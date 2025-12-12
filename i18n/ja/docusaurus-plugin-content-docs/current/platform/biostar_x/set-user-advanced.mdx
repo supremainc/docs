@@ -1,0 +1,40 @@
+---
+id: set-user-advanced
+title: ユーザーの詳細設定
+description: ユーザーが入退室する際にデバイスに表示するメッセージの設定方法と、ディレクトリ連携から除外する機能について説明します。
+keywords:
+  - ユーザー
+  - 高度な設定
+---
+
+ユーザーの入退室時にデバイスに表示するメッセージを設定したり、<Cmd sid='settings.activeDirectory.title' product='2' className='normal' /> 連携時に当該ユーザーを同期対象から除外したりできます。 この機能はユーザーを新規追加または編集する際に設定できます。
+
+<Cmd sid='shell.header.launcher' /> → <Cmd sid='shell.header.user' /> ページに移動し、次の 2 つの方法で入退室権限を設定します。
+
+import EnterUserPage from '../../common/_enter-user-page.mdx';
+
+<EnterUserPage />
+
+<Cmd sid='common.advanced' product='2' /> セクションで設定できる項目は次のとおりです。
+
+<Image src='/img/biostarx-user-advanced.png' />
+
+* <Cmd sid='common.privateMessage' product='2' />：ユーザーの入退室時にデバイスに表示するメッセージを入力できます。 メッセージは最大128文字まで入力できます。
+
+* <Cmd sid='user.adsync.exclude' product='2' />：<Cmd sid='settings.activeDirectory.title' product='2' className='normal' /> 連携時にそのユーザーを同期対象から除外できます。
+
+:::info
+
+* <Cmd sid='user.adsync.exclude' product='2' /> オプションは **アドバンス** (Advanced) ライセンス以上で追加オプションとして利用できます。 ライセンスポリシーの詳細は[次のドキュメント](licensing#features-add-ons)を参照してください。
+
+* ディレクトリ連携設定の詳細については[次のドキュメント](settings-diretory-integration)を参照してください。
+
+:::
+
+<NextStep>
+<NextItem to='edit-user'>
+
+ユーザー情報を修正する方法を確認してください。
+
+</NextItem>
+</NextStep>

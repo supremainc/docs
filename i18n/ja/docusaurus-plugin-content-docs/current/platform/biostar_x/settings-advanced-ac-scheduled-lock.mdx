@@ -1,0 +1,64 @@
+---
+id: settings-advanced-ac-scheduled-lock
+title: スケジュールロック
+description: スケジュールロックの設定方法を案内します。 スケジュールロックは特定の時間にドアをロックする機能を提供します。
+keywords:
+  - 高度なアクセス制御
+  - スケジュールロック
+---
+
+スケジュールロックの設定方法を案内します。 スケジュールロックは特定の時間にドアをロックする機能を提供します。 この機能は入退室制御を強化し、特定の時間帯に入退室を制限するのに役立ちます。
+
+:::info
+
+スケジュールロックの設定は<Cmd sid='zone.globalZone.local' product='2' />モードのみ対応しています。
+
+:::
+
+## スケジュールロックの登録 {#addScheduledLockZone}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.advancedAc.root' /> をクリックします。
+
+3. <Cmd sid='button.func.addZone' product='2' /> ボタンをクリックします。
+
+4. <Cmd sid='zone.scheduledLock' product='2' />を選択し、<Cmd sid='button.apply' product='2' />をクリックします。
+
+5. <Cmd sid='common.info' product='2' />セクションで追加するスケジュールロック機能の名前を入力します。
+
+   <Image src='/img/biostarx-settings-adv-ac-add-schedule-lock.png' />
+
+6. <Cmd sid='common.setting' product='2' />セクションでスケジュールロック機能の詳細項目を設定します。 詳しくは [次のドキュメント](#setting) を参照してください。
+
+7. <Cmd sid='common.alarm' product='2' />セクションでスケジュールロック違反発生時に実行する動作を設定します。
+
+8. <Cmd sid='zone.forcedLock.bypass' product='2' />セクションでスケジュールロックをバイパスできる入退室グループを選択します。 このグループに属するユーザーはスケジュールロックをバイパスできます。
+
+9. すべての設定が完了したら、画面下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+:::info
+
+<Cmd sid='common.alarm' product='2' />セクションは、<Cmd sid='zone.pause.doorselected' product='2' />を設定すると使用できます。
+
+:::
+
+## 設定オプションの案内 {#setting}
+
+スケジュールロック設定の詳細項目は次のとおりです。
+
+* <Cmd sid='zone.pause.activatedAndDeactivated' product='2' />：設定を有効化または一時的に無効化できます。
+
+* <Cmd sid='zone.forcedLock.doorLockType' product='2' />：入室デバイスのみをロックするか、入室デバイスと退室デバイスの両方をロックするように設定できます。
+
+* <Cmd sid='zone.pause.doorselected' product='2' />：スケジュールロック規則を適用するドアを選択します。
+
+* <Cmd sid='common.schedule' product='2' />：スケジュールを選択します。 目的のスケジュールがない場合は、<Cmd sid='button.plusAddSchedule' product='2' /> をクリックして追加します。
+
+:::info
+
+* <Cmd sid='zone.globalZone.local' product='2' />モードでは、複数のドアを選択してスケジュールロック機能を構成できます。
+
+* スケジュール設定の詳細は[次のドキュメント](settings-schedule)を参照してください。
+
+:::

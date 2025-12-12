@@ -1,0 +1,225 @@
+---
+id: authentication
+title: 認証
+description: サポートする認証方式と認証手順について説明します。
+keywords:
+  - 認証モード
+  - 認証オプション
+  - PIN
+  - 顔
+  - 勤怠
+---
+
+サポートする認証方式と認証手順について説明します。
+
+## 認証モード
+
+デバイスの認証モードを設定できます。 <Cmd sid='ui_312' product='dev' />, <Cmd sid='ui_040' product='dev' />, <Cmd sid='ui_322' product='dev' />, <Cmd sid='ui_020' product='dev' /> を組み合わせて認証モードとして使用でき、各認証モードごとに使用するスケジュールを設定することもできます。
+
+### 指紋認証モード
+
+指紋を使用する認証方法ごとにスケジュールを設定できます。
+
+1. **ESC**キーを押してから、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> → <Cmd sid='ui_313' product='dev' /> を選択して **6** を押します。
+
+3. 希望の項目を選択し、**4** または **6** を押してスケジュールを設定します。
+
+   <Image src='/img/device/bln2-auth-authmode.png' />
+
+   * <Image src='/img/common/ico-authmode-finger-bln2.png' ico alone />：指紋のみを使用するモードです。
+
+   * <Image src='/img/common/ico-authmode-finger-bln2.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bln2.png' ico alone />：指紋で認証した後、PIN を入力するモードです。
+
+4. 設定を保存するには **OK** を押してください。
+
+:::info
+
+* <Cmd sid='ui_203' product='dev' /> は BioStar X で設定できます。 設定したスケジュールがない場合、<Cmd sid='ui_162' product='dev' /> と <Cmd sid='ui_361' product='dev' /> だけ選択できます。
+
+* <Cmd sid='ui_203' product='dev' /> の設定について詳しくは、[BioStar X 管理者マニュアル](../../platform/biostar_x/settings-schedule) を参照してください。
+
+:::
+
+### カード認証モード
+
+カードを使用する認証方法ごとにスケジュールを設定できます。
+
+1. **ESC**キーを押してから、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> → <Cmd sid='ui_324' product='dev' /> を選択して **6** を押します。
+
+3. 希望の項目を選択し、**4** または **6** を押してスケジュールを設定します。
+
+   <Image src='/img/device/bln2-auth.png' />
+
+   * <Image src='/img/common/ico-authmode-card-bln2.png' ico alone />：カードのみを使用するモードです。
+
+   * <Image src='/img/common/ico-authmode-card-bln2.png' ico alone /> + <Image src='/img/common/ico-authmode-finger-bln2.png' ico alone />：カードで認証した後、指紋で認証するモードです。
+
+   * <Image src='/img/common/ico-authmode-card-bln2.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bln2.png' ico alone />：カードで認証した後、PIN を入力するモードです。
+
+   * <Image src='/img/common/ico-authmode-card-bln2.png' ico alone /> + <Image src='/img/common/ico-authmode-finger-bln2.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bln2.png' ico alone />：カードで認証した後、指紋で認証するか PIN を入力するモードです。
+
+   * <Image src='/img/common/ico-authmode-card-bln2.png' ico alone /> + <Image src='/img/common/ico-authmode-finger-bln2.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bln2.png' ico alone />：カードで認証した後、指紋認証と PIN 入力の両方を使用するモードです。
+
+4. 設定を保存するには **OK** を押してください。
+
+:::info
+
+* <Cmd sid='ui_203' product='dev' /> は BioStar X で設定できます。 設定したスケジュールがない場合、<Cmd sid='ui_162' product='dev' /> と <Cmd sid='ui_361' product='dev' /> だけ選択できます。
+
+* <Cmd sid='ui_203' product='dev' /> の設定について詳しくは、[BioStar X 管理者マニュアル](../../platform/biostar_x/settings-schedule) を参照してください。
+
+:::
+
+### ID 認証モード
+
+ID を使用する認証方法ごとにスケジュールを設定できます。
+
+1. **ESC**キーを押してから、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> → <Cmd sid='ui_021' product='dev' /> を選択して **6** を押します。
+
+3. 希望の項目を選択し、**4** または **6** を押してスケジュールを設定します。
+
+   <Image src='/img/device/bln2-auth1.png' />
+
+   * <Image src='/img/common/ico-authmode-id-bln2.png' ico alone /> + <Image src='/img/common/ico-authmode-finger-bln2.png' ico alone />：ID を入力した後、指紋で認証するモードです。
+
+   * <Image src='/img/common/ico-authmode-id-bln2.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bln2.png' ico alone />：ID を入力した後、PIN を入力するモードです。
+
+   * <Image src='/img/common/ico-authmode-id-bln2.png' ico alone /> + <Image src='/img/common/ico-authmode-finger-bln2.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bln2.png' ico alone />：ID を入力した後、指紋で認証するか PIN を入力するモードです。
+
+   * <Image src='/img/common/ico-authmode-id-bln2.png' ico alone /> + <Image src='/img/common/ico-authmode-finger-bln2.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bln2.png' ico alone />：ID を入力した後、指紋認証と PIN 入力の両方を使用するモードです。
+
+4. 設定を保存するには **OK** を押してください。
+
+:::info
+
+* <Cmd sid='ui_203' product='dev' /> は BioStar X で設定できます。 設定したスケジュールがない場合、<Cmd sid='ui_162' product='dev' /> と <Cmd sid='ui_361' product='dev' /> だけ選択できます。
+
+* <Cmd sid='ui_203' product='dev' /> の設定について詳しくは、[BioStar X 管理者マニュアル](../../platform/biostar_x/settings-schedule) を参照してください。
+
+:::
+
+## 勤怠モード
+
+勤怠モードの登録方法を設定できます。
+
+1. **ESC**キーを押してから、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_083_title' product='dev' /> を選択して **6** を押します。
+
+3. 希望の項目を選択し、**4** または **6** を押してスケジュールを設定します。
+
+   <Image src='/img/device/bln2-auth2.png' />
+
+   * <Cmd sid='ui_084' product='dev' />：勤怠イベントを確認できます。
+
+   * <Cmd sid='ui_083_list' product='dev' />：勤怠モードの使用方法を設定できます。
+
+   * <Cmd sid='ui_082' product='dev' />：ユーザーが認証する際に必ず勤怠イベントを選択するよう設定できます。 <Cmd sid='ui_372' product='dev' /> に設定すると、認証時に勤怠イベントを必ず選択するよう設定できます。
+
+   * <Cmd sid='ui_080' product='dev' />：管理者が選択した勤怠イベントのみ使用するように設定できます。 <Cmd sid='ui_083_list' product='dev' /> を <Cmd sid='ui_071' product='dev' /> に設定したときに使用できます。
+
+   * <Cmd sid='ui_279' product='dev' />：作業コードの使用有無を選択できます。
+
+4. 設定を保存するには **OK** を押してください。
+
+:::info
+
+<Cmd sid='ui_279' product='dev' /> を <Cmd sid='ui_372' product='dev' /> に設定した場合、ユーザーの作業コードを変更できます。 **OK** を長押しして認証すると、目的の作業コードを選択できます。
+
+:::
+
+## 指紋設定
+
+指紋認証に関する設定を変更できます。
+
+1. **ESC**キーを押してから、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_312' product='dev' /> を選択して **6** を押します。
+
+3. 希望の項目を選択し、**4** または **6** を押してスケジュールを設定します。
+
+   <Image src='/img/device/bln2-auth3.png' />
+
+   * <Cmd sid='ui_149' product='dev' />：1:N 認証のセキュリティレベルを設定できます。
+
+   * <Cmd sid='ui_130' product='dev' />：指紋マッチング時の待機時間を設定できます。 設定した時間内に認証が完了しない場合、認証は失敗します。
+
+   * <Cmd sid='ui_254' product='dev' />：指紋をスキャンしたときに元画像を表示できます。
+
+   * <Cmd sid='ui_197' product='dev' />：指紋センサーの感度を設定できます。 より精密な指紋情報を取得するには、センサー感度を高く設定してください。
+
+   * <Cmd sid='ui_249' product='dev' />：偽造指紋検出レベルを設定できます。 偽造指紋検出レベルを高く設定すると、実際の指紋に対する拒否率も高くなる場合があります。
+
+   * <Cmd sid='ui_003' product='dev' />：指紋認証速度を設定できます。 <Cmd sid='ui_275' product='dev' /> を選択すると、端末に登録されている指紋テンプレートの総数に応じて認証パフォーマンスが設定されます。
+
+   * <Cmd sid='ui_342' product='dev' />：指紋テンプレート形式を設定できます。 <Cmd sid='ui_057' product='dev' />がデフォルトで設定されています。テンプレート形式を変更すると、以前に保存されたすべての指紋が使用できなくなるため、変更時は注意してください。
+
+     :::info
+
+     ユーザー指紋情報をすべて削除してからテンプレート形式を変更します。 ユーザー指紋情報が登録されている場合は、テンプレート形式を変更できません。 
+
+     :::
+
+   * <Cmd sid='ui_198' product='dev' />：<Cmd sid='ui_277' product='dev' /> に設定すると、指紋センサーがユーザーの指を検知して起動します。 <Cmd sid='ui_362' product='dev' /> に設定すると、指紋をスキャンしていないときでも常にセンサーがオンになります。
+
+   * <Cmd sid='ui_116' product='dev' />：高品質な指紋情報を保存するために、スキャンした指紋の品質を検査できます。 有効にすると、指紋品質が低い場合にユーザーへ通知し、正しくスキャンできるよう支援します。
+
+   * <Cmd sid='ui_118' product='dev' />：指紋登録時に重複指紋かどうかを検査できます。
+
+4. 設定を保存するには **OK** を押してください。
+
+## サーバーマッチング
+
+サーバーマッチングを設定できます。 サーバーマッチングを使用すると、端末でユーザー認証を行わず、BioStar X でユーザー認証を行います。 サーバーマッチングは、デバイスにユーザー情報が多すぎる場合や、ユーザークレデンシャル情報が保存されているデバイスを外部にさらしたくない場合に有用です。
+
+1. **ESC**キーを押してから、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_185' product='dev' /> を選択して **6** を押します。
+
+   <Image src='/img/device/bln2-auth4.png' />
+
+3. **4** または **6** を押して設定を変更します。
+
+4. 設定を保存するには **OK** を押してください。
+
+:::info
+
+* <Cmd sid='ui_185' product='dev' /> は <Cmd sid='ui_312' product='dev' />, <Cmd sid='ui_322' product='dev' />, <Cmd sid='ui_020' product='dev' /> でのみ使用できます。
+
+* <Cmd sid='ui_185' product='dev' /> を使用する場合は、デバイスと BioStar X の両方でサーバーマッチングを有効にする必要があります。 BioStar X のサーバーマッチング設定の詳細については、[BioStar X 管理者マニュアル](../../platform/biostar_x/settings-server-server#servermatching) を参照してください。
+
+:::
+
+## 認証結果表示オプション
+
+認証結果表示オプションを設定できます。
+
+1. **ESC**キーを押してから、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_256' product='dev' /> を選択して **6** を押します。
+
+3. 希望の項目を選択し、**4** または **6** を押して設定を変更します。
+
+   <Image src='/img/device/bln2-auth5.png' />
+
+   * <Cmd sid='ui_169' product='dev' />：デバイスの認証結果画面でユーザー ID の表示方法を選択できます。
+
+     * <Cmd sid='ui_138' product='dev' />：ユーザー ID をすべて表示します。
+
+     * <Cmd sid='ui_316' product='dev' />：ユーザー ID の先頭文字のみ表示します。
+
+     * <Cmd sid='ui_357' product='dev' />：ユーザー ID を表示しません。
+
+   * <Cmd sid='ui_177' product='dev' />：デバイスの認証結果画面でユーザー名の表示方法を選択できます。
+
+     * <Cmd sid='ui_138' product='dev' />：ユーザー名をすべて表示します。
+
+     * <Cmd sid='ui_316' product='dev' />：ユーザー名の先頭文字のみ表示します。
+
+     * <Cmd sid='ui_357' product='dev' />：ユーザー名を表示しません。

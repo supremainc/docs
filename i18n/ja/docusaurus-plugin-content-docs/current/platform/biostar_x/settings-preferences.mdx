@@ -1,0 +1,99 @@
+---
+id: settings-preferences
+title: 基本設定を構成する
+description: BioStar X を初めてインストールする場合や使用環境を変更する場合に、言語とタイムゾーン、日付/時刻形式、通知音の設定方法を案内します。
+keywords:
+  - 基本設定
+---
+
+**BioStar X** を効率的に使用するためには、使用環境に合った基本設定が必要です。 以下のような状況で必要な設定方法を案内します。
+
+* 新規インストールした **BioStar X** の初期設定
+
+* ユーザーが好む言語への変更
+
+* 現地タイムゾーンに合わせた時刻設定
+
+* イベント通知音のカスタマイズ
+
+## 基本設定にアクセス {#preference}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.preferences.root' /> をクリックします。
+
+3. 各セクションで必要なオプションを設定します。
+
+   * <Cmd sid='preference.languageTimezone' product='2' />：インターフェース言語とタイムゾーン、サマータイム
+
+   * <Cmd sid='preference.dateTimeFormat' product='2' />：日付と時刻の形式
+
+   * <Cmd sid='device.info.sound' product='2' />：イベント通知音
+
+4. すべての設定を完了したら、画面右下の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+## 言語とタイムゾーンの設定 {#language-timezone}
+
+**BioStar X** のインターフェース言語、タイムゾーン、サマータイム規則を設定できます。
+
+<Image src='/img/biostarx-settings-preference-language-timezone.png' className='none' />
+
+* <Cmd sid='common.language' product='2' />：使用するインターフェース言語を選択します。
+
+* <Cmd sid='common.timeZone' product='2' />：現在の場所に合わせたタイムゾーンを選択します。
+
+* <Cmd sid='common.dst' product='2' />：**BioStar X** サーバーに適用するサマータイム規則を選択します。 目的の項目がない場合は、[次のドキュメント](settings-system-daylight-saving-time)を参照して追加できます。
+
+設定を保存するには、画面右下の<Cmd sid='button.apply' product='2' />ボタンをクリックしてください。
+
+## 日付と時刻の表示形式の設定 {#date-time-format}
+
+システム全体で使用する日付と時刻の表示形式を設定できます。
+
+<Image src='/img/biostarx-settings-preference-date-time.png' className='none' />
+
+* <Cmd sid='common.dateFormat' product='2' />：日付形式を変更できます。
+
+  * **mm/dd/yyyy**：01/31/2025
+
+  * **yyyy/mm/dd**：2025/01/31
+
+  * **dd/mm/yyyy**：31/01/2025
+
+* <Cmd sid='common.timeFormat' product='2' />：時間形式を変更できます。
+
+  * **hh:mm**：23:59、24時間形式
+
+  * **hh:mm a**：11:59 PM、12時間形式
+
+  * **a hh:mm**：PM 11:59、12時間形式
+
+設定を保存するには、画面右下の<Cmd sid='button.apply' product='2' />ボタンをクリックしてください。
+
+## イベント通知音の設定 {#sound}
+
+イベント発生時に使用するサウンドファイルをアップロードできます。
+
+<Image src='/img/biostarx-settings-preference-sound.png' className='none' />
+
+1. <Cmd sid='button.plusAdd' product='2' /> をクリックします。
+
+2. <Cmd sid='setting.preference.sound.alert.add' product='2' /> ウィンドウが表示されたら、<Cmd sid='setting.preference.sound.alert.addSound.browse' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-settings-preference-add-sound.png' className='none' />
+
+3. アップロードする *.wav* または *.mp3* ファイルを選択し、**開く** をクリックします。
+
+4. サウンドファイルをアップロードするには、<Cmd sid='button.add' product='2' /> ボタンをクリックします。
+
+設定を保存するには、画面右下の<Cmd sid='button.apply' product='2' />ボタンをクリックしてください。
+
+:::info
+
+* サウンドファイルは *.wav* または *.mp3* 形式のみアップロードできます。
+
+* アップロードできる最大ファイルサイズは10MBです。
+
+* イベント発生時にアップロードしたサウンドファイルを適用する方法は、[次のドキュメント](settings-alert#edit-alert-message)を参照します。
+
+:::

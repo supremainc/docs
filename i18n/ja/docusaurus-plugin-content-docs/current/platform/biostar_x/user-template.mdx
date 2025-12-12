@@ -1,0 +1,138 @@
+---
+id: user-template
+title: ユーザーテンプレートを管理する
+description: ユーザーテンプレートを活用すると、新規ユーザー登録を標準化して時間を節約でき、効率的なユーザー管理が可能になります。
+keywords:
+  - ユーザーテンプレート
+draft: true
+---
+
+ユーザーテンプレートは、組織や部署ごとの基本情報を標準化し、新規ユーザー登録プロセスを簡素化して管理効率を高められます。 テンプレートを使用すると、すべての新規ユーザーに対して一貫した情報と権限を迅速かつ正確に適用できます。
+
+## ユーザーテンプレートを作成する {#create-a-user-template}
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.user' /> をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='team.sidebar.template' /> をクリックします。
+
+3. 画面右上の <Cmd sid='team.userTemplate.newTemplate' /> ボタンをクリックします。
+
+4. テンプレート作成ウィンドウが表示されたら、<Cmd sid='team.user.information' /> でテンプレート名、メール、部署などを入力します。
+
+   <Image src='/img/biostarx-user-new-template.png' />
+
+5. <Cmd sid='team.user.permission.title' /> セクションで入退室グループを選択します。
+
+6. 入力を終えたら <Cmd sid='common.save' /> をクリックしてテンプレートを保存します。
+
+テンプレート一覧で追加した新しいテンプレートを確認します。
+
+:::info
+
+* 部署は組織構造を反映してユーザーを分類するために使用します。 詳細については[次のドキュメント](add-user-basic-info)を参照してください。
+
+* グループは複数ユーザーをまとめて入退室権限を一度に適用するために使用します。 詳細については[次のドキュメント](user-group-manage)を参照してください。
+
+* <Cmd sid='team.user.permission.accessGroup' /> は特定エリアへのユーザー権限を定義し、ユーザーに一括で入退室権限を付与する際に使用します。 詳細については[次のドキュメント](settings-access-control-manage-access-group)を参照してください。
+
+:::
+
+## テンプレートでユーザーを追加する {#add-user-as-a-template}
+
+追加したテンプレートで新規ユーザーを追加するには、次の手順に従います。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.user' /> をクリックします。
+
+2. 画面右上の <Cmd sid='team.user.dialog.newUser' /> ボタンの右にある <IcDown/> をクリックします。
+
+   <Image src='/img/biostarx-add-user-from-template.png' />
+
+3. 目的のテンプレートを選択します。
+
+4. テンプレートに設定されている情報を確認し、ユーザーID、名前、連絡先など残りの項目を入力します。
+
+5. <Cmd sid='common.save' /> をクリックします。
+
+ユーザー一覧でテンプレートから追加した新規ユーザーを確認します。
+
+:::info
+
+ユーザー追加の詳細については[次のドキュメント](add-user)を参照してください。
+
+:::
+
+## テンプレートを編集する {#template-modification}
+
+既に作成したユーザーテンプレートを編集できます。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.user' /> をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='team.sidebar.template' /> をクリックします。
+
+3. テンプレート一覧で編集したい項目をダブルクリックします。
+
+4. テンプレート編集ウィンドウが表示されたら、必要な項目を編集します。
+
+5. 編集が完了したら <Cmd sid='common.save' /> をクリックします。
+
+編集内容がテンプレートに反映されます。
+
+## テンプレートを削除する {#delete-template}
+
+不要なユーザーテンプレートを削除できます。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.user' /> をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='team.sidebar.template' /> をクリックします。
+
+3. テンプレート一覧で削除したい項目の一番左にあるチェックボックスをクリックします。 1つ以上のテンプレートを選択できます。
+
+4. 画面右上の<Cmd sid='common.delete' />をクリックします。
+
+5. 確認メッセージが表示されたら <Cmd sid='common.acknowledge' /> ボタンをクリックします。
+
+テンプレート一覧から選択したテンプレートが削除されます。
+
+:::info
+
+<Cmd sid='team.userTemplate.title' /> 一覧のすべてのテンプレートを選択するには、画面左上の <Cmd sid='common.selectAll' /> をクリックします。
+
+:::
+
+## 表示オプションを選択する {#select-view-options}
+
+画面右上のツールボタンを使用してユーザーテンプレート一覧の表示オプションを変更できます。
+
+:::info
+
+ユーザーテンプレート一覧の列ヘッダーを変更できます。<Cmd sid='team.menu.columnLayout' /> 機能の詳細は[次のドキュメント](view-users#user-list-column-settings)を参照してください。
+
+:::
+
+### テンプレート一覧ページを移動する {#template-list-page-moves}
+
+テンプレート一覧にはデフォルトで10件のテンプレートが表示されます。 画面上部のボタンをクリックして別のページへ移動できます。
+
+<Image src='/img/biostarx-users-template-list-pagenation.png' />
+
+* <IcFirst /> ：ユーザーテンプレート一覧の最初のページに移動します。
+
+* <IcFw /> ：ユーザーテンプレート一覧の前のページに移動します。
+
+* <IcBw /> ：ユーザーテンプレート一覧の次のページに移動します。
+
+* <IcLast /> ：ユーザーテンプレート一覧の最後のページに移動します。
+
+* 指定ページへ移動するには、数値入力フィールドにページ番号を入力し、<Kbd>Enter</Kbd> キーを押します。
+
+### テンプレート表示数を変更する {#change-number-of-users-list-indications}
+
+テンプレート一覧に表示される件数を変更できます。 画面右上のリスト選択ボックスで、表示件数を選択します。 選択できるオプションは10、25、50、100です。
+
+<Image src='/img/biostarx-users-template-list-select-row.png' />
+
+## テンプレートを検索する {#search-template}
+
+テンプレート一覧で目的のテンプレートを検索できます。 画面右上の検索入力フィールドにキーワードを入力し、<Kbd>Enter</Kbd> キーを押します。
+
+<Image src='/img/biostarx-users-template-list-search.png' />

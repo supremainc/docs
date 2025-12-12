@@ -1,0 +1,88 @@
+---
+id: settings-system-system-backup
+title: システムをバックアップする
+description: システムバックアップメニューを使用すると、BioStar X のデータベース、各種設定、キーなどの主要情報をバックアップできます。
+keywords:
+  - システムバックアップ
+  - バックアップ
+  - 自動バックアップ
+  - 手動バックアップ
+  - データ保護
+  - 復元
+---
+
+**BioStar X** のデータベース、各種設定、キーなどの主要情報をバックアップできます。 <Cmd sid="common.backup" product='2' /> 機能は、サーバーデータの損失を防止したり、新しい PC へ移行する際に使用します。
+
+サポートされるバックアップ方式は次のとおりです。
+
+* **手動バックアップ**：ユーザーが手動でバックアップファイルを作成します。
+
+* **自動バックアップ**：システムが設定された周期でバックアップファイルを自動生成します。
+
+:::info
+
+* 以前の PC でバックアップした **BioStar X** のバックアップファイルを使用して新しい PC で **BioStar X** を復元する場合、ライセンスの再発行が必要です。
+
+* SQL Server データベースと **BioStar X** が別々のサーバーにインストールされている場合、**BioStar X** のシステムバックアップと復元は使用できません。
+
+* システム復元の詳細については [次のドキュメント](settings-system-system-restore) を参照してください。
+
+:::
+
+## 手動バックアップ
+
+ユーザーがバックアップファイルを直接作成できます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.system.root' /> → <Cmd sid="common.backup" product='2' /> をクリックします。
+
+3. <Cmd sid='common.backup.general' product='2' /> セクションで、バックアップファイルの保存パスと最大バックアップ数を設定します。
+
+   <Image src='/img/biostarx-settings-system-system-backup-general.png' className='none' />
+
+   * <Cmd sid='backup.filePath' product='2' />：バックアップファイルの保存パスを入力します。 保存パスには、既に作成済みのディレクトリパスを入力します。
+
+   * <Cmd sid='backup.numberFileToKeep' product='2' />：最大バックアップ数を設定します。
+
+4. <Cmd sid="backup.backupNow" product='2' /> をクリックしてバックアップファイルを作成します。
+
+バックアップファイルは <Cmd sid='backup.filePath' product='2' /> オプションで指定したパスに *zip* 形式で保存されます。 ファイル名は `BioStar_X_Backup_YYYYMMDD_HHMMSS.zip` 形式で生成されます。 ここで `YYYYMMDD` はバックアップ日、`HHMMSS` はバックアップ時刻を示します。
+
+:::info
+
+* 最大バックアップ数を超えると、最も古いバックアップファイルから自動的に削除されます。
+
+* <Cmd sid="backup.numberFileToKeep" product='2' /> には 1 ～ 100 の数値のみ入力できます。
+
+:::
+
+## 自動バックアップの設定
+
+自動バックアップを設定すると、システムが設定した周期でバックアップファイルを作成します。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.system.root' /> → <Cmd sid="common.backup" product='2' /> をクリックします。
+
+3. <Cmd sid='common.backup.autoBackup' product='2' /> セクションで <Cmd sid='common.backup.frequency' product='2' /> オプションを選択します。
+
+   <Image src='/img/biostarx-settings-system-system-backup-automatic.png' className='none' />
+
+   * <Cmd sid="backup.daily" product='2' />：毎日自動バックアップします。 <Cmd sid='backup.time' product='2' /> オプションでバックアップ時刻を設定します。
+
+   * <Cmd sid="backup.weekly" product='2' />：毎週自動バックアップします。 <Cmd sid='backup.day' product='2' /> オプションで自動バックアップする曜日を設定し、<Cmd sid='backup.time' product='2' /> オプションでバックアップ時刻を設定します。
+
+   * <Cmd sid="backup.monthly" product='2' />：毎月自動バックアップします。 <Cmd sid='backup.date' product='2' /> オプションで自動バックアップする日付を設定し、<Cmd sid='backup.time' product='2' /> オプションでバックアップ時刻を設定します。
+
+4. <Cmd sid="button.apply" product='2' /> をクリックして設定を保存します。
+
+バックアップファイルは <Cmd sid='common.backup.general' product='2' /> セクションの <Cmd sid='backup.filePath' product='2' /> オプションで指定したパスに *zip* 形式で保存されます。 ファイル名は `BioStar_X_Backup_YYYYMMDD_HHMMSS.zip` 形式で生成されます。 ここで `YYYYMMDD` はバックアップ日、`HHMMSS` はバックアップ時刻を示します。
+
+:::info
+
+* 自動バックアップの頻度を <Cmd sid="backup.monthly" product='2' /> に設定し、日付を 29、30、31 日に指定すると、その日付が存在しない月には自動バックアップを実行しません。
+
+* 時刻は <Cmd sid='setting.menu.preferences.root' /> で設定した標準タイムゾーンを基準にします。 標準タイムゾーン設定の詳細については [次のドキュメント](settings-preferences#language-timezone) を参照してください。
+
+:::

@@ -1,0 +1,102 @@
+---
+id: user
+title: ユーザー
+description: ユーザーの登録、編集、削除および管理方法について説明します。
+keywords:
+  - 登録
+  - 編集
+  - 削除
+  - 管理
+---
+
+ユーザーの登録、編集、削除および管理方法について説明します。
+
+## ユーザー情報の登録 {#registering-user-information}
+
+生体認証情報を含むユーザー情報を登録できます。
+
+1. **ESC**キーを押してから、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_166' product='dev' /> → <Cmd sid='ui_173' product='dev' /> を選択してから **6** を押してください。
+
+   <Image src='/img/device/bln2-user-add.png' />
+
+3. 目的の項目を選択し、**4** または **6** を押して設定してください。 **OK** を押すと、ユーザー情報が登録されます。
+
+   * <Cmd sid='ui_020' product='dev' />：1～4294967294 の数字を入力してユーザーIDを登録できます。 <Cmd sid='ui_168' product='dev' /> を <Cmd sid='ui_237' product='dev' /> に設定した場合、英数字と記号 `_` `-` の組み合わせをIDとして使用でき、最大32文字まで入力できます。
+
+   * <Cmd sid='ui_253' product='dev' />：数字キーと機能キーを使用してユーザー名を入力できます。
+
+   * <Cmd sid='ui_312' product='dev' />：ユーザー認証用の指紋を登録できます。 登録したい指の指紋をスキャンした後、同じ指の指紋をもう一度スキャンしてください。 削除する指紋を選択して **4** を押すと指紋を削除でき、**6** を押すと指紋を再スキャンできます。 指紋を追加するには <Cmd sid='ui_001' product='dev' /> を選択して **6** を押してください。
+
+   * <Cmd sid='ui_322' product='dev' />：ユーザー認証用のカードを登録できます。 ユーザーに割り当てるカードをRFカードリーダーにかざしてください。
+
+   * <Cmd sid='ui_040' product='dev' />：使用するPINを入力できます。 使用するPINを入力した後、確認のためにもう一度PINを入力してください。 PINの流出を防ぐため、8～16桁の数字を入力してください。
+
+   * <Cmd sid='ui_172' product='dev' />：ユーザーに割り当てる権限を選択できます。
+
+     :::info
+
+     設定されているユーザー権限によって使用できるメニューが異なります。
+
+     * <Cmd sid='ui_273' product='dev' />：一般ユーザーレベルで、メニューを利用できません。
+
+     * <Cmd sid='ui_300' product='dev' />：すべてのメニューを利用できます。
+
+     * <Cmd sid='ui_194' product='dev' />：<Cmd sid='ui_256' product='dev' />, <Cmd sid='ui_366' product='dev' />, <Cmd sid='ui_280' product='dev' />, <Cmd sid='ui_344' product='dev' />, <Cmd sid='ui_255' product='dev' /> メニューを利用できます。
+
+     * <Cmd sid='ui_171' product='dev' />：<Cmd sid='ui_166' product='dev' />, <Cmd sid='ui_255' product='dev' /> メニューを利用できます。
+
+     :::
+
+   * <Cmd sid='ui_213' product='dev' />：ユーザーアカウントの使用開始日を設定できます。
+
+   * <Cmd sid='ui_129' product='dev' />：ユーザーアカウントの使用停止日を設定できます。
+
+   * <Cmd sid='ui_002' product='dev' />：1:1 認証用のセキュリティレベルを設定できます。
+
+   * <Cmd sid='ui_363' product='dev' />：脅迫指紋として使用する指紋番号を選択できます。 指紋が2個以上登録されている必要があります。
+
+   * <Cmd sid='ui_064' product='dev' />：ユーザーごとに認証方法を変更できます。
+
+4. 設定を保存するには **OK** を押してください。
+
+## ユーザー情報の編集
+
+ユーザー管理者または全体管理者が登録済みのユーザー情報を編集できます。 ユーザーの指紋やカードを追加でき、PINおよび権限を修正できます。
+
+1. **ESC**キーを押してから、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_166' product='dev' /> → <Cmd sid='ui_170' product='dev' /> を選択して **6** を押してください。
+
+3. 使用する検索条件を選択します。 <Cmd sid='ui_137' product='dev' />, <Cmd sid='ui_020' product='dev' />, <Cmd sid='ui_253' product='dev' />, <Cmd sid='ui_312' product='dev' />, <Cmd sid='ui_322' product='dev' /> でユーザーを検索できます。
+
+   <Image src='/img/device/bln2-user-search.png' />
+
+4. 修正したいユーザーを選択して **6** を押してください。 [ユーザー情報の登録](#registering-user-information) を参照して情報を修正してください。
+
+   * ユーザーを削除するには **4** を選択して **OK** を押してください。
+
+:::info
+
+<Cmd sid='ui_320' product='dev' /> は BioStar X で登録できます。 出入グループの登録の詳細は [BioStar X 管理者マニュアル](../../platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup) を参照してください。
+
+:::
+
+## ユーザーの一括削除
+
+登録済みのすべてのユーザーを一度に削除できます。
+
+1. **ESC**キーを押してから、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_166' product='dev' /> → <Cmd sid='ui_302' product='dev' /> を選択して **6** を押してください。
+
+3. **OK** を押すと、登録されているすべてのユーザーが削除されます。
+
+## ユーザー登録状況の確認
+
+登録されているユーザー、指紋、カードの数を一目で確認できます。
+
+1. **ESC**キーを押してから、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_166' product='dev' /> → <Cmd sid='ui_175' product='dev' /> を選択して **6** を押してください。 ユーザー登録状況を確認できます。

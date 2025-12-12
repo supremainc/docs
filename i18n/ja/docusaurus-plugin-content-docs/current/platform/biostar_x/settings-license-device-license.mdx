@@ -1,0 +1,121 @@
+---
+id: settings-license-device-license
+title: デバイスライセンス
+description: Suprema から発行されたデバイスライセンスを有効化すると、ライセンスに対応する特定の機能を利用できます。
+keywords:
+  - ライセンス
+---
+
+Suprema が発行した <Cmd sid="setting.server.license.device" product='2' /> を有効化して、ライセンスに対応する特定の機能を利用してください。
+
+<Cmd sid="setting.server.license.device" product='2' /> では **BioStar X** と USB メモリを使用してデバイスのライセンスを有効化できます。
+
+:::info
+
+import DocumentA from '../../common/_device-license-info.mdx'
+
+<DocumentA />
+
+* ライセンスのエラーコードを確認するには[次のリンク](https://reprisesoftware.com/docs/isv/appendix/appendix-b-rlm-status-values.html)を参照してください。
+
+:::
+
+## 開始前に {#before-start}
+
+デバイスライセンスを有効化する前に次の項目を確認してください。
+
+* 有効なデバイスライセンスファイルを準備してください。 デバイスライセンスファイルについては購入先にお問い合わせください。
+
+* 対象デバイスが **BioStar X** に登録されていることを確認してください。 デバイス登録の詳細については [次のドキュメント](settings-adding-devices) を参照してください。
+
+## デバイスライセンスの適用 {#apply-device-license}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.license.root' /> → <Cmd sid="setting.server.license.device" product='2' /> をクリックします。
+
+3. <Cmd sid="user.list.csvImport.browse" product='2' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-settings-license-device-license.png' className='none' />
+
+4. デバイスライセンスが保存されているパスからデバイスライセンスファイルを読み込みます。
+
+5. 読み込んだライセンスに対応する情報が <Cmd sid="setting.server.license.name" product='2' />, <Cmd sid="setting.server.license.device.count" product='2' />, <Cmd sid="setting.server.license.device.list" product='2' /> 項目に表示されます。
+
+   <Image src='/img/biostarx-settings-license-device-license-loaded.png' />
+
+6. <Cmd sid="setting.server.license.device.list" product='2' /> を確認し、デバイスライセンスを有効化するには <Cmd sid="setting.server.license.button.activate" product='2' /> ボタンをクリックします。
+
+:::info
+
+ライセンスの有効化に失敗すると、エラーメッセージが表示されます。 ライセンスの有効化を再試行してください。
+
+:::
+
+## デバイスライセンス情報 {#device-license-info}
+
+デバイスライセンスファイルを読み込むと、次の情報が表示されます。
+
+* <Cmd sid="setting.server.license.name" product='2' />：デバイスライセンスファイルに含まれるライセンスの種類を確認できます。
+
+  * **Camera QR**
+
+    :::note
+
+    「**Camera QR**」を利用できるデバイスは次のとおりです。
+
+    * X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) ファームウェア 1.2.0 以上
+
+    * BioStation 3 (BS3-DB, BS3-APWB) ファームウェア 1.1.0 以上
+
+    :::
+
+  * **ワイヤレスドアロック**
+
+    :::note
+
+    * 対応する OSDP アンテナとワイヤレスドアロックは以下のとおりです。
+
+      * U&Z OSDP アンテナ：CX8936
+
+      * U&Z ワイヤレスドアロック：CX217x（ハンドル）、CX212x（ノブ）
+
+    * 接続予定のワイヤレスドアロックの台数分、最大 12 台までデバイスライセンスを発行できます。
+
+    * デバイスライセンスで接続できるワイヤレスドアロックの最大台数は 12 台です。 複数のデバイスライセンスを有効化しても 12 台を超えることはできません。
+
+    :::
+
+* <Cmd sid="setting.server.license.device.count" product='2' />：デバイスライセンスファイルに含まれるデバイス数を確認できます。
+
+* <Cmd sid="setting.server.license.device.licenseCount" product='2' />：デバイスライセンスで有効化できるワイヤレスドアロックの台数を確認できます。
+
+* <Cmd sid="setting.server.license.device.list" product='2' />：デバイスライセンスファイルに含まれるデバイスの詳細情報を確認できます。
+
+  * <Cmd sid="setting.server.license.device.id" product='2' />：デバイスを識別する固有 ID です。
+
+  * <Cmd sid="setting.server.license.device.name" product='2' />：デバイスの名前です。
+
+  * <Cmd sid="setting.server.license.device.product" product='2' />：デバイスのモデル名です。
+
+  * <Cmd sid="setting.server.license.device.status" product='2' />：デバイスの現在の状態です。 <Cmd sid="setting.server.license.device.list.normal" product='2' /> の状態のデバイスのみライセンスを有効化できます。
+
+    * <Cmd sid="setting.server.license.device.list.normal" product='2' />, <Cmd sid="setting.server.license.device.list.disconnected" product='2' />, <Cmd sid="setting.server.license.device.list.notSupported" product='2' />, <Cmd sid="setting.server.license.device.list.unregistered" product='2' />
+
+    :::note
+
+    デバイスがライセンスの機能をサポートしていないモデル、またはファームウェアバージョンが低い場合、<Cmd sid='setting.server.license.device.status' product='2' /> は <Cmd sid='setting.server.license.device.list.notSupported' product='2' /> と表示されます。 その機能をサポートするモデルとファームウェアバージョンを確認してください。
+
+    :::
+
+  * <Cmd sid="setting.server.license.status" product='2' />：ライセンスの有効化状況です。 <Cmd sid="setting.server.license.device.list.notActivated" product='2' /> の状態のデバイスのみライセンスを有効化できます。
+
+    * <Cmd sid="setting.server.license.device.list.notActivated" product='2' />, <Cmd sid="setting.server.license.device.list.activated" product='2' />, <Cmd sid="setting.server.license.device.list.na" product='2' />
+
+  * <Cmd sid="setting.server.license.device.activatedCount" product='2' />：ワイヤレスドアロックの接続状況です。
+
+:::info
+
+* <Cmd sid="setting.server.license.device.licenseCount" product='2' />, <Cmd sid="setting.server.license.device.activatedCount" product='2' /> 項目は、ワイヤレスドアロックのデバイスライセンスを読み込んだ場合にのみ値が表示されます。
+
+:::

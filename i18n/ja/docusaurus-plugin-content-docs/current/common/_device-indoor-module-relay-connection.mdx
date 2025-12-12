@@ -1,0 +1,127 @@
+## リレー接続
+
+<Include product='corestation_20,doorinterface'>
+
+本製品には Alarm と Lock の 2 種類のリレー端子があり、それぞれを用途に応じて使用できます。
+
+* **Alarm**：警告灯、サイレン、ブザーなどの警報音を鳴らしたり、侵入通知装置を接続できます。
+
+* **Lock**：ストライクロック、マグネティックロックなどの出入口の施錠・解錠用装置を接続できます。
+
+:::caution
+
+マグネティックロックを使用する場合は、ロックの電源を直接接続してください。
+
+:::
+
+</Include>
+
+<Include product='inputmodule'>
+
+本製品のリレーで出入口のロック装置または警報装置を制御できます。 接続する装置のガイドを参照し、リレーを NC または NO に接続してください。
+
+<Image src='/img/device/installation-relay-im120.png' width='75%' className='none' />
+
+</Include>
+
+### Fail Safe Lock
+
+Fail Safe Lock を使用する場合は、下図のように **NC** リレーを接続してください。 Fail Safe Lock は通常、リレー回路に電流が流れており、リレーが動作して電流を一時的に遮断すると出入口が開きます。 停電や外部要因で装置の電源が切れた場合、出入口が開きます。
+
+:::info
+
+<Include product='corestation_20,doorinterface'>
+
+出入口のロック装置が作動する際に発生する逆電流からリレーを保護するため、図のようにロック装置の配線両端付近にダイオードを取り付けてください。 ダイオードの向きに注意し、必ずカソード（ストライプ側）を電源の＋側に接続してください。
+
+</Include>
+
+<Include product='corestation_40,doormodule,inputmodule,securemodule'>
+
+デッドボルトまたはドアストライクを設置する際は、下図のようにダイオードを電源入力の両端に接続してください。 ダイオードの向きに注意し、必ずカソード（ストライプ側）を電源の＋側に接続してください。
+
+</Include>
+
+<Include product='inputmodule'>
+
+マスター装置のリレーポートに接続されている装置には、本製品のリレーを重複して接続しないでください。
+
+</Include>
+
+:::
+
+<Include product='corestation_20,,doorinterface'><Image src='/img/device/installation-relay-fail-safe-lock-cs20.png' width='55%' className='none' /></Include>
+
+<Include product='corestation_40'><Image src='/img/device/installation-relay-fail-safe-lock-cs40.png' width='60%' className='none' /></Include>
+
+<Include product='doormodule'><Image src='/img/device/installation-relay-fail-safe-lock-dm20.png' width='70%' className='none' /></Include>
+
+<Include product='inputmodule'><Image src='/img/device/installation-relay-fail-safe-lock-im120.png' width='60%' className='none' /></Include>
+
+<Include product='securemodule'><Image src='/img/device/installation-relay-fail-safe-lock-sio2.png' width='65%' className='none' /></Include>
+
+<Include product='corestation_20,doorinterface'>
+
+マグネティックロックを使用する場合は、下図のようにロックの電源を Lock 端子の **GND**、**VOUT** に直接接続してください。
+
+<Image src='/img/device/installation-relay-fail-safe-lock-magnetic-cs20.png' width='45%' className='none' />
+
+:::caution
+
+ロックの電源を直接接続する場合、マグネティックロックのみ使用できます。
+
+:::
+
+</Include>
+
+<PageBreak />
+
+### Fail Secure Lock
+
+Fail Secure Lock を使用する場合は、下図のように **NO** リレーを接続してください。 Fail Secure Lock は通常、リレー回路に電流が流れず、リレーが動作して電流が流れると出入口が開きます。 停電や外部要因で装置の電源が切れた場合、出入口が施錠されます。
+
+:::info
+
+<Include product='corestation_20,doorinterface'>
+
+出入口のロック装置が作動する際に発生する逆電流からリレーを保護するため、図のようにロック装置の配線両端付近にダイオードを取り付けてください。 ダイオードの向きに注意し、必ずカソード（ストライプ側）を電源の＋側に接続してください。
+
+</Include>
+
+<Include product='corestation_40,doormodule,inputmodule,securemodule'>
+
+デッドボルトまたはドアストライクを設置する際は、下図のようにダイオードを電源入力の両端に接続してください。 ダイオードの向きに注意し、必ずカソード（ストライプ側）を電源の＋側に接続してください。
+
+</Include>
+
+<Include product='inputmodule'>
+
+マスター装置のリレーポートに接続されている装置には、本製品のリレーを重複して接続しないでください。
+
+</Include>
+
+:::
+
+<Include product='corestation_20,doorinterface'><Image src='/img/device/installation-relay-fail-secure-lock-cs20.png' width='55%' className='none' /></Include>
+
+<Include product='corestation_40'><Image src='/img/device/installation-relay-fail-secure-lock-cs40.png' width='60%' className='none' /></Include>
+
+<Include product='doormodule'><Image src='/img/device/installation-relay-fail-secure-lock-dm20.png' width='70%' className='none' /></Include>
+
+<Include product='inputmodule'><Image src='/img/device/installation-relay-fail-secure-lock-im120.png' width='60%' className='none' /></Include>
+
+<Include product='securemodule'><Image src='/img/device/installation-relay-fail-secure-lock-sio2.png' width='65%' className='none' /></Include>
+
+<Include product='corestation_20,doorinterface'>
+
+マグネティックロックを使用する場合は、下図のようにロックの電源を Lock 端子の **GND**、**VOUT** に直接接続してください。
+
+<Image src='/img/device/installation-relay-fail-secure-lock-magnetic-cs20.png' width='45%' className='none' />
+
+:::caution
+
+ロックの電源を直接接続する場合、マグネティックロックのみ使用できます。
+
+:::
+
+</Include>

@@ -1,0 +1,87 @@
+---
+id: settings-manage-account
+title: 運用権限管理
+description: 登録したユーザーに運用権限を付与し、カスタム権限を追加して設定する方法を案内します。
+keywords:
+  - アカウント
+  - 運用権限
+  - カスタム権限
+---
+
+登録したユーザーに運用権限を付与し、カスタム権限を追加して設定する方法を案内します。 運用権限は、ユーザーが **Biostar X** で実行できる作業を制御する機能です。 **カスタム権限** は、基本の運用権限に加えて追加の権限を設定できる機能です。
+
+## 権限の種類を確認する
+
+<Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。 画面左側のサイドバーで <Cmd sid='setting.menu.account.root' /> をクリックします。 権限制に応じてデフォルトで提供されるアカウントを参照する。
+
+import AccountList from '../../common/_account-list.mdx';
+
+<AccountList />
+
+## ユーザーに運用権限を付与する {#addUserPermission}
+
+一般ユーザーに運用権限を付与する方法を案内します。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.account.root' /> をクリックします。
+
+3. アカウント一覧で目的の項目をクリックする。
+
+4. <Cmd sid='settings.account.addUser' product='2' /> オプションで <Cmd sid='button.plusAdd' product='2' /> をクリックする。
+
+   <Image src='/img/biostarx-settings-account-add-permission.png' caption />
+
+5. ユーザー一覧で運用権限を付与するユーザーを選択する。
+
+6. 目的のユーザーをすべて選択したら、画面下部の <Cmd sid='button.apply' product='2' /> をクリックする。
+
+:::info
+
+* ユーザーが多くて探しにくい場合は <IcSearch /> をクリックして目的のユーザーを検索し、選択できる。
+
+* 運用権限はユーザー情報の追加や変更時にも付与できる。 詳細は [以下](set-permission) を参照する。
+
+* ユーザー情報を追加または変更する際に権限をすでに設定している場合、<Cmd sid='settings.account.addUser' product='2' /> オプションに追加されている。
+
+:::
+
+## 運用権限を除外する
+
+ユーザーに付与した運用権限を除外する方法を案内します。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.account.root' /> をクリックします。
+
+3. アカウント一覧で目的のアカウント種類をクリックする。
+
+4. <Cmd sid='settings.account.addUser' product='2' /> オプションで運用から除外するユーザーの <IcTrash2 /> をクリックする。
+
+   <Image src='/img/biostarx-settings-account-exclude-permission.png' caption />
+
+5. 設定を保存するには、画面最下部の <Cmd sid='button.apply' product='2' /> をクリックします。
+
+## 運用権限の詳細を確認する
+
+<Cmd sid='setting.menu.account.root' /> メニューのアカウント一覧でアカウントをクリックすると、そのアカウントの運用権限の詳細を確認できる。
+
+* <Cmd sid='common.name' product='2' />：選択した運用権限の名前。
+
+* <Cmd sid='settings.accountList.columnDesc' product='2' />：権限の簡単な説明を確認できる。
+
+* <Cmd sid='settings.account.menu.detailSetting' product='2' />：アイテム別に権限が付与されているグループを確認できる。
+
+* <Cmd sid='settings.account.menu.setting' product='2' />：メニューにアクセスできる権限を確認できる。
+
+  * <Cmd sid='common.editRead' product='2' />：該当メニューの項目を追加、編集、削除できる権限を付与します。
+
+  * <Cmd sid='common.read' product='2' />：該当メニューへアクセスし、設定内容を確認のみできる権限を付与します。
+
+* <Cmd sid='settings.account.addUser' product='2' />：権限が付与されているユーザーを確認できる。
+
+:::info
+
+特定ユーザーに権限を付与する方法は [以下](#addUserPermission) を参照する。
+
+:::

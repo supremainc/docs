@@ -1,0 +1,97 @@
+---
+id: settings-schedule
+title: スケジュールを設定する
+description: 入退室および休日スケジュールを設定して、アクセス制御と勤怠管理を効率的に運用してください。
+keywords:
+  - スケジュール
+  - 入退室
+  - 休日
+---
+
+入退室および休日スケジュールを設定し、アクセス制御と勤怠管理を効率的に運用する方法を案内します。 スケジュールはアクセス制御に適用できる重要な要素で、ユーザーの入退室時間と休日を管理できます。
+
+## スケジュール登録 {#addSchedule}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.schedule.root' /> をクリックします。
+
+3. 画面左上の <Cmd sid='button.func.addSchedule' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-settings-schedule-add-btn.png' />
+
+4. <Cmd sid='schedule.addNewSchedule' product='2' /> 画面で各項目を入力または設定します。
+
+   <Image src='/img/biostarx-settings-schedule-add.png' />
+
+5. すべての設定が完了したら、画面下部の <Cmd sid='button.apply' product='2' /> をクリックします。
+
+:::info
+
+<Cmd sid='schedule.addNewSchedule' product='2' /> 画面の各項目の詳細は [次のドキュメント](#addScheduleOptions) を参照してください。
+
+:::
+
+### 新規スケジュール追加オプションの案内 {#addScheduleOptions}
+
+<Cmd sid='schedule.addNewSchedule' product='2' /> 画面で設定できる各項目について説明します。
+
+<Image src='/img/biostarx-settings-schedule-add-extend.png' />
+
+* <Cmd sid='common.name' product='2' />：スケジュール名を入力します。
+
+* <Cmd sid='common.description' product='2' />：スケジュールの簡単な説明を入力します。
+
+* <Cmd sid='common.type' product='2' />：週単位または日単位のスケジュールを選択します。 <Cmd sid='schedule.daily' product='2' /> を選択すると、<Cmd sid='schedule.cycle' product='2' /> と <Cmd sid='schedule.start_date' product='2' /> を選択できます。
+
+  <Image src='/img/biostarx-settings-schedule-add-type-daily.png' />
+
+* 中央エリアの <Cmd sid='shift.timeSegment' product='2' /> をクリックして、希望の時間を設定します。 設定が完了したら、<Cmd sid='button.apply' product='2' /> をクリックします。
+
+  <Image src='/img/biostarx-settings-schedule-input-time-slot.png' />
+
+  * 曜日別・日別の時間スロットは最大5個まで設定できます。
+
+  * スケジュールを設定して <IcTslot /> をクリックすると、直上の時間スロットをコピーできます。
+
+  * 時間スロットを編集するには <IcEditUL /> をクリックします。 設定済みの時間スロットを削除するには <IcEraser /> をクリックします。
+
+* <Cmd sid='schedule.holidaySchedule' product='2' />：休日スケジュールを適用するかどうかを選択します。 項目を選択すると詳細設定を適用できます。
+
+  * <Cmd sid='common.none' product='2' /> セレクトボックスで、事前に設定した休日を選択できます。  休日を追加するには <Cmd sid='button.plusAdd' product='2' /> をクリックし、休日を設定します。
+
+  * **休日時間スロット**：時間スロットをクリックして、休日に適用する時間スロットを設定します。
+
+  :::info
+
+  * 時間スロットを編集するには <IcEditUL /> をクリックします。 設定済みの時間スロットを削除するには <IcEraser /> をクリックします。
+
+  * 追加した休日を削除するには <IcTrash2 /> をクリックします。
+
+  * 休日スケジュールの追加について詳しくは [次のドキュメント](#addHolidaySchedule) を参照してください。
+
+  :::
+
+## 休日スケジュール追加 {#addHolidaySchedule}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.schedule.root' /> をクリックします。
+
+3. 画面左上の <Cmd sid='button.func.addHoliday' product='2' /> をクリックします。
+
+4. <Cmd sid='schedule.addNewHoliday' product='2' /> 画面で <Cmd sid='common.name' product='2' /> と <Cmd sid='common.description' product='2' /> を入力します。
+
+   <Image src='/img/biostarx-settings-schedule-add-holiday.png' />
+
+5. <Cmd sid='common.detail' product='2' /> セクションで <Cmd sid='button.addplus' product='2' /> をクリックします。
+
+6. <IcCalc /> をクリックして日付を選択し、繰り返し回数と期間を設定します。
+
+7. 設定した休日スケジュールを登録するには <Cmd sid='button.apply' product='2' /> をクリックします。
+
+:::info
+
+休日スケジュールを削除するには <IcTrash2 /> をクリックします。
+
+:::

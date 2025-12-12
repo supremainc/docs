@@ -1,0 +1,165 @@
+---
+id: getting-started
+title: はじめに
+description: デバイスを使用するための初期手順を案内します。
+keywords:
+  - 同梱物
+  - 名称
+  - 機能
+  - ケーブル
+  - コネクター
+---
+
+デバイスを使用するための初期手順を案内します。
+
+## 同梱物
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-bew2.svg' className='none' width={90} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-bew2.svg' className='none' width={80} alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>BioEntry W2</Td>
+
+<Td>壁掛けブラケット</Td>
+
+<Td>クイックガイド</Td>
+
+<Td>オープンソースライセンスガイド</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-shrink-tube.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>収縮チューブ</Td>
+
+<Td>固定用ネジ x2</Td>
+
+<Td>ブラケット固定用ネジ（星形）</Td>
+
+<Td>ダイオード</Td>
+
+<Td>120 Ω 抵抗</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## 各部の名称と機能
+
+<Image src='/img/device/name-function-each-part-bew2.png' className='none' width='70%' />
+
+* **LED状態表示灯**：製品の動作状態を表示します。
+
+  * 緑：認証成功
+
+  * 赤：認証失敗
+
+  * 青色／水色が点滅：正常動作中
+
+  * 青／緑点滅：
+
+    * <Cmd sid='ui_012' product='dev' />を有効に設定すると、IP アドレスを取得できない状態
+
+    * <Cmd sid='ui_205' product='dev' /> モードのとき、マスター装置との接続が切断された状態
+
+    * ネットワーク設定を初期化する際
+
+  * 緑色が点滅：入力待機状態
+
+  * 緑色／白色が点滅：Suprema Airfob Pass (BLE) アプリケーションと接続中
+
+* **RFカード・モバイル入退出カードリーダー**：入退出のためにRFカードまたはモバイル入退出カードを読み取る部分です。
+
+* **指紋認識部**：入退室のために指紋を認識する部分です。
+
+* **初期化ボタン**
+
+  * ネットワーク設定を初期化します。 詳細については[ネットワーク設定の初期化](installation#reset-network-settings)を参照してください。
+
+  * デバイスに保存されたすべての情報と証明書を削除し、設定を初期化します。 詳細については[工場出荷時リセット](installation#factory-reset)を参照してください。
+
+* **ネットワーク状態LED**：ネットワーク接続状態を表示します。
+
+* **ケーブル**
+
+  電源 / イーサネット + PoE / RS-485 / Wiegand 入出力 / Input / リレー
+
+### ケーブル
+
+<Columns>
+<Column>
+
+<Image src='/img/device/cables-layout-bew2.svg' alone width={550} className='none' />
+
+</Column>
+<Column className='padding--l10'>
+
+|  ピン |    名称    |      色     |
+| :-: | :------: | :--------: |
+|  1  |  RLY NO  |   灰色 (白線)  |
+|  2  |  RLY COM |   緑色 (白線)  |
+|  3  |  RLY NC  | オレンジ色 (白線) |
+|  4  |    VB2   |    青色／茶色   |
+|  5  |    VB1   |    赤色／緑色   |
+|  6  |   WG D0  |      緑     |
+|  7  |   WG D1  |      白     |
+|  8  |  WG GND  |      黒     |
+|  9  |  INPUT1  |      茶     |
+|  10 |  INPUT0  |      紫     |
+|  11 | PWR +VDC |      赤     |
+|  12 |    未接続   |     ピンク    |
+|  13 |  PWR GND |   黒色 (白線)  |
+|  14 | 485 TRXN |   黄色 (黒線)  |
+|  15 | 485 TRXP |   青色 (白線)  |
+|  16 |  485 GND |   白色 (黒線)  |
+|  17 | ENET TXP |      白     |
+|  18 | ENET TXN |    オレンジ    |
+|  19 | ENET RXP |      黒     |
+|  20 | ENET RXN |      黄     |
+
+</Column>
+</Columns>
+
+:::info
+
+AWG 26 サイズの導体にはさまざまな種類があり、配線時には一般的な被覆または同等の材質で保護する必要があります。 また、リード線が 18 AWG (0.82 mm2) より大きい導体に接触しないよう注意してください。
+
+:::
+
+{/* ## 올바른 지문 입력 방법 */}
+import Enrollfingerprint from '../../common/_enroll-fingerprint.mdx'
+
+<Enrollfingerprint />

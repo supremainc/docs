@@ -1,0 +1,54 @@
+---
+id: ui-user
+title: ユーザー
+description: ユーザーページのユーザーインターフェース (User Interface) について説明します。
+keywords:
+  - ユーザー
+  - UI
+---
+
+<Cmd sid='shell.header.user' /> ページの <Cmd sid='team.sidebar.user' /> メニューでは、ユーザーグループ管理、ユーザー管理、アクセス権別のユーザー確認など、さまざまな機能によりユーザーを効率的に管理し、権限によってセキュリティを強化できます。 <Cmd sid='shell.header.user' /> ページの UI 構成要素は次のとおりです。
+
+<Image src='/img/biostarx-ui-user.png' className='none' />
+
+<Calloutlists>
+
+1. ユーザーグループまたはアクセスグループを確認できます。
+
+   * ユーザーグループの詳細は[次のドキュメント](user-group-manage)を参照してください。
+
+   * アクセスグループの詳細は[次のドキュメント](view-user-by-access)を参照してください。
+
+2. ユーザーグループまたはアクセスグループをツリー構造で確認できます。 ツリーを展開または折りたたみ、各グループをクリックしてそのグループに属するユーザーを確認できます。
+
+3. サイドメニューで選択したユーザーグループのユーザー数を確認できます。
+
+4. ユーザー一覧に表示されているすべてのユーザーを選択するには、<Cmd sid='common.selectAll' /> ボタンをクリックします。 選択したユーザーの数は <Cmd sid='team.user.selected' /> に表示されます。
+
+5. キーワードを入力してユーザーを検索できます。 ユーザー検索の詳細は[次のドキュメント](view-users#user-search)を参照してください。
+
+6. 画面右上のページ移動ボタンをクリックして、次または前のユーザーリストを確認できます。 また、移動したいページを指定することもできます。 詳細については[次のドキュメント](view-users#select-view-options)を参照してください。
+
+7. <Image src='/img/menus/ico-more-white.svg' ico alone /> ボタンをクリックすると、ユーザーに関連するさまざまな機能を使用できます。
+
+   * <Cmd sid='team.menu.export.title' />：ユーザー一覧を CSV ファイルまたは Data ファイル形式で保存できます。 詳細については[次のドキュメント](export-import-user-info)を参照してください。
+
+   * <Cmd sid='team.menu.import.title' />：ユーザー一覧を CSV ファイルまたは Data ファイル形式で読み込んだり、顔認証情報を取り込んだりできます。 詳細については[次のドキュメント](export-import-user-info)を参照してください。
+
+   * <Cmd sid='team.menu.transferToDevice' />：登録したユーザー情報をデバイスへ送信する機能です。 詳細については[次のドキュメント](transfer-user-info-to-device)を参照してください。
+
+   * <Cmd sid='team.menu.faceMigration' />：**BioStar X** の以前のバージョンで登録した顔データを最新アルゴリズムにアップグレードし、認証性能を向上できます。 詳細については[次のドキュメント](migration-face)を参照してください。
+
+   * <Cmd sid='team.menu.columnLayout' />：ユーザー一覧で列ヘッダー項目を変更できます。 詳細については[次のドキュメント](view-users#user-list-column-settings)を参照してください。
+
+   * <Cmd sid='team.menu.print' />：ユーザー一覧を印刷できます。
+
+8. ユーザーの登録、一括編集、削除機能を利用できます。
+
+   * <Cmd sid='common.batchEdit' />：複数ユーザーの情報やアクセス権を一度に修正できます。 詳細については[次のドキュメント](edit-user#user-information-collective-modification)を参照してください。
+
+   * <Cmd sid='common.delete' />：選択したユーザーを削除できます。 詳細については[次のドキュメント](delete-user)を参照してください。
+
+   * <Cmd sid='team.user.newUser' />：新しいユーザーを登録できます。 詳細については[次のドキュメント](add-user)を参照してください。
+
+</Calloutlists>

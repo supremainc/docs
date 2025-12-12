@@ -1,0 +1,60 @@
+---
+id: tna-rule-setting
+title: "勤務規則を設定する "
+description: 勤務スケジュールを時間・日・週単位で設定し、勤怠管理規則を構成する方法を案内します。
+keywords:
+  - 勤務規則
+  - 勤怠管理
+---
+
+勤務スケジュールを時間・日・週単位で設定し、勤怠管理規則を構成する方法を案内します。
+
+勤務規則を初めて登録する場合は、次の順序で設定します。
+
+<Steps>
+<Step>
+
+## <Cmd sid='tab.payCode' product='2' className='bold' />
+
+勤怠記録管理、残業、欠勤に関する時間規則を設定できます。 時間当たりの重み付けを設定でき、ひと目でわかるように色を指定して表示できます。
+
+<Cmd sid='tab.payCode' product='2' className='normal' /> の設定の詳細については [以下の文書](tna-rule-shift-paycode) を参照してください。
+
+</Step>
+<Step>
+
+## <Cmd sid='tab.shift' product='2' className='bold' />
+
+1日（24時間）単位の勤務規則を設定できます。 勤務規則には、時間別の時間規則設定、1日の開始時間設定、時間の丸め規則などが含まれます。
+
+<Cmd sid='tab.shift' product='2' className='normal' /> の設定の詳細については [以下の文書](tna-rule-shift-day) を参照してください。
+
+</Step>
+<Step>
+
+## <Cmd sid='tab.scheduleTemplate' product='2' className='bold' />
+
+設定された 1 日単位の勤務規則で週次勤務規則を設定します。 週別または日別で週次勤務規則を設定します。
+
+<Cmd sid='tab.scheduleTemplate' product='2' className='normal' /> の設定の詳細については [以下の文書](tna-rule-shift-schedule) を参照してください。
+
+</Step>
+<Step>
+
+## <Cmd sid='rule.rule' product='2' className='bold' />
+
+日次勤務規則に残業時間規則を追加していない場合に便利に使用できます。 日次勤務規則で設定する残業は開始時刻と終了時刻を持ちますが、<Cmd sid='rule.rule' product='2' /> は所定勤務時間を超えた合計時間を計算します。 <Cmd sid='rule.rule' product='2' />は日別/週別/月別の総残業時間を管理する際に便利に使用でき、<Cmd sid='rule.rule' product='2' />を設定すると、勤務規則に追加された残業時間規則の代わりに適用されます。
+
+<Cmd sid='rule.rule' product='2' className='normal' /> の設定の詳細については [以下の文書](tna-rule-shift-overtime) を参照してください。
+
+</Step>
+<Step>
+
+## 勤務スケジュール
+
+前のステップで設定した勤務スケジュールを適用する期間、ユーザー、その他の勤務規則、休暇日程を設定できます。
+
+<Cmd sid='ta.schedule' product='2' className='normal' /> の設定の詳細については [以下の文書](tna-rule-schedule) を参照してください。
+
+</Step>
+</Steps>

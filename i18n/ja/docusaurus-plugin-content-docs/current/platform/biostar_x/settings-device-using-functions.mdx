@@ -1,0 +1,49 @@
+---
+id: settings-device-using-functions
+title: デバイス管理機能を利用する
+description: デバイスの再接続、同期、一括編集機能について説明します。
+keywords:
+  - デバイス
+---
+
+**BioStar X** でデバイスのその他の機能を使用する方法を説明します。 デバイスの再接続、同期、情報の一括編集、デバイス削除の機能を提供します。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.device.root' /> をクリックしてください。
+
+3. <Cmd sid='menu.device.allDeviceGroups' product='2' /> リストでデバイスを選択し、右クリックしてください。
+
+4. ポップアップメニューから目的の機能を選択します。
+
+<Image src='/img/biostarx-setting-device-functions.png' />
+
+ポップアップメニューで提供される機能は以下を参照します。 提供される機能はデバイスによって異なる場合があります。
+
+* <Cmd sid='button.reconnect' product='2' />：選択したデバイスを再接続できます。 デバイスを 1 台選択した場合に使用できます。 この機能は **BioStar X** との接続が切れたときに使用できます。
+
+  :::info
+
+  この機能は <Cmd sid='device.info.deviceToServerConnection' product='2' /> オプションで接続されたデバイスではサポートされません。 デバイス登録の詳細は[次のドキュメント](settings-adding-devices#setipaddress)を参照してください。
+
+  :::
+
+* <Cmd sid='button.syncDevice' product='2' />：登録したデバイスと **BioStar X** のすべてのユーザー情報を同期できます。 **BioStar X** のデータベース情報を基準にユーザー情報を同期し、デバイスのみに登録されているユーザー情報は削除します。 ユーザー情報を **BioStar X** にアップロードするには <Cmd sid='button.manageUsersInDevice' product='2' /> 機能を使用します。
+
+* <Cmd sid='device.sync_all' product='2' />：デバイスに保存されているすべての設定情報およびユーザー情報を削除して再送できます。 この機能はデバイス一覧でデバイスを選択し、<IcMoreW /> ボタンをクリックして使用することもできます。
+
+* <Cmd sid='button.manageUsersInDevice' product='2' />：デバイスに登録されているユーザー情報を **BioStar X** にアップロードするか、デバイスから削除できます。 詳細については [次のドキュメント](settings-device-manage-device-users) を参照します。
+
+* <Cmd sid='button.firmwareUpgrade' product='2' />：デバイスのファームウェアを簡単にアップグレードできます。 詳細については [次のドキュメント](settings-device-upgrade-firmware) を参照します。
+
+* <Cmd sid='device.menu.reboot' product='2' />：選択したデバイスを再起動できます。 この機能はデバイスが正常に動作しない場合に使用できます。
+
+* <Cmd sid='button.deleteDevice' product='2' />：選択したデバイスを一覧から削除できます。 出入口または区画として設定されたデバイスは削除できません。
+
+:::info
+
+* <Cmd sid='device.menu.addWiegandDevice' product='2' /> 機能の詳細は [次のドキュメント](settings-adding-wiegand) を参照します。
+
+* <Cmd sid='device.menu.searchSlaveDevice' product='2' /> 機能の詳細は [次のドキュメント](settings-adding-slave-device) を参照します。
+
+:::

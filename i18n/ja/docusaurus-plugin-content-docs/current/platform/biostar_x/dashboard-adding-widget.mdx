@@ -1,0 +1,184 @@
+---
+id: dashboard-adding-widget
+title: ウィジェットを追加
+description: ダッシュボードは、ユーザーが希望する情報を自由に配置できるカスタムモニタリング画面です。
+keywords:
+  - ダッシュボード
+  - ウィジェット
+---
+
+**BioStar X** ダッシュボードは、ユーザーが希望する情報を自由に配置できるカスタムモニタリング画面です。 さまざまなウィジェットを追加して、入退室管理システムの主要情報を業務環境に合わせて構成できます。
+
+追加可能なウィジェットの種類は次のとおりです。
+
+* **チャート**：入退室イベントデータを棒／線／円チャートで可視化
+
+* **カウンター**：日次／週次イベント発生数を数値で表示
+
+* **リアルタイムイベント**：**BioStar X** で発生するすべてのイベントをリアルタイムでモニタリング
+
+* **リアルタイム出入モニタリング**：特定デバイスで認証に成功したユーザー情報をリアルタイム表示
+
+* **システム使用状況**：ユーザー、デバイス、ドアなどの登録状況を数値で表示
+
+* **ドア制御**：選択したドアの状態確認とリモート制御
+
+* **テキスト**：お知らせやウィジェットタイトルなどのカスタムテキストを配置
+
+ダッシュボードに配置したウィジェットによって、次のようなメリットが得られます。
+
+* **カスタム構成**：業務に必要な情報だけを選択し、一画面に配置
+
+* **リアルタイムモニタリング**：入退室イベントとシステム状態を即時確認
+
+* **直感的なビジュアル化**：チャートとカウンターによるデータの視覚的表現
+
+* **効率的な管理**：モニタリングと制御機能を統合し、業務効率を向上
+
+## ウィジェットの追加 {#add-widgets}
+
+<Cmd sid='shell.header.dashboard' /> にウィジェットを追加して、必要な情報を確認できます。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.dashboard' /> をクリックします。
+
+2. <Cmd sid='reportApp.addWidget' product='2' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-dashboard-add-widget.png' />
+
+3. <Cmd sid='reportApp.addNewWidget' product='2' /> ウィンドウが表示されたら、<Cmd sid='reportApp.widgetType' product='2' /> から希望の項目を選択し、必須項目を入力または設定します。
+
+   <Image src='/img/biostarx-dashboard-add-widget-type.png' width={400} />
+
+4. ウィジェットの設定を完了し、<Cmd sid='reportApp.apply' product='2' /> ボタンをクリックします。
+
+5. ウィジェット表示エリアにウィジェットが作成されたら、サイズを調整するか、希望の位置に配置します。
+
+6. すべての設定が完了したら、画面右上の <Cmd sid='reportApp.apply' product='2' /> ボタンをクリックします。
+
+:::info
+
+既にウィジェットが追加されている場合は、画面右上の <IcSet2 /> アイコンをクリックします。 <Cmd sid='reportApp.dashboardSettings' product='2' /> モードに入ったら、<Cmd sid='reportApp.addWidget' product='2' /> ボタンをクリックします。
+
+:::
+
+## ウィジェットの種類 {#widget-types}
+
+* ウィジェットごとにデフォルトサイズが異なり、デフォルト状態で最も見やすいよう最適化されています。
+
+* すべてのウィジェットは右下をドラッグしてサイズを調整できます。
+
+  <Image src='/img/biostarx-adjust-win-size.png' caption />
+
+### チャート {#chart}
+
+任意のチャートデータを選択して発生したイベント数をチャートで表示できます。
+
+<Image src='/img/common/biostarx-chart.png' caption alone />
+
+* <Cmd sid='reportApp.widgetTypes.chartData' product='2' />：日次または週次イベント一覧から希望のチャートデータを選択します。
+
+  * <Cmd sid='reportApp.dailyAccessGranted' product='2' />, <Cmd sid='reportApp.dailyAccessDenied' product='2' />, <Cmd sid='reportApp.dailyCommunicationIssue' product='2' />, <Cmd sid='reportApp.dailyAPBViolation' product='2' />, <Cmd sid='reportApp.weeklyAccessGranted' product='2' />, <Cmd sid='reportApp.weeklyAccessDenied' product='2' />, <Cmd sid='reportApp.weeklyCommunicationIssue' product='2' />, <Cmd sid='reportApp.weeklyAPBViolation' product='2' />
+
+* <Cmd sid='reportApp.chartType' product='2' />：<Cmd sid='reportApp.chartTypes.verticalBar' product='2' />, <Cmd sid='reportApp.chartTypes.horizontalBar' product='2' />, <Cmd sid='reportApp.chartTypes.line' product='2' />, <Cmd sid='reportApp.chartTypes.pie' product='2' /> の中から希望のタイプを選択します。
+
+* <Cmd sid='reportApp.chartColorSchemes' product='2' />：5 つのカラースキームから希望の色を選択します。
+
+:::info
+
+<Cmd sid='reportApp.chartColorSchemes' product='2' /> を選択するときに表示されるチャートの値は実際の値ではなく、プレビュー用の仮の値です。
+
+:::
+
+### カウンター {#bar}
+
+任意のカウンターデータを選択して発生したイベント数を数値で表示できます。
+
+<Image src='/img/common/biostarx-counter.png' caption alone />
+
+* <Cmd sid='reportApp.widgetTypes.counterData' product='2' />：日次または週次イベント一覧から希望のカウンターデータを選択します。
+
+  * <Cmd sid='reportApp.dailyAccessGranted' product='2' />, <Cmd sid='reportApp.dailyAccessDenied' product='2' />, <Cmd sid='reportApp.dailyCommunicationIssue' product='2' />, <Cmd sid='reportApp.dailyAPBViolation' product='2' />, <Cmd sid='reportApp.weeklyAccessGranted' product='2' />, <Cmd sid='reportApp.weeklyAccessDenied' product='2' />, <Cmd sid='reportApp.weeklyCommunicationIssue' product='2' />, <Cmd sid='reportApp.weeklyAPBViolation' product='2' />
+
+### テキスト {#text}
+
+<Cmd sid='shell.header.dashboard' /> のウィジェット領域に、ユーザーが希望するテキストを入力して配置できます。 作成後、必要な位置に配置してウィジェットのタイトルやお知らせなどに利用できます。
+
+<Image src='/img/common/biostarx-text.png' caption alone />
+
+:::info
+
+<Cmd sid='reportApp.widgetTypes.text' product='2' /> ウィジェットを作成するときに <Cmd sid='reportApp.widgetTypes.text.removeBackground' product='2' /> オプションを選択すると、背景に透明度が適用されます。
+
+:::
+
+### リアルタイムイベント {#realtime-events}
+
+**BioStar X**で発生するイベントをリアルタイムで表示します。 特定のイベント、ユーザー、ドア、デバイスをフィルタリングしてイベントを確認できます。
+
+<Image src='/img/biostarx-real-time-event.png' caption />
+
+* <Cmd sid='reportApp.pause' product='2' />：リアルタイムイベントを停止できます。
+
+* <Cmd sid='reportApp.play' product='2' />：停止したリアルタイムイベントを再開できます。
+
+* <Cmd sid='reportApp.clear' product='2' />：認証履歴をすべて削除できます。
+
+:::info
+
+別のページに移動してから再度<Cmd sid='shell.header.dashboard' />に戻ると、リストがクリアされてイベントが再び記録されます。
+
+:::
+
+### リアルタイムアクセス監視 {#real-time-access-monitoring}
+
+1 台のデバイスを選択すると、そのデバイスで認証に成功したユーザーのプロフィール写真と情報（<Cmd sid='reportApp.user' product='2' />, <Cmd sid='reportApp.date' product='2' />, <Cmd sid='reportApp.device' product='2' />）をリアルタイムで表示します。
+
+<Image src='/img/biostarx-checkpoint.png' caption />
+
+* <Cmd sid='reportApp.pause' product='2' />：リアルタイム出入モニタリングを停止できます。
+
+* <Cmd sid='reportApp.play' product='2' />：停止したリアルタイム出入モニタリングを再開できます。
+
+* <Cmd sid='reportApp.clear' product='2' />：認証履歴をすべて削除できます。
+
+:::info
+
+<Cmd sid='reportApp.widgetTypes.checkpoint' product='2' /> には最大 5 名まで記録されます。
+
+:::
+
+### システム使用状況 {#system-usage-status}
+
+BioStar X のさまざまな利用状況を数値で表示します。
+
+<Image src='/img/common/biostarx-system-usage.png' caption alone />
+
+表示可能な <Cmd sid='reportApp.widgetTypes.systemUsage' product='2' /> は次のとおりです。
+
+* <Cmd sid='reportApp.systemUsage.users' product='2' />, <Cmd sid='reportApp.systemUsage.cards' product='2' />, <Cmd sid='reportApp.systemUsage.fingerprint' product='2' />, <Cmd sid='reportApp.systemUsage.visualFace' product='2' />, <Cmd sid='reportApp.systemUsage.face' product='2' />, <Cmd sid='reportApp.systemUsage.qrBarcode' product='2' />, <Cmd sid='reportApp.systemUsage.mobileAccessCard' product='2' />, <Cmd sid='reportApp.systemUsage.devices' product='2' />, <Cmd sid='reportApp.systemUsage.doors' product='2' />, <Cmd sid='reportApp.systemUsage.zones' product='2' />, <Cmd sid='reportApp.systemUsage.accessGroups' product='2' />, <Cmd sid='reportApp.systemUsage.userGroups' product='2' />, <Cmd sid='reportApp.systemUsage.deviceGroups' product='2' />
+
+### ドア制御 {#door-control}
+
+1 つのドアを選択して、そのドアの状態を確認および制御できます。
+
+<Image src='/img/biostarx-door-control.png' caption />
+
+<Cmd sid='reportApp.doorControl.actionsBtn' product='2' /> ボタンで制御できる項目は次のとおりです。
+
+* <Cmd sid='reportApp.doorControl.actions.open' product='2' />, <Cmd sid='reportApp.doorControl.actions.normalize' product='2' />, <Cmd sid='reportApp.doorControl.actions.lock' product='2' />, <Cmd sid='reportApp.doorControl.actions.unlock' product='2' />, <Cmd sid='reportApp.doorControl.actions.clearAlarm' product='2' />, <Cmd sid='reportApp.doorControl.actions.clearAPB' product='2' />
+
+:::info
+
+<Cmd sid='reportApp.widgetTypes.doorControl' product='2' /> ウィジェットの名前はドア名で自動設定され、変更できません。
+
+:::
+
+## ウィジェットデータの更新間隔設定 {#widget-refresh-interval}
+
+ダッシュボードに追加したウィジェットのデータ更新間隔を設定できます。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.dashboard' /> をクリックします。
+
+2. 画面右上の <IcSet2 /> アイコンをクリックします。
+
+3. <Cmd sid='reportApp.dashboardSettings' product='2' /> モードに入ったら、画面下部の一般設定で<Cmd sid='reportApp.autoRefreshInterval' product='2' />を設定します。

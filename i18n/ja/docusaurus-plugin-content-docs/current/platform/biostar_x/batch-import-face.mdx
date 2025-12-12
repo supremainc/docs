@@ -1,0 +1,153 @@
+---
+id: batch-import-face
+title: "顔を一括登録する "
+description: ユーザーの顔を一括登録する方法を説明します。
+keywords:
+  - 顔
+  - 登録
+  - 一括
+  - クレデンシャル
+  - 認証
+---
+
+ユーザーの顔を一括登録する方法を説明します。 CSVファイルのインポート機能を使用するか、ユーザーIDと同じファイル名の顔写真を読み込み登録することで、複数のユーザーの顔を一度に登録できます。 また、複数のユーザーにメールで顔登録リンクを送信し、モバイルデバイスで直接顔を登録させることもできます。
+
+## 開始する前に
+
+顔の一括登録を開始する前に、ユーザーの顔画像を準備してください。 
+
+* 顔画像ファイルはすべて同じフォルダーに保存しておく必要があります。 顔画像ファイル名はユーザーIDと同じである必要があります。
+
+* 対応する画像ファイルのサイズは最大10MBです。
+
+* 対応する画像ファイル形式はJPG、JPEG、PNGです。
+
+## CSVファイルのインポートで登録 {#import-csv}
+
+CSVインポート機能でユーザーの顔を一括登録できます。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.user' /> をクリックします。
+
+2. ユーザー一覧で顔を登録するユーザーのチェックボックスをクリックしてください。 1 人以上のユーザーを選択できます。
+
+3. 画面右上の <IcMoreW /> をクリックし、<Cmd sid='team.menu.export.title' /> → <Cmd sid='team.menu.export.csv' /> を選択します。
+
+4. CSVエクスポートウィンドウが表示されたら、<Cmd sid='common.button.download' /> をクリックしてください。
+
+5. ローカルの任意のパスにCSVファイルを保存します。
+
+6. CSVファイルを開き、`face_image_file1`、`face_image_file2` 列を追加してください。
+
+7. 追加した列に顔画像ファイル名（拡張子を含む）を入力して保存してください。
+
+8. 画面右上の<IcMoreW /> ボタンをクリックし、<Cmd sid='team.menu.import.title' /> → <Cmd sid='team.menu.import.csv' /> を選択します。
+
+9. 編集したCSVファイルを選択してください。
+
+10. CSVインポートウィンドウが表示されたら、<Cmd sid='user.list.csvImport.importStartRow' /> を設定し、<Cmd sid='common.button.next' /> をクリックしてください。
+
+    <Image src='/img/biostarx-user-import-01.png' />
+
+11. すでに **BioStar X** に登録されているユーザーデータを保持するか、CSVファイルの情報で上書きするかを選択し、<Cmd sid='common.apply' /> をクリックしてください。
+
+    <Image src='/img/biostarx-user-import-03.png' />
+
+12. <Cmd sid='user.list.csvImport.visualFaceImageFolder' product='2' /> 項目で <Cmd sid='button.browse' product='2' /> をクリックしてください。
+
+    <Image src='/img/biostarx-new-user-credential-face-import-csv.png' />
+
+13. 顔画像が保存されているパスを選択し、<Cmd sid='button.upload' product='2' /> をクリックしてください。
+
+14. CSVインポートを完了するには、<Cmd sid='common.button.next' /> をクリックしてください。
+
+CSVファイルの情報をインポート中にエラーが発生した場合、エラーが発生したCSVデータのみを再確認してアップロードできます。
+
+:::info
+
+インポートするCSVファイルと顔画像ファイルは同じパスに置くことを推奨します。
+
+:::
+
+## 顔をインポート {#import-face}
+
+ユーザーIDと一致するファイル名の顔写真を読み込み、顔認証用として登録できます。 開始する前にユーザーの顔画像ファイルを準備してください。 顔画像ファイル名はユーザーIDと同じである必要があります。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.user' /> をクリックします。
+
+2. 画面右上の <IcMoreW /> をクリックし、<Cmd sid='team.menu.import.title' /> → <Cmd sid='team.menu.import.face' /> を選択してください。
+
+3. <Cmd sid='user.list.visualFaceImport.title' /> ウィンドウが表示されたら、<Cmd sid='common.button.browse' /> をクリックしてください。
+
+   <Image src='/img/biostarx-new-user-credential-face-import.png' />
+
+4. 顔画像が保存されているパスを選択してください。
+
+5. <Cmd sid='user.list.visualFaceImport.newImport' /> オプションで、顔画像をインポートする方法を選択してください。
+
+   * <Cmd sid='user.list.visualFaceImport.default' />：顔画像ファイル名とユーザーIDが一致する画像をインポートします。
+
+   * <Cmd sid='user.list.visualFaceImport.createUser' />：登録済みのユーザーIDと顔画像ファイル名が一致する場合はその画像をインポートし、一致しない場合はファイル名をユーザーIDとして新規ユーザーを作成し、顔認証手段として登録します。
+
+6. <Cmd sid='user.list.visualFileImport.duplicateUser' /> オプションで、<Cmd sid='user.list.csvImport.duplicateUser.preserve' product='2' /> または <Cmd sid='user.list.csvImport.duplicateUser.overwrite' product='2' /> を選択してください。
+
+   * <Cmd sid='user.list.csvImport.duplicateUser.preserve' />：登録済みユーザーの顔画像を保持します。
+
+   * <Cmd sid='user.list.csvImport.duplicateUser.overwrite' />：登録済みユーザーの顔画像を新しい顔画像で上書きします。
+
+7. インポートした顔画像をプロフィール画像として使用する場合は、<Cmd sid='team.user.credential.visualFace.useAsProfileImage' /> オプションをクリックして有効にしてください。
+
+8. <Cmd sid='common.start' /> をクリックしてください。
+
+顔写真ファイルのインポート中にエラーが発生すると、エラーが発生した写真の一覧が表示されます。 一覧を確認して再試行してください。
+
+:::info
+
+顔画像はユーザーIDごとに1枚のみインポートできます。
+
+:::
+
+## モバイルデバイスで顔を登録 {#mobile-device}
+
+ユーザーにメールで顔登録リンクを送信できます。 ユーザーはモバイルデバイスでそのリンクにアクセスし、顔を直接登録できます。
+
+### 開始する前に
+
+* モバイル顔登録機能を使用する前に、SMTP設定を含むメール情報設定を完了してください。 詳細については [次のドキュメント](settings-email-setting) を参照してください。
+
+* モバイル顔登録機能は <Cmd sid='setting.menu.remoteAccess.root' /> 機能を有効にすると使用できます。 <Cmd sid='setting.menu.remoteAccess.root' /> の詳細は [次のドキュメント](settings-remote-access) を参照してください。
+
+### 顔登録リンクを送信
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.user' /> をクリックします。
+
+2. ユーザー一覧で顔を登録するユーザーのチェックボックスをクリックしてください。 1 人以上のユーザーを選択できます。
+
+3. 画面右上の <IcMoreW /> をクリックし、<Cmd sid='team.menu.sendFaceMobileEnrollLink' /> を選択してください。
+
+   <Image src='/img/biostarx-user-face-mobile-link.png' />
+
+4. メッセージウィンドウが表示されたら、<Cmd sid='common.button.ok' /> をクリックしてください。
+
+   <Image src='/img/biostarx-user-face-mobile-link-warning.png' width='60%' />
+
+選択したユーザーのメールアドレスに顔登録リンクを送信します。 ユーザーがアップロードを完了すると、ユーザー情報に顔情報が追加されます。
+
+:::info
+
+* <Cmd sid='monitoring.auditTrail' product='2' /> でメール送信の成否を確認できます。 詳細については[次のドキュメント](settings-system-audit-trail)を参照してください。
+
+* 顔登録モバイルリンクからアクセスするページに表示される言語は、モバイル端末で使用しているブラウザーの言語設定に従います。
+
+* ユーザーが受信した顔登録モバイルリンクにアクセスすると、以下のように顔登録サービスが起動します。 画面の指示に従って進めてください。
+
+  <Image src='/img/biostarx-new-user-credential-face-mobile-app.png' className='none' />
+
+* 対応する画像ファイルのサイズは最大10MBです。
+
+* 対応する画像ファイル形式はJPG、JPEG、PNGです。
+
+* 送信された顔登録モバイルリンクは24時間後に失効します。
+
+* 顔写真のアップロードが完了し、モバイル顔登録に成功すると、登録成功のメッセージが表示されます。 登録に失敗した場合は、登録失敗メッセージと失敗理由が表示され、ユーザーは別の写真を使用して顔登録を再試行できます。
+
+:::

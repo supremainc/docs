@@ -1,0 +1,133 @@
+---
+id: installation
+title: インストール
+description: インストールに必要な全手順と接続例を提供します。
+keywords:
+  - ブラケット
+  - 電源
+  - ネットワーク
+  - 入力
+  - リレー
+  - スタンドアロン
+  - Secure I/O
+  - Wiegand
+---
+
+インストールに必要な全手順と接続例を提供します。
+
+## ブラケットと製品の固定
+
+1. 製品を取り付ける位置にブラケットを固定ネジでしっかり固定してください。
+
+   <Image src='/img/device/installation-device1-bew2.svg' className='none' alone />
+
+   :::info
+
+   * 製品をコンクリート壁に設置する場合は、ドリルで穴を開けてPVCアンカーを挿入し、固定ネジで固定してください。
+
+   * RF信号干渉を回避するため、最小離隔距離を確認して設置してください。
+
+   <Columns>
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall1-bew2.png' className='none' width='60%' />
+
+   <div className='overflow-x'>
+
+   |  壁の厚さ  |   距離   |
+   | :----: | :----: |
+   | 100 mm | 270 mm |
+   | 120 mm | 250 mm |
+   | 150 mm | 170 mm |
+
+   </div>
+
+   </Column>
+
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall2-bew2.png' className='none' width='60%' />
+
+   </Column>
+   </Columns>
+
+   * モバイルアクセスカードを使用する場合、BLE信号の干渉を回避するため、デバイス間に1 m以上の距離を空けて設置してください。
+
+   * ワイヤレス電子製品は、物理的なクレデンシャルと同じ方法で使用しなければならず、近距離でユーザーデータを送信する必要があります。
+
+   :::
+
+2. 固定したブラケット上に製品を取り付けます。
+
+   <Image src='/img/device/installation-device2-bew2.svg' className='none' alone />
+
+3. 製品固定ネジを締めて、製品とブラケットを組み付けてください。
+
+   <Image src='/img/device/installation-device3-bew2.svg' className='none' alone />
+
+   :::info
+
+   ブラケットと製品を組み立てる際は、セキュリティを向上させるため、製品固定用ネジの代わりに同梱のブラケット固定用ネジ（星形）を使用できます。
+
+   :::
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+{/* ## 네트워크 연결 */}
+import NetworkConnection from "../../common/_device-network-connection.mdx";
+
+<NetworkConnection />
+
+{/* ## Input 연결 */}
+import InputConnection from "../../common/_device-input-connetion.mdx";
+
+<InputConnection />
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-relay-connection.mdx";
+
+<RelayConnectioin />
+
+{/* ## 독립형 연결 */}
+import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
+
+<StandaloneConnection />
+
+{/* 공통 노트 */}
+import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
+
+<CommonNotes />
+
+{/* ## Secure I/O 2 연결 */}
+import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
+
+<SecureIOConnection />
+
+{/* 공통 노트 */}
+
+<CommonNotes />
+
+{/* BEW2 UL향 문구 */}
+:::info
+
+* 本Secure I/O 2接続方法に関する説明は、UL294規格による評価を受けていない内容です。
+
+:::
+
+{/* ## Wiegand 연결 */}
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+{/* ## 네트워크 설정 초기화 */}
+import Resetnetwork from "../../common/_device-reset-network-settings.mdx";
+
+<Resetnetwork />
+
+{/* ## 공장 초기화 */}
+import Factoryreset from "../../common/_device-factory-reset.mdx";
+
+<Factoryreset name='緑' />

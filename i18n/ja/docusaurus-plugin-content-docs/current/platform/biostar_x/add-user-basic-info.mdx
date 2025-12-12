@@ -1,0 +1,116 @@
+---
+id: add-user-basic-info
+title: ユーザー基本情報を入力
+description: ユーザーの基本情報の入力方法について詳しく説明します。
+keywords:
+  - ユーザー
+  - ユーザーグループ
+---
+
+ユーザーの基本情報の入力方法について詳しく説明します。 入力したユーザー情報は検索および管理に使用されます。 ユーザー情報を明確に管理することで、組織のセキュリティポリシーや個人情報保護ポリシーの遵守に役立ちます。
+
+* 氏名、部署、役職、グループなどの基本情報を体系的に入力すると、ユーザーを簡単に検索・分類・管理できます。
+
+* ユーザーの所属、役職、グループ情報に応じて入退室権限を細分化して設定できます。
+
+* ユーザーごとに活動履歴や入退室記録などを正確に追跡できるため、セキュリティおよび監査に有利です。
+
+<Cmd sid='shell.header.launcher' /> → <Cmd sid='shell.header.user' /> ページへ移動し、次の 2 つの方法でユーザー情報を入力できます。
+
+import EnterUserPage from '../../common/_enter-user-page.mdx';
+
+<EnterUserPage />
+
+<Cmd sid='team.user.information' /> セクションで設定できる項目は次のとおりです。 各項目の説明を参照してユーザー情報を入力してください。
+
+<Image src='/img/biostarx-new-user-information.png' />
+
+* **写真**：ユーザーの写真を登録してください。 ウェブカメラで写真を撮影するか、PCから写真をアップロードできます。 プロフィールにマウスを合わせると使用可能なツールが表示されます。
+
+  <Columns>
+  <Column className='width--20'><Image src='/img/common/biostarx-new-user-photo.png' alone /></Column>
+  <Column className='padding--l10'>
+
+  * <IcCamera/>：PC にウェブカメラが接続されている場合、ボタンをクリックして写真を撮影・登録できます。
+
+  * <IcUpload/>：PC に保存されている画像ファイルをアップロードできます。
+
+  詳細については[次の記事](enroll-credential-face#erollbywebcambyphoto)を参照してください。
+
+  </Column>
+  </Columns>
+
+* <Cmd sid='team.user.table.id' />：ユーザーに付与する固有 ID を入力してください。
+
+* <Cmd sid='team.user.table.name' />：ユーザーの氏名を入力してください。
+
+* <Cmd sid='team.user.table.email' />：メールアドレスを入力してください。
+
+* <Cmd sid='team.user.table.phone' />：電話番号を入力してください。
+
+* <Cmd sid='team.user.table.department' />：ユーザーが所属する部署を入力してください。
+
+* <Cmd sid='team.user.table.title' />：ユーザーの役職を入力してください。
+
+* <Cmd sid='team.user.table.group' />：ユーザーのグループを選択してください。 ユーザーグループの追加および管理の詳細については[次の記事](user-group-manage)を参照してください。
+
+* <Cmd sid='team.user.table.period' />：ユーザーアカウントの使用期間を設定してください。 日付および時間フィールドをクリックして直接入力するか、<IcCalc /> ボタンをクリックして希望の日付と時間を選択できます。
+
+* <Cmd sid='team.user.table.status' />：ユーザーアカウントを一時的に無効に設定できます。
+
+入力した基本情報を保存するには、画面右上の <Cmd sid='user.save' product='2' /> ボタンをクリックしてください。
+
+:::info
+
+* <Cmd sid='team.user.table.id' /> は <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.server' /> メニューの <Cmd sid="setting.userDevice.useridType" product='2' /> オプションによって設定できる値が異なる場合があります。 詳細については[次の記事](settings-server-server#userid-type)を参照してください。
+
+  * <Cmd sid="setting.userDevice.useridType.numeric" product='2' />：1 ～ 4294967294 の数字で入力できます。
+
+  * <Cmd sid="setting.userDevice.useridType.alphanumeric" product='2' />：英字と数字を組み合わせて入力できます。
+
+* <Cmd sid='team.user.table.id' /> の値には空白を含めることはできません。
+
+* ユーザー名は特殊記号を含めて最大 48 文字まで入力できます。
+
+  > 特殊記号：`~` `!` `@` `#` `$` `%` `^` `&` `(` `)` `-` `_` `=` `+` `[` `]` `{` `}` `;` <code>\`</code>
+
+* モバイル入退室カードにユーザーの写真、部署、役職を表示するには、必ず写真を追加し、部署と役職を入力してください。
+
+* 役職および部署名は特殊記号 `空白` `_` を含めて最大 64 文字まで入力できます。
+
+* モバイル入退室カードを使用する場合、送信方法によってはメール送信時にユーザーのメールアドレスを必ず入力してください。
+
+* 顔モバイル登録や BioStar X QR を使用するには、必ずユーザーのメールアドレスを入力してください。
+
+:::
+
+:::tip
+
+**BioStar X** が提供する基本入力フィールド以外に追加のユーザー情報を入力する場合は、<Cmd sid='team.userTemplate.table.customField' /> 機能を使用してカスタムフィールドを追加できます。 <Cmd sid='team.userTemplate.table.customField' /> は組織の要件に合わせてユーザー情報を拡張できる便利な機能です。
+
+<Cmd sid='team.userTemplate.table.customField' /> の追加方法の詳細については[次の記事](settings-server-server#custom-field)を参照してください。
+
+:::
+
+<NextStep>
+<NextItem to='enroll-credential'>
+
+<Cmd sid='team.user.credential.title' /> セクションでユーザークレデンシャルを登録し、入退室認証方式を設定します。
+
+</NextItem>
+<NextItem to='set-permission'>
+
+<Cmd sid='team.user.permission.title' /> セクションでユーザーの入退室権限の設定方法を確認します。
+
+</NextItem>
+<NextItem to='set-user-advanced'>
+
+<Cmd sid='common.advanced' product='2' /> セクションでユーザー入退室時にデバイスに表示するメッセージを設定するか、<Cmd sid='settings.activeDirectory.title' product='2' className='normal' /> 連携時に当該ユーザーを同期対象から除外できます。
+
+</NextItem>
+<NextItem to='edit-user'>
+
+ユーザー情報を修正する方法を確認してください。
+
+</NextItem>
+</NextStep>

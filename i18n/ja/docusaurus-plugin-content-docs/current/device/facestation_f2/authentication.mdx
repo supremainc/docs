@@ -1,0 +1,339 @@
+---
+id: authentication
+title: 認証
+description: サポートする認証方式と認証手順について説明します。
+keywords:
+  - 認証モード
+  - 認証オプション
+  - PIN
+  - 顔
+  - 勤怠
+---
+
+サポートする認証方式と認証手順について説明します。
+
+## 認証モード
+
+デバイスの認証モードを設定できます。 顔、指紋、PIN、カード、ID を組み合わせて認証モードとして使用でき、各認証モードごとに利用するスケジュールを設定することもできます。
+
+:::info
+
+指紋認証は FSF2-ODB 製品でのみ使用できます。
+
+:::
+
+### 認証モードの登録 {#registering-auth-mode}
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> → <Image src='/img/common/ico-add2.svg' ico alone /> を押します。
+
+3. <Image src='/img/common/ico-add1.svg' ico alone /> を選択した後、実行する認証方法を選択します。 認証方法を追加で設定する場合は、同じ手順で選択してから組み合わせます。
+
+4. <Cmd sid='ui_203' product='dev' /> を設定します。
+
+   :::info
+
+   * 選択した認証方法を順番にすべて認証するように組み合わせることも、一部のみを選択して認証するように組み合わせることもできます。 例えば、<Image src='/img/common/ico-authmode-card.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone /> の組み合わせでは、カード・顔・PIN のすべてで認証する必要があります。<Image src='/img/common/ico-authmode-card.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone /> の組み合わせでは、カードで認証した後に顔または PIN を入力する必要があります。
+
+   * <Cmd sid='ui_203' product='dev' /> は BioStar X で設定できます。 設定済みのスケジュールがない場合は、<Cmd sid='ui_163' product='dev' /> と <Cmd sid='ui_361' product='dev' /> だけを選択できます。
+
+   * <Cmd sid='ui_203' product='dev' /> の設定について詳しくは、[BioStar X 管理者マニュアル](../../platform/biostar_x/settings-schedule) を参照してください。
+
+   :::
+
+5. 設定を保存するには<Cmd sid='ui_037' product='dev' />を押します。
+
+### 認証モードの編集
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> を押します。
+
+3. 編集する認証モードを選択します。
+
+4. [認証モードの登録](#registering-auth-mode) を参照して認証モードを修正した後、<Cmd sid='ui_037' product='dev' /> を押します。
+
+### 認証モードの削除
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> を押します。
+
+3. <Image src='/img/common/ico-delete.svg' ico alone />をクリックして削除する項目を選択します。 複数選択することもできます。
+
+4. 選択した項目を削除するには、<Cmd sid='ui_037' product='dev' /> を押してから <Cmd sid='ui_367' product='dev' /> を押します。 前の画面に戻るには <Cmd sid='ui_321' product='dev' /> を押してください。
+
+## サーバーマッチング
+
+サーバーマッチングを設定できます。 サーバーマッチングを使用すると、デバイスではなく BioStar X でユーザー認証を実行します。 サーバーマッチングは、デバイスにユーザー情報が多すぎる場合や、デバイスを出入口の外側に設置する場合に便利です。
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_256' product='dev' /> を押してから <Cmd sid='ui_185' product='dev' /> を有効にします。
+
+   * <Badge only>FSF2-ODB</Badge>：<Cmd sid='ui_186' product='dev' />
+
+   * <Badge only>FSF2-DB, FSF2-AB</Badge>：<Cmd sid='ui_187' product='dev' />
+
+:::info
+
+* <Cmd sid='ui_185' product='dev' /> では、指紋・カード・ID だけを使用できます。
+
+* <Cmd sid='ui_185' product='dev' /> を使用する場合は、デバイスと BioStar X の両方でサーバーマッチングを有効にする必要があります。 BioStar X のサーバーマッチング設定の詳細については、[BioStar X 管理者マニュアル](../../platform/biostar_x/settings-server-server#servermatching) を参照してください。
+
+:::
+
+## 顔 {#face}
+
+顔認証に関する設定を変更できます。
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_228' product='dev' /> を選択します。
+
+3. 必要な項目を変更してください。
+
+   <Image src='/img/device/fsf2-auth.png' width={300} />
+
+   * <Cmd sid='ui_308' product='dev' />：デバイスの照明の明るさを手動で調整できます。 <Cmd sid='ui_152' product='dev' /> または <Cmd sid='ui_107' product='dev' /> で明るさを設定するか、<Cmd sid='ui_162' product='dev' /> を選択して照明をオフにできます。
+
+   * <Cmd sid='ui_140' product='dev' />：デバイス周辺の動きを検知する感度を設定します。 <Cmd sid='ui_140' product='dev' /> を <Cmd sid='ui_091' product='dev' /> に設定した場合、顔認証を行うには画面をタッチしてから認証を進めてください。
+
+   * <Cmd sid='ui_115' product='dev' />：設定した時間内に顔を登録できないと、顔登録がキャンセルされます。
+
+   * <Cmd sid='ui_260' product='dev' />：設定した時間内に認証を完了できないと、認証失敗となります。
+
+   * <Cmd sid='ui_117' product='dev' />：顔登録時に重複顔をチェックできます。
+
+   * <Cmd sid='ui_229' product='dev' />：顔認証時にデバイスが顔を検出する領域の位置とサイズを設定できます。
+
+     :::info
+
+     最適な性能を得るために、<Cmd sid='ui_229' product='dev' /> のサブオプションはデフォルト値のまま使用することを推奨します。 各オプションのデフォルト値は次のとおりです。
+
+     * 最大顔回転角度：15
+
+     * 顔認識距離：最小30 cm、最大100 cm
+
+     * 顔認識領域拡張：無効
+
+     :::
+
+   * <Cmd sid='ui_060' product='dev' />：<Cmd sid='ui_060' product='dev' /> を有効にすると、BioStar X で発行された <Cmd sid='ui_340' product='dev' /> を登録できます。 <Cmd sid='ui_340' product='dev' /> は、ユーザーのバイオメトリックテンプレートをモバイル端末に保存するモバイルアクセスカードであり、BioStar X サーバー、Airfob Portal、デバイスにユーザーデータを保存せずにバイオメトリック認証を行えます。
+
+     :::info
+
+     <Cmd sid='ui_340' product='dev' /> の詳細については、[BioStar X 管理者マニュアル](../../platform/biostar_x/enroll-credential-mobile#template-on-mobile) を参照してください。
+
+     :::
+
+   * <Cmd sid='ui_157' product='dev' />：ビジュアルフェイスに実際の画像とテンプレートの両方を保存するか、画像を保存せずテンプレートのみを保存するかを設定できます。 無効にすると、保存されているビジュアルフェイスの画像はすべて削除され、今後登録されるビジュアルフェイスも画像を除いたテンプレートのみ保存されます。
+
+     :::info
+
+     この設定を無効にした後は、BioStar 2 v2.9.7 以上に接続して使用してください。
+
+     :::
+
+   * <Cmd sid='ui_149' product='dev' />：1:N 認証のセキュリティレベルを設定できます。
+
+   * <Cmd sid='ui_278' product='dev' />：顔認証時のデバイス動作モードを設定できます。
+
+     * <Cmd sid='ui_359' product='dev' />：ビジュアルと赤外線の両方でマッチングを行い、顔認証の精度を向上させます。
+
+     * <Cmd sid='ui_159' product='dev' />：ユーザーはデバイスの認証範囲内を歩きながらでも顔認証を行うなど、高速に認証を実施できます。
+
+   * <Cmd sid='ui_247' product='dev' />：写真などの偽造顔を用いたユーザー認証を防止できます。 <Cmd sid='ui_278' product='dev' />を<Cmd sid='ui_359' product='dev' />に設定すると有効になります。
+
+   * <Cmd sid='ui_070' product='dev' />：マスク検出、サーマルカメラ機能など、顔認証に関する高度な設定を変更できます。
+
+     * <Cmd sid='ui_368' product='dev' />：用途に応じて確認モードを設定できます。
+
+     * <Cmd sid='ui_264' product='dev' />：マスク未着用または基準温度超過による認証失敗時の通知有無を設定できます。
+
+     * <Cmd sid='ui_123' product='dev' />：マスク検出の使用有無を設定できます。
+
+       * <Cmd sid='ui_165' product='dev' />：マスクを着用していないユーザーは認証が拒否され、マスク未着用イベントがログに記録されます。
+
+       * <Cmd sid='ui_164' product='dev' />：マスクを着用していないユーザーも認証可能ですが、マスク未着用イベントがログに記録されます。
+
+   * <Cmd sid='ui_236' product='dev' />：サーマルカメラの使用可否を設定できます。
+
+     * <Cmd sid='ui_165' product='dev' />：基準温度範囲を超えたユーザーは認証が拒否され、基準温度超過イベントがログに記録されます。
+
+     * <Cmd sid='ui_164' product='dev' />：基準温度範囲を超えたユーザーも認証可能ですが、温度超過イベントがログに記録されます。
+
+:::info
+
+* <Cmd sid='ui_123' product='dev' /> または <Cmd sid='ui_236' product='dev' />を使用する場合、装置の用途に応じて <Cmd sid='ui_368' product='dev' /> を設定できます。
+
+  * <Cmd sid='ui_267' product='dev' />：認証を実行した後、ユーザーのマスク着用有無を確認または温度を測定します。
+
+  * <Cmd sid='ui_369' product='dev' />：ユーザーのマスク着用有無を確認または温度を測定した後に認証を行います。 このモードを使用すると、マスクを着用していない、または基準温度を超えたユーザーは認証できません。
+
+  * <Cmd sid='ui_370' product='dev' />：装置をマスク着用有無の確認または温度測定専用として使用できます。 このモードを使用すると、認証に関係なく、マスクを着用しているか基準温度以下のユーザーはすべて入場できます。
+
+* <Cmd sid='ui_236' product='dev' />を<Cmd sid='ui_161' product='dev' />に設定すると、サーマルカメラの高度な設定オプションが有効になります。
+
+  * <Cmd sid='ui_196' product='dev' />：温度表示単位を設定できます。
+
+  * <Cmd sid='ui_099' product='dev' />：入場を制限する最低基準温度を設定できます。 表面温度が<Cmd sid='ui_099' product='dev' />より低いユーザーは認証が拒否されます。 <Cmd sid='ui_099' product='dev' />は1℃～45℃の範囲で設定でき、<Cmd sid='ui_106' product='dev' />より高く設定することはできません。
+
+  * <Cmd sid='ui_106' product='dev' />：入室を制限するための最高基準温度を設定します。 表面温度が<Cmd sid='ui_106' product='dev' />より高いユーザーは認証が拒否されます。 <Cmd sid='ui_106' product='dev' />は1℃～45℃の範囲で設定でき、<Cmd sid='ui_099' product='dev' />より低く設定することはできません。
+
+  * <Cmd sid='ui_240' product='dev' />：ユーザーの温度ログを保存するかどうかを設定します。 このオプションを有効にすると、認証の成否とユーザーの温度値の両方がログに保存され、無効にすると認証の成否のみがログに保存されます。
+
+  * <Cmd sid='ui_235' product='dev' />：装置画面に赤外線映像を表示するかどうかを設定できます。
+
+  * <Cmd sid='ui_114' product='dev' />：装置がユーザーの温度を測定する関心領域（ROI）を自動検出するよう設定できます。 たとえば、周囲に他の照明が設置されている場合でも、このオプションを有効にすると、サーマルカメラは照明ではなくユーザーの温度を検知して測定します。
+
+  * <Cmd sid='ui_331' product='dev' />：正確な測定のためにカメラの詳細オプションを設定してください。
+
+* <Cmd sid='ui_236' product='dev' />を<Cmd sid='ui_161' product='dev' />に設定すると、設置環境に応じて正確に測定できるようサーマルカメラの詳細オプションを設定できます。
+
+  * <Cmd sid='ui_243' product='dev' />：ユーザーとサーマルカメラの距離を設定します。
+
+  * <Cmd sid='ui_296' product='dev' />：赤外線放射率を設定します。
+
+  * <Cmd sid='ui_045' product='dev' />、<Cmd sid='ui_046' product='dev' />、<Cmd sid='ui_048' product='dev' />、<Cmd sid='ui_047' product='dev' />：<Cmd sid='ui_114' product='dev' />を<Cmd sid='ui_162' product='dev' />に設定した場合、ROI（関心領域）を手動で設定できます。 ROI の位置とサイズを調整し、熱画像カメラが温度を測定する領域を手動で設定します。 <Cmd sid='ui_045' product='dev' />は関心領域の左右位置を示し、この値を大きくすると領域は画面の右側へ移動します。 <Cmd sid='ui_046' product='dev' />は関心領域の上下位置を示し、この値を大きくすると領域は上側へ移動します。 <Cmd sid='ui_048' product='dev' />と<Cmd sid='ui_047' product='dev' />は関心領域のサイズを示し、両方の値を大きくすると温度を測定する領域が広がります。 たとえば、<Cmd sid='ui_045' product='dev' />、<Cmd sid='ui_046' product='dev' />、<Cmd sid='ui_048' product='dev' />、<Cmd sid='ui_047' product='dev' />の値をデフォルトからそれぞれ40、15、70、40に変更すると、関心領域は以下のように変更されます。
+
+  <Columns>
+  <Column className='text--center'>
+  <Image src='/img/device/auth-roi1.png' width={200} alone />
+
+  ROIをデフォルト値に設定した場合
+
+  </Column>
+  <Column className='text--center'>
+  <Image src='/img/device/auth-roi2.png' width={200} alone />
+
+  ROI X(%), ROI Y(%), ROI 幅(%), ROI 高さ(%)<br/>値をそれぞれ 40、15、70、40 に変更した場合
+
+  </Column>
+  </Columns>
+
+  * <Cmd sid='ui_241' product='dev' />：装置の使用環境と周囲温度を考慮し、サーマルカメラが自動で温度を補正するよう設定できます。
+
+  * <Cmd sid='ui_242' product='dev' />：製品の使用環境に合わせて、温度を一定値だけ高くまたは低く測定するよう補正できます。 たとえば、温度が常に0.1℃高く測定される環境では、温度補正値を-0.1に設定してください。
+
+  * <Cmd sid='ui_017' product='dev' />：サーマルカメラが正常に接続されている場合、そのカメラのファームウェアバージョンが表示されます。
+
+* 最適な性能を得るために、<Cmd sid='ui_331' product='dev' />のサブオプションはデフォルト設定のまま使用することを推奨します。 各オプションのデフォルト値は次のとおりです。
+
+  * <Cmd sid='ui_243' product='dev' />：100
+
+  * <Cmd sid='ui_296' product='dev' />：0.98
+
+  * <Cmd sid='ui_045' product='dev' />：30
+
+  * <Cmd sid='ui_046' product='dev' />：25
+
+  * <Cmd sid='ui_048' product='dev' />：50
+
+  * <Cmd sid='ui_047' product='dev' />：55
+
+  ROI をデフォルト設定値として使用する場合、認証時に画面の ROI 領域に以下のような黄色いガイドが表示されます。 ユーザーがその領域に顔を合わせて認証すると、正確な温度を測定できます。 設定値を手動で変更するか、ダイナミック ROI を設定した場合、黄色いガイドは表示されません。
+
+  <Columns>
+  <Column className='text--center'>
+  <Image src='/img/device/auth-static-roi.png' width={200} />
+
+  ROIをデフォルト値に設定した場合
+
+  </Column>
+  <Column className='text--center'>
+  <Image src='/img/device/auth-dynamic-roi.png' width={200} />
+
+  ROI 設定値を変更するか、ダイナミック ROI を使用する場合
+
+  </Column>
+  </Columns>
+
+* スレーブ装置ではマスク認証およびサーマルカメラ機能を使用できません。
+
+* サーマルカメラは TCM10-FSF2 をサポートしています。
+
+:::
+
+## 指紋 <Badge only>FSF2-ODB</Badge> {#fingerprint}
+
+指紋認証に関する設定を変更できます。
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_312' product='dev' /> を選択します。
+
+3. 必要な項目を変更してください。
+
+   <Image src='/img/device/auth-fingerprint.png' width={300} />
+
+   * <Cmd sid='ui_149' product='dev' />：1:N 認証のセキュリティレベルを設定できます。
+
+   * <Cmd sid='ui_130' product='dev' />：指紋マッチング時の待機時間を設定できます。 設定した時間内に認証が完了しない場合、認証は失敗します。
+
+   * <Cmd sid='ui_254' product='dev' />：指紋をスキャンしたときに元画像を表示できます。
+
+   * <Cmd sid='ui_197' product='dev' />：指紋センサーの感度を設定できます。 より精密な指紋情報を取得するには、センサー感度を高く設定してください。
+
+   * <Cmd sid='ui_003' product='dev' />：指紋認証速度を設定できます。 <Cmd sid='ui_275' product='dev' /> を選択すると、端末に登録されている指紋テンプレートの総数に応じて認証パフォーマンスが設定されます。
+
+   * <Cmd sid='ui_342' product='dev' />：指紋テンプレート形式を設定できます。 <Cmd sid='ui_057' product='dev' />がデフォルトで設定されています。テンプレート形式を変更すると、以前に保存されたすべての指紋が使用できなくなるため、変更時は注意してください。
+
+   * <Cmd sid='ui_198' product='dev' />：<Cmd sid='ui_277' product='dev' /> に設定すると、指紋センサーがユーザーの指を検知して起動します。 <Cmd sid='ui_362' product='dev' /> に設定すると、指紋をスキャンしていないときでも常にセンサーがオンになります。
+
+   * <Cmd sid='ui_249' product='dev' />：偽造指紋検出レベルを設定できます。 偽造指紋検出レベルを高く設定すると、実際の指紋に対する拒否率も高くなる場合があります。
+
+   * <Cmd sid='ui_116' product='dev' />：高品質な指紋情報を保存するために、スキャンした指紋の品質を検査できます。 有効にすると、指紋品質が低い場合にユーザーへ通知し、正しくスキャンできるよう支援します。
+
+   * <Cmd sid='ui_118' product='dev' />：指紋登録時に重複指紋かどうかを検査できます。
+
+## 勤怠
+
+勤怠モードの登録方法を設定できます。
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_079' product='dev' /> を選択します。
+
+3. 必要な項目を設定してください。
+
+   <Image src='/img/device/auth-tna.png' width={300} />
+
+   * <Cmd sid='ui_083_list' product='dev' />：勤怠モードの使用方法を設定できます。
+
+   * <Cmd sid='ui_086' product='dev' />：勤怠イベントを登録できます。 勤怠イベントを登録するには、<Cmd sid='ui_086' product='dev' /> → <Image src='/img/common/ico-add2.svg' ico alone /> を選択し、画面に表示するアイコン、勤怠イベント名、スケジュールを設定してください。
+
+   * <Cmd sid='ui_082' product='dev' />：ユーザーが認証する際に必ず勤怠イベントを選択するよう設定できます。 <Cmd sid='ui_083_list' product='dev' /> を <Cmd sid='ui_199' product='dev' /> に設定したときに使用できます。
+
+   * <Cmd sid='ui_081' product='dev' />：管理者が選択した勤怠イベントのみ使用するよう設定できます。 <Cmd sid='ui_083_list' product='dev' /> を <Cmd sid='ui_071' product='dev' /> に設定したときに使用できます。
+
+   * <Cmd sid='ui_279' product='dev' />：作業コードの使用有無を選択できます。
+
+## 認証結果表示オプション
+
+認証結果表示オプションを設定できます。
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_256' product='dev' /> を選択します。
+
+3. <Cmd sid='ui_259' product='dev' /> で目的の項目を設定します。
+
+   <Image src='/img/device/auth-result-display-option.png' width={300} />
+
+   * <Cmd sid='ui_169' product='dev' />：デバイスの認証結果画面でユーザー ID の表示方法を選択できます。
+
+     * <Cmd sid='ui_307' product='dev' />：ユーザー ID をすべて表示します。
+
+     * <Cmd sid='ui_316' product='dev' />：ユーザー ID の先頭文字のみ表示します。
+
+     * <Cmd sid='ui_357' product='dev' />：ユーザー ID を表示しません。
+
+   * <Cmd sid='ui_177' product='dev' />：デバイスの認証結果画面でユーザー名の表示方法を選択できます。
+
+     * <Cmd sid='ui_307' product='dev' />：ユーザー名をすべて表示します。
+
+     * <Cmd sid='ui_316' product='dev' />：ユーザー名の先頭文字のみ表示します。
+
+     * <Cmd sid='ui_357' product='dev' />：ユーザー名を表示しません。

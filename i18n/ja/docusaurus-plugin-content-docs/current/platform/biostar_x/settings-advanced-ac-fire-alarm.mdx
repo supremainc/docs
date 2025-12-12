@@ -1,0 +1,70 @@
+---
+id: settings-advanced-ac-fire-alarm
+title: 火災警報
+description: 火災警報の設定方法を案内します。 火災警報は、火災発生時にすべてのドアまたはエレベーターを開放または施錠するように設定する機能です。
+keywords:
+  - 高度なアクセス制御
+  - 火災警報
+---
+
+火災警報の設定方法を案内します。 火災警報は、火災発生時にすべてのドアまたはエレベーターを開放または施錠するように設定する機能です。
+
+## 火災警報を登録する {#addFireAlarm}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.advancedAc.root' /> をクリックします。
+
+3. <Cmd sid='button.func.addZone' product='2' /> ボタンをクリックします。
+
+4. <Cmd sid='zone.fireAlarm' product='2' /> を選択し、<Cmd sid='button.apply' product='2' /> をクリックします。
+
+5. <Cmd sid='common.info' product='2' /> セクションで、追加する火災警報の名前を入力します。
+
+   <Image src='/img/biostarx-settings-adv-ac-add-fire-alarm.png' />
+
+6. <Cmd sid='common.setting' product='2' /> セクションで、火災警報の詳細項目を設定します。 詳しくは [次のドキュメント](#setting) を参照してください。
+
+7. <Cmd sid='common.alarm' product='2' /> セクションで、火災警報が発生したときに実行する動作を設定します。
+
+8. すべての設定が完了したら、画面下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+:::info
+
+<Cmd sid='common.alarm' product='2' />セクションは、<Cmd sid='zone.pause.doorselected' product='2' />を設定すると使用できます。
+
+:::
+
+## 設定オプションの案内 {#setting}
+
+火災警報設定の詳細項目は次のとおりです。
+
+* <Cmd sid='zone.globalZone' product='2' />：適用範囲を設定します。
+
+  * <Cmd sid='zone.globalZone.local' product='2' />：入室デバイスと RS-485 で接続されたデバイスのみ設定できます。
+
+  * <Cmd sid='zone.globalZone.global' product='2' />：**BioStar X** に登録されているすべてのデバイスに設定できます。
+
+* <Cmd sid='zone.pause.activatedAndDeactivated' product='2' />：設定を有効化または一時的に無効化できます。
+
+* <Cmd sid='zone.pause.doorselected' product='2' />：火災警報ルールを適用するドアを選択します。
+
+* <Cmd sid='zone.pause.liftselected' product='2' />：火災警報ルールを適用するエレベーターを選択します。
+
+* <Cmd sid='zone.deviceInput' product='2' />：<Cmd sid='button.addplus' product='2' /> をクリックし、火災警報信号を発生させるデバイスを設定します。
+
+:::info
+
+* <Cmd sid='zone.globalZone' product='2' /> オプションを <Cmd sid='zone.globalZone.local' product='2' /> に設定すると、ドアまたはエレベーターのいずれか一方にのみ火災警報機能を設定できます。
+
+* <Cmd sid='zone.globalZone' product='2' /> オプションを <Cmd sid='zone.globalZone.global' product='2' /> に設定すると、ドアとエレベーターの両方に同時に火災警報機能を設定できます。
+
+* デバイス登録の詳細は、以下のドキュメントを参照してください。
+
+  * <DocLink docId='platform/biostar_x/settings-adding-devices' />
+
+  * <DocLink docId='platform/biostar_x/settings-adding-wiegand' />
+
+  * <DocLink docId='platform/biostar_x/settings-adding-slave-device' />
+
+:::

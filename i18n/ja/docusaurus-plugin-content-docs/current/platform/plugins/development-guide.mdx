@@ -1,0 +1,205 @@
+---
+id: development-guide
+title: 開発ガイド
+description: BioStar X プラグインの実際の開発方法と実装例を提供します。
+keywords:
+  - プラグイン開発
+  - エンドポイント
+  - セッションブリッジ
+  - 暗号化
+---
+
+BioStar X と連携するプラグインの実際の開発方法と実装例を案内します。
+
+## 必須エンドポイントの実装
+
+BioStar X と連携するプラグインを開発するには、次の 2 つのエンドポイントを必ず実装する必要があります。 本ドキュメントでは `/bsx` を例示のパスとして使用します。
+
+### プラグイン登録エンドポイント
+
+<Badge className='get'>GET</Badge> `/bsx`
+
+これは、プラグインを登録する際に BioStar X Service Manager がサーバーのアクセス性を確認するために呼び出すエンドポイントです。
+
+#### リクエスト形式
+
+```http
+GET /bsx
+Headers:
+    X-BioStar-Ping: <ping_token>
+```
+
+#### 実装要件
+
+```python title="Python FastAPI"
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
+
+app = FastAPI()
+
+@app.get("/bsx")
+async def bsx_ping(request: Request):
+    """BioStar X プラグイン登録用 ping エンドポイント"""
+    ping_token = request.headers.get("x-biostar-ping")
+    # 応答で ping トークンを返す
+    response_data = {"token": ping_token}
+    response = JSONResponse(content=response_data)
+    return response
+```
+
+#### レスポンス形式
+
+```json title="Success (200 OK)"
+{
+    "token": "<ping_token_value>"
+}
+```
+
+#### テスト
+
+`curl` コマンドを使用してエンドポイントを手動でテストできます。
+
+```bash
+curl -H "X-BioStar-Ping: test123" http://localhost:8000/bsx
+```
+
+### ユーザー認証コールバックエンドポイント
+
+<Badge className='post'>POST</Badge> `/bsx`
+
+ユーザーが BioStar X の Web インターフェイスでプラグインアイコンをクリックすると呼び出されるエンドポイントです。 この過程で、BioStar X にログインしているユーザーのセッションを要求し、応答を受け取ります。 
+
+:::info
+
+BioStar X とプラグイン間の安全な通信には証明書が必要です。 証明書はプラグイン登録後、該当プラグインの詳細ページからダウンロードできます。 詳細については [次のドキュメント](registration-guide#register-plugin) を参照してください。
+
+:::
+
+#### リクエスト形式
+
+```http
+POST /bsx
+Content-Type: application/x-www-form-urlencoded
+
+user_id={user_id}&plugin_id={plugin_id}
+```
+
+#### 実装要件
+
+1. **パラメーター検証**：`user_id` と `plugin_id` の必須値を確認
+
+2. **AES キー生成**：セキュア通信用の 32 バイトキーを生成
+
+3. **キー暗号化**：RSA 公開鍵で AES キーを暗号化（例では `public_key.pem` というファイル名を想定）
+
+4. **セッションブリッジ要求**：BioStar X サーバーにセッションを要求
+
+5. **セッション復号**：受信した暗号化されたセッション ID を AES で復号
+
+```python
+import uuid
+import requests
+from fastapi import HTTPException, Form
+
+@app.post("/bsx")
+async def bsx_callback(
+    request: Request,
+    user_id: str = Form(None, description="ユーザー ID"),
+    plugin_id: str = Form(None, description="プラグイン ID")
+):
+    """BioStar X プラグインコールバック処理"""
+    # 1. 必須パラメーター検証
+    if not user_id:
+      raise HTTPException(status_code=400, detail="user_idが必要です")
+    if not plugin_id:
+      raise HTTPException(status_code=400, detail="plugin_idが必要です")
+    
+    # 2. セキュア通信用の AES キー生成
+    key = uuid.uuid4().hex # 32バイトキー
+    
+    # 3. RSA 公開鍵でキーを暗号化
+    encrypted_key = encrypt_with_public_key(key, "public_key.pem")
+    
+    # 4. BioStar サーバーにセッションブリッジ要求
+    payload = {
+        "user_id": user_id,
+        "plugin_id": plugin_id,
+        "key": encrypted_key
+    }
+
+    response = requests.post(
+        f"https://{BIOSTAR_SERVER}/api/session/bridge",
+        json=payload,
+        verify=False
+    )
+
+    # 5. 応答処理
+    if response.status_code == 200:
+        data = response.json()
+        if data.get("Response", {}).get("code") == "0":
+            # セッション ID 復号
+            encrypted_session = data.get("bs_session_id")
+            bs_session_id = decrypt_aes256_base64(encrypted_session, key)
+        else:
+            # BioStar X エラー処理
+            error_msg = data.get("Response", {}).get("message", "不明なエラー")
+            raise HTTPException(status_code=400, detail=f"BioStar X エラー: {error_msg}")
+    else:
+        raise HTTPException(status_code=500, detail="BioStar X サーバー接続失敗")
+```
+
+#### テスト
+
+`curl` コマンドを使用してエンドポイントを手動でテストできます。
+
+```bash
+curl -X POST http://localhost:8000/bsx \
+    -H "Content-Type: application/x-www-form-urlencoded" \
+    -d "user_id={user_id}&plugin_id={your_plugin_id}"
+```
+
+## 暗号化の実装
+
+次の暗号化関数を実装する必要があります。
+
+### RSA 公開鍵暗号化
+
+```python
+from cryptography.hazmat.primitives import serialization, padding
+import base64
+
+def encrypt_with_public_key(message: str, public_key_path: str) -> str:
+    """RSA 公開鍵でメッセージを暗号化"""
+    with open(public_key_path, 'rb') as key_file:
+        public_key = serialization.load_pem_public_key(key_file.read())
+    
+    message_bytes = message.encode('utf-8')
+    encrypted = public_key.encrypt(message_bytes, padding.PKCS1v15())
+    return base64.b64encode(encrypted).decode('utf-8')
+```
+
+### AES-256 復号
+
+```python
+from Crypto.Cipher import AES
+from Crypto.Util.Padding import unpad
+import base64
+
+def decrypt_aes256_base64(encrypted_data: str, key: str) -> str:
+    """AES-256 で暗号化された Base64 文字列を復号"""
+    key_bytes = key.encode('utf-8')
+    
+    # 32バイトキー保証
+    if len(key_bytes) != 32:
+        if len(key_bytes) < 32:
+            key_bytes = key_bytes.ljust(32, b'\0')
+        else:
+            key_bytes = key_bytes[:32]
+    
+    cipher_text = base64.b64decode(encrypted_data)
+    iv = key_bytes[:16]  # 最初の16バイトをIVとして使用
+    
+    cipher = AES.new(key_bytes, AES.MODE_CBC, iv)
+    decrypted = unpad(cipher.decrypt(cipher_text), AES.block_size)
+    return decrypted.decode('utf-8')
+```

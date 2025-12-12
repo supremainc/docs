@@ -1,0 +1,79 @@
+---
+id: settings-access-control-manage-access-level
+title: アクセスレベルを管理する
+description: ドアを通行できる時間を設定してアクセスレベルとして登録します。
+keywords:
+  - 入退室レベル
+---
+
+アクセスレベルとは、ユーザーが通行できる時間を設定し、その時間内にドアを出入りできる権限です。 アクセスレベルはアクセスグループを設定するうえでの主要要素です。
+
+## 開始前に {#beforeStart}
+
+* アクセスレベルを登録する前にドアを設定します。 ドア登録の詳細については [次のドキュメント](settings-door-add) を参照してください。
+
+* スケジュール設定で、アクセスレベルに適用する時間をあらかじめ定義できます。 スケジュール設定の詳細は[次のドキュメント](settings-schedule)を参照してください。
+
+## アクセスレベルを追加する {#addAccessLevel}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.accessControl.root' /> をクリックします。
+
+3. <Cmd sid='button.func.addAccessLevel' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-settings-access-level.png' />
+
+4. <Cmd sid='accessGroup.addNewAccessLevel' product='2' /> 画面で <Cmd sid='common.name' product='2' /> と <Cmd sid='common.description' product='2' /> を入力します。
+
+   <Image src='/img/biostarx-settings-add-access-level.png' />
+
+5. <Cmd sid='common.door' product='2' /> 項目で、アクセスレベルに適用するドアを選択します。
+
+6. <Cmd sid='common.schedule' product='2' /> 項目で、アクセスレベルに適用するスケジュールを選択します。
+
+7. 画面下部の <Cmd sid='button.apply' product='2' /> をクリックしてアクセスレベルを登録します。
+
+:::info
+
+* アクセスレベルはアクセスグループごとに最大128件まで登録できます。
+
+* <Cmd sid='common.door' product='2' /> と <Cmd sid='common.schedule' product='2' /> 項目で <IcSearch /> をクリックして、目的のドアとスケジュールを検索します。
+
+* <Cmd sid='common.door' product='2' /> と <Cmd sid='common.schedule' product='2' /> 項目で追加した項目を削除するには <IcTrash2 /> をクリックします。
+
+* 目的のドアが見つからない場合は、新しいドアを登録します。 ドア登録の詳細については [次のドキュメント](settings-door-add) を参照してください。
+
+* 目的のスケジュールがない場合は、<Cmd sid='button.plusAddSchedule' product='2' /> をクリックして追加します。 スケジュール設定の詳細は[次のドキュメント](settings-schedule)を参照してください。
+
+:::
+
+## アクセスレベルを編集する {#editAccessLevel}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.accessControl.root' /> をクリックします。
+
+3. <Cmd sid='access_control.tab.access_level' product='2' /> タブをクリックします。
+
+   <Image src='/img/biostarx-settings-access-level-tab.png' />
+
+4. アクセスレベルリストで編集するアクセスレベルをクリックします。
+
+5. 必要な項目を編集します。
+
+6. 編集が完了したら、画面下部の <Cmd sid='button.apply' product='2' /> をクリックします。
+
+## アクセスレベルを削除する {#deleteAccessLevel}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.accessControl.root' /> をクリックします。
+
+3. <Cmd sid='access_control.tab.access_level' product='2' /> タブをクリックします。
+
+4. アクセスレベルリストで削除するアクセスレベルのチェックボックスをクリックします。
+
+5. 画面右上の <Cmd sid='button.deleteAccessLevel' product='2' /> をクリックします。
+
+<Image src='/img/biostarx-settings-delete-access-level.png' />

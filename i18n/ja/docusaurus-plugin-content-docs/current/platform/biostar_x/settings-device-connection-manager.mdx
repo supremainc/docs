@@ -1,0 +1,85 @@
+---
+id: settings-device-connection-manager
+title: デバイス接続管理を設定する
+description: BioStar Xで通信サーバーを介して多数のデバイスを接続し管理する方法を案内します。 最大3,000台のネットワークデバイスを複数のサーバーに分散して管理できます。
+keywords:
+  - デバイス接続マネージャー
+  - Communication サーバー
+  - 設定
+---
+
+**BioStar X** の <Cmd sid='settings.deviceConnectionManager.settingMenuTitle' product='2' /> は、企業や大型ビルで多数のデバイスを効率的に管理するために作られた機能です。 従来は1台のサーバーで最大1,000台のデバイスしか接続できませんでしたが、現在は **Communication** サーバーを複数のコンピューターにインストールすることで、最大3,000台のネットワークデバイスを管理できます。
+
+:::info
+
+* この機能は **Device Manager** ライセンスを有効化すると利用できます。 ライセンスポリシーの詳細は [以下](licensing) を参照してください。
+
+* Communication サーバーの仕様とインストールの詳細については次のドキュメントを参照してください。
+
+  * [Communication サーバーの仕様](system-requirements#communication-server)
+
+  * [Communication サーバーのインストール案内](install-communication-server)
+
+:::
+
+## 主な機能
+
+* **サーバー拡張**：メインコンピューター以外の追加コンピューターに通信サーバーをインストールし、より多くのデバイスを接続できます。
+
+* **複数サーバー運用**：最大3台のサーバーを併用して合計3,000台のデバイスをサポートします。
+
+* **便利なデバイス管理**：新しいデバイスを追加する際に接続先サーバーを選択でき、既存デバイスを別のサーバーへ移動することもできます。
+
+* **大規模環境サポート**：大規模な事業所や建物で必要とされる多数のデバイスを安定して運用できます。
+
+Communication サーバーは、BioStar X の統合サーバーからデバイス接続機能のみを分離した専用サービスです。 デバイスとの安定した通信に特化し、システム全体のパフォーマンスを向上させます。
+
+## 別のサーバーへデバイスを移動する
+
+メインサーバーまたは別の Communication サーバーに登録されているデバイスを、別の Communication サーバーへ移動できます。 この機能により、デバイスの接続状態を維持したままサーバー間でデバイスを移動できます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.deviceConnectionManager' /> をクリックします。
+
+3. 左側の <Cmd sid='settings.deviceConnectionManager.followerSelectLabel' product='2' /> 項目で、移動したいデバイスが登録されているサーバーを選択します。
+
+   <Image src='/img/biostarx-setting-device-connection-manager-01.png' />
+
+4. 右側の <Cmd sid='settings.deviceConnectionManager.selectedSelectLabel' product='2' /> 項目で、デバイスを移動する宛先サーバーを選択します。
+
+   <Image src='/img/biostarx-setting-device-connection-manager-02.png' />
+
+5. デバイス一覧から移動するデバイスを選択します。 複数のデバイスを選択できます。
+
+   <Image src='/img/biostarx-setting-device-connection-manager-03.png' />
+
+   :::note
+
+   特定のデバイスを検索するには、上部の入力フィールドにキーワードを入力します。 デバイス名やシリアル番号で検索できます。
+
+   :::
+
+6. デバイスを宛先サーバーへ移動するには、<Cmd sid='settings.deviceConnectionManager.moveButtonTitle' product='2' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-setting-device-connection-manager-04.png' />
+
+7. メッセージウィンドウで移動するデバイス総数、TCP/IP 接続デバイス数、移動先サーバーの名前と IP アドレスを確認します。
+
+8. <Cmd sid='button.yes' product='2' /> ボタンをクリックします。
+
+移動が完了すると、メッセージウィンドウで移動されたデバイス総数、TCP/IP 接続デバイス数、移動先サーバーの名前と IP アドレスを確認できます。 
+
+移動に失敗したデバイスがある場合、メッセージウィンドウで失敗したデバイス数と TCP/IP 接続デバイス数を確認できます。 移動に失敗したデバイスの一覧と失敗理由を CSV ファイルで確認するには、<Cmd sid='button.download' product='2' /> ボタンをクリックします。
+
+:::info
+
+* 接続された拡張サーバーがない場合、画面右側の <Cmd sid='settings.deviceConnectionManager.selectedSelectLabel' product='2' /> は表示されません。
+
+* サーバーを選択すると、そのサーバーに登録されている Wiegand や RS-485 接続デバイスを含むすべてのデバイスを確認できます。
+
+* デバイスまたはデバイスグループを選択すると、デバイスに接続された子デバイスやグループに含まれるデバイスも一緒に移動します。
+
+* TCP/IP 通信で接続していないデバイスは移動できません。
+
+:::

@@ -1,0 +1,155 @@
+## マスター管理者を設定する
+
+<Cmd sid='ui_128' product='dev' /> 機能は、デバイスの全面的な管理者権限を強化し、デバイスのセキュリティを向上させ、不正アクセスや設定変更をブロックするための機能です。 新しいデバイスでは、この機能を通じて必ず **マスター管理者を登録** する必要があり、登録されたマスター管理者のみが管理メニューに入りデバイス設定を変更できます。
+
+:::note
+
+**マスター管理者とは?**
+
+* デバイスに管理者を設定せずに使用すると、誰でも管理メニューに入りデバイス設定を変更できます。 マスター管理者機能は、このようなセキュリティ脆弱性を解決するために、全体管理者の設定を強制する機能です。
+
+* マスター管理者は直接削除できず、<Cmd sid='ui_072' product='dev' /> のときにのみ削除されます。
+
+:::
+
+### 新しいデバイスでマスター管理者を登録する
+
+新しいデバイスでは、最初から <Cmd sid='ui_128' product='dev' /> の登録が必須であり、登録しない場合はデバイスの使用が制限されます。
+
+:::info
+
+* 新しいデバイスでは、初回起動時に <Cmd sid='ui_128' product='dev' /> 登録画面が表示されます。 <Cmd sid='ui_128' product='dev' /> を登録しないと次の画面に進めません。
+
+* BioStar Xと接続してデバイス全体の管理者を割り当てても、<Cmd sid='ui_128' product='dev' /> を登録しなければすべての機能を利用できません。
+
+* 新しいデバイスはファームウェアをダウングレードできません。
+
+:::
+
+<Include product='biostation_3'>
+
+1. 新しいデバイスを初回起動すると <Cmd sid='ui_128' product='dev' /> 登録画面が表示されます。
+
+   <Image src='/img/how-to/setting-master-admin-1.png' width='300px' />
+
+</Include>
+
+<Include product='xstation_2'>
+
+1. 新しいデバイスを初回起動すると <Cmd sid='ui_128' product='dev' /> 登録画面が表示されます。
+
+   <Image src='/img/device/xs2-master-admin-setting-main.png' />
+
+</Include>
+
+<Include product='biolite_n2'>
+
+1. 新しいデバイスを初回起動すると <Cmd sid='ui_128' product='dev' /> 登録画面が表示されます。 登録を開始するには **OK** を押してください。
+
+   <Image src='/img/device/bln2-master-admin-setting-main.png' />
+
+</Include>
+
+<Include product='biostation_2a'>
+
+1. 新しいデバイスを初回起動すると <Cmd sid='ui_128' product='dev' /> 登録画面が表示されます。 登録を開始するには **OK** を押してください。
+
+   <Image src='/img/device/bs2a-master-admin-setting-main.png' />
+
+</Include>
+
+2. <Cmd sid='ui_128' product='dev' /> を登録するには、少なくとも2種類以上のクレデンシャルを登録する必要があります。 必要な2種類のクレデンシャルを選択して登録してください。
+
+   <Include product='biostation_3'><Image src='/img/how-to/setting-master-admin-2.png' width='300px' /></Include>
+
+   <Include product='biolite_n2'><Image src='/img/device/bln2-master-admin-setting-credential1.png' /></Include>
+
+   <Include product='biostation_2a'><Image src='/img/device/bs2a-master-admin-setting-credential1.png' /></Include>
+
+   <Include product='xstation_2'><Image src='/img/device/xs2-master-admin-setting-credential1.png' /></Include>
+
+   <Cmd sid='ui_128' product='dev' /> に登録できるクレデンシャルは次のとおりです。
+
+   <Table>
+     <Tbody>
+     <Row>
+       <Th>クレデンシャルの種類</Th>
+       <Th>登録可能数</Th>
+       <Th>詳細条件</Th>
+     </Row>
+     <Row>
+       <Td>カード</Td>
+       <Td>最大4個</Td>
+       <Td>CSN、Wiegandタイプのみ対応<br/>同一タイプ内で重複登録不可</Td>
+     </Row>
+     <Row>
+       <Td>顔</Td>
+       <Td>最大2個</Td>
+       <Td>同じアルゴリズムを搭載したデバイスでのみ登録可能</Td>
+     </Row>
+     <Row>
+       <Td>指紋</Td>
+       <Td>最大2個</Td>
+       <Td>-</Td>
+     </Row>
+     <Row>
+       <Td>PIN</Td>
+       <Td>1個</Td>
+       <Td>8桁以上</Td>
+     </Row>
+     </Tbody>
+   </Table>
+
+   :::note
+
+   **登録条件**
+
+   * 少なくとも 2 種類以上のクレデンシャルを登録する必要があります。
+
+   * 新規デバイスとファームウェアをアップグレードしたデバイスの両方に同じ条件が適用されます。
+
+   * デバイスがサポートするすべてのクレデンシャルを認証手段として使用できます。
+
+   :::
+
+<Include product='biostation_3'>
+
+3. 2種類以上のクレデンシャルを登録した後、<Cmd sid='ui_373' product='dev' /> ボタンを押すと <Cmd sid='ui_128' product='dev' /> の登録が完了します。
+
+   <Image src='/img/how-to/setting-master-admin-3.png' width='300px' />
+
+</Include>
+
+<Include product='xstation_2'>
+
+3. 2種類以上のクレデンシャルを登録した後、<Cmd sid='ui_373' product='dev' /> ボタンを押すと <Cmd sid='ui_128' product='dev' /> の登録が完了します。
+
+   <Image src='/img/device/xs2-master-admin-setting-credential2.png' />
+
+</Include>
+
+<Include product='biolite_n2'>
+
+3. 2種類以上のクレデンシャルを登録した後、**OK** を押すと <Cmd sid='ui_128' product='dev' /> の登録が完了します。
+
+   <Image src='/img/device/bln2-master-admin-setting-credential2.png' />
+
+</Include>
+
+<Include product='biostation_2a'>
+
+3. 2種類以上のクレデンシャルを登録した後、**OK** を押すと <Cmd sid='ui_128' product='dev' /> の登録が完了します。
+
+   <Image src='/img/device/bs2a-master-admin-setting-credential2.png' />
+
+</Include>
+
+### ご案内事項
+
+* **デバイスハッシュキーを手動で変更する場合**
+
+  デバイスハッシュキーを手動で変更する場合、マスター管理者のPINが削除されるという警告メッセージが表示されます。メッセージを確認してから変更してください。
+
+* **RS-485通信区間での顔画像送信制限**
+
+  RS-485通信区間ではバイオメトリッククレデンシャルの画像が送信されないため、スレーブデバイスで登録済みマスター管理者の顔を参照するときは代替画像が表示されます。

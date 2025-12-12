@@ -1,0 +1,38 @@
+---
+id: manage-server
+title: サーバーの起動と停止
+description: BioStar X Service Manager を使用して BioStar X サーバーのサービスを起動および停止する方法を説明します。
+keywords:
+  - BioStar X 設定
+  - サーバー管理
+---
+
+**BioStar X Service Manager** を使用して BioStar X サーバーのサービスを管理する方法を確認します。 個別のサービスを起動または停止できます。
+
+## BioStar X Service Manager {#biostar-x-setting}
+
+**BioStar X** サーバーの状態を管理できるツールを提供します。 Windows で <Start/> → **BioStar X** → **BioStar X Service Manager** をクリックします。 <Cmd>BioStar X Service Manager</Cmd> ウィンドウが表示されます。
+
+<Image src='/img/common/biostarx-tutoria-service-manager-main.png' alone />
+
+:::info
+
+**BioStar X** サーバーの時間設定を変更した場合は、**BioStar X Core Service** を停止して再起動してください。 再起動しないと、**BioStar X** が動作しない可能性があります。
+
+:::
+
+### サービスを終了する {#end-service}
+
+**BioStar X** を終了するには、<Cmd>SERVICES</Cmd> メニューで各サービスの <Cmd>Stop</Cmd> ボタンをクリックします。
+
+<Image src='/img/common/biostarx-tutoria-service-manager-main.png' alone />
+
+{/* 모든 서비스를 종료하려면 화면 오른쪽 상단의 <Cmd>Stop All</Cmd> 버튼을 클릭하세요. */}
+
+### サーバーを起動する {#start-the-server}
+
+**BioStar X** を再起動するには、<Cmd>SERVICES</Cmd> メニューの <Cmd>Status</Cmd> 列で <Cmd>Stopped</Cmd> 状態のサービスの <Cmd>Start</Cmd> ボタンをクリックします。
+
+<Image src='/img/common/biostarx-tutoria-service-manager-main-restart.png' alone />
+
+{/* 모든 서비스를 시작하려면 화면 오른쪽 상단의 <Cmd>Start All</Cmd> 버튼을 클릭하세요. */}

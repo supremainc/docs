@@ -1,0 +1,73 @@
+---
+id: settings-device-usb-agent
+title: USB エージェントを設定する
+description: クライアント PC から BioStar X に接続した際に、USB 指紋登録デバイスおよびカード登録デバイスを使用する方法を案内します。
+keywords:
+  - USB Agent
+---
+
+クライアント PC から **BioStar X** に接続した際に、USB 指紋登録デバイスとカード登録デバイスを利用できるようにサポートします。 そのためには、USB Device Agent をインストールする必要があります。 本書では、USB Device Agent のインストールと設定方法を案内します。
+
+## USB Device Agent をインストールする {#install-usb-agent}
+
+クライアント PC から **BioStar X** に接続して USB 指紋登録デバイスおよびカード登録デバイスを使用するには、USB Device Agent をインストールする必要があります。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.usbAgent' /> をクリックします。
+
+3. <Cmd sid='settings.usgAgent.lable' product='2' /> セクションで <Cmd sid='button.download' product='2' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-setting-device-usb-agent-download.png' />
+
+4. ダウンロードしたファイルを実行し、画面の案内に従ってインストールを完了します。
+
+:::info
+
+Windows で **ユーザー アカウント制御** が有効になっている場合、USB Agent は自動実行できません。 ユーザー アカウント制御をオフにするか、管理者権限で直接実行します。
+
+:::
+
+## USB カードデバイスのバイト順序を設定する {#usb-card-device-byte-order}
+
+USB カードデバイスのバイト順序を設定できます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.usbAgent' /> をクリックします。
+
+3. <Cmd sid='settings.usbAgent.byteOrder.title' product='2' /> セクションで <Cmd sid='settings.usbAgent.byteOrder' product='2' /> オプションを設定します。
+
+   <Image src='/img/biostarx-setting-device-usb-byte-order.png' />
+
+   * <Cmd>MSB</Cmd>：カードデータを処理するとき、大きいバイト単位から小さいバイト単位の順に処理し、カードシリアル番号 (CSN) を左から右へ順に保存します。
+
+   * <Cmd>LSB</Cmd>：カードデータを処理するとき、小さいバイト単位から大きいバイト単位の順に処理してカードシリアル番号 (CSN) を保存します。
+
+4. すべての設定が完了したら、画面最下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+:::info
+
+<Cmd sid='settings.usbAgent.byteOrder' product='2' /> オプションは CSN カードにのみ適用できます。
+
+:::
+
+## USB Agent ポートを設定する
+
+USB Agent が使用するポートを設定できます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.usbAgent' /> をクリックします。
+
+3. <Cmd sid='settings.usbAgent.port.title' product='2' /> セクションの <Cmd sid='settings.usbAgent.port' product='2' /> 入力フィールドにポート番号を入力します。
+
+   <Image src='/img/biostarx-setting-device-usb-agent-port.png' />
+
+4. すべての設定が完了したら、画面最下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+:::info
+
+USB Agent はクライアントごとに動作するプログラムであり、ポート番号の設定はサーバーがそのポート番号で通信するためのものです。
+
+:::

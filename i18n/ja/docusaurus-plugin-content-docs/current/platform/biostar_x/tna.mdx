@@ -1,0 +1,153 @@
+---
+id: tna
+title: 勤怠管理を使用
+description: 勤怠管理ルールを設定し、デバイスで記録された勤務データを確認するかレポートとして出力します
+keywords:
+  - 勤怠管理
+  - 入退室記録
+  - レポート
+---
+
+勤怠管理ルールを設定し、デバイスで記録された勤務データを確認するかレポートとして出力します。 <Cmd sid='shell.header.tna' className='normal' /> 機能はプラグイン形式で提供され、別途ライセンスが必要です。
+
+:::info
+
+<Cmd sid='shell.header.tna' className='normal' /> 機能は**アドバンス**(Advanced)ライセンス以上で追加オプションとして利用できます。 ライセンスポリシーの詳細は[次のドキュメント](licensing#features-add-ons)を参照してください。
+
+:::
+
+## 開始する前に
+
+<Cmd sid='shell.header.tna' className='normal' /> 機能を使用するにはライセンスを適用し、別途インストーラーをダウンロードしてインストールする必要があります。
+
+### ライセンス適用
+
+<Cmd sid='shell.header.tna' className='normal' /> ライセンスの適用手順を案内します。 **BioStar X** の購入先から <Cmd sid='shell.header.tna' className='normal' /> ライセンスを購入した後、次の手順に従ってライセンスを適用してください。
+
+import LicenseApply from '../../common/_bsx-license-apply.mdx'
+
+<LicenseApply />
+
+### プラグインのインストール
+
+<Cmd sid='shell.header.tna' className='normal' /> 機能を使用するには別途インストーラーをダウンロードしてインストールする必要があります。 次の手順に従ってプラグインをインストールしてください。
+
+1. [シュプリマダウンロードセンター](https://download.supremainc.com/) にアクセスし、<Cmd sid='shell.header.tna' className='normal' /> プラグインのインストールファイル(*BioStar X TA.X.Y.Z.BB.exe*) をダウンロードしてください。
+
+2. インストーラを実行し、案内に従ってインストールを完了してください。
+
+3. ダウンロードしたインストールファイルを実行してください。
+
+4. 使用する言語を選択し、<Cmd code='biostar2.install.ok' className='bold'/> ボタンをクリックしてください。
+
+   <Image src='/img/biostarx-install-select-language.png' />
+
+5. インストールを続行するには、<Cmd code='biostar2.install.agree' className='bold'/> を選択し、<Cmd code='biostar2.install.next' className='bold'/> ボタンをクリックしてください。
+
+   <Image src='/img/biostarx-tna-install-agree.png' />
+
+6. データベースの root アカウントのパスワードを入力し、<Cmd code='biostar2.install.next' className='bold'/> ボタンをクリックしてください。
+
+   <Image src='/img/biostarx-tna-install-input-db-pw.png' />
+
+7. データベースに保存される個人情報の管理権限および責任に関する案内を読み、インストールを続行するには <Cmd code='biostar2.install.next' className='bold'/> ボタンをクリックしてください。
+
+   <Image src='/img/biostarx-tna-install-read-covenant.png' />
+
+8. **BioStar X** と通信するポートを設定し、<Cmd code='biostar2.install.next' className='bold'/> をクリックしてください。
+
+   <Image src='/img/biostarx-tna-install-set-port.png' />
+
+   :::note
+
+   ポート番号はデフォルト値（3002）を使用するか、別のポート番号に変更できます。 ポート番号を変更した場合は、ファイアウォールでそのポートが開放されていることを確認してください。
+
+   :::
+
+9. インストールコンポーネントを選択し、<Cmd code='biostar2.install.next' className='bold'/> をクリックしてください。
+
+   <Image src='/img/biostarx-tna-install-additional.png' />
+
+10. すべてのインストール準備が完了したら、<Cmd code='biostar2.install.btnInstall' className='bold'/> ボタンをクリックしてください。
+
+    <Image src='/img/biostarx-tna-install-complete.png' />
+
+:::info
+
+* ダウンロードしたファイル名の `X.Y.Z` はバージョン情報、`BB` はビルド番号です。
+
+* データベースのルート（root）アカウントのパスワードには、**BioStar X** をインストールしたときに設定したパスワードを使用してください。
+
+:::
+
+## <Cmd sid='shell.header.tna' className='bold' /> メニュー
+
+<Cmd sid='shell.header.tna' className='normal' /> ライセンスとプラグインのインストールが完了すると、<Cmd sid='shell.header.launcher' /> ページに <Cmd sid='shell.header.tna' /> メニューが追加されます。
+
+<Image src='/img/biostarx-tna-main.png' />
+
+<Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.tna' /> アイコンをクリックするか、画面左上のショートカットリストから <Cmd sid='shell.header.tna' /> を選択してください。
+
+## <Cmd sid='shell.header.tna' className='bold' /> ログイン
+
+<Cmd sid='shell.header.tna' className='normal' /> 機能に初めてアクセスすると、専用のログイン画面が表示されます。 **BioStar X** の管理者アカウントでログインしてください。 一度管理者アカウントで <Cmd sid='shell.header.tna' className='normal' /> 機能にログインすると、その後は追加のログインなしで <Cmd sid='shell.header.tna' className='normal' /> 機能を使用できます。
+
+<Image src='/img/biostarx-tna-login.png' />
+
+## 初期設定
+
+1. <Cmd sid='shell.header.tna' className='normal' /> 機能に初めてログインしたら、初期設定のために勤怠管理用デバイスを追加する必要があります。 画面で <Cmd sid='common.setting' product='2' /> をクリックしてください。
+
+   <Image src='/img/biostarx-tna-initial-setting.png' />
+
+2. デバイスリストから勤怠管理に使用するデバイスを選択してください。
+
+   <Image src='/img/biostarx-tna-initial-setting-register-device.png' />
+
+3. 有効になった <IcAdd /> <Cmd sid='setting.register' product='2' /> をクリックしてください。
+
+   <Image src='/img/biostarx-tna-initial-setting-select-device.png' />
+
+4. 選択したデバイスが <Cmd sid='setting.registerDevices' product='2' /> リストに表示されたら、<Cmd sid='setting.setting' product='2' /> をクリックしてください。
+
+   <Image src='/img/biostarx-tna-initial-setting-selected-device.png' />
+
+5. <Cmd sid='setting.setting' product='2' /> ウィンドウが表示されたら、勤怠管理の基本設定を完了してください。
+
+### 勤怠モード設定
+
+勤怠モードと勤怠イベントの設定を行ってください。
+
+<Image src='/img/biostarx-tna-initial-setting-device-setting.png' />
+
+* <Cmd sid='device.info.mode' product='2' />：勤怠イベントの登録方法を選択してください。
+
+  * <Cmd sid='device.tna.mode.byUser' product='2' />：認証時にユーザーが勤怠イベントを選択できます。
+
+  * <Cmd sid='device.tna.mode.bySchedule' product='2' />：設定したスケジュールに従って勤怠イベントが自動で切り替わります。 勤怠イベントに適用するスケジュールを選択できます。
+
+  * <Cmd sid='device.tna.mode.lastChoice' product='2' />：ユーザーが最後に使用した勤怠イベントを継続して使用できます。
+
+  * <Cmd sid='device.tna.mode.fixed' product='2' />：選択した勤怠イベントのみを使用できます。
+
+  * <Cmd sid='device.tna.mode.unused' product='2' />：勤怠イベントを記録しません。
+
+* <Cmd sid='device.info.tnaRequired' product='2' />：認証時に必ず勤怠イベントを登録するように設定できます。 <Cmd sid='device.info.mode' product='2' /> を <Cmd sid='device.tna.mode.byUser' product='2' /> に設定した場合に使用できます。
+
+* <Cmd sid='device.info.tnaEvent' product='2' />：勤怠イベントの名前を変更するか、<Cmd sid='device.info.mode' product='2' /> を <Cmd sid='device.tna.mode.bySchedule' product='2' /> に設定した場合に使用されるスケジュールを追加できます。
+
+  * <Cmd sid='device.tna.eventKey' product='2' />：勤怠登録に使用できるキーの一覧です。
+
+  * <Cmd sid='device.tna.label' product='2' />：勤怠キーに応じて勤怠イベント名を変更できます。
+
+  * <Cmd sid='device.tna.schedule' product='2' />：<Cmd sid='device.info.mode' product='2' /> を <Cmd sid='device.tna.mode.bySchedule' product='2' /> に設定した場合に自動で切り替わるスケジュールを設定できます。 スケジュール設定の詳細は[次のドキュメント](settings-schedule)を参照してください。
+
+:::info
+
+* LCD 画面をサポートしないデバイスは、<Cmd sid='device.info.mode' product='2' /> を <Cmd sid='device.tna.mode.bySchedule' product='2' /> または <Cmd sid='device.tna.mode.fixed' product='2' /> に設定できます。 固定された勤怠イベントを登録するか、あらかじめ設定されたスケジュールに従って変更される勤怠イベントを登録できます。 
+
+* <Cmd sid='device.tna.mode.bySchedule' product='2' /> と <Cmd sid='device.tna.mode.fixed' product='2' /> モードをサポートするデバイスモデルは、BioEntry P2、BioEntry W2、BioEntry Plus、BioEntry W、XPass、XPass S2、XPass D2、XPass 2 です。
+
+* <Cmd sid='setting.setting' product='2' /> メニューの詳細については[次のドキュメント](tna-settings)を参照してください。
+
+:::

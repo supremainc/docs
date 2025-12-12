@@ -1,0 +1,61 @@
+---
+id: settings-event-log-import
+title: イベントログの取得
+description: イベントログの取得方法について説明します。
+keywords:
+  - イベント
+  - ログ
+  - インポート
+---
+
+デバイスのログを **BioStar X** サーバーにインポートしてイベントを確認できます。 この機能は、<Cmd sid='setting.server' product='2' /> で <Cmd sid='setting.server.logUploadType' product='2' /> オプションを <Cmd sid='common.manual' product='2' /> に設定した場合に使用できます。
+
+:::info
+
+<Cmd sid='setting.server.logUploadType' product='2' /> オプションの詳細は、[以下のドキュメント](settings-server-server#basic-setting)を参照してください。
+
+:::
+
+## 手動で取得
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.event.root' /> → <Cmd sid='setting.menu.event.eventLogImport' /> をクリックします。
+
+3. <Cmd sid='setting.eventLogImport.UpdateLog.label' /> でログを取得する期間を選択します。
+
+   <Image src='/img/biostarx-settings-event-log-from-device.png' />
+
+   * <Cmd sid='setting.eventLogImport.UpdateLog.dropdown.SinceLast' product='2' />：最後に **BioStar X** サーバーに保存されたログの日付以降のログを取得します。
+
+   * <Cmd sid='setting.eventLogImport.UpdateLog.dropdown.All' product='2' />：デバイスのすべてのログを取得します。
+
+   * <Cmd sid='setting.eventLogImport.UpdateLog.dropdown.UserDefined' product='2' />：ログを取得する開始日と終了日を選択できます。
+
+4. ログを取得するには、<Cmd sid='button.updateLog' product='2' /> をクリックします。
+
+## 外部ストレージから取得
+
+外部ストレージ（USB）に保存されたイベントログを **BioStar X** にインポートできます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.event.root' /> → <Cmd sid='setting.menu.event.eventLogImport' /> をクリックします。
+
+3. <Cmd sid='menu.dataImport' product='2' /> で <Cmd sid='button.browse' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-settings-event-log-import-data.png' />
+
+4. ローカルに保存されているデータファイル（*.tgz*）を選択します。
+
+データファイルのインポートに成功すると、画面にメッセージが表示されます。
+
+:::info
+
+* 古いファームウェアバージョンのデバイスからエクスポートされたデータは **BioStar X** へインポートできません。 常に最新バージョンのファームウェアを使用してください。
+
+* FaceStation F2、FaceStation 2、FaceLite、BioStation A2、BioStation 2、X-Station 2、BioStation 3 からエクスポートされたデータファイルのみインポートできます。
+
+* **BioStar X** システムで設定したドア、エレベーター、ゾーンのイベントログ以外の場合、一部の情報が空欄で表示されることがあります。
+
+:::

@@ -1,0 +1,222 @@
+---
+id: settings-card-printer
+title: カードを印刷する
+description: BioStar X と cardPresso を連携させて、ユーザーが希望するデザインのカードを印刷できます。
+keywords:
+  - cardPresso
+  - カードプリンター
+---
+
+**BioStar X** と cardPresso を連携させて、ユーザーが希望するデザインのカードを印刷できます。 cardPresso はカードのデザインと印刷のための専門ソフトウェアです。 cardPresso を使用すると、さまざまなカードテンプレートを作成し、ユーザー情報をカードに合わせて配置できます。
+
+## 開始する前に
+
+**BioStar X** のカードプリンタ機能を使用するには、cardPresso をインストールして **BioStar X** と接続する必要があります。 cardPresso の Web 印刷サーバー機能を使用するには、cardPresso XXL edition のライセンスが必要です。
+
+:::info
+
+* ライセンスの種類について詳しくは、[cardPresso Editions](https://www.cardpresso.com/cardpresso-software/editions/) ページを参照してください。
+
+* Web 印刷サーバー機能は Windows オペレーティングシステムでのみサポートされています。
+
+:::
+
+### cardPresso のインストールと設定 {#installing-configuring-cardPresso}
+
+cardPresso をインストールして Web 印刷サーバーを設定するには、以下の手順に従ってください。 
+
+:::note
+
+インストールバージョンによってメニュー経路や画面が異なる場合があります。
+
+:::
+
+1. Web 印刷サーバーとして運用する PC の OS に対応した最新バージョンの cardPresso を [cardPresso Download](https://www.cardpresso.com/downloads-cp) からダウンロードしてください。 
+
+2. プログラムをインストールして、cardPresso で発行したライセンスを有効化します。
+
+3. cardPresso を起動し、カードテンプレートを作成してください。
+
+   <Image src='/img/common/cardpresso-new-card-template.png' alone caption />
+
+4. 作成したカードテンプレートを **BioStar X** をインストールしたサーバーの任意のパスに保存してください。 (例：*C:\template\example.card*)
+
+5. cardPresso をインストールした PC のデスクトップで右クリックし、ポップアップメニューから **新規作成** → **ショートカット** をクリックしてください。 {/* New → Shortcut */}
+
+6. ［**項目の場所を入力**］フィールドに以下のように入力し、［**次へ**］ボタンをクリックしてください。
+
+   ```
+   "C:\Program Files (x86)\cardPresso\cardPresso.exe" /PRINTSERVER
+   ```
+
+   <Image src='/img/cardpresso-print-server-short-cut.png' width={400} />
+
+   :::note
+
+   インストール環境によって cardPresso がインストールされているパスが異なる場合があります。 cardPresso のインストールパスを確認した後、上記のパスを適切に修正してください。
+
+   :::
+
+7. ショートカット名を入力し、［**完了**］ボタンをクリックしてください。
+
+8. デスクトップに作成した cardPresso Web 印刷サーバーのショートカットアイコンをダブルクリックして起動してください。
+
+9. cardPresso Web 印刷サーバーのウィンドウが表示されたら、**設定** アイコンをクリックしてください。
+
+   <Image src='/img/biostarx-settings-card-printer-installation2.png' />
+
+   * **アドレス**：Web 印刷サーバーとして動作する PC の IP アドレスを入力します。
+
+   * **ポート**：cardPresso が印刷ジョブを受信するために使用するポート番号です。
+
+   * **許可されたユーザーグループ**：Web 印刷サーバーへアクセスできるユーザーグループを選択します。
+
+10. 設定が完了したら **保存** をクリックします。
+
+11. 右下にある <Image src='/img/common/ico-card-printer-play.png' ico alone /> をクリックしてサービスを開始します。 正しく設定されると、アイコンが <Image src='/img/common/ico-card-printer-stop.png' ico alone /> に変わり、**listen OK** メッセージが表示されます。
+
+    <Image src='/img/biostarx-settings-card-printer-installation3.png' />
+
+    :::note
+
+    カードの印刷が完了するまでウィンドウを閉じないでください。
+
+    :::
+
+## cardPresso を BioStar X に接続する
+
+**BioStar X** に cardPresso を接続するには、以下のように設定してください。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid="common.cardPrinter" product='2' /> をクリックします。
+
+3. <Cmd sid="common.cardPrinter.cardpressoSetting" product='2' /> を <Cmd sid="common.use" product='2' /> に設定してから各項目を入力します。
+
+   <Image src='/img/biostarx-settings-card-printer.png' className='none' />
+
+   * <Cmd sid="common.cardPrinter.id" product='2' />：cardPresso のログイン ID を入力します。 (デフォルト：ADMIN)
+
+   * <Cmd sid="common.cardPrinter.password" product='2' />：cardPresso のログインパスワードを入力します。 (デフォルト：admin)
+
+   * <Cmd sid="common.cardPrinter.ipAddress" product='2' />：Web 印刷サーバーとして動作する PC の IP アドレスを入力します。
+
+   * <Cmd sid="common.cardPrinter.ipAddressPort" product='2' />：cardPresso が印刷ジョブを受信するために使用するポート番号です。
+
+   * <Cmd sid="common.cardPrinter.printerName" product='2' />：カードプリンターとして使用するプリンター名を入力します。 Windows の **コントロール パネル** → **デバイスとプリンター** で確認できます。
+
+   * <Cmd sid="common.cardPrinter.cardTemplate" product='2' />：<Cmd sid="button.plusAdd" product='2' /> をクリックして <Cmd sid="common.cardPrinter.cardTemplate" product='2' /> を追加できます。 <Cmd sid="setting.server.card_template.configure.th.name" product='2' /> 項目に、カードテンプレートのファイル名と拡張子を含むフルパスを入力してください。
+
+     * カードテンプレートのファイル名には英数字と記号を使用できます。
+
+     * カードテンプレートは最大 20 個までサポートします。
+
+     * パス例：C:\\template\\example.card
+
+   * <Cmd sid="common.cardPrinter.printTestLabel" product='2' />：カードテンプレートのテスト印刷ができます。
+
+4. 設定が完了したら <Cmd sid="button.apply" product='2' /> をクリックしてください。
+
+## カードテンプレートをテスト印刷する
+
+Administrator 情報を含むカードテンプレートをテスト印刷できます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid="common.cardPrinter" product='2' /> をクリックします。
+
+3. 印刷するカードテンプレートを選択し、<Cmd sid="common.cardPrinter.testPrint" product='2' /> ボタンをクリックしてください。
+
+   <Image src='/img/biostarx-settings-card-printer1.png' className='none' />
+
+4. Administrator 情報を含むカードテンプレートが印刷されます。
+
+## ユーザー別カードテンプレートを印刷する {#printing-card-template-per-user}
+
+ユーザーごとの情報を含むカードテンプレートでカードを印刷できます。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.user' /> をクリックします。
+
+2. 画面右上の <Cmd sid='team.user.dialog.newUser' /> ボタンをクリックしてください。 <Cmd sid='team.user.dialog.newUser' /> ウィンドウが表示されます。
+
+3. フォームに入力し、<Cmd sid="button.printCard" product='2' /> ボタンをクリックしてください。
+
+   * ユーザー情報には英字、数字、特殊記号を入力できます。
+
+   <Image src='/img/biostarx-settings-card-printer-user.png' />
+
+4. 印刷するカードテンプレートを選択し、<Cmd sid="common.cardPrinter.print" product='2' /> ボタンをクリックしてください。
+
+   <Image src='/img/biostarx-settings-card-printer-user1.png' className='none' />
+
+5. カードを印刷するかどうかを確認するポップアップが表示されたら、<Cmd sid="common.cardPrinter.ok" product='2' /> ボタンをクリックしてください。
+
+   <Image src='/img/biostarx-settings-card-printer-user2.png' className='none' />
+
+新しいユーザーが作成され、ユーザー情報を含むカードテンプレートでカードが印刷されます。
+
+## カスタムユーザーフィールドを追加する {#adding-custom-user-fields}
+
+カスタムユーザーフィールドを追加したカードテンプレートでカードを印刷できます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' /> をクリックしてください。
+
+3. <Cmd sid='setting.server.userDeviceManagement' product='2' /> セクションの <Cmd sid="setting.server.custom_field.title" product='2' /> 項目で <Cmd sid="button.plusAdd" product='2' /> ボタンをクリックし、<Cmd sid="setting.server.custom_field.configure.th.name" product='2' /> を入力して <Cmd sid="setting.server.custom_field.configure.th.type" product='2' /> を選択してください。 追加した <Cmd sid="setting.server.custom_field.title" product='2' /> の順序に従ってカードテンプレートの属性 **ID** が決定されます。
+
+   <Image src='/img/biostarx-settings-card-printer-custom-user.png' />
+
+   BioStar X の属性 ID では、**順序 1** は **CUSTOM1** に相当します。 BioStar X の属性 ID の詳細については、[次のドキュメント](#card-template-attribute-ids) を参照してください。
+
+4. 設定が完了したら、画面最下部の <Cmd sid="button.apply" product='2' /> ボタンをクリックしてください。
+
+5. cardPresso で **ファイル** → **テンプレートを開く** をクリックしてカードテンプレートファイルを開いてください。 新しい属性を追加し、BioStar X の属性 ID の順序に合わせた **XML 項目 ID 名** として **ID** を入力してください。
+
+   <Image src='/img/biostarx-settings-card-printer-template.png' />
+
+6. 設定が完了したら **ファイル** → **保存** をクリックしてください。
+
+7. **BioStar X** に戻り、<Cmd sid='shell.header.user' /> ページでカードテンプレートを適用するユーザーを選択してください。
+
+8. 追加したカスタムユーザーフィールド項目を確認できます。 該当フォームに入力し、<Cmd sid="button.printCard" product='2' /> ボタンをクリックしてください。
+
+   <Image src='/img/biostarx-settings-card-printer-custom-user1.png' />
+
+9. 印刷するカードテンプレートを選択し、<Cmd sid="common.cardPrinter.print" product='2' /> ボタンをクリックしてください。
+
+   <Image src='/img/biostarx-settings-card-printer-user1.png' className='none' />
+
+10. カードを印刷するかどうかを確認するポップアップが表示されたら、<Cmd sid="common.cardPrinter.ok" product='2' /> ボタンをクリックしてください。
+
+    <Image src='/img/biostarx-settings-card-printer-user2.png' className='none' />
+
+ユーザー情報が保存され、カスタムユーザーフィールドを追加したカードテンプレートでカードが印刷されます。
+
+## カードテンプレート属性 ID {#card-template-attribute-ids}
+
+**BioStar X** でサポートされる属性 ID は次のとおりです。 カードテンプレートを作成するときは、属性 ID を適切な **XML 項目 ID 名** として入力します。
+
+<div className='overflow-x cols3--20-40-40'>
+
+|  番号 | BioStar X ユーザーデータ | XML 項目 ID 名 |
+| :-: | :---------------: | :---------: |
+|  1  |      User ID      |      ID     |
+|  2  |     User Name     |     NAME    |
+|  3  |       Email       |    EMAIL    |
+|  4  |         部署        |  DEPARTMENT |
+|  5  |        電話番号       |  TELEPHONE  |
+|  6  |      ユーザーグループ     |    GROUP    |
+|  7  |      プロフィール写真     |    PHOTO    |
+|  8  |    カスタムフィールド 1    |   CUSTOM1   |
+|  9  |    カスタムフィールド 2    |   CUSTOM2   |
+|  10 |    カスタムフィールド 3    |   CUSTOM3   |
+|  11 |    カスタムフィールド 4    |   CUSTOM4   |
+|  12 |    カスタムフィールド 5    |   CUSTOM5   |
+|  13 |    カスタムフィールド 6    |   CUSTOM6   |
+|  14 |    カスタムフィールド 7    |   CUSTOM7   |
+|  15 |    カスタムフィールド 8    |   CUSTOM8   |
+|  16 |    カスタムフィールド 9    |   CUSTOM9   |
+|  17 |    カスタムフィールド 10   |   CUSTOM10  |
+
+</div>

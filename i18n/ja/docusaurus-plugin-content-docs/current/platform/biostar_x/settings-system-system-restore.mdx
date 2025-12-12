@@ -1,0 +1,49 @@
+---
+id: settings-system-system-restore
+title: システムを復元する
+description: システムバックアップファイルを使用して、BioStar X のデータベース、設定、ライセンスなどを以前の状態に復元する方法を案内します。
+keywords:
+  - システム復元
+  - 復元
+  - バックアップ復元
+  - データ復旧
+  - BioStar X Restore
+---
+
+**BioStar X** で問題が発生した場合や以前の状態に戻す必要がある場合は、システムバックアップファイルを使用して復元できる。 復元機能を使用すると、データベース、各種設定、ライセンス情報などをバックアップ時点の状態に戻せる。
+
+:::caution
+
+* 復元を実行すると、現在のデータがバックアップ時点の状態に戻る。 復元の前に現在の状態をバックアップすることを推奨する。 現在の状態をバックアップするには [the following](settings-system-system-backup) を参照する。
+
+* 復元を実行する際、復元先サーバーの IP アドレスがバックアップ元サーバーの IP アドレスと異なる場合、復元が失敗する可能性がある。 復元を実行する前にサーバーの IP アドレスを確認する。
+
+:::
+
+:::info
+
+SQL Server データベースと **BioStar X** が別々のサーバーにインストールされている場合、**BioStar X** のシステムバックアップと復元は使用できません。
+
+:::
+
+1. Windows で <Start/> → **BioStar X** → **BioStar X Restore** を実行する。
+
+   * プログラムパス：*C:\\Program Files\\BioStar X\\biostar-restore.exe*
+
+2. **Select File** をクリックし、復元するバックアップファイルを選択する。
+
+   <Image src='/img/common/setting-system-restore.png' className='none' alone />
+
+3. 復元を開始するには **Restore** をクリックする。 
+
+**Starting Biostar services...Done** メッセージが表示されたら、復元が完了した状態だ。 **BioStar X** に接続し、復元されたデータを確認する。
+
+:::info
+
+* バックアップ時点の **BioStar X** バージョンと現在のバージョンが異なる場合、復元を実行できない。 **BioStar X** のバージョンを確認するには、画面右上の <IcInfo /> をクリックする。
+
+  <Image src='/img/biostarx-settings-system-restore-check-ver.png' />
+
+* バックアップ時点の **BioStar X** バージョンを確認するには、バックアップファイルを展開し、*sysbackup.conf* の `biostarVersion` を確認する。
+
+:::

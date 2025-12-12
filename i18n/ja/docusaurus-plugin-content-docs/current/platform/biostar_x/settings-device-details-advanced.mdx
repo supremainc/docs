@@ -1,0 +1,413 @@
+---
+id: settings-device-details-advanced
+title: 高度設定
+description: 上級設定セクションでは、マスター管理者、デバイス管理者、画面/サウンド、動作条件および動作などを設定できます。
+keywords:
+  - デバイス
+  - 高度
+---
+
+<Cmd sid='device.info.advanced' product='2' /> セクションで設定できる項目について説明します。 マスター管理者、管理権限管理、勤怠イベント、画面とサウンド、動作条件と動作、イメージログ、Wiegand、セキュリティタンパーなど、多彩な高度機能の設定方法と各オプションの意味を確認できます。 環境に合わせた設定を適用し、デバイスを効率的に管理します。
+
+:::info
+
+* デバイスの種類によって設定できるネットワークオプションが異なる場合があります。
+
+* ユーザーが任意で変更した内容がある場合は、<Cmd sid='button.apply' product='2' /> をクリックします。 変更内容を保存しないとデバイスに反映されません。
+
+:::
+
+## マスター管理者の追加 {#master-administrator}
+
+<Cmd sid='device.masterAdmin.title' product='2' /> 機能は、デバイスのフル管理権限を強化し、セキュリティを向上させて不正アクセスや設定変更を防止するための機能です。 新しいデバイスでは、この機能を使用して必ずマスター管理者を登録する必要があり、登録されたマスター管理者のみが管理メニューにアクセスして設定を変更できます。
+
+<Cmd sid='device.info.advanced' product='2' /> → <Cmd sid='device.info.administrator' product='2' /> の <Cmd sid='device.masterAdmin.title' product='2' /> メニューで、必要な 2 種類のクレデンシャルを選択して登録します。
+
+<Image src='/img/biostarx-setting-device-adv-admin-master-admin.png' />
+
+<Cmd sid='device.masterAdmin.title' product='2' /> に登録できるクレデンシャルは次のとおりです。
+
+| クレデンシャルの種類 |  登録可能数 | 詳細条件                                      |
+| ---------- | :----: | ----------------------------------------- |
+| カード        | 最大 4 件 | CSN と Wiegand タイプのみ対応し、同一タイプ内で重複登録はできません。 |
+| 顔          | 最大 2 件 | 同じアルゴリズムを搭載したデバイスでのみ登録できます。               |
+| 指紋         | 最大 2 件 | -                                         |
+| PIN        |   1 件  | 8 桁以上の数字を入力できます。                          |
+
+* 登録済みのクレデンシャルを変更するには、該当クレデンシャルの右側にある <IcEdit /> ボタンをクリックします。
+
+* 登録済みのクレデンシャルを削除するには、該当クレデンシャルの右側にある <IcTrash2 /> ボタンをクリックします。
+
+:::note
+
+**登録条件**
+
+* 少なくとも 2 種類以上のクレデンシャルを登録する必要があります。
+
+* 新規デバイスとファームウェアをアップグレードしたデバイスの両方に同じ条件が適用されます。
+
+* デバイスがサポートするすべてのクレデンシャルを認証手段として使用できます。
+
+:::
+
+:::info
+
+* この機能は LCD 画面を使ったユーザーインターフェースに対応する Suprema 製品でのみ利用できます。
+
+* ファームウェアをアップグレードした既存デバイスでは、BioStar 2 のデバイス設定に <Cmd sid='device.masterAdmin.title' product='2' /> メニューは表示されません。
+
+* ファームウェアをアップグレードした既存デバイスは <Cmd sid='device.masterAdmin.title' product='2' /> 設定を提供しませんが、<Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> オプションによってフル管理者の権限を強化し、デバイスのセキュリティを向上させることができます。 <Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> の設定方法については、[次のドキュメント](#two-step-authentication)を参照してください。
+
+* この機能をサポートするデバイスおよびファームウェアバージョンの詳細については、[次のドキュメント](../../how-to/master-admin)を参照してください。
+
+:::
+
+## 二段階認証の設定 {#two-step-authentication}
+
+ファームウェアをアップグレードした既存デバイスは <Cmd sid='device.masterAdmin.title' product='2' /> 設定を提供しませんが、<Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> オプションによってフル管理者の権限を強化し、デバイスのセキュリティを向上させることができます。
+
+<Image src='/img/biostarx-setting-device-adv-two-step.png' />
+
+<Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> オプションを <Cmd sid='common.use' product='2' /> に設定すると、デバイスのフル管理者認証には2種類以上のクレデンシャルが必要になります。 例として、カードとPINの両方を登録した場合、フル管理者の認証ではカードのスキャンとPINの入力の両方を行う必要があります。
+
+:::info
+
+すべての管理者に2種類以上のクレデンシャルが登録されていない状態で有効化すると、設定は失敗しエラーメッセージが表示されます。 すべての管理者に2種類以上のクレデンシャルを登録してから、再試行してください。
+
+<Image src='/img/biostarx-setting-device-adv-error-admin.png' />
+
+:::
+
+:::caution
+
+デバイスにフル管理者が設定されていない場合、次のようなポップアップメッセージが表示されます。 <Cmd sid='device.info.advanced' product='2' /> → <Cmd sid='device.info.administrator' product='2' /> で、すべての権限に管理者を追加してください。
+
+<Image src='/img/biostarx-setting-device-adv-warning-admin.png' />
+
+:::
+
+:::warning
+
+<Cmd sid='device.masterAdmin.twoStepAuth.title' product='2' /> を有効にした後にすべての管理者のクレデンシャルを2種類未満に削除すると、**BioStar X** に接続できない状況下ではデバイスから管理者メニューにアクセスできなくなります。 そのため、管理者クレデンシャルを削除する際は十分に注意してください。
+
+:::
+
+## 管理者追加 {#administrator}
+
+<Cmd sid='device.info.administrator' product='2' /> グループでデバイス管理者を階級別に管理します。
+
+<Image src='/img/biostarx-setting-device-edit-advanced-administrator.png' />
+
+権限レベル別の管理者を追加するには、<Cmd sid='button.plusAdd' product='2' /> をクリックしてください。 ユーザー一覧が表示されたら、目的のユーザーを選択してください。 ユーザー一覧で <IcSearch /> をクリックすると、目的のユーザーを検索することもできます。
+
+各階級の権限は以下を参照します。
+
+<div className='table-fixed'>
+
+| 階級                                                           | ユーザー情報管理 | デバイス設定 |
+| ------------------------------------------------------------ | :------: | :----: |
+| <Cmd sid='device.operatorLevel.all' product='2' />           |    ✔️    |   ✔️   |
+| <Cmd sid='device.operatorLevel.user' product='2' />          |    ✔️    |    ❌   |
+| <Cmd sid='device.operatorLevel.configuration' product='2' /> |     ❌    |   ✔️   |
+
+</div>
+
+:::info
+
+* 管理者を最大1,000人まで追加して管理します。 追加できる管理者数はデバイスのファームウェアバージョンによって異なる場合があります。
+
+* 登録済みユーザーを検索するには、<Cmd sid='device.info.admin.searchTitle' product='2' /> で <IcSearch /> をクリックしてください。
+
+* **デバイス設定**でデバイスの画面や音声、ネットワーク、RS-485 などの設定を変更します。
+
+* 管理者を削除するには、該当管理者の右側にある <IcTrash2 /> をクリックします。
+
+* 各デバイスに設定された管理者は **BioStar X** の権限に影響しません。
+
+:::
+
+## 勤怠管理 {#attendance-management}
+
+<Cmd sid='device.info.tna' product='2' /> グループでデバイスの勤怠イベント名を変更したり、勤怠モードを設定します。
+
+<Image src='/img/biostarx-setting-device-edit-advanced-tna.png' />
+
+* <Cmd sid='device.info.tnaMode' product='2' />：勤怠イベントの登録方法を設定します。
+
+  * <Cmd sid='device.tna.mode.unused' product='2' />：勤怠イベントを記録できません。
+
+  * <Cmd sid='device.tna.mode.byUser' product='2' />：ユーザーが認証時に希望する勤怠イベントを選択できます。
+
+  * <Cmd sid='device.tna.mode.bySchedule' product='2' />：設定したスケジュールに従って勤怠イベントが自動で切り替わります。 勤怠イベントに適用するスケジュールを選択します。
+
+  * <Cmd sid='device.tna.mode.lastChoice' product='2' />：ユーザーが最後に使用した勤怠イベントを継続して使用できます。
+
+  * <Cmd sid='device.tna.mode.fixed' product='2' />：選択した勤怠イベントのみを使用できます。 固定で使用する勤怠イベントを選択します。
+
+* <Cmd sid='device.info.tnaRequired' product='2' />：ユーザーが認証する際に必ず勤怠イベントを登録するように設定します。
+
+  :::note
+
+  このオプションは、<Cmd sid='device.info.tnaMode' product='2' /> オプションが <Cmd sid='device.tna.mode.byUser' product='2' /> に設定されている場合に使用できます。 
+
+  :::
+
+* <Cmd sid='device.info.tnaEvent' product='2' />：勤怠イベント名を修正したり、<Cmd sid='device.info.tnaMode' product='2' /> オプションを <Cmd sid='device.tna.mode.bySchedule' product='2' /> に設定した際に使用するスケジュールを追加します。
+
+  * <Cmd sid='device.tna.eventKey' product='2' />：勤怠登録に使用できるキーの一覧です。
+
+  * <Cmd sid='device.tna.label' product='2' />：<Cmd sid='device.tna.eventKey' product='2' /> に対応する勤怠イベント名を変更できます。
+
+  * <Cmd sid='device.tna.schedule' product='2' />：<Cmd sid='device.info.tnaMode' product='2' /> オプションを <Cmd sid='device.tna.mode.bySchedule' product='2' /> に設定した場合に自動で切り替えるスケジュールを設定します。
+
+    <Image src='/img/biostarx-setting-device-edit-advanced-tna-auto.png' />
+
+:::info
+
+* LCD 画面がないデバイスでは、勤怠モードを <Cmd sid='device.tna.mode.fixed' product='2' /> と <Cmd sid='device.tna.mode.bySchedule' product='2' /> に設定でき、固定の勤怠イベントを登録するか、あらかじめ設定したスケジュールに応じて切り替わる勤怠イベントを登録できます。 対応デバイスは BioEntry P2、BioEntry W2、XPass D2、XPass 2 です。
+
+* 新しいスケジュール設定の詳細は[次のドキュメント](settings-schedule)を参照します。
+
+:::
+
+## 画面と音声の設定 {#screen-and-sound-settings}
+
+デバイスの画面や音声に関する設定を変更します。 デバイスによって設定できるオプションが異なる場合があります。
+
+<details>
+
+<summary>BioEntry P2, BioEntry W2, XPass D2, XPass 2</summary>
+
+* <Cmd sid='device.info.sound' product='2' />：音声をオンまたはオフに切り替えます。
+
+* <Cmd sid='device.info.ledBuzzer' product='2' />：LED またはブザーを動作させるイベント項目を選択して設定します。
+
+* <Cmd sid='device.info.keypadBackLight' product='2' />：キーパッドバックライトをオンまたはオフに切り替えます。 このオプションを有効にすると、キーパッド背面の照明が点灯します。 暗い環境でもキーを簡単に識別できます。
+
+:::note
+
+<Cmd sid='device.info.keypadBackLight' product='2' /> オプションは XPass D2 ハードウェア V02M、ファームウェア 1.7.1 以降で使用できます。
+
+:::
+
+</details>
+
+<details>
+
+<summary>BioStation 2, BioStation L2, BioLite N2, FaceLite</summary>
+
+* <Cmd sid='device.info.language' product='2' />：デバイスの画面に表示する言語を設定します。 デバイスに言語リソースファイルを送信するには、<Cmd sid='device.updateResource' product='2' /> をクリックします。
+
+* <Cmd sid='device.info.volume' product='2' />：デバイスで再生される基本音量を設定します。
+
+* <Cmd sid='device.info.menuTimeout' product='2' />：メニュー画面が待機画面に切り替わるまでの時間を設定します。
+
+* <Cmd sid='device.info.theme' product='2' />：デバイスのホーム画面スタイルを変更します。
+
+* <Cmd sid='device.info.backlightTimeout' product='2' />：画面バックライトが自動でオフになるまでの時間を設定します。
+
+* <Cmd sid='device.info.msgTimeout' product='2' />：メッセージが自動で消えるまでの時間を設定します。
+
+* <Cmd sid='device.info.useVoice' product='2' />：通知音の代わりに音声ガイダンスを使用できます。
+
+* <Cmd sid='device.info.background' product='2' />：デバイスのホーム画面の背景に表示する項目を設定します。
+
+  * <Cmd sid='device.display.background.logo' product='2' />：ユーザーが登録した画像をデバイスのホーム画面に表示できます。 <Cmd sid='common.add' product='2' /> ボタンをクリックして、希望する画像を登録します。
+
+  * <Cmd sid='device.display.background.notice' product='2' />：管理者が入力した内容をホーム画面に表示できます。
+
+  * <Cmd sid='device.display.background.slideShow' product='2' />：ユーザーが登録した最大10枚の画像をスライドショーとしてホーム画面に表示できます。 <Cmd sid='common.add' product='2' /> ボタンをクリックして、希望する画像を登録します。
+
+  :::note
+
+  * <Cmd sid='button.update' product='2' /> ボタンをクリックして、変更内容をデバイスにリアルタイムで反映します。
+
+  * 壁紙の種類を変更した場合、<Cmd sid='button.update' product='2' /> ボタンをクリックしてもデバイスに適用されません。 画面下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+  * <Cmd sid='device.display.background.notice' product='2' />、<Cmd sid='device.display.background.slideShow' product='2' /> オプションは BioStation 2 モデルでサポートされています。
+
+  :::
+
+* <Cmd sid='device.info.sound' product='2' />：デバイスの起動、認証成功、認証失敗イベント時に再生する効果音を設定します。 サイズが500KB以下の *\*.wav* ファイルを選択します。 <Cmd sid='button.browse' product='2' /> ボタンをクリックします。
+
+  :::note
+
+  <Cmd sid='button.update' product='2' /> ボタンをクリックして、変更内容をデバイスにリアルタイムで反映します。
+
+  :::
+
+</details>
+
+<details>
+
+<summary>BioStation 3, BioStation A2, FaceStation 2, FaceStation F2, X-Station 2</summary>
+
+* <Cmd sid='device.info.language' product='2' />：デバイスの画面に表示する言語を設定します。 デバイスに言語リソースファイルを送信するには、<Cmd sid='device.updateResource' product='2' /> をクリックします。
+
+* <Cmd sid='device.info.volume' product='2' />：デバイスで再生される基本音量を設定します。
+
+* <Cmd sid='device.intercom.speakerVolume' product='2' />：IP インターホン機能を使用するときにデバイスから出力される音量を設定します。
+
+* <Cmd sid='device.intercom.micVolume' product='2' />：IP インターホン機能を使用するときにデバイスへ入力される音量を設定します。
+
+* <Cmd sid='device.info.menuTimeout' product='2' />：メニュー画面が待機画面に切り替わるまでの時間を設定します。
+
+* <Cmd sid='device.info.backlightTimeout' product='2' />：画面バックライトが自動でオフになるまでの時間を設定します。
+
+* <Cmd sid='device.info.msgTimeout' product='2' />：メッセージが自動で消えるまでの時間を設定します。
+
+* <Cmd sid='device.info.serverPrivateMsg' product='2' />：ユーザーが認証する際に画面に表示する個人メッセージの使用有無を設定できます。
+
+* <Cmd sid='device.info.useScreenSaver' product='2' />：デバイスを使用していないときに LCD 画面の明るさを下げて不要な電力消費を削減できます。 この機能を有効にしない場合、デバイスで <Cmd sid='device.info.useScreenSaver' product='2' /> オプションを有効にしても認証成功メッセージは表示されません。
+
+  :::note
+
+  このオプションは FaceStation 2、FaceStation F2、X-Station 2、BioStation 3 モデルでサポートされています。
+
+  :::
+
+* <Cmd sid='device.info.useVoice' product='2' />：通知音の代わりに音声ガイダンスを使用できます。
+
+* <Cmd sid='device.info.homeScreen' product='2' />：デバイスのホーム画面の背景に表示する項目を設定します。
+
+  * <Cmd sid='device.display.background.normal' product='2' />：既定の画像をホーム画面に表示します。
+
+  * <Cmd sid='device.display.background.logo' product='2' />：ユーザーが登録した画像をデバイスのホーム画面に表示できます。 <Cmd sid='common.add' product='2' /> ボタンをクリックして、希望する画像を登録します。
+
+  * <Cmd sid='device.display.background.notice' product='2' />：管理者が入力した内容をホーム画面に表示できます。
+
+  :::note
+
+  * <Cmd sid='button.update' product='2' /> ボタンをクリックして、変更内容をデバイスにリアルタイムで反映します。
+
+  * 壁紙の種類を変更した場合、<Cmd sid='button.update' product='2' /> ボタンをクリックしてもデバイスに適用されません。 画面下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+  * ホーム画面を <Cmd sid='device.display.background.logo' product='2' /> に設定し、<Cmd sid='device.display.background.slideShow' product='2' /> に設定すると、最大10枚の画像をスライドショーとしてホーム画面に表示できます。 <Cmd sid='common.add' product='2' /> ボタンをクリックして、希望する画像を登録します。
+
+  :::
+
+* <Cmd sid='device.info.sound' product='2' />：デバイスの起動、認証成功、認証失敗イベント時に再生する効果音を設定します。 サイズが500KB以下の *\*.wav* ファイルを選択します。 <Cmd sid='button.browse' product='2' /> ボタンをクリックします。
+
+  :::note
+
+  <Cmd sid='button.update' product='2' /> ボタンをクリックして、変更内容をデバイスにリアルタイムで反映します。
+
+  :::
+
+</details>
+
+## 作業条件と動作の設定 {#triggerAction}
+
+<Cmd sid='device.info.triggerNAction' product='2' /> グループでは、各状況に応じた作業条件と動作を設定できます。 例えば、認証に失敗したときにすべてのアラームを鳴らす、または RS-485 接続が切断されたときにデバイスを使用できないように設定できます。
+
+作業条件と動作は、イベントを選択して登録することも、ユーザーが任意の条件や動作を設定することもできます。 <Cmd sid='device.info.triggerNAction' product='2' /> グループの右側で <IcAdd /> <Cmd sid='common.add' product='2' /> ボタンをクリックします。
+
+<Image src='/img/biostarx-setting-device-edit-advanced-triggernaction.png' />
+
+### <Cmd sid='triggerAction.trigger' product='2' /> {#triggerAction}
+
+あらかじめ設定されたイベントを選択するか、ユーザー定義の条件を追加できます。
+
+* <Cmd sid='triggerAction.event' product='2' />：あらかじめ設定されたイベントを選択します。
+
+* <Cmd sid='triggerAction.input' product='2' />：オプション内の各項目を選択してユーザー定義の条件を設定します。
+
+* <Cmd sid='triggerAction.break_glass' product='2' />：オプション内の各項目を選択してユーザー定義の条件を設定します。 入力に対する動作を伴わずに入力のみを検知するように設定できます。
+
+:::info
+
+* <Cmd sid='triggerAction.trigger' product='2' /> を <Cmd sid='triggerAction.event' product='2' /> に設定した場合、イベントリストから 1 つのイベントしか選択できません。
+
+* <Cmd sid='triggerAction.input' product='2' /> または <Cmd sid='triggerAction.break_glass' product='2' /> オプションを選択してカスタム条件を設定する際に希望するスケジュールがない場合は、<Cmd sid='button.plusAddSchedule' product='2' /> をクリックします。 スケジュール設定の詳細は[次のドキュメント](settings-schedule)を参照してください。
+
+* <Cmd sid='triggerAction.break_glass' product='2' /> オプションを選択してカスタム条件を設定する際に目的のイベント名がない場合は、<Cmd sid='triggerAction.addNewBreakGlassEvent' product='2' /> をクリックします。 該当イベントが発生すると、イベントログおよびリアルタイムログに設定したイベント名が表示されます。
+
+* イベント名は最大 64 文字まで入力できます。
+
+:::
+
+### <Cmd sid='triggerAction.action' product='2' /> {#triggeraction}
+
+あらかじめ設定された動作を選択するか、ユーザー定義の動作を追加できます。
+
+:::info
+
+* <Cmd sid='triggerAction.output' product='2' /> オプションを選択してカスタム動作を設定する際に目的の信号設定がない場合は、<Cmd sid='common.addSignal' product='2' /> をクリックして設定します。
+
+* <Cmd sid='triggerAction.trigger' product='2' /> を <Cmd sid='triggerAction.break_glass' product='2' /> に選択した場合、<Cmd sid='triggerAction.action' product='2' /> を <Cmd sid='triggerAction.portNone' product='2' /> に設定できます。
+
+:::
+
+## イメージログ設定 {#image-log-settings}
+
+<Cmd sid='common.imageLog' product='2' /> グループでは、デバイスで使用するイメージログイベントとスケジュールを設定できます。
+
+1. <Cmd sid='common.imageLog' product='2' /> オプションを <Cmd sid='common.use' product='2' /> に設定します。
+
+2. <Cmd sid='common.configuration' product='2' /> で <Cmd sid='button.addplus' product='2' /> をクリックし、必要なイベントとスケジュールを設定します。
+
+<Image src='/img/biostarx-setting-device-edit-advanced-imagelog.png' />
+
+:::info
+
+* この機能は BioStation A2、FaceStation 2、FaceStation F2、X-Station 2、BioStation 3 モデルでサポートされています。
+
+* イメージログの基本設定については[次のドキュメント](settings-device-image-log)を参照してください。
+
+:::
+
+## Wiegand 設定 {#wiegang-settings}
+
+<Cmd>Wiegand</Cmd> グループでは、Wiegand デバイスの入出力に関する詳細項目を設定できます。
+
+<Image src='/img/biostarx-setting-device-edit-advanced-wiegand.png' />
+
+* <Cmd sid='device.info.wiegandInOut' product='2' />：入出力モードを選択します。
+
+* <Cmd sid='device.info.wiegandOutPulseWidth' product='2' />：Wiegand 信号のパルス幅を設定します。
+
+* <Cmd sid='device.card.wiegand.inOutFormat' product='2' />：デバイスに指定する Wiegand フォーマットを変更します。
+
+* <Cmd sid='device.info.wiegandOutPulseInterval' product='2' />：Wiegand 信号のパルス間隔を設定します。
+
+* <Cmd sid='device.card.wiegand.out' product='2' />：Wiegand 信号の出力モードを設定します。
+
+  * <Cmd sid='device.card.wiegand.out.normal' product='2' />：設定済みの Wiegand フォーマットでカードをスキャンします。 エラーコードを設定でき、Wiegand を使用したカード認証に失敗した場合に送信する値を選択できます。
+
+  * <Cmd sid='device.card.wiegand.out.bypass' product='2' />：Wiegand 認証に関係なく CSN を送信します。 ドア制御機能のないデバイスとして使用する場合に設定します。
+
+* <Cmd sid='device.card.wiegand.outputInfo' product='2' />：認証時にデバイスへ出力する情報を選択します。
+
+:::info
+
+Wiegand フォーマットの設定詳細については、[次のドキュメント](settings-credential-wiegand-format)を参照してください。
+
+:::
+
+## セキュリティタンパー設定 {#tamper-settings}
+
+デバイスでタンパーイベントが発生した場合に、デバイスに保存されているすべてのユーザー情報、全ログ、およびセキュリティキーを削除するよう設定できます。 <Cmd sid='device.info.tamperOn' product='2' /> 機能を有効にするには、<Cmd sid='device.info.tamperOn.on' product='2' /> に設定します。
+
+<Image src='/img/biostarx-setting-device-edit-advanced-tamper.png' />
+
+## アナログインターホン設定 {#analog-intercom-settings}
+
+アナログインターホンの使用可否を設定できます。 デバイスに接続されたインターホンを使用するには、<Cmd sid='device.intercom.title' product='2' /> グループで <Cmd sid='common.use' product='2' /> をクリックします。
+
+:::info
+
+この機能は BioStation 2 モデルのみ対応しています。
+
+:::
+
+## カメラ設定 {#camera-settings}
+
+カメラの周波数を設定できます。 蛍光灯を使用する環境で周波数を誤って設定すると、画像がちらつく場合があります。 <Cmd sid='device.info.camera' product='2' /> グループで地域に合わせた周波数を設定します。
+
+:::info
+
+* この機能は、ファームウェア 2.1.4 以降の FaceStation F2 モデルおよび BioStation A2 モデルでサポートされます。
+
+* カメラの周波数は地域によって異なります。 米国では 60 Hz が一般的で、多くの他地域では 50 Hz が使用されています。 地域に適したカメラ周波数については代理店にお問い合わせください。
+
+:::

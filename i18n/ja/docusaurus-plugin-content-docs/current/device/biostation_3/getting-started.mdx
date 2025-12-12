@@ -1,0 +1,171 @@
+---
+id: getting-started
+title: はじめに
+description: デバイスを使用するための初期手順を案内します。
+keywords:
+  - 同梱物
+  - 名称
+  - 機能
+  - ケーブル
+  - コネクター
+---
+
+デバイスを使用するための初期手順を案内します。
+
+## 同梱物
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-bs3.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-bs3.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-drilling-template-bs3.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-connection-cables-bs3.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>BioStation 3</Td>
+
+<Td>壁掛けブラケット</Td>
+
+<Td>ドリルテンプレート</Td>
+
+<Td>クイックガイド</Td>
+
+<Td>接続ケーブル</Td>
+
+</Row>
+</Tbody>
+
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-pvc-anchors2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>ダイオード</Td>
+
+<Td>120 Ω 抵抗</Td>
+
+<Td>PVCアンカー x2</Td>
+
+<Td>固定用ネジ x2</Td>
+
+<Td>ブラケット固定用ネジ（星形）</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## 各部の名称と機能
+
+<Image src='/img/device/name-function-each-part-bs3.png' className='none' width='60%' />
+
+* **マイク**：インターホン接続時にユーザーの音声を伝えます。
+
+  * マイクを覆ったり塞いだりすると、音声が正常に伝わらない場合があります。
+
+* **赤外線カメラ**：赤外線画像を撮影します。
+
+* **ビジュアルカメラ**：実際の画像を撮影します。
+
+* **ディスプレイ**：操作用のUIを提供します。
+
+* **RFカード・モバイル入退出カードリーダー**：入退出のためにRFカードまたはモバイル入退出カードを読み取る部分です。
+
+* **LED状態表示灯**：製品の動作状態を表示します。
+
+  * 緑：認証成功
+
+  * 赤：認証失敗
+
+  * 青：正常動作状態
+
+  * 青／緑点滅：
+
+    * <Cmd sid='ui_012' product='dev' />を有効に設定すると、IP アドレスを取得できない状態
+
+    * <Cmd sid='ui_205' product='dev' /> モードのとき、マスター装置との接続が切断された状態
+
+  * 赤／紫点滅：デバイスロック状態
+
+  * 黄点滅：入力待機状態
+
+* **スピーカー**：音を出力します。
+
+* **イーサネット**：イーサネットケーブルを接続します。
+
+* **Input（5ピン）**：Inputケーブルを接続します。
+
+* **USB拡張ポート（5ピン）**：他のアクセサリ製品を接続できます。
+
+* **Wiegand出力（4ピン）**：Wiegand出力ケーブルを接続します。
+
+* **Wiegand入力（4ピン）**：Wiegand入力ケーブルを接続します。
+
+* **RS-485（4ピン）**：RS-485ケーブルを接続します。
+
+* **リレー（3ピン）**：リレーケーブルを接続します。
+
+* **電源（2ピン）**：電源ケーブルを接続します。
+
+* **USB（Type-C）メモリスロット**：USBメモリを接続します。
+
+{/* 케이블 및 커넥터 */}
+import CablesandConnectors from '../../common/_getting-started-cables-and-connectors.mdx'
+
+<CablesandConnectors />
+
+{/* 마스터 관리자 설정하기 */}
+import Masteradminsettings from '../../common/_device-master-admin-settings.mdx'
+
+<Masteradminsettings />
+
+{/* 올바른 얼굴 등록 및 인증 방법 */}
+import DocumentA from '../../common/_face-enrollment-authentication-method.mdx'
+
+<DocumentA name='60~100 cm' />
+
+## QRコードおよびデバイスライセンスに関する注意事項
+
+### 正しいQRコード認証方法
+
+ユーザーにQRコードを発行し、認証手段として使用できます。 認識率を高めるため、画面の案内に従って正しくQRコードをスキャンしてください。
+
+<Image src='/img/device/qr-scanning-bs3.svg' className='none' alone />
+
+* デバイスのカメラとQRコードの間の距離を30〜40 cmに保ってください。
+
+* QRコードをデバイスのスキャン画面中央に合わせてください。
+
+* モバイルデバイスにダウンロードしたQRコードで認証する場合、画面が見やすいようにモバイルデバイスの明るさを調整してください。
+
+### デバイスライセンスに関する注意事項
+
+* QR認証を使用するには、別途デバイスライセンスが必要です。 デバイスライセンスを発行するには、購入先にお問い合わせください。
+
+* デバイスライセンスファイルは暗号化されているため、任意に変更できません。
+
+* デバイスライセンスはデバイスIDを基準に発行されます。 不正な方法でデバイスIDを変更した場合、ライセンスの保証サービスは提供されません。

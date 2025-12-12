@@ -1,0 +1,60 @@
+---
+id: getting-started
+title: はじめに
+description: Device Manager を使用するための最小要件を案内します。
+keywords:
+  - 概要
+  - 最小要件
+---
+
+Suprema Device Manager は、BLE 通信を利用して Suprema の XPass D2、XPass 2、BioEntry W3 を設定できるモバイルアプリケーションです。
+
+<Image src='/img/device/device-manager-system-diagram1.svg' className='none' width={650} alone />
+
+管理者は PC でサーバーに接続したり装置を物理的に取り外したりすることなく、モバイルデバイスから装置のネットワーク、サーバー、RS-485 通信、カード形式、キーパッド設定、PIN、LED、ブザーを設定でき、装置の再起動やファームウェアアップグレード、装置設定の初期化などの機能も利用できます。
+
+また、XPass D2 では、一度設定した値をテンプレートとして保存し、複数の装置に迅速かつ簡単に適用できます。
+
+:::info
+
+Suprema Device Manager を使用すると、他社コントローラーと構成された XPass D2 の設定を現場で直接変更できます。
+
+<Image src='/img/device/device-manager-system-diagram2.svg' className='none' width={900} alone />
+
+:::
+
+## 最小要件
+
+### モバイルデバイス
+
+モバイルデバイスが BLE 通信に対応しているか確認してください。
+
+* Android 5.0 Lollipop 以上
+
+* iOS 9.0 以上
+
+### 装置とファームウェア
+
+互換性のある装置とファームウェアバージョンを確認してください。
+
+* [**XPass D2**](../xpass_d2/index.mdx) ファームウェア 1.1.0 以上
+
+* [**XPass 2**](../xpass_2/index.mdx)
+
+  * XP2-MDPB、XP2-GDPB、XP2-GKDPB：ファームウェア 1.0.0 以上
+
+  * XP2-MAPB：ファームウェア 1.4.1 以上
+
+  * XP2-MAPB-H：ファームウェア 1.4.3 以上
+
+* [**BioEntry W3**](../bioentry_w3/index.mdx) ファームウェア 1.0.1 以上
+
+:::info
+
+* 互換性のある装置とファームウェアは変更される場合があります。
+
+* 装置のファームウェアが上記のバージョンより古い場合は、BioStar X でファームウェアをアップグレードしてください。 装置をスレーブ装置として使用している場合、接続されているマスター装置のファームウェアも BioStar 2 2.7.0 以上と互換性のある最新バージョンである必要があります。
+
+* 装置ファームウェアのアップグレードの詳細については、[IP 装置（装置ファームウェアをアップグレードする）](ip-device-settings#device-firmware-upgrade)、[XPass D2（装置ファームウェアをアップグレードする）](xpd2-settings#device-firmware-upgrade) または [BioStar X 管理者マニュアル](../../platform/biostar_x/settings-device-upgrade-firmware) を参照してください。
+
+:::

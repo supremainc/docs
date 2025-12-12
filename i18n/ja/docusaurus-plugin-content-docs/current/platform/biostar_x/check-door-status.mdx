@@ -1,0 +1,176 @@
+---
+id: check-door-status
+title: ドア状態を確認
+description: ドアの状態をリアルタイムで監視し、セキュリティシステムを安定的に運用できます。 また、ドアに割り当てられたデバイスの異常状態も確認できます。
+keywords:
+  - モニタリング
+  - ドア
+---
+
+ドアの状態をリアルタイムで監視し、セキュリティシステムを安定的に運用できます。 <Cmd sid='shell.header.arena' /> が提供するステータスアイコンでドアに割り当てられたデバイスの異常状態を一目で確認し、問題発生時に即座に対応してください。
+
+<Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.arena' /> をクリックするか、画面左上のショートカットリストから <Cmd sid='shell.header.arena' /> を選択してください。 画面左のサイドバーにある <Cmd sid='arena.tree.door.title' /> タブで各ドアの状態を確認できます。
+
+## 開始する前に
+
+ドアに接続されたデバイスが正しく構成されているか確認してください。 デバイスがネットワークに接続され、最新ファームウェアに更新されているか確認することが重要です。 問題が発生した場合は、まずデバイスの電源状態とネットワーク接続を確認してください。
+
+:::info
+
+* デバイスの追加と構成の詳細については[次のドキュメント](settings-manage-devices)を参照してください。
+
+* ドアの追加と構成の詳細については[次のドキュメント](settings-manage-door)を参照してください。
+
+* ドアの状態をモニタリングまたは制御するには、<Cmd sid='setting.server.logUploadType' product='2' /> 機能を有効にする必要があります。 この機能は、<Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' /> のメニュー経路にある <Cmd sid='common.general' product='2' /> セクションで有効化できます。
+
+* VMSサーバーと連携してカメラをドアに紐付ける機能は、**アドバンス** (Advanced) 以上のライセンスで追加オプションとして利用できます。 ライセンスポリシーの詳細は[次のドキュメント](licensing#features-add-ons)を参照してください。
+
+:::
+
+## ツリー構造を確認 {#door-tree-structure}
+
+画面左のサイドバーにある <Cmd sid='arena.tree.door.title' /> タブのツリーは次のような構成です。
+
+import Doortree from './door-tree.json';
+
+<Treeview data={Doortree} />
+
+:::info
+
+* デバイスの追加と構成の詳細については[次のドキュメント](settings-manage-devices)を参照してください。
+
+* ドアの追加と構成の詳細については[次のドキュメント](settings-manage-door)を参照してください。
+
+* エレベーターの追加と構成の詳細については[次のドキュメント](settings-manage-elevators)を参照してください。
+
+* 高度アクセス制御設定の詳細については[次のドキュメント](settings-advanced-ac)を参照してください。
+
+* ドアとカメラを連携するには[次のドキュメント](settings-videos-rule)を参照してください。
+
+:::
+
+## 状態を確認
+
+### 接続エラーとアラームを確認 {#check-the-error-status}
+
+ドアまたはエレベーターの状態を確認して、正常に動作しているか把握できます。 各アイコンの状態は以下を参照してください。
+
+<div className='col2--20-80 overflow-x'>
+
+|                ステータスアイコン               | 説明                                                                           |
+| :------------------------------------: | ---------------------------------------------------------------------------- |
+|  <IcErr width='35px' height='35px' />  | デバイスの切断、通信サーバーエラー、同期エラーなどのデバイス異常状態を表示します。                                    |
+| <IcAlert width='40px' height='40px' /> | ドアアラーム（強制開扉、長時間開扉、APB、火災アラーム、非常開放）または AI 映像解析アラーム（徘徊検知、侵入検知など）が発生した状態を表示します。 |
+
+</div>
+
+:::tip
+
+ステータスアイコンをクリックすると、ツールチップで詳細情報を確認できます。 ツールチップに表示されたエラーメッセージのリンクをクリックすると、ドアまたはエレベーターに接続されたデバイスの一覧へ移動できます。
+
+<Image src='/img/monitoring-door-status-tooltip.png' />
+
+該当デバイスを右クリックし、<Cmd sid='arena.tree.contextMenu.reconnect' /> または <Cmd sid='arena.tree.contextMenu.reboot' /> オプションを選択してください。
+
+<Image src='/img/monitoring-door-status-tooltip-device.png' />
+
+:::
+
+:::info
+
+* ドアまたはエレベーターで発生するアラームは、次の設定で構成できます。
+
+  * [ドアアラーム設定](settings-door-add#alarm)
+
+  * [エレベーターアラーム設定](settings-elevators-add#alarm)
+
+  * [高度アクセス制御設定](settings-advanced-ac)
+
+* ビデオルールでドアとカメラを連携させてアラームを設定します。 ビデオルール設定の詳細は[次のドキュメント](settings-videos-rule)を参照してください。
+
+* VMSサーバーと連携する際、映像に対するAIイベントアラームを設定すると、**BioStar X** にアラームを送信できます。 詳細はVMSサーバーのマニュアルを参照してください。
+
+* アラーム解除の詳細については[次のドキュメント](monitoring-event#acknowledge-alarm-and-record-action)を参照してください。
+
+:::
+
+### ドアのロックを確認 {#check-the-door-lock}
+
+ドアリレーの状態からドアのロック状態を確認できます。 ドアリレーの状態は以下を参照してください。
+
+<div className='col2--20-80 overflow-x'>
+
+|                   ステータスアイコン                  | 説明           |
+| :------------------------------------------: | ------------ |
+|  <IcRelayLock width='auto' height='35px' />  | ドアが施錠されています。 |
+| <IcRelayUnlock width='auto' height='40px' /> | ドアが開いています。   |
+
+</div>
+
+### カメラの状態を確認 {#check-the-camera-status}
+
+カメラの状態を確認して、正常に動作しているか確認できます。 カメラの状態は以下を参照してください。
+
+<div className='col2--20-80 overflow-x'>
+
+|                ステータスアイコン                | 説明                        |
+| :-------------------------------------: | ------------------------- |
+|  <IcCamOk width='auto' height='35px'/>  | カメラが接続されています。             |
+| <IcCamFail width='auto' height='35px'/> | カメラの電源がオフ、または接続が解除されています。 |
+
+</div>
+
+### セキュリティ状態を確認 {#check-the-security-status}
+
+ドアまたは高度アクセス制御設定の警備状態を確認します。 
+
+<div className='col2--20-80 overflow-x'>
+
+|                 ステータスアイコン                | 説明                                      |
+| :--------------------------------------: | --------------------------------------- |
+| <IcDisable width='auto' height='30px' /> | 無効化された設定のアイコンです。 無効化された設定ではアラームは発生しません。 |
+|    <IcArm width='auto' height='35px'/>   | セキュリティが有効です。                            |
+|  <IcDisarm width='auto' height='35px'/>  | セキュリティが無効です。                            |
+
+</div>
+
+:::info
+
+警備状態は、ドアを**警備**に設定した場合にのみ表示されます。 警備設定の詳細は[次のドキュメント](settings-advanced-ac-intrusion-alarm)を参照してください。
+
+:::
+
+### エレベーター状態を確認
+
+エレベーター経由のフロアアクセス制御状態を確認します。
+
+<div className='col2--20-80 overflow-x'>
+
+|                  ステータスアイコン                 | 説明                       |
+| :----------------------------------------: | ------------------------ |
+| <StatusNormal width='auto' height='35px'/> | エレベーター経由で当該フロアが施錠されています。 |
+|   <StatusOK width='auto' height='35px'/>   | エレベーター経由で当該フロアが解放されています。 |
+
+</div>
+
+## グループリストの展開/折りたたみ
+
+最上位グループまたはサブグループからリストを展開または折りたたむことができます。 
+
+<Image src='/img/biostarx-monitoring-group-expand-collapse.png' />
+
+### 最上位グループ
+
+1. <Cmd sid='arena.tree.door.title' /> タブで <Cmd sid='arena.tree.door.allDoorGroups' /> または <Cmd sid='arena.tree.door.allElevatorGroups' />、<Cmd sid='arena.tree.door.allZones' /> を選択して右クリックしてください。
+
+2. ポップアップメニューで <Cmd sid='arena.tree.expandAll' /> または <Cmd sid='arena.tree.collapseAll' /> を選択してください。 
+
+選択した最上位グループを基準にすべてのサブリストを展開または折りたたむことができます。
+
+### サブグループ
+
+1. 各最上位グループのサブグループリストを展開または折りたたむには、サブグループを選択して右クリックしてください。 
+
+2. ポップアップメニューで <Cmd sid='arena.tree.contextMenu.expandBelow' /> または <Cmd sid='arena.tree.contextMenu.collapseBelow' /> を選択してください。 
+
+選択したサブグループのリストを展開または折りたたむことができます。

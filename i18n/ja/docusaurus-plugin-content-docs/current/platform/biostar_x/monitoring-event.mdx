@@ -1,0 +1,212 @@
+---
+id: monitoring-event
+title: イベントをモニタリングする​
+description: イベントモニタリング機能を使用し、リアルタイムイベントを確認および管理する方法を案内します。 アラームイベント、警告イベント、フィルタリングや状態管理など、さまざまな機能を活用してイベントを効率的に処理します。
+keywords:
+  - モニタリング
+  - イベントモニタリング
+  - リアルタイムイベント
+  - アラームイベント
+  - 警告イベント
+  - イベントフィルタリング
+---
+
+モニタリングページの画面下部にある <Cmd sid='arena.eventTable.title' /> セクションで、リアルタイムで発生するイベントを確認および管理できます。 イベントの状態、アラームイベント処理、フィルタリング、色分けなど多様な機能により、イベントを効率的に管理できます。 特に、ドア、デバイス、ユーザーに関連するイベントをリアルタイムでモニタリングし、必要な対応を迅速に行えます。
+
+<Image src='/img/biostarx-monitoring-event-list.png' />
+
+## イベント一覧を確認する {#event-list}
+
+<Cmd sid='arena.eventTable.title' /> セクションでは、発生したイベントをリアルタイムで確認できます。 イベントには次の情報が含まれます。
+
+<Image src='/img/biostarx-monitoring-event-list-details.png' />
+
+* <Cmd sid='arena.eventTable.date' />：イベントが発生した日時です。
+
+* <Cmd sid='arena.eventTable.door' />：イベントが発生したドアです。
+
+* <Cmd sid='arena.eventTable.device' />：イベントが発生したデバイスです。
+
+* <Cmd sid='arena.eventTable.user' />：イベントを発生させたユーザーです。
+
+* <Cmd sid='arena.eventTable.event' />：イベントの詳細内容です。
+
+* <Cmd sid='arena.eventTable.status' />：イベントの状態です。 アクティブなイベントの場合、<Cmd sid='arena.preview.event.active' /> 状態で表示されます。 アラームイベントには <Cmd sid='common.acknowledge' /> ボタンが表示されます。 <Cmd sid='common.acknowledge' /> ボタンをクリックすると、該当イベントが解除されます。
+
+  <Image src='/img/biostarx-monitoring-event-list-alarm-active.png' />
+
+* <Cmd sid='arena.eventTable.view' />：イベントに扉に接続されたカメラの映像情報が含まれている場合、ビデオアイコン(<IcVidLog />)が表示されます。 アイコンをクリックすると映像を確認できます。
+
+:::info
+
+* 個別のイベントをクリックすると、画面右側に詳細情報が表示されます。 詳細情報には、イベント発生日時とエリア、ドア、デバイス、ユーザーグループ、ユーザー、ポート、イベントの詳細が含まれます。 
+
+* イベントにドアに接続されたカメラの映像または画像情報が含まれている場合、ビデオおよびイメージログも確認できます。
+
+{/* 예시 이미지 추가 */}
+
+:::
+
+## 色によるイベント区分 {#event-color}
+
+イベント一覧に表示されるイベントは色分けで区別できます。
+
+<Image src='/img/biostarx-monitoring-event-list-types.png' />
+
+* **色なし**：通常イベントです。
+
+* <span style={{fontWeight: 'bold', color: '#ffa200'}}>オレンジ</span>：注意イベントです。 アクセスが許可されていないエリアにユーザーが入ろうとした場合や、ドアが開いたままの場合など、注意が必要なイベントです。
+
+* <span style={{fontWeight: 'bold', color: '#ff0000'}}>赤</span>：[アラーム](../../reference/glossary#alarm)イベントです。 システムで発生したイベントのうち、対応が必要な警告イベントです。
+
+* <span style={{fontWeight: 'bold', color: '#6dae00'}}>緑</span>：解除されたアラームイベントです。
+
+{/* 알림 이벤트와 경고 이벤트의 차이 */}
+
+## アラームイベントの確認 {#alarm-event}
+
+<Cmd sid='arena.eventTable.title' /> セクションの一覧でアラームイベントのみを確認できます。 <Cmd sid='arena.eventTable.title' /> セクション右上の <IcAlarm /> <Cmd sid='arena.eventTable.toolbar.alarmEvents' /> ボタンをクリックします。 イベント一覧にはアラームイベントのみが表示されます。 アラームイベントは赤色で表示されます。
+
+<Image src='/img/biostarx-monitoring-event-list-view-only-alarm.png' />
+
+:::info
+
+<Cmd sid='arena.eventTable.title' /> セクション右上の <IcAlarm /> <Cmd sid='arena.eventTable.toolbar.allEvents' /> ボタンをクリックすると、アラームイベントを含むすべてのイベントを確認できます。
+
+:::
+
+## リアルタイムイベント {#real-time-event}
+
+<Cmd sid='arena.eventTable.title' /> セクションのイベント一覧では、リアルタイムで発生するイベントを確認できます。 リアルタイムイベントを停止するには、<Cmd sid='arena.eventTable.title' /> セクション右上の <IcPause /> <Cmd sid='arena.eventTable.toolbar.pause' /> ボタンをクリックします。 <IcPlay/> <Cmd sid='arena.eventTable.toolbar.play' /> ボタンをクリックすると、リアルタイムイベントを再開します。
+
+<Image src='/img/biostarx-monitoring-event-list-pause.png' />
+
+## イベントのフィルタリング {#filter-event}
+
+### フィルター適用 {#apply-filter}
+
+ユーザーが希望する条件でイベント一覧をフィルタリングできます。 これにより、目的の条件に合ったイベントを素早く確認できます。
+
+1. <Cmd sid='arena.eventTable.title' /> セクション一覧の各ヘッダー列で <IcFilter /> アイコンをクリックします。
+
+   <Image src='/img/biostarx-monitoring-event-list-filter-01.png' />
+
+2. フィルターウィンドウが表示されたら、左側の一覧から目的の項目をクリックします。
+
+   <Image src='/img/biostarx-monitoring-event-list-filter-02.png' />
+
+   選択した項目を解除するには、<span className='text-blue-500'><IcClose /></span> ボタンをクリックします。 すべての項目を解除するには <Cmd sid='common.removeAll' /> ボタンをクリックします。
+
+3. すべての設定が完了したら、<Cmd sid='common.apply' /> ボタンをクリックします。
+
+イベント一覧には設定した条件のイベントのみが表示されます。
+
+:::info
+
+* フィルターウィンドウの検索入力フィールドを使って目的の項目を素早く検索することもできます。
+
+* 各ヘッダー列ごとに複数の条件を設定できます。 1つ以上の条件を設定すると、`AND` 条件が適用されます。
+
+* ヘッダー列ごとにフィルタリング可能な項目は異なる場合があります。
+
+* フィルター条件を設定すると、ヘッダー列の <span className='text-blue-500'><IcFilter /></span> アイコンの色が青に変わります。
+
+:::
+
+### フィルタリング解除 {#removefilter}
+
+適用したフィルター条件を解除できます。
+
+1. <Cmd sid='arena.eventTable.title' /> セクション一覧でフィルターが適用されているヘッダー列の <span className='text-blue-500'><IcFilter /></span> アイコンをクリックします。
+
+2. フィルターウィンドウが表示されたら、右側の一覧で解除したい項目の右側にある <span className='text-blue-500'><IcClose /></span> ボタンをクリックします。 すべてのフィルターを解除するには、<Cmd sid='common.removeAll' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-monitoring-event-list-filter-02.png' />
+
+3. 解除する条件をすべて設定したら、<Cmd sid='common.apply' /> ボタンをクリックします。
+
+:::info
+
+* フィルターウィンドウの検索入力フィールドを使って目的の項目を素早く検索することもできます。
+
+* フィルター条件が解除されると、ヘッダー列のアイコンの色が元に戻ります。
+
+:::
+
+## イベント一覧をクリア {#cleareventlist}
+
+<Cmd sid='arena.eventTable.title' /> セクションの一覧からイベントを削除できます。 <Cmd sid='arena.eventTable.title' /> セクション右上の <IcMoreB/> ボタンをクリックし、ポップアップメニューで <Cmd sid='arena.eventTable.clearEvents' /> を選択します。 イベント一覧に不要なイベントが大量に溜まっている場合は、<Cmd sid='arena.eventTable.clearEvents' /> 機能を使用して整理できます。
+
+<Image src='/img/biostarx-monitoring-event-list-remove.png' />
+
+## アラームの確認および措置内容の記録 {#acknowledge-alarm-and-record-action}
+
+ドアの強制開放などのアラームイベントが発生すると、アラームメッセージウィンドウが表示されます。 アラームメッセージウィンドウには、発生したアラームイベントの詳細が含まれます。 このとき管理者は、発生したアラームイベントの認知状況と措置内容を記録できます。
+
+<Image src='/img/biostarx-monitoring-event-alert-message.png' />
+
+:::info
+
+<Cmd sid='common.ignoreAll' /> ボタンは、アラームイベントが2件以上発生した場合にのみ表示されます。
+
+:::
+
+### アラームイベントへの措置内容の記録 {#recordactionforalarmevent}
+
+メッセージ入力フィールドにアラームイベントへの措置内容を入力します。 最大500文字まで入力できます。 措置内容を入力して <Cmd sid='common.acknowledge' /> ボタンをクリックします。 アラームイベントの認知状況と措置内容が記録されます。 アラームメッセージウィンドウが閉じられます。
+
+### アラームイベントの認知保留 {#deferalarmeventacknowledgment}
+
+<Cmd sid='common.ignore' /> ボタンをクリックして、アラームイベントの認知を保留することもできます。 対応事項を記録できます。 アラームメッセージウィンドウが閉じられます。 保留したアラームイベントはイベント一覧で <Cmd sid='arena.preview.event.active' /> 状態で表示され、<Cmd sid='common.acknowledge' /> ボタンを使用できます。
+
+<Image src='/img/biostarx-monitoring-event-list-alarm-active.png' />
+
+### イベント一覧でアラームイベントを確認
+
+イベント一覧の <Cmd sid='arena.eventTable.status' /> 列に表示される <Cmd sid='common.acknowledge' /> ボタンをクリックすると、発生したアラームイベントの認知状況と措置内容を記録できます。 入力を完了し、<Cmd sid='common.acknowledge' /> ボタンをクリックします。
+
+<Image src='/img/biostarx-monitoring-event-alert-acknowledge.png' />
+
+## 未確認のアラームイベントを表示する
+
+まだ確認していないアラームイベントを一度に確認し、対応事項を記録できる機能を提供します。 同じアラームイベントが複数発生した場合に有用です。
+
+1. <Cmd sid='arena.eventTable.title' /> セクション右上の <IcViewAlert /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-monitoring-event-list-view-alerts-01.png' />
+
+2. <Cmd sid='arena.activeAlarm.activeAlarmEvents' /> ウィンドウが表示されたら、左側の一覧で措置内容を記録するアラームイベントを選択します。 すべてのイベントを選択するには、ヘッダー列一番左のチェックボックスをクリックします。
+
+   <Image src='/img/biostarx-monitoring-event-list-view-alerts-02.png' />
+
+3. <Cmd sid='arena.activeAlarm.memo' /> 入力フィールドにアラームイベントへの措置内容を入力します。
+
+4. <Cmd sid='common.acknowledge' /> ボタンをクリックします。
+
+選択したイベントに対する対応事項を記録します。 アラームイベントのポップアップウィンドウが閉じられます。
+
+:::info
+
+アラームイベント一覧で1件以上のイベントを選択すると、<Cmd sid='common.acknowledge' /> ボタンが有効になります。
+
+:::
+
+## イベント一覧の列設定
+
+イベント一覧で表示する列を追加したり、順序変更や非表示設定ができます。
+
+1. <Cmd sid='arena.eventTable.title' /> セクション右上で <IcMoreB /> → <Cmd sid='arena.eventTable.columnLayout' /> をクリックします。
+
+   <Image src='/img/biostarx-monitoring-event-list-column-layout.png' />
+
+2. <Cmd sid='arena.eventTable.columnLayout' /> ウィンドウが表示されたら、表示する列のチェックボックスをクリックして追加または非表示設定ができます。 ドラッグ＆ドロップで列の順序を変更することもできます。
+
+   <Image src='/img/biostarx-monitoring-event-list-column-layout-popup.png' />
+
+3. 列設定をすべて変更したら、<Cmd sid='common.apply' /> ボタンをクリックします。
+
+:::info
+
+列設定を初期化するには、<Cmd sid='columnSetting.button.defaultColumn' product='2' /> をクリックします。
+
+:::
