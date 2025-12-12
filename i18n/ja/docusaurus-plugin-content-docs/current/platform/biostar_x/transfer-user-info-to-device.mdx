@@ -1,0 +1,40 @@
+---
+id: transfer-user-info-to-device
+title: デバイスにユーザー情報を転送する
+description: 登録済みデバイスへユーザー情報を転送する方法を案内します。
+keywords:
+  - ユーザー
+  - デバイス
+---
+
+入退室管理のために **BioStar X** サーバーに登録したユーザー情報をデバイスへ転送する機能を提供します。 デバイスへユーザー情報を転送すると、デバイスはユーザーデータを利用して入退室権限を判定し、オフライン環境でも認証を実行できます。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.user' /> をクリックします。
+
+2. ユーザーリストで、情報を転送するユーザーの一番左のチェックボックスをクリックします。 1 人以上のユーザーを選択できます。
+
+3. 画面右上の <IcMoreW/> ボタンを選択し、<Cmd sid='team.menu.transferToDevice' /> をクリックします。
+
+   <Image src='/img/biostarx-user-list-transfer-device.png' />
+
+4. <Cmd sid='team.menu.transferToDevice' /> ウィンドウが表示されたら、デバイス一覧でユーザー情報を転送するデバイスを選択します。
+
+   <Image src='/img/biostarx-user-transfer-to-devices.png' width='50%' />
+
+5. 同じ ID でも情報が異なる場合に **BioStar X** サーバーの内容で上書きするには、<Cmd sid='user.overwriteWhenTransfer' product='2' /> オプションのチェックボックスをクリックします。
+
+6. 転送するデバイスをすべて選択したら、<Cmd sid='common.apply' /> ボタンをクリックします。
+
+選択したデバイスへユーザー情報を転送します。
+
+:::info
+
+* 検索入力フィールドにキーワードを入力してデバイスを検索することもできます。
+
+* ユーザー情報を転送するには、デバイスが **BioStar X** サーバーに接続されている必要があります。
+
+* デバイスに既に登録されているユーザーの情報を変更した場合、変更内容をデバイスに反映するにはユーザー情報を再転送する必要があります。 ユーザー情報をデバイスと同期する <Cmd sid='setting.server.automaticUserSync' product='2' /> オプションを利用する場合は、[次のドキュメント](settings-server-server#user-sync) を参照します。
+
+* デバイスごとに登録できるユーザー数には制限があります。 デバイスに登録できるユーザー数を確認します。
+
+:::

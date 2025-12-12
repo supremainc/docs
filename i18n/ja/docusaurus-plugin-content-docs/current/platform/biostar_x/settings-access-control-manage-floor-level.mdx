@@ -1,0 +1,89 @@
+---
+id: settings-access-control-manage-floor-level
+title: フロアレベルを管理する
+description: 設定したエレベーターとフロア情報を使用してフロアレベルを設定できます。
+keywords:
+  - フロア
+  - フロアレベル
+  - エレベーター
+---
+
+設定済みのエレベーターとフロア情報を使用してフロアレベルを設定する方法を案内します。 フロアレベルはアクセスグループに適用できる重要な要素です。 フロアレベルを設定すると、ユーザーがエレベーターでアクセスできるフロアを管理できます。
+
+:::info
+
+<Cmd sid='ag.floorLevel.title' product='2' /> タブと <Cmd sid='ac.al.main.addFloorlevel.button' product='2' /> ボタンは **アドバンス** 以上のライセンスでのみ使用できます。 ライセンスポリシーの詳細は [以下](licensing) を参照してください。
+
+:::
+
+## 開始前に {#beforeStart}
+
+* フロアレベルを登録する前にエレベーターを設定する必要があります。 エレベーターの登録について詳しくは、[次のドキュメント](settings-elevators-add) を参照してください。
+
+* スケジュール設定によって、フロアレベルに適用する時間を事前に定義できます。 スケジュール設定の詳細は[次のドキュメント](settings-schedule)を参照してください。
+
+## フロアレベルを登録する {#addFloorLevel}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.accessControl.root' /> をクリックします。
+
+3. <Cmd sid='ac.al.main.addFloorlevel.button' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-settings-access-floor-level.png' />
+
+4. <Cmd sid='ac.al.addFloorlevel.top' product='2' /> 画面で、<Cmd sid='common.name' product='2' /> と <Cmd sid='common.description' product='2' /> を入力します。
+
+   <Image src='/img/biostarx-settings-add-access-floor-level.png' />
+
+5. <Cmd sid='ac.al.list.column.elevator' product='2' /> 項目でフロアレベルに適用するエレベーターを選択します。
+
+6. <Cmd sid='ac.al.list.column.floorName' product='2' /> 項目でフロアレベルに適用するフロアを選択します。
+
+7. <Cmd sid='common.schedule' product='2' /> 項目でフロアレベルに適用するスケジュールを選択します。
+
+8. フロアレベルを登録するには、画面最下部にある <Cmd sid='button.apply' product='2' /> をクリックします。
+
+:::info
+
+* 必要な入退室レベルがない場合は、新しい入退室レベルを登録する必要があります。 入退室レベルの登録の詳細は [次のドキュメント](settings-access-control-manage-access-level) を参照してください。
+
+* 目的のエレベーターがない場合は、新しいエレベーターを登録する必要があります。 エレベーターの登録について詳しくは、[次のドキュメント](settings-elevators-add) を参照してください。
+
+* 目的のスケジュールがない場合は、<Cmd sid='button.plusAddSchedule' product='2' /> をクリックして追加します。 スケジュール設定の詳細は[次のドキュメント](settings-schedule)を参照してください。
+
+* 追加した項目を削除するには <IcTrash2 /> をクリックします。
+
+* 項目を検索するには <IcSearch /> をクリックします。
+
+::::
+
+## フロアレベルを編集する {#editFloorLevel}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.accessControl.root' /> をクリックします。
+
+3. <Cmd sid='ag.floorLevel.title' product='2' /> タブをクリックします。
+
+   <Image src='/img/biostarx-settings-access-floor-level-tab.png' />
+
+4. フロアレベル一覧で編集するフロアレベルをクリックします。
+
+5. 必要な項目を編集します。
+
+6. 編集が完了したら、画面下部の <Cmd sid='button.apply' product='2' /> をクリックします。
+
+## フロアレベルを削除する {#deleteFloorLevel}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.accessControl.root' /> をクリックします。
+
+3. <Cmd sid='ag.floorLevel.title' product='2' /> タブをクリックします。
+
+4. フロアレベル一覧で削除するフロアレベルのチェックボックスをクリックします。
+
+5. 画面右上の <Cmd sid='ac.al.main.deleteFloorlevel.button' product='2' /> をクリックします。
+
+<Image src='/img/biostarx-settings-access-delete-floor-level.png' />

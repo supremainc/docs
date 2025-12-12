@@ -1,0 +1,126 @@
+---
+id: user
+title: ユーザー
+description: ユーザーの登録、編集、削除および管理方法について説明します。
+keywords:
+  - 登録
+  - 編集
+  - 削除
+  - 管理
+---
+
+ユーザーの登録、編集、削除および管理方法について説明します。
+
+## ユーザー情報の登録 {#registering-user-information}
+
+生体認証情報を含むユーザー情報を登録できます。
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_166' product='dev' /> → <Image src='/img/common/ico-add.svg' ico alone />を選択し、必要な項目を設定します。 ユーザー情報の登録は2段階で行われ、いくつかのオプションは認証手段を登録した後に有効になります。
+
+   <Image src='/img/device/bs3-user-add.png' className='none' />
+
+   * <Image src='/img/common/ico-photo.svg' ico alone />：ユーザー写真を登録できます。
+
+   * **名前**：ユーザー名を入力できます。
+
+   * **ID**：1～4294967295 の数字を入力してユーザーIDを登録します。 <Cmd sid='ui_168' product='dev' /> を <Cmd sid='ui_237' product='dev' /> に設定した場合、英数字と記号 `_` `-` の組み合わせをIDとして使用でき、最大32文字まで入力できます。
+
+   * <Cmd sid='ui_228' product='dev' />：ユーザー認証用の顔を登録します。 <Cmd sid='ui_228' product='dev' /> → <Cmd sid='ui_108' product='dev' />をタップし、画面の指示に従って顔を登録します。 顔を追加登録するには <Image src='/img/common/ico-add.svg' ico alone />をタップします。 顔の登録の詳細は[ユーザー顔登録](#enrolling-user-faces)を参照してください。
+
+   * <Cmd sid='ui_323' product='dev' />：ユーザー認証用のカードを登録できます。 <Cmd sid='ui_323' product='dev' /> → <Cmd sid='ui_108' product='dev' />をタップし、ユーザーに割り当てるカードをRFカード認証部にスキャンします。 カードを追加登録するには <Cmd sid='ui_323' product='dev' /> → <Image src='/img/common/ico-add.svg' ico alone />をタップします。
+
+   * <Cmd sid='ui_040' product='dev' />：使用するPINを入力できます。 <Cmd sid='ui_040' product='dev' /> → <Cmd sid='ui_108' product='dev' />をタップし、使用するPINを入力します。 確認のため再度PINを入力し、<Cmd sid='ui_037' product='dev' />をタップします。 PINの流出を防ぐため、8～16桁の数字を入力してください。
+
+   * <Cmd sid='ui_172' product='dev' />：ユーザーに割り当てる権限を選択できます。
+
+     :::info
+
+     設定されているユーザー権限によって使用できるメニューが異なります。
+
+     * <Cmd sid='ui_075' product='dev' />：一般ユーザーレベルで、メニューは使用できません。
+
+     * <Cmd sid='ui_300' product='dev' />：すべてのメニューを利用できます。
+
+     * <Cmd sid='ui_194' product='dev' />：<Cmd sid='ui_256' product='dev' />, <Cmd sid='ui_366' product='dev' />, <Cmd sid='ui_280' product='dev' />, <Cmd sid='ui_103' product='dev' />, <Cmd sid='ui_255' product='dev' /> メニューを利用できます。
+
+     * <Cmd sid='ui_171' product='dev' />：<Cmd sid='ui_166' product='dev' />, <Cmd sid='ui_255' product='dev' /> メニューを利用できます。
+
+     :::
+
+   * <Cmd sid='ui_250' product='dev' />：ユーザーアカウントの利用期間を設定できます。
+
+   * <Cmd sid='ui_371' product='dev' />：拡張個別認証モードを設定できます。 拡張個別認証モードを使用すると、ユーザーごとに顔を含む認証方式を組み合わせることができます。 使用しない場合は、デバイスの基本認証モードが適用されます。
+
+3. ユーザー情報の登録を完了するには <Cmd sid='ui_295' product='dev' />をタップします。
+
+### ユーザー顔登録 {#enrolling-user-faces}
+
+import EnrollingFace from '../../common/_enrolling-face-warning.mdx';
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_166' product='dev' /> → <Image src='/img/common/ico-add.svg' ico alone />を選択します。
+
+3. <Cmd sid='ui_228' product='dev' /> → <Cmd sid='ui_108' product='dev' />をタップします。
+
+4. 顔が画面に表示されるように距離を調整し、デバイスのカメラを正面から見てください。
+
+5. 撮影が完了したら <Cmd sid='ui_367' product='dev' /> → <Cmd sid='ui_295' product='dev' />をタップします。 顔を再撮影するには <Cmd sid='ui_294' product='dev' />をタップします。
+
+   :::info
+
+   * BioStation 3の顔情報はFaceStation 2およびFaceLiteの顔テンプレートと互換性がありません。
+
+   * BioStation 3の顔情報はデバイス上だけでなく、BioStar Xに写真をアップロードしたりCSVをインポートしたりして一括登録することもできます。 ユーザーに顔登録リンクを送信し、ユーザー自身のモバイルデバイスからも顔を登録できます。 各登録方法の詳細は[BioStar X 管理者ガイド](../../platform/biostar_x/enroll-credential-face)を参照してください。
+
+   * 顔を登録する際は次の事項に注意してください。
+
+     <EnrollingFace />
+
+   :::
+
+## ユーザー情報の編集
+
+ユーザー管理者または全体管理者が登録済みのユーザー情報を編集できます。 ユーザーの顔やカードを追加したり、PINおよび権限を修正したりできます。
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_166' product='dev' /> → <Image src='/img/common/ico-search.svg' ico alone />をクリックします。
+
+3. 使用する検索条件を選択します。 <Cmd sid='ui_299' product='dev' />、<Cmd sid='ui_167' product='dev' />、<Cmd sid='ui_253' product='dev' />、<Cmd sid='ui_228' product='dev' />、<Cmd sid='ui_322' product='dev' />でユーザーを検索します。
+
+4. 編集するユーザーを選択します。
+
+5. [ユーザー情報登録](#registering-user-information)を参照して情報を編集し、<Cmd sid='ui_037' product='dev' />をクリックします。
+
+   * <Image src='/img/common/ico-delete.svg' ico alone />を選択して<Cmd sid='ui_367' product='dev' />をクリックし、ユーザーを削除します。
+
+:::info
+
+<Cmd sid='ui_320' product='dev' /> は BioStar X で登録できます。 出入グループの登録の詳細は [BioStar X 管理者マニュアル](../../platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup) を参照してください。
+
+:::
+
+## ユーザーの一括削除
+
+登録済みのすべてのユーザーを一度に削除できます。
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_166' product='dev' /> → <Image src='/img/common/ico-delete.svg' ico alone />を選択します。
+
+3. <Cmd sid='ui_303' product='dev' />を選択してチェックし、<Cmd sid='ui_037' product='dev' />をクリックします。
+
+4. すべてのユーザーを削除するには<Cmd sid='ui_367' product='dev' />をクリックします。
+
+## ユーザー登録状況の確認
+
+登録済みのユーザー数、顔数、カード数を一目で確認できます。
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_166' product='dev' /> → <Image src='/img/common/ico-info.svg' ico alone />をタップします。 ユーザー登録状況を確認できます。
+
+   <Image src='/img/device/bs3-user-usage.png' />

@@ -1,0 +1,106 @@
+---
+id: user
+title: ユーザー
+description: ユーザーの登録、編集、削除および管理方法について説明します。
+keywords:
+  - 登録
+  - 編集
+  - 削除
+  - 管理
+---
+
+ユーザーの登録、編集、削除および管理方法について説明します。
+
+## ユーザー情報の登録 {#registering-user-information}
+
+生体認証情報を含むユーザー情報を登録できます。
+
+1. <Image src='/img/common/ico-menu1.svg' ico alone />を押してから、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_166' product='dev' /> → <Cmd sid='ui_173' product='dev' />を選択してから **OK** を押してください。
+
+   <Image src='/img/device/bs2a-user-add.png' />
+
+3. 目的の項目を選択してから <IcBw /> ボタンを押してください。 項目を設定して **OK** を押すと、ユーザー情報が登録されます。
+
+   * <Cmd sid='ui_020' product='dev' />：1\~4294967295 の数字を入力してユーザーIDを登録できます。 <Cmd sid='ui_168' product='dev' /> を <Cmd sid='ui_237' product='dev' /> に設定した場合、英数字と記号 `_` `-` の組み合わせをIDとして使用でき、最大32文字まで入力できます。
+
+   * <Cmd sid='ui_253' product='dev' />：数字ボタンを使用してユーザー名を入力できます。 <IcUp/><IcDown/> ボタンを押してアルファベットや数字を選択でき、**F1**/**F2** を押すとさらに多くの文字を確認できます。
+
+   * <Cmd sid='ui_040' product='dev' />：使用するPINを入力できます。 PIN を入力してから **OK** を押してください。 確認のためもう一度 PIN を入力してから **OK** を押してください。 PINの流出を防ぐため、8～16桁の数字を入力してください。
+
+   * <Cmd sid='ui_312' product='dev' />：ユーザー認証用の指紋を登録できます。 登録したい指の指紋をスキャンした後、同じ指の指紋をもう一度スキャンしてください。
+
+   * <Cmd sid='ui_322' product='dev' />：ユーザー認証用のカードを登録できます。 ユーザーに割り当てるカードをスキャンしてください。
+
+   * <Cmd sid='ui_172' product='dev' />：ユーザーに割り当てる権限を選択できます。
+
+     :::info
+
+     設定されているユーザー権限によって使用できるメニューが異なります。
+
+     * <Cmd sid='ui_075' product='dev' />：一般ユーザーレベルで、メニューは使用できません。
+
+     * <Cmd sid='ui_300' product='dev' />：すべてのメニューを利用できます。
+
+     * <Cmd sid='ui_194' product='dev' />：<Cmd sid='ui_256' product='dev' />, <Cmd sid='ui_366' product='dev' />, <Cmd sid='ui_280' product='dev' />, <Cmd sid='ui_344' product='dev' />, <Cmd sid='ui_255' product='dev' /> メニューを利用できます。
+
+     * <Cmd sid='ui_171' product='dev' />：<Cmd sid='ui_166' product='dev' />, <Cmd sid='ui_255' product='dev' /> メニューを利用できます。
+
+     :::
+
+   * <Cmd sid='ui_213' product='dev' />：ユーザーアカウントの使用開始日を設定できます。 数字ボタンを押して日付を入力してください。 <IcFw /> ボタンで入力した日付を削除できます。 <IcBw /> ボタンで区切り記号を入力できます。
+
+   * <Cmd sid='ui_129' product='dev' />：ユーザーアカウントの使用停止日を設定できます。 数字ボタンを押して日付を入力してください。 <IcFw /> ボタンで入力した日付を削除できます。 <IcBw /> ボタンで区切り記号を入力できます。
+
+   * <Cmd sid='ui_149' product='dev' />：1:1 認証用のセキュリティレベルを設定できます。
+
+   * <Cmd sid='ui_363' product='dev' />：デュレス指紋として登録する場合は選択してください。 誰かに脅迫されて強制的に扉を開けなければならない場合、この指紋で認証すると BioStar X にアラーム信号を送ることができます。
+
+   * <Cmd sid='ui_064' product='dev' />：ユーザーごとに認証方法を変更できます。 目的の項目を選択してから <IcFw /><IcBw /> ボタンで設定を変更できます。
+
+## ユーザー情報の編集
+
+ユーザー管理者または全体管理者が登録済みのユーザー情報を編集できます。 ユーザーの指紋やカードを追加でき、PINおよび権限を修正できます。
+
+1. <Image src='/img/common/ico-menu1.svg' ico alone />を押してから、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_166' product='dev' /> → <Cmd sid='ui_170' product='dev' />を選択してから **OK** を押してください。
+
+   <Image src='/img/device/bs2a-user-edt.png' />
+
+3. 使用する検索手段を選択してから <IcBw /> ボタンを押してください。 <Cmd sid='ui_020' product='dev' />, <Cmd sid='ui_253' product='dev' />, <Cmd sid='ui_312' product='dev' />, <Cmd sid='ui_322' product='dev' />でユーザーを検索できます。
+
+   * 検索手段を選択せずに **OK** を押すと、すべてのユーザー一覧が表示されます。
+
+4. 編集するユーザーを選択してから **F2** を押してください。 [ユーザー情報の登録](#registering-user-information) を参照して情報を修正してください。
+
+   * ユーザーを削除するには **F3** を押してから **OK** を押してください。
+
+:::info
+
+<Cmd sid='ui_320' product='dev' /> は BioStar X で登録できます。 出入グループの登録の詳細は [BioStar X 管理者マニュアル](../../platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup) を参照してください。
+
+:::
+
+## ユーザーの一括削除
+
+登録済みのすべてのユーザーを一度に削除できます。
+
+1. <Image src='/img/common/ico-menu1.svg' ico alone />を押してから、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_166' product='dev' /> → <Cmd sid='ui_176' product='dev' />を選択してから **OK** を押してください。
+
+   <Image src='/img/device/bs2a-delete-user.png' />
+
+3. すべてのユーザーを削除するには **OK** を押してください。 前の画面に戻るには **ESC** を押してください。
+
+## ユーザー登録状況の確認
+
+登録されているユーザー、指紋、カードの数を一目で確認できます。
+
+1. <Image src='/img/common/ico-menu1.svg' ico alone />を押してから、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_166' product='dev' /> → <Cmd sid='ui_175' product='dev' />を選択してから **OK** を押してください。 ユーザー登録状況を確認できます。
+
+   <Image src='/img/device/bs2a-user-usage.png' />

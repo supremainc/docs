@@ -1,0 +1,136 @@
+---
+id: control-door
+title: 出入ドアを制御する
+description: 出入ドアを制御し、詳細情報を確認してください。
+keywords:
+  - モニタリング
+  - ドア
+---
+
+出入ドアを制御する方法を説明します。 出入ドアを一定時間ロックしたり、出入ドアに接続されたカメラを確認したり、発生したアラームを解除できます。
+
+* 出入ドアをリモートで制御して、出入を管理してください。 特定時間、出入ドアを解放またはロック状態に設定できます。
+
+* 出入ドアに接続されたカメラを通じてリアルタイムで出入状況をモニタリングできます。
+
+* [アンチパスバック](../../reference/glossary#apb) 機能により、不正侵入をブロックし、入退室履歴を正確に管理できます。
+
+<Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.arena' /> をクリックするか、画面左上のショートカットリストから <Cmd sid='shell.header.arena' /> を選択してください。 制御したい出入ドアを選択し、右クリックしてください。 ポップアップメニューで必要な機能を選択できます。
+
+<Image src='/img/biostarx-monitoring-door-popup.png' />
+
+:::info
+
+* ドアの状態をモニタリングまたは制御するには、<Cmd sid='setting.server.logUploadType' product='2' /> 機能を有効にする必要があります。 この機能は、<Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' /> のメニュー経路にある <Cmd sid='common.general' product='2' /> セクションで有効化できます。
+
+* <Cmd sid='arena.tree.contextMenu.openVideo' /> オプションは、VMSと連携しており、ドアとカメラが連係されている必要があります。 また、この機能は **アドバンス** (Advanced) 以上のライセンスで追加オプションとして利用できます。 ライセンスポリシーの詳細は [以下](licensing) を参照してください。
+
+:::
+
+## ドア開放 {#door-open}
+
+開放状態のドアは誰でも出入りできます。 ポップアップメニューで <Cmd sid='arena.tree.contextMenu.unlock' /> をクリックし、必要なオプションを選択してください。 
+
+* <Cmd sid='arena.tree.contextMenu.unlockOnce' />：ドアを一度だけ開放します。
+
+* <Cmd sid='arena.tree.contextMenu.unlockTimed' />：一定時間ドアを開放します。 希望する時間を秒（second）単位で入力してください。
+
+* <Cmd sid='arena.tree.contextMenu.unlockPermanent' />：時間に関係なくドアを開放します。
+
+ドアを開放すると、ドアリレーアイコンが <IcRelayLock /> から <IcRelayUnlock /> に変わります。
+
+:::tip
+
+外部の来客時にドアを一時的に開放して、便利に出入りできます。 ドアを開放した後は、必ず <Cmd sid='arena.tree.contextMenu.normalize' /> 状態に戻してください。
+
+:::
+
+## ドア解除 {#door-unlock}
+
+ドアを <Cmd sid='arena.tree.contextMenu.normalize' /> 状態にすると、許可されたユーザーだけが出入りできます。 ポップアップメニューで <Cmd sid='arena.tree.contextMenu.normalize' /> をクリックしてください。
+
+## ドアロック {#door-lock}
+
+ドアを <Cmd sid='arena.tree.contextMenu.lock' /> 状態にすると、誰も出入りできません。 ポップアップメニューで <Cmd sid='arena.tree.contextMenu.lock' /> をクリックし、必要なオプションを選択してください。
+
+* <Cmd sid='arena.tree.contextMenu.unlockTimed' />：一定時間ドアをロック状態にします。 希望する時間を秒（second）単位で入力してください。
+
+* <Cmd sid='arena.tree.contextMenu.lockPermanent' />：時間に関係なくドアをロック状態にします。
+
+## ドアカメラ確認 {#door-camera}
+
+ドアに接続されたカメラを確認できます。 ポップアップメニューで <Cmd sid='arena.tree.contextMenu.openVideo' /> をクリックしてください。 <Cmd sid='shell.header.arena' /> セクションのビデオタイルに選択したカメラの映像を追加して再生できます。
+
+<Image src='/img/monitoring-door-control-open-video.png' />
+
+また、目的のカメラを選択して右クリックしてください。 ポップアップメニューで <Cmd sid='arena.tree.contextMenu.openVideo' /> をクリックすると、選択したカメラの映像を追加して再生できます。
+
+<Image src='/img/monitoring-door-camera-control-open-video.png' />
+
+:::info
+
+* ドアに接続されているカメラが1台以上ある場合、最初に接続されたカメラがビデオタイルに表示されます。
+
+* ビデオタイルは画面左上から順に追加され、現在の画面に追加スペースがない場合はエラーメッセージが表示されます。 {/* 이런 경우 화면에 탭을 추가하고 <Cmd sid='arena.tree.contextMenu.openVideo' />를 다시 클릭하세요. */}
+
+* ビデオモニタリングの詳細については[次の文書](monitoring-video)を参照してください。
+
+* この機能は **アドバンス**（Advanced）ライセンス以上で、追加オプションにより使用できます。 ライセンスポリシーの詳細は[次のドキュメント](licensing#features-add-ons)を参照してください。
+
+:::
+
+## アラーム解除 {#alarm-reset}
+
+ドアで発生したアラームを解除できます。 ポップアップメニューで <Cmd sid='arena.tree.contextMenu.clearAlarm' /> をクリックしてください。 画面右上にアラームメッセージが表示されます。
+
+## APB解除 {#apb-reset}
+
+アンチパスバック違反が発生した場合、APBアラームを解除できます。 
+
+1. ポップアップメニューで <Cmd sid='arena.tree.contextMenu.clearApb' /> をクリックしてください。 
+
+2. <Cmd sid='arena.tree.contextMenu.clearApb' /> ウィンドウが表示されたら、アンチパスバック違反ユーザーの一覧を確認します。
+
+   <Image src='/img/monitoring-door-monitoring-disable-apb.png' />
+
+3. ユーザーを選択し、<Cmd sid='common.apply' /> ボタンをクリックしてください。
+
+画面右上に完了メッセージが表示されます。
+
+:::info
+
+* <Glossary termid='apb'/>
+
+* 出入口に**アンチパスバック**を設定する方法の詳細は、[以下の文書](settings-door-add#antipassback) を参照してください。
+
+:::
+
+## 警備設定および解除
+
+出入口が警備モードに設定されている場合、警備を有効化または解除します。 ポップアップメニューで <Cmd sid='arena.tree.contextMenu.arm' /> または <Cmd sid='arena.tree.contextMenu.disarm' /> をクリックしてください。
+
+<Image src='/img/biostarx-monitoring-door-arm-status.png' />
+
+警備状態のドアでは、警備状態アイコンが <IcDisarm /> から <IcArm /> に変わります。 このとき、該当するアクセス制御設定にも <IcArm /> アイコンが適用されます。
+
+:::info
+
+この機能は、**アドバンス**（Advanced）ライセンスで追加オプションを購入するか、**エンタープライズ**（Enterprise）ライセンス以上で利用できます。 ライセンスポリシーの詳細は [以下](licensing) を参照してください。
+
+:::
+
+## 詳細情報確認 {#detail-view}
+
+ドアの詳細情報とイベント発生履歴を確認できます。 ポップアップメニューで <Cmd sid='arena.tree.contextMenu.viewDetail' /> をクリックしてください。 画面右側にドアの詳細情報とイベント発生履歴が表示されます。
+
+<Image src='/img/biostarx-monitoring-door-view-details.png' />
+
+* **ドアの詳細情報**：ドアの名前、位置、状態、接続されているサブデバイス情報などを確認できます。
+
+* <Cmd sid='arena.recentEvent' />：選択したドアで発生した最近のイベント一覧を確認できます。
+
+:::info
+
+ドア詳細情報セクションの各項目について詳しくは[次の文書](settings-door-add)を参照してください。
+
+:::

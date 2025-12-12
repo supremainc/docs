@@ -1,0 +1,67 @@
+---
+id: add-user
+title: ユーザー登録
+description: 新規ユーザーを登録する方法について説明します。
+keywords:
+  - ユーザー
+  - ユーザーグループ
+---
+
+新規ユーザーを登録する方法について説明します。 ユーザーの写真、氏名、メールアドレス、電話番号などの情報を入力し、ユーザーの入退室権限と生体情報を設定できます。
+
+ユーザー情報の入力、入退室権限の設定、クレデンシャル登録の順に進めます。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.user' /> をクリックします。
+
+2. <Cmd sid='shell.header.user' /> ページ右上の <Cmd sid='team.user.newUser' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-user-add-user-01.png' />
+
+3. <Cmd sid='user.addNewUser' product='2' /> 画面でユーザー情報を入力します。
+
+   <Image src='/img/biostarx-user-add-user-02.png' />
+
+4. <Cmd sid='team.user.information' /> セクションでユーザーの基本情報を入力します。
+
+5. <Cmd sid='team.user.credential.title' /> セクションでユーザーの生体認証情報を登録します。
+
+6. <Cmd sid='team.user.permission.title' /> セクションでユーザーの **BioStar X** 運用権限と入退室権限を設定します。
+
+7. <Cmd sid='common.advanced' product='2' /> セクションでユーザーが入退室する際にデバイスに表示するメッセージを入力できます。
+
+8. すべての情報を入力し、画面右上の <Cmd sid='user.save' product='2' /> ボタンをクリックします。
+
+ユーザー一覧で登録したユーザーを確認できます。 各セクションの入力と設定の詳細は以下を参照してください。
+
+<NextStep notitle>
+<NextItem to='add-user-basic-info'>
+
+<Cmd sid='team.user.information' /> セクションでユーザーの基本情報を入力します。 各項目の詳細を確認できます。
+
+</NextItem>
+<NextItem to='enroll-credential'>
+
+<Cmd sid='team.user.credential.title' /> セクションでユーザークレデンシャルを登録し、入退室認証方式を設定します。
+
+</NextItem>
+<NextItem to='set-permission'>
+
+<Cmd sid='team.user.permission.title' /> セクションでユーザーの入退室権限の設定方法を確認します。
+
+</NextItem>
+<NextItem to='set-user-advanced'>
+
+<Cmd sid='common.advanced' product='2' /> セクションでユーザー入退室時にデバイスに表示するメッセージを設定するか、<Cmd sid='settings.activeDirectory.title' product='2' className='normal' /> 連携時に当該ユーザーを同期対象から除外できます。
+
+</NextItem>
+</NextStep>
+
+:::info
+
+* 入退室権限と生体認証情報は任意項目です。 基本情報を入力して保存した後で、修正または追加できます。
+
+* ユーザー情報をカードテンプレートでカードに印刷するには、画面右上の <Cmd sid="button.printCard" product='2' /> ボタンをクリックします。 詳細については[次のドキュメント](settings-card-printer)を参照してください。
+
+* ユーザー登録を取り消すには、画面右上の <Cmd sid="button.cancel" product='2' /> ボタンをクリックします。
+
+:::

@@ -1,0 +1,137 @@
+---
+id: getting-started
+title: はじめに
+description: デバイスを使用するための初期手順を案内します。
+keywords:
+  - 同梱物
+  - 名称
+  - 機能
+  - ケーブル
+  - コネクター
+---
+
+デバイスを使用するための初期手順を案内します。
+
+## 同梱物
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-im120.svg' className='none' height={300} alone /></Td>
+
+<Td><Image src='/img/device/component-drilling-template-im120.svg' className='none' height={300} alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Input Module</Td>
+
+<Td>ドリルテンプレート</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-screws12.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-spacer6.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-diode2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>固定用ネジ x12</Td>
+
+<Td>スペーサー x6</Td>
+
+<Td>ダイオード x2</Td>
+
+<Td>クイックガイド</Td>
+
+<Td>オープンソースライセンスガイド</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+<PageBreak />
+
+{/* 액세서리_함체(ENCR-10) */}
+import Accessoryencr10 from '../../common/_device-encr10-accessory.mdx'
+
+<Accessoryencr10 />
+
+<PageBreak />
+
+## 各部の名称と機能
+
+<Magnify src='/img/device/name-function-each-part-im120.svg' width='45%' zoomFactor={.4} mgWidth={500} mgHeight={500} alone />
+
+| No. | 名前                                 |
+| :-: | ---------------------------------- |
+|  1  | **RESET** ボタン                      |
+|  2  | **INIT** ボタン                       |
+|  3  | **SUPERVISED INPUT (9:11)** 接続     |
+|  4  | **SUPERVISED INPUT (6:8)** 接続      |
+|  5  | **RELAY 1** 接続                     |
+|  6  | **TAMPER** または **AUX IN (0:1)** 接続 |
+|  7  | **RS-485** 終端抵抗スイッチ                |
+|  8  | **RS-485** 接続                      |
+|  9  | **POWER** 接続 (DC 12 または 24 V)      |
+|  10 | **RELAY 0** 接続                     |
+|  11 | **SUPERVISED INPUT (3:5)** 接続      |
+|  12 | **SUPERVISED INPUT (0:2)** 接続      |
+
+:::info
+
+* **INIT** ボタンを 2 秒以上押して、デバイスと連動している製品を初期化し、別のデバイスに接続します。
+
+* **RESET** ボタンを押して、製品を再起動します。
+
+:::
+
+<PageBreak />
+
+### LED ステータス表示灯
+
+LED ステータス表示灯の色で製品の動作状態を確認できます。
+
+| 項目                          | LED    | 状態                                                 |
+| --------------------------- | ------ | -------------------------------------------------- |
+| **POWER**                   | 赤色点灯   | 電源オン                                               |
+| **STATUS**                  | 緑色点灯   | セキュアセッションで接続中                                      |
+| ^                           | 青色点灯   | マスターに接続されていない状態                                    |
+| ^                           | ピンク色点灯 | ファームウェアをアップグレード中                                   |
+| ^                           | 黄色点灯   | 暗号キーが異なる、または OSDP パケットの欠落により RS-485 通信エラーが発生している状態 |
+| ^                           | 水色点灯   | セキュアセッションを使用せずに接続中                                 |
+| ^                           | 緑色点滅   | 設定初期化進行時の最終入力待機状態                                  |
+| ^                           | 緑色点灯   | 設定初期化完了                                            |
+| **SUPERVISED INPUT (0~11)** | 赤色点灯   | 入力信号を受信中の状態                                        |
+| **RELAY (0, 1)**            | 赤色点灯   | リレー動作                                              |
+| **RS-485 TX**               | 橙色点滅   | RS-485 データを送信中                                     |
+| **RS-485 RX**               | 緑色点滅   | RS-485 データを受信中                                     |
+| **AUX IN (0, 1)**           | 橙色点灯   | AUX 信号を受信中                                         |
+| **TAMPER**                  | 橙色点灯   | タンパー動作                                             |
+
+### 設置例
+
+本製品は BioStar X と連携し、リアルタイムで検知された入力に対して即時にリレーを動作させます。また、マスター装置との接続が切断されている状態で検知された入力に対してもリレーを動作させたりログを残したりできます。
+
+マスター装置とのネットワーク用に 1 チャネルの RS-485、断線・短絡・オン・オフ状態を検知できる 12 チャネルの Supervised Input、2 チャネルのリレー、2 チャネルの AUX 入力、1 チャネルのタンパー入力をサポートします。
+
+<Image src='/img/device/installation-example-im120.png' width="80%" className='none' />

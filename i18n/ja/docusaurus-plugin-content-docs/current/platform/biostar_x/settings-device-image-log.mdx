@@ -1,0 +1,156 @@
+---
+id: settings-device-image-log
+title: イメージログを設定する
+description: デバイスでイメージログを生成するためのイベントとスケジュールの設定方法、イメージログの削除オプションおよび保存パスの設定方法などを案内します。
+keywords:
+  - デバイス
+  - イメージログ
+---
+
+<Cmd sid='common.imageLog' product='2' /> は、カメラ付きデバイスで発生したイベントを画像として確認できる機能です。 出入口を通過するユーザーの顔画像やイベント発生時の状況をデバイスのカメラで記録できます。 記録された画像は <Cmd sid='shell.header.arena' /> ページのリアルタイムイベントで確認できます。
+
+<Image src='/img/biostarx-setting-device-imagelog-example.png' caption />
+
+イメージログを設定すると、<Cmd sid='arena.eventTable.title' /> リストにそのイベントのイメージログが生成されます。 イベント項目の最右端で <IcImgLog /> をクリックします。 右側パネルで、そのイベントが発生したときに撮影された画像を確認できます。
+
+:::info
+
+* この機能は BioStation A2、FaceStation 2、FaceStation F2、X-Station 2、BioStation 3 モデルでサポートされています。
+
+* <Cmd sid='shell.header.arena' /> ページでイベントログを確認する方法の詳細は [次のドキュメント](monitoring-event) を参照してください。
+
+* <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> → <Cmd sid='common.imageLog' product='2' /> メニューで設定した内容はデバイスに反映されません。 デバイスの <Cmd sid='common.imageLog' product='2' /> 設定の詳細は [次のドキュメント](settings-device-details-advanced#image-log-settings) を参照してください。
+
+:::
+
+## 基本設定を追加 {#add-image-log-settings}
+
+デバイスでイメージログを生成するためのイベントとスケジュールを設定できます。 イベントおよびスケジュール条件に一致するとイメージログが生成されます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> をクリックします。
+
+3. <Cmd sid='common.preset' product='2' /> セクションの右側で <Cmd sid='button.plusAdd' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-setting-device-imagelog-add.png' />
+
+4. リスト下部にイベントが追加されたら、対象イベントの <IcDown /> をクリックし、目的の項目を選択します。
+
+   <Image src='/img/biostarx-setting-device-imagelog-select-event.png' />
+
+5. 該当イベントのスケジュールで <IcDown /> をクリックし、目的の項目を選択します。
+
+   <Image src='/img/biostarx-setting-device-imagelog-select-schedule.png' />
+
+6. 設定を保存するには、画面最下部の <Cmd sid='button.apply' product='2' /> をクリックします。
+
+:::info
+
+目的のスケジュールがない場合は、<Cmd sid='button.plusAddSchedule' product='2' /> をクリックして追加します。 スケジュール設定の詳細は[次のドキュメント](settings-schedule)を参照してください。
+
+:::
+
+## 基本設定を変更 {#edit-image-log-settings}
+
+既に設定済みのイメージログのイベントとスケジュールを変更できます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> をクリックします。
+
+3. <Cmd sid='common.preset' product='2' /> セクションのリストで変更するイベントの <IcDown /> をクリックし、目的の項目を選択します。
+
+   <Image src='/img/biostarx-setting-device-imagelog-select-event.png' />
+
+4. 該当イベントのスケジュールで <IcDown /> をクリックし、目的の項目を選択します。
+
+   <Image src='/img/biostarx-setting-device-imagelog-select-schedule.png' />
+
+5. 設定を保存するには、画面最下部の <Cmd sid='button.apply' product='2' /> をクリックします。
+
+:::info
+
+目的のスケジュールがない場合は、<Cmd sid='button.plusAddSchedule' product='2' /> をクリックして追加します。 スケジュール設定の詳細は[次のドキュメント](settings-schedule)を参照してください。
+
+:::
+
+## 基本設定を削除 {#delete-image-log-settings}
+
+既に設定済みのイメージログのイベントとスケジュールを削除できます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> をクリックします。
+
+3. <Cmd sid='common.preset' product='2' /> セクションのリストで削除するイベントの <IcTrash2 /> をクリックします。
+
+   <Image src='/img/biostarx-setting-device-imagelog-remove.png' />
+
+4. 設定を保存するには、画面最下部の <Cmd sid='button.apply' product='2' /> をクリックします。
+
+## <Cmd sid='setting.imageLog.deleteOption' product='2' className='bold' /> {#image-log-delete-options}
+
+イメージログファイルが保存スペースを占有し続けないように、**BioStar X** サーバーで削除オプションを設定できます。 設定したファイルサイズまたは期間を超えたイメージログは自動で削除されます。 
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> をクリックします。
+
+3. <Cmd sid='setting.imageLog.deleteOption' product='2' /> セクションでイメージログの削除条件を設定します。
+
+   <Image src='/img/biostarx-setting-device-imagelog-delete-option.png' />
+
+   * <Cmd sid='setting.imageLog.deleteOption' product='2' />：ファイルサイズ単位（<Cmd>MB</Cmd>/<Cmd>GB</Cmd>）または期間単位（<Cmd sid='setting.imageLog.deleteOption.day' product='2' />/<Cmd sid='setting.imageLog.deleteOption.week' product='2' />/<Cmd sid='setting.imageLog.deleteOption.month' product='2' />）を選択します。
+
+   * <Cmd sid='setting.imageLog.deleteOption.log.amount' product='2' />：<Cmd sid='setting.imageLog.deleteOption' product='2' /> で設定した条件の単位を設定します。
+
+   * <Cmd sid='setting.imageLog.deleteCheckDuration' product='2' />：イメージログを削除する周期を選択します。
+
+4. 設定を保存するには、画面最下部の <Cmd sid='button.apply' product='2' /> をクリックします。
+
+## <Cmd sid='setting.imageLog.storagePath' product='2' className='bold' /> {#image-log-save-path}
+
+イメージログを保存するパスを設定できます。 
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> をクリックします。
+
+3. <Cmd sid='setting.imageLog.storagePath' product='2' /> セクションの <Cmd sid='setting.imageLog.imageLogFilePath' product='2' /> 入力フィールドにイメージログを保存するパスを入力します。
+
+   <Image src='/img/biostarx-setting-device-imagelog-savepath.png' />
+
+4. 設定を保存するには、画面最下部の <Cmd sid='button.apply' product='2' /> をクリックします。
+
+:::info
+
+* 保存パスは自動生成されないため、イメージログを保存するパスをあらかじめ作成しておく必要があります。
+
+* たとえば、`.\imagelog\` と入力すると、BioStar X をインストールしたパス配下にイメージログを保存します。 
+
+  > *C:\\Program Files\\BioStar X\\imagelog\\*
+
+:::
+
+## <Cmd sid='setting.image_log.title' product='2' className='bold' /> {#image-log-user-profile}
+
+イメージログを撮影できないデバイスでイベントログやリアルタイムログをモニタリングする際に、ユーザープロフィール写真を表示するように設定できます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.device.root' /> → <Cmd sid='setting.menu.device.imageLog' /> をクリックします。
+
+3. <Cmd sid='setting.image_log.title' product='2' /> セクションの <Cmd sid='setting.image_log.display' product='2' /> 項目のチェックボックスをクリックします。
+
+   <Image src='/img/biostarx-setting-device-imagelog-userprofile.png' />
+
+4. 設定を保存するには、画面最下部の <Cmd sid='button.apply' product='2' /> をクリックします。
+
+:::info
+
+* このオプションが有効な場合、イメージログが発生するとユーザープロフィール写真ではなく撮影されたイメージログを表示します。
+
+* <Cmd sid='shell.header.arena' /> ページでイベントログを確認する方法の詳細は [次のドキュメント](monitoring-event) を参照してください。
+
+:::

@@ -1,0 +1,112 @@
+---
+id: installation
+title: インストール
+description: 製品の設置に必要な全工程と接続例を提供します。
+keywords:
+  - インストール
+  - CoreStation
+  - デバイス
+---
+
+import InstallationBracketNotes from '../../common/_installation-bracket-notes.mdx';
+
+インストールに必要な全手順と接続例を提供します。
+
+## 製品の固定
+
+1. 製品を取り付ける位置にスペーサーを固定用ネジで固定します。
+
+2. 固定したスペーサーの上に製品を置き、固定用ネジでしっかり固定します。
+
+   <Image src='/img/device/device-fix-cs40.png' className='none' width={400} alone />
+
+3. RTCバッテリーに付着している放電防止フィルムを取り外してください。
+
+   <Image src='/img/device/device-remove-film-cs40.png' className='none' width={300} alone />
+
+:::info
+
+* RTC (Real Time Clock) バッテリーは、製品の電源が切れていても正確な時刻を維持するために使用されます。
+
+* RTCバッテリーの容量は226 mAhで、期待寿命は設置環境と動作方法によって異なる場合があります。 RTCバッテリーを交換する際はCR2032を使用してください。
+
+:::
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+<PageBreak />
+
+{/* ## 네트워크 연결 */}
+import NetworkConnection from "../../common/_device-network-connection.mdx";
+
+<NetworkConnection />
+
+<PageBreak />
+
+## RS-485 接続
+
+本製品は5つのRS-485ポートをサポートしており、1つのRS-485ポートには最大31台の装置を接続できます。
+
+<Image src='/img/device/installation-rs485-connection-cs40.png' width='70%' className='none' />
+
+:::info
+
+* 製品に接続できるRS-485装置は合計64台を超えることはできません。
+
+* RS-485 ケーブルは AWG26 以上を使用し、すべての配線は ANSI/NFPA 70 規格に準拠する必要があります。
+
+* RS-485 ケーブルには AWG24 のツイストペアケーブルを使用し、最大長は 1.2 km としてください。
+
+* RS-485 ケーブルには特性インピーダンス 120 Ω のケーブルを使用することを推奨します。
+
+* RS-485デイジーチェーン接続の両端に終端抵抗（120 Ω）を接続します。 中間ラインに接続すると信号レベルが低下して通信性能が落ちるため、必ずデイジーチェーンの両端に接続してください。 本製品の終端抵抗スイッチをONに設定します。
+
+:::
+
+<PageBreak />
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-indoor-module-relay-connection.mdx";
+
+<RelayConnectioin />
+
+<PageBreak />
+
+{/* ## Wiegand 연결 */}
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+<PageBreak />
+
+## ドアセンサーおよび退室ボタンの接続
+
+SUPERVISED INPUT 0～7端子は、一般的な入力として使用するか、Supervised Inputとして使用するように設定できます。
+
+<Image src='/img/device/installation-door-senser-rte-connection-cs40.png' width='50%' className='none' />
+
+<PageBreak />
+
+{/* ## AUX 입력 연결 */}
+import AuxConnection from "../../common/_device-aux-connection.mdx";
+
+<AuxConnection />
+
+<PageBreak />
+
+## エンクロージャの設置 {#install-enclosure}
+
+物理的および電気的保護のため、本製品をエンクロージャ（ENCR-10）内に設置できます。 エンクロージャには、電源状態LEDボード、電源分配ボード、電源供給装置、タンパースイッチが含まれています。 エンクロージャは別売りです。
+
+{/* ## cs40 함체 설치 */}
+import Installenclosurecs40 from "../../common/_device-install-enclosure-cs40.mdx";
+
+<Installenclosurecs40 />
+
+{/* ## 공장 초기화 {#factory-reset} */}
+import FactoryReset from "../../common/_cs-fatory-reset.mdx";
+
+<FactoryReset />

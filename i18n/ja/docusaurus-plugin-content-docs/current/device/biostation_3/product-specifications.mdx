@@ -1,0 +1,73 @@
+---
+id: product-specifications
+title: 製品仕様
+description: 製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+keywords:
+  - クレデンシャル
+  - 一般
+  - 顔
+  - ストレージ
+  - インターフェース
+  - 電気仕様
+  - 製品寸法
+---
+
+製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+
+import specs from '@site/static/specs/bs3_specs.json';
+
+{/* 크리덴셜 */}
+
+<SpecSection data={specs.biostation3.credentials} />
+
+{/* 일반 */}
+
+<SpecSection data={specs.biostation3.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.biostation3.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.biostation3.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.biostation3.power} />
+
+## サイズと重量
+
+<Image src='/img/device/bs3-dimension.svg' className='none' />
+
+---
+
+:::note
+
+<Anno id='anno1'>1)</Anno> 表記された最小顔認証距離は本製品のデフォルト設定であり、推奨顔認証距離は0.6\~1.0 mです。
+
+<Anno id='anno2'>2)</Anno> DESFire EV2/EV3カードはDESFire EV1カードとの下位互換性があるため、DESFire EV1カードの機能を含めてCSNおよびスマートカード機能がサポートされます。
+
+<Anno id='anno3'>3)</Anno> RF認識距離は設置環境によって異なる場合があります。
+
+<Anno id='anno4'>4)</Anno> 最大32文字のASCIIコード文字列で構成されるQR/バーコードをサポートします。
+
+<Anno id='anno5'>5)</Anno> 別途デバイスライセンスが必要です。
+
+<Anno id='anno6'>6)</Anno> クレデンシャルなしで登録されたユーザーを基準としています。
+
+<Anno id='anno7'>7)</Anno> PoE+（IEEE 802.3at, 30 W）またはPoE++（IEEE 802.3bt, 60~100 W）の電源が必要です。 標準 PoE (IEEE 802.3af, 15.4 W) には対応していません。 標準 PoE を使用すると、デバイスが不安定に動作したり、永久的に損傷したりする可能性があります。 デバイスを接続する前に、ネットワークスイッチまたは PoE インジェクターが PoE+ または PoE++ に対応していることを必ず確認してください。
+
+:::
+
+:::info
+
+* 製品仕様は性能向上のため予告なく変更されることがあります。
+
+* 本製品をマスター装置として使用する場合、指紋センサーを搭載した装置をスレーブとして接続すると、スレーブ装置で指紋認証が行えます。
+
+  * 指紋クレデンシャル最大数 (1:N)：100,000
+
+  * 指紋クレデンシャル最大数 (1:1)：100,000
+
+:::

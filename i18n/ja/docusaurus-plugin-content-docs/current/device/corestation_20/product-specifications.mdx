@@ -1,0 +1,58 @@
+---
+id: product-specifications
+title: 製品仕様
+description: 製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+keywords:
+  - 一般
+  - インターフェース
+  - 電気仕様
+  - 製品寸法
+---
+
+製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+
+import specs from '@site/static/specs/cs20_specs.json';
+
+{/* 일반 */}
+
+<SpecSection data={specs.corestation20.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.corestation20.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.corestation20.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.corestation20.power} />
+
+<PageBreak />
+
+## サイズと重量
+
+:::note
+
+寸法公差は ±0.3 mm です。
+
+:::
+
+<Image src='/img/device/cs20-dimension.svg' className='none' />
+
+---
+
+:::note
+
+<Anno id='anno1'>1)</Anno> Input または Supervised 入力のいずれかを選択して使用できます。
+
+<Anno id='anno2'>2)</Anno> PoE+ (IEEE 802.3at, 30 W) または PoE++ (IEEE 802.3bt, 60～100 W) 電源が必要です。 標準 PoE (IEEE 802.3af, 15.4 W) には対応していません。 標準 PoE を使用すると、デバイスが不安定に動作したり、永久的に損傷したりする可能性があります。 デバイスを接続する前に、ネットワークスイッチまたは PoE インジェクターが PoE+ または PoE++ に対応していることを必ず確認してください。
+
+:::
+
+:::info
+
+製品仕様は性能向上のため予告なく変更されることがあります。
+
+:::

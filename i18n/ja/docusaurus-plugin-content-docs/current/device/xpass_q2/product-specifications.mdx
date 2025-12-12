@@ -1,0 +1,64 @@
+---
+id: product-specifications
+title: 製品仕様
+description: 製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+keywords:
+  - クレデンシャル
+  - 一般
+  - ストレージ
+  - インターフェース
+  - 電気仕様
+  - 製品寸法
+---
+
+製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+
+import specs from '@site/static/specs/xpq2_specs.json';
+
+{/* 크리덴셜 */}
+
+<SpecSection data={specs.xpassq2.credentials} />
+
+{/* 일반 */}
+
+<SpecSection data={specs.xpassq2.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.xpassq2.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.xpassq2.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.xpassq2.power} />
+
+## サイズと重量
+
+<Image src='/img/device/xpq2-dimension.svg' className='none' />
+
+---
+
+:::note
+
+<Anno id='anno1'>1)</Anno> DESFire EV2/EV3 カードは DESFire EV1 カードとの下位互換性があるため、DESFire EV1 カードの機能を含む CSN およびスマートカード機能がサポートされます。
+
+<Anno id='anno2'>2)</Anno> RF 読取距離は設置環境によって変動する可能性があります。
+
+<Anno id='anno3'>3)</Anno> 最大32個のASCIIコード文字で構成されたQRコードをサポートします。
+
+<Anno id='anno4'>4)</Anno> より多様なQR/バーコード認証を使用するには、Camera QRライセンスが必要です。 デバイスライセンスの詳細については、[BioStar X 管理者ガイド](../../platform/biostar_x/settings-license-device-license)を参照してください。
+
+* Camera QR ライセンスでサポートされるバーコードタイプ：QR Code、DataMatrix、Aztec、Micro QR Code、PDF417、Code39、Code128、UPC-A、UPC-E、EAN-8、EAN-13
+
+<Anno id='anno5'>5)</Anno> クレデンシャルなしで登録されたユーザーを基準としています。
+
+:::
+
+:::info
+
+製品仕様は性能向上のため予告なく変更されることがあります。
+
+:::

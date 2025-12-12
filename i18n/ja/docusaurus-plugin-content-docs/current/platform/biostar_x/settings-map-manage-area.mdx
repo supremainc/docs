@@ -1,0 +1,160 @@
+---
+id: settings-map-manage-area
+title: エリアを構成する
+description: フロアと施設の構成を完了すると、エリアを構成できます。 管理しているセキュリティエリアをマップで管理・確認できます。
+keywords:
+  - マップ
+  - エリア
+  - フロア
+  - 施設
+---
+
+フロアと施設の構成を完了すると、エリアを構成できます。 管理しているセキュリティエリアをマップで管理・確認できます。 エリアを構成すると、<Cmd sid='shell.header.arena' /> ページから当該エリアの施設およびフロアに入り、モニタリングできます。
+
+<Image src='/img/monitoring-map-open-map.png' />
+
+:::info
+
+* エリアを構成する前にフロアと施設を登録してください。 フロアと施設の登録の詳細は次のドキュメントを参照してください。
+
+  * <DocLink docId='platform/biostar_x/settings-map-manage-floor' />
+
+  * <DocLink docId='platform/biostar_x/settings-map-manage-facility' />
+
+* マップモニタリングの詳細は [以下](monitoring-map) を参照してください。
+
+* マップ設定およびマップモニタリング機能は、**アドバンス**（Advanced）ライセンス以上で追加オプションとして利用できます。 ライセンスポリシーの詳細は[次のドキュメント](licensing#features-add-ons)を参照してください。
+
+:::
+
+## エリアを追加 {#add-area}
+
+現在管理しているセキュリティエリアをマップで設定および管理できます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.area' /> をクリックします。
+
+3. エリア一覧画面の右上にある <Cmd sid='setting.area.table.action.newArea' /> をクリックします。
+
+   <Image src='/img/biostarx-settings-map-add-area.png' />
+
+4. <Cmd sid='setting.area.page.title' /> 画面の <Cmd sid='setting.area.information.section.title' /> セクションで、追加するエリアの名前と説明を入力します。
+
+5. <Cmd sid='setting.area.configuration.section.title' /> セクションのマップで追加するエリアの位置を設定します。
+
+6. マップ上で右クリックし、<Cmd sid='setting.area.label.setArea' /> を選択します。
+
+   <Image src='/img/biostarx-settings-map-area-add-01.png' />
+
+7. 希望する形状でエリアを設定します。 クリックで開始し、ドラッグしてエリアを設定できます。
+
+   <Image src='/img/biostarx-settings-map-area-drawing.gif' alone />
+
+   :::note
+
+   エリアを再設定するには、設定済みのエリアを削除する必要があります。 当該エリアを削除するには <IcFremove /> をクリックします。
+
+   :::
+
+8. 設定したエリアに施設を追加するには、右クリックして <Cmd sid='map.menu.add.facility' /> を選択します。
+
+   <Image src='/img/biostarx-settings-map-area-add-02.png' />
+
+   :::note
+
+   エリアを追加する際は、少なくとも1つの施設またはドア・カメラを設定する必要があります。
+
+   * ドアを追加するには、右クリックして <Cmd sid='setting.area.label.addDoor' /> を選択します。
+
+   * カメラを追加するには、右クリックして <Cmd sid='setting.area.label.addCamera' /> を選択します。
+
+   :::
+
+9. <Cmd sid='setting.area.label.addFacility' /> ウィンドウが表示されたら、追加する施設を選択し、<Cmd sid='common.apply' /> をクリックします。
+
+   <Image src='/img/biostarx-settings-map-area-add-03.png' />
+
+   :::note
+
+   ドアまたはカメラを追加する場合も同様に、<Cmd sid='setting.area.label.addDoor' /> または <Cmd sid='setting.area.label.addCamera' /> ウィンドウが表示されます。 追加する項目を選択し、<Cmd sid='common.apply' /> をクリックします。
+
+   :::
+
+10. エリア設定が完了したら、画面右下の <Cmd sid='button.apply' product='2' /> をクリックします。
+
+:::info
+
+* マップ左上の入力フィールドで目的の位置を検索できます。 現在位置に戻るには <IcCurP /> をクリックします。
+
+  <Image src='/img/biostarx-settings-map-area-find-point.png' />
+
+* エリア追加時、マップでは1つの多角形でエリアを設定できます。 エリアを設定する際は、開始点と終点を必ず同じ位置にしてください。 エリアを設定した後に形状を変更することはできません。 エリアを変更するには、エリアを削除して再度追加する必要があります。
+
+* 追加した施設・ドア・カメラの位置は、マップ上でドラッグ＆ドロップして変更できます。
+
+:::
+
+## エリアを編集 {#edit-area}
+
+既存のエリアを削除して再設定するか、施設・ドア・カメラを追加または削除できます。
+
+### エリアを再設定
+
+マップでエリアを再設定するには、既存のエリアを削除してから再度追加する必要があります。 
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.area' /> をクリックします。
+
+3. エリア一覧で再設定するエリアを選択します。 
+
+4. <Cmd sid='setting.area.configuration.section.title' /> セクションのマップで既存エリアの左上にある <IcFremove /> をクリックします。
+
+   <Image src='/img/biostarx-settings-map-area-reset.png' alone />
+
+5. マップ上で右クリックし、ポップアップメニューから <Cmd sid='setting.area.label.setArea' /> を選択します。
+
+6. 希望する形状でエリアを設定し保存するには、画面右下の <Cmd sid='button.apply' product='2' /> をクリックします。
+
+### 施設/ドア/カメラの削除
+
+マップで削除したい施設・ドア・カメラをクリックします。 <IcFremove /> アイコンが表示されます。 アイコンをクリックすると、選択した施設を削除できます。
+
+<Image src='/img/biostarx-settings-map-area-x-btn.png' alone />
+
+### カメラ撮影範囲の設定
+
+マップでカメラの撮影範囲を設定できます。 カメラが配置されたアイコンを右クリックし、<Cmd sid='setting.area.button.addCoverage' /> を選択します。
+
+<Image src='/img/biostarx-settings-map-area-camera-setting.png' />
+
+* 撮影範囲を変更するには、緑色領域の撮影範囲をクリックしたまま希望の方向へドラッグします。
+
+  <Image src='/img/biostarx-settings-map-area-camera-rot.png' alone />
+
+* 撮影範囲を調整するには、範囲の端をクリックしたまま希望のサイズにドラッグします。
+
+  <Image src='/img/biostarx-settings-map-area-camera-adjust.png' alone />
+
+* 撮影範囲を削除するには <IcFremove /> アイコンをクリックします。
+
+:::caution
+
+ユーザーが設定した内容はセキュリティ管理の利便性のための機能であり、実際のカメラ撮影範囲を反映しません。
+
+:::
+
+## エリアを削除
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.map.root' /> → <Cmd sid='setting.menu.map.area' /> をクリックします。
+
+3. エリア一覧で削除するエリアのチェックボックスをクリックします。
+
+   <Image src='/img/biostarx-settings-map-area-remove-item.png' />
+
+4. 画面右上の<Cmd sid='common.delete' />をクリックします。
+
+5. 確認メッセージが表示されたら、<Cmd sid='common.dialog.yes' /> ボタンをクリックします。

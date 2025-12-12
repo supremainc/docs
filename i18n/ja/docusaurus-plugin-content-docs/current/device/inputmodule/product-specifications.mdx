@@ -1,0 +1,57 @@
+---
+id: product-specifications
+title: 製品仕様
+description: 製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+keywords:
+  - 一般
+  - ストレージ
+  - インターフェース
+  - 電気仕様
+  - 製品寸法
+---
+
+製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+
+import specs from '@site/static/specs/im120_specs.json';
+
+{/* 일반 */}
+
+<SpecSection data={specs.inputmodule.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.inputmodule.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.inputmodule.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.inputmodule.power} />
+
+## サイズと重量
+
+:::note
+
+寸法公差は ±0.3 mm です。
+
+:::
+
+<Image src='/img/device/im120-dimension.svg' className='none' />
+
+---
+
+:::note
+
+<Anno id='anno1'>1)</Anno> ネットワーク接続が切断された際に発生したイベントをポートごとに最大10件まで保存し、イベントが10件を超えると、先に発生したイベントログから順に削除されます。
+
+<Anno id='anno2'>2)</Anno> InputまたはSupervised入力のいずれかを選択して使用できます。
+
+:::
+
+:::info
+
+製品仕様は性能向上のため予告なく変更されることがあります。
+
+:::

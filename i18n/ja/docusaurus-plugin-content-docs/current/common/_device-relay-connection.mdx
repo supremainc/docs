@@ -1,0 +1,115 @@
+## リレー接続
+
+### Fail Safe Lock
+
+フェイルセーフロックを使用するには、下図のように N/C リレーを接続してください。 Fail Safe Lock は通常、リレー回路に電流が流れており、リレーが動作して電流を一時的に遮断すると出入口が開きます。 停電や外部要因で装置の電源が切れた場合、出入口が開きます。
+
+<Include product='biostation_3'><Image src='/img/device/installation-relay-fail-safe-lock-bs3.png' width='60%' className='none' /></Include>
+
+<Include product='bioentry_w3'><Image src='/img/device/installation-relay-fail-safe-lock-bew3.png' width='55%' className='none' /></Include>
+
+<Include product='biostation_2a'><Image src='/img/device/installation-relay-fail-safe-lock-bs2a.png' width='60%' className='none' /></Include>
+
+<Include product='facestation_f2'><Image src='/img/device/installation-relay-fail-safe-lock-fsf2.png' width='60%' className='none' /></Include>
+
+<Include product='biolite_n2'><Image src='/img/device/installation-relay-fail-safe-lock-bln2.png' width='60%' className='none' /></Include>
+
+<Include product='xstation_2'><Image src='/img/device/installation-relay-fail-safe-lock-xs2.png' width='65%' className='none' /></Include>
+
+<Include product='facestation_2'><Image src='/img/device/installation-relay-fail-safe-lock-fs2.png' width='65%' className='none' /></Include>
+
+<Include product='bioentry_p2'><Image src='/img/device/installation-relay-fail-safe-lock-bep2.png' width='70%' className='none' /></Include>
+
+<Include product='bioentry_w2'><Image src='/img/device/installation-relay-fail-safe-lock-bew2.png' width='65%' className='none' /></Include>
+
+<Include product='xpass_2'><Image src='/img/device/installation-relay-fail-safe-lock-xp2.png' width='65%' className='none' /></Include>
+
+<Include product='xpass_s2'><Image src='/img/device/installation-relay-fail-safe-lock-xps2.png' width='65%' className='none' /></Include>
+
+<Include product='xpass_q2'><Image src='/img/device/installation-relay-fail-safe-lock-xpq2.png' width='70%' className='none' /></Include>
+
+:::caution
+
+* 扉のロック装置が動作する際に発生する逆電流からリレーを保護するため、図のように扉ロック装置の配線の両側にダイオードを取り付けてください。
+
+* 製品と扉ロック装置には別々の電源を使用してください。
+
+* Suprema のインテリジェントデバイスには、利便性向上のためにコントローラーを介さずスタンドアロンで接続し、扉を直接開閉できるリレーが内蔵されています。 しかし、より高いセキュリティが求められる入退室管理アプリケーションでは、扉のロック解除を引き起こす可能性のある改ざん攻撃を防ぐため、デバイス内蔵のリレーを使用しないことを推奨します。 このようなアプリケーションでは、ロック制御用に扉内部の安全な位置に設置した Suprema Secure I/O 2、DM-20、CoreStation などの別体リレー装置の使用を推奨します。
+
+:::
+
+:::info
+
+ダイオードの取り付け方向に注意してください。 ダイオードは扉ロック装置の近くに取り付けてください。
+
+:::
+
+### Fail Secure Lock
+
+フェイルセキュアロックを使用するには、下図のように N/O リレーを接続してください。 Fail Secure Lock は通常、リレー回路に電流が流れず、リレーが動作して電流が流れると出入口が開きます。 停電や外部要因で装置の電源が切れた場合、出入口が施錠されます。
+
+<Include product='biostation_3'><Image src='/img/device/installation-relay-fail-secure-lock-bs3.png' width='60%' className='none' /></Include>
+
+<Include product='bioentry_w3'><Image src='/img/device/installation-relay-fail-secure-lock-bew3.png' width='55%' className='none' /></Include>
+
+<Include product='biostation_2a'><Image src='/img/device/installation-relay-fail-secure-lock-bs2a.png' width='60%' className='none' /></Include>
+
+<Include product='facestation_f2'><Image src='/img/device/installation-relay-fail-secure-lock-fsf2.png' width='60%' className='none' /></Include>
+
+<Include product='biolite_n2'><Image src='/img/device/installation-relay-fail-secure-lock-bln2.png' width='60%' className='none' /></Include>
+
+<Include product='xstation_2'><Image src='/img/device/installation-relay-fail-secure-lock-xs2.png' width='65%' className='none' /></Include>
+
+<Include product='facestation_2'><Image src='/img/device/installation-relay-fail-secure-lock-fs2.png' width='65%' className='none' /></Include>
+
+<Include product='bioentry_p2'><Image src='/img/device/installation-relay-fail-secure-lock-bep2.png' width='70%' className='none' /></Include>
+
+<Include product='bioentry_w2'><Image src='/img/device/installation-relay-fail-secure-lock-bew2.png' width='65%' className='none' /></Include>
+
+<Include product='xpass_2'><Image src='/img/device/installation-relay-fail-secure-lock-xp2.png' width='65%' className='none' /></Include>
+
+<Include product='xpass_s2'><Image src='/img/device/installation-relay-fail-secure-lock-xps2.png' width='65%' className='none' /></Include>
+
+<Include product='xpass_q2'><Image src='/img/device/installation-relay-fail-secure-lock-xpq2.png' width='70%' className='none' /></Include>
+
+:::caution
+
+* 扉のロック装置が動作する際に発生する逆電流からリレーを保護するため、図のように扉ロック装置の配線の両側にダイオードを取り付けてください。
+
+* 製品と扉ロック装置には別々の電源を使用してください。
+
+* Suprema のインテリジェントデバイスには、利便性向上のためにコントローラーを介さずスタンドアロンで接続し、扉を直接開閉できるリレーが内蔵されています。 しかし、より高いセキュリティが求められる入退室管理アプリケーションでは、扉のロック解除を引き起こす可能性のある改ざん攻撃を防ぐため、デバイス内蔵のリレーを使用しないことを推奨します。 このようなアプリケーションでは、ロック制御用に扉内部の安全な位置に設置した Suprema Secure I/O 2、DM-20、CoreStation などの別体リレー装置の使用を推奨します。
+
+:::
+
+:::info
+
+ダイオードの取り付け方向に注意してください。 ダイオードは扉ロック装置の近くに取り付けてください。
+
+:::
+
+### 自動ドア接続
+
+<Include product='biostation_3'><Image src='/img/device/installation-automatic-door-bs3.png' width='60%' className='none' /></Include>
+
+<Include product='bioentry_w3'><Image src='/img/device/installation-automatic-door-bew3.png' width='60%' className='none' /></Include>
+
+<Include product='biostation_2a'><Image src='/img/device/installation-automatic-door-bs2a.png' width='60%' className='none' /></Include>
+
+<Include product='facestation_f2'><Image src='/img/device/installation-automatic-door-fsf2.png' width='65%' className='none' /></Include>
+
+<Include product='biolite_n2'><Image src='/img/device/installation-automatic-door-bln2.png' width='70%' className='none' /></Include>
+
+<Include product='xstation_2'><Image src='/img/device/installation-automatic-door-xs2.png' width='70%' className='none' /></Include>
+
+<Include product='facestation_2'><Image src='/img/device/installation-automatic-door-fs2.png' width='70%' className='none' /></Include>
+
+<Include product='bioentry_p2'><Image src='/img/device/installation-automatic-door-bep2.png' width='70%' className='none' /></Include>
+
+<Include product='bioentry_w2'><Image src='/img/device/installation-automatic-door-bew2.png' width='70%' className='none' /></Include>
+
+<Include product='xpass_2'><Image src='/img/device/installation-automatic-door-xp2.png' width='75%' className='none' /></Include>
+
+<Include product='xpass_s2'><Image src='/img/device/installation-automatic-door-xps2.png' width='75%' className='none' /></Include>
+
+<Include product='xpass_q2'><Image src='/img/device/installation-automatic-door-xpq2.png' width='70%' className='none' /></Include>

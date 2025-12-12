@@ -68,3 +68,12 @@ the following document,  [the following]() document.
 visual face
 
 settings-remote-access.mdx 문서 업데이트
+
+
+---
+
+전체 문서에 테이블의 | * -> | - 변경할 것
+
+---
+
+location-issues.json: \\\" -> \"

@@ -1,0 +1,55 @@
+## プラグインの登録 {#register-plugin}
+
+1. Windows で <Start/> → **BioStar X** → **BioStar X Service Manager** をクリックします。
+
+2. 画面左側のサイドメニューで<Cmd>PLUGINS</Cmd>をクリックします。
+
+3. 画面右上の<Cmd>Add Plugin</Cmd>ボタンをクリックします。
+
+   <Image src='/img/common/biostarx-sm-plugins-add.png' width='60%' alone />
+
+4. <Cmd>Add New Plugin</Cmd>画面でプラグイン情報を入力します。
+
+   <Image src='/img/common/biostarx-sm-plugins-add-new.png' width='60%' alone />
+
+5. プラグイン情報を入力し、登録を完了するには<Cmd>Apply</Cmd>ボタンをクリックします。
+
+:::info
+
+<Cmd>Session Bridge</Cmd>を有効にした場合、画面下部から証明書をダウンロードできます。 証明書は**BioStar X**とプラグイン間のセキュア通信に必要です。 証明書を紛失した場合は再度ダウンロードできます。 このとき既存の証明書は無効になります。
+
+<Image src='/img/common/biostarx-sm-plugins-download-certification.png' alone />
+
+:::
+
+### プラグイン情報の入力
+
+* <Cmd>Plugin Name</Cmd>：プラグイン名を入力します。 最大48文字まで入力できます。 既に登録されているプラグインと同じ名前は使用できません。
+
+* <Cmd>Description</Cmd>：プラグインの説明を入力します。 最大500文字まで入力できます。
+
+* <Cmd>Plugin Address</Cmd>：プラグインのアドレスを入力します。 `http://`または`https://`で始まる有効なURLである必要があり、既に登録されているプラグインと同じアドレスは使用できません。
+
+* <Cmd>Plugin Icon</Cmd>：プラグインのアイコンをアップロードします。
+
+  * 対応フォーマットはJPEG、PNG、SVG、GIFです。 
+
+  * ファイルサイズの上限は1MBで、0KBの空ファイルはアップロードできません。 
+
+  * アップロードされた画像は104×104ピクセルに自動リサイズされます。 
+
+* <Cmd>Session Bridge</Cmd>：セッションブリッジを使用する場合は有効にします。 この機能を使用すると、BioStar Xユーザーの権限が自動継承され、プラグインにアクセスする際に別途ログインする必要がありません。
+
+:::info
+
+* アイコンをアップロードしない場合は、プラグイン名の先頭文字を使ってアイコンが自動生成されます。 アップロードしたアイコンは<IcTrash2 />ボタンをクリックして削除でき、削除すると自動生成アイコンに切り替わります。
+
+* <Cmd>Session Bridge</Cmd>を有効にすると無効化できず、セキュリティ上の理由からプラグインアドレスを変更できません。
+
+:::
+
+### ランチャー画面で確認
+
+**BioStar X**の<Cmd sid='shell.header.launcher' />画面で追加したプラグインを確認できます。
+
+<Image src='/img/biostarx-added-plugins-launcher.png' />

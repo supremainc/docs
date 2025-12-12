@@ -1,0 +1,215 @@
+---
+id: settings-virtual-device-event-log
+title: 仮想デバイスのイベントログを連携する
+description: 仮想デバイスを登録し、外部システムで発生したイベントログを BioStar X に記録する方法を説明します。
+keywords:
+  - 仮想デバイス
+  - イベントログ
+  - API
+  - 連携
+---
+
+仮想デバイス機能を使用すると、勤怠管理機能を連携する際にモバイルアプリや他社サービスで発生した出勤・退勤などのイベントを **BioStar X** に直接記録できます。 実際の物理デバイスがなくてもイベントログを体系的に管理できるため、外部システムとの連携に役立ちます。
+
+## いつ使用しますか？
+
+次のような場合に仮想デバイスのイベントログ連携機能を使用してください。
+
+* 外部勤怠管理システムのイベントを **BioStar X** で統合管理する必要がある場合
+
+* モバイルアプリや外部システムで発生した入退記録（Punch Log）を **BioStar X** に直接保存する必要がある場合（データベース連携なしで出勤／退勤イベントを記録）
+
+* 他社アプリケーションやサービスから **BioStar X** API を通じて直接イベントを送信する必要がある場合
+
+## 開始する前に
+
+「イベントログ API」ライセンスが有効になっている必要があります。 ライセンスポリシーの詳細は[次のドキュメント](licensing#features-add-ons)を参照してください。
+
+:::info
+
+ライセンスの適用については[次のドキュメント](settings-license-biostar-x-license)を参照してください。
+
+:::
+
+## 仮想デバイスを登録する
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.device.root' /> をクリックしてください。
+
+3. デバイス一覧で画面右上の <IcMoreW /> ボタンをクリックし、<Cmd sid='device.addVirtualDevice' product='2' /> を選択します。
+
+   <Image src='/img/biostarx-settings-device-add-virtual-device.png' />
+
+4. <Cmd sid='device.addVirtualDevice' product='2' /> 画面が表示されたら設定情報を入力します。
+
+   <Image src='/img/biostarx-settings-device-add-virtual-device-settings.png' />
+
+   * <Cmd sid='device.info.name' product='2' />：仮想デバイスの名前を入力します。
+
+   * <Cmd sid='device.info.group' product='2' />：仮想デバイスを割り当てるグループを選択します。
+
+   * <Cmd sid='device.info.deviceId' product='2' />：仮想デバイスの固有 ID を入力します。 既存のデバイス ID と重複しない範囲で指定する必要があります。
+
+   * <Cmd sid='common.description' product='2' />：仮想デバイスに関する説明を入力します。
+
+5. 仮想デバイスを登録するには、画面右下の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+:::info
+
+* <Cmd sid='device.info.deviceId' product='2' /> は 100000〜999999 の範囲で指定できます。 既存の Suprema デバイス ID と重複しない範囲で指定する必要があります。
+
+* 既に作成された <Cmd sid='device.info.deviceId' product='2' /> の値は変更できません。
+
+:::
+
+### デバイスグループを管理する
+
+仮想デバイスも通常のデバイスと同様にデバイスグループ機能を使用できます。
+
+* 既存のデバイスと同じグループに配置できます。
+
+* グループ権限があれば、そのグループ内の仮想デバイスにも権限を付与できます。
+
+:::info
+
+デバイスグループの詳細は[次のドキュメント](settings-manage-device-group)を参照してください。
+
+:::
+
+### 仮想デバイスの制限事項
+
+* 仮想デバイスは次のメニューにのみ表示されます。
+
+  * <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' />
+
+  * <Cmd sid='shell.header.arena' /> メニューのすべてのイベントログ閲覧およびイベントログプレビュー
+
+  * <Cmd sid='shell.header.data' /> メニューのイベントログ閲覧
+
+* 仮想デバイスは、ドアおよび <Cmd sid='setting.menu.advancedAc.root' /> で入退室制御機能を使用できません。
+
+* <Cmd sid='shell.header.tna' /> 用のデバイスとして指定できません。
+
+* <Cmd sid='shell.header.arena' /> メニューのサイドバーにはデバイス一覧として表示されません。
+
+* デバイス制御機能は使用できません。
+
+* 「マルチコミュニケーションサーバー」ライセンスのデバイス数には含まれません。
+
+## API でイベントログを記録する
+
+### 対応イベントタイプ
+
+次のイベントタイプのみ記録できます。
+
+* **入退室許可** (Access granted：`4088`)
+
+* **入退室拒否** (Access denied：`6400`)
+
+### API パラメーター
+
+イベントログを記録するときは、次のパラメーターを指定する必要があります。
+
+| パラメーター     | 説明                               | 必須かどうか |
+| ---------- | -------------------------------- | ------ |
+| `dev_id`   | 登録済みの仮想デバイス ID のみ許可              | 必須     |
+| `evt`      | Access Granted または Access Denied | 必須     |
+| `datetime` | イベント発生時刻                         | 必須     |
+| `user_id`  | ユーザーID                           | 必須     |
+| `tna_key`  | 指定された値のみ入力可能                     | 任意     |
+
+```json title='Request example'
+{
+    "packet_device_id" : 100003, // required
+    "is_virtual_device" : "true", // required
+    "events":[ //4088 access granted, 6400 access denied
+        {
+            "dev_id": 100003, // required
+            "evt": 6400, // required
+            "datetime": "2025-08-21T14:12:00Z", // required
+            "user_id": "2", // required
+            "tna_key": "1"
+        },
+        {
+            "dev_id": 100003,
+            "evt": 6400,
+            "datetime": "2025-08-21T14:13:01Z",
+            "user_id": "2",
+            "tna_key": "1"
+        }
+    ]
+}
+```
+
+```json title='Response example'
+{
+    "Response": {
+        "code": "0",
+        "link": "https://support.supremainc.com/en/support/home",
+        "message": "Success"
+    }
+}
+```
+
+:::info
+
+* 単一 API 呼び出しで 1 つの仮想デバイスに対して複数のイベントログを一度に記録できます。
+
+* API の利用に関する詳細は[次のドキュメント](../../api/bsxapi#tag/Virtual-Device-and-Event-Import)を参照してください。
+
+:::
+
+## イベントログを照会する
+
+仮想デバイスで記録したイベントログはメニューで照会できます。
+
+* <Cmd sid='shell.header.arena' />：すべてのイベントの照会とフィルター、イベントプレビュー
+
+* <Cmd sid='shell.header.data' />：すべてのイベントの照会とフィルター
+
+:::info
+
+* <Cmd sid='shell.header.arena' /> メニューでのイベント照会の詳細は[次のドキュメント](monitoring-event)を参照してください。
+
+* <Cmd sid='shell.header.data' /> メニューの詳細は[次のドキュメント](data-generate-reports)を参照してください。
+
+:::
+
+## 監査トレイル​
+
+イベントログを記録すると、次の例のように監査トレイルが記録されます。
+
+```
+Access Granted, 2025/08/05 03:37:49, 12階出入口 外部, Administrator(1)
+```
+
+:::info
+
+* イベントを一括して記録しても、イベントごとに個別の監査トレイル項目が生成されます。
+
+* <Cmd sid='setting.menu.system.auditTrail' /> の詳細は[次のドキュメント](settings-system-audit-trail)を参照してください。
+
+:::
+
+## トラブルシューティング
+
+### <Cmd sid='device.addVirtualDevice' product='2' className='normal' /> ボタンが表示されない場合
+
+「イベントログ API」ライセンスが有効になっているか確認してください。
+
+### API 呼び出しが失敗する場合
+
+* 「イベントログ API」ライセンスが有効になっているか確認してください。
+
+* 登録されているデバイス ID が仮想デバイスであることを確認してください。
+
+* API パラメーター形式が正しいか確認してください。
+
+### イベントが照会されない場合
+
+* 記録したデバイスが正しい仮想デバイス ID であることを確認してください。
+
+* イベントフィルターで該当の仮想デバイスが選択されているか確認してください。
+
+* イベント記録時にエラーが発生していないか監査トレースを確認してください。

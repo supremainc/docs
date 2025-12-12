@@ -1,0 +1,273 @@
+---
+id: authentication
+title: 認証
+description: サポートする認証方式と認証手順について説明します。
+keywords:
+  - 認証モード
+  - 認証オプション
+  - PIN
+  - 顔
+  - 勤怠
+---
+
+サポートする認証方式と認証手順について説明します。
+
+## 認証モード
+
+デバイスの認証モードを設定できます。 <Cmd sid='ui_228' product='dev' />, <Cmd sid='ui_040' product='dev' />, <Cmd sid='ui_323' product='dev' />, <Cmd sid='ui_020' product='dev' />を組み合わせて認証モードとして使用でき、各認証モードごとにスケジュールを設定することもできます。
+
+### 認証モードの登録 {#registering-auth-mode}
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> を押します。
+
+3. <Image src='/img/common/ico-add.svg' ico alone />を選択します。
+
+4. <Image src='/img/common/ico-add1.svg' ico alone />を押すと、追加できるクレデンシャルが画面に表示されます。 必要なクレデンシャルを追加します。 クレデンシャルが追加された状態で <Image src='/img/common/ico-cancel.svg' ico alone /> を押すと、追加したクレデンシャルを削除できます。
+
+   <Image src='/img/device/bs3-authmode.png' />
+
+5. 目的の認証モードを設定した後、<Cmd sid='ui_203' product='dev' /> を設定します。
+
+   <div className='overflow-x'>
+
+   |      区分     | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+   | :---------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   |      顔      | - <Image src='/img/common/ico-authmode-face-bs3.png' ico alone />：顔のみを使用するモードです。<br/>- <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：顔で認証した後にPINを入力するモードです。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+   | カード / QRコード | - <Image src='/img/common/ico-authmode-card-bs3.png' ico alone />：カード / QRコードのみを使用するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone />：カード / QRコードで認証した後に顔で認証するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：カード / QRコードで認証した後にPINを入力するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：カード / QRコードで認証した後に顔認証またはPIN入力を行うモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：カード / QRコードで認証した後に顔認証とPIN入力の両方を使用するモードです。 |
+   |      ID     | - <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone />：IDを入力した後に顔で認証するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：IDを入力した後にPINを入力するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：IDを入力した後に顔認証またはPIN入力を行うモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：IDを入力した後に顔認証とPIN入力の両方を使用するモードです。                                                                                                                                            |
+
+   </div>
+
+   :::info
+
+   * <Cmd sid='ui_203' product='dev' /> は BioStar X で設定できます。 設定したスケジュールがない場合は、<Cmd sid='ui_361' product='dev' /> だけを選択できます。
+
+   * <Cmd sid='ui_203' product='dev' /> の設定について詳しくは、[BioStar X 管理者マニュアル](../../platform/biostar_x/settings-schedule) を参照してください。
+
+   * <Cmd sid='ui_042' product='dev' />認証を使用するには、<Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_265' product='dev' />で<Cmd sid='ui_041' product='dev' />が有効になっている必要があり、別途デバイスライセンスが必要です。 詳細は[ライセンス](settings#license)を参照してください。
+
+   :::
+
+6. 設定を保存するには<Cmd sid='ui_037' product='dev' />を押します。
+
+### 認証モードの編集
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> を押します。
+
+3. 編集する認証モードを選択します。
+
+4. [認証モードの登録](#registering-auth-mode) を参照して認証モードを修正した後、<Cmd sid='ui_037' product='dev' /> を押します。
+
+### 認証モードの削除
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> を押します。
+
+3. <Image src='/img/common/ico-delete.svg' ico alone />をクリックして削除する項目を選択します。 複数選択することもできます。
+
+4. 選択した項目を削除するには <Cmd sid='ui_037' product='dev' /> を押します。
+
+## 認証オプション
+
+### サーバーマッチング
+
+サーバーマッチングを設定できます。
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_256' product='dev' />を押した後、<Cmd sid='ui_265' product='dev' />で<Cmd sid='ui_187' product='dev' />を有効にします。
+
+   <Image src='/img/device/bs3-auth-option.png' />
+
+   * <Cmd sid='ui_187' product='dev' />：サーバーマッチングを設定すると、デバイスでユーザー認証を行わず、BioStar Xでユーザー認証を実行します。 サーバーマッチングは、デバイスにユーザー情報が多すぎる場合や、ユーザークレデンシャル情報が保存されているデバイスを外部にさらしたくない場合に有用です。
+
+   :::info
+
+   * <Cmd sid='ui_185' product='dev' /> ではカードと ID のみ使用できます。
+
+   * <Cmd sid='ui_185' product='dev' /> を使用する場合は、デバイスと BioStar X の両方でサーバーマッチングを有効にする必要があります。 BioStar X のサーバーマッチング設定の詳細については、[BioStar X 管理者マニュアル](../../platform/biostar_x/settings-server-server#servermatching) を参照してください。
+
+   :::
+
+### QR認証
+
+QRコード認証を設定できます。
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_256' product='dev' />を選択し、<Cmd sid='ui_265' product='dev' />で<Cmd sid='ui_041' product='dev' />を有効にします。
+
+   <Image src='/img/device/bs3-auth-option-qr.png' />
+
+   * <Cmd sid='ui_041' product='dev' />：デバイスのカメラによるQRコード認証の使用可否を設定できます。
+
+   * <Cmd sid='ui_329' product='dev' />：付与したCSNカードまたはWiegandカードと同じデータを持つQRコードで認証できるように設定します。 <Cmd sid='ui_041' product='dev' />が有効な場合にのみ設定できます。
+
+   :::info
+
+   <Cmd sid='ui_041' product='dev' />を使用するには、別途デバイスライセンスが必要です。 詳細は[ライセンス](settings#license)を参照してください。
+
+   :::
+
+## PIN
+
+パスワード入力時にスクランブルキーパッドを使用するかどうかを設定できます。
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_256' product='dev' />を選択し、<Cmd sid='ui_040' product='dev' />で<Cmd sid='ui_204' product='dev' />の使用有無を設定します。
+
+   <Image src='/img/device/bs3-pin.png' />
+
+   * <Cmd sid='ui_204' product='dev' />：パスワード入力時に数字キーの位置をランダム化して、パスワード流出を防止できます。
+
+## 認証結果表示オプション
+
+認証結果表示オプションを設定できます。
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_256' product='dev' />を選択し、<Cmd sid='ui_259' product='dev' />で必要な項目を変更します。
+
+   <Image src='/img/device/bs3-auth-result-display-option.png' />
+
+   * <Cmd sid='ui_169' product='dev' />：デバイスの認証結果画面でユーザー ID の表示方法を選択できます。
+
+     * <Cmd sid='ui_307' product='dev' />：ユーザー ID をすべて表示します。
+
+     * <Cmd sid='ui_316' product='dev' />：ユーザー ID の先頭文字のみ表示します。
+
+     * <Cmd sid='ui_357' product='dev' />：ユーザー ID を表示しません。
+
+   * <Cmd sid='ui_177' product='dev' />：デバイスの認証結果画面でユーザー名の表示方法を選択できます。
+
+     * <Cmd sid='ui_307' product='dev' />：ユーザー名をすべて表示します。
+
+     * <Cmd sid='ui_316' product='dev' />：ユーザー名の先頭文字のみ表示します。
+
+     * <Cmd sid='ui_357' product='dev' />：ユーザー名を表示しません。
+
+## 顔
+
+顔認証に関する設定を変更できます。
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_228' product='dev' /> を選択します。
+
+3. 必要な項目を変更してください。
+
+   <Image src='/img/device/bs3-auth.png' />
+
+   * <Cmd sid='ui_140' product='dev' />：デバイス周辺の動きを検知する感度を設定します。 <Cmd sid='ui_140' product='dev' /> を <Cmd sid='ui_091' product='dev' /> に設定した場合、顔認証を行うには画面をタッチしてから認証を進めてください。
+
+   * <Cmd sid='ui_115' product='dev' />：設定した時間内に顔を登録できないと、顔登録がキャンセルされます。
+
+   * <Cmd sid='ui_260' product='dev' />：設定した時間内に認証を完了できないと、認証失敗となります。
+
+   * <Cmd sid='ui_117' product='dev' />：顔登録時に重複顔をチェックできます。
+
+   * <Cmd sid='ui_229' product='dev' />：顔認証時にデバイスが顔を検出する領域の位置とサイズを設定できます。
+
+     :::info
+
+     最適な性能を得るために、<Cmd sid='ui_229' product='dev' /> のサブオプションはデフォルト値のまま使用することを推奨します。 各オプションのデフォルト値は次のとおりです。
+
+     * 最大顔回転角度：15
+
+     * 顔認識距離：最小30 cm、最大100 cm
+
+     * 顔認識領域拡張：無効
+
+     :::
+
+   * <Cmd sid='ui_060' product='dev' />：<Cmd sid='ui_060' product='dev' /> を有効にすると、BioStar X で発行された <Cmd sid='ui_340' product='dev' /> を登録できます。 <Cmd sid='ui_340' product='dev' /> は、ユーザーのバイオメトリックテンプレートをモバイル端末に保存するモバイルアクセスカードであり、BioStar X サーバー、Airfob Portal、デバイスにユーザーデータを保存せずにバイオメトリック認証を行えます。
+
+     :::info
+
+     <Cmd sid='ui_340' product='dev' /> の詳細については、[BioStar X 管理者マニュアル](../../platform/biostar_x/enroll-credential-mobile#template-on-mobile) を参照してください。
+
+     :::
+
+   * <Cmd sid='ui_157' product='dev' />：ビジュアルフェイスに実際の画像とテンプレートの両方を保存するか、画像を保存せずテンプレートのみを保存するかを設定できます。 無効にすると、保存されているビジュアルフェイスの画像はすべて削除され、今後登録されるビジュアルフェイスも画像を除いたテンプレートのみ保存されます。
+
+     :::info
+
+     この設定を無効にした後は、BioStar 2 v2.9.7 以上に接続して使用してください。
+
+     :::
+
+   * <Cmd sid='ui_149' product='dev' />：1:N 認証のセキュリティレベルを設定できます。
+
+   * <Cmd sid='ui_278' product='dev' />：顔認証時のデバイス動作モードを設定できます。
+
+     * <Cmd sid='ui_359' product='dev' />：ビジュアルと赤外線の両方でマッチングを行い、顔認証の精度を向上させます。
+
+     * <Cmd sid='ui_159' product='dev' />：ユーザーはデバイスの認証範囲内を歩きながらでも顔認証を行うなど、高速に認証を実施できます。
+
+   * <Cmd sid='ui_247' product='dev' />：写真などの偽造顔を用いたユーザー認証を防止できます。 <Cmd sid='ui_278' product='dev' />を<Cmd sid='ui_359' product='dev' />に設定すると有効になります。
+
+     :::info
+
+     * 偽造顔検出性能を向上させ、iBeta Level 1 ISO 30107-3 Presentation Attack Detection テストに合格しました。
+
+     * 日差しが強い環境では、<Cmd sid='ui_247' product='dev' />機能を<Cmd sid='ui_152' product='dev' />に設定することを推奨します。
+
+     :::
+
+   * <Cmd sid='ui_070' product='dev' />：マスク検出など顔認証に関する高度な設定を変更できます。
+
+     * <Cmd sid='ui_123' product='dev' />：マスク検出の使用有無を設定できます。
+
+     * <Cmd sid='ui_067' product='dev' />：マスク着用の確認方法を設定できます。 <Cmd sid='ui_123' product='dev' />を<Cmd sid='ui_161' product='dev' />に設定すると有効になります。
+
+     :::info
+
+     * <Cmd sid='ui_127' product='dev' />：マスク未着用のユーザーは認証が拒否され、マスク未着用イベントがログに記録されます。
+
+     * <Cmd sid='ui_126' product='dev' />：マスク未着用のユーザーも認証できますが、マスク未着用イベントがログに記録されます。
+
+     * <Cmd sid='ui_125' product='dev' />：マスク未着用のユーザーのみ認証でき、このモードを使用する場合、マスク確認モードは<Cmd sid='ui_369' product='dev' />に固定されます。
+
+     :::
+
+   * <Cmd sid='ui_124' product='dev' />：マスク着用を検知する感度を設定できます。 <Cmd sid='ui_123' product='dev' />を<Cmd sid='ui_161' product='dev' />に設定すると有効になります。
+
+   * <Cmd sid='ui_368' product='dev' />：デバイスの用途に応じて確認モードを設定できます。
+
+     :::info
+
+     * <Cmd sid='ui_267' product='dev' />：認証を実行した後にユーザーのマスク着用を確認します。
+
+     * <Cmd sid='ui_369' product='dev' />：ユーザーのマスク着用を確認した後に認証を実行します。
+
+     * <Cmd sid='ui_370' product='dev' />：デバイスをマスク着用確認専用として使用できます。 このモードを使用すると、認証に関係なくマスクを着用したユーザーはすべて入退室できます。
+
+     :::
+
+## 勤怠
+
+勤怠モードの登録方法を設定できます。
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />を選択し、管理者権限の認証手段で認証します。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_079' product='dev' /> を選択します。
+
+3. 必要な項目を設定してください。
+
+   <Image src='/img/device/bs3-auth2.png' />
+
+   * <Cmd sid='ui_083_list' product='dev' />：勤怠モードの使用方法を設定できます。
+
+   * <Cmd sid='ui_086' product='dev' />：勤怠イベントを登録できます。 勤怠イベントを登録するには、<Cmd sid='ui_086' product='dev' /> → <Image src='/img/common/ico-add.svg' ico alone />を選択し、画面に表示するアイコン、<Cmd sid='ui_085' product='dev' />、<Cmd sid='ui_203' product='dev' />を設定します。
+
+   * <Cmd sid='ui_082' product='dev' />：ユーザーが認証する際に必ず勤怠イベントを選択するよう設定できます。 <Cmd sid='ui_083_list' product='dev' /> を <Cmd sid='ui_199' product='dev' /> に設定したときに使用できます。
+
+   * <Cmd sid='ui_081' product='dev' />：管理者が選択した勤怠イベントのみ使用するよう設定できます。 <Cmd sid='ui_083_list' product='dev' /> を <Cmd sid='ui_071' product='dev' /> に設定したときに使用できます。
+
+   * <Cmd sid='ui_279' product='dev' />：作業コードの使用有無を選択できます。

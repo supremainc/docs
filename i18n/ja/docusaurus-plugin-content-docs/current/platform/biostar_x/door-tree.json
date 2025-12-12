@@ -1,0 +1,71 @@
+[
+  {
+    "name": "すべてのドアグループ",
+    "children": [
+      {
+        "name": "ドアグループ A",
+        "type": "door-group",
+        "children": [
+          {
+            "name": "ドア",
+            "type": "door-device",
+            "children": [
+              {
+                "name": "ドアセンサー",
+                "type": "door-sensor"
+              },
+              {
+                "name": "ドアリレー",
+                "type": "door-relay"
+              },
+              {
+                "name": "警備状態",
+                "type": "door-arm"
+              },
+              {
+                "name": "カメラ",
+                "type": "door-camera"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "すべてのエレベーターグループ",
+    "type": "elevator",
+    "children": [
+      {
+        "name": "エレベーターグループ B",
+        "type": "elevator-group",
+        "children": [
+          {
+            "name": "エレベーター 1",
+            "type": "elevator-device",
+            "children": [
+              {
+                "name": "エレベーター 1 - 1階",
+                "type": "elevator-floor"
+              },
+              {
+                "name": "エレベーター 1 - 2階",
+                "type": "elevator-floor"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "すべての高度アクセス制御",
+    "type": "access-control",
+    "children": [
+      {
+        "name": "アクセス制御設定",
+        "type": "access-zone"
+      }
+    ]
+  }
+]

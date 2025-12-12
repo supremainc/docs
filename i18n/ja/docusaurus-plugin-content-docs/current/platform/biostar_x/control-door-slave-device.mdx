@@ -1,0 +1,97 @@
+---
+id: control-door-slave-device
+title: スレーブ装置を制御する
+description: ドアに接続された装置を制御する方法を案内します。
+keywords:
+  - モニタリング
+  - ドア
+  - スレーブ装置
+---
+
+ドアに接続された装置を簡単に制御できるよう、本ドキュメントでは装置ごとの制御方法を案内します。 ドアリレーでの施錠/解錠、カメラ映像および詳細情報の確認、警備状態の操作など、さまざまな機能を利用できます。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.arena' /> をクリックするか、画面左上のショートカットリストから <Cmd sid='shell.header.arena' /> を選択してください。
+
+2. <Cmd sid='arena.tree.door.title' /> タブでドアを選択してください。
+
+3. サブリストで接続された装置を選択し、右クリックしてください。 ポップアップメニューで必要な機能を選択できます。
+
+## ドアリレー装置の制御 {#control-relay}
+
+ドアに接続されたリレー装置を制御できます。 リレー装置で右クリックしてください。 ポップアップメニューで必要な機能を選択できます。
+
+<Image src='/img/biostarx-monitoring-door-relay-popup.png' />
+
+:::info
+
+<Glossary termid='relay'/>
+
+:::
+
+### リレー開放 {#relay-open}
+
+ドアに接続されたリレー装置を通じてドアの施錠を解除できます。 開放状態のドアは誰でも出入りできます。 ポップアップメニューで <Cmd sid='arena.tree.contextMenu.unlock' /> をクリックし、必要なオプションを選択してください。
+
+* <Cmd sid='arena.tree.contextMenu.unlockOnce' />：ドアを一度だけ開放します。
+
+* <Cmd sid='arena.tree.contextMenu.unlockTimed' />：一定時間ドアを開放します。 希望する時間を秒（second）単位で入力してください。
+
+* <Cmd sid='arena.tree.contextMenu.unlockPermanent' />：時間に関係なくドアを開放します。
+
+ドアリレーを開放すると、ドアリレーアイコンが <IcRelayLock /> から <IcRelayUnlock /> に変わります。
+
+:::tip
+
+この機能により、外部の来訪者があるときにドアを一時的に開放し、便利に出入りできます。 ドアを開放した後は、必ず <Cmd sid='arena.tree.contextMenu.normalize' /> 状態に戻してください。
+
+:::
+
+### リレー解除 {#relay-release}
+
+ドアに接続されたリレー装置を通じてドアを <Cmd sid='arena.tree.contextMenu.normalize' /> 状態に変更すると、許可されたユーザーだけが出入りできます。 ポップアップメニューで <Cmd sid='arena.tree.contextMenu.normalize' /> をクリックしてください。 
+
+### リレー施錠 {#relay-lock}
+
+ドアに接続されたリレー装置を通じてドアを <Cmd sid='arena.tree.contextMenu.lock' /> 状態に変更すると、誰も出入りできません。 ポップアップメニューで <Cmd sid='arena.tree.contextMenu.lock' /> をクリックし、必要なオプションを選択してください。
+
+* <Cmd sid='arena.tree.contextMenu.unlockTimed' />：一定時間ドアをロック状態にします。 希望する時間を秒（second）単位で入力してください。
+
+* <Cmd sid='arena.tree.contextMenu.lockPermanent' />：時間に関係なくドアをロック状態にします。
+
+## ドア警備装置の制御 {#control-arm}
+
+ドアに接続された警備装置を通じて、ドアを警備状態に設定または解除できます。 ポップアップメニューで <Cmd sid='arena.tree.contextMenu.arm' /> または <Cmd sid='arena.tree.contextMenu.disarm' /> をクリックします。
+
+<Image src='/img/biostarx-monitoring-door-arm-popup.png' className='none' />
+
+:::info
+
+この機能は、**アドバンス**（Advanced）ライセンスで追加オプションを購入するか、**エンタープライズ**（Enterprise）ライセンス以上で利用できます。 ライセンスポリシーの詳細は [以下](licensing) を参照してください。
+
+:::
+
+## ドアカメラ装置の制御 {#control-camera}
+
+ドアに接続されたカメラ装置を制御できます。 カメラ装置の映像をリアルタイムで確認したり、詳細情報を確認したりできます。
+
+<Image src='/img/biostarx-monitoring-door-camera-popup.png' />
+
+:::info
+
+* この機能を使用するには、ドアにカメラが接続されている必要があります。 ドアとカメラの連携方法については［次のドキュメント］(settings-videos-rule) を参照してください。
+
+* この機能は **アドバンス**（Advanced）ライセンス以上で、追加オプションにより使用できます。 ライセンスポリシーの詳細は[次のドキュメント](licensing#features-add-ons)を参照してください。
+
+:::
+
+### カメラ映像の確認 {#camera-video}
+
+カメラ装置の映像をリアルタイムで確認するには、ポップアップメニューで <Cmd sid='arena.tree.contextMenu.openVideo' /> をクリックしてください。 <Cmd sid='shell.header.arena' /> セクションのビデオタイルに選択したカメラの映像を追加して再生できます。
+
+<Image src='/img/monitoring-door-camera-control-open-video.png' />
+
+### カメラ詳細情報の確認 {#camera-detail}
+
+カメラの詳細情報を確認するには、ポップアップメニューで <Cmd sid='arena.tree.contextMenu.viewDetail' /> をクリックしてください。 画面の右側にカメラの詳細情報が表示されます。
+
+<Image src='/img/biostarx-monitoring-door-camera-details.png' />

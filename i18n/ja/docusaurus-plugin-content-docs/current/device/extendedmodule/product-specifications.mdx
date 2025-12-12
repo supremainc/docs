@@ -1,0 +1,33 @@
+---
+id: product-specifications
+title: 製品仕様
+description: 製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+keywords:
+  - 一般
+  - インターフェース
+  - 製品寸法
+---
+
+製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+
+import specs from '@site/static/specs/extm_specs.json';
+
+{/* 일반 */}
+
+<SpecSection data={specs.extendedmodule.general} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.extendedmodule.interface} />
+
+## サイズと重量
+
+<Image src='/img/device/extm-dimension.svg' className='none' />
+
+---
+
+:::info
+
+製品仕様は性能向上のため予告なく変更されることがあります。
+
+:::

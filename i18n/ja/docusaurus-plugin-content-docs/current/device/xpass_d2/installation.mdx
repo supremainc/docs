@@ -1,0 +1,173 @@
+---
+id: installation
+title: インストール
+description: インストールに必要な全手順と接続例を提供します。
+keywords:
+  - ブラケット
+  - 電源
+  - ネットワーク
+  - 入力
+  - リレー
+  - スタンドアロン
+  - Secure I/O
+  - Wiegand
+---
+
+インストールに必要な全手順と接続例を提供します。
+
+## ブラケットと製品の固定
+
+:::info
+
+このドキュメントではマリオンタイプを基準に設置方法を説明します。 ギャングボックスタイプとキーパッドタイプも同じ方法で設置してください。
+
+:::
+
+1. 製品を取り付ける位置にブラケットを固定ネジでしっかり固定してください。
+
+   <Image src='/img/device/installation-device1-xpd2.svg' className='none' width={300} alone />
+
+   :::info
+
+   * 製品をコンクリート壁に設置する場合は、ドリルで穴を開けてPVCアンカーを挿入し、固定ネジで固定してください。
+
+   * RF信号干渉を回避するため、最小離隔距離を確認して設置してください。
+
+   <Badge only>XPD2-MDB</Badge>
+
+   <Columns>
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall1-xpd2-mdb.png' className='none' width={300} />
+
+   <div className='overflow-x'>
+
+   |  壁の厚さ  |   距離   |
+   | :----: | :----: |
+   | 100 mm | 360 mm |
+   | 120 mm | 360 mm |
+   | 150 mm | 300 mm |
+
+   </div>
+
+   </Column>
+
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall2-xpd2-mdb.png' className='none' width={300} />
+
+   </Column>
+   </Columns>
+
+   <Badge only>XPD2-GDB, XPD2-GKDB</Badge>
+
+   <Columns>
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall1-xpd2-gdb.png' className='none' width={300} />
+
+   <div className='overflow-x'>
+
+   |  壁の厚さ  |   距離   |
+   | :----: | :----: |
+   | 100 mm | 400 mm |
+   | 120 mm | 380 mm |
+   | 150 mm | 380 mm |
+
+   </div>
+
+   </Column>
+
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall2-xpd2-gdb.png' className='none' width={300} />
+
+   </Column>
+   </Columns>
+
+   * モバイルアクセスカードを使用する場合、BLE信号の干渉を回避するため、デバイス間に1 m以上の距離を空けて設置してください。
+
+   :::
+
+2. 固定したブラケット上に製品を取り付けます。
+
+   <Image src='/img/device/installation-device2-xpd2.svg' className='none' width={250} alone />
+
+3. 製品固定ネジを締めて、製品とブラケットを組み付けてください。
+
+   <Image src='/img/device/installation-device3-xpd2.svg' className='none' width={250} alone />
+
+   :::info
+
+   ブラケットと製品を組み立てる際は、セキュリティを向上させるため、製品固定用ネジの代わりに同梱のブラケット固定用ネジ（星形）を使用できます。
+
+   :::
+
+## 電源接続
+
+本製品はマスター装置またはCoreStationに接続することで、RFIDカードやモバイルカードリーダーとして使用できます。
+
+<Image src='/img/device/installation-power-connection-xpd2.png' width='60%' className='none' />
+
+:::caution
+
+* 電源アダプターはIEC\/EN 62368-1の認証を受け、端末の消費電力を上回る容量のものを使用してください。 電源アダプターに他の機器も接続する場合は、端末の消費電力と他機器の消費電力を合算した電流容量以上のアダプターを使用する必要があります。
+
+  * 最大消費電流の規格は製品仕様の[電源](product-specifications#specs.power)を参照してください。
+
+* 電源アダプターを使用する場合、電源ケーブルの長さを任意に延長しないでください。
+
+:::
+
+## RS-485 接続
+
+<Image src='/img/device/installation-rs485-connection-xpd2.png' width='53%' className='none' />
+
+:::info
+
+* RS-485 ケーブルには AWG24 のツイストペアケーブルを使用し、最大長は 1.2 km としてください。
+
+* RS-485 ケーブルには特性インピーダンス 120 Ω のケーブルを使用することを推奨します。
+
+* RS-485 をデイジーチェーン接続する場合は、デイジーチェーンの両端に終端抵抗（120 Ω）を取り付けてください。 中間ラインに接続すると信号レベルが低下して通信性能が落ちるため、必ずデイジーチェーンの両端に接続してください。
+
+:::
+
+## Wiegandおよびその他のケーブル接続
+
+<Image src='/img/device/installation-wiegand-other-connection-xpd2.png' width='60%' className='none' />
+
+{/* ## 공장 초기화 */}
+import Factoryreset from "../../common/_device-factory-reset.mdx";
+
+<Factoryreset name='緑' />
+
+## RS-485転送速度のリセット
+
+希望する通信速度を選択して設定できます。
+
+1. 電源を入れます。
+
+2. 初期化ボタンを2秒以上押します。 設定モードに入ると、LEDが緑色で点滅します。
+
+3. 装置のLEDが緑色で点滅している間に、初期化ボタンを希望の回数押します。 押した回数に応じて転送速度が設定され、LEDの色で設定された速度を確認できます。
+
+   <div className='overflow-x'>
+
+   | 押す回数 |    転送速度   | LEDの色 |
+   | :--: | :-------: | :---: |
+   | 1    | 9600      |  水色   |
+   | 2    | 19200     |  青    |
+   | 3    | 38400     |  紫    |
+   | 4    | 57600     | 白     |
+   | 5    | 115200    |  赤    |
+
+   </div>
+
+4. 設定した転送速度のLEDの色が5秒間点滅します。 ビープ音が鳴ると、転送速度の設定が完了します。
+
+:::info
+
+設定モードに入った後に初期化ボタンを押さないと、転送速度は自動的に115200に設定されます。
+
+:::

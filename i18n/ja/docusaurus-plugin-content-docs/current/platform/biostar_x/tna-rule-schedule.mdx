@@ -1,0 +1,204 @@
+---
+id: tna-rule-schedule
+title: 勤務スケジュールを設定する
+description: 設定済みの週間勤務ルール、その他の勤務ルール、期間、休日をユーザーに割り当てて勤務スケジュールを作成する方法を案内します。
+keywords:
+  - 勤務スケジュール
+  - 勤務規則
+---
+
+設定済みの <Cmd sid='tab.shift' product='2' className='normal' />、<Cmd sid='rule.rule' product='2' className='normal' />、期間、休日をユーザーに割り当てて勤務スケジュールを作成できます。
+
+作成した勤務スケジュールには、臨時スケジュールや個人休暇も追加できます。
+
+:::info
+
+スケジュールを作成する前に、使用する <Cmd sid='tab.payCode' product='2' className='normal' />、<Cmd sid='tab.shift' product='2' className='normal' />、<Cmd sid='tab.shift' product='2' className='normal' />、休日が正しく作成されているか確認してください。 
+
+* 勤務ルール設定の詳細については、次のドキュメントを参照してください。
+
+  * <DocLink docId='platform/biostar_x/tna-rule-shift-paycode' />
+
+  * <DocLink docId='platform/biostar_x/tna-rule-shift-day' />
+
+  * <DocLink docId='platform/biostar_x/tna-rule-shift-schedule' />
+
+  * <DocLink docId='platform/biostar_x/tna-rule-shift-overtime' />
+
+* 休日設定の詳細については[次のドキュメント](settings-schedule#addHolidaySchedule)を参照してください。
+
+:::
+
+## 勤務スケジュール
+
+### 勤務スケジュールを追加する
+
+以下の手順に従って、登録したユーザーの勤務スケジュールを追加してください。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.tna' /> をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='ta.schedule' product='2' /> タブをクリックします。
+
+3. <Cmd sid='schedule.addSchedule' product='2' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-tna-schedule-template.png' />
+
+4. <Cmd sid='schedule.addSchedule' product='2' /> 画面が表示されたら、各項目を設定します。
+
+:::info
+
+* 設定を保存するには、画面下部の <Cmd sid='button.apply' product='2' /> をクリックします。
+
+* 設定を保存後、別の <Cmd sid='ta.schedule' product='2' /> を追加するには、<Cmd sid='ta.apply_add_another' product='2' /> ボタンをクリックします。
+
+:::
+
+### 設定オプションガイド
+
+勤務スケジュールの設定オプションを説明します。
+
+<Image src='/img/biostarx-tna-schedule-template-adding.png' />
+
+* <Cmd sid='form.name' product='2' />：勤務スケジュールの名前を入力します。
+
+* <Cmd sid='form.description' product='2' />：勤務スケジュールの説明を入力します。
+
+* <Cmd sid='rule.rule' product='2' />：設定した <Cmd sid='rule.rule' product='2' className='normal' /> を選択します。 <Cmd sid='rule.rule' product='2' className='normal' /> を設定すると、<Cmd sid='tab.shift' product='2' className='normal' /> で設定した残業時間ルールは適用されません。 使用しない場合は <Cmd sid='common.none' product='2' /> を選択します。
+
+  :::info
+
+  希望する <Cmd sid='rule.rule' product='2' className='normal' /> がない場合は、追加できます。 詳細については[次のドキュメント](tna-rule-shift-overtime)を参照してください。
+
+  :::
+
+* <Cmd sid='scheduleTemplate.scheduleTemplate' product='2' />：設定した <Cmd sid='scheduleTemplate.scheduleTemplate' product='2' className='normal' /> を選択します。 一度設定した <Cmd sid='scheduleTemplate.scheduleTemplate' product='2' className='normal' /> は編集できません。
+
+  :::info
+
+  希望する <Cmd sid='scheduleTemplate.scheduleTemplate' product='2' className='normal' /> がない場合は、追加できます。 詳細については[次のドキュメント](tna-rule-shift-schedule)を参照してください。
+
+  :::
+
+* <Cmd sid='schedule.period' product='2' />：勤怠イベントを収集する期間を設定します。
+
+  :::info
+
+  開始日は一度設定すると後で変更できません。 終了日は後で変更できますが、設定された日付より前に変更すると、変更された期間分の不在イベントが削除されます。
+
+  :::
+
+* <Cmd sid='schedule.holiday' product='2' />：設定した休暇スケジュールを選択します。 使用しない場合は <Cmd sid='common.none' product='2' /> を選択します。
+
+  :::info
+
+  希望する休暇スケジュールがない場合は、追加できます。 詳細については[次のドキュメント](settings-schedule#addHolidaySchedule)を参照してください。
+
+  :::
+
+* <Cmd sid='schedule.users' product='2' />：ルールを適用するユーザーを追加します。
+
+:::info
+
+すべての勤務スケジュールに含まれるユーザー数は、登録済みの勤怠管理ライセンスがサポートする最大ユーザー数を超えることはできません。 ライセンスごとの最大ユーザー数については <DocLink docId='platform/biostar_x/licensing' /> を参照してください。
+
+:::
+
+### 勤務スケジュールを編集する
+
+登録済みの勤務スケジュールを編集する方法を案内します。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.tna' /> をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='ta.schedule' product='2' /> タブをクリックします。
+
+3. <Cmd sid='ta.schedule' product='2' /> リストで編集する項目をクリックします。 または画面左のサイドバーで、編集する項目の <IcEdit /> ボタンをクリックします。
+
+4. 対象項目を編集し、<Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+### 勤務スケジュールを削除する
+
+登録済みの勤務スケジュールを削除する方法を案内します。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.tna' /> をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='ta.schedule' product='2' /> タブをクリックします。
+
+3. <Cmd sid='ta.schedule' product='2' /> リストで削除する項目のチェックボックスをクリックします。
+
+   <Image src='/img/biostarx-tna-schedule-remove-item.png' />
+
+4. 画面右上の <Cmd sid='schedule.deleteSchedule' product='2' /> ボタンをクリックします。 または画面左のサイドバーで、削除する項目の <IcTrash2 /> ボタンをクリックします。
+
+5. 確認メッセージが表示されたら、<Cmd sid='button.yes' product='2' /> ボタンをクリックします。
+
+## 臨時スケジュールを追加する
+
+既に登録されているスケジュールがある場合、ユーザーに一時的に別の勤務ルールを適用できます。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.tna' /> をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='ta.schedule' product='2' /> タブをクリックします。
+
+3. 画面左のリストで目的のスケジュールの <IcTnaExpand /> ボタンをクリックします。
+
+4. スケジュールに割り当てられたユーザーリストが表示され、臨時スケジュールを適用するユーザーを選択するとカレンダーが表示されます。
+
+   <Image src='/img/biostarx-tna-schedule-template-add-temp-user.png' />
+
+5. カレンダーで臨時スケジュールを追加する日付をクリックします。
+
+   <Image src='/img/biostarx-tna-schedule-template-add-temp-schedule.png' />
+
+6. ポップアップメニューで <Cmd sid='schedule.addTemporarySchedule' product='2' /> をクリックします。
+
+7. <Cmd sid='schedule.addTemporarySchedule' product='2' /> 設定ウィンドウが表示されたら、各項目を設定します。
+
+   <Image src='/img/biostarx-tna-schedule-template-add-temp-schedule-setting.png' />
+
+   他のユーザーにも同じ勤務スケジュールを適用する場合は、<IcSearch /> ボタンをクリックしてユーザーを選択します。
+
+8. 設定した勤務ルールを適用するには、<Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+:::info
+
+ユーザーに適用した臨時スケジュールを削除するには、カレンダーで設定された臨時スケジュールをクリックします。 確認メッセージが表示されたら、<Cmd sid='button.yes' product='2' /> ボタンをクリックします。
+
+:::
+
+## 不在の追加および削除
+
+ユーザーの不在スケジュールを追加できます。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.tna' /> をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='ta.schedule' product='2' /> タブをクリックします。
+
+3. 画面左のリストで目的のスケジュールの <IcTnaExpand /> ボタンをクリックします。
+
+4. スケジュールに割り当てられているユーザーの一覧が表示され、不在スケジュールを適用するユーザーを選択するとカレンダーが表示されます。
+
+   <Image src='/img/biostarx-tna-schedule-template-add-temp-user.png' />
+
+5. カレンダーでユーザーの不在スケジュールを追加する日付をクリックします。
+
+   <Image src='/img/biostarx-tna-schedule-template-add-temp-schedule.png' />
+
+6. ポップアップメニューで <Cmd sid='schedule.addLeave' product='2' /> をクリックします。
+
+7. <Cmd sid='leave.editLeave' product='2' /> 設定ウィンドウが表示されたら、各項目を設定します。
+
+   <Image src='/img/biostarx-tna-schedule-template-add-leave-setting.png' />
+
+   他のユーザーにも同じ不在スケジュールを適用する場合は、<IcSearch /> ボタンをクリックしてユーザーを選択します。
+
+8. 設定した不在スケジュールを適用するには、<Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+:::info
+
+* 必要な不在管理時間ルールがない場合は、追加できます。 時間ルールの追加について詳しくは[以下のドキュメント](tna-rule-shift-paycode)を参照してください。
+
+* ユーザーに適用した不在スケジュールを削除するには、カレンダーで設定済みの不在スケジュールの <IcTrash2 /> ボタンをクリックします。 確認メッセージが表示されたら、<Cmd sid='button.yes' product='2' /> ボタンをクリックします。
+
+  <Image src='/img/biostarx-tna-schedule-remove-leave-item.png' alone />
+
+:::

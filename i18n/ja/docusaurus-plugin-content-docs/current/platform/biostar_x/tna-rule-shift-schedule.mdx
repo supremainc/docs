@@ -1,0 +1,71 @@
+---
+id: tna-rule-shift-schedule
+title: 週次勤務規則を設定する
+description: 設定した日次勤務規則を基に、週単位の勤務規則を作成する方法を案内します。
+keywords:
+  - 週次勤務規則
+---
+
+設定した <Cmd sid='tab.shift' product='2' className='normal' /> を基に、週単位の勤務規則を作成する方法を案内します。
+
+## <Cmd sid='scheduleTemplate.addScheduleTemplate' product='2' className='bold' />
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.tna' /> をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='tab.shift' product='2' /> → <Cmd sid='tab.scheduleTemplate' product='2' /> をクリックします。
+
+3. <Cmd sid='scheduleTemplate.addScheduleTemplate' product='2' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-tna-shift-schedule.png' />
+
+4. <Cmd sid='scheduleTemplate.addScheduleTemplate' product='2' /> 画面が表示されたら各項目を設定します。
+
+:::info
+
+* 設定を保存するには、画面下部の <Cmd sid='button.apply' product='2' /> をクリックします。
+
+* 続けて勤務スケジュールを追加する場合は、<Cmd sid='payCode.applyAndAddShift' product='2' />ボタンをクリックします。
+
+* 設定を保存した後、別の <Cmd sid='tab.scheduleTemplate' product='2' /> を追加する場合は <Cmd sid='ta.apply_add_another' product='2' /> ボタンをクリックします。
+
+:::
+
+## 設定オプションガイド
+
+<Image src='/img/biostarx-tna-shift-schedule-adding.png' />
+
+* <Cmd sid='form.name' product='2' />：<Cmd sid='tab.scheduleTemplate' product='2' className='normal' /> の名前を入力します。
+
+* <Cmd sid='form.description' product='2' />：<Cmd sid='tab.scheduleTemplate' product='2' className='normal' /> の説明を入力します。
+
+* <Cmd sid='form.type' product='2' />：<Cmd sid='tab.scheduleTemplate' product='2' className='normal' /> を <Cmd sid='scheduleTemplate.type.weekly' product='2' /> または <Cmd sid='scheduleTemplate.type.daily' product='2' /> 日別で設定できます。
+
+  <Cmd sid='scheduleTemplate.type.daily' product='2' /> を選択すると、繰り返し使用期間（<Cmd sid='scheduleTemplate.cycle' product='2' />）を設定できます。
+
+  <Image src='/img/biostarx-tna-shift-schedule-adding-daily.png' />
+
+* <Cmd sid='scheduleTemplate.weekendSetting' product='2' />：週末として指定する曜日を設定します。
+
+* <Cmd sid='scheduleTemplate.shift' product='2' />：設定された <Cmd sid='tab.shift' product='2' className='normal' /> の一覧を確認できます。
+
+* 週別/日別スケジュール：設定した <Cmd sid='tab.shift' product='2' className='normal' /> をドラッグ＆ドロップで設定します。 
+
+  <Image src='/img/biostarx-tna-shift-schedule-adding-drag-shift.png' />
+
+  :::info
+
+  * 月曜日から日曜日まで全てに適用する場合は、<Cmd sid='scheduleTemplate.copyAll' product='2' /> ボタンをクリックします。
+
+  * 適用した <Cmd sid='tab.shift' product='2' className='normal' /> を解除するには、<IcTrash2 /> ボタンをクリックします。
+
+  * <Cmd sid='shift.dayStartTimeExcessTime' product='2' /> を設定した <Cmd sid='tab.shift' product='2' className='normal' /> を適用する場合、前日の超過許容時間を前日勤務規則の開始時刻より24時間以上前に設定することはできません。
+
+  :::
+
+<NextStep>
+<NextItem to='tna-rule-shift-overtime'>
+
+日次勤務規則に残業時間規則を追加適用して柔軟な勤務規則を作成する方法を案内します。
+
+</NextItem>
+</NextStep>

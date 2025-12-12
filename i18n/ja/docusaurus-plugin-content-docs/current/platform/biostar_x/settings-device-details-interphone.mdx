@@ -1,0 +1,94 @@
+---
+id: settings-device-details-interphone
+title: IPインターホンを設定する
+description: IPインターホンの使用に関する詳細設定方法を説明します。
+keywords:
+  - デバイス
+  - IPインターホン
+---
+
+この<Cmd sid='device.info.interphone' product='2' />セクションでは、IPインターホンの詳細項目を設定できます。
+
+:::info
+
+* この機能はBioStation 3、FaceStation 2、BioStation A2モデルでサポートされています。
+
+* ユーザーが任意で変更した内容がある場合は、<Cmd sid='button.apply' product='2' /> をクリックします。 変更内容を保存しないとデバイスに反映されません。
+
+:::
+
+## IPインターホンの設定 {#ip-interphone-settings}
+
+各オプションを設定して、デバイスを**Session Initiation Protocol**（SIP）サーバーに登録してください。
+
+<Image src='/img/biostarx-setting-device-edit-ipinterphone.png' />
+
+* <Cmd sid='device.info.interphone' product='2' />：デバイスをIPインターホンとして使用するには<Cmd sid='device.info.enabled' product='2' />に設定してください。
+
+* <Cmd sid='device.intercom.ipAddr' product='2' />：SIPサーバーのアドレスを入力してください。
+
+* <Cmd sid='device.intercom.port' product='2' />：SIPサーバーのポートを入力してください。 デフォルトは5060です。
+
+* <Cmd sid='device.intercom.account.new' product='2' />：SIPアカウントのユーザー名を入力してください。
+
+* <Cmd sid='device.intercom.password.new' product='2' />：SIPアカウントのパスワードを入力してください。
+
+* <Cmd sid='device.intercom.authorization.id' product='2' />：SIPアカウントの認証IDを入力してください。
+
+* <Cmd sid='device.intercom.registration.duration' product='2' />：登録維持時間を秒単位で入力してください。 デバイスは登録維持時間が終了するたびにSIPサーバーへの登録を試みます。
+
+* <Cmd sid='device.intercom.doorOpenButton' product='2' />：通話中にデバイスのドアを開けるためのボタンを指定してください。
+
+* <Cmd sid='device.intercom.transport' product='2' />：IPインターホンのSIPサーバー設定の際にSIPトランスポート方式を選択してください。
+
+* <Cmd sid='device.intercom.outbound.proxy.server' product='2' />：別の（アウトバウンド）プロキシサーバー経由でSIPサービスを使用する場合は<Cmd sid='device.info.enabled' product='2' />に設定してください。
+
+  * <Cmd sid='device.intercom.outbound.proxy.server.ipAddress' product='2' />：アウトバウンドプロキシサーバーのアドレスを入力してください。
+
+  * <Cmd sid='device.intercom.outbound.proxy.server.port' product='2' />：アウトバウンドプロキシサーバーのポートを入力してください。
+
+* <Cmd sid='device.intercom.resolution' product='2' />：IPインターホン使用時に出力される映像の解像度を選択してください。 デフォルトは<Cmd>360 x 640</Cmd>です。
+
+* <Cmd sid='device.intercom.extension.display' product='2' />：デバイスで内線番号を表示しないようにするには<Cmd sid='device.info.disable' product='2' />に設定してください。 内線番号を表示しない場合、発信画面で受信者を識別できません。
+
+* <Cmd sid='device.intercom.extension' product='2' />：最大128件の内線番号を登録できます。 内線番号を追加または編集するには<Cmd sid='device.intercom.extension.editBtn' product='2' />ボタンをクリックしてください。 詳細は[次のドキュメント](#edit-extension)を参照してください。
+
+:::info
+
+* <Cmd sid='device.intercom.account.new' product='2' />と<Cmd sid='device.intercom.authorization.id' product='2' />オプションでは数字、英字（大文字・小文字区別）、特殊記号のみ入力できます。
+
+* <Cmd sid='device.intercom.registration.duration' product='2' />オプションは60秒から600秒の範囲で設定できます。
+
+* <Cmd sid='device.intercom.transport' product='2' />と<Cmd sid='device.intercom.resolution' product='2' />オプションはBioStation 3ファームウェア1.3.0以上でサポートされています。
+
+* **Session Initiation Protocol**（SIP）は、インターネット電話やビデオ会議など、さまざまなマルチメディア通信のためのインターネットプロトコルベースの通信プロトコルです。 SIPサーバーはこれらの通信を管理し、接続を確立する役割を担います。
+
+:::
+
+## 内線番号の編集 {#edit-extension}
+
+<Cmd sid='device.intercom.extension.popup.title' product='2' />ウィンドウで提供される機能について説明します。
+
+<Image src='/img/biostarx-setting-device-edit-ipinterphone-extension.png' />
+
+* <Cmd sid='device.intercom.extension.popup.sendToTop' product='2' />：選択した内線番号をリストの最上段へ移動できます。
+
+* <Cmd sid='device.intercom.extension.popup.csvImport' product='2' />：内線番号を保存したCSVファイルを読み込めます。
+
+* <Cmd sid='device.intercom.extension.popup.csvExport' product='2' />：保存されている内線番号をCSVファイルにエクスポートできます。
+
+* <Cmd sid='device.intercom.extension.popup.add' product='2' />：内線番号を追加します。
+
+* <Cmd sid='device.intercom.extension.popup.delete' product='2' />：内線番号を削除します。
+
+* <Cmd sid='device.intercom.list.reorder' product='2' />：内線番号をドラッグして順序を変更します。
+
+:::info
+
+* FaceStation 2とBioStation A2モデルでは、内線番号を最大16件まで保存できます。
+
+* サポート上限を超える数の内線番号が含まれるCSVファイルは読み込めません。
+
+* 内線番号には数字、英字（大文字・小文字区別）、特殊記号のみ入力できます。
+
+:::

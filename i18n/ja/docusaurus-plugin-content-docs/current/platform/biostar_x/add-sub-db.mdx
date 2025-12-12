@@ -1,0 +1,441 @@
+---
+id: add-sub-db
+title: 補助データベースを追加する
+description: 通信サーバーを追加した際にメインサーバーの負荷を軽減するため、通信サーバーと連携する補助データベースを追加して接続する方法を説明します。
+keywords:
+  - データベース
+  - 追加
+  - 接続
+---
+
+import DbQueryCreate from "../../common/_bsx-sub-db-create-table-query-mariadb.mdx";
+import DbQueryCreateSQL from "../../common/_bsx-sub-db-create-table-query-mssql.mdx";
+
+通信サーバーを追加した際にメインサーバーの負荷を軽減するため、通信サーバーと連携する補助データベースを追加して接続する方法を説明します。
+
+:::info
+
+* 補助データベースを追加するには **マルチ通信サーバー** ライセンスが必要です。 ライセンスポリシーの詳細は[次のドキュメント](licensing#features-add-ons)を参照してください。
+
+* 通信サーバーのインストールの詳細は[次のドキュメント](install-communication-server)を参照してください。
+
+:::
+
+## 開始する前に
+
+MariaDB を使用する環境でデータベース間通信に IP アドレスではなくドメインまたはホスト名を使用する場合は、次の案内事項を必ず確認してください。
+
+* IP アドレスを使用しない場合、`CREATE USER` または `GRANT` の登録ができない可能性があります。
+
+* ドメインまたはホスト名で通信する場合は、必ず localhost に対してユーザーと権限が登録されていることを確認してください。
+
+* BioStar X を簡易インストール方式でインストールした場合、root アカウントは localhost のみユーザーと権限が登録されているため、当該サーバーの IP アドレスまたは *127.0.0.1* で追加登録する必要があります。
+
+### 登録方法
+
+ホストが *127.0.0.1* でユーザーが root のアカウントにパスワードが設定されているか確認し、設定されていない場合は必ずパスワードを設定して権限を付与してください。
+
+1. ホストが *127.0.0.1* でユーザーが root のアカウントにパスワードが設定されているか確認してください。 
+
+   ```sql
+   SELECT * FROM mysql.user;
+   ```
+
+   <Image src='/img/common/biostarx-subdb-mariadb-specific.png' alone />
+
+   空欄であればパスワードが設定されていないため、次の項目にあるクエリを実行してパスワードの追加と権限付与を必ず行ってください。
+
+2. ホストが *127.0.0.1* でユーザーが root のアカウントにパスワードを設定し、権限を付与してください。
+
+   ```sql
+   ALTER USER 'root'@'127.0.0.1' IDENTIFIED BY '<Main DB AC Schema Password>';
+   GRANT ALL PRIVILEGES ON *.* TO 'root'@'127.0.0.1';
+     
+   CREATE USER '<Main DB AC User>'@'127.0.0.1' IDENTIFIED BY '<Main DB AC Schema Password>';
+   GRANT ALL PRIVILEGES ON *.* TO '<Main DB AC User>'@'127.0.0.1';
+   CREATE USER '<Main DB AC User>'@'::1' IDENTIFIED BY '<Main DB AC Schema Password>';
+   GRANT ALL PRIVILEGES ON *.* TO '<Main DB AC User>'@'::1';
+     
+   CREATE USER '<Main DB TA User>'@'127.0.0.1' IDENTIFIED BY '<Main DB AC Schema Password>';
+   GRANT ALL PRIVILEGES ON *.* TO '<Main DB TA User>'@'127.0.0.1';
+   CREATE USER '<Main DB TA User>'@'::1' IDENTIFIED BY '<Main DB AC Schema Password>';
+   GRANT ALL PRIVILEGES ON *.* TO '<Main DB TA User>'@'::1';
+     
+   CREATE USER '<Main DB VE User>'@'127.0.0.1' IDENTIFIED BY '<Main DB AC Schema Password>';
+   GRANT ALL PRIVILEGES ON *.* TO '<Main DB VE User>'@'127.0.0.1';
+   CREATE USER '<Main DB VE User>'@'::1' IDENTIFIED BY '<Main DB AC Schema Password>';
+   GRANT ALL PRIVILEGES ON *.* TO '<Main DB VE User>'@'::1';
+     
+   FLUSH PRIVILEGES;
+   ```
+
+   ```sql title='Example'
+   ALTER USER 'root'@'127.0.0.1' IDENTIFIED BY 'admin1234!';
+   GRANT ALL PRIVILEGES ON *.* TO 'root'@'127.0.0.1';
+   FLUSH PRIVILEGES;
+   ```
+
+### IP アドレスで通信を設定
+
+以下の設定により、強制的に IP アドレスで通信するように設定できます。
+
+1. **BioStar X** をインストールした後、次のパスに移動してください。
+
+   >  C:\Program Files\BioStar X\ta\mariadb-11.4.4-winx64
+
+2. *my.cnf* ファイルを管理者権限で開き、[mysqld] セクションに `skip-name-resolve` オプションを追加してください。
+
+   ```ini
+   [mysqld]
+   port = 3312
+   character-set-server=utf8
+   collation-server=utf8_unicode_ci
+   socket = /tmp/mysql.sock
+   skip-external-locking
+   key_buffer_size = 32M
+   max_allowed_packet = 64M
+   ...
+   skip-name-resolve
+   ```
+
+3. MariaDB サービスを再起動してください。
+
+## 補助データベースを追加 {#add-sub-db}
+
+補助データベースを追加する方法を説明します。 使用するデータベースの種類に応じて、MariaDB と SQL Server の 2 通りの方法があります。
+
+### MariaDB {#mariadb}
+
+<Steps>
+<Step>
+
+#### メインデータベース
+
+新しい補助データベースからメインデータベースへアクセスできるように、アカウントと権限を付与してください。
+
+```sql
+CREATE USER '<Main DB AC Schema User>'@'<Sub DB IP>' IDENTIFIED BY '<Main DB AC Schema Password>';
+
+GRANT ALL PRIVILEGES ON <Main DB AC Schema>.* TO '<Main DB AC Schema User>'@'<Sub DB IP>';
+FLUSH PRIVILEGES;
+```
+
+```sql title='Example'
+CREATE USER 'biostarx_ac_user'@'192.168.12.42' IDENTIFIED BY 'password';
+
+GRANT ALL PRIVILEGES ON biostar2_ac.* TO 'biostarx_ac_user'@'192.168.12.42';
+FLUSH PRIVILEGES;
+```
+
+</Step>
+<Step>
+
+#### 補助データベース
+
+メインデータベースから新しい補助データベースへアクセスできるように、アカウントと権限を付与してください。
+
+```sql
+CREATE USER '<Sub DB AC Schema User>'@'<Main DB IP>' IDENTIFIED BY '<Sub DB AC Schema Password>';
+
+GRANT ALL PRIVILEGES ON <Sub DB AC Schema>.* TO '<Sub DB AC Schema User>'@'<Main DB IP>';
+FLUSH PRIVILEGES;
+```
+
+```sql title='Example'
+CREATE USER 'biostarx_ac_user'@'192.168.12.161' IDENTIFIED BY 'password';
+
+GRANT ALL PRIVILEGES ON biostar2_ac.* TO 'biostarx_ac_user'@'192.168.12.161';
+FLUSH PRIVILEGES;
+```
+
+</Step>
+<Step>
+
+#### FederatedX 使用状況の確認
+
+メインおよび補助データベースで以下のコマンドを実行し、FederatedX ストレージエンジンが有効になっているか確認してください。
+
+```sql
+SHOW ENGINES;
+```
+
+クエリ結果に `Engine : FEDERATED, Support : YES` と表示されれば、すでにインストールされています。 FederatedX ストレージエンジンがインストールされていない場合は、以下のクエリを実行してください。
+
+```sql
+INSTALL PLUGIN federated SONAME 'ha_federatedx';
+```
+
+:::info
+
+MariaDB をインストールしたパス配下の *lib/plugin* フォルダーに *ha_federatedx.dll* ファイルがあるか確認してください。 通常、*C:\Program Files\MariaDB \{version}\lib\plugin* パスに dll ファイルが存在します。
+
+:::
+
+</Step>
+<Step>
+
+#### サーバーエイリアスの登録
+
+補助データベースに作成される FederatedX テーブルがメインデータベースの元テーブルにアクセスできるように、サーバーエイリアス(alias)を登録してください。
+
+```sql
+CREATE SERVER 'default' FOREIGN DATA WRAPPER mysql OPTIONS (HOST '<Main DB IP>', PORT <Main DB PORT>, DATABASE '<Main DB AC Schema>', USER '<Main DB AC USER>', PASSWORD '<Main DB AC USER Password>');
+
+-- 登録が正常に行われたことを確認
+SELECT * FROM mysql.servers;
+```
+
+既に登録したサーバー名の Host、Port、DB、User、Password の情報を変更する必要がある場合は、`ALTER` 文で修正できます。 一部の情報のみを変更することもできます。
+
+```sql
+ALTER SERVER 'default' OPTIONS (HOST '<Main DB IP>', PORT <Main DB PORT>, DATABASE '<Main DB AC Schema>', USER '<Main DB AC USER>', PASSWORD '<Main DB AC USER Password>');
+```
+
+```sql title='Example'
+CREATE SERVER 'default' FOREIGN DATA WRAPPER mysql OPTIONS (HOST '192.168.12.161', PORT 3312, DATABASE 'biostar2_ac', USER 'biostarx_ac_user', PASSWORD 'password');
+  
+ALTER SERVER 'default' OPTIONS (HOST '192.168.12.161', PORT 3312, DATABASE 'biostar2_ac', USER 'biostarx_ac_usermt__fttid__', PASSWORD 'password');
+```
+
+</Step>
+<Step>
+
+#### テーブルリンクの設定
+
+補助データベースに必要なテーブルは、以下の順序で進めてメインデータベースのテーブルを補助データベースにリンク設定してください。
+
+* 以下はメインデータベースで `CREATE TABLE` 文を生成するクエリです。
+
+  ```sql
+  select
+    concat(
+        'CREATE TABLE IF NOT EXISTS <SubDB_AC_Database_Schema>.', table_name,
+        ' ENGINE=FEDERATED ',
+        'CONNECTION=''default/', table_name, ''';'
+    ) as create_table_sql
+  from information_schema.TABLES
+  where TABLE_SCHEMA = '<MainDB_AC_Database_Schema>'
+      AND TABLE_TYPE = 'BASE TABLE'
+      AND NOT TABLE_NAME REGEXP '^t_lg[0-9]{6}$'
+      AND NOT TABLE_NAME REGEXP '^t_almevt[0-9]{6}$'
+      AND NOT TABLE_NAME REGEXP '^t_lgalmtrstrc[0-9]{6}$'
+  ORDER BY TABLE_NAME;
+  ```
+
+  :::info
+
+  FederatedX の特性上、`Table_type` は 'BASE TABLE' に設定することを推奨します。 `VIEW` タイプも可能ですが、推奨しません。
+
+  :::
+
+<div className='print--invisible'>
+
+* 上記クエリで生成された以下の `CREATE` 文を必ず補助データベースに入力してください。
+
+  <DbQueryCreate />
+
+</div>
+
+</Step>
+<Step>
+
+#### Service Manager 設定
+
+1. **BioStar X Service Manager** を実行してください。 (<Start/> → **BioStar X** → **BioStar X Service Manager**)
+
+2. 画面左側のサイドバーで <Cmd>DATABASE</Cmd> メニューをクリックします。
+
+3. 画面右上の <Cmd>+ Add Database</Cmd> ボタンをクリックしてください。
+
+4. データベース追加画面で各項目を入力してください。
+
+   <Image src='/img/common/biostarx-subdb-sm-add-database.png' alone />
+
+   * <Cmd>Name</Cmd>：データベース名を入力します。
+
+   * <Cmd>Description</Cmd>：データベースの説明を入力します。
+
+   * <Cmd>DB Type</Cmd>：データベースの種類を選択します。 (Maria, MS SQL)
+
+   * <Cmd>Host</Cmd>：データベースサーバーのホスト名または IP アドレスを入力します。
+
+   * <Cmd>Port</Cmd>：データベースサーバーのポート番号を入力します。
+
+   * <Cmd>AC</Cmd> / <Cmd>TA</Cmd>：AC、TA データベースの名前、ユーザー、パスワードを入力してください。
+
+5. データベースが正常に接続されているか確認するには、画面右上の <Cmd>Test Connection</Cmd> ボタンをクリックします。
+
+6. 設定を保存するには、画面右上の <Cmd>Save</Cmd> ボタンをクリックします。
+
+</Step>
+</Steps>
+
+### SQL Server {#sqlserver}
+
+<Steps>
+<Step>
+
+#### メインデータベース権限付与
+
+sysadmin 権限を持つアカウントでメインデータベースに以下の権限を付与してください。
+
+```sql
+GRANT ALTER ANY LINKED SERVER TO [<MAIN DATABASE AC USER>];
+GRANT ALTER ANY LOGIN TO [<MAIN DATABASE AC USER>];
+```
+
+```sql title='Example'
+GRANT ALTER ANY LINKED SERVER TO [biostar_x_user];
+GRANT ALTER ANY LOGIN TO [biostar_x_user];
+```
+
+</Step>
+<Step>
+
+#### 補助データベース権限付与
+
+1. sysadmin 権限を持つアカウントで補助データベースにテーブルおよびユーザーの User Mapping 接続が必要です。 このとき `db_owner` ロールの追加が必要です。
+
+   <Image src='/img/common/biostarx-subdb-user-mapping.png' alone />
+
+2. 追加するデータベースに以下の権限を付与します。
+
+   ```sql
+   GRANT ALTER ANY LINKED SERVER TO [<SUB DATABASE AC USER>];
+   GRANT ALTER ANY LOGIN TO [<SUB DATABASE AC USER>];
+   ```
+
+   ```sql title='Example'
+   GRANT ALTER ANY LINKED SERVER TO [biostar_x_user_sub];
+   GRANT ALTER ANY LOGIN TO [biostar_x_user_sub];
+   ```
+
+</Step>
+<Step>
+
+#### Service Manager 設定
+
+**BioStar X Service Manager** で補助データベースを追加します。
+
+1. **BioStar X Service Manager** を実行してください。 (<Start/> → **BioStar X** → **BioStar X Service Manager**)
+
+2. 画面左側のサイドバーで <Cmd>DATABASE</Cmd> メニューをクリックします。
+
+3. 画面右上の <Cmd>+ Add Database</Cmd> ボタンをクリックしてください。
+
+4. データベース追加画面で各項目を入力してください。
+
+   <Image src='/img/common/biostarx-subdb-sm-add-database.png' alone />
+
+   * <Cmd>Name</Cmd>：データベース名を入力します。
+
+   * <Cmd>Description</Cmd>：データベースの説明を入力します。
+
+   * <Cmd>DB Type</Cmd>：データベースの種類を選択します。 (Maria, MS SQL)
+
+   * <Cmd>Host</Cmd>：データベースサーバーのホスト名または IP アドレスを入力します。
+
+   * <Cmd>Port</Cmd>：データベースサーバーのポート番号を入力します。
+
+   * <Cmd>AC</Cmd> / <Cmd>TA</Cmd>：AC、TA データベースの名前、ユーザー、パスワードを入力してください。
+
+5. データベースが正常に接続されているか確認するには、画面右上の <Cmd>Test Connection</Cmd> ボタンをクリックします。
+
+6. 設定を保存するには、画面右上の <Cmd>Save</Cmd> ボタンをクリックします。
+
+:::info
+
+* 設定を完了すると、メインデータベースと補助データベースそれぞれに Linked Server 設定が自動で実行されます。
+
+* データベース情報を修正する際も、Linked Server 設定は自動で更新されます。 メインデータベースを修正すると、登録されているすべての補助データベースに対して Linked Server 設定が変更内容で反映されます。 補助データベースを修正すると、メインデータベースとその補助データベースのみに変更内容が反映されます。
+
+:::
+
+</Step>
+<Step>
+
+#### Linked Temp Table クエリの生成
+
+メインデータベースで次のクエリを実行し、補助データベースに作成する Linked Temp Table 用クエリを生成します。
+
+```sql
+USE [<AC Schema>];
+GO
+DECLARE @LinkedServer  sysname = N'default';
+DECLARE @SourceSchema  sysname = N'dbo';
+DECLARE @TargetSchema  sysname = N'dbo';
+ 
+SELECT
+    'IF OBJECT_ID(N''' + QUOTENAME(@TargetSchema,'') + '.' + QUOTENAME(t.name,'') + ''', ''SN'') IS NOT NULL '
+  + 'DROP SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name) + ';'
+  + 'CREATE SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name)
+  + ' FOR ' + QUOTENAME(@LinkedServer) + '.' + QUOTENAME(DB_NAME()) + '.' + QUOTENAME(s.name) + '.' + QUOTENAME(t.name) + ';'
+  AS recreate_synonym_sql
+FROM sys.tables AS t
+JOIN sys.schemas AS s
+  ON s.schema_id = t.schema_id
+WHERE s.name = @SourceSchema
+  AND t.is_ms_shipped = 0
+  AND t.name NOT LIKE 't_lg[0-9][0-9][0-9][0-9][0-9][0-9]'
+  AND t.name NOT LIKE 't_almevt[0-9][0-9][0-9][0-9][0-9][0-9]'
+  AND t.name NOT LIKE 't_lgalmtrstrc[0-9][0-9][0-9][0-9][0-9][0-9]'
+ORDER BY t.name;
+```
+
+```sql title='Example'
+-- 例
+USE [main_ac_x_215];
+GO
+DECLARE @LinkedServer  sysname = N'default';  -- Linked Server name set in the sub DB
+DECLARE @SourceSchema  sysname = N'dbo';      -- Schema to target in the main DB
+DECLARE @TargetSchema  sysname = N'dbo';      -- Schema to create synonyms in the sub DB (reflected in the output string)
+
+SELECT
+    'IF OBJECT_ID(N''' + QUOTENAME(@TargetSchema,'') + '.' + QUOTENAME(t.name,'') + ''', ''SN'') IS NOT NULL '
+  + 'DROP SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name) + ';'
+  + 'CREATE SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name)
+  + ' FOR ' + QUOTENAME(@LinkedServer) + '.' + QUOTENAME(DB_NAME()) + '.' + QUOTENAME(s.name) + '.' + QUOTENAME(t.name) + ';'
+  AS recreate_synonym_sql
+FROM sys.tables AS t
+JOIN sys.schemas AS s
+  ON s.schema_id = t.schema_id
+WHERE s.name = @SourceSchema
+  AND t.is_ms_shipped = 0
+  AND t.name NOT LIKE 't_lg[0-9][0-9][0-9][0-9][0-9][0-9]'
+  AND t.name NOT LIKE 't_almevt[0-9][0-9][0-9][0-9][0-9][0-9]'
+  AND t.name NOT LIKE 't_lgalmtrstrc[0-9][0-9][0-9][0-9][0-9][0-9]'
+ORDER BY t.name;
+```
+
+<div className='print--invisible'>
+
+:::info
+
+上記のクエリで生成される `CREATE` 文の例です。
+
+<DbQueryCreateSQL />
+
+:::
+
+</div>
+
+</Step>
+<Step>
+
+#### 補助データベースでクエリを実行
+
+先ほど生成した `CREATE SYNONYM` クエリをすべてコピーします。 追加する補助データベースサーバーに接続し、以下のようにクエリを作成して実行します。 補助データベースの AC スキーマ内の Synonyms に保存されます。
+
+```sql
+use [<Sub DB AC Database>];
+
+IF OBJECT_ID(N'[dbo].[T_ACSGR]', 'SN') IS NOT NULL DROP SYNONYM [dbo].[T_ACSGR];CREATE SYNONYM [dbo].[T_ACSGR] FOR [default].[main_ac_x_215].[dbo].[T_ACSGR];
+IF OBJECT_ID(N'[dbo].[T_ACSGRLVLS]', 'SN') IS NOT NULL DROP SYNONYM [dbo].[T_ACSGRLVLS];CREATE SYNONYM [dbo].[T_ACSGRLVLS] FOR [default].[main_ac_x_215].[dbo].[T_ACSGRLVLS];
+IF OBJECT_ID(N'[dbo].[T_ACSGRSENT]', 'SN') IS NOT NULL DROP SYNONYM [dbo].[T_ACSGRSENT];CREATE SYNONYM [dbo].[T_ACSGRSENT] FOR [default].[main_ac_x_215].[dbo].[T_ACSGRSENT];
+IF OBJECT_ID(N'[dbo].[T_ACSGRUSS]', 'SN') IS NOT NULL DROP SYNONYM [dbo].[T_ACSGRUSS];CREATE SYNONYM [dbo].[T_ACSGRUSS] FOR [default].[main_ac_x_215].[dbo].[T_ACSGRUSS];
+...
+```
+
+</Step>
+
+</Steps>

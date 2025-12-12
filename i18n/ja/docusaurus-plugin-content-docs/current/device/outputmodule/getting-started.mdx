@@ -1,0 +1,110 @@
+---
+id: getting-started
+title: はじめに
+description: デバイスを使用するための初期手順を案内します。
+keywords:
+  - 同梱物
+  - 名称
+  - 機能
+  - ケーブル
+  - コネクター
+---
+
+デバイスを使用するための初期手順を案内します。
+
+## 同梱物
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-om120.svg' className='none' height={300} alone /></Td>
+
+<Td><Image src='/img/device/component-drilling-template-om120.svg' className='none' height={300} alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Output Module</Td>
+
+<Td>ドリルテンプレート</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-screws12.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-spacer6.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-diode12.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>固定用ネジ x12</Td>
+
+<Td>スペーサー x6</Td>
+
+<Td>ダイオード x12</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+<PageBreak />
+
+{/* 액세서리_함체(ENCR-10) */}
+import Accessoryencr10 from '../../common/_device-encr10-accessory.mdx'
+
+<Accessoryencr10 />
+
+<PageBreak />
+
+## 各部の名称と機能
+
+<Magnify src='/img/device/name-function-each-part-om120.svg' width={700} zoomFactor={.4} mgWidth={500} mgHeight={500} />
+
+:::info
+
+* **INIT** ボタンを 2 秒以上押して、デバイスと連動している製品を初期化し、別のデバイスに接続します。
+
+* **RESET** ボタンを押して、製品を再起動します。
+
+:::
+
+<PageBreak />
+
+### LED ステータス表示灯
+
+LED ステータス表示灯の色で製品の動作状態を確認できます。
+
+| 項目                | LED    | 状態                                                 |
+| ----------------- | ------ | -------------------------------------------------- |
+| **POWER**         | 赤色点灯   | 電源オン                                               |
+| **STATUS**        | 緑色点灯   | セキュアセッションで接続中                                      |
+| ^                 | 青色点灯   | マスターに接続されていない状態                                    |
+| ^                 | ピンク色点灯 | ファームウェアをアップグレード中                                   |
+| ^                 | 黄色点灯   | 暗号キーが異なる、または OSDP パケットの欠落により RS-485 通信エラーが発生している状態 |
+| ^                 | 水色点灯   | セキュアセッションを使用せずに接続中                                 |
+| **RELAY (0~11)**  | 赤色点灯   | リレー動作                                              |
+| **RS-485 TX**     | 橙色点滅   | RS-485 データを送信中                                     |
+| **RS-485 RX**     | 緑色点滅   | RS-485 データを受信中                                     |
+| **AUX IN (0, 1)** | 橙色点灯   | AUX 信号を受信中                                         |
+
+### 設置例
+
+本製品は建物の階への出入を制御する拡張モジュールです。 Suprema デバイスおよび BioStar X と接続することで、1 つのモジュールで 12 階を制御できます。
+
+RS-485 のデイジーチェーンで接続すると、エレベーター 1 基につき最大 192 階を制御できます。
+
+<Image src='/img/device/installation-example-om120.png' width="90%" className='none' />

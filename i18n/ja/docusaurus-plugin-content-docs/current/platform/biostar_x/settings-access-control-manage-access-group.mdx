@@ -1,0 +1,87 @@
+---
+id: settings-access-control-manage-access-group
+title: アクセスグループを管理する
+description: 入退室レベルとユーザーグループ情報を使用してアクセスグループを設定できます。
+keywords:
+  - アクセスグループ
+  - 入退室レベル
+  - ユーザーグループ
+---
+
+入退室レベルとユーザーグループ情報を用いてアクセスグループを設定する方法を説明します。 アクセスグループはドアの入退室権限を設定する重要な要素です。 アクセスグループを設定すると、ユーザーのドア入退室権限を管理できます。
+
+## 開始前に {#beforeStart}
+
+アクセスグループを登録する前に、次の事項を確認してから進めてください。
+
+* 入退室レベルを設定します。 入退室レベルの登録の詳細は [次のドキュメント](settings-access-control-manage-access-level) を参照してください。
+
+* フロアレベルを設定します。 フロアレベルの登録について詳しくは [次のドキュメント](settings-access-control-manage-floor-level) を参照してください。
+
+* ユーザーグループを設定します。 ユーザーグループの登録について詳しくは [次のドキュメント](user-group-manage) を参照してください。
+
+## アクセスグループを登録する {#addAccessGroup}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.accessControl.root' /> をクリックします。
+
+3. <Cmd sid='button.func.addAccessGroup' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-settings-access-group.png' />
+
+4. <Cmd sid='accessGroup.addNewAccessGroup' product='2' /> 画面で、<Cmd sid='common.name' product='2' /> と <Cmd sid='common.description' product='2' /> を入力します。
+
+   <Image src='/img/biostarx-settings-add-access-group.png' />
+
+5. <Cmd sid='common.accessLevel' product='2' /> 項目で <Cmd sid='button.addplus' product='2' /> をクリックし、アクセスグループに適用する入退室レベルを選択します。
+
+6. <Cmd sid='ag.floorLevel.title' product='2' /> 項目で <Cmd sid='button.addplus' product='2' /> をクリックし、アクセスグループに適用するフロアレベルを選択します。
+
+7. <Cmd sid='accessGroup.userGroup' product='2' /> 項目で <Cmd sid='button.addplus' product='2' /> をクリックし、アクセスグループに適用するユーザーグループを選択します。
+
+8. <Cmd sid='common.user' product='2' /> 項目で <Cmd sid='button.addplus' product='2' /> をクリックし、アクセスグループに追加するユーザーを選択します。
+
+9. アクセスグループを登録するには、画面下部の <Cmd sid='button.apply' product='2' /> をクリックします。
+
+:::info
+
+* 必要な入退室レベルがない場合は、新しい入退室レベルを登録する必要があります。 入退室レベルの登録の詳細は [次のドキュメント](settings-access-control-manage-access-level) を参照してください。
+
+* 必要なフロアレベルがない場合は、新しいフロアレベルを登録する必要があります。 フロアレベルの登録について詳しくは [次のドキュメント](settings-access-control-manage-floor-level) を参照してください。
+
+* 追加した項目を削除するには <IcTrash2 /> をクリックします。
+
+* 項目を検索するには <IcSearch /> をクリックします。
+
+:::
+
+## アクセスグループを編集する {#editAccessGroup}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.accessControl.root' /> をクリックします。
+
+3. <Cmd sid='access_control.tab.access_group' product='2' /> タブをクリックします。
+
+   <Image src='/img/biostarx-settings-access-group-tab.png' />
+
+4. アクセスグループ一覧で、編集するアクセスグループをクリックします。
+
+5. 必要な項目を編集します。
+
+6. 編集が完了したら、画面下部の <Cmd sid='button.apply' product='2' /> をクリックします。
+
+## アクセスグループを削除する {#deleteAccessGroup}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.accessControl.root' /> をクリックします。
+
+3. <Cmd sid='access_control.tab.access_group' product='2' /> タブをクリックします。
+
+4. アクセスグループ一覧で、削除するアクセスグループのチェックボックスをクリックします。
+
+5. 画面右上の <Cmd sid='button.deleteAccessGroup' product='2' /> をクリックします。
+
+<Image src='/img/biostarx-settings-delete-access-group.png' />

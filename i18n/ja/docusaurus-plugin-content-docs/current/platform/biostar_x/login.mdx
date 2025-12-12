@@ -1,0 +1,56 @@
+---
+id: login
+title: ログインする
+description: Webブラウザーから BioStar X に接続してログインします。
+keywords:
+  - ログイン
+  - ウェブブラウザー
+---
+
+インストールパッケージを使用して **BioStar X** のインストールが完了したら、Webブラウザーから接続して正常に動作するか確認します。 **BioStar X** はWebベースのサービスを提供しており、いつでもどこでもアクセスできます。
+
+## Webブラウザーからログインする {#log-in-from-a-web-browser}
+
+1. Windows で <Start/> → **BioStar X** → **BioStar X** をクリックします。 
+
+2. Webブラウザーを通じて **BioStar X** に接続します。
+
+   <Image src='/img/common/biostarx-login-web-browser-ip-address.png' alone />
+
+   :::note
+
+   * Webブラウザーのアドレスバーで **BioStar X** の接続アドレスを確認します。
+
+   * **BioStar X** を別のPCにインストールした場合は、そのPCのIPアドレスを入力します。 例：`https://192.168.0.1`
+
+   * 'localhost' を **BioStar X** の接続アドレスとして使用しないでください。
+
+   * **BioStar X** はUnified Gateway（統合ゲートウェイ）を介してすべてのリクエストを統合処理します。 そのため、WebアクセスおよびAPI呼び出しは統合ゲートウェイポート（デフォルト443）を通じて行われます。
+
+   :::
+
+3. ログイン画面が表示されたら、管理者アカウントでログインします。
+
+   <Image src='/img/biostarx-login.png' />
+
+   :::note
+
+   * 管理者IDは **admin** です。 
+
+   * Webブラウザーのアドレスバーに **安全ではありません** の警告が表示された場合は、HTTPS証明書をインストールする必要があります。 証明書のインストールについては[次のドキュメント](settings-server-https)を参照してください。
+
+   :::
+
+ログインすると <Cmd sid='shell.header.launcher' /> 画面が表示されます。
+
+<Image src='/img/biostarx-main-launcher.png' alone />
+
+:::info
+
+* Chrome 100 以降のバージョンのブラウザーの使用を推奨します。
+
+* **BioStar X** をインストールしたPCの外部IPアドレスは[次のリンク](https://whatismyipaddress.com/)にアクセスして確認できます。
+
+* **BioStar X** は **443** ポートをデフォルトで使用します。 **443** ポートを使用しているプログラムがある場合は終了してから、再度接続を試みてください。 そのプログラムを終了できない場合は **BioStar X Service Manager** を実行してポート番号を変更します。 詳細については[次のドキュメント](change-port)を参照してください。
+
+:::

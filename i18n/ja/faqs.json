@@ -1,0 +1,317 @@
+[
+  {
+    "category": {
+      "title": "電源",
+      "hid": "power",
+      "contents": [
+        {
+          "product": [
+            "biostation_3",
+            "biostation_2",
+            "biostation_2a",
+            "facestation_f2",
+            "bioentry_n2",
+            "biolite_n2",
+            "biostation_a2",
+            "biostation_l2",
+            "facelite",
+            "facestation_2",
+            "xstation_2"
+          ],
+          "question": "電源が供給されていますが、動作しません。",
+          "answer": [
+            "端末とブラケットが離れている場合、タンパースイッチによって動作しないことがあります。",
+            "アダプターまたは電源接続ケーブルを確認してください。"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "category": {
+      "title": "PIN",
+      "hid": "pin",
+      "contents": [
+        {
+          "product": [
+            "biostation_3",
+            "biostation_2",
+            "biostation_2a",
+            "facestation_f2",
+            "bioentry_n2",
+            "biolite_n2",
+            "biostation_a2",
+            "biostation_l2",
+            "facelite",
+            "facestation_2",
+            "xstation_2"
+          ],
+          "question": "PINを紛失しました。",
+          "answer": [
+            "一般ユーザーのPINは管理者に依頼してから再入力してください。",
+            "管理者PINを紛失した場合は、設置業者にお問い合わせください。"
+          ]
+        },
+        {
+          "product": [
+            "biostation_3",
+            "biostation_2",
+            "biostation_2a",
+            "facestation_f2",
+            "bioentry_n2",
+            "biolite_n2",
+            "biostation_a2",
+            "biostation_l2",
+            "facelite",
+            "facestation_2",
+            "xstation_2"
+          ],
+          "question": "PINを入力してから<span class='cmd'>OK</span>ボタンを押しても、施錠されたドアを開けられません。",
+          "answer": [
+            "登録したPINを正しく入力したか確認してください。",
+            "最近PINを変更していないか確認してください。",
+            "PINが分からない場合は管理者に依頼してから再入力してください。"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "category": {
+      "title": "QR/バーコード",
+      "hid": "qrbarcode",
+      "contents": [
+        {
+          "product": [
+            "xstation_2"
+          ],
+          "question": "QR/バーコードがうまく読み取れません。",
+          "answer": [
+            "<a href='getting-started#how-to-scan-qrbarcode'>正しいQR/バーコード認証方法</a>を確認してから再度お試しください。",
+            "<b>XS2-QDPB</b>、<b>XS2-QAPB</b>：ガイドビームがQR/バーコードの中央に来るように位置付けてください。",
+            "<b>XS2-DPB</b>、<b>XS2-APB</b>、<b>XS2-ODPB</b>、<b>XS2-OAPB</b>：QR/バーコードをデバイスのスキャン画面中央に来るように位置付けてください。",
+            "モバイル端末で受け取ったQR/バーコードの場合は、画面が見やすいようにモバイル端末の明るさを調整するか、画面を拭いてから再度お試しください。",
+            "問題が解決しない場合は、QR/バーコードを発行した管理者にお問い合わせください。"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "category": {
+      "title": "顔",
+      "hid": "face",
+      "contents": [
+        {
+          "product": [
+            "biostation_3",
+            "facestation_f2",
+            "facelite",
+            "facestation_2"
+          ],
+          "question": "登録はされたものの顔認証がうまくいかず、エラーが多発します。",
+          "answer": [
+            "<a href='getting-started#cautions-enrolling-faces'>顔登録時の注意事項</a>を確認してから顔を再登録してください。",
+            "登録されている顔の数が多い場合は、<span class='cmd'>マッチング待機時間</span>を変更してから再度お試しください。"
+          ]
+        },
+        {
+          "product": [
+            "biostation_3",
+            "facestation_f2",
+            "facelite",
+            "facestation_2"
+          ],
+          "question": "突然顔認証ができなくなりました。",
+          "answer": [
+            "<a href='getting-started#cautions-authenticating-face'>顔認証時の注意事項</a>を確認してから再度お試しください。"
+          ]
+        },
+        {
+          "product": [
+            "biostation_3",
+            "facestation_f2"
+          ],
+          "question": "<span class='cmd'>マスク検出</span>機能を<span class='cmd'>使用</span>に設定しましたが、マスク着用時に顔認証がうまくいかずエラーが多発します。",
+          "answer": [
+            "マスクを鼻先まで下げてから顔を2回認証し、その後鼻を覆って再度顔認証を試してください。問題が続く場合は設置業者にお問い合わせください。"
+          ]
+        },
+        {
+          "product": [
+            "facestation_f2"
+          ],
+          "question": "サーマルカメラ使用時に温度が正常に測定されません。",
+          "answer": [
+            "端末にサーマルカメラが正常に接続されているか確認してください。",
+            "額が隠れていない状態で再度温度測定を試してください。問題が続く場合は設置業者にお問い合わせください。"
+          ]
+        },
+        {
+          "product": [
+            "facestation_f2"
+          ],
+          "question": "サーマルカメラ使用時に温度が低すぎて測定されます。",
+          "answer": [
+            "冬季にユーザーが長時間屋外の低温にさらされた状態で温度を測定すると、体温より低く測定されることがあります。屋内で1〜2分待機してから再度お試しください。問題が続く場合は設置業者にお問い合わせください。"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "category": {
+      "title": "指紋",
+      "hid": "fingerprint",
+      "contents": [
+        {
+          "product": [
+            "bioentry_n2",
+            "biostation_2",
+            "biostation_2a",
+            "biolite_n2",
+            "biostation_a2",
+            "biostation_l2",
+            "facestation_f2"
+          ],
+          "question": "登録はされたものの指紋認証がうまくいかず、エラーが多発します。",
+          "answer": [
+            "<a href='getting-started#cautions-enrolling-fingers'>正しい指紋入力方法</a>を確認してから指紋を再登録してください。",
+            "指紋に傷がある場合、機器が他人の指紋として誤認識することがあります。",
+            "登録されている指紋の数が多い場合は、<span class='cmd'>マッチング待機時間</span>を変更してから再度お試しください。",
+            "指紋ごとの特徴の違いにより認識率が異なるため、別の指の指紋を登録してください。"
+          ]
+        },
+        {
+          "product": [
+            "bioentry_n2",
+            "biostation_2",
+            "biostation_2a",
+            "biolite_n2",
+            "biostation_a2",
+            "biostation_l2"
+          ],
+          "question": "突然指紋認証ができなくなりました。",
+          "answer": [
+            "指や指紋センサーに汗、水分、ほこりなどが付着していないか確認し、きれいに拭いてください。",
+            "乾いたタオルなどで指と指紋センサーを拭いてから再度お試しください。",
+            "指の指紋が非常に乾燥している場合は、息を吹きかけてから再度お試しください。"
+          ]
+        },
+        {
+          "product": [
+            "bioentry_n2",
+            "biostation_2",
+            "biostation_2a",
+            "biolite_n2"
+          ],
+          "question": "指紋センサーが起動しません。",
+          "answer": [
+            "<span class='cmd'>センサーモード</span>が<span class='cmd'>自動オン</span>に設定されている場合、指紋センサーに指を置いたときのみセンサーがオンになります。常に指紋センサーをオンにしたい場合は、<span class='cmd'>センサーモード</span>を<span class='cmd'>常にオン</span>に設定してください。"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "category": {
+      "title": "ドアロック",
+      "hid": "doorlock",
+      "contents": [
+        {
+          "product": [
+            "biostation_3",
+            "biostation_2",
+            "biostation_2a",
+            "facestation_f2",
+            "bioentry_n2",
+            "biolite_n2",
+            "biostation_a2",
+            "biostation_l2",
+            "facelite",
+            "facestation_2",
+            "xstation_2"
+          ],
+          "question": "ドアを閉めてもロック装置が施錠されません。",
+          "answer": [
+            "電気ロック装置の異常の可能性があります。設置業者による点検を受けてください。"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "category": {
+      "title": "時間",
+      "hid": "time",
+      "contents": [
+        {
+          "product": [
+            "biostation_3",
+            "biostation_2",
+            "biostation_2a",
+            "facestation_f2",
+            "bioentry_n2",
+            "biolite_n2",
+            "biostation_a2",
+            "biostation_l2",
+            "facelite",
+            "facestation_2",
+            "xstation_2"
+          ],
+          "question": "突然時刻が合わなくなりました。",
+          "answer": [
+            "装置には内蔵バッテリーがありますが、長時間電源が供給されないと内蔵バッテリーが放電し、時刻がずれることがあります。<a href='settings#date-time'>日付と時間</a>メニューを参照して時刻を修正できます。"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "category": {
+      "title": "管理者アクセス",
+      "hid": "admin",
+      "contents": [
+        {
+          "product": [
+            "biostation_3",
+            "biostation_2",
+            "biostation_2a",
+            "facestation_f2",
+            "bioentry_n2",
+            "biolite_n2",
+            "biostation_a2",
+            "biostation_l2",
+            "facelite",
+            "facestation_2",
+            "xstation_2"
+          ],
+          "question": "管理者PINを紛失して管理者モードに入れません。",
+          "answer": [
+            "装置は管理者が入出許可権限を付与するため、メニューに入れるのは管理者のみです。",
+            "管理者PINを紛失した場合は、設置業者にお問い合わせください。"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "category": {
+      "title": "マスター管理者",
+      "hid": "admin",
+      "contents": [
+        {
+          "product": [
+            "biostation_3",
+            "biolite_n2",
+            "biostation_2a"
+          ],
+          "question": "既存装置でファームウェアをアップグレードした後、マスター管理者設定が表示されません。",
+          "answer": [
+            "既存装置でファームウェアをアップグレードした装置にはマスター管理者設定がありません。<span class='cmd'>管理者2段階認証</span>オプションを通じて全管理者の権限を強化し、装置のセキュリティを向上できます。詳細は<a href='settings#admin-2-step-authentication'>管理者2段階認証</a>オプションを参照してください。"
+          ]
+        }
+      ]
+    }
+  }
+]
