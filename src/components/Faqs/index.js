@@ -7,6 +7,7 @@ import {useLocation} from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import faqsKR from "@site/i18n/ko/faqs.json";
 import faqsEN from "@site/i18n/en/faqs.json";
+import faqsJA from "@site/i18n/ja/faqs.json";
 
 /**
  * FAQ 컴포넌트
@@ -57,6 +58,7 @@ export default function Faqs() {
   const faqsMap = {
     ko: faqsKR,
     en: faqsEN,
+    ja: faqsJA,
   };
   const { i18n: {currentLocale} } = useDocusaurusContext();
   const location = useLocation();

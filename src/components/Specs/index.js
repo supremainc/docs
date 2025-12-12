@@ -8,6 +8,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 import glossary_ko from '@site/i18n/ko/glossary.json';
 import glossary_en from '@site/i18n/en/glossary.json';
+import glossary_ja from '@site/i18n/ja/glossary.json';
 import DimenW from '@site/static/img/common/ico-w.svg';
 import DimenH from '@site/static/img/common/ico-h.svg';
 import DimenD from '@site/static/img/common/ico-d.svg';
@@ -17,6 +18,7 @@ import Fingerprint from '@site/static/img/menus/spec-credential-finger.svg';
 const glossaryMap = {
   ko: glossary_ko,
   en: glossary_en,
+  ja: glossary_ja,
 };
 
 // 어노테이션 렌더링 유틸

@@ -72,6 +72,11 @@ const config = {
         direction: 'ltr',
         htmlLang: 'en-US',
       },
+      ja: {
+        label: '日本語',
+        direction: 'ltr',
+        htmlLang: 'ja-JP',
+      },
     }
   },
   headTags: [

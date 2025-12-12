@@ -166,6 +166,7 @@ export default function Treeview({ data: propData }) {
     const langData = {
         ko: dataKo,
         en: dataEn,
+        ja: dataEn,
     }
     const data = langData[currentLocale] || langData.en;
 

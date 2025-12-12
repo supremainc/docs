@@ -5,12 +5,15 @@ import { translate } from '@docusaurus/Translate';
 import clsx from 'clsx';
 import koLocale from './ko.json';
 import enLocale from './en.json';
+import jaLocale from './js.json';
 import xkoLocale from './x/ko.json';
 import xenLocale from './x/en.json';
+import xjsLocale from './x/js.json';
 import devkoLocale from './device/ko.json';
 import devenLocale from './device/en.json';
 import glossary_ko from '@site/i18n/ko/glossary.json';
 import glossary_en from '@site/i18n/en/glossary.json';
+import glossary_ja from '@site/i18n/ja/glossary.json';
 import air_ko from './air/ko.json';
 import air_en from './air/en.json';
 
@@ -18,6 +21,7 @@ import air_en from './air/en.json';
 const localeMap = {
   ko: koLocale,
   en: enLocale,
+  ja: jaLocale,
   // 향후 다른 언어 추가 예시:
   // fr: frLocale,
   // es: esLocale,
@@ -26,6 +30,7 @@ const localeMap = {
 const deviceLocaleMap = {
   ko: devkoLocale,
   en: devenLocale,
+  ja: devenLocale,
 };
 
 const airLocaleMap = {
@@ -36,6 +41,7 @@ const airLocaleMap = {
 const xlocaleMap = {
   ko: xkoLocale,
   en: xenLocale,
+  ja: xjaLocale,
   // 향후 다른 언어 추가 예시:
   // fr: frLocale,
   // es: esLocale,
