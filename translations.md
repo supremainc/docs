@@ -77,3 +77,68 @@ settings-remote-access.mdx 문서 업데이트
 ---
 
 location-issues.json: \\\" -> \"
+
+
+## 번역 언어 추가 시 고려할 사항
+
+settings-credential-card-manage.mdx
+Locale text not found for SID: setting.menu.credential.card
+Locale text not found for SID: setting.menu.credential.root
+Locale text not found for SID: setting.menu.credential.card
+Locale text not found for SID: setting.menu.remoteAccessExternal.root
+Locale text not found for SID: setting.menu.remoteAccessExternal.root
+Locale text not found for SID: setting.menu.remoteAccessExternal.root
+Locale text not found for SID: setting.menu.remoteAccessExternal.root
+Locale text not found for SID: setting.menu.remoteAccessExternal.root
+Locale text not found for SID: setting.menu.remoteAccessExternal.root
+Locale text not found for SID: setting.menu.remoteAccessExternal.root
+Locale text not found for SID: setting.menu.remoteAccessExternal.root
+Locale text not found for SID: setting.menu.remoteAccessExternal.root
+Locale text not found for SID: setting.menu.remoteAccessExternal.root
+
+_airfob-portal-site-type.mdx
+_more-information.mdx
+_ic-information.mdx
+_ios-license.mdx
+_android-license.mdx
+_sil-open-font-license.mdx
+_original-ssleay-license.mdx
+_openssl-license.mdx
+_mit-open-source-license.mdx
+_gnu-lesser-general-public-license.mdx
+_gnu-general-public-license.mdx
+_boringssl-license.mdx
+_apache-license.mdx
+legal/*.mdx
+/docs/ja/platform/biostar_x/opensourcelicenses.txt
+
+code.json
+
+src\components\Image\index.js
+
+navbar.json
+
+releasenote
+
+overviewitem.js 82 줄 수정
+
+`},{`
+
+```
+,
+  "externalLinks.dev.sdk.desc": {
+    "message": "Integrate fingerprint device core functions with third-party software"
+  },
+  "externalLinks.dev.xapi.desc": {
+    "message": "API documentation that allows you to see all APIs of BioStar X at a glance"
+  },
+  "externalLinks.dev.2api.desc": {
+    "message": "API documentation that allows you to see all APIs of BioStar 2 at a glance"
+  },
+  "externalLinks.dev.gsdk.desc": {
+    "message": "Cross-platform solution supporting various programming languages"
+  },
+  "externalLinks.dev.svpsdk.desc": {
+    "message": "Core functions of Suprema devices<br/>Supported by third-party software"
+  }
+```
