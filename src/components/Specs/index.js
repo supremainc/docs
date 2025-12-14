@@ -123,7 +123,7 @@ export function SpecSection({data}) {
                                     ) : typeof subsubitem.value === 'string' ? (
                                       <Description contents={subsubitem.value} />
                                     ) : typeof subsubitem.value === 'object' ? (
-                                      <Description contents={subsubitem.value[currentLocale]} />
+                                      <Description contents={subsubitem.value[currentLocale] || subsubitem.value['en']} />
                                     ) : null
                                   }
                                 </li>
@@ -198,7 +198,7 @@ function DescObj( {contents} ) {
   // console.log(typeof contents[currentLocale]);
   if (typeof contents[currentLocale] === 'string') {
     return (
-      <p dangerouslySetInnerHTML={{__html: contents[currentLocale]}} />
+      <p dangerouslySetInnerHTML={{__html: contents[currentLocale] || contents['en']}} />
     )
   } else if (typeof contents[currentLocale] === 'object') {
     return (
