@@ -203,7 +203,7 @@ function DescObj( {contents} ) {
   } else if (typeof contents[currentLocale] === 'object') {
     return (
       <ul>
-        {Object.values(contents[currentLocale]).map((item, index) => (
+        {Object.values(contents[currentLocale] || contents['en']).map((item, index) => (
           <li key={index} dangerouslySetInnerHTML={{__html: item}} />
         ))}
       </ul>

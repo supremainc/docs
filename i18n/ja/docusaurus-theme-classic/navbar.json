@@ -20,7 +20,7 @@
     "description": "Navbar item with label BioStar X"
   },
   "item.label.Reference": {
-    "message": "リファレンス",
+    "message": "Reference",
     "description": "Navbar item with label Reference"
   },
   "item.label.Legal": {
