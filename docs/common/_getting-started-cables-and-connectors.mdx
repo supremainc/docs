@@ -2,9 +2,11 @@
 
 ### 전원
 
-<Xclude product='bioentry_p2,xpass_q2'><Image src='/img/device/cable-power.svg' className='none' alone /></Xclude>
+<Xclude product='bioentry_p2,xpass_q2,biostation_3_max'><Image src='/img/device/cable-power.svg' className='none' alone /></Xclude>
 
 <Include product='bioentry_p2,xpass_q2'><Image src='/img/device/cable-power-bidirect.svg' className='none' alone /></Include>
+
+<Xclude product='biostation_3_max'>
 
 <div className='overflow-x col3--10-20-70'>
 
@@ -14,6 +16,23 @@
 | 2 | PWR GND | 검은색(흰띠) |
 
 </div>
+
+</Xclude>
+
+<Include product='biostation_3_max'>
+
+<Image src='/img/device/cable-power2.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | PWR +VDC | 빨간색 |
+| 2 | PWR GND | 검은색 |
+
+</div>
+
+</Include>
 
 ### 릴레이
 
@@ -83,6 +102,23 @@
 
 </Include>
 
+<Include product='biostation_3_max'>
+
+<Image src='/img/device/cable-input-4pin2.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| 핀 | 명칭 | 색상 |
+| -- | -- | -- |
+| 1 | INPUT0 | 빨간색 |
+| 2 | INPUT1 | 노란색 |
+| 3 | INPUT2 | 주황색 |
+| 4 | INPUT GND | 검은색 |
+
+</div>
+
+</Include>
+
 <PageBreak />
 
 <Include product='biostation_3,biostation_2a'>
@@ -119,7 +155,7 @@
 
 </Include>
 
-<Include product='facestation_f2,facestation_2,bioentry_p2,xpass_q2'>
+<Include product='facestation_f2,facestation_2,bioentry_p2,xpass_q2,biostation_3_max'>
 
 ### Wiegand 입출력
 

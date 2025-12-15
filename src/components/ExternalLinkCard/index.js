@@ -94,6 +94,13 @@ export function BiometricReader({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const defaultProductLinks = [
     {
+      title: 'BioStation 3 Max',
+      url: `/device/biostation_3_max`,
+      img: '#',
+      //img: require('@site/static/img/device/xpass_q2.png').default,
+      desc: 'BioStation 3 Max',
+    },
+    {
       title: 'BioEntry W3',
       url: `/device/bioentry_w3`,
       img: 'https://www.supremainc.com/images/upload/products/EN/20240926152809218.png',
@@ -199,15 +206,15 @@ export function BiometricReader({ productLinks: productLinksProp }) {
 export function RfMobileDevices({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const defaultProductLinks = [
-    // {
-    //   title: 'XPass Q2',
-    //   url: `/device/xpass_q2`,
-    //   img: require('@site/static/img/device/xpass_q2.png').default,
-    //   desc: `${translate({
-    //     id: "externalLinks.XPassQ2.desc",
-    //     message: "카드 및 QR/바코드 인증 지원 출입 통제 장치"
-    //   })}`
-    // },
+    {
+      title: 'XPass Q2',
+      url: `/device/xpass_q2`,
+      img: require('@site/static/img/device/xpass_q2.png').default,
+      desc: `${translate({
+        id: "externalLinks.XPassQ2.desc",
+        message: "카드 및 QR/바코드 인증 지원 출입 통제 장치"
+      })}`
+    },
     {
       title: 'X-Station 2',
       url: `/device/xstation_2`,

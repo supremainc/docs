@@ -5,7 +5,7 @@
       "hid": "power",
       "contents": [
         {
-          "product": [ "biostation_3", "biostation_2", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "biostation_a2", "biostation_l2", "facelite", "facestation_2", "xstation_2" ],
+          "product": [ "biostation_3", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "facestation_2", "xstation_2", "biostation_3_max" ],
           "question": "The power is being supplied but the device does not operate.",
           "answer": [
             "If the terminal and the bracket are far away from each other, the device may not operate due to the temper switch.",
@@ -21,7 +21,7 @@
       "hid": "pin",
       "contents": [
         {
-          "product": [ "biostation_3", "biostation_2", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "biostation_a2", "biostation_l2", "facelite", "facestation_2", "xstation_2" ],
+          "product": [ "biostation_3", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "facestation_2", "xstation_2", "biostation_3_max" ],
           "question": "I lost my PIN.",
           "answer": [
             "For a normal user PIN, request it from the administrator and enter it again.",
@@ -29,7 +29,7 @@
           ]
         },
         {
-          "product": [ "biostation_3", "biostation_2", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "biostation_a2", "biostation_l2", "facelite", "facestation_2", "xstation_2" ],
+          "product": [ "biostation_3", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "facestation_2", "xstation_2", "biostation_3_max" ],
           "question": "I entered my PIN and pressed the <span class='cmd'>OK</span> button, but I still cannot open the door.",
           "answer": [
             "Check if you have entered the registered PIN correctly.",
@@ -46,7 +46,7 @@
       "hid": "qrbarcode",
       "contents": [
         {
-          "product": [ "xstation_2" ],
+          "product": [ "xstation_2", "biostation_3_max" ],
           "question": "It fails to scan a QR/Barcode.",
           "answer": [
             "Refer to <a href='getting-started#how-to-scan-qrbarcode'>Correct QR/Barcode Authentication Method</a> and try again.",
@@ -65,7 +65,7 @@
       "hid": "face",
       "contents": [
         {
-          "product": [ "biostation_3", "facestation_f2", "facelite", "facestation_2" ],
+          "product": [ "biostation_3", "facestation_f2", "facestation_2", "biostation_3_max" ],
           "question": "The face has been registered but face authentication cannot be done smoothly, and errors occur frequently.",
           "answer": [
             "Check <a href='getting-started#cautions-enrolling-faces'>Cautions for enrolling a faces</a> and enroll the face again.",
@@ -73,21 +73,21 @@
           ]
         },
         {
-          "product": [ "biostation_3", "facestation_f2", "facelite", "facestation_2" ],
+          "product": [ "biostation_3", "facestation_f2", "facestation_2", "biostation_3_max" ],
           "question": "Face authentication has suddenly stopped working.",
           "answer": [
             "Check <a href='getting-started#cautions-authenticating-face'>Cautions for authenticating a face</a> and try again."
           ]
         },
         {
-          "product": [ "biostation_3", "facestation_f2" ],
+          "product": [ "biostation_3", "facestation_f2", "biostation_3_max" ],
           "question": "<span class='cmd'>Mask Detection</span> is set to <span class='cmd'>Enabled</span>, but face authentication cannot be done smoothly when wearing a mask.",
           "answer": [
             "Authenticate your face twice with the mask pull down on the tip of your nose. Then, authenticate your face again wearing a mask that covers your nose completely. If the problem persists, contact the installation company."
           ]
         },
         {
-          "product": [ "facestation_f2" ],
+          "product": [ "facestation_f2", "facestation_2" ],
           "question": "The thermal camera fails to measure temperature.",
           "answer": [
             "Check if the thermal camera is properly connected to the terminal.",
@@ -95,7 +95,7 @@
           ]
         },
         {
-          "product": [ "facestation_f2" ],
+          "product": [ "facestation_f2", "facestation_2" ],
           "question": "The thermal camera measures lower temperature than actual temperature.",
           "answer": [
             "If a user measures the temperature after being exposed to cold temperatures for a long time, the temperature may be measured lower than the actual temperature. Wait for 1 to 2 minutes indoors and try again. If the problem persists, contact the installation company."
@@ -110,7 +110,7 @@
       "hid": "fingerprint",
       "contents": [
         {
-          "product": [ "bioentry_n2", "biostation_2", "biostation_2a", "biolite_n2", "biostation_a2", "biostation_l2", "facestation_f2" ],
+          "product": [ "bioentry_n2", "biostation_2a", "biolite_n2", "xstation_2", "facestation_f2", "biostation_3_max" ],
           "question": "The fingerprint has been enrolled but fingerprint authentication cannot be done smoothly and errors occur frequently.",
           "answer": [
             "Check <a href='getting-started#cautions-enrolling-fingers'>How to enroll a fingerprint</a> and enroll the fingerprint again.",
@@ -120,7 +120,7 @@
           ]
         },
         {
-          "product": [ "bioentry_n2", "biostation_2", "biostation_2a", "biolite_n2", "biostation_a2", "biostation_l2" ],
+          "product": [ "bioentry_n2", "biostation_2a", "biolite_n2", "xstation_2", "facestation_f2", "biostation_3_max" ],
           "question": "Suddenly fingerprint authentication cannot be done.",
           "answer": [
             "Check if the finger or the fingerprint sensor is smeared with sweat, water or dust, and wipe the finger or the fingerprint sensor clean.",
@@ -129,7 +129,7 @@
           ]
         },
         {
-          "product": [ "bioentry_n2", "biostation_2", "biostation_2a", "biolite_n2" ],
+          "product": [ "bioentry_n2", "biostation_2a", "biolite_n2", "xstation_2", "facestation_f2", "biostation_3_max" ],
           "question": "The fingerprint sensor does not turn on.",
           "answer": [
             "When <span class='cmd'>Sensor Mode</span> is set to <span class='cmd'>Auto On</span>, the sensor will only turn on when you place finger on the fingerprint sensor. If you want the fingerprint sensor to always be on, set <span class='cmd'>Sensor Mode</span> to <span class='cmd'>Always On</span>."
@@ -144,7 +144,7 @@
       "hid": "doorlock",
       "contents": [
         {
-          "product": [ "biostation_3", "biostation_2", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "biostation_a2", "biostation_l2", "facelite", "facestation_2", "xstation_2" ],
+          "product": [ "biostation_3", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "facestation_2", "xstation_2", "biostation_3_max" ],
           "question": "The door cannot be locked when I close the door.",
           "answer": [
             "The electric lock may be malfunctioning. Have an inspection through the installation company."
@@ -159,7 +159,7 @@
       "hid": "time",
       "contents": [
         {
-          "product": [ "biostation_3", "biostation_2", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "biostation_a2", "biostation_l2", "facelite", "facestation_2", "xstation_2" ],
+          "product": [ "biostation_3", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "facestation_2", "xstation_2", "biostation_3_max" ],
           "question": "Suddenly the time has become incorrect.",
           "answer": [
             "The device is equipped with a built-in battery but if power is not supplied for a long time, the built-in battery may die, causing the time to become incorrect. You can correct the time by referring to <a href='settings#date-time'>Date & Time</a>."
@@ -174,7 +174,7 @@
       "hid": "admin",
       "contents": [
         {
-          "product": [ "biostation_3", "biostation_2", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "biostation_a2", "biostation_l2", "facelite", "facestation_2", "xstation_2" ],
+          "product": [ "biostation_3", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "facestation_2", "xstation_2", "biostation_3_max" ],
           "question": "I lost my Admin PIN, so I cannot access the Admin mode.",
           "answer": [
             "The administrator grants an access permission in the device, so only the administrator can access the Admin menu.",
@@ -190,7 +190,7 @@
       "hid": "admin",
       "contents": [
         {
-          "product": [ "biostation_3", "biolite_n2", "biostation_2a" ],
+          "product": [ "biostation_3", "biolite_n2", "biostation_2a", "biostation_3_max" ],
           "question": "After upgrading the firmware on existing devices, the Master Admin setting does not appear.",
           "answer": [
             "Devices upgraded with firmware from existing devices do not support master administrator configuration. You can enhance device security by strengthening the permissions of all administrators through the <span class='cmd'>Admin 2-Step Authentication</span> option. For more detailed information, refer to <a href='settings#admin-2-step-authentication'>Admin 2-step Authentication</a>."
