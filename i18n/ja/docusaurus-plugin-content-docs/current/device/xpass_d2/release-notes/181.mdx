@@ -1,0 +1,42 @@
+---
+id: 181
+title: Firmware Version 1.8.1
+---
+
+# Firmware Version 1.8.1 (Build No. 1.8.1_250520)
+
+Release<Separator/>2025-05-21
+
+:::caution
+
+Devices with the new BLE chip cannot downgrade to a lower version after upgrading the firmware to v1.7.0 or higher. Devices with existing BLE chips can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Supports SL1, SL3, and SL1/SL3 Mix Mode for security level compatibility with MIFARE Plus EV1 cards.
+
+    - SL1: Compatible mode with MIFARE Classic
+
+    - SL3: Advanced security mode based on AES
+
+1. Added identification code to support recognition of the latest cards.
+
+    - DESFire EV3
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Custom smart cards with the **DESFire Advanced** option enabled fail to be recognized. <Badge>1.7.1</Badge>
+
+1. Authentication fails with a 'period expired' message when using a smart card issued with a visual face included. <Badge>1.0.0</Badge>
+
+</BugLists>

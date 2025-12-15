@@ -1,0 +1,97 @@
+---
+id: v2_10
+title: v2.10
+description: Release notes for BioStar Air v2.10
+keywords: [BioStar Air, Release Notes, v2.10]
+---
+
+# BioStar Air 2.10 – Release Highlights
+
+August 12, 2025
+
+We're excited to announce BioStar Air 2.10 — a major update that introduces support for our most advanced biometric reader, BioStation 3, along with powerful new features to improve credential management, user setup, and device control. This release gives both administrators and installers more flexibility, security, and ease of use than ever before.
+
+---
+
+## BioStation 3 Support
+
+BioStation 3 (BS3) is Suprema's flagship intelligent terminal, combining facial authentication, mobile access, card reading, and intercom functionality in one compact device. With BioStar Air 2.10, BS3 is fully supported and manageable from the BioStar Air portal and mobile apps.
+
+**Key BS3 features now available in BioStar Air**:
+
+* **Face Authentication**: Fast Mode for speed, Fusion Mode for enhanced security
+
+* **RFID Support**: MIFARE Classic, FeliCa, DESFire, EM4100 (125 KHz), and select proprietary formats (iCLASS, Prox where supported)
+
+* **Mobile Credentials**: Seamless Suprema Pass integration
+
+* **QR Code Scanning**: Supports dynamic QR codes and CSNs encoded as QR codes (license required)
+
+* **SIP Intercom**: Audio/video calls to the BioStar Air App or web dashboard, with remote door unlock via DTMF
+
+* **Device Branding**: Upload custom logos or wallpapers via the Edit Device screen
+
+* **Time & Attendance Keys**: On-screen event codes for shift start/end and breaks
+
+
+## Smarter Credential Management
+
+### Custom Wiegand Format Support
+
+Define and manage your own Wiegand formats, including facility codes, segment definitions, and parity bits. Configure from Settings → Credential Formats in the web portal. Formats appear as separate columns in CSV imports, allowing you to:
+
+* Assign multiple cards per user with a / separator
+
+* Optionally name each card inline for clarity
+
+### Assign Up to 8 Cards Per User
+
+Support for multiple credentials per user has been expanded to allow up to eight RFID cards (CSN or Wiegand) per account.
+
+### PIN Code Support
+
+Set PINs directly in the Edit User screen or via CSV import. For security, PINs cannot be viewed or exported.
+
+### Mobile App Enhancements
+
+* **iOS**: Edit User screen now includes a **Read** button to scan cards via a connected reader
+
+* **Android**: NFC-on-phone scan replaced with dropdown-based reader scan (matches iOS behavior)
+
+### Better CSV Upload Feedback
+
+CSV imports now show line-by-line error messages, making it faster to correct issues.
+
+### Validity Period Improvements
+
+For "infinite" access periods, the start date is automatically set to today at 00:00. Quick adjustments (+1 day, +1 week, etc.) update only the end date.
+
+---
+
+## Device Management Enhancements
+
+* **Wiegand Output Mode**: Toggle between Normal and Bypass modes per device
+
+* **Firmware Update Safeguard**: Update button is greyed out during active updates
+
+* **Byte Order Settings**: Configure per device or apply in bulk from the Device List
+
+---
+
+## Video Performance Improvements
+
+Backend optimizations improve Uniview camera stream stability and responsiveness. Additional camera brand support is planned for future releases.
+
+---
+
+## Private Reports
+
+One-time reports are now sent only to the admin who generated them, preventing accidental distribution to all administrators.
+
+---
+
+## Real-Time Patch Diagnostics
+
+When registering Airfob Patch, the system now displays live voltage and RSSI readings, making placement and performance testing faster and more accurate.
+
+<YouTube videoId="si2Pu0W8ABw" />

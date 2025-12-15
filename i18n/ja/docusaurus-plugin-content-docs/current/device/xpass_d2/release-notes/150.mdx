@@ -1,0 +1,30 @@
+---
+id: 150
+title: Firmware Version 1.5.0
+---
+
+# Firmware Version 1.5.0 (Build No. 1.5.0_210408)
+
+Release<Separator/>2021-04-12
+
+## New Features and Improvements
+
+---
+
+1. The transmission power level for Bluetooth Low Energy (BLE) has been adjusted.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Card data were output with the wrong BitCount while the device was communicating with a 3rd party controller via OSDP. <Badge>1.4.0</Badge>
+
+1. Modified to output 4 bits for each key input on the keypad while the device was set as a Wiegand reader. (XPD2-GKDPB) <Badge>1.4.0</Badge>
+
+1. The OSDP LED Temporary command did not work properly. <Badge>1.4.0</Badge>
+
+1. Delay occurred when reading a smart card that contained credentials which the device did not support while the device was set as a Wiegand reader. <Badge>1.0.0</Badge>
+
+</BugLists>

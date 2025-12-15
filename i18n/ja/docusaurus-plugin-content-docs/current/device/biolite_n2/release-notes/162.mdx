@@ -1,0 +1,56 @@
+---
+id: 162
+title: Firmware Version 1.6.2
+---
+
+# Firmware Version 1.6.2 (Build No. 1.6.2_241113)
+
+Release<Separator/>2024-11-14
+
+:::caution
+
+Devices with the new BLE chip and the SE processor cannot downgrade to a lower version after upgrading the firmware to v1.5.0 or higher. Devices with existing BLE chips and SE processor can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Supports **Custom Smart Card Layout**.
+
+1. Supports the **Display Result from Controller** feature for displaying authentication success or failure results from a 3rd party controller on the device screen when using **Intelligent Slave**.
+
+1. Supports the **Auth Result Display Option** that allows you to select how the user ID and name are displayed on the authentication result screen of the device.
+
+    - **User ID Display**
+
+    - **User Name Display**
+
+1. Supports feature to set the baud rate of slave devices.
+
+1. Extended the user expiration period to a maximum of '**2037-12-31**'.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. When **Relay** is set in the device menu, the door does not open with a mobile card. <Badge>1.0.1</Badge>
+
+1. Calling the BS2_GetDeviceCapabilities function on a slave device connected via RS-485 outputs incorrect values. <Badge>1.0.0</Badge>
+
+1. Some smart cards fail to be recognized in environments using the new SE chip firmware. <Badge>1.5.0</Badge>
+
+1. When a fingerprint is entered into the slave device and fingerprint matching is in progress, the master device does not accept a fingerprint scan. <Badge>1.0.0</Badge>
+
+1. When the **Reset Time** for **Timed Anti PassBack** is set to 0, anti-passback does not work. <Badge>1.0.0</Badge>
+
+1. When authentication fails due to a fake fingerprint on a door with **Dual Authentication** enabled, the dual authentication process does not restart from the beginning. <Badge>1.5.0</Badge>
+
+1. Fixed the text displayed on the screen when a **Timed Anti PassBack** violation occurs. <Badge>1.0.0</Badge>
+
+</BugLists>

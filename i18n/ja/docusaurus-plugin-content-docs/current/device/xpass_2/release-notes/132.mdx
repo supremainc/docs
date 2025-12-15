@@ -1,0 +1,46 @@
+---
+id: 132
+title: Firmware Version 1.3.2
+---
+
+# Firmware Version 1.3.2 (Build No. 1.3.2_230116)
+
+Release<Separator/>2023-01-26
+
+:::caution
+
+Devices with the new BLE chip cannot downgrade to a lower version after upgrading the firmware to v1.3.1 or higher. Devices with existing BLE chips can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Separated the log related to the cause of the door unlock.
+
+    - Door open request by exit button
+
+    - Door open request by operator
+
+1. Added relay deactivation option for exit button input.
+
+    - Added the option to set the door open request log to occur but the relay not to operate when the exit button is pressed.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Card types not checked to be used in smart card settings gets issued normally. <Badge>1.0.0</Badge>
+
+1. Event logs and real-time logs are not output due to corrupted log records. <Badge>1.0.0</Badge>
+
+1. Deleting all users included in an access group in BioStar 2 does not delete the access group from the device's user information. <Badge>1.0.0</Badge>
+
+1. Improved the structure to prevent authentication fail caused by broken database or cache memory. <Badge>1.0.0</Badge>
+
+</BugLists>
