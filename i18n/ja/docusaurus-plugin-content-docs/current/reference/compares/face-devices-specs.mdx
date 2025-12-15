@@ -1,0 +1,18 @@
+---
+id: face-devices-specs
+title: 仕様比較
+hide_table_of_contents: true
+---
+
+# 顔認証装置仕様比較
+
+import fData from '@site/src/components/CompareTable/face-device-specs.json';
+import { RenderTableSpecs } from '@site/src/components/CompareTable';
+
+:::note
+
+\* 指紋センサー付きデバイスをスレーブとして接続すると、そのスレーブデバイスで指紋を認証できます。
+
+:::
+
+<RenderTableSpecs data={fData} />
