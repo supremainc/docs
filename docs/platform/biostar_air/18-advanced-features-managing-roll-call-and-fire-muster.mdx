@@ -9,7 +9,25 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
 BioStar Air의 비상 호출(Roll Call) 및 화재 대피 안내 기능을 통해 조직은 비상 상황 발생 시 어떤 직원이 안전하게 건물에서 대피했는지 추적할 수 있습니다. 소집 구역을 설정하고 BioStar Air 모바일 앱을 사용하면 관리자는 모든 사용자를 신속하게 파악하고 점호 내역 보고서를 생성할 수 있습니다.
 
+:::info
+
+* **사용자 그룹에 소집 구역이 올바르게 할당되었는지 확인**하여 혼란을 방지하세요.
+
+* 실제 비상 상황 발생 시 원활한 진행을 위해 비상 호출 기능을 **정기적으로 테스트하세요**.
+
+* **출입 기록**을 통해 안전 규정 준수를 위한 출석을 확인할 수 있습니다.
+
+:::
+
+:::tip
+
+비상 호출 및 소집 구역에 대한 동영상 가이드를 시청하려면 다음 영상을 참고하세요.
+
 <YouTube videoId="F0dnR7VmfAo" />
+
+:::
+
+<CustomerNote />
 
 
 ## 소집 구역 설정 {#settingMusterPoints}
@@ -24,9 +42,15 @@ BioStar Air의 비상 호출(Roll Call) 및 화재 대피 안내 기능을 통�
 
 1. <Cmd sid='add_muster_point_title' product='air' /> 패널이 나타나면 이름과 설명(선택 사항)을 입력하세요.
 
+   <Image src='/img/air/bsair-adv-rollcall-add.png' />
+
 1. <Cmd sid='add_muster_point_devices_title' product='air' /> 섹션에서 소집 구역에 할당할 장치 그룹 또는 장치를 추가하세요. 장치 그룹 또는 장치의 체크박스를 클릭하고 <Cmd sid='add_btn' product='air' /> 버튼을 클릭하세요.
 
+   <Image src='/img/air/bsair-adv-rollcall-add-device-group.png' />
+
 1. <Cmd sid='add_muster_point_user_groups_title' product='air' /> 섹션에서 소집 구역에 도착했을 때 보고해야할 사용자 그룹을 선택하세요. 사용자 그룹의 체크박스를 클릭하고 <Cmd sid='add_btn' product='air' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-adv-rollcall-add-user-group.png' />
 
 1. 소집 구역 설정을 저장하려면 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
 
@@ -47,60 +71,81 @@ BioStar Air의 비상 호출(Roll Call) 및 화재 대피 안내 기능을 통�
 
 ## 모바일에서 비상 호출 시작 {#startingRollcallonMobile}
 
-BioStar Air 모바일 앱으로 출석 확인을 시작하세요.
+BioStar Air 모바일 앱에서 비상 호출을 시작하고 출석을 확인하세요.
 
-1. 모바일 기기에서 BioStar Air 앱을 실행하세요.
+<Image src='/img/air/bsair-mobile-adv-rollcall.png' className='none' />
 
-1. **All Menu** → **Roll Call** (Advanced Features 아래)로 이동하세요.
+1. 모바일 기기에서 BioStar Air 앱을 실행하고 로그인하세요.
 
-1. **Roll Call Start**를 누르세요.
+1. 화면 하단의 <Cmd en='All Menu'>전체 메뉴</Cmd> → <Cmd sid='roll_call_submenu' product='air' />을 차례로 탭하세요.
 
-1. 시스템이 현재 현장에 있는 모든 사용자 목록을 표시합니다.
+1. <Cmd en='Roll Call Start'>비상 호출 시작</Cmd> 버튼을 탭하세요.
+
+1. 소집 장소에 모여야할 모든 사용자 목록이 표시됩니다.
+
 
 ### 사용자가 안전하다고 표시하기 {#marking-users-safe}
 
-사용자는 아래 방법으로 자신이 안전하다고 표시할 수 있습니다.
+<Columns>
+<Column className='width--20'>
 
-* 사용자는 지정된 소집 구역에서 자신의 크리덴셜을 태깅하세요.
+<Image src='/img/air/bsair-mobile-adv-rollcall-start.png' />
 
-* 관리자는 사용자 이름 옆에 있는 **체크 표시** 버튼을 길게 눌러서 사용자가 안전하다고 체크할 수 있습니다.
+</Column>
+<Column className='padding--l20'>
 
-### 점호 진행 상황 추적 {#tracking-roll-call-progress}
+관리자 또는 사용자는 아래 방법으로 자신이 안전하다고 표시할 수 있습니다.
+
+* 관리자는 모바일 앱에서 사용자 이름 옆에 있는 **체크 표시** 버튼을 길게 눌러서 사용자가 안전하다고 체크할 수 있습니다.
+
+* 사용자는 지정된 소집 구역에서 장치에 자신의 크리덴셜을 태깅하세요.
 
 * 사용자는 **소집 그룹**에 따라 필터링할 수 있습니다.
 
 * 검색 기능을 사용하여 특정 개인을 찾을 수 있습니다.
 
-* 점호를 완료하세요.
-
-  * 모든 사용자가 안전하다고 표시됩니다.
-
-  * 관리자는 모든 사용자가 안전하다고 수동으로 체크합니다.
-
-  * 24시간이 경과해도 완료되지 않습니다.
+</Column>
+</Columns>
 
 
-## Roll Call 내역 보기 {#viewing-roll-call-history}
+### 비상 호출 완료 {#completingRollCall}
 
-이전 점호를 확인할 수 있습니다.
+<Columns>
+<Column className='width--20'>
 
-1. BioStar Air 포털에서 **Roll Call**로 이동하세요.
+<Image src='/img/air/bsair-mobile-adv-rollcall-complete.png' />
 
-1. **History** 탭을 클릭하세요.
+</Column>
+<Column className='padding--l20'>
 
-1. 완료된 점호에서 아래 항목을 확인할 수 있습니다.
+아래의 사항이 충족되면 비상 호출을 완료합니다.
 
-   * Roll Call 중 기록된 모든 출입 이벤트 목록
+* 모든 사용자가 소집 구역에 도착하여 안전하다고 표시될 때
 
-   * 사용자가 안전하다고 표시되었는지 또는 확인되지 않았는지에 대한 세부 정보
+* 관리자가 모든 사용자를 수동으로 안전하다고 표시할 때
 
-   * Roll Call 시작 및 완료 시간
+* 24시간이 경과했을 때
+
+</Column>
+</Columns>
 
 
-## 주요 고려 사항 {#key-considerations}
+## 비상 호출 내역 보기 {#viewingRollCallHistory}
 
-* **사용자 그룹에 소집 구역이 올바르게 할당되었는지 확인**하여 혼란을 방지하세요.
+이전에 실시한 비상 호출 내역을 확인할 수 있습니다.
 
-* 실제 비상 상황 발생 시 원활한 진행을 위해 Roll Call 기능을 **정기적으로 테스트하세요**.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='advanced_menu' product='air' /> → <Cmd sid='roll_call_submenu' product='air' />을 클릭하세요.
 
-* **출입 기록**을 통해 안전 규정 준수를 위한 출석을 확인할 수 있습니다.
+1. <Cmd sid='roll_call_history_tab' product='air' /> 탭을 클릭하세요.
+
+   <Image src='/img/air/bsair-adv-rollcall-history.png' />
+
+1. 세부 사항을 확인하려면 완료된 비상 호출 항목을 클릭하세요.
+
+<Image src='/img/air/bsair-adv-rollcall-history-details.png' />
+
+* 비상 호출 중 기록된 모든 출입 이벤트 목록을 확인할 수 있습니다.
+
+* 사용자가 안전하다고 표시되었는지 또는 확인되지 않았는지에 대한 세부 정보를 확인할 수 있습니다.
+
+* 비상 호출 시작 및 완료 시간을 확인할 수 있습니다.
