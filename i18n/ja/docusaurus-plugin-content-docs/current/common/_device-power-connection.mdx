@@ -1,0 +1,199 @@
+## 電源接続
+
+<Include product='bioentry_w3'><Image src='/img/device/bew3-power-connetion.png' width='45%' className='none' /></Include>
+
+<Include product='biostation_3'><Image src='/img/device/installation-power-connection-bs3.png' width='60%' className='none' /></Include>
+
+<Include product='biostation_2a'><Image src='/img/device/installation-power-connection-bs2a.png' width='60%' className='none' /></Include>
+
+<Include product='facestation_f2'><Image src='/img/device/installation-power-connection-fsf2.png' width='60%' className='none' /></Include>
+
+<Include product='corestation_20'><Image src='/img/device/installation-power-connection-cs20.png' width='60%' className='none' /></Include>
+
+<Include product='corestation_40'><Image src='/img/device/installation-power-connection-cs40.png' width='65%' className='none' /></Include>
+
+<Include product='doorinterface'><Image src='/img/device/installation-power-connection-di24.png' width='60%' className='none' /></Include>
+
+<Include product='biolite_n2'><Image src='/img/device/installation-power-connection-bln2.png' width='60%' className='none' /></Include>
+
+<Include product='xstation_2'><Image src='/img/device/installation-power-connection-xs2.png' width='60%' className='none' /></Include>
+
+<Include product='facestation_2'><Image src='/img/device/installation-power-connection-fs2.png' width='60%' className='none' /></Include>
+
+<Include product='bioentry_p2'><Image src='/img/device/installation-power-connection-bep2.png' width='65%' className='none' /></Include>
+
+<Include product='bioentry_w2'><Image src='/img/device/installation-power-connection-bew2.png' width='65%' className='none' /></Include>
+
+<Include product='doormodule'><Image src='/img/device/installation-power-connection-dm20.png' width='60%' className='none' /></Include>
+
+<Include product='inputmodule'><Image src='/img/device/installation-power-connection-im120.png' width='60%' className='none' /></Include>
+
+<Include product='outputmodule'><Image src='/img/device/installation-power-connection-om120.png' width='30%' className='none' /></Include>
+
+<Include product='securemodule'><Image src='/img/device/installation-power-connection-sio2.png' width='45%' className='none' /></Include>
+
+<Include product='xpass_2'><Image src='/img/device/installation-power-connection-xp2.png' width='65%' className='none' /></Include>
+
+<Include product='xpass_s2'><Image src='/img/device/installation-power-connection-xps2.png' width='70%' className='none' /></Include>
+
+<Include product='xpass_q2'><Image src='/img/device/installation-power-connection-xpq2.png' width='55%' className='none' /></Include>
+
+:::caution
+
+<Include product='bioentry_w3,bioentry_w2'>
+
+* Listed Class 2 電源装置の使用を推奨します。
+
+</Include>
+
+{/* BEW2 UL향 합본 문구 */}
+
+<Include product='bioentry_w2'>
+
+* 装置の電源は外部12 VDCのListed Class 2電源装置またはUL294B PoE電源装置を使用する必要があります。
+
+* ULC S319を満たすために「PSC-100A」電源供給装置と「Casil CA 1270」バッテリーを接続する必要があります。
+
+</Include>
+
+<Include product='bioentry_w3,biostation_2a,biostation_3,xstation_2,bioentry_w2,xpass_q2'>
+
+* 電源装置（またはアダプター）とPoE電源装置を同時に接続しないでください。
+
+</Include>
+
+<Include product='corestation_20,corestation_40,doormodule,inputmodule,outputmodule,securemodule'>
+
+* 出入管理装置と製品に接続する電源は必ず分けて使用してください。
+
+</Include>
+
+<Include product='doorinterface'>
+
+* リーダーと製品に接続する電源は必ず分けて使用してください。
+
+</Include>
+
+* 電源アダプターはIEC\/EN 62368-1の認証を受け、端末の消費電力を上回る容量のものを使用してください。 電源アダプターに他の機器も接続する場合は、端末の消費電力と他機器の消費電力を合算した電流容量以上のアダプターを使用する必要があります。
+
+  * 最大消費電流の規格は製品仕様の[電源](product-specifications#specs.power)を参照してください。
+
+<Xclude product='corestation_20,corestation_40,doorinterface,inputmodule,outputmodule,securemodule'>
+
+* Secure I/O 2、電気錠（電気式ロック）、製品は必ず個別の電源を使用してください。 電源を共用すると装置が誤動作する可能性があります。
+
+</Xclude>
+
+<Include product='biostation_3,facestation_f2,bioentry_w3'>
+
+* 電源を接続する際は製品と電源装置の距離に注意してください。 製品と電源装置はできるだけ近くに設置する必要があります。 正しく接続しないと製品が誤動作する恐れがあるため注意してください。 製品と電源装置の距離が長い場合は16 AWGまたは18 AWGケーブルの使用を推奨します。 使用するケーブルの規格や設置環境によって接続できる距離が異なる場合があります。 本製品はDC 24 VとDC 12 Vの両方に対応しているため、ケーブル規格ごとの最大延長長を確認し、適切に電源を接続してください。
+
+  <Table>
+  <Thead>
+  <Row>
+  <Th rowspan='2'>ケーブル規格</Th>
+  <Th colspan='2'>最大延長長</Th>
+  </Row>
+  <Row>
+  <Th>DC 12V</Th>
+  <Th>DC 24V</Th>
+  </Row>
+  </Thead>
+  <Tbody>
+  <Row>
+  <Td>16 AWG</Td>
+  <Td>50 m</Td>
+  <Td>150 m</Td>
+  </Row>
+  <Row>
+  <Td>18 AWG</Td>
+  <Td>30 m</Td>
+  <Td>136 m</Td>
+  </Row>
+  <Row>
+  <Td>20 AWG</Td>
+  <Td>20 m</Td>
+  <Td>90 m</Td>
+  </Row>
+  </Tbody>
+  </Table>
+
+</Include>
+
+<Include product='facestation_2'>
+
+* 電源を接続する際は製品と電源装置の距離に注意してください。 製品と電源装置はできるだけ近くに設置する必要があります。 正しく接続しないと製品が誤動作する恐れがあるため注意してください。 製品と電源装置の距離が長い場合は16 AWGまたは18 AWGケーブルの使用を推奨します。 使用するケーブルの規格や設置環境によって接続できる距離が異なる場合があります。
+
+  <Table>
+  <Thead>
+  <Row>
+  <Th rowspan='2'>ケーブル規格</Th>
+  <Th colspan='2'>最大延長長</Th>
+  </Row>
+  </Thead>
+  <Tbody>
+  <Row>
+  <Td>16 AWG</Td>
+  <Td>150 m</Td>
+  </Row>
+  <Row>
+  <Td>18 AWG</Td>
+  <Td>136 m</Td>
+  </Row>
+  <Row>
+  <Td>20 AWG</Td>
+  <Td>90 m</Td>
+  </Row>
+  </Tbody>
+  </Table>
+
+</Include>
+
+* 電源アダプターを使用する場合、電源ケーブルの長さを任意に延長しないでください。
+
+<Include product='biostation_3,xstation_2,facestation_2,bioentry_w3,facestation_f2'>
+
+* CAT5 UTP 2線ケーブルを電源供給用途に使用しないでください。
+
+</Include>
+
+<Include product='bioentry_w2'>
+
+* アラーム信号はリレー接点方式でAC OKおよびバッテリー低電圧状態ピンを介して送信されます。
+
+  <div className='overflow-x'>
+
+  |     機能     |         説明        | リレー状態 |
+  | :--------: | :---------------: | :---: |
+  |   AC電源確認   |       AC電源オン      |   短絡  |
+  |      ^     |       AC電源オフ      |   断線  |
+  | バッテリー低電圧状態 | バッテリー電圧が11 V以下のとき |   短絡  |
+  |      ^     | バッテリー電圧が11 V以上のとき |   断線  |
+
+  </div>
+
+* アラーム信号機能を使用するには外部電源が必要です。 最大印加電圧は30 V、最大シンク電流は1 Aです。
+
+* PoE電源はNational Electrical Code、ANSI\/NFPA 70、Article 725.121のクラス2およびクラス3回路の電源要件に準拠しなければなりません。
+
+* 5eケーブル接続は推奨される最小性能カテゴリです。 性能カテゴリは設置現場で要求される伝送速度と一致しなければなりません。
+
+* PSEまたは電源インジェクターとPDの間を接続できる最小導体ゲージは、パッチコードの場合26 AWG（0.13 mm²）です。 水平またはライザケーブルの場合24 AWG（0.21 mm²）です。
+
+* PoEで電源を供給する場合、UL294BまたはUL294 8th Editionを遵守する必要があります。
+
+* IEEE 802.3（atまたはaf）仕様への準拠は、この要件の一部とは見なされません。
+
+</Include>
+
+:::
+
+<Include product='corestation_20,corestation_40,doorinterface,inputmodule,outputmodule'>
+
+:::info
+
+電源障害を防ぐため、無停電電源装置（UPS）を接続して使用することを推奨します。
+
+:::
+
+</Include>

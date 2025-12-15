@@ -1,0 +1,166 @@
+---
+id: getting-started
+title: はじめに
+description: デバイスを使用するための初期手順を案内します。
+keywords:
+  - 同梱物
+  - 名称
+  - 機能
+  - ケーブル
+  - コネクター
+---
+
+デバイスを使用するための初期手順を案内します。
+
+## 同梱物
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-fsf2-odb.svg' width={103} className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-fsf2-odb.svg' width={88.5} className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-drilling-template-fsf2-odb.svg' width={101.78} className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>FaceStation F2 (FSF2-ODB)</Td>
+
+<Td>壁掛け用ブラケット (FSF2-ODB)</Td>
+
+<Td>ドリルテンプレート (FSF2-ODB)</Td>
+
+</Row>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-fsf2-dbab.svg' height={200} className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-fsf2-dbab.svg' height={200} className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-drilling-template-fsf2-dbab.svg' height={200} className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>FaceStation F2 (FSF2-DB, FSF2-AB)</Td>
+
+<Td>壁掛け用ブラケット (FSF2-DB, FSF2-AB)</Td>
+
+<Td>ドリルテンプレート (FSF2-DB, FSF2-AB)</Td>
+
+</Row>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-cable-cover-fsf2.svg' height={120} className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>ケーブルカバー</Td>
+
+<Td>ダイオード</Td>
+
+<Td>120 Ω 抵抗</Td>
+
+</Row>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-pvc-anchors6.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws6.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>PVCアンカー x6</Td>
+
+<Td>固定用ネジ x6</Td>
+
+<Td>ブラケット固定用ネジ（星形）</Td>
+
+</Row>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-connection-cables-fs2.svg' height={158} className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>接続ケーブル</Td>
+
+<Td>クイックガイド</Td>
+
+<Td>オープンソースライセンスガイド</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+<PageBreak />
+
+## 各部の名称と機能
+
+<Image src='/img/device/name-function-each-part-fsf2.png' className='none' width='80%' />
+
+* **LEDランプ**：暗い場所でユーザーを検知するとLEDランプが点灯します。
+
+* **赤外線カメラ**：赤外線画像を撮影します。
+
+* **ビジュアルカメラ**：実際の画像を撮影します。
+
+* **ディスプレイ**：操作用のUIを提供します。
+
+* **RFカード・モバイル入退出カードリーダー**：入退出のためにRFカードまたはモバイル入退出カードを読み取る部分です。
+
+* **指紋認証部**：<Badge only>FSF2-ODB</Badge> 入退室のために指紋を認証する部分です。
+
+* **イーサネット**：イーサネットケーブルを接続します。
+
+* **Input (4ピン)**：Inputケーブルを接続します。
+
+* **Wiegand入出力 (4ピン)**：Wiegand入出力ケーブルを接続します。
+
+* **RS-485（4ピン）**：RS-485ケーブルを接続します。
+
+* **スピーカー**：音を出力します。
+
+* **リレー（3ピン）**：リレーケーブルを接続します。
+
+* **電源（2ピン）**：電源ケーブルを接続します。
+
+* **SAMカードスロット**：SAMカードを使用できます。
+
+* **USB（Type-C）メモリスロット**：USBメモリを接続します。
+
+{/* 케이블 및 커넥터 */}
+import CablesandConnectors from '../../common/_getting-started-cables-and-connectors.mdx'
+
+<CablesandConnectors />
+
+{/* 올바른 얼굴 등록 및 인증 방법 */}
+import DocumentA from '../../common/_face-enrollment-authentication-method.mdx'
+
+<DocumentA name='90~100 cm' />
+
+{/* 올바른 지문 입력 방법 */}
+import Enrollfingerprint from '../../common/_enroll-fingerprint.mdx'
+
+<Enrollfingerprint />

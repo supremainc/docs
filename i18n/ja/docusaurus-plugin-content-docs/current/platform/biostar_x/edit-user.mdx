@@ -1,0 +1,92 @@
+---
+id: edit-user
+title: ユーザー情報を編集
+description: 個別ユーザーまたは複数ユーザーの情報を編集し、アクセス権限を変更する手順を説明します。
+keywords:
+  - ユーザー
+  - ユーザーグループ
+---
+
+登録済みユーザーの情報を編集する方法を説明します。 個別ユーザーの基本情報、アクセス権限、クレデンシャルを編集したり、複数ユーザーの情報を一括で編集します。
+
+:::info
+
+最初に作成されたIDが `1` のユーザーは、他の管理者が編集できません。 該当アカウントでログインした本人のみが自分の情報を編集できます。
+
+:::
+
+## ユーザー情報を編集 {#user-information-modification}
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.user' /> をクリックします。
+
+2. ユーザー一覧から編集するユーザーを選択します。
+
+3. ユーザーをダブルクリックするか、画面右側にユーザープロフィール情報が表示されたら、<Cmd sid='team.user.preview.button.seeMore' /> をクリックします。 
+
+4. ユーザー情報を編集できるウィンドウが表示されます。
+
+   <Image src='/img/biostarx-edit-user-screen.png' />
+
+5. 必要な項目を編集します。
+
+6. クレデンシャル項目を編集するには <IcEdit /> をクリックし、削除するには <IcClose /> をクリックします。
+
+   <Image src='/img/biostarx-edit-user-credentials.png' />
+
+7. 変更内容を保存するには、画面右上の<Cmd sid='common.save' /> をクリックします。
+
+:::info
+
+* <Cmd sid='team.user.information' /> セクションの各項目の詳細は[以下](add-user-basic-info)を参照してください。
+
+* <Cmd sid='team.user.credential.title' /> セクションの各項目の詳細は[以下](enroll-credential)を参照してください。
+
+* <Cmd sid='team.user.permission.title' /> セクションの各項目の詳細は[以下](set-permission)を参照してください。
+
+* <Cmd sid='common.advanced' product='2' /> セクションでユーザーに関連する個人メッセージを入力します。
+
+:::
+
+## ユーザー情報を一括編集 {#user-information-collective-modification}
+
+複数ユーザーの情報やアクセス権限を一度に編集します。 この機能は多数のユーザーに同一のアクセス権限またはグループを設定する際に役立ちます。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.user' /> をクリックします。
+
+2. ユーザー一覧で編集するユーザーの最左列のチェックボックスをクリックします。 2人以上のユーザーを選択します。
+
+3. 画面右上の <Cmd sid='common.batchEdit' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-batch-edit-users.png' />
+
+4. <Cmd sid='common.batchEdit' /> 画面が表示されたら、目的の項目のチェックボックスをクリックして編集します。
+
+   <Image src='/img/biostarx-edit-user-batch-edit.png' />
+
+5. 編集内容を保存するには、画面右上の<Cmd sid='common.save' /> をクリックします。
+
+:::info
+
+* ユーザーのID、名前、メールアドレス、電話番号、クレデンシャルなどの個人情報は一括編集できません。
+
+* 編集を取り消すには、画面右上の<Cmd sid='common.cancel' /> をクリックします。
+
+:::
+
+<NextStep>
+<NextItem to='enroll-credential'>
+
+ユーザークレデンシャルを登録し、入退室認証方式を設定します。
+
+</NextItem>
+<NextItem to='set-permission'>
+
+ユーザーのアクセス権限を設定する方法を確認します。
+
+</NextItem>
+<NextItem to='transfer-user-info-to-device'>
+
+ユーザー情報を変更したら、デバイスへ送信する必要があります。 ユーザー情報をデバイスへ送信する方法を確認します。
+
+</NextItem>
+</NextStep>

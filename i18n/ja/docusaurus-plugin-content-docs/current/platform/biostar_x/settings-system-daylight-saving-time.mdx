@@ -1,0 +1,87 @@
+---
+id: settings-system-daylight-saving-time
+title: サマータイムを設定する
+description: サマータイム（DST）を設定すると、現地の法定時間に合わせてシステム時刻を自動調整できます。
+keywords:
+  - サマータイム
+---
+
+[サマータイム（Daylight Saving Time、DST）](../../reference/glossary#dst)を設定すると、現地の法定時間に合わせてシステム時刻を自動調整できます。 これにより、入退室記録の正確性を保証し、他のシステムとの時刻同期の問題を防止できます。
+
+:::info
+
+次のような場合にサマータイムを設定してください。
+
+* サマータイムを採用している国や地域でシステムを運用する場合
+
+* 勤怠管理システムと連携し、正確な入退室時刻を記録する必要がある場合
+
+* 複数のタイムゾーンにわたって運用される統合セキュリティシステムを管理する場合
+
+:::
+
+## サマータイムを追加
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.system.root' /> → <Cmd sid='common.dst' product='2' /> をクリックします。
+
+3. <Cmd sid="button.plusAdd" product='2' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-settings-system-daylight-saving-time-init.png' />
+
+4. 各項目を設定し、<Cmd sid="button.add" product='2' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-settings-system-daylight-saving-time.png' className='none' />
+
+5. 追加した設定を保存するには、画面右下の <Cmd sid="button.apply" product='2' /> ボタンをクリックします。
+
+:::info
+
+* 使用中のサマータイム設定は編集または削除できません。 使用中のサマータイム設定は <Cmd sid='shell.header.setting' /> → <Cmd sid='common.preference' product='2' /> メニューで確認できます。 
+
+* 追加したサマータイム設定をシステムに適用する詳細は[次のドキュメント](settings-preferences#language-timezone)を参照してください。
+
+:::
+
+## サマータイムを編集
+
+:::info
+
+現在使用中の設定は編集できません。 編集するには、まず <Cmd sid='shell.header.setting' /> → <Cmd sid='common.preference' product='2' /> メニューの <Cmd sid='preference.languageTimezone' product='2' /> セクションで選択を解除します。
+
+:::
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.system.root' /> → <Cmd sid='common.dst' product='2' /> をクリックします。
+
+3. サマータイム一覧で編集する項目の <IcEdit /> ボタンをクリックします。
+
+4. <Cmd sid='setting.dst.alert.edit.title' product='2' /> ウィンドウが表示されたら、必要な項目を編集します。
+
+   <Image src='/img/biostarx-settings-system-daylight-saving-time-edit.png' />
+
+5. 編集が完了したら、<Cmd sid='button.edit' product='2' /> ボタンをクリックします。
+
+6. 編集した設定を保存するには、画面右下の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+:::info
+
+サマータイム設定をシステムに適用する詳細は[次のドキュメント](settings-preferences#language-timezone)を参照してください。
+
+:::
+
+## サマータイムを削除
+
+使用していないサマータイム設定を削除します。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.system.root' /> → <Cmd sid='common.dst' product='2' /> をクリックします。
+
+3. サマータイム一覧で削除する項目の <IcTrash2 /> ボタンをクリックします。
+
+4. 確認メッセージが表示されたら、<Cmd sid='button.yes' product='2' /> ボタンをクリックします。
+
+5. 削除した設定を保存するには、画面右下の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。

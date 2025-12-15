@@ -1,0 +1,54 @@
+---
+id: 112
+title: Firmware Version 1.1.2
+---
+
+# Firmware Version 1.1.2 (Build No. 1.1.2_210903)
+
+Release<Separator/>2021-10-01
+
+## New Features and Improvements
+
+---
+
+1. Intelligent Slave Support
+
+    - Intelligent Slave: A function that enables 1:1 or 1:N matching directly from the Suprema device and transmits the authentication result as OSDP card data to the third-party controller.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. The device rebooted abnormally when adding an occupancy limit zone. <Badge>1.1.1 or earlier</Badge>
+
+1. When the LAN connection of the device configured in the occupancy limit zone was removed, the device rebooted abnormally if a user belonging to the bypass group authenticated on the entry device. <Badge>1.1.1 or earlier</Badge>
+
+1. An abnormal IP address was set when using DHCP. <Badge>1.1.1 or earlier</Badge>
+
+1. If some ports of the OM-120 connected as a slave are set as a door relay and the device is rebooted, the relay was operated abnormally. <Badge>1.1.1 or earlier</Badge>
+
+1. If the device is rebooted with Live Finger Detection turned on, then the device fails to detect a fake fingerprint. <Badge>1.1.1 or earlier</Badge>
+
+1. Abnormal authentication failure occurred when the slave device's auth mode was set to card+fingerprint. <Badge>1.1.1 or earlier</Badge>
+
+1. PIN authentication did not work properly. <Badge>1.1.1 or earlier</Badge>
+
+1. Renamed and improved the light brightness feature <Badge>1.1.1 or earlier</Badge>
+
+    - Changed the option name from 'LED Brightness' to 'Light Brightness'.
+
+    - Fixed the device to automatically operate as 'Normal' option when the administrator sets the light brightness to an invalid option.
+
+1. After setting the auth mode to include fingerprint and fingerprint/PIN, an abnormal error message is displayed if a user whose fingerprint or PIN is not enrolled authenticates on a slave device that does not support Extended Private Auth Mode. <Badge>1.1.1 or earlier</Badge>
+
+1. If the face auth mode was not used for more than 10 hours. and then activated, the face authentication did not work. <Badge>1.1.1 or earlier</Badge>
+
+1. When using server matching, the device rebooted abnormally during the loading if a user with an Operator Level of 'None' inquires about the event log. <Badge>1.1.1 or earlier</Badge>
+
+    - This issue was caused by a conflict between uploading event logs to the server and outputting the user's event logs when the device has a large number of event logs that have not been uploaded to the server for a long period of time.
+
+1. Capturing and authenticating face images in the background was activated during operations unrelated to face authentication. <Badge>1.1.1 or earlier</Badge>
+
+</BugLists>

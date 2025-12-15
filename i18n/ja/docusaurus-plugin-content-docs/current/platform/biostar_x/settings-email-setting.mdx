@@ -1,0 +1,108 @@
+---
+id: settings-email-setting
+title: メールを設定する
+description: ユーザーに顔登録用モバイルリンクを送信したりQR/バーコードを発行するメールの件名、会社名、会社ロゴ、連絡先などの情報を設定できます。
+keywords:
+  - メール設定
+  - 顔登録
+---
+
+ユーザーに顔登録用モバイルリンクを送信したりQR/バーコードを発行するメールの件名、会社名、会社ロゴ、連絡先などの情報を設定できます。
+
+:::info
+
+* ユーザーに顔登録用モバイルリンクを送信したりQR/バーコードを発行するには、ユーザー情報にメールアドレスが登録されている必要があります。 ユーザー情報の詳細については[次のドキュメント](add-user-basic-info)を参照してください。
+
+* **顔認証**を利用できるデバイスは以下のとおりです。
+
+  * FaceStation F2, BioStation 3, BioEntry W3
+
+* **スキャナーでQR/バーコード認証**を利用できるデバイスは以下のとおりです。
+
+  * X-Station 2 (XS2-QDPB, XS2-QAPB)
+
+* **カメラでQR/バーコード認証**を利用できるデバイスは以下のとおりです。
+
+  * X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) ファームウェア 1.2.0 以上
+
+  * BioStation 3 (BS3-DB, BS3-APWB) ファームウェア 1.1.0 以上
+
+  * **カメラでQR/バーコード認証**を利用するには、別途デバイスライセンスが必要です。 デバイスライセンスの詳細については[次のドキュメント](settings-license-device-license)を参照してください。
+
+:::
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで<Cmd sid="common.emailContent" product='2' />をクリックしてください。
+
+3. 各項目を設定してください。
+
+4. <Cmd sid="button.apply" product='2' /> をクリックして設定を保存します。
+
+## メールコンテンツを設定する {#email-contents-setting}
+
+メール送信用のSMTPサーバー情報を入力してください。
+
+<Image src='/img/biostarx-settings-email-contents.png' className='none' />
+
+import EmailSmtpOptions from '../../common/_settings-email-settings.mdx';
+
+* <Cmd sid="common.emailContent.smtp" product='2' />：メール送信のためにシンプルメールトランスファープロトコル（SMTP）を設定してください。 <Cmd sid='button.smtpSetting' product='2' />ボタンをクリックすると、<Cmd sid="common.emailContent.smtp" product='2' />設定ウィンドウが表示されます。
+
+  <Image src='/img/biostarx-settings-email-smtp-option.png' className='none' />
+
+  <EmailSmtpOptions />
+
+* <Cmd sid="common.emailContent.smtpTestMail" product='2' />：SMTP設定に問題がないか確認するには、受信するメールアドレスを入力してから<Cmd sid="button.smtpSettingTest" product='2' />ボタンをクリックしてください。
+
+## 顔登録モバイルリンクを設定する
+
+メールでユーザーに顔登録モバイルリンクを送信するには、<Cmd sid="common.use" product='2' />に設定してください。
+
+<Image src='/img/biostarx-settings-email-visual-face.png' />
+
+* <Cmd sid="common.emailContent.title" product='2' />：顔登録モバイルリンクを送信するメールの件名を入力してください。
+
+* <Cmd sid="common.emailContent.companyName" product='2' />：会社名を入力してください。
+
+* <Cmd sid="common.emailContent.companyLogo" product='2' />：会社のロゴ画像をアップロードしてください。
+
+  :::info
+
+  * 対応している画像ファイル形式はGIF、JPG、JPEG、JPE、JFIF、PNGです。
+
+  * 対応している画像ファイルのサイズは最大5MBです。
+
+  :::
+
+* <Cmd sid="common.emailContent.adminContact" product='2' />：担当者の連絡先を入力してください。
+
+* <Cmd sid="printOption.footer" product='2' />：法的通知文など、顔登録を行うユーザーに通知する内容を入力してください。 顔登録モバイルリンク送信メールの下部に表示されます。
+
+  :::info
+
+  フッターには最大5,000文字まで入力できます。
+
+  :::
+
+## QR/バーコード発行を設定する
+
+メールでユーザーにQR/バーコードを発行するには、<Cmd sid="common.use" product='2' />に設定してください。
+
+<Image src='/img/biostarx-settings-email-qr.png' className='none' />
+
+* <Cmd sid="common.emailContent.title" product='2' />：QR/バーコードを送信するメールの件名を入力してください。
+
+* <Cmd sid="common.emailContent.companyName" product='2' />：会社名を入力してください。
+
+* <Cmd sid="common.emailContent.companyLogo" product='2' />：会社のロゴ画像をアップロードしてください。
+
+  :::info
+
+  * 対応している画像ファイル形式はGIF、JPG、JPEG、JPE、JFIF、PNGです。
+
+  * 対応している画像ファイルのサイズは最大5MBです。
+
+  :::
+
+* <Cmd sid="common.emailContent.adminContact" product='2' />：担当者の連絡先を入力してください。

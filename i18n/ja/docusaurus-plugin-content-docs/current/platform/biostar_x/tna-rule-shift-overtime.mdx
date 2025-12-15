@@ -1,0 +1,74 @@
+---
+id: tna-rule-shift-overtime
+title: その他の勤務規則を設定する
+description: 日次勤務規則に残業時間規則を追加していない場合に便利な、その他の勤務規則を追加する方法を案内します。
+keywords:
+  - その他の勤務規則
+  - 残業
+---
+
+<Cmd sid='tab.shift' product='2' className='normal' />で残業時間規則を追加していない場合に便利に使用できます。 <Cmd sid='tab.shift' product='2' className='normal' />で設定する残業は開始時刻と終了時刻を持ちますが、<Cmd sid='rule.rule' product='2' className='normal' />は所定勤務時間を超える合計時間を計算します。 <Cmd sid='rule.rule' product='2' className='normal' />は日次・週次・月次の総残業時間で管理する際に便利に使用できます。 <Cmd sid='rule.rule' product='2' className='normal' />を設定すると、<Cmd sid='tab.shift' product='2' className='normal' />に追加された残業時間規則の代わりに適用されます。
+
+## <Cmd sid='rule.addRule' product='2' className='bold' />
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.tna' /> をクリックします。
+
+2. 画面左側のサイドバーで<Cmd sid='tab.shift' product='2' /> → <Cmd sid='rule.rule' product='2' />をクリックします。
+
+3. <Cmd sid='rule.addRule' product='2' />ボタンをクリックします。
+
+   <Image src='/img/biostarx-tna-shift-overtime.png' />
+
+4. <Cmd sid='rule.addRule' product='2' />画面が表示されたら、各項目を設定します。
+
+:::info
+
+* 設定を保存するには、画面下部の <Cmd sid='button.apply' product='2' /> をクリックします。
+
+* 続けて勤務スケジュールを追加する場合は、<Cmd sid='payCode.applyAndAddShift' product='2' />ボタンをクリックします。
+
+* 設定を保存した後、別の<Cmd sid='rule.rule' product='2' />を追加する場合は、<Cmd sid='ta.apply_add_another' product='2' />ボタンをクリックします。
+
+:::
+
+## 設定オプションガイド
+
+<Cmd sid='rule.rule' product='2' className='normal' />を設定します。 日次、週次、月次単位で適用する残業規則を設定できます。
+
+<Image src='/img/biostarx-tna-shift-overtime-adding.png' />
+
+* <Cmd sid='form.name' product='2' />：<Cmd sid='rule.rule' product='2' className='normal' />の名前を入力します。
+
+* <Cmd sid='form.description' product='2' />：<Cmd sid='rule.rule' product='2' className='normal' />の説明を入力します。
+
+* <Cmd sid='rule.overtime' product='2' />：日次、週次、月次単位で所定勤務時間後に適用する残業規則を選択します。 一定時間後に別の残業規則を適用できます。 最大残業時間を設定して、従業員が働ける残業時間を制限することもできます。
+
+  :::tip
+
+  以下のように設定すると、所定勤務時間が午前8時から午後5時の場合、午後5時から午後11時までは**Overtime(1.5)**規則が適用され、午後11時から午前2時までは**Overtime(2)**規則が適用されます。 また、1日に働ける最大残業時間が9時間に制限され、午前2時まで働いた記録のみを使用して1日の給与を計算します。
+
+  <Image src='/img/biostarx-tna-shift-overtime-example.png' />
+
+  :::
+
+  :::info
+
+  総勤務時間には休憩時間や食事時間は含まれません。
+
+  :::
+
+* <Cmd sid='rule.weekendOvertime' product='2' /> / <Cmd sid='rule.holidayOvertime' product='2' />：週末または休日に適用する勤務規則を設定します。
+
+  * <Cmd sid='payCode.payCode' product='2' />：適用する<Cmd sid='tab.payCode' product='2' className='normal' />を選択します。
+
+  * <Cmd sid='shift.dayStartTime' product='2' />：勤務開始時刻を設定します。
+
+  * <Cmd sid='rule.firstInLastOut' product='2' />：最初にユーザーが認証した時刻を出勤時刻として記録し、最後にユーザーが認証した時刻を退勤時刻として記録します。
+
+<NextStep>
+<NextItem to='tna-rule-schedule'>
+
+期間、ユーザー、その他の勤務規則、休暇日程を構成して勤務スケジュールを設定する方法を案内します。
+
+</NextItem>
+</NextStep>

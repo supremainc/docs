@@ -48,28 +48,35 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
       url: `https://kb.supremainc.com/bs2sdk/doku.php?id=${currentLocale}:start`,
       Svg: require('@site/static/img/biostar2-devicesdk.svg').default,
       height: '45px',
-      desc: '지문 인식 장치의 핵심 기능을<br/>타사 소프트웨어와 완벽한 통합 지원'
+      desc: `${translate({ id: "externalLinks.dev.sdk.desc" })}`
     },
     {
-      title: 'BioStar2 API',
+      title: 'BioStar X API',
+      url: '/api/bsxapi',
+      Svg: require('@site/static/img/biostar-api.svg').default,
+      height: '45px',
+      desc: `${translate({ id: "externalLinks.dev.xapi.desc" })}`
+    },
+    {
+      title: 'BioStar 2 API',
       url: 'https://bs2api.biostar2.com/',
       Svg: require('@site/static/img/biostar-api.svg').default,
       height: '45px',
-      desc: 'BioStar2의 모든 API를<br/>한눈에 볼 수 있는 API 문서'
+      desc: `${translate({ id: "externalLinks.dev.2api.desc" })}`
     },
     {
       title: 'Suprema G-SDK',
       url: 'https://supremainc.github.io/g-sdk/',
       Svg: require('@site/static/img/gsdk.svg').default,
       height: '45px',
-      desc: '다양한 프로그래밍 언어 지원하는<br/>크로스 플랫폼 솔루션'
+      desc: `${translate({ id: "externalLinks.dev.gsdk.desc" })}`
     },
     {
       title: 'SVP Android SDK',
       url: `https://kb.supremainc.com/svpsdk/doku.php?id=${currentLocale}:getting_started`,
       Svg: require('@site/static/img/banner/android-banner.svg').default,
       height: '45px',
-      desc: '슈프리마 장치의 핵심 기능을<br/> 타 소프트웨어에서 지원'
+      desc: `${translate({ id: "externalLinks.dev.svpsdk.desc" })}`
     }
   ];
   const externalLinks = externalLinksProp || defaultExternalLinks;

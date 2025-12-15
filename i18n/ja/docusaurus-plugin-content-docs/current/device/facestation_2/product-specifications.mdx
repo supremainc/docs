@@ -1,0 +1,65 @@
+---
+id: product-specifications
+title: 製品仕様
+description: 製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+keywords:
+  - クレデンシャル
+  - 一般
+  - 顔
+  - ストレージ
+  - インターフェース
+  - 電気仕様
+  - 製品寸法
+---
+
+製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+
+import specs from '@site/static/specs/fs2_specs.json';
+
+{/* 크리덴셜 */}
+
+<SpecSection data={specs.facestation2.credentials} />
+
+{/* 일반 */}
+
+<SpecSection data={specs.facestation2.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.facestation2.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.facestation2.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.facestation2.power} />
+
+## サイズと重量
+
+<Image src='/img/device/fs2-odpb-oapb-dimension.svg' className='none' />
+
+---
+
+:::note
+
+<Anno id='anno1'>1)</Anno> DESFire EV2/EV3 カードは DESFire EV1 カードとの下位互換性があるため、DESFire EV1 カードの機能を含む CSN およびスマートカード機能がサポートされます。
+
+<Anno id='anno2'>2)</Anno> RF 読取距離は設置環境によって変動する可能性があります。
+
+<Anno id='anno3'>3)</Anno> クレデンシャルなしで登録されたユーザーを基準としています。
+
+:::
+
+:::info
+
+* 製品仕様は性能向上のため予告なく変更されることがあります。
+
+* 本製品をマスター装置として使用する場合、指紋センサーを搭載した装置をスレーブとして接続すると、スレーブ装置で指紋認証が行えます。
+
+  * 最大指紋クレデンシャル数（1:N）：10,000
+
+  * 指紋クレデンシャル最大数 (1:1)：100,000
+
+:::

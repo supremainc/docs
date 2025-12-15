@@ -1,0 +1,284 @@
+---
+id: installation
+title: インストール
+description: インストールに必要な全手順と接続例を提供します。
+keywords:
+  - ブラケット
+  - 電源
+  - ネットワーク
+  - 入力
+  - リレー
+  - スタンドアロン
+  - Secure I/O
+  - Wiegand
+---
+
+インストールに必要な全手順と接続例を提供します。
+
+## ブラケットと製品の固定
+
+1. 製品を取り付ける位置にブラケットを固定ネジでしっかり固定してください。
+
+   <Image src='/img/device/installation-device1-xpq2.svg' className='none' width='20%' alone />
+
+   :::info
+
+   * 製品をコンクリート壁に設置する場合は、ドリルで穴を開けてPVCアンカーを挿入し、固定ネジで固定してください。
+
+   * RF信号干渉を回避するため、最小離隔距離を確認して設置してください。
+
+   <Columns>
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall1-xpq2.png' className='none' width='60%' />
+
+   <div className='overflow-x'>
+
+   |  壁の厚さ  |   距離   |
+   | :----: | :----: |
+   | 100 mm | 270 mm |
+   | 120 mm | 250 mm |
+   | 150 mm | 170 mm |
+
+   </div>
+
+   </Column>
+
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall2-xpq2.png' className='none' width='60%' />
+
+   </Column>
+   </Columns>
+
+   * モバイルアクセスカードを使用する場合、BLE信号の干渉を回避するため、デバイス間に1 m以上の距離を空けて設置してください。
+
+   :::
+
+2. ケーブルカバーに取り付けられている4本のネジを締めて、しっかり固定します。
+
+   <Image src='/img/device/installation-device2-xpq2.svg' className='none' width='20%' alone />
+
+   :::info
+
+   IP65等級を満たすため、製品とケーブルを接続した後、必ずケーブルカバーを使用してください。
+
+   :::
+
+3. 固定したブラケット上に製品を取り付けます。
+
+   <Image src='/img/device/installation-device3-xpq2.svg' className='none' width='35%' alone />
+
+4. 製品固定ネジを締めて、製品とブラケットを組み付けてください。
+
+   <Image src='/img/device/installation-device4-xpq2.svg' className='none' width='15%' alone />
+
+   :::info
+
+   ブラケットと製品を組み立てる際は、セキュリティを向上させるため、製品固定用ネジの代わりに同梱のブラケット固定用ネジ（星形）を使用できます。
+
+   :::
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+## リーダー・ロックの電源接続
+
+### リーダーの電源接続
+
+<Image src='/img/device/installation-reader-power-connection-xpq2.png' className='none' width='65%' />
+
+### ロック（ドアロック）の電源接続
+
+<Image src='/img/device/installation-lock-power-connection-xpq2.png' className='none' width='65%' />
+
+### 電源別リーダー／ロック電力仕様
+
+<div className='overflow-x'>
+
+|      電源     | リーダー最大電流 | ロック最大電流 |
+| :---------: | :------: | :-----: |
+|    DC 12V   |  500 mA  |  1.2 A  |
+|    DC 24V   |  250 mA  |  600 mA |
+| PoE（12V 出力） |  500 mA  |   非対応   |
+
+</div>
+
+### ケーブル規格別の最大延長距離
+
+電源接続に使用するケーブルの規格と設置環境によって、接続できる距離が異なる場合があります。 正しく接続しないと装置が誤動作する恐れがあるため、注意してください。 本製品はDC 12V、DC 24V、PoE電源すべてに対応しているため、各ケーブル規格の最大延長長を確認し、正しく電源を接続します。
+
+<Table>
+<Thead>
+<Row>
+
+<Th rowspan={2}>ケーブル規格</Th>
+
+<Th colspan={2}>DC 12V</Th>
+
+<Th colspan={2}>DC 24V</Th>
+
+<Th colspan={2}>PoE (12V出力)</Th>
+
+</Row>
+<Row>
+
+<Th>リーダー (500 mA)</Th>
+
+<Th>ロック (1.2 A)</Th>
+
+<Th>リーダー (250 mA)</Th>
+
+<Th>ロック (600 mA)</Th>
+
+<Th>リーダー (500 mA)</Th>
+
+</Row>
+</Thead>
+<Tbody>
+
+<Row className='center'>
+<Td>14 AWG</Td>
+<Td>190 m</Td>
+<Td>95 m</Td>
+<Td>770 m</Td>
+<Td>385 m</Td>
+<Td>190 m</Td>
+
+</Row>
+
+<Row className='center'>
+<Td>16 AWG</Td>
+<Td>120 m</Td>
+<Td>60 m</Td>
+<Td>480 m</Td>
+<Td>240 m</Td>
+<Td>120 m</Td>
+</Row>
+
+<Row className='center'>
+<Td>18 AWG</Td>
+<Td>75 m</Td>
+<Td>35 m</Td>
+<Td>300 m</Td>
+<Td>150 m</Td>
+<Td>75 m</Td>
+</Row>
+
+</Tbody>
+</Table>
+
+:::info
+
+ケーブルメーカーや製品ごとの抵抗値の違いにより、実際の最大延長長は変わる場合があります。
+
+:::
+
+<PageBreak />
+
+{/* ## 네트워크 연결 */}
+import NetworkConnection from "../../common/_device-network-connection.mdx";
+
+<NetworkConnection />
+
+{/* ## Input 연결 */}
+import InputConnection from "../../common/_device-input-connetion.mdx";
+
+<InputConnection />
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-relay-connection.mdx";
+
+<RelayConnectioin />
+
+<PageBreak />
+
+{/* ## 독립형 연결 */}
+import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
+
+<StandaloneConnection />
+
+{/* 공통 노트 */}
+import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
+
+<CommonNotes />
+
+<PageBreak />
+
+{/* ## Secure I/O 2 연결 */}
+import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
+
+<SecureIOConnection />
+
+{/* 공통 노트 */}
+
+<CommonNotes />
+
+<PageBreak />
+
+{/* ## Wiegand 연결 */}
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+{/* ## 네트워크 설정 초기화 */}
+import Resetnetwork from "../../common/_device-reset-network-settings.mdx";
+
+<Resetnetwork />
+
+<PageBreak />
+
+{/* ## 공장 초기화 */}
+import Factoryreset from "../../common/_device-factory-reset.mdx";
+
+<Factoryreset name='緑' />
+
+## ファームウェアをアップグレードする
+
+デバイスにUSBメモリを接続してファームウェアをアップグレードできます。
+
+1. USBメモリにアップグレード用ファームウェアファイルを保存してください。
+
+   :::info
+
+   アップグレード時はUSBメモリにファームウェアファイルを1つだけ保存することを推奨します。
+
+   :::
+
+2. デバイスにUSBメモリを接続してください。
+
+   :::info
+
+   USBメモリを読み込んでいる間は、入退室認証機能が一時的に停止します。
+
+   :::
+
+3. 認証要求を示すLED／ブザーが動作したら、管理者権限の認証手段で認証します。
+
+   :::info
+
+   * BioStar Xでデバイスに管理者を登録してください。 デバイスに管理者が登録されていない場合、ファームウェアをアップグレードできません。 管理者の登録方法の詳細は [BioStar X 管理者ガイド](../../platform/biostar_x/set-permission) を参照してください。
+
+   * 認証の試行はUSBメモリの挿入につき1回のみ可能です。
+
+   * 認証に失敗すると、失敗を知らせるLED／ブザーが動作した後、USB読み取り状態が終了します。 USBメモリを取り外してから、もう一度装置に接続します。
+
+   :::
+
+4. 管理者認証に成功すると、装置はファームウェアアップグレードを実行し、アップグレード中であることをLEDで示します。
+
+   :::info
+
+   ファームウェアファイルがない、または破損している場合、アップグレードは実行されず、失敗状態をLED／ブザーで示します。
+
+   :::
+
+5. ファームウェアアップグレードが完了すると、装置は自動的に再起動します。
+
+:::caution
+
+ファームウェアのアップグレード中に電源が切れないよう注意してください。 故障の原因になります。
+
+:::

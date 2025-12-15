@@ -1,0 +1,20 @@
+---
+id: controller-devices-specs
+title: 仕様比較
+hide_table_of_contents: true
+---
+
+# インテリジェントコントローラーと周辺機器の仕様比較
+
+import fData from '@site/src/components/CompareTable/controller-device-specs.json';
+import { RenderTableSpecs } from '@site/src/components/CompareTable';
+
+:::note
+
+\* 指紋センサー付きデバイスをスレーブとして接続すると、そのスレーブデバイスで指紋を認証できます。
+
+\*\* Input または Supervised 入力を選択できます。
+
+:::
+
+<RenderTableSpecs data={fData} />

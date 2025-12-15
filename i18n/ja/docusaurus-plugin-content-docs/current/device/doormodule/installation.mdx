@@ -1,0 +1,75 @@
+---
+id: installation
+title: インストール
+description: 製品の設置に必要な全工程と接続例を提供します。
+keywords:
+  - インストール
+  - Door Interface
+  - デバイス
+---
+
+インストールに必要な全手順と接続例を提供します。
+
+## ブラケットの使用
+
+1. 製品を取り付ける位置にブラケットを固定ネジでしっかり固定してください。
+
+   :::info
+
+   製品をコンクリート壁に設置する場合は、ドリルで穴を開けてPVCアンカーを挿入し、固定ネジで固定してください。
+
+   :::
+
+2. 固定したブラケット上に製品を取り付けます。
+
+   <Image src='/img/device/installation-mounting-bracket-fix-dm20.svg' className='none' width={250} alone />
+
+## スペーサーの使用
+
+製品を取り付ける位置で、スペーサーと固定用ネジを使用して製品をしっかり固定してください。
+
+<Image src='/img/device/installation-mounting-spacer-fix-dm20.svg' className='none' width={500} alone />
+
+:::info
+
+製品をコンクリート壁に設置する場合は、ドリルで穴を開けてPVCアンカーを挿入し、固定ネジで固定してください。
+
+:::
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+## RS-485 接続
+
+<Image src='/img/device/installation-rs485-connection-dm20.png' width='65%' className='none' />
+
+:::info
+
+* RS-485 ケーブルには AWG24 のツイストペアケーブルを使用し、最大長は 1.2 km としてください。
+
+* RS-485 ケーブルには特性インピーダンス 120 Ω のケーブルを使用することを推奨します。
+
+* RS-485 をデイジーチェーン接続する場合は、デイジーチェーンの両端に終端抵抗（120 Ω）を取り付けてください。 中間ラインに接続すると信号レベルが低下して通信性能が落ちるため、必ずデイジーチェーンの両端に接続してください。
+
+* 製品にはカードリーダーを最大31台まで接続でき、指紋認証装置は最大7台、カードリーダー24台との組み合わせで接続できます。
+
+* XPassまたはXPass 2をマスター装置として接続した場合、カード認証のみ使用できます。
+
+:::
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-indoor-module-relay-connection.mdx";
+
+<RelayConnectioin />
+
+{/* ## Wiegand 연결 */}
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+{/* ## 출입문 센서 및 퇴실 버튼 연결 */}
+import RtsConnection from "../../common/_device-door-sensor-connection.mdx";
+
+<RtsConnection />

@@ -1,0 +1,216 @@
+---
+id: settings-video-integration
+title: VMS と連携する
+description: BioStar X でリアルタイム映像のモニタリングおよび録画映像の再生を行うための Video Management System (VMS) 連携方法を説明します。
+keywords:
+  - ビデオ
+  - 連携
+  - カメラ
+  - 設定
+---
+
+**Video Management System** (VMS) は、複数のカメラ映像を統合管理し、録画と再生を行う映像管理システムです。 BioStar X と VMS を連携すると、入退室制御と映像セキュリティを 1 つのプラットフォームで統合管理できます。
+
+VMS 連携により、次のような利点を得られます。
+
+* **リアルタイムモニタリング**：出入口に接続されたカメラのライブ映像を確認できます。
+
+* **統合イベント管理**：入退室イベントと映像を関連付けてセキュリティ状況を把握できます。
+
+* **効率的な証拠収集**：特定の時点の録画映像を迅速に検索して再生できます。
+
+* **ブックマーク機能**：重要なイベント時点に映像タグを追加し、簡単に検索および確認できます。
+
+## 開始する前に
+
+**Video Management System** (VMS) と連携する前に、次の項目を確認してください。
+
+* VMS 連携機能は **アドバンス** (Advanced) ライセンス以上で追加オプションとして利用できます。 ライセンスポリシーの詳細は[次のドキュメント](licensing#features-add-ons)を参照してください。
+
+* VMS サーバーが正しくインストールおよび構成されていることを確認してください。 VMS サーバーが **BioStar X** とオンラインで接続できる状態である必要があります。
+
+* **BioStar X** と互換性のある VMS を使用してください。 **BioStar X VMS** または **Nx Witness v5.1.5** 系列の VMS を利用できます。
+
+* VMS サーバーの IP アドレス、ポート番号、管理者アカウント情報を準備してください。 これらの情報は **BioStar X** が VMS サーバーに接続する際に必要です。
+
+## VMS サーバー連携設定
+
+VMS サーバーと **BioStar X** を連携するには、次の手順に従ってください。
+
+<Steps>
+<Step>
+
+### VMS サーバーで証明書をインストールする {#install-vms-certification}
+
+VMS サーバーの録画映像を再生するには、HTTPS プロトコルを使用する必要があります。 VMS サーバーで IP アドレスベースの証明書を作成してください。
+
+:::note
+
+* 証明書をインストールする前に、VMS をインストールした PC に Open JDK 21 以上がインストールされていることを確認してください。
+
+* VMS サーバーと **BioStar X** を同じサーバーにインストールする場合、証明書をインストールする必要があります。
+
+:::
+
+1. *C:\\Program Files\\BioStar X\\third* パスに移動し、コマンドプロンプトを起動してください。
+
+2. 次のコマンドを実行してください。 
+
+   <Tabs groupId='os' defaultValue='Windows'>
+   <TabItem value="Windows">
+   ```java
+   java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate "C:\Windows\System32\config\systemprofile\AppData\Local\<%VENDOR.NAME%>\<%VENDOR.NAME%> Media Server\ssl" {VMS_IP_ADDRESS}
+   ```
+   </TabItem>
+   <TabItem value="Linux">
+   ```java
+   java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate "/opt/<%VENDOR.NAME%>/mediaserver/var/ssl" {VMS_IP_ADDRESS}
+   ```
+   </TabItem>
+   </Tabs>
+
+   * `<%VENDOR.NAME%>` 部分に VMS をインストールしたパスを入力してください。
+
+   * `{VMS_IP_ADDRESS}` 部分に VMS サーバーの IP アドレスを入力してください。
+
+   * 導入した VMS 製品によっては *ssl* のパスが異なる場合があります。
+
+3. VMS をインストールしたパスに証明書ファイル (*\*.pem*) が生成されていることを確認してください。
+
+4. VMS サーバーを再起動してください。
+
+:::info
+
+VMS が **BioStar X** と別のサーバーにインストールされている場合は、*scaleUtil-1.0-all.jar* ファイルを VMS サーバーにコピーして上記の手順を実行してください。
+
+:::
+
+</Step>
+<Step>
+
+### VMS 連携を有効化する
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.vmsIntegration' /> をクリックしてください。
+
+3. 初めてアクセスする場合は **BioStar X** の管理者アカウントでログインする必要があります。
+
+   <Image src='/img/biostarx-settings-video-integration-login.png' />
+
+4. <Cmd sid='video.setting.integration.title' product='2' /> オプションを <Cmd sid='common.use' product='2' /> に設定してください。
+
+   <Image src='/img/biostarx-settings-video-integration.png' />
+
+5. VMS サーバー情報を入力してください。
+
+   * <Cmd sid='video.setting.integration.serverAddress' product='2' />：VMS サーバーの IP アドレスを入力してください。
+
+   * <Cmd sid='video.setting.integration.port' product='2' />：VMS サーバーのポート番号を入力してください。
+
+   * <Cmd sid='video.setting.integration.loginId' product='2' />：VMS サーバーの管理者アカウント ID を入力してください。
+
+   * <Cmd sid='video.setting.integration.password' product='2' />：VMS サーバーの管理者アカウントのパスワードを入力してください。
+
+6. VMS サーバー情報をすべて入力したら、画面右下の <Cmd sid='button.apply' product='2' /> ボタンをクリックしてください。
+
+:::info
+
+* VMS サーバーとの連携に失敗してエラーメッセージが表示された場合は、サーバーアドレスや管理者アカウント情報などを再確認してください。 VMS サーバーがオンライン状態にあるか、ファイアウォール設定によってネットワーク接続がブロックされていないかを確認することも必要です。
+
+* <Cmd sid='video.setting.tag.title' product='2' /> セクションの設定の詳細は [次のドキュメント](#vms-event-bookmark) を参照してください。
+
+:::
+
+</Step>
+<Step>
+
+### サービスの再起動
+
+VMS サーバーと初めて連携すると、**BioStar X** はサービスを自動的に再起動します。 自動で再起動しない場合は、次の手順に従って手動でサービスを再起動してください。
+
+1. Windows で <Start/> → **BioStar X** → **BioStar X Service Manager** をクリックします。
+
+2. **All Services** リストで下記サービスの **Stop** ボタンをクリックしてサービスを停止してください。
+
+   <Image src='/img/common/biostarx-sm-restart-service-video.png' alone />
+
+   * **BioStar X Unified Gateway Service**
+
+   * **BioStar X Core Web Service**
+
+3. 停止を要求したサービスの状態が **Pending** から **Stopped** に変わったら、**Start** ボタンをクリックしてサービスを再起動してください。
+
+   <Image src='/img/common/biostarx-sm-restart-service-video-start.png' alone />
+
+</Step>
+<Step>
+
+### カメラの確認と設定
+
+VMS サーバーと正常に連携できた場合、<Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> メニューで接続されているカメラを確認できます。 詳細は [次のドキュメント](settings-videos-camera) を参照してください。
+
+</Step>
+</Steps>
+
+### トラブルシューティング {#video-troubleshooting}
+
+次のような状況が発生した場合、VMS サーバーにインストールされている証明書をクライアント PC にインストールして問題を解決できます。
+
+* ブラウザーで **Video Management System** (VMS) にアクセスした際に「安全ではありません」と警告が表示される場合
+
+* <Cmd sid='shell.header.arena' /> ページでライブ映像は再生されるが録画映像が再生されない場合
+
+#### クライアント PC で証明書をインストールする {#install-client-certification}
+
+1. **BioStar X** をインストールしたクライアント PC のログイン画面、または <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid="setting.https.https" product='2' /> から HTTPS 証明書インストーラ (*cert-register.zip*) をダウンロードします。
+
+2. ダウンロードしたファイルを解凍し、**cert-register.exe** ファイルを実行します。 **Enrollment Certification** ウィンドウが表示されます。
+
+3. **Target System** で **VMS** を選択し、次の情報を入力します。
+
+   <Image src='/img/common/biostarx-settings-server-enrollment-vms-certification.png' />
+
+   * **Server Address**：VMS サーバーの IP アドレス
+
+   * **Port**：VMS サーバーのポート番号
+
+4. **Enrollment** ボタンをクリックします。
+
+5. セキュリティ警告メッセージを確認し、**はい** をクリックします。
+
+Web ブラウザーを再起動し、<Cmd sid='shell.header.arena' /> ページで VMS サーバーの録画映像が正常に再生されるか確認します。
+
+## VMS イベントとブックマークの設定 {#vms-event-bookmark}
+
+連携したVMSサーバーにブックマークタグとイベントタグの情報を送信できます。 このとき、イベントログ、ドア名、デバイス名、ユーザーIDも併せて送信するかどうかを選択できます。 必要なオプションを選択し、画面右下の <Cmd sid='button.apply' product='2' /> をクリックしてください。
+
+<Image src='/img/biostarx-settings-video-event-bookmark.png' />
+
+* <Cmd sid='common.language' product='2' />：VMSサーバーに送信するイベントタグおよびブックマークタグの言語を選択します。 韓国語または英語を選択できます。
+
+* <Cmd sid='video.setting.tag.bookmark' product='2' />：ブックマークタグは、VMSサーバーに保存された映像にラベルと名前を付け、簡単に検索・確認できる機能です。 ブックマークタグで送信する情報を選択します。
+
+* <Cmd sid='video.setting.tag.event' product='2' />：ある時点で発生したイベントをVMSサーバーに送信して記録できます。 イベントタグで送信する情報を選択します。
+
+:::info
+
+* VMSのブックマーク機能の詳細は[次のリンク](https://resources.vmsproxy.com/nx_6.0_help/using_bookmarks.html)を参照してください。
+
+* VMSのイベント機能の詳細は[次のリンク](https://resources.vmsproxy.com/nx_6.0_help/events_available_in_vms.html)を参照してください。
+
+:::
+
+## VMSサーバー連携の解除
+
+連携したVMSサーバーとの接続を解除するには、次の手順に従ってください。 VMS連携を解除すると、ビデオ設定、登録済みカメラ、ルールがすべて削除されます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.vmsIntegration' /> をクリックしてください。
+
+3. <Cmd sid='video.setting.integration.title' product='2' /> オプションを <Cmd sid='common.notUse' product='2' /> に設定します。
+
+4. 画面右下の <Cmd sid='button.apply' product='2' /> をクリックしてください。
+
+5. メッセージウィンドウの内容を確認し、<Cmd sid='button.yes' product='2' /> をクリックしてください。

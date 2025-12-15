@@ -1,0 +1,108 @@
+---
+id: initial-setup-guide
+title: 初期設定ガイド
+description: BioStar X入退室管理システムの初期設定から運用までを段階的に案内します。
+keywords:
+  - 初期設定
+  - デバイス登録
+  - ドア設定
+  - ユーザー登録
+---
+
+初めて **BioStar X** をインストールした後、正常に運用するために必要な設定を段階的に案内します。 各段階を順に実行し、効率的な入退室管理環境を構築してください。
+
+<Steps>
+<Step>
+
+## デバイス登録
+
+**BioStar X** に接続するデバイスを登録してください。 デバイスごとに認証モードを個別に構成したり、それぞれのデバイスに管理者を設定できます。
+
+また、デバイスで発生する各種イベント（認証失敗、強要指紋認証、アンチパスバック違反など）に応じた動作を設定できます。
+
+* <DocLink docId='platform/biostar_x/settings-manage-device-group' />
+
+* <DocLink docId='platform/biostar_x/settings-adding-devices' />
+
+* <DocLink docId='platform/biostar_x/settings-adding-wiegand' />
+
+* <DocLink docId='platform/biostar_x/settings-adding-slave-device' />
+
+* <DocLink docId='platform/biostar_x/settings-device-details' />
+
+</Step>
+<Step>
+
+## ドアの登録と設定
+
+デバイスが設置されているドアの情報を登録してください。 リレー、アンチパスバック、二要素認証、アラームなどを設定できます。
+
+* <DocLink docId='platform/biostar_x/settings-manage-door-group' />
+
+* <DocLink docId='platform/biostar_x/settings-door-add' />
+
+</Step>
+<Step>
+
+## アクセスレベル設定
+
+アクセスレベルはドア情報とスケジュール情報を組み合わせて作成し、1 つのアクセスレベルに複数のドアとスケジュールを登録できます。
+
+<DocLink docId='platform/biostar_x/settings-access-control-manage-access-level' />
+
+</Step>
+<Step>
+
+## アクセスグループ設定
+
+アクセスグループはアクセスレベル（ドア、スケジュール）とユーザー情報を組み合わせて作成し、1 つのアクセスグループに複数のアクセスレベルとユーザーを登録できます。
+
+<DocLink docId='platform/biostar_x/settings-access-control-manage-access-group' />
+
+</Step>
+<Step>
+
+## ユーザー登録
+
+ユーザー情報やクレデンシャルなど、入退室管理に使用する情報を登録してください。 ユーザー情報はデバイスで直接登録することも、**BioStar X** で登録することもできます。 さらに、デバイスで登録したユーザー情報を **BioStar X** に取り込んだり、**BioStar X** で登録したユーザー情報をデバイスに送信することもできます。
+
+* <DocLink docId='platform/biostar_x/user-group-manage' />
+
+* <DocLink docId='platform/biostar_x/user-manage' />
+
+* <DocLink docId='platform/biostar_x/add-user' />
+
+* <DocLink docId='platform/biostar_x/enroll-credential' />
+
+</Step>
+<Step>
+
+## 高度な入退室管理設定
+
+アンチパスバック、火災警報などを設定でき、火災警報はローカルとグローバルを設定できます。
+
+* <DocLink docId='platform/biostar_x/settings-advanced-ac' />
+
+* <DocLink docId='platform/biostar_x/monitoring-map' />
+
+:::info
+
+**アドバンス** 以上のライセンスでのみ使用できます。 ライセンスポリシーの詳細は [以下](licensing) を参照してください。
+
+:::
+
+</Step>
+<Step>
+
+## モニタリング
+
+ドア、デバイス、イベントなど、さまざまなモニタリング機能を通じてリアルタイムで入退室管理システムを管理できます。
+
+* <DocLink docId='platform/biostar_x/monitoring-door' />
+
+* <DocLink docId='platform/biostar_x/monitoring-device' />
+
+* <DocLink docId='platform/biostar_x/monitoring-event' />
+
+</Step>
+</Steps>

@@ -1,0 +1,146 @@
+{
+  "title": {
+    "message": "Docs",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Suprema ドキュメント",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Devices": {
+    "message": "Devices",
+    "description": "Navbar item with label Devices"
+  },
+  "item.label.BioStar 2": {
+    "message": "BioStar 2",
+    "description": "Navbar item with label BioStar 2"
+  },
+  "item.label.BioStar X": {
+    "message": "BioStar X",
+    "description": "Navbar item with label BioStar X"
+  },
+  "item.label.Reference": {
+    "message": "Reference",
+    "description": "Navbar item with label Reference"
+  },
+  "item.label.Legal": {
+    "message": "Legal",
+    "description": "Navbar item with label Legal"
+  },
+  "item.label.BioStation 3": {
+    "message": "BioStation 3",
+    "description": "Navbar item with label BioStation 3"
+  },
+  "item.label.Platforms": {
+    "message": "Platforms",
+    "description": "Navbar item with label Platforms"
+  },
+  "item.label.BioStar Air": {
+    "message": "BioStar Air",
+    "description": "Navbar item with label BioStar Air"
+  },
+  "item.label.How-to Articles": {
+    "message": "How-to Articles",
+    "description": "Navbar item with label How-to Articles"
+  },
+  "item.label.BioEntry W3": {
+    "message": "BioEntry W3",
+    "description": "Navbar item with label BioEntry W3"
+  },
+  "item.label.BioStation 2a": {
+    "message": "BioStation 2a",
+    "description": "Navbar item with label BioStation 2a"
+  },
+  "item.label.FaceStation F2": {
+    "message": "FaceStation F2",
+    "description": "Navbar item with label FaceStation F2"
+  },
+  "item.label.BioLite N2": {
+    "message": "BioLite N2",
+    "description": "Navbar item with label BioLite N2"
+  },
+  "item.label.X-Station 2": {
+    "message": "X-Station 2",
+    "description": "Navbar item with label X-Station 2"
+  },
+  "item.label.CoreStation": {
+    "message": "CoreStation",
+    "description": "Navbar item with label CoreStation"
+  },
+  "item.label.CoreStation 20": {
+    "message": "CoreStation 20",
+    "description": "Navbar item with label CoreStation 20"
+  },
+  "item.label.Door Interface": {
+    "message": "Door Interface",
+    "description": "Navbar item with label Door Interface"
+  },
+  "item.label.API": {
+    "message": "API",
+    "description": "Navbar item with label API"
+  },
+  "item.label.FaceStation 2": {
+    "message": "FaceStation 2",
+    "description": "Navbar item with label FaceStation 2"
+  },
+  "item.label.BioEntry W2": {
+    "message": "BioEntry W2",
+    "description": "Navbar item with label BioEntry W2"
+  },
+  "item.label.BioEntry P2": {
+    "message": "BioEntry P2",
+    "description": "Navbar item with label BioEntry P2"
+  },
+  "item.label.BioEntry R2": {
+    "message": "BioEntry R2",
+    "description": "Navbar item with label BioEntry R2"
+  },
+  "item.label.XPass 2": {
+    "message": "XPass 2",
+    "description": "Navbar item with label XPass 2"
+  },
+  "item.label.XPass S2": {
+    "message": "XPass S2",
+    "description": "Navbar item with label XPass S2"
+  },
+  "item.label.XPass D2": {
+    "message": "XPass D2",
+    "description": "Navbar item with label XPass D2"
+  },
+  "item.label.Enclosure": {
+    "message": "Enclosure",
+    "description": "Navbar item with label Enclosure"
+  },
+  "item.label.Input Module": {
+    "message": "Input Module",
+    "description": "Navbar item with label Input Module"
+  },
+  "item.label.Output Module": {
+    "message": "Output Module",
+    "description": "Navbar item with label Output Module"
+  },
+  "item.label.Door Module": {
+    "message": "Door Module",
+    "description": "Navbar item with label Door Module"
+  },
+  "item.label.Secure Module": {
+    "message": "Secure Module",
+    "description": "Navbar item with label Secure Module"
+  },
+  "item.label.Extended Module": {
+    "message": "Extended Module",
+    "description": "Navbar item with label Extended Module"
+  },
+  "item.label.Extended Module-SC": {
+    "message": "Extended Module-SC",
+    "description": "Navbar item with label Extended Module-SC"
+  },
+  "item.label.Device Manager": {
+    "message": "Device Manager",
+    "description": "Navbar item with label Device Manager"
+  },
+  "item.label.CoreStation Setup Manager": {
+    "message": "CoreStation Setup Manager",
+    "description": "Navbar item with label CoreStation Setup Manager"
+  }
+}

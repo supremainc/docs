@@ -1,0 +1,52 @@
+---
+id: 154
+title: Firmware Version 1.5.4
+---
+
+# Firmware Version 1.5.4 (Build No. 1.5.4_230927)
+
+Release<Separator/>2023-10-24
+
+:::caution
+
+For devices with the new SE processor, after upgrading the firmware to v1.5.3 or higher, you cannot downgrade to a lower version and downgrade the firmware customized in the lower version.
+
+Devices with existing SE processor can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Improved to select and update only the desired information when updating user information. (Compatible with BioStar v2.9.0 or higher)
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. When authenticating with a BLE mobile card running on iOS, authentication fails and the device restarts intermittently. <Badge>1.4.0</Badge>
+
+1. Deleting all users included in an access group in BioStar 2 does not delete the access group from the device's user information. <Badge>1.0.0</Badge>
+
+1. Device does not recognize certain HID iCLASS Seos cards. <Badge>1.0.0</Badge>
+
+1. Door Locked event occurs when input signal gets detected while configured to Arm/Disarm by input signal. <Badge>1.0.0</Badge>
+
+1. Intermittently, the door does not open even if authentication succeeds when the door uses the slave device's relay. <Badge>1.0.0</Badge>
+
+1. When a user registered in BioStar 2 is sent to the device and authenticated with a face or card, the user is intermittently not authenticated and the device restarts. <Badge>1.0.0</Badge>
+
+1. Restart log is not logged in the device's **Event Log** when the master device is restarted. <Badge>1.5.3</Badge>
+
+1. Global APB behavior for the same input was different depending on firmware version. <Badge>1.5.0</Badge>
+
+1. When the device with the working **Screen Saver** is not used for a long time, a black screen occurs and the device freezes. <Badge>1.4.0</Badge>
+
+1. Device abnormally restarts when changing the device's **Network** settings in BioStar 2. <Badge>1.0.0</Badge>
+
+</BugLists>

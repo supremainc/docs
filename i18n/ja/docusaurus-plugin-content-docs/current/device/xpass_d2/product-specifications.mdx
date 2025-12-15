@@ -1,0 +1,59 @@
+---
+id: product-specifications
+title: 製品仕様
+description: 製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+keywords:
+  - クレデンシャル
+  - 一般
+  - 顔
+  - ストレージ
+  - インターフェース
+  - 電気仕様
+  - 製品寸法
+---
+
+製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+
+import specs from '@site/static/specs/xpd2_specs.json';
+
+{/* 크리덴셜 */}
+
+<SpecSection data={specs.xpassd2.credentials} />
+
+{/* 일반 */}
+
+<SpecSection data={specs.xpassd2.general} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.xpassd2.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.xpassd2.power} />
+
+## サイズと重量
+
+<Badge only>XPD2-MDB</Badge>
+
+<Image src='/img/device/xpd2-mdb-dimension.svg' className='none' />
+
+<Badge only>XPD2-GDB, XPD2-GKDB</Badge>
+
+<Image src='/img/device/xpd2-gkdb-dimension.svg' className='none' />
+
+---
+
+:::note
+
+<Anno id='anno1'>1)</Anno> DESFire EV2/EV3 カードは DESFire EV1 カードとの下位互換性があるため、DESFire EV1 カードの機能を含む CSN およびスマートカード機能がサポートされます。
+
+<Anno id='anno2'>2)</Anno> RF 読取距離は設置環境によって変動する可能性があります。
+
+:::
+
+:::info
+
+製品仕様は性能向上のため予告なく変更されることがあります。
+
+:::

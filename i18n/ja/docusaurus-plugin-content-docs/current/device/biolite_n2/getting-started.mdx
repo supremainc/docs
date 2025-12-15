@@ -1,0 +1,166 @@
+---
+id: getting-started
+title: はじめに
+description: デバイスを使用するための初期手順を案内します。
+keywords:
+  - 同梱物
+  - 名称
+  - 機能
+  - ケーブル
+  - コネクター
+---
+
+デバイスを使用するための初期手順を案内します。
+
+## 同梱物
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-bln2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-bln2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-drilling-template-bln2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-shrink-tube.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>BioLite N2</Td>
+
+<Td>壁掛けブラケット</Td>
+
+<Td>ドリルテンプレート</Td>
+
+<Td>収縮チューブ</Td>
+
+</Row>
+</Tbody>
+
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-pvc-anchors2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>PVCアンカー x2</Td>
+
+<Td>固定用ネジ x2</Td>
+
+<Td>クイックガイド</Td>
+
+<Td>オープンソースライセンスガイド</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>ブラケット固定用ネジ（星形）</Td>
+
+<Td>120 Ω 抵抗</Td>
+
+<Td>ダイオード</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## 各部の名称と機能
+
+<Image src='/img/device/name-function-each-part-bln2.png' className='none' width='30%' />
+
+* **ディスプレイ**：操作用のUIを提供します。
+
+* **機能ボタン**：勤怠キーや文字の変更などに使用します。
+
+* **キーパッド**
+
+  * **0〜9**：数字または文字を入力する際に使用します。
+
+  * **2**, **4**, **6**, **8**：希望する項目へ移動する際に使用します。
+
+* **OK ボタン**：勤怠モードの選択および設定を保存する際に使用します。 作業コードが設定されている場合は、長押ししてユーザーの作業コードを変更します。
+
+* **ESC ボタン**：メニューを開く、前の画面に移動する、入力を取り消す際に使用します。
+
+* **指紋認識部**：入退室のために指紋を認識する部分です。
+
+* **RFカード・モバイル入退出カードリーダー**：入退出のためにRFカードまたはモバイル入退出カードを読み取る部分です。
+
+* **ケーブル**
+
+  電源 / RS-485 / イーサネット / リレー / Wiegand 入出力 / Input
+
+* **スピーカー**：音を出力します。
+
+### ケーブル
+
+<Columns>
+<Column>
+
+<Image src='/img/device/cables-layout-bln2.svg' className='none' width='70%' alone />
+
+</Column>
+<Column className='padding--l10'>
+
+|  ピン |     名称    |    色   |
+| :-: | :-------: | :----: |
+|  1  |  PWR +VDC |    赤   |
+|  2  |  PWR GND  | 黒 (白線) |
+|  3  |  485 TRXP | 青 (白線) |
+|  4  |  485 TRXN | 黄 (黒線) |
+|  5  |  485 GND  | 白 (黒線) |
+|  6  |  ENET RXN |    黄   |
+|  7  |  ENET RXP |    緑   |
+|  8  |  ENET TXN |    赤   |
+|  9  |  ENET TXP |    黒   |
+|  10 |   RLY NO  | 灰 (白線) |
+|  11 |  RLY COM  | 緑 (白線) |
+|  12 |   RLY NC  | 橙 (白線) |
+|  13 |   WG D0   |    緑   |
+|  14 |   WG D1   |    白   |
+|  15 | INPUT GND |    灰   |
+|  16 |   INPUT1  |    茶   |
+|  17 |   INPUT0  |    紫   |
+
+</Column>
+</Columns>
+
+{/* 마스터 관리자 설정하기 */}
+import Masteradminsettings from '../../common/_device-master-admin-settings.mdx'
+
+<Masteradminsettings />
+
+{/* 올바른 지문 입력 방법 */}
+import Enrollfingerprint from '../../common/_enroll-fingerprint.mdx'
+
+<Enrollfingerprint />

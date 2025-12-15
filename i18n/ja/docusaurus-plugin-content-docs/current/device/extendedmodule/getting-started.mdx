@@ -1,0 +1,161 @@
+---
+id: getting-started
+title: はじめに
+description: デバイスを使用するための初期手順を案内します。
+keywords:
+  - 同梱物
+  - 名称
+  - 機能
+  - ケーブル
+  - コネクター
+---
+
+デバイスを使用するための初期手順を案内します。
+
+:::caution
+
+拡張モジュールの接続は一般ファームウェアではサポートされないため、別途カスタムファームウェアが必要です。
+
+:::
+
+## 同梱物
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-extm.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-pinmap-extm.svg' alone /></Td>
+
+<Td><Image src='/img/device/component-screws2.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>拡張モジュール</Td>
+
+<Td>ピンマップラベル</Td>
+
+<Td>固定用ネジ x2</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/cable-rs485-4pin.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/cable-rs485-4pin.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>RS-232Cケーブル</Td>
+
+<Td>RS-485ケーブル</Td>
+
+</Row>
+
+<Row className='center white'>
+
+<Td><Image src='/img/device/cable-usb-4pin.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/cable-usb-4pin-short.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>USB拡張ポート接続ケーブル (BioStation 3)</Td>
+
+<Td>USB拡張ポート接続ケーブル (BioStation 2a)</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## 各部の名称と機能
+
+<Image src='/img/device/name-function-each-part-extm.png' className='none' width='50%' />
+
+* **SAMカードスロット**：SAM (Secure Access Module) カードを使用できます。
+
+* **USB拡張ポート（5ピン）**：デバイスと拡張モジュールを接続します。
+
+* **RS-485（4ピン）**：RS-485ケーブルを接続します。
+
+* **RS-232C（4ピン）**：RS-232Cケーブルを接続します。
+
+## ケーブルとコネクタ
+
+### RS-232C
+
+<Image src='/img/device/cable-rs485-4pin.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| ピン | 名称      | 色 |
+| -- | ------- | - |
+| 1  | 232 TX  | 青 |
+| 2  | 232 RX  | 黄 |
+| 3  | 232 GND | 黒 |
+| 4  | SH GND  | 灰 |
+
+</div>
+
+### RS-485
+
+<Image src='/img/device/cable-rs485-4pin.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| ピン | 名称       | 色 |
+| -- | -------- | - |
+| 1  | 485 TRXP | 青 |
+| 2  | 485 TRXN | 黄 |
+| 3  | 485 GND  | 黒 |
+| 4  | SH GND   | 灰 |
+
+</div>
+
+### USB拡張ポート接続ケーブル
+
+<Image src='/img/device/cable-usb-4pin.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| ピン | 名称        | 色 |
+| -- | --------- | - |
+| 1  | MAIN VBUS | 赤 |
+| 2  | MAIN DM   | 白 |
+| 3  | MAIN DP   | 緑 |
+| 4  | NC        | - |
+| 5  | MAIN GND  | 黒 |
+
+</div>
+
+## 設置例
+
+:::caution
+
+拡張モジュールの接続は一般ファームウェアではサポートされないため、別途カスタムファームウェアが必要です。
+
+:::
+
+Suprema デバイスに拡張モジュールを装着すると、RS-485、RS-232C ポートおよび SAM カードを追加で使用できます。
+
+拡張モジュールを取り付け可能なSupremaデバイスは次のとおりです。
+
+* [**BioStation 3**](../biostation_3/index.mdx)
+
+* [**BioStation 2a**](../biostation_2a/index.mdx)
+
+<Image src='/img/device/installation-example-extm.png' className='none' width='70%' />

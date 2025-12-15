@@ -1,0 +1,27 @@
+<Head level={3} hashid={props.hashid}><Cmd sid='settings.activeDirectory.SyncDataFromADServer' product='2' /></Head>
+
+<strong>{props.name}</strong> で変更されたユーザー情報を同期する機能です。
+
+* <Cmd sid='settings.activeDirectory.SyncDataFromADServer' product='2' />：希望する同期方式を選択し、同期間隔を設定できます。
+
+  * <Cmd sid='common.manual' product='2' />：<Cmd sid='settings.activeDirectory.SyncNow' product='2' /> ボタンをクリックするたびに <strong>{props.name}</strong> からユーザー情報を取得して同期します。
+
+    <Image src='/img/biostarx-setting-directory-sync-manual.png' />
+
+  * <Cmd sid='common.auto' product='2' />：<Cmd sid='settings.activeDirectory.autosyncInterval' product='2' /> 項目で設定した間隔で <strong>{props.name}</strong> からユーザー情報を取得して同期します。 同期間隔は分単位で設定できます。 最小設定値は **30** 分、最大設定値は **10,080** 分（7 日）です。
+
+    <Image src='/img/biostarx-setting-directory-sync-auto.png' />
+
+* <Cmd sid='settings.activeDirectory.lastSynchronized' product='2' />：直近の同期日時を確認できます。
+
+:::info
+
+* <Cmd sid='settings.activeDirectory.SyncNow' product='2' /> ボタンをクリックすると警告メッセージが表示されます。 メッセージを確認して続行する場合は <Cmd sid='button.continue' product='2' /> ボタンを、キャンセルする場合は <Cmd sid='button.cancel' product='2' /> ボタンをクリックします。
+
+  <Image src='/img/biostarx-setting-directory-sync-warn-message.png' />
+
+  同期機能で連携する際に特定のユーザーを同期対象から除外するには [次のドキュメント](#exclude-integration) を参照してください。
+
+* 同期方式が <Cmd sid='common.auto' product='2' /> の状態でも、<Cmd sid='settings.activeDirectory.SyncNow' product='2' /> ボタンをクリックすると即時同期できます。
+
+:::

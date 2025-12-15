@@ -1,0 +1,226 @@
+---
+id: settings-advanced-ac-roll-call
+title: 人数点検（ロールコール）
+description: 人員点検（Roll Call）の設定方法を案内します。
+keywords:
+  - 高度なアクセス制御
+  - 人員点検
+---
+
+人員点検（Roll Call）は、特定の時点と場所での入退室記録を基に人員リストを迅速に生成し、現在位置を把握する機能です。 緊急時に、ユーザーがあらかじめ指定された場所の入室または退室デバイスで認証し、人員点検場所に到着したかどうかを把握できます。
+
+緊急対応、安全確認、救助隊への情報提供などに使用できます。 これにより、入退室記録を効率的に活用して人員状況を管理できます。
+
+:::info
+
+人員点検設定は **アドバンス**（Advanced）ライセンス以上で追加オプションとして利用できます。 ライセンスポリシーの詳細は[次のドキュメント](licensing#features-add-ons)を参照してください。
+
+:::
+
+## 人員点検の登録 {#addRollcallZone}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.advancedAc.root' /> をクリックします。
+
+3. <Cmd sid='button.func.addZone' product='2' /> ボタンをクリックします。
+
+4. <Cmd sid='zone.rollCall' product='2' /> を選択し、<Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+5. <Cmd sid='common.info' product='2' /> セクションで追加する人員点検設定の名前と説明を入力します。
+
+   <Image src='/img/biostarx-settings-adv-ac-add-rollcall.png' />
+
+6. <Cmd sid='device.info.configuration' product='2' /> セクションで詳細項目を設定します。 詳しくは [次のドキュメント](#setting) を参照してください。
+
+7. すべての設定が完了したら、画面下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+:::info
+
+<Cmd sid='common.name' product='2' /> は最大48文字まで入力でき、他の設定と同じ名前にはできません。
+
+:::
+
+## 設定オプションの案内 {#setting}
+
+人員点検設定の詳細項目は以下のとおりです。
+
+<Image src='/img/biostarx-settings-adv-ac-add-rollcall-config.png' />
+
+* <Cmd sid='zone.globalZone' product='2' />：適用範囲を確認できます。 人員点検設定は <Cmd sid='zone.globalZone.global' product='2' /> モードのみサポートしており、**BioStar X** に登録されているすべてのデバイスで設定できます。
+
+* <Cmd sid='zone.pause.activatedAndDeactivated' product='2' />：設定を有効化または一時的に無効化できます。
+
+* <Cmd sid='zone.rollCall.manualStatusChange' product='2' />：手動で状態を変更できるように設定できます。
+
+* <Cmd sid='zone.entryDevices' product='2' />：入室時に使用するデバイスを選択します。 登録済みデバイスの一覧から選択できます。
+
+* <Cmd sid='zone.exitDevices' product='2' />：退室時に使用するデバイスを選択します。 登録済みデバイスの一覧から選択できます。
+
+* <Cmd sid='common.users' product='2' />：入室可能なユーザーグループまたは個別ユーザーを選択できます。
+
+:::info
+
+* 同じデバイスを <Cmd sid='zone.entryDevices' product='2' /> と <Cmd sid='zone.exitDevices' product='2' /> に同時に設定することはできません。
+
+* <Cmd sid='zone.entryDevices' product='2' /> と <Cmd sid='zone.exitDevices' product='2' /> は最大 10 個まで選択できます。
+
+* <Cmd sid='door.dualAuthentication' product='2' /> を設定したデバイスは、<Cmd sid='zone.entryDevices' product='2' /> または <Cmd sid='zone.exitDevices' product='2' /> に設定できません。
+
+* デバイス登録の詳細は、以下のドキュメントを参照してください。
+
+  * <DocLink docId='platform/biostar_x/settings-adding-devices' />
+
+  * <DocLink docId='platform/biostar_x/settings-adding-wiegand' />
+
+  * <DocLink docId='platform/biostar_x/settings-adding-slave-device' />
+
+:::
+
+## 有効化/無効化 {#activateDeactivateOccupancyZone}
+
+無効化された人員点検設定を有効化したり、有効化されている設定を無効化できます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.advancedAc.root' /> をクリックします。
+
+3. 一覧で <Cmd sid='zone.rollCall' product='2' /> をクリックします。
+
+4. 人員点検設定リストの中から有効化または無効化する項目のチェックボックスをクリックします。
+
+5. 画面右上の <Cmd sid='zone.pause.activate' product='2' /> または <Cmd sid='zone.pause.deactivate' product='2' /> ボタンをクリックします。
+
+## 削除 {#deleteOccupancyZone}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.advancedAc.root' /> をクリックします。
+
+3. 一覧で <Cmd sid='zone.rollCall' product='2' /> をクリックします。
+
+4. 人員点検設定リストの中から削除する項目のチェックボックスをクリックします。
+
+5. 画面右上の <Cmd sid='button.deleteZone' product='2' /> ボタンをクリックします。
+
+6. 警告メッセージが表示されたら <Cmd sid='button.continue' product='2' /> ボタンをクリックします。
+
+import ExploreListPages from '../../common/_explore-list-pages.mdx';
+
+<ExploreListPages />
+
+## 人員点検を開始する {#mobileAppRollCall}
+
+人員点検機能は **BioStar X** モバイルアプリで利用できます。
+
+:::info
+
+**BioStar X** モバイルアプリは次のリンクからインストールできます。
+
+* iOS：[Apple App Store](https://apps.apple.com/kr/app/biostar-x-mobile/id6741415253)
+
+* Android：[Google Play](https://play.google.com/store/apps/details?id=com.suprema.biostarmobile)
+
+:::
+
+### モバイルアプリで人員点検を開始する {#useRollCallMobileApp}
+
+モバイルアプリで人員点検機能を開始するには、次の手順に従います。
+
+1. モバイル端末で **BioStar X** モバイルアプリを起動します。
+
+2. アプリの初期画面で **Roll Call** ボタンをタップします。
+
+   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-01.png' width={253} alone />
+
+3. Roll Call リストで人員点検を実行する項目の <IcRCplay /> ボタンをタップします。
+
+   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-02.png' width={253} alone />
+
+4. 確認メッセージが表示されたら **Yes** ボタンをタップします。
+
+人員点検が開始され、進行中の人員点検項目をタップすると人員点検状況を確認できます。
+
+<Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-03.png' width={595} alone className='none' />
+
+### 進行中の人員点検の管理
+
+* 入室済みのユーザーには <IcRCdone /> アイコンが表示されます。 すべてのユーザーが入室すると、人員点検終了メッセージが表示されます。 人員点検を終了するには **Yes** ボタンをタップします。
+
+* 管理者は手動でユーザーの入室または状態を変更できます。 ユーザーリストで状態を変更するユーザーの一番右にある丸いボタンを長押しします。
+
+  <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-change-status.png' alone className='none' width={595} />
+
+* 入室ユーザーを初期化するには **Reset** ボタンをタップします。 **Accounted** ユーザーを **Unacounted** 状態に変更します。
+
+* 別の管理者によって人員点検が終了すると、通知メッセージが表示されます。
+
+  <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-stopped.png' width={253} alone />
+
+* 進行中の人員点検を終了するには、人員点検リスト画面で <IcRCstop /> ボタンをタップするか、人員点検状況画面で **END** ボタンをタップします。
+
+* 進行中の人員点検は **BioStar X** でも終了できます。 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='data.sidebar.events' /> → <Cmd sid='zone.rollCall' product='2' /> メニューに移動し、進行中の人員点検項目を選択した後、画面右上の <Cmd sid='data.header.rollCall.ended' /> ボタンをクリックします。
+
+  <Image src='/img/biostarx-settings-adv-ac-rollcoll-ended.png' />
+
+* 人員点検を完了した後、<Cmd sid='shell.header.data' /> → <Cmd sid='data.mainMenu.generate' /> → <Cmd sid='data.sidebar.rollCall' /> で関連レポートを確認できます。 詳細は [次のドキュメント](#viewRollCallReport) を参照します。
+
+### 人員点検中のユーザー情報確認
+
+モバイルアプリで、人員点検中に各ユーザーの情報を確認できます。 ユーザーに緊急連絡が必要な場合や現在のユーザーの位置を把握する際に役立ちます。
+
+人員点検中に詳細を確認するユーザー項目を左にスワイプします。 その後 <IcRCinfo /> ボタンをタップします。
+
+<Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-user-info.png' className='none' width={595} alone />
+
+### 人員点検中にユーザーへメモを残す
+
+モバイルアプリで人員点検中に特定のユーザーが入室していない場合、そのユーザーにメモを残すことができます。
+
+点呼中にメモを入力するユーザー項目を左へスワイプしてください。 その後、<IcRCmemo /> ボタンをタップしてください。 メモ入力画面で内容を入力してから **Save** ボタンをタップしてください。
+
+<Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-user-memo.png' className='none' width={595} alone />
+
+メモを入力したユーザーには、点呼一覧で <IcRCmemo /> アイコンが表示されます。
+
+<Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-user-status.png' width={253} alone />
+
+### 点呼の詳細を確認 {#viewRollCallinfo}
+
+モバイルアプリで点呼設定の詳細を確認できます。
+
+1. モバイル端末で **BioStar X** モバイルアプリを起動します。
+
+2. アプリの初期画面で **Roll Call** ボタンをタップします。
+
+   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-01.png' width={253} alone />
+
+3. 一覧で詳細を確認する項目を左へスワイプし、<IcRCinfo /> ボタンをタップしてください。
+
+   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-info.png' width={595} alone className='none' />
+
+## 点呼レポートを確認 {#viewRollCallReport}
+
+点呼レポートを確認するには、次の手順に従ってください。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.data' /> をクリックしてください。
+
+2. 画面左のサイドバーで <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.rollCall' /> をクリックしてください。
+
+3. <Cmd sid='data.dialog.rollCall.selectRollCall' /> ウィンドウが表示されたら、レポートで確認する点呼項目を選択し、<Cmd sid='data.button.next' /> ボタンをクリックしてください。
+
+   <Image src='/img/biostarx-settings-adv-ac-rollcoll-report-01.png' />
+
+   :::note
+
+   目的の点呼項目が表示されない場合は、画面上部の期間を調整してください。
+
+   :::
+
+4. オプション設定ウィンドウでレポートに含めるデータを選択し、<Cmd sid='data.button.generate' /> ボタンをクリックしてください。
+
+   <Image src='/img/biostarx-settings-adv-ac-rollcoll-report-02.png' />
+
+レポートを生成します。 レポートでは、各ユーザーの情報や入室時間、退室時間、最後の場所、メモ内容などを確認できます。
+
+<Image src='/img/biostarx-settings-adv-ac-rollcoll-report-generated.png' caption />

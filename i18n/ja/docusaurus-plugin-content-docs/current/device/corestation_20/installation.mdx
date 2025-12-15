@@ -1,0 +1,180 @@
+---
+id: installation
+title: インストール
+description: 製品の設置に必要な全工程と接続例を提供します。
+keywords:
+  - インストール
+  - CoreStation 20
+  - デバイス
+---
+
+インストールに必要な全手順と接続例を提供します。
+
+## 製品の固定
+
+取り付け位置で固定用ネジを使用して製品をしっかり固定してください。
+
+<Image src='/img/device/device-fix-cs20.png' className='none' width='50%' alone />
+
+<PageBreak />
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+### 電源別リーダー／ロック電力仕様
+
+| 電源           | リーダー（最大電流、台数）     | ロック（最大電流、台数）      |
+| ------------ | ----------------- | ----------------- |
+| DC 12V       | 600mA（300mA × 2台） | 1.2A（600mA × 2台）  |
+| DC 24V       | 300mA（150mA × 2台） | 600mA（300mA × 2台） |
+| PoE+（12V 出力） | 600mA（300mA × 2台） | 600mA（600mA × 1台） |
+
+<PageBreak />
+
+### ケーブル規格別の最大延長距離
+
+電源接続に使用するケーブルの規格と設置環境によって、接続できる距離が異なる場合があります。 正しく接続しないと装置が誤動作する恐れがあるため、注意してください。 本製品は DC 12V、DC 24V、PoE+ の電源にすべて対応しています。ケーブル規格ごとの最大延長距離を確認して、電源を正しく接続してください。
+
+<Table>
+<Thead>
+<Row>
+
+<Th rowspan={2}>ケーブル規格</Th>
+
+<Th colspan={2}>DC 12V</Th>
+
+<Th colspan={2}>DC 24V</Th>
+
+<Th colspan={2}>PoE+ (12V 出力)</Th>
+
+</Row>
+<Row>
+
+<Th>リーダー(300mA)</Th>
+
+<Th>ロック(600mA)</Th>
+
+<Th>リーダー(150mA)</Th>
+
+<Th>ロック(300mA)</Th>
+
+<Th>リーダー(300mA)</Th>
+
+<Th>ロック(600mA)</Th>
+
+</Row>
+</Thead>
+<Tbody>
+
+<Row className='center'>
+<Td>14 AWG</Td>
+<Td>380 m</Td>
+<Td>190 m</Td>
+<Td>1540 m</Td>
+<Td>770 m</Td>
+<Td>380 m</Td>
+<Td>190 m</Td>
+</Row>
+
+<Row className='center'>
+<Td>16 AWG</Td>
+<Td>240 m</Td>
+<Td>120 m</Td>
+<Td>960 m</Td>
+<Td>480 m</Td>
+<Td>240 m</Td>
+<Td>120 m</Td>
+</Row>
+
+<Row className='center'>
+<Td>18 AWG</Td>
+<Td>150 m</Td>
+<Td>75 m</Td>
+<Td>600 m</Td>
+<Td>300 m</Td>
+<Td>150 m</Td>
+<Td>75 m</Td>
+</Row>
+
+</Tbody>
+</Table>
+
+<PageBreak />
+
+{/* ## 네트워크 연결 */}
+import NetworkConnection from "../../common/_device-network-connection.mdx";
+
+<NetworkConnection />
+
+<PageBreak />
+
+## RS-485 接続
+
+本製品は RS-485 ポートを 3 つサポートしており、Door Interface をデイジーチェーン接続すると最大 34 のドアを構成できます。
+
+<Image src='/img/device/installation-rs485-connection-cs20.png' width='55%' className='none' />
+
+:::info
+
+* 本製品に接続できる RS-485 デバイスは合計 84 台を超えることはできません。 （Door Interface を含む）
+
+* RS-485 0 ポートおよび RS-485 1 ポートには、ポートあたり最大 2 台のデバイスを接続できます。
+
+* 1 つの RS-485 ポートに 3 台以上のデバイスが接続されている場合、スレーブデバイスを検索するときに目的のデバイスが接続可能リストに表示されないことがあります。
+
+* RS-485 ケーブルは AWG26 以上を使用し、すべての配線は ANSI/NFPA 70 規格に準拠する必要があります。
+
+* RS-485 ケーブルには AWG24 のツイストペアケーブルを使用し、最大長は 1.2 km としてください。
+
+* RS-485 ケーブルには特性インピーダンス 120 Ω のケーブルを使用することを推奨します。
+
+* RS-485デイジーチェーン接続の両端に終端抵抗（120 Ω）を接続します。 中間ラインに接続すると信号レベルが低下して通信性能が落ちるため、必ずデイジーチェーンの両端に接続してください。 本製品の終端抵抗スイッチをONに設定します。
+
+:::
+
+<PageBreak />
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-indoor-module-relay-connection.mdx";
+
+<RelayConnectioin />
+
+<PageBreak />
+
+{/* ## Wiegand 연결 */}
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+{/* ## 출입문 센서 및 퇴실 버튼 연결 */}
+import RtsConnection from "../../common/_device-door-sensor-connection.mdx";
+
+<RtsConnection />
+
+<PageBreak />
+
+{/* ## AUX 입력 연결 */}
+import AuxConnection from "../../common/_device-aux-connection.mdx";
+
+<AuxConnection />
+
+## SAM カードスロット <Badge only>CS-20P</Badge>
+
+SAM（Secure Access Module）カードを使用できます。
+
+<Image src='/img/device/installation-sam-slot-connection-cs20.png' width='40%' className='none' />
+
+:::info
+
+<Badge only>CS-20P</Badge> SAM カードを装着して使用している場合、CS-20P のリーダーポートに直接接続されたスレーブデバイスのみ使用できます。
+
+:::
+
+<PageBreak />
+
+{/* ## 공장 초기화 {#factory-reset} */}
+import FactoryReset from "../../common/_cs-fatory-reset.mdx";
+
+<FactoryReset />

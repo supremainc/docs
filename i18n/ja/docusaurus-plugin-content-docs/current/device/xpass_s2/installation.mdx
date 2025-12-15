@@ -1,0 +1,129 @@
+---
+id: installation
+title: インストール
+description: インストールに必要な全手順と接続例を提供します。
+keywords:
+  - ブラケット
+  - 拡張ブラケット
+  - 電源
+  - ネットワーク
+  - 入力
+  - リレー
+  - スタンドアロン
+  - Secure I/O
+  - Wiegand
+---
+
+インストールに必要な全手順と接続例を提供します。
+
+## ブラケットと製品の固定
+
+### 一般ブラケット
+
+1. 製品を取り付ける位置にブラケットを固定ネジでしっかり固定してください。
+
+   <Image src='/img/device/installation-device1-xps2.png' className='none' alone />
+
+   :::info
+
+   製品をコンクリート壁に設置する場合は、ドリルで穴を開けてPVCアンカーを挿入し、固定ネジで固定してください。
+
+   :::
+
+2. 固定したブラケット上に製品を取り付けます。
+
+   <Image src='/img/device/installation-device2-xps2.png' className='none' alone />
+
+3. 製品固定ネジを締めて、製品とブラケットを組み付けてください。
+
+   <Image src='/img/device/installation-device3-xps2.png' className='none' alone />
+
+   :::info
+
+   ブラケットと製品を組み立てる際は、セキュリティを向上させるため、製品固定用ネジの代わりに同梱のブラケット固定用ネジ（星形）を使用できます。
+
+   :::
+
+### 拡張ブラケット
+
+1. 拡張ブラケットに含まれている固定用ネジを使用して、通常ブラケットと拡張ブラケットを組み立ててください。
+
+   <Image src='/img/device/installation-device-bracket1-xps2.png' className='none' alone />
+
+2. 製品を取り付ける位置に固定用ネジを使用して、拡張ブラケットをしっかり固定してください。
+
+   <Image src='/img/device/installation-device-bracket2-xps2.png' className='none' alone />
+
+   :::info
+
+   製品をコンクリート壁に設置する場合は、ドリルで穴を開けてPVCアンカーを挿入し、固定ネジで固定してください。
+
+   :::
+
+3. 固定された拡張ブラケットの上に製品を取り付けてください。
+
+   <Image src='/img/device/installation-device-bracket3-xps2.png' className='none' alone />
+
+4. 製品固定用ネジを締めて、製品と拡張ブラケットを組み立ててください。
+
+   <Image src='/img/device/installation-device-bracket4-xps2.png' className='none' alone />
+
+   :::info
+
+   拡張ブラケットと製品を組み立てる際、セキュリティを強化するために製品固定用ネジの代わりに同梱のブラケット固定用ネジ（星形）を使用できます。
+
+   :::
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+{/* ## 네트워크 연결 */}
+import NetworkConnection from "../../common/_device-network-connection.mdx";
+
+<NetworkConnection />
+
+{/* ## 출입문 센서 및 퇴실 버튼 연결 */}
+import RtsConnection from "../../common/_device-door-sensor-connection.mdx";
+
+<RtsConnection />
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-relay-connection.mdx";
+
+<RelayConnectioin />
+
+{/* ## 독립형 연결 */}
+import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
+
+<StandaloneConnection />
+
+{/* 공통 노트 */}
+import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
+
+<CommonNotes />
+
+{/* ## Secure I/O 2 연결 */}
+import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
+
+<SecureIOConnection />
+
+{/* 공통 노트 */}
+
+<CommonNotes />
+
+{/* ## Wiegand 연결 */}
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+{/* ## 네트워크 설정 초기화 */}
+import Resetnetwork from "../../common/_device-reset-network-settings.mdx";
+
+<Resetnetwork />
+
+{/* ## 공장 초기화 */}
+import Factoryreset from "../../common/_device-factory-reset.mdx";
+
+<Factoryreset name='緑' />

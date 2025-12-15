@@ -1,0 +1,298 @@
+---
+id: data-generate-reports
+title: "レポートを作成する "
+description: 希望のフォーマットでレポートを作成できます。
+keywords:
+  - レポート
+  - テンプレート
+---
+
+**BioStar X** で発生したすべてのイベントを閲覧することも、警報履歴のみを閲覧することもできます。 ユーザーの条件に合わせてフィルタリングし、カスタムレポートを作成することもできます。
+
+<Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.data' /> をクリックするか、画面左上のショートカットリストから <Cmd sid='shell.header.data' /> を選択してください。
+
+## すべてのイベントを閲覧
+
+**BioStar X** で発生したすべてのイベントを閲覧できます。 画面左のサイドバーで <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.allEvents' /> をクリックしてください。
+
+<Image src='/img/biostarx-data-generate-report.png' className='none' />
+
+* 表示されたリストで前のページまたは次のページを確認するには、画面右上の <IcFw2 /> または <IcBw2 /> ボタンをクリックしてください。
+
+* リストに表示する行数を変更するには、画面右上のドロップダウンメニューをクリックし、希望の値を選択してください。 最少で25行、最大で200行まで選択できます。
+
+  <Image src='/img/biostarx-data-all-events-set-rows.png' />
+
+### 期間の設定
+
+画面左上の <Cmd sid='data.header.customReport.period' /> で、希望する期間を設定できます。 日付エリアをクリックしてください。
+
+<Image src='/img/biostarx-data-all-events-select-period.png' />
+
+* 本日を基準に、1日から6か月までのあらかじめ定義された期間を選択できます。 期間を選択すると、その期間に発生したイベントがリストに自動表示されます。
+
+* <Cmd sid='data.dialog.rollCall.userDefined' /> を選択すると、任意の期間を手動で設定することもできます。 期間選択ウィンドウが表示されたら、開始日、終了日、時間を設定し、<Cmd sid='common.button.ok' /> ボタンをクリックしてください。 設定した期間に発生したイベントがリストに自動表示されます。
+
+  <Image src='/img/biostarx-data-all-events-set-custom-period.png' />
+
+  :::info
+
+  本日の日付を選択するには、<Cmd sid='data.dialog.rollCall.today' /> ボタンをクリックしてください。
+
+  :::
+
+### 照会条件の設定
+
+リストのヘッダーで条件を設定し、リストをフィルタリングできます。 日付を除くすべての項目に条件を設定できます。 
+
+1. イベントリストのヘッダーで、対象列の <IcFilter2 /> ボタンをクリックしてください。
+
+2. フィルター条件ウィンドウが表示されたら、必要な項目を選択してください。
+
+3. 選択が完了したら、<Cmd sid='button.addCondition' product='2' /> ボタンをクリックしてください。
+
+選択した条件に一致するイベントのみがリストに表示されます。
+
+<Image src='/img/biostarx-data-all-events-filtered.png' />
+
+### 照会条件の解除
+
+設定した照会条件を解除するには、ヘッダー下に表示されている条件の <IcClose /> ボタンをクリックしてください。 条件が解除され、すべてのイベントがリストに再表示されます。
+
+<Image src='/img/biostarx-data-all-events-disable-filter.png' />
+
+### イベント映像を確認する
+
+イベントリストで、特定のイベントが発生したデバイスにカメラが接続されている場合、そのイベントの <Cmd sid='data.column.customReport.view' /> 列に <IcReportVid /> アイコンが表示されます。 アイコンをクリックすると、ポップアップウィンドウで該当イベント発生時点の映像を確認できます。
+
+<Image src='/img/biostarx-data-all-events-video-log.png' />
+
+:::info
+
+* カメラルール設定で複数のカメラを連携している場合は、1台目のカメラ映像を再生します。 カメラルール設定の詳細については[次のドキュメント](settings-videos-rule)を参照してください。
+
+* この機能は **アドバンス**（Advanced）ライセンス以上で、追加オプションにより使用できます。 ライセンスポリシーの詳細は[次のドキュメント](licensing#features-add-ons)を参照してください。
+
+* ドアとカメラの連携について詳しくは、[次のドキュメント](settings-videos-rule)を参照してください。
+
+:::
+
+### CSV へのエクスポート
+
+表示されたイベントリストを CSV ファイルとしてエクスポートできます。 画面右上の <IcMoreW /> → <Cmd sid='menu.csvDownload' product='2' /> をクリックしてください。 CSV ファイルがユーザーの PC にダウンロードされます。
+
+:::info
+
+CSV ファイル名の形式は `Report_YYYYMMDD_hash.csv` です。 （例：*Report_20251002_94a85b7519664378b4b39b879f1e81b7.csv*）
+
+:::
+
+## 警報履歴の閲覧
+
+警報（アラーム）履歴のみを閲覧できます。 画面左のサイドバーで <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.alertHistory' /> をクリックしてください。
+
+<Image src='/img/biostarx-data-alert-lists.png' />
+
+* 表示されたリストで前のページまたは次のページを確認するには、画面右上の <IcFw2 /> または <IcBw2 /> ボタンをクリックしてください。
+
+* 表示されたリストで最初のページまたは最後のページへ移動するには、画面右上の <IcFirst2 /> または <IcLast2 /> ボタンをクリックしてください。
+
+* リストに表示する行数を変更するには、画面右上のドロップダウンメニューをクリックし、希望の値を選択してください。 最少で25行、最大で200行まで選択できます。
+
+  <Image src='/img/biostarx-data-all-events-set-rows.png' />
+
+:::info
+
+イベントモニタリングで警報（アラーム）イベントを確認する方法の詳細は[次のドキュメント](monitoring-event)を参照してください。
+
+:::
+
+### 期間の設定
+
+期間を設定し、その期間に発生した警報履歴を閲覧できます。 リストの <Cmd sid='reportHeader.datetime' product='2' /> 列で <IcFilter2 /> ボタンをクリックしてください。 期間選択ウィンドウが表示されたら、開始日、終了日、時間を設定し、<Cmd sid='common.button.ok' /> ボタンをクリックしてください。 設定した期間に発生したイベントがリストに自動表示されます。
+
+<Image src='/img/biostarx-data-all-events-set-custom-period.png' />
+
+:::info
+
+本日の日付を選択するには、<Cmd sid='data.dialog.rollCall.today' /> ボタンをクリックしてください。
+
+:::
+
+### 照会条件の設定
+
+リストのヘッダーで条件を設定し、リストをフィルタリングできます。 日付を除くすべての項目に条件を設定できます。 
+
+1. イベントリストのヘッダーで、対象列の <IcFilter2 /> ボタンをクリックしてください。
+
+2. フィルター条件ウィンドウが表示されたら、必要な項目を選択してください。
+
+3. 選択が完了したら、<Cmd sid='button.addCondition' product='2' /> ボタンをクリックしてください。
+
+選択した条件に一致するイベントのみがリストに表示されます。
+
+<Image src='/img/biostarx-data-alert-events-filtered.png' />
+
+### 照会条件の解除
+
+設定した照会条件を解除するには、ヘッダー下に表示されている条件の <IcClose /> ボタンをクリックしてください。 条件が解除され、すべてのイベントがリストに再表示されます。
+
+<Image src='/img/biostarx-data-alert-events-disable-filter.png' />
+
+## ユーザーレポートの閲覧
+
+ユーザー関連テンプレートを選択してレポートを作成できます。 画面左のサイドバーの <Cmd sid='data.sidebar.user' /> 配下で、目的のテンプレートをクリックしてください。
+
+<Columns>
+<Column className='width--30'>
+
+<Image src='/img/biostarx-data-user-report.png' />
+
+</Column>
+<Column className='padding--l10'>
+
+* <Cmd sid='data.sidebar.usersInformation' />：ユーザーの詳細情報をリスト形式で閲覧できます。
+
+* <Cmd sid='data.sidebar.usersInDevice' />：デバイスに登録されたユーザー情報を閲覧できます。
+
+* <Cmd sid='data.sidebar.userDetail' />：ユーザーの詳細情報をカード形式で閲覧できます。
+
+* <Cmd sid='data.sidebar.userPhotoGallery' />：ユーザープロフィール写真をギャラリー形式で閲覧できます。
+
+* <Cmd sid='data.sidebar.usersWithoutCredential' />：クレデンシャルを設定していないユーザーを閲覧できます。
+
+* <Cmd sid='data.sidebar.privateAuthModeByUser' />：ユーザーの個別認証モード設定情報を閲覧できます。
+
+* <Cmd sid='data.sidebar.numberOfCredentialsByUser' />：ユーザーに設定されているクレデンシャルの数を閲覧できます。
+
+* <Cmd sid='data.sidebar.allCards' />：登録済みカードを基準にユーザーを検索できます。
+
+* <Cmd sid='data.sidebar.unassignedCards' />：ユーザーに割り当てられていないカードを検索できます。
+
+* <Cmd sid='data.sidebar.blacklistCards' />：使用停止されたカードを検索できます。
+
+* <Cmd sid='data.sidebar.expiredUsers' />：有効期限が切れたユーザーを検索できます。
+
+* <Cmd sid='data.sidebar.usersToBeExpiredInNDays' />：N日以内に有効期限が切れるユーザーを検索できます。 日数はレポート作成前に直接入力できます。
+
+* <Cmd sid='data.report.idleUsersWithValue' />：直近Nか月間に入退室履歴がないユーザーを検索できます。 月数はレポート作成前に直接入力できます。
+
+* <Cmd sid='data.sidebar.inactiveUsers' />：無効化されたユーザーを検索できます。
+
+</Column>
+
+</Columns>
+
+:::info
+
+* 作成したレポートは <Cmd sid='data.sidebar.savedReports' /> 配下に保存できます。 レポート左上の <Cmd sid='data.button.saveReport' /> ボタンをクリックします。
+
+* レポート管理の詳細は[以下のドキュメント](#report-management)を参照してください。
+
+:::
+
+## カスタムレポートの作成 {#custom-report}
+
+必要な条件でフィルタリングしてカスタムレポートを作成できます。 作成したレポートをテンプレートとして保存すると、後から同じ条件でレポートを作成する際に便利です。
+
+1. 画面左のサイドバーで <Cmd sid='data.sidebar.events' /> → <Cmd sid='data.sidebar.customReport' /> をクリックします。
+
+2. <Cmd sid='data.dialog.customReport.events' /> ウィンドウで必要なイベントを選択します。
+
+   <Image src='/img/biostarx-data-custom-report-set-filter.png' />
+
+3. イベントの選択を終えたら、<Cmd sid='common.button.next' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-data-custom-report-select-items.png' />
+
+   * 検索(<IcSearch />)入力フィールドで必要な項目を検索できます。
+
+   * 最右列のリストで <IcRepTrash /> ボタンをクリックすると、選択した項目を除外できます。
+
+4. 照会期間を設定し、<Cmd sid='common.button.next' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-data-custom-report-set-period.png' className='none' />
+
+   * <Cmd sid='data.static' />：指定した日付と時刻を設定して照会期間を設定できます。
+
+   * <Cmd sid='data.dynamic' />：本日を基準に開始日、終了日、時刻を設定できます。 一定期間のレポートを繰り返し作成する際に便利です。
+
+5. ユーザー、ドア、デバイスを基準にグループ別または個別で条件を設定できます。
+
+   <Image src='/img/biostarx-data-custom-report-select-filters.png' className='none' />
+
+   * 右側のリストで <IcRepTrash /> ボタンをクリックすると、選択した項目を除外できます。
+
+6. 必要な条件を選択し、<Cmd sid='common.button.next' /> ボタンをクリックします。
+
+7. 列設定ウィンドウでレポートに表示するカラムを選択します。
+
+   <Image src='/img/biostarx-data-custom-report-set-columns.png' />
+
+8. カラムの選択を終えたら、<Cmd sid='data.button.generate' /> ボタンをクリックします。
+
+カスタムレポートの作成が完了します。
+
+<Image src='/img/biostarx-data-custom-report-complete.png' />
+
+:::info
+
+* レポートのタイトル、イベント項目、期間、フィルター条件を修正するには、レポート上部の <IcRepoEdit /> ボタンをクリックします。
+
+* レポートタイトルは画面左のサイドバーの <Cmd sid='data.sidebar.savedReports' /> 配下でも変更できます。 タイトルを変更するカスタムレポートを選択し、右クリックします。 ポップアップメニューで <Cmd sid='data.sidebar.renameSavedReport' /> を選択します。
+
+  <Image src='/img/biostarx-data-custom-report-rename.png' />
+
+* レポート管理の詳細は[以下のドキュメント](#report-management)を参照してください。
+
+:::
+
+## レポート管理 {#report-management}
+
+### レポート保存
+
+作成したレポートをテンプレートとして保存するには、<Cmd sid='data.button.saveReport' /> ボタンをクリックします。 保存したレポートは画面左のサイドバーの <Cmd sid='data.sidebar.savedReports' /> 配下で確認できます。
+
+<Image src='/img/biostarx-data-custom-report-saved.png' />
+
+### レポートファイルの保存
+
+レポートをPDFまたはCSVファイルとしてエクスポートするには、<Cmd sid='data.button.export' /> ボタンをクリックします。 <Cmd sid='data.exportReport' /> ウィンドウが表示されたら各項目を設定し、<Cmd sid='data.button.export' /> ボタンをクリックします。
+
+<Image src='/img/biostarx-data-custom-report-export.png' />
+
+### レポートの印刷
+
+PCに接続されたプリンターでレポートを印刷するには、<Cmd sid='data.button.print' /> ボタンをクリックします。 <Cmd sid='data.printReport' /> ウィンドウが表示されたら各項目を設定し、<Cmd sid='data.button.print' /> ボタンをクリックします。
+
+<Image src='/img/biostarx-data-custom-report-print.png' />
+
+Webブラウザーの新しいタブで印刷プレビュー画面が表示されます。 画面右上の印刷ボタンをクリックすると印刷を開始できます。
+
+### レポートの削除
+
+保存したレポートを削除するには、画面左のサイドバーの <Cmd sid='data.sidebar.savedReports' /> 配下で削除するレポートを選択し、右クリックします。 ポップアップメニューで <Cmd sid='data.sidebar.deleteSavedReport' /> を選択します。
+
+<Image src='/img/biostarx-data-custom-report-remove.png' />
+
+### 列設定
+
+レポートに表示される列（カラム）設定を変更できます。 列設定で表示する列を選択したり、列の順序を変更したりできます。
+
+1. レポート右上の <Cmd sid='data.dialog.customReport.columns' /> ボタンをクリックします。
+
+2. <Cmd sid='common.dialog.columnSetting.title' /> ウィンドウが表示されたら、必要な列を選択または選択解除します。
+
+   <Image src='/img/biostarx-data-column-setting.png' />
+
+3. 列の順序を変更するには、目的の列をクリックしたままドラッグして位置を変更します。
+
+4. 設定を保存するには、<Cmd sid='common.apply' /> ボタンをクリックします。
+
+:::info
+
+* 列レイアウト設定を初期化するには、<Cmd sid='columnSetting.button.defaultColumn' product='2' /> ボタンをクリックします。
+
+* 作成したレポートによって、選択または選択解除できる列が異なる場合があります。
+
+:::

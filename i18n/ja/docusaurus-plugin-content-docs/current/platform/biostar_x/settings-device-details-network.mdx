@@ -1,0 +1,231 @@
+---
+id: settings-device-details-network
+title: ネットワークを設定する
+description: デバイスの TCP/IP、RS-485、サーバー通信などのネットワーク設定を説明します。
+keywords:
+  - デバイス
+  - ネットワーク
+  - TCP/IP
+  - RS-485
+  - サーバー通信
+  - シリアル通信
+  - インテリジェントスレーブ
+---
+
+登録した装置のネットワーク設定を案内します。 <Cmd sid='device.info.network' product='2' /> セクションでは、装置のTCP/IP、RS-485、サーバー通信などのネットワークを設定できます。
+
+<Image src='/img/biostarx-setting-device-edit-network.png' />
+
+:::info
+
+* デバイスの種類によって設定できるネットワークオプションが異なる場合があります。
+
+* ユーザーが任意で変更した内容がある場合は、<Cmd sid='button.apply' product='2' /> をクリックします。 変更内容を保存しないとデバイスに反映されません。
+
+:::
+
+## TCP/IP 設定
+
+<Cmd sid='device.info.tcpIpSetting' product='2' /> グループではデバイスの IP アドレスを設定できます。
+
+:::info
+
+デバイスを登録する際の IP アドレス設定の詳細は[次のドキュメント](settings-adding-devices#setipaddress)を参照してください。
+
+:::
+
+### 動的 IP 設定
+
+装置を動的IPで使用するよう設定するには、<Cmd sid='device.info.useDhcp' product='2' /> オプションのチェックボックスをクリックします。 デバイスが DHCP サーバーから IP アドレスを自動取得します。 この場合、デバイスの IP アドレスが変更されることがあります。
+
+### 固定 IP 設定
+
+装置のIPアドレスを固定に設定するには、<Cmd sid='device.info.useDhcp' product='2' /> オプションのチェックボックスの選択を解除します。 以下の詳細項目に装置のネットワーク情報を入力できます。 
+
+* <Cmd sid='device.info.ipAddress' product='2' />：デバイスの IP アドレスを入力します。 IP アドレスは `xxx.xxx.xxx.xxx` 形式で入力でき、各オクテットには 0〜255 の数値のみを入力できます。
+
+* <Cmd sid='device.info.subnetMask' product='2' />：デバイスのサブネットマスクを入力します。
+
+* <Cmd sid='device.info.gateway' product='2' />：デバイスのゲートウェイアドレスを入力します。
+
+* <Cmd sid='device.info.devicePort' product='2' />：デバイスのポート番号を入力します。
+
+* <Cmd sid='device.info.dnsServerAddress' product='2' />：デバイスの DNS サーバーアドレスを入力します。
+
+<details>
+
+<summary>DNS サーバーアドレスを入力できるデバイスとファームウェアバージョンを表示</summary>
+
+* BioStation L2 ファームウェア 1.0.0 以上
+
+* BioStation A2 ファームウェア 1.0.0 以上
+
+* BioStation 2 ファームウェア 1.2.0 以上
+
+* BioLite Net ファームウェア 2.2.0 以上
+
+* BioEntry Plus ファームウェア 2.2.0 以上
+
+* BioEntry W ファームウェア 2.2.0 以上
+
+* XPass ファームウェア 2.2.0 以上
+
+* XPass S2 ファームウェア 2.2.0 以上
+
+* FaceStation 2 ファームウェア 1.0.0 以上
+
+* BioLite N2 ファームウェア 1.0.0 以上
+
+* FaceLite ファームウェア 1.0.0 以上
+
+* XPass 2 ファームウェア 1.0.0 以上
+
+* FaceStation F2 ファームウェア 1.0.0 以上
+
+* X-Station 2 ファームウェア 1.0.0 以上
+
+* BioStation 3 ファームウェア 1.0.0 以上
+
+* BioEntry W3 ファームウェア 1.0.0 以上
+
+</details>
+
+## 無線 LAN 設定
+
+<Cmd sid='device.info.wlan' product='2' /> グループではデバイスの無線 LAN 設定をオンまたはオフにできます。 詳細項目はデバイスで設定でき、詳細はデバイスのユーザーガイドを参照してください。
+
+:::info
+
+無線 LAN 設定に対応するデバイスは以下を参照してください。
+
+* BioStation 2
+
+* BioStation A2
+
+* FaceStation 2
+
+* BioStation 3
+
+:::
+
+## サーバー通信設定
+
+<Cmd sid='device.info.server' product='2' /> グループでは **BioStar X** サーバーとの通信方法を設定できます。
+
+* <Cmd sid='device.info.deviceToServerConnection' product='2' />：このオプションを選択すると、デバイスで接続する **BioStar X** サーバーの IP アドレスとポート番号を入力できます。
+
+* <Cmd sid='device.info.serverIP' product='2' />：**BioStar X** サーバーの IP アドレスまたはドメインアドレスを入力します。
+
+* <Cmd sid='device.info.serverPort' product='2' />：**BioStar X** サーバーのポート番号を入力します。
+
+:::tip
+
+この機能は **BioStar X** サーバーの IP アドレスが変更される際に便利です。 **BioStar X** サーバーの IP アドレスを変更する前に複数のデバイスでこのオプションを事前に設定しておくと、デバイスは自動的に変更後の IP アドレスへ接続します。
+
+:::
+
+<details>
+
+<summary><Cmd sid='device.info.serverIP' product='2' /> にドメインを入力できるデバイスとファームウェアバージョンを表示</summary>
+
+* BioStation L2 ファームウェア 1.0.0 以上
+
+* BioStation A2 ファームウェア 1.0.0 以上
+
+* BioStation 2 ファームウェア 1.2.0 以上
+
+* BioEntry W2 ファームウェア 1.0.0 以上
+
+* BioEntry P2 ファームウェア 1.0.0 以上
+
+* FaceStation 2 ファームウェア 1.0.0 以上
+
+* FaceLite ファームウェア 1.0.0 以上
+
+* FaceStation F2 ファームウェア 1.0.0 以上
+
+* BioLite N2 ファームウェア 1.0.0 以上
+
+* BioLite Net ファームウェア 2.2.0 以上
+
+* BioEntry Plus ファームウェア 2.2.0 以上
+
+* BioEntry W ファームウェア 2.2.0 以上
+
+* XPass ファームウェア 2.2.0 以上
+
+* XPass S2 ファームウェア 2.2.0 以上
+
+* XPass 2 ファームウェア 1.0.0 以上
+
+* X-Station 2 ファームウェア 1.0.0 以上
+
+* BioStation 3 ファームウェア 1.0.0 以上
+
+* BioEntry W3 ファームウェア 1.0.0 以上
+
+</details>
+
+## シリアル通信設定
+
+<Cmd sid='device.info.serialSetting' product='2' /> グループでは RS-485 通信方式で接続されたデバイスのモード、伝送速度、および表示する認証結果を設定できます。
+
+* <Cmd sid='device.info.rs485' product='2' />：RS-485 モードを設定します。
+
+* <Cmd sid='device.info.baudRate' product='2' />：RS-485 通信速度を設定します。
+
+* <Cmd sid='device.info.osdpAuthResult' product='2' />：他社コントローラーと連携してデバイスを使用する際、デバイス画面に表示する認証結果を選択します。
+
+  * <Cmd sid='device.info.osdpControllerResult' product='2' />：他社コントローラーの認証結果をデバイスに表示できます。
+
+  * <Cmd sid='device.info.osdpDeviceResult' product='2' />：デバイスの認証結果を表示できます。
+
+:::info
+
+<Cmd sid='device.info.osdpAuthResult' product='2' /> オプションは、<Cmd sid='device.info.rs485' product='2' /> オプションで <Cmd sid='device.rs485.slave' product='2' /> または <Cmd sid='device.rs485.default' product='2' /> を選択した場合に有効になります。
+
+:::
+
+## インテリジェントスレーブ設定
+
+<Cmd sid='device.info.intelligentPD' product='2' /> グループでは、Suprema デバイスと他社コントローラーを組み合わせた環境でユーザーが指紋認証を行った際、その認証結果を [Open Supervised Device Protocol(OSDP)](../../reference/glossary#osdp) のカードデータとして送信し、多数の 1:1 または 1:N マッチングをサポートします。
+
+* <Cmd sid='device.info.ipdUseFailCode' product='2' />：インテリジェントスレーブを使用する際に認証失敗などの例外が発生した場合、例外コードを10進数(0\~18446744073709551615)または16進数(0\~FFFFFFFFFFFFFFFF)形式で入力して正確なログを残せます。 16進数は数字または英字で入力できます。
+
+  <Image src='/img/biostarx-setting-device-edit-network-exception-code.png' />
+
+* <Cmd sid='device.info.ipdCardFormat' product='2' />：認証が成功したときにカードIDまたはユーザーIDを出力できます。
+
+* <Cmd sid='device.info.ipdOsdpID' product='2' />：装置のOSDPアドレスを入力してください。 0\~126 の範囲の数字で入力できます。
+
+:::info
+
+* <Cmd sid='device.info.ipdUseFailCode' product='2' />のデータサイズは最大8バイトまで入力できます。
+
+* <Cmd sid='device.info.intelligentPD' product='2' /> オプションは、<Cmd sid='device.info.rs485' product='2' /> オプションで <Cmd sid='device.rs485.default' product='2' /> を選択したときに有効になります。
+
+:::
+
+<details>
+
+<summary><Cmd sid='device.info.intelligentPD' product='2' /> オプションをサポートするデバイスとファームウェアバージョンを表示</summary>
+
+* BioEntry W2 ファームウェア 1.6.3 以上
+
+* BioStation L2 ファームウェア 1.6.1 以上
+
+* BioEntry P2 ファームウェア 1.4.1 以上
+
+* XPass 2 ファームウェア 1.2.3 以上
+
+* X-Station 2 ファームウェア 1.1.0 以上
+
+* BioLite N2 ファームウェア 1.4.1 以上
+
+* FaceStation F2 ファームウェア 1.1.2 以上
+
+* BioStation 3 ファームウェア 1.0.0 以上
+
+* BioEntry W3 ファームウェア 1.0.0 以上
+
+</details>

@@ -1,0 +1,49 @@
+---
+id: settings-device-details
+title: デバイス設定
+description: 登録済みデバイスの詳細機能を設定および管理する方法を説明します。
+keywords:
+  - 設定
+  - デバイス
+  - デバイス情報
+---
+
+登録済みデバイスの詳細機能を設定および管理する方法を説明します。 デバイスの情報、ネットワーク、認証、高度な設定などの詳細を設定できます。 詳細は RS-485 の接続方式やデバイスの種類によって異なります。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.device.root' /> をクリックしてください。
+
+3. デバイス一覧で詳細を設定したいデバイスをクリックします。
+
+4. 各セクションの詳細項目を参照してデバイス情報を設定します。
+
+   * <Cmd sid='device.info.information' product='2' />：デバイス名、グループ、タイムゾーン、ハードウェアおよびファームウェアのバージョンを確認および変更できます。 詳細は[次のドキュメント](settings-device-details-info)を参照してください。
+
+   * <Cmd sid='device.info.network' product='2' />：デバイスの TCP/IP、RS-485、サーバー通信などのネットワークを設定できます。 詳細は[次のドキュメント](settings-device-details-network)を参照してください。
+
+   * <Cmd sid='device.info.authentication' product='2' />：デバイスのユーザー認証に関するオプションを設定できます。 詳細は[次のドキュメント](settings-device-details-auth)を参照してください。
+
+   * <Cmd sid='device.info.advanced' product='2' />：マスター管理者、デバイス管理者、画面/サウンド、動作条件および動作などを設定できます。 詳細は[次のドキュメント](settings-device-details-advanced)を参照してください。
+
+   * <Cmd sid='device.info.temperMask' product='2' /> / <Cmd sid='device.info.mask' product='2' />：サーマルカメラおよびマスク使用に関する詳細項目を設定できます。 詳細は[次のドキュメント](settings-device-details-thermal-mask)を参照してください。
+
+   * <Cmd sid='device.info.interphone' product='2' />：IP インターフォンの使用に関する詳細項目を設定できます。 詳細は[次のドキュメント](settings-device-details-interphone)を参照してください。
+
+   * <Cmd sid='device.info.rtsp' product='2' />：**Real Time Streaming Protocol** (RTSP) ストリーミング用の詳細項目を設定できます。 詳細は[次のドキュメント](settings-device-details-rtsp)を参照してください。
+
+5. すべての設定が完了したら、画面最下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+:::info
+
+* 複数のデバイス情報をまとめて編集することもできます。 2 台以上のデバイスを選択し、画面右上の <Cmd sid='button.batchEdit' product='2' /> をクリックします。
+
+  <Image src='/img/biostarx-setting-device-batch-edit.png' />
+
+* 選択したデバイスの種類によって、<Cmd sid='device.batchEdit' product='2' /> ウィンドウに表示される詳細項目が異なる場合があります。
+
+* マスターデバイスとスレーブデバイスを同時に選択して一括編集をクリックすると、<Cmd sid='device.info.authentication' product='2' /> と <Cmd sid='device.info.displaySound' product='2' /> 項目の一部のみを変更できます。
+
+* <Cmd sid='device.info.authenticationMode' product='2' /> は同一モデル名のデバイスを選択した場合にのみ一括編集できます。
+
+:::

@@ -1,0 +1,74 @@
+---
+id: 140
+title: Firmware Version 1.4.0
+---
+
+# Firmware Version 1.4.0 (Build No. 1.4.0_200525)
+
+Release<Separator/>2020-05-29
+
+## New Features and Improvements
+
+---
+
+1. Supports face authentication devices.
+
+    - FaceStation 2
+
+    - FaceLite
+
+1. Supports new device.
+
+    - XPass D2 (Rev)
+
+1. Added feature to change device ID.
+
+1. Enhancement in the security of the device.
+
+    - Restrict unencrypted connections.
+
+    - Enhancement in security of encryption keys.
+
+    - Encrypt and migrate user information.
+
+    - Restrict access through communications such as TCP/IP, RS-232, and USB.
+
+1. Improved Anti-passback zone to operate based on the door status.
+
+1. Improved the scheduled unlock function for each floor when controlling elevator.
+
+1. Improved the CoreStation SETUP Manager
+
+    - Added feature to change device ID.
+
+    - Added feature to set IP.
+
+    - Duplicate check for device IP and CoreStation SETUP Manager IP settings.
+
+    - Supports FW upgrade for slave devices.
+
+    - Improved to show a warning message when a relay port in output status is 'On' in the Monitoring menu.
+
+    - Improved Setting menu by allowing scroll.
+
+    - Improved to show a warning message when a user sets the IP address of the CoreStation SETUP Manager.
+
+## Bug Fix
+
+---
+
+<BugLists>
+
+1. When rebooting the master device with multiple slave devices connected, Trigger & Action does not work as set.
+
+1. A bug where the master device is rebooted if the value sent to the slave device is greater than the defined value.
+
+1. Issue that it is possible to connect to the CoreStation SETUP Manager with the IP address of a device when using DHCP.
+
+1. A bug where OSDP Communication does not work normally if the value sent to the slave device is greater than the defined value.
+
+1. An issue where device gets disconnected or a timeout occurs when upgrading firmware or transferring users under SSL secure communication.
+
+1. A bug where the event log of the device is not sent in the order in which it occurred.
+
+</BugLists>

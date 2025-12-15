@@ -1,0 +1,44 @@
+---
+id: custom-install
+title: カスタムインストールを実行する
+description: 既にインストール済みのデータベースと連携するためのカスタムインストール手順を案内します。
+keywords:
+  - カスタムインストール
+---
+
+本書では、<Cmd code='biostar2.install.customInstall' className='bold'/> を使用して **BioStar X** をインストールする手順を段階的に説明します。 <Cmd code='biostar2.install.customInstall' className='bold'/> は、ローカルサーバーまたはリモートサーバーに既にインストールされているデータベース（MariaDB、MS SQL Server）と連携してデータベーススキーマを作成します。 インストールを開始する前に、連携するデータベースとユーザーアカウントをあらかじめ準備してください。
+
+## 開始前 {#start-before}
+
+* **BioStar X** と連携して使用できるデータベースは次のとおりです。
+
+  * MariaDB 11.4.4
+
+  * MS SQL Server 2012 SP3
+
+  * MS SQL Server 2014 SP2
+
+  * MS SQL Server 2016 SP1
+
+  * MS SQL Server 2017
+
+  * MS SQL Server 2019
+
+  * MS SQL Server 2022
+
+* MS SQL Server のセキュア通信は TLS 1.2 をサポートします。
+
+* MS SQL Server をデータベースとして設定し、テーブルの作成に失敗した場合は、*C:\\Program Files\\BioStar X\\dbscript\\mssql* にあるスクリプトを実行してテーブルを作成できます。
+
+* インストールオプションで <Cmd code='biostar2.install.customInstall' className='bold'/> を選択する場合、**AC DB name**、**TA DB name**、**VE DB name** を同じ名前に設定することはできません。
+
+* Windows 認証を使用するには、[Microsoft ODBC Driver 17 for SQL Server](https://learn.microsoft.com/ko-kr/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17) が必要です。
+  まず、そのドライバーをインストールしてください。
+
+import InstallStep from '../../common/_biostar-install-steps.mdx';
+
+<InstallStep />
+
+import InstallNotes from '../../common/_install-note.mdx';
+
+<InstallNotes />

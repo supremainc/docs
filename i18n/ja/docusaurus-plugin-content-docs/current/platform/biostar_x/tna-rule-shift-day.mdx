@@ -1,0 +1,96 @@
+---
+id: tna-rule-shift-day
+title: 日次勤務規則を設定する
+description: 24時間を基準に、時刻に応じて異なる時間規則を適用して勤務規則を作成します。
+keywords:
+  - 勤務時間
+  - 日次勤務規則
+---
+
+24時間を基準に、時刻に応じて異なる時間規則を適用して勤務規則を作成します。 固定勤務、フレックスタイム勤務、フローティング勤務を選択し、1日の開始時刻や時間の丸め規則などを設定します。
+
+## <Cmd sid='shift.addShift' product='2' className='bold' />
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.tna' /> をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='tab.shift' product='2' /> → <Cmd sid='tab.shift' product='2' /> をクリックします。
+
+3. <Cmd sid='shift.addShift' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-tna-shift-day.png' />
+
+4. <Cmd sid='shift.addShift' product='2' /> 画面が表示されたら、各項目を設定します。
+
+:::info
+
+* 設定を保存するには、画面下部の <Cmd sid='button.apply' product='2' /> をクリックします。
+
+* 週次勤務規則を続けて追加するには、<Cmd sid='payCode.applyAndAddShift' product='2' /> をクリックします。
+
+* 設定を保存した後に別の <Cmd sid='tab.shift' product='2' /> を追加するには、<Cmd sid='ta.apply_add_another' product='2' /> をクリックします。
+
+:::
+
+## 設定オプションガイド
+
+勤務規則の種類に応じて、<Cmd sid='shift.type.fixed' product='2' />, <Cmd sid='shift.type.flexible' product='2' />, <Cmd sid='shift.type.floating' product='2' /> のいずれかを選択します。 選択した勤務規則の種類によって設定オプションが異なる場合があります。
+
+### <Cmd sid='shift.type.fixed' product='2' className='normal' />
+
+定められた時刻に出勤と退勤を行う勤務規則です。 <Cmd sid='tab.shift' product='2' className='normal' /> の名前と説明を入力し、<Cmd sid='form.type' product='2' /> で <Cmd sid='shift.type.fixed' product='2' /> を選択します。
+
+<Image src='/img/biostarx-tna-shift-day-adding-fixed.png' />
+
+import Shift from '../../common/_tna-rule-shift-settings.mdx';
+
+<Shift type='fixed' />
+
+:::info
+
+* <Cmd sid='payCode.countAsAttendance' product='2' /> に設定された時間規則は、<Cmd sid='tab.shift' product='2' className='normal' /> に 1 つだけ追加できます。
+
+* <Cmd sid='payCode.accumulateTowardOvertime' product='2' /> に設定された時間規則では、<Cmd sid='shift.startTime' product='2' />, <Cmd sid='shift.endTime' product='2' />, <Cmd sid='shift.minDuration' product='2' />, <Cmd sid='shift.rounding' product='2' /> を設定できます。
+
+:::
+
+### フレックスタイム勤務
+
+1日の勤務時間を設定し、1日の開始時刻を基準に出勤および退勤時刻を柔軟に調整する勤務規則です。 <Cmd sid='tab.shift' product='2' className='normal' /> の名前と説明を入力し、<Cmd sid='form.type' product='2' /> で <Cmd sid='shift.type.flexible' product='2' /> を選択します。
+
+<Image src='/img/biostarx-tna-shift-day-adding-flexible.png' />
+
+<Shift type='flexible' />
+
+:::info
+
+<Cmd sid='payCode.accumulateTowardOvertime' product='2' /> に設定された時間規則は追加できません。
+
+:::
+
+### フローティング勤務
+
+出勤と退勤時刻を自由に設定できる勤務規則です。 <Cmd sid='tab.shift' product='2' className='normal' /> の名前と説明を入力し、<Cmd sid='form.type' product='2' /> で <Cmd sid='shift.type.floating' product='2' /> を選択します。
+
+<Image src='/img/biostarx-tna-shift-day-adding-floating.png' />
+
+<Shift type='floating' />
+
+:::info
+
+* 勤務組は最大 5 つの時間スロットで構成できます。 <Cmd sid='button.addplus' product='2' /> をクリックして時間スロットを追加します。
+
+* 不在を設定する際は、<Cmd sid='shift.timeSegmentSet.default' product='2' /> オプションを選択する必要があります。 <Cmd sid='shift.timeSegmentSet.default' product='2' /> は勤務組で構成した時間スロットから選択できます。
+
+  <Image src='/img/biostarx-tna-shift-day-adding-floating-timesegment.png' />
+
+* <Cmd sid='payCode.accumulateTowardOvertime' product='2' /> に設定された時間規則では、<Cmd sid='shift.startTime' product='2' />, <Cmd sid='shift.endTime' product='2' />, <Cmd sid='shift.minDuration' product='2' />, <Cmd sid='shift.rounding' product='2' /> を設定できます。
+
+:::
+
+<NextStep>
+<NextItem to='tna-rule-shift-schedule'>
+
+設定された 1 日単位の勤務規則で週次勤務規則を設定します。 週別または日別で週次勤務規則を設定します。
+
+</NextItem>
+</NextStep>

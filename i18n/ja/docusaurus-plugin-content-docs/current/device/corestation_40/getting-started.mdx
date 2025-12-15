@@ -1,0 +1,207 @@
+---
+id: getting-started
+title: はじめに
+description: デバイスを使用するための初期手順を案内します。
+keywords:
+  - 同梱物
+  - 名称
+  - 機能
+  - ケーブル
+  - コネクター
+---
+
+デバイスを使用するための初期手順を案内します。
+
+## 同梱物
+
+<Table className='component'>
+<Tbody>
+
+<Row className='center white'>
+<Td rowspan={3} colspan={2}><Image src='/img/device/component-device-cs40.svg' className='none' height={350} alone /></Td>
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+</Row>
+
+<Row className='center'>
+<Td>クイックガイド</Td>
+</Row>
+
+<Row className='center white'>
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+</Row>
+
+<Row className='center'>
+
+<Td colspan={2}>CoreStation</Td>
+
+<Td>オープンソースライセンスガイド</Td>
+
+</Row>
+
+<Row className='center white'>
+<Td><Image src='/img/device/component-screws12.svg' className='none' alone /></Td>
+<Td><Image src='/img/device/component-spacer6.svg' className='none' alone /></Td>
+<Td><Image src='/img/device/component-diode4.svg' className='none' alone /></Td>
+</Row>
+
+<Row className='center'>
+
+<Td>固定用ネジ x12</Td>
+
+<Td>スペーサー x6</Td>
+
+<Td>ダイオード×4</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+<PageBreak />
+
+{/* 액세서리_함체(ENCR-10) */}
+import Accessoryencr10 from '../../common/_device-encr10-accessory.mdx'
+
+<Accessoryencr10 />
+
+<PageBreak />
+
+## 各部の名称と機能
+
+<Magnify src='/img/device/product-part-cs40.svg' width='60%' zoomFactor={.4} mgWidth={500} mgHeight={500} alone />
+
+| No. | 名前                                                | No. | 名前                                                |
+| :-: | ------------------------------------------------- | :-: | ------------------------------------------------- |
+|  1  | **HOST RS-485** 接続                                |  20 | **RESET** ボタン                                     |
+|  2  | **HOST RS-485** 終端抵抗スイッチ                          |  21 | **AUX IN (0, 1)** 接続                              |
+|  3  | **INIT** ボタン                                      |  22 | CoreStation 電源接続（DC 12V IN）                       |
+|  4  | **ETHERNET** 接続                                   |  23 | **RELAY 3** 接続                                    |
+|  5  | **RELAY 1** 接続                                    |  24 | **SUPERVISED INPUT (6:7)** または **Input (6:7)** 接続 |
+|  6  | **SUPERVISED INPUT (2:3)** または **Input (2:3)** 接続 |  25 | **OUTPUT (6:7)** 接続                               |
+|  7  | **OUTPUT (2:3)** 接続                               |  26 | **WIEGAND 3** 接続                                  |
+|  8  | **WIEGAND 1** 接続                                  |  27 | 12VDC 出力                                          |
+|  9  | 12VDC 出力                                          |  28 | **RS-485 3** 接続                                   |
+|  10 | **RS-485 1** 接続                                   |  29 | **RS-485 3** 終端抵抗スイッチ                             |
+|  11 | **RS-485 1** 終端抵抗スイッチ                             |  30 | CoreStation ステータスLED                              |
+|  12 | **RELAY 0** 接続                                    |  31 | **RELAY 2** 接続                                    |
+|  13 | **SUPERVISED INPUT (0:1)** または **Input (0:1)** 接続 |  32 | **SUPERVISED INPUT (4:5)** または **Input (4:5)** 接続 |
+|  14 | **OUTPUT (0:1)** 接続                               |  33 | **OUTPUT (4:5)** 接続                               |
+|  15 | **WIEGAND 0** 接続                                  |  34 | **WIEGAND 2** 接続                                  |
+|  16 | 12VDC 出力                                          |  35 | 12VDC 出力                                          |
+|  17 | **RS-485 0** 接続                                   |  36 | **RS-485 2** 接続                                   |
+|  18 | **RS-485 0** 終端抵抗スイッチ                             |  37 | **RS-485 2** 終端抵抗スイッチ                             |
+|  19 | RTC バッテリー                                         |     |                                                   |
+
+:::info
+
+* **INIT** ボタンを 2 秒以上押して、デバイスと連動している製品を初期化し、別のデバイスに接続します。
+
+* **RESET** ボタンを押して、製品を再起動します。
+
+* 製品とWiegandデバイスを接続する際、Wiegandデバイスの電源として製品の電源出力（12V、最大1.5A）を使用できます。 200 mAを消費するWiegandデバイスを3台接続すると、残りの電源出力端子には最大900 mAを消費するデバイスを接続できます。
+
+* RTCバッテリーの容量は226 mAhで、期待寿命は設置環境と動作方法によって異なる場合があります。 RTCバッテリーを交換する際はCR2032を使用してください。
+
+:::
+
+<PageBreak />
+
+### 通信状態LED
+
+| LED                          | 状態                                                                                     |
+| ---------------------------- | -------------------------------------------------------------------------------------- |
+| **HOST RS-485 TX**           | オレンジ点滅：RS-485データ送信中                                                                    |
+| **HOST RS-485 RX**           | 緑点滅：RS-485データ受信中                                                                       |
+| **RELAY (0 ~ 3)**            | 赤点灯：リレー動作                                                                              |
+| **SUPERVISED INPUT (0 ~ 7)** | Input を使用する場合<br/>- 緑点灯：Normal Close<br/>- 消灯：Normal Open                              |
+| ^                            | Supervised Input を使用する場合<br/>- 緑点灯：Normal Close（短絡）、Normal Open、スイッチオン<br/>- 消灯：スイッチオフ |
+| **AUX IN (0, 1)**            | オレンジ点灯：AUX信号受信中                                                                        |
+
+### アクセス制御グレード
+
+| 機能                                         | 階級 |
+| ------------------------------------------ | -- |
+| Destructive Attack                         | Ⅰ  |
+| Line Security                              | Ⅰ  |
+| Endurance                                  | Ⅳ  |
+| Standby Power                              | Ⅰ  |
+| Single Point Locking Device with Key Locks | Ⅰ  |
+
+<PageBreak />
+
+### CoreStation ステータスLED
+
+製品の状態は前面左側にある STATUS LED 1/2 で確認でき、イーサネット、RS-485 0、RS-485 1、RS-485 2、RS-485 3、RS-485 HOST、システムの状態を1秒ずつ順番に表示します。
+
+| 項目          | LED 1 | LED 2 | 状態                                 |
+| ----------- | ----- | ----- | ---------------------------------- |
+| イーサネット      | 赤     | 赤     | ダイナミックIP接続失敗                       |
+| ^           | 赤     | 黄     | ダイナミックIP接続待機中                      |
+| ^           | 赤     | 水色    | 固定IP接続成功                           |
+| ^           | 赤     | 青     | 動的IP接続成功                           |
+| ^           | 赤     | マゼンタ  | 固定IP接続失敗                           |
+| ^           | 赤     | オフ    | HWエラー                              |
+| RS-485 0    | 黄     | 赤     | スレーブ装置なし                           |
+| ^           | 黄     | 黄     | スレーブ装置切断                           |
+| ^           | 黄     | 青     | スレーブ装置正常                           |
+| ^           | 黄     | オフ    | HWエラー                              |
+| RS-485 1    | 緑     | 赤     | スレーブ装置なし                           |
+| ^           | 緑     | 黄     | スレーブ装置切断                           |
+| ^           | 緑     | 青     | スレーブ装置正常                           |
+| ^           | 緑     | オフ    | HWエラー                              |
+| RS-485 2    | 水色    | 赤     | スレーブ装置なし                           |
+| ^           | 水色    | 黄     | スレーブ装置切断                           |
+| ^           | 水色    | 青     | スレーブ装置正常                           |
+| ^           | 水色    | オフ    | HWエラー                              |
+| RS-485 3    | 青     | 赤     | スレーブ装置なし                           |
+| ^           | 青     | 黄     | スレーブ装置切断                           |
+| ^           | 青     | 青     | スレーブ装置正常                           |
+| ^           | 青     | オフ    | HWエラー                              |
+| RS-485 HOST | マゼンタ  | 赤     | スレーブ装置なし                           |
+| ^           | マゼンタ  | 黄     | スレーブ装置切断                           |
+| ^           | マゼンタ  | 青     | スレーブ装置正常                           |
+| ^           | マゼンタ  | オフ    | HWエラー                              |
+| システム        | 白     | 赤     | システムロック（装置の作業条件と動作）                |
+| ^           | 白     | 黄     | システムロック（BioStar Xの作業条件と動作）         |
+| ^           | 白     | 緑     | BioStar X接続成功                      |
+| ^           | 白     | 水色    | BioStar X接続成功 + タンパーオン             |
+| ^           | 白     | 青     | タンパーオン                             |
+| ^           | 白     | マゼンタ  | システムロック（装置の作業条件と動作）+ タンパーオン        |
+| ^           | 白     | 白     | システムロック（BioStar Xの作業条件と動作）+ タンパーオン |
+| ^           | マゼンタ  | マゼンタ  | データベース移行動作中                        |
+
+<PageBreak />
+
+### 設置例
+
+本製品はバイオメトリック認証を実行できる集中型入退室管理システムです。 エンタープライズ向けに設計された本製品は最大500,000人のユーザー情報を保存でき、毎秒400,000件の指紋マッチングを実行できます。
+
+BioStar Xと連携し、入退室管理と勤怠管理の両方を利用でき、RS-485(OSDP)、Wiegand、Supervised input、AUXなど多様なインターフェースを提供します。
+
+<Image src='/img/device/installation-example-cs40.png' width="65%" className='none' />
+
+### システム構成図
+
+本製品はRS-485デバイスを最大64台まで接続でき、Door Moduleをデイジーチェーン接続することでWiegandデバイスを132台まで拡張できます。
+
+<Image src='/img/device/system-configuration-cs40.svg' width="100%" />
+
+<PageBreak />
+
+### 全体接続構成図
+
+安定的に製品を使用するため、専用エンクロージャの使用を推奨します。 エンクロージャにはLED制御ボード、電源制御ボード、電源装置、バッテリー、タンパーが含まれています。
+
+<Image src='/img/device/cs40-led-status.png' className='none' alone />
+
+<Image src='/img/device/cs40-wiring.png' className='none' alone />
+
+:::info
+
+Aスイッチで制御されるソケットには接続しないでください。
+
+:::

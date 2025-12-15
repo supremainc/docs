@@ -1,0 +1,86 @@
+---
+id: tna-settings
+title: 勤怠管理を設定する
+description: 勤怠管理に使用する端末を登録したり、通知メール送信用の送信者情報を設定できます。
+keywords:
+  - 勤怠
+  - 設定
+---
+
+勤怠管理に使用する端末を登録したり、通知メール送信用の送信者情報を設定できます。 CSV エクスポートで勤怠レポートを出力する際に、ドキュメントの区切り文字を設定することもできます。
+
+## 勤怠管理設定に移動
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.tna' /> をクリックします。
+
+2. 画面左のサイドバーで <IcSet /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-tna-access-btn.png' />
+
+3. 各項目を設定してください。
+
+<Image src='/img/biostarx-tna-settings.png' />
+
+## 勤怠管理設定項目
+
+### <Cmd sid='setting.devices' product='2' className='normal' />
+
+勤怠管理に使用できる端末の一覧です。 端末を勤怠管理用に登録するには、対象端末を選択して <Cmd sid='setting.register' product='2' /> ボタンをクリックします。
+
+<Image src='/img/biostarx-tna-settings-unregister-list.png' />
+
+### <Cmd sid='setting.registerDevices' product='2' className='normal' />
+
+現在使用中の勤怠管理端末の一覧です。 
+
+* 登録を解除するには、対象端末を選択して <Cmd sid='setting.unregister' product='2' /> ボタンをクリックします。
+
+  <Image src='/img/biostarx-tna-settings-register-list.png' />
+
+* 登録済み端末の勤怠設定を編集するには、<Cmd sid='setting.setting' product='2' /> ボタンをクリックします。 勤怠設定の詳細は [次のドキュメント](settings-device-details-advanced#attendance-management) を参照してください。
+
+  <Image src='/img/biostarx-tna-initial-setting-device-setting.png' />
+
+  <Cmd sid='setting.typeCode' product='2' /> は、<Cmd sid='device.tna.eventKey' product='2' /> と勤怠イベント種別をマッピングする設定です。 勤怠イベントの種類は次のとおりです。
+
+  * <Cmd sid='PUNCH_TYPE_CHECK_IN' product='2' />
+
+  * <Cmd sid='PUNCH_TYPE_CHECK_OUT' product='2' />
+
+  * <Cmd sid='PUNCH_TYPE_BREAK_START' product='2' />
+
+  * <Cmd sid='PUNCH_TYPE_BREAK_END' product='2' />
+
+  * <Cmd sid='PUNCH_TYPE_MEAL_START' product='2' />
+
+  * <Cmd sid='PUNCH_TYPE_MEAL_END' product='2' />
+
+:::info
+
+* 端末が接続されている状態でのみ、端末の勤怠設定を編集できます。
+
+* <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' /> メニューで登録した端末を削除すると、登録された勤怠管理端末も自動的に削除されます。
+
+:::
+
+### <Cmd sid='setting.triggerAction.senderInfor' product='2' className='normal' /> {#senderInfo}
+
+通知メールを送信する際に使用する送信者情報を設定できます。 <Cmd sid='button.edit' product='2' /> ボタンをクリックします。
+
+<Image src='/img/biostarx-tna-settings-sender-info.png' />
+
+import EmailSmtpOptions from '../../common/_settings-email-settings.mdx';
+
+<EmailSmtpOptions />
+
+### <Cmd sid='setting.export' product='2' className='normal' />
+
+<Cmd sid='button.downloadToCsv' product='2' /> 機能で勤怠レポートを出力する際に、ドキュメントの区切り文字を選択できます。
+
+<Image src='/img/biostarx-tna-settings-export-csv.png' />
+
+### <Cmd sid='tna.settings.punchlogs.optionTitle' product='2' className='normal' />
+
+勤怠記録を保存する期間を設定できます。 <Cmd sid='tna.settings.punchlogs.storeDays' product='2' /> オプションを <Cmd sid='common.active' product='2' /> に設定し、期間を入力します。 設定を保存するには、<Cmd sid='tna.settings.apply' product='2' /> ボタンをクリックします。
+
+<Image src='/img/biostarx-tna-settings-save-period.png' />

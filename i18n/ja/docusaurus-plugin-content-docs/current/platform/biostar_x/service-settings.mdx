@@ -1,0 +1,149 @@
+---
+id: service-settings
+title: サービス設定
+description: BioStar X Service Manager の Service Settings では、システムのコアサービスを構成して管理できます。
+keywords:
+  - Service Settings
+  - Service Manager
+  - BioStar X
+---
+
+<Cmd>BioStar X Service Manager</Cmd> の <Cmd>Service Settings</Cmd> メニューでは、システムのコアサービスを構成して管理できます。 各サービスは独立して設定され、ネットワークポートとバージョン情報を確認できます。
+
+<Cmd>Service Settings</Cmd> は以下の主要サービスで構成されています。
+
+* <Cmd>BioStar X Core Web Service</Cmd>：Web インターフェースサービス
+
+* <Cmd>BioStar X Core Service</Cmd>：システムのコア機能および API 通信サービス
+
+* <Cmd>Unified Gateway Service</Cmd>：リバースプロキシベースの統合ゲートウェイサービス
+
+* <Cmd>BioStar X Coordinator Service</Cmd>：分散システムの構成情報管理およびサービス間同期
+
+* <Cmd>BioStar X Server (Main)</Cmd>：メインサーバーサービス
+
+* <Cmd>BioStar X Cache Service</Cmd>：データキャッシュとシステム性能の向上
+
+## 設定変更が必要な状況 {#when-to-change}
+
+次のような状況でサービス設定を変更する必要があります。
+
+* **ポート競合の解決**：他のアプリケーションが同じポートを使用して競合が発生した場合
+
+* **セキュリティポリシーの遵守**：組織のネットワークセキュリティポリシーにより特定のポート範囲のみ許可されている場合
+
+* **ファイアウォール設定**：企業のファイアウォールで許可されているポートに変更する必要がある場合
+
+* **サーバー環境の変更**：サーバー IP アドレスやネットワーク構成を変更する場合
+
+* **性能最適化**：トラフィック分散やロードバランシングのためにポートを分離する必要がある場合
+
+## 設定変更方法 {#how-to-change}
+
+1. <Cmd>BioStar X Service Manager</Cmd> で <Cmd>SERVICE SETTINGS</Cmd> メニューをクリックします。
+
+2. 変更するサービスのセクションに移動します。
+
+3. 必要なポート番号やアドレスを修正します。
+
+4. 変更を適用するには、画面右上の <Cmd>Apply</Cmd> ボタンをクリックします。
+
+:::note
+
+* サービス設定を変更した後、変更を反映させるには関連サービスを再起動してください。
+
+* 一部のサービスではポートの変更に対応していない場合があります。
+
+:::
+
+:::caution
+
+ポート番号を変更する際は、他のサービスやアプリケーションと競合しないよう注意してください。
+
+:::
+
+## サービス構成 {#service-composition}
+
+### BioStar X Core Web Service {#biostar-x-core-web-service}
+
+Web ベースのユーザーインターフェースを担当するサービスです。
+
+<Image src='/img/common/biostarx-sm-cws.png' alone />
+
+* <Cmd>HTTPS Port</Cmd>：Web インターフェース接続ポート (デフォルト：5002)
+
+* <Cmd>WebServerThrift Port</Cmd>：Thrift プロトコルベースの Web サーバー通信ポート (デフォルト：9310)
+
+### BioStar X Core Service {#biostar-x-core-service}
+
+システムのコア機能と外部 API 通信を処理するメインサービスです。
+
+<Image src='/img/common/biostarx-sm-core-s.png' alone />
+
+* <Cmd>WebSocket Port</Cmd>：リアルタイムの双方向通信用 WebSocket ポート (デフォルト：9002)
+
+* <Cmd>API Port</Cmd>：REST API 通信用ポート (デフォルト：9010)
+
+* <Cmd>WebServerFastCgi Port</Cmd>：FastCGI プロトコルベースの Web サーバー通信ポート (デフォルト：9000)
+
+* <Cmd>Rpc Port</Cmd>：RPC （リモートプロシージャコール）通信ポート (デフォルト：51218)
+
+### Unified Gateway Service {#unified-gateway-service}
+
+リバースプロキシ方式により **BioStar X** サーバーへのリクエストを効率的に処理し、iframe のセキュリティ脆弱性を改善し、SSL 証明書のエラーを最小化します。
+
+<Image src='/img/common/biostarx-sm-ugs.png' alone />
+
+* <Cmd>HTTPS Port</Cmd>：統合ゲートウェイ HTTPS 通信用ポート (デフォルト：443)
+
+### BioStar X Coordinator Service {#biostar-x-coordinator-service}
+
+分散システムの構成情報管理、サービス状態のモニタリング、およびサービス間同期を担当するサービスです。
+
+<Image src='/img/common/biostarx-sm-coordinator-s.png' alone />
+
+* <Cmd>Client Port</Cmd>：クライアント接続用通信ポート (デフォルト：21810)
+
+:::info
+
+* <Cmd>Client Port</Cmd> の値を変更した場合は、**Windows Services**(*services.msc*) で **BioStar X Coordinator Service** を探して手動で再起動してください。
+
+* **BioStar X Coordinator Service** を再起動した後、**BioStar X Service Manager** → **SERVICES** メニューで全サービスを再起動します。 
+
+  画面右上の <Cmd>Stop All</Cmd> ボタンをクリックします。 すべてのサービスが停止した後、<Cmd>Start All</Cmd> ボタンが有効になったらクリックします。
+
+:::
+
+### BioStar X Server (Main) {#biostar-x-server-(main)}
+
+システムのメインサーバーとして機能するコアサービスです。
+
+<Image src='/img/common/biostarx-sm-server.png' alone />
+
+* <Cmd>Server Address</Cmd>：メインサーバーの IP アドレス
+
+* <Cmd>Server Port</Cmd>：一般サーバー通信用ポート (デフォルト：51212)
+
+* <Cmd>SSL Server Port</Cmd>：SSL セキュア通信ポート (デフォルト：51213)
+
+* <Cmd>gRPC Server Port</Cmd>：gRPC プロトコルベースの高性能通信ポート (デフォルト：51219)
+
+### BioStar X Cache Service {#biostar-x-cache-service}
+
+頻繁に使用されるデータをメモリに保存し、システムのデータ処理速度と性能を向上させるサービスです。
+
+<Image src='/img/common/biostarx-sm-cache-s.png' alone />
+
+* <Cmd>Client Port</Cmd>：キャッシュサービスのクライアント接続ポート (デフォルト：10800)
+
+* <Cmd>Communication Port</Cmd>：キャッシュノード間内部通信ポート (デフォルト：47500)
+
+* <Cmd>Discovery Port</Cmd>：分散キャッシュノード自動検出用ポート (デフォルト：47100)
+
+<NextStep>
+<NextItem to='change-port'>
+
+**BioStar X** のデフォルトポート (443) を変更する手順をステップごとに確認しましょう。
+
+</NextItem>
+</NextStep>

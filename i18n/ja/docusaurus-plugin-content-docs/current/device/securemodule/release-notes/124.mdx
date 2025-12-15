@@ -1,0 +1,28 @@
+---
+id: 124
+title: Firmware Version 1.2.4
+---
+
+# Firmware Version 1.2.4 (Build No. 1.2.4_181031)
+
+Release<Separator/>2018-11-29
+
+
+## New Features and Improvements
+
+---
+
+1. If the data transmission fails when communicating with OSDP, it is transmitted again.
+
+1. When there is the response data with OSDP Secure Session, it responds with 0x16 for SEC_BLK_TYPE value and responds with 0x18 when there is no data.
+
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Problems with data communication when changing RS485 baud rate to 9600 bps with osdp_COMSET command.
+
+</BugLists>

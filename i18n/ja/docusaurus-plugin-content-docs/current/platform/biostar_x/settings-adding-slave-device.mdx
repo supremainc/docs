@@ -1,0 +1,44 @@
+---
+id: settings-adding-slave-device
+title: スレーブ装置を登録する
+description: マスター装置にスレーブ装置を追加する方法を案内します。
+keywords:
+  - デバイス
+  - スレーブ装置
+---
+
+登録済みの[マスター装置](../../reference/glossary#master_device)に[スレーブ装置](../../reference/glossary#slave_device)を追加して、アクセス制御システムのネットワークを簡単に拡張します。 マスター装置とスレーブ装置はRS-485通信で接続します。 装置だけでなくSecure I/O 2などの付属装置も接続して使用します。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.device.root' /> をクリックしてください。
+
+3. <Cmd sid='menu.device.allDeviceGroups' product='2' /> リストのマスターまたはスレーブデバイスを右クリックします。
+
+   <Image src='/img/biostarx-setting-device-adding-slave-device.png' />
+
+4. ポップアップメニューで<Cmd sid='device.menu.searchSlaveDevice' product='2' />をクリックします。
+
+5. 該当マスター装置に接続されているスレーブ装置の一覧が表示されたら、登録する装置を選択します。 目的の装置がない場合は、右上の<Cmd sid='button.search' product='2' />ボタンをクリックします。
+
+   <Image src='/img/biostarx-setting-device-adding-slave-list.png' />
+
+6. <Cmd sid='button.add' product='2' /> をクリックします。
+
+7. デバイス登録の確認メッセージが表示されたら、<Cmd sid='button.apply' product='2' /> をクリックします。
+
+選択した装置の下位に登録したスレーブ装置が表示されます。
+
+:::info
+
+* 指紋認証装置がマスター装置の場合、顔認証装置をスレーブ装置として追加できません。
+
+* 顔認証装置がマスター装置で、別のスレーブ装置が既に追加されている場合、顔認証装置をスレーブ装置として追加できません。
+
+* 顔認証装置がマスター装置で、顔認証装置をスレーブ装置として接続する場合、顔認証装置は1台のみスレーブ装置として追加できます。
+
+* 顔認証装置がマスター装置で、顔認証装置をスレーブ装置として接続する場合、Secure I/O 2とDM-20をそれぞれ1台ずつ追加で接続できます。
+
+* 接続可能なスレーブ装置の最大数は認証方法、ユーザー数、装置数によって変わり、スレーブ装置の数は認証速度に影響します。
+
+:::

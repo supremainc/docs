@@ -1,0 +1,68 @@
+---
+id: product-specifications
+title: 製品仕様
+description: 製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+keywords:
+  - 一般
+  - インターフェース
+  - 電気仕様
+  - 製品寸法
+---
+
+製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+
+import specs from '@site/static/specs/cs40_specs.json';
+
+{/* 일반 */}
+
+<SpecSection data={specs.corestation.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.corestation.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.corestation.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.corestation.power} />
+
+<PageBreak />
+
+## サイズと重量
+
+:::note
+
+寸法公差は ±0.3 mm です。
+
+:::
+
+<Image src='/img/device/cs40-dimension.svg' className='none' />
+
+---
+
+:::note
+
+<Anno id='anno1'>1)</Anno> クレデンシャルなしで登録されたユーザーを基準としています。
+
+<Anno id='anno2'>2)</Anno> 顔認証デバイスは FaceStation 2 と FaceLite のみ対応しています。
+
+<Anno id='anno3'>3)</Anno> Input または Supervised 入力のいずれかを選択して使用できます。
+
+:::
+
+:::info
+
+* 製品仕様は性能向上のため予告なく変更されることがあります。
+
+* 本製品をマスター装置として使用する場合、指紋センサーを搭載した装置をスレーブとして接続すると、スレーブ装置で指紋認証が行えます。
+
+  * 指紋クレデンシャル最大数 (1:N)：100,000
+
+  * 最大指紋クレデンシャル数 (1:1)：500,000
+
+* 製品やトラブルシューティングの詳細については、[以下のリンク](https://kb.supremainc.com/knowledge/doku.php?id=ko:how_to_configure_corestation&s[]=corestation/) を参照してください。
+
+:::

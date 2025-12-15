@@ -1,0 +1,67 @@
+<Include type={props.type} ref='mifare,custom-mifare'>
+
+* <Cmd sid='setting.cardFormat.encryptionType' product='2' />：暗号化タイプを<Cmd>SL1</Cmd> または <Cmd>SL3</Cmd> に設定します。
+
+</Include>
+
+<Include type={props.type} ref='desfire,custom-desfire'>
+
+* <Cmd sid='setting.card.format.desfireAvd' product='2' />：サードパーティが発行したDESFireカードを使用します。 DESFireのみ設定します。
+
+</Include>
+
+<Include type={props.type} ref='mifare,custom-mifare,iclass,desfire,custom-desfire,iclassseos'>
+
+* <Cmd sid='setting.cardFormat.primaryKey' product='2' />：スマートカードとカードリーダー間の通信を暗号化するキーです。
+
+* <Cmd sid='setting.cardFormat.secondaryKey' product='2' />：カードのプライマリサイトキーが一致しない場合に使用して認証を実行します。 補助サイトキーを入力するには、セクション上部の<Cmd sid='setting.cardFormat.secondaryKey' product='2' />オプションを有効にします。
+
+</Include>
+
+<Include type={props.type} ref='mifare,iclass'>
+
+* <Cmd sid='setting.cardFormat.startBlockIndex' product='2' />：各テンプレートを保存する開始ブロックを選択します。 このブロックはユーザー情報を保存するブロックのインデックスです。既にスマートカードを使用している場合は、保存可能なブロックを設定します。
+
+</Include>
+
+<Include type={props.type} ref='custom-mifare,custom-iclass'>
+
+* <Cmd sid='setting.cardFormat.blockIndex' product='2' />：各テンプレートを保存する開始ブロックを選択します。 このブロックはユーザー情報を保存するブロックのインデックスです。既にスマートカードを使用している場合は、保存可能なブロックを設定します。
+
+</Include>
+
+<Include type={props.type} ref='desfire,custom-desfire'>
+
+* <Cmd sid='setting.cardFormat.appId' product='2' />：アプリケーションIDを設定します。 <Cmd sid='setting.cardFormat.fileId' product='2' />を含む一種のディレクトリとして機能します。
+
+* <Cmd sid='setting.cardFormat.fileId' product='2' />：ファイルIDを設定します。
+
+* <Cmd sid='setting.cardFormat.encryptionType' product='2' />：暗号化タイプを<Cmd>DES/3DES</Cmd> または <Cmd>AES</Cmd> に設定します。
+
+</Include>
+
+<Include type={props.type} ref='custom-mifare,custom-iclass,custom-desfire'>
+
+* <Cmd sid='setting.cardFormat.skipBytes' product='2' />：カード番号を読み取る開始位置を設定します。
+
+* <Cmd sid='setting.cardFormat.dataSize' product='2' />：（設定した<Cmd sid='setting.cardFormat.primaryKey' product='2' /> と <Cmd sid='setting.cardFormat.secondaryKey' product='2' /> がカードの設定値と一致する場合）読み取るカードのデータサイズを設定します。
+
+</Include>
+
+<Include type={props.type} ref='iclassseos'>
+
+* <Cmd sid='setting.cardFormat.ADF' product='2' />：デジタル資格情報が保存されるADFアドレスです。
+
+</Include>
+
+<Include type={props.type} ref='felica'>
+
+* <Cmd sid='setting.cardFormat.systemCode' product='2' />：FeliCaカードを読み取るためのシステムコードを16進数で最大4桁入力します。
+
+* <Cmd sid='setting.cardFormat.serviceCode' product='2' />：FeliCaカードを読み取るためのサービスコードを16進数で最大4桁入力します。
+
+* <Cmd sid='setting.cardFormat.idField' product='2' />：カードの特定領域を読み取れるように設定します。 <Cmd sid='button.addplus' product='2' /> ボタンをクリックして、読み取り対象の最大8ブロックを設定します。
+
+  <Cmd sid='setting.cardFormat.blockNumber' product='2' />：カードを読み取るブロックを設定します。 (0 ～ 150)
+
+</Include>

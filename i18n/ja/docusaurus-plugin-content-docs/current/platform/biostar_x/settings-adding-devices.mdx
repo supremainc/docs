@@ -1,0 +1,128 @@
+---
+id: settings-adding-devices
+title: デバイスを登録する
+description: BioStar X にデバイスを登録する方法を説明します。
+keywords:
+  - デバイス
+  - デバイス追加
+---
+
+**BioStar X** にデバイスを登録する方法を説明します。 デバイスを登録すると、**BioStar X** でそのデバイスの状態を監視して管理できます。 デバイスを検索する前に、デバイスが正しく接続されていることを確認します。 複数のデバイスをまとめて追加する場合は、各デバイスの設置場所、ID、IP アドレスなどを事前に把握しておくと便利です。
+
+:::info
+
+* デバイスを新規登録するとき、デバイスのキー値をサーバーのデータ暗号化キー値に変更します。 キーを変換すると、デバイス内のすべてのユーザーデータが削除されます。
+
+* デバイスに保存されているすべての設定情報とユーザー情報を削除して再送信するには、<Cmd sid='device.sync_all' product='2' /> をクリックします。 <Cmd sid='device.sync_all' product='2' /> オプションは、デバイスリストでデバイスを選択し、<IcMoreW /> ボタンをクリックすると表示されます。
+
+* グループ内のすべてのデバイスを登録するには、<Cmd sid='menu.device.waitingDevice' product='2' /> グループ名を右クリックし、<Cmd sid='device.menu.addAllWaitingDevices' product='2' /> をクリックします。 各デバイスを個別に登録する場合は、デバイス名を右クリックし、<Cmd sid='device.menu.addWaitingDevice' product='2' /> をクリックします。
+
+* **BioStar X** とデバイスでユーザー ID タイプが異なる場合は、**BioStar X** のユーザー ID 設定に合わせてデバイス設定を変更します。
+
+* **BioStar X** のユーザー ID タイプを英数字に設定すると、一部のデバイスが使用できなかったり制限が発生したりすることがあります。 詳細については[次の記事](settings-server-server#userid-type)を参照してください。
+
+* デバイスを登録して詳細を設定するには、[次のドキュメント](settings-device-details) を参照します。
+
+:::
+
+## 開始前に {#before-start}
+
+デバイスを登録する前に、次の事項を確認します。
+
+* 入退室制御用の入室レベル、入室グループ、フロアレベルを設定します。 詳細については[以下](settings-access-control)を参照してください。
+
+* デバイスを効率的に管理するグループを作成します。 詳細は [次のドキュメント](settings-manage-device-group) を参照します。
+
+## 簡易登録 {#quickadd-device}
+
+**BioStar X** と同じネットワーク上にあるデバイスを自動で検索して登録できます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.device.root' /> をクリックしてください。
+
+3. デバイス一覧で <Cmd sid='device.searchDevice' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-setting-device-search-device.png' />
+
+4. <Cmd sid='device.searchDevice' product='2' /> ウィンドウが表示されると、登録可能なすべてのデバイス一覧が表示されます。 目的のデバイスが一覧にない場合は、右上の <Cmd sid='button.search' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-setting-add-device.png' />
+
+5. デバイス一覧で登録するデバイスを選択し、登録しないデバイスは選択を解除します。
+
+6. 登録するデバイス名を変更するには、<Cmd sid='device.info.name' product='2' /> 列の <IcEdit /> をクリックして編集します。
+
+   <Image src='/img/biostarx-setting-add-device-rename.png' />
+
+7. 登録するデバイスのグループを設定するには、<Cmd sid='device.info.group' product='2' /> 列で選択します。
+
+   <Image src='/img/biostarx-setting-add-device-group.png' />
+
+8. 選択したデバイスの設定が完了したら、<Cmd sid='button.add' product='2' /> をクリックします。
+
+追加したデバイスがデバイス一覧に表示されます。 追加したデバイスを選択し、<Cmd sid='button.syncDevice' product='2' /> をクリックします。
+
+<Image src='/img/biostarx-setting-device-sync-device.png' />
+
+:::info
+
+IP アドレスを使用できない、または変更が必要なデバイスは、<Cmd sid='button.setIp' product='2' /> をクリックして変更できます。 詳細は [次のドキュメント](#setipaddress) を参照します。
+
+:::
+
+### IP アドレス設定 {#setipaddress}
+
+新規登録するデバイスの IP アドレスを変更できます。 <Cmd sid='device.searchDevice' product='2' /> ウィンドウ左下の <Cmd sid='button.setIp' product='2' /> をクリックします。 <Cmd sid='button.setIp' product='2' /> ウィンドウが表示されたら、デバイス一覧から IP アドレスを変更するデバイスを選択します。
+
+<Image src='/img/biostarx-setting-device-set-ip.png' />
+
+* <Cmd sid='device.info.useDhcp' product='2' />：デバイスが DHCP で IP アドレスを自動取得するように設定します。 このオプションを選択すると、デバイスがネットワークに接続するたびに IP アドレスが変わる可能性があります。
+
+  :::note
+
+  IP アドレス、サブネットマスク、ゲートウェイなどを手動入力する場合は、このオプションの選択を解除します。
+
+  :::
+
+* <Cmd sid='device.info.deviceToServerConnection' product='2' />：デバイスから **BioStar X** サーバーへ接続するように設定する場合は、このオプションを選択します。 **BioStar X** をインストールしたサーバーの IP アドレスとポート番号を入力する必要があります。
+
+:::info
+
+IP 設定を完了して変更を保存するには、<Cmd sid='button.apply' product='2' /> をクリックします。 変更を取り消す場合は、<Cmd sid='button.cancel' product='2' /> をクリックします。
+
+:::
+
+### デバイス検索オプション {#devicesearchoptions}
+
+<Cmd sid='device.searchDevice' product='2' /> ウィンドウ右上の <IcSet /> をクリックすると、デバイス検索オプションを設定できます。
+
+<Image src='/img/biostarx-setting-add-device-option.png' />
+
+* <Cmd sid='device.showNewDevicesOnly' product='2' />：新しく検出されたデバイスのみを一覧に表示する場合は、このオプションを選択します。
+
+* <Cmd sid='device.timeout' product='2' />：一定時間応答しないデバイスを一覧から除外する場合は、所要時間を設定します。 秒単位で設定でき、デフォルトは 3 秒です。
+
+## 高度な検索 {#advancedsearch}
+
+特定のデバイスの IP アドレスとポート番号を指定して登録できます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.device.root' /> をクリックしてください。
+
+3. デバイス一覧で <Cmd sid='button.func.advancedSearch' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-setting-device-adv-search-device.png' />
+
+4. <Cmd sid='button.func.advancedSearch' product='2' /> ウィンドウが表示されたら、登録するデバイスの IP アドレスとポート番号を入力します。
+
+   <Image src='/img/biostarx-setting-device-advanced-search.png' />
+
+5. <Cmd sid='button.search' product='2' /> をクリックすると、入力した条件に一致するデバイスが一覧に表示されます。
+
+   <Image src='/img/biostarx-setting-device-advanced-search-result.png' />
+
+6. デバイスを登録するには、<Cmd sid='button.add' product='2' /> をクリックします。
+
+追加したデバイスがデバイス一覧に表示されます。 追加したデバイスを選択し、<Cmd sid='button.syncDevice' product='2' /> をクリックします。

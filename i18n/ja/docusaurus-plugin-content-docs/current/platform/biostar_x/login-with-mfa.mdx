@@ -1,0 +1,114 @@
+---
+id: login-with-mfa
+title: 多要素認証でログインする
+description: BioStar X にログインする際に多要素認証機能を使用すると、アカウントのセキュリティを向上できます。
+keywords:
+  - ログイン
+  - MFA
+  - 多要素認証
+  - 多要素認証
+---
+
+BioStar X にログインする際、セキュリティを強化するために多要素認証機能を使用できます。 <Cmd sid='team.user.permission.multiFactorAuth' /> 機能を有効にすると、ユーザー ID とパスワードの組み合わせに指紋スキャナーによる指紋認証ステップが追加されます。
+
+:::info
+
+* <Cmd sid='team.user.permission.multiFactorAuth' /> 機能を使用するユーザーは、指紋情報を登録し、ID とパスワード、権限レベルをすべて設定する必要があります。
+
+* <Cmd sid='team.user.permission.multiFactorAuth' /> 機能を使用するには、BioStar X クライアント PC に多要素認証ログインをサポートする指紋スキャナーを接続する必要があります。 指紋スキャナーとしてサポートされるデバイスは以下の一覧を参照してください。
+
+  * BioMini
+
+  * BioMini Plus 2
+
+  * BioMini Slim 2
+
+* <Cmd sid='settings.activeDirectory.title' product='2' className='normal' /> アカウントで <Cmd sid='biostar.login' product='2' /> オプションを使用している場合、<Cmd sid='team.user.permission.multiFactorAuth' /> 機能は使用できません。
+
+* <Cmd sid='team.user.permission.multiFactorAuth' /> を設定した管理者は、入退室管理以外の BioStar X サービス（勤怠管理およびビデオ）には初回認証できません。 これらのサービスを使用するには、<Cmd sid='team.user.permission.multiFactorAuth' /> 設定を解除してからログインしてください。 その後、再度 <Cmd sid='team.user.permission.multiFactorAuth' /> 設定を有効にできます。
+
+:::
+
+:::caution
+
+* 全体管理者（ID 1）のアカウントに多要素認証機能を設定した後に指紋認証が利用できなくなると、そのアカウントではログインできなくなるため注意してください。
+
+* 指紋認証でログインできない場合は、[Suprema テクニカルサポート](https://support.supremainc.com) までお問い合わせください。
+
+:::
+
+## 多要素認証の設定 {#multifactorauthenticationsetting}
+
+<Cmd sid='team.user.permission.multiFactorAuth' /> を設定するには、次の手順に従ってください。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.user' /> をクリックします。
+
+2. ユーザー一覧で <Cmd sid='team.user.permission.multiFactorAuth' /> を設定するユーザーをダブルクリックします。
+
+   または、ユーザーを選択し、右側に表示されるプロファイルで <Cmd sid='team.user.preview.button.seeMore' /> ボタンをクリックします。
+
+3. ユーザープレビュー画面が表示されたら、<Cmd sid='team.user.permission.title' /> セクションで <Cmd sid='common.fingerprintLogin' product='2' /> 項目を <Cmd sid='common.use' /> に設定します。
+
+   <Image src='/img/biostarx-edit-user-mfa-use.png' />
+
+4. 画面右上の <Cmd sid='common.save' /> ボタンをクリックします。
+
+多要素認証の設定を完了します。
+
+## 多要素認証の一括設定 {#multifactorauthenticationbatchset}
+
+:::note
+
+**始める前に**
+
+多要素認証ログイン機能を使用するには、次の条件を満たす必要があります。
+
+* 当該ユーザーの指紋認証手段が登録されている必要があります。
+
+* <Cmd sid='team.userTemplate.table.operator' />, <Cmd sid='user.loginId' product='2' />, <Cmd sid='common.password' product='2' /> が設定されている必要があります。 詳細は [以下](set-permission) を参照する。
+
+:::
+
+一括編集機能を使用して、複数ユーザーに <Cmd sid='team.user.permission.multiFactorAuth' /> 機能を適用できます。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.user' /> をクリックします。
+
+2. ユーザー一覧で多要素認証を設定するユーザーの最左列にあるチェックボックスをクリックします。
+
+3. 画面右上の <Cmd sid='common.batchEdit' /> ボタンをクリックします。
+
+4. 一括編集ウィンドウが表示されたら、<Cmd sid='team.user.permission.title' /> セクションで <Cmd sid='common.fingerprintLogin' product='2' /> オプションのチェックボックスを選択し、<Cmd sid='common.use' /> に設定します。
+
+   <Image src='/img/biostarx-batch-edit-user-mfa-use.png' />
+
+5. 画面右上の <Cmd sid='common.save' /> ボタンをクリックします。
+
+選択した複数ユーザーの多要素認証設定を完了します。
+
+:::info
+
+選択したユーザーのうち、<Cmd sid='common.fingerprintLogin' product='2' /> 機能を有効にするための条件を満たしていないユーザーは、ポップアップメッセージの <Cmd sid='user.batchedit.popup.notavailableuser' product='2' /> リストで確認できます。 設定に必要な条件を確認し、再試行してください。
+
+:::
+
+## 多要素認証でログイン {#loginwithmultifactorauthentication}
+
+1. Web ブラウザーで BioStar X のログイン画面にアクセスします。
+
+2. ユーザー ID とパスワードを入力し、<Cmd sid='auth.login' /> ボタンをクリックします。
+
+3. 指紋入力画面が表示されたら、指紋スキャナーで指紋をスキャンします。
+
+   <Image src='/img/biostarx-mfa-login-scan-fingerprint.png' />
+
+ログインを完了します。
+
+:::info
+
+* 指紋スキャンの制限時間は 18 秒に固定されており、変更できません。
+
+* 最大 3 回まで連続して指紋をスキャンでき、3 回のスキャンで正しく読み取れない場合は認証失敗となります。
+
+* 認証に失敗した場合は、<Cmd sid='button.retry' product='2' /> ボタンをクリックして指紋認証を再試行します。 最大 2 回まで再試行できます。 再試行回数内で認証に失敗した場合、ログイン初期画面に戻ります。
+
+:::
