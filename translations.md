@@ -71,7 +71,6 @@ visual face
 
 settings-remote-access.mdx 문서 업데이트
 
-
 ---
 
 전체 문서에 테이블의 | * -> | - 변경할 것
@@ -79,7 +78,6 @@ settings-remote-access.mdx 문서 업데이트
 ---
 
 location-issues.json: \\\" -> \"
-
 
 ## 번역 언어 추가 시 고려할 사항
 
@@ -103,7 +101,6 @@ _apache-license.mdx
 legal/*.mdx
 /docs/ja/platform/biostar_x/opensourcelicenses.txt
 
-
 ### 번역 리소스 파일 확인하기
 
 - i18n\ko\code.json 파일과 같은 구조의 파일인지 확인할 것
@@ -117,3 +114,13 @@ legal/*.mdx
 ## 추후 수정 예정
 
 src\components\Image\index.js
+
+## 스페인어 번역 업로드 / 다운로드
+
+```
+# upload
+crowdin upload --config ./crowdin-13.yml
+
+# download
+crowdin download --config ./crowdin-13.yml
+```
