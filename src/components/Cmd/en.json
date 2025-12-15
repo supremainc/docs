@@ -830,11 +830,15 @@
   "audit.menu.remoteAccess": "Remote Access",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   "audit.menu.remoteAccessExternal": "External Remote Access",
 =======
   "audit.menu.remoteAccessExternal": "Remote Access External",
 >>>>>>> ea840a571c (AB#84: v1.0.0(2) update locale)
+=======
+  "audit.menu.remoteAccessExternal": "External Remote Access",
+>>>>>>> ed9e5145c6 (update Locale)
   "audit.menu.setting.audit": "Audit Trail",
 >>>>>>> origin/bsx@1.0.0(2)
   "audit.menu.setting.cloud": "Cloud",
@@ -4526,10 +4530,13 @@
 =======
   "setting.menu.credential.irFaceGroupMatching": "IR Face Group Matching",
   "setting.menu.remoteAccessExternal.root": "External Remote Access",
+<<<<<<< HEAD
 >>>>>>> origin/bsx@1.0.0(2)
 =======
   "setting.menu.credential.irFaceGroupMatching": "IR Face Group Matching",
 >>>>>>> be71faa1f9 (AB#84: 1.0.0(2) locale update)
+=======
+>>>>>>> ed9e5145c6 (update Locale)
   "setting.mobileCredentail.setting_complete": "Do you want to complete the mobile access setup?",
   "setting.mobileCredential.addDeviceSuccess": "Succeeded to transfer mobile credential certificate to selected devices.",
   "setting.mobileCredential.allDeleteDevice": "Mobile credential certificates loaded on all devices will be deleted. The mobile credential will not work after proceeding.",
