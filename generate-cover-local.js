@@ -41,24 +41,61 @@ function getSupremaLogoSVG() {
     </svg>`;
 }
 
+// 언어 감지 함수
+function detectLanguage(lang, number) {
+    const isKorean = lang === "한국어" || (lang !== "English" && lang !== "日本語" && number.startsWith('KO'));
+    const isJapanese = lang === "日本語" || number.startsWith('JA');
+    return { isKorean, isJapanese };
+}
+
+// 언어별 버전 및 번호 레이블 매핑
+function getLocalizedVersionAndNumber() {
+    return {
+        version: {
+            ko: '버전',
+            en: 'Version',
+            ja: 'バージョン'
+        },
+        number: {
+            ko: 'KO',
+            en: 'EN',
+            ja: 'JA'
+        }
+    };
+}
+
+// 언어에 따른 버전 및 번호 처리
+function getProcessedVersionAndNumber(version, number, isKorean, isJapanese) {
+    const langCode = isKorean ? 'ko' : isJapanese ? 'ja' : 'en';
+    const { version: versionLabel, number: numberLabel } = getLocalizedVersionAndNumber();
+    
+    const processedVersion = `${versionLabel[langCode]} ${version}`;
+    const processedNumber = `${numberLabel[langCode]} ${number}`;
+    return { processedVersion, processedNumber };
+}
+
 // subtitle 값에 따른 언어별 제목 매핑
-function getLocalizedSubtitle(subtitleCode, isKorean = true) {
+function getLocalizedSubtitle(subtitleCode, isKorean = true, isJapanese = false) {
     const subtitleMap = {
         'IG': {
             ko: '설치 가이드',
-            en: 'INSTALLATION GUIDE'
+            en: 'INSTALLATION GUIDE',
+            ja: '設置ガイド'
         },
         'UG': {
             ko: '사용자 가이드',
-            en: 'USER GUIDE'
+            en: 'USER GUIDE',
+            ja: 'ユーザーガイド'
         },
         'AG': {
             ko: '관리자 가이드',
-            en: 'Administrator Guide'
+            en: 'Administrator Guide',
+            ja: '管理者ガイド'
         },
         'RN': {
             ko: 'Release Notes',
-            en: 'Release Notes'
+            en: 'Release Notes',
+            ja: 'Release Notes'
         }
     };
 
@@ -68,7 +105,8 @@ function getLocalizedSubtitle(subtitleCode, isKorean = true) {
         return subtitleCode;
     }
 
-    return isKorean ? mapping.ko : mapping.en;
+    const langCode = isKorean ? 'ko' : isJapanese ? 'ja' : 'en';
+    return mapping[langCode];
 }
 
 // HTML 템플릿 생성
@@ -81,15 +119,14 @@ function generateCoverHTML(params) {
         number = "101.00.BS3"
     } = params;
 
-    // 언어 감지 (lang 파라미터를 우선으로, 그 다음 문서 번호로 판단)
-    const isKorean = lang === "한국어" || (lang !== "English" && number.startsWith('KO'));
+    // 언어 감지
+    const { isKorean, isJapanese } = detectLanguage(lang, number);
     
     // subtitle이 코드(IG, UG, AG)인지 확인하고 적절한 제목으로 변환
-    const processedSubtitle = getLocalizedSubtitle(subtitle, isKorean);
+    const processedSubtitle = getLocalizedSubtitle(subtitle, isKorean, isJapanese);
     
-    // 버전에 언어별 접두사 추가
-    const processedVersion = isKorean ? `버전 ${version}` : `Version ${version}`;
-    const processedNumber = isKorean ? `KO ${number}` : `EN ${number}`;
+    // 버전과 번호 처리
+    const { processedVersion, processedNumber } = getProcessedVersionAndNumber(version, number, isKorean, isJapanese);
 
     const logoSVG = getSupremaLogoSVG();
     const logoDataUri = `data:image/svg+xml;base64,${Buffer.from(logoSVG).toString('base64')}`;
@@ -98,7 +135,7 @@ function generateCoverHTML(params) {
     const coverpageClass = title === 'BioStar X' ? 'coverpage bsx' : 'coverpage';
 
     return `<!DOCTYPE html>
-<html lang="${isKorean ? 'ko' : 'en'}">
+<html lang="${isKorean ? 'ko' : isJapanese ? 'ja' : 'en'}">
 <head>
     <meta charset="utf-8">
     <title>커버 - ${title}</title>
@@ -319,9 +356,9 @@ function main() {
     const lang = args.lang || '한국어';
     const number = args.number || 'KO 101.00.853';
     const version = args.version || '1.08';
-    const isKorean = lang === "한국어" || (lang !== "English" && number.startsWith('KO'));
-    const processedSubtitle = getLocalizedSubtitle(args.subtitle || 'IG', isKorean);
-    const processedVersion = isKorean ? `버전 ${version}` : `Version ${version}`;
+    const { isKorean, isJapanese } = detectLanguage(lang, number);
+    const processedSubtitle = getLocalizedSubtitle(args.subtitle || 'IG', isKorean, isJapanese);
+    const { processedVersion } = getProcessedVersionAndNumber(version, number, isKorean, isJapanese);
     
     console.log('\n📋 사용된 파라미터:');
     console.log(`  제품명: ${args.title || 'BioStation 3'}`);
