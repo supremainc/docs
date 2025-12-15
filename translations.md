@@ -85,6 +85,8 @@ location-issues.json: \\\" -> \"
 
 ### 수동 추가 파일
 
+crowdin.yml 파일에서 "ignore" 항목 참조
+
 _airfob-portal-site-type.mdx
 _more-information.mdx
 _ic-information.mdx
