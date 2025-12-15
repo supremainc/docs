@@ -123,7 +123,7 @@ jobs:
           LANG_DISPLAY="English"
           BACK_COVER="back-cover-en.pdf"
           COVER_VERSION="Version ${{ github.event.inputs.version }}"
-        else if [ "${{ github.event.inputs.language }}" = "日本語" ]; then
+        elif [ "${{ github.event.inputs.language }}" = "日本語" ]; then
           LANG_CODE="JA"
           LANG_DISPLAY="日本語"
           BACK_COVER="back-cover-ja.pdf"
