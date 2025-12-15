@@ -53,6 +53,8 @@ crowdin upload -b main
 ^.*[가-힣]  [가-힣].*$
 ^.*[a-z]  [a-z].*$
 
+찾아서 삭제할 것: },{
+
 ---
 
 물결 사용 -> 하이픈
@@ -81,20 +83,7 @@ location-issues.json: \\\" -> \"
 
 ## 번역 언어 추가 시 고려할 사항
 
-settings-credential-card-manage.mdx
-Locale text not found for SID: setting.menu.credential.card
-Locale text not found for SID: setting.menu.credential.root
-Locale text not found for SID: setting.menu.credential.card
-Locale text not found for SID: setting.menu.remoteAccessExternal.root
-Locale text not found for SID: setting.menu.remoteAccessExternal.root
-Locale text not found for SID: setting.menu.remoteAccessExternal.root
-Locale text not found for SID: setting.menu.remoteAccessExternal.root
-Locale text not found for SID: setting.menu.remoteAccessExternal.root
-Locale text not found for SID: setting.menu.remoteAccessExternal.root
-Locale text not found for SID: setting.menu.remoteAccessExternal.root
-Locale text not found for SID: setting.menu.remoteAccessExternal.root
-Locale text not found for SID: setting.menu.remoteAccessExternal.root
-Locale text not found for SID: setting.menu.remoteAccessExternal.root
+### 수동 추가 파일
 
 _airfob-portal-site-type.mdx
 _more-information.mdx
@@ -112,33 +101,17 @@ _apache-license.mdx
 legal/*.mdx
 /docs/ja/platform/biostar_x/opensourcelicenses.txt
 
-code.json
+
+### 번역 리소스 파일 확인하기
+
+- i18n\ko\code.json 파일과 같은 구조의 파일인지 확인할 것
+
+- navbar.json 국문 파일과 다국어 파일 구조가 동일한지 확인할 것
+
+- releasenote 영문 파일 기준으로 다국어 파일에 추가할 것
+
+- overviewitem.js 82 줄 수정: '릴리스' 'release'
+
+## 추후 수정 예정
 
 src\components\Image\index.js
-
-navbar.json
-
-releasenote
-
-overviewitem.js 82 줄 수정
-
-`},{`
-
-```
-,
-  "externalLinks.dev.sdk.desc": {
-    "message": "Integrate fingerprint device core functions with third-party software"
-  },
-  "externalLinks.dev.xapi.desc": {
-    "message": "API documentation that allows you to see all APIs of BioStar X at a glance"
-  },
-  "externalLinks.dev.2api.desc": {
-    "message": "API documentation that allows you to see all APIs of BioStar 2 at a glance"
-  },
-  "externalLinks.dev.gsdk.desc": {
-    "message": "Cross-platform solution supporting various programming languages"
-  },
-  "externalLinks.dev.svpsdk.desc": {
-    "message": "Core functions of Suprema devices<br/>Supported by third-party software"
-  }
-```
