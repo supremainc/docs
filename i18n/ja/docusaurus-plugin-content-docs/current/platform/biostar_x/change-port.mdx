@@ -1,0 +1,40 @@
+---
+id: change-port
+title: ポートを変更する
+description: BioStar X の既定ポート (443) を使用できない場合にポートを変更する方法を説明します。
+keywords:
+  - BioStar X 設定
+  - ポート
+---
+
+**BioStar X** の既定ポート (443) を使用できない場合にポートを変更する方法を説明します。
+
+1. Windows で <Start/> → **BioStar X** → **BioStar X Service Manager** をクリックします。
+
+2. Web ブラウザーで **BioStar X Service Manager** ウィンドウが表示されたら、<Cmd>SERVICES</Cmd> メニューをクリックします。
+
+3. すべてのサービスで <Cmd>Stop</Cmd> をクリックします。
+
+   <Image src='/img/common/biostarx-tutoria-service-manager-services-stop.png' alone />
+
+4. 画面左のサイドバーで <Cmd>SERVICE SETTINGS</Cmd> をクリックします。
+
+5. <Cmd>Unified Gateway Service</Cmd> セクションの <Cmd>HTTPS Port</Cmd> フィールドに変更するポート番号を入力します。
+
+   <Image src='/img/common/biostarx-tutoria-service-manager-services-change-port.png' alone />
+
+6. 画面右上の <Cmd>Apply</Cmd> をクリックします。
+
+7. 確認メッセージが表示されたら <Cmd>OK</Cmd> をクリックします。
+
+8. <Cmd>SERVICES</Cmd> に移動し、すべてのサービスで **Start** をクリックします。
+
+9. ウェブブラウザーで **BioStar X** にアクセスします。
+
+:::info
+
+* ポート番号を 450 に変更した場合は、アドレスバーに `https://{ip_address}:450` と入力します。
+
+* 一部のサービスではポートの変更に対応していない場合があります。
+
+:::

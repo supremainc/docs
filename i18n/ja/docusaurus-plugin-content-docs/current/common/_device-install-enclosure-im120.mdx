@@ -1,0 +1,53 @@
+{/* ### 백업 배터리 고정 */}
+import Installenclosurebattery from "./_device-install-enclosure-battery.mdx";
+
+<Installenclosurebattery />
+
+<PageBreak />
+
+### 製品の固定
+
+1. エンクロージャ内で製品を取り付ける位置を確認してください。 1 つのエンクロージャに 2 台の製品を設置できます。
+
+   <Image src='/img/device/installation-enclosure-fix1-2device.png' className='none' width='25%' alone />
+
+2. 取り付け位置に合わせて製品をエンクロージャに載せ、固定用ネジで固定してください。
+
+   <Image src='/img/device/installation-enclosure-fix2-im120.png' className='none' width='50%' alone />
+
+:::info
+
+* ENCR-10 は壁面に固定して使用できるよう設計されています。 設置高さに制限はありません。安全で使いやすい位置に設置してください。
+
+{/* ENCR-10 제품의 구성품(나사 세트) */}
+import Includedscrews from './_device-encr10-included-screws.mdx'
+
+<Includedscrews />
+
+:::
+
+### 電源および AUX 入力の接続
+
+電源障害を防ぐために、無停電電源装置（UPS）を接続して使用できます。また、停電検出器や他の機器の接点出力を AUX IN 端子に接続できます。
+
+<Image src='/img/device/installation-enclosure-power-aux-input-connection-im120.png' className='none' width='70%' alone />
+
+:::caution
+
+* 出入管理装置と製品に接続する電源は必ず分けて使用してください。
+
+* 電源アダプターはIEC\/EN 62368-1の認証を受け、端末の消費電力を上回る容量のものを使用してください。 電源アダプターに他の機器も接続する場合は、端末の消費電力と他機器の消費電力を合算した電流容量以上のアダプターを使用する必要があります。
+
+  * 最大消費電流の規格については、製品仕様の［電源］(../device/inputmodule/product-specifications.mdx#specs.power) を参照してください。
+
+* 電源アダプターを使用する場合、電源ケーブルの長さを任意に延長しないでください。
+
+* バックアップバッテリーは 12 VDC 仕様で 7 Ah 以上のものを使用してください。 本製品は ROCKET 社の 「ES7-12」でテストされており、ES7-12 と同等の製品の使用を推奨します。
+
+:::
+
+### タンパーの接続
+
+外部要因によってエンクロージャが開いた場合、警報を鳴らしたりイベントログを残したりできます。
+
+<Image src='/img/device/installation-enclosure-connection-im120.png' className='none' width='40%' alone />

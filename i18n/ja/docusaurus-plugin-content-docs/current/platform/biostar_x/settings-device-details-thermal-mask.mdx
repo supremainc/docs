@@ -1,0 +1,112 @@
+---
+id: settings-device-details-thermal-mask
+title: 熱画像とマスクを設定する
+description: 熱画像カメラとマスクの使用に関する詳細設定を説明します。
+keywords:
+  - デバイス
+  - 熱画像カメラ
+  - マスク
+---
+
+<Cmd sid='device.info.temperMask' product='2' /> または <Cmd sid='device.info.mask' product='2' /> セクションで熱画像カメラとマスクの使用に関する詳細項目を設定します。
+
+* 熱画像カメラをSupremaの顔認証デバイスと連携して出入口を通過するユーザーの体温を測定し、基準温度を超えたユーザーのアクセスを制限します。
+
+* マスクを検出し、マスク未着用のユーザーのアクセスを制限します。
+
+:::info
+
+* <Cmd sid='device.thermal.title' product='2' /> 設定機能はFaceStation 2とFaceStation F2モデルでサポートします。 対応する熱画像カメラは以下を参照してください。
+
+  * TCM10-FS2
+
+  * TCM10-FSF2
+
+* <Cmd sid='device.mask.useMask' product='2' /> 設定機能はFaceStation F2、BioStation 3、BioEntry W3モデルでサポートします。
+
+* ユーザーが任意で変更した内容がある場合は、<Cmd sid='button.apply' product='2' /> をクリックします。 変更内容を保存しないとデバイスに反映されません。
+
+:::
+
+## マスク設定 {#mask-settings}
+
+<Cmd sid='device.mask.title' product='2' /> グループではマスク検出の使用可否を設定します。
+
+* <Cmd sid='device.mask.useMask' product='2' />：マスク検出の使用可否を選択します。
+
+  * <Cmd sid='device.mask.checkModeHard' product='2' />：マスクを着用していないユーザーは認証が拒否され、マスク未着用イベントログが記録されます。
+
+  * <Cmd sid='device.mask.checkModeSoft' product='2' />：マスクを着用していないユーザーも認証できますが、マスク未着用イベントログが記録されます。
+
+  * <Cmd sid='device.thermal.maskCheckModeOff' product='2' />：マスク検出機能を使用しません。
+
+* <Cmd sid='device.thermal.maskdetectlevel' product='2' />：マスク検出感度を選択します。
+
+## 熱画像カメラ設定 {#thermal-camera-settings}
+
+<Cmd sid='device.thermal.title' product='2' /> グループでは熱画像カメラの使用可否と詳細項目を設定します。
+
+* <Cmd sid='device.thermal.useThermalCamera' product='2' />：熱画像カメラの使用可否を設定します。
+
+  * <Cmd sid='device.thermal.checkModeHard' product='2' />：基準温度を超えたユーザーは認証が拒否され、基準温度超過イベントログが記録されます。
+
+  * <Cmd sid='device.thermal.checkModeSoft' product='2' /> 基準温度を超えたユーザーも認証できますが、温度超過イベントログが記録されます。
+
+* <Cmd sid='device.thermal.usecentigrade' product='2' />：温度表示単位を設定します。
+
+* <Cmd sid='device.thermal.temperatureThresholdCelc' product='2' /> / <Cmd sid='device.thermal.temperatureThresholdFahr' product='2' />：アクセスを制限する基準温度の下限と上限を設定します。
+
+  表面温度が<Cmd>Low</Cmd>値より低い場合、または<Cmd>High</Cmd>値より高い場合、<Cmd sid='device.thermal.useThermalCamera' product='2' /> オプションに従ってアクセスを制限します。 1℃～45℃の範囲で設定でき、<Cmd>Low</Cmd>値は<Cmd>High</Cmd>値より高く設定できません。
+
+* <Cmd sid='device.thermal.useAuditTemperature' product='2' />：ユーザーの温度ログの保存可否を設定します。
+
+  * <Cmd sid='device.info.enabled' product='2' />：認証成功の有無とユーザーの温度値をログに保存します。
+
+  * <Cmd sid='device.info.disable' product='2' />：認証成功の有無のみをログに保存します。
+
+* <Cmd sid='device.thermal.useTemperatureRejectSound' product='2' />：基準温度超過による認証失敗時の通知可否を設定します。
+
+* <Cmd sid='device.thermal.useOverlapThermal' product='2' />：デバイス画面に赤外線映像を表示するかどうかを設定します。
+
+* <Cmd sid='device.thermal.cameraconfig' product='2' />：熱画像カメラの詳細オプションを設定します。
+
+  * <Cmd sid='device.thermal.compensationCalcTemp' product='2' />：使用環境に応じて温度を一定値だけ高くまたは低く測定するよう補正できます。 例えば、温度が常に0.1℃高く測定される環境では、温度補正値を-0.1℃に設定します。
+
+  * <Cmd sid='device.thermal.distance' product='2' />：ユーザーと熱画像カメラ間の距離を設定します。
+
+  * <Cmd sid='device.thermal.emissionRate' product='2' />：赤外線放射率を設定します。
+
+  * <Cmd sid='device.thermal.useDynamicROI' product='2' />：周囲に他の照明がある場合、熱画像カメラが自動で照明ではなくユーザーの温度を測定するように設定できます。
+
+  * <Cmd sid='device.thermal.roiX' product='2' /> / <Cmd sid='device.thermal.roiY' product='2' /> / <Cmd sid='device.thermal.roiWidth' product='2' /> / <Cmd sid='device.thermal.roiHeight' product='2' />：<Cmd sid='device.thermal.useDynamicROI' product='2' /> オプションを <Cmd sid='device.info.disable' product='2' /> に設定した場合、ROI（関心領域）を手動で設定できます。 ROI の位置とサイズを調整し、熱画像カメラが温度を測定する領域を手動で設定します。
+
+:::info
+
+* <Cmd sid='device.thermal.temperatureThreshold' product='2' /> オプションの<Cmd>Low</Cmd>値および<Cmd>High</Cmd>値の設定は、以下のファームウェアバージョン以降でサポートします。
+
+  * FaceStation 2 ファームウェア 1.4.2 以上
+
+  * FaceStation F2 ファームウェア 1.0.2 以上
+
+* 最適なパフォーマンスを得るため、<Cmd sid='device.thermal.cameraconfig' product='2' /> のサブオプションはデフォルト値の使用を推奨します。 デバイスごとの各オプションのデフォルト値は以下を参照してください。
+
+  | 項目                                                    | FaceStation 2 | FaceStation F2 |
+  | ----------------------------------------------------- | :-----------: | :------------: |
+  | <Cmd sid='device.thermal.distance' product='2' />     |      100      |       100      |
+  | <Cmd sid='device.thermal.emissionRate' product='2' /> |      0.98     |      0.98      |
+  | <Cmd sid='device.thermal.roiX' product='2' />         |       47      |       30       |
+  | <Cmd sid='device.thermal.roiY' product='2' />         |       45      |       25       |
+  | <Cmd sid='device.thermal.roiWidth' product='2' />     |       15      |       50       |
+  | <Cmd sid='device.thermal.roiHeight' product='2' />    |       10      |       55       |
+
+:::
+
+## サーマルおよびマスク確認方式 {#thermal-mask-verification}
+
+<Cmd sid='device.thermal.mode' product='2' /> グループでは、<Cmd sid='device.mask.useMask' product='2' /> または <Cmd sid='device.thermal.useThermalCamera' product='2' /> オプションを <Cmd sid='common.use' product='2' /> に設定すると、デバイスの用途に応じて確認方式を設定できます。
+
+* <Cmd sid='device.thermal.authBeforeMode' product='2' />：認証後にユーザーのマスク着用有無を確認するか体温を測定します。
+
+* <Cmd sid='device.thermal.authAfterMode' product='2' />：ユーザーのマスク着用有無を確認するか体温を測定してから認証を実行します。 この場合、マスクを着用していない、または基準温度を超えているユーザーは認証できません。
+
+* <Cmd sid='device.thermal.authTemperatureOnlyMode' product='2' />：マスク着用有無の確認または体温測定の用途にのみデバイスを使用できます。 この場合、認証に関係なく、マスクを着用しているか基準温度以下のユーザーはすべて入場できます。

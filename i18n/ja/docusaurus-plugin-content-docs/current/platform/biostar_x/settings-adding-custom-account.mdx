@@ -1,0 +1,93 @@
+---
+id: settings-adding-custom-account
+title: カスタム権限を追加する
+description: ユーザーが希望する権限レベルを追加する方法を説明します。
+keywords:
+  - アカウント
+  - 運用権限
+  - カスタム権限
+---
+
+ユーザーが希望する権限レベルを追加する方法を説明します。 カスタム権限は、基本の運用権限に加えて追加の権限を設定できるユーザー向けの機能です。
+
+## カスタム権限の追加
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.account.root' /> をクリックします。
+
+3. <Cmd sid='setting.account.addCustomOperator' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-settings-account-add-custom-permission.png' />
+
+4. 新しく作成する権限の名前と説明を入力します。
+
+   <Image src='/img/biostarx-settings-account-add-custom-permission-details.png' />
+
+5. 残りの各項目を入力または選択します。
+
+6. 設定を保存するには、画面最下部の <Cmd sid='button.apply' product='2' /> をクリックします。
+
+:::info
+
+* <Cmd sid='settings.account.menu.setting' product='2' /> で設定できる項目は、有効化されているライセンスの種類によって異なる場合があります。
+
+* <Cmd sid='settings.account.menu.detailSetting' product='2' /> の詳細については [次のドキュメント](#detailSetting) を参照してください。
+
+* <Cmd sid='settings.account.menu.setting' product='2' /> の詳細については [次のドキュメント](#menuSetting) を参照してください。
+
+* <Cmd sid='settings.account.addUser' product='2' /> の詳細については [次のドキュメント](#addUser) を参照してください。
+
+:::
+
+### <Cmd sid='settings.account.menu.detailSetting' product='2' className='normal' /> {#detailSetting}
+
+アイテムの詳細な権限を設定します。 各メニューに対して編集権限および閲覧権限を付与するグループを選択できます。 アイテム詳細権限は <Cmd sid='common.permission.module.userGroup' product='2' />, <Cmd sid='common.permission.module.deviceGroup' product='2' />, <Cmd sid='common.permission.module.doorGroup' product='2' />, <Cmd sid='common.permission.module.accessGroup' product='2' /> に対して設定でき、各メニューで既に作成されているグループ情報を基に設定できます。
+
+<Image src='/img/biostarx-settings-account-add-custom-permission-details-item.png' />
+
+:::info
+
+* 目的のグループがない場合は、該当メニューに移動して新しいグループを追加します。 グループの追加の詳細については、次のドキュメントを参照してください。
+
+  * [ユーザーグループの登録と管理](user-group-manage)
+
+  * [デバイスグループの登録と管理](settings-manage-device-group)
+
+  * [ドアグループの登録と管理](settings-manage-door-group)
+
+  * [エレベーターグループの登録と管理](settings-manage-elevators-group)
+
+  * [アクセスグループの登録と管理](settings-access-control-manage-access-group)
+
+* <Cmd sid='common.permission.module.elevatorGroup' product='2' />, <Cmd sid='setting.account.item.advAC' product='2' />, <Cmd sid='setting.account.item.map' product='2' /> の権限は **アドバンス**（Advanced）ライセンス以上で利用できます。 ライセンス ポリシーの詳細については、[次のドキュメント](../biostar_x/licensing) を参照してください。
+
+:::
+
+### <Cmd sid='settings.account.menu.setting' product='2' className='normal' /> {#menuSetting}
+
+個別メニューに対する **編集** と **閲覧** 権限を設定します。 メニューごとに異なる権限を設定できます。
+
+<Image src='/img/biostarx-settings-account-add-custom-permission-details-menus.png' />
+
+* <Cmd sid='common.editRead' product='2' />：該当メニューの項目を追加、編集、削除できる権限を付与します。
+
+* <Cmd sid='common.read' product='2' />：該当メニューへアクセスし、設定内容を確認のみできる権限を付与します。
+
+:::info
+
+各メニューに **編集** 権限を付与すると、<Cmd sid='button.add' product='2' /> が有効になります。 ただし、<Cmd sid='shell.header.dashboard' /> および <Cmd sid='shell.header.setting' /> メニューには追加機能がないため <Cmd sid='setting.account.menu.canCreate.na' product='2' /> と表示されます。<Cmd sid='common.permission.module.ac' product='2' /> メニューでは、<Cmd sid='settings.account.menu.detailSetting' product='2' /> で <Cmd sid='common.permission.module.accessGroup' product='2' /> を <Cmd sid='setting.account.menu.detailPriv.allAC' product='2' /> に設定し、**編集** 権限を付与した場合にのみ <Cmd sid='button.add' product='2' /> が有効になります。
+
+:::
+
+### <Cmd sid='settings.account.addUser' product='2' className='normal' /> {#addUser}
+
+権限を付与するユーザー情報を追加または確認できます。 ユーザーを追加するには <Cmd sid='button.plusAdd' product='2' /> をクリックします。 ユーザー一覧から権限を付与するユーザーを選択します。
+
+<Image src='/img/biostarx-settings-account-add-custom-permission-details-users.png' />
+
+:::info
+
+ユーザー一覧でユーザーの <IcTrash2 /> をクリックすると、そのユーザーは権限から除外されます。
+
+:::

@@ -1,0 +1,150 @@
+---
+id: view-users
+title: ユーザーを閲覧する
+description: ユーザー一覧の照会、検索、並べ替えおよび管理機能の使用方法を説明します。
+keywords:
+  - ユーザー
+  - 検索
+---
+
+ユーザー一覧ページで登録済みユーザーを照会および管理する方法を説明します。 一般検索と詳細検索を利用して目的のユーザーを素早く見つけられ、一覧の並べ替え、列設定、印刷などの機能を使用できます。
+
+<Cmd sid='shell.header.user' /> ページにアクセスするには、<Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.user' /> をクリックするか、画面左上のショートカットリストから <Cmd sid='shell.header.user' /> を選択します。
+
+## ユーザー一覧を表示する {#view-user-list}
+
+ユーザー一覧ページでは、ユーザーの基本情報と状態を確認でき、各ユーザーの詳細情報を閲覧または編集できます。
+
+<Image src='/img/biostarx-users-list.png' />
+
+ユーザー一覧には登録済みユーザーがすべて表示され、各ユーザーのID、名前、メールアドレス、利用期間、登録済みクレデンシャル状況、状態を基本情報として確認できます。 ユーザーはID順に一覧表示されます。
+
+* 個別ユーザーの詳細情報を確認するには、ユーザー一覧で対象ユーザーをクリックします。 ユーザーのプロフィール情報が画面右側に表示されます。 ユーザープロフィール情報で <Cmd sid='team.user.preview.button.seeMore' /> ボタンをクリックすると、ユーザーの詳細情報を編集できるページへ移動します。
+
+  <Image src='/img/biostarx-users-list-view-profile.png' />
+
+* ユーザーの詳細情報を編集するには、ユーザー一覧で対象ユーザーをダブルクリックします。 ユーザーの詳細情報を編集できるページへ移動します。
+
+:::info
+
+* ユーザー情報の編集について詳しくは[次のドキュメント](edit-user)を参照してください。
+
+* ユーザー一覧で列レイアウトを変更できます。 列レイアウトの変更について詳しくは[次のドキュメント](view-users#user-list-column-settings)を参照してください。
+
+:::
+
+## 表示オプションを選択する {#select-view-options}
+
+画面右上のツールボタンを使用して、ユーザー一覧の表示オプションを変更できます。
+
+### ユーザー一覧ページの移動 {#user-list-page-moves}
+
+ユーザー一覧にはデフォルトで10人のユーザーが表示されます。 画面上部のボタンをクリックして別のページへ移動できます。
+
+<Image src='/img/biostarx-users-list-pagenation.png' />
+
+* <IcFirst /> ：ユーザー一覧の最初のページへ移動します。
+
+* <IcFw /> ：ユーザー一覧の前のページへ移動します。
+
+* <IcBw /> ：ユーザー一覧の次のページへ移動します。
+
+* <IcLast /> ：ユーザー一覧の最後のページへ移動します。
+
+* 指定ページへ移動するには、数値入力フィールドにページ番号を入力し、<Kbd>Enter</Kbd> キーを押します。
+
+### ユーザー一覧の表示件数を変更する {#change-number-of-users-list-indications}
+
+ユーザー一覧に表示されるユーザー数を変更できます。 画面右上のリスト選択ボックスで表示件数を選択します。 選択できるオプションは50件、100件、200件です。
+
+<Image src='/img/biostarx-users-list-select-row.png' />
+
+### ユーザー一覧の並べ替え {#user-list-alignment}
+
+ユーザー一覧の並べ替え基準を変更できます。 一覧上部の列ヘッダーをクリックすると、昇順または降順に並べ替えられます。 たとえば、<Cmd sid='team.user.table.firstName' /> 列ヘッダーをクリックすると、ユーザー名を基準に昇順または降順で並べ替えられます。 クリックした項目には昇順(<IcAscend />) または降順(<IcDescend />) のアイコンが表示されます。
+
+<Image src='/img/biostarx-users-list-order.png' />
+
+:::info
+
+列の種類によっては並べ替えできない項目があります。
+
+:::
+
+## ユーザー検索 {#user-search}
+
+特定のユーザーを検索する方法を説明します。 ユーザー一覧ページの検索機能を使って、目的のユーザーを素早く見つけることができます。
+
+:::info
+
+* 検索に使用するキーワードでは大文字と小文字が区別されません。
+
+* ユーザーの基本情報が入力されている必要があります。 ユーザーの基本情報入力について詳しくは[次のドキュメント](add-user-basic-info)を参照してください。
+
+:::
+
+### 一般検索 {#general-search}
+
+ユーザーのID、名前、メールアドレスを基準に検索できます。 画面上部の検索入力フィールドにキーワードを入力し、<Kbd>Enter</Kbd> キーを押します。 入力したキーワードと一致するユーザーが一覧に表示されます。 一覧の最上部で検索結果の件数を確認できます。
+
+<Image src='/img/biostarx-users-search-result.png' />
+
+### 詳細検索 {#advanced-search}
+
+ユーザーのID、名前、メールアドレス、電話番号などを指定して検索できます。 
+
+1. 画面上部の検索入力フィールド横にある <IcAdvSearch /> ボタンをクリックします。 
+
+2. 詳細検索ウィンドウが開いたら、検索条件を入力し、<Cmd sid='common.search' /> ボタンをクリックします。
+
+<Image src='/img/biostarx-users-advanced-search.png' />
+
+:::info
+
+* 入力フィールドのうち <IcTips /> アイコンが表示されている項目は、個人情報DBの暗号化により完全一致でのみ検索できます。
+
+* 詳細検索ウィンドウで入力条件をリセットするには、<Cmd sid='common.clearAll' /> ボタンをクリックします。
+
+* 詳細検索では <Cmd sid='setting.server.custom_field.title' product='2' /> の検索をサポートします。 <Cmd sid='setting.server.custom_field.title' product='2' /> について詳しくは[次のドキュメント](settings-server-server#custom-field)を参照してください。
+
+:::
+
+## ユーザー一覧の列設定 {#user-list-column-settings}
+
+ユーザー一覧で表示される列設定を変更できます。 列設定で表示する列を選択したり、列の順序を変更したりできます。
+
+1. ユーザー一覧画面右上の <IcMoreW /> ボタンをクリックします。
+
+2. <Cmd sid='team.menu.columnLayout' /> をクリックします。
+
+3. <Cmd sid='common.dialog.columnSetting.title' /> ウィンドウが表示されたら、必要な列を選択または選択解除します。
+
+   <Image src='/img/biostarx-users-list-column-layout.png' />
+
+4. 列の順序を変更するには、目的の列をクリックしたままドラッグして位置を変更します。
+
+5. 設定を保存するには、<Cmd sid='common.apply' /> ボタンをクリックします。
+
+:::info
+
+* 列設定は各ユーザーアカウントごとに保存されます。
+
+* 列レイアウト設定を初期化するには、<Cmd sid='columnSetting.button.defaultColumn' product='2' /> ボタンをクリックします。
+
+:::
+
+## ユーザー一覧を印刷 {#print-user-list}
+
+表示中のユーザー一覧をPDFまたはSVGファイルとして保存できます。
+
+1. ユーザー一覧画面右上の <IcMoreW /> ボタンをクリックします。
+
+2. <Cmd sid='team.menu.print' />をクリックします。
+
+3. 「<Cmd sid='printOption.dialog.header' product='2' />」ウィンドウが表示されたら、「<Cmd sid='printOption.fileFormat' product='2' />」オプションで目的のフォーマットを選択し、その他のオプションを設定します。
+
+   <Image src='/img/biostarx-users-print-list.png' />
+
+4. <Cmd sid='team.menu.print' />をクリックします。
+
+ブラウザーで開いたPDFまたはSVGファイルを印刷できます。

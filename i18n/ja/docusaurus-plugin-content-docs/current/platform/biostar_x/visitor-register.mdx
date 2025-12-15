@@ -1,0 +1,105 @@
+---
+id: visitor-register
+title: 訪問を申請する
+description: 訪問申請用PCで訪問者が入退室を申請する方法を説明します。
+keywords:
+  - 訪問申請
+---
+
+社内ユーザーではない外部訪問者が訪問申請用PCを使用して入退室を申請する方法を説明します。
+
+:::info
+
+* 訪問申請用PCは別途構成する必要があり、訪問者設定を先に行う必要があります。 訪問者設定の詳細については[次のドキュメント](settings-visitor)を参照してください。
+
+* 訪問申請用PCに訪問申請ページへのショートカットアイコンがない場合は、[次のドキュメント](settings-visitor#settings-visitor-pc-link)を参照してショートカットアイコンを作成してください。
+
+:::
+
+## 新規訪問申請
+
+初めて訪問する訪問者が訪問申請用PCで入退室を申請する方法を説明します。
+
+1. 訪問申請用PCで訪問申請ページを開いてください。 訪問申請ページのURLアドレスは `https://{biostar_x_server_ip}/#/register-welcome` 形式です。
+
+   <Image src='/img/biostarx-visitor-register-welcome.png' />
+
+2. 画面中央の <Cmd sid='visitor.welcome.first.time' product='2' /> をクリックしてください。
+
+3. 訪問先の入退室に関する約款および個人情報取扱方針への同意を完了したら、画面右下の <Cmd sid='button.nextPage' product='2' /> ボタンをクリックしてください。
+
+4. 訪問申請に必要な情報を入力してください。
+
+   <Image src='/img/biostarx-visitor-register-info.png' />
+
+   * <Cmd sid='common.visitor' product='2' />：訪問者の名前と電話番号を入力してください。
+
+   * <Cmd sid='visitor.host' product='2' />：訪問先担当者の名前と電話番号を入力してください。
+
+   * <Cmd sid='visitor.accessInfo' product='2' />：入退室エリアと訪問期間を設定してください。
+
+5. 情報入力が完了したら、画面右下の <Cmd sid='button.nextPage' product='2' /> ボタンをクリックしてください。
+
+6. 入退室手段を設定してください。
+
+   <Image src='/img/biostarx-visitor-register-access-credential.png' />
+
+   * <Cmd sid='common.fingerPrint' product='2' />：指紋認証を使用する場合は <Cmd sid='button.addFingerprint' product='2' /> ボタンをクリックして指紋を登録してください。
+
+   * <Cmd sid='common.card' product='2' />：カード認証を使用する場合は <Cmd sid='visitor.request' product='2' /> に設定した後、管理者からカードを発行してもらってください。
+
+7. 設定が完了したら、画面右下の <Cmd sid='button.nextPage' product='2' /> ボタンをクリックしてください。
+
+8. 申請したすべての情報を確認したら、画面右下の <Cmd sid='button.register' product='2' /> ボタンをクリックしてください。
+
+   <Image src='/img/biostarx-visitor-register-complete.png' />
+
+:::info
+
+* 訪問先の入退室に関する約款および個人情報取扱方針の作成に関する詳細は[次のドキュメント](settings-visitor#settings-visitor-terms)を参照してください。
+
+* 名前は最大48文字まで入力できます。
+
+* 訪問者情報入力にカスタムフィールドを追加する場合は[次のドキュメント](settings-visitor#settings-visitor-custom-field)を参照してください。
+
+* 訪問PCに割り当てた訪問先の入退室グループのみ選択できます。 詳細は[次のドキュメント](settings-visitor#settings-visitor-site)を参照してください。
+
+* 入退室グループの詳細については[次のドキュメント](settings-access-control-manage-access-group)を参照してください。
+
+* 前の段階に戻って訪問情報を修正する場合は <Cmd sid='button.previousPage' product='2' /> ボタンをクリックしてください。
+
+* 指紋をスキャンするには、訪問申請用PCに指紋登録デバイスが接続されている必要があります。
+
+:::
+
+## 既存情報で訪問申請
+
+訪問先に指紋が登録されている場合は、指紋を検索して既存の訪問情報を使用して訪問を申請できます。
+
+1. 訪問申請用PCで訪問申請ページを開いてください。 訪問申請ページのURLアドレスは `https://{biostar_x_server_ip}/#/register-welcome` 形式です。
+
+   <Image src='/img/biostarx-visitor-register-welcome.png' />
+
+2. 画面中央の指紋アイコン下にある <Cmd sid='visitor.welcome.search' product='2' /> をクリックしてください。
+
+3. 指紋スキャナデバイスで指紋をスキャンしてください。 スキャンした指紋を使用して登録済みユーザーを検索します。
+
+4. 以前に指紋を登録した訪問者と一致する指紋がある場合、確認メッセージが表示されます。
+
+   <Image src='/img/biostarx-visitor-register-confirm-message.png' />
+
+5. 検索された訪問者で正しければ <Cmd sid='button.yes' product='2' /> ボタンをクリックしてください。
+
+6. 訪問先の入退室に関する約款および個人情報取扱方針への同意を完了したら、画面右下の <Cmd sid='button.nextPage' product='2' /> ボタンをクリックしてください。
+
+7. 前回訪問時に設定した訪問情報を確認してください。 既存情報を修正する場合は各項目を修正した後、画面右下の <Cmd sid='button.nextPage' product='2' /> ボタンをクリックしてください。
+
+   <Image src='/img/biostarx-visitor-register-saved-info.png' />
+
+8. 前回訪問時に設定した入退室手段を確認してください。 既存の入退室手段を変更する場合は、変更する項目を修正した後、画面右下の <Cmd sid='button.nextPage' product='2' /> ボタンをクリックしてください。
+
+   <Image src='/img/biostarx-visitor-register-saved-access-credential.png' />
+
+9. 申請したすべての情報を確認したら、画面右下の <Cmd sid='button.register' product='2' /> ボタンをクリックしてください。
+
+   <Image src='/img/biostarx-visitor-register-complete.png' />

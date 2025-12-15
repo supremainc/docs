@@ -1,0 +1,66 @@
+---
+id: settings-advanced-ac-interlock
+title: インターロック
+description: インターロックの設定方法を説明します。 インターロックとは、複数のドアのうち1つが開いていると他のドアへの通行を遮断してセキュリティを強化する出入管理方式です。
+keywords:
+  - 高度なアクセス制御
+  - インターロック
+---
+
+インターロックは、セキュリティが重要なエリアで使用される出入管理方式です。 2枚以上のドアがある場所でインターロックを設定すると、次のように動作します。
+
+* ドアセンサーとリレーを使用して各ドアの状態をリアルタイムで監視します。
+
+* 1つのドアが開いている、または解錠されている場合、他のすべてのドアは自動的に施錠されます。
+
+* ユーザーがその場所に滞在している間は追加の出入りをブロックするよう設定します。
+
+この方法により複数のドアが同時に開くことを防ぎ、セキュリティを強化します。
+
+:::info
+
+* 1つのインターロック設定には最大4枚のドアを含めることができます。
+
+* CoreStationに接続されているデバイスで構成されたドアのみインターロックを設定できます。
+
+* インターロックに割り当てられたデバイスは、他のインターロック設定では使用できません。
+
+* インターロックに指定されたドアは、火災警報設定を除き他の設定では使用できません。
+
+:::
+
+## インターロックを追加 {#addInterlockZone}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.advancedAc.root' /> をクリックします。
+
+3. <Cmd sid='button.func.addZone' product='2' /> ボタンをクリックします。
+
+4. <Cmd sid='zone.interLock' product='2' /> を選択し、<Cmd sid='button.apply' product='2' /> をクリックします。
+
+5. <Cmd sid='common.info' product='2' /> セクションで、追加するインターロック設定の名前を入力します。
+
+   <Image src='/img/biostarx-settings-adv-ac-add-interlock.png' />
+
+6. <Cmd sid='common.setting' product='2' /> セクションでインターロック設定の詳細項目を設定します。 詳しくは [次のドキュメント](#setting) を参照してください。
+
+7. <Cmd sid='common.option' product='2' /> セクションで、ユーザーが滞在している間は出入りできないように設定します。
+
+8. <Cmd sid='common.alarm' product='2' /> セクションで、インターロック設定で特定のイベントが発生した際に実行する動作を設定します。
+
+:::info
+
+<Cmd sid='common.option' product='2' /> および <Cmd sid='common.alarm' product='2' /> セクションは、<Cmd sid='common.setting' product='2' /> セクションで <Cmd sid='zone.pause.doorselected' product='2' /> を設定してから使用できます。
+
+:::
+
+## 設定オプションの案内 {#setting}
+
+インターロック設定の詳細項目は以下のとおりです。
+
+* <Cmd sid='zone.globalZone' product='2' />：適用範囲を設定します。 インターロック設定は <Cmd sid='zone.globalZone.local' product='2' /> モードのみをサポートし、CoreStationにRS-485で接続されたデバイスでのみ設定できます。
+
+* <Cmd sid='zone.pause.activatedAndDeactivated' product='2' />：設定を有効化または一時的に無効化できます。
+
+* <Cmd sid='zone.pause.doorselected' product='2' />：インターロックに指定するドアを選択します。 少なくとも2つ以上のドアを選択する必要があり、ドアセンサーが接続されているドアのみ追加できます。

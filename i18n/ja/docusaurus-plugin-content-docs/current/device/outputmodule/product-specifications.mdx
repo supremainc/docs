@@ -1,0 +1,44 @@
+---
+id: product-specifications
+title: 製品仕様
+description: 製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+keywords:
+  - 一般
+  - インターフェース
+  - 電気仕様
+  - 製品寸法
+---
+
+製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+
+import specs from '@site/static/specs/om120_specs.json';
+
+{/* 일반 */}
+
+<SpecSection data={specs.outputmodule.general} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.outputmodule.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.outputmodule.power} />
+
+## サイズと重量
+
+:::note
+
+寸法公差は ±0.3 mm です。
+
+:::
+
+<Image src='/img/device/om120-dimension.svg' className='none' />
+
+---
+
+:::info
+
+製品仕様は性能向上のため予告なく変更されることがあります。
+
+:::

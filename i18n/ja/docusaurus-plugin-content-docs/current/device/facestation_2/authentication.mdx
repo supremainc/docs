@@ -1,0 +1,151 @@
+---
+id: authentication
+title: 認証
+description: サポートする認証方式と認証手順について説明します。
+keywords:
+  - 認証モード
+  - 認証オプション
+  - PIN
+  - 顔
+  - 勤怠
+---
+
+サポートする認証方式と認証手順について説明します。
+
+## 認証モード
+
+デバイスの認証モードを設定できます。 <Cmd sid='ui_228' product='dev' />, <Cmd sid='ui_040' product='dev' />, <Cmd sid='ui_322' product='dev' />, <Cmd sid='ui_020' product='dev' /> を組み合わせて認証モードとして利用でき、各認証モードごとに使用するスケジュールを設定することも可能です。
+
+### 認証モードの登録 {#registering-auth-mode}
+
+1. <Image src='/img/common/ico-menu2.svg' ico alone />を押して、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> を押します。
+
+3. <Image src='/img/common/ico-add2.svg' ico alone /> を選択します。
+
+4. <Image src='/img/common/ico-add3.svg' ico alone /> を押すと、追加可能なクレデンシャルが画面に表示されます。 必要なクレデンシャルを追加します。 クレデンシャルが追加された状態で <Image src='/img/common/ico-cancel1.svg' ico alone /> を押すと、追加したクレデンシャルを削除できます。
+
+   <Image src='/img/device/fs2-auth-mode.png' />
+
+5. 目的の認証モードを設定した後、<Cmd sid='ui_203' product='dev' /> を設定します。
+
+   <div className='overflow-x'>
+
+   |  区分 | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+   | :-: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+   |  顔  | - <Image src='/img/common/ico-authmode-face-fs2.png' ico alone />：顔だけを使用するモードです。<br/>- <Image src='/img/common/ico-authmode-face-fs2.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs2a.png' ico alone />：顔で認証した後に PIN を入力するモードです。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+   | カード | - <Image src='/img/common/ico-authmode-card-bs2a.png' ico alone />：カードのみを使用するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs2a.png' ico alone /> + <Image src='/img/common/ico-authmode-face-fs2.png' ico alone />：カードで認証した後に顔で認証するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs2a.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs2a.png' ico alone />：カードで認証した後に PIN を入力するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs2a.png' ico alone /> + <Image src='/img/common/ico-authmode-face-fs2.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs2a.png' ico alone />：カードで認証した後に顔で認証するか、PIN を入力するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs2a.png' ico alone /> + <Image src='/img/common/ico-authmode-face-fs2.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs2a.png' ico alone />：カードで認証した後に顔認証と PIN 入力を両方使用するモードです。 |
+   |  ID | - <Image src='/img/common/ico-authmode-id-bs2a.png' ico alone /> + <Image src='/img/common/ico-authmode-face-fs2.png' ico alone />：ID を入力した後に顔で認証するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs2a.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs2a.png' ico alone />：ID を入力した後に PIN を入力するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs2a.png' ico alone /> + <Image src='/img/common/ico-authmode-face-fs2.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs2a.png' ico alone />：ID を入力した後に顔で認証するか、PIN を入力するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs2a.png' ico alone /> + <Image src='/img/common/ico-authmode-face-fs2.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs2a.png' ico alone />：ID を入力した後に顔認証と PIN 入力を両方使用するモードです。                                                                                                 |
+
+   </div>
+
+   :::info
+
+   * <Cmd sid='ui_203' product='dev' /> は BioStar X で設定できます。 設定したスケジュールがない場合は、<Cmd sid='ui_361' product='dev' /> だけを選択できます。
+
+   * <Cmd sid='ui_203' product='dev' /> の設定について詳しくは、[BioStar X 管理者マニュアル](../../platform/biostar_x/settings-schedule) を参照してください。
+
+   :::
+
+6. 設定を保存するには<Cmd sid='ui_037' product='dev' />を押します。
+
+### 認証モードの編集
+
+1. <Image src='/img/common/ico-menu2.svg' ico alone />を押して、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> を押します。
+
+3. 編集する認証モードを選択します。
+
+4. [認証モードの登録](#registering-auth-mode) を参照して認証モードを修正した後、<Cmd sid='ui_037' product='dev' /> を押します。
+
+### 認証モードの削除
+
+1. <Image src='/img/common/ico-menu2.svg' ico alone />を押して、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_261' product='dev' /> を押します。
+
+3. <Image src='/img/common/ico-delete.svg' ico alone />をクリックして削除する項目を選択します。 複数選択することもできます。
+
+4. 選択した項目を削除するには <Cmd sid='ui_037' product='dev' /> を押します。
+
+## 認証オプション
+
+1. <Image src='/img/common/ico-menu2.svg' ico alone />を押して、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_256' product='dev' /> を押してから <Cmd sid='ui_265' product='dev' /> で目的の項目を変更します。
+
+   <Image src='/img/device/fs2-auth-option.png' />
+
+   * <Cmd sid='ui_310' product='dev' />：周囲の明るさを検出して IR LED の強度を調整します。 設置環境に応じて設定を変更します。
+
+   * <Cmd sid='ui_140' product='dev' />：デバイス周辺の動きを検知する感度を設定します。 <Cmd sid='ui_140' product='dev' /> を <Cmd sid='ui_091' product='dev' /> に設定した場合、顔認証を行うには画面をタッチしてから認証を進めてください。
+
+   * <Cmd sid='ui_260' product='dev' />：設定した時間内に認証を完了できないと、認証失敗となります。
+
+   * <Cmd sid='ui_185' product='dev' />：サーバーマッチングを設定すると、デバイスではユーザー認証を行わず、BioStar X でユーザー認証を実行します。 サーバーマッチングは、デバイスにユーザー情報が多すぎる場合や、ユーザークレデンシャル情報が保存されているデバイスを外部にさらしたくない場合に有用です。
+
+     :::info
+
+     * <Cmd sid='ui_185' product='dev' /> ではカードと ID のみ使用できます。
+
+     * <Cmd sid='ui_185' product='dev' /> を使用する場合は、デバイスと BioStar X の両方でサーバーマッチングを有効にする必要があります。 BioStar X のサーバーマッチング設定の詳細については、[BioStar X 管理者マニュアル](../../platform/biostar_x/settings-server-server#servermatching) を参照してください。
+
+     :::
+
+   * <Cmd sid='ui_232' product='dev' />：顔を登録する際に顔の位置、角度、距離に対する感度を設定します。 高精度の顔テンプレートを取得するには高く設定します。
+
+   * <Cmd sid='ui_115' product='dev' />：設定した時間内に顔を登録できないと、顔登録がキャンセルされます。
+
+   * <Cmd sid='ui_117' product='dev' />：顔登録時に重複顔をチェックできます。
+
+## 顔認証
+
+顔認証に関する設定を変更できます。
+
+1. <Image src='/img/common/ico-menu2.svg' ico alone />を押して、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_256' product='dev' /> を押してから <Cmd sid='ui_231' product='dev' /> で目的の項目を変更します。
+
+   <Image src='/img/device/fs2-auth.png' />
+
+   * <Cmd sid='ui_149' product='dev' />：1:N 認証のセキュリティレベルを設定できます。
+
+   * <Cmd sid='ui_078' product='dev' />：グループマッチングの使用有無を確認できます。 グループマッチングを使用すると、複数ユーザーの顔をグループ化して認証速度を向上できます。
+
+   * <Cmd sid='ui_360' product='dev' />：顔テンプレートを登録したデバイスのファームウェアが v1.0.1 以前の場合はこのオプションを有効にします。
+
+   * <Cmd sid='ui_248' product='dev' />：写真などの偽造顔を使用したユーザー登録を防止できます。 <Cmd sid='ui_004' product='dev' /> から <Cmd sid='ui_006' product='dev' /> まで強度を設定でき、段階が上がるほど検査強度が強化されます。
+
+   * <Cmd sid='ui_158' product='dev' />：高速顔登録の使用有無を設定できます。 高速顔登録を有効にすると登録手順は 1 段階になり、無効にすると 3 段階になります。
+
+     :::info
+
+     * <Cmd sid='ui_078' product='dev' /> は BioStar X で設定できます。
+
+     * <Cmd sid='ui_248' product='dev' /> を高い段階に設定すると、実際の顔の登録が拒否される可能性があります。 登録に失敗した場合は再試行するか、検査強度を下げます。
+
+     * 高品質の顔テンプレートを登録するには <Cmd sid='ui_158' product='dev' /> を無効にします。
+
+     :::
+
+## 勤怠モード
+
+勤怠モードの登録方法を設定できます。
+
+1. <Image src='/img/common/ico-menu2.svg' ico alone />を押して、管理者権限の認証手段で認証してください。
+
+2. <Cmd sid='ui_256' product='dev' /> を押してから <Cmd sid='ui_083_list' product='dev' /> で目的の項目を変更します。
+
+   <Image src='/img/device/fs2-auth1.png' />
+
+   * <Cmd sid='ui_083_list' product='dev' />：勤怠モードの使用方法を設定できます。
+
+   * <Cmd sid='ui_086' product='dev' />：勤怠イベントを登録できます。
+
+   * <Cmd sid='ui_082' product='dev' />：ユーザーが認証する際に必ず勤怠イベントを選択するよう設定できます。 <Cmd sid='ui_083_list' product='dev' /> を <Cmd sid='ui_199' product='dev' /> に設定したときに使用できます。
+
+   * <Cmd sid='ui_081' product='dev' />：管理者が選択した勤怠イベントのみ使用するよう設定できます。 <Cmd sid='ui_083_list' product='dev' /> を <Cmd sid='ui_071' product='dev' /> に設定したときに使用できます。
+
+   * <Cmd sid='ui_279' product='dev' />：作業コードの使用有無を選択できます。

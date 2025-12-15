@@ -1,0 +1,97 @@
+---
+id: installation
+title: インストール
+description: 製品の設置に必要な全工程と接続例を提供します。
+keywords:
+  - インストール
+  - 電源
+  - RS-485
+  - リレー
+  - 監視入力​
+  - タンパー
+  - エンクロージャ
+  - AUX
+---
+
+インストールに必要な全手順と接続例を提供します。
+
+## 製品の固定
+
+1. 製品を取り付ける位置にスペーサーを固定用ネジで固定します。
+
+2. 固定したスペーサーの上に製品を置き、固定用ネジでしっかり固定します。
+
+   <Image src='/img/device/installation-device-im120.svg' className='none' width={300} alone />
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+<PageBreak />
+
+## RS-485 接続
+
+製品をマスター装置に接続できます。
+
+<Image src='/img/device/installation-rs485-connection-im120.png' width='75%' className='none' />
+
+:::info
+
+* RS-485 ケーブルは AWG26 以上を使用し、すべての配線は ANSI/NFPA 70 規格に準拠する必要があります。
+
+* RS-485 ケーブルには AWG24 のツイストペアケーブルを使用し、最大長は 1.2 km としてください。
+
+* RS-485 ケーブルには特性インピーダンス 120 Ω のケーブルを使用することを推奨します。
+
+* RS-485デイジーチェーン接続の両端に終端抵抗（120 Ω）を接続します。 中間ラインに接続すると信号レベルが低下して通信性能が落ちるため、必ずデイジーチェーンの両端に接続してください。 本製品の終端抵抗スイッチをONに設定します。
+
+:::
+
+<PageBreak />
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-indoor-module-relay-connection.mdx";
+
+<RelayConnectioin />
+
+<PageBreak />
+
+## 監視入力の接続
+
+火災検知センサー、温度検知センサー、防犯センサー、ドアセンサー、退室ボタンなどを接続できます。 **SUPERVISED INPUT** 0〜11 端子は回路の電圧を検知して装置の断線、短絡、オン、オフ状態を監視でき、一般的な入力として使用することもできます。
+
+BioStar X で製品の状態別動作を設定し、入力状態を監視できます。
+
+<Image src='/img/device/installation-supervised-input-connection-im120.png' width='75%' className='none' />
+
+:::info
+
+* マスター装置の入力ポートに接続されている機器に、本製品の入力を重複して接続しないでください。
+
+* 本製品は 1㏀、2.2㏀、4.7㏀、10㏀ の抵抗を接続して使用できます。 接続する入力機器に適切な抵抗を取り付けた後、BioStar X で抵抗値を同じ値に設定してください。
+
+:::
+
+## タンパーの接続
+
+外部要因により製品が設置場所から外れた場合、警報を鳴らす、またはイベントログを残すことができます。
+
+<Image src='/img/device/installation-tamper-connection-im120.png' width='80%' className='none' />
+
+<PageBreak />
+
+## エンクロージャの設置 {#install-enclosure}
+
+物理的および電気的保護のため、本製品をエンクロージャ（ENCR-10）内に設置できます。 エンクロージャには、電源状態LEDボード、電源分配ボード、電源供給装置、タンパースイッチが含まれています。 エンクロージャは別売りです。
+
+{/* ## IM120 함체 설치 */}
+import Installenclosureim120 from "../../common/_device-install-enclosure-im120.mdx";
+
+<Installenclosureim120 />
+
+:::info
+
+製品の設置に関する詳細は、Supremaテクニカルサポート（CS@suprema.co.kr）までお問い合わせください。
+
+:::

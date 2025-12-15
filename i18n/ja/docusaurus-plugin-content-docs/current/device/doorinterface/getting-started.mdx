@@ -1,0 +1,164 @@
+---
+id: getting-started
+title: はじめに
+description: デバイスを使用するための初期手順を案内します。
+keywords:
+  - 同梱物
+  - 名称
+  - 機能
+  - ケーブル
+  - コネクター
+---
+
+デバイスを使用するための初期手順を案内します。
+
+## 同梱物
+
+<Table className='component'>
+<Tbody>
+
+<Row className='center white'>
+<Td rowspan={3}><Image src='/img/device/component-device-di24.svg' className='none' height={350} alone /></Td>
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+</Row>
+
+<Row className='center'>
+<Td>クイックガイド</Td>
+</Row>
+
+<Row className='center white'>
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+</Row>
+
+<Row className='center'>
+
+<Td>Door Interface</Td>
+
+<Td>オープンソースライセンスガイド</Td>
+
+</Row>
+
+<Row className='center white'>
+<Td><Image src='/img/device/component-fixing-screws6.svg' className='none' alone /></Td>
+<Td><Image src='/img/device/component-diode4.svg' className='none' alone /></Td>
+</Row>
+
+<Row className='center'>
+
+<Td>固定用ネジ x6</Td>
+
+<Td>ダイオード×4</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+<PageBreak />
+
+## 各部の名称と機能
+
+<Columns className='partname'>
+<Column>
+
+<Magnify src='/img/device/product-part-di24.svg' width={600} zoomFactor={.4} mgWidth={500} mgHeight={500} alone />
+
+</Column>
+<Column className='padding--l20'>
+
+| No. | 名前                                                 |
+| :-: | -------------------------------------------------- |
+|  1  | **AUX IN (0:2)** 接続​                               |
+|  2  | **RS-485** 接続                                      |
+|  3  | **RS-485** 終端抵抗スイッチ                                |
+|  4  | **SUPERVISED INPUT (3:5)** または **Input (3:5)** 接続  |
+|  5  | **RELAY 2 (Alarm)** 接続                             |
+|  6  | **OUTPUT (3:5)** 接続                                |
+|  7  | **RS-485 1** 終端抵抗スイッチ                              |
+|  8  | **WIEGAND 1** 接続                                   |
+|  9  | **RS-485 1** 接続                                    |
+|  10 | **RELAY 3 (Lock)** 接続                              |
+|  11 | ドアインターフェース電源接続（DC 12V / DC 24V IN）                 |
+|  12 | **RESET** ボタン                                      |
+|  13 | **INIT** ボタン                                       |
+|  14 | **RELAY 1 (Lock)** 接続                              |
+|  15 | **WIEGAND 0** 接続                                   |
+|  16 | **RS-485 0** 接続                                    |
+|  17 | **RS-485 0** 終端抵抗スイッチ                              |
+|  18 | **OUTPUT (0:2)** 接続                                |
+|  19 | **RELAY 0 (Alarm)** 接続                             |
+|  20 | **SUPERVISED INPUT (0:2)** または **Input (0:2)** 接続  |
+
+</Column>
+</Columns>
+
+:::info
+
+* **INIT** ボタンを 2 秒以上押して、デバイスと連動している製品を初期化し、別のデバイスに接続します。
+
+* **RESET** ボタンを押して、製品を再起動します。
+
+* 製品とリーダーを接続する際、リーダーの電源として製品のリーダー電源出力（12 Vdc 最大 0.6 A / 24 Vdc 最大 0.3 A）を使用できます。 12 Vdc 電源出力の場合、0.3 A を消費するリーダーを 2 台接続できます。
+
+:::
+
+<PageBreak />
+
+### ドアインターフェース状態 LED
+
+製品の状態は前面右側にある STATUS で確認でき、イーサネット、RS-485、RS-485 0、RS-485 1、システムの状態が 1 秒ごとに順番に表示されます。
+
+| 項目       | LED       | 状態                                 |
+| -------- | --------- | ---------------------------------- |
+| RS-485   | マゼンタ/青の点滅 | マスター装置正常                           |
+| ^        | マゼンタ/黄の点滅 | マスター装置切断                           |
+| RS-485 0 | 黄/青の点滅    | スレーブ装置正常                           |
+| ^        | 黄/黄の点滅    | スレーブ装置切断                           |
+| ^        | 黄/赤の点滅    | スレーブ装置なし                           |
+| RS-485 1 | 緑/青の点滅    | スレーブ装置正常                           |
+| ^        | 緑/黄の点滅    | スレーブ装置切断                           |
+| ^        | 緑/赤の点滅    | スレーブ装置なし                           |
+| システム     | 白/白の点滅    | システムロック（BioStar Xの作業条件と動作）+ タンパーオン |
+| ^        | 白/マゼンタの点滅 | システムロック（装置の作業条件と動作）+ タンパーオン        |
+| ^        | 白/青の点滅    | タンパーオン                             |
+| ^        | 白/シアンの点滅  | BioStar X接続成功 + タンパーオン             |
+| ^        | 白/緑の点滅    | BioStar X接続成功                      |
+| ^        | 白/黄の点滅    | システムロック（BioStar Xの作業条件と動作）         |
+| ^        | 白/赤の点滅    | システムロック（装置の作業条件と動作）                |
+
+<PageBreak />
+
+### 設置例
+
+本製品はドア拡張モジュールで、最大 2 つのドアを簡単に構成できます。
+
+BioStar Xと連携し、入退室管理と勤怠管理の両方を利用でき、RS-485(OSDP)、Wiegand、Supervised input、AUXなど多様なインターフェースを提供します。
+
+<Image src='/img/device/installation-example-di24.png' width="70%" className='none' />
+
+<PageBreak />
+
+### システム構成図
+
+本製品はRS-485ポートを3つ搭載しており、マスター装置に複数のDoor Interfaceをデイジーチェーン接続することで、最大34ドアの構成が可能です。
+
+<Image src='/img/device/system-configuration-di24.png' width='75%' className='none' />
+
+:::info
+
+* RS-485 0 ポートおよび RS-485 1 ポートには、ポートあたり最大 2 台のデバイスを接続できます。
+
+* 1 つの RS-485 ポートに 3 台以上のデバイスが接続されている場合、スレーブデバイスを検索するときに目的のデバイスが接続可能リストに表示されないことがあります。
+
+* マスター装置のホストポートに Door Interface をスレーブとして接続すると、マスター装置との接続が切れても、Door Interface に接続されたスレーブ装置がオフラインモード専用の施設コード（Facility Code for Offline Mode）を使用してカードの施設コード（Facility Code）を識別し、ドアを開けることができます。
+
+:::
+
+<PageBreak />
+
+### 全体接続構成図
+
+<Magnify src='/img/device/system-di24.svg' width='80%' zoomFactor={.4} mgWidth={500} mgHeight={500} />

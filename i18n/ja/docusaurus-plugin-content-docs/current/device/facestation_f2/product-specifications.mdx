@@ -1,0 +1,73 @@
+---
+id: product-specifications
+title: 製品仕様
+description: 製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+keywords:
+  - クレデンシャル
+  - 一般
+  - 顔
+  - ストレージ
+  - インターフェース
+  - 電気仕様
+  - 製品寸法
+---
+
+製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+
+import specs from '@site/static/specs/fsf2_specs.json';
+
+{/* 크리덴셜 */}
+
+<SpecSection data={specs.facestationf2.credentials} />
+
+{/* 일반 */}
+
+<SpecSection data={specs.facestationf2.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.facestationf2.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.facestationf2.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.facestationf2.power} />
+
+## サイズと重量
+
+<Badge only>FSF2-ODB</Badge>
+
+<Image src='/img/device/fsf2-odb-dimension.svg' className='none' />
+
+<Badge only>FSF2-DB, FSF2-AB</Badge>
+
+<Image src='/img/device/fsf2-dbadb-dimension.svg' className='none' />
+
+---
+
+:::note
+
+<Anno id='anno1'>1)</Anno> 表示されている最小顔認証距離は製品のデフォルト設定であり、推奨顔認証距離は0.5\~1.3 mです。
+
+<Anno id='anno2'>2)</Anno> DESFire EV2/EV3カードはDESFire EV1カードとの下位互換性があるため、DESFire EV1カードの機能を含めてCSNおよびスマートカード機能がサポートされます。
+
+<Anno id='anno3'>3)</Anno> RF認識距離は設置環境によって異なる場合があります。
+
+<Anno id='anno4'>4)</Anno> クレデンシャルなしで登録されたユーザーを基準としています。
+
+:::
+
+:::info
+
+* 製品仕様は性能向上のため予告なく変更されることがあります。
+
+* <Badge only>FSF2-DB, FSF2-AB</Badge> をマスター装置として使用する場合、指紋センサー付き装置をスレーブとして接続すると、スレーブ装置で指紋を認証できます。
+
+  * 指紋クレデンシャル最大数 (1:N)：100,000
+
+  * 指紋クレデンシャル最大数 (1:1)：100,000
+
+:::

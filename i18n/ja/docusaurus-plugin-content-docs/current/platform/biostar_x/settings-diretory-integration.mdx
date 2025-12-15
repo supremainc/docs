@@ -1,0 +1,280 @@
+---
+id: settings-diretory-integration
+title: ディレクトリ連携を設定する
+description: Microsoft Entra ID と BioStar X を連携し、ユーザーを同期・管理する方法を案内します。
+---
+
+import UserGroupFilter from '../../common/_usergroupfilter.mdx';
+import UserCustomField from '../../common/_usercustomfield.mdx';
+import SyncIntegration from '../../common/_sync-with-integ.mdx';
+
+**Microsoft Entra ID**（以下 **Entra ID**）または **アクティブ ディレクトリ**（Active Directory）と **BioStar X** を連携し、ユーザーを同期・管理する方法を案内します。 
+
+**Entra ID** または **Active Directory** と連携すると、以下の便利な機能を利用できます。 これにより、セキュリティと利便性を向上できます。
+
+* **Entra ID** が提供するシングル サインオン（SSO）機能を使用して、**Entra ID** アカウントで **BioStar X** にログインできます。
+
+* **Active Directory** が提供する Lightweight Directory Access Protocol（LDAP）認証を使用して **BioStar X** にログインできます。
+
+* **Entra ID** または **Active Directory** で構成したユーザーおよびグループを **BioStar X** と同期できます。
+
+* **Entra ID** または **Active Directory** で使用される役職・部署・グループなどのユーザー情報を **BioStar X** のカスタムフィールドにマッピングできます。
+
+:::info
+
+**Entra ID** または **Active Directory** 設定機能は、**アドバンス** ライセンス以上で追加オプションとして利用できます。 ライセンスポリシーの詳細は[次のドキュメント](licensing#features-add-ons)を参照してください。
+
+:::
+
+## Entra ID と連携する {#intergratewithentraid}
+
+1. **BioStar X** に管理者 ID でログインします。
+
+2. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+3. 画面左のサイドバーで <Cmd sid='setting.menu.directoryIntegration.root' /> をクリックします。
+
+4. <Cmd sid='settings.activeDirectory.title' product='2' /> 項目で <Cmd sid='settings.activeDirectory.AdServerNew' product='2' /> を選択します。
+
+   <Image src='/img/biostarx-setting-directory-integ-entraid.png' />
+
+5. 以下の案内に従って各項目を設定します。
+
+<Steps>
+<Step>
+
+### <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' /> {#EntraidServer}
+
+<Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' /> セクションで **Entra ID** のサーバー情報を入力し、<Cmd sid='settings.activeDirectory.Connect' product='2' /> ボタンをクリックします。
+
+<Image src='/img/biostarx-setting-directory-server.png' />
+
+* <Cmd sid='settings.activeDirectory.ClientID' product='2' />：**Entra ID** で登録したアプリケーションの **クライアント ID**（**Client ID**）を入力します。
+
+* <Cmd sid='settings.activeDirectory.ClientSecret' product='2' />：**Entra ID** で登録したアプリケーションの **証明書とシークレット**（**Certificates & secrets**）に追加した **クライアント シークレット**（**Client secrets**）を入力します。
+
+* <Cmd sid='settings.activeDirectory.PrimaryDomain' product='2' />：**Entra ID** で組織を作成するときに入力した既定のドメイン名を入力します。
+
+:::info
+
+* **Entra ID** でアプリケーションを登録する方法は [以下のリンク](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app) を参照してください。
+
+* **Entra ID** で **証明書とシークレット** を設定する方法は [以下のリンク](https://learn.microsoft.com/entra/identity-platform/how-to-add-credentials?tabs=client-secret) を参照してください。
+
+* **テナント ID** は **Entra ID** で登録したアプリケーションの **概要**（**Overview**）で確認できます。
+
+* <Cmd sid='settings.activeDirectory.PrimaryDomain' product='2' /> の情報は **Entra ID** の **概要** (Overview) で確認できます。
+
+  <Image src='/img/biostarx-setting-directory-primary-domain.png' />
+
+:::
+
+</Step>
+
+<Step>
+
+<UserGroupFilter hashid='usergroupfilterEntraid' name='Entra ID' />
+
+</Step>
+
+<Step>
+
+<UserCustomField hashid='userfieldEntraid' name='Entra ID' img01='biostarx-setting-directory-userfield.png' img02='biostarx-setting-directory-userfield-select-other.png' sid='settings.activeDirectory.FieldNameEI' />
+
+:::caution
+
+**Entra ID** と連携する場合、<Cmd sid='common.userId' product='2' /> フィールドはマッピングできません。 <Cmd sid='common.userId' product='2' /> は **BioStar X** が自動生成して適用します。
+
+:::
+
+</Step>
+
+<Step>
+
+### <Cmd sid='settings.activeDirectory.LogintitleEI' product='2' /> {#setssoEntraid}
+
+**Entra ID SSO** で **BioStar X** にログインできるようにするには、<Cmd sid='settings.activeDirectory.LogintitleEI' product='2' /> 項目を <Cmd sid='device.info.enabled' product='2' /> に変更します。
+
+<Image src='/img/biostarx-setting-directory-login-with-entraid.png' />
+
+<Cmd sid='settings.activeDirectory.RedirectionUri' product='2' /> 項目のリダイレクト URL をコピー（<IcCopy2 />）し、**Entra ID** ポータルの SSO リダイレクト設定に貼り付けます。 ユーザーが **Entra ID** でのログインに成功すると、このアドレスへリダイレクトされます。
+
+:::info
+
+* **Entra ID** にアプリケーションを登録し、リダイレクト URI を追加する方法については次のリンクを参照してください。
+
+  * [Microsoft Entra ID へのアプリケーション登録](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app)
+
+  * [アプリにリダイレクト URI を追加](https://learn.microsoft.com/entra/identity-platform/how-to-add-redirect-uri)
+
+* リダイレクト URL は **Entra ID** で登録したアプリケーションの **概要**（**Overview**）で確認できます。
+
+:::
+
+</Step>
+
+<Step>
+
+<SyncIntegration hashid='syncdatafromEntraid' name='Entra ID' />
+
+</Step>
+
+</Steps>
+
+:::note
+
+<Cmd sid='setting.menu.directoryIntegration.root' /> の設定をすべて完了したら、画面最下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックして保存します。 設定結果を確認するには [次のドキュメント](#checksettings) を参照してください。
+
+<Image src='/img/biostarx-setting-directory-btn-apply.png' />
+
+:::
+
+## Active Directory と連携する {#integratewithactivedirectory}
+
+1. **BioStar X** に管理者 ID でログインします。
+
+2. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+3. 画面左のサイドバーで <Cmd sid='setting.menu.directoryIntegration.root' /> をクリックします。
+
+4. <Cmd sid='settings.activeDirectory.title' product='2' /> 項目で <Cmd sid='settings.activeDirectory.AdServerOld' product='2' /> を選択します。
+
+   <Image src='/img/biostarx-setting-directory-integ-ad.png' />
+
+5. 以下の案内に従って各項目を設定します。
+
+:::info
+
+* Active Directory は Windows Server 2008 R2 以降のシステム環境で使用できます。
+
+* Active Directory サーバーを使用するには、<Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.server' product='2' /> メニューで <Cmd sid='setting.userDevice.useridType' product='2' /> 項目を <Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' /> に設定する必要があります。
+
+:::
+
+<Steps>
+
+<Step>
+
+### <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' /> {#ADserver}
+
+<Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' /> セクションで **Active Directory** のサーバー情報を入力し、<Cmd sid='settings.activeDirectory.Connect' product='2' /> ボタンをクリックします。
+
+<Image src='/img/biostarx-setting-directory-ad-server.png' />
+
+* <Cmd sid='settings.activeDirectory.ServerAddress' product='2' />：Windows Active Directory サーバーのアドレスを入力します。
+
+* <Cmd sid='settings.activeDirectory.UserName' product='2' />：Windows Active Directory のログイン ID を入力します。
+
+* <Cmd sid='settings.activeDirectory.Password' product='2' />：Windows Active Directory のログインパスワードを入力します。
+
+* <Cmd sid='settings.activeDirectory.DomainNode' product='2' />：Windows Active Directory の既定ドメイン名を入力します。 既定ドメイン名は下記の手順で確認できます。
+
+  1. **Active Directory 管理センター** を起動します。
+
+  2. ユーザーデータが保存されているノード（Node）を右クリックし、**プロパティ** を選択します。
+
+  3. **プロパティ** ウィンドウで **拡張** を選択し、**属性エディター** をクリックします。
+
+  4. **distinguishedName** の値を確認します。
+
+* <Cmd sid='settings.activeDirectory.secureTransfer' product='2' />：Windows Active Directory サーバーと通信するときに暗号化を使用できます。 Active Directory 証明書サービスをインストールし、<Cmd sid='settings.activeDirectory.keystorePassword' product='2' /> を設定するには [次のドキュメント](ad-encrypt) を参照してください。
+
+  * <Cmd sid='settings.activeDirectory.keystorePassword' product='2' />：Windows Active Directory サーバーの暗号化キー ストアのパスワードを入力します。 <Cmd sid='settings.activeDirectory.secureTransfer' product='2' /> 項目を <Cmd sid='device.info.enabled' product='2' /> に設定すると入力できます。
+
+</Step>
+
+<Step>
+
+<UserGroupFilter hashid='usergroupfilterAD' name='Active Directory' />
+
+</Step>
+
+<Step>
+
+<UserCustomField hashid='userfieldAD' name='Active Directory' img01='biostarx-setting-directory-userfield-ad.png' img02='biostarx-setting-directory-userfield-select-other-ad.png' sid='settings.activeDirectory.FieldNameAD' />
+
+</Step>
+
+<Step>
+
+### <Cmd sid='settings.activeDirectory.LogintitleAD' product='2' /> {#setssoAD}
+
+Active Directory サーバーのユーザー ID でログインできるようにするには、<Cmd sid='settings.activeDirectory.LogintitleAD' product='2' /> 項目を <Cmd sid='device.info.enabled' product='2' /> に変更します。 Active Directory サーバーの `sAMAccountName` フィールドの値が **BioStar X** のログイン ID にマッピングされます。
+
+:::caution
+
+`sAMAccountName` フィールドには特殊文字を含めることはできません。 **BioStar X** のログイン ID ポリシーに合致しない場合、ログインに失敗することがあります。
+
+:::
+
+<Image src='/img/biostarx-setting-directory-login-with-ad.png' />
+
+</Step>
+
+<Step>
+
+<SyncIntegration hashid='syncdatafromAd' name='Active Directory' />
+
+</Step>
+
+</Steps>
+
+:::note
+
+<Cmd sid='setting.menu.directoryIntegration.root' /> の設定をすべて完了したら、画面最下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックして保存します。 設定結果を確認するには [次のドキュメント](#checksettings) を参照してください。
+
+<Image src='/img/biostarx-setting-directory-btn-apply.png' />
+
+:::
+
+## 設定結果を確認する {#checksettings}
+
+**Entra ID** または **Active Directory** との連携設定を完了したら、画面下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。 以下の項目を参考に同期された設定を確認します。
+
+* <Cmd sid='common.user' product='2' /> メニューで同期されたユーザーの一覧を確認します。
+
+* **Entra ID** または **Active Directory** のログイン設定を完了した後、**BioStar X** にログインするときに <Cmd sid='login.entraidLoginBtn' product='2' /> ボタンが表示されます。
+
+  <Image src='/img/biostarx-setting-directory-entraid-login.png' />
+
+## ディレクトリ連携を除外する {#excludeintegration}
+
+<Cmd sid='setting.menu.directoryIntegration.root' /> 機能を使用して **Entra ID** または **Active Directory** と連携する場合、ディレクトリサービスに存在しないユーザーは **BioStar X** から削除されることがあります。 削除したくないユーザーがいる場合、次の方法で連携から除外できます。
+
+1. **BioStar X** に管理者 ID でログインします。
+
+2. <Cmd sid='common.user' product='2' /> メニューに移動します。
+
+3. <Cmd sid='menu.user.allUserGroups' product='2' /> 一覧で連携から除外するユーザーをクリックします。
+
+4. 選択したユーザーの詳細画面が表示されたら、<Cmd sid='common.advanced' product='2' /> セクションで <Cmd sid='user.adsync.exclude' product='2' /> 項目のチェックボックスをクリックします。
+
+   <Image src='/img/biostarx-user-advance-exclude-sync.png' />
+
+5. <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+選択したユーザーは <Cmd sid='setting.menu.directoryIntegration.root' /> 機能を使用するときに連携から除外されます。
+
+## ディレクトリ連携を解除する {#disableIntegration}
+
+<Cmd sid='settings.activeDirectory.title' product='2' /> 機能を無効にする場合、次の手順に従います。
+
+1. **BioStar X** に管理者 ID でログインします。
+
+2. <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.menu.directoryIntegration.root' /> をクリックします。
+
+3. <Cmd sid='settings.activeDirectory.title' product='2' /> 項目で <Cmd sid='settings.activeDirectory.notUse' product='2' /> を選択します。
+
+   <Image src='/img/biostarx-setting-directory-unset.png' />
+
+4. <Cmd sid='alert.warning' product='2' /> メッセージが表示されたら、<Cmd sid='button.continue' product='2' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-setting-directory-unset-warn-message.png' />
+
+5. 画面下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+:::caution
+
+<Cmd sid='settings.activeDirectory.title' product='2' /> 機能を <Cmd sid='settings.activeDirectory.notUse' product='2' /> に設定すると、**BioStar X** で **Entra ID** または **Active Directory** と連携しているすべての設定が解除されます。 連携されたユーザーおよびグループ情報は削除されませんが、以降は同期されません。 連携を解除する前に必ず確認してください。
+
+:::

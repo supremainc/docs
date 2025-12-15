@@ -1,0 +1,451 @@
+---
+id: xpd2-settings
+title: XPass D2 を設定する
+description: XPass D2 に適用する設定をあらかじめテンプレートとして作成し、個別デバイスに直接適用できます。
+keywords:
+  - XPass D2
+  - テンプレート
+  - デバイス検索
+  - デバイス接続
+  - ファームウェアをアップグレードする
+  - デバイス再起動
+  - 管理者パスワード
+---
+
+XPass D2 に適用する設定をあらかじめテンプレートとして作成し、個別デバイスに直接適用できます。 PC で管理プログラムに接続して設定を変更したりコマンドカードを使用する方法と比べて、はるかに速く設定を適用できます。
+
+:::info
+
+デバイスのファームウェアバージョンが低い場合、いくつかの設定が適用されないことがあります。 すべての設定を適用するには、[デバイスファームウェアをアップグレードする](#device-firmware-upgrade)を参照してファームウェアをアップグレードしてください。
+
+:::
+
+## テンプレートを追加する {#template-add}
+
+RS-485 通信、カード形式、キーパッド設定、PIN、LED、ブザーなどを設定した後、テンプレートとして追加できます。 テンプレートを追加すると、複数の個別デバイスを毎回設定せずに、迅速かつ簡単に設定を適用できます。
+
+1. モバイル端末で Suprema Device Manager を起動します。
+
+2. メイン画面で XPass D2 を選択します。
+
+3. <Cmd sid='ui_338' product='dev' /> → <Image src='/img/common/ico-add.svg' ico alone /> を押します。
+
+   <Image src='/img/device/xpd2-template-management-add.png' className='none' width={540} />
+
+4. テンプレートを作成するデバイスモデルを選択します。
+
+5. 各項目を設定した後、テンプレートを保存するには <Cmd sid='ui_295' product='dev' /> を押します。
+
+:::info
+
+テンプレートは最大 100 個まで追加できます。
+
+:::
+
+### テンプレート名および管理者パスワードの設定
+
+<Image src='/img/device/xpd2-template-name-pw.png' width={250} />
+
+* <Cmd sid='ui_341' product='dev' />：希望するテンプレート名を入力します。
+
+* <Cmd sid='ui_074' product='dev' />：管理者パスワードを入力します。
+
+:::info
+
+* 管理者パスワードは 6～32 桁の数字で設定できます。
+
+* 管理者パスワードを紛失しないよう注意してください。 管理者パスワードを紛失した場合、テンプレートを適用したデバイスに接続するにはそのデバイスを初期化する必要があります。
+
+* 管理者パスワードの変更について詳しくは、[管理者パスワードを変更する](#admin-password-change)を参照してください。
+
+:::
+
+### インターフェース
+
+<Image src='/img/device/xpd2-template-interface.png' width={250} />
+
+* <Cmd sid='ui_038' product='dev' />：デバイスとマスターデバイスの通信で使用する OSDP アドレスを設定します。 0～126 の数値で設定できます。
+
+* <Cmd sid='ui_298' product='dev' />：RS-485 の転送速度を設定します。
+
+### 認証
+
+<Image src='/img/device/xpd2-template-auth-cardtype.png' width={250} />
+
+* <Cmd sid='ui_328' product='dev' />：デバイスで使用するカードタイプを設定できます。
+
+  * <Cmd sid='ui_008' product='dev' />：CSN カードタイプを選択し、バイト順序を設定できます。
+
+  * <Cmd sid='ui_201' product='dev' />：Suprema が発行したスマートカードタイプを選択できます。
+
+  * <Cmd sid='ui_333' product='dev' />：他社が発行したスマートカードタイプを選択できます。
+
+  * <Cmd sid='ui_139' product='dev' />：モバイルカードタイプを設定できます。
+
+:::info
+
+バイト順序を <Cmd sid='ui_034' product='dev' /> に設定すると、カードデータを処理する際に上位バイトから下位バイトの順に処理し、カードのシリアル番号（CSN）を保存するときに左から右へ順に処理します。 <Cmd sid='ui_030' product='dev' /> は下位バイトから上位バイトの順に処理し、カードのシリアル番号（CSN）を保存します。
+
+:::
+
+### ウィーガンドカードフォーマット
+
+<Image src='/img/device/xpd2-template-wiegand-card.png' width={250} />
+
+* <Cmd sid='ui_354' product='dev' />：デバイスに指定する Wiegand カード形式を設定できます。 設定した形式でカードデータが処理されます。
+
+  * <Cmd sid='ui_179' product='dev' />：希望するフォーマットがない場合、<IcAdd/> を押して新しい Wiegand フォーマットを追加できます。
+
+    <Image src='/img/device/xpd2-template-wiegand-card-new.png' width={250} />
+
+    * <Cmd sid='ui_253' product='dev' />：希望する Wiegand フォーマットの名前を入力します。
+
+    * <Cmd sid='ui_318' product='dev' />：合計ビット数を入力します。
+
+    * <Cmd sid='ui_024' product='dev' />：使用する ID の開始ビットと終了ビットを入力します。 <Image src='/img/common/ico-add3.svg' ico alone /> <Cmd sid='ui_319' product='dev' /> を押すと、ID フィールドを追加できます。
+
+    * <Cmd sid='ui_350' product='dev' />：使用するパリティフィールドの位置と開始ビット、終了ビットを入力します。 <Image src='/img/common/ico-add3.svg' ico alone /> <Cmd sid='ui_319' product='dev' /> を押すと、パリティフィールドを追加できます。
+
+      :::info
+
+      パリティフィールドを追加するには、合計ビット数を入力します。
+
+      :::
+
+* <Cmd sid='ui_352' product='dev' />：Wiegand 信号のパルス幅を設定できます。
+
+* <Cmd sid='ui_351' product='dev' />：Wiegand 信号のパルス間隔を設定できます。
+
+### Suprema スマートカードレイアウト
+
+<Image src='/img/device/xpd2-template-suprema-card.png' width={250} />
+
+* <Cmd sid='ui_151' product='dev' />：補助サイトキーの使用可否を設定できます。 補助サイトキーを設定すると、カードの基本キーが一致しない場合に補助サイトキーを使用して認証を実行できます。
+
+* <Cmd sid='ui_032' product='dev' />：MIFARE カードを設定できます。
+
+  * <Cmd sid='ui_222' product='dev' />：暗号化方式を Crypto-1 または AES-128 に設定できます。
+
+  * <Cmd sid='ui_087' product='dev' />：スマートカードとデバイス間の通信を暗号化するキーです。
+
+  * <Cmd sid='ui_151' product='dev' />：カードの基本サイトキーが一致しない場合に使用して認証を実行できます。 補助サイトキーの項目は、前レベルの <Cmd sid='ui_151' product='dev' /> を有効にしたときのみ表示されます。
+
+  * <Cmd sid='ui_214' product='dev' />：各テンプレートを保存する開始ブロックを選択します。 このブロックはユーザー情報を保存するブロックのインデックスです。既にスマートカードを使用している場合は、保存可能なブロックを設定します。 MIFAREのみ設定できます。
+
+* <Cmd sid='ui_010' product='dev' />：DESFireカードを設定できます。
+
+  * <Cmd sid='ui_011' product='dev' />：他社が発行したDESFireカードを使用できます。 DESFireのみ設定します。
+
+  * <Cmd sid='ui_087' product='dev' />：スマートカードとデバイス間の通信を暗号化するキーです。
+
+  * <Cmd sid='ui_151' product='dev' />：カードの基本サイトキーが一致しない場合に使用して認証を実行できます。 補助サイトキーの項目は、前レベルの <Cmd sid='ui_151' product='dev' /> を有効にしたときのみ表示されます。
+
+  * <Cmd sid='ui_223' product='dev' />：アプリケーションIDを設定してください。 ファイルIDを含む一種のディレクトリとして機能します。 DESFireのみ設定します。
+
+  * <Cmd sid='ui_347' product='dev' />：ファイルIDを設定してください。 DESFireのみ設定します。
+
+  * <Cmd sid='ui_222' product='dev' />：暗号化方式をDES/3DESまたはAESに設定できます。
+
+* <Cmd sid='ui_202' product='dev' />：スマートカード出力のバイト順序を設定できます。
+
+:::info
+
+* <Cmd sid='ui_011' product='dev' />を使用するには、<Cmd sid='ui_224' product='dev' />、<Cmd sid='ui_225' product='dev' />、<Cmd sid='ui_348' product='dev' />、<Cmd sid='ui_349' product='dev' />、<Cmd sid='ui_223' product='dev' />、<Cmd sid='ui_347' product='dev' />、<Cmd sid='ui_222' product='dev' />の情報を正確に入力してください。
+
+* <Cmd sid='ui_224' product='dev' />、<Cmd sid='ui_348' product='dev' />は最大32バイトの16進数のみ入力できます。
+
+* バイト順序を <Cmd sid='ui_034' product='dev' /> に設定すると、カードデータを処理する際に上位バイトから下位バイトの順に処理し、カードのシリアル番号（CSN）を保存するときに左から右へ順に処理します。 <Cmd sid='ui_030' product='dev' /> は下位バイトから上位バイトの順に処理し、カードのシリアル番号（CSN）を保存します。
+
+:::
+
+### カスタムスマートカードレイアウト
+
+<Image src='/img/device/xpd2-template-custom-card.png' width={250} />
+
+* <Cmd sid='ui_151' product='dev' />：補助サイトキーの使用可否を設定できます。 補助サイトキーを設定すると、カードの基本キーが一致しない場合に補助サイトキーを使用して認証を実行できます。
+
+* <Cmd sid='ui_032' product='dev' />：MIFARE カードを設定できます。
+
+  * <Cmd sid='ui_222' product='dev' />：暗号化方式を Crypto-1 または AES-128 に設定できます。
+
+  * <Cmd sid='ui_087' product='dev' />：スマートカードとデバイス間の通信を暗号化するキーです。
+
+  * <Cmd sid='ui_151' product='dev' />：カードの基本サイトキーが一致しない場合に使用して認証を実行できます。 補助サイトキーの項目は、前レベルの <Cmd sid='ui_151' product='dev' /> を有効にしたときのみ表示されます。
+
+  * <Cmd sid='ui_154' product='dev' />：各テンプレートが保存される開始ブロックを選択してください。 このブロックはユーザー情報を保存するブロックのインデックスです。既にスマートカードを使用している場合は、保存可能なブロックを設定します。 MIFAREのみ設定できます。
+
+  * <Cmd sid='ui_145' product='dev' />：カード番号を読み取る開始位置を設定できます。
+
+  * <Cmd sid='ui_110' product='dev' />：（設定した<Cmd sid='ui_087' product='dev' />と<Cmd sid='ui_151' product='dev' />がカードの設定値と同じ場合）読み取るカードのデータサイズを設定できます。
+
+* <Cmd sid='ui_010' product='dev' />：DESFireカードを設定できます。
+
+  * <Cmd sid='ui_011' product='dev' />：他社が発行したDESFireカードを使用できます。 DESFireのみ設定します。
+
+  * <Cmd sid='ui_087' product='dev' />：スマートカードとデバイス間の通信を暗号化するキーです。
+
+  * <Cmd sid='ui_151' product='dev' />：カードの基本サイトキーが一致しない場合に使用して認証を実行できます。 補助サイトキーの項目は、前レベルの <Cmd sid='ui_151' product='dev' /> を有効にしたときのみ表示されます。
+
+  * <Cmd sid='ui_223' product='dev' />：アプリケーションIDを設定してください。 ファイルIDを含む一種のディレクトリとして機能します。 DESFireのみ設定します。
+
+  * <Cmd sid='ui_347' product='dev' />：ファイルIDを設定してください。 DESFireのみ設定します。
+
+  * <Cmd sid='ui_222' product='dev' />：暗号化方式をDES/3DESまたはAESに設定できます。
+
+  * <Cmd sid='ui_145' product='dev' />：カード番号を読み取る開始位置を設定できます。
+
+  * <Cmd sid='ui_110' product='dev' />：（設定した<Cmd sid='ui_087' product='dev' />と<Cmd sid='ui_151' product='dev' />がカードの設定値と同じ場合）読み取るカードのデータサイズを設定できます。
+
+* <Cmd sid='ui_146' product='dev' />：スマートカード出力のバイト順序を設定できます。
+
+:::info
+
+* <Cmd sid='ui_011' product='dev' />を使用するには、<Cmd sid='ui_224' product='dev' />、<Cmd sid='ui_225' product='dev' />、<Cmd sid='ui_348' product='dev' />、<Cmd sid='ui_349' product='dev' />、<Cmd sid='ui_223' product='dev' />、<Cmd sid='ui_347' product='dev' />、<Cmd sid='ui_222' product='dev' />の情報を正確に入力してください。
+
+* <Cmd sid='ui_224' product='dev' />、<Cmd sid='ui_348' product='dev' />は最大32バイトの16進数のみ入力できます。
+
+* バイト順序を <Cmd sid='ui_034' product='dev' /> に設定すると、カードデータを処理する際に上位バイトから下位バイトの順に処理し、カードのシリアル番号（CSN）を保存するときに左から右へ順に処理します。 <Cmd sid='ui_030' product='dev' /> は下位バイトから上位バイトの順に処理し、カードのシリアル番号（CSN）を保存します。
+
+:::
+
+### キーパッド設定
+
+<Image src='/img/device/xpd2-template-keypad.png' width={250} />
+
+* <Cmd sid='ui_335' product='dev' />：キーパッドの使用可否を設定できます。 キーパッドを有効にすると、キーパッドでカードIDを入力して認証できます。
+
+* <Cmd sid='ui_219' product='dev' />：キーパッドでカードIDを入力する際、キーを押すたびに値を送信します。
+
+* <Cmd sid='ui_306' product='dev' />：キーパッドでカードIDを入力する際、すべてのキーを押した後に「#」キーを押すと、全値を一括で送信します。
+
+* <Cmd sid='ui_327' product='dev' />：デバイスの認証モードをカード＋PINに設定した場合、ユーザーがカードを提示するとLEDを動作させてPIN入力を促すことができます。
+
+* <Cmd sid='ui_147' product='dev' />：キーパッドのバックライトをオンまたはオフにできます。
+
+:::info
+
+* <Cmd sid='ui_336' product='dev' />はXPD2-GKDBデバイスのテンプレート設定画面にのみ表示されます。
+
+* <Cmd sid='ui_147' product='dev' />はXPD2-GKDBハードウェアV02M、ファームウェアv1.7.1以上でのみサポートされます。
+
+* デバイスでキーパッドを通じて入力された値は、基本的に4ビット単位で送信されます。 キーパッドで入力したカードIDは、Wiegandカード形式に従ってカードIDと同じ形式で送信されます。
+
+:::
+
+### その他
+
+<Image src='/img/device/xpd2-template-others.png' width={250} />
+
+* <Cmd sid='ui_150' product='dev' />：デバイスでタンパーイベントが発生した場合、デバイスに保存されたセキュリティキーを削除するよう設定できます。 セキュリティタンパー機能を使用するには有効にしてください。
+
+### LED / ブザー
+
+<Image src='/img/device/device-manager-led-buzzer.png' width={250} />
+
+* <Cmd sid='ui_272' product='dev' />：通常時にデバイスLEDに表示される色を設定できます。
+
+* <Cmd sid='ui_325' product='dev' />：デバイスにカードをスキャンする際にデバイスLEDに表示される色とブザー音の再生回数を設定できます。
+
+* <Cmd sid='ui_262' product='dev' />：認証成功時にデバイスLEDに表示される色とブザー音の再生回数を設定できます。
+
+* <Cmd sid='ui_263' product='dev' />：認証失敗時にデバイスLEDに表示される色とブザー音の再生回数を設定できます。
+
+:::info
+
+* LEDは最大3色を交互に繰り返し表示するよう設定できます。 スロットを押して色を選択してください。
+
+* <Image src='/img/common/ico-cancel2.svg' ico alone /> を選択すると、該当スロットの色表示順序をスキップし、次の順序のスロットに設定された色が表示されます。
+
+:::
+
+## テンプレートを適用する
+
+追加したテンプレートはBLE通信を利用して複数台のデバイスに同一に適用できます。
+
+:::info
+
+デバイスのファームウェアバージョンが低い場合、いくつかの設定が適用されないことがあります。 すべての設定を適用するには、[デバイスファームウェアをアップグレードする](#device-firmware-upgrade)を参照してファームウェアをアップグレードしてください。
+
+:::
+
+1. モバイル機器でBluetooth機能を有効にした後、Suprema Device Managerを起動してください。
+
+2. メイン画面で XPass D2 を選択します。
+
+3. <Cmd sid='ui_343' product='dev' />を押してください。 選択可能なテンプレートの一覧が表示されます。
+
+   <Image src='/img/device/xpd2-template-choose-select.png' className='none' width={540} />
+
+4. テンプレート一覧から目的のテンプレートを選択してください。
+
+5. <Cmd sid='ui_212' product='dev' />を押してください。
+
+   <Image src='/img/device/xpd2-template-choose-select-start.png' width={250} />
+
+6. テンプレートを適用するデバイスにモバイル機器の背面を完全に接触させてください。
+
+7. テンプレート適用が完了したら、<Cmd sid='ui_367' product='dev' />を押してください。
+
+:::info
+
+* Suprema Device Managerで変更した設定はデバイスにのみ適用され、サーバーには同期されません。
+
+* デバイスがマスターデバイスと接続されているか、Wiegand出力設定が変更されている場合、Suprema Device Managerにデフォルトキーで接続できません。 Suprema Device Managerに接続するにはデバイスを初期化してください。
+
+:::
+
+## テンプレートを管理する
+
+### テンプレートを編集する
+
+1. モバイル端末で Suprema Device Manager を起動します。
+
+2. メイン画面で XPass D2 を選択します。
+
+3. <Cmd sid='ui_338' product='dev' />を押してください。
+
+   <Image src='/img/device/xpd2-template-management-select.png' className='none' width={540} />
+
+4. テンプレート一覧から編集するテンプレートを選択します。
+
+5. 「[テンプレートを追加](#template-add)」を参照してテンプレートを編集します。
+
+6. 変更した設定を保存するには <Cmd sid='ui_295' product='dev' /> を、新しいテンプレートとして保存するには <Cmd sid='ui_178' product='dev' /> を押します。
+
+### テンプレートを削除する
+
+1. モバイル端末で Suprema Device Manager を起動します。
+
+2. メイン画面で XPass D2 を選択します。
+
+3. <Cmd sid='ui_338' product='dev' />を押してください。
+
+   <Image src='/img/device/xpd2-template-management-select.png' className='none' width={540} />
+
+4. テンプレート一覧で削除するテンプレートを選択します。
+
+5. テンプレートを削除するには <Image src='/img/common/ico-delete.svg' ico alone /> → <Cmd sid='ui_367' product='dev' /> を押します。
+
+   <Image src='/img/device/xpd2-template-management-select-del.png' width={250} />
+
+### テンプレートをエクスポートする
+
+XPass D2 設定のテンプレートをアプリからエクスポートできます。
+
+1. モバイル端末で Suprema Device Manager を起動します。
+
+2. メイン画面で XPass D2 を選択します。
+
+3. <Cmd sid='ui_338' product='dev' />を押してください。
+
+   <Image src='/img/device/xpd2-template-management-export1.png' className='none' width={840} />
+
+4. テンプレート一覧画面の上部で <Image src='/img/common/ico-menu1.svg' ico alone /> を押してから <Cmd sid='ui_339' product='dev' /> を選択します。
+
+5. エクスポートするテンプレートを選択した後、<Image src='/img/common/ico-check.svg' ico alone /> を押します。
+
+   <Image src='/img/device/xpd2-template-management-export2.png' width={250} />
+
+:::info
+
+テンプレートは Suprema Device Manager アプリケーションのインストールファイルと同じ場所に作成される *DeviceManager_TemplateFiles* フォルダーに保存されます。
+
+:::
+
+### テンプレートをインポートする
+
+XPass D2 設定のテンプレートをアプリにインポートできます。
+
+1. モバイル端末で Suprema Device Manager を起動します。
+
+2. メイン画面で XPass D2 を選択します。
+
+3. <Cmd sid='ui_338' product='dev' />を押してください。
+
+   <Image src='/img/device/xpd2-template-management-import.png' className='none' width={840} />
+
+4. テンプレート一覧画面の上部で <Image src='/img/common/ico-menu1.svg' ico alone /> を押してから <Cmd sid='ui_337' product='dev' /> を選択します。
+
+5. テンプレートが保存されているフォルダーでインポートするテンプレートを選択します。
+
+:::info
+
+テンプレートは Suprema Device Manager アプリケーションのインストールファイルと同じ場所に作成される *DeviceManager_TemplateFiles* フォルダーに保存されます。
+
+:::
+
+## デバイスの検索と接続 {#device-search-connect}
+
+周辺に設置された XPass D2 を検索して接続できます。 Suprema Device Manager と接続すると、デバイスのファームウェアのアップグレードやデバイスの再起動、テンプレートのパスワード変更など、さまざまな機能を利用できます。
+
+1. モバイル機器でBluetooth機能を有効にした後、Suprema Device Managerを起動してください。
+
+2. メイン画面で XPass D2 を選択します。
+
+3. <Cmd sid='ui_285' product='dev' /> を押します。 接続可能なデバイスの一覧が表示されます。
+
+   <Image src='/img/device/xpd2-template-search-device-select.png' className='none' width={540} />
+
+4. デバイス一覧でデバイス ID を確認してデバイスを選択するか、接続するデバイスにモバイル機器を近づけます。
+
+5. 接続パスワードを入力します。 入力したパスワードを画面に表示するには <Image src='/img/common/ico-password.svg' ico alone /> を押します。
+
+6. デバイスの接続を完了するには <Cmd sid='ui_367' product='dev' /> を押します。
+
+## デバイスのファームウェアをアップグレードする {#device-firmware-upgrade}
+
+デバイスのファームウェアを簡単にアップグレードできます。
+
+:::info
+
+* ファームウェアをアップグレードするには、モバイル機器にファームウェアファイルをダウンロードする必要があります。 最新ファームウェアは[Suprema ダウンロードセンター](https://download.supremainc.com/)からダウンロードできます。
+
+* ファームウェアのアップグレード中は、デバイスとモバイル機器の距離を 1 m 以内に保ってください。
+
+:::
+
+1. 「[デバイスの検索と接続](#device-search-connect)」を参照して、ファームウェアをアップグレードするデバイスと接続します。
+
+2. <Image src='/img/common/ico-option.svg' ico alone /> → <Cmd sid='ui_018' product='dev' /> を押します。
+
+   <Image src='/img/device/xpd2-template-management-fwupgrade.png' width={250} />
+
+3. ファームウェアファイルが保存されているパスでファームウェアを選択します。 ファームウェアのアップグレードが実行されます。
+
+4. ファームウェアのアップグレードを完了するには <Cmd sid='ui_367' product='dev' /> を押します。
+
+## デバイスを再起動する
+
+デバイスを再起動できます。
+
+1. 「[デバイスの検索と接続](#device-search-connect)」を参照して、再起動するデバイスと接続します。
+
+2. <Image src='/img/common/ico-option.svg' ico alone /> → <Cmd sid='ui_287' product='dev' /> を押します。
+
+   <Image src='/img/device/xpd2-template-management-restart.png' width={250} />
+
+3. デバイスを再起動すると、モバイル機器との BLE 通信が切断されます。 自動で再接続するには、<Cmd sid='ui_276' product='dev' /> 機能を有効にします。 詳細な設定方法は「[アプリを設定する](initial-setup#app-settings)」を参照してください。
+
+## 管理者パスワードを変更する {#admin-password-change}
+
+テンプレートの管理者パスワードを変更できます。
+
+1. 「[デバイスの検索と接続](#device-search-connect)」を参照し、パスワードを変更するテンプレートが適用されたデバイスと接続します。
+
+2. <Image src='/img/common/ico-option.svg' ico alone /> → <Cmd sid='ui_156' product='dev' /> を押します。
+
+   <Image src='/img/device/xpd2-template-management-password.png' width={250} />
+
+3. 現在のパスワードと新しいパスワードを入力します。
+
+   <Image src='/img/device/device-manager-change-password.png' width={250} />
+
+4. パスワードの変更を完了するには <Cmd sid='ui_367' product='dev' /> を押します。
+
+:::info
+
+* 管理者パスワードは 6～32 桁の数字で設定できます。
+
+* 管理者パスワードを紛失しないよう注意してください。 管理者パスワードを紛失した場合、テンプレートを適用したデバイスに接続するにはそのデバイスを初期化する必要があります。
+
+:::

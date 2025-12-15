@@ -1,0 +1,188 @@
+---
+id: settings-visitor
+title: 訪問者設定
+description: 訪問者を管理するために訪問先と訪問PCを構成でき、訪問者向けの入退館規約と案内文を設定できます。 さらに、カスタム訪問者フィールドを使用して訪問者に求める情報を直接追加することもできます。
+keywords:
+  - 訪問者管理
+  - カスタムフィールド
+---
+
+訪問者を管理するために訪問先と訪問PCを構成でき、訪問者向けの入退館規約と案内文を設定できます。 さらに、カスタム訪問者フィールドを使用して訪問者に求める情報を直接追加することもできます。
+
+:::info
+
+* <Cmd sid="common.visitor" product='2' /> 設定は、**アドバンス** (Advanced) ライセンス以上で追加オプションとして利用できます。 ライセンスポリシーの詳細は[次のドキュメント](licensing#features-add-ons)を参照してください。
+
+* <Cmd sid="common.visitor" product='2' /> メニューを使用するには、<Cmd sid="setting.server.automaticUserSync" product='2' /> または <Cmd sid="setting.server.serverMatching.use" product='2' /> オプションを有効にする必要があります。 詳細は[こちら](settings-server-server)を参照してください。
+
+:::
+
+## 訪問設定 {#settings-visitor}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid="common.visitor" product='2' /> をクリックします。
+
+3. 次の案内に従って訪問者設定を構成してください。
+
+<Steps>
+<Step>
+
+### 訪問先設定 {#settings-visitor-site}
+
+各訪問先の訪問申請用または訪問者管理用PCで使用する入退館グループとカード使用の有無を設定できます。 カードを使用する場合は、カード種類とデータ形式も設定できます。
+
+<Image src='/img/biostarx-settings-visitor-site-settings.png' className='none' />
+
+* <Cmd sid="setting.server.custom_field.configure.th.name" product='2' />：訪問先の名前を入力できます。
+
+  :::info
+
+  * 訪問先名は最大48文字まで入力できます。
+
+  :::
+
+* <Cmd sid="visitor.accessGroup" product='2' />：訪問者に割り当てる入退館グループを選択できます。
+
+  :::info
+
+  訪問者用の入退室グループをあらかじめ設定しておくと、管理が容易になります。 入退室グループの設定について詳しくは[こちら](settings-access-control-manage-access-group)を参照してください。
+
+  :::
+
+* <Cmd sid="common.card" product='2' /> <Cmd sid="common.use" product='2' />：カードを使用するかどうかを選択できます。
+
+* <Cmd sid="user.cardType" product='2' />：訪問先で使用するカードの種類を選択できます。 カードの種類は、<Cmd sid="common.card" product='2' /> <Cmd sid="common.use" product='2' /> を設定した場合にのみ有効になります。
+
+* <Cmd sid="user.cardEnrol.cardFormat" product='2' />：カードデータを読み取る形式を設定できます。 <Cmd sid="user.cardEnrol.cardFormat" product='2' /> は、<Cmd sid="user.cardType" product='2' /> を <Cmd sid="user.cardEnrol.cardTypeWiegand" product='2' /> に設定した場合にのみ有効になります。
+
+訪問先設定を保存するには、<Cmd sid="visitor.setting.button.apply" product='2' /> をクリックしてください。
+
+</Step>
+<Step>
+
+### 訪問PC設定 {#settings-visitor-pc}
+
+訪問申請用または訪問者管理用PCを設定できます。
+
+<Image src='/img/biostarx-settings-visitor-visit-pc-settings.png' className='none' />
+
+* <Cmd sid="common.name" product='2' />：訪問申請用または訪問者管理用PCの名前を設定できます。
+
+* <Cmd sid="common.fingerPrint" product='2' /> <Cmd sid="setting.server.enrollment_device.device_name" product='2' />：訪問者が指紋認証で入退館する場合、指紋を登録するデバイスを選択します。
+
+* <Cmd sid="common.card" product='2' /> <Cmd sid="setting.server.enrollment_device.device_name" product='2' />：訪問者がカード認証で入退館する場合、カードを発行するデバイスを選択します。 カードデバイス名は、カード使用を選択した訪問先を設定した場合にのみ有効になります。
+
+* <Cmd sid="visitor.site" product='2' />：該当の訪問PCで訪問を管理する訪問先を選択します。
+
+訪問PC設定を保存するには <Cmd sid="visitor.setting.button.apply" product='2' /> をクリックします。
+
+:::info
+
+* 訪問PC名は最大48文字まで入力できます。
+
+* 指紋デバイスとカードデバイスを同時に使用でき、それぞれ1台ずつ選択できます。
+
+* 訪問先はPCごとに1つだけ選択できます。
+
+:::
+
+</Step>
+<Step>
+
+### 訪問PC選択 {#settings-visitor-assign-pc}
+
+<Cmd sid="visitor.pc.setting" product='2' /> で設定したPCを選択し、使用中のPCに割り当てることができます。
+
+<Image src='/img/biostarx-settings-visitor-visit-pc-select.png' className='none' />
+
+設定を保存するには <Cmd sid="visitor.setting.button.apply" product='2' /> をクリックします。 
+
+</Step>
+<Step>
+
+### 訪問者申請ページショートカット {#settings-visitor-pc-link}
+
+訪問申請用PCのデスクトップに訪問申請ページへのショートカットアイコンを作成できます。 <Cmd sid="visitor.link.visitPCKIOSK" product='2' /> 項目のURLをデスクトップにドラッグしてください。
+
+<Image src='/img/biostarx-settings-visitor-page-shortcut.png' />
+
+WebブラウザーでそのURLにアクセスすると、訪問申請ページを確認できます。
+
+<Image src='/img/biostarx-settings-visitor-welcome-screen.png' />
+
+</Step>
+
+</Steps>
+
+## 利用規約 & 訪問者設定 {#settings-visitor-terms}
+
+訪問者入退館規約、個人情報取扱方針、案内文など、訪問者に関する主要設定を管理できます。
+
+<Image src='/img/biostarx-settings-visitor-terms-visitor-settings.png' className='none' />
+
+* **入退館利用規約**：入退館に関する利用規約と規約同意文を入力できます。 <IcEdit /> をクリックして入力フィールドを有効化し、利用規約と規約同意文を入力します。
+
+  :::info
+
+  * 入退館規約は最大65,535文字まで入力できます。
+
+  * 規約同意文は最大64文字まで入力できます。
+
+  :::
+
+* **個人情報取扱方針**：訪問者が訪問時に提供した個人情報の取扱方針とその方針への同意文を入力できます。 <IcEdit /> をクリックして入力フィールドを有効化し、個人情報取扱方針とその方針への同意文を入力します。
+
+  :::info
+
+  * 個人情報取扱方針は最大65,535文字まで入力できます。
+
+  * 個人情報取扱方針への同意文は最大64文字まで入力できます。
+
+  :::
+
+* <Cmd sid="visitor.periodKeepSensitive" product='2' />：訪問者が訪問時に提供した個人情報の保管期間を設定できます。 <IcEdit /> をクリックして入力フィールドを有効化し、個人情報の保管期間を日単位で入力します。
+
+  :::info
+
+  * 個人および機微情報の保管期間が満了した訪問者リストは <Cmd sid="common.visitor" product='2' /> メニューで削除できます。
+
+  :::
+
+* <Cmd sid="visitor.guideAfterRegister" product='2' />：訪問申請完了時にポップアップ画面で表示する案内文を入力できます。 <IcEdit /> をクリックして入力フィールドを有効化し、案内文を入力します。
+
+  :::info
+
+  * 訪問申請完了時の案内文は最大65,535文字まで入力できます。
+
+  * 案内文を入力しない場合、訪問申請完了時に案内文のポップアップ画面は表示されません。
+
+  :::
+
+* <Cmd sid="visitor.defaultActivePeriod" product='2' />：訪問者の入退館許可期間を設定できます。 <IcEdit /> をクリックして入力フィールドを有効化し、訪問者のデフォルト入退館許可期間を日単位で入力します。
+
+## カスタム訪問者フィールド設定 {#settings-visitor-custom-field}
+
+訪問者の追加情報を入力するフィールドを追加でき、追加されたフィールドは訪問申請画面に表示されます。
+
+<Image src='/img/biostarx-settings-visitor-custom-visitor-field.png' className='none' />
+
+* <Cmd sid="setting.server.custom_field.configure.th.order" product='2' />：ユーザー定義で追加した入力フィールドの順序を設定できます。
+
+* <Cmd sid="setting.server.custom_field.configure.th.name" product='2' />：ユーザー定義で追加した入力フィールドの名前を設定できます。
+
+* <Cmd sid="setting.server.custom_field.configure.th.type" product='2' />：文字入力ボックス、数値入力ボックス、選択ボックスを選択できます。
+
+* <Cmd sid="setting.server.custom_field.configure.th.data" product='2' />：選択ボックスのリストに表示する選択肢を入力します。 各項目はセミコロン(;)で区切ります。 データは、<Cmd sid="setting.server.custom_field.configure.th.type" product='2' /> を <Cmd sid="setting.server.custom_field.type.combobox" product='2' /> に設定した場合にのみ有効になります。
+
+設定を保存するには、<Cmd sid="visitor.setting.button.apply" product='2' /> をクリックしてください。
+
+:::info
+
+* <Cmd sid="setting.server.custom_field.type.textbox" product='2' /> で追加したカスタム訪問者フィールドには数字と文字を入力できます。
+
+* <Cmd sid="setting.server.custom_field.type.numericbox" product='2' /> で追加したカスタム訪問者フィールドには数字のみ入力でき、文字は入力できません。
+
+* <Cmd sid="setting.server.custom_field.type.combobox" product='2' /> で追加したカスタム訪問者フィールドでは、訪問者が項目を選択できます。 カスタム訪問者フィールドを設定するときは、データに **Option 1**; **Option 2**; **Option 3**; **Option 4** を入力してください。
+
+:::

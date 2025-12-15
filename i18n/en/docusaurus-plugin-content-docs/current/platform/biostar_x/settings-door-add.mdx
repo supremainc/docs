@@ -76,7 +76,7 @@ In the <Cmd sid='device.info.configuration' product='2' /> section, you can set 
 
 * <Cmd sid='door.entryDevice' product='2' />: Select the device to be used for entry. If the device is not listed, register the device first.
 
-* <Cmd sid='common.doorRelay' product='2' />: Choose the relay that will function as the door lock mechanism.
+* <Cmd sid='common.doorRelay' product='2' />: Choose the [relay](../../reference/glossary#relay) that will function as the door lock mechanism.
 
 * <Cmd sid='door.exitButton' product='2' />: Select the port to be used as the exit button.
 
@@ -120,7 +120,7 @@ In the <Cmd sid='common.option' product='2' /> section, you can set additional o
 
   * <Cmd sid='door.openOnce' product='2' />: The door will lock when the door sensor detects it has closed. If set to <Cmd sid='door.openOnceOn' product='2' />, the option <Cmd sid='door.option.openCondition.useAutoDoor' product='2' /> cannot be used.
 
-  * <Cmd sid='door.option.openCondition.useAutoDoor' product='2' />: If using an automatic door as the door, the relay can operate regardless of the door sensor's status. If set to <Cmd sid='door.openOnce' product='2' />, the option cannot be used.
+  * <Cmd sid='door.option.openCondition.useAutoDoor' product='2' />: If using an automatic door as the door, the relay can operate regardless of the door sensor's status. If set to <Cmd sid='door.openOnceOn' product='2' />, the <Cmd sid='door.openOnce' product='2' /> option cannot be used.
 
   :::info
 
@@ -142,7 +142,7 @@ In the <Cmd sid='common.option' product='2' /> section, you can set additional o
 
   * <Cmd sid='door.approvalGroup' product='2' />: Set the group to which the administrator belongs. This option can be used when <Cmd sid='door.dualAuthentication.approvalType' product='2' /> is set to <Cmd sid='door.dualAuthentication.approvalType.last' product='2' />.
 
-  * <Cmd sid='door.authenticationTimeout' product='2' />: Set the waiting time between the first and second authentications. <Cmd sid='door.authenticationTimeout' product='2' />: Set the waiting time until the second authentication after the first authentication.
+  * <Cmd sid='door.authenticationTimeout' product='2' />: Set the waiting time between the first and second authentications. If the second authentication is not completed within the set time, the door will not open.
 
   :::info
 

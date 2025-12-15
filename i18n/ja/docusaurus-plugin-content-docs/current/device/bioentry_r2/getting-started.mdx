@@ -1,0 +1,164 @@
+---
+id: getting-started
+title: はじめに
+description: デバイスを使用するための初期手順を案内します。
+keywords:
+  - 同梱物
+  - 名称
+  - 機能
+  - ケーブル
+  - コネクター
+---
+
+デバイスを使用するための初期手順を案内します。
+
+## 同梱物
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-bep2.svg' className='none' height={250} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-bep2.svg' className='none' height={250} alone /></Td>
+
+<Td><Image src='/img/device/component-drilling-template-bep2.svg' className='none' height={250} alone /></Td>
+
+<Td><Image src='/img/device/component-connection-cables-ber2.svg' className='none' width='80%' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>BioEntry R2</Td>
+
+<Td>壁掛けブラケット</Td>
+
+<Td>ドリルテンプレート</Td>
+
+<Td>接続ケーブル</Td>
+
+</Row>
+</Tbody>
+
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-ferrite-core.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-pvc-anchors2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>フェライトコア</Td>
+
+<Td>120 Ω 抵抗</Td>
+
+<Td>PVCアンカー x2</Td>
+
+<Td>固定用ネジ x2</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>ブラケット固定用ネジ（星形）</Td>
+
+<Td>クイックガイド</Td>
+
+<Td>オープンソースライセンスガイド</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## 各部の名称と機能
+
+<Image src='/img/device/name-function-each-part-ber2.png' className='none' width='60%' />
+
+* **LED状態表示灯**：製品の動作状態を表示します。
+
+  * 緑：認証成功
+
+  * 赤：認証失敗
+
+  * 青色／水色が点滅：正常動作中
+
+  * 青／緑点滅：
+
+    * <Cmd sid='ui_012' product='dev' />を有効に設定すると、IP アドレスを取得できない状態
+
+    * <Cmd sid='ui_205' product='dev' /> モードのとき、マスター装置との接続が切断された状態
+
+  * 緑色が点滅：入力待機状態
+
+* **RFカードリーダー部**：入退室のためにRFカードを認識する部分です。
+
+* **指紋認識部**：入退室のために指紋を認識する部分です。
+
+* **電源（2ピン）**：電源ケーブルを接続します。
+
+* **RS-485（4ピン）**：RS-485ケーブルを接続します。
+
+* **初期化ボタン**
+
+  * RS-485 接続を初期化します。 詳細については、[RS-485 接続の初期化](installation#rs485-reset)を参照してください。
+
+  * デバイスに保存されたすべての情報と証明書を削除し、設定を初期化します。 詳細については[工場出荷時リセット](installation#factory-reset)を参照してください。
+
+## ケーブルとコネクタ
+
+### 電源
+
+<Image src='/img/device/cable-power-bidirect.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| ピン | 名称       | 色     |
+| -- | -------- | ----- |
+| 1  | PWR +VDC | 赤(白線) |
+| 2  | PWR GND  | 黒(白線) |
+
+</div>
+
+### RS-485
+
+<Image src='/img/device/cable-rs485-4pin.svg' className='none' alone />
+
+<div className='overflow-x col3--10-20-70'>
+
+| ピン | 名称       | 色 |
+| -- | -------- | - |
+| 1  | 485 TRXP | 青 |
+| 2  | 485 TRXN | 黄 |
+| 3  | 485 GND  | 黒 |
+| 4  | SH GND   | 灰 |
+
+</div>
+
+{/* 올바른 지문 입력 방법 */}
+import Enrollfingerprint from '../../common/_enroll-fingerprint.mdx'
+
+<Enrollfingerprint />

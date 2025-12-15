@@ -1,0 +1,42 @@
+---
+id: 141
+title: Firmware Version 1.4.1
+---
+
+# Firmware Version 1.4.1 (Build No. 1.4.1_210203)
+
+Release<Separator/>2021-02-16
+
+## New Features and Improvements
+
+---
+
+1. Suprema Thermal Camera (TCM10-FS2) SDK Revision
+
+    - FPS 8.3 applied
+
+    - The management service is separated to recover the system safely after the device stops working abnormally.
+
+    - The infrared image motion stopped working or the device was restarted while using the thermal camera.
+
+    - The specifications of captured image buffer were modified.
+
+1. Renamed the thermal camera's feature (English only)
+
+    - Before: Emission Rate
+
+    - After: Emissivity
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Disconnected logs frequently occurred when the device was used with Secure I/O 2. <Badge>1.4.0 or earlier</Badge>
+
+1. Doors were not applied in the open state when the device was restarted with the door set to manual open mode. <Badge>1.4.0</Badge>
+
+1. The Secure Tamper could not be manually turned off by the default hash key. <Badge>1.4.0</Badge>
+
+</BugLists>

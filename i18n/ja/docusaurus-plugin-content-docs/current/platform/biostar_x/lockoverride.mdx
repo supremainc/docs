@@ -1,0 +1,63 @@
+---
+id: lockoverride
+title: 緊急開放権限を設定する
+description: カードクレデンシャルに緊急開放権限を付与して、特定のユーザーが緊急時にすべてのドアを開放できるようにする方法を説明します。
+keywords:
+  - 緊急
+  - 開放
+  - 入退室
+---
+
+緊急時に特定のユーザーがすべてのドアにアクセスできるよう緊急開放権限を設定できます。 緊急開放権限が設定されたカードでドアを開放すると、そのドアは開いたままになり誰でも通行できます。
+
+## 開始する前に
+
+緊急開放権限を設定する前に、まずカードクレデンシャルを追加する必要があります。 カードクレデンシャルの追加方法の詳細は[以下](enroll-credential-card)を参照してください。
+
+:::info
+
+* カードクレデンシャル以外のクレデンシャルはサポートしていません。
+
+* スマートカード（AoC）、ToMモバイルアクセスカード（ToM AoC）を除くすべてのカードクレデンシャルをサポートします。
+
+* デバイスによっては緊急開放機能をサポートしていない場合があります。 サポートされるデバイスとファームウェアバージョンは以下を参照してください。
+
+  * BioStation 3 ファームウェア v1.4.0 以降
+
+:::
+
+## 緊急開放権限を設定する
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.user' /> をクリックします。
+
+2. ユーザーリストで緊急開放権限を設定するユーザーをダブルクリックします。
+
+   または、ユーザーを選択し、右側に表示されるプロファイルで <Cmd sid='team.user.preview.button.seeMore' /> ボタンをクリックします。
+
+3. ユーザー詳細画面が表示されたら、<Cmd sid='team.user.credential.title' /> セクションに移動します。
+
+4. 緊急開放を許可するカードクレデンシャルの <Cmd sid='team.user.table.lockOverride' /> 項目のチェックボックスをクリックします。
+
+   <Image src='/img/biostarx-user-credential-set-emergency-opening.png' />
+
+5. 警告メッセージが表示されたら内容を確認し、<Cmd sid='common.button.continue' /> をクリックします。
+
+   <Image src='/img/biostarx-user-credential-set-emergency-opening-warning.png' width='60%' />
+
+6. 画面右上の <Cmd sid='common.save' /> ボタンをクリックします。
+
+緊急開放権限の設定が完了します。
+
+:::caution
+
+ユーザーは緊急開放権限が設定されたカードで全てのドアを開放できます。
+
+:::
+
+:::info
+
+* 緊急開放権限を付与するカードクレデンシャルは1枚以上選択できます。
+
+* 緊急開放権限を解除するには、選択したカードクレデンシャルの <Cmd sid='team.user.table.lockOverride' /> 項目のチェックボックスを再度クリックします。
+
+:::

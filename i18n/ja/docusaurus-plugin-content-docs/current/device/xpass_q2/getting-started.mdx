@@ -1,0 +1,209 @@
+---
+id: getting-started
+title: はじめに
+description: デバイスを使用するための初期手順を案内します。
+keywords:
+  - 同梱物
+  - 名称
+  - 機能
+  - ケーブル
+  - コネクター
+---
+
+デバイスを使用するための初期手順を案内します。
+
+## 同梱物
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-xpq2.svg' className='none' width={110} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-xpq2.svg' className='none' width={100} alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>XPass Q2</Td>
+
+<Td>壁掛けブラケット</Td>
+
+<Td>クイックガイド</Td>
+
+<Td>オープンソースライセンスガイド</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-connection-cables-xpq2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>接続ケーブル</Td>
+
+<Td>固定用ネジ x2</Td>
+
+<Td>ブラケット固定用ネジ（星形）</Td>
+
+<Td>ダイオード</Td>
+
+<Td>120 Ω 抵抗</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## 各部の名称と機能
+
+<Image src='/img/device/name-function-each-part-xpq2.png' className='none' width='60%' />
+
+* **LED状態表示灯**：製品の動作状態を表示します。
+
+  * 緑：認証成功
+
+  * 赤：認証失敗
+
+  * 青色／水色が点滅：正常動作中
+
+  * 青／緑点滅：
+
+    * <Cmd sid='ui_012' product='dev' />を有効に設定すると、IP アドレスを取得できない状態
+
+    * <Cmd sid='ui_205' product='dev' /> モードのとき、マスター装置との接続が切断された状態
+
+  * 赤／紫点滅：デバイスロック状態
+
+  * 緑色が点滅：入力待機状態
+
+* **LED照明**：QR／バーコードスキャナー周辺で動きを検知するとLEDが自動的に点灯します。
+
+* **QR／バーコードスキャナー**：入退室のための認証用QR／バーコードを読み取る部分です。
+
+* **RFカード・モバイル入退出カードリーダー**：入退出のためにRFカードまたはモバイル入退出カードを読み取る部分です。
+
+* **USB（Type-C）メモリスロット**：USBメモリを接続します。
+
+* **初期化ボタン**
+
+  * ネットワーク設定を初期化します。 詳細については[ネットワーク設定の初期化](installation#reset-network-settings)を参照してください。
+
+  * デバイスに保存されたすべての情報と証明書を削除し、設定を初期化します。 詳細については[工場出荷時リセット](installation#factory-reset)を参照してください。
+
+* **イーサネット**：イーサネットケーブルを接続します。
+
+* **RS-485（4ピン）**：RS-485ケーブルを接続します。
+
+* **Input（5ピン）**：Inputケーブルを接続します。
+
+* **リレー（3ピン）**：リレーケーブルを接続します。
+
+* **電源（2ピン）**：電源ケーブルを接続します。
+
+* **USB拡張ポート（5ピン）**：他のアクセサリ製品を接続できます。
+
+* **Wiegand入出力 (4ピン)**：Wiegand入出力ケーブルを接続します。
+
+* **リーダー電源出力（3ピン）**：リーダー電源出力ケーブルを接続します。
+
+* **ロック電源出力（3ピン）**：ロック電源出力ケーブルを接続します。
+
+<PageBreak />
+
+{/* 케이블 및 커넥터 */}
+import CablesandConnectors from '../../common/_getting-started-cables-and-connectors.mdx'
+
+<CablesandConnectors />
+
+<PageBreak />
+
+## QR/バーコードおよびデバイスライセンスに関する注意事項
+
+### 正しいQR/バーコード認証方法 {#how-to-scan-qrbarcode}
+
+ユーザーにQR/バーコードを発行して認証手段として利用できます。 認識率を高めるため、案内に従い、正しくQR／バーコードをスキャンしてください。
+
+<Image src='/img/device/qr-scanning-xpq2.svg' className='none' width={300} alone />
+
+* 装置のスキャナーとQR／バーコードの距離を5〜15 cmに保ってください。
+
+* QR／バーコードがスキャナーの中央に来るように配置してください。
+
+* モバイルデバイスでダウンロードしたQR/バーコードで認証する場合、画面が見えやすいようにモバイルデバイスの明るさを調整します。
+
+* 位置、距離、照度が適切でない場合、QR／バーコードの認識に時間がかかる、または失敗することがあります。
+
+### バーコードの種類と最小認識サイズ
+
+バーコードの種類ごとに認識可能な最小バーコードサイズの例です。
+
+:::info
+
+実際の認識率は印刷品質、エンコード、照明、カメラ解像度、撮影距離などの環境により異なる場合があります。
+
+:::
+
+#### 基本サポート
+
+本製品は基本的にQR Codeをサポートしています。
+
+<div className='overflow-x cols3--20-20-60'>
+
+| バーコードタイプ | 最小認識サイズ | 例値（文字数）                               |
+| :------: | :-----: | :------------------------------------ |
+|  QR Code |   1 cm  | 32文字：12345678901234567890123456789012 |
+
+</div>
+
+#### Camera QRライセンス適用時
+
+<div className='overflow-x cols3--20-20-60'>
+
+|    バーコードタイプ   | 最小認識サイズ | 例値（文字数）                               |
+| :-----------: | :-----: | :------------------------------------ |
+|    QR Code    |   1 cm  | 32文字：12345678901234567890123456789012 |
+| Micro QR Code |   1 cm  | 32文字：12345678901234567890123456789012 |
+|     Aztec     |   1 cm  | 32文字：12345678901234567890123456789012 |
+|     PDF417    |   3 cm  | 32文字：12345678901234567890123456789012 |
+|   DataMatrix  |   1 cm  | 32文字：12345678901234567890123456789012 |
+|     Code39    |   5 cm  | 16文字：1234567890123456                 |
+|    Code128    |   3 cm  | 16文字：1234567890123456                 |
+|     EAN-8     |  1.5 cm | 8文字（データ7文字 + チェックサム1）：12345670        |
+|     EAN-13    |   2 cm  | 13文字（データ12文字 + チェックサム1）：1234567890128 |
+|     UPC-A     |   2 cm  | 12文字（データ11文字 + チェックサム1）：123456789012  |
+|     UPC-E     |  1.5 cm | 8文字（データ7文字 + チェックサム1）：12345670        |
+
+</div>
+
+### デバイスライセンスに関する注意事項
+
+* より多様なQR/バーコード認証を使用するには、別途デバイスライセンスが必要です。 デバイスライセンスを発行するには、購入先にお問い合わせください。
+
+* デバイスライセンスファイルは暗号化されているため、任意に変更できません。
+
+* デバイスライセンスはデバイスIDを基準に発行されます。 不正な方法でデバイスIDを変更した場合、ライセンスの保証サービスは提供されません。
+
+* デバイスライセンスの詳細については、[BioStar X 管理者ガイド](../../platform/biostar_x/settings-license-device-license)を参照してください。

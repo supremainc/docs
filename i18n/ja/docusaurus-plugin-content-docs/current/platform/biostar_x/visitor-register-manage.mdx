@@ -1,0 +1,178 @@
+---
+id: visitor-register-manage
+title: 来訪申請を管理する
+description: 来訪申請を承認、修正、追加、削除できます。
+keywords:
+  - 訪問申請
+  - 管理
+---
+
+来訪申請を承認または修正できます。 管理者が直接来訪者を追加または削除することもできます。
+
+## 来訪承認
+
+来訪申請履歴を確認し、来訪者の入退室を承認する方法を説明します。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.visitor' /> をクリックします。
+
+2. 来訪者一覧で、承認する来訪者をクリックします。
+
+   <Image src='/img/biostarx-visitor-register-lists.png' />
+
+3. 来訪者の来訪情報を確認して修正が必要な項目を修正した後、<Cmd sid='common.edit' product='2' /> をクリックします。
+
+4. 画面右下の <Cmd sid='visitor.status.checkIn' product='2' /> をクリックします。
+
+5. <Cmd sid='visitor.visitRegisterInfo' product='2' /> の内容を確認し、来訪を承認するには、画面右下の <Cmd sid='button.checkin' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-visitor-register-item-approved.png' />
+
+:::info
+
+* 来訪申請時に来訪者入退室利用規約に同意していない申請者の場合、<Cmd sid='button.checkin' product='2' /> は無効化されます。 <Cmd sid='visitor.term.watch' product='2' /> をクリックして来訪者に入退室利用規約を提示し、規約への同意を取得します。 来訪者が入退室利用規約に同意しない場合、来訪が制限されます。
+
+  <Image src='/img/visitor-register-manage-view-term.png' />
+
+* 来訪PCにカード登録デバイスが設定されている場合、<Cmd sid='visitor.button.approveAndRegisterCard' product='2' /> が有効になります。 来訪を承認して入退室カードを発行するには、<Cmd sid='visitor.button.approveAndRegisterCard' product='2' /> をクリックします。 詳細については[次のドキュメント](#approve-and-register-card)を参照してください。
+
+* 来訪PCでカード利用を設定するには、<Cmd sid='shell.header.setting' /> → <Cmd sid='shell.header.visitor' /> メニューで以下の最小設定が必要です。 詳細については[次のドキュメント](settings-visitor#settings-visitor)を参照してください。
+
+  <Image src='/img/biostarx-visitor-settings-use-card.png' />
+
+  * <Cmd sid='visitor.site' product='2' /> <Cmd sid='common.setting' product='2' /> → <Cmd sid='common.card' product='2' /> <Cmd sid='common.use' product='2' /> / <Cmd sid='user.cardType' product='2' />
+
+  * <Cmd sid='visitor.pc.management' product='2' /> <Cmd sid='visitor.pc.setting' product='2' /> → <Cmd sid='common.card' product='2' /> <Cmd sid='setting.server.enrollment_device.device_name' product='2' />
+
+:::
+
+### 承認とカード登録 {#approve-and-register-card}
+
+来訪申請を承認して入退室カードを発行する方法を説明します。 
+
+1. <Cmd sid='visitor.visitRegisterInfo' product='2' /> 画面で、画面右下の <Cmd sid='visitor.button.approveAndRegisterCard' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-visitor-register-item-approved-card.png' />
+
+2. カード登録ウィンドウが表示されたら、希望する登録方法を選択します。
+
+   * <Cmd sid='common.registerByCardReader' product='2' />
+
+   * <Cmd sid='common.enterManually' product='2' />
+
+#### <Cmd sid='common.registerByCardReader' product='2' className='normal' />
+
+来訪PCに接続されたデバイスでカード情報をスキャンして登録できます。
+
+1. <Cmd sid='common.registrationOption' product='2' /> を <Cmd sid='common.registerByCardReader' product='2' /> に選択します。
+
+   <Image src='/img/biostarx-visitor-register-item-approved-card-reader.png' />
+
+2. 登録するカードをデバイスにスキャンするには、<Cmd sid='common.readCard' product='2' /> をクリックします。
+
+3. カードを登録するには、<Cmd sid='button.enroll' product='2' /> をクリックします。
+
+#### <Cmd sid='common.enterManually' product='2' className='normal' />
+
+カード番号を直接入力して登録できます。
+
+1. <Cmd sid='common.registrationOption' product='2' /> を <Cmd sid='common.enterManually' product='2' /> に選択します。
+
+   <Image src='/img/biostarx-visitor-register-item-approved-card-manual.png' />
+
+2. <Cmd sid='user.cardId' product='2' /> を直接入力します。
+
+3. カードを登録するには、<Cmd sid='button.enroll' product='2' /> をクリックします。
+
+## 指紋検索による来訪者承認
+
+指紋を登録済みの来訪者を指紋で検索し、承認できます。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.visitor' /> をクリックします。
+
+2. 来訪申請一覧で左上の <Cmd sid='visitor.button.searchVisitorByFingerprint' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-visitor-list-search-fingerprint.png' />
+
+3. 指紋スキャナに来訪者の指紋をスキャンします。
+
+4. 指紋と一致する来訪者が検索されると、確認メッセージが表示されます。 <Cmd sid='visitor.button.registerInformation' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-visitor-list-search-fingerprint-confirm.png' />
+
+5. 来訪者の来訪情報を確認して修正が必要な項目を修正した後、<Cmd sid='common.edit' product='2' /> をクリックします。
+
+6. 画面右下の <Cmd sid='visitor.status.checkIn' product='2' /> をクリックします。
+
+7. <Cmd sid='visitor.visitRegisterInfo' product='2' /> の内容を確認し、来訪を承認するには、画面右下の <Cmd sid='button.checkin' product='2' /> をクリックします。
+
+## 来訪者追加
+
+管理者が直接来訪者を追加する方法を説明します。
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.visitor' /> をクリックします。
+
+2. 来訪者一覧で左上の <IcAdd /> <Cmd sid='button.func.addVisitor' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-visitor-register-lists-add.png' />
+
+3. <Cmd sid='common.visitor' product='2' /> セクションで来訪者の氏名と電話番号を入力します。
+
+   <Image src='/img/biostarx-visitor-register-lists-add-visitor-info.png' />
+
+4. <Cmd sid='visitor.host' product='2' /> セクションで訪問先担当者の氏名と電話番号を入力します。
+
+   <Image src='/img/biostarx-visitor-register-lists-add-admin-info.png' />
+
+   :::note
+
+   氏名または電話番号を入力すると、一致するユーザーの一覧が表示されます。 希望するユーザーを指定するには、<Cmd sid='button.choose' product='2' /> をクリックします。
+
+   :::
+
+5. <Cmd sid='visitor.accessInfo' product='2' /> セクションで入退室グループと訪問期間を設定します。
+
+   <Image src='/img/biostarx-visitor-register-lists-add-access-info.png' />
+
+   :::note
+
+   訪問PCに割り当てた訪問先の入退室グループのみ選択できます。 詳細は[次のドキュメント](settings-visitor#settings-visitor-site)を参照してください。
+
+   :::
+
+6. <Cmd sid='common.credential' product='2' /> セクションで入退室手段を設定します。
+
+   <Image src='/img/biostarx-visitor-register-lists-add-credential.png' />
+
+   * <Cmd sid='common.card' product='2' />：カード認証を使用する場合は <Cmd sid='visitor.request' product='2' /> に設定します。
+
+   * <Cmd sid='common.fingerPrint' product='2' />：指紋認証を使用する場合は、<Cmd sid='button.addFingerprint' product='2' /> をクリックして来訪者の指紋を登録します。
+
+7. 来訪者追加を完了するには、画面右下の <Cmd sid='button.register' product='2' /> をクリックします。
+
+:::info
+
+* 名前は最大48文字まで入力できます。
+
+* 訪問者情報入力にカスタムフィールドを追加する場合は[次のドキュメント](settings-visitor#settings-visitor-custom-field)を参照してください。
+
+:::
+
+## 来訪者削除
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.visitor' /> をクリックします。
+
+2. 来訪申請一覧で削除する来訪者のチェックボックスをクリックします。
+
+   <Image src='/img/biostarx-visitor-register-lists-remove-visitor.png' />
+
+3. 画面右上の <Cmd sid='button.func.deleteVisitor' product='2' /> をクリックします。
+
+4. 確認メッセージが表示されたら、<Cmd sid='button.yes' product='2' /> ボタンをクリックします。
+
+:::info
+
+* <Cmd sid='button.func.deleteVisitor' product='2' /> は、来訪者のチェックボックスをクリックすると有効になります。
+
+* 来訪者は来訪申請一覧からのみ削除できます。
+
+:::

@@ -1,0 +1,65 @@
+---
+id: settings-access-control-ac-status
+title: アクセス権限ステータスを確認する
+description: ユーザーが通行できるドアの一覧を確認できます。
+keywords:
+  - アクセス権限
+---
+
+ユーザーが通行できるドアの一覧を確認する方法を案内します。 アクセス権限ステータスを確認すると、ユーザーが通行できるドアとそのドアに対する権限を管理できます。 フィルター機能を使用して必要な結果を並べ替えたり、リストをCSVファイルとして保存したりできます。 
+
+## アクセス権限ステータスの確認
+
+アクセス権限はドアまたはフロア、ユーザーを基準に表示できます。
+
+<Image src='/img/biostarx-settings-access-control-status.png' />
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.accessControl.root' /> をクリックします。
+
+3. <Cmd sid='common.status' product='2' /> タブをクリックします。
+
+4. <Cmd sid='common.status' product='2' /> タブの下にあるステータスリストで目的の項目をクリックします。
+
+   * <Cmd sid='access_control.status.access_control_status_by_door.list_name' product='2' />
+
+   * <Cmd sid='access_control.status.access_control_status_by_user.list_name' product='2' />
+
+   * <Cmd sid='ac.status.elevatorbyFloor.title' product='2' />
+
+   * <Cmd sid='ac.status.elevatorbyUser.title' product='2' />
+
+選択した項目のアクセス権限ステータスを確認できます。
+
+## フィルターの保存
+
+必要な結果を並べ替えるには、アクセス権限リストテーブルのヘッダーで <IcFilter2 /> ボタンをクリックします。 フィルター条件を追加できます。
+
+フィルターを設定した後は、フィルターを保存できます。 <Cmd sid='monitoring.saveFilter' product='2' /> ボタンをクリックします。 保存したフィルターは、<Cmd sid='common.status' product='2' /> タブ下のステータスリストで確認できます。
+
+<Image src='/img/biostarx-settings-access-control-status-filter.png' />
+
+* フィルター名を変更するには <IcEditUL /> アイコンをクリックします。
+
+* フィルターを削除するには <IcTrash2 /> アイコンをクリックします。
+
+import ExploreListPages from '../../common/_explore-list-pages.mdx';
+
+<ExploreListPages />
+
+## CSV へのエクスポート
+
+現在表示されているアクセス権限ステータスリストをCSVファイルにエクスポートできます。 画面右上の <IcMoreW /> ボタンをクリックし、<Cmd sid='button.downloadToCsv' product='2' /> を選択します。
+
+## 列設定
+
+現在表示しているアクセス権限ステータステーブルで、必要な列を非表示または表示できます。 画面右上の <IcMoreW /> ボタンをクリックし、<Cmd sid='columnSetting.dialog.header' product='2' /> を選択します。
+
+<Image src='/img/biostarx-settings-access-control-status-column-setting.png' />
+
+* <Cmd sid='columnSetting.columnList' product='2' /> で表示する列を選択します。 選択した列がリストテーブルに表示されます。 選択しなかった列はリストテーブルで非表示になります。
+
+* 設定を初期化するには <Cmd sid='columnSetting.defaultColumn' product='2' /> ボタンをクリックします。
+
+すべての設定が完了したら <Cmd sid='button.apply' product='2' /> ボタンをクリックします。

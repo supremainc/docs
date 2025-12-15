@@ -1,0 +1,48 @@
+---
+id: 141
+title: Firmware Version 1.4.1
+---
+
+# Firmware Version 1.4.1 (Build No. 1.4.1_210511)
+
+Release<Separator/>2021-06-01
+
+## New Features and Improvements
+
+---
+
+1. Upgraded to the 1.1.1i version of OpenSSL.
+
+1. Intelligent Slave Support
+
+    - Intelligent Slave: A function that enables 1:1 or 1:N matching directly from the Suprema device and transmits the authentication result as OSDP card data to the third-party controller.
+
+1. Separated event logs of Mobile Access cards and RFID cards.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. When calling the BS2_ResetConfigExceptNetInfo API from the BioStar Device SDK, a 'Timeout' error occurred. <Badge>1.0.0</Badge>
+
+1. Card data were output with the wrong BitCount while the device was communicating with a 3rd party controller via OSDP. <Badge>1.0.0</Badge>
+
+1. When using a static IP while DNS server address was configured, a reboot on the device caused communication problems between the server. <Badge>1.0.0</Badge>
+
+1. While the device was communicating with a 3rd party controller via OSDP, the device connected as a slave responded that it supported transparent mode by OSDP_PDCAP even though it did not actually support that mode. <Badge>1.0.0</Badge>
+
+1. If 31 slave devices were connected and one of the devices got disconnected, the master device rebooted. <Badge>1.0.0</Badge>
+
+1. Fingerprint authentication did not work after downgrading from firmware version 1.4.0 to firmware version 1.2.1. <Badge>1.4.0</Badge>
+
+1. It was not able to communicate with a 3rd-party controller via OSDP with the default key before network initialization. (only for devices released with the firmware version 1.4.0 or later) <Badge>1.4.0</Badge>
+
+1. It was able to communicate using default keys after changing the key settings when the device was connected to a 3rd-party device via OSDP. <Badge>1.3.0</Badge>
+
+1. After initializing the slave device's settings, it was not able to connect it to a 3rd-party controller. <Badge>1.0.0</Badge>
+
+1. Secure communication was not available by using the default key after downgrading firmware to version 1.3.1 or below which does not support encryption. <Badge>1.4.0</Badge>
+
+</BugLists>

@@ -1,0 +1,122 @@
+---
+id: settings-server-https
+title: HTTPS 証明書をインストールする
+description: BioStar X を HTTPS で接続するには、BioStar X をインストールしたサーバーの IP アドレスを登録して証明書をインストールする必要があります。
+keywords:
+  - HTTPS
+  - 証明書
+---
+
+**BioStar X** を HTTPS で接続するには、**BioStar X** をインストールしたサーバーの IP アドレスを登録して証明書をインストールする必要があります。
+
+## 証明書のインストールが必要な場合
+
+**BioStar X** に HTTPS 証明書がインストールされていない状態で接続すると、Web ブラウザーに次のようなセキュリティ警告が表示されます。
+
+<Image src='/img/biostarx-settings-server-not-secure.png' />
+
+これは、ブラウザーがサーバーの身元を確認できないために表示される警告です。 証明書をインストールすると、ブラウザーが **BioStar X** サーバーを信頼し、警告なしで安全な HTTPS 接続を利用できます。
+
+## 証明書のインストール
+
+適切にネットワーク接続するため、**BioStar X** を使用する前に証明書をインストールします。
+
+1. **BioStar X** のログインページにアクセスします。
+
+2. 画面下部の <Cmd sid='auth.httpsDownload' /> リンクをクリックします。
+
+   <Image src='/img/biostarx-settings-server-login-down-https-cert.png' />
+
+3. *cert-register.zip* ファイルをローカルに保存します。
+
+4. ダウンロードしたファイルを解凍し、*cert-register.exe* ファイルを実行します。 **Enroll Certificate** プログラムが起動します。
+
+5. **Target System** で **BioStar X** を選択し、**BioStar X** がインストールされている PC の IP アドレスを **Server Address** に入力して **Enrollment** ボタンをクリックします。
+
+   <Image src='/img/common/biostarx-settings-server-enrollment-certification.png' className='none' alone />
+
+   :::note
+
+   **BioStar X** のデフォルトポート番号は 443 です。 ポート番号を変更した場合は **Port** に変更後のポート番号を入力します。
+
+   :::
+
+6. セキュリティ警告メッセージを確認し、**はい** をクリックします。
+
+Web ブラウザーを再起動し、登録した IP アドレスを入力して **BioStar X** ページへ移動します。 アドレスバー左側のアイコンをクリックすると **この接続は安全です** のメッセージが表示されます。
+
+<Image src='/img/biostarx-settings-server-secure.png' />
+
+:::info
+
+**Enroll Certificate** で入力する IP アドレスは **BioStar X** に設定されている IP アドレスと同一でなければなりません。 これは、<Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' /> のメニュー経路にある <Cmd sid='setting.server.biostarIPAdress' product='2' /> 項目で確認できます。
+
+:::
+
+## サーバー設定で証明書をインストール
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.server.root' /> → <Cmd sid="setting.https.https" product='2' /> をクリックします。
+
+3. <Cmd sid="button.certDownload" product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-settings-server-https.png' className='none' />
+
+4. *cert-register.zip* ファイルをローカルに保存します。
+
+5. ダウンロードしたファイルを解凍し、**cert-register.exe** ファイルを実行します。 **Enroll Certificate** プログラムが起動します。
+
+6. **Target System** で **BioStar X** を選択し、**BioStar X** がインストールされている PC の IP アドレスを **Server Address** に入力して **Enrollment** ボタンをクリックします。
+
+   <Image src='/img/common/biostarx-settings-server-enrollment-certification.png' className='none' alone />
+
+   :::note
+
+   **BioStar X** のデフォルトポート番号は 443 です。 ポート番号を変更した場合は **Port** に変更後のポート番号を入力します。
+
+   :::
+
+7. セキュリティ警告メッセージを確認し、**はい** をクリックします。
+
+Web ブラウザーを再起動し、登録した IP アドレスを入力して **BioStar X** ページへ移動します。 アドレスバー左側のアイコンをクリックすると **この接続は安全です** のメッセージが表示されます。
+
+<Image src='/img/biostarx-settings-server-secure.png' />
+
+## VMS サーバーの証明書をインストールする {#vms-certification}
+
+次のような状況が発生した場合、VMS サーバーにインストールされている証明書をクライアント PC にインストールして問題を解決できます。
+
+* ブラウザーで **Video Management System** (VMS) にアクセスした際に「安全ではありません」と警告が表示される場合
+
+* <Cmd sid='shell.header.arena' /> ページでライブ映像は再生されるが録画映像が再生されない場合
+
+* VMS サーバーと **BioStar X** を同じサーバーにインストールする場合
+
+:::info
+
+* VMS サーバーに証明書をインストールする方法は [the following](settings-video-integration#install-vms-certification) を参照します。
+
+* VMS サーバーと連携する機能は、追加オプションを別途購入することで利用できます。 ライセンスポリシーの詳細は [以下](licensing) を参照してください。
+
+:::
+
+### クライアント PC で証明書をインストールする {#install-client-certification}
+
+1. **BioStar X** をインストールしたクライアント PC のログイン画面、または <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid="setting.https.https" product='2' /> から HTTPS 証明書インストーラ (*cert-register.zip*) をダウンロードします。
+
+2. ダウンロードしたファイルを解凍し、**cert-register.exe** ファイルを実行します。 **Enroll Certificate** プログラムが起動します。
+
+3. **Target System** で **VMS** を選択し、次の情報を入力します。
+
+   <Image src='/img/common/biostarx-settings-server-enrollment-vms-certification.png' alone />
+
+   * **Server Address**：VMS サーバーの IP アドレス
+
+   * **Port**：VMS サーバーのポート番号
+
+4. **Enrollment** ボタンをクリックします。
+
+5. セキュリティ警告メッセージを確認し、**はい** をクリックします。
+
+Web ブラウザーを再起動し、<Cmd sid='shell.header.arena' /> ページで VMS サーバーの録画映像が正常に再生されるか確認します。

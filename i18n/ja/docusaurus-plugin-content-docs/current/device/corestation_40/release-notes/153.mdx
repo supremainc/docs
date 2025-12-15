@@ -1,0 +1,38 @@
+---
+id: 153
+title: Firmware Version 1.5.3
+---
+
+# Firmware Version 1.5.3 (Build No. 1.5.3_221026)
+
+Release<Separator/>2022-11-02
+
+## New Features and Improvements
+
+---
+
+1. XPass D2 new BLE (Bluetooth Low Energy) chip firmware(Build No. 1.7.0_220921) support.
+
+    - The BLE chip parts of the hardware have been changed, and the firmware has been upgraded to be compatible with both the existing and new BLE chips.
+
+1. Added relay deactivation option for exit button input.
+
+    - Added the option to set the door open request log to occur but the relay not to operate when the exit button is pressed.
+
+1. Separated the log related to the cause of the door unlock.
+
+    - Door open request by exit button
+
+    - Door open request by operator
+
+1. Improved the Arm/Disarm status is maintained if the device loses power.
+
+## Bug Fix
+
+---
+
+<BugLists>
+
+1. Slave devices connected to specific RS-485 ports not being searched. <Badge>1.0.0</Badge>
+
+</BugLists>

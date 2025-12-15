@@ -14,7 +14,7 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
     const imagePath = (() => {
         const localizedSrc = currentLocale === 'ko' || alone ? 
             src : 
-            src.replace('/img/', `/img/${currentLocale}/`);
+            src.replace('/img/', `/img/en/`);
         
         if (isDev) {
             return useBaseUrl(localizedSrc);

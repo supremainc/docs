@@ -1,0 +1,49 @@
+---
+id: change-db
+title: "データベースを変更する "
+description: データベースの設定を変更できます。
+keywords:
+  - データベース
+---
+
+データベースの設定を変更できます。
+
+1. Windows で <Start/> → **BioStar X** → **BioStar X Service Manager** をクリックします。
+
+2. Web ブラウザーで **BioStar X Service Manager** ウィンドウが表示されたら、<Cmd>SERVICES</Cmd> メニューをクリックします。
+
+3. すべてのサービスで <Cmd>Stop</Cmd> ボタンをクリックします。
+
+   <Image src='/img/common/biostarx-tutoria-service-manager-services-stop.png' alone />
+
+   :::note
+
+   すべてのサービスを一度に停止するには、<Cmd>Stop All</Cmd> ボタンをクリックします。
+
+   :::
+
+4. 画面左側のサイドバーで <Cmd>DATABASE</Cmd> メニューをクリックします。
+
+   <Image src='/img/common/biostarx-tutoria-service-manager-database.png' alone />
+
+5. データベース一覧から、設定を変更するデータベースを選択します。
+
+6. <Cmd>Database Server Configuration</Cmd> セクションで以下の設定を変更できます。
+
+   <Image src='/img/common/biostarx-tutoria-service-manager-database-configuration.png' alone />
+
+   * <Cmd>Name</Cmd>：データベース名を入力します。
+
+   * <Cmd>Description</Cmd>：データベースの説明を入力します。
+
+   * <Cmd>DB Type</Cmd>：データベースの種類を選択します。 (MariaDB, MS SQL)
+
+   * <Cmd>Host</Cmd>：データベースサーバーのホスト名または IP アドレスを入力します。
+
+   * <Cmd>Port</Cmd>：データベースサーバーのポート番号を入力します。
+
+   * <Cmd>AC</Cmd> / <Cmd>TA</Cmd> / <Cmd>Video</Cmd>：AC、TA、Video データベースの名前、ユーザー、パスワードを入力します。
+
+7. データベースが正常に接続されているか確認するには、画面右上の <Cmd>Test Connection</Cmd> ボタンをクリックします。
+
+8. 設定を保存するには、画面右上の <Cmd>Save</Cmd> ボタンをクリックします。

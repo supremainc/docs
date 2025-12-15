@@ -1,0 +1,73 @@
+---
+id: product-specifications
+title: 製品仕様
+description: 製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+keywords:
+  - クレデンシャル
+  - 一般
+  - 顔
+  - ストレージ
+  - インターフェース
+  - 電気仕様
+  - 製品寸法
+---
+
+製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+
+import specs from '@site/static/specs/xs2_specs.json';
+
+{/* 크리덴셜 */}
+
+<SpecSection data={specs.xstation2.credentials} />
+
+{/* 일반 */}
+
+<SpecSection data={specs.xstation2.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.xstation2.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.xstation2.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.xstation2.power} />
+
+## サイズと重量
+
+<Badge only>XS2-DPB, XS2-APB</Badge>
+
+<Image src='/img/device/xs2-dpb-apb-dimension.svg' className='none' />
+
+<Badge only>XS2-QDPB, XS2-QAPB</Badge>
+
+<Image src='/img/device/xs2-qdpb-qapb-dimension.svg' className='none' />
+
+<Badge only>XS2-ODPB, XS2-OAPB</Badge>
+
+<Image src='/img/device/xs2-odpb-oapb-dimension.svg' className='none' />
+
+---
+
+:::note
+
+<Anno id='anno1'>1)</Anno> DESFire EV2/EV3 カードは DESFire EV1 カードとの下位互換性があるため、DESFire EV1 カードの機能を含む CSN およびスマートカード機能がサポートされます。
+
+<Anno id='anno2'>2)</Anno> RF 読取距離は設置環境によって変動する可能性があります。
+
+<Anno id='anno3'>3)</Anno> 最大32文字のASCIIコードで構成されたQR/バーコードをサポートします。
+
+<Anno id='anno4'>4)</Anno> 別途デバイスライセンスが必要です。
+
+<Anno id='anno5'>5)</Anno> クレデンシャルなしで登録されたユーザーを基準としています。
+
+:::
+
+:::info
+
+製品仕様は性能向上のため予告なく変更されることがあります。
+
+:::

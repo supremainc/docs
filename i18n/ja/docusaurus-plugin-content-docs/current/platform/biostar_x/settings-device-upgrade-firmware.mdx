@@ -1,0 +1,69 @@
+---
+id: settings-device-upgrade-firmware
+title: ファームウェアをアップグレードする
+description: BioStar X に接続されたデバイスのファームウェアをアップグレードする手順を案内します。
+keywords:
+  - デバイス
+  - ファームウェア
+  - アップグレード
+---
+
+**BioStar X** に接続されたデバイスは追加の接続や操作なしで簡単にファームウェアをアップグレードできます。 デバイスのファームウェアを最新バージョンに保つことで、セキュリティ脆弱性を解消し、新機能を利用できます。
+
+## 開始前に {#before-start}
+
+デバイスのファームウェアをアップグレードする前に、新しいバージョンのファームウェアファイルをあらかじめ用意してください。 ダウンロードしたファームウェアファイルを以下のパスに保存してください。 「*firmware*」フォルダーがない場合は新規作成してください。
+
+> *C:\Program Files\BioStar X\firmware*
+
+:::info
+
+新しいバージョンのファームウェアファイルは、[Suprema ダウンロードセンター](https://download.supremainc.com)でデバイスのモデル名を検索し、最新バージョンのファームウェアファイルをダウンロードしてください。
+
+:::
+
+## ファームウェアをアップグレードする {#upgrade-firmware}
+
+### 1 台のデバイスのファームウェアアップグレード
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.device.root' /> をクリックしてください。
+
+3. デバイスリストでファームウェアをアップグレードするデバイスをクリックします。
+
+4. デバイス詳細画面の <Cmd sid='device.info.information' product='2' /> セクションで <Cmd sid='button.firmwareUpgrade' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-setting-device-info-upgrade-firmware.png' />
+
+デバイスのファームウェアをアップグレードします。
+
+### 複数デバイスのファームウェアアップグレード
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.device.root' /> をクリックしてください。
+
+3. デバイスリストでファームウェアをアップグレードするデバイスの一番左にあるチェックボックスを選択します。 複数のデバイスを選択できます。
+
+4. デバイスリストの右上にある <Cmd sid='button.firmwareUpgrade' product='2' /> をクリックします。
+
+   <Image src='/img/biostarx-setting-device-upgrade-firmware.png' />
+
+5. <Cmd sid='device.firmwareUpgrade' product='2' /> ウィンドウが表示されたら、ファームウェアバージョンをクリックします。
+
+   <Image src='/img/biostarx-setting-device-upgrade-firmware-popup.png' />
+
+選択したデバイスのファームウェアをアップグレードします。
+
+:::info
+
+* <Cmd sid='button.firmwareUpgrade' product='2' /> はデバイスリストでデバイスを選択した後にのみ有効になります。
+
+* 同じ RS-485 モードを持つデバイスは、複数台を同時にアップグレードできます。 たとえば、マスターデバイスはマスターデバイス同士で複数台を同時にアップグレードでき、スレーブデバイスはスレーブデバイス同士で複数台を同時にアップグレードできます。
+
+* マスターデバイスやマスターに接続されていないスレーブデバイスは、複数台を同時にアップグレードできます。
+
+* 同じマスターデバイスに接続されているスレーブデバイスは、複数台を同時にアップグレードできません。
+
+:::

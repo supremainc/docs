@@ -1,0 +1,90 @@
+---
+id: data-automatic-report-schedule
+title: 自動生成スケジュールを設定する
+description: 変動期間で作成したカスタムレポートを自動生成するようスケジュールを設定します。
+keywords:
+  - 自動レポート
+  - スケジュール
+---
+
+変動期間で作成した<Cmd sid='reportApp.customReport' product='2' />を自動生成するようスケジュールを設定します。
+
+## 自動生成スケジュールを追加する
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.data' /> をクリックするか、画面左上のショートカットリストから <Cmd sid='shell.header.data' /> を選択してください。
+
+2. <Cmd sid='reportApp.mainMenu.schedule' product='2' />タブをクリックします。
+
+3. 画面右上の<Cmd sid='reportApp.addSchedule' product='2' />をクリックします。
+
+   <Image src='/img/biostarx-data-auto-schedule-main.png' />
+
+4. <Cmd sid='data.schedule.newSchedulePageTitle' />画面が表示されたら、各項目を設定します。
+
+### 情報を設定する
+
+自動生成スケジュールの基本情報を設定します。
+
+<Image src='/img/biostarx-data-information.png' className='none' />
+
+* <Cmd sid='reportApp.scheduleName' product='2' / >：スケジュール名を入力します。
+
+### レポートとスケジュールを設定する
+
+レポートごとの自動生成スケジュールを設定します。
+
+<Image src='/img/biostarx-data-report-schedule.png' className='none' />
+
+* <Cmd sid='reportApp.report' product='2' / >：自動生成するカスタムレポートを選択します。 変動期間に設定されたカスタムレポートのみ表示されます。
+
+* <Cmd sid='reportApp.frequency' product='2' / >：レポートを自動生成する周期を設定します。
+
+* <Cmd sid='reportApp.generateTime' product='2' / >：レポートを自動生成する時間を設定します。
+
+:::info
+
+カスタムレポートの作成について詳しくは、[以下のドキュメント](data-generate-reports#custom-report)を参照してください。
+
+:::
+
+### レポート形式を設定する
+
+レポートごとの形式を設定します。
+
+<Image src='/img/biostarx-data-report-format.png' className='none' />
+
+* <Cmd sid='reportApp.outputType' product='2' />：レポートの自動生成方式を設定します。
+
+* <Cmd sid='reportApp.reportTitle' product='2' />：レポート名をすべてのページのタイトルとして表示するには、<Cmd sid='reportApp.showTitle' product='2' />を選択します。
+
+* <Cmd sid='reportApp.header' product='2' />：<Cmd sid='reportApp.showHeader' product='2' />を選択すると、レポート生成時にヘッダーを表示できます。 ヘッダーをすべてのページに表示するには、<Cmd sid='reportApp.onEveryPage' product='2' />を選択します。
+
+    :::info
+
+    レポートごとに生成されるヘッダーは異なる場合があります。
+
+    :::
+
+* <Cmd sid='reportApp.footer' product='2' />：ページ番号を表示するかどうかを設定します。
+
+* <Cmd sid='reportApp.fileFormat' product='2' />：レポートを出力するファイル形式を設定します。
+
+3. 設定を保存するには、<Cmd sid="reportApp.apply" product='2' />をクリックします。
+
+:::info
+
+すべての設定が完了したら、レポートを保存するパスを設定します。 詳細は[以下のドキュメント](data-settings)を参照してください。
+
+:::
+
+## 自動生成スケジュールを削除する
+
+1. <Cmd sid='shell.header.launcher' /> ページで <Cmd sid='shell.header.data' /> をクリックするか、画面左上のショートカットリストから <Cmd sid='shell.header.data' /> を選択してください。
+
+2. <Cmd sid='reportApp.mainMenu.schedule' product='2' />タブをクリックします。
+
+3. 自動スケジュール一覧で削除するスケジュールのチェックボックスをクリックします。
+
+   <Image src='/img/biostarx-data-auto-schedule-remove-item.png' />
+
+4. 画面右上の<Cmd sid='common.button.delete' />をクリックします。

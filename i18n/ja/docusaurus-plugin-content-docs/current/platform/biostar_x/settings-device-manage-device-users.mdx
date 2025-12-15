@@ -1,0 +1,46 @@
+---
+id: settings-device-manage-device-users
+title: デバイスに登録したユーザーを管理する
+description: デバイスに登録したユーザーを管理する方法を案内します。
+keywords:
+  - デバイス
+  - ユーザー
+---
+
+デバイスに登録されているユーザー数、指紋数、顔情報数、カード数を確認できます。 **BioStar X** に未登録または既に登録済みのユーザー情報と比較し、**BioStar X** サーバーに送信または削除できます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.device.root' /> をクリックしてください。
+
+3. <Cmd sid='menu.device.allDeviceGroups' product='2' /> リストでデバイスを選択し、右クリックしてください。
+
+4. ポップアップメニューで <Cmd sid='button.manageUsersInDevice' product='2' /> をクリックしてください。
+
+   <Image src='/img/biostarx-setting-device-manage-device-users.png' />
+
+<Cmd sid='device.menu.manageUsersInDevice' product='2' /> ウィンドウが表示されたら、デバイスに登録したユーザー情報と **BioStar X** に登録したユーザー情報を比較できます。
+
+<Image src='/img/biostarx-setting-device-manage-device-users-popup.png' />
+
+<Cmd sid='common.status' product='2' /> 列に表示される値を参照して、ユーザー情報をデバイスから削除するか **BioStar X** サーバーに送信するかを選択できます。 <Cmd sid='common.status' product='2' /> 列の値は次のとおりです。
+
+* <Cmd sid='user.syncStatus.same' product='2' />：**BioStar X** サーバーに登録されている情報と同一のユーザー
+
+* <Cmd sid='user.syncStatus.different' product='2' />：**BioStar X** サーバーに登録されている情報と異なるユーザー
+
+* <Cmd sid='user.syncStatus.newUser' product='2' />：**BioStar X** サーバーに登録されていないユーザー
+
+特定のユーザー情報をデバイスから削除するには、削除するユーザーを選択して <Cmd sid='button.delete' product='2' /> ボタンをクリックしてください。 ユーザー情報を **BioStar X** サーバーに送信するには、<Cmd sid='button.upload' product='2' /> ボタンをクリックしてください。
+
+:::info
+
+* <Cmd sid='button.manageUsersInDevice' product='2' /> 機能は 1 台のデバイスのみ選択して使用できます。
+
+* <Cmd sid='button.upload' product='2' /> ボタンをクリックしたとき、**BioStar X** サーバーに同じ ID を持つユーザーがいる場合は、デバイスの情報で更新できます。
+
+* 削除したユーザー情報はデバイスでのみ削除され、**BioStar X** サーバーには残ります。
+
+* デバイスの詳細設定については[次のドキュメント](settings-device-details)を参照してください。
+
+:::

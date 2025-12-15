@@ -1,0 +1,54 @@
+---
+id: product-specifications
+title: 製品仕様
+description: 製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+keywords:
+  - 一般
+  - 電源供給装置
+  - バックアップバッテリー
+  - 製品寸法
+---
+
+製品のサイズ、機能、性能などの主要な仕様情報を提供します。
+
+import specs from '@site/static/specs/encr_specs.json';
+
+{/* 일반 */}
+
+<SpecSection data={specs.enclosure.general} />
+
+{/* 전원 공급 장치 */}
+
+<SpecSection data={specs.enclosure.power_supply} />
+
+{/* 백업 배터리 */}
+
+<SpecSection data={specs.enclosure.backup_battery} />
+
+<PageBreak />
+
+## サイズと重量
+
+:::note
+
+寸法公差は ±0.3 mm です。
+
+:::
+
+<Image src='/img/device/encr-dimension.svg' className='none' />
+
+---
+
+:::info
+
+* 製品仕様は性能向上のため予告なく変更されることがあります。
+
+* バックアップバッテリーは別売りです。
+
+:::
+
+:::caution
+
+バックアップバッテリーは 12 VDC 仕様で 7 Ah 以上のものを使用してください。 本製品は ROCKET 社の 「ES7-12」でテストされており、ES7-12 と同等の製品の使用を推奨します。
+
+:::

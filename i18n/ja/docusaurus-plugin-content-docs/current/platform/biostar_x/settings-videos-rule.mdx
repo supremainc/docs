@@ -1,0 +1,173 @@
+---
+id: settings-videos-rule
+title: ビデオルールを設定する
+description: BioStar X で VMS と連携してビデオルールを設定する方法を案内します。
+keywords:
+  - カメラ
+  - ルール
+  - 設定
+---
+
+ルールは、カメラとドアで発生したイベントを組み合わせ、VMSサーバーにイベントおよびブックマーク形式で送信するための設定です。 適切にビデオルールを設定することで、次のようなセキュリティ管理機能を活用できます。
+
+* **自動ブックマーク生成**：特定の入退室イベントが発生した際に自動でブックマークを作成し、重要な映像を簡単に検索できます。
+
+* **効率的なモニタリング**：ドアに接続されたカメラ映像をリアルタイムで監視し、イベント発生時に即座に確認できます。
+
+* **統合イベント管理**：入退室イベントと映像を連携し、セキュリティ状況を総合的に把握できます。
+
+:::info
+
+ビデオルール機能は、**アドバンス**（Advanced）ライセンス以上で追加オプションとして利用できます。 ライセンスポリシーの詳細は[次のドキュメント](licensing#features-add-ons)を参照してください。
+
+:::
+
+## ルール追加 {#add-camera-rule}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> をクリックします。
+
+3. 画面左上の <Cmd sid='video.addRule.button' product='2' /> ボタンをクリックします。
+
+<Cmd sid='video.rule.addRule.title' product='2' /> 画面が表示されたら、以下の案内に従ってルールを設定します。 画面下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックして、すべての設定を完了し保存します。
+
+### ルール情報の入力
+
+<Cmd sid='video.rule.detail.information.title' product='2' /> セクションで、新しいルールの名前と説明を入力します。
+
+<Image src='/img/biostarx-settings-video-add-rule-info.png' />
+
+:::info
+
+<Cmd sid='video.rule.detail.description' product='2' /> 項目は任意です。 ルールの用途や特徴を把握しやすいように、簡単な説明を入力してください。
+
+:::
+
+### ビデオログ設定
+
+<Cmd sid='video.addRule.label.videoLog' product='2' /> は、特定のイベント発生前後の映像を自動で記録する機能です。 イベント発生前後の状況を把握できるよう、指定した時間の映像を保存します。
+
+<Image src='/img/biostarx-settings-video-add-rule-video-log.png' />
+
+* <Cmd sid='video.addRule.label.videoLog' product='2' />：現在のルールで <Cmd sid='video.addRule.label.videoLog' product='2' className='normal' /> 機能を使用するかどうかを設定します。
+
+  * <Cmd sid='video.addRule.label.enabled' product='2' />：イベント発生時に前後の映像を自動で記録します。
+
+  * <Cmd sid='video.addRule.label.disabled' product='2' />：<Cmd sid='video.addRule.label.videoLog' product='2' className='normal' /> 機能を無効にします。
+
+* <Cmd sid='video.addRule.label.videoLogLength' product='2' />：イベント発生時刻を基準に、10秒前後の映像を記録する範囲を設定します。 最大で60秒まで設定できます。
+
+:::info
+
+<Cmd sid='video.addRule.label.videoLogLength' product='2' /> で設定した範囲が長いほど、多くの保存容量が必要になる場合があります。 システム性能と保存容量を考慮して、適切な長さを設定してください。
+
+:::
+
+### VMSに記録するイベントの設定
+
+<Cmd sid='video.rule.detail.event.title' product='2' /> セクションでは、VMSサーバーに記録するイベントを選択し、ブックマークまたはイベント送信の有無を設定できます。
+
+<Image src='/img/biostarx-settings-video-add-rule-event.png' />
+
+* <Cmd sid='video.rule.detail.event.itemName' product='2' />：VMSサーバーへ送信するイベントタイプを選択します。 左側のイベントリストで目的のイベントを選択すると、右側のリストに追加されます。
+
+* <Cmd sid='video.rule.detail.vmsBookmark.itemName' product='2' />：イベントリストで選択したイベントが発生した際に、VMSサーバーにブックマークを作成するかどうかを設定できます。
+
+* <Cmd sid='video.rule.detail.vmsEvent.itemName' product='2' />：イベントリストで選択したイベントが発生した際に、VMSサーバーにイベント記録を作成するかどうかを設定できます。
+
+:::info
+
+* イベントの選択は必須ではありません。
+
+* 左側のイベントリスト上部の検索フィールドを使用して、目的のイベントを素早く検索できます。
+
+* 右側のリストからイベントを削除するには、<IcTrash2 /> ボタンをクリックします。
+
+* ブックマークおよびイベントをVMSサーバーに送信する際、メッセージの言語を設定できます。 詳細は[次の文書](settings-video-integration#vms-event-bookmark)を参照してください。
+
+::: 
+
+### ドアとカメラの連携 {#link-door-camera}
+
+<Cmd sid='video.rule.detail.doorCameraLinkage.title' product='2' /> セクションでは、ドアとカメラを連携し、ドアでイベントが発生した際に接続されたカメラの映像と共にVMSサーバーへ送信できます。 これにより、入退室イベントに関連する映像を容易に確認できます。
+
+<Image src='/img/biostarx-settings-video-add-rule-connect-door.png' />
+
+1. 右上の <Cmd sid='button.addplus' product='2' /> ボタンをクリックします。
+
+2. <Cmd sid='video.rule.detail.doorCameraLinkage.popup.title' product='2' /> ウィンドウが表示されたら、ドアを選択し、そのドアに関連付けるカメラを選択します。
+
+   <Image src='/img/biostarx-settings-video-add-rule-connect-door-add.png' />
+
+3. ドアとカメラをすべて選択したら、<Cmd sid='button.add' product='2' /> ボタンをクリックします。
+
+リストでドアに連携されたカメラを確認できます。
+
+<Image src='/img/biostarx-settings-video-add-rule-connect-door-complete.png' />
+
+:::info
+
+* 1つのドアには最大4台のカメラを追加できます。
+
+* 1つのルールに含まれたドアは、他のルールでは使用できません。
+
+* ドアとカメラの連携ルールを削除するには、リストで削除したい項目のチェックボックスをクリックし、右上の <IcTrash2 /> <Cmd sid='button.delete' product='2' /> ボタンをクリックします。
+
+* ドアと連携されたカメラは、<Cmd sid='shell.header.arena' /> ページのドアリストでドアのサブツリーとして確認できます。 詳細は[次の文書](check-door-status#door-tree-structure)を参照してください。
+
+* 画面下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックして、すべての設定を完了し保存します。
+
+:::
+
+## ルールの編集 {#edit-rule}
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> をクリックします。
+
+3. <Cmd sid='video.header.all.rules' product='2' /> リストで編集したいルールをクリックします。
+
+4. ルール編集画面が表示されたら、必要な項目を修正します。
+
+5. 編集したルールを保存するには、画面右下の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
+
+:::info
+
+ルール編集画面の各セクションの詳細は[次の文書](#add-camera-rule)を参照してください。
+
+:::
+
+## ルールの削除
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> をクリックします。
+
+3. <Cmd sid='video.header.all.rules' product='2' /> リストで削除したいルールのチェックボックスをクリックします。 1つ以上のルールを選択できます。
+
+4. 画面右上にある <IcTrash2 /> <Cmd sid='video.rule.delete' product='2' /> ボタンをクリックします。
+
+5. メッセージを確認し、<Cmd sid='button.yes' product='2' /> ボタンをクリックします。
+
+## リスト列を設定する
+
+リストで表示する列を追加、順序を変更、または非表示に設定できます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' /> をクリックします。
+
+3. <Cmd sid='video.header.all.rules' product='2' /> リストの右上で <IcMoreW /> → <Cmd sid='columnSetting.dialog.header' product='2' /> をクリックします。
+
+4. <Cmd sid='columnSetting.dialog.header' product='2' /> ウィンドウが表示されたら、表示する列のチェックボックスをクリックして追加または非表示設定ができます。 ドラッグ＆ドロップで列の順序を変更することもできます。
+
+   <Image src='/img/biostarx-settings-video-column-layout.png' />
+
+5. 列設定をすべて変更したら、<Cmd sid='button.ok' product='2' /> ボタンをクリックします。
+
+:::info
+
+列設定を初期化するには、<Cmd sid='columnSetting.button.defaultColumn' product='2' /> をクリックします。
+
+:::

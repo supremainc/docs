@@ -1,0 +1,63 @@
+:::info
+
+<Xclude product='xpass_s2'>
+
+* RS-485 ケーブルでスレーブ装置を接続し、本製品をマルチドアコントローラーとして使用できます。 スレーブ装置はダミーリーダーとして使用され、認証はマスター装置で行います。
+
+</Xclude>
+
+<Include product='biostation_3,facestation_f2,facestation_2'>
+
+* 指紋認識装置が{props.product}のスレーブ装置として構成されている場合、別の{props.product}をスレーブ装置として追加することはできません。
+
+* 指紋認識装置がマスター装置の場合、{props.product}をスレーブ装置として追加することはできません。
+
+* {props.product}がマスター装置であり、{props.product}をスレーブ装置として接続する場合、スレーブ装置として追加できる{props.product}は1台のみです。
+
+* {props.product}がマスター装置であり、{props.product}をスレーブ装置として接続する場合、Secure I/O 2とDM-20をそれぞれ1台ずつ追加接続できます。
+
+* {props.product}がマスター装置であり、{props.product}をスレーブ装置として接続する場合、OM-120を追加接続することはできません。
+
+</Include>
+
+<Include product='biostation_3,facestation_f2'>
+
+* {props.product_2}がマスター装置の場合、{props.product}をスレーブ装置として使用できず、その逆も使用できません。
+
+</Include>
+
+<Include product='bioentry_w3,biostation_2a,biolite_n2,bioentry_p2,bioentry_w2'>
+
+* XPassまたはXPass 2をマスター装置として接続した場合、カード認証のみ使用できます。
+
+</Include>
+
+<Include product='xpass_2'>
+
+* 本製品をマスター装置として使用する場合、スレーブ装置ではカード認証のみ使用できます。
+
+</Include>
+
+<Include product='xpass_q2'>
+
+* 本製品をマスター装置として使用する場合、スレーブ装置ではカード認証またはQR/バーコード認証のみ使用できます。
+
+</Include>
+
+<Include product='xpass_2,xpass_q2,xpass_s2'>
+
+* 1台のマスター装置につき、スレーブ装置は最大31台まで接続できます。
+
+</Include>
+
+<Include product='facestation_f2,bioentry_p2,bioentry_r2,biolite_n2,bioentry_w2,xstation_2,biostation_2a,bioentry_w3,biostation_3,facestation_f2,facestation_2'>
+
+* 接続可能なスレーブ装置の最大数は認証方法、ユーザー数、装置数によって変わり、スレーブ装置の数は認証速度に影響します。
+
+* 1台のマスター装置につき、スレーブ装置は最大31台まで接続できます。 RS-485の帯域幅の制限により、指紋認識装置は最大7台まで接続できます。
+
+</Include>
+
+* 詳細は Suprema テクニカルサポート (CS@suprema.co.kr) までお問い合わせください。
+
+:::

@@ -1,0 +1,218 @@
+---
+id: ip-device-settings
+title: IPデバイスを設定する
+description: IPデバイスの設定を変更できます。
+keywords:
+  - IPデバイス
+  - ネットワーク
+  - サーバー
+  - RS-485
+  - その他
+  - LED/ブザー
+  - デバイス設定
+  - デバイス接続
+  - ファームウェアをアップグレードする
+  - デバイス再起動
+  - 設定の初期化
+  - パスワード変更
+---
+
+IPデバイスの設定を変更できます。 PCで管理プログラムに接続して設定を変更したり、コマンドカードを使用する方法よりも、より迅速かつ便利に設定を変更できます。
+
+:::info
+
+デバイスのファームウェアバージョンが低い場合、いくつかの設定が適用されないことがあります。 すべての設定を適用するには、[デバイスファームウェアをアップグレードする](#device-firmware-upgrade)を参照してファームウェアをアップグレードしてください。
+
+:::
+
+## デバイス設定を変更する
+
+デバイスのネットワーク、サーバー、RS-485、LEDおよびブザー、その他の設定を変更できます。
+
+:::info
+
+バイオ認証デバイスはネットワークとサーバー設定のみをサポートします。
+
+:::
+
+1. モバイル機器でBluetooth機能を有効にした後、Suprema Device Managerを起動してください。
+
+2. メイン画面でIPデバイスを選択します。
+
+3. 接続可能なデバイス一覧でデバイスIDを確認してデバイスを選択するか、接続するデバイスにモバイル端末を近づけます。
+
+4. デバイスパスワードを設定した後、<Cmd sid='ui_367' product='dev' />をタップします。 入力したパスワードを画面に表示するには <Image src='/img/common/ico-password.svg' ico alone /> を押します。
+
+   :::info
+
+   * デバイスパスワードは6\~32桁の数字で設定できます。
+
+   * デバイスパスワードを紛失しないよう注意してください。 デバイスパスワードを紛失した場合、デバイスに接続するにはそのデバイスを初期化する必要があります。
+
+   :::
+
+5. 各項目を設定したら、保存するために<Cmd sid='ui_288' product='dev' />をタップします。
+
+### ネットワーク設定
+
+<Image src='/img/device/ip-device-network.png' width={250} />
+
+* <Cmd sid='ui_355' product='dev' />：デバイスが使用するポートを入力します。
+
+* <Cmd sid='ui_012' product='dev' />：デバイスでDHCPを使用する場合は有効にします。 このオプションを有効にすると、ネットワーク情報を直接入力できません。
+
+* <Cmd sid='ui_029' product='dev' />、<Cmd sid='ui_068' product='dev' />、<Cmd sid='ui_191' product='dev' />：デバイスのネットワーク情報を入力します。
+
+* <Cmd sid='ui_013' product='dev' />：DNSサーバーアドレスを入力します。
+
+### サーバー
+
+<Image src='/img/device/ip-device-server.png' width={250} />
+
+* <Cmd sid='ui_188' product='dev' />：サーバー通信方式を設定できます。 サーバーからデバイスを検索して接続する場合は<Cmd sid='ui_181' product='dev' />を選択します。 デバイス側で接続先サーバー情報を設定する場合は<Cmd sid='ui_281' product='dev' />を選択します。
+
+* <Cmd sid='ui_182' product='dev' />：サーバーのIPアドレスを入力します。
+
+* <Cmd sid='ui_183' product='dev' />：サーバーのドメインアドレスを入力します。
+
+* <Cmd sid='ui_189' product='dev' />：サーバーのポートを入力します。
+
+### RS-485
+
+<Image src='/img/device/ip-device-rs485.png' width={250} />
+
+* <Cmd sid='ui_050' product='dev' />：RS-485モードを設定します。
+
+* <Cmd sid='ui_298' product='dev' />：RS-485 の転送速度を設定します。
+
+### その他
+
+<Image src='/img/device/ip-device-others.png' width={250} />
+
+* <Cmd sid='ui_132' product='dev' />：メモリ使用状況を確認できます。
+
+* <Cmd sid='ui_150' product='dev' />：デバイスでタンパーイベントが発生した場合、保存されている全ユーザー情報、全ログ、セキュリティキーを削除するように設定できます。 セキュリティタンパー機能を使用するには有効にしてください。
+
+### LED / ブザー
+
+<Image src='/img/device/device-manager-led-buzzer.png' width={250} />
+
+* <Cmd sid='ui_272' product='dev' />：通常時にデバイスLEDに表示される色を設定できます。
+
+* <Cmd sid='ui_325' product='dev' />：デバイスにカードをスキャンする際にデバイスLEDに表示される色とブザー音の再生回数を設定できます。
+
+* <Cmd sid='ui_262' product='dev' />：認証成功時にデバイスLEDに表示される色とブザー音の再生回数を設定できます。
+
+* <Cmd sid='ui_263' product='dev' />：認証失敗時にデバイスLEDに表示される色とブザー音の再生回数を設定できます。
+
+:::info
+
+* LEDは最大3色を交互に繰り返し表示するよう設定できます。 スロットを押して色を選択してください。
+
+* <Image src='/img/common/ico-cancel2.svg' ico alone /> を選択すると、該当スロットの色表示順序をスキップし、次の順序のスロットに設定された色が表示されます。
+
+:::
+
+## デバイスを接続する {#connect-device}
+
+周辺に設置されたIPデバイスを検索して接続できます。 Suprema Device Managerに接続すると、デバイスのファームウェアアップグレード、デバイス再起動、設定初期化、ネットワークを除く設定の初期化、管理者パスワード変更など、さまざまな機能を利用できます。
+
+1. モバイル機器でBluetooth機能を有効にした後、Suprema Device Managerを起動してください。
+
+2. メイン画面でIPデバイスを選択します。 接続可能なデバイスの一覧が表示されます。
+
+   <Image src='/img/device/ip-device-connect.png' width={250} />
+
+3. デバイス一覧でデバイス ID を確認してデバイスを選択するか、接続するデバイスにモバイル機器を近づけます。
+
+4. 接続パスワードを入力します。 入力したパスワードを画面に表示するには <Image src='/img/common/ico-password.svg' ico alone /> を押します。
+
+5. デバイスの接続を完了するには <Cmd sid='ui_367' product='dev' /> を押します。
+
+:::info
+
+<Cmd sid='ui_291' product='dev' />：デバイス一覧画面の上部で<IcFilter/>をタップして、目的のデバイスのみが一覧に表示されるように設定できます。
+
+:::
+
+## デバイスのファームウェアをアップグレードする {#device-firmware-upgrade}
+
+デバイスのファームウェアを簡単にアップグレードできます。
+
+:::info
+
+* ファームウェアをアップグレードするには、モバイル機器にファームウェアファイルをダウンロードする必要があります。 最新ファームウェアは[Suprema ダウンロードセンター](https://download.supremainc.com/)からダウンロードできます。
+
+* ファームウェアのアップグレード中は、デバイスとモバイル機器の距離を 1 m 以内に保ってください。
+
+:::
+
+1. [デバイスを接続する](#connect-device)を参照して、ファームウェアをアップグレードするデバイスに接続します。
+
+2. <Image src='/img/common/ico-option.svg' ico alone /> → <Cmd sid='ui_018' product='dev' /> を押します。
+
+   <Image src='/img/device/ip-device-fwupgrade.png' width={250} />
+
+3. ファームウェアファイルが保存されているパスでファームウェアを選択します。 ファームウェアのアップグレードが実行されます。
+
+4. ファームウェアのアップグレードを完了するには <Cmd sid='ui_367' product='dev' /> を押します。
+
+## デバイスを再起動する
+
+デバイスを再起動できます。
+
+1. [デバイスを接続する](#connect-device)を参照して、再起動するデバイスに接続します。
+
+2. <Image src='/img/common/ico-option.svg' ico alone /> → <Cmd sid='ui_287' product='dev' /> を押します。
+
+   <Image src='/img/device/ip-device-restart.png' width={250} />
+
+3. デバイスを再起動すると、モバイル機器との BLE 通信が切断されます。 自動で再接続するには、<Cmd sid='ui_276' product='dev' /> 機能を有効にします。 詳細な設定方法は「[アプリを設定する](initial-setup#app-settings)」を参照してください。
+
+## 設定を初期化する
+
+デバイス設定を初期化できます。
+
+1. [デバイスを接続する](#connect-device)を参照して、設定を初期化するデバイスに接続します。
+
+2. <Image src='/img/common/ico-option.svg' ico alone /> → <Cmd sid='ui_195' product='dev' />をタップします。
+
+   <Image src='/img/device/ip-device-restore-default.png' width={250} />
+
+3. デバイスを初期化すると、適用されているすべての設定が初期値に復元されます。 続行するには<Cmd sid='ui_367' product='dev' />をタップします。
+
+## ネットワーク以外のデバイス設定を初期化する
+
+ネットワーク設定を除くデバイス設定を初期化できます。
+
+1. [デバイスを接続する](#connect-device)を参照して、ネットワーク設定を除く設定を初期化するデバイスに接続します。
+
+2. <Image src='/img/common/ico-option.svg' ico alone /> → <Cmd sid='ui_105' product='dev' />をタップします。
+
+   <Image src='/img/device/ip-device-restore-default-network.png' width={250} />
+
+3. ネットワーク以外のデバイス設定を初期化すると、ネットワークを除くその他の設定が初期化されます。 続行するには<Cmd sid='ui_367' product='dev' />をタップします。
+
+## デバイスパスワードを変更する
+
+デバイスのパスワードを変更できます。
+
+1. [デバイスを接続する](#connect-device)を参照して、パスワードを変更するデバイスに接続します。
+
+2. <Image src='/img/common/ico-option.svg' ico alone /> → <Cmd sid='ui_156' product='dev' /> を押します。
+
+   <Image src='/img/device/ip-device-change-password.png' width={250} />
+
+3. 現在のパスワードと新しいパスワードを入力します。
+
+   <Image src='/img/device/device-manager-change-password.png' width={250} />
+
+4. パスワードの変更を完了するには <Cmd sid='ui_367' product='dev' /> を押します。
+
+:::info
+
+* デバイスパスワードは6\~32桁の数字で設定できます。
+
+* デバイスパスワードを紛失しないよう注意してください。 デバイスパスワードを紛失した場合、デバイスに接続するにはそのデバイスを初期化する必要があります。
+
+:::

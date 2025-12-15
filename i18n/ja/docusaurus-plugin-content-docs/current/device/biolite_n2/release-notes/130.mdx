@@ -1,0 +1,88 @@
+---
+id: 130
+title: Firmware Version 1.3.0
+---
+
+# Firmware Version 1.3.0 (Build No. 1.3.0_200609)
+
+Release<Separator/>2020-06-11
+
+## Main Fixes
+
+---
+
+1. Logs generated while the device is disconnected are not sent to BioStar 2, even after the device is reconnected.
+
+## New Features and Improvements
+
+---
+
+1. Added feature to change device ID.
+
+1. Enhancement in the security of the device.
+
+    - Restrict unencrypted connections.
+
+    - Enhancement in security of encryption keys.
+
+    - Encrypt and migrate user information.
+
+1. Improved Anti-passback zone to operate based on the door status.
+
+1. Improved the scheduled unlock zone function for each floor when controlling elevator.
+
+1. Supports new device.
+
+    - XPass D2 (Rev)
+
+1. Support to the Mobile Access V1.1.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. When the master device is rebooted with both the scheduled unlock and manual lock set, it operates using the scheduled unlock.
+
+1. The device does not recognize the iCLASS cards issued by 1st generation devices.
+
+1. Once a card has been registered on the Wiegand output device, the device will not work properly when trying to output data using a fingerprint registered to another user.
+
+1. When a user authenticates the fingerprint after setting the byte order as LSB and the Wiegand output information as the user ID, the device will reboot.
+
+1. When a user authenticates on the slave device using a smart card or the face, the master device will reboot.
+
+1. When the user ID type is set to alphanumeric, a user ID with spaces can be registered on the device.
+
+1. When BioStation 2 is connected as a slave device, the output port cannot be set in the Trigger and Action.
+
+1. RS-485 communication with BioEntry R2 (BER2-OD) does not work properly.
+
+1. A bug that caused delays in the output of motion signals.
+
+1. The change in authentication mode is not applied.
+
+1. The device reboots or a timeout occurs when upgrading firmware or transferring user data during SSL secure communication.
+
+1. An error occurs when updating the fingerprint template.
+
+1. Authentication of fingerprints registered as duress fingerprints fails.
+
+1. Authentication mode setting does not work properly when XPass 2 is connected as a slave device.
+
+1. Some resources are not initialized even when the BioStation 2 connected as a slave device is factory reset.
+
+1. After the message 'Invalid payload' occurs on the slave device, it is disconnected abnormally and reconnection is impossible.
+
+1. An error occurs when authenticating with an iCLASS SEOS card when a smart card layout is set but SEOS is not selected in the card type option.
+
+1. An error occurs when authenticating with an AoC or SCC issued in DES/AES encryption mode.
+
+1. In the case of anti-passback violations in the global anti-passback zone, an authentication success log is generated.
+
+1. In the RS-485 communication, if a user attempts to perform fingerprint authentication continuously from the device, authentication fails.
+
+1. The device does not recognize the iCLASS cards intermittently.
+
+</BugLists>

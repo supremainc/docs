@@ -1,0 +1,161 @@
+---
+id: getting-started
+title: はじめに
+description: デバイスを使用するための初期手順を案内します。
+keywords:
+  - 同梱物
+  - 名称
+  - 機能
+  - ケーブル
+  - コネクター
+---
+
+デバイスを使用するための初期手順を案内します。
+
+## 同梱物
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-xpd2-mdb.svg' className='none' width={90} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-xpd2-mdb.svg' className='none' width={80} alone /></Td>
+
+<Td><Image src='/img/device/component-device-xpd2-gdb.svg' className='none' width={100} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-xpd2-gdb.svg' className='none' width={90} alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>XPass D2 マリオンタイプ (XPD2-MDB)</Td>
+
+<Td>壁掛け用ブラケット (XPD2-MDB)</Td>
+
+<Td>XPass D2 ギャングボックスタイプ (XPD2-GDB)</Td>
+
+<Td>壁掛け用ブラケット (XPD2-GDB)</Td>
+
+</Row>
+</Tbody>
+
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-xpd2-gkdb.svg' className='none' width={100} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-xpd2-gkdb.svg' className='none' width={90} alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>XPass D2 キーパッドタイプ (XPD2-GKDB)</Td>
+
+<Td>壁掛け用ブラケット (XPD2-GKDB)</Td>
+
+<Td>固定用ネジ x2</Td>
+
+<Td>ブラケット固定用ネジ（星形）</Td>
+
+</Row>
+</Tbody>
+
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-shrink-tube.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>120 Ω 抵抗</Td>
+
+<Td>収縮チューブ</Td>
+
+<Td>クイックガイド</Td>
+
+<Td>オープンソースライセンスガイド</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## 各部の名称と機能
+
+<Image src='/img/device/name-function-each-part-xpd2.png' width='80%' className='none' />
+
+* **LED状態表示灯**：製品の動作状態を表示します。
+
+  * 緑：認証成功
+
+  * 赤：認証失敗
+
+  * 青色／水色が点滅：正常動作中
+
+  * 青/緑が点滅：ネットワーク設定を初期化する時
+
+  * 緑色が点滅：入力待機状態
+
+  * 緑/白が点滅：Suprema AirFob Pass (BLE) アプリケーションと接続中
+
+  * 白が点滅：Device Manager アプリケーションと接続中
+
+* **RFカード・モバイル入退出カードリーダー**：入退出のためにRFカードまたはモバイル入退出カードを読み取る部分です。
+
+* **モバイルアクセスカード読取部**：入退出用モバイルアクセスカードを認識する箇所です。
+
+* **初期化ボタン**：デバイスに保存されたすべての情報と証明書を削除し、設定を初期化します。 詳細については[工場出荷時リセット](installation#factory-reset)を参照してください。
+
+* **ケーブル**
+
+  電源 / RS-485 / Wiegand 出力 / LED 入力 / Beep 入力 / タンパー
+
+* **キーパッド**：<Badge only>XPD2-GKDB</Badge> カード ID を直接入力して認証する際に使用します。 直接入力方式で認証するには、BioStar X で認証方法の設定を変更してください。
+
+  * **0\~9**：数字を入力する際に使用します。
+
+  * <Image src='/img/common/ico-star.svg' ico alone />：Wiegand カード ID を入力する際に FC コードと ID を区別するために使用します。
+
+  * <Image src='/img/common/ico-pound.svg' ico alone />：入力を終了する際に使用します。
+
+### ケーブル
+
+<Columns>
+<Column>
+
+<Image src='/img/device/cables-layout-xpd2.png' className='none' width={500} alone />
+
+</Column>
+<Column className='padding--l10'>
+
+|  ピン |    名称    |    色   |
+| :-: | :------: | :----: |
+|  1  | PWR +VDC |    赤   |
+|  2  |    GND   | 黒 (白線) |
+|  3  | 485 TRXN | 黄 (黒線) |
+|  4  | 485 TRXP | 青 (白線) |
+|  5  |   WG D0  |    緑   |
+|  6  |   WG D1  |    白   |
+|  7  |  LED RED |  オレンジ  |
+|  8  |  LED GRN |    茶   |
+|  9  |   BEEP   |    紫   |
+|  10 |   TMPR   |    灰   |
+
+</Column>
+</Columns>

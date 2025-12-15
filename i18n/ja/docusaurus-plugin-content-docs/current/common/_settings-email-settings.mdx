@@ -1,0 +1,29 @@
+* <Cmd sid="setting.triggerAction.smtpServer" product='2' />：SMTP サーバー名を入力します。
+
+* <Cmd sid="common.description" product='2' />：SMTP の説明を入力します。
+
+* <Cmd sid="setting.triggerAction.smtpServerAddr" product='2' />：SMTP サーバーアドレスを入力します。 SMTP サーバーアドレスは `smtp.{email-service-provider}.com` のような形式で、SMTP サーバーとして使用するメールの設定画面で確認できます。
+
+* <Cmd sid="setting.triggerAction.portDefault25" product='2' />：SMTP サーバーのポート番号を入力します。 SMTP サービスプロバイダーのメール設定画面で確認できます。
+
+* <Cmd sid="common.userName" product='2' />：SMTP サービスのアカウントを入力します。
+
+* <Cmd sid="common.password" product='2' />：SMTP サービスのアカウントパスワードを入力します。
+
+* <Cmd sid="setting.triggerAction.securityType" product='2' />：セキュリティタイプを選択します。
+
+* <Cmd sid="setting.triggerAction.sender" product='2' />：送信元のメールアドレスを入力します。
+
+:::info
+
+* SMTP の詳細についてはシステム管理者にお問い合わせください。
+
+* SMTP サーバーを 2 段階認証が設定されたメールアカウントで使用する場合、そのアカウントのパスワードを変更するときは次の点に注意してください。 
+
+  * 2 段階認証を設定すると、SMTP パスワードにはそのメールアカウントのパスワードではなく、2 段階認証で生成されたアプリパスワードが使用されます。 
+
+  * このとき、そのメールアカウントのパスワードが変更されるとアプリパスワードは自動的に削除され、SMTP パスワードは使用できなくなります。 
+
+  * そのメールアカウントのパスワードを変更した場合は、アプリパスワードを再生成してから SMTP パスワードを再設定します。
+
+:::
