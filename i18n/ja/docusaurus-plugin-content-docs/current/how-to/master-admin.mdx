@@ -1,0 +1,218 @@
+---
+id: master-admin
+title: マスター管理者機能の概要と設定方法
+description: 管理者権限を強化してデバイスのセキュリティを向上させるマスター管理者設定ガイドを提供します。
+keywords:
+  - マスター管理者
+  - マスター
+  - マスター管理者
+---
+
+**マスター管理者**機能は、デバイスの**完全な管理者権限を強化**し、**デバイスのセキュリティを向上**させ、**不正アクセスおよび設定変更を防止**するための機能です。<br/>新しいデバイスでは、この機能を使用して**必ずマスター管理者を登録**する必要があり、登録されたマスター管理者のみが管理者メニューにアクセスしてデバイス設定を変更できます。
+
+**マスター管理者** 機能は **LCD画面を介したユーザーインターフェースに対応するSuprema製品** でのみ使用できます。
+
+:::info
+
+* この機能はデバイスのセキュリティを強化するための必須ポリシーです。
+
+* マスター管理者は直接削除できず、**工場出荷時リセット時のみ削除されます**。
+
+:::
+
+## マスター管理者を設定する
+
+### マスター管理者とは？
+
+デバイスに管理者を設定せずに使用すると、誰でも管理メニューに入りデバイス設定を変更できます。 マスター管理者機能は、このようなセキュリティ脆弱性を解決するために、全体管理者の設定を強制する機能です。
+
+### マスター管理者対応製品案内
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/how-to/BioStation 3-Front.png' className='none' alone width='130px'/></Td>
+
+<Td><Image src='/img/how-to/BioStation 2a-front.png' className='none' alone width='200px' /></Td>
+
+<Td><Image src='/img/how-to/BioLite N2-Front.png' className='none' alone width='110px' /></Td>
+
+<Td><Image src='/img/how-to/X-Station 2-Front.png' className='none' alone width='300px' /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>**BioStation 3**<br/>ファームウェア バージョン 1.4.0 以上</Td>
+
+<Td>**BioStation 2a**<br/>ファームウェア バージョン 1.2.0 以上</Td>
+
+<Td>**BioLite N2**<br/>ファームウェア バージョン 1.7.0 以上</Td>
+
+<Td>**X-Station 2**<br/>ファームウェア バージョン 1.4.0 以上</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+## 新しいデバイスまたはファームウェアをアップグレードした既存デバイスで管理者セキュリティを強化する
+
+### 新しいデバイス
+
+新しいデバイスでは、最初に**マスター管理者**を必ず登録する必要があり、登録しない場合はデバイスの使用が制限されます。
+
+:::info
+
+* 新しいデバイスでは、初回起動時に**Master Admin**登録画面が表示されます。 **マスター管理者**を登録しないと、次の画面に進むことはできません。
+
+* BioStar 2に接続してデバイス全体の管理者を割り当てても、**マスター管理者**を登録しなければ、すべての機能を使用できます。
+
+* 新しいデバイスはファームウェアをダウングレードできません。
+
+:::
+
+<details>
+<summary>**新しいデバイスでマスター管理者を登録する**</summary>
+
+#### 新しいデバイスでマスター管理者を登録する
+
+1. 新しいデバイスでは、初回起動時に**マスター管理者**登録画面が表示されます。
+
+   <Image src='/img/how-to/setting-master-admin-1.png' caption width='300px' />
+
+2. **マスター管理者**を登録するには、少なくとも 2 種類以上のクレデンシャルを登録する必要があります。 必要な2種類のクレデンシャルを選択して登録してください。
+
+   <Image src='/img/how-to/setting-master-admin-2.png' caption width='300px' />
+
+   **マスター管理者**に登録できるクレデンシャルは次のとおりです。
+
+   <Table>
+     <Tbody>
+     <Row>
+       <Th>クレデンシャルの種類</Th>
+       <Th>登録可能数</Th>
+       <Th>詳細条件</Th>
+     </Row>
+     <Row>
+       <Td>カード</Td>
+       <Td>最大4個</Td>
+       <Td>CSN、Wiegandタイプのみ対応<br/>同一タイプ内で重複登録不可</Td>
+     </Row>
+     <Row>
+       <Td>顔</Td>
+       <Td>最大2個</Td>
+       <Td>同じアルゴリズムを搭載したデバイスでのみ登録可能</Td>
+     </Row>
+     <Row>
+       <Td>指紋</Td>
+       <Td>最大2個</Td>
+       <Td>-</Td>
+     </Row>
+     <Row>
+       <Td>PIN</Td>
+       <Td>1個</Td>
+       <Td>8桁以上</Td>
+     </Row>
+     </Tbody>
+   </Table>
+
+   :::note
+
+   **登録条件**
+
+   * 少なくとも 2 種類以上のクレデンシャルを登録する必要があります。
+
+   * 新規デバイスとファームウェアをアップグレードしたデバイスの両方に同じ条件が適用されます。
+
+   * デバイスがサポートするすべてのクレデンシャルを認証手段として使用できます。
+
+   :::
+
+3. 2種類以上のクレデンシャルを登録した後、**Complete**ボタンを押すと**マスター管理者**の登録が完了します。
+
+   <Image src='/img/how-to/setting-master-admin-3.png' caption width='300px' />
+
+{/\* :::warning
+
+**マスター管理者未登録時の警告メッセージ**
+
+マスター管理者またはそれに準じた設定が行われていない場合、設定を保存する際に警告ポップアップメッセージで通知します。
+
+<Image src='/img/how-to/no-register-master-admin.png' alone caption />
+
+::: \*/}
+
+</details>
+
+<details>
+<summary>**新しいデバイスでマスター管理者を管理する**</summary>
+
+#### 新しいデバイスでマスター管理者を管理する
+
+新しいデバイスでは、**Master Admin**設定を**Settings → Device → Master Admin**メニューで変更します。
+
+<div className='grid-container'>
+
+<Image src='/img/how-to/edit-master-admin-1.png' caption width='300px' />
+
+<Image src='/img/how-to/setting-master-admin-4.png' caption width='300px' />
+
+</div>
+
+</details>
+
+### デバイスをアップグレードする {#admin-two-step-authentication}
+
+ファームウェアをアップグレードしたデバイスには **Master Admin** 設定がありませんが、**Admin 2-step Authentication** オプションを使用してすべての管理者の権限を強化し、デバイスのセキュリティを向上させることができます。
+
+:::info
+
+* **Admin 2-step Authentication** オプションを有効にしていない場合、1段階認証がデフォルトになります。
+
+* デバイスに登録されている管理者のクレデンシャルが2種類以上の場合のみ、2段階認証を有効にします。
+
+* アップグレードされたデバイスではファームウェアをダウングレードできません。
+
+:::
+
+<details>\n<summary>**アップグレードしたデバイスで管理者の2段階認証を設定する**</summary>
+
+#### アップグレードデバイスで管理者の二段階認証を設定する
+
+**Settings → Device → Admin 2-step Authentication** メニューで管理者 2段階認証を有効にします。
+
+* **Admin 2-step Authentication** オプションは、既に使用しているデバイスのファームウェアを最新バージョンにアップグレードした場合にのみ表示されます。
+
+<Image src='/img/how-to/setting-two-step-authentication.png' caption width='300px' />
+
+:::info
+
+* すべての管理者に2種類以上のクレデンシャルが登録されていない場合、有効化に失敗し、エラーメッセージが表示されます。<br/>すべての管理者に2種類以上のクレデンシャルを登録してから、再試行してください。
+
+<Image src='/img/how-to/error-two-step-authentication.png' caption width='300px' />
+
+:::
+
+:::warning
+
+* **Admin 2-step Authentication**を有効化した後、すべての管理者のクレデンシャルを2種類未満に削除すると、BioStar 2 に接続できない状況では管理者メニューにアクセスできなくなります。 そのため、管理者クレデンシャルを削除する際は十分に注意してください。
+
+:::
+
+</details>
+
+## ご案内事項
+
+* **デバイスハッシュキーを手動で変更する場合**
+
+  * デバイスハッシュキーを手動で変更する場合、マスター管理者のPINが削除されるという警告メッセージが表示されます。メッセージを確認してから変更してください。
+
+* **RS-485通信区間での顔画像送信制限**
+
+  * RS-485通信区間ではバイオメトリッククレデンシャルの画像が送信されないため、スレーブデバイスで登録済みマスター管理者の顔を参照するときは代替画像が表示されます。
+
+## よくある質問
+
+import FaqData from './faqs.json';
+
+<FaqsItems data={FaqData} />
