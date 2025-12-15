@@ -38,6 +38,7 @@ files: [
       "/i18n/en/docusaurus-plugin-content-docs/current/common/_biostarair-customer-notice.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/common/bsx-license/*.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/opensourcelicenses.txt",
+      "/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/*.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/**/*.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/reference/**/smartcardissue.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/*/*/release-notes/*.mdx",
