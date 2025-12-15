@@ -1,110 +1,134 @@
 ---
 id: monitoring-door-status
-title: 출입문 상태 모니터링
-description: BioStar Air에서 웹 포털과 모바일 앱을 사용하여 실시간 출입문 상태를 모니터링하고, 잠금을 원격으로 제어하며, 출입문 접근을 관리하는 방법을 안내합니다.
+title: 출입문 상태 모니터링하기
+description: BioStar Air 웹 포털과 모바일 앱을 사용하여 실시간 출입문 상태를 모니터링하고, 잠금을 원격으로 제어하며, 출입문 접근을 관리하는 방법을 안내합니다.
 keywords: [모니터링, 출입문 상태, BioStar Air]
 ---
 
 import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
-## 기능 개요 {#feature-overview}
+BioStar Air 시스템에 연결된 출입문의 상태를 실시간으로 모니터링할 수 있습니다. 관리자는 출입문의 잠금 또는 잠금 해제 여부 및 릴레이 센서 상태를 확인하고, 문을 잠그거나 잠금 해제하여 원격으로 출입을 제어할 수 있습니다.
 
-BioStar Air 시스템에 연결된 출입문의 상태를 실시간으로 모니터링할 수 있습니다. 관리자는 문의 잠금 또는 잠금 해제 여부를 확인하고, 문 센서 상태를 확인하고, 문을 잠그거나 잠금 해제하여 원격으로 출입을 제어할 수 있습니다.
+:::tip
+
+출입문 상태 모니터링에 대한 동영상 가이드를 시청하려면 다음 영상을 참고하세요.
 
 <YouTube videoId="_nxSRwst480" />
+
+:::
 
 <CustomerNote />
 
 
-## 웹 포털에서 출입문 상태 모니터링 {#monitoring-door-status-web-portal}
+## 웹 포털에서 모니터링 {#monitoringWebPortal}
 
-BioStar Air 웹 포털에서 출입문 상태를 모니터링하세요.
+BioStar Air 웹 포털에서 출입문 상태를 모니터링할 수 있습니다. 화면 왼쪽 사이드바에서 <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='door_status_submenu' product='air' />를 클릭하세요. BioStar Air에 등록된 출입문의 목록을 확인할 수 있습니다.
 
-1. **Monitoring** → **Door Status**로 이동하세요.
+<Image src='/img/air/bsair-monitoring-door-status.png' />
 
-1. 시스템은 현재 연결된 출입문의 목록을 표시합니다.
+:::info
 
-### 출입문 상태 표시 이해하기 {#understanding-door-status-indicators}
+* 출입문은 장치 등록을 통해 등록할 수 있습니다. 자세한 내용은 [다음 문서](register-device)를 참고하세요.
+
+* 출입문 관리에 대한 자세한 내용은 [다음 문서](managing-registered-doors)를 참고하세요.
+
+:::
+
+### 출입문 상태 표시 {#doorStatusIndicators}
 
 각 출입문에서는 아래 항목을 확인할 수 있습니다.
 
-* **릴레이 상태**: 출입문의 잠금 또는 잠금 해제 상태를 표시합니다.
+* <Cmd sid='door_status_column2' product='air' />: 출입문의 잠금 또는 잠금 해제 상태를 표시합니다.
 
-* **출입문 센서**: 출입문이 물리적으로 열려 있는지 또는 닫혀 있는지 표시합니다.
+* <Cmd sid='door_status_column3' product='air' />: 출입문이 물리적으로 열려 있는지 또는 닫혀 있는지 표시합니다.
 
 ### 출입문 잠금 해제 {#remotely-unlocking-a-door}
 
-출입문이 온라인 상태이고 BioStar Air에 연결되어 있다면 원격으로 잠금 해제할 수 있습니다:
+출입문이 온라인 상태이고 BioStar Air에 연결되어 있다면 원격으로 잠금 해제할 수 있습니다. 
 
-1. **Open Door** 버튼을 클릭하세요.
+1. <Cmd sid='door_status_column4' product='air' /> 열에서 <Cmd sid='door_open_btn' product='air' /> 버튼을 클릭하세요. 
 
-1. 릴레이 상태가 **Unlocked**로 업데이트됩니다.
+1. <Cmd sid='door_status_column2' product='air' /> 열의 상태가 잠금 해제로 변경됩니다. 
 
-1. 설정된 시간이 지나면 문은 다시 잠긴 상태로 돌아갑니다.
+1. 설정된 시간이 지나면 출입문은 다시 잠금 상태로 돌아갑니다.
 
-### 출입문을 영구적으로 잠금 해제하기 {#permanently-unlocking-a-door}
+:::info
 
-출입문을 무기한 잠금 해제할 수 있습니다.
+출입문이 열린 상태로 유지되는 시간을 설정하는 방법은 [다음 문서](managing-registered-doors#editingDoors)를 참고하세요.
 
-1. 출입문 옆의 **Menu** 아이콘을 클릭하세요.
+:::
 
-1. **Unlock Mode**를 선택하세요.
+### 항상 열림 모드 설정 {#alwaysOpenMode}
 
-1. 릴레이는 잠금 해제 상태로 유지됩니다.
+출입문을 무기한 열림 상태로 유지할 수 있습니다. 방문객 또는 임시 출입이 필요한 경우에 유용하게 사용할 수 있습니다.
 
-정상 작동으로 복원하려면 메뉴에서 **Release**를 선택하세요.
+1. 출입문 목록에서 열림 상태로 유지할 출입문의 가장 오른쪽에 <IcAirMore title='Control' /> 버튼을 클릭하세요.
 
-### 출입문 강제 잠금 {#forcing-a-door-to-lock}
+   <Image src='/img/air/bsair-monitoring-door-status-more-func.png' />
 
-현재 일정에 관계없이 출입문을 잠글 수 있습니다.
+1. 팝업 메뉴에서 <Cmd sid='event_log_unlock_mode' product='air' />을 클릭하세요.
 
-1. 출입문 옆의 **Menu** 아이콘을 클릭하세요.
+1. <Cmd sid='door_status_column4' product='air' /> 열에 <Cmd sid='door_control_unlocked_description' product='air' />로 상태가 변경됩니다.
 
-1. **Lock Mode**를 선택하세요.
+<Image src='/img/air/bsair-monitoring-door-status-control-always-open.png' />
 
-1. 릴레이는 잠금 상태로 전환되어 출입이 차단됩니다.
-
-정상 작동으로 복원하려면 메뉴에서 **Release**를 선택하세요.
+정상 동작 상태로 되돌리려면 <IcAirMore title='Control' /> → <Cmd sid='release_icon_tooltip' product='air' />를 클릭하세요.
 
 
-## BioStar Air 앱에서 출입문 상태 모니터링  {#monitoring-door-status-app}
+### 페쇄 모드 설정 {#lockMode}
 
-BioStar Air 모바일 앱을 사용하여 출입문 상태를 확인할 수 있습니다.
+현재 스케줄에 관계없이 출입문을 잠금 상태로 유지할 수 있습니다. 보안 강화가 필요한 경우에 유용하게 사용할 수 있습니다.
 
-1. 모바일 기기에서 BioStar Air 앱을 실행하세요.
+1. 출입문 목록에서 잠금 상태로 유지할 출입문의 가장 오른쪽에 <IcAirMore title='Control' /> 버튼을 클릭하세요.
 
-1. 화면 하단의 **Monitoring** 탭을 탭하세요.
+   <Image src='/img/air/bsair-monitoring-door-status-more-func.png' />
 
-1. **Door Status**를 선택하세요.
+1.  팝업 메뉴에서 <Cmd sid='event_log_lock_mode' product='air' />를 클릭하세요.
 
-1. 시스템은 현재 연결된 모든 출입문을 표시합니다.
+1. <Cmd sid='door_status_column4' product='air' /> 열에 <Cmd sid='door_control_locked_description' product='air' />로 상태가 변경됩니다.
 
-### 출입문 정보 보기 {#viewing-door-information}
+<Image src='/img/air/bsair-monitoring-door-status-control-lock-mode.png' />
 
-BioStar Air 모바일 앱에서는 각 출입문에 대한 아래 세부 정보를 제공합니다.
+정상 동작 상태로 되돌리려면 <IcAirMore title='Control' /> → <Cmd sid='release_icon_tooltip' product='air' />를 클릭하세요.
 
-* **출입문 이름**
 
-* **할당 그룹**
+## 모바일에서 출입문 상태 모니터링 {#monitoringDoorStatusMobile}
 
-* **릴레이 상태** (잠금/잠금 해제)
+모바일 기기에서 BioStar Air 앱을 사용하여 출입문 상태를 확인할 수 있습니다.
 
-* **문 센서** (열림/닫힘)
+<Image src='/img/air/bsair-mobile-monitoring-door-status.png' className='none' />
+
+1. 모바일 기기에서 BioStar Air 앱을 실행하고 로그인하세요.
+
+1. 초기 화면 하단의 <Cmd sid='monitoring_menu' product='air' />을 탭하세요.
+
+1. <Cmd sid='door_status_submenu' product='air' /> 카드를 탭하세요.
+
+1. BioStar Air에 등록된 출입문의 목록을 확인할 수 있습니다.
+
 
 ### 출입문 출입 제어 {#controlling-door-access-app}
 
+<Columns>
+<Column className='width--20'>
+
+<Image src='/img/air/bsair-mobile-monitoring-door-status-control.png' />
+
+</Column>
+<Column className='padding--l20'>
+
 출입문이 네트워크에 연결되어 있다면 아래 작업을 실행할 수 있습니다.
 
-* **Tap Open**을 탭하여 문을 원격으로 잠금 해제합니다.
+* <Cmd sid='door_open_btn' product='air' />: 출입문을 원격으로 잠금 해제할 수 있습니다.
 
-* **Set Lock/Unlock Modes**를 탭하여 일정을 무시합니다.
+출입문의 가장 오른쪽에 <IcAirMore title='Control' /> 버튼을 탭하세요. <Cmd en='Door Info and Control'>출입문 정보 및 제어</Cmd> 옵션이 나타납니다.
 
-* **Release**를 탭하여 잠금 또는 잠금 해제 모드를 해제하고 정상 작동으로 복원합니다.
+* <Cmd sid='event_log_unlock_mode' product='air' /> / <Cmd sid='event_log_lock_mode' product='air' />: 스케줄에 관계없이 출입문을 항상 열림 또는 잠금 모드로 설정합니다.
 
-### 출입문 상태 새로 고침 {#refreshing-door-status}
+* <Cmd sid='release_icon_tooltip' product='air' />: <Cmd sid='event_log_unlock_mode' product='air' /> 또는 <Cmd sid='event_log_lock_mode' product='air' />를 해제하고 정상 동작 상태로 되돌립니다.
 
-출입문 상태를 업데이트할 수 있습니다.
+</Column>
+</Columns>
 
-1. 화면 상단의 **Refresh** 버튼을 탭하세요.
 
-1. 시스템은 모든 출입문의 최신 상태를 검색합니다.
+
