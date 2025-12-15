@@ -1,6 +1,6 @@
 {
   "title": {
-    "message": "ドキュメント",
+    "message": "Docs",
     "description": "The title in the navbar"
   },
   "logo.alt": {
@@ -8,7 +8,7 @@
     "description": "The alt text of navbar logo"
   },
   "item.label.Devices": {
-    "message": "デバイス",
+    "message": "Devices",
     "description": "Navbar item with label Devices"
   },
   "item.label.BioStar 2": {
@@ -20,11 +20,11 @@
     "description": "Navbar item with label BioStar X"
   },
   "item.label.Reference": {
-    "message": "リファレンス",
+    "message": "Reference",
     "description": "Navbar item with label Reference"
   },
   "item.label.Legal": {
-    "message": "法的事項",
+    "message": "Legal",
     "description": "Navbar item with label Legal"
   },
   "item.label.BioStation 3": {
@@ -32,7 +32,7 @@
     "description": "Navbar item with label BioStation 3"
   },
   "item.label.Platforms": {
-    "message": "プラットフォーム",
+    "message": "Platforms",
     "description": "Navbar item with label Platforms"
   },
   "item.label.BioStar Air": {
@@ -40,7 +40,7 @@
     "description": "Navbar item with label BioStar Air"
   },
   "item.label.How-to Articles": {
-    "message": "ハウツー記事",
+    "message": "How-to Articles",
     "description": "Navbar item with label How-to Articles"
   },
   "item.label.BioEntry W3": {
@@ -108,39 +108,39 @@
     "description": "Navbar item with label XPass D2"
   },
   "item.label.Enclosure": {
-    "message": "エンクロージャ",
+    "message": "Enclosure",
     "description": "Navbar item with label Enclosure"
   },
   "item.label.Input Module": {
-    "message": "入力モジュール",
+    "message": "Input Module",
     "description": "Navbar item with label Input Module"
   },
   "item.label.Output Module": {
-    "message": "出力モジュール",
+    "message": "Output Module",
     "description": "Navbar item with label Output Module"
   },
   "item.label.Door Module": {
-    "message": "ドアモジュール",
+    "message": "Door Module",
     "description": "Navbar item with label Door Module"
   },
   "item.label.Secure Module": {
-    "message": "セキュアモジュール",
+    "message": "Secure Module",
     "description": "Navbar item with label Secure Module"
   },
   "item.label.Extended Module": {
-    "message": "拡張モジュール",
+    "message": "Extended Module",
     "description": "Navbar item with label Extended Module"
   },
   "item.label.Extended Module-SC": {
-    "message": "拡張モジュール-SC",
+    "message": "Extended Module-SC",
     "description": "Navbar item with label Extended Module-SC"
   },
   "item.label.Device Manager": {
-    "message": "デバイスマネージャー",
+    "message": "Device Manager",
     "description": "Navbar item with label Device Manager"
   },
   "item.label.CoreStation Setup Manager": {
-    "message": "CoreStation セットアップマネージャー",
+    "message": "CoreStation Setup Manager",
     "description": "Navbar item with label CoreStation Setup Manager"
   }
 }

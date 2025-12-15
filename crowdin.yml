@@ -20,9 +20,7 @@ files: [
     "source" : "/i18n/ko/**/*",
     "translation" : "/i18n/%two_letters_code%/**/%original_file_name%",
     "escape_special_characters": 0,
-    "ignore": [
-      "i18n/ko/faqs.json"
-    ]
+    "ignore": []
   },
   {
     "source" : "/docs/**/*",
@@ -43,7 +41,6 @@ files: [
       "/docs/common/_boringssl-license.mdx",
       "/docs/common/_ios-license.mdx",
       "/docs/common/_android-license.mdx",
-      "/docs/common/_airfob-portal-site-type.mdx",
       "/docs/common/_biostarair-customer-notice.mdx",
       "/docs/common/bsx-license/*.mdx",
       "/docs/platform/biostar_x/opensourcelicenses.txt",

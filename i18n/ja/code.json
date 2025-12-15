@@ -387,7 +387,7 @@
     "message": "検索"
   },
   "index.biostarx.description": {
-    "message": "入退室管理の限界を超える新たなセキュリティ基準,<br/>AIベースの統合セキュリティプラットフォーム"
+    "message": "入退室管理の限界を超える新たなセキュリティ基準、AIベースの統合セキュリティプラットフォーム"
   },
   "windows.key.start": {
     "message": "開始"
@@ -1089,5 +1089,20 @@
   },
   "externalLinks.XPassQ2.desc": {
     "message": "カードおよびQR/バーコード認証対応入退室装置"
+  },
+  "externalLinks.dev.sdk.desc": {
+    "message": "指紋認証デバイスのコア機能を<br/>サードパーティ製ソフトウェアと完全に統合"
+  },
+  "externalLinks.dev.xapi.desc": {
+    "message": "BioStar XのすべてのAPIを<br/>一目で確認できるAPIドキュメント"
+  },
+  "externalLinks.dev.2api.desc": {
+    "message": "BioStar 2のすべてのAPIを<br/>一目で確認できるAPIドキュメント"
+  },
+  "externalLinks.dev.gsdk.desc": {
+    "message": "多様なプログラミング言語をサポートする<br/>クロスプラットフォームソリューション"
+  },
+  "externalLinks.dev.svpsdk.desc": {
+    "message": "Suprema デバイスの主要機能を<br/>他ソフトウェアでサポート"
   }
 }
