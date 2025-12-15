@@ -1,0 +1,109 @@
+## 장치 라이선스
+
+### 등록하기
+
+슈프리마에서 발급한 장치 라이선스를 활성화하려면 라이선스에 해당하는 특정 기능을 사용할 수 있습니다. 장치 라이선스는 BioStar X 및 USB 메모리를 사용하여 장치에 활성화할 수 있습니다. 장치 라이선스를 발급하려면 구입처에 문의하세요.
+
+1. <Cmd>Settings</Cmd> → <IcLicense/> <Cmd>License</Cmd> → <Cmd sid='setting.menu.device.root' /> 메뉴로 이동하세요.
+
+<span class='cmd'>Settings</span>
+
+1. <Cmd sid='setting.server.license.device' /> 섹션에서 <Cmd sid='user.list.csvImport.browse' /> 버튼을 클릭하세요.
+
+1. 장치 라이선스를 저장한 경로에서 장치 라이선스 파일(*\*.lic*)을 선택하세요.
+
+1. 라이선스 파일을 불러오면 <Cmd sid='setting.server.license.name' /> 및 <Cmd sid='setting.server.license.device.count' />, <Cmd sid='setting.server.license.device.list' />이 표시됩니다. 자세한 내용은 [다음 문서](#check-device-license)를 참고하세요.
+
+1. <Cmd sid='setting.server.license.device.list' />을 확인한 후 <Cmd sid='setting.server.license.button.activate' product='2' /> 버튼을 클릭하세요.
+
+라이선스 활성화를 실패하면 메시지가 표시됩니다. 이때 라이선스 활성화를 다시 시도할 수 있습니다.
+
+:::info
+
+* 장치 라이선스 한 개당 한 개의 기능을 사용할 수 있습니다.
+
+* 한 개의 장치 라이선스 파일에 다수의 장치 라이선스를 포함시킬 수 있습니다. 최대 100개까지 지원합니다.
+
+* 장치 라이선스 파일은 암호화된 파일이므로 임의로 수정할 수 없습니다.
+
+* 장치 라이선스는 장치 ID를 기준으로 발급됩니다. 비정상적인 방법으로 장치 ID를 변경할 경우 라이선스에 대한 보증 서비스가 제공되지 않습니다.
+
+:::
+
+### 장치 라이선스 정보 {#check-device-license}
+
+라이선스 파일(*\*.lic*)을 불러온 다음 표시되는 아래 항목들을 참고하고 장치 라이선스를 활성화하세요.
+
+#### <Cmd sid='setting.server.license.name' />
+
+장치 라이선스 파일에 포함한 라이선스 종류를 확인할 수 있습니다.
+
+* **Camera QR**을 사용할 수 있는 장치는 아래 목록을 참고하세요.
+
+  * X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB): 펌웨어 1.2.0 이상
+
+  * BioStation 3 (BS3-DB, BS3-APWB): 펌웨어 1.1.0 이상
+
+* 지원하는 OSDP 안테나와 무선 도어락은 아래 목록을 참고하세요.
+
+  * U&Z OSDP 안테나: CX8936
+
+  * U&Z 무선 도어락: CX217x(Handle), CX212x(Knob)
+
+  :::info
+
+  * 연결하려는 무선 도어락의 장치 수만큼 최대 12개까지 장치 라이선스를 발급받을 수 있습니다.
+
+  * 장치 라이선스로 연결할 수 있는 무선 도어락의 최대 장치 수는 12대입니다. 장치 라이선스 여러 개를 활성화하여도 12대를 초과할 수 없습니다.
+
+  :::
+
+#### <Cmd sid='setting.server.license.device.count' />
+
+장치 라이선스 파일에 포함된 장치의 수를 확인할 수 있습니다.
+
+#### <Cmd sid='setting.server.license.device.licenseCount' />
+
+장치 라이선스로 활성화할 수 있는 무선 도어락의 개수를 확인할 수 있습니다.
+
+:::info
+
+이 항목은 무선 도어락 장치 라이선스 파일을 선택했을 때 표시됩니다.
+
+:::
+
+#### <Cmd sid='setting.server.license.device.list' />
+
+장치 목록에 표시되는 각 항목을 참고하세요.
+
+* <Cmd sid='setting.server.license.device.id' />: 장치의 고유 ID입니다.
+
+* <Cmd sid='setting.server.license.device.name' />: 장치의 이름입니다.
+
+* <Cmd sid='setting.server.license.device.product' />: 장치의 모델명입니다.
+
+* <Cmd sid='setting.server.license.device.status' />: 장치의 상태를 확인할 수 있습니다. <Cmd sid='setting.server.license.device.list.normal' /> 상태의 장치만 라이선스를 활성화할 수 있습니다.
+
+  아래 상태의 장치는 라이선스를 활성화할 수 없습니다.
+
+  - <Cmd sid='setting.server.license.device.list.disconnected' />
+
+  - <Cmd sid='setting.server.license.device.list.notSupported' />
+
+  - <Cmd sid='setting.server.license.device.list.unregistered' />
+
+* <Cmd sid='setting.server.license.status' />: 라이선스 활성화 여부입니다. <Cmd sid='setting.server.license.device.list.notActivated' /> 상태의 장치만 라이선스를 활성화할 수 있습니다.
+
+  아래 상태의 라이선스는 활성화할 수 없습니다.
+
+  - <Cmd sid='setting.server.license.device.list.notActivated' />
+
+  - <Cmd sid='setting.server.license.device.list.na' />
+
+* <Cmd sid='setting.server.license.device.activatedCount' />: 무선 도어락의 연결 현황입니다.
+
+  :::info
+
+  이 항목은 무선 도어락 장치 라이선스 파일을 선택했을 때 표시됩니다.
+
+  :::

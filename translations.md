@@ -53,6 +53,8 @@ crowdin upload -b main
 ^.*[가-힣]  [가-힣].*$
 ^.*[a-z]  [a-z].*$
 
+찾아서 삭제할 것: },{
+
 ---
 
 물결 사용 -> 하이픈
@@ -77,3 +79,41 @@ settings-remote-access.mdx 문서 업데이트
 ---
 
 location-issues.json: \\\" -> \"
+
+
+## 번역 언어 추가 시 고려할 사항
+
+### 수동 추가 파일
+
+crowdin.yml 파일에서 "ignore" 항목 참조
+
+_airfob-portal-site-type.mdx
+_more-information.mdx
+_ic-information.mdx
+_ios-license.mdx
+_android-license.mdx
+_sil-open-font-license.mdx
+_original-ssleay-license.mdx
+_openssl-license.mdx
+_mit-open-source-license.mdx
+_gnu-lesser-general-public-license.mdx
+_gnu-general-public-license.mdx
+_boringssl-license.mdx
+_apache-license.mdx
+legal/*.mdx
+/docs/ja/platform/biostar_x/opensourcelicenses.txt
+
+
+### 번역 리소스 파일 확인하기
+
+- i18n\ko\code.json 파일과 같은 구조의 파일인지 확인할 것
+
+- navbar.json 국문 파일과 다국어 파일 구조가 동일한지 확인할 것
+
+- releasenote 영문 파일 기준으로 다국어 파일에 추가할 것
+
+- overviewitem.js 82 줄 수정: '릴리스' 'release'
+
+## 추후 수정 예정
+
+src\components\Image\index.js
