@@ -17,20 +17,32 @@
                 "auth_distance": {
                   "label": "인증 거리",
                   "label_id": "specs.credentials.biometrics.face.auth_distance",
-                  "value": "0.3 ~ 1.0 m",
+                  "value": {
+                     "ko": "0.3 ~ 1.0 m",
+                     "en": "0.3 ~ 1.0 m",
+                     "es": "De 0.3 a 1.0 m",
+                     "ja": "0.3 ~ 1.0 m"
+                  },
                   "annotation_label": "anno1"
                 },
                 "auth_height": {
                   "label": "인증 높이",
                   "label_id": "specs.credentials.biometrics.face.auth_height",
-                  "value": "1.4 ~ 1.9 m"
+                  "value": {
+                     "ko": "1.4 ~ 1.9 m",
+                     "en": "1.4 ~ 1.9 m",
+                     "es": "De 1.4 a 1.9 m",
+                     "ja": "1.4 ~ 1.9 m"
+                  }
                 },
                 "matching_speed": {
                   "label": "매칭 속도",
                   "label_id": "specs.credentials.biometrics.face.matching_speed",
                   "value": {
                     "ko": "0.2초 이내",
-                    "en": "Within 0.2 seconds"
+                    "en": "Within 0.2 seconds",
+                    "es": "En un plazo de 0.2 segundos",
+                    "ja": "0.2 秒以内"
                   }
                 },
                 "live_face_detection": {
@@ -49,12 +61,22 @@
           "items": {
             "model1": {
               "label": "BS3-DB",
-              "value": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno2_dest'><a href='#anno2'></a></sup>, FeliCa",
+              "value": {
+               "ko": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno2_dest'><a href='#anno2'></a></sup>, FeliCa",
+               "en": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno2_dest'><a href='#anno2'></a></sup>, FeliCa",
+               "es": "125kHz EM y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno2_dest'><a href='#anno2'></a></sup>, FeliCa",
+               "ja": "125kHz EM および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3<sup id='anno2_dest'><a href='#anno2'></a></sup>、FeliCa"
+              },
               "annotation_value": "anno2"
             },
             "model2": {
               "label": "BS3-APWB",
-              "value": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
+              "value": {
+               "ko": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
+               "en": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
+               "es": "125kHz EM, HID Prox y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
+               "ja": "125kHz EM、HID Prox および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno2'></a></sup>、FeliCa、iCLASS SE/SR/Seos"
+              },
               "annotation_value": "anno2"
             }
           }
@@ -62,13 +84,23 @@
         "rf_distance": {
           "label": "RF 인식 거리",
           "label_id": "specs.credentials.rf_distance",
-          "value": "EM/HID Prox/MIFARE/DESFire/HID iCLASS: 30 mm, FeliCa: 15 mm",
+          "value": {
+            "ko": "EM/HID Prox/MIFARE/DESFire/HID iCLASS: 30 mm, FeliCa: 15 mm",
+            "en": "EM/HID Prox/MIFARE/DESFire/HID iCLASS: 30 mm, FeliCa: 15 mm",
+            "es": "EM/HID Prox/MIFARE/DESFire/HID iCLASS: 30 mm, FeliCa: 15 mm",
+            "ja": "EM/HID Prox/MIFARE/DESFire/HID iCLASS：30 mm、FeliCa：15 mm"
+          },
           "annotation_label": "anno3"
         },
         "mobile": {
           "label": "모바일",
           "label_id": "specs.credentials.mobile",
-          "value": "NFC, BLE"
+          "value": {
+            "ko": "NFC, BLE",
+            "en": "NFC, BLE",
+            "es": "NFC, BLE",
+            "ja": "NFC、BLE"
+          }
         },
         "keypad": {
           "label": "스크램블 키패드(PIN)",
@@ -91,12 +123,22 @@
         "cpu": {
           "label": "CPU",
           "label_id": "specs.general.cpu",
-          "value": "1.5GHz Quad Core"
+          "value": {
+            "ko": "1.5GHz Quad Core",
+            "en": "1.5GHz Quad Core",
+            "es": "1.5GHz Quad Core",
+            "ja": "1.5 GHz 4 コア"
+          }
         },
         "memory": {
           "label": "메모리",
           "label_id": "specs.general.memory",
-          "value": "32 GB Flash + 4 GB RAM"
+          "value": {
+            "ko": "32 GB Flash + 4 GB RAM",
+            "en": "32 GB Flash + 4 GB RAM",
+            "es": "Memoria flash de 32 GB + RAM de 4 GB",
+            "ja": "32 GB Flash + 4 GB RAM"
+          }
         },
         "crypto_chip": {
           "label": "크립토 칩",
@@ -108,7 +150,9 @@
           "label_id": "specs.general.lcd_type",
           "value": {
             "ko": "5.5\" IPS 컬러 LCD",
-            "en": "5.5\" IPS color LCD"
+            "en": "5.5\" IPS color LCD",
+            "es": "LCD en color IPS 5.5\"",
+            "ja": "5.5 インチ IPS カラー LCD"
           }
         },
         "lcd_resolution": {
@@ -118,30 +162,42 @@
             "ko": "720 x 1280 픽셀",
             "en": "720 x 1280 pixels",
             "es": "720 x 1280 píxeles",
-            "jp": "720 x 1280 画素"
+            "ja": "720 x 1280 画素"
           }
         },
         "sound": {
           "label": "소리",
           "label_id": "specs.general.sound",
-          "value": "16bit"
+          "value": "16 bit"
         },
         "operating_temp": {
           "label": "동작 온도",
           "label_id": "specs.general.operating_temp",
-          "value": "-20 °C ~ 50 °C"
+          "value": {
+            "ko": "-20 °C ~ 50 °C",
+            "en": "-20 °C ~ 50 °C",
+            "es": "De -20 °C a 50 °C",
+            "ja": "-20 °C ~ 50 °C"
+          }
         },
         "storage_temp": {
           "label": "보관 온도",
           "label_id": "specs.general.storage_temp",
-          "value": "-40 °C ~ 70 °C"
+          "value": {
+            "ko": "-40 °C ~ 70 °C",
+            "en": "-40 °C ~ 70 °C",
+            "es": "De -40 °C a 70 °C",
+            "ja": "-40 °C ~ 70 °C"
+          }
         },
         "operating_humidity": {
           "label": "동작 습도",
           "label_id": "specs.general.operating_humidity",
           "value": {
             "ko": "0 % ~ 80 %, 비응축",
-            "en": "0 % ~ 80 %, non-condensing"
+            "en": "0 % ~ 80 %, non-condensing",
+            "es": "Del 0 % al 80 %, sin condensación",
+            "ja": "0 % ~ 80 %（結露なきこと）"
           }
         },
         "storage_humidity": {
@@ -149,7 +205,9 @@
           "label_id": "specs.general.storage_humidity",
           "value": {
             "ko": "0 % ~ 90 %, 비응축",
-            "en": "0 % ~ 90 %, non-condensing"
+            "en": "0 % ~ 90 %, non-condensing",
+            "es": "Del 0 % al 90 %, sin condensación",
+            "ja": "0 % ~ 90 %（結露なきこと）"
           }
         },
         "camera": {
@@ -177,7 +235,12 @@
         "certifications": {
           "label": "인증",
           "label_id": "specs.general.certifications",
-          "value": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE, MIC, TELEC"
+          "value": {
+            "ko": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE, MIC, TELEC",
+            "en": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE, MIC, TELEC",
+            "es": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE, MIC, TELEC",
+            "ja": "CE、UKCA、KC、FCC、IC、RCM、BIS、SIG、RoHS、REACH、WEEE、MIC、TELEC"
+          }
         }
       }
     },
@@ -196,7 +259,9 @@
           "label_id": "specs.storage.max_credentials_1n",
           "value": {
             "ko": "얼굴: 50,000",
-            "en": "Face: 50,000"
+            "en": "Face: 50,000",
+            "es": "Rostro: 50,000",
+            "ja": "顔：50,000"
           }
         },
         "max_credentials_1on1": {
@@ -204,7 +269,9 @@
           "label_id": "specs.storage.max_credentials_1on1",
           "value": {
             "ko": [ "얼굴: 100,000", "카드: 100,000", "PIN: 100,000" ],
-            "en": [ "Face: 100,000", "Card: 100,000", "PIN: 100,000" ]
+            "en": [ "Face: 100,000", "Card: 100,000", "PIN: 100,000" ],
+            "es": [ "Rostro: 100,000", "Tarjeta: 100,000", "PIN: 100,000" ],
+            "ja": [ "顔：100,000", "カード：100,000", "PIN：100,000" ]
           }
         },
         "max_text_logs": {
@@ -228,7 +295,9 @@
           "label_id": "specs.interface.ethernet",
           "value": {
             "ko": "지원 (10/100/1000 Mbps, 자동 MDI/MDI-X)",
-            "en": "Supported (10/100/1000 Mbps, auto MDI/MDI-X)"
+            "en": "Supported (10/100/1000 Mbps, auto MDI/MDI-X)",
+            "es": "Admitida (10/100/1000 Mbps, MDI/MDI-X automática)",
+            "ja": "サポート対象（10/100/1000 Mbps、自動 MDI/MDI-X）"
           }
         },
         "wifi": {
@@ -244,7 +313,9 @@
               "label": "BS3-APWB",
               "value": {
                 "ko": "지원 (802.11 b/ g/ n 2.4 GHz)",
-                "en": "Supported (802.11 b/ g/ n 2.4 GHz)"
+                "en": "Supported (802.11 b/ g/ n 2.4 GHz)",
+                "es": "Compatible (802.11 b/g/n 2.4 GHz)",
+                "ja": "サポート対象（802.11 b/g/n 2.4 GHz）"
               }
             }
           }
@@ -252,14 +323,21 @@
         "network_protocol": {
           "label": "네트워크 프로토콜",
           "label_id": "specs.interface.network_protocol",
-          "value": "TCP, UDP"
+          "value": {
+            "ko": "TCP, UDP",
+            "en": "TCP, UDP",
+            "es": "TCP, UDP",
+            "ja": "TCP、UDP"
+          }
         },
         "rs485": {
           "label": "RS-485",
           "label_id": "specs.interface.rs485",
           "value": {
             "ko": "1채널 마스터/슬레이브 (선택 가능)",
-            "en": "1 ch Master / Slave (Selectable)"
+            "en": "1 ch Master / Slave (Selectable)",
+            "es": "1 canal maestro/esclavo (seleccionable)",
+            "ja": "1 チャンネルホスト/スレーブ（選択可能）"
           }
         },
         "rs485_protocol": {
@@ -267,7 +345,9 @@
           "label_id": "specs.interface.rs485_protocol",
           "value": {
             "ko": "OSDP V2 호환",
-            "en": "OSDP V2 compliant"
+            "en": "OSDP V2 compliant",
+            "es": "Compatible con OSDP V2",
+            "ja": "OSDP V2 準拠"
           }
         },
         "wiegand": {
@@ -275,7 +355,9 @@
           "label_id": "specs.interface.wiegand",
           "value": {
             "ko": "1채널 입력, 1채널 출력",
-            "en": "1 ch Input, 1 ch Output"
+            "en": "1 ch Input, 1 ch Output",
+            "es": "Entrada de 1 canal, salida de 1 canal",
+            "ja": "1 チャンネル入力、1 チャンネル出力"
           }
         },
         "input": {
@@ -283,7 +365,9 @@
           "label_id": "specs.interface.input",
           "value": {
             "ko": "입력 3채널",
-            "en": "3 ch Inputs"
+            "en": "3 ch Inputs",
+            "es": "3 canales de entrada",
+            "ja": "3 チャンネル入力"
           }
         },
         "relay": {
@@ -291,7 +375,9 @@
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "1개",
-            "en": "1 relay"
+            "en": "1 relay",
+            "es": "1 relé",
+            "ja": "リレー 1"
           }
         },
         "poe_plus": {
@@ -308,7 +394,9 @@
               "label": "BS3-APWB",
               "value": {
                 "ko": "지원 (IEEE 802.3at 호환)",
-                "en": "Supported (IEEE 802.3at compliant)"
+                "en": "Supported (IEEE 802.3at compliant)",
+                "es": "Compatible (compatible con IEEE 802.3at)",
+                "ja": "対応（IEEE 802.3at 互換）"
               }
             }
           }
@@ -326,7 +414,12 @@
         "usb": {
           "label": "USB",
           "label_id": "specs.interface.usb",
-          "value": "USB 2.0 (Host)"
+          "value": {
+            "ko": "USB 2.0 (Host)",
+            "en": "USB 2.0 (Host)",
+            "es": "USB 2.0 (Maestro)",
+            "ja": "USB 2.0（ホスト）"
+          }
         },
         "usb_ext": {
           "label": "USB 확장 포트",
@@ -353,14 +446,18 @@
               "label": "12 Vdc",
               "value": {
                 "ko": "전류: 최대 1 A",
-                "en": "Current: Max. 1 A"
+                "en": "Current: Max. 1 A",
+                "es": "Corriente: Máx. 1 A",
+                "ja": "電流：最大 1 A"
               }
             },
             "24vdc": {
               "label": "24 Vdc",
               "value": {
                 "ko": "전류: 최대 0.7 A",
-                "en": "Current: Max. 0.7 A"
+                "en": "Current: Max. 0.7 A",
+                "es": "Corriente: Máx. 0.7 A",
+                "ja": "電流：最大 0.7 A"
               }
             }
           }
@@ -369,14 +466,10 @@
           "label": "스위치 입력 VIH",
           "label_id": "specs.power.switch_input_vih",
           "value": {
-            "ko": [
-              "최소: 3 V",
-              "최대: 5 V"
-            ],
-            "en": [
-              "Min.: 3 V",
-              "Max.: 5 V"
-            ]
+            "ko": [ "최소: 3 V", "최대: 5 V" ],
+            "en": [ "Min.: 3 V", "Max.: 5 V" ],
+            "es": [ "Mínimo: 3 V", "Máx.: 5 V" ],
+            "ja": [ "最小：3 V", "最大：5 V" ]
           }
         },
         "switch_input_vil": {
@@ -384,7 +477,9 @@
           "label_id": "specs.power.switch_input_vil",
           "value": {
             "ko": "최대: 1 V",
-            "en": "Max.: 1 V"
+            "en": "Max.: 1 V",
+            "es": "Máximo: 1 V",
+            "ja": "最大：1 V"
           }
         },
         "switch_pullup": {
@@ -392,7 +487,9 @@
           "label_id": "specs.power.switch_pullup",
           "value": {
             "ko": "4.7 kΩ (입력 단자는 4.7 kΩ으로 풀업되어 있습니다.)",
-            "en": "4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)"
+            "en": "4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)",
+            "es": "4.7 kΩ (los puertos de entrada se polarizan con 4.7 kΩ)",
+            "ja": "4.7 kΩ（入力ポートは 4.7 KΩ でプルアップされる）"
           }
         },
         "wiegand_voh": {
@@ -400,7 +497,9 @@
           "label_id": "specs.power.wiegand_voh",
           "value": {
             "ko": "4.8 V 이상",
-            "en": "More than 4.8 V"
+            "en": "More than 4.8 V",
+            "es": "Más de 4.8 V",
+            "ja": "4.8 V 以上"
           }
         },
         "wiegand_vol": {
@@ -408,7 +507,9 @@
           "label_id": "specs.power.wiegand_vol",
           "value": {
             "ko": "0.2 V 이하",
-            "en": "Less than 0.2 V"
+            "en": "Less than 0.2 V",
+            "es": "Menos de 0.2 V",
+            "ja": "0.2 V 未満"
           }
         },
         "wiegand_pullup": {
@@ -416,16 +517,20 @@
           "label_id": "specs.power.wiegand_pullup",
           "value": {
             "ko": "1 kΩ으로 내부 풀업",
-            "en": "Internally pulled up with 1 kΩ"
+            "en": "Internally pulled up with 1 kΩ",
+            "es": "Polarización interna de 1 kΩ",
+            "ja": "1 kΩ の内部プルアップ"
           }
         },
         "relay": {
           "label": "릴레이",
           "label_id": "specs.power.relay",
-          "value": [
-            "2 A @ 30 VDC Resistive load",
-            "1 A @ 30 VDC Inductive load"
-          ]
+          "value": {
+            "ko": [ "2 A @ 30 VDC Resistive load", "1 A @ 30 VDC Inductive load" ],
+            "en": [ "2 A @ 30 VDC Resistive load", "1 A @ 30 VDC Inductive load" ],
+            "es": [ "Carga resistiva de 2 A a 30 VCC", "Carga inductiva de 1 A a 30 VCC" ],
+            "ja": [ "2 A @ 30 VDC 抵抗負荷", "1 A @ 30 VDC 誘導負荷" ]
+          }
         }
       }
     }
