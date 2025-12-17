@@ -204,8 +204,6 @@ const capacityUpgradePrices = {
     }
 };
 const featureAddonPrices = {
-    'Multi Comm Server Init': 15000,
-    'Multi Comm Server Add-on': 4000,
     'GIS Map Monitoring': 1000,
     'Video Monitoring': 100,
     'Server Matching': 3000,
@@ -219,18 +217,6 @@ const featureAddonPrices = {
     'Remote Access': 1000,
     'BioStar X Plugin': 2000
 };
-function calculateMultiCommServer(quantity) {
-    if (quantity < 2) {
-        return {
-            init: 0,
-            addon: 0
-        };
-    }
-    return {
-        init: 1,
-        addon: Math.max(0, quantity - 2)
-    };
-}
 function getTAType(quantity) {
     if (quantity === 0) return null;
     if (quantity <= 500) return 'Standard';
@@ -474,7 +460,6 @@ function calculateFeatureAddons(input, baseLicense) {
         'Mobile App',
         'Event Log API',
         'Remote Access',
-        'External Remote Access',
         'BioStar X Plugin'
     ];
     checkboxAddons.forEach((addon)=>{
@@ -489,13 +474,6 @@ function calculateFeatureAddons(input, baseLicense) {
             });
         }
     });
-    if (input.featureAddons['Multi Communications Server'] >= 2) {
-        const quantity = input.featureAddons['Multi Communications Server'];
-        addons.push({
-            type: 'Multi Communications Server',
-            quantity: quantity
-        });
-    }
     return addons;
 }
 function hasAnyFeatureAddon(input) {
@@ -511,17 +489,12 @@ function hasAnyFeatureAddon(input) {
         'Mobile App',
         'Event Log API',
         'Remote Access',
-        'External Remote Access',
         'BioStar X Plugin'
     ];
     for (const addon of checkboxAddons){
         if (input.featureAddons[addon]) {
             return true;
         }
-    }
-    // Multi Communications Server 확인 (2개 이상)
-    if (input.featureAddons['Multi Communications Server'] >= 2) {
-        return true;
     }
     return false;
 }
@@ -562,12 +535,7 @@ function calculateTotalPrice(baseLicense, capacityUpgrades, featureAddons, packa
     let total = calculateLicensePrice(baseLicense, capacityUpgrades);
     // Feature Add-ons 가격 계산
     featureAddons.forEach((addon)=>{
-        if (addon.type === 'Multi Communications Server') {
-            const quantity = addon.quantity || 0;
-            const { init, addon: addonCount } = calculateMultiCommServer(quantity);
-            total += init * featureAddonPrices["Multi Comm Server Init"];
-            total += addonCount * featureAddonPrices["Multi Comm Server Add-on"];
-        } else if (addon.type === 'T&A') {
+        if (addon.type === 'T&A') {
             const taType = getTAType(addon.quantity || 0);
             if (taType === 'Standard') {
                 total += featureAddonPrices["T&A Standard"];
@@ -611,16 +579,6 @@ function getPartNumber(type, quantity) {
         'Operator': 'BIOSTARX-UP-OPR'
     };
     // Feature Add-ons
-    if (type === 'Multi Communications Server') {
-        if (quantity && quantity >= 2) {
-            const addonCount = quantity - 2;
-            if (addonCount > 0) {
-                return `BIOSTARX-ADD-MCS-BAS + BIOSTARX-ADD-MCS-ADD x${addonCount}`;
-            }
-            return 'BIOSTARX-ADD-MCS-BAS';
-        }
-        return 'BIOSTARX-ADD-MCS-BAS';
-    }
     if (type === 'T&A') {
         const taType = getTAType(quantity || 0);
         if (taType === 'Standard') {
@@ -640,7 +598,6 @@ function getPartNumber(type, quantity) {
         'Mobile App': 'BIOSTARX-ADD-MOB',
         'Event Log API': 'BIOSTARX-ADD-EVTAPI',
         'Remote Access': 'BIOSTARX-ADD-RAC',
-        'External Remote Access': 'BIOSTARX-ADD-RAE',
         'BioStar X Plugin': 'BIOSTARX-ADD-PLG'
     };
     // Package
@@ -691,16 +648,7 @@ function generatePartNumberList(licenseResult) {
     }
     // Feature Add-ons
     licenseResult.featureAddons.forEach((addon)=>{
-        if (addon.type === 'Multi Communications Server') {
-            const quantity = addon.quantity || 0;
-            if (quantity >= 2) {
-                partNumbers.push('BIOSTARX-ADD-MCS-BAS');
-                const addonCount = quantity - 2;
-                if (addonCount > 0) {
-                    partNumbers.push(addonCount > 1 ? `BIOSTARX-ADD-MCS-ADD (${addonCount})` : 'BIOSTARX-ADD-MCS-ADD');
-                }
-            }
-        } else if (addon.type === 'T&A') {
+        if (addon.type === 'T&A') {
             const taType = getTAType(addon.quantity || 0);
             if (taType) {
                 const taPart = getPartNumber('T&A', addon.quantity);
@@ -753,16 +701,6 @@ function license_result_getPartNumber(type, quantity) {
         'Operator': 'BIOSTARX-UP-OPR'
     };
     // Feature Add-ons
-    if (type === 'Multi Communications Server') {
-        if (quantity && quantity >= 2) {
-            const addonCount = quantity - 2;
-            if (addonCount > 0) {
-                return `BIOSTARX-ADD-MCS-BAS + BIOSTARX-ADD-MCS-ADD x${addonCount}`;
-            }
-            return 'BIOSTARX-ADD-MCS-BAS';
-        }
-        return 'BIOSTARX-ADD-MCS-BAS';
-    }
     if (type === 'T&A') {
         const taType = getTAType(quantity || 0);
         if (taType === 'Standard') {
@@ -782,7 +720,6 @@ function license_result_getPartNumber(type, quantity) {
         'Mobile App': 'BIOSTARX-ADD-MOB',
         'Event Log API': 'BIOSTARX-ADD-EVTAPI',
         'Remote Access': 'BIOSTARX-ADD-RAC',
-        'External Remote Access': 'BIOSTARX-ADD-RAE',
         'BioStar X Plugin': 'BIOSTARX-ADD-PLG'
     };
     // Package
@@ -804,7 +741,7 @@ function LicenseResult({ licenseResult, onReset }) {
         }
     };
     return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-        className: "bg-white p-6 mb-5 rounded-lg border border-gray-300 bg-white shadow-lg",
+        className: "bg-white p-6 rounded-lg shadow-lg",
         children: [
             /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
                 className: "flex items-center justify-between mb-4",
@@ -913,52 +850,32 @@ function LicenseResult({ licenseResult, onReset }) {
                             })
                         ]
                     }),
-                    (()=>{
-                        const advancedACPackages = licenseResult.packages.filter((pkg)=>pkg === 'Advanced AC');
-                        const displayFeatureAddons = [
-                            ...licenseResult.featureAddons,
-                            ...advancedACPackages.map((pkg)=>({
-                                    type: pkg
-                                }))
-                        ];
-                        return displayFeatureAddons.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                            children: [
-                                /*#__PURE__*/ (0,jsx_runtime.jsx)("h3", {
-                                    className: "text-lg font-semibold mb-2",
-                                    children: "Feature Add-ons"
-                                }),
-                                /*#__PURE__*/ (0,jsx_runtime.jsx)("ul", {
-                                    className: "list-disc list-inside space-y-1 text-sm",
-                                    children: displayFeatureAddons.map((addon, index)=>{
-                                        if (addon.type === 'Multi Communications Server') {
-                                            const quantity = addon.quantity || 0;
-                                            const addonCount = Math.max(0, quantity - 2);
-                                            if (addonCount > 0) {
-                                                return /*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
-                                                    children: license_result_getPartNumber(addon.type, quantity)
-                                                }, index);
-                                            }
+                    licenseResult.featureAddons.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                        children: [
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)("h3", {
+                                className: "font-semibold mb-2",
+                                children: "Feature Add-ons"
+                            }),
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)("ul", {
+                                className: "list-disc list-inside space-y-1 text-sm",
+                                children: licenseResult.featureAddons.map((addon, index)=>{
+                                    if (addon.type === 'T&A') {
+                                        const taType = getTAType(addon.quantity || 0);
+                                        if (taType) {
                                             return /*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
-                                                children: license_result_getPartNumber(addon.type, quantity)
-                                            }, index);
-                                        } else if (addon.type === 'T&A') {
-                                            const taType = getTAType(addon.quantity || 0);
-                                            if (taType) {
-                                                return /*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
-                                                    children: license_result_getPartNumber(addon.type, addon.quantity)
-                                                }, index);
-                                            }
-                                        } else {
-                                            return /*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
-                                                children: license_result_getPartNumber(addon.type)
+                                                children: license_result_getPartNumber(addon.type, addon.quantity)
                                             }, index);
                                         }
-                                        return null;
-                                    })
+                                    } else {
+                                        return /*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
+                                            children: license_result_getPartNumber(addon.type)
+                                        }, index);
+                                    }
+                                    return null;
                                 })
-                            ]
-                        });
-                    })()
+                            })
+                        ]
+                    })
                 ]
             })
         ]
@@ -985,10 +902,8 @@ const initialInput = {
         'Roll Call': false,
         'T&A': 0,
         'Mobile App': false,
-        'Multi Communications Server': 0,
         'Event Log API': false,
         'Remote Access': false,
-        'External Remote Access': false,
         'BioStar X Plugin': false
     },
     packages: {
@@ -1002,9 +917,8 @@ function isInitialInput(input) {
 function LicenseForm() {
     const [input, setInput] = (0,react.useState)(initialInput);
     const [result, setResult] = (0,react.useState)(null);
-    // UI-only checkbox states for T&A and Multi Communications Server
+    // UI-only checkbox state for T&A
     const [isTAChecked, setIsTAChecked] = (0,react.useState)(false);
-    const [isMultiCommServerChecked, setIsMultiCommServerChecked] = (0,react.useState)(false);
     // Feature Add-on descriptions
     const featureAddonDescriptions = {
         'Map Monitoring': 'Monitor sites visually using a map-based interface.',
@@ -1017,10 +931,8 @@ function LicenseForm() {
         'Roll Call': 'Perform roll-call checks at specific locations using the BioStar X Mobile app.',
         'T&A': 'Time and attendance management system.',
         'Mobile App': 'BioStar X mobile apps for Android and iOS.',
-        'Multi Communications Server': 'Distribute server workloads to handle sites with more than 1,000 IP devices.',
         'Event Log API': 'Allows external systems to insert event logs into BioStar X via API.',
         'Remote Access': 'Provides a tunneling service that enables access to BioStar X from public networks.',
-        'External Remote Access': 'Allows tunneling BioStar X to the public network through the user\'s own ngrok account.',
         'BioStar X Plugin': 'Integrate external software by registering it as a BioStar X plugin for seamless operation.'
     };
     // Submit
@@ -1062,13 +974,12 @@ function LicenseForm() {
         setInput(initialInput);
         setResult(null);
         setIsTAChecked(false);
-        setIsMultiCommServerChecked(false);
     };
     return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-        className: "max-w-8xl mx-auto p-3 pt-6 pb-10",
+        className: "max-w-8xl mx-auto p-3",
         children: [
             /*#__PURE__*/ (0,jsx_runtime.jsx)("h1", {
-                className: "text-2xl font-bold mb-4",
+                className: "text-lg font-bold mb-4",
                 children: "BioStar X License Calculator"
             }),
             /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
@@ -1078,7 +989,7 @@ function LicenseForm() {
                         className: "space-y-2 lg:col-span-6",
                         children: [
                             /*#__PURE__*/ (0,jsx_runtime.jsxs)("section", {
-                                className: "px-4 pt-1 pb-2 rounded-lg bg-white shadow",
+                                className: "bg-white px-4 pt-1 pb-2 rounded-lg shadow",
                                 children: [
                                     /*#__PURE__*/ (0,jsx_runtime.jsx)("h2", {
                                         className: "text-lg font-semibold mb-1",
@@ -1291,57 +1202,6 @@ function LicenseForm() {
                                                         ]
                                                     })
                                                 }, name)),
-                                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                                children: [
-                                                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("label", {
-                                                        className: "flex items-start space-x-2",
-                                                        children: [
-                                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
-                                                                type: "checkbox",
-                                                                checked: isMultiCommServerChecked,
-                                                                onChange: (e)=>{
-                                                                    setIsMultiCommServerChecked(e.target.checked);
-                                                                    if (e.target.checked) {
-                                                                        if (input.featureAddons['Multi Communications Server'] === 0) {
-                                                                            handleFeatureAddonChange('Multi Communications Server', 2);
-                                                                        }
-                                                                    } else {
-                                                                        handleFeatureAddonChange('Multi Communications Server', 0);
-                                                                    }
-                                                                },
-                                                                className: "w-4 h-4 mt-2"
-                                                            }),
-                                                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                                                className: "flex-1",
-                                                                children: [
-                                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                                        className: "text-sm",
-                                                                        children: "Multi Communications Server (Number of Servers)"
-                                                                    }),
-                                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                                                        className: "text-xs text-gray-600",
-                                                                        children: featureAddonDescriptions['Multi Communications Server']
-                                                                    })
-                                                                ]
-                                                            })
-                                                        ]
-                                                    }),
-                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                                                        className: "ml-6",
-                                                        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("input", {
-                                                            type: "number",
-                                                            min: "2",
-                                                            value: input.featureAddons['Multi Communications Server'],
-                                                            onChange: (e)=>{
-                                                                const value = parseInt(e.target.value) || 0;
-                                                                handleFeatureAddonChange('Multi Communications Server', value);
-                                                            },
-                                                            disabled: !isMultiCommServerChecked,
-                                                            className: "w-30 px-2 mt-1 py-1 border border-gray-300 rounded-md disabled:bg-gray-100 disabled:cursor-not-allowed text-sm"
-                                                        })
-                                                    })
-                                                ]
-                                            }),
                                             [
                                                 {
                                                     name: 'Event Log API',
@@ -1350,10 +1210,6 @@ function LicenseForm() {
                                                 {
                                                     name: 'Remote Access',
                                                     description: featureAddonDescriptions['Remote Access']
-                                                },
-                                                {
-                                                    name: 'External Remote Access',
-                                                    description: featureAddonDescriptions['External Remote Access']
                                                 },
                                                 {
                                                     name: 'BioStar X Plugin',
@@ -1397,10 +1253,10 @@ function LicenseForm() {
                             licenseResult: result,
                             onReset: handleReset
                         }) : /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                            className: "px-4 pt-1 pt-2 mb-5 rounded-lg border border-gray-300 bg-white shadow-lg",
+                            className: "bg-white px-4 pt-1 pt-2 rounded-lg shadow-lg",
                             children: [
                                 /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                    className: "flex items-center justify-between",
+                                    className: "flex items-center justify-between mb-2",
                                     children: [
                                         /*#__PURE__*/ (0,jsx_runtime.jsx)("h2", {
                                             className: "text-lg font-bold",
