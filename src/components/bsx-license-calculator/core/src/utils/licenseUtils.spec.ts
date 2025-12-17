@@ -148,61 +148,6 @@ describe('generatePartNumberList', () => {
       expect(partNumberList).toBe('BIOSTARX-ESS, BIOSTARX-ADD-TNA-ENT');
     });
 
-    it('includes Multi Communications Server BAS only (quantity = 2)', () => {
-      const result: LicenseResult = {
-        baseLicense: 'Essential',
-        capacityUpgrades: {},
-        featureAddons: [
-          { type: 'Multi Communications Server', quantity: 2 },
-        ],
-        packages: [],
-      };
-
-      const partNumberList = generatePartNumberList(result);
-      expect(partNumberList).toBe('BIOSTARX-ESS, BIOSTARX-ADD-MCS-BAS');
-    });
-
-    it('includes Multi Communications Server BAS + ADD (quantity = 3)', () => {
-      const result: LicenseResult = {
-        baseLicense: 'Essential',
-        capacityUpgrades: {},
-        featureAddons: [
-          { type: 'Multi Communications Server', quantity: 3 },
-        ],
-        packages: [],
-      };
-
-      const partNumberList = generatePartNumberList(result);
-      expect(partNumberList).toBe('BIOSTARX-ESS, BIOSTARX-ADD-MCS-BAS, BIOSTARX-ADD-MCS-ADD');
-    });
-
-    it('includes Multi Communications Server BAS + ADD with quantity > 1', () => {
-      const result: LicenseResult = {
-        baseLicense: 'Essential',
-        capacityUpgrades: {},
-        featureAddons: [
-          { type: 'Multi Communications Server', quantity: 5 },
-        ],
-        packages: [],
-      };
-
-      const partNumberList = generatePartNumberList(result);
-      expect(partNumberList).toBe('BIOSTARX-ESS, BIOSTARX-ADD-MCS-BAS, BIOSTARX-ADD-MCS-ADD (3)');
-    });
-
-    it('excludes Multi Communications Server with quantity < 2', () => {
-      const result: LicenseResult = {
-        baseLicense: 'Essential',
-        capacityUpgrades: {},
-        featureAddons: [
-          { type: 'Multi Communications Server', quantity: 1 },
-        ],
-        packages: [],
-      };
-
-      const partNumberList = generatePartNumberList(result);
-      expect(partNumberList).toBe('BIOSTARX-ESS');
-    });
   });
 
   describe('Packages', () => {
@@ -230,14 +175,13 @@ describe('generatePartNumberList', () => {
         featureAddons: [
           { type: 'Mobile App' },
           { type: 'BioStar X Plugin' },
-          { type: 'Multi Communications Server', quantity: 4 },
           { type: 'T&A', quantity: 200 },
         ],
         packages: ['Advanced AC'],
       };
 
       const partNumberList = generatePartNumberList(result);
-      expect(partNumberList).toBe('BIOSTARX-ESS, BIOSTARX-UP-DOR (2), BIOSTARX-UP-USR, BIOSTARX-ADD-MOB, BIOSTARX-ADD-PLG, BIOSTARX-ADD-MCS-BAS, BIOSTARX-ADD-MCS-ADD (2), BIOSTARX-ADD-TNA-STD, BIOSTARX-PKG-AAC');
+      expect(partNumberList).toBe('BIOSTARX-ESS, BIOSTARX-UP-DOR (2), BIOSTARX-UP-USR, BIOSTARX-ADD-MOB, BIOSTARX-ADD-PLG, BIOSTARX-ADD-TNA-STD, BIOSTARX-PKG-AAC');
     });
 
     it('generates part number list matching example format', () => {
@@ -247,7 +191,6 @@ describe('generatePartNumberList', () => {
         featureAddons: [
           { type: 'Mobile App' },
           { type: 'BioStar X Plugin' },
-          { type: 'Multi Communications Server', quantity: 3 },
         ],
         packages: [],
       };
@@ -256,8 +199,6 @@ describe('generatePartNumberList', () => {
       expect(partNumberList).toContain('BIOSTARX-ESS');
       expect(partNumberList).toContain('BIOSTARX-ADD-MOB');
       expect(partNumberList).toContain('BIOSTARX-ADD-PLG');
-      expect(partNumberList).toContain('BIOSTARX-ADD-MCS-BAS');
-      expect(partNumberList).toContain('BIOSTARX-ADD-MCS-ADD');
     });
   });
 });

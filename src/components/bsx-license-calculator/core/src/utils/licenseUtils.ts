@@ -21,16 +21,6 @@ function getPartNumber(type: string, quantity?: number): string {
   };
 
   // Feature Add-ons
-  if (type === 'Multi Communications Server') {
-    if (quantity && quantity >= 2) {
-      const addonCount = quantity - 2;
-      if (addonCount > 0) {
-        return `BIOSTARX-ADD-MCS-BAS + BIOSTARX-ADD-MCS-ADD x${addonCount}`;
-      }
-      return 'BIOSTARX-ADD-MCS-BAS';
-    }
-    return 'BIOSTARX-ADD-MCS-BAS';
-  }
 
   if (type === 'T&A') {
     const taType = getTAType(quantity || 0);
@@ -52,7 +42,6 @@ function getPartNumber(type: string, quantity?: number): string {
     'Mobile App': 'BIOSTARX-ADD-MOB',
     'Event Log API': 'BIOSTARX-ADD-EVTAPI',
     'Remote Access': 'BIOSTARX-ADD-RAC',
-    'External Remote Access': 'BIOSTARX-ADD-RAE',
     'BioStar X Plugin': 'BIOSTARX-ADD-PLG',
   };
 
@@ -110,16 +99,7 @@ export function generatePartNumberList(licenseResult: LicenseResult): string {
 
   // Feature Add-ons
   licenseResult.featureAddons.forEach((addon) => {
-    if (addon.type === 'Multi Communications Server') {
-      const quantity = addon.quantity || 0;
-      if (quantity >= 2) {
-        partNumbers.push('BIOSTARX-ADD-MCS-BAS');
-        const addonCount = quantity - 2;
-        if (addonCount > 0) {
-          partNumbers.push(addonCount > 1 ? `BIOSTARX-ADD-MCS-ADD (${addonCount})` : 'BIOSTARX-ADD-MCS-ADD');
-        }
-      }
-    } else if (addon.type === 'T&A') {
+    if (addon.type === 'T&A') {
       const taType = getTAType(addon.quantity || 0);
       if (taType) {
         const taPart = getPartNumber('T&A', addon.quantity);

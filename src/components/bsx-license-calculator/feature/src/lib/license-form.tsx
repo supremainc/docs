@@ -17,10 +17,8 @@ const initialInput: LicenseInput = {
     'Roll Call': false,
     'T&A': 0,
     'Mobile App': false,
-    'Multi Communications Server': 0,
     'Event Log API': false,
     'Remote Access': false,
-    'External Remote Access': false,
     'BioStar X Plugin': false,
   },
   packages: {
@@ -36,9 +34,8 @@ function isInitialInput(input: LicenseInput): boolean {
 export function LicenseForm() {
   const [input, setInput] = useState<LicenseInput>(initialInput);
   const [result, setResult] = useState<LicenseResultType | null>(null);
-  // UI-only checkbox states for T&A and Multi Communications Server
+  // UI-only checkbox state for T&A
   const [isTAChecked, setIsTAChecked] = useState(false);
-  const [isMultiCommServerChecked, setIsMultiCommServerChecked] = useState(false);
 
   // Feature Add-on descriptions
   const featureAddonDescriptions: Record<string, string> = {
@@ -52,10 +49,8 @@ export function LicenseForm() {
     'Roll Call': 'Perform roll-call checks at specific locations using the BioStar X Mobile app.',
     'T&A': 'Time and attendance management system.',
     'Mobile App': 'BioStar X mobile apps for Android and iOS.',
-    'Multi Communications Server': 'Distribute server workloads to handle sites with more than 1,000 IP devices.',
     'Event Log API': 'Allows external systems to insert event logs into BioStar X via API.',
     'Remote Access': 'Provides a tunneling service that enables access to BioStar X from public networks.',
-    'External Remote Access': 'Allows tunneling BioStar X to the public network through the user\'s own ngrok account.',
     'BioStar X Plugin': 'Integrate external software by registering it as a BioStar X plugin for seamless operation.',
   };
 
@@ -106,16 +101,16 @@ export function LicenseForm() {
     setInput(initialInput);
     setResult(null);
     setIsTAChecked(false);
-    setIsMultiCommServerChecked(false);
   };
 
   return (
-    <div className="max-w-8xl mx-auto p-3 pt-6 pb-10">
-      <h1 className="text-2xl font-bold mb-4">BioStar X License Calculator</h1>
+    <div className="max-w-8xl mx-auto p-3">
+      <h1 className="text-lg font-bold mb-4">BioStar X License Calculator</h1>
+      
       <div className="grid grid-cols-1 lg:grid-cols-10 gap-4 text-black">
         <div className="space-y-2 lg:col-span-6">
         {/* Capacity Input */}
-        <section className="px-4 pt-1 pb-2 rounded-lg bg-white shadow">
+        <section className="bg-white px-4 pt-1 pb-2 rounded-lg shadow">
           <h2 className="text-lg font-semibold mb-1">Site Information</h2>
           <div className="grid grid-cols-3 gap-3">
             <div>
@@ -263,52 +258,10 @@ export function LicenseForm() {
               </div>
             ))}
 
-            {/* Multi Communications Server */}
-            <div>
-              <label className="flex items-start space-x-2">
-                <input
-                  type="checkbox"
-                  checked={isMultiCommServerChecked}
-                  onChange={(e) => {
-                    setIsMultiCommServerChecked(e.target.checked);
-                    if (e.target.checked) {
-                      if (input.featureAddons['Multi Communications Server'] === 0) {
-                        handleFeatureAddonChange('Multi Communications Server', 2);
-                      }
-                    } else {
-                      handleFeatureAddonChange('Multi Communications Server', 0);
-                    }
-                  }}
-                  className="w-4 h-4 mt-2"
-                />
-                <div className="flex-1">
-                  <span className="text-sm">Multi Communications Server (Number of Servers)</span>
-                  <p className="text-xs text-gray-600">{featureAddonDescriptions['Multi Communications Server']}</p>
-                </div>
-              </label>
-              <div className="ml-6">
-                <input
-                  type="number"
-                  min="2"
-                  value={input.featureAddons['Multi Communications Server']}
-                  onChange={(e) => {
-                    const value = parseInt(e.target.value) || 0;
-                    handleFeatureAddonChange(
-                      'Multi Communications Server',
-                      value
-                    );
-                  }}
-                  disabled={!isMultiCommServerChecked}
-                  className="w-30 px-2 mt-1 py-1 border border-gray-300 rounded-md disabled:bg-gray-100 disabled:cursor-not-allowed text-sm"
-                />
-              </div>
-            </div>
-
             {/* Checkbox Add-ons continued */}
             {[
               { name: 'Event Log API', description: featureAddonDescriptions['Event Log API'] },
               { name: 'Remote Access', description: featureAddonDescriptions['Remote Access'] },
-              { name: 'External Remote Access', description: featureAddonDescriptions['External Remote Access'] },
               { name: 'BioStar X Plugin', description: featureAddonDescriptions['BioStar X Plugin'] },
             ].map(({ name, description }) => (
               <div key={name}>
@@ -333,15 +286,15 @@ export function LicenseForm() {
             ))}
           </div>
         </section>
-        
+
         </div>
 
         <div className="lg:sticky lg:top-6 lg:h-fit lg:self-start lg:col-span-4">
           {result ? (
             <LicenseResult licenseResult={result} onReset={handleReset} />
           ) : (
-            <div className="px-4 pt-1 pt-2 mb-5 rounded-lg border border-gray-300 bg-white shadow-lg">
-              <div className="flex items-center justify-between">
+            <div className="bg-white px-4 pt-1 pt-2 rounded-lg shadow-lg">
+              <div className="flex items-center justify-between mb-2">
                 <h2 className="text-lg font-bold">Recommended License</h2>
                 <button
                   type="button"

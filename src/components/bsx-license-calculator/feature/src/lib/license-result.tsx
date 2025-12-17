@@ -26,17 +26,6 @@ function getPartNumber(type: string, quantity?: number): string {
   };
 
   // Feature Add-ons
-  if (type === 'Multi Communications Server') {
-    if (quantity && quantity >= 2) {
-      const addonCount = quantity - 2;
-      if (addonCount > 0) {
-        return `BIOSTARX-ADD-MCS-BAS + BIOSTARX-ADD-MCS-ADD x${addonCount}`;
-      }
-      return 'BIOSTARX-ADD-MCS-BAS';
-    }
-    return 'BIOSTARX-ADD-MCS-BAS';
-  }
-
   if (type === 'T&A') {
     const taType = getTAType(quantity || 0);
     if (taType === 'Standard') {
@@ -57,7 +46,6 @@ function getPartNumber(type: string, quantity?: number): string {
     'Mobile App': 'BIOSTARX-ADD-MOB',
     'Event Log API': 'BIOSTARX-ADD-EVTAPI',
     'Remote Access': 'BIOSTARX-ADD-RAC',
-    'External Remote Access': 'BIOSTARX-ADD-RAE',
     'BioStar X Plugin': 'BIOSTARX-ADD-PLG',
   };
 
@@ -89,7 +77,7 @@ export function LicenseResult({ licenseResult, onReset }: LicenseResultProps) {
     }
   };
   return (
-    <div className="bg-white p-6 mb-5 rounded-lg border border-gray-300 bg-white shadow-lg">
+    <div className="bg-white p-6 rounded-lg shadow-lg">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-lg font-semibold mb-2">Recommended License</h2>
         <div className="flex gap-2">
@@ -161,63 +149,28 @@ export function LicenseResult({ licenseResult, onReset }: LicenseResultProps) {
         )}
 
         {/* Feature Add-ons */}
-        {(() => {
-          const advancedACPackages = licenseResult.packages.filter(pkg => pkg === 'Advanced AC');
-          const displayFeatureAddons: Array<{ type: string; quantity?: number }> = [
-            ...licenseResult.featureAddons,
-            ...advancedACPackages.map(pkg => ({ type: pkg }))
-          ];
-          
-          return displayFeatureAddons.length > 0 && (
-            <div>
-              <h3 className="text-lg font-semibold mb-2">Feature Add-ons</h3>
-              <ul className="list-disc list-inside space-y-1 text-sm">
-                {displayFeatureAddons.map((addon, index) => {
-                  if (addon.type === 'Multi Communications Server') {
-                    const quantity = addon.quantity || 0;
-                    const addonCount = Math.max(0, quantity - 2);
-                    if (addonCount > 0) {
-                      return (
-                        <li key={index}>
-                          {getPartNumber(addon.type, quantity)}
-                        </li>
-                      );
-                    }
+        {licenseResult.featureAddons.length > 0 && (
+          <div>
+            <h3 className="font-semibold mb-2">Feature Add-ons</h3>
+            <ul className="list-disc list-inside space-y-1 text-sm">
+              {licenseResult.featureAddons.map((addon, index) => {
+                if (addon.type === 'T&A') {
+                  const taType = getTAType(addon.quantity || 0);
+                  if (taType) {
                     return (
                       <li key={index}>
-                        {getPartNumber(addon.type, quantity)}
+                        {getPartNumber(addon.type, addon.quantity)}
                       </li>
                     );
-                  } else if (addon.type === 'T&A') {
-                    const taType = getTAType(addon.quantity || 0);
-                    if (taType) {
-                      return (
-                        <li key={index}>
-                          {getPartNumber(addon.type, addon.quantity)}
-                        </li>
-                      );
-                    }
-                  } else {
-                    return <li key={index}>{getPartNumber(addon.type)}</li>;
                   }
-                  return null;
-                })}
-              </ul>
-            </div>
-          );
-        })()}
-
-        {/* Total Price */}
-        {/* {licenseResult.totalPrice !== undefined && (
-          <div className="border-t pt-4 mt-4">
-            <div className="flex justify-between items-center">
-              <h3 className="text-lg font-semibold">Total Price</h3>
-              <p className="text-lg font-bold text-blue-600">
-                ${licenseResult.totalPrice.toLocaleString()}
-              </p>
-            </div>
+                } else {
+                  return <li key={index}>{getPartNumber(addon.type)}</li>;
+                }
+                return null;
+              })}
+            </ul>
           </div>
-        )} */}
+        )}
 
       </div>
     </div>

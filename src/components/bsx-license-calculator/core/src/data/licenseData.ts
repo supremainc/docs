@@ -106,8 +106,6 @@ export const capacityUpgradePrices: Record<CapacityType, { quantity: number; pri
 };
 
 export const featureAddonPrices: Record<string, number> = {
-  'Multi Comm Server Init': 15000,
-  'Multi Comm Server Add-on': 4000,
   'GIS Map Monitoring': 1000,
   'Video Monitoring': 100,
   'Server Matching': 3000,
@@ -121,19 +119,6 @@ export const featureAddonPrices: Record<string, number> = {
   'Remote Access': 1000,
   'BioStar X Plugin': 2000,
 };
-
-export function calculateMultiCommServer(quantity: number): {
-  init: number;
-  addon: number;
-} {
-  if (quantity < 2) {
-    return { init: 0, addon: 0 };
-  }
-  return {
-    init: 1,
-    addon: Math.max(0, quantity - 2),
-  };
-}
 
 export function getTAType(quantity: number): 'Standard' | 'Enterprise' | null {
   if (quantity === 0) return null;
