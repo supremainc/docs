@@ -46,12 +46,21 @@
       "hid": "qrbarcode",
       "contents": [
         {
-          "product": [ "xstation_2", "biostation_3_max" ],
+          "product": [ "xstation_2" ],
           "question": "QR/바코드 인식이 잘 되지 않습니다.",
           "answer": [
             "<a href='getting-started#how-to-scan-qrbarcode'>올바른 QR/바코드 인증 방법</a>을 확인한 뒤 다시 시도하세요.",
             "<b>XS2-QDPB</b>, <b>XS2-QAPB</b>: 가이드 빔이 QR/바코드의 중앙에 오도록 위치시키세요.",
             "<b>XS2-DPB</b>, <b>XS2-APB</b>, <b>XS2-ODPB</b>, <b>XS2-OAPB</b>: QR/바코드를 장치의 스캔 화면 중앙에 오도록 위치시키세요.",
+            "모바일 장치에 내려 받은 QR/바코드일 경우 화면이 잘 보이도록 모바일 장치의 밝기를 조정하거나 화면을 닦고 다시 시도하세요.",
+            "문제가 해결되지 않을 경우 QR/바코드를 발급한 관리자에게 문의하세요."
+          ]
+        },
+        {
+          "product": [ "biostation_3_max" ],
+          "question": "QR/바코드 인식이 잘 되지 않습니다.",
+          "answer": [
+            "<a href='getting-started#how-to-scan-qrbarcode'>올바른 QR/바코드 인증 방법</a>을 확인한 뒤 다시 시도하세요.",
             "모바일 장치에 내려 받은 QR/바코드일 경우 화면이 잘 보이도록 모바일 장치의 밝기를 조정하거나 화면을 닦고 다시 시도하세요.",
             "문제가 해결되지 않을 경우 QR/바코드를 발급한 관리자에게 문의하세요."
           ]
@@ -190,7 +199,7 @@
       "hid": "admin",
       "contents": [
         {
-          "product": [ "biostation_3", "biolite_n2", "biostation_2a", "biostation_3_max" ],
+          "product": [ "biostation_3", "biolite_n2", "biostation_2a", "xstation_2" ],
           "question": "기존 장치에서 펌웨어 업그레이드 후 마스터 관리자 설정이 보이지 않습니다.",
           "answer": [
             "기존 장치에서 펌웨어 업그레이드한 장치는 마스터 관리자 설정이 제공되지 않습니다. <span class='cmd'>관리자 2단계 인증</span> 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다. 자세한 내용은 <a href='settings#admin-2-step-authentication'>관리자 2단계 인증</a> 옵션을 참조하세요."

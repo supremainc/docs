@@ -29,17 +29,11 @@ keywords: [인증 모드, 인증 옵션, PIN, 얼굴, 근태]
 
    <Image src='/img/device/bs3m-add-auth-mode.png' />
 
+   * <Image src='/img/common/ico-authmode-face-bs3m.png' ico alone />: 얼굴, <Image src='/img/common/ico-authmode-fingerprint-bs3m.png' ico alone />: 지문, <Image src='/img/common/ico-authmode-card-qr-bs3m.png' ico alone />: 카드 / QR코드, <Image src='/img/common/ico-authmode-id-bs3m.png' ico alone />: ID, <Image src='/img/common/ico-authmode-pin-bs3m.png' ico alone />: PIN
+
+   * 선택한 인증 방법을 순서대로 모두 인증하도록 조합하거나, 선택한 인증 방법 중 일부만 선택해 인증하도록 조합할 수 있습니다. 예를 들어, <Image src='/img/common/ico-authmode-card-qr-bs3m.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3m.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3m.png' ico alone />으로 조합할 경우 카드 / QR코드, 얼굴, PIN을 모두 인증해야 하며, <Image src='/img/common/ico-authmode-card-qr-bs3m.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3m.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3m.png' ico alone />으로 조합할 경우 카드 / QR코드로 인증한 뒤 얼굴 또는 PIN을 입력해야 합니다.
+
 1. 원하는 인증 모드를 설정한 뒤 <Cmd sid='ui_203' product='dev' />을 설정하세요.
-
-   <div className='overflow-x'>
-
-   | 구분 | 설명 |
-   | :--: | -- |
-   | 얼굴 | - <Image src='/img/common/ico-authmode-face-bs3.png' ico alone />: 얼굴만 사용하는 모드입니다.<br/>- <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: 얼굴로 인증한 뒤 PIN을 입력하는 모드입니다. |
-   | 카드 / QR코드 | - <Image src='/img/common/ico-authmode-card-bs3.png' ico alone />: 카드 / QR코드만 사용하는 모드입니다.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone />: 카드 / QR코드로 인증한 뒤 얼굴로 인증하는 모드입니다.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: 카드 / QR코드로 인증한 뒤 PIN을 입력하는 모드입니다.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: 카드 / QR코드로 인증한 뒤 얼굴로 인증하거나 PIN을 입력하는 모드입니다.<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: 카드 / QR코드로 인증한 뒤 얼굴 인증과 PIN 입력을 모두 사용하는 모드입니다. |
-   | ID | - <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone />: ID를 입력한 뒤 얼굴로 인증하는 모드입니다.<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: ID를 입력한 뒤 PIN을 입력하는 모드입니다.<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: ID를 입력한 뒤 얼굴로 인증하거나 PIN을 입력하는 모드입니다.<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />: ID를 입력한 뒤 얼굴 인증과 PIN 입력을 모두 사용하는 모드입니다. |
-
-   </div>
 
    :::info
 
@@ -227,29 +221,61 @@ QR코드 인증을 설정할 수 있습니다.
 
       * <Cmd sid='ui_067' product='dev' />: 마스크 착용 여부를 확인하는 방식을 설정할 수 있습니다. <Cmd sid='ui_123' product='dev' />을 <Cmd sid='ui_161' product='dev' />으로 설정할 경우 활성화됩니다.
 
-      :::info
+         :::info
 
-      * <Cmd sid='ui_127' product='dev' />: 마스크를 착용하지 않은 사용자는 인증이 거부되며, 마스크 미착용 이벤트가 로그로 기록됩니다.
+         * <Cmd sid='ui_127' product='dev' />: 마스크를 착용하지 않은 사용자는 인증이 거부되며, 마스크 미착용 이벤트가 로그로 기록됩니다.
 
-      * <Cmd sid='ui_126' product='dev' />: 마스크를 착용하지 않은 사용자도 인증할 수 있으나 마스크 미착용 이벤트가 로그로 기록됩니다.
+         * <Cmd sid='ui_126' product='dev' />: 마스크를 착용하지 않은 사용자도 인증할 수 있으나 마스크 미착용 이벤트가 로그로 기록됩니다.
 
-      * <Cmd sid='ui_125' product='dev' />: 마스크를 착용하지 않은 사용자만 인증할 수 있으며, 이 모드를 사용할 경우 마스크 확인 모드가 <Cmd sid='ui_369' product='dev' />으로 고정됩니다.
+         * <Cmd sid='ui_125' product='dev' />: 마스크를 착용하지 않은 사용자만 인증할 수 있으며, 이 모드를 사용할 경우 마스크 확인 모드가 <Cmd sid='ui_369' product='dev' />으로 고정됩니다.
 
-      :::
+         :::
 
-   * <Cmd sid='ui_124' product='dev' />: 마스크 착용을 감지하는 감도를 설정할 수 있습니다. <Cmd sid='ui_123' product='dev' />을 <Cmd sid='ui_161' product='dev' />으로 설정할 경우 활성화됩니다.
+      * <Cmd sid='ui_124' product='dev' />: 마스크 착용을 감지하는 감도를 설정할 수 있습니다. <Cmd sid='ui_123' product='dev' />을 <Cmd sid='ui_161' product='dev' />으로 설정할 경우 활성화됩니다.
 
-   * <Cmd sid='ui_368' product='dev' />: 장치의 용도에 따라 확인 모드를 설정할 수 있습니다.
+      * <Cmd sid='ui_368' product='dev' />: 장치의 용도에 따라 확인 모드를 설정할 수 있습니다.
 
-      :::info
+         :::info
 
-      * <Cmd sid='ui_267' product='dev' />: 인증을 수행한 뒤 사용자의 마스크 착용 여부를 확인합니다.
+         * <Cmd sid='ui_267' product='dev' />: 인증을 수행한 뒤 사용자의 마스크 착용 여부를 확인합니다.
 
-      * <Cmd sid='ui_369' product='dev' />: 사용자의 마스크 착용 여부를 확인한 뒤 인증을 수행합니다.
+         * <Cmd sid='ui_369' product='dev' />: 사용자의 마스크 착용 여부를 확인한 뒤 인증을 수행합니다.
 
-      * <Cmd sid='ui_370' product='dev' />: 장치를 마스크 착용 여부를 확인하는 용도로만 사용할 수 있습니다. 이 모드를 사용할 경우 인증과 관계없이 마스크를 착용한 사용자는 모두 출입할 수 있습니다.
+         * <Cmd sid='ui_370' product='dev' />: 장치를 마스크 착용 여부를 확인하는 용도로만 사용할 수 있습니다. 이 모드를 사용할 경우 인증과 관계없이 마스크를 착용한 사용자는 모두 출입할 수 있습니다.
 
-      :::
+         :::
+
+## 지문 <Badge only>BS3M-ODB, BS3M-OAPB</Badge> {#fingerprint}
+
+지문 인증에 대한 설정을 변경할 수 있습니다.
+
+1. <Image src='/img/common/ico-menu.svg' ico alone />을 누른 뒤 관리자 권한 인증 수단으로 인증하세요.
+
+1. <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_312' product='dev' />을 선택하세요.
+
+1. 원하는 항목을 변경하세요.
+
+   <Image src='/img/device/auth-fingerprint.png' width={300} />
+
+   * <Cmd sid='ui_149' product='dev' />: 1:N 인증을 위한 보안 등급을 설정할 수 있습니다.
+
+   * <Cmd sid='ui_130' product='dev' />: 지문 매칭 시 대기 시간을 설정할 수 있습니다. 설정한 시간 동안 인증을 완료하지 못하면 인증에 실패합니다.
+
+   * <Cmd sid='ui_254' product='dev' />: 지문을 스캔했을 때 원본 이미지를 볼 수 있습니다.
+
+   * <Cmd sid='ui_197' product='dev' />: 지문 인식 센서의 민감도를 설정할 수 있습니다. 센서 감도를 높여 정밀한 지문 정보를 얻으려면 센서 감도를 높게 설정하세요.
+
+   * <Cmd sid='ui_003' product='dev' />: 지문 인증 속도를 설정할 수 있습니다. <Cmd sid='ui_275' product='dev' />을 선택하면 장치에 등록된 총 지문 템플릿의 개수에 따라 인증 속도가 설정됩니다.
+
+   * <Cmd sid='ui_342' product='dev' />: 지문 템플릿 형식을 설정할 수 있습니다. <Cmd sid='ui_057' product='dev' />가 기본으로 설정되어 있으며, 템플릿 형식을 변경할 경우 이전에 저장된 모든 지문을 사용할 수 없으므로 변경 시 유의하세요.
+
+   * <Cmd sid='ui_198' product='dev' />: <Cmd sid='ui_277' product='dev' />으로 설정하면 지문 센서가 사용자의 손가락을 인식하여 켜집니다. <Cmd sid='ui_362' product='dev' />으로 설정하면 지문을 스캔하지 않을 때에도 항상 센서가 켜져 있습니다.
+
+   * <Cmd sid='ui_249' product='dev' />: 위조 지문 검사 등급을 설정할 수 있습니다. 위조 지문 검사 등급이 높을수록 실제 사람 지문에 대한 거부율도 높아질 수 있습니다.
+
+   * <Cmd sid='ui_116' product='dev' />: 높은 품질의 지문 정보를 저장하기 위해 스캔한 지문의 품질을 검사할 수 있습니다. 활성화하면 지문 품질이 낮을 경우 사용자에게 알려주어 지문을 올바르게 스캔하도록 도와줍니다.
+
+   * <Cmd sid='ui_118' product='dev' />: 지문 등록 시 중복 지문 여부를 검사할 수 있습니다.
 
 ## 근태
 

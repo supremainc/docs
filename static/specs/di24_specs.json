@@ -46,14 +46,21 @@
         "storage_temp": {
           "label": "보관 온도",
           "label_id": "specs.general.storage_temp",
-          "value": "-40 °C ~ 70 °C"
+          "value": {
+            "ko": "-40 °C ~ 70 °C",
+            "en": "-40 °C ~ 70 °C",
+            "es": "De -40 °C a 70 °C",
+            "ja": "-40 °C ~ 70 °C"
+          }
         },
         "operating_humidity": {
           "label": "동작 습도",
           "label_id": "specs.general.operating_humidity",
           "value": {
             "ko": "0 % ~ 80 %, 비응축",
-            "en": "0 % ~ 80 %, non-condensing"
+            "en": "0 % ~ 80 %, non-condensing",
+            "es": "Del 0 % al 80 %, sin condensación",
+            "ja": "0 % ~ 80 %（結露なきこと）"
           }
         },
         "storage_humidity": {
@@ -104,7 +111,9 @@
           "label_id": "specs.interface.rs485_protocol",
           "value": {
             "ko": "OSDP V2 호환",
-            "en": "OSDP V2 compliant"
+            "en": "OSDP V2 compliant",
+            "es": "Compatible con OSDP V2",
+            "ja": "OSDP V2 準拠"
           }
         },
         "wiegand": {
@@ -171,14 +180,18 @@
               "label": "12 Vdc",
               "value": {
                 "ko": "전류: 최대 2.8 A",
-                "en": "Current: Max. 2.8 A"
+                "en": "Current: Max. 2.8 A",
+                "es": "Corriente: Máx. 2.8 A",
+                "ja": "電流：最大 2.8 A"
               }
             },
             "24vdc": {
               "label": "24 Vdc",
               "value": {
                 "ko": "전류: 최대 1.4 A",
-                "en": "Current: Max. 1.4 A"
+                "en": "Current: Max. 1.4 A",
+                "es": "Corriente: Máx. 1.4 A",
+                "ja": "電流：最大 1.4 A"
               }
             }
           }
@@ -220,14 +233,10 @@
           "label": "스위치 입력 VIH",
           "label_id": "specs.power.switch_input_vih",
           "value": {
-            "ko": [
-              "최대: 5 V",
-              "최소: 3 V"
-            ],
-            "en": [
-              "Max.: 5 V",
-              "Min.: 3 V"
-            ]
+            "ko": [ "최소: 3 V", "최대: 5 V" ],
+            "en": [ "Min.: 3 V", "Max.: 5 V" ],
+            "es": [ "Mínimo: 3 V", "Máx.: 5 V" ],
+            "ja": [ "最小：3 V", "最大：5 V" ]
           }
         },
         "switch_input_vil": {
@@ -235,7 +244,9 @@
           "label_id": "specs.power.switch_input_vil",
           "value": {
             "ko": "최대: 1 V",
-            "en": "Max.: 1 V"
+            "en": "Max.: 1 V",
+            "es": "Máximo: 1 V",
+            "ja": "最大：1 V"
           }
         },
         "relay": {

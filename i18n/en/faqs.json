@@ -46,12 +46,21 @@
       "hid": "qrbarcode",
       "contents": [
         {
-          "product": [ "xstation_2", "biostation_3_max" ],
+          "product": [ "xstation_2" ],
           "question": "It fails to scan a QR/Barcode.",
           "answer": [
             "Refer to <a href='getting-started#how-to-scan-qrbarcode'>Correct QR/Barcode Authentication Method</a> and try again.",
             "<b>XS2-QDPB</b>, <b>XS2-QAPB</b>: Place the guide beam at the center of the QR code.",
             "<b>XS2-DPB</b>, <b>XS2-APB</b>: Position the QR/Barcode in the center of the scan screen of the device.",
+            "Adjust the brightness of your smartphone so that the device can read the QR/Barcode clearly and try again.",
+            "If the problem persists, contact the administrator who issued the QR/Barcode."
+          ]
+        },
+        {
+          "product": [ "biostation_3_max" ],
+          "question": "It fails to scan a QR/Barcode.",
+          "answer": [
+            "Refer to <a href='getting-started#how-to-scan-qrbarcode'>Correct QR/Barcode Authentication Method</a> and try again.",
             "Adjust the brightness of your smartphone so that the device can read the QR/Barcode clearly and try again.",
             "If the problem persists, contact the administrator who issued the QR/Barcode."
           ]
@@ -190,7 +199,7 @@
       "hid": "admin",
       "contents": [
         {
-          "product": [ "biostation_3", "biolite_n2", "biostation_2a", "biostation_3_max" ],
+          "product": [ "biostation_3", "biolite_n2", "biostation_2a", "xstation_2" ],
           "question": "After upgrading the firmware on existing devices, the Master Admin setting does not appear.",
           "answer": [
             "Devices upgraded with firmware from existing devices do not support master administrator configuration. You can enhance device security by strengthening the permissions of all administrators through the <span class='cmd'>Admin 2-Step Authentication</span> option. For more detailed information, refer to <a href='settings#admin-2-step-authentication'>Admin 2-step Authentication</a>."
