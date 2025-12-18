@@ -2,6 +2,9 @@
   "externalLinks.BioEntryW3.desc": {
     "message": "Simple, duradero, seguro<br/>Dispositivo de autenticación facial con IA"
   },
+  "externalLinks.BioStation3.desc": {
+    "message": "La Nueva Experiencia de Acceso a Puertas"
+  },
   "externalLinks.FaceStationF2.desc": {
     "message": "Terminal multimodal Fusion"
   },
@@ -23,6 +26,9 @@
   "externalLinks.CoreStation.desc": {
     "message": "Controlador biométrico inteligente"
   },
+  "externalLinks.CoreStation20.desc": {
+    "message": "Seguridad Potente y Expansión Flexible"
+  },
   "externalLinks.CoreStationEnclosure.desc": {
     "message": "Gabinete para CoreStation"
   },
@@ -42,7 +48,7 @@
     "message": "Módulo escalable de comunicación y seguridad"
   },
   "externalLinks.apps.devicemanager.desc": {
-    "message": "Aplicación de administración de dispositivos de control de acceso basada en dispositivos móviles"
+    "message": "Aplicación móvil de gestión de control de acceso"
   },
   "externalLinks.apps.setupmanager.desc": {
     "message": "Servidor web de gestión de control de acceso centralizado"
@@ -1091,7 +1097,7 @@
     "message": "Control de acceso compatible con autenticación por tarjeta y QR/Barcode"
   },
   "externalLinks.dev.sdk.desc": {
-    "message": "Integra las funciones principales del dispositivo de huellas dactilares con software de terceros"
+    "message": "Integra funciones de huella dactilar con software de terceros"
   },
   "externalLinks.dev.xapi.desc": {
     "message": "Documentación API que permite ver todas las API de BioStar X de un vistazo"
@@ -1103,6 +1109,6 @@
     "message": "Solución multiplataforma compatible con varios lenguajes de programación"
   },
   "externalLinks.dev.svpsdk.desc": {
-    "message": "Funciones principales de los dispositivos Suprema<br/>compatibles con software de terceros"
+    "message": "Funciones principales de los dispositivos Suprema compatibles con software de terceros"
   }
 }

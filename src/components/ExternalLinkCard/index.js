@@ -113,7 +113,10 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       title: 'BioStation 3',
       url: `/device/biostation_3`,
       img: 'https://www.suprema.co.kr/en/asset/images/thumbnail/biostation3.png',
-      desc: 'The New Door Access Experience'
+      desc: `${translate({
+        id: "externalLinks.BioStation3.desc",
+        message: "Simple, Durable, Secure<br/>AI 기반 얼굴인증 디바이스"
+      })}`
     },
     {
       title: 'FaceStation F2',
@@ -261,7 +264,10 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
       title: 'CoreStation 20',
       url: '/device/corestation_20',
       img: 'https://www.supremainc.com/images/upload/products/EN/20250306163802329.png',
-      desc: 'Powerful Security, Flexible Expansion'
+      desc: `${translate({
+        id: "externalLinks.CoreStation20.desc",
+        message: "Powerful Security, Flexible Expansion"
+      })}`
     },
     {
       title: 'CoreStation',

@@ -2,6 +2,9 @@
   "externalLinks.BioEntryW3.desc": {
     "message": "Simple, Durable, Secure<br/>AI-Powered Facial Authentication Device"
   },
+  "externalLinks.BioStation3.desc": {
+    "message": "The New Door Access Experience"
+  },
   "externalLinks.FaceStationF2.desc": {
     "message": "Fusion Multimodal Terminal"
   },
@@ -22,6 +25,9 @@
   },
   "externalLinks.CoreStation.desc": {
     "message": "Intelligent Biometric Controller"
+  },
+  "externalLinks.CoreStation20.desc": {
+    "message": "Powerful Security, Flexible Expansion"
   },
   "externalLinks.CoreStationEnclosure.desc": {
     "message": "Enclosure for CoreStation"

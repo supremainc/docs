@@ -76,67 +76,75 @@ Los siguientes pasos están basados en Windows 11. La ubicación del menú puede
 :::
 
 <Steps>
-  <Step>
-    ### Abrir la configuración de red
+<Step>
 
-    1. En el menú **Inicio**, escriba **Ver conexiones de red**.
+### Abrir la configuración de red
 
-       <Image src="/img/biostarx-install-check-start-network-search.png" />
+1. En el menú **Inicio**, escriba **Ver conexiones de red**.
 
-    2. Haga clic en **Ver conexiones de red** en los resultados de la búsqueda.
+    <Image src="/img/biostarx-install-check-start-network-search.png" />
 
-    3. Haga doble clic en el adaptador conectado a Internet en la lista.
+2. Haga clic en **Ver conexiones de red** en los resultados de la búsqueda.
 
-       <Image src="/img/biostarx-install-check-control-network-connections.png" />
-  </Step>
+3. Haga doble clic en el adaptador conectado a Internet en la lista.
 
-  <Step>
-    ### Abrir las opciones del adaptador
+    <Image src="/img/biostarx-install-check-control-network-connections.png" />
 
-    1. Cuando aparezca la ventana **Estado de Ethernet**, haga clic en el botón **Propiedades**.
+</Step>
 
-       <Image src="/img/biostarx-install-check-ethernet-status.png" />
+<Step>
 
-    2. Cuando aparezca la ventana Propiedades de Ethernet, seleccione <b>Protocolo de Internet versión 4 (TCP/IPv4)</b> en la lista.
+### Abrir las opciones del adaptador
 
-       <Image src="/img/biostarx-install-check-ethernet-properties.png" />
+1. Cuando aparezca la ventana **Estado de Ethernet**, haga clic en el botón **Propiedades**.
 
-    3. Haga clic en el botón **Propiedades**.
+    <Image src="/img/biostarx-install-check-ethernet-status.png" />
 
-    4. Cuando aparezca la ventana **Propiedades de Protocolo de Internet versión 4 (TCP/IPv4)**, haga clic en el botón **Avanzado**.
+2. Cuando aparezca la ventana Propiedades de Ethernet, seleccione <b>Protocolo de Internet versión 4 (TCP/IPv4)</b> en la lista.
 
-       <Image src="/img/biostarx-install-check-protocol-properties.png" />
-  </Step>
+    <Image src="/img/biostarx-install-check-ethernet-properties.png" />
 
-  <Step>
-    ### Configuración de métrica
+3. Haga clic en el botón **Propiedades**.
 
-    1. Desmarque la casilla **Automatic Metric**.
+4. Cuando aparezca la ventana **Propiedades de Protocolo de Internet versión 4 (TCP/IPv4)**, haga clic en el botón **Avanzado**.
 
-       <Image src="/img/biostarx-install-check-set-metrics.png" />
+    <Image src="/img/biostarx-install-check-protocol-properties.png" />
 
-    2. Ingrese el valor deseado en el campo **Interface Metric**.
+</Step>
 
-       * Si desea la prioridad más alta, ingrese `1`.
+<Step>
 
-       * Si desea una prioridad mayor que la de otros adaptadores, ingrese un número menor que los valores de métrica de los demás adaptadores.
+### Configuración de métrica
 
-    3. Para guardar la configuración y cerrar todas las ventanas, haga clic en el botón **OK**.
+1. Desmarque la casilla **Automatic Metric**.
 
-    :::info
+    <Image src="/img/biostarx-install-check-set-metrics.png" />
 
-    Los valores que puede ingresar en **Interface Metric** van de `1` a `9999`. Cuanto menor sea el valor, mayor será la prioridad.
+2. Ingrese el valor deseado en el campo **Interface Metric**.
 
-    :::
-  </Step>
+    * Si desea la prioridad más alta, ingrese `1`.
 
-  <Step>
-    ### Verificar la configuración
+    * Si desea una prioridad mayor que la de otros adaptadores, ingrese un número menor que los valores de métrica de los demás adaptadores.
 
-    1. Vuelva a abrir el **Símbolo del sistema** y ejecute el comando `route print`.
+3. Para guardar la configuración y cerrar todas las ventanas, haga clic en el botón **OK**.
 
-    2. Verifique si el valor de la métrica ha cambiado.
-  </Step>
+:::info
+
+Los valores que puede ingresar en **Interface Metric** van de `1` a `9999`. Cuanto menor sea el valor, mayor será la prioridad.
+
+:::
+
+</Step>
+
+<Step>
+
+### Verificar la configuración
+
+1. Vuelva a abrir el **Símbolo del sistema** y ejecute el comando `route print`.
+
+2. Verifique si el valor de la métrica ha cambiado.
+
+</Step>
 </Steps>
 
 ## Solución de problemas

@@ -41,73 +41,82 @@ La función de configuración de **Entra ID** o **Active Directory** está dispo
 5. Configura cada elemento como se indica a continuación.
 
 <Steps>
-  <Step>
-    ### <Cmd sid="settings.activeDirectory.ADServerConfiguration" product="2" /> {#EntraidServer}
+<Step>
 
-    Ingresa la información del servidor de **Entra ID** y haz clic en <Cmd sid="settings.activeDirectory.Connect" product="2" /> en <Cmd sid="settings.activeDirectory.ADServerConfiguration" product="2" />.
+### <Cmd sid="settings.activeDirectory.ADServerConfiguration" product="2" /> {#EntraidServer}
 
-    <Image src="/img/biostarx-setting-directory-server.png" />
+Ingresa la información del servidor de **Entra ID** y haz clic en <Cmd sid="settings.activeDirectory.Connect" product="2" /> en <Cmd sid="settings.activeDirectory.ADServerConfiguration" product="2" />.
 
-    * <Cmd sid="settings.activeDirectory.ClientID" product="2" />: Ingresa el **Client ID** de la aplicación registrada en **Entra ID**.
+<Image src="/img/biostarx-setting-directory-server.png" />
 
-    * <Cmd sid="settings.activeDirectory.ClientSecret" product="2" />: Ingresa el **Client secret** agregado en **Certificates & secrets** de la aplicación registrada en **Entra ID**.
+* <Cmd sid="settings.activeDirectory.ClientID" product="2" />: Ingresa el **Client ID** de la aplicación registrada en **Entra ID**.
 
-    * <Cmd sid="settings.activeDirectory.PrimaryDomain" product="2" />: Ingresa el nombre de dominio principal que se ingresó al crear la organización en **Entra ID**.
+* <Cmd sid="settings.activeDirectory.ClientSecret" product="2" />: Ingresa el **Client secret** agregado en **Certificates & secrets** de la aplicación registrada en **Entra ID**.
 
-    :::info
+* <Cmd sid="settings.activeDirectory.PrimaryDomain" product="2" />: Ingresa el nombre de dominio principal que se ingresó al crear la organización en **Entra ID**.
 
-    * Para obtener más información sobre cómo registrar una aplicación en **Entra ID**, consulta [el siguiente enlace](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app).
+:::info
 
-    * Para obtener más información sobre cómo configurar **Certificates & secrets** en **Entra ID**, consulta [el siguiente enlace](https://learn.microsoft.com/entra/identity-platform/how-to-add-credentials?tabs=client-secret).
+* Para obtener más información sobre cómo registrar una aplicación en **Entra ID**, consulta [el siguiente enlace](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app).
 
-    * **Tenant ID** se puede encontrar en **Overview** de la aplicación registrada en **Entra ID**.
+* Para obtener más información sobre cómo configurar **Certificates & secrets** en **Entra ID**, consulta [el siguiente enlace](https://learn.microsoft.com/entra/identity-platform/how-to-add-credentials?tabs=client-secret).
 
-    * La información de <Cmd sid="settings.activeDirectory.PrimaryDomain" product="2" /> se puede verificar en **Overview** de **Entra ID**.
+* **Tenant ID** se puede encontrar en **Overview** de la aplicación registrada en **Entra ID**.
 
-      <Image src="/img/biostarx-setting-directory-primary-domain.png" />
+* La información de <Cmd sid="settings.activeDirectory.PrimaryDomain" product="2" /> se puede verificar en **Overview** de **Entra ID**.
 
-    :::
-  </Step>
+  <Image src="/img/biostarx-setting-directory-primary-domain.png" />
 
-  <Step>
-    <UserGroupFilter hashid="usergroupfilterEntraid" name="Entra ID" />
-  </Step>
+:::
+</Step>
 
-  <Step>
-    <UserCustomField hashid="userfieldEntraid" name="Entra ID" img01="biostarx-setting-directory-userfield.png" img02="biostarx-setting-directory-userfield-select-other.png" sid="settings.activeDirectory.FieldNameEI" />
+<Step>
 
-    :::caution
+<UserGroupFilter hashid="usergroupfilterEntraid" name="Entra ID" />
 
-    El campo <Cmd sid="common.userId" product="2" /> no se puede asignar al integrar con **Entra ID**. <Cmd sid="common.userId" product="2" /> se genera y aplica automáticamente en **BioStar X**.
+</Step>
 
-    :::
-  </Step>
+<Step>
 
-  <Step>
-    ### <Cmd sid="settings.activeDirectory.LogintitleEI" product="2" /> {#setssoEntraid}
+<UserCustomField hashid="userfieldEntraid" name="Entra ID" img01="biostarx-setting-directory-userfield.png" img02="biostarx-setting-directory-userfield-select-other.png" sid="settings.activeDirectory.FieldNameEI" />
 
-    Cambia <Cmd sid="settings.activeDirectory.LogintitleEI" product="2" /> a <Cmd sid="device.info.enabled" product="2" /> para habilitar el inicio de sesión en **BioStar X** mediante **Entra ID SSO**.
+:::caution
 
-    <Image src="/img/biostarx-setting-directory-login-with-entraid.png" />
+El campo <Cmd sid="common.userId" product="2" /> no se puede asignar al integrar con **Entra ID**. <Cmd sid="common.userId" product="2" /> se genera y aplica automáticamente en **BioStar X**.
 
-    Copia el URI de redirección del campo <Cmd sid="settings.activeDirectory.RedirectionUri" product="2" /> (<IcCopy2 />) y pégalo en la configuración de redirección SSO en el portal de **Entra ID**. Cuando un usuario inicie sesión correctamente con **Entra ID**, será redirigido a esta dirección.
+:::
 
-    :::info
+</Step>
 
-    * Para obtener más información sobre cómo registrar una aplicación en **Entra ID** y agregar un URI de redirección, consulta los siguientes enlaces.
+<Step>
 
-      * [Registrar una aplicación en Microsoft Entra ID](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app)
+### <Cmd sid="settings.activeDirectory.LogintitleEI" product="2" /> {#setssoEntraid}
 
-      * [Cómo agregar un URI de redirección a tu aplicación](https://learn.microsoft.com/entra/identity-platform/how-to-add-redirect-uri)
+Cambia <Cmd sid="settings.activeDirectory.LogintitleEI" product="2" /> a <Cmd sid="device.info.enabled" product="2" /> para habilitar el inicio de sesión en **BioStar X** mediante **Entra ID SSO**.
 
-    * La dirección de redirección se puede encontrar en **Overview** de la aplicación registrada en **Entra ID**.
+<Image src="/img/biostarx-setting-directory-login-with-entraid.png" />
 
-    :::
-  </Step>
+Copia el URI de redirección del campo <Cmd sid="settings.activeDirectory.RedirectionUri" product="2" /> (<IcCopy2 />) y pégalo en la configuración de redirección SSO en el portal de **Entra ID**. Cuando un usuario inicie sesión correctamente con **Entra ID**, será redirigido a esta dirección.
 
-  <Step>
-    <SyncIntegration hashid="syncdatafromEntraid" name="Entra ID" />
-  </Step>
+:::info
+
+* Para obtener más información sobre cómo registrar una aplicación en **Entra ID** y agregar un URI de redirección, consulta los siguientes enlaces.
+
+  * [Registrar una aplicación en Microsoft Entra ID](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app)
+
+  * [Cómo agregar un URI de redirección a tu aplicación](https://learn.microsoft.com/entra/identity-platform/how-to-add-redirect-uri)
+
+* La dirección de redirección se puede encontrar en **Overview** de la aplicación registrada en **Entra ID**.
+
+:::
+
+</Step>
+
+<Step>
+
+<SyncIntegration hashid="syncdatafromEntraid" name="Entra ID" />
+
+</Step>
 </Steps>
 
 :::note
@@ -128,73 +137,83 @@ Después de completar todos los ajustes de <Cmd sid="setting.menu.directoryInteg
 
 4. Selecciona <Cmd sid="settings.activeDirectory.AdServerOld" product="2" /> en <Cmd sid="settings.activeDirectory.title" product="2" />.
 
-   <Image src="/img/biostarx-setting-directory-integ-ad.png" />
+    <Image src="/img/biostarx-setting-directory-integ-ad.png" />
 
 5. Configura cada elemento como se indica a continuación.
 
 :::info
 
 * Active Directory está disponible para entornos de sistema con Windows Server 2008 R2 o
-  posterior.
+posterior.
 
 * Para usar el servidor Active Directory, establece <Cmd sid="setting.userDevice.useridType" product="2" /> en <Cmd sid="setting.userDevice.useridType.alphanumeric" product="2" /> en <Cmd sid="common.setting" product="2" /> → <Cmd sid="setting.server" product="2" />.
 
 :::
 
 <Steps>
-  <Step>
-    ### <Cmd sid="settings.activeDirectory.ADServerConfiguration" product="2" /> {#ADserver}
+<Step>
 
-    Ingresa la información del servidor de **Active Directory** y haz clic en <Cmd sid="settings.activeDirectory.Connect" product="2" /> en <Cmd sid="settings.activeDirectory.ADServerConfiguration" product="2" />.
+### <Cmd sid="settings.activeDirectory.ADServerConfiguration" product="2" /> {#ADserver}
 
-    <Image src="/img/biostarx-setting-directory-ad-server.png" />
+Ingresa la información del servidor de **Active Directory** y haz clic en <Cmd sid="settings.activeDirectory.Connect" product="2" /> en <Cmd sid="settings.activeDirectory.ADServerConfiguration" product="2" />.
 
-    * <Cmd sid="settings.activeDirectory.ServerAddress" product="2" />: Ingresa la dirección del servidor de Windows Active Directory.
+<Image src="/img/biostarx-setting-directory-ad-server.png" />
 
-    * <Cmd sid="settings.activeDirectory.UserName" product="2" />: Ingresa el nombre de usuario que utiliza Windows Active Directory.
+* <Cmd sid="settings.activeDirectory.ServerAddress" product="2" />: Ingresa la dirección del servidor de Windows Active Directory.
 
-    * <Cmd sid="settings.activeDirectory.Password" product="2" />: Ingresa la contraseña que utiliza Windows Active Directory.
+* <Cmd sid="settings.activeDirectory.UserName" product="2" />: Ingresa el nombre de usuario que utiliza Windows Active Directory.
 
-    * <Cmd sid="settings.activeDirectory.DomainNode" product="2" />: Ingresa el nombre de dominio base para Windows Active Directory. Encuentra el nombre de dominio base mediante los siguientes pasos:
+* <Cmd sid="settings.activeDirectory.Password" product="2" />: Ingresa la contraseña que utiliza Windows Active Directory.
 
-      1. Ejecuta **Active Directory Administrative Center**.
+* <Cmd sid="settings.activeDirectory.DomainNode" product="2" />: Ingresa el nombre de dominio base para Windows Active Directory. Encuentra el nombre de dominio base mediante los siguientes pasos:
 
-      2. Haz clic derecho en el nodo donde se almacenan los datos de usuario y luego haz clic en **Property**.
+  1. Ejecuta **Active Directory Administrative Center**.
 
-      3. En la ventana **property**, selecciona **Expand** y luego haz clic en **Attribute Editor**.
+  2. Haz clic derecho en el nodo donde se almacenan los datos de usuario y luego haz clic en **Property**.
 
-      4. Consulta el valor de **distinguishedName**.
+  3. En la ventana **property**, selecciona **Expand** y luego haz clic en **Attribute Editor**.
 
-    * <Cmd sid="settings.activeDirectory.secureTransfer" product="2" />: Usa cifrado al comunicarte con el servidor Windows Active Directory. Para instalar Active Directory Certificate Services y configurar <Cmd sid="settings.activeDirectory.keystorePassword" product="2" />, consulta [lo siguiente](ad-encrypt).
+  4. Consulta el valor de **distinguishedName**.
 
-      * <Cmd sid="settings.activeDirectory.keystorePassword" product="2" />: Ingresa la contraseña del almacén de claves de cifrado del servidor Windows Active Directory. Ingresa la contraseña cuando <Cmd sid="settings.activeDirectory.secureTransfer" product="2" /> esté establecido en <Cmd sid="device.info.enabled" product="2" />.
-  </Step>
+* <Cmd sid="settings.activeDirectory.secureTransfer" product="2" />: Usa cifrado al comunicarte con el servidor Windows Active Directory. Para instalar Active Directory Certificate Services y configurar <Cmd sid="settings.activeDirectory.keystorePassword" product="2" />, consulta [lo siguiente](ad-encrypt).
 
-  <Step>
-    <UserGroupFilter hashid="usergroupfilterAD" name="Active Directory" />
-  </Step>
+  * <Cmd sid="settings.activeDirectory.keystorePassword" product="2" />: Ingresa la contraseña del almacén de claves de cifrado del servidor Windows Active Directory. Ingresa la contraseña cuando <Cmd sid="settings.activeDirectory.secureTransfer" product="2" /> esté establecido en <Cmd sid="device.info.enabled" product="2" />.
 
-  <Step>
-    <UserCustomField hashid="userfieldAD" name="Active Directory" img01="biostarx-setting-directory-userfield-ad.png" img02="biostarx-setting-directory-userfield-select-other-ad.png" sid="settings.activeDirectory.FieldNameAD" />
-  </Step>
+</Step>
 
-  <Step>
-    ### <Cmd sid="settings.activeDirectory.LogintitleAD" product="2" /> {#setssoAD}
+<Step>
 
-    Para configurar el inicio de sesión en **BioStar X** usando el ID de usuario del servidor Active Directory, cambia <Cmd sid="settings.activeDirectory.LogintitleAD" product="2" /> a <Cmd sid="device.info.enabled" product="2" />. El valor del campo `sAMAccountName` del servidor Active Directory se asignará al ID de inicio de sesión de **BioStar X**.
+<UserGroupFilter hashid="usergroupfilterAD" name="Active Directory" />
 
-    :::caution
+</Step>
 
-    El campo `sAMAccountName` no puede contener caracteres especiales. El inicio de sesión podría fallar si no cumple con la política de ID de inicio de **BioStar X**.
+<Step>
 
-    :::
+<UserCustomField hashid="userfieldAD" name="Active Directory" img01="biostarx-setting-directory-userfield-ad.png" img02="biostarx-setting-directory-userfield-select-other-ad.png" sid="settings.activeDirectory.FieldNameAD" />
 
-    <Image src="/img/biostarx-setting-directory-login-with-ad.png" />
-  </Step>
+</Step>
 
-  <Step>
-    <SyncIntegration hashid="syncdatafromAd" name="Active Directory" />
-  </Step>
+<Step>
+
+### <Cmd sid="settings.activeDirectory.LogintitleAD" product="2" /> {#setssoAD}
+
+Para configurar el inicio de sesión en **BioStar X** usando el ID de usuario del servidor Active Directory, cambia <Cmd sid="settings.activeDirectory.LogintitleAD" product="2" /> a <Cmd sid="device.info.enabled" product="2" />. El valor del campo `sAMAccountName` del servidor Active Directory se asignará al ID de inicio de sesión de **BioStar X**.
+
+:::caution
+
+El campo `sAMAccountName` no puede contener caracteres especiales. El inicio de sesión podría fallar si no cumple con la política de ID de inicio de **BioStar X**.
+
+:::
+
+<Image src="/img/biostarx-setting-directory-login-with-ad.png" />
+
+</Step>
+
+<Step>
+
+<SyncIntegration hashid="syncdatafromAd" name="Active Directory" />
+
+</Step>
 </Steps>
 
 :::note

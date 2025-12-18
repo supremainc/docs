@@ -22,81 +22,93 @@ Siga las instrucciones en pantalla para configurar los detalles.
 <Image src="/img/biostarx-settings-trigger-and-action-add.png" />
 
 <Steps>
-  <Step>
-    ## Ingrese el nombre
+<Step>
 
-    <Cmd sid="common.name" product="2" />: Ingrese el nombre para las condiciones y las acciones.
-  </Step>
+## Ingrese el nombre
 
-  <Step>
-    ## Configurar horario
+<Cmd sid="common.name" product="2" />: Ingrese el nombre para las condiciones y las acciones.
 
-    <Cmd sid="triggerAction.schedule" product="2" />: Configure el horario en el que se aplicarán las condiciones y acciones.
+</Step>
 
-    :::info
+<Step>
 
-    * Haga clic en <Cmd sid="button.plusAddSchedule" product="2" /> para definir un horario si no existe uno adecuado al seleccionar <Cmd sid="triggerAction.input" product="2" /> y crear condiciones personalizadas.
+## Configurar horario
 
-    * Para obtener más información sobre la configuración de horarios, consulta [lo siguiente](settings-schedule).
+<Cmd sid="triggerAction.schedule" product="2" />: Configure el horario en el que se aplicarán las condiciones y acciones.
 
-    :::
-  </Step>
+:::info
 
-  <Step>
-    ## Usar como Acción Rápida
+* Haga clic en <Cmd sid="button.plusAddSchedule" product="2" /> para definir un horario si no existe uno adecuado al seleccionar <Cmd sid="triggerAction.input" product="2" /> y crear condiciones personalizadas.
 
-    Configure <Cmd sid="common.quickAction" product="2" /> para controlar varias puertas a la vez mediante el botón <Cmd sid="common.quickAction" product="2" /> en la pantalla principal de **BioStar X**. Haga clic en la casilla <Cmd sid="triggerAction.quickAction" product="2" />.
+* Para obtener más información sobre la configuración de horarios, consulta [lo siguiente](settings-schedule).
 
-    :::info
+:::
 
-    * Esta función solo está disponible cuando la opción <Cmd sid="triggerAction.schedule" product="2" /> se configura en <Cmd>Always</Cmd>.
+</Step>
 
-    * <Cmd sid="common.quickAction" product="2" /> se puede configurar en <Cmd sid="shell.header.setting" /> → <Cmd sid="setting.menu.customInterface.root" />. Para más información sobre <Cmd sid="common.quickAction" product="2" />, consulte [lo siguiente](settings-custom-interface).
+<Step>
 
-    :::
-  </Step>
+## Usar como Acción Rápida
 
-  <Step>
-    ## Seleccionar dispositivo, puerta, control de acceso avanzado {#select-device-door-advanced-ac}
+Configure <Cmd sid="common.quickAction" product="2" /> para controlar varias puertas a la vez mediante el botón <Cmd sid="common.quickAction" product="2" /> en la pantalla principal de **BioStar X**. Haga clic en la casilla <Cmd sid="triggerAction.quickAction" product="2" />.
 
-    Seleccione los elementos para enviar señales de eventos. Se pueden seleccionar varios dispositivos y funcionarán de forma independiente incluso si se pierde la conexión con **BioStar X**.
+:::info
 
-    :::info
+* Esta función solo está disponible cuando la opción <Cmd sid="triggerAction.schedule" product="2" /> se configura en <Cmd>Always</Cmd>.
 
-    La opción <Cmd>Advanced Access Control</Cmd> solo está disponible con una licencia **Advanced** o superior. Para obtener más información sobre la política de licencias, consulta [lo siguiente](licensing).
+* <Cmd sid="common.quickAction" product="2" /> se puede configurar en <Cmd sid="shell.header.setting" /> → <Cmd sid="setting.menu.customInterface.root" />. Para más información sobre <Cmd sid="common.quickAction" product="2" />, consulte [lo siguiente](settings-custom-interface).
 
-    :::
-  </Step>
+:::
 
-  <Step>
-    ## Configurar condiciones de evento
+</Step>
 
-    Configure los eventos de condición. Debe seleccionar uno o más eventos.
+<Step>
 
-    :::info
+## Seleccionar dispositivo, puerta, control de acceso avanzado {#select-device-door-advanced-ac}
 
-    Según las opciones seleccionadas en el [paso anterior](#select-device-door-advanced-ac), se activarán listas de eventos distintas.
+Seleccione los elementos para enviar señales de eventos. Se pueden seleccionar varios dispositivos y funcionarán de forma independiente incluso si se pierde la conexión con **BioStar X**.
 
-    :::
-  </Step>
+:::info
 
-  <Step>
-    ## Configurar acciones
+La opción <Cmd>Advanced Access Control</Cmd> solo está disponible con una licencia **Advanced** o superior. Para obtener más información sobre la política de licencias, consulta [lo siguiente](licensing).
 
-    Seleccione el dispositivo que realizará las acciones. Elija acciones para dispositivos, puertas o **BioStar X**.
+:::
 
-    En la sección <Cmd sid="triggerAction.action" product="2" />, configure las señales que se enviarán cuando ocurran los eventos de condición seleccionados. Configure esto en **BioStar X** para recibir registros por correo electrónico.
+</Step>
 
-    :::info
+<Step>
 
-    * Al hacer clic en <Cmd sid="common.device" product="2" />, <Cmd sid="common.door" product="2" />, o <Cmd>BioStar X</Cmd> se cambiará el contenido de la sección de acciones.
+## Configurar condiciones de evento
 
-    * Para configurar la información del servidor de correo electrónico, haga clic en <IcSet2 /> en la pestaña <Cmd>BioStar X</Cmd>. Cuando aparezca la ventana <Cmd sid="setting.triggerAction.smtpOption" product="2" />, ingrese la información del servidor de correo electrónico y haga clic en <Cmd sid="button.apply" product="2" />. Para más información, consulte [lo siguiente](settings-email-setting#email-contents-setting).
+Configure los eventos de condición. Debe seleccionar uno o más eventos.
 
-    * Para información detallada sobre la configuración del servidor de correo electrónico, contacte a su administrador del sistema.
+:::info
 
-    :::
-  </Step>
+Según las opciones seleccionadas en el [paso anterior](#select-device-door-advanced-ac), se activarán listas de eventos distintas.
+
+:::
+
+</Step>
+
+<Step>
+
+## Configurar acciones
+
+Seleccione el dispositivo que realizará las acciones. Elija acciones para dispositivos, puertas o **BioStar X**.
+
+En la sección <Cmd sid="triggerAction.action" product="2" />, configure las señales que se enviarán cuando ocurran los eventos de condición seleccionados. Configure esto en **BioStar X** para recibir registros por correo electrónico.
+
+:::info
+
+* Al hacer clic en <Cmd sid="common.device" product="2" />, <Cmd sid="common.door" product="2" />, o <Cmd>BioStar X</Cmd> se cambiará el contenido de la sección de acciones.
+
+* Para configurar la información del servidor de correo electrónico, haga clic en <IcSet2 /> en la pestaña <Cmd>BioStar X</Cmd>. Cuando aparezca la ventana <Cmd sid="setting.triggerAction.smtpOption" product="2" />, ingrese la información del servidor de correo electrónico y haga clic en <Cmd sid="button.apply" product="2" />. Para más información, consulte [lo siguiente](settings-email-setting#email-contents-setting).
+
+* Para información detallada sobre la configuración del servidor de correo electrónico, contacte a su administrador del sistema.
+
+:::
+
+</Step>
 </Steps>
 
 Cuando finalices la configuración, haz clic en <Cmd sid="button.apply" product="2" />.
