@@ -123,7 +123,7 @@ function _createMdxContent(props) {
             }), (0,jsx_runtime.jsx)(_components.th, {
               children: "Pequeña"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "Organización mediana"
+              children: "Medio"
             }), (0,jsx_runtime.jsx)(_components.th, {
               children: "Corporativa"
             })]
@@ -284,7 +284,7 @@ function _createMdxContent(props) {
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Organización mediana"
+            children: "Medio"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "50 - 300 dispositivos"
           }), (0,jsx_runtime.jsx)(_components.td, {
@@ -325,7 +325,7 @@ function _createMdxContent(props) {
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Organización mediana"
+            children: "Medio"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "50 - 300 dispositivos"
           }), (0,jsx_runtime.jsx)(_components.td, {
@@ -407,7 +407,7 @@ function _createMdxContent(props) {
             }), (0,jsx_runtime.jsx)(_components.th, {
               children: "Pequeña"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "Organización mediana"
+              children: "Medio"
             }), (0,jsx_runtime.jsx)(_components.th, {
               children: "Corporativa"
             })]

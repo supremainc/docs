@@ -123,7 +123,7 @@ function _createMdxContent(props) {
             }), (0,jsx_runtime.jsx)(_components.th, {
               children: "Small"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "Mid-sized organization"
+              children: "Medium"
             }), (0,jsx_runtime.jsx)(_components.th, {
               children: "Enterprise"
             })]
@@ -284,7 +284,7 @@ function _createMdxContent(props) {
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Mid-sized organization"
+            children: "Medium"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "50 - 300 devices"
           }), (0,jsx_runtime.jsx)(_components.td, {
@@ -325,7 +325,7 @@ function _createMdxContent(props) {
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Mid-sized organization"
+            children: "Medium"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "50 - 300 devices"
           }), (0,jsx_runtime.jsx)(_components.td, {
@@ -407,7 +407,7 @@ function _createMdxContent(props) {
             }), (0,jsx_runtime.jsx)(_components.th, {
               children: "Small"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "Mid-sized organization"
+              children: "Medium"
             }), (0,jsx_runtime.jsx)(_components.th, {
               children: "Enterprise"
             })]
