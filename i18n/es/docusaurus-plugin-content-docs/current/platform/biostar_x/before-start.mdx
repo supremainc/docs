@@ -144,87 +144,100 @@ Establezca los siguientes valores recomendados en la sección **Database Files**
 #### Configurar la base de datos de autenticación de Windows {#windows-authentication-database-settings}
 
 <Steps>
-  <Step>
-    ##### Configuración previa {#preliminary-setting}
+<Step>
 
-    Si utiliza **Microsoft Windows Active Directory**, complete las configuraciones previas que se indican a continuación antes de configurar la base de datos de autenticación de Windows.
+##### Configuración previa {#preliminary-setting}
 
-    1. Inicie sesión con una cuenta de administrador en **SQL Server Management Studio**.
+Si utiliza **Microsoft Windows Active Directory**, complete las configuraciones previas que se indican a continuación antes de configurar la base de datos de autenticación de Windows.
 
-    2. Haga clic derecho en **Security** y haga clic en **New Login**.
+1. Inicie sesión con una cuenta de administrador en **SQL Server Management Studio**.
 
-    3. Seleccione **Windows Authentication** y luego haga clic en **Search**.
+2. Haga clic derecho en **Security** y haga clic en **New Login**.
 
-    4. En la ventana **Select a user or group**, haga clic en Ubicación, seleccione la ruta de Active Directory y haga clic en **OK**.
+3. Seleccione **Windows Authentication** y luego haga clic en **Search**.
 
-    5. Ingrese el nombre de usuario en el campo **Enter object name to select**, luego haga clic en **Check Names** > **OK**.
+4. En la ventana **Select a user or group**, haga clic en Ubicación, seleccione la ruta de Active Directory y haga clic en **OK**.
 
-    6. Haga clic en **Server Roles** en **Select a page**.
+5. Ingrese el nombre de usuario en el campo **Enter object name to select**, luego haga clic en **Check Names** > **OK**.
 
-    7. Seleccione **sysadmin** y luego haga clic en **OK**.
+6. Haga clic en **Server Roles** en **Select a page**.
 
-    8. Haz clic en **User Mapping** en la página **Select**.
+7. Seleccione **sysadmin** y luego haga clic en **OK**.
 
-    9. Selecciona **ac**, **master**, **ta**, **ve** y establece **Default Schema** en **dbo**.
+8. Haz clic en **User Mapping** en la página **Select**.
 
-    10. Haga clic en **OK** para guardar los ajustes.
-  </Step>
+9. Selecciona **ac**, **master**, **ta**, **ve** y establece **Default Schema** en **dbo**.
 
-  <Step>
-    ##### Configurar la autenticación de Windows de MS SQL con una cuenta de Active Directory {#settingsforusingmssql}
+10. Haga clic en **OK** para guardar los ajustes.
 
-    1. Ejecuta *services.msc*.
+</Step>
 
-    2. En la ventana **Properties** > **Logon** de la base de datos de SQL Server, selecciona **Specify account** e inicia sesión como usuario de dominio.
+<Step>
 
-    3. Agrega el puerto 1433 como excepción en el Firewall de Windows.
+##### Configurar la autenticación de Windows de MS SQL con una cuenta de Active Directory {#settingsforusingmssql}
 
-    4. Crea las bases de datos vacías **ac**, **ta**, **ve** en SQL Server con autenticación **sysadmin**.
+1. Ejecuta *services.msc*.
 
-    5. Configura al usuario de dominio para que use la autenticación de Windows en SQL Server y asigna todos los permisos excepto **sysadmin** a las bases de datos **ac**, **ta**, **ve**.
+2. En la ventana **Properties** > **Logon** de la base de datos de SQL Server, selecciona **Specify account** e inicia sesión como usuario de dominio.
 
-    6. Conecta todos los servicios, excepto el equipo local, en *services.msc*.
+3. Agrega el puerto 1433 como excepción en el Firewall de Windows.
 
-    7. Establece al usuario de dominio como administrador en el equipo de servicio local.
+4. Crea las bases de datos vacías **ac**, **ta**, **ve** en SQL Server con autenticación **sysadmin**.
 
-    8. Conéctate a MS SQL ODBC.
-  </Step>
+5. Configura al usuario de dominio para que use la autenticación de Windows en SQL Server y asigna todos los permisos excepto **sysadmin** a las bases de datos **ac**, **ta**, **ve**.
 
-  <Step>
-    ##### Configuración de la base de datos {#database-setting}
+6. Conecta todos los servicios, excepto el equipo local, en *services.msc*.
 
-    1. Después de ejecutar **SQL Server Configuration Manager**, haz clic en **Client Protocol** en **SQL Native Client**.
+7. Establece al usuario de dominio como administrador en el equipo de servicio local.
 
-    2. Selecciona **TCP/IP** y verifica el puerto predeterminado.
+8. Conéctate a MS SQL ODBC.
 
-    3. Haz clic en **Protocols for SQL EXPRESS** en **SQL Server Network Configuration**.
+</Step>
 
-    4. Comprueba que el puerto ODBC en **TCP/IP** esté configurado con el mismo valor que el puerto predeterminado.
+<Step>
 
-    5. Inicie sesión con una cuenta de administrador en **SQL Server Management Studio**.
+##### Configuración de la base de datos {#database-setting}
 
-    6. Haz clic en **Security** > **Log In**, luego haz doble clic en **NT AUTHORITY\SYSTEM**.
+1. Después de ejecutar **SQL Server Configuration Manager**, haz clic en **Client Protocol** en **SQL Native Client**.
 
-    7. Haga clic en **Server Roles** en **Select a page**.
+2. Selecciona **TCP/IP** y verifica el puerto predeterminado.
 
-    8. Selecciona **public** y **sysadmin**, luego haz clic en **OK**.
+3. Haz clic en **Protocols for SQL EXPRESS** en **SQL Server Network Configuration**.
 
-    9. Haz clic en **User Mapping** en la página **Select**.
+4. Comprueba que el puerto ODBC en **TCP/IP** esté configurado con el mismo valor que el puerto predeterminado.
 
-    10. Selecciona las bases de datos **ac**, **ta**, **ve** y haz clic en **OK** para guardar.
-  </Step>
+5. Inicie sesión con una cuenta de administrador en **SQL Server Management Studio**.
+
+6. Haz clic en **Security** > **Log In**, luego haz doble clic en **NT AUTHORITY\SYSTEM**.
+
+7. Haga clic en **Server Roles** en **Select a page**.
+
+8. Selecciona **public** y **sysadmin**, luego haz clic en **OK**.
+
+9. Haz clic en **User Mapping** en la página **Select**.
+
+10. Selecciona las bases de datos **ac**, **ta**, **ve** y haz clic en **OK** para guardar.
+
+</Step>
 </Steps>
 
 <NextStep>
-  <NextItem to="system-requirements">
-    Conoce los requisitos mínimos del sistema para instalar **BioStar X**.
-  </NextItem>
 
-  <NextItem to="express-install">
-    Esta guía proporciona un método de instalación sencillo para usuarios primerizos.
-  </NextItem>
+<NextItem to="system-requirements">
 
-  <NextItem to="custom-install">
-    Guía al usuario para configurar una instalación personalizada que se integre con una base de datos que ya haya instalado.
-  </NextItem>
+Conoce los requisitos mínimos del sistema para instalar **BioStar X**.
+
+</NextItem>
+
+<NextItem to="express-install">
+
+Esta guía proporciona un método de instalación sencillo para usuarios primerizos.
+
+</NextItem>
+
+<NextItem to="custom-install">
+
+Guía al usuario para configurar una instalación personalizada que se integre con una base de datos que ya haya instalado.
+
+</NextItem>
 </NextStep>
