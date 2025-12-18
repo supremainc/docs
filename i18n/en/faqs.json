@@ -199,7 +199,7 @@
       "hid": "admin",
       "contents": [
         {
-          "product": [ "biostation_3", "biolite_n2", "biostation_2a" ],
+          "product": [ "biostation_3", "biolite_n2", "biostation_2a", "xstation_2" ],
           "question": "After upgrading the firmware on existing devices, the Master Admin setting does not appear.",
           "answer": [
             "Devices upgraded with firmware from existing devices do not support master administrator configuration. You can enhance device security by strengthening the permissions of all administrators through the <span class='cmd'>Admin 2-Step Authentication</span> option. For more detailed information, refer to <a href='settings#admin-2-step-authentication'>Admin 2-step Authentication</a>."
