@@ -107,317 +107,338 @@ Esta sección brinda orientación sobre cómo agregar una base de datos auxiliar
 ### MariaDB {#mariadb}
 
 <Steps>
-  <Step>
-    #### Base de datos principal
+<Step>
 
-    Otorga la cuenta y los permisos para acceder a la base de datos principal desde la nueva base de datos auxiliar.
+#### Base de datos principal
 
-    ```sql
-    CREATE USER '<Main DB AC Schema User>'@'<Sub DB IP>' IDENTIFIED BY '<Main DB AC Schema Password>';
+Otorga la cuenta y los permisos para acceder a la base de datos principal desde la nueva base de datos auxiliar.
 
-    GRANT ALL PRIVILEGES ON <Main DB AC Schema>.* TO '<Main DB AC Schema User>'@'<Sub DB IP>';
-    FLUSH PRIVILEGES;
-    ```
+```sql
+CREATE USER '<Main DB AC Schema User>'@'<Sub DB IP>' IDENTIFIED BY '<Main DB AC Schema Password>';
 
-    ```sql title='Example'
-    CREATE USER 'biostarx_ac_user'@'192.168.12.42' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON <Main DB AC Schema>.* TO '<Main DB AC Schema User>'@'<Sub DB IP>';
+FLUSH PRIVILEGES;
+```
 
-    GRANT ALL PRIVILEGES ON biostar2_ac.* TO 'biostarx_ac_user'@'192.168.12.42';
-    FLUSH PRIVILEGES;
-    ```
-  </Step>
+```sql title='Example'
+CREATE USER 'biostarx_ac_user'@'192.168.12.42' IDENTIFIED BY 'password';
 
-  <Step>
-    #### Base de datos auxiliar
+GRANT ALL PRIVILEGES ON biostar2_ac.* TO 'biostarx_ac_user'@'192.168.12.42';
+FLUSH PRIVILEGES;
+```
+</Step>
 
-    Otorga la cuenta y los permisos para acceder a la nueva base de datos auxiliar desde la base de datos principal.
+<Step>
 
-    ```sql
-    CREATE USER '<Sub DB AC Schema User>'@'<Main DB IP>' IDENTIFIED BY '<Sub DB AC Schema Password>';
+#### Base de datos auxiliar
 
-    GRANT ALL PRIVILEGES ON <Sub DB AC Schema>.* TO '<Sub DB AC Schema User>'@'<Main DB IP>';
-    FLUSH PRIVILEGES;
-    ```
+Otorga la cuenta y los permisos para acceder a la nueva base de datos auxiliar desde la base de datos principal.
 
-    ```sql title='Example'
-    CREATE USER 'biostarx_ac_user'@'192.168.12.161' IDENTIFIED BY 'password';
+```sql
+CREATE USER '<Sub DB AC Schema User>'@'<Main DB IP>' IDENTIFIED BY '<Sub DB AC Schema Password>';
 
-    GRANT ALL PRIVILEGES ON biostar2_ac.* TO 'biostarx_ac_user'@'192.168.12.161';
-    FLUSH PRIVILEGES;
-    ```
-  </Step>
+GRANT ALL PRIVILEGES ON <Sub DB AC Schema>.* TO '<Sub DB AC Schema User>'@'<Main DB IP>';
+FLUSH PRIVILEGES;
+```
 
-  <Step>
-    #### Verificar el uso de FederatedX
+```sql title='Example'
+CREATE USER 'biostarx_ac_user'@'192.168.12.161' IDENTIFIED BY 'password';
 
-    Ejecuta el siguiente comando tanto en la base de datos principal como en la auxiliar para verificar si el motor de almacenamiento FederatedX está habilitado.
+GRANT ALL PRIVILEGES ON biostar2_ac.* TO 'biostarx_ac_user'@'192.168.12.161';
+FLUSH PRIVILEGES;
+```
 
-    ```sql
-    SHOW ENGINES;
-    ```
+</Step>
+<Step>
 
-    Si el resultado de la consulta muestra `Engine : FEDERATED, Support : YES`, ya está instalado. Si el motor de almacenamiento FederatedX no está instalado, ejecuta la siguiente consulta.
+#### Verificar el uso de FederatedX
 
-    ```sql
-    INSTALL PLUGIN federated SONAME 'ha_federatedx';
-    ```
+Ejecuta el siguiente comando tanto en la base de datos principal como en la auxiliar para verificar si el motor de almacenamiento FederatedX está habilitado.
 
-    :::info
+```sql
+SHOW ENGINES;
+```
 
-    Verifica si el archivo *ha_federatedx.dll* existe en la carpeta *lib/plugin* en la ruta donde está instalada MariaDB. Normalmente, el archivo dll se encuentra en la ruta *C:\Program Files\MariaDB \{version}\lib\plugin*.
+Si el resultado de la consulta muestra `Engine : FEDERATED, Support : YES`, ya está instalado. Si el motor de almacenamiento FederatedX no está instalado, ejecuta la siguiente consulta.
 
-    :::
-  </Step>
+```sql
+INSTALL PLUGIN federated SONAME 'ha_federatedx';
+```
 
-  <Step>
-    #### Registrar alias de servidor
+:::info
 
-    Registra un alias de servidor para que la tabla federatedX creada en la base de datos auxiliar pueda acceder a la tabla origen en la base de datos principal.
+Verifica si el archivo *ha_federatedx.dll* existe en la carpeta *lib/plugin* en la ruta donde está instalada MariaDB. Normalmente, el archivo dll se encuentra en la ruta *C:\Program Files\MariaDB \{version}\lib\plugin*.
 
-    ```sql
-    CREATE SERVER 'default' FOREIGN DATA WRAPPER mysql OPTIONS (HOST '<Main DB IP>', PORT <Main DB PORT>, DATABASE '<Main DB AC Schema>', USER '<Main DB AC USER>', PASSWORD '<Main DB AC USER Password>');
+:::
 
-    -- Confirm registration
-    SELECT * FROM mysql.servers;
-    ```
+</Step>
+<Step>
 
-    Si necesitas cambiar la información de Host, Puerto, BD, Usuario o Contraseña del nombre de servidor registrado, puedes modificarla usando la instrucción `Alter`. También puedes cambiar solo cierta información.
+#### Registrar alias de servidor
 
-    ```sql
-    ALTER SERVER 'default' OPTIONS (HOST '<Main DB IP>', PORT <Main DB PORT>, DATABASE '<Main DB AC Schema>', USER '<Main DB AC USER>', PASSWORD '<Main DB AC USER Password>');
-    ```
+Registra un alias de servidor para que la tabla federatedX creada en la base de datos auxiliar pueda acceder a la tabla origen en la base de datos principal.
 
-    ```sql title='Example'
-    CREATE SERVER 'default' FOREIGN DATA WRAPPER mysql OPTIONS (HOST '192.168.12.161', PORT 3312, DATABASE 'biostar2_ac', USER 'biostarx_ac_user', PASSWORD 'password');
-      
-    ALTER SERVER 'default' OPTIONS (HOST '192.168.12.161', PORT 3312, DATABASE 'biostar2_ac', USER 'biostarx_ac_usermt__fttid__', PASSWORD 'password');
-    ```
-  </Step>
+```sql
+CREATE SERVER 'default' FOREIGN DATA WRAPPER mysql OPTIONS (HOST '<Main DB IP>', PORT <Main DB PORT>, DATABASE '<Main DB AC Schema>', USER '<Main DB AC USER>', PASSWORD '<Main DB AC USER Password>');
 
-  <Step>
-    #### Configuración de enlace de tablas
+-- Confirm registration
+SELECT * FROM mysql.servers;
+```
 
-    Sigue los pasos a continuación para enlazar las tablas necesarias en la base de datos auxiliar con las tablas en la base de datos principal.
+Si necesitas cambiar la información de Host, Puerto, BD, Usuario o Contraseña del nombre de servidor registrado, puedes modificarla usando la instrucción `Alter`. También puedes cambiar solo cierta información.
 
-    * A continuación se muestra la consulta para generar sentencias `CREATE TABLE` en la base de datos principal.
+```sql
+ALTER SERVER 'default' OPTIONS (HOST '<Main DB IP>', PORT <Main DB PORT>, DATABASE '<Main DB AC Schema>', USER '<Main DB AC USER>', PASSWORD '<Main DB AC USER Password>');
+```
 
-      ```sql
-      select
-        concat(
-            'CREATE TABLE IF NOT EXISTS <SubDB_AC_Database_Schema>.', table_name,
-            ' ENGINE=FEDERATED ',
-            'CONNECTION=''default/', table_name, ''';'
-        ) as create_table_sql
-      from information_schema.TABLES
-      where TABLE_SCHEMA = '<MainDB_AC_Database_Schema>'
-          AND TABLE_TYPE = 'BASE TABLE'
-          AND NOT TABLE_NAME REGEXP '^t_lg[0-9]{6}$'
-          AND NOT TABLE_NAME REGEXP '^t_almevt[0-9]{6}$'
-          AND NOT TABLE_NAME REGEXP '^t_lgalmtrstrc[0-9]{6}$'
-      ORDER BY TABLE_NAME;
-      ```
+```sql title='Example'
+CREATE SERVER 'default' FOREIGN DATA WRAPPER mysql OPTIONS (HOST '192.168.12.161', PORT 3312, DATABASE 'biostar2_ac', USER 'biostarx_ac_user', PASSWORD 'password');
+  
+ALTER SERVER 'default' OPTIONS (HOST '192.168.12.161', PORT 3312, DATABASE 'biostar2_ac', USER 'biostarx_ac_usermt__fttid__', PASSWORD 'password');
+```
 
-      :::info
+</Step>
+<Step>
 
-      Debido a la naturaleza de FederatedX, se recomienda establecer `Table_type` en 'BASE TABLE'. El `VIEW type` también es posible, pero no recomendado.
+#### Configuración de enlace de tablas
 
-      :::
+Sigue los pasos a continuación para enlazar las tablas necesarias en la base de datos auxiliar con las tablas en la base de datos principal.
 
-    <div className="print--invisible">
-      - Asegúrate de ingresar la sentencia `CREATE` generada por la consulta anterior en la base de datos auxiliar.
+* A continuación se muestra la consulta para generar sentencias `CREATE TABLE` en la base de datos principal.
 
-        <DbQueryCreate />
-    </div>
-  </Step>
+  ```sql
+  select
+    concat(
+        'CREATE TABLE IF NOT EXISTS <SubDB_AC_Database_Schema>.', table_name,
+        ' ENGINE=FEDERATED ',
+        'CONNECTION=''default/', table_name, ''';'
+    ) as create_table_sql
+  from information_schema.TABLES
+  where TABLE_SCHEMA = '<MainDB_AC_Database_Schema>'
+      AND TABLE_TYPE = 'BASE TABLE'
+      AND NOT TABLE_NAME REGEXP '^t_lg[0-9]{6}$'
+      AND NOT TABLE_NAME REGEXP '^t_almevt[0-9]{6}$'
+      AND NOT TABLE_NAME REGEXP '^t_lgalmtrstrc[0-9]{6}$'
+  ORDER BY TABLE_NAME;
+  ```
 
-  <Step>
-    #### Configuración de Service Manager
+  :::info
 
-    1. Ejecuta **BioStar X Service Manager**. (<Start /> → **BioStar X** → **BioStar X Service Manager**)
+  Debido a la naturaleza de FederatedX, se recomienda establecer `Table_type` en 'BASE TABLE'. El `VIEW type` también es posible, pero no recomendado.
 
-    2. Haz clic en el menú <Cmd>DATABASE</Cmd> en la barra lateral izquierda.
+  :::
 
-    3. Haz clic en el botón <Cmd>+ Add Database</Cmd> en la esquina superior derecha de la pantalla.
+<div className="print--invisible">
 
-    4. Ingresa cada elemento en la pantalla de adición de base de datos.
+- Asegúrate de ingresar la sentencia `CREATE` generada por la consulta anterior en la base de datos auxiliar.
 
-       <Image src="/img/common/biostarx-subdb-sm-add-database.png" alone />
+  <DbQueryCreate />
 
-       * <Cmd>Name</Cmd>: Ingresa el nombre de la base de datos.
+</div>
 
-       * <Cmd>Description</Cmd>: Ingresa la descripción de la base de datos.
+</Step>
+<Step>
 
-       * <Cmd>DB Type</Cmd>: Selecciona el tipo de base de datos. (Maria, MS SQL)
+#### Configuración de Service Manager
 
-       * <Cmd>Host</Cmd>: Ingresa el nombre de host o la dirección IP del servidor de bases de datos.
+1. Ejecuta **BioStar X Service Manager**. (<Start /> → **BioStar X** → **BioStar X Service Manager**)
 
-       * <Cmd>Port</Cmd>: Ingresa el número de puerto del servidor de bases de datos.
+2. Haz clic en el menú <Cmd>DATABASE</Cmd> en la barra lateral izquierda.
 
-       * <Cmd>AC</Cmd> / <Cmd>TA</Cmd>: Ingresa el nombre, usuario y contraseña de las bases de datos AC y TA.
+3. Haz clic en el botón <Cmd>+ Add Database</Cmd> en la esquina superior derecha de la pantalla.
 
-    5. Haz clic en el botón <Cmd>Test Connection</Cmd> en la esquina superior derecha para comprobar si la base de datos está correctamente conectada.
+4. Ingresa cada elemento en la pantalla de adición de base de datos.
 
-    6. Haz clic en <Cmd>Save</Cmd> en la parte superior derecha de la pantalla para guardar la configuración.
-  </Step>
+    <Image src="/img/common/biostarx-subdb-sm-add-database.png" alone />
+
+    * <Cmd>Name</Cmd>: Ingresa el nombre de la base de datos.
+
+    * <Cmd>Description</Cmd>: Ingresa la descripción de la base de datos.
+
+    * <Cmd>DB Type</Cmd>: Selecciona el tipo de base de datos. (Maria, MS SQL)
+
+    * <Cmd>Host</Cmd>: Ingresa el nombre de host o la dirección IP del servidor de bases de datos.
+
+    * <Cmd>Port</Cmd>: Ingresa el número de puerto del servidor de bases de datos.
+
+    * <Cmd>AC</Cmd> / <Cmd>TA</Cmd>: Ingresa el nombre, usuario y contraseña de las bases de datos AC y TA.
+
+5. Haz clic en el botón <Cmd>Test Connection</Cmd> en la esquina superior derecha para comprobar si la base de datos está correctamente conectada.
+
+6. Haz clic en <Cmd>Save</Cmd> en la parte superior derecha de la pantalla para guardar la configuración.
+
+</Step>
 </Steps>
 
 ### SQL Server {#sqlserver}
 
 <Steps>
-  <Step>
-    #### Otorgar permisos para la base de datos principal
+<Step>
 
-    Concede los siguientes permisos en la base de datos principal con una cuenta que tenga privilegios de sysadmin.
+#### Otorgar permisos para la base de datos principal
+
+Concede los siguientes permisos en la base de datos principal con una cuenta que tenga privilegios de sysadmin.
+
+```sql
+GRANT ALTER ANY LINKED SERVER TO [<MAIN DATABASE AC USER>];
+GRANT ALTER ANY LOGIN TO [<MAIN DATABASE AC USER>];
+```
+
+```sql title='Example'
+GRANT ALTER ANY LINKED SERVER TO [biostar_x_user];
+GRANT ALTER ANY LOGIN TO [biostar_x_user];
+```
+
+</Step>
+
+<Step>
+
+#### Otorgar permisos para la base de datos auxiliar
+
+1. Conecta User Mapping para las tablas y usuarios en la base de datos auxiliar con una cuenta que tenga privilegios de sysadmin. En este momento, es necesario agregar el rol `db_owner`.
+
+    <Image src="/img/common/biostarx-subdb-user-mapping.png" alone />
+
+2. Otorga los siguientes permisos a la base de datos que se va a agregar.
 
     ```sql
-    GRANT ALTER ANY LINKED SERVER TO [<MAIN DATABASE AC USER>];
-    GRANT ALTER ANY LOGIN TO [<MAIN DATABASE AC USER>];
+    GRANT ALTER ANY LINKED SERVER TO [<SUB DATABASE AC USER>];
+    GRANT ALTER ANY LOGIN TO [<SUB DATABASE AC USER>];
     ```
 
     ```sql title='Example'
-    GRANT ALTER ANY LINKED SERVER TO [biostar_x_user];
-    GRANT ALTER ANY LOGIN TO [biostar_x_user];
-    ```
-  </Step>
-
-  <Step>
-    #### Otorgar permisos para la base de datos auxiliar
-
-    1. Conecta User Mapping para las tablas y usuarios en la base de datos auxiliar con una cuenta que tenga privilegios de sysadmin. En este momento, es necesario agregar el rol `db_owner`.
-
-       <Image src="/img/common/biostarx-subdb-user-mapping.png" alone />
-
-    2. Otorga los siguientes permisos a la base de datos que se va a agregar.
-
-       ```sql
-       GRANT ALTER ANY LINKED SERVER TO [<SUB DATABASE AC USER>];
-       GRANT ALTER ANY LOGIN TO [<SUB DATABASE AC USER>];
-       ```
-
-       ```sql title='Example'
-       GRANT ALTER ANY LINKED SERVER TO [biostar_x_user_sub];
-       GRANT ALTER ANY LOGIN TO [biostar_x_user_sub];
-       ```
-  </Step>
-
-  <Step>
-    #### Configuración de Service Manager
-
-    Usa **BioStar X Service Manager** para agregar la base de datos auxiliar.
-
-    1. Ejecuta **BioStar X Service Manager**. (<Start /> → **BioStar X** → **BioStar X Service Manager**)
-
-    2. Haz clic en el menú <Cmd>DATABASE</Cmd> en la barra lateral izquierda.
-
-    3. Haz clic en el botón <Cmd>+ Add Database</Cmd> en la esquina superior derecha de la pantalla.
-
-    4. Ingresa cada elemento en la pantalla de adición de base de datos.
-
-       <Image src="/img/common/biostarx-subdb-sm-add-database.png" alone />
-
-       * <Cmd>Name</Cmd>: Ingresa el nombre de la base de datos.
-
-       * <Cmd>Description</Cmd>: Ingresa la descripción de la base de datos.
-
-       * <Cmd>DB Type</Cmd>: Selecciona el tipo de base de datos. (Maria, MS SQL)
-
-       * <Cmd>Host</Cmd>: Ingresa el nombre de host o la dirección IP del servidor de bases de datos.
-
-       * <Cmd>Port</Cmd>: Ingresa el número de puerto del servidor de bases de datos.
-
-       * <Cmd>AC</Cmd> / <Cmd>TA</Cmd>: Ingresa el nombre, usuario y contraseña de las bases de datos AC y TA.
-
-    5. Haz clic en el botón <Cmd>Test Connection</Cmd> en la esquina superior derecha para comprobar si la base de datos está correctamente conectada.
-
-    6. Haz clic en <Cmd>Save</Cmd> en la parte superior derecha de la pantalla para guardar la configuración.
-
-    :::info
-
-    * Después de completar la configuración, los ajustes de Linked Server para ambas bases de datos, principal y auxiliar, se aplicarán automáticamente.
-
-    * Incluso al modificar la información de la base de datos, los ajustes de Linked Server se cambiarán automáticamente. Al modificar la base de datos principal, los cambios se reflejarán en los ajustes de Linked Server de todas las bases de datos auxiliares registradas. Cuando se modifique la base de datos auxiliar, solo se reflejarán los cambios correspondientes a la base de datos principal y a esa base de datos auxiliar.
-
-    :::
-  </Step>
-
-  <Step>
-    #### Generar la consulta de Linked Temp Table
-
-    Ejecuta la siguiente consulta en la base de datos principal para generar la consulta de Linked Temp Table que se creará en la base de datos auxiliar.
-
-    ```sql
-    USE [<AC Schema>];
-    GO
-    DECLARE @LinkedServer  sysname = N'default';
-    DECLARE @SourceSchema  sysname = N'dbo';
-    DECLARE @TargetSchema  sysname = N'dbo';
-     
-    SELECT
-        'IF OBJECT_ID(N''' + QUOTENAME(@TargetSchema,'') + '.' + QUOTENAME(t.name,'') + ''', ''SN'') IS NOT NULL '
-      + 'DROP SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name) + ';'
-      + 'CREATE SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name)
-      + ' FOR ' + QUOTENAME(@LinkedServer) + '.' + QUOTENAME(DB_NAME()) + '.' + QUOTENAME(s.name) + '.' + QUOTENAME(t.name) + ';'
-      AS recreate_synonym_sql
-    FROM sys.tables AS t
-    JOIN sys.schemas AS s
-      ON s.schema_id = t.schema_id
-    WHERE s.name = @SourceSchema
-      AND t.is_ms_shipped = 0
-      AND t.name NOT LIKE 't_lg[0-9][0-9][0-9][0-9][0-9][0-9]'
-      AND t.name NOT LIKE 't_almevt[0-9][0-9][0-9][0-9][0-9][0-9]'
-      AND t.name NOT LIKE 't_lgalmtrstrc[0-9][0-9][0-9][0-9][0-9][0-9]'
-    ORDER BY t.name;
+    GRANT ALTER ANY LINKED SERVER TO [biostar_x_user_sub];
+    GRANT ALTER ANY LOGIN TO [biostar_x_user_sub];
     ```
 
-    ```sql title='Example'
-    -- Example
-    USE [main_ac_x_215];
-    GO
-    DECLARE @LinkedServer  sysname = N'default';  -- Linked Server name set in the sub DB
-    DECLARE @SourceSchema  sysname = N'dbo';      -- Schema to target in the main DB
-    DECLARE @TargetSchema  sysname = N'dbo';      -- Schema to create synonyms in the sub DB (reflected in the output string)
+</Step>
 
-    SELECT
-        'IF OBJECT_ID(N''' + QUOTENAME(@TargetSchema,'') + '.' + QUOTENAME(t.name,'') + ''', ''SN'') IS NOT NULL '
-      + 'DROP SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name) + ';'
-      + 'CREATE SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name)
-      + ' FOR ' + QUOTENAME(@LinkedServer) + '.' + QUOTENAME(DB_NAME()) + '.' + QUOTENAME(s.name) + '.' + QUOTENAME(t.name) + ';'
-      AS recreate_synonym_sql
-    FROM sys.tables AS t
-    JOIN sys.schemas AS s
-      ON s.schema_id = t.schema_id
-    WHERE s.name = @SourceSchema
-      AND t.is_ms_shipped = 0
-      AND t.name NOT LIKE 't_lg[0-9][0-9][0-9][0-9][0-9][0-9]'
-      AND t.name NOT LIKE 't_almevt[0-9][0-9][0-9][0-9][0-9][0-9]'
-      AND t.name NOT LIKE 't_lgalmtrstrc[0-9][0-9][0-9][0-9][0-9][0-9]'
-    ORDER BY t.name;
-    ```
+<Step>
 
-    <div className="print--invisible">
-      :::info
+#### Configuración de Service Manager
 
-      Este es un ejemplo de una instrucción `CREATE` generada por la consulta anterior.
+Usa **BioStar X Service Manager** para agregar la base de datos auxiliar.
 
-      <DbQueryCreateSQL />
+1. Ejecuta **BioStar X Service Manager**. (<Start /> → **BioStar X** → **BioStar X Service Manager**)
 
-      :::
-    </div>
-  </Step>
+2. Haz clic en el menú <Cmd>DATABASE</Cmd> en la barra lateral izquierda.
 
-  <Step>
-    #### Ejecutar la consulta en la base de datos auxiliar.
+3. Haz clic en el botón <Cmd>+ Add Database</Cmd> en la esquina superior derecha de la pantalla.
 
-    Copia por completo la consulta `CREATE SYNONYM` generada previamente. Conéctate al servidor de base de datos auxiliar que se va a agregar, escribe la consulta como se muestra a continuación y ejecútala. Se almacenará en Synonyms del esquema AC de la base de datos auxiliar.
+4. Ingresa cada elemento en la pantalla de adición de base de datos.
 
-    ```sql
-    use [<Sub DB AC Database>];
+    <Image src="/img/common/biostarx-subdb-sm-add-database.png" alone />
 
-    IF OBJECT_ID(N'[dbo].[T_ACSGR]', 'SN') IS NOT NULL DROP SYNONYM [dbo].[T_ACSGR];CREATE SYNONYM [dbo].[T_ACSGR] FOR [default].[main_ac_x_215].[dbo].[T_ACSGR];
-    IF OBJECT_ID(N'[dbo].[T_ACSGRLVLS]', 'SN') IS NOT NULL DROP SYNONYM [dbo].[T_ACSGRLVLS];CREATE SYNONYM [dbo].[T_ACSGRLVLS] FOR [default].[main_ac_x_215].[dbo].[T_ACSGRLVLS];
-    IF OBJECT_ID(N'[dbo].[T_ACSGRSENT]', 'SN') IS NOT NULL DROP SYNONYM [dbo].[T_ACSGRSENT];CREATE SYNONYM [dbo].[T_ACSGRSENT] FOR [default].[main_ac_x_215].[dbo].[T_ACSGRSENT];
-    IF OBJECT_ID(N'[dbo].[T_ACSGRUSS]', 'SN') IS NOT NULL DROP SYNONYM [dbo].[T_ACSGRUSS];CREATE SYNONYM [dbo].[T_ACSGRUSS] FOR [default].[main_ac_x_215].[dbo].[T_ACSGRUSS];
-    ...
-    ```
-  </Step>
+    * <Cmd>Name</Cmd>: Ingresa el nombre de la base de datos.
+
+    * <Cmd>Description</Cmd>: Ingresa la descripción de la base de datos.
+
+    * <Cmd>DB Type</Cmd>: Selecciona el tipo de base de datos. (Maria, MS SQL)
+
+    * <Cmd>Host</Cmd>: Ingresa el nombre de host o la dirección IP del servidor de bases de datos.
+
+    * <Cmd>Port</Cmd>: Ingresa el número de puerto del servidor de bases de datos.
+
+    * <Cmd>AC</Cmd> / <Cmd>TA</Cmd>: Ingresa el nombre, usuario y contraseña de las bases de datos AC y TA.
+
+5. Haz clic en el botón <Cmd>Test Connection</Cmd> en la esquina superior derecha para comprobar si la base de datos está correctamente conectada.
+
+6. Haz clic en <Cmd>Save</Cmd> en la parte superior derecha de la pantalla para guardar la configuración.
+
+:::info
+
+* Después de completar la configuración, los ajustes de Linked Server para ambas bases de datos, principal y auxiliar, se aplicarán automáticamente.
+
+* Incluso al modificar la información de la base de datos, los ajustes de Linked Server se cambiarán automáticamente. Al modificar la base de datos principal, los cambios se reflejarán en los ajustes de Linked Server de todas las bases de datos auxiliares registradas. Cuando se modifique la base de datos auxiliar, solo se reflejarán los cambios correspondientes a la base de datos principal y a esa base de datos auxiliar.
+
+:::
+
+</Step>
+
+<Step>
+
+#### Generar la consulta de Linked Temp Table
+
+Ejecuta la siguiente consulta en la base de datos principal para generar la consulta de Linked Temp Table que se creará en la base de datos auxiliar.
+
+```sql
+USE [<AC Schema>];
+GO
+DECLARE @LinkedServer  sysname = N'default';
+DECLARE @SourceSchema  sysname = N'dbo';
+DECLARE @TargetSchema  sysname = N'dbo';
+  
+SELECT
+    'IF OBJECT_ID(N''' + QUOTENAME(@TargetSchema,'') + '.' + QUOTENAME(t.name,'') + ''', ''SN'') IS NOT NULL '
+  + 'DROP SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name) + ';'
+  + 'CREATE SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name)
+  + ' FOR ' + QUOTENAME(@LinkedServer) + '.' + QUOTENAME(DB_NAME()) + '.' + QUOTENAME(s.name) + '.' + QUOTENAME(t.name) + ';'
+  AS recreate_synonym_sql
+FROM sys.tables AS t
+JOIN sys.schemas AS s
+  ON s.schema_id = t.schema_id
+WHERE s.name = @SourceSchema
+  AND t.is_ms_shipped = 0
+  AND t.name NOT LIKE 't_lg[0-9][0-9][0-9][0-9][0-9][0-9]'
+  AND t.name NOT LIKE 't_almevt[0-9][0-9][0-9][0-9][0-9][0-9]'
+  AND t.name NOT LIKE 't_lgalmtrstrc[0-9][0-9][0-9][0-9][0-9][0-9]'
+ORDER BY t.name;
+```
+
+```sql title='Example'
+-- Example
+USE [main_ac_x_215];
+GO
+DECLARE @LinkedServer  sysname = N'default';  -- Linked Server name set in the sub DB
+DECLARE @SourceSchema  sysname = N'dbo';      -- Schema to target in the main DB
+DECLARE @TargetSchema  sysname = N'dbo';      -- Schema to create synonyms in the sub DB (reflected in the output string)
+
+SELECT
+    'IF OBJECT_ID(N''' + QUOTENAME(@TargetSchema,'') + '.' + QUOTENAME(t.name,'') + ''', ''SN'') IS NOT NULL '
+  + 'DROP SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name) + ';'
+  + 'CREATE SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name)
+  + ' FOR ' + QUOTENAME(@LinkedServer) + '.' + QUOTENAME(DB_NAME()) + '.' + QUOTENAME(s.name) + '.' + QUOTENAME(t.name) + ';'
+  AS recreate_synonym_sql
+FROM sys.tables AS t
+JOIN sys.schemas AS s
+  ON s.schema_id = t.schema_id
+WHERE s.name = @SourceSchema
+  AND t.is_ms_shipped = 0
+  AND t.name NOT LIKE 't_lg[0-9][0-9][0-9][0-9][0-9][0-9]'
+  AND t.name NOT LIKE 't_almevt[0-9][0-9][0-9][0-9][0-9][0-9]'
+  AND t.name NOT LIKE 't_lgalmtrstrc[0-9][0-9][0-9][0-9][0-9][0-9]'
+ORDER BY t.name;
+```
+
+<div className="print--invisible">
+
+:::info
+
+Este es un ejemplo de una instrucción `CREATE` generada por la consulta anterior.
+
+<DbQueryCreateSQL />
+
+:::
+
+</div>
+
+</Step>
+
+<Step>
+
+#### Ejecutar la consulta en la base de datos auxiliar.
+
+Copia por completo la consulta `CREATE SYNONYM` generada previamente. Conéctate al servidor de base de datos auxiliar que se va a agregar, escribe la consulta como se muestra a continuación y ejecútala. Se almacenará en Synonyms del esquema AC de la base de datos auxiliar.
+
+```sql
+use [<Sub DB AC Database>];
+
+IF OBJECT_ID(N'[dbo].[T_ACSGR]', 'SN') IS NOT NULL DROP SYNONYM [dbo].[T_ACSGR];CREATE SYNONYM [dbo].[T_ACSGR] FOR [default].[main_ac_x_215].[dbo].[T_ACSGR];
+IF OBJECT_ID(N'[dbo].[T_ACSGRLVLS]', 'SN') IS NOT NULL DROP SYNONYM [dbo].[T_ACSGRLVLS];CREATE SYNONYM [dbo].[T_ACSGRLVLS] FOR [default].[main_ac_x_215].[dbo].[T_ACSGRLVLS];
+IF OBJECT_ID(N'[dbo].[T_ACSGRSENT]', 'SN') IS NOT NULL DROP SYNONYM [dbo].[T_ACSGRSENT];CREATE SYNONYM [dbo].[T_ACSGRSENT] FOR [default].[main_ac_x_215].[dbo].[T_ACSGRSENT];
+IF OBJECT_ID(N'[dbo].[T_ACSGRUSS]', 'SN') IS NOT NULL DROP SYNONYM [dbo].[T_ACSGRUSS];CREATE SYNONYM [dbo].[T_ACSGRUSS] FOR [default].[main_ac_x_215].[dbo].[T_ACSGRUSS];
+...
+```
+
+</Step>
 </Steps>

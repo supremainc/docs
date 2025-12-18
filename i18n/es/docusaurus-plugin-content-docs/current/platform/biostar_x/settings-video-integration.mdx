@@ -38,115 +38,127 @@ Antes de integrar el **Sistema de Gestión de Video** (VMS), verifica lo siguien
 Sigue los pasos a continuación para integrar el servidor VMS con **BioStar X**.
 
 <Steps>
-  <Step>
-    ### Instalar el certificado en el servidor VMS {#install-vms-certification}
+<Step>
 
-    Para reproducir video grabado desde el servidor VMS, se debe usar el protocolo HTTPS. Genera un certificado basado en dirección IP en el servidor VMS.
+### Instalar el certificado en el servidor VMS {#install-vms-certification}
 
-    :::note
+Para reproducir video grabado desde el servidor VMS, se debe usar el protocolo HTTPS. Genera un certificado basado en dirección IP en el servidor VMS.
 
-    * Antes de instalar el certificado, asegúrate de que Open JDK 21 o superior esté instalado en el PC donde se encuentra instalado el VMS.
+:::note
 
-    * Si instalas el servidor VMS y **BioStar X** en el mismo servidor, debes instalar un certificado.
+* Antes de instalar el certificado, asegúrate de que Open JDK 21 o superior esté instalado en el PC donde se encuentra instalado el VMS.
 
-    :::
+* Si instalas el servidor VMS y **BioStar X** en el mismo servidor, debes instalar un certificado.
 
-    1. Ve a la ruta *C:\Program Files\BioStar X\third* y ejecuta la consola de comandos.
+:::
 
-    2. Ejecuta el siguiente comando.
+1. Ve a la ruta *C:\Program Files\BioStar X\third* y ejecuta la consola de comandos.
 
-       <Tabs groupId="os" defaultValue="Windows">
-         <TabItem value="Windows">
-           ```java
-           java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate "C:\Windows\System32\config\systemprofile\AppData\Local\<%VENDOR.NAME%>\<%VENDOR.NAME%> Media Server\ssl" {VMS_IP_ADDRESS}
-           ```
-         </TabItem>
+2. Ejecuta el siguiente comando.
 
-         <TabItem value="Linux">
-           ```java
-           java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate "/opt/<%VENDOR.NAME%>/mediaserver/var/ssl" {VMS_IP_ADDRESS}
-           ```
-         </TabItem>
-       </Tabs>
+    <Tabs groupId="os" defaultValue="Windows">
+    <TabItem value="Windows">
 
-       * Ingresa la ruta donde está instalado el VMS en la sección `<%VENDOR.NAME%>`.
+    ```java
+    java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate "C:\Windows\System32\config\systemprofile\AppData\Local\<%VENDOR.NAME%>\<%VENDOR.NAME%> Media Server\ssl" {VMS_IP_ADDRESS}
+    ```
+    
+    </TabItem>
 
-       * Ingresa la dirección IP del servidor VMS en la sección `{VMS_IP_ADDRESS}`.
+    <TabItem value="Linux">
+    
+    ```java
+    java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate "/opt/<%VENDOR.NAME%>/mediaserver/var/ssl" {VMS_IP_ADDRESS}
+    ```
+    
+    </TabItem>
+    </Tabs>
 
-       * La ruta *ssl* puede variar según el producto VMS instalado.
+    * Ingresa la ruta donde está instalado el VMS en la sección `<%VENDOR.NAME%>`.
 
-    3. Verifica si el archivo de certificado (*.pem*) se creó en la ruta donde está instalado el VMS.
+    * Ingresa la dirección IP del servidor VMS en la sección `{VMS_IP_ADDRESS}`.
 
-    4. Reinicia el servidor VMS.
+    * La ruta *ssl* puede variar según el producto VMS instalado.
 
-    :::info
+3. Verifica si el archivo de certificado (*.pem*) se creó en la ruta donde está instalado el VMS.
 
-    Si el VMS está instalado en un servidor diferente de **BioStar X**, copia el archivo *scaleUtil-1.0-all.jar* al servidor VMS y sigue los pasos anteriores.
+4. Reinicia el servidor VMS.
 
-    :::
-  </Step>
+:::info
 
-  <Step>
-    ### Activar la integración de VMS
+Si el VMS está instalado en un servidor diferente de **BioStar X**, copia el archivo *scaleUtil-1.0-all.jar* al servidor VMS y sigue los pasos anteriores.
 
-    1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+:::
 
-    2. En la barra lateral izquierda, haz clic en <Cmd sid="setting.menu.video.root" /> → <Cmd sid="setting.menu.video.vmsIntegration" />.
+</Step>
 
-    3. Si es la primera vez que accedes, inicia sesión con la cuenta de administrador de **BioStar X**.
+<Step>
 
-       <Image src="/img/biostarx-settings-video-integration-login.png" />
+### Activar la integración de VMS
 
-    4. Establece la opción <Cmd sid="video.setting.integration.title" product="2" /> en <Cmd sid="common.use" product="2" />.
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
 
-       <Image src="/img/biostarx-settings-video-integration.png" />
+2. En la barra lateral izquierda, haz clic en <Cmd sid="setting.menu.video.root" /> → <Cmd sid="setting.menu.video.vmsIntegration" />.
 
-    5. Ingresa la información del servidor VMS.
+3. Si es la primera vez que accedes, inicia sesión con la cuenta de administrador de **BioStar X**.
 
-       * <Cmd sid="video.setting.integration.serverAddress" product="2" />: Ingresa la dirección IP del servidor VMS.
+    <Image src="/img/biostarx-settings-video-integration-login.png" />
 
-       * <Cmd sid="video.setting.integration.port" product="2" />: Ingresa el número de puerto del servidor VMS.
+4. Establece la opción <Cmd sid="video.setting.integration.title" product="2" /> en <Cmd sid="common.use" product="2" />.
 
-       * <Cmd sid="video.setting.integration.loginId" product="2" />: Ingresa el ID de la cuenta de administrador del servidor VMS.
+    <Image src="/img/biostarx-settings-video-integration.png" />
 
-       * <Cmd sid="video.setting.integration.password" product="2" />: Ingresa la contraseña de la cuenta de administrador del servidor VMS.
+5. Ingresa la información del servidor VMS.
 
-    6. Después de ingresar toda la información del servidor VMS, haz clic en el botón <Cmd sid="button.apply" product="2" /> en la parte inferior derecha de la pantalla.
+    * <Cmd sid="video.setting.integration.serverAddress" product="2" />: Ingresa la dirección IP del servidor VMS.
 
-    :::info
+    * <Cmd sid="video.setting.integration.port" product="2" />: Ingresa el número de puerto del servidor VMS.
 
-    * Si la integración con el servidor VMS falla y aparece un mensaje de error, verifica nuevamente la dirección del servidor y la información de la cuenta de administrador. También es necesario comprobar si el servidor VMS está en línea y si las conexiones de red están bloqueadas por la configuración del firewall.
+    * <Cmd sid="video.setting.integration.loginId" product="2" />: Ingresa el ID de la cuenta de administrador del servidor VMS.
 
-    * Para obtener más información sobre la configuración en la sección <Cmd sid="video.setting.tag.title" product="2" />, consulta [lo siguiente](#vms-event-bookmark).
+    * <Cmd sid="video.setting.integration.password" product="2" />: Ingresa la contraseña de la cuenta de administrador del servidor VMS.
 
-    :::
-  </Step>
+6. Después de ingresar toda la información del servidor VMS, haz clic en el botón <Cmd sid="button.apply" product="2" /> en la parte inferior derecha de la pantalla.
 
-  <Step>
-    ### Reiniciar el servicio
+:::info
 
-    La primera vez que integres con el servidor VMS, **BioStar X** reiniciará automáticamente el servicio. Si no se reinicia automáticamente, sigue las instrucciones a continuación para reiniciar el servicio manualmente.
+* Si la integración con el servidor VMS falla y aparece un mensaje de error, verifica nuevamente la dirección del servidor y la información de la cuenta de administrador. También es necesario comprobar si el servidor VMS está en línea y si las conexiones de red están bloqueadas por la configuración del firewall.
 
-    1. Haz clic en <Start /> → **BioStar X** → **BioStar X Service Manager** en Windows.
+* Para obtener más información sobre la configuración en la sección <Cmd sid="video.setting.tag.title" product="2" />, consulta [lo siguiente](#vms-event-bookmark).
 
-    2. En la lista **All Services**, haz clic en el botón **Stop** de los siguientes servicios para detenerlos.
+:::
 
-       <Image src="/img/common/biostarx-sm-restart-service-video.png" alone />
+</Step>
 
-       * **BioStar X Unified Gateway Service**
+<Step>
 
-       * **BioStar X Core Web Service**
+### Reiniciar el servicio
 
-    3. Cuando el estado del servicio solicitado cambie de **Pending** a **Stopped**, haz clic en el botón **Start** para reiniciar el servicio.
+La primera vez que integres con el servidor VMS, **BioStar X** reiniciará automáticamente el servicio. Si no se reinicia automáticamente, sigue las instrucciones a continuación para reiniciar el servicio manualmente.
 
-       <Image src="/img/common/biostarx-sm-restart-service-video-start.png" alone />
-  </Step>
+1. Haz clic en <Start /> → **BioStar X** → **BioStar X Service Manager** en Windows.
 
-  <Step>
-    ### Comprobar y configurar cámaras
+2. En la lista **All Services**, haz clic en el botón **Stop** de los siguientes servicios para detenerlos.
 
-    Si el servidor VMS se integra correctamente, verifica las cámaras conectadas en el menú <Cmd sid="setting.menu.video.root" /> → <Cmd sid="setting.menu.video.video" />. Para más información, consulta [lo siguiente](settings-videos-camera).
-  </Step>
+    <Image src="/img/common/biostarx-sm-restart-service-video.png" alone />
+
+    * **BioStar X Unified Gateway Service**
+
+    * **BioStar X Core Web Service**
+
+3. Cuando el estado del servicio solicitado cambie de **Pending** a **Stopped**, haz clic en el botón **Start** para reiniciar el servicio.
+
+    <Image src="/img/common/biostarx-sm-restart-service-video-start.png" alone />
+
+</Step>
+
+<Step>
+
+### Comprobar y configurar cámaras
+
+Si el servidor VMS se integra correctamente, verifica las cámaras conectadas en el menú <Cmd sid="setting.menu.video.root" /> → <Cmd sid="setting.menu.video.video" />. Para más información, consulta [lo siguiente](settings-videos-camera).
+
+</Step>
 </Steps>
 
 ### Solución de problemas {#video-troubleshooting}
