@@ -34,7 +34,7 @@
         "memory": {
           "label": "메모리",
           "label_id": "specs.general.memory",
-          "value": "16 MB RAM + 16 MB Flash"
+          "value": "16 MB Flash + 16 MB RAM"
         },
         "led_type": {
           "label": "LED",

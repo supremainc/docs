@@ -12,7 +12,12 @@
         "cpu": {
           "label": "CPU",
           "label_id": "specs.general.cpu",
-          "value": "1.2 GHz Single Core"
+          "value": {
+            "ko": "1.2 GHz Single Core",
+            "en": "1.2 GHz Single Core",
+            "es": "1.2 GHz de un núcleo",
+            "ja": "1.2 GHz 1 コア"
+          }
         },
         "memory": {
           "label": "메모리",
@@ -41,7 +46,12 @@
         "operating_temp": {
           "label": "동작 온도",
           "label_id": "specs.general.operating_temp",
-          "value": "0 °C ~ 50 °C"
+          "value": {
+            "ko": "0 °C ~ 50 °C",
+            "en": "0 °C ~ 50 °C",
+            "es": "De 0 °C a 50 °C",
+            "ja": "0 °C ~ 50 °C"
+          }
         },
         "storage_temp": {
           "label": "보관 온도",
@@ -68,13 +78,20 @@
           "label_id": "specs.general.storage_humidity",
           "value": {
             "ko": "0 % ~ 95 %, 비응축",
-            "en": "0 % ~ 95 %, non-condensing"
+            "en": "0 % ~ 95 %, non-condensing",
+            "es": "Del 0 % al 95 %, sin condensación",
+            "ja": "0 % ~ 95 %（結露なきこと）"
           }
         },
         "operating_condition": {
           "label": "동작 환경 조건",
           "label_id": "specs.general.operating_condition",
-          "value": "0 °C ~ 49 °C"
+          "value": {
+            "ko": "0 °C ~ 49 °C",
+            "en": "0 °C ~ 49 °C",
+            "es": "De 0 °C a 49 °C",
+            "ja": "0 °C ~ 49 °C"
+          }
         },
         "certifications": {
           "label": "인증",
@@ -103,7 +120,9 @@
           "label_id": "specs.interface.rs485",
           "value": {
             "ko": "3채널",
-            "en": "3 ch"
+            "en": "3 ch",
+            "es": "3 canales",
+            "ja": "3 チャンネル"
           }
         },
         "rs485_protocol": {
@@ -121,7 +140,9 @@
           "label_id": "specs.interface.wiegand",
           "value": {
             "ko": "2채널",
-            "en": "2 ch"
+            "en": "2 ch",
+            "es": "2 canales",
+            "ja": "2 チャンネル"
           }
         },
         "relay": {
@@ -137,7 +158,9 @@
           "label_id": "specs.interface.input",
           "value": {
             "ko": "6채널",
-            "en": "6 ch"
+            "en": "6 ch",
+            "es": "6 canales",
+            "ja": "6 チャンネル"
           },
           "annotation_value": "anno1"
         },
@@ -146,7 +169,9 @@
           "label_id": "specs.interface.output",
           "value": {
             "ko": "6채널",
-            "en": "6 ch"
+            "en": "6 ch",
+            "es": "6 canales",
+            "ja": "6 チャンネル"
           }
         },
         "supervised": {

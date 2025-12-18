@@ -125,12 +125,7 @@
         "memory": {
           "label": "메모리",
           "label_id": "specs.general.memory",
-          "value": {
-            "ko": "8 GB Flash + 64 MB RAM",
-            "en": "8 GB Flash + 64 MB RAM",
-            "es": "Memoria flash de 8 GB + 64MB de RAM",
-            "ja": "8 GB Flash + 64 MB RAM"
-          }
+          "value": "8 GB Flash + 64 MB RAM"
         },
         "crypto_chip": {
           "label": "크립토 칩",

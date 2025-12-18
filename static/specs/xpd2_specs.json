@@ -91,7 +91,9 @@
           "label_id": "specs.general.operating_humidity",
           "value": {
             "ko": "0 % ~ 95 %, 비응축",
-            "en": "0 % ~ 95 %, non-condensing"
+            "en": "0 % ~ 95 %, non-condensing",
+            "es": "Del 0 % al 95 %, sin condensación",
+            "ja": "0 % ~ 95 %（結露なきこと）"
           }
         },
         "storage_humidity": {
@@ -99,7 +101,9 @@
           "label_id": "specs.general.storage_humidity",
           "value": {
             "ko": "0 % ~ 95 %, 비응축",
-            "en": "0 % ~ 95 %, non-condensing"
+            "en": "0 % ~ 95 %, non-condensing",
+            "es": "Del 0 % al 95 %, sin condensación",
+            "ja": "0 % ~ 95 %（結露なきこと）"
           }
         },
         "ip_rating": {
@@ -150,7 +154,9 @@
           "label_id": "specs.interface.wiegand",
           "value": {
             "ko": "1채널",
-            "en": "1 ch"
+            "en": "1 ch",
+            "es": "1 canal",
+            "ja": "1 チャンネル"
           }
         },
         "led": {
@@ -158,7 +164,9 @@
           "label_id": "specs.interface.led",
           "value": {
             "ko": "2채널",
-            "en": "2 ch"
+            "en": "2 ch",
+            "es": "2 canales",
+            "ja": "2 チャンネル"
           }
         },
         "beep": {
@@ -166,7 +174,9 @@
           "label_id": "specs.interface.beep",
           "value": {
             "ko": "1채널",
-            "en": "1 ch"
+            "en": "1 ch",
+            "es": "1 canal",
+            "ja": "1 チャンネル"
           }
         },
         "tamper": {

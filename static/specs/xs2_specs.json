@@ -146,7 +146,12 @@
         "cpu": {
           "label": "CPU",
           "label_id": "specs.general.cpu",
-          "value": "1.5 GHz Quad Core"
+          "value": {
+            "ko": "1.5 GHz Quad Core",
+            "en": "1.5 GHz Quad Core",
+            "es": "1.5 GHz Quad Core",
+            "ja": "1.5 GHz クアッドコア"
+          }
         },
         "memory": {
           "label": "메모리",
@@ -278,8 +283,10 @@
             "model1": {
               "label": "XS2-ODPB, XS2-OAPB",
               "value": {
-                "ko": "지문: 100,000",
-                "en": "Fingerprint: 100,000"
+               "ko": "지문: 100,000",
+               "en": "Fingerprint: 100,000",
+               "es": "Huella dactilar: 100,000",
+               "ja": "指紋：100,000"
               }
             }
           }
@@ -420,7 +427,9 @@
           "label_id": "specs.interface.poe",
           "value": {
             "ko": "지원 (IEEE 802.3af 호환)",
-            "en": "Supported (IEEE 802.3af compliant)"
+            "en": "Supported (IEEE 802.3af compliant)",
+            "es": "Compatible (compatible con IEEE 802.3af)",
+            "ja": "対応（IEEE 802.3af 互換）"
           }
         },
         "tamper": {

@@ -124,21 +124,16 @@
           "label": "CPU",
           "label_id": "specs.general.cpu",
           "value": {
-            "ko": "1.5GHz Quad Core",
-            "en": "1.5GHz Quad Core",
-            "es": "1.5GHz Quad Core",
-            "ja": "1.5 GHz 4 コア"
+            "ko": "1.5 GHz Quad Core",
+            "en": "1.5 GHz Quad Core",
+            "es": "1.5 GHz Quad Core",
+            "ja": "1.5 GHz クアッドコア"
           }
         },
         "memory": {
           "label": "메모리",
           "label_id": "specs.general.memory",
-          "value": {
-            "ko": "32 GB Flash + 4 GB RAM",
-            "en": "32 GB Flash + 4 GB RAM",
-            "es": "Memoria flash de 32 GB + RAM de 4 GB",
-            "ja": "32 GB Flash + 4 GB RAM"
-          }
+          "value": "32 GB Flash + 4 GB RAM"
         },
         "crypto_chip": {
           "label": "크립토 칩",

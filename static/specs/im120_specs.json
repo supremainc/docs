@@ -55,7 +55,12 @@
         "operating_temp": {
           "label": "동작 온도",
           "label_id": "specs.general.operating_temp",
-          "value": "-20 °C ~ 60 °C"
+          "value": {
+            "ko": "-20 °C ~ 60 °C",
+            "en": "-20 °C ~ 60 °C",
+            "es": "De -20 °C a 60 °C",
+            "ja": "-20 °C ~ 60 °C"
+          }
         },
         "storage_temp": {
           "label": "보관 온도",
@@ -72,7 +77,9 @@
           "label_id": "specs.general.operating_humidity",
           "value": {
             "ko": "0 % ~ 95 %, 비응축",
-            "en": "0 % ~ 95 %, non-condensing"
+            "en": "0 % ~ 95 %, non-condensing",
+            "es": "Del 0 % al 95 %, sin condensación",
+            "ja": "0 % ~ 95 %（結露なきこと）"
           }
         },
         "storage_humidity": {
@@ -80,7 +87,9 @@
           "label_id": "specs.general.storage_humidity",
           "value": {
             "ko": "0 % ~ 95 %, 비응축",
-            "en": "0 % ~ 95 %, non-condensing"
+            "en": "0 % ~ 95 %, non-condensing",
+            "es": "Del 0 % al 95 %, sin condensación",
+            "ja": "0 % ~ 95 %（結露なきこと）"
           }
         },
         "certifications": {
@@ -114,7 +123,9 @@
           "label_id": "specs.interface.input",
           "value": {
             "ko": "12채널",
-            "en": "12 ch"
+            "en": "12 ch",
+            "es": "12 canales",
+            "ja": "12 チャンネル"
           },
           "annotation_value": "anno2"
         },
@@ -131,7 +142,9 @@
           "label_id": "specs.interface.rs485",
           "value": {
             "ko": "1채널",
-            "en": "1 ch"
+            "en": "1 ch",
+            "es": "1 canal",
+            "ja": "1 チャンネル"
           }
         },
         "rs485_protocol": {
@@ -165,7 +178,9 @@
           "label_id": "specs.interface.tamper",
           "value": {
             "ko": "1채널",
-            "en": "1 ch"
+            "en": "1 ch",
+            "es": "1 canal",
+            "ja": "1 チャンネル"
           }
         }
       }

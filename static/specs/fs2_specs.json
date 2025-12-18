@@ -85,7 +85,12 @@
         "cpu": {
           "label": "CPU",
           "label_id": "specs.general.cpu",
-          "value": "1.4 GHz Quad Core"
+          "value": {
+            "ko": "1.4 GHz Quad Core",
+            "en": "1.4 GHz Quad Core",
+            "es": "1.4 GHz Quad Core",
+            "ja": "1.4 GHz クアッドコア"
+          }
         },
         "memory": {
           "label": "메모리",

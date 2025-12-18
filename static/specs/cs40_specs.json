@@ -59,7 +59,12 @@
         "operating_temp": {
           "label": "동작 온도",
           "label_id": "specs.general.operating_temp",
-          "value": "0 °C ~ 50 °C"
+          "value": {
+            "ko": "0 °C ~ 50 °C",
+            "en": "0 °C ~ 50 °C",
+            "es": "De 0 °C a 50 °C",
+            "ja": "0 °C ~ 50 °C"
+          }
         },
         "storage_temp": {
           "label": "보관 온도",
@@ -86,13 +91,20 @@
           "label_id": "specs.general.storage_humidity",
           "value": {
             "ko": "0 % ~ 95 %, 비응축",
-            "en": "0 % ~ 95 %, non-condensing"
+            "en": "0 % ~ 95 %, non-condensing",
+            "es": "Del 0 % al 95 %, sin condensación",
+            "ja": "0 % ~ 95 %（結露なきこと）"
           }
         },
         "operating_condition": {
           "label": "동작 환경 조건",
           "label_id": "specs.general.operating_condition",
-          "value": "0 °C ~ 49 °C"
+          "value": {
+            "ko": "0 °C ~ 49 °C",
+            "en": "0 °C ~ 49 °C",
+            "es": "De 0 °C a 49 °C",
+            "ja": "0 °C ~ 49 °C"
+          }
         },
         "certifications": {
           "label": "인증",
@@ -172,7 +184,9 @@
           "label_id": "specs.interface.rs485",
           "value": {
             "ko": "5채널",
-            "en": "5 ch"
+            "en": "5 ch",
+            "es": "5 canales",
+            "ja": "5 チャンネル"
           }
         },
         "rs485_protocol": {
@@ -190,7 +204,9 @@
           "label_id": "specs.interface.wiegand",
           "value": {
             "ko": "4채널",
-            "en": "4 ch"
+            "en": "4 ch",
+            "es": "4 canales",
+            "ja": "4 チャンネル"
           }
         },
         "relay": {
@@ -206,7 +222,9 @@
           "label_id": "specs.interface.input",
           "value": {
             "ko": "8채널",
-            "en": "8 ch"
+            "en": "8 ch",
+            "es": "8 canales",
+            "ja": "8 チャンネル"
           },
           "annotation_value": "anno3"
         },
@@ -215,7 +233,9 @@
           "label_id": "specs.interface.output",
           "value": {
             "ko": "8채널",
-            "en": "8 ch"
+            "en": "8 ch",
+            "es": "8 canales",
+            "ja": "8 チャンネル"
           }
         },
         "supervised": {

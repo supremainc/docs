@@ -84,7 +84,12 @@
         "rf_distance": {
           "label": "RF 인식 거리",
           "label_id": "specs.credentials.rf_distance",
-          "value": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+          "value": {
+            "ko": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+            "en": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+            "es": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+            "ja": "EM/MIFARE/DESFire/HID iCLASS：50 mm、HID Prox/FeliCa：30 mm"
+          },
           "annotation_label": "anno3"
         },
         "mobile": {
@@ -106,7 +111,12 @@
         "cpu": {
           "label": "CPU",
           "label_id": "specs.general.cpu",
-          "value": "1.5 GHz Quad Core"
+          "value": {
+            "ko": "1.5 GHz Quad Core",
+            "en": "1.5 GHz Quad Core",
+            "es": "1.5 GHz Quad Core",
+            "ja": "1.5 GHz クアッドコア"
+          }
         },
         "memory": {
           "label": "메모리",
@@ -121,7 +131,12 @@
         "lcd_type": {
           "label": "디스플레이",
           "label_id": "specs.general.lcd_type",
-          "value": "1.3\" PMOLED"
+          "value": {
+            "ko": "1.3\" PMOLED",
+            "en": "1.3\" PMOLED",
+            "es": "PMOLED DE 1.3\"",
+            "ja": "1.3 インチ PMOLED"
+          }
         },
         "led_type": {
           "label": "LED",
@@ -203,7 +218,12 @@
         "certifications": {
           "label": "인증",
           "label_id": "specs.general.certifications",
-          "value": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE, EAC, TELEC"
+          "value": {
+            "ko": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE, EAC, TELEC",
+            "en": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE, EAC, TELEC",
+            "es": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE, EAC, TELEC",
+            "ja": "CE、UKCA、KC、FCC、IC、RCM、BIS、ANATEL、SIG、RoHS、REACH、WEEE、EAC、TELEC"
+          }
         }
       }
     },
@@ -222,7 +242,9 @@
           "label_id": "specs.storage.max_credentials_1n",
           "value": {
             "ko": ["얼굴: 30,000", "카드: 100,000"],
-            "en": ["Face: 30,000", "Card: 100,000"]
+            "en": ["Face: 30,000", "Card: 100,000"],
+            "es": ["Rostro: 30,000", "Tarjeta: 100,000"],
+            "ja": ["顔：30,000", "カード：100,000"]
           }
         },
         "max_credentials_1on1": {
@@ -230,7 +252,9 @@
           "label_id": "specs.storage.max_credentials_1on1",
           "value": {
             "ko": [ "얼굴: 30,000", "카드: 100,000" ],
-            "en": [ "Face: 30,000", "Card: 100,000" ]
+            "en": [ "Face: 30,000", "Card: 100,000" ],
+            "es": [ "Rostro: 30,000", "Tarjeta: 100,000" ],
+            "ja": [ "顔：30,000", "カード：100,000" ]
           }
         },
         "max_text_logs": {
@@ -332,7 +356,9 @@
               "label": "BEW3-APB",
               "value": {
                 "ko": "지원 (IEEE 802.3af 호환)",
-                "en": "Supported (IEEE 802.3af compliant)"
+                "en": "Supported (IEEE 802.3af compliant)",
+                "es": "Compatible (compatible con IEEE 802.3af)",
+                "ja": "対応（IEEE 802.3af 互換）"
               }
             }
           }
@@ -347,7 +373,9 @@
           "label_id": "specs.interface.usb",
           "value": {
             "ko": "USB 2.0 (Type C), 펌웨어 업그레이드만 지원",
-            "en": "USB 2.0 (Type C), only FW-Upgrade"
+            "en": "USB 2.0 (Type C), only FW-Upgrade",
+            "es": "USB 2.0 (tipo C), solo actualización de firmware",
+            "ja": "USB 2.0（Type C）、ファームウェアアップグレードのみ"
           }
         },
         "usb_ext": {

@@ -98,12 +98,7 @@
         "memory": {
           "label": "메모리",
           "label_id": "specs.general.memory",
-          "value": {
-            "ko": "32 MB Flash + 32 MB RAM",
-            "en": "32 MB Flash + 32 MB RAM",
-            "es": "Memoria flash de 32MB + 32MB de RAM",
-            "ja": "32 MB Flash + 32 MB RAM"
-          }
+          "value": "32 MB Flash + 32 MB RAM"
         },
         "crypto_chip": {
           "label": "크립토 칩",

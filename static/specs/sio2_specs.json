@@ -102,7 +102,9 @@
           "label_id": "specs.interface.rs485",
           "value": {
             "ko": "1채널",
-            "en": "1 ch"
+            "en": "1 ch",
+            "es": "1 canal",
+            "ja": "1 チャンネル"
           }
         },
         "rs485_protocol": {
@@ -120,7 +122,9 @@
           "label_id": "specs.interface.input",
           "value": {
             "ko": "2채널",
-            "en": "2 ch"
+            "en": "2 ch",
+            "es": "2 canales",
+            "ja": "2 チャンネル"
           }
         },
         "relay": {

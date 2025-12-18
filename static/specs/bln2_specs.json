@@ -98,7 +98,12 @@
         "rf_distance": {
           "label": "RF 인식 거리",
           "label_id": "specs.credentials.rf_distance",
-          "value": "MIFARE/DESFire/HID iCLASS: 50 mm, EM/HID Prox/FeliCa: 30 mm",
+          "value": {
+            "ko": "MIFARE/DESFire/HID iCLASS: 50 mm, EM/HID Prox/FeliCa: 30 mm",
+            "en": "MIFARE/DESFire/HID iCLASS: 50 mm, EM/HID Prox/FeliCa: 30 mm",
+            "es": "MIFARE/DESFire/HID iCLASS: 50 mm, EM/HID Prox/FeliCa: 30 mm",
+            "ja": "MIFARE/DESFire/HID iCLASS：50 mm、EM/HID Prox/FeliCa：30 mm"
+          },
           "annotation_label": "anno2"
         },
         "mobile": {
@@ -135,7 +140,7 @@
         "memory": {
           "label": "메모리",
           "label_id": "specs.general.memory",
-          "value": "4 GB Flash + 64 Mb RAM"
+          "value": "4 GB Flash + 64 MB RAM"
         },
         "crypto_chip": {
           "label": "크립토 칩",
@@ -147,7 +152,9 @@
           "label_id": "specs.general.lcd_type",
           "value": {
             "ko": "1.77\" 컬러 TFT LCD",
-            "en": "1.77\" color TFT LCD"
+            "en": "1.77\" color TFT LCD",
+            "es": "Pantalla TFT-LCD en color de 1.77\"",
+            "ja": "1.77 インチカラー TFT LCD"
           }
         },
         "lcd_resolution": {
@@ -163,7 +170,7 @@
         "sound": {
           "label": "소리",
           "label_id": "specs.general.sound",
-          "value": "16bit"
+          "value": "16 bit"
         },
         "operating_temp": {
           "label": "동작 온도",
@@ -172,16 +179,21 @@
           "items": {
             "model1": {
               "label": "BLN2-ODB, BLN2-OAB, BLN2-OD, BLN2-OA",
-          "value": {
-            "ko": "-20 °C ~ 50 °C",
-            "en": "-20 °C ~ 50 °C",
-            "es": "De -20 °C a 50 °C",
-            "ja": "-20 °C ~ 50 °C"
-          }
+              "value": {
+               "ko": "-20 °C ~ 50 °C",
+               "en": "-20 °C ~ 50 °C",
+               "es": "De -20 °C a 50 °C",
+               "ja": "-20 °C ~ 50 °C"
+              }
             },
             "model2": {
               "label": "BLN2-PAB",
-              "value": "-10 °C ~ 50 °C"
+              "value": {
+               "ko": "-10 °C ~ 50 °C",
+               "en": "-10 °C ~ 50 °C",
+               "es": "De -10 °C a 50 °C",
+               "ja": "-10 °C ~ 50 °C"
+              }
             }
           }
         },
@@ -201,7 +213,12 @@
             },
             "model2": {
               "label": "BLN2-PAB",
-              "value": "-20 °C ~ 60 °C"
+              "value": {
+                 "ko": "-20 °C ~ 60 °C",
+                 "en": "-20 °C ~ 60 °C",
+                 "es": "De -20 °C a 60 °C",
+                 "ja": "-20 °C ~ 60 °C"
+              }
             }
           }
         },
@@ -234,7 +251,12 @@
         "certifications": {
           "label": "인증",
           "label_id": "specs.general.certifications",
-          "value": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE"
+          "value": {
+            "ko": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE",
+            "en": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE",
+            "es": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE",
+            "ja": "CE、UKCA、KC、FCC、IC、RCM、BIS、SIG、RoHS、REACH、WEEE"
+          }
         }
       }
     },
@@ -252,7 +274,9 @@
           "label_id": "specs.storage.max_credentials_1n",
           "value": {
             "ko": "지문: 10,000",
-            "en": "Fingerprint: 10,000"
+            "en": "Fingerprint: 10,000",
+            "es": "Huella digital: 10,000",
+            "ja": "指紋：10,000"
           }
         },
         "max_credentials_1on1": {
@@ -260,7 +284,9 @@
           "label_id": "specs.storage.max_credentials_1on1",
           "value": {
             "ko": [ "지문: 10,000", "카드: 10,000", "PIN: 10,000" ],
-            "en": [ "Fingerprint: 10,000", "Card: 10,000", "PIN: 10,000" ]
+            "en": [ "Fingerprint: 10,000", "Card: 10,000", "PIN: 10,000" ],
+            "es": [ "Huella dactilar: 10,000", "Tarjeta: 10,000", "PIN: 10,000" ],
+            "ja": [ "指紋：10,000", "カード：10,000", "PIN：10,000" ]
           }
         },
         "max_text_logs": {

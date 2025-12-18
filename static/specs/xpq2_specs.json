@@ -118,7 +118,9 @@
           "label_id": "specs.general.operating_humidity",
           "value": {
             "ko": "0 % ~ 95 %, 비응축",
-            "en": "0 % ~ 95 %, non-condensing"
+            "en": "0 % ~ 95 %, non-condensing",
+            "es": "Del 0 % al 95 %, sin condensación",
+            "ja": "0 % ~ 95 %（結露なきこと）"
           }
         },
         "storage_humidity": {
@@ -126,7 +128,9 @@
           "label_id": "specs.general.storage_humidity",
           "value": {
             "ko": "0 % ~ 95 %, 비응축",
-            "en": "0 % ~ 95 %, non-condensing"
+            "en": "0 % ~ 95 %, non-condensing",
+            "es": "Del 0 % al 95 %, sin condensación",
+            "ja": "0 % ~ 95 %（結露なきこと）"
           }
         },
         "camera": {
@@ -270,7 +274,9 @@
               "label": "XPQ2-APB",
               "value": {
                 "ko": "지원 (IEEE 802.3af 호환)",
-                "en": "Supported (IEEE 802.3af compliant)"
+                "en": "Supported (IEEE 802.3af compliant)",
+                "es": "Compatible (compatible con IEEE 802.3af)",
+                "ja": "対応（IEEE 802.3af 互換）"
               }
             }
           }
@@ -280,7 +286,9 @@
           "label_id": "specs.interface.usb",
           "value": {
             "ko": "USB 2.0 (Type C), 펌웨어 업그레이드만 지원",
-            "en": "USB 2.0 (Type C), only FW-Upgrade"
+            "en": "USB 2.0 (Type C), only FW-Upgrade",
+            "es": "USB 2.0 (tipo C), solo actualización de firmware",
+            "ja": "USB 2.0（Type C）、ファームウェアアップグレードのみ"
           }
         },
         "usb_ext": {
