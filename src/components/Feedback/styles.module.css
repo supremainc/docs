@@ -26,16 +26,19 @@
   font-size: .7rem;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.2s ease;
 }
 
+html[lang="es-419"] .feedbackTrigger {
+  position: relative;
+  top: -1px;
+}
 .feedbackTrigger:hover {
   background-color: var(--ifm-color-primary-dark);
-  transform: translateY(-1px);
+  /* transform: translateY(-1px); */
 }
 
 .feedbackTrigger:active {
-  transform: translateY(0);
+  /* transform: translateY(0); */
 }
 
 .feedbackHeader {
