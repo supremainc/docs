@@ -4,7 +4,7 @@ import {
   BaseLicenseType,
   FeatureAddonType,
 } from '../types/license';
-import { licenseConfigs, getTAType, capacityUpgradePrices, packagePrices, featureAddonPrices, calculateMultiCommServer } from '../data/licenseData';
+import { licenseConfigs, getTAType, capacityUpgradePrices, packagePrices, featureAddonPrices } from '../data/licenseData';
 
 export function recommendLicense(input: LicenseInput): LicenseResult {
   // Feature Add-ons나 Advanced AC가 있으면 Device Manager나 Starter 불가
@@ -310,7 +310,6 @@ function calculateFeatureAddons(
     'Mobile App',
     'Event Log API',
     'Remote Access',
-    'External Remote Access',
     'BioStar X Plugin',
   ];
 
@@ -324,14 +323,6 @@ function calculateFeatureAddons(
       addons.push({ type: addon as FeatureAddonType });
     }
   });
-
-  if (input.featureAddons['Multi Communications Server'] >= 2) {
-    const quantity = input.featureAddons['Multi Communications Server'];
-    addons.push({
-      type: 'Multi Communications Server',
-      quantity: quantity,
-    });
-  }
 
   return addons;
 }
@@ -349,7 +340,6 @@ function hasAnyFeatureAddon(input: LicenseInput): boolean {
     'Mobile App',
     'Event Log API',
     'Remote Access',
-    'External Remote Access',
     'BioStar X Plugin',
   ];
 
@@ -357,11 +347,6 @@ function hasAnyFeatureAddon(input: LicenseInput): boolean {
     if (input.featureAddons[addon]) {
       return true;
     }
-  }
-
-  // Multi Communications Server 확인 (2개 이상)
-  if (input.featureAddons['Multi Communications Server'] >= 2) {
-    return true;
   }
 
   return false;
@@ -424,12 +409,7 @@ function calculateTotalPrice(
   
   // Feature Add-ons 가격 계산
   featureAddons.forEach((addon) => {
-    if (addon.type === 'Multi Communications Server') {
-      const quantity = addon.quantity || 0;
-      const { init, addon: addonCount } = calculateMultiCommServer(quantity);
-      total += init * featureAddonPrices['Multi Comm Server Init'];
-      total += addonCount * featureAddonPrices['Multi Comm Server Add-on'];
-    } else if (addon.type === 'T&A') {
+    if (addon.type === 'T&A') {
       const taType = getTAType(addon.quantity || 0);
       if (taType === 'Standard') {
         total += featureAddonPrices['T&A Standard'];

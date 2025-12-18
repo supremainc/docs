@@ -30,10 +30,8 @@ const createInput = (overrides: Partial<LicenseInput> = {}): LicenseInput => ({
     'Roll Call': false,
     'T&A': 0,
     'Mobile App': false,
-    'Multi Communications Server': 0,
     'Event Log API': false,
     'Remote Access': false,
-    'External Remote Access': false,
     'BioStar X Plugin': false,
   },
   packages: {
@@ -488,56 +486,6 @@ describe('recommendLicense', () => {
       expect(starterResult.baseLicense).not.toBe('Starter');
     });
 
-    describe('Multi Communications Server', () => {
-      it('ignores Multi Comm Server when quantity < 2', () => {
-        const input = createInput({
-          door: 10,
-          user: 100,
-          operator: 0,
-          featureAddons: {
-            ...createInput().featureAddons,
-            'Multi Communications Server': 1,
-          },
-        });
-        const result = recommendLicense(input);
-
-        expect(hasAddon(result, 'Multi Communications Server')).toBe(false);
-      });
-
-      it('includes Multi Comm Server as single init when quantity = 2', () => {
-        const input = createInput({
-          door: 10,
-          user: 100,
-          operator: 0,
-          featureAddons: {
-            ...createInput().featureAddons,
-            'Multi Communications Server': 2,
-          },
-        });
-        const result = recommendLicense(input);
-
-        expect(hasAddon(result, 'Multi Communications Server')).toBe(true);
-        const mc = result.featureAddons.find(a => a.type === 'Multi Communications Server');
-        expect(mc?.quantity).toBe(2);
-      });
-
-      it('includes Multi Comm Server init + addons when quantity > 2', () => {
-        const input = createInput({
-          door: 10,
-          user: 100,
-          operator: 0,
-          featureAddons: {
-            ...createInput().featureAddons,
-            'Multi Communications Server': 5,
-          },
-        });
-        const result = recommendLicense(input);
-
-        expect(hasAddon(result, 'Multi Communications Server')).toBe(true);
-        const mc = result.featureAddons.find(a => a.type === 'Multi Communications Server');
-        expect(mc?.quantity).toBe(5);
-      });
-    });
 
     describe('T&A', () => {
       it('ignores T&A when quantity = 0', () => {

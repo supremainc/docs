@@ -21,10 +21,8 @@ export type FeatureAddonType =
   | 'Roll Call'
   | 'T&A'
   | 'Mobile App'
-  | 'Multi Communications Server'
   | 'Event Log API'
   | 'Remote Access'
-  | 'External Remote Access'
   | 'BioStar X Plugin';
 
 // Package Types
@@ -64,10 +62,8 @@ export interface LicenseInput {
     'Roll Call': boolean;
     'T&A': number;
     'Mobile App': boolean;
-    'Multi Communications Server': number;
     'Event Log API': boolean;
     'Remote Access': boolean;
-    'External Remote Access': boolean;
     'BioStar X Plugin': boolean;
   };
   packages: {
