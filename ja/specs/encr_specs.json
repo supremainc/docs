@@ -38,14 +38,21 @@
         "storage_temp": {
           "label": "보관 온도",
           "label_id": "specs.general.storage_temp",
-          "value": "-40 °C ~ 70 °C"
+          "value": {
+            "ko": "-40 °C ~ 70 °C",
+            "en": "-40 °C ~ 70 °C",
+            "es": "De -40 °C a 70 °C",
+            "ja": "-40 °C ~ 70 °C"
+          }
         },
         "operating_humidity": {
           "label": "동작 습도",
           "label_id": "specs.general.operating_humidity",
           "value": {
             "ko": "0 % ~ 80 %, 비응축",
-            "en": "0 % ~ 80 %, non-condensing"
+            "en": "0 % ~ 80 %, non-condensing",
+            "es": "Del 0 % al 80 %, sin condensación",
+            "ja": "0 % ~ 80 %（結露なきこと）"
           }
         },
         "storage_humidity": {

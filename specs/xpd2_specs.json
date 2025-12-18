@@ -7,7 +7,12 @@
         "rfcard": {
           "label": "RF 카드",
           "label_id": "specs.credentials.rfcard",
-          "value": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa"
+          "value": {
+          "ko": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
+          "en": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
+          "es": "125kHz EM y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
+          "ja": "125kHz EM および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>、FeliCa"
+          }
         },
         "rf_distance": {
           "label": "RF 인식 거리",
@@ -18,7 +23,12 @@
         "mobile": {
           "label": "모바일",
           "label_id": "specs.credentials.mobile",
-          "value": "NFC, BLE"
+          "value": {
+            "ko": "NFC, BLE",
+            "en": "NFC, BLE",
+            "es": "NFC, BLE",
+            "ja": "NFC、BLE"
+          }
         }
       }
     },
@@ -46,7 +56,9 @@
           "label_id": "specs.general.led_type",
           "value": {
             "ko": "다중 색상",
-            "en": "Multi-color"
+            "en": "Multi-color",
+            "es": "Multi-color",
+            "ja": "マルチカラー"
           }
         },
         "sound": {
@@ -54,7 +66,9 @@
           "label_id": "specs.general.sound",
           "value": {
             "ko": "멀티톤 버저",
-            "en": "Multi-tone Buzzer"
+            "en": "Multi-tone Buzzer",
+            "es": "Timbre de varios tonos",
+            "ja": "マルチトーンブザー"
           }
         },
         "operating_temp": {
@@ -65,7 +79,12 @@
         "storage_temp": {
           "label": "보관 온도",
           "label_id": "specs.general.storage_temp",
-          "value": "-40 °C ~ 70 °C"
+          "value": {
+            "ko": "-40 °C ~ 70 °C",
+            "en": "-40 °C ~ 70 °C",
+            "es": "De -40 °C a 70 °C",
+            "ja": "-40 °C ~ 70 °C"
+          }
         },
         "operating_humidity": {
           "label": "동작 습도",
@@ -110,8 +129,10 @@
           "label": "RS-485",
           "label_id": "specs.interface.rs485",
           "value": {
-            "ko": "1채널",
-            "en": "1 ch"
+            "ko": "1채널 슬레이브",
+            "en": "1 ch Slave",
+            "es": "1 canal esclavo",
+            "ja": "1チャンネルスレーブ"
           }
         },
         "rs485_protocol": {
@@ -119,7 +140,9 @@
           "label_id": "specs.interface.rs485_protocol",
           "value": {
             "ko": "OSDP V2 호환",
-            "en": "OSDP V2 compliant"
+            "en": "OSDP V2 compliant",
+            "es": "Compatible con OSDP V2",
+            "ja": "OSDP V2 準拠"
           }
         },
         "wiegand": {
@@ -166,7 +189,9 @@
               "label": "12 Vdc",
               "value": {
                 "ko": "전류: 최대 0.3 A",
-                "en": "Current: Max. 0.3 A"
+                "en": "Current: Max. 0.3 A",
+                "es": "Corriente: Máx. 0.3 A",
+                "ja": "電流：最大 0.3 A"
               }
             }
           }
@@ -184,7 +209,9 @@
           "label_id": "specs.power.led_beep_input_vil",
           "value": {
             "ko": "최대: 1 V",
-            "en": "Max.: 1 V"
+            "en": "Max.: 1 V",
+            "es": "Máximo: 1 V",
+            "ja": "最大：1 V"
           }
         },
         "led_beep_pullup": {
@@ -192,7 +219,9 @@
           "label_id": "specs.power.led_beep_pullup",
           "value": {
             "ko": "4.7 kΩ (입력 단자는 4.7 kΩ으로 풀업되어 있습니다.)",
-            "en": "4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)"
+            "en": "4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)",
+            "es": "4.7 kΩ (los puertos de entrada se polarizan con 4.7 kΩ)",
+            "ja": "4.7 kΩ（入力ポートは 4.7 KΩ でプルアップされる）"
           }
         },
         "wiegand_voh": {
@@ -200,7 +229,9 @@
           "label_id": "specs.power.wiegand_voh",
           "value": {
             "ko": "4.8 V 이상",
-            "en": "More than 4.8 V"
+            "en": "More than 4.8 V",
+            "es": "Más de 4.8 V",
+            "ja": "4.8 V 以上"
           }
         },
         "wiegand_vol": {
@@ -208,7 +239,9 @@
           "label_id": "specs.power.wiegand_vol",
           "value": {
             "ko": "0.2 V 이하",
-            "en": "Less than 0.2 V"
+            "en": "Less than 0.2 V",
+            "es": "Menos de 0.2 V",
+            "ja": "0.2 V 未満"
           }
         },
         "wiegand_pullup": {
@@ -216,7 +249,9 @@
           "label_id": "specs.power.wiegand_pullup",
           "value": {
             "ko": "1 kΩ으로 내부 풀업",
-            "en": "Internally pulled up with 1 kΩ"
+            "en": "Internally pulled up with 1 kΩ",
+            "es": "Polarización interna de 1 kΩ",
+            "ja": "1 kΩ の内部プルアップ"
           }
         }
       }
