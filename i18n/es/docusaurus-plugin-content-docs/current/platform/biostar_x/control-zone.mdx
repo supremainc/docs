@@ -1,0 +1,120 @@
+---
+id: control-zone
+title: Gestionar el control de acceso avanzado
+description: Controle el control de acceso avanzado y verifique la información detallada.
+keywords:
+  - Monitorizar
+  - Control de acceso avanzado
+---
+
+Esta guía explica cómo controlar puertas o dispositivos configurados con control de acceso avanzado. Las funciones proporcionadas permiten respuestas rápidas y una gestión eficiente en caso de problemas.
+
+1. Haga clic en <Cmd sid="shell.header.arena" /> en la página <Cmd sid="shell.header.launcher" /> o seleccione <Cmd sid="shell.header.arena" /> en la lista de accesos directos en la esquina superior izquierda de la pantalla.
+
+2. Vaya a la pestaña <Cmd sid="arena.tree.door.title" /> en la barra lateral izquierda de la pantalla y seleccione <Cmd sid="arena.tree.door.allZones" />.
+
+3. Seleccione el control de acceso avanzado configurado y haga clic derecho. Seleccione la función deseada en el menú emergente.
+
+<Image src="/img/biostarx-monitoring-door-zone-popup.png" />
+
+:::info
+
+Las funciones ofrecidas varían según el tipo de control de acceso avanzado. Los tipos de control de acceso avanzado son los siguientes.
+
+* **Anti-Passback**
+
+* Alarma de incendios
+
+* Bloqueo/desbloqueo programado
+
+* Alarma Intrusión
+
+* Esclusa
+
+* Aforo
+
+* Limite de Ocupación
+
+* Lista de Presencia
+
+Para obtener más información sobre cada control de acceso avanzado, consulte [lo siguiente](settings-advanced-ac).
+
+:::
+
+## Borrar anti-passback {#apb-release}
+
+Borre la alarma APB de la puerta o dispositivo configurado con **Anti-Passback**. Haz clic en <Cmd sid="arena.tree.contextMenu.clearApb" /> en el menú emergente. Un mensaje de finalización aparece en la parte superior de la pantalla.
+
+:::info
+
+* La función <Cmd sid="arena.tree.contextMenu.clearApb" /> solo está disponible para **Anti-Passback**.
+
+* Para obtener más información sobre la configuración de **Anti-Passback**, consulte [lo siguiente](settings-advanced-ac-apb).
+
+* Para obtener más información sobre **Anti-Passback**, consulte [lo siguiente](../../reference/glossary#apb).
+
+:::
+
+## Borrar alarma {#alarm}
+
+Borre la alarma que ocurrió en la puerta o dispositivo. Haga clic en <Cmd sid="arena.tree.contextMenu.clearAlarm" /> en el menú emergente. Un mensaje de finalización aparece en la parte superior de la pantalla.
+
+:::info
+
+<Cmd sid="arena.tree.contextMenu.clearAlarm" /> no se puede usar en la función de límite de ocupación.
+
+:::
+
+## Activar/Desactivar {#zone-revitalizationdisabled}
+
+Active el control de acceso avanzado o desactive las funciones que no se usen. El control de acceso avanzado desactivado muestra el ícono <IcDisable width="20px" height="20px" />. Haga clic en <Cmd sid="arena.tree.contextMenu.enable" /> o <Cmd sid="arena.tree.contextMenu.disable" /> en el menú emergente.
+
+## Seguridad/Desarmar {#security-zone-control}
+
+Active o desactive la seguridad de la puerta o dispositivo. Haz clic en <Cmd sid="arena.tree.contextMenu.arm" /> o <Cmd sid="arena.tree.contextMenu.disarm" /> en el menú emergente.
+
+:::info
+
+* <Cmd sid="arena.tree.contextMenu.arm" /> o <Cmd sid="arena.tree.contextMenu.disarm" /> solo pueden usarse en controles de acceso avanzado configurados para seguridad.
+
+* Para obtener más información sobre la configuración de seguridad, consulte [lo siguiente](settings-advanced-ac-intrusion-alarm).
+
+:::
+
+## Ver informe de muster {#confirmation-of-muster-reports}
+
+Haga clic en <Cmd sid="arena.tree.contextMenu.musterReport" /> para revisar el informe de muster. En la nueva ventana, verifique las horas de entrada y salida de los usuarios y si el tiempo de estancia se ha excedido, mediante la lista de usuarios y los dispositivos configurados con la función de muster.
+
+:::info
+
+* La función <Cmd sid="arena.tree.contextMenu.musterReport" /> solo está disponible en los muster.
+
+* Para obtener más información sobre la función de muster, consulte [lo siguiente](settings-advanced-ac-muster).
+
+:::
+
+## Monitorear límite de ocupación {#monitoring-of-restrictions-on-the-number-of-people}
+
+Verifique el estado de los dispositivos configurados con la función de límite de ocupación. Haga clic en <Cmd sid="arena.tree.contextMenu.occupancyMonitoring" /> en el menú emergente. En la nueva ventana, vaya al menú <Cmd sid="shell.header.setting" /> → <Cmd sid="setting.menu.advancedAc.root" />. Verifique el estado en la lista <Cmd sid="zone.occupancy.title" product="2" />.
+
+:::info
+
+* La función <Cmd sid="arena.tree.contextMenu.occupancyMonitoring" /> solo está disponible para elementos configurados con la función de límite de ocupación.
+
+* Para obtener más información sobre la configuración del límite de ocupación, consulte [lo siguiente](settings-advanced-ac-occupancy).
+
+:::
+
+## Ver detalles {#detail-view}
+
+Verifique la información detallada y el historial de eventos del control de acceso avanzado. Haga clic en <Cmd sid="arena.tree.contextMenu.viewDetail" /> en el menú emergente. La información detallada y el historial de eventos se muestran en el panel derecho de la pantalla.
+
+* **Información detallada**: Verifique el nombre y el estado de la función de control de acceso avanzado, la información del dispositivo, etc.
+
+* <Cmd sid="arena.recentEvent" />: Verifique la lista de eventos recientes ocurridos en el control de acceso avanzado seleccionado.
+
+:::info
+
+Para obtener más información sobre cada elemento de la sección de detalles del control de acceso avanzado, consulte [lo siguiente](settings-advanced-ac).
+
+:::

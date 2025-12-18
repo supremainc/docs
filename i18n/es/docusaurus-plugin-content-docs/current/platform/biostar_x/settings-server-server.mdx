@@ -1,0 +1,355 @@
+---
+id: settings-server-server
+title: Configuración detallada del servidor
+description: Guía sobre la información básica del servidor BioStar X, la gestión de usuarios y dispositivos, la asignación de servidores, los niveles de registro del sistema y la configuración para guardar imágenes faciales.
+keywords:
+  - Servidor
+  - Gestión Usuarios
+  - Gestión Dispositivos
+  - Coincidencia en el servidor
+  - Registro del sistema
+---
+
+Cambie la configuración de información básica del servidor BioStar X, la gestión de usuarios y dispositivos, la asignación de servidores, los niveles de registro del sistema y la configuración para guardar imágenes faciales.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.server.root" /> → <Cmd sid="common.server" product="2" /> en la barra lateral izquierda.
+
+3. Configure los elementos deseados en cada sección.
+
+   * <Cmd sid="common.general" product="2" />: Configure la dirección IP, el número de puerto, el tiempo de expiración de la sesión, el método de carga de registros de eventos y el período de retención de registros.
+
+   * <Cmd sid="setting.server.userDeviceManagement" product="2" />: Cambie la configuración de gestión de usuarios y dispositivos.
+
+   * <Cmd sid="setting.server.logLevelManagement" product="2" />: Cambie la configuración del nivel de registro del sistema.
+
+   * <Cmd sid="settings.expertSettings.title" product="2" />: Configure para guardar tanto la imagen real como la plantilla del rostro, o guardar solo la plantilla sin almacenar la imagen real.
+
+4. Haga clic en <Cmd sid="button.apply" product="2" /> en la parte inferior derecha de la pantalla para guardar los ajustes.
+
+## Configuración de información básica {#basic-setting}
+
+Verifique o configure la información básica de **BioStar X** en la sección <Cmd sid="common.general" product="2" />.
+
+<Image src="/img/biostarx-settings-server-general.png" className="none" />
+
+* <Cmd sid="setting.server.biostarIPAdress" product="2" />: Verifique la dirección IP del servidor.
+
+* <Cmd sid="setting.server.logUploadType" product="2" />: Seleccione un método de carga de registros de eventos. Si la comunicación en tiempo real con el servidor es difícil, configure esta opción en <Cmd sid="common.manual" product="2" />.
+
+* <Cmd sid="setting.server.biostarPort" product="2" />: Cambie el puerto del servidor. Introduzca el número de puerto deseado.
+
+* <Cmd sid="setting.server.logRetainDays" product="2" />: Establezca el período de retención de registros de 1 a 120 días.
+
+* <Cmd sid="common.sessionTimeout" product="2" />: Configure un período de expiración de sesión. Si no hay operación después de iniciar sesión en BioStar X durante el tiempo configurado, la sesión se cerrará automáticamente.
+
+## Gestión de usuarios y dispositivos {#user-and-device-management}
+
+En la sección <Cmd sid="setting.server.userDeviceManagement" product="2" />, configure los métodos de sincronización y autenticación entre usuarios y dispositivos.
+
+<Image src="/img/biostarx-settings-server-management.png" className="none" />
+
+### <Cmd sid="setting.server.automaticUserSync" product="2" className="normal" /> {#user-sync}
+
+En la opción <Cmd sid="setting.server.automaticUserSync" product="2" />, elija cómo sincronizar la información de usuario entre el servidor y los dispositivos.
+
+* <Cmd sid="setting.server.syncOption.allDevices" product="2" />: La información de usuario se sincroniza automáticamente entre el servidor y todos los dispositivos registrados.
+
+* <Cmd sid="setting.server.syncOption.deviceSync" product="2" />: La información de usuario del servidor se sincroniza con todos los dispositivos registrados en el servidor. Sin embargo, la información de usuario modificada en el dispositivo no se sincroniza con el servidor; solo la información de usuario añadida en el dispositivo se sincroniza con el servidor.
+
+* <Cmd sid="setting.server.syncOption.smartSync" product="2" />: Solo los dispositivos que pertenecen a un grupo de acceso con cambios se sincronizan automáticamente con el servidor.
+
+:::info
+
+* Si selecciona la opción <Cmd sid="setting.server.syncOption.smartSync" product="2" />, los usuarios guardados en dispositivos que no pertenecen al grupo de acceso no podrán ser gestionados por el servidor. Para usar esta opción, vaya a <Cmd sid="shell.header.setting" /> → <Cmd sid="setting.menu.device.root" />, seleccione cada dispositivo y luego haga clic en <Cmd sid="device.sync_all" product="2" /> para proceder con la sincronización. Para más información sobre la función <Cmd sid="device.sync_all" product="2" />, consulte [lo siguiente](settings-device-using-functions).
+
+* Incluso si selecciona la opción <Cmd sid="setting.server.syncOption.smartSync" product="2" />, los grupos de acceso especiales designados para fines específicos se sincronizarán independientemente del grupo de acceso del dispositivo.
+
+  * Grupo de acceso de autenticación dual configurado en Dispositivos y Elevadores.
+
+  * Grupo Always pass para la configuración anti-passback
+
+  * Grupo Always pass para la configuración de bloqueo programado
+
+  * Grupo de acceso de autenticación abierta para la configuración de apertura programada
+
+  * Grupo Access/Deactivate para la configuración de guardia
+
+* Incluso si selecciona la opción <Cmd sid="setting.server.syncOption.smartSync" product="2" />, los usuarios designados como administradores del dispositivo se sincronizarán independientemente del grupo de acceso.
+
+:::
+
+### <Cmd sid="setting.server.fingerprintTemplateFormat" product="2" className="normal" /> {#fingerprint-template-format}
+
+En la opción <Cmd sid="setting.server.fingerprintTemplateFormat" product="2" />, elija el formato de plantilla de huella digital. Seleccione entre los siguientes elementos.
+
+* <Cmd>SUPREMA</Cmd>: Formato de plantilla de huella digital de Suprema. Se utiliza al enrolar huellas digitales en dispositivos Suprema.
+
+* <Cmd>ISO</Cmd>: Formato internacional de plantilla de huella digital ISO.
+
+* <Cmd>ANSI378</Cmd>: Formato de plantilla de huella digital definido por el American National Standards Institute (ANSI).
+
+:::info
+
+Si existen plantillas de huellas digitales de usuario en el dispositivo, no se pueden cambiar a otro formato.
+
+:::
+
+### <Cmd sid="setting.userDevice.useridType" product="2" className="normal" /> {#userid-type}
+
+En la opción <Cmd sid="setting.userDevice.useridType" product="2" />, seleccione el tipo de ID de usuario como <Cmd sid="setting.userDevice.useridType.numeric" product="2" /> o <Cmd sid="setting.userDevice.useridType.alphanumeric" product="2" />. Revise la lista de dispositivos registrados en el servidor **BioStar X** y seleccione la configuración compatible.
+
+<details>
+  <summary>Ver los dispositivos y las versiones de firmware que pueden cambiar <Cmd sid="setting.userDevice.useridType" product="2" /></summary>
+
+  * Versión de firmware de CoreStation 1.0.0 o superior
+
+  * Firmware de FaceStation 2 1.0.0 o posterior
+
+  * Firmware de FaceLite 1.0.0 o posterior
+
+  * BioEntry W2 FW 1.1.0 o posterior
+
+  * BioStation L2 FW 1.2.0 o posterior
+
+  * BioStation A2 FW 1.3.0 o posterior
+
+  * BioStation 2 FW 1.4.0 o posterior
+
+  * Firmware de BioLite N2 1.0.0 o posterior
+
+  * Firmware de BioEntry P2 1.0.0 o posterior
+
+  * BioEntry R2 FW 1.0.0 o posterior
+
+  * Firmware de XPass 2 1.0.0 o posterior
+
+  * Versión de firmware de XPass D2 1.0.0 o superior
+
+  * X-Station 2 versión de firmware 1.0.0 o superior
+
+  * BioStation 3 firmware 1.0.0 o superior
+</details>
+
+:::info
+
+Cambiar de <Cmd sid="setting.userDevice.useridType.alphanumeric" product="2" /> a <Cmd sid="setting.userDevice.useridType.numeric" product="2" /> requiere eliminar toda la información de usuario registrada en **BioStar X**.
+
+:::
+
+### <Cmd sid="setting.server.enrollment_device.title" product="2" className="normal" /> {#enrollment-device}
+
+Para mayor comodidad, añada dispositivos usados con frecuencia para enrolar huellas digitales, rostros o tarjetas en la opción <Cmd sid="setting.server.enrollment_device.title" product="2" />.
+
+1. Haga clic en el botón <Cmd sid="button.plusAdd" product="2" /> para añadir un dispositivo.
+
+2. Cuando aparezca la ventana <Cmd sid="setting.server.enrollment_device.configure.title" product="2" />, haga clic en la casilla de verificación del dispositivo deseado en la lista.
+
+   <Image src="/img/biostarx-settings-server-management-enroll-device.png" className="none" />
+
+3. Haga clic en el botón <Cmd sid="button.add" product="2" /> para añadir el dispositivo seleccionado.
+
+4. Haga clic en <Cmd sid="button.apply" product="2" /> en la esquina inferior derecha de la pantalla para guardar la configuración del dispositivo añadido.
+
+:::info
+
+* Si resulta difícil localizar un dispositivo registrado en la lista debido a la gran cantidad, ingrese palabras clave en el campo de búsqueda para encontrar dispositivos. Ingrese el ID del dispositivo, el nombre del dispositivo, el grupo de dispositivos y la dirección IP.
+
+* Para obtener más información sobre cómo enrolar credenciales de huella dactilar, rostro o tarjeta, consulte lo siguiente:
+
+  * <DocLink docId="platform/biostar_x/enroll-credential-fingerprint" />
+
+  * <DocLink docId="platform/biostar_x/enroll-credential-face" />
+
+  * <DocLink docId="platform/biostar_x/enroll-credential-card" />
+
+  * <DocLink docId="platform/biostar_x/enroll-credential-mobile" />
+
+:::
+
+### <Cmd sid="setting.server.custom_field.title" product="2" className="normal" /> {#custom-field}
+
+En la opción <Cmd sid="setting.server.custom_field.title" product="2" />, agregue campos para ingresar información adicional del usuario. Los campos agregados se mostrarán en la pantalla de información del usuario.
+
+1. Haga clic en <Cmd sid="button.plusAdd" product="2" /> para agregar un campo de usuario personalizado.
+
+2. Ingrese el nombre del campo de usuario personalizado y seleccione el tipo de elemento deseado.
+
+   <Image src="/img/biostarx-settings-server-management-custome-field.png" />
+
+   * <Cmd sid="setting.server.custom_field.type.numericbox" product="2" />: Permite ingresar valores de 0 a 4294962795; no se pueden ingresar caracteres.
+
+   * <Cmd sid="setting.server.custom_field.type.textbox" product="2" />: Permite ingresar hasta 32 caracteres entre números y letras.
+
+   * <Cmd sid="setting.server.custom_field.type.combobox" product="2" />: Permite agregar hasta 20 elementos de 32 caracteres; cada elemento se separa con punto y coma (;). (p. ej., Seleccion1;Seleccion2;Seleccion3)
+
+     <Image src="/img/biostarx-settings-server-management-custome-field-select.png" />
+
+   * <Cmd sid="setting.server.custom_field.type.fileupload" product="2" />: Permite agregar un campo para cargar archivos.
+
+     :::note
+
+     * El tamaño máximo del archivo es 1MB.
+
+     * El nombre del archivo puede contener un mínimo de 1 carácter y un máximo de 120 caracteres.
+
+     * Requisitos del nombre de archivo: el nombre debe usar caracteres alfanuméricos, guiones bajos (`_`) y guiones (`-`), y debe usar un punto (`.`) para separar la extensión.
+
+     :::
+
+3. Haga clic en <Cmd sid="button.apply" product="2" /> en la parte inferior derecha de la pantalla para guardar el campo de usuario personalizado agregado.
+
+:::info
+
+* Modifique los números en la columna <Cmd sid="setting.server.custom_field.order" product="2" /> para cambiar el orden de los campos de usuario personalizados. La posición de ese campo cambiará.
+
+* Haga clic en <Cmd sid="button.apply" product="2" /> en la parte inferior derecha de la pantalla después de modificar los campos de usuario personalizados.
+
+* Haga clic en <IcTrash2 /> para eliminar un campo de usuario personalizado. Los campos eliminados no se pueden recuperar.
+
+* Para obtener más información sobre el registro y la modificación de información del usuario, consulte [lo siguiente](how-to-guide-user).
+
+* La información del usuario con campos personalizados añadidos se puede imprimir en una tarjeta. Para obtener más información, consulte [el siguiente enlace](settings-card-printer#adding-custom-user-fields).
+
+:::
+
+### Configuración de tarjetas AoC {#aoc-card-setting}
+
+Habilite la opción <Cmd sid="setting.server.deleteCredentialAfterAOC" product="2" /> para emitir una credencial [Access on Card (AoC)](../../reference/glossary#access_on_card) que almacena las credenciales del usuario en una tarjeta y elimina la información personal y los datos de credenciales del servidor **BioStar X**.
+
+:::info
+
+<details>
+  <summary>Ver dispositivos y versiones de firmware que admiten **tarjetas móviles NFC**</summary>
+
+  * Sistema operativo del dispositivo móvil: Android 5.0 Lollipop o superior, Android 10 o anterior
+
+  * BioStar X Mobile 1.0.0 o superior
+
+  * XPass S2: XPS2M-V2 FW 2.4 o superior
+
+  * BioStation 2: BS2-OMPW, BS2-OIPW FW 1.4 o superior, FW 1.8 o anterior
+
+  * BioStation A2: BSA2-OMPW, BSA2-OIPW FW 1.3 o superior, FW 1.7.1 o anterior
+
+  * BioStation L2: BSL2-OM FW 1.2 o superior
+
+  * BioEntry W2: BEW2-OAP, BEW2-ODP FW 1.1 o superior, FW 1.5 o anterior
+
+  * FaceStation 2: FS2-D, FS2-AWB FW 1.3.1 o anterior
+
+  * BioLite N2: BLN2-ODB, BLN2-OAB, BLN2-PAB FW 1.2 o anterior
+
+  * XPass D2: XPD2-MDB, XPD2-GDB, XPD2-GKDB FW 1.3 o anterior
+
+  * FaceLite: FL-DB FW 1.1 o anterior
+
+  * XPass 2: XP2-MDPB, XP2-GDPB, XP2-GKDPB, XP2-MAPB FW 1.0 o superior
+
+  * BioEntry P2: BEP2-OD, BEP2-OA FW 1.0 o superior
+
+  * BioEntry R2: BER2-OD FW v1.1.0 o superior
+</details>
+
+<details>
+  <summary>Ver dispositivos y versiones de firmware que admiten **tarjetas móviles BLE**</summary>
+
+  * Sistema operativo del dispositivo móvil: Android 5.0 Lollipop o superior, Android 10 o anterior / iOS 9.0 o superior
+
+  * BioStar X Mobile 1.0.0 o superior
+
+  * FaceStation 2: FS2-AWB FW 1.3.1 o anterior
+
+  * BioLite N2: BLN2-ODB, BLN2-OAB, BLN2-PAB FW 1.2 o anterior
+
+  * XPass D2: XPD2-MDB, XPD2-GDB, XPD2-GKDB FW 1.3 o anterior
+
+  * FaceLite: FL-DB FW 1.1 o anterior
+
+  * XPass 2: XP2-MDPB, XP2-GDPB, XP2-GKDPB, XP2-MAPB FW 1.0 o superior
+</details>
+
+* Las funciones <Cmd sid="user.mobileCredentialCard" product="2" /> y <Cmd sid="common.mobileCredential" product="2" /> no se pueden utilizar al mismo tiempo.
+
+:::
+
+### Otros ajustes {#other-settings}
+
+* <Cmd sid="setting.server.eventLogRetainDays" product="2" />: Configure el período de retención de los registros de eventos de control de acceso.
+
+* <Cmd sid="setting.server.hideCredentialFaces" product="2" />: Para proteger la información personal de los usuarios, la imagen de vista previa se puede ocultar durante el registro de credenciales faciales. Cuando esta opción está habilitada, la pantalla de vista previa no se mostrará al enrolar credenciales faciales de los usuarios.
+
+## Server matching {#servermatching}
+
+En la sección <Cmd sid="common.serverMatching" product="2" />, configure la función de [server matching](../../reference/glossary#server_matching) para autenticar la información del usuario en **BioStar X** sin autenticarla en el dispositivo.
+
+<Image src="/img/biostarx-settings-server-server-matching.png" className="none" />
+
+* <Cmd sid="setting.server.serverMatching.use" product="2" />: Activa/desactiva la función de server matching.
+
+* <Cmd sid="setting.server.serverMatching.matchingConcurrencyCount" product="2" />: Configure cuántas coincidencias pueden realizarse simultáneamente.
+
+  :::note
+
+  Esta opción puede variar según el rendimiento de la CPU de la PC servidor donde esté instalado **BioStar X**.
+
+  :::
+
+* <Cmd sid="setting.server.serverMatching.fastMode" product="2" />: Configure la velocidad de coincidencia de huellas dactilares.
+
+* <Cmd sid="setting.server.serverMatching.securityLevel" product="2" />: Establezca el nivel de seguridad del server matching para huellas dactilares. Cuanto más alto sea el nivel de seguridad, mayor puede ser la tasa de rechazo falso (FRR).
+
+:::info
+
+<Cmd sid="common.serverMatching" product="2" /> está disponible cuando los complementos de funciones se habilitan con una licencia **Advanced** o superior. Para obtener más información sobre la política de licencias, consulta [lo siguiente](licensing).
+
+:::
+
+## Configuración del nivel de registro del sistema {#systemloglevel}
+
+En la sección <Cmd sid="setting.server.logLevelManagement" product="2" />, configure el nivel de registros del sistema que se almacenan en la base de datos.
+
+<Image src="/img/biostarx-settings-server-system-log-level.png" className="none" />
+
+Los registros del sistema se gestionan según categorías predefinidas, y los niveles de registro se clasifican en <Cmd sid="setting.server.logLevel.trace" product="2" />, <Cmd sid="setting.server.logLevel.debug" product="2" />, <Cmd sid="setting.server.logLevel.info" product="2" />, <Cmd sid="setting.server.logLevel.warning" product="2" /> y <Cmd sid="setting.server.logLevel.error" product="2" />. El nivel más alto incluye todos los registros de los niveles inferiores. Por ejemplo, al seleccionar <Cmd sid="setting.server.logLevel.trace" product="2" />, se incluirán y guardarán todos los registros de los niveles inferiores <Cmd sid="setting.server.logLevel.debug" product="2" />, <Cmd sid="setting.server.logLevel.info" product="2" />, <Cmd sid="setting.server.logLevel.warning" product="2" /> y <Cmd sid="setting.server.logLevel.error" product="2" />.
+
+## Guardar imágenes faciales {#storevisualfaceimage}
+
+Al inscribir un rostro como credencial, se puede configurar para guardar tanto la imagen real como la plantilla, o guardar solo la plantilla sin la imagen real.
+
+:::note
+
+**Antes de usar**
+
+Antes de activar la opción <Cmd sid="settings.expertSettings.enableOptionLabel" product="2" />, guarda primero cualquier cambio realizado en el menú <Cmd sid="common.server" product="2" />. Haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior derecha de la pantalla.
+
+:::
+
+1. En la sección <Cmd sid="settings.expertSettings.title" product="2" />, establece la opción <Cmd sid="settings.expertSettings.enableOptionLabel" product="2" /> en <Cmd sid="common.use" product="2" />.
+
+   <Image src="/img/biostarx-settings-server-expert.png" className="none" />
+
+2. Haz clic en <Cmd sid="settings.expertSettings.enableButton" product="2" />.
+
+3. Al ingresar a la pantalla <Cmd sid="settings.expertSettings.detail.title" product="2" />, configura la opción <Cmd sid="settings.expertSettings.detail.storeVisualFaceImageOptionLabel" product="2" />.
+
+   <Image src="/img/biostarx-settings-server-expert2.png" />
+
+   * <Cmd sid="common.use" product="2" />: Este es el valor predeterminado. Guarda tanto la imagen real como la plantilla de la credencial de rostro.
+
+   * <Cmd sid="common.notUse" product="2" />: No guarda la imagen real de la credencial de rostro y guarda solo la plantilla. Lee detenidamente la ventana emergente de advertencia que aparece al seleccionar esta opción antes de configurarla.
+
+4. Haga clic en <Cmd sid="button.apply" product="2" /> para guardar la configuración.
+
+:::caution
+
+**Precauciones al desactivar la opción <Cmd sid="settings.expertSettings.detail.storeVisualFaceImageOptionLabel" product="2" />**
+
+* Si desactivas esta función, se eliminarán todas las imágenes faciales almacenadas y las futuras inscripciones de rostro guardarán solo las plantillas, excluyendo las imágenes.
+
+* No es posible desactivar esta función si las imágenes faciales inscritas no tienen ambos tipos de plantillas. Para obtener más información sobre la función <Cmd sid="team.menu.faceMigration" />, consulta [lo siguiente](migration-face).
+
+* Después de desactivar esta función, si incluyes plantillas de imagen facial inválidas en <Cmd sid="menu.dataImport" product="2" />, no podrás importar el archivo de datos. Para resolver este problema, habilita temporalmente esta función antes de importar el archivo de datos.
+
+:::

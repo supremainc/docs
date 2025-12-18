@@ -1,0 +1,71 @@
+[
+  {
+    "name": "Todos los grupos de puertas de entrada",
+    "children": [
+      {
+        "name": "Grupo de puertas de entrada A",
+        "type": "door-group",
+        "children": [
+          {
+            "name": "Puerta",
+            "type": "door-device",
+            "children": [
+              {
+                "name": "Sensor de puerta",
+                "type": "door-sensor"
+              },
+              {
+                "name": "Relé de puerta",
+                "type": "door-relay"
+              },
+              {
+                "name": "Estado de armado",
+                "type": "door-arm"
+              },
+              {
+                "name": "Cámara",
+                "type": "door-camera"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Todos los grupos de ascensores",
+    "type": "ascensor",
+    "children": [
+      {
+        "name": "Grupo de ascensores B",
+        "type": "elevator-group",
+        "children": [
+          {
+            "name": "Ascensor 1",
+            "type": "elevator-device",
+            "children": [
+              {
+                "name": "Ascensor 1 - primer piso",
+                "type": "elevator-floor"
+              },
+              {
+                "name": "Ascensor 1 - segundo piso",
+                "type": "elevator-floor"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Todos los AC avanzados",
+    "type": "access-control",
+    "children": [
+      {
+        "name": "Configuración de control de acceso",
+        "type": "access-zone"
+      }
+    ]
+  }
+]

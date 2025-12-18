@@ -1,0 +1,99 @@
+---
+id: settings-remote-access
+title: Configurar acceso remoto
+description: Esta guía explica cómo configurar el acceso remoto mediante el servicio ngrok.
+keywords:
+  - remoto
+  - acceso
+  - ngrok
+---
+
+El acceso remoto a través de ngrok permite acceder de forma segura a redes internas desde redes externas. Esta función permite acceder al servidor **BioStar X** de forma remota sin configuraciones de firewall ni reenvío de puertos.
+
+:::info
+
+* La función de acceso remoto está disponible como una opción adicional. Para más información sobre la política de licencias, consulta [lo siguiente](licensing#features-add-ons).
+
+* Al adquirir la licencia de acceso remoto, Suprema genera una cuenta de bot, un endpoint y un documento de licencia para el uso de acceso remoto en el sitio ngrok de Suprema.
+
+:::
+
+:::caution
+
+* El acceso remoto se proporciona a través del servicio de túnel de terceros de ngrok. El acceso remoto se proporciona a través del servicio de túnel de terceros de ngrok. Antes de usar esta función, revise [Remote Access Feature Agreement](../../legal/eula#remote-access-agreement).
+
+* BioStar X solo admite la conexión llamando a la API de ngrok, pero la seguridad y continuidad de la conectividad a Internet dependen completamente del servicio ngrok. Por lo tanto, Suprema no asume ninguna responsabilidad por incidentes de seguridad, pérdida de datos o vulneraciones del sistema que puedan ocurrir durante el uso de esta función.
+
+:::
+
+## ¿Cuándo usarlo?
+
+Use la función de acceso remoto en las siguientes situaciones.
+
+* Cuando necesite conectarse al servidor **BioStar X** desde una red externa
+
+* Cuando sea difícil conectarse directamente debido a firewalls o entornos NAT
+
+* Cuando desee configurar rápidamente el acceso remoto sin configuraciones de red complejas
+
+* Cuando necesite proporcionar derechos de acceso externos de manera temporal
+
+## Configuración del acceso remoto
+
+<Steps>
+  <Step>
+    ### Activar licencia de acceso remoto
+
+    1. Inicie sesión con su ID de administrador de **BioStar X**.
+
+    2. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+    3. Haga clic en <Cmd sid="setting.menu.license.root" /> → <Cmd sid="setting.menu.license.biostarXLicense" /> en la barra lateral izquierda.
+
+    4. Introduzca la clave de licencia de acceso remoto y el nombre de administrador proporcionados por Suprema y, a continuación, haga clic en <Cmd sid="setting.server.license.button.activate" product="2" />.
+
+    :::info
+
+    Para obtener más información sobre el registro de licencias, consulte [lo siguiente](settings-license-biostar-x-license).
+
+    :::
+  </Step>
+
+  <Step>
+    ### Activar acceso remoto
+
+    1. Inicie sesión con su ID de administrador de **BioStar X**.
+
+    2. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+    3. Haga clic en <Cmd sid="setting.menu.remoteAccess.root" /> en la barra lateral izquierda.
+
+    4. En la sección <Cmd sid="setting.remoteAccess.section.title" />, cambie la opción <Cmd sid="setting.menu.remoteAccess.root" /> a <Cmd sid="common.use" />.
+
+    <Image src="/img/biostarx-settings-remote-access.png" />
+  </Step>
+
+  <Step>
+    ### Introducir la información de configuración de ngrok
+
+    Introduzca la información de configuración de ngrok proporcionada por Suprema.
+
+    * <Cmd sid="setting.remoteAccess.field.ngrokUserId" />: Introduzca su cuenta de ngrok.
+
+    * <Cmd sid="setting.remoteAccess.field.tunnelToken" />: Introduzca su **Authtoken**.
+
+    * <Cmd sid="setting.remoteAccess.field.hostURL" />: Introduzca la URL del endpoint. La URL tiene el formato `your-name.bsx.ngrok.app`.
+
+    Después de introducir toda la información, haga clic en el botón <Cmd sid="button.apply" product="2" />. Si aparece una ventana de mensaje de advertencia, verifique el contenido y haga clic en el botón <Cmd sid="setting.remoteAccess.button.agree" />.
+  </Step>
+</Steps>
+
+## Acceder a la URL del endpoint
+
+Después de completar la configuración, verifique si puede acceder al servidor **BioStar X** desde una red externa usando la URL del endpoint que introdujo en <Cmd sid="setting.remoteAccess.field.hostURL" />.
+
+:::info
+
+Si no puede acceder mediante la URL del endpoint desde una red externa, póngase en contacto con el punto de venta o distribuidor que emitió su licencia.
+
+:::

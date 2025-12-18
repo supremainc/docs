@@ -1,0 +1,55 @@
+## Registrar complemento {#register-plugin}
+
+1. Haz clic en <Start /> → **BioStar X** → **BioStar X Service Manager** en Windows.
+
+2. Haz clic en <Cmd>PLUGINS</Cmd> en el menú lateral izquierdo.
+
+3. Haz clic en <Cmd>Add Plugin</Cmd> en la esquina superior derecha.
+
+   <Image src="/img/common/biostarx-sm-plugins-add.png" width="60%" alone />
+
+4. Ingresa la información del complemento en la pantalla <Cmd>Add New Plugin</Cmd>.
+
+   <Image src="/img/common/biostarx-sm-plugins-add-new.png" width="60%" alone />
+
+5. Ingresa la información del complemento y haz clic en <Cmd>Apply</Cmd> para completar el registro.
+
+:::info
+
+Si activaste <Cmd>Session Bridge</Cmd>, descarga el certificado en la parte inferior de la pantalla. Se requiere el certificado para la comunicación segura entre **BioStar X** y el complemento. Si pierdes el certificado, descárgalo de nuevo. En ese momento, el certificado existente se invalidará.
+
+<Image src="/img/common/biostarx-sm-plugins-download-certification.png" alone />
+
+:::
+
+### Ingresar información del complemento
+
+* <Cmd>Plugin Name</Cmd>: Ingresa el nombre del complemento. Ingresa hasta 48 caracteres. No uses un nombre ya registrado por otro complemento.
+
+* <Cmd>Description</Cmd>: Ingresa una descripción del complemento. Ingresa hasta 500 caracteres.
+
+* <Cmd>Plugin Address</Cmd>: Ingresa la dirección del complemento. Debe ser una URL válida que comience con `http://` o `https://`, y no se debe usar la misma dirección de un complemento ya registrado.
+
+* <Cmd>Plugin Icon</Cmd>: Carga el ícono del complemento.
+
+  * Los formatos compatibles son JPEG, PNG, SVG y GIF.
+
+  * El tamaño máximo del archivo es de 1 MB y no se pueden cargar archivos vacíos de 0 KB.
+
+  * Las imágenes cargadas se redimensionarán automáticamente a 104×104 píxeles.
+
+* <Cmd>Session Bridge</Cmd>: Activa Session Bridge. Al usar esta función se heredan automáticamente los permisos de los usuarios de BioStar X, por lo que no se requiere un inicio de sesión aparte para acceder al complemento.
+
+:::info
+
+* Si no cargas un ícono, se generará automáticamente uno a partir de la primera letra del nombre del complemento. Para eliminar el ícono cargado, haz clic en el botón <IcTrash2 />; al eliminarlo se reemplazará por el ícono generado automáticamente.
+
+* Una vez que <Cmd>Session Bridge</Cmd> esté activado, no se podrá desactivar ni cambiar la dirección del complemento por razones de seguridad.
+
+:::
+
+### Verificar en la pantalla del lanzador
+
+Los complementos agregados aparecen en la pantalla <Cmd sid="shell.header.launcher" /> de **BioStar X**.
+
+<Image src="/img/biostarx-added-plugins-launcher.png" />

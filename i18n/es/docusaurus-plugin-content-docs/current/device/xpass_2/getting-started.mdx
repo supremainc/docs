@@ -1,0 +1,198 @@
+---
+id: getting-started
+title: Primeros pasos
+description: Proporciona procedimientos iniciales para empezar con el dispositivo.
+keywords:
+  - Componentes
+  - Nombre
+  - Función
+  - Cable
+  - Conector
+---
+
+Proporciona procedimientos iniciales para empezar con el dispositivo.
+
+## Componentes
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-device-xpd2-mdb.svg" className="none" width={90} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-wall-bracket-xpd2-mdb.svg" className="none" width={80} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-device-xpd2-gdb.svg" className="none" width={100} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-wall-bracket-xpd2-gdb.svg" className="none" width={90} alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Tipo mullion de XPass 2 (XP2-MDPB, XP2-MAPB, XP2-MAPB-H)</Td>
+
+      <Td>Soporte de pared (XP2-MDPB,<br />XP2-MAPB, XP2-MAPB-H)</Td>
+
+      <Td>Tipo gang box de XPass 2 (XP2-GDPB)</Td>
+
+      <Td>Soporte de pared (XP2-GDPB)</Td>
+    </Row>
+  </Tbody>
+
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-device-xpd2-gkdb.svg" className="none" width={100} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-wall-bracket-xpd2-gkdb.svg" className="none" width={90} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-fixing-screws2.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-bracket-fixing-screw.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Tipo teclado de XPass 2 (XP2-GKDPB)</Td>
+
+      <Td>Soporte de pared (XP2-GKDPB)</Td>
+
+      <Td>Tornillos de fijación x2</Td>
+
+      <Td>Tornillo de fijación del soporte (en forma de estrella)</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-diode1.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-resistor.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-shrink-tube.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-quick-guide.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-oss-guide.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Diodo</Td>
+
+      <Td>Resistencia de 120 Ω</Td>
+
+      <Td>Tubo termorretráctil</Td>
+
+      <Td>Guía rápida</Td>
+
+      <Td>Guía de software de código abierto</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## Nombre y función de cada parte
+
+<Image src="/img/device/name-function-each-part-xp2.png" width="80%" className="none" />
+
+* **Indicador LED**: Indica el estado operativo del dispositivo mediante el color del LED.
+
+  * Verde: autenticación exitosa.
+
+  * Rojo: autenticación fallida.
+
+  * Azul/cian intermitente: funcionamiento normal.
+
+  * Parpadeo azul/verde: durante la inicialización de la configuración de red
+
+  * Verde intermitente: esperando entrada.
+
+  * Parpadeo verde/blanco: conexión a la aplicación Suprema AirFob Pass (BLE)
+
+  * Parpadeo blanco: conexión a la aplicación Device Manager
+
+* **Unidad de autenticación de tarjeta RF y tarjeta de acceso móvil**: parte para escanear una tarjeta RFID o una tarjeta de acceso móvil para la entrada.
+
+* **Área de reconocimiento de tarjeta de acceso móvil**: esta es la parte que reconoce tarjetas de acceso móvil para la entrada.
+
+* **Botón de reinicio**
+
+  * Inicializa la configuración de red. Para obtener más información sobre la inicialización de la configuración de red, consulta [lo siguiente](installation#reset-network-settings).
+
+  * Elimina toda la información y los certificados almacenados en el dispositivo e inicializa la configuración. Para obtener más información sobre la inicialización de fábrica, consulta [lo siguiente](installation#factory-reset).
+
+* **Cable**
+
+  Alimentación / RS-485 / Ethernet / E/S Wiegand / Entrada / Relé
+
+* **Teclado**: <Badge only>XP2-GKDPB</Badge> Se utiliza para autenticar ingresando directamente el ID de la tarjeta. Cambia la configuración del método de autenticación en BioStar X para autenticar mediante el modo de entrada directa.
+
+  * **0-9**: se utiliza al ingresar números.
+
+  * <Image src="/img/common/ico-star.svg" ico alone />: se utiliza para distinguir entre el código FC y el ID al ingresar el ID de tarjeta Wiegand.
+
+  * <Image src="/img/common/ico-pound.svg" ico alone />: se utiliza para finalizar la entrada.
+
+### Cable
+
+<Columns>
+  <Column>
+    <Image src="/img/device/cables-layout-xp2.png" className="none" width={600} alone />
+  </Column>
+
+  <Column className="padding--l10">
+    | Pin | Nombre | Color |
+    | :-: | :-: | :-: |
+    | 1 | 485 TRXP | Azul (franja blanca) |
+    | 2 | 485 TRXN | Amarillo (franja negra) |
+    | 3 | 485 GND | Blanco (franja negra) |
+    | 4 | ENET RXN | Amarillo |
+    | 5 | ENET RXP | Negro |
+    | 6 | ENET TXN | Naranja |
+    | 7 | ENET TXP | Blanco |
+    | 8 | ENET VB1 | Rojo |
+    | 9 | ENET VB1 | Verde |
+    | 10 | ENET VB2 | Azul |
+    | 11 | ENET VB2 | Marrón |
+    | 12 | WG GND | Negro |
+    | 13 | WG D1 | Blanco |
+    | 14 | WG D0 | Verde |
+    | 15 | INPUT0 | Morado |
+    | 16 | INPUT1 | Marrón |
+    | 17 | INPUT GND | Gris |
+    | 18 | RLY NO | Gris (franja blanca) |
+    | 19 | RLY COM | Verde (franja blanca) |
+    | 20 | RLY NC | Naranja (franja blanca) |
+    | 21 | PWR +VDC | Rojo |
+    | 22 | PWR GND | Negro (franja blanca) |
+  </Column>
+</Columns>

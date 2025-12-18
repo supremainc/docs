@@ -1,0 +1,127 @@
+## Conexión del relé
+
+<Include product="corestation_20,doorinterface">
+  El producto cuenta con dos tipos de puertos de relé, Alarm y Lock, cada uno de los cuales puede utilizarse para fines específicos.
+
+  * **Alarm**: Puede conectarse a dispositivos que generan sonidos de advertencia o alertas de intrusión, como luces de advertencia, sirenas o zumbadores.
+
+  * **Lock**: Puede conectarse a dispositivos para bloqueo y desbloqueo de puertas, como cerraduras eléctricas de golpe o cerraduras magnéticas.
+
+  :::caution
+
+  Al utilizar una cerradura magnética, conecte la alimentación de la cerradura directamente.
+
+  :::
+</Include>
+
+<Include product="inputmodule">
+  Controle el mecanismo de bloqueo de la puerta de entrada o el sistema de alarma mediante el relé de este producto. Consulte la guía del dispositivo que va a conectar y conecte el relé como NC o NO.
+
+  <Image src="/img/device/installation-relay-im120.png" width="75%" className="none" />
+</Include>
+
+### Cerradura fail safe
+
+Conecte el relé **NC** como se muestra en la figura siguiente para usar la cerradura Fail Safe. Normalmente circula corriente a través del relé de la cerradura Fail Safe. Cuando se activa el relé y se bloquea el flujo de corriente, la puerta se abrirá. Si se corta la alimentación del producto debido a un fallo de energía o a un factor externo, la puerta se abrirá.
+
+:::info
+
+<Include product="corestation_20,doorinterface">
+  Instale un diodo cerca de ambos extremos del cableado de la cerradura de la puerta, como se muestra en la figura, para proteger el relé de la corriente inversa que se produce cuando la cerradura opera. Asegúrese de conectar el cátodo (lado de la franja) a la parte + de la alimentación, prestando atención a la orientación del diodo.
+</Include>
+
+<Include product="corestation_40,doormodule,inputmodule,securemodule">
+  Conecte un diodo a ambos extremos de la entrada de alimentación, como se muestra en la figura siguiente, al instalar un cerrojo o una cerradura eléctrica de golpe. Asegúrese de conectar el cátodo (lado de la franja) a la parte + de la alimentación, prestando atención a la orientación del diodo.
+</Include>
+
+<Include product="inputmodule">
+  No conecte el relé de este producto de forma duplicada al dispositivo conectado al puerto de relé del dispositivo maestro.
+</Include>
+
+:::
+
+<Include product="corestation_20,,doorinterface">
+  <Image src="/img/device/installation-relay-fail-safe-lock-cs20.png" width="55%" className="none" />
+</Include>
+
+<Include product="corestation_40">
+  <Image src="/img/device/installation-relay-fail-safe-lock-cs40.png" width="60%" className="none" />
+</Include>
+
+<Include product="doormodule">
+  <Image src="/img/device/installation-relay-fail-safe-lock-dm20.png" width="70%" className="none" />
+</Include>
+
+<Include product="inputmodule">
+  <Image src="/img/device/installation-relay-fail-safe-lock-im120.png" width="60%" className="none" />
+</Include>
+
+<Include product="securemodule">
+  <Image src="/img/device/installation-relay-fail-safe-lock-sio2.png" width="65%" className="none" />
+</Include>
+
+<Include product="corestation_20,doorinterface">
+  Al utilizar una cerradura magnética, conecte directamente la alimentación de la cerradura a **GND** y **VOUT** de los puertos Lock, como se muestra en la figura siguiente.
+
+  <Image src="/img/device/installation-relay-fail-safe-lock-magnetic-cs20.png" width="45%" className="none" />
+
+  :::caution
+
+  Solo se pueden usar cerraduras magnéticas cuando la alimentación de la cerradura se conecta directamente.
+
+  :::
+</Include>
+
+<PageBreak />
+
+### Cerradura fail secure
+
+Conecte el relé **NO** como se muestra en la figura siguiente para usar la cerradura Fail Secure. Normalmente no circula corriente a través del relé de la cerradura Fail Secure. Cuando el relé active el flujo de corriente, la puerta se abrirá. Si se corta la alimentación del producto debido a un fallo de energía o a un factor externo, la puerta se bloqueará.
+
+:::info
+
+<Include product="corestation_20,doorinterface">
+  Instale un diodo cerca de ambos extremos del cableado de la cerradura de la puerta, como se muestra en la figura, para proteger el relé de la corriente inversa que se produce cuando la cerradura opera. Asegúrese de conectar el cátodo (lado de la franja) a la parte + de la alimentación, prestando atención a la orientación del diodo.
+</Include>
+
+<Include product="corestation_40,doormodule,inputmodule,securemodule">
+  Conecte un diodo a ambos extremos de la entrada de alimentación, como se muestra en la figura siguiente, al instalar un cerrojo o una cerradura eléctrica de golpe. Asegúrese de conectar el cátodo (lado de la franja) a la parte + de la alimentación, prestando atención a la orientación del diodo.
+</Include>
+
+<Include product="inputmodule">
+  No conecte el relé de este producto de forma duplicada al dispositivo conectado al puerto de relé del dispositivo maestro.
+</Include>
+
+:::
+
+<Include product="corestation_20,doorinterface">
+  <Image src="/img/device/installation-relay-fail-secure-lock-cs20.png" width="55%" className="none" />
+</Include>
+
+<Include product="corestation_40">
+  <Image src="/img/device/installation-relay-fail-secure-lock-cs40.png" width="60%" className="none" />
+</Include>
+
+<Include product="doormodule">
+  <Image src="/img/device/installation-relay-fail-secure-lock-dm20.png" width="70%" className="none" />
+</Include>
+
+<Include product="inputmodule">
+  <Image src="/img/device/installation-relay-fail-secure-lock-im120.png" width="60%" className="none" />
+</Include>
+
+<Include product="securemodule">
+  <Image src="/img/device/installation-relay-fail-secure-lock-sio2.png" width="65%" className="none" />
+</Include>
+
+<Include product="corestation_20,doorinterface">
+  Al utilizar una cerradura magnética, conecte directamente la alimentación de la cerradura a **GND** y **VOUT** de los puertos Lock, como se muestra en la figura siguiente.
+
+  <Image src="/img/device/installation-relay-fail-secure-lock-magnetic-cs20.png" width="45%" className="none" />
+
+  :::caution
+
+  Solo se pueden usar cerraduras magnéticas cuando la alimentación de la cerradura se conecta directamente.
+
+  :::
+</Include>

@@ -1,0 +1,150 @@
+---
+id: view-users
+title: Explorar usuarios
+description: Esta guía explica cómo usar las funciones para ver, buscar, ordenar y administrar la lista de usuarios.
+keywords:
+  - Usuario
+  - Buscar
+---
+
+Esta guía explica cómo ver y administrar los usuarios registrados en la página de lista de usuarios. Busque rápidamente los usuarios deseados mediante búsquedas generales y avanzadas, y use funciones como el ordenamiento de listas, la configuración de columnas y la impresión.
+
+Haga clic en <Cmd sid="shell.header.user" /> en el <Cmd sid="shell.header.launcher" /> o seleccione <Cmd sid="shell.header.user" /> en el menú de la esquina superior izquierda de la pantalla para acceder a la página <Cmd sid="shell.header.user" />.
+
+## Ver lista de usuarios {#view-user-list}
+
+En la página de lista de usuarios, consulte la información básica y el estado de los usuarios, y vea o edite la información detallada de cada uno.
+
+<Image src="/img/biostarx-users-list.png" />
+
+La lista de usuarios muestra todos los usuarios registrados y permite verificar el ID, nombre, dirección de correo electrónico, duración y estado de las credenciales inscritas de cada usuario. Los usuarios se enumeran en orden según su ID.
+
+* Haga clic en el usuario deseado en la lista para ver su información detallada. La información del perfil del usuario aparece en el lado derecho de la pantalla. Haga clic en <Cmd sid="team.user.preview.button.seeMore" /> en la información del perfil del usuario para ir a la página de edición de la información detallada.
+
+  <Image src="/img/biostarx-users-list-view-profile.png" />
+
+* Haga doble clic en el usuario deseado de la lista para editar su información detallada. Vaya a la página de edición de la información detallada del usuario.
+
+:::info
+
+* Para obtener más información sobre la modificación de información del usuario, consulte [lo siguiente](edit-user).
+
+* Cambie el diseño de columnas en la lista de usuarios. Para obtener más información sobre cómo cambiar el diseño de columnas, consulte [lo siguiente](view-users#user-list-column-settings).
+
+:::
+
+## Seleccionar opciones de vista {#select-view-options}
+
+Cambie las opciones de visualización de la lista de usuarios mediante el botón de herramientas en la esquina superior derecha de la pantalla.
+
+### Ir a la lista de usuarios {#user-list-page-moves}
+
+De forma predeterminada, la lista de usuarios muestra 10 usuarios. Haga clic en el botón en la parte superior de la pantalla para ir a otra página.
+
+<Image src="/img/biostarx-users-list-pagenation.png" />
+
+* <IcFirst /> : Ir a la primera página de la lista de usuarios.
+
+* <IcFw /> : Ir a la página anterior de la lista de usuarios.
+
+* <IcBw /> : Ir a la página siguiente de la lista de usuarios.
+
+* <IcLast /> : Ir a la última página de la lista de usuarios.
+
+* Vaya a la página deseada, ingrese el número de página en el campo numérico y presione <Kbd>Enter</Kbd>.
+
+### Cambiar la cantidad de usuarios mostrados en la lista {#change-number-of-users-list-indications}
+
+Cambie la cantidad de usuarios que se muestran en la lista. Seleccione la cantidad deseada de usuarios en el cuadro de lista de la esquina superior derecha de la pantalla. Las opciones disponibles son 50, 100 o 200 usuarios.
+
+<Image src="/img/biostarx-users-list-select-row.png" />
+
+### Ordenar lista de usuarios {#user-list-alignment}
+
+Cambie el criterio de ordenamiento de la lista de usuarios. Haga clic en el encabezado de columna en la parte superior de la lista para ordenar en orden ascendente o descendente. Por ejemplo, al hacer clic en el encabezado <Cmd sid="team.user.table.firstName" />, los nombres de los usuarios se ordenan en orden ascendente o descendente. El elemento seleccionado mostrará un ícono de ascendente (<IcAscend />) o descendente (<IcDescend />).
+
+<Image src="/img/biostarx-users-list-order.png" />
+
+:::info
+
+Algunos elementos podrían no ordenarse según el tipo de columna.
+
+:::
+
+## Buscar usuario {#user-search}
+
+Ofrece orientación sobre cómo buscar usuarios específicos. Encuentre rápidamente a los usuarios deseados mediante la función de búsqueda en la página de lista de usuarios.
+
+:::info
+
+* Los términos de búsqueda no distinguen mayúsculas de minúsculas.
+
+* La información básica del usuario debe ingresarse para buscarlos. Para obtener más información sobre la introducción de la información del usuario, consulte [lo siguiente](add-user-basic-info).
+
+:::
+
+### Búsqueda general {#general-search}
+
+Busque por ID, nombre o correo electrónico del usuario. Introduzca las palabras clave en el campo de búsqueda en la parte superior de la pantalla y presione <Kbd>Enter</Kbd>. Los usuarios que coincidan con la palabra clave especificada aparecerán en la lista. Verifique la cantidad de resultados de búsqueda en la parte superior de la lista.
+
+<Image src="/img/biostarx-users-search-result.png" />
+
+### Búsqueda avanzada {#advanced-search}
+
+Busque IDs de usuario, nombres, direcciones de correo electrónico, etc.
+
+1. Haga clic en <IcAdvSearch /> junto al campo de búsqueda en la parte superior de la pantalla.
+
+2. Cuando se abra la ventana de búsqueda avanzada, ingrese los criterios deseados y haga clic en <Cmd sid="common.search" />.
+
+<Image src="/img/biostarx-users-advanced-search.png" />
+
+:::info
+
+* Los campos con el ícono <IcTips /> no admiten búsqueda de palabras parciales debido al cifrado de datos personales en la base de datos.
+
+* Para restablecer los criterios ingresados en la ventana de búsqueda avanzada, haga clic en <Cmd sid="common.clearAll" />.
+
+* La búsqueda avanzada admite la búsqueda de <Cmd sid="setting.server.custom_field.title" product="2" />. Para obtener más información sobre <Cmd sid="setting.server.custom_field.title" product="2" />, consulte [lo siguiente](settings-server-server#custom-field).
+
+:::
+
+## Configuración de columnas de la lista de usuarios {#user-list-column-settings}
+
+Cambie la configuración de columnas que se muestran en la lista de usuarios. En la configuración de columnas, seleccione las columnas que se mostrarán o cambie su orden.
+
+1. Haga clic en <IcMoreW /> en la esquina superior derecha de la pantalla de la lista de usuarios.
+
+2. Haga clic en <Cmd sid="team.menu.columnLayout" />.
+
+3. Cuando aparezca la ventana <Cmd sid="common.dialog.columnSetting.title" />, seleccione o deseleccione las columnas deseadas.
+
+   <Image src="/img/biostarx-users-list-column-layout.png" />
+
+4. Haga clic y arrastre la columna deseada para cambiar su posición.
+
+5. Haga clic en <Cmd sid="common.apply" /> para guardar la configuración.
+
+:::info
+
+* La configuración de columnas se guarda para cada cuenta de usuario.
+
+* Haga clic en <Cmd sid="columnSetting.button.defaultColumn" product="2" /> para restablecer el diseño de columnas.
+
+:::
+
+## Imprimir lista de usuarios {#print-user-list}
+
+Guarde la lista de usuarios que está viendo como archivo PDF o SVG.
+
+1. Haga clic en <IcMoreW /> en la esquina superior derecha de la pantalla de la lista de usuarios.
+
+2. Haga clic en <Cmd sid="team.menu.print" />.
+
+3. Cuando aparezca la ventana <Cmd sid="printOption.dialog.header" product="2" />, seleccione el formato deseado en las opciones <Cmd sid="printOption.fileFormat" product="2" /> y configure las demás opciones.
+
+   <Image src="/img/biostarx-users-print-list.png" />
+
+4. Haga clic en <Cmd sid="team.menu.print" />.
+
+Imprima el archivo PDF o SVG que se abre en el navegador.

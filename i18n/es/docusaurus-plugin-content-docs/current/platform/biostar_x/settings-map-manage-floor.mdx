@@ -1,0 +1,143 @@
+---
+id: settings-map-manage-floor
+title: Configurar pisos
+description: Configura los pisos antes de configurar zonas y instalaciones. Coloca puertas y cámaras en la imagen del piso para confirmación visual.
+keywords:
+  - Mapa
+  - Planta
+  - Instalación
+  - Puerta
+  - Cámara
+  - Plantilla
+  - Imágenes
+---
+
+Configura los pisos antes de configurar zonas y instalaciones. Carga el plano del piso como imagen y coloca puertas y cámaras para la gestión visual. Después de configurar un piso, verifica las puertas y cámaras de ese piso en la página <Cmd sid="shell.header.arena" />.
+
+<Image src="/img/common/biostarx-settings-map-add-floor-example.png" alone caption />
+
+:::info
+
+* Registra puertas antes de configurar pisos. Para obtener más información sobre el registro de puertas, consulta [lo siguiente](settings-door-add).
+
+* Para obtener más información sobre el monitoreo de mapas, consulta [lo siguiente](monitoring-map).
+
+* Las opciones de configuración de mapas y la función de monitoreo de mapas pueden utilizarse mediante opciones adicionales con una licencia **avanzada** o superior. Para más información sobre la política de licencias, consulta [lo siguiente](licensing#features-add-ons).
+
+:::
+
+## Agregar piso {#add-floor}
+
+Carga un plano del piso o una imagen 3D en vista aérea para agregar un piso y colocar puertas y cámaras.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. En la barra lateral izquierda, haz clic en <Cmd sid="setting.menu.map.root" /> → <Cmd sid="setting.menu.map.floor" />.
+
+3. Haz clic en <Cmd sid="setting.floor.table.actions.newFloor" /> en la esquina superior derecha de la pantalla de lista de pisos.
+
+   <Image src="/img/biostarx-settings-map-add-floor.png" />
+
+4. Ingresa el nombre y la descripción del piso que deseas agregar en la sección <Cmd sid="setting.floor.information.section.title" /> de la pantalla <Cmd sid="setting.floor.page.title" />.
+
+5. Haz clic en <Cmd sid="setting.floor.configuration.button.floorPlan" /> en la sección <Cmd sid="setting.floor.configuration.section.title" /> o arrastra y suelta la imagen para cargarla.
+
+6. Confirma la imagen cargada en la ventana <Cmd sid="setting.floor.configuration.dialog.title.addFloorPlan" /> y continúa con la configuración.
+
+   <Image src="/img/biostarx-settings-map-add-floor-01.png" alone />
+
+   * Para rotar la imagen, haz clic en <IcLrot /> o <IcRrot />.
+
+   * Para recortar la imagen, haz clic en <IcCrop />.
+
+7. Después de completar la configuración de la imagen, haz clic en <Cmd sid="common.apply" />.
+
+8. Para agregar una puerta a la imagen cargada en la sección <Cmd sid="setting.floor.configuration.section.title" />, haz clic derecho en la ubicación deseada de la imagen y selecciona <Cmd sid="setting.floor.configuration.dialog.title.addDoor" />.
+
+9. Cuando aparezca la ventana <Cmd sid="setting.floor.configuration.dialog.title.addDoor" />, selecciona una de las puertas registradas.
+
+   <Image src="/img/biostarx-settings-map-add-floor-03.png" />
+
+10. Para colocar la puerta en la imagen, haz clic en <Cmd sid="common.apply" />.
+
+    <Image src="/img/biostarx-settings-map-add-floor-04.png" alone />
+
+11. Para agregar una cámara a la imagen cargada, haz clic derecho en la ubicación deseada de la imagen y selecciona <Cmd sid="setting.floor.configuration.dialog.title.addCamera" />.
+
+12. Cuando aparezca la ventana <Cmd sid="setting.floor.configuration.dialog.title.addCamera" />, selecciona una de las cámaras registradas.
+
+    <Image src="/img/biostarx-settings-map-add-floor-05.png" />
+
+13. Para colocar la cámara en la imagen, haz clic en <Cmd sid="common.apply" />.
+
+    <Image src="/img/biostarx-settings-map-add-floor-06.png" alone />
+
+14. Coloca puertas y cámaras adicionales según sea necesario en el piso real.
+
+15. Para guardar la configuración del piso, haz clic en <Cmd sid="button.apply" product="2" /> después de completar todos los ajustes.
+
+:::info
+
+* Para cambiar la posición de las puertas y cámaras colocadas en el piso, haz clic y arrastra la puerta o cámara correspondiente hasta la ubicación deseada.
+
+* Para obtener más información sobre los íconos y el estado de las puertas y cámaras colocadas en el piso, consulta [lo siguiente](monitoring-map#component-and-options).
+
+:::
+
+## Modificar configuración del piso
+
+Puedes modificar el diseño del piso con las puertas y cámaras añadidas. Al modificar el diseño del piso, puedes cambiar o eliminar las posiciones de puertas y cámaras.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. En la barra lateral izquierda, haz clic en <Cmd sid="setting.menu.map.root" /> → <Cmd sid="setting.menu.map.floor" />.
+
+3. Haz clic en el piso que deseas modificar de la lista.
+
+Después de completar todos los ajustes y guardar el piso configurado, haz clic en <Cmd sid="common.apply" />.
+
+### Eliminar puerta/cámara
+
+Haz clic en el ícono <IcFremove /> de la puerta o cámara que deseas eliminar de la imagen del piso. Puedes eliminar la puerta o cámara correspondiente.
+
+### Configurar rango de captura de la cámara
+
+Haz clic derecho en la cámara a la que deseas ajustar el rango de captura en la imagen del piso. Haz clic en <Cmd sid="setting.area.button.addCoverage" /> en el menú emergente.
+
+<Image src="/img/biostarx-settings-map-floor-add-camera-coverage.png" />
+
+* Para cambiar el rango de captura, mueve el puntero del mouse dentro del área verde. Cuando el puntero del mouse cambie a forma de cruz, haz clic y arrastra hasta la ubicación deseada manteniendo presionado el botón del mouse.
+
+  <Image src="/img/common/biostarx-settings-floor-camera-rotation.png" alone />
+
+* Para ajustar el área de cobertura, sujeta el borde del rango y arrastra para redimensionar.
+
+  <Image src="/img/common/biostarx-settings-floor-camera-adjust.png" alone />
+
+* Para eliminar el área de cobertura, haz clic en el ícono <IcFremove />.
+
+:::caution
+
+Los ajustes realizados por el usuario son solo funciones proporcionadas para la comodidad de la gestión de seguridad y no reflejan el rango de captura real de la cámara.
+
+:::
+
+### Eliminar imagen del piso
+
+Para eliminar la imagen del piso, haz clic derecho sobre la imagen del piso y selecciona <Cmd sid="setting.floor.contextMenu.deleteFloor" /> en el menú emergente.
+
+<Image src="/img/biostarx-settings-map-remove-floor.png" />
+
+## Eliminar piso {#delete-floor}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. En la barra lateral izquierda, haz clic en <Cmd sid="setting.menu.map.root" /> → <Cmd sid="setting.menu.map.floor" />.
+
+3. Marca la casilla del piso que deseas eliminar de la lista. Puedes seleccionar más de un piso.
+
+   <Image src="/img/biostarx-settings-map-remove-floor-item.png" />
+
+4. Haz clic en <Cmd sid="common.delete" /> en la parte superior derecha de la pantalla.
+
+Los pisos seleccionados se eliminarán de la lista. Los pisos eliminados no se pueden recuperar.

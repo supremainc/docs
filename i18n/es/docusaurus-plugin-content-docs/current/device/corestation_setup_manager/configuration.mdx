@@ -1,0 +1,126 @@
+---
+id: configuration
+title: Configuración del dispositivo
+description: Guía para los ajustes y la administración del dispositivo.
+keywords:
+  - Configuración del dispositivo
+  - Esclavo
+  - Información
+  - Red
+  - Autenticación
+  - Configuración avanzada
+---
+
+Guía para los ajustes y la administración del dispositivo.
+
+## Buscar y registrar dispositivo esclavo
+
+Amplía fácilmente la red del sistema de control de acceso agregando dispositivos esclavos a CoreStation. CoreStation (maestro) y los dispositivos esclavos se pueden conectar mediante RS-485, y también se pueden conectar dispositivos adicionales como Secure I/O.
+
+1. Haz clic en **CONFIGURE**.
+
+2. Haz clic con el botón derecho en CoreStation en la lista de dispositivos y haz clic en **Search Slave Device**. Aparece una lista de los dispositivos esclavos conectados a CoreStation.
+
+   <Image src="/img/device/config-search-slave-device1.png" alone />
+
+3. Selecciona el dispositivo que deseas registrar como esclavo y haz clic en **Add**. Como alternativa, selecciona puertos individuales para agregar dispositivos esclavos.
+
+   <Image src="/img/device/config-search-slave-device2.png" alone />
+
+## Reiniciar dispositivo
+
+Reinicia el dispositivo.
+
+1. Haz clic en **CONFIGURE**.
+
+2. Haz clic con el botón derecho en CoreStation en la lista de dispositivos y haz clic en **Reboot**.
+
+   <Image src="/img/device/config-reboot.png" alone />
+
+## Modificar ajustes e información del dispositivo
+
+Configura los detalles de CoreStation.
+
+1. Haz clic en **CONFIGURE**.
+
+2. Edite los campos necesarios.
+
+3. Haz clic en **Apply** para finalizar todos los ajustes y guardar los cambios.
+
+### Información
+
+<Image src="/img/device/config-information.png" alone />
+
+<div className="overflow-x col2--20-80">
+  | Nombre | Descripción de la función |
+  | --- | --- |
+  | **Nombre** | Consulta el nombre del dispositivo. |
+  | **ID del dispositivo** | Consulta el ID del dispositivo. |
+  | **Tipo de dispositivo** | Consulta el tipo de dispositivo. |
+  | **Versión de firmware** | Instala una nueva versión del firmware haciendo clic en **Firmware Upgrade** y seleccionando el archivo de firmware para la actualización. |
+  | **Versión Kernel** | Consulta la versión del kernel. |
+  | **Versión Hardware** | Consulta la versión del hardware. |
+  | **Valores Fábrica** | Elimina toda la información almacenada en el dispositivo y restablece los ajustes. |
+  | **Restaurar valores predeterminados** | Inicializa los ajustes del dispositivo.<br />- **ALL**: Inicializa todos los ajustes.<br />- **without Network**: Inicializa todos los ajustes excepto los de red. |
+  | **Bloqueado** | Cuando el dispositivo esté bloqueado debido a condiciones de operación, utiliza el botón **Unlock**. |
+  | **Zona horaria** | Define la zona horaria del dispositivo. |
+  | **Fecha Terminal** | Configura manualmente la fecha y la hora.<br />- **Get Time**: Haz clic para obtener la hora configurada en el dispositivo.<br />- **Set Time**: Haz clic para aplicar al dispositivo la hora configurada en CoreStation Setup Manager. |
+</div>
+
+:::info
+
+El menú **Factory Default** se puede usar cuando hay un certificado raíz almacenado en el dispositivo. Al ejecutar un restablecimiento de fábrica se eliminará la cuenta de administrador.
+
+:::
+
+### Red
+
+<Image src="/img/device/config-network.png" alone />
+
+<div className="overflow-x col2--20-80">
+  | Nombre | Descripción de la función |
+  | --- | --- |
+  | **Usar DHCP** | Selecciona esta opción para que el dispositivo utilice una dirección IP dinámica. Si seleccionas este elemento, no se podrá asignar una dirección IP fija. |
+  | **Dirección IP** | Consulta la dirección IP del dispositivo. |
+  | **Puerta de enlace** | Consulta la puerta de enlace del dispositivo. |
+  | **Dirección Servidor DNS** | Consulta la dirección del servidor DNS del dispositivo. |
+  | **Máscara de subred** | Consulta la máscara de subred del dispositivo. |
+  | **Puerto del dispositivo** | Ingresa el puerto que utilizará el dispositivo. |
+  | **Conexión Dispositivo a Servidor** | Al seleccionar esta opción podrás ingresar la información del servidor BioStar X para conectar el dispositivo al servidor. |
+  | **Dirección Servidor** | Ingresa la dirección IP o el dominio del servidor BioStar X. |
+  | **Puerto del servidor** | Ingresa el puerto del servidor BioStar X. |
+  | **RS485** | Solo está disponible el modo maestro. |
+  | **Baud rate** | Define la velocidad de transmisión para cada puerto RS-485. |
+</div>
+
+### Autenticación
+
+<Image src="/img/device/config-auth.png" alone />
+
+<div className="overflow-x col2--20-80">
+  | Nombre | Descripción de la función |
+  | --- | --- |
+  | **Nivel Seguridad 1:N** | Define el nivel de seguridad utilizado para autenticar las huellas digitales. Al aumentar el nivel de seguridad, aumenta la tasa de rechazo falso (FRR) y disminuye la tasa de aceptación falsa (FAR). |
+  | **Modo 1:N** | Define la velocidad de autenticación de huellas digitales. Al seleccionar **Auto**, la velocidad de autenticación se ajusta según la cantidad total de plantillas de huellas digitales inscritas en el dispositivo. |
+  | **Formato Patrón** | Consulta el formato de plantilla de huella digital configurado. |
+</div>
+
+:::info
+
+La autenticación biométrica solo se admite en CoreStation.
+
+:::
+
+### Configuración avanzada
+
+<Image src="/img/device/config-advanced.png" alone />
+
+<div className="overflow-x col2--20-80">
+  | Nombre | Descripción de la función |
+  | --- | --- |
+  | **Falla de AC** | Configura un puerto AUX para supervisar las señales de entrada de alimentación. |
+  | **Manipulación** | Configura un puerto AUX para las notificaciones de manipulación. |
+  | **Incendio** | Configura un puerto AUX para supervisar señales de detección de incendios. |
+  | **Configuración** | Configura el puerto Supervised Input de CoreStation como puerto de entrada y define el valor de la resistencia que se usará para Supervised Input. Los valores de resistencia pueden establecerse en 1 kΩ, 2.2 kΩ, 4.7 kΩ o 10 kΩ. |
+  | **Sabotaje** | En caso de manipulación del dispositivo, configúralo para que elimine toda la información de usuarios, los registros y las claves de seguridad almacenadas en el dispositivo. |
+</div>

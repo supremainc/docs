@@ -1,0 +1,102 @@
+---
+id: settings-triger-and-action
+title: Configuración de activadores y acciones
+description: Configure el dispositivo o BioStar X para realizar la acción deseada cuando ocurra un evento específico en el dispositivo, la entrada o el área.
+keywords:
+  - Operación
+  - Activador y acción
+---
+
+Configure el dispositivo o **BioStar X** para realizar acciones deseadas cuando ocurran eventos específicos en un dispositivo, puerta o área.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.triggerAndAction.root" /> en la barra lateral izquierda.
+
+3. Haga clic en <Cmd sid="button.func.addTriggerAndAction" product="2" /> en la parte superior izquierda de la pantalla.
+
+   <Image src="/img/biostarx-settings-trigger-and-action.png" />
+
+Siga las instrucciones en pantalla para configurar los detalles.
+
+<Image src="/img/biostarx-settings-trigger-and-action-add.png" />
+
+<Steps>
+  <Step>
+    ## Ingrese el nombre
+
+    <Cmd sid="common.name" product="2" />: Ingrese el nombre para las condiciones y las acciones.
+  </Step>
+
+  <Step>
+    ## Configurar horario
+
+    <Cmd sid="triggerAction.schedule" product="2" />: Configure el horario en el que se aplicarán las condiciones y acciones.
+
+    :::info
+
+    * Haga clic en <Cmd sid="button.plusAddSchedule" product="2" /> para definir un horario si no existe uno adecuado al seleccionar <Cmd sid="triggerAction.input" product="2" /> y crear condiciones personalizadas.
+
+    * Para obtener más información sobre la configuración de horarios, consulta [lo siguiente](settings-schedule).
+
+    :::
+  </Step>
+
+  <Step>
+    ## Usar como Acción Rápida
+
+    Configure <Cmd sid="common.quickAction" product="2" /> para controlar varias puertas a la vez mediante el botón <Cmd sid="common.quickAction" product="2" /> en la pantalla principal de **BioStar X**. Haga clic en la casilla <Cmd sid="triggerAction.quickAction" product="2" />.
+
+    :::info
+
+    * Esta función solo está disponible cuando la opción <Cmd sid="triggerAction.schedule" product="2" /> se configura en <Cmd>Always</Cmd>.
+
+    * <Cmd sid="common.quickAction" product="2" /> se puede configurar en <Cmd sid="shell.header.setting" /> → <Cmd sid="setting.menu.customInterface.root" />. Para más información sobre <Cmd sid="common.quickAction" product="2" />, consulte [lo siguiente](settings-custom-interface).
+
+    :::
+  </Step>
+
+  <Step>
+    ## Seleccionar dispositivo, puerta, control de acceso avanzado {#select-device-door-advanced-ac}
+
+    Seleccione los elementos para enviar señales de eventos. Se pueden seleccionar varios dispositivos y funcionarán de forma independiente incluso si se pierde la conexión con **BioStar X**.
+
+    :::info
+
+    La opción <Cmd>Advanced Access Control</Cmd> solo está disponible con una licencia **Advanced** o superior. Para obtener más información sobre la política de licencias, consulta [lo siguiente](licensing).
+
+    :::
+  </Step>
+
+  <Step>
+    ## Configurar condiciones de evento
+
+    Configure los eventos de condición. Debe seleccionar uno o más eventos.
+
+    :::info
+
+    Según las opciones seleccionadas en el [paso anterior](#select-device-door-advanced-ac), se activarán listas de eventos distintas.
+
+    :::
+  </Step>
+
+  <Step>
+    ## Configurar acciones
+
+    Seleccione el dispositivo que realizará las acciones. Elija acciones para dispositivos, puertas o **BioStar X**.
+
+    En la sección <Cmd sid="triggerAction.action" product="2" />, configure las señales que se enviarán cuando ocurran los eventos de condición seleccionados. Configure esto en **BioStar X** para recibir registros por correo electrónico.
+
+    :::info
+
+    * Al hacer clic en <Cmd sid="common.device" product="2" />, <Cmd sid="common.door" product="2" />, o <Cmd>BioStar X</Cmd> se cambiará el contenido de la sección de acciones.
+
+    * Para configurar la información del servidor de correo electrónico, haga clic en <IcSet2 /> en la pestaña <Cmd>BioStar X</Cmd>. Cuando aparezca la ventana <Cmd sid="setting.triggerAction.smtpOption" product="2" />, ingrese la información del servidor de correo electrónico y haga clic en <Cmd sid="button.apply" product="2" />. Para más información, consulte [lo siguiente](settings-email-setting#email-contents-setting).
+
+    * Para información detallada sobre la configuración del servidor de correo electrónico, contacte a su administrador del sistema.
+
+    :::
+  </Step>
+</Steps>
+
+Cuando finalices la configuración, haz clic en <Cmd sid="button.apply" product="2" />.

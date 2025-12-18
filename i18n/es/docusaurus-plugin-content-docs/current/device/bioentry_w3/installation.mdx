@@ -1,0 +1,184 @@
+---
+id: installation
+title: Instalación
+description: Ofrece los procedimientos completos de instalación y ejemplos de conexión necesarios para el dispositivo.
+keywords:
+  - Soporte
+  - Alimentación
+  - Red
+  - Entrada
+  - Relé
+  - Independiente
+  - E/S Segura
+  - Wiegand
+---
+
+import InstallationBracketNotes from '../../common/_installation-bracket-notes.mdx';
+
+Ofrece los procedimientos completos de instalación y ejemplos de conexión necesarios para el dispositivo.
+
+## Fijar el soporte y el producto
+
+1. Determine la ubicación para montar el producto.
+
+   <Image src="/img/device/installation-recommended-bew3.svg" className="none" alone />
+
+   <InstallationBracketNotes height={137} />
+
+2. Asegura firmemente el soporte con los tornillos de fijación en el lugar donde se montará el producto.
+
+   <Image src="/img/device/installation-device1-bew3.svg" className="none" alone />
+
+   :::info
+
+   * Si instalas el producto en una pared de concreto, perfora un agujero, inserta un anclaje de PVC y sujétalo con un tornillo de fijación.
+
+   * Para evitar interferencias de RF, se debe mantener una distancia mínima de separación.
+
+   <Columns>
+     <Column className="text--center">
+       <Image src="/img/device/bew3-installation_distance1.png" className="none" width="60%" />
+
+       <div className="overflow-x">
+         | Espesor de pared | Distancia |
+         | :-: | :-: |
+         | 100 mm | 270 mm |
+         | 120 mm | 250 mm |
+         | 150 mm | 170 mm |
+       </div>
+     </Column>
+
+     <Column className="text--center">
+       <Image src="/img/device/bew3-installation_distance.png" className="none" width="65%" />
+     </Column>
+   </Columns>
+
+   * Al utilizar una credencial de acceso móvil, instala los dispositivos manteniendo una distancia mínima de 1 m entre ellos para evitar interferencias BLE.
+
+   :::
+
+3. Monta el producto en el soporte fijado.
+
+   <Image src="/img/device/installation-device2-bew3.svg" className="none" alone />
+
+4. Gira los tornillos de fijación para ensamblar el producto con el soporte.
+
+   <Image src="/img/device/installation-device3-bew3.svg" className="none" alone />
+
+   :::info
+
+   Al ensamblar el producto con el soporte, puedes usar el tornillo de fijación del soporte incluido (en forma de estrella) en lugar del tornillo de fijación del producto para aumentar la seguridad.
+
+   :::
+
+{/* ## 전원 연결 */}
+
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+<div className="page-break" />
+
+{/* ## 네트워크 연결 */}
+
+import NetworkConnection from "../../common/_device-network-connection.mdx";
+
+<NetworkConnection />
+
+{/* ## Input 연결 */}
+
+import InputConnection from "../../common/_device-input-connetion.mdx";
+
+<InputConnection />
+
+{/* ## 릴레이 연결 */}
+
+import RelayConnectioin from "../../common/_device-relay-connection.mdx";
+
+<RelayConnectioin />
+
+<div className="page-break" />
+
+{/* ## 독립형 연결 */}
+
+import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
+
+<StandaloneConnection />
+
+{/* 공통 노트 */}
+
+import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
+
+<CommonNotes />
+
+<div className="page-break" />
+
+{/* ## Secure I/O 2 연결 */}
+
+import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
+
+<SecureIOConnection />
+
+{/* 공통 노트 */}
+
+<CommonNotes />
+
+{/* ## Wiegand 연결 */}
+
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+<div className="page-break" />
+
+{/* ## 네트워크 설정 초기화 */}
+
+import Resetnetwork from "../../common/_device-reset-network-settings.mdx";
+
+<Resetnetwork />
+
+{/* ## 공장 초기화 */}
+
+import Factoryreset from "../../common/_device-factory-reset.mdx";
+
+<Factoryreset name="verde" />
+
+## Actualización de firmware
+
+Conecta una memoria USB para actualizar el firmware.
+
+1. Guarda el archivo de firmware en una memoria USB para la actualización.
+
+   :::info
+
+   Se recomienda guardar solo un archivo de firmware en la memoria USB para la actualización.
+
+   :::
+
+2. Conecta la memoria USB al dispositivo.
+
+3. Si aparece el mensaje "Admin Auth Required", autentíquese con credenciales de administrador.
+
+   :::info
+
+   Registra el administrador en BioStar X para el dispositivo. No puedes continuar con la actualización de firmware si no hay un administrador registrado en el dispositivo. Para obtener información detallada sobre cómo registrar un administrador, consulta la [Guía de administrador de BioStar X](../../platform/biostar_x/set-permission).
+
+   :::
+
+4. Una vez que la autenticación del administrador sea exitosa, el archivo de firmware se transferirá al dispositivo.
+
+5. Cuando la transferencia del archivo de firmware finalice, aparecerá en la pantalla un mensaje para quitar la memoria USB. Retire la memoria USB.
+
+   :::info
+
+   Si no retira la memoria USB, la actualización de firmware se ejecutará nuevamente después de que el dispositivo se reinicie.
+
+   :::
+
+6. Después de realizar la actualización de firmware, el dispositivo se reiniciará automáticamente.
+
+:::caution
+
+No desconectes la fuente de alimentación mientras actualizas el firmware del dispositivo. El dispositivo puede fallar.
+
+:::

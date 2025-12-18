@@ -1,0 +1,121 @@
+---
+id: settings-license-device-license
+title: Licencia de dispositivo
+description: Activar una licencia de dispositivo emitida por Suprema permite usar las características específicas asociadas a la licencia.
+keywords:
+  - Licencia
+---
+
+Activa <Cmd sid="setting.server.license.device" product="2" /> emitida por Suprema para usar las características específicas asociadas a la licencia.
+
+<Cmd sid="setting.server.license.device" product="2" /> permite activar la licencia de dispositivo mediante **BioStar X** y una memoria USB.
+
+:::info
+
+import DocumentA from '../../common/_device-license-info.mdx'
+
+<DocumentA />
+
+* Para obtener información sobre los códigos de error de licencias, consulta [el siguiente enlace](https://reprisesoftware.com/docs/isv/appendix/appendix-b-rlm-status-values.html).
+
+:::
+
+## Antes de comenzar {#before-start}
+
+Antes de activar la licencia de dispositivo, verifica lo siguiente.
+
+* Prepara un archivo de licencia de dispositivo válido. Solicita el archivo de licencia de dispositivo en el lugar de compra.
+
+* Asegúrate de que el dispositivo de destino esté registrado en **BioStar X**. Para obtener más información sobre el enrolamiento de dispositivos, consulta [lo siguiente](settings-adding-devices).
+
+## Aplicar licencia de dispositivo {#apply-device-license}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.license.root" /> → <Cmd sid="setting.server.license.device" product="2" /> en la barra lateral izquierda.
+
+3. Haz clic en <Cmd sid="user.list.csvImport.browse" product="2" />.
+
+   <Image src="/img/biostarx-settings-license-device-license.png" className="none" />
+
+4. Carga el archivo de licencia de dispositivo desde la ruta donde está guardada la licencia.
+
+5. La información correspondiente a la licencia cargada aparece en <Cmd sid="setting.server.license.name" product="2" />, <Cmd sid="setting.server.license.device.count" product="2" />, <Cmd sid="setting.server.license.device.list" product="2" />.
+
+   <Image src="/img/biostarx-settings-license-device-license-loaded.png" />
+
+6. Revisa <Cmd sid="setting.server.license.device.list" product="2" /> y para activar la licencia de dispositivo, haz clic en <Cmd sid="setting.server.license.button.activate" product="2" />.
+
+:::info
+
+Si la activación de la licencia falla, aparece un mensaje de error. Intenta activar la licencia nuevamente.
+
+:::
+
+## Información de la licencia de dispositivo {#device-license-info}
+
+Cuando cargas el archivo de licencia de dispositivo, aparece la siguiente información.
+
+* <Cmd sid="setting.server.license.name" product="2" />: Verifica el tipo de licencia incluido en el archivo de licencia de dispositivo.
+
+  * **Camera QR**
+
+    :::note
+
+    Los dispositivos que pueden usar **Camera QR** son los siguientes.
+
+    * X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) versión de firmware 1.2.0 o superior
+
+    * BioStation 3 (BS3-DB, BS3-APWB) versión de firmware 1.1.0 o superior
+
+    :::
+
+  * **Cerradura inalámbrica**
+
+    :::note
+
+    * La antena OSDP y la cerradura inalámbrica compatibles son las siguientes:
+
+      * Antena OSDP U&Z: CX8936
+
+      * Cerradura inalámbrica U&Z: CX217x (Manija), CX212x (Perilla)
+
+    * Se puede emitir una licencia de dispositivo para hasta 12 dispositivos, equivalente al número de cerraduras inalámbricas que se deseen conectar.
+
+    * El número máximo de cerraduras inalámbricas que se puede conectar con una licencia de dispositivo es 12. Aunque se activen varias licencias de dispositivo, no es posible superar 12 dispositivos.
+
+    :::
+
+* <Cmd sid="setting.server.license.device.count" product="2" />: Verifica la cantidad de dispositivos incluidos en el archivo de licencia de dispositivo.
+
+* <Cmd sid="setting.server.license.device.licenseCount" product="2" />: Verifica la cantidad de cerraduras inalámbricas que se pueden activar con una licencia de dispositivo.
+
+* <Cmd sid="setting.server.license.device.list" product="2" />: Permite consultar la información detallada de los dispositivos incluidos en el archivo de licencia de dispositivo.
+
+  * <Cmd sid="setting.server.license.device.id" product="2" />: ID único que identifica el dispositivo.
+
+  * <Cmd sid="setting.server.license.device.name" product="2" />: Nombre del dispositivo.
+
+  * <Cmd sid="setting.server.license.device.product" product="2" />: Nombre del modelo del dispositivo.
+
+  * <Cmd sid="setting.server.license.device.status" product="2" />: Estado actual del dispositivo. Solo los dispositivos en estado <Cmd sid="setting.server.license.device.list.normal" product="2" /> pueden activar licencias.
+
+    * <Cmd sid="setting.server.license.device.list.normal" product="2" />, <Cmd sid="setting.server.license.device.list.disconnected" product="2" />, <Cmd sid="setting.server.license.device.list.notSupported" product="2" />, <Cmd sid="setting.server.license.device.list.unregistered" product="2" />
+
+    :::note
+
+    Si el dispositivo es un modelo que no admite la función de licencia o si la versión de firmware es baja, <Cmd sid="setting.server.license.device.status" product="2" /> se mostrará como <Cmd sid="setting.server.license.device.list.notSupported" product="2" />. Verifica los modelos y las versiones de firmware compatibles con esa función.
+
+    :::
+
+  * <Cmd sid="setting.server.license.status" product="2" />: Indica si la licencia está activada. Solo los dispositivos <Cmd sid="setting.server.license.device.list.notActivated" product="2" /> pueden activar licencias.
+
+    * <Cmd sid="setting.server.license.device.list.notActivated" product="2" />, <Cmd sid="setting.server.license.device.list.activated" product="2" />, <Cmd sid="setting.server.license.device.list.na" product="2" />
+
+  * <Cmd sid="setting.server.license.device.activatedCount" product="2" />: Muestra el estado de conexión de la cerradura inalámbrica.
+
+:::info
+
+* La información de <Cmd sid="setting.server.license.device.licenseCount" product="2" /> y <Cmd sid="setting.server.license.device.activatedCount" product="2" /> solo aparece cuando se carga la licencia de dispositivo de la cerradura inalámbrica.
+
+:::

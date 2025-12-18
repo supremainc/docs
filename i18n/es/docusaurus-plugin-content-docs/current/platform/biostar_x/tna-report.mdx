@@ -1,0 +1,168 @@
+---
+id: tna-report
+title: Ver el informe
+description: Puede generar informes de T&A a partir de los eventos de asistencia de los usuarios recopilados en el sistema y editar los registros de tiempo o exportarlos como archivos CSV o PDF.
+keywords:
+  - Informe de tiempo y asistencia
+  - Informes
+---
+
+Puede generar informes de T&A a partir de los eventos de asistencia de los usuarios recopilados en el sistema y editar los registros de tiempo o exportarlos como archivos CSV o PDF.
+
+Utilice fácilmente los siete filtros de informe predefinidos; además, los administradores pueden configurar sus propios filtros.
+
+## Antes de comenzar
+
+### Antes de usar el informe multilingüe
+
+**BioStar X** admite coreano e inglés de forma predeterminada. Para utilizar informes multilingües, configure el idioma deseado según las siguientes instrucciones.
+
+1. Vaya a la siguiente ruta. *C:\Program Files\BioStar X\plugin\ta\dist\setup\report_fonts*
+
+2. Cree una carpeta con el nombre del idioma que desea usar. Consulte las normas ISO 639-1 para los nombres de idiomas. Por ejemplo, para usar español, cree una carpeta llamada "es".
+
+3. Copie y pegue las fuentes en la carpeta creada. Solo se admite una fuente TrueType.
+
+### Antes de actualizar el informe
+
+**BioStar X** utiliza MariaDB como base de datos predeterminada. Si utiliza la base de datos MS SQL Server, verifique primero los siguientes elementos.
+
+Al usar **BioStar X** con MS SQL Server, si hay muchos usuarios registrados, el uso de memoria en la PC puede acumularse cada vez que se actualiza el informe. Restablezca la memoria máxima del servidor de la base de datos MS SQL Server.
+
+1. Ejecute **Microsoft SQL Server Management Studio**.
+
+2. Haga clic derecho en la base de datos **BioStar X** en el explorador de objetos.
+
+3. Haga clic en **Propiedades** en el menú emergente.
+
+4. Haga clic en **Memory** y reduzca el valor de **Maximum server memory**.
+
+:::info
+
+Para obtener más información sobre la configuración de MariaDB y MS SQL Server durante la instalación de **BioStar X**, consulte [lo siguiente](custom-install).
+
+:::
+
+## Comprobar el informe
+
+### Generar el informe
+
+Aquí se proporcionan instrucciones para generar informes de registros de asistencia de usuarios registrados.
+
+1. Haga clic en <Cmd sid="shell.header.tna" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en la pestaña <Cmd sid="ta.report.title" product="2" /> en la barra lateral izquierda de la pantalla.
+
+   <Image src="/img/biostarx-tna-report.png" />
+
+3. Haga clic en el filtro de informe deseado en la barra lateral izquierda de la pantalla.
+
+4. En <Cmd sid="common.userGroup" product="2" /> o <Cmd sid="common.user" product="2" />, haga clic en el botón <IcSearch /> y luego especifique el grupo o usuario.
+
+5. Para generar el informe, haga clic en el botón <Cmd sid="button.updateReport" product="2" />.
+
+6. Cuando la lista de informes aparezca en la parte inferior de la pantalla, puede hacer clic en el elemento deseado para ver los detalles.
+
+<Image src="/img/biostarx-tna-report-update-list.png" />
+
+### Configurar las condiciones de filtro
+
+Puede configurar condiciones de filtro para generar un nuevo informe de registros de T&A.
+
+<Image src="/img/biostarx-tna-report-filter-setting.png" />
+
+* <Cmd sid="common.name" product="2" />: Ingrese el nombre del informe.
+
+* <Cmd sid="ta.report.condition.reportType" product="2" />: Seleccione el tipo de informe deseado. Los tipos de informe disponibles son los siguientes.
+
+  * <Cmd sid="report.daily" product="2" />, <Cmd sid="report.dailySummary" product="2" />, <Cmd sid="report.individual" product="2" />, <Cmd sid="report.individualSummary" product="2" />, <Cmd sid="report.leave" product="2" />, <Cmd sid="report.exception" product="2" />, <Cmd sid="report.modifiedPunchLogHistory" product="2" />, <Cmd sid="report.workweek" product="2" />
+
+  :::info
+
+  Al seleccionar <Cmd sid="ta.report.condition.reportType" product="2" /> como <Cmd sid="report.individual" product="2" />, puede configurar si se mostrarán los registros de entrada del usuario.
+
+  <Image src="/img/biostarx-tna-report-individual-types.png" />
+
+  * <Cmd sid="report.individual.optionSummary" product="2" />: Esto solo muestra los registros de entrada y salida del usuario en el informe.
+
+  * <Cmd sid="report.individual.optionDetail" product="2" />: Esto muestra todos los registros de entrada del usuario en el informe.
+
+  :::
+
+* <Cmd sid="grid.columnSetting" product="2" />: Puede cambiar el orden de las columnas de la tabla de informe u ocultarlas.
+
+  <Image src="/img/biostarx-tna-report-filter-setting-column.png" />
+
+  :::info
+
+  Después de cambiar el orden de las columnas, haga clic en el botón <Cmd sid="columnSetting.defaultColumn" product="2" /> para restaurar los valores predeterminados.
+
+  :::
+
+* <Cmd sid="report.filter" product="2" />: Esto solo se activará cuando <Cmd sid="ta.report.condition.reportType" product="2" /> esté configurado como <Cmd sid="report.leave" product="2" /> o <Cmd sid="report.exception" product="2" />, y puede elegir condiciones específicas para registros de ausencias o excepciones.
+
+* <Cmd sid="common.userGroup" product="2" /> / <Cmd sid="common.user" product="2" />: Seleccione el grupo de usuarios o usuario para generar el informe.
+
+* <Cmd sid="ta.report.condition.saveFilter.button" product="2" />: Puede guardar el informe de asistencia configurado como un filtro.
+
+  <Image src="/img/biostarx-tna-report-filter-saving.png" />
+
+### Configurar período del informe
+
+Aquí se proporcionan instrucciones para configurar el período del informe.
+
+<Image src="/img/biostarx-tna-report-period-setting.png" />
+
+Puede establecer el período del informe como <Cmd sid="timeCard.daily" product="2" />, <Cmd sid="timeCard.weekly" product="2" /> o <Cmd sid="timeCard.monthly" product="2" />. Para generar un informe para un período específico, seleccione <Cmd sid="timeCard.custom" product="2" />.
+
+### Exportar informe
+
+* <Cmd sid="button.downloadToCsv" product="2" />: Puede guardar el informe generado como un archivo CSV.
+
+* <Cmd sid="button.exportPdf" product="2" />: Puede guardar el informe generado como un archivo PDF.
+
+## Generar informe de horas de alarma de trabajo
+
+Puede generar informes de T&A para los usuarios que hayan alcanzado las horas laborales designadas o notificar al administrador por correo electrónico. El informe de horas laborales de alerta se genera semanalmente.
+
+1. Haga clic en <Cmd sid="shell.header.tna" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en la pestaña <Cmd sid="ta.report.title" product="2" /> en la barra lateral izquierda de la pantalla.
+
+3. Haga clic en <Cmd>Working Alarm Time Report</Cmd> en la lista de filtros de la barra lateral izquierda.
+
+   <Image src="/img/biostarx-tna-report-working-alarm.png" />
+
+4. Configure cada elemento en <Cmd sid="ta.report.condition.filterConditions" product="2" /> y <Cmd sid="ta.report.condition.reportPeriod" product="2" />.
+
+5. Para generar el informe, haga clic en el botón <Cmd sid="button.updateReport" product="2" />.
+
+:::info
+
+Para enviar notificaciones al administrador por correo electrónico para los usuarios que hayan alcanzado las horas laborales designadas, configure <Cmd sid="ta.report.condition.autoEmail" product="2" />. Para obtener más información, consulte [lo siguiente](#autoEmail).
+
+:::
+
+### Configuración de correo electrónico automatizado
+
+Puede enviar automáticamente correos electrónicos de alarma al administrador para los usuarios que hayan alcanzado las horas laborales designadas.
+
+<Image src="/img/biostarx-tna-report-working-alarm-auto-email.png" />
+
+* <Cmd sid="common.email" product="2" />: Marque la casilla para enviar correos electrónicos automáticamente al administrador.
+
+* <Cmd sid="setting.dst.dayOfWeek" product="2" />: Seleccione el día de la semana para enviar correos electrónicos al administrador.
+
+* <Cmd sid="shift.time" product="2" />: Configure la hora para enviar correos electrónicos al administrador.
+
+* <Cmd sid="setting.triggerAction.recipient" product="2" />: Puede especificar el administrador que recibirá el correo electrónico. Haga clic en el botón <Cmd sid="button.edit" product="2" /> para abrir la ventana emergente <Cmd sid="setting.triggerAction.recipient" product="2" />. Ingrese la dirección de correo electrónico. Puede especificar más de un administrador.
+
+  <Image src="/img/biostarx-tna-report-working-alarm-auto-email-receipt.png" />
+
+:::info
+
+* Establezca las condiciones de filtro y luego guarde el filtro para configurar la función <Cmd sid="ta.report.condition.autoEmail" product="2" />.
+
+* Configure la información del remitente de los correos electrónicos enviados automáticamente en <Cmd sid="setting.setting" product="2" />(<IcSet />) → <Cmd sid="setting.triggerAction.senderInfor" product="2" /> en la barra lateral izquierda de la pantalla. Para obtener más información, consulte [lo siguiente](tna-settings#senderInfo).
+
+:::

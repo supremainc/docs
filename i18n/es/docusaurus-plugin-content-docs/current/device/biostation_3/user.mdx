@@ -1,0 +1,126 @@
+---
+id: user
+title: Usuario
+description: Describe cómo registrar, editar, eliminar y gestionar usuarios.
+keywords:
+  - Enrolamiento
+  - Editar
+  - Borrar
+  - Gestionar
+---
+
+Describe cómo registrar, editar, eliminar y gestionar usuarios.
+
+## Registrar información de usuario {#registering-user-information}
+
+Registre información de usuario que incluya datos de autenticación biométrica.
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-add.svg" ico alone /> y configure el elemento deseado. La información de uso de usuarios aparece.
+
+   <Image src="/img/device/bs3-user-add.png" className="none" />
+
+   * <Image src="/img/common/ico-photo.svg" ico alone />: Registre una foto de usuario.
+
+   * **Nombre**: Introduzca el nombre de usuario.
+
+   * **ID**: Registre un ID de usuario ingresando un número de 1 a 4294967295. Si <Cmd sid="ui_168" product="dev" /> está configurado en <Cmd sid="ui_237" product="dev" />, puede usar una combinación de caracteres alfanuméricos y los símbolos `_` `-` como ID, con un máximo de 32 caracteres.
+
+   * <Cmd sid="ui_228" product="dev" />: Registre un rostro para la autenticación del usuario. Presione <Cmd sid="ui_228" product="dev" /> → <Cmd sid="ui_108" product="dev" /> y siga las instrucciones en pantalla para registrar su rostro. Presione <Image src="/img/common/ico-add.svg" ico alone /> para añadir más rostros. Consulte [Enrolling user faces](#enrolling-user-faces) para obtener más información sobre el registro de rostros.
+
+   * <Cmd sid="ui_323" product="dev" />: Registre una tarjeta para la autenticación del usuario. Presione <Cmd sid="ui_323" product="dev" /> → <Cmd sid="ui_108" product="dev" />, luego escanee la tarjeta en la unidad de autenticación de tarjetas RF para asignarla al usuario. Presione <Cmd sid="ui_323" product="dev" /> → <Image src="/img/common/ico-add.svg" ico alone /> para registrar más tarjetas.
+
+   * <Cmd sid="ui_040" product="dev" />: Ingrese el PIN que desea usar. Presione <Cmd sid="ui_040" product="dev" /> → <Cmd sid="ui_108" product="dev" /> e introduzca el PIN que desea usar. Para confirmarlo, introduzca el PIN nuevamente y luego presione <Cmd sid="ui_037" product="dev" />. Ingrese un número de entre 8 y 16 dígitos para evitar filtraciones.
+
+   * <Cmd sid="ui_172" product="dev" />: Seleccione los permisos que desea asignar al usuario.
+
+     :::info
+
+     Los menús disponibles varían según el nivel de usuario establecido.
+
+     * <Cmd sid="ui_075" product="dev" />: Este es un nivel de usuario general y el menú no está disponible.
+
+     * <Cmd sid="ui_300" product="dev" />: Puede usar todos los menús.
+
+     * <Cmd sid="ui_194" product="dev" />: Utilice los menús <Cmd sid="ui_256" product="dev" />, <Cmd sid="ui_366" product="dev" />, <Cmd sid="ui_280" product="dev" />, <Cmd sid="ui_103" product="dev" />, <Cmd sid="ui_255" product="dev" />.
+
+     * <Cmd sid="ui_171" product="dev" />: Puede usar los menús <Cmd sid="ui_166" product="dev" />, <Cmd sid="ui_255" product="dev" />.
+
+     :::
+
+   * <Cmd sid="ui_250" product="dev" />: Configure la duración de uso de la cuenta de usuario.
+
+   * <Cmd sid="ui_371" product="dev" />: Configure el modo de autenticación personal extendido. Este modo le permite combinar métodos de autenticación del usuario, incluidos ambos rostros. De lo contrario, utilice el modo de autenticación básico del dispositivo.
+
+3. Presione <Cmd sid="ui_295" product="dev" /> para completar el registro de la información del usuario.
+
+### Registrar rostros de usuario {#enrolling-user-faces}
+
+import EnrollingFace from '../../common/_enrolling-face-warning.mdx';
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-add.svg" ico alone />.
+
+3. Presione <Cmd sid="ui_228" product="dev" /> → <Cmd sid="ui_108" product="dev" />.
+
+4. Ajuste la distancia entre el rostro y la pantalla y mire directamente a la cámara del dispositivo.
+
+5. Cuando la captura se complete, presione <Cmd sid="ui_367" product="dev" /> → <Cmd sid="ui_295" product="dev" />. Para volver a tomar la foto de su rostro, presione <Cmd sid="ui_294" product="dev" />.
+
+   :::info
+
+   * Los datos de rostro visual de BioStation 3 no son compatibles con las plantillas faciales de FaceStation 2 ni de FaceLite.
+
+   * La información de rostro para BioStation 3 también puede registrarse por lotes cargando una foto en BioStar X o importando un archivo CSV, no solo en el dispositivo. También puede registrar rostro visual con su teléfono inteligente mediante un enlace enviado desde BioStar 2. Para obtener más información sobre cada método de registro, consulte la [Guía del administrador de BioStar X](../../platform/biostar_x/enroll-credential-face).
+
+   * Para usar correctamente la función Visual Face, tome una foto siguiendo las instrucciones a continuación.
+
+     <EnrollingFace />
+
+   :::
+
+## Modificar información de usuario
+
+El gestor de usuarios o el administrador pueden modificar la información de usuario registrada. Se puede añadir una tarjeta o rostro y modificar el PIN y el nivel.
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Haga clic en <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-search.svg" ico alone />.
+
+3. Seleccione los términos de búsqueda. Busque usuarios utilizando <Cmd sid="ui_299" product="dev" />, <Cmd sid="ui_167" product="dev" />, <Cmd sid="ui_253" product="dev" />, <Cmd sid="ui_228" product="dev" />, <Cmd sid="ui_322" product="dev" />.
+
+4. Seleccione el usuario que desea modificar.
+
+5. Modifique la información consultando [Registering user information](#registering-user-information) y presione <Cmd sid="ui_037" product="dev" />.
+
+   * Para eliminar un usuario, seleccione <Image src="/img/common/ico-delete.svg" ico alone /> y luego presione <Cmd sid="ui_367" product="dev" />.
+
+:::info
+
+<Cmd sid="ui_320" product="dev" /> se puede registrar en BioStar X. Para obtener más información sobre el registro de grupos de acceso, consulte la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+
+:::
+
+## Eliminar todos los usuarios
+
+Elimine todos los usuarios registrados a la vez.
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-delete.svg" ico alone />.
+
+3. Seleccione <Cmd sid="ui_303" product="dev" /> para verificar y luego presione <Cmd sid="ui_037" product="dev" />.
+
+4. Para eliminar a todos los usuarios, presione <Cmd sid="ui_367" product="dev" />.
+
+## Ver uso de usuarios
+
+Puede ver de un vistazo la cantidad de usuarios, rostros y tarjetas registrados.
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Presione <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-info.svg" ico alone />. La información de uso de usuarios aparece.
+
+   <Image src="/img/device/bs3-user-usage.png" />

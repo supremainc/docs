@@ -74,7 +74,7 @@ function OverviewLink({item, renderAll}) {
   }
   
   // 릴리스 관련 항목은 렌더링하지 않음
-  if (item.label?.includes('릴리스') || item.label?.includes('Release') || item.label?.includes('リリースノート')) {
+  if (item.label?.includes('릴리스') || item.label?.includes('Release') || item.label?.includes('リリースノート') || item.label?.includes('リリースノート')) {
     return null;
   }
 

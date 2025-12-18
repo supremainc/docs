@@ -1,0 +1,337 @@
+---
+id: authentication
+title: Autenticación
+description: Describe los métodos de autenticación compatibles y los procedimientos de autenticación.
+keywords:
+  - Modo de autenticación
+  - Operación
+  - PIN
+  - Rostro
+  - T&A (Tiempo y Asistencia)
+---
+
+Describe los métodos de autenticación compatibles y los procedimientos de autenticación.
+
+## Modo de autenticación
+
+Configura el modo de autenticación. Utilice rostro, huella, PIN, tarjeta e ID en combinación como modos de autenticación y configure también el horario para cada modo.
+
+:::info
+
+La autenticación por huella solo está disponible en el producto FSF2-ODB.
+
+:::
+
+### Registrar modo de autenticación {#registering-auth-mode}
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Presione <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_261" product="dev" /> → <Image src="/img/common/ico-add2.svg" ico alone />.
+
+3. Seleccione <Image src="/img/common/ico-add1.svg" ico alone /> y elija el método de autenticación que desea usar. Seleccione del mismo modo el método de autenticación adicional y combínelo.
+
+4. Configure <Cmd sid="ui_203" product="dev" />.
+
+   :::info
+
+   * Combine los métodos de autenticación seleccionados para autenticar todos en orden o elija autenticar solo algunos de ellos. Por ejemplo, si se combinan como <Image src="/img/common/ico-authmode-card.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />, deberá autenticar la tarjeta, rostro y PIN; cuando se combinan como <Image src="/img/common/ico-authmode-card.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3.png" ico alone /> / <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />, deberá autenticar la tarjeta y luego ingresar el rostro o el PIN.
+
+   * <Cmd sid="ui_203" product="dev" /> se puede configurar en BioStar X. Si no hay un horario configurado, solo se pueden seleccionar <Cmd sid="ui_163" product="dev" /> y <Cmd sid="ui_361" product="dev" />.
+
+   * Para obtener más información sobre la configuración de <Cmd sid="ui_203" product="dev" />, consulta la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-schedule).
+
+   :::
+
+5. Pulsa <Cmd sid="ui_037" product="dev" /> para guardar la configuración.
+
+### Modificar modo de autenticación
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Pulsa <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_261" product="dev" />.
+
+3. Selecciona el modo de autenticación que deseas modificar.
+
+4. Modifica el modo de autenticación consultando [Registrar modo de autenticación](#registering-auth-mode) y pulsa <Cmd sid="ui_037" product="dev" />.
+
+### Eliminar modo de autenticación
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Pulsa <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_261" product="dev" />.
+
+3. Pulsa <Image src="/img/common/ico-delete.svg" ico alone /> y selecciona el modo de autenticación que deseas eliminar. Es posible seleccionar varias opciones.
+
+4. Presione <Cmd sid="ui_037" product="dev" />, luego <Cmd sid="ui_367" product="dev" /> para eliminar el elemento seleccionado. Presiona <Cmd sid="ui_321" product="dev" /> para volver a la pantalla anterior.
+
+## Coincidencia en el servidor
+
+Configura la coincidencia con el servidor. El uso de la coincidencia en el servidor significa que la autenticación del usuario se realiza en BioStar X y no en el dispositivo. La coincidencia en el servidor puede ser útil cuando hay demasiada información de usuarios en el dispositivo o cuando se instala fuera de la puerta de entrada.
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Presione <Cmd sid="ui_256" product="dev" /> y luego active <Cmd sid="ui_185" product="dev" />.
+
+   * <Badge only>FSF2-ODB</Badge>: <Cmd sid="ui_186" product="dev" />
+
+   * <Badge only>FSF2-DB, FSF2-AB</Badge>: <Cmd sid="ui_187" product="dev" />
+
+:::info
+
+* <Cmd sid="ui_185" product="dev" /> solo puede usar huella, tarjeta e ID.
+
+* Si utilizas <Cmd sid="ui_185" product="dev" />, debes habilitar la coincidencia en el servidor tanto en el dispositivo como en BioStar X. Para obtener más información sobre la configuración de coincidencia en el servidor de BioStar X, consulta la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-server-server#servermatching).
+
+:::
+
+## Rostro {#face}
+
+Cambie la configuración de la autenticación facial.
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_228" product="dev" />.
+
+3. Cambie el elemento deseado.
+
+   <Image src="/img/device/fsf2-auth.png" width={300} />
+
+   * <Cmd sid="ui_308" product="dev" />: Permite ajustar manualmente el brillo de la luz del dispositivo. Ajuste el brillo con <Cmd sid="ui_152" product="dev" /> o <Cmd sid="ui_107" product="dev" /> o seleccione <Cmd sid="ui_162" product="dev" /> para apagar la luz.
+
+   * <Cmd sid="ui_140" product="dev" />: Establece la sensibilidad para detectar movimiento alrededor del dispositivo. Cuando <Cmd sid="ui_140" product="dev" /> está ajustado en <Cmd sid="ui_091" product="dev" />, toque la pantalla para autenticar el rostro.
+
+   * <Cmd sid="ui_115" product="dev" />: Si el rostro no se registra dentro del tiempo establecido, el registro se cancelará.
+
+   * <Cmd sid="ui_260" product="dev" />: Si la autenticación no se completa dentro del tiempo establecido, la autenticación falla.
+
+   * <Cmd sid="ui_117" product="dev" />: Permite verificar rostros duplicados durante el registro de rostro.
+
+   * <Cmd sid="ui_229" product="dev" />: Defina la posición y el tamaño del área donde el dispositivo detecta rostros durante la autenticación facial.
+
+     :::info
+
+     Para un rendimiento óptimo, se recomienda usar los valores predeterminados de las subopciones de <Cmd sid="ui_229" product="dev" />. Los valores predeterminados de cada opción son los siguientes:
+
+     * Ángulo máximo de orientación de la cabeza: 15
+
+     * Distancia de detección: mín. 30 cm, máx. 100 cm
+
+     * Búsqueda amplia: desactivada
+
+     :::
+
+   * <Cmd sid="ui_060" product="dev" />: Al activar <Cmd sid="ui_060" product="dev" />, podrá enrolar la <Cmd sid="ui_340" product="dev" /> emitida por BioStar X. <Cmd sid="ui_340" product="dev" /> permite la autenticación biométrica sin almacenar datos de usuario en el servidor BioStar X, Airfob Portal o dispositivo, al guardar la plantilla biométrica del usuario en una tarjeta de acceso móvil.
+
+     :::info
+
+     Para obtener más información sobre <Cmd sid="ui_340" product="dev" />, consulte la [Guía del administrador de BioStar X](../../platform/biostar_x/enroll-credential-mobile#template-on-mobile).
+
+     :::
+
+   * <Cmd sid="ui_157" product="dev" />: Configure para almacenar tanto las imágenes reales como las plantillas en Visual Face, o para guardar solo las plantillas sin imágenes. Si se desactiva, se eliminarán todas las imágenes almacenadas de rostros visuales y los rostros visuales enrolados posteriormente almacenarán solo las plantillas, sin imágenes.
+
+     :::info
+
+     Después de desactivar esta opción, utilice BioStar 2 v2.9.7 o superior.
+
+     :::
+
+   * <Cmd sid="ui_149" product="dev" />: Configura el nivel de seguridad para la autenticación 1:N.
+
+   * <Cmd sid="ui_278" product="dev" />: Configure el modo de funcionamiento del dispositivo para la autenticación facial.
+
+     * <Cmd sid="ui_359" product="dev" />: La coincidencia visual e infrarroja funciona conjuntamente para aumentar la precisión de la autenticación facial.
+
+     * <Cmd sid="ui_159" product="dev" />: Los usuarios pueden autenticarse rápidamente mientras caminan dentro del rango de autenticación del dispositivo.
+
+   * <Cmd sid="ui_247" product="dev" />: Evite la autenticación de usuarios con rostros falsificados, como fotografías. Se activa cuando <Cmd sid="ui_278" product="dev" /> está configurado en <Cmd sid="ui_359" product="dev" />.
+
+   * <Cmd sid="ui_070" product="dev" />: Permite cambiar ajustes avanzados de autenticación facial, como la detección de mascarilla y las funciones de la cámara térmica.
+
+     * <Cmd sid="ui_368" product="dev" />: Permite establecer el modo de confirmación según la finalidad.
+
+     * <Cmd sid="ui_264" product="dev" />: Permite definir el estado de notificación para fallos de autenticación debidos a la ausencia de mascarilla o a temperatura superior al estándar.
+
+     * <Cmd sid="ui_123" product="dev" />: Configure si se utiliza la detección de mascarillas.
+
+       * <Cmd sid="ui_165" product="dev" />: Los usuarios sin mascarilla serán rechazados y el evento sin mascarilla se registrará en los registros.
+
+       * <Cmd sid="ui_164" product="dev" />: Los usuarios sin mascarilla aún podrán autenticarse, pero se registrará un evento sin mascarilla.
+
+   * <Cmd sid="ui_236" product="dev" />: Puede establecer si se utilizará la cámara térmica.
+
+     * <Cmd sid="ui_165" product="dev" />: Los usuarios con temperatura superior al rango estándar serán rechazados y el evento se registrará como temperatura superior al estándar.
+
+     * <Cmd sid="ui_164" product="dev" />: Los usuarios con temperatura superior al rango estándar aún podrán autenticarse, pero el evento se registrará como temperatura superior al estándar.
+
+:::info
+
+* Al usar <Cmd sid="ui_123" product="dev" /> o <Cmd sid="ui_236" product="dev" />, configure <Cmd sid="ui_368" product="dev" /> según la finalidad del dispositivo.
+
+  * <Cmd sid="ui_267" product="dev" />: Después de la autenticación, verifica si el usuario lleva mascarilla o mide la temperatura.
+
+  * <Cmd sid="ui_369" product="dev" />: Después de comprobar si el usuario lleva mascarilla o de medir la temperatura, realiza la autenticación. Al usar este modo, los usuarios sin mascarilla o con temperatura superior al estándar no pueden autenticarse.
+
+  * <Cmd sid="ui_370" product="dev" />: El dispositivo solo puede utilizarse para verificar si se lleva mascarilla o para medir la temperatura. Al usar este modo, los usuarios que lleven mascarilla o que estén por debajo de la temperatura estándar pueden ingresar independientemente de la autenticación.
+
+* Cuando <Cmd sid="ui_236" product="dev" /> se ajusta a <Cmd sid="ui_161" product="dev" />, se activan las opciones avanzadas de la cámara térmica.
+
+  * <Cmd sid="ui_196" product="dev" />: Puede establecer la unidad de visualización de la temperatura.
+
+  * <Cmd sid="ui_099" product="dev" />: Puede establecer la temperatura mínima de referencia para restringir el acceso. Los usuarios con temperatura superficial inferior a <Cmd sid="ui_099" product="dev" /> serán rechazados. <Cmd sid="ui_099" product="dev" /> puede establecerse en un rango de 1℃~45℃ y no puede configurarse por encima de <Cmd sid="ui_106" product="dev" />.
+
+  * <Cmd sid="ui_106" product="dev" />: Puede establecer la temperatura máxima de referencia para restringir el acceso. Los usuarios con temperatura superficial superior a <Cmd sid="ui_106" product="dev" /> serán rechazados. <Cmd sid="ui_106" product="dev" /> puede establecerse en un rango de 1℃~45℃ y no puede configurarse por debajo de <Cmd sid="ui_099" product="dev" />.
+
+  * <Cmd sid="ui_240" product="dev" />: Puede establecer si se guardará el registro de temperatura del usuario. Si utiliza esta opción, tanto el éxito de la autenticación como el valor de temperatura del usuario se guardarán en el registro; si no se utiliza, solo se registrará el éxito de la autenticación.
+
+  * <Cmd sid="ui_235" product="dev" />: Establece si el video infrarrojo se muestra en la pantalla del dispositivo.
+
+  * <Cmd sid="ui_114" product="dev" />: Configura el dispositivo para que detecte automáticamente la zona de interés (ROI) para medir la temperatura del usuario. Por ejemplo, si hay otras luces instaladas cerca, esta opción permite que la cámara térmica detecte y mida la temperatura del usuario en lugar de esa iluminación.
+
+  * <Cmd sid="ui_331" product="dev" />: Establece opciones detalladas de la cámara para una medición precisa.
+
+* Cuando <Cmd sid="ui_236" product="dev" /> se ajusta a <Cmd sid="ui_161" product="dev" />, configura opciones detalladas de la cámara térmica para una medición precisa según el entorno de instalación.
+
+  * <Cmd sid="ui_243" product="dev" />: Configure la distancia entre el usuario y la cámara térmica.
+
+  * <Cmd sid="ui_296" product="dev" />: Configure la emisividad infrarroja.
+
+  * <Cmd sid="ui_045" product="dev" />, <Cmd sid="ui_046" product="dev" />, <Cmd sid="ui_048" product="dev" />, <Cmd sid="ui_047" product="dev" />: Permite configurar manualmente la ROI (región de interés) cuando <Cmd sid="ui_114" product="dev" /> está ajustado a <Cmd sid="ui_162" product="dev" />. Ajuste la ubicación y el tamaño de la ROI para especificar el área donde la cámara térmica medirá la temperatura. <Cmd sid="ui_045" product="dev" /> indica las posiciones izquierda y derecha de la región de interés; cuanto mayor sea este valor, más se desplazará la región hacia la derecha de la pantalla. <Cmd sid="ui_046" product="dev" /> indica las posiciones superior e inferior de la región de interés; cuanto mayor sea este valor, más se desplazará la región hacia arriba. <Cmd sid="ui_048" product="dev" /> y <Cmd sid="ui_047" product="dev" /> indican el tamaño de la región de interés; al aumentar ambos valores, el área para medir la temperatura se amplía. Por ejemplo, si los valores de <Cmd sid="ui_045" product="dev" />, <Cmd sid="ui_046" product="dev" />, <Cmd sid="ui_048" product="dev" />, <Cmd sid="ui_047" product="dev" /> se cambian de los valores predeterminados a 40, 15, 70 y 40 respectivamente, la región de interés cambiará como se muestra a continuación.
+
+  <Columns>
+    <Column className="text--center">
+      <Image src="/img/device/auth-roi1.png" width={200} alone />
+
+      Si la ROI está configurada con el valor predeterminado
+    </Column>
+
+    <Column className="text--center">
+      <Image src="/img/device/auth-roi2.png" width={200} alone />
+
+      ROI X(%), ROI Y(%), ancho de ROI (%), alto de ROI (%)<br />Cuando los valores se cambian a 40, 15, 70 y 40, respectivamente
+    </Column>
+  </Columns>
+
+  * <Cmd sid="ui_241" product="dev" />: Configure la cámara termográfica para corregir la temperatura de forma autónoma, teniendo en cuenta el uso ambiental del dispositivo y la temperatura circundante.
+
+  * <Cmd sid="ui_242" product="dev" />: Ajuste las mediciones de temperatura para que aumenten o disminuyan en un valor constante según el entorno de uso del producto. Por ejemplo, si la lectura de temperatura siempre se mide 0.1℃ más alta, establezca el valor de corrección de temperatura en -0.1.
+
+  * <Cmd sid="ui_017" product="dev" />: Si la cámara termográfica está correctamente conectada, se mostrará la versión del firmware de dicha cámara.
+
+* Para un rendimiento óptimo, se recomienda usar los valores predeterminados en las subopciones de <Cmd sid="ui_331" product="dev" />. Los valores predeterminados de cada opción son los siguientes:
+
+  * <Cmd sid="ui_243" product="dev" />: 100
+
+  * <Cmd sid="ui_296" product="dev" />: 0.98
+
+  * <Cmd sid="ui_045" product="dev" />: 30
+
+  * <Cmd sid="ui_046" product="dev" />: 25
+
+  * <Cmd sid="ui_048" product="dev" />: 50
+
+  * <Cmd sid="ui_047" product="dev" />: 55
+
+  Cuando use el ROI como configuración predeterminada, se mostrará una guía amarilla en el área de ROI de la pantalla durante la autenticación, como se muestra a continuación. Cuando el rostro del usuario esté alineado dentro de esa área durante la autenticación, se podrán realizar mediciones de temperatura precisas. Cuando cambie la configuración manualmente o use un ROI dinámico, la guía amarilla no se mostrará.
+
+  <Columns>
+    <Column className="text--center">
+      <Image src="/img/device/auth-static-roi.png" width={200} />
+
+      Si la ROI está configurada con el valor predeterminado
+    </Column>
+
+    <Column className="text--center">
+      <Image src="/img/device/auth-dynamic-roi.png" width={200} />
+
+      Al cambiar la configuración de ROI o usar ROI dinámico
+    </Column>
+  </Columns>
+
+* Las funciones de autenticación con mascarilla y de cámara termográfica no están disponibles en los dispositivos esclavos.
+
+* La cámara termográfica es compatible con TCM10-FSF2.
+
+:::
+
+## Huella dactilar <Badge only>FSF2-ODB</Badge> {#fingerprint}
+
+Cambia los ajustes de autenticación por huella digital.
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_312" product="dev" />.
+
+3. Cambie el elemento deseado.
+
+   <Image src="/img/device/auth-fingerprint.png" width={300} />
+
+   * <Cmd sid="ui_149" product="dev" />: Configura el nivel de seguridad para la autenticación 1:N.
+
+   * <Cmd sid="ui_130" product="dev" />: Establece el tiempo de espera para la coincidencia de huellas dactilares. Si la autenticación no se completa dentro del tiempo establecido, falla.
+
+   * <Cmd sid="ui_254" product="dev" />: Muestra la imagen sin procesar al escanear una huella dactilar.
+
+   * <Cmd sid="ui_197" product="dev" />: Establece la sensibilidad del sensor de huellas dactilares. Establece la sensibilidad más alta para obtener información de huella dactilar precisa.
+
+   * <Cmd sid="ui_003" product="dev" />: Establece el rendimiento de autenticación por huella dactilar. Al seleccionar <Cmd sid="ui_275" product="dev" />, la velocidad de autenticación se ajusta según el número total de plantillas de huellas dactilares registradas en el dispositivo.
+
+   * <Cmd sid="ui_342" product="dev" />: Establece el formato de la plantilla de huella dactilar. El valor predeterminado es <Cmd sid="ui_057" product="dev" />. Cambiar el formato de la plantilla bloquea el uso de todas las huellas dactilares almacenadas previamente, así que procede con precaución.
+
+   * <Cmd sid="ui_198" product="dev" />: Establece en <Cmd sid="ui_277" product="dev" /> para encender el sensor de huellas dactilares cuando detecta el dedo del usuario. Establece en <Cmd sid="ui_362" product="dev" /> para mantener el sensor siempre encendido, incluso cuando no se escanean huellas dactilares.
+
+   * <Cmd sid="ui_249" product="dev" />: Establece el nivel de detección de huellas dactilares falsas. Niveles más altos de detección de huellas falsas pueden aumentar las tasas de rechazo de las huellas reales.
+
+   * <Cmd sid="ui_116" product="dev" />: Inspecciona la calidad de la huella escaneada para guardar datos de alta calidad. Cuando está activado, el dispositivo notifica al usuario si la calidad de la huella es baja y le ayuda a escanear correctamente.
+
+   * <Cmd sid="ui_118" product="dev" />: Verifica huellas dactilares duplicadas durante el enrolamiento.
+
+## T&A (Tiempo y Asistencia)
+
+Configura cómo registrar el modo T&A.
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Selecciona <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_079" product="dev" />.
+
+3. Cambie el elemento deseado.
+
+   <Image src="/img/device/auth-tna.png" width={300} />
+
+   * <Cmd sid="ui_083_list" product="dev" />: Configura cómo usar el modo de asistencia.
+
+   * <Cmd sid="ui_086" product="dev" />: Agrega eventos de asistencia. Seleccione <Cmd sid="ui_086" product="dev" /> → <Image src="/img/common/ico-add2.svg" ico alone /> para agregar un evento de tiempo y asistencia, luego configure el ícono que se mostrará, el nombre del evento y el horario.
+
+   * <Cmd sid="ui_082" product="dev" />: Exige a los usuarios seleccionar un evento de asistencia durante la autenticación. Disponible cuando <Cmd sid="ui_083_list" product="dev" /> está configurado en <Cmd sid="ui_199" product="dev" />.
+
+   * <Cmd sid="ui_081" product="dev" />: Permite a los usuarios usar solo los eventos de asistencia seleccionados por el administrador. Disponible cuando <Cmd sid="ui_083_list" product="dev" /> está configurado en <Cmd sid="ui_071" product="dev" />.
+
+   * <Cmd sid="ui_279" product="dev" />: Selecciona si usar códigos de trabajo.
+
+## Opciones de visualización del resultado de autenticación
+
+Configura la opción de visualización del resultado de autenticación.
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_256" product="dev" />.
+
+3. Configure los elementos deseados en <Cmd sid="ui_259" product="dev" />.
+
+   <Image src="/img/device/auth-result-display-option.png" width={300} />
+
+   * <Cmd sid="ui_169" product="dev" />: Selecciona cómo aparece el ID de usuario en la pantalla de resultados de autenticación del dispositivo.
+
+     * <Cmd sid="ui_307" product="dev" />: Muestra el ID de usuario completo.
+
+     * <Cmd sid="ui_316" product="dev" />: Mostrar solo el primer carácter del ID de usuario.
+
+     * <Cmd sid="ui_357" product="dev" />: No mostrar el ID de usuario.
+
+   * <Cmd sid="ui_177" product="dev" />: Seleccionar cómo aparece el nombre de usuario en la pantalla de resultados de autenticación del dispositivo.
+
+     * <Cmd sid="ui_307" product="dev" />: Mostrar el nombre de usuario completo.
+
+     * <Cmd sid="ui_316" product="dev" />: Mostrar solo el primer carácter del nombre de usuario.
+
+     * <Cmd sid="ui_357" product="dev" />: No mostrar el nombre de usuario.

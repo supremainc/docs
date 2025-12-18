@@ -1,0 +1,281 @@
+---
+id: installation
+title: Instalación
+description: Ofrece los procedimientos completos de instalación y ejemplos de conexión necesarios para el dispositivo.
+keywords:
+  - Soporte
+  - Alimentación
+  - Red
+  - Entrada
+  - Relé
+  - Independiente
+  - E/S Segura
+  - Wiegand
+---
+
+Ofrece los procedimientos completos de instalación y ejemplos de conexión necesarios para el dispositivo.
+
+## Fijar el soporte y el producto
+
+1. Asegura firmemente el soporte con los tornillos de fijación en el lugar donde se montará el producto.
+
+   <Image src="/img/device/installation-device1-xpq2.svg" className="none" width="20%" alone />
+
+   :::info
+
+   * Si instalas el producto en una pared de concreto, perfora un agujero, inserta un anclaje de PVC y sujétalo con un tornillo de fijación.
+
+   * Para evitar interferencias de RF, se debe mantener una distancia mínima de separación.
+
+   <Columns>
+     <Column className="text--center">
+       <Image src="/img/device/installation-wall1-xpq2.png" className="none" width="60%" />
+
+       <div className="overflow-x">
+         | Espesor de pared | Distancia |
+         | :-: | :-: |
+         | 100 mm | 270 mm |
+         | 120 mm | 250 mm |
+         | 150 mm | 170 mm |
+       </div>
+     </Column>
+
+     <Column className="text--center">
+       <Image src="/img/device/installation-wall2-xpq2.png" className="none" width="60%" />
+     </Column>
+   </Columns>
+
+   * Al utilizar una credencial de acceso móvil, instala los dispositivos manteniendo una distancia mínima de 1 m entre ellos para evitar interferencias BLE.
+
+   :::
+
+2. Aprieta los cuatro tornillos que sujetan la cubierta del cable.
+
+   <Image src="/img/device/installation-device2-xpq2.svg" className="none" width="20%" alone />
+
+   :::info
+
+   Asegúrate de que la cubierta del cable esté completamente cerrada después de conectarla al producto para mantener las características de resistencia al agua y al polvo (clasificación IP65).
+
+   :::
+
+3. Monta el producto en el soporte fijado.
+
+   <Image src="/img/device/installation-device3-xpq2.svg" className="none" width="35%" alone />
+
+4. Gira los tornillos de fijación para ensamblar el producto con el soporte.
+
+   <Image src="/img/device/installation-device4-xpq2.svg" className="none" width="15%" alone />
+
+   :::info
+
+   Al ensamblar el producto con el soporte, puedes usar el tornillo de fijación del soporte incluido (en forma de estrella) en lugar del tornillo de fijación del producto para aumentar la seguridad.
+
+   :::
+
+{/* ## 전원 연결 */}
+
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+## Conectar alimentación del lector y la cerradura
+
+### Conectar alimentación del lector
+
+<Image src="/img/device/installation-reader-power-connection-xpq2.png" className="none" width="65%" />
+
+### Conectar alimentación de la cerradura
+
+<Image src="/img/device/installation-lock-power-connection-xpq2.png" className="none" width="65%" />
+
+### Especificaciones de alimentación del lector y la cerradura
+
+<div className="overflow-x">
+  | Alimentación | Corriente máxima del lector | Corriente máxima de la cerradura |
+  | :-: | :-: | :-: |
+  | DC 12V | 500 mA | 1.2 A |
+  | DC 24V | 250 mA | 600 mA |
+  | PoE (salida de 12 V) | 500 mA | No compatible |
+</div>
+
+### Longitud máxima de extensión según especificación de cable
+
+La distancia que se puede conectar puede variar según las especificaciones del cable y el entorno de instalación utilizado para la conexión de alimentación. Si las conexiones de los cables se realizan de forma incorrecta, el dispositivo puede funcionar incorrectamente. El producto admite DC 12 V, DC 24 V y PoE. Verifica la longitud máxima de extensión para cada calibre de cable y conecta la alimentación correctamente.
+
+<Table>
+  <Thead>
+    <Row>
+      <Th rowspan={2}>Especificación del cable</Th>
+
+      <Th colspan={2}>DC 12V</Th>
+
+      <Th colspan={2}>DC 24V</Th>
+
+      <Th colspan={2}>PoE (salida de 12 V)</Th>
+    </Row>
+
+    <Row>
+      <Th>Lector (500 mA)</Th>
+
+      <Th>Cerradura (1.2 A)</Th>
+
+      <Th>Lector (250 mA)</Th>
+
+      <Th>Cerradura (600 mA)</Th>
+
+      <Th>Lector (500 mA)</Th>
+    </Row>
+  </Thead>
+
+  <Tbody>
+    <Row className="center">
+      <Td>14 AWG</Td>
+      <Td>190 m</Td>
+      <Td>95 m</Td>
+      <Td>770 m</Td>
+      <Td>385 m</Td>
+      <Td>190 m</Td>
+    </Row>
+
+    <Row className="center">
+      <Td>16 AWG</Td>
+      <Td>120 m</Td>
+      <Td>60 m</Td>
+      <Td>480 m</Td>
+      <Td>240 m</Td>
+      <Td>120 m</Td>
+    </Row>
+
+    <Row className="center">
+      <Td>18 AWG</Td>
+      <Td>75 m</Td>
+      <Td>35 m</Td>
+      <Td>300 m</Td>
+      <Td>150 m</Td>
+      <Td>75 m</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+:::info
+
+La longitud máxima de extensión real puede variar según la resistencia del fabricante y modelo del cable.
+
+:::
+
+<PageBreak />
+
+{/* ## 네트워크 연결 */}
+
+import NetworkConnection from "../../common/_device-network-connection.mdx";
+
+<NetworkConnection />
+
+{/* ## Input 연결 */}
+
+import InputConnection from "../../common/_device-input-connetion.mdx";
+
+<InputConnection />
+
+{/* ## 릴레이 연결 */}
+
+import RelayConnectioin from "../../common/_device-relay-connection.mdx";
+
+<RelayConnectioin />
+
+<PageBreak />
+
+{/* ## 독립형 연결 */}
+
+import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
+
+<StandaloneConnection />
+
+{/* 공통 노트 */}
+
+import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
+
+<CommonNotes />
+
+<PageBreak />
+
+{/* ## Secure I/O 2 연결 */}
+
+import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
+
+<SecureIOConnection />
+
+{/* 공통 노트 */}
+
+<CommonNotes />
+
+<PageBreak />
+
+{/* ## Wiegand 연결 */}
+
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+{/* ## 네트워크 설정 초기화 */}
+
+import Resetnetwork from "../../common/_device-reset-network-settings.mdx";
+
+<Resetnetwork />
+
+<PageBreak />
+
+{/* ## 공장 초기화 */}
+
+import Factoryreset from "../../common/_device-factory-reset.mdx";
+
+<Factoryreset name="verde" />
+
+## Actualización de firmware
+
+Conecta una memoria USB para actualizar el firmware.
+
+1. Guarda el archivo de firmware en una memoria USB para la actualización.
+
+   :::info
+
+   Se recomienda guardar solo un archivo de firmware en la memoria USB para la actualización.
+
+   :::
+
+2. Conecta la memoria USB al dispositivo.
+
+   :::info
+
+   La autenticación se suspende temporalmente mientras se lee la memoria USB.
+
+   :::
+
+3. Cuando el LED/zumbador indique una solicitud de autenticación, autentica con una credencial de administrador.
+
+   :::info
+
+   * Registra el administrador en BioStar X para el dispositivo. No puedes continuar con la actualización de firmware si no hay un administrador registrado en el dispositivo. Para obtener información detallada sobre cómo registrar un administrador, consulta la [Guía de administrador de BioStar X](../../platform/biostar_x/set-permission).
+
+   * Solo se permite un intento de autenticación por inserción de memoria USB.
+
+   * Si la autenticación falla, el LED/zumbador indicará la falla y la lectura de la USB terminará. Desconecta la memoria USB y vuelve a conectarla al dispositivo.
+
+   :::
+
+4. Tras la autenticación correcta del administrador, el dispositivo realiza una actualización de firmware e indica la actualización con el LED.
+
+   :::info
+
+   Si falta el archivo de firmware o está dañado, la actualización no se realizará y el LED/zumbador indicará la falla.
+
+   :::
+
+5. El dispositivo se reinicia automáticamente cuando la actualización de firmware se completa.
+
+:::caution
+
+No desconectes la fuente de alimentación mientras actualizas el firmware del dispositivo. El dispositivo puede fallar.
+
+:::

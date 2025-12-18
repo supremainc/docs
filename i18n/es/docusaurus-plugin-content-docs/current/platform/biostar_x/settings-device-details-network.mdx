@@ -1,0 +1,225 @@
+---
+id: settings-device-details-network
+title: Configuración de red
+description: Directrices para la configuración de red, como TCP/IP, RS-485 y la comunicación con el servidor para el dispositivo.
+keywords:
+  - Dispositivo
+  - Red
+  - TCP/IP
+  - RS-485
+  - Comunicación con el servidor
+  - Comunicación serial
+  - Esclavo inteligente
+---
+
+A continuación se muestran los ajustes de red del dispositivo registrado. En la sección <Cmd sid="device.info.network" product="2" />, configure la red TCP/IP, RS-485 y la comunicación con el servidor del dispositivo.
+
+<Image src="/img/biostarx-setting-device-edit-network.png" />
+
+:::info
+
+* Las opciones de red disponibles pueden variar según el tipo de dispositivo.
+
+* Si el usuario ha realizado cambios, haga clic en <Cmd sid="button.apply" product="2" />. Los cambios no se aplicarán al dispositivo si no se guardan.
+
+:::
+
+## Ajustes de TCP/IP
+
+En el grupo <Cmd sid="device.info.tcpIpSetting" product="2" />, configure la dirección IP del dispositivo.
+
+:::info
+
+Para obtener más información sobre la configuración de la dirección IP durante el registro del dispositivo, consulte [lo siguiente](settings-adding-devices#setipaddress).
+
+:::
+
+### Ajustes de IP dinámica
+
+Seleccione la casilla de la opción <Cmd sid="device.info.useDhcp" product="2" /> para configurar el dispositivo con IP dinámica. El dispositivo recibirá automáticamente una dirección IP del servidor DHCP, la cual puede cambiar. En ese caso, la dirección IP del dispositivo puede cambiar.
+
+### Ajustes de IP estática
+
+Desactive la casilla de la opción <Cmd sid="device.info.useDhcp" product="2" /> para asignar una dirección IP estática al dispositivo. Ingrese la información de red del dispositivo en los campos siguientes.
+
+* <Cmd sid="device.info.ipdOsdpID" product="2" />: Ingrese la dirección OSDP del dispositivo. Debe ser un número entre 0 y 126.
+
+* <Cmd sid="device.info.subnetMask" product="2" />: Ingrese la máscara de subred del dispositivo.
+
+* <Cmd sid="device.info.gateway" product="2" />: Ingrese la dirección de puerta de enlace del dispositivo.
+
+* <Cmd sid="device.info.devicePort" product="2" />: Ingrese el número de puerto del dispositivo.
+
+* <Cmd sid="device.info.dnsServerAddress" product="2" />: Ingrese la dirección del servidor DNS del dispositivo.
+
+<details>
+  <summary>Ver dispositivos y versiones de firmware que pueden aceptar direcciones de servidor DNS</summary>
+
+  * Firmware de BioStation L2 1.0.0 o posterior
+
+  * Firmware de BioStation A2 1.0.0 o posterior
+
+  * Firmware de BioStation 2 1.2.0 o posterior
+
+  * Firmware de BioLite Net 2.2.0 o posterior
+
+  * Firmware de BioEntry Plus 2.2.0 o posterior
+
+  * Firmware de BioEntry W 2.2.0 o posterior
+
+  * Firmware de XPass 2.2.0 o posterior
+
+  * Firmware de XPass S2 2.2.0 o posterior
+
+  * Firmware de FaceStation 2 1.0.0 o posterior
+
+  * Firmware de BioLite N2 1.0.0 o posterior
+
+  * Firmware de FaceLite 1.0.0 o posterior
+
+  * Firmware de XPass 2 1.0.0 o posterior
+
+  * FaceStation F2 versión de firmware 1.0.0 o superior
+
+  * X-Station 2 versión de firmware 1.0.0 o superior
+
+  * BioStation 3 firmware 1.0.0 o superior
+
+  * BioEntry W3 versión de firmware 1.0.0 o superior
+</details>
+
+## Ajustes de LAN inalámbrica
+
+En el grupo <Cmd sid="device.info.wlan" product="2" />, active o desactive los ajustes de LAN inalámbrica del dispositivo. Los ajustes detallados están disponibles en la guía del usuario del dispositivo.
+
+:::info
+
+Consulte los siguientes dispositivos que admiten ajustes de LAN inalámbrica:
+
+* BioStation 2
+
+* BioStation A2
+
+* FaceStation 2
+
+* BioStation 3
+
+:::
+
+## Ajustes de comunicación con el servidor
+
+En el grupo <Cmd sid="device.info.server" product="2" />, configure cómo se comunica el dispositivo con el servidor **BioStar X**.
+
+* <Cmd sid="device.info.deviceToServerConnection" product="2" />: Al seleccionar esta opción, ingrese la dirección IP y el número de puerto del servidor **BioStar X** al que se conectará el dispositivo.
+
+* <Cmd sid="device.info.serverIP" product="2" />: Ingrese la dirección IP o el nombre de dominio del servidor **BioStar X**.
+
+* <Cmd sid="device.info.serverPort" product="2" />: Ingrese el número de puerto del servidor **BioStar X**.
+
+:::tip
+
+Esta función es útil cuando cambia la dirección IP del servidor **BioStar X**. Si configura previamente esta opción en varios dispositivos antes de cambiar la dirección IP del servidor, los dispositivos se conectarán automáticamente a la dirección IP actualizada.
+
+:::
+
+<details>
+  <summary>Ver dispositivos y versiones de firmware que permiten ingresar nombres de dominio en <Cmd sid="device.info.serverIP" product="2" /></summary>
+
+  * Firmware de BioStation L2 1.0.0 o posterior
+
+  * Firmware de BioStation A2 1.0.0 o posterior
+
+  * Firmware de BioStation 2 1.2.0 o posterior
+
+  * Firmware de BioEntry W2 1.0.0 o posterior
+
+  * Firmware de BioEntry P2 1.0.0 o posterior
+
+  * Firmware de FaceStation 2 1.0.0 o posterior
+
+  * Firmware de FaceLite 1.0.0 o posterior
+
+  * FaceStation F2 versión de firmware 1.0.0 o superior
+
+  * Firmware de BioLite N2 1.0.0 o posterior
+
+  * Firmware de BioLite Net 2.2.0 o posterior
+
+  * Firmware de BioEntry Plus 2.2.0 o posterior
+
+  * Firmware de BioEntry W 2.2.0 o posterior
+
+  * Firmware de XPass 2.2.0 o posterior
+
+  * Firmware de XPass S2 2.2.0 o posterior
+
+  * Firmware de XPass 2 1.0.0 o posterior
+
+  * X-Station 2 versión de firmware 1.0.0 o superior
+
+  * BioStation 3 firmware 1.0.0 o superior
+
+  * BioEntry W3 versión de firmware 1.0.0 o superior
+</details>
+
+## Configuración de comunicación serial
+
+En el grupo <Cmd sid="device.info.serialSetting" product="2" />, configure el modo, el rendimiento de transmisión y la visualización de resultados de autenticación para dispositivos conectados mediante RS-485.
+
+* <Cmd sid="device.info.rs485" product="2" />: Configure el modo RS-485.
+
+* <Cmd sid="device.info.baudRate" product="2" />: Configure el rendimiento de comunicación RS-485.
+
+* <Cmd sid="device.info.osdpAuthResult" product="2" />: Seleccione el resultado de autenticación que se mostrará en la pantalla del dispositivo cuando se utilice con un controlador de terceros.
+
+  * <Cmd sid="device.info.osdpControllerResult" product="2" />: Permite mostrar en el dispositivo el resultado de autenticación del controlador de terceros.
+
+  * <Cmd sid="device.info.osdpDeviceResult" product="2" />: Permite mostrar el resultado de autenticación del propio dispositivo.
+
+:::info
+
+La opción <Cmd sid="device.info.osdpAuthResult" product="2" /> se habilita cuando la opción <Cmd sid="device.info.rs485" product="2" /> está configurada en <Cmd sid="device.rs485.slave" product="2" /> o <Cmd sid="device.rs485.default" product="2" />.
+
+:::
+
+## Ajustes de esclavo inteligente
+
+En el grupo <Cmd sid="device.info.intelligentPD" product="2" />, cuando un usuario se autentica con huella digital en un entorno donde los dispositivos Suprema están conectados a controladores de terceros, el resultado de la autenticación se envía como datos de tarjeta OSDP (Open Supervised Device Protocol) para admitir numerosos emparejamientos 1:1 o 1:N.
+
+* <Cmd sid="device.info.ipdUseFailCode" product="2" />: Cuando utilice el esclavo inteligente, si ocurre una excepción, como un fallo de autenticación, ingrese el código de excepción en formato decimal (0-18446744073709551615) o hexadecimal (0-FFFFFFFFFFFFFFFF) para registrar un log preciso. El valor hexadecimal puede introducirse con números o letras.
+
+  <Image src="/img/biostarx-setting-device-edit-network-exception-code.png" />
+
+* <Cmd sid="device.info.ipdCardFormat" product="2" />: Permite enviar el ID de tarjeta o el ID de usuario tras una autenticación exitosa.
+
+* <Cmd sid="device.info.ipdOsdpID" product="2" />: Ingrese la dirección OSDP del dispositivo. Debe ser un número entre 0 y 126.
+
+:::info
+
+* Puede introducir datos de hasta 8 bytes en <Cmd sid="device.info.ipdUseFailCode" product="2" />.
+
+* La opción <Cmd sid="device.info.intelligentPD" product="2" /> se habilita cuando la opción <Cmd sid="device.info.rs485" product="2" /> está configurada en <Cmd sid="device.rs485.default" product="2" />.
+
+:::
+
+<details>
+  <summary>Ver dispositivos y versiones de firmware que admiten la opción <Cmd sid="device.info.intelligentPD" product="2" /></summary>
+
+  * Firmware de BioEntry W2 1.6.3 o posterior
+
+  * Firmware de BioStation L2 1.6.1 o posterior
+
+  * Firmware de BioEntry P2 1.4.1 o superior
+
+  * Firmware de XPass 2 1.2.3 o superior
+
+  * Firmware de X-Station 2 1.1.0 o superior
+
+  * Firmware de BioLite N2 1.4.1 o superior
+
+  * Firmware de FaceStation F2 1.1.2 o superior
+
+  * BioStation 3 firmware 1.0.0 o superior
+
+  * BioEntry W3 versión de firmware 1.0.0 o superior
+</details>

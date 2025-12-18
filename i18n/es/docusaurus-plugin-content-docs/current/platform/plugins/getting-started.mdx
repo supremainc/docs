@@ -1,0 +1,93 @@
+---
+id: getting-started
+title: Primeros pasos
+description: Esta guía describe los requisitos y los conceptos básicos para iniciar el desarrollo de complementos de BioStar X.
+keywords:
+  - Desarrollo de complementos
+  - Primeros pasos
+  - Requisitos
+  - Arquitectura
+---
+
+Esto proporciona los requisitos y conceptos básicos para desarrollar complementos que se integren con **BioStar X**.
+
+## Antes de comenzar
+
+### Conocimientos previos necesarios
+
+* **Experiencia en desarrollo de API REST HTTP**: comprensión básica del desarrollo de servicios web y la comunicación por API
+
+* **Comprensión del cifrado de clave pública RSA**: conocimientos básicos de los métodos de cifrado asimétrico
+
+* **Comprensión del cifrado de clave simétrica AES**: conocimientos básicos de los métodos de cifrado simétrico
+
+* **Experiencia en desarrollo de servidores web**: Python FastAPI, Node.js Express, Java Spring Boot, etc.
+
+### Requisitos del entorno de desarrollo
+
+* **Servidor BioStar X**: entorno de prueba de **BioStar X**
+
+* **Servidor web de desarrollo**: servidor web para alojar el complemento
+
+* **Cliente HTTP**: herramientas para probar la API como curl, Postman, etc.
+
+## Arquitectura del complemento
+
+El complemento de **BioStar X** funciona con la siguiente estructura.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant U as User
+    participant P as Plugin
+    participant SM as ServiceManager
+    participant BS as BioStar X Server
+    participant BC as BioStar X Client
+    
+    Note over U,BC: Register Plugin
+    U->>+SM: Register plugin
+    SM->>+P: Ping to register address / e.g. {address}/bsx
+    P->>-SM: Pong with header value in body
+    SM-->SM: Certificate generation
+    SM->>-U: Response / Reg success
+
+    Note over U,BC: Download certification
+    U->>+SM: Download certification
+    SM-->SM: Certification
+    SM->>-U: Response certification file
+
+    Note over U,BC: Open Plugin Service
+    U->>+BC: Plugin Click
+    BC->>-P: Post request(with user id, plugin id) with new tab
+    U-->>+P: Watched new tab
+    P->>+BS: Post method called <br/>→ /api/session/bridge,<br/>Body: {pluginid, userid, key (a random 32-byte key encrypted with the certification and transmitted)}
+    Note right of BS: /api/session/brdige
+    BS->>-P: Response (bs-session-ID)
+    Note right of BS: Encrypt the current user's bs-session-id using the key and transmit it.
+    Note right of P: bs-session-id must be decrypted before use
+    P->>-U: Response / Open Page
+```
+
+:::note
+
+La clave o el certificado no se pueden volver a descargar a menos que se vuelvan a emitir después de haber sido descargados una vez.
+
+:::
+
+## Descripción general del funcionamiento del complemento
+
+El sistema de complementos de **BioStar X** opera en tres etapas principales.
+
+1. **Registro del complemento**: registro del servidor del complemento en el Service Manager y verificación de la accesibilidad
+
+2. **Gestión de certificados**: gestión de claves para una comunicación segura mediante Session Bridge
+
+3. **Ejecución del complemento**: autenticación a través del Session Bridge automático cuando el usuario accede al complemento
+
+Para conocer los métodos de implementación específicos en cada etapa, consulte la [guía de desarrollo](./development-guide).
+
+:::info
+
+Los certificados se pueden descargar desde la página de detalles del complemento correspondiente después de registrar el complemento. Si pierdes el certificado, descárgalo de nuevo. En ese momento, el certificado existente se invalidará.
+
+:::

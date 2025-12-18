@@ -1,0 +1,14 @@
+{
+  "link.item.label.Stack Overflow": {
+    "message": "Stack Overflow",
+    "description": "The label of footer link with label=Stack Overflow linking to https://stackoverflow.com/questions/tagged/docusaurus"
+  },
+  "copyright": {
+    "message": "Copyright © Suprema Inc. Todos los derechos reservados. | SUPREMA Co., Ltd. Número de registro de empresa 431-87-00369",
+    "description": "The footer copyright"
+  },
+  "logo.alt": {
+    "message": "Suprema Security & biometrics",
+    "description": "The alt text of footer logo"
+  }
+}

@@ -1,0 +1,149 @@
+---
+id: authentication
+title: Autenticación
+description: Describe los métodos de autenticación compatibles y los procedimientos de autenticación.
+keywords:
+  - Modo de autenticación
+  - Operación
+  - PIN
+  - Rostro
+  - T&A (Tiempo y Asistencia)
+---
+
+Describe los métodos de autenticación compatibles y los procedimientos de autenticación.
+
+## Modo de autenticación
+
+Configura el modo de autenticación. Use <Cmd sid="ui_228" product="dev" />, <Cmd sid="ui_040" product="dev" />, <Cmd sid="ui_322" product="dev" /> y <Cmd sid="ui_020" product="dev" /> en combinación como modos de autenticación y establezca horarios para cada modo.
+
+### Registrar modo de autenticación {#registering-auth-mode}
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Pulsa <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_261" product="dev" />.
+
+3. Selecciona <Image src="/img/common/ico-add2.svg" ico alone />.
+
+4. Presione <Image src="/img/common/ico-add3.svg" ico alone /> para ver las credenciales que se pueden agregar en la pantalla. Selecciona las credenciales que deseas añadir. Elimine las credenciales añadidas presionando <Image src="/img/common/ico-cancel1.svg" ico alone /> cuando se hayan agregado credenciales.
+
+   <Image src="/img/device/fs2-auth-mode.png" />
+
+5. Después de configurar el modo de autenticación deseado, configura <Cmd sid="ui_203" product="dev" />.
+
+   <div className="overflow-x">
+     | Categoría | Descripción |
+     | :-: | --- |
+     | Rostro | * <Image src="/img/common/ico-authmode-face-fs2.png" ico alone />: Este modo usa solo autenticación facial.<br />- <Image src="/img/common/ico-authmode-face-fs2.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs2a.png" ico alone />: Este modo primero autentica con rostro y luego ingresa el PIN. |
+     | Tarjeta | - <Image src="/img/common/ico-authmode-card-bs2a.png" ico alone />: Este modo usa solo autenticación con tarjeta.<br />- <Image src="/img/common/ico-authmode-card-bs2a.png" ico alone /> + <Image src="/img/common/ico-authmode-face-fs2.png" ico alone />: Este modo autentica con tarjeta y luego con rostro.<br />- <Image src="/img/common/ico-authmode-card-bs2a.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs2a.png" ico alone />: Este modo autentica con tarjeta y luego ingresa el PIN.<br />- <Image src="/img/common/ico-authmode-card-bs2a.png" ico alone /> + <Image src="/img/common/ico-authmode-face-fs2.png" ico alone /> / <Image src="/img/common/ico-authmode-pin-bs2a.png" ico alone />: Este modo autentica con tarjeta y luego con rostro o ingresa el PIN.<br />- <Image src="/img/common/ico-authmode-card-bs2a.png" ico alone /> + <Image src="/img/common/ico-authmode-face-fs2.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs2a.png" ico alone />: Este modo usa autenticación facial y entrada de PIN después de autenticar con tarjeta. |
+     | ID | * <Image src="/img/common/ico-authmode-id-bs2a.png" ico alone /> + <Image src="/img/common/ico-authmode-face-fs2.png" ico alone />: Este modo ingresa el ID y luego autentica con rostro.<br />- <Image src="/img/common/ico-authmode-id-bs2a.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs2a.png" ico alone />: Este modo ingresa el ID y luego ingresa el PIN.<br />- <Image src="/img/common/ico-authmode-id-bs2a.png" ico alone /> + <Image src="/img/common/ico-authmode-face-fs2.png" ico alone /> / <Image src="/img/common/ico-authmode-pin-bs2a.png" ico alone />: Este modo ingresa el ID y luego autentica con rostro o ingresa el PIN.<br />- <Image src="/img/common/ico-authmode-id-bs2a.png" ico alone /> + <Image src="/img/common/ico-authmode-face-fs2.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs2a.png" ico alone />: Este modo usa autenticación facial y entrada de PIN después de ingresar el ID. |
+   </div>
+
+   :::info
+
+   * <Cmd sid="ui_203" product="dev" /> se puede configurar en BioStar X. Si no se establece un horario, solo se puede seleccionar <Cmd sid="ui_361" product="dev" />.
+
+   * Para obtener más información sobre la configuración de <Cmd sid="ui_203" product="dev" />, consulta la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-schedule).
+
+   :::
+
+6. Pulsa <Cmd sid="ui_037" product="dev" /> para guardar la configuración.
+
+### Modificar modo de autenticación
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Pulsa <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_261" product="dev" />.
+
+3. Selecciona el modo de autenticación que deseas modificar.
+
+4. Modifica el modo de autenticación consultando [Registrar modo de autenticación](#registering-auth-mode) y pulsa <Cmd sid="ui_037" product="dev" />.
+
+### Eliminar modo de autenticación
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Pulsa <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_261" product="dev" />.
+
+3. Pulsa <Image src="/img/common/ico-delete.svg" ico alone /> y selecciona el modo de autenticación que deseas eliminar. Es posible seleccionar varias opciones.
+
+4. Pulsa <Cmd sid="ui_037" product="dev" /> para eliminar el elemento seleccionado.
+
+## Operación
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Después de pulsar <Cmd sid="ui_256" product="dev" />, cambia el elemento deseado en <Cmd sid="ui_265" product="dev" />.
+
+   <Image src="/img/device/fs2-auth-option.png" />
+
+   * <Cmd sid="ui_310" product="dev" />: Ajusta la intensidad del LED IR detectando el brillo ambiental. Cambie los ajustes según el entorno de instalación.
+
+   * <Cmd sid="ui_140" product="dev" />: Establece la sensibilidad para detectar movimiento alrededor del dispositivo. Cuando <Cmd sid="ui_140" product="dev" /> está ajustado en <Cmd sid="ui_091" product="dev" />, toque la pantalla para autenticar el rostro.
+
+   * <Cmd sid="ui_260" product="dev" />: Si la autenticación no se completa dentro del tiempo establecido, la autenticación falla.
+
+   * <Cmd sid="ui_185" product="dev" />: Cuando se configura la coincidencia en el servidor, el dispositivo no realiza la autenticación del usuario; BioStar X realiza la autenticación del usuario. Se puede usar cuando el dispositivo tiene demasiada información de usuarios o cuando el dispositivo está instalado en exteriores.
+
+     :::info
+
+     * <Cmd sid="ui_185" product="dev" /> solo puede usar tarjetas e ID.
+
+     * Si utilizas <Cmd sid="ui_185" product="dev" />, debes habilitar la coincidencia en el servidor tanto en el dispositivo como en BioStar X. Para obtener más información sobre la configuración de coincidencia en el servidor de BioStar X, consulta la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-server-server#servermatching).
+
+     :::
+
+   * <Cmd sid="ui_232" product="dev" />: Establece la sensibilidad para la posición, el ángulo y la distancia del rostro al registrar un rostro. Establezca en alto para plantillas de rostro precisas.
+
+   * <Cmd sid="ui_115" product="dev" />: Si el rostro no se registra dentro del tiempo establecido, el registro se cancelará.
+
+   * <Cmd sid="ui_117" product="dev" />: Permite verificar rostros duplicados durante el registro de rostro.
+
+## Autenticación facial
+
+Cambie la configuración de la autenticación facial.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Después de presionar <Cmd sid="ui_256" product="dev" />, cambie el elemento deseado en <Cmd sid="ui_231" product="dev" />.
+
+   <Image src="/img/device/fs2-auth.png" />
+
+   * <Cmd sid="ui_149" product="dev" />: Configura el nivel de seguridad para la autenticación 1:N.
+
+   * <Cmd sid="ui_078" product="dev" />: Permite verificar si se usa coincidencia de grupo. El uso de la coincidencia de grupo permite agrupar los rostros de varios usuarios para aumentar la velocidad de autenticación.
+
+   * <Cmd sid="ui_360" product="dev" />: Habilite esta opción si el firmware del dispositivo que registra las plantillas de rostro es v1.0.1 o anterior.
+
+   * <Cmd sid="ui_248" product="dev" />: Puede prevenir el registro de usuarios con rostros falsificados, como fotografías. Establezca la intensidad de <Cmd sid="ui_004" product="dev" /> a <Cmd sid="ui_006" product="dev" />; a medida que aumenta el nivel, la intensidad de la inspección se incrementa.
+
+   * <Cmd sid="ui_158" product="dev" />: Permite definir si se utiliza el registro facial rápido. Cuando el registro facial rápido está habilitado, el proceso de registro de rostro se establece en un paso; cuando está deshabilitado, se establece en tres pasos.
+
+     :::info
+
+     * <Cmd sid="ui_078" product="dev" /> se puede configurar en BioStar X.
+
+     * Si <Cmd sid="ui_248" product="dev" /> se establece en un nivel alto, el registro de rostros reales puede ser rechazado. Si el registro falla, inténtelo de nuevo o disminuya la intensidad de la inspección.
+
+     * Para registrar plantillas de rostro de alta calidad, desactive <Cmd sid="ui_158" product="dev" />.
+
+     :::
+
+## Modo de asistencia
+
+Configura cómo registrar el modo T&A.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Haz clic en <Cmd sid="ui_256" product="dev" />, luego modifica el elemento deseado en <Cmd sid="ui_083_list" product="dev" />.
+
+   <Image src="/img/device/fs2-auth1.png" />
+
+   * <Cmd sid="ui_083_list" product="dev" />: Configura cómo usar el modo de asistencia.
+
+   * <Cmd sid="ui_086" product="dev" />: Agrega eventos de asistencia.
+
+   * <Cmd sid="ui_082" product="dev" />: Exige a los usuarios seleccionar un evento de asistencia durante la autenticación. Disponible cuando <Cmd sid="ui_083_list" product="dev" /> está configurado en <Cmd sid="ui_199" product="dev" />.
+
+   * <Cmd sid="ui_081" product="dev" />: Permite a los usuarios usar solo los eventos de asistencia seleccionados por el administrador. Disponible cuando <Cmd sid="ui_083_list" product="dev" /> está configurado en <Cmd sid="ui_071" product="dev" />.
+
+   * <Cmd sid="ui_279" product="dev" />: Selecciona si usar códigos de trabajo.

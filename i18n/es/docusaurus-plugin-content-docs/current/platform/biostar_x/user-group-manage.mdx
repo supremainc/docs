@@ -1,0 +1,123 @@
+---
+id: user-group-manage
+title: Administrar grupos de usuarios
+description: Mejore la eficiencia de la gestión y la escalabilidad aprovechando los grupos de usuarios y optimice las operaciones de control de acceso.
+keywords:
+  - Usuario
+  - Grupo
+  - Control de acceso
+---
+
+Los grupos de usuarios pueden compartir propiedades y permisos comunes. Cuando un usuario se convierte en miembro de un grupo, automáticamente se le otorgan todas las propiedades de ese grupo. Un usuario solo puede pertenecer a un grupo de usuarios.
+
+* En lugar de establecer permisos de acceso para usuarios individuales, cree grupos de usuarios por departamento o rol y aplique los mismos permisos de acceso de una sola vez.
+
+* Al modificar los permisos de acceso del grupo, estos se aplican automáticamente a todos los usuarios que pertenecen a ese grupo, lo que reduce la carga administrativa. Ajuste rápidamente los permisos cuando haya cambios organizativos o nuevos proyectos.
+
+* Evite accesos innecesarios y aumente la seguridad estableciendo permisos por grupo.
+
+* Analice por separado los registros de acceso de grupos específicos, lo que facilita las auditorías de seguridad y la gestión de registros.
+
+* Los grupos de usuarios pueden aplicar políticas detalladas, como horarios límite de acceso y áreas restringidas, en integración con el nivel de acceso.
+
+## Agregar grupo {#group-additional}
+
+Cree grupos para gestionar varios usuarios de forma eficiente. Registre un nombre, como la organización a la que pertenece el usuario, para gestionarlo cómodamente.
+
+:::info
+
+* Registrar el nombre del grupo como el nombre de la organización o departamento al que pertenece el usuario facilita la gestión.
+
+* Cree subgrupos del grupo de forma secuencial hasta 8 niveles.
+
+* El nombre del grupo de usuarios puede tener hasta 48 caracteres.
+
+* Seleccione un grupo de la lista de grupos de usuarios para que en la lista de usuarios aparezcan únicamente los pertenecientes a ese grupo.
+
+:::
+
+### Crear grupo de nivel superior {#creating-a-higher-group}
+
+1. Haz clic en <Cmd sid="shell.header.user" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. En la barra lateral izquierda de la pantalla, seleccione <Cmd sid="team.user.tree.userGroupRootName" /> en la pestaña <Cmd sid="team.tree.userGroup" /> y haga clic derecho.
+
+   <Image src="/img/biostarx-user-group-add.png" />
+
+3. Haga clic en <Cmd sid="arena.tree.contextMenu.addNewGroup" /> en el menú emergente.
+
+4. Una vez creado el grupo, ingrese el nombre de grupo deseado.
+
+   <Image src="/img/biostarx-user-group-add-input.png" />
+
+### Crear subgrupo {#creating-a-lower-group}
+
+1. En la pestaña <Cmd sid="team.tree.userGroup" /> de la barra lateral izquierda de la pantalla, seleccione el grupo padre y haga clic derecho.
+
+   <Image src="/img/biostarx-user-sub-group-add.png" />
+
+2. Haga clic en <Cmd sid="arena.tree.contextMenu.addNewGroup" /> en el menú emergente.
+
+3. Una vez creado el grupo, ingrese el nombre de grupo deseado.
+
+:::info
+
+* Al crear un subgrupo, debe seleccionar un grupo padre y puede crear hasta 8 niveles.
+
+* Establezca un grupo como subgrupo del grupo de destino arrastrándolo a otro grupo. Mover un grupo a <Cmd sid="team.user.tree.userGroupRootName" /> permite configurarlo como grupo de nivel superior.
+
+:::
+
+## Cambiar nombre de grupo {#group-name-change}
+
+Cambie el nombre del grupo al que pertenece el usuario. Se recomienda cambiar el nombre del grupo cuando cambie el nombre de la organización o del departamento.
+
+1. Haz clic en <Cmd sid="shell.header.user" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. En la lista <Cmd sid="team.tree.userGroup" /> de la barra lateral izquierda, seleccione el grupo que desea renombrar y haga clic derecho.
+
+   <Image src="/img/biostarx-user-group-rename.png" />
+
+3. Haga clic en <Cmd sid="arena.tree.contextMenu.renameGroup" /> en el menú emergente.
+
+4. Cambie el nombre del grupo según desee.
+
+Verifique los cambios en la lista <Cmd sid="team.tree.userGroup" />.
+
+:::info
+
+El nombre del grupo de usuarios puede tener hasta 48 caracteres.
+
+:::
+
+## Eliminar grupo {#group-deletion}
+
+Elimine el grupo al que pertenece el usuario.
+
+1. Haz clic en <Cmd sid="shell.header.user" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. En la lista <Cmd sid="team.tree.userGroup" /> de la barra lateral izquierda, seleccione el grupo que desea eliminar y haga clic derecho.
+
+3. Haga clic en <Cmd sid="arena.tree.contextMenu.deleteGroup" /> en el menú emergente.
+
+   <Image src="/img/biostarx-user-group-remove.png" />
+
+4. Cuando aparezca el mensaje de confirmación, haga clic en el botón <Cmd sid="team.user.tree.dialog.delete.yes" />.
+
+En la lista <Cmd sid="team.tree.userGroup" />, confirme que el grupo seleccionado se ha eliminado.
+
+## Ver usuarios por grupo {#viewgroupuser}
+
+Vea los usuarios que pertenecen al grupo de usuarios. En la página <Cmd sid="shell.header.user" />, seleccione el grupo de usuarios deseado en la barra lateral izquierda. Los usuarios del grupo seleccionado se mostrarán en la lista.
+
+<Image src="/img/biostarx-user-group-select-group-user.png" />
+
+## Expandir/contraer lista de grupos
+
+Expanda o contraiga la lista de grupos de usuarios. En la pestaña <Cmd sid="team.tree.userGroup" />, seleccione <Cmd sid="team.user.tree.userGroupRootName" /> y haga clic derecho. En el menú emergente, haga clic en <Cmd sid="team.expandAll" /> o <Cmd sid="team.collapseAll" />.
+
+<Image src="/img/biostarx-user-group-expand-collapse.png" />
+
+Si hay subgrupos dentro del grupo, puede expandirlos o contraerlos. Seleccione el grupo padre y haga clic derecho. En el menú emergente, haga clic en <Cmd sid="common.tree.contextMenu.expandBelow" /> o <Cmd sid="common.tree.contextMenu.collapseBelow" />.
+
+<Image src="/img/biostarx-user-sub-group-expand-collapse.png" />

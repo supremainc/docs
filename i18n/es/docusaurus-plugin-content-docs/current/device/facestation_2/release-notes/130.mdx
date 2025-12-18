@@ -1,0 +1,88 @@
+---
+id: 130
+title: Firmware Version 1.3.0
+---
+
+# Firmware Version 1.3.0 (Build No. 1.3.0_190805)
+
+Release<Separator/>2019-09-25
+
+## Main Fixes
+
+1. The master device abnormally shuts down if it is operated after reconnecting a disconnected slave device.
+
+1. The master device reboots abnormally when a user authenticates the face to the slave device continuously.
+
+1. The master device abnormally shuts down if the RS-485 mode of the master device is changed after disconnecting the 31 connected slave devices.
+
+## New Features and Improvements
+
+---
+
+1. OSDP Standardization
+
+    - Improved to comply with OSDP V2.1.7 protocol when connecting with 3rd-party controllers.
+
+1. Increase of the number of administrators that can be added.
+
+1. Support to the Clear APB for each user.
+
+1. Supports options by card type.
+
+1. Increase of the maximum number of floor levels to up to 2,048.
+
+1. Add the event items to IMAGE LOG menu.
+
+1. Change the way new settings are applied when adding administrators using batch edit of devices.
+
+    - Before: Overwrite a new setting to existing settings.
+
+    - After: Add a new setting to existing settings.
+
+1. Supports the duplicate face check when registering users on a device.
+
+1. Supports setting options for Wiegand authentication result output.
+
+    - User ID and Card ID
+
+1. Supports Anti-Tailgating at doors.
+
+1. If the data transmission fails when communicating with OSDP, it is transmitted again.
+
+1. Improves the Enhanced fake face enrollment block.
+
+1. Improves the usability.
+
+    - expanded the area of the menu button.
+
+1. Support for RS-485 connections to new devices
+
+    - XPass 2 (XP2-MDPB, XP2-GDPB, XP2-GKDPB)
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. When upgrading firmware using USB, upgrade fails due to a timeout.
+
+    - Change the timeout from 90 seconds to 5 minutes.
+
+1. Scanning a deleted card to the device causes the device to restart abnormally.
+
+1. The device recognizes the iCLASS Seos card as a CSN card.
+
+1. Importing user data exported from BioStation A2 causes the device to restart abnormally.
+
+1. Start time is not applied in UTC when importing filtered logs using SDK.
+
+1. Relay works after reconnecting for authentication that occurred when elevator connection is disconnected.
+
+1. Access is denied and user ID is displayed abnormally when using a smart card or fingerprint authentication in One Device Mode.
+
+1. The Wiegand output data are transmitted in duplicate.
+
+1. A delay occurs in opening the door when authentication succeeds, and the device UI is generally slow to respond.
+
+</BugLists>

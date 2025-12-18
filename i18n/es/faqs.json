@@ -1,0 +1,317 @@
+[
+  {
+    "category": {
+      "title": "Alimentación",
+      "hid": "power",
+      "contents": [
+        {
+          "product": [
+            "biostation_3",
+            "biostation_2",
+            "biostation_2a",
+            "facestation_f2",
+            "bioentry_n2",
+            "biolite_n2",
+            "biostation_a2",
+            "biostation_l2",
+            "facelite",
+            "facestation_2",
+            "xstation_2"
+          ],
+          "question": "Se está suministrando energía, pero el dispositivo no funciona.",
+          "answer": [
+            "Si el terminal y el soporte están muy separados, el dispositivo puede no funcionar debido al interruptor antisabotaje.",
+            "Verifique el adaptador o el cable de alimentación."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "category": {
+      "title": "PIN",
+      "hid": "pin",
+      "contents": [
+        {
+          "product": [
+            "biostation_3",
+            "biostation_2",
+            "biostation_2a",
+            "facestation_f2",
+            "bioentry_n2",
+            "biolite_n2",
+            "biostation_a2",
+            "biostation_l2",
+            "facelite",
+            "facestation_2",
+            "xstation_2"
+          ],
+          "question": "Perdí mi PIN.",
+          "answer": [
+            "Para un PIN de usuario normal, solicítelo al administrador e introdúzcalo nuevamente.",
+            "Si perdió el PIN de administrador, comuníquese con la empresa de instalación."
+          ]
+        },
+        {
+          "product": [
+            "biostation_3",
+            "biostation_2",
+            "biostation_2a",
+            "facestation_f2",
+            "bioentry_n2",
+            "biolite_n2",
+            "biostation_a2",
+            "biostation_l2",
+            "facelite",
+            "facestation_2",
+            "xstation_2"
+          ],
+          "question": "Ingresé mi PIN y pulsé el botón <span class='cmd'>OK</span>, pero aún no puedo abrir la puerta.",
+          "answer": [
+            "Verifique si ingresó el PIN registrado correctamente.",
+            "Verifique si ha cambiado el PIN recientemente.",
+            "Si no recuerda el PIN, solicítelo al administrador e introdúzcalo nuevamente."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "category": {
+      "title": "QR/Código de Barras",
+      "hid": "qrbarcode",
+      "contents": [
+        {
+          "product": [
+            "xstation_2"
+          ],
+          "question": "No se puede escanear un código QR/código de barras.",
+          "answer": [
+            "Consulte <a href='getting-started#how-to-scan-qrbarcode'>Método correcto de autenticación con QR/código de barras</a> y vuelva a intentarlo.",
+            "<b>XS2-QDPB</b>, <b>XS2-QAPB</b>: Coloque el haz guía en el centro del código QR.",
+            "<b>XS2-DPB</b>, <b>XS2-APB</b>: Coloque el QR/código de barras en el centro de la pantalla de escaneo del dispositivo.",
+            "Ajuste el brillo de su smartphone para que el dispositivo pueda leer el QR/código de barras claramente y vuelva a intentarlo.",
+            "Si el problema persiste, comuníquese con el administrador que emitió el QR/código de barras."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "category": {
+      "title": "Rostro",
+      "hid": "face",
+      "contents": [
+        {
+          "product": [
+            "biostation_3",
+            "facestation_f2",
+            "facelite",
+            "facestation_2"
+          ],
+          "question": "El rostro está registrado pero la autenticación facial no se realiza correctamente y se producen errores con frecuencia.",
+          "answer": [
+            "Consulte <a href='getting-started#cautions-enrolling-faces'>Precauciones para registrar rostros</a> y registre el rostro nuevamente.",
+            "Si hay un gran número de rostros registrados, cambie <span class='cmd'>Matching Timeout</span> y vuelva a intentarlo."
+          ]
+        },
+        {
+          "product": [
+            "biostation_3",
+            "facestation_f2",
+            "facelite",
+            "facestation_2"
+          ],
+          "question": "La autenticación facial dejó de funcionar repentinamente.",
+          "answer": [
+            "Consulte <a href='getting-started#cautions-authenticating-face'>Precauciones para autenticar un rostro</a> y vuelva a intentarlo."
+          ]
+        },
+        {
+          "product": [
+            "biostation_3",
+            "facestation_f2"
+          ],
+          "question": "<span class='cmd'>Mask Detection</span> está en <span class='cmd'>Enabled</span>, pero la autenticación facial no se realiza correctamente al usar una mascarilla.",
+          "answer": [
+            "Autentique su rostro dos veces con la mascarilla bajada hasta la punta de la nariz. Luego, autentique su rostro nuevamente usando una mascarilla que cubra completamente la nariz. Si el problema persiste, comuníquese con la empresa de instalación."
+          ]
+        },
+        {
+          "product": [
+            "facestation_f2"
+          ],
+          "question": "La cámara térmica no puede medir la temperatura.",
+          "answer": [
+            "Verifique que la cámara térmica esté conectada correctamente al terminal.",
+            "Mida la temperatura nuevamente sin cubrirse la frente. Si el problema persiste, comuníquese con la empresa de instalación."
+          ]
+        },
+        {
+          "product": [
+            "facestation_f2"
+          ],
+          "question": "La cámara térmica mide una temperatura inferior a la real.",
+          "answer": [
+            "Si un usuario mide la temperatura después de estar expuesto al frío durante mucho tiempo, la cámara puede medir una temperatura inferior a la real. Espere de 1 a 2 minutos en el interior y vuelva a intentarlo. Si el problema persiste, comuníquese con la empresa de instalación."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "category": {
+      "title": "Huella",
+      "hid": "fingerprint",
+      "contents": [
+        {
+          "product": [
+            "bioentry_n2",
+            "biostation_2",
+            "biostation_2a",
+            "biolite_n2",
+            "biostation_a2",
+            "biostation_l2",
+            "facestation_f2"
+          ],
+          "question": "La huella se ha registrado, pero la autenticación de huella no se realiza correctamente y se producen errores con frecuencia.",
+          "answer": [
+            "Consulte <a href='getting-started#cautions-enrolling-fingers'>Cómo registrar una huella</a> y vuelva a registrarla.",
+            "Si su huella tiene un corte, el dispositivo puede reconocerla como la huella de otra persona.",
+            "Si hay un gran número de huellas registradas, cambie <span class='cmd'>Matching Timeout</span> y vuelva a intentarlo.",
+            "La tasa de autenticación puede variar para cada huella debido a diferentes características. Registre la huella de otro dedo."
+          ]
+        },
+        {
+          "product": [
+            "bioentry_n2",
+            "biostation_2",
+            "biostation_2a",
+            "biolite_n2",
+            "biostation_a2",
+            "biostation_l2"
+          ],
+          "question": "La autenticación de huella dejó de funcionar repentinamente.",
+          "answer": [
+            "Verifique si el dedo o el sensor de huella tienen sudor, agua o polvo, y límpielos.",
+            "Seque su dedo y el sensor de huella con una toalla seca y vuelva a intentarlo.",
+            "Si su huella está demasiado seca, sopléela y vuelva a intentarlo."
+          ]
+        },
+        {
+          "product": [
+            "bioentry_n2",
+            "biostation_2",
+            "biostation_2a",
+            "biolite_n2"
+          ],
+          "question": "El sensor de huella no se enciende.",
+          "answer": [
+            "Cuando <span class='cmd'>Sensor Mode</span> está en <span class='cmd'>Auto On</span>, el sensor solo se encenderá al colocar el dedo sobre él. Si desea que el sensor de huella esté siempre encendido, configure <span class='cmd'>Sensor Mode</span> en <span class='cmd'>Always On</span>."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "category": {
+      "title": "Cerradura de puerta",
+      "hid": "doorlock",
+      "contents": [
+        {
+          "product": [
+            "biostation_3",
+            "biostation_2",
+            "biostation_2a",
+            "facestation_f2",
+            "bioentry_n2",
+            "biolite_n2",
+            "biostation_a2",
+            "biostation_l2",
+            "facelite",
+            "facestation_2",
+            "xstation_2"
+          ],
+          "question": "La puerta no se bloquea al cerrarla.",
+          "answer": [
+            "La cerradura eléctrica puede estar fallando. Solicite una inspección a la empresa de instalación."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "category": {
+      "title": "Hora",
+      "hid": "time",
+      "contents": [
+        {
+          "product": [
+            "biostation_3",
+            "biostation_2",
+            "biostation_2a",
+            "facestation_f2",
+            "bioentry_n2",
+            "biolite_n2",
+            "biostation_a2",
+            "biostation_l2",
+            "facelite",
+            "facestation_2",
+            "xstation_2"
+          ],
+          "question": "De repente, la hora es incorrecta.",
+          "answer": [
+            "El dispositivo cuenta con una batería interna, pero si no recibe alimentación durante mucho tiempo, la batería puede agotarse y provocar que la hora sea incorrecta. Puede corregirla consultando <a href='settings#date-time'>Date & Time</a>."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "category": {
+      "title": "Acceso de administrador",
+      "hid": "admin",
+      "contents": [
+        {
+          "product": [
+            "biostation_3",
+            "biostation_2",
+            "biostation_2a",
+            "facestation_f2",
+            "bioentry_n2",
+            "biolite_n2",
+            "biostation_a2",
+            "biostation_l2",
+            "facelite",
+            "facestation_2",
+            "xstation_2"
+          ],
+          "question": "Perdí mi PIN de administrador, por lo que no puedo acceder al modo de administrador.",
+          "answer": [
+            "El administrador otorga un permiso de acceso en el dispositivo, por lo que solo él puede acceder al menú de administrador.",
+            "Si perdió el PIN de administrador, comuníquese con la empresa de instalación."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "category": {
+      "title": "Administrador Principal",
+      "hid": "admin",
+      "contents": [
+        {
+          "product": [
+            "biostation_3",
+            "biolite_n2",
+            "biostation_2a"
+          ],
+          "question": "Después de actualizar el firmware en dispositivos existentes, la configuración de Master Admin no aparece.",
+          "answer": [
+            "Los dispositivos actualizados con firmware de dispositivos existentes no admiten la configuración de Master Admin. Puede mejorar la seguridad del dispositivo reforzando los permisos de todos los administradores mediante la opción <span class='cmd'>Admin 2-Step Authentication</span>. Para obtener información detallada, consulte <a href='settings#admin-2-step-authentication'>Admin 2-step Authentication</a>."
+          ]
+        }
+      ]
+    }
+  }
+]

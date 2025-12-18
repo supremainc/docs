@@ -1,0 +1,173 @@
+---
+id: settings-videos-rule
+title: Configurar reglas de video
+description: Esta guía muestra cómo configurar reglas de video usando VMS integrado con BioStar X.
+keywords:
+  - Cámara
+  - Reglas
+  - Ajustes
+---
+
+Las reglas son ajustes para enviar eventos y marcadores al servidor VMS combinando los eventos que ocurren en la cámara y la puerta. Una configuración adecuada de las reglas de video permite utilizar varias funciones de gestión de seguridad.
+
+* **Creación automática de marcadores**: Crea marcadores automáticamente cuando ocurren eventos de acceso específicos para encontrar fácilmente videos importantes.
+
+* **Supervisión eficiente**: Supervisa las imágenes en vivo de las cámaras conectadas a las puertas y comprueba los eventos al instante cuando ocurren.
+
+* **Gestión integrada de eventos**: Vincula eventos de acceso e imágenes para comprender de manera integral las situaciones de seguridad.
+
+:::info
+
+La función de reglas de video está disponible con una licencia **Advanced** o superior mediante opciones adicionales. Para más información sobre la política de licencias, consulta [lo siguiente](licensing#features-add-ons).
+
+:::
+
+## Agregar regla {#add-camera-rule}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.video.root" /> → <Cmd sid="setting.menu.video.video" /> en la barra lateral izquierda.
+
+3. Haz clic en <Cmd sid="video.addRule.button" product="2" /> en la parte superior izquierda de la pantalla.
+
+Cuando aparezca la pantalla <Cmd sid="video.rule.addRule.title" product="2" />, configura las reglas según las siguientes instrucciones. Haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla para completar y guardar todos los ajustes.
+
+### Ingresar información de la regla
+
+En la sección <Cmd sid="video.rule.detail.information.title" product="2" />, ingresa el nombre y la descripción de la nueva regla.
+
+<Image src="/img/biostarx-settings-video-add-rule-info.png" />
+
+:::info
+
+<Cmd sid="video.rule.detail.description" product="2" /> es opcional. Úsalo para ingresar una descripción sencilla y comprender fácilmente el propósito o las características de la regla.
+
+:::
+
+### Ajustes de registro de video
+
+<Cmd sid="video.addRule.label.videoLog" product="2" /> es una función que graba automáticamente video antes y después de que ocurra un evento específico. Conserva las grabaciones durante un período determinado para comprender el contexto antes y después de los eventos.
+
+<Image src="/img/biostarx-settings-video-add-rule-video-log.png" />
+
+* <Cmd sid="video.addRule.label.videoLog" product="2" />: Define el uso de <Cmd sid="video.addRule.label.videoLog" product="2" className="normal" /> en la regla actual.
+
+  * <Cmd sid="video.addRule.label.enabled" product="2" />: Graba automáticamente video desde antes y después de que ocurran los eventos.
+
+  * <Cmd sid="video.addRule.label.disabled" product="2" />: Desactiva la función <Cmd sid="video.addRule.label.videoLog" product="2" className="normal" />.
+
+* <Cmd sid="video.addRule.label.videoLogLength" product="2" />: Define el rango de grabación alrededor de diez segundos antes y después del evento. Se puede configurar hasta un máximo de 60 segundos.
+
+:::info
+
+Cuanto mayor sea el rango establecido de <Cmd sid="video.addRule.label.videoLogLength" product="2" />, más espacio de almacenamiento puede requerir. Ten en cuenta el rendimiento del sistema y la capacidad de almacenamiento al definir una duración adecuada.
+
+:::
+
+### Ajustes de eventos que se registrarán en VMS
+
+En la sección <Cmd sid="video.rule.detail.event.title" product="2" />, puedes seleccionar los eventos que se registrarán en el servidor VMS y definir si se enviarán marcadores o eventos.
+
+<Image src="/img/biostarx-settings-video-add-rule-event.png" />
+
+* <Cmd sid="video.rule.detail.event.itemName" product="2" />: Selecciona el tipo de evento que se enviará al servidor VMS. Cuando selecciones el evento deseado de la lista de eventos de la izquierda, se añadirá a la lista de la derecha.
+
+* <Cmd sid="video.rule.detail.vmsBookmark.itemName" product="2" />: Puedes definir si se creará un marcador en el servidor VMS cuando ocurra el evento seleccionado en la lista.
+
+* <Cmd sid="video.rule.detail.vmsEvent.itemName" product="2" />: Puedes definir si se crearán registros de eventos en el servidor VMS cuando ocurra el evento seleccionado en la lista.
+
+:::info
+
+* Seleccionar eventos no es obligatorio.
+
+* Puedes encontrar rápidamente el evento deseado utilizando el campo de búsqueda en la parte superior de la lista de eventos de la izquierda.
+
+* Para eliminar un evento de la lista de la derecha, haz clic en <IcTrash2 />.
+
+* Puedes establecer el idioma del mensaje al enviar marcadores y eventos al servidor VMS. Para más información, consulta [lo siguiente](settings-video-integration#vms-event-bookmark).
+
+:::
+
+### Enlazar puerta y cámara {#link-door-camera}
+
+En la sección <Cmd sid="video.rule.detail.doorCameraLinkage.title" product="2" />, enlaza puertas con cámaras para enviar grabaciones de las cámaras conectadas junto con los eventos que ocurren en las puertas al servidor VMS. Esto permite ver fácilmente las grabaciones relacionadas con eventos de acceso.
+
+<Image src="/img/biostarx-settings-video-add-rule-connect-door.png" />
+
+1. Haz clic en <Cmd sid="button.addplus" product="2" /> en la parte superior derecha.
+
+2. Cuando aparezca la ventana <Cmd sid="video.rule.detail.doorCameraLinkage.popup.title" product="2" />, selecciona la puerta y luego la cámara asociada.
+
+   <Image src="/img/biostarx-settings-video-add-rule-connect-door-add.png" />
+
+3. Después de seleccionar la puerta y la cámara, haz clic en <Cmd sid="button.add" product="2" />.
+
+Consulta en la lista las cámaras enlazadas a la puerta.
+
+<Image src="/img/biostarx-settings-video-add-rule-connect-door-complete.png" />
+
+:::info
+
+* Una sola puerta puede tener hasta cuatro cámaras añadidas.
+
+* Las puertas incluidas en una regla no pueden usarse en otras reglas.
+
+* Para eliminar la regla de enlace de puertas y cámaras, marca la casilla de los elementos que deseas eliminar en la lista y haz clic en <IcTrash2 /> <Cmd sid="button.delete" product="2" /> en la parte superior derecha.
+
+* Las cámaras enlazadas a las puertas pueden visualizarse como una subestructura de las puertas en la lista de puertas de la página <Cmd sid="shell.header.arena" />. Para más información, consulta [lo siguiente](check-door-status#door-tree-structure).
+
+* Haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla para completar y guardar todos los ajustes.
+
+:::
+
+## Editar regla {#edit-rule}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.video.root" /> → <Cmd sid="setting.menu.video.video" /> en la barra lateral izquierda.
+
+3. Haz clic en la regla que deseas editar en la lista <Cmd sid="video.header.all.rules" product="2" />.
+
+4. Cuando aparezca la pantalla de edición de la regla, modifica los elementos deseados.
+
+5. Para guardar la regla modificada, haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior derecha de la pantalla.
+
+:::info
+
+Para información detallada sobre cada sección de la pantalla de edición de reglas, consulta [lo siguiente](#add-camera-rule).
+
+:::
+
+## Borrar Regla
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.video.root" /> → <Cmd sid="setting.menu.video.video" /> en la barra lateral izquierda.
+
+3. Marca la casilla de la regla que deseas eliminar en la lista <Cmd sid="video.header.all.rules" product="2" />. Se puede seleccionar una o más reglas.
+
+4. Haz clic en <IcTrash2 /> <Cmd sid="video.rule.delete" product="2" /> en la parte superior derecha de la pantalla.
+
+5. Revisa el mensaje y haz clic en el botón <Cmd sid="button.yes" product="2" />.
+
+## Configuración de columnas
+
+Agrega columnas, cambia su orden en la lista o configúralas como ocultas.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.video.root" /> → <Cmd sid="setting.menu.video.video" /> en la barra lateral izquierda.
+
+3. En la parte superior derecha de la lista <Cmd sid="video.header.all.rules" product="2" />, haz clic en <IcMoreW /> → <Cmd sid="columnSetting.dialog.header" product="2" />.
+
+4. Cuando aparezca la ventana <Cmd sid="columnSetting.dialog.header" product="2" />, selecciona las casillas de las columnas que quieras mostrar para agregarlas o configúralas como ocultas. También cambia el orden de las columnas mediante arrastrar y soltar.
+
+   <Image src="/img/biostarx-settings-video-column-layout.png" />
+
+5. Cuando hayas terminado de cambiar la configuración de columnas, haz clic en el botón <Cmd sid="button.ok" product="2" />.
+
+:::info
+
+Haz clic en el botón <Cmd sid="columnSetting.button.defaultColumn" product="2" /> para inicializar la configuración de columnas.
+
+:::

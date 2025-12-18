@@ -1,0 +1,88 @@
+---
+id: edit-user
+title: Editar Información Del Usuario
+description: Guía el proceso de modificar la información de usuarios individuales o múltiples y cambiar los permisos de acceso.
+keywords:
+  - Usuario
+  - Grupo usuario
+---
+
+Guía cómo modificar la información de usuarios registrados. Modifica la información básica, los permisos de acceso o las credenciales de usuarios individuales o edita en lote la información de varios usuarios.
+
+:::info
+
+Un usuario con el ID original `1` no puede ser modificado por otros administradores. Solo el usuario que ha iniciado sesión en esta cuenta puede modificar su propia información.
+
+:::
+
+## Editar información del usuario {#user-information-modification}
+
+1. Haz clic en <Cmd sid="shell.header.user" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Selecciona al usuario que deseas editar de la lista de usuarios.
+
+3. Haz doble clic en el usuario o haz clic en el botón <Cmd sid="team.user.preview.button.seeMore" /> cuando la información del perfil del usuario aparezca en el lado derecho de la pantalla.
+
+4. Aparece una ventana para editar la información del usuario.
+
+   <Image src="/img/biostarx-edit-user-screen.png" />
+
+5. Modifique los elementos deseados.
+
+6. Haz clic en el botón <IcEdit /> para modificar elementos de credenciales y en el botón <IcClose /> para eliminarlos.
+
+   <Image src="/img/biostarx-edit-user-credentials.png" />
+
+7. Haz clic en el botón <Cmd sid="common.save" /> en la esquina superior derecha de la pantalla para guardar los cambios.
+
+:::info
+
+* Para obtener información sobre cada campo en la sección <Cmd sid="team.user.information" />, consulta [lo siguiente](add-user-basic-info).
+
+* Para obtener información sobre cada campo en la sección <Cmd sid="team.user.credential.title" />, consulta [lo siguiente](enroll-credential).
+
+* Para obtener información sobre cada campo en la sección <Cmd sid="team.user.permission.title" />, consulta [lo siguiente](set-permission).
+
+* Ingresa el mensaje personal del usuario en la sección <Cmd sid="common.advanced" product="2" />.
+
+:::
+
+## Editar información de usuario por lotes {#user-information-collective-modification}
+
+Edita la información o los permisos de acceso de varios usuarios a la vez. Esta función es útil al establecer los mismos permisos de acceso o grupos para varios usuarios.
+
+1. Haz clic en <Cmd sid="shell.header.user" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en la casilla a la izquierda del usuario que deseas editar en la lista de usuarios. Selecciona dos o más usuarios.
+
+3. Haz clic en <Cmd sid="common.batchEdit" /> en la esquina superior derecha de la pantalla.
+
+   <Image src="/img/biostarx-batch-edit-users.png" />
+
+4. Cuando aparezca la pantalla <Cmd sid="common.batchEdit" />, marca la casilla del elemento deseado y realiza las modificaciones.
+
+   <Image src="/img/biostarx-edit-user-batch-edit.png" />
+
+5. Haz clic en el botón <Cmd sid="common.save" /> en la esquina superior derecha de la pantalla para guardar la información editada.
+
+:::info
+
+* El ID, nombre, correo electrónico, número de teléfono y credenciales del usuario no se pueden editar por lotes.
+
+* Haz clic en el botón <Cmd sid="common.cancel" /> en la esquina superior derecha de la pantalla para cancelar la información editada.
+
+:::
+
+<NextStep>
+  <NextItem to="enroll-credential">
+    Enrola las credenciales del usuario y establece el método de autenticación de acceso.
+  </NextItem>
+
+  <NextItem to="set-permission">
+    Consulta cómo establecer los permisos de acceso del usuario.
+  </NextItem>
+
+  <NextItem to="transfer-user-info-to-device">
+    Si cambiaste la información del usuario, envíala al dispositivo. Consulta cómo enviar la información del usuario al dispositivo.
+  </NextItem>
+</NextStep>

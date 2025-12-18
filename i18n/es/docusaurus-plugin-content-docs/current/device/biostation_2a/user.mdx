@@ -1,0 +1,106 @@
+---
+id: user
+title: Usuario
+description: Describe cómo registrar, editar, eliminar y gestionar usuarios.
+keywords:
+  - Enrolamiento
+  - Editar
+  - Borrar
+  - Gestionar
+---
+
+Describe cómo registrar, editar, eliminar y gestionar usuarios.
+
+## Registrar información de usuario {#registering-user-information}
+
+Registre información de usuario que incluya datos de autenticación biométrica.
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_166" product="dev" /> → <Cmd sid="ui_173" product="dev" /> y luego presione **OK**.
+
+   <Image src="/img/device/bs2a-user-add.png" />
+
+3. Seleccione el elemento deseado y presione el botón <IcBw />. Después de configurar el elemento, presione **OK** para registrar la información de usuario.
+
+   * <Cmd sid="ui_020" product="dev" />: Ingrese un número entre 1 y 4294967295 para registrar un ID de usuario. Si <Cmd sid="ui_168" product="dev" /> está configurado en <Cmd sid="ui_237" product="dev" />, puede usar una combinación de caracteres alfanuméricos y los símbolos `_` `-` como ID, con un máximo de 32 caracteres.
+
+   * <Cmd sid="ui_253" product="dev" />: Ingrese el nombre de usuario usando los botones numéricos. Presione los botones <IcUp />/<IcDown /> para seleccionar letras o números y presione **F1**/**F2** para ver más caracteres.
+
+   * <Cmd sid="ui_040" product="dev" />: Ingrese el PIN que desea usar. Ingrese el PIN y presione **OK**. Para confirmar, ingrese el PIN nuevamente y presione **OK**. Ingrese un número de entre 8 y 16 dígitos para evitar filtraciones.
+
+   * <Cmd sid="ui_312" product="dev" />: Inscriba una huella digital para la autenticación del usuario. Después de escanear la huella digital del dedo que se va a inscribir, vuelva a escanear la huella del mismo dedo.
+
+   * <Cmd sid="ui_322" product="dev" />: Inscriba una tarjeta para la autenticación del usuario. Escanee la tarjeta que desea asignar al usuario.
+
+   * <Cmd sid="ui_172" product="dev" />: Seleccione los permisos que desea asignar al usuario.
+
+     :::info
+
+     Los menús disponibles varían según el nivel de usuario establecido.
+
+     * <Cmd sid="ui_075" product="dev" />: Este es un nivel de usuario general y el menú no está disponible.
+
+     * <Cmd sid="ui_300" product="dev" />: Puede usar todos los menús.
+
+     * <Cmd sid="ui_194" product="dev" />: Puede usar los menús <Cmd sid="ui_256" product="dev" />, <Cmd sid="ui_366" product="dev" />, <Cmd sid="ui_280" product="dev" />, <Cmd sid="ui_344" product="dev" />, <Cmd sid="ui_255" product="dev" />.
+
+     * <Cmd sid="ui_171" product="dev" />: Puede usar los menús <Cmd sid="ui_166" product="dev" />, <Cmd sid="ui_255" product="dev" />.
+
+     :::
+
+   * <Cmd sid="ui_213" product="dev" />: Configure la fecha de inicio de uso de la cuenta de usuario. Presione los botones numéricos para ingresar la fecha. Borre la fecha ingresada con el botón <IcFw />. Ingrese delimitadores con el botón <IcBw />.
+
+   * <Cmd sid="ui_129" product="dev" />: Configure la fecha de finalización de uso de la cuenta de usuario. Presione los botones numéricos para ingresar la fecha. Borre la fecha ingresada con el botón <IcFw />. Ingrese delimitadores con el botón <IcBw />.
+
+   * <Cmd sid="ui_149" product="dev" />: Configure el nivel de seguridad para la autenticación 1:1.
+
+   * <Cmd sid="ui_363" product="dev" />: Seleccione para inscribir una huella de coacción. Si alguien lo coacciona o necesita abrir la puerta por la fuerza, autenticar con esta huella enviará una señal de alarma a BioStar X.
+
+   * <Cmd sid="ui_064" product="dev" />: Puede cambiar el método de autenticación para cada usuario. Seleccione el elemento deseado y cambie el ajuste con los botones <IcFw />/<IcBw />.
+
+## Modificar información de usuario
+
+El administrador de usuarios o el superadministrador puede modificar la información de usuario registrada. Agregue la huella digital o la tarjeta del usuario y modifique el PIN y los permisos.
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_166" product="dev" /> → <Cmd sid="ui_170" product="dev" /> y luego presione **OK**.
+
+   <Image src="/img/device/bs2a-user-edt.png" />
+
+3. Seleccione el método de búsqueda que desea usar y presione el botón <IcBw />. Busque usuarios con <Cmd sid="ui_020" product="dev" />, <Cmd sid="ui_253" product="dev" />, <Cmd sid="ui_312" product="dev" />, <Cmd sid="ui_322" product="dev" />.
+
+   * Si presiona **OK** sin seleccionar un método de búsqueda, aparecerá la lista completa de usuarios.
+
+4. Seleccione el usuario que desea modificar y presione **F2**. Consulte [Registrar información de usuario](#registering-user-information) para modificar la información.
+
+   * Para eliminar un usuario, presione **F3** y luego **OK**.
+
+:::info
+
+<Cmd sid="ui_320" product="dev" /> se puede registrar en BioStar X. Para obtener más información sobre el registro de grupos de acceso, consulte la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+
+:::
+
+## Eliminar todos los usuarios
+
+Elimine todos los usuarios registrados a la vez.
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_166" product="dev" /> → <Cmd sid="ui_176" product="dev" /> y luego presione **OK**.
+
+   <Image src="/img/device/bs2a-delete-user.png" />
+
+3. Presione **OK** para eliminar a todos los usuarios. Presione **ESC** para regresar a la pantalla anterior.
+
+## Ver uso de usuarios
+
+Vea de un vistazo la cantidad de usuarios, huellas digitales y tarjetas inscritas.
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_166" product="dev" /> → <Cmd sid="ui_175" product="dev" /> y luego presione **OK**. La información de uso de usuarios aparece.
+
+   <Image src="/img/device/bs2a-user-usage.png" />

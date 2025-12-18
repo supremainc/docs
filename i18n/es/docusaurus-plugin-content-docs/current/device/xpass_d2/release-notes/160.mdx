@@ -1,0 +1,38 @@
+---
+id: 160
+title: Firmware Version 1.6.0
+---
+
+# Firmware Version 1.6.0 (Build No. 1.6.0_220223)
+
+Release<Separator/>2022-03-02
+
+## New Features and Improvements
+
+---
+
+1. Supports setting the byte order of CSN card output data when using the device as a Wiegand reader or OSDP reader by connecting with a 3rd-party controller.
+
+1. Supports setting the byte order for smart cards.
+
+    - Supports setting the byte order of data to be output to Wiegand or OSDP.
+
+1. Supports new features and improvements of the Device Manager app (v1.1.4 or later).
+
+    - Supports Byte order setting for CSN card and smart card.
+
+    - Added LED operation of the device according to auth mode operation.
+
+1. Supports a new BLE (Bluetooth Low Energy) chip.
+
+    - The BLE chip part of the hardware have been changed, and the firmware has been upgraded to be compatible with both the existing and new BLE chips.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. The Wiegand value displayed on the card scan of the Device Manager app was different from the value output from BioStar 2 <Badge>1.4.0</Badge>.
+
+</BugLists>

@@ -1,0 +1,103 @@
+## Configurar administrador maestro
+
+La función <Cmd>Master Administrator</Cmd> amplía los privilegios de administrador total del dispositivo para mejorar la seguridad y bloquear el acceso y los cambios de configuración no autorizados. Debes **registrar credenciales** para el <Cmd>Master Administrator</Cmd> en un dispositivo nuevo, y solo los Master Administrators registrados pueden acceder al menú de administración para cambiar la configuración del dispositivo.
+
+:::note
+
+¿Qué es un administrador maestro?
+
+* Si se utiliza el dispositivo sin configurar un administrador, cualquiera podrá acceder al menú de administración y cambiar la configuración del dispositivo. La función de administrador maestro aplica la configuración administrativa general para solucionar estas vulnerabilidades de seguridad.
+
+* El Master Administrator no puede eliminarse directamente y solo se elimina durante <Cmd>Factory Initialize</Cmd>.
+
+:::
+
+### Inscribir administrador maestro en un dispositivo nuevo
+
+En un dispositivo nuevo, debes registrar el <Cmd>Master Administrator</Cmd> desde el inicio y el acceso será limitado si no se registra.
+
+:::info
+
+* La pantalla de registro de <Cmd>Master Administrator</Cmd> aparece durante el primer arranque de un dispositivo nuevo. No puedes pasar a la siguiente pantalla sin registrar <Cmd>Master Administrator</Cmd>.
+
+* Incluso si asignas un administrador completo a través de BioStar 2, debes registrar el <Cmd>Master Administrator</Cmd> para usar todas las funciones.
+
+* Los dispositivos nuevos no pueden realizar degradaciones de firmware.
+
+:::
+
+1. Cuando inicias un dispositivo nuevo, aparece la pantalla de registro de <Cmd>Master Administrator</Cmd>.
+
+   <Include product="biostation_3">
+     <Image src="/img/how-to/setting-master-admin-1.png" width="300px" />
+   </Include>
+
+2. Debes registrar al menos dos tipos de credenciales para registrar el <Cmd>Master Administrator</Cmd>. Seleccione e inscriba las dos credenciales deseadas.
+
+   <Include product="biostation_3">
+     <Image src="/img/how-to/setting-master-admin-2.png" width="300px" />
+   </Include>
+
+   Las credenciales que se pueden registrar como <Cmd>Master Administrator</Cmd> son las siguientes.
+
+   <Table>
+     <Tbody>
+       <Row>
+         <Th>Tipo de credencial</Th>
+         <Th>Número de inscripciones</Th>
+         <Th>Condiciones</Th>
+       </Row>
+
+       <Row>
+         <Td>Tarjeta</Td>
+         <Td>Hasta 4</Td>
+         <Td>Solo admite tipos CSN y Wiegand<br />No se permite la duplicación dentro del mismo tipo</Td>
+       </Row>
+
+       <Row>
+         <Td>Rostro</Td>
+         <Td>Hasta 2</Td>
+         <Td>Solo se puede inscribir en dispositivos con el mismo algoritmo</Td>
+       </Row>
+
+       <Row>
+         <Td>Fingerprint</Td>
+         <Td>Hasta 2</Td>
+         <Td>-</Td>
+       </Row>
+
+       <Row>
+         <Td>PIN</Td>
+         <Td>1</Td>
+         <Td>Al menos 8 caracteres</Td>
+       </Row>
+     </Tbody>
+   </Table>
+
+   :::note
+
+   **Condiciones de enrolamiento**
+
+   * Debe enrolar al menos dos tipos de credenciales.
+
+   * Las mismas condiciones se aplican tanto a dispositivos nuevos como a dispositivos con actualización de firmware.
+
+   * Todas las credenciales compatibles con el dispositivo pueden utilizarse como medios de autenticación.
+
+   :::
+
+3. Después de registrar dos o más tipos de credenciales, presiona el botón <Cmd>Complete</Cmd> para completar el registro del <Cmd>Master Administrator</Cmd>.
+
+   <Include product="biostation_3">
+     <Image src="/img/how-to/setting-master-admin-3.png" width="300px" />
+   </Include>
+
+### Avisos
+
+* **Al cambiar manualmente la clave de cifrado del dispositivo**
+
+  Al cambiar manualmente la clave de cifrado del dispositivo, aparecerá un mensaje de advertencia indicando que se eliminará el PIN del administrador maestro; revise el mensaje antes de continuar con el cambio.
+
+* **Limitaciones en la transmisión de imágenes faciales a través de segmentos de comunicación RS-485**
+
+  Las imágenes de credenciales biométricas no se transmiten a través de segmentos de comunicación RS-485, por lo que se mostrará una imagen sustituta al visualizar el rostro del administrador maestro registrado en el dispositivo esclavo.

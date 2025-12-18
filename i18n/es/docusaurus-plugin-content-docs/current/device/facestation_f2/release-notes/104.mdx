@@ -1,0 +1,48 @@
+---
+id: 104
+title: Firmware Version 1.0.4
+---
+
+# Firmware Version 1.0.4 (Build No. 1.0.4_210303)
+
+Release<Separator/>2021-03-10
+
+## New Features and Improvements
+
+---
+
+1. Changes to a new LCD screen
+
+    - For devices with firmware version 1.0.3 or earlier, be sure to upgrade the firmware to the latest version before replacing it with a new LCD display. If you upgrade the firmware to version 1.0.4 or higher after replacing the LCD display first, a touch malfunction may occur.
+
+1. Suprema Thermal Camera (TCM10-FSF2) SDK Revision
+
+    - FPS 8.3 applied
+
+    - The management service is separated to recover the system safely after the device stops working abnormally.
+
+    - The infrared image motion stopped working or the device was restarted while using the thermal camera.
+
+    - The specifications of captured image buffer were modified.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. The firmware version of the thermal camera was not displayed.
+
+1. The previous T&A code setting was maintained even after changing the setting.
+
+1. A timeout occurred when a user set to Exclude Device Default Authentication Mode attempted to authenticate a card on a slave device with authentication mode set to Card+PIN.
+
+1. The thermal camera froze up when updating resources via BioStar 2.
+
+1. Improved the Visual Face matching algorithm.
+
+    - Improved the face authentication algorithm for users with glasses.
+
+    - Improved the authentication performance when wearing masks.
+
+</BugLists>

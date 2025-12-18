@@ -1,0 +1,69 @@
+---
+id: settings-device-upgrade-firmware
+title: Actualizar firmware
+description: Instrucciones para actualizar el firmware de los dispositivos conectados a BioStar X.
+keywords:
+  - Dispositivo
+  - firmware
+  - Actualizar
+---
+
+Los dispositivos conectados a **BioStar X** pueden actualizar su firmware fácilmente sin conexiones ni operaciones adicionales. Mantener el firmware del dispositivo actualizado resuelve vulnerabilidades de seguridad y permite acceder a nuevas funciones.
+
+## Antes de comenzar {#before-start}
+
+Antes de actualizar el firmware del dispositivo, prepare la nueva versión del archivo de firmware. Guarde el archivo de firmware descargado en la siguiente ruta. Cree una nueva carpeta si la carpeta *firmware* no existe.
+
+> *C:\Program Files\BioStar X\firmware*
+
+:::info
+
+Busque el nombre del modelo de su dispositivo en el [Centro de descargas de Suprema](https://download.supremainc.com) para descargar la última versión del archivo de firmware.
+
+:::
+
+## Actualización de firmware {#upgrade-firmware}
+
+### Actualizar firmware para un solo dispositivo
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.device.root" /> en la barra lateral izquierda.
+
+3. Haga clic en el dispositivo que desea actualizar en la lista de dispositivos.
+
+4. Haga clic en el botón <Cmd sid="button.firmwareUpgrade" product="2" /> en la sección <Cmd sid="device.info.information" product="2" /> de la pantalla de detalles del dispositivo.
+
+   <Image src="/img/biostarx-setting-device-info-upgrade-firmware.png" />
+
+Esto inicia la actualización de firmware del dispositivo.
+
+### Actualizar firmware para varios dispositivos
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.device.root" /> en la barra lateral izquierda.
+
+3. Seleccione la casilla situada completamente a la izquierda de los dispositivos que desea actualizar en la lista de dispositivos. Puede seleccionar varios dispositivos.
+
+4. Haga clic en el botón <Cmd sid="button.firmwareUpgrade" product="2" /> en la parte superior derecha de la lista de dispositivos.
+
+   <Image src="/img/biostarx-setting-device-upgrade-firmware.png" />
+
+5. Cuando aparezca la ventana <Cmd sid="device.firmwareUpgrade" product="2" />, haga clic en la versión de firmware.
+
+   <Image src="/img/biostarx-setting-device-upgrade-firmware-popup.png" />
+
+Esto inicia la actualización de firmware de los dispositivos seleccionados.
+
+:::info
+
+* El botón <Cmd sid="button.firmwareUpgrade" product="2" /> se activa solo después de seleccionar un dispositivo de la lista de dispositivos.
+
+* Los dispositivos con el mismo modo RS-485 pueden actualizarse simultáneamente en grupos. Por ejemplo, los dispositivos maestros pueden actualizar varios dispositivos maestros a la vez, y los dispositivos esclavos pueden actualizar varios dispositivos esclavos a la vez.
+
+* Los dispositivos maestros o los esclavos sin maestro pueden actualizarse simultáneamente en grupos.
+
+* Los dispositivos esclavos conectados al mismo dispositivo maestro no pueden actualizarse simultáneamente.
+
+:::

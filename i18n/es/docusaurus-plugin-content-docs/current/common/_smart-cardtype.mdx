@@ -1,0 +1,49 @@
+<Include type={props.type} ref="mifare,custom-mifare">
+  * <Cmd sid="setting.cardFormat.encryptionType" product="2" />: Configure el tipo de cifrado en <Cmd>SL1</Cmd> o <Cmd>SL3</Cmd>.
+</Include>
+
+<Include type={props.type} ref="desfire,custom-desfire">
+  * <Cmd sid="setting.card.format.desfireAvd" product="2" />: Utilice tarjetas DESFire emitidas por terceros. Solo se puede configurar DESCire.
+</Include>
+
+<Include type={props.type} ref="mifare,custom-mifare,iclass,desfire,custom-desfire,iclassseos">
+  * <Cmd sid="setting.cardFormat.primaryKey" product="2" />: Clave que cifra las comunicaciones entre la tarjeta inteligente y el lector de tarjetas.
+
+  * <Cmd sid="setting.cardFormat.secondaryKey" product="2" />: Se usa para la autenticación cuando la clave de sitio primaria de la tarjeta no coincide. La clave de sitio secundaria solo se puede ingresar después de activar la opción <Cmd sid="setting.cardFormat.secondaryKey" product="2" /> en la parte superior de la sección.
+</Include>
+
+<Include type={props.type} ref="mifare,iclass">
+  * <Cmd sid="setting.cardFormat.startBlockIndex" product="2" />: Seleccione el bloque inicial donde se guardará cada plantilla. Este bloque es el índice del bloque donde se almacena la información del usuario; configúrelo en un bloque almacenable si el usuario ya usa la tarjeta inteligente.
+</Include>
+
+<Include type={props.type} ref="custom-mifare,custom-iclass">
+  * <Cmd sid="setting.cardFormat.blockIndex" product="2" />: Seleccione el bloque inicial donde se guardará cada plantilla. Este bloque es el índice del bloque donde se almacena la información del usuario; configúrelo en un bloque almacenable si el usuario ya usa la tarjeta inteligente.
+</Include>
+
+<Include type={props.type} ref="desfire,custom-desfire">
+  * <Cmd sid="setting.cardFormat.idField" product="2" />: Configure para leer un área específica de la tarjeta. Funciona como un directorio que contiene <Cmd sid="setting.cardFormat.fileId" product="2" />.
+
+  * <Cmd sid="setting.cardFormat.fileId" product="2" />: Configure el ID de archivo.
+
+  * <Cmd sid="setting.cardFormat.encryptionType" product="2" />: Configure el tipo de cifrado en <Cmd>DES/3DES</Cmd> o <Cmd>AES</Cmd>.
+</Include>
+
+<Include type={props.type} ref="custom-mifare,custom-iclass,custom-desfire">
+  * <Cmd sid="setting.cardFormat.skipBytes" product="2" />: Configure el punto de inicio para leer el número de tarjeta.
+
+  * <Cmd sid="setting.cardFormat.dataSize" product="2" />: (Cuando los valores configurados de <Cmd sid="setting.cardFormat.primaryKey" product="2" /> y <Cmd sid="setting.cardFormat.secondaryKey" product="2" /> coinciden con la configuración de la tarjeta) Configure el tamaño de los datos de la tarjeta que se leerán.
+</Include>
+
+<Include type={props.type} ref="iclassseos">
+  * <Cmd sid="setting.cardFormat.ADF" product="2" />: Dirección ADF donde se almacenan las credenciales digitales.
+</Include>
+
+<Include type={props.type} ref="felica">
+  * <Cmd sid="setting.cardFormat.systemCode" product="2" />: Ingrese el código de sistema para leer tarjetas FeliCa en hexadecimal, con un máximo de 4 caracteres.
+
+  * <Cmd sid="setting.cardFormat.serviceCode" product="2" />: Ingrese el código de servicio para leer tarjetas FeliCa en hexadecimal, con un máximo de 4 caracteres.
+
+  * <Cmd sid="setting.cardFormat.idField" product="2" />: Configure para leer un área determinada de la tarjeta. Configure hasta 8 bloques para lectura haciendo clic en <Cmd sid="button.addplus" product="2" />.
+
+    <Cmd sid="setting.cardFormat.blockNumber" product="2" />: Configure el bloque que se leerá de la tarjeta. (0-150)
+</Include>

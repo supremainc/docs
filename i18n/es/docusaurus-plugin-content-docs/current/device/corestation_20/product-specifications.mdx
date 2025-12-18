@@ -1,0 +1,58 @@
+---
+id: product-specifications
+title: Especificaciones del producto
+description: Incluye las especificaciones clave del producto, como tamaño, características y rendimiento.
+keywords:
+  - General
+  - Interfaz
+  - Eléctrico
+  - Dimensiones
+---
+
+Incluye las especificaciones clave del producto, como tamaño, características y rendimiento.
+
+import specs from '@site/static/specs/cs20_specs.json';
+
+{/* 일반 */}
+
+<SpecSection data={specs.corestation20.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.corestation20.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.corestation20.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.corestation20.power} />
+
+<PageBreak />
+
+## Dimensiones y peso
+
+:::note
+
+La tolerancia dimensional es de ±0.3 mm.
+
+:::
+
+<Image src="/img/device/cs20-dimension.svg" className="none" />
+
+---
+
+:::note
+
+<Anno id="anno1">1)</Anno> Seleccione entre Entrada o Entrada supervisada.
+
+<Anno id="anno2">2)</Anno> Requiere alimentación PoE+ (IEEE 802.3at, 30 W) o PoE++ (IEEE 802.3bt, 60~100 W). No se admite PoE estándar (IEEE 802.3af, 15.4 W). El uso de PoE estándar puede provocar que los dispositivos funcionen de forma inestable o sufran daños permanentes. Antes de conectar el dispositivo, asegúrese de que su switch de red o inyector PoE sea compatible con PoE+ o PoE++.
+
+:::
+
+:::info
+
+Las especificaciones del producto están sujetas a cambios sin previo aviso para mejorar el rendimiento.
+
+:::

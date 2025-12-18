@@ -1,0 +1,93 @@
+---
+id: settings-adding-custom-account
+title: Agregar permisos personalizados
+description: Esta guía describe cómo agregar el nivel de permiso deseado.
+keywords:
+  - Cuentas
+  - Permiso de operación
+  - Permiso personalizado
+---
+
+Esta guía describe cómo agregar el nivel de permiso deseado. Los permisos personalizados son funciones que el usuario puede personalizar y que permiten permisos adicionales más allá de los permisos operativos predeterminados.
+
+## Agregar permisos personalizados
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.account.root" /> en la barra lateral izquierda.
+
+3. Haga clic en <Cmd sid="setting.account.addCustomOperator" product="2" />.
+
+   <Image src="/img/biostarx-settings-account-add-custom-permission.png" />
+
+4. Ingrese un nombre y una descripción para el permiso recién creado.
+
+   <Image src="/img/biostarx-settings-account-add-custom-permission-details.png" />
+
+5. Complete o seleccione cada uno de los elementos restantes.
+
+6. Haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla para guardar la configuración.
+
+:::info
+
+* Los tipos de ajustes de <Cmd sid="settings.account.menu.setting" product="2" /> que puede configurar pueden variar según el tipo de licencia activada.
+
+* Para más información sobre <Cmd sid="settings.account.menu.detailSetting" product="2" />, consulte [lo siguiente](#detailSetting).
+
+* Para más información sobre <Cmd sid="settings.account.menu.setting" product="2" />, consulte [lo siguiente](#menuSetting).
+
+* Para más información sobre <Cmd sid="settings.account.addUser" product="2" />, consulte [lo siguiente](#addUser).
+
+:::
+
+### <Cmd sid="settings.account.menu.detailSetting" product="2" className="normal" /> {#detailSetting}
+
+Configure permisos detallados para los elementos. Seleccione grupos para otorgar permisos de edición y visualización para cada menú. Establezca permisos de elementos para <Cmd sid="common.permission.module.userGroup" product="2" />, <Cmd sid="common.permission.module.deviceGroup" product="2" />, <Cmd sid="common.permission.module.doorGroup" product="2" />, <Cmd sid="common.permission.module.accessGroup" product="2" /> basándose en la información de los grupos ya creados en cada menú.
+
+<Image src="/img/biostarx-settings-account-add-custom-permission-details-item.png" />
+
+:::info
+
+* Si el grupo que desea no está disponible, diríjase al menú correspondiente para agregar un nuevo grupo. Para más información sobre cómo agregar grupos, consulte lo siguiente:
+
+  * [Gestión de grupos de usuarios](user-group-manage)
+
+  * [Gestión de grupos de dispositivos](settings-manage-device-group)
+
+  * [Gestión de grupos de puertas](settings-manage-door-group)
+
+  * [Gestión de grupos de elevadores](settings-manage-elevators-group)
+
+  * [Registrar y gestionar grupos de acceso](settings-access-control-manage-access-group)
+
+* Los permisos para <Cmd sid="common.permission.module.elevatorGroup" product="2" />, <Cmd sid="setting.account.item.advAC" product="2" />, <Cmd sid="setting.account.item.map" product="2" /> están disponibles con una licencia **Advanced** o superior. Para obtener más información sobre la política de licencias, consulte [la siguiente](../biostar_x/licensing).
+
+:::
+
+### <Cmd sid="settings.account.menu.setting" product="2" className="normal" /> {#menuSetting}
+
+Configure permisos de **edición** y **visualización** para menús individuales. Se pueden configurar permisos diferentes para cada menú.
+
+<Image src="/img/biostarx-settings-account-add-custom-permission-details-menus.png" />
+
+* <Cmd sid="common.editRead" product="2" />: Concede permiso para añadir, editar o eliminar elementos en el menú.
+
+* <Cmd sid="common.read" product="2" />: Concede permiso para entrar en el menú y solo ver la configuración.
+
+:::info
+
+Otorgar permisos de **edición** para cada menú activa el botón <Cmd sid="button.add" product="2" />. Sin embargo, para los menús <Cmd sid="shell.header.dashboard" /> y <Cmd sid="shell.header.setting" />, dado que no hay funciones adicionales, se mostrarán como <Cmd sid="setting.account.menu.canCreate.na" product="2" />. Para el menú <Cmd sid="common.permission.module.ac" product="2" />, <Cmd sid="settings.account.menu.detailSetting" product="2" /> debe tener <Cmd sid="common.permission.module.accessGroup" product="2" /> establecido en <Cmd sid="setting.account.menu.detailPriv.allAC" product="2" /> y otorgar permisos de **edición** para que el botón <Cmd sid="button.add" product="2" /> se active.
+
+:::
+
+### <Cmd sid="settings.account.addUser" product="2" className="normal" /> {#addUser}
+
+Agregue o verifique la información del usuario para otorgar permisos. Haga clic en <Cmd sid="button.plusAdd" product="2" /> para agregar un usuario. Seleccione el usuario al que desea otorgar permisos de la lista de usuarios.
+
+<Image src="/img/biostarx-settings-account-add-custom-permission-details-users.png" />
+
+:::info
+
+Al hacer clic en <IcTrash2 /> junto a un usuario en la lista de usuarios, se excluirá a ese usuario de los permisos.
+
+:::

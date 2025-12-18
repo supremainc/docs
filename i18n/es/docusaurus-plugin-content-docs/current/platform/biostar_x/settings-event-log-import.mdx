@@ -1,0 +1,61 @@
+---
+id: settings-event-log-import
+title: Importar registros de eventos
+description: Aprende a importar registros de eventos.
+keywords:
+  - Evento
+  - Registro
+  - Importar
+---
+
+Importa los registros del dispositivo al servidor **BioStar X** para revisar eventos. Esta función está disponible cuando la opción <Cmd sid="setting.server.logUploadType" product="2" /> se establece en <Cmd sid="common.manual" product="2" /> en los ajustes de <Cmd sid="setting.server" product="2" />.
+
+:::info
+
+Para obtener más información sobre la opción <Cmd sid="setting.server.logUploadType" product="2" />, consulta [lo siguiente](settings-server-server#basic-setting).
+
+:::
+
+## Importar manualmente
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.event.root" /> → <Cmd sid="setting.menu.event.eventLogImport" /> en la barra lateral izquierda de la pantalla.
+
+3. Selecciona el periodo para obtener registros en <Cmd sid="setting.eventLogImport.UpdateLog.label" />.
+
+   <Image src="/img/biostarx-settings-event-log-from-device.png" />
+
+   * <Cmd sid="setting.eventLogImport.UpdateLog.dropdown.SinceLast" product="2" />: Importa los registros desde la fecha del último registro guardado en el servidor **BioStar X**.
+
+   * <Cmd sid="setting.eventLogImport.UpdateLog.dropdown.All" product="2" />: Importa todos los registros del dispositivo.
+
+   * <Cmd sid="setting.eventLogImport.UpdateLog.dropdown.UserDefined" product="2" />: Selecciona las fechas de inicio y fin para importar registros.
+
+4. Haz clic en <Cmd sid="button.updateLog" product="2" /> para importar los registros.
+
+## Importar desde almacenamiento externo
+
+Carga los registros de eventos almacenados en un dispositivo de almacenamiento externo (USB) en **BioStar X**.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.event.root" /> → <Cmd sid="setting.menu.event.eventLogImport" /> en la barra lateral izquierda de la pantalla.
+
+3. Haz clic en <Cmd sid="button.browse" product="2" /> para el elemento <Cmd sid="menu.dataImport" product="2" />.
+
+   <Image src="/img/biostarx-settings-event-log-import-data.png" />
+
+4. Seleccione el archivo de datos (*.tgz*) guardado localmente.
+
+Aparecerá un mensaje en la pantalla si el archivo de datos se importa correctamente.
+
+:::info
+
+* Los datos exportados desde dispositivos con una versión de firmware desactualizada no se pueden importar en **BioStar X**. Utiliza siempre la versión más reciente del firmware.
+
+* Solo se pueden importar archivos de datos exportados desde los modelos FaceStation F2, FaceStation 2, FaceLite, BioStation A2, BioStation 2, X-Station 2 y BioStation 3.
+
+* Si los registros de eventos importados no provienen de puntos de acceso, ascensores o zonas configuradas en el sistema **BioStar X**, cierta información puede aparecer en blanco.
+
+:::

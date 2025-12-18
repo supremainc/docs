@@ -1,0 +1,112 @@
+---
+id: add-user-basic-info
+title: Ingresar Información Básica del Usuario
+description: Esta sección describe cómo ingresar la información básica del usuario.
+keywords:
+  - Usuario
+  - Grupo usuario
+---
+
+Esta sección describe cómo ingresar la información básica del usuario. La información de usuario ingresada se utiliza para búsqueda y gestión. Gestionar la información de los usuarios ayuda claramente a cumplir con las políticas de seguridad y privacidad de la organización.
+
+* Al ingresar de forma sistemática información básica como nombre, departamento, puesto y grupo, se puede buscar, clasificar y gestionar a los usuarios fácilmente.
+
+* Se pueden perfeccionar los derechos de acceso según la afiliación, el puesto y la información de grupo del usuario.
+
+* Es ventajoso para la seguridad y las auditorías porque permite el seguimiento preciso de actividades, registros de acceso, etc., por usuario.
+
+Vaya a la página <Cmd sid="shell.header.launcher" /> → <Cmd sid="shell.header.user" />. Hay dos maneras de ingresar la información del usuario.
+
+import EnterUserPage from '../../common/_enter-user-page.mdx';
+
+<EnterUserPage />
+
+Los campos que se pueden configurar en la sección <Cmd sid="team.user.information" /> son los siguientes. Ingrese la información del usuario según la descripción de cada campo.
+
+<Image src="/img/biostarx-new-user-information.png" />
+
+* **Foto**: Registre la foto del usuario. Puede tomar una foto con la cámara web o cargar una desde su PC. Al colocar el cursor sobre el perfil, se muestran las herramientas disponibles.
+
+  <Columns>
+    <Column className="width--20">
+      <Image src="/img/common/biostarx-new-user-photo.png" alone />
+    </Column>
+
+    <Column className="padding--l10">
+      * <IcCamera />: Si hay una cámara web conectada al PC, haga clic en el botón para tomar y registrar una foto.
+
+      * <IcUpload />: Puede cargar un archivo de imagen guardado en su PC.
+
+      Para obtener más información, consulte [lo siguiente](enroll-credential-face#erollbywebcambyphoto).
+    </Column>
+  </Columns>
+
+* <Cmd sid="team.user.table.id" />: Ingrese la identificación única que asignará al usuario.
+
+* <Cmd sid="team.user.table.name" />: Ingrese el nombre del usuario.
+
+* <Cmd sid="team.user.table.email" />: Ingrese la dirección de correo electrónico.
+
+* <Cmd sid="team.user.table.phone" />: Ingrese el número de teléfono.
+
+* <Cmd sid="team.user.table.department" />: Ingrese el departamento al que pertenece el usuario.
+
+* <Cmd sid="team.user.table.title" />: Ingrese el puesto del usuario.
+
+* Seleccione <Cmd sid="team.user.table.group" />: Seleccione el grupo del usuario. Para obtener más información sobre cómo agregar y administrar grupos de usuarios, consulte [lo siguiente](user-group-manage).
+
+* <Cmd sid="team.user.table.period" />: Defina un período para usar la cuenta de usuario. Puede hacer clic en el área de fecha y hora para ingresarlas manualmente o hacer clic en <IcCalc /> para seleccionar la fecha y hora deseadas.
+
+* <Cmd sid="team.user.table.status" />: Puede deshabilitar temporalmente la cuenta de usuario.
+
+Haga clic en <Cmd sid="user.save" product="2" /> en la esquina superior derecha de la pantalla para guardar la información básica ingresada.
+
+:::info
+
+* Los valores de <Cmd sid="team.user.table.id" /> pueden variar según el menú <Cmd sid="setting.menu.server.server" /> en <Cmd sid="shell.header.setting" /> → opción <Cmd sid="setting.userDevice.useridType" product="2" />. Para obtener más información, consulte [lo siguiente](settings-server-server#userid-type).
+
+  * <Cmd sid="setting.userDevice.useridType.numeric" product="2" />: Ingrese un número del 1 al 4294967294.
+
+  * <Cmd sid="setting.userDevice.useridType.alphanumeric" product="2" />: Ingrese una combinación de letras y números.
+
+* El valor de <Cmd sid="team.user.table.id" /> no puede incluir espacios.
+
+* El nombre de usuario puede tener hasta 48 caracteres, incluidos los caracteres especiales.
+
+  > Caracteres especiales: `~` `!` `@` `#` `$` `%` `^` `&` `(` `)` `-` `_` `=` `+` `[` `]` `{` `}` `;` <code>\`</code>
+
+* Para mostrar la foto, el departamento y el puesto del usuario en la tarjeta de acceso móvil, asegúrese de agregar una foto e ingresar el departamento y el puesto.
+
+* Los nombres de puesto y departamento pueden tener hasta 64 caracteres, incluidos los caracteres especiales, `espacios` y `_`.
+
+* Si usa una tarjeta de acceso móvil, asegúrese de ingresar el correo electrónico del usuario al enviarla por correo electrónico.
+
+* Para usar el enrolamiento facial móvil o BioStar X QR, asegúrese de ingresar la dirección de correo electrónico del usuario.
+
+:::
+
+:::tip
+
+Además de los campos básicos proporcionados por **BioStar X**, puede agregar campos personalizados mediante la función <Cmd sid="team.userTemplate.table.customField" /> para ingresar información adicional del usuario. <Cmd sid="team.userTemplate.table.customField" /> es una función útil que permite ampliar la información del usuario según los requisitos de la organización.
+
+Para obtener más información sobre cómo agregar <Cmd sid="team.userTemplate.table.customField" />, consulte [lo siguiente](settings-server-server#custom-field).
+
+:::
+
+<NextStep>
+  <NextItem to="enroll-credential">
+    Inscriba las credenciales del usuario y configure el método de autenticación de acceso en la sección <Cmd sid="team.user.credential.title" />.
+  </NextItem>
+
+  <NextItem to="set-permission">
+    Consulte cómo configurar los permisos de acceso del usuario en la sección <Cmd sid="team.user.permission.title" />.
+  </NextItem>
+
+  <NextItem to="set-user-advanced">
+    En la sección <Cmd sid="common.advanced" product="2" />, configure el mensaje que se mostrará en el dispositivo cuando el usuario acceda o excluya a ese usuario de la sincronización al vincular con <Cmd sid="settings.activeDirectory.title" product="2" className="normal" />.
+  </NextItem>
+
+  <NextItem to="edit-user">
+    Consulte cómo editar la información del usuario.
+  </NextItem>
+</NextStep>

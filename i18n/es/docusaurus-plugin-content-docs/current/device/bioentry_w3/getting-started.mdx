@@ -1,0 +1,186 @@
+---
+id: getting-started
+title: Primeros pasos
+description: Proporciona procedimientos iniciales para empezar con el dispositivo.
+keywords:
+  - Componentes
+  - Nombre
+  - Función
+  - Cable
+  - Conector
+---
+
+Proporciona procedimientos iniciales para empezar con el dispositivo.
+
+## Componentes
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/bew3-component-device.svg" className="none" height={220} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/bew3-component-bracket.svg" className="none" height={210} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-quick-guide.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-oss-guide.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>BioEntry W3</Td>
+
+      <Td>Soporte de pared</Td>
+
+      <Td>Guía rápida</Td>
+
+      <Td>Guía de software de código abierto</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-fixing-screws2.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-bracket-fixing-screw.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-shrink-tube.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-diode1.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-resistor2.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Tornillos de fijación x2</Td>
+
+      <Td>Tornillo de fijación del soporte (en forma de estrella)</Td>
+
+      <Td>Tubo termorretráctil</Td>
+
+      <Td>Diodo</Td>
+
+      <Td>Resistor de 120 Ω x2</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## Nombre y función de cada parte
+
+<Image src="/img/device/bew3-product-part.png" className="none" width="80%" />
+
+* **Cámara visual**: Captura una imagen facial real.
+
+* **Cámara infrarroja**: Captura la imagen facial infrarroja.
+
+* **Pantalla**: Indica el resultado de la autenticación del usuario.
+
+* **Unidad de autenticación de tarjeta RF y tarjeta de acceso móvil**: parte para escanear una tarjeta RFID o una tarjeta de acceso móvil para la entrada.
+
+* **Indicador LED**: Indica el estado operativo del dispositivo mediante el color del LED.
+
+  * Verde: autenticación exitosa.
+
+  * Rojo: autenticación fallida.
+
+  * Azul/cian intermitente: funcionamiento normal.
+
+  * Azul/verde intermitente:
+
+    * Al configurar <Cmd sid="ui_012" product="dev" /> para su uso, no se puede obtener la dirección IP.
+
+    * Cuando está en modo <Cmd sid="ui_205" product="dev" />, la conexión con el dispositivo maestro se desconecta.
+
+  * Parpadeo rojo/morado: El dispositivo está bloqueado.
+
+  * Verde intermitente: esperando entrada.
+
+* **Cable**
+
+  Alimentación / Ethernet / RS-485 / Wiegand entrada/salida / Entrada / Relé
+
+* **Altavoz**: Emite sonido.
+
+* **Botón de reinicio**
+
+  * Inicializa la configuración de red. Para obtener más información sobre la inicialización de la configuración de red, consulta [lo siguiente](installation#reset-network-settings).
+
+  * Elimina toda la información y los certificados almacenados en el dispositivo e inicializa la configuración. Para obtener más información sobre la inicialización de fábrica, consulta [lo siguiente](installation#factory-reset).
+
+* **Ranura para memoria USB (tipo C)**: Conecta la memoria USB.
+
+### Cable
+
+<Columns>
+  <Column>
+    <Image src="/img/device/bew3-cables-layout.png" alone width={450} className="none" />
+  </Column>
+
+  <Column className="padding--l10">
+    | Pin | Nombre | Color |
+    | :-: | :-: | :-: |
+    | 1 | INPUT2 | Naranja |
+    | 2 | INPUT1 | Marrón |
+    | 3 | INPUT0 | Morado |
+    | 4 | ETX+ | Blanco |
+    | 5 | ETX- | Naranja |
+    | 6 | ERX+ | Negro |
+    | 7 | ERX- | Amarillo |
+    | 8 | RS485_0 TRXN | Amarillo (franja negra) |
+    | 9 | RS485_0 TRXP | Azul (franja blanca) |
+    | 10 | RS485_1 TRXN | Amarillo |
+    | 11 | RS485_1 TRXP | Azul |
+    | 12 | PWR GND | Negro (franja blanca) |
+    | 13 | PWR +VDC | Rojo |
+    | 14 | VB2 | Marrón |
+    | 15 | VB2 | Azul |
+    | 16 | VB1 | Verde |
+    | 17 | VB1 | Rojo |
+    | 18 | GND | Negro |
+    | 19 | RELAY NO | Gris (franja blanca) |
+    | 20 | RELAY NC | Naranja (franja blanca) |
+    | 21 | RELAY COM | Verde (franja blanca) |
+    | 22 | GND | Negro |
+    | 23 | WGD OUT1 | Blanco (franja negra) |
+    | 24 | WGD OUT0 | Verde (franja negra) |
+    | 25 | WGD IN1 | Blanco |
+    | 26 | WGD IN0 | Verde |
+  </Column>
+</Columns>
+
+:::info
+
+Hay varios conductores de calibre AWG	26, que deben protegerse con aislamiento estándar o material equivalente al realizar el cableado. Además, asegúrese de que el cable no entre en contacto con conductores mayores a 18 AWG (0.82 mm²).
+
+:::
+
+{/* 올바른 얼굴 등록 및 인증 방법 */}
+
+import FaceEnrollCaution from '../../common/_face-enrollment-authentication-method.mdx'
+
+<FaceEnrollCaution name="60~100 cm" />

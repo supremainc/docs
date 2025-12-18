@@ -1,0 +1,73 @@
+---
+id: product-specifications
+title: Especificaciones del producto
+description: Incluye las especificaciones clave del producto, como tamaño, características y rendimiento.
+keywords:
+  - Credenciales
+  - General
+  - Rostro
+  - Capacidad
+  - Interfaz
+  - Eléctrico
+  - Dimensiones
+---
+
+Incluye las especificaciones clave del producto, como tamaño, características y rendimiento.
+
+import specs from '@site/static/specs/fsf2_specs.json';
+
+{/* 크리덴셜 */}
+
+<SpecSection data={specs.facestationf2.credentials} />
+
+{/* 일반 */}
+
+<SpecSection data={specs.facestationf2.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.facestationf2.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.facestationf2.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.facestationf2.power} />
+
+## Dimensiones y peso
+
+<Badge only>FSF2-ODB</Badge>
+
+<Image src="/img/device/fsf2-odb-dimension.svg" className="none" />
+
+<Badge only>FSF2-DB, FSF2-AB</Badge>
+
+<Image src="/img/device/fsf2-dbadb-dimension.svg" className="none" />
+
+---
+
+:::note
+
+<Anno id="anno1">1)</Anno> La distancia mínima de autenticación facial especificada es la configuración predeterminada del producto, y la distancia de autenticación facial recomendada es de 0.5–1.3 m.
+
+<Anno id="anno2">2)</Anno> Las tarjetas DESFire EV2/EV3 son compatibles con las tarjetas DESFire EV1 y admiten las funciones CSN y de tarjeta inteligente, incluidas las de la tarjeta DESFire EV1.
+
+<Anno id="anno3">3)</Anno> El alcance de lectura RF variará según el entorno de instalación.
+
+<Anno id="anno4">4)</Anno> Según los usuarios inscritos sin credenciales.
+
+:::
+
+:::info
+
+* Las especificaciones del producto están sujetas a cambios sin previo aviso para mejorar el rendimiento.
+
+* Cuando <Badge only>FSF2-DB, FSF2-AB</Badge> es el maestro, un esclavo equipado con un sensor de huellas digitales autentica huellas digitales.
+
+  * Máx. Credenciales de huellas digitales (1:N): 100,000
+
+  * Máx. Credenciales de huella digital (1:1): 100,000
+
+:::

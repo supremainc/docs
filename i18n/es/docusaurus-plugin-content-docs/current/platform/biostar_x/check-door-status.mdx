@@ -1,0 +1,166 @@
+---
+id: check-door-status
+title: Verifica el estado de la puerta
+description: Supervisa el estado de la puerta de entrada en tiempo real para operar el sistema de seguridad de forma confiable. También verifica el estado anómalo del dispositivo asignado a la puerta de entrada.
+keywords:
+  - Monitorizar
+  - Puerta
+---
+
+Supervisa el estado de la puerta de entrada en tiempo real para operar el sistema de seguridad de forma confiable. Consulta de un vistazo el estado anómalo del dispositivo asignado a la puerta de entrada mediante el icono de estado proporcionado en <Cmd sid="shell.header.arena" /> y responde de inmediato cuando se produzca un problema.
+
+Haga clic en <Cmd sid="shell.header.arena" /> en la página <Cmd sid="shell.header.launcher" /> o seleccione <Cmd sid="shell.header.arena" /> en la lista de accesos directos en la esquina superior izquierda de la pantalla. Verifica el estado de cada puerta de entrada en la pestaña <Cmd sid="arena.tree.door.title" /> ubicada en la barra lateral izquierda de la pantalla.
+
+## Antes de comenzar
+
+Asegúrate de que los dispositivos conectados a la puerta estén configurados correctamente. Comprueba que el dispositivo esté conectado a la red y actualizado con el firmware más reciente. En caso de un problema, primero verifica el estado de alimentación y la conexión de red del dispositivo.
+
+:::info
+
+* Para obtener información sobre cómo añadir y configurar dispositivos, consulta [lo siguiente](settings-manage-devices).
+
+* Para obtener información sobre cómo añadir y configurar puertas, consulta [lo siguiente](settings-manage-door).
+
+* La función <Cmd sid="setting.server.logUploadType" product="2" /> debe estar habilitada para supervisar o controlar el estado de la puerta de acceso. Activa esta función en la ruta de menú <Cmd sid="shell.header.setting" /> → <Cmd sid="setting.menu.server.root" /> → <Cmd sid="setting.menu.server.server" />, en la sección <Cmd sid="common.general" product="2" />.
+
+* La función para conectar cámaras a la puerta mediante el servidor VMS está disponible como opción adicional con una licencia **Advanced** o superior. Para más información sobre la política de licencias, consulta [lo siguiente](licensing#features-add-ons).
+
+:::
+
+## Conoce la estructura del árbol {#door-tree-structure}
+
+La estructura de árbol en la pestaña <Cmd sid="arena.tree.door.title" /> de la barra lateral izquierda se organiza de la siguiente manera.
+
+import Doortree from './door-tree.json';
+
+<Treeview data={Doortree} />
+
+:::info
+
+* Para obtener información sobre cómo añadir y configurar dispositivos, consulta [lo siguiente](settings-manage-devices).
+
+* Para obtener información sobre cómo añadir y configurar puertas, consulta [lo siguiente](settings-manage-door).
+
+* Para obtener información sobre cómo añadir y configurar ascensores, consulta [lo siguiente](settings-manage-elevators).
+
+* Para obtener información sobre la configuración avanzada de control de acceso, consulta [lo siguiente](settings-advanced-ac).
+
+* Consulta [lo siguiente](settings-videos-rule) para vincular la puerta y la cámara.
+
+:::
+
+## Verifica el estado
+
+### Verificar errores de conexión y alarmas {#check-the-error-status}
+
+Verifica el estado de la puerta o del ascensor para confirmar su correcto funcionamiento. Consulta la información siguiente para el estado de cada icono.
+
+<div className="col2--20-80 overflow-x">
+  | Ícono de estado | Descripción |
+  | :-: | --- |
+  | <IcErr width="35px" height="35px" /> | Muestra estados anómalos del dispositivo, como desconexión, errores del servidor de comunicación y errores de sincronización. |
+  | <IcAlert width="40px" height="40px" /> | Muestra el estado cuando se producen alarmas de la puerta de entrada (apertura forzada, apertura prolongada, APB, alarmas de incendio, aperturas de emergencia) o alarmas de análisis de video con IA (detección de merodeo, detección de intrusión, etc.) se producen. |
+</div>
+
+:::tip
+
+Haz clic en un icono de estado para ver información detallada en una descripción emergente. Haz clic en el enlace del mensaje de error de la descripción emergente para ir a la lista de dispositivos conectados a la puerta o al ascensor.
+
+<Image src="/img/monitoring-door-status-tooltip.png" />
+
+Haz clic derecho en el dispositivo y selecciona la opción <Cmd sid="arena.tree.contextMenu.reconnect" /> o <Cmd sid="arena.tree.contextMenu.reboot" />.
+
+<Image src="/img/monitoring-door-status-tooltip-device.png" />
+
+:::
+
+:::info
+
+* Configura las alarmas provenientes de la puerta o del ascensor mediante los siguientes ajustes.
+
+  * [Ajustes de alarma de puerta](settings-door-add#alarm)
+
+  * [Ajustes de alarma de ascensor](settings-elevators-add#alarm)
+
+  * [Ajustes avanzados de control de acceso](settings-advanced-ac)
+
+* Conecta la puerta de entrada y la cámara en las reglas de video para configurar alarmas. Para obtener información sobre los ajustes de reglas de video, consulta [lo siguiente](settings-videos-rule).
+
+* Cuando está vinculado con el servidor VMS, las alarmas de eventos de IA para videos pueden enviarse a **BioStar X**. Para obtener más información, consulta el manual del servidor VMS.
+
+* Para obtener información sobre el reconocimiento de alarmas, consulta [lo siguiente](monitoring-event#acknowledge-alarm-and-record-action).
+
+:::
+
+### Verificar el estado del bloqueo de la puerta {#check-the-door-lock}
+
+Verifica el estado de bloqueo de la puerta mediante el estado del relé de la puerta. Consulta lo siguiente para el estado del relé de la puerta.
+
+<div className="col2--20-80 overflow-x">
+  | Ícono de estado | Descripción |
+  | :-: | --- |
+  | <IcRelayLock width="auto" height="35px" /> | La puerta de entrada está bloqueada. |
+  | <IcRelayUnlock width="auto" height="40px" /> | La puerta está abierta. |
+</div>
+
+### Verificar el estado de la cámara {#check-the-camera-status}
+
+Verifica el estado de la cámara para asegurarte de que funcione con normalidad. Consulta lo siguiente para el estado de la cámara.
+
+<div className="col2--20-80 overflow-x">
+  | Ícono de estado | Descripción |
+  | :-: | --- |
+  | <IcCamOk width="auto" height="35px" /> | La cámara está conectada. |
+  | <IcCamFail width="auto" height="35px" /> | La cámara está apagada o desconectada. |
+</div>
+
+### Verificar el estado de armado {#check-the-security-status}
+
+Verifica el estado de seguridad de la puerta de entrada o de los ajustes avanzados de control de acceso.
+
+<div className="col2--20-80 overflow-x">
+  | Ícono de estado | Descripción |
+  | :-: | --- |
+  | <IcDisable width="auto" height="30px" /> | Este es el icono para ajustes inactivos. Los ajustes inactivos no generan alarmas. |
+  | <IcArm width="auto" height="35px" /> | La puerta está armada. |
+  | <IcDisarm width="auto" height="35px" /> | La puerta está desarmada. |
+</div>
+
+:::info
+
+El estado de seguridad se muestra solo cuando la puerta de entrada está configurada como **guard**. Para obtener más información sobre la configuración de seguridad, consulte [lo siguiente](settings-advanced-ac-intrusion-alarm).
+
+:::
+
+### Verificar el estado del ascensor
+
+Verifica el estado del control de acceso por piso a través del ascensor.
+
+<div className="col2--20-80 overflow-x">
+  | Ícono de estado | Descripción |
+  | :-: | --- |
+  | <StatusNormal width="auto" height="35px" /> | El piso correspondiente está bloqueado a través del ascensor. |
+  | <StatusOK width="auto" height="35px" /> | El piso correspondiente está desbloqueado a través del ascensor. |
+</div>
+
+## Expandir/contraer lista de grupos
+
+Expande o contrae la lista mediante el grupo de nivel superior o el subgrupo.
+
+<Image src="/img/biostarx-monitoring-group-expand-collapse.png" />
+
+### Grupo de nivel superior
+
+1. En la pestaña <Cmd sid="arena.tree.door.title" />, selecciona <Cmd sid="arena.tree.door.allDoorGroups" /> o <Cmd sid="arena.tree.door.allElevatorGroups" />, <Cmd sid="arena.tree.door.allZones" /> y haz clic derecho.
+
+2. Elige <Cmd sid="arena.tree.expandAll" /> o <Cmd sid="arena.tree.collapseAll" /> en el menú emergente.
+
+Todas las sublistas pueden expandirse o contraerse según el grupo de nivel superior seleccionado.
+
+### Subgrupo
+
+1. Para expandir o contraer la lista de subgrupos en cada grupo de nivel superior, selecciona el subgrupo y haz clic derecho.
+
+2. Selecciona la opción <Cmd sid="arena.tree.contextMenu.expandBelow" /> o <Cmd sid="arena.tree.contextMenu.collapseBelow" /> en el menú emergente.
+
+Puedes expandir o contraer la lista del subgrupo seleccionado.

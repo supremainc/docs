@@ -1,0 +1,306 @@
+---
+id: settings
+title: Ajustes
+description: Proporciona instrucciones para configurar los ajustes del sistema y del dispositivo.
+keywords:
+  - Visualizar
+  - Sonido
+  - Red
+  - Dispositivo
+---
+
+Proporciona instrucciones para configurar los ajustes del sistema y del dispositivo.
+
+## Pantalla y sonido
+
+Cambie los ajustes de pantalla y sonido del dispositivo.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Haz clic en <Cmd sid="ui_366" product="dev" /> y cambia el elemento deseado.
+
+   <Image src="/img/device/xs2-displaysound.png" />
+
+   * <Cmd sid="ui_364" product="dev" />: Permite elegir los elementos que se mostrarán en el fondo de la pantalla de inicio.
+
+   * <Cmd sid="ui_227" product="dev" />: Permite seleccionar el idioma que se mostrará en la pantalla.
+
+   * <Cmd sid="ui_284" product="dev" />: Configure si se utiliza un mensaje privado que se mostrará en la pantalla cuando el usuario se autentique. <Cmd sid="ui_284" product="dev" /> se puede configurar mediante el SDK de dispositivos BioStar. Si no se configura, no se mostrará ningún mensaje cuando la autenticación sea correcta, incluso si <Cmd sid="ui_284" product="dev" /> está habilitado en el dispositivo.
+
+   * <Cmd sid="ui_184" product="dev" />: Configure si se utiliza un mensaje privado que se mostrará en la pantalla cuando el usuario se autentique. <Cmd sid="ui_184" product="dev" /> se puede configurar mediante la API de BioStar X. Si no se configura, no se mostrará ningún mensaje cuando la autenticación sea correcta, incluso si <Cmd sid="ui_184" product="dev" /> está habilitado en el dispositivo.
+
+   * <Cmd sid="ui_365" product="dev" />: Configure si el protector de pantalla está habilitado. Reduce el consumo de energía innecesario al disminuir el brillo de la pantalla cuando el dispositivo no se utiliza.
+
+   * <Cmd sid="ui_131" product="dev" />: Configure el tiempo (s) para que la pantalla de menú desaparezca automáticamente. Si no se pulsa ningún botón durante el tiempo establecido, la pantalla regresará a la pantalla de inicio.
+
+   * <Cmd sid="ui_135" product="dev" />: Configure el tiempo (s) para que un mensaje de configuración completada o de notificación desaparezca automáticamente.
+
+   * <Cmd sid="ui_148" product="dev" />: Configure el tiempo (s) para apagar la iluminación de la pantalla.
+
+   * <Cmd sid="ui_251" product="dev" />: Permite usar guía por voz en lugar de tonos de notificación.
+
+   * <Cmd sid="ui_153" product="dev" />: Configure el volumen.
+
+:::info
+
+Para obtener más información sobre el SDK de dispositivos BioStar, consulte la [página del SDK de dispositivos BioStar](https://kb.supremainc.com/bs2sdk/doku.php) en la base de conocimientos de Suprema.
+
+:::
+
+## Red
+
+Cambie los ajustes de red del dispositivo, como Ethernet, servidor, OSDP, etc.
+
+### Ethernet
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Seleccione <Cmd sid="ui_344" product="dev" /> → <Cmd sid="ui_252" product="dev" />.
+
+3. Cambie el elemento deseado.
+
+   <Image src="/img/device/xs2-network-ethernet.png" />
+
+   * <Cmd sid="ui_012" product="dev" />: Configure si se utiliza DHCP. Al desactivar la configuración de DHCP, se pueden modificar <Cmd sid="ui_290" product="dev" />, <Cmd sid="ui_029" product="dev" />, <Cmd sid="ui_068" product="dev" />, <Cmd sid="ui_192" product="dev" />, <Cmd sid="ui_111" product="dev" />.
+
+   * <Cmd sid="ui_290" product="dev" />: Configure el puerto del dispositivo.
+
+   * <Cmd sid="ui_029" product="dev" />: Compruebe la dirección IP del dispositivo. Para modificarla, desactive la configuración de DHCP.
+
+   * <Cmd sid="ui_068" product="dev" />: Compruebe la puerta de enlace del dispositivo. Para modificarla, desactive la configuración de DHCP.
+
+   * <Cmd sid="ui_192" product="dev" />: Compruebe la máscara de subred del dispositivo. Para modificarla, desactive la configuración de DHCP.
+
+   * <Cmd sid="ui_111" product="dev" />: Configure la dirección del servidor DNS.
+
+4. Pulsa <Cmd sid="ui_037" product="dev" /> para guardar la configuración.
+
+### Servidor
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Seleccione <Cmd sid="ui_344" product="dev" /> → <Cmd sid="ui_180" product="dev" />.
+
+3. Cambie el elemento deseado.
+
+   <Image src="/img/device/xs2-network-server.png" />
+
+   * <Cmd sid="ui_283" product="dev" />: Permite enviar una señal de conexión desde el dispositivo a un servidor con la información ingresada. Cuando <Cmd sid="ui_283" product="dev" /> está habilitado, se pueden introducir <Cmd sid="ui_182" product="dev" />, <Cmd sid="ui_183" product="dev" /> y <Cmd sid="ui_189" product="dev" />.
+
+   * <Cmd sid="ui_182" product="dev" />: Ingrese la dirección IP de la PC en la que está instalado BioStar X.
+
+   * <Cmd sid="ui_183" product="dev" />: Introduzca <Cmd sid="ui_183" product="dev" /> en lugar de <Cmd sid="ui_182" product="dev" />.
+
+   * <Cmd sid="ui_189" product="dev" />: Ingrese el puerto de la PC en la que está instalado BioStar X.
+
+4. Pulsa <Cmd sid="ui_037" product="dev" /> para guardar la configuración.
+
+### Ajustes de OSDP
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Haz clic en <Cmd sid="ui_344" product="dev" /> y establece el elemento deseado en <Cmd sid="ui_039" product="dev" />.
+
+   <Image src="/img/device/xs2-network-osdp.png" />
+
+   * <Cmd sid="ui_049" product="dev" />: Seleccione el modo RS-485.
+
+   * <Cmd sid="ui_297" product="dev" />: Seleccione la velocidad en baudios deseada.
+
+   * <Cmd sid="ui_257" product="dev" />: Cuando utilice <Cmd sid="ui_269" product="dev" />, seleccione esta opción para mostrar en la pantalla los resultados de autenticación de controladores o dispositivos de terceros. Esta opción puede utilizarse cuando el modo de <Cmd sid="ui_049" product="dev" /> está configurado en <Cmd sid="ui_088" product="dev" /> o <Cmd sid="ui_205" product="dev" />.
+
+3. Pulsa <Cmd sid="ui_037" product="dev" /> para guardar la configuración.
+
+## Dispositivo
+
+### Licencia {#license}
+
+Activa la licencia del dispositivo o revisa <Cmd sid="ui_206" product="dev" /> y <Cmd sid="ui_292" product="dev" />.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Presiona <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_119" product="dev" />.
+
+3. Conecta al dispositivo la USB que contiene la licencia y selecciona <Image src="/img/common/ico-add2.svg" ico alone /> para activar la licencia del dispositivo.
+
+   <Image src="/img/device/xs2-license.png" />
+
+4. Las licencias que se pueden activar aparecen en la pantalla. Activa la licencia deseada.
+
+   <Image src="/img/device/xs2-license1.png" />
+
+:::info
+
+import DocumentA from '../../common/_device-license-info.mdx'
+
+<DocumentA />
+
+:::
+
+### Relé
+
+Configure los puertos de entrada de <Cmd sid="ui_144" product="dev" /> y <Cmd sid="ui_015" product="dev" /> en el dispositivo.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Haga clic en <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_122" product="dev" />.
+
+   <Image src="/img/device/xs2-relay.png" />
+
+   * <Cmd sid="ui_122" product="dev" />: Configure si el relé está habilitado. Habilitar el ajuste de relé permite configurar <Cmd sid="ui_144" product="dev" /> y <Cmd sid="ui_015" product="dev" />.
+
+   * <Cmd sid="ui_144" product="dev" />: Establece la duración que la puerta permanece abierta cuando se ha realizado la autenticación de usuario estándar.
+
+   * <Cmd sid="ui_015" product="dev" />: Selecciona el puerto de entrada conectado al botón de salida.
+
+   * <Cmd sid="ui_274" product="dev" />: Selecciona el tipo de interruptor (<Cmd sid="ui_036" product="dev" /> o <Cmd sid="ui_035" product="dev" />) para el puerto de entrada del botón de salida.
+
+### Fecha y hora {#date-time}
+
+Configura la fecha y la hora. Configura la fecha y la hora con precisión para recopilar datos de registro precisos.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Haz clic en <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_098" product="dev" />.
+
+3. Cambie el elemento deseado.
+
+   <Image src="/img/device/xs2-datetime.png" />
+
+   * <Cmd sid="ui_098" product="dev" />: Verifica la fecha y hora actuales. Desactiva <Cmd sid="ui_208" product="dev" /> para modificarla manualmente.
+
+   * <Cmd sid="ui_358" product="dev" />: Establece la referencia de hora de la ubicación actual.
+
+   * <Cmd sid="ui_208" product="dev" />: Sincroniza el servidor y la hora. Habilita <Cmd sid="ui_208" product="dev" /> para sincronizar el servidor y la hora.
+
+   * <Cmd sid="ui_097" product="dev" />: Establece el formato de fecha. Selecciona <Cmd sid="ui_062" product="dev" />, <Cmd sid="ui_033" product="dev" /> y <Cmd sid="ui_009" product="dev" />.
+
+   * <Cmd sid="ui_209" product="dev" />: Establece el formato de hora. Selecciona <Cmd sid="ui_238" product="dev" /> y <Cmd sid="ui_005" product="dev" />.
+
+### Horario de verano
+
+Aplica el horario de verano para usar el dispositivo. Configura correctamente la hora de inicio y fin.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Haz clic en <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_270" product="dev" />, luego presiona <Image src="/img/common/ico-add2.svg" ico alone /> para agregar el horario de verano.
+
+3. Cambie el elemento deseado.
+
+   <Image src="/img/device/xs2-dst.png" />
+
+   * <Cmd sid="ui_253" product="dev" />: Consulta el nombre del horario de verano.
+
+   * <Cmd sid="ui_217" product="dev" /> / <Cmd sid="ui_218" product="dev" /> / <Cmd sid="ui_216" product="dev" /> / <Cmd sid="ui_215" product="dev" />: Define los detalles de cuándo inicia el horario de verano.
+
+   * <Cmd sid="ui_094" product="dev" /> / <Cmd sid="ui_095" product="dev" /> / <Cmd sid="ui_093" product="dev" /> / <Cmd sid="ui_092" product="dev" />: Define los detalles de cuándo finaliza el horario de verano.
+
+4. Pulsa <Cmd sid="ui_037" product="dev" /> para guardar la configuración.
+
+### Información del dispositivo
+
+Consulta el nombre del modelo, el ID del dispositivo, el número de serie, la versión del dispositivo y del firmware, el kernel y la dirección MAC.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Selecciona <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_289" product="dev" />. Verifica la información de <Cmd sid="ui_136" product="dev" />, <Cmd sid="ui_282" product="dev" />, <Cmd sid="ui_210" product="dev" />, <Cmd sid="ui_019" product="dev" />, <Cmd sid="ui_017" product="dev" />, <Cmd sid="ui_332" product="dev" />, <Cmd sid="ui_031" product="dev" />.
+
+   <Image src="/img/device/xs2-info.png" />
+
+### Información de memoria
+
+Consulta el estado de uso de la memoria.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Selecciona <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_134" product="dev" />. Consulta el estado de uso de memoria del dispositivo.
+
+   <Image src="/img/device/xs2-memory.png" />
+
+### Memoria USB
+
+Conecta una memoria USB e importa la información de usuarios al dispositivo o exporta registros e información de usuarios desde el dispositivo. También puede actualizar el firmware.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Selecciona <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_061" product="dev" />.
+
+3. Selecciona el elemento deseado y cambia el ajuste.
+
+   <Image src="/img/device/xs2-usb.png" />
+
+   * <Cmd sid="ui_063" product="dev" />: Importa la información de usuarios desde la memoria USB conectada.
+
+   * <Cmd sid="ui_100" product="dev" />: Selecciona la información para exportar a la memoria USB conectada.
+
+   * <Cmd sid="ui_353" product="dev" />: Actualiza el firmware si los archivos de firmware están guardados en la memoria USB conectada.
+
+:::caution
+
+No desconectes la fuente de alimentación mientras actualizas el firmware del dispositivo. El dispositivo puede fallar.
+
+:::
+
+### Sabotaje
+
+Configura si se utiliza el tamper de seguridad. Cuando el tamper está activado, establece la eliminación de todos los usuarios, todos los registros y la clave de seguridad.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Selecciona <Cmd sid="ui_280" product="dev" />.
+
+3. Activa <Cmd sid="ui_150" product="dev" /> para eliminar los datos de todos los usuarios registrados, todos los registros y las claves de seguridad cuando ocurra un evento de tamper.
+
+### Reiniciar dispositivo
+
+Reinicia el dispositivo.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Selecciona <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_286" product="dev" />.
+
+3. Presiona <Cmd sid="ui_367" product="dev" /> para reiniciar el dispositivo. Presiona <Cmd sid="ui_321" product="dev" /> para volver a la pantalla anterior.
+
+### Restaurar valores predeterminados
+
+Los ajustes del dispositivo, los ajustes de red y los niveles de operador se restablecerán.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Selecciona <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_089" product="dev" />.
+
+   * <Cmd sid="ui_304" product="dev" />: Inicializa todos los ajustes almacenados en el dispositivo. Presiona <Cmd sid="ui_367" product="dev" /> para inicializar todos los ajustes del dispositivo. Presiona <Cmd sid="ui_321" product="dev" /> para volver a la pantalla anterior.
+
+   * <Cmd sid="ui_104" product="dev" />: Inicializa todos los ajustes excepto los de red. Presiona <Cmd sid="ui_367" product="dev" /> para inicializar todos los ajustes excepto los de red. Presiona <Cmd sid="ui_321" product="dev" /> para volver a la pantalla anterior.
+
+   * <Cmd sid="ui_072" product="dev" />: Elimina toda la información guardada en el dispositivo y el certificado raíz, y restaura los ajustes a los valores predeterminados.
+
+   * <Cmd sid="ui_121" product="dev" />: Elimina el certificado raíz guardado en el dispositivo.
+
+3. Si continúas con <Cmd sid="ui_089" product="dev" />, el dispositivo se reiniciará.
+
+:::info
+
+* Al restablecer, el nivel de operador también se restablecerá. Después de restablecer, vuelve a configurar el nivel de operador.
+
+* El ajuste de idioma no cambiará después de restablecer.
+
+* El menú <Cmd sid="ui_072" product="dev" /> puede usarse cuando el certificado raíz está guardado en el dispositivo.
+
+* El menú <Cmd sid="ui_121" product="dev" /> puede usarse solo cuando el certificado raíz está guardado en el dispositivo y se ha designado un administrador.
+
+:::
+
+### Tipo de ID de usuario
+
+Selecciona el tipo de ID de usuario que se va a registrar en el dispositivo.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Selecciona <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_168" product="dev" />.
+
+   * <Cmd sid="ui_200" product="dev" />: Permite introducir un ID de usuario solo con números.
+
+   * <Cmd sid="ui_237" product="dev" />: Permite introducir un ID de usuario con caracteres alfanuméricos y ciertos símbolos `_` `-`.
+
+3. Pulsa <Cmd sid="ui_037" product="dev" /> para guardar la configuración.

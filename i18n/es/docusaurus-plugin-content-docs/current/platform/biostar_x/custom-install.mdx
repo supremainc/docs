@@ -1,0 +1,44 @@
+---
+id: custom-install
+title: Instalación Personalizada​
+description: Guía al usuario para configurar una instalación personalizada que se integre con una base de datos que ya haya instalado.
+keywords:
+  - Instalación personalizada
+---
+
+Este documento proporciona una guía paso a paso sobre cómo instalar **BioStar X** mediante el método <Cmd code="biostar2.install.customInstall" className="bold" />. <Cmd code="biostar2.install.customInstall" className="bold" /> crea un esquema de base de datos junto con una base de datos existente (MariaDB, MS SQL Server) instalada en un servidor local o remoto. Prepare la base de datos y la cuenta de usuario que se vincularán antes de iniciar la instalación.
+
+## Antes de empezar {#start-before}
+
+* Las bases de datos que se pueden usar en la integración con **BioStar X** son las siguientes.
+
+  * MariaDB 11.4.4
+
+  * MS SQL Server 2012 SP3
+
+  * MS SQL Server 2014 SP2
+
+  * MS SQL Server 2016 SP1
+
+  * MS SQL Server 2017
+
+  * MS SQL Server 2019
+
+  * MS SQL Server 2022
+
+* La seguridad de comunicación de MS SQL Server admite TLS 1.2.
+
+* Si la creación de tablas falla cuando se establece MS SQL Server como Tipo de base de datos, cree la tabla ejecutando el script en la carpeta *C:\Program Files\BioStar X\dbscript\mssql*.
+
+* Al instalar con <Cmd code="biostar2.install.customInstall" className="bold" />, **AC DB name**, **TA DB name** y **VE DB name** no pueden configurarse con el mismo nombre.
+
+* Para usar la autenticación de Windows, se requiere [Microsoft ODBC Driver 17 for SQL Server](https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17).
+  Instale primero el controlador.
+
+import InstallStep from '../../common/_biostar-install-steps.mdx';
+
+<InstallStep />
+
+import InstallNotes from '../../common/_install-note.mdx';
+
+<InstallNotes />

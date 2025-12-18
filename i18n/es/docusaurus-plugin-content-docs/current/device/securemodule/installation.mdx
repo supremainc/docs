@@ -1,0 +1,50 @@
+---
+id: installation
+title: Conectar
+description: Consulta ejemplos de cómo conectar el producto.
+keywords:
+  - Secure Module
+  - Dispositivo
+---
+
+Consulta ejemplos de cómo conectar el producto.
+
+:::info
+
+* Utiliza cables AWG22 a AWG16 para la conexión con el producto.
+
+* Pela aproximadamente 5 a 6 mm del extremo del cable para conectarlo al conector del producto.
+
+:::
+
+{/* ## 전원 연결 */}
+
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+## Conexión RS-485
+
+<Image src="/img/device/installation-rs485-connection-sio2.png" width="75%" className="none" />
+
+:::info
+
+* Utilice un par trenzado AWG24 con una longitud máxima de 1.2 km para el cable RS-485.
+
+* Se recomienda usar cables RS-485 con una impedancia característica de 120 Ω.
+
+* Si se conecta mediante una cadena en serie RS-485, conecte la resistencia de terminación (120 Ω) en ambos extremos de la conexión en cadena. Si se conecta en la línea media, el nivel de señal se reducirá y el rendimiento de comunicación se verá afectado. Asegúrese de conectarlas en ambos extremos de la conexión en cadena.
+
+:::
+
+{/* ## 릴레이 연결 */}
+
+import RelayConnectioin from "../../common/_device-indoor-module-relay-connection.mdx";
+
+<RelayConnectioin />
+
+{/* ## 출입문 센서 및 퇴실 버튼 연결 */}
+
+import RtsConnection from "../../common/_device-door-sensor-connection.mdx";
+
+<RtsConnection />

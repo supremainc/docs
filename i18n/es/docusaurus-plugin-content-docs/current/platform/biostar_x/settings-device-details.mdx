@@ -1,0 +1,49 @@
+---
+id: settings-device-details
+title: Configuración del dispositivo
+description: Esto proporciona instrucciones sobre cómo configurar y gestionar las funciones detalladas del dispositivo registrado.
+keywords:
+  - Ajustes
+  - Dispositivo
+  - Información del dispositivo
+---
+
+Esto proporciona instrucciones sobre cómo configurar y gestionar las funciones detalladas del dispositivo registrado. Puede configurar detalles como la información del dispositivo, la configuración de red, la autenticación y la configuración avanzada. Los detalles pueden variar según los tipos de conexión RS-485 o los modelos de dispositivo.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.device.root" /> en la barra lateral izquierda.
+
+3. Seleccione el dispositivo que desea configurar de la lista de dispositivos.
+
+4. Consulte los detalles en cada sección para configurar la información del dispositivo.
+
+   * <Cmd sid="device.info.information" product="2" />: Verifique y modifique el nombre y grupo del dispositivo, la zona horaria, el hardware y las versiones de firmware. Para obtener más información, consulte [lo siguiente](settings-device-details-info).
+
+   * <Cmd sid="device.info.network" product="2" />: Configure la configuración de red del dispositivo para TCP/IP, RS-485 y comunicación con el servidor. Para obtener más información, consulte [lo siguiente](settings-device-details-network).
+
+   * <Cmd sid="device.info.authentication" product="2" />: Configure las opciones relacionadas con la autenticación de usuarios para el dispositivo. Para obtener más información, consulte [lo siguiente](settings-device-details-auth).
+
+   * <Cmd sid="device.info.advanced" product="2" />: Puede configurar el Administrador maestro, la gestión del dispositivo, pantalla/sonido, condiciones de funcionamiento y acciones. Para obtener más información, consulte [lo siguiente](settings-device-details-advanced).
+
+   * <Cmd sid="device.info.temperMask" product="2" /> / <Cmd sid="device.info.mask" product="2" />: Configure los detalles relacionados con el uso de la cámara térmica y la mascarilla. Para obtener más información, consulte [lo siguiente](settings-device-details-thermal-mask).
+
+   * <Cmd sid="device.info.interphone" product="2" />: Configure los detalles para usar el intercomunicador IP. Para obtener más información, consulte [lo siguiente](settings-device-details-interphone).
+
+   * <Cmd sid="device.info.rtsp" product="2" />: Establezca los detalles para la transmisión **Real Time Streaming Protocol** (RTSP). Para obtener más información, consulte [lo siguiente](settings-device-details-rtsp).
+
+5. Una vez completadas todas las configuraciones, haga clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla.
+
+:::info
+
+* También puede modificar la información de varios dispositivos a la vez. Seleccione dos o más dispositivos y luego haga clic en <Cmd sid="button.batchEdit" product="2" /> en la esquina superior derecha de la pantalla.
+
+  <Image src="/img/biostarx-setting-device-batch-edit.png" />
+
+* Los detalles que se muestran en la ventana <Cmd sid="device.batchEdit" product="2" /> pueden variar según los tipos de dispositivo seleccionados.
+
+* Al seleccionar un dispositivo maestro y dispositivos esclavos simultáneamente para la edición por lotes, solo se pueden modificar ciertos elementos dentro de <Cmd sid="device.info.authentication" product="2" /> y <Cmd sid="device.info.displaySound" product="2" />.
+
+* <Cmd sid="device.info.authenticationMode" product="2" /> solo se puede editar por lotes cuando se seleccionan dispositivos con el mismo nombre de modelo.
+
+:::

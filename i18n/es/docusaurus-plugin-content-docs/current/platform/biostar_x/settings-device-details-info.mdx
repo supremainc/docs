@@ -1,0 +1,100 @@
+---
+id: settings-device-details-info
+title: Ajuste de Información Básica
+description: Proporciona orientación para verificar y ajustar el nombre del dispositivo, el grupo, la zona horaria, el hardware y la versión del firmware.
+keywords:
+  - Dispositivo
+  - Información
+---
+
+La sección <Cmd sid="device.info.information" product="2" /> permite configurar la información básica del dispositivo. Permite comprobar el nombre y el grupo del dispositivo, la zona horaria y las versiones de hardware y firmware. Permite cambiar el nombre y el grupo del dispositivo o actualizar su firmware.
+
+<Image src="/img/biostarx-setting-device-edit-info.png" />
+
+Estos son los ajustes de información predeterminados del dispositivo que no se pueden modificar.
+
+* <Cmd sid="device.info.deviceId" product="2" />: Permite comprobar el ID del dispositivo.
+
+* <Cmd sid="device.info.deviceType" product="2" />: Permite comprobar el tipo de dispositivo.
+
+* <Cmd sid="device.info.productName" product="2" />: Permite comprobar el nombre del modelo del dispositivo.
+
+* <Cmd sid="device.info.kernelVersion" product="2" />: Permite comprobar la versión del kernel del dispositivo.
+
+* <Cmd sid="device.info.hwVersion" product="2" />: Permite comprobar la versión de hardware del dispositivo.
+
+:::info
+
+Si el usuario ha realizado cambios, haga clic en <Cmd sid="button.apply" product="2" />. Los cambios no se aplicarán al dispositivo si no se guardan.
+
+:::
+
+## Cambiar el nombre del dispositivo
+
+Permite cambiar el nombre predeterminado del dispositivo. Introduzca el nombre deseado del dispositivo en el campo <Cmd sid="device.info.name" product="2" />. Puede introducir un nombre de dispositivo de hasta 48 caracteres. El nombre del dispositivo puede tener hasta 48 caracteres y se usa para identificar el dispositivo en la lista de dispositivos.
+
+## Cambiar el grupo del dispositivo
+
+Permite cambiar el grupo al que pertenece el dispositivo. Seleccione el grupo de dispositivos deseado en el campo <Cmd sid="device.info.group" product="2" />.
+
+:::info
+
+Para más información sobre crear un nuevo grupo de dispositivos, cambiar o eliminar nombres de grupos, consulte [lo siguiente](settings-manage-device-group).
+
+:::
+
+## Actualización de firmware
+
+Puede comprobar la versión de firmware del dispositivo en la sección <Cmd sid="device.info.firmwareVersion" product="2" />. Haga clic en <Cmd sid="button.firmwareUpgrade" product="2" /> para actualizar el firmware.
+
+:::info
+
+Para más información sobre la actualización del firmware del dispositivo, consulte [lo siguiente](settings-device-upgrade-firmware).
+
+:::
+
+## Configurar la fecha y la hora del dispositivo
+
+Permite configurar la fecha y la hora del dispositivo mediante las opciones siguientes.
+
+* <Cmd sid="device.info.timeZone" product="2" />: Permite seleccionar la zona horaria estándar donde se encuentra el dispositivo.
+
+* <Cmd sid="device.info.timeSync" product="2" />: Permite sincronizar la hora del dispositivo con el servidor **BioStar X**.
+
+* <Cmd sid="common.dst" product="2" />: Permite aplicar al dispositivo el horario de verano configurado por el usuario. Consulte [lo siguiente](settings-system-daylight-saving-time) para añadir un nuevo horario de verano.
+
+* <Cmd sid="device.info.date" product="2" />: Permite configurar manualmente la fecha y la hora del dispositivo. Después de configurar fecha y hora, haga clic en <Cmd sid="device.info.setTime" product="2" />.
+
+  :::note
+
+  Esta función se puede utilizar cuando la opción <Cmd sid="device.info.timeSync" product="2" /> no está seleccionada.
+
+  :::
+
+* <Cmd sid="common.dateFormat" product="2" />: Permite seleccionar el formato de fecha que se muestra en el dispositivo.
+
+* <Cmd sid="device.info.getTime" product="2" />: Permite obtener la hora configurada en el dispositivo.
+
+:::caution
+
+La fecha y la hora configuradas se registrarán en el registro de eventos y en tiempo real. Si la fecha y la hora del dispositivo son incorrectas, los registros pueden ser inexactos.
+
+:::
+
+## Desbloquear el dispositivo
+
+Cuando el dispositivo esté bloqueado debido a condiciones de funcionamiento y acciones, haga clic en <Cmd sid="device.info.locked" product="2" /> <Cmd sid="device.info.unlock" product="2" /> para desbloquearlo. Permite desbloquear el dispositivo.
+
+:::info
+
+Para más información sobre las condiciones de funcionamiento y la configuración de acciones, consulte [lo siguiente](settings-triger-and-action).
+
+:::
+
+## Inicializar el dispositivo
+
+Para inicializar los ajustes del dispositivo, seleccione una de las siguientes funciones en el campo <Cmd sid="device.info.factoryDefault" product="2" />.
+
+* <Cmd sid="device.info.reset" product="2" />: Inicializa todos los ajustes del dispositivo.
+
+* <Cmd sid="device.info.reset.withoutNetwork" product="2" />: Mantiene los ajustes de red e inicializa los demás ajustes.

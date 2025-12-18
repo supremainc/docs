@@ -1,0 +1,60 @@
+---
+id: getting-started
+title: Primeros pasos
+description: Pautas sobre los requisitos mínimos para usar Device Manager.
+keywords:
+  - Introducción
+  - Requisitos mínimos
+---
+
+Suprema Device Manager es una aplicación móvil que permite configurar los dispositivos XPass D2, XPass 2 y BioEntry W3 de Suprema mediante comunicación BLE.
+
+<Image src="/img/device/device-manager-system-diagram1.svg" className="none" width={650} alone />
+
+Los administradores pueden conectarse al servidor desde una PC o configurar la red del dispositivo, servidor, comunicación RS-485, formato de tarjeta, ajustes del teclado, PIN, LED y zumbador desde un dispositivo móvil sin desconectarlo físicamente, y también pueden usar funciones como reinicio del dispositivo, actualización de firmware e inicialización de la configuración del dispositivo.
+
+Para XPass D2, los valores configurados una vez pueden guardarse como plantilla para aplicarlos de forma rápida y sencilla a varios dispositivos.
+
+:::info
+
+El uso de Suprema Device Manager permite modificar in situ la configuración del XPass D2 integrado con controladoras de terceros.
+
+<Image src="/img/device/device-manager-system-diagram2.svg" className="none" width={900} alone />
+
+:::
+
+## Requisitos mínimos
+
+### Dispositivo móvil
+
+Compruebe si el dispositivo móvil admite comunicación BLE.
+
+* Android 5.0 Lollipop o posterior
+
+* iOS 9.0 o posterior
+
+### Dispositivo y firmware
+
+Verifica los dispositivos y las versiones de firmware compatibles.
+
+* [**XPass D2**](../xpass_d2/index.mdx) versión de firmware 1.1.0 o posterior
+
+* [**XPass 2**](../xpass_2/index.mdx)
+
+  * XP2-MDPB, XP2-GDPB, XP2-GKDPB: versión de firmware 1.0.0 o posterior
+
+  * XP2-MAPB: versión de firmware 1.4.1 o posterior
+
+  * XP2-MAPB-H: versión de firmware 1.4.3 o posterior
+
+* [**BioEntry W3**](../bioentry_w3/index.mdx) versión de firmware 1.0.1 o posterior
+
+:::info
+
+* Los dispositivos y firmware compatibles están sujetos a cambios.
+
+* Si la versión de firmware del dispositivo es inferior a las versiones indicadas anteriormente, actualice el firmware del dispositivo en BioStar X. Cuando el dispositivo se utilice como esclavo, el firmware del maestro conectado también debe ser la versión más reciente compatible con BioStar 2 2.7.0 o posterior.
+
+* Para obtener más información sobre la actualización del firmware del dispositivo, consulte [IP Device (Upgrade device firmware)](ip-device-settings#device-firmware-upgrade), [XPass D2 (Upgrade device firmware)](xpd2-settings#device-firmware-upgrade) o la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-device-upgrade-firmware).
+
+:::

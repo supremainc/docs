@@ -1,0 +1,168 @@
+---
+id: getting-started
+title: Primeros pasos
+description: Proporciona procedimientos iniciales para empezar con el dispositivo.
+keywords:
+  - Componentes
+  - Nombre
+  - Función
+  - Cable
+  - Conector
+---
+
+Proporciona procedimientos iniciales para empezar con el dispositivo.
+
+## Componentes
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td rowspan={3}>
+        <Image src="/img/device/component-device-di24.svg" className="none" height={350} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-quick-guide.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Guía rápida</Td>
+    </Row>
+
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-oss-guide.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Interfaz de puerta</Td>
+
+      <Td>Guía de software de código abierto</Td>
+    </Row>
+
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-fixing-screws6.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-diode4.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Tornillo de fijación x6</Td>
+
+      <Td>Diodo x4</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+<PageBreak />
+
+## Nombre y función de cada parte
+
+<Columns className="partname">
+  <Column>
+    <Magnify src="/img/device/product-part-di24.svg" width={600} zoomFactor={.4} mgWidth={500} mgHeight={500} alone />
+  </Column>
+
+  <Column className="padding--l20">
+    | No. | Nombre |
+    | :-: | --- |
+    | 1 | Conexión **AUX IN (0:2)** |
+    | 2 | Conexión **RS-485** |
+    | 3 | Interruptor de resistencia terminal **RS-485** |
+    | 4 | Conexión **SUPERVISED INPUT (3:5)** o **Input (3:5)** |
+    | 5 | Conexión **RELAY 2 (Alarma)** |
+    | 6 | Conexión **OUTPUT (3:5)** |
+    | 7 | Interruptor de resistencia terminal **RS-485 1** |
+    | 8 | Conexión **WIEGAND 1** |
+    | 9 | Conexión **RS-485 1** |
+    | 10 | Conexión **RELAY 3 (Cerradura)** |
+    | 11 | Conexión de alimentación para la interfaz de puerta (DC 12V / DC 24V IN) |
+    | 12 | Botón **RESET** |
+    | 13 | Botón **INIT** |
+    | 14 | Conexión **RELAY 1 (Cerradura)** |
+    | 15 | Conexión **WIEGAND 0** |
+    | 16 | Conexión **RS-485 0** |
+    | 17 | Interruptor de resistencia terminal **RS-485 0** |
+    | 18 | Conexión **OUTPUT (0:2)** |
+    | 19 | Conexión **RELAY 0 (Alarma)** |
+    | 20 | Conexión **SUPERVISED INPUT (0:2)** o **Input (0:2)** |
+  </Column>
+</Columns>
+
+:::info
+
+* Presione el botón **INIT** durante más de 2 segundos, después de inicializar el producto vinculado al dispositivo, para conectarlo a otro dispositivo.
+
+* Presione el botón **RESET** para reiniciar el producto.
+
+* Use la salida de alimentación del lector del producto (12 Vdc, hasta 0.6 A / 24 Vdc, hasta 0.3 A) como fuente de alimentación del lector al conectar el producto. Conecte dos lectores que consuman 0.3 A usando la salida de 12 Vdc.
+
+:::
+
+<PageBreak />
+
+### LED de estado de la interfaz de puerta
+
+Verifique el estado del producto en STATUS, ubicado en el lado derecho del frontal del dispositivo; muestra en orden cada segundo el estado de Ethernet, RS-485, RS-485 0 y RS-485 1.
+
+| Ítem | LED | Estado |
+| --- | --- | --- |
+| RS-485 | Parpadeo magenta/azul | Dispositivo maestro normal |
+| ^ | Parpadeo magenta/amarillo | Dispositivo maestro desconectado |
+| RS-485 0 | Parpadeo amarillo/azul | Dispositivo esclavo normal |
+| ^ | Parpadeo amarillo/amarillo | Dispositivo esclavo desconectado |
+| ^ | Parpadeo amarillo/rojo | Sin dispositivo esclavo |
+| RS-485 1 | Parpadeo verde/azul | Dispositivo esclavo normal |
+| ^ | Parpadeo verde/amarillo | Dispositivo esclavo desconectado |
+| ^ | Parpadeo verde/rojo | Sin dispositivo esclavo |
+| Sistema | Parpadeo blanco/blanco | Bloqueo del sistema (condiciones y comportamiento operativos de BioStar X) + Tamper activado |
+| ^ | Parpadeo blanco/magenta | Bloqueo del sistema (condiciones y comportamiento operativos del dispositivo) + Tamper activado |
+| ^ | Parpadeo blanco/azul | Sabotaje On |
+| ^ | Parpadeo blanco/cian | Conexión exitosa a BioStar X + Tamper activado |
+| ^ | Parpadeo blanco/verde | Conexión exitosa a BioStar X |
+| ^ | Parpadeo blanco/amarillo | Bloqueo del sistema (condiciones y comportamiento operativos de BioStar X) |
+| ^ | Parpadeo blanco/rojo | Bloqueo del sistema (condiciones y comportamiento operativos del dispositivo) |
+
+<PageBreak />
+
+### Ejemplo de instalación
+
+Configure fácilmente hasta 2 puertas de acceso como módulo de expansión.
+
+Integre BioStar X para utilizar el control de acceso y la gestión de asistencia, y disponga de diversas interfaces como RS-485 (OSDP), Wiegand, entrada supervisada y AUX.
+
+<Image src="/img/device/installation-example-di24.png" width="70%" className="none" />
+
+<PageBreak />
+
+### Diagrama del sistema
+
+Este producto admite 3 puertos RS-485 y, al encadenar (daisy chain) varias interfaces de puerta al dispositivo maestro, puede configurar hasta 34 puertas.
+
+<Image src="/img/device/system-configuration-di24.png" width="75%" className="none" />
+
+:::info
+
+* Se pueden conectar hasta 2 dispositivos por puerto para RS-485 0 y RS-485 1.
+
+* Si se conectan más de 3 dispositivos a un solo puerto RS-485, es posible que el dispositivo deseado no aparezca en la lista de conexión al buscar dispositivos esclavos.
+
+* Abra puertas de acceso identificando el código de recinto de la tarjeta mediante el código de recinto para el modo sin conexión cuando conecte la interfaz de puerta como esclava al puerto host del dispositivo maestro, incluso si se pierde la conexión con el maestro para los dispositivos esclavos conectados a la interfaz de puerta.
+
+:::
+
+<PageBreak />
+
+### Diagrama general de conexión
+
+<Magnify src="/img/en/device/system-di24.svg" width="80%" zoomFactor={.4} mgWidth={500} mgHeight={500} />

@@ -1,0 +1,204 @@
+---
+id: tna-rule-schedule
+title: Configurar el horario
+description: Guía a los usuarios para crear horarios de trabajo especificando las reglas de trabajo establecidas, otras reglas de trabajo, la duración y los días festivos.
+keywords:
+  - Horario de trabajo
+  - Reglas de trabajo
+---
+
+Cree horarios de trabajo especificando <Cmd sid="tab.shift" product="2" className="normal" />, <Cmd sid="rule.rule" product="2" className="normal" />, la duración y los días festivos.
+
+También agregue horarios temporales o licencias personales al horario de trabajo creado.
+
+:::info
+
+Antes de crear el horario, asegúrese de haber creado correctamente <Cmd sid="tab.payCode" product="2" className="normal" />, <Cmd sid="tab.shift" product="2" className="normal" />, <Cmd sid="tab.shift" product="2" className="normal" /> y los días festivos.
+
+* Para obtener más información sobre la configuración de reglas de trabajo, consulte lo siguiente:
+
+  * <DocLink docId="platform/biostar_x/tna-rule-shift-paycode" />
+
+  * <DocLink docId="platform/biostar_x/tna-rule-shift-day" />
+
+  * <DocLink docId="platform/biostar_x/tna-rule-shift-schedule" />
+
+  * <DocLink docId="platform/biostar_x/tna-rule-shift-overtime" />
+
+* Para obtener más información sobre la configuración de días festivos, consulte [lo siguiente](settings-schedule#addHolidaySchedule).
+
+:::
+
+## Configurar el horario
+
+### Agregar un horario
+
+Agregue el horario de trabajo para los usuarios registrados como se indica a continuación.
+
+1. Haga clic en <Cmd sid="shell.header.tna" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en la pestaña <Cmd sid="ta.schedule" product="2" /> en la barra lateral izquierda de la pantalla.
+
+3. Haga clic en el botón <Cmd sid="schedule.addSchedule" product="2" />.
+
+   <Image src="/img/biostarx-tna-schedule-template.png" />
+
+4. Cuando aparezca la pantalla <Cmd sid="schedule.addSchedule" product="2" />, configure cada elemento.
+
+:::info
+
+* Haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla para guardar la configuración.
+
+* Después de guardar la configuración, haga clic en el botón <Cmd sid="ta.apply_add_another" product="2" /> para agregar otro <Cmd sid="ta.schedule" product="2" />.
+
+:::
+
+### Guía de opciones de configuración
+
+Guía de opciones de configuración del horario de trabajo.
+
+<Image src="/img/biostarx-tna-schedule-template-adding.png" />
+
+* <Cmd sid="form.name" product="2" />: Ingrese el nombre del horario de trabajo.
+
+* <Cmd sid="form.description" product="2" />: Ingrese una descripción para el horario de trabajo.
+
+* <Cmd sid="rule.rule" product="2" />: Seleccione el <Cmd sid="rule.rule" product="2" className="normal" /> configurado. Configurar <Cmd sid="rule.rule" product="2" className="normal" /> ignora las reglas de horas extra establecidas en <Cmd sid="tab.shift" product="2" className="normal" />. Seleccione <Cmd sid="common.none" product="2" /> si no se utiliza.
+
+  :::info
+
+  Si el <Cmd sid="rule.rule" product="2" className="normal" /> deseado no está disponible, agrégalo. Para obtener más información, consulte [lo siguiente](tna-rule-shift-overtime).
+
+  :::
+
+* <Cmd sid="scheduleTemplate.scheduleTemplate" product="2" />: Seleccione la <Cmd sid="scheduleTemplate.scheduleTemplate" product="2" className="normal" /> configurada. Una vez configurada, <Cmd sid="scheduleTemplate.scheduleTemplate" product="2" className="normal" /> no se puede modificar.
+
+  :::info
+
+  Si la <Cmd sid="scheduleTemplate.scheduleTemplate" product="2" className="normal" /> deseada no está disponible, agréguela. Para obtener más información, consulte [lo siguiente](tna-rule-shift-schedule).
+
+  :::
+
+* <Cmd sid="schedule.period" product="2" />: Defina el periodo para recopilar eventos de asistencia.
+
+  :::info
+
+  La fecha de inicio no se puede cambiar una vez establecida. La fecha de finalización se puede cambiar más adelante y, si se cambia a una fecha anterior a la establecida, se eliminarán los eventos de asistencia del periodo modificado.
+
+  :::
+
+* <Cmd sid="schedule.holiday" product="2" />: Seleccione el calendario de días festivos configurado. Seleccione <Cmd sid="common.none" product="2" /> si no se utiliza.
+
+  :::info
+
+  Si el calendario de días festivos deseado no está disponible, agréguelo. Para obtener más información, consulte [lo siguiente](settings-schedule#addHolidaySchedule).
+
+  :::
+
+* <Cmd sid="schedule.users" product="2" />: Agregue usuarios para aplicar las reglas.
+
+:::info
+
+La cantidad de usuarios incluida en el horario de trabajo general no puede exceder el máximo admitido por su licencia registrada de gestión de asistencia. El número máximo de usuarios por licencia se detalla en <DocLink docId="platform/biostar_x/licensing" />.
+
+:::
+
+### Editar un horario
+
+Guía para modificar horarios de trabajo registrados.
+
+1. Haga clic en <Cmd sid="shell.header.tna" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en la pestaña <Cmd sid="ta.schedule" product="2" /> en la barra lateral izquierda de la pantalla.
+
+3. Haga clic en el elemento que desea modificar de la lista <Cmd sid="ta.schedule" product="2" />. Como alternativa, haga clic en el botón <IcEdit /> del elemento que desea modificar en la barra lateral izquierda de la pantalla.
+
+4. Modifique el elemento deseado y haga clic en el botón <Cmd sid="button.apply" product="2" />.
+
+### Eliminar un horario
+
+Guía para eliminar horarios de trabajo registrados.
+
+1. Haga clic en <Cmd sid="shell.header.tna" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en la pestaña <Cmd sid="ta.schedule" product="2" /> en la barra lateral izquierda de la pantalla.
+
+3. Haga clic en la casilla de verificación del elemento que desea eliminar de la lista <Cmd sid="ta.schedule" product="2" />.
+
+   <Image src="/img/biostarx-tna-schedule-remove-item.png" />
+
+4. Haga clic en el botón <Cmd sid="schedule.deleteSchedule" product="2" /> en la parte superior derecha de la pantalla. Como alternativa, haga clic en el botón <IcTrash2 /> del elemento que desea eliminar en la barra lateral izquierda de la pantalla.
+
+5. Cuando aparezca el mensaje de confirmación, haz clic en <Cmd sid="button.yes" product="2" />.
+
+## Agregar un horario temporal
+
+Si ya hay un horario registrado, se puede aplicar al usuario una regla de trabajo temporal diferente.
+
+1. Haga clic en <Cmd sid="shell.header.tna" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en la pestaña <Cmd sid="ta.schedule" product="2" /> en la barra lateral izquierda de la pantalla.
+
+3. Haga clic en el botón <IcTnaExpand /> del horario deseado de la lista en el lado izquierdo de la pantalla.
+
+4. Aparecerá una lista de usuarios asignados al horario y, al seleccionar un usuario para aplicar un horario temporal, se mostrará el calendario.
+
+   <Image src="/img/biostarx-tna-schedule-template-add-temp-user.png" />
+
+5. Haga clic en la fecha del calendario a la que desea agregar un horario temporal.
+
+   <Image src="/img/biostarx-tna-schedule-template-add-temp-schedule.png" />
+
+6. Haga clic en <Cmd sid="schedule.addTemporarySchedule" product="2" /> en el menú emergente.
+
+7. Cuando aparezca la ventana de configuración <Cmd sid="schedule.addTemporarySchedule" product="2" />, configure cada elemento.
+
+   <Image src="/img/biostarx-tna-schedule-template-add-temp-schedule-setting.png" />
+
+   Para aplicar el mismo horario de trabajo a otros usuarios, haga clic en el botón <IcSearch /> y seleccione los usuarios.
+
+8. Haga clic en el botón <Cmd sid="button.apply" product="2" /> para aplicar las reglas de trabajo establecidas.
+
+:::info
+
+Para eliminar el horario temporal aplicado al usuario, haga clic en el horario temporal establecido en el calendario. Haz clic en el botón <Cmd sid="button.yes" product="2" /> cuando aparezca la ventana del mensaje de confirmación.
+
+:::
+
+## Agregar y eliminar una ausencia
+
+Agregue el horario de ausencia personal de un usuario.
+
+1. Haga clic en <Cmd sid="shell.header.tna" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en la pestaña <Cmd sid="ta.schedule" product="2" /> en la barra lateral izquierda de la pantalla.
+
+3. Haga clic en el botón <IcTnaExpand /> del horario deseado de la lista en el lado izquierdo de la pantalla.
+
+4. Aparecerá una lista de usuarios asignados al horario y, al seleccionar un usuario para aplicar el horario de ausencia, se mostrará el calendario.
+
+   <Image src="/img/biostarx-tna-schedule-template-add-temp-user.png" />
+
+5. Haga clic en la fecha del calendario para agregar el horario de ausencia del usuario.
+
+   <Image src="/img/biostarx-tna-schedule-template-add-temp-schedule.png" />
+
+6. Haga clic en <Cmd sid="schedule.addLeave" product="2" /> en el menú emergente.
+
+7. Cuando aparezca la ventana de configuración <Cmd sid="leave.editLeave" product="2" />, configure cada elemento.
+
+   <Image src="/img/biostarx-tna-schedule-template-add-leave-setting.png" />
+
+   Para aplicar el mismo horario de ausencia a otros usuarios, haga clic en el botón <IcSearch /> y seleccione los usuarios.
+
+8. Haga clic en el botón <Cmd sid="button.apply" product="2" /> para aplicar el horario de ausencia establecido.
+
+:::info
+
+* Si las reglas de tiempo de gestión de ausencias deseadas no están disponibles, agréguelas. Para obtener más información sobre cómo agregar reglas de tiempo, consulte [lo siguiente](tna-rule-shift-paycode).
+
+* Para eliminar el horario de ausencia aplicado al usuario, haga clic en el botón <IcTrash2 /> del horario de ausencia establecido en el calendario. Haz clic en el botón <Cmd sid="button.yes" product="2" /> cuando aparezca la ventana del mensaje de confirmación.
+
+  <Image src="/img/biostarx-tna-schedule-remove-leave-item.png" alone />
+
+:::

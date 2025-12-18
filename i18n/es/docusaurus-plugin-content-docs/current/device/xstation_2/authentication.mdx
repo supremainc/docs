@@ -1,0 +1,225 @@
+---
+id: authentication
+title: Autenticación
+description: Describe los métodos de autenticación compatibles y los procedimientos de autenticación.
+keywords:
+  - Modo de autenticación
+  - Operación
+  - PIN
+  - Huella
+  - T&A (Tiempo y Asistencia)
+---
+
+Describe los métodos de autenticación compatibles y los procedimientos de autenticación.
+
+## Modo de autenticación
+
+Configura el modo de autenticación. Utiliza <Cmd sid="ui_312" product="dev" />, <Cmd sid="ui_040" product="dev" />, <Cmd sid="ui_323" product="dev" /> y <Cmd sid="ui_020" product="dev" /> en combinación para los modos de autenticación y también establece un horario para cada modo de autenticación.
+
+:::info
+
+La autenticación por huella digital solo está disponible para los productos XS2-ODPB y XS2-OAPB.
+
+:::
+
+### Registrar modo de autenticación {#registering-auth-mode}
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Pulsa <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_261" product="dev" />.
+
+3. Selecciona <Image src="/img/common/ico-add2.svg" ico alone />.
+
+4. Al pulsar <Image src="/img/common/ico-add1.svg" ico alone />, aparecerá en la pantalla la credencial que se puede añadir. Selecciona las credenciales que deseas añadir. Pulsa <Image src="/img/common/ico-cancel.svg" ico alone /> mientras la credencial esté añadida para eliminarla.
+
+   <Image src="/img/device/xs2-auth-authmode.png" />
+
+5. Después de configurar el modo de autenticación deseado, configura <Cmd sid="ui_203" product="dev" />.
+
+   <div className="overflow-x">
+     | Categoría | Descripción |
+     | :-: | --- |
+     | Huella | * <Image src="/img/common/ico-authmode-fingerprint.png" ico alone />: Este modo utiliza solo huella digital.<br />- <Image src="/img/common/ico-authmode-fingerprint.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo requiere ingresar un PIN después de la autenticación por huella digital. |
+     | Tarjeta / Código QR | - <Image src="/img/common/ico-authmode-card-bs3.png" ico alone />: Este modo utiliza solo la autenticación por tarjeta / código QR.<br />- <Image src="/img/common/ico-authmode-card-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-fingerprint.png" ico alone />: Este modo requiere autenticación mediante tarjeta / código QR seguida de autenticación por huella digital.<br />- <Image src="/img/common/ico-authmode-card-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo requiere autenticación mediante tarjeta / código QR seguida de ingreso de PIN.<br />- <Image src="/img/common/ico-authmode-card-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-fingerprint.png" ico alone /> / <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo permite autenticación mediante tarjeta / código QR seguida de huella digital o ingreso de PIN.<br />- <Image src="/img/common/ico-authmode-card-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-fingerprint.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo requiere autenticación por huella digital y ingreso de PIN después de la autenticación mediante tarjeta / código QR. |
+     | ID | * <Image src="/img/common/ico-authmode-id-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-fingerprint.png" ico alone />: Este modo requiere ingresar un ID seguido de autenticación por huella digital.<br />- <Image src="/img/common/ico-authmode-id-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo requiere ingresar un ID seguido de ingreso de PIN.<br />- <Image src="/img/common/ico-authmode-id-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-fingerprint.png" ico alone /> / <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo permite ingresar un ID seguido de autenticación por huella digital o ingreso de PIN.<br />- <Image src="/img/common/ico-authmode-id-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-fingerprint.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo requiere autenticación por huella digital y ingreso de PIN después de ingresar un ID. |
+   </div>
+
+   :::info
+
+   * <Cmd sid="ui_203" product="dev" /> se puede configurar en BioStar X. Si no se establece un horario, solo se puede seleccionar <Cmd sid="ui_361" product="dev" />.
+
+   * Para obtener más información sobre la configuración de <Cmd sid="ui_203" product="dev" />, consulta la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-schedule).
+
+   * Para usar la autenticación <Cmd sid="ui_043" product="dev" /> en los modelos XS2-DPB, XS2-APB, XS2-ODPB y XS2-OAPB, activa <Cmd sid="ui_043" product="dev" /> en <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_044" product="dev" /> y adquiere una licencia de dispositivo adicional. Para obtener más información, consulta [Licencia](settings#license).
+
+   :::
+
+6. Pulsa <Cmd sid="ui_037" product="dev" /> para guardar la configuración.
+
+### Modificar modo de autenticación
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Pulsa <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_261" product="dev" />.
+
+3. Selecciona el modo de autenticación que deseas modificar.
+
+4. Modifica el modo de autenticación consultando [Registrar modo de autenticación](#registering-auth-mode) y pulsa <Cmd sid="ui_037" product="dev" />.
+
+### Eliminar modo de autenticación
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Pulsa <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_261" product="dev" />.
+
+3. Pulsa <Image src="/img/common/ico-delete.svg" ico alone /> y selecciona el modo de autenticación que deseas eliminar. Es posible seleccionar varias opciones.
+
+4. Pulsa <Cmd sid="ui_037" product="dev" /> para eliminar el elemento seleccionado.
+
+## Operación
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Después de pulsar <Cmd sid="ui_256" product="dev" />, cambia el elemento deseado en <Cmd sid="ui_265" product="dev" />.
+
+   <Image src="/img/device/xs2-auth.png" />
+
+   * <Cmd sid="ui_260" product="dev" />: Si la autenticación no se completa dentro del tiempo establecido, la autenticación fallará. Se puede configurar entre 3 y 20 segundos.
+
+   * <Cmd sid="ui_185" product="dev" />: Cuando se configura la coincidencia en el servidor, el dispositivo no realiza la autenticación del usuario; BioStar X realiza la autenticación del usuario. Se puede usar cuando el dispositivo tiene demasiada información de usuarios o cuando el dispositivo está instalado en exteriores.
+
+   :::info
+
+   Si utilizas <Cmd sid="ui_185" product="dev" />, debes habilitar la coincidencia en el servidor tanto en el dispositivo como en BioStar X. Para obtener más información sobre la configuración de coincidencia en el servidor de BioStar X, consulta la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-server-server#servermatching).
+
+   :::
+
+## PIN
+
+Configura si se utiliza el teclado aleatorio al ingresar contraseñas.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Después de pulsar <Cmd sid="ui_256" product="dev" />, establece si se usa <Cmd sid="ui_040" product="dev" /> en <Cmd sid="ui_204" product="dev" />.
+
+   <Image src="/img/device/xs2-auth1.png" />
+
+   * <Cmd sid="ui_204" product="dev" />: Las posiciones de las teclas numéricas pueden mezclarse aleatoriamente al ingresar una contraseña para evitar filtraciones.
+
+## Opciones de visualización del resultado de autenticación
+
+Configura la opción de visualización del resultado de autenticación.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Después de pulsar <Cmd sid="ui_256" product="dev" />, cambia los elementos deseados en <Cmd sid="ui_259" product="dev" />.
+
+   <Image src="/img/device/xs2-auth2.png" />
+
+   * <Cmd sid="ui_169" product="dev" />: Selecciona cómo aparece el ID de usuario en la pantalla de resultados de autenticación del dispositivo.
+
+     * <Cmd sid="ui_307" product="dev" />: Muestra el ID de usuario completo.
+
+     * <Cmd sid="ui_316" product="dev" />: Mostrar solo el primer carácter del ID de usuario.
+
+     * <Cmd sid="ui_357" product="dev" />: No mostrar el ID de usuario.
+
+   * <Cmd sid="ui_177" product="dev" />: Seleccionar cómo aparece el nombre de usuario en la pantalla de resultados de autenticación del dispositivo.
+
+     * <Cmd sid="ui_307" product="dev" />: Mostrar el nombre de usuario completo.
+
+     * <Cmd sid="ui_316" product="dev" />: Mostrar solo el primer carácter del nombre de usuario.
+
+     * <Cmd sid="ui_357" product="dev" />: No mostrar el nombre de usuario.
+
+## Opciones de autenticación mediante QR/código de barras
+
+Configura la autenticación por QR/código de barras.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Tras presionar <Cmd sid="ui_256" product="dev" />, activa <Cmd sid="ui_043" product="dev" /> en <Cmd sid="ui_044" product="dev" />.
+
+<Badge only>XS2-QDPB, XS2-QAPB</Badge>
+
+<Image src="/img/device/xs2-auth3.png" />
+
+* <Cmd sid="ui_043" product="dev" />: Selecciona si utilizar la autenticación por QR/código de barras.
+
+* <Cmd sid="ui_374" product="dev" />: Si el QR/código de barras no se escanea dentro del tiempo establecido, la autenticación falla. Establece entre 4 y 10 segundos.
+
+* <Cmd sid="ui_329" product="dev" />: Configura la autenticación con un código QR que contenga los mismos datos que la tarjeta CSN o tarjeta Wiegand emitida al usuario.
+
+<Badge only>XS2-DPB, XS2-APB, XS2-ODPB, XS2-OAPB</Badge>
+
+<Image src="/img/device/xs2-auth3-1.png" />
+
+* <Cmd sid="ui_043" product="dev" />: Selecciona si utilizar la autenticación por QR/código de barras.
+
+* <Cmd sid="ui_375" product="dev" />: Si el QR/código de barras no se escanea dentro del tiempo establecido, la autenticación falla. Establece entre 3 y 20 segundos. Disponible solo cuando <Cmd sid="ui_043" product="dev" /> está activado.
+
+* <Cmd sid="ui_140" product="dev" />: Establece la sensibilidad para detectar movimiento alrededor del dispositivo. Disponible solo cuando <Cmd sid="ui_043" product="dev" /> está activado.
+
+* <Cmd sid="ui_329" product="dev" />: Configura la autenticación con un código QR que contenga los mismos datos que la tarjeta CSN o tarjeta Wiegand emitida al usuario. Disponible solo cuando <Cmd sid="ui_043" product="dev" /> está activado.
+
+:::info
+
+Para usar la autenticación <Cmd sid="ui_043" product="dev" /> en los modelos XS2-DPB, XS2-APB, XS2-ODPB y XS2-OAPB, activa <Cmd sid="ui_043" product="dev" /> en <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_044" product="dev" /> y adquiere una licencia de dispositivo adicional. Para obtener más información, consulta [Licencia](settings#license).
+
+:::
+
+## Configuraciones de huella digital <Badge only>XS2-ODPB, XS2-OAPB</Badge>
+
+Cambia los ajustes de autenticación por huella digital.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Tras presionar <Cmd sid="ui_256" product="dev" />, modifica los elementos deseados en <Cmd sid="ui_312" product="dev" />.
+
+   <Image src="/img/device/xs2-auth4.png" />
+
+   * <Cmd sid="ui_149" product="dev" />: Configura el nivel de seguridad para la autenticación 1:N.
+
+   * <Cmd sid="ui_130" product="dev" />: Establece el tiempo de espera para la coincidencia de huellas dactilares. Si la autenticación no se completa dentro del tiempo establecido, falla.
+
+   * <Cmd sid="ui_254" product="dev" />: Muestra la imagen sin procesar al escanear una huella dactilar.
+
+   * <Cmd sid="ui_197" product="dev" />: Establece la sensibilidad del sensor de huellas dactilares. Establece la sensibilidad más alta para obtener información de huella dactilar precisa.
+
+   * <Cmd sid="ui_003" product="dev" />: Establece el rendimiento de autenticación por huella dactilar. Al seleccionar <Cmd sid="ui_275" product="dev" />, la velocidad de autenticación se ajusta según el número total de plantillas de huellas dactilares registradas en el dispositivo.
+
+   * <Cmd sid="ui_342" product="dev" />: Establece el formato de la plantilla de huella dactilar. El valor predeterminado es <Cmd sid="ui_057" product="dev" />. Cambiar el formato de la plantilla bloquea el uso de todas las huellas dactilares almacenadas previamente, así que procede con precaución.
+
+     :::info
+
+     Elimina toda la información de huellas dactilares de los usuarios y luego cambia el formato de la plantilla. Si hay información de huellas dactilares registrada, no es posible cambiar el formato de la plantilla.
+
+     :::
+
+   * <Cmd sid="ui_198" product="dev" />: Establece en <Cmd sid="ui_277" product="dev" /> para encender el sensor de huellas dactilares cuando detecta el dedo del usuario. Establece en <Cmd sid="ui_362" product="dev" /> para mantener el sensor siempre encendido, incluso cuando no se escanean huellas dactilares.
+
+   * <Cmd sid="ui_249" product="dev" />: Establece el nivel de detección de huellas dactilares falsas. Niveles más altos de detección de huellas falsas pueden aumentar las tasas de rechazo de las huellas reales.
+
+   * <Cmd sid="ui_116" product="dev" />: Inspecciona la calidad de la huella escaneada para guardar datos de alta calidad. Cuando está activado, el dispositivo notifica al usuario si la calidad de la huella es baja y le ayuda a escanear correctamente.
+
+   * <Cmd sid="ui_118" product="dev" />: Verifica huellas dactilares duplicadas durante el enrolamiento.
+
+## Modo de asistencia
+
+Configura cómo registrar el modo T&A.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Haz clic en <Cmd sid="ui_256" product="dev" />, luego modifica el elemento deseado en <Cmd sid="ui_083_list" product="dev" />.
+
+   <Image src="/img/device/xs2-auth5.png" />
+
+   * <Cmd sid="ui_083_list" product="dev" />: Configura cómo usar el modo de asistencia.
+
+   * <Cmd sid="ui_086" product="dev" />: Agrega eventos de asistencia. Para registrar eventos de asistencia, selecciona <Cmd sid="ui_086" product="dev" /> → <Image src="/img/common/ico-add2.svg" ico alone /> y configura los iconos que se mostrarán en la pantalla, <Cmd sid="ui_085" product="dev" />, y <Cmd sid="ui_203" product="dev" />.
+
+   * <Cmd sid="ui_082" product="dev" />: Exige a los usuarios seleccionar un evento de asistencia durante la autenticación. Disponible cuando <Cmd sid="ui_083_list" product="dev" /> está configurado en <Cmd sid="ui_199" product="dev" />.
+
+   * <Cmd sid="ui_081" product="dev" />: Permite a los usuarios usar solo los eventos de asistencia seleccionados por el administrador. Disponible cuando <Cmd sid="ui_083_list" product="dev" /> está configurado en <Cmd sid="ui_071" product="dev" />.
+
+   * <Cmd sid="ui_279" product="dev" />: Selecciona si usar códigos de trabajo.
