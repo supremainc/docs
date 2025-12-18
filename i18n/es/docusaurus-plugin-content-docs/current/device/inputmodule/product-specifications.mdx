@@ -1,0 +1,57 @@
+---
+id: product-specifications
+title: Especificaciones del producto
+description: Incluye las especificaciones clave del producto, como tamaño, características y rendimiento.
+keywords:
+  - General
+  - Capacidad
+  - Interfaz
+  - Eléctrico
+  - Dimensiones
+---
+
+Incluye las especificaciones clave del producto, como tamaño, características y rendimiento.
+
+import specs from '@site/static/specs/im120_specs.json';
+
+{/* 일반 */}
+
+<SpecSection data={specs.inputmodule.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.inputmodule.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.inputmodule.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.inputmodule.power} />
+
+## Dimensiones y peso
+
+:::note
+
+La tolerancia dimensional es de ±0.3 mm.
+
+:::
+
+<Image src="/img/device/im120-dimension.svg" className="none" />
+
+---
+
+:::note
+
+<Anno id="anno1">1)</Anno> Se guardarán hasta 10 eventos que hayan ocurrido cuando se perdió la conexión de red por puerto y, cuando haya más de 10 eventos, se eliminarán del registro en el orden en que ocurrieron.
+
+<Anno id="anno2">2)</Anno> Elija utilizar Input o Supervised input.
+
+:::
+
+:::info
+
+Las especificaciones del producto están sujetas a cambios sin previo aviso para mejorar el rendimiento.
+
+:::

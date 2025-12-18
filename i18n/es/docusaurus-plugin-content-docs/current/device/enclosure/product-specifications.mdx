@@ -1,0 +1,54 @@
+---
+id: product-specifications
+title: Especificaciones del producto
+description: Incluye las especificaciones clave del producto, como tamaño, características y rendimiento.
+keywords:
+  - General
+  - Fuente de alimentación
+  - Batería de respaldo
+  - Dimensiones
+---
+
+Incluye las especificaciones clave del producto, como tamaño, características y rendimiento.
+
+import specs from '@site/static/specs/encr_specs.json';
+
+{/* 일반 */}
+
+<SpecSection data={specs.enclosure.general} />
+
+{/* 전원 공급 장치 */}
+
+<SpecSection data={specs.enclosure.power_supply} />
+
+{/* 백업 배터리 */}
+
+<SpecSection data={specs.enclosure.backup_battery} />
+
+<PageBreak />
+
+## Dimensiones y peso
+
+:::note
+
+La tolerancia dimensional es de ±0.3 mm.
+
+:::
+
+<Image src="/img/device/encr-dimension.svg" className="none" />
+
+---
+
+:::info
+
+* Las especificaciones del producto están sujetas a cambios sin previo aviso para mejorar el rendimiento.
+
+* La batería de respaldo se vende por separado.
+
+:::
+
+:::caution
+
+Utiliza una batería de respaldo con especificaciones de 12 VCC y 7 Ah o superiores. Este producto se probó con el modelo "ES7-12" de "ROCKET", y se recomienda utilizar productos equivalentes al "ES7-12".
+
+:::

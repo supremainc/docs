@@ -1,0 +1,45 @@
+---
+id: troubleshooting
+title: Solución de problemas
+description: Proporciona soluciones para problemas que puedan ocurrir durante el desarrollo, registro y operación del complemento BioStar X.
+keywords:
+  - Solución de problemas
+  - Depuración
+  - Solución de problemas
+---
+
+Proporciona soluciones para problemas que puedan ocurrir durante el desarrollo, registro y operación del complemento **BioStar X**.
+
+## Error de registro del complemento
+
+* Verifica que el servidor esté en funcionamiento antes de registrar el complemento.
+
+* Asegúrate de que el endpoint <Badge className="get">GET</Badge> `/bsx` responda correctamente. Prueba con el comando `curl`.
+
+  ```bash
+  curl -H "X-BioStar-Ping: test123" http://localhost:8000/bsx
+  ```
+
+* Verifica si el servidor **BioStar X** puede acceder a la URL del servidor del complemento.
+
+## Error del callback de autenticación
+
+* Verifica que el archivo de certificado exista y sea válido.
+
+* Verifica la dirección y el puerto del servidor **BioStar X** en <Cmd>SERVICE SETTINGS</Cmd> del **BioStar X Service Manager**.
+
+* Verifica que la red entre el servidor del complemento y el servidor **BioStar X** esté conectada.
+
+## Error de descifrado
+
+* Verifica la generación de la clave AES y el proceso de cifrado.
+
+* Asegúrate de que el IV se derive de la misma clave.
+
+## Consejos de depuración
+
+* Habilita el registro para revisar los detalles de las solicitudes y respuestas.
+
+* Prueba los endpoints individualmente antes de la integración completa.
+
+* Simula solicitudes al servidor **BioStar X** usando el comando `curl`.

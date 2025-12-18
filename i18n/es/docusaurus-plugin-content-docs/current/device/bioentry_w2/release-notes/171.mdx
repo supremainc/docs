@@ -1,0 +1,67 @@
+---
+id: 171
+title: Firmware Version 1.7.1
+---
+
+# Firmware Version 1.7.1 (Build No. 1.7.1_20230502_210200_tw)
+
+Release<Separator/>2023-06-08
+
+Hanwha Techwin OEM FW
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Only Hanwha Techwin SDK is allowed to connect. (Except BS2_GetFactoryConfig)
+
+1. The firmware upgrade is available only with Hanwha Techwin OEM firmware.
+
+1. Remove all relay action.
+
+</BugLists>
+
+<br/>
+<br/>
+
+# Firmware Version 1.7.1 (Build No. 1.7.1_221220)
+
+Release<Separator/>2023-01-11
+
+:::caution
+
+Devices with the new SE processor cannot downgrade to a lower version after upgrading the firmware to v1.7.1 or later. Devices with existing SE processor can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Supports a new SE processor and new firmware.
+
+1. Separated the log related to the cause of the door unlock.
+
+    - Door open request by exit button
+
+    - Door open request by operator
+
+1. Added relay deactivation option for exit button input.
+
+    - Added the option to set the door open request log to occur but the relay not to operate when the exit button is pressed.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Card types not checked to be used in smart card settings gets issued normally <Badge>1.5.0</Badge>.
+
+1. Improved the structure to prevent authentication fail caused by broken database or cache memory <Badge>1.0.0</Badge>.
+
+</BugLists>

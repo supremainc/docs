@@ -1,0 +1,107 @@
+---
+id: settings-map-manage-facility
+title: Configurar instalación
+description: Configura instalaciones y organiza pisos. Organiza los pisos de forma secuencial para representar la distribución real de la instalación.
+keywords:
+  - Zona
+  - Instalación
+  - Planta
+---
+
+Configura la instalación y organiza los pisos. Organiza los pisos de forma secuencial para representar la distribución real de la instalación. La configuración de instalaciones permite seleccionar las instalaciones ubicadas en el mapa en la página <Cmd sid="shell.header.arena" /> y acceder a cada piso para supervisión.
+
+<Image src="/img/monitoring-map-select-floor.png" alone />
+
+:::info
+
+* Registra los pisos antes de configurar las instalaciones. Para obtener más información sobre el registro de pisos, consulta [lo siguiente](settings-map-manage-floor).
+
+* Para obtener más información sobre el monitoreo de mapas, consulta [lo siguiente](monitoring-map).
+
+* Las opciones de configuración de mapas y la función de monitoreo de mapas pueden utilizarse mediante opciones adicionales con una licencia **avanzada** o superior. Para más información sobre la política de licencias, consulta [lo siguiente](licensing#features-add-ons).
+
+:::
+
+## Agregar instalación
+
+Sigue estos pasos para diseñar la estructura agregando pisos a la instalación.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.map.root" /> → <Cmd sid="setting.menu.map.facility" /> en la barra lateral izquierda.
+
+3. Haz clic en <Cmd sid="setting.facility.table.action.newFacility" /> en la parte superior derecha de la pantalla de lista de instalaciones.
+
+   <Image src="/img/biostarx-settings-map-add-facility.png" />
+
+4. Ingresa el nombre y la descripción de la instalación que deseas agregar en la sección <Cmd sid="setting.facility.information.section.title" /> de la pantalla <Cmd sid="setting.facility.page.title" />.
+
+5. Haz clic en <Cmd sid="common.add" /> en <Cmd sid="setting.facility.configuration.section.title" />.
+
+   <Image src="/img/biostarx-settings-map-add-facility-config.png" />
+
+6. Cuando aparezca la ventana <Cmd sid="setting.facility.dialog.floor.titleAddFloor" />, selecciona el piso que deseas agregar de la lista de pisos.
+
+   <Image src="/img/biostarx-settings-map-facility-add-floor.png" />
+
+   * También puedes buscar pisos ingresando palabras clave en el campo de entrada.
+
+   * Para seleccionar todos los pisos, elige <Cmd sid="setting.floor.table.title" />.
+
+7. Si seleccionaste todos los pisos, haz clic en <Cmd sid="common.apply" />.
+
+8. Para revisar los pisos agregados a la lista de puertas de acceso y cambiar el orden, arrastra <IcDorder /> en la columna <Cmd sid="setting.facility.floorTableHeaders.order" /> para cambiar el orden.
+
+9. Para finalizar la configuración de la instalación y guardar, haz clic en el botón <Cmd sid="button.apply" product="2" /> en la parte inferior derecha de la pantalla.
+
+## Modificar instalación
+
+### Agregar pisos a instalaciones existentes
+
+Agrega pisos a una instalación ya creada.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.map.root" /> → <Cmd sid="setting.menu.map.facility" /> en la barra lateral izquierda.
+
+3. Selecciona la instalación a la que deseas agregar pisos de la lista de instalaciones.
+
+4. Haz clic en <Cmd sid="common.add" /> en <Cmd sid="setting.facility.configuration.section.title" />.
+
+   <Image src="/img/biostarx-settings-map-add-facility-config-add.png" />
+
+5. Cuando aparezca la ventana <Cmd sid="setting.facility.dialog.floor.titleAddFloor" />, haz clic en la casilla de verificación del piso que deseas seleccionar.
+
+6. Si seleccionaste todos los pisos, haz clic en <Cmd sid="common.apply" />.
+
+7. Para revisar los pisos agregados a la lista de puertas de acceso y cambiar el orden, arrastra <IcDorder /> en la columna <Cmd sid="setting.facility.floorTableHeaders.order" /> para cambiar el orden.
+
+8. Para finalizar la configuración de la instalación y guardar, haz clic en el botón <Cmd sid="button.apply" product="2" /> en la parte inferior derecha de la pantalla.
+
+### Eliminar pisos de la instalación
+
+Elimina pisos de una instalación ya creada.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.map.root" /> → <Cmd sid="setting.menu.map.facility" /> en la barra lateral izquierda.
+
+3. Selecciona la instalación de la que deseas eliminar pisos en la lista de instalaciones.
+
+4. Haz clic en <IcClose /> del piso que deseas eliminar en <Cmd sid="setting.facility.configuration.section.title" />.
+
+5. Para completar la eliminación de pisos y guardar, haz clic en el botón <Cmd sid="button.apply" product="2" /> en la parte inferior derecha de la pantalla.
+
+## Eliminar instalación
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.map.root" /> → <Cmd sid="setting.menu.map.facility" /> en la barra lateral izquierda.
+
+3. Haz clic en la casilla de verificación de la instalación que deseas eliminar en la lista de instalaciones.
+
+   <Image src="/img/biostarx-settings-map-remove-facility-list.png" />
+
+4. Haz clic en <Cmd sid="common.delete" /> en la parte superior derecha de la pantalla.
+
+5. Cuando aparezca la ventana de mensaje de confirmación, haz clic en <Cmd sid="common.dialog.yes" />.

@@ -1,0 +1,196 @@
+---
+id: settings-advanced-ac-occupancy
+title: Limite de Ocupación
+description: Esta guía describe cómo configurar los ajustes del límite de ocupación. Supervise el estado de ocupación y limite el número máximo de personas en determinados lugares.
+keywords:
+  - Control de acceso avanzado
+  - Limite de Ocupación
+---
+
+La función de límite de ocupación es una característica clave de control de acceso para garantizar la seguridad y la eficiencia de los espacios. Esta función permite a los administradores definir un número máximo de personas que pueden ingresar simultáneamente en cada ubicación, evitando la sobrepoblación y posibilitando una gestión del espacio más sistemática.
+
+Las principales aplicaciones del ajuste de límite de ocupación son las siguientes.
+
+* **Gestión de seguridad**: Prevención de incidentes de seguridad mediante la limitación del número máximo de ocupantes según las normas contra incendios o la capacidad del edificio.
+
+* **Eficiencia del espacio**: Optimización del entorno de trabajo manteniendo una ocupación adecuada en salas de reuniones, laboratorios y áreas de trabajo.
+
+* **Respuesta ante enfermedades infecciosas**: Gestión del personal en situaciones que requieren distanciamiento social o restricciones de densidad de personas.
+
+* **Supervisión en tiempo real**: Verifique la ocupación actual y el estado de entrada/salida de cada ubicación en tiempo real.
+
+* **Alertas automáticas**: Notificaciones inmediatas a los administradores cuando se alcanza el límite de ocupación establecido, lo que permite respuestas rápidas.
+
+Al utilizar estas funciones, los administradores pueden establecer políticas de gestión de personal adaptadas a las características de cada espacio, garantizando operaciones de las instalaciones seguras y eficientes.
+
+:::info
+
+* Agregue hasta 100 ajustes de límite de ocupación.
+
+* Los dispositivos y versiones de firmware que se pueden configurar para el ajuste de límite de ocupación son los siguientes.
+
+  * FaceStation F2 versión de firmware 1.1.0 o superior
+
+  * FaceStation 2 versión de firmware 1.5.0 o superior
+
+:::
+
+## Registro del límite de ocupación {#addOccupancyZone}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.advancedAc.root" /> en la barra lateral izquierda.
+
+3. Haz clic en <Cmd sid="button.func.addZone" product="2" />.
+
+4. Seleccione <Cmd sid="zone.occupancy.title" product="2" /> y haga clic en <Cmd sid="button.apply" product="2" />.
+
+5. Ingrese el nombre del ajuste de límite de ocupación que desea añadir en la sección <Cmd sid="common.info" product="2" />.
+
+   <Image src="/img/biostarx-settings-adv-ac-add-occupancy.png" />
+
+6. Configure los detalles del ajuste de límite de ocupación en la sección <Cmd sid="common.configuration" product="2" />. Para obtener más información, consulta [lo siguiente](#setting).
+
+7. En la sección <Cmd sid="zone.occupancy.countByPass" product="2" />, seleccione los grupos de acceso que siempre puedan omitir el ajuste de límite de ocupación. Para obtener más información, consulte [lo siguiente](#countByPass).
+
+8. Después de completar todas las configuraciones, haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla.
+
+:::info
+
+<Cmd sid="common.name" product="2" /> puede contener hasta 48 caracteres y no puede utilizar el mismo nombre que otras configuraciones.
+
+:::
+
+## Guía de opciones de configuración {#setting}
+
+Los detalles del ajuste de límite de ocupación son los siguientes.
+
+* <Cmd sid="zone.globalZone" product="2" />: Puedes verificar el alcance de aplicación. El ajuste de límite de ocupación solo admite el modo <Cmd sid="zone.globalZone.global" product="2" /> y se puede establecer para todos los dispositivos registrados en **BioStar X**.
+
+* <Cmd sid="common.activate" product="2" />: Active o desactive temporalmente los ajustes.
+
+* <Cmd sid="zone.entryDevices" product="2" />: Selecciona el dispositivo que se utilizará al entrar. Puedes elegir de la lista de dispositivos registrados.
+
+* <Cmd sid="zone.exitDevices" product="2" />: Selecciona el dispositivo que se utilizará al salir. Puedes elegir de la lista de dispositivos registrados.
+
+* <Cmd sid="zone.occupancy.limit" product="2" />: Ingrese el número de personas a limitar para la entrada. El ingreso se restringe si el número de personas alcanza el límite de ocupación establecido. Ingrese un número de 0 a 10,000; si lo establece en 0, el acceso será ilimitado.
+
+* <Cmd sid="zone.occupancy.autoCountReset" product="2" />: Defina la hora para inicializar automáticamente el conteo de ocupación almacenado. Cada día a la hora establecida, se restablecerán el conteo de ocupación y el número de personas que siempre omiten el límite.
+
+* <Cmd sid="zone.occupancy.list.almostFull" product="2" />: Envíe una alerta al administrador o registre un evento antes de que el número de personas que ingresan alcance el límite establecido. Cuando las prealertas de ocupación están habilitadas, el campo de entrada <Cmd sid="zone.occupancy.1stLevel" product="2" /> se activa. Para configurar <Cmd sid="zone.occupancy.2stLevel" product="2" />, haga clic en el botón <IcAdd className="border radius" />.
+
+* <Cmd sid="zone.occupancy.networkFailureAction" product="2" />: Determine si se permite la entrada y salida cuando se produce un error de red en el dispositivo configurado. Si se establece permitir entrada y salida, la restricción de ingreso se detiene cuando el dispositivo pierde la conexión de red y los usuarios pueden ingresar incluso si el número real supera el límite.
+
+:::info
+
+* No se puede establecer el mismo dispositivo tanto para <Cmd sid="zone.entryDevices" product="2" /> como para <Cmd sid="zone.exitDevices" product="2" /> al mismo tiempo.
+
+* Seleccione hasta 128 dispositivos para <Cmd sid="zone.entryDevices" product="2" /> y <Cmd sid="zone.exitDevices" product="2" />.
+
+* Los dispositivos configurados con <Cmd sid="door.dualAuthentication" product="2" /> no pueden establecerse como <Cmd sid="zone.entryDevices" product="2" /> ni <Cmd sid="zone.exitDevices" product="2" />.
+
+* Configure la hora para la opción <Cmd sid="zone.occupancy.autoCountReset" product="2" /> teniendo en cuenta la zona horaria estándar de la ubicación real. Por ejemplo, si el servidor **BioStar X** está ubicado en una región UTC+1:00 y la hora de restablecimiento automático se establece a las 00:00, el cliente **BioStar X** en la región UTC+2:00 restablecerá automáticamente la ocupación a las 01:00.
+
+* Configure hasta 2 límites de <Cmd sid="zone.occupancy.list.almostFull" product="2" /> y solo se podrán ingresar números menores que el límite. <Cmd sid="zone.occupancy.1stLevel" product="2" /> y <Cmd sid="zone.occupancy.2stLevel" product="2" /> no pueden configurarse con el mismo valor.
+
+* Para obtener más información sobre el registro de dispositivos, consulte lo siguiente.
+
+  * <DocLink docId="platform/biostar_x/settings-adding-devices" />
+
+  * <DocLink docId="platform/biostar_x/settings-adding-wiegand" />
+
+  * <DocLink docId="platform/biostar_x/settings-adding-slave-device" />
+
+:::
+
+## Configuración de personal siempre exento {#countByPass}
+
+Seleccione los grupos de acceso que siempre pueden omitir el ajuste de límite de ocupación. Los usuarios que pertenecen al grupo exento pueden entrar y salir independientemente del conteo de ocupación y no se contabilizarán en las cifras de ocupación. Los miembros activos actualmente exentos se muestran en la columna de ocupantes exentos de la lista de ajustes de límite de ocupación.
+
+:::info
+
+* Al usar una cámara térmica conectada al dispositivo, configurar <Cmd sid="device.thermal.mode" product="2" /> en <Cmd sid="device.thermal.authTemperatureOnlyMode" product="2" /> no funcionará, incluso si se han establecido personas exentas.
+
+* Configure hasta 16 grupos de <Cmd sid="zone.occupancy.bypassGroup" product="2" />.
+
+:::
+
+## Verifique el estado de la lista de ocupación {#occupancyZoneList}
+
+Revise la lista de ajustes de límite de ocupación. Revise el estado de cada ajuste y el conteo de ocupación, y cambie los ajustes según sea necesario.
+
+* <Cmd sid="zone.occupancy.list.name" product="2" />: Revise el nombre.
+
+* <Cmd sid="zone.occupancy.list.status" product="2" />: Revise el estado.
+
+  * <Cmd sid="zone.occupancy.list.normal" product="2" />: Indica que el número de usuarios en la zona es inferior al establecido por <Cmd sid="common.limit" product="2" />, <Cmd sid="zone.occupancy.almostFull" product="2" />(<Cmd sid="zone.occupancy.1stLevel" product="2" />, <Cmd sid="zone.occupancy.2stLevel" product="2" />). Los usuarios pueden entrar en esta ubicación.
+
+  * <Cmd sid="zone.occupancy.almostFull" product="2" />: Indica que el número de usuarios presentes ha alcanzado el valor establecido en <Cmd sid="zone.occupancy.1stLevel" product="2" /> o <Cmd sid="zone.occupancy.2stLevel" product="2" />.
+
+  * <Cmd sid="zone.occupancy.list.full" product="2" />: Indica que el número de usuarios presentes ha alcanzado el límite establecido. Se restringen más ingresos.
+
+* <Cmd sid="zone.occupancy.list.countLimit" product="2" />: Revise el número actual de ocupantes en comparación con la capacidad. Si hay una discrepancia entre la ocupación registrada y el número real de usuarios presentes debido a situaciones como errores de red, el administrador puede hacer clic en <IcAdd className="border radius" /> o <IcMinus className="border radius" /> o hacer clic en el conteo de ocupación para modificarlo directamente.
+
+* <Cmd sid="zone.occupancy.countByPass" product="2" />: Revise el número de usuarios que actualmente están en el grupo exento.
+
+* <Cmd sid="zone.occupancy.list.deviceStatus" product="2" />: Revise el estado de los dispositivos configurados.
+
+  * <Cmd sid="zone.occupancy.list.normal" product="2" />: La red de todos los dispositivos configurados funciona con normalidad.
+
+  * <Cmd sid="zone.occupancy.networkFailure" product="2" />: Indica que uno o más dispositivos están experimentando errores de red.
+
+* <Cmd sid="zone.occupancy.list.fullscreen" product="2" />: Puede ver el estado de la configuración del límite de ocupación en pantalla completa.
+
+:::info
+
+Cuando se establece <Cmd sid="zone.occupancy.limit" product="2" />, puede ingresar conteos de ocupación de hasta 50,000 como máximo. Si <Cmd sid="zone.occupancy.limit" product="2" /> no está establecido, puede ingresar conteos de hasta 999,999 como máximo. No puede ingresar números que superen el valor máximo permitido y, si la ocupación real supera este valor, el excedente no se registrará en la base de datos.
+
+:::
+
+## Inicializar ocupación {#resetOccupancy}
+
+Puede restablecer el conteo de ocupación y el número de personas con paso siempre permitido. Al continuar con el restablecimiento de la ocupación se eliminará toda la información de entrada y salida de los usuarios, y la precisión del conteo de ocupación puede variar según el estado de la conexión de red.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.advancedAc.root" /> en la barra lateral izquierda.
+
+3. Haga clic en <Cmd sid="zone.occupancy.title" product="2" /> en la lista.
+
+4. Haga clic en la casilla de verificación de la configuración que desea inicializar en la lista de configuraciones de límite de ocupación.
+
+5. Haga clic en <Cmd sid="zone.occupancy.list.reset" product="2" /> en la esquina superior derecha de la pantalla.
+
+6. Cuando aparezca el mensaje de confirmación, haga clic en <Cmd sid="button.apply" product="2" />.
+
+## Activar/desactivar {#activateDeactivateOccupancyZone}
+
+Puede activar una configuración de límite de ocupación desactivada o desactivar una configuración activa. Al desactivar las configuraciones se restablecerán <Cmd sid="zone.occupancy.fullscreen.currentOccupancy" product="2" /> y <Cmd sid="zone.occupancy.list.countBypass" product="2" />.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.advancedAc.root" /> en la barra lateral izquierda.
+
+3. Haga clic en <Cmd sid="zone.occupancy.title" product="2" /> en la lista.
+
+4. Haga clic en la casilla de verificación del elemento en la lista de configuraciones de límite de ocupación para activarlo o desactivarlo.
+
+5. Haga clic en <Cmd sid="zone.occupancy.list.activate" product="2" /> o <Cmd sid="zone.occupancy.list.deactivate" product="2" /> en la esquina superior derecha de la pantalla.
+
+## Eliminar {#deleteOccupancyZone}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.advancedAc.root" /> en la barra lateral izquierda.
+
+3. Haga clic en <Cmd sid="zone.occupancy.title" product="2" /> en la lista.
+
+4. Haga clic en la casilla de verificación del elemento que desea eliminar de la lista de configuraciones de límite de ocupación.
+
+5. Haga clic en <Cmd sid="zone.occupancy.list.deleteZone" product="2" /> en la esquina superior derecha de la pantalla.
+
+6. Cuando aparezca el mensaje de confirmación, haga clic en <Cmd sid="button.apply" product="2" />.
+
+import ExploreListPages from '../../common/_explore-list-pages.mdx';
+
+<ExploreListPages />

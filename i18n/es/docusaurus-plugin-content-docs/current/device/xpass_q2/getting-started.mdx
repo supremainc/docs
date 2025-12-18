@@ -1,0 +1,219 @@
+---
+id: getting-started
+title: Primeros pasos
+description: Proporciona procedimientos iniciales para empezar con el dispositivo.
+keywords:
+  - Componentes
+  - Nombre
+  - Función
+  - Cable
+  - Conector
+---
+
+Proporciona procedimientos iniciales para empezar con el dispositivo.
+
+## Componentes
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-device-xpq2.svg" className="none" width={110} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-wall-bracket-xpq2.svg" className="none" width={100} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-quick-guide.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-oss-guide.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>XPass Q2</Td>
+
+      <Td>Soporte de pared</Td>
+
+      <Td>Guía rápida</Td>
+
+      <Td>Guía de software de código abierto</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-connection-cables-xpq2.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-fixing-screws2.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-bracket-fixing-screw.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-diode1.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-resistor.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Cables de conexión</Td>
+
+      <Td>Tornillos de fijación x2</Td>
+
+      <Td>Tornillo de fijación del soporte (en forma de estrella)</Td>
+
+      <Td>Diodo</Td>
+
+      <Td>Resistencia de 120 Ω</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## Nombre y función de cada parte
+
+<Image src="/img/device/name-function-each-part-xpq2.png" className="none" width="60%" />
+
+* **Indicador LED**: Indica el estado operativo del dispositivo mediante el color del LED.
+
+  * Verde: autenticación exitosa.
+
+  * Rojo: autenticación fallida.
+
+  * Azul/cian intermitente: funcionamiento normal.
+
+  * Azul/verde intermitente:
+
+    * Al configurar <Cmd sid="ui_012" product="dev" /> para su uso, no se puede obtener la dirección IP.
+
+    * Cuando está en modo <Cmd sid="ui_205" product="dev" />, la conexión con el dispositivo maestro se desconecta.
+
+  * Parpadeo rojo/morado: El dispositivo está bloqueado.
+
+  * Verde intermitente: esperando entrada.
+
+* **Luz LED**: El LED se enciende automáticamente cuando se detecta movimiento cerca del escáner de QR/código de barras.
+
+* **Escáner de QR/código de barras**: Escanea credenciales QR/código de barras para el acceso.
+
+* **Unidad de autenticación de tarjeta RF y tarjeta de acceso móvil**: parte para escanear una tarjeta RFID o una tarjeta de acceso móvil para la entrada.
+
+* **Ranura para memoria USB (tipo C)**: Conecta la memoria USB.
+
+* **Botón de reinicio**
+
+  * Inicializa la configuración de red. Para obtener más información sobre la inicialización de la configuración de red, consulta [lo siguiente](installation#reset-network-settings).
+
+  * Elimina toda la información y los certificados almacenados en el dispositivo e inicializa la configuración. Para obtener más información sobre la inicialización de fábrica, consulta [lo siguiente](installation#factory-reset).
+
+* **Ethernet**: Conecta el cable Ethernet.
+
+* **RS-485 (4 pines)**: Conecta el cable RS-485.
+
+* **Entrada (5 pines)**: Conecta el cable de entrada.
+
+* **Relé (3 pines)**: Conecta el cable del relé.
+
+* **Alimentación (2 pines)**: Conecta el cable de alimentación.
+
+* **Puerto de expansión USB (5 pines)**: Conecta otros productos accesorios.
+
+* **Entrada/salida Wiegand (4 pines)**: Conecta el cable Wiegand de entrada/salida.
+
+* **Salida de alimentación del lector (3 pines)**: Conecte el cable de salida de alimentación del lector.
+
+* **Salida de alimentación de la cerradura (3 pines)**: Conecte el cable de salida de alimentación de la cerradura.
+
+<PageBreak />
+
+{/* 케이블 및 커넥터 */}
+
+import CablesandConnectors from '../../common/_getting-started-cables-and-connectors.mdx'
+
+<CablesandConnectors />
+
+<PageBreak />
+
+## Notas sobre QR/código de barras y licencia del dispositivo
+
+### Método correcto de autenticación con QR/código de barras {#how-to-scan-qrbarcode}
+
+Emita un QR/código de barras al usuario para usarlo como medio de autenticación. Escanee el QR/código de barras según las instrucciones para mejorar el reconocimiento.
+
+<Image src="/img/device/qr-scanning-xpq2.svg" className="none" width={300} alone />
+
+* Mantenga una distancia de 5-15 cm entre el escáner del dispositivo y el QR/código de barras.
+
+* Coloque el QR/código de barras en el centro del escáner.
+
+* Si autentica con un QR/código de barras descargado en un dispositivo móvil, ajuste el brillo del dispositivo para que la pantalla sea claramente visible.
+
+* El escaneo de QR/código de barras puede tardar más o fallar si la posición, la distancia o la iluminación son inadecuadas.
+
+### Tipos de códigos de barras y tamaño mínimo legible
+
+A continuación se muestran ejemplos de los tamaños mínimos de código de barras que se pueden leer para cada tipo.
+
+:::info
+
+Las tasas de lectura reales pueden variar según la calidad de impresión, la codificación, la iluminación, la resolución de la cámara, la distancia de captura y otras condiciones.
+
+:::
+
+#### Compatibilidad básica
+
+Este producto es compatible de forma nativa con códigos QR.
+
+<div className="overflow-x cols3--20-20-60">
+  | Tipo de código de barras | Tamaño mínimo legible | Valor de ejemplo (recuento de caracteres) |
+  | :-: | :-: | :-- |
+  | Código QR | 1 cm | 32 caracteres: 12345678901234567890123456789012 |
+</div>
+
+#### Cuando se aplica la licencia de cámara QR
+
+<div className="overflow-x cols3--20-20-60">
+  | Tipo de código de barras | Tamaño mínimo legible | Valor de ejemplo (recuento de caracteres) |
+  | :-: | :-: | :-- |
+  | Código QR | 1 cm | 32 caracteres: 12345678901234567890123456789012 |
+  | Micro QR Code | 1 cm | 32 caracteres: 12345678901234567890123456789012 |
+  | Aztec | 1 cm | 32 caracteres: 12345678901234567890123456789012 |
+  | PDF417 | 3 cm | 32 caracteres: 12345678901234567890123456789012 |
+  | Data Matrix | 1 cm | 32 caracteres: 12345678901234567890123456789012 |
+  | Code 39 | 5 cm | 16 caracteres: 1234567890123456 |
+  | Code 128 | 3 cm | 16 caracteres: 1234567890123456 |
+  | EAN-8 | 1.5 cm | 8 caracteres (7 datos + 1 dígito de control): 12345670 |
+  | EAN-13 | 2 cm | 13 caracteres (12 datos + 1 dígito de control): 1234567890128 |
+  | UPC-A | 2 cm | 12 caracteres (11 datos + 1 dígito de control): 123456789012 |
+  | UPC-E | 1.5 cm | 8 caracteres (7 datos + 1 dígito de control): 12345670 |
+</div>
+
+### Notas sobre la licencia del dispositivo
+
+* Para usar métodos de autenticación adicionales con QR/código de barras se requiere una licencia de dispositivo independiente. Contacta al lugar de compra para obtener una licencia de dispositivo.
+
+* El archivo de licencia del dispositivo está cifrado y no puede modificarse de forma arbitraria.
+
+* Las licencias de dispositivo se emiten según el ID del dispositivo. Si el ID del dispositivo se cambia de manera inusual, no se proporciona servicio de garantía para la licencia.
+
+* Para obtener más información sobre las licencias de dispositivos, consulte la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-license-device-license).

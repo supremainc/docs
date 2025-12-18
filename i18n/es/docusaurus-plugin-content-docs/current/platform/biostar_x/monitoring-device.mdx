@@ -1,0 +1,98 @@
+---
+id: monitoring-device
+title: Supervisar dispositivo
+description: Supervisa en tiempo real los dispositivos y cámaras conectados a todas las áreas y puertas. La gestión eficiente es posible mediante varias funciones, incluidas la verificación del estado de dispositivos y cámaras, la visualización de información detallada y la reproducción de video de la cámara.
+keywords:
+  - Monitorizar
+  - Dispositivo
+  - Cámara
+---
+
+Este documento proporciona orientación sobre cómo usar las funciones de supervisión de dispositivos y cámaras. Puedes verificar el estado de dispositivos y cámaras, ver información detallada y reproducir video de la cámara en tiempo real, entre otras funciones. Además, revisa los eventos recientes para gestionar de manera eficiente el estado de dispositivos y cámaras.
+
+Para acceder a la página <Cmd sid="arena.title" />, haz clic en <Cmd sid="arena.title" /> en <Cmd sid="shell.header.launcher" /> o selecciona <Cmd sid="arena.title" /> en el menú de la parte superior izquierda de la pantalla.
+
+## Verificar estado de dispositivos y cámaras
+
+Haz clic en la pestaña <Cmd sid="arena.tree.device.title" /> en la barra lateral izquierda. Puedes verificar el estado de todos los dispositivos y cámaras. Consulta lo siguiente para conocer el estado de los dispositivos y cámaras.
+
+<div className="col2--20-80 overflow-x">
+  | Ícono de estado | Descripción |
+  | :-: | --- |
+  | <StatusOK /> | El dispositivo está conectado correctamente. |
+  | <StatusFail /> | El dispositivo está apagado o desconectado. |
+  | <IcCamOk width="auto" height="35px" /> | La cámara está conectada. |
+  | <IcCamFail width="auto" height="35px" /> | La cámara está apagada o desconectada. |
+</div>
+
+## Control del dispositivo
+
+Selecciona el dispositivo deseado de la lista en la barra lateral izquierda y haz clic derecho. Seleccione la función deseada en el menú emergente.
+
+<Image src="/img/biostarx-monitoring-device-popup.png" />
+
+### Reconectar dispositivo
+
+Si el dispositivo está apagado o desconectado, haz clic en <Cmd sid="arena.tree.contextMenu.reconnect" /> en el menú emergente. Cuando el dispositivo se reconecte, el ícono de estado cambiará a <StatusOK />.
+
+:::info
+
+La función <Cmd sid="arena.tree.contextMenu.reconnect" /> no es compatible con dispositivos conectados mediante la opción <Cmd sid="device.info.deviceToServerConnection" product="2" />. Para obtener más información sobre el registro de dispositivos, consulta [lo siguiente](settings-adding-devices#setipaddress).
+
+:::
+
+### Reiniciar dispositivo
+
+Para reiniciar el dispositivo, haz clic en <Cmd sid="arena.tree.contextMenu.reboot" /> en el menú emergente.
+
+### Bloquear dispositivo
+
+* Para bloquear el dispositivo, haz clic en <Cmd sid="arena.tree.contextMenu.deviceLock" /> en el menú emergente. Aparecerá un mensaje en la parte superior de la pantalla que indica que el bloqueo del dispositivo está en curso. Cuando se complete el bloqueo, el mensaje desaparecerá.
+
+* Para desbloquear el dispositivo, haz clic en <Cmd sid="arena.tree.contextMenu.deviceUnlock" /> en el menú emergente. Aparecerá un mensaje en la parte superior de la pantalla que indica que el desbloqueo del dispositivo está en curso. Cuando se complete el desbloqueo, el mensaje desaparecerá.
+
+### Detener acción
+
+Para detener una acción en curso, haz clic en <Cmd sid="arena.tree.contextMenu.stopAction" /> en el menú emergente. Aparecerá un mensaje de éxito en la parte superior de la pantalla indicando que la acción se detuvo. Cuando la acción se detenga, el mensaje desaparecerá.
+
+### Vista detallada del dispositivo
+
+Para ver información detallada del dispositivo, haz clic en <Cmd sid="arena.tree.contextMenu.viewDetail" /> en el menú emergente. O haz doble clic en el dispositivo. La información detallada del dispositivo aparecerá en el lado derecho de la pantalla.
+
+<Image src="/img/biostarx-monitoring-device-details.png" />
+
+Puedes ver el ID del dispositivo, grupo, nombre del modelo, tiempo de actividad, dirección IP y otros detalles. La lista <Cmd sid="arena.recentEvent" /> en la parte inferior muestra los eventos recientes en orden cronológico inverso.
+
+## Control de la cámara
+
+Selecciona la cámara deseada de la lista en la barra lateral izquierda y haz clic derecho. Seleccione la función deseada en el menú emergente.
+
+<Image src="/img/biostarx-monitoring-camera-popup.png" />
+
+### Reproducir video de la cámara
+
+Para colocar el video de la cámara en el mosaico de video y supervisarlo en tiempo real, haz clic en <Cmd sid="arena.tree.contextMenu.openVideo" /> en el menú emergente.
+
+:::note
+
+También puedes añadir video de la cámara a los mosaicos de video de las siguientes maneras:
+
+* Haz doble clic en la cámara para reproducir su video desde la barra lateral izquierda.
+
+* También puedes añadir video arrastrando y soltando la cámara en el área de mosaicos de video.
+
+:::
+
+:::info
+
+* Los mosaicos de video se añaden en orden desde la parte superior izquierda de la pantalla. Si no hay espacio para añadir más, aparece un mensaje de error.
+
+* Para obtener información detallada sobre cómo controlar el video y las herramientas que se muestran en él, consulta [lo siguiente](monitoring-video).
+
+:::
+
+### Vista detallada de la cámara
+
+Haz clic en <Cmd sid="arena.tree.contextMenu.viewDetail" /> en el menú emergente para ver los detalles de la cámara. Puedes verificar el grupo, la descripción, el ID y la dirección IP de la cámara.
+
+<Image src="/img/biostarx-monitoring-camera-details.png" />

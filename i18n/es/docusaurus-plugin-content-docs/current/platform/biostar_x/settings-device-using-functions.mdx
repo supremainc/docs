@@ -1,0 +1,49 @@
+---
+id: settings-device-using-functions
+title: Usar la función de administración de dispositivos
+description: Instrucciones para reconectar el dispositivo, sincronizar y editar información por lotes.
+keywords:
+  - Dispositivo
+---
+
+Esta guía explica cómo usar funciones adicionales de **BioStar X**. Ofrece opciones para reconectar el dispositivo, sincronizar, editar información por lotes y eliminar el dispositivo.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.device.root" /> en la barra lateral izquierda.
+
+3. Selecciona el dispositivo en la lista <Cmd sid="menu.device.allDeviceGroups" product="2" /> y haz clic con el botón derecho.
+
+4. Seleccione la función deseada en el menú emergente.
+
+<Image src="/img/biostarx-setting-device-functions.png" />
+
+Consulta las funciones disponibles mediante el menú emergente que se muestra a continuación. Las funciones proporcionadas pueden variar según el dispositivo.
+
+* <Cmd sid="button.reconnect" product="2" />: Reconectar el dispositivo seleccionado. Esta opción está disponible cuando se selecciona un dispositivo. Utiliza esta función cuando se pierda la conexión con **BioStar X**.
+
+  :::info
+
+  Esta función no es compatible con los dispositivos conectados con la opción <Cmd sid="device.info.deviceToServerConnection" product="2" />. Para obtener más información sobre el registro de dispositivos, consulta [lo siguiente](settings-adding-devices#setipaddress).
+
+  :::
+
+* <Cmd sid="button.syncDevice" product="2" />: Sincronizar toda la información de usuario registrada en el dispositivo con **BioStar X**. Esta sincronización se basa en la base de datos de **BioStar X** y eliminará la información de usuario registrada únicamente en el dispositivo. Utiliza la función <Cmd sid="button.manageUsersInDevice" product="2" /> para cargar la información de usuario en **BioStar X**.
+
+* <Cmd sid="device.sync_all" product="2" />: Eliminar toda la información de configuración y de usuario almacenada en el dispositivo y volver a enviarla. Esta función también está disponible al seleccionar el dispositivo en la lista y hacer clic en el botón <IcMoreW />.
+
+* <Cmd sid="button.manageUsersInDevice" product="2" />: Cargar o eliminar la información de usuario registrada en el dispositivo en **BioStar X**. Para obtener más información, consulta [lo siguiente](settings-device-manage-device-users).
+
+* <Cmd sid="button.firmwareUpgrade" product="2" />: Actualizar fácilmente el firmware del dispositivo. Para obtener más información, consulta [lo siguiente](settings-device-upgrade-firmware).
+
+* <Cmd sid="device.menu.reboot" product="2" />: Reiniciar el dispositivo seleccionado. Utiliza esta función cuando el dispositivo no funcione con normalidad.
+
+* <Cmd sid="button.deleteDevice" product="2" />: Eliminar el dispositivo seleccionado de la lista. Los dispositivos configurados como puertas o zonas no se pueden eliminar.
+
+:::info
+
+* Para obtener más información sobre la función <Cmd sid="device.menu.addWiegandDevice" product="2" />, consulta [lo siguiente](settings-adding-wiegand).
+
+* Para obtener más información sobre la función <Cmd sid="device.menu.searchSlaveDevice" product="2" />, consulta [lo siguiente](settings-adding-slave-device).
+
+:::

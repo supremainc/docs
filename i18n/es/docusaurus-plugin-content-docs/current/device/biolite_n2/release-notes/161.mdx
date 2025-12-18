@@ -1,0 +1,58 @@
+---
+id: 161
+title: Firmware Version 1.6.1
+---
+
+# Firmware Version 1.6.1 (Build No. 1.6.1_240628)
+
+Release<Separator/>2024-07-10
+
+:::caution
+
+Devices with the new BLE chip and the SE processor cannot downgrade to a lower version after upgrading the firmware to v1.5.0 or higher. Devices with existing BLE chips and SE processor can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. XPass D2 new BLE (Bluetooth Low Energy) chip firmware (Build No. 1.7.0_220921) support.
+
+    - The BLE chip parts of the hardware have been changed, and the firmware has been upgraded to be compatible with both the existing and new BLE chips.
+
+1. Improved synchronization to complete if user enrollment fails when synchronizing multiple users to the device in BioStar 2.
+
+1. Improved smartcard output byte order setting.
+
+    - When using Wiegand or OSDP output, it is improved to be affected by the smartcard output byte order when the Wiegand output information is set to send user ID.
+
+1. Improved to not recognize SEOS configuration cards as CSN for 1 minute after device booting.
+
+1. Improved to get user update succeeded event log using the GetLogWithFilter function in the SDK.
+
+1. Improved to ensure that values set with osdp_comset are correctly applied on the device connected as a slave.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Device does not recognize certain HID iCLASS Seos cards. <Badge>1.0.0</Badge>
+
+1. Restart log is not logged in the device's **Event Log** when the master device is restarted. <Badge>1.6.0</Badge>
+
+1. Device does not recognize certain MIFARE Classic cards. <Badge>1.0.0</Badge>
+
+1. Authentication fails when authenticating with a DESFire AoC while the device is connected as a slave. <Badge>1.0.0</Badge>
+
+1. The user ID stored as a 32-character string is truncated to only 31 characters in a specific event log. <Badge>1.0.0</Badge>
+
+1. When a user with a 32-character user ID authenticates to the device while the device is not connected to the server, the authentication event log is not updated in BioStar 2 even after the device is reconnected to the server. <Badge>1.0.0</Badge>
+
+1. When the bit interval is set for the **Facility Code** and **ID Field** of the Wiegand card format and the card is scanned during add user, the **Facility Code** is displayed as an incorrect value. <Badge>1.4.1</Badge>
+
+</BugLists>

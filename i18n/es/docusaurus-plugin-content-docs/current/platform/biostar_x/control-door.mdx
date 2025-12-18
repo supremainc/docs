@@ -1,0 +1,136 @@
+---
+id: control-door
+title: Control de puerta
+description: Controla la puerta y consulta la información detallada.
+keywords:
+  - Monitorizar
+  - Puerta
+---
+
+Esta guía describe cómo controlar puertas. Bloquea la puerta durante un periodo determinado, verifica la cámara conectada a la puerta y borra las alarmas que se hayan generado.
+
+* Controla la puerta de forma remota para administrar el acceso. Configura la puerta para que permanezca abierta o bloqueada durante un periodo específico.
+
+* Monitorea en tiempo real las situaciones de acceso mediante la cámara conectada a la puerta.
+
+* La función [anti-passback](../../reference/glossary#apb) evita el acceso no autorizado y gestiona los registros de acceso con precisión.
+
+Haga clic en <Cmd sid="shell.header.arena" /> en la página <Cmd sid="shell.header.launcher" /> o seleccione <Cmd sid="shell.header.arena" /> en la lista de accesos directos en la esquina superior izquierda de la pantalla. Selecciona la puerta que deseas controlar y haz clic derecho. Seleccione la función deseada en el menú emergente.
+
+<Image src="/img/biostarx-monitoring-door-popup.png" />
+
+:::info
+
+* La función <Cmd sid="setting.server.logUploadType" product="2" /> debe estar habilitada para supervisar o controlar el estado de la puerta de acceso. Activa esta función en la ruta de menú <Cmd sid="shell.header.setting" /> → <Cmd sid="setting.menu.server.root" /> → <Cmd sid="setting.menu.server.server" />, en la sección <Cmd sid="common.general" product="2" />.
+
+* La opción <Cmd sid="arena.tree.contextMenu.openVideo" /> está vinculada al VMS y requiere la integración de la puerta de acceso y la cámara para poder usarse. Además, esta función está disponible mediante la compra de opciones adicionales con una licencia **advanced** o superior. Para obtener más información sobre la política de licencias, consulta [lo siguiente](licensing).
+
+:::
+
+## Abrir puerta {#door-open}
+
+Cualquiera puede acceder a la puerta cuando está abierta. Haga clic en <Cmd sid="arena.tree.contextMenu.unlock" /> en el menú emergente y seleccione la opción deseada.
+
+* <Cmd sid="arena.tree.contextMenu.unlockOnce" />: Desbloquea la puerta una vez.
+
+* <Cmd sid="arena.tree.contextMenu.unlockTimed" />: Abre la puerta durante un tiempo determinado. Ingresa el tiempo deseado en segundos.
+
+* <Cmd sid="arena.tree.contextMenu.unlockPermanent" />: Desbloquea la puerta sin límite de tiempo.
+
+Cuando la puerta de acceso se abre, el ícono de relé de la puerta cambia del estado <IcRelayLock /> a <IcRelayUnlock />.
+
+:::tip
+
+La puerta puede abrirse temporalmente para la comodidad de los visitantes externos. Después de abrir la puerta, cambia al modo <Cmd sid="arena.tree.contextMenu.normalize" />.
+
+:::
+
+## Normalizar puerta {#door-unlock}
+
+Cambiar la puerta al estado <Cmd sid="arena.tree.contextMenu.normalize" /> permitirá el acceso solo a usuarios autorizados. Haga clic en <Cmd sid="arena.tree.contextMenu.normalize" /> en el menú emergente.
+
+## Bloquear puerta {#door-lock}
+
+Cambiar la puerta al estado <Cmd sid="arena.tree.contextMenu.lock" /> impedirá el acceso a cualquier persona. Haz clic en <Cmd sid="arena.tree.contextMenu.lock" /> en el menú emergente y selecciona la opción deseada.
+
+* <Cmd sid="arena.tree.contextMenu.unlockTimed" />: Cambia la puerta a un estado bloqueado durante un período determinado. Ingresa el tiempo deseado en segundos.
+
+* <Cmd sid="arena.tree.contextMenu.lockPermanent" />: Cambia la puerta a un estado bloqueado sin límite de tiempo.
+
+## Ver cámara de la puerta {#door-camera}
+
+Consulta la cámara conectada a la puerta. Haz clic en <Cmd sid="arena.tree.contextMenu.openVideo" /> en el menú emergente. Agrega y reproduce el metraje de la cámara seleccionada en la sección de mosaicos de video de <Cmd sid="shell.header.arena" />.
+
+<Image src="/img/monitoring-door-control-open-video.png" />
+
+O selecciona la cámara deseada y haz clic con el botón derecho del ratón. Haz clic en <Cmd sid="arena.tree.contextMenu.openVideo" /> en el menú emergente para añadir y reproducir la grabación de la cámara seleccionada.
+
+<Image src="/img/monitoring-door-camera-control-open-video.png" />
+
+:::info
+
+* Si hay más de una cámara conectada a la puerta de acceso, la primera cámara conectada aparece en el mosaico de video.
+
+* Los mosaicos de video se añaden en orden desde la parte superior izquierda de la pantalla. Si no hay espacio para añadir más, aparece un mensaje de error. {/* In this case, add a tab to the screen and click <Cmd sid='arena.tree.contextMenu.openVideo' /> again. */}
+
+* Para obtener más información sobre la monitorización de video, consulta [the following](monitoring-video).
+
+* Esta función está disponible con opciones adicionales en la licencia **Advanced** o superior. Para más información sobre la política de licencias, consulta [lo siguiente](licensing#features-add-ons).
+
+:::
+
+## Restablecer alarma {#alarm-reset}
+
+Desactiva la alarma que se generó en la puerta. Haga clic en <Cmd sid="arena.tree.contextMenu.clearAlarm" /> en el menú emergente. Un mensaje de alarma aparece en la esquina superior derecha de la pantalla.
+
+## Restablecer anti-passback {#apb-reset}
+
+Desactiva la alarma APB cuando se produzca una violación de anti-passback.
+
+1. Haz clic en <Cmd sid="arena.tree.contextMenu.clearApb" /> en el menú emergente.
+
+2. Cuando aparezca la ventana <Cmd sid="arena.tree.contextMenu.clearApb" />, revisa la lista de usuarios que han infringido el anti-passback.
+
+   <Image src="/img/monitoring-door-monitoring-disable-apb.png" />
+
+3. Selecciona un usuario y haz clic en el botón <Cmd sid="common.apply" />.
+
+Un mensaje de finalización aparece en la esquina superior derecha de la pantalla.
+
+:::info
+
+* <Glossary termid="apb" />
+
+* Para obtener más información sobre cómo configurar el **anti-passback** en la puerta, consulta [the following](settings-door-add#antipassback).
+
+:::
+
+## Activar o desactivar la alarma
+
+Si la puerta está configurada en modo seguridad, activa o desactiva la seguridad. Haz clic en <Cmd sid="arena.tree.contextMenu.arm" /> o <Cmd sid="arena.tree.contextMenu.disarm" /> en el menú emergente.
+
+<Image src="/img/biostarx-monitoring-door-arm-status.png" />
+
+Una puerta de acceso en estado de alarma cambia el ícono de estado de alarma de <IcDisarm /> a <IcArm />. En ese momento, el ícono <IcArm /> también se aplica a la configuración de control de acceso correspondiente.
+
+:::info
+
+Esta función está disponible al adquirir opciones adicionales con una licencia **Advanced** o superior, o con una licencia **Enterprise** o superior. Para obtener más información sobre la política de licencias, consulta [lo siguiente](licensing).
+
+:::
+
+## Ver detalles {#detail-view}
+
+Consulta la información detallada de la puerta y el historial de eventos. Haga clic en <Cmd sid="arena.tree.contextMenu.viewDetail" /> en el menú emergente. La información detallada y el historial de eventos de la puerta aparecen en el lado derecho de la pantalla.
+
+<Image src="/img/biostarx-monitoring-door-view-details.png" />
+
+* **Información detallada de la puerta**: Consulta el nombre, la ubicación, el estado y la información de los subdispositivos conectados a la puerta.
+
+* <Cmd sid="arena.recentEvent" />: Consulta la lista de eventos recientes que se produjeron en la puerta de acceso seleccionada.
+
+:::info
+
+Para obtener más información sobre cada elemento de la sección de detalles de la puerta, consulta [the following](settings-door-add).
+
+:::

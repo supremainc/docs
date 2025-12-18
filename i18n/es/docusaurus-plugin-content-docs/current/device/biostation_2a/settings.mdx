@@ -1,0 +1,450 @@
+---
+id: settings
+title: Ajustes
+description: Proporciona instrucciones para configurar los ajustes del sistema y del dispositivo.
+keywords:
+  - Visualizar
+  - Sonido
+  - Red
+  - Dispositivo
+---
+
+Proporciona instrucciones para configurar los ajustes del sistema y del dispositivo.
+
+## Pantalla y sonido
+
+Cambie los ajustes de pantalla y sonido del dispositivo.
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_366" product="dev" /> y luego presione **OK**.
+
+   <Image src="/img/device/bs2a-displaysound.png" />
+
+3. Seleccione el elemento deseado y presione <IcFw />/<IcBw /> para cambiar la configuración.
+
+   * <Cmd sid="ui_364" product="dev" />: Permite elegir los elementos que se mostrarán en el fondo de la pantalla de inicio.
+
+   * <Cmd sid="ui_227" product="dev" />: Permite seleccionar el idioma que se mostrará en la pantalla.
+
+   * <Cmd sid="ui_284" product="dev" />: Configure si se utiliza un mensaje privado que se mostrará en la pantalla cuando el usuario se autentique. <Cmd sid="ui_284" product="dev" /> se puede configurar mediante el SDK de dispositivos BioStar. Si no se configura, no se mostrará ningún mensaje cuando la autenticación sea correcta, incluso si <Cmd sid="ui_284" product="dev" /> está habilitado en el dispositivo.
+
+   * <Cmd sid="ui_184" product="dev" />: Configure si se utiliza un mensaje privado que se mostrará en la pantalla cuando el usuario se autentique. <Cmd sid="ui_184" product="dev" /> se puede configurar mediante la API de BioStar X. Si no se configura, no se mostrará ningún mensaje cuando la autenticación sea correcta, incluso si <Cmd sid="ui_184" product="dev" /> está habilitado en el dispositivo.
+
+   * <Cmd sid="ui_148" product="dev" />: Configure el tiempo (s) para apagar la iluminación de la pantalla.
+
+   * <Cmd sid="ui_131" product="dev" />: Configure el tiempo (s) para que la pantalla de menú desaparezca automáticamente. Si no se pulsa ningún botón durante el tiempo establecido, la pantalla regresará a la pantalla de inicio.
+
+   * <Cmd sid="ui_135" product="dev" />: Configure el tiempo (s) para que un mensaje de configuración completada o de notificación desaparezca automáticamente.
+
+   * <Cmd sid="ui_251" product="dev" />: Permite usar guía por voz en lugar de tonos de notificación.
+
+   * <Cmd sid="ui_153" product="dev" />: Configure el volumen.
+
+4. Pulsa **OK** para guardar la configuración.
+
+:::info
+
+Para obtener más información sobre el SDK de dispositivos BioStar, consulte la [página del SDK de dispositivos BioStar](https://kb.supremainc.com/bs2sdk/doku.php) en la base de conocimientos de Suprema.
+
+:::
+
+## Dispositivo
+
+### Fecha y hora {#date-time}
+
+Configura la fecha y la hora. Configura la fecha y la hora con precisión para recopilar datos de registro precisos.
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_098" product="dev" /> y luego presione **OK**.
+
+   <Image src="/img/device/bs2a-datetime.png" />
+
+3. Seleccione el elemento deseado y presione <IcFw />/<IcBw /> para cambiar la configuración.
+
+   * <Cmd sid="ui_096" product="dev" />: Verifique la fecha actual. Desactiva <Cmd sid="ui_208" product="dev" /> para modificarla manualmente.
+
+   * <Cmd sid="ui_207" product="dev" />: Verifique la hora actual. Desactiva <Cmd sid="ui_208" product="dev" /> para modificarla manualmente.
+
+   * <Cmd sid="ui_358" product="dev" />: Establece la referencia de hora de la ubicación actual.
+
+   * <Cmd sid="ui_208" product="dev" />: Sincroniza el servidor y la hora. Habilita <Cmd sid="ui_208" product="dev" /> para sincronizar el servidor y la hora.
+
+   * <Cmd sid="ui_097" product="dev" />: Establece el formato de fecha. Selecciona <Cmd sid="ui_062" product="dev" />, <Cmd sid="ui_033" product="dev" /> y <Cmd sid="ui_009" product="dev" />.
+
+   * <Cmd sid="ui_209" product="dev" />: Establece el formato de hora. Selecciona <Cmd sid="ui_238" product="dev" /> y <Cmd sid="ui_005" product="dev" />.
+
+4. Pulsa **OK** para guardar la configuración.
+
+:::info
+
+Ingrese la fecha y la hora presionando los botones numéricos. Elimine el valor ingresado con el botón <IcFw /> e ingrese el delimitador con el botón <IcBw />.
+
+:::
+
+### Memoria USB
+
+Conecta una memoria USB e importa la información de usuarios al dispositivo o exporta registros e información de usuarios desde el dispositivo. También puede actualizar el firmware.
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_061" product="dev" /> y luego presione **OK**.
+
+   <Image src="/img/device/bs2a-usb.png" />
+
+3. Seleccione el elemento deseado para continuar.
+
+   * <Cmd sid="ui_100" product="dev" />: Selecciona la información para exportar a la memoria USB conectada. Seleccione el elemento y luego presione **OK**.
+
+   * <Cmd sid="ui_063" product="dev" />: Importa la información de usuarios desde la memoria USB conectada. Seleccione el elemento y luego presione **OK**.
+
+   * <Cmd sid="ui_353" product="dev" />: Si el archivo de firmware está guardado en la memoria USB conectada, presione **OK** para actualizar el firmware.
+
+:::caution
+
+No desconectes la fuente de alimentación mientras actualizas el firmware del dispositivo. El dispositivo puede fallar.
+
+:::
+
+### Reiniciar dispositivo
+
+Reinicia el dispositivo.
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_286" product="dev" /> y luego presione **OK**.
+
+   <Image src="/img/device/bs2a-restart.png" />
+
+3. Presione **OK** para reiniciar el dispositivo. Presione **ESC** para regresar a la pantalla anterior.
+
+### Restablecimiento
+
+Los ajustes del dispositivo, los ajustes de red y los niveles de operador se restablecerán.
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_317" product="dev" /> y luego presione **OK**.
+
+   <Image src="/img/device/bs2a-restore-default.png" />
+
+3. Seleccione el elemento deseado para continuar.
+
+   * <Cmd sid="ui_304" product="dev" />: Inicializa todos los ajustes almacenados en el dispositivo. Presione **OK** para inicializar todas las configuraciones del dispositivo. Presione **ESC** para regresar a la pantalla anterior.
+
+   * <Cmd sid="ui_104" product="dev" />: Inicializa todos los ajustes excepto los de red. Presione **OK** para inicializar todas las configuraciones excepto las de red. Presione **ESC** para regresar a la pantalla anterior.
+
+   * <Cmd sid="ui_072" product="dev" />: Elimina toda la información guardada en el dispositivo y el certificado raíz, y restaura los ajustes a los valores predeterminados.
+
+   * <Cmd sid="ui_121" product="dev" />: Elimina el certificado raíz guardado en el dispositivo.
+
+4. La ejecución de <Cmd sid="ui_317" product="dev" /> reinicia el dispositivo.
+
+:::info
+
+* Al restablecer, el nivel de operador también se restablecerá. Después de restablecer, vuelve a configurar el nivel de operador.
+
+* El ajuste de idioma no cambiará después de restablecer.
+
+* El menú <Cmd sid="ui_072" product="dev" /> puede usarse cuando el certificado raíz está guardado en el dispositivo.
+
+* El menú <Cmd sid="ui_121" product="dev" /> puede usarse solo cuando el certificado raíz está guardado en el dispositivo y se ha designado un administrador.
+
+:::
+
+### Administrador Principal
+
+Cambie el método de autenticación del administrador maestro.
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_128" product="dev" />.
+
+3. Configure los métodos de autenticación deseados.
+
+   <div className="grid-container">
+     <Image src="/img/device/bs2a-master-admin.png" />
+
+     <Image src="/img/device/bs2a-master-admin-edit.png" />
+   </div>
+
+:::info
+
+* Debe enrolar al menos dos tipos de credenciales.
+
+* Esta función está disponible solo en dispositivos nuevos con firmware v1.2.0 o superior.
+
+:::
+
+### Autenticación en dos pasos del administrador {#admin-2-step-authentication}
+
+Los dispositivos con firmware actualizado no ofrecen la configuración <Cmd sid="ui_128" product="dev" />; mejore la seguridad del dispositivo elevando los privilegios de administrador completo mediante la opción <Cmd sid="ui_073" product="dev" />.
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_073" product="dev" />.
+
+   <Image src="/img/device/bs2a-administrator-two-step-auth.png" />
+
+:::info
+
+* <Cmd sid="ui_073" product="dev" /> está disponible después de actualizar el firmware a la versión v1.2.0 o posterior, y el firmware no se puede degradar a una versión anterior tras la actualización.
+
+* El primer paso de autenticación es el predeterminado a menos que la opción <Cmd sid="ui_073" product="dev" /> esté habilitada.
+
+* Si no hay dos tipos de credenciales enroladas para todos los administradores, la activación falla y se muestra un mensaje de error. Enrole dos tipos de credenciales para todos los administradores e inténtelo nuevamente.
+
+  <Image src="/img/device/bs2a-master-admin-error-message.png" />
+
+:::
+
+:::caution
+
+Si elimina las credenciales de todos los administradores por debajo del tipo 2 después de habilitar <Cmd sid="ui_073" product="dev" />, ya no tendrá acceso al menú de administrador ni podrá conectarse a BioStar X. Por lo tanto, tenga especial cuidado al eliminar las credenciales de administrador.
+
+:::
+
+### Normativa
+
+Verifique las certificaciones reglamentarias y las marcas de cumplimiento en el producto.
+
+* CE / FCC / KC / UKCA / RCM
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_076" product="dev" /> y luego presione **OK**. Verifique las certificaciones reglamentarias.
+
+   <Image src="/img/device/bs2a-regulatory.png" />
+
+### Licencia de software de código abierto {#license}
+
+Verifique la licencia en el producto.
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_239" product="dev" /> y luego presione **OK**. Verifique la licencia.
+
+   <Image src="/img/device/bs2a-open-license.png" />
+
+### Otras configuraciones
+
+#### Horario de verano
+
+Aplica el horario de verano para usar el dispositivo. Configura correctamente la hora de inicio y fin.
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_090" product="dev" /> → <Cmd sid="ui_270" product="dev" /> y luego presione **OK**.
+
+3. Seleccione <Cmd sid="ui_271" product="dev" /> y luego presione **OK**.
+
+   <Image src="/img/device/bs2a-add-dst.png" />
+
+4. Seleccione el elemento deseado y presione <IcFw />/<IcBw /> para cambiar la configuración.
+
+   * <Cmd sid="ui_253" product="dev" />: Establece el nombre del horario de verano.
+
+   * <Cmd sid="ui_217" product="dev" /> / <Cmd sid="ui_218" product="dev" /> / <Cmd sid="ui_216" product="dev" /> / <Cmd sid="ui_215" product="dev" />: Define los detalles de cuándo inicia el horario de verano.
+
+   * <Cmd sid="ui_094" product="dev" /> / <Cmd sid="ui_095" product="dev" /> / <Cmd sid="ui_093" product="dev" /> / <Cmd sid="ui_092" product="dev" />: Define los detalles de cuándo finaliza el horario de verano.
+
+5. Pulsa **OK** para guardar la configuración.
+
+#### Tipo de ID de usuario
+
+Selecciona el tipo de ID de usuario que se va a registrar en el dispositivo.
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_090" product="dev" /> → <Cmd sid="ui_168" product="dev" /> y luego presione **OK**.
+
+   <Image src="/img/device/bs2a-userid.png" />
+
+3. Presione <IcFw />/<IcBw /> para cambiar la configuración.
+
+   * <Cmd sid="ui_200" product="dev" />: Permite introducir un ID de usuario solo con números.
+
+   * <Cmd sid="ui_237" product="dev" />: Permite introducir un ID de usuario con caracteres alfanuméricos y ciertos símbolos `_` `-`.
+
+4. Pulsa **OK** para guardar la configuración.
+
+#### Relé
+
+Configure los puertos de entrada de <Cmd sid="ui_144" product="dev" /> y <Cmd sid="ui_015" product="dev" /> en el dispositivo. Útil cuando se utiliza como dispositivo independiente.
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_090" product="dev" /> → <Cmd sid="ui_122" product="dev" /> y luego presione **OK**.
+
+   <Image src="/img/device/bs2a-relay.png" />
+
+3. Presione <IcFw />/<IcBw /> para cambiar la configuración.
+
+   * <Cmd sid="ui_122" product="dev" />: Configure si el relé está habilitado. Habilitar el ajuste de relé permite configurar <Cmd sid="ui_144" product="dev" /> y <Cmd sid="ui_015" product="dev" />.
+
+   * <Cmd sid="ui_144" product="dev" />: Establece la duración que la puerta permanece abierta cuando se ha realizado la autenticación de usuario estándar.
+
+   * <Cmd sid="ui_015" product="dev" />: Selecciona el puerto de entrada conectado al botón de salida.
+
+4. Pulsa **OK** para guardar la configuración.
+
+#### Sabotaje
+
+Configura si se utiliza el tamper de seguridad. Cuando el tamper está activado, establece la eliminación de todos los usuarios, todos los registros y la clave de seguridad.
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_090" product="dev" /> → <Cmd sid="ui_150" product="dev" /> y luego presione **OK**.
+
+   <Image src="/img/device/bs2a-secure-tamper.png" />
+
+3. Para configurarlo para que elimine todos los usuarios, registros y claves seguras cuando ocurra un evento de sabotaje, presione <IcFw />/<IcBw /> y establezca <Cmd sid="ui_161" product="dev" />.
+
+4. Pulsa **OK** para guardar la configuración.
+
+#### Información del dispositivo
+
+Consulta el nombre del modelo, el ID del dispositivo, el número de serie, la versión del dispositivo y del firmware, el kernel y la dirección MAC.
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_090" product="dev" /> → <Cmd sid="ui_289" product="dev" /> y luego presione **OK**. Vea la información de <Cmd sid="ui_136" product="dev" />, <Cmd sid="ui_282" product="dev" />, <Cmd sid="ui_210" product="dev" />, <Cmd sid="ui_019" product="dev" />, <Cmd sid="ui_017" product="dev" />, <Cmd sid="ui_332" product="dev" />, <Cmd sid="ui_031" product="dev" /> y <Cmd sid="ui_142" product="dev" />.
+
+   <Image src="/img/device/bs2a-info.png" />
+
+#### Información de memoria
+
+Consulta el estado de uso de la memoria.
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_090" product="dev" /> → <Cmd sid="ui_134" product="dev" /> y luego presione **OK**. Consulta el estado de uso de memoria del dispositivo.
+
+   <Image src="/img/device/bs2a-memory.png" />
+
+## Red
+
+Cambie la configuración de comunicación de dispositivos como Ethernet, servidor y comunicación serial.
+
+### TCP/IP
+
+#### Ethernet
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_344" product="dev" /> → <Cmd sid="ui_059" product="dev" /> y luego presione **OK**.
+
+3. Presione <IcFw /> / <IcBw /> en <Cmd sid="ui_309" product="dev" /> y seleccione <Cmd sid="ui_252" product="dev" />.
+
+   <Image src="/img/device/bs2a-network-ethernet.png" />
+
+4. Cambie el elemento deseado.
+
+   * <Cmd sid="ui_355" product="dev" />: Configure los puertos del dispositivo.
+
+   * <Cmd sid="ui_012" product="dev" />: Configure si se utiliza DHCP. Si la configuración DHCP está deshabilitada, el usuario puede modificar <Cmd sid="ui_029" product="dev" />, <Cmd sid="ui_068" product="dev" /> y <Cmd sid="ui_192" product="dev" />.
+
+   * <Cmd sid="ui_014" product="dev" />: Configure la dirección DNS.
+
+   * <Cmd sid="ui_029" product="dev" />: Compruebe la dirección IP del dispositivo. Para modificarla, desactive la configuración de DHCP.
+
+   * <Cmd sid="ui_068" product="dev" />: Compruebe la puerta de enlace del dispositivo. Para modificarla, desactive la configuración de DHCP.
+
+   * <Cmd sid="ui_192" product="dev" />: Compruebe la máscara de subred del dispositivo. Para modificarla, desactive la configuración de DHCP.
+
+5. Pulsa **OK** para guardar la configuración.
+
+:::info
+
+* <Cmd sid="ui_252" product="dev" /> no se puede usar con <Cmd sid="ui_141" product="dev" />.
+
+* <Cmd sid="ui_029" product="dev" />, <Cmd sid="ui_068" product="dev" /> y <Cmd sid="ui_192" product="dev" /> se ingresan presionando los botones numéricos. Elimine el valor ingresado con el botón <IcFw /> e ingrese el delimitador con el botón <IcBw />.
+
+:::
+
+#### Inalámbrico
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_344" product="dev" /> → <Cmd sid="ui_059" product="dev" /> y luego presione **OK**.
+
+3. Presione <IcFw /> / <IcBw /> en <Cmd sid="ui_309" product="dev" /> y seleccione <Cmd sid="ui_141" product="dev" />.
+
+   <Image src="/img/device/bs2a-network-wifi.png" />
+
+4. Cambie el elemento deseado.
+
+   * <Cmd sid="ui_007" product="dev" />: Seleccione el AP al que desea conectarse.
+
+   * <Cmd sid="ui_221" product="dev" />: Se muestra el método de cifrado configurado en el AP.
+
+   * <Cmd sid="ui_220" product="dev" />: Ingrese la contraseña de acceso del AP.
+
+   * <Cmd sid="ui_355" product="dev" />: Configure los puertos del dispositivo.
+
+   * <Cmd sid="ui_012" product="dev" />: Configure si se utiliza DHCP. Si la configuración DHCP está deshabilitada, el usuario puede modificar <Cmd sid="ui_029" product="dev" />, <Cmd sid="ui_068" product="dev" /> y <Cmd sid="ui_192" product="dev" />.
+
+   * <Cmd sid="ui_014" product="dev" />: Configure la dirección DNS.
+
+   * <Cmd sid="ui_029" product="dev" />: Compruebe la dirección IP del dispositivo. Para modificarla, desactive la configuración de DHCP.
+
+   * <Cmd sid="ui_068" product="dev" />: Compruebe la puerta de enlace del dispositivo. Para modificarla, desactive la configuración de DHCP.
+
+   * <Cmd sid="ui_192" product="dev" />: Compruebe la máscara de subred del dispositivo. Para modificarla, desactive la configuración de DHCP.
+
+5. Pulsa **OK** para guardar la configuración.
+
+:::info
+
+* <Cmd sid="ui_141" product="dev" /> solo está disponible para el modelo BS2A-OAPWB.
+
+* <Cmd sid="ui_141" product="dev" /> no se puede usar con <Cmd sid="ui_252" product="dev" />.
+
+* <Cmd sid="ui_029" product="dev" />, <Cmd sid="ui_068" product="dev" /> y <Cmd sid="ui_192" product="dev" /> se ingresan presionando los botones numéricos. Elimine el valor ingresado con el botón <IcFw /> e ingrese el delimitador con el botón <IcBw />.
+
+* Se requiere un enrutador inalámbrico para conectar <Cmd sid="ui_141" product="dev" />. Para obtener información sobre la instalación y configuración del enrutador inalámbrico, consulte el manual del usuario del enrutador.
+
+:::
+
+### Servidor
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_344" product="dev" /> → <Cmd sid="ui_180" product="dev" /> y luego presione **OK**.
+
+   <Image src="/img/device/bs2a-network-server.png" />
+
+3. Presione <IcFw />/<IcBw /> para cambiar la configuración.
+
+   * <Cmd sid="ui_234" product="dev" />: Al seleccionar <Cmd sid="ui_281" product="dev" />, se enviará una señal de conexión directamente a un servidor con la información ingresada desde el dispositivo. Cuando la configuración <Cmd sid="ui_281" product="dev" /> está habilitada, el usuario puede ingresar <Cmd sid="ui_183" product="dev" />, <Cmd sid="ui_182" product="dev" />, <Cmd sid="ui_189" product="dev" />.
+
+   * <Cmd sid="ui_183" product="dev" />: Introduzca <Cmd sid="ui_183" product="dev" /> en lugar de <Cmd sid="ui_182" product="dev" />.
+
+   * <Cmd sid="ui_182" product="dev" />: Ingrese la dirección IP de la PC en la que está instalado BioStar X.
+
+   * <Cmd sid="ui_189" product="dev" />: Ingrese el puerto de la PC en la que está instalado BioStar X.
+
+4. Pulsa **OK** para guardar la configuración.
+
+:::info
+
+<Cmd sid="ui_182" product="dev" />, <Cmd sid="ui_189" product="dev" /> pueden ingresarse presionando los botones numéricos. Elimine el valor ingresado con el botón <IcFw /> e ingrese el delimitador con el botón <IcBw />.
+
+:::
+
+### RS-485
+
+1. Presione <Image src="/img/common/ico-menu1.svg" ico alone /> y autentíquese con la credencial de administrador.
+
+2. Seleccione <Cmd sid="ui_344" product="dev" /> → <Cmd sid="ui_049" product="dev" /> y luego presione **OK**.
+
+   <Image src="/img/device/bs2a-network-serial.png" />
+
+3. Seleccione el elemento deseado y presione <IcFw />/<IcBw /> para cambiar la configuración.
+
+   * <Cmd sid="ui_112" product="dev" />: Seleccione el modo de operación RS-485.
+
+   * <Cmd sid="ui_345" product="dev" />: Seleccione el rendimiento de comunicación deseado.
+
+4. Pulsa **OK** para guardar la configuración.

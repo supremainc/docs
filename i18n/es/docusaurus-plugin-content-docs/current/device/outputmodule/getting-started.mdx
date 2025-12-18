@@ -1,0 +1,116 @@
+---
+id: getting-started
+title: Primeros pasos
+description: Proporciona procedimientos iniciales para empezar con el dispositivo.
+keywords:
+  - Componentes
+  - Nombre
+  - Función
+  - Cable
+  - Conector
+---
+
+Proporciona procedimientos iniciales para empezar con el dispositivo.
+
+## Componentes
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-device-om120.svg" className="none" height={300} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-drilling-template-om120.svg" className="none" height={300} alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Módulo de salida</Td>
+
+      <Td>Plantilla de perforación</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-screws12.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-spacer6.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-diode12.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Tornillo de fijación x12</Td>
+
+      <Td>Separador x6</Td>
+
+      <Td>Diodo x12</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+<PageBreak />
+
+{/* 액세서리_함체(ENCR-10) */}
+
+import Accessoryencr10 from '../../common/_device-encr10-accessory.mdx'
+
+<Accessoryencr10 />
+
+<PageBreak />
+
+## Nombre y función de cada parte
+
+<Magnify src="/img/en/device/name-function-each-part-om120.svg" width={700} zoomFactor={.4} mgWidth={500} mgHeight={500} />
+
+:::info
+
+* Presione el botón **INIT** durante más de 2 segundos, después de inicializar el producto vinculado al dispositivo, para conectarlo a otro dispositivo.
+
+* Presione el botón **RESET** para reiniciar el producto.
+
+:::
+
+<PageBreak />
+
+### Indicador de estado LED
+
+Compruebe el estado de funcionamiento del producto mediante el color del indicador de estado LED.
+
+| Ítem | LED | Estado |
+| --- | --- | --- |
+| **ALIMENTACIÓN** | Rojo encendido | Encendido |
+| **ESTADO** | Verde encendido | Estado conectado mediante sesión segura |
+| ^ | Azul encendido | No conectado al dispositivo maestro |
+| ^ | Rosa encendido | En proceso de actualización de firmware |
+| ^ | Amarillo encendido | Error de comunicación debido a clave diferente o pérdida de paquetes en OSDP que afecta RS-485 |
+| ^ | Celeste encendido | Estado conectado sin sesión segura |
+| **RELÉ (0~11)** | Rojo encendido | Operación del relé |
+| **RS-485 TX** | Naranja parpadeando | En proceso de transmisión de datos RS-485 |
+| **RS-485 RX** | Verde parpadeando | En proceso de recepción de datos RS-485 |
+| **AUX IN (0, 1)** | Naranja encendido | En proceso de recepción de señal AUX |
+
+### Ejemplo de instalación
+
+Este producto es un módulo de extensión que controla el acceso a los pisos del edificio. Al conectarse a los dispositivos Suprema y a BioStar X, un módulo puede controlar 12 pisos.
+
+Cuando se conecta en cadena RS-485, se pueden controlar hasta 192 pisos por ascensor.
+
+<Image src="/img/device/installation-example-om120.png" width="90%" className="none" />

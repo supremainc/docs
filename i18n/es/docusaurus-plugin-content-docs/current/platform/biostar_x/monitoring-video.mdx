@@ -1,0 +1,190 @@
+---
+id: monitoring-video
+title: Supervisar Video
+description: Este documento proporciona instrucciones paso a paso para las operaciones principales de la función de monitoreo de video, incluidas agregar video, cambiar el tamaño, cambiar la posición y comprobar alarmas.
+keywords:
+  - Monitorizar
+  - Video
+---
+
+Supervise y controle en tiempo real los videos de cámaras vinculadas a puertas, áreas y dispositivos mediante la función de monitoreo de video. Este documento ofrece orientación sobre cómo usar los mosaicos de video para agregar videos de cámaras, cambiar su tamaño, cambiar su posición, verlos en pantalla completa y realizar varias tareas. Además, admite una respuesta rápida a situaciones de seguridad mediante funciones de gestión como comprobar y borrar estados de alarma.
+
+:::info
+
+* **Video Tile** es el área en el centro de la pantalla donde aparece el video de la cámara. Es un componente de la interfaz que permite colocar y supervisar simultáneamente varios videos de cámaras. Los usuarios pueden cambiar el tamaño o la posición del video en el video tile y cerrarlo o pasarlo a pantalla completa según sea necesario.
+
+  <Image src="/img/biostarx-monitoring-video-tiles.png" width="70%" />
+
+* Para obtener información sobre cómo integrar con VMS y agregar y gestionar cámaras, consulte [the following](settings-videos).
+
+* Si se produce un error de carga al reproducir grabaciones desde el VMS, instale el certificado en el servidor VMS e instale el certificado del servidor VMS en la PC cliente. Para obtener más información, consulta lo siguiente.
+
+  * [Instalar el certificado en el servidor VMS](settings-video-integration#install-vms-certification)
+
+  * [Instalar el certificado del servidor VMS en la PC cliente](settings-video-integration#video-troubleshooting)
+
+* El monitoreo de video está disponible con opciones adicionales para licencias **Advanced** y superiores. Para más información sobre la política de licencias, consulta [lo siguiente](licensing#features-add-ons).
+
+:::
+
+## Reproducir video {#play-video}
+
+Agregue videos de cámaras al video tile para su monitoreo. El video tile se encuentra en el centro de la pantalla y permite supervisar simultáneamente varios videos de cámaras.
+
+1. Seleccione la cámara que desea ver desde las pestañas <Cmd sid="arena.tree.door.title" /> o <Cmd sid="arena.tree.map.title" />, <Cmd sid="arena.tree.device.title" /> en la barra lateral izquierda.
+
+2. Haga clic con el botón derecho.
+
+3. Haz clic en <Cmd sid="arena.tree.contextMenu.openVideo" /> en el menú emergente.
+
+El video de la cámara seleccionada se puede colocar en el video tile ubicado en el centro de la pantalla.
+
+<Image src="/img/monitoring-door-control-open-video.png" />
+
+:::info
+
+* Seleccione cámaras de la lista en la barra lateral y arrástrelas al área del video tile.
+
+  <Image src="/img/monitoring-door-control-open-video-drag-drop.png" />
+
+* Los mosaicos de video se añaden en orden desde la parte superior izquierda de la pantalla. Si no hay espacio para añadir más, aparece un mensaje de error. {/* In this case, add a tab to the screen and click <Cmd sid='arena.tree.contextMenu.openVideo' /> again. */}
+
+:::
+
+## Controlar video {#control-video}
+
+De forma predeterminada, los videos colocados en el video tile se reproducen en tiempo real. Utilice las herramientas de reproducción para ajustar la reproducción del video o ver grabaciones anteriores.
+
+<Image src="/img/monitoring-video-player.png" alone />
+
+<Calloutlists>
+  1. Este es el nombre de la cámara.
+
+  2. Este botón permite reproducir el video en pantalla completa (<Image src="/img/menus/ico-fullscreen.svg" ico alone />) o excluirlo del video tile (<Image src="/img/menus/ico-close.svg" ico alone />).
+
+  3. Este control deslizante permite ajustar la posición de reproducción del video. Al arrastrar el control deslizante, se pueden ver videos anteriores.
+
+  4. Para reproducir o pausar el video, haga clic en el botón <Image src="/img/menus/ico-play.svg" ico alone /> o <Image src="/img/menus/ico-pause.svg" ico alone />.
+
+  5. Este icono indica que el video actual se reproduce en tiempo real. Para volver al video en vivo mientras reproduce video anterior, haga clic en este icono.
+</Calloutlists>
+
+## Herramienta de control de puerta {#door-control-tool}
+
+Después de agregar un video, use la herramienta <Cmd sid="arena.map.doorControl" /> para realizar acciones adicionales. Al seleccionar la cámara vinculada a la puerta desde el video tile se activa la herramienta <Cmd sid="arena.map.doorControl" /> que permite controlar la puerta. Use funciones como abrir o bloquear la puerta, desbloquear y desactivar la alarma.
+
+<Image src="/img/monitoring-door-control.png" alt="Control de puerta" />
+
+:::info
+
+* La herramienta <Cmd sid="arena.map.doorControl" /> se puede usar cuando no hay nada abierto en el panel derecho. Si la información detallada está abierta en el panel derecho, ciérrela para usar la herramienta.
+
+* Esta función requiere que una cámara esté vinculada a la puerta. Para información sobre la vinculación de puertas y cámaras, consulte [lo siguiente](settings-videos-rule).
+
+* Para obtener más información sobre las funciones disponibles en la herramienta <Cmd sid="arena.map.doorControl" />, consulte [the following](control-door).
+
+:::
+
+## Comprobar alarma de video {#check-the-video-alarm}
+
+Cuando se activa un estado de alarma para una de las puertas vinculadas a la cámara, aparece un icono de alarma sobre el video. Para que el icono de alarma desaparezca, deben borrarse todas las alarmas vinculadas a la puerta.
+
+<Image src="/img/monitoring-video-alarm.png" alt="alarma" />
+
+Para borrar la alarma de la puerta, haga clic con el botón derecho en la puerta de la lista y haga clic en <Cmd sid="arena.tree.contextMenu.clearAlarm" /> en el menú emergente. Como alternativa, haga clic en la herramienta <Cmd sid="arena.map.doorControl" /> y luego en <Cmd sid="arena.tree.contextMenu.clearAlarm" />.
+
+<Image src="/img/biostarx-monitoring-camera-clear-alarm.png" />
+
+Un mensaje de éxito o error aparecerá en la parte superior de la pantalla.
+
+<Image src="/img/biostarx-monitoring-camera-clear-alarm-success.png" />
+
+:::info
+
+Para obtener más información sobre la sección <Cmd sid="arena.eventTable.event" /> en la parte inferior de la pantalla, consulte [the following](monitoring-event).
+
+:::
+
+## Comprobar registro de video {#check-video-log}
+
+Cuando se produce un evento específico en una puerta establecido por una regla, el elemento de evento correspondiente en la lista de la sección <Cmd sid="arena.eventTable.title" /> mostrará un icono de registro de video (<IcVidLog />). Al hacer clic en el elemento de evento con el icono de registro de video, se muestra información detallada en el lado derecho de la pantalla, lo que le permite ver el video del momento en que ocurrió el evento específico. Compruebe el video del momento en que ocurrió un evento específico.
+
+<Image src="/img/biostarx-monitoring-camera-event-video-log.png" />
+
+:::info
+
+* El icono de registro de video se muestra solo cuando una cámara está vinculada a la puerta. Para obtener información sobre cómo vincular cámaras y puertas, consulte [the following](settings-videos-rule).
+
+* La primera cámara conectada tiene prioridad de reproducción según las reglas de configuración de eventos. Para ver el video en una pantalla más grande, haga doble clic en él.
+
+* Vincule hasta 4 cámaras a una puerta y haga clic en el botón de cámara en la parte inferior del video para reproducir el video de la cámara deseada. Si solo hay una cámara vinculada, el botón de cámara no se mostrará.
+
+* Para obtener más información sobre la sección <Cmd sid="arena.eventTable.event" /> en la parte inferior de la pantalla, consulte [the following](monitoring-event).
+
+:::
+
+## Configurar diseño del video tile {#video-tile-layout-setting}
+
+Cambie el tamaño o la posición del video colocado en el video tile según sea necesario. Ajuste el tamaño y la posición del video según su importancia para el monitoreo.
+
+### Cambiar tamaño del video {#change-video-size}
+
+1. Haga clic en el video cuyo tamaño desea cambiar para activar el marco del video seleccionado.
+
+   <Image src="/img/monitoring-video-adjust-size-01.png" alone />
+
+2. Mueva el cursor del mouse sobre los bordes del marco para que adopte la forma de redimensionamiento.
+
+3. Haga clic en una esquina y arrastre hasta el tamaño deseado.
+
+   <Image src="/img/monitoring-video-adjust-size-02.png" alone />
+
+El tamaño del video puede ajustarse proporcionalmente al tamaño del mosaico colocado. De manera inversa, también es posible reducir el tamaño del video.
+
+<Image src="/img/monitoring-video-adjust-size-03.png" alone />
+
+### Ampliar tamaño del video {#video-size-enlargement}
+
+Para ampliar el video al tamaño completo del video tile, haga doble clic en el video. El video se ampliará hasta el tamaño del video tile.
+
+<Image src="/img/common/monitoring-video-extend.gif" alone />
+
+### Cambiar ubicación del video {#changing-the-video-location}
+
+Haga clic en el video para moverlo y arrástrelo hasta la ubicación deseada. Es posible cambiar la posición del video seleccionado.
+
+<Image src="/img/monitoring-video-move-position.png" alone />
+
+{/* 크기를 늘린 영상은 이동되지 않습니다. ??? */}
+
+## Vista de pantalla completa {#full-screen}
+
+<Columns>
+  <Column>
+    <Image src="/img/monitoring-video-fullscreen.png" alone />
+  </Column>
+
+  <Column className="padding--l10">
+    Haz clic en <IcFullscreen /> en la esquina superior derecha del video para verlo en pantalla completa.
+
+    Haz clic en <IcRestorscreen /> en la esquina superior derecha de la pantalla para salir de pantalla completa. O presiona la tecla <kbd>ESC</kbd> en el teclado.
+  </Column>
+</Columns>
+
+## Cerrar video {#close-the-video}
+
+<Columns>
+  <Column>
+    <Image src="/img/monitoring-video-close.png" alone />
+  </Column>
+
+  <Column className="padding--l10">
+    Haz clic en <IcClose /> en la esquina superior derecha del video para cerrarlo.
+  </Column>
+</Columns>
+
+## Cerrar todos los videos {#close-all-video}
+
+Haz clic en <IcMoreB /> en la esquina superior derecha de la pantalla para cerrar todos los videos. Haz clic en <Cmd sid="arena.monitoring.contextMenu.closeAll" /> en el menú emergente.
+
+<Image src="/img/biostarx-monitoring-video-close-all.png" />

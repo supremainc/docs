@@ -1,0 +1,60 @@
+---
+id: 120
+title: Firmware Version 1.2.0
+---
+
+# Firmware Version 1.2.0 (Build No. 1.2.0_231005)
+
+Release<Separator/>2023-10-05
+
+## New Features and Improvements
+
+---
+
+1. Supports **Template on Mobile**.
+
+1. Improved face anti-spoofing performance when **Operation Mode** is set to **Fusion Matching** and **Fake Detection** is set to **Normal**.
+
+1. Fixed strings in the **Use QR as Card** menu.
+
+1. Separated event code for QR authentication.
+
+1. Added Voice Instruction.
+
+1. Updated Japanese regulatory certification electronic notation.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. The **Server URL** for device's **Device **▶** Server Connection** in BioStar 2 does not appear on the device configuration. <Badge>1.0.1</Badge>
+
+1. Authentication result does not appear when authenticating with entering ID followed by an action returning to home screen after entering the menu as an administrator. <Badge>1.0.0</Badge>
+
+1. The screen overlaps when swiping to scroll the Event Log list screen. <Badge>1.0.0</Badge>
+
+1. When authenticating with ID + PIN on a device connected as a slave, the user ID is displayed but the user name is not displayed. <Badge>1.1.1</Badge>
+
+1. Firmware upgrade succeeds with an invalid resource file. <Badge>1.0.0</Badge>
+
+1. When upgrading firmware, resource file included in the firmware does not get updated. <Badge>1.0.0</Badge>
+
+1. When user information is sent from BioStar 2 to a master device that does not have 1:N authentication mode, 1:N authentication fails on the device connected as a slave. <Badge>1.0.0</Badge>
+
+1. Restart log is not logged in the device's **Event Log** when the master device is restarted. <Badge>1.0.1</Badge>
+
+1. The device turns off when the user **Format Card** in BioStar 2. <Badge>1.0.0</Badge>
+
+1. Device freezes or restarts when continuously authenticating with an EM card. <Badge>1.0.0</Badge>
+
+1. When devices are connected as a master-slave and the door is deleted and added again, the door does not open even if authentication has succeeded with the device connected as a slave. <Badge>1.0.0</Badge>
+
+1. Fixed string for scheduled lock zone violation. <Badge>1.0.0</Badge>
+
+1. Fixed smartcard output byte order setting. <Badge>1.1.0</Badge>
+
+    - When using Wiegand or OSDP output, it is fixed to be affected by the smartcard output byte order when the Wiegand output information is set to send user ID.
+
+</BugLists>

@@ -1,0 +1,115 @@
+<Include type={props.type} ref="fixed">
+  * <Cmd sid="shift.dayStartTime" product="2" />: Establece la hora de inicio de la jornada laboral.
+
+    <Cmd sid="shift.dayStartTimeExcessTime" product="2" /> permite definir reglas de trabajo para las horas trabajadas en exceso de 24 horas según la hora de inicio del día establecida. Se puede configurar por un máximo de 6 horas.
+
+    <Image src="/img/biostarx-tna-shift-day-adding-fixed-before-after-time.png" />
+</Include>
+
+<Include type={props.type} ref="flexible,floating">
+  * <Cmd sid="shift.dayStartTime" product="2" />: Establece la hora de inicio de la jornada laboral.
+</Include>
+
+* <Cmd sid="shift.firstInLastOut" product="2" />: Cuando esta opción está activada, la primera hora autenticada se registra como la hora de inicio y la última hora autenticada se registra como la hora de fin.
+
+  :::info
+
+  Cuando esta opción está activada, configura <Cmd sid="shift.breakByPunch" product="2" /> para registrar los descansos de los usuarios.
+
+  :::
+
+<Include type={props.type} ref="flexible">
+  - <Cmd sid="shift.flexible.hours" product="2" />: Establece el total de horas de trabajo del día.
+</Include>
+
+<Include type={props.type} ref="fixed,floating">
+  * <Cmd sid="shift.timeSegment" product="2" />: Después de seleccionar los elementos configurados en la columna <Cmd sid="shift.payCode" product="2" /> para los registros de asistencia, establece <Cmd sid="shift.startTime" product="2" />, <Cmd sid="shift.endTime" product="2" /> y <Cmd sid="shift.minDuration" product="2" />.
+
+    <Include type={props.type} ref="floating">
+      * <Cmd sid="shift.punchInTimeRange" product="2" />: Configura el rango horario que se considerará trabajo normal cuando se llegue antes o se salga después de la hora de inicio o fin establecida.
+    </Include>
+
+    * <Cmd sid="shift.grace" product="2" />: Configura el tiempo de gracia para permitir trabajo normal cuando se llegue tarde o se salga temprano respecto a la hora establecida.
+
+      <Image src="/img/biostarx-tna-shift-day-adding-fixed-allow-time.png" />
+
+  * <Cmd sid="shift.rounding" product="2" />: Redondea automáticamente las horas de inicio y fin. Configura las unidades y los estándares para las horas de inicio y fin.
+
+    <Image src="/img/biostarx-tna-shift-day-adding-fixed-roundup.png" />
+
+    * <Cmd sid="shift.unitMin" product="2" />: Define reglas para redondear la hora registrada cuando los eventos de entrada se registran antes o después de la hora de inicio establecida.
+
+    * <Cmd sid="shift.pointMin" product="2" />: Define reglas para redondear la hora registrada cuando los eventos de salida se registran antes o después de la hora de fin establecida.
+
+    :::tip
+
+    Por ejemplo, si la hora de entrada se establece a las 09:00 y <Cmd sid="shift.unitMin" product="2" /> se establece en 15 minutos y <Cmd sid="shift.pointMin" product="2" /> se establece en 8 minutos, el redondeo se hará de la siguiente manera.
+
+    * Entrada a las 09:07 → se redondea hacia abajo a 09:00 (menos de 8 minutos)
+
+    * Entrada a las 09:08 → se redondea hacia arriba a 09:15 (8 minutos o más)
+
+    :::
+
+    :::info
+
+    Las reglas de <Cmd sid="shift.rounding" product="2" /> tienen prioridad sobre <Cmd sid="shift.grace" product="2" />.
+
+    :::
+</Include>
+
+<Include type={props.type} ref="flexible">
+  * <Cmd sid="shift.payCode" product="2" />: Selecciona los elementos para los registros de asistencia.
+
+  * <Cmd sid="shift.punchInTimeLimit" product="2" /> / <Cmd sid="shift.punchOutTimeLimit" product="2" />: Configura el rango de tiempo en el que los usuarios pueden autenticar sus horas de entrada y salida.
+
+    <Image src="/img/biostarx-tna-shift-day-adding-flexible-inout-time-limit.png" />
+</Include>
+
+* <Cmd sid="shift.mealDeduction1" product="2" /> / <Cmd sid="shift.mealDeduction2" product="2" />: Configura las deducciones por tiempo de comida de las horas laborales diarias.
+
+  * <Cmd sid="shift.mealDeduction.type.byPunch" product="2" />: Configura para deducir según los registros de tiempo en el dispositivo de asistencia sin establecer horarios fijos de comida.
+
+  * <Cmd sid="shift.mealDeduction.type.auto" product="2" />: Configura para deducir automáticamente los tiempos de comida definiendo <Cmd sid="shift.deductionTime" product="2" /> y <Cmd sid="shift.minimalHoursBeforeDeduction" product="2" />.
+
+  * <Cmd sid="shift.mealDeduction.type.fixed" product="2" />: Configura para deducir tiempos fijos definiendo <Cmd sid="shift.startTime" product="2" /> y <Cmd sid="shift.endTime" product="2" />.
+
+  :::info
+
+  * Usar <Cmd sid="shift.mealDeduction2" product="2" /> permite deducir dos tiempos de comida de las horas laborales diarias.
+
+  * Si los tipos de deducción de comida son <Cmd sid="shift.mealDeduction.type.auto" product="2" /> o <Cmd sid="shift.mealDeduction.type.fixed" product="2" />, entonces <Cmd sid="shift.mealDeduction1" product="2" /> y <Cmd sid="shift.mealDeduction2" product="2" /> solo pueden configurarse con el mismo tipo.
+
+  :::
+
+<Include type={props.type} ref="flexible">
+  - <Cmd sid="shift.rounding" product="2" />: Redondea automáticamente las horas de inicio y fin. Configura las unidades y los estándares para las horas de inicio y fin.
+
+    <Image src="/img/biostarx-tna-shift-day-adding-fixed-roundup.png" />
+
+    * <Cmd sid="shift.unitMin" product="2" />: Define reglas para redondear la hora registrada cuando los eventos de entrada se registran antes o después de la hora de inicio establecida.
+
+    * <Cmd sid="shift.pointMin" product="2" />: Define reglas para redondear la hora registrada cuando los eventos de salida se registran antes o después de la hora de fin establecida.
+
+    :::tip
+
+    Por ejemplo, si la hora de entrada se establece a las 09:00 y <Cmd sid="shift.unitMin" product="2" /> se establece en 15 minutos y <Cmd sid="shift.pointMin" product="2" /> se establece en 8 minutos, el redondeo se hará de la siguiente manera.
+
+    * Entrada a las 09:07 → se redondea hacia abajo a 09:00 (menos de 8 minutos)
+
+    * Entrada a las 09:08 → se redondea hacia arriba a 09:15 (8 minutos o más)
+
+    :::
+
+    :::info
+
+    Las reglas de <Cmd sid="shift.rounding" product="2" /> tienen prioridad sobre <Cmd sid="shift.grace" product="2" />.
+
+    :::
+</Include>
+
+* <Cmd sid="shift.breakTime" product="2" />: Configura los tiempos de descanso.
+
+  * <Cmd sid="shift.breakTime.type.byPunch" product="2" />: Configura para seguir los registros de tiempo del dispositivo de asistencia sin horarios de descanso fijos. Cuando esta opción está activada, configura <Cmd sid="shift.maxAllowedBreakTime" product="2" />.
+
+  * <Cmd sid="shift.breakTime.type.fixed" product="2" />: Establece <Cmd sid="shift.startTime" product="2" /> y <Cmd sid="shift.endTime" product="2" /> como horarios fijos para los descansos de los usuarios.

@@ -1,0 +1,74 @@
+---
+id: 150
+title: Firmware Version 1.5.0
+---
+
+# Firmware Version 1.5.0 (Build No. 1.5.0_220621)
+
+Release<Separator/>2022-06-21
+
+:::caution
+
+Devices with the new BLE chip and the SE processor cannot downgrade to a lower version after upgrading the firmware to v1.5.0 or higher. Devices with existing BLE chips and SE processor can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Added new models that do not support BLE (Bluetooth Low Energy).
+
+    - BLN2-OA, BLN2-OD
+
+1. Supports setting the byte order for smart cards.
+
+    - Supports setting the byte order of data to be output to Wiegand or OSDP.
+
+1. Supports a new BLE (Bluetooth Low Energy) chip.
+
+    - The BLE chip parts of the hardware have been changed, and the firmware has been upgraded to be compatible with both the existing and new BLE chips.
+
+1. Supports the dual SE processor.
+
+1. Separated the log related to the cause of the door unlock.
+
+    - Door open request by exit button
+
+    - Door open request by operator
+
+1. Added relay deactivation option for exit button input.
+
+    - Added the option to set the door open request log to occur but the relay not to operate when the exit button is pressed.
+
+1. Supports Live Finger Detection.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Mobile card authentication suddenly does not work <Badge>1.3.2</Badge>.
+
+1. Global APB behavior for the same input was different depending on firmware version <Badge>1.4.0</Badge>.
+
+1. Device does not connect to a 3rd party controller (Software House iSTAR Edge G2) via OSDP <Badge>1.4.1</Badge>.
+
+1. When changing the intelligent slave settings on the detailed page of the device on BioStar 2, the settings were not applied <Badge>1.4.2</Badge>.
+
+1. Migration malfunction occurs when the firmware is upgraded from v1.2.0 or earlier to v1.3.0 or higher <Badge>1.3.0</Badge>.
+
+    - Migration did not complete and the device boots to the main screen, some keys do not work or an abnormal screen is displayed.
+
+1. When communicating with a 3rd party control panel via OSDP, the device incorrectly responds as 'Inactive' when receiving the Input Status Request command while the input port is grounded <Badge>1.4.1</Badge>.
+
+1. When communicating with a 3rd party control panel via OSDP, the device does not respond to the Output Status Report command while the relay reacts to it <Badge>1.4.1</Badge>.
+
+1. When communicating with a 3rd party control panel via OSDP, the device incorrectly responds as 'Inactive' when receiving the Output Status Request command while the relay status is 'On' <Badge>1.4.1</Badge>.
+
+1. Device does not recognize certain HID iCLASS Seos cards <Badge>1.0.0</Badge>.
+
+</BugLists>

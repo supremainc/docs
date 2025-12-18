@@ -1,0 +1,245 @@
+---
+id: master-admin
+title: Introducción a la función Master Admin y guía de configuración
+description: Proporciona una guía para configurar el Master Admin, que mejora la seguridad del dispositivo al reforzar los permisos de administrador.
+keywords:
+  - Administrador Principal
+  - Administrador
+  - Maestro
+---
+
+La función de **Master Admin** está diseñada para **mejorar la seguridad del dispositivo** al **reforzar los privilegios de administrador** y **evitar el acceso no autorizado y cambios de configuración**.<br />Con esta función, **debe registrar un Master Admin** en el nuevo dispositivo y solo los Master Admin registrados pueden acceder al menú de administrador y cambiar la configuración del dispositivo.
+
+La función de **Master Admin** está disponible **solo en productos Suprema que admiten interfaz de usuario mediante pantalla LCD**.
+
+:::info
+
+* Esta función es una política esencial para mejorar la seguridad del dispositivo.
+
+* El Master Admin no puede eliminarse directamente y **solo se borra mediante restablecimiento de fábrica**.
+
+:::
+
+## Configurar el Master Admin
+
+### ¿Qué es un Master Admin?
+
+Si utiliza el dispositivo sin configurar un administrador, cualquiera puede acceder al menú de administrador y cambiar la configuración del dispositivo. La función de Master Admin soluciona esta vulnerabilidad de seguridad al obligar a configurar un administrador general.
+
+### Productos compatibles con Master Admin
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/how-to/BioStation 3-Front.png" className="none" alone width="130px" />
+      </Td>
+
+      <Td>
+        <Image src="/img/how-to/BioStation 2a-front.png" className="none" alone width="200px" />
+      </Td>
+
+      <Td>
+        <Image src="/img/how-to/BioLite N2-Front.png" className="none" alone width="110px" />
+      </Td>
+
+      <Td>
+        <Image src="/img/how-to/X-Station 2-Front.png" className="none" alone width="300px" />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>**BioStation 3**<br />Firmware v1.4.0 o posterior</Td>
+
+      <Td>**BioStation 2a**<br />Firmware v1.2.0 o posterior</Td>
+
+      <Td>**BioLite N2**<br />Firmware v1.7.0 o posterior</Td>
+
+      <Td>**X-Station 2**<br />Firmware v1.4.0 o posterior</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+## Cómo mejorar la seguridad del administrador en dispositivos nuevos o dispositivos existentes con firmware actualizado
+
+### Dispositivos nuevos
+
+En dispositivos nuevos, registrar un **Master Admin** es obligatorio desde el principio. Si no registra un Master Admin, el uso del dispositivo estará restringido.
+
+:::info
+
+* En los dispositivos nuevos, la pantalla de registro de **Master Admin** aparece al iniciar por primera vez. No puede avanzar a la siguiente pantalla a menos que registre un Master Admin.
+
+* Incluso si asigna un administrador general del dispositivo mediante BioStar 2, debe registrar un **Master Admin** para utilizar todas las funciones del dispositivo.
+
+* El nuevo dispositivo no puede degradarse a una versión inferior.
+
+:::
+
+<details>
+  <summary>**Registrar un Master Admin en un dispositivo nuevo**</summary>
+
+  #### Registrar un Master Admin en un dispositivo nuevo
+
+  1. Cuando enciende un dispositivo nuevo por primera vez, aparece la pantalla de registro de **Master Admin**.
+
+     <Image src="/img/how-to/setting-master-admin-1.png" caption width="300px" />
+
+  2. Para registrar un **Master Admin**, debe inscribir al menos dos tipos de credenciales. Seleccione e inscriba los dos tipos de credenciales que prefiera.
+
+     <Image src="/img/how-to/setting-master-admin-2.png" caption width="300px" />
+
+     Las credenciales que pueden inscribirse para **Master Admin** son las siguientes:
+
+     <Table>
+       <Tbody>
+         <Row>
+           <Th>Tipo de credencial</Th>
+           <Th>Cantidad máxima</Th>
+           <Th>Detalles</Th>
+         </Row>
+
+         <Row>
+           <Td>Card</Td>
+           <Td>Hasta 4</Td>
+           <Td>Admite únicamente tipos CSN y Wiegand<br />No se permite inscripción duplicada dentro del mismo tipo</Td>
+         </Row>
+
+         <Row>
+           <Td>Face</Td>
+           <Td>Hasta 2</Td>
+           <Td>Disponible solo en dispositivos con el mismo algoritmo</Td>
+         </Row>
+
+         <Row>
+           <Td>Fingerprint</Td>
+           <Td>Hasta 2</Td>
+           <Td>-</Td>
+         </Row>
+
+         <Row>
+           <Td>PIN</Td>
+           <Td>1</Td>
+           <Td>Mínimo 8 dígitos</Td>
+         </Row>
+       </Tbody>
+     </Table>
+
+     :::note
+
+     **Condiciones de inscripción**
+
+     * Se deben inscribir al menos dos tipos diferentes de credenciales.
+
+     * Las mismas condiciones se aplican tanto a dispositivos nuevos como a los que se actualicen mediante firmware.
+
+     * Todas las credenciales compatibles con el dispositivo pueden usarse para autenticación.
+
+     :::
+
+  3. Después de inscribir al menos dos tipos de credenciales, presione el botón **Complete** para finalizar el registro de **Master Admin**.
+
+     <Image src="/img/how-to/setting-master-admin-3.png" caption width="300px" />
+
+  {/* :::warning
+
+  **Warning Message When Master Admin Is Not Registered**
+
+  If neither a Master Admin nor an equivalent setting is configured, a warning popup message will appear when saving settings.
+
+  <Image src='/img/how-to/no-register-master-admin.png' alone caption />
+
+  ::: */}
+</details>
+
+<details>
+  <summary>**Gestionar Master Admin en un dispositivo nuevo**</summary>
+
+  #### Gestionar Master Admin en un dispositivo nuevo
+
+  En dispositivos nuevos, puede modificar la configuración de **Master Admin** en el menú **Settings → Device → Master Admin**.
+
+  <div className="grid-container">
+    <Image src="/img/how-to/edit-master-admin-1.png" caption width="300px" />
+
+    <Image src="/img/how-to/setting-master-admin-4.png" caption width="300px" />
+  </div>
+</details>
+
+### Dispositivos actualizados {#admin-two-step-authentication}
+
+Los dispositivos actualizados mediante firmware no ofrecen la configuración de **Master Admin**, pero puede mejorar la seguridad del administrador al habilitar la opción **Admin 2-step Authentication**.
+
+:::info
+
+* El valor predeterminado de **Admin 2-step Authentication** es autenticación de un solo paso.
+
+* La autenticación de dos pasos puede activarse solo si todos los administradores registrados tienen al menos dos tipos de credenciales.
+
+* El dispositivo actualizado mediante firmware no puede degradarse a una versión inferior después de la actualización.
+
+:::
+
+<details>
+  <summary>**Configurar Admin 2-step Authentication en dispositivos actualizados**</summary>
+
+  #### Configurar Admin 2-step Authentication en dispositivos actualizados
+
+  Puede activar Admin 2-step Authentication en el menú **Settings → Device → Admin 2-step Authentication**.
+
+  * La opción **Admin 2-step Authentication** aparece solo en dispositivos actualizados al firmware más reciente.
+
+  <Image src="/img/how-to/setting-two-step-authentication.png" caption width="300px" />
+
+  :::info
+
+  * Si no todos los administradores tienen al menos dos tipos de credenciales, la activación fallará y aparecerá un mensaje de error.<br />Inscriba al menos dos tipos de credenciales para todos los administradores y vuelva a intentarlo.
+
+  <Image src="/img/how-to/error-two-step-authentication.png" caption width="300px" />
+
+  :::
+
+  :::warning
+
+  * Si activa **Admin 2-step Authentication** y luego elimina credenciales de modo que todos los administradores tengan menos de dos tipos, no podrá acceder al menú de administrador si la conexión con BioStar 2 también está indisponible. Por lo tanto, tenga precaución al eliminar credenciales de administrador.
+
+  :::
+</details>
+
+## Información adicional
+
+* **Cambio manual de la clave hash del dispositivo**
+
+  * Al cambiar manualmente la clave hash del dispositivo, aparecerá un mensaje de advertencia que indicará que los PIN de Master Admin se eliminarán. Confirme el mensaje antes de continuar.
+
+* **Restricción de transmisión de imágenes biométricas RS-485**
+
+  * Las imágenes de credenciales biométricas no se transmiten por comunicación RS-485, por lo que aparecen imágenes sustitutas al ver el rostro del Master Admin registrado en dispositivos esclavos.
+
+## Preguntas frecuentes
+
+import FaqData from './faqs.json';
+
+<FaqsItems data={FaqData} />
+
+{/* ## [TBD] Setting Master Admin via BioStar 2
+
+:::info
+
+* The Master Admin feature is supported from BioStar 2 v2.9.11.
+
+* Los dispositivos actualizados mediante firmware no muestran el menú Master Admin en la configuración de administrador de BioStar 2.
+
+:::
+
+## [TBD] Edición por lotes de Master Admin
+
+* Puede editar por lotes Admin 2-step Authentication y la inscripción de credenciales.
+
+* La edición por lotes sobrescribe con las credenciales inscritas.
+
+* Puede inscribir credenciales de face, fingerprint, card y PIN.
+
+* Si el dispositivo seleccionado no admite un tipo de credencial, la edición por lotes fallará para ese dispositivo.
+
+* Los dispositivos nuevos también deben cumplir la condición mínima de dos credenciales; de lo contrario, la edición por lotes para ese dispositivo fallará. */}

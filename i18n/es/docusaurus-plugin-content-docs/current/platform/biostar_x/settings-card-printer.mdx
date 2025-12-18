@@ -1,0 +1,220 @@
+---
+id: settings-card-printer
+title: Impresora de Tarjetas
+description: Imprima tarjetas con el diseño deseado integrando BioStar X y cardPresso.
+keywords:
+  - cardPresso
+  - IMPRESORA DE TARJETAS
+---
+
+Imprima tarjetas con el diseño deseado integrando **BioStar X** y cardPresso. cardPresso es un software profesional para el diseño e impresión de tarjetas. Con cardPresso cree diversas plantillas de tarjetas y organice la información del usuario en consecuencia.
+
+## Antes de comenzar
+
+Instale el programa cardPresso y conéctelo a **BioStar X** para usar la función de impresora de tarjetas de **BioStar X**. Se requiere una licencia de la edición XXL de cardPresso para utilizar la función de servidor de impresión web del programa.
+
+:::info
+
+* Para obtener más información sobre los tipos de licencias del programa cardPresso, consulte [el siguiente enlace](https://www.cardpresso.com/cardpresso-software/editions/).
+
+* La función de servidor de impresión web solo es compatible con sistemas operativos Windows.
+
+:::
+
+### Instalar y configurar cardPresso {#installing-configuring-cardPresso}
+
+Siga los pasos siguientes para instalar el programa cardPresso y configurar el servidor de impresión web.
+
+:::note
+
+La ruta del menú o la pantalla pueden variar según la versión de instalación.
+
+:::
+
+1. Descargue la última versión de cardPresso compatible con el sistema operativo del PC que operará como servidor de impresión web desde [cardPresso Download](https://www.cardpresso.com/downloads-cp).
+
+2. Instale el programa y active la licencia emitida por cardPresso.
+
+3. Después de ejecutar cardPresso, cree una plantilla de tarjeta.
+
+   <Image src="/img/common/cardpresso-new-card-template.png" alone caption />
+
+4. Guarde la plantilla de tarjeta creada en la ubicación deseada en el servidor donde está instalado **BioStar X**. (p. ej. *C:\template\example.card*)
+
+5. Haga clic con el botón derecho en el escritorio del PC donde está instalado cardPresso y luego seleccione **Nuevo** → **Acceso directo** en el menú emergente. {/* New → Shortcut */}
+
+6. Introduzca lo siguiente en el campo **Ubicación del elemento** y luego haga clic en el botón **Siguiente**.
+
+   ```
+   "C:\Program Files (x86)\cardPresso\cardPresso.exe" /PRINTSERVER
+   ```
+
+   <Image src="/img/cardpresso-print-server-short-cut.png" width={400} />
+
+   :::note
+
+   La ruta donde está instalado cardPresso puede variar según el entorno de instalación. Después de confirmar la ruta donde está instalado cardPresso, modifíquela según corresponda conforme a la ruta anterior.
+
+   :::
+
+7. Introduzca un nombre para el acceso directo y haga clic en el botón **Finalizar**.
+
+8. Haga doble clic en el icono de acceso directo del servidor de impresión web de cardPresso creado en el escritorio para ejecutarlo.
+
+9. Cuando aparezca la ventana del servidor de impresión web de cardPresso, haga clic en el icono **Configuración**.
+
+   <Image src="/img/biostarx-settings-card-printer-installation2.png" />
+
+   * **Dirección**: Introduzca la dirección IP del equipo que actúa como servidor de impresión web.
+
+   * **Puerto**: Número de puerto en el que cardPresso recibe las operaciones de impresión.
+
+   * **Grupos de usuarios permitidos**: Seleccione un grupo de usuarios que tenga acceso al servidor de impresión web.
+
+10. Haga clic en **Guardar** cuando finalice la configuración.
+
+11. Haga clic en <Image src="/img/common/ico-card-printer-play.png" ico alone /> en la esquina inferior derecha para iniciar el servicio. Si la configuración es correcta, el icono cambia a <Image src="/img/common/ico-card-printer-stop.png" ico alone /> y aparece el mensaje **listen OK**.
+
+    <Image src="/img/biostarx-settings-card-printer-installation3.png" />
+
+    :::note
+
+    No cierre la ventana hasta que la impresión de tarjetas se haya completado.
+
+    :::
+
+## Conectar cardPresso con BioStar X
+
+Configure cardPresso como se muestra a continuación para conectarlo a **BioStar X**.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. En la barra lateral izquierda, haga clic en <Cmd sid="common.cardPrinter" product="2" />.
+
+3. Active <Cmd sid="common.cardPrinter.cardpressoSetting" product="2" /> en <Cmd sid="common.use" product="2" /> y luego complete cada elemento.
+
+   <Image src="/img/biostarx-settings-card-printer.png" className="none" />
+
+   * <Cmd sid="common.cardPrinter.id" product="2" />: Introduzca su ID de inicio de sesión de cardPresso. (predeterminado: ADMIN)
+
+   * <Cmd sid="common.cardPrinter.password" product="2" />: Introduzca su contraseña de inicio de sesión de cardPresso. (predeterminado: admin)
+
+   * <Cmd sid="common.cardPrinter.ipAddress" product="2" />: Introduzca la dirección IP del PC que ejecuta el servidor de impresión web de cardPresso.
+
+   * <Cmd sid="common.cardPrinter.ipAddressPort" product="2" />: Introduzca el número de puerto que cardPresso utiliza para recibir operaciones de impresión.
+
+   * <Cmd sid="common.cardPrinter.printerName" product="2" />: Introduzca el nombre de la impresora que se utilizará como impresora de tarjetas. Se encuentra en el **Panel de control** de Windows → **Dispositivos e impresoras**.
+
+   * <Cmd sid="common.cardPrinter.cardTemplate" product="2" />: Haga clic en <Cmd sid="button.plusAdd" product="2" /> para añadir un <Cmd sid="common.cardPrinter.cardTemplate" product="2" />. En el elemento <Cmd sid="setting.server.card_template.configure.th.name" product="2" />, introduzca la ruta completa, incluido el nombre de archivo y la extensión de la plantilla de tarjeta.
+
+     * El nombre de archivo de la plantilla de tarjeta puede contener caracteres alfanuméricos y especiales.
+
+     * Se admiten hasta 20 plantillas de tarjetas.
+
+     * Ruta de ejemplo: C:\template\example.card
+
+   * <Cmd sid="common.cardPrinter.printTestLabel" product="2" />: Imprima de prueba la plantilla de tarjeta.
+
+4. Una vez que complete la configuración, haga clic en <Cmd sid="button.apply" product="2" />.
+
+## Imprimir de prueba la plantilla de tarjeta
+
+Imprima de prueba una plantilla de tarjeta con información del administrador.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. En la barra lateral izquierda, haga clic en <Cmd sid="common.cardPrinter" product="2" />.
+
+3. Seleccione la plantilla de tarjeta que desea imprimir y luego haga clic en el botón <Cmd sid="common.cardPrinter.testPrint" product="2" />.
+
+   <Image src="/img/biostarx-settings-card-printer1.png" className="none" />
+
+4. Se imprime la plantilla de tarjeta con información del administrador.
+
+## Imprimir plantillas de tarjetas por usuario {#printing-card-template-per-user}
+
+Imprima tarjetas con plantillas de tarjetas por usuario.
+
+1. Haz clic en <Cmd sid="shell.header.user" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en el botón <Cmd sid="team.user.dialog.newUser" /> en la parte superior derecha de la pantalla. Aparece la ventana <Cmd sid="team.user.dialog.newUser" />.
+
+3. Complete el formulario y haga clic en el botón <Cmd sid="button.printCard" product="2" />.
+
+   * Cada elemento puede contener caracteres alfanuméricos y especiales.
+
+   <Image src="/img/biostarx-settings-card-printer-user.png" />
+
+4. Seleccione la plantilla de tarjeta que desea imprimir y haga clic en el botón <Cmd sid="common.cardPrinter.print" product="2" />.
+
+   <Image src="/img/biostarx-settings-card-printer-user1.png" className="none" />
+
+5. Cuando aparezca la ventana emergente que pregunta si desea imprimir la tarjeta, haga clic en el botón <Cmd sid="common.cardPrinter.ok" product="2" />.
+
+   <Image src="/img/biostarx-settings-card-printer-user2.png" className="none" />
+
+Se creará un nuevo usuario y se imprimirá una tarjeta como plantilla de tarjeta con la información del usuario.
+
+## Añadir campos de usuario personalizados {#adding-custom-user-fields}
+
+Imprima una tarjeta con una plantilla de tarjeta que incluya un campo de usuario personalizado.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.server.root" /> → <Cmd sid="setting.menu.server.server" /> en la barra lateral izquierda.
+
+3. En la sección <Cmd sid="setting.server.userDeviceManagement" product="2" />, haz clic en <Cmd sid="button.plusAdd" product="2" /> en <Cmd sid="setting.server.custom_field.title" product="2" /> para ingresar un <Cmd sid="setting.server.custom_field.configure.th.name" product="2" /> y seleccionar un <Cmd sid="setting.server.custom_field.configure.th.type" product="2" />. El orden en que agregues <Cmd sid="setting.server.custom_field.title" product="2" /> determina el **ID** del elemento de la plantilla de tarjetas.
+
+   <Image src="/img/biostarx-settings-card-printer-custom-user.png" />
+
+   Según el ID de elemento de BioStar X, **Orden 1** equivale a **CUSTOM1**. Para obtener más información sobre el ID de atributo de BioStar X, consulta [lo siguiente](#card-template-attribute-ids).
+
+4. Una vez que completes la configuración, haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla.
+
+5. Haz clic en **File** → **Open Template** en el programa cardPresso para abrir el archivo de plantilla de tarjeta. Agrega un nuevo elemento e ingresa el **ID** como **XML item ID name** en el orden de IDs de elementos de BioStar X.
+
+   <Image src="/img/biostarx-settings-card-printer-template.png" />
+
+6. Cuando finalices la configuración, haz clic en **File** → **Save**.
+
+7. Regresa a **BioStar X** y selecciona el usuario al que aplicarás la plantilla de tarjeta en la página <Cmd sid="shell.header.user" />.
+
+8. Verifica los campos de usuario personalizados que agregaste. Completa según el formulario y haz clic en <Cmd sid="button.printCard" product="2" />.
+
+   <Image src="/img/biostarx-settings-card-printer-custom-user1.png" />
+
+9. Seleccione la plantilla de tarjeta que desea imprimir y haga clic en el botón <Cmd sid="common.cardPrinter.print" product="2" />.
+
+   <Image src="/img/biostarx-settings-card-printer-user1.png" className="none" />
+
+10. Cuando aparezca la ventana emergente que pregunta si desea imprimir la tarjeta, haga clic en el botón <Cmd sid="common.cardPrinter.ok" product="2" />.
+
+    <Image src="/img/biostarx-settings-card-printer-user2.png" className="none" />
+
+La información del usuario se guarda y la tarjeta se imprime como una plantilla con los campos de usuario personalizados.
+
+## ID de atributo de la plantilla de tarjetas {#card-template-attribute-ids}
+
+Los IDs de atributos compatibles en **BioStar X** son los siguientes. Asegúrate de ingresar **XML item ID name** como ID de elemento al crear una plantilla de tarjetas.
+
+<div className="overflow-x cols3--20-40-40">
+  | Índice | Datos de usuario de BioStar X | Nombre de ID de elemento XML |
+  | :-: | :-: | :-: |
+  | 1 | ID Usuario | ID |
+  | 2 | Nombre Usuario | NAME |
+  | 3 | Email | EMAIL |
+  | 4 | Departamento | DEPARTMENT |
+  | 5 | Teléfono | TELEPHONE |
+  | 6 | Filtro Grupo Usuarios | GROUP |
+  | 7 | Foto de perfil | PHOTO |
+  | 8 | Campo personalizado 1 | CUSTOM1 |
+  | 9 | Campo personalizado 2 | CUSTOM2 |
+  | 10 | Campo personalizado 3 | CUSTOM3 |
+  | 11 | Campo personalizado 4 | CUSTOM4 |
+  | 12 | Campo personalizado 5 | CUSTOM5 |
+  | 13 | Campo personalizado 6 | CUSTOM6 |
+  | 14 | Campo personalizado 7 | CUSTOM7 |
+  | 15 | Campo personalizado 8 | CUSTOM8 |
+  | 16 | Campo personalizado 9 | CUSTOM9 |
+  | 17 | Campo personalizado 10 | CUSTOM10 |
+</div>

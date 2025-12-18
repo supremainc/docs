@@ -1,0 +1,70 @@
+---
+id: settings-advanced-ac-scheduled-unlock
+title: Apertura Programada
+description: Pautas para la configuración de desbloqueo programado. El desbloqueo programado permite abrir puertas en horarios específicos.
+keywords:
+  - Control de acceso avanzado
+  - Apertura Programada
+---
+
+Pautas para la configuración de desbloqueo programado. El desbloqueo programado permite abrir puertas en horarios específicos. Esta función mejora el control de acceso y es útil para permitir el ingreso durante determinados períodos de tiempo.
+
+:::info
+
+El desbloqueo programado solo admite el modo <Cmd sid="zone.globalZone.local" product="2" />.
+
+:::
+
+## Registrar desbloqueo programado {#addScheduledUnlockZone}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.advancedAc.root" /> en la barra lateral izquierda.
+
+3. Haz clic en <Cmd sid="button.func.addZone" product="2" />.
+
+4. Seleccione <Cmd sid="zone.scheduledUnlock" product="2" /> y haga clic en <Cmd sid="button.apply" product="2" />.
+
+5. Introduzca el nombre de la función de desbloqueo programado que se va a añadir en la sección <Cmd sid="common.info" product="2" />.
+
+   <Image src="/img/biostarx-settings-adv-ac-add-schedule-unlock.png" />
+
+6. Configure los detalles de la función de desbloqueo programado en la sección <Cmd sid="common.setting" product="2" />. Para obtener más información, consulta [lo siguiente](#setting).
+
+7. Seleccione el grupo de acceso que puede iniciar el desbloqueo programado en la sección <Cmd sid="zone.forcedUnlock.firstManInTitle" product="2" />.
+
+8. Después de completar todas las configuraciones, haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla.
+
+## Guía de opciones de configuración {#setting}
+
+Los detalles de la configuración de desbloqueo programado son los siguientes.
+
+* <Cmd sid="zone.pause.activatedAndDeactivated" product="2" />: Puedes activar o desactivar temporalmente la configuración.
+
+* <Cmd sid="zone.forcedUnlock.firstManIn" product="2" />: Si se define en <Cmd sid="zone.pause.activated" product="2" />, aparecerá la sección <Cmd sid="zone.forcedUnlock.firstManInTitle" product="2" />. Los usuarios del grupo de usuarios seleccionado en <Cmd sid="zone.forcedUnlock.firstManInGroups" product="2" /> deben autenticarse según el horario especificado para iniciar el desbloqueo programado.
+
+* <Cmd sid="zone.selectoption" product="2" />: Seleccione la puerta o el ascensor al que se aplicará la función de desbloqueo programado.
+
+  * Al seleccionar <Cmd sid="common.door" product="2" />, se activa la lista de puertas. Seleccione la puerta a la que se aplicará la función de desbloqueo programado. Se pueden seleccionar varias puertas.
+
+  * Al seleccionar <Cmd sid="common.elevator" product="2" />, se activa la lista de ascensores. Seleccione el ascensor al que se aplicará la función de desbloqueo programado. Se pueden seleccionar varios ascensores.
+
+  :::note
+
+  La opción <Cmd sid="zone.selectoption" product="2" /> aparece cuando se registra un ascensor. Si no hay ascensores registrados, solo aparecerá la opción <Cmd sid="common.door" product="2" />. Para obtener más información sobre la incorporación de ascensores, consulte [lo siguiente](settings-elevators-add).
+
+  :::
+
+* <Cmd sid="common.schedule" product="2" />: Selecciona un horario. Si el horario deseado no está disponible, haz clic en <Cmd sid="button.plusAddSchedule" product="2" /> para agregar uno.
+
+* <Cmd sid="common.floor" product="2" />: Puede seleccionar los pisos para el ascensor seleccionado.
+
+:::info
+
+* En el modo <Cmd sid="zone.globalZone.local" product="2" />, puede seleccionar varias puertas para configurar la función de desbloqueo programado.
+
+* Si selecciona un ascensor que ya forma parte de otra configuración de desbloqueo programado, no podrá duplicar los ajustes en el mismo piso.
+
+* Para obtener más información sobre la configuración de horarios, consulta [lo siguiente](settings-schedule).
+
+:::

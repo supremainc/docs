@@ -1,0 +1,226 @@
+---
+id: settings-advanced-ac-roll-call
+title: Lista de Presencia
+description: Esta guía explica cómo configurar la lista de asistencia.
+keywords:
+  - Control de acceso avanzado
+  - Lista de asistencia
+---
+
+La lista de asistencia es una característica que genera rápidamente una lista de personal según los registros de entrada en un momento y lugar específicos, lo que permite el seguimiento en tiempo real de las ubicaciones actuales. En caso de emergencia, el usuario puede determinar si ha llegado al punto de lista de asistencia autenticándose a través de dispositivos de entrada o salida en una ubicación predefinida.
+
+Puede utilizarse para la respuesta a emergencias, verificaciones de seguridad y para proporcionar información al equipo de rescate. Esto permite la gestión eficiente del estado del personal utilizando registros de entrada y salida.
+
+:::info
+
+Las configuraciones de lista de asistencia pueden utilizarse mediante opciones adicionales disponibles con una licencia **Avanzada** o superior. Para más información sobre la política de licencias, consulta [lo siguiente](licensing#features-add-ons).
+
+:::
+
+## Registrar lista de asistencia {#addRollcallZone}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.advancedAc.root" /> en la barra lateral izquierda.
+
+3. Haz clic en <Cmd sid="button.func.addZone" product="2" />.
+
+4. Selecciona <Cmd sid="zone.rollCall" product="2" /> y haz clic en <Cmd sid="button.apply" product="2" />.
+
+5. Ingresa el nombre y la descripción de la configuración de lista de asistencia que deseas añadir en la sección <Cmd sid="common.info" product="2" />.
+
+   <Image src="/img/biostarx-settings-adv-ac-add-rollcall.png" />
+
+6. Configura los detalles en la sección <Cmd sid="device.info.configuration" product="2" />. Para obtener más información, consulta [lo siguiente](#setting).
+
+7. Después de completar todas las configuraciones, haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla.
+
+:::info
+
+<Cmd sid="common.name" product="2" /> puede contener hasta 48 caracteres y no puede utilizar el mismo nombre que otras configuraciones.
+
+:::
+
+## Guía de opciones de configuración {#setting}
+
+Los detalles de las configuraciones de lista de asistencia son los siguientes.
+
+<Image src="/img/biostarx-settings-adv-ac-add-rollcall-config.png" />
+
+* <Cmd sid="zone.globalZone" product="2" />: Puedes verificar el alcance de aplicación. Las configuraciones de lista de asistencia solo se admiten en modo <Cmd sid="zone.globalZone.global" product="2" /> y pueden configurarse para todos los dispositivos registrados en **BioStar X**.
+
+* <Cmd sid="zone.pause.activatedAndDeactivated" product="2" />: Puedes activar o desactivar temporalmente la configuración.
+
+* <Cmd sid="zone.rollCall.manualStatusChange" product="2" />: Puedes configurarlo para cambiar el estado manualmente.
+
+* <Cmd sid="zone.entryDevices" product="2" />: Selecciona el dispositivo que se utilizará al entrar. Puedes elegir de la lista de dispositivos registrados.
+
+* <Cmd sid="zone.exitDevices" product="2" />: Selecciona el dispositivo que se utilizará al salir. Puedes elegir de la lista de dispositivos registrados.
+
+* <Cmd sid="common.users" product="2" />: Puedes seleccionar grupos de usuarios o usuarios individuales que tengan permiso para entrar.
+
+:::info
+
+* No se puede establecer el mismo dispositivo tanto para <Cmd sid="zone.entryDevices" product="2" /> como para <Cmd sid="zone.exitDevices" product="2" /> al mismo tiempo.
+
+* Puedes seleccionar hasta 10 dispositivos para <Cmd sid="zone.entryDevices" product="2" /> y <Cmd sid="zone.exitDevices" product="2" />.
+
+* Los dispositivos configurados con <Cmd sid="door.dualAuthentication" product="2" /> no pueden establecerse como <Cmd sid="zone.entryDevices" product="2" /> ni <Cmd sid="zone.exitDevices" product="2" />.
+
+* Para obtener más información sobre el registro de dispositivos, consulte lo siguiente.
+
+  * <DocLink docId="platform/biostar_x/settings-adding-devices" />
+
+  * <DocLink docId="platform/biostar_x/settings-adding-wiegand" />
+
+  * <DocLink docId="platform/biostar_x/settings-adding-slave-device" />
+
+:::
+
+## Activar/desactivar {#activateDeactivateOccupancyZone}
+
+Puedes activar configuraciones de lista de asistencia deshabilitadas o desactivar configuraciones activadas.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.advancedAc.root" /> en la barra lateral izquierda.
+
+3. Haz clic en <Cmd sid="zone.rollCall" product="2" /> en la lista.
+
+4. Haz clic en la casilla de verificación del elemento que deseas activar o desactivar en la lista de configuraciones de lista de asistencia.
+
+5. Haz clic en el botón <Cmd sid="zone.pause.activate" product="2" /> o <Cmd sid="zone.pause.deactivate" product="2" /> en la esquina superior derecha de la pantalla.
+
+## Eliminar {#deleteOccupancyZone}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.advancedAc.root" /> en la barra lateral izquierda.
+
+3. Haz clic en <Cmd sid="zone.rollCall" product="2" /> en la lista.
+
+4. Haz clic en la casilla de verificación del elemento que deseas eliminar de la lista de configuraciones de lista de asistencia.
+
+5. Haz clic en el botón <Cmd sid="button.deleteZone" product="2" /> en la esquina superior derecha de la pantalla.
+
+6. Cuando aparezca el mensaje de advertencia, haz clic en el botón <Cmd sid="button.continue" product="2" />.
+
+import ExploreListPages from '../../common/_explore-list-pages.mdx';
+
+<ExploreListPages />
+
+## Iniciar lista de asistencia {#mobileAppRollCall}
+
+La función de lista de asistencia está disponible en la aplicación móvil **BioStar X**.
+
+:::info
+
+Puedes instalar la aplicación móvil **BioStar X** mediante los siguientes enlaces.
+
+* iOS: [Apple App Store](https://apps.apple.com/kr/app/biostar-x-mobile/id6741415253)
+
+* Android: [Google Play](https://play.google.com/store/apps/details?id=com.suprema.biostarmobile)
+
+:::
+
+### Iniciar lista de asistencia en la aplicación móvil {#useRollCallMobileApp}
+
+Para iniciar la función de lista de asistencia en la aplicación móvil, sigue estos pasos.
+
+1. Abre la aplicación móvil **BioStar X** en tu dispositivo.
+
+2. Toca el botón **Roll Call** en la pantalla de inicio de la aplicación.
+
+   <Image src="/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-01.png" width={253} alone />
+
+3. En la lista de Roll Call, toca el botón <IcRCplay /> del elemento para ejecutar la lista de asistencia.
+
+   <Image src="/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-02.png" width={253} alone />
+
+4. Cuando aparezca el mensaje de confirmación, toca el botón **Yes**.
+
+La lista de asistencia se iniciará y, al tocar el elemento de lista de asistencia en curso, podrás comprobar su estado.
+
+<Image src="/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-03.png" width={595} alone className="none" />
+
+### Control de lista de asistencia en curso
+
+* Los usuarios que ingresen se marcarán con el ícono <IcRCdone />. Cuando todos los usuarios hayan ingresado, aparecerá un mensaje que indica que la lista de asistencia ha finalizado. Para finalizar la lista de asistencia, toca el botón **Yes**.
+
+* El administrador puede cambiar manualmente la entrada o el estado del usuario. Mantén presionado el botón redondo en el extremo derecho del usuario cuyo estado deseas cambiar en la lista de usuarios.
+
+  <Image src="/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-change-status.png" alone className="none" width={595} />
+
+* Para restablecer a un usuario que ingresa, toca el botón **Reset**. Cambia el usuario **Accounted** al estado **Unaccounted**.
+
+* Si otro administrador finaliza la lista de asistencia, aparecerá un mensaje de notificación.
+
+  <Image src="/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-stopped.png" width={253} alone />
+
+* Para finalizar una lista de asistencia en curso, toca el botón <IcRCstop /> en la pantalla de lista de asistencia o toca el botón **END** en la pantalla de estado de la lista de asistencia.
+
+* También puedes finalizar la lista de asistencia en curso en **BioStar X**. Ve a <Cmd sid="shell.header.setting" /> → <Cmd sid="setting.menu.advancedAc.root" /> → <Cmd sid="data.sidebar.events" /> → menú <Cmd sid="zone.rollCall" product="2" />, selecciona el elemento de lista de asistencia en curso y haz clic en el botón <Cmd sid="data.header.rollCall.ended" /> en la esquina superior derecha de la pantalla.
+
+  <Image src="/img/biostarx-settings-adv-ac-rollcoll-ended.png" />
+
+* Después de completar la lista de asistencia, puedes consultar los informes relacionados en <Cmd sid="shell.header.data" /> → <Cmd sid="data.mainMenu.generate" /> → <Cmd sid="data.sidebar.rollCall" />. Para obtener más información, consulta [lo siguiente](#viewRollCallReport).
+
+### Información del usuario durante la lista de asistencia
+
+Durante la lista de asistencia en la aplicación móvil, puedes consultar la información de cada usuario. Es útil para contactar a los usuarios en una emergencia o para localizar la posición actual de un usuario.
+
+Desliza hacia la izquierda sobre el elemento de usuario del que quieras ver detalles durante la lista de asistencia. Luego toca el botón <IcRCinfo />.
+
+<Image src="/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-user-info.png" className="none" width={595} alone />
+
+### Dejar una nota para usuarios durante la lista de asistencia
+
+Si un usuario específico no ha ingresado durante la lista de asistencia en la aplicación móvil, puedes dejarle una nota.
+
+Desliza hacia la izquierda sobre el elemento de usuario donde quieras ingresar una nota durante la lista de asistencia. Luego toca el botón <IcRCmemo />. En la pantalla de ingreso de notas, escribe el contenido y toca el botón **Save**.
+
+<Image src="/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-user-memo.png" className="none" width={595} alone />
+
+Los usuarios que tengan notas se marcarán con el ícono <IcRCmemo /> en la lista de asistencia.
+
+<Image src="/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-user-status.png" width={253} alone />
+
+### Ver detalles de la lista de asistencia {#viewRollCallinfo}
+
+Consulta los detalles de la configuración del pase de lista en la aplicación móvil.
+
+1. Abre la aplicación móvil **BioStar X** en tu dispositivo.
+
+2. Toca el botón **Roll Call** en la pantalla de inicio de la aplicación.
+
+   <Image src="/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-01.png" width={253} alone />
+
+3. Desliza el elemento hacia la izquierda para consultar los detalles en la lista y, luego, toca el botón <IcRCinfo />.
+
+   <Image src="/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-info.png" width={595} alone className="none" />
+
+## Ver informes de pase de lista {#viewRollCallReport}
+
+Sigue estos pasos para consultar el informe de pase de lista.
+
+1. Haz clic en <Cmd sid="shell.header.launcher" /> en la página de <Cmd sid="shell.header.data" />.
+
+2. En la barra lateral izquierda de la pantalla, haz clic en <Cmd sid="data.sidebar.events" /> → <Cmd sid="data.sidebar.rollCall" />.
+
+3. Cuando aparezca la ventana <Cmd sid="data.dialog.rollCall.selectRollCall" />, selecciona el elemento de pase de lista que deseas consultar en el informe y, luego, haz clic en el botón <Cmd sid="data.button.next" />.
+
+   <Image src="/img/biostarx-settings-adv-ac-rollcoll-report-01.png" />
+
+   :::note
+
+   Si no ves el elemento de pase de lista deseado, ajusta el período en la parte superior de la pantalla.
+
+   :::
+
+4. En la ventana de configuración de opciones, selecciona los datos que se van a incluir en el informe y, luego, haz clic en el botón <Cmd sid="data.button.generate" />.
+
+   <Image src="/img/biostarx-settings-adv-ac-rollcoll-report-02.png" />
+
+Generando el informe. El informe proporciona información de cada usuario, incluida la hora de entrada, la hora de salida, la última ubicación y las notas.
+
+<Image src="/img/biostarx-settings-adv-ac-rollcoll-report-generated.png" caption />

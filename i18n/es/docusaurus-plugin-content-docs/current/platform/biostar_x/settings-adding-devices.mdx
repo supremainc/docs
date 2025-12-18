@@ -1,0 +1,128 @@
+---
+id: settings-adding-devices
+title: Registrar dispositivo
+description: Esta guía describe cómo registrar un dispositivo en BioStar X.
+keywords:
+  - Dispositivo
+  - Agregar dispositivo
+---
+
+Esta guía explica cómo registrar un dispositivo en **BioStar X**. Registrar un dispositivo permite que **BioStar X** supervise y administre el estado de ese dispositivo. Asegúrese de que el dispositivo esté correctamente conectado antes de buscarlo. Es conveniente conocer de antemano la ubicación, el ID, la dirección IP y otros detalles al agregar varios dispositivos a la vez.
+
+:::info
+
+* Al registrar un nuevo dispositivo, cambie el valor de la clave del dispositivo por el valor de la clave de cifrado de datos del servidor. Todos los datos de usuario del dispositivo se eliminarán durante la conversión de clave.
+
+* Haga clic en <Cmd sid="device.sync_all" product="2" /> para eliminar toda la información de configuración y los datos de usuario almacenados en el dispositivo y volver a enviarlos. Encuentre la opción <Cmd sid="device.sync_all" product="2" /> seleccionando el dispositivo en la lista y haciendo clic en el botón <IcMoreW />.
+
+* Haga clic con el botón derecho en el nombre del grupo <Cmd sid="menu.device.waitingDevice" product="2" /> y luego haga clic en <Cmd sid="device.menu.addAllWaitingDevices" product="2" /> para registrar todos los dispositivos del grupo. Haga clic con el botón derecho en el nombre del dispositivo y luego haga clic en <Cmd sid="device.menu.addWaitingDevice" product="2" /> para registrarlo individualmente.
+
+* Si el tipo de ID de usuario en **BioStar X** difiere del del dispositivo, cambie la configuración del dispositivo según la configuración de ID de usuario de **BioStar X**.
+
+* Si el tipo de ID de usuario en **BioStar X** está configurado como alfanumérico, es posible que algunos dispositivos no se puedan usar o tengan restricciones. Para obtener más información, consulte [lo siguiente](settings-server-server#userid-type).
+
+* Para registrar un dispositivo y configurar sus detalles, consulte [lo siguiente](settings-device-details).
+
+:::
+
+## Antes de comenzar {#before-start}
+
+Revise lo siguiente antes de registrar el dispositivo.
+
+* Configure los niveles de acceso, grupos de acceso y niveles de piso para el control de acceso. Para obtener más información, consulte [lo siguiente](settings-access-control).
+
+* Cree un grupo para administrar los dispositivos de forma eficiente. Para obtener más información, consulte [lo siguiente](settings-manage-device-group).
+
+## Registro rápido {#quickadd-device}
+
+Los dispositivos en la misma red que **BioStar X** se pueden buscar y registrar automáticamente.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.device.root" /> en la barra lateral izquierda.
+
+3. Haga clic en <Cmd sid="device.searchDevice" product="2" /> en la lista de dispositivos.
+
+   <Image src="/img/biostarx-setting-device-search-device.png" />
+
+4. Cuando aparezca la ventana <Cmd sid="device.searchDevice" product="2" />, se mostrará una lista de todos los dispositivos que se pueden registrar. Si el dispositivo deseado no está en la lista, haga clic en <Cmd sid="button.search" product="2" /> en la esquina superior derecha.
+
+   <Image src="/img/biostarx-setting-add-device.png" />
+
+5. Seleccione en la lista los dispositivos que desee registrar o desmarque los que no quiera registrar.
+
+6. Haga clic en <IcEdit /> en la columna <Cmd sid="device.info.name" product="2" /> para cambiar el nombre del dispositivo que se registrará y realice el cambio.
+
+   <Image src="/img/biostarx-setting-add-device-rename.png" />
+
+7. Seleccione el grupo del dispositivo que se registrará en la columna <Cmd sid="device.info.group" product="2" />.
+
+   <Image src="/img/biostarx-setting-add-device-group.png" />
+
+8. Cuando haya terminado de configurar todos los dispositivos seleccionados, haga clic en <Cmd sid="button.add" product="2" />.
+
+Los dispositivos añadidos aparecerán en la lista de dispositivos. Seleccione el dispositivo añadido y haga clic en <Cmd sid="button.syncDevice" product="2" />.
+
+<Image src="/img/biostarx-setting-device-sync-device.png" />
+
+:::info
+
+Modifique los dispositivos cuya dirección IP no esté disponible o deba cambiarse haciendo clic en <Cmd sid="button.setIp" product="2" />. Para obtener más información, consulte [lo siguiente](#setipaddress).
+
+:::
+
+### Configuración de dirección IP {#setipaddress}
+
+Cambie la dirección IP del dispositivo que se registrará. Haga clic en <Cmd sid="button.setIp" product="2" /> en la parte inferior izquierda de la ventana <Cmd sid="device.searchDevice" product="2" />. Cuando aparezca la ventana <Cmd sid="button.setIp" product="2" />, seleccione el dispositivo al que desea cambiar la dirección IP.
+
+<Image src="/img/biostarx-setting-device-set-ip.png" />
+
+* <Cmd sid="device.info.useDhcp" product="2" />: Seleccione esta opción para que el dispositivo obtenga automáticamente una dirección IP mediante DHCP. Al seleccionar esta opción, es posible que la dirección IP cambie cada vez que el dispositivo se conecte a la red.
+
+  :::note
+
+  Para introducir manualmente la dirección IP, la máscara de subred, la puerta de enlace, etc., desmarque esta opción.
+
+  :::
+
+* <Cmd sid="device.info.deviceToServerConnection" product="2" />: Seleccione esta opción para configurar el dispositivo para que se conecte al servidor de **BioStar X**. Deberá introducir la dirección IP y el número de puerto del servidor donde está instalado **BioStar X**.
+
+:::info
+
+Después de completar toda la configuración de IP y guardar los cambios, haga clic en <Cmd sid="button.apply" product="2" />. Para cancelar los cambios, haga clic en <Cmd sid="button.cancel" product="2" />.
+
+:::
+
+### Opciones de búsqueda de dispositivos {#devicesearchoptions}
+
+Configure las opciones de búsqueda de dispositivos haciendo clic en <IcSet /> en la esquina superior derecha de la ventana <Cmd sid="device.searchDevice" product="2" />.
+
+<Image src="/img/biostarx-setting-add-device-option.png" />
+
+* <Cmd sid="device.showNewDevicesOnly" product="2" />: Seleccione esta opción para mostrar solo los dispositivos recién detectados en la lista de búsqueda.
+
+* <Cmd sid="device.timeout" product="2" />: Establezca el tiempo deseado para excluir de la lista de búsqueda los dispositivos que no respondan durante un periodo determinado. Este valor puede configurarse en segundos, con un valor predeterminado de 3 segundos.
+
+## Búsqueda avanzada {#advancedsearch}
+
+Especifique la dirección IP y el número de puerto de un dispositivo específico para registrarlo.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.device.root" /> en la barra lateral izquierda.
+
+3. Haga clic en <Cmd sid="button.func.advancedSearch" product="2" /> en la lista de dispositivos.
+
+   <Image src="/img/biostarx-setting-device-adv-search-device.png" />
+
+4. Cuando aparezca la ventana <Cmd sid="button.func.advancedSearch" product="2" />, introduzca la dirección IP y el número de puerto del dispositivo que se va a registrar.
+
+   <Image src="/img/biostarx-setting-device-advanced-search.png" />
+
+5. Haga clic en <Cmd sid="button.search" product="2" /> para mostrar los dispositivos que coincidan con los criterios introducidos.
+
+   <Image src="/img/biostarx-setting-device-advanced-search-result.png" />
+
+6. Para registrar el dispositivo, haga clic en <Cmd sid="button.add" product="2" />.
+
+Los dispositivos añadidos aparecerán en la lista de dispositivos. Seleccione el dispositivo añadido y haga clic en <Cmd sid="button.syncDevice" product="2" />.

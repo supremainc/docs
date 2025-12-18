@@ -1,0 +1,79 @@
+---
+id: settings-access-control-manage-access-level
+title: Administrar niveles de acceso
+description: Configure los periodos de tiempo durante los cuales un usuario puede acceder a una puerta y regístrelos como un nivel de acceso.
+keywords:
+  - Nivel de acceso
+---
+
+Los niveles de acceso permiten a los usuarios establecer horarios de entrada y conceder permiso para acceder a las puertas durante esos horarios. Los niveles de acceso son un elemento clave para configurar grupos de acceso.
+
+## Antes de comenzar {#beforeStart}
+
+* Inicializa las puertas antes de registrar niveles de acceso. Para obtener más información sobre el registro de puertas, consulta [lo siguiente](settings-door-add).
+
+* Predefine los horarios que se aplicarán a los niveles de acceso mediante los ajustes de programación. Para obtener más información sobre la configuración de horarios, consulta [lo siguiente](settings-schedule).
+
+## Registrar nivel de acceso {#addAccessLevel}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.accessControl.root" /> en la barra lateral izquierda.
+
+3. Haz clic en <Cmd sid="button.func.addAccessLevel" product="2" />.
+
+   <Image src="/img/biostarx-settings-access-level.png" />
+
+4. Ingresa <Cmd sid="common.name" product="2" /> y <Cmd sid="common.description" product="2" /> en la pantalla <Cmd sid="accessGroup.addNewAccessLevel" product="2" />.
+
+   <Image src="/img/biostarx-settings-add-access-level.png" />
+
+5. Selecciona la puerta a la que se aplicará el nivel de acceso en el campo <Cmd sid="common.door" product="2" />.
+
+6. Selecciona el horario que se aplicará al nivel de acceso en el campo <Cmd sid="common.schedule" product="2" />.
+
+7. Haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla para registrar el nivel de acceso.
+
+:::info
+
+* Se pueden registrar hasta 128 niveles de acceso por grupo de acceso.
+
+* Haz clic en <IcSearch /> en los campos <Cmd sid="common.door" product="2" /> y <Cmd sid="common.schedule" product="2" /> para buscar las puertas y horarios deseados.
+
+* Haz clic en <IcTrash2 /> para eliminar los elementos añadidos en los campos <Cmd sid="common.door" product="2" /> y <Cmd sid="common.schedule" product="2" />.
+
+* Si la puerta deseada no está disponible, registra una nueva puerta. Para obtener más información sobre el registro de puertas, consulta [lo siguiente](settings-door-add).
+
+* Si el horario deseado no está disponible, haz clic en <Cmd sid="button.plusAddSchedule" product="2" /> para agregar uno. Para obtener más información sobre la configuración de horarios, consulta [lo siguiente](settings-schedule).
+
+:::
+
+## Modificar nivel de acceso {#editAccessLevel}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.accessControl.root" /> en la barra lateral izquierda.
+
+3. Haz clic en la pestaña <Cmd sid="access_control.tab.access_level" product="2" />.
+
+   <Image src="/img/biostarx-settings-access-level-tab.png" />
+
+4. Haz clic en el nivel de acceso que desees modificar en la lista de niveles de acceso.
+
+5. Modifique los elementos deseados.
+
+6. Una vez que complete las modificaciones, haga clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla.
+
+## Eliminar nivel de acceso {#deleteAccessLevel}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.accessControl.root" /> en la barra lateral izquierda.
+
+3. Haz clic en la pestaña <Cmd sid="access_control.tab.access_level" product="2" />.
+
+4. Marca la casilla del nivel de acceso que desees eliminar de la lista de niveles de acceso.
+
+5. Haz clic en <Cmd sid="button.deleteAccessLevel" product="2" /> en la parte superior derecha de la pantalla.
+
+<Image src="/img/biostarx-settings-delete-access-level.png" />

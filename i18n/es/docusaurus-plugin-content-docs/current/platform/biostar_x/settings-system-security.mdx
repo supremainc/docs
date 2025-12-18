@@ -1,0 +1,195 @@
+---
+id: settings-system-security
+title: Mejorar la seguridad del sistema
+description: Mejore la seguridad del sistema configurando la política de contraseñas, el cifrado de datos personales y la seguridad de comunicación entre dispositivos en BioStar X.
+keywords:
+  - Seguridad del sistema
+  - Cifrado
+---
+
+Configure los ajustes de seguridad de **BioStar X** según la política de seguridad de la organización. Configure de forma selectiva la política de contraseñas, el cifrado de datos personales, la seguridad de comunicación entre dispositivos y el control de accesos concurrentes.
+
+:::info
+
+Verifique la política y las regulaciones de seguridad de la organización antes de mejorar la seguridad del sistema.
+
+:::
+
+## Usar la seguridad del sistema
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.system.root" /> → <Cmd sid="setting.systemSecurity" product="2" /> en la barra lateral izquierda.
+
+3. Configure cada elemento relacionado con la seguridad.
+
+   * <Cmd sid="setting.systemSecurity.loginPassword" product="2" />: Configure el nivel de seguridad relacionado con la contraseña de inicio de sesión. Para obtener más información, consulte [la siguiente sección](#password-policy-configuration).
+
+   * <Cmd sid="setting.server.secure.comm.title" product="2" />: Mejore la seguridad de comunicación entre la información personal y los dispositivos. Para obtener más información, consulte [la siguiente sección](#advanced-security-configuration).
+
+   * <Cmd sid="setting.systemSecurity.sessionSecurity" product="2" />: Mejore la seguridad de la sesión. Para obtener más información, consulte [la siguiente sección](#session-security-configuration).
+
+4. Haga clic en <Cmd sid="button.apply" product="2" /> en la parte inferior derecha de la pantalla para guardar los ajustes.
+
+:::info
+
+Solo la primera cuenta de administrador con ID **1** puede usar el menú <Cmd sid="setting.server.secure.comm.title" product="2" />.
+
+:::
+
+## Configurar la política de contraseñas {#password-policy-configuration}
+
+La sección <Cmd sid="setting.systemSecurity.loginPassword" product="2" /> establece el nivel de seguridad relacionado con la contraseña de inicio de sesión. Configure la política de contraseñas según los requisitos de seguridad de la organización.
+
+<Image src="/img/biostarx-settings-system-security-password.png" className="none" />
+
+### Configurar la complejidad de la contraseña
+
+Configure la complejidad de las contraseñas de los usuarios. Ajuste el control deslizante de la opción <Cmd sid="setting.server.passwordLevel" product="2" /> para definir el nivel de seguridad.
+
+* <Cmd sid="setting.server.passwordLevelDefault" product="2" />: Permite ingresar hasta 32 caracteres.
+
+* <Cmd sid="setting.server.passwordLevelMedium" product="2" />: Al establecer una contraseña, se requiere una combinación de 8 a 32 caracteres alfabéticos (mayúsculas o minúsculas) y números.
+
+* <Cmd sid="setting.server.passwordLevelStrong" product="2" />: Al establecer una contraseña, se requiere una combinación de 10 a 32 caracteres alfabéticos (mayúsculas y minúsculas, con al menos una mayúscula), números y caracteres especiales.
+
+### Configurar el ciclo de cambio de contraseña
+
+Para limitar el período de uso de las contraseñas, cambie el botón de la opción <Cmd sid="setting.systemSecurity.passwordUpdateCycle" product="2" /> al estado <Cmd sid="common.active" product="2" />. Los usuarios deben cambiar su contraseña periódicamente según lo establecido. Si se supera el ciclo de cambio de contraseña, aparecerá un mensaje solicitando el cambio durante el inicio de sesión.
+
+:::info
+
+Puede configurarse de 1 a 180 días.
+
+:::
+
+### Configurar el límite de intentos fallidos de inicio de sesión
+
+Configure la cantidad de intentos fallidos permitidos y el tiempo de restricción de inicio de sesión. Si se supera la cantidad de intentos definida en la opción <Cmd sid="setting.systemSecurity.allowLoginFailed" product="2" />, no podrá iniciar sesión durante un tiempo limitado después de ingresar una contraseña incorrecta.
+
+:::info
+
+Esta opción está activada de forma predeterminada y restringe el inicio de sesión durante 10 minutos después de 100 intentos fallidos. Ajuste los valores o desactívelos según sea necesario.
+
+:::
+
+### Configurar el límite de cambio de contraseña
+
+Para limitar la cantidad de cambios de contraseña que un usuario puede realizar en un día, cambie el botón de la opción <Cmd sid="setting.systemSecurity.allowPasswordChange" product="2" /> al estado <Cmd sid="common.active" product="2" />. Los usuarios pueden cambiar la contraseña hasta el número especificado de veces.
+
+:::info
+
+Puede configurarse hasta un máximo de 10 veces.
+
+:::
+
+## Configuraciones de seguridad avanzadas {#advanced-security-configuration}
+
+En la sección <Cmd sid="setting.server.secure.comm.title" product="2" />, puede mejorar la seguridad de la información personal y la comunicación entre dispositivos.
+
+<Image src="/img/biostarx-settings-system-security-advanced.png" className="none" />
+
+### Mejorar la protección de datos personales
+
+Para minimizar el riesgo de filtraciones de datos, configure las siguientes opciones para cifrar la información personal sensible.
+
+* <Cmd sid="setting.sever.secure.comm.encrypt.db" product="2" />
+
+  * <Cmd sid="common.use" product="2" />: Cifra y almacena los datos personales del usuario, incluidos los datos de credenciales.
+
+  * <Cmd sid="common.notUse" product="2" />: Almacena la información personal del usuario sin cifrado. Los datos que ya están cifrados se almacenarán descifrados y los nuevos datos no se cifrarán.
+
+* <Cmd sid="setting.server.secure.comm.encryption_key_db" product="2" />: Se utiliza para cifrar o descifrar la información almacenada en la base de datos y proteger de forma segura la información personal del usuario. Haga clic en el botón <Cmd sid="setting.server.secure.comm.key_change" product="2" /> y establezca un nuevo valor de clave de cifrado. Cambiar la clave de cifrado vuelve a cifrar los datos que previamente estaban cifrados.
+
+:::info
+
+* No inicie el servidor de forma forzada durante el proceso de cifrado o descifrado de la base de datos de datos personales. Pueden producirse errores como fallos de inicio de sesión o corrupción de datos. Puede tardar cierto tiempo según el tamaño de la base de datos y el rendimiento del servidor.
+
+  <details>
+    <summary>Ver los elementos de cifrado de datos personales</summary>
+
+    * Imagen de perfil
+
+    * ID Usuario
+
+    * Nombre
+
+    * Número de teléfono
+
+    * USER IP
+
+    * Información de correo electrónico del remitente y de los destinatarios
+
+    * ID Inicio Sesión
+
+    * Contraseña de inicio de sesión
+
+    * Plantilla de rostro
+
+    * Plantilla de huella dactilar
+
+    * ID Tarjeta
+
+    * Clave de layout de tarjeta inteligente
+
+    * Información personalizada para usuario y visitante
+
+    * Archivos de registros de imágenes
+  </details>
+
+* Puede introducir <Cmd sid="setting.server.secure.comm.encryption_key_db" product="2" /> utilizando caracteres alfanuméricos y símbolos, para un total de 32 caracteres.
+
+:::
+
+### Configurar la seguridad de comunicación entre dispositivos
+
+Configure la comunicación segura entre el servidor **BioStar X** y los dispositivos de control de acceso.
+
+* <Cmd sid="setting.sever.secure.comm.menu" product="2" />: La comunicación entre el servidor **BioStar X** y los dispositivos de control de acceso puede protegerse con certificados. Si establece esta opción en <Cmd sid="common.use" product="2" />, el servidor genera automáticamente un certificado para enviarlo a los dispositivos y, a partir de entonces, toda la comunicación se cifrará. Los dispositivos pueden utilizar este certificado para establecer un canal seguro al intercambiar datos con el servidor **BioStar X**.
+
+  Para usar certificados externos, habilite la opción <Cmd sid="setting.sever.secure.comm.extcert.menu" product="2" /> y cargue el certificado raíz, el certificado de clave pública y el archivo de clave privada.
+
+  <Image src="/img/biostarx-settings-system-security-advanced-with-device.png" />
+* <Cmd sid="setting.server.secure.comm.data_encryption" product="2" />: Puede redefinir la clave de cifrado de datos y la contraseña de administrador.
+
+:::info
+
+* **BioStar X** genera o elimina certificados según el estado de configuración del dispositivo y los ajustes de comunicación segura, y no vuelve a crear el mismo certificado anterior. Por ejemplo, si el ajuste de Comunicación segura con el dispositivo se cambia en el orden de <Cmd sid="common.use" product="2" /> → <Cmd sid="common.notUse" product="2" />, el certificado creado se eliminará automáticamente. Cuando el ajuste se cambia en el orden de <Cmd sid="common.use" product="2" /> → <Cmd sid="common.notUse" product="2" /> → <Cmd sid="common.use" product="2" />, se ejecuta la operación **Crear certificado A** → **Eliminar certificado A** → **Crear certificado B**.
+
+* Si establece la opción <Cmd sid="setting.sever.secure.comm.menu" product="2" /> en <Cmd sid="common.notUse" product="2" /> mientras el dispositivo está físicamente desconectado de la red, se eliminará el certificado almacenado en el dispositivo. En este caso, el dispositivo no podrá reconectarse. Para volver a conectarlo, debe eliminarse el certificado guardado en el dispositivo o restablecer el dispositivo a los valores de fábrica. Para obtener más información, consulte el manual del dispositivo.
+
+<details>
+  <summary>Ver los dispositivos y versiones de firmware compatibles con la función <Cmd sid="setting.sever.secure.comm.menu" product="2" /></summary>
+
+  * FaceStation 2 FW 1.1.0 o posterior
+
+  * BioStation A2 FW 1.5.0 o posterior
+
+  * BioStation 2 FW 1.6.0 o posterior
+
+  * BioStation L2 FW 1.3.0 o posterior
+
+  * Firmware de BioLite N2 1.0.0 o posterior
+
+  * BioEntry P2 FW 1.1.0 o posterior
+
+  * BioEntry W2 FW 1.2.0 o posterior
+
+  * Firmware de FaceLite 1.0.0 o posterior
+
+  * Firmware de XPass 2 1.0.0 o posterior
+
+  * CoreStation FW 1.1.0 o posterior
+
+  * X-Station 2 versión de firmware 1.0.0 o superior
+
+  * BioStation 3 firmware 1.0.0 o superior
+</details>
+
+:::
+
+## Control de acceso concurrente {#session-security-configuration}
+
+En la sección <Cmd sid="setting.systemSecurity.sessionSecurity" product="2" />, limite los inicios de sesión duplicados para la misma cuenta para mejorar la seguridad. Establezca la opción <Cmd sid="setting.systemSecurity.useSimultaneousConnection" product="2" /> en <Cmd sid="common.inactive" product="2" />. Cuando haya intentos de inicio de sesión concurrentes para la misma cuenta, se cerrará la sesión de los usuarios existentes.
+
+<Image src="/img/biostarx-settings-system-security-session.png" className="none" />

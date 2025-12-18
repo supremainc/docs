@@ -1,0 +1,72 @@
+---
+id: tna-rule-shift-overtime
+title: Configurar otras reglas de trabajo
+description: Esto proporciona métodos para agregar reglas de trabajo adicionales que pueden ser útiles cuando las reglas de horas extra no se añaden a las reglas de trabajo diarias.
+keywords:
+  - Otras reglas de trabajo
+  - Horas Extra
+---
+
+Esto es útil cuando las reglas de horas extra no se añaden a <Cmd sid="tab.shift" product="2" className="normal" />. Los ajustes de horas extra en <Cmd sid="tab.shift" product="2" className="normal" /> tienen horas de inicio y fin, mientras que <Cmd sid="rule.rule" product="2" className="normal" /> calcula el total de horas más allá del horario laboral regular. <Cmd sid="rule.rule" product="2" className="normal" /> es conveniente para gestionar el total de horas extra de forma diaria, semanal o mensual. Cuando se configura <Cmd sid="rule.rule" product="2" className="normal" />, reemplaza las reglas de horas extra añadidas a <Cmd sid="tab.shift" product="2" className="normal" />.
+
+## <Cmd sid="rule.addRule" product="2" className="bold" />
+
+1. Haga clic en <Cmd sid="shell.header.tna" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="tab.shift" product="2" /> → <Cmd sid="rule.rule" product="2" /> en la barra lateral izquierda.
+
+3. Haga clic en <Cmd sid="rule.addRule" product="2" />.
+
+   <Image src="/img/biostarx-tna-shift-overtime.png" />
+
+4. Cuando aparezca la pantalla <Cmd sid="rule.addRule" product="2" />, configure cada elemento.
+
+:::info
+
+* Haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla para guardar la configuración.
+
+* Haz clic en el botón <Cmd sid="payCode.applyAndAddShift" product="2" /> para seguir agregando el horario de trabajo.
+
+* Después de guardar los ajustes, haga clic en <Cmd sid="ta.apply_add_another" product="2" /> para agregar otro <Cmd sid="rule.rule" product="2" />.
+
+:::
+
+## Guía de opciones de configuración
+
+Configure <Cmd sid="rule.rule" product="2" className="normal" />. Puede establecer reglas de horas extra para aplicar de forma diaria, semanal o mensual.
+
+<Image src="/img/biostarx-tna-shift-overtime-adding.png" />
+
+* <Cmd sid="form.name" product="2" />: Ingrese el nombre de <Cmd sid="rule.rule" product="2" className="normal" />.
+
+* <Cmd sid="form.description" product="2" />: Ingrese una descripción para <Cmd sid="rule.rule" product="2" className="normal" />.
+
+* <Cmd sid="rule.overtime" product="2" />: Seleccione las reglas de horas extra que se aplicarán después del horario laboral regular de forma diaria, semanal o mensual. Puede aplicar otras reglas de horas extra después de un cierto período de tiempo. También puede establecer un límite máximo de horas extra para restringir la cantidad de horas extra que un empleado puede trabajar.
+
+  :::tip
+
+  Si se configura como se indica a continuación, la regla de tiempo **Overtime(1.5)** se aplicará de 5:00 p. m. a 11:00 p. m. cuando el horario laboral regular sea de 8:00 a. m. a 5:00 p. m., y la regla de tiempo **Overtime(2)** se aplicará de 11:00 p. m. a 2:00 a. m. Además, las horas extra diarias están limitadas a un máximo de 9 horas, y solo los registros hasta las 2:00 a. m. se utilizarán para calcular los salarios diarios.
+
+  <Image src="/img/biostarx-tna-shift-overtime-example.png" />
+
+  :::
+
+  :::info
+
+  El total de horas trabajadas no incluye pausas ni tiempos de comida.
+
+  :::
+
+* <Cmd sid="rule.weekendOvertime" product="2" /> / <Cmd sid="rule.holidayOvertime" product="2" />: Configure las reglas de trabajo que se aplicarán los fines de semana o días festivos.
+
+  * <Cmd sid="payCode.payCode" product="2" />: Seleccione el <Cmd sid="tab.payCode" product="2" className="normal" /> que se aplicará.
+
+  * <Cmd sid="shift.dayStartTime" product="2" />: Configure la hora de inicio del trabajo.
+
+  * <Cmd sid="rule.firstInLastOut" product="2" />: Registra la hora en que el primer usuario se autenticó como hora de inicio y la hora en que el último usuario se autenticó como hora de fin.
+
+<NextStep>
+  <NextItem to="tna-rule-schedule">
+    Esto lo guía sobre cómo configurar su horario de trabajo mediante la configuración del período, usuarios, otras reglas de trabajo y calendarios de vacaciones.
+  </NextItem>
+</NextStep>

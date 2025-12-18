@@ -1,0 +1,40 @@
+---
+id: transfer-user-info-to-device
+title: Transferir información de usuario al dispositivo
+description: Esta guía explica cómo transferir la información de usuario al dispositivo registrado.
+keywords:
+  - Usuario
+  - Dispositivo
+---
+
+Proporciona una función para transmitir al dispositivo la información de usuario registrada en el servidor **BioStar X** para el control de acceso. Cuando se envía la información de usuario al dispositivo, este utiliza los datos del usuario para determinar los permisos de acceso y puede realizar autenticación incluso en entornos sin conexión.
+
+1. Haz clic en <Cmd sid="shell.header.user" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en la casilla de verificación a la izquierda del usuario cuya información deseas enviar desde la lista de usuarios. Selecciona más de un usuario.
+
+3. Selecciona el botón <IcMoreW /> en la esquina superior derecha de la pantalla y haz clic en <Cmd sid="team.menu.transferToDevice" />.
+
+   <Image src="/img/biostarx-user-list-transfer-device.png" />
+
+4. Cuando aparezca la ventana <Cmd sid="team.menu.transferToDevice" />, selecciona el dispositivo de la lista al que deseas transferir la información de usuario.
+
+   <Image src="/img/biostarx-user-transfer-to-devices.png" width="50%" />
+
+5. Si la información difiere para el mismo ID, marca la casilla de la opción <Cmd sid="user.overwriteWhenTransfer" product="2" /> para sobrescribirla con el contenido del servidor **BioStar X**.
+
+6. Después de seleccionar todos los dispositivos a los que deseas transferir, haz clic en <Cmd sid="common.apply" />.
+
+Transfiriendo la información de usuario al dispositivo seleccionado.
+
+:::info
+
+* Busca dispositivos ingresando palabras clave en el campo de búsqueda.
+
+* El dispositivo debe estar conectado al servidor **BioStar X** para transferir la información de usuario.
+
+* Si cambias la información de un usuario que ya está registrado en el dispositivo, debes volver a enviar la información de usuario para que los cambios se reflejen en el dispositivo. Para usar la opción <Cmd sid="setting.server.automaticUserSync" product="2" /> y sincronizar la información de usuario con el dispositivo, consulta [lo siguiente](settings-server-server#user-sync).
+
+* Existe un límite en la cantidad de usuarios que se pueden registrar en cada dispositivo. Verifica la cantidad de usuarios que se pueden registrar en el dispositivo.
+
+:::

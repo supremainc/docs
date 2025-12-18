@@ -1,0 +1,151 @@
+## Configurar administrador maestro
+
+La función <Cmd sid="ui_128" product="dev" /> mejora los privilegios administrativos generales del dispositivo para aumentar la seguridad del dispositivo y evitar el acceso y los cambios de configuración no autorizados. **Inscriba un administrador maestro** en los dispositivos nuevos con esta función. Solo el administrador maestro inscrito puede acceder al menú de administración para cambiar la configuración del dispositivo.
+
+:::note
+
+¿Qué es un administrador maestro?
+
+* Si se utiliza el dispositivo sin configurar un administrador, cualquiera podrá acceder al menú de administración y cambiar la configuración del dispositivo. La función de administrador maestro aplica la configuración administrativa general para solucionar estas vulnerabilidades de seguridad.
+
+* El administrador maestro no puede eliminarse directamente y solo se eliminará durante <Cmd sid="ui_072" product="dev" />.
+
+:::
+
+### Inscribir administrador maestro en un dispositivo nuevo
+
+En un dispositivo nuevo, <Cmd sid="ui_128" product="dev" /> debe registrarse desde el inicio; si no se registra, el uso del dispositivo se restringirá.
+
+:::info
+
+* Cuando el dispositivo nuevo se inicie por primera vez, aparecerá la pantalla de registro de <Cmd sid="ui_128" product="dev" />. Si no se registra <Cmd sid="ui_128" product="dev" />, no podrá continuar a la siguiente pantalla.
+
+* Registre <Cmd sid="ui_128" product="dev" /> para usar todas las funciones, incluso si conecta BioStar X y asigna un administrador global del dispositivo.
+
+* Los dispositivos nuevos no pueden realizar degradaciones de firmware.
+
+:::
+
+<Include product="biostation_3">
+  1. Cuando el dispositivo nuevo se inicie por primera vez, aparecerá la pantalla de registro de <Cmd sid="ui_128" product="dev" />.
+
+     <Image src="/img/how-to/setting-master-admin-1.png" width="300px" />
+</Include>
+
+<Include product="xstation_2">
+  1. Cuando el dispositivo nuevo se inicie por primera vez, aparecerá la pantalla de registro de <Cmd sid="ui_128" product="dev" />.
+
+     <Image src="/img/device/xs2-master-admin-setting-main.png" />
+</Include>
+
+<Include product="biolite_n2">
+  1. Cuando el dispositivo nuevo se inicie por primera vez, aparecerá la pantalla de registro de <Cmd sid="ui_128" product="dev" />. Presione **OK** para iniciar la inscripción.
+
+     <Image src="/img/device/bln2-master-admin-setting-main.png" />
+</Include>
+
+<Include product="biostation_2a">
+  1. Cuando el dispositivo nuevo se inicie por primera vez, aparecerá la pantalla de registro de <Cmd sid="ui_128" product="dev" />. Presione **OK** para iniciar la inscripción.
+
+     <Image src="/img/device/bs2a-master-admin-setting-main.png" />
+</Include>
+
+2. Se deben inscribir al menos dos tipos diferentes de credenciales para registrar <Cmd sid="ui_128" product="dev" />. Seleccione e inscriba las dos credenciales deseadas.
+
+   <Include product="biostation_3">
+     <Image src="/img/how-to/setting-master-admin-2.png" width="300px" />
+   </Include>
+
+   <Include product="biolite_n2">
+     <Image src="/img/device/bln2-master-admin-setting-credential1.png" />
+   </Include>
+
+   <Include product="biostation_2a">
+     <Image src="/img/device/bs2a-master-admin-setting-credential1.png" />
+   </Include>
+
+   <Include product="xstation_2">
+     <Image src="/img/device/xs2-master-admin-setting-credential1.png" />
+   </Include>
+
+   Las credenciales que se pueden inscribir para <Cmd sid="ui_128" product="dev" /> son las siguientes.
+
+   <Table>
+     <Tbody>
+       <Row>
+         <Th>Tipo de credencial</Th>
+         <Th>Número de inscripciones</Th>
+         <Th>Condiciones</Th>
+       </Row>
+
+       <Row>
+         <Td>Tarjeta</Td>
+         <Td>Hasta 4</Td>
+         <Td>Solo admite tipos CSN y Wiegand<br />No se permite la duplicación dentro del mismo tipo</Td>
+       </Row>
+
+       <Row>
+         <Td>Rostro</Td>
+         <Td>Hasta 2</Td>
+         <Td>Solo se puede inscribir en dispositivos con el mismo algoritmo</Td>
+       </Row>
+
+       <Row>
+         <Td>Fingerprint</Td>
+         <Td>Hasta 2</Td>
+         <Td>-</Td>
+       </Row>
+
+       <Row>
+         <Td>PIN</Td>
+         <Td>1</Td>
+         <Td>Al menos 8 caracteres</Td>
+       </Row>
+     </Tbody>
+   </Table>
+
+   :::note
+
+   **Condiciones de enrolamiento**
+
+   * Debe enrolar al menos dos tipos de credenciales.
+
+   * Las mismas condiciones se aplican tanto a dispositivos nuevos como a dispositivos con actualización de firmware.
+
+   * Todas las credenciales compatibles con el dispositivo pueden utilizarse como medios de autenticación.
+
+   :::
+
+<Include product="biostation_3">
+  3) Después de inscribir dos o más tipos de credenciales, presione el botón <Cmd sid="ui_373" product="dev" /> para completar el registro de <Cmd sid="ui_128" product="dev" />.
+
+     <Image src="/img/how-to/setting-master-admin-3.png" width="300px" />
+</Include>
+
+<Include product="xstation_2">
+  3. Después de inscribir dos o más tipos de credenciales, presione el botón <Cmd sid="ui_373" product="dev" /> para completar el registro de <Cmd sid="ui_128" product="dev" />.
+
+     <Image src="/img/device/xs2-master-admin-setting-credential2.png" />
+</Include>
+
+<Include product="biolite_n2">
+  3. Después de inscribir dos o más tipos de credenciales, presione **OK** para completar la inscripción de <Cmd sid="ui_128" product="dev" />.
+
+     <Image src="/img/device/bln2-master-admin-setting-credential2.png" />
+</Include>
+
+<Include product="biostation_2a">
+  3. Después de inscribir dos o más tipos de credenciales, presione **OK** para completar la inscripción de <Cmd sid="ui_128" product="dev" />.
+
+     <Image src="/img/device/bs2a-master-admin-setting-credential2.png" />
+</Include>
+
+### Avisos
+
+* **Al cambiar manualmente la clave de cifrado del dispositivo**
+
+  Al cambiar manualmente la clave de cifrado del dispositivo, aparecerá un mensaje de advertencia indicando que se eliminará el PIN del administrador maestro; revise el mensaje antes de continuar con el cambio.
+
+* **Limitaciones en la transmisión de imágenes faciales a través de segmentos de comunicación RS-485**
+
+  Las imágenes de credenciales biométricas no se transmiten a través de segmentos de comunicación RS-485, por lo que se mostrará una imagen sustituta al visualizar el rostro del administrador maestro registrado en el dispositivo esclavo.

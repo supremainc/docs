@@ -1,0 +1,183 @@
+---
+id: installation
+title: Instalación
+description: Proporciona el proceso completo y ejemplos de conexión necesarios para la instalación del producto.
+keywords:
+  - Instalar
+  - CoreStation 20
+  - Dispositivo
+---
+
+Ofrece los procedimientos completos de instalación y ejemplos de conexión necesarios para el dispositivo.
+
+## Fijación del producto
+
+Fije firmemente el producto con un tornillo de fijación en el lugar de montaje.
+
+<Image src="/img/device/device-fix-cs20.png" className="none" width="50%" alone />
+
+<PageBreak />
+
+{/* ## 전원 연결 */}
+
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+### Especificaciones de alimentación del lector y la cerradura
+
+| Alimentación | Lector (corriente máxima, número de dispositivos) | Cerradura (corriente máxima, número de dispositivos) |
+| --- | --- | --- |
+| DC 12V | 600 mA (300 mA × 2) | 1.2 A (600 mA × 2) |
+| DC 24V | 300 mA (150 mA × 2) | 600 mA (300 mA × 2) |
+| PoE+ (salida de 12 V) | 600 mA (300 mA × 2) | 600 mA (600 mA x 1) |
+
+<PageBreak />
+
+### Longitud máxima de extensión según especificación de cable
+
+La distancia que se puede conectar puede variar según las especificaciones del cable y el entorno de instalación utilizado para la conexión de alimentación. Si las conexiones de los cables se realizan de forma incorrecta, el dispositivo puede funcionar incorrectamente. Este producto admite alimentación de 12 V CC, 24 V CC y PoE+. Asegúrese de conectar la alimentación correctamente comprobando la longitud máxima de extensión según la especificación de cada cable.
+
+<Table>
+  <Thead>
+    <Row>
+      <Th rowspan={2}>Especificación del cable</Th>
+
+      <Th colspan={2}>DC 12V</Th>
+
+      <Th colspan={2}>DC 24V</Th>
+
+      <Th colspan={2}>PoE+ (Salida de 12 V)</Th>
+    </Row>
+
+    <Row>
+      <Th>Lector (300 mA)</Th>
+
+      <Th>Cerradura (600 mA)</Th>
+
+      <Th>Lector (150 mA)</Th>
+
+      <Th>Cerradura (300 mA)</Th>
+
+      <Th>Lector (300 mA)</Th>
+
+      <Th>Cerradura (600 mA)</Th>
+    </Row>
+  </Thead>
+
+  <Tbody>
+    <Row className="center">
+      <Td>14 AWG</Td>
+      <Td>380 m</Td>
+      <Td>190 m</Td>
+      <Td>1540 m</Td>
+      <Td>770 m</Td>
+      <Td>380 m</Td>
+      <Td>190 m</Td>
+    </Row>
+
+    <Row className="center">
+      <Td>16 AWG</Td>
+      <Td>240 m</Td>
+      <Td>120 m</Td>
+      <Td>960 m</Td>
+      <Td>480 m</Td>
+      <Td>240 m</Td>
+      <Td>120 m</Td>
+    </Row>
+
+    <Row className="center">
+      <Td>18 AWG</Td>
+      <Td>150 m</Td>
+      <Td>75 m</Td>
+      <Td>600 m</Td>
+      <Td>300 m</Td>
+      <Td>150 m</Td>
+      <Td>75 m</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+<PageBreak />
+
+{/* ## 네트워크 연결 */}
+
+import NetworkConnection from "../../common/_device-network-connection.mdx";
+
+<NetworkConnection />
+
+<PageBreak />
+
+## Conexión RS-485
+
+Este producto admite tres puertos RS-485 y, al conectar la interfaz de puerta en cadena, se pueden configurar hasta 34 puertas.
+
+<Image src="/img/device/installation-rs485-connection-cs20.png" width="55%" className="none" />
+
+:::info
+
+* El número total de dispositivos RS-485 conectados al producto no debe exceder de 84. (incluye la interfaz de puerta)
+
+* Se pueden conectar hasta 2 dispositivos por puerto para RS-485 0 y RS-485 1.
+
+* Si se conectan más de 3 dispositivos a un solo puerto RS-485, es posible que el dispositivo deseado no aparezca en la lista de conexión al buscar dispositivos esclavos.
+
+* Utilice cable AWG26 o superior para RS-485 y asegúrese de que todo el cableado cumpla con las normas ANSI/NFPA 70.
+
+* Utilice un par trenzado AWG24 con una longitud máxima de 1.2 km para el cable RS-485.
+
+* Se recomienda usar cables RS-485 con una impedancia característica de 120 Ω.
+
+* Conecte resistencias de terminación (120 Ω) en ambos extremos de la conexión en cadena RS-485. Si se conecta en la línea media, el nivel de señal se reducirá y el rendimiento de comunicación se verá afectado. Asegúrese de conectarlas en ambos extremos de la conexión en cadena. Configure el interruptor de la resistencia de terminación de este producto en ON.
+
+:::
+
+<PageBreak />
+
+{/* ## 릴레이 연결 */}
+
+import RelayConnectioin from "../../common/_device-indoor-module-relay-connection.mdx";
+
+<RelayConnectioin />
+
+<PageBreak />
+
+{/* ## Wiegand 연결 */}
+
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+{/* ## 출입문 센서 및 퇴실 버튼 연결 */}
+
+import RtsConnection from "../../common/_device-door-sensor-connection.mdx";
+
+<RtsConnection />
+
+<PageBreak />
+
+{/* ## AUX 입력 연결 */}
+
+import AuxConnection from "../../common/_device-aux-connection.mdx";
+
+<AuxConnection />
+
+## Ranura para tarjeta SAM <Badge only>CS-20P</Badge>
+
+Use una tarjeta SAM (Secure Access Module).
+
+<Image src="/img/device/installation-sam-slot-connection-cs20.png" width="40%" className="none" />
+
+:::info
+
+<Badge only>CS-20P</Badge> Utilice solo dispositivos esclavos conectados directamente al puerto lector CS-20P cuando se instale una tarjeta SAM.
+
+:::
+
+<PageBreak />
+
+{/* ## 공장 초기화 {#factory-reset} */}
+
+import FactoryReset from "../../common/_cs-fatory-reset.mdx";
+
+<FactoryReset />

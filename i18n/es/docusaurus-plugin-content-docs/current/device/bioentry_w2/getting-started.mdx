@@ -1,0 +1,176 @@
+---
+id: getting-started
+title: Primeros pasos
+description: Proporciona procedimientos iniciales para empezar con el dispositivo.
+keywords:
+  - Componentes
+  - Nombre
+  - Función
+  - Cable
+  - Conector
+---
+
+Proporciona procedimientos iniciales para empezar con el dispositivo.
+
+## Componentes
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-device-bew2.svg" className="none" width={90} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-wall-bracket-bew2.svg" className="none" width={80} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-quick-guide.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-oss-guide.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>BioEntry W2</Td>
+
+      <Td>Soporte de pared</Td>
+
+      <Td>Guía rápida</Td>
+
+      <Td>Guía de software de código abierto</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-shrink-tube.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-fixing-screws2.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-bracket-fixing-screw.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-diode1.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-resistor.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Tubo termorretráctil</Td>
+
+      <Td>Tornillos de fijación x2</Td>
+
+      <Td>Tornillo de fijación del soporte (en forma de estrella)</Td>
+
+      <Td>Diodo</Td>
+
+      <Td>Resistencia de 120 Ω</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## Nombre y función de cada parte
+
+<Image src="/img/device/name-function-each-part-bew2.png" className="none" width="70%" />
+
+* **Indicador LED**: Indica el estado operativo del dispositivo mediante el color del LED.
+
+  * Verde: autenticación exitosa.
+
+  * Rojo: autenticación fallida.
+
+  * Azul/cian intermitente: funcionamiento normal.
+
+  * Azul/verde intermitente:
+
+    * Al configurar <Cmd sid="ui_012" product="dev" /> para su uso, no se puede obtener la dirección IP.
+
+    * Cuando está en modo <Cmd sid="ui_205" product="dev" />, la conexión con el dispositivo maestro se desconecta.
+
+    * Al inicializar la configuración de red.
+
+  * Verde intermitente: esperando entrada.
+
+  * Parpadeo verde/blanco: conectando a la aplicación Suprema Airfob Pass (BLE)
+
+* **Unidad de autenticación de tarjeta RF y tarjeta de acceso móvil**: parte para escanear una tarjeta RFID o una tarjeta de acceso móvil para la entrada.
+
+* **Unidad de reconocimiento de huella dactilar**: La parte que reconoce la huella dactilar para acceso.
+
+* **Botón de reinicio**
+
+  * Inicializa la configuración de red. Para obtener más información sobre la inicialización de la configuración de red, consulta [lo siguiente](installation#reset-network-settings).
+
+  * Elimina toda la información y los certificados almacenados en el dispositivo e inicializa la configuración. Para obtener más información sobre la inicialización de fábrica, consulta [lo siguiente](installation#factory-reset).
+
+* **LED de estado de red**: Indica el estado de la conexión de red.
+
+* **Cable**
+
+  Alimentación / Ethernet + PoE / RS-485 / Wiegand entrada/salida / entrada / relé
+
+### Cable
+
+<Columns>
+  <Column>
+    <Image src="/img/device/cables-layout-bew2.svg" alone width={550} className="none" />
+  </Column>
+
+  <Column className="padding--l10">
+    | Pin | Nombre | Color |
+    | :-: | :-: | :-: |
+    | 1 | RLY NO | Gris (franja blanca) |
+    | 2 | RLY COM | Verde (franja blanca) |
+    | 3 | RLY NC | Naranja (franja blanca) |
+    | 4 | VB2 | Azul/Marrón |
+    | 5 | VB1 | Rojo/Verde |
+    | 6 | WG D0 | Verde |
+    | 7 | WG D1 | Blanco |
+    | 8 | WG GND | Negro |
+    | 9 | INPUT1 | Marrón |
+    | 10 | INPUT0 | Morado |
+    | 11 | PWR +VDC | Rojo |
+    | 12 | Sin conexión | Rosa |
+    | 13 | PWR GND | Negro (franja blanca) |
+    | 14 | 485 TRXN | Amarillo (franja negra) |
+    | 15 | 485 TRXP | Azul (franja blanca) |
+    | 16 | 485 GND | Blanco (franja negra) |
+    | 17 | ENET TXP | Blanco |
+    | 18 | ENET TXN | Naranja |
+    | 19 | ENET RXP | Negro |
+    | 20 | ENET RXN | Amarillo |
+  </Column>
+</Columns>
+
+:::info
+
+Hay varios conductores de calibre AWG	26, que deben protegerse con aislamiento estándar o material equivalente al realizar el cableado. Además, asegúrese de que el cable no entre en contacto con conductores mayores a 18 AWG (0.82 mm²).
+
+:::
+
+{/* ## 올바른 지문 입력 방법 */}
+
+import Enrollfingerprint from '../../common/_enroll-fingerprint.mdx'
+
+<Enrollfingerprint />

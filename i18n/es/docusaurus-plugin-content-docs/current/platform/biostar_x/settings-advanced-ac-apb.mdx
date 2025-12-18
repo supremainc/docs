@@ -1,0 +1,100 @@
+---
+id: settings-advanced-ac-apb
+title: Anti-retorno
+description: Guía para configurar el anti-passback. El anti-passback ofrece funciones mejoradas en comparación con el anti-passback generado a partir de puertas o dispositivos.
+keywords:
+  - Control de acceso avanzado
+  - Anti-retorno
+---
+
+El anti-passback ofrece funciones mejoradas en comparación con el anti-passback generado a partir de puertas o dispositivos. Configure el anti-passback para obligar a los usuarios a utilizar las puertas y los dispositivos designados al ingresar y salir. Esto evita el reingreso no autorizado y mejora la seguridad.
+
+:::info
+
+<Glossary termid="apb" />
+
+:::
+
+## Registrar anti-passback {#addAPBZone}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.advancedAc.root" /> en la barra lateral izquierda.
+
+3. Haz clic en <Cmd sid="button.func.addZone" product="2" />.
+
+4. Seleccione <Cmd sid="zone.antiPassback" product="2" /> y haga clic en <Cmd sid="button.apply" product="2" />.
+
+5. Ingrese el nombre de la función adicional de anti-passback en la sección <Cmd sid="common.info" product="2" />.
+
+   <Image src="/img/biostarx-settings-adv-ac-add-apb.png" />
+
+6. Configure los detalles de la función de anti-passback en la sección <Cmd sid="common.setting" product="2" />. Para obtener más información, consulta [lo siguiente](#setting).
+
+7. Configure las acciones a realizar cuando se produzca una violación de anti-passback en la sección <Cmd sid="common.alarm" product="2" />.
+
+8. Seleccione los grupos de ingreso que pueden omitir el anti-passback en la sección <Cmd sid="zone.apb.bypass" product="2" />. Los usuarios que pertenezcan a este grupo pueden omitir el anti-passback.
+
+9. Después de completar todas las configuraciones, haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla.
+
+:::info
+
+La sección <Cmd sid="common.alarm" product="2" /> solo puede utilizarse después de configurar tanto <Cmd sid="zone.entryDevices" product="2" /> como <Cmd sid="zone.exitDevices" product="2" />.
+
+:::
+
+## Guía de opciones de configuración {#setting}
+
+Los detalles de la configuración de anti-passback son los siguientes.
+
+* <Cmd sid="zone.globalZone" product="2" />: Establece el alcance de aplicación.
+
+  * <Cmd sid="zone.globalZone.local" product="2" />: Se puede configurar con dispositivos de entrada conectados mediante RS-485.
+
+  * <Cmd sid="zone.globalZone.global" product="2" />: Se puede configurar en todos los dispositivos registrados en **BioStar X**.
+
+* <Cmd sid="zone.pause.activatedAndDeactivated" product="2" />: Puedes activar o desactivar temporalmente la configuración.
+
+* <Cmd sid="zone.apbType" product="2" />: Seleccione el tipo de anti-passback.
+
+  * <Cmd sid="door.apbType.hard" product="2" />: Crea eventos de anti-passback y no permite el ingreso.
+
+  * <Cmd sid="door.apbType.soft" product="2" />: Crea eventos de anti-passback y permite el ingreso.
+
+* <Cmd sid="door.resetTime" product="2" />: Establezca el tiempo de espera hasta que se permita el reingreso después de que un usuario viole las reglas de anti-passback. Después de que transcurra el tiempo especificado tras una alarma, se permitirá automáticamente el acceso del usuario.
+
+  * Se puede configurar en un rango de **1** minuto a **10080** minutos (7 días).
+
+  * Si se establece en **0** minutos, la alarma no se borrará automáticamente hasta que el administrador la borre manualmente.
+
+* <Cmd sid="zone.apbUseDoorSensor" product="2" />: Configure el alcance en el que se aplican las reglas de anti-passback.
+
+  * <Cmd sid="common.on" product="2" />: Las reglas de anti-passback se aplican según la operación real de los dispositivos de entrada y salida.
+
+  * <Cmd sid="common.off" product="2" />: Las reglas se aplican según la autenticación del usuario, independientemente del funcionamiento de la puerta.
+
+  * <Cmd sid="zone.apbUseEachDoorSensorSetting" product="2" />: Al usar APB basado en la entrada de la puerta correspondiente, las reglas de anti-passback se aplican según la opción de uso del sensor.
+
+* <Cmd sid="zone.entryDevices" product="2" />: Selecciona el dispositivo que se utilizará al entrar. Puedes elegir de la lista de dispositivos registrados.
+
+* <Cmd sid="zone.exitDevices" product="2" />: Selecciona el dispositivo que se utilizará al salir. Puedes elegir de la lista de dispositivos registrados.
+
+* <Cmd sid="zone.apbFailAction" product="2" />: Configure la acción de la puerta cuando se interrumpa la comunicación con dispositivos configurados con anti-passback en **BioStar X**. Esta función está disponible cuando la opción <Cmd sid="zone.globalZone" product="2" /> se establece en <Cmd sid="zone.globalZone.global" product="2" />.
+
+  * <Cmd sid="zone.apbFailAction.noAction" product="2" />: La puerta se abre cuando el usuario se autentica normalmente.
+
+  * <Cmd sid="zone.apbFailAction.recordLog" product="2" />: Se genera una alarma de violación de anti-passback y la puerta se abre.
+
+  * <Cmd sid="zone.apbFailAction.doorLocked" product="2" />: Se genera una alarma de violación de anti-passback y la puerta no se abre.
+
+:::info
+
+Para obtener más información sobre el registro de dispositivos, consulte lo siguiente.
+
+* <DocLink docId="platform/biostar_x/settings-adding-devices" />
+
+* <DocLink docId="platform/biostar_x/settings-adding-wiegand" />
+
+* <DocLink docId="platform/biostar_x/settings-adding-slave-device" />
+
+:::

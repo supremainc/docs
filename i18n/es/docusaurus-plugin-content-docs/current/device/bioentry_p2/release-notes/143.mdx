@@ -1,0 +1,32 @@
+---
+id: 143
+title: Firmware Version 1.4.3
+---
+
+# Firmware Version 1.4.3 (Build No. 1.4.3_211213)
+
+Release<Separator/>2022-01-25
+
+## New Features and Improvements
+
+---
+
+1. Improved to transmit entire card data, including the parity bit, when a user authenticated the fingerprint while the Wiegand card was registered.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. The card ID was always output as MSB through OSDP when the card ID is input while the device was connected by an intelligent slave. <Badge>1.4.1</Badge>
+
+1. The user ID was abnormally displayed in the event log if the user authenticated with AoC set as the blacklist card when the User ID Type was set to Alphanumeric. <Badge>1.0.0</Badge>
+
+1. The device failed to recognize the iCLASS Seos card intermittently before rebooting the device. (BEP2-OA) <Badge>1.0.0</Badge>
+
+1. When the device is connected as an intelligent slave and the first card registered to the user is a Wiegand card of a format other than 26-bit, the CSN value is output through OSDP when authenticated with the user's fingerprint. <Badge>1.4.1</Badge>
+
+1. The fingerprint sensor was deactivated after upgrading the firmware to v1.4.2 and it was reactivated only when the device is restarted. <Badge>1.4.2</Badge>
+
+</BugLists>

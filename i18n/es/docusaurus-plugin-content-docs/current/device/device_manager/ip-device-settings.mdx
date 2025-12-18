@@ -1,0 +1,218 @@
+---
+id: ip-device-settings
+title: Configurar dispositivo IP
+description: Cambie la configuración del dispositivo IP.
+keywords:
+  - Dispositivo IP
+  - Red
+  - Servidor
+  - RS-485
+  - Otros
+  - LED/Zumbador
+  - Configuración del dispositivo
+  - Conexión de dispositivos
+  - Actualización de firmware
+  - Reiniciar dispositivo
+  - Inicializar configuración
+  - Cambiar contraseña
+---
+
+Cambie la configuración del dispositivo IP. Cambie la configuración de forma rápida y sencilla en comparación con hacerlo mediante el programa de administración en una PC o mediante tarjetas de comandos.
+
+:::info
+
+Es posible que ciertos ajustes no se apliquen si la versión del firmware del dispositivo es antigua. Consulta [Actualizar el firmware del dispositivo](#device-firmware-upgrade) para aplicar todos los ajustes.
+
+:::
+
+## Cambiar configuración del dispositivo
+
+Cambie la configuración de red, servidor, RS-485, LED y zumbador, entre otras.
+
+:::info
+
+Los dispositivos biométricos solo admiten las configuraciones de red y servidor.
+
+:::
+
+1. Active el Bluetooth en su dispositivo móvil y ejecute Suprema Device Manager.
+
+2. Seleccione el dispositivo IP desde la pantalla principal.
+
+3. Verifique el ID del dispositivo para seleccionarlo en la lista de dispositivos conectables o acerque el dispositivo móvil al equipo para conectarse.
+
+4. Después de establecer la contraseña del dispositivo, presione <Cmd sid="ui_367" product="dev" />. Toque <Image src="/img/common/ico-password.svg" ico alone /> para mostrar la contraseña ingresada.
+
+   :::info
+
+   * La contraseña del dispositivo puede tener entre 6 y 32 caracteres.
+
+   * Procure no perder la contraseña del dispositivo. Si pierde la contraseña del dispositivo, deberá inicializar el equipo para poder conectarse.
+
+   :::
+
+5. Después de configurar cada elemento, presione <Cmd sid="ui_288" product="dev" /> para guardar.
+
+### Configuración de red
+
+<Image src="/img/device/ip-device-network.png" width={250} />
+
+* <Cmd sid="ui_355" product="dev" />: Introduzca el puerto que utilizará el dispositivo.
+
+* <Cmd sid="ui_012" product="dev" />: Active esta opción para que el dispositivo use IP dinámica. Si activa esta opción, no podrá introducir la información de red manualmente.
+
+* <Cmd sid="ui_029" product="dev" />, <Cmd sid="ui_068" product="dev" />, <Cmd sid="ui_191" product="dev" />: Introduzca la información de red del dispositivo.
+
+* <Cmd sid="ui_013" product="dev" />: Introduzca la dirección del servidor DNS.
+
+### Servidor
+
+<Image src="/img/device/ip-device-server.png" width={250} />
+
+* <Cmd sid="ui_188" product="dev" />: Configure el método de comunicación del servidor. Para buscar y conectar el dispositivo desde el servidor, seleccione <Cmd sid="ui_181" product="dev" />. Para establecer la información del servidor para conectar el dispositivo, seleccione <Cmd sid="ui_281" product="dev" />.
+
+* <Cmd sid="ui_182" product="dev" />: Introduzca la dirección IP del servidor.
+
+* <Cmd sid="ui_183" product="dev" />: Introduzca el dominio del servidor.
+
+* <Cmd sid="ui_189" product="dev" />: Introduzca el puerto del servidor.
+
+### RS-485
+
+<Image src="/img/device/ip-device-rs485.png" width={250} />
+
+* <Cmd sid="ui_050" product="dev" />: Configure el modo RS-485.
+
+* <Cmd sid="ui_298" product="dev" />: Establece la velocidad de transmisión RS-485.
+
+### Otros
+
+<Image src="/img/device/ip-device-others.png" width={250} />
+
+* <Cmd sid="ui_132" product="dev" />: Verifique el estado de uso de la memoria.
+
+* <Cmd sid="ui_150" product="dev" />: Si ocurre un evento de sabotaje en el dispositivo, puede configurarlo para eliminar toda la información de usuario, los registros y las claves de seguridad almacenadas. Active la función de manipulación de seguridad para utilizarla.
+
+### LED / zumbador
+
+<Image src="/img/device/device-manager-led-buzzer.png" width={250} />
+
+* <Cmd sid="ui_272" product="dev" />: Configure los colores que se mostrarán en el LED del dispositivo durante el funcionamiento normal.
+
+* <Cmd sid="ui_325" product="dev" />: Configure el color que se mostrará en el LED del dispositivo y la cantidad de veces que suena el zumbador al escanear una tarjeta.
+
+* <Cmd sid="ui_262" product="dev" />: Configure el color que se mostrará en el LED del dispositivo y la cantidad de veces que suena el zumbador cuando la autenticación es correcta.
+
+* <Cmd sid="ui_263" product="dev" />: Configure el color que se mostrará en el LED del dispositivo y la cantidad de veces que suena el zumbador cuando la autenticación falla.
+
+:::info
+
+* El LED puede configurarse para mostrar un máximo de tres colores en patrones alternos. Presione la ranura para elegir un color.
+
+* Al seleccionar <Image src="/img/common/ico-cancel2.svg" ico alone />, se omite la secuencia de color de esa ranura y se muestra el color configurado para la siguiente ranura.
+
+:::
+
+## Conectar dispositivo {#connect-device}
+
+Busque y conéctese a los dispositivos IP instalados cercanos. Cuando esté conectado a Suprema Device Manager, podrá actualizar el firmware del dispositivo, reiniciarlo, inicializar la configuración, inicializar la configuración del dispositivo excepto la red, cambiar la contraseña de administrador y usar varias funciones.
+
+1. Active el Bluetooth en su dispositivo móvil y ejecute Suprema Device Manager.
+
+2. Seleccione el dispositivo IP desde la pantalla principal. Aparecerá una lista de dispositivos conectables.
+
+   <Image src="/img/device/ip-device-connect.png" width={250} />
+
+3. Seleccione un dispositivo verificando el ID en la lista de dispositivos o acerque su dispositivo móvil al dispositivo para conectarlo.
+
+4. Ingrese la contraseña de conexión. Toque <Image src="/img/common/ico-password.svg" ico alone /> para mostrar la contraseña ingresada.
+
+5. Presione <Cmd sid="ui_367" product="dev" /> para completar la conexión del dispositivo.
+
+:::info
+
+<Cmd sid="ui_291" product="dev" />: En la parte superior de la pantalla de lista de dispositivos, presione <IcFilter /> para mostrar solo los dispositivos deseados en la lista.
+
+:::
+
+## Actualizar el firmware del dispositivo {#device-firmware-upgrade}
+
+Actualice fácilmente el firmware del dispositivo.
+
+:::info
+
+* Descargue el archivo de firmware en su dispositivo móvil para actualizar el firmware. Puede descargar el firmware más reciente desde el [Centro de descargas de Suprema](https://download.supremainc.com/).
+
+* Durante la actualización del firmware, mantenga una distancia menor a 1 m entre el dispositivo y el dispositivo móvil.
+
+:::
+
+1. Consulte [Conectar dispositivo](#connect-device) para conectarse al dispositivo y actualizar el firmware.
+
+2. Toque <Image src="/img/common/ico-option.svg" ico alone /> → <Cmd sid="ui_018" product="dev" />.
+
+   <Image src="/img/device/ip-device-fwupgrade.png" width={250} />
+
+3. Seleccione el firmware desde la ruta donde se guardó el archivo de firmware. La actualización del firmware está en curso.
+
+4. Presione <Cmd sid="ui_367" product="dev" /> para completar la actualización del firmware.
+
+## Reiniciar dispositivo
+
+Reinicie el dispositivo.
+
+1. Consulte [Conectar dispositivo](#connect-device) para conectarse al dispositivo y reiniciarlo.
+
+2. Toque <Image src="/img/common/ico-option.svg" ico alone /> → <Cmd sid="ui_287" product="dev" />.
+
+   <Image src="/img/device/ip-device-restart.png" width={250} />
+
+3. Al reiniciar el dispositivo, la conexión de comunicación BLE con el dispositivo móvil se desconectará. Habilite la función <Cmd sid="ui_276" product="dev" /> para reconectar automáticamente. Para obtener instrucciones detalladas de configuración, consulte [Configurar los ajustes de la aplicación](initial-setup#app-settings).
+
+## Inicializar configuración
+
+Inicialice la configuración del dispositivo.
+
+1. Consulte [Conectar dispositivo](#connect-device) para conectarse al dispositivo e inicializar la configuración.
+
+2. Toque <Image src="/img/common/ico-option.svg" ico alone /> → <Cmd sid="ui_195" product="dev" />.
+
+   <Image src="/img/device/ip-device-restore-default.png" width={250} />
+
+3. Si inicializa el dispositivo, todas las configuraciones aplicadas se restaurarán a los valores de fábrica. Presione <Cmd sid="ui_367" product="dev" /> para continuar.
+
+## Inicializar configuración del dispositivo excepto red
+
+Inicialice la configuración del dispositivo excepto la de red.
+
+1. Consulte [Conectar dispositivo](#connect-device) para conectarse al dispositivo e inicializar la configuración del dispositivo excepto la red.
+
+2. Toque <Image src="/img/common/ico-option.svg" ico alone /> → <Cmd sid="ui_105" product="dev" />.
+
+   <Image src="/img/device/ip-device-restore-default-network.png" width={250} />
+
+3. Si inicializa la configuración del dispositivo excepto la red, se inicializarán las demás configuraciones. Presione <Cmd sid="ui_367" product="dev" /> para continuar.
+
+## Cambiar contraseña del dispositivo
+
+Cambie la contraseña del dispositivo.
+
+1. Consulte [Conectar dispositivo](#connect-device) para conectarse al dispositivo y cambiar la contraseña.
+
+2. Toque <Image src="/img/common/ico-option.svg" ico alone /> → <Cmd sid="ui_156" product="dev" />.
+
+   <Image src="/img/device/ip-device-change-password.png" width={250} />
+
+3. Ingrese la contraseña actual y la nueva contraseña que utilizará.
+
+   <Image src="/img/device/device-manager-change-password.png" width={250} />
+
+4. Presione <Cmd sid="ui_367" product="dev" /> para completar el cambio de contraseña.
+
+:::info
+
+* La contraseña del dispositivo puede tener entre 6 y 32 caracteres.
+
+* Procure no perder la contraseña del dispositivo. Si pierde la contraseña del dispositivo, deberá inicializar el equipo para poder conectarse.
+
+:::

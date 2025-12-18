@@ -1,0 +1,85 @@
+---
+id: settings-device-connection-manager
+title: Configuración de administración de conexión de dispositivos
+description: Este documento brinda orientación sobre cómo conectar y administrar una gran cantidad de dispositivos a través del servidor de comunicación en BioStar X. Puede administrar hasta 3,000 dispositivos de red distribuyéndolos entre varios servidores.
+keywords:
+  - Administrador de conexión de dispositivos
+  - Servidor de comunicación
+  - Ajustes
+---
+
+El <Cmd sid="settings.deviceConnectionManager.settingMenuTitle" product="2" /> de **BioStar X** es una función diseñada para administrar de manera eficiente una gran cantidad de dispositivos en empresas o edificios grandes. Anteriormente, un único servidor podía conectar un máximo de 1,000 dispositivos, pero ahora puede instalar varios servidores de **comunicación** en varias computadoras para administrar hasta 3,000 dispositivos de red.
+
+:::info
+
+* Esta función requiere que la licencia de **Device Manager** esté activada. Para obtener más información sobre la política de licencias, consulta [lo siguiente](licensing).
+
+* Para las especificaciones e instalación del servidor de comunicación, consulte lo siguiente:
+
+  * [Especificaciones del servidor de comunicación](system-requirements#communication-server)
+
+  * [Instalar servidor de comunicación](install-communication-server)
+
+:::
+
+## Funciones clave
+
+* **Expansión de servidor**: Instale servidores de comunicación en computadoras adicionales además de la principal para conectar más dispositivos.
+
+* **Operación con múltiples servidores**: Use hasta tres servidores en conjunto para admitir un total de 3,000 dispositivos.
+
+* **Gestión conveniente de dispositivos**: Al agregar nuevos dispositivos, elija a qué servidor conectarlos; también puede mover dispositivos existentes a otro servidor.
+
+* **Soporte para entornos grandes**: Opere una gran cantidad de dispositivos de forma fiable en sitios corporativos o edificios grandes.
+
+El servidor de comunicación es un servicio dedicado que separa la funcionalidad de conexión con los dispositivos del servidor integrado de BioStar X. Se centra únicamente en la comunicación fiable con los dispositivos, mejorando el rendimiento del sistema en general.
+
+## Mover dispositivos a otro servidor
+
+Puede mover los dispositivos registrados en el servidor principal u otros servidores de comunicación a otro servidor de comunicación. Esta función ayuda a mantener el estado de conexión de los dispositivos mientras se trasladan entre servidores.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.device.root" /> → <Cmd sid="setting.menu.device.deviceConnectionManager" /> en la barra lateral izquierda
+
+3. En la sección <Cmd sid="settings.deviceConnectionManager.followerSelectLabel" product="2" /> de la izquierda, seleccione el servidor donde está registrado el dispositivo que desea mover.
+
+   <Image src="/img/biostarx-setting-device-connection-manager-01.png" />
+
+4. En la sección <Cmd sid="settings.deviceConnectionManager.selectedSelectLabel" product="2" /> de la derecha, seleccione el servidor de destino al que desea trasladar los dispositivos.
+
+   <Image src="/img/biostarx-setting-device-connection-manager-02.png" />
+
+5. Seleccione los dispositivos que desea mover de la lista de dispositivos. Puede seleccionar varios dispositivos.
+
+   <Image src="/img/biostarx-setting-device-connection-manager-03.png" />
+
+   :::note
+
+   Para buscar un dispositivo específico, ingrese palabras clave en el campo de entrada superior. Puede buscar por nombre del dispositivo o número de serie.
+
+   :::
+
+6. Haga clic en <Cmd sid="settings.deviceConnectionManager.moveButtonTitle" product="2" /> para mover el dispositivo al servidor de destino.
+
+   <Image src="/img/biostarx-setting-device-connection-manager-04.png" />
+
+7. Verifique el número total de dispositivos a mover, la cantidad de dispositivos conectados por TCP/IP, el nombre del servidor al que se trasladarán y la dirección IP en la ventana de mensajes.
+
+8. Haga clic en <Cmd sid="button.yes" product="2" />.
+
+Una vez completada la transferencia, puede verificar el número total de dispositivos trasladados, la cantidad de dispositivos conectados por TCP/IP, y el nombre y la dirección IP del servidor de destino en la ventana de mensajes.
+
+Si hay dispositivos que no se pudieron mover, la ventana de mensajes mostrará la cantidad de dispositivos que no se movieron y la cantidad de dispositivos conectados por TCP/IP. Para ver una lista de los dispositivos que no se pudieron mover y los motivos de la falla en un archivo CSV, haga clic en el botón <Cmd sid="button.download" product="2" />.
+
+:::info
+
+* Si no hay servidores de extensión conectados, <Cmd sid="settings.deviceConnectionManager.selectedSelectLabel" product="2" /> en el lado derecho de la pantalla no se mostrará.
+
+* Al seleccionar un servidor, puede ver todos los dispositivos registrados, incluidos los dispositivos conectados por Wiegand y RS-485 en ese servidor.
+
+* Al seleccionar un dispositivo o grupo de dispositivos, también se trasladarán los dispositivos subordinados conectados al dispositivo y los dispositivos incluidos en el grupo.
+
+* Los dispositivos que no están conectados mediante TCP/IP no se pueden mover.
+
+:::

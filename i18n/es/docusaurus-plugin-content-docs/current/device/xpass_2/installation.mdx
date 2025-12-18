@@ -1,0 +1,156 @@
+---
+id: installation
+title: Instalación
+description: Ofrece los procedimientos completos de instalación y ejemplos de conexión necesarios para el dispositivo.
+keywords:
+  - Soporte
+  - Alimentación
+  - Red
+  - Entrada
+  - Relé
+  - Independiente
+  - E/S Segura
+  - Wiegand
+---
+
+Ofrece los procedimientos completos de instalación y ejemplos de conexión necesarios para el dispositivo.
+
+## Fijar el soporte y el producto
+
+:::info
+
+Este documento explica el método de instalación basado en el tipo million. Instale el tipo gang box y el tipo teclado de la misma manera.
+
+:::
+
+1. Asegura firmemente el soporte con los tornillos de fijación en el lugar donde se montará el producto.
+
+   <Image src="/img/device/installation-device1-xpd2.svg" className="none" width={300} alone />
+
+   :::info
+
+   * Si instalas el producto en una pared de concreto, perfora un agujero, inserta un anclaje de PVC y sujétalo con un tornillo de fijación.
+
+   * Para evitar interferencias de RF, se debe mantener una distancia mínima de separación.
+
+   <Badge only>XP2-MDPB, XP2-MAPB, XP2-MAPB-H</Badge>
+
+   <Columns>
+     <Column className="text--center">
+       <Image src="/img/device/installation-wall1-xpd2-mdb.png" className="none" width={300} />
+
+       <div className="overflow-x">
+         | Espesor de pared | Distancia |
+         | :-: | :-: |
+         | 100 mm | 360 mm |
+         | 120 mm | 360 mm |
+         | 150 mm | 300 mm |
+       </div>
+     </Column>
+
+     <Column className="text--center">
+       <Image src="/img/device/installation-wall2-xpd2-mdb.png" className="none" width={300} />
+     </Column>
+   </Columns>
+
+   <Badge only>XP2-GDPB, XP2-GKDPB</Badge>
+
+   <Columns>
+     <Column className="text--center">
+       <Image src="/img/device/installation-wall1-xpd2-gdb.png" className="none" width={300} />
+
+       <div className="overflow-x">
+         | Espesor de pared | Distancia |
+         | :-: | :-: |
+         | 100 mm | 400 mm |
+         | 120 mm | 380 mm |
+         | 150 mm | 380 mm |
+       </div>
+     </Column>
+
+     <Column className="text--center">
+       <Image src="/img/device/installation-wall2-xpd2-gdb.png" className="none" width={300} />
+     </Column>
+   </Columns>
+
+   * Al utilizar una credencial de acceso móvil, instala los dispositivos manteniendo una distancia mínima de 1 m entre ellos para evitar interferencias BLE.
+
+   :::
+
+2. Monta el producto en el soporte fijado.
+
+   <Image src="/img/device/installation-device2-xpd2.svg" className="none" width={250} alone />
+
+3. Gira los tornillos de fijación para ensamblar el producto con el soporte.
+
+   <Image src="/img/device/installation-device3-xpd2.svg" className="none" width={250} alone />
+
+   :::info
+
+   Al ensamblar el producto con el soporte, puedes usar el tornillo de fijación del soporte incluido (en forma de estrella) en lugar del tornillo de fijación del producto para aumentar la seguridad.
+
+   :::
+
+{/* ## 전원 연결 */}
+
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+{/* ## 네트워크 연결 */}
+
+import NetworkConnection from "../../common/_device-network-connection.mdx";
+
+<NetworkConnection />
+
+{/* ## Input 연결 */}
+
+import InputConnection from "../../common/_device-input-connetion.mdx";
+
+<InputConnection />
+
+{/* ## 릴레이 연결 */}
+
+import RelayConnectioin from "../../common/_device-relay-connection.mdx";
+
+<RelayConnectioin />
+
+{/* ## 독립형 연결 */}
+
+import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
+
+<StandaloneConnection />
+
+{/* 공통 노트 */}
+
+import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
+
+<CommonNotes />
+
+{/* ## Secure I/O 2 연결 */}
+
+import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
+
+<SecureIOConnection />
+
+{/* 공통 노트 */}
+
+<CommonNotes />
+
+{/* ## Wiegand 연결 */}
+
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+{/* ## 네트워크 설정 초기화 */}
+
+import Resetnetwork from "../../common/_device-reset-network-settings.mdx";
+
+<Resetnetwork />
+
+{/* ## 공장 초기화 */}
+
+import Factoryreset from "../../common/_device-factory-reset.mdx";
+
+<Factoryreset name="verde" />

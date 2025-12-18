@@ -1,0 +1,86 @@
+---
+id: tna-settings
+title: Configurar tiempo y asistencia
+description: Puede registrar dispositivos para usarlos en la gestión de asistencia o establecer la información del remitente que se utilizará al enviar correos electrónicos de notificación.
+keywords:
+  - T&A (Tiempo y Asistencia)
+  - Ajustes
+---
+
+Puede registrar dispositivos para usarlos en la gestión de asistencia o establecer la información del remitente que se utilizará al enviar correos electrónicos de notificación. También puede establecer el delimitador de documentos para exportar informes de asistencia en formato CSV.
+
+## Acceder a la configuración de gestión de asistencia
+
+1. Haga clic en <Cmd sid="shell.header.tna" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <IcSet /> en la barra lateral izquierda.
+
+   <Image src="/img/biostarx-tna-access-btn.png" />
+
+3. Edite los campos necesarios.
+
+<Image src="/img/biostarx-tna-settings.png" />
+
+## Configuración de gestión de asistencia
+
+### <Cmd sid="setting.devices" product="2" className="normal" />
+
+Lista de dispositivos que se pueden usar para la gestión de asistencia. Para registrarlo como dispositivo de gestión de asistencia, seleccione el dispositivo deseado y haga clic en <Cmd sid="setting.register" product="2" />.
+
+<Image src="/img/biostarx-tna-settings-unregister-list.png" />
+
+### <Cmd sid="setting.registerDevices" product="2" className="normal" />
+
+Lista de dispositivos que se utilizan actualmente para la gestión de asistencia.
+
+* Para darlo de baja, seleccione el dispositivo deseado y haga clic en <Cmd sid="setting.unregister" product="2" />.
+
+  <Image src="/img/biostarx-tna-settings-register-list.png" />
+
+* Para editar la configuración de asistencia de un dispositivo registrado, haga clic en <Cmd sid="setting.setting" product="2" />. Para obtener más información sobre la configuración de asistencia, consulte [el siguiente enlace](settings-device-details-advanced#attendance-management).
+
+  <Image src="/img/biostarx-tna-initial-setting-device-setting.png" />
+
+  <Cmd sid="setting.typeCode" product="2" /> es una configuración para asignar <Cmd sid="device.tna.eventKey" product="2" /> con los tipos de eventos de asistencia. Los tipos de eventos de asistencia son los siguientes:
+
+  * <Cmd sid="PUNCH_TYPE_CHECK_IN" product="2" />
+
+  * <Cmd sid="PUNCH_TYPE_CHECK_OUT" product="2" />
+
+  * <Cmd sid="PUNCH_TYPE_BREAK_START" product="2" />
+
+  * <Cmd sid="PUNCH_TYPE_BREAK_END" product="2" />
+
+  * <Cmd sid="PUNCH_TYPE_MEAL_START" product="2" />
+
+  * <Cmd sid="PUNCH_TYPE_MEAL_END" product="2" />
+
+:::info
+
+* Solo puede editar la configuración de asistencia de un dispositivo cuando esté conectado a él.
+
+* Si elimina un dispositivo registrado desde el menú <Cmd sid="shell.header.setting" /> → <Cmd sid="setting.menu.device.root" />, el dispositivo de gestión de asistencia registrado también se eliminará automáticamente.
+
+:::
+
+### <Cmd sid="setting.triggerAction.senderInfor" product="2" className="normal" /> {#senderInfo}
+
+Puede establecer la información del remitente que se utilizará al enviar correos electrónicos de notificación. Haga clic en <Cmd sid="button.edit" product="2" />.
+
+<Image src="/img/biostarx-tna-settings-sender-info.png" />
+
+import EmailSmtpOptions from '../../common/_settings-email-settings.mdx';
+
+<EmailSmtpOptions />
+
+### <Cmd sid="setting.export" product="2" className="normal" />
+
+Con la función <Cmd sid="button.downloadToCsv" product="2" />, puede elegir el delimitador de documentos al exportar informes de asistencia.
+
+<Image src="/img/biostarx-tna-settings-export-csv.png" />
+
+### <Cmd sid="tna.settings.punchlogs.optionTitle" product="2" className="normal" />
+
+Puede establecer el período de almacenamiento de los registros de asistencia. Establezca la opción <Cmd sid="tna.settings.punchlogs.storeDays" product="2" /> en <Cmd sid="common.active" product="2" /> e ingrese el período. Para guardar la configuración, haga clic en <Cmd sid="tna.settings.apply" product="2" />.
+
+<Image src="/img/biostarx-tna-settings-save-period.png" />

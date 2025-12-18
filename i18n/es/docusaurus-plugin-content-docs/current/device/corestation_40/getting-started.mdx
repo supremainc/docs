@@ -1,0 +1,219 @@
+---
+id: getting-started
+title: Primeros pasos
+description: Proporciona procedimientos iniciales para empezar con el dispositivo.
+keywords:
+  - Componentes
+  - Nombre
+  - Función
+  - Cable
+  - Conector
+---
+
+Proporciona procedimientos iniciales para empezar con el dispositivo.
+
+## Componentes
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td rowspan={3} colspan={2}>
+        <Image src="/img/device/component-device-cs40.svg" className="none" height={350} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-quick-guide.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Guía rápida</Td>
+    </Row>
+
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-oss-guide.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td colspan={2}>CoreStation</Td>
+
+      <Td>Guía de software de código abierto</Td>
+    </Row>
+
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-screws12.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-spacer6.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-diode4.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Tornillo de fijación x12</Td>
+
+      <Td>Separador x6</Td>
+
+      <Td>Diodo x4</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+<PageBreak />
+
+{/* 액세서리_함체(ENCR-10) */}
+
+import Accessoryencr10 from '../../common/_device-encr10-accessory.mdx'
+
+<Accessoryencr10 />
+
+<PageBreak />
+
+## Nombre y función de cada parte
+
+<Magnify src="/img/device/product-part-cs40.svg" width="60%" zoomFactor={.4} mgWidth={500} mgHeight={500} alone />
+
+| No. | Nombre | No. | Nombre |
+| :-: | --- | :-: | --- |
+| 1 | Conexión **HOST RS-485** | 20 | Botón **RESET** |
+| 2 | Interruptor de resistencia de terminación **HOST RS-485** | 21 | Conexión **AUX IN (0, 1)** |
+| 3 | Botón **INIT** | 22 | Conexión de alimentación de CoreStation (DC 12V IN) |
+| 4 | Conexión **ETHERNET** | 23 | Conexión **RELAY 3** |
+| 5 | Conexión **RELAY 1** | 24 | Conexión **SUPERVISED INPUT (6:7)** o **Input (6:7)** |
+| 6 | Conexión **SUPERVISED INPUT (2:3)** o **Input (2:3)** | 25 | Conexión **OUTPUT (6:7)** |
+| 7 | Conexión **OUTPUT (2:3)** | 26 | Conexión **WIEGAND 3** |
+| 8 | Conexión **WIEGAND 1** | 27 | Salida 12VDC |
+| 9 | Salida 12VDC | 28 | Conexión **RS-485 3** |
+| 10 | Conexión **RS-485 1** | 29 | Interruptor de resistencia de terminación **RS-485 3** |
+| 11 | Interruptor de resistencia terminal **RS-485 1** | 30 | Indicador LED de estado de CoreStation |
+| 12 | Conexión **RELAY 0** | 31 | Conexión **RELAY 2** |
+| 13 | Conexión **SUPERVISED INPUT (0:1)** o **Input (0:1)** | 32 | Conexión **SUPERVISED INPUT (4:5)** o **Input (4:5)** |
+| 14 | Conexión **OUTPUT (0:1)** | 33 | Conexión **OUTPUT (4:5)** |
+| 15 | Conexión **WIEGAND 0** | 34 | Conexión **WIEGAND 2** |
+| 16 | Salida 12VDC | 35 | Salida 12VDC |
+| 17 | Conexión **RS-485 0** | 36 | Conexión **RS-485 2** |
+| 18 | Interruptor de resistencia terminal **RS-485 0** | 37 | Interruptor de resistencia de terminación **RS-485 2** |
+| 19 | Batería RTC |  |  |
+
+:::info
+
+* Presione el botón **INIT** durante más de 2 segundos, después de inicializar el producto vinculado al dispositivo, para conectarlo a otro dispositivo.
+
+* Presione el botón **RESET** para reiniciar el producto.
+
+* Use la salida de alimentación del producto (12 V, hasta 1.5 A) para alimentar el dispositivo Wiegand al conectarlo al producto. Si conecta tres dispositivos Wiegand que consumen 200 mA, conecte dispositivos que consuman hasta 900 mA a los terminales de salida de alimentación restantes.
+
+* La batería RTC tiene una capacidad de 226 mAh y la vida útil estimada puede variar según el entorno de instalación y el modo de uso. Al reemplazar la batería RTC, utiliza una CR2032.
+
+:::
+
+<PageBreak />
+
+### Indicador LED de estado de comunicación
+
+| LED | Estado |
+| --- | --- |
+| **HOST RS-485 TX** | Parpadeo naranja: Transmisión de datos RS-485 |
+| **HOST RS-485 RX** | Parpadeo verde: Recepción de datos RS-485 |
+| **RELAY (0 ~ 3)** | Encendido rojo: Operación del relé |
+| **SUPERVISED INPUT (0 ~ 7)** | Al usar entrada<br />- Luz verde: Normalmente cerrado<br />- Apagado: Normalmente abierto |
+| ^ | Al usar entrada supervisada<br />- Luz verde: Normalmente cerrado (cortocircuito), normalmente abierto, interruptor encendido<br />- Apagado: Interruptor apagado |
+| **AUX IN (0, 1)** | Luz naranja: Recepción de señal AUX |
+
+### Nivel de control de acceso
+
+| Función | Nivel |
+| --- | --- |
+| Ataque destructivo | I |
+| Seguridad de línea | I |
+| Resistencia | IV |
+| Energía en reposo | I |
+| Dispositivo de bloqueo de un solo punto con cerraduras | I |
+
+<PageBreak />
+
+### Indicador LED de estado de CoreStation
+
+Verifique el estado del producto con los LED DE ESTADO 1/2 ubicados en el lado izquierdo del frontal; estos muestran secuencialmente el estado de Ethernet, RS-485 0, RS-485 1, RS-485 2, RS-485 3, RS-485 HOST y el sistema en intervalos de un segundo.
+
+| Ítem | LED 1 | LED 2 | Estado |
+| --- | --- | --- | --- |
+| Ethernet | Rojo | Rojo | Conexión de IP dinámica fallida |
+| ^ | Rojo | Amarillo | Esperando conexión de IP dinámica |
+| ^ | Rojo | Celeste | Conexión de IP estática exitosa |
+| ^ | Rojo | Azul | Conexión de IP dinámica exitosa |
+| ^ | Rojo | Magenta | Conexión de IP estática fallida |
+| ^ | Rojo | Desactivado | Error de hardware |
+| RS-485 0 | Amarillo | Rojo | Sin dispositivo esclavo |
+| ^ | Amarillo | Amarillo | Dispositivo esclavo desconectado |
+| ^ | Amarillo | Azul | Dispositivo esclavo normal |
+| ^ | Amarillo | Desactivado | Error de hardware |
+| RS-485 1 | Verde | Rojo | Sin dispositivo esclavo |
+| ^ | Verde | Amarillo | Dispositivo esclavo desconectado |
+| ^ | Verde | Azul | Dispositivo esclavo normal |
+| ^ | Verde | Desactivado | Error de hardware |
+| RS-485 2 | Celeste | Rojo | Sin dispositivo esclavo |
+| ^ | Celeste | Amarillo | Dispositivo esclavo desconectado |
+| ^ | Celeste | Azul | Dispositivo esclavo normal |
+| ^ | Celeste | Desactivado | Error de hardware |
+| RS-485 3 | Azul | Rojo | Sin dispositivo esclavo |
+| ^ | Azul | Amarillo | Dispositivo esclavo desconectado |
+| ^ | Azul | Azul | Dispositivo esclavo normal |
+| ^ | Azul | Desactivado | Error de hardware |
+| RS-485 HOST | Magenta | Rojo | Sin dispositivo esclavo |
+| ^ | Magenta | Amarillo | Dispositivo esclavo desconectado |
+| ^ | Magenta | Azul | Dispositivo esclavo normal |
+| ^ | Magenta | Desactivado | Error de hardware |
+| Sistema | Blanco | Rojo | Bloqueo del sistema (condiciones y comportamiento operativos del dispositivo) |
+| ^ | Blanco | Amarillo | Bloqueo del sistema (condiciones y comportamiento operativos de BioStar X) |
+| ^ | Blanco | Verde | Conexión exitosa a BioStar X |
+| ^ | Blanco | Celeste | Conexión exitosa a BioStar X + Tamper activado |
+| ^ | Blanco | Azul | Sabotaje On |
+| ^ | Blanco | Magenta | Bloqueo del sistema (condiciones y comportamiento operativos del dispositivo) + Tamper activado |
+| ^ | Blanco | Blanco | Bloqueo del sistema (condiciones y comportamiento operativos de BioStar X) + Tamper activado |
+| ^ | Magenta | Magenta | Migración de base de datos en curso |
+
+<PageBreak />
+
+### Ejemplo de instalación
+
+Este producto es un sistema de control de acceso centralizado capaz de realizar autenticación biométrica. Diseñado para sistemas de nivel empresarial, el producto puede almacenar información de hasta 500,000 usuarios y realizar 400,000 comparaciones de huellas por segundo.
+
+Integre BioStar X para utilizar el control de acceso y la gestión de asistencia, y disponga de diversas interfaces como RS-485 (OSDP), Wiegand, entrada supervisada y AUX.
+
+<Image src="/img/device/installation-example-cs40.png" width="65%" className="none" />
+
+### Diagrama del sistema
+
+Conecte hasta 64 dispositivos RS-485 y conecte en serie un Módulo de Puerta para admitir hasta 132 dispositivos Wiegand.
+
+<Image src="/img/device/system-configuration-cs40.svg" width="100%" />
+
+<PageBreak />
+
+### Diagrama general de conexión
+
+Para un uso confiable del producto, se recomienda utilizar una carcasa dedicada. La carcasa incluye una placa de control LED, una placa de control de energía, un dispositivo de alimentación, una batería y un sensor antisabotaje.
+
+<Image src="/img/device/cs40-led-status.png" className="none" alone />
+
+<Image src="/img/device/cs40-wiring.png" className="none" alone />
+
+:::info
+
+No conecte a un tomacorriente controlado por el interruptor A.
+
+:::

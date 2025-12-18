@@ -1,0 +1,179 @@
+---
+id: getting-started
+title: Primeros pasos
+description: Proporciona procedimientos iniciales para empezar con el dispositivo.
+keywords:
+  - Componentes
+  - Nombre
+  - Función
+  - Cable
+  - Conector
+---
+
+Proporciona procedimientos iniciales para empezar con el dispositivo.
+
+## Componentes
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-device-bln2.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-wall-bracket-bln2.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-drilling-template-bln2.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-shrink-tube.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>BioLite N2</Td>
+
+      <Td>Soporte de pared</Td>
+
+      <Td>Plantilla de perforación</Td>
+
+      <Td>Tubo termorretráctil</Td>
+    </Row>
+  </Tbody>
+
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-pvc-anchors2.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-fixing-screws2.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-quick-guide.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-oss-guide.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Anclajes de PVC x2</Td>
+
+      <Td>Tornillos de fijación x2</Td>
+
+      <Td>Guía rápida</Td>
+
+      <Td>Guía de software de código abierto</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-bracket-fixing-screw.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-resistor.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-diode1.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Tornillo de fijación del soporte (en forma de estrella)</Td>
+
+      <Td>Resistencia de 120 Ω</Td>
+
+      <Td>Diodo</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## Nombre y función de cada parte
+
+<Image src="/img/device/name-function-each-part-bln2.png" className="none" width="30%" />
+
+* **Pantalla**: Proporciona una interfaz de usuario para la operación.
+
+* **Botón de funciones**: Se utiliza para la tecla de asistencia, la modificación de texto, etc.
+
+* **Teclado**
+
+  * **0-9**: Se utiliza para ingresar números o caracteres.
+
+  * **2**, **4**, **6**, **8**: Se utilizan para navegar al elemento deseado.
+
+* **Botón OK**: Se utiliza para seleccionar el modo de asistencia y guardar los ajustes. Cuando el código de trabajo esté configurado, mantén presionado para cambiar el código de trabajo del usuario.
+
+* **Botón ESC**: Se utiliza para abrir el menú, volver a la pantalla anterior y cancelar la entrada.
+
+* **Unidad de reconocimiento de huella dactilar**: La parte que reconoce la huella dactilar para acceso.
+
+* **Unidad de autenticación de tarjeta RF y tarjeta de acceso móvil**: parte para escanear una tarjeta RFID o una tarjeta de acceso móvil para la entrada.
+
+* **Cable**
+
+  Alimentación / RS-485 / Ethernet / Relé / Entrada/Salida Wiegand / Entrada
+
+* **Altavoz**: Emite sonido.
+
+### Cable
+
+<Columns>
+  <Column>
+    <Image src="/img/device/cables-layout-bln2.svg" className="none" width="70%" alone />
+  </Column>
+
+  <Column className="padding--l10">
+    | Pin | Nombre | Color |
+    | :-: | :-: | :-: |
+    | 1 | PWR +VDC | Rojo |
+    | 2 | PWR GND | Negro (franja blanca) |
+    | 3 | 485 TRXP | Azul (franja blanca) |
+    | 4 | 485 TRXN | Amarillo (franja negra) |
+    | 5 | 485 GND | Blanco (franja negra) |
+    | 6 | ENET RXN | Amarillo |
+    | 7 | ENET RXP | Verde |
+    | 8 | ENET TXN | Rojo |
+    | 9 | ENET TXP | Negro |
+    | 10 | RLY NO | Gris (franja blanca) |
+    | 11 | RLY COM | Verde (franja blanca) |
+    | 12 | RLY NC | Naranja (franja blanca) |
+    | 13 | WG D0 | Verde |
+    | 14 | WG D1 | Blanco |
+    | 15 | INPUT GND | Gris |
+    | 16 | INPUT1 | Marrón |
+    | 17 | INPUT0 | Morado |
+  </Column>
+</Columns>
+
+{/* 마스터 관리자 설정하기 */}
+
+import Masteradminsettings from '../../common/_device-master-admin-settings.mdx'
+
+<Masteradminsettings />
+
+{/* 올바른 지문 입력 방법 */}
+
+import Enrollfingerprint from '../../common/_enroll-fingerprint.mdx'
+
+<Enrollfingerprint />

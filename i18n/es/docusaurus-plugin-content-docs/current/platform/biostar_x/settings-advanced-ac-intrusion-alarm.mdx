@@ -1,0 +1,102 @@
+---
+id: settings-advanced-ac-intrusion-alarm
+title: Alarma Intrusión
+description: Esta guía muestra cómo configurar la seguridad. La función de alarma de intrusión permite bloquear puertas o activar alarmas cuando se detecta una intrusión.
+keywords:
+  - Control de acceso avanzado
+  - Alarma Intrusión
+---
+
+Esta guía muestra cómo configurar la seguridad. Los ajustes de la alarma de intrusión permiten bloquear puertas o activar alarmas cuando se detecta una intrusión.
+
+:::info
+
+<Glossary termid="intrusion_alarm_zone" />
+
+:::
+
+## Agregar alarma de intrusión {#addIntrusionAlarmZone}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.advancedAc.root" /> en la barra lateral izquierda.
+
+3. Haz clic en <Cmd sid="button.func.addZone" product="2" />.
+
+4. Seleccione <Cmd sid="zone.intrusion" product="2" /> y haga clic en <Cmd sid="button.apply" product="2" />.
+
+5. Introduzca el nombre del ajuste de alarma de intrusión que desea agregar en la sección <Cmd sid="common.info" product="2" />.
+
+   <Image src="/img/biostarx-settings-adv-ac-add-intrusion.png" />
+
+6. Configure los detalles de los ajustes de alarma de intrusión en la sección <Cmd sid="common.setting" product="2" />. Para obtener más información, consulta [lo siguiente](#setting).
+
+7. Agregue ajustes de autenticación para el armado y desarmado en la sección <Cmd sid="zone.intrusion.armConfiguration" product="2" />. Para obtener más información, consulte [lo siguiente](#armConfiguration).
+
+   <Image src="/img/biostarx-settings-adv-ac-add-intrusion-set-arm.png" />
+
+   :::note
+
+   La sección <Cmd sid="zone.intrusion.armConfiguration" product="2" /> aparece cuando selecciona una puerta en la sección <Cmd sid="common.info" product="2" />.
+
+   :::
+
+8. Configure las señales de detección de intrusión en la sección <Cmd sid="zone.intrusion.intrusionSetting" product="2" />. Para obtener más información, consulte [lo siguiente](#intrusionSetting).
+
+   <Image src="/img/biostarx-settings-adv-ac-add-intrusion-set-intrusion.png" />
+
+9. Configure las acciones que se realizarán cuando ocurran eventos específicos en la sección <Cmd sid="common.alarm" product="2" />.
+
+10. Después de completar todas las configuraciones, haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla.
+
+:::info
+
+Las secciones <Cmd sid="zone.intrusion.armConfiguration" product="2" />, <Cmd sid="zone.intrusion.intrusionSetting" product="2" /> y <Cmd sid="common.alarm" product="2" /> están disponibles solo si la opción <Cmd sid="zone.pause.doorselected" product="2" /> está configurada en la sección <Cmd sid="common.setting" product="2" />.
+
+:::
+
+## Guía de opciones de configuración {#setting}
+
+Los detalles para los ajustes de alarma de intrusión son los siguientes.
+
+* <Cmd sid="zone.globalZone" product="2" />: Establece el alcance de aplicación. Los ajustes de alarma de intrusión solo admiten el modo <Cmd sid="zone.globalZone.local" product="2" /> y solo se pueden configurar con dispositivos conectados mediante RS-485 y dispositivos de entrada.
+
+* <Cmd sid="zone.pause.activatedAndDeactivated" product="2" />: Puedes activar o desactivar temporalmente la configuración.
+
+* <Cmd sid="zone.pause.doorselected" product="2" />: Seleccione la puerta a la que se aplicará la función de alarma de intrusión.
+
+## Ajustes de armado o desarmado {#armConfiguration}
+
+Agregue ajustes de autenticación para el armado y desarmado.
+
+<Image src="/img/biostarx-settings-adv-ac-add-intrusion-set-arm.png" />
+
+* Configure el tiempo de retraso para el armado o desarmado con <Cmd sid="zone.intrusion.delayTime" product="2" />. Esto significa que el armado es el tiempo de retraso después de la autenticación hasta que inicia la alarma, y el desarmado es el tiempo de retraso antes de que se active la alarma después de que se detecta una intrusión.
+
+* Agregue tarjetas autorizadas para el armado o desarmado con <Cmd sid="zone.intrusion.accessCard" product="2" />. Registre hasta 128 tarjetas de armado/desarmado.
+
+* Seleccione los grupos autorizados para el armado o desarmado con <Cmd sid="zone.intrusion.accessGroup" product="2" />. Registre hasta 128 grupos de armado/desarmado.
+
+* Configure el armado/desarmado mediante el dispositivo o señal de entrada con <Cmd sid="zone.intrusion.armInput" product="2" />. Haga clic en el botón <Cmd sid="button.plusAdd" product="2" /> y configure cada elemento.
+
+### Agregar armado/desarmado por dispositivo {#addArmInput}
+
+Haga clic en el botón <Cmd sid="button.plusAdd" product="2" /> en la opción <Cmd sid="zone.intrusion.armInput" product="2" /> (<Cmd sid="common.device" product="2" />). Seleccione el dispositivo para controlar la función de alarma de intrusión y elija <Cmd sid="zone.intrusion.armType" product="2" />.
+
+En <Cmd sid="zone.intrusion.inputType" product="2" /> puede seleccionar <Cmd sid="zone.intrusion.inputType.card" product="2" />, <Cmd sid="zone.intrusion.inputType.key" product="2" /> o <Cmd sid="zone.intrusion.inputType.cardOrKey" product="2" />. Los dispositivos sin pantalla LCD solo pueden usar <Cmd sid="zone.intrusion.inputType.card" product="2" /> como tipo de entrada.
+
+<Image src="/img/biostarx-settings-advanced-ac-intusion-add-device.png" />
+
+### Agregar armado/desarmado por señal de entrada {#addArmInputBySignal}
+
+Haga clic en el botón <Cmd sid="button.plusAdd" product="2" /> en la opción <Cmd sid="zone.intrusion.armInput" product="2" /> (<Cmd sid="zone.intrusion.inputType.input" product="2" />). Seleccione el dispositivo para controlar la función de alarma de intrusión. Haga clic en <Cmd sid="zone.intrusion.inputType.port" product="2" /> para elegir el puerto de entrada del dispositivo seleccionado.
+
+Después de elegir <Cmd sid="zone.intrusion.armType" product="2" />, establezca el tipo de interruptor y la duración de la señal.
+
+<Image src="/img/biostarx-settings-advanced-ac-intusion-add-signal.png" />
+
+## Ajustes de detección de intrusión {#intrusionSetting}
+
+Configure las señales de detección de intrusión. Haga clic en <Cmd sid="button.addplus" product="2" /> y configúrelo como se muestra a continuación para reconocer una intrusión cuando un sensor N/O conectado al puerto de entrada 0 del dispositivo BioStation 3 envíe una señal durante 100 (ms).
+
+<Image src="/img/biostarx-settings-advanced-ac-intusion-detect-settings.png" />

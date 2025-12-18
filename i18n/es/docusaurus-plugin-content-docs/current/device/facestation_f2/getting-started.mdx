@@ -1,0 +1,189 @@
+---
+id: getting-started
+title: Primeros pasos
+description: Proporciona procedimientos iniciales para empezar con el dispositivo.
+keywords:
+  - Componentes
+  - Nombre
+  - Función
+  - Cable
+  - Conector
+---
+
+Proporciona procedimientos iniciales para empezar con el dispositivo.
+
+## Componentes
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-device-fsf2-odb.svg" width={103} className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-wall-bracket-fsf2-odb.svg" width={88.5} className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-drilling-template-fsf2-odb.svg" width={101.78} className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>FaceStation F2 (FSF2-ODB)</Td>
+
+      <Td>Soporte de pared (FSF2-ODB)</Td>
+
+      <Td>Plantilla de perforación (FSF2-ODB)</Td>
+    </Row>
+
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-device-fsf2-dbab.svg" height={200} className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-wall-bracket-fsf2-dbab.svg" height={200} className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-drilling-template-fsf2-dbab.svg" height={200} className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>FaceStation F2 (FSF2-DB, FSF2-AB)</Td>
+
+      <Td>Soporte de pared (FSF2-DB, FSF2-AB)</Td>
+
+      <Td>Plantilla de perforación (FSF2-DB, FSF2-AB)</Td>
+    </Row>
+
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-cable-cover-fsf2.svg" height={120} className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-diode1.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-resistor.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Cubierta de cable</Td>
+
+      <Td>Diodo</Td>
+
+      <Td>Resistencia de 120 Ω</Td>
+    </Row>
+
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-pvc-anchors6.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-fixing-screws6.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-bracket-fixing-screw.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Anclaje de PVC x6</Td>
+
+      <Td>Tornillo de fijación x6</Td>
+
+      <Td>Tornillo de fijación del soporte (en forma de estrella)</Td>
+    </Row>
+
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-connection-cables-fs2.svg" height={158} className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-quick-guide.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-oss-guide.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Cables de conexión</Td>
+
+      <Td>Guía rápida</Td>
+
+      <Td>Guía de software de código abierto</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+<PageBreak />
+
+## Nombre y función de cada parte
+
+<Image src="/img/device/name-function-each-part-fsf2.png" className="none" width="80%" />
+
+* **Lámpara LED**: La lámpara LED se enciende cuando detecta a un usuario en la oscuridad.
+
+* **Cámara infrarroja**: Captura la imagen facial infrarroja.
+
+* **Cámara visual**: Captura una imagen facial real.
+
+* **Pantalla**: Proporciona una interfaz de usuario para la operación.
+
+* **Unidad de autenticación de tarjeta RF y tarjeta de acceso móvil**: parte para escanear una tarjeta RFID o una tarjeta de acceso móvil para la entrada.
+
+* **Unidad de reconocimiento de huellas**: <Badge only>FSF2-ODB</Badge> La parte que reconoce la huella para el acceso.
+
+* **Ethernet**: Conecta el cable Ethernet.
+
+* **Entrada (4 pines)**: Conecta el cable de entrada.
+
+* **Entrada/salida Wiegand (4 pines)**: Conecta el cable Wiegand de entrada/salida.
+
+* **RS-485 (4 pines)**: Conecta el cable RS-485.
+
+* **Altavoz**: Emite sonido.
+
+* **Relé (3 pines)**: Conecta el cable del relé.
+
+* **Alimentación (2 pines)**: Conecta el cable de alimentación.
+
+* **Ranura para tarjeta SAM**: Se puede usar una tarjeta SAM.
+
+* **Ranura para memoria USB (tipo C)**: Conecta la memoria USB.
+
+{/* 케이블 및 커넥터 */}
+
+import CablesandConnectors from '../../common/_getting-started-cables-and-connectors.mdx'
+
+<CablesandConnectors />
+
+{/* 올바른 얼굴 등록 및 인증 방법 */}
+
+import DocumentA from '../../common/_face-enrollment-authentication-method.mdx'
+
+<DocumentA name="90~100 cm" />
+
+{/* 올바른 지문 입력 방법 */}
+
+import Enrollfingerprint from '../../common/_enroll-fingerprint.mdx'
+
+<Enrollfingerprint />

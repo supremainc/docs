@@ -1,0 +1,14 @@
+[
+  {
+    "question": "¿Qué sucede si no registras un administrador maestro?",
+    "answer": "Un dispositivo nuevo sin un administrador maestro registrado no puede realizar autenticaciones ni cambiar la configuración. Sin embargo, conecta el nuevo dispositivo a BioStar para registrar un administrador maestro."
+  },
+  {
+    "question": "¿Se admite la configuración de administrador maestro en los dispositivos actualizados con firmware de dispositivos existentes?",
+    "answer": "No. Los dispositivos actualizados con firmware de dispositivos existentes no admiten la configuración de administrador maestro. Sin embargo, mejora la seguridad del dispositivo fortaleciendo los permisos de todos los administradores mediante la opción Admin 2-Step Authentication. Para obtener más información, consulta <a href='#admin-two-step-authentication'>Admin 2-Step Authentication</a>."
+  },
+  {
+    "question": "¿Es posible registrar un administrador maestro en un dispositivo esclavo?",
+    "answer": "Sí. Es posible registrar un administrador maestro en un dispositivo esclavo."
+  }
+]

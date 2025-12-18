@@ -1,0 +1,69 @@
+---
+id: tna-rule-shift-schedule
+title: Configurar turnos semanales
+description: Esta guía explica cómo crear reglas de turno semanales basadas en las reglas de turno diarias configuradas.
+keywords:
+  - Reglas de turno semanales
+---
+
+Esta guía explica cómo crear reglas de turno semanales basadas en las <Cmd sid="tab.shift" product="2" className="normal" /> configuradas.
+
+## <Cmd sid="scheduleTemplate.addScheduleTemplate" product="2" className="bold" />
+
+1. Haga clic en <Cmd sid="shell.header.tna" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="tab.shift" product="2" /> → <Cmd sid="tab.scheduleTemplate" product="2" /> en la barra lateral izquierda.
+
+3. Haz clic en <Cmd sid="scheduleTemplate.addScheduleTemplate" product="2" />.
+
+   <Image src="/img/biostarx-tna-shift-schedule.png" />
+
+4. Cuando aparezca la pantalla <Cmd sid="scheduleTemplate.addScheduleTemplate" product="2" />, configura cada elemento.
+
+:::info
+
+* Haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla para guardar la configuración.
+
+* Haz clic en el botón <Cmd sid="payCode.applyAndAddShift" product="2" /> para seguir agregando el horario de trabajo.
+
+* Después de guardar la configuración, haz clic en <Cmd sid="ta.apply_add_another" product="2" /> para agregar otra <Cmd sid="tab.scheduleTemplate" product="2" />.
+
+:::
+
+## Guía de opciones de configuración
+
+<Image src="/img/biostarx-tna-shift-schedule-adding.png" />
+
+* <Cmd sid="form.name" product="2" />: Ingresa el nombre de <Cmd sid="tab.scheduleTemplate" product="2" className="normal" />.
+
+* <Cmd sid="form.description" product="2" />: Ingresa una descripción para <Cmd sid="tab.scheduleTemplate" product="2" className="normal" />.
+
+* <Cmd sid="form.type" product="2" />: Establece <Cmd sid="tab.scheduleTemplate" product="2" className="normal" /> como <Cmd sid="scheduleTemplate.type.weekly" product="2" /> o <Cmd sid="scheduleTemplate.type.daily" product="2" />.
+
+  Al seleccionar <Cmd sid="scheduleTemplate.type.daily" product="2" />, podrás establecer el período de uso repetido (<Cmd sid="scheduleTemplate.cycle" product="2" />).
+
+  <Image src="/img/biostarx-tna-shift-schedule-adding-daily.png" />
+
+* <Cmd sid="scheduleTemplate.weekendSetting" product="2" />: Establece los días que se designarán como fines de semana.
+
+* <Cmd sid="scheduleTemplate.shift" product="2" />: Consulta la lista de reglas <Cmd sid="tab.shift" product="2" className="normal" /> configuradas.
+
+* Horario semanal/diario: Arrastra y suelta las <Cmd sid="tab.shift" product="2" className="normal" /> configuradas.
+
+  <Image src="/img/biostarx-tna-shift-schedule-adding-drag-shift.png" />
+
+  :::info
+
+  * Para aplicar a todos de lunes a domingo, haz clic en <Cmd sid="scheduleTemplate.copyAll" product="2" />.
+
+  * Para eliminar la <Cmd sid="tab.shift" product="2" className="normal" /> aplicada, haz clic en el botón <IcTrash2 />.
+
+  * Al aplicar la <Cmd sid="tab.shift" product="2" className="normal" /> establecida con <Cmd sid="shift.dayStartTimeExcessTime" product="2" />, no se puede establecer un exceso de tiempo que se sitúe más de 24 horas antes de la hora de inicio de las reglas de turno diarias.
+
+  :::
+
+<NextStep>
+  <NextItem to="tna-rule-shift-overtime">
+    Esta guía explica cómo crear reglas de turno flexibles aplicando reglas de horas extra adicionales a las reglas de turno diarias.
+  </NextItem>
+</NextStep>

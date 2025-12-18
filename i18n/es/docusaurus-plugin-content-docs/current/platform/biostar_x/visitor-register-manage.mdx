@@ -1,0 +1,178 @@
+---
+id: visitor-register-manage
+title: Administrar visitantes
+description: Apruebe, modifique, agregue o elimine solicitudes de visitantes.
+keywords:
+  - Solicitud de visita
+  - Gestionar
+---
+
+Apruebe o modifique solicitudes de visitantes. Los administradores también pueden agregar o eliminar visitantes directamente.
+
+## Aprobación de visitantes
+
+Esta guía muestra cómo revisar las solicitudes de visitantes y aprobar su acceso.
+
+1. Haz clic en <Cmd sid="shell.header.visitor" /> en <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en el visitante que desea aprobar en la lista de visitantes.
+
+   <Image src="/img/biostarx-visitor-register-lists.png" />
+
+3. Después de revisar la información del visitante, corrija los elementos necesarios y haga clic en <Cmd sid="common.edit" product="2" />.
+
+4. Haga clic en <Cmd sid="visitor.status.checkIn" product="2" /> en la parte inferior derecha de la pantalla.
+
+5. Revise el contenido de <Cmd sid="visitor.visitRegisterInfo" product="2" /> y, para aprobar la visita, haga clic en <Cmd sid="button.checkin" product="2" /> en la parte inferior derecha de la pantalla.
+
+   <Image src="/img/biostarx-visitor-register-item-approved.png" />
+
+:::info
+
+* Si el solicitante no ha aceptado los términos de acceso para visitantes, <Cmd sid="button.checkin" product="2" /> estará deshabilitado. Haga clic en <Cmd sid="visitor.term.watch" product="2" /> para mostrar los términos de acceso al visitante y obtener su consentimiento. Si el visitante no acepta los términos de acceso, la visita se restringirá.
+
+  <Image src="/img/visitor-register-manage-view-term.png" />
+
+* Si en la PC del visitante hay un dispositivo de registro de tarjetas configurado, <Cmd sid="visitor.button.approveAndRegisterCard" product="2" /> se activará. Haga clic en <Cmd sid="visitor.button.approveAndRegisterCard" product="2" /> para aprobar al visitante y emitir una tarjeta de acceso. Para obtener más información, consulte [lo siguiente](#approve-and-register-card).
+
+* Configure el uso de tarjetas en la PC del visitante desde <Cmd sid="shell.header.setting" /> → <Cmd sid="shell.header.visitor" /> y asegúrese de aplicar los siguientes ajustes mínimos. Para obtener más información, consulte [lo siguiente](settings-visitor#settings-visitor).
+
+  <Image src="/img/biostarx-visitor-settings-use-card.png" />
+
+  * <Cmd sid="visitor.site" product="2" /> <Cmd sid="common.setting" product="2" /> → <Cmd sid="common.card" product="2" /> <Cmd sid="common.use" product="2" /> / <Cmd sid="user.cardType" product="2" />
+
+  * <Cmd sid="visitor.pc.management" product="2" /> <Cmd sid="visitor.pc.setting" product="2" /> → <Cmd sid="common.card" product="2" /> <Cmd sid="setting.server.enrollment_device.device_name" product="2" />
+
+:::
+
+### Aprobar y enrolar tarjeta {#approve-and-register-card}
+
+Esta guía muestra cómo aprobar solicitudes de visitantes y emitir tarjetas de acceso.
+
+1. En la pantalla <Cmd sid="visitor.visitRegisterInfo" product="2" />, haga clic en <Cmd sid="visitor.button.approveAndRegisterCard" product="2" /> en la parte inferior derecha de la pantalla.
+
+   <Image src="/img/biostarx-visitor-register-item-approved-card.png" />
+
+2. Cuando aparezca la ventana de registro de tarjetas, seleccione el método de registro deseado.
+
+   * <Cmd sid="common.registerByCardReader" product="2" />
+
+   * <Cmd sid="common.enterManually" product="2" />
+
+#### <Cmd sid="common.registerByCardReader" product="2" className="normal" />
+
+Escanee la información de la tarjeta con un dispositivo conectado a la PC del visitante.
+
+1. Seleccione <Cmd sid="common.registerByCardReader" product="2" /> en <Cmd sid="common.registrationOption" product="2" />.
+
+   <Image src="/img/biostarx-visitor-register-item-approved-card-reader.png" />
+
+2. Para escanear la tarjeta a enrolar, haga clic en <Cmd sid="common.readCard" product="2" />.
+
+3. Para enrolar la tarjeta, haga clic en <Cmd sid="button.enroll" product="2" />.
+
+#### <Cmd sid="common.enterManually" product="2" className="normal" />
+
+Enrole ingresando directamente el número de tarjeta.
+
+1. Seleccione <Cmd sid="common.enterManually" product="2" /> en <Cmd sid="common.registrationOption" product="2" />.
+
+   <Image src="/img/biostarx-visitor-register-item-approved-card-manual.png" />
+
+2. Ingrese directamente <Cmd sid="user.cardId" product="2" />.
+
+3. Para enrolar la tarjeta, haga clic en <Cmd sid="button.enroll" product="2" />.
+
+## Búsqueda de huella digital para aprobación de visitantes
+
+Busque visitantes con huellas digitales enroladas y procese su aprobación.
+
+1. Haz clic en <Cmd sid="shell.header.visitor" /> en <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="visitor.button.searchVisitorByFingerprint" product="2" /> en la parte superior izquierda de la lista de solicitudes de visitantes.
+
+   <Image src="/img/biostarx-visitor-list-search-fingerprint.png" />
+
+3. Escanee la huella digital del visitante en el dispositivo de escaneo de huellas.
+
+4. Si se encuentra un visitante que coincida con la huella, aparecerá un mensaje de confirmación. Haga clic en <Cmd sid="visitor.button.registerInformation" product="2" />.
+
+   <Image src="/img/biostarx-visitor-list-search-fingerprint-confirm.png" />
+
+5. Después de revisar la información del visitante, corrija los elementos necesarios y haga clic en <Cmd sid="common.edit" product="2" />.
+
+6. Haga clic en <Cmd sid="visitor.status.checkIn" product="2" /> en la parte inferior derecha de la pantalla.
+
+7. Revise el contenido de <Cmd sid="visitor.visitRegisterInfo" product="2" /> y, para aprobar la visita, haga clic en <Cmd sid="button.checkin" product="2" /> en la parte inferior derecha de la pantalla.
+
+## Agregar visitante
+
+Esta guía muestra cómo un administrador puede agregar visitantes directamente.
+
+1. Haz clic en <Cmd sid="shell.header.visitor" /> en <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <IcAdd /> <Cmd sid="button.func.addVisitor" product="2" /> en la parte superior izquierda de la lista de visitantes.
+
+   <Image src="/img/biostarx-visitor-register-lists-add.png" />
+
+3. Ingrese el nombre y número de teléfono del visitante en la sección <Cmd sid="common.visitor" product="2" />.
+
+   <Image src="/img/biostarx-visitor-register-lists-add-visitor-info.png" />
+
+4. Ingrese el nombre y número de teléfono de la persona responsable de la visita en la sección <Cmd sid="visitor.host" product="2" />.
+
+   <Image src="/img/biostarx-visitor-register-lists-add-admin-info.png" />
+
+   :::note
+
+   Al ingresar un nombre o número de teléfono, se mostrará una lista de usuarios que coinciden con la información ingresada. Para seleccionar el usuario deseado, haga clic en <Cmd sid="button.choose" product="2" />.
+
+   :::
+
+5. Configure el grupo de acceso y la duración de la visita en la sección <Cmd sid="visitor.accessInfo" product="2" />.
+
+   <Image src="/img/biostarx-visitor-register-lists-add-access-info.png" />
+
+   :::note
+
+   Solo se pueden seleccionar los grupos de acceso asignados al departamento visitado para la PC de visitas. Para más información, consulte [lo siguiente](settings-visitor#settings-visitor-site).
+
+   :::
+
+6. Configure el medio de acceso en la sección <Cmd sid="common.credential" product="2" />.
+
+   <Image src="/img/biostarx-visitor-register-lists-add-credential.png" />
+
+   * <Cmd sid="common.card" product="2" />: Para usar autenticación con tarjeta, configúrelo en <Cmd sid="visitor.request" product="2" />.
+
+   * <Cmd sid="common.fingerPrint" product="2" />: Para usar autenticación con huella digital, haga clic en <Cmd sid="button.addFingerprint" product="2" /> y luego enrole la huella del visitante.
+
+7. Para finalizar la adición del visitante, haga clic en <Cmd sid="button.register" product="2" /> en la parte inferior derecha de la pantalla.
+
+:::info
+
+* El nombre puede tener hasta 48 caracteres.
+
+* Para agregar campos personalizados a la información del visitante, consulte [lo siguiente](settings-visitor#settings-visitor-custom-field).
+
+:::
+
+## Eliminar visitante
+
+1. Haz clic en <Cmd sid="shell.header.visitor" /> en <Cmd sid="shell.header.launcher" />.
+
+2. Marque la casilla del visitante que desea eliminar de la lista de solicitudes de visitantes.
+
+   <Image src="/img/biostarx-visitor-register-lists-remove-visitor.png" />
+
+3. Haga clic en <Cmd sid="button.func.deleteVisitor" product="2" /> en la parte superior derecha de la pantalla.
+
+4. Cuando aparezca el mensaje de confirmación, haz clic en <Cmd sid="button.yes" product="2" />.
+
+:::info
+
+* <Cmd sid="button.func.deleteVisitor" product="2" /> se activará cuando se marque la casilla de un visitante.
+
+* Los visitantes solo se pueden eliminar desde la lista de solicitudes de visitantes.
+
+:::

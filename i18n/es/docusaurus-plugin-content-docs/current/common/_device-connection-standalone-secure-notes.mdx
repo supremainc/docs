@@ -1,0 +1,47 @@
+:::info
+
+<Xclude product="xpass_s2">
+  * El dispositivo puede utilizarse como controlador de múltiples puertas con los dispositivos esclavos mediante el cable RS-485. Los dispositivos esclavos se utilizan como lectores ficticios y la autenticación se realiza en el dispositivo maestro.
+</Xclude>
+
+<Include product="biostation_3,facestation_f2,facestation_2">
+  * Si un dispositivo de autenticación por huella digital está configurado como esclavo en {props.product}, no se puede agregar otro {props.product} como esclavo.
+
+  * Si el dispositivo de autenticación por huella digital es el dispositivo maestro, no se puede agregar {props.product} como dispositivo esclavo.
+
+  * Cuando se conecta {props.product} como dispositivo esclavo mientras {props.product} es el dispositivo maestro, solo se puede agregar un {props.product} como dispositivo esclavo.
+
+  * Cuando {props.product} es el dispositivo maestro y otro {props.product} se conecta a él como esclavo, se puede conectar adicionalmente un Secure I/O 2 y un DM-20 cada uno.
+
+  * Cuando {props.product} es el dispositivo maestro y otro {props.product} está conectado a él como esclavo, no se pueden conectar OM-120 adicionales.
+</Include>
+
+<Include product="biostation_3,facestation_f2">
+  * {props.product} no puede utilizarse como dispositivo esclavo cuando {props.product_2} es el dispositivo maestro y viceversa.
+</Include>
+
+<Include product="bioentry_w3,biostation_2a,biolite_n2,bioentry_p2,bioentry_w2">
+  * Si se conecta XPass o XPass 2 al dispositivo maestro, solo se puede usar la autenticación con tarjeta.
+</Include>
+
+<Include product="xpass_2">
+  * Si usa este producto como dispositivo maestro, el dispositivo esclavo solo puede utilizar autenticación por tarjeta.
+</Include>
+
+<Include product="xpass_q2">
+  * Cuando este producto opera como maestro, en el esclavo solo está disponible la autenticación por tarjeta o QR/Barcode.
+</Include>
+
+<Include product="xpass_2,xpass_q2,xpass_s2">
+  * Conecte hasta 31 dispositivos esclavos a un dispositivo maestro.
+</Include>
+
+<Include product="facestation_f2,bioentry_p2,bioentry_r2,biolite_n2,bioentry_w2,xstation_2,biostation_2a,bioentry_w3,biostation_3,facestation_f2,facestation_2">
+  * El número máximo de dispositivos esclavos que se pueden conectar varía según el método de autenticación, el número de usuarios y el número de dispositivos. Ten en cuenta también que la cantidad de dispositivos esclavos afecta el rendimiento de autenticación.
+
+  * Conecte hasta 31 dispositivos esclavos a un dispositivo maestro. El ancho de banda de RS-485 permite conectar hasta 7 dispositivos de autenticación por huella.
+</Include>
+
+* Para más información, comuníquese con el [Equipo de soporte técnico de Suprema](https://support.supremainc.com).
+
+:::

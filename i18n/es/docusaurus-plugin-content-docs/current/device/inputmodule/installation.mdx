@@ -1,0 +1,100 @@
+---
+id: installation
+title: Instalación
+description: Proporciona el proceso completo y ejemplos de conexión necesarios para la instalación del producto.
+keywords:
+  - Instalar
+  - Alimentación
+  - RS-485
+  - Relé
+  - Entrada Supervisada
+  - Tamper
+  - Enclosure
+  - AUX},{
+---
+
+Ofrece los procedimientos completos de instalación y ejemplos de conexión necesarios para el dispositivo.
+
+## Fijación del producto
+
+1. Asegura el espaciador con tornillos de fijación en el lugar donde se instalará el producto.
+
+2. Aprieta el producto sobre el espaciador asegurado utilizando tornillos de fijación.
+
+   <Image src="/img/device/installation-device-im120.svg" className="none" width={300} alone />
+
+{/* ## 전원 연결 */}
+
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+<PageBreak />
+
+## Conexión RS-485
+
+Conecta el producto al dispositivo maestro.
+
+<Image src="/img/device/installation-rs485-connection-im120.png" width="75%" className="none" />
+
+:::info
+
+* Utilice cable AWG26 o superior para RS-485 y asegúrese de que todo el cableado cumpla con las normas ANSI/NFPA 70.
+
+* Utilice un par trenzado AWG24 con una longitud máxima de 1.2 km para el cable RS-485.
+
+* Se recomienda usar cables RS-485 con una impedancia característica de 120 Ω.
+
+* Conecte resistencias de terminación (120 Ω) en ambos extremos de la conexión en cadena RS-485. Si se conecta en la línea media, el nivel de señal se reducirá y el rendimiento de comunicación se verá afectado. Asegúrese de conectarlas en ambos extremos de la conexión en cadena. Configure el interruptor de la resistencia de terminación de este producto en ON.
+
+:::
+
+<PageBreak />
+
+{/* ## 릴레이 연결 */}
+
+import RelayConnectioin from "../../common/_device-indoor-module-relay-connection.mdx";
+
+<RelayConnectioin />
+
+<PageBreak />
+
+## Conexión de entrada supervisada
+
+Conecta sensores de detección de incendios, sensores de temperatura, sensores antirrobo, sensores de puerta, botones de salida, etc. Los terminales **SUPERVISED INPUT** 0~11 pueden detectar el voltaje que circula por el circuito para supervisar los estados de cortocircuito, circuito abierto, encendido y apagado del dispositivo, y también se pueden usar como entrada general.
+
+Configura las acciones según el estado del producto en BioStar X y supervisa el estado de la entrada.
+
+<Image src="/img/device/installation-supervised-input-connection-im120.png" width="75%" className="none" />
+
+:::info
+
+* No dupliques la conexión de las entradas del producto a los dispositivos conectados a los puertos de entrada del dispositivo maestro.
+
+* Este producto admite la conexión de resistencias de 1kΩ, 2.2kΩ, 4.7kΩ y 10kΩ. Después de conectar la resistencia adecuada al dispositivo de entrada, configure el mismo valor de resistencia en BioStar X.
+
+:::
+
+## Conexión antimanipulación
+
+Si el dispositivo se separa de su instalación por factores externos, puede activar una alarma o generar un registro de eventos.
+
+<Image src="/img/device/installation-tamper-connection-im120.png" width="80%" className="none" />
+
+<PageBreak />
+
+## Instalación del gabinete {#install-enclosure}
+
+Para protección física y eléctrica, el producto puede instalarse dentro del gabinete (ENCR-10). El gabinete incluye una placa LED de estado de alimentación, una placa de distribución de energía, una fuente de alimentación y un tamper. El gabinete se vende por separado.
+
+{/* ## IM120 함체 설치 */}
+
+import Installenclosureim120 from "../../common/_device-install-enclosure-im120.mdx";
+
+<Installenclosureim120 />
+
+:::info
+
+Para obtener información más detallada sobre la instalación del producto, comunícate con el equipo de soporte técnico de Suprema (CS@suprema.co.kr).
+
+:::

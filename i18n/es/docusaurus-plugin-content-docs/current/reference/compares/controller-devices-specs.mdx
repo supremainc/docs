@@ -1,0 +1,20 @@
+---
+id: controller-devices-specs
+title: Comparar especificaciones
+hide_table_of_contents: true
+---
+
+# Compare las especificaciones del controlador inteligente y periféricos
+
+import fData from '@site/src/components/CompareTable/controller-device-specs.json';
+import { RenderTableSpecs } from '@site/src/components/CompareTable';
+
+:::note
+
+\* Si un dispositivo con un sensor de huellas digitales está conectado como esclavo, el dispositivo esclavo se puede usar para la autenticación con huellas digitales.
+
+\*\* Entrada o entrada supervisada seleccionable.
+
+:::
+
+<RenderTableSpecs data={fData} />

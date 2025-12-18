@@ -1,0 +1,103 @@
+---
+id: migration-x
+title: Actualizar
+description: Este documento guía el procedimiento para actualizar BioStar 2 a BioStar X y los requisitos que se deben verificar antes de la actualización.
+keywords:
+  - Actualizar
+---
+
+Este documento ofrece una guía paso a paso sobre cómo actualizar BioStar 2 a **BioStar X**. Verifique los requisitos del sistema y las precauciones antes de iniciar la actualización.
+
+## Antes de empezar {#start-before}
+
+Verifique lo siguiente antes de actualizar de **BioStar 2** a **BioStar X**.
+
+<div className="announcement">
+  ### Requisitos mínimos
+
+  * Si su entorno ejecuta BioStar 2 v2.9.11 o superior, puede actualizar a **BioStar X**.
+
+    * Si utiliza una versión de BioStar 2 anterior a la v2.6.4, debe actualizarla de forma secuencial hasta la v2.9.11 antes de realizar la actualización. Para obtener instrucciones paso a paso sobre cómo actualizar BioStar 2, consulte la **Guía de administración de BioStar 2**.
+
+    * No es posible actualizar las versiones de BioStar 2 inferiores a la v2.9.10.
+
+  * Si los siguientes dispositivos están conectados a BioStar 2, la actualización a **BioStar X** no está soportada.
+
+    * XPass S2, XPass, BioEntry W, BioEntry Plus, BioLite Net
+
+  ---
+
+  ### Licencia
+
+  * Debe contactar a su distribuidor para disponer de al menos una licencia de BioStar X antes de actualizar a **BioStar X**.
+
+  * Al actualizar a **BioStar X** se aplica una política de licenciamiento diferente a la de BioStar 2.
+
+  * Si realiza la actualización con una licencia BioStar 2 AC Advanced o superior activada, se eliminarán las siguientes funciones y ajustes del servicio.
+
+    * Mapa Gráfico
+
+    * Nube
+
+  * Para utilizar el servicio T&A de BioStar 2 en **BioStar X**, debe adquirir por separado la licencia **BioStar X T&A**.
+</div>
+
+## Guía de instalación de la actualización {#upgrade-install}
+
+1. Vaya al [Suprema Download Center](https://download.supremainc.com/), inicie sesión y descargue el paquete de instalación (*BioStar X Setup.X.Y.Z.BB.exe*).
+
+2. Ejecute el archivo de instalación descargado.
+
+3. Seleccione el idioma a usar y haga clic en el botón <Cmd code="biostar2.install.ok" className="bold" />.
+
+   <Image src="/img/biostarx-install-select-language.png" />
+
+4. Acepte la política de licenciamiento de la transición de BioStar 2 a **BioStar X**. Marque la casilla y seleccione el botón <Cmd code="biostar2.install.next" className="bold" />.
+
+   <Image src="/img/biostarx-install-2-to-x-agree.png" />
+
+5. Para continuar con la instalación, seleccione <Cmd code="biostar2.install.agree" className="bold" /> y haga clic en el botón <Cmd code="biostar2.install.next" className="bold" />.
+
+   <Image src="/img/biostarx-install-agree.png" />
+
+6. Al actualizar desde BioStar 2, la base de datos existente se conectará para continuar con la instalación. Seleccione el botón <Cmd code="biostar2.install.next" className="bold" />.
+
+   <Image src="/img/biostarx-upgrade-select-install-type.png" />
+
+7. Ingrese la contraseña de la cuenta root de la base de datos existente y seleccione el botón <Cmd code="biostar2.install.next" className="bold" />.
+
+   <Image src="/img/biostarx-install-input-db-pw.png" />
+
+8. Establezca la ruta para almacenar la clave de cifrado y haga clic en <Cmd code="biostar2.install.next" className="bold" />.
+
+   <Image src="/img/biostarx-install-set-encrypt-path.png" />
+
+9. Lea la información sobre la gestión y la responsabilidad de los datos personales almacenados en la base de datos y haga clic en el botón <Cmd code="biostar2.install.next" className="bold" /> para continuar con la instalación.
+
+   <Image src="/img/biostarx-install-read-covenant.png" />
+
+10. Si aparece un mensaje relacionado con el número de puerto, seleccione <Cmd code="biostar2.install.ok" className="bold" />.
+
+    <Image src="/img/biostarx-install-set-port-confirm.png" />
+
+11. Configure el puerto de comunicación de **BioStar X** y haga clic en <Cmd code="biostar2.install.next" className="bold" />.
+
+    <Image src="/img/biostarx-upgrade-set-port.png" />
+
+12. Seleccione los componentes de **BioStar X** y haga clic en <Cmd code="biostar2.install.next" className="bold" />. Al seleccionar **USB Device Agent**, se instalarán conjuntamente el USB Agent y el controlador para usar BioMini, BioMini Plus 2, BioMini Slim 2 y DUALi DE-620.
+
+    <Image src="/img/biostarx-install-additional.png" />
+
+13. Cuando se completen todas las preparaciones para la instalación, haga clic en el botón <Cmd code="biostar2.install.btnInstall" className="bold" />.
+
+    <Image src="/img/biostarx-upgrade-complete.png" />
+
+14. Seleccione si instalar programas adicionales y haga clic en **Finish**.
+
+    <Image src="/img/biostarx-install-additional-fin.png" />
+
+15. Complete la instalación de **USB Device Agent** siguiendo las instrucciones en la pantalla de instalación.
+
+import InstallNotes from '../../common/_install-note.mdx';
+
+<InstallNotes />

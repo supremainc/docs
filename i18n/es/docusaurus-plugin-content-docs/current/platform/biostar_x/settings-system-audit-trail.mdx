@@ -1,0 +1,334 @@
+---
+id: settings-system-audit-trail
+title: Registro auditoría
+description: Supervise no solo la información de acceso de los usuarios, sino también toda la información modificada en el sistema.
+keywords:
+  - Registro de auditoría
+  - Historial de cambios del sistema
+  - registro de auditoría
+  - Gestión de registros
+  - Auditoría de seguridad
+  - Monitoreo del sistema
+---
+
+La función <Cmd sid="setting.menu.system.auditTrail" /> registra y supervisa todas las actividades que se producen en el sistema. Todas las actividades, como inicio/cierre de sesión de usuarios, cambios de Setting y tareas de administración del sistema, se registran y pueden utilizarse para auditorías de seguridad y monitoreo del sistema.
+
+* **Auditoría de seguridad**: Detectar intentos de acceso no autorizado o abuso de privilegios.
+
+* **Solución de problemas**: Supervisar la aparición de errores del sistema y el historial de cambios de Setting.
+
+* **Cumplimiento**: Conservar registros de acceso y generar informes de auditoría.
+
+## Usar registro de auditoría {#audit-trail-guide}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.system.root" /> → <Cmd sid="setting.menu.system.auditTrail" /> en la barra lateral izquierda.
+
+3. La lista de registro de auditoría aparece en la pantalla.
+
+<Image src="/img/biostarx-settings-system-audit-trail.png" />
+
+Para obtener más información sobre los principales elementos de seguimiento, consulte [lo siguiente](#audit-trail-items).
+
+### Tipos de acciones rastreadas {#method}
+
+Haga clic en la opción <Cmd sid="auditTrail.method" product="2" /> en la sección <Cmd sid="auditTrail.filter.title" product="2" /> para clasificar los registros de auditoría por los siguientes tipos de acción.
+
+<Image src="/img/biostarx-settings-system-audit-trail-action-filter.png" />
+
+* <Cmd sid="audit.method.1" product="2" />: Crear un nuevo elemento
+
+* <Cmd sid="audit.method.3" product="2" />: Modificar un elemento existente
+
+* <Cmd sid="audit.method.4" product="2" />: Eliminar elemento
+
+* <Cmd sid="audit.method.2" product="2" />: Ejecutar funciones del sistema (inicio de sesión, control de dispositivos, etc.)
+
+### Clasificación por nivel de permiso {#permision}
+
+Los registros de auditoría pueden clasificarse según el nivel de administrador. Haga clic en la opción <Cmd sid="user.bioStarOperator" product="2" /> en la sección <Cmd sid="auditTrail.filter.title" product="2" /> para filtrar por los siguientes niveles de permiso.
+
+* <Cmd sid="audit.permission.1" product="2" />: Acceder a todas las funciones del sistema
+
+* <Cmd sid="audit.permission.2" product="2" />: Funciones de gestión de usuarios
+
+* <Cmd sid="audit.permission.3" product="2" />: Funciones de monitoreo
+
+* <Cmd sid="audit.permission.253" product="2" />: Funciones relacionadas con video
+
+* <Cmd sid="audit.permission.254" product="2" />: Funciones de gestión de asistencia
+
+:::info
+
+Los niveles de permiso <Cmd sid="audit.permission.253" product="2" /> y <Cmd sid="audit.permission.254" product="2" /> están disponibles mediante opciones adicionales para la licencia **Advanced** o superior. Para más información sobre la política de licencias, consulta [lo siguiente](licensing#features-add-ons).
+
+:::
+
+## Consulta de configuración de período
+
+Configure el período para revisar el historial del registro de auditoría durante una duración específica.
+
+### Consultar con períodos predefinidos
+
+Seleccione <Cmd sid="auditTrail.filter.one_month" product="2" /> o <Cmd sid="auditTrail.filter.three_month" product="2" /> en la lista de filtros de la pantalla izquierda.
+
+<Image src="/img/biostarx-settings-system-audit-trail-defined-period.png" />
+
+### Consultar con períodos personalizados
+
+Para configuraciones de período detalladas, establezca la fecha de inicio y la fecha de finalización en la sección <Cmd sid="auditTrail.filter.title" product="2" /> bajo la opción <Cmd sid="common.datetime" product="2" />.
+
+<Image src="/img/biostarx-settings-system-audit-trail-set-period.png" />
+
+## Configuración de filtros
+
+Filtre la lista de registro de auditoría de forma eficiente mediante varios criterios.
+
+<Image src="/img/biostarx-settings-system-audit-trail-list.png" />
+
+En la sección <Cmd sid="auditTrail.filter.title" product="2" />, configure las siguientes opciones. Las opciones de filtro coinciden con los elementos de columna de la lista de registro de auditoría. Sin embargo, la columna <Cmd sid="auditTrail.content" product="2" /> no se puede filtrar.
+
+* <Cmd sid="common.datetime" product="2" />: Fecha y hora en que ocurrió el evento
+
+* <Cmd sid="common.gnb.user" product="2" />: ID del usuario que realizó el evento
+
+* <Cmd sid="user.bioStarOperator" product="2" />: [Nivel de permiso](#permision) del usuario
+
+* <Cmd sid="auditTrail.ip" product="2" />: Dirección IP desde la cual el usuario accedió
+
+* <Cmd sid="auditTrail.menu" product="2" />: Categoría de menú del elemento modificado
+
+* <Cmd sid="auditTrail.target" product="2" />: Objetivo modificado
+
+* <Cmd sid="auditTrail.method" product="2" />: [Acción](#method) realizada
+
+* <Cmd sid="auditTrail.content" product="2" />: Detalles durante la ocurrencia del evento
+
+## Guardar filtro
+
+Configure el filtro y haga clic en el botón <Cmd sid="ta.report.condition.saveFilter.button" product="2" /> de la sección <Cmd sid="auditTrail.filter.title" product="2" /> para guardar el filtro en la lista de filtros de la pantalla izquierda.
+
+<Image src="/img/biostarx-settings-system-audit-trail-add-filter.png" />
+
+* Haga clic en <IcEditUL /> para editar el nombre del filtro. Ingrese el nombre del filtro y presione <Kbd>Enter</Kbd> para cambiar el nombre.
+
+* Haga clic en <IcTrash2 /> para eliminar el filtro. El filtro se eliminará de la lista de filtros.
+
+## Navegación de páginas
+
+Desplácese entre páginas o establezca la cantidad de elementos que aparecerán en cada página.
+
+* <Image src="/img/common/ico-audit-trail-first-page.png" ico alone />: Ir a la primera página.
+
+* <Image src="/img/common/ico-audit-trail-previous-page.png" ico alone />: Ir a la página anterior.
+
+* <Image src="/img/common/ico-audit-trail-nav-page.png" ico alone />: Ingrese el número de página al que desea ir y presione <Kbd>Enter</Kbd> para ir a esa página.
+
+* <Image src="/img/common/ico-audit-trail-next-page.png" ico alone />: Ir a la página siguiente.
+
+* <Image src="/img/common/ico-audit-trail-last-page.png" ico alone />: Ir a la última página.
+
+* <Image src="/img/ico-audit-trail-rows-page.png" ico />: Seleccione la cantidad de elementos que se mostrarán por página.
+
+## Exportar a CSV
+
+Exporte la lista de registro de auditoría a un archivo CSV para utilizarla con herramientas de análisis externas.
+
+1. En la sección <Cmd sid="auditTrail.filter.title" product="2" />, configure filtros si es necesario.
+
+2. Haga clic en <IcMoreW /> → <Cmd sid="audit.user.csv_export" product="2" /> en el lado derecho de la sección.
+
+:::tip
+
+Si configuró filtros, solo los resultados filtrados se exportarán al archivo CSV.
+
+:::
+
+## Configurar columnas
+
+<Columns>
+  <Column className="width--40">
+    <Image src="/img/biostarx-settings-system-audit-trail-column-setting.png" />
+  </Column>
+
+  <Column className="padding--l20">
+    Cambie las posiciones de las columnas o ocúltelas en la lista de registro de auditoría. Haga clic en <IcMoreW /> → <Cmd sid="menu.columnSetting" product="2" /> en el extremo derecho de la sección <Cmd sid="auditTrail.filter.title" product="2" />.
+
+    * Desmarque la casilla del elemento que desea ocultar de la lista de columnas.
+
+    * Arrastra los elementos deseados a una nueva posición para cambiar el orden de las columnas.
+
+    * Haz clic en el botón <Cmd sid="columnSetting.button.defaultColumn" product="2" /> para inicializar la configuración de columnas.
+
+    Haz clic en el botón <Cmd sid="button.apply" product="2" /> para guardar la configuración.
+  </Column>
+</Columns>
+
+## Elementos principales de seguimiento {#audit-trail-items}
+
+Todas las actividades registradas en el registro de auditoría se organizan por categoría. Haz clic en cada elemento para ver los detalles.
+
+<details>
+  <summary>**Acceso al sistema**</summary>
+
+  * **Inicio de sesión**: <Cmd sid="audit.system.login" product="2" />
+
+  * **Inicio de sesión multifactor**: <Cmd sid="audit.system.fingerprint_login" product="2" />
+
+  * **Cierre de sesión**: <Cmd sid="audit.system.logout" product="2" />
+
+  * **Intentos de inicio de sesión excedidos**: <Cmd sid="audit.system.maximum_invalid_attempts" product="2" />
+</details>
+
+<details>
+  <summary>**Información del usuario**</summary>
+
+  * **Información básica**: <Cmd sid="audit.user.name" product="2" />, <Cmd sid="audit.user.user_id" product="2" />, <Cmd sid="audit.user.login_id" product="2" />, <Cmd sid="audit.user.email" product="2" />, <Cmd sid="audit.user.phone" product="2" />
+
+  * **Información de autenticación**: <Cmd sid="audit.user.password" product="2" />, <Cmd sid="audit.user.pin" product="2" />, <Cmd sid="audit.user.fingerprint_templates" product="2" />, <Cmd sid="audit.user.faces" product="2" />, <Cmd sid="audit.user.cards" product="2" />
+
+  * **Permisos y grupos**: <Cmd sid="audit.user.permission" product="2" />, <Cmd sid="audit.user.access_groups" product="2" />, <Cmd sid="audit.user.user_group_id" product="2" />, <Cmd sid="audit.user.private_operation_modes" product="2" />
+
+  * **Estado del usuario**: <Cmd sid="audit.user.disabled" product="2" />, <Cmd sid="audit.user.start_datetime" product="2" />, <Cmd sid="audit.user.expiry_datetime" product="2" />
+
+  * **Gestión de datos**: <Cmd sid="audit.user.csv_import" product="2" />, <Cmd sid="audit.user.csv_export" product="2" />, <Cmd sid="audit.user.data_import" product="2" />, <Cmd sid="audit.user.data_export" product="2" />
+
+  * **Integración de dispositivos**: <Cmd sid="audit.user.export" product="2" />, <Cmd sid="audit.user.remove" product="2" />
+
+  * **Otros**: <Cmd sid="audit.user.photo" product="2" />, <Cmd sid="audit.user.user_custom_fields" product="2" />, <Cmd sid="audit.user.security_level" product="2" />, <Cmd sid="audit.user.report" product="2" />
+
+  * **Gestión**: <Cmd sid="audit.user.csv_export.absence" product="2" />, <Cmd sid="audit.user.delete.absence" product="2" />, <Cmd sid="team.menu.faceMigration" />, <Cmd sid="user.list.visualFaceImport.title" />
+
+  * **Funciones de correo electrónico**: <Cmd sid="audit.user.emailSentSuccess" product="2" />, <Cmd sid="audit.user.emailSentFail" product="2" />
+</details>
+
+<details>
+  <summary>**Control de acceso**</summary>
+
+  * **Configuración de la puerta**: <Cmd sid="audit.door.name" product="2" />, <Cmd sid="audit.door.description" product="2" />, <Cmd sid="audit.door.door_group_id" product="2" />
+
+  * **Dispositivos de puerta**: <Cmd sid="audit.door.entry_device_id" product="2" />, <Cmd sid="audit.door.exit_device_id" product="2" />, <Cmd sid="audit.door.relay_output_id" product="2" />, <Cmd sid="audit.door.sensor_input_id" product="2" />, <Cmd sid="audit.door.exit_button_input_id" product="2" />
+
+  * **Control de puerta**: <Cmd sid="audit.door.open_duration" product="2" />, <Cmd sid="audit.door.open_once" product="2" />, <Cmd sid="audit.door.open_timeout" product="2" />, <Cmd sid="audit.door.dual_authentication" product="2" />, <Cmd sid="audit.door.unconditional_lock" product="2" />
+
+  * **Acciones de puerta**: <Cmd sid="audit.door.lock" product="2" />, <Cmd sid="audit.door.unlock" product="2" />, <Cmd sid="audit.door.release" product="2" />, <Cmd sid="audit.door.open" product="2" />, <Cmd sid="audit.door.clear_alarm" product="2" />, <Cmd sid="audit.door.clear_apb" product="2" />, <Cmd sid="audit.door.clear_apb_ex" product="2" />, <Cmd sid="audit.door.clear_timed_apb_ex" product="2" />
+
+  * **Grupos de acceso**: <Cmd sid="audit.access_group.name" product="2" />, <Cmd sid="audit.access_group.description" product="2" />, <Cmd sid="audit.access_group.access_levels" product="2" />, <Cmd sid="audit.access_group.user_groups" product="2" />, <Cmd sid="audit.access_group.users" product="2" />
+
+  * **Niveles de acceso**: <Cmd sid="audit.access_level.name" product="2" />, <Cmd sid="audit.access_level.description" product="2" />, <Cmd sid="audit.access_level.access_level_items" product="2" />
+
+  * **Configuración del ascensor**: <Cmd sid="audit.elevator.name" product="2" />, <Cmd sid="audit.elevator.description" product="2" />, <Cmd sid="audit.elevator.elevator_group_id" product="2" />, <Cmd sid="audit.elevator.floors" product="2" />, <Cmd sid="audit.elevator.active_timeout" product="2" />
+
+  * **Dispositivos del ascensor**: <Cmd sid="audit.elevator.control_device_id" product="2" />, <Cmd sid="audit.elevator.reader_devices" product="2" />, <Cmd sid="audit.elevator.module_devices" product="2" />, <Cmd sid="audit.elevator.tamper_device" product="2" />
+
+  * **Control del ascensor**: <Cmd sid="audit.elevator.dual_authentication" product="2" />, <Cmd sid="audit.elevator.trigger_actions" product="2" />
+
+  * **Acciones del ascensor**: <Cmd sid="audit.elevator.lock" product="2" />, <Cmd sid="audit.elevator.unlock" product="2" />, <Cmd sid="audit.elevator.release" product="2" />, <Cmd sid="audit.elevator.open" product="2" />, <Cmd sid="audit.elevator.clear_alarm" product="2" />, <Cmd sid="audit.elevator.clear_apb" product="2" />
+
+  * **Niveles de piso**: <Cmd sid="audit.floor_level.name" product="2" />, <Cmd sid="audit.floor_level.description" product="2" />, <Cmd sid="audit.floor_level.id" product="2" />, <Cmd sid="audit.floor_level.floor_level_items" product="2" />
+</details>
+
+<details>
+  <summary>**Gestión de dispositivos**</summary>
+
+  * **Configuración básica del dispositivo**: <Cmd sid="audit.device.name" product="2" />, <Cmd sid="audit.device.device_group_id" product="2" />, <Cmd sid="audit.device.timezone" product="2" />
+
+  * **Configuración de autenticación**: <Cmd sid="audit.device.authentication" product="2" />, <Cmd sid="audit.device.fingerprint" product="2" />, <Cmd sid="audit.device.face" product="2" />, <Cmd sid="audit.device.card" product="2" />
+
+  * **Configuración de interfaz**: <Cmd sid="audit.device.display" product="2" />, <Cmd sid="audit.device.imageLogEventInfo" product="2" />, <Cmd sid="audit.device.use_image_log" product="2" />
+
+  * **Configuración de comunicación**: <Cmd sid="audit.device.lan" product="2" />, <Cmd sid="audit.device.server" product="2" />, <Cmd sid="audit.device.rs485" product="2" />, <Cmd sid="audit.device.wlan" product="2" />, <Cmd sid="audit.device.wiegand" product="2" />, <Cmd sid="audit.device.wiegand_io" product="2" />, <Cmd sid="audit.device.usb" product="2" />, <Cmd sid="audit.device.voip" product="2" />
+
+  * **Configuración de funciones**: <Cmd sid="audit.device.system" product="2" />, <Cmd sid="audit.device.tna" product="2" />, <Cmd sid="audit.device.trigger_actions" product="2" />, <Cmd sid="audit.device.camera_frequency" product="2" />
+
+  * **Gestión de usuarios**: <Cmd sid="audit.device.export" product="2" />
+
+  * **Control del dispositivo**: <Cmd sid="audit.device.connect" product="2" />, <Cmd sid="audit.device.disconnect" product="2" />, <Cmd sid="audit.device.sync" product="2" />, <Cmd sid="audit.device.deleteNsync" product="2" />, <Cmd sid="audit.device.discover_wiegand" product="2" />
+
+  * **Gestión del sistema**: <Cmd sid="audit.device.factory_reset" product="2" />, <Cmd sid="audit.device.reset" product="2" />, <Cmd sid="audit.device.update" product="2" />, <Cmd sid="audit.device.sync_time" product="2" />, <Cmd sid="audit.device.license" product="2" />
+
+  * **Estado del dispositivo**: <Cmd sid="audit.device.locked" product="2" />, <Cmd sid="audit.device.clear_alarm" product="2" />, <Cmd sid="audit.device.delete" product="2" />
+</details>
+
+<details>
+  <summary>**Control de acceso avanzado**</summary>
+
+  * **Configuración básica de control de acceso avanzado**: <Cmd sid="audit.zone.name" product="2" />, <Cmd sid="audit.zone.description" product="2" />, <Cmd sid="audit.zone.zone_type" product="2" />, <Cmd sid="audit.zone.enable" product="2" />, <Cmd sid="audit.zone.is_global" product="2" />
+
+  * **Antipassback**: <Cmd sid="audit.zone.antipassback" product="2" />, <Cmd sid="audit.zone.clear_apb" product="2" />, <Cmd sid="audit.zone.clear_apb_ex" product="2" />
+
+  * **Alarma de incendio**: <Cmd sid="audit.zone.fire_alarm" product="2" />
+
+  * **Control de horario**: <Cmd sid="audit.zone.forced_lock" product="2" />, <Cmd sid="audit.zone.forced_unlock" product="2" />
+
+  * **Gestión de ocupación**: <Cmd sid="audit.zone.increase_occupancy" product="2" />, <Cmd sid="audit.zone.decrease_occupancy" product="2" />, <Cmd sid="audit.zone.set_occupancy" product="2" />
+
+  * **Acciones de control de acceso avanzado**: <Cmd sid="audit.zone.lock" product="2" />, <Cmd sid="audit.zone.unlock" product="2" />, <Cmd sid="audit.zone.release" product="2" />, <Cmd sid="audit.zone.open" product="2" />, <Cmd sid="audit.zone.clear_alarm" product="2" />
+</details>
+
+<details>
+  <summary>**Configuración del sistema**</summary>
+
+  * **Configuración del servidor**: <Cmd sid="audit.setting.server.server_addr" product="2" />, <Cmd sid="audit.setting.server.server_port" product="2" />, <Cmd sid="audit.setting.server.https" product="2" />, <Cmd sid="audit.setting.server.session_timeout" product="2" />
+
+  * **Configuración de seguridad**: <Cmd sid="audit.setting.server.secure_communication" product="2" />, <Cmd sid="audit.setting.server.password_strength" product="2" />, <Cmd sid="audit.setting.server.server_matching" product="2" />
+
+  * **Configuración de sincronización**: <Cmd sid="audit.setting.server.log_sync_method" product="2" />, <Cmd sid="audit.setting.server.user_sync_method" product="2" />
+
+  * **Configuración del dispositivo**: <Cmd sid="audit.setting.server.enrollment_device_list" product="2" />, <Cmd sid="audit.setting.server.fingerprint_format" product="2" />, <Cmd sid="audit.setting.server.support_mobile_credential" product="2" />, <Cmd sid="audit.setting.server.use_photo_log" product="2" />
+
+  * **Licencias**: <Cmd sid="audit.setting.server.licenses" product="2" />
+
+  * **Configuración predeterminada**: <Cmd sid="audit.setting.preference.language" product="2" />, <Cmd sid="audit.setting.preference.date_format" product="2" />, <Cmd sid="audit.setting.preference.time_format" product="2" />, <Cmd sid="audit.setting.preference.time_zone" product="2" />
+
+  * **Configuración de horarios**: <Cmd sid="audit.setting.schedule.name" product="2" />, <Cmd sid="audit.setting.schedule.description" product="2" />, <Cmd sid="audit.setting.schedule.id" product="2" />, <Cmd sid="audit.setting.schedule.daily_schedules" product="2" />, <Cmd sid="audit.setting.schedule.holiday_schedules" product="2" />, <Cmd sid="audit.setting.schedule.start_date" product="2" />, <Cmd sid="audit.setting.schedule.use_daily_iteration" product="2" />, <Cmd sid="audit.setting.schedule.days_of_iteration" product="2" />
+
+  * **Configuración de días festivos**: <Cmd sid="audit.setting.holiday_group.name" product="2" />, <Cmd sid="audit.setting.holiday_group.description" product="2" />, <Cmd sid="audit.setting.holiday_group.setting.holidays" product="2" />
+
+  * **Configuración de alertas**: <Cmd sid="audit.setting.event_type.alert_on" product="2" />, <Cmd sid="audit.setting.event_type.alert_off" product="2" />
+
+  * **Configuración del registro de imágenes**: <Cmd sid="audit.setting.image_filter.EventFilterCollection" product="2" />, <Cmd sid="audit.setting.image_filter.CutoffOption" product="2" />
+
+  * **Credenciales móviles**: <Cmd sid="audit.setting.mobileCredential.use" product="2" />, <Cmd sid="audit.setting.mobileCredential.notUse" product="2" />
+</details>
+
+<details>
+  <summary>**Configuración de seguridad avanzada**</summary>
+
+  * **Tarjeta inteligente - DESFire**: <Cmd sid="audit.setting.smartcard.desfire_app_id" product="2" />, <Cmd sid="audit.setting.smartcard.desfire_file_id" product="2" />, <Cmd sid="audit.setting.smartcard.desfire_encryption_type" product="2" />, <Cmd sid="audit.setting.smartcard.desfire_primary_key" product="2" />, <Cmd sid="audit.setting.smartcard.desfire_second_key" product="2" />
+
+  * **Tarjeta inteligente - iClass**: <Cmd sid="audit.setting.smartcard.iclass_primary_key" product="2" />, <Cmd sid="audit.setting.smartcard.iclass_second_key" product="2" />, <Cmd sid="audit.setting.smartcard.iclass_start_block_index" product="2" />
+
+  * **Tarjeta inteligente - MIFARE**: <Cmd sid="audit.setting.smartcard.mifare_primary_key" product="2" />, <Cmd sid="audit.setting.smartcard.mifare_second_key" product="2" />, <Cmd sid="audit.setting.smartcard.mifare_start_block_index" product="2" />, <Cmd sid="audit.setting.smartcard.use_mifare_primary_key" product="2" />, <Cmd sid="audit.setting.smartcard.use_mifare_second_key" product="2" />
+
+  * **Tarjeta inteligente - móvil**: <Cmd sid="audit.setting.smartcard.mobile_primary_key" product="2" />, <Cmd sid="audit.setting.smartcard.mobile_second_key" product="2" />
+
+  * **Tarjeta inteligente - estándar**: <Cmd sid="audit.setting.smartcard.name" product="2" />, <Cmd sid="audit.setting.smartcard.number_of_template" product="2" />, <Cmd sid="audit.setting.smartcard.template_size" product="2" />, <Cmd sid="audit.setting.smartcard.use_second_key" product="2" />
+
+  * **Configuración de Wiegand**: <Cmd sid="audit.setting.wiegand_format.name" product="2" />, <Cmd sid="audit.setting.wiegand_format.description" product="2" />, <Cmd sid="audit.setting.wiegand_format.id" product="2" />, <Cmd sid="audit.setting.wiegand_format.length" product="2" />, <Cmd sid="audit.setting.wiegand_format.id_fields" product="2" />, <Cmd sid="audit.setting.wiegand_format.parity_fields" product="2" />, <Cmd sid="audit.setting.wiegand_format.parity_positions" product="2" />, <Cmd sid="audit.setting.wiegand_format.parity_types" product="2" />, <Cmd sid="audit.setting.wiegand_format.use_facility_code" product="2" />
+
+  * **Condiciones y acciones de activación**: <Cmd sid="audit.setting.trigger_action.name" product="2" />, <Cmd sid="audit.setting.trigger_action.trigger" product="2" />, <Cmd sid="audit.setting.trigger_action.action" product="2" />, <Cmd sid="audit.setting.trigger_action.schedule_id" product="2" />
+
+  * **Permisos personalizados**: <Cmd sid="audit.setting.permission.name" product="2" />, <Cmd sid="audit.setting.permission.description" product="2" />, <Cmd sid="audit.setting.permission.id" product="2" />, <Cmd sid="audit.setting.permission.operator" product="2" />, <Cmd sid="audit.setting.permission.permission_items" product="2" />
+
+  * **Campos personalizados**: <Cmd sid="audit.setting.custom_fields.name" product="2" />, <Cmd sid="audit.setting.custom_fields.id" product="2" />
+
+  * **Configuración de señales**: <Cmd sid="audit.setting.output_signal.name" product="2" />, <Cmd sid="audit.setting.output_signal.delay" product="2" />, <Cmd sid="audit.setting.output_signal.count" product="2" />, <Cmd sid="audit.setting.output_signal.on_duration" product="2" />, <Cmd sid="audit.setting.output_signal.off_duration" product="2" />
+</details>
+
+<details>
+  <summary>**Gestión de datos**</summary>
+
+  * **Copia de seguridad del sistema**: <Cmd sid="audit.menu.systemBackup" product="2" />
+
+  * **Gestión de video**: <Cmd sid="audit.video.camera" product="2" />, <Cmd sid="audit.video.rule" product="2" />
+
+  * **Gestión de visitantes**: <Cmd sid="audit.menu.visitor" product="2" />, <Cmd sid="audit.menu.visitor.setting" product="2" />
+
+  * **Gestión de puertos**: <Cmd sid="audit.menu.port" product="2" />
+
+  * **Horario de verano**: <Cmd sid="audit.menu.setting.dst" product="2" />
+
+  * **Interfaz personalizada**: <Cmd sid="audit.menu.setting.quick_action" product="2" />
+</details>

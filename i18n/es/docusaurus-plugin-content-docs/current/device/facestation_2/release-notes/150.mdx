@@ -1,0 +1,80 @@
+---
+id: 150
+title: Firmware Version 1.5.0
+---
+
+# Firmware Version 1.5.0 (Build No. 1.5.0_210628)
+
+Release<Separator/>2021-07-08
+
+## Main Fixes
+
+1. Incorrect temperature was displayed when authenticating from a slave device with the thermal camera. <Badge>1.4.0, 1.4.1, 1.4.2</Badge>
+
+## New Features and Improvements
+
+---
+
+1. Occupancy limit zone support
+
+1. Added support for the option to toggle Screen Saver for slave devices.
+
+1. Improved manually turning the secure tamper on or off even when the default hash key is set.
+
+1. Separated event logs of Mobile Access cards and RFID cards.
+
+1. Improved that the thermal camera works first when both the thermal camera and Wiegand bypass are set.
+
+1. Changed to a new touch pad
+
+    - For devices with firmware version 1.4.2 or earlier, please follow the instructions below when replacing the front cover (touch pad).
+
+        - Replace the front cover after upgrading the firmware to version 1.5.0 or later.
+
+        - If you have already replaced the front cover before upgrading the firmware to version 1.5.0 or later, please upgrade to the latest version firmware again.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. The RS-485 communication did not work properly when connecting the device to a third-party controller after activating the Secure Communication mode. <Badge>1.4.2 or earlier</Badge>
+
+1. A large number of 'Door closed' logs occurred abnormally when the door sensor was set to the input port of Secure I/O 2 connected as a slave device.
+
+1. Added defensive code to initialize if an error in the IR LED value occurs. <Badge>1.3.0 or earlier</Badge>
+
+1. The screen was abnormally displayed when the second user authentication was successful on a slave device with dual authentication. <Badge>1.4.2 or earlier</Badge>
+
+1. An abnormal event log occurred when the temperature measurement failed after setting the temperature mode to 'Temperature Check Before Authentication'. <Badge>1.4.0, 1.4.1, 1.4.2</Badge>
+
+1. An abnormal event log occurred when measuring temperature after setting the temperature mode to 'Check Temperature Only'. <Badge>1.4.0, 1.4.1, 1.4.2</Badge>
+
+1. The changed settings were reflected in the log but were not displayed properly on the screen when the time and attendance code settings were changed. <Badge>1.4.2 or earlier</Badge>
+
+1. The relay operated as Off (Lock) after setting the scheduled unlock zone in the elevator and rebooting the master device. <Badge>1.4.2 or earlier</Badge>
+
+1. The performed action, such as temperature output, was different from the intended action responding to the input signal set in the Trigger & Action feature when using the Suprema Thermal Camera. <Badge>1.4.0, 1.4.1, 1.4.2</Badge>
+
+1. An issue of Suprema Thermal Camera screen being maintained even when the thermal imaging camera was toggled from 'Enabled' to 'Disabled'. <Badge>1.4.0, 1.4.1, 1.4.2</Badge>
+
+1. The device abnormally terminated when establishing a communication connection with 'Device → Server'. <Badge>1.4.2 or earlier</Badge>
+
+1. All files in the database were deleted after exporting them to a USB. <Badge>1.4.2 or earlier</Badge>
+
+1. The slave device rebooted abnormally. <Badge>1.4.2 or earlier</Badge>
+
+1. The RS-485 disconnection log continuously occurred when Secure I/O 2 was connected. <Badge>1.4.2 or earlier</Badge>
+
+1. Ten administrators were still not deleted from the device when initializing the device that has 1,000 assigned administrators. <Badge>1.4.2 or earlier</Badge>
+
+1. Device registration using Mobile Access app does not work on dynamic sites. <Badge>1.4.2 or earlier</Badge>
+
+1. The Wiegand reader operated as Unlock after setting the Wiegand reader connected to DM-20 to Lock and rebooting the device when using the device with DM-20. <Badge>1.4.2 or earlier</Badge>
+
+1. When enrolling a new fingerprint to AoC, it was able to authenticate the user with both the new fingerprint data and the existing fingerprint data. <Badge>1.4.2 or earlier</Badge>
+
+1. The door relay status was not displayed properly when rebooting the master device while Manual Lock or Manual Unlock was set. <Badge>1.4.2 or earlier</Badge>
+
+</BugLists>

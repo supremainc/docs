@@ -1,0 +1,271 @@
+---
+id: authentication
+title: Autenticación
+description: Describe los métodos de autenticación compatibles y los procedimientos de autenticación.
+keywords:
+  - Modo de autenticación
+  - Operación
+  - PIN
+  - Rostro
+  - T&A (Tiempo y Asistencia)
+---
+
+Describe los métodos de autenticación compatibles y los procedimientos de autenticación.
+
+## Modo de autenticación
+
+Configura el modo de autenticación. Utilice <Cmd sid="ui_228" product="dev" />, <Cmd sid="ui_040" product="dev" />, <Cmd sid="ui_323" product="dev" /> y <Cmd sid="ui_020" product="dev" /> en combinación como modos de autenticación y configure el horario para cada modo de autenticación.
+
+### Registrar modo de autenticación {#registering-auth-mode}
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Pulsa <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_261" product="dev" />.
+
+3. Seleccione <Image src="/img/common/ico-add.svg" ico alone />.
+
+4. Al pulsar <Image src="/img/common/ico-add1.svg" ico alone />, aparecerá en la pantalla la credencial que se puede añadir. Selecciona las credenciales que deseas añadir. Pulsa <Image src="/img/common/ico-cancel.svg" ico alone /> mientras la credencial esté añadida para eliminarla.
+
+   <Image src="/img/device/bs3-authmode.png" />
+
+5. Después de configurar el modo de autenticación deseado, configura <Cmd sid="ui_203" product="dev" />.
+
+   <div className="overflow-x">
+     | Categoría | Descripción |
+     | :-: | --- |
+     | Rostro | * <Image src="/img/common/ico-authmode-face-bs3.png" ico alone />: Este modo utiliza únicamente autenticación facial.<br />- <Image src="/img/common/ico-authmode-face-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo requiere autenticación facial seguida de la introducción de un PIN. |
+     | Tarjeta / Código QR | - <Image src="/img/common/ico-authmode-card-bs3.png" ico alone />: Este modo utiliza solo la autenticación por tarjeta / código QR.<br />- <Image src="/img/common/ico-authmode-card-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3.png" ico alone />: Este modo requiere autenticación con tarjeta / código QR seguida de autenticación facial.<br />- <Image src="/img/common/ico-authmode-card-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo requiere autenticación mediante tarjeta / código QR seguida de ingreso de PIN.<br />- <Image src="/img/common/ico-authmode-card-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3.png" ico alone /> / <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo requiere autenticación con tarjeta / código QR seguida de autenticación facial o introducción de PIN.<br />- <Image src="/img/common/ico-authmode-card-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo utiliza autenticación facial y PIN después de la autenticación con tarjeta / código QR. |
+     | ID | * <Image src="/img/common/ico-authmode-id-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3.png" ico alone />: Este modo requiere la introducción de ID seguida de autenticación facial.<br />- <Image src="/img/common/ico-authmode-id-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo requiere ingresar un ID seguido de ingreso de PIN.<br />- <Image src="/img/common/ico-authmode-id-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3.png" ico alone /> / <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo requiere la introducción de ID seguida de autenticación facial o introducción de PIN.<br />- <Image src="/img/common/ico-authmode-id-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo utiliza autenticación facial y PIN después de la introducción de ID. |
+   </div>
+
+   :::info
+
+   * <Cmd sid="ui_203" product="dev" /> se puede configurar en BioStar X. Si no se establece un horario, solo se puede seleccionar <Cmd sid="ui_361" product="dev" />.
+
+   * Para obtener más información sobre la configuración de <Cmd sid="ui_203" product="dev" />, consulta la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-schedule).
+
+   * Haga clic en <Cmd sid="ui_256" product="dev" /> y active <Cmd sid="ui_265" product="dev" /> con <Cmd sid="ui_041" product="dev" /> para usar la autenticación <Cmd sid="ui_042" product="dev" />; se requiere una licencia de dispositivo independiente. Para obtener más información, consulta [Licencia](settings#license).
+
+   :::
+
+6. Pulsa <Cmd sid="ui_037" product="dev" /> para guardar la configuración.
+
+### Modificar modo de autenticación
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Pulsa <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_261" product="dev" />.
+
+3. Selecciona el modo de autenticación que deseas modificar.
+
+4. Modifica el modo de autenticación consultando [Registrar modo de autenticación](#registering-auth-mode) y pulsa <Cmd sid="ui_037" product="dev" />.
+
+### Eliminar modo de autenticación
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Pulsa <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_261" product="dev" />.
+
+3. Pulsa <Image src="/img/common/ico-delete.svg" ico alone /> y selecciona el modo de autenticación que deseas eliminar. Es posible seleccionar varias opciones.
+
+4. Pulsa <Cmd sid="ui_037" product="dev" /> para eliminar el elemento seleccionado.
+
+## Operación
+
+### Coincidencia en el servidor
+
+Configura la coincidencia con el servidor.
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Después de pulsar <Cmd sid="ui_256" product="dev" />, active <Cmd sid="ui_265" product="dev" /> en <Cmd sid="ui_187" product="dev" />.
+
+   <Image src="/img/device/bs3-auth-option.png" />
+
+   * <Cmd sid="ui_187" product="dev" />: Cuando se establece la coincidencia en el servidor, BioStar X realiza la autenticación del usuario sin que el dispositivo la realice. Se puede usar cuando el dispositivo tiene demasiada información de usuarios o cuando el dispositivo está instalado en exteriores.
+
+   :::info
+
+   * <Cmd sid="ui_185" product="dev" /> solo puede usar tarjetas e ID.
+
+   * Si utilizas <Cmd sid="ui_185" product="dev" />, debes habilitar la coincidencia en el servidor tanto en el dispositivo como en BioStar X. Para obtener más información sobre la configuración de coincidencia en el servidor de BioStar X, consulta la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-server-server#servermatching).
+
+   :::
+
+### Autenticación QR
+
+Active la autenticación mediante código QR.
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Después de pulsar <Cmd sid="ui_256" product="dev" />, active <Cmd sid="ui_265" product="dev" /> para <Cmd sid="ui_041" product="dev" />.
+
+   <Image src="/img/device/bs3-auth-option-qr.png" />
+
+   * <Cmd sid="ui_041" product="dev" />: Configure si se utiliza la autenticación por código QR a través de la cámara del dispositivo.
+
+   * <Cmd sid="ui_329" product="dev" />: Configura la autenticación con un código QR que contenga los mismos datos que la tarjeta CSN o tarjeta Wiegand emitida al usuario. Solo se puede configurar cuando <Cmd sid="ui_041" product="dev" /> está activado.
+
+   :::info
+
+   Se requiere una licencia de dispositivo independiente para usar <Cmd sid="ui_041" product="dev" />. Para obtener más información, consulta [Licencia](settings#license).
+
+   :::
+
+## PIN
+
+Configura si se utiliza el teclado aleatorio al ingresar contraseñas.
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Después de pulsar <Cmd sid="ui_256" product="dev" />, establece si se usa <Cmd sid="ui_040" product="dev" /> en <Cmd sid="ui_204" product="dev" />.
+
+   <Image src="/img/device/bs3-pin.png" />
+
+   * <Cmd sid="ui_204" product="dev" />: Las posiciones de las teclas numéricas pueden mezclarse aleatoriamente al ingresar una contraseña para evitar filtraciones.
+
+## Opciones de visualización del resultado de autenticación
+
+Configura la opción de visualización del resultado de autenticación.
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Después de pulsar <Cmd sid="ui_256" product="dev" />, cambia los elementos deseados en <Cmd sid="ui_259" product="dev" />.
+
+   <Image src="/img/device/bs3-auth-result-display-option.png" />
+
+   * <Cmd sid="ui_169" product="dev" />: Selecciona cómo aparece el ID de usuario en la pantalla de resultados de autenticación del dispositivo.
+
+     * <Cmd sid="ui_307" product="dev" />: Muestra el ID de usuario completo.
+
+     * <Cmd sid="ui_316" product="dev" />: Mostrar solo el primer carácter del ID de usuario.
+
+     * <Cmd sid="ui_357" product="dev" />: No mostrar el ID de usuario.
+
+   * <Cmd sid="ui_177" product="dev" />: Seleccionar cómo aparece el nombre de usuario en la pantalla de resultados de autenticación del dispositivo.
+
+     * <Cmd sid="ui_307" product="dev" />: Mostrar el nombre de usuario completo.
+
+     * <Cmd sid="ui_316" product="dev" />: Mostrar solo el primer carácter del nombre de usuario.
+
+     * <Cmd sid="ui_357" product="dev" />: No mostrar el nombre de usuario.
+
+## Rostro
+
+Cambie la configuración de la autenticación facial.
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_228" product="dev" />.
+
+3. Cambie el elemento deseado.
+
+   <Image src="/img/device/bs3-auth.png" />
+
+   * <Cmd sid="ui_140" product="dev" />: Establece la sensibilidad para detectar movimiento alrededor del dispositivo. Cuando <Cmd sid="ui_140" product="dev" /> está ajustado en <Cmd sid="ui_091" product="dev" />, toque la pantalla para autenticar el rostro.
+
+   * <Cmd sid="ui_115" product="dev" />: Si el rostro no se registra dentro del tiempo establecido, el registro se cancelará.
+
+   * <Cmd sid="ui_260" product="dev" />: Si la autenticación no se completa dentro del tiempo establecido, la autenticación falla.
+
+   * <Cmd sid="ui_117" product="dev" />: Permite verificar rostros duplicados durante el registro de rostro.
+
+   * <Cmd sid="ui_229" product="dev" />: Defina la posición y el tamaño del área donde el dispositivo detecta rostros durante la autenticación facial.
+
+     :::info
+
+     Para un rendimiento óptimo, se recomienda usar los valores predeterminados de las subopciones de <Cmd sid="ui_229" product="dev" />. Los valores predeterminados de cada opción son los siguientes:
+
+     * Ángulo máximo de orientación de la cabeza: 15
+
+     * Distancia de detección: mín. 30 cm, máx. 100 cm
+
+     * Búsqueda amplia: desactivada
+
+     :::
+
+   * <Cmd sid="ui_060" product="dev" />: Al activar <Cmd sid="ui_060" product="dev" />, podrá enrolar la <Cmd sid="ui_340" product="dev" /> emitida por BioStar X. <Cmd sid="ui_340" product="dev" /> permite la autenticación biométrica sin almacenar datos de usuario en el servidor BioStar X, Airfob Portal o dispositivo, al guardar la plantilla biométrica del usuario en una tarjeta de acceso móvil.
+
+     :::info
+
+     Para obtener más información sobre <Cmd sid="ui_340" product="dev" />, consulte la [Guía del administrador de BioStar X](../../platform/biostar_x/enroll-credential-mobile#template-on-mobile).
+
+     :::
+
+   * <Cmd sid="ui_157" product="dev" />: Configure para almacenar tanto las imágenes reales como las plantillas en Visual Face, o para guardar solo las plantillas sin imágenes. Si se desactiva, se eliminarán todas las imágenes almacenadas de rostros visuales y los rostros visuales enrolados posteriormente almacenarán solo las plantillas, sin imágenes.
+
+     :::info
+
+     Después de desactivar esta opción, utilice BioStar 2 v2.9.7 o superior.
+
+     :::
+
+   * <Cmd sid="ui_149" product="dev" />: Configura el nivel de seguridad para la autenticación 1:N.
+
+   * <Cmd sid="ui_278" product="dev" />: Configure el modo de funcionamiento del dispositivo para la autenticación facial.
+
+     * <Cmd sid="ui_359" product="dev" />: La coincidencia visual e infrarroja funciona conjuntamente para aumentar la precisión de la autenticación facial.
+
+     * <Cmd sid="ui_159" product="dev" />: Los usuarios pueden autenticarse rápidamente mientras caminan dentro del rango de autenticación del dispositivo.
+
+   * <Cmd sid="ui_247" product="dev" />: Evite la autenticación de usuarios con rostros falsificados, como fotografías. Se activa cuando <Cmd sid="ui_278" product="dev" /> está configurado en <Cmd sid="ui_359" product="dev" />.
+
+     :::info
+
+     * El rendimiento de la función anti-spoofing facial se ha mejorado para aprobar la prueba iBeta Level 1 ISO 30107-3 de detección de ataques de presentación.
+
+     * Con luz solar intensa, se recomienda usar la función <Cmd sid="ui_247" product="dev" /> como <Cmd sid="ui_152" product="dev" />.
+
+     :::
+
+   * <Cmd sid="ui_070" product="dev" />: Cambie las configuraciones avanzadas para la autenticación facial, como la detección de mascarillas.
+
+     * <Cmd sid="ui_123" product="dev" />: Configure si se utiliza la detección de mascarillas.
+
+     * <Cmd sid="ui_067" product="dev" />: Defina el método para comprobar si se lleva mascarilla. Se activa cuando <Cmd sid="ui_123" product="dev" /> está configurado en <Cmd sid="ui_161" product="dev" />.
+
+     :::info
+
+     * <Cmd sid="ui_127" product="dev" />: Los usuarios sin mascarilla serán rechazados y se registrarán los eventos de ausencia de mascarilla.
+
+     * <Cmd sid="ui_126" product="dev" />: Los usuarios sin mascarilla podrán autenticarse, pero los eventos de ausencia de mascarilla se registrarán.
+
+     * <Cmd sid="ui_125" product="dev" />: Solo los usuarios sin mascarilla pueden autenticarse y, si se usa este modo, el modo de verificación de mascarilla quedará fijo en <Cmd sid="ui_369" product="dev" />.
+
+     :::
+
+   * <Cmd sid="ui_124" product="dev" />: Establece la sensibilidad para detectar el uso de mascarilla. Se activa cuando <Cmd sid="ui_123" product="dev" /> está configurado en <Cmd sid="ui_161" product="dev" />.
+
+   * <Cmd sid="ui_368" product="dev" />: Configura el modo de confirmación según el propósito del dispositivo.
+
+     :::info
+
+     * <Cmd sid="ui_267" product="dev" />: Después de la autenticación, verifica si el usuario lleva mascarilla.
+
+     * <Cmd sid="ui_369" product="dev" />: Autentica después de comprobar si el usuario lleva mascarilla.
+
+     * <Cmd sid="ui_370" product="dev" />: El dispositivo solo se puede usar para comprobar si se lleva mascarilla. Cuando este modo está activado, cualquier usuario que lleve mascarilla puede acceder independientemente de la autenticación.
+
+     :::
+
+## T&A (Tiempo y Asistencia)
+
+Configura cómo registrar el modo T&A.
+
+1. Presione <Image src="/img/common/ico-menu.svg" ico alone /> y autentíquese con la credencial de nivel de administrador.
+
+2. Selecciona <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_079" product="dev" />.
+
+3. Cambie el elemento deseado.
+
+   <Image src="/img/device/bs3-auth2.png" />
+
+   * <Cmd sid="ui_083_list" product="dev" />: Configura cómo usar el modo de asistencia.
+
+   * <Cmd sid="ui_086" product="dev" />: Agrega eventos de asistencia. Selecciona <Cmd sid="ui_086" product="dev" /> → <Image src="/img/common/ico-add.svg" ico alone /> para registrar eventos de asistencia y luego configura el icono que se mostrará en la pantalla, <Cmd sid="ui_085" product="dev" /> y <Cmd sid="ui_203" product="dev" />.
+
+   * <Cmd sid="ui_082" product="dev" />: Exige a los usuarios seleccionar un evento de asistencia durante la autenticación. Disponible cuando <Cmd sid="ui_083_list" product="dev" /> está configurado en <Cmd sid="ui_199" product="dev" />.
+
+   * <Cmd sid="ui_081" product="dev" />: Permite a los usuarios usar solo los eventos de asistencia seleccionados por el administrador. Disponible cuando <Cmd sid="ui_083_list" product="dev" /> está configurado en <Cmd sid="ui_071" product="dev" />.
+
+   * <Cmd sid="ui_279" product="dev" />: Selecciona si usar códigos de trabajo.

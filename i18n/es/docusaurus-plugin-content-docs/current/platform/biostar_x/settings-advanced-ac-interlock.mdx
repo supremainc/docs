@@ -1,0 +1,66 @@
+---
+id: settings-advanced-ac-interlock
+title: Esclusa
+description: Guía sobre cómo configurar el interbloqueo. El interbloqueo es un método de control de acceso que mejora la seguridad al bloquear el acceso a las demás puertas cuando una puerta está abierta entre varias.
+keywords:
+  - Control de acceso avanzado
+  - Esclusa
+---
+
+El interbloqueo es un método de control de acceso utilizado en áreas donde la seguridad es importante. Cuando se configura el interbloqueo en un lugar con dos o más puertas, funciona de la siguiente manera.
+
+* Supervisa el estado de cada puerta en tiempo real mediante sensores y relés de puerta.
+
+* Si una puerta está abierta o desbloqueada, todas las demás puertas pasan automáticamente a estado bloqueado.
+
+* Configura para bloquear el acceso adicional mientras haya un usuario presente en la ubicación.
+
+Este método mejora la seguridad al evitar que varias puertas se abran simultáneamente.
+
+:::info
+
+* Una sola configuración de interbloqueo puede incluir hasta 4 puertas.
+
+* Solo se puede configurar el interbloqueo en puertas compuestas por dispositivos conectados a CoreStation.
+
+* Los dispositivos asignados a un interbloqueo no pueden utilizarse en otras configuraciones de interbloqueo.
+
+* Las puertas asignadas a un interbloqueo no pueden utilizarse en otras configuraciones, excepto en los ajustes de alarma contra incendios.
+
+:::
+
+## Registrar interbloqueo {#addInterlockZone}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.advancedAc.root" /> en la barra lateral izquierda.
+
+3. Haz clic en <Cmd sid="button.func.addZone" product="2" />.
+
+4. Selecciona <Cmd sid="zone.interLock" product="2" /> y haz clic en <Cmd sid="button.apply" product="2" />.
+
+5. Ingresa el nombre de la configuración de interbloqueo que se añadirá en la sección <Cmd sid="common.info" product="2" />.
+
+   <Image src="/img/biostarx-settings-adv-ac-add-interlock.png" />
+
+6. Configura los detalles de la configuración de interbloqueo en la sección <Cmd sid="common.setting" product="2" />. Para obtener más información, consulta [lo siguiente](#setting).
+
+7. Establece que no se permita el acceso cuando haya un usuario presente en la sección <Cmd sid="common.option" product="2" />.
+
+8. En la sección <Cmd sid="common.alarm" product="2" />, define las acciones que se ejecutarán cuando ocurran eventos específicos en la configuración de interbloqueo.
+
+:::info
+
+Las secciones <Cmd sid="common.option" product="2" /> y <Cmd sid="common.alarm" product="2" /> solo pueden utilizarse si la opción <Cmd sid="zone.pause.doorselected" product="2" /> está configurada en la sección <Cmd sid="common.setting" product="2" />.
+
+:::
+
+## Guía de opciones de configuración {#setting}
+
+Los detalles de las configuraciones de interbloqueo son los siguientes.
+
+* <Cmd sid="zone.globalZone" product="2" />: Establece el alcance de aplicación. Las configuraciones de interbloqueo solo admiten el modo <Cmd sid="zone.globalZone.local" product="2" /> y solo pueden configurarse con dispositivos conectados a CoreStation mediante RS-485.
+
+* <Cmd sid="zone.pause.activatedAndDeactivated" product="2" />: Puedes activar o desactivar temporalmente la configuración.
+
+* <Cmd sid="zone.pause.doorselected" product="2" />: Selecciona la puerta que se designará para interbloqueo. Debes seleccionar al menos 2 puertas, y solo se pueden añadir puertas con sensores de puerta conectados.

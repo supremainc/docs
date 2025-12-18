@@ -1,0 +1,26 @@
+[
+  {
+    "question": "¿Por qué se me pide activar los servicios de ubicación?",
+    "answer": "La app Suprema Pass se comunica con los dispositivos de control de acceso mediante Bluetooth. En los dispositivos Android, el sistema operativo requiere que los servicios de ubicación estén activados para que Bluetooth funcione. En iOS, los permisos de ubicación son necesarios para usar la app en modo de segundo plano."
+  },
+  {
+    "question": "¿La app Airfob almacena mis datos de ubicación?",
+    "answer": "<b>No</b>. La app Suprema Pass no rastrea ni almacena datos de ubicación basados en GPS ni comparte estos datos con terceros. Aunque la app usa los servicios de ubicación por Bluetooth para la autenticación, los registros de acceso solo se guardan en el portal del administrador del sitio. La app Suprema Pass, Suprema y MOCA System no almacenan ni utilizan ningún dato personal de ubicación."
+  },
+  {
+    "question": "¿Activar los servicios de ubicación agotará la batería de mi teléfono?",
+    "answer": "<b>No</b>. A diferencia de otras apps que usan GPS, la app Suprema Pass no depende de los servicios de ubicación por GPS, por lo que no aumenta el consumo de batería."
+  },
+  {
+    "question": "¿Es obligatorio activar los servicios de ubicación para usar Suprema Pass?",
+    "answer": "<ul><li><b>Usuarios de Android</b>: Sí, los servicios de ubicación deben estar activados debido a la política de Bluetooth de Android.</li><li><b>Usuarios de iOS</b>: Solo es necesario para el modo de segundo plano. Si se usa el modo \"Solo mientras la app está en pantalla\", no se necesitan permisos de ubicación.</li></ul>"
+  },
+  {
+    "question": "Requisitos de permisos de ubicación según el método de conexión:",
+    "answer": "<ul><li><b>Solo mientras la app está en pantalla</b>: El permiso de ubicación puede configurarse en \"Permitir solo mientras se usa la app\". (No requerido en iOS.)</li><li><b>Modo en segundo plano (Siempre)</b>: El permiso de ubicación debe configurarse en \"Permitir siempre\".</li><li><b>Modo NFC</b>: Los usuarios de Android deben aceptar los permisos de ubicación.</li></ul>"
+  },
+  {
+    "question": "¿Por qué mi teléfono me pide de forma aleatoria que acepte los servicios de ubicación?",
+    "answer": "<ol><li>Si seleccionas \"No permitir\" o \"Permitir una vez\", tu teléfono puede seguir pidiéndote que actives los servicios de ubicación. Esto lo controla iOS o Android, no la app Suprema Pass.</li><li>Para los usuarios de iOS, incluso si se selecciona \"Permitir siempre\", Apple aún puede mostrar mensajes de confirmación periódicos como parte de sus políticas de seguridad. Continúa seleccionando \"Permitir siempre\" o las credenciales móviles pueden no funcionar de forma constante. Funciones como el Modo en segundo plano y la Pulsación prolongada pueden desactivarse aleatoriamente.</li></ol>"
+  }
+]

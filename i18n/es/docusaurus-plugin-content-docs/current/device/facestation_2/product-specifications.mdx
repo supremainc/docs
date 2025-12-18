@@ -1,0 +1,65 @@
+---
+id: product-specifications
+title: Especificaciones del producto
+description: Incluye las especificaciones clave del producto, como tamaño, características y rendimiento.
+keywords:
+  - Credenciales
+  - General
+  - Rostro
+  - Capacidad
+  - Interfaz
+  - Eléctrico
+  - Dimensiones
+---
+
+Incluye las especificaciones clave del producto, como tamaño, características y rendimiento.
+
+import specs from '@site/static/specs/fs2_specs.json';
+
+{/* 크리덴셜 */}
+
+<SpecSection data={specs.facestation2.credentials} />
+
+{/* 일반 */}
+
+<SpecSection data={specs.facestation2.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.facestation2.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.facestation2.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.facestation2.power} />
+
+## Dimensiones y peso
+
+<Image src="/img/device/fs2-odpb-oapb-dimension.svg" className="none" />
+
+---
+
+:::note
+
+<Anno id="anno1">1)</Anno> Las tarjetas DESFire EV2/EV3 son retrocompatibles con las tarjetas DESFire EV1 y admiten las funciones de CSN y de tarjeta inteligente, incluidas las de la tarjeta DESFire EV1.
+
+<Anno id="anno2">2)</Anno> El alcance de lectura por RF variará según el entorno de instalación.
+
+<Anno id="anno3">3)</Anno> Basado en usuarios inscritos sin credenciales.
+
+:::
+
+:::info
+
+* Las especificaciones del producto están sujetas a cambios sin previo aviso para mejorar el rendimiento.
+
+* Cuando este producto funciona como dispositivo maestro, conectar un dispositivo con sensor de huellas como esclavo permite autenticar huellas mediante el dispositivo esclavo.
+
+  * Máx. Credenciales de huella digital (1:N): 10,000
+
+  * Máx. Credenciales de huella digital (1:1): 100,000
+
+:::

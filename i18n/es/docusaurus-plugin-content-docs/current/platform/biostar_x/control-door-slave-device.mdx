@@ -1,0 +1,97 @@
+---
+id: control-door-slave-device
+title: Controlar dispositivos esclavos
+description: Esta guía muestra cómo controlar los dispositivos conectados a la puerta de entrada.
+keywords:
+  - Monitorizar
+  - Puerta
+  - dispositivo esclavo
+---
+
+Este documento ofrece una guía sobre cómo controlar los dispositivos por modelo para facilitar el control de los dispositivos conectados a la puerta de entrada. Hay varias funciones disponibles, como bloquear/desbloquear mediante el relé de la puerta, revisar el video de la cámara y la información detallada, y gestionar el estado de seguridad.
+
+1. Haga clic en <Cmd sid="shell.header.arena" /> en la página <Cmd sid="shell.header.launcher" /> o seleccione <Cmd sid="shell.header.arena" /> en la lista de accesos directos en la esquina superior izquierda de la pantalla.
+
+2. En la pestaña <Cmd sid="arena.tree.door.title" />, selecciona una puerta.
+
+3. Selecciona el dispositivo conectado desde la sublista y haz clic con el botón derecho del ratón. Seleccione la función deseada en el menú emergente.
+
+## Controlar el relé de la puerta {#control-relay}
+
+Controla el relé conectado a la puerta. Haz clic derecho en el dispositivo de relé. Seleccione la función deseada en el menú emergente.
+
+<Image src="/img/biostarx-monitoring-door-relay-popup.png" />
+
+:::info
+
+<Glossary termid="relay" />
+
+:::
+
+### Desbloquear el relé {#relay-open}
+
+Desbloquea la puerta mediante el dispositivo de relé conectado a la puerta. Cualquiera puede acceder a la puerta cuando está abierta. Haga clic en <Cmd sid="arena.tree.contextMenu.unlock" /> en el menú emergente y seleccione la opción deseada.
+
+* <Cmd sid="arena.tree.contextMenu.unlockOnce" />: Desbloquea la puerta una vez.
+
+* <Cmd sid="arena.tree.contextMenu.unlockTimed" />: Abre la puerta durante un tiempo determinado. Ingresa el tiempo deseado en segundos.
+
+* <Cmd sid="arena.tree.contextMenu.unlockPermanent" />: Desbloquea la puerta sin límite de tiempo.
+
+Al abrir el relé de la puerta, el icono cambia de <IcRelayLock /> a <IcRelayUnlock />.
+
+:::tip
+
+La puerta puede abrirse temporalmente para la comodidad de los visitantes externos. Después de abrir la puerta, cambia al modo <Cmd sid="arena.tree.contextMenu.normalize" />.
+
+:::
+
+### Normalizar el relé {#relay-release}
+
+Usa el relé para cambiar la puerta al estado <Cmd sid="arena.tree.contextMenu.normalize" /> y permitir el acceso solo a usuarios autorizados. Haga clic en <Cmd sid="arena.tree.contextMenu.normalize" /> en el menú emergente.
+
+### Bloquear el relé {#relay-lock}
+
+Usa el relé conectado a la puerta para cambiarla al estado <Cmd sid="arena.tree.contextMenu.lock" /> y evitar el acceso de cualquier persona. Haz clic en <Cmd sid="arena.tree.contextMenu.lock" /> en el menú emergente y selecciona la opción deseada.
+
+* <Cmd sid="arena.tree.contextMenu.unlockTimed" />: Cambia la puerta a un estado bloqueado durante un período determinado. Ingresa el tiempo deseado en segundos.
+
+* <Cmd sid="arena.tree.contextMenu.lockPermanent" />: Cambia la puerta a un estado bloqueado sin límite de tiempo.
+
+## Controlar dispositivo de seguridad {#control-arm}
+
+Configura o desactiva el estado armado de la puerta mediante el dispositivo de seguridad conectado. Haz clic en <Cmd sid="arena.tree.contextMenu.arm" /> o <Cmd sid="arena.tree.contextMenu.disarm" /> en el menú emergente.
+
+<Image src="/img/biostarx-monitoring-door-arm-popup.png" className="none" />
+
+:::info
+
+Esta función está disponible al adquirir opciones adicionales con una licencia **Advanced** o superior, o con una licencia **Enterprise** o superior. Para obtener más información sobre la política de licencias, consulta [lo siguiente](licensing).
+
+:::
+
+## Controlar la cámara de la puerta {#control-camera}
+
+Controla la cámara conectada a la puerta. Visualiza el video de la cámara en tiempo real o consulta los detalles.
+
+<Image src="/img/biostarx-monitoring-door-camera-popup.png" />
+
+:::info
+
+* Para usar esta función, la puerta debe estar conectada a una cámara. Consulta [el siguiente](settings-videos-rule) para saber cómo integrar la puerta con la cámara.
+
+* Esta función está disponible con opciones adicionales en la licencia **Advanced** o superior. Para más información sobre la política de licencias, consulta [lo siguiente](licensing#features-add-ons).
+
+:::
+
+### Revisar video de la cámara {#camera-video}
+
+Haz clic en <Cmd sid="arena.tree.contextMenu.openVideo" /> en el menú emergente para ver la transmisión de la cámara en tiempo real. Agrega y reproduce el metraje de la cámara seleccionada en la sección de mosaicos de video de <Cmd sid="shell.header.arena" />.
+
+<Image src="/img/monitoring-door-camera-control-open-video.png" />
+
+### Ver detalles de la cámara {#camera-detail}
+
+Haz clic en <Cmd sid="arena.tree.contextMenu.viewDetail" /> en el menú emergente para ver los detalles de la cámara. Los detalles de la cámara aparecen en el lado derecho de la pantalla.
+
+<Image src="/img/biostarx-monitoring-door-camera-details.png" />

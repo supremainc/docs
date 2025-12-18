@@ -1,0 +1,97 @@
+---
+id: settings-schedule
+title: Ajustes De Horario
+description: Configure los horarios de entrada y festivos para gestionar de forma eficiente el control de acceso y la asistencia.
+keywords:
+  - Turno
+  - Acceso
+  - Festivo
+---
+
+Esta guía describe cómo operar de manera eficiente el control de acceso y la gestión de asistencia configurando horarios de acceso y festivos. Los horarios son un factor importante que se puede aplicar al control de acceso, lo que permite gestionar los tiempos de acceso de los usuarios y los días festivos.
+
+## Registrar horario {#addSchedule}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.schedule.root" /> en la barra lateral izquierda.
+
+3. Haga clic en <Cmd sid="button.func.addSchedule" product="2" /> en la parte superior izquierda de la pantalla.
+
+   <Image src="/img/biostarx-settings-schedule-add-btn.png" />
+
+4. Introduzca o configure cada elemento en la pantalla <Cmd sid="schedule.addNewSchedule" product="2" />.
+
+   <Image src="/img/biostarx-settings-schedule-add.png" />
+
+5. Cuando termine todos los ajustes, haga clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla.
+
+:::info
+
+Para obtener información detallada sobre los elementos individuales de la pantalla <Cmd sid="schedule.addNewSchedule" product="2" />, consulte [lo siguiente](#addScheduleOptions).
+
+:::
+
+### Guía de opciones para añadir nuevo horario {#addScheduleOptions}
+
+Guía de los elementos individuales que se pueden configurar en la pantalla <Cmd sid="schedule.addNewSchedule" product="2" />.
+
+<Image src="/img/biostarx-settings-schedule-add-extend.png" />
+
+* <Cmd sid="common.name" product="2" />: Introduzca el nombre del horario.
+
+* <Cmd sid="common.description" product="2" />: Introduzca una breve descripción del horario.
+
+* <Cmd sid="common.type" product="2" />: Elija un horario semanal o diario. Al seleccionar <Cmd sid="schedule.daily" product="2" />, puede seleccionar <Cmd sid="schedule.cycle" product="2" /> y <Cmd sid="schedule.start_date" product="2" />.
+
+  <Image src="/img/biostarx-settings-schedule-add-type-daily.png" />
+
+* Haga clic en <Cmd sid="shift.timeSegment" product="2" /> en el área central para establecer la hora deseada. Una vez completado, haga clic en <Cmd sid="button.apply" product="2" />.
+
+  <Image src="/img/biostarx-settings-schedule-input-time-slot.png" />
+
+  * Puede configurar hasta cinco franjas horarias por día o por semana.
+
+  * Prográmelas y haga clic en <IcTslot /> para copiar las franjas horarias establecidas arriba.
+
+  * Haga clic en <IcEditUL /> para modificar una franja horaria. Haga clic en <IcEraser /> para eliminar una franja horaria establecida.
+
+* <Cmd sid="schedule.holidaySchedule" product="2" />: Elija si desea aplicar horarios de festivos. Al seleccionar un elemento, se habilitan los ajustes detallados.
+
+  * Seleccione la casilla <Cmd sid="common.none" product="2" /> para elegir los festivos preestablecidos.  Para añadir más festivos, haga clic en <Cmd sid="button.plusAdd" product="2" /> y establezca los festivos.
+
+  * **Franjas horarias de festivos**: Haga clic en las franjas horarias para establecer las que se aplicarán en los festivos.
+
+  :::info
+
+  * Haga clic en <IcEditUL /> para modificar una franja horaria. Haga clic en <IcEraser /> para eliminar una franja horaria establecida.
+
+  * Haga clic en <IcTrash2 /> para eliminar los festivos añadidos.
+
+  * Para obtener información detallada sobre cómo añadir horarios de festivos, consulte [lo siguiente](#addHolidaySchedule).
+
+  :::
+
+## Añadir horario de festivos {#addHolidaySchedule}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.schedule.root" /> en la barra lateral izquierda.
+
+3. Haga clic en <Cmd sid="button.func.addHoliday" product="2" /> en la parte superior izquierda de la pantalla.
+
+4. Introduzca <Cmd sid="common.name" product="2" /> y <Cmd sid="common.description" product="2" /> en la pantalla <Cmd sid="schedule.addNewHoliday" product="2" />.
+
+   <Image src="/img/biostarx-settings-schedule-add-holiday.png" />
+
+5. Haga clic en <Cmd sid="button.addplus" product="2" /> en la sección <Cmd sid="common.detail" product="2" />.
+
+6. Haga clic en <IcCalc /> para seleccionar la fecha y establecer el número de repeticiones y la duración.
+
+7. Haga clic en <Cmd sid="button.apply" product="2" /> para registrar el horario de festivos establecido.
+
+:::info
+
+Haga clic en <IcTrash2 /> para eliminar un horario de festivos.
+
+:::

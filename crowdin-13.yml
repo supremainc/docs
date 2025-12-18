@@ -1,0 +1,48 @@
+#
+# Your Crowdin credentials
+#
+"project_id" : "13"
+"api_token" : "763fcd04f64c1312bad530dba993f905bad244a6d8b0e9f8da39bf8589242e3ee16d864c28f71eeb"
+"base_path" : "."
+"base_url" : "https://supremainc.crowdin.com"
+
+#
+# Choose file structure in Crowdin
+# e.g. true or false
+#
+"preserve_hierarchy": true
+
+#
+# Files configuration
+# i18n/en/docusaurus-plugin-content-docs/current
+files: [
+  {
+    "source" : "/i18n/en/**/*",
+    "translation" : "/i18n/%two_letters_code%/**/%original_file_name%",
+    "escape_special_characters": 0,
+    "ignore": [
+      "/i18n/en/docusaurus-plugin-content-docs/current/legal/*.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/_unused/*.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/common/_apache-license.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/common/_gnu-general-public-license.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/common/_gnu-lesser-general-public-license.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/common/_mit-open-source-license.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/common/_more-information.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/common/_openssl-license.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/common/_original-ssleay-license.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/common/_register-device-license.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/common/_sil-open-font-license.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/common/_boringssl-license.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/common/_ios-license.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/common/_android-license.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/common/_biostarair-customer-notice.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/common/bsx-license/*.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/opensourcelicenses.txt",
+      "/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/*.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/**/*.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/reference/**/smartcardissue.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/*/*/release-notes/*.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/common/_ic-information.mdx",
+    ]
+  }
+]

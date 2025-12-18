@@ -1,0 +1,76 @@
+---
+id: settings-advanced-ac-muster
+title: Aforo
+description: Esta guía describe cómo configurar los ajustes de muster. Establece la ubicación en la que los usuarios se reunirán en caso de emergencia y supervisa la cantidad de personas en esa ubicación específica.
+keywords:
+  - Control de acceso avanzado
+  - Aforo
+---
+
+El muster es un ajuste necesario para la gestión eficaz del personal y la garantía de seguridad durante emergencias. Esta función permite a los administradores designar una ubicación específica como punto de reunión para predefinir dónde se reunirán los usuarios durante emergencias.
+
+El ajuste de muster cumple los siguientes propósitos:
+
+* **Respuesta ante emergencias**: Designa una ubicación donde los usuarios puedan reunirse de forma segura en caso de emergencias, como incendios o terremotos.
+
+* **Supervisión de personal**: Verifica en tiempo real el número actual de personas y la lista de ingresantes en una ubicación específica.
+
+* **Detección de estancia prolongada**: Detecta a los usuarios que permanecen en una ubicación específica más allá del tiempo establecido y envía notificaciones al administrador.
+
+* **Seguridad mejorada**: Supervisa continuamente el acceso a ubicaciones sensibles para mejorar los niveles de seguridad.
+
+A través de estas funciones, los administradores pueden establecer un marco de gestión de seguridad más sistemático y eficiente.
+
+## Registrar muster {#addMusterZone}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.advancedAc.root" /> en la barra lateral izquierda.
+
+3. Haz clic en <Cmd sid="button.func.addZone" product="2" />.
+
+4. Selecciona <Cmd sid="zone.muster" product="2" /> y haz clic en <Cmd sid="button.apply" product="2" />.
+
+5. Ingresa el nombre del ajuste de muster que se agregará en la sección <Cmd sid="common.info" product="2" />.
+
+   <Image src="/img/biostarx-settings-adv-ac-add-muster.png" />
+
+6. Configura los detalles de los ajustes de muster en la sección <Cmd sid="common.setting" product="2" />. Para obtener más información, consulta [lo siguiente](#setting).
+
+7. Configura las acciones que se realizarán cuando ocurran eventos específicos en los ajustes de muster en la sección <Cmd sid="common.alarm" product="2" />.
+
+8. Después de completar todas las configuraciones, haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla.
+
+:::info
+
+La sección <Cmd sid="common.alarm" product="2" /> solo puede utilizarse después de configurar tanto <Cmd sid="zone.entryDevices" product="2" /> como <Cmd sid="zone.exitDevices" product="2" />.
+
+:::
+
+### Guía de opciones de configuración {#setting}
+
+Los detalles de los ajustes de muster son los siguientes:
+
+* <Cmd sid="zone.globalZone" product="2" />: Puedes verificar el alcance de aplicación. El ajuste de muster solo admite el modo <Cmd sid="zone.globalZone.global" product="2" /> y puede configurarse con todos los dispositivos registrados en **BioStar X**.
+
+* <Cmd sid="zone.pause.activatedAndDeactivated" product="2" />: Puedes activar o desactivar temporalmente la configuración.
+
+* <Cmd sid="zone.entryDevices" product="2" />: Selecciona el dispositivo que se utilizará al entrar. Puedes elegir de la lista de dispositivos registrados.
+
+* <Cmd sid="zone.exitDevices" product="2" />: Selecciona el dispositivo que se utilizará al salir. Puedes elegir de la lista de dispositivos registrados.
+
+* <Cmd sid="zone.muster.accessGroup" product="2" />: Establece el grupo de acceso para los usuarios que se quedarán en la ubicación de reunión. Establece hasta 16 grupos de acceso.
+
+* <Cmd sid="zone.muster.timeLimit" product="2" />: Establece el tiempo máximo permitido para permanecer en la ubicación de reunión. Se puede configurar hasta un máximo de 4320 minutos y se activará una alarma si un usuario permanece en la ubicación de reunión más allá del tiempo especificado.
+
+:::info
+
+Para obtener más información sobre el registro de dispositivos, consulte lo siguiente.
+
+* <DocLink docId="platform/biostar_x/settings-adding-devices" />
+
+* <DocLink docId="platform/biostar_x/settings-adding-wiegand" />
+
+* <DocLink docId="platform/biostar_x/settings-adding-slave-device" />
+
+:::

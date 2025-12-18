@@ -1,0 +1,36 @@
+---
+id: 151
+title: Firmware Version 1.5.1
+---
+
+# Firmware Version 1.5.1 (Build No. 1.5.1_211203)
+
+Release<Separator/>2021-12-13
+
+## New Features and Improvements
+
+---
+
+1. Applied a code to compensate for the incorrect flag of the face template.
+
+1. Improved security vulnerability.
+
+    - Removed UDP port for debug.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Scanning a fingerprint to enroll on the slave device caused an error and failed enrollment. <Badge>1.5.0</Badge>
+
+1. The device failed to recognize the iCLASS Seos card suddenly (FS2-AWB). <Badge>1.5.0 or earlier</Badge>
+
+1. Abnormal authentication failure occurred if a user authenticates with card+face or ID+face on the slave device when using server matching. <Badge>1.5.0 or earlier</Badge>
+
+1. Slave devices are disconnected when the master device is rebooted. <Badge>1.5.0 or earlier</Badge>
+
+1. Abnormal authentication failure occurred when the slave device's auth mode was set to card+fingerprint. <Badge>1.4.0 or later, 1.5.0 or earlier</Badge>
+
+</BugLists>

@@ -1,0 +1,175 @@
+---
+id: getting-started
+title: Primeros pasos
+description: Proporciona procedimientos iniciales para empezar con el dispositivo.
+keywords:
+  - Componentes
+  - Nombre
+  - Función
+  - Cable
+  - Conector
+---
+
+Proporciona procedimientos iniciales para empezar con el dispositivo.
+
+## Componentes
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-device-bep2.svg" className="none" height={250} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-wall-bracket-bep2.svg" className="none" height={250} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-drilling-template-bep2.svg" className="none" height={250} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-connection-cables-ber2.svg" className="none" width="80%" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>BioEntry R2</Td>
+
+      <Td>Soporte de pared</Td>
+
+      <Td>Plantilla de perforación</Td>
+
+      <Td>Cables de conexión</Td>
+    </Row>
+  </Tbody>
+
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-ferrite-core.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-resistor.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-pvc-anchors2.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-fixing-screws2.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Núcleo de ferrita</Td>
+
+      <Td>Resistencia de 120 Ω</Td>
+
+      <Td>Anclajes de PVC x2</Td>
+
+      <Td>Tornillos de fijación x2</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-bracket-fixing-screw.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-quick-guide.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-oss-guide.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Tornillo de fijación del soporte (en forma de estrella)</Td>
+
+      <Td>Guía rápida</Td>
+
+      <Td>Guía de software de código abierto</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## Nombre y función de cada parte
+
+<Image src="/img/device/name-function-each-part-ber2.png" className="none" width="60%" />
+
+* **Indicador LED**: Indica el estado operativo del dispositivo mediante el color del LED.
+
+  * Verde: autenticación exitosa.
+
+  * Rojo: autenticación fallida.
+
+  * Azul/cian intermitente: funcionamiento normal.
+
+  * Azul/verde intermitente:
+
+    * Al configurar <Cmd sid="ui_012" product="dev" /> para su uso, no se puede obtener la dirección IP.
+
+    * Cuando está en modo <Cmd sid="ui_205" product="dev" />, la conexión con el dispositivo maestro se desconecta.
+
+  * Verde intermitente: esperando entrada.
+
+* **Sección de reconocimiento de tarjetas RF**: Esta es la parte que reconoce tarjetas RF para acceso.
+
+* **Unidad de reconocimiento de huella dactilar**: La parte que reconoce la huella dactilar para acceso.
+
+* **Alimentación (2 pines)**: Conecta el cable de alimentación.
+
+* **RS-485 (4 pines)**: Conecta el cable RS-485.
+
+* **Botón de reinicio**
+
+  * Inicializa la conexión RS-485. Para obtener más información sobre la inicialización de la conexión RS-485, consulta [Inicializa la conexión RS-485](installation#rs485-reset).
+
+  * Elimina toda la información y los certificados almacenados en el dispositivo e inicializa la configuración. Para obtener más información sobre la inicialización de fábrica, consulta [lo siguiente](installation#factory-reset).
+
+## Cables y conectores
+
+### Alimentación
+
+<Image src="/img/device/cable-power-bidirect.svg" className="none" alone />
+
+<div className="overflow-x col3--10-20-70">
+  | Pin | Nombre | Color |
+  | --- | --- | --- |
+  | 1 | PWR +VDC | Rojo (franja blanca) |
+  | 2 | PWR GND | Negro (franja blanca) |
+</div>
+
+### RS-485
+
+<Image src="/img/device/cable-rs485-4pin.svg" className="none" alone />
+
+<div className="overflow-x col3--10-20-70">
+  | Pin | Nombre | Color |
+  | --- | --- | --- |
+  | 1 | 485 TRXP | Azul |
+  | 2 | 485 TRXN | Amarillo |
+  | 3 | 485 GND | Negro |
+  | 4 | SH GND | Gris |
+</div>
+
+{/* 올바른 지문 입력 방법 */}
+
+import Enrollfingerprint from '../../common/_enroll-fingerprint.mdx'
+
+<Enrollfingerprint />

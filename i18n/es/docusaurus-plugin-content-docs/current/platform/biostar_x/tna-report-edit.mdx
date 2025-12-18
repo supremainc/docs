@@ -1,0 +1,80 @@
+---
+id: tna-report-edit
+title: Editar informe de T&A
+description: Esta guía explica cómo modificar los registros de asistencia en los informes generados.
+keywords:
+  - Informe de tiempo y asistencia
+  - Editar
+---
+
+Haz clic en la tabla del informe generado para modificar los registros de asistencia.
+
+:::info
+
+* Primero debes generar un informe para modificar los registros de asistencia. Para obtener más información sobre la generación de informes, consulta [lo siguiente](tna-report).
+
+* No se pueden modificar los registros de los usuarios sin un horario de asistencia.
+
+:::
+
+1. Haz clic en el elemento de la lista de informes generados para modificar el registro.
+
+2. Modifica los registros de asistencia o agrega ausencias según sea necesario.
+
+## Editar en la lista
+
+<Image src="/img/biostarx-tna-report-edit-list.png" />
+
+<Calloutlists className="svg-none-style">
+  1. <Cmd sid="timeCard.dateRange" product="2" />: Configura el período de los registros de asistencia que se mostrará en la lista.
+
+  2. **Registro diario de asistencia**: Muestra el registro diario de asistencia.
+
+     * Haz clic en las horas de entrada/salida para agregar, modificar o eliminar registros de asistencia. Después de hacer clic en las horas de entrada/salida, haz clic en el botón <IcEdit /> para modificar el registro de asistencia, y haz clic en el botón <Cmd sid="button.apply" product="2" /> para guardar los cambios.
+
+     * Haz clic en el botón <IcEdit /> para agregar una ausencia. Necesitas un código de tiempo configurado como ausencia para agregar vacaciones. Haz clic en <IcTrash2 /> en la ausencia agregada del usuario para eliminarla.
+
+  3. **Resumen de registros de asistencia**: Revisa los registros de asistencia del período especificado.
+
+  4. **Actualizar** / **Ver en calendario**
+
+     * <IcRefresh />: Actualiza la lista de registros de asistencia.
+
+     * <IcCalc />: Visualiza los registros de asistencia en formato de calendario.
+</Calloutlists>
+
+:::info
+
+Para obtener más información sobre la creación de códigos de tiempo, consulta [lo siguiente](tna-rule-shift-paycode).
+
+:::
+
+## Editar en el calendario
+
+<Image src="/img/biostarx-tna-report-edit-calendar.png" />
+
+<Calloutlists className="svg-none-style">
+  1. **Tipo de evento**: Selecciona u oculta los tipos de evento que aparecerán en el calendario.
+
+  2. **Mes**: Haz clic en <IcFw /> o <IcBw /> para moverte al mes anterior o siguiente.
+
+  3. **Registro diario de asistencia**: Muestra el registro diario de asistencia.
+
+     * Haz clic en el horario de trabajo (en blanco) para agregar, modificar o eliminar registros de asistencia. Haz clic en el botón <IcEdit /> para modificar el registro de asistencia, y luego haz clic en el botón <Cmd sid="button.apply" product="2" /> para guardar los cambios.
+
+     * Haz clic en las reglas de trabajo (en gris) para agregar gestión de ausencias de usuario. Necesitas un código de tiempo configurado como ausencia para agregar una ausencia de usuario. Haz clic en <IcTrash2 /> en la ausencia agregada del usuario para eliminarla.
+
+  4. **Resumen de registros de asistencia**: Muestra el registro de asistencia mensual.
+
+  5. **Actualizar** / **Ver en lista**
+
+     * <IcRefresh />: Actualiza la lista de registros de asistencia.
+
+     * <IcList />: Visualiza los registros de asistencia en formato de lista.
+</Calloutlists>
+
+:::info
+
+Para obtener más información sobre la creación de códigos de tiempo, consulta [lo siguiente](tna-rule-shift-paycode).
+
+:::
