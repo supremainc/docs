@@ -70,7 +70,7 @@ const config = {
       es: {
         label: 'Español',
         direction: 'ltr',
-        htmlLang: 'es-ES',
+        htmlLang: 'es-419',
       },
       en: {
         label: 'English',
