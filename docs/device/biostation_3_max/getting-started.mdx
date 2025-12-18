@@ -1,0 +1,190 @@
+---
+id: getting-started
+title: 시작하기
+description: 장치 사용을 위한 초기 절차를 안내합니다.
+keywords: [구성품, 명칭, 기능, 케이블, 커넥터]
+---
+
+장치 사용을 위한 초기 절차를 안내합니다.
+
+## 구성품
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-device-db-apb-bs3m.svg' className='none' width={100} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-db-apb-bs3m.svg' className='none' width={90} alone /></Td>
+
+<Td><Image src='/img/device/component-device-odb-oapb-bs3m.svg' className='none' width={100} alone /></Td>
+
+<Td><Image src='/img/device/component-wall-bracket-odb-oapb-bs3m.svg' className='none' width={90} alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>BioStation 3 Max (BS3M-ODB, BS3M-OAPB)</Td>
+
+<Td>벽걸이용 브래킷 (BS3M-ODB, BS3M-OAPB)</Td>
+
+<Td>BioStation 3 Max (BS3M-DB, BS3M-APB)</Td>
+
+<Td>벽걸이용 브래킷 (BS3M-DB, BS3M-APB)</Td>
+
+</Row>
+</Tbody>
+
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-connection-cables-bs3m.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-fixing-screws6.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>연결 케이블</Td>
+
+<Td>다이오드</Td>
+
+<Td>120 Ω 저항</Td>
+
+<Td>고정용 나사 x6</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-cable-cover-fsf2.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>브래킷 고정용 나사(별 모양)</Td>
+
+<Td>케이블 커버</Td>
+
+<Td>퀵 가이드</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## 각 부분의 명칭 및 기능
+
+<Image src='/img/device/name-function-each-part-bs3m.png' className='none' width='70%' />
+
+* **LED 상태 표시등**: 제품의 작동 상태가 표시됩니다.
+
+   * 초록색: 인증 성공
+
+   * 빨간색: 인증 실패
+
+   * 파란색: 정상 동작 상태
+
+   * 파란색/초록색 점멸:
+
+      * <Cmd sid='ui_012' product='dev' />를 사용으로 설정 시 IP 주소를 받아오지 못하는 상태
+
+      * <Cmd sid='ui_205' product='dev' /> 모드일 때 마스터 장치와 연결이 끊어진 상태
+
+   * 빨간색/보라색 점멸: 장치 잠금 상태
+
+   * 노란색 점멸: 입력 대기 상태
+
+* **마이크**: 인터폰 연결 시 사용자의 음성을 전달합니다.
+
+   * 마이크를 가리거나 막으면 음성 전달이 원활하지 않을 수 있습니다.
+
+* **적외선 카메라**: 적외선 이미지를 촬영합니다.
+
+* **비주얼 카메라**: 실제 이미지를 촬영합니다.
+
+* **디스플레이**: 동작을 위한 UI를 제공합니다.
+
+* **RF 카드 및 모바일 출입카드 인식부**: 출입을 위해 RF 카드 또는 모바일 출입카드를 인식시키는 부분입니다.
+
+* **지문 인식부**: <Badge only>BS3M-ODB, BS3M-OAPB</Badge> 출입을 위해 지문을 인식시키는 부분입니다.
+
+* **스피커**: 소리를 들을 수 있습니다.
+
+* **이더넷**: 이더넷 케이블을 연결합니다.
+
+* **Input (4핀)**: Input 케이블을 연결합니다.
+
+* **릴레이 (3핀)**: 릴레이 케이블을 연결합니다.
+
+* **RS-485 (4핀)**: RS-485 케이블을 연결합니다.
+
+* **USB 확장 포트 (5핀)**: 기타 액세서리 제품을 연결할 수 있습니다.
+
+* **Wiegand 출력 (4핀)**: Wiegand 출력 케이블을 연결합니다.
+
+* **Wiegand 입력 (4핀)**: Wiegand 입력 케이블을 연결합니다.
+
+* **전원 (2핀)**: 전원 케이블을 연결합니다.
+
+* **USB (Type-C) 메모리 슬롯**: USB 메모리를 연결합니다.
+
+{/* 케이블 및 커넥터 */}
+import CablesandConnectors from '../../common/_getting-started-cables-and-connectors.mdx'
+
+<CablesandConnectors />
+
+{/* 마스터 관리자 설정하기 */}
+import Masteradminsettings from '../../common/_device-master-admin-settings-v100.mdx'
+
+<Masteradminsettings />
+
+{/* 올바른 얼굴 등록 및 인증 방법 */}
+import DocumentA from '../../common/_face-enrollment-authentication-method.mdx'
+
+<DocumentA name='90~100 cm' />
+
+{/* ## 올바른 지문 입력 방법 */}
+import Enrollfingerprint from '../../common/_enroll-fingerprint.mdx'
+
+<Enrollfingerprint />
+
+## QR/바코드 및 장치 라이선스에 대한 참고 사항
+
+### 올바른 QR/바코드 인증 방법 {#how-to-scan-qrbarcode}
+
+사용자에게 QR/바코드를 발급하여 인증 수단으로 사용할 수 있습니다. 인식률을 높이기 위해 화면의 안내에 따라 올바르게 QR/바코드를 스캔하세요.
+
+<Image src='/img/device/qr-scanning-bs3m.svg' className='none' alone />
+
+* 장치의 카메라와 QR/바코드 사이의 거리를 5\~20 cm로 유지하세요.
+
+* QR/바코드를 장치의 스캔 화면 중앙에 오도록 위치시키세요.
+
+* 모바일 장치에 내려받은 QR/바코드로 인증할 경우 화면이 잘 보이도록 모바일 장치의 밝기를 조정하세요.
+
+* 화면의 지시에 따르지 않을 경우 QR/바코드 인식이 오래 걸리거나 실패할 수 있습니다.
+
+### 장치 라이선스 참고 사항
+
+* 더 다양한 QR/바코드 인증을 사용하려면 별도의 장치 라이선스가 필요합니다. 장치 라이선스를 발급하려면 구입처에 문의하세요.
+
+* 장치 라이선스 파일은 암호화된 파일이므로 임의로 수정할 수 없습니다.
+
+* 장치 라이선스는 장치 ID를 기준으로 발급됩니다. 비정상적인 방법으로 장치 ID를 변경할 경우 라이선스에 대한 보증 서비스가 제공되지 않습니다.

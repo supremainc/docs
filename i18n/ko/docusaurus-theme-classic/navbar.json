@@ -87,6 +87,10 @@
     "message": "BioEntry W2",
     "description": "Navbar item with label BioEntry W2"
   },
+  "item.label.BioEntry P2": {
+    "message": "BioEntry P2",
+    "description": "Navbar item with label BioEntry P2"
+  },
   "item.label.BioEntry R2": {
     "message": "BioEntry R2",
     "description": "Navbar item with label BioEntry R2"
