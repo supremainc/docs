@@ -251,8 +251,6 @@ You can set whether to use security tamper. When the tamper is turned on, you ca
 
 3. Activate <Cmd sid='ui_150' product='dev' /> to delete data of all registered users, all logs, and secure keys when a temper event occurs.
 
-{/*
-
 ### Master Admin
 
 You can change the authentication method of the Master Admin.
@@ -275,7 +273,7 @@ You can change the authentication method of the Master Admin.
 
 * You must enroll at least two types of credentials.
 
-* This feature is available only on new devices running firmware v#.#.# or later.
+* This feature is available only on new devices running firmware v1.4.0 or later.
 
 :::
 
@@ -291,13 +289,13 @@ Devices with upgraded firmware do not provide <Cmd sid='ui_128' product='dev' />
 
 :::info
 
-* <Cmd sid='ui_073' product='dev' /> is available after upgrading the firmware to v#.#.# or later, and the firmware cannot be downgraded to an earlier version after the upgrade.
+* <Cmd sid='ui_073' product='dev' /> is available after upgrading the firmware to v1.4.0 or later, and the firmware cannot be downgraded to an earlier version after the upgrade.
 
 * The first step of authentication is default unless the <Cmd sid='ui_073' product='dev' /> option is enabled.
 
 * If there are not two types of credentials enrolled for all administrators, activation fails and an error message is displayed. Enroll two types of credentials for all administrators and try again.
 
-  <Image src='/img/how-to/error-two-step-authentication.png' className='none' width='300px' />
+  <Image src='/img/device/xs2-error-two-step-authentication.png' width={200} />
 
 :::
 
@@ -306,8 +304,6 @@ Devices with upgraded firmware do not provide <Cmd sid='ui_128' product='dev' />
 If you delete all administrators' credentials to below type 2 after enabling <Cmd sid='ui_073' product='dev' />, you will no longer have access to the administrator menu without being able to connect to BioStar X. Therefore, you need to be particularly careful when deleting administrator credentials.
 
 :::
-
-*/}
 
 ### Restart device
 
