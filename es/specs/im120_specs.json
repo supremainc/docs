@@ -1,0 +1,218 @@
+{
+  "inputmodule": {
+    "general": {
+      "label": "일반",
+      "label_id": "specs.general",
+      "items": {
+        "modelName": {
+          "label": "모델명",
+          "label_id": "specs.general.modelName",
+          "value": "IM-120"
+        },
+        "cpu": {
+          "label": "CPU",
+          "label_id": "specs.general.cpu",
+          "value": "Cortex M3 72 MHz"
+        },
+        "memory": {
+          "label": "메모리",
+          "label_id": "specs.general.memory",
+          "value": "512 KB Flash + 64 KB SRAM"
+        },
+        "led_type": {
+          "label": "LED",
+          "label_id": "specs.general.led_type",
+          "type": "model",
+          "items": {
+            "multiColor": {
+              "label": "다중 색상",
+              "label_id": "specs.general.led_type.multiColor",
+              "value": {
+                "ko": [
+                  "POWER: 1개",
+                  "STATUS: 1개",
+                  "RS-485 TX: 1개",
+                  "RS-485 RX: 1개",
+                  "SUPERVISED INPUT: 12개",
+                  "RELAY: 2개",
+                  "AUX IN: 2개",
+                  "TAMPER: 1개"
+                ],
+                "en": [
+                  "POWER: 1ea",
+                  "STATUS: 1ea",
+                  "RS-485 TX: 1ea",
+                  "RS-485 RX: 1ea",
+                  "SUPERVISED INPUT: 12ea",
+                  "RELAY: 2ea",
+                  "AUX IN: 2ea",
+                  "TAMPER: 1ea"
+                ]
+              }
+            }
+          }
+        },
+        "operating_temp": {
+          "label": "동작 온도",
+          "label_id": "specs.general.operating_temp",
+          "value": "-20 °C ~ 60 °C"
+        },
+        "storage_temp": {
+          "label": "보관 온도",
+          "label_id": "specs.general.storage_temp",
+          "value": {
+            "ko": "-40 °C ~ 70 °C",
+            "en": "-40 °C ~ 70 °C",
+            "es": "De -40 °C a 70 °C",
+            "ja": "-40 °C ~ 70 °C"
+          }
+        },
+        "operating_humidity": {
+          "label": "동작 습도",
+          "label_id": "specs.general.operating_humidity",
+          "value": {
+            "ko": "0 % ~ 95 %, 비응축",
+            "en": "0 % ~ 95 %, non-condensing"
+          }
+        },
+        "storage_humidity": {
+          "label": "보관 습도",
+          "label_id": "specs.general.storage_humidity",
+          "value": {
+            "ko": "0 % ~ 95 %, 비응축",
+            "en": "0 % ~ 95 %, non-condensing"
+          }
+        },
+        "certifications": {
+          "label": "인증",
+          "label_id": "specs.general.certifications",
+          "value": "CE, UKCA, KC, FCC, RCM, RoHS, REACH, WEEE"
+        }
+      }
+    },
+    "storage": {
+      "label": "저장 용량",
+      "label_id": "specs.storage",
+      "items": {
+        "max_text_logs": {
+          "label": "최대 텍스트 로그 수",
+          "label_id": "specs.storage.max_text_logs",
+          "value": {
+            "ko": "포트당 10개",
+            "en": "10 ea per port"
+          },
+          "annotation_value": "anno1"
+        }
+      }
+    },
+    "interface": {
+      "label": "인터페이스",
+      "label_id": "specs.interface",
+      "items": {
+        "input": {
+          "label": "Input",
+          "label_id": "specs.interface.input",
+          "value": {
+            "ko": "12채널",
+            "en": "12 ch"
+          },
+          "annotation_value": "anno2"
+        },
+        "supervised": {
+          "label": "Supervised 입력",
+          "label_id": "specs.interface.supervised",
+          "value": {
+            "ko": "12채널<sup id='dupl'><a href='#anno2'></a></sup>",
+            "en": "12 ch<sup id='dupl'><a href='#anno2'></a></sup>"
+          }
+        },
+        "rs485": {
+          "label": "RS-485",
+          "label_id": "specs.interface.rs485",
+          "value": {
+            "ko": "1채널",
+            "en": "1 ch"
+          }
+        },
+        "rs485_protocol": {
+          "label": "RS-485 통신 프로토콜",
+          "label_id": "specs.interface.rs485_protocol",
+          "value": {
+            "ko": "OSDP V2 호환",
+            "en": "OSDP V2 compliant",
+            "es": "Compatible con OSDP V2",
+            "ja": "OSDP V2 準拠"
+          }
+        },
+        "relay": {
+          "label": "릴레이",
+          "label_id": "specs.interface.relay",
+          "value": {
+            "ko": "2개",
+            "en": "2 relays"
+          }
+        },
+        "auxInput": {
+          "label": "AUX 입력",
+          "label_id": "specs.interface.auxInput",
+          "value": {
+            "ko": "2채널 (AC POWER FAIL)",
+            "en": "2 ch (AC POWER FAIL)"
+          }
+        },
+        "tamper": {
+          "label": "탬퍼",
+          "label_id": "specs.interface.tamper",
+          "value": {
+            "ko": "1채널",
+            "en": "1 ch"
+          }
+        }
+      }
+    },
+    "power": {
+      "label": "전기 규격",
+      "label_id": "specs.power",
+      "items": {
+        "power": {
+          "label": "전원",
+          "label_id": "specs.power.power",
+          "type": "model",
+          "items": {
+            "12vdc": {
+              "label": "12 Vdc",
+              "value": {
+                "ko": "전류: 최대 0.2 A",
+                "en": "Current: Max. 0.2 A",
+                "es": "Corriente: Máx. 0.2 A",
+                "ja": "電流：最大 0.2 A"
+              }
+            },
+            "24vdc": {
+              "label": "24 Vdc",
+              "value": {
+                "ko": "전류: 최대 0.1 A",
+                "en": "Current: Max. 0.1 A",
+                "es": "Corriente: Máx. 0.1 A",
+                "ja": "電流：最大 0.1 A"
+              }
+            }
+          }
+        },
+        "switch_input_vih": {
+          "label": "스위치 입력 VIH",
+          "label_id": "specs.power.switch_input_vih",
+          "value": {
+            "ko": "최대: 5 V (접점 출력)",
+            "en": "Max.: 5 V (Dry Contact)"
+          }
+        },
+        "relay": {
+          "label": "릴레이",
+          "label_id": "specs.power.relay",
+          "value": "5 A @ 30 VDC Resistive load"
+        }
+      }
+    }
+  }
+}
