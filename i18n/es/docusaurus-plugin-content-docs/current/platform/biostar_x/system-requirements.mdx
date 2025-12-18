@@ -1,0 +1,113 @@
+---
+id: system-requirements
+title: Requisitos mínimos del sistema
+description: Verifica los requisitos del sistema para instalar BioStar X y configurar el entorno óptimo según el tamaño de tu organización.
+keywords:
+  - Requisitos mínimos del sistema
+  - Sistema operativo
+  - Base de datos
+  - CPU
+  - RAM
+---
+
+**BioStar X** ofrece una solución confiable y escalable de gestión de seguridad integrada para entornos empresariales grandes. El sistema puede gestionar eficientemente más de mil dispositivos mediante una arquitectura distribuida compuesta por un servidor principal y un servidor de comunicación.
+
+El servidor principal gestiona las funciones centrales del sistema, mientras que el servidor de comunicación se encarga de la comunicación con los dispositivos, distribuyendo la carga y optimizando el rendimiento. Además, los administradores pueden acceder al sistema a través de un navegador web en los equipos cliente y realizar todas las tareas de gestión. Consulta los siguientes requisitos del sistema para configurar el entorno óptimo según el tamaño de tu organización.
+
+:::info
+
+Para obtener más información sobre la configuración y optimización de licencias, comunícate con el [Servicio de soporte técnico de Suprema](https://support.supremainc.com).
+
+:::
+
+## Servidor principal {#main-server}
+
+El servidor principal es el servidor donde se instala el sistema de gestión central de **BioStar X**. El usuario accede al sistema mediante un navegador web para gestionarlo y realizar todas las tareas, como configurar la información de usuarios o los permisos de acceso. También se encarga de supervisar el estado general del sistema y de gestionar los registros de eventos o las alarmas.
+
+<div className="overflow-x col5--15-10-25">
+  | > | Ítem | Pequeña | Organización mediana | Corporativa |
+  | --- | --- | --- | --- | --- |
+  | Entorno de uso | Total Dispositivos | 1 a 50 | 51 a 100 | 101 a 1,000 |
+  | Requisito del sistema | Sistema operativo | > | > | Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022 |
+  | ^ | Base de datos | > | > | MariaDB 11.4.4, MS SQL Server 2012 SP3, MS SQL Server 2014 SP2, MS SQL Server 2016 SP1, MS SQL Server 2017, MS SQL Server 2019, MS SQL Server 2022 |
+  | ^ | CPU | 2.3 GHz de 6 núcleos | 2.3 GHz de 8 núcleos | Mínimo 2.3 GHz<br />Recomendado 4.0 GHz de 16 núcleos |
+  | ^ | RAM | 16 GB | 32 GB | Mínimo 64 GB<br />Recomendado 128 GB |
+  | ^ | SSD | 512 GB | 512 GB | 1 TB |
+  | ^ | HDD | > | > | Al utilizar la función <Cmd sid="common.imageLog" product="2" />, se requieren 200 GB para 10 millones de registros de imágenes. |
+</div>
+
+:::info
+
+* **BioStar X** solo se puede instalar en sistemas operativos de 64 bits.
+
+* La seguridad de comunicación de MS SQL Server admite TLS 1.2.
+
+* Si MS SQL Server y **BioStar X** se instalan en diferentes equipos, instala el [Controlador Microsoft OLE DB para SQL Server](https://learn.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server) en el equipo donde esté instalado **BioStar X**.
+
+* Para entornos empresariales, se recomienda instalar una base de datos MS SQL Server.
+
+* Si utilizas una base de datos MS SQL Server y **BioStar X T&A**, deberás instalar el [Controlador Microsoft ODBC 17 para SQL Server](https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17) correspondiente a tu entorno.
+
+* El entorno virtual de Windows proporcionado por Boot Camp en macOS no es compatible.
+
+:::
+
+### Requisitos de licencias de SQL Server {#sqlserver-requriements}
+
+Si utilizas SQL Server como base de datos, se requiere una licencia adecuada de SQL Server según la cantidad de dispositivos conectados para el funcionamiento estable de **BioStar X**. Consulta las configuraciones de licencias recomendadas para cada entorno y selecciona la licencia adecuada al tamaño y las necesidades de tu organización.
+
+:::info
+
+Para obtener más información sobre las licencias de SQL Server, consulta [Microsoft SQL Server Licensing](https://www.microsoft.com/sql-server/sql-server-2022-pricing).
+
+:::
+
+#### Uso general {#general}
+
+| Organización | Total Dispositivos | Cantidad de núcleos |
+| --- | --- | --- |
+| Pequeña | 1 a 50 | 4 - 6 |
+| Organización mediana | 50 - 300 dispositivos | 8 - 12 |
+| Corporativa | 300 - 1,000 dispositivos | 16 - 24 |
+
+#### Uso de la API de BioStar X {#useapi}
+
+| Organización | Total Dispositivos | Cantidad de núcleos |
+| --- | --- | --- |
+| Pequeña | 1 a 50 | 4 - 6 |
+| Organización mediana | 50 - 300 dispositivos | 8 - 12 |
+| Corporativa | 300 - 1,000 dispositivos | 16 - 24 |
+
+## Servidor de comunicación {#communication-server}
+
+El servidor de comunicación es un servidor dedicado a la comunicación con dispositivos de control de acceso. Al instalarlo por separado del servidor principal, ayuda a gestionar muchos dispositivos de forma confiable. Un solo servidor de comunicación puede conectar hasta 1,000 dispositivos, y se pueden agregar varios servidores de comunicación según sea necesario.
+
+<div className="overflow-x">
+  | > | Ítem | Especificación |
+  | --- | --- | --- |
+  | Requisito del sistema | Sistema operativo | Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022 |
+  | ^ | CPU | Mínimo 2.3 GHz, recomendado 4.0 GHz de 16 núcleos |
+  | ^ | RAM | Mínimo 64 GB, recomendado 128 GB |
+  | ^ | SSD | 1 TB |
+</div>
+
+## Cliente {#client}
+
+El cliente es el equipo desde el cual los administradores acceden a **BioStar X** a través de un navegador web para operar el sistema.
+
+<div className="overflow-x">
+  | > | Ítem | Pequeña | Organización mediana | Corporativa |
+  | --- | --- | --- | --- | --- |
+  | Requisito del sistema | CPU | 2.5 GHz | 2.5 GHz | Mínimo 2.5 GHz |
+  | ^ | RAM | 16 GB | 32 GB | Mínimo 32 GB |
+  | ^ | GPU | > | > | Mínimo NVIDIA GeForce RTX 4060 al usar VMS |
+  | ^ | navegador web | > | > | Google Chrome versión 100 o superior |
+</div>
+
+:::info
+
+* **BioStar X** está optimizado para Google Chrome.
+
+* La interfaz web de **BioStar X** no admite navegadores móviles.
+
+:::

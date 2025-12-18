@@ -1,0 +1,205 @@
+---
+id: development-guide
+title: Guía de desarrollo
+description: Proporciona métodos de desarrollo reales y ejemplos de implementación del complemento de BioStar X.
+keywords:
+  - Desarrollo de complementos
+  - Endpoint
+  - Puente de sesión
+  - Cifrado
+---
+
+Ofrece métodos de desarrollo reales y ejemplos de implementación de complementos integrados con **BioStar X**.
+
+## Implementación de endpoint requerida
+
+Para desarrollar un complemento integrado con **BioStar X**, debe implementar los siguientes dos endpoints. Este documento utiliza `/bsx` como ruta de ejemplo.
+
+### Endpoint de registro de complemento
+
+<Badge className="get">GET</Badge> `/bsx`
+
+Este es el endpoint que el **BioStar X Service Manager** llama para comprobar la accesibilidad del servidor al registrar el complemento.
+
+#### Formato de solicitud
+
+```http
+GET /bsx
+Headers:
+    X-BioStar-Ping: <ping_token>
+```
+
+#### Requisitos de implementación
+
+```python title="Python FastAPI"
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
+
+app = FastAPI()
+
+@app.get("/bsx")
+async def bsx_ping(request: Request):
+    """Ping endpoint for BioStar X plugin registration"""
+    ping_token = request.headers.get("x-biostar-ping")
+    # Return ping token in response
+    response_data = {"token": ping_token}
+    response = JSONResponse(content=response_data)
+    return response
+```
+
+#### Formato de respuesta
+
+```json title="Success (200 OK)"
+{
+    "token": "<ping_token_value>"
+}
+```
+
+#### Pruebas
+
+Pruebe el endpoint manualmente con el comando `curl`.
+
+```bash
+curl -H "X-BioStar-Ping: test123" http://localhost:8000/bsx
+```
+
+### Endpoint de devolución de llamada de autenticación de usuario
+
+<Badge className="post">POST</Badge> `/bsx`
+
+Este es el endpoint que se llama cuando el usuario hace clic en el ícono del complemento en la interfaz web de **BioStar X**. En este proceso, se solicita la sesión del usuario conectado en **BioStar X** y se recibe una respuesta.
+
+:::info
+
+Se requiere un certificado para la comunicación segura entre **BioStar X** y el complemento. El certificado puede descargarse desde la página de detalles del complemento después del registro. Para obtener más información, consulte [lo siguiente](registration-guide#register-plugin).
+
+:::
+
+#### Formato de solicitud
+
+```http
+POST /bsx
+Content-Type: application/x-www-form-urlencoded
+
+user_id={user_id}&plugin_id={plugin_id}
+```
+
+#### Requisitos de implementación
+
+1. **Validación de parámetros**: Verifique los valores requeridos de `user_id` y `plugin_id`
+
+2. **Generación de clave AES**: Genere una clave de 32 bytes para la comunicación segura
+
+3. **Encriptación de clave**: Encripte la clave AES con la clave pública RSA (suponiendo que el nombre del archivo sea `public_key.pem` en el código de ejemplo)
+
+4. **Solicitud de puente de sesión**: Solicite la sesión al servidor de **BioStar X**
+
+5. **Descifrado de sesión**: Descifre el ID de sesión cifrado recibido con AES
+
+```python
+import uuid
+import requests
+from fastapi import HTTPException, Form
+
+@app.post("/bsx")
+async def bsx_callback(
+    request: Request,
+    user_id: str = Form(None, description="User ID"),
+    plugin_id: str = Form(None, description="Plugin ID")
+):
+    """BioStar X plugin callback processing"""
+    # 1. Validate required parameters
+    if not user_id:
+      raise HTTPException(status_code=400, detail="user_id is required")
+    if not plugin_id:
+      raise HTTPException(status_code=400, detail="plugin_id is required")
+    
+    # 2. Generate AES key for secure communication
+    key = uuid.uuid4().hex # 32-byte key
+    
+    # 3. Encrypt key with RSA public key
+    encrypted_key = encrypt_with_public_key(key, "public_key.pem")
+    
+    # 4. Request session bridge to BioStar server
+    payload = {
+        "user_id": user_id,
+        "plugin_id": plugin_id,
+        "key": encrypted_key
+    }
+
+    response = requests.post(
+        f"https://{BIOSTAR_SERVER}/api/session/bridge",
+        json=payload,
+        verify=False
+    )
+
+    # 5. Process response
+    if response.status_code == 200:
+        data = response.json()
+        if data.get("Response", {}).get("code") == "0":
+            # Decrypt session ID
+            encrypted_session = data.get("bs_session_id")
+            bs_session_id = decrypt_aes256_base64(encrypted_session, key)
+        else:
+            # Handle BioStar X errors
+            error_msg = data.get("Response", {}).get("message", "unknown error")
+            raise HTTPException(status_code=400, detail=f"BioStar X error: {error_msg}")
+    else:
+        raise HTTPException(status_code=500, detail="Failed to connect to BioStar X server")
+```
+
+#### Pruebas
+
+Pruebe el endpoint manualmente con el comando `curl`.
+
+```bash
+curl -X POST http://localhost:8000/bsx \
+    -H "Content-Type: application/x-www-form-urlencoded" \
+    -d "user_id={user_id}&plugin_id={your_plugin_id}"
+```
+
+## Implementación de encriptación
+
+Debe implementar las siguientes funciones de encriptación.
+
+### Encriptación de clave pública RSA
+
+```python
+from cryptography.hazmat.primitives import serialization, padding
+import base64
+
+def encrypt_with_public_key(message: str, public_key_path: str) -> str:
+    """Encrypt message with RSA public key"""
+    with open(public_key_path, 'rb') as key_file:
+        public_key = serialization.load_pem_public_key(key_file.read())
+    
+    message_bytes = message.encode('utf-8')
+    encrypted = public_key.encrypt(message_bytes, padding.PKCS1v15())
+    return base64.b64encode(encrypted).decode('utf-8')
+```
+
+### Descifrado AES-256
+
+```python
+from Crypto.Cipher import AES
+from Crypto.Util.Padding import unpad
+import base64
+
+def decrypt_aes256_base64(encrypted_data: str, key: str) -> str:
+    """Decrypt base64 data encrypted with AES256"""
+    key_bytes = key.encode('utf-8')
+    
+    # Ensure 32-byte key
+    if len(key_bytes) != 32:
+        if len(key_bytes) < 32:
+            key_bytes = key_bytes.ljust(32, b'\0')
+        else:
+            key_bytes = key_bytes[:32]
+    
+    cipher_text = base64.b64decode(encrypted_data)
+    iv = key_bytes[:16]  # Use first 16 bytes as IV
+    
+    cipher = AES.new(key_bytes, AES.MODE_CBC, iv)
+    decrypted = unpad(cipher.decrypt(cipher_text), AES.block_size)
+    return decrypted.decode('utf-8')
+```

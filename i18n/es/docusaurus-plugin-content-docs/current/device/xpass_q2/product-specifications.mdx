@@ -1,0 +1,64 @@
+---
+id: product-specifications
+title: Especificaciones del producto
+description: Incluye las especificaciones clave del producto, como tamaño, características y rendimiento.
+keywords:
+  - Credenciales
+  - General
+  - Capacidad
+  - Interfaz
+  - Eléctrico
+  - Dimensiones
+---
+
+Incluye las especificaciones clave del producto, como tamaño, características y rendimiento.
+
+import specs from '@site/static/specs/xpq2_specs.json';
+
+{/* 크리덴셜 */}
+
+<SpecSection data={specs.xpassq2.credentials} />
+
+{/* 일반 */}
+
+<SpecSection data={specs.xpassq2.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.xpassq2.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.xpassq2.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.xpassq2.power} />
+
+## Dimensiones y peso
+
+<Image src="/img/device/xpq2-dimension.svg" className="none" />
+
+---
+
+:::note
+
+<Anno id="anno1">1)</Anno> Las tarjetas DESFire EV2/EV3 son retrocompatibles con las tarjetas DESFire EV1 y admiten las funciones de CSN y de tarjeta inteligente, incluidas las de la tarjeta DESFire EV1.
+
+<Anno id="anno2">2)</Anno> El alcance de lectura por RF variará según el entorno de instalación.
+
+<Anno id="anno3">3)</Anno> Admite códigos QR de hasta 32 caracteres ASCII.
+
+<Anno id="anno4">4)</Anno> Se requiere una licencia de cámara QR para utilizar métodos de autenticación con códigos QR/códigos de barras más diversos. Para obtener más información sobre las licencias de dispositivos, consulte la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-license-device-license).
+
+* Tipos de códigos de barras compatibles con la licencia de cámara QR: Código QR, DataMatrix, Aztec, Micro Código QR, PDF417, Code39, Code128, UPC-A, UPC-E, EAN-8, EAN-13
+
+<Anno id="anno5">5)</Anno> Basado en usuarios registrados sin credenciales.
+
+:::
+
+:::info
+
+Las especificaciones del producto están sujetas a cambios sin previo aviso para mejorar el rendimiento.
+
+:::

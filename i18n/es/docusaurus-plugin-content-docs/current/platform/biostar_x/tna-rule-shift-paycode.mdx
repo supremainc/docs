@@ -1,0 +1,58 @@
+---
+id: tna-rule-shift-paycode
+title: Establecer código de tiempo
+description: Esta guía describe la configuración de los códigos de tiempo utilizados para los cálculos de horas laboradas.
+keywords:
+  - Horas laborales
+  - Tipo Hora
+---
+
+Esta guía describe la configuración de los ajustes de <Cmd sid="tab.payCode" product="2" className="normal" /> utilizados para el cálculo de horas laborales. Configura códigos de tiempo estándar, de horas extra y de ausencias. Cada <Cmd sid="tab.payCode" product="2" className="normal" /> se puede utilizar con diferentes ponderaciones horarias.
+
+## <Cmd sid="payCode.addPayCode" product="2" className="bold" />
+
+1. Haga clic en <Cmd sid="shell.header.tna" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="tab.shift" product="2" /> → <Cmd sid="tab.payCode" product="2" /> en la barra lateral izquierda.
+
+3. Haz clic en <Cmd sid="payCode.addPayCode" product="2" />.
+
+   <Image src="/img/biostarx-tna-shift-paycode.png" />
+
+4. Cuando aparezca la pantalla <Cmd sid="payCode.addPayCode" product="2" />, configura cada elemento.
+
+:::info
+
+* Haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla para guardar la configuración.
+
+* Haz clic en <Cmd sid="payCode.applyAndAddShift" product="2" /> para agregar <Cmd sid="tab.shift" product="2" className="normal" />.
+
+* Después de guardar la configuración, haz clic en <Cmd sid="ta.apply_add_another" product="2" /> para agregar otro <Cmd sid="tab.payCode" product="2" />.
+
+:::
+
+## Guía de opciones de configuración
+
+<Image src="/img/biostarx-tna-shift-paycode-adding.png" />
+
+* <Cmd sid="form.name" product="2" />: Ingresa el nombre del <Cmd sid="tab.payCode" product="2" className="normal" />.
+
+* <Cmd sid="form.description" product="2" />: Ingresa una descripción para el <Cmd sid="tab.payCode" product="2" className="normal" />.
+
+* <Cmd sid="form.type" product="2" />: Selecciona el tipo de <Cmd sid="tab.payCode" product="2" className="normal" />.
+
+  * <Cmd sid="payCode.countAsAttendance" product="2" />: Configura como el <Cmd sid="tab.payCode" product="2" className="normal" /> que se utilizará para la asistencia normal.
+
+  * <Cmd sid="payCode.accumulateTowardOvertime" product="2" />: Configura como el <Cmd sid="tab.payCode" product="2" className="normal" /> que se utilizará para horas extra.
+
+  * <Cmd sid="payCode.trackOnLeaveManagement" product="2" />: Configura como el <Cmd sid="tab.payCode" product="2" className="normal" /> que se utilizará para ausencias, viajes de negocios, etc.
+
+* <Cmd sid="payCode.timeRate" product="2" />: Establece la ponderación por hora según el <Cmd sid="tab.payCode" product="2" className="normal" />. **1** es la ponderación base y, si se establece en **2**, el <Cmd sid="tab.payCode" product="2" className="normal" /> configurado calculará las horas laborales al doble por hora.
+
+* <Cmd sid="payCode.color" product="2" />: Establece el color para distinguir el <Cmd sid="tab.payCode" product="2" className="normal" />.
+
+<NextStep>
+  <NextItem to="tna-rule-shift-day">
+    Configura reglas de trabajo diarias basadas en un periodo de 24 horas. Las reglas de trabajo incluyen ajustes de reglas por hora, ajustes de hora de inicio diaria y reglas de redondeo de tiempo.
+  </NextItem>
+</NextStep>

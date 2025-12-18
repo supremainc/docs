@@ -1,0 +1,68 @@
+---
+id: product-specifications
+title: Especificaciones del producto
+description: Incluye las especificaciones clave del producto, como tamaño, características y rendimiento.
+keywords:
+  - General
+  - Interfaz
+  - Eléctrico
+  - Dimensiones
+---
+
+Incluye las especificaciones clave del producto, como tamaño, características y rendimiento.
+
+import specs from '@site/static/specs/cs40_specs.json';
+
+{/* 일반 */}
+
+<SpecSection data={specs.corestation.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.corestation.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.corestation.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.corestation.power} />
+
+<PageBreak />
+
+## Dimensiones y peso
+
+:::note
+
+La tolerancia dimensional es de ±0.3 mm.
+
+:::
+
+<Image src="/img/device/cs40-dimension.svg" className="none" />
+
+---
+
+:::note
+
+<Anno id="anno1">1)</Anno> Esto se basa en usuarios inscritos sin credenciales.
+
+<Anno id="anno2">2)</Anno> La autenticación facial es compatible únicamente con FaceStation 2 y FaceLite.
+
+<Anno id="anno3">3)</Anno> Elija entre Entrada o Entrada supervisada.
+
+:::
+
+:::info
+
+* Las especificaciones del producto están sujetas a cambios sin previo aviso para mejorar el rendimiento.
+
+* Cuando este producto funciona como dispositivo maestro, conectar un dispositivo con sensor de huellas como esclavo permite autenticar huellas mediante el dispositivo esclavo.
+
+  * Máx. Credenciales de huellas digitales (1:N): 100,000
+
+  * Máx. Credenciales de huella digital (1:1): 500,000
+
+* Para obtener información detallada sobre productos o resolución de problemas, consulte [el siguiente enlace](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_configure_corestation\&s\[]=corestation/).
+
+:::

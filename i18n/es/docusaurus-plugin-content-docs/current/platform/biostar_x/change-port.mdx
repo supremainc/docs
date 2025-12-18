@@ -1,0 +1,40 @@
+---
+id: change-port
+title: Cambiar el puerto
+description: Guía para cambiar el puerto cuando el puerto predeterminado (443) de BioStar X no está disponible.
+keywords:
+  - Configuración de BioStar X
+  - puerto
+---
+
+Esta guía explica cómo cambiar el puerto cuando el puerto predeterminado (443) de **BioStar X** no está disponible.
+
+1. Haz clic en <Start /> → **BioStar X** → **BioStar X Service Manager** en Windows.
+
+2. Cuando aparezca la ventana **BioStar X Service Manager** en el navegador web, haga clic en el menú <Cmd>SERVICES</Cmd>.
+
+3. Haga clic en <Cmd>Stop</Cmd> para todos los servicios.
+
+   <Image src="/img/common/biostarx-tutoria-service-manager-services-stop.png" alone />
+
+4. Haga clic en <Cmd>SERVICE SETTINGS</Cmd> en la barra lateral izquierda.
+
+5. Ingrese el número de puerto que desea cambiar en el campo de entrada <Cmd>HTTPS Port</Cmd> de la sección <Cmd>Unified Gateway Service</Cmd>.
+
+   <Image src="/img/common/biostarx-tutoria-service-manager-services-change-port.png" alone />
+
+6. Haga clic en <Cmd>Apply</Cmd> en la esquina superior derecha de la pantalla.
+
+7. Cuando aparezca el mensaje de confirmación, haga clic en <Cmd>OK</Cmd>.
+
+8. Vaya a <Cmd>SERVICES</Cmd> y haga clic en **Start** para todos los servicios.
+
+9. Acceda a **BioStar X** desde el navegador web.
+
+:::info
+
+* Si cambió el número de puerto a 450, ingrese `https://{ip_address}:450` en la barra de direcciones.
+
+* La compatibilidad para cambiar el puerto varía según el servicio.
+
+:::

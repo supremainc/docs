@@ -1,0 +1,63 @@
+---
+id: lockoverride
+title: Configurar permisos de apertura de emergencia
+description: Esta guía explica cómo otorgar permisos de apertura de emergencia a las credenciales de tarjeta para que usuarios específicos puedan abrir todas las puertas en situaciones de emergencia.
+keywords:
+  - Emergencia
+  - Abierto
+  - Acceso
+---
+
+Configure permisos de apertura de emergencia para permitir que usuarios específicos accedan a todas las puertas en situaciones de emergencia. Si se abre una puerta con una tarjeta que tiene configurado el permiso de acceso de emergencia, la puerta permanece abierta y permite que cualquiera entre.
+
+## Antes de comenzar
+
+Primero agregue las credenciales de tarjeta antes de configurar los permisos de apertura de emergencia. Para obtener más información sobre cómo agregar credenciales de tarjeta, consulte [lo siguiente](enroll-credential-card).
+
+:::info
+
+* No se admiten credenciales distintas de las credenciales de tarjeta.
+
+* Se admiten todas las credenciales de tarjeta excepto las tarjetas inteligentes (AoC) y las tarjetas de acceso móvil ToM (ToM AoC).
+
+* Según el dispositivo, es posible que la función de apertura de emergencia no esté admitida. Consulte los dispositivos y versiones de firmware compatibles a continuación.
+
+  * Firmware BioStation 3 v1.4.0 o superior
+
+:::
+
+## Configurar permisos de apertura de emergencia
+
+1. Haz clic en <Cmd sid="shell.header.user" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga doble clic en el usuario al que desea configurar permisos de apertura de emergencia en la lista de usuarios.
+
+   Como alternativa, seleccione un usuario y haga clic en el botón <Cmd sid="team.user.preview.button.seeMore" /> en el perfil que se muestra en la pantalla derecha.
+
+3. Cuando aparezca la pantalla de detalles del usuario, vaya a la sección <Cmd sid="team.user.credential.title" />.
+
+4. Haga clic en la casilla de verificación del elemento <Cmd sid="team.user.table.lockOverride" /> para las credenciales de tarjeta que desea autorizar para la apertura de emergencia.
+
+   <Image src="/img/biostarx-user-credential-set-emergency-opening.png" />
+
+5. Cuando aparezca un mensaje de advertencia, revise el contenido y haga clic en <Cmd sid="common.button.continue" />.
+
+   <Image src="/img/biostarx-user-credential-set-emergency-opening-warning.png" width="60%" />
+
+6. Haga clic en <Cmd sid="common.save" /> en la parte superior derecha de la pantalla.
+
+Complete la configuración de los permisos de apertura de emergencia.
+
+:::caution
+
+Los usuarios pueden abrir todas las puertas con una tarjeta de acceso configurada con permiso de emergencia.
+
+:::
+
+:::info
+
+* Seleccione una o más credenciales de tarjeta para otorgar permiso de acceso de emergencia.
+
+* Para revocar el permiso de acceso de emergencia, vuelva a hacer clic en la casilla de verificación del elemento <Cmd sid="team.user.table.lockOverride" /> de la credencial de tarjeta seleccionada.
+
+:::

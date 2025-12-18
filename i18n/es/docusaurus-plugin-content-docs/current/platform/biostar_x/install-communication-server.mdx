@@ -1,0 +1,136 @@
+---
+id: install-communication-server
+title: Instalar el servidor de comunicación
+description: Este documento guía el proceso de instalación del servidor de comunicación.
+keywords:
+  - Servidor de comunicación
+  - Instalación
+---
+
+Este documento explica cómo instalar el **Communication Server** de **BioStar X**.
+
+El servidor de comunicación es un servidor dedicado a la comunicación con dispositivos de control de acceso. Al instalarlo por separado del servidor principal, ayuda a gestionar muchos dispositivos de forma confiable. Un solo servidor de comunicación puede conectar hasta 1,000 dispositivos, y se pueden agregar varios servidores de comunicación según sea necesario.
+
+## Antes de empezar {#start-before}
+
+Antes de instalar el servidor de comunicación, verifique los siguientes elementos.
+
+* El servidor de comunicación no puede instalarse en el mismo servidor que el servidor de **BioStar X**.
+
+* El servidor de comunicación solo puede instalarse en un sistema operativo de 64 bits. Para obtener más información sobre los requisitos mínimos del sistema, consulte [lo siguiente](system-requirements#communication-server).
+
+* Se requiere una licencia de multi-servidor de comunicación para instalar y conectar el servidor de comunicación. Para más información sobre la política de licencias, consulta [lo siguiente](licensing#features-add-ons).
+
+### Verificaciones previas a la instalación {#check-before-install}
+
+Antes de instalar el servidor de comunicación, ejecute **BioStar X Service Manager** para comprobar la información necesaria durante la instalación.
+
+1. Haz clic en <Start /> → **BioStar X** → **BioStar X Service Manager** en Windows.
+
+2. La ventana <Cmd>BioStar X Service Manager</Cmd> aparece.
+
+3. Haga clic en <Cmd>SERVICE SETTINGS</Cmd>.
+
+A continuación se muestra la información necesaria al instalar el servidor de comunicación. Revise y prepare cada elemento.
+
+<Image src="/img/biostarx-cumm-server-matching.png" />
+
+<div className="table-fixed">
+  | BioStar X Service Manager | Información requerida para la instalación del servidor de comunicación |
+  | --- | --- |
+  | <Cmd>BioStar X Core Service</Cmd> → <Cmd>RPC Port</Cmd> | **Puerto gRPC del servidor BioStar X para comunicación** |
+  | <Cmd>BioStar X Coordinator Service</Cmd> → <Cmd>Client Port</Cmd> | **Puerto del servicio BioStar X Coordinator para comunicación** |
+  | <Cmd>BioStar X Cache Service</Cmd> → <Cmd>Client Port</Cmd> | **Cliente del servicio BioStar X Cache para comunicación** |
+</div>
+
+:::info
+
+Para obtener más información sobre <Cmd>SERVICE SETTINGS</Cmd>, consulte [lo siguiente](service-settings).
+
+:::
+
+## Guía de instalación {#install-guide}
+
+Siga los pasos a continuación para instalar el servidor de comunicación.
+
+1. Acceda al [Suprema Download Center](https://download.supremainc.com/), inicie sesión y descargue el paquete de instalación (*BioStar X Communications Server.X.Y.X.BB.exe*).
+
+2. Ejecute el archivo de instalación descargado.
+
+3. Seleccione el idioma a usar y haga clic en el botón <Cmd code="biostar2.install.ok" className="bold" />.
+
+   <Image src="/img/biostarx-install-select-language.png" />
+
+4. Para continuar con la instalación, seleccione <Cmd code="biostar2.install.agree" className="bold" /> y haga clic en el botón <Cmd code="biostar2.install.next" className="bold" />.
+
+   <Image src="/img/biostarx-install-comm-server-license-agree.png" />
+
+5. Establezca la ruta donde se instalará el servidor de comunicación y haga clic en <Cmd code="biostar2.install.next" className="bold" />.
+
+   <Image src="/img/biostarx-install-comm-server-set-path.png" />
+
+6. Revise los permisos y responsabilidades relacionados con la información personal y haga clic en <Cmd code="biostar2.install.next" className="bold" /> para continuar con la instalación.
+
+   <Image src="/img/biostarx-install-comm-server-private-policy.png" />
+
+7. Seleccione los componentes del servidor de comunicación y haga clic en <Cmd code="biostar2.install.next" className="bold" />.
+
+   <Image src="/img/biostarx-install-comm-server-select-component.png" />
+
+8. Ingrese la dirección IP y el número de puerto del servidor **BioStar X**, e introduzca los detalles para la conexión al servidor **BioStar X**. Complete su configuración y haga clic en <Cmd code="biostar2.install.next" className="bold" />.
+
+   <Image src="/img/biostarx-install-comm-server-settings.png" />
+
+   :::note
+
+   Para obtener más información sobre cada elemento de entrada, consulte [lo siguiente](#check-before-install).
+
+   :::
+
+9. Configure el puerto para la comunicación y haga clic en <Cmd code="biostar2.install.next" className="bold" />.
+
+   <Image src="/img/biostarx-install-comm-server-port-settings.png" />
+
+10. Cuando se completen todas las preparaciones para la instalación, haga clic en el botón <Cmd code="biostar2.install.btnInstall" className="bold" />. Proceda con la instalación.
+
+    <Image src="/img/biostarx-install-comm-server-install-step.png" />
+
+11. Verifique el mensaje de finalización de instalación y haga clic en <Cmd code="biostar2.install.complete" className="bold" />.
+
+    <Image src="/img/biostarx-install-comm-server-complete.png" />
+
+Complete la instalación del servidor de comunicación. Una vez finalizada la instalación, verifique la conexión entre el servidor de comunicación y el servidor principal de **BioStar X**.
+
+## Verificaciones posteriores a la instalación {#check-after-install}
+
+Después de completar la instalación del servidor de comunicación, necesita conectar el servidor principal y el servidor de comunicación mediante **BioStar X Service Manager**.
+
+1. Haz clic en <Start /> → **BioStar X** → **BioStar X Service Manager** en Windows.
+
+2. La ventana <Cmd>BioStar X Service Manager</Cmd> aparece.
+
+3. En la barra lateral izquierda, haga clic en el menú <Cmd>COMMUNICATIONS</Cmd>.
+
+   <Image src="/img/common/biostarx-sm-cluster-main-01.png" alone />
+
+4. Haga clic en el botón <Cmd>Add Communication Server</Cmd> en la esquina superior derecha de la pantalla.
+
+5. Cuando aparezca la ventana <Cmd>Add Communication Server</Cmd>, marque la casilla del elemento que coincida con la dirección IP del servidor de comunicación instalado y seleccione la base de datos a usar en la columna <Cmd>Database</Cmd>.
+
+   <Image src="/img/common/biostarx-sm-cluster-main-03.png" alone />
+
+6. Haga clic en el botón <Cmd>Add</Cmd>.
+
+En la lista de servidores de comunicación, verifique que la columna <Cmd>Server Status</Cmd> del servidor de comunicación agregado esté en estado <Cmd>Connected</Cmd>.
+
+<Image src="/img/common/biostarx-sm-cluster-main-04.png" alone />
+
+:::info
+
+* El menú <Cmd>COMMUNICATIONS</Cmd> puede usarse cuando la licencia de multi-servidor de comunicación está activada. Para más información sobre la política de licencias, consulta [lo siguiente](licensing#features-add-ons).
+
+* Para eliminar el servidor de comunicación, marque la casilla del servidor que desea eliminar en la lista y haga clic en el botón <Cmd>Delete Communication Server</Cmd> en la esquina superior derecha de la pantalla.
+
+* Al agregar un servidor de comunicación, también se puede agregar una base de datos secundaria para reducir la carga en el servidor principal. Para obtener más información sobre cómo agregar una base de datos secundaria, consulte [lo siguiente](add-sub-db).
+
+:::

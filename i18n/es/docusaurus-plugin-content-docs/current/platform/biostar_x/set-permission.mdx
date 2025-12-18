@@ -1,0 +1,92 @@
+---
+id: set-permission
+title: Configurar permisos de usuario
+description: Esta guía explica cómo establecer los privilegios de administrador y los permisos de acceso para los usuarios de **BioStar X**.
+keywords:
+  - Usuario
+  - Permisos
+---
+
+De acuerdo con la política de seguridad de la organización, puede diferenciar los privilegios operativos específicos del usuario y los permisos de acceso para **BioStar X**. Restrinja el acceso a los menús principales mediante niveles de administrador y controle el acceso a los espacios físicos mediante grupos de acceso. También puede mejorar la seguridad mediante restricciones de dirección IP y autenticación multifactor.
+
+Ve a la página <Cmd sid="shell.header.launcher" /> → <Cmd sid="shell.header.user" /> y establece permisos de acceso con los dos métodos siguientes.
+
+import EnterUserPage from '../../common/_enter-user-page.mdx';
+
+<EnterUserPage />
+
+En la sección <Cmd sid="team.user.permission.title" />, se pueden configurar los siguientes elementos. Consulte las descripciones de cada elemento para configurar los permisos de usuario adecuados.
+
+<Image src="/img/biostarx-new-user-permission.png" />
+
+## Seleccione nivel de administrador {#operatorLevel}
+
+Los menús accesibles se limitarán según el nivel de administrador seleccionado. Seleccione el nivel de administrador del usuario en la sección <Cmd sid="team.user.permission.title" />, bajo el elemento <Cmd sid="user.bioStarOperator" product="2" />. Consulte la siguiente lista para conocer los niveles de administrador que se pueden asignar a los usuarios.
+
+import AccountList from '../../common/_account-list.mdx';
+
+<AccountList />
+
+### Configurar ID de inicio de sesión y contraseña
+
+Si seleccionó un nivel de administrador, debe establecer el ID y la contraseña que se utilizarán cuando el usuario inicie sesión en **BioStar X**.
+
+<Image src="/img/biostarx-new-user-permission-set-login.png" />
+
+:::info
+
+**Precauciones al establecer ID y contraseña**
+
+* Establezca el ID como una combinación de letras y números de entre 8 y 32 caracteres.
+
+* Para obtener más información sobre la configuración de la política de contraseñas, consulte [lo siguiente](settings-system-security#password-policy-configuration).
+
+* Evite usar contraseñas vulnerables en términos de seguridad.
+
+  * Caracteres o números consecutivos (por ejemplo, abcd, 1234)
+
+  * Palabras o patrones comunes (por ejemplo, qwerty, password)
+
+:::
+
+## Configuración de autenticación de múltiples factores {#multiFactorAuth}
+
+Al habilitar <Cmd sid="common.fingerprintLogin" product="2" />, los usuarios podrán iniciar sesión en **BioStar X** con autenticación de huella digital adicional.
+
+:::info
+
+Para obtener más información sobre la configuración de autenticación multifactor, consulte [este documento](login-with-mfa).
+
+:::
+
+## Configuración de inicio de sesión con dirección IP del usuario {#userIp}
+
+Si registra una dirección IP de usuario, solo podrá iniciar sesión en el PC cuando la información de IP coincida con la registrada en su cuenta. Esto mejora la seguridad. Ingrese la dirección IP del usuario en el campo <Cmd sid="team.user.permission.userIp" /> de la sección <Cmd sid="team.user.permission.title" />.
+
+:::info
+
+* Las direcciones IP pueden introducirse en el formato xxx.xxx.xxx.xxx, y cada octeto debe contener un número en el rango de 0–255.
+
+* Si la dirección IP no está registrada, se permitirá el inicio de sesión en el PC independientemente de la información de IP.
+
+:::
+
+## Seleccione grupo de acceso {#accessGroup}
+
+Configure el grupo de acceso del usuario para restringir el acceso por organización o departamento. En la sección <Cmd sid="team.user.permission.title" />, seleccione el grupo de acceso desde <Cmd sid="team.user.permission.accessGroup" />.
+
+:::info
+
+Para obtener más información sobre cómo agregar y administrar grupos de acceso, consulte [lo siguiente](settings-access-control-manage-access-group).
+
+:::
+
+<NextStep>
+  <NextItem to="set-user-advanced">
+    En la sección <Cmd sid="common.advanced" product="2" />, configure el mensaje que se mostrará en el dispositivo cuando el usuario acceda o excluya a ese usuario de la sincronización al vincular con <Cmd sid="settings.activeDirectory.title" product="2" className="normal" />.
+  </NextItem>
+
+  <NextItem to="edit-user">
+    Consulte cómo editar la información del usuario.
+  </NextItem>
+</NextStep>

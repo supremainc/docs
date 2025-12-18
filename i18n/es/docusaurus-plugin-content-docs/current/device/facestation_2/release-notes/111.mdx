@@ -1,0 +1,71 @@
+---
+id: 111
+title: Firmware Version 1.1.1
+---
+
+# Firmware Version 1.1.1 (Build No. 1.1.1_180801)
+
+Release<Separator/>2018-08-10
+
+## New Features and Improvements
+
+---
+
+1. Improves RFID card read range in Factory mode.
+
+<br/>
+<br/>
+
+# Firmware Version 1.1.1 (Build No. 1.1.1_180705)
+
+Release<Separator/>2018-07-23
+
+## New Features and Improvements
+
+---
+
+1. Support the bypass mode through Wiegand output on smart cards.
+
+    - Bypass mode: It makes the device send out Card Data to 3rd party device without making an authentication. With this mode, the device works as a dummy device, and card data only can be transmitted through Wiegand.
+
+1. Support the issuance of Secure Credential Card without the fingerprints when registering iCLASS 2K card.
+
+1. Improves RFID card read range.
+
+1. Support for connecting new devices.
+
+    - FaceStation 2(FS2-DS), BioLite N2(BLN2-PAB), XPass D2(XPD2-GDB, XPD2-GKDB)
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. The bypass does not work when authentication with AoC in Wiegand output.
+
+1. Event logs and real-time logs are not uploaded normally to BioStar 2.
+
+1. The device's time is kept in daylight saving time even after the set daylight saving time is over.
+
+1. The device does not work as set for relay alarms when connecting Secure I/O 2 as a slave to the device.
+
+1. User Export is executed even though there is no saved user.
+
+1. The arm/disarm key is displayed on a device not included in Intrusion Alarm Zone.
+
+1. Wiegand Reader could not be unlocked.
+
+1. The device restarts when authenticating on the slave device with an unregistered fingerprint.
+
+1. An empty file is created when running USB Export, even though there is saved data.
+
+1. The device cannot read CSN because the card recognized as an NFC tag.
+
+1. All users are deleted in BioStar 2 if running USB Import when there are users.
+
+1. "USB Connection Fail" message is displayed when the encryption key does not match during data import.
+
+1. The device recognizes the smart card as a CSN card when changing the primary key of the smart card to the secondary key.
+
+</BugLists>

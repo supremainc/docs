@@ -1,0 +1,87 @@
+---
+id: settings-manage-account
+title: Gestionar permisos de operación
+description: Esta guía describe cómo asignar permisos de operador y añadir y configurar permisos personalizados a los usuarios registrados.
+keywords:
+  - Cuentas
+  - Permiso de operación
+  - Permiso personalizado
+---
+
+Esta guía describe cómo asignar permisos de operador y añadir y configurar permisos personalizados a los usuarios registrados. Los permisos de operador controlan las tareas que un usuario puede realizar en **Biostar X**. **Los permisos personalizados** permiten establecer permisos adicionales más allá de los permisos de operador predeterminados.
+
+## Comprobar tipos de permisos
+
+Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />. Haz clic en <Cmd sid="setting.menu.account.root" /> en la barra lateral izquierda. Consulta las cuentas proporcionadas según los niveles de permiso.
+
+import AccountList from '../../common/_account-list.mdx';
+
+<AccountList />
+
+## Conceder permisos de operador a los usuarios {#addUserPermission}
+
+Guía para conceder permisos de operador a usuarios generales.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.account.root" /> en la barra lateral izquierda.
+
+3. Haz clic en el elemento deseado de la lista de cuentas.
+
+4. Haz clic en <Cmd sid="button.plusAdd" product="2" /> en la opción <Cmd sid="settings.account.addUser" product="2" />.
+
+   <Image src="/img/biostarx-settings-account-add-permission.png" caption />
+
+5. Selecciona en la lista de usuarios al usuario al que deseas conceder permisos de operador.
+
+6. Después de seleccionar todos los usuarios deseados, haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla.
+
+:::info
+
+* Si resulta difícil encontrar usuarios debido a su cantidad, haz clic en <IcSearch /> para buscarlos y seleccionar el usuario deseado.
+
+* Los permisos de operador también se pueden conceder al añadir o modificar la información del usuario. Consulta [lo siguiente](set-permission) para obtener más información.
+
+* Si los permisos ya se configuraron al añadir o modificar la información del usuario, se incluirán en la opción <Cmd sid="settings.account.addUser" product="2" />.
+
+:::
+
+## Excluir permisos de operador
+
+Guía para excluir los permisos de operador concedidos a los usuarios.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.account.root" /> en la barra lateral izquierda.
+
+3. Haz clic en el tipo de cuenta deseado de la lista de cuentas.
+
+4. Haz clic en <IcTrash2 /> para el usuario que se excluirá de la operación en la opción <Cmd sid="settings.account.addUser" product="2" />.
+
+   <Image src="/img/biostarx-settings-account-exclude-permission.png" caption />
+
+5. Haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla para guardar la configuración.
+
+## Comprobar detalles de permisos de operador
+
+Haz clic en la cuenta en la lista de cuentas del menú <Cmd sid="setting.menu.account.root" /> para ver los detalles de los permisos de operación de esa cuenta.
+
+* <Cmd sid="common.name" product="2" />: Nombre del permiso de operador seleccionado.
+
+* <Cmd sid="settings.accountList.columnDesc" product="2" />: Descripción breve del permiso.
+
+* <Cmd sid="settings.account.menu.detailSetting" product="2" />: Permite ver los grupos con permisos concedidos, elemento por elemento.
+
+* <Cmd sid="settings.account.menu.setting" product="2" />: Permite ver los permisos concedidos para acceder al menú.
+
+  * <Cmd sid="common.editRead" product="2" />: Concede permiso para añadir, editar o eliminar elementos en el menú.
+
+  * <Cmd sid="common.read" product="2" />: Concede permiso para entrar en el menú y solo ver la configuración.
+
+* <Cmd sid="settings.account.addUser" product="2" />: Permite ver los usuarios con permisos concedidos.
+
+:::info
+
+Para conocer los métodos para conceder permisos a usuarios específicos, consulta [lo siguiente](#addUserPermission).
+
+:::

@@ -1,0 +1,470 @@
+{
+  "version.label": {
+    "message": "Siguiente",
+    "description": "The label for version current"
+  },
+  "sidebar.biostarx.category.개요": {
+    "message": "Resúmen",
+    "description": "The label for category '개요' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.BioStar X": {
+    "message": "BioStar X",
+    "description": "The label for category 'BioStar X' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.튜토리얼": {
+    "message": "Tutorial",
+    "description": "The label for category 튜토리얼 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.사용자": {
+    "message": "Usuario",
+    "description": "The label for category '사용자' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.사용자 등록하기": {
+    "message": "Registrar usuarios",
+    "description": "The label for category 사용자 등록하기 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.사용자 관리하기": {
+    "message": "Administrar Usuarios",
+    "description": "The label for category '사용자 관리하기' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.모니터링": {
+    "message": "Monitorizar",
+    "description": "The label for category '모니터링' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.출입문 모니터링하기": {
+    "message": "Monitoreo de puertas",
+    "description": "The label for category '출입문 모니터링하기' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.UI 알아보기": {
+    "message": "Explorar la interfaz",
+    "description": "The label for category 'UI 알아보기' in sidebar 'biostarx'"
+  },
+  "sidebar.legal.category.Legal": {
+    "message": "Legal",
+    "description": "The label for category 'Legal' in sidebar 'legal'"
+  },
+  "sidebar.reference.category.참조 문서": {
+    "message": "Referencia",
+    "description": "The label for category '참조 문서' in sidebar 'reference'"
+  },
+  "sidebar.bioStation3.category.BioStation 3": {
+    "message": "BioStation 3",
+    "description": "The label for category BioStation 3 in sidebar bioStation3"
+  },
+  "sidebar.bioStation3.category.사용하기": {
+    "message": "Cómo usar",
+    "description": "The label for category 사용하기 in sidebar bioStation3"
+  },
+  "sidebar.biostarx.category.설정": {
+    "message": "Ajustes",
+    "description": "The label for category '설정' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.장치 관리하기": {
+    "message": "Administrar dispositivos",
+    "description": "The label for category '장치 관리하기' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.장치 설정하기": {
+    "message": "Configuración del dispositivo",
+    "description": "The label for category '장치 설정하기' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.출입문 관리하기": {
+    "message": "Administrar puertas",
+    "description": "The label for category '출입문 관리하기' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.엘리베이터 관리하기": {
+    "message": "Administrar elevadores",
+    "description": "The label for category '엘리베이터 관리하기' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.운영 권한 관리하기": {
+    "message": "Gestionar permisos de operación",
+    "description": "The label for category '운영 권한 관리하기' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.출입 통제 설정하기": {
+    "message": "Configuración de control de acceso",
+    "description": "The label for category '출입 통제 설정하기' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.데이터": {
+    "message": "Fecha",
+    "description": "The label for category '데이터' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.대시보드": {
+    "message": "Tablero",
+    "description": "The label for category 대시보드 in sidebar biostarx"
+  },
+  "sidebar.biostarx.category.고급 출입 통제 설정하기": {
+    "message": "Configuración avanzada de control de acceso",
+    "description": "The label for category '고급 출입 통제 설정하기' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.크리덴셜 관리하기": {
+    "message": "Administrar credenciales",
+    "description": "The label for category '크리덴셜 관리하기' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.서버 설정하기": {
+    "message": "Configuración del servidor",
+    "description": "The label for category '서버 설정하기' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.라이선스 활성화하기": {
+    "message": "Activar licencia",
+    "description": "The label for category '라이선스 활성화하기' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.시스템 설정하기": {
+    "message": "Configuración Del Sistema",
+    "description": "The label for category '시스템 설정하기' in sidebar 'biostarx'"
+  },
+  "sidebar.biostation3.category.BioStation 3": {
+    "message": "BioStation 3",
+    "description": "The label for category 'BioStation 3' in sidebar 'biostation3'"
+  },
+  "sidebar.biostation3.category.사용하기": {
+    "message": "Cómo usar",
+    "description": "The label for category '사용하기' in sidebar 'biostation3'"
+  },
+  "sidebar.biostation2a.category.BioStation 2a": {
+    "message": "BioStation 2a",
+    "description": "The label for category 'BioStation 2a' in sidebar 'biostation2a'"
+  },
+  "sidebar.biostation2a.category.사용하기": {
+    "message": "Cómo usar",
+    "description": "The label for category '사용하기' in sidebar 'biostation2a'"
+  },
+  "sidebar.biostarx.category.사용자 크리덴셜 등록하기": {
+    "message": "Registrar credencial del usuario",
+    "description": "The label for category '사용자 크리덴셜 등록하기' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.맵 관리하기": {
+    "message": "Administrar mapa",
+    "description": "The label for category '맵 관리하기' in sidebar 'biostarx'"
+  },
+  "sidebar.biostar_air.category.BioStar Air": {
+    "message": "BioStar Air",
+    "description": "The label for category 'BioStar Air' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.Overview": {
+    "message": "Resúmen",
+    "description": "The label for category 'Overview' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.Site Management": {
+    "message": "Administración de sitios",
+    "description": "The label for category 'Site Management' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.User Management": {
+    "message": "Gestión Usuarios",
+    "description": "The label for category 'User Management' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.Device Management": {
+    "message": "Gestión Dispositivos",
+    "description": "The label for category 'Device Management' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.Door Management": {
+    "message": "Administración de puertas",
+    "description": "The label for category 'Door Management' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.Monitoring": {
+    "message": "Monitorizar",
+    "description": "The label for category 'Monitoring' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.Settings": {
+    "message": "Ajustes",
+    "description": "The label for category 'Settings' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.Video Management": {
+    "message": "Administración de video",
+    "description": "The label for category 'Video Management' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.Using Mobile Credentials": {
+    "message": "Uso de credenciales móviles",
+    "description": "The label for category 'Using Mobile Credentials' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.Partners and Integrations": {
+    "message": "Socios e integraciones",
+    "description": "The label for category 'Partners and Integrations' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.Hardware": {
+    "message": "Hardware",
+    "description": "The label for category 'Hardware' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostarx.category.시작하기": {
+    "message": "Primeros pasos",
+    "description": "The label for category '시작하기' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.서버 관리": {
+    "message": "Administración de servidores",
+    "description": "The label for category '서버 관리' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.고급 설정": {
+    "message": "Configuración avanzada",
+    "description": "The label for category '고급 설정' in sidebar 'biostarx'"
+  },
+  "sidebar.reference.category.제품 기능 및 사양 비교": {
+    "message": "Comparar funciones y especificaciones del producto",
+    "description": "The label for category '제품 기능 및 사양 비교' in sidebar 'reference'"
+  },
+  "sidebar.reference.category.지문 인증 장치": {
+    "message": "Dispositivos de autenticación por huella digital",
+    "description": "The label for category '지문 인증 장치' in sidebar 'reference'"
+  },
+  "sidebar.reference.category.얼굴 인증 장치": {
+    "message": "Dispositivos de autenticación facial",
+    "description": "The label for category '얼굴 인증 장치' in sidebar 'reference'"
+  },
+  "sidebar.reference.category.RFID 장치": {
+    "message": "Dispositivos RFID",
+    "description": "The label for category 'RFID 장치' in sidebar 'reference'"
+  },
+  "sidebar.reference.category.지문 및 RFID 리더": {
+    "message": "Lectores de huellas digitales y RFID",
+    "description": "The label for category '지문 및 RFID 리더' in sidebar 'reference'"
+  },
+  "sidebar.reference.category.지능형 컨트롤러 및 주변 장치": {
+    "message": "Controladores inteligentes y periféricos",
+    "description": "The label for category '지능형 컨트롤러 및 주변 장치' in sidebar 'reference'"
+  },
+  "sidebar.howto.category.How-to Articles": {
+    "message": "How-to Articles",
+    "description": "The label for category 'How-to Articles' in sidebar 'howto'"
+  },
+  "sidebar.biostar_air.category.Reports": {
+    "message": "Informes",
+    "description": "The label for category 'Reports' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.Advanced Features": {
+    "message": "Funciones avanzadas",
+    "description": "The label for category 'Advanced Features' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.Release Notes": {
+    "message": "Notas de la versión",
+    "description": "The label for category 'Release Notes' in sidebar 'biostar_air'"
+  },
+  "sidebar.bsxplugins.category.BioStar X Plugins": {
+    "message": "Plugins de BioStar X",
+    "description": "The label for category 'BioStar X Plugins' in sidebar 'bsxplugins'"
+  },
+  "sidebar.biostarx.category.비디오 설정하기": {
+    "message": "Configuración de video",
+    "description": "The label for category '비디오 설정하기' in sidebar 'biostarx'"
+  },
+  "sidebar.corestation40.category.CoreStation": {
+    "message": "CoreStation",
+    "description": "The label for category CoreStation in sidebar corestation40"
+  },
+  "sidebar.corestation20.category.CoreStation 20": {
+    "message": "CoreStation 20",
+    "description": "The label for category 'CoreStation 20' in sidebar 'corestation20'"
+  },
+  "sidebar.doorinterface24.category.Door Interface": {
+    "message": "Door Interface",
+    "description": "The label for category Door Interface in sidebar doorinterface24"
+  },
+  "sidebar.facestationf2.category.FaceStation F2": {
+    "message": "FaceStation F2",
+    "description": "The label for category 'FaceStation F2' in sidebar 'facestationf2'"
+  },
+  "sidebar.facestationf2.category.사용하기": {
+    "message": "Cómo usar",
+    "description": "The label for category '사용하기' in sidebar 'facestationf2'"
+  },
+  "sidebar.bioentryw3.category.BioEntry W3": {
+    "message": "BioEntry W3",
+    "description": "The label for category 'BioEntry W3' in sidebar 'bioentryw3'"
+  },
+  "sidebar.bioliten2.category.BioLite N2": {
+    "message": "BioLite N2",
+    "description": "The label for category 'BioLite N2' in sidebar 'bioliten2'"
+  },
+  "sidebar.bioliten2.category.사용하기": {
+    "message": "Cómo usar",
+    "description": "The label for category '사용하기' in sidebar 'bioliten2'"
+  },
+  "sidebar.xstation2.category.X-Station 2": {
+    "message": "X-Station 2",
+    "description": "The label for category 'X-Station 2' in sidebar 'xstation2'"
+  },
+  "sidebar.xstation2.category.사용하기": {
+    "message": "Cómo usar",
+    "description": "The label for category '사용하기' in sidebar 'xstation2'"
+  },
+  "sidebar.biostarx.category.bsxDashboard": {
+    "message": "Tablero",
+    "description": "The label for category '대시보드' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.플러그인": {
+    "message": "Plugin",
+    "description": "The label for category '플러그인' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.근태 관리 사용하기": {
+    "message": "Cómo usar tiempo y asistencia",
+    "description": "The label for category '근태 관리 사용하기' in sidebar 'biostarx'"
+  },
+  "sidebar.biostarx.category.방문자 신청 및 관리하기": {
+    "message": "Administrar visitantes",
+    "description": "The label for category '방문자 신청 및 관리하기' in sidebar 'biostarx'"
+  },
+  "sidebar.biostation3.category.Release Notes": {
+    "message": "Notas de la versión",
+    "description": "The label for category 릴리스 노트 in sidebar biostation3"
+  },
+  "sidebar.biostarx.category.Release Notes": {
+    "message": "Notas de la versión",
+    "description": "The label for category 'Release Notes' in sidebar 'biostarx'"
+  },
+  "sidebar.corestation.category.CoreStation": {
+    "message": "CoreStation",
+    "description": "The label for category 'CoreStation' in sidebar 'corestation'"
+  },
+  "sidebar.corestation.category.릴리스 노트": {
+    "message": "Notas de la versión",
+    "description": "The label for category '릴리스 노트' in sidebar 'corestation'"
+  },
+  "sidebar.corestation20.category.릴리스 노트": {
+    "message": "Notas de la versión",
+    "description": "The label for category '릴리스 노트' in sidebar 'corestation20'"
+  },
+  "sidebar.enclosure.category.Enclosure": {
+    "message": "Enclosure",
+    "description": "The label for category 'Enclosure' in sidebar 'enclosure'"
+  },
+  "sidebar.doorinterface.category.Door Interface": {
+    "message": "Door Interface",
+    "description": "The label for category 'Door Interface' in sidebar 'doorinterface'"
+  },
+  "sidebar.doorinterface.category.릴리스 노트": {
+    "message": "Notas de la versión",
+    "description": "The label for category '릴리스 노트' in sidebar 'doorinterface'"
+  },
+  "sidebar.doormodule.category.Door Module": {
+    "message": "Door Module",
+    "description": "The label for category 'Door Module' in sidebar 'doormodule'"
+  },
+  "sidebar.doormodule.category.릴리스 노트": {
+    "message": "Notas de la versión",
+    "description": "The label for category '릴리스 노트' in sidebar 'doormodule'"
+  },
+  "sidebar.inputmodule.category.Input Module": {
+    "message": "Input Module",
+    "description": "The label for category 'Input Module' in sidebar 'inputmodule'"
+  },
+  "sidebar.inputmodule.category.릴리스 노트": {
+    "message": "Notas de la versión",
+    "description": "The label for category '릴리스 노트' in sidebar 'inputmodule'"
+  },
+  "sidebar.outputmodule.category.Output Module": {
+    "message": "Output Module",
+    "description": "The label for category 'Output Module' in sidebar 'outputmodule'"
+  },
+  "sidebar.outputmodule.category.릴리스 노트": {
+    "message": "Notas de la versión",
+    "description": "The label for category '릴리스 노트' in sidebar 'outputmodule'"
+  },
+  "sidebar.securemodule.category.Secure Module": {
+    "message": "Secure Module",
+    "description": "The label for category 'Secure Module' in sidebar 'securemodule'"
+  },
+  "sidebar.securemodule.category.릴리스 노트": {
+    "message": "Notas de la versión",
+    "description": "The label for category '릴리스 노트' in sidebar 'securemodule'"
+  },
+  "sidebar.extendedmodule.category.Extended Module": {
+    "message": "Extended Module",
+    "description": "The label for category 'Extended Module' in sidebar 'extendedmodule'"
+  },
+  "sidebar.extendedmodule_sc.category.Extended Module-SC": {
+    "message": "Extended Module-SC",
+    "description": "The label for category 'Extended Module-SC' in sidebar 'extendedmodule_sc'"
+  },
+  "sidebar.facestationf2.category.릴리스 노트": {
+    "message": "Notas de la versión",
+    "description": "The label for category '릴리스 노트' in sidebar 'facestationf2'"
+  },
+  "sidebar.facestation2.category.FaceStation 2": {
+    "message": "FaceStation 2",
+    "description": "The label for category 'FaceStation 2' in sidebar 'facestation2'"
+  },
+  "sidebar.facestation2.category.사용하기": {
+    "message": "Cómo usar",
+    "description": "The label for category '사용하기' in sidebar 'facestation2'"
+  },
+  "sidebar.facestation2.category.릴리스 노트": {
+    "message": "Notas de la versión",
+    "description": "The label for category '릴리스 노트' in sidebar 'facestation2'"
+  },
+  "sidebar.bioentryp2.category.BioEntry P2": {
+    "message": "BioEntry P2",
+    "description": "The label for category 'BioEntry P2' in sidebar 'bioentryp2'"
+  },
+  "sidebar.bioentryp2.category.릴리스 노트": {
+    "message": "Notas de la versión",
+    "description": "The label for category '릴리스 노트' in sidebar 'bioentryp2'"
+  },
+  "sidebar.bioentryr2.category.BioEntry R2": {
+    "message": "BioEntry R2",
+    "description": "The label for category 'BioEntry R2' in sidebar 'bioentryr2'"
+  },
+  "sidebar.bioentryr2.category.릴리스 노트": {
+    "message": "Notas de la versión",
+    "description": "The label for category '릴리스 노트' in sidebar 'bioentryr2'"
+  },
+  "sidebar.bioentryw2.category.BioEntry W2": {
+    "message": "BioEntry W2",
+    "description": "The label for category 'BioEntry W2' in sidebar 'bioentryw2'"
+  },
+  "sidebar.bioentryw2.category.릴리스 노트": {
+    "message": "Notas de la versión",
+    "description": "The label for category '릴리스 노트' in sidebar 'bioentryw2'"
+  },
+  "sidebar.device_manager.category.Device Manager": {
+    "message": "Device Manager",
+    "description": "The label for category 'Device Manager' in sidebar 'device_manager'"
+  },
+  "sidebar.bioentryw3.category.릴리스 노트": {
+    "message": "Notas de la versión",
+    "description": "The label for category '릴리스 노트' in sidebar 'bioentryw3'"
+  },
+  "sidebar.biostation3.category.릴리스 노트": {
+    "message": "Notas de la versión",
+    "description": "The label for category '릴리스 노트' in sidebar 'biostation3'"
+  },
+  "sidebar.biostation2a.category.릴리스 노트": {
+    "message": "Notas de la versión",
+    "description": "The label for category '릴리스 노트' in sidebar 'biostation2a'"
+  },
+  "sidebar.bioliten2.category.릴리스 노트": {
+    "message": "Notas de la versión",
+    "description": "The label for category '릴리스 노트' in sidebar 'bioliten2'"
+  },
+  "sidebar.xpass2.category.XPass 2": {
+    "message": "XPass 2",
+    "description": "The label for category 'XPass 2' in sidebar 'xpass2'"
+  },
+  "sidebar.xpass2.category.릴리스 노트": {
+    "message": "Notas de la versión",
+    "description": "The label for category '릴리스 노트' in sidebar 'xpass2'"
+  },
+  "sidebar.xpassd2.category.XPass D2": {
+    "message": "XPass D2",
+    "description": "The label for category 'XPass D2' in sidebar 'xpassd2'"
+  },
+  "sidebar.xpassd2.category.릴리스 노트": {
+    "message": "Notas de la versión",
+    "description": "The label for category '릴리스 노트' in sidebar 'xpassd2'"
+  },
+  "sidebar.xpasss2.category.XPass S2": {
+    "message": "XPass S2",
+    "description": "The label for category 'XPass S2' in sidebar 'xpasss2'"
+  },
+  "sidebar.xpasss2.category.릴리스 노트": {
+    "message": "Notas de la versión",
+    "description": "The label for category '릴리스 노트' in sidebar 'xpasss2'"
+  },
+  "sidebar.xstation2.category.릴리스 노트": {
+    "message": "Notas de la versión",
+    "description": "The label for category '릴리스 노트' in sidebar 'xstation2'"
+  },
+  "sidebar.corestation_setup_manager.category.CoreStation Setup Manager": {
+    "message": "CoreStation Setup Manager",
+    "description": "The label for category 'CoreStation Setup Manager' in sidebar 'corestation_setup_manager'"
+  },
+  "sidebar.xpassq2.category.XPass Q2": {
+    "message": "XPass Q2",
+    "description": "The label for category 'XPass Q2' in sidebar 'xpassq2'"
+  }
+}

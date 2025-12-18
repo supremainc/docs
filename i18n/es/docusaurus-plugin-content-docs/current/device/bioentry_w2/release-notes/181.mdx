@@ -1,0 +1,44 @@
+---
+id: 181
+title: Firmware Version 1.8.1
+---
+
+# Firmware Version 1.8.1 (Build No. 1.8.1_240508)
+
+Release<Separator/>2024-05-09
+
+:::caution
+
+Devices with the new SE processor cannot downgrade to a lower version after upgrading the firmware to v1.7.1 or later. Devices with existing SE processor can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Improved to get user update succeeded event log using the GetLogWithFilter function in the SDK.
+
+1. Supports new device.
+
+    - BioStation 2a (BS2A-ODPB, BS2A-OAPWB)
+
+1. Improved to allow the use of **Secure Tamper** regardless of the **Device Hashkey Management** option.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. When authenticating an iClass AoC card and a fingerprint simultaneously, the device restarts abnormally. <Badge>1.0.0</Badge>
+
+1. The user ID stored as a 32-character string is truncated to only 31 characters in a specific event log. <Badge>1.0.0</Badge>
+
+1. When a user with a 32-character user ID authenticates to the device while the device is not connected to the server, the authentication event log is not updated in BioStar 2 even after the device is reconnected to the server. <Badge>1.0.0</Badge>
+
+1. After a firmware upgrade, authentication failure occurs with the previously used cards. <Badge>1.8.0</Badge>
+
+</BugLists>

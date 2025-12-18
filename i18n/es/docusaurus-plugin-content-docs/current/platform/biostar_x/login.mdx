@@ -1,0 +1,56 @@
+---
+id: login
+title: Cómo iniciar sesión
+description: Accede a **BioStar X** a través de un navegador web.
+keywords:
+  - Iniciar sesión
+  - navegador web
+---
+
+Si completaste la instalación de **BioStar X** mediante el paquete de instalación, accede desde un navegador web para comprobar que funciona correctamente. **BioStar X** ofrece un servicio basado en la web que permite el acceso en cualquier momento y lugar.
+
+## Iniciar sesión desde un navegador web {#log-in-from-a-web-browser}
+
+1. Haz clic en <Start /> → **BioStar X** → **BioStar X** en Windows.
+
+2. Conéctate a **BioStar X** a través de un navegador web.
+
+   <Image src="/img/common/biostarx-login-web-browser-ip-address.png" alone />
+
+   :::note
+
+   * Verifica la dirección de acceso de **BioStar X** en la barra de direcciones del navegador web.
+
+   * Si instalaste **BioStar X** en otra PC, ingresa la dirección IP de esa PC. p. ej. `https://192.168.0.1`
+
+   * No uses "localhost" como la dirección de acceso de **BioStar X**.
+
+   * **BioStar X** procesa todas las solicitudes a través del Unified Gateway. Por lo tanto, el acceso web y las llamadas de API se realizan a través del puerto de Unified Gateway (443 por defecto).
+
+   :::
+
+3. Cuando aparezca la pantalla de inicio de sesión, inicia sesión con la cuenta de administrador.
+
+   <Image src="/img/biostarx-login.png" />
+
+   :::note
+
+   * El ID de administrador es **admin**.
+
+   * Si ves la advertencia **Not Secure** en la barra de direcciones del navegador web, debes instalar el certificado HTTPS. Para más información sobre la instalación del certificado, consulta [lo siguiente](settings-server-https).
+
+   :::
+
+Después de iniciar sesión, aparece la pantalla <Cmd sid="shell.header.launcher" />.
+
+<Image src="/img/biostarx-main-launcher.png" alone />
+
+:::info
+
+* Se recomienda utilizar Chrome versión 100 o superior.
+
+* Consulta la dirección IP externa de la PC donde está instalado **BioStar X** visitando [este enlace](https://whatismyipaddress.com/).
+
+* **BioStar X** utiliza el **puerto 443** por defecto. Si existe un programa que use el **puerto 443**, ciérralo y vuelve a intentar la conexión. Si no puedes cerrar el programa, ejecuta **BioStar X Service Manager** para cambiar el número de puerto. Para más información, consulta [lo siguiente](change-port).
+
+:::

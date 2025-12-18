@@ -1,0 +1,130 @@
+---
+id: settings-elevators-add
+title: Registrar ascensor
+description: Esta guía describe cómo registrar un ascensor para el control de pisos.
+keywords:
+  - Elevador
+  - Control de pisos
+---
+
+Este documento ofrece orientación sobre cómo registrar y configurar un ascensor. El ascensor se utiliza para el control de pisos y forma parte del sistema de control de acceso junto con la puerta de entrada. Registrar el ascensor permite controlar los permisos de acceso para pisos específicos.
+
+## Antes de comenzar {#before-start}
+
+* Configure el nivel de acceso, el grupo de acceso y el nivel de piso para el control de acceso antes de registrar el ascensor. Para obtener más información, consulte [lo siguiente](settings-access-control).
+
+* Registre el dispositivo antes de registrar el ascensor. Para obtener más información sobre el registro de dispositivos, consulte lo siguiente.
+
+  * <DocLink docId="platform/biostar_x/settings-adding-devices" />
+
+  * <DocLink docId="platform/biostar_x/settings-adding-wiegand" />
+
+  * <DocLink docId="platform/biostar_x/settings-adding-slave-device" />
+
+## Registrar ascensor {#adding-elevator}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.elevator.root" /> en la barra lateral izquierda.
+
+3. Cuando aparezca la pantalla <Cmd sid="elevator.new.title" product="2" />, configure cada elemento de la sección en orden.
+
+   * <Cmd sid="common.information" product="2" />: Configure la información básica del ascensor. Para obtener más información, consulte [lo siguiente](#info).
+
+   * <Cmd sid="common.detail" product="2" />: Configure la información detallada del ascensor. Para obtener más información, consulte [lo siguiente](#details).
+
+   * <Cmd sid="common.option" product="2" />: Configure opciones adicionales. Para obtener más información, consulte [lo siguiente](#option).
+
+   * <Cmd sid="door.alarm" product="2" />: Configure la alarma para activar o bloquear el uso del dispositivo cuando ocurra una violación de anti-passback. Para obtener más información, consulte [lo siguiente](#alarm).
+
+4. Una vez completadas todas las configuraciones, haga clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla.
+
+### Configurar información básica {#info}
+
+En la sección <Cmd sid="common.information" product="2" />, ingrese o cambie el nombre, el grupo y la descripción del ascensor.
+
+* <Cmd sid="common.name" product="2" />: Ingrese el nombre del ascensor. Es conveniente ingresar un nombre que especifique la ubicación del ascensor para facilitar la gestión.
+
+* <Cmd sid="common.group" product="2" />: Seleccione el grupo del ascensor.
+
+* <Cmd sid="common.description" product="2" />: Ingrese una descripción breve del ascensor.
+
+:::info
+
+* El nombre del ascensor puede tener hasta 48 caracteres.
+
+* Para obtener información sobre el registro de grupos de ascensores, consulte [lo siguiente](settings-manage-elevators-group).
+
+:::
+
+### Configurar información detallada {#details}
+
+En la sección <Cmd sid="common.detail" product="2" />, configure la información detallada del ascensor, como los dispositivos conectados al ascensor y la información de los pisos. Configure la información de dispositivos y pisos para conectarlos al ascensor.
+
+* <Cmd sid="elevator.list.column.controller" product="2" />: Seleccione el dispositivo que controlará los permisos de acceso del ascensor.
+
+* <Cmd sid="elevator.list.column.reader" product="2" />: Seleccione el dispositivo que se utilizará para la autenticación.
+
+* <Cmd sid="elevator.list.column.module" product="2" />: Seleccione el dispositivo que controlará el relé del botón del ascensor.
+
+* <Cmd sid="elevator.floor.totalFloor" product="2" />: Ingrese el número total de pisos a los que el ascensor puede acceder. Ingrese hasta 192 pisos.
+
+* <Cmd sid="user.list.csvImport.autoMapping" product="2" />: Seleccione si desea usar el mapeo automático. El mapeo automático asigna números de relé de forma secuencial.
+
+* <Cmd sid="elevator.floor.setting.title" product="2" />: Configure los nombres de los pisos y los números de relé que los controlarán.
+
+:::info
+
+* Solo se pueden seleccionar dispositivos maestro para la opción <Cmd sid="elevator.list.column.controller" product="2" />.
+
+* Para la opción <Cmd sid="elevator.list.column.reader" product="2" />, solo se pueden seleccionar dispositivos maestro, dispositivos esclavo y dispositivos Wiegand, con un máximo de 4 selecciones permitidas.
+
+  El modelo OM-120 no se puede configurar como lector.
+
+* Para la opción <Cmd sid="elevator.list.column.module" product="2" />, solo se pueden seleccionar los modelos OM-120, DM-20, IM-120 y SIO2.
+
+:::
+
+### Configurar opciones adicionales {#option}
+
+En la sección <Cmd sid="common.option" product="2" />, configure las opciones adicionales del ascensor.
+
+* <Cmd sid="elevator.option.relayTime" product="2" />: Configure las opciones para el relé del botón de piso.
+
+  * <Cmd sid="door.openTime" product="2" />: Configure el tiempo durante el cual el botón de piso permanece activo después de completar la autenticación. Después de este tiempo, el relé no activará el botón de piso.
+
+* <Cmd sid="door.dualAuthentication" product="2" />: Configure para que dos personas (un usuario general y un administrador) deban autenticar sus credenciales para activar el botón de piso.
+
+  * <Cmd sid="common.device" product="2" />: Selecciona el dispositivo que se usará para la autenticación dual. Para no usar autenticación dual, seleccione <Cmd sid="common.none" product="2" />.
+
+  * <Cmd sid="door.schedule" product="2" />: Selecciona el horario para usar la autenticación dual. Si el horario deseado no está disponible, haz clic en <Cmd sid="button.plusAddSchedule" product="2" /> para agregar uno.
+
+  * <Cmd sid="door.dualAuthentication.approvalType" product="2" />: Define el orden de la autenticación del administrador.
+
+    * <Cmd sid="door.dualAuthentication.approvalType.none" product="2" />: Se requieren dos autenticaciones sin importar el grupo de autenticación.
+
+    * <Cmd sid="door.dualAuthentication.approvalType.last" product="2" />: El usuario general debe autenticarse primero, seguido de un usuario autenticado incluido en el grupo de autenticación establecido.
+
+  * <Cmd sid="door.approvalGroup" product="2" />: Define el grupo al que pertenece el administrador. Esta opción está disponible cuando <Cmd sid="door.dualAuthentication.approvalType" product="2" /> se establece en <Cmd sid="door.dualAuthentication.approvalType.last" product="2" />.
+
+  * <Cmd sid="door.authenticationTimeout" product="2" />: Define el tiempo de espera entre la primera y la segunda autenticación. Si la segunda autenticación no se completa dentro del tiempo establecido, el botón de piso no se activará.
+
+  :::info
+
+  * Modifique los ajustes en el siguiente menú para cambiar la autenticación dual del dispositivo configurado para los ajustes de límite de ocupación. <Cmd sid="shell.header.setting" /> → <Cmd sid="setting.menu.advancedAc.root" /> → <Cmd sid="zone.occupancy.title" product="2" />
+
+    Para obtener más información sobre la configuración de <Cmd sid="zone.occupancy.title" product="2" />, consulta [lo siguiente](settings-advanced-ac).
+
+  * Para obtener más información sobre la configuración de horarios, consulta [lo siguiente](settings-schedule).
+
+  :::
+
+* <Cmd sid="device.info.wiegandTamper" product="2" />: Configure el puerto para emitir la señal de sabotaje.
+
+### Configurar alarmas {#alarm}
+
+En la sección <Cmd sid="door.alarm" product="2" />, configure las acciones a realizar cuando se detecten entradas de sabotaje o señales de entrada independientes.
+
+* <Cmd sid="triggerAction.trigger" product="2" />: Configure la detección de entradas de sabotaje o señales de entrada independientes.
+
+* <Cmd sid="triggerAction.action" product="2" />: Configure las acciones a realizar según las condiciones establecidas. Active todos los botones de piso del ascensor u emita señales específicas.

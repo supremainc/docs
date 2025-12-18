@@ -1,0 +1,160 @@
+---
+id: settings-map-manage-area
+title: Configurar área},{
+description: Completa la configuración de pisos e instalaciones para definir el área. Verifica las áreas seguras en el mapa.
+keywords:
+  - Mapa
+  - Zona
+  - Planta
+  - Instalación
+---
+
+Completa la configuración de pisos e instalaciones para definir el área. Verifica las áreas seguras en el mapa. La configuración de zonas permite acceder y supervisar las instalaciones y los pisos de la zona correspondiente en la página <Cmd sid="shell.header.arena" />.
+
+<Image src="/img/monitoring-map-open-map.png" />
+
+:::info
+
+* Registra pisos e instalaciones antes de configurar las zonas. Para obtener más información sobre cómo registrar pisos e instalaciones, consulta lo siguiente:
+
+  * <DocLink docId="platform/biostar_x/settings-map-manage-floor" />
+
+  * <DocLink docId="platform/biostar_x/settings-map-manage-facility" />
+
+* Para obtener más información sobre el monitoreo de mapas, consulta [lo siguiente](monitoring-map).
+
+* Las opciones de configuración de mapas y la función de monitoreo de mapas pueden utilizarse mediante opciones adicionales con una licencia **avanzada** o superior. Para más información sobre la política de licencias, consulta [lo siguiente](licensing#features-add-ons).
+
+:::
+
+## Añadir zona {#add-area}
+
+Configura y administra las zonas de las áreas de seguridad que gestionas actualmente mediante el mapa.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.map.root" /> → <Cmd sid="setting.menu.map.area" /> en la barra lateral izquierda.
+
+3. Haz clic en <Cmd sid="setting.area.table.action.newArea" /> en la parte superior derecha de la pantalla de lista de áreas.
+
+   <Image src="/img/biostarx-settings-map-add-area.png" />
+
+4. Ingresa el nombre y la descripción del área que deseas añadir en la sección <Cmd sid="setting.area.information.section.title" /> de la pantalla <Cmd sid="setting.area.page.title" />.
+
+5. Define la ubicación de la zona que vas a añadir en el mapa, en la sección <Cmd sid="setting.area.configuration.section.title" />.
+
+6. Haz clic derecho en el mapa y selecciona <Cmd sid="setting.area.label.setArea" />.
+
+   <Image src="/img/biostarx-settings-map-area-add-01.png" />
+
+7. Define la zona con la forma deseada. Haz clic para comenzar a dibujar y arrastra para definir la zona.
+
+   <Image src="/img/biostarx-settings-map-area-drawing.gif" alone />
+
+   :::note
+
+   Para restablecer el área, debes eliminar la zona configurada. Para eliminar el área, haz clic en <IcFremove />.
+
+   :::
+
+8. Para añadir instalaciones al área configurada, haz clic derecho y selecciona <Cmd sid="map.menu.add.facility" />.
+
+   <Image src="/img/biostarx-settings-map-area-add-02.png" />
+
+   :::note
+
+   Al añadir una zona, debes configurar al menos una instalación, entrada o cámara.
+
+   * Para añadir una entrada, haz clic derecho y selecciona <Cmd sid="setting.area.label.addDoor" />.
+
+   * Para añadir una cámara, haz clic derecho y selecciona <Cmd sid="setting.area.label.addCamera" />.
+
+   :::
+
+9. Cuando aparezca la ventana <Cmd sid="setting.area.label.addFacility" />, selecciona la instalación que deseas añadir y haz clic en <Cmd sid="common.apply" />.
+
+   <Image src="/img/biostarx-settings-map-area-add-03.png" />
+
+   :::note
+
+   Al añadir una entrada o una cámara, también aparecerá la ventana <Cmd sid="setting.area.label.addDoor" /> o <Cmd sid="setting.area.label.addCamera" />. Selecciona el elemento que quieres añadir y haz clic en <Cmd sid="common.apply" />.
+
+   :::
+
+10. Una vez completada la configuración del área, haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior derecha de la pantalla.
+
+:::info
+
+* Busca la ubicación deseada usando el campo de entrada en la parte superior izquierda del mapa. Haz clic en <IcCurP /> para volver a la ubicación actual.
+
+  <Image src="/img/biostarx-settings-map-area-find-point.png" />
+
+* Al añadir una zona en el mapa, solo puede establecerse como un único polígono. Al definir una zona, asegúrate de que los puntos de inicio y fin sean los mismos. Una vez configurada, la forma de la zona no se puede cambiar. Para modificar la zona, debes eliminarla y volver a añadirla.
+
+* Las posiciones de las instalaciones, entradas y cámaras añadidas pueden cambiarse mediante arrastrar y soltar en el mapa.
+
+:::
+
+## Editar zona {#edit-area}
+
+Elimina y reconfigura zonas existentes o añade o elimina instalaciones, entradas y cámaras.
+
+### Restablecer zona
+
+Para restablecer una zona en el mapa, debes eliminar la zona existente y volver a añadirla.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.map.root" /> → <Cmd sid="setting.menu.map.area" /> en la barra lateral izquierda.
+
+3. Selecciona la zona que deseas restablecer de la lista de zonas.
+
+4. En el mapa, en la sección <Cmd sid="setting.area.configuration.section.title" />, haz clic en <IcFremove /> en la esquina superior izquierda del área ya creada.
+
+   <Image src="/img/biostarx-settings-map-area-reset.png" alone />
+
+5. Haz clic derecho en el mapa y selecciona <Cmd sid="setting.area.label.setArea" /> en el menú emergente.
+
+6. Para definir el área como desees y guardar, haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior derecha de la pantalla.
+
+### Eliminar instalación/entrada/cámara
+
+Haz clic en la instalación, entrada o cámara que quieras eliminar en el mapa. Aparecerá el ícono <IcFremove />. Haz clic en el ícono para eliminar la instalación seleccionada.
+
+<Image src="/img/biostarx-settings-map-area-x-btn.png" alone />
+
+### Definir cobertura de la cámara
+
+Define el área de cobertura de la cámara en el mapa. Haz clic derecho en el ícono donde está ubicada la cámara y selecciona <Cmd sid="setting.area.button.addCoverage" />.
+
+<Image src="/img/biostarx-settings-map-area-camera-setting.png" />
+
+* Para cambiar el rango de disparo, haz clic y arrastra el rango de la zona verde en la dirección deseada.
+
+  <Image src="/img/biostarx-settings-map-area-camera-rot.png" alone />
+
+* Para ajustar el área de cobertura, sujeta el borde del rango y arrastra para redimensionar.
+
+  <Image src="/img/biostarx-settings-map-area-camera-adjust.png" alone />
+
+* Para eliminar el área de cobertura, haz clic en el ícono <IcFremove />.
+
+:::caution
+
+Los ajustes realizados por el usuario son solo funciones proporcionadas para la comodidad de la gestión de seguridad y no reflejan el rango de captura real de la cámara.
+
+:::
+
+## Eliminar zona
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.map.root" /> → <Cmd sid="setting.menu.map.area" /> en la barra lateral izquierda.
+
+3. Marca la casilla de la zona que deseas eliminar en la lista de zonas.
+
+   <Image src="/img/biostarx-settings-map-area-remove-item.png" />
+
+4. Haz clic en <Cmd sid="common.delete" /> en la parte superior derecha de la pantalla.
+
+5. Cuando aparezca la ventana de mensaje de confirmación, haz clic en <Cmd sid="common.dialog.yes" />.

@@ -1,0 +1,217 @@
+---
+id: settings-door-add
+title: Registrar puerta
+description: Configure la puerta para el control de acceso. Seleccione el dispositivo de entrada/salida según la puerta o configure anti-passback para mejorar la seguridad y establezca alarmas.
+keywords:
+  - Puerta
+  - Seguridad
+  - Control de acceso
+---
+
+Esta guía describe cómo registrar y configurar puertas. Conecte dispositivos de entrada y salida para cada puerta y configure funciones de seguridad como anti-passback y autenticación dual para establecer un entorno de gestión de acceso sistemático. Además, configure alarmas basadas en el estado de la puerta para prevenir incidentes de seguridad con anticipación.
+
+## Antes de comenzar {#before-start}
+
+* Configure los niveles de acceso, los grupos de acceso y los niveles de piso para el control de acceso antes de registrar puertas. Para obtener más información, consulte [lo siguiente](settings-access-control).
+
+* Registre los dispositivos antes de registrar puertas. Para obtener más información sobre el registro de dispositivos, consulte lo siguiente.
+
+  * <DocLink docId="platform/biostar_x/settings-adding-devices" />
+
+  * <DocLink docId="platform/biostar_x/settings-adding-wiegand" />
+
+  * <DocLink docId="platform/biostar_x/settings-adding-slave-device" />
+
+## Registrar puerta {#adding-door}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.door.root" /> en la barra lateral izquierda.
+
+3. Haga clic en <Cmd sid="button.func.addDoor" product="2" />.
+
+   <Image src="/img/biostarx-setting-door-adding.png" />
+
+4. Cuando aparezca la pantalla <Cmd sid="door.addNewDoor" product="2" />, configure cada elemento de la sección en orden.
+
+   * <Cmd sid="common.information" product="2" />: Configure la información básica de la puerta. Para obtener más información, consulte [lo siguiente](#info).
+
+   * <Cmd sid="device.info.configuration" product="2" />: Configure los dispositivos conectados a la puerta, los botones de entrada y salida y los sensores de puerta. Para obtener más información, consulte [lo siguiente](#configdoor).
+
+   * <Cmd sid="common.option" product="2" />: Configure opciones adicionales. Para obtener más información, consulte [lo siguiente](#option).
+
+   * <Cmd sid="door.antiPassBack" product="2" />: Configure la función anti-passback para gestionar el historial de acceso y mejorar la seguridad. Para obtener más información, consulte [lo siguiente](#antipassback).
+
+   * <Cmd sid="timedAPB.title" product="2" />: Configure el tiempo de inicialización para la función anti-passback. Para obtener más información, consulte [lo siguiente](#timed-apb).
+
+   * <Cmd sid="door.alarm" product="2" />: Configure la alarma para activar o bloquear el uso del dispositivo cuando ocurra una violación de anti-passback. Para obtener más información, consulte [lo siguiente](#alarm).
+
+5. Una vez completadas todas las configuraciones, haga clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla.
+
+### Configurar información básica {#info}
+
+En la sección <Cmd sid="common.information" product="2" />, ingrese o cambie el nombre, el grupo y la descripción de la puerta.
+
+<Image src="/img/biostarx-setting-door-adding-info.png" />
+
+* <Cmd sid="common.name" product="2" />: Ingrese el nombre de la puerta. Ingrese un nombre que permita una gestión conveniente.
+
+* <Cmd sid="common.group" product="2" />: Seleccione el grupo de la puerta.
+
+* <Cmd sid="common.description" product="2" />: Ingrese una descripción breve de la puerta.
+
+:::info
+
+* El nombre de la puerta puede tener hasta 48 caracteres.
+
+* Para obtener más información sobre el registro de grupos de puertas, consulte [lo siguiente](settings-manage-door-group).
+
+:::
+
+### Configurar la puerta {#configdoor}
+
+En la sección <Cmd sid="device.info.configuration" product="2" />, configure los dispositivos conectados a la puerta, los botones de salida y los sensores de puerta.
+
+<Image src="/img/biostarx-setting-door-adding-configuration.png" />
+
+* <Cmd sid="door.entryDevice" product="2" />: Seleccione el dispositivo que se utilizará para la entrada. Si el dispositivo no está en la lista, regístrelo primero.
+
+* <Cmd sid="common.doorRelay" product="2" />: Elija el [relevador](../../reference/glossary#relay) que funcionará como mecanismo de cierre de la puerta.
+
+* <Cmd sid="door.exitButton" product="2" />: Seleccione el puerto que se utilizará como botón de salida.
+
+  * <Cmd sid="door.switchType" product="2" />: Se puede configurar en <Cmd>N/C</Cmd> ([Normalmente Cerrado](../../reference/glossary#nc)) o <Cmd>N/O</Cmd> ([Normalmente Abierto](../../reference/glossary#no)).
+
+  * <Cmd sid="door.simulateUnlockSupported" product="2" />: Configure para que una entrada del botón de salida genere un registro de solicitud de apertura de puerta sin activar el relevador.
+
+* <Cmd sid="door.doorSensor" product="2" />: Elija el puerto para confirmar el estado de la puerta. Si se establece en <Cmd sid="common.none" product="2" />, se deshabilitará el uso de la sección <Cmd sid="door.alarm" product="2" />.
+
+  * <Cmd sid="door.switchType" product="2" />: Se puede configurar en <Cmd>N/C</Cmd> ([Normalmente Cerrado](../../reference/glossary#nc)) o <Cmd>N/O</Cmd> ([Normalmente Abierto](../../reference/glossary#no)).
+
+  * <Cmd sid="door.apbUseDoorSensor" product="2" />: Configure si se utilizará el sensor de puerta al usar la opción <Cmd sid="zone.apbUseDoorSensor" product="2" />.
+
+  :::note
+
+  Si <Cmd sid="timedAPB.title" product="2" /> está habilitado, no se podrá usar la opción <Cmd sid="door.apbUseDoorSensor" product="2" />.
+
+  :::
+
+* <Cmd sid="door.exitDevice" product="2" />: Seleccione el dispositivo que se utilizará para la salida.
+
+:::info
+
+* Si seleccionó una cerradura de puerta inalámbrica para <Cmd sid="door.entryDevice" product="2" />, también debe seleccionar una cerradura de puerta inalámbrica para <Cmd sid="door.exitDevice" product="2" />.
+
+* Si seleccionó una cerradura de puerta inalámbrica para <Cmd sid="door.entryDevice" product="2" />, no podrá usar la opción <Cmd sid="common.doorRelay" product="2" />.
+
+* Los modelos CoreStation no se pueden usar como dispositivos de entrada ni de salida.
+
+:::
+
+### Configurar opciones adicionales {#option}
+
+En la sección <Cmd sid="common.option" product="2" />, configure opciones adicionales para la puerta.
+
+<Image src="/img/biostarx-setting-door-adding-aditional-option.png" />
+
+* <Cmd sid="common.open" product="2" />: Configure las opciones de apertura de la puerta.
+
+  * <Cmd sid="door.openTime" product="2" />: Configure la duración durante la cual la puerta permanece abierta después de completar la autenticación. La puerta se bloqueará automáticamente después de este tiempo.
+
+  * <Cmd sid="door.openOnce" product="2" />: La puerta se bloqueará cuando el sensor detecte que se ha cerrado. Si se establece en <Cmd sid="door.openOnceOn" product="2" />, no se podrá usar la opción <Cmd sid="door.option.openCondition.useAutoDoor" product="2" />.
+
+  * <Cmd sid="door.option.openCondition.useAutoDoor" product="2" />: Si se usa una puerta automática, el relevador puede operar independientemente del estado del sensor de puerta. Si se establece en <Cmd sid="door.openOnceOn" product="2" />, no se podrá usar la opción <Cmd sid="door.openOnce" product="2" />.
+
+  :::info
+
+  El valor de <Cmd sid="door.openTime" product="2" /> puede variar según el tipo de dispositivo de cierre de puerta que se use.
+
+  :::
+
+* <Cmd sid="door.dualAuthentication" product="2" />: Configura para requerir que dos personas (un usuario regular y un administrador) autentiquen credenciales para abrir la puerta.
+
+  * <Cmd sid="common.device" product="2" />: Selecciona el dispositivo que se usará para la autenticación dual. <Cmd sid="common.device" product="2" />: Selecciona el dispositivo para la autenticación dual.
+
+  * <Cmd sid="door.schedule" product="2" />: Selecciona el horario para usar la autenticación dual. Si el horario deseado no está disponible, haz clic en <Cmd sid="button.plusAddSchedule" product="2" /> para agregar uno.
+
+  * <Cmd sid="door.dualAuthentication.approvalType" product="2" />: Define el orden de la autenticación del administrador.
+
+    * <Cmd sid="door.dualAuthentication.approvalType.none" product="2" />: Se requieren dos autenticaciones sin importar el grupo de autenticación.
+
+    * <Cmd sid="door.dualAuthentication.approvalType.last" product="2" />: El usuario general debe autenticarse primero, seguido de un usuario autenticado incluido en el grupo de autenticación establecido.
+
+  * <Cmd sid="door.approvalGroup" product="2" />: Define el grupo al que pertenece el administrador. Esta opción está disponible cuando <Cmd sid="door.dualAuthentication.approvalType" product="2" /> se establece en <Cmd sid="door.dualAuthentication.approvalType.last" product="2" />.
+
+  * <Cmd sid="door.authenticationTimeout" product="2" />: Define el tiempo de espera entre la primera y la segunda autenticación. Si la segunda autenticación no se completa dentro del tiempo establecido, la puerta no se abrirá.
+
+  :::info
+
+  * Modifica la configuración en el siguiente menú para cambiar la autenticación dual del dispositivo configurado con el límite de ocupantes. <Cmd sid="shell.header.setting" /> → <Cmd sid="setting.menu.advancedAc.root" /> → <Cmd sid="zone.occupancy.title" product="2" />
+
+    Para obtener más información sobre la configuración de <Cmd sid="zone.occupancy.title" product="2" />, consulta [lo siguiente](settings-advanced-ac).
+
+  * Para obtener más información sobre la configuración de horarios, consulta [lo siguiente](settings-schedule).
+
+  :::
+
+* <Cmd sid="door.antiTailSensor" product="2" />: Configura para detectar tailgating cuando una persona no autorizada sigue a una autorizada para entrar.
+
+  * <Cmd sid="common.sensor" product="2" />: Selecciona un sensor para detectar tailgating.
+
+### Configurar anti-passback {#antipassback}
+
+[Anti-passback](../../reference/glossary#apb) se usa para gestionar el historial de acceso y mejorar la seguridad. Previene situaciones en las que un usuario entrega su tarjeta de entrada a otro después de ingresar y detiene a personas externas que siguen a usuarios con privilegios de acceso.
+
+Consulta a continuación para completar la configuración en la sección <Cmd sid="door.antiPassBack" product="2" />.
+
+* <Cmd sid="common.type" product="2" />: Elige el tipo de anti-passback.
+
+  * <Cmd sid="door.dualAuthentication.approvalType.none" product="2" />: No utiliza la función de anti-passback.
+
+  * <Cmd sid="door.apbType.soft" product="2" />: Durante una violación de anti-passback, se permite la entrada pero se activa una alarma o se crea un registro en **BioStar X**.
+
+  * <Cmd sid="door.apbType.hard" product="2" />: Durante una violación de anti-passback, la entrada no está permitida y se activará una alarma o se creará un registro en **BioStar X**.
+
+* <Cmd sid="door.resetTime" product="2" />: Define el tiempo hasta que se reinicie la función de anti-passback. Admite hasta 7 días (10080 minutos); si se establece en 0, no se reinicia.
+
+:::info
+
+* Funciona únicamente cuando se instalan dispositivos de entrada y salida; si en la sección <Cmd sid="device.info.configuration" product="2" /> la opción <Cmd sid="door.exitDevice" product="2" /> se establece en <Cmd sid="common.none" product="2" />, quedará inutilizable. Para el método de configuración del dispositivo de salida, consulta [lo siguiente](#configdoor).
+
+* La sección <Cmd sid="door.antiPassBack" product="2" /> requiere un dispositivo maestro configurado vía RS-485 y un dispositivo esclavo.
+
+* Si se habilita la sección <Cmd sid="timedAPB.title" product="2" />, <Cmd sid="door.antiPassBack" product="2" /> no estará disponible.
+
+:::
+
+### Configurar anti-passback temporizado {#timed-apb}
+
+Cuando un usuario intenta volver a autenticarse en el mismo dispositivo después de la autenticación de ingreso, la función de anti-passback impide la reautenticación inmediata. La sección <Cmd sid="timedAPB.title" product="2" /> define el tiempo de inicialización de la función de anti-passback para limitar de forma efectiva las entradas frecuentes de los usuarios.
+
+<Image src="/img/biostarx-setting-door-adding-time-litmit-apb.png" />
+
+* <Cmd sid="timedAPB.field" product="2" />: Selecciona el dispositivo que usará la función de anti-passback temporizado.
+
+* <Cmd sid="door.resetTime" product="2" />: Define el tiempo hasta que se reinicie la función de anti-passback. La unidad de entrada es minutos (min) y el valor predeterminado es 10 minutos. Admite un máximo de 60 minutos.
+
+* <Cmd sid="zone.apb.bypassGroup" product="2" />: Selecciona los grupos de acceso que siempre pueden pasar sin estar sujetos al anti-passback temporizado.
+
+### Configurar alarmas {#alarm}
+
+En la sección <Cmd sid="door.alarm" product="2" />, configura que se active una alarma o se bloquee el uso del dispositivo cuando la puerta se abra por la fuerza, quede abierta o ocurra una violación de anti-passback. Haz clic en <Cmd sid="button.addplus" product="2" /> para agregar una alarma al elemento.
+
+<Image src="/img/biostarx-setting-door-adding-alarm.png" />
+
+* <Cmd sid="door.heldOpen" product="2" />: Configura las acciones de alarma cuando la puerta quede abierta.
+
+* <Cmd sid="door.heldOpenTime" product="2" />: Define el tiempo para que suene la alarma cuando la puerta haya estado abierta durante un periodo prolongado. Determina el tiempo máximo que la puerta puede permanecer abierta.
+
+* <Cmd sid="door.forcedOpen" product="2" />: Configura las acciones de alarma cuando la puerta se abra por la fuerza.
+
+* <Cmd sid="door.antiPassBack" product="2" /> / <Cmd sid="timedAPB.title" product="2" />: Configura las acciones de alarma para violaciones de anti-passback o anti-passback temporizado.
+
+:::info
+
+La opción <Cmd sid="door.antiPassBack" product="2" /> está disponible únicamente si el dispositivo de salida está registrado.
+
+:::

@@ -1,0 +1,94 @@
+---
+id: settings-device-details-interphone
+title: Configuración del intercomunicador
+description: Esto proporciona orientación sobre la configuración de elementos detallados para el uso del intercomunicador.
+keywords:
+  - Dispositivo
+  - Intercomunicador IP
+---
+
+En la sección <Cmd sid="device.info.interphone" product="2" />, configure opciones detalladas para usar el intercomunicador.
+
+:::info
+
+* Esta función es compatible con BioStation 3, FaceStation 2 y BioStation A2.
+
+* Si el usuario ha realizado cambios, haga clic en <Cmd sid="button.apply" product="2" />. Los cambios no se aplicarán al dispositivo si no se guardan.
+
+:::
+
+## Configuración del intercomunicador {#ip-interphone-settings}
+
+Configure cada opción para registrar el dispositivo en el servidor SIP (Session Initiation Protocol).
+
+<Image src="/img/biostarx-setting-device-edit-ipinterphone.png" />
+
+* <Cmd sid="device.info.interphone" product="2" />: Para usar el dispositivo como intercomunicador, configúrelo en <Cmd sid="device.info.enabled" product="2" />.
+
+* <Cmd sid="device.intercom.ipAddr" product="2" />: Ingrese la dirección del servidor SIP.
+
+* <Cmd sid="device.intercom.port" product="2" />: Ingrese el puerto del servidor SIP. El valor predeterminado es 5060.
+
+* <Cmd sid="device.intercom.account.new" product="2" />: Ingrese el nombre de usuario de la cuenta SIP.
+
+* <Cmd sid="device.intercom.password.new" product="2" />: Ingrese la contraseña de la cuenta SIP.
+
+* <Cmd sid="device.intercom.authorization.id" product="2" />: Ingrese el ID de autorización de la cuenta SIP.
+
+* <Cmd sid="device.intercom.registration.duration" product="2" />: Ingrese la duración del registro en segundos. El dispositivo intenta registrarse en el servidor SIP cada vez que vence la duración del registro.
+
+* <Cmd sid="device.intercom.doorOpenButton" product="2" />: Especifique un botón para abrir la puerta de entrada durante una llamada.
+
+* <Cmd sid="device.intercom.transport" product="2" />: Elija el método de transporte SIP al configurar los ajustes del servidor SIP del intercomunicador.
+
+* <Cmd sid="device.intercom.outbound.proxy.server" product="2" />: Establézcalo en <Cmd sid="device.info.enabled" product="2" /> si utiliza servicios SIP a través de un servidor proxy de salida independiente.
+
+  * <Cmd sid="device.intercom.outbound.proxy.server.ipAddress" product="2" />: Ingrese la dirección del servidor proxy de salida.
+
+  * <Cmd sid="device.intercom.outbound.proxy.server.port" product="2" />: Ingrese el puerto del servidor proxy de salida.
+
+* <Cmd sid="device.intercom.resolution" product="2" />: Seleccione la resolución de la salida de video cuando use el intercomunicador. El valor predeterminado es <Cmd>360 x 640</Cmd>.
+
+* <Cmd sid="device.intercom.extension.display" product="2" />: Establézcalo en <Cmd sid="device.info.disable" product="2" /> para evitar que el dispositivo muestre el número de extensión. Si no se muestra el número de extensión, no podrá distinguir al destinatario en la pantalla de llamada.
+
+* <Cmd sid="device.intercom.extension" product="2" />: Puede registrar hasta 128 números de extensión. Para agregar o editar números de extensión, haga clic en el botón <Cmd sid="device.intercom.extension.editBtn" product="2" />. Para obtener más información, consulte [lo siguiente](#edit-extension).
+
+:::info
+
+* Las opciones <Cmd sid="device.intercom.account.new" product="2" /> y <Cmd sid="device.intercom.authorization.id" product="2" /> solo pueden incluir números, letras inglesas (distingue mayúsculas y minúsculas) y caracteres especiales.
+
+* La opción <Cmd sid="device.intercom.registration.duration" product="2" /> se puede configurar entre 60 y 600 segundos.
+
+* Las opciones <Cmd sid="device.intercom.transport" product="2" /> y <Cmd sid="device.intercom.resolution" product="2" /> son compatibles con el firmware versión 1.3.0 y posteriores de BioStation 3.
+
+* **Session Initiation Protocol** (SIP) es un protocolo de comunicación basado en protocolos de Internet para diversas comunicaciones multimedia, como VoIP y videoconferencias. El servidor SIP gestiona dichas comunicaciones y establece conexiones.
+
+:::
+
+## Editar números de extensión {#edit-extension}
+
+Orientación sobre las funciones proporcionadas en la ventana <Cmd sid="device.intercom.extension.popup.title" product="2" />.
+
+<Image src="/img/biostarx-setting-device-edit-ipinterphone-extension.png" />
+
+* <Cmd sid="device.intercom.extension.popup.sendToTop" product="2" />: Mueva el número de extensión seleccionado al principio de la lista.
+
+* <Cmd sid="device.intercom.extension.popup.csvImport" product="2" />: Importe un archivo CSV que contenga los números de extensión.
+
+* <Cmd sid="device.intercom.extension.popup.csvExport" product="2" />: Exporte los números de extensión guardados a un archivo CSV.
+
+* <Cmd sid="device.intercom.extension.popup.add" product="2" />: Agregue un número de extensión.
+
+* <Cmd sid="device.intercom.extension.popup.delete" product="2" />: Elimine un número de extensión.
+
+* <Cmd sid="device.intercom.list.reorder" product="2" />: Cambie el orden de los números de extensión arrastrándolos con el mouse.
+
+:::info
+
+* Los modelos FaceStation 2 y BioStation A2 pueden guardar hasta 16 números de extensión.
+
+* No puede importar un archivo CSV que contenga más números de extensión que el máximo permitido.
+
+* Los números de extensión solo pueden incluir números, letras inglesas (distingue mayúsculas y minúsculas) y caracteres especiales.
+
+:::

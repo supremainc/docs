@@ -1,0 +1,189 @@
+---
+id: getting-started
+title: Primeros pasos
+description: Proporciona procedimientos iniciales para empezar con el dispositivo.
+keywords:
+  - Componentes
+  - Nombre
+  - Función
+  - Cable
+  - Conector
+---
+
+Proporciona procedimientos iniciales para empezar con el dispositivo.
+
+## Componentes
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-device-bs3.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-wall-bracket-bs3.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-drilling-template-bs3.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-quick-guide.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-connection-cables-bs3.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>BioStation 3</Td>
+
+      <Td>Soporte de pared</Td>
+
+      <Td>Plantilla de perforación</Td>
+
+      <Td>Guía rápida</Td>
+
+      <Td>Cables de conexión</Td>
+    </Row>
+  </Tbody>
+
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-diode1.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-resistor.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-pvc-anchors2.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-fixing-screws2.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-bracket-fixing-screw.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Diodo</Td>
+
+      <Td>Resistencia de 120 Ω</Td>
+
+      <Td>Anclajes de PVC x2</Td>
+
+      <Td>Tornillos de fijación x2</Td>
+
+      <Td>Tornillo de fijación del soporte (en forma de estrella)</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## Nombre y función de cada parte
+
+<Image src="/img/device/name-function-each-part-bs3.png" className="none" width="60%" />
+
+* **Micrófono**: Transmite la voz del usuario cuando el interfono está conectado.
+
+  * Cubrir u obstruir el micrófono puede interferir con la transmisión de la voz.
+
+* **Cámara infrarroja**: Captura la imagen facial infrarroja.
+
+* **Cámara visual**: Captura una imagen facial real.
+
+* **Pantalla**: Proporciona una interfaz de usuario para la operación.
+
+* **Unidad de autenticación de tarjeta RF y tarjeta de acceso móvil**: parte para escanear una tarjeta RFID o una tarjeta de acceso móvil para la entrada.
+
+* **Indicador LED**: Indica el estado operativo del dispositivo mediante el color del LED.
+
+  * Verde: autenticación exitosa.
+
+  * Rojo: autenticación fallida.
+
+  * Azul: Operación normal.
+
+  * Azul/verde intermitente:
+
+    * Al configurar <Cmd sid="ui_012" product="dev" /> para su uso, no se puede obtener la dirección IP.
+
+    * Cuando está en modo <Cmd sid="ui_205" product="dev" />, la conexión con el dispositivo maestro se desconecta.
+
+  * Parpadeo rojo/morado: El dispositivo está bloqueado.
+
+  * Parpadeo amarillo: Esperando entrada.
+
+* **Altavoz**: Emite sonido.
+
+* **Ethernet**: Conecta el cable Ethernet.
+
+* **Entrada (5 pines)**: Conecta el cable de entrada.
+
+* **Puerto de expansión USB (5 pines)**: Conecta otros productos accesorios.
+
+* **Salida Wiegand (4 pines)**: Conecta el cable de salida Wiegand.
+
+* **Entrada Wiegand (4 pines)**: Conecta el cable de entrada Wiegand.
+
+* **RS-485 (4 pines)**: Conecta el cable RS-485.
+
+* **Relé (3 pines)**: Conecta el cable del relé.
+
+* **Alimentación (2 pines)**: Conecta el cable de alimentación.
+
+* **Ranura para memoria USB (tipo C)**: Conecta la memoria USB.
+
+{/* 케이블 및 커넥터 */}
+
+import CablesandConnectors from '../../common/_getting-started-cables-and-connectors.mdx'
+
+<CablesandConnectors />
+
+{/* 마스터 관리자 설정하기 */}
+
+import Masteradminsettings from '../../common/_device-master-admin-settings.mdx'
+
+<Masteradminsettings />
+
+{/* 올바른 얼굴 등록 및 인증 방법 */}
+
+import DocumentA from '../../common/_face-enrollment-authentication-method.mdx'
+
+<DocumentA name="60~100 cm" />
+
+## Nota sobre el uso de códigos QR y la licencia del dispositivo
+
+### Cómo escanear un código QR
+
+Emite un código QR a un usuario y úsalo como método de autenticación. Escanea correctamente el código QR siguiendo las instrucciones en la pantalla para aumentar la tasa de reconocimiento.
+
+<Image src="/img/device/qr-scanning-bs3.svg" className="none" alone />
+
+* Mantén la distancia entre la cámara del dispositivo y el código QR a 30~40 cm.
+
+* Coloca el código QR en el centro de la pantalla de escaneo del dispositivo.
+
+* Al autenticar con el código QR descargado en tu smartphone, ajusta el brillo de tu smartphone para que el dispositivo pueda leer el código QR con claridad.
+
+### Notas sobre la licencia del dispositivo
+
+* El uso de la autenticación mediante código QR requiere una licencia de dispositivo aparte. Contacta al lugar de compra para obtener una licencia de dispositivo.
+
+* El archivo de licencia del dispositivo está cifrado y no puede modificarse de forma arbitraria.
+
+* Las licencias de dispositivo se emiten según el ID del dispositivo. Si el ID del dispositivo se cambia de manera inusual, no se proporciona servicio de garantía para la licencia.

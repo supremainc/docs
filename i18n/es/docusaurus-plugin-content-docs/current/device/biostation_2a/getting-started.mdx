@@ -1,0 +1,197 @@
+---
+id: getting-started
+title: Primeros pasos
+description: Proporciona procedimientos iniciales para empezar con el dispositivo.
+keywords:
+  - Componentes
+  - Nombre
+  - Función
+  - Cable
+  - Conector
+---
+
+Proporciona procedimientos iniciales para empezar con el dispositivo.
+
+## Componentes
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-device-bs2a.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-wall-bracket-bs2a.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-drilling-template-bs2a.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-cable-cover-bs2a.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>BioStation 2a</Td>
+
+      <Td>Soporte de pared</Td>
+
+      <Td>Plantilla de perforación</Td>
+
+      <Td>Cubierta de cable</Td>
+    </Row>
+  </Tbody>
+
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-connection-cables-bs3.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-quick-guide.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-pvc-anchors4.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-fixing-screws4.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Cables de conexión</Td>
+
+      <Td>Guía rápida</Td>
+
+      <Td>Anclajes de PVC x4</Td>
+
+      <Td>Tornillos de fijación x4</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-bracket-fixing-screw.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-resistor.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-diode1.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Tornillo de fijación del soporte (en forma de estrella)</Td>
+
+      <Td>Resistencia de 120 Ω</Td>
+
+      <Td>Diodo</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## Nombre y función de cada parte
+
+<Image src="/img/device/name-function-each-part-bs2a.png" className="none" width="60%" />
+
+* **Pantalla**: Proporciona una interfaz de usuario para la operación.
+
+* **Botón Número/Menú/ESC**
+
+  * **0-9**: Ingresar números/caracteres, seleccionar menús
+
+  * <Image src="/img/common/ico-menu1.svg" ico alone />: Ingresar al menú
+
+  * **ESC**: Regresar a la pantalla anterior, cancelar ingreso
+
+* **Botón Función**: Se usa como tecla funcional de control de asistencia o para seleccionar submenú.
+
+* **Botón Dirección/OK**
+
+  * <IcUp />: Cambiar tipo de carácter, establecer inicio/fin de guardia
+
+  * <IcDown />: Cambiar tipo de carácter, seleccionar evento de asistencia para registro
+
+  * <IcFw />: Eliminar números/caracteres, autenticar con ID
+
+  * <IcBw />: Insertar símbolo, definir elemento, seleccionar código de operación
+
+  * **OK**: Seleccionar elemento/guardar ajuste, activar menú de teclas
+
+* **Indicador LED**: Indica el estado operativo del dispositivo mediante el color del LED.
+
+  * Verde: autenticación exitosa.
+
+  * Rojo: autenticación fallida.
+
+  * Azul: Operación normal.
+
+  * Azul/verde intermitente:
+
+    * Al configurar <Cmd sid="ui_012" product="dev" /> para su uso, no se puede obtener la dirección IP.
+
+    * Cuando está en modo <Cmd sid="ui_205" product="dev" />, la conexión con el dispositivo maestro se desconecta.
+
+  * Parpadeo rojo/morado: El dispositivo está bloqueado.
+
+  * Parpadeo amarillo: Esperando entrada.
+
+* **Unidad de reconocimiento de huella dactilar**: La parte que reconoce la huella dactilar para acceso.
+
+* **Unidad de autenticación de tarjeta RF y tarjeta de acceso móvil**: parte para escanear una tarjeta RFID o una tarjeta de acceso móvil para la entrada.
+
+* **Ranura para memoria USB (tipo C)**: Conecta la memoria USB.
+
+* **Altavoz**: Emite sonido.
+
+* **Entrada Wiegand (4 pines)**: Conecta el cable de entrada Wiegand.
+
+* **Salida Wiegand (4 pines)**: Conecta el cable de salida Wiegand.
+
+* **RS-485 (4 pines)**: Conecta el cable RS-485.
+
+* **Ethernet**: Conecta el cable Ethernet.
+
+* **Entrada (5 pines)**: Conecta el cable de entrada.
+
+* **Relé (3 pines)**: Conecta el cable del relé.
+
+* **Puerto de expansión USB (5 pines)**: Conecta otros productos accesorios.
+
+* **Alimentación (2 pines)**: Conecta el cable de alimentación.
+
+{/* 케이블 및 커넥터 */}
+
+import CablesandConnectors from '../../common/_getting-started-cables-and-connectors.mdx'
+
+<CablesandConnectors />
+
+{/* 마스터 관리자 설정하기 */}
+
+import Masteradminsettings from '../../common/_device-master-admin-settings.mdx'
+
+<Masteradminsettings />
+
+{/* ## 올바른 지문 입력 방법 */}
+
+import Enrollfingerprint from '../../common/_enroll-fingerprint.mdx'
+
+<Enrollfingerprint />

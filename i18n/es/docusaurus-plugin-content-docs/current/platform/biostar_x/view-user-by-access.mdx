@@ -1,0 +1,56 @@
+---
+id: view-user-by-access
+title: Administrar grupos de acceso
+description: Esta guía muestra cómo consultar usuarios por grupo de acceso y explorar la estructura de permisos de acceso.
+keywords:
+  - Usuario
+  - Permiso de acceso
+---
+
+Esta guía muestra cómo consultar y administrar usuarios basados en grupos de acceso. Usa <Cmd sid="team.tree.accessExplorer" /> para verificar los usuarios registrados por grupo de acceso y explorar la jerarquía de permisos de acceso mediante la estructura de árbol.
+
+:::info
+
+Configura la función de control de acceso para verificar las puertas o pisos que pertenecen a un grupo de acceso en <Cmd sid="team.tree.accessExplorer" />. Para obtener más información, consulte [lo siguiente](settings-access-control).
+
+:::
+
+## Consulta usuarios por grupo de acceso {#view-user-by-access}
+
+1. Haz clic en <Cmd sid="shell.header.user" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en la pestaña <Cmd sid="team.tree.accessExplorer" /> en el menú de la estructura de árbol.
+
+   <Image src="/img/biostarx-user-access-explorer.png" />
+
+3. Haz clic en el grupo de permisos de acceso deseado en <Cmd sid="team.user.tree.accessExplorerRootName" />.
+
+Puedes ver los usuarios que pertenecen al grupo de permisos de acceso seleccionado en la lista de usuarios.
+
+:::info
+
+Haz clic en <IcAdd /> o <IcMinus /> para expandir o contraer los niveles de acceso o de piso bajo el grupo de acceso.
+
+:::
+
+## Conoce la estructura de árbol {#learn-tree-view}
+
+El menú de la estructura de árbol se compone de la siguiente jerarquía.
+
+<Treeview />
+
+* El **grupo de acceso** es la capa superior que incluye niveles de acceso, niveles de piso, grupos de usuarios y usuarios. Puedes administrar los permisos de acceso a través del **grupo de acceso**. Para obtener más información sobre cómo crear grupos de acceso, consulta [lo siguiente](settings-access-control-manage-access-group).
+
+* El **nivel de acceso** define los horarios en los que los usuarios pueden ingresar y concede permiso para acceder a las puertas durante ese periodo. Para obtener más información sobre cómo crear niveles de acceso, consulta [lo siguiente](settings-access-control-manage-access-level).
+
+* Puedes gestionar los pisos a los que los usuarios pueden acceder mediante ascensores a través del **nivel de piso**. Para obtener más información sobre cómo crear niveles de piso, consulta [lo siguiente](settings-access-control-manage-floor-level).
+
+* El **horario** es una función que opera de forma eficaz el control de acceso y la gestión de asistencia mediante la configuración de horarios de acceso y festivos. Para obtener más información sobre cómo registrar horarios, consulta [lo siguiente](settings-schedule).
+
+* Puedes registrar ascensores y gestionar los pisos accesibles a través de ellos. Para obtener más información sobre la incorporación de ascensores, consulte [lo siguiente](settings-elevators-add).
+
+:::info
+
+La función de registro de ascensores está disponible como opción adicional para licencias **Advanced** y superiores. Para más información sobre la política de licencias, consulta [lo siguiente](licensing#features-add-ons).
+
+:::

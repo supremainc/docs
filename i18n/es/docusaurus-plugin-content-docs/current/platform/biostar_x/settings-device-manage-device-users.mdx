@@ -1,0 +1,46 @@
+---
+id: settings-device-manage-device-users
+title: Administrar usuarios registrados en el dispositivo
+description: Este documento ofrece orientación sobre cómo administrar los usuarios almacenados en el dispositivo.
+keywords:
+  - Dispositivo
+  - Usuario
+---
+
+Comprueba la cantidad de usuarios, huellas, rostros y tarjetas almacenados en el dispositivo. Compara la información de los usuarios no registrados en **BioStar X** con la información de los usuarios registrados y envíala o elimínala en el servidor de **BioStar X**.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.device.root" /> en la barra lateral izquierda.
+
+3. Selecciona el dispositivo en la lista <Cmd sid="menu.device.allDeviceGroups" product="2" /> y haz clic con el botón derecho.
+
+4. Haz clic en <Cmd sid="button.manageUsersInDevice" product="2" /> en el menú emergente.
+
+   <Image src="/img/biostarx-setting-device-manage-device-users.png" />
+
+Cuando aparezca la ventana <Cmd sid="device.menu.manageUsersInDevice" product="2" />, compara la información de usuario registrada en el dispositivo con la información de usuario registrada en **BioStar X**.
+
+<Image src="/img/biostarx-setting-device-manage-device-users-popup.png" />
+
+Consulta los valores que aparecen en la columna <Cmd sid="common.status" product="2" /> para decidir si eliminas la información de usuario del dispositivo o la envías al servidor de **BioStar X**. Los valores de la columna <Cmd sid="common.status" product="2" /> son los siguientes:
+
+* <Cmd sid="user.syncStatus.same" product="2" />: Usuario con la misma información registrada en el servidor de **BioStar X**
+
+* <Cmd sid="user.syncStatus.different" product="2" />: Usuario con información diferente de la registrada en el servidor de **BioStar X**
+
+* <Cmd sid="user.syncStatus.newUser" product="2" />: Usuario de **BioStar X** que no está almacenado en el servidor
+
+Selecciona al usuario y haz clic en el botón <Cmd sid="button.delete" product="2" /> para eliminar su información del dispositivo. Haz clic en el botón <Cmd sid="button.upload" product="2" /> para enviar la información de usuario al servidor de **BioStar X**.
+
+:::info
+
+* La función <Cmd sid="button.manageUsersInDevice" product="2" /> solo se puede usar con un dispositivo seleccionado.
+
+* Al hacer clic en el botón <Cmd sid="button.upload" product="2" />, si existe un usuario en el servidor de **BioStar X** con el mismo ID, se actualizará con la información del dispositivo.
+
+* La información de usuario eliminada se quita solo del dispositivo y se conserva en el servidor de **BioStar X**.
+
+* Para obtener más información sobre la configuración del dispositivo, consulta [lo siguiente](settings-device-details).
+
+:::

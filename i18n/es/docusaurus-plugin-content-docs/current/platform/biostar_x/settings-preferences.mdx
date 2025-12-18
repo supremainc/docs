@@ -1,0 +1,99 @@
+---
+id: settings-preferences
+title: Configurar ajustes
+description: Esta guía explica cómo configurar el idioma y la zona horaria, el formato de fecha y hora, y el sonido de notificación cuando instala BioStar X por primera vez o cambia su entorno de uso.
+keywords:
+  - Ajustes iniciales
+---
+
+Para utilizar BioStar X de manera eficaz, son necesarios los ajustes adecuados para su entorno de uso. A continuación se indican los ajustes necesarios para diversas situaciones.
+
+* Ajustes iniciales para el recién instalado BioStar X
+
+* Cambiar al idioma preferido
+
+* Configurar la hora según la zona horaria local
+
+* Personalizar el sonido de notificación de eventos
+
+## Acceder a los ajustes predeterminados {#preference}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.preferences.root" /> en la barra lateral izquierda.
+
+3. Configure las opciones deseadas en cada sección.
+
+   * <Cmd sid="preference.languageTimezone" product="2" />: Idioma de la interfaz y zona horaria, horario de verano
+
+   * <Cmd sid="preference.dateTimeFormat" product="2" />: Formato de fecha y hora
+
+   * <Cmd sid="device.info.sound" product="2" />: Sonido de notificación de eventos
+
+4. Después de completar todos los ajustes, haga clic en <Cmd sid="button.apply" product="2" /> en la parte inferior derecha de la pantalla.
+
+## Configurar idioma y zona horaria estándar {#language-timezone}
+
+Puede configurar el idioma de la interfaz de BioStar X, la zona horaria y las reglas de horario de verano.
+
+<Image src="/img/biostarx-settings-preference-language-timezone.png" className="none" />
+
+* <Cmd sid="common.language" product="2" />: Seleccione el idioma de la interfaz que desea usar.
+
+* <Cmd sid="common.timeZone" product="2" />: Seleccione la zona horaria que corresponde a su ubicación actual.
+
+* <Cmd sid="common.dst" product="2" />: Elija las reglas de horario de verano que se aplicarán al servidor BioStar X. Si el elemento deseado no está disponible, consulte [lo siguiente](settings-system-daylight-saving-time) para agregarlo.
+
+Haga clic en <Cmd sid="button.apply" product="2" /> en la parte inferior derecha de la pantalla para guardar los ajustes.
+
+## Configurar formato de visualización de fecha y hora {#date-time-format}
+
+Puede configurar el formato de visualización de fecha y hora que se utilizará en todo el sistema.
+
+<Image src="/img/biostarx-settings-preference-date-time.png" className="none" />
+
+* <Cmd sid="common.dateFormat" product="2" />: Puede cambiar el formato de fecha.
+
+  * **mm/dd/yyyy**: 01/31/2025
+
+  * **yyyy/mm/dd**: 2025/01/31
+
+  * **dd/mm/yyyy**: 31/01/2025
+
+* <Cmd sid="common.timeFormat" product="2" />: Puede cambiar el formato de hora.
+
+  * **hh:mm**: 23:59, formato de 24 horas
+
+  * **hh:mm a**: 11:59 PM, formato de 12 horas
+
+  * **a hh:mm**: PM 11:59, formato de 12 horas
+
+Haga clic en <Cmd sid="button.apply" product="2" /> en la parte inferior derecha de la pantalla para guardar los ajustes.
+
+## Configurar sonido de notificación de eventos {#sound}
+
+Puede cargar un archivo de sonido que se utilizará cuando ocurra un evento.
+
+<Image src="/img/biostarx-settings-preference-sound.png" className="none" />
+
+1. Haga clic en <Cmd sid="button.plusAdd" product="2" />.
+
+2. Cuando aparezca la ventana <Cmd sid="setting.preference.sound.alert.add" product="2" />, haga clic en <Cmd sid="setting.preference.sound.alert.addSound.browse" product="2" />.
+
+   <Image src="/img/biostarx-settings-preference-add-sound.png" className="none" />
+
+3. Seleccione el archivo *.wav* o *.mp3* que desea cargar y haga clic en **Abrir**.
+
+4. Haga clic en el botón <Cmd sid="button.add" product="2" /> para cargar el archivo de sonido.
+
+Haga clic en <Cmd sid="button.apply" product="2" /> en la parte inferior derecha de la pantalla para guardar los ajustes.
+
+:::info
+
+* Solo se pueden cargar archivos de sonido en formato *.wav* o *.mp3*.
+
+* El tamaño máximo del archivo es 10MB.
+
+* Para saber cómo aplicar el archivo de sonido cargado cuando ocurre un evento, consulte [lo siguiente](settings-alert#edit-alert-message).
+
+:::

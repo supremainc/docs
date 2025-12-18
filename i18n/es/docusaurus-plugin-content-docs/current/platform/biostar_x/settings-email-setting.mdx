@@ -1,0 +1,108 @@
+---
+id: settings-email-setting
+title: Configuración de correo electrónico
+description: Configure información como la línea de asunto del correo electrónico que enviará el enlace móvil para el enrolamiento facial, el nombre de la empresa, el logotipo de la empresa y los datos de contacto.
+keywords:
+  - Configuración de correo electrónico
+  - Enrolamiento facial
+---
+
+Configure información como la línea de asunto del correo electrónico que enviará el enlace móvil para el enrolamiento facial, el nombre de la empresa, el logotipo de la empresa y los datos de contacto.
+
+:::info
+
+* Registre la dirección de correo electrónico del usuario en la información del usuario para enviar el enlace móvil de enrolamiento facial o para emitir un QR/código de barras. Para obtener más información sobre la información del usuario, consulte lo [siguiente](add-user-basic-info).
+
+* Los dispositivos que pueden realizar **autenticación facial** son los siguientes.
+
+  * FaceStation F2, BioStation 3, BioEntry W3
+
+* Los dispositivos que pueden usar **Use QR/Barcode through Scanner** son los siguientes.
+
+  * X-Station 2 (XS2-QDPB, XS2-QAPB)
+
+* Los dispositivos que pueden usar **Use QR/Barcode through Camera** son los siguientes.
+
+  * X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) versión de firmware 1.2.0 o superior
+
+  * BioStation 3 (BS3-DB, BS3-APWB) versión de firmware 1.1.0 o superior
+
+  * Usar **Use QR/Barcode through Camera** requiere una licencia de dispositivo independiente. Para obtener más información sobre la licencia de dispositivo, consulte lo [siguiente](settings-license-device-license).
+
+:::
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. En la barra lateral izquierda, haga clic en <Cmd sid="common.emailContent" product="2" />.
+
+3. Edite los campos necesarios.
+
+4. Haga clic en <Cmd sid="button.apply" product="2" /> para guardar la configuración.
+
+## Configurar contenido del correo electrónico {#email-contents-setting}
+
+Ingrese la información del servidor SMTP para enviar correos electrónicos.
+
+<Image src="/img/biostarx-settings-email-contents.png" className="none" />
+
+import EmailSmtpOptions from '../../common/_settings-email-settings.mdx';
+
+* <Cmd sid="common.emailContent.smtp" product="2" />: Configure el SMTP (Simple Mail Transfer Protocol) para enviar correos electrónicos. Haga clic en <Cmd sid="button.smtpSetting" product="2" /> para abrir la ventana de configuración de <Cmd sid="common.emailContent.smtp" product="2" />.
+
+  <Image src="/img/biostarx-settings-email-smtp-option.png" className="none" />
+
+  <EmailSmtpOptions />
+
+* <Cmd sid="common.emailContent.smtpTestMail" product="2" />: Para comprobar si existen problemas con la configuración SMTP, ingrese la dirección de correo electrónico que recibirá el mensaje y haga clic en <Cmd sid="button.smtpSettingTest" product="2" />.
+
+## Configurar enlace móvil para el enrolamiento facial
+
+Establezca en <Cmd sid="common.use" product="2" /> para enviar al usuario un enlace móvil de enrolamiento facial por correo electrónico.
+
+<Image src="/img/biostarx-settings-email-visual-face.png" />
+
+* <Cmd sid="common.emailContent.title" product="2" />: Ingrese la línea de asunto del correo electrónico para enviar el enlace móvil de enrolamiento facial.
+
+* <Cmd sid="common.emailContent.companyName" product="2" />: Ingrese el nombre de la empresa.
+
+* <Cmd sid="common.emailContent.companyLogo" product="2" />: Cargue la imagen del logotipo de la empresa.
+
+  :::info
+
+  * Los formatos de archivo de imagen admitidos son GIF, JPG, JPEG, JPE, JFIF, PNG.
+
+  * El tamaño de archivo de imagen soportado es de hasta 5MB.
+
+  :::
+
+* <Cmd sid="common.emailContent.adminContact" product="2" />: Ingrese la información de contacto de la persona responsable.
+
+* <Cmd sid="printOption.footer" product="2" />: Ingrese el contenido que se notificará a los usuarios que se enrolen con su rostro, como avisos legales. Se mostrará en la parte inferior del correo electrónico enviado con el enlace móvil para el enrolamiento facial.
+
+  :::info
+
+  El pie de página puede tener hasta 5,000 caracteres.
+
+  :::
+
+## Configuración de QR/código de barras
+
+Para usar el QR/código de barras, configúrelo en <Cmd sid="common.use" product="2" />.
+
+<Image src="/img/biostarx-settings-email-qr.png" className="none" />
+
+* <Cmd sid="common.emailContent.title" product="2" />: Ingrese el título del correo electrónico.
+
+* <Cmd sid="common.emailContent.companyName" product="2" />: Ingrese el nombre de la empresa.
+
+* <Cmd sid="common.emailContent.companyLogo" product="2" />: Cargue la imagen del logotipo de la empresa.
+
+  :::info
+
+  * Los formatos de archivo de imagen admitidos son GIF, JPG, JPEG, JPE, JFIF, PNG.
+
+  * El tamaño de archivo de imagen soportado es de hasta 5MB.
+
+  :::
+
+* <Cmd sid="common.emailContent.adminContact" product="2" />: Ingrese la información de contacto de la persona responsable.

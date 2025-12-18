@@ -1,0 +1,88 @@
+---
+id: settings-system-system-backup
+title: Respaldo de Sistema
+description: Realice copias de seguridad de información clave, como la base de datos de **BioStar X**, diversos ajustes y claves, mediante el menú de copia de seguridad del sistema.
+keywords:
+  - Respaldo de Sistema
+  - copia de seguridad
+  - Copia de seguridad automática
+  - Copia de seguridad manual
+  - Protección de datos
+  - Restaurar
+---
+
+Realice copias de seguridad de información clave, como la base de datos de **BioStar X**, diversos ajustes y claves. Utilice la función <Cmd sid="common.backup" product="2" /> para evitar la pérdida de datos en el servidor o al transferirlos a un nuevo equipo.
+
+Los métodos de copia de seguridad compatibles son los siguientes.
+
+* **Copia de seguridad manual**: El usuario crea el archivo de copia de seguridad manualmente.
+
+* **Copia de seguridad automática**: El sistema crea archivos de copia de seguridad automáticamente en intervalos predefinidos.
+
+:::info
+
+* Al restaurar **BioStar X** desde un archivo de copia de seguridad creado en un equipo anterior a uno nuevo, vuelva a emitir la licencia.
+
+* Si la base de datos de SQL Server y **BioStar X** están instalados en servidores diferentes, no se puede usar la copia de seguridad y restauración del sistema de **BioStar X**.
+
+* Para más información sobre la restauración del sistema, consulte [lo siguiente](settings-system-system-restore).
+
+:::
+
+## Copia de seguridad manual
+
+Los usuarios pueden crear archivos de copia de seguridad de forma manual.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.system.root" /> → <Cmd sid="common.backup" product="2" /> en la barra lateral izquierda de la pantalla.
+
+3. En la sección <Cmd sid="common.backup.general" product="2" />, configure la ruta para guardar el archivo de copia de seguridad y el número máximo de archivos de copia de seguridad.
+
+   <Image src="/img/biostarx-settings-system-system-backup-general.png" className="none" />
+
+   * <Cmd sid="backup.filePath" product="2" />: Ingrese la ruta donde se guardará el archivo de copia de seguridad. Ingrese una ruta de directorio que ya exista para la ubicación de guardado.
+
+   * <Cmd sid="backup.numberFileToKeep" product="2" />: Defina el número máximo de archivos de copia de seguridad.
+
+4. Para crear un archivo de copia de seguridad, haga clic en el botón <Cmd sid="backup.backupNow" product="2" />.
+
+Los archivos de copia de seguridad se guardan en formato *zip* en la ruta especificada en la opción <Cmd sid="backup.filePath" product="2" />. El nombre del archivo se genera con el formato `BioStar_X_Backup_YYYYMMDD_HHMMSS.zip`. Aquí, `YYYYMMDD` representa la fecha de la copia de seguridad y `HHMMSS` representa la hora.
+
+:::info
+
+* Si se supera el número máximo de copias de seguridad, los archivos de copia de seguridad más antiguos se eliminan automáticamente.
+
+* En <Cmd sid="backup.numberFileToKeep" product="2" />, solo se ingresan números entre 1 y 100.
+
+:::
+
+## Configuración de copia de seguridad automática
+
+Cuando configure la copia de seguridad automática, el sistema creará archivos de copia de seguridad en intervalos predefinidos.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.system.root" /> → <Cmd sid="common.backup" product="2" /> en la barra lateral izquierda de la pantalla.
+
+3. En la sección <Cmd sid="common.backup.autoBackup" product="2" />, seleccione la opción <Cmd sid="common.backup.frequency" product="2" />.
+
+   <Image src="/img/biostarx-settings-system-system-backup-automatic.png" className="none" />
+
+   * <Cmd sid="backup.daily" product="2" />: Realiza copias de seguridad diariamente de forma automática. Configure la hora de la copia de seguridad en la opción <Cmd sid="backup.time" product="2" />.
+
+   * <Cmd sid="backup.weekly" product="2" />: Realiza copias de seguridad semanalmente de forma automática. Configure el día para la copia de seguridad automática en la opción <Cmd sid="backup.day" product="2" /> y establezca la hora en la opción <Cmd sid="backup.time" product="2" />.
+
+   * <Cmd sid="backup.monthly" product="2" />: Realiza copias de seguridad mensualmente de forma automática. Configure la fecha para la copia de seguridad automática en la opción <Cmd sid="backup.date" product="2" /> y establezca la hora en la opción <Cmd sid="backup.time" product="2" />.
+
+4. Haga clic en <Cmd sid="button.apply" product="2" /> para guardar la configuración.
+
+Los archivos de copia de seguridad se guardan en formato *zip* en la ruta especificada en la opción <Cmd sid="backup.filePath" product="2" /> de la sección <Cmd sid="common.backup.general" product="2" />. El nombre del archivo se genera con el formato `BioStar_X_Backup_YYYYMMDD_HHMMSS.zip`. Aquí, `YYYYMMDD` representa la fecha de la copia de seguridad y `HHMMSS` representa la hora.
+
+:::info
+
+* Si selecciona la frecuencia de copia de seguridad automática como <Cmd sid="backup.monthly" product="2" /> y establece la fecha en 29, 30 o 31, no se realizarán copias de seguridad automáticas en los meses que no tengan ese día.
+
+* La hora se basa en la zona horaria estándar configurada en <Cmd sid="setting.menu.preferences.root" />. Para más información sobre la configuración de la zona horaria, consulte [lo siguiente](settings-preferences#language-timezone).
+
+:::

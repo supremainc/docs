@@ -1,0 +1,49 @@
+---
+id: settings-system-system-restore
+title: Restauración del sistema
+description: Esta guía explica cómo restaurar la base de datos, la configuración, las licencias, etc. de BioStar X a un estado anterior mediante un archivo de copia de seguridad del sistema.
+keywords:
+  - Restauración del sistema
+  - restaurar
+  - Restaurar copia de seguridad
+  - Recuperación de datos
+  - Restauración de BioStar X
+---
+
+Use un archivo de copia de seguridad del sistema para restaurar cuando haya un problema con **BioStar X** o necesite volver a un estado anterior. La función de restauración permite devolver la base de datos, varias configuraciones y la información de licencias al estado del momento de la copia de seguridad.
+
+:::caution
+
+* Realice la operación de restauración para devolver los datos actuales al punto de la copia de seguridad. Se recomienda crear una copia de seguridad del estado actual antes de restaurar. Consulte [lo siguiente](settings-system-system-backup) para crear una copia de seguridad del estado actual.
+
+* Si la dirección IP del servidor de destino de la restauración difiere de la dirección IP del servidor de copia de seguridad durante la operación de restauración, el proceso puede fallar. Verifique la dirección IP del servidor antes de continuar con la operación de restauración.
+
+:::
+
+:::info
+
+Si la base de datos de SQL Server y **BioStar X** están instalados en servidores diferentes, no se puede usar la copia de seguridad y restauración del sistema de **BioStar X**.
+
+:::
+
+1. En Windows, ejecute <Start /> → **BioStar X** → **BioStar X Restore**.
+
+   * Ruta del programa: *C:\Program Files\BioStar X\biostar-restore.exe*
+
+2. Haga clic en **Select File** y elija el archivo de copia de seguridad que desea restaurar.
+
+   <Image src="/img/common/setting-system-restore.png" className="none" alone />
+
+3. Haga clic en **Restore** para iniciar la restauración.
+
+Cuando aparezca el mensaje **Starting Biostar services...Done**, la restauración habrá finalizado. Acceda a **BioStar X** para verificar los datos restaurados.
+
+:::info
+
+* La restauración no puede continuar si la versión de **BioStar X** en el momento de la copia de seguridad es diferente de la versión actual. Haga clic en <IcInfo /> en la esquina superior derecha de la pantalla para comprobar la versión de **BioStar X**.
+
+  <Image src="/img/biostarx-settings-system-restore-check-ver.png" />
+
+* Para comprobar la versión de **BioStar X** en el momento de la copia de seguridad, extraiga el archivo de copia de seguridad y verifique el valor `biostarVersion` en el archivo *sysbackup.conf*.
+
+:::

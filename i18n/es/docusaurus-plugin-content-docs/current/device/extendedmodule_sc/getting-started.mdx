@@ -1,0 +1,159 @@
+---
+id: getting-started
+title: Primeros pasos
+description: Proporciona procedimientos iniciales para empezar con el dispositivo.
+keywords:
+  - Componentes
+  - Nombre
+  - Función
+  - Cable
+  - Conector
+---
+
+Proporciona procedimientos iniciales para empezar con el dispositivo.
+
+:::caution
+
+La conexión del módulo de expansión no es compatible con el firmware estándar, por lo que se requiere un firmware personalizado aparte.
+
+:::
+
+## Componentes
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-extm-sc.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-pinmap-extm-sc.svg" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-screws2.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Módulo de expansión</Td>
+
+      <Td>Etiqueta del mapa de pines</Td>
+
+      <Td>Tornillos de fijación x2</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/cable-rs485-4pin.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/cable-rs485-4pin.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Cable RS-232C</Td>
+
+      <Td>Cable RS-485</Td>
+    </Row>
+
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/cable-usb-4pin.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/cable-usb-4pin-short.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Cable de conexión al puerto de expansión USB (BioStation 3)</Td>
+
+      <Td>Cable de conexión al puerto de expansión USB (BioStation 2a)</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## Nombre y función de cada parte
+
+<Image src="/img/device/name-function-each-part-extm-sc.png" className="none" width="80%" />
+
+* **Puerto de expansión USB (5 pines)**: conecta el dispositivo al módulo de expansión.
+
+* **RS-485 (4 pines)**: Conecta el cable RS-485.
+
+* **RS-232C (4 pines)**: conecta el cable RS-232C.
+
+## Cables y conectores
+
+### RS-232C
+
+<Image src="/img/device/cable-rs485-4pin.svg" className="none" alone />
+
+<div className="overflow-x col3--10-20-70">
+  | Pin | Nombre | Color |
+  | --- | --- | --- |
+  | 1 | 232 TX | Azul |
+  | 2 | 232 RX | Amarillo |
+  | 3 | 232 GND | Negro |
+  | 4 | SH GND | Gris |
+</div>
+
+### RS-485
+
+<Image src="/img/device/cable-rs485-4pin.svg" className="none" alone />
+
+<div className="overflow-x col3--10-20-70">
+  | Pin | Nombre | Color |
+  | --- | --- | --- |
+  | 1 | 485 TRXP | Azul |
+  | 2 | 485 TRXN | Amarillo |
+  | 3 | 485 GND | Negro |
+  | 4 | SH GND | Gris |
+</div>
+
+### Cable de conexión al puerto de expansión USB
+
+<Image src="/img/device/cable-usb-4pin.svg" className="none" alone />
+
+<div className="overflow-x col3--10-20-70">
+  | Pin | Nombre | Color |
+  | --- | --- | --- |
+  | 1 | MAIN VBUS | Rojo |
+  | 2 | MAIN DM | Blanco |
+  | 3 | MAIN DP | Verde |
+  | 4 | NC | * |
+  | 5 | MAIN GND | Negro |
+</div>
+
+## Ejemplo de instalación
+
+:::caution
+
+La conexión del módulo de expansión no es compatible con el firmware estándar, por lo que se requiere un firmware personalizado aparte.
+
+:::
+
+Equipa el dispositivo Suprema con un módulo de expansión para utilizar adicionalmente los puertos RS-485 y RS-232C.
+
+Los dispositivos Suprema que pueden admitir el módulo de expansión son los siguientes.
+
+* [**BioStation 3**](../biostation_3/index.mdx)
+
+* [**BioStation 2a**](../biostation_2a/index.mdx)
+
+<Image src="/img/device/installation-example-extm-sc.png" className="none" width="65%" />

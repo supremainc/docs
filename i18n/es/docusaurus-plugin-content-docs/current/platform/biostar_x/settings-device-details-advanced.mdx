@@ -1,0 +1,405 @@
+---
+id: settings-device-details-advanced
+title: Configuración avanzada
+description: En la sección Configuración avanzada, configure Master Administrator, administración de dispositivos, pantalla/sonido, condiciones de funcionamiento y acciones.
+keywords:
+  - Dispositivo
+  - avanzado
+---
+
+Esta sección ofrece orientación para configurar elementos en los ajustes de <Cmd sid="device.info.advanced" product="2" />. Consulte cómo configurar diversas funciones avanzadas, como Master Administrator, gestión de permisos de administrador, eventos de asistencia, pantalla y sonido, condiciones de funcionamiento y acciones, registros de imágenes, Wiegand, tamper de seguridad y el significado de cada opción. Aplique los ajustes adecuados para su entorno para gestionar el dispositivo de forma eficaz.
+
+:::info
+
+* Las opciones de red disponibles pueden variar según el tipo de dispositivo.
+
+* Si el usuario ha realizado cambios, haga clic en <Cmd sid="button.apply" product="2" />. Los cambios no se aplicarán al dispositivo si no se guardan.
+
+:::
+
+## Agregar Master Administrator {#master-administrator}
+
+La función <Cmd sid="device.masterAdmin.title" product="2" /> mejora los permisos de administrador global del dispositivo para aumentar la seguridad y evitar el acceso y los cambios de ajustes no autorizados. Un dispositivo nuevo debe registrar un Master Administrator mediante esta función, y solo el Master Administrator registrado puede acceder al menú de administrador y cambiar ajustes.
+
+Seleccione dos tipos de credenciales para enrolar en el menú <Cmd sid="device.info.advanced" product="2" /> → <Cmd sid="device.info.administrator" product="2" /> <Cmd sid="device.masterAdmin.title" product="2" />.
+
+<Image src="/img/biostarx-setting-device-adv-admin-master-admin.png" />
+
+Las credenciales que se pueden enrolar como <Cmd sid="device.masterAdmin.title" product="2" /> son las siguientes:
+
+| Tipo de credencial | Número de enrolamientos | Condiciones |
+| --- | :-: | --- |
+| tarjeta | Hasta 4 | Solo admite los tipos CSN y Wiegand y no puede enrolar duplicados del mismo tipo. |
+| Rostro | Hasta 2 | Solo se puede enrolar en dispositivos equipados con el mismo algoritmo. |
+| Huella | Hasta 2 | * |
+| PIN | 1 | Debe ingresar al menos 8 dígitos. |
+
+* Para cambiar la credencial enrolada, haga clic en el botón <IcEdit /> a la derecha de esa credencial.
+
+* Para eliminar la credencial enrolada, haga clic en el botón <IcTrash2 /> a la derecha de esa credencial.
+
+:::note
+
+**Condiciones de enrolamiento**
+
+* Debe enrolar al menos dos tipos de credenciales.
+
+* Las mismas condiciones se aplican tanto a dispositivos nuevos como a dispositivos con actualización de firmware.
+
+* Todas las credenciales compatibles con el dispositivo pueden utilizarse como medios de autenticación.
+
+:::
+
+:::info
+
+* Esta función solo está disponible en productos Suprema que admiten interfaces de usuario mediante pantallas LCD.
+
+* Los dispositivos existentes que se hayan actualizado no mostrarán el menú <Cmd sid="device.masterAdmin.title" product="2" /> en los ajustes del dispositivo de BioStar 2.
+
+* Los dispositivos existentes que se hayan actualizado no ofrecen los ajustes de <Cmd sid="device.masterAdmin.title" product="2" />; sin embargo, mejore los permisos de administrador global para aumentar la seguridad del dispositivo mediante la opción <Cmd sid="device.masterAdmin.twoStepAuth.title" product="2" />. Para obtener más información sobre cómo configurar <Cmd sid="device.masterAdmin.twoStepAuth.title" product="2" />, consulte [lo siguiente](#two-step-authentication).
+
+* Para obtener más información sobre los dispositivos y las versiones de firmware que admiten esta función, consulte [lo siguiente](../../how-to/master-admin).
+
+:::
+
+## Configuración de autenticación en dos pasos {#two-step-authentication}
+
+Los dispositivos existentes que se hayan actualizado no ofrecen los ajustes de <Cmd sid="device.masterAdmin.title" product="2" />; sin embargo, mejore los permisos de administrador global para aumentar la seguridad del dispositivo mediante la opción <Cmd sid="device.masterAdmin.twoStepAuth.title" product="2" />.
+
+<Image src="/img/biostarx-setting-device-adv-two-step.png" />
+
+Si configura la opción <Cmd sid="device.masterAdmin.twoStepAuth.title" product="2" /> en <Cmd sid="common.use" product="2" />, deberá utilizar dos o más credenciales para la autenticación de administrador global en el dispositivo. Por ejemplo, si se han enrolado una tarjeta y un PIN, deberá escanear la tarjeta e ingresar el PIN para autenticar correctamente durante la autenticación de administrador global.
+
+:::info
+
+Si no hay dos tipos de credenciales enroladas para todos los administradores, la activación falla y se muestra un mensaje de error. Enrole dos tipos de credenciales para todos los administradores e inténtelo nuevamente.
+
+<Image src="/img/biostarx-setting-device-adv-error-admin.png" />
+
+:::
+
+:::caution
+
+Si el administrador global no está establecido en el dispositivo, aparecerá el siguiente mensaje emergente. Agregue administradores para todos los permisos en <Cmd sid="device.info.advanced" product="2" /> →  <Cmd sid="device.info.administrator" product="2" />.
+
+<Image src="/img/biostarx-setting-device-adv-warning-admin.png" />
+
+:::
+
+:::warning
+
+Si se activa <Cmd sid="device.masterAdmin.twoStepAuth.title" product="2" /> y luego se eliminan las credenciales de todos los administradores hasta quedar con menos de dos tipos, no se podrá acceder al menú de administrador en el dispositivo cuando no sea posible conectarse a **BioStar X**. Por lo tanto, tenga especial cuidado al eliminar credenciales de administrador.
+
+:::
+
+## Agregar administradores {#administrator}
+
+En el grupo <Cmd sid="device.info.administrator" product="2" />, gestione los administradores del dispositivo por nivel de permiso.
+
+<Image src="/img/biostarx-setting-device-edit-advanced-administrator.png" />
+
+Para agregar un administrador por nivel de permiso, haga clic en el botón <Cmd sid="button.plusAdd" product="2" />. Cuando aparezca la lista de usuarios, seleccione el usuario deseado. Busque al usuario deseado haciendo clic en el botón <IcSearch /> en la lista de usuarios.
+
+Consulte los permisos para cada nivel a continuación.
+
+<div className="table-fixed">
+  | Nivel | Gestión de información del usuario | Configuración del dispositivo |
+  | --- | :-: | :-: |
+  | <Cmd sid="device.operatorLevel.all" product="2" /> | ✔️ | ✔️ |
+  | <Cmd sid="device.operatorLevel.user" product="2" /> | ✔️ | ❌ |
+  | <Cmd sid="device.operatorLevel.configuration" product="2" /> | ❌ | ✔️ |
+</div>
+
+:::info
+
+* Se pueden agregar hasta 1,000 administradores. La cantidad de administradores que se pueden agregar puede variar según la versión del firmware del dispositivo.
+
+* Para buscar el usuario registrado, haga clic en el botón <IcSearch /> en <Cmd sid="device.info.admin.searchTitle" product="2" />.
+
+* **Device Settings** permite cambiar ajustes de pantalla y sonido, red, RS-485, etc.
+
+* Para eliminar un administrador, haga clic en el botón <IcTrash2 /> a la derecha del administrador.
+
+* Los administradores establecidos para cada dispositivo no afectan los permisos de **BioStar X**.
+
+:::
+
+## Gestión de asistencia {#attendance-management}
+
+El grupo <Cmd sid="device.info.tna" product="2" /> permite cambiar los nombres de eventos de asistencia o establecer modos de asistencia.
+
+<Image src="/img/biostarx-setting-device-edit-advanced-tna.png" />
+
+* <Cmd sid="device.info.tnaMode" product="2" />: Establece cómo se registran los eventos de asistencia.
+
+  * <Cmd sid="device.tna.mode.unused" product="2" />: No se pueden registrar eventos de asistencia.
+
+  * <Cmd sid="device.tna.mode.byUser" product="2" />: El usuario puede seleccionar el evento de asistencia deseado al autenticarse.
+
+  * <Cmd sid="device.tna.mode.bySchedule" product="2" />: Los eventos de asistencia cambian automáticamente según un horario establecido. Seleccione un horario para aplicar a los eventos de asistencia.
+
+  * <Cmd sid="device.tna.mode.lastChoice" product="2" />: El último evento de asistencia utilizado puede seguir usándose.
+
+  * <Cmd sid="device.tna.mode.fixed" product="2" />: Solo se puede usar el evento de asistencia seleccionado. Elija el evento de asistencia fijo que desea usar.
+
+* <Cmd sid="device.info.tnaRequired" product="2" />: Configura que se requiera al usuario registrar un evento de asistencia al autenticarse.
+
+  :::note
+
+  Esta opción puede usarse cuando la opción <Cmd sid="device.info.tnaMode" product="2" /> está configurada en <Cmd sid="device.tna.mode.byUser" product="2" />.
+
+  :::
+
+* <Cmd sid="device.info.tnaEvent" product="2" />: Modifique los nombres de los eventos de asistencia o agregue horarios cuando la opción <Cmd sid="device.info.tnaMode" product="2" /> esté configurada en <Cmd sid="device.tna.mode.bySchedule" product="2" />.
+
+  * <Cmd sid="device.tna.eventKey" product="2" />: Lista de claves que se pueden usar para registrar asistencia.
+
+  * <Cmd sid="device.tna.label" product="2" />: Cambie el nombre del evento de asistencia según <Cmd sid="device.tna.eventKey" product="2" />.
+
+  * <Cmd sid="device.tna.schedule" product="2" />: Configure un horario para cambios automáticos cuando la opción <Cmd sid="device.info.tnaMode" product="2" /> esté configurada en <Cmd sid="device.tna.mode.bySchedule" product="2" />.
+
+    <Image src="/img/biostarx-setting-device-edit-advanced-tna-auto.png" />
+
+:::info
+
+* Los dispositivos sin pantalla LCD pueden establecer los modos de asistencia en <Cmd sid="device.tna.mode.fixed" product="2" /> y <Cmd sid="device.tna.mode.bySchedule" product="2" /> y pueden registrar eventos de asistencia fijos o eventos de asistencia que cambien según un horario preestablecido. Los dispositivos compatibles son BioEntry P2, BioEntry W2, XPass D2 y XPass 2.
+
+* Para obtener más información sobre la configuración de nuevos horarios, consulte [lo siguiente](settings-schedule).
+
+:::
+
+## Ajustes de pantalla y sonido {#screen-and-sound-settings}
+
+Cambie los ajustes relacionados con la pantalla y el sonido del dispositivo. Las opciones disponibles pueden variar según el dispositivo.
+
+<details>
+  <summary>BioEntry P2, BioEntry W2, XPass D2, XPass 2</summary>
+
+  * <Cmd sid="device.info.sound" product="2" />: Active o desactive el sonido.
+
+  * <Cmd sid="device.info.ledBuzzer" product="2" />: Seleccione y configure los elementos de evento que activarán el LED o el zumbador.
+
+  * <Cmd sid="device.info.keypadBackLight" product="2" />: Active o desactive la retroiluminación del teclado. Cuando esta opción está activada, la luz detrás del teclado se enciende, lo que facilita identificar las teclas en entornos oscuros. Identifique fácilmente las teclas incluso en entornos oscuros.
+
+  :::note
+
+  La opción <Cmd sid="device.info.keypadBackLight" product="2" /> está disponible en el hardware XPass D2 V02M y en la versión de firmware 1.7.1 o superior.
+
+  :::
+</details>
+
+<details>
+  <summary>BioStation 2, BioStation L2, BioLite N2, FaceLite</summary>
+
+  * <Cmd sid="device.info.language" product="2" />: Configure el idioma que se mostrará en la pantalla del dispositivo. Haga clic en <Cmd sid="device.updateResource" product="2" /> para enviar archivos de recursos de idioma al dispositivo.
+
+  * <Cmd sid="device.info.volume" product="2" />: Defina el nivel de sonido predeterminado que produce el dispositivo.
+
+  * <Cmd sid="device.info.menuTimeout" product="2" />: Defina el tiempo que tarda en pasar de la pantalla de menú a la pantalla inactiva.
+
+  * <Cmd sid="device.info.theme" product="2" />: Cambie el estilo de la pantalla de inicio del dispositivo.
+
+  * <Cmd sid="device.info.backlightTimeout" product="2" />: Establezca el tiempo antes de que la luz de la pantalla se apague automáticamente.
+
+  * <Cmd sid="device.info.msgTimeout" product="2" />: Establezca el tiempo antes de que los mensajes desaparezcan automáticamente.
+
+  * <Cmd sid="device.info.useVoice" product="2" />: Utilice la guía por voz en lugar de tonos de notificación.
+
+  * <Cmd sid="device.info.background" product="2" />: Defina los elementos que se mostrarán en el fondo de la pantalla de inicio del dispositivo.
+
+    * <Cmd sid="device.display.background.logo" product="2" />: Los usuarios pueden mostrar las imágenes que registraron en la pantalla de inicio del dispositivo. Haga clic en <Cmd sid="common.add" product="2" /> para registrar una imagen.
+
+    * <Cmd sid="device.display.background.notice" product="2" />: Los administradores pueden mostrar sus entradas en la pantalla de inicio.
+
+    * <Cmd sid="device.display.background.slideShow" product="2" />: Los usuarios pueden mostrar hasta 10 imágenes registradas como presentación de diapositivas en la pantalla de inicio. Haga clic en <Cmd sid="common.add" product="2" /> para registrar una imagen.
+
+    :::note
+
+    * Haga clic en <Cmd sid="button.update" product="2" /> para reflejar los cambios en tiempo real en el dispositivo.
+
+    * Si cambia el tipo de fondo de pantalla, hacer clic en <Cmd sid="button.update" product="2" /> no lo aplicará al dispositivo. En la parte inferior de la pantalla, haga clic en <Cmd sid="button.apply" product="2" />.
+
+    * Las opciones <Cmd sid="device.display.background.notice" product="2" /> y <Cmd sid="device.display.background.slideShow" product="2" /> son compatibles con el modelo BioStation 2.
+
+    :::
+
+  * <Cmd sid="device.info.sound" product="2" />: Configure los efectos de sonido que se reproducirán al iniciar, al autenticar correctamente y al fallar la autenticación. Seleccione archivos *\*.wav* de hasta 500 Kb de tamaño. Haga clic en <Cmd sid="button.browse" product="2" />.
+
+    :::note
+
+    Haga clic en <Cmd sid="button.update" product="2" /> para reflejar los cambios en tiempo real en el dispositivo.
+
+    :::
+</details>
+
+<details>
+  <summary>BioStation 3, BioStation A2, FaceStation 2, FaceStation F2, X-Station 2</summary>
+
+  * <Cmd sid="device.info.language" product="2" />: Configure el idioma que se mostrará en la pantalla del dispositivo. Haga clic en <Cmd sid="device.updateResource" product="2" /> para enviar archivos de recursos de idioma al dispositivo.
+
+  * <Cmd sid="device.info.volume" product="2" />: Defina el nivel de sonido predeterminado que produce el dispositivo.
+
+  * <Cmd sid="device.intercom.speakerVolume" product="2" />: Defina el volumen de salida de sonido del dispositivo cuando utilice la función de intercom IP.
+
+  * <Cmd sid="device.intercom.micVolume" product="2" />: Defina el volumen de entrada de sonido al dispositivo cuando utilice la función de intercom IP.
+
+  * <Cmd sid="device.info.menuTimeout" product="2" />: Defina el tiempo que tarda en pasar de la pantalla de menú a la pantalla inactiva.
+
+  * <Cmd sid="device.info.backlightTimeout" product="2" />: Establezca el tiempo antes de que la luz de la pantalla se apague automáticamente.
+
+  * <Cmd sid="device.info.msgTimeout" product="2" />: Establezca el tiempo antes de que los mensajes desaparezcan automáticamente.
+
+  * <Cmd sid="device.info.serverPrivateMsg" product="2" />: Defina si se utilizará un mensaje privado que se mostrará en pantalla cuando el usuario se autentique.
+
+  * <Cmd sid="device.info.useScreenSaver" product="2" />: Reduce el consumo innecesario de energía al disminuir el brillo de la pantalla LCD cuando el dispositivo no está en uso. Si esta función no está habilitada, aunque la opción <Cmd sid="device.info.useScreenSaver" product="2" /> esté habilitada en el dispositivo, los mensajes de autenticación exitosa no se mostrarán.
+
+    :::note
+
+    Esta opción es compatible con los modelos FaceStation 2, FaceStation F2, X-Station 2 y BioStation 3.
+
+    :::
+
+  * <Cmd sid="device.info.useVoice" product="2" />: Utilice la guía por voz en lugar de tonos de notificación.
+
+  * <Cmd sid="device.info.homeScreen" product="2" />: Defina los elementos que se mostrarán en el fondo de la pantalla de inicio del dispositivo.
+
+    * <Cmd sid="device.display.background.normal" product="2" />: Muestra la imagen predeterminada en la pantalla de inicio.
+
+    * <Cmd sid="device.display.background.logo" product="2" />: Los usuarios pueden mostrar las imágenes que registraron en la pantalla de inicio del dispositivo. Haga clic en <Cmd sid="common.add" product="2" /> para registrar una imagen.
+
+    * <Cmd sid="device.display.background.notice" product="2" />: Los administradores pueden mostrar sus entradas en la pantalla de inicio.
+
+    :::note
+
+    * Haga clic en <Cmd sid="button.update" product="2" /> para reflejar los cambios en tiempo real en el dispositivo.
+
+    * Si cambia el tipo de fondo de pantalla, hacer clic en <Cmd sid="button.update" product="2" /> no lo aplicará al dispositivo. En la parte inferior de la pantalla, haga clic en <Cmd sid="button.apply" product="2" />.
+
+    * Configurar la pantalla de inicio como <Cmd sid="device.display.background.logo" product="2" /> y <Cmd sid="device.display.background.slideShow" product="2" /> permite mostrar hasta 10 imágenes como presentación de diapositivas en la pantalla de inicio. Haga clic en <Cmd sid="common.add" product="2" /> para registrar una imagen.
+
+    :::
+
+  * <Cmd sid="device.info.sound" product="2" />: Configure los efectos de sonido que se reproducirán al iniciar, al autenticar correctamente y al fallar la autenticación. Seleccione archivos *\*.wav* de hasta 500 Kb de tamaño. Haga clic en <Cmd sid="button.browse" product="2" />.
+
+    :::note
+
+    Haga clic en <Cmd sid="button.update" product="2" /> para reflejar los cambios en tiempo real en el dispositivo.
+
+    :::
+</details>
+
+## Ajustes de condiciones y acciones de activación {#triggerAction}
+
+En el grupo <Cmd sid="device.info.triggerNAction" product="2" />, defina las condiciones y acciones según situaciones específicas. Por ejemplo, configure todas las alarmas para que suenen cuando falle la autenticación o para que el dispositivo quede inutilizable si se pierde la conexión RS-485.
+
+Registre eventos seleccionándolos como condiciones o acciones, o configure condiciones y acciones según las preferencias del usuario. Haga clic en el grupo <Cmd sid="device.info.triggerNAction" product="2" /> y luego en <IcAdd /> <Cmd sid="common.add" product="2" /> ubicado a la derecha.
+
+<Image src="/img/biostarx-setting-device-edit-advanced-triggernaction.png" />
+
+### <Cmd sid="triggerAction.trigger" product="2" /> {#triggerAction}
+
+Puede seleccionar eventos predefinidos o agregar condiciones personalizadas.
+
+* <Cmd sid="triggerAction.event" product="2" />: Seleccione un evento predefinido.
+
+* <Cmd sid="triggerAction.input" product="2" />: Establezca condiciones personalizadas seleccionando cada elemento dentro de la opción.
+
+* <Cmd sid="triggerAction.break_glass" product="2" />: Establezca condiciones personalizadas seleccionando cada elemento dentro de la opción. Puede configurarlo para que solo detecte entradas sin acciones adicionales.
+
+:::info
+
+* Cuando <Cmd sid="triggerAction.trigger" product="2" /> se establece en <Cmd sid="triggerAction.event" product="2" />, solo puede seleccionar un evento de la lista de eventos.
+
+* Al seleccionar las opciones <Cmd sid="triggerAction.input" product="2" /> o <Cmd sid="triggerAction.break_glass" product="2" /> para establecer condiciones personalizadas, si el horario deseado no está disponible, haga clic en <Cmd sid="button.plusAddSchedule" product="2" />. Para obtener más información sobre la configuración de horarios, consulta [lo siguiente](settings-schedule).
+
+* Si el nombre de evento deseado no está disponible al seleccionar la opción <Cmd sid="triggerAction.break_glass" product="2" /> para establecer condiciones personalizadas, haga clic en <Cmd sid="triggerAction.addNewBreakGlassEvent" product="2" />. Cuando ocurra este evento, el nombre del evento se mostrará en el registro de eventos y en el registro en tiempo real.
+
+* Los nombres de eventos pueden tener un máximo de 64 caracteres.
+
+:::
+
+### <Cmd sid="triggerAction.action" product="2" /> {#triggeraction}
+
+Puede seleccionar acciones predefinidas o agregar acciones personalizadas.
+
+:::info
+
+* Si selecciona la opción <Cmd sid="triggerAction.output" product="2" /> para establecer acciones personalizadas y la configuración de señal deseada no está disponible, haga clic en <Cmd sid="common.addSignal" product="2" /> para configurarla.
+
+* Si seleccionó <Cmd sid="triggerAction.trigger" product="2" /> como <Cmd sid="triggerAction.break_glass" product="2" />, puede establecer <Cmd sid="triggerAction.action" product="2" /> como <Cmd sid="triggerAction.portNone" product="2" />.
+
+:::
+
+## Configuración del registro de imágenes {#image-log-settings}
+
+En el grupo <Cmd sid="common.imageLog" product="2" />, puede configurar los eventos y horarios del registro de imágenes utilizados por el dispositivo.
+
+1. Establezca la opción <Cmd sid="common.imageLog" product="2" /> en <Cmd sid="common.use" product="2" />.
+
+2. Haga clic en <Cmd sid="common.configuration" product="2" /> y luego en <Cmd sid="button.addplus" product="2" /> para configurar los eventos y horarios deseados.
+
+<Image src="/img/biostarx-setting-device-edit-advanced-imagelog.png" />
+
+:::info
+
+* Esta función es compatible con los modelos BioStation A2, FaceStation 2, FaceStation F2, X-Station 2 y BioStation 3.
+
+* Para obtener más información sobre la configuración predeterminada de los registros de imágenes, consulte [la siguiente](settings-device-image-log).
+
+:::
+
+## Configuración de Wiegand {#wiegang-settings}
+
+En el grupo <Cmd>Wiegand</Cmd>, puede configurar los detalles de entrada y salida relacionados con los dispositivos Wiegand.
+
+<Image src="/img/biostarx-setting-device-edit-advanced-wiegand.png" />
+
+* <Cmd sid="device.info.wiegandInOut" product="2" />: Seleccione el modo de entrada y salida.
+
+* <Cmd sid="device.info.wiegandOutPulseWidth" product="2" />: Establezca el ancho de pulso para la señal Wiegand.
+
+* <Cmd sid="device.card.wiegand.inOutFormat" product="2" />: Cambie el formato Wiegand asignado al dispositivo.
+
+* <Cmd sid="device.info.wiegandOutPulseInterval" product="2" />: Establezca el intervalo de pulso para la señal Wiegand.
+
+* <Cmd sid="device.card.wiegand.out" product="2" />: Configure el modo de salida de la señal Wiegand.
+
+  * <Cmd sid="device.card.wiegand.out.normal" product="2" />: Escanee tarjetas usando el formato Wiegand configurado. Puede establecer códigos de error y seleccionar valores que se enviarán si la autenticación de la tarjeta Wiegand falla.
+
+  * <Cmd sid="device.card.wiegand.out.bypass" product="2" />: Envíe CSN independientemente de la autenticación Wiegand. Configure esto si lo usa como un dispositivo sin funcionalidad de control de puertas.
+
+* <Cmd sid="device.card.wiegand.outputInfo" product="2" />: Seleccione la información que se enviará al dispositivo durante la autenticación.
+
+:::info
+
+Para obtener más información sobre la configuración del formato Wiegand, consulte [la siguiente](settings-credential-wiegand-format).
+
+:::
+
+## Configuración de manipulación de seguridad {#tamper-settings}
+
+Si ocurre un evento de manipulación en el dispositivo, puede configurarlo para eliminar toda la información de usuario, los registros y las claves de seguridad almacenadas en el dispositivo. Para activar la función <Cmd sid="device.info.tamperOn" product="2" />, establézcala en <Cmd sid="device.info.tamperOn.on" product="2" />.
+
+<Image src="/img/biostarx-setting-device-edit-advanced-tamper.png" />
+
+## Configuración de intercomunicador analógico {#analog-intercom-settings}
+
+Puede configurar si se utilizará un intercomunicador analógico. Para usar el intercomunicador conectado al dispositivo, haga clic en el grupo <Cmd sid="device.intercom.title" product="2" /> y seleccione <Cmd sid="common.use" product="2" />.
+
+:::info
+
+Esta función es compatible solo con el modelo BioStation 2.
+
+:::
+
+## Configuración de la cámara {#camera-settings}
+
+Puede establecer la frecuencia de la cámara. Configurar incorrectamente la frecuencia en entornos con luces fluorescentes puede causar parpadeo en las imágenes. Establezca la frecuencia para el área local en el grupo <Cmd sid="device.info.camera" product="2" />.
+
+:::info
+
+* Esta función es compatible con los modelos FaceStation F2 y BioStation A2 con versión de firmware 2.1.4 o superior.
+
+* Las frecuencias de la cámara varían según la ubicación geográfica. Estados Unidos suele usar 60 Hz, mientras que la mayoría de las demás regiones usan 50 Hz. Para conocer la frecuencia de la cámara en su área, consulte a su distribuidor.
+
+:::

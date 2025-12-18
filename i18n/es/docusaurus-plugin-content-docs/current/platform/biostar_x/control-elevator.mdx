@@ -1,0 +1,76 @@
+---
+id: control-elevator
+title: Controlar ascensores
+description: Controle los ascensores y verifique información detallada.
+keywords:
+  - Monitorizar
+  - Elevador
+---
+
+Esta guía describe cómo controlar el ascensor. Controle el ascensor o verifique información detallada mediante las funciones proporcionadas.
+
+1. Haga clic en <Cmd sid="shell.header.arena" /> en la página <Cmd sid="shell.header.launcher" /> o seleccione <Cmd sid="shell.header.arena" /> en la lista de accesos directos en la esquina superior izquierda de la pantalla.
+
+2. En la pestaña <Cmd sid="arena.tree.door.title" /> de la barra lateral izquierda, vaya a <Cmd sid="arena.tree.door.allElevatorGroups" />.
+
+3. Seleccione el ascensor en el grupo deseado y haga clic con el botón derecho. Seleccione la función deseada en el menú emergente.
+
+:::info
+
+Para obtener información sobre cómo configurar el ascensor y los grupos, consulte [lo siguiente](settings-manage-elevators).
+
+:::
+
+## Controlar ascensores
+
+Reconozca o verifique detalles de las alarmas activadas por el ascensor.
+
+<Image src="/img/biostarx-monitoring-door-elevator-popup.png" />
+
+### Borrar alarma {#clear-alarm}
+
+Desactive la alarma que se produjo en este ascensor. Haga clic en <Cmd sid="arena.tree.contextMenu.clearAlarm" /> en el menú emergente. Un mensaje de finalización aparece en la esquina superior derecha de la pantalla.
+
+### Ver detalles {#detail-view}
+
+Verifique información detallada sobre el ascensor y el historial de eventos. Haga clic en <Cmd sid="arena.tree.contextMenu.viewDetail" /> en el menú emergente. La información detallada y el historial de eventos del ascensor aparecen en el lado derecho de la pantalla.
+
+<Image src="/img/biostarx-monitoring-door-elevator-details.png" />
+
+* **Ver detalles**: Verifique el nombre, la ubicación, la información de estado y más del ascensor.
+
+* <Cmd sid="arena.recentEvent" />: Verifique la lista de eventos recientes que ocurrió en el ascensor seleccionado.
+
+:::info
+
+Para obtener información sobre cada elemento de la sección de detalles del ascensor, consulte [lo siguiente](settings-elevators-add).
+
+:::
+
+## Control de acceso a pisos {#floor-access-control}
+
+Controle los pisos a los que se puede acceder desde el ascensor. Haga clic en el relé del piso configurado en el ascensor y haga clic con el botón derecho. Seleccione la función deseada en el menú emergente.
+
+<Image src="/img/biostarx-monitoring-door-elevator-floor-popup.png" />
+
+### Abrir piso {#floor-open}
+
+Cualquier persona puede acceder al piso abierto. Haga clic en <Cmd sid="arena.tree.contextMenu.unlock" /> en el menú emergente y seleccione la opción deseada.
+
+* <Cmd sid="arena.tree.contextMenu.unlockOnce" />: Abre el piso una vez.
+
+* <Cmd sid="arena.tree.contextMenu.unlockPermanent" />: Abre el piso sin restricciones de tiempo.
+
+:::tip
+
+El piso puede abrirse temporalmente para la comodidad de los visitantes externos cuando lleguen. Después de abrir el piso, cambie al modo <Cmd sid="arena.tree.contextMenu.normalize" />.
+
+:::
+
+### Normalizar piso {#floor-unlock}
+
+Al cambiar el piso al estado <Cmd sid="arena.tree.contextMenu.normalize" />, solo los usuarios autorizados podrán acceder. Haga clic en <Cmd sid="arena.tree.contextMenu.normalize" /> en el menú emergente.
+
+### Bloquear piso {#floor-lock}
+
+Al cambiar el piso al estado <Cmd sid="arena.tree.contextMenu.lock" />, se evitará el acceso de cualquier persona. Haga clic en <Cmd sid="arena.tree.contextMenu.lock" /> en el menú emergente.

@@ -1,0 +1,62 @@
+---
+id: 120
+title: Firmware Version 1.2.0
+---
+
+# Firmware Version 1.2.0 (Build No. 1.2.0_181119)
+
+Release<Separator/>2018-11-29
+
+## Main Fixes
+
+1. When using iCLASS Seos card, the card does not work as set even though the key setting is changed.
+
+1. A code is added to prevent the authentication fails because the cache memory is broken.
+
+## New Features and Improvements
+
+---
+
+1. Support to the number of users, fingerprints, faces, and cards in Manage Users in Device.
+
+1. Change the maximum value of the interval and width for the Wiegand Input.
+
+1. Improves the data protection.
+
+    - Increase the items to encrypt the data.
+
+    - Support to setting the period for storing the personal information.
+
+1. If the data transmission fails when communicating with OSDP, it is transmitted again.
+
+1. The site key is initialized if a secure tamper event occurs
+
+1. If an administrator has registered, modified, or deleted a user, the event log shows whether the editing was done on the server or on the device.
+
+1. Support to the creation of up to 2048 Access Levels and Access Groups.
+
+1. Support to AES encryption type for DESFire card.
+
+1. Support to DESFire/DESFire EV1 Advanced option.
+
+1. When using The bypass, The card ID is output as Wiegand even though a user authenticates with the AoC.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. If the user uses the BS_GetLogBlob command to get the door ID, the door ID is not output normally.
+
+1. When communicating with OSDP, the LED color is displayed differently from the setting.
+
+1. The device cannot read CSN because the card recognized as an NFC tag.
+
+1. Modified the firmware of that slave device so that it cannot be upgraded when a device not supported by the master device is connected as a slave.
+
+1. If the elevator is configured by connecting the OM-120 to the device, the relays operate differently from the previous status when the slave device is rebooted.
+
+1. The alarm can be released in the Floors status after a fire alarm occurs when the elevator is configured as a Fire Alarm Zone.
+
+</BugLists>

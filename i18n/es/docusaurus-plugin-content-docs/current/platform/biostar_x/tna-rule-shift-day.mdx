@@ -1,0 +1,94 @@
+---
+id: tna-rule-shift-day
+title: Configurar Turno Diario},{
+description: Cree reglas de trabajo aplicando diferentes reglas horarias durante un período de 24 horas.
+keywords:
+  - Horas laborales
+  - Reglas de trabajo diarias
+---
+
+Cree reglas de trabajo aplicando diferentes reglas horarias durante un período de 24 horas. Seleccione entre opciones de trabajo fijo, flexible o flotante y configure la hora de inicio del día, las reglas de redondeo, etc.
+
+## <Cmd sid="shift.addShift" product="2" className="bold" />
+
+1. Haga clic en <Cmd sid="shell.header.tna" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="tab.shift" product="2" /> → <Cmd sid="tab.shift" product="2" /> en la barra lateral izquierda.
+
+3. Haga clic en <Cmd sid="shift.addShift" product="2" />.
+
+   <Image src="/img/biostarx-tna-shift-day.png" />
+
+4. Cuando aparezca la pantalla <Cmd sid="shift.addShift" product="2" />, configure cada elemento.
+
+:::info
+
+* Haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla para guardar la configuración.
+
+* Haga clic en <Cmd sid="payCode.applyAndAddShift" product="2" /> para seguir agregando reglas de trabajo semanales.
+
+* Después de guardar la configuración, haga clic en <Cmd sid="ta.apply_add_another" product="2" /> para agregar otro <Cmd sid="tab.shift" product="2" />.
+
+:::
+
+## Guía de opciones de configuración
+
+Según el tipo de regla de trabajo, seleccione <Cmd sid="shift.type.fixed" product="2" />, <Cmd sid="shift.type.flexible" product="2" /> o <Cmd sid="shift.type.floating" product="2" />. Las opciones de configuración pueden variar según el tipo de regla de trabajo seleccionado.
+
+### <Cmd sid="shift.type.fixed" product="2" className="normal" />
+
+Es una regla de trabajo para llegada y salida en horas establecidas. Ingrese el nombre y la descripción de <Cmd sid="tab.shift" product="2" className="normal" /> y seleccione <Cmd sid="form.type" product="2" /> como <Cmd sid="shift.type.fixed" product="2" />.
+
+<Image src="/img/biostarx-tna-shift-day-adding-fixed.png" />
+
+import Shift from '../../common/_tna-rule-shift-settings.mdx';
+
+<Shift type="fixed" />
+
+:::info
+
+* Solo es posible agregar un conjunto de reglas de tiempo establecido como <Cmd sid="payCode.countAsAttendance" product="2" /> a <Cmd sid="tab.shift" product="2" className="normal" />.
+
+* Configure <Cmd sid="shift.startTime" product="2" />, <Cmd sid="shift.endTime" product="2" />, <Cmd sid="shift.minDuration" product="2" /> y <Cmd sid="shift.rounding" product="2" /> para un conjunto de reglas de tiempo establecido como <Cmd sid="payCode.accumulateTowardOvertime" product="2" />.
+
+:::
+
+### Trabajo flexible
+
+Es una regla de trabajo que establece las horas laborables diarias y ajusta de forma flexible las horas de llegada y salida según la hora de inicio del día. Ingrese el nombre y la descripción de <Cmd sid="tab.shift" product="2" className="normal" /> y seleccione <Cmd sid="form.type" product="2" /> como <Cmd sid="shift.type.flexible" product="2" />.
+
+<Image src="/img/biostarx-tna-shift-day-adding-flexible.png" />
+
+<Shift type="flexible" />
+
+:::info
+
+No se puede agregar un conjunto de reglas de tiempo configurado como <Cmd sid="payCode.accumulateTowardOvertime" product="2" />.
+
+:::
+
+### Turno flotante
+
+Es una regla de trabajo que permite configurar de manera flexible las horas de llegada y salida. Ingrese el nombre y la descripción de <Cmd sid="tab.shift" product="2" className="normal" /> y seleccione <Cmd sid="form.type" product="2" /> como <Cmd sid="shift.type.floating" product="2" />.
+
+<Image src="/img/biostarx-tna-shift-day-adding-floating.png" />
+
+<Shift type="floating" />
+
+:::info
+
+* Los turnos de trabajo pueden consistir en hasta cinco franjas horarias. Haga clic en <Cmd sid="button.addplus" product="2" /> para agregar una franja horaria.
+
+* Al configurar ausencias, debe seleccionarse la opción <Cmd sid="shift.timeSegmentSet.default" product="2" />. Se puede seleccionar <Cmd sid="shift.timeSegmentSet.default" product="2" /> entre las franjas horarias configuradas en los turnos de trabajo.
+
+  <Image src="/img/biostarx-tna-shift-day-adding-floating-timesegment.png" />
+
+* Configure <Cmd sid="shift.startTime" product="2" />, <Cmd sid="shift.endTime" product="2" />, <Cmd sid="shift.minDuration" product="2" /> y <Cmd sid="shift.rounding" product="2" /> para un conjunto de reglas de tiempo establecido como <Cmd sid="payCode.accumulateTowardOvertime" product="2" />.
+
+:::
+
+<NextStep>
+  <NextItem to="tna-rule-shift-schedule">
+    Configure reglas de trabajo semanales basadas en las reglas diarias configuradas. Configure reglas de trabajo semanales de forma semanal o diaria.
+  </NextItem>
+</NextStep>

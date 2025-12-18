@@ -1,0 +1,64 @@
+---
+id: settings-advanced-ac-scheduled-lock
+title: Cierre Programado
+description: Guía para configurar el bloqueo programado. El bloqueo programado permite bloquear puertas en horarios específicos.
+keywords:
+  - Control de acceso avanzado
+  - Cierre Programado
+---
+
+Guía para configurar el bloqueo programado. El bloqueo programado permite bloquear puertas en horarios específicos. Esta función mejora el control de acceso y resulta útil para restringir el acceso durante ciertos períodos.
+
+:::info
+
+La configuración de bloqueo programado solo admite el modo <Cmd sid="zone.globalZone.local" product="2" />.
+
+:::
+
+## Registrar bloqueo programado {#addScheduledLockZone}
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haz clic en <Cmd sid="setting.menu.advancedAc.root" /> en la barra lateral izquierda.
+
+3. Haz clic en <Cmd sid="button.func.addZone" product="2" />.
+
+4. Selecciona <Cmd sid="zone.scheduledLock" product="2" /> y haz clic en <Cmd sid="button.apply" product="2" />.
+
+5. Ingresa el nombre de la función de bloqueo programado que deseas agregar en la sección <Cmd sid="common.info" product="2" />.
+
+   <Image src="/img/biostarx-settings-adv-ac-add-schedule-lock.png" />
+
+6. Configura los detalles de la función de bloqueo programado en la sección <Cmd sid="common.setting" product="2" />. Para obtener más información, consulta [lo siguiente](#setting).
+
+7. Configura la acción a realizar cuando se produzca una violación del bloqueo programado en la sección <Cmd sid="common.alarm" product="2" />.
+
+8. Selecciona el grupo de acceso que puede omitir el bloqueo programado en la sección <Cmd sid="zone.forcedLock.bypass" product="2" />. Los usuarios de este grupo pueden omitir el bloqueo programado.
+
+9. Después de completar todas las configuraciones, haz clic en <Cmd sid="button.apply" product="2" /> en la parte inferior de la pantalla.
+
+:::info
+
+La sección <Cmd sid="common.alarm" product="2" /> debe configurar <Cmd sid="zone.pause.doorselected" product="2" /> para que sea utilizable.
+
+:::
+
+## Guía de opciones de configuración {#setting}
+
+Los detalles para configurar el bloqueo programado son los siguientes.
+
+* <Cmd sid="zone.pause.activatedAndDeactivated" product="2" />: Puedes activar o desactivar temporalmente la configuración.
+
+* <Cmd sid="zone.forcedLock.doorLockType" product="2" />: Puedes configurarlo para bloquear solo el dispositivo de entrada o ambos dispositivos de entrada y salida.
+
+* <Cmd sid="zone.pause.doorselected" product="2" />: Selecciona las puertas para especificar las reglas de bloqueo programado.
+
+* <Cmd sid="common.schedule" product="2" />: Selecciona un horario. Si el horario deseado no está disponible, haz clic en <Cmd sid="button.plusAddSchedule" product="2" /> para agregar uno.
+
+:::info
+
+* Puedes seleccionar varias puertas para configurar la función de bloqueo programado en el modo <Cmd sid="zone.globalZone.local" product="2" />.
+
+* Para obtener más información sobre la configuración de horarios, consulta [lo siguiente](settings-schedule).
+
+:::

@@ -1,0 +1,147 @@
+---
+id: getting-started
+title: Primeros pasos
+description: Proporciona procedimientos iniciales para empezar con el dispositivo.
+keywords:
+  - Componentes
+  - Nombre
+  - Función
+  - Cable
+  - Conector
+---
+
+Proporciona procedimientos iniciales para empezar con el dispositivo.
+
+## Componentes
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-device-im120.svg" className="none" height={300} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-drilling-template-im120.svg" className="none" height={300} alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Módulo de entrada</Td>
+
+      <Td>Plantilla de perforación</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-screws12.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-spacer6.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-diode2.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-quick-guide.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-oss-guide.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Tornillo de fijación x12</Td>
+
+      <Td>Separador x6</Td>
+
+      <Td>Diodo x2</Td>
+
+      <Td>Guía rápida</Td>
+
+      <Td>Guía de software de código abierto</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+<PageBreak />
+
+{/* 액세서리_함체(ENCR-10) */}
+
+import Accessoryencr10 from '../../common/_device-encr10-accessory.mdx'
+
+<Accessoryencr10 />
+
+<PageBreak />
+
+## Nombre y función de cada parte
+
+<Magnify src="/img/device/name-function-each-part-im120.svg" width="45%" zoomFactor={.4} mgWidth={500} mgHeight={500} alone />
+
+| No. | Nombre |
+| :-: | --- |
+| 1 | Botón **RESET** |
+| 2 | Botón **INIT** |
+| 3 | Conexión de **SUPERVISED INPUT (9:11)** |
+| 4 | Conexión de **SUPERVISED INPUT (6:8)** |
+| 5 | Conexión **RELAY 1** |
+| 6 | Conexión de **TAMPER** o **AUX IN (0:1)** |
+| 7 | Interruptor de resistencia terminal **RS-485** |
+| 8 | Conexión **RS-485** |
+| 9 | Conexión de **POWER** (DC 12 o 24 V) |
+| 10 | Conexión **RELAY 0** |
+| 11 | Conexión de **SUPERVISED INPUT (3:5)** |
+| 12 | Conexión de **SUPERVISED INPUT (0:2)** |
+
+:::info
+
+* Presione el botón **INIT** durante más de 2 segundos, después de inicializar el producto vinculado al dispositivo, para conectarlo a otro dispositivo.
+
+* Presione el botón **RESET** para reiniciar el producto.
+
+:::
+
+<PageBreak />
+
+### Indicador de estado LED
+
+Compruebe el estado de funcionamiento del producto mediante el color del indicador de estado LED.
+
+| Ítem | LED | Estado |
+| --- | --- | --- |
+| **ALIMENTACIÓN** | Rojo encendido | Encendido |
+| **ESTADO** | Verde encendido | Estado conectado mediante sesión segura |
+| ^ | Azul encendido | No conectado al dispositivo maestro |
+| ^ | Rosa encendido | En proceso de actualización de firmware |
+| ^ | Amarillo encendido | Error de comunicación debido a clave diferente o pérdida de paquetes en OSDP que afecta RS-485 |
+| ^ | Celeste encendido | Estado conectado sin sesión segura |
+| ^ | Verde parpadeando | Estado final de espera de entrada durante la inicialización de la configuración |
+| ^ | Verde encendido | Inicialización de la configuración completada |
+| **SUPERVISED INPUT (0~11)** | Rojo encendido | Estado de recepción de la señal de entrada |
+| **RELAY (0, 1)** | Rojo encendido | Operación del relé |
+| **RS-485 TX** | Naranja parpadeando | En proceso de transmisión de datos RS-485 |
+| **RS-485 RX** | Verde parpadeando | En proceso de recepción de datos RS-485 |
+| **AUX IN (0, 1)** | Naranja encendido | En proceso de recepción de señal AUX |
+| **TAMPER** | Naranja encendido | Acción de tamper |
+
+### Ejemplo de instalación
+
+Este producto admite acciones de relé inmediatas para las entradas detectadas en tiempo real junto con BioStar X, y también puede ejecutar acciones de relé o registrar datos para las entradas detectadas cuando está desconectado del dispositivo maestro.
+
+Admite 1 canal RS-485 para la red con el dispositivo maestro, 12 canales de Supervised Input para detectar cortocircuitos y estados de encendido y apagado, un relé de 2 canales, una entrada AUX de 2 canales y una entrada de tamper de 1 canal.
+
+<Image src="/img/device/installation-example-im120.png" width="80%" className="none" />

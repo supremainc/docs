@@ -1,0 +1,164 @@
+---
+id: getting-started
+title: Primeros pasos
+description: Proporciona procedimientos iniciales para empezar con el dispositivo.
+keywords:
+  - Componentes
+  - Nombre
+  - Función
+  - Cable
+  - Conector
+---
+
+Proporciona procedimientos iniciales para empezar con el dispositivo.
+
+## Componentes
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-device-xps2.png" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-wall-bracket-xps2.png" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-drilling-template-xps2.png" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-fixing-screws2.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-pvc-anchors2.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>XPass S2</Td>
+
+      <Td>Soporte de pared</Td>
+
+      <Td>Plantilla de perforación</Td>
+
+      <Td>Tornillos de fijación x2</Td>
+
+      <Td>Anclajes de PVC x2</Td>
+    </Row>
+  </Tbody>
+
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-shrink-tube.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-diode1.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-resistor.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-bracket-fixing-screw.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-quick-guide.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Tubo termorretráctil</Td>
+
+      <Td>Diodo</Td>
+
+      <Td>Resistencia de 120 Ω</Td>
+
+      <Td>Tornillo de fijación del soporte (en forma de estrella)</Td>
+
+      <Td>Guía rápida</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## Nombre y función de cada parte
+
+<Image src="/img/device/name-function-each-part-xps2.png" className="none" width="70%" />
+
+* **Indicador LED**: Indica el estado operativo del dispositivo mediante el color del LED.
+
+  * Verde: autenticación exitosa.
+
+  * Rojo: autenticación fallida.
+
+  * Rosa: Procesando
+
+  * Azul/cian intermitente: funcionamiento normal.
+
+  * Parpadeo rojo/rosa: Terminal bloqueado
+
+  * Parpadeo azul/rojo: Estado de inicialización de hora, se necesita reiniciar la hora
+
+  * Parpadeo azul/amarillo:
+
+    * Al configurar <Cmd sid="ui_012" product="dev" /> para su uso, no se puede obtener la dirección IP.
+
+    * Cuando está en modo <Cmd sid="ui_205" product="dev" />, la conexión con el dispositivo maestro se desconecta.
+
+  * Parpadeo rojo: Error de inicialización del producto, contacte al fabricante
+
+  * Parpadeo amarillo: Esperando entrada.
+
+* **Sección de reconocimiento de tarjetas RF**: Esta es la parte que reconoce tarjetas RF para acceso.
+
+* **Botón de reinicio**
+
+  * Inicializa la configuración de red. Para obtener más información sobre la inicialización de la configuración de red, consulta [lo siguiente](installation#reset-network-settings).
+
+  * Elimina toda la información y los certificados almacenados en el dispositivo e inicializa la configuración. Para obtener más información sobre la inicialización de fábrica, consulta [lo siguiente](installation#factory-reset).
+
+* **LED de estado de red**: Indica el estado de la conexión de red.
+
+### Cable
+
+<Columns>
+  <Column>
+    <Image src="/img/device/cables-layout-xps2.png" width={550} className="none" alone />
+  </Column>
+
+  <Column className="padding--l10">
+    | Pin | Nombre | Color |
+    | :-: | :-: | :-: |
+    | 1 | WG GND | Negro |
+    | 2 | INPUT GND | Gris |
+    | 3 | 485 GND | Blanco (con franja negra) |
+    | 4 | WG D0 | Verde |
+    | 5 | WG D1 | Blanco |
+    | 6 | INPUT0 | Morado |
+    | 7 | INPUT1 | Marrón |
+    | 8 | 485 TRXP | Azul (con franja blanca) |
+    | 9 | 485 TRXN | Amarillo (con franja negra) |
+    | 10 | ENET TXN | Rojo |
+    | 11 | ENET TXP | Negro |
+    | 12 | ENET RXN | Amarillo |
+    | 13 | ENET RXP | Verde |
+    | 14 | PWR GND | Negro (franja blanca) |
+    | 15 | RLY NO | Gris (con franja blanca) |
+    | 16 | RLY COM | Verde (con franja blanca) |
+    | 17 | RLY NC | Naranja (con franja blanca) |
+    | 18 | PWR +VDC | Rojo |
+  </Column>
+</Columns>

@@ -1,0 +1,64 @@
+---
+id: ad-encrypt
+title: Cifrado de Active Directory
+description: Es posible usar el cifrado al comunicarse con un servidor de Windows Active Directory.
+displayed_sidebar: biostarx
+---
+
+Es posible usar el cifrado al comunicarse con un servidor de Windows Active Directory. Configure según el siguiente orden cuando use el cifrado por primera vez.
+
+## Paso 1. Instalar los servicios de certificados de Active Directory
+
+Para utilizar la comunicación cifrada del servidor de Windows Active Directory, debe instalar los Servicios de Certificados de Active Directory. Los Servicios de Certificados de Active Directory se pueden instalar de la siguiente manera:
+
+1. En el PC donde está instalado el servidor de Windows Active Directory, ejecute **Server Manager** y luego haga clic en **Manage** → **Add Roles and Features**.
+
+2. En **Before You Begin**, haga clic en **Next**.
+
+3. En **Select Installation Type**, seleccione **Role-Based or feature-based installation** y luego haga clic en **Next**.
+
+4. En **Select destination server**, seleccione **Select a server from the server pool**, marque el servidor y haga clic en **Next**.
+
+5. En **Select Server Roles**, seleccione **Active Directory Certificate Services** y haga clic en **Next**.
+
+6. Cuando aparezca una ventana emergente, revise los detalles y haga clic en **Add Features** → **Next**.
+
+7. Revise los detalles de **Active Directory Certificate Services** y haga clic en **Next**.
+
+8. En **Confirm installation selections**, haga clic en **Install**. Cuando finalice la instalación, haga clic en **Configure Active Directory Certificate Services on the destination server**.
+
+9. Cuando aparezca **AD CS Configuration wizard**, revise los detalles y haga clic en **Next**.
+
+10. En **Role Services**, haga clic en **Certification Authority** → **Next**.
+
+11. En la página **Setup Type**, seleccione **Enterprise CA** y haga clic en **Next**.
+
+12. En la página **Specify the type of the CA**, seleccione **Root CA** y haga clic en **Next**.
+
+13. En la página **Specify the type of the private key**, seleccione **Create a new private key** y haga clic en **Next**.
+
+14. Configure **Cryptography for CA**, **CA Name** y **Validity Period**, y luego haga clic en **Next**.
+
+15. En la página **CA Database**, establezca la **folder location for the certificate database** y el **certificate database log**, y luego haga clic en **Next**.
+
+16. En la página **Confirmation**, revise los detalles de Active Directory Certificate Services y haga clic en **Configure**.
+
+## Paso 2. Conectar LDAPS (LDAP sobre SSL/TLS)
+
+1. Haga clic en **Start** → **Run**.
+
+2. Ingrese **ldp** en el campo de entrada.
+
+3. Cuando aparezca la ventana **Ldp-disconnected**, haga clic en **Connect**.
+
+4. Complete los campos **Server** y **Port** y seleccione **SSL**.
+
+## Paso 3. Copiar el certificado raíz
+
+1. Ejecute el Símbolo del sistema en el PC donde está instalado el servidor de Windows Active Directory.
+
+2. Ingrese el comando `certutil -ca.cert client.crt` para copiar el certificado raíz.
+
+3. Ingrese el comando `keytool -import -keystore ad.jks -file client.crt` para convertir el certificado del servidor al formato *.jks*.
+
+4. Guarde el certificado del servidor en formato *.jks* en la ruta de instalación de **BioStar X**.

@@ -1,0 +1,114 @@
+---
+id: login-with-mfa
+title: Iniciar sesión con autenticación multifactor
+description: Usar la autenticación multifactor al iniciar sesión en **BioStar X** puede mejorar la seguridad de su cuenta.
+keywords:
+  - Iniciar sesión
+  - MFA
+  - Autenticación de múltiples factores
+  - Autenticación multifactor
+---
+
+Use la función **Autenticación multifactor** para mejorar la seguridad al iniciar sesión en **BioStar X**. Al habilitar <Cmd sid="team.user.permission.multiFactorAuth" /> se añade un paso de autenticación por huella digital mediante un lector de huellas a la combinación de ID de usuario y contraseña.
+
+:::info
+
+* Los usuarios que deseen utilizar la función <Cmd sid="team.user.permission.multiFactorAuth" /> deben registrar su huella digital y configurar su nombre de usuario, contraseña y nivel de operador.
+
+* Para usar la función <Cmd sid="team.user.permission.multiFactorAuth" />, debe conectarse al PC cliente de **BioStar X** un lector de huellas que admita inicio de sesión con autenticación multifactor. Consulte la siguiente lista para ver los dispositivos compatibles con el lector de huellas.
+
+  * BioMini
+
+  * BioMini Plus 2
+
+  * BioMini Slim 2
+
+* Si utiliza la cuenta <Cmd sid="settings.activeDirectory.title" product="2" className="normal" /> con la opción <Cmd sid="biostar.login" product="2" />, no podrá usar la función <Cmd sid="team.user.permission.multiFactorAuth" />.
+
+* Los administradores que configuren <Cmd sid="team.user.permission.multiFactorAuth" /> no podrán autenticarse en los servicios de **BioStar X** (gestión de asistencia y video) distintos al control de acceso. Para usar el servicio, inicie sesión después de desactivar el ajuste <Cmd sid="team.user.permission.multiFactorAuth" />. Luego puede volver a activar el ajuste <Cmd sid="team.user.permission.multiFactorAuth" />.
+
+:::
+
+:::caution
+
+* Después de configurar la función de autenticación multifactor para la cuenta de administrador principal (ID 1), tenga en cuenta que no podrá iniciar sesión con esa cuenta si la autenticación por huella digital deja de estar disponible.
+
+* Si el inicio de sesión se vuelve imposible debido a problemas con la huella digital, comuníquese con [Suprema Technical Support](https://support.supremainc.com).
+
+:::
+
+## Configuración de autenticación multifactor {#multifactorauthenticationsetting}
+
+Siga los pasos a continuación para configurar <Cmd sid="team.user.permission.multiFactorAuth" />.
+
+1. Haz clic en <Cmd sid="shell.header.user" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga doble clic en el usuario al que desea configurar <Cmd sid="team.user.permission.multiFactorAuth" /> en la lista de usuarios.
+
+   Como alternativa, seleccione un usuario y haga clic en el botón <Cmd sid="team.user.preview.button.seeMore" /> en el perfil que se muestra en la pantalla derecha.
+
+3. Cuando aparezca la pantalla de vista previa del usuario, establezca el elemento <Cmd sid="common.fingerprintLogin" product="2" /> en <Cmd sid="common.use" /> en la sección <Cmd sid="team.user.permission.title" />.
+
+   <Image src="/img/biostarx-edit-user-mfa-use.png" />
+
+4. Haga clic en <Cmd sid="common.save" /> en la parte superior derecha de la pantalla.
+
+Configuración de autenticación multifactor completada.
+
+## Configuración masiva de autenticación multifactor {#multifactorauthenticationbatchset}
+
+:::note
+
+**Antes de comenzar**
+
+Para usar la función de inicio de sesión con autenticación multifactor, debe cumplir las siguientes condiciones.
+
+* El usuario debe tener registrada la autenticación por huella digital.
+
+* Se deben configurar <Cmd sid="team.userTemplate.table.operator" />, <Cmd sid="user.loginId" product="2" /> y <Cmd sid="common.password" product="2" />. Consulta [lo siguiente](set-permission) para obtener más información.
+
+:::
+
+Puede usar la función de edición masiva para aplicar <Cmd sid="team.user.permission.multiFactorAuth" /> a varios usuarios.
+
+1. Haz clic en <Cmd sid="shell.header.user" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. En la lista de usuarios, marque la casilla a la izquierda del usuario al que desea configurar la autenticación multifactor.
+
+3. Haz clic en <Cmd sid="common.batchEdit" /> en la esquina superior derecha de la pantalla.
+
+4. Cuando aparezca la ventana de edición masiva, marque la casilla de la opción <Cmd sid="common.fingerprintLogin" product="2" /> en la sección <Cmd sid="team.user.permission.title" /> y establézcala en <Cmd sid="common.use" />.
+
+   <Image src="/img/biostarx-batch-edit-user-mfa-use.png" />
+
+5. Haga clic en <Cmd sid="common.save" /> en la parte superior derecha de la pantalla.
+
+Configuración de autenticación multifactor completada para varios usuarios seleccionados.
+
+:::info
+
+Los usuarios seleccionados que no cumplan con las condiciones necesarias para activar la función <Cmd sid="common.fingerprintLogin" product="2" /> se pueden verificar mediante el mensaje emergente de <Cmd sid="user.batchedit.popup.notavailableuser" product="2" />. Verifique las condiciones requeridas para la configuración e inténtelo de nuevo.
+
+:::
+
+## Iniciar sesión con autenticación multifactor {#loginwithmultifactorauthentication}
+
+1. Acceda a la pantalla de inicio de sesión de **BioStar X** mediante un navegador web.
+
+2. Introduzca su ID de usuario y contraseña, y luego haga clic en el botón <Cmd sid="auth.login" />.
+
+3. Cuando aparezca la pantalla de ingreso de huella, escanee su huella digital con el lector de huellas.
+
+   <Image src="/img/biostarx-mfa-login-scan-fingerprint.png" />
+
+Inicio de sesión completado.
+
+:::info
+
+* El tiempo límite de escaneo está fijado en 18 segundos y no se puede cambiar.
+
+* El escaneo de huella digital se puede intentar hasta tres veces consecutivas. Si la huella digital no se escanea correctamente dentro de estos tres intentos, la autenticación fallará.
+
+* Si la autenticación falla, haga clic en el botón <Cmd sid="button.retry" product="2" /> para volver a intentar la autenticación por huella digital. Se permiten hasta dos intentos de reintento. Si la autenticación falla después de los intentos de reintento, el proceso volverá al paso de inicio de sesión con ID y contraseña.
+
+:::

@@ -1,0 +1,105 @@
+---
+id: visitor-register
+title: Solicitar visita
+description: Esta guía explica cómo los visitantes solicitan la entrada mediante la PC de solicitud de visitas.
+keywords:
+  - Solicitud de visita
+---
+
+Esta guía explica cómo los visitantes externos que no son usuarios internos solicitan la entrada mediante la PC de solicitud de visitas.
+
+:::info
+
+* La PC de solicitud de visitas debe configurarse por separado y la configuración de visitantes debe realizarse previamente. Para más información sobre cómo configurar los ajustes de visitantes, consulte [lo siguiente](settings-visitor).
+
+* Si no hay un icono de acceso directo para la página de solicitud de visitas en la PC de solicitud de visitas, consulte [lo siguiente](settings-visitor#settings-visitor-pc-link) para crear un icono de acceso directo.
+
+:::
+
+## Nueva solicitud de visita
+
+Esta guía explica cómo los visitantes que vienen por primera vez solicitan la entrada mediante la PC de solicitud de visitas.
+
+1. Abra la página de solicitud de visitas en la PC de solicitud de visitas. La dirección URL de la página de solicitud de visitas tiene el formato `https://{biostar_x_server_ip}/#/register-welcome`.
+
+   <Image src="/img/biostarx-visitor-register-welcome.png" />
+
+2. Haga clic en <Cmd sid="visitor.welcome.first.time" product="2" /> en el centro de la pantalla.
+
+3. Después de aceptar los términos y la política de privacidad relacionados con el acceso al departamento visitado, haga clic en el botón <Cmd sid="button.nextPage" product="2" /> en la esquina inferior derecha de la pantalla.
+
+4. Ingrese la información requerida para la solicitud de visita.
+
+   <Image src="/img/biostarx-visitor-register-info.png" />
+
+   * <Cmd sid="common.visitor" product="2" />: Ingrese el nombre y el número de teléfono del visitante.
+
+   * <Cmd sid="visitor.host" product="2" />: Ingrese el nombre y el número de teléfono de la persona responsable en el destino de la visita.
+
+   * <Cmd sid="visitor.accessInfo" product="2" />: Configure el área de acceso y la duración de la visita.
+
+5. Después de ingresar la información, haga clic en el botón <Cmd sid="button.nextPage" product="2" /> en la esquina inferior derecha de la pantalla.
+
+6. Configure el medio de entrada.
+
+   <Image src="/img/biostarx-visitor-register-access-credential.png" />
+
+   * <Cmd sid="common.fingerPrint" product="2" />: Para usar autenticación por huella digital, haga clic en el botón <Cmd sid="button.addFingerprint" product="2" /> y luego registre su huella.
+
+   * <Cmd sid="common.card" product="2" />: Para usar autenticación mediante tarjeta, configúrela con <Cmd sid="visitor.request" product="2" /> y reciba una tarjeta del administrador.
+
+7. Después de completar la configuración, haga clic en el botón <Cmd sid="button.nextPage" product="2" /> en la esquina inferior derecha de la pantalla.
+
+8. Después de confirmar toda la información proporcionada, haga clic en el botón <Cmd sid="button.register" product="2" /> en la esquina inferior derecha de la pantalla.
+
+   <Image src="/img/biostarx-visitor-register-complete.png" />
+
+:::info
+
+* Para más información sobre cómo redactar los términos y las políticas de privacidad relacionadas con el acceso al departamento visitado, consulte [lo siguiente](settings-visitor#settings-visitor-terms).
+
+* El nombre puede tener hasta 48 caracteres.
+
+* Para agregar campos personalizados a la información del visitante, consulte [lo siguiente](settings-visitor#settings-visitor-custom-field).
+
+* Solo se pueden seleccionar los grupos de acceso asignados al departamento visitado para la PC de visitas. Para más información, consulte [lo siguiente](settings-visitor#settings-visitor-site).
+
+* Para más información sobre los grupos de acceso, consulte [lo siguiente](settings-access-control-manage-access-group).
+
+* Para volver al paso anterior y modificar la información de la visita, haga clic en el botón <Cmd sid="button.previousPage" product="2" />.
+
+* Para escanear huellas digitales, se debe conectar un dispositivo de registro de huellas digitales a la PC de solicitud de visitas.
+
+:::
+
+## Solicitar usando información existente
+
+Si una huella digital está registrada en el lugar de la visita, puede buscar la huella y solicitar una visita usando la información de visita existente.
+
+1. Abra la página de solicitud de visitas en la PC de solicitud de visitas. La dirección URL de la página de solicitud de visitas tiene el formato `https://{biostar_x_server_ip}/#/register-welcome`.
+
+   <Image src="/img/biostarx-visitor-register-welcome.png" />
+
+2. Haga clic en <Cmd sid="visitor.welcome.search" product="2" /> debajo del ícono de huella digital en el centro de la pantalla.
+
+3. Escanee su huella digital en el dispositivo de escaneo de huellas digitales. Use la huella digital escaneada para buscar usuarios registrados.
+
+4. Si la huella digital coincide con un visitante registrado previamente, aparecerá un mensaje de confirmación.
+
+   <Image src="/img/biostarx-visitor-register-confirm-message.png" />
+
+5. Si el visitante encontrado es correcto, haga clic en el botón <Cmd sid="button.yes" product="2" />.
+
+6. Después de aceptar los términos y la política de privacidad relacionados con el acceso al departamento visitado, haga clic en el botón <Cmd sid="button.nextPage" product="2" /> en la esquina inferior derecha de la pantalla.
+
+7. Confirme la información de la visita establecida durante la visita anterior. Para modificar la información existente, edite cada elemento y luego haga clic en el botón <Cmd sid="button.nextPage" product="2" /> en la esquina inferior derecha de la pantalla.
+
+   <Image src="/img/biostarx-visitor-register-saved-info.png" />
+
+8. Confirme el medio de entrada establecido durante la visita anterior. Para cambiar el medio de entrada existente, edite el elemento que desea cambiar y luego haga clic en el botón <Cmd sid="button.nextPage" product="2" /> en la esquina inferior derecha de la pantalla.
+
+   <Image src="/img/biostarx-visitor-register-saved-access-credential.png" />
+
+9. Después de confirmar toda la información proporcionada, haga clic en el botón <Cmd sid="button.register" product="2" /> en la esquina inferior derecha de la pantalla.
+
+   <Image src="/img/biostarx-visitor-register-complete.png" />

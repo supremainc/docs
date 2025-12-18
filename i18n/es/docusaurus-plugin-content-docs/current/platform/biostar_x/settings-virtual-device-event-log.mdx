@@ -1,0 +1,215 @@
+---
+id: settings-virtual-device-event-log
+title: Integrar el registro de eventos de dispositivos virtuales
+description: Esta guía explica cómo inscribir un dispositivo virtual y registrar en **BioStar X** los eventos que ocurren en sistemas externos.
+keywords:
+  - Dispositivo Virtual
+  - Registros de eventos
+  - API
+  - Integración
+---
+
+Al usar la función de dispositivo virtual, es posible registrar eventos como entradas y salidas directamente en **BioStar X** desde aplicaciones móviles o servicios de terceros al integrar la función de gestión de asistencia. Es posible gestionar sistemáticamente los registros de eventos sin un dispositivo físico, lo cual resulta útil para la integración con sistemas externos.
+
+## ¿Cuándo usarlo?
+
+Utilice la función de integración de registro de eventos de dispositivos virtuales en las siguientes situaciones.
+
+* Al gestionar eventos del sistema externo de gestión de T&A en **BioStar X**
+
+* Cuando necesite guardar registros de acceso (Punch Log) desde la aplicación móvil o un sistema externo directamente en **BioStar X** (registrar eventos de entrada/salida sin vinculación de base de datos)
+
+* Cuando sea necesario enviar eventos directamente mediante la API de **BioStar X** desde aplicaciones o servicios de terceros
+
+## Antes de comenzar
+
+Debe activarse la licencia **Event Log API**. Para más información sobre la política de licencias, consulta [lo siguiente](licensing#features-add-ons).
+
+:::info
+
+Para obtener más información sobre la aplicación de licencias, consulte [lo siguiente](settings-license-biostar-x-license).
+
+:::
+
+## Registrar dispositivo virtual
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.device.root" /> en la barra lateral izquierda.
+
+3. Haga clic en <IcMoreW /> en la parte superior derecha de la lista de dispositivos y seleccione <Cmd sid="device.addVirtualDevice" product="2" />.
+
+   <Image src="/img/biostarx-settings-device-add-virtual-device.png" />
+
+4. Ingrese la información de configuración cuando aparezca la pantalla <Cmd sid="device.addVirtualDevice" product="2" />.
+
+   <Image src="/img/biostarx-settings-device-add-virtual-device-settings.png" />
+
+   * <Cmd sid="device.info.name" product="2" />: Ingrese el nombre del dispositivo virtual.
+
+   * <Cmd sid="device.info.group" product="2" />: Seleccione el grupo para asignar el dispositivo virtual.
+
+   * <Cmd sid="device.info.deviceId" product="2" />: Ingrese el ID único del dispositivo virtual. Debe especificarse dentro de un rango que no duplique un ID de dispositivo existente.
+
+   * <Cmd sid="common.description" product="2" />: Ingrese la descripción del dispositivo virtual.
+
+5. Haga clic en <Cmd sid="button.apply" product="2" /> en la parte inferior derecha de la pantalla para registrar el dispositivo virtual.
+
+:::info
+
+* El <Cmd sid="device.info.deviceId" product="2" /> puede especificarse dentro del rango de 100000 - 999999. Debe especificarse dentro de un rango que no duplique un ID de dispositivo Suprema existente.
+
+* El valor de <Cmd sid="device.info.deviceId" product="2" /> que ya se ha creado no puede modificarse.
+
+:::
+
+### Gestionar grupos de dispositivos
+
+Los dispositivos virtuales pueden usar la función de grupos de dispositivos igual que los dispositivos normales.
+
+* Ubique el dispositivo en el mismo grupo que los dispositivos existentes.
+
+* Si el usuario tiene permisos de grupo, puede otorgar permisos a los dispositivos virtuales dentro de ese grupo.
+
+:::info
+
+Para obtener más información sobre los grupos de dispositivos, consulte [lo siguiente](settings-manage-device-group).
+
+:::
+
+### Limitaciones de dispositivos virtuales
+
+* Los dispositivos virtuales aparecen solo en el siguiente menú.
+
+  * <Cmd sid="shell.header.setting" /> → <Cmd sid="setting.menu.device.root" />
+
+  * Vea todos los registros de eventos y la vista previa de eventos en <Cmd sid="shell.header.arena" />
+
+  * Recupere registros de eventos desde <Cmd sid="shell.header.data" />
+
+* El dispositivo virtual no puede usar las funciones de control de acceso en la puerta ni en <Cmd sid="setting.menu.advancedAc.root" />.
+
+* No puede especificarse como dispositivo para la configuración de <Cmd sid="shell.header.tna" />.
+
+* Los dispositivos virtuales no aparecen en la lista de dispositivos de la barra lateral del menú <Cmd sid="shell.header.arena" />.
+
+* No es posible usar la función de control del dispositivo.
+
+* No se incluyen en el número de dispositivos de la licencia **Multi Communication Server**.
+
+## Registrar eventos mediante API
+
+### Tipo de evento admitido
+
+Solo pueden registrarse los siguientes tipos de eventos.
+
+* **Acceso concedido** (`4088`)
+
+* **Acceso denegado** (`6400`)
+
+### Parámetros de la API
+
+Debe proporcionar los siguientes parámetros al registrar eventos.
+
+| Parámetro | Descripción | Obligatorio |
+| --- | --- | --- |
+| `dev_id` | Solo se permiten ID de dispositivos virtuales registrados | Si |
+| `evt` | Acceso concedido o acceso denegado | Si |
+| `fecha y hora` | Hora de ocurrencia del evento | Si |
+| `user_id` | ID Usuario | Si |
+| `tna_key` | Disponible únicamente para la entrada con el valor especificado | Opción |
+
+```json title='Request example'
+{
+    "packet_device_id" : 100003, // required
+    "is_virtual_device" : "true", // required
+    "events":[ //4088 access granted, 6400 access denied
+        {
+            "dev_id": 100003, // required
+            "evt": 6400, // required
+            "datetime": "2025-08-21T14:12:00Z", // required
+            "user_id": "2", // required
+            "tna_key": "1"
+        },
+        {
+            "dev_id": 100003,
+            "evt": 6400,
+            "datetime": "2025-08-21T14:13:01Z",
+            "user_id": "2",
+            "tna_key": "1"
+        }
+    ]
+}
+```
+
+```json title='Response example'
+{
+    "Response": {
+        "code": "0",
+        "link": "https://support.supremainc.com/en/support/home",
+        "message": "Success"
+    }
+}
+```
+
+:::info
+
+* Es posible registrar múltiples eventos para un solo dispositivo virtual a la vez con una sola llamada a la API.
+
+* Para obtener más información sobre el uso de la API, consulte [lo siguiente](../../api/bsxapi#tag/Virtual-Device-and-Event-Import).
+
+:::
+
+## Recuperar registro de eventos
+
+Recupere los registros de eventos grabados mediante el dispositivo virtual en el menú.
+
+* <Cmd sid="shell.header.arena" />: Recupere y filtre todos los eventos, vista previa de eventos
+
+* <Cmd sid="shell.header.data" />: Recupere y filtre todos los eventos
+
+:::info
+
+* Para obtener más información sobre la recuperación de eventos en <Cmd sid="shell.header.arena" />, consulte [lo siguiente](monitoring-event).
+
+* Para obtener más información sobre <Cmd sid="shell.header.data" />, consulte [lo siguiente](data-generate-reports).
+
+:::
+
+## Registro de auditoría
+
+El rastro de auditoría se registra como se muestra en el siguiente ejemplo cuando se registran eventos.
+
+```
+Access granted, 2025/08/05 03:37:49, outside access door on 12th floor, Administrator(1)
+```
+
+:::info
+
+* Incluso si los eventos se registran por lotes, se crea una entrada de auditoría individual para cada evento.
+
+* Para obtener más información sobre <Cmd sid="setting.menu.system.auditTrail" />, consulte [lo siguiente](settings-system-audit-trail).
+
+:::
+
+## Solución de problemas
+
+### Si el botón <Cmd sid="device.addVirtualDevice" product="2" className="normal" /> no es visible
+
+Verifique si la licencia **Event Log API** está activada.
+
+### Cuando falla la llamada a la API
+
+* Verifique si la licencia **Event Log API** está activada.
+
+* Verifique que el ID de dispositivo sea un dispositivo virtual registrado.
+
+* Verifique que el formato de los parámetros de la API sea correcto.
+
+### Cuando no se recuperan los eventos
+
+* Verifique que el dispositivo registrado sea el ID de dispositivo virtual correcto.
+
+* Verifique que el dispositivo virtual esté seleccionado en el filtro de eventos.
+
+* Compruebe los registros de auditoría para garantizar que no se produjeron errores al registrar eventos.

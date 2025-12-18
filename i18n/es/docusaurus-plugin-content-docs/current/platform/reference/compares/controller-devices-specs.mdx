@@ -1,0 +1,20 @@
+---
+id: controller-devices-specs
+title: Compare Specifications
+hide_table_of_contents: true
+---
+
+# Compare Intelligent Controller & Peripheral Specifications
+
+import fData from '@site/src/components/CompareTable/controller-device-specs.json';
+import { RenderTableSpecs } from '@site/src/components/CompareTable';
+
+:::note
+
+\* If a device with a fingerprint sensor is connected as a slave, the slave device can be used for fingerprint authentication.
+
+\*\* Input or Supervised Input selectable.
+
+:::
+
+<RenderTableSpecs data={fData} />

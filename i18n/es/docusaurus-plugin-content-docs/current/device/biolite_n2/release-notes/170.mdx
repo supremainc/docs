@@ -1,0 +1,48 @@
+---
+id: 170
+title: Firmware Version 1.7.0
+---
+
+# Firmware Version 1.7.0 (Build No. 1.7.0_251027)
+
+Release<Separator/>2025-10-29
+
+:::caution
+
+Devices with the new BLE chip and the SE processor cannot downgrade to a lower version after upgrading the firmware to v1.5.0 or higher. Devices with existing BLE chips and SE processor can be downgraded to a lower version.
+
+After upgrading the firmware to v1.7.0, it is not able to downgrade to an earlier version of the firmware.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Supports the **Master Admin** setting, which grants full administrator privileges.
+
+1. Reflects global cybersecurity standards and the latest security requirements.
+
+1. Improved to distinguish devices that support the **Secure Tamper** feature.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Device abnormally restarts when changing the device’s Network settings in BioStar 2. <Badge>1.0.0</Badge>
+
+1. When a user with more than two cards enrolled attempts card authentication to the Wiegand output device, the ID of a card other than the authenticated card is output. <Badge>1.6.0</Badge>
+
+1. Arm/Disarm actions did not operate correctly on specific Supervised Input port of the DM-20 connected as a slave. <Badge>1.0.0</Badge>
+
+1. Wiegand format card data of 25 bits or less is not recognized. <Badge>1.0.0</Badge>
+
+1. In **Trigger & Action**, configuring two or more inputs causes the input logs and device lock logs to be repeatedly logged based on the number of configured inputs. <Badge>1.0.0</Badge>
+
+1. When the card ID of an issued smart card is 32 digits, the card data is not correctly recognized during authentication with a Wiegand reader. <Badge>1.0.0</Badge>
+
+</BugLists>

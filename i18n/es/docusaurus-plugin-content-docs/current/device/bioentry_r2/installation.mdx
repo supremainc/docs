@@ -1,0 +1,134 @@
+---
+id: installation
+title: Instalación
+description: Ofrece los procedimientos completos de instalación y ejemplos de conexión necesarios para el dispositivo.
+keywords:
+  - Soporte
+  - Alimentación
+  - Red
+  - Entrada
+  - Relé
+  - Independiente
+  - E/S Segura
+  - Wiegand
+---
+
+Ofrece los procedimientos completos de instalación y ejemplos de conexión necesarios para el dispositivo.
+
+## Fijar el soporte y el producto
+
+1. Determine la posición correcta para instalar el soporte usando la plantilla de perforación proporcionada. Asegura firmemente el soporte con los tornillos de fijación en el lugar donde se montará el producto.
+
+   <Image src="/img/device/installation-device1-bep2.png" className="none" alone />
+
+   :::info
+
+   * Si instalas el producto en una pared de concreto, perfora un agujero, inserta un anclaje de PVC y sujétalo con un tornillo de fijación.
+
+   * Para evitar interferencias de RF, se debe mantener una distancia mínima de separación.
+
+   <Columns>
+     <Column className="text--center">
+       <Image src="/img/device/installation-wall1-bep2.png" className="none" width="50%" />
+
+       <div className="overflow-x">
+         | Espesor de pared | Distancia |
+         | :-: | :-: |
+         | 100 mm | 250 mm |
+         | 120 mm | 250 mm |
+         | 150 mm | 180 mm |
+       </div>
+     </Column>
+
+     <Column className="text--center">
+       <Image src="/img/device/installation-wall2-bep2.png" className="none" width="50%" />
+     </Column>
+   </Columns>
+
+   :::
+
+2. Monta el producto en el soporte fijado.
+
+   <Image src="/img/device/installation-device2-bep2.png" className="none" alone />
+
+3. Gira los tornillos de fijación para ensamblar el producto con el soporte.
+
+   <Image src="/img/device/installation-device3-bep2.png" className="none" alone />
+
+   :::info
+
+   Al ensamblar el producto con el soporte, puedes usar el tornillo de fijación del soporte incluido (en forma de estrella) en lugar del tornillo de fijación del producto para aumentar la seguridad.
+
+   :::
+
+## Conexión de la fuente de alimentación
+
+<Image src="/img/device/installation-power-connection-ber2.png" width="60%" className="none" />
+
+:::caution
+
+* Use un adaptador de alimentación aprobado por IEC/EN 62368-1 que admita un consumo de energía mayor que el del producto. Si desea conectar y usar otro dispositivo al adaptador de alimentación, utilice un adaptador con una capacidad de corriente igual o mayor que el consumo total requerido por el terminal y el otro dispositivo.
+
+  * Consulte la sección [Power](product-specifications#specs.power) en las especificaciones del producto para conocer el consumo máximo de corriente.
+
+* NO extienda la longitud del cable de alimentación al usar el adaptador de alimentación.
+
+* Use una fuente de alimentación independiente para Secure I/O 2, la cerradura eléctrica y el producto, respectivamente. Si conecta y usa la misma fuente de alimentación para estos dispositivos, estos pueden funcionar incorrectamente.
+
+* Utilice un par trenzado AWG24 con una longitud máxima de 1.2 km para el cable RS-485.
+
+* Se recomienda usar cables RS-485 con una impedancia característica de 120 Ω.
+
+* Si se conecta mediante una cadena en serie RS-485, conecte la resistencia de terminación (120 Ω) en ambos extremos de la conexión en cadena. Si se conecta en la línea media, el nivel de señal se reducirá y el rendimiento de comunicación se verá afectado. Asegúrese de conectarlas en ambos extremos de la conexión en cadena.
+
+* Si se conecta XPass o XPass 2 al dispositivo maestro, solo se puede usar la autenticación con tarjeta.
+
+:::
+
+## Inicializar conexión RS-485 {#rs485-reset}
+
+1. Encienda el dispositivo.
+
+2. Mantenga presionado el botón de reinicio durante más de 1 segundo. El LED se ilumina en verde.
+
+3. Al escuchar un pitido, se completa la inicialización de la conexión RS-485.
+
+:::info
+
+Para conectar un dispositivo que ya está conectado al maestro a otro dispositivo maestro, inicialice la conexión RS-485 de dicho dispositivo.
+
+:::
+
+## Restablecer el rendimiento de transmisión RS-485
+
+Seleccione y configure el rendimiento de comunicación deseado.
+
+1. Encienda el dispositivo.
+
+2. Mantenga presionado el botón de reinicio durante más de 2 segundos. Al ingresar al modo de configuración, el LED parpadea en verde.
+
+3. Cuando el LED del dispositivo parpadee en verde, presione el botón de reinicio tantas veces como sea necesario. El rendimiento de transmisión se establece según la cantidad de pulsaciones y se verifica mediante el color del LED.
+
+   <div className="overflow-x">
+     | Número de pulsaciones | Rendimiento de transmisión | Color del LED |
+     | :-: | :-: | :-: |
+     | 1 | 9600 | Celeste |
+     | 2 | 19200 | Azul |
+     | 3 | 38400 | Morado |
+     | 4 | 57600 | Blanco |
+     | 5 | 115200 | Rojo |
+   </div>
+
+4. El color del LED del rendimiento de transmisión configurado parpadea durante 5 segundos. Cuando se escuche un pitido, la configuración del rendimiento de transmisión se completa.
+
+:::info
+
+Si no se presiona el botón de reinicio después de ingresar al modo de configuración, el rendimiento de transmisión se ajustará automáticamente a 115200.
+
+:::
+
+{/* ## 공장 초기화 */}
+
+import Factoryreset from "../../common/_device-factory-reset.mdx";
+
+<Factoryreset name="verde" />

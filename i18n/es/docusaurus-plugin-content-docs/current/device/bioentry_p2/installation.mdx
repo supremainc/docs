@@ -1,0 +1,134 @@
+---
+id: installation
+title: Instalación
+description: Ofrece los procedimientos completos de instalación y ejemplos de conexión necesarios para el dispositivo.
+keywords:
+  - Soporte
+  - Alimentación
+  - Red
+  - Entrada
+  - Relé
+  - Independiente
+  - E/S Segura
+  - Wiegand
+---
+
+Ofrece los procedimientos completos de instalación y ejemplos de conexión necesarios para el dispositivo.
+
+## Fijar el soporte y el producto
+
+1. Determine la posición correcta para instalar el soporte usando la plantilla de perforación proporcionada. Asegura firmemente el soporte con los tornillos de fijación en el lugar donde se montará el producto.
+
+   <Image src="/img/device/installation-device1-bep2.png" className="none" alone />
+
+   :::info
+
+   * Si instalas el producto en una pared de concreto, perfora un agujero, inserta un anclaje de PVC y sujétalo con un tornillo de fijación.
+
+   * Para evitar interferencias de RF, se debe mantener una distancia mínima de separación.
+
+   <Columns>
+     <Column className="text--center">
+       <Image src="/img/device/installation-wall1-bep2.png" className="none" width="50%" />
+
+       <div className="overflow-x">
+         | Espesor de pared | Distancia |
+         | :-: | :-: |
+         | 100 mm | 250 mm |
+         | 120 mm | 250 mm |
+         | 150 mm | 180 mm |
+       </div>
+     </Column>
+
+     <Column className="text--center">
+       <Image src="/img/device/installation-wall2-bep2.png" className="none" width="50%" />
+     </Column>
+   </Columns>
+
+   :::
+
+2. Monta el producto en el soporte fijado.
+
+   <Image src="/img/device/installation-device2-bep2.png" className="none" alone />
+
+3. Gira los tornillos de fijación para ensamblar el producto con el soporte.
+
+   <Image src="/img/device/installation-device3-bep2.png" className="none" alone />
+
+   :::info
+
+   Al ensamblar el producto con el soporte, puedes usar el tornillo de fijación del soporte incluido (en forma de estrella) en lugar del tornillo de fijación del producto para aumentar la seguridad.
+
+   :::
+
+{/* ## 전원 연결 */}
+
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+<div className="page-break" />
+
+{/* ## 네트워크 연결 */}
+
+import NetworkConnection from "../../common/_device-network-connection.mdx";
+
+<NetworkConnection />
+
+{/* ## Input 연결 */}
+
+import InputConnection from "../../common/_device-input-connetion.mdx";
+
+<InputConnection />
+
+{/* ## 릴레이 연결 */}
+
+import RelayConnectioin from "../../common/_device-relay-connection.mdx";
+
+<RelayConnectioin />
+
+<div className="page-break" />
+
+{/* ## 독립형 연결 */}
+
+import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
+
+<StandaloneConnection />
+
+{/* 공통 노트 */}
+
+import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
+
+<CommonNotes />
+
+<div className="page-break" />
+
+{/* ## Secure I/O 2 연결 */}
+
+import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
+
+<SecureIOConnection />
+
+{/* 공통 노트 */}
+
+<CommonNotes />
+
+{/* ## Wiegand 연결 */}
+
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+<div className="page-break" />
+
+{/* ## 네트워크 설정 초기화 */}
+
+import Resetnetwork from "../../common/_device-reset-network-settings.mdx";
+
+<Resetnetwork />
+
+{/* ## 공장 초기화 */}
+
+import Factoryreset from "../../common/_device-factory-reset.mdx";
+
+<Factoryreset name="verde" />

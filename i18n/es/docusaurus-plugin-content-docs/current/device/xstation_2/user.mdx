@@ -1,0 +1,140 @@
+---
+id: user
+title: Usuario
+description: Describe cómo registrar, editar, eliminar y gestionar usuarios.
+keywords:
+  - Enrolamiento
+  - Editar
+  - Borrar
+  - Gestionar
+---
+
+Describe cómo registrar, editar, eliminar y gestionar usuarios.
+
+## Registrar información de usuario {#registering-user-information}
+
+Registre información de usuario que incluya datos de autenticación biométrica.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Seleccione <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-add2.svg" ico alone /> y configure los elementos deseados. La información de uso de usuarios aparece.
+
+   <Image src="/img/device/xs2-user-add.png" className="none" />
+
+   * <Image src="/img/common/ico-photo1.svg" ico alone />: Registre una foto de usuario.
+
+   * **Nombre**: Introduzca el nombre de usuario.
+
+   * **ID**: Ingrese un número entre 1 y 4294967295 para registrar un ID de usuario. Si <Cmd sid="ui_168" product="dev" /> está configurado en <Cmd sid="ui_237" product="dev" />, puede usar una combinación de caracteres alfanuméricos y los símbolos `_` `-` como ID, con un máximo de 32 caracteres.
+
+   * <Cmd sid="ui_312" product="dev" />: <Badge only>XS2-ODPB, XS2-OAPB</Badge> Registre una huella digital para la autenticación del usuario. Presione <Cmd sid="ui_312" product="dev" /> → <Cmd sid="ui_108" product="dev" /> y siga las instrucciones en pantalla para inscribir una huella. Presione <Image src="/img/common/ico-add2.svg" ico alone /> para inscribir más huellas. Para obtener más información sobre el registro de huellas, consulte [Inscripción de huellas de usuario](#enrolling-user-fingerprint).
+
+   * <Cmd sid="ui_323" product="dev" />: Registre una tarjeta para la autenticación del usuario. Presione <Cmd sid="ui_323" product="dev" /> → <Cmd sid="ui_108" product="dev" />, luego escanee la tarjeta en la unidad de autenticación de tarjetas RF para asignarla al usuario. Haga clic en <Image src="/img/common/ico-add2.svg" ico alone /> para inscribir más tarjetas.
+
+   * <Cmd sid="ui_040" product="dev" />: Ingrese el PIN que desea usar. Presione <Cmd sid="ui_040" product="dev" /> → <Cmd sid="ui_108" product="dev" /> e introduzca el PIN que desea usar. Para confirmarlo, introduzca el PIN nuevamente y luego presione <Cmd sid="ui_037" product="dev" />. Para evitar filtraciones, ingrese un PIN de 4 a 16 dígitos.
+
+   * <Cmd sid="ui_172" product="dev" />: Seleccione los permisos que desea asignar al usuario.
+
+     :::info
+
+     Los menús disponibles varían según el nivel de usuario establecido.
+
+     * <Cmd sid="ui_075" product="dev" />: Este es un nivel de usuario general y el menú no está disponible.
+
+     * <Cmd sid="ui_300" product="dev" />: Puede usar todos los menús.
+
+     * <Cmd sid="ui_194" product="dev" />: Puede usar los menús <Cmd sid="ui_256" product="dev" />, <Cmd sid="ui_366" product="dev" />, <Cmd sid="ui_280" product="dev" />, <Cmd sid="ui_344" product="dev" />, <Cmd sid="ui_255" product="dev" />.
+
+     * <Cmd sid="ui_171" product="dev" />: Puede usar los menús <Cmd sid="ui_166" product="dev" />, <Cmd sid="ui_255" product="dev" />.
+
+     :::
+
+   * <Cmd sid="ui_250" product="dev" />: Configure la duración de uso de la cuenta de usuario.
+
+   * <Cmd sid="ui_363" product="dev" />: <Badge only>XS2-ODPB, XS2-OAPB</Badge> Seleccione para registrar una huella digital de coacción. Si alguien lo coacciona o necesita abrir la puerta por la fuerza, autenticar con esta huella enviará una señal de alarma a BioStar X.
+
+   * <Cmd sid="ui_064" product="dev" />: Puede cambiar el método de autenticación para cada usuario.
+
+3. Presione <Cmd sid="ui_295" product="dev" /> para completar el registro de la información del usuario.
+
+## Registro de huella digital del usuario <Badge only>XS2-ODPB, XS2-OAPB</Badge> {#enrolling-user-fingerprint}
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Haga clic en <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-add2.svg" ico alone />.
+
+3. Seleccione <Image src="/img/common/ico-add-finger-xs2.png" ico alone /> <Cmd sid="ui_312" product="dev" /> → <Cmd sid="ui_108" product="dev" />.
+
+4. Después de escanear la huella del dedo que se va a inscribir, escanee nuevamente la huella del mismo dedo.
+
+:::info
+
+* El registro de huellas digitales solo está disponible para los productos XS2-ODPB y XS2-OAPB.
+
+* Coloque el dedo lo suficientemente profundo para que haga contacto completo con el sensor.
+
+* Coloque el centro de la huella en el centro del sensor.
+
+* Si un dedo tiene un corte o la huella está borrosa, seleccione otro dedo para la huella.
+
+* Ingrese con precisión según las instrucciones en pantalla al autenticar huellas.
+
+* Si mantiene el dedo en posición vertical de modo que se reduzca el área de contacto con el sensor o cambia el ángulo del dedo, es posible que la autenticación de la huella no se realice.
+
+:::
+
+## Modificar información de usuario
+
+El gestor de usuarios o el administrador pueden modificar la información de usuario registrada. Agregue la huella digital o la tarjeta del usuario y modifique el PIN y los permisos.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Haga clic en <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-search.svg" ico alone />.
+
+3. Seleccione los términos de búsqueda. Busque usuarios con <Cmd sid="ui_299" product="dev" />, <Cmd sid="ui_167" product="dev" />, <Cmd sid="ui_253" product="dev" />, <Cmd sid="ui_312" product="dev" />, <Cmd sid="ui_323" product="dev" />.
+
+   :::info
+
+   Las huellas digitales solo pueden buscarse en los productos XS2-ODPB y XS2-OAPB.
+
+   :::
+
+4. Seleccione el usuario que desea modificar.
+
+5. Modifique la información consultando [Registering user information](#registering-user-information) y presione <Cmd sid="ui_037" product="dev" />.
+
+   * Seleccione <Image src="/img/common/ico-delete.svg" ico alone /> y presione <Cmd sid="ui_037" product="dev" /> para eliminar un usuario.
+
+:::info
+
+<Cmd sid="ui_320" product="dev" /> se puede registrar en BioStar X. Para obtener más información sobre el registro de grupos de acceso, consulte la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+
+:::
+
+## Eliminar todos los usuarios
+
+Elimine todos los usuarios registrados a la vez.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Seleccione <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-delete.svg" ico alone />.
+
+3. Seleccione <Cmd sid="ui_303" product="dev" /> para verificar y luego presione <Cmd sid="ui_037" product="dev" />.
+
+4. Para eliminar a todos los usuarios, presione <Cmd sid="ui_367" product="dev" />.
+
+## Ver uso de usuarios
+
+Vea los usuarios registrados y el recuento de tarjetas de un vistazo.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Haga clic en <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-info2.svg" ico alone />. La información de uso de usuarios aparece.
+
+   <Image src="/img/device/xs2-user-usage.png" />
+
+:::info
+
+El número de huellas digitales solo puede verificarse en los productos XS2-ODPB y XS2-OAPB.
+
+:::

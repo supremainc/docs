@@ -1,0 +1,81 @@
+---
+id: installation
+title: Instalación
+description: Proporciona el proceso completo y ejemplos de conexión necesarios para la instalación del producto.
+keywords:
+  - Instalar
+  - Alimentación
+  - RS-485
+  - Relé
+  - AUX},{
+  - Enclosure
+  - Tamper
+---
+
+Ofrece los procedimientos completos de instalación y ejemplos de conexión necesarios para el dispositivo.
+
+## Fijación del producto
+
+1. Asegura el espaciador con tornillos de fijación en el lugar donde se instalará el producto.
+
+2. Aprieta el producto sobre el espaciador asegurado utilizando tornillos de fijación.
+
+   <Image src="/img/device/installation-device-om120.svg" className="none" width="30%" alone />
+
+{/* ## 전원 연결 */}
+
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+<PageBreak />
+
+## Conexión RS-485
+
+<Image src="/img/device/installation-rs485-connection-om120.png" width="70%" className="none" />
+
+:::info
+
+* Utilice un par trenzado AWG24 con una longitud máxima de 1.2 km para el cable RS-485.
+
+* Se recomienda usar cables RS-485 con una impedancia característica de 120 Ω.
+
+* Conecte resistencias de terminación (120 Ω) en ambos extremos de la conexión en cadena RS-485. Si se conecta en la línea media, el nivel de señal se reducirá y el rendimiento de comunicación se verá afectado. Asegúrese de conectarlas en ambos extremos de la conexión en cadena. Configure el interruptor de la resistencia de terminación de este producto en ON.
+
+* Este producto puede conectar hasta 31 dispositivos a un único dispositivo maestro.
+
+:::
+
+## Conexión del relé
+
+<Image src="/img/device/installation-relay-om120.png" className="none" width="70%" />
+
+:::info
+
+* El método para conectar el relé puede variar según el tipo de ascensor. Para más detalles, comuníquese con la empresa constructora del ascensor.
+
+* Cada salida de relé debe conectarse correctamente al panel de control y a los botones de piso.
+
+:::
+
+{/* ## AUX 입력 연결 */}
+
+import AuxConnection from "../../common/_device-aux-connection.mdx";
+
+<AuxConnection />
+
+## Instalación del gabinete {#install-enclosure}
+
+Para protección física y eléctrica, el producto puede instalarse dentro del gabinete (ENCR-10). El gabinete incluye una placa LED de estado de alimentación, una placa de distribución de energía, una fuente de alimentación y un tamper. El gabinete se vende por separado.
+
+{/* ## OM120 함체 설치 */}
+
+import InstallEnclosureOM120 from "../../common/_device-install-enclosure-om120.mdx";
+
+<InstallEnclosureOM120 />
+
+:::info
+
+Para obtener información más detallada sobre la instalación del producto, comunícate con el equipo de soporte técnico de Suprema (CS@suprema.co.kr).
+
+:::

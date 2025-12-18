@@ -1,0 +1,33 @@
+---
+id: product-specifications
+title: Especificaciones del producto
+description: Incluye las especificaciones clave del producto, como tamaño, características y rendimiento.
+keywords:
+  - General
+  - Interfaz
+  - Dimensiones
+---
+
+Incluye las especificaciones clave del producto, como tamaño, características y rendimiento.
+
+import specs from '@site/static/specs/extm_sc_specs.json';
+
+{/* 일반 */}
+
+<SpecSection data={specs.extendedmodule_sc.general} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.extendedmodule_sc.interface} />
+
+## Dimensiones y peso
+
+<Image src="/img/device/extm-sc-dimension.svg" className="none" />
+
+---
+
+:::info
+
+Las especificaciones del producto están sujetas a cambios sin previo aviso para mejorar el rendimiento.
+
+:::

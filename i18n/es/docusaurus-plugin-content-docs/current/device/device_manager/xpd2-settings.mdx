@@ -1,0 +1,451 @@
+---
+id: xpd2-settings
+title: Configurar XPass D2
+description: Configura ajustes para aplicar a XPass D2 como plantilla y aplícalos directamente a dispositivos individuales.
+keywords:
+  - XPass D2
+  - Plantilla
+  - Búsqueda de dispositivos
+  - Conexión de dispositivos
+  - Actualización de firmware
+  - Reiniciar dispositivo
+  - Contraseña de administrador
+---
+
+Configura ajustes para aplicar a XPass D2 como plantilla y aplícalos directamente a dispositivos individuales. Aplica los ajustes mucho más rápido que al acceder al programa de gestión en un PC o usar tarjetas de comando.
+
+:::info
+
+Es posible que ciertos ajustes no se apliquen si la versión del firmware del dispositivo es antigua. Consulta [Actualizar el firmware del dispositivo](#device-firmware-upgrade) para aplicar todos los ajustes.
+
+:::
+
+## Agregar plantilla {#template-add}
+
+Configura la comunicación RS-485, el formato de tarjeta, los ajustes del teclado, el PIN, el LED y el zumbador antes de agregarlos como plantilla. Agregar una plantilla permite aplicar ajustes de forma rápida y sencilla sin configurar cada dispositivo individual cada vez.
+
+1. Ejecuta Suprema Device Manager en el dispositivo móvil.
+
+2. Selecciona XPass D2 en la pantalla principal.
+
+3. Toca <Cmd sid="ui_338" product="dev" /> → <Image src="/img/common/ico-add.svg" ico alone />.
+
+   <Image src="/img/device/xpd2-template-management-add.png" className="none" width={540} />
+
+4. Selecciona el modelo de dispositivo para el que deseas crear la plantilla.
+
+5. Después de configurar cada elemento, toca <Cmd sid="ui_295" product="dev" /> para guardar la plantilla.
+
+:::info
+
+Se pueden agregar hasta 100 plantillas.
+
+:::
+
+### Establecer nombre de plantilla y contraseña de administrador
+
+<Image src="/img/device/xpd2-template-name-pw.png" width={250} />
+
+* <Cmd sid="ui_341" product="dev" />: Ingresa el nombre de plantilla deseado.
+
+* <Cmd sid="ui_074" product="dev" />: Ingresa la contraseña de administrador.
+
+:::info
+
+* La contraseña de administrador puede tener de 6 a 32 dígitos.
+
+* Ten cuidado de no perder la contraseña de administrador. Si pierdes la contraseña de administrador, será necesario inicializar el dispositivo para conectarte al dispositivo con la plantilla aplicada.
+
+* Para obtener más información sobre cómo cambiar la contraseña de administrador, consulta [Cambiar contraseña de administrador](#admin-password-change).
+
+:::
+
+### Interfaz
+
+<Image src="/img/device/xpd2-template-interface.png" width={250} />
+
+* <Cmd sid="ui_038" product="dev" />: Establece la dirección OSDP que se utilizará en la comunicación entre el dispositivo y el dispositivo maestro. Se puede configurar con números del 0 al 126.
+
+* <Cmd sid="ui_298" product="dev" />: Establece la velocidad de transmisión RS-485.
+
+### Autenticación
+
+<Image src="/img/device/xpd2-template-auth-cardtype.png" width={250} />
+
+* <Cmd sid="ui_328" product="dev" />: Configura el tipo de tarjeta que usará el dispositivo.
+
+  * <Cmd sid="ui_008" product="dev" />: Selecciona el tipo de tarjeta CSN y establece el orden de bytes.
+
+  * <Cmd sid="ui_201" product="dev" />: Selecciona los tipos de tarjetas inteligentes emitidas por Suprema.
+
+  * <Cmd sid="ui_333" product="dev" />: Selecciona los tipos de tarjetas inteligentes emitidas por terceros.
+
+  * <Cmd sid="ui_139" product="dev" />: Configura el tipo de tarjeta móvil.
+
+:::info
+
+Cuando se establece en <Cmd sid="ui_034" product="dev" />, los datos de la tarjeta se procesan de izquierda a derecha, procesando secuencialmente del byte más grande al más pequeño al guardar el número de serie de la tarjeta (CSN). <Cmd sid="ui_030" product="dev" /> procesa el número de serie de la tarjeta (CSN) del byte más pequeño al más grande al guardarlo.
+
+:::
+
+### Formato Tarjeta Wiegand
+
+<Image src="/img/device/xpd2-template-wiegand-card.png" width={250} />
+
+* <Cmd sid="ui_354" product="dev" />: Establece el formato de tarjeta Wiegand que se especificará para el dispositivo. Los datos de la tarjeta se procesan según el formato establecido.
+
+  * <Cmd sid="ui_179" product="dev" />: Si el formato deseado no está disponible, toca <IcAdd /> para agregar un nuevo formato Wiegand.
+
+    <Image src="/img/device/xpd2-template-wiegand-card-new.png" width={250} />
+
+    * <Cmd sid="ui_253" product="dev" />: Ingresa el nombre del formato Wiegand deseado.
+
+    * <Cmd sid="ui_318" product="dev" />: Ingresa el número total de bits.
+
+    * <Cmd sid="ui_024" product="dev" />: Ingresa los bits inicial y final del ID que deseas usar. Toca <Image src="/img/common/ico-add3.svg" ico alone /> <Cmd sid="ui_319" product="dev" /> para agregar un campo de ID.
+
+    * <Cmd sid="ui_350" product="dev" />: Ingresa la posición del campo de paridad y los bits inicial y final que deseas usar. Toca <Image src="/img/common/ico-add3.svg" ico alone /> <Cmd sid="ui_319" product="dev" /> para agregar un campo de paridad.
+
+      :::info
+
+      Para agregar un campo de paridad, ingresa el número total de bits.
+
+      :::
+
+* <Cmd sid="ui_352" product="dev" />: Configura el ancho de pulso de la señal Wiegand.
+
+* <Cmd sid="ui_351" product="dev" />: Configura el intervalo de pulso de la señal Wiegand.
+
+### Diseño de Tarjeta Inteligente Suprema
+
+<Image src="/img/device/xpd2-template-suprema-card.png" width={250} />
+
+* <Cmd sid="ui_151" product="dev" />: Define si se utilizará la clave de sitio auxiliar. Al establecer la clave de sitio auxiliar, se puede usar para la autenticación cuando la clave principal de la tarjeta no coincide.
+
+* <Cmd sid="ui_032" product="dev" />: Configura tarjetas MIFARE.
+
+  * <Cmd sid="ui_222" product="dev" />: Configura el tipo de cifrado en Crypto-1 o AES-128.
+
+  * <Cmd sid="ui_087" product="dev" />: Clave que cifra la comunicación entre las tarjetas inteligentes y el dispositivo.
+
+  * <Cmd sid="ui_151" product="dev" />: Úsala para autenticar cuando la clave principal de sitio de la tarjeta no coincide. El campo de clave de sitio auxiliar solo se muestra cuando <Cmd sid="ui_151" product="dev" /> del nivel anterior está activado.
+
+  * <Cmd sid="ui_214" product="dev" />: Selecciona el bloque inicial donde se almacenará cada plantilla. Este bloque es el índice del bloque donde se almacena la información del usuario; configúrelo en un bloque almacenable si el usuario ya usa la tarjeta inteligente. Solo se puede configurar para MIFARE.
+
+* <Cmd sid="ui_010" product="dev" />: Configura tarjetas DESFire.
+
+  * <Cmd sid="ui_011" product="dev" />: Utiliza tarjetas DESFire emitidas por terceros. Solo se puede configurar DESCire.
+
+  * <Cmd sid="ui_087" product="dev" />: Clave que cifra la comunicación entre las tarjetas inteligentes y el dispositivo.
+
+  * <Cmd sid="ui_151" product="dev" />: Úsala para autenticar cuando la clave principal de sitio de la tarjeta no coincide. El campo de clave de sitio auxiliar solo se muestra cuando <Cmd sid="ui_151" product="dev" /> del nivel anterior está activado.
+
+  * <Cmd sid="ui_223" product="dev" />: Establece el ID de aplicación. Funciona como una especie de directorio que incluye un ID de archivo. Solo se puede configurar DESCire.
+
+  * <Cmd sid="ui_347" product="dev" />: Establece el ID de archivo. Solo se puede configurar DESCire.
+
+  * <Cmd sid="ui_222" product="dev" />: Configura el tipo de cifrado en DES/3DES o AES.
+
+* <Cmd sid="ui_202" product="dev" />: Configure el orden de bytes para la salida de tarjeta inteligente.
+
+:::info
+
+* Ingrese correctamente la información de <Cmd sid="ui_224" product="dev" />, <Cmd sid="ui_225" product="dev" />, <Cmd sid="ui_348" product="dev" />, <Cmd sid="ui_349" product="dev" />, <Cmd sid="ui_223" product="dev" />, <Cmd sid="ui_347" product="dev" />, <Cmd sid="ui_222" product="dev" /> para utilizar <Cmd sid="ui_011" product="dev" />.
+
+* <Cmd sid="ui_224" product="dev" />, <Cmd sid="ui_348" product="dev" /> solo aceptan hasta 32 bytes en hexadecimal.
+
+* Cuando se establece en <Cmd sid="ui_034" product="dev" />, los datos de la tarjeta se procesan de izquierda a derecha, procesando secuencialmente del byte más grande al más pequeño al guardar el número de serie de la tarjeta (CSN). <Cmd sid="ui_030" product="dev" /> procesa el número de serie de la tarjeta (CSN) del byte más pequeño al más grande al guardarlo.
+
+:::
+
+### Diseño de Tarjeta Inteligente Personalizada
+
+<Image src="/img/device/xpd2-template-custom-card.png" width={250} />
+
+* <Cmd sid="ui_151" product="dev" />: Define si se utilizará la clave de sitio auxiliar. Al establecer la clave de sitio auxiliar, se puede usar para la autenticación cuando la clave principal de la tarjeta no coincide.
+
+* <Cmd sid="ui_032" product="dev" />: Configura tarjetas MIFARE.
+
+  * <Cmd sid="ui_222" product="dev" />: Configura el tipo de cifrado en Crypto-1 o AES-128.
+
+  * <Cmd sid="ui_087" product="dev" />: Clave que cifra la comunicación entre las tarjetas inteligentes y el dispositivo.
+
+  * <Cmd sid="ui_151" product="dev" />: Úsala para autenticar cuando la clave principal de sitio de la tarjeta no coincide. El campo de clave de sitio auxiliar solo se muestra cuando <Cmd sid="ui_151" product="dev" /> del nivel anterior está activado.
+
+  * <Cmd sid="ui_154" product="dev" />: Seleccione el bloque inicial donde se almacenará cada plantilla. Este bloque es el índice del bloque donde se almacena la información del usuario; configúrelo en un bloque almacenable si el usuario ya usa la tarjeta inteligente. Solo se puede configurar para MIFARE.
+
+  * <Cmd sid="ui_145" product="dev" />: Configure el punto de inicio para leer el número de tarjeta.
+
+  * <Cmd sid="ui_110" product="dev" />: Configure el tamaño de los datos que se leerán de la tarjeta (si los valores establecidos de <Cmd sid="ui_087" product="dev" /> y <Cmd sid="ui_151" product="dev" /> son iguales a los de la tarjeta).
+
+* <Cmd sid="ui_010" product="dev" />: Configura tarjetas DESFire.
+
+  * <Cmd sid="ui_011" product="dev" />: Utiliza tarjetas DESFire emitidas por terceros. Solo se puede configurar DESCire.
+
+  * <Cmd sid="ui_087" product="dev" />: Clave que cifra la comunicación entre las tarjetas inteligentes y el dispositivo.
+
+  * <Cmd sid="ui_151" product="dev" />: Úsala para autenticar cuando la clave principal de sitio de la tarjeta no coincide. El campo de clave de sitio auxiliar solo se muestra cuando <Cmd sid="ui_151" product="dev" /> del nivel anterior está activado.
+
+  * <Cmd sid="ui_223" product="dev" />: Establece el ID de aplicación. Funciona como una especie de directorio que incluye un ID de archivo. Solo se puede configurar DESCire.
+
+  * <Cmd sid="ui_347" product="dev" />: Establece el ID de archivo. Solo se puede configurar DESCire.
+
+  * <Cmd sid="ui_222" product="dev" />: Configura el tipo de cifrado en DES/3DES o AES.
+
+  * <Cmd sid="ui_145" product="dev" />: Configure el punto de inicio para leer el número de tarjeta.
+
+  * <Cmd sid="ui_110" product="dev" />: Configure el tamaño de los datos que se leerán de la tarjeta (si los valores establecidos de <Cmd sid="ui_087" product="dev" /> y <Cmd sid="ui_151" product="dev" /> son iguales a los de la tarjeta).
+
+* <Cmd sid="ui_146" product="dev" />: Configure el orden de bytes para la salida de tarjeta inteligente.
+
+:::info
+
+* Ingrese correctamente la información de <Cmd sid="ui_224" product="dev" />, <Cmd sid="ui_225" product="dev" />, <Cmd sid="ui_348" product="dev" />, <Cmd sid="ui_349" product="dev" />, <Cmd sid="ui_223" product="dev" />, <Cmd sid="ui_347" product="dev" />, <Cmd sid="ui_222" product="dev" /> para utilizar <Cmd sid="ui_011" product="dev" />.
+
+* <Cmd sid="ui_224" product="dev" />, <Cmd sid="ui_348" product="dev" /> solo aceptan hasta 32 bytes en hexadecimal.
+
+* Cuando se establece en <Cmd sid="ui_034" product="dev" />, los datos de la tarjeta se procesan de izquierda a derecha, procesando secuencialmente del byte más grande al más pequeño al guardar el número de serie de la tarjeta (CSN). <Cmd sid="ui_030" product="dev" /> procesa el número de serie de la tarjeta (CSN) del byte más pequeño al más grande al guardarlo.
+
+:::
+
+### Configuración del teclado
+
+<Image src="/img/device/xpd2-template-keypad.png" width={250} />
+
+* <Cmd sid="ui_335" product="dev" />: Configure si se utilizará el teclado. Cuando el teclado está activado, autentíquese ingresando el ID de la tarjeta con el teclado.
+
+* <Cmd sid="ui_219" product="dev" />: Envía el valor cada vez que se presiona una tecla al ingresar el ID de la tarjeta en el teclado.
+
+* <Cmd sid="ui_306" product="dev" />: Al ingresar el ID de la tarjeta en el teclado, presione todas las teclas necesarias y luego presione la tecla `#` para enviar todo el valor de una vez.
+
+* <Cmd sid="ui_327" product="dev" />: Cuando el modo de autenticación del dispositivo está configurado en tarjeta + PIN, al presentar la tarjeta se activa el LED para solicitar al usuario que ingrese el PIN.
+
+* <Cmd sid="ui_147" product="dev" />: Encienda o apague la retroiluminación del teclado.
+
+:::info
+
+* <Cmd sid="ui_336" product="dev" /> solo se muestra en la pantalla de configuración de plantillas del dispositivo XPD2-GKDB.
+
+* <Cmd sid="ui_147" product="dev" /> solo es compatible con el hardware XPD2-GKDB V02M y la versión de firmware v1.7.1 o superior.
+
+* Los valores ingresados mediante el teclado se transmiten en unidades de 4 bits de forma predeterminada. Los ID de tarjetas ingresados mediante el teclado se envían en el mismo formato que el formato de tarjeta Wiegand.
+
+:::
+
+### Otros
+
+<Image src="/img/device/xpd2-template-others.png" width={250} />
+
+* <Cmd sid="ui_150" product="dev" />: Configure para que, cuando se produzca un evento de manipulación en el dispositivo, la clave de seguridad almacenada en el dispositivo se elimine. Active la función de manipulación de seguridad para utilizarla.
+
+### LED / zumbador
+
+<Image src="/img/device/device-manager-led-buzzer.png" width={250} />
+
+* <Cmd sid="ui_272" product="dev" />: Configure los colores que se mostrarán en el LED del dispositivo durante el funcionamiento normal.
+
+* <Cmd sid="ui_325" product="dev" />: Configure el color que se mostrará en el LED del dispositivo y la cantidad de veces que suena el zumbador al escanear una tarjeta.
+
+* <Cmd sid="ui_262" product="dev" />: Configure el color que se mostrará en el LED del dispositivo y la cantidad de veces que suena el zumbador cuando la autenticación es correcta.
+
+* <Cmd sid="ui_263" product="dev" />: Configure el color que se mostrará en el LED del dispositivo y la cantidad de veces que suena el zumbador cuando la autenticación falla.
+
+:::info
+
+* El LED puede configurarse para mostrar un máximo de tres colores en patrones alternos. Presione la ranura para elegir un color.
+
+* Al seleccionar <Image src="/img/common/ico-cancel2.svg" ico alone />, se omite la secuencia de color de esa ranura y se muestra el color configurado para la siguiente ranura.
+
+:::
+
+## Aplicar plantilla
+
+Las plantillas añadidas pueden aplicarse de manera uniforme a varios dispositivos mediante comunicación BLE.
+
+:::info
+
+Es posible que ciertos ajustes no se apliquen si la versión del firmware del dispositivo es antigua. Consulta [Actualizar el firmware del dispositivo](#device-firmware-upgrade) para aplicar todos los ajustes.
+
+:::
+
+1. Active el Bluetooth en su dispositivo móvil y ejecute Suprema Device Manager.
+
+2. Selecciona XPass D2 en la pantalla principal.
+
+3. Haga clic en <Cmd sid="ui_343" product="dev" />. Aparecerá una lista de plantillas disponibles.
+
+   <Image src="/img/device/xpd2-template-choose-select.png" className="none" width={540} />
+
+4. Seleccione la plantilla deseada de la lista de plantillas.
+
+5. Haga clic en <Cmd sid="ui_212" product="dev" /> para continuar.
+
+   <Image src="/img/device/xpd2-template-choose-select-start.png" width={250} />
+
+6. Asegúrese de que la parte posterior de su dispositivo móvil toque el dispositivo al que desea aplicar la plantilla.
+
+7. Una vez completada la aplicación de la plantilla, haga clic en <Cmd sid="ui_367" product="dev" />.
+
+:::info
+
+* Los ajustes modificados mediante Suprema Device Manager solo se aplican al dispositivo y no se sincronizarán con el servidor.
+
+* Si el dispositivo está conectado al dispositivo maestro o si la configuración de salida Wiegand ha cambiado, no se puede conectar a Suprema Device Manager con la clave principal. Inicialice el dispositivo para conectarlo con Suprema Device Manager.
+
+:::
+
+## Gestionar plantillas
+
+### Editar plantilla
+
+1. Ejecuta Suprema Device Manager en el dispositivo móvil.
+
+2. Selecciona XPass D2 en la pantalla principal.
+
+3. Haga clic en <Cmd sid="ui_338" product="dev" />.
+
+   <Image src="/img/device/xpd2-template-management-select.png" className="none" width={540} />
+
+4. Seleccione la plantilla que desea editar de la lista de plantillas.
+
+5. Consulte [Agregar plantilla](#template-add) para editar la plantilla.
+
+6. Para guardar los ajustes modificados, haga clic en <Cmd sid="ui_295" product="dev" />; para guardarlos como una nueva plantilla, haga clic en <Cmd sid="ui_178" product="dev" />.
+
+### Eliminar plantilla
+
+1. Ejecuta Suprema Device Manager en el dispositivo móvil.
+
+2. Selecciona XPass D2 en la pantalla principal.
+
+3. Haga clic en <Cmd sid="ui_338" product="dev" />.
+
+   <Image src="/img/device/xpd2-template-management-select.png" className="none" width={540} />
+
+4. Seleccione la plantilla que desea eliminar de la lista de plantillas.
+
+5. Toque <Image src="/img/common/ico-delete.svg" ico alone /> → <Cmd sid="ui_367" product="dev" /> para eliminar una plantilla.
+
+   <Image src="/img/device/xpd2-template-management-select-del.png" width={250} />
+
+### Exportar plantilla
+
+Exporte plantillas para la configuración de XPass D2 desde la aplicación.
+
+1. Ejecuta Suprema Device Manager en el dispositivo móvil.
+
+2. Selecciona XPass D2 en la pantalla principal.
+
+3. Haga clic en <Cmd sid="ui_338" product="dev" />.
+
+   <Image src="/img/device/xpd2-template-management-export1.png" className="none" width={840} />
+
+4. En la parte superior de la lista de plantillas, toque <Image src="/img/common/ico-menu1.svg" ico alone /> y seleccione <Cmd sid="ui_339" product="dev" />.
+
+5. Después de seleccionar la plantilla para exportar, toque <Image src="/img/common/ico-check.svg" ico alone />.
+
+   <Image src="/img/device/xpd2-template-management-export2.png" width={250} />
+
+:::info
+
+Las plantillas se guardarán en la carpeta *DeviceManager_TemplateFiles* creada en la misma ubicación que el archivo de instalación de la aplicación Suprema Device Manager.
+
+:::
+
+### Importar plantilla
+
+Importe plantillas para la configuración de XPass D2 en la aplicación.
+
+1. Ejecuta Suprema Device Manager en el dispositivo móvil.
+
+2. Selecciona XPass D2 en la pantalla principal.
+
+3. Haga clic en <Cmd sid="ui_338" product="dev" />.
+
+   <Image src="/img/device/xpd2-template-management-import.png" className="none" width={840} />
+
+4. En la parte superior de la lista de plantillas, toque <Image src="/img/common/ico-menu1.svg" ico alone /> y seleccione <Cmd sid="ui_337" product="dev" />.
+
+5. Seleccione la plantilla que desea importar de la carpeta donde se almacenan las plantillas.
+
+:::info
+
+Las plantillas se guardarán en la carpeta *DeviceManager_TemplateFiles* creada en la misma ubicación que el archivo de instalación de la aplicación Suprema Device Manager.
+
+:::
+
+## Buscar y conectar dispositivo {#device-search-connect}
+
+Busque y conéctese a los XPass D2 instalados cercanos. Conéctese a Suprema Device Manager para actualizar el firmware del dispositivo o utilizar funciones como reiniciar el dispositivo o cambiar la contraseña de la plantilla.
+
+1. Active el Bluetooth en su dispositivo móvil y ejecute Suprema Device Manager.
+
+2. Selecciona XPass D2 en la pantalla principal.
+
+3. Haga clic en <Cmd sid="ui_285" product="dev" />. Aparecerá una lista de dispositivos conectables.
+
+   <Image src="/img/device/xpd2-template-search-device-select.png" className="none" width={540} />
+
+4. Seleccione un dispositivo verificando el ID en la lista de dispositivos o acerque su dispositivo móvil al dispositivo para conectarlo.
+
+5. Ingrese la contraseña de conexión. Toque <Image src="/img/common/ico-password.svg" ico alone /> para mostrar la contraseña ingresada.
+
+6. Presione <Cmd sid="ui_367" product="dev" /> para completar la conexión del dispositivo.
+
+## Actualizar el firmware del dispositivo {#device-firmware-upgrade}
+
+Actualice fácilmente el firmware del dispositivo.
+
+:::info
+
+* Descargue el archivo de firmware en su dispositivo móvil para actualizar el firmware. Puede descargar el firmware más reciente desde el [Centro de descargas de Suprema](https://download.supremainc.com/).
+
+* Durante la actualización del firmware, mantenga una distancia menor a 1 m entre el dispositivo y el dispositivo móvil.
+
+:::
+
+1. Consulte [Buscar y conectar un dispositivo](#device-search-connect) para conectar el dispositivo al que desea actualizar el firmware.
+
+2. Toque <Image src="/img/common/ico-option.svg" ico alone /> → <Cmd sid="ui_018" product="dev" />.
+
+   <Image src="/img/device/xpd2-template-management-fwupgrade.png" width={250} />
+
+3. Seleccione el firmware desde la ruta donde se guardó el archivo de firmware. La actualización del firmware está en curso.
+
+4. Presione <Cmd sid="ui_367" product="dev" /> para completar la actualización del firmware.
+
+## Reiniciar dispositivo
+
+Reinicie el dispositivo.
+
+1. Consulte [Buscar y conectar un dispositivo](#device-search-connect) para conectar el dispositivo que desea reiniciar.
+
+2. Toque <Image src="/img/common/ico-option.svg" ico alone /> → <Cmd sid="ui_287" product="dev" />.
+
+   <Image src="/img/device/xpd2-template-management-restart.png" width={250} />
+
+3. Al reiniciar el dispositivo, la conexión de comunicación BLE con el dispositivo móvil se desconectará. Habilite la función <Cmd sid="ui_276" product="dev" /> para reconectar automáticamente. Para obtener instrucciones detalladas de configuración, consulte [Configurar los ajustes de la aplicación](initial-setup#app-settings).
+
+## Cambiar contraseña de administrador {#admin-password-change}
+
+Cambie la contraseña de administrador de la plantilla.
+
+1. Consulte [Buscar y conectar un dispositivo](#device-search-connect) para conectar el dispositivo con la plantilla en la que desea cambiar la contraseña.
+
+2. Toque <Image src="/img/common/ico-option.svg" ico alone /> → <Cmd sid="ui_156" product="dev" />.
+
+   <Image src="/img/device/xpd2-template-management-password.png" width={250} />
+
+3. Ingrese la contraseña actual y la nueva contraseña que utilizará.
+
+   <Image src="/img/device/device-manager-change-password.png" width={250} />
+
+4. Presione <Cmd sid="ui_367" product="dev" /> para completar el cambio de contraseña.
+
+:::info
+
+* La contraseña de administrador puede tener de 6 a 32 dígitos.
+
+* Ten cuidado de no perder la contraseña de administrador. Si pierdes la contraseña de administrador, será necesario inicializar el dispositivo para conectarte al dispositivo con la plantilla aplicada.
+
+:::

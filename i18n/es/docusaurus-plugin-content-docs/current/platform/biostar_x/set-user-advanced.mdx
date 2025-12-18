@@ -1,0 +1,38 @@
+---
+id: set-user-advanced
+title: Configura Los Ajustes Avanzados Del Usuario
+description: Aprende a configurar mensajes que aparezcan en el dispositivo cuando el usuario ingrese y a excluir las funciones de integración de directorios.
+keywords:
+  - Usuario
+  - Configuración avanzada
+---
+
+Configura mensajes para que aparezcan en el dispositivo cuando el usuario ingrese o excluye al usuario de la sincronización durante <Cmd sid="settings.activeDirectory.title" product="2" className="normal" /> integration. Configura esta función al agregar o editar un usuario.
+
+Ve a la página <Cmd sid="shell.header.launcher" /> → <Cmd sid="shell.header.user" /> y establece permisos de acceso con los dos métodos siguientes.
+
+import EnterUserPage from '../../common/_enter-user-page.mdx';
+
+<EnterUserPage />
+
+Configura los siguientes elementos en la sección <Cmd sid="common.advanced" product="2" />.
+
+<Image src="/img/biostarx-user-advanced.png" />
+
+* <Cmd sid="common.privateMessage" product="2" />: Ingresa un mensaje que aparezca en el dispositivo cuando el usuario ingrese. Ingresa hasta 128 caracteres para el mensaje.
+
+* <Cmd sid="user.adsync.exclude" product="2" />: Excluye al usuario de la sincronización durante la integración de <Cmd sid="settings.activeDirectory.title" product="2" className="normal" />.
+
+:::info
+
+* La opción <Cmd sid="user.adsync.exclude" product="2" /> está disponible mediante opciones adicionales para licencias **Advanced** o superiores. Para más información sobre la política de licencias, consulta [lo siguiente](licensing#features-add-ons).
+
+* Para obtener más información sobre la configuración de la integración de directorios, consulta [lo siguiente](settings-diretory-integration).
+
+:::
+
+<NextStep>
+  <NextItem to="edit-user">
+    Consulte cómo editar la información del usuario.
+  </NextItem>
+</NextStep>

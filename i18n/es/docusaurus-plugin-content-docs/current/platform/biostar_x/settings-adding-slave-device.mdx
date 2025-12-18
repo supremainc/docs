@@ -1,0 +1,44 @@
+---
+id: settings-adding-slave-device
+title: Registrar esclavo
+description: Esta sección ofrece orientación para añadir un esclavo al maestro.
+keywords:
+  - Dispositivo
+  - dispositivo esclavo
+---
+
+Amplía fácilmente la red del sistema de control de acceso añadiendo un [dispositivo esclavo](../../reference/glossary#slave_device) al [dispositivo maestro](../../reference/glossary#master_device) registrado. Los dispositivos maestro y esclavo pueden conectarse mediante comunicación RS-485. Además de los dispositivos, también pueden conectarse y utilizarse dispositivos complementarios como Secure I/O 2.
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.device.root" /> en la barra lateral izquierda.
+
+3. Haz clic con el botón derecho en el dispositivo maestro o esclavo en la lista <Cmd sid="menu.device.allDeviceGroups" product="2" />.
+
+   <Image src="/img/biostarx-setting-device-adding-slave-device.png" />
+
+4. Haz clic en <Cmd sid="device.menu.searchSlaveDevice" product="2" /> en el menú emergente.
+
+5. Cuando aparezca la lista de dispositivos esclavos conectados al dispositivo maestro, selecciona el dispositivo que se va a registrar. Si el dispositivo deseado no aparece en la lista, haz clic en <Cmd sid="button.search" product="2" /> en la esquina superior derecha.
+
+   <Image src="/img/biostarx-setting-device-adding-slave-list.png" />
+
+6. Haz clic en <Cmd sid="button.add" product="2" />.
+
+7. Cuando aparezca el mensaje de confirmación del registro del dispositivo, haz clic en <Cmd sid="button.apply" product="2" />.
+
+El dispositivo esclavo registrado aparecerá debajo del dispositivo seleccionado.
+
+:::info
+
+* No es posible añadir un dispositivo de autenticación facial como esclavo cuando el dispositivo maestro es de autenticación por huella digital.
+
+* No es posible añadir un dispositivo de autenticación facial como esclavo si el dispositivo maestro es de autenticación facial y ya se añadió otro dispositivo esclavo.
+
+* Solo se puede añadir un dispositivo de autenticación facial como esclavo cuando el dispositivo maestro es de autenticación facial.
+
+* Cuando el dispositivo maestro es de autenticación facial, se puede conectar además un Secure I/O 2 y un DM-20.
+
+* El número máximo de dispositivos esclavos que se pueden conectar varía según el método de autenticación, el número de usuarios y el número de dispositivos. Ten en cuenta también que la cantidad de dispositivos esclavos afecta el rendimiento de autenticación.
+
+:::

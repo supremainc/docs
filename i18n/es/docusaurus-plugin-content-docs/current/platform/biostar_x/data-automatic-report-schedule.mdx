@@ -1,0 +1,90 @@
+---
+id: data-automatic-report-schedule
+title: Programación automática de reportes
+description: Configure una programación para generar automáticamente informes personalizados creados al establecer el período DYNAMIC.
+keywords:
+  - Informe automático
+  - Turno
+---
+
+Configure una programación para generar automáticamente <Cmd sid="reportApp.customReport" product="2" /> creados al establecer el período DYNAMIC.
+
+## Agregar programación automática
+
+1. Haga clic en <Cmd sid="shell.header.data" /> o seleccione <Cmd sid="shell.header.data" /> en la lista de accesos directos en la parte superior izquierda de la pantalla en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en la pestaña <Cmd sid="reportApp.mainMenu.schedule" product="2" />.
+
+3. Haga clic en <Cmd sid="reportApp.addSchedule" product="2" /> en la parte superior derecha de la pantalla.
+
+   <Image src="/img/biostarx-data-auto-schedule-main.png" />
+
+4. Cuando aparezca la pantalla <Cmd sid="data.schedule.newSchedulePageTitle" />, configure cada elemento.
+
+### Configuración de información
+
+Configure la información básica de la programación de informes automáticos.
+
+<Image src="/img/biostarx-data-information.png" className="none" />
+
+* <Cmd sid="reportApp.scheduleName" product="2" />: Ingrese el nombre de la programación.
+
+### Configuración de informes y programación
+
+Configure la programación que se generará automáticamente para cada informe.
+
+<Image src="/img/biostarx-data-report-schedule.png" className="none" />
+
+* <Cmd sid="reportApp.report" product="2" />: Seleccione un informe personalizado para generar automáticamente. Solo aparecerán los informes personalizados configurados con período DYNAMIC.
+
+* <Cmd sid="reportApp.frequency" product="2" />: Configure la frecuencia para generar informes automáticamente.
+
+* <Cmd sid="reportApp.generateTime" product="2" />: Configure la hora para generar informes automáticamente.
+
+:::info
+
+Para obtener más información sobre la creación de informes personalizados, consulte [the following](data-generate-reports#custom-report).
+
+:::
+
+### Configuración del formato de informe
+
+Configure el formato para cada informe.
+
+<Image src="/img/biostarx-data-report-format.png" className="none" />
+
+* <Cmd sid="reportApp.outputType" product="2" />: Configure el método de generación automática de informes.
+
+* <Cmd sid="reportApp.reportTitle" product="2" />: Seleccione <Cmd sid="reportApp.showTitle" product="2" /> para mostrar el nombre del informe como título en cada página.
+
+* <Cmd sid="reportApp.header" product="2" />: Si se selecciona <Cmd sid="reportApp.showHeader" product="2" />, el encabezado se muestra cuando se crea el informe. Seleccione <Cmd sid="reportApp.onEveryPage" product="2" /> para mostrar el encabezado en cada página.
+
+  :::info
+
+  El encabezado puede variar según los informes.
+
+  :::
+
+* <Cmd sid="reportApp.footer" product="2" />: Configure si se mostrarán números de página.
+
+* <Cmd sid="reportApp.fileFormat" product="2" />: Configure el formato de archivo para exportar informes.
+
+3. Haga clic en <Cmd sid="reportApp.apply" product="2" /> para guardar la configuración.
+
+:::info
+
+Cuando todas las configuraciones estén completas, establezca la ruta para guardar el informe. Para obtener más información, consulte [the following](data-settings).
+
+:::
+
+## Eliminar programación automática
+
+1. Haga clic en <Cmd sid="shell.header.data" /> o seleccione <Cmd sid="shell.header.data" /> en la lista de accesos directos en la parte superior izquierda de la pantalla en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en la pestaña <Cmd sid="reportApp.mainMenu.schedule" product="2" />.
+
+3. Haga clic en la casilla de verificación de la programación que desea eliminar de la lista de programación automática.
+
+   <Image src="/img/biostarx-data-auto-schedule-remove-item.png" />
+
+4. Haga clic en <Cmd sid="common.button.delete" /> en la parte superior derecha de la pantalla.

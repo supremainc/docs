@@ -1,0 +1,122 @@
+---
+id: settings-server-https
+title: Instalar Certificado HTTPS
+description: Para conectar BioStar X mediante HTTPS, debe registrar la dirección IP del servidor donde está instalado BioStar X para instalar el certificado.
+keywords:
+  - HTTPS
+  - Certificado
+---
+
+Para conectar **BioStar X** mediante HTTPS, debe registrar la dirección IP del servidor donde está instalado **BioStar X** para instalar el certificado.
+
+## Cuándo se requiere la instalación del certificado
+
+Si accede a **BioStar X** sin tener instalado el certificado HTTPS, aparecerá una advertencia de seguridad como la siguiente en su navegador web.
+
+<Image src="/img/biostarx-settings-server-not-secure.png" />
+
+Estas advertencias aparecen porque el navegador no puede verificar la identidad del servidor. La instalación del certificado hará que el navegador confíe en el servidor **BioStar X**, lo que permitirá una conexión HTTPS segura sin advertencias de seguridad.
+
+## Instalación del certificado
+
+Instale el certificado antes de utilizar **BioStar X** para garantizar la conectividad de red correcta.
+
+1. Acceda a la página de inicio de sesión de **BioStar X**.
+
+2. Haga clic en el enlace <Cmd sid="auth.httpsDownload" /> en la parte inferior de la pantalla.
+
+   <Image src="/img/biostarx-settings-server-login-down-https-cert.png" />
+
+3. Guarde el archivo *cert-register.zip* localmente.
+
+4. Extraiga el archivo descargado y ejecute el archivo *cert-register.exe*. Se ejecuta el programa **Enroll Certificate**.
+
+5. Seleccione **BioStar X** en **Target System**, introduzca la dirección IP del PC donde está instalado **BioStar X** en **Server Address** y haga clic en **Enrollment**.
+
+   <Image src="/img/common/biostarx-settings-server-enrollment-certification.png" className="none" alone />
+
+   :::note
+
+   El número de puerto predeterminado para **BioStar X** es 443. Si cambió el número de puerto, introduzca el nuevo número en **Port**.
+
+   :::
+
+6. Verifique el mensaje de advertencia de seguridad y haga clic en **Yes**.
+
+Reinicie el navegador web e introduzca la dirección IP registrada para acceder a la página de **BioStar X**. Al hacer clic en el ícono a la izquierda de la barra de direcciones, aparecerá el mensaje **Esta conexión es segura**.
+
+<Image src="/img/biostarx-settings-server-secure.png" />
+
+:::info
+
+La dirección IP introducida en **Enroll Certificate** debe ser la misma que la establecida en **BioStar X**. Compruébela en la ruta de menú <Cmd sid="shell.header.setting" /> → <Cmd sid="setting.menu.server.root" /> → <Cmd sid="setting.menu.server.server" /> en <Cmd sid="setting.server.biostarIPAdress" product="2" />.
+
+:::
+
+## Instalación del certificado en la configuración del servidor
+
+1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+
+2. Haga clic en <Cmd sid="setting.menu.server.root" /> → <Cmd sid="setting.https.https" product="2" /> en la barra lateral izquierda de la pantalla.
+
+3. Haga clic en <Cmd sid="button.certDownload" product="2" />.
+
+   <Image src="/img/biostarx-settings-server-https.png" className="none" />
+
+4. Guarde el archivo *cert-register.zip* localmente.
+
+5. Descomprima el archivo descargado y ejecute el archivo **cert-register.exe**. Se ejecuta el programa **Enroll Certificate**.
+
+6. Seleccione **BioStar X** en **Target System**, introduzca la dirección IP del PC donde está instalado **BioStar X** en **Server Address** y haga clic en **Enrollment**.
+
+   <Image src="/img/common/biostarx-settings-server-enrollment-certification.png" className="none" alone />
+
+   :::note
+
+   El número de puerto predeterminado para **BioStar X** es 443. Si cambió el número de puerto, introduzca el nuevo número en **Port**.
+
+   :::
+
+7. Verifique el mensaje de advertencia de seguridad y haga clic en **Yes**.
+
+Reinicie el navegador web e introduzca la dirección IP registrada para acceder a la página de **BioStar X**. Al hacer clic en el ícono a la izquierda de la barra de direcciones, aparecerá el mensaje **Esta conexión es segura**.
+
+<Image src="/img/biostarx-settings-server-secure.png" />
+
+## Instalación del certificado para el servidor VMS {#vms-certification}
+
+Si se presentan las siguientes situaciones, instala el certificado desde el servidor VMS en el PC cliente para resolver el problema.
+
+* Al acceder al **Sistema de Gestión de Video** (VMS) a través del navegador y aparece una advertencia "No es seguro"
+
+* Cuando el video en tiempo real se reproduce en la página <Cmd sid="shell.header.arena" /> pero el video grabado no se reproduce
+
+* Al instalar el servidor VMS y **BioStar X** en el mismo servidor
+
+:::info
+
+* Para obtener información sobre cómo instalar el certificado en el servidor VMS, consulte [lo siguiente](settings-video-integration#install-vms-certification).
+
+* La función para integrar con el servidor VMS debe comprarse por separado en un paquete de opciones adicional. Para obtener más información sobre la política de licencias, consulta [lo siguiente](licensing).
+
+:::
+
+### Instalación de certificado en PC cliente {#install-client-certification}
+
+1. Descargue el instalador del certificado HTTPS (*cert-register.zip*) desde la pantalla de inicio de sesión o desde <Cmd sid="shell.header.setting" /> → <Cmd sid="setting.menu.server.root" /> → <Cmd sid="setting.https.https" product="2" /> en la PC cliente donde está instalado **BioStar X**.
+
+2. Descomprima el archivo descargado y ejecute el archivo **cert-register.exe**. Se ejecuta el programa **Enroll Certificate**.
+
+3. Seleccione **VMS** en **Target System** e ingrese la siguiente información.
+
+   <Image src="/img/common/biostarx-settings-server-enrollment-vms-certification.png" alone />
+
+   * **Server Address**: dirección IP del servidor VMS
+
+   * **Port**: número de puerto del servidor VMS
+
+4. Haga clic en el botón **Enrollment**.
+
+5. Verifique el mensaje de advertencia de seguridad y haga clic en **Yes**.
+
+Reinicie el navegador web y verifique que el video grabado del servidor VMS se reproduzca normalmente en la página <Cmd sid="shell.header.arena" />.
