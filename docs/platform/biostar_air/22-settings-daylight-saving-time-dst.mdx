@@ -7,58 +7,87 @@ keywords: [일광 절약 시간, DST, 시간대]
 
 import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
-## 기능 개요 {#feature-overview}
-
 일광 절약 시간(Daylight Saving Time, DST)을 설정을 사용해 사이트의 시간 조정 방식을 구성할 수 있습니다. 이는 특히 여러 시간대에 걸쳐 방문자가 있는 사이트를 관리할 때 일관되고 정확한 시간 추적을 보장하는 데 중요합니다.
 
-<CustomerNote />
+:::tip
 
-## 일광 절약 시간 설정으로 이동 {#navigating-to-the-feature}
-
-일광 절약 시간 설정으로 이동하세요.
-
-* **Settings**으로 이동하세요.
-
-* **DST**를 클릭하세요.
-
-* **Daylight Saving Time** 페이지로 이동하게 되며, 기존 DST 구성을 보고 편집할 수 있습니다.
+일광 절약 시간(Daylight Saving Time, DST) 설정에 대한 동영상 가이드를 시청하려면 다음 영상을 참고하세요.
 
 <YouTube videoId="e51UOKLECz8" />
 
+:::
 
-## 단계별 사용 안내 {#step-by-step-instructions}
+:::info
 
-### 기존 DST 구성 편집 {#editing-an-existing-dst-configuration}
+<Cmd sid='event_logs_submenu' product='air' className='normal' />를 확인할 때 아래 사항을 참고하세요.
 
-1. **Daylight Saving Time** 페이지에서 편집할 DST 구성을 찾으세요.
+* 장치 시간이 설정되어 있다면 이벤트 로그 타임스탬프는 각 개별 장치의 DST 시간에 맞춰 조정됩니다.
 
-1. 기존 DST 설정을 클릭하고 매개변수를 수정하세요.
+* 사이트 시간이 설정되어 있다면 타임스탬프는 장치별이 아닌 사이트의 DST 구성에 따라 조정됩니다.
 
-### 새 DST 구성 추가 {#adding-a-new-dst-configuration}
+:::
 
-1. 화면 오른쪽 상단의 **Add DST** 버튼을 클릭하세요.
+<CustomerNote />
 
-1. 드롭다운 메뉴에서 적절한 시간대를 선택하세요.
 
-1. **Automatic DST**(권장)를 활성화할지 수동으로 구성할지 선택하세요.
+## 새 DST 구성 추가 {#addingNewdst}
 
-1. **Automatic DST**를 사용하려면 토글 버튼을 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='daylight_saving_time_submenu' product='air' />를 클릭하세요.
 
-1. 수동으로 구성하려면 해당 시간대에 대한 적절한 시작일 및 종료일 또는 주를 지정하세요.
+1. 화면 오른쪽 상단의 <Cmd sid='btn_add_DST' product='air' /> 버튼을 클릭하세요.
 
-### 장치에 대한 DST 활성화 {#enabling-dst-for-devices}
+   <Image src='/img/air/bsair-settings-dst.png' />
+
+1. <Cmd sid='dst_add_modal_title' product='air' /> 패널이 나타나면 <Cmd sid='device_editable_fields_timezone' product='air' />에서 원하는 항목을 선택하세요.
+
+   <Image src='/img/air/bsair-settings-dst-add.png' />
+
+### 자동 구성 {#autoConfig}
+
+<Cmd sid='dst_add_modal_subtitle_setting_dst' product='air' /> 섹션에서 <Cmd sid='dst_auto' product='air' />을 클릭하고 하단의 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요. 선택한 시간대에 대한 DST 구성이 자동 추가됩니다.
+
+<Image src='/img/air/bsair-settings-dst-add-auto.png' />
+
+
+### 수동 구성 {#manualConfig}
+
+수동으로 구성하려면 해당 시간대에 대한 적절한 시작 시간과 종료 시간을 설정하세요.
+
+<Image src='/img/air/bsair-settings-dst-add-manual.png' />
+
+* <Cmd sid='date_label' product='air' />: DST가 시작되고 종료되는 날짜를 선택할 수 있습니다.
+
+* <Cmd sid='dropdown_label_week' product='air' />: DST가 시작되고 종료되는 주를 선택할 수 있습니다.
+
+DST 구성을 저장하려면 하단의 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+
+## 기존 DST 구성 수정 {#editing-an-existing-dst-configuration}
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='daylight_saving_time_submenu' product='air' />를 클릭하세요.
+
+1. 목록에서 수정하려는 DST 구성을 클릭하세요. 또는 체크박스를 클릭하고 상단의 <IcAirEdit /> 버튼을 클릭하세요.
+
+1. <Cmd sid='dst_update_modal_title' product='air' /> 패널이 나타나면 시작 시간과 종료 시간을 수정하세요.
+
+   <Image src='/img/air/bsair-settings-dst-edit.png' caption />
+
+1. 변경 사항을 저장하려면 하단의 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+
+## 장치의 DST 활성화 {#enabling-dst-for-devices}
 
 각 장치에서도 정확한 시간 조정을 보장하기 위해 DST를 활성화해야 합니다.
 
-1. **Device Management**로 이동하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' />를 클릭하세요.
 
-1. **Registered Devices**를 클릭하세요.
+1. 목록에서 DST 설정을 적용하려며는 장치를 클릭하세요.
 
-1. 목록에서 장치를 선택하세요.
+1. <Cmd sid='device_editable_fields_timezone' product='air' /> 섹션에서 원하는 시간대를 선택하고 <Cmd sid='device_field_dst_usage' product='air' /> 옵션을 활성화하세요.
 
-1. **Time Zone** 섹션을 찾으세요.
+   <Image src='/img/air/bsair-device-mng-edit-timezone.png' />
 
-1. **Use DST**를 활성화하고 장치에 대한 일광 절약 시간을 활성화합니다.
+1. 변경 사항을 저장하려면 하단의 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
 
 :::note
 
@@ -67,10 +96,12 @@ DST를 적용하는 시간대에서 이 설정은 기본 활성화됩니다.
 :::
 
 
-## 공통 이슈 및 고려사항 {#common-issues-and-considerations}
+## DST 구성 삭제 {#deleteDst}
 
-**Event Logs**를 확인할 때 아래 사항을 참고하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='daylight_saving_time_submenu' product='air' />를 클릭하세요.
 
-* 장치 시간이 설정되어 있다면 이벤트 로그 타임스탬프는 각 개별 장치의 DST 시간에 맞춰 조정됩니다.
+1. 목록에서 삭제하려는 DST 구성 항목의 체크박스를 클릭하세요. 1개 이상의 DST 구성 항목을 선택할 수 있습니다.
 
-* 사이트 시간이 설정되어 있다면 타임스탬프는 장치별이 아닌 사이트의 DST 구성에 따라 조정됩니다.
+1. 화면 상단의 <IcAirRemove /> 버튼을 클릭하세요.
+
+1. 메시지 창이 나타나면 <Cmd sid='btn_delete' product='air' /> 버튼을 클릭하세요.
