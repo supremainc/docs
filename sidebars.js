@@ -839,6 +839,7 @@ const sidebars = {
             id: 'device/corestation_20/release-notes/index',
           },
           items: [
+            'device/corestation_20/release-notes/103',
             'device/corestation_20/release-notes/102',
             'device/corestation_20/release-notes/101',
             'device/corestation_20/release-notes/100',
@@ -897,6 +898,7 @@ const sidebars = {
             id: 'device/doorinterface/release-notes/index',
           },
           items: [
+            'device/doorinterface/release-notes/102',
             'device/doorinterface/release-notes/101',
             'device/doorinterface/release-notes/100',
           ]
@@ -1600,6 +1602,7 @@ const sidebars = {
             id: 'device/biostation_2a/release-notes/index',
           },
           items: [
+            'device/biostation_2a/release-notes/120',
             'device/biostation_2a/release-notes/111',
             'device/biostation_2a/release-notes/110',
             'device/biostation_2a/release-notes/100',
@@ -1865,6 +1868,8 @@ const sidebars = {
             id: 'device/xstation_2/release-notes/index',
           },
           items: [
+            'device/xstation_2/release-notes/140',
+            'device/xstation_2/release-notes/132',
             'device/xstation_2/release-notes/131',
             'device/xstation_2/release-notes/130',
             'device/xstation_2/release-notes/123',
