@@ -149,7 +149,7 @@ function _createMdxContent(props) {
               children: "운영체제"
             }), (0,jsx_runtime.jsx)(_components.td, {
               colSpan: "3",
-              children: "Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022"
+              children: "Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -370,7 +370,7 @@ function _createMdxContent(props) {
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "운영체제"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022"
+              children: "Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {

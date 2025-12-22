@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["61841"], {
-30886: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["92396"], {
+29964: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,28 +9,28 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_x_system_requirements_mdx_142_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_ja_docusaurus_plugin_content_docs_current_platform_biostar_x_system_requirements_mdx_481_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-es-docusaurus-plugin-content-docs-current-platform-biostar-x-system-requirements-mdx-142.json
-var site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_x_system_requirements_mdx_142_namespaceObject = JSON.parse('{"id":"platform/biostar_x/system-requirements","title":"Requisitos mínimos del sistema","description":"Verifica los requisitos del sistema para instalar BioStar X y configurar el entorno óptimo según el tamaño de tu organización.","source":"@site/i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/system-requirements.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/system-requirements","permalink":"/docs/es/platform/biostar_x/system-requirements","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/system-requirements.mdx","tags":[],"version":"current","frontMatter":{"id":"system-requirements","title":"Requisitos mínimos del sistema","description":"Verifica los requisitos del sistema para instalar BioStar X y configurar el entorno óptimo según el tamaño de tu organización.","keywords":["Requisitos mínimos del sistema","Sistema operativo","Base de datos","CPU","RAM"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"지원 장치","permalink":"/docs/es/platform/biostar_x/supported-device"},"next":{"title":"Primeros pasos","permalink":"/docs/es/platform/biostar_x/getting-started"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-ja-docusaurus-plugin-content-docs-current-platform-biostar-x-system-requirements-mdx-481.json
+var site_i_18_n_ja_docusaurus_plugin_content_docs_current_platform_biostar_x_system_requirements_mdx_481_namespaceObject = JSON.parse('{"id":"platform/biostar_x/system-requirements","title":"システム最小要件","description":"BioStar X をインストールするためのシステム要件を確認し、組織規模に合わせて最適な環境を構築してください。","source":"@site/i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/system-requirements.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/system-requirements","permalink":"/docs/ja/platform/biostar_x/system-requirements","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/system-requirements.mdx","tags":[],"version":"current","frontMatter":{"id":"system-requirements","title":"システム最小要件","description":"BioStar X をインストールするためのシステム要件を確認し、組織規模に合わせて最適な環境を構築してください。","keywords":["システム最小要件","オペレーティング システム","データベース","CPU","RAM"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"지원 장치","permalink":"/docs/ja/platform/biostar_x/supported-device"},"next":{"title":"はじめに","permalink":"/docs/ja/platform/biostar_x/getting-started"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/system-requirements.mdx
+;// CONCATENATED MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/system-requirements.mdx
 
 
 const frontMatter = {
 	id: 'system-requirements',
-	title: 'Requisitos mínimos del sistema',
-	description: 'Verifica los requisitos del sistema para instalar BioStar X y configurar el entorno óptimo según el tamaño de tu organización.',
+	title: 'システム最小要件',
+	description: 'BioStar X をインストールするためのシステム要件を確認し、組織規模に合わせて最適な環境を構築してください。',
 	keywords: [
-		'Requisitos mínimos del sistema',
-		'Sistema operativo',
-		'Base de datos',
+		'システム最小要件',
+		'オペレーティング システム',
+		'データベース',
 		'CPU',
 		'RAM'
 	],
@@ -45,27 +45,27 @@ const assets = {
 
 
 const toc = [{
-  "value": "Servidor principal",
+  "value": "メインサーバー",
   "id": "main-server",
   "level": 2
 }, {
-  "value": "Requisitos de licencias de SQL Server",
+  "value": "SQL Server ライセンス要件",
   "id": "sqlserver-requriements",
   "level": 3
 }, {
-  "value": "Uso general",
+  "value": "一般的な使用",
   "id": "general",
   "level": 4
 }, {
-  "value": "Uso de la API de BioStar X",
+  "value": "BioStar X API の使用",
   "id": "useapi",
   "level": 4
 }, {
-  "value": "Servidor de comunicación",
+  "value": "コミュニケーションサーバー",
   "id": "communication-server",
   "level": 2
 }, {
-  "value": "Cliente",
+  "value": "クライアント",
   "id": "client",
   "level": 2
 }];
@@ -94,24 +94,24 @@ function _createMdxContent(props) {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " ofrece una solución confiable y escalable de gestión de seguridad integrada para entornos empresariales grandes. El sistema puede gestionar eficientemente más de mil dispositivos mediante una arquitectura distribuida compuesta por un servidor principal y un servidor de comunicación."]
+      }), " は、大規模エンタープライズ環境向けに、安定して拡張可能な統合セキュリティ管理ソリューションを提供します。 システムはメインサーバーとコミュニケーションサーバーで構成される分散アーキテクチャにより、最大 1,000 台以上のデバイスを効率的に管理できます。"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "El servidor principal gestiona las funciones centrales del sistema, mientras que el servidor de comunicación se encarga de la comunicación con los dispositivos, distribuyendo la carga y optimizando el rendimiento. Además, los administradores pueden acceder al sistema a través de un navegador web en los equipos cliente y realizar todas las tareas de gestión. Consulta los siguientes requisitos del sistema para configurar el entorno óptimo según el tamaño de tu organización."
+      children: "メインサーバーはシステムの中核管理機能を担当し、コミュニケーションサーバーはデバイス通信を専任することで負荷を分散し、パフォーマンスを最適化します。 管理者はクライアント PC のウェブブラウザーからシステムにアクセスし、すべての管理業務を実行できます。 以下のシステム要件を確認し、組織規模に合わせて最適な環境を構築してください。"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["Para obtener más información sobre la configuración y optimización de licencias, comunícate con el ", (0,jsx_runtime.jsx)(_components.a, {
+        children: ["ライセンス構成および最適化の詳細については、", (0,jsx_runtime.jsx)(_components.a, {
           href: "https://support.supremainc.com",
-          children: "Servicio de soporte técnico de Suprema"
-        }), "."]
+          children: "Suprema テクニカルサポートチーム"
+        }), " までお問い合わせください。"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "main-server",
-      children: "Servidor principal"
+      children: "メインサーバー"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["El servidor principal es el servidor donde se instala el sistema de gestión central de ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["メインサーバーは ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), ". El usuario accede al sistema mediante un navegador web para gestionarlo y realizar todas las tareas, como configurar la información de usuarios o los permisos de acceso. También se encarga de supervisar el estado general del sistema y de gestionar los registros de eventos o las alarmas."]
+      }), " の中央管理システムがインストールされるサーバーです。 ユーザーがウェブブラウザーで接続してシステムを管理し、ユーザー情報や入退室権限設定などのすべての業務を処理します。 さらに、システム全体の状態を監視し、イベントログやアラームの管理を担当します。"]
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "overflow-x col5--15-10-25",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -119,84 +119,84 @@ function _createMdxContent(props) {
           children: (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.th, {
               colSpan: "2",
-              children: "Ítem"
+              children: "項目"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "Pequeña"
+              children: "小規模組織"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "Medio"
+              children: "中規模組織"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "Corporativa"
+              children: "大規模組織"
             })]
           })
         }), (0,jsx_runtime.jsxs)(_components.tbody, {
           children: [(0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: "Entorno de uso"
+              children: "使用環境"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Total Dispositivos"
+              children: "デバイス数"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "1 a 50"
+              children: "1～50 台"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "51 a 100"
+              children: "51～100 台"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "101 a 1,000"
+              children: "101～1,000 台"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               rowSpan: "6",
-              children: "Requisito del sistema"
+              children: "システム環境"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Sistema operativo"
+              children: "オペレーティング システム"
             }), (0,jsx_runtime.jsx)(_components.td, {
               colSpan: "3",
-              children: "Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022"
+              children: "Windows 10、Windows 11、Windows Server 2016、Windows Server 2019、Windows Server 2022、Windows Server 2025"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: "Base de datos"
+              children: "データベース"
             }), (0,jsx_runtime.jsx)(_components.td, {
               colSpan: "3",
-              children: "MariaDB 11.4.4, MS SQL Server 2012 SP3, MS SQL Server 2014 SP2, MS SQL Server 2016 SP1, MS SQL Server 2017, MS SQL Server 2019, MS SQL Server 2022"
+              children: "MariaDB 11.4.4、MS SQL Server 2012 SP3、MS SQL Server 2014 SP2、MS SQL Server 2016 SP1、MS SQL Server 2017、MS SQL Server 2019、MS SQL Server 2022"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "CPU"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "2.3 GHz de 6 núcleos"
+              children: "2.3 GHz 6 Core"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "2.3 GHz de 8 núcleos"
+              children: "2.3 GHz 8 Core"
             }), (0,jsx_runtime.jsxs)(_components.td, {
-              children: ["Mínimo 2.3 GHz", (0,jsx_runtime.jsx)("br", {}), "Recomendado 4.0 GHz de 16 núcleos"]
+              children: ["最小 2.3 GHz", (0,jsx_runtime.jsx)("br", {}), "推奨 4.0 GHz 16 Core"]
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "RAM"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "16 GB"
+              children: "16GB"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "32 GB"
+              children: "32GB"
             }), (0,jsx_runtime.jsxs)(_components.td, {
-              children: ["Mínimo 64 GB", (0,jsx_runtime.jsx)("br", {}), "Recomendado 128 GB"]
+              children: ["最小 64GB", (0,jsx_runtime.jsx)("br", {}), "推奨 128GB"]
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "SSD"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "512 GB"
+              children: "512GB"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "512 GB"
+              children: "512GB"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "1 TB"
+              children: "1TB"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "HDD"
             }), (0,jsx_runtime.jsxs)(_components.td, {
               colSpan: "3",
-              children: ["Al utilizar la función ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "common.imageLog",
                 product: "2"
-              }), ", se requieren 200 GB para 10 millones de registros de imágenes."]
+              }), " 機能を使用する場合、1,000万件のイメージログにつき 200GB が必要です"]
             })]
           })]
         })]
@@ -208,93 +208,93 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), " solo se puede instalar en sistemas operativos de 64 bits."]
+            }), " は 64 ビットのオペレーティングシステムにのみインストールできます。"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "La seguridad de comunicación de MS SQL Server admite TLS 1.2."
+            children: "MS SQL Server のセキュア通信は TLS 1.2 をサポートします。"
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["Si MS SQL Server y ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: ["MS SQL Server と ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), " se instalan en diferentes equipos, instala el ", (0,jsx_runtime.jsx)(_components.a, {
+            }), " を異なる PC にインストールする場合、", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X"
+            }), " がインストールされている PC に ", (0,jsx_runtime.jsx)(_components.a, {
               href: "https://learn.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server",
-              children: "Controlador Microsoft OLE DB para SQL Server"
-            }), " en el equipo donde esté instalado ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "BioStar X"
-            }), "."]
+              children: "Microsoft OLE DB Driver for SQL Server"
+            }), " をインストールする必要があります。"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Para entornos empresariales, se recomienda instalar una base de datos MS SQL Server."
+            children: "大規模組織では MS SQL Server データベースの導入を推奨します。"
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["Si utilizas una base de datos MS SQL Server y ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: ["データベースに MS SQL Server を使用し、", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X T&A"
-            }), ", deberás instalar el ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17",
-              children: "Controlador Microsoft ODBC 17 para SQL Server"
-            }), " correspondiente a tu entorno."]
+            }), " を利用する場合は ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://learn.microsoft.com/ko-kr/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17",
+              children: "Microsoft ODBC Driver 17 for SQL Server"
+            }), " が必要となるため、環境に適したドライバーをインストールしてください。"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "El entorno virtual de Windows proporcionado por Boot Camp en macOS no es compatible."
+            children: "Mac オペレーティングシステムで提供される Boot Camp の Windows 仮想環境はサポートしていません。"
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "sqlserver-requriements",
-      children: "Requisitos de licencias de SQL Server"
+      children: "SQL Server ライセンス要件"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Si utilizas SQL Server como base de datos, se requiere una licencia adecuada de SQL Server según la cantidad de dispositivos conectados para el funcionamiento estable de ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["データベースに SQL Server を使用する場合、", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), ". Consulta las configuraciones de licencias recomendadas para cada entorno y selecciona la licencia adecuada al tamaño y las necesidades de tu organización."]
+      }), " を安定して運用するには、接続されるデバイス数に応じた適切な SQL Server ライセンスが必要です。 各環境の推奨ライセンス構成を参考に、組織の規模とニーズに合ったライセンスを選択してください。"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["Para obtener más información sobre las licencias de SQL Server, consulta ", (0,jsx_runtime.jsx)(_components.a, {
+        children: ["SQL Server のライセンスの詳細については ", (0,jsx_runtime.jsx)(_components.a, {
           href: "https://www.microsoft.com/sql-server/sql-server-2022-pricing",
-          children: "Microsoft SQL Server Licensing"
-        }), "."]
+          children: "Microsoft SQL Server ライセンス"
+        }), " を参照してください。"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
       id: "general",
-      children: "Uso general"
+      children: "一般的な使用"
     }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
       children: [(0,jsx_runtime.jsx)(_components.thead, {
         children: (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.th, {
-            children: "Organización"
+            children: "組織"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "Total Dispositivos"
+            children: "デバイス数"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "Cantidad de núcleos"
+            children: "コア数"
           })]
         })
       }), (0,jsx_runtime.jsxs)(_components.tbody, {
         children: [(0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Pequeña"
+            children: "小規模組織"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "1 a 50"
+            children: "1～50 台"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "4 - 6"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Medio"
+            children: "中規模組織"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "50 - 300 dispositivos"
+            children: "50 - 300 台"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "8 - 12"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Corporativa"
+            children: "大規模組織"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "300 - 1,000 dispositivos"
+            children: "300 - 1,000 台"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "16 - 24"
           })]
@@ -302,40 +302,40 @@ function _createMdxContent(props) {
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
       id: "useapi",
-      children: "Uso de la API de BioStar X"
+      children: "BioStar X API の使用"
     }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
       children: [(0,jsx_runtime.jsx)(_components.thead, {
         children: (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.th, {
-            children: "Organización"
+            children: "組織"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "Total Dispositivos"
+            children: "デバイス数"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "Cantidad de núcleos"
+            children: "コア数"
           })]
         })
       }), (0,jsx_runtime.jsxs)(_components.tbody, {
         children: [(0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Pequeña"
+            children: "小規模組織"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "1 a 50"
+            children: "1～50 台"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "4 - 6"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Medio"
+            children: "中規模組織"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "50 - 300 dispositivos"
+            children: "50 - 300 台"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "8 - 12"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Corporativa"
+            children: "大規模組織"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "300 - 1,000 dispositivos"
+            children: "300 - 1,000 台"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "16 - 24"
           })]
@@ -343,9 +343,9 @@ function _createMdxContent(props) {
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "communication-server",
-      children: "Servidor de comunicación"
+      children: "コミュニケーションサーバー"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "El servidor de comunicación es un servidor dedicado a la comunicación con dispositivos de control de acceso. Al instalarlo por separado del servidor principal, ayuda a gestionar muchos dispositivos de forma confiable. Un solo servidor de comunicación puede conectar hasta 1,000 dispositivos, y se pueden agregar varios servidores de comunicación según sea necesario."
+      children: "コミュニケーションサーバーは、入退室管理デバイスとの通信を専任で行うサーバーです。 メインサーバーとは別に設置し、多数のデバイスを安定して管理できるよう支援します。 1 台のコミュニケーションサーバーで最大 1,000 台のデバイスを接続でき、必要に応じて複数台を追加することもできます。"
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -353,49 +353,49 @@ function _createMdxContent(props) {
           children: (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.th, {
               colSpan: "2",
-              children: "Ítem"
+              children: "項目"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "Especificación"
+              children: "仕様"
             })]
           })
         }), (0,jsx_runtime.jsxs)(_components.tbody, {
           children: [(0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               rowSpan: "4",
-              children: "Requisito del sistema"
+              children: "システム環境"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Sistema operativo"
+              children: "オペレーティング システム"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022"
+              children: "Windows 10、Windows 11、Windows Server 2016、Windows Server 2019、Windows Server 2022、Windows Server 2025"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "CPU"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Mínimo 2.3 GHz, recomendado 4.0 GHz de 16 núcleos"
+              children: "最小 2.3 GHz、推奨 4.0 GHz 16 Core"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "RAM"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Mínimo 64 GB, recomendado 128 GB"
+              children: "最小 64GB、推奨 128GB"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "SSD"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "1 TB"
+              children: "1TB"
             })]
           })]
         })]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "client",
-      children: "Cliente"
+      children: "クライアント"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["El cliente es el equipo desde el cual los administradores acceden a ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["クライアントは、管理者が Web ブラウザーを介して ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " a través de un navegador web para operar el sistema."]
+      }), " にアクセスし、システムを運用する PC です。"]
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -403,20 +403,20 @@ function _createMdxContent(props) {
           children: (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.th, {
               colSpan: "2",
-              children: "Ítem"
+              children: "項目"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "Pequeña"
+              children: "小規模組織"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "Medio"
+              children: "中規模組織"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "Corporativa"
+              children: "大規模組織"
             })]
           })
         }), (0,jsx_runtime.jsxs)(_components.tbody, {
           children: [(0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               rowSpan: "4",
-              children: "Requisito del sistema"
+              children: "システム環境"
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "CPU"
             }), (0,jsx_runtime.jsx)(_components.td, {
@@ -424,31 +424,31 @@ function _createMdxContent(props) {
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "2.5 GHz"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Mínimo 2.5 GHz"
+              children: "最小 2.5 GHz"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "RAM"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "16 GB"
+              children: "16GB"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "32 GB"
+              children: "32GB"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Mínimo 32 GB"
+              children: "最小 32GB"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: "GPU"
             }), (0,jsx_runtime.jsx)(_components.td, {
               colSpan: "3",
-              children: "Mínimo NVIDIA GeForce RTX 4060 al usar VMS"
+              children: "VMS を使用する場合、最低でも NVIDIA GeForce RTX 4060"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: "navegador web"
+              children: "ウェブブラウザー"
             }), (0,jsx_runtime.jsx)(_components.td, {
               colSpan: "3",
-              children: "Google Chrome versión 100 o superior"
+              children: "Google Chrome バージョン 100 以上"
             })]
           })]
         })]
@@ -460,13 +460,13 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), " está optimizado para Google Chrome."]
+            }), " は Google Chrome に最適化されています。"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["La interfaz web de ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), " no admite navegadores móviles."]
+            }), " のウェブインターフェースはモバイルブラウザーをサポートしていません。"]
           }), "\n"]
         }), "\n"]
       })
