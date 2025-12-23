@@ -340,18 +340,22 @@ paths:
             schema:
               type: object
               properties:
-                login_id:
-                  type: string
-                  description: Your login ID.
-                password:
-                  type: string
-                  description: Your password.
+                User:
+                  type: object
+                  properties:
+                    login_id:
+                      type: string
+                      description: Your login ID.
+                    password:
+                      type: string
+                      description: Your password.
               required:
                 - login_id
                 - password
             example:
-              login_id: admin
-              password: admin
+              User:
+                login_id: admin
+                password: admin
       responses:
         '200':
           description: Successful response
@@ -1808,6 +1812,32 @@ paths:
           application/json:
             schema:
               type: object
+              properties:
+                access_level_items:
+                  type: array
+                  description: Array of access level items linking doors to schedules
+                  items:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        description: ID of the access level item (for existing items)
+                      doors:
+                        type: array
+                        description: Array of door objects
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              description: ID of the door
+                      schedule_id:
+                        type: object
+                        description: Schedule object
+                        properties:
+                          id:
+                            type: integer
+                            description: ID of the schedule
               example:
                 AccessLevel:
                   name: Test Update
@@ -1984,6 +2014,36 @@ paths:
           application/json:
             schema:
               type: object
+              properties:
+                use:
+                  type: string
+                  enum: ['true', 'false']
+                  description: Toggle to enable/disable scheduled backup
+                cycle:
+                  type: string
+                  pattern: '^([1-9]|[1-9][0-9]|100)$'
+                  description: Number of backup files to keep (1 to 100)
+                path:
+                  type: string
+                  description: Backup folder path (must exist)
+                  example: "C:\\Backup"
+                minute:
+                  type: string
+                  pattern: '^([0-9]|[1-5][0-9])$'
+                  description: Minute value for scheduled backup (0 to 59)
+                hour:
+                  type: string
+                  pattern: '^([0-9]|1[0-9]|2[0-3])$'
+                  description: Hour value for scheduled backup (0 to 23)
+                days:
+                  type: string
+                  description: Date value for scheduled backup
+                month:
+                  type: string
+                  description: Month value for Scheduled Backup. Leave it as \* since currently it only support Daily and Weekly.
+                weeks:
+                  type: string
+                  description: Day value for Scheduled Backup. Used when it's configured as Weekly Backup. (mon tue wed thu fri sat sun, default value is ?)
               example:
                 use: 'false'
                 cycle: '5'
