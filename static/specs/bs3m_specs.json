@@ -132,7 +132,12 @@
         "rf_distance": {
           "label": "RF 인식 거리",
           "label_id": "specs.credentials.rf_distance",
-          "value": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+          "value": {
+            "ko": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+            "en": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+            "es": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+            "ja": "EM/MIFARE/DESFire/HID iCLASS：50 mm、HID Prox/FeliCa：30 mm"
+          },
           "annotation_label": "anno3"
         },
         "mobile": {
@@ -184,7 +189,7 @@
           "value": {
             "ko": "7\" IPS 컬러 LCD",
             "en": "7\" IPS color LCD",
-            "es": "Pantalla LCD en color IPS de 7\"",
+            "es": "LCD en color IPS 7\"",
             "ja": "7 インチ IPS カラー LCD"
           }
         },
@@ -201,7 +206,7 @@
         "sound": {
           "label": "소리",
           "label_id": "specs.general.sound",
-          "value": "16bit"
+          "value": "16 bit"
         },
         "operating_temp": {
           "label": "동작 온도",
@@ -268,7 +273,12 @@
         "certifications": {
           "label": "인증",
           "label_id": "specs.general.certifications",
-          "value": "CE, UKCA, KC, FCC, IC, RCM, RoHS, REACH, WEEE, EAC, MIC, TELEC, ETL Listed to UL 294"
+          "value": {
+            "ko": "CE, UKCA, KC, FCC, IC, RCM, RoHS, REACH, WEEE, EAC, MIC, TELEC, ETL Listed to UL 294",
+            "en": "CE, UKCA, KC, FCC, IC, RCM, RoHS, REACH, WEEE, EAC, MIC, TELEC, ETL Listed to UL 294",
+            "es": "CE, UKCA, KC, FCC, IC, RCM, RoHS, REACH, WEEE, EAC, MIC, TELEC, ETL Listed to UL 294",
+            "ja": "CE、UKCA、KC、FCC、IC、RCM、RoHS、REACH、WEEE、EAC、MIC、TELEC、ETL Listed to UL 294"
+          }
         }
       }
     },
@@ -290,29 +300,19 @@
             "model1": {
               "label": "BS3M-DB, BS3M-APB",
               "value": {
-                "ko": [
-                  "얼굴: 50,000",
-                  "카드: 100,000"
-               ],
-                "en": [
-                  "Face: 50,000",
-                  "Card: 100,000"
-               ]
+                "ko": [ "얼굴: 50,000", "카드: 100,000" ],
+                "en": [ "Face: 50,000", "Card: 100,000" ],
+                "es": [ "Rostro: 50,000", "Tarjeta: 100,000" ],
+                "ja": [ "顔：50,000", "カード：100,000" ]
               }
             },
             "model2": {
               "label": "BS3M-ODB, BS3M-OAPB",
               "value": {
-                "ko": [
-                  "얼굴: 50,000",
-                  "지문: 100,000",
-                  "카드: 100,000"
-                ],
-                "en": [
-                  "Face: 50,000",
-                  "Fingerprint: 100,000",
-                  "Card: 100,000"
-                ]
+                "ko": [ "얼굴: 50,000", "지문: 100,000", "카드: 100,000" ],
+                "en": [ "Face: 50,000", "Fingerprint: 100,000", "Card: 100,000" ],
+                "es": [ "Rostro: 50,000", "Huella dactilar: 100,000", "Tarjeta: 100,000" ],
+                "ja": [ "顔：50,000", "指紋：100,000", "カード：100,000" ]
               }
             }
           }
@@ -325,33 +325,19 @@
             "model1": {
               "label": "BS3M-DB, BS3M-APB",
               "value": {
-                "ko": [
-                  "얼굴: 100,000",
-                  "카드: 100,000",
-                  "PIN: 100,000"
-                ],
-                "en": [
-                  "Face: 100,000",
-                  "Card: 100,000",
-                  "PIN: 100,000"
-                ]
+                "ko": [ "얼굴: 100,000", "카드: 100,000", "PIN: 100,000" ],
+                "en": [ "Face: 100,000", "Card: 100,000", "PIN: 100,000" ],
+                "es": [ "Rostro: 100,000", "Tarjeta: 100,000", "PIN: 100,000" ],
+                "ja": [ "顔：100,000", "カード：100,000", "PIN：100,000" ]
               }
             },
             "model2": {
               "label": "BS3M-ODB, BS3M-OAPB",
               "value": {
-                "ko": [
-                  "얼굴: 100,000",
-                  "지문: 100,000",
-                  "카드: 100,000",
-                  "PIN: 100,000"
-                ],
-                "en": [
-                  "Face: 100,000",
-                  "Fingerprint: 100,000",
-                  "Card: 100,000",
-                  "PIN: 100,000"
-                ]
+                "ko": [ "얼굴: 100,000", "지문: 100,000", "카드: 100,000", "PIN: 100,000" ],
+                "en": [ "Face: 100,000", "Fingerprint: 100,000", "Card: 100,000", "PIN: 100,000" ],
+                "es": [ "Rostro: 100,000", "Huella dactilar: 100,000", "Tarjeta: 100,000", "PIN: 100,000" ],
+                "ja": [ "顔：100,000", "指紋：100,000", "カード：100,000", "PIN：100,000" ]
               }
             }
           }
@@ -439,7 +425,7 @@
             "ko": "1개",
             "en": "1 relay",
             "es": "1 relé",
-            "ja": "リレー 1"
+            "ja": "1 リレー"
           }
         },
         "poe_plus": {
@@ -476,7 +462,12 @@
         "usb": {
           "label": "USB",
           "label_id": "specs.interface.usb",
-          "value": "USB 2.0 (Type C)"
+          "value": {
+            "ko": "USB 2.0 (Type C)",
+            "en": "USB 2.0 (Type C)",
+            "es": "USB 2.0 (tipo C)",
+            "ja": "USB 2.0 (Type C)"
+          }
         },
         "usb_ext": {
           "label": "USB 확장 포트",
@@ -525,7 +516,7 @@
           "value": {
             "ko": [ "최소: 3 V", "최대: 5 V" ],
             "en": [ "Min.: 3 V", "Max.: 5 V" ],
-            "es": [ "Mínimo: 3 V", "Máx.: 5 V" ],
+            "es": [ "Mín.: 3 V", "Máx.: 5 V" ],
             "ja": [ "最小：3 V", "最大：5 V" ]
           }
         },
@@ -535,7 +526,7 @@
           "value": {
             "ko": "최대: 1 V",
             "en": "Max.: 1 V",
-            "es": "Máximo: 1 V",
+            "es": "Máx.: 1 V",
             "ja": "最大：1 V"
           }
         },
