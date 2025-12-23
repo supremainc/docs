@@ -19,7 +19,9 @@
           "label_id": "specs.general.led_type",
           "value": {
             "ko": [ "배터리 상태 표시등", "AC 상태 표시등" ],
-            "en": [ "Battery status LED", "AC status LED" ]
+            "en": [ "Battery status LED", "AC status LED" ],
+            "es": [ "LED de estado de batería", "LED de estado de AC" ],
+            "ja": [ "バッテリー状態表示灯", "AC 状態表示灯" ]
           }
         },
         "material": {
@@ -27,7 +29,9 @@
           "label_id": "specs.general.material",
           "value": {
             "ko": "ABS 플라스틱",
-            "en": "ABS Plastic"
+            "en": "ABS Plastic",
+            "es": "Plástico ABS",
+            "ja": "ABS プラスチック"
           }
         },
         "operating_temp": {
@@ -91,7 +95,9 @@
           "label_id": "specs.power_supply.input",
           "value": {
             "ko": [ "전압 범위: 110 ~ 240 VAC", "주파수 범위: 50/60 Hz" ],
-            "en": [ "Voltage range: 110 ~ 240 VAC", "Frequency range: 50/60 Hz" ]
+            "en": [ "Voltage range: 110 ~ 240 VAC", "Frequency range: 50/60 Hz" ],
+            "es": [ "Rango de voltaje: De 110 a 240 V CA", "Rango de frecuencia: De 50 a 60 Hz" ],
+            "ja": [ "電圧範囲：110 ~ 240 VAC", "周波数範囲：50/60 Hz" ]
           }
         },
         "output": {
@@ -103,7 +109,9 @@
               "label": "13.8 Vdc",
               "value": {
                 "ko": [ "정격 전류: 11.6 A", "정격 전력: 160 W" ],
-                "en": [ "Rated Current: 11.6 A", "Rated Power: 160 W" ]
+                "en": [ "Rated Current: 11.6 A", "Rated Power: 160 W" ],
+                "es": [ "Corriente nominal: 11.6 A", "Potencia nominal: 160 W" ],
+                "ja": [ "定格電流：11.6 A", "定格電力：160 W" ]
               }
             }
           }
@@ -127,7 +135,12 @@
         "voltage": {
           "label": "전압",
           "label_id": "specs.backup_battery.voltage",
-          "value": "12 VDC"
+          "value": {
+            "ko": "12 VDC",
+            "en": "12 VDC",
+            "es": "12 V CC",
+            "ja": "12 V DC"
+          }
         },
         "capacity": {
           "label": "용량",

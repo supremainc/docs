@@ -34,7 +34,12 @@
         "rf_distance": {
           "label": "RF 인식 거리",
           "label_id": "specs.credentials.rf_distance",
-          "value": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+          "value": {
+            "ko": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+            "en": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+            "es": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+            "ja": "EM/MIFARE/DESFire/HID iCLASS：50 mm、HID Prox/FeliCa：30 mm"
+          },
           "annotation_label": "anno2"
         },
         "mobile": {
@@ -100,7 +105,9 @@
           "label_id": "specs.general.operating_temp",
           "value": {
             "ko": [ "DC 전원: -20 °C ~ 60 °C", "PoE 전원: -20 °C ~ 50 °C" ],
-            "en": [ "DC Power: -20 °C ~ 60 °C", "PoE Power: -20 °C ~ 50 °C" ]
+            "en": [ "DC Power: -20 °C ~ 60 °C", "PoE Power: -20 °C ~ 50 °C" ],
+            "es": [ "Energía DC: De -20 °C a 60 °C", "Energía PoE: De -20 °C a 50 °C" ],
+            "ja": [ "DC 電源：-20 °C ~ 60 °C", "PoE 電源：-20 °C ~ 50 °C" ]
           }
         },
         "storage_temp": {
@@ -138,7 +145,9 @@
           "label_id": "specs.general.camera",
           "value": {
             "ko": "1개 (QR 전용)",
-            "en": "1 Camera (QR only)"
+            "en": "1 Camera (QR only)",
+            "es": "1 Cámara (solo QR)",
+            "ja": "1 台のカメラ（QR専用）"
           }
         },
         "ip_rating": {
@@ -150,7 +159,12 @@
         "certifications": {
           "label": "인증",
           "label_id": "specs.general.certifications",
-          "value": "CE, UKCA, KC, FCC, IC, RCM, SIG, RoHS, REACH, WEEE, EAC, TELEC"
+          "value": {
+            "ko": "CE, UKCA, KC, FCC, IC, RCM, SIG, RoHS, REACH, WEEE, EAC, TELEC",
+            "en": "CE, UKCA, KC, FCC, IC, RCM, SIG, RoHS, REACH, WEEE, EAC, TELEC",
+            "es": "CE, UKCA, KC, FCC, IC, RCM, SIG, RoHS, REACH, WEEE, EAC, TELEC",
+            "ja": "CE、UKCA、KC、FCC、IC、RCM、SIG、RoHS、REACH、WEEE、EAC、TELEC"
+          }
         }
       }
     },
@@ -169,7 +183,9 @@
           "label_id": "specs.storage.max_credentials_1n",
           "value": {
             "ko": "카드: 200,000",
-            "en": "Card: 200,000"
+            "en": "Card: 200,000",
+            "es": "Tarjeta: 200,000",
+            "ja": "カード：200,000"
           }
         },
         "max_credentials_1on1": {
@@ -177,7 +193,9 @@
           "label_id": "specs.storage.max_credentials_1on1",
           "value": {
             "ko": "카드: 200,000",
-            "en": "Card: 200,000"
+            "en": "Card: 200,000",
+            "es": "Tarjeta: 200,000",
+            "ja": "カード：200,000"
           }
         },
         "max_text_logs": {
@@ -258,7 +276,7 @@
             "ko": "1개",
             "en": "1 relay",
             "es": "1 relé",
-            "ja": "リレー 1"
+            "ja": "1 リレー"
           }
         },
         "poe": {
@@ -315,27 +333,19 @@
             "12vdc": {
               "label": "12 Vdc",
               "value": {
-                "ko": [
-                  "DC OUT 미사용 시 전류: 최대 0.5 A",
-                  "DC OUT 사용 시 전류: 최대 2.6 A"
-                ],
-                "en": [
-                  "DC OUT not used Current: Max. 0.5 A",
-                  "DC OUT used Current: Max. 2.6 A"
-                ]
+                "ko": [ "DC OUT 미사용 시 전류: 최대 0.5 A", "DC OUT 사용 시 전류: 최대 2.6 A" ],
+                "en": [ "DC OUT not used Current: Max. 0.5 A", "DC OUT used Current: Max. 2.6 A" ],
+                "es": [ "Corriente con DC OUT no utilizado: Máx. 0.5 A", "Corriente con DC OUT utilizado: Máx. 2.6 A" ],
+                "ja": [ "DC OUT 未使用時の電流：最大 0.5 A", "DC OUT 使用時の電流：最大 2.6 A" ]
               }
             },
             "24vdc": {
               "label": "24 Vdc",
               "value": {
-                "ko": [
-                  "DC OUT 미사용 시 전류: 최대 0.3 A",
-                  "DC OUT 사용 시 전류: 최대 1.4 A"
-                ],
-                "en": [
-                  "DC OUT not used Current: Max. 0.3 A",
-                  "DC OUT used Current: Max. 1.4 A"
-                ]
+                "ko": [ "DC OUT 미사용 시 전류: 최대 0.3 A", "DC OUT 사용 시 전류: 최대 1.4 A" ],
+                "en": [ "DC OUT not used Current: Max. 0.3 A", "DC OUT used Current: Max. 1.4 A" ],
+                "es": [ "Corriente con DC OUT no utilizado: Máx. 0.3 A", "Corriente con DC OUT utilizado: Máx. 1.4 A" ],
+                "ja": [ "DC OUT 未使用時の電流：最大 0.3 A", "DC OUT 使用時の電流：最大 1.4 A" ]
               }
             }
           }
@@ -348,39 +358,29 @@
             "12vdc": {
               "label": "12 Vdc",
               "value": {
-                "ko": [
-                  "리더: 최대 0.5 A",
-                  "락: 최대 1.2 A"
-                ],
-                "en": [
-                  "Reader: Max. 0.5 A",
-                  "Lock: Max. 1.2 A"
-                ]
+                "ko": [ "리더: 최대 0.5 A", "락: 최대 1.2 A" ],
+                "en": [ "Reader: Max. 0.5 A", "Lock: Max. 1.2 A" ],
+                "es": [ "Lector: Máx. 0.5 A", "Bloqueo: Máx. 1.2 A" ],
+                "ja": [ "リーダー：最大 0.5 A", "ロック：最大 1.2 A" ]
               }
             },
             "24vdc": {
               "label": "24 Vdc",
               "value": {
-                "ko": [
-                  "리더: 최대 0.25 A",
-                  "락: 최대 0.6 A"
-                ],
-                "en": [
-                  "Reader: Max. 0.25 A",
-                  "Lock: Max. 0.6 A"
-                ]
+                "ko": [ "리더: 최대 0.25 A", "락: 최대 0.6 A" ],
+                "en": [ "Reader: Max. 0.25 A", "Lock: Max. 0.6 A" ],
+                "es": [ "Lector: Máx. 0.25 A", "Bloqueo: Máx. 0.6 A" ],
+                "ja": [ "リーダー：最大 0.25 A", "ロック：最大 0.6 A" ]
               }
             },
             "poe12vout": {
               "label": "PoE (12V 출력)",
               "label_id": "specs.power.poe12vout",
               "value": {
-                "ko": [
-                  "리더: 최대 0.5 A"
-                ],
-                "en": [
-                  "Reader: Max. 0.5 A"
-                ]
+                "ko": [ "리더: 최대 0.5 A" ],
+                "en": [ "Reader: Max. 0.5 A" ],
+                "es": [ "Lector: Máx. 0.5 A" ],
+                "ja": [ "リーダー：最大 0.5 A" ]
               }
             }
           }
@@ -391,7 +391,7 @@
           "value": {
             "ko": [ "최소: 3 V", "최대: 5 V" ],
             "en": [ "Min.: 3 V", "Max.: 5 V" ],
-            "es": [ "Mínimo: 3 V", "Máx.: 5 V" ],
+            "es": [ "Mín.: 3 V", "Máx.: 5 V" ],
             "ja": [ "最小：3 V", "最大：5 V" ]
           }
         },
@@ -401,7 +401,7 @@
           "value": {
             "ko": "최대: 1 V",
             "en": "Max.: 1 V",
-            "es": "Máximo: 1 V",
+            "es": "Máx.: 1 V",
             "ja": "最大：1 V"
           }
         },

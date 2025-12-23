@@ -187,8 +187,8 @@
           "value": {
             "ko": "4개",
             "en": "4 relays",
-            "es": "4 relays",
-            "ja": "4 relays"
+            "es": "4 relés",
+            "ja": "4 リレー"
           }
         },
         "input": {
@@ -217,7 +217,9 @@
           "label_id": "specs.interface.supervised",
           "value": {
             "ko": "6채널<sup id='dupl'><a href='#anno1'></a></sup>",
-            "en": "6 ch<sup id='dupl'><a href='#anno1'></a></sup>"
+            "en": "6 ch<sup id='dupl'><a href='#anno1'></a></sup>",
+            "es": "6 canales<sup id='dupl'><a href='#anno1'></a></sup>",
+            "ja": "6 チャンネル<sup id='dupl'><a href='#anno1'></a></sup>"
           }
         },
         "auxInput": {
@@ -225,7 +227,9 @@
           "label_id": "specs.interface.auxInput",
           "value": {
             "ko": "3채널 (AC POWER FAIL, Tamper, Fire 연결 지원)",
-            "en": "3 ch (AC POWER FAIL, Tamper, Fire)"
+            "en": "3 ch (AC POWER FAIL, Tamper, Fire)",
+            "es": "3 canales (FALLA DE ALIMENTACIÓN DE CA, seguro contra alteración [Tamper], incendio)",
+            "ja": "3 チャンネル（AC 電源の停止、タンパー、火災）"
           }
         },
         "poe_plus": {
@@ -233,28 +237,20 @@
           "label_id": "specs.interface.poe_plus",
           "annotation_label": "anno2",
           "value": {
-            "ko": [
-              "CS-20: 미지원",
-              "CS-20P: 지원 (IEEE 802.3at 호환)"
-            ],
-            "en": [
-              "CS-20: Not supported",
-              "CS-20P: Supported (IEEE 802.3at compliant)"
-            ]
+            "ko": [ "CS-20: 미지원", "CS-20P: 지원 (IEEE 802.3at 호환)" ],
+            "en": [ "CS-20: Not supported", "CS-20P: Supported (IEEE 802.3at compliant)" ],
+            "es": [ "CS-20: No compatible", "CS-20P: Compatible (compatible con IEEE 802.3at)" ],
+            "ja": [ "CS-20：サポートされない", "CS-20P：対応（IEEE 802.3at 互換）" ]
           }
         },
         "samSlot": {
           "label": "SAM 카드 슬롯",
           "label_id": "specs.interface.samSlot",
           "value": {
-            "ko": [
-              "CS-20: 미지원",
-              "CS-20P: 지원"
-            ],
-            "en": [
-              "CS-20: Not supported",
-              "CS-20P: Supported"
-            ]
+            "ko": [ "CS-20: 미지원", "CS-20P: 지원" ],
+            "en": [ "CS-20: Not supported", "CS-20P: Supported" ],
+            "es": [ "CS-20: No compatible", "CS-20P: Compatible" ],
+            "ja": [ "CS-20：サポートされない", "CS-20P：サポート対象" ]
           }
         }
       }
@@ -296,41 +292,29 @@
             "12vdc": {
               "label": "12 Vdc",
               "value": {
-                "ko": [
-                  "리더: 최대 0.6 A (0.3 A x 2개)",
-                  "락: 최대 1.2 A (0.6 A x 2개)"
-                ],
-                "en": [
-                  "Reader: Max. 0.6 A (0.3 A x 2)",
-                  "Lock: Max. 1.2 A (0.6 A x 2)"
-                ]
+                "ko": [ "리더: 최대 0.6 A (0.3 A x 2개)", "락: 최대 1.2 A (0.6 A x 2개)" ],
+                "en": [ "Reader: Max. 0.6 A (0.3 A x 2)", "Lock: Max. 1.2 A (0.6 A x 2)" ],
+                "es": [ "Lector: Máx. 0.6 A (0.3 A x 2)", "Bloqueo: Máx. 1.2 A (0.6 A x 2)" ],
+                "ja": [ "リーダー：最大 0.6 A（0.3 A x 2）", "ロック：最大 1.2 A（0.6 A x 2）" ]
               }
             },
             "24vdc": {
               "label": "24 Vdc",
               "value": {
-                "ko": [
-                  "리더: 최대 0.3 A (0.15 A x 2개)",
-                  "락: 최대 0.6 A (0.3 A x 2개)"
-                ],
-                "en": [
-                  "Reader: Max. 0.3 A (0.15 A x 2)",
-                  "Lock: Max. 0.6 A (0.3 A x 2)"
-                ]
+                "ko": [ "리더: 최대 0.3 A (0.15 A x 2개)", "락: 최대 0.6 A (0.3 A x 2개)" ],
+                "en": [ "Reader: Max. 0.3 A (0.15 A x 2)", "Lock: Max. 0.6 A (0.3 A x 2)" ],
+                "es": [ "Lector: Máx. 0.3 A (0.15 A x 2)", "Bloqueo: Máx. 0.6 A (0.3 A x 2)" ],
+                "ja": [ "リーダー：最大 0.3 A（0.15 A x 2）", "ロック：最大 0.6 A（0.3 A x 2）" ]
               }
             },
             "poe_plus12vout": {
               "label": "PoE+ (12V 출력)",
               "label_id": "specs.power.poe_plus12vout",
               "value": {
-                "ko": [
-                  "리더: 최대 0.6 A (0.3 A x 2개)",
-                  "락: 최대 0.6 A (0.6 A x 1개)"
-                ],
-                "en": [
-                  "Reader: Max. 0.6 A (0.3 A x 2)",
-                  "Lock: Max. 0.6 A (0.6 A x 1)"
-                ]
+                "ko": [ "리더: 최대 0.6 A (0.3 A x 2개)", "락: 최대 0.6 A (0.6 A x 1개)" ],
+                "en": [ "Reader: Max. 0.6 A (0.3 A x 2)", "Lock: Max. 0.6 A (0.6 A x 1)" ],
+                "es": [ "Lector: Máx. 0.6 A (0.3 A x 2)", "Bloqueo: Máx. 0.6 A (0.6 A x 1)" ],
+                "ja": [ "リーダー：最大 0.6 A（0.3 A x 2）", "ロック：最大 0.6 A（0.6 A x 1）" ]
               }
             }
           }
@@ -341,7 +325,7 @@
           "value": {
             "ko": [ "최소: 3 V", "최대: 5 V" ],
             "en": [ "Min.: 3 V", "Max.: 5 V" ],
-            "es": [ "Mínimo: 3 V", "Máx.: 5 V" ],
+            "es": [ "Mín.: 3 V", "Máx.: 5 V" ],
             "ja": [ "最小：3 V", "最大：5 V" ]
           }
         },
@@ -351,14 +335,19 @@
           "value": {
             "ko": "최대: 1 V",
             "en": "Max.: 1 V",
-            "es": "Máximo: 1 V",
+            "es": "Máx.: 1 V",
             "ja": "最大：1 V"
           }
         },
         "relay": {
           "label": "릴레이",
           "label_id": "specs.power.relay",
-          "value": "5 A @ 30 VDC Resistive load"
+          "value": {
+            "ko": "5 A @ 30 VDC Resistive load",
+            "en": "5 A @ 30 VDC Resistive load",
+            "es": "Carga resistiva de 5 A a 30 VCC",
+            "ja": "5 A @ 30 VDC 抵抗負荷"
+          }
         }
       }
     }

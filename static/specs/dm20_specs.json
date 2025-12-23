@@ -45,6 +45,24 @@
                   "OUTPUT: 6ea",
                   "RS-485: 2ea",
                   "RUN: 1ea"
+                ],
+                "es": [
+                  "POWER: 1unidad",
+                  "RELAY: 4unidades",
+                  "INPUT: 4unidades",
+                  "SUPERVISED INPUT: 4unidades",
+                  "OUTPUT: 6unidades",
+                  "RS-485: 2unidades",
+                  "RUN: 1unidad"
+                ],
+                "ja": [
+                  "POWER: 1ea",
+                  "RELAY: 4ea",
+                  "INPUT: 4ea",
+                  "SUPERVISED INPUT: 4ea",
+                  "OUTPUT: 6ea",
+                  "RS-485: 2ea",
+                  "RUN: 1ea"
                 ]
               }
             }
@@ -93,7 +111,12 @@
         "certifications": {
           "label": "인증",
           "label_id": "specs.general.certifications",
-          "value": "CE, UKCA, KC, FCC, RoHS, REACH, WEEE"
+          "value": {
+            "ko": "CE, UKCA, KC, FCC, RoHS, REACH, WEEE",
+            "en": "CE, UKCA, KC, FCC, RoHS, REACH, WEEE",
+            "es": "CE, UKCA, KC, FCC, RoHS, REACH, WEEE",
+            "ja": "CE、UKCA、KC、FCC、RoHS、REACH、WEEE"
+          }
         }
       }
     },
@@ -156,7 +179,9 @@
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "4개",
-            "en": "4 relays"
+            "en": "4 relays",
+            "es": "4 relés",
+            "ja": "4 リレー"
           }
         },
         "wiegand": {
@@ -164,7 +189,9 @@
           "label_id": "specs.interface.wiegand",
           "value": {
             "ko": "2채널 입력 (전압: 12 Vdc / 전류: 최대 1.5 A)",
-            "en": "2 ch Inputs (Voltage: 12 Vdc / Current: Max. 1.5 A)"
+            "en": "2 ch Inputs (Voltage: 12 Vdc / Current: Max. 1.5 A)",
+            "es": "Entrada de 2 canales (Voltaje: 12 Vdc / Corriente: Máx. 1.5 A)",
+            "ja": "2 チャンネル入力（電圧：12 Vdc / 電流：最大 1.5 A）"
           }
         }
       }

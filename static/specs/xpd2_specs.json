@@ -17,7 +17,12 @@
         "rf_distance": {
           "label": "RF 인식 거리",
           "label_id": "specs.credentials.rf_distance",
-          "value": "EM/MIFARE/DESFire: 50 mm, FeliCa: 30 mm",
+          "value": {
+            "ko": "EM/MIFARE/DESFire: 50 mm, FeliCa: 30 mm",
+            "en": "EM/MIFARE/DESFire: 50 mm, FeliCa: 30 mm",
+            "es": "EM/MIFARE/DESFire: 50 mm, FeliCa: 30 mm",
+            "ja": "EM/MIFARE/DESFire：50 mm、FeliCa：30 mm"
+          },
           "annotation_label": "anno2"
         },
         "mobile": {
@@ -74,7 +79,12 @@
         "operating_temp": {
           "label": "동작 온도",
           "label_id": "specs.general.operating_temp",
-          "value": "-35 °C ~ 65 °C"
+          "value": {
+            "ko": "-35 °C ~ 65 °C",
+            "en": "-35 °C ~ 65 °C",
+            "es": "De -35 °C a 65 °C",
+            "ja": "-35 °C ~ 65 °C"
+          }
         },
         "storage_temp": {
           "label": "보관 온도",
@@ -121,7 +131,12 @@
         "certifications": {
           "label": "인증",
           "label_id": "specs.general.certifications",
-          "value": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE"
+          "value": {
+            "ko": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE",
+            "en": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE",
+            "es": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE",
+            "ja": "CE、UKCA、KC、FCC、IC、RCM、BIS、SIG、RoHS、REACH、WEEE"
+          }
         }
       }
     },
@@ -136,7 +151,7 @@
             "ko": "1채널 슬레이브",
             "en": "1 ch Slave",
             "es": "1 canal esclavo",
-            "ja": "1チャンネルスレーブ"
+            "ja": "1 チャンネルスレーブ"
           }
         },
         "rs485_protocol": {
@@ -211,7 +226,9 @@
           "label_id": "specs.power.led_beep_input_vih",
           "value": {
             "ko": [ "최소: 3 V", "최대: 5 V" ],
-            "en": [ "Min.: 3 V", "Max.: 5 V" ]
+            "en": [ "Min.: 3 V", "Max.: 5 V" ],
+            "es": [ "Mín.: 3 V", "Máx.: 5 V" ],
+            "ja": [ "最小：3 V", "最大：5 V" ]
           }
         },
         "led_beep_input_vil": {
@@ -220,7 +237,7 @@
           "value": {
             "ko": "최대: 1 V",
             "en": "Max.: 1 V",
-            "es": "Máximo: 1 V",
+            "es": "Máx.: 1 V",
             "ja": "最大：1 V"
           }
         },

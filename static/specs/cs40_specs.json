@@ -14,7 +14,9 @@
           "label_id": "specs.general.cpu",
           "value": {
             "ko": "1.4 GHz 옥타코어",
-            "en": "1.4 GHz Octa-core"
+            "en": "1.4 GHz Octa-core",
+            "es": "Octa-core de 1.4 GHz",
+            "ja": "1.4 GHz 8 コア"
           }
         },
         "memory": {
@@ -45,6 +47,22 @@
                   "AUX IN: 2개"
                 ],
                 "en": [
+                  "STATUS: 2ea",
+                  "HOST RS-485 TX: 1ea",
+                  "HOST RS-485 RX: 1ea",
+                  "SUPERVISED INPUT: 8ea",
+                  "RELAY: 4ea",
+                  "AUX IN: 2ea"
+                ],
+                "es": [
+                  "STATUS: 2unidades",
+                  "HOST RS-485 TX: 1unidad",
+                  "HOST RS-485 RX: 1unidad",
+                  "SUPERVISED INPUT: 8unidades",
+                  "RELAY: 4unidades",
+                  "AUX IN: 2unidades"
+                ],
+                "ja": [
                   "STATUS: 2ea",
                   "HOST RS-485 TX: 1ea",
                   "HOST RS-485 RX: 1ea",
@@ -109,7 +127,12 @@
         "certifications": {
           "label": "인증",
           "label_id": "specs.general.certifications",
-          "value": "CE, UKCA, KC, FCC, RCM, RoHS, REACH, WEEE"
+          "value": {
+            "ko": "CE, UKCA, KC, FCC, RCM, RoHS, REACH, WEEE",
+            "en": "CE, UKCA, KC, FCC, RCM, RoHS, REACH, WEEE",
+            "es": "CE, UKCA, KC, FCC, RCM, RoHS, REACH, WEEE",
+            "ja": "CE、UKCA、KC、FCC、RCM、RoHS、REACH、WEEE"
+          }
         }
       }
     },
@@ -128,7 +151,9 @@
           "label_id": "specs.storage.max_credentials_1n",
           "value": {
             "ko": "얼굴: 4,000",
-            "en": "Face: 4,000"
+            "en": "Face: 4,000",
+            "es": "Rostro: 4,000",
+            "ja": "顔：4,000"
           },
           "annotation_value": "anno2"
         },
@@ -145,6 +170,16 @@
               "Face: 30,000<sup id='dupl'><a href='#anno2'></a></sup>",
               "Card: 500,000",
               "PIN: 500,000"
+            ],
+            "es": [
+              "Rostro: 30,000<sup id='dupl'><a href='#anno2'></a></sup>",
+              "Tarjeta: 500,000",
+              "PIN: 500,000"
+            ],
+            "ja": [
+              "顔：30,000<sup id='dupl'><a href='#anno2'></a></sup>",
+              "カード：500,000",
+              "PIN：500,000"
             ]
           }
         },
@@ -214,7 +249,9 @@
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "4개",
-            "en": "4 relays"
+            "en": "4 relays",
+            "es": "4 relés",
+            "ja": "4 リレー"
           }
         },
         "input": {
@@ -243,7 +280,9 @@
           "label_id": "specs.interface.supervised",
           "value": {
             "ko": "8채널<sup id='dupl'><a href='#anno3'></a></sup>",
-            "en": "8 ch<sup id='dupl'><a href='#anno3'></a></sup>"
+            "en": "8 ch<sup id='dupl'><a href='#anno3'></a></sup>",
+            "es": "8 canales<sup id='dupl'><a href='#anno3'></a></sup>",
+            "ja": "8 チャンネル<sup id='dupl'><a href='#anno3'></a></sup>"
           }
         },
         "auxInput": {
@@ -251,7 +290,9 @@
           "label_id": "specs.interface.auxInput",
           "value": {
             "ko": "2채널 (AC POWER FAIL, 탬퍼 연결 지원)",
-            "en": "2 ch (AC POWER FAIL, Tamper)"
+            "en": "2 ch (AC POWER FAIL, Tamper)",
+            "es": "2 canales (FALLA DE ALIMENTACIÓN DE CA, Seguro contra alteraciones (Tamper))",
+            "ja": "2 チャンネル（AC 電源の停電、タンパー）"
           }
         }
       }
@@ -270,13 +311,20 @@
               "label": "CoreStation",
               "value": {
                 "ko": "전압: 12 Vdc / 전류: 최대 3 A",
-                "en": "Voltage: 12 Vdc / Current: Max. 3 A"
+                "en": "Voltage: 12 Vdc / Current: Max. 3 A",
+                "es": "Voltaje: 12 Vdc / Corriente: Máx. 3 A",
+                "ja": "電圧：12 Vdc / 電流：最大 3 A"
               }
             },
             "powerSupply": {
               "label": "전원 장치",
               "label_id": "specs.power.powerSupply",
-              "value": "110 ~ 240 VAC, 50/60 Hz"
+              "value": {
+               "ko": "110 ~ 240 VAC, 50/60 Hz",
+               "en": "110 ~ 240 VAC, 50/60 Hz",
+               "es": "110 ~ 240 VAC, 50/60 Hz",
+               "ja": "110 ~ 240 VAC、50/60 Hz"
+              }
             }
           }
         },
@@ -302,7 +350,7 @@
           "value": {
             "ko": [ "최소: 3 V", "최대: 5 V" ],
             "en": [ "Min.: 3 V", "Max.: 5 V" ],
-            "es": [ "Mínimo: 3 V", "Máx.: 5 V" ],
+            "es": [ "Mín.: 3 V", "Máx.: 5 V" ],
             "ja": [ "最小：3 V", "最大：5 V" ]
           }
         },
@@ -312,14 +360,19 @@
           "value": {
             "ko": "최대: 1 V",
             "en": "Max.: 1 V",
-            "es": "Máximo: 1 V",
+            "es": "Máx.: 1 V",
             "ja": "最大：1 V"
           }
         },
         "relay": {
           "label": "릴레이",
           "label_id": "specs.power.relay",
-          "value": "5 A @ 30 VDC Resistive load"
+          "value": {
+            "ko": "5 A @ 30 VDC Resistive load",
+            "en": "5 A @ 30 VDC Resistive load",
+            "es": "Carga resistiva de 5 A a 30 VCC",
+            "ja": "5 A @ 30 VDC 抵抗負荷"
+          }
         }
       }
     }
