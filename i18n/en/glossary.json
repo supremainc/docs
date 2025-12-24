@@ -1,27 +1,11 @@
 {
-  "access": {
-    "name": "Access",
-    "description": "The act of accessing a particular zone or particular assets."
+  "onetoone_auth": {
+    "name": "1:1 Authentication",
+    "description": "Authentication method that verifies the user by comparing the individual's biometric data one-to-one with the biometric data stored in the database."
   },
-  "access_control": {
-    "name": "Access control",
-    "description": "The act of restricting unauthorized people from accessing the infrastructure and assets. Access made by authorized individuals is recorded in the log."
-  },
-  "access_group": {
-    "name": "Access Group",
-    "description": "A user group that has the right to access a specified door/door group during a scheduled period of time."
-  },
-  "access_level": {
-    "name": "Access Level",
-    "description": "The right to access the door during a scheduled period of time."
-  },
-  "access_on_card": {
-    "name": "Access on Card",
-    "description": "A card on which information about a user’s ID, credential, and access group is recorded."
-  },
-  "access_rule": {
-    "name": "Access Rule",
-    "description": "A rule concerning access to a certain door/door group during a scheduled period of time."
+  "onetomany_auth": {
+    "name": "1:N Authentication",
+    "description": "Authentication method that retrieves user information from a database. It identifies an individual by comparing their biometric information with information in all registered databases."
   },
   "acid": {
     "name": "ACID",
@@ -31,281 +15,17 @@
     "name": "Ad Hoc Network",
     "description": "A network that is autonomously configured by each device without reliance on network infrastructure such as a base station and an access point. In this network, a dynamic and autonomous network topology is formed despite each device communicating through a wireless interface, as each device can be moved freely thanks to a routing function that enables the distance limitations of wireless communication to be overcome."
   },
-  "administrator": {
-    "name": "Administrator",
-    "description": "The user who has full access to the configuration software."
-  },
-  "aes": {
-    "name": "AES (Advanced Encryption Standard)",
-    "description": "The Advanced Encryption Standard (AES) is a specification for the encryption of electronic data established by the U.S. National Institute of Standards and Technology (NIST)."
-  },
-  "alarm": {
-    "name": "Alarm",
-    "description": "Among events occurred in the system, the type of event that requires action without delay."
-  },
-  "alarm_action": {
-    "name": "Alarm action",
-    "description": "The actions that automatically perform activities such as controlling the device and sending emails when an alarm or a certain event occurs."
-  },
-  "alert": {
-    "name": "Alert",
-    "description": "The act of displaying or forwarding in real time an alarm event occurred in the system."
-  },
-  "analog_intercom": {
-    "name": "Analog intercom",
-    "description": "An intercom telephone that consists of an analog switch and a network."
-  },
   "ansi378": {
     "name": "ANSI 378",
     "description": "The fingerprint template standards defined by the American National Standards Institute (ANSI)."
-  },
-  "access_point": {
-    "name": "AP (Access Point)",
-    "description": "A device for implementing a Wireless LAN. An access point creates a connection to a wireless network through a wired LAN."
-  },
-  "apb": {
-    "name": "APB (Anti-passback)",
-    "description": "A structural method used to control access. This function uses access control devices installed both inside and outside the door, so that authentication is required for access to the zone. In the case of card-based access control systems, if a person enters a zone following the person in front without swiping their card on the reader, the door does not open when the person attempts to leave the zone, and subsequently an anti-passback event occurs. Anti-passback is categorized into hard APB and soft APB. If the anti-passback is violated, the anti-passback event is created immediately and hard APB does not permit access to the user while soft APB still permits access to the user."
-  },
-  "api": {
-    "name": "API (Application Programming Interface)",
-    "description": "An API is a set of protocols, tools, and instruction for implementing software applications. In case of web application development, the API specifies how the system should send requests and what kind of corresponding responses should be expected to receive. The API may include functions like file managements, window/video/character processing to ease the application development process for the 3rd party application developers."
-  },
-  "arm": {
-    "name": "Arm",
-    "description": "The act of monitoring a specific zone for the prevention of crime and accidents. 24-hour monitoring, alarm notifications, recordings, etc. are available through a security system."
-  },
-  "audit_trail": {
-    "name": "Audit trail",
-    "description": "The data recorded on system changes. The audit trail makes it possible to search for information about unauthorized user activity, the processing of user activity, etc."
-  },
-  "auth": {
-    "name": "Authentication",
-    "description": "The act of verifying the credentials entered by a user to identify the user."
-  },
-  "auth_mode": {
-    "name": "Authentication mode",
-    "description": "A combination of credentials required for authentication."
-  },
-  "backlight": {
-    "name": "Backlight",
-    "description": "A light that emits from the back of the LCD of a device for readability."
-  },
-  "backlight_timeout": {
-    "name": "Backlight timeout",
-    "description": "The duration of time the backlight remains on."
-  },
-  "bandwidth": {
-    "name": "Bandwidth",
-    "description": "A range of frequencies where certain functions can be performed; measured in hertz (Hz). The amount of information that can be transmitted over a wire or another medium over a period of time. The greater the frequency bandwidth, the more information can be sent over a certain period of time."
-  },
-  "batch_enrollment": {
-    "name": "Batch enrollment",
-    "description": "The act of registering a multiple number of access cards on the BioStar server. Registered entry cards can be allocated to individual users."
-  },
-  "bifurcation": {
-    "name": "Bifurcation",
-    "description": "A point where two fingerprint ridges meet or are separated."
-  },
-  "biometric_auth": {
-    "name": "Biometric authentication",
-    "description": "The act of determining whether the provided biometric information of an individual matches the information on the individual’s Biometric characteristics previously enrolled."
-  },
-  "biometric_information": {
-    "name": "Biometric information",
-    "description": "Information used to identify each individual. Information concerning the unique physical and behavioral characteristics of an individual, including the individual's fingerprint, signature, vein pattern, face, voice, iris, genes, etc."
-  },
-  "biometrics": {
-    "name": "Biometrics",
-    "description": "A technology that extracts and analyzes the physical and behavioral characteristics of individuals using an automated device for the identification of each individual."
-  },
-  "blacklist": {
-    "name": "Blacklist",
-    "description": "A list of cards that are denied for authentication on the BioStar device. When a card is lost or stolen, misuse can be prevented by registering the ID of the card in the blacklist."
-  },
-  "ble": {
-    "name": "BLE(Bluetooth Low Energy)",
-    "description": "A Bluetooth technology that can transmit and receive low-power, low-volume data within a distance of about 10 m by using the 2.4 GHz frequency band. Low-power Bluetooth technology is mainly applied to small devices where the supply of power is limited due to low power consumption. It is also used in access control in the form of mobile ID cards."
-  },
-  "bluetooth": {
-    "name": "Bluetooth",
-    "description": "A communication technology that supports bidirectional transmission and reception of data at close range. Each type of Bluetooth has different characteristics depending on the transmission distance, transmission method, power consumption, etc."
-  },
-  "break": {
-    "name": "Break",
-    "description": "A brief time taken off for rest during working hours. Each break is calculated as the time between the start and the end of the break."
-  },
-  "brute_attack": {
-    "name": "Brutal attack",
-    "description": "Also called Brute Force Attack, this term refers to the act of entering all possible values to unlock passwords."
-  },
-  "bypass_card": {
-    "name": "Bypass card",
-    "description": "A card that enables access to a specific zone by bypassing the authentication process. For example, people who possess this card can pass through the door without the need to go through a series of security (authentication) procedures."
-  },
-  "card": {
-    "name": "Card",
-    "description": "A portable information medium in the form of a card. It stores information for identification."
-  },
-  "card_id": {
-    "name": "Card ID",
-    "description": "A serial number given to a card according to the format defined by a company, organization, or department. A card ID can be either given by the card manufacturer or created in a format defined by a particular company or organization."
-  },
-  "card_layout": {
-    "name": "Card layout",
-    "description": "The data arrangement and structure inside a card."
-  },
-  "card_mode": {
-    "name": "Card mode",
-    "description": "A method for authenticating cardholders. There are two card modes, Card ID mode and Template-on-Card mode. The Card ID mode compares the user ID that is stored on the device with fingerprint information, in reference to the card ID stored on the card. Whereas the Template-on-Card mode identifies a user by checking whether the fingerprint entered by the user matches the fingerprint information on the card."
-  },
-  "card_reader": {
-    "name": "Card reader",
-    "description": "A device that reads the information stored on cards and transmits it to the controller."
-  },
-  "cde": {
-    "name": "CDE(Conformance Decision Engine)",
-    "description": "One of the procedures for Suprema's fingerprint matching algorithm. This is a step that determines whether the obtained fingerprint image is valid prior to processing the fingerprint image and extracting the minutiae of the fingerprint."
-  },
-  "clean_room": {
-    "name": "Clean room",
-    "description": "A space where suspended particulate matter in air such as dust, viruses, metal powders, and cells can be controlled as required."
-  },
-  "client": {
-    "name": "Client",
-    "description": "Entity that requests service from the server through a network."
-  },
-  "controller": {
-    "name": "Controller",
-    "description": "A device that examines access rights based on credential information obtained from a reader and controls the input and output of the reader."
-  },
-  "contact_card": {
-    "name": "Contact card",
-    "description": "A card with a gold or silver chip attached to the surface. For data transmission, a contact card must be inserted into a card terminal in order to place the chip in direct contact with the card terminal."
-  },
-  "contactless_card": {
-    "name": "Contactless card",
-    "description": "A card that communicates with a card terminal using its built-in coil antenna. This type of card enables transmission of data using a magnetic field without contacting a card terminal."
-  },
-  "credential": {
-    "name": "Credential",
-    "description": "Data used to identify users. Digital signatures, smart cards, biometric data, user names, passwords, etc. are common examples of credentials."
-  },
-  "csn": {
-    "name": "CSN (Card Serial Number)",
-    "description": "A serial number given to a card by the manufacturer."
-  },
-  "daisy_chain": {
-    "name": "Daisy Chain",
-    "description": "A daisy chain is a wiring scheme in which hardware devices are connected together in sequence."
-  },
-  "dst": {
-    "name": "Daylight Saving Time(DST)",
-    "description": "Also called summer time, DST is the practice of moving the clocks forward a certain amount of time from standard time for the purpose of saving energy through more efficient use of the daytime in the summer."
-  },
-  "dbms": {
-    "name": "DBMS (Database Management System)",
-    "description": "A DBMS is a software that controls and manages database, and interacts with a user or an application to access data in the database."
-  },
-  "decryption": {
-    "name": "Decryption",
-    "description": "The act of recovering encrypted data using decryption keys. Encrypted data can only be decrypted with a symmetric key that pairs with the key used for the encryption of the encrypted data."
-  },
-  "device": {
-    "name": "Device",
-    "description": "An access control device that can be controlled in the BioStar."
-  },
-  "device_id": {
-    "name": "Device ID",
-    "description": "A unique number given to identify each hardware device in the BioStar."
   },
   "dhcp": {
     "name": "DHCP",
     "description": "A communication protocol used for the automatic allocation and management of settings required for TCP/IP communication."
   },
-  "diode": {
-    "name": "Diode",
-    "description": "A component that controls the current to flow in a single direction only. This component is used to prevent reverse current flow that momentarily occurs when the door lock operates."
-  },
   "dip_switch": {
     "name": "DIP switch",
     "description": "A DIP switch is an On/Off switch that is used to control the behavior of a device circuit board without hardware alteration."
-  },
-  "direct_mode": {
-    "name": "Direct mode",
-    "description": "A mode whereby the BioStar 2 client directly searches for connectable devices and connecting to them. In this mode, the client is responsible for communicating with devices and servers. In this mode, a list of connectable devices is shown when a device search is performed on the server, and the administrator can select a device to connect from the list."
-  },
-  "disarm": {
-    "name": "Disarm",
-    "description": "The act of suspending the operation of an alarm system activated for a specific zone."
-  },
-  "door": {
-    "name": "Door",
-    "description": "A place in which a physical device for access control is installed. A spatial concept that forms the basis for access control."
-  },
-  "door_group": {
-    "name": "Door group",
-    "description": "A group of doors created for ease of management. Events can be monitored by the door group. A component of an access group."
-  },
-  "door_sensor": {
-    "name": "Door sensor",
-    "description": "A sensor that detects the state of the door. There are various types of states such as open, closed, held open, and forced open that can be checked."
-  },
-  "dual_auth": {
-    "name": "Double mode",
-    "description": "An authentication method where the credentials of two different individuals are entered in sequence in a limited amount of time."
-  },
-  "dummy_reader": {
-    "name": "Dummy Reader",
-    "description": "A device that does not store or assess user data, but performs the role of reading credential data such as faces, fingerprints and cards, and transmits this data to the control device."
-  },
-  "duress": {
-    "name": "Duress finger",
-    "description": "A fingerprint chosen to generate a certain event upon fingerprint registration. If a user authenticates himself/herself with such a fingerprint, the authentication gets recorded in a log as duress fingerprint authentication. The system administrator can set a separate alarm using the log."
-  },
-  "eer": {
-    "name": "EER (Equal Error Rate)",
-    "description": "As an indicator of Biometric Performance, an ERR(Equal Error Rate) is a point where FAR (False Acceptance Rate) and FRR (False Rejection Rate) intersects. A device with lower EER is regarded to be more accurate."
-  },
-  "encryption": {
-    "name": "Encryption",
-    "description": "The act of transforming information so that it is impossible to recognize its original meaning. Storing or transferring information in encrypted form is a way of protecting the information."
-  },
-  "encryption_key": {
-    "name": "Encryption Key",
-    "description": "A certain bit string generated for encryption. Encryption keys are designed using algorithms that prevent guessing. Generally, longer encryption keys make decryption more difficult."
-  },
-  "enrollment": {
-    "name": "Enrollment",
-    "description": "A series of steps used to record the biometric information of users in a biometrics system. It involves sampling, template creation, storing, etc."
-  },
-  "entrance_limit_zone": {
-    "name": "Entrance Limit Zone",
-    "description": "A zone that restricts access at specific times. This zone can be configured in such a way as to restrict the authentication or the authentication count."
-  },
-  "epoxy_potted": {
-    "name": "Epoxy potted",
-    "description": "A material that protects the circuitry by preventing rainwater from entering the device if the device is installed outdoors."
-  },
-  "event": {
-    "name": "Event",
-    "description": "An interaction between a user, the device, and the door. Events are recorded in a log on the BioStar server. They include authentication successes and failures and changes to the status of the door, alarms, etc."
-  },
-  "exit_button": {
-    "name": "Exit button",
-    "description": "A button used to open the door. Pressing this button opens the door. The button can be used for doors and zones that do not require separate authentication."
-  },
-  "export": {
-    "name": "Export",
-    "description": "An operation performed by a program that uses a particular data format. It is the act of storing data in a format that is compatible with other programs."
-  },
-  "face_detection": {
-    "name": "Face detection",
-    "description": "A function that, after a user's credential has been verified, takes a picture of the user's face before granting them access so that the event and an image of the user's face can be stored together. Authentication fails if the user's face is not detected. When an image of a user's face has been stored, if necessary, it is possible to identify the user by comparing the image of the face with the user ID that was recorded when the event occurred."
-  },
-  "face_recognition": {
-    "name": "Face authentication",
-    "description": "A technology and authentication system that identifies people based on their facial features."
   },
   "fail_safe_lock": {
     "name": "Fail Safe Lock",
@@ -315,77 +35,9 @@
     "name": "Fail Secure Lock",
     "description": "This means that the system enters security mode in the event of a power outage. In the event that the power supplied to the doors of a critical site such as a bank is cut off, the doors will be locked."
   },
-  "fake_fp": {
-    "name": "Fake fingerprint",
-    "description": "A fake fingerprint made from paper, silicone, rubber, etc. to emulate another individual's fingerprint."
-  },
-  "far": {
-    "name": "FAR (False Acceptance Rate)",
-    "description": "Criteria used when comparing the accuracy of different biometric systems. It represents the probability of incorrectly recognizing a non-registered person as a registered person."
-  },
   "fastcgi": {
     "name": "FastCGI",
     "description": "FastCGI is a web-server plugin program which allows one process to handle multiple CGI(Common gateway interface) requests at once with faster speed."
-  },
-  "fp": {
-    "name": "Fingerprint",
-    "description": "The curved patterns observed on the fingertips."
-  },
-  "fp_recognition": {
-    "name": "Fingerprint recognition",
-    "description": "A technology and authentication system that recognizes people based on the image information of fingerprints that are unique to individuals."
-  },
-  "fp_scanner": {
-    "name": "Fingerprint scanner",
-    "description": "A device that scans users' fingerprints to register them on the database."
-  },
-  "fp_sensor": {
-    "name": "Fingerprint sensor",
-    "description": "In fingerprint recognition technology, the image input device that obtains the image information of fingerprints that each represent the unique characteristics of an individual or the area on which a finger is placed, so that the fingerprint scanner can read the fingerprint."
-  },
-  "fp_template": {
-    "name": "Fingerprint template",
-    "description": "A collection of fingerprint information that consists of a series of minutiae, such as the bifurcations and the end points of ridges observed in fingerprint images. Fingerprint templates are used for the identification of fingerprints, which is carried out by comparing the locations and number of minutiae."
-  },
-  "fire_alarm_zone": {
-    "name": "Fire alarm zone",
-    "description": "A zone set to open or lock all the doors or elevators located within it in the event of a fire."
-  },
-  "firmwall": {
-    "name": "Firmwall",
-    "description": "An electronically controlled device that opens/closes electrical contacts in order to affect other devices."
-  },
-  "firmware": {
-    "name": "Firmware",
-    "description": "A micro program or file stored on a ROM to control the hardware of the product."
-  },
-  "floating_shift": {
-    "name": "Floating Shift",
-    "description": "One of the attendance rules provided by BioStar. This method does not involve preset arrival and exit times, but instead applies the attendance rules of the day according to the user's arrival time."
-  },
-  "forced_open": {
-    "name": "Forced open",
-    "description": "A status in which the opening of the door has been detected by the door sensor without the occurrence of a normal door open event, such as user authentication or use of the exit button."
-  },
-  "frr": {
-    "name": "FRR (False Rejection Rate)",
-    "description": "A criterion used when comparing the accuracy of different biometrics systems. It represents the probability of mistakenly recognizing a registered person as a non-registered person."
-  },
-  "global_zone": {
-    "name": "Global Zone",
-    "description": "A zone where a server and a master device are connected via TCP/IP, and the master device and a slave device are connected via RS-485. The server performs the master role for the zone."
-  },
-  "grace": {
-    "name": "Grace",
-    "description": "Allowable time for time and attendance rules. For instance, if you set the work start time to 9:00 and the allowable time to 10 minutes, personnel who have arrived between 9:00 and 9:10 are not deemed to have been late for work."
-  },
-  "graphic_map": {
-    "name": "Graphic map",
-    "description": "One of the monitoring methods provided by BioStar. This function enables you to check and control the status of doors in real time from the map."
-  },
-  "held_open": {
-    "name": "Held open",
-    "description": "A status in which the door has remained open longer than maximum set time. Can trigger an alarm."
   },
   "hf_card": {
     "name": "HF(High Frequency) Card",
@@ -403,37 +55,17 @@
     "name": "IC card(integrated circuit card)",
     "description": "A card with a built-in semiconductor-based integrated circuit. Also called a smart card. IC cards are capable of both reading and writing data, and have a larger storage capacity and greater durability than magnetic cards, so the data stored on them is not damaged by contact with magnets. In addition, because IC cards can be fitted with various security functions such as data encryption and configured to be compatible only with readers that have particular specifications, they are also excellent in terms of security and functionality."
   },
-  "io": {
-    "name": "I/O",
-    "description": "Short for input/output."
-  },
-  "io_device": {
-    "name": "I/O device",
-    "description": "A device that performs an information input/output function."
-  },
   "ik_rating": {
     "name": "IK rating",
     "description": "An international rating system that defines the degree of product protection against physical impacts."
   },
+  "io": {
+    "name": "I/O",
+    "description": "Short for input/output."
+  },
   "ip_rating": {
     "name": "IP rating",
     "description": "An international rating system that defines the degree of product protection against solids and liquids."
-  },
-  "import": {
-    "name": "Import",
-    "description": "The act of transferring data from one computer into its own system."
-  },
-  "intercom": {
-    "name": "Intercom",
-    "description": "A communication system that is generally installed in a building or institution by using a Private Branch eXchange (PBX)."
-  },
-  "interlock_zone": {
-    "name": "Interlock Zone",
-    "description": "A zone between two or more doors. In this zone, if one door is open or has been unlocked, the rest of the doors will be locked. This zone is generally applied to laboratories and manufacturing facilities where suspended particulate matter in the air such as dust needs to be controlled, or places where this is required for security and safety reasons."
-  },
-  "intrusion_alarm_zone": {
-    "name": "Intrusion Alarm Zone",
-    "description": "A zone set to emit a warning sound or relay signal if an unauthorized person attempts an intrusion after Arm. This zone normally begins monitoring after the day's work, and emits a preset alarm or signal when an intrusion attempt is detected."
   },
   "iso19749-2": {
     "name": "ISO 19749-2",
@@ -443,117 +75,17 @@
     "name": "JSON",
     "description": "JSON is a form of data representation that uses characters, parentheses, and symbols to transmit data objects. It can be used in various programming languages such as PHP, C#, Python, etc."
   },
-  "kernel": {
-    "name": "Kernel",
-    "description": "A core component of an operating system. It manages important resources such as the memory and processes. It is loaded onto the memory at boot time to provide various basic services."
-  },
   "lan": {
     "name": "LAN (Local Area Network)",
     "description": "A network system with communication lines that connects computers, printers, and other devices in a limited area such as in a building, so they can interact with each other."
-  },
-  "vacation": {
-    "name": "Leave",
-    "description": "The act of taking a leave of absence from work with a pre-specified reason/permission or the period of leave itself."
-  },
-  "leave_manage": {
-    "name": "Leave Management",
-    "description": "The act of managing personnel absence due to vacations, business trips, external duties, etc."
   },
   "lf_card": {
     "name": "LF(Low Frequency) Card",
     "description": "An electronic card operating in a low-frequency band of 120-140 kHz."
   },
-  "live_face_detection": {
-    "name": "Live Face Detection(LFD)",
-    "description": "A technology that detects forged faces, e.g., masks and photographs."
-  },
-  "live_fp_detection": {
-    "name": "Live Finger Detection(LFD)",
-    "description": "A technology that detects Fake fingerprint copied using rubber, silicone, clay, glue, film, and so on."
-  },
-  "lvv": {
-    "name": "Live Video View",
-    "description": "A video-based monitoring method. BioStar provides IP camera screens and event logs in real time, and supports the ability to manually open/lock doors."
-  },
-  "local_zone": {
-    "name": "Local Zone",
-    "description": "A zone set via an inter-device RS-485 connection. The master role for the zone is not performed by the server but by the master device."
-  },
-  "lock": {
-    "name": "Lock",
-    "description": "An electro-mechanical device that connects to the access control system to be used for locking the door. It refers to all electronic devices either built into or fitted to the door."
-  },
-  "log": {
-    "name": "Log",
-    "description": "The records of all events occurred in the system, network, device, door, etc."
-  },
-  "lsb": {
-    "name": "LSB (Least Significant Bit)",
-    "description": "The bit at the lowest position of binary data (the right-most bit) or its content. It is the opposite of the Most Significant Bit (MSB)."
-  },
-  "mag_card": {
-    "name": "Magnetic stripe card",
-    "description": "A card that stores data by altering the magnetism of its magnetic tape. For data transmission, the magnetic tape attached on one side of a magnetic stripe card must be read by a card terminal. Only limited types and small amounts of data can be stored on this type of card, and the data recorded on magnetic stripe cards can be altered or damaged upon contact with a magnet. In addition, because magnetic stripe cards do not provide sufficient security due to the fact that they do not use data encryption, they are increasingly being replaced by IC cards in various fields, including access control."
-  },
-  "man_trap": {
-    "name": "Man-trap",
-    "description": "A physical access control system for preventing unauthorized access and separating security zones from non-security zones."
-  },
-  "master_device": {
-    "name": "Master device",
-    "description": "Among the devices that are connected through RS-485, the device that plays the role of a controller. It processes data by periodically monitoring the slave device. It is also called a host device."
-  },
-  "matching_timeout": {
-    "name": "Matching timeout",
-    "description": "The time limit given to device matching or server matching. Matching fails if the matching does not get completed within the time limit."
-  },
-  "meal_deduct": {
-    "name": "Meal deduction",
-    "description": "The act of excluding meal times when calculating the total number of daily working hours."
-  },
-  "message_timeout": {
-    "name": "Message timeout",
-    "description": "The duration of time a message is displayed when there is no user interaction."
-  },
-  "minutiae": {
-    "name": "Minutiae",
-    "description": "The specific details in the ridges of a fingerprint used to recognize the fingerprint."
-  },
-  "mobile_card": {
-    "name": "Mobile card",
-    "description": "A card that stores user data and credential data on a mobile device and performs authentications through NFC or BLE technology. Mobile cards provide higher levels of security and convenience than plastic cards, and have the advantage of reducing card issuance and management expenses because they use mobile devices used by most people daily."
-  },
-  "model_number": {
-    "name": "Model number",
-    "description": "A generic number given to a device by the manufacturer in order to identify its type."
-  },
-  "monitoring": {
-    "name": "Monitoring",
-    "description": "A surveillance activity for specific purposes. Monitoring access control and time and attendance management refers to checking access control events and user time and attendance events, as well as checking and controlling the status of devices, doors and zones in real time."
-  },
-  "msb": {
-    "name": "MSB (Most Significant Bit)",
-    "description": "The bit at the highest position of binary data (the left-most bit) or its content. It is the opposite of the Least Significant Bit (LSB)."
-  },
-  "mtu": {
-    "name": "MTU (Maximum Transmission Unit)",
-    "description": "The maximum amount of packets that can be transmitted through the network."
-  },
-  "multi_rfid": {
-    "name": "Multi-RFID technology",
-    "description": "A technology that allows cards operating in different frequency bands, such as 125 kHz and 13.56 MHz, to be read from a single device."
-  },
-  "muster_zone": {
-    "name": "Muster Zone",
-    "description": "A zone designated for the gathering of members in case of an emergency such as a fire. This is used to monitor the number and roster of personnel in a certain zone, and to notify administrators via an alarm or alert if a user has remained in a particular zone for a certain period of time."
-  },
   "nc": {
     "name": "NC (Normally Closed)",
     "description": "An action where the relay remains closed in normal status but opens when the device operates. The current flows through the connected circuit because the relay remained closed earlier."
-  },
-  "nfc": {
-    "name": "NFC(Near Field Communication)",
-    "description": "An RFID technology applied to mobile terminals to enable bidirectional transmission/reception of data at close range. With the rise in the smartphone penetration rate, this technology is increasingly used in various fields such as finance and communications, and it is also applied in access control in the form of mobile ID cards."
   },
   "no": {
     "name": "NO (Normally Open)",
@@ -563,197 +95,53 @@
     "name": "NVR(Network Video Record)",
     "description": "A function that records and monitors videos of access points using cameras or video devices installed on the network, and manages events that occur."
   },
-  "noise": {
-    "name": "Noise",
-    "description": "The electrical signals that obscure or make it difficult to identify signals."
-  },
-  "open": {
-    "name": "Open",
-    "description": "A state in which no current flows because a wire has been broken, causing the circuit to open."
-  },
-  "optical_fp_sensor": {
-    "name": "Optical fingerprint sensor",
-    "description": "A sensor that extract fingerprint information using light."
-  },
   "osdp": {
     "name": "OSDP(Open Supervised Device Protocol)",
     "description": "The standard RS-485 protocol developed by enhancing the Wiegand interface, through which only unidirectional communication from a reader to a controller was possible. This protocol enables processing of large amounts of data in a bidirectional reader-controller communication environment, as well as transmitting biometric data. Supporting this protocol also enables connectivity between third-party devices, so you can simply replace an existing system's items as necessary."
   },
-  "output_relay": {
-    "name": "Output relays",
-    "description": "An electronically controlled device that opens/closes electrical contacts in order to affect other devices."
-  },
-  "overtime": {
-    "name": "Overtime",
-    "description": "The time worked that is more than the daily working hours set by the Labor Standards Act or the company regulations. Overtime may include early work, extra work, holiday work, etc."
-  },
-  "password": {
-    "name": "Password",
-    "description": "A string that an individual uses together with their user ID for authentication."
-  },
-  "pin": {
-    "name": "PIN (Personal Identification Number)",
-    "description": "A serial number given to an individual for their identification."
-  },
-  "port_number": {
-    "name": "Port number",
-    "description": "The port number used for intercommunication in TCP/UDP. Its range is from 0 to 65535."
-  },
-  "private_auth": {
-    "name": "Private authentication",
-    "description": "An authentication method where user authentication is performed according to the combination of credentials specified by the administrator. This method takes precedence over other authentication methods."
-  },
-  "puch": {
-    "name": "Punch",
-    "description": "An event that indicates the start time or the end time of work."
-  },
-  "punch_in": {
-    "name": "Punch in",
-    "description": "The act of recording the time of arrival at the workplace."
-  },
-  "punch_out": {
-    "name": "Punch out",
-    "description": "The act of recording the time of departure from the workplace."
-  },
-  "relay": {
-    "name": "Relay",
-    "description": "A control device that auto-executes the opening and closing of the electric circuit according to changes in the current, voltage, frequency, etc. of another electric circuit."
-  },
-  "initialize_reset": {
-    "name": "Reset",
-    "description": "The act of restoring the settings of hardware, software, etc. to the specified default values."
+  "poe": {
+    "name": "PoE (Power over Ethernet)",
+    "description": "The system supplies power to the device through an Ethernet cable. Using a single cable to transmit data and supply power simplifies installation and expansion and reduces wiring costs."
   },
   "rest": {
     "name": "REST (Representational State Transfer)",
     "description": "REST is an architectural style for distributed systems such as Web. REST interfaces with external systems using HTTP URI, and communicate with HTTP verbs (GET, POST, PUT, DELETE and etc)."
   },
-  "restart": {
-    "name": "Restart",
-    "description": "The act of switching off and on by force due to an error related to program execution during device operation."
+  "rf": {
+    "name": "RF (Radio Frequency)",
+    "description": "Radio frequency is an electromagnetic wave used to detect or transmit information over short or long distances. It is mainly used in communications, RFID technology, wireless networks, and other fields."
   },
-  "ridge": {
-    "name": "Ridge",
-    "description": "A ridge is a curve that represents a fingerprint, consisting of a continuous curve, an end point where the ridge is cut midway through, and a bifurcation where two ridges meet, which are called minutiae."
+  "rfid": {
+    "name": "RFID (Radio-Frequency Identification)",
+    "description": "Technology that authenticates and identifies IDs using RF (Radio Frequency). Information is stored on an RFID tag composed of an antenna and a chip, and an RFID reader reads the tag to identify the information."
+  },
+  "rfid_tag": {
+    "name": "RFID (Radio-Frequency Identification) tag",
+    "description": "It is an electronic tag attached to a card or other object that stores unique identification information for the person or object. An RFID reader wirelessly reads the information stored on the tag using radio waves. An RFID tag typically consists of a small processor, memory, a small antenna, and a battery, and can be classified into multiple types based on whether it supports reading and writing, whether it includes an internal power source, and its RF (radio frequency) band."
+  },
+  "rte": {
+    "name": "RTE (request to exit) button",
+    "description": "A button to open the door from inside. Pressing this button opens the door. The button can be used for doors and zones that do not require separate authentication when exiting."
   },
   "rs485": {
     "name": "RS-485",
     "description": "A standard protocol for serial communication that supports home networking. RS-232 has a low transfer rate and a short transmission range while RS485 enables all devices to transmit/receive data on the same line."
   },
-  "scan": {
-    "name": "Scan",
-    "description": "The act of putting a finger on the surface of the sensor or moving a finger at regular speed for the conversion of fingerprint information into digital data."
-  },
-  "fp_scan_timeout": {
-    "name": "Scan timeout",
-    "description": "The time limit for entering fingerprint information."
-  },
-  "security_level": {
-    "name": "Security level",
-    "description": "The accuracy of fingerprint matching level required to identify users. At a higher security level, the False Rejection Rate (FRR) can also be higher."
-  },
-  "semiconductor_fp_sensor": {
-    "name": "Semiconductor fingerprint sensor",
-    "description": "A multiple number of sensors arranged on a semiconductor that electrically detect fingerprint information."
-  },
-  "sensor_sensitivity": {
-    "name": "Sensor sensitivity",
-    "description": "The level of accuracy in detecting fingerprint images. With higher sensitivity, it is easier to get fingerprint images, but, because noise sensitivity increases also, it may be more difficult to perform accurate image detection."
-  },
-  "serial_comm": {
-    "name": "Serial communication",
-    "description": "A communication method that transmits multiple bits in sequence. RS-232 and RS-485 are popular examples."
-  },
-  "server": {
-    "name": "Server",
-    "description": "A computer program that provides services to other programs, or a computer on which a server program runs."
-  },
-  "server_matching": {
-    "name": "Server matching",
-    "description": "A function that compares the credential information stored on the server and the credential information entered by a user."
-  },
-  "slave_device": {
-    "name": "Slave device",
-    "description": "Among devices connected through RS-485, the device that only performs the input and output functions. It does not contain user information and is controlled by the master device."
-  },
-  "suprema_template": {
-    "name": "Suprema template",
-    "description": "A fingerprint template type defined by Suprema."
-  },
-  "sdk": {
-    "name": "SDK (Software Development Kit)",
-    "description": "A SDK is a set of software development tools that allows software developers to create applications for a certain software package, software framework, hardware platform, computer system, or similar development environment platform."
-  },
-  "synchronization": {
-    "name": "Synchronization",
-    "description": "The act of precisely matching time, information, etc. between different systems or networks."
-  },
-  "tna": {
-    "name": "T&A (Time and Attendance)",
-    "description": "A control function that collects and traces information about employees and their working hours, such as attendance and absences."
-  },
-  "tna_event": {
-    "name": "T&A event",
-    "description": "An event that indicates the T&A (Time and Attendance) status of employees. It records the entry and exit times of employees and calculates how many hours they worked in a certain period of time."
-  },
-  "tna_rule": {
-    "name": "T&A rule",
-    "description": "The rule defined by the administrator in order to assess and manage the hours worked by employees."
-  },
-  "tamper": {
-    "name": "Tamper",
-    "description": "A method for monitoring the device status. A tamper can be set so that, if the device is dislocated from the bracket on which it is installed due to external factors, an alarm is activated, or the event is recorded on the server."
+  "ssl": {
+    "name": "SSL (Secure Sockets Layer)",
+    "description": "It refers to an encryption protocol used by web clients and web servers to ensure security and data integrity when communicating over a network."
   },
   "tcpip": {
     "name": "TCP/IP",
     "description": "Abbreviation of Transmission Control Protocol/Internet Protocol. It is a protocol for communication between computers and a combination of TCP and IP."
   },
-  "template": {
-    "name": "Template",
-    "description": "The stored data created from extracting and then encoding biometric features. It is used to identify a user by comparing it with the bio sample entered by the user in a biometrics system or on a biometrics device."
+  "tls": {
+    "name": "TLS (Transport Layer Security)",
+    "description": "It refers to an encryption protocol used by web clients and web servers to ensure security and data integrity when communicating over a network."
   },
-  "template_on_card": {
-    "name": "Template-on-Card",
-    "description": "A method used to store the user information and fingerprint template on a smart card."
-  },
-  "time_sync": {
-    "name": "Time sync",
-    "description": "A function that synchronizes the time between different devices or different systems on a network."
-  },
-  "timezone": {
-    "name": "Time zone",
-    "description": "A geographical zone that uses the same time standard. It can be used to set the time of the device or BioStar for controlling access."
-  },
-  "transaction": {
-    "name": "Transaction",
-    "description": "A transaction is a unit of work that consists of data retrieval, updates, and other operations. In order to prevent using temporarily unmatched data from updates, a transaction is processed all at once. ACID Properties should be satisfied when a transaction is used."
-  },
-  "trigger_action": {
-    "name": "Triggered action",
-    "description": "The actions that automatically perform activities such as controlling the device and sending emails when an alarm or a certain event occurs."
-  },
-  "upgrade": {
-    "name": "Upgrade",
-    "description": "The act of enhancing the performance of hardware or software by replacing the existing product with a newer or improved version."
-  },
-  "user": {
-    "name": "User",
-    "description": "An individual that uses the Suprema device."
-  },
-  "user_group": {
-    "name": "User group",
-    "description": "A group of users that is created for ease of management. A component of the access group."
-  },
-  "user_id": {
-    "name": "User ID",
-    "description": "An identification code comprised of the alphabet, numbers, or a combination of both used to identify a certain user."
-  },
-  "user_sync": {
-    "name": "User synchronization",
-    "description": "The act of automatically sending to the device the user information that has been modified on the BioStar server."
-  },
-  "voice_prompt": {
-    "name": "Voice prompt",
-    "description": "A function that introduces available options to users using the recorded voice."
+  "uhf": {
+    "name": "UHF (Ultra High Frequency)",
+    "description": "Ultra high frequency (UHF) is an electromagnetic wave with frequencies between 300 and 3,000 MHz. It is used in various communication fields, including satellite broadcasting, mobile communications such as cellular phones, terrestrial digital TV, aviation radio, and RFID technology. Because of its high frequency, it has a short wavelength of 1–10 cm and is highly directional."
   },
   "voip": {
     "name": "VoIP",
@@ -763,12 +151,748 @@
     "name": "Wiegand",
     "description": "A method that transfers a small amount of data using D0 and D1. Generally it is used as a method of communication between the reader and controller of an access control device."
   },
-  "wlan": {
-    "name": "Wireless LAN",
-    "description": "A local area network that uses Radio Frequency (RF) technology. With a terminal fitted with a WLAN card, people can use a communication network within a certain distance from the place where an access point (AP)is installed."
+  "import": {
+    "name": "Import",
+    "description": "The act of transferring data from one computer into its own system."
+  },
+  "audit_trail": {
+    "name": "Audit trail",
+    "description": "The data recorded on system changes. The audit trail makes it possible to search for information about unauthorized user activity, the processing of user activity, etc."
+  },
+  "forced_open": {
+    "name": "Forced open",
+    "description": "A status in which the opening of the door has been detected by the door sensor without the occurrence of a normal door open event, such as user authentication or use of the exit button."
+  },
+  "private_auth": {
+    "name": "Private authentication",
+    "description": "An authentication method where user authentication is performed according to the combination of credentials specified by the administrator. This method takes precedence over other authentication methods."
+  },
+  "pin": {
+    "name": "PIN (Personal Identification Number)",
+    "description": "A serial number given to an individual for their identification."
+  },
+  "alert": {
+    "name": "Alert",
+    "description": "The act of displaying or forwarding in real time an alarm event occurred in the system."
+  },
+  "arm": {
+    "name": "Arm",
+    "description": "The act of monitoring a specific zone for the prevention of crime and accidents. 24-hour monitoring, alarm notifications, recordings, etc. are available through a security system."
+  },
+  "intrusion_alarm_zone": {
+    "name": "Intrusion Alarm Zone",
+    "description": "A zone set to emit a warning sound or relay signal if an unauthorized person attempts an intrusion after Arm. This zone normally begins monitoring after the day's work, and emits a preset alarm or signal when an intrusion attempt is detected."
+  },
+  "disarm": {
+    "name": "Disarm",
+    "description": "The act of suspending the operation of an alarm system activated for a specific zone."
   },
   "zone": {
     "name": "Zone",
     "description": "A device group that is subject to access rules. It is used to monitor events."
+  },
+  "aes": {
+    "name": "AES (Advanced Encryption Standard)",
+    "description": "The Advanced Encryption Standard (AES) is a specification for the encryption of electronic data established by the U.S. National Institute of Standards and Technology (NIST)."
+  },
+  "administrator": {
+    "name": "Administrator",
+    "description": "The user who has full access to the configuration software."
+  },
+  "optical_fp_sensor": {
+    "name": "Optical fingerprint sensor",
+    "description": "A sensor that extract fingerprint information using light."
+  },
+  "graphic_map": {
+    "name": "Graphic map",
+    "description": "One of the monitoring methods provided by BioStar. This function enables you to check and control the status of doors in real time from the map."
+  },
+  "nfc": {
+    "name": "NFC(Near Field Communication)",
+    "description": "An RFID technology applied to mobile terminals to enable bidirectional transmission/reception of data at close range. With the rise in the smartphone penetration rate, this technology is increasingly used in various fields such as finance and communications, and it is also applied in access control in the form of mobile ID cards."
+  },
+  "tna": {
+    "name": "T&A (Time and Attendance)",
+    "description": "A control function that collects and traces information about employees and their working hours, such as attendance and absences."
+  },
+  "tna_rule": {
+    "name": "T&A rule",
+    "description": "The rule defined by the administrator in order to assess and manage the hours worked by employees."
+  },
+  "tna_event": {
+    "name": "T&A event",
+    "description": "An event that indicates the T&A (Time and Attendance) status of employees. It records the entry and exit times of employees and calculates how many hours they worked in a certain period of time."
+  },
+  "global_zone": {
+    "name": "Global Zone",
+    "description": "A zone where a server and a master device are connected via TCP/IP, and the master device and a slave device are connected via RS-485. The server performs the master role for the zone."
+  },
+  "payroll_sys": {
+    "name": "Payroll system",
+    "description": "Calculates total wages based on employees' working hours, attendance, and other tax factors to pay accurate salaries."
+  },
+  "export": {
+    "name": "Export",
+    "description": "An operation performed by a program that uses a particular data format. It is the act of storing data in a format that is compatible with other programs."
+  },
+  "noise": {
+    "name": "Noise",
+    "description": "The electrical signals that obscure or make it difficult to identify signals."
+  },
+  "direct_mode": {
+    "name": "Direct mode",
+    "description": "A mode whereby the BioStar 2 client directly searches for connectable devices and connecting to them. In this mode, the client is responsible for communicating with devices and servers. In this mode, a list of connectable devices is shown when a device search is performed on the server, and the administrator can select a device to connect from the list."
+  },
+  "diode": {
+    "name": "Diode",
+    "description": "A component that controls the current to flow in a single direction only. This component is used to prevent reverse current flow that momentarily occurs when the door lock operates."
+  },
+  "short": {
+    "name": "Short circuit",
+    "description": "The wires are shorted. It typically occurs due to damaged wires or overcurrent."
+  },
+  "open": {
+    "name": "Open",
+    "description": "A state in which no current flows because a wire has been broken, causing the circuit to open."
+  },
+  "bandwidth": {
+    "name": "Bandwidth",
+    "description": "A range of frequencies where certain functions can be performed; measured in hertz (Hz). The amount of information that can be transmitted over a wire or another medium over a period of time. The greater the frequency bandwidth, the more information can be sent over a certain period of time."
+  },
+  "dummy_reader": {
+    "name": "Dummy Reader",
+    "description": "A device that does not store or assess user data, but performs the role of reading credential data such as faces, fingerprints and cards, and transmits this data to the control device."
+  },
+  "daisy_chain": {
+    "name": "Daisy Chain",
+    "description": "A daisy chain is a wiring scheme in which hardware devices are connected together in sequence."
+  },
+  "dbms": {
+    "name": "DBMS (Database Management System)",
+    "description": "A DBMS is a software that controls and manages database, and interacts with a user or an application to access data in the database."
+  },
+  "door_contact": {
+    "name": "Door Contact",
+    "description": "Another term for a door sensor. Magnetic sensor used to check the current state (closed/open) of a door."
+  },
+  "synchronization": {
+    "name": "Synchronization",
+    "description": "The act of precisely matching time, information, etc. between different systems or networks."
+  },
+  "eer": {
+    "name": "EER (Equal Error Rate)",
+    "description": "As an indicator of Biometric Performance, an ERR(Equal Error Rate) is a point where FAR (False Acceptance Rate) and FRR (False Rejection Rate) intersects. A device with lower EER is regarded to be more accurate."
+  },
+  "enrollment": {
+    "name": "Enrollment",
+    "description": "A series of steps used to record the biometric information of users in a biometrics system. It involves sampling, template creation, storing, etc."
+  },
+  "log": {
+    "name": "Log",
+    "description": "The records of all events occurred in the system, network, device, door, etc."
+  },
+  "local_zone": {
+    "name": "Local Zone",
+    "description": "A zone set via an inter-device RS-485 connection. The master role for the zone is not performed by the server but by the master device."
+  },
+  "relay": {
+    "name": "Relay",
+    "description": "A control device that auto-executes the opening and closing of the electric circuit according to changes in the current, voltage, frequency, etc. of another electric circuit."
+  },
+  "mag_card": {
+    "name": "Magnetic stripe card",
+    "description": "A card that stores data by altering the magnetism of its magnetic tape. For data transmission, the magnetic tape attached on one side of a magnetic stripe card must be read by a card terminal. Only limited types and small amounts of data can be stored on this type of card, and the data recorded on magnetic stripe cards can be altered or damaged upon contact with a magnet. In addition, because magnetic stripe cards do not provide sufficient security due to the fact that they do not use data encryption, they are increasingly being replaced by IC cards in various fields, including access control."
+  },
+  "master_device": {
+    "name": "Master device",
+    "description": "Among the devices that are connected through RS-485, the device that plays the role of a controller. It processes data by periodically monitoring the slave device. It is also called a host device."
+  },
+  "matching_timeout": {
+    "name": "Matching timeout",
+    "description": "The time limit given to device matching or server matching. Matching fails if the matching does not get completed within the time limit."
+  },
+  "man_trap": {
+    "name": "Man-trap",
+    "description": "A physical access control system for preventing unauthorized access and separating security zones from non-security zones."
+  },
+  "multi_rfid": {
+    "name": "Multi-RFID technology",
+    "description": "A technology that allows cards operating in different frequency bands, such as 125 kHz and 13.56 MHz, to be read from a single device."
+  },
+  "message_timeout": {
+    "name": "Message timeout",
+    "description": "The duration of time a message is displayed when there is no user interaction."
+  },
+  "monitoring": {
+    "name": "Monitoring",
+    "description": "A surveillance activity for specific purposes. Monitoring access control and time and attendance management refers to checking access control events and user time and attendance events, as well as checking and controlling the status of devices, doors and zones in real time."
+  },
+  "model_number": {
+    "name": "Model number",
+    "description": "A generic number given to a device by the manufacturer in order to identify its type."
+  },
+  "mobile_card": {
+    "name": "Mobile card",
+    "description": "A card that stores user data and credential data on a mobile device and performs authentications through NFC or BLE technology. Mobile cards provide higher levels of security and convenience than plastic cards, and have the advantage of reducing card issuance and management expenses because they use mobile devices used by most people daily."
+  },
+  "wlan": {
+    "name": "Wireless LAN",
+    "description": "A local area network that uses Radio Frequency (RF) technology. With a terminal fitted with a WLAN card, people can use a communication network within a certain distance from the place where an access point (AP)is installed."
+  },
+  "access_point": {
+    "name": "AP (Access Point)",
+    "description": "A device for implementing a Wireless LAN. An access point creates a connection to a wireless network through a wired LAN."
+  },
+  "brute_attack": {
+    "name": "Brutal attack",
+    "description": "Also called Brute Force Attack, this term refers to the act of entering all possible values to unlock passwords."
+  },
+  "ups": {
+    "name": "UPS (Uninterruptible Power Supply system)",
+    "description": "Provides emergency power for a certain period using a built-in battery when the main power supply is interrupted due to a power outage or other reasons. Mainly used in facilities where a stable power supply is essential, such as communication, broadcasting, medical facilities, data centers, and infrastructure facilities."
+  },
+  "biometric_information": {
+    "name": "Biometric information",
+    "description": "Information used to identify each individual. Information concerning the unique physical and behavioral characteristics of an individual, including the individual's fingerprint, signature, vein pattern, face, voice, iris, genes, etc."
+  },
+  "biometrics": {
+    "name": "Biometric",
+    "description": "A technology that extracts and analyzes the physical and behavioral characteristics of individuals using an automated device for the identification of each individual."
+  },
+  "biometric_auth": {
+    "name": "Biometric authentication",
+    "description": "The act of determining whether the provided biometric information of an individual matches the information on the individual’s Biometric characteristics previously enrolled."
+  },
+  "semiconductor_fp_sensor": {
+    "name": "Semiconductor fingerprint sensor",
+    "description": "A multiple number of sensors arranged on a semiconductor that electrically detect fingerprint information."
+  },
+  "waterproof": {
+    "name": "Waterproof",
+    "description": "Treatment that blocks liquids from seeping into the device due to rain or flooding and affecting its operation."
+  },
+  "firewall": {
+    "name": "Firewall",
+    "description": "This security system prevents unauthorized external parties from accessing the network used by individuals and organizations’ PCs to leak information or damage the system. A firewall sits at the boundary between the external internet and the internal private network, allowing or blocking incoming access attempts according to a predefined access control list."
+  },
+  "backlight": {
+    "name": "Backlight",
+    "description": "A light that emits from the back of the LCD of a device for readability."
+  },
+  "backlight_timeout": {
+    "name": "Backlight timeout",
+    "description": "The duration of time the backlight remains on."
+  },
+  "parallel_port": {
+    "name": "Parallel port",
+    "description": "Input and output port that transmits data simultaneously via a parallel interface."
+  },
+  "security_level": {
+    "name": "Security level",
+    "description": "The accuracy of fingerprint matching level required to identify users. At a higher security level, the False Rejection Rate (FRR) can also be higher."
+  },
+  "secure_tamper": {
+    "name": "Secure Tamper",
+    "description": "This feature deletes all information about users, logs, encryption keys, and SSL certificates stored on the device immediately when the device is separated from the bracket and a tamper occurs."
+  },
+  "decryption": {
+    "name": "Decryption",
+    "description": "The act of recovering encrypted data using decryption keys. Encrypted data can only be decrypted with a symmetric key that pairs with the key used for the encryption of the encrypted data."
+  },
+  "frr": {
+    "name": "FRR (False Rejection Rate)",
+    "description": "A criterion used when comparing the accuracy of different biometrics systems. It represents the probability of mistakenly recognizing a registered person as a non-registered person."
+  },
+  "leave_manage": {
+    "name": "Leave Management",
+    "description": "The act of managing personnel absence due to vacations, business trips, external duties, etc."
+  },
+  "bifurcation": {
+    "name": "Bifurcation",
+    "description": "A point where two fingerprint ridges meet or are separated."
+  },
+  "blacklist": {
+    "name": "Blacklist",
+    "description": "A list of cards that are denied for authentication on the BioStar device. When a card is lost or stolen, misuse can be prevented by registering the ID of the card in the blacklist."
+  },
+  "bluetooth": {
+    "name": "Bluetooth",
+    "description": "A communication technology that supports bidirectional transmission and reception of data at close range. Each type of Bluetooth has different characteristics depending on the transmission distance, transmission method, power consumption, etc."
+  },
+  "contactless_card": {
+    "name": "Contactless card",
+    "description": "A card that communicates with a card terminal using its built-in coil antenna. This type of card enables transmission of data using a magnetic field without contacting a card terminal."
+  },
+  "user": {
+    "name": "User",
+    "description": "An individual that uses the Suprema device."
+  },
+  "user_id": {
+    "name": "User ID",
+    "description": "An identification code comprised of the alphabet, numbers, or a combination of both used to identify a certain user."
+  },
+  "user_group": {
+    "name": "User group",
+    "description": "A group of users that is created for ease of management. A component of the access group."
+  },
+  "user_sync": {
+    "name": "User synchronization",
+    "description": "The act of automatically sending to the device the user information that has been modified on the BioStar server."
+  },
+  "weatherproof": {
+    "name": "Water Resistant",
+    "description": "This refers to a slightly lower level of waterproof performance than waterproof."
+  },
+  "server": {
+    "name": "Server",
+    "description": "A computer program that provides services to other programs, or a computer on which a server program runs."
+  },
+  "server_matching": {
+    "name": "Server matching",
+    "description": "A function that compares the credential information stored on the server and the credential information entered by a user."
+  },
+  "server_mode": {
+    "name": "Server mode",
+    "description": "Enter the server IP address directly on the device to connect the server and the device. Because the address is entered directly, the device is not at risk of connecting to another server or client, and if the connection is lost, it reconnects automatically to achieve a stable network environment."
+  },
+  "sensor_sensitivity": {
+    "name": "Sensor sensitivity",
+    "description": "The level of accuracy in detecting fingerprint images. With higher sensitivity, it is easier to get fingerprint images, but, because noise sensitivity increases also, it may be more difficult to perform accurate image detection."
+  },
+  "muster_zone": {
+    "name": "Muster Zone",
+    "description": "A zone designated for the gathering of members in case of an emergency such as a fire. This is used to monitor the number and roster of personnel in a certain zone, and to notify administrators via an alarm or alert if a user has remained in a particular zone for a certain period of time."
+  },
+  "sdk": {
+    "name": "SDK (Software Development Kit)",
+    "description": "A SDK is a set of software development tools that allows software developers to create applications for a certain software package, software framework, hardware platform, computer system, or similar development environment platform."
+  },
+  "shrink_tube": {
+    "name": "Shrink tube",
+    "description": "Tube-shaped rubber elastomer that shrinks when heat is applied, mainly used to protect electronic device cables from breakage, corrosion, and water ingress."
+  },
+  "suprema_template": {
+    "name": "Suprema template",
+    "description": "A fingerprint template type defined by Suprema."
+  },
+  "smart_card": {
+    "name": "Smart Card",
+    "description": "An electronic card that operates in the 13.56 MHz band and is capable of both reading and writing data. An HF card can be fitted with various security functions, such as data encryption and allowing it to be read by a specific reader only."
+  },
+  "scan": {
+    "name": "Scan",
+    "description": "The act of putting a finger on the surface of the sensor or moving a finger at regular speed for the conversion of fingerprint information into digital data."
+  },
+  "schedule_unlock": {
+    "name": "Scheduled Unlock",
+    "description": "Opens doors in certain areas according to a predefined schedule."
+  },
+  "schedule_lock": {
+    "name": "Scheduled Lock",
+    "description": "Locks doors in certain areas according to a predefined schedule."
+  },
+  "slave_device": {
+    "name": "Slave device",
+    "description": "Among devices connected through RS-485, the device that only performs the input and output functions. It does not contain user information and is controlled by the master device."
+  },
+  "puch": {
+    "name": "Punch",
+    "description": "An event that indicates the start time or the end time of work."
+  },
+  "time_sync": {
+    "name": "Time sync",
+    "description": "A function that synchronizes the time between different devices or different systems on a network."
+  },
+  "overtime": {
+    "name": "Overtime",
+    "description": "The time worked that is more than the daily working hours set by the Labor Standards Act or the company regulations. Overtime may include early work, extra work, holiday work, etc."
+  },
+  "serial_comm": {
+    "name": "Serial communication",
+    "description": "A communication method that transmits multiple bits in sequence. RS-232 and RS-485 are popular examples."
+  },
+  "meal_deduct": {
+    "name": "Meal deduction",
+    "description": "The act of excluding meal times when calculating the total number of daily working hours."
+  },
+  "real_time_log": {
+    "name": "Real-time log",
+    "description": "Records of real-time events at each access point (AP)."
+  },
+  "lvv": {
+    "name": "Live Video View",
+    "description": "A video-based monitoring method. BioStar provides IP camera screens and event logs in real time, and supports the ability to manually open/lock doors."
+  },
+  "analog_intercom": {
+    "name": "Analog intercom",
+    "description": "An intercom telephone that consists of an analog switch and a network."
+  },
+  "apb": {
+    "name": "APB (Anti-passback)",
+    "description": "A structural method used to control access. This function uses access control devices installed both inside and outside the door, so that authentication is required for access to the zone. In the case of card-based access control systems, if a person enters a zone following the person in front without swiping their card on the reader, the door does not open when the person attempts to leave the zone, and subsequently an <b>anti-passback</b> event occurs.<br/><b>Anti-passback</b> is categorized into hard APB and soft APB. If the <b>anti-passback</b> is violated, the <b>anti-passback</b> event is created immediately and hard APB does not permit access to the user while soft APB still permits access to the user."
+  },
+  "alarm": {
+    "name": "Alarm",
+    "description": "Among events occurred in the system, the type of event that requires action without delay."
+  },
+  "alarm_action": {
+    "name": "Alarm action",
+    "description": "The actions that automatically perform activities such as controlling the device and sending emails when an alarm or a certain event occurs."
+  },
+  "password": {
+    "name": "Password",
+    "description": "A string that an individual uses together with their user ID for authentication."
+  },
+  "encryption": {
+    "name": "Encryption",
+    "description": "The act of transforming information so that it is impossible to recognize its original meaning. Storing or transferring information in encrypted form is a way of protecting the information."
+  },
+  "encryption_key": {
+    "name": "Encryption Key",
+    "description": "A certain bit string generated for encryption. Encryption keys are designed using algorithms that prevent guessing. Generally, longer encryption keys make decryption more difficult."
+  },
+  "access_on_card": {
+    "name": "Access on Card",
+    "description": "A card on which information about a user’s ID, credential, and access group is recorded."
+  },
+  "face_detection": {
+    "name": "Face detection",
+    "description": "A function that, after a user's credential has been verified, takes a picture of the user's face before granting them access so that the event and an image of the user's face can be stored together. Authentication fails if the user's face is not detected. When an image of a user's face has been stored, if necessary, it is possible to identify the user by comparing the image of the face with the user ID that was recorded when the event occurred."
+  },
+  "face_recognition": {
+    "name": "Face authentication",
+    "description": "A technology and authentication system that identifies people based on their facial features."
+  },
+  "upgrade": {
+    "name": "Upgrade",
+    "description": "The act of enhancing the performance of hardware or software by replacing the existing product with a newer or improved version."
+  },
+  "epoxy_potted": {
+    "name": "Epoxy potted",
+    "description": "A material that protects the circuitry by preventing rainwater from entering the device if the device is installed outdoors."
+  },
+  "live_face_detection": {
+    "name": "Live Face Detection(LFD)",
+    "description": "A technology that detects forged faces, e.g., masks and photographs."
+  },
+  "fake_fp": {
+    "name": "Fake fingerprint",
+    "description": "A fake fingerprint made from paper, silicone, rubber, etc. to emulate another individual's fingerprint."
+  },
+  "live_fp_detection": {
+    "name": "Live Finger Detection(LFD)",
+    "description": "A technology that detects Fake fingerprint copied using rubber, silicone, clay, glue, film, and so on."
+  },
+  "floating_shift": {
+    "name": "Floating Shift",
+    "description": "One of the attendance rules provided by BioStar. This method does not involve preset arrival and exit times, but instead applies the attendance rules of the day according to the user's arrival time."
+  },
+  "ridge": {
+    "name": "Ridge",
+    "description": "A ridge is a curve that represents a fingerprint, consisting of a continuous curve, an end point where the ridge is cut midway through, and a bifurcation where two ridges meet, which are called minutiae."
+  },
+  "voice_prompt": {
+    "name": "Voice prompt",
+    "description": "A function that introduces available options to users using the recorded voice."
+  },
+  "api": {
+    "name": "API (Application Programming Interface)",
+    "description": "An API is a set of protocols, tools, and instruction for implementing software applications. In case of web application development, the API specifies how the system should send requests and what kind of corresponding responses should be expected to receive. The API may include functions like file managements, window/video/character processing to ease the application development process for the 3rd party application developers."
+  },
+  "event": {
+    "name": "Event",
+    "description": "An interaction between a user, the device, and the door. Events are recorded in a log on the BioStar server. They include authentication successes and failures and changes to the status of the door, alarms, etc."
+  },
+  "dual_auth": {
+    "name": "Double mode",
+    "description": "An authentication method where the credentials of two different individuals are entered in sequence in a limited amount of time."
+  },
+  "auth": {
+    "name": "Authentication",
+    "description": "The act of verifying the credentials entered by a user to identify the user."
+  },
+  "auth_mode": {
+    "name": "Authentication mode",
+    "description": "A combination of credentials required for authentication."
+  },
+  "interlock_zone": {
+    "name": "Interlock Zone",
+    "description": "A zone between two or more doors. In this zone, if one door is open or has been unlocked, the rest of the doors will be locked. This zone is generally applied to laboratories and manufacturing facilities where suspended particulate matter in the air such as dust needs to be controlled, or places where this is required for security and safety reasons."
+  },
+  "intercom": {
+    "name": "Intercom",
+    "description": "A communication system that is generally installed in a building or institution by using a Private Branch eXchange (PBX)."
+  },
+  "batch_enrollment": {
+    "name": "Batch enrollment",
+    "description": "The act of registering a multiple number of access cards on the BioStar server. Registered entry cards can be allocated to individual users."
+  },
+  "dst": {
+    "name": "Daylight Saving Time(DST)",
+    "description": "Also called summer time, DST is the practice of moving the clocks forward a certain amount of time from standard time for the purpose of saving energy through more efficient use of the daytime in the summer."
+  },
+  "io_device": {
+    "name": "I/O device",
+    "description": "A device that performs an information input/output function."
+  },
+  "lock": {
+    "name": "Lock",
+    "description": "An electro-mechanical device that connects to the access control system to be used for locking the door. It refers to all electronic devices either built into or fitted to the door."
+  },
+  "held_open": {
+    "name": "Held open",
+    "description": "A status in which the door has remained open longer than maximum set time. Can trigger an alarm."
+  },
+  "device": {
+    "name": "Device",
+    "description": "An access control device that can be controlled in the BioStar."
+  },
+  "device_id": {
+    "name": "Device ID",
+    "description": "A unique number given to identify each hardware device in the BioStar."
+  },
+  "restart": {
+    "name": "Restart",
+    "description": "The act of switching off and on by force due to an error related to program execution during device operation."
+  },
+  "ble": {
+    "name": "BLE(Bluetooth Low Energy)",
+    "description": "A Bluetooth technology that can transmit and receive low-power, low-volume data within a distance of about 10 m by using the 2.4 GHz frequency band. Low-power Bluetooth technology is mainly applied to small devices where the supply of power is limited due to low power consumption. It is also used in access control in the form of mobile ID cards."
+  },
+  "cde": {
+    "name": "CDE(Conformance Decision Engine)",
+    "description": "One of the procedures for Suprema's fingerprint matching algorithm. This is a step that determines whether the obtained fingerprint image is valid prior to processing the fingerprint image and extracting the minutiae of the fingerprint."
+  },
+  "contact_card": {
+    "name": "Contact card",
+    "description": "A card with a gold or silver chip attached to the surface. For data transmission, a contact card must be inserted into a card terminal in order to place the chip in direct contact with the card terminal."
+  },
+  "termination": {
+    "name": "Termination resistor",
+    "description": "This resistor is connected to the end of a daisy chain to prevent signal reflections and maintain signal quality in RS-485 communication. It reduces communication errors and ensures reliable data transmission."
+  },
+  "intelligent_reader": {
+    "name": "Intelligent card reader",
+    "description": "Device that stores user and access information and authenticates entered credentials to authorize user access."
+  },
+  "fp": {
+    "name": "Fingerprint",
+    "description": "The curved patterns observed on the fingertips."
+  },
+  "fp_sensor": {
+    "name": "Fingerprint sensor",
+    "description": "In fingerprint recognition technology, the image input device that obtains the image information of fingerprints that each represent the unique characteristics of an individual or the area on which a finger is placed, so that the fingerprint scanner can read the fingerprint."
+  },
+  "fp_scanner": {
+    "name": "Fingerprint scanner",
+    "description": "A device that scans users' fingerprints to register them on the database."
+  },
+  "fp_recognition": {
+    "name": "Fingerprint recognition",
+    "description": "A technology and authentication system that recognizes people based on the image information of fingerprints that are unique to individuals."
+  },
+  "fp_scan_timeout": {
+    "name": "Scan timeout",
+    "description": "The time limit for entering fingerprint information."
+  },
+  "fp_template": {
+    "name": "Fingerprint template",
+    "description": "A collection of fingerprint information that consists of a series of minutiae, such as the bifurcations and the end points of ridges observed in fingerprint images. Fingerprint templates are used for the identification of fingerprints, which is carried out by comparing the locations and number of minutiae."
+  },
+  "stp": {
+    "name": "Shielded twisted pair",
+    "description": "A cable wrapped in shielding to block external noise and reduce electrical signal interference. It is mainly used in factories or outdoors with significant signal interference, or where high-speed communication is required."
+  },
+  "clean_room": {
+    "name": "Clean room",
+    "description": "A space where suspended particulate matter in air such as dust, viruses, metal powders, and cells can be controlled as required."
+  },
+  "initialize_reset": {
+    "name": "Reset",
+    "description": "The act of restoring the settings of hardware, software, etc. to the specified default values."
+  },
+  "mtu": {
+    "name": "MTU (Maximum Transmission Unit)",
+    "description": "The maximum amount of packets that can be transmitted through the network."
+  },
+  "msb": {
+    "name": "MSB (Most Significant Bit)",
+    "description": "The bit at the highest position of binary data (the left-most bit) or its content. It is the opposite of the Least Significant Bit (LSB)."
+  },
+  "lsb": {
+    "name": "LSB (Least Significant Bit)",
+    "description": "The bit at the lowest position of binary data (the right-most bit) or its content. It is the opposite of the Most Significant Bit (MSB)."
+  },
+  "punch_in": {
+    "name": "Punch in",
+    "description": "The act of recording the time of arrival at the workplace."
+  },
+  "output_relay": {
+    "name": "Output relays",
+    "description": "An electronically controlled device that opens/closes electrical contacts in order to affect other devices."
+  },
+  "access": {
+    "name": "Access",
+    "description": "The act of accessing a particular zone or particular assets."
+  },
+  "access_rule": {
+    "name": "Access Rule",
+    "description": "A rule concerning access to a certain door/door group during a scheduled period of time."
+  },
+  "access_group": {
+    "name": "Access group",
+    "description": "A user group that has the right to access a specified door/door group during a scheduled period of time."
+  },
+  "access_level": {
+    "name": "Access level",
+    "description": "The right to access the door during a scheduled period of time."
+  },
+  "entrance_limit_zone": {
+    "name": "Entrance Limit Zone",
+    "description": "A zone that restricts access at specific times. This zone can be configured in such a way as to restrict the authentication or the authentication count."
+  },
+  "access_control": {
+    "name": "Access control",
+    "description": "The act of restricting unauthorized people from accessing the infrastructure and assets. Access made by authorized individuals is recorded in the log."
+  },
+  "door": {
+    "name": "Door",
+    "description": "A place in which a physical device for access control is installed. A spatial concept that forms the basis for access control."
+  },
+  "door_group": {
+    "name": "Door group",
+    "description": "A group of doors created for ease of management. Events can be monitored by the door group. A component of an access group."
+  },
+  "door_sensor": {
+    "name": "Door sensor",
+    "description": "A sensor that detects the state of the door. There are various types of states such as open, closed, held open, and forced open that can be checked."
+  },
+  "card": {
+    "name": "card",
+    "description": "A portable information medium in the form of a card. It stores information for identification."
+  },
+  "card_id": {
+    "name": "Card ID",
+    "description": "A serial number given to a card according to the format defined by a company, organization, or department. A card ID can be either given by the card manufacturer or created in a format defined by a particular company or organization."
+  },
+  "card_layout": {
+    "name": "Card layout",
+    "description": "The data arrangement and structure inside a card."
+  },
+  "card_mode": {
+    "name": "Card mode",
+    "description": "A method for authenticating cardholders. There are two card modes, Card ID mode and Template-on-Card mode. The Card ID mode compares the user ID that is stored on the device with fingerprint information, in reference to the card ID stored on the card. Whereas the Template-on-Card mode identifies a user by checking whether the fingerprint entered by the user matches the fingerprint information on the card."
+  },
+  "csn": {
+    "name": "CSN (Card Serial Number)",
+    "description": "A serial number given to a card by the manufacturer."
+  },
+  "card_reader": {
+    "name": "Card reader",
+    "description": "A device that reads the information stored on cards and transmits it to the controller."
+  },
+  "kernel": {
+    "name": "Kernel",
+    "description": "A core component of an operating system. It manages important resources such as the memory and processes. It is loaded onto the memory at boot time to provide various basic services."
+  },
+  "controller": {
+    "name": "Controller",
+    "description": "A device that examines access rights based on credential information obtained from a reader and controls the input and output of the reader."
+  },
+  "credential": {
+    "name": "Credential",
+    "description": "Data used to identify users. Digital signatures, smart cards, biometric data, user names, passwords, etc. are common examples of credentials."
+  },
+  "client": {
+    "name": "Client",
+    "description": "Entity that requests service from the server through a network."
+  },
+  "far": {
+    "name": "FAR (False Acceptance Rate)",
+    "description": "Criteria used when comparing the accuracy of different biometric systems. It represents the probability of incorrectly recognizing a non-registered person as a registered person."
+  },
+  "transaction": {
+    "name": "Transaction",
+    "description": "A transaction is a unit of work that consists of data retrieval, updates, and other operations. In order to prevent using temporarily unmatched data from updates, a transaction is processed all at once. ACID Properties should be satisfied when a transaction is used."
+  },
+  "tamper": {
+    "name": "Tamper",
+    "description": "A method for monitoring the device status. A tamper can be set so that, if the device is dislocated from the bracket on which it is installed due to external factors, an alarm is activated, or the event is recorded on the server."
+  },
+  "tailgating": {
+    "name": "Tailgating",
+    "description": "As one method of unauthorized access using fraudulent authentication, it refers to the act of a person who does not have access rights to a restricted area entering by following the person in front. It is also known as 'two-person entry', and is one of the most representative methods of unauthorized access along with <b>Piggybacking</b>. Generally, <b>Tailgating</b> refers to unauthorized access without intent, while <b>Piggybacking</b> refers to unauthorized access with intent."
+  },
+  "template": {
+    "name": "Template",
+    "description": "The stored data created from extracting and then encoding biometric features. It is used to identify a user by comparing it with the bio sample entered by the user in a biometrics system or on a biometrics device."
+  },
+  "template_on_card": {
+    "name": "Template-on-Card",
+    "description": "A method used to store the user information and fingerprint template on a smart card."
+  },
+  "punch_out": {
+    "name": "Punch out",
+    "description": "The act of recording the time of departure from the workplace."
+  },
+  "exit_button": {
+    "name": "Exit button",
+    "description": "A button used to open the door. Pressing this button opens the door. The button can be used for doors and zones that do not require separate authentication."
+  },
+  "trigger_action": {
+    "name": "Triggered action",
+    "description": "The actions that automatically perform activities such as controlling the device and sending emails when an alarm or a certain event occurs."
+  },
+  "minutiae": {
+    "name": "Minutiae",
+    "description": "The specific details in the ridges of a fingerprint used to recognize the fingerprint."
+  },
+  "tilting_bracket": {
+    "name": "Tilting bracket",
+    "description": "Bracket with adjustable angle. It is primarily used with facial authentication or iris recognition devices."
+  },
+  "firmware": {
+    "name": "Firmware",
+    "description": "A micro program or file stored on a ROM to control the hardware of the product."
+  },
+  "port_number": {
+    "name": "Port number",
+    "description": "The port number used for intercommunication in TCP/UDP. Its range is from 0 to 65535."
+  },
+  "timezone": {
+    "name": "Time zone",
+    "description": "A geographical zone that uses the same time standard. It can be used to set the time of the device or BioStar for controlling access."
+  },
+  "protocol": {
+    "name": "Protocol",
+    "description": "Communication rules used to exchange data between systems or terminals."
+  },
+  "piggybacking": {
+    "name": "Piggybacking",
+    "description": "As one method of unauthorized access using fraudulent authentication, it refers to the act of a person who does not have access rights to a restricted area entering by following the person in front. It is also known as 'Piggybacking' or 'Piggyback', and is one of the most representative methods of unauthorized access along with <b>Tailgating</b>. Generally, <b>Tailgating</b> refers to unauthorized access without intent, while <b>Piggybacking</b> refers to unauthorized access with intent."
+  },
+  "bypass_card": {
+    "name": "Bypass card",
+    "description": "A card that enables access to a specific zone by bypassing the authentication process. For example, people who possess this card can pass through the door without the need to go through a series of security (authentication) procedures."
+  },
+  "grace": {
+    "name": "Grace",
+    "description": "Allowable time for time and attendance rules. For instance, if you set the work start time to 9:00 and the allowable time to 10 minutes, personnel who have arrived between 9:00 and 9:10 are not deemed to have been late for work."
+  },
+  "duress": {
+    "name": "Duress finger",
+    "description": "A fingerprint chosen to generate a certain event upon fingerprint registration. If a user authenticates himself/herself with such a fingerprint, the authentication gets recorded in a log as duress fingerprint authentication. The system administrator can set a separate alarm using the log."
+  },
+  "fire_alarm_zone": {
+    "name": "Fire alarm zone",
+    "description": "A zone set to open or lock all the doors or elevators located within it in the event of a fire."
+  },
+  "vacation": {
+    "name": "Leave",
+    "description": "The act of taking a leave of absence from work with a pre-specified reason/permission or the period of leave itself."
+  },
+  "break": {
+    "name": "Break",
+    "description": "A brief time taken off for rest during working hours. Each break is calculated as the time between the start and the end of the break."
   }
 }

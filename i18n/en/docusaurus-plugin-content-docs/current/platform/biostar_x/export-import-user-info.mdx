@@ -32,9 +32,17 @@ Save selected user information as a CSV file, or load saved CSV files. This allo
 
    <Image src='/img/biostarx-user-export-csv.png' />
 
-4. Click the <Cmd sid='common.button.download' /> button when the <Cmd sid='team.menu.export.csv' /> <Cmd sid='team.menu.export.title' /> window appears.
+4. When the <Cmd sid='team.menu.export.csv' /> <Cmd sid='team.menu.export.title' /> window appears, enter <Cmd sid='team.menu.export.exportReason' /> (optional), and click <Cmd sid='common.button.download' />.
+
+   <Image src='/img/biostarx-user-export-csv-popup.png' />
 
 5. Save the CSV file to your desired location on your local path.
+
+:::info
+
+<Cmd sid='team.menu.export.exportReason' /> is optional. View <Cmd sid='team.menu.export.exportReason' /> records under <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />.
+
+:::
 
 ### Import CSV {#csvimport}
 
@@ -56,7 +64,7 @@ Save selected user information as a CSV file, or load saved CSV files. This allo
 
    <Image src='/img/biostarx-user-import-03.png' />
 
-If an error occurs while importing information from the CSV file, you can review and upload only the erroneous CSV data.
+If an error occurs while importing the CSV file, you can recheck and upload only the CSV data that caused the error.
 
 :::info
 
@@ -123,17 +131,21 @@ User information can be stored on external storage (USB) for import into **BioSt
 
    <Image src='/img/biostarx-user-export-data.png' />
 
-4. Select the device to apply the data file in the <Cmd sid='team.menu.dialog.exprotDataFile.title' /> window and click the <Cmd sid='common.apply' /> button.
+4. In the <Cmd sid='team.menu.dialog.exprotDataFile.title' /> window, select the device to apply the data file.
 
    <Image src='/img/biostarx-user-export-data-select-device.png' />
 
-5. Save the data file in your desired local path. The file name is generated in the format `BioStarX_YYYYMMDD_HHMMSS.tgz`.
+5. Enter <Cmd sid='team.menu.export.exportReason' /> (optional) and click <Cmd sid='common.apply' />.
+
+6. Save the data file in your desired local path.
 
 :::info
 
 * The data file export includes user profile photos, IDs, names, validity periods, access groups, PINs, private authentication modes, credentials (face, fingerprint, card, mobile card, face, QR/Barcode), and one-to-one security level information.
 
 * Selecting the incorrect device to apply the data file may cause it to be unrecognized by that device.
+
+* <Cmd sid='team.menu.export.exportReason' /> is optional. View <Cmd sid='team.menu.export.exportReason' /> records under <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />.
 
 :::
 
