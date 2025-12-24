@@ -23,11 +23,11 @@ env:
   PRINCE_VER: 16
   PRODUCT_NAME: "BioStar X"
   DOC_TYPE: "Administrator Guide"
-  BASE_URL_KO: "https://docs.supremainc.com/platform/biostar_x"
-  BASE_URL_EN: "https://docs.supremainc.com/en/platform/biostar_x"
+  BASE_URL_KO: "https://supremainc.github.io/docs/platform/biostar_x"
+  BASE_URL_EN: "https://supremainc.github.io/docs/en/platform/biostar_x"
   RN_TYPE: "Release Notes"
-  RN_URL_KO: "https://docs.supremainc.com/platform/biostar_x/release-notes"
-  RN_URL_EN: "https://docs.supremainc.com/en/platform/biostar_x/release-notes"
+  RN_URL_KO: "https://supremainc.github.io/docs/platform/biostar_x/release-notes"
+  RN_URL_EN: "https://supremainc.github.io/docs/en/platform/biostar_x/release-notes"
 
 jobs:
   generate-pdf:
