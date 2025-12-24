@@ -1,0 +1,73 @@
+---
+id: product-specifications
+title: Product Specifications
+description: Provides key specifications of the product, including size, features, and performance.
+keywords:
+  - Credentials
+  - General
+  - Face
+  - Capacity
+  - Interface
+  - Electrical
+  - Dimensions
+---
+
+Provides key specifications of the product, including size, features, and performance.
+
+import specs from '@site/static/specs/bs3m_specs.json';
+
+{/* 크리덴셜 */}
+
+<SpecSection data={specs.biostation3max.credentials} />
+
+{/* 일반 */}
+
+<SpecSection data={specs.biostation3max.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.biostation3max.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.biostation3max.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.biostation3max.power} />
+
+## Dimensions and Weight
+
+<Badge only>BS3M-DB, BS3M-APB</Badge>
+
+<Image src="/img/device/bs3m-db-apb-dimension.svg" className="none" />
+
+<Badge only>BS3M-ODB, BS3M-OAPB</Badge>
+
+<Image src="/img/device/bs3m-odb-oapb-dimension.svg" className="none" />
+
+---
+
+:::note
+
+<Anno id="anno1">1)</Anno> The specified minimum facial authentication distance is the product's default setting, and the recommended facial authentication distance is 0.5–1.3 m.
+
+<Anno id="anno2">2)</Anno> DESFire EV2/EV3 cards are backward compatible with DESFire EV1 cards, supporting CSN and smart card features, including those of the DESFire EV1 card.
+
+<Anno id="anno3">3)</Anno> RF read range will vary depending on installation environment.
+
+<Anno id="anno4">4)</Anno> Supports QR/Barcodes composed of up to 32 ASCII code strings.
+
+<Anno id="anno5">5)</Anno> Obtain a Camera QR license to use additional QR/Barcode authentication. For more information on device licenses, refer to the [BioStar X Administrator Guide](../../platform/biostar_x/settings-license-device-license).
+
+<Anno id="anno6">6)</Anno> The number of users registered without having any credential data.
+
+<Anno id="anno7">7)</Anno> Requires PoE+ (IEEE 802.3at, 30 W) or PoE++ (IEEE 802.3bt, 60-100 W) power. Standard PoE (IEEE 802.3af, 15.4 W) is not supported. Using standard PoE may cause devices to operate unstably or be permanently damaged. Before connecting the device, make sure your network switch or PoE injector supports PoE+ or PoE++.
+
+:::
+
+:::info
+
+Product specifications are subject to change without notice for performance improvement.
+
+:::

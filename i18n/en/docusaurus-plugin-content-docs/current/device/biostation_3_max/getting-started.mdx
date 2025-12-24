@@ -1,0 +1,213 @@
+---
+id: getting-started
+title: Getting Started
+description: Provides initial procedures for getting started with the device.
+keywords:
+  - Components
+  - Name
+  - Feature
+  - Cable
+  - Connector
+---
+
+Provides initial procedures for getting started with the device.
+
+## Components
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-device-db-apb-bs3m.svg" className="none" width={100} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-wall-bracket-db-apb-bs3m.svg" className="none" width={90} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-device-odb-oapb-bs3m.svg" className="none" width={100} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-wall-bracket-odb-oapb-bs3m.svg" className="none" width={90} alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>BioStation 3 Max (BS3M-ODB, BS3M-OAPB)</Td>
+
+      <Td>Wall Bracket (BS3M-ODB, BS3M-OAPB)</Td>
+
+      <Td>BioStation 3 Max (BS3M-DB, BS3M-APB)</Td>
+
+      <Td>Wall Bracket (BS3M-DB, BS3M-APB)</Td>
+    </Row>
+  </Tbody>
+
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-connection-cables-bs3m.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-diode1.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-resistor.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-fixing-screws6.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Connection Cables</Td>
+
+      <Td>Diode</Td>
+
+      <Td>120 Ω Resistor</Td>
+
+      <Td>Fixing Screw x6</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-bracket-fixing-screw.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-cable-cover-fsf2.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-quick-guide.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>Bracket Fixing Screw (Star Shaped)</Td>
+
+      <Td>Cable Cover</Td>
+
+      <Td>Quick Guide</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## Name and function of each part
+
+<Image src="/img/device/name-function-each-part-bs3m.png" className="none" width="70%" />
+
+* **LED Indicator**: Indicates the operational status of the device with the color of the LED.
+
+  * Green: Authentication success.
+
+  * Red: Authentication failure.
+
+  * Blue: Normal operation.
+
+  * Blue/Green blinking:
+
+    * When setting <Cmd sid="ui_012" product="dev" /> to use, unable to retrieve IP address.
+
+    * When in <Cmd sid="ui_205" product="dev" /> mode, the connection to the master device is disconnected.
+
+  * Red/Purple blinking: Device is locked.
+
+  * Yellow blinking: Waiting for input.
+
+* **Microphone**: Transmits the voice of the user when the interphone is connected.
+
+  * Covering or blocking the microphone may interfere with voice transmission.
+
+* **Infrared Camera**: Capture the infrared face image.
+
+* **Visual Camera**: Capture an actual face image.
+
+* **Display**: Provides a UI for operation.
+
+* **RF card and mobile access card authentication unit**: Part to scan a RFID card or mobile access card for entrance.
+
+* **Fingerprint Recognition Unit**: <Badge only>BS3M-ODB, BS3M-OAPB</Badge> The part that recognizes fingerprints for access.
+
+* **Speaker**: Delivers sound.
+
+* **Ethernet**: Connect the Ethernet cable.
+
+* **Input (4-pin)**: Connect the input cable.
+
+* **Relay (3-pin)**: Connect the Relay cable.
+
+* **RS-485 (4-pin)**: Connect the RS-485 cable.
+
+* **USB Expansion Port (5-pin)**: Connect other accessory products.
+
+* **Wiegand Output (4-pin)**: Connect the Wiegand Output cable.
+
+* **Wiegand Input (4-pin)**: Connect the Wiegand Input cable.
+
+* **Power Supply (2-pin)**: Connects the power supply cable.
+
+* **USB (Type-C) Memory Slot**: Connects the USB memory.
+
+{/* 케이블 및 커넥터 */}
+
+import CablesandConnectors from '../../common/_getting-started-cables-and-connectors.mdx'
+
+<CablesandConnectors />
+
+{/* 마스터 관리자 설정하기 */}
+
+import Masteradminsettings from '../../common/_device-master-admin-settings-v100.mdx'
+
+<Masteradminsettings />
+
+{/* 올바른 얼굴 등록 및 인증 방법 */}
+
+import DocumentA from '../../common/_face-enrollment-authentication-method.mdx'
+
+<DocumentA name="90-100 cm" />
+
+{/* ## 올바른 지문 입력 방법 */}
+
+import Enrollfingerprint from '../../common/_enroll-fingerprint.mdx'
+
+<Enrollfingerprint />
+
+## Notes on QR/Barcode and Device License
+
+### Correct QR/Barcode Authentication Method {#how-to-scan-qrbarcode}
+
+You can issue a QR/barcode to the user for use as a means of authentication. To improve recognition rate, scan the QR/barcode correctly according to the guidance on the screen.
+
+<Image src="/img/device/qr-scanning-bs3m.svg" className="none" alone />
+
+* Keep the distance between the device's camera and the QR/barcode at 5-20 cm.
+
+* Position the QR/barcode so that it is centered in the device's scanning screen.
+
+* If authenticating with a QR/barcode downloaded to a mobile device, adjust the brightness of the mobile device to ensure the screen is clearly visible.
+
+* Failure to follow the instructions on the screen may result in slow recognition or failure of the QR/barcode.
+
+### Notes for device license
+
+* Using additional QR/Barcode authentication methods requires a separate device license. Contact the place of purchase to issue a device license.
+
+* The device license file is an encrypted file and cannot be modified arbitrarily.
+
+* Device licenses are issued based on device ID. If the device ID is changed in an unusual way, the warranty service for the license is not provided.

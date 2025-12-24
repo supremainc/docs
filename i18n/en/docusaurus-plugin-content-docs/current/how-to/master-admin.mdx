@@ -2,7 +2,10 @@
 id: master-admin
 title: Introduction to Master Admin Feature and Setup Guide
 description: Provides a guide to configuring the Master Admin, which enhances device security by strengthening administrator permissions.
-keywords: [ Master Admin, Administrator, Master ]
+keywords:
+  - Master Admin
+  - Master
+  - Master Admin
 ---
 
 The **Master Admin** feature is designed to **enhance device security** by **strengthening overall administrator privileges** and **preventing unauthorized access and configuration changes**.<br/>With this feature, you **must register a Master Admin** on the new device, and only registered Master Admins can access the administrator menu and change device settings.
@@ -21,7 +24,7 @@ The **Master Admin** feature is available **only on Suprema products that suppor
 
 ### What is a Master Admin?
 
-If you use the device without setting up a administrator, anyone can access the administrator menu and change device settings. The Master Admin feature addresses this security vulnerability by enforcing the setup of an overall administrator.
+If you use the device without setting an administrator, anyone can access the administrator menu and change device settings. The master administrator feature enforces overall administrator settings to address these security vulnerabilities.
 
 ### Supported Products for Master Admin
 
@@ -60,74 +63,74 @@ For new devices, registering a **Master Admin** is mandatory from the beginning.
 
 :::info
 
-* On new devices, the **Master Admin** registration screen appears upon initial boot. You cannot proceed to the next screen unless you register a Master Admin.
+* On new devices, the **Master Admin** registration screen appears upon initial boot. If you do not register a Master Admin, device usage will be restricted.
 
 * Even if you assign an overall device administrator via BioStar 2, you must register a **Master Admin** to use all device functions.
 
-* The new device cannot be downgraded to a lower version.
+* New devices cannot perform firmware downgrades.
 
 :::
 
 <details>
 <summary>**Registering Master Admin on a New Device**</summary>
 
-#### Registering Master Admin on a New Device
+#### Enroll master administrator on a new device
 
 1. When you boot a new device for the first time, the **Master Admin** registration screen appears.
 
-    <Image src='/img/how-to/setting-master-admin-1.png' caption width='300px' />
+   <Image src='/img/how-to/setting-master-admin-1.png' caption width='300px' />
 
-1. To register a **Master Admin**, you must enroll at least two types of credentials. Select and enroll your preferred two credential types.
+2. To register a **Master Admin**, you must enroll at least two types of credentials. Select and enroll two desired credentials.
 
-    <Image src='/img/how-to/setting-master-admin-2.png' caption width='300px' />
+   <Image src='/img/how-to/setting-master-admin-2.png' caption width='300px' />
 
-    Credentials that can be enrolled for **Master Admin** are as follows:
+   Credentials that can be enrolled for **Master Admin** are as follows:
 
-    <Table>
-      <Tbody>
-      <Row>
-        <Th>Credential Type</Th>
-        <Th>Max Quantity</Th>
-        <Th>Details</Th>
-      </Row>
-      <Row>
-        <Td>Card</Td>
-        <Td>Up to 4</Td>
-        <Td>Supports CSN and Wiegand type only<br/>No duplicate enrollment within the same type</Td>
-      </Row>
-      <Row>
-        <Td>Face</Td>
-        <Td>Up to 2</Td>
-        <Td>Available only on devices with the same algorithm</Td>
-      </Row>
-      <Row>
-        <Td>Fingerprint</Td>
-        <Td>Up to 2</Td>
-        <Td>-</Td>
-      </Row>
-      <Row>
-        <Td>PIN</Td>
-        <Td>1</Td>
-        <Td>Minimum 8 digits</Td>
-      </Row>
-      </Tbody>
-    </Table>
+   <Table>
+   <Tbody>
+   <Row>
+   <Th>Credential Type</Th>
+   <Th>Max Quantity</Th>
+   <Th>Details</Th>
+   </Row>
+   <Row>
+   <Td>Card</Td>
+   <Td>Up to 4</Td>
+   <Td>Supports CSN and Wiegand type only<br/>No duplicate enrollment within the same type</Td>
+   </Row>
+   <Row>
+   <Td>Face</Td>
+   <Td>Up to 2</Td>
+   <Td>Available only on devices with the same algorithm</Td>
+   </Row>
+   <Row>
+   <Td>Fingerprint</Td>
+   <Td>Up to 2</Td>
+   <Td>-</Td>
+   </Row>
+   <Row>
+   <Td>PIN</Td>
+   <Td>1</Td>
+   <Td>Minimum 8 digits</Td>
+   </Row>
+   </Tbody>
+   </Table>
 
-    :::note
+   :::note
 
-    **Enrollment Conditions**
+   **Enrollment conditions**
 
-    * At least two different types of credentials must be enrolled.
+   * You must enroll at least two types of credentials.
 
-    * The same conditions apply to both new and firmware upgraded devices.
+   * The same conditions apply to both new devices and firmware upgrade devices.
 
-    * All credentials supported by the device can be used for authentication.
+   * All credentials supported by the device can be used as authentication means.
 
-    :::
+   :::
 
-1. After enrolling at least two types of credentials, press the **Complete** button to finish **Master Admin** registration.
+3. After enrolling at least two types of credentials, press the **Complete** button to finish **Master Admin** registration.
 
-    <Image src='/img/how-to/setting-master-admin-3.png' caption width='300px' />
+   <Image src='/img/how-to/setting-master-admin-3.png' caption width='300px' />
 
 {/* :::warning
 
@@ -185,7 +188,7 @@ You can activate Admin 2-step Authentication in the **Settings → Device → Ad
 
 :::info
 
-* If not all administrators have at least two types of credentials, activation will fail and an error message will appear.<br/>Enroll at least two types of credentials for all administrators, and then try again.
+* If not all administrators have at least two types of credentials, activation will fail and an error message will appear.<br/>Enroll two types of credentials for all administrators and try again.
 
 <Image src='/img/how-to/error-two-step-authentication.png' caption width='300px' />
 
@@ -203,36 +206,14 @@ You can activate Admin 2-step Authentication in the **Settings → Device → Ad
 
 * **Manual Device Hash Key Change**
 
-  * When manually changing the device hash key, a warning message will indicate that Master Admin PINs will be deleted. Please confirm the message before proceeding.
+   * When manually changing the device hash key, a warning message will indicate that Master Admin PINs will be deleted. Please confirm the message before proceeding.
 
 * **RS-485 Biometric Image Transmission Restriction**
 
-  * Biometric credential images are not transmitted over RS-485 communication, so substitute images appear when viewing the registered Master Admin face on slave devices.
+   * Biometric credential images are not transmitted over RS-485 communication, so substitute images appear when viewing the registered Master Admin face on slave devices.
 
 ## Frequently Asked Questions
 
 import FaqData from './faqs.json';
 
 <FaqsItems data={FaqData} />
-
-{/* ## [TBD] Setting Master Admin via BioStar 2
-
-:::info
-
-* The Master Admin feature is supported from BioStar 2 v2.9.11.
-
-* Devices upgraded via firmware do not display the Master Admin menu in BioStar 2 administrator settings.
-
-:::
-
-## [TBD] Batch Edit Master Admin
-
-* You can batch edit Admin 2-step Authentication and credential enrollment.
-
-* Batch editing overwrites with the enrolled credentials.
-
-* You can enroll a face, fingerprint, card, and PIN credentials.
-
-* If a selected device does not support a credential type, batch editing will fail for that device.
-
-* New devices must also meet the minimum two-credential condition; if not, batch editing for that device will fail. */}

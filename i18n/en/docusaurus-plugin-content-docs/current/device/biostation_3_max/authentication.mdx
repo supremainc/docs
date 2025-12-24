@@ -1,0 +1,305 @@
+---
+id: authentication
+title: Authentication
+description: Describes the supported authentication methods and authentication procedures.
+keywords:
+  - Authentication mode
+  - Operation
+  - PIN
+  - Face
+  - T&A (Time and Attendance)
+---
+
+Describes the supported authentication methods and authentication procedures.
+
+## Authentication mode
+
+Set the authentication mode. Combine <Cmd sid="ui_228" product="dev" />PIN, <Cmd sid="ui_040" product="dev" />Card / QR Code<Cmd sid="ui_312" product="dev" />, and <Cmd sid="ui_020" product="dev" />ID<Cmd sid="ui_323" product="dev" /> to create authentication modes and set a schedule for each mode.
+
+:::info
+
+Fingerprint authentication is available only on BS3M-ODB and BS3M-OAPB.
+
+:::
+
+### Registering auth mode {#registering-auth-mode}
+
+1. Press <Image src="/img/common/ico-menu.svg" ico alone /> and authenticate with the Admin level credential.
+
+2. Press <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_261" product="dev" />.
+
+3. Select <Image src="/img/common/ico-add.svg" ico alone />.
+
+4. Pressing <Image src="/img/common/ico-add1.svg" ico alone /> will display the credential that can be added on the screen. Select the credentials to add. Press the <Image src="/img/common/ico-cancel.svg" ico alone /> while the credential is added, and the added credential will be deleted.
+
+   <Image src="/img/device/bs3m-add-auth-mode.png" />
+
+   * <Image src="/img/common/ico-authmode-face-bs3m.png" ico alone />: Face, <Image src="/img/common/ico-authmode-fingerprint-bs3m.png" ico alone />: Fingerprint, <Image src="/img/common/ico-authmode-card-qr-bs3m.png" ico alone />: Card / QR code, <Image src="/img/common/ico-authmode-id-bs3m.png" ico alone />: ID, <Image src="/img/common/ico-authmode-pin-bs3m.png" ico alone />: PIN
+
+   * You can combine selected authentication methods to authenticate all in order or choose to authenticate only some of the selected methods. For example, with the combination <Image src="/img/common/ico-authmode-card-qr-bs3m.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3m.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3m.png" ico alone />, authenticate with card / QR code, face, and PIN. With the combination <Image src="/img/common/ico-authmode-card-qr-bs3m.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3m.png" ico alone /> / <Image src="/img/common/ico-authmode-pin-bs3m.png" ico alone />, authenticate with card / QR code first, and then enter either face or PIN.
+
+5. After setting the desired authentication mode, set <Cmd sid="ui_203" product="dev" />.
+
+   :::info
+
+   * <Cmd sid="ui_203" product="dev" /> can be set in BioStar X. If no schedule is set, only <Cmd sid="ui_361" product="dev" /> can be selected.
+
+   * For more information about <Cmd sid="ui_203" product="dev" /> settings, refer to the [BioStar X Administrator Guide](../../platform/biostar_x/settings-schedule).
+
+   * To use <Cmd sid="ui_042" product="dev" /> authentication, <Cmd sid="ui_256" product="dev" /> must be clicked and <Cmd sid="ui_265" product="dev" /> must have <Cmd sid="ui_041" product="dev" /> activated, and a separate device license is required. For more information, refer to [License](settings#license).
+
+   :::
+
+6. To save the settings, press <Cmd sid="ui_037" product="dev" />.
+
+### Modifying auth mode
+
+1. Press <Image src="/img/common/ico-menu.svg" ico alone /> and authenticate with the Admin level credential.
+
+2. Press <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_261" product="dev" />.
+
+3. Select the authentication mode to modify.
+
+4. Modify the authentication mode by referring to [Registering auth mode](#registering-auth-mode) and press <Cmd sid="ui_037" product="dev" />.
+
+### Delete auth mode
+
+1. Press <Image src="/img/common/ico-menu.svg" ico alone /> and authenticate with the Admin level credential.
+
+2. Press <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_261" product="dev" />.
+
+3. Press <Image src="/img/common/ico-delete.svg" ico alone /> and select the authentication mode to delete. You can select multiple options.
+
+4. To delete the selected item, press <Cmd sid="ui_037" product="dev" />.
+
+## Operation
+
+### Server matching
+
+You can set up server matching.
+
+1. Press <Image src="/img/common/ico-menu.svg" ico alone /> and authenticate with the Admin level credential.
+
+2. After pressing <Cmd sid="ui_256" product="dev" />, activate <Cmd sid="ui_265" product="dev" /> in <Cmd sid="ui_187" product="dev" />.
+
+   <Image src="/img/device/bs3m-operation.png" />
+
+   * <Cmd sid="ui_187" product="dev" />: When server matching is set, user authentication is performed by BioStar X without the device performing user authentication. It can be used when the device has too much user information or when the device is installed outside.
+
+   :::info
+
+   * <Cmd sid="ui_185" product="dev" /> can only use cards and IDs.
+
+   * If you use <Cmd sid="ui_185" product="dev" />, you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to the [BioStar X Administrator Guide](../../platform/biostar_x/settings-server-server#servermatching).
+
+   :::
+
+### QR authentication
+
+You can activate QR code authentication.
+
+1. Press <Image src="/img/common/ico-menu.svg" ico alone /> and authenticate with the Admin level credential.
+
+2. After pressing <Cmd sid="ui_256" product="dev" />, activate <Cmd sid="ui_265" product="dev" /> for <Cmd sid="ui_041" product="dev" />.
+
+   <Image src="/img/device/bs3m-operation.png" />
+
+   * <Cmd sid="ui_041" product="dev" />: Set whether to use QR code authentication through the device's camera.
+
+   * <Cmd sid="ui_329" product="dev" />: You can set up authentication with a QR code that has the same data as the CSN card or Wiegand card issued to the user. This can only be set when <Cmd sid="ui_041" product="dev" /> is activated.
+
+   :::info
+
+   A separate device license is required to use <Cmd sid="ui_041" product="dev" />. For more information, refer to [License](settings#license).
+
+   :::
+
+## PIN
+
+Set whether to use the scramble keypad when entering passwords.
+
+1. Press <Image src="/img/common/ico-menu.svg" ico alone /> and authenticate with the Admin level credential.
+
+2. After pressing <Cmd sid="ui_256" product="dev" />, set whether to use <Cmd sid="ui_040" product="dev" /> in <Cmd sid="ui_204" product="dev" />.
+
+   <Image src="/img/device/bs3m-pin.png" />
+
+   * <Cmd sid="ui_204" product="dev" />: The positions of numeric keys can be scrambled randomly when entering a password to prevent password leaks.
+
+## Auth result display option
+
+You can set the auth result display option.
+
+1. Press <Image src="/img/common/ico-menu.svg" ico alone /> and authenticate with the Admin level credential.
+
+2. After pressing <Cmd sid="ui_256" product="dev" />, change the desired items in <Cmd sid="ui_259" product="dev" />.
+
+   <Image src="/img/device/bs3m-auth-result-display-option.png" />
+
+   * <Cmd sid="ui_169" product="dev" />: Select how the user ID appears on the device's authentication result screen.
+
+     * <Cmd sid="ui_307" product="dev" />: Show the entire user ID.
+
+     * <Cmd sid="ui_316" product="dev" />: Show only the first character of the user ID.
+
+     * <Cmd sid="ui_357" product="dev" />: Do not show the user ID.
+
+   * <Cmd sid="ui_177" product="dev" />: Select how the user name appears on the device's authentication result screen.
+
+     * <Cmd sid="ui_307" product="dev" />: Show the entire user name.
+
+     * <Cmd sid="ui_316" product="dev" />: Show only the first character of the user name.
+
+     * <Cmd sid="ui_357" product="dev" />: Do not show the user name.
+
+## Face
+
+You can change the configuration for facial authentication.
+
+1. Press <Image src="/img/common/ico-menu.svg" ico alone /> and authenticate with the Admin level credential.
+
+2. Select <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_228" product="dev" />.
+
+3. Change the desired item.
+
+   <Image src="/img/device/bs3m-face.png" />
+
+   * <Cmd sid="ui_140" product="dev" />: Set the sensitivity to detect motion around the device. When <Cmd sid="ui_140" product="dev" /> is set to <Cmd sid="ui_091" product="dev" />, touch the screen to authenticate your face.
+
+   * <Cmd sid="ui_115" product="dev" />: If the face is not enrolled within the set time, the face registration will be canceled.
+
+   * <Cmd sid="ui_260" product="dev" />: If authentication is not completed within the set time, authentication fails.
+
+   * <Cmd sid="ui_117" product="dev" />: You can check for duplicate faces during face registration.
+
+   * <Cmd sid="ui_229" product="dev" />: Set the position and size of the area where the device detects faces during face authentication.
+
+     :::info
+
+     For optimal performance, it is recommended to use default settings for the sub-options of <Cmd sid="ui_229" product="dev" />. The default values of each option are as follows:
+
+     * Maximum Head Pose Angle: 15
+
+     * Detection Distance: Min 30 cm, Max 100 cm
+
+     * Wide Search: Deactivated
+
+     :::
+
+   * <Cmd sid="ui_060" product="dev" />: By activating <Cmd sid="ui_060" product="dev" />, you can enroll the <Cmd sid="ui_340" product="dev" /> issued by BioStar X. <Cmd sid="ui_340" product="dev" /> allows biometric authentication without storing user data on the BioStar X server, Airfob Portal, or device by storing the user's biometric template on a mobile access card.
+
+     :::info
+
+     For more information about <Cmd sid="ui_340" product="dev" />, refer to the [BioStar X Administrator Guide](../../platform/biostar_x/enroll-credential-mobile#template-on-mobile).
+
+     :::
+
+   * <Cmd sid="ui_157" product="dev" />: You can set to store both the actual images and templates in Visual Face, or to store only the templates without saving the actual images. If disabled, all stored images of visual faces will be deleted, and newly enrolled visual faces will store templates excluding images.
+
+     :::info
+
+     After disabling this setting, use BioStar 2 v2.9.7 or higher.
+
+     :::
+
+   * <Cmd sid="ui_149" product="dev" />: You can set the security level for 1:N authentication.
+
+   * <Cmd sid="ui_278" product="dev" />: You can set the operating mode of the device for face authentication.
+
+     * <Cmd sid="ui_359" product="dev" />: Both visual and infrared matching work to increase the accuracy of face authentication.
+
+     * <Cmd sid="ui_159" product="dev" />: Users can perform rapid authentication while walking within the device's authentication range.
+
+   * <Cmd sid="ui_247" product="dev" />: You can prevent user authentication with spoofed faces such as photos. Activated when <Cmd sid="ui_278" product="dev" /> is set to <Cmd sid="ui_359" product="dev" />.
+
+     :::info
+
+     * Face anti-spoofing performance has been improved to pass the iBeta Level 1 ISO 30107-3 Presentation Attack Detection Test.
+
+     * In strong sunlight, it is recommended to use the <Cmd sid="ui_247" product="dev" /> function as <Cmd sid="ui_152" product="dev" />.
+
+     :::
+
+   * <Cmd sid="ui_070" product="dev" />: You can change advanced settings for facial authentication, such as mask detection.
+
+     * <Cmd sid="ui_123" product="dev" />: You can set whether to use mask detection.
+
+     * <Cmd sid="ui_067" product="dev" />: You can set the method to check if a mask is worn. This is activated when the <Cmd sid="ui_123" product="dev" /> is set to <Cmd sid="ui_161" product="dev" />.
+
+       :::info
+
+       * <Cmd sid="ui_127" product="dev" />: Users not wearing a mask are denied authentication, and a mask non-compliance event log is recorded.
+
+       * <Cmd sid="ui_126" product="dev" />: Users not wearing a mask can still authenticate, but a mask non-compliance event log is recorded.
+
+       * <Cmd sid="ui_125" product="dev" />: Only users not wearing a mask can be authenticated, and when this mode is used, the mask check mode is fixed to <Cmd sid="ui_369" product="dev" />.
+
+       :::
+
+     * <Cmd sid="ui_124" product="dev" />: Set the sensitivity for detecting mask usage. This is activated when the <Cmd sid="ui_123" product="dev" /> is set to <Cmd sid="ui_161" product="dev" />.
+
+     * <Cmd sid="ui_368" product="dev" />: Set the confirmation mode according to the purpose of the device.
+
+       :::info
+
+       * <Cmd sid="ui_267" product="dev" />: After authentication, check whether the user is wearing a mask.
+
+       * <Cmd sid="ui_369" product="dev" />: Authenticate after checking whether the user is wearing a mask.
+
+       * <Cmd sid="ui_370" product="dev" />: The device can only be used to check if a mask is worn. When this mode is activated, any user wearing a mask can access it regardless of authentication.
+
+       :::
+
+## Fingerprint <Badge only>BS3M-ODB, BS3M-OAPB</Badge> {#fingerprint}
+
+You can change the settings for fingerprint authentication.
+
+1. Press <Image src="/img/common/ico-menu.svg" ico alone /> and authenticate with the Admin level credential.
+
+2. Select <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_312" product="dev" />.
+
+3. Change the desired item.
+
+   <Image src="/img/device/auth-fingerprint.png" width={300} />
+
+   * <Cmd sid="ui_149" product="dev" />: You can set the security level for 1:N authentication.
+
+   * <Cmd sid="ui_130" product="dev" />: Set the wait time for fingerprint matching. If authentication is not completed within the set time, it fails.
+
+   * <Cmd sid="ui_254" product="dev" />: View the raw image when scanning a fingerprint.
+
+   * <Cmd sid="ui_197" product="dev" />: Set the fingerprint sensor sensitivity. Set the sensitivity higher to obtain precise fingerprint information.
+
+   * <Cmd sid="ui_003" product="dev" />: Set the fingerprint authentication performance. When you select <Cmd sid="ui_275" product="dev" />, authentication speed is set according to the total number of fingerprint templates enrolled in the device.
+
+   * <Cmd sid="ui_342" product="dev" />: Set the fingerprint template format. The default is <Cmd sid="ui_057" product="dev" />. Changing the template format blocks the use of all previously stored fingerprints, so proceed with caution.
+
+   * <Cmd sid="ui_198" product="dev" />: Set to <Cmd sid="ui_277" product="dev" /> to turn on the fingerprint sensor when it detects the user’s finger. Set to <Cmd sid="ui_362" product="dev" /> to keep the sensor always on, even when not scanning fingerprints.
+
+   * <Cmd sid="ui_249" product="dev" />: Set the fake fingerprint detection level. Higher levels for fake fingerprint detection may also increase rejection rates for actual people’s fingerprints.
+
+   * <Cmd sid="ui_116" product="dev" />: Inspect the quality of the scanned fingerprint to save high-quality fingerprint data. When enabled, the device notifies the user if the fingerprint quality is low, helping them scan correctly.
+
+   * <Cmd sid="ui_118" product="dev" />: Check for duplicate fingerprints during enrollment.
+
+## T&A (Time and Attendance)
+
+You can set how to register T&A mode.
+
+1. Press <Image src="/img/common/ico-menu.svg" ico alone /> and authenticate with the Admin level credential.
+
+2. Select <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_079" product="dev" />.
+
+3. Change the desired item.
+
+   <Image src="/img/device/bs3m-ta.png" />
+
+   * <Cmd sid="ui_083_list" product="dev" />: Set how to use attendance mode.
+
+   * <Cmd sid="ui_086" product="dev" />: Add time and attendance events. To register attendance events, select <Cmd sid="ui_086" product="dev" /> → <Image src="/img/common/ico-add.svg" ico alone /> and then set the icon to display on the screen, <Cmd sid="ui_085" product="dev" />, and <Cmd sid="ui_203" product="dev" />.
+
+   * <Cmd sid="ui_082" product="dev" />: Require users to select a time and attendance event during authentication. Available when <Cmd sid="ui_083_list" product="dev" /> is set to <Cmd sid="ui_199" product="dev" />.
+
+   * <Cmd sid="ui_081" product="dev" />: Allow users to use only time and attendance events selected by the administrator. Available when <Cmd sid="ui_083_list" product="dev" /> is set to <Cmd sid="ui_071" product="dev" />.
+
+   * <Cmd sid="ui_279" product="dev" />: Select whether to use job codes.

@@ -13,7 +13,7 @@ keywords:
 <NextStep notitle>
 <NextItem to='../../bsx-license-calculator' target='_blank'>
 
-Try the **BioStar X License Calculator** to help you determine the license types and quantities that match your needs. This tool helps you resolve complex licensing requirements.
+Use the **BioStar X License Calculator** to resolve complex licensing requirements. The tool helps determine the required license type and quantity.
 
 </NextItem>
 </NextStep>
@@ -29,11 +29,11 @@ Try the **BioStar X License Calculator** to help you determine the license types
 | **Maximum Number of Doors**                                                                                                                     |         0        |    5    |     32    |    128   |     500    |   2000  |
 | **Maximum Users**                                                                                                                               |        200       |   100   |   1,000   |  50,000  |   100,000  | 500,000 |
 | **Maximum Operators**                                                                                                                           |         1        |    1    |     10    |    20    |     40     |   100   |
-| **Maximum Connected IP Devices**                                                                                                               |      1,000       |  1,000  |   1,000   |  1,000   |   1,000    |  1,000  |
+| **Maximum Connected IP Devices**                                                                                                                |       1,000      |  1,000  |   1,000   |   1,000  |    1,000   |  1,000  |
 | **Maps**                                                                                                                                        |         ❌        |    ❌    |     ❌     |    ✔️    |     ✔️     |    ✔️   |
 | **Video**                                                                                                                                       |         ❌        |    ❌    |     ❌     |  Add on  |   Add on   |  Add on |
 | [**Advanced Access Control**](#package)<br/>*(Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Elevator, Interlock)* |         ❌        |    ❌    |     ❌     |  Add on  |     ✔️     |    ✔️   |
-| [**Upgradable**](#license-upgrade)<br/>*(Door/Users/Operators)*                                                                                      | Users, Operators only |    ❌    |   Add on  |  Add on  |   Add on   |  Add on |
+| [**Upgradable**](#capacity-upgrade)<br/>*(Doors/Users/Operators)*                                                                                      | Users, Operators only |    ❌    |   Add on  |  Add on  |   Add on   |  Add on |
 
 </div>
 
@@ -49,13 +49,13 @@ Try the **BioStar X License Calculator** to help you determine the license types
 
 ## Capacity Upgrade {#capacity-upgrade}
 
-License upgrades are available for holders of **Essential**, **Advanced**, **Enterprise**, and **Elite** licenses. License holders of the **Device Manager** can only purchase User Upgrades.
+License upgrades are available for holders of **Essential**, **Advanced**, **Enterprise**, and **Elite** licenses. License holders of the **Device Manager** can only purchase User and Operator Upgrades.
 
 |     &nbsp;    | Number |
 | :-----------: | :----: |
-|      Doors     |   32   |
-|      Users     |  5,000 |
-| Operators |   10   |
+| Doors | 32 |
+| Users | 5,000 |
+| Operators | 10 |
 
 ## Feature add-ons {#features-add-ons}
 
@@ -63,18 +63,16 @@ The following items can be purchased individually and can be additionally applie
 
 <div className='cols3--20-20-60 overflow-x'>
 
-| Feature                               | License Type          | Remarks                                                                                                                                                                                                      |
-| ------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Multi Communication Server Init**   | Basic License         | Basic license – Includes 1 server. An annual maintenance contract is required for support.                                                                                                                   |
-| **Multi Communication Server Add-on** | Additional Server     | Applied when an additional server is added.                                                                                                                                                                  |
-| **GIS Map**                           | System                | You can use the GIS map to set up areas, facilities, and floors.                                                                                                                                             |
-| **Video**                             | Camera                | Applies when using a Video Management System (VMS) not provided by Suprema.                                                                                                                                  |
-| **Server Matching**                   | ID, Card, Fingerprint | Server matching method compares the entered ID, card, and fingerprint from the device to the credentials stored inside the server database. An annual maintenance contract is required for advanced support. |
-| **Visitor**                           | System                | Administrators and operators can track or control visitor access.                                                                                                                                            |
-| **Attendance Management** (T&amp;A)   | Standard              | Supports up to 500 users.                                                                                                                                                                                    |
-| ^                                     | Enterprise            | There is no limit on the number of users.                                                                                                                                                                    |
-| **Directory Integration**             | System                | An annual maintenance contract is required for advanced support.                                                                                                                                             |
-| **Roll Call**                         | System                | -                                                                                                                                                                                                            |
+| Feature                               | License Type                   | Remarks                                                                                                                                                                                                        |
+| ------------------------------------- | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Multi Communication Server Init**   | Basic License                  | Basic license – Includes 1 server. An annual maintenance contract is required for support.                                                                                                                     |
+| **Multi Communication Server Add-on** | Additional Server              | Applied when an additional server is added.                                                                                                                                                                    |
+| **GIS Map**                           | System                         | You can use the GIS map to set up areas, facilities, and floors.                                                                                                                                               |
+| **Video**                             | Camera                         | Applies when using a Video Management System (VMS) not provided by Suprema.                                                                                                                                    |
+| **Server Matching**                   | ID, card, fingerprint, IR face | Server matching method compares the ID, card, fingerprint, and IR face stored on the device to the credentials stored in the server database. An annual maintenance contract is required for advanced support. |
+| **Visitor**                           | System                         | Administrators and operators can track or control visitor access.                                                                                                                                              |
+| **Directory Integration**             | System                         | An annual maintenance contract is required for advanced support.                                                                                                                                               |
+| **Roll Call**                         | System                         | -                                                                                                                                                                                                              |
 
 </div>
 
@@ -86,12 +84,20 @@ Not all cameras connected to the VMS need to be integrated with BioStar X. For e
 
 The following items can be purchased individually and can be added regardless of the basic license.
 
-| Feature                    | License Type | Remarks                                                                                                                                                                                                                                                                          |
-| -------------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Mobile App**             | System       | *                                                                                                                                                                                                                                                                                |
-| **Event log API**          | System       | The system can receive and log event logs via external API. This allows third-party applications or services to insert event data directly into the access control system for centralized logging and reporting.                                                                 |
-| **Remote Access**          | System       | Provides a secure tunnel feature that allows access to the **BioStar X** server from an external network. **BioStar X** also serves as a gateway for external network access to mobile and API.<br/>Required for using <Cmd sid='team.menu.sendFaceMobileEnrollLink' /> feature. |
-| **BioStar X Plugin**       | System       | Supports external plugin integration. A maximum of 10 custom plugins can be used per system. For more information, refer to [the following](plugins).                                                                                                                            |
+| Feature                             | License Type | Remarks                                                                                                                                                                                                                                                                          |
+| ----------------------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Mobile App**                      | System       | -                                                                                                                                                                                                                                                                                |
+| **Event log API**                   | System       | The system can receive and log event logs via external API. This allows third-party applications or services to insert event data directly into the access control system for centralized logging and reporting.                                                                 |
+| **Remote Access**                   | System       | Provides a secure tunnel feature that allows access to the **BioStar X** server from an external network. **BioStar X** also serves as a gateway for external network access to mobile and API.<br/>Required for using <Cmd sid='team.menu.sendFaceMobileEnrollLink' /> feature. |
+| **BioStar X Plugin**                | System       | Supports external plugin integration. A maximum of 10 custom plugins can be used per system. For more information, refer to [the following](plugins).                                                                                                                            |
+| **Attendance Management** (T&amp;A) | Standard     | Supports up to 500 users.                                                                                                                                                                                                                                                        |
+| ^                                   | Enterprise   | There is no limit on the number of users.                                                                                                                                                                                                                                        |
+
+:::info
+
+**Time & attendance** (T&amp;A) users follow the basic license limit and are allowed up to the maximum user count permitted by the **time & attendance** edition. (e.g., 500 users for the Standard edition)
+
+:::
 
 ## Package {#package}
 

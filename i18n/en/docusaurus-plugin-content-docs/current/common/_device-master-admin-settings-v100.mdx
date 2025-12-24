@@ -1,0 +1,91 @@
+## Set master administrator
+
+The <Cmd sid="ui_128" product="dev" /> feature enhances the overall admin privileges of the device to improve device security and prevent unauthorized access and configuration changes. Enroll a master administrator using this feature. Only the enrolled master administrator can access the administrator menu to change device setting.
+
+:::note
+
+What is a master administrator?
+
+* If you use the device without setting an administrator, anyone can access the administrator menu and change device settings. The master administrator feature enforces overall administrator settings to address these security vulnerabilities.
+
+* The master admin cannot delete directly and will be deleted only during <Cmd sid="ui_072" product="dev" />.
+
+:::
+
+### Register the master admin
+
+Enroll <Cmd sid="ui_128" product="dev" /> on the <Cmd sid="ui_128" product="dev" /> enrollment screen that appears on initial boot. If not enrolled, the device becomes restricted and the next screen does not appear.
+
+:::info
+
+Register <Cmd sid="ui_128" product="dev" /> to use all features, even if you connect to BioStar X and assign a device-wide administrator.
+
+:::
+
+1. The <Cmd sid="ui_128" product="dev" /> enrollment screen appears on initial boot.
+
+   <Image src="/img/device/bs3m-setting-master-admin-start.png" />
+
+2. At least two different types of credentials must be enrolled to register <Cmd sid="ui_128" product="dev" />. Select and enroll two desired credentials.
+
+   <Image src="/img/device/bs3m-setting-master-admin-credential1.png" />
+
+   The credentials that can be enrolled for <Cmd sid="ui_128" product="dev" /> are as follows.
+
+   <Table>
+     <Tbody>
+       <Row>
+         <Th>Credential type</Th>
+         <Th>Number of enrollments</Th>
+         <Th>Conditions</Th>
+       </Row>
+
+       <Row>
+         <Td>Card</Td>
+         <Td>Up to 4</Td>
+         <Td>Supports only CSN and Wiegand types<br />Duplication within the same type is not allowed</Td>
+       </Row>
+
+       <Row>
+         <Td>Face</Td>
+         <Td>Up to 2</Td>
+         <Td>Only enrollable on devices with the same algorithm</Td>
+       </Row>
+
+       <Row>
+         <Td>Fingerprint</Td>
+         <Td>Up to 2</Td>
+         <Td>-</Td>
+       </Row>
+
+       <Row>
+         <Td>PIN</Td>
+         <Td>1</Td>
+         <Td>At least 8 characters long</Td>
+       </Row>
+     </Tbody>
+   </Table>
+
+   :::note
+
+   **Enrollment conditions**
+
+   * You must enroll at least two types of credentials.
+
+   * All credentials supported by the device can be used as authentication means.
+
+   :::
+
+3. After enrolling two or more types of credentials, press the <Cmd sid="ui_373" product="dev" /> button to complete the registration of <Cmd sid="ui_128" product="dev" />.
+
+   <Image src="/img/device/bs3m-setting-master-admin-credential2.png" />
+
+### Notices
+
+* **When manually changing the device encryption key**
+
+  When manually changing the device encryption key, a warning message will appear stating that the master administrator's PIN will be deleted, so check the message before proceeding with the change.
+
+* **Limitations on face image transmission over RS-485 communication segments**
+
+  Biometric credential images are not transmitted over RS-485 communication segments, so a substitute image will be displayed when viewing the registered master administrator's face on the slave device.
