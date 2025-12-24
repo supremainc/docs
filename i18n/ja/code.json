@@ -1,9 +1,12 @@
 {
+   "externalLinks.BioStation2a.desc": {
+      "message": "AI プロセッサによる驚異的な指紋認証性能"
+   },
   "externalLinks.BioEntryW3.desc": {
     "message": "シンプルで耐久性が高く、安全な AI ベースの顔認証デバイス"
   },
   "externalLinks.BioStation3.desc": {
-    "message": "The New Door Access Experience"
+    "message": "次世代の入退室管理ソリューション"
   },
   "externalLinks.FaceStationF2.desc": {
     "message": "フュージョン顔認証装置"
@@ -27,7 +30,7 @@
     "message": "インテリジェント生体認証コントローラー"
   },
   "externalLinks.CoreStation20.desc": {
-    "message": "強力なセキュリティ、柔軟な拡張性"
+    "message": "強力なセキュリティと柔軟な拡張性"
   },
   "externalLinks.CoreStationEnclosure.desc": {
     "message": "CoreStation 専用エンクロージャー"
