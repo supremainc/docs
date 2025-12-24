@@ -24,7 +24,7 @@
   "auth.message.required.id": "Please enter your ID.",
   "auth.message.required.password": "Please enter your password.",
   "auth.message.failed": "Failed to authenticate.",
-  "auth.message.changePassword.disabled": "Password change is not available when logged in to BioStar X through Active Directory integration.",
+  "auth.message.changePassword.disabled": "Password change is not available when logged in to BioStar X through Directory integration.",
   "auth.error.loginFailed": "Something went wrong during login. Please try again in a moment.",
   "auth.error.fingerScannerNotConnected": "Fingerprint scanner is not connected. Please check the connection and try again.",
   "auth.httpsDownload": "Download HTTPS certificate installer",
@@ -39,11 +39,7 @@
   "auth.passwordChange.newPassword": "New Password",
   "auth.passwordChange.confirmNewPassword": "Confirm New Password",
   "auth.passwordChange.currentPassword": "Current Password",
-<<<<<<< HEAD
-  "auth.passwordChange.invalidPassword": "Invalid Password",
-=======
   "auth.passwordChange.success": "Password has been changed.",
->>>>>>> be71faa1f9 (AB#84: 1.0.0(2) locale update)
   "data.pageTitle": "BioStar X",
   "data.all": "All",
   "data.object": "Object",
@@ -925,12 +921,9 @@
   "team.user.period.today": "Today",
   "team.user.detail.ip": "Login Allowed IP",
   "team.user.detail.title": "Title",
-<<<<<<< HEAD
-=======
   "team.user.detail.customfield.file.tooltip": "Maximum file size: 1MB\nFilename length: Min 1 char Max 120 char\nAllowed filename characters: alphanumeric, underscore ( _ ) and hyphen ( - ). Only use dot/period ( . ) for separating base file name and extension.",
   "team.user.detail.customfield.file.maxSize": "Maximum file size is 1MB",
   "team.user.detail.deviceDisplayMessage": "Device Display Message",
->>>>>>> be71faa1f9 (AB#84: 1.0.0(2) locale update)
   "team.userTemplate.title": "User Template",
   "team.userTemplate.newTemplate": "New User Template",
   "team.userTemplate.id": "ID",
@@ -1002,11 +995,8 @@
   "user.list.csvImport.importStartRow": "Start import at row",
   "user.list.visualFileImport.duplicateUser": "If Face Exists",
   "tema.user.list.advSearchTitle": "Search Result ({0})",
-<<<<<<< HEAD
-=======
   "ACB_ERROR_CODE.124": "Invalid Password",
   "ACB_ERROR_CODE.237": "Modifications to the Administrator account with User ID 1 are not allowed.",
->>>>>>> be71faa1f9 (AB#84: 1.0.0(2) locale update)
   "ACB_ERROR_CODE.343": "Duplicate Device ID.",
   "ACB_ERROR_CODE.599": "There are items under this group. Groups cannot be deleted with child items. Please try again after removing them first.",
   "ACB_ERROR_CODE.655": "Access group name contains special characters that cannot be used. Please exclude /.",
@@ -1239,10 +1229,7 @@
   "setting.userDevice.useridType.change.msg": "Limitations and restrictions when User ID Type is set to Alphanumeric<br> - BioLite Net, BioEntry Plus, and BioEntry W does not support Alphanumeric User ID <br> - All user information will be deleted from Xpass and Xpass S2, and it will restore to factory default settings except the network configurations.<br>Continue?",
   "setting.systemBackup.change.msg": "Backup files can only be restored on a PC configured with the same IP address.\nDo you want to continue?",
   "setting.systemBackup.change.comm.msg": "It only backs up the main database, so data from any databases added afterward will not be included in the backup.",
-<<<<<<< HEAD
-=======
   "setting.systemBackup.change.msgSecond": "Changes made after this backup was initiated will not be included in the backup file. Do you want to continue?",
->>>>>>> 90a9b53eca (AB#84: v1.0.0(2) update locale)
   "setting.systemBackup.restore.complete.comm.msg": "Please start the communications servers from Service Manager before using BioStar X.",
   "setting.remoteAccess.section.title": "Remote Access with ngrok",
   "setting.remoteAccess.field.ngrokUserId": "ngrok User ID",
@@ -1471,10 +1458,7 @@
   "dashboard.doorControl.actions.successMessage": "{{0}} succeeded.",
   "dashboard.doorControl.actions.failedMessage": "Failed to {{0}}",
   "dashboard.doorControl.actions.doorOpenRequestFail": "Release the alert or lock and try again. {{0}}",
-<<<<<<< HEAD
-=======
   "dashboard.systemUsage.irFace": "Total IR Faces",
->>>>>>> ea840a571c (AB#84: v1.0.0(2) update locale)
   "errorPage.notFound.title": "404 - Page Not Found",
   "errorPage.notFound.description": "Page does not exist.",
   "errorPage.notFound.goHome": "Go to Home",
@@ -1617,6 +1601,10 @@
   "mbl.quick.action.detail.operator.levels": "Operator Levels",
   "mbl.quick.action.detail.operator.level.name": "Operator Name: {value1}",
   "mbl.quick.action.detail.operator.level.description": "Operator Description: {value1}",
+  "mbl.quick.action.dialog.response.title": "Status Changed",
+  "mbl.quick.action.dialog.response.body": "The status has been changed successfully.",
+  "mbl.quick.action.dialog.activate": "\"Activate {value1} ?\"",
+  "mbl.quick.action.activate.button": "Activate",
   "mbl.alarm.delete.title": "Delete Alarm",
   "mbl.alarm.delete.dialog.title": "Confirmation",
   "mbl.alarm.delete.dialog.body": "Delete data? \n \nTotal selected data: {value1}",
@@ -1705,6 +1693,7 @@
   "mbl.checkbox.confirmatin.login": "This action will disable biometric login feature. Continue?",
   "mbl.no.data.found": "No data found",
   "mbl.no.page.found": "No Page Found",
+  "mbl.no.actions.found": "No actions found",
   "mbl.setting.changed.not.saved.dialog": "You have unsaved changes. Are you sure you want to leave this page?  \nAny unsaved data will be lost.",
   "mbl.setting.confirmation.dialog": "Are you sure you want to apply the new preference settings?",
   "mbl.setting.app.name": "BioStar X Mobile App",
@@ -1755,9 +1744,6 @@
   "mbl.long.pressed.warning": "Long press to manually change status.",
   "mbl.note": "Note",
   "mbl.rollcall.already.ended.by.another.operator": "The Roll Call has already been ended by another operator.",
-<<<<<<< HEAD
-  "mbl.permission.with.code": "Permission Denied. ({0})"
-=======
   "mbl.permission.with.code": "Permission Denied. ({0})",
   "mbl.door.search.placeholder": "{value1} displayed of total {value2}",
   "mbl.auth.password.confirm.title": "Confirm password",
@@ -1774,5 +1760,4 @@
   "mbl.biometrics.confirmation.dialog": "Confirmation using Biometrics",
   "mbl.auto.login": "Auto Login",
   "mbl.app.setting.title": "App Setting"
->>>>>>> be71faa1f9 (AB#84: 1.0.0(2) locale update)
 }

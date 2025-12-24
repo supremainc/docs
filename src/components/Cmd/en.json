@@ -46,6 +46,7 @@
   "ACB_ERROR_CODE.1201": "The fingerprint that matches the fingerprint information you requested does not exist.",
   "ACB_ERROR_CODE.121": "The ID entered cannot be used for logging in. Please try again with a different ID.",
   "ACB_ERROR_CODE.122": "Your account has Multi-Factor Auth for Login enabled. Please disable it and try again.",
+  "ACB_ERROR_CODE.124": "Password is incorrect.",
   "ACB_ERROR_CODE.1301": "Same file name already exists.",
   "ACB_ERROR_CODE.131072": "Invalid length of ID.",
   "ACB_ERROR_CODE.131073": "Invalid User ID.",
@@ -267,6 +268,7 @@
   "ACB_ERROR_CODE.331791": "License is required.",
   "ACB_ERROR_CODE.331792": "License is required.",
   "ACB_ERROR_CODE.331793": "A higher-level license for this feature is already activated. Lower-level licenses cannot be added.",
+  "ACB_ERROR_CODE.331794": "You need a base license to register devices.",
   "ACB_ERROR_CODE.332": "key field is empty.",
   "ACB_ERROR_CODE.333": "Invalid value in field key.",
   "ACB_ERROR_CODE.334": "Invalid value in field key_type.",
@@ -828,19 +830,8 @@
   "audit.menu.mapFloor": "Floor",
   "audit.menu.port": "Port",
   "audit.menu.remoteAccess": "Remote Access",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   "audit.menu.remoteAccessExternal": "External Remote Access",
-=======
-  "audit.menu.remoteAccessExternal": "Remote Access External",
->>>>>>> ea840a571c (AB#84: v1.0.0(2) update locale)
-=======
-  "audit.menu.remoteAccessExternal": "External Remote Access",
->>>>>>> ed9e5145c6 (update Locale)
   "audit.menu.setting.audit": "Audit Trail",
->>>>>>> origin/bsx@1.0.0(2)
   "audit.menu.setting.cloud": "Cloud",
   "audit.menu.setting.custom_field": "Custom Fields",
   "audit.menu.setting.dst": "Daylight Saving Time",
@@ -879,6 +870,7 @@
   "audit.permission.255": "User(255)",
   "audit.permission.3": "Monitoring Operator(3)",
   "audit.permission.operator": "Add User",
+  "audit.setting.audit.csv_export": "CSV Export",
   "audit.setting.cloud.all": "All Cloud Setting",
   "audit.setting.cloud.email": "Email",
   "audit.setting.cloud.http_port": "Port Used By Cloud",
@@ -984,13 +976,10 @@
   "audit.setting.wiegand_format.use_facility_code": "Facility Code",
   "audit.system.fingerprint_login": "Login (ID+Password+Fingerprint)",
   "audit.system.login": "Login (ID+Password)",
-<<<<<<< HEAD
-=======
   "audit.system.loginentra": "Login (Entra ID)",
   "audit.system.loginfailedfingerprint": "Login Failed (Fingerprint)",
   "audit.system.loginfailedidpw": "Login Failed (ID+Password)",
   "audit.system.loginfailedip": "Login Failed (IP not allowed)",
->>>>>>> ea840a571c (AB#84: v1.0.0(2) update locale)
   "audit.system.logout": "Logout",
   "audit.system.maximum_invaild_attemps": "Exceeded maximum login attempts",
   "audit.system.maximum_invalid_attempts": "Exceeded maximum login attempts",
@@ -1066,11 +1055,8 @@
   "audit.zone.unlock": "Unlock",
   "audit.zone.zone_type": "Advanced AC Type",
   "auditTrail.content": "Modification",
-<<<<<<< HEAD
-=======
   "auditTrail.export.downloadMessage": "Please click Download to export the CSV file.",
   "auditTrail.export.reason": "Export Reason",
->>>>>>> 90a9b53eca (AB#84: v1.0.0(2) update locale)
   "auditTrail.filter.one_month": "Last 1 Month",
   "auditTrail.filter.three_month": "Last 3 Months",
   "auditTrail.filter.title": "Filter",
@@ -1642,6 +1628,7 @@
   "common.quickActionLayout": "Quick Action Layout",
   "common.read": "Read",
   "common.readCard": "Read Card",
+  "common.reason": "Reason",
   "common.registerByCardReader": "Register by Card Reader",
   "common.registrationOption": "Registration Option",
   "common.relay": "Relay {0}",
@@ -1795,7 +1782,7 @@
   "common.wiegand": "Wiegand",
   "common.yes": "Yes",
   "common.zone": "Advanced AC",
-  "common.zoneName": "Zone Name",
+  "common.zoneName": "Advanced AC Name",
   "confirm.DeleteDataAndSyncDevice": "Delete data and sync device.<br> The authentication performance may be affected since updated biometric data in device is overwritten by the original data from BioStar X.<br> Continue?",
   "confirm.accessGroupForNoAccessLevel": "There is no access level applied for access group. Continue?",
   "confirm.accessGroupForNoAccessLevelOrFloorLevel": "There is no access level or floor level applied for access group. Continue?",
@@ -4525,18 +4512,8 @@
   "setting.image_log.title": "User Profile Image Option",
   "setting.lastUpdateVersionForUserSync": "User synchronization version",
   "setting.maxBackdateMonthForEventSync": "Event synchronization period",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   "setting.menu.credential.irFaceGroupMatching": "IR Face Group Matching",
   "setting.menu.remoteAccessExternal.root": "External Remote Access",
-<<<<<<< HEAD
->>>>>>> origin/bsx@1.0.0(2)
-=======
-  "setting.menu.credential.irFaceGroupMatching": "IR Face Group Matching",
->>>>>>> be71faa1f9 (AB#84: 1.0.0(2) locale update)
-=======
->>>>>>> ed9e5145c6 (update Locale)
   "setting.mobileCredentail.setting_complete": "Do you want to complete the mobile access setup?",
   "setting.mobileCredential.addDeviceSuccess": "Succeeded to transfer mobile credential certificate to selected devices.",
   "setting.mobileCredential.allDeleteDevice": "Mobile credential certificates loaded on all devices will be deleted. The mobile credential will not work after proceeding.",
@@ -4832,13 +4809,9 @@
   "setting.sever.secure.comm.notuse.catution.msg": "Are you sure you want to disable secure communication with the device?",
   "setting.sever.secure.comm.older.fw.catution.msg": "Devices or older firmware versions which don't support secure communication have been detected. Please replace the devices or update the devices' firmware to the latest version and try again.<br>No. of devices: {1} including device ID {0}",
   "setting.sever.secure.comm.use.catution.msg": "When secure communication is on, the access to the devices can be limited. The limitations must be fully understood before proceeding. You can find the details from the manual . When changing the secure comm. option, it could take several minutes to reconnect the devices.<br>Do you want to continue?",
-<<<<<<< HEAD
-  "setting.systemBackup.change.msg": "Communications server data cannot be backed up.\\nIn a multi-communications server environment, only the main server can be backed up.\\nBackup files can only be restored on a PC configured with the same IP address.\\nDo you want to continue?",
-=======
   "setting.systemBackup.change.comm.msg": "It only backs up the main database, so data from any databases added afterward will not be included in the backup.",
   "setting.systemBackup.change.msg": "Backup files can only be restored on a PC configured with the same IP address.<br>Do you want to continue?",
   "setting.systemBackup.change.msgSecond": "Changes made after this backup was initiated will not be included in the backup file. Do you want to continue?",
->>>>>>> cfdf9d4066 (AB#84: v1.0.0(2) IR 페이스 서버 매칭 및 기타 업데이트)
   "setting.systemBackup.isrunning.msg": "A backup that has previously been started is still in progress.<br>Please try again when the previous backup is done.",
   "setting.systemBackup.outofrange.cycle": "Number of Backup Files to Keep can only be set between 1~100.",
   "setting.systemBackup.outofrange.month": "Date can only be set between 1~31.",
@@ -4962,6 +4935,7 @@
   "setting.xlicense.myLicense.overview.video": "Video",
   "setting.xlicense.myLicense.plugin": "BioStar X Plugin",
   "setting.xlicense.myLicense.remoteAcs": "BioStar X Remote Access",
+  "setting.xlicense.myLicense.remoteAcsExternal": "BioStar X Remote Access External",
   "setting.xlicense.myLicense.rollCall": "BioStar X Roll Call",
   "setting.xlicense.myLicense.serverMatching": "BioStar X Server Matching",
   "setting.xlicense.myLicense.serverMatchingFace": "BioStar X IR Face Server Matching",
