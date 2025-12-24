@@ -820,6 +820,11 @@
   "audit.menu.mapFloor": "Floor",
   "audit.menu.port": "Port",
   "audit.menu.remoteAccess": "Remote Access",
+<<<<<<< HEAD
+=======
+  "audit.menu.remoteAccessExternal": "External Remote Access",
+  "audit.menu.setting.audit": "Audit Trail",
+>>>>>>> origin/bsx@1.0.0(2)
   "audit.menu.setting.cloud": "Cloud",
   "audit.menu.setting.custom_field": "Custom Fields",
   "audit.menu.setting.dst": "Daylight Saving Time",
@@ -4485,6 +4490,11 @@
   "setting.image_log.title": "User Profile Image Option",
   "setting.lastUpdateVersionForUserSync": "User synchronization version",
   "setting.maxBackdateMonthForEventSync": "Event synchronization period",
+<<<<<<< HEAD
+=======
+  "setting.menu.credential.irFaceGroupMatching": "IR Face Group Matching",
+  "setting.menu.remoteAccessExternal.root": "External Remote Access",
+>>>>>>> origin/bsx@1.0.0(2)
   "setting.mobileCredentail.setting_complete": "Do you want to complete the mobile access setup?",
   "setting.mobileCredential.addDeviceSuccess": "Succeeded to transfer mobile credential certificate to selected devices.",
   "setting.mobileCredential.allDeleteDevice": "Mobile credential certificates loaded on all devices will be deleted. The mobile credential will not work after proceeding.",

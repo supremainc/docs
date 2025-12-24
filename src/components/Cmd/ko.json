@@ -4485,6 +4485,11 @@
   "setting.image_log.title": "사용자 프로필 이미지 옵션",
   "setting.lastUpdateVersionForUserSync": "사용자 동기화 버전",
   "setting.maxBackdateMonthForEventSync": "이벤트 동기화 기간",
+<<<<<<< HEAD
+=======
+  "setting.menu.credential.irFaceGroupMatching": "IR 페이스 그룹 매칭",
+  "setting.menu.remoteAccessExternal.root": "사용자 리모트 액세스",
+>>>>>>> origin/bsx@1.0.0(2)
   "setting.mobileCredentail.setting_complete": "모바일 출입 카드 설정을 완료 하시겠습니까?",
   "setting.mobileCredential.addDeviceSuccess": "모바일 크리덴셜 인증서가 장치로 전송되었습니다.",
   "setting.mobileCredential.allDeleteDevice": "모든 장치에서 모바일 크리덴셜 인증서가 삭제되며, 이후에는 장치에서 모바일 크리덴셜을 사용할 수 없습니다. 계속하시겠습니까?",
