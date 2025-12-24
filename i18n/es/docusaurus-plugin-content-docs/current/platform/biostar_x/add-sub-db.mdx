@@ -126,6 +126,7 @@ CREATE USER 'biostarx_ac_user'@'192.168.12.42' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON biostar2_ac.* TO 'biostarx_ac_user'@'192.168.12.42';
 FLUSH PRIVILEGES;
 ```
+
 </Step>
 
 <Step>
@@ -206,34 +207,33 @@ Sigue los pasos a continuación para enlazar las tablas necesarias en la base de
 
 * A continuación se muestra la consulta para generar sentencias `CREATE TABLE` en la base de datos principal.
 
-  ```sql
-  select
-    concat(
-        'CREATE TABLE IF NOT EXISTS <SubDB_AC_Database_Schema>.', table_name,
-        ' ENGINE=FEDERATED ',
-        'CONNECTION=''default/', table_name, ''';'
-    ) as create_table_sql
-  from information_schema.TABLES
-  where TABLE_SCHEMA = '<MainDB_AC_Database_Schema>'
+   ```sql
+   select
+      concat(
+         'CREATE TABLE IF NOT EXISTS <SubDB_AC_Database_Schema>.', table_name,
+         ' ENGINE=FEDERATED ',
+         'CONNECTION=''default/', table_name, ''';'
+      ) as create_table_sql
+   from information_schema.TABLES
+   where TABLE_SCHEMA = '<MainDB_AC_Database_Schema>'
       AND TABLE_TYPE = 'BASE TABLE'
       AND NOT TABLE_NAME REGEXP '^t_lg[0-9]{6}$'
       AND NOT TABLE_NAME REGEXP '^t_almevt[0-9]{6}$'
       AND NOT TABLE_NAME REGEXP '^t_lgalmtrstrc[0-9]{6}$'
-  ORDER BY TABLE_NAME;
-  ```
+   ORDER BY TABLE_NAME;
+   ```
 
-  :::info
+   :::info
 
-  Debido a la naturaleza de FederatedX, se recomienda establecer `Table_type` en 'BASE TABLE'. El `VIEW type` también es posible, pero no recomendado.
+   Debido a la naturaleza de FederatedX, se recomienda establecer `Table_type` en 'BASE TABLE'. El `VIEW type` también es posible, pero no recomendado.
 
-  :::
+   :::
 
 <div className="print--invisible">
 
 - Asegúrate de ingresar la sentencia `CREATE` generada por la consulta anterior en la base de datos auxiliar.
 
-  <DbQueryCreate />
-
+   <DbQueryCreate />
 </div>
 
 </Step>
@@ -249,19 +249,19 @@ Sigue los pasos a continuación para enlazar las tablas necesarias en la base de
 
 4. Ingresa cada elemento en la pantalla de adición de base de datos.
 
-    <Image src="/img/common/biostarx-subdb-sm-add-database.png" alone />
+   <Image src="/img/common/biostarx-subdb-sm-add-database.png" alone />
 
-    * <Cmd>Name</Cmd>: Ingresa el nombre de la base de datos.
+   * <Cmd>Name</Cmd>: Ingresa el nombre de la base de datos.
 
-    * <Cmd>Description</Cmd>: Ingresa la descripción de la base de datos.
+   * <Cmd>Description</Cmd>: Ingresa la descripción de la base de datos.
 
-    * <Cmd>DB Type</Cmd>: Selecciona el tipo de base de datos. (Maria, MS SQL)
+   * <Cmd>DB Type</Cmd>: Selecciona el tipo de base de datos. (Maria, MS SQL)
 
-    * <Cmd>Host</Cmd>: Ingresa el nombre de host o la dirección IP del servidor de bases de datos.
+   * <Cmd>Host</Cmd>: Ingresa el nombre de host o la dirección IP del servidor de bases de datos.
 
-    * <Cmd>Port</Cmd>: Ingresa el número de puerto del servidor de bases de datos.
+   * <Cmd>Port</Cmd>: Ingresa el número de puerto del servidor de bases de datos.
 
-    * <Cmd>AC</Cmd> / <Cmd>TA</Cmd>: Ingresa el nombre, usuario y contraseña de las bases de datos AC y TA.
+   * <Cmd>AC</Cmd> / <Cmd>TA</Cmd>: Ingresa el nombre, usuario y contraseña de las bases de datos AC y TA.
 
 5. Haz clic en el botón <Cmd>Test Connection</Cmd> en la esquina superior derecha para comprobar si la base de datos está correctamente conectada.
 
@@ -297,19 +297,19 @@ GRANT ALTER ANY LOGIN TO [biostar_x_user];
 
 1. Conecta User Mapping para las tablas y usuarios en la base de datos auxiliar con una cuenta que tenga privilegios de sysadmin. En este momento, es necesario agregar el rol `db_owner`.
 
-    <Image src="/img/common/biostarx-subdb-user-mapping.png" alone />
+   <Image src="/img/common/biostarx-subdb-user-mapping.png" alone />
 
 2. Otorga los siguientes permisos a la base de datos que se va a agregar.
 
-    ```sql
-    GRANT ALTER ANY LINKED SERVER TO [<SUB DATABASE AC USER>];
-    GRANT ALTER ANY LOGIN TO [<SUB DATABASE AC USER>];
-    ```
+   ```sql
+   GRANT ALTER ANY LINKED SERVER TO [<SUB DATABASE AC USER>];
+   GRANT ALTER ANY LOGIN TO [<SUB DATABASE AC USER>];
+   ```
 
-    ```sql title='Example'
-    GRANT ALTER ANY LINKED SERVER TO [biostar_x_user_sub];
-    GRANT ALTER ANY LOGIN TO [biostar_x_user_sub];
-    ```
+   ```sql title='Example'
+   GRANT ALTER ANY LINKED SERVER TO [biostar_x_user_sub];
+   GRANT ALTER ANY LOGIN TO [biostar_x_user_sub];
+   ```
 
 </Step>
 
@@ -327,19 +327,19 @@ Usa **BioStar X Service Manager** para agregar la base de datos auxiliar.
 
 4. Ingresa cada elemento en la pantalla de adición de base de datos.
 
-    <Image src="/img/common/biostarx-subdb-sm-add-database.png" alone />
+   <Image src="/img/common/biostarx-subdb-sm-add-database.png" alone />
 
-    * <Cmd>Name</Cmd>: Ingresa el nombre de la base de datos.
+   * <Cmd>Name</Cmd>: Ingresa el nombre de la base de datos.
 
-    * <Cmd>Description</Cmd>: Ingresa la descripción de la base de datos.
+   * <Cmd>Description</Cmd>: Ingresa la descripción de la base de datos.
 
-    * <Cmd>DB Type</Cmd>: Selecciona el tipo de base de datos. (Maria, MS SQL)
+   * <Cmd>DB Type</Cmd>: Selecciona el tipo de base de datos. (Maria, MS SQL)
 
-    * <Cmd>Host</Cmd>: Ingresa el nombre de host o la dirección IP del servidor de bases de datos.
+   * <Cmd>Host</Cmd>: Ingresa el nombre de host o la dirección IP del servidor de bases de datos.
 
-    * <Cmd>Port</Cmd>: Ingresa el número de puerto del servidor de bases de datos.
+   * <Cmd>Port</Cmd>: Ingresa el número de puerto del servidor de bases de datos.
 
-    * <Cmd>AC</Cmd> / <Cmd>TA</Cmd>: Ingresa el nombre, usuario y contraseña de las bases de datos AC y TA.
+   * <Cmd>AC</Cmd> / <Cmd>TA</Cmd>: Ingresa el nombre, usuario y contraseña de las bases de datos AC y TA.
 
 5. Haz clic en el botón <Cmd>Test Connection</Cmd> en la esquina superior derecha para comprobar si la base de datos está correctamente conectada.
 
@@ -367,21 +367,21 @@ GO
 DECLARE @LinkedServer  sysname = N'default';
 DECLARE @SourceSchema  sysname = N'dbo';
 DECLARE @TargetSchema  sysname = N'dbo';
-  
+
 SELECT
-    'IF OBJECT_ID(N''' + QUOTENAME(@TargetSchema,'') + '.' + QUOTENAME(t.name,'') + ''', ''SN'') IS NOT NULL '
-  + 'DROP SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name) + ';'
-  + 'CREATE SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name)
-  + ' FOR ' + QUOTENAME(@LinkedServer) + '.' + QUOTENAME(DB_NAME()) + '.' + QUOTENAME(s.name) + '.' + QUOTENAME(t.name) + ';'
-  AS recreate_synonym_sql
+   'IF OBJECT_ID(N''' + QUOTENAME(@TargetSchema,'') + '.' + QUOTENAME(t.name,'') + ''', ''SN'') IS NOT NULL '
++ 'DROP SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name) + ';'
++ 'CREATE SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name)
++ ' FOR ' + QUOTENAME(@LinkedServer) + '.' + QUOTENAME(DB_NAME()) + '.' + QUOTENAME(s.name) + '.' + QUOTENAME(t.name) + ';'
+AS recreate_synonym_sql
 FROM sys.tables AS t
 JOIN sys.schemas AS s
-  ON s.schema_id = t.schema_id
+ON s.schema_id = t.schema_id
 WHERE s.name = @SourceSchema
-  AND t.is_ms_shipped = 0
-  AND t.name NOT LIKE 't_lg[0-9][0-9][0-9][0-9][0-9][0-9]'
-  AND t.name NOT LIKE 't_almevt[0-9][0-9][0-9][0-9][0-9][0-9]'
-  AND t.name NOT LIKE 't_lgalmtrstrc[0-9][0-9][0-9][0-9][0-9][0-9]'
+AND t.is_ms_shipped = 0
+AND t.name NOT LIKE 't_lg[0-9][0-9][0-9][0-9][0-9][0-9]'
+AND t.name NOT LIKE 't_almevt[0-9][0-9][0-9][0-9][0-9][0-9]'
+AND t.name NOT LIKE 't_lgalmtrstrc[0-9][0-9][0-9][0-9][0-9][0-9]'
 ORDER BY t.name;
 ```
 
@@ -394,19 +394,19 @@ DECLARE @SourceSchema  sysname = N'dbo';      -- Schema to target in the main DB
 DECLARE @TargetSchema  sysname = N'dbo';      -- Schema to create synonyms in the sub DB (reflected in the output string)
 
 SELECT
-    'IF OBJECT_ID(N''' + QUOTENAME(@TargetSchema,'') + '.' + QUOTENAME(t.name,'') + ''', ''SN'') IS NOT NULL '
-  + 'DROP SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name) + ';'
-  + 'CREATE SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name)
-  + ' FOR ' + QUOTENAME(@LinkedServer) + '.' + QUOTENAME(DB_NAME()) + '.' + QUOTENAME(s.name) + '.' + QUOTENAME(t.name) + ';'
-  AS recreate_synonym_sql
+   'IF OBJECT_ID(N''' + QUOTENAME(@TargetSchema,'') + '.' + QUOTENAME(t.name,'') + ''', ''SN'') IS NOT NULL '
++ 'DROP SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name) + ';'
++ 'CREATE SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name)
++ ' FOR ' + QUOTENAME(@LinkedServer) + '.' + QUOTENAME(DB_NAME()) + '.' + QUOTENAME(s.name) + '.' + QUOTENAME(t.name) + ';'
+AS recreate_synonym_sql
 FROM sys.tables AS t
 JOIN sys.schemas AS s
-  ON s.schema_id = t.schema_id
+ON s.schema_id = t.schema_id
 WHERE s.name = @SourceSchema
-  AND t.is_ms_shipped = 0
-  AND t.name NOT LIKE 't_lg[0-9][0-9][0-9][0-9][0-9][0-9]'
-  AND t.name NOT LIKE 't_almevt[0-9][0-9][0-9][0-9][0-9][0-9]'
-  AND t.name NOT LIKE 't_lgalmtrstrc[0-9][0-9][0-9][0-9][0-9][0-9]'
+AND t.is_ms_shipped = 0
+AND t.name NOT LIKE 't_lg[0-9][0-9][0-9][0-9][0-9][0-9]'
+AND t.name NOT LIKE 't_almevt[0-9][0-9][0-9][0-9][0-9][0-9]'
+AND t.name NOT LIKE 't_lgalmtrstrc[0-9][0-9][0-9][0-9][0-9][0-9]'
 ORDER BY t.name;
 ```
 

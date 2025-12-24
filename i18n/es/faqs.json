@@ -7,16 +7,13 @@
         {
           "product": [
             "biostation_3",
-            "biostation_2",
             "biostation_2a",
             "facestation_f2",
             "bioentry_n2",
             "biolite_n2",
-            "biostation_a2",
-            "biostation_l2",
-            "facelite",
             "facestation_2",
-            "xstation_2"
+            "xstation_2",
+            "biostation_3_max"
           ],
           "question": "Se está suministrando energía, pero el dispositivo no funciona.",
           "answer": [
@@ -35,16 +32,13 @@
         {
           "product": [
             "biostation_3",
-            "biostation_2",
             "biostation_2a",
             "facestation_f2",
             "bioentry_n2",
             "biolite_n2",
-            "biostation_a2",
-            "biostation_l2",
-            "facelite",
             "facestation_2",
-            "xstation_2"
+            "xstation_2",
+            "biostation_3_max"
           ],
           "question": "Perdí mi PIN.",
           "answer": [
@@ -55,16 +49,13 @@
         {
           "product": [
             "biostation_3",
-            "biostation_2",
             "biostation_2a",
             "facestation_f2",
             "bioentry_n2",
             "biolite_n2",
-            "biostation_a2",
-            "biostation_l2",
-            "facelite",
             "facestation_2",
-            "xstation_2"
+            "xstation_2",
+            "biostation_3_max"
           ],
           "question": "Ingresé mi PIN y pulsé el botón <span class='cmd'>OK</span>, pero aún no puedo abrir la puerta.",
           "answer": [
@@ -89,7 +80,18 @@
           "answer": [
             "Consulte <a href='getting-started#how-to-scan-qrbarcode'>Método correcto de autenticación con QR/código de barras</a> y vuelva a intentarlo.",
             "<b>XS2-QDPB</b>, <b>XS2-QAPB</b>: Coloque el haz guía en el centro del código QR.",
-            "<b>XS2-DPB</b>, <b>XS2-APB</b>: Coloque el QR/código de barras en el centro de la pantalla de escaneo del dispositivo.",
+            "<b>XS2-DPB</b>, <b>XS2-APB</b>, <b>XS2-ODPB</b>, <b>XS2-OAPB</b>: Coloque el código QR/código de barras en el centro de la pantalla de escaneo del dispositivo.",
+            "Ajuste el brillo de su smartphone para que el dispositivo pueda leer el QR/código de barras claramente y vuelva a intentarlo.",
+            "Si el problema persiste, comuníquese con el administrador que emitió el QR/código de barras."
+          ]
+        },
+        {
+          "product": [
+            "biostation_3_max"
+          ],
+          "question": "No se puede escanear un código QR/código de barras.",
+          "answer": [
+            "Consulte <a href='getting-started#how-to-scan-qrbarcode'>Método correcto de autenticación con QR/código de barras</a> y vuelva a intentarlo.",
             "Ajuste el brillo de su smartphone para que el dispositivo pueda leer el QR/código de barras claramente y vuelva a intentarlo.",
             "Si el problema persiste, comuníquese con el administrador que emitió el QR/código de barras."
           ]
@@ -106,8 +108,8 @@
           "product": [
             "biostation_3",
             "facestation_f2",
-            "facelite",
-            "facestation_2"
+            "facestation_2",
+            "biostation_3_max"
           ],
           "question": "El rostro está registrado pero la autenticación facial no se realiza correctamente y se producen errores con frecuencia.",
           "answer": [
@@ -119,8 +121,8 @@
           "product": [
             "biostation_3",
             "facestation_f2",
-            "facelite",
-            "facestation_2"
+            "facestation_2",
+            "biostation_3_max"
           ],
           "question": "La autenticación facial dejó de funcionar repentinamente.",
           "answer": [
@@ -130,7 +132,8 @@
         {
           "product": [
             "biostation_3",
-            "facestation_f2"
+            "facestation_f2",
+            "biostation_3_max"
           ],
           "question": "<span class='cmd'>Mask Detection</span> está en <span class='cmd'>Enabled</span>, pero la autenticación facial no se realiza correctamente al usar una mascarilla.",
           "answer": [
@@ -139,7 +142,8 @@
         },
         {
           "product": [
-            "facestation_f2"
+            "facestation_f2",
+            "facestation_2"
           ],
           "question": "La cámara térmica no puede medir la temperatura.",
           "answer": [
@@ -149,7 +153,8 @@
         },
         {
           "product": [
-            "facestation_f2"
+            "facestation_f2",
+            "facestation_2"
           ],
           "question": "La cámara térmica mide una temperatura inferior a la real.",
           "answer": [
@@ -167,12 +172,11 @@
         {
           "product": [
             "bioentry_n2",
-            "biostation_2",
             "biostation_2a",
             "biolite_n2",
-            "biostation_a2",
-            "biostation_l2",
-            "facestation_f2"
+            "xstation_2",
+            "facestation_f2",
+            "biostation_3_max"
           ],
           "question": "La huella se ha registrado, pero la autenticación de huella no se realiza correctamente y se producen errores con frecuencia.",
           "answer": [
@@ -185,11 +189,11 @@
         {
           "product": [
             "bioentry_n2",
-            "biostation_2",
             "biostation_2a",
             "biolite_n2",
-            "biostation_a2",
-            "biostation_l2"
+            "xstation_2",
+            "facestation_f2",
+            "biostation_3_max"
           ],
           "question": "La autenticación de huella dejó de funcionar repentinamente.",
           "answer": [
@@ -201,9 +205,11 @@
         {
           "product": [
             "bioentry_n2",
-            "biostation_2",
             "biostation_2a",
-            "biolite_n2"
+            "biolite_n2",
+            "xstation_2",
+            "facestation_f2",
+            "biostation_3_max"
           ],
           "question": "El sensor de huella no se enciende.",
           "answer": [
@@ -221,16 +227,13 @@
         {
           "product": [
             "biostation_3",
-            "biostation_2",
             "biostation_2a",
             "facestation_f2",
             "bioentry_n2",
             "biolite_n2",
-            "biostation_a2",
-            "biostation_l2",
-            "facelite",
             "facestation_2",
-            "xstation_2"
+            "xstation_2",
+            "biostation_3_max"
           ],
           "question": "La puerta no se bloquea al cerrarla.",
           "answer": [
@@ -248,16 +251,13 @@
         {
           "product": [
             "biostation_3",
-            "biostation_2",
             "biostation_2a",
             "facestation_f2",
             "bioentry_n2",
             "biolite_n2",
-            "biostation_a2",
-            "biostation_l2",
-            "facelite",
             "facestation_2",
-            "xstation_2"
+            "xstation_2",
+            "biostation_3_max"
           ],
           "question": "De repente, la hora es incorrecta.",
           "answer": [
@@ -275,16 +275,13 @@
         {
           "product": [
             "biostation_3",
-            "biostation_2",
             "biostation_2a",
             "facestation_f2",
             "bioentry_n2",
             "biolite_n2",
-            "biostation_a2",
-            "biostation_l2",
-            "facelite",
             "facestation_2",
-            "xstation_2"
+            "xstation_2",
+            "biostation_3_max"
           ],
           "question": "Perdí mi PIN de administrador, por lo que no puedo acceder al modo de administrador.",
           "answer": [
@@ -304,7 +301,8 @@
           "product": [
             "biostation_3",
             "biolite_n2",
-            "biostation_2a"
+            "biostation_2a",
+            "xstation_2"
           ],
           "question": "Después de actualizar el firmware en dispositivos existentes, la configuración de Master Admin no aparece.",
           "answer": [

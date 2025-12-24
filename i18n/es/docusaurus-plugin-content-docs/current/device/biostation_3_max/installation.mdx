@@ -1,0 +1,137 @@
+---
+id: installation
+title: Instalación
+description: Ofrece los procedimientos completos de instalación y ejemplos de conexión necesarios para el dispositivo.
+keywords:
+  - Soporte
+  - Alimentación
+  - Red
+  - Entrada
+  - Relé
+  - Independiente
+  - E/S Segura
+  - Wiegand
+---
+
+import InstallationBracketNotes from '../../common/_installation-bracket-notes.mdx';
+
+Ofrece los procedimientos completos de instalación y ejemplos de conexión necesarios para el dispositivo.
+
+## Fijar el soporte y el producto
+
+:::info
+
+Este documento describe el procedimiento de instalación basado en los modelos BS3M-ODB y BS3M-OAPB. Instale los modelos BS3M-DB y BS3M-APB de la misma manera.
+
+:::
+
+1. Determine la ubicación para montar el producto.
+
+   <Image src="/img/device/installation-recommended-fsf2.png" className="none" width="35%" alone />
+
+   <InstallationBracketNotes height1={124} height2={127} />
+
+2. Asegura firmemente el soporte con los tornillos de fijación en el lugar donde se montará el producto.
+
+   <Image src="/img/device/installation-device1-bs3m.svg" className="none" width="30%" alone />
+
+   :::info
+
+   * Si instalas el producto en una pared de concreto, perfora un agujero, inserta un anclaje de PVC y sujétalo con un tornillo de fijación.
+
+   * Para evitar interferencias de RF, se debe mantener una distancia mínima de separación.
+
+   <Columns>
+     <Column className="text--center">
+       <Image src="/img/device/installation-wall1-bs3m.png" className="none" width="60%" />
+
+       <div className="overflow-x">
+         | Espesor de pared | Distancia |
+         | :-: | :-: |
+
+         \| 100 mm | 200 mm |
+         \| 120 mm | 180 mm |
+         \| 150 mm | 150 mm |
+       </div>
+     </Column>
+
+     <Column className="text--center">
+       <Image src="/img/device/installation-wall2-bs3m.png" className="none" width="60%" />
+     </Column>
+   </Columns>
+
+   * Al utilizar una credencial de acceso móvil, instala los dispositivos manteniendo una distancia mínima de 1 m entre ellos para evitar interferencias BLE.
+
+   :::
+
+3. Después de instalar la cubierta del cable, apriete firmemente los seis tornillos de la cubierta y monte el producto en el soporte fijo.
+
+   <Image src="/img/device/installation-device2-fsf2.png" className="none" width="25%" alone />
+
+   :::info
+
+   Asegúrate de que la cubierta del cable esté completamente cerrada después de conectarla al producto para mantener las características de resistencia al agua y al polvo (clasificación IP65).
+
+   :::
+
+4. Gira los tornillos de fijación para ensamblar el producto con el soporte.
+
+   <Image src="/img/device/installation-device3-fsf2.png" className="none" width="25%" alone />
+
+   :::info
+
+   Al ensamblar el producto con el soporte, puedes usar el tornillo de fijación del soporte incluido (en forma de estrella) en lugar del tornillo de fijación del producto para aumentar la seguridad.
+
+   :::
+
+{/* ## 전원 연결 */}
+
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+{/* ## 네트워크 연결 */}
+
+import NetworkConnection from "../../common/_device-network-connection.mdx";
+
+<NetworkConnection />
+
+{/* ## Input 연결 */}
+
+import InputConnection from "../../common/_device-input-connetion.mdx";
+
+<InputConnection />
+
+{/* ## 릴레이 연결 */}
+
+import RelayConnectioin from "../../common/_device-relay-connection.mdx";
+
+<RelayConnectioin />
+
+{/* ## 독립형 연결 */}
+
+import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
+
+<StandaloneConnection />
+
+{/* 공통 노트 */}
+
+import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
+
+<CommonNotes product="BioStation 3 Max" product_2="FaceStation 2, FaceLite" />
+
+{/* ## Secure I/O 2 연결 */}
+
+import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
+
+<SecureIOConnection />
+
+{/* 공통 노트 */}
+
+<CommonNotes product="BioStation 3 Max" product_2="FaceStation 2, FaceLite" />
+
+{/* ## Wiegand 연결 */}
+
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />

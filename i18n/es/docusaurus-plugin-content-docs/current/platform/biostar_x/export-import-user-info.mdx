@@ -32,9 +32,17 @@ Guarda la información de usuarios seleccionada como un archivo CSV o carga arch
 
    <Image src="/img/biostarx-user-export-csv.png" />
 
-4. Cuando aparezca la ventana <Cmd sid="team.menu.export.csv" /> <Cmd sid="team.menu.export.title" />, haz clic en <Cmd sid="common.button.download" />.
+4. Cuando aparezca la ventana <Cmd sid="team.menu.export.csv" /> <Cmd sid="team.menu.export.title" />, ingresa <Cmd sid="team.menu.export.exportReason" /> (opcional) y haz clic en <Cmd sid="common.button.download" />.
+
+   <Image src="/img/biostarx-user-export-csv-popup.png" />
 
 5. Guarda el archivo CSV en la ubicación deseada de tu ruta local.
+
+:::info
+
+<Cmd sid="team.menu.export.exportReason" /> es opcional. Consulta los registros de <Cmd sid="team.menu.export.exportReason" /> en <Cmd sid="shell.header.setting" /> → <Cmd sid="setting.menu.system.root" /> → <Cmd sid="setting.menu.system.auditTrail" />.
+
+:::
 
 ### Importar CSV {#csvimport}
 
@@ -56,7 +64,7 @@ Guarda la información de usuarios seleccionada como un archivo CSV o carga arch
 
    <Image src="/img/biostarx-user-import-03.png" />
 
-Si se produce un error al importar la información del archivo CSV, revisa y sube solo los datos erróneos del CSV.
+Si ocurre un error al importar el archivo CSV, puedes volver a revisar y subir solo los datos CSV que provocaron el error.
 
 :::info
 
@@ -122,17 +130,21 @@ La información de usuarios se puede almacenar en un dispositivo de almacenamien
 
    <Image src="/img/biostarx-user-export-data.png" />
 
-4. Selecciona el dispositivo al que aplicar el archivo de datos en la ventana <Cmd sid="team.menu.dialog.exprotDataFile.title" /> y haz clic en <Cmd sid="common.apply" />.
+4. En la ventana <Cmd sid="team.menu.dialog.exprotDataFile.title" />, selecciona el dispositivo al que aplicar el archivo de datos.
 
    <Image src="/img/biostarx-user-export-data-select-device.png" />
 
-5. Guarda el archivo de datos en la ruta local deseada. El nombre del archivo se genera con el formato `BioStarX_YYYYMMDD_HHMMSS.tgz`.
+5. Ingresa <Cmd sid="team.menu.export.exportReason" /> (opcional) y haz clic en <Cmd sid="common.apply" />.
+
+6. Guarda el archivo de datos en la ruta local deseada.
 
 :::info
 
 * La exportación del archivo de datos incluye fotos de perfil de usuario, IDs, nombres, periodos de validez, grupos de acceso, PIN, modos de autenticación privada, credenciales (rostro, huella, tarjeta, tarjeta móvil, rostro, QR/Barcode) e información de nivel de seguridad uno a uno.
 
 * Seleccionar un dispositivo incorrecto para aplicar el archivo de datos puede hacer que el dispositivo no lo reconozca.
+
+* <Cmd sid="team.menu.export.exportReason" /> es opcional. Consulta los registros de <Cmd sid="team.menu.export.exportReason" /> en <Cmd sid="shell.header.setting" /> → <Cmd sid="setting.menu.system.root" /> → <Cmd sid="setting.menu.system.auditTrail" />.
 
 :::
 

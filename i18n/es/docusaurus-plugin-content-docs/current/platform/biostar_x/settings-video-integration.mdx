@@ -56,29 +56,29 @@ Para reproducir video grabado desde el servidor VMS, se debe usar el protocolo H
 
 2. Ejecuta el siguiente comando.
 
-    <Tabs groupId="os" defaultValue="Windows">
-    <TabItem value="Windows">
+   <Tabs groupId="os" defaultValue="Windows">
+   <TabItem value="Windows">
 
-    ```java
-    java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate "C:\Windows\System32\config\systemprofile\AppData\Local\<%VENDOR.NAME%>\<%VENDOR.NAME%> Media Server\ssl" {VMS_IP_ADDRESS}
-    ```
-    
-    </TabItem>
+   ```java
+   java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate "C:\Windows\System32\config\systemprofile\AppData\Local\<%VENDOR.NAME%>\<%VENDOR.NAME%> Media Server\ssl" {VMS_IP_ADDRESS}
+   ```
+   
+   </TabItem>
 
-    <TabItem value="Linux">
-    
-    ```java
-    java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate "/opt/<%VENDOR.NAME%>/mediaserver/var/ssl" {VMS_IP_ADDRESS}
-    ```
-    
-    </TabItem>
-    </Tabs>
+   <TabItem value="Linux">
+   
+   ```java
+   java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate "/opt/<%VENDOR.NAME%>/mediaserver/var/ssl" {VMS_IP_ADDRESS}
+   ```
+   
+   </TabItem>
+   </Tabs>
 
-    * Ingresa la ruta donde está instalado el VMS en la sección `<%VENDOR.NAME%>`.
+   * Ingresa la ruta donde está instalado el VMS en la sección `<%VENDOR.NAME%>`.
 
-    * Ingresa la dirección IP del servidor VMS en la sección `{VMS_IP_ADDRESS}`.
+   * Ingresa la dirección IP del servidor VMS en la sección `{VMS_IP_ADDRESS}`.
 
-    * La ruta *ssl* puede variar según el producto VMS instalado.
+   * La ruta *ssl* puede variar según el producto VMS instalado.
 
 3. Verifica si el archivo de certificado (*.pem*) se creó en la ruta donde está instalado el VMS.
 
@@ -102,21 +102,21 @@ Si el VMS está instalado en un servidor diferente de **BioStar X**, copia el ar
 
 3. Si es la primera vez que accedes, inicia sesión con la cuenta de administrador de **BioStar X**.
 
-    <Image src="/img/biostarx-settings-video-integration-login.png" />
+   <Image src="/img/biostarx-settings-video-integration-login.png" />
 
 4. Establece la opción <Cmd sid="video.setting.integration.title" product="2" /> en <Cmd sid="common.use" product="2" />.
 
-    <Image src="/img/biostarx-settings-video-integration.png" />
+   <Image src="/img/biostarx-settings-video-integration.png" />
 
 5. Ingresa la información del servidor VMS.
 
-    * <Cmd sid="video.setting.integration.serverAddress" product="2" />: Ingresa la dirección IP del servidor VMS.
+   * <Cmd sid="video.setting.integration.serverAddress" product="2" />: Ingresa la dirección IP del servidor VMS.
 
-    * <Cmd sid="video.setting.integration.port" product="2" />: Ingresa el número de puerto del servidor VMS.
+   * <Cmd sid="video.setting.integration.port" product="2" />: Ingresa el número de puerto del servidor VMS.
 
-    * <Cmd sid="video.setting.integration.loginId" product="2" />: Ingresa el ID de la cuenta de administrador del servidor VMS.
+   * <Cmd sid="video.setting.integration.loginId" product="2" />: Ingresa el ID de la cuenta de administrador del servidor VMS.
 
-    * <Cmd sid="video.setting.integration.password" product="2" />: Ingresa la contraseña de la cuenta de administrador del servidor VMS.
+   * <Cmd sid="video.setting.integration.password" product="2" />: Ingresa la contraseña de la cuenta de administrador del servidor VMS.
 
 6. Después de ingresar toda la información del servidor VMS, haz clic en el botón <Cmd sid="button.apply" product="2" /> en la parte inferior derecha de la pantalla.
 
@@ -140,15 +140,15 @@ La primera vez que integres con el servidor VMS, **BioStar X** reiniciará autom
 
 2. En la lista **All Services**, haz clic en el botón **Stop** de los siguientes servicios para detenerlos.
 
-    <Image src="/img/common/biostarx-sm-restart-service-video.png" alone />
+   <Image src="/img/common/biostarx-sm-restart-service-video.png" alone />
 
-    * **BioStar X Unified Gateway Service**
+   * **BioStar X Unified Gateway Service**
 
-    * **BioStar X Core Web Service**
+   * **BioStar X Core Web Service**
 
 3. Cuando el estado del servicio solicitado cambie de **Pending** a **Stopped**, haz clic en el botón **Start** para reiniciar el servicio.
 
-    <Image src="/img/common/biostarx-sm-restart-service-video-start.png" alone />
+   <Image src="/img/common/biostarx-sm-restart-service-video-start.png" alone />
 
 </Step>
 
