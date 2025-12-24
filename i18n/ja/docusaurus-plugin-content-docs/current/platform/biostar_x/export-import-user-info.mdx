@@ -32,9 +32,17 @@ keywords:
 
    <Image src='/img/biostarx-user-export-csv.png' />
 
-4. <Cmd sid='team.menu.export.csv' /> <Cmd sid='team.menu.export.title' /> ウィンドウが表示されたら <Cmd sid='common.button.download' /> をクリックします。
+4. <Cmd sid='team.menu.export.csv' /> <Cmd sid='team.menu.export.title' /> ウィンドウが表示されたら、<Cmd sid='team.menu.export.exportReason' />(任意)を入力し、<Cmd sid='common.button.download' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-user-export-csv-popup.png' />
 
 5. ローカルの任意のパスにCSVファイルを保存します。
+
+:::info
+
+<Cmd sid='team.menu.export.exportReason' /> は必須入力項目ではありません。 <Cmd sid='team.menu.export.exportReason' />の記録は<Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />で確認できます。
+
+:::
 
 ### CSV インポート {#csvimport}
 
@@ -56,7 +64,7 @@ keywords:
 
    <Image src='/img/biostarx-user-import-03.png' />
 
-CSVファイルの情報をインポート中にエラーが発生した場合は、エラーとなったCSVデータのみを再確認してアップロードします。
+CSVファイルの情報をインポート中にエラーが発生した場合、エラーが発生したCSVデータのみを再確認してアップロードできます。
 
 :::info
 
@@ -123,17 +131,21 @@ CSVファイルの情報をインポート中にエラーが発生した場合�
 
    <Image src='/img/biostarx-user-export-data.png' />
 
-4. <Cmd sid='team.menu.dialog.exprotDataFile.title' /> ウィンドウでデータファイルを適用するデバイスを選択し、<Cmd sid='common.apply' /> ボタンをクリックします。
+4. <Cmd sid='team.menu.dialog.exprotDataFile.title' /> ウィンドウで、データファイルを適用するデバイスを選択してください。
 
    <Image src='/img/biostarx-user-export-data-select-device.png' />
 
-5. ローカルの任意のパスにデータファイルを保存します。 ファイル名は `BioStarX_YYYYMMDD_HHMMSS.tgz` 形式です。
+5. <Cmd sid='team.menu.export.exportReason' />(任意)を入力し、<Cmd sid='common.apply' /> ボタンをクリックします。
+
+6. ローカルの任意のパスにデータファイルを保存します。
 
 :::info
 
 * データファイルのエクスポートでは、ユーザー情報のうちプロフィール写真、ID、名前、有効期間、入退グループ、PIN、個人認証モード、クレデンシャル（顔、指紋、カード、モバイルカード、顔、QR/Barcode）、1:1セキュリティ等級情報をファイルとして保存します。
 
 * データファイルを適用するデバイスを正しく選択しないと、そのデバイスではデータファイルを認識できません。
+
+* <Cmd sid='team.menu.export.exportReason' /> は必須入力項目ではありません。 <Cmd sid='team.menu.export.exportReason' />の記録は<Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />で確認できます。
 
 :::
 

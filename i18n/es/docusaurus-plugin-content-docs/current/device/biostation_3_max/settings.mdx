@@ -1,0 +1,404 @@
+---
+id: settings
+title: Ajustes
+description: Proporciona instrucciones para configurar los ajustes del sistema y del dispositivo.
+keywords:
+  - Visualizar
+  - Sonido
+  - Red
+  - Dispositivo
+---
+
+Proporciona instrucciones para configurar los ajustes del sistema y del dispositivo.
+
+## Pantalla y sonido
+
+Cambie los ajustes de pantalla y sonido del dispositivo.
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Presione <Cmd sid="ui_193" product="dev" /> → <Cmd sid="ui_366" product="dev" />.
+
+3. Cambie el elemento deseado.
+
+   <Image src="/img/device/bs3m-display-sound.png" />
+
+   * <Cmd sid="ui_364" product="dev" />: Seleccione los elementos que se mostrarán en el fondo de la pantalla de inicio.
+
+   * <Cmd sid="ui_227" product="dev" />: Seleccione el idioma que se mostrará en pantalla.
+
+   * <Cmd sid="ui_284" product="dev" />: Configure si se usará un mensaje privado que se mostrará en pantalla cuando el usuario se autentique. Configure <Cmd sid="ui_284" product="dev" /> mediante el BioStar Device SDK. Si no está configurado, no se mostrará ningún mensaje cuando la autenticación sea exitosa, incluso si <Cmd sid="ui_284" product="dev" /> está habilitado en el dispositivo.
+
+   * <Cmd sid="ui_184" product="dev" />: Configure si se usará un mensaje privado que se mostrará en pantalla cuando el usuario se autentique. Configure <Cmd sid="ui_184" product="dev" /> mediante la API de BioStar X. Si no está configurado, no se mostrará ningún mensaje cuando la autenticación sea exitosa, incluso si <Cmd sid="ui_184" product="dev" /> está habilitado en el dispositivo.
+
+   * <Cmd sid="ui_365" product="dev" />: Configure si el protector de pantalla está habilitado. Reduce el consumo de energía innecesario al disminuir el brillo de la pantalla cuando el dispositivo no se utiliza.
+
+   * <Cmd sid="ui_131" product="dev" />: Defina el tiempo (s) para que la pantalla del menú desaparezca automáticamente. Si no se pulsa ningún botón durante el tiempo establecido, la pantalla regresará a la pantalla de inicio.
+
+   * <Cmd sid="ui_135" product="dev" />: Defina el tiempo (s) para que un mensaje de configuración completa o de notificación desaparezca automáticamente.
+
+   * <Cmd sid="ui_148" product="dev" />: Defina el tiempo (s) para apagar la retroiluminación de la pantalla.
+
+   * <Cmd sid="ui_251" product="dev" />: Use la guía por voz en lugar de tonos de notificación.
+
+   * <Cmd sid="ui_153" product="dev" />: Ajuste el volumen.
+
+   * <Cmd sid="ui_028" product="dev" />: Ajuste el volumen de salida del altavoz cuando use el intercomunicador.
+
+   * <Cmd sid="ui_026" product="dev" />: Ajuste el volumen de entrada del micrófono cuando use el intercomunicador.
+
+:::info
+
+Para obtener más información sobre el SDK de dispositivos BioStar, consulte la [página del SDK de dispositivos BioStar](https://kb.supremainc.com/bs2sdk/doku.php) en la base de conocimientos de Suprema.
+
+:::
+
+## Red
+
+Cambie los ajustes de red del dispositivo, como Ethernet, servidor, OSDP, etc.
+
+### Ethernet
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_193" product="dev" /> → <Cmd sid="ui_344" product="dev" /> → <Cmd sid="ui_252" product="dev" />.
+
+3. Cambie el elemento deseado.
+
+   <Image src="/img/device/bs3m-ethernet.png" />
+
+   * <Cmd sid="ui_012" product="dev" />: Configure si se usará DHCP. Si la configuración DHCP está deshabilitada, se pueden modificar <Cmd sid="ui_029" product="dev" />, <Cmd sid="ui_068" product="dev" /> y <Cmd sid="ui_192" product="dev" />.
+
+   * <Cmd sid="ui_290" product="dev" />: Configure el puerto del dispositivo.
+
+   * <Cmd sid="ui_029" product="dev" />: Compruebe la dirección IP del dispositivo. Para modificarla, desactive la configuración de DHCP.
+
+   * <Cmd sid="ui_068" product="dev" />: Compruebe la puerta de enlace del dispositivo. Para modificarla, desactive la configuración de DHCP.
+
+   * <Cmd sid="ui_192" product="dev" />: Compruebe la máscara de subred del dispositivo. Para modificarla, desactive la configuración de DHCP.
+
+   * <Cmd sid="ui_111" product="dev" />: Configure la dirección del servidor DNS.
+
+4. Para guardar la configuración, presione <Cmd sid="ui_037" product="dev" />.
+
+### Servidor
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_193" product="dev" /> → <Cmd sid="ui_344" product="dev" /> → <Cmd sid="ui_180" product="dev" />.
+
+3. Cambie el elemento deseado.
+
+   <Image src="/img/device/bs3m-edit-server.png" />
+
+   * <Cmd sid="ui_283" product="dev" />: Envíe directamente una señal de conexión desde el dispositivo a un servidor con la información ingresada. Cuando <Cmd sid="ui_283" product="dev" /> está habilitado, ingrese <Cmd sid="ui_182" product="dev" />, <Cmd sid="ui_183" product="dev" /> y <Cmd sid="ui_189" product="dev" />.
+
+   * <Cmd sid="ui_182" product="dev" />: Ingrese la dirección IP de la PC donde está instalado BioStar X.
+
+   * <Cmd sid="ui_183" product="dev" />: Ingrese <Cmd sid="ui_183" product="dev" /> en lugar de <Cmd sid="ui_182" product="dev" />.
+
+   * <Cmd sid="ui_189" product="dev" />: Ingrese el puerto de la PC donde está instalado BioStar X.
+
+4. Para guardar la configuración, presione <Cmd sid="ui_037" product="dev" />.
+
+### Ajustes de OSDP
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_193" product="dev" /> → <Cmd sid="ui_344" product="dev" />.
+
+3. Configure el elemento deseado en <Cmd sid="ui_039" product="dev" />.
+
+   <Image src="/img/device/bs3m-osdp-setting.png" />
+
+   * <Cmd sid="ui_049" product="dev" />: Seleccione el modo RS-485.
+
+   * <Cmd sid="ui_297" product="dev" />: Seleccione la velocidad en baudios deseada.
+
+   * <Cmd sid="ui_257" product="dev" />: Al usar <Cmd sid="ui_269" product="dev" />, seleccione para mostrar en pantalla los resultados de autenticación de controladores o dispositivos de terceros. Esta opción puede utilizarse cuando el modo de <Cmd sid="ui_049" product="dev" /> está configurado en <Cmd sid="ui_088" product="dev" /> o <Cmd sid="ui_205" product="dev" />.
+
+## Dispositivo
+
+### Intercomunicador IP
+
+Configura la cuenta y las extensiones del intercomunicador.
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_193" product="dev" /> → <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_025" product="dev" />.
+
+   <Image src="/img/device/bs3m-intercom.png" />
+
+   * <Cmd sid="ui_025" product="dev" />: Configure si el intercomunicador está habilitado. Al habilitar la configuración de intercomunicador, configure <Cmd sid="ui_055" product="dev" /> y <Cmd sid="ui_101" product="dev" />.
+
+   * <Cmd sid="ui_055" product="dev" />: Ingrese cada dato para que el dispositivo se registre en el servidor SIP.
+
+   * <Cmd sid="ui_027" product="dev" />: Seleccione la resolución de salida de video del intercomunicador desde el dispositivo.
+
+   * <Cmd sid="ui_101" product="dev" />: Agregue, elimine o edite números de extensión.
+
+   * <Cmd sid="ui_102" product="dev" />: Configure si se mostrarán los números de extensión.
+
+   :::info
+
+   * Si <Cmd sid="ui_356" product="dev" /> no está configurado, no será posible distinguir los receptores.
+
+   * Los números de extensión solo pueden incluir caracteres alfanuméricos (distingue mayúsculas y minúsculas) y los caracteres especiales `+` `-` `@` `.`.
+
+   :::
+
+3. Para guardar la configuración, presione <Cmd sid="ui_037" product="dev" />.
+
+### Licencia {#license}
+
+Active la licencia del dispositivo o verifique <Cmd sid="ui_206" product="dev" /> y <Cmd sid="ui_292" product="dev" />.
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_193" product="dev" /> → <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_119" product="dev" />.
+
+3. Para activar la licencia del dispositivo, conecte al dispositivo el USB con la licencia y seleccione <Image src="/img/common/ico-add.svg" ico alone />.
+
+   <Image src="/img/device/bs3m-license1.png" />
+
+4. Las licencias que se pueden activar aparecen en la pantalla. Activa la licencia deseada.
+
+   <Image src="/img/device/bs3m-license2.png" />
+
+:::info
+
+import DocumentA from '../../common/_device-license-info.mdx'
+
+<DocumentA />
+
+:::
+
+### Relé
+
+Configure los puertos de entrada de <Cmd sid="ui_144" product="dev" /> y <Cmd sid="ui_346" product="dev" /> en el dispositivo.
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_193" product="dev" /> → <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_122" product="dev" />.
+
+   <Image src="/img/device/bs3m-relay.png" />
+
+   * <Cmd sid="ui_122" product="dev" />: Configure si el relé está habilitado. Para configurar <Cmd sid="ui_144" product="dev" /> y <Cmd sid="ui_346" product="dev" />, active esta opción.
+
+   * <Cmd sid="ui_144" product="dev" />: Defina la duración durante la cual la puerta permanece abierta después de la autenticación de un usuario estándar.
+
+   * <Cmd sid="ui_346" product="dev" />: Seleccione el puerto de entrada al que está conectado el botón de salida.
+
+   * <Cmd sid="ui_274" product="dev" />: Seleccione el tipo de interruptor (<Cmd sid="ui_036" product="dev" /> o <Cmd sid="ui_035" product="dev" />) para el puerto de entrada del botón de salida.
+
+### Fecha y hora {#date-time}
+
+Configura la fecha y la hora. Configura la fecha y la hora con precisión para recopilar datos de registro precisos.
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_193" product="dev" /> → <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_098" product="dev" />.
+
+3. Cambie el elemento deseado.
+
+   <Image src="/img/device/bs3m-date-time.png" />
+
+   * <Cmd sid="ui_098" product="dev" />: Compruebe la fecha y hora actuales. Para modificarla manualmente, desactive <Cmd sid="ui_208" product="dev" />.
+
+   * <Cmd sid="ui_358" product="dev" />: Ajuste la referencia horaria de la ubicación actual.
+
+   * <Cmd sid="ui_208" product="dev" />: Sincronice el servidor y la hora. Si desea sincronizar el servidor y la hora, habilite <Cmd sid="ui_208" product="dev" />.
+
+   * <Cmd sid="ui_097" product="dev" />: Configure el formato de fecha. Seleccione <Cmd sid="ui_062" product="dev" />, <Cmd sid="ui_033" product="dev" /> y <Cmd sid="ui_009" product="dev" />.
+
+   * <Cmd sid="ui_209" product="dev" />: Configure el formato de hora. Seleccione <Cmd sid="ui_238" product="dev" /> y <Cmd sid="ui_005" product="dev" />.
+
+### Horario de verano
+
+Aplica el horario de verano para usar el dispositivo. Configura correctamente la hora de inicio y fin.
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_193" product="dev" /> → <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_270" product="dev" /> y luego presione <Image src="/img/common/ico-add.svg" ico alone /> para añadir un horario de verano adicional.
+
+3. Cambie el elemento deseado.
+
+   <Image src="/img/device/bs3m-add-dst.png" />
+
+   * <Cmd sid="ui_253" product="dev" />: Defina el nombre del horario de verano.
+
+   * <Cmd sid="ui_217" product="dev" /> / <Cmd sid="ui_218" product="dev" /> / <Cmd sid="ui_216" product="dev" /> / <Cmd sid="ui_215" product="dev" />: Defina los detalles de cuándo comienza el horario de verano.
+
+   * <Cmd sid="ui_094" product="dev" /> / <Cmd sid="ui_095" product="dev" /> / <Cmd sid="ui_093" product="dev" /> / <Cmd sid="ui_092" product="dev" />: Defina los detalles de cuándo termina el horario de verano.
+
+4. Para guardar la configuración, presione <Cmd sid="ui_037" product="dev" />.
+
+### Información del dispositivo
+
+Consulta el nombre del modelo, el ID del dispositivo, el número de serie, la versión del dispositivo y del firmware, el kernel y la dirección MAC.
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_193" product="dev" /> → <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_289" product="dev" />. Compruebe la información de <Cmd sid="ui_136" product="dev" />, <Cmd sid="ui_282" product="dev" />, <Cmd sid="ui_210" product="dev" />, <Cmd sid="ui_019" product="dev" />, <Cmd sid="ui_017" product="dev" />, <Cmd sid="ui_332" product="dev" />, <Cmd sid="ui_031" product="dev" />.
+
+   <Image src="/img/device/bs3m-device-info.png" />
+
+:::info
+
+Mantenga presionado <Cmd sid="ui_031" product="dev" /> para mostrar la información <Cmd sid="ui_016" product="dev" /> que indica la versión del algoritmo de anti-suplantación facial. Si presiona <Cmd sid="ui_016" product="dev" />, puede comprobar el valor hash completo en un mensaje emergente.
+
+:::
+
+### Información de memoria
+
+Consulta el estado de uso de la memoria.
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_193" product="dev" /> → <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_134" product="dev" />. Consulta el estado de uso de memoria del dispositivo.
+
+   <Image src="/img/device/bs3m-memory-info.png" />
+
+### Memoria USB
+
+Conecta una memoria USB e importa la información de usuarios al dispositivo o exporta registros e información de usuarios desde el dispositivo. También puede actualizar el firmware.
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_193" product="dev" /> → <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_061" product="dev" />.
+
+3. Selecciona el elemento deseado y cambia el ajuste.
+
+   <Image src="/img/device/bs3m-usb-memory.png" />
+
+   * <Cmd sid="ui_063" product="dev" />: Importe la información de usuarios desde la memoria USB conectada.
+
+   * <Cmd sid="ui_100" product="dev" />: Seleccione la información que desea exportar a la memoria USB conectada.
+
+   * <Cmd sid="ui_353" product="dev" />: Actualice el firmware si los archivos de firmware están guardados en la memoria USB conectada.
+
+:::caution
+
+No desconectes la fuente de alimentación mientras actualizas el firmware del dispositivo. El dispositivo puede fallar.
+
+:::
+
+:::info
+
+* Se recomienda usar una unidad flash USB formateada en exFAT. Las unidades flash USB en formato FAT32 pueden funcionar incorrectamente cuando se almacenan más de 50,000 credenciales faciales.
+
+* Verifica la cantidad de espacio libre en la unidad flash USB. Se requieren al menos 15 GB de espacio libre para guardar 100,000 credenciales faciales.
+
+:::
+
+### Sabotaje
+
+Configura si se utiliza el tamper de seguridad. Cuando el tamper está activado, establece la eliminación de todos los usuarios, todos los registros y la clave de seguridad.
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_193" product="dev" /> → <Cmd sid="ui_280" product="dev" />.
+
+3. Active <Cmd sid="ui_150" product="dev" /> para eliminar los datos de todos los usuarios registrados, todos los registros y las claves seguras cuando ocurra un evento de manipulación.
+
+### RTSP
+
+Conecta un sistema de gestión de video (VMS) de terceros para monitorear los videos filmados con la cámara visual del producto.
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_193" product="dev" /> → <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_051" product="dev" />.
+
+3. Selecciona el elemento deseado y cambia el ajuste.
+
+   <Image src="/img/device/bs3m-rtsp.png" />
+
+   * <Cmd sid="ui_051" product="dev" />: Configure si RTSP está habilitado. Cuando RTSP está habilitado, configure <Cmd sid="ui_020" product="dev" />, <Cmd sid="ui_155" product="dev" />, <Cmd sid="ui_053" product="dev" />, <Cmd sid="ui_054" product="dev" /> y <Cmd sid="ui_052" product="dev" />.
+
+   * <Cmd sid="ui_020" product="dev" />: Ingrese el ID. El ID puede tener hasta 32 caracteres, en una combinación de caracteres alfanuméricos (distingue mayúsculas y minúsculas) y los símbolos `-` `_`.
+
+   * <Cmd sid="ui_155" product="dev" />: Ingrese la contraseña. La contraseña puede tener de 8 a 32 caracteres en una combinación de letras (mayúsculas y minúsculas) y números.
+
+   * <Cmd sid="ui_053" product="dev" />: Ingrese la dirección RTSP.
+
+   * <Cmd sid="ui_054" product="dev" />: Ingrese el puerto RTSP.
+
+   * <Cmd sid="ui_052" product="dev" />: Seleccione la resolución de la salida de video RTSP desde el dispositivo.
+
+:::info
+
+Cuando el dispositivo está configurado como dispositivo esclavo, es posible que la función RTSP no esté disponible.
+
+:::
+
+### Administrador Principal
+
+Cambie el método de autenticación del administrador maestro.
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_193" product="dev" /> → <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_128" product="dev" />.
+
+3. Presione <Cmd sid="ui_373" product="dev" /> para guardar después de configurar el método de autenticación deseado.
+
+   <Image src="/img/device/bs3m-setting-master-admin-edit.png" />
+
+:::info
+
+Debe enrolar al menos dos tipos de credenciales.
+
+:::
+
+### Reiniciar dispositivo
+
+Reinicia el dispositivo.
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_193" product="dev" /> → <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_286" product="dev" />.
+
+3. Presione <Cmd sid="ui_367" product="dev" /> para reiniciar el dispositivo. Presiona <Cmd sid="ui_321" product="dev" /> para regresar a la pantalla anterior.
+
+### Restaurar valores predeterminados
+
+Los ajustes del dispositivo, los ajustes de red y los niveles de operador se restablecerán.
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_193" product="dev" /> → <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_089" product="dev" />.
+
+   * <Cmd sid="ui_304" product="dev" />: Inicializa todos los ajustes almacenados en el dispositivo. Presione <Cmd sid="ui_367" product="dev" /> para inicializar todos los ajustes del dispositivo. Presiona <Cmd sid="ui_321" product="dev" /> para regresar a la pantalla anterior.
+
+   * <Cmd sid="ui_104" product="dev" />: Inicializa todos los ajustes excepto los de red. Presione <Cmd sid="ui_367" product="dev" /> para inicializar todos los ajustes excepto los de red. Presiona <Cmd sid="ui_321" product="dev" /> para regresar a la pantalla anterior.
+
+   * <Cmd sid="ui_072" product="dev" />: Elimina toda la información guardada en el dispositivo y el certificado raíz, y restaura los ajustes predeterminados.
+
+   * <Cmd sid="ui_121" product="dev" />: Elimina el certificado raíz guardado en el dispositivo.
+
+3. Si continúa con <Cmd sid="ui_089" product="dev" />, el dispositivo se reiniciará.
+
+:::info
+
+* Al restablecer, el nivel de operador también se restablecerá. Después de restablecer, vuelve a configurar el nivel de operador.
+
+* El ajuste de idioma no cambiará después de restablecer.
+
+* El menú <Cmd sid="ui_072" product="dev" /> puede utilizarse cuando el certificado raíz está guardado en el dispositivo.
+
+* El menú <Cmd sid="ui_121" product="dev" /> puede utilizarse solo cuando el certificado raíz está guardado en el dispositivo y se ha designado un administrador.
+
+:::
+
+### Tipo de ID de usuario
+
+Selecciona el tipo de ID de usuario que se va a registrar en el dispositivo.
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Seleccione <Cmd sid="ui_193" product="dev" /> → <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_168" product="dev" />.
+
+   * <Cmd sid="ui_200" product="dev" />: Ingrese un ID de usuario con solo números.
+
+   * <Cmd sid="ui_237" product="dev" />: Ingrese un ID de usuario con caracteres alfanuméricos y los símbolos `_` `-`.
+
+3. Seleccione el elemento deseado.

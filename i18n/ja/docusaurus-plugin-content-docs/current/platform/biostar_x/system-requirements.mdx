@@ -29,7 +29,7 @@ keywords:
 | \>     | 項目            | 小規模組織          | 中規模組織          | 大規模組織                                                                                                                                        |
 | ------ | ------------- | -------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | 使用環境   | デバイス数         | 1～50 台         | 51～100 台       | 101～1,000 台                                                                                                                                  |
-| システム環境 | オペレーティング システム | \>             | \>             | Windows 10、Windows 11、Windows Server 2016、Windows Server 2019、Windows Server 2022、Windows Server 2025 |
+| システム環境 | オペレーティング システム | \>             | \>             | Windows 10、Windows 11、Windows Server 2016、Windows Server 2019、Windows Server 2022、Windows Server 2025                                   |
 | ^      | データベース        | \>             | \>             | MariaDB 11.4.4、MS SQL Server 2012 SP3、MS SQL Server 2014 SP2、MS SQL Server 2016 SP1、MS SQL Server 2017、MS SQL Server 2019、MS SQL Server 2022 |
 | ^      | CPU           | 2.3 GHz 6 Core | 2.3 GHz 8 Core | 最小 2.3 GHz<br/>推奨 4.0 GHz 16 Core                                                                                                            |
 | ^      | RAM           | 16GB           | 32GB           | 最小 64GB<br/>推奨 128GB                                                                                                                         |
@@ -51,6 +51,8 @@ keywords:
 * データベースに MS SQL Server を使用し、**BioStar X T&A** を利用する場合は [Microsoft ODBC Driver 17 for SQL Server](https://learn.microsoft.com/ko-kr/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17) が必要となるため、環境に適したドライバーをインストールしてください。
 
 * Mac オペレーティングシステムで提供される Boot Camp の Windows 仮想環境はサポートしていません。
+
+* Ethernet (TCP/IP) で接続できるデバイスの最大数は 1,000 台です。 コミュニケーションサーバーを追加して、さらにデバイスを接続します。
 
 :::
 
@@ -86,14 +88,20 @@ SQL Server のライセンスの詳細については [Microsoft SQL Server ラ�
 
 <div className='overflow-x'>
 
-| \>     | 項目            | 仕様                                                                                |
-| ------ | ------------- | --------------------------------------------------------------------------------- |
+| \>     | 項目            | 仕様                                                                                                         |
+| ------ | ------------- | ---------------------------------------------------------------------------------------------------------- |
 | システム環境 | オペレーティング システム | Windows 10、Windows 11、Windows Server 2016、Windows Server 2019、Windows Server 2022、Windows Server 2025 |
-| ^      | CPU           | 最小 2.3 GHz、推奨 4.0 GHz 16 Core                                                     |
-| ^      | RAM           | 最小 64GB、推奨 128GB                                                                  |
-| ^      | SSD           | 1TB                                                                               |
+| ^      | CPU           | 最小 2.3 GHz、推奨 4.0 GHz 16 Core                                                                              |
+| ^      | RAM           | 最小 64GB、推奨 128GB                                                                                           |
+| ^      | SSD           | 1TB                                                                                                        |
 
 </div>
+
+:::info
+
+Ethernet (TCP/IP) で接続できるデバイスの最大数は 1,000 台です。
+
+:::
 
 ## クライアント {#client}
 

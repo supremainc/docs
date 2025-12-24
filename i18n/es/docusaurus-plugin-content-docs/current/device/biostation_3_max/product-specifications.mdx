@@ -1,0 +1,73 @@
+---
+id: product-specifications
+title: Especificaciones del producto
+description: Incluye las especificaciones clave del producto, como tamaño, características y rendimiento.
+keywords:
+  - Credenciales
+  - General
+  - Rostro
+  - Capacidad
+  - Interfaz
+  - Eléctrico
+  - Dimensiones
+---
+
+Incluye las especificaciones clave del producto, como tamaño, características y rendimiento.
+
+import specs from '@site/static/specs/bs3m_specs.json';
+
+{/* 크리덴셜 */}
+
+<SpecSection data={specs.biostation3max.credentials} />
+
+{/* 일반 */}
+
+<SpecSection data={specs.biostation3max.general} />
+
+{/* 저장 용량 */}
+
+<SpecSection data={specs.biostation3max.storage} />
+
+{/* 인터페이스 */}
+
+<SpecSection data={specs.biostation3max.interface} />
+
+{/* 전기 규격 */}
+
+<SpecSection data={specs.biostation3max.power} />
+
+## Dimensiones y peso
+
+<Badge only>BS3M-DB, BS3M-APB</Badge>
+
+<Image src="/img/device/bs3m-db-apb-dimension.svg" className="none" />
+
+<Badge only>BS3M-ODB, BS3M-OAPB</Badge>
+
+<Image src="/img/device/bs3m-odb-oapb-dimension.svg" className="none" />
+
+---
+
+:::note
+
+<Anno id="anno1">1)</Anno> La distancia mínima de autenticación facial especificada es la configuración predeterminada del producto y la distancia recomendada de autenticación facial es de 0.5–1.3 m.
+
+<Anno id="anno2">2)</Anno> Las tarjetas DESFire EV2/EV3 son retrocompatibles con las tarjetas DESFire EV1 y admiten características CSN y de tarjeta inteligente, incluidas las de la tarjeta DESFire EV1.
+
+<Anno id="anno3">3)</Anno> El rango de lectura RF variará según el entorno de instalación.
+
+<Anno id="anno4">4)</Anno> Admite códigos QR/barras compuestos por cadenas de hasta 32 caracteres ASCII.
+
+<Anno id="anno5">5)</Anno> Obtén una licencia Camera QR para utilizar autenticación adicional por QR/código de barras. Para obtener más información sobre las licencias de dispositivos, consulte la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-license-device-license).
+
+<Anno id="anno6">6)</Anno> Cantidad de usuarios registrados sin datos de credenciales.
+
+<Anno id="anno7">7)</Anno> Requiere alimentación PoE+ (IEEE 802.3at, 30 W) o PoE++ (IEEE 802.3bt, 60-100 W). No se admite PoE estándar (IEEE 802.3af, 15.4 W). El uso de PoE estándar puede provocar que los dispositivos funcionen de forma inestable o sufran daños permanentes. Antes de conectar el dispositivo, asegúrese de que su switch de red o inyector PoE sea compatible con PoE+ o PoE++.
+
+:::
+
+:::info
+
+Las especificaciones del producto están sujetas a cambios sin previo aviso para mejorar el rendimiento.
+
+:::

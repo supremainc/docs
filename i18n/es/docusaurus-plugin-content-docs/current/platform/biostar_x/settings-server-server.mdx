@@ -227,8 +227,6 @@ Habilite la opción <Cmd sid="setting.server.deleteCredentialAfterAOC" product="
 
   * BioStar X Mobile 1.0.0 o superior
 
-  * XPass S2: XPS2M-V2 FW 2.4 o superior
-
   * BioStation 2: BS2-OMPW, BS2-OIPW FW 1.4 o superior, FW 1.8 o anterior
 
   * BioStation A2: BSA2-OMPW, BSA2-OIPW FW 1.3 o superior, FW 1.7.1 o anterior
@@ -296,9 +294,15 @@ En la sección <Cmd sid="common.serverMatching" product="2" />, configure la fun
 
   :::
 
-* <Cmd sid="setting.server.serverMatching.fastMode" product="2" />: Configure la velocidad de coincidencia de huellas dactilares.
+* <Cmd sid="common.fingerPrint" product="2" />
 
-* <Cmd sid="setting.server.serverMatching.securityLevel" product="2" />: Establezca el nivel de seguridad del server matching para huellas dactilares. Cuanto más alto sea el nivel de seguridad, mayor puede ser la tasa de rechazo falso (FRR).
+  * <Cmd sid="setting.server.serverMatching.fastMode" product="2" />: Configure la velocidad de coincidencia de huellas dactilares.
+
+  * <Cmd sid="setting.server.serverMatching.securityLevel" product="2" />: Configure el nivel de seguridad de coincidencia del servidor para huellas dactilares. Cuanto más alto sea el nivel de seguridad, mayor puede ser la tasa de rechazo falso (FRR).
+
+* <Cmd sid="common.face" product="2" />
+
+  * <Cmd sid="setting.server.serverMatching.securityLevel" product="2" />: Configure el nivel de seguridad de coincidencia del servidor para rostros IR. Cuanto más alto sea el nivel de seguridad, mayor puede ser la tasa de rechazo falso (FRR).
 
 :::info
 

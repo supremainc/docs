@@ -53,6 +53,8 @@ crowdin upload -b main
 ^.*[가-힣]  [가-힣].*$
 ^.*[a-z]  [a-z].*$
 
+테이블의 unorder list | * -> | -  (공백 포함)
+
 찾아서 삭제할 것: },{
 
 ---

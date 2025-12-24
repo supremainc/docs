@@ -1,0 +1,213 @@
+---
+id: getting-started
+title: はじめに
+description: デバイスを使用するための初期手順を案内します。
+keywords:
+  - 同梱物
+  - 名称
+  - 機能
+  - ケーブル
+  - コネクター
+---
+
+デバイスを使用するための初期手順を案内します。
+
+## 同梱物
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-device-db-apb-bs3m.svg" className="none" width={100} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-wall-bracket-db-apb-bs3m.svg" className="none" width={90} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-device-odb-oapb-bs3m.svg" className="none" width={100} alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-wall-bracket-odb-oapb-bs3m.svg" className="none" width={90} alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>BioStation 3 Max (BS3M-ODB, BS3M-OAPB)</Td>
+
+      <Td>壁掛け用ブラケット (BS3M-ODB, BS3M-OAPB)</Td>
+
+      <Td>BioStation 3 Max (BS3M-DB, BS3M-APB)</Td>
+
+      <Td>壁掛け用ブラケット (BS3M-DB, BS3M-APB)</Td>
+    </Row>
+  </Tbody>
+
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-connection-cables-bs3m.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-diode1.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-resistor.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-fixing-screws6.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>接続ケーブル</Td>
+
+      <Td>ダイオード</Td>
+
+      <Td>120 Ω 抵抗</Td>
+
+      <Td>固定用ネジ ×6</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+<Table className="component">
+  <Tbody>
+    <Row className="center white">
+      <Td>
+        <Image src="/img/device/component-bracket-fixing-screw.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-cable-cover-fsf2.svg" className="none" alone />
+      </Td>
+
+      <Td>
+        <Image src="/img/device/component-quick-guide.svg" className="none" alone />
+      </Td>
+    </Row>
+
+    <Row className="center">
+      <Td>ブラケット固定用ネジ（星形）</Td>
+
+      <Td>ケーブルカバー</Td>
+
+      <Td>クイックガイド</Td>
+    </Row>
+  </Tbody>
+</Table>
+
+{/* 구성품 노트 */}
+
+import Componentsnote from '../../common/_getting-started-components-note.mdx'
+
+<Componentsnote />
+
+## 各部の名称と機能
+
+<Image src="/img/device/name-function-each-part-bs3m.png" className="none" width="70%" />
+
+* **LED状態表示灯**：製品の動作状態を表示します。
+
+  * 緑：認証成功
+
+  * 赤：認証失敗
+
+  * 青：正常動作状態
+
+  * 青／緑点滅：
+
+    * <Cmd sid="ui_012" product="dev" />を有効に設定すると、IP アドレスを取得できない状態
+
+    * <Cmd sid="ui_205" product="dev" /> モードのとき、マスター装置との接続が切断された状態
+
+  * 赤／紫点滅：デバイスロック状態
+
+  * 黄点滅：入力待機状態
+
+* **マイク**：インターホン接続時にユーザーの音声を伝えます。
+
+  * マイクを覆ったり塞いだりすると、音声が正常に伝わらない場合があります。
+
+* **赤外線カメラ**：赤外線画像を撮影します。
+
+* **ビジュアルカメラ**：実際の画像を撮影します。
+
+* **ディスプレイ**：操作用のUIを提供します。
+
+* **RFカード・モバイル入退出カードリーダー**：入退出のためにRFカードまたはモバイル入退出カードを読み取る部分です。
+
+* **指紋認識部**：<Badge only>BS3M-ODB, BS3M-OAPB</Badge> 入退室のために指紋を読み取る部分です。
+
+* **スピーカー**：音を出力します。
+
+* **イーサネット**：イーサネットケーブルを接続します。
+
+* **Input (4ピン)**：Inputケーブルを接続します。
+
+* **リレー（3ピン）**：リレーケーブルを接続します。
+
+* **RS-485（4ピン）**：RS-485ケーブルを接続します。
+
+* **USB拡張ポート（5ピン）**：他のアクセサリ製品を接続できます。
+
+* **Wiegand出力（4ピン）**：Wiegand出力ケーブルを接続します。
+
+* **Wiegand入力（4ピン）**：Wiegand入力ケーブルを接続します。
+
+* **電源（2ピン）**：電源ケーブルを接続します。
+
+* **USB（Type-C）メモリスロット**：USBメモリを接続します。
+
+{/* 케이블 및 커넥터 */}
+
+import CablesandConnectors from '../../common/_getting-started-cables-and-connectors.mdx'
+
+<CablesandConnectors />
+
+{/* 마스터 관리자 설정하기 */}
+
+import Masteradminsettings from '../../common/_device-master-admin-settings-v100.mdx'
+
+<Masteradminsettings />
+
+{/* 올바른 얼굴 등록 및 인증 방법 */}
+
+import DocumentA from '../../common/_face-enrollment-authentication-method.mdx'
+
+<DocumentA name="90～100 cm" />
+
+{/* ## 올바른 지문 입력 방법 */}
+
+import Enrollfingerprint from '../../common/_enroll-fingerprint.mdx'
+
+<Enrollfingerprint />
+
+## QR/バーコードおよびデバイスライセンスに関する注意事項
+
+### 正しいQR/バーコード認証方法 {#how-to-scan-qrbarcode}
+
+ユーザーにQR/バーコードを発行して認証手段として利用できます。 認識率を高めるため、画面の案内に従い正しくQR/バーコードをスキャンします。
+
+<Image src="/img/device/qr-scanning-bs3m.svg" className="none" alone />
+
+* デバイスのカメラとQR/バーコードの距離を5〜20 cmに保ちます。
+
+* QR/バーコードをデバイスのスキャン画面中央に位置させます。
+
+* モバイルデバイスでダウンロードしたQR/バーコードで認証する場合、画面が見えやすいようにモバイルデバイスの明るさを調整します。
+
+* 画面の指示に従わないと、QR/バーコードの認識に時間がかかるか、失敗する場合があります。
+
+### デバイスライセンスに関する注意事項
+
+* より多様なQR/バーコード認証を使用するには、別途デバイスライセンスが必要です。 デバイスライセンスを発行するには、購入先にお問い合わせください。
+
+* デバイスライセンスファイルは暗号化されているため、任意に変更できません。
+
+* デバイスライセンスはデバイスIDを基準に発行されます。 不正な方法でデバイスIDを変更した場合、ライセンスの保証サービスは提供されません。

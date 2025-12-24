@@ -1,0 +1,164 @@
+---
+id: user
+title: Usuario
+description: Describe cómo registrar, editar, eliminar y gestionar usuarios.
+keywords:
+  - Enrolamiento
+  - Editar
+  - Borrar
+  - Gestionar
+---
+
+Describe cómo registrar, editar, eliminar y gestionar usuarios.
+
+## Registrar información de usuario {#registering-user-information}
+
+Registre información de usuario que incluya datos de autenticación biométrica.
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Selecciona <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-add.svg" ico alone /> y configura el elemento deseado. La información de uso de usuarios aparece.
+
+   <div className="grid-container">
+     <Image src="/img/device/bs3m-add-user1.png" />
+
+     <Image src="/img/device/bs3m-add-user2.png" />
+   </div>
+
+   * <Image src="/img/common/ico-photo.svg" ico alone />: Registra una foto del usuario.
+
+   * **Nombre**: Introduzca el nombre de usuario.
+
+   * **ID**: Ingrese un número entre 1 y 4294967295 para registrar un ID de usuario. Si <Cmd sid="ui_168" product="dev" /> está configurado en <Cmd sid="ui_237" product="dev" />, utiliza una combinación de caracteres alfanuméricos y los símbolos `_` `-` como ID, con un máximo de 32 caracteres.
+
+   * <Cmd sid="ui_228" product="dev" />: Registra un rostro para la autenticación del usuario. Pulsa <Cmd sid="ui_228" product="dev" /> → <Cmd sid="ui_108" product="dev" /> y sigue las instrucciones en pantalla para enrolar tu rostro. Pulsa <Image src="/img/common/ico-add.svg" ico alone /> para añadir más rostros. Consulte [Enrolling user faces](#enrolling-user-faces) para obtener más información sobre el registro de rostros.
+
+   * <Cmd sid="ui_312" product="dev" />: <Badge only>BS3M-ODB, BS3M-OAPB</Badge> Enrola una huella digital para la autenticación del usuario. Pulsa <Cmd sid="ui_312" product="dev" /> → <Cmd sid="ui_108" product="dev" /> y sigue las instrucciones en pantalla para enrolar una huella digital. Pulsa <Image src="/img/common/ico-add.svg" ico alone /> para enrolar más huellas digitales. Para obtener más información sobre el registro de huellas, consulte [Inscripción de huellas de usuario](#enrolling-user-fingerprint).
+
+   * <Cmd sid="ui_323" product="dev" />: Enrola una tarjeta para la autenticación del usuario. Pulsa <Cmd sid="ui_323" product="dev" /> → <Cmd sid="ui_108" product="dev" />, luego escanea la tarjeta en la unidad de autenticación de tarjeta RF para asignarla al usuario. Pulsa <Cmd sid="ui_323" product="dev" /> → <Image src="/img/common/ico-add.svg" ico alone /> para enrolar más tarjetas.
+
+   * <Cmd sid="ui_040" product="dev" />: Introduce el PIN que se va a usar. Pulsa <Cmd sid="ui_040" product="dev" /> → <Cmd sid="ui_108" product="dev" /> e introduce el PIN que se va a usar. Para confirmarlo, introduce de nuevo el PIN y después pulsa <Cmd sid="ui_037" product="dev" />. Ingrese un número de entre 8 y 16 dígitos para evitar filtraciones.
+
+   * <Cmd sid="ui_172" product="dev" />: Selecciona los permisos que se asignarán al usuario.
+
+     :::info
+
+     Los menús disponibles varían según el nivel de usuario establecido.
+
+     * <Cmd sid="ui_075" product="dev" />: Es un nivel de usuario general y el menú no está disponible.
+
+     * <Cmd sid="ui_300" product="dev" />: Permite usar todos los menús.
+
+     * <Cmd sid="ui_194" product="dev" />: Permite usar los menús <Cmd sid="ui_256" product="dev" />, <Cmd sid="ui_366" product="dev" />, <Cmd sid="ui_280" product="dev" />, <Cmd sid="ui_344" product="dev" />, <Cmd sid="ui_255" product="dev" />.
+
+     * <Cmd sid="ui_171" product="dev" />: Permite usar los menús <Cmd sid="ui_166" product="dev" />, <Cmd sid="ui_255" product="dev" />.
+
+     :::
+
+   * <Cmd sid="ui_250" product="dev" />: Configura la duración de uso de la cuenta de usuario.
+
+   * <Cmd sid="ui_371" product="dev" />: Configura el modo ampliado de autenticación personal. Este modo le permite combinar métodos de autenticación del usuario, incluidos ambos rostros. De lo contrario, utilice el modo de autenticación básico del dispositivo.
+
+3. Pulsa <Cmd sid="ui_295" product="dev" /> para completar el registro de la información del usuario.
+
+### Registrar rostros de usuario {#enrolling-user-faces}
+
+import EnrollingFace from '../../common/_enrolling-face-warning.mdx';
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Selecciona <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-add.svg" ico alone />.
+
+3. Pulsa <Cmd sid="ui_228" product="dev" /> → <Cmd sid="ui_108" product="dev" />.
+
+4. Ajuste la distancia entre el rostro y la pantalla y mire directamente a la cámara del dispositivo.
+
+5. Una vez finalizada la captura, pulsa <Cmd sid="ui_367" product="dev" /> → <Cmd sid="ui_295" product="dev" />. Pulsa <Cmd sid="ui_294" product="dev" /> para volver a tomar la foto de tu rostro.
+
+   :::info
+
+   * Los datos de rostro visual de este producto no son compatibles con las plantillas faciales de FaceStation F2.
+
+   * La información facial de este producto también puede inscribirse por lotes cargando una foto en BioStar X o importando un archivo CSV, no solo en el dispositivo. También puede registrar rostro visual con su teléfono inteligente mediante un enlace enviado desde BioStar 2. Para obtener más información sobre cada método de registro, consulte la [Guía del administrador de BioStar X](../../platform/biostar_x/enroll-credential-face).
+
+   * Para usar correctamente la función Visual Face, tome una foto siguiendo las instrucciones a continuación.
+
+   <EnrollingFace />
+
+   :::
+
+## Registro de huella digital del usuario <Badge only>BS3M-ODB, BS3M-OAPB</Badge> {#enrolling-user-fingerprint}
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Selecciona <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-add.svg" ico alone />.
+
+3. Toca <Cmd sid="ui_312" product="dev" /> → <Cmd sid="ui_108" product="dev" />.
+
+4. Después de escanear la huella del dedo que se va a inscribir, escanee nuevamente la huella del mismo dedo.
+
+:::info
+
+* El enrolamiento de huella digital solo está disponible en BS3M-ODB y BS3M-OAPB.
+
+* Coloque el dedo lo suficientemente profundo para que haga contacto completo con el sensor.
+
+* Coloque el centro de la huella en el centro del sensor.
+
+* Si un dedo tiene un corte o la huella está borrosa, seleccione otro dedo para la huella.
+
+* Ingrese con precisión según las instrucciones en pantalla al autenticar huellas.
+
+* Si mantiene el dedo en posición vertical de modo que se reduzca el área de contacto con el sensor o cambia el ángulo del dedo, es posible que la autenticación de la huella no se realice.
+
+:::
+
+## Modificar información de usuario
+
+El gestor de usuarios o el administrador pueden modificar la información de usuario registrada. Agregue el rostro, la huella digital o la tarjeta del usuario y modifique el PIN y el nivel.
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Haz clic en <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-search.svg" ico alone />.
+
+3. Seleccione los términos de búsqueda. Busca usuarios mediante <Cmd sid="ui_299" product="dev" />, <Cmd sid="ui_167" product="dev" />, <Cmd sid="ui_253" product="dev" />, <Cmd sid="ui_228" product="dev" />, <Cmd sid="ui_322" product="dev" />.
+
+4. Seleccione el usuario que desea modificar.
+
+5. Modifica la información consultando [Registro de información del usuario](#registering-user-information) y pulsa <Cmd sid="ui_037" product="dev" />.
+
+   * Selecciona <Image src="/img/common/ico-delete.svg" ico alone /> y luego pulsa <Cmd sid="ui_367" product="dev" /> para eliminar al usuario.
+
+:::info
+
+<Cmd sid="ui_320" product="dev" /> se puede registrar en BioStar X. Para obtener más información sobre cómo registrar grupos de acceso, consulta la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+
+:::
+
+## Eliminar todos los usuarios
+
+Elimine todos los usuarios registrados a la vez.
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Selecciona <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-delete.svg" ico alone />.
+
+3. Selecciona <Cmd sid="ui_303" product="dev" /> para verificar y luego pulsa <Cmd sid="ui_037" product="dev" />.
+
+4. Pulsa <Cmd sid="ui_367" product="dev" /> para eliminar a todos los usuarios.
+
+## Ver uso de usuarios
+
+Consulta de un vistazo la cantidad de usuarios, rostros, tarjetas y huellas digitales registrados.
+
+1. Presiona <Image src="/img/common/ico-menu.svg" ico alone /> y autentícate con la credencial de nivel de administrador.
+
+2. Pulsa <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-info.svg" ico alone />. La información de uso de usuarios aparece.
+
+   <Image src="/img/device/bs3m-user-usage.png" />
+
+:::info
+
+La cantidad de huellas digitales solo se puede visualizar en BS3M-ODB y BS3M-OAPB.
+
+:::

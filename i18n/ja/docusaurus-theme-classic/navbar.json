@@ -4,7 +4,7 @@
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "Suprema ドキュメント",
+    "message": "Suprema Docs",
     "description": "The alt text of navbar logo"
   },
   "item.label.Devices": {
