@@ -113,7 +113,10 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       title: 'BioStation 2a',
       url: `/device/biostation_2a`,
       img: 'https://www.supremainc.com/images/upload/products/EN/20231013111341886.png',
-      desc: 'Feel the Power of AI',
+      desc: `${translate({
+        id: "externalLinks.BioStation2a.desc",
+        message: "AI 프로세서의 놀라운 지문 인식 성능"
+      })}`,
       height: '90px'
     },
     {
@@ -122,7 +125,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       img: 'https://www.suprema.co.kr/en/asset/images/thumbnail/biostation3.png',
       desc: `${translate({
         id: "externalLinks.BioStation3.desc",
-        message: "Simple, Durable, Secure<br/>AI 기반 얼굴인증 디바이스"
+        message: "차세대 출입통제 솔루션"
       })}`
     },
     {
@@ -250,7 +253,8 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
       desc: `${translate({
         id: "externalLinks.XPassS2.desc",
         message: "IP RFID 출입통제 단말기"
-      })}`
+      })}`,
+      height: '90px'
     }
   ];
   const productLinks = productLinksProp || defaultProductLinks;
@@ -273,8 +277,9 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
       img: 'https://www.supremainc.com/images/upload/products/EN/20250306163802329.png',
       desc: `${translate({
         id: "externalLinks.CoreStation20.desc",
-        message: "Powerful Security, Flexible Expansion"
-      })}`
+        message: "강력한 보안, 유연한 확장성"
+      })}`,
+      height: '90px'
     },
     {
       title: 'CoreStation',
@@ -283,7 +288,8 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
       desc: `${translate({
         id: "externalLinks.CoreStation.desc",
         message: "지능형 바이오인식 컨트롤러"
-      })}`
+      })}`,
+      height: '90px'
     },
     {
       title: 'Enclosure',
@@ -292,7 +298,8 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
       desc: `${translate({
         id: "externalLinks.CoreStationEnclosure.desc",
         message: "CoreStation 전용 함체"
-      })}`
+      })}`,
+      height: '90px'
     }
   ];
   const productLinks = productLinksProp || defaultProductLinks;
