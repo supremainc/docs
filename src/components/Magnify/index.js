@@ -1,8 +1,16 @@
 import Magnifier from "react-magnifier";
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export default function Magnify(props) {
-    const img = useBaseUrl(props.src);
+    const { i18n: { currentLocale } } = useDocusaurusContext();
+    const img = (() => {
+        const localizedSrc = currentLocale === 'ko' ? 
+            props.src : 
+            props.src.replace('/img/', `/img/en/`);
+        
+            return useBaseUrl(localizedSrc);
+    })();
     const updatedProps = {
         ...props,
         src: img
