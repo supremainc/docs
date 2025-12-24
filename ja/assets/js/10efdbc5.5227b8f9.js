@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["93913"], {
-21531: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["85040"], {
+50395: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,13 +9,13 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_es_docusaurus_plugin_content_docs_current_reference_smartcardissue_mdx_0fe_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_ja_docusaurus_plugin_content_docs_current_reference_smartcardissue_mdx_10e_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-es-docusaurus-plugin-content-docs-current-reference-smartcardissue-mdx-0fe.json
-var site_i_18_n_es_docusaurus_plugin_content_docs_current_reference_smartcardissue_mdx_0fe_namespaceObject = JSON.parse('{"id":"reference/smartcardissue","title":"How to Issue Suprema Smart Cards","description":"This document provides a technical guide for third-party vendors to issue smart cards compatible with Suprema\'s BioStar platform.","source":"@site/i18n/es/docusaurus-plugin-content-docs/current/reference/smartcardissue.mdx","sourceDirName":"reference","slug":"/reference/smartcardissue","permalink":"/docs/es/reference/smartcardissue","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/smartcardissue.mdx","tags":[],"version":"current","frontMatter":{"id":"smartcardissue","title":"How to Issue Suprema Smart Cards","toc_max_heading_level":3,"isTranslationMissing":false},"sidebar":"reference","previous":{"title":"Comparar especificaciones","permalink":"/docs/es/reference/compares/controller-devices-specs"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-ja-docusaurus-plugin-content-docs-current-reference-smartcardissue-mdx-10e.json
+var site_i_18_n_ja_docusaurus_plugin_content_docs_current_reference_smartcardissue_mdx_10e_namespaceObject = JSON.parse('{"id":"reference/smartcardissue","title":"How to Issue Suprema Smart Cards","description":"This document provides a technical guide for third-party vendors to issue smart cards compatible with Suprema\'s BioStar platform.","source":"@site/i18n/ja/docusaurus-plugin-content-docs/current/reference/smartcardissue.mdx","sourceDirName":"reference","slug":"/reference/smartcardissue","permalink":"/docs/ja/reference/smartcardissue","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/smartcardissue.mdx","tags":[],"version":"current","frontMatter":{"id":"smartcardissue","title":"How to Issue Suprema Smart Cards","toc_max_heading_level":3,"isTranslationMissing":false},"sidebar":"reference","previous":{"title":"仕様比較","permalink":"/docs/ja/reference/compares/controller-devices-specs"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -581,7 +581,7 @@ function ResponsiveImageMap({ src, alt, className, mapName, areas, originalWidth
     });
 }
 
-;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/reference/smartcardissue.mdx
+;// CONCATENATED MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/reference/smartcardissue.mdx
 
 
 const frontMatter = {
@@ -4955,7 +4955,7 @@ var Magnifier_es = __webpack_require__(50658);
 function Magnify(props) {
     const { i18n: { currentLocale } } = (0,useDocusaurusContext/* ["default"] */.A)();
     const img = (()=>{
-        const localizedSrc = currentLocale === 'ko' ? props.src : props.src.replace('/img/', `/img/en/`);
+        const localizedSrc = currentLocale === 'ko' || props.alone ? props.src : props.src.replace('/img/', `/img/en/`);
         return (0,useBaseUrl/* ["default"] */.Ay)(localizedSrc);
     })();
     const updatedProps = {

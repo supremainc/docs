@@ -5037,7 +5037,7 @@ var Magnifier_es = __webpack_require__(50658);
 function Magnify(props) {
     const { i18n: { currentLocale } } = (0,useDocusaurusContext/* ["default"] */.A)();
     const img = (()=>{
-        const localizedSrc = currentLocale === 'ko' ? props.src : props.src.replace('/img/', `/img/en/`);
+        const localizedSrc = currentLocale === 'ko' || props.alone ? props.src : props.src.replace('/img/', `/img/en/`);
         return (0,useBaseUrl/* ["default"] */.Ay)(localizedSrc);
     })();
     const updatedProps = {

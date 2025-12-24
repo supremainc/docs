@@ -1,5 +1,1202 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["70106"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["49025"], {
+11206: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  frontMatter: () => (/* binding */ frontMatter),
+  toc: () => (/* binding */ toc),
+  "default": () => (/* binding */ MDXContent),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_smartcardissue_mdx_262_namespaceObject),
+  assets: () => (/* binding */ assets),
+  contentTitle: () => (/* binding */ contentTitle)
+});
+
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-reference-smartcardissue-mdx-262.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_reference_smartcardissue_mdx_262_namespaceObject = JSON.parse('{"id":"reference/smartcardissue","title":"How to Issue Suprema Smart Cards","description":"This document provides a technical guide for third-party vendors to issue smart cards compatible with Suprema\'s BioStar platform.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/reference/smartcardissue.mdx","sourceDirName":"reference","slug":"/reference/smartcardissue","permalink":"/docs/en/reference/smartcardissue","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/smartcardissue.mdx","tags":[],"version":"current","frontMatter":{"id":"smartcardissue","title":"How to Issue Suprema Smart Cards","toc_max_heading_level":3,"isTranslationMissing":false},"sidebar":"reference","previous":{"title":"Compare Specifications","permalink":"/docs/en/reference/compares/controller-devices-specs"}}')
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(74848);
+// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
+var lib = __webpack_require__(84429);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(96540);
+;// CONCATENATED MODULE: ./src/components/TypedefStruct/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const styles_module = ({"typedefContainer":"typedefContainer_Wn7J","titleRow":"titleRow_juh5","metadata":"metadata_jjxW","category":"category_KdBD","size":"size_yHpg","version":"version_y0px","description":"description_vl9m","section":"section_UAKO","sectionHeader":"sectionHeader_fRZ_","sectionSubtitle":"sectionSubtitle_Uhu4","hierarchyContainer":"hierarchyContainer_TJKg","hierarchyLevel":"hierarchyLevel_eVaW","nestedLevel":"nestedLevel_fvI8","hierarchyItem":"hierarchyItem_GODh","nestedLeveltop":"nestedLeveltop_mB2_","hierarchyNotes":"hierarchyNotes_QTbs","hierarchyNode":"hierarchyNode_fJgq","nodeHeader":"nodeHeader_VmLc","hierarchyName":"hierarchyName_Xieu","hierarchyType":"hierarchyType_cEEc","hierarchySize":"hierarchySize_iDgU","hierarchyDesc":"hierarchyDesc_qbou","references":"references_Fuyx","referencesLabel":"referencesLabel_ptzV","reference":"reference_oQRT","childrenContainer":"childrenContainer_yihK","structLink":"structLink_tUc1","relatedStruct":"relatedStruct_OSZX","memoryBlocks":"memoryBlocks_TkDs","memoryBlock":"memoryBlock_RkZ2","memoryBlockHeader":"memoryBlockHeader_jD1Y","memoryOffset":"memoryOffset_djHn","memoryFieldName":"memoryFieldName_QGoe","memoryType":"memoryType_KcxH","memorySize":"memorySize_eMk3","memoryDesc":"memoryDesc_np0k","codeBlock":"codeBlock_LQwb","field":"field_RchT","fieldHeader":"fieldHeader_HncE","fieldNumber":"fieldNumber_PrLt","fieldName":"fieldName_xHbg","fieldType":"fieldType_fbjm","fieldSize":"fieldSize_dkeI","fieldRange":"fieldRange_kmek","fieldDescription":"fieldDescription_sT1v","fieldConstants":"fieldConstants_jw4N","relatedStructs":"relatedStructs_KK4K","relatedLabel":"relatedLabel_uofL","dependencyGroup":"dependencyGroup_PDbs","dependencyList":"dependencyList_DTc4","dependency":"dependency_R2lA","depName":"depName_u4Ua","depType":"depType_lMEs","depDesc":"depDesc_T3ac","constantsTable":"constantsTable_GcDj","variantsTable":"variantsTable_UAHC","constantValue":"constantValue_cMnk","constantNote":"constantNote_TGMI","notesList":"notesList_P0Bz","note":"note_FyD5","depDesc_T3ac":"depDesc_T3ac_YWbU"});
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Heading/index.js
+var Heading = __webpack_require__(3381);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Translate.js + 1 modules
+var Translate = __webpack_require__(43789);
+;// CONCATENATED MODULE: ./src/components/TypedefStruct/index.js
+
+
+
+
+
+const TypedefStruct_TypedefStruct = ({ name, description, code, fields = [], constants = [], notes = [], dependencies = [], usedBy = [], size, category, hierarchy = [], linkPrefix = "#" })=>{
+    const renderHierarchy = (items, level = 0)=>{
+        return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+            className: `${styles_module.hierarchyLevel} ${level > 0 ? styles_module.nestedLevel : styles_module.nestedLeveltop}`,
+            children: items.map((item, index)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("ul", {
+                    className: styles_module.hierarchyItem,
+                    children: [
+                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("li", {
+                            className: styles_module.hierarchyNode,
+                            children: [
+                                /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                    className: styles_module.nodeHeader,
+                                    children: [
+                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                            className: styles_module.hierarchyName,
+                                            id: item.name.toLowerCase(),
+                                            children: item.name
+                                        }),
+                                        item.type && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                            className: styles_module.hierarchyType,
+                                            children: item.type
+                                        }),
+                                        item.size && /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
+                                            className: styles_module.hierarchySize,
+                                            children: [
+                                                item.size,
+                                                " ",
+                                                item.size > 1 ? "bytes" : "byte"
+                                            ]
+                                        })
+                                    ]
+                                }),
+                                item.description && /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                                    className: styles_module.hierarchyDesc,
+                                    dangerouslySetInnerHTML: {
+                                        __html: item.description
+                                    }
+                                }),
+                                item.notes && /*#__PURE__*/ (0,jsx_runtime.jsx)("ul", {
+                                    className: styles_module.hierarchyNotes,
+                                    children: item.notes.map((note, index)=>/*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
+                                            children: /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                                                className: styles_module.hierarchyDesc,
+                                                dangerouslySetInnerHTML: {
+                                                    __html: note
+                                                }
+                                            })
+                                        }, index))
+                                }),
+                                item.constants && item.constants.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                    className: styles_module.fieldConstants,
+                                    children: [
+                                        /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* ["default"] */.A, {
+                                            as: "h6",
+                                            children: (0,Translate/* .translate */.T)({
+                                                id: 'theme.typedefstruct.availableValue'
+                                            })
+                                        }),
+                                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("table", {
+                                            className: styles_module.constantsTable,
+                                            children: [
+                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("thead", {
+                                                    children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("tr", {
+                                                        children: [
+                                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
+                                                                children: (0,Translate/* .translate */.T)({
+                                                                    id: 'theme.typedefstruct.value'
+                                                                })
+                                                            }),
+                                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
+                                                                children: (0,Translate/* .translate */.T)({
+                                                                    id: 'theme.typedefstruct.description'
+                                                                })
+                                                            })
+                                                        ]
+                                                    })
+                                                }),
+                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("tbody", {
+                                                    children: item.constants.map((constant, constIndex)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("tr", {
+                                                            children: [
+                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
+                                                                    className: styles_module.constantValue,
+                                                                    children: constant.value
+                                                                }),
+                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
+                                                                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                                                                        dangerouslySetInnerHTML: {
+                                                                            __html: constant.description
+                                                                        }
+                                                                    })
+                                                                })
+                                                            ]
+                                                        }, constIndex))
+                                                })
+                                            ]
+                                        })
+                                    ]
+                                }),
+                                item.references && item.references.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                    className: styles_module.references,
+                                    children: [
+                                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
+                                            className: styles_module.referencesLabel,
+                                            children: [
+                                                (0,Translate/* .translate */.T)({
+                                                    id: 'theme.typedefstruct.references'
+                                                }),
+                                                ":"
+                                            ]
+                                        }),
+                                        item.references.map((ref, refIndex)=>/*#__PURE__*/ (0,jsx_runtime.jsx)("a", {
+                                                href: `${linkPrefix}${ref.toLowerCase()}`,
+                                                className: styles_module.reference,
+                                                children: ref
+                                            }, refIndex))
+                                    ]
+                                })
+                            ]
+                        }),
+                        item.children && item.children.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                            className: styles_module.childrenContainer,
+                            children: renderHierarchy(item.children, level + 1)
+                        })
+                    ]
+                }, index))
+        });
+    };
+    const renderStructLink = (structName)=>{
+        return /*#__PURE__*/ (0,jsx_runtime.jsx)("a", {
+            href: `${linkPrefix}${structName.toLowerCase()}`,
+            className: styles_module.structLink,
+            children: structName
+        });
+    };
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+        className: styles_module.typedefContainer,
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                className: styles_module.header,
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                        className: styles_module.titleRow,
+                        children: [
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* ["default"] */.A, {
+                                as: "h3",
+                                id: name.toLowerCase(),
+                                children: name
+                            }),
+                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                className: styles_module.metadata,
+                                children: [
+                                    category && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                        className: styles_module.category,
+                                        children: category
+                                    }),
+                                    size && /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
+                                        className: styles_module.size,
+                                        children: [
+                                            size,
+                                            " ",
+                                            size > 1 ? "bytes" : "byte"
+                                        ]
+                                    })
+                                ]
+                            })
+                        ]
+                    }),
+                    description && /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                        className: styles_module.description,
+                        children: description
+                    })
+                ]
+            }),
+            hierarchy.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                className: styles_module.section,
+                children: /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                    className: styles_module.hierarchyContainer,
+                    children: renderHierarchy(hierarchy)
+                })
+            }),
+            fields.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                className: styles_module.section,
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                        className: styles_module.sectionHeader,
+                        children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* ["default"] */.A, {
+                            as: "h4",
+                            children: (0,Translate/* .translate */.T)({
+                                id: 'theme.typedefstruct.fieldDetails'
+                            })
+                        })
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                        className: styles_module.fieldsList,
+                        children: fields.map((field, index)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                className: styles_module.field,
+                                children: [
+                                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                        className: styles_module.fieldHeader,
+                                        children: [
+                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                                className: styles_module.fieldNumber,
+                                                children: index + 1
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                                className: styles_module.fieldName,
+                                                id: field.name.toLowerCase(),
+                                                children: field.name
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                                className: styles_module.fieldType,
+                                                children: field.type
+                                            }),
+                                            field.size && /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
+                                                className: styles_module.fieldSize,
+                                                children: [
+                                                    field.size,
+                                                    " ",
+                                                    field.size > 1 ? "bytes" : "byte"
+                                                ]
+                                            }),
+                                            field.range && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                                className: styles_module.fieldRange,
+                                                children: field.range
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                                        className: styles_module.fieldDescription,
+                                        dangerouslySetInnerHTML: {
+                                            __html: field.description
+                                        }
+                                    }),
+                                    field.constants && field.constants.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                        className: styles_module.fieldConstants,
+                                        children: [
+                                            /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* ["default"] */.A, {
+                                                as: "h6",
+                                                children: (0,Translate/* .translate */.T)({
+                                                    id: 'theme.typedefstruct.availableValue'
+                                                })
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("table", {
+                                                className: styles_module.constantsTable,
+                                                children: [
+                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("thead", {
+                                                        children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("tr", {
+                                                            children: [
+                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
+                                                                    children: (0,Translate/* .translate */.T)({
+                                                                        id: 'theme.typedefstruct.value'
+                                                                    })
+                                                                }),
+                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
+                                                                    children: (0,Translate/* .translate */.T)({
+                                                                        id: 'theme.typedefstruct.description'
+                                                                    })
+                                                                })
+                                                            ]
+                                                        })
+                                                    }),
+                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("tbody", {
+                                                        children: field.constants.map((constant, constIndex)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("tr", {
+                                                                children: [
+                                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
+                                                                        className: styles_module.constantValue,
+                                                                        children: constant.value
+                                                                    }),
+                                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
+                                                                        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                                                                            dangerouslySetInnerHTML: {
+                                                                                __html: constant.description
+                                                                            }
+                                                                        })
+                                                                    })
+                                                                ]
+                                                            }, constIndex))
+                                                    })
+                                                ]
+                                            })
+                                        ]
+                                    }),
+                                    field.relatedStructs && field.relatedStructs.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                        className: styles_module.relatedStructs,
+                                        children: [
+                                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
+                                                className: styles_module.relatedLabel,
+                                                children: [
+                                                    (0,Translate/* .translate */.T)({
+                                                        id: 'theme.typedefstruct.relatedStructs'
+                                                    }),
+                                                    ":"
+                                                ]
+                                            }),
+                                            field.relatedStructs.map((struct, structIndex)=>/*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                                    children: renderStructLink(struct)
+                                                }, structIndex))
+                                        ]
+                                    })
+                                ]
+                            }, index))
+                    })
+                ]
+            }),
+            constants.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                className: styles_module.section,
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                        className: styles_module.sectionHeader,
+                        children: [
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* ["default"] */.A, {
+                                as: "h4",
+                                children: "상수 정의"
+                            }),
+                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
+                                className: styles_module.sectionSubtitle,
+                                children: [
+                                    constants.length,
+                                    "개 상수"
+                                ]
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("table", {
+                        className: styles_module.variantsTable,
+                        children: [
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)("thead", {
+                                children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("tr", {
+                                    children: [
+                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
+                                            children: "값"
+                                        }),
+                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
+                                            children: "설명"
+                                        }),
+                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
+                                            children: "비고"
+                                        })
+                                    ]
+                                })
+                            }),
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)("tbody", {
+                                children: constants.map((constant, index)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("tr", {
+                                        children: [
+                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
+                                                className: styles_module.constantValue,
+                                                children: constant.value
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
+                                                children: constant.description
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
+                                                children: constant.note
+                                            })
+                                        ]
+                                    }, index))
+                            })
+                        ]
+                    })
+                ]
+            }),
+            (dependencies.length > 0 || usedBy.length > 0) && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                className: styles_module.section,
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                        className: styles_module.sectionHeader,
+                        children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* ["default"] */.A, {
+                            as: "h4",
+                            children: "의존성 관계"
+                        })
+                    }),
+                    dependencies.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                        className: styles_module.dependencyGroup,
+                        children: [
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* ["default"] */.A, {
+                                as: "h5",
+                                children: "이 구조체가 의존하는 타입"
+                            }),
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                                className: styles_module.dependencyList,
+                                children: dependencies.map((dep, index)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                        className: styles_module.dependency,
+                                        children: [
+                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                                className: styles_module.depName,
+                                                children: renderStructLink(dep.name)
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                                className: styles_module.depType,
+                                                children: dep.type
+                                            }),
+                                            dep.description && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                                className: styles_module.depDesc,
+                                                children: dep.description
+                                            })
+                                        ]
+                                    }, index))
+                            })
+                        ]
+                    }),
+                    usedBy.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                        className: styles_module.dependencyGroup,
+                        children: [
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* ["default"] */.A, {
+                                as: "h5",
+                                children: "이 구조체를 사용하는 타입"
+                            }),
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                                className: styles_module.dependencyList,
+                                children: usedBy.map((use, index)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                        className: styles_module.dependency,
+                                        children: [
+                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                                className: styles_module.depName,
+                                                children: renderStructLink(use.name)
+                                            }),
+                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                                className: styles_module.depType,
+                                                children: use.type
+                                            }),
+                                            use.description && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                                className: styles_module.depDesc,
+                                                children: use.description
+                                            })
+                                        ]
+                                    }, index))
+                            })
+                        ]
+                    })
+                ]
+            })
+        ]
+    });
+};
+/* ESM default export */ const TypedefStruct = (TypedefStruct_TypedefStruct);
+
+// EXTERNAL MODULE: ./src/components/Image/index.js + 1 modules
+var Image = __webpack_require__(61415);
+;// CONCATENATED MODULE: ./src/components/ResponsiveImageMap/index.js
+
+
+
+function ResponsiveImageMap({ src, alt, className, mapName, areas, originalWidth = 910, originalHeight = 700 // 원본 이미지 높이
+ }) {
+    const containerRef = (0,react.useRef)(null);
+    const mapRef = (0,react.useRef)(null);
+    const [isLoaded, setIsLoaded] = (0,react.useState)(false);
+    // 좌표를 현재 이미지 크기에 맞게 조정하는 함수
+    const updateAreaCoords = ()=>{
+        if (!containerRef.current || !mapRef.current || !isLoaded) return;
+        const img = containerRef.current.querySelector('img');
+        if (!img) return;
+        const actualWidth = img.offsetWidth;
+        const actualHeight = img.offsetHeight;
+        if (actualWidth === 0 || actualHeight === 0) return;
+        // 스케일 비율 계산
+        const scaleX = actualWidth / originalWidth;
+        const scaleY = actualHeight / originalHeight;
+        // 모든 area 요소의 좌표 업데이트
+        const areaElements = mapRef.current.querySelectorAll('area');
+        areaElements.forEach((area, index)=>{
+            if (areas[index]) {
+                const originalCoords = areas[index].coords;
+                const newCoords = originalCoords.split(',').map((coord, i)=>{
+                    const num = parseInt(coord);
+                    return Math.round(i % 2 === 0 ? num * scaleX : num * scaleY);
+                }).join(',');
+                area.setAttribute('coords', newCoords);
+            }
+        });
+    };
+    // 이미지 로드 완료 감지
+    (0,react.useEffect)(()=>{
+        if (!containerRef.current) return;
+        const img = containerRef.current.querySelector('img');
+        if (!img) return;
+        const handleImageLoad = ()=>{
+            setIsLoaded(true);
+            setTimeout(updateAreaCoords, 100);
+        };
+        if (img.complete) {
+            handleImageLoad();
+        } else {
+            img.addEventListener('load', handleImageLoad);
+        }
+        return ()=>{
+            img.removeEventListener('load', handleImageLoad);
+        };
+    }, []);
+    // 윈도우 리사이즈 시 좌표 업데이트
+    (0,react.useEffect)(()=>{
+        const handleResize = ()=>{
+            updateAreaCoords();
+        };
+        window.addEventListener('resize', handleResize);
+        // 컴포넌트 마운트 시에도 좌표 업데이트
+        const timer = setTimeout(updateAreaCoords, 200);
+        return ()=>{
+            window.removeEventListener('resize', handleResize);
+            clearTimeout(timer);
+        };
+    }, [
+        isLoaded
+    ]);
+    // 이미지 크기 변화 감지 (ResizeObserver 사용)
+    (0,react.useEffect)(()=>{
+        if (!containerRef.current) return;
+        const resizeObserver = new ResizeObserver(()=>{
+            updateAreaCoords();
+        });
+        resizeObserver.observe(containerRef.current);
+        return ()=>{
+            resizeObserver.disconnect();
+        };
+    }, [
+        isLoaded
+    ]);
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+        ref: containerRef,
+        style: {
+            position: 'relative'
+        },
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("map", {
+                ref: mapRef,
+                id: mapName,
+                name: mapName,
+                children: areas.map((area, index)=>/*#__PURE__*/ (0,jsx_runtime.jsx)("area", {
+                        shape: area.shape,
+                        coords: area.coords,
+                        href: area.href,
+                        title: area.title,
+                        alt: area.alt || area.title
+                    }, index))
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(Image/* ["default"] */.A, {
+                src: src,
+                alt: alt,
+                className: className,
+                usemap: `#${mapName}`,
+                alone: true
+            })
+        ]
+    });
+}
+
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/reference/smartcardissue.mdx
+
+
+const frontMatter = {
+	id: 'smartcardissue',
+	title: 'How to Issue Suprema Smart Cards',
+	toc_max_heading_level: 3,
+	isTranslationMissing: false
+};
+const contentTitle = undefined;
+
+const assets = {
+
+};
+
+
+
+
+
+const toc = [{
+  "value": "Structure Relationship Diagram",
+  "id": "structure-relationship-diagram",
+  "level": 2
+}, {
+  "value": "Structure Hierarchy",
+  "id": "structure-hierarchy",
+  "level": 2
+}, {
+  "value": "CRC Calculation and Validation",
+  "id": "crc",
+  "level": 2
+}, {
+  "value": "What are hdrCRC and cardCRC?",
+  "id": "hdrcrc-cardcrc",
+  "level": 3
+}, {
+  "value": "How to Calculate CRC",
+  "id": "crc-calculation",
+  "level": 3
+}, {
+  "value": "How to Validate",
+  "id": "crc-validation",
+  "level": 3
+}];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    admonition: "admonition",
+    code: "code",
+    h2: "h2",
+    h3: "h3",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    ul: "ul",
+    ...(0,lib/* .useMDXComponents */.R)(),
+    ...props.components
+  };
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(_components.p, {
+      children: "This document provides a technical guide for third-party vendors to issue smart cards compatible with Suprema's BioStar platform."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Card data structure"
+          }), ": Data structure required for the issuance of SCC (Secure Credential Card) and AOC (Access on Card)"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Structure specification"
+          }), ": Detailed requirements for each field that must be complied with during card issuance"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Data integrity"
+          }), ": Method for ensuring the quality of card data through CRC validation"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Implementation reference"
+          }), ": Relationships between structures and how to correctly set data"]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Smart cards issued according to this document operate normally on all BioStar compatible devices from Suprema."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+      type: "info",
+      children: [(0,jsx_runtime.jsx)(_components.p, {
+        children: "Check the following before issuing smart cards."
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Compatible devices"
+            }), ": All Suprema devices supported by BioStar"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Card types"
+            }), ": SCC (Secure Credential Card), AOC (Access on Card)"]
+          }), "\n"]
+        }), "\n"]
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "structure-relationship-diagram",
+      children: "Structure Relationship Diagram"
+    }), "\n", (0,jsx_runtime.jsx)(ResponsiveImageMap, {
+      src: "/img/common/smartcardapi-structure.png",
+      alt: "SmartCard API structure relationship diagram",
+      className: "useMap",
+      mapName: "imgmap2025813133616",
+      originalWidth: 2072,
+      originalHeight: 1192,
+      areas: [{
+        shape: "rect",
+        title: "BS2SmartCardData",
+        coords: "489,507,971,765",
+        href: "#bs2smartcarddata"
+      }, {
+        shape: "rect",
+        title: "BS2SmartCardHeader",
+        coords: "1115,34,1597,609",
+        href: "#bs2smartcardheader"
+      }, {
+        shape: "rect",
+        title: "BS2SmartCardCredentials",
+        coords: "1115,655,1597,868",
+        href: "#bs2smartcardcredentials"
+      }, {
+        shape: "rect",
+        title: "BS2AccessOnCardData",
+        coords: "1115,914,1597,1154",
+        href: "#bs2accessoncarddata"
+      }]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "note",
+      children: (0,jsx_runtime.jsx)(_components.p, {
+        children: "Clicking on the structure in the image will take you to the details of that structure."
+      })
+    }), "\n", (0,jsx_runtime.jsx)("div", {
+      className: "page-break"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "structure-hierarchy",
+      children: "Structure Hierarchy"
+    }), "\n", (0,jsx_runtime.jsx)(TypedefStruct, {
+      name: "BS2SmartCardData",
+      description: "Composite structure containing all data of SmartCard.",
+      category: "Smart Card",
+      size: "1656",
+      hierarchy: [{
+        name: "BS2SmartCardData",
+        type: "composite struct",
+        size: 1656,
+        description: "Container for all SmartCard data",
+        children: [{
+          name: "BS2SmartCardHeader",
+          type: "struct",
+          size: 16,
+          description: "SmartCard header structure",
+          children: [{
+            name: "Checksum Area",
+            description: "The checksum area is used to validate the integrity of card data. For more information, refer to <a href='#crc'>the following</a>.",
+            children: [{
+              name: "hdrCRC",
+              type: "uint16_t",
+              size: 2,
+              description: "Checksum value of the card header. (cardCRC - reserved)"
+            }, {
+              name: "cardCRC",
+              type: "uint16_t",
+              size: 2,
+              description: "Checksum value of card data. (<code>BS2SmartCardHeader.cardType</code> - <code>BS2SmartCardData.accessOnData</code>)"
+            }]
+          }, {
+            name: "Card Metadata",
+            description: "Card type and template information",
+            children: [{
+              name: "cardType",
+              type: "BS2_CARD_TYPE",
+              size: 1,
+              description: "Code value of card type.",
+              constants: [{
+                value: "0x02",
+                description: "Secure Credential Card (SCC)"
+              }, {
+                value: "0x03",
+                description: "Access on Card (AOC)"
+              }]
+            }, {
+              name: "numOfTemplate",
+              type: "uint8_t",
+              size: 1,
+              description: "Number of fingerprint templates. For Access on Card (AOC), templates are stored in <code>BS2SmartCardCredentials</code>. Fingerprints or faces must be stored selectively. Since fingerprints and faces are not stored together, if you want to store a fingerprint template in AOC, <code>numOfFaceTemplate</code> must be set to <code>0</code>.",
+              notes: ["Supports up to 4 fingerprint templates. For more information on fingerprint template data area, refer to <a href='#bs2smartcardcredentials'>the following</a>."]
+            }, {
+              name: "templateSize",
+              type: "uint16_t",
+              size: 2,
+              description: "Size of the fingerprint template. The typical size of a fingerprint template is fixed at 384 bytes. The default for using smart cards in BioStar 2 is 300 bytes, which can be changed as needed, but set the size above 300 bytes to avoid issues with fingerprint matching.",
+              notes: ["When set to 300 bytes, copy 300 bytes into an array of size 384 bytes, and pad the remaining 84 bytes with 0.", "To store 2 fingerprints in a MIFARE 1K Classic card, set each template to 300 bytes."]
+            }, {
+              name: "issueCount",
+              type: "uint16_t",
+              size: 2,
+              description: "Issue number of the smart card. Manage the blacklist by combining card ID and issue number, so manage the issue number accurately. When reissuing the card, increment the issue number by 1."
+            }, {
+              name: "duressMask",
+              type: "uint8_t",
+              size: 1,
+              description: "Mask for whether there is a duress fingerprint."
+            }, {
+              name: "numOfFaceTemplate",
+              type: "uint8_t",
+              size: 1,
+              description: "Indicates the number of face templates. Although the basic template sizes for fingerprints and faces (fingerprint: 384, face: 552) differ, save considering the total size of <code>BS2SmartCardCredentials</code>'s <code>templateData</code>. Since fingerprints and faces are not stored together, if you want to store a face template in an AOC card, <code>numOfTemplate</code> must be set to <code>0</code>.",
+              notes: ["Supports up to 1 face template."]
+            }, {
+              name: "reserved",
+              type: "uint8_t[1]",
+              size: 1,
+              description: "Reserved."
+            }]
+          }, {
+            name: "Authentication Settings",
+            description: "Card authentication modes and options",
+            children: [{
+              name: "cardAuthMode",
+              type: "uint8_t",
+              size: 1,
+              description: "Uses the authentication mode stored on the card instead of the one set on the device.",
+              notes: ["<b>Visual Face</b> base uses <code>cardAuthModeEx</code>."],
+              constants: [{
+                value: "2",
+                description: "Card authentication only"
+              }, {
+                value: "3",
+                description: "Card and fingerprint authentication"
+              }, {
+                value: "4",
+                description: "Card and PIN authentication"
+              }, {
+                value: "5",
+                description: "Fingerprint or PIN authentication after card authentication"
+              }, {
+                value: "6",
+                description: "Card, fingerprint, and PIN authentication"
+              }, {
+                value: "254",
+                description: "Not usable"
+              }, {
+                value: "255",
+                description: "Undefined (operates in a mode defined by the system)"
+              }]
+            }, {
+              name: "cardAuthModeEx",
+              type: "uint8_t",
+              size: 1,
+              description: "<span class='badge'>SDK v2.7.1 or later</span> Setting value for card authentication mode based on <b>Visual Face</b>. Uses the authentication mode stored on the card instead of the one set on the device.",
+              notes: ["Suprema devices are supported on FaceStation F2, BioStation 3, BioEntry W3.", "To apply consistently across all devices, set both <code>cardAuthMode</code> and <code>cardAuthModeEx</code>. Check supported devices."],
+              constants: [{
+                value: "21",
+                description: "Card"
+              }, {
+                value: "22",
+                description: "Card + Face"
+              }, {
+                value: "23",
+                description: "Card + Fingerprint"
+              }, {
+                value: "24",
+                description: "Card + PIN"
+              }, {
+                value: "26",
+                description: "Card + Face or PIN"
+              }, {
+                value: "27",
+                description: "Card + Fingerprint or PIN"
+              }, {
+                value: "28",
+                description: "Card + Face or Fingerprint or PIN"
+              }, {
+                value: "30",
+                description: "Card + Face + PIN"
+              }, {
+                value: "32",
+                description: "Card + Fingerprint + PIN"
+              }, {
+                value: "33",
+                description: "Card + Face or Fingerprint + PIN"
+              }, {
+                value: "254",
+                description: "Not usable"
+              }, {
+                value: "255",
+                description: "Undefined (system-defined mode)"
+              }]
+            }, {
+              name: "useAlphanumericID",
+              type: "uint8_t",
+              size: 1,
+              description: "Flag indicating whether to use Alphanumeric ID."
+            }]
+          }]
+        }, {
+          name: "cardID",
+          type: "uint8_t[BS2_CARD_DATA_SIZE]",
+          size: 32,
+          description: "Card identifier used by the terminal. <b>Access on Card (AOC)</b> uses the entire 32 bytes of the array as Card ID, while <b>Secure Credential Card (SCC)</b> uses 24 bytes of the array as Card ID. <b>Secure Credential Card (SCC)</b> must fill 32 bytes with Card ID (24 bytes), issueCount (4 bytes), and Time Stamp (4 bytes). Fill the cardObjs array of the <code>BS2UserBlob</code> structure with SC Card, and <code>cardObjs</code> must be updated every time the SC Card is issued.",
+          children: [{
+            name: "cardID: Access on Card (AOC)",
+            type: "bytes[0-31]",
+            size: 32,
+            description: "AOC: Uses the entire 32 bytes."
+          }, {
+            name: "cardID: Secure Credential Card (SCC)",
+            type: "bytes[0-31]",
+            size: 32,
+            description: "SCC: Card ID (32 bytes)",
+            children: [{
+              name: "cardID (SCC)",
+              type: "bytes[0-23]",
+              size: 24,
+              description: "SCC: Card ID (24 bytes)"
+            }, {
+              name: "issueCount (SCC)",
+              type: "bytes[24-27]",
+              size: 4,
+              description: "SCC: Issue count"
+            }, {
+              name: "timeStamp (SCC)",
+              type: "bytes[28-31]",
+              size: 4,
+              description: "SCC: Issue time"
+            }]
+          }]
+        }, {
+          name: "BS2SmartCardCredentials",
+          type: "struct",
+          size: 1568,
+          description: "Authentication data area where PIN codes or biometric authentication templates are stored.",
+          children: [{
+            name: "pin",
+            type: "uint8_t[BS2_PIN_HASH_SIZE]",
+            size: 32,
+            description: "PIN code hash value. Use the hash function of the BioStar 2 SDK to generate it with the same hash algorithm as the device.",
+            notes: ["PIN codes cannot be used in third-party tools."]
+          }, {
+            name: "templateData",
+            type: "uint8_t[S2_SMART_CARD_MAX_TEMPLATE_COUNT * BS2_FINGER_TEMPLATE_SIZE]",
+            size: 1536,
+            description: "Fingerprint or face template data area. Store up to 4 fingerprint templates and 1 face template.",
+            children: [{
+              name: "Fingerprint Templates",
+              description: "Supports up to 4 fingerprint templates.",
+              children: [{
+                name: "Template 1",
+                type: "uint8_t[384]",
+                size: 384,
+                description: "First fingerprint template"
+              }, {
+                name: "Template 2",
+                type: "uint8_t[384]",
+                size: 384,
+                description: "Second fingerprint template"
+              }, {
+                name: "Template 3",
+                type: "uint8_t[384]",
+                size: 384,
+                description: "Third fingerprint template"
+              }, {
+                name: "Template 4",
+                type: "uint8_t[384]",
+                size: 384,
+                description: "Fourth fingerprint template"
+              }]
+            }, {
+              name: "Face Template",
+              description: "Supports up to 1 face template with size 552.",
+              children: [{
+                name: "Template 1",
+                type: "uint8_t[552]",
+                size: 552,
+                description: "Face template"
+              }]
+            }]
+          }]
+        }, {
+          name: "BS2AccessOnCardData",
+          type: "struct",
+          size: 40,
+          description: "Area used in AOC cards that contains access group information.",
+          children: [{
+            name: "accessGroupID",
+            type: "uint16_t[BS2_SMART_CARD_MAX_ACCESS_GROUP_COUNT]",
+            size: 32,
+            description: "List of access group IDs. Each group has IDs ranging from 1 to 65535, supporting up to 16 groups.",
+            children: [{
+              name: "Group ID 1",
+              type: "uint16_t",
+              size: 2,
+              description: "First access group"
+            }, {
+              name: "Group ID 2",
+              type: "uint16_t",
+              size: 2,
+              description: "Second access group"
+            }, {
+              name: "...",
+              type: "uint16_t",
+              size: 2,
+              description: "..."
+            }, {
+              name: "Group ID 16",
+              type: "uint16_t",
+              size: 2,
+              description: "Last access group"
+            }]
+          }, {
+            name: "Time Restrictions",
+            description: "Time range for access permissions.",
+            children: [{
+              name: "startTime",
+              type: "BS2_DATETIME",
+              size: 4,
+              description: "Start time for user authentication, with <code>0</code> indicating no restriction. In Unix timestamp format, measured in seconds."
+            }, {
+              name: "endTime",
+              type: "BS2_DATETIME",
+              size: 4,
+              description: "End time for user authentication, with <code>0</code> indicating no restriction. In Unix timestamp format, measured in seconds."
+            }]
+          }]
+        }]
+      }]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "crc",
+      children: "CRC Calculation and Validation"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["CRC-16 CCITT checksums (", (0,jsx_runtime.jsx)(_components.code, {
+        children: "hdrCRC"
+      }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "cardCRC"
+      }), ") are used for the header and card data respectively, to ensure the integrity of SmartCard data."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "hdrcrc-cardcrc",
+      children: "What are hdrCRC and cardCRC?"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.code, {
+            children: "hdrCRC"
+          }), ": The value calculated using CRC-16 CCITT (polynomial 0x1021, initial value 0xFFFF) for the ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "cardCRC"
+          }), " to ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "reserved"
+          }), " (14 bytes total) of ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "BS2SmartCardHeader"
+          }), "."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.code, {
+            children: "cardCRC"
+          }), ": The value calculated using CRC-16 CCITT (polynomial 0x1021, initial value 0xFFFF) for card data from ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "cardType"
+          }), " to ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "BS2SmartCardData.accessOnData"
+          }), " (total card data excluding the header)."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "crc-calculation",
+      children: "How to Calculate CRC"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["The ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "https://kb.supremainc.com/bs2sdk/doku.php",
+        children: "BioStar 2 SDK"
+      }), " provides the ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BS2_ComputeCRC16CCITT"
+      }), " function. Below is an example of its use."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-csharp",
+        metastring: "title='Calculate checksum'",
+        children: "// Calculate card data checksum (cardCRC)\nuint16_t cardCRC = 0xFFFF;\nint result = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardType, sizeof(BS2SmartCardData) - offsetof(BS2SmartCardHeader, cardType), &cardCRC);\n\n// Calculate header checksum (hdrCRC)\ncard.header.cardCRC = cardCRC;  // Set the cardCRC value first\nuint16_t hdrCRC = 0xFFFF;\nresult = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardCRC, sizeof(BS2SmartCardHeader) - offsetof(BS2SmartCardHeader, cardCRC), &hdrCRC);\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "note",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.code, {
+              children: "cardCRC"
+            }), " is calculated from ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "cardType"
+            }), " to ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "accessOnData"
+            }), "."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.code, {
+              children: "hdrCRC"
+            }), " is calculated from ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "cardCRC"
+            }), " to ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "reserved"
+            }), "."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["Always calculate ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "cardCRC"
+            }), " first, set it in the header, then calculate ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "hdrCRC"
+            }), "."]
+          }), "\n"]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "crc-validation",
+      children: "How to Validate"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "To validate the integrity of card data when reading, do the following:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Recalculate CRC using data read from the card."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Compare the stored CRC value with the calculated CRC value."
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-csharp",
+        metastring: "title='CRC Validation'",
+        children: "// CRC validation example\nBS2SmartCardData readCard;  // Data read from card\n\n// 1. cardCRC validation\nuint16_t calculatedCardCRC = 0xFFFF;\nBS2_ComputeCRC16CCITT((uint8_t*)&readCard.header.cardType, sizeof(BS2SmartCardData) - offsetof(BS2SmartCardHeader, cardType), &calculatedCardCRC);\n\nif (readCard.header.cardCRC != calculatedCardCRC) {\n    // Card data corruption\n    return ERROR_CARD_DATA_CORRUPTED;\n}\n\n// 2. hdrCRC validation\nuint16_t calculatedHdrCRC = 0xFFFF;\nBS2_ComputeCRC16CCITT((uint8_t*)&readCard.header.cardCRC, sizeof(BS2SmartCardHeader) - offsetof(BS2SmartCardHeader, cardCRC), &calculatedHdrCRC);\n\nif (readCard.header.hdrCRC != calculatedHdrCRC) {\n    // Header data corruption\n    return ERROR_HEADER_DATA_CORRUPTED;\n}\n"
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+      type: "note",
+      children: [(0,jsx_runtime.jsx)(_components.p, {
+        children: (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Cautions for CRC Calculation"
+        })
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Calculation Order"
+            }), ": Calculate ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "cardCRC"
+            }), " first, set it in the header, and then calculate ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "hdrCRC"
+            }), "."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Structure Alignment"
+            }), ": Ensure the CRC calculation range matches precisely, and be cautious of structure padding and alignment."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Initial Value"
+            }), ": CRC-16 CCITT uses polynomial 0x1021 and ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "initial value 0xFFFF"
+            }), "."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "SDK Function"
+            }), ": The ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "BS2_ComputeCRC16CCITT"
+            }), " function is provided in the ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://kb.supremainc.com/bs2sdk/doku.php",
+              children: "BioStar 2 SDK"
+            }), "."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Data Order"
+            }), ": Input data is processed in little-endian byte order."]
+          }), "\n"]
+        }), "\n"]
+      })]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,lib/* .useMDXComponents */.R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
+    ...props,
+    children: (0,jsx_runtime.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+}),
 43464: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   A: () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -489,1285 +1686,6 @@ function Admonition(unprocessedProps) {
     const AdmonitionTypeComponent = getAdmonitionTypeComponent(props.type);
     return /*#__PURE__*/ (0,jsx_runtime.jsx)(AdmonitionTypeComponent, {
         ...props
-    });
-}
-
-
-}),
-59932: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  A: () => (/* binding */ DocItemLayout)
-});
-
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(74848);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(96540);
-// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.mjs
-var clsx = __webpack_require__(39836);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/hooks/useWindowSize.js
-var useWindowSize = __webpack_require__(3738);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/doc.js
-var doc = __webpack_require__(68729);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocItem/Paginator/index.js + 2 modules
-var Paginator = __webpack_require__(35544);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocVersionBanner/index.js
-var DocVersionBanner = __webpack_require__(4825);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocVersionBadge/index.js
-var DocVersionBadge = __webpack_require__(50514);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/ThemeClassNames.js
-var ThemeClassNames = __webpack_require__(16364);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Translate.js + 1 modules
-var Translate = __webpack_require__(43789);
-;// CONCATENATED MODULE: ./src/components/Feedback/constants/index.js
-/**
- * 피드백 시스템 공통 상수 및 설정
- */ // Google Forms 설정
-const FEEDBACK_CONFIG = {
-    GOOGLE_FORM_ID: '1FAIpQLSc80m8XWDnKO3XJ9ZZ_hJ9iZVcYocu6XjdsGgOwC1vvh_IuxA',
-    ENTRY_IDS: {
-        FEEDBACK_TYPE: 'entry.1129679087',
-        PAGE_URL: 'entry.23458126',
-        DETAIL_CONTENT: 'entry.1070297166'
-    },
-    FORM_FIELDS: {
-        FVV: '1',
-        PAGE_HISTORY: '0'
-    }
-};
-// 피드백 유형 정의
-const FEEDBACK_TYPES = {
-    POSITIVE: 'positive',
-    NEGATIVE: 'negative'
-};
-// 제출 상태 정의
-const SUBMIT_STATUS = {
-    IDLE: 'idle',
-    SUCCESS: 'success',
-    ERROR: 'error',
-    VALIDATION_ERROR: 'validation-error'
-};
-// 피드백 텍스트 매핑
-const FEEDBACK_TEXT_MAP = {
-    [FEEDBACK_TYPES.POSITIVE]: '😊 Good',
-    [FEEDBACK_TYPES.NEGATIVE]: '😫 Bad'
-};
-// 기본 메시지 
-const DEFAULT_MESSAGES = {
-    NEGATIVE_NO_DETAIL: '구체적인 개선 사항은 작성되지 않았습니다.',
-    POSITIVE_QUICK: '빠른 긍정 피드백 (추가 의견 없음)',
-    NO_COMMENT: '추가 의견 없음'
-};
-// 텍스트영역 설정
-const TEXTAREA_CONFIG = {
-    MAX_LENGTH: 1000,
-    ROWS: 4
-};
-// 타이밍 설정
-const TIMING_CONFIG = {
-    SUCCESS_AUTO_CLOSE: 2000,
-    SUCCESS_DISPLAY_TIME: 3000 // 데스크탑용 표시 시간
-};
-// 상태 검증 함수들
-const STATUS_CHECKS = (/* unused pure expression or super */ null && ({
-    isIdle: (status)=>status === SUBMIT_STATUS.IDLE,
-    isSuccess: (status)=>status === SUBMIT_STATUS.SUCCESS,
-    isError: (status)=>status === SUBMIT_STATUS.ERROR,
-    isValidationError: (status)=>status === SUBMIT_STATUS.VALIDATION_ERROR,
-    isSubmitting: (status, isSubmitting)=>isSubmitting
-}));
-/**
- * Google Forms 제출 URL 생성
- * @param {string} formId - Google Form ID
- * @returns {string} 완전한 제출 URL
- */ function createSubmitUrl(formId = FEEDBACK_CONFIG.GOOGLE_FORM_ID) {
-    return `https://docs.google.com/forms/d/e/${formId}/formResponse`;
-}
-/**
- * 피드백 유형에 따른 텍스트 반환
- * @param {string} type - 피드백 유형 ('positive' | 'negative')
- * @returns {string} 피드백 텍스트
- */ function getFeedbackText(type) {
-    return FEEDBACK_TEXT_MAP[type] || '';
-}
-/**
- * 상세 내용 처리 로직
- * @param {string} detailText - 사용자 입력 텍스트
- * @param {string} feedbackType - 피드백 유형
- * @returns {string} 처리된 상세 내용
- */ function processDetailContent(detailText, feedbackType) {
-    const trimmedText = detailText.trim();
-    if (!trimmedText && feedbackType === FEEDBACK_TYPES.NEGATIVE) {
-        return DEFAULT_MESSAGES.NEGATIVE_NO_DETAIL;
-    } else if (!trimmedText && feedbackType === FEEDBACK_TYPES.POSITIVE) {
-        return DEFAULT_MESSAGES.POSITIVE_QUICK;
-    } else {
-        return trimmedText || DEFAULT_MESSAGES.NO_COMMENT;
-    }
-}
-
-;// CONCATENATED MODULE: ./src/components/Feedback/hooks/useFeedback.js
-
-
-/**
- * 피드백 기능을 위한 공통 커스텀 훅
- * @param {Object} config - 설정 객체
- * @param {string} config.googleFormId - Google Form ID
- * @param {string} config.feedbackTypeEntryId - 피드백 유형 필드 ID
- * @param {string} config.pageUrlEntryId - 페이지 URL 필드 ID  
- * @param {string} config.detailEntryId - 상세 내용 필드 ID
- * @param {Function} config.onSuccess - 성공 콜백
- * @param {Function} config.onReset - 초기화 콜백
- */ function useFeedback({ googleFormId = FEEDBACK_CONFIG.GOOGLE_FORM_ID, feedbackTypeEntryId = FEEDBACK_CONFIG.ENTRY_IDS.FEEDBACK_TYPE, pageUrlEntryId = FEEDBACK_CONFIG.ENTRY_IDS.PAGE_URL, detailEntryId = FEEDBACK_CONFIG.ENTRY_IDS.DETAIL_CONTENT, onSuccess, onReset } = {}) {
-    // 공통 상태
-    const [feedbackType, setFeedbackType] = (0,react.useState)(null);
-    const [detailText, setDetailText] = (0,react.useState)('');
-    const [isSubmitting, setIsSubmitting] = (0,react.useState)(false);
-    const [submitStatus, setSubmitStatus] = (0,react.useState)(SUBMIT_STATUS.IDLE);
-    const [currentPageUrl, setCurrentPageUrl] = (0,react.useState)('');
-    // 페이지 URL 설정
-    (0,react.useEffect)(()=>{
-        if (typeof window !== 'undefined') {
-            setCurrentPageUrl(window.location.href);
-        }
-    }, []);
-    // 피드백 선택 핸들러
-    const handleFeedbackClick = (0,react.useCallback)((type)=>{
-        setFeedbackType(type);
-        setSubmitStatus(SUBMIT_STATUS.IDLE);
-    }, []);
-    // 초기화 함수
-    const resetFeedback = (0,react.useCallback)(()=>{
-        setFeedbackType(null);
-        setDetailText('');
-        setSubmitStatus(SUBMIT_STATUS.IDLE);
-        onReset?.();
-    }, [
-        onReset
-    ]);
-    // Google Forms 제출 로직
-    const submitToGoogleForms = (0,react.useCallback)(async ()=>{
-        try {
-            const formData = new FormData();
-            // 피드백 유형
-            const feedbackTypeText = getFeedbackText(feedbackType);
-            formData.append(feedbackTypeEntryId, feedbackTypeText);
-            // 페이지 URL
-            formData.append(pageUrlEntryId, currentPageUrl);
-            // 상세 내용
-            const processedContent = processDetailContent(detailText, feedbackType);
-            formData.append(detailEntryId, processedContent);
-            // 필수 필드들
-            formData.append('fvv', FEEDBACK_CONFIG.FORM_FIELDS.FVV);
-            formData.append('pageHistory', FEEDBACK_CONFIG.FORM_FIELDS.PAGE_HISTORY);
-            // Google Forms 제출 URL
-            const submitUrl = createSubmitUrl(googleFormId);
-            await fetch(submitUrl, {
-                method: 'POST',
-                body: formData,
-                mode: 'no-cors'
-            });
-            return true;
-        } catch (error) {
-            console.error('Google Forms 제출 오류:', error);
-            return false;
-        }
-    }, [
-        feedbackType,
-        currentPageUrl,
-        detailText,
-        googleFormId,
-        feedbackTypeEntryId,
-        pageUrlEntryId,
-        detailEntryId
-    ]);
-    // 제출 핸들러
-    const handleSubmit = (0,react.useCallback)(async ()=>{
-        if (!feedbackType) return;
-        // 부정 피드백인 경우 상세 내용 필수 검증
-        if (feedbackType === FEEDBACK_TYPES.NEGATIVE && !detailText.trim()) {
-            setSubmitStatus(SUBMIT_STATUS.VALIDATION_ERROR);
-            return;
-        }
-        setIsSubmitting(true);
-        setSubmitStatus(SUBMIT_STATUS.IDLE);
-        const success = await submitToGoogleForms();
-        if (success) {
-            setSubmitStatus(SUBMIT_STATUS.SUCCESS);
-            onSuccess?.(feedbackType, detailText);
-        } else {
-            setSubmitStatus(SUBMIT_STATUS.ERROR);
-        }
-        setIsSubmitting(false);
-    }, [
-        feedbackType,
-        detailText,
-        submitToGoogleForms,
-        onSuccess
-    ]);
-    return {
-        // 상태
-        feedbackType,
-        detailText,
-        isSubmitting,
-        submitStatus,
-        currentPageUrl,
-        // 상태 업데이트
-        setFeedbackType,
-        setDetailText,
-        setSubmitStatus,
-        // 핸들러
-        handleFeedbackClick,
-        handleSubmit,
-        resetFeedback
-    };
-}
-
-;// CONCATENATED MODULE: ./src/components/Feedback/components/CommonComponents.js
-
-
-
-
-/**
- * 피드백 버튼 컴포넌트
- */ function FeedbackButtons({ feedbackType, onFeedbackClick, isSubmitting, styles, buttonClassName = '', containerClassName = '' }) {
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-        className: containerClassName,
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsxs)("button", {
-                className: `${styles?.feedbackButton || 'feedback-button'} ${feedbackType === FEEDBACK_TYPES.POSITIVE ? styles?.active || 'active' : ''} ${buttonClassName}`,
-                onClick: ()=>onFeedbackClick(FEEDBACK_TYPES.POSITIVE),
-                disabled: isSubmitting,
-                "aria-label": "Positive feedback: Good",
-                children: [
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                        className: styles?.icon || 'icon',
-                        children: "\uD83D\uDE0A"
-                    }),
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                        children: (0,Translate/* .translate */.T)({
-                            id: 'feedback.components.feedbackTypeGood',
-                            message: '도움이 되었습니다.'
-                        })
-                    })
-                ]
-            }),
-            /*#__PURE__*/ (0,jsx_runtime.jsxs)("button", {
-                className: `${styles?.feedbackButton || 'feedback-button'} ${feedbackType === FEEDBACK_TYPES.NEGATIVE ? styles?.active || 'active' : ''} ${buttonClassName}`,
-                onClick: ()=>onFeedbackClick(FEEDBACK_TYPES.NEGATIVE),
-                disabled: isSubmitting,
-                "aria-label": "Negative feedback: Bad",
-                children: [
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                        className: styles?.icon || 'icon',
-                        children: "\uD83D\uDE2B"
-                    }),
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                        children: (0,Translate/* .translate */.T)({
-                            id: 'feedback.components.feedbackTypeBad',
-                            message: '개선이 필요합니다.'
-                        })
-                    })
-                ]
-            })
-        ]
-    });
-}
-/**
- * 피드백 텍스트영역 컴포넌트
- */ function FeedbackTextarea({ feedbackType, detailText, onDetailTextChange, isSubmitting, submitStatus, styles, className = '', showCharacterCount = true }) {
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-        className: className,
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsxs)("label", {
-                htmlFor: "feedback-detail",
-                className: styles?.textareaLabel || 'textarea-label',
-                children: [
-                    (0,Translate/* .translate */.T)({
-                        id: 'feedback.components.feedbackDetail',
-                        message: '평가에 대해 자세히 알려주세요.'
-                    }),
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                        className: styles?.required || 'required',
-                        children: feedbackType === FEEDBACK_TYPES.NEGATIVE ? (0,Translate/* .translate */.T)({
-                            id: 'feedback.components.required',
-                            message: '(필수)'
-                        }) : (0,Translate/* .translate */.T)({
-                            id: 'feedback.components.optional',
-                            message: '(선택사항)'
-                        })
-                    })
-                ]
-            }),
-            /*#__PURE__*/ (0,jsx_runtime.jsx)("textarea", {
-                id: "feedback-detail",
-                className: styles?.feedbackTextarea || 'feedback-textarea',
-                placeholder: feedbackType === FEEDBACK_TYPES.NEGATIVE ? (0,Translate/* .translate */.T)({
-                    id: 'feedback.component.feedbackTextarea.negativePlaceholder',
-                    message: '문서에 문제점을 상세히 작성해 주시면 만족할 수 있도록 반영하겠습니다.'
-                }) : (0,Translate/* .translate */.T)({
-                    id: 'feedback.component.feedbackTextarea.positivePlaceholder',
-                    message: '개선이 필요한 부분이나 추가 의견을 자유롭게 작성해 주세요.'
-                }),
-                value: detailText,
-                onChange: (e)=>onDetailTextChange(e.target.value),
-                disabled: isSubmitting,
-                rows: TEXTAREA_CONFIG.ROWS,
-                maxLength: TEXTAREA_CONFIG.MAX_LENGTH,
-                required: feedbackType === FEEDBACK_TYPES.NEGATIVE,
-                "aria-describedby": "feedback-privacy-note"
-            }),
-            showCharacterCount && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                className: styles?.characterCount || 'character-count',
-                children: [
-                    detailText.length,
-                    " / ",
-                    TEXTAREA_CONFIG.MAX_LENGTH,
-                    feedbackType === FEEDBACK_TYPES.NEGATIVE && detailText.trim().length === 0 && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                        className: styles?.requiredNote || 'required-note',
-                        children: (0,Translate/* .translate */.T)({
-                            id: 'feedback.component.requiredNote',
-                            message: '* 필수 입력'
-                        })
-                    })
-                ]
-            }),
-            submitStatus === 'validation-error' && /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                className: styles?.errorMessage || 'error-message',
-                role: "alert",
-                children: (0,Translate/* .translate */.T)({
-                    id: 'feedback.components.validationError',
-                    message: '개선이 필요한 부분에 대한 상세한 의견을 작성해 주세요.'
-                })
-            })
-        ]
-    });
-}
-/**
- * 성공 메시지 컴포넌트
- */ function SuccessMessage({ styles, className = '' }) {
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-        className: `${styles?.successMessage || 'success-message'} ${className}`,
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                className: styles?.successIcon || 'success-icon',
-                children: "✓"
-            }),
-            /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                children: (0,Translate/* .translate */.T)({
-                    id: 'feedback.components.thanksForFeedback',
-                    message: '피드백을 제출해 주셔서 감사합니다.'
-                })
-            }),
-            /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                className: styles?.successSubtext || 'success-subtext',
-                children: (0,Translate/* .translate */.T)({
-                    id: 'feedback.components.successSubtext',
-                    message: '귀하의 의견은 문서 개선에 소중하게 활용됩니다.'
-                })
-            })
-        ]
-    });
-}
-/**
- * 에러 메시지 컴포넌트
- */ function ErrorMessage({ styles, className = '' }) {
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-        className: `${styles?.errorMessage || 'error-message'} ${className}`,
-        role: "alert",
-        children: (0,Translate/* .translate */.T)({
-            id: 'feedback.components.errorMessage',
-            message: '피드백 제출 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.'
-        })
-    });
-}
-/**
- * 제출 버튼 컴포넌트
- */ function SubmitButton({ isSubmitting, disabled, onClick, feedbackType, detailText, styles, className = '', children }) {
-    const isDisabled = disabled || isSubmitting || feedbackType === FEEDBACK_TYPES.NEGATIVE && !detailText.trim();
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
-        className: `${styles?.submitButton || 'submit-button'} ${className}`,
-        onClick: onClick,
-        disabled: isDisabled,
-        "aria-label": isSubmitting ? (0,Translate/* .translate */.T)({
-            id: 'feedback.components.quickSubmitButton.onGoing',
-            message: '제출 중...'
-        }) : (0,Translate/* .translate */.T)({
-            id: 'feedback.component.feedbackCompletedMessage',
-            message: '피드백 제출'
-        }),
-        children: children || /*#__PURE__*/ (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-            children: isSubmitting ? /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-                children: [
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                        className: styles?.spinner || 'spinner',
-                        "aria-hidden": "true"
-                    }),
-                    (0,Translate/* .translate */.T)({
-                        id: 'feedback.components.quickSubmitButton.onGoing',
-                        message: '제출 중...'
-                    })
-                ]
-            }) : (0,Translate/* .translate */.T)({
-                id: 'feedback.component.feedbackCompletedMessage',
-                message: '피드백 제출'
-            })
-        })
-    });
-}
-/**
- * 빠른 제출 버튼 컴포넌트 (긍정 피드백용)
- */ function QuickSubmitButton({ isSubmitting, onClick, styles, className = '' }) {
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-        className: styles?.quickSubmitSection || 'quick-submit-section',
-        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
-            className: `${styles?.quickSubmitButton || 'quick-submit-button'} ${className}`,
-            onClick: onClick,
-            disabled: isSubmitting,
-            children: isSubmitting ? (0,Translate/* .translate */.T)({
-                id: 'feedback.components.quickSubmitButton.onGoing',
-                message: '제출 중...'
-            }) : (0,Translate/* .translate */.T)({
-                id: 'feedback.components.quickSubmitButton.idle',
-                message: '빠른 제출 (추가 의견 없음)'
-            })
-        })
-    });
-}
-
-;// CONCATENATED MODULE: ./src/components/Feedback/mobile.module.css
-// extracted by css-extract-rspack-plugin
-/* ESM default export */ const mobile_module = ({"feedbackWidget":"feedbackWidget_j3Il","feedbackTitle":"feedbackTitle_R9ld","selectFeedback":"selectFeedback_eOBc","feedbackButton":"feedbackButton_EJI6","selected":"selected_xjMQ","icon":"icon_kAAf","modalOverlay":"modalOverlay_ulit","modalContent":"modalContent_ZSdd","modalHeader":"modalHeader_Lns1","modalTitle":"modalTitle_Zg5p","closeButton":"closeButton_FeHU","modalBody":"modalBody__5Db","modalDescription":"modalDescription_xFRy","selectedFeedback":"selectedFeedback_B07W","quickSubmitSection":"quickSubmitSection_AwZ_","quickSubmitButton":"quickSubmitButton_QWLE","feedbackForm":"feedbackForm_ux3G","textareaLabel":"textareaLabel_ADIZ","required":"required_c5Yi","feedbackTextarea":"feedbackTextarea_nNPm","characterCount":"characterCount_erCw","requiredNote":"requiredNote_jagi","modalActions":"modalActions_R6kp","submitButton":"submitButton_WnMz","cancelButton":"cancelButton_siXf","spinner":"spinner_iCEV","spin":"spin_moNT","successMessage":"successMessage_W4eg","successIcon":"successIcon_uDmE","successSubtext":"successSubtext_qs5F","errorMessage":"errorMessage_crz9","modalFooter":"modalFooter_Kdcd","privacyNote":"privacyNote_fn6F"});
-;// CONCATENATED MODULE: ./src/components/Feedback/mobile.js
-
-
-
-
-
-
-
-function MobileFeedback() {
-    // 모바일 전용 상태 (모달 관리)
-    const [isModalOpen, setIsModalOpen] = (0,react.useState)(false);
-    // 공통 피드백 로직
-    const { feedbackType, detailText, isSubmitting, submitStatus, setDetailText, handleFeedbackClick: baseFeedbackClick, handleSubmit, resetFeedback } = useFeedback({
-        onSuccess: ()=>{
-            // 모바일에서는 성공 시 자동 닫힘
-            setTimeout(()=>{
-                closeModal();
-            }, TIMING_CONFIG.SUCCESS_AUTO_CLOSE);
-        }
-    });
-    const handleFeedbackClick = (0,react.useCallback)((type)=>{
-        baseFeedbackClick(type);
-        setIsModalOpen(true);
-    }, [
-        baseFeedbackClick
-    ]);
-    const closeModal = (0,react.useCallback)(()=>{
-        setIsModalOpen(false);
-        resetFeedback();
-    }, [
-        resetFeedback
-    ]);
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                className: mobile_module.feedbackWidget,
-                children: [
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                        className: mobile_module.feedbackTitle,
-                        children: (0,Translate/* .translate */.T)({
-                            id: 'feedback.components.feedbackTitle',
-                            message: '이 페이지가 도움이 되었나요?'
-                        })
-                    }),
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)(FeedbackButtons, {
-                        feedbackType: feedbackType,
-                        onFeedbackClick: handleFeedbackClick,
-                        isSubmitting: isSubmitting,
-                        styles: mobile_module,
-                        containerClassName: mobile_module.selectFeedback
-                    })
-                ]
-            }),
-            isModalOpen && /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                className: mobile_module.modalOverlay,
-                onClick: closeModal,
-                children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                    className: mobile_module.modalContent,
-                    onClick: (e)=>e.stopPropagation(),
-                    children: [
-                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                            className: mobile_module.modalHeader,
-                            children: [
-                                /*#__PURE__*/ (0,jsx_runtime.jsxs)("h3", {
-                                    className: mobile_module.modalTitle,
-                                    children: [
-                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                            className: mobile_module.icon,
-                                            children: feedbackType === 'positive' ? '😊' : '😫'
-                                        }),
-                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                            children: feedbackType === 'positive' ? (0,Translate/* .translate */.T)({
-                                                id: 'feedback.components.feedbackTypeGood',
-                                                message: '도움이 되었습니다.'
-                                            }) : (0,Translate/* .translate */.T)({
-                                                id: 'feedback.components.feedbackTypeBad',
-                                                message: '개선이 필요합니다.'
-                                            })
-                                        })
-                                    ]
-                                }),
-                                /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
-                                    className: mobile_module.closeButton,
-                                    onClick: closeModal,
-                                    "aria-label": (0,Translate/* .translate */.T)({
-                                        id: 'theme.SearchModal.searchBox.cancelButtonText',
-                                        message: '취소'
-                                    }),
-                                    children: "\xd7"
-                                })
-                            ]
-                        }),
-                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                            className: mobile_module.modalBody,
-                            children: [
-                                /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                    className: mobile_module.modalDescription,
-                                    children: (0,Translate/* .translate */.T)({
-                                        id: 'feedback.components.feedbackDescription',
-                                        message: '귀하의 피드백은 문서 품질 향상에 큰 도움이 됩니다.'
-                                    })
-                                }),
-                                feedbackType === 'positive' && submitStatus !== 'success' && /*#__PURE__*/ (0,jsx_runtime.jsx)(QuickSubmitButton, {
-                                    isSubmitting: isSubmitting,
-                                    onClick: handleSubmit,
-                                    styles: mobile_module
-                                }),
-                                submitStatus !== 'success' && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                    className: mobile_module.feedbackForm,
-                                    children: [
-                                        /*#__PURE__*/ (0,jsx_runtime.jsx)(FeedbackTextarea, {
-                                            feedbackType: feedbackType,
-                                            detailText: detailText,
-                                            onDetailTextChange: setDetailText,
-                                            isSubmitting: isSubmitting,
-                                            submitStatus: submitStatus,
-                                            styles: mobile_module
-                                        }),
-                                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                            className: mobile_module.modalActions,
-                                            children: [
-                                                /*#__PURE__*/ (0,jsx_runtime.jsx)(SubmitButton, {
-                                                    isSubmitting: isSubmitting,
-                                                    disabled: isSubmitting || feedbackType === 'negative' && !detailText.trim(),
-                                                    onClick: handleSubmit,
-                                                    feedbackType: feedbackType,
-                                                    detailText: detailText,
-                                                    styles: mobile_module,
-                                                    className: mobile_module.submitButton
-                                                }),
-                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
-                                                    className: mobile_module.cancelButton,
-                                                    onClick: closeModal,
-                                                    disabled: isSubmitting,
-                                                    children: (0,Translate/* .translate */.T)({
-                                                        id: 'theme.SearchModal.searchBox.cancelButtonText',
-                                                        message: '취소'
-                                                    })
-                                                })
-                                            ]
-                                        })
-                                    ]
-                                }),
-                                submitStatus === 'success' && /*#__PURE__*/ (0,jsx_runtime.jsx)(SuccessMessage, {
-                                    styles: mobile_module
-                                }),
-                                submitStatus === 'error' && /*#__PURE__*/ (0,jsx_runtime.jsx)(ErrorMessage, {
-                                    styles: mobile_module
-                                })
-                            ]
-                        }),
-                        /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                            className: mobile_module.modalFooter,
-                            children: /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                className: mobile_module.privacyNote,
-                                children: (0,Translate/* .translate */.T)({
-                                    id: 'feedback.component.privacyNote',
-                                    message: '제출된 피드백은 문서 개선 목적으로만 사용되며, 개인 식별 정보는 수집되지 않습니다.'
-                                })
-                            })
-                        })
-                    ]
-                })
-            })
-        ]
-    });
-}
-
-;// CONCATENATED MODULE: ./src/theme/DocItem/Footer/index.js
-
-
-
-
-
-
-function DocItemFooter() {
-    const { metadata } = (0,doc/* .useDoc */.u)();
-    const { editUrl, lastUpdatedAt, lastUpdatedBy, tags } = metadata;
-    const canDisplayTagsRow = tags.length > 0;
-    const canDisplayEditMetaRow = !!(editUrl || lastUpdatedAt || lastUpdatedBy);
-    const canDisplayFooter = canDisplayTagsRow || canDisplayEditMetaRow;
-    // if (!canDisplayFooter) {
-    //   return null;
-    // }
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)("footer", {
-        className: (0,clsx/* ["default"] */.A)(ThemeClassNames/* .ThemeClassNames.docs.docFooter */.G.docs.docFooter, 'docusaurus-mt-lg'),
-        children: /*#__PURE__*/ (0,jsx_runtime.jsx)(MobileFeedback, {})
-    });
-}
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocItem/TOC/Mobile/index.js + 1 modules
-var Mobile = __webpack_require__(22295);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocItem/TOC/Desktop/index.js + 2 modules
-var Desktop = __webpack_require__(7177);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Heading/index.js
-var Heading = __webpack_require__(3381);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXContent/index.js
-var MDXContent = __webpack_require__(65025);
-// EXTERNAL MODULE: ./src/theme/Admonition/index.js + 14 modules
-var Admonition = __webpack_require__(71008);
-// EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
-var react_router = __webpack_require__(56347);
-;// CONCATENATED MODULE: ./src/theme/DocItem/Content/index.js
-
-
-
-
-
-
-
-
-
-/**
- Title can be declared inside md content or declared through
- front matter and added manually. To make both cases consistent,
- the added title is added under the same div.markdown block
- See https://github.com/facebook/docusaurus/pull/4882#issuecomment-853021120
-
- We render a "synthetic title" if:
- - user doesn't ask to hide it with front matter
- - the markdown content does not already contain a top-level h1 heading
-*/ function useSyntheticTitle() {
-    const { metadata, frontMatter, contentTitle } = (0,doc/* .useDoc */.u)();
-    const shouldRender = !frontMatter.hide_title && typeof contentTitle === 'undefined';
-    if (!shouldRender) {
-        return null;
-    }
-    return metadata.title;
-}
-function DocItemContent({ children }) {
-    const { frontMatter } = (0,doc/* .useDoc */.u)();
-    const syntheticTitle = useSyntheticTitle();
-    const headingClassName = frontMatter.heading_className || null;
-    const location = (0,react_router/* .useLocation */.zy)();
-    (0,react.useEffect)(()=>{
-        if (location.hash) {
-            const targetId = location.hash.substring(1);
-            const decodedTargetId = decodeURI(targetId);
-            const targetElement = document.getElementById(decodedTargetId);
-            if (targetElement) {
-                const offset = 160; // 원하는 offset 값 (예: 네비게이션 높이)
-                const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - offset;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        }
-    }, [
-        location.hash
-    ]);
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-        className: (0,clsx/* ["default"] */.A)(ThemeClassNames/* .ThemeClassNames.docs.docMarkdown */.G.docs.docMarkdown, 'markdown'),
-        children: [
-            syntheticTitle && /*#__PURE__*/ (0,jsx_runtime.jsx)("header", {
-                children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* ["default"] */.A, {
-                    as: "h1",
-                    className: headingClassName,
-                    children: syntheticTitle
-                })
-            }),
-            frontMatter.isTranslationMissing && /*#__PURE__*/ (0,jsx_runtime.jsxs)(Admonition/* ["default"] */.A, {
-                type: "note",
-                children: [
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)("b", {
-                        children: "Not translated"
-                    }),
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)("br", {}),
-                    "This page is currently being translated. We will complete the translation as soon as possible."
-                ]
-            }),
-            /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* ["default"] */.A, {
-                children: children
-            })
-        ]
-    });
-}
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/docsUtils.js
-var docsUtils = __webpack_require__(39095);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/routesUtils.js
-var routesUtils = __webpack_require__(70406);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
-var Link = __webpack_require__(12801);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(97158);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Icon/Home/index.js
-var Home = __webpack_require__(6122);
-;// CONCATENATED MODULE: ./src/theme/DocBreadcrumbs/Items/Home/styles.module.css
-// extracted by css-extract-rspack-plugin
-/* ESM default export */ const styles_module = ({"breadcrumbHomeIcon":"breadcrumbHomeIcon_xK9p"});
-;// CONCATENATED MODULE: ./src/theme/DocBreadcrumbs/Items/Home/index.js
-
-
-
-
-
-
-
-function HomeBreadcrumbItem() {
-    const homeHref = (0,useBaseUrl/* ["default"] */.Ay)('/');
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
-        className: "breadcrumbs__item",
-        children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* ["default"] */.A, {
-            "aria-label": (0,Translate/* .translate */.T)({
-                id: 'theme.docs.breadcrumbs.home',
-                message: 'Home page',
-                description: 'The ARIA label for the home page in the breadcrumbs'
-            }),
-            className: "breadcrumbs__link",
-            href: homeHref,
-            children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Home/* ["default"] */.A, {
-                className: styles_module.breadcrumbHomeIcon
-            })
-        })
-    });
-}
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
-var Head = __webpack_require__(25895);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/structuredDataUtils.js
-var structuredDataUtils = __webpack_require__(92131);
-;// CONCATENATED MODULE: ./src/theme/DocBreadcrumbs/StructuredData/index.js
-
-
-
-
-function DocBreadcrumbsStructuredData(props) {
-    const structuredData = (0,structuredDataUtils/* .useBreadcrumbsStructuredData */.D)({
-        breadcrumbs: props.breadcrumbs
-    });
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)(Head/* ["default"] */.A, {
-        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("script", {
-            type: "application/ld+json",
-            children: JSON.stringify(structuredData)
-        })
-    });
-}
-
-;// CONCATENATED MODULE: ./src/components/DocBreadcrumOption/styles.module.css
-// extracted by css-extract-rspack-plugin
-/* ESM default export */ const DocBreadcrumOption_styles_module = ({"btnprint":"btnprint_MOIq","printbtn":"printbtn_FzsH","feedback__button":"feedback__button_L4gG"});
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/ExecutionEnvironment.js
-var ExecutionEnvironment = __webpack_require__(69774);
-// EXTERNAL MODULE: ./node_modules/prop-types/index.js
-var prop_types = __webpack_require__(5556);
-var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
-;// CONCATENATED MODULE: ./src/components/Feedback/styles.module.css
-// extracted by css-extract-rspack-plugin
-/* ESM default export */ const Feedback_styles_module = ({"feedbackWidget":"feedbackWidget_k6Vk","fadeInUp":"fadeInUp_O5Jd","feedbackTrigger":"feedbackTrigger_JVwE","feedbackHeader":"feedbackHeader_CqVb","feedbackTitle":"feedbackTitle_wh2Y","closeButton":"closeButton_qj3Z","feedbackDescription":"feedbackDescription_zDNP","feedbackButtons":"feedbackButtons_A_6o","feedbackButton":"feedbackButton_fT9j","active":"active_FsnQ","icon":"icon_umgs","feedbackExpanded":"feedbackExpanded_gP9b","slideDown":"slideDown_D1TK","textareaLabel":"textareaLabel_QIwJ","feedbackTextarea":"feedbackTextarea_LV1g","characterCount":"characterCount_vh7X","feedbackActions":"feedbackActions_ZEj0","submitButton":"submitButton_HBS4","spinner":"spinner_j3TA","spin":"spin_bqa2","cancelButton":"cancelButton_Wdyq","privacyNote":"privacyNote_U2W4","successMessage":"successMessage_D4uZ","successIcon":"successIcon_ft80","successSubtext":"successSubtext_Z5ZA","errorMessage":"errorMessage_tXKP","requiredNote":"requiredNote_mfgl","feedbackSelected":"feedbackSelected_Dxqi","selectedMessage":"selectedMessage_FYJV","selectedActions":"selectedActions_kbEA","expandButton":"expandButton_CONR","submitQuickButton":"submitQuickButton_o0eb","quickSubmitSection":"quickSubmitSection_K5_T","quickSubmitButton":"quickSubmitButton_L3lA"});
-// EXTERNAL MODULE: ./static/img/menus/ico-close.svg
-var ico_close = __webpack_require__(43464);
-;// CONCATENATED MODULE: ./src/components/Feedback/index.js
-
-
-
-
-
-
-
-
-
-function FeedbackWidget({ googleFormId, feedbackTypeEntryId, pageUrlEntryId, detailEntryId }) {
-    // 데스크탑 전용 상태 관리
-    const [isExpanded, setIsExpanded] = (0,react.useState)(false);
-    const [isWidgetOpen, setIsWidgetOpen] = (0,react.useState)(false);
-    // 공통 피드백 로직
-    const { feedbackType, detailText, isSubmitting, submitStatus, setDetailText, handleFeedbackClick: baseFeedbackClick, handleSubmit, resetFeedback } = useFeedback({
-        googleFormId,
-        feedbackTypeEntryId,
-        pageUrlEntryId,
-        detailEntryId,
-        onSuccess: ()=>{
-            // 데스크탑에서는 성공 시 위젯 초기화
-            setTimeout(()=>{
-                resetWidget();
-            }, TIMING_CONFIG.SUCCESS_DISPLAY_TIME);
-        }
-    });
-    const handleFeedbackClick = (0,react.useCallback)((type)=>{
-        baseFeedbackClick(type);
-        setIsExpanded(true); // 피드백 선택 시 바로 확장
-    }, [
-        baseFeedbackClick
-    ]);
-    const handleOpenWidget = (0,react.useCallback)(()=>{
-        setIsWidgetOpen(true);
-    }, []);
-    const handleExpandClick = (0,react.useCallback)(()=>{
-        setIsExpanded(true);
-    }, []);
-    const resetWidget = (0,react.useCallback)(()=>{
-        setIsExpanded(false);
-        setIsWidgetOpen(false);
-        resetFeedback();
-    }, [
-        resetFeedback
-    ]);
-    // 제출 완료 화면
-    if (submitStatus === 'success') {
-        return /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-            children: [
-                /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
-                    className: Feedback_styles_module.feedbackTrigger,
-                    onClick: handleOpenWidget,
-                    "aria-label": (0,Translate/* .translate */.T)({
-                        id: 'feedback.components.sendFeedback',
-                        message: '피드백 제공하기'
-                    }),
-                    children: "Feedback"
-                }),
-                /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                    className: Feedback_styles_module.feedbackWidget,
-                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(SuccessMessage, {
-                        styles: Feedback_styles_module
-                    })
-                })
-            ]
-        });
-    }
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
-                className: Feedback_styles_module.feedbackTrigger,
-                onClick: handleOpenWidget,
-                "aria-label": (0,Translate/* .translate */.T)({
-                    id: 'feedback.components.sendFeedback',
-                    message: '피드백 제공하기'
-                }),
-                children: "Feedback"
-            }),
-            isWidgetOpen && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                className: Feedback_styles_module.feedbackWidget,
-                children: [
-                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                        className: Feedback_styles_module.feedbackHeader,
-                        children: [
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)("h3", {
-                                className: Feedback_styles_module.feedbackTitle,
-                                children: (0,Translate/* .translate */.T)({
-                                    id: 'feedback.components.feedbackTitle',
-                                    message: '이 페이지가 도움이 되었나요?'
-                                })
-                            }),
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
-                                className: Feedback_styles_module.closeButton,
-                                onClick: ()=>setIsWidgetOpen(false),
-                                "aria-label": (0,Translate/* .translate */.T)({
-                                    id: 'theme.SearchModal.searchBox.cancelButtonText',
-                                    message: '취소'
-                                }),
-                                children: /*#__PURE__*/ (0,jsx_runtime.jsx)(ico_close/* ["default"] */.A, {})
-                            }),
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                className: Feedback_styles_module.feedbackDescription,
-                                children: (0,Translate/* .translate */.T)({
-                                    id: 'feedback.components.feedbackDescription',
-                                    message: '귀하의 피드백은 문서 품질 향상에 큰 도움이 됩니다.'
-                                })
-                            })
-                        ]
-                    }),
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                        className: Feedback_styles_module.feedbackButtons,
-                        children: /*#__PURE__*/ (0,jsx_runtime.jsx)(FeedbackButtons, {
-                            feedbackType: feedbackType,
-                            onFeedbackClick: handleFeedbackClick,
-                            isSubmitting: isSubmitting,
-                            styles: Feedback_styles_module,
-                            containerClassName: Feedback_styles_module.feedbackButtons
-                        })
-                    }),
-                    feedbackType === 'positive' && /*#__PURE__*/ (0,jsx_runtime.jsx)(QuickSubmitButton, {
-                        isSubmitting: isSubmitting,
-                        onClick: handleSubmit,
-                        styles: Feedback_styles_module
-                    }),
-                    isExpanded && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                        className: Feedback_styles_module.feedbackExpanded,
-                        children: [
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)(FeedbackTextarea, {
-                                feedbackType: feedbackType,
-                                detailText: detailText,
-                                onDetailTextChange: setDetailText,
-                                isSubmitting: isSubmitting,
-                                submitStatus: submitStatus,
-                                styles: Feedback_styles_module
-                            }),
-                            submitStatus === 'error' && /*#__PURE__*/ (0,jsx_runtime.jsx)(ErrorMessage, {
-                                styles: Feedback_styles_module
-                            }),
-                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                className: Feedback_styles_module.feedbackActions,
-                                children: [
-                                    /*#__PURE__*/ (0,jsx_runtime.jsx)(SubmitButton, {
-                                        isSubmitting: isSubmitting,
-                                        disabled: isSubmitting || feedbackType === 'negative' && !detailText.trim(),
-                                        onClick: handleSubmit,
-                                        feedbackType: feedbackType,
-                                        detailText: detailText,
-                                        styles: Feedback_styles_module,
-                                        className: Feedback_styles_module.submitButton
-                                    }),
-                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
-                                        className: Feedback_styles_module.cancelButton,
-                                        onClick: resetWidget,
-                                        disabled: isSubmitting,
-                                        "aria-label": (0,Translate/* .translate */.T)({
-                                            id: "feedback.component.cancelButton.label",
-                                            message: "피드백 입력 취소"
-                                        }),
-                                        children: (0,Translate/* .translate */.T)({
-                                            id: 'theme.SearchModal.searchBox.cancelButtonText',
-                                            message: '취소'
-                                        })
-                                    })
-                                ]
-                            }),
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                id: "feedback-privacy-note",
-                                className: Feedback_styles_module.privacyNote,
-                                dangerouslySetInnerHTML: {
-                                    __html: (0,Translate/* .translate */.T)({
-                                        id: 'feedback.component.privacyNote',
-                                        message: '제출된 피드백은 문서 개선 목적으로만 사용되며, 개인 식별 정보는 수집되지 않습니다.'
-                                    })
-                                }
-                            })
-                        ]
-                    })
-                ]
-            })
-        ]
-    });
-}
-// PropTypes 정의
-FeedbackWidget.propTypes = {
-    /** Google Form ID (URL의 /d/e/ 다음 문자열) */ googleFormId: (prop_types_default()).string.isRequired,
-    /** 피드백 유형 필드의 entry ID */ feedbackTypeEntryId: (prop_types_default()).string.isRequired,
-    /** 페이지 URL 필드의 entry ID */ pageUrlEntryId: (prop_types_default()).string.isRequired,
-    /** 상세 내용 필드의 entry ID */ detailEntryId: (prop_types_default()).string.isRequired
-};
-
-;// CONCATENATED MODULE: ./src/components/DocBreadcrumOption/index.js
-
-
-
-
-
-const DocuementButton = ()=>{
-    const [isClient, setIsClient] = (0,react.useState)(false);
-    (0,react.useEffect)(()=>{
-        if (ExecutionEnvironment["default"].canUseDOM) {
-            setIsClient(true);
-        }
-    }, []);
-    const handleButtonClick = ()=>{
-        if (!isClient) return;
-        // 모든 details 요소에 open 속성을 부여하고 하위에 있는 div 요소에 display: block 스타일을 적용
-        const detailsElements = document.querySelectorAll('details');
-        detailsElements.forEach((detailsElement)=>{
-            detailsElement.setAttribute('open', true);
-            const childDivs = detailsElement.querySelectorAll('div');
-            childDivs.forEach((div)=>{
-                div.style.display = 'block';
-                div.style.overflow = 'visible';
-                div.style.height = 'auto';
-            });
-        });
-        window.print();
-    };
-    const curLocation = isClient ? window.location.href : '';
-    const destURL = encodeURIComponent(curLocation);
-    const target = `https://forms.office.com/Pages/ResponsePage.aspx?id=_bYDU8LVnkqxz7A7AWK9TZ3QlIh-_zNBvEgx2mDsll1UQjNOVDhQNEFHUjMyTUw4NUZWWktMTUwwTi4u&r41f093b8508c4bf1996887fab4eb1ad0=${destURL}`;
-    // 팝업 창의 크기와 위치 설정 
-    const popupWidth = 600;
-    const popupHeight = 800;
-    const browserWidth = isClient ? window.innerWidth : 0;
-    const browserHeight = isClient ? window.innerHeight : 0;
-    const left = isClient ? (browserWidth - popupWidth) / 2 + window.screenX : 0;
-    const top = isClient ? (browserHeight - popupHeight) / 2 + window.screenY : 0;
-    const popupOptions = `width=${popupWidth},height=${popupHeight},top=${top},left=${left},resizable=yes,scrollbars=yes`;
-    const gotoFeedback = ()=>{
-        if (!isClient) return;
-        window.open(target, '_blank', popupOptions);
-    };
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-        className: DocBreadcrumOption_styles_module.btnprint,
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
-                onClick: handleButtonClick,
-                disabled: !isClient,
-                className: DocBreadcrumOption_styles_module.printbtn,
-                children: "PDF"
-            }),
-            /*#__PURE__*/ (0,jsx_runtime.jsx)(FeedbackWidget, {
-                googleFormId: "1FAIpQLSc80m8XWDnKO3XJ9ZZ_hJ9iZVcYocu6XjdsGgOwC1vvh_IuxA",
-                feedbackTypeEntryId: "entry.1129679087",
-                pageUrlEntryId: "entry.23458126",
-                detailEntryId: "entry.1070297166"
-            })
-        ]
-    });
-};
-/* ESM default export */ const DocBreadcrumOption = (DocuementButton);
-
-;// CONCATENATED MODULE: ./src/theme/DocBreadcrumbs/styles.module.css
-// extracted by css-extract-rspack-plugin
-/* ESM default export */ const DocBreadcrumbs_styles_module = ({"breadcrumbsContainer":"breadcrumbsContainer_Alpn"});
-;// CONCATENATED MODULE: ./src/theme/DocBreadcrumbs/index.js
-
-
-
-
-
-
-
-
-
-
-
-
-// TODO move to design system folder
-function BreadcrumbsItemLink({ children, href, isLast }) {
-    const className = 'breadcrumbs__link';
-    if (isLast) {
-        return /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-            className: className,
-            children: children
-        });
-    }
-    return href ? /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* ["default"] */.A, {
-        className: className,
-        href: href,
-        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-            children: children
-        })
-    }) : /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-        className: className,
-        children: children
-    });
-}
-// TODO move to design system folder
-function BreadcrumbsItem({ children, active, index }) {
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
-        className: (0,clsx/* ["default"] */.A)('breadcrumbs__item', {
-            'breadcrumbs__item--active': active
-        }, 'item-' + String(index + 1)),
-        children: children
-    });
-}
-function DocBreadcrumbs() {
-    const breadcrumbs = (0,docsUtils/* .useSidebarBreadcrumbs */.OF)();
-    const homePageRoute = (0,routesUtils/* .useHomePageRoute */.Dt)();
-    if (!breadcrumbs) {
-        return null;
-    }
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsx)(DocBreadcrumbsStructuredData, {
-                breadcrumbs: breadcrumbs
-            }),
-            /*#__PURE__*/ (0,jsx_runtime.jsxs)("nav", {
-                className: (0,clsx/* ["default"] */.A)(ThemeClassNames/* .ThemeClassNames.docs.docBreadcrumbs */.G.docs.docBreadcrumbs, DocBreadcrumbs_styles_module.breadcrumbsContainer),
-                "aria-label": (0,Translate/* .translate */.T)({
-                    id: 'theme.docs.breadcrumbs.navAriaLabel',
-                    message: 'Breadcrumbs',
-                    description: 'The ARIA label for the breadcrumbs'
-                }),
-                children: [
-                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("ul", {
-                        className: "breadcrumbs",
-                        children: [
-                            homePageRoute && /*#__PURE__*/ (0,jsx_runtime.jsx)(HomeBreadcrumbItem, {}),
-                            breadcrumbs.map((item, idx)=>{
-                                const isLast = idx === breadcrumbs.length - 1;
-                                const href = item.type === 'category' && item.linkUnlisted ? undefined : item.href;
-                                return /*#__PURE__*/ (0,jsx_runtime.jsx)(BreadcrumbsItem, {
-                                    index: idx,
-                                    active: isLast,
-                                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(BreadcrumbsItemLink, {
-                                        href: href,
-                                        isLast: isLast,
-                                        children: item.label
-                                    })
-                                }, idx);
-                            })
-                        ]
-                    }),
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)(DocBreadcrumOption, {})
-                ]
-            })
-        ]
-    });
-}
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/ContentVisibility/index.js + 3 modules
-var ContentVisibility = __webpack_require__(63718);
-;// CONCATENATED MODULE: ./src/theme/DocItem/Layout/styles.module.css
-// extracted by css-extract-rspack-plugin
-/* ESM default export */ const Layout_styles_module = ({"docItemContainer":"docItemContainer_c0TR","docItemCol":"docItemCol_z5aJ"});
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TOCItems/index.js + 3 modules
-var TOCItems = __webpack_require__(19333);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TOCCollapsible/index.js + 3 modules
-var TOCCollapsible = __webpack_require__(29135);
-;// CONCATENATED MODULE: ./src/components/GenerateToc/styles.module.css
-// extracted by css-extract-rspack-plugin
-/* ESM default export */ const GenerateToc_styles_module = ({"tableOfContents":"tableOfContents_pzBX","docItemContainer":"docItemContainer_EhBe","tocMobile":"tocMobile_XdKt"});
-;// CONCATENATED MODULE: ./src/components/GenerateToc/index.js
-
-
-
-
-
-
-
-
-function GenerateTOC({ className, device, ...props }) {
-    const [tocItems, setTocItems] = (0,react.useState)([]);
-    const { frontMatter } = (0,doc/* .useDoc */.u)();
-    (0,react.useEffect)(()=>{
-        // 페이지가 렌더링된 후에 TOC를 생성합니다.
-        const headers = document.querySelectorAll('h2:not(.padding--lg h2, .margin-bottom--lg h2), h3:not(.padding--lg h3, .margin-bottom--lg h2), h4:not(.padding--lg h4, .margin-bottom--lg h2)');
-        const collectedToc = Array.from(headers).map((header)=>({
-                value: header.innerText,
-                id: header.id,
-                level: parseInt(header.tagName[1], 10)
-            }));
-        // TOC 데이터 수집
-        setTocItems(collectedToc);
-    }, []);
-    const LINK_CLASS_NAME = 'table-of-contents__link toc-highlight';
-    const LINK_ACTIVE_CLASS_NAME = 'table-of-contents__link--active';
-    if (device === 'desktop') {
-        return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-            className: (0,clsx/* ["default"] */.A)(GenerateToc_styles_module.tableOfContents, 'thin-scrollbar', className),
-            children: /*#__PURE__*/ (0,jsx_runtime.jsx)(TOCItems/* ["default"] */.A, {
-                toc: tocItems,
-                linkClassName: LINK_CLASS_NAME,
-                linkActiveClassName: LINK_ACTIVE_CLASS_NAME,
-                minHeadingLevel: frontMatter.toc_min_heading_level,
-                maxHeadingLevel: frontMatter.toc_max_heading_level,
-                ...props
-            })
-        });
-    } else if (device === 'mobile') {
-        return /*#__PURE__*/ (0,jsx_runtime.jsx)(TOCCollapsible/* ["default"] */.A, {
-            toc: tocItems,
-            minHeadingLevel: frontMatter.toc_min_heading_level,
-            maxHeadingLevel: frontMatter.toc_max_heading_level,
-            className: (0,clsx/* ["default"] */.A)(ThemeClassNames/* .ThemeClassNames.docs.docTocMobile */.G.docs.docTocMobile, GenerateToc_styles_module.tocMobile)
-        });
-    }
-}
-
-;// CONCATENATED MODULE: ./src/theme/DocItem/Layout/index.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**
- * Decide if the toc should be rendered, on mobile or desktop viewports
- */ function useDocTOC() {
-    const { frontMatter, toc } = (0,doc/* .useDoc */.u)();
-    const windowSize = (0,useWindowSize/* .useWindowSize */.l)();
-    const hidden = frontMatter.hide_table_of_contents;
-    const canRender = !hidden && toc.length > 0;
-    const mobile = canRender ? /*#__PURE__*/ (0,jsx_runtime.jsx)(Mobile/* ["default"] */.A, {}) : undefined;
-    const desktop = canRender && (windowSize === 'desktop' || windowSize === 'ssr') ? /*#__PURE__*/ (0,jsx_runtime.jsx)(Desktop/* ["default"] */.A, {}) : undefined;
-    return {
-        hidden,
-        mobile,
-        desktop
-    };
-}
-function DocItemLayout({ children }) {
-    const docTOC = useDocTOC();
-    const { metadata } = (0,doc/* .useDoc */.u)();
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-        className: "row",
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                className: (0,clsx/* ["default"] */.A)('col', !docTOC.hidden && Layout_styles_module.docItemCol),
-                children: [
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)(ContentVisibility/* ["default"] */.A, {
-                        metadata: metadata
-                    }),
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)(DocVersionBanner/* ["default"] */.A, {}),
-                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                        className: Layout_styles_module.docItemContainer,
-                        children: [
-                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("article", {
-                                children: [
-                                    /*#__PURE__*/ (0,jsx_runtime.jsx)(DocBreadcrumbs, {}),
-                                    /*#__PURE__*/ (0,jsx_runtime.jsx)(DocVersionBadge/* ["default"] */.A, {}),
-                                    /*#__PURE__*/ (0,jsx_runtime.jsx)(GenerateTOC, {
-                                        device: "mobile"
-                                    }),
-                                    /*#__PURE__*/ (0,jsx_runtime.jsx)(DocItemContent, {
-                                        children: children
-                                    }),
-                                    /*#__PURE__*/ (0,jsx_runtime.jsx)(DocItemFooter, {})
-                                ]
-                            }),
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)(Paginator/* ["default"] */.A, {})
-                        ]
-                    })
-                ]
-            }),
-            /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                className: "col col--3",
-                children: !docTOC.hidden ? /*#__PURE__*/ (0,jsx_runtime.jsx)(GenerateTOC, {
-                    device: "desktop"
-                }) : null
-            })
-        ]
     });
 }
 
@@ -5037,7 +4955,7 @@ var Magnifier_es = __webpack_require__(50658);
 function Magnify(props) {
     const { i18n: { currentLocale } } = (0,useDocusaurusContext/* ["default"] */.A)();
     const img = (()=>{
-        const localizedSrc = currentLocale === 'ko' ? props.src : props.src.replace('/img/', `/img/en/`);
+        const localizedSrc = currentLocale === 'ko' || props.alone ? props.src : props.src.replace('/img/', `/img/en/`);
         return (0,useBaseUrl/* ["default"] */.Ay)(localizedSrc);
     })();
     const updatedProps = {
