@@ -401,7 +401,7 @@ function _createMdxContent(props) {
       id: "name-and-function-of-each-part",
       children: "Name and function of each part"
     }), "\n", (0,jsx_runtime.jsx)(Magnify, {
-      src: "/img/en/device/name-function-each-part-om120.svg",
+      src: "/img/device/name-function-each-part-om120.svg",
       width: 700,
       zoomFactor: .4,
       mgWidth: 500,

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["33512"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["11050"], {
 12683: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
@@ -61,7 +61,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-69637: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+43444: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -70,20 +70,20 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_corestation_20_getting_started_mdx_aa3_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_doorinterface_getting_started_mdx_52f_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-corestation-20-getting-started-mdx-aa3.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_corestation_20_getting_started_mdx_aa3_namespaceObject = JSON.parse('{"id":"device/corestation_20/getting-started","title":"Getting Started","description":"Provides initial procedures for getting started with the device.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/corestation_20/getting-started.mdx","sourceDirName":"device/corestation_20","slug":"/device/corestation_20/getting-started","permalink":"/docs/en/device/corestation_20/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/corestation_20/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"Getting Started","description":"Provides initial procedures for getting started with the device.","keywords":["Components","Name","Feature","Cable","Connector"],"isTranslationMissing":false},"sidebar":"corestation20","previous":{"title":"Safety Instructions","permalink":"/docs/en/device/corestation_20/safety-instructions"},"next":{"title":"Installation","permalink":"/docs/en/device/corestation_20/installation"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-doorinterface-getting-started-mdx-52f.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_doorinterface_getting_started_mdx_52f_namespaceObject = JSON.parse('{"id":"device/doorinterface/getting-started","title":"Getting Started","description":"Provides initial procedures for getting started with the device.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/doorinterface/getting-started.mdx","sourceDirName":"device/doorinterface","slug":"/device/doorinterface/getting-started","permalink":"/docs/en/device/doorinterface/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/doorinterface/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"Getting Started","description":"Provides initial procedures for getting started with the device.","keywords":["Components","Name","Feature","Cable","Connector"],"isTranslationMissing":false},"sidebar":"doorinterface","previous":{"title":"Safety Instructions","permalink":"/docs/en/device/doorinterface/safety-instructions"},"next":{"title":"Installation","permalink":"/docs/en/device/doorinterface/installation"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
 // EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_getting-started-components-note.mdx
 var _getting_started_components_note = __webpack_require__(12683);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/corestation_20/getting-started.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/doorinterface/getting-started.mdx
 
 
 const frontMatter = {
@@ -117,8 +117,8 @@ const toc = [{
   "id": "name-and-function-of-each-part",
   "level": 2
 }, {
-  "value": "CoreStation 20 status LED",
-  "id": "corestation-20-status-led",
+  "value": "Door Interface status LED",
+  "id": "door-interface-status-led",
   "level": 3
 }, {
   "value": "Installation example",
@@ -150,8 +150,7 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Badge, Column, Columns, Image, Magnify, PageBreak, Row, Table, Tbody, Td} = _components;
-  if (!Badge) _missingMdxReference("Badge", true);
+  }, {Column, Columns, Image, Magnify, PageBreak, Row, Table, Tbody, Td} = _components;
   if (!Column) _missingMdxReference("Column", true);
   if (!Columns) _missingMdxReference("Columns", true);
   if (!Image) _missingMdxReference("Image", true);
@@ -175,7 +174,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Td, {
             rowspan: 3,
             children: (0,jsx_runtime.jsx)(Image, {
-              src: "/img/device/component-device-cs20.svg",
+              src: "/img/device/component-device-di24.svg",
               className: "none",
               height: 350,
               alone: true
@@ -204,7 +203,7 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsxs)(Row, {
           className: "center",
           children: [(0,jsx_runtime.jsx)(Td, {
-            children: "CoreStation 20"
+            children: "Door Interface"
           }), (0,jsx_runtime.jsx)(Td, {
             children: "Open Source Software Guide"
           })]
@@ -239,7 +238,7 @@ function _createMdxContent(props) {
       className: "partname",
       children: [(0,jsx_runtime.jsx)(Column, {
         children: (0,jsx_runtime.jsx)(Magnify, {
-          src: "/img/device/product-part-cs20.svg",
+          src: "/img/device/product-part-di24.svg",
           width: 600,
           zoomFactor: .4,
           mgWidth: 500,
@@ -380,7 +379,7 @@ function _createMdxContent(props) {
                 },
                 children: "11"
               }), (0,jsx_runtime.jsx)(_components.td, {
-                children: "CoreStation 20 power connection (DC 12V / DC 24V IN)"
+                children: "Power connection for Door Interface (DC 12V / DC 24V IN)"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -401,17 +400,6 @@ function _createMdxContent(props) {
                 children: "13"
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: [(0,jsx_runtime.jsx)(_components.strong, {
-                  children: "ETHERNET"
-                }), " connection"]
-              })]
-            }), (0,jsx_runtime.jsxs)(_components.tr, {
-              children: [(0,jsx_runtime.jsx)(_components.td, {
-                style: {
-                  textAlign: "center"
-                },
-                children: "14"
-              }), (0,jsx_runtime.jsxs)(_components.td, {
-                children: [(0,jsx_runtime.jsx)(_components.strong, {
                   children: "INIT"
                 }), " button"]
               })]
@@ -420,7 +408,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "15"
+                children: "14"
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: [(0,jsx_runtime.jsx)(_components.strong, {
                   children: "RELAY 1 (Lock)"
@@ -431,10 +419,21 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "16"
+                children: "15"
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: [(0,jsx_runtime.jsx)(_components.strong, {
                   children: "WIEGAND 0"
+                }), " connection"]
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                style: {
+                  textAlign: "center"
+                },
+                children: "16"
+              }), (0,jsx_runtime.jsxs)(_components.td, {
+                children: [(0,jsx_runtime.jsx)(_components.strong, {
+                  children: "RS-485 0"
                 }), " connection"]
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
@@ -446,17 +445,6 @@ function _createMdxContent(props) {
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: [(0,jsx_runtime.jsx)(_components.strong, {
                   children: "RS-485 0"
-                }), " connection"]
-              })]
-            }), (0,jsx_runtime.jsxs)(_components.tr, {
-              children: [(0,jsx_runtime.jsx)(_components.td, {
-                style: {
-                  textAlign: "center"
-                },
-                children: "18"
-              }), (0,jsx_runtime.jsxs)(_components.td, {
-                children: [(0,jsx_runtime.jsx)(_components.strong, {
-                  children: "RS-485 0"
                 }), " termination resistor switch"]
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
@@ -464,7 +452,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "19"
+                children: "18"
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: [(0,jsx_runtime.jsx)(_components.strong, {
                   children: "OUTPUT (0:2)"
@@ -475,7 +463,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "20"
+                children: "19"
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: [(0,jsx_runtime.jsx)(_components.strong, {
                   children: "RELAY 0 (Alarm)"
@@ -486,7 +474,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "21"
+                children: "20"
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: [(0,jsx_runtime.jsx)(_components.strong, {
                   children: "SUPERVISED INPUT (0:2)"
@@ -515,13 +503,13 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "You can use the product's reader power output (12 Vdc, up to 0.6 A / 24 Vdc, up to 0.3 A) as the power for the Wiegand device when connecting the product to the Wiegand device. You can connect two Wiegand devices consuming 0.3 A based on 12 Vdc power output."
+            children: "You can use the product's reader power output (12 Vdc, up to 0.6 A / 24 Vdc, up to 0.3 A) as power for the reader when connecting the product to the reader. You can connect two readers consuming 0.3 A based on 12 Vdc power output."
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "corestation-20-status-led",
-      children: "CoreStation 20 status LED"
+      id: "door-interface-status-led",
+      children: "Door Interface status LED"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "The product's status can be checked at the STATUS located on the right side of the front of the product, displaying the status of Ethernet, RS-485, RS-485 0, RS-485 1, in order every second."
     }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
@@ -538,57 +526,18 @@ function _createMdxContent(props) {
       }), (0,jsx_runtime.jsxs)(_components.tbody, {
         children: [(0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
-            rowSpan: "5",
-            children: "Ethernet"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Red/magenta blinking"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Static IP connection failed"
-          })]
-        }), (0,jsx_runtime.jsxs)(_components.tr, {
-          children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Red/blue blinking"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Dynamic IP connection successful"
-          })]
-        }), (0,jsx_runtime.jsxs)(_components.tr, {
-          children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Red/cyan blinking"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Static IP connection successful"
-          })]
-        }), (0,jsx_runtime.jsxs)(_components.tr, {
-          children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Red/yellow blinking"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Waiting for dynamic IP connection"
-          })]
-        }), (0,jsx_runtime.jsxs)(_components.tr, {
-          children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Red/red blinking"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Dynamic IP connection failed"
-          })]
-        }), (0,jsx_runtime.jsxs)(_components.tr, {
-          children: [(0,jsx_runtime.jsx)(_components.td, {
-            rowSpan: "3",
+            rowSpan: "2",
             children: "RS-485"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "Magenta/blue blinking"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Slave device normal"
+            children: "Master device normal"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: "Magenta/yellow blinking"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Slave device disconnected"
-          })]
-        }), (0,jsx_runtime.jsxs)(_components.tr, {
-          children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Magenta/red blinking"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "No slave device"
+            children: "Master device disconnected"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -683,20 +632,21 @@ function _createMdxContent(props) {
       id: "installation-example",
       children: "Installation example"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "This product is designed for an enterprise-grade environment as a central access control system and can store information for up to 500,000 users."
+      children: "This product can easily configure up to 2 access doors as an extension module."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "When integrated with BioStar X, both access control and attendance management can be utilized, providing various interfaces such as RS-485 (OSDP), Wiegand, supervised input, and AUX."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/device/installation-example-cs20.png",
+      src: "/img/device/installation-example-di24.png",
       width: "70%",
       className: "none"
     }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "system-diagram",
       children: "System diagram"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "This product supports three RS-485 ports, and by connecting the Door Interface in a daisy chain, up to 34 doors can be configured."
+      children: "This product supports 3 RS-485 ports, and by daisy-chaining multiple Door Interfaces to the master device, you can configure up to 34 doors."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/device/system-configuration-cs20.png",
+      src: "/img/device/system-configuration-di24.png",
+      width: "75%",
       className: "none"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
@@ -711,14 +661,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "If you connect the Door Interface as a slave to the host port, even if the connection with CoreStation 20 is interrupted, the slave devices connected to the Door Interface can identify the Facility Code of the card through the offline mode dedicated Facility Code and unlock the door."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Badge, {
-              only: true,
-              children: "CS-20P"
-            }), " Use only slave devices directly connected to the CS-20P reader port when a SAM card is installed."]
+            children: "When connecting the Door Interface as a slave to the host port of the master device, you can open access doors by identifying the facility code of the card through the Facility Code for Offline Mode, even if the connection with the master device is lost for the slave devices connected to the Door Interface."
           }), "\n"]
         }), "\n"]
       })
@@ -726,7 +669,7 @@ function _createMdxContent(props) {
       id: "overall-connection-diagram",
       children: "Overall connection diagram"
     }), "\n", (0,jsx_runtime.jsx)(Magnify, {
-      src: "/img/en/device/system-cs20.svg",
+      src: "/img/device/system-di24.svg",
       width: "80%",
       zoomFactor: .4,
       mgWidth: 500,

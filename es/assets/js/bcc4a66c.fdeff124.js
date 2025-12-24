@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["19318"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["79712"], {
 81876: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
@@ -61,7 +61,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-25701: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+87410: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -70,20 +70,20 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_es_docusaurus_plugin_content_docs_current_device_corestation_20_getting_started_mdx_ad3_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_es_docusaurus_plugin_content_docs_current_device_doorinterface_getting_started_mdx_bcc_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-es-docusaurus-plugin-content-docs-current-device-corestation-20-getting-started-mdx-ad3.json
-var site_i_18_n_es_docusaurus_plugin_content_docs_current_device_corestation_20_getting_started_mdx_ad3_namespaceObject = JSON.parse('{"id":"device/corestation_20/getting-started","title":"Primeros pasos","description":"Proporciona procedimientos iniciales para empezar con el dispositivo.","source":"@site/i18n/es/docusaurus-plugin-content-docs/current/device/corestation_20/getting-started.mdx","sourceDirName":"device/corestation_20","slug":"/device/corestation_20/getting-started","permalink":"/docs/es/device/corestation_20/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/corestation_20/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"Primeros pasos","description":"Proporciona procedimientos iniciales para empezar con el dispositivo.","keywords":["Componentes","Nombre","Función","Cable","Conector"],"isTranslationMissing":false},"sidebar":"corestation20","previous":{"title":"Instrucciones de seguridad","permalink":"/docs/es/device/corestation_20/safety-instructions"},"next":{"title":"Instalación","permalink":"/docs/es/device/corestation_20/installation"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-es-docusaurus-plugin-content-docs-current-device-doorinterface-getting-started-mdx-bcc.json
+var site_i_18_n_es_docusaurus_plugin_content_docs_current_device_doorinterface_getting_started_mdx_bcc_namespaceObject = JSON.parse('{"id":"device/doorinterface/getting-started","title":"Primeros pasos","description":"Proporciona procedimientos iniciales para empezar con el dispositivo.","source":"@site/i18n/es/docusaurus-plugin-content-docs/current/device/doorinterface/getting-started.mdx","sourceDirName":"device/doorinterface","slug":"/device/doorinterface/getting-started","permalink":"/docs/es/device/doorinterface/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/doorinterface/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"Primeros pasos","description":"Proporciona procedimientos iniciales para empezar con el dispositivo.","keywords":["Componentes","Nombre","Función","Cable","Conector"],"isTranslationMissing":false},"sidebar":"doorinterface","previous":{"title":"Instrucciones de seguridad","permalink":"/docs/es/device/doorinterface/safety-instructions"},"next":{"title":"Instalación","permalink":"/docs/es/device/doorinterface/installation"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
 // EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_getting-started-components-note.mdx
 var _getting_started_components_note = __webpack_require__(81876);
-;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/device/corestation_20/getting-started.mdx
+;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/device/doorinterface/getting-started.mdx
 
 
 const frontMatter = {
@@ -117,8 +117,8 @@ const toc = [{
   "id": "nombre-y-función-de-cada-parte",
   "level": 2
 }, {
-  "value": "LED de estado de CoreStation 20",
-  "id": "led-de-estado-de-corestation-20",
+  "value": "LED de estado de la interfaz de puerta",
+  "id": "led-de-estado-de-la-interfaz-de-puerta",
   "level": 3
 }, {
   "value": "Ejemplo de instalación",
@@ -150,8 +150,7 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Badge, Column, Columns, Image, Magnify, PageBreak, Row, Table, Tbody, Td} = _components;
-  if (!Badge) _missingMdxReference("Badge", true);
+  }, {Column, Columns, Image, Magnify, PageBreak, Row, Table, Tbody, Td} = _components;
   if (!Column) _missingMdxReference("Column", true);
   if (!Columns) _missingMdxReference("Columns", true);
   if (!Image) _missingMdxReference("Image", true);
@@ -175,7 +174,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Td, {
             rowspan: 3,
             children: (0,jsx_runtime.jsx)(Image, {
-              src: "/img/device/component-device-cs20.svg",
+              src: "/img/device/component-device-di24.svg",
               className: "none",
               height: 350,
               alone: true
@@ -204,7 +203,7 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsxs)(Row, {
           className: "center",
           children: [(0,jsx_runtime.jsx)(Td, {
-            children: "CoreStation 20"
+            children: "Interfaz de puerta"
           }), (0,jsx_runtime.jsx)(Td, {
             children: "Guía de software de código abierto"
           })]
@@ -239,7 +238,7 @@ function _createMdxContent(props) {
       className: "partname",
       children: [(0,jsx_runtime.jsx)(Column, {
         children: (0,jsx_runtime.jsx)(Magnify, {
-          src: "/img/device/product-part-cs20.svg",
+          src: "/img/device/product-part-di24.svg",
           width: 600,
           zoomFactor: .4,
           mgWidth: 500,
@@ -380,7 +379,7 @@ function _createMdxContent(props) {
                 },
                 children: "11"
               }), (0,jsx_runtime.jsx)(_components.td, {
-                children: "Conexión de alimentación de CoreStation 20 (12 V CC / 24 V CC ENTRADA)"
+                children: "Conexión de alimentación para la interfaz de puerta (DC 12V / DC 24V IN)"
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
               children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -400,17 +399,6 @@ function _createMdxContent(props) {
                 },
                 children: "13"
               }), (0,jsx_runtime.jsxs)(_components.td, {
-                children: ["Conexión ", (0,jsx_runtime.jsx)(_components.strong, {
-                  children: "ETHERNET"
-                })]
-              })]
-            }), (0,jsx_runtime.jsxs)(_components.tr, {
-              children: [(0,jsx_runtime.jsx)(_components.td, {
-                style: {
-                  textAlign: "center"
-                },
-                children: "14"
-              }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: ["Botón ", (0,jsx_runtime.jsx)(_components.strong, {
                   children: "INIT"
                 })]
@@ -420,7 +408,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "15"
+                children: "14"
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: ["Conexión ", (0,jsx_runtime.jsx)(_components.strong, {
                   children: "RELAY 1 (Cerradura)"
@@ -431,7 +419,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "16"
+                children: "15"
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: ["Conexión ", (0,jsx_runtime.jsx)(_components.strong, {
                   children: "WIEGAND 0"
@@ -442,7 +430,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "17"
+                children: "16"
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: ["Conexión ", (0,jsx_runtime.jsx)(_components.strong, {
                   children: "RS-485 0"
@@ -453,7 +441,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "18"
+                children: "17"
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: ["Interruptor de resistencia terminal ", (0,jsx_runtime.jsx)(_components.strong, {
                   children: "RS-485 0"
@@ -464,7 +452,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "19"
+                children: "18"
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: ["Conexión ", (0,jsx_runtime.jsx)(_components.strong, {
                   children: "OUTPUT (0:2)"
@@ -475,7 +463,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "20"
+                children: "19"
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: ["Conexión ", (0,jsx_runtime.jsx)(_components.strong, {
                   children: "RELAY 0 (Alarma)"
@@ -486,7 +474,7 @@ function _createMdxContent(props) {
                 style: {
                   textAlign: "center"
                 },
-                children: "21"
+                children: "20"
               }), (0,jsx_runtime.jsxs)(_components.td, {
                 children: ["Conexión ", (0,jsx_runtime.jsx)(_components.strong, {
                   children: "SUPERVISED INPUT (0:2)"
@@ -515,13 +503,13 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Utilice la salida de alimentación del lector del producto (12 Vdc, hasta 0.6 A / 24 Vdc, hasta 0.3 A) como fuente de alimentación para el dispositivo Wiegand al conectar el producto al dispositivo Wiegand. Conecte dos dispositivos Wiegand que consuman 0.3 A con la salida de alimentación de 12 VCC."
+            children: "Use la salida de alimentación del lector del producto (12 Vdc, hasta 0.6 A / 24 Vdc, hasta 0.3 A) como fuente de alimentación del lector al conectar el producto. Conecte dos lectores que consuman 0.3 A usando la salida de 12 Vdc."
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "led-de-estado-de-corestation-20",
-      children: "LED de estado de CoreStation 20"
+      id: "led-de-estado-de-la-interfaz-de-puerta",
+      children: "LED de estado de la interfaz de puerta"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "Verifique el estado del producto en STATUS, ubicado en el lado derecho del frontal del dispositivo; muestra en orden cada segundo el estado de Ethernet, RS-485, RS-485 0 y RS-485 1."
     }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
@@ -538,57 +526,18 @@ function _createMdxContent(props) {
       }), (0,jsx_runtime.jsxs)(_components.tbody, {
         children: [(0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
-            rowSpan: "5",
-            children: "Ethernet"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Parpadeo rojo/magenta"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Conexión de IP estática fallida"
-          })]
-        }), (0,jsx_runtime.jsxs)(_components.tr, {
-          children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Parpadeo rojo/azul"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Conexión de IP dinámica exitosa"
-          })]
-        }), (0,jsx_runtime.jsxs)(_components.tr, {
-          children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Parpadeo rojo/cian"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Conexión de IP estática exitosa"
-          })]
-        }), (0,jsx_runtime.jsxs)(_components.tr, {
-          children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Parpadeo rojo/amarillo"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Esperando conexión de IP dinámica"
-          })]
-        }), (0,jsx_runtime.jsxs)(_components.tr, {
-          children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Parpadeo rojo/rojo"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Conexión de IP dinámica fallida"
-          })]
-        }), (0,jsx_runtime.jsxs)(_components.tr, {
-          children: [(0,jsx_runtime.jsx)(_components.td, {
-            rowSpan: "3",
+            rowSpan: "2",
             children: "RS-485"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "Parpadeo magenta/azul"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Dispositivo esclavo normal"
+            children: "Dispositivo maestro normal"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: "Parpadeo magenta/amarillo"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Dispositivo esclavo desconectado"
-          })]
-        }), (0,jsx_runtime.jsxs)(_components.tr, {
-          children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Parpadeo magenta/rojo"
-          }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Sin dispositivo esclavo"
+            children: "Dispositivo maestro desconectado"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -683,20 +632,21 @@ function _createMdxContent(props) {
       id: "ejemplo-de-instalación",
       children: "Ejemplo de instalación"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Este producto está diseñado para entornos de nivel empresarial como sistema central de control de acceso y puede almacenar información de hasta 500,000 usuarios."
+      children: "Configure fácilmente hasta 2 puertas de acceso como módulo de expansión."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "Integre BioStar X para utilizar el control de acceso y la gestión de asistencia, y disponga de diversas interfaces como RS-485 (OSDP), Wiegand, entrada supervisada y AUX."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/device/installation-example-cs20.png",
+      src: "/img/device/installation-example-di24.png",
       width: "70%",
       className: "none"
     }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "diagrama-del-sistema",
       children: "Diagrama del sistema"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Este producto admite tres puertos RS-485 y, al conectar la interfaz de puerta en cadena, se pueden configurar hasta 34 puertas."
+      children: "Este producto admite 3 puertos RS-485 y, al encadenar (daisy chain) varias interfaces de puerta al dispositivo maestro, puede configurar hasta 34 puertas."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/device/system-configuration-cs20.png",
+      src: "/img/device/system-configuration-di24.png",
+      width: "75%",
       className: "none"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
@@ -711,14 +661,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Si conecta la Door Interface como esclava al puerto host, incluso si se interrumpe la conexión con CoreStation 20, los dispositivos esclavos conectados a la Door Interface pueden identificar el Facility Code de la tarjeta mediante el modo sin conexión dedicado al Facility Code y desbloquear la puerta."
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Badge, {
-              only: true,
-              children: "CS-20P"
-            }), " Utilice solo dispositivos esclavos conectados directamente al puerto lector CS-20P cuando se instale una tarjeta SAM."]
+            children: "Abra puertas de acceso identificando el código de recinto de la tarjeta mediante el código de recinto para el modo sin conexión cuando conecte la interfaz de puerta como esclava al puerto host del dispositivo maestro, incluso si se pierde la conexión con el maestro para los dispositivos esclavos conectados a la interfaz de puerta."
           }), "\n"]
         }), "\n"]
       })
@@ -726,7 +669,7 @@ function _createMdxContent(props) {
       id: "diagrama-general-de-conexión",
       children: "Diagrama general de conexión"
     }), "\n", (0,jsx_runtime.jsx)(Magnify, {
-      src: "/img/en/device/system-cs20.svg",
+      src: "/img/device/system-di24.svg",
       width: "80%",
       zoomFactor: .4,
       mgWidth: 500,

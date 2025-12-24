@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["10336"], {
-11302: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["61388"], {
+12683: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -19,32 +19,27 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 const toc = [];
 function _createMdxContent(props) {
   const _components = {
+    admonition: "admonition",
     li: "li",
-    p: "p",
     ul: "ul",
     ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
     ...props.components
-  };
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-    children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "The ENCR-10 components include screws for housing fixation, screws for product fixation, and screws for power device connection. Use each screw correctly according to its purpose."
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "Fixing screws for the enclosure (diameter: 4 mm, length: 25 mm) x4"
-          }), "\n"]
-        }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "Fixing screws for the device (diameter: 3 mm, length: 5 mm) x6"
-          }), "\n"]
-        }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "Fixing screws for the power supply cable (diameter: 3 mm, length: 8 mm) x1"
-          }), "\n"]
-        }), "\n"]
+  }, {Xclude} = _components;
+  if (!Xclude) _missingMdxReference("Xclude", true);
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.admonition, {
+    type: "info",
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Components may vary according to the installation environment."
       }), "\n"]
-    }), "\n"]
+    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Xclude, {
+      product: "corestation_20,corestation_40,doorinterface,doormodule,inputmodule,outputmodule,securemodule,extendedmodule,extendedmodule_sc",
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+          children: "When assembling the product with the bracket, you can use the included bracket fixing screw (Star Shaped) instead of the product fixing screw for enhanced security."
+        }), "\n"]
+      })
+    })]
   });
 }
 function MDXContent(props = {}) {
@@ -59,11 +54,14 @@ function MDXContent(props = {}) {
     })
   }) : _createMdxContent(props);
 }
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}
 
 
 
 }),
-87825: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+49492: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -72,20 +70,20 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_enclosure_getting_started_mdx_9dd_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_doormodule_getting_started_mdx_306_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-enclosure-getting-started-mdx-9dd.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_enclosure_getting_started_mdx_9dd_namespaceObject = JSON.parse('{"id":"device/enclosure/getting-started","title":"Getting Started","description":"Provides initial procedures for getting started with the device.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/enclosure/getting-started.mdx","sourceDirName":"device/enclosure","slug":"/device/enclosure/getting-started","permalink":"/docs/en/device/enclosure/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/enclosure/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"Getting Started","description":"Provides initial procedures for getting started with the device.","keywords":["Components","Name","Feature","Cable","Connector"],"isTranslationMissing":false},"sidebar":"enclosure","previous":{"title":"Safety Instructions","permalink":"/docs/en/device/enclosure/safety-instructions"},"next":{"title":"Installation","permalink":"/docs/en/device/enclosure/installation"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-doormodule-getting-started-mdx-306.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_doormodule_getting_started_mdx_306_namespaceObject = JSON.parse('{"id":"device/doormodule/getting-started","title":"Getting Started","description":"Provides initial procedures for getting started with the device.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/doormodule/getting-started.mdx","sourceDirName":"device/doormodule","slug":"/device/doormodule/getting-started","permalink":"/docs/en/device/doormodule/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/doormodule/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"Getting Started","description":"Provides initial procedures for getting started with the device.","keywords":["Components","Name","Feature","Cable","Connector"],"isTranslationMissing":false},"sidebar":"doormodule","previous":{"title":"Safety Instructions","permalink":"/docs/en/device/doormodule/safety-instructions"},"next":{"title":"Installation","permalink":"/docs/en/device/doormodule/installation"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_device-encr10-included-screws.mdx
-var _device_encr10_included_screws = __webpack_require__(11302);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/enclosure/getting-started.mdx
+// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_getting-started-components-note.mdx
+var _getting_started_components_note = __webpack_require__(12683);
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/doormodule/getting-started.mdx
 
 
 const frontMatter = {
@@ -107,7 +105,7 @@ const assets = {
 
 };
 
-/*ENCR-10 제품의 구성품(나사 세트)*/
+/*구성품 노트*/
 
 
 
@@ -115,22 +113,17 @@ const toc = [{
   "value": "Components",
   "id": "components",
   "level": 2
-}, ..._device_encr10_included_screws/* .toc */.RM, {
+}, ..._getting_started_components_note/* .toc */.RM, {
   "value": "Name and function of each part",
   "id": "name-and-function-of-each-part",
   "level": 2
 }, {
-  "value": "Outside",
-  "id": "outside",
-  "level": 3
-}, {
-  "value": "Inside",
-  "id": "inside",
+  "value": "Installation example",
+  "id": "installation-example",
   "level": 3
 }];
 function _createMdxContent(props) {
   const _components = {
-    a: "a",
     admonition: "admonition",
     h2: "h2",
     h3: "h3",
@@ -140,9 +133,10 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Image, Magnify, Row, Table, Tbody, Td} = _components;
+  }, {Image, Magnify, PageBreak, Row, Table, Tbody, Td} = _components;
   if (!Image) _missingMdxReference("Image", true);
   if (!Magnify) _missingMdxReference("Magnify", true);
+  if (!PageBreak) _missingMdxReference("PageBreak", true);
   if (!Row) _missingMdxReference("Row", true);
   if (!Table) _missingMdxReference("Table", true);
   if (!Tbody) _missingMdxReference("Tbody", true);
@@ -160,16 +154,15 @@ function _createMdxContent(props) {
           className: "center white",
           children: [(0,jsx_runtime.jsx)(Td, {
             rowspan: 3,
-            colspan: 2,
             children: (0,jsx_runtime.jsx)(Image, {
-              src: "/img/device/component-encr10.svg",
+              src: "/img/device/component-device-dm20.svg",
               className: "none",
-              height: 350,
+              height: 300,
               alone: true
             })
           }), (0,jsx_runtime.jsx)(Td, {
             children: (0,jsx_runtime.jsx)(Image, {
-              src: "/img/device/component-cable-tie6.svg",
+              src: "/img/device/component-wall-bracket-dm20.svg",
               className: "none",
               alone: true
             })
@@ -177,13 +170,13 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsx)(Row, {
           className: "center",
           children: (0,jsx_runtime.jsx)(Td, {
-            children: "Cable Tie x6"
+            children: "Wall Bracket"
           })
         }), (0,jsx_runtime.jsx)(Row, {
           className: "center white",
           children: (0,jsx_runtime.jsx)(Td, {
             children: (0,jsx_runtime.jsx)(Image, {
-              src: "/img/device/component-cable-earth.svg",
+              src: "/img/device/component-resistor.svg",
               className: "none",
               alone: true
             })
@@ -191,20 +184,18 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsxs)(Row, {
           className: "center",
           children: [(0,jsx_runtime.jsx)(Td, {
-            colspan: 2,
-            children: "Enclosure (ENCR-10)"
+            children: "Door Module"
           }), (0,jsx_runtime.jsx)(Td, {
-            children: "Earth Cable"
+            children: "120 Ω Resistor"
           })]
-        }), (0,jsx_runtime.jsxs)(Row, {
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Table, {
+      className: "component",
+      children: (0,jsx_runtime.jsxs)(Tbody, {
+        children: [(0,jsx_runtime.jsxs)(Row, {
           className: "center white",
           children: [(0,jsx_runtime.jsx)(Td, {
-            children: (0,jsx_runtime.jsx)(Image, {
-              src: "/img/device/component-fixing-screws4.svg",
-              className: "none",
-              alone: true
-            })
-          }), (0,jsx_runtime.jsx)(Td, {
             children: (0,jsx_runtime.jsx)(Image, {
               src: "/img/device/component-pvc-anchors4.svg",
               className: "none",
@@ -212,7 +203,19 @@ function _createMdxContent(props) {
             })
           }), (0,jsx_runtime.jsx)(Td, {
             children: (0,jsx_runtime.jsx)(Image, {
-              src: "/img/device/component-device-screws6.svg",
+              src: "/img/device/component-fixing-screws4.svg",
+              className: "none",
+              alone: true
+            })
+          }), (0,jsx_runtime.jsx)(Td, {
+            children: (0,jsx_runtime.jsx)(Image, {
+              src: "/img/device/component-spacer4.svg",
+              className: "none",
+              alone: true
+            })
+          }), (0,jsx_runtime.jsx)(Td, {
+            children: (0,jsx_runtime.jsx)(Image, {
+              src: "/img/device/component-diode4.svg",
               className: "none",
               alone: true
             })
@@ -220,99 +223,75 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsxs)(Row, {
           className: "center",
           children: [(0,jsx_runtime.jsx)(Td, {
-            children: "Fixing Screw x4"
-          }), (0,jsx_runtime.jsx)(Td, {
             children: "PVC Anchor x4"
           }), (0,jsx_runtime.jsx)(Td, {
-            children: "Fixing screws for the device x6"
-          })]
-        }), (0,jsx_runtime.jsxs)(Row, {
-          className: "center white",
-          children: [(0,jsx_runtime.jsx)(Td, {
-            children: (0,jsx_runtime.jsx)(Image, {
-              src: "/img/device/component-ferrite-core.svg",
-              className: "none",
-              alone: true
-            })
+            children: "Fixing Screw x4"
           }), (0,jsx_runtime.jsx)(Td, {
-            children: (0,jsx_runtime.jsx)(Image, {
-              src: "/img/device/component-terminal.svg",
-              className: "none",
-              alone: true
-            })
+            children: "Spacer x4"
           }), (0,jsx_runtime.jsx)(Td, {
-            children: (0,jsx_runtime.jsx)(Image, {
-              src: "/img/device/component-power-cable-screw.svg",
-              className: "none",
-              alone: true
-            })
-          })]
-        }), (0,jsx_runtime.jsxs)(Row, {
-          className: "center",
-          children: [(0,jsx_runtime.jsx)(Td, {
-            children: "Ferrite Core"
-          }), (0,jsx_runtime.jsx)(Td, {
-            children: "Terminal"
-          }), (0,jsx_runtime.jsx)(Td, {
-            children: "Fixing screws for the power supply cable"
+            children: "Diode x4"
           })]
         })]
       })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-      type: "info",
-      children: [(0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-          children: "Components may vary according to the installation environment."
-        }), "\n"]
-      }), (0,jsx_runtime.jsx)(_device_encr10_included_screws/* ["default"] */.Ay, {}), (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-          children: "The backup battery is sold separately."
-        }), "\n"]
-      })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_getting_started_components_note/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "name-and-function-of-each-part",
       children: "Name and function of each part"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "outside",
-      children: "Outside"
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/device/name-function-each-part-outside-encr.png",
-      className: "none",
-      width: "45%"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "inside",
-      children: "Inside"
     }), "\n", (0,jsx_runtime.jsx)(Magnify, {
-      src: "/img/en/device/name-function-each-part-inside-encr.png",
-      width: "85%",
+      src: "/img/device/name-function-each-part-dm20.svg",
+      width: 800,
       zoomFactor: .4,
       mgWidth: 500,
       mgHeight: 500
-    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: [(0,jsx_runtime.jsx)(_components.p, {
-        children: "LED status indicator and wiring guide labels are attached to the enclosure for CoreStation. For details on the LED status indicators and wiring of each device, refer to the respective product guide."
-      }), (0,jsx_runtime.jsxs)(_components.ul, {
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: (0,jsx_runtime.jsx)(_components.a, {
-              href: "/docs/en/device/outputmodule/",
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Output Module"
-              })
-            })
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["Press the ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "INIT"
+            }), " button for more than 2 seconds after initializing the product linked to the device to connect it to another device."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["Press the ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "RESET"
+            }), " button to reboot the product."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: (0,jsx_runtime.jsx)(_components.a, {
-              href: "/docs/en/device/inputmodule/",
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Input Module"
-              })
-            })
+            children: "Refer to the LED status below when using Supervised Input."
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "Orange: Short Circuit"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "Red: Short"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "Green: On"
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "Off: Off"
+              }), "\n"]
+            }), "\n"]
           }), "\n"]
         }), "\n"]
-      })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "installation-example",
+      children: "Installation example"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "This product supports various inputs and outputs as well as Wiegand connections, enhancing scalability with Suprema devices and third-party devices."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Supervised Input is also available, which can check for short circuit, short, On, and Off status."
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/device/installation-example-dm20.png",
+      width: "60%",
+      className: "none"
     })]
   });
 }

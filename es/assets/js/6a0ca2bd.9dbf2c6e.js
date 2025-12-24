@@ -213,7 +213,7 @@ function _createMdxContent(props) {
       id: "nombre-y-función-de-cada-parte",
       children: "Nombre y función de cada parte"
     }), "\n", (0,jsx_runtime.jsx)(Magnify, {
-      src: "/img/en/device/name-function-each-part-sio2.png",
+      src: "/img/device/name-function-each-part-sio2.png",
       width: 800,
       zoomFactor: .4,
       mgWidth: 500,
