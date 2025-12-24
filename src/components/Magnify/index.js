@@ -5,7 +5,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 export default function Magnify(props) {
     const { i18n: { currentLocale } } = useDocusaurusContext();
     const img = (() => {
-        const localizedSrc = currentLocale === 'ko' ? 
+        const localizedSrc = currentLocale === 'ko' || props.alone ? 
             props.src : 
             props.src.replace('/img/', `/img/en/`);
         
