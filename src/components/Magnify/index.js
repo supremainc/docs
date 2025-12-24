@@ -7,7 +7,7 @@ export default function Magnify(props) {
     const isDev = process.env.NODE_ENV === 'development';
     const baseUrl = 'https://supremadocs.blob.core.windows.net';
     const img = (() => {
-        const localizedSrc = currentLocale === 'ko' ? 
+        const localizedSrc = currentLocale === 'ko' || props.alone ? 
             props.src : 
             props.src.replace('/img/', `/img/en/`);
         
