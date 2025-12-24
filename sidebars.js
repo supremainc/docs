@@ -653,13 +653,14 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Release Notes',
+      label: '릴리스 노트',
       link: {
         type: 'doc',
         id: 'platform/biostar_x/release-notes'
       },
       items: [
-        'platform/biostar_x/release-notes/100'
+        'platform/biostar_x/release-notes/101',
+        'platform/biostar_x/release-notes/100',
       ]
     }
   ],

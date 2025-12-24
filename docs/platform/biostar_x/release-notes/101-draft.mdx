@@ -1,0 +1,227 @@
+---
+id: 101-draft
+title: (초안) 버전 1.0.1
+draft: true
+---
+
+# 버전 1.0.1 (빌드 번호 1.0.1.352)
+
+릴리즈<Separator/>2025-12-29
+
+
+## 신규 기능 및 개선
+
+---
+
+<Jira num='BX-4306' /> [Header] 내 계정 설정 1.0.0.310, 1.0.0.319
+
+1. 상단 메뉴바에서 접속 중인 계정의 기본 설정 및 비밀번호를 변경 할 수 있는 메뉴 추가
+
+1. Added the menu in the top navigation bar to change the signed-in account’s Preference settings and password.
+
+<Jira num='BX-4698' /> [User][User List][More] Print - 사유 기록 및 감사 추적 사유 기록 확인 1.0.0.313
+<Jira num='BX-4719' /> [Setting] Audit Trail에서 사용자 정보를 파일로 내보내기 시 사유 기록 기능 추가 1.0.0.316, 1.0.0.323
+<Jira num='BX-4742' /> [Data] Export / Print Audit Trail 동작 확인 1.0.0.316, 1.0.0.323
+<Jira num='BX-4696' /> [User][User List][More][Export] CSV - 사유 기록 및 감사 추적 사유 기록 확인 1.0.0.313
+<Jira num='BX-4697' /> [User][User List][More][Export] Data File - 사유 기록 및 감사 추적 사유 기록 확인 1.0.0.313
+
+1. 일부 메뉴에서 인쇄 또는 내보내기 작업 시 사유를 입력하고, 입력한 사유를 **감사 추적**에서 확인할 수 있도록 개선
+
+    - **사용자**: **인쇄** / **CSV 내보내기** / **데이터 파일로 내보내기**
+
+    - **데이터**: **인쇄** / **CSV 내보내기**
+
+1. Improved to allow entering a reason when printing or exporting in certain menus, and to view the entered reason in the **Audit Trail**.
+
+    - **User**: **Print** / **CSV Export** / **Data File Export**
+
+    - **Data**: **Print** / **CSV Export**
+
+<Jira num='BX-4744' /> Login 실패 시 이력 확인
+
+1. 로그인 실패 시 **감사 추적**에서 이력을 확인할 수 있도록 개선
+
+1. Improved to allow viewing the history in the **Audit Trail** upon login failure.
+
+<Jira num='BX-4846' /> [Setting] BioStar X TA 라이선스를 모든 Base 라이선스에서 활성화할 수 있도록 변경
+
+1. BioStar X **근태 관리(T&A) 라이선스**를 모든 기본 라이선스(디바이스 매니저 이상)에서 활성화할 수 있도록 변경
+
+1. Improved to allow the BioStar X **Attendance Management (T&A) license** to be activated on all base licenses (Device Manager or higher).
+
+<Jira num='BX-4692' /> [Setting] Essential Base License 부터 Capacity 라이선스 지원
+
+1. BioStar X **운용 규모(Capacity) 업그레이드**를 **에센셜** 라이선스부터 지원하도록 개선
+
+1. Improved to support the BioStar X **Capacity upgrade** starting from the **Essential** license.
+
+<Jira num='BX-4760' /> Face -> IR Face 메세지 변경
+
+1. **얼굴** 인증수단 표기 변경
+
+    - **얼굴** → **IR 페이스**
+
+1. Rename the **Face** credential
+
+    - **Face** → **IR Face**
+
+
+## 버그 수정
+
+---
+
+<BugLists>
+
+1. 시스템 안정성 향상을 위한 버그 수정 및 서비스 최적화 작업 진행 <Badge>1.0.0</Badge>
+
+1. Fixed bugs and optimized services to improve overall system stability. <Badge>1.0.0</Badge>
+
+<Jira num='FISS-4668' /> [Suprema LATAM] BioStar 2에서 BioStar X로 업그레이드 이후, 로그인시 에러
+<Jira num='BX-4774' /> C서버 기동시 속도 개선
+<Jira num='BX-4779' /> Core Web Service 가 켜져있지 않은 상태에 대한 메세지 수정
+
+1. **BioStar X Core Web Service**의 기동 시간을 개선하고, 서비스가 중지되었거나 시작 중인 상태에서 로그인 시도 시 표시되는 팝업 메시지를 더 명확하게 개선 <Badge>1.0.0</Badge>
+
+1. Improved the startup performance of the **BioStar X Core Web Service** and clarified the popup message that appears when attempting to sign in while the service is stopped or still starting. <Badge>1.0.0</Badge>
+
+<Jira num='FISS-4670' /> [Suprema UK] BioStar X Roll Call 실행 시 동일한 User ID + 동일한 Timestamp(DEVDT) 의 이벤트 로그가 존재하면 서버 프로세스가 Roll Call 시작 직후 크래시 발생
+
+1. 서로 다른 장치에서 같은 사용자의 인증 이벤트가 동일한 시간대에 발생한 경우, **인원 점검**을 실행하면 서버가 종료되던 문제 <Badge>1.0.0</Badge>
+
+1. Fixed a server crash that occurred when running **Roll Call** after the same user’s authentication events were generated at the same timestamp (DEVDT) on different devices. <Badge>1.0.0</Badge>
+
+</BugLists>
+
+## 제외 이슈
+
+---
+
+<Jira num='BX-4734' /> Remote Access External Mode 개발.
+<Jira num='BX-4844' /> [DATA] Update Audit Trail Reason Parsing to Support New Format Without Comma when no reason text is added 1.0.0.316
+<Jira num='BX-4895' /> 다국어 새로 적용
+<Jira num='BX-4786' /> IR FACE 관련 설정값 복원(max_face_count)
+<Jira num='BX-4776' /> Installer에서 미지원 장치 목록 수정
+<Jira num='BX-4745' /> Remote Access External UI 기본 출력
+<Jira num='BX-4772' /> IR Face 지원_Dashborad 1.0.0.316, 1.0.0.319
+<Jira num='BX-4757' /> 2.9.11 초과되는 버전에서 업그레이드 시 불가 확인
+<Jira num='BX-4052' /> [User][User List][List View] Order By (IR Face 재 지원)
+<Jira num='BX-4050' /> [User][User List][List View] 기본 출력 (IR Face 재 지원)
+<Jira num='BX-4056' /> [User][User List][More] Print (IR Face 재 지원)
+<Jira num='BX-4048' /> [User][User List][More] Transfer to Device (BioStar X 미지원 장치 중 일부 장치 지원) 1.0.0.319
+<Jira num='BX-4049' /> [User][User List][More] Delete from Device (BioStar X 미지원 장치 중 일부 장치 지원)
+<Jira num='BX-4746' /> External Remote Access 동작
+<Jira num='BX-4057' /> [User][User Detail] Credential (IR Face 재 지원) 1.0.0.313
+<Jira num='BX-4814' /> Remote Access External 사용에 따른 BSX 기능 제약 동작 확인 1.0.0.319
+<Jira num='BX-4055' /> [User][User List][More] Column Layout (IR Face 재 지원)
+<Jira num='BX-4754' /> [Settings] 기존 Zone 명칭에 대한 개선 1.0.0.310
+<Jira num='BX-4054' /> [User][User List][More][Export] Data File (BioStar X 미지원 장치 중 일부 장치 지원)
+<Jira num='BX-4053' /> [User][Audit Trail] User 기능 별 감사 추적 기능 동작 (IR Face 재 지원)
+<Jira num='BX-4690' /> [Setting] Base License 등록 전 장치를 추가할 수 없도록 개선
+<Jira num='BX-4691' /> [Setting] Remote Access External 라이선스 추가
+<Jira num='BX-4750' /> Audit Trail (External Remote Access)
+<Jira num='BX-4752' /> [Data] Export / Print Audit Trail 동작 확인 (ETC)
+<Jira num='BX-4741' /> [Data] Export / Print Audit Trail 기본UI 확인(User)
+<Jira num='BX-4740' /> [Data] Export / Print Audit Trail 기본UI 확인(Event)
+<Jira num='BX-4771' /> IR Face 지원_Data_Number Of Credentials By User 1.0.0.316
+<Jira num='BX-4051' /> [User][User List][List View] Column Data (IR Face 재 지원)
+<Jira num='BX-4770' /> IR Face 지원_Data_UsersWithoutCredential 1.0.0.316
+<Jira num='BX-4716' /> [Setting] 최초 버전에서 미 지원한 IR Face 관련 기능 재 지원
+<Jira num='BX-4748' /> [Remote Access] URL Token 동작
+<Jira num='BX-4856' /> [Monitoring] Status Tree 에 무채색인 아이콘들에 색상 적용하기
+<Jira num='BX-4689' /> [Setting] 각 장치 서버 당 TCP IP 장치 기준 1,000 대 까지 추가 가능 하도록 개선
+<Jira num='BX-4749' /> Suprema Remote Access가 사용중일 경우 동작 확인
+<Jira num='BX-4769' /> IR Face 지원_Data_User_In_Device 1.0.0.316
+<Jira num='BX-4747' /> Auth Token 동작[Remote Access External]
+<Jira num='BX-5032' /> Network Disconnect 상태에서 복수의 사용자 Device 인증 후 Network Connect 시 Muster Report 의 시간에 마지막 인증 사용자만 업데이트 되는 문제 1.0.0.294
+
+1. 네트워크 연결이 해제된 상태에서 여러 사용자가 장치에 인증한 뒤 네트워크 연결 시, <Cmd sid="arena.tree.contextMenu.musterReport" /> 또는 <Cmd sid="zone.rollCall" />의 기록이 마지막 인증 사용자만 반영되던 문제 <Badge>1.0.0</Badge>
+
+1. When the network is disconnected and multiple users authenticate at a device, after the network reconnects, only the last authenticated user’s record is reflected in the <Cmd sid="arena.tree.contextMenu.musterReport" /> or <Cmd sid="zone.rollCall" /> history.
+
+<Jira num='BX-4800' /> [Settings][Advanced AC] APB 알람 발생 시 알람창 타이틀에 Zone 출력됨 1
+<Jira num='BX-4805' /> [Dashboard] 실시간 이벤트 위젯 생성 시 이벤트 목록에서 구역 명칭 출력됨 1.0.0.310
+<Jira num='BX-4999' /> Monitoring > Event 영역에 Advanced AC 아이콘 선택 시 목록 조회 안되는 문제 (오래 걸림, 서버 문제 인듯) 1.0.0.329
+<Jira num='BX-4791' /> [Settings][Device] ToM 을 지원하지만, ToM 등록은 미지원 하는 Device 의 상세 페이지 진입 시 ToM 관련 메뉴가 출력되지 않는 문제 1.0.0.294
+<Jira num='BX-4669' /> [Settings] [Trigger & Action] Roll Call Started & Roll Call Ended의 이메일 내용에 장치 관련 정보가 출력 되는 문제 1.0.0.294
+<Jira num='BX-3273' /> [Setting] 장치 이름에 Script 코드 입력하여 저장 후 장치 삭제 또는 Delete Data & Sync Device 실패 1.0.0.174_0.6.8
+<Jira num='BX-4517' /> [MCS] 재실인원제한구역의 서버이벤트(재실 인원 사전 경보, 재실 인원 정원 도달 감지)가 DB에 저장되지 않는 문제 1.0.0.278
+<Jira num='BX-4676' /> 일본어로 설정 후 > Data report 생성 시 문구 표시오류 1.0.0.294
+<Jira num='BX-4803' /> [Settings][Advanced AC] 소집 알람 발생 시 알람창 타이틀에 Zone 출력됨 1.0.0.310
+<Jira num='BX-4542' /> User Detail 에서 Mobile Access Card ToM 신규 등록시 삭제 아이콘 디자인 문제 1.0.0.294
+<Jira num='BX-4642' /> 암복호화 후 Data > 사용자별 개인 인증 모드 , 크리덴셜이 없는 사용자 PDF로 내보내기 시 OB로 되는 현상 1.0.0.292, 1.0.0.310, 1.0.0.313
+<Jira num='BX-4877' /> [Settings][Device] 추가된 장치가 없는 상태에서 장치 리스트 진입 시, 1분 동안 로딩하는 문제 1.0.0.294
+<Jira num='BX-4880' /> [MCS] 장치 추가가 불가한 문제 1.0.0.319
+<Jira num='BX-4835' /> User 메뉴 Read 권한 사용자 로그인 후 Print 시 unkown error 팝업 발생하는 문제 1.0.0.294
+<Jira num='BX-4795' /> [Monitoring] Communication 서버의 출입문 알람 표시 문제(Door Controller및 Video) 및 Clear Alarm시 실패 팝업 출력 문제 1.0.0.310
+<Jira num='BX-4794' /> [Settings][Device] 장치 이름을 "<script>alert('하하하')</script>" 로 설정 후, 해당 장치를 포함하여 일괄 편집 시 Alert 출력 되는 문제 1.0.0.310
+<Jira num='BX-4838' /> Device Server 를 Stop 하는 경우 간헐적 으로 C서버 의 Dump 발생하는 문제 (로그아웃 됨) 1.0.0.294
+<Jira num='BX-4317' /> 메인 / 컴서버 연결되어있는 상태에서 서비스 재시작 시 컴서버 버전 변경되는 현상 1.0.0.259, 1.0.0.273, 1.0.0.288, 1.0.0.319
+<Jira num='BX-4667' /> Administrator 포함하여 Select All > Batch Edit 에서 "디렉토리 연동 제외" 옵션 체크시 경고 메시지 팝업 발생하지 않는 문제 1.0.0.294
+<Jira num='BX-4801' /> [Settings][Advanced AC] 화재 알람 발생 시 알람창 타이틀에 Zone 출력됨 1.0.0.310
+<Jira num='BX-4900' /> Idle Users For The Last X Months csv로 expor시 status , Period Validity값 오류 1.0.0.323
+<Jira num='BX-4809' /> [Settings][Device] CS-20, DM-20 등 장치에서 Wiegand Reader 2개 추가 후, Wiegand Reader 1 장치 설정 저장 시 Unknown Error 발생하며 저장되지 않는 문제 1.0.0.294, 1.0.0.310
+<Jira num='BX-4934' /> [Monitoring] Monitoring의 Door Status Tree 출력 중 Sync 에러&Device Disconnected 이상 발생 시 Door Status Tree에 이상상태 아이콘이 출력 되지 않음 1.0.0.329
+<Jira num='BX-4802' /> [Settings][Advanced AC] 스케줄 잠금 알람 발생 시 알람창 타이틀에 Zone 출력됨 1.0.0.310
+<Jira num='BX-4646' /> [Settings][Preference] 스페인어(스페인), 포르투갈어(브라질)로 설정 시, 대메뉴명이 영어로 출력되는 문제 1.0.0.293
+<Jira num='BX-4693' /> [TA] AC 인증 로그와 Sync되지 않아서 근태 보고서가 정상 출력 되지 않음 1.0.0.294
+<Jira num='BX-4926' /> User 29999명 + IR Face 3만개 존재하는 환경에서 모두 선택 후 Data File Export > Import 시 오류 팝업 발생. 1.0.0.294
+<Jira num='BX-4136' /> [Plugin][TA] TA Plugin에 Version 및 T&A HTTPS Port 출력되지 않는 현상 
+<Jira num='BX-4678' /> 다국어 적용 > custom report 생성 > 내보내기 동작 시 컬럼명 다르게 출력되는 현상 1.0.0.294
+<Jira num='BX-4990' /> [Monitoring] 특정 출입문에 테일게이팅 영상분석 이벤트가 발생하지 않는 문제 (동일 장치로 구성한 출입문이 DB에 삭제된 이력이 있을 경우) 1.0.0.329
+<Jira num='BX-4647' /> [Setting][Security] 컴서버 연결 해제된 상태에서 장치 보안 통신 사용함 설정이 가능한 문제 1.0.0.294
+<Jira num='BX-4799' /> [Settings] Master Admin 지원하는 장치 상세페이지 > Master admin 크리덴셜 등록 아이콘 표시 오류 1.0.0.310
+<Jira num='BX-4560' /> enckey 저장 경로 변경하여 Comm Server 업그레이드 후, Not serving 상태를 유지하는 문제 1.0.0.288
+<Jira num='BX-4687' /> 작업조건및동작에서 새로운 이벤트를 추가 시 해당 이벤트가 비디오-룰 생성페이지에서 eventType.49408 처럼 나옴 1.0.0.294
+<Jira num='BX-4657' /> [Monitoring] Fire Alarm 발생 후 Monitoring 메뉴 진입 시 Fire Alarm Zone에 설정 된 출입문에 이전에 Clear한 알람이 발생한 것처럼 표시되며, Video에도 알람 아이콘이 잘 못 출력 되는 문제 1.0.0.294
+<Jira num='BX-4578' /> 비밀번호 최대 실패 허용 횟수 팝업에서 {} 표시나오는 현상 1.0.0.288
+<Jira num='BX-4869' /> Face 를 보유한 다량의 사용자 선택 후 (메인 서버 + 컴 서버 장치로 전송) Transfer to Device 수행시 Fail 처리되는 문제 1.0.0.294
+<Jira num='BX-4581' /> [Settings][DB Sharding] Comm 서버에 DB 정보 변경 시 자동으로 해당 서버 재 시작 하지 않는 현상 1.0.0.288, 1.0.0.312
+<Jira num='BX-4909' /> 영문 환경에서 Data File Export, Data File Import 시 Audit Trail - Modification 에 공식 명칭 대/소문자 구분 오류 1.0.0.294
+<Jira num='BX-5016' /> [Setting][RollCall] Roll Call 생성 후 사용자 그룹 변경 시 Roll Call > List에 적용되지않음 1.0.0.336
+<Jira num='BX-4960' /> [Map] Area 설정 페이지에서 Add Door 팝업에 Door 정보가 출력 되지 않을 경우 발생 함 1.0.0.329
+<Jira num='BX-4868' /> core server 재시작 시 장치 서비스 , 코어 서비스 이상 상태로 변함 1.0.0.319
+<Jira num='BX-4694' /> Remote Access 주소로 접속 하여 Entra ID 로그인 시 Server URL 주소로 변경되는 문제 1.0.0.294
+<Jira num='BX-4608' /> [Settings][Trigger&Action] Glabal Trigger & Action 이메일 수신 시 Zone name 명칭 수정 1.0.0.288
+<Jira num='BX-4713' /> User Detail - 일부 Credential Enroll Popup 내 타이틀이 출력되지 않는 문제 1.0.0.294
+<Jira num='BX-4492' /> CSV Import - Face 발급 화면에서 결과 Count 가 CSV File 에 있는 전체 사용자 수로 표시되는 문제 1.0.0.294
+<Jira num='BX-4773' /> [Setting][License] Video 라이선스 활성화 시 camera count 옵션 값이 없을 때 팝업 메세지 추가 1.0.0.294
+<Jira num='BX-4589' /> 특정 사용자 그룹 권한 사용자로 로그인 후 권한 없는 사용자의 이벤트 발생시 경보 팝업 발생하는 문제 1.0.0.294
+<Jira num='BX-4587' /> 사용자 메뉴 권한 사용자 로그인 후 이벤트 발생 시 경보 팝업이 발생하는 문제 1.0.0.294
+<Jira num='BX-4447' /> "장치 사용자 변경 포함" 동기화 옵션에 의해 장치에서 추가된 사용자가 서버에 자동 동기화 된 경우 Tree Count 에 반영되지 않는 문제 1.0.0.294
+<Jira num='BX-4412' /> [Settings] [Launcher] TA 설치 되지 않은 상태에서 라이선스만 등록 후 TA 진입 시 출력 화면 개선 1.0.0.266
+<Jira num='BX-4903' /> [Data] Custom Report > 열 설정에 구역 명칭 출력 1.0.0.323
+<Jira num='BX-4592' /> [Settings][Device] 장치 이름을 "<script>alert('하하하')</script>" 로 설정 후, 해당 장치 Delete Data & Sync Device 클릭 시 Alert 출력 되는 문제 1.0.0.288
+<Jira num='BX-4641' /> BS2에서 BSX 업그레이드 시 기존 설정된 rule > 비디오 로그길이가 0초로 설정되어있는 현상 1.0.0.292
+<Jira num='BX-4832' /> User List 에 100명 초과 조회된 환경에서 Select All > CSV Export 시 Audit Trail 에 선택되지 않은 User 정보까지 기록되는 문제 1.0.0.294
+<Jira num='BX-4485' /> [Monitoring] Device Status Tree에서 커뮤니케이션 서버 에러 또는 Sync 에러로 이상상태 발생한 장치의 그룹을 접기 시 에 Group 옆에 이상상태 표시 되지 않음 1.0.0.278
+<Jira num='BX-4663' /> User Detail - Exclude from Directory Integration 영문 명이 길어 ... 출력되는 문제 1.0.0.294
+<Jira num='BX-5002' /> [Monitoring] 최대 체류시간이 설정된 Muster Zone에서 퇴실 사용자 발생 시 해당 사용자보다 빠른 시간의 입실 사용자 중 퇴실하지 않은 사용자에 대해서 체류시간 초과 상태로 갱신되지 않는 문제 1.0.0.329
+<Jira num='BX-4593' /> [Settings][DB Sharding] Comm 서버에 Sub DB 연결 후 Comm 서버 장치로 구성된 출입문 알람 발생 시 알람 아이콘 출력 오류 1.0.0.288
+<Jira num='BX-4787' /> Device Batch Edit > Enroll Face시 불필요한 이미지 아이콘 표시 1.0.0.310, 1.0.0.319
+<Jira num='BX-4465' /> BioStar 2 MSSQL 환경에서 BioStar X 업그레이드 시 t_syscfg 에 이전 버전이 BioStar X 업그레이드 버전으로 기록되는 문제 1.0.0.275
+<Jira num='BX-4650' /> User Detail - Credential List 에서 Lock Override 느낌표 마우스 호버시 말풍선 표시 안되는 문제 1.0.0.294
+<Jira num='BX-4479' /> TA 화면에서 세션 타임아웃이 될 경우, 로그인 화면으로 전환되나 상단 메뉴명은 TA로 출력되는 문제 
+<Jira num='BX-4842' /> 장치 1000대 추가시 60초 넘어서 완료되면 WEBSOCKET 응답오지 않는 이슈 1.0.0.294
+<Jira num='BX-4910' /> [Data] Schedule 생성 > 재 진입 > apply 반복 시 검은 화면 출력되는 현상 1.0.0.323
+<Jira num='BX-4914' /> [Settings]System Backup > General > Number of Backup Files > up down아이콘 미 표시 
+<Jira num='BX-4505' /> [Settings][Account] Settings 권한만 가진 사용자 로그인 시 장치 상태 실시간 확인 불가 1.0.0.278
+<Jira num='BX-4651' /> [Settings][Advanced AC] roll call start 동작 시 thrift call error발생하며 로그아웃되는 현상 1.0.0.294
+<Jira num='BX-4671' /> [Settings] [Custom Interface] Quick Action 동작 후, 성공 팝업에 Ok가 아닌 Yes 버튼이 출력 되는 문제 1.0.0.294
+<Jira num='BX-5001' /> [Monitoring] Global Fire Alarm 구역에 속한 Door의 장치가 연결 해제 상태에서 화재 경보 발생 후 장치가 연결되었을 때에 Input이 발생해도 출입문이 화재경보 알람 상태가 되지 않는 문제 1.0.0.329
+<Jira num='BX-4905' /> [Dashboard] real time event > selt filerts > users에서 리스트가 영역을 넘어가는현상 1.0.0.323
+<Jira num='BX-4712' /> Remote Access 주소로 접속 하여 Entra ID 로그인 후 로그아웃 시 다시 재 로그인 되는 현상 1.0.0.294, 1.0.0.319
+<Jira num='BX-4997' /> 대량의 사용자 선택 후 끊어진 장치에 Transfer to Device 무한 로딩 발생하는 문제 1.0.0.294
+<Jira num='BX-4618' /> service_token이 없는 컴서버 업그레이드시 진행 되지 않는 현상 1.0.0.290
+<Jira num='BX-4962' /> [Monitoring] 소집 고급 출입 통제에 설정된 장치가 끊어지고 다시 연결된 후 소집 리포트 진입하면 연결이 끊긴 장치가 존재한다는 팝업이 계속 발생함 1.0.0.294, 1.0.0.329
+<Jira num='BX-5004' /> Zookeeper 인증 digest sha-256 적용 1.0.0.294
+<Jira num='BX-4790' /> BS2(설치경로 , enckey custom경로) > bsx업그레이드 시 enckey경로 오류 및 서비스 토큰 없음 1.0.0.310
+<Jira num='BX-4649' /> User Detail - Smart Card 발급 화면에서 지문 선택 버튼이 일부 잘리는 문제 1.0.0.294
+<Jira num='BX-4826' /> Device Server 를 Stop 하는 경우 간헐적 으로 Device Server 의 Dump 발생하는 문제 1.0.0.310
+<Jira num='BX-4670' /> 특정 장치 동기화 모드 + Device Server 연결 해제 상황에서 사용자 정보 수정 후 Device Server 재 연결 시 장치에 동기화 안되는 문제 1.0.0.294
+<Jira num='BX-4821' /> biostar에 없는 사용자 ID로 로그인 시 오류 팝업이 상이함 1.0.0.319
+<Jira num='BX-4557' /> [Settings][Security] 암호화 > 복호화 > 암호화 시 오류 팝업 발생 (327683 에러) 1.0.0.310
+<Jira num='BX-4547' /> Device 가 Custom Smart Card, ToM 이 Use 설정된 상태에서 Device Server 가 Restart 된 뒤 Batch Edit 로 Device 다른 정보 수정 시 Not Use 되는 문제 1.0.0.294
+<Jira num='BX-4983' /> [공개용 API 아님] BS3 SL3 에 대한 신규 프로토콜 Get 하도록 diagnosis (custom_card_layout) api 수정 개발 1.0.0.294
+<Jira num='BX-4625' /> [Monitoring] Video탭 전환되고 Video가 Open되는 경우 Video 영상이 출력되지 않는 경우 발생 1.0.0.290, 1.0.0.292, 1.0.0.294
+<Jira num='BX-4617' /> bsx 업그레이드 시 enckey 폴더 변경 시 system-device-server.conf > service token dir항목에 잘못변경되는 현상 
+`제외`
