@@ -61,16 +61,6 @@ keywords:
 
   * BioStation 2 ファームウェア 1.2.0 以上
 
-  * BioLite Net ファームウェア 2.2.0 以上
-
-  * BioEntry Plus ファームウェア 2.2.0 以上
-
-  * BioEntry W ファームウェア 2.2.0 以上
-
-  * XPass ファームウェア 2.2.0 以上
-
-  * XPass S2 ファームウェア 2.2.0 以上
-
   * BioLite N2 ファームウェア 1.0.0 以上
 
   * XPass D2 ファームウェア 1.0.0 以上
@@ -243,7 +233,7 @@ keywords:
 
 * <Cmd sid='device.info.useVisualBarcode' product='2' />：デバイスのカメラによる QR/バーコード認証の使用有無を設定します。
 
-* <Cmd sid='device.info.qrCameraTimeout' product='2' />：カメラのスキャン待機時間を設定します。 設定した時間内に QR/バーコードをスキャンできない場合、認証は失敗します。
+* <Cmd sid='device.info.qrCameraTimeout' product='2' />：カメラのスキャン待機時間を設定します。 設定した時間内に QR/バーコードをスキャンしない場合、認証は失敗します。
 
 * <Cmd sid='device.info.normalize' product='2' />：ユーザーに発行した CSN カードまたは Wiegand カードと同じデータを持つ QR コードで認証できるように設定します。
 
@@ -251,7 +241,7 @@ keywords:
 
 * <Cmd sid='device.info.useBarcodeScanner' product='2' />：デバイスのスキャナーによるQR/バーコード認証の使用可否を設定します。
 
-* <Cmd sid='device.info.qrScanTimeout' product='2' />：スキャン待機時間を設定します。 設定した時間内に QR/バーコードをスキャンできない場合、認証は失敗します。
+* <Cmd sid='device.info.qrScanTimeout' product='2' />：スキャン待機時間を設定します。 設定した時間内に QR/バーコードをスキャンしない場合、認証は失敗します。
 
 :::info
 
@@ -295,7 +285,7 @@ CSNカードとフォーマットの種類を選択し、バイト順序を設�
 
   * <Cmd sid='common.general' product='2' />：カードのシリアル番号 (CSN) を変換せずにそのまま読み取って表示します。
 
-  * <Cmd sid='common.wiegand' product='2' />：ユーザーが定義した Wiegand 形式に従ってカードシリアル番号 (CSN) を変換して表示します。 新しい Wiegand 形式を設定するには [次のドキュメント](settings-credential-wiegand-format) を参照してください。
+  * <Cmd sid='common.wiegand' product='2' />：ユーザーが定義した Wiegand 形式に従ってカードシリアル番号 (CSN) を変換して表示します。 新しい Wiegand 形式を設定するには[次のドキュメント](settings-credential-wiegand-format)を参照してください。
 
 ### <Cmd sid='device.card.Wiegand' product='2' />
 
@@ -305,7 +295,7 @@ Wiegand カードの種類を選択し、Wiegand 形式を設定します。 <Cm
 
 :::info
 
-新しい Wiegand 形式を設定するには [次のドキュメント](settings-credential-wiegand-format) を参照してください。
+新しい Wiegand 形式を設定するには[次のドキュメント](settings-credential-wiegand-format)を参照してください。
 
 :::
 

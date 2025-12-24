@@ -3,7 +3,7 @@
     "message": "シンプルで耐久性が高く、安全な AI ベースの顔認証デバイス"
   },
   "externalLinks.BioStation3.desc": {
-    "message": "The New Door Access Experience"
+    "message": "新しいドアアクセス体験"
   },
   "externalLinks.FaceStationF2.desc": {
     "message": "フュージョン顔認証装置"
@@ -612,7 +612,7 @@
     "message": "出力"
   },
   "specs.interface.supervised": {
-    "message": "監視入力"
+    "message": "スーパーバイズド入力"
   },
   "specs.interface.auxInput": {
     "message": "AUX入力"
