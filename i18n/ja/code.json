@@ -612,7 +612,7 @@
     "message": "出力"
   },
   "specs.interface.supervised": {
-    "message": "監視入力"
+    "message": "スーパーバイズド入力"
   },
   "specs.interface.auxInput": {
     "message": "AUX入力"

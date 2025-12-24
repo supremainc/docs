@@ -304,7 +304,7 @@
     "description": "The label for category 릴리스 노트 in sidebar biostation3"
   },
   "sidebar.biostarx.category.Release Notes": {
-    "message": "리リースノート",
+    "message": "リリースノート",
     "description": "The label for category 'Release Notes' in sidebar 'biostarx'"
   },
   "sidebar.corestation.category.CoreStation": {
@@ -320,7 +320,7 @@
     "description": "The label for category '릴리스 노트' in sidebar 'corestation20'"
   },
   "sidebar.enclosure.category.Enclosure": {
-    "message": "エンクロージャ",
+    "message": "Enclosure",
     "description": "The label for category 'Enclosure' in sidebar 'enclosure'"
   },
   "sidebar.doorinterface.category.Door Interface": {
@@ -332,7 +332,7 @@
     "description": "The label for category '릴리스 노트' in sidebar 'doorinterface'"
   },
   "sidebar.doormodule.category.Door Module": {
-    "message": "ドアモジュール",
+    "message": "Door Module",
     "description": "The label for category 'Door Module' in sidebar 'doormodule'"
   },
   "sidebar.doormodule.category.릴리스 노트": {
@@ -340,7 +340,7 @@
     "description": "The label for category '릴리스 노트' in sidebar 'doormodule'"
   },
   "sidebar.inputmodule.category.Input Module": {
-    "message": "入力モジュール",
+    "message": "Input Module",
     "description": "The label for category 'Input Module' in sidebar 'inputmodule'"
   },
   "sidebar.inputmodule.category.릴리스 노트": {
@@ -348,7 +348,7 @@
     "description": "The label for category '릴리스 노트' in sidebar 'inputmodule'"
   },
   "sidebar.outputmodule.category.Output Module": {
-    "message": "出力モジュール",
+    "message": "Output Module",
     "description": "The label for category 'Output Module' in sidebar 'outputmodule'"
   },
   "sidebar.outputmodule.category.릴리스 노트": {
@@ -356,7 +356,7 @@
     "description": "The label for category '릴리스 노트' in sidebar 'outputmodule'"
   },
   "sidebar.securemodule.category.Secure Module": {
-    "message": "セキュアモジュール",
+    "message": "Secure Module",
     "description": "The label for category 'Secure Module' in sidebar 'securemodule'"
   },
   "sidebar.securemodule.category.릴리스 노트": {
@@ -364,11 +364,11 @@
     "description": "The label for category '릴리스 노트' in sidebar 'securemodule'"
   },
   "sidebar.extendedmodule.category.Extended Module": {
-    "message": "拡張モジュール",
+    "message": "Extended Module",
     "description": "The label for category 'Extended Module' in sidebar 'extendedmodule'"
   },
   "sidebar.extendedmodule_sc.category.Extended Module-SC": {
-    "message": "拡張モジュール-SC",
+    "message": "Extended Module-SC",
     "description": "The label for category 'Extended Module-SC' in sidebar 'extendedmodule_sc'"
   },
   "sidebar.facestationf2.category.릴리스 노트": {
@@ -412,7 +412,7 @@
     "description": "The label for category '릴리스 노트' in sidebar 'bioentryw2'"
   },
   "sidebar.device_manager.category.Device Manager": {
-    "message": "デバイスマネージャー",
+    "message": "Device Manager",
     "description": "The label for category 'Device Manager' in sidebar 'device_manager'"
   },
   "sidebar.bioentryw3.category.릴리스 노트": {
@@ -460,7 +460,7 @@
     "description": "The label for category '릴리스 노트' in sidebar 'xstation2'"
   },
   "sidebar.corestation_setup_manager.category.CoreStation Setup Manager": {
-    "message": "CoreStation セットアップマネージャー",
+    "message": "CoreStation Setup Manager",
     "description": "The label for category 'CoreStation Setup Manager' in sidebar 'corestation_setup_manager'"
   },
   "sidebar.xpassq2.category.XPass Q2": {
