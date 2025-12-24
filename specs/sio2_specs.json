@@ -41,6 +41,20 @@
                   "RS-485 RX: 1ea",
                   "INPUT: 2ea",
                   "RELAY: 1ea"
+                ],
+                "es": [
+                  "POWER: 1unidad",
+                  "RS-485 TX: 1unidad",
+                  "RS-485 RX: 1unidad",
+                  "INPUT: 2unidades",
+                  "RELAY: 1unidad"
+                ],
+                "ja": [
+                  "POWER: 1ea",
+                  "RS-485 TX: 1ea",
+                  "RS-485 RX: 1ea",
+                  "INPUT: 2ea",
+                  "RELAY: 1ea"
                 ]
               }
             }
@@ -89,7 +103,12 @@
         "certifications": {
           "label": "인증",
           "label_id": "specs.general.certifications",
-          "value": "CE, UKCA, KC, FCC, RoHS, REACH, WEEE"
+          "value": {
+            "ko": "CE, UKCA, KC, FCC, RoHS, REACH, WEEE",
+            "en": "CE, UKCA, KC, FCC, RoHS, REACH, WEEE",
+            "es": "CE, UKCA, KC, FCC, RoHS, REACH, WEEE",
+            "ja": "CE、UKCA、KC、FCC、RoHS、REACH、WEEE"
+          }
         }
       }
     },
@@ -102,7 +121,9 @@
           "label_id": "specs.interface.rs485",
           "value": {
             "ko": "1채널",
-            "en": "1 ch"
+            "en": "1 ch",
+            "es": "1 canal",
+            "ja": "1 チャンネル"
           }
         },
         "rs485_protocol": {
@@ -120,7 +141,9 @@
           "label_id": "specs.interface.input",
           "value": {
             "ko": "2채널",
-            "en": "2 ch"
+            "en": "2 ch",
+            "es": "2 canales",
+            "ja": "2 チャンネル"
           }
         },
         "relay": {
@@ -130,7 +153,7 @@
             "ko": "1개",
             "en": "1 relay",
             "es": "1 relé",
-            "ja": "リレー 1"
+            "ja": "1 リレー"
           }
         }
       }

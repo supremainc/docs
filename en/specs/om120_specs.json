@@ -43,6 +43,22 @@
                   "RS-485 TX: 1ea",
                   "RS-485 RX: 1ea",
                   "AUX IN: 2ea"
+                ],
+                "es": [
+                  "POWER: 1unidad",
+                  "STATUS: 1unidad",
+                  "RELAY: 12unidades",
+                  "RS-485 TX: 1unidad",
+                  "RS-485 RX: 1unidad",
+                  "AUX IN: 2unidades"
+                ],
+                "ja": [
+                  "POWER: 1ea",
+                  "STATUS: 1ea",
+                  "RELAY: 12ea",
+                  "RS-485 TX: 1ea",
+                  "RS-485 RX: 1ea",
+                  "AUX IN: 2ea"
                 ]
               }
             }
@@ -51,7 +67,12 @@
         "operating_temp": {
           "label": "동작 온도",
           "label_id": "specs.general.operating_temp",
-          "value": "-20 °C ~ 60 °C"
+          "value": {
+            "ko": "-20 °C ~ 60 °C",
+            "en": "-20 °C ~ 60 °C",
+            "es": "De -20 °C a 60 °C",
+            "ja": "-20 °C ~ 60 °C"
+          }
         },
         "storage_temp": {
           "label": "보관 온도",
@@ -68,7 +89,9 @@
           "label_id": "specs.general.operating_humidity",
           "value": {
             "ko": "0 % ~ 95 %, 비응축",
-            "en": "0 % ~ 95 %, non-condensing"
+            "en": "0 % ~ 95 %, non-condensing",
+            "es": "Del 0 % al 95 %, sin condensación",
+            "ja": "0 % ~ 95 %（結露なきこと）"
           }
         },
         "storage_humidity": {
@@ -76,13 +99,20 @@
           "label_id": "specs.general.storage_humidity",
           "value": {
             "ko": "0 % ~ 95 %, 비응축",
-            "en": "0 % ~ 95 %, non-condensing"
+            "en": "0 % ~ 95 %, non-condensing",
+            "es": "Del 0 % al 95 %, sin condensación",
+            "ja": "0 % ~ 95 %（結露なきこと）"
           }
         },
         "certifications": {
           "label": "인증",
           "label_id": "specs.general.certifications",
-          "value": "CE, UKCA, KC, FCC, RoHS, REACH, WEEE"
+          "value": {
+            "ko": "CE, UKCA, KC, FCC, RoHS, REACH, WEEE",
+            "en": "CE, UKCA, KC, FCC, RoHS, REACH, WEEE",
+            "es": "CE, UKCA, KC, FCC, RoHS, REACH, WEEE",
+            "ja": "CE、UKCA、KC、FCC、RoHS、REACH、WEEE"
+          }
         }
       }
     },
@@ -95,7 +125,9 @@
           "label_id": "specs.interface.rs485",
           "value": {
             "ko": "1채널",
-            "en": "1 ch"
+            "en": "1 ch",
+            "es": "1 canal",
+            "ja": "1 チャンネル"
           }
         },
         "rs485_protocol": {
@@ -113,7 +145,9 @@
           "label_id": "specs.interface.auxInput",
           "value": {
             "ko": "스위치 접점 입력 2채널",
-            "en": "2 ch Dry Contact Input"
+            "en": "2 ch Dry Contact Input",
+            "es": "2 canales de entrada de contacto seco",
+            "ja": "2 チャンネルドライ接点入力"
           }
         },
         "relay": {
@@ -121,7 +155,9 @@
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "12개",
-            "en": "12 relays"
+            "en": "12 relays",
+            "es": "12 relés",
+            "ja": "12 リレー"
           }
         }
       }
@@ -151,13 +187,20 @@
           "label_id": "specs.power.switch_input_vih",
           "value": {
             "ko": "최대: 5 V (접점 출력)",
-            "en": "Max.: 5 V (Dry Contact)"
+            "en": "Max.: 5 V (Dry Contact)",
+            "es": "Máx.: 5 V (contacto seco)",
+            "ja": "最大 5 V（ドライ接点）"
           }
         },
         "relay": {
           "label": "릴레이",
           "label_id": "specs.power.relay",
-          "value": "5 A @ 30 VDC Resistive load"
+          "value": {
+            "ko": "5 A @ 30 VDC Resistive load",
+            "en": "5 A @ 30 VDC Resistive load",
+            "es": "Carga resistiva de 5 A a 30 VCC",
+            "ja": "5 A @ 30 VDC 抵抗負荷"
+          }
         }
       }
     }

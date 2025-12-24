@@ -21,7 +21,9 @@
           "label_id": "specs.interface.rs485",
           "value": {
             "ko": "1채널",
-            "en": "1 ch"
+            "en": "1 ch",
+            "es": "1 canal",
+            "ja": "1 チャンネル"
           }
         },
         "rs232c": {
@@ -29,7 +31,9 @@
           "label_id": "specs.interface.rs232c",
           "value": {
             "ko": "1채널",
-            "en": "1 ch"
+            "en": "1 ch",
+            "es": "1 canal",
+            "ja": "1 チャンネル"
           }
         }
       }

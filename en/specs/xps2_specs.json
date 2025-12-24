@@ -7,12 +7,22 @@
         "rfcard": {
           "label": "RF 카드",
           "label_id": "specs.credentials.rfcard",
-          "value": "13.56MHz MIFARE, MIFARE Plus, DESFire/EV1 (CSN), FeliCa, ISO14443A, ISO15693"
+          "value": {
+            "ko": "13.56MHz MIFARE, MIFARE Plus, DESFire/EV1 (CSN), FeliCa, ISO14443A, ISO15693",
+            "en": "13.56MHz MIFARE, MIFARE Plus, DESFire/EV1 (CSN), FeliCa, ISO14443A, ISO15693",
+            "es": "13.56MHz MIFARE, MIFARE Plus, DESFire/EV1 (CSN), FeliCa, ISO14443A, ISO15693",
+            "ja": "13.56MHz MIFARE、MIFARE Plus、DESFire/EV1 (CSN)、FeliCa、ISO14443A、ISO15693"
+          }
         },
         "rf_distance": {
           "label": "RF 인식 거리",
           "label_id": "specs.credentials.rf_distance",
-          "value": "MIFARE/DESFire: 50 mm, FeliCa: 30 mm",
+          "value": {
+            "ko": "MIFARE/DESFire: 50 mm, FeliCa: 30 mm",
+            "en": "MIFARE/DESFire: 50 mm, FeliCa: 30 mm",
+            "es": "MIFARE/DESFire: 50 mm, FeliCa: 30 mm",
+            "ja": "MIFARE/DESFire：50 mm、FeliCa：30 mm"
+          },
           "annotation_label": "anno1"
         },
         "multi_controller": {
@@ -29,12 +39,17 @@
         "cpu": {
           "label": "CPU",
           "label_id": "specs.general.cpu",
-          "value": "533 MHz DSP"
+          "value": {
+            "ko": "533 MHz DSP",
+            "en": "533 MHz DSP",
+            "es": "DSP de 533 MHz",
+            "ja": "533 MHz DSP"
+          }
         },
         "memory": {
           "label": "메모리",
           "label_id": "specs.general.memory",
-          "value": "16 MB RAM + 16 MB Flash"
+          "value": "16 MB Flash + 16 MB RAM"
         },
         "led_type": {
           "label": "LED",
@@ -59,7 +74,12 @@
         "operating_temp": {
           "label": "동작 온도",
           "label_id": "specs.general.operating_temp",
-          "value": "-35 °C ~ 65 °C"
+          "value": {
+            "ko": "-35 °C ~ 65 °C",
+            "en": "-35 °C ~ 65 °C",
+            "es": "De -35 °C a 65 °C",
+            "ja": "-35 °C ~ 65 °C"
+          }
         },
         "storage_temp": {
           "label": "보관 온도",
@@ -100,7 +120,12 @@
         "certifications": {
           "label": "인증",
           "label_id": "specs.general.certifications",
-          "value": "CE, UKCA, KC, FCC, BIS, RoHS, REACH, WEEE"
+          "value": {
+            "ko": "CE, UKCA, KC, FCC, BIS, RoHS, REACH, WEEE",
+            "en": "CE, UKCA, KC, FCC, BIS, RoHS, REACH, WEEE",
+            "es": "CE, UKCA, KC, FCC, BIS, RoHS, REACH, WEEE",
+            "ja": "CE、UKCA、KC、FCC、BIS、RoHS、REACH、WEEE"
+          }
         }
       }
     },
@@ -189,7 +214,9 @@
           "label_id": "specs.interface.relay",
           "value": {
             "ko": "1개 (전압: 최대 24 Vdc / 전류: 0.5 A, 최대 1.0 A)",
-            "en": "1 relay (Voltage: Max. 24 Vdc / Current: Typ. 0.5 A, Max. 1.0 A)"
+            "en": "1 relay (Voltage: Max. 24 Vdc / Current: Typ. 0.5 A, Max. 1.0 A)",
+            "es": "1 relé (Voltaje: Máx. 24 V CC / Corriente: Típ. 0.5 A, Máx. 1.0 A)",
+            "ja": "1 リレー（電圧：最大 24 V DC / 電流：典型 0.5 A、最大 1.0 A）"
           }
         },
         "tamper": {

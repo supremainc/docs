@@ -98,7 +98,12 @@
         "rf_distance": {
           "label": "RF 인식 거리",
           "label_id": "specs.credentials.rf_distance",
-          "value": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+          "value": {
+            "ko": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+            "en": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+            "es": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+            "ja": "EM/MIFARE/DESFire/HID iCLASS：50 mm、HID Prox/FeliCa：30 mm"
+          },
           "annotation_label": "anno2"
         },
         "mobile": {
@@ -120,7 +125,12 @@
         "cpu": {
           "label": "CPU",
           "label_id": "specs.general.cpu",
-          "value": "1.5GHz Quad Core"
+          "value": {
+            "ko": "1.5 GHz Quad Core",
+            "en": "1.5 GHz Quad Core",
+            "es": "1.5 GHz Quad Core",
+            "ja": "1.5 GHz クアッドコア"
+          }
         },
         "memory": {
           "label": "메모리",
@@ -137,7 +147,9 @@
           "label_id": "specs.general.lcd_type",
           "value": {
             "ko": "2.8\" 컬러 TFT LCD",
-            "en": "2.8\" color TFT LCD"
+            "en": "2.8\" color TFT LCD",
+            "es": "Pantalla TFT-LCD en color de 2.8\"",
+            "ja": "2.8 インチカラー TFT LCD"
           }
         },
         "lcd_resolution": {
@@ -163,12 +175,17 @@
         "sound": {
           "label": "소리",
           "label_id": "specs.general.sound",
-          "value": "16bit"
+          "value": "16 bit"
         },
         "operating_temp": {
           "label": "동작 온도",
           "label_id": "specs.general.operating_temp",
-          "value": "-20 °C ~ 60 °C"
+          "value": {
+            "ko": "-20 °C ~ 60 °C",
+            "en": "-20 °C ~ 60 °C",
+            "es": "De -20 °C a 60 °C",
+            "ja": "-20 °C ~ 60 °C"
+          }
         },
         "storage_temp": {
           "label": "보관 온도",
@@ -209,7 +226,12 @@
         "certifications": {
           "label": "인증",
           "label_id": "specs.general.certifications",
-          "value": "CE, UKCA, KC, FCC, RCM, SIG, RoHS, REACH, WEEE"
+          "value": {
+            "ko": "CE, UKCA, KC, FCC, RCM, SIG, RoHS, REACH, WEEE",
+            "en": "CE, UKCA, KC, FCC, RCM, SIG, RoHS, REACH, WEEE",
+            "es": "CE, UKCA, KC, FCC, RCM, SIG, RoHS, REACH, WEEE",
+            "ja": "CE、UKCA、KC、FCC、RCM、SIG、RoHS、REACH、WEEE"
+          }
         }
       }
     },
@@ -228,7 +250,9 @@
           "label_id": "specs.storage.max_credentials_1n",
           "value": {
             "ko": "지문: 100,000",
-            "en": "Fingerprint: 100,000"
+            "en": "Fingerprint: 100,000",
+            "es": "Huella dactilar: 100,000",
+            "ja": "指紋：100,000"
           }
         },
         "max_credentials_1on1": {
@@ -236,7 +260,9 @@
           "label_id": "specs.storage.max_credentials_1on1",
           "value": {
             "ko": [ "지문: 500,000", "카드: 500,000", "PIN: 500,000" ],
-            "en": [ "Fingerprint: 500,000", "Card: 500,000", "PIN: 500,000" ]
+            "en": [ "Fingerprint: 500,000", "Card: 500,000", "PIN: 500,000" ],
+            "es": [ "Huella dactilar: 500,000", "Tarjeta: 500,000", "PIN: 500,000" ],
+            "ja": [ "指紋：500,000", "カード：500,000", "PIN：500,000" ]
           }
         },
         "max_text_logs": {
@@ -337,7 +363,7 @@
             "ko": "1개",
             "en": "1 relay",
             "es": "1 relé",
-            "ja": "リレー 1"
+            "ja": "1 リレー"
           }
         },
         "usb": {
@@ -360,7 +386,9 @@
           "label_id": "specs.interface.poe",
           "value": {
             "ko": "지원 (IEEE 802.3af 호환)",
-            "en": "Supported (IEEE 802.3af compliant)"
+            "en": "Supported (IEEE 802.3af compliant)",
+            "es": "Compatible (compatible con IEEE 802.3af)",
+            "ja": "対応（IEEE 802.3af 互換）"
           }
         },
         "tamper": {
@@ -405,7 +433,7 @@
           "value": {
             "ko": [ "최소: 3 V", "최대: 5 V" ],
             "en": [ "Min.: 3 V", "Max.: 5 V" ],
-            "es": [ "Mínimo: 3 V", "Máx.: 5 V" ],
+            "es": [ "Mín.: 3 V", "Máx.: 5 V" ],
             "ja": [ "最小：3 V", "最大：5 V" ]
           }
         },
@@ -415,7 +443,7 @@
           "value": {
             "ko": "최대: 1 V",
             "en": "Max.: 1 V",
-            "es": "Máximo: 1 V",
+            "es": "Máx.: 1 V",
             "ja": "最大：1 V"
           }
         },

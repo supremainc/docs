@@ -99,7 +99,12 @@
         "rf_distance": {
           "label": "RF 인식 거리",
           "label_id": "specs.credentials.rf_distance",
-          "value": "EM/HID Prox/MIFARE/DESFire/HID iCLASS: 50 mm, Felica: 30 mm",
+          "value": {
+            "ko": "EM/HID Prox/MIFARE/DESFire/HID iCLASS: 50 mm, Felica: 30 mm",
+            "en": "EM/HID Prox/MIFARE/DESFire/HID iCLASS: 50 mm, Felica: 30 mm",
+            "es": "EM/HID Prox/MIFARE/DESFire/HID iCLASS: 50 mm, Felica: 30 mm",
+            "ja": "EM/HID Prox/MIFARE/DESFire/HID iCLASS：50 mm、Felica：30 mm"
+          },
           "annotation_label": "anno2"
         },
         "mobile": {
@@ -131,7 +136,9 @@
               "label": "XS2-DPB, XS2-APB,</br>XS2-ODPB, XS2-OAPB",
               "value": {
                 "ko": "지원<sup id='anno4_dest'><a href='#anno4'></a></sup>",
-                "en": "Supported<sup id='anno4_dest'><a href='#anno4'></a></sup>"
+                "en": "Supported<sup id='anno4_dest'><a href='#anno4'></a></sup>",
+                "es": "Compatible<sup id='anno4_dest'><a href='#anno4'></a></sup>",
+                "ja": "サポート対象<sup id='anno4_dest'><a href='#anno4'></a></sup>"
               },
               "annotation_value": "anno4"
             }
@@ -146,7 +153,12 @@
         "cpu": {
           "label": "CPU",
           "label_id": "specs.general.cpu",
-          "value": "1.5 GHz Quad Core"
+          "value": {
+            "ko": "1.5 GHz Quad Core",
+            "en": "1.5 GHz Quad Core",
+            "es": "1.5 GHz Quad Core",
+            "ja": "1.5 GHz クアッドコア"
+          }
         },
         "memory": {
           "label": "메모리",
@@ -163,7 +175,9 @@
           "label_id": "specs.general.lcd_type",
           "value": {
             "ko": "4\" IPS 컬러 LCD",
-            "en": "4\" IPS color LCD"
+            "en": "4\" IPS color LCD",
+            "es": "LCD en color IPS 4\"",
+            "ja": "4 インチ IPS カラー LCD"
           }
         },
         "lcd_resolution": {
@@ -179,7 +193,7 @@
         "sound": {
           "label": "소리",
           "label_id": "specs.general.sound",
-          "value": "24bit"
+          "value": "24 bit"
         },
         "operating_temp": {
           "label": "동작 온도",
@@ -226,7 +240,9 @@
           "label_id": "specs.general.camera_type",
           "value": {
             "ko": "CMOS 2M 픽셀",
-            "en": "CMOS 2M pixels"
+            "en": "CMOS 2M pixels",
+            "es": "CMOS de 2M píxeles",
+            "ja": "CMOS 200 画素"
           }
         },
         "camera_resolution": {
@@ -234,7 +250,9 @@
           "label_id": "specs.general.camera_resolution",
           "value": {
             "ko": "1600 x 1200 픽셀",
-            "en": "1600 x 1200 pixels"
+            "en": "1600 x 1200 pixels",
+            "es": "1600 x 1200 píxeles",
+            "ja": "1600 x 1200 画素"
           }
         },
         "ip_rating": {
@@ -250,11 +268,21 @@
           "items": {
             "model1": {
               "label": "XS2-DPB, XS2-APB,</br>XS2-QDPB, XS2-QAPB",
-              "value": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, TELEC, RoHS, REACH, WEEE"
+              "value": {
+               "ko": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, TELEC, RoHS, REACH, WEEE",
+               "en": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, TELEC, RoHS, REACH, WEEE",
+               "es": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, TELEC, RoHS, REACH, WEEE",
+               "ja": "CE、UKCA、KC、FCC、IC、RCM、BIS、ANATEL、SIG、TELEC、RoHS、REACH、WEEE"
+              }
             },
             "model2": {
               "label": "XS2-ODPB, XS2-OAPB",
-              "value": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE"
+              "value": {
+               "ko": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE",
+               "en": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE",
+               "es": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE",
+               "ja": "CE、UKCA、KC、FCC、IC、RCM、BIS、ANATEL、SIG、RoHS、REACH、WEEE"
+              }
             }
           }
         }
@@ -278,8 +306,10 @@
             "model1": {
               "label": "XS2-ODPB, XS2-OAPB",
               "value": {
-                "ko": "지문: 100,000",
-                "en": "Fingerprint: 100,000"
+               "ko": "지문: 100,000",
+               "en": "Fingerprint: 100,000",
+               "es": "Huella dactilar: 100,000",
+               "ja": "指紋：100,000"
               }
             }
           }
@@ -292,29 +322,19 @@
             "model1": {
               "label": "XS2-DPB, XS2-APB,</br>XS2-QDPB, XS2-QAPB",
               "value": {
-                "ko": [
-                  "카드: 500,000",
-                  "PIN: 500,000"
-                ],
-                "en": [
-                  "Card: 500,000",
-                  "PIN: 500,000"
-                ]
+                "ko": [ "카드: 500,000", "PIN: 500,000" ],
+                "en": [ "Card: 500,000", "PIN: 500,000" ],
+                "es": [ "Tarjeta: 500,000", "PIN: 500,000" ],
+                "ja": [ "カード：500,000", "PIN：500,000" ]
               }
             },
             "model2": {
               "label": "XS2-ODPB, XS2-OAPB",
               "value": {
-                "ko": [
-                  "지문: 500,000",
-                  "카드: 500,000",
-                  "PIN: 500,000"
-                ],
-                "en": [
-                  "Fingerprint: 500,000",
-                  "Card: 500,000",
-                  "PIN: 500,000"
-                ]
+                "ko": [ "지문: 500,000", "카드: 500,000", "PIN: 500,000" ],
+                "en": [ "Fingerprint: 500,000", "Card: 500,000", "PIN: 500,000" ],
+                "es": [ "Huella dactilar: 500,000", "Tarjeta: 500,000", "PIN: 500,000" ],
+                "ja": [ "指紋：500,000", "カード：500,000", "PIN：500,000" ]
               }
             }
           }
@@ -402,7 +422,7 @@
             "ko": "1개",
             "en": "1 relay",
             "es": "1 relé",
-            "ja": "リレー 1"
+            "ja": "1 リレー"
           }
         },
         "usb": {
@@ -420,7 +440,9 @@
           "label_id": "specs.interface.poe",
           "value": {
             "ko": "지원 (IEEE 802.3af 호환)",
-            "en": "Supported (IEEE 802.3af compliant)"
+            "en": "Supported (IEEE 802.3af compliant)",
+            "es": "Compatible (compatible con IEEE 802.3af)",
+            "ja": "対応（IEEE 802.3af 互換）"
           }
         },
         "tamper": {
@@ -465,7 +487,7 @@
           "value": {
             "ko": [ "최소: 3 V", "최대: 5 V" ],
             "en": [ "Min.: 3 V", "Max.: 5 V" ],
-            "es": [ "Mínimo: 3 V", "Máx.: 5 V" ],
+            "es": [ "Mín.: 3 V", "Máx.: 5 V" ],
             "ja": [ "最小：3 V", "最大：5 V" ]
           }
         },
@@ -475,7 +497,7 @@
           "value": {
             "ko": "최대: 1 V",
             "en": "Max.: 1 V",
-            "es": "Máximo: 1 V",
+            "es": "Máx.: 1 V",
             "ja": "最大：1 V"
           }
         },

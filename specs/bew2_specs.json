@@ -59,7 +59,9 @@
                   "label_id": "specs.credentials.biometrics.fingerprint.live_fingerprint_detection",
                   "value": {
                     "ko": "지원 (HW + SW 기반)",
-                    "en": "Supported (HW + SW based)"
+                    "en": "Supported (HW + SW-based)",
+                    "es": "Compatible (basado en HW + SW)",
+                    "ja": "サポート対象（HW + SW ベース）"
                   }
                 }
               }
@@ -73,12 +75,22 @@
           "items": {
             "model2": {
               "label": "BEW2-OHPB",
-              "value": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
+              "value": {
+               "ko": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
+               "en": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
+               "es": "125kHz EM, HID Prox y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
+               "ja": "125kHz EM、HID Prox および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>、FeliCa"
+              },
               "annotation_value": "anno1"
             },
             "model1": {
               "label": "BEW2-ODPB",
-              "value": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>, FeliCa",
+              "value": {
+               "ko": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>, FeliCa",
+               "en": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>, FeliCa",
+               "es": "125kHz EM y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>, FeliCa",
+               "ja": "125kHz EM および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>、FeliCa"
+              },
               "annotation_value": "anno1"
             },
             "model3": {
@@ -96,7 +108,12 @@
         "rf_distance": {
           "label": "RF 인식 거리",
           "label_id": "specs.credentials.rf_distance",
-          "value": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+          "value": {
+            "ko": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+            "en": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+            "es": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+            "ja": "EM/MIFARE/DESFire/HID iCLASS：50 mm、HID Prox/FeliCa：30 mm"
+          },
           "annotation_label": "anno2"
         },
         "mobile": {
@@ -118,7 +135,12 @@
         "cpu": {
           "label": "CPU",
           "label_id": "specs.general.cpu",
-          "value": "1.2 GHz Quad Core"
+          "value": {
+            "ko": "1.2 GHz Quad Core",
+            "en": "1.2 GHz Quad Core",
+            "es": "1.2 GHz Quad Core",
+            "ja": "1.2 GHz クアッドコア"
+          }
         },
         "memory": {
           "label": "메모리",
@@ -205,7 +227,12 @@
         "certifications": {
           "label": "인증",
           "label_id": "specs.general.certifications",
-          "value": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE, ETL Listed to UL 294",
+          "value": {
+            "ko": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE, ETL Listed to UL 294",
+            "en": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE, ETL Listed to UL 294",
+            "es": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE, ETL Listed to UL 294",
+            "ja": "CE、UKCA、KC、FCC、IC、RCM、BIS、ANATEL、SIG、RoHS、REACH、WEEE、ETL Listed to UL 294"
+          },
           "annotation_value": "anno3"
         }
       }
@@ -225,7 +252,9 @@
           "label_id": "specs.storage.max_credentials_1n",
           "value": {
             "ko": "지문: 100,000",
-            "en": "Fingerprint: 100,000"
+            "en": "Fingerprint: 100,000",
+            "es": "Huella dactilar: 100,000",
+            "ja": "指紋：100,000"
           }
         },
         "max_credentials_1on1": {
@@ -233,7 +262,9 @@
           "label_id": "specs.storage.max_credentials_1on1",
           "value": {
             "ko": [ "지문: 500,000", "카드: 500,000" ],
-            "en": [ "Fingerprint: 500,000", "Card: 500,000" ]
+            "en": [ "Fingerprint: 500,000", "Card: 500,000" ],
+            "es": [ "Huella dactilar: 500,000", "Tarjeta: 500,000" ],
+            "ja": [ "指紋：500,000", "カード：500,000" ]
           }
         },
         "max_text_logs": {
@@ -314,7 +345,7 @@
             "ko": "1개",
             "en": "1 relay",
             "es": "1 relé",
-            "ja": "リレー 1"
+            "ja": "1 リレー"
           }
         },
         "poe": {
@@ -322,7 +353,9 @@
           "label_id": "specs.interface.poe",
           "value": {
             "ko": "지원 (Power over Ethernet 44 VDC Max 12 W, IEEE 802.3af)",
-            "en": "Supported (Power over Ethernet 44 VDC Max 12 W, IEEE 802.3af)"
+            "en": "Supported (Power over Ethernet 44 VDC Max 12 W, IEEE 802.3af)",
+            "es": "Compatible (alimentación a través de Ethernet 44 VCC, máximo 12 W, IEEE 802.3af)",
+            "ja": "サポート対象（Power over Ethernet 44 VDC 最大 12 W、IEEE 802.3af）"
           }
         },
         "tamper": {
@@ -358,7 +391,7 @@
           "value": {
             "ko": [ "최소: 3 V", "최대: 5 V" ],
             "en": [ "Min.: 3 V", "Max.: 5 V" ],
-            "es": [ "Mínimo: 3 V", "Máx.: 5 V" ],
+            "es": [ "Mín.: 3 V", "Máx.: 5 V" ],
             "ja": [ "最小：3 V", "最大：5 V" ]
           }
         },
@@ -368,7 +401,7 @@
           "value": {
             "ko": "최대: 1 V",
             "en": "Max.: 1 V",
-            "es": "Máximo: 1 V",
+            "es": "Máx.: 1 V",
             "ja": "最大：1 V"
           }
         },

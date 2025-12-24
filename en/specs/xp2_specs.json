@@ -31,14 +31,24 @@
             },
             "model3": {
               "label": "XP2-MAPB-H",
-              "value": "125kHz EM, HID Prox & 13.56MHz iCLASS SE/SR/Seos"
+              "value": {
+               "ko": "125kHz EM, HID Prox & 13.56MHz iCLASS SE/SR/Seos",
+               "en": "125kHz EM, HID Prox & 13.56MHz iCLASS SE/SR/Seos",
+               "es": "125kHz EM, HID Prox y 13.56MHz iCLASS SE/SR/Seos",
+               "ja": "125kHz EM、HID Prox および 13.56MHz iCLASS SE/SR/Seos"
+              }
             }
           }
         },
         "rf_distance": {
           "label": "RF 인식 거리",
           "label_id": "specs.credentials.rf_distance",
-          "value": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+          "value": {
+            "ko": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+            "en": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+            "es": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+            "ja": "EM/MIFARE/DESFire/HID iCLASS：50 mm、HID Prox/FeliCa：30 mm"
+          },
           "annotation_label": "anno2"
         },
         "mobile": {
@@ -95,7 +105,12 @@
         "operating_temp": {
           "label": "동작 온도",
           "label_id": "specs.general.operating_temp",
-          "value": "-35 °C ~ 65 °C"
+          "value": {
+            "ko": "-35 °C ~ 65 °C",
+            "en": "-35 °C ~ 65 °C",
+            "es": "De -35 °C a 65 °C",
+            "ja": "-35 °C ~ 65 °C"
+          }
         },
         "storage_temp": {
           "label": "보관 온도",
@@ -112,7 +127,9 @@
           "label_id": "specs.general.operating_humidity",
           "value": {
             "ko": "0 % ~ 95 %, 비응축",
-            "en": "0 % ~ 95 %, non-condensing"
+            "en": "0 % ~ 95 %, non-condensing",
+            "es": "Del 0 % al 95 %, sin condensación",
+            "ja": "0 % ~ 95 %（結露なきこと）"
           }
         },
         "storage_humidity": {
@@ -120,7 +137,9 @@
           "label_id": "specs.general.storage_humidity",
           "value": {
             "ko": "0 % ~ 95 %, 비응축",
-            "en": "0 % ~ 95 %, non-condensing"
+            "en": "0 % ~ 95 %, non-condensing",
+            "es": "Del 0 % al 95 %, sin condensación",
+            "ja": "0 % ~ 95 %（結露なきこと）"
           }
         },
         "ip_rating": {
@@ -142,15 +161,30 @@
           "items": {
             "model1": {
               "label": "XP2-MDPB, XP2-GDPB",
-              "value": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE"
+              "value": {
+               "ko": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE",
+               "en": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE",
+               "es": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE",
+               "ja": "CE、UKCA、KC、FCC、IC、RCM、BIS、SIG、RoHS、REACH、WEEE"
+              }
             },
             "model2": {
               "label": "XP2-GKDPB",
-              "value": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, TELEC, RoHS, REACH, WEEE"
+              "value": {
+               "ko": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, TELEC, RoHS, REACH, WEEE",
+               "en": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, TELEC, RoHS, REACH, WEEE",
+               "es": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, TELEC, RoHS, REACH, WEEE",
+               "ja": "CE、UKCA、KC、FCC、IC、RCM、BIS、SIG、TELEC、RoHS、REACH、WEEE"
+              }
             },
             "model3": {
               "label": "XP2-MAPB,<br/>XP2-MAPB-H",
-              "value": "CE, UKCA, KC, FCC, RCM, SIG, RoHS, REACH, WEEE"
+              "value": {
+               "ko": "CE, UKCA, KC, FCC, RCM, SIG, RoHS, REACH, WEEE",
+               "en": "CE, UKCA, KC, FCC, RCM, SIG, RoHS, REACH, WEEE",
+               "es": "CE, UKCA, KC, FCC, RCM, SIG, RoHS, REACH, WEEE",
+               "ja": "CE、UKCA、KC、FCC、RCM、SIG、RoHS、REACH、WEEE"
+              }
             }
           }
         }
@@ -248,7 +282,7 @@
             "ko": "1개",
             "en": "1 relay",
             "es": "1 relé",
-            "ja": "リレー 1"
+            "ja": "1 リレー"
           }
         },
         "poe": {
@@ -256,7 +290,9 @@
           "label_id": "specs.interface.poe",
           "value": {
             "ko": "지원 (IEEE 802.3af 호환)",
-            "en": "Supported (IEEE 802.3af compliant)"
+            "en": "Supported (IEEE 802.3af compliant)",
+            "es": "Compatible (compatible con IEEE 802.3af)",
+            "ja": "対応（IEEE 802.3af 互換）"
           }
         },
         "tamper": {
@@ -301,7 +337,7 @@
           "value": {
             "ko": [ "최소: 3 V", "최대: 5 V" ],
             "en": [ "Min.: 3 V", "Max.: 5 V" ],
-            "es": [ "Mínimo: 3 V", "Máx.: 5 V" ],
+            "es": [ "Mín.: 3 V", "Máx.: 5 V" ],
             "ja": [ "最小：3 V", "最大：5 V" ]
           }
         },
@@ -311,7 +347,7 @@
           "value": {
             "ko": "최대: 1 V",
             "en": "Max.: 1 V",
-            "es": "Máximo: 1 V",
+            "es": "Máx.: 1 V",
             "ja": "最大：1 V"
           }
         },
