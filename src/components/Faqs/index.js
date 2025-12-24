@@ -8,6 +8,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import faqsKR from "@site/i18n/ko/faqs.json";
 import faqsEN from "@site/i18n/en/faqs.json";
 import faqsJA from "@site/i18n/ja/faqs.json";
+import faqsES from "@site/i18n/es/faqs.json";
 
 /**
  * FAQ 컴포넌트
@@ -59,6 +60,7 @@ export default function Faqs() {
     ko: faqsKR,
     en: faqsEN,
     ja: faqsJA,
+    es: faqsES,
   };
   const { i18n: {currentLocale} } = useDocusaurusContext();
   const location = useLocation();
