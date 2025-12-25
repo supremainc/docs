@@ -208,7 +208,7 @@ function _createMdxContent(props) {
         sid: "button.addFace",
         product: "2"
       }), " 버튼을 클릭하세요. ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "userCredential.enroll.faceEnroll",
+        sid: "userCredential.enroll.visualFaceEnroll",
         product: "2"
       }), " 창이 나타나면 각 항목을 설정하고 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "button.enroll",

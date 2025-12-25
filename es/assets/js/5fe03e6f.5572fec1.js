@@ -208,7 +208,7 @@ function _createMdxContent(props) {
         sid: "common.credential",
         product: "2"
       }), ". Cuando aparezca la ventana ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "userCredential.enroll.faceEnroll",
+        sid: "userCredential.enroll.visualFaceEnroll",
         product: "2"
       }), ", configura cada elemento y haz clic en ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "button.enroll",
