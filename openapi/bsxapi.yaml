@@ -11358,7 +11358,7 @@ paths:
                   $ref: '#/components/schemas/ExportCSV'
                 reason:
                   type: string
-                  description: Reason for exporting audit data
+                  description: Reason for exporting audit data (Supported in v1.0.1 and later)
                   example: "For compliance"
             example:
               Query:
@@ -14375,7 +14375,7 @@ components:
                 user_operator_level_id: 0
         reason:
           type: string
-          description: Reason for exporting user data
+          description: Reason for exporting user data (Supported in v1.0.1 and later)
           example: "For device migration"
     
     UserCsvImportInput:
@@ -14631,7 +14631,7 @@ components:
                 order_by: "user_id:false"
         reason:
           type: string
-          description: Reason for exporting user data
+          description: Reason for exporting user data (Supported in v1.0.1 and later)
           example: "For backup"
     UserSearchInput:
       type: object
