@@ -1386,6 +1386,9 @@ body[data-rh] .redocusaurus {
     p, dt, dd, li {
       font-size: .8rem !important;
       line-height: 1.4;
+      img.ico {
+        width: fit-content !important;
+      }
       strong {
         word-break: keep-all;
       }
