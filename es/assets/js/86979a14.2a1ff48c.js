@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["82730"], {
-38642: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["73249"], {
+35225: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,31 +9,31 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_settings_system_audit_trail_mdx_ae9_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_system_audit_trail_mdx_869_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-system-audit-trail-mdx-ae9.json
-var site_docs_platform_biostar_x_settings_system_audit_trail_mdx_ae9_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-system-audit-trail","title":"감사 추적 관리하기","description":"사용자의 접속 정보뿐만 아니라 시스템에서 변경되는 모든 정보를 모두 추적할 수 있습니다.","source":"@site/docs/platform/biostar_x/settings-system-audit-trail.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-system-audit-trail","permalink":"/docs/platform/biostar_x/settings-system-audit-trail","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-system-audit-trail.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-system-audit-trail","title":"감사 추적 관리하기","description":"사용자의 접속 정보뿐만 아니라 시스템에서 변경되는 모든 정보를 모두 추적할 수 있습니다.","keywords":["감사 추적","시스템 변경 이력","audit trail","로그 관리","보안 감사","시스템 모니터링"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"시스템 설정하기","permalink":"/docs/platform/biostar_x/settings-system"},"next":{"title":"시스템 백업하기","permalink":"/docs/platform/biostar_x/settings-system-system-backup"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-es-docusaurus-plugin-content-docs-current-platform-biostar-x-settings-system-audit-trail-mdx-869.json
+var site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_system_audit_trail_mdx_869_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-system-audit-trail","title":"Registro auditoría","description":"Supervise no solo la información de acceso de los usuarios, sino también toda la información modificada en el sistema.","source":"@site/i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-system-audit-trail.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-system-audit-trail","permalink":"/docs/es/platform/biostar_x/settings-system-audit-trail","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-system-audit-trail.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-system-audit-trail","title":"Registro auditoría","description":"Supervise no solo la información de acceso de los usuarios, sino también toda la información modificada en el sistema.","keywords":["Registro de auditoría","Historial de cambios del sistema","registro de auditoría","Gestión de registros","Auditoría de seguridad","Monitoreo del sistema"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Configuración Del Sistema","permalink":"/docs/es/platform/biostar_x/settings-system"},"next":{"title":"Respaldo de Sistema","permalink":"/docs/es/platform/biostar_x/settings-system-system-backup"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/settings-system-audit-trail.mdx
+;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-system-audit-trail.mdx
 
 
 const frontMatter = {
 	id: 'settings-system-audit-trail',
-	title: '감사 추적 관리하기',
-	description: '사용자의 접속 정보뿐만 아니라 시스템에서 변경되는 모든 정보를 모두 추적할 수 있습니다.',
+	title: 'Registro auditoría',
+	description: 'Supervise no solo la información de acceso de los usuarios, sino también toda la información modificada en el sistema.',
 	keywords: [
-		'감사 추적',
-		'시스템 변경 이력',
-		'audit trail',
-		'로그 관리',
-		'보안 감사',
-		'시스템 모니터링'
+		'Registro de auditoría',
+		'Historial de cambios del sistema',
+		'registro de auditoría',
+		'Gestión de registros',
+		'Auditoría de seguridad',
+		'Monitoreo del sistema'
 	],
 	isTranslationMissing: false
 };
@@ -46,51 +46,51 @@ const assets = {
 
 
 const toc = [{
-  "value": "감사 추적 사용하기",
+  "value": "Usar registro de auditoría",
   "id": "audit-trail-guide",
   "level": 2
 }, {
-  "value": "추적되는 동작 유형",
+  "value": "Tipos de acciones rastreadas",
   "id": "method",
   "level": 3
 }, {
-  "value": "권한 등급별 분류",
+  "value": "Clasificación por nivel de permiso",
   "id": "permision",
   "level": 3
 }, {
-  "value": "기간 설정 조회",
-  "id": "기간-설정-조회",
+  "value": "Consulta de configuración de período",
+  "id": "consulta-de-configuración-de-período",
   "level": 2
 }, {
-  "value": "사전 정의된 기간으로 조회",
-  "id": "사전-정의된-기간으로-조회",
+  "value": "Consultar con períodos predefinidos",
+  "id": "consultar-con-períodos-predefinidos",
   "level": 3
 }, {
-  "value": "사용자 정의 기간으로 조회",
-  "id": "사용자-정의-기간으로-조회",
+  "value": "Consultar con períodos personalizados",
+  "id": "consultar-con-períodos-personalizados",
   "level": 3
 }, {
-  "value": "필터 설정",
-  "id": "필터-설정",
+  "value": "Configuración de filtros",
+  "id": "configuración-de-filtros",
   "level": 2
 }, {
-  "value": "필터 저장",
-  "id": "필터-저장",
+  "value": "Guardar filtro",
+  "id": "guardar-filtro",
   "level": 2
 }, {
-  "value": "페이지 탐색",
-  "id": "페이지-탐색",
+  "value": "Navegación de páginas",
+  "id": "navegación-de-páginas",
   "level": 2
 }, {
-  "value": "CSV 내보내기",
-  "id": "csv-내보내기",
+  "value": "Exportar a CSV",
+  "id": "exportar-a-csv",
   "level": 2
 }, {
-  "value": "열 설정",
-  "id": "열-설정",
+  "value": "Configurar columnas",
+  "id": "configurar-columnas",
   "level": 2
 }, {
-  "value": "주요 추적 항목",
+  "value": "Elementos principales de seguimiento",
   "id": "audit-trail-items",
   "level": 2
 }];
@@ -119,72 +119,72 @@ function _createMdxContent(props) {
   if (!Kbd) _missingMdxReference("Kbd", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(Cmd, {
+      children: ["La función ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.menu.system.auditTrail"
-      }), " 기능은 시스템에서 발생하는 모든 활동을 기록하고 추적하는 기능입니다. 사용자의 로그인/로그아웃, 설정 변경, 시스템 관리 작업 등 모든 활동이 기록되어 보안 감사와 시스템 모니터링에 활용할 수 있습니다."]
+      }), " registra y supervisa todas las actividades que se producen en el sistema. Todas las actividades, como inicio/cierre de sesión de usuarios, cambios de Setting y tareas de administración del sistema, se registran y pueden utilizarse para auditorías de seguridad y monitoreo del sistema."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "보안 감사"
-          }), ": 비인가 접속 시도나 권한 남용 탐지할 수 있습니다."]
+            children: "Auditoría de seguridad"
+          }), ": Detectar intentos de acceso no autorizado o abuso de privilegios."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "문제 해결"
-          }), ": 시스템 오류 발생 시점과 설정 변경 이력 추적할 수 있습니다."]
+            children: "Solución de problemas"
+          }), ": Supervisar la aparición de errores del sistema y el historial de cambios de Setting."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "규정 준수"
-          }), ": 접근 기록 보관 및 감사 보고서 작성할 수 있습니다."]
+            children: "Cumplimiento"
+          }), ": Conservar registros de acceso y generar informes de auditoría."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "audit-trail-guide",
-      children: "감사 추적 사용하기"
+      children: "Usar registro de auditoría"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "shell.header.launcher"
-          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Haz clic en ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.setting"
-          }), "을 클릭하세요."]
+          }), " en la página ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.launcher"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Haga clic en ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.menu.system.root"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.menu.system.auditTrail"
-          }), "을 클릭하세요."]
+          }), " en la barra lateral izquierda."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "감사 추적 목록이 화면에 표시됩니다."
+          children: "La lista de registro de auditoría aparece en la pantalla."
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-system-audit-trail.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["주요 추적 항목에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+      children: ["Para obtener más información sobre los principales elementos de seguimiento, consulte ", (0,jsx_runtime.jsx)(_components.a, {
         href: "#audit-trail-items",
-        children: "다음 문서"
-      }), "를 참고하세요."]
+        children: "lo siguiente"
+      }), "."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "method",
-      children: "추적되는 동작 유형"
+      children: "Tipos de acciones rastreadas"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(Cmd, {
-        sid: "auditTrail.filter.title",
-        product: "2"
-      }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["Haga clic en la opción ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "auditTrail.method",
         product: "2"
-      }), " 옵션을 클릭하면 다음과 같은 동작 유형으로 감사 추적을 분류할 수 있습니다."]
+      }), " en la sección ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "auditTrail.filter.title",
+        product: "2"
+      }), " para clasificar los registros de auditoría por los siguientes tipos de acción."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-system-audit-trail-action-filter.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -193,234 +193,234 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "audit.method.1",
             product: "2"
-          }), ": 새로운 항목 생성"]
+          }), ": Crear un nuevo elemento"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "audit.method.3",
             product: "2"
-          }), ": 기존 항목 변경"]
+          }), ": Modificar un elemento existente"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "audit.method.4",
             product: "2"
-          }), ": 항목 제거"]
+          }), ": Eliminar elemento"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "audit.method.2",
             product: "2"
-          }), ": 시스템 기능 실행 (로그인, 장치 제어 등)"]
+          }), ": Ejecutar funciones del sistema (inicio de sesión, control de dispositivos, etc.)"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "permision",
-      children: "권한 등급별 분류"
+      children: "Clasificación por nivel de permiso"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["관리자 등급에 따라 감사 추적을 분류할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "auditTrail.filter.title",
-        product: "2"
-      }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["Los registros de auditoría pueden clasificarse según el nivel de administrador. Haga clic en la opción ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "user.bioStarOperator",
         product: "2"
-      }), " 옵션을 클릭하면 다음과 같은 권한 등급으로 필터링할 수 있습니다."]
+      }), " en la sección ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "auditTrail.filter.title",
+        product: "2"
+      }), " para filtrar por los siguientes niveles de permiso."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "audit.permission.1",
             product: "2"
-          }), ": 모든 시스템 기능 접근"]
+          }), ": Acceder a todas las funciones del sistema"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "audit.permission.2",
             product: "2"
-          }), ": 사용자 관리 기능"]
+          }), ": Funciones de gestión de usuarios"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "audit.permission.3",
             product: "2"
-          }), ": 모니터링 기능"]
+          }), ": Funciones de monitoreo"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "audit.permission.253",
             product: "2"
-          }), ": 비디오 관련 기능"]
+          }), ": Funciones relacionadas con video"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "audit.permission.254",
             product: "2"
-          }), ": 근태 관리 기능"]
+          }), ": Funciones de gestión de asistencia"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(Cmd, {
+        children: ["Los niveles de permiso ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "audit.permission.253",
           product: "2"
-        }), " 및 ", (0,jsx_runtime.jsx)(Cmd, {
+        }), " y ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "audit.permission.254",
           product: "2"
-        }), " 권한 등급은 ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "어드밴스"
-        }), "(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+        }), " están disponibles mediante opciones adicionales para la licencia ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Advanced"
+        }), " o superior. Para más información sobre la política de licencias, consulta ", (0,jsx_runtime.jsx)(_components.a, {
           href: "licensing#features-add-ons",
-          children: "다음 문서"
-        }), "를 참고하세요."]
+          children: "lo siguiente"
+        }), "."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "기간-설정-조회",
-      children: "기간 설정 조회"
+      id: "consulta-de-configuración-de-período",
+      children: "Consulta de configuración de período"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "조회할 기간을 설정하여 특정 기간의 감사 추적 이력을 확인하세요."
+      children: "Configure el período para revisar el historial del registro de auditoría durante una duración específica."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "사전-정의된-기간으로-조회",
-      children: "사전 정의된 기간으로 조회"
+      id: "consultar-con-períodos-predefinidos",
+      children: "Consultar con períodos predefinidos"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["화면 왼쪽 필터 목록에서 ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["Seleccione ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "auditTrail.filter.one_month",
         product: "2"
-      }), " 또는 ", (0,jsx_runtime.jsx)(Cmd, {
+      }), " o ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "auditTrail.filter.three_month",
         product: "2"
-      }), "을 선택하세요."]
+      }), " en la lista de filtros de la pantalla izquierda."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-system-audit-trail-defined-period.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "사용자-정의-기간으로-조회",
-      children: "사용자 정의 기간으로 조회"
+      id: "consultar-con-períodos-personalizados",
+      children: "Consultar con períodos personalizados"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["상세한 기간 설정이 필요한 경우, ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["Para configuraciones de período detalladas, establezca la fecha de inicio y la fecha de finalización en la sección ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "auditTrail.filter.title",
         product: "2"
-      }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+      }), " bajo la opción ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.datetime",
         product: "2"
-      }), " 옵션에서 시작 날짜와 종료 날짜를 설정하세요."]
+      }), "."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-system-audit-trail-set-period.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "필터-설정",
-      children: "필터 설정"
+      id: "configuración-de-filtros",
+      children: "Configuración de filtros"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "감사 추적 목록을 효율적으로 탐색하기 위해 다양한 조건으로 필터링하세요."
+      children: "Filtre la lista de registro de auditoría de forma eficiente mediante varios criterios."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-system-audit-trail-list.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(Cmd, {
+      children: ["En la sección ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "auditTrail.filter.title",
         product: "2"
-      }), " 섹션에서 다음 옵션들을 설정할 수 있습니다. 필터 옵션은 감사 추적 목록의 컬럼 항목과 일치합니다. 단, ", (0,jsx_runtime.jsx)(Cmd, {
+      }), ", configure las siguientes opciones. Las opciones de filtro coinciden con los elementos de columna de la lista de registro de auditoría. Sin embargo, la columna ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "auditTrail.content",
         product: "2"
-      }), " 컬럼은 필터링할 수 없습니다."]
+      }), " no se puede filtrar."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "common.datetime",
             product: "2"
-          }), ": 이벤트가 발생한 날짜와 시간"]
+          }), ": Fecha y hora en que ocurrió el evento"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "common.gnb.user",
             product: "2"
-          }), ": 이벤트를 수행한 사용자 아이디"]
+          }), ": ID del usuario que realizó el evento"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user.bioStarOperator",
             product: "2"
-          }), ": 사용자의 ", (0,jsx_runtime.jsx)(_components.a, {
+          }), ": ", (0,jsx_runtime.jsx)(_components.a, {
             href: "#permision",
-            children: "권한 등급"
-          })]
+            children: "Nivel de permiso"
+          }), " del usuario"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "auditTrail.ip",
             product: "2"
-          }), ": 사용자가 접속한 IP 주소"]
+          }), ": Dirección IP desde la cual el usuario accedió"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "auditTrail.menu",
             product: "2"
-          }), ": 변경된 항목의 메뉴 카테고리"]
+          }), ": Categoría de menú del elemento modificado"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "auditTrail.target",
             product: "2"
-          }), ": 변경된 대상"]
+          }), ": Objetivo modificado"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "auditTrail.method",
             product: "2"
-          }), ": 수행된 ", (0,jsx_runtime.jsx)(_components.a, {
+          }), ": ", (0,jsx_runtime.jsx)(_components.a, {
             href: "#method",
-            children: "동작"
-          })]
+            children: "Acción"
+          }), " realizada"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "auditTrail.content",
             product: "2"
-          }), ": 이벤트 발생 시의 상세 내용"]
+          }), ": Detalles durante la ocurrencia del evento"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "필터-저장",
-      children: "필터 저장"
+      id: "guardar-filtro",
+      children: "Guardar filtro"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["필터를 설정하고 ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "auditTrail.filter.title",
-        product: "2"
-      }), " 섹션의 ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["Configure el filtro y haga clic en el botón ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "ta.report.condition.saveFilter.button",
         product: "2"
-      }), " 버튼을 클릭하면 화면 왼쪽 필터 목록에 설정한 필터를 저장할 수 있습니다."]
+      }), " de la sección ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "auditTrail.filter.title",
+        product: "2"
+      }), " para guardar el filtro en la lista de filtros de la pantalla izquierda."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-system-audit-trail-add-filter.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["필터 이름을 수정하려면 ", (0,jsx_runtime.jsx)(IcEditUL, {}), " 버튼을 클릭하세요. 필터 이름을 입력하고 ", (0,jsx_runtime.jsx)(Kbd, {
+          children: ["Haga clic en ", (0,jsx_runtime.jsx)(IcEditUL, {}), " para editar el nombre del filtro. Ingrese el nombre del filtro y presione ", (0,jsx_runtime.jsx)(Kbd, {
             children: "Enter"
-          }), " 키를 누르면 필터 이름이 변경됩니다."]
+          }), " para cambiar el nombre."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["필터를 삭제하려면 ", (0,jsx_runtime.jsx)(IcTrash2, {}), " 버튼을 클릭하세요. 필터 목록에서 해당 필터가 삭제됩니다."]
+          children: ["Haga clic en ", (0,jsx_runtime.jsx)(IcTrash2, {}), " para eliminar el filtro. El filtro se eliminará de la lista de filtros."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "페이지-탐색",
-      children: "페이지 탐색"
+      id: "navegación-de-páginas",
+      children: "Navegación de páginas"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "페이지를 이동하거나 한 페이지에 표시할 목록 개수를 설정할 수 있습니다."
+      children: "Desplácese entre páginas o establezca la cantidad de elementos que aparecerán en cada página."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -428,7 +428,7 @@ function _createMdxContent(props) {
             src: "/img/common/ico-audit-trail-first-page.png",
             ico: true,
             alone: true
-          }), ": 처음 페이지로 이동합니다."]
+          }), ": Ir a la primera página."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -436,7 +436,7 @@ function _createMdxContent(props) {
             src: "/img/common/ico-audit-trail-previous-page.png",
             ico: true,
             alone: true
-          }), ": 이전 페이지로 이동합니다."]
+          }), ": Ir a la página anterior."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -444,9 +444,9 @@ function _createMdxContent(props) {
             src: "/img/common/ico-audit-trail-nav-page.png",
             ico: true,
             alone: true
-          }), ": 이동하려는 페이지 번호를 입력하고 ", (0,jsx_runtime.jsx)(Kbd, {
+          }), ": Ingrese el número de página al que desea ir y presione ", (0,jsx_runtime.jsx)(Kbd, {
             children: "Enter"
-          }), " 키를 누르면 해당 페이지로 이동합니다."]
+          }), " para ir a esa página."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -454,7 +454,7 @@ function _createMdxContent(props) {
             src: "/img/common/ico-audit-trail-next-page.png",
             ico: true,
             alone: true
-          }), ": 다음 페이지로 이동합니다."]
+          }), ": Ir a la página siguiente."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -462,45 +462,45 @@ function _createMdxContent(props) {
             src: "/img/common/ico-audit-trail-last-page.png",
             ico: true,
             alone: true
-          }), ": 마지막 페이지로 이동합니다."]
+          }), ": Ir a la última página."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Image, {
             src: "/img/ico-audit-trail-rows-page.png",
             ico: true
-          }), ": 한 페이지에 표시할 목록 개수를 선택할 수 있습니다."]
+          }), ": Seleccione la cantidad de elementos que se mostrarán por página."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "csv-내보내기",
-      children: "CSV 내보내기"
+      id: "exportar-a-csv",
+      children: "Exportar a CSV"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "감사 추적 목록을 CSV 파일로 내보내 외부 분석 도구에서 활용하세요."
+      children: "Exporte la lista de registro de auditoría a un archivo CSV para utilizarla con herramientas de análisis externas."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["En la sección ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "auditTrail.filter.title",
             product: "2"
-          }), " 섹션에서 필요한 경우 필터를 설정하세요."]
+          }), ", configure filtros si es necesario."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["섹션 오른쪽의 ", (0,jsx_runtime.jsx)(IcMoreW, {}), " → ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Haga clic en ", (0,jsx_runtime.jsx)(IcMoreW, {}), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "audit.user.csv_export",
             product: "2"
-          }), "를 클릭하세요."]
+          }), " en el lado derecho de la sección."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["CSV 내보내기 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Cuando aparezca la ventana de exportación CSV, ingresa ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "auditTrail.export.reason",
             product: "2"
-          }), "(선택 사항)을 입력하고 ", (0,jsx_runtime.jsx)(Cmd, {
+          }), "(opcional) y haz clic en ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.download",
             product: "2"
-          }), " 버튼을 클릭하세요."]
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-settings-system-audit-trail-export-csv.png"
         }), "\n"]
@@ -508,11 +508,11 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "tip",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "필터링을 설정한 경우, 필터링된 결과만 CSV 파일로 내보내집니다."
+        children: "Si configuró filtros, solo los resultados filtrados se exportarán al archivo CSV."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "열-설정",
-      children: "열 설정"
+      id: "configurar-columnas",
+      children: "Configurar columnas"
     }), "\n", (0,jsx_runtime.jsxs)(Columns, {
       children: [(0,jsx_runtime.jsx)(Column, {
         className: "width--40",
@@ -522,52 +522,52 @@ function _createMdxContent(props) {
       }), (0,jsx_runtime.jsxs)(Column, {
         className: "padding--l20",
         children: [(0,jsx_runtime.jsxs)(_components.p, {
-          children: ["감사 추적 목록의 컬럼의 위치를 변경하거나 숨길 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "auditTrail.filter.title",
-            product: "2"
-          }), " 섹션의 가장 오른쪽에 ", (0,jsx_runtime.jsx)(IcMoreW, {}), " → ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Cambie las posiciones de las columnas o ocúltelas en la lista de registro de auditoría. Haga clic en ", (0,jsx_runtime.jsx)(IcMoreW, {}), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "menu.columnSetting",
             product: "2"
-          }), "을 클릭하세요."]
+          }), " en el extremo derecho de la sección ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "auditTrail.filter.title",
+            product: "2"
+          }), "."]
         }), (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "열 목록에서 숨기고 싶은 항목의 체크박스 선택을 해제하세요."
+              children: "Desmarque la casilla del elemento que desea ocultar de la lista de columnas."
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "열의 순서를 변경하려면 원하는 항목을 드래그하여 위치를 변경할 수 있습니다."
+              children: "Arrastra los elementos deseados a una nueva posición para cambiar el orden de las columnas."
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["열 설정을 초기화하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["Haz clic en el botón ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "columnSetting.button.defaultColumn",
                 product: "2"
-              }), " 버튼을 클릭하세요."]
+              }), " para inicializar la configuración de columnas."]
             }), "\n"]
           }), "\n"]
         }), (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Haz clic en el botón ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.apply",
             product: "2"
-          }), " 버튼을 클릭하세요."]
+          }), " para guardar la configuración."]
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "audit-trail-items",
-      children: "주요 추적 항목"
+      children: "Elementos principales de seguimiento"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "감사 추적에서 기록하는 모든 활동을 카테고리별로 정리했습니다. 각 항목을 클릭하여 세부 내용을 확인하세요."
+      children: "Todas las actividades registradas en el registro de auditoría se organizan por categoría. Haz clic en cada elemento para ver los detalles."
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "시스템 접속"
+          children: "Acceso al sistema"
         })
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "로그인"
+              children: "Inicio de sesión"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.system.login",
               product: "2"
@@ -576,7 +576,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "다중 인증 로그인"
+              children: "Inicio de sesión multifactor"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.system.fingerprint_login",
               product: "2"
@@ -585,7 +585,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "로그아웃"
+              children: "Cierre de sesión"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.system.logout",
               product: "2"
@@ -594,7 +594,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "로그인 실패 사유"
+              children: "Motivos de error de inicio de sesión"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.system.loginfailedfingerprint",
               product: "2"
@@ -609,7 +609,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "로그인 실패 횟수 초과"
+              children: "Intentos de inicio de sesión excedidos"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.system.maximum_invalid_attempts",
               product: "2"
@@ -620,13 +620,13 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "사용자 정보"
+          children: "Información del usuario"
         })
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "기본 정보"
+              children: "Información básica"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.user.name",
               product: "2"
@@ -647,7 +647,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "인증 정보"
+              children: "Información de autenticación"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.user.password",
               product: "2"
@@ -668,7 +668,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "권한 및 그룹"
+              children: "Permisos y grupos"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.user.permission",
               product: "2"
@@ -686,7 +686,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "사용자 상태"
+              children: "Estado del usuario"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.user.disabled",
               product: "2"
@@ -701,7 +701,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "데이터 관리"
+              children: "Gestión de datos"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.user.csv_import",
               product: "2"
@@ -719,7 +719,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "장치 연동"
+              children: "Integración de dispositivos"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.user.export",
               product: "2"
@@ -731,7 +731,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "기타"
+              children: "Otros"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.user.photo",
               product: "2"
@@ -749,7 +749,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "관리"
+              children: "Gestión"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.user.csv_export.absence",
               product: "2"
@@ -765,7 +765,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "이메일 기능"
+              children: "Funciones de correo electrónico"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.user.emailSentSuccess",
               product: "2"
@@ -779,13 +779,13 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "출입 통제"
+          children: "Control de acceso"
         })
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "출입문 설정"
+              children: "Configuración de la puerta"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.door.name",
               product: "2"
@@ -800,7 +800,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "출입문 장치"
+              children: "Dispositivos de puerta"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.door.entry_device_id",
               product: "2"
@@ -821,7 +821,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "출입문 제어"
+              children: "Control de puerta"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.door.open_duration",
               product: "2"
@@ -842,7 +842,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "출입문 동작"
+              children: "Acciones de puerta"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.door.lock",
               product: "2"
@@ -872,7 +872,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "출입그룹"
+              children: "Grupos de acceso"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.access_group.name",
               product: "2"
@@ -893,7 +893,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "출입등급"
+              children: "Niveles de acceso"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.access_level.name",
               product: "2"
@@ -908,7 +908,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "엘리베이터 설정"
+              children: "Configuración del ascensor"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.elevator.name",
               product: "2"
@@ -929,7 +929,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "엘리베이터 장치"
+              children: "Dispositivos del ascensor"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.elevator.control_device_id",
               product: "2"
@@ -947,7 +947,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "엘리베이터 제어"
+              children: "Control del ascensor"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.elevator.dual_authentication",
               product: "2"
@@ -959,7 +959,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "엘리베이터 동작"
+              children: "Acciones del ascensor"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.elevator.lock",
               product: "2"
@@ -983,7 +983,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "층등급"
+              children: "Niveles de piso"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.floor_level.name",
               product: "2"
@@ -1003,13 +1003,13 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "장치 관리"
+          children: "Gestión de dispositivos"
         })
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "장치 기본 설정"
+              children: "Configuración básica del dispositivo"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.device.name",
               product: "2"
@@ -1024,7 +1024,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "인증 설정"
+              children: "Configuración de autenticación"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.device.authentication",
               product: "2"
@@ -1042,7 +1042,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "인터페이스 설정"
+              children: "Configuración de interfaz"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.device.display",
               product: "2"
@@ -1057,7 +1057,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "통신 설정"
+              children: "Configuración de comunicación"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.device.lan",
               product: "2"
@@ -1087,7 +1087,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "기능 설정"
+              children: "Configuración de funciones"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.device.system",
               product: "2"
@@ -1105,7 +1105,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "사용자 관리"
+              children: "Gestión de usuarios"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.device.export",
               product: "2"
@@ -1114,7 +1114,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "장치 제어"
+              children: "Control del dispositivo"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.device.connect",
               product: "2"
@@ -1135,7 +1135,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "시스템 관리"
+              children: "Gestión del sistema"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.device.factory_reset",
               product: "2"
@@ -1156,7 +1156,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "장치 상태"
+              children: "Estado del dispositivo"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.device.locked",
               product: "2"
@@ -1173,13 +1173,13 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "고급 출입 통제"
+          children: "Control de acceso avanzado"
         })
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "고급 출입 통제 기본 설정"
+              children: "Configuración básica de control de acceso avanzado"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.zone.name",
               product: "2"
@@ -1200,7 +1200,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "안티패스백"
+              children: "Antipassback"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.zone.antipassback",
               product: "2"
@@ -1215,7 +1215,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "화재경보"
+              children: "Alarma de incendio"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.zone.fire_alarm",
               product: "2"
@@ -1224,7 +1224,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "스케줄 제어"
+              children: "Control de horario"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.zone.forced_lock",
               product: "2"
@@ -1236,7 +1236,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "재실 인원 관리"
+              children: "Gestión de ocupación"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.zone.increase_occupancy",
               product: "2"
@@ -1251,7 +1251,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "고급 출입 통제 제어"
+              children: "Acciones de control de acceso avanzado"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.zone.lock",
               product: "2"
@@ -1274,13 +1274,13 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "시스템 설정"
+          children: "Configuración del sistema"
         })
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "서버 설정"
+              children: "Configuración del servidor"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.server.server_addr",
               product: "2"
@@ -1298,7 +1298,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "보안 설정"
+              children: "Configuración de seguridad"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.server.secure_communication",
               product: "2"
@@ -1313,7 +1313,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "동기화 설정"
+              children: "Configuración de sincronización"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.server.log_sync_method",
               product: "2"
@@ -1325,7 +1325,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "장치 설정"
+              children: "Configuración del dispositivo"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.server.enrollment_device_list",
               product: "2"
@@ -1343,7 +1343,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "라이선스"
+              children: "Licencias"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.server.licenses",
               product: "2"
@@ -1352,7 +1352,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "기본 설정"
+              children: "Configuración predeterminada"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.preference.language",
               product: "2"
@@ -1370,7 +1370,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "스케줄 설정"
+              children: "Configuración de horarios"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.schedule.name",
               product: "2"
@@ -1400,7 +1400,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "휴일 설정"
+              children: "Configuración de días festivos"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.holiday_group.name",
               product: "2"
@@ -1415,7 +1415,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "경보 설정"
+              children: "Configuración de alertas"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.event_type.alert_on",
               product: "2"
@@ -1427,7 +1427,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "이미지 로그 설정"
+              children: "Configuración del registro de imágenes"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.image_filter.EventFilterCollection",
               product: "2"
@@ -1439,7 +1439,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "모바일 크리덴셜"
+              children: "Credenciales móviles"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.mobileCredential.use",
               product: "2"
@@ -1451,24 +1451,27 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "감사 추적"
+              children: "Registro de auditoría"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.audit.csv_export",
               product: "2"
-            })]
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "reportApp.schedulePageTitle",
+              product: "2"
+            }), " agregado, modificado, eliminado"]
           }), "\n"]
         }), "\n"]
       })]
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "고급 보안 설정"
+          children: "Configuración de seguridad avanzada"
         })
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "스마트 카드 - DESFire"
+              children: "Tarjeta inteligente - DESFire"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.smartcard.desfire_app_id",
               product: "2"
@@ -1489,7 +1492,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "스마트 카드 - iClass"
+              children: "Tarjeta inteligente - iClass"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.smartcard.iclass_primary_key",
               product: "2"
@@ -1504,7 +1507,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "스마트 카드 - MIFARE"
+              children: "Tarjeta inteligente - MIFARE"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.smartcard.mifare_primary_key",
               product: "2"
@@ -1525,7 +1528,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "스마트 카드 - Mobile"
+              children: "Tarjeta inteligente - móvil"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.smartcard.mobile_primary_key",
               product: "2"
@@ -1537,7 +1540,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "스마트 카드 - 일반"
+              children: "Tarjeta inteligente - estándar"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.smartcard.name",
               product: "2"
@@ -1555,7 +1558,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Wiegand 설정"
+              children: "Configuración de Wiegand"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.wiegand_format.name",
               product: "2"
@@ -1588,7 +1591,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "작업 조건 및 동작"
+              children: "Condiciones y acciones de activación"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.trigger_action.name",
               product: "2"
@@ -1606,7 +1609,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "커스텀 권한"
+              children: "Permisos personalizados"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.permission.name",
               product: "2"
@@ -1627,7 +1630,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "커스텀 필드"
+              children: "Campos personalizados"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.custom_fields.name",
               product: "2"
@@ -1639,7 +1642,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "신호 설정"
+              children: "Configuración de señales"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.output_signal.name",
               product: "2"
@@ -1662,13 +1665,13 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "데이터 관리"
+          children: "Gestión de datos"
         })
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "시스템 백업"
+              children: "Copia de seguridad del sistema"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.menu.systemBackup",
               product: "2"
@@ -1677,7 +1680,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "비디오 관리"
+              children: "Gestión de video"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.video.camera",
               product: "2"
@@ -1689,7 +1692,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "방문자 관리"
+              children: "Gestión de visitantes"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.menu.visitor",
               product: "2"
@@ -1701,7 +1704,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "포트 관리"
+              children: "Gestión de puertos"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.menu.port",
               product: "2"
@@ -1710,7 +1713,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "일광 절약 시간"
+              children: "Horario de verano"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.menu.setting.dst",
               product: "2"
@@ -1719,7 +1722,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "사용자 지정 인터페이스"
+              children: "Interfaz personalizada"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.menu.setting.quick_action",
               product: "2"

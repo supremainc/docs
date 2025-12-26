@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["73249"], {
-35225: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["18323"], {
+52829: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,31 +9,31 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_system_audit_trail_mdx_869_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_system_audit_trail_mdx_4fb_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-es-docusaurus-plugin-content-docs-current-platform-biostar-x-settings-system-audit-trail-mdx-869.json
-var site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_system_audit_trail_mdx_869_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-system-audit-trail","title":"Registro auditoría","description":"Supervise no solo la información de acceso de los usuarios, sino también toda la información modificada en el sistema.","source":"@site/i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-system-audit-trail.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-system-audit-trail","permalink":"/docs/es/platform/biostar_x/settings-system-audit-trail","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-system-audit-trail.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-system-audit-trail","title":"Registro auditoría","description":"Supervise no solo la información de acceso de los usuarios, sino también toda la información modificada en el sistema.","keywords":["Registro de auditoría","Historial de cambios del sistema","registro de auditoría","Gestión de registros","Auditoría de seguridad","Monitoreo del sistema"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Configuración Del Sistema","permalink":"/docs/es/platform/biostar_x/settings-system"},"next":{"title":"Respaldo de Sistema","permalink":"/docs/es/platform/biostar_x/settings-system-system-backup"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-settings-system-audit-trail-mdx-4fb.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_system_audit_trail_mdx_4fb_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-system-audit-trail","title":"Audit Trail","description":"You can track not only user access information but also all information changed in the system.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-system-audit-trail.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-system-audit-trail","permalink":"/docs/en/platform/biostar_x/settings-system-audit-trail","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-system-audit-trail.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-system-audit-trail","title":"Audit Trail","description":"You can track not only user access information but also all information changed in the system.","keywords":["Audit trail","System change history","audit trail","Log Management","Security Audit","System Monitoring"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"System Settings","permalink":"/docs/en/platform/biostar_x/settings-system"},"next":{"title":"System Backup","permalink":"/docs/en/platform/biostar_x/settings-system-system-backup"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-system-audit-trail.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-system-audit-trail.mdx
 
 
 const frontMatter = {
 	id: 'settings-system-audit-trail',
-	title: 'Registro auditoría',
-	description: 'Supervise no solo la información de acceso de los usuarios, sino también toda la información modificada en el sistema.',
+	title: 'Audit Trail',
+	description: 'You can track not only user access information but also all information changed in the system.',
 	keywords: [
-		'Registro de auditoría',
-		'Historial de cambios del sistema',
-		'registro de auditoría',
-		'Gestión de registros',
-		'Auditoría de seguridad',
-		'Monitoreo del sistema'
+		'Audit trail',
+		'System change history',
+		'audit trail',
+		'Log Management',
+		'Security Audit',
+		'System Monitoring'
 	],
 	isTranslationMissing: false
 };
@@ -46,51 +46,51 @@ const assets = {
 
 
 const toc = [{
-  "value": "Usar registro de auditoría",
+  "value": "Use audit trail",
   "id": "audit-trail-guide",
   "level": 2
 }, {
-  "value": "Tipos de acciones rastreadas",
+  "value": "Types of tracked actions",
   "id": "method",
   "level": 3
 }, {
-  "value": "Clasificación por nivel de permiso",
+  "value": "Classification by permission level",
   "id": "permision",
   "level": 3
 }, {
-  "value": "Consulta de configuración de período",
-  "id": "consulta-de-configuración-de-período",
+  "value": "Period setting query",
+  "id": "period-setting-query",
   "level": 2
 }, {
-  "value": "Consultar con períodos predefinidos",
-  "id": "consultar-con-períodos-predefinidos",
+  "value": "Query with predefined periods",
+  "id": "query-with-predefined-periods",
   "level": 3
 }, {
-  "value": "Consultar con períodos personalizados",
-  "id": "consultar-con-períodos-personalizados",
+  "value": "Query with custom periods",
+  "id": "query-with-custom-periods",
   "level": 3
 }, {
-  "value": "Configuración de filtros",
-  "id": "configuración-de-filtros",
+  "value": "Filter settings",
+  "id": "filter-settings",
   "level": 2
 }, {
-  "value": "Guardar filtro",
-  "id": "guardar-filtro",
+  "value": "Save filter",
+  "id": "save-filter",
   "level": 2
 }, {
-  "value": "Navegación de páginas",
-  "id": "navegación-de-páginas",
+  "value": "Page navigation",
+  "id": "page-navigation",
   "level": 2
 }, {
-  "value": "Exportar a CSV",
-  "id": "exportar-a-csv",
+  "value": "Export to CSV",
+  "id": "export-to-csv",
   "level": 2
 }, {
-  "value": "Configurar columnas",
-  "id": "configurar-columnas",
+  "value": "Set columns",
+  "id": "set-columns",
   "level": 2
 }, {
-  "value": "Elementos principales de seguimiento",
+  "value": "Major tracking items",
   "id": "audit-trail-items",
   "level": 2
 }];
@@ -119,72 +119,72 @@ function _createMdxContent(props) {
   if (!Kbd) _missingMdxReference("Kbd", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["La función ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["The ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.menu.system.auditTrail"
-      }), " registra y supervisa todas las actividades que se producen en el sistema. Todas las actividades, como inicio/cierre de sesión de usuarios, cambios de Setting y tareas de administración del sistema, se registran y pueden utilizarse para auditorías de seguridad y monitoreo del sistema."]
+      }), " feature records and tracks all activities occurring in the system. All activities such as user login/logout, setting changes, and system administration tasks are recorded and can be utilized for security audits and system monitoring."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Auditoría de seguridad"
-          }), ": Detectar intentos de acceso no autorizado o abuso de privilegios."]
+            children: "Security audit"
+          }), ": Detect unauthorized access attempts or privilege abuse."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Solución de problemas"
-          }), ": Supervisar la aparición de errores del sistema y el historial de cambios de Setting."]
+            children: "Troubleshooting"
+          }), ": Track the occurrence of system errors and setting change history."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Cumplimiento"
-          }), ": Conservar registros de acceso y generar informes de auditoría."]
+            children: "Compliance"
+          }), ": Retain access logs and generate audit reports."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "audit-trail-guide",
-      children: "Usar registro de auditoría"
+      children: "Use audit trail"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Haz clic en ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.setting"
-          }), " en la página ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.launcher"
-          }), "."]
+          }), " page."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Haga clic en ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.menu.system.root"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.menu.system.auditTrail"
-          }), " en la barra lateral izquierda."]
+          }), " on the left sidebar."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "La lista de registro de auditoría aparece en la pantalla."
+          children: "The audit trail list appears on the screen."
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-system-audit-trail.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Para obtener más información sobre los principales elementos de seguimiento, consulte ", (0,jsx_runtime.jsx)(_components.a, {
+      children: ["For more information on major tracking items, refer to ", (0,jsx_runtime.jsx)(_components.a, {
         href: "#audit-trail-items",
-        children: "lo siguiente"
+        children: "the following"
       }), "."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "method",
-      children: "Tipos de acciones rastreadas"
+      children: "Types of tracked actions"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Haga clic en la opción ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "auditTrail.method",
         product: "2"
-      }), " en la sección ", (0,jsx_runtime.jsx)(Cmd, {
+      }), " option in the ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "auditTrail.filter.title",
         product: "2"
-      }), " para clasificar los registros de auditoría por los siguientes tipos de acción."]
+      }), " section to categorize audit trails by the following action types."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-system-audit-trail-action-filter.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -193,234 +193,234 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "audit.method.1",
             product: "2"
-          }), ": Crear un nuevo elemento"]
+          }), ": Create new item"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "audit.method.3",
             product: "2"
-          }), ": Modificar un elemento existente"]
+          }), ": Modify existing item"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "audit.method.4",
             product: "2"
-          }), ": Eliminar elemento"]
+          }), ": Remove item"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "audit.method.2",
             product: "2"
-          }), ": Ejecutar funciones del sistema (inicio de sesión, control de dispositivos, etc.)"]
+          }), ": Execute system functions (login, device control, etc.)"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "permision",
-      children: "Clasificación por nivel de permiso"
+      children: "Classification by permission level"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Los registros de auditoría pueden clasificarse según el nivel de administrador. Haga clic en la opción ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["Audit trails can be categorized according to admin level. Click ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "user.bioStarOperator",
         product: "2"
-      }), " en la sección ", (0,jsx_runtime.jsx)(Cmd, {
+      }), " option in the ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "auditTrail.filter.title",
         product: "2"
-      }), " para filtrar por los siguientes niveles de permiso."]
+      }), " section to filter by the following permission levels."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "audit.permission.1",
             product: "2"
-          }), ": Acceder a todas las funciones del sistema"]
+          }), ": Access all system functions"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "audit.permission.2",
             product: "2"
-          }), ": Funciones de gestión de usuarios"]
+          }), ": User management functions"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "audit.permission.3",
             product: "2"
-          }), ": Funciones de monitoreo"]
+          }), ": Monitoring functions"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "audit.permission.253",
             product: "2"
-          }), ": Funciones relacionadas con video"]
+          }), ": Video-related functions"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "audit.permission.254",
             product: "2"
-          }), ": Funciones de gestión de asistencia"]
+          }), ": Attendance management functions"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["Los niveles de permiso ", (0,jsx_runtime.jsx)(Cmd, {
+        children: [(0,jsx_runtime.jsx)(Cmd, {
           sid: "audit.permission.253",
           product: "2"
-        }), " y ", (0,jsx_runtime.jsx)(Cmd, {
+        }), " and ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "audit.permission.254",
           product: "2"
-        }), " están disponibles mediante opciones adicionales para la licencia ", (0,jsx_runtime.jsx)(_components.strong, {
+        }), " permission levels are available through additional options for ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "Advanced"
-        }), " o superior. Para más información sobre la política de licencias, consulta ", (0,jsx_runtime.jsx)(_components.a, {
+        }), " license or higher. For more information on licensing policy, refer to ", (0,jsx_runtime.jsx)(_components.a, {
           href: "licensing#features-add-ons",
-          children: "lo siguiente"
+          children: "the following"
         }), "."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "consulta-de-configuración-de-período",
-      children: "Consulta de configuración de período"
+      id: "period-setting-query",
+      children: "Period setting query"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Configure el período para revisar el historial del registro de auditoría durante una duración específica."
+      children: "Set the period to check the audit trail history for a specific duration."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "consultar-con-períodos-predefinidos",
-      children: "Consultar con períodos predefinidos"
+      id: "query-with-predefined-periods",
+      children: "Query with predefined periods"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Seleccione ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "auditTrail.filter.one_month",
         product: "2"
-      }), " o ", (0,jsx_runtime.jsx)(Cmd, {
+      }), " or ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "auditTrail.filter.three_month",
         product: "2"
-      }), " en la lista de filtros de la pantalla izquierda."]
+      }), " from the filter list on the left screen."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-system-audit-trail-defined-period.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "consultar-con-períodos-personalizados",
-      children: "Consultar con períodos personalizados"
+      id: "query-with-custom-periods",
+      children: "Query with custom periods"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Para configuraciones de período detalladas, establezca la fecha de inicio y la fecha de finalización en la sección ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["For detailed period settings, set the start date and end date in the ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "auditTrail.filter.title",
         product: "2"
-      }), " bajo la opción ", (0,jsx_runtime.jsx)(Cmd, {
+      }), " section under the ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.datetime",
         product: "2"
-      }), "."]
+      }), " option."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-system-audit-trail-set-period.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "configuración-de-filtros",
-      children: "Configuración de filtros"
+      id: "filter-settings",
+      children: "Filter settings"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Filtre la lista de registro de auditoría de forma eficiente mediante varios criterios."
+      children: "Filter the audit trail list efficiently using various criteria."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-system-audit-trail-list.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["En la sección ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["In the ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "auditTrail.filter.title",
         product: "2"
-      }), ", configure las siguientes opciones. Las opciones de filtro coinciden con los elementos de columna de la lista de registro de auditoría. Sin embargo, la columna ", (0,jsx_runtime.jsx)(Cmd, {
+      }), " section, you can set the following options. Filter options match the column items of the audit trail list. However, the ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "auditTrail.content",
         product: "2"
-      }), " no se puede filtrar."]
+      }), " column cannot be filtered."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "common.datetime",
             product: "2"
-          }), ": Fecha y hora en que ocurrió el evento"]
+          }), ": Date and time when the event occurred"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "common.gnb.user",
             product: "2"
-          }), ": ID del usuario que realizó el evento"]
+          }), ": User ID of the user who performed the event"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user.bioStarOperator",
             product: "2"
-          }), ": ", (0,jsx_runtime.jsx)(_components.a, {
+          }), ": User's ", (0,jsx_runtime.jsx)(_components.a, {
             href: "#permision",
-            children: "Nivel de permiso"
-          }), " del usuario"]
+            children: "permission level"
+          })]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "auditTrail.ip",
             product: "2"
-          }), ": Dirección IP desde la cual el usuario accedió"]
+          }), ": IP address from which the user accessed"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "auditTrail.menu",
             product: "2"
-          }), ": Categoría de menú del elemento modificado"]
+          }), ": Menu category of the modified item"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "auditTrail.target",
             product: "2"
-          }), ": Objetivo modificado"]
+          }), ": Modified target"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "auditTrail.method",
             product: "2"
-          }), ": ", (0,jsx_runtime.jsx)(_components.a, {
+          }), ": Performed ", (0,jsx_runtime.jsx)(_components.a, {
             href: "#method",
-            children: "Acción"
-          }), " realizada"]
+            children: "action"
+          })]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "auditTrail.content",
             product: "2"
-          }), ": Detalles durante la ocurrencia del evento"]
+          }), ": Details during the event occurrence"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "guardar-filtro",
-      children: "Guardar filtro"
+      id: "save-filter",
+      children: "Save filter"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Configure el filtro y haga clic en el botón ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "ta.report.condition.saveFilter.button",
-        product: "2"
-      }), " de la sección ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["Set the filter and click the ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "auditTrail.filter.title",
         product: "2"
-      }), " para guardar el filtro en la lista de filtros de la pantalla izquierda."]
+      }), " section's ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "ta.report.condition.saveFilter.button",
+        product: "2"
+      }), " button to save the filter you set to the filter list on the left screen."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-system-audit-trail-add-filter.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Haga clic en ", (0,jsx_runtime.jsx)(IcEditUL, {}), " para editar el nombre del filtro. Ingrese el nombre del filtro y presione ", (0,jsx_runtime.jsx)(Kbd, {
+          children: ["Click ", (0,jsx_runtime.jsx)(IcEditUL, {}), " to edit the filter name. Enter the filter name and press ", (0,jsx_runtime.jsx)(Kbd, {
             children: "Enter"
-          }), " para cambiar el nombre."]
+          }), " to change the filter name."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Haga clic en ", (0,jsx_runtime.jsx)(IcTrash2, {}), " para eliminar el filtro. El filtro se eliminará de la lista de filtros."]
+          children: ["Click ", (0,jsx_runtime.jsx)(IcTrash2, {}), " to delete the filter. The filter will be removed from the filter list."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "navegación-de-páginas",
-      children: "Navegación de páginas"
+      id: "page-navigation",
+      children: "Page navigation"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Desplácese entre páginas o establezca la cantidad de elementos que aparecerán en cada página."
+      children: "Move between pages or set the number of items to appear on each page."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -428,7 +428,7 @@ function _createMdxContent(props) {
             src: "/img/common/ico-audit-trail-first-page.png",
             ico: true,
             alone: true
-          }), ": Ir a la primera página."]
+          }), ": Go to the first page."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -436,7 +436,7 @@ function _createMdxContent(props) {
             src: "/img/common/ico-audit-trail-previous-page.png",
             ico: true,
             alone: true
-          }), ": Ir a la página anterior."]
+          }), ": Go to the previous page."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -444,9 +444,9 @@ function _createMdxContent(props) {
             src: "/img/common/ico-audit-trail-nav-page.png",
             ico: true,
             alone: true
-          }), ": Ingrese el número de página al que desea ir y presione ", (0,jsx_runtime.jsx)(Kbd, {
+          }), ": Enter the page number to navigate to and press ", (0,jsx_runtime.jsx)(Kbd, {
             children: "Enter"
-          }), " para ir a esa página."]
+          }), " to go to that page."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -454,7 +454,7 @@ function _createMdxContent(props) {
             src: "/img/common/ico-audit-trail-next-page.png",
             ico: true,
             alone: true
-          }), ": Ir a la página siguiente."]
+          }), ": Go to the next page."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -462,45 +462,45 @@ function _createMdxContent(props) {
             src: "/img/common/ico-audit-trail-last-page.png",
             ico: true,
             alone: true
-          }), ": Ir a la última página."]
+          }), ": Go to the last page."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Image, {
             src: "/img/ico-audit-trail-rows-page.png",
             ico: true
-          }), ": Seleccione la cantidad de elementos que se mostrarán por página."]
+          }), ": You can select the number of items to display per page."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "exportar-a-csv",
-      children: "Exportar a CSV"
+      id: "export-to-csv",
+      children: "Export to CSV"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Exporte la lista de registro de auditoría a un archivo CSV para utilizarla con herramientas de análisis externas."
+      children: "Export the audit trail list to a CSV file for use with external analysis tools."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["En la sección ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["In the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "auditTrail.filter.title",
             product: "2"
-          }), ", configure filtros si es necesario."]
+          }), " section, set filters if needed."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Haga clic en ", (0,jsx_runtime.jsx)(IcMoreW, {}), " → ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click ", (0,jsx_runtime.jsx)(IcMoreW, {}), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "audit.user.csv_export",
             product: "2"
-          }), " en el lado derecho de la sección."]
+          }), " on the right side of the section."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Cuando aparezca la ventana de exportación CSV, ingresa ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["When the CSV export window appears, enter ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "auditTrail.export.reason",
             product: "2"
-          }), "(opcional) y haz clic en ", (0,jsx_runtime.jsx)(Cmd, {
+          }), "(optional) and click the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.download",
             product: "2"
-          }), "."]
+          }), " button."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-settings-system-audit-trail-export-csv.png"
         }), "\n"]
@@ -508,11 +508,11 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "tip",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "Si configuró filtros, solo los resultados filtrados se exportarán al archivo CSV."
+        children: "If you have set filtering, only the filtered results will be exported to the CSV file."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "configurar-columnas",
-      children: "Configurar columnas"
+      id: "set-columns",
+      children: "Set columns"
     }), "\n", (0,jsx_runtime.jsxs)(Columns, {
       children: [(0,jsx_runtime.jsx)(Column, {
         className: "width--40",
@@ -522,52 +522,52 @@ function _createMdxContent(props) {
       }), (0,jsx_runtime.jsxs)(Column, {
         className: "padding--l20",
         children: [(0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Cambie las posiciones de las columnas o ocúltelas en la lista de registro de auditoría. Haga clic en ", (0,jsx_runtime.jsx)(IcMoreW, {}), " → ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["You can change the positions of columns or hide them in the audit trail list. Click ", (0,jsx_runtime.jsx)(IcMoreW, {}), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "menu.columnSetting",
             product: "2"
-          }), " en el extremo derecho de la sección ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " on the far right of the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "auditTrail.filter.title",
             product: "2"
-          }), "."]
+          }), " section."]
         }), (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Desmarque la casilla del elemento que desea ocultar de la lista de columnas."
+              children: "Uncheck the checkbox of the item you wish to hide from the column list."
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Arrastra los elementos deseados a una nueva posición para cambiar el orden de las columnas."
+              children: "To change the order of the columns, you can drag the desired items to a new position."
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Haz clic en el botón ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["To initialize the column settings, click the ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "columnSetting.button.defaultColumn",
                 product: "2"
-              }), " para inicializar la configuración de columnas."]
+              }), " button."]
             }), "\n"]
           }), "\n"]
         }), (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Haz clic en el botón ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.apply",
             product: "2"
-          }), " para guardar la configuración."]
+          }), " button to save the settings."]
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "audit-trail-items",
-      children: "Elementos principales de seguimiento"
+      children: "Major tracking items"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Todas las actividades registradas en el registro de auditoría se organizan por categoría. Haz clic en cada elemento para ver los detalles."
+      children: "All activities recorded in the audit trail are organized by category. Click each item to check the details."
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Acceso al sistema"
+          children: "System Access"
         })
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Inicio de sesión"
+              children: "Login"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.system.login",
               product: "2"
@@ -576,7 +576,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Inicio de sesión multifactor"
+              children: "Multi-factor login"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.system.fingerprint_login",
               product: "2"
@@ -585,7 +585,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Cierre de sesión"
+              children: "Logout"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.system.logout",
               product: "2"
@@ -594,7 +594,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Motivos de error de inicio de sesión"
+              children: "Login failure reasons"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.system.loginfailedfingerprint",
               product: "2"
@@ -609,7 +609,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Intentos de inicio de sesión excedidos"
+              children: "Exceeded login attempts"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.system.maximum_invalid_attempts",
               product: "2"
@@ -620,13 +620,13 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Información del usuario"
+          children: "User Information"
         })
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Información básica"
+              children: "Basic Info"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.user.name",
               product: "2"
@@ -647,7 +647,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Información de autenticación"
+              children: "Authentication Information"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.user.password",
               product: "2"
@@ -668,7 +668,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Permisos y grupos"
+              children: "Permissions and Groups"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.user.permission",
               product: "2"
@@ -686,7 +686,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Estado del usuario"
+              children: "User Status"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.user.disabled",
               product: "2"
@@ -701,7 +701,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Gestión de datos"
+              children: "Data Management"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.user.csv_import",
               product: "2"
@@ -719,7 +719,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Integración de dispositivos"
+              children: "Device Integration"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.user.export",
               product: "2"
@@ -731,7 +731,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Otros"
+              children: "Others"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.user.photo",
               product: "2"
@@ -749,7 +749,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Gestión"
+              children: "Management"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.user.csv_export.absence",
               product: "2"
@@ -765,7 +765,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Funciones de correo electrónico"
+              children: "Email Functions"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.user.emailSentSuccess",
               product: "2"
@@ -779,13 +779,13 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Control de acceso"
+          children: "Access Control"
         })
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Configuración de la puerta"
+              children: "Door Settings"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.door.name",
               product: "2"
@@ -800,7 +800,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Dispositivos de puerta"
+              children: "Door Devices"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.door.entry_device_id",
               product: "2"
@@ -821,7 +821,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Control de puerta"
+              children: "Door Control"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.door.open_duration",
               product: "2"
@@ -842,7 +842,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Acciones de puerta"
+              children: "Door Actions"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.door.lock",
               product: "2"
@@ -872,7 +872,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Grupos de acceso"
+              children: "Access Groups"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.access_group.name",
               product: "2"
@@ -893,7 +893,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Niveles de acceso"
+              children: "Access Levels"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.access_level.name",
               product: "2"
@@ -908,7 +908,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Configuración del ascensor"
+              children: "Elevator Settings"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.elevator.name",
               product: "2"
@@ -929,7 +929,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Dispositivos del ascensor"
+              children: "Elevator Devices"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.elevator.control_device_id",
               product: "2"
@@ -947,7 +947,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Control del ascensor"
+              children: "Elevator Control"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.elevator.dual_authentication",
               product: "2"
@@ -959,7 +959,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Acciones del ascensor"
+              children: "Elevator Actions"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.elevator.lock",
               product: "2"
@@ -983,7 +983,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Niveles de piso"
+              children: "Floor Levels"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.floor_level.name",
               product: "2"
@@ -1003,13 +1003,13 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Gestión de dispositivos"
+          children: "Device Management"
         })
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Configuración básica del dispositivo"
+              children: "Device Basic Settings"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.device.name",
               product: "2"
@@ -1024,7 +1024,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Configuración de autenticación"
+              children: "Authentication Settings"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.device.authentication",
               product: "2"
@@ -1042,7 +1042,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Configuración de interfaz"
+              children: "Interface Settings"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.device.display",
               product: "2"
@@ -1057,7 +1057,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Configuración de comunicación"
+              children: "Communication Settings"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.device.lan",
               product: "2"
@@ -1087,7 +1087,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Configuración de funciones"
+              children: "Function Settings"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.device.system",
               product: "2"
@@ -1105,7 +1105,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Gestión de usuarios"
+              children: "User Management"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.device.export",
               product: "2"
@@ -1114,7 +1114,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Control del dispositivo"
+              children: "Device Control"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.device.connect",
               product: "2"
@@ -1135,7 +1135,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Gestión del sistema"
+              children: "System Management"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.device.factory_reset",
               product: "2"
@@ -1156,7 +1156,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Estado del dispositivo"
+              children: "Device Status"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.device.locked",
               product: "2"
@@ -1173,13 +1173,13 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Control de acceso avanzado"
+          children: "Advanced Access Control"
         })
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Configuración básica de control de acceso avanzado"
+              children: "Advanced Access Control Basic Settings"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.zone.name",
               product: "2"
@@ -1200,7 +1200,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Antipassback"
+              children: "Anti-passback"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.zone.antipassback",
               product: "2"
@@ -1215,7 +1215,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Alarma de incendio"
+              children: "Fire Alarm"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.zone.fire_alarm",
               product: "2"
@@ -1224,7 +1224,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Control de horario"
+              children: "Schedule Control"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.zone.forced_lock",
               product: "2"
@@ -1236,7 +1236,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Gestión de ocupación"
+              children: "Occupancy Management"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.zone.increase_occupancy",
               product: "2"
@@ -1251,7 +1251,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Acciones de control de acceso avanzado"
+              children: "Advanced Access Control Actions"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.zone.lock",
               product: "2"
@@ -1274,13 +1274,13 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Configuración del sistema"
+          children: "System Settings"
         })
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Configuración del servidor"
+              children: "Server Settings"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.server.server_addr",
               product: "2"
@@ -1298,7 +1298,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Configuración de seguridad"
+              children: "Security Settings"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.server.secure_communication",
               product: "2"
@@ -1313,7 +1313,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Configuración de sincronización"
+              children: "Sync Settings"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.server.log_sync_method",
               product: "2"
@@ -1325,7 +1325,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Configuración del dispositivo"
+              children: "Device Settings"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.server.enrollment_device_list",
               product: "2"
@@ -1343,7 +1343,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Licencias"
+              children: "Licenses"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.server.licenses",
               product: "2"
@@ -1352,7 +1352,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Configuración predeterminada"
+              children: "Default settings"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.preference.language",
               product: "2"
@@ -1370,7 +1370,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Configuración de horarios"
+              children: "Schedule settings"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.schedule.name",
               product: "2"
@@ -1400,7 +1400,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Configuración de días festivos"
+              children: "Holiday settings"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.holiday_group.name",
               product: "2"
@@ -1415,7 +1415,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Configuración de alertas"
+              children: "Alert settings"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.event_type.alert_on",
               product: "2"
@@ -1427,7 +1427,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Configuración del registro de imágenes"
+              children: "Image log settings"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.image_filter.EventFilterCollection",
               product: "2"
@@ -1439,7 +1439,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Credenciales móviles"
+              children: "Mobile credentials"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.mobileCredential.use",
               product: "2"
@@ -1451,24 +1451,27 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Registro de auditoría"
+              children: "Audit trail"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.audit.csv_export",
               product: "2"
-            })]
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "reportApp.schedulePageTitle",
+              product: "2"
+            }), " added, modified, deleted"]
           }), "\n"]
         }), "\n"]
       })]
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Configuración de seguridad avanzada"
+          children: "Advanced security settings"
         })
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Tarjeta inteligente - DESFire"
+              children: "Smart card - DESFire"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.smartcard.desfire_app_id",
               product: "2"
@@ -1489,7 +1492,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Tarjeta inteligente - iClass"
+              children: "Smart card - iClass"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.smartcard.iclass_primary_key",
               product: "2"
@@ -1504,7 +1507,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Tarjeta inteligente - MIFARE"
+              children: "Smart card - MIFARE"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.smartcard.mifare_primary_key",
               product: "2"
@@ -1525,7 +1528,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Tarjeta inteligente - móvil"
+              children: "Smart card - Mobile"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.smartcard.mobile_primary_key",
               product: "2"
@@ -1537,7 +1540,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Tarjeta inteligente - estándar"
+              children: "Smart card - Standard"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.smartcard.name",
               product: "2"
@@ -1555,7 +1558,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Configuración de Wiegand"
+              children: "Wiegand settings"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.wiegand_format.name",
               product: "2"
@@ -1588,7 +1591,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Condiciones y acciones de activación"
+              children: "Trigger conditions and actions"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.trigger_action.name",
               product: "2"
@@ -1606,7 +1609,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Permisos personalizados"
+              children: "Custom permissions"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.permission.name",
               product: "2"
@@ -1627,7 +1630,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Campos personalizados"
+              children: "Custom fields"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.custom_fields.name",
               product: "2"
@@ -1639,7 +1642,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Configuración de señales"
+              children: "Signal settings"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.output_signal.name",
               product: "2"
@@ -1662,13 +1665,13 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(Details, {
       children: [(0,jsx_runtime.jsx)("summary", {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Gestión de datos"
+          children: "Data management"
         })
       }), (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Copia de seguridad del sistema"
+              children: "System backup"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.menu.systemBackup",
               product: "2"
@@ -1677,7 +1680,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Gestión de video"
+              children: "Video management"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.video.camera",
               product: "2"
@@ -1689,7 +1692,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Gestión de visitantes"
+              children: "Visitor management"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.menu.visitor",
               product: "2"
@@ -1701,7 +1704,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Gestión de puertos"
+              children: "Port management"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.menu.port",
               product: "2"
@@ -1710,7 +1713,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Horario de verano"
+              children: "Daylight saving time"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.menu.setting.dst",
               product: "2"
@@ -1719,7 +1722,7 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Interfaz personalizada"
+              children: "Custom interface"
             }), ": ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.menu.setting.quick_action",
               product: "2"

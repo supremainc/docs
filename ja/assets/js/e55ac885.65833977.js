@@ -1455,7 +1455,10 @@ function _createMdxContent(props) {
             }), "：", (0,jsx_runtime.jsx)(Cmd, {
               sid: "audit.setting.audit.csv_export",
               product: "2"
-            })]
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "reportApp.schedulePageTitle",
+              product: "2"
+            }), " 追加、修正、削除"]
           }), "\n"]
         }), "\n"]
       })]
