@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["9865"], {
-77459: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["40657"], {
+23235: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,26 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_release_notes_101_mdx_9ea_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_release_notes_101_mdx_cde_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-release-notes-101-mdx-9ea.json
-var site_docs_platform_biostar_x_release_notes_101_mdx_9ea_namespaceObject = JSON.parse('{"id":"platform/biostar_x/release-notes/101","title":"버전 1.0.1","description":"릴리스2025-12-29","source":"@site/docs/platform/biostar_x/release-notes/101.mdx","sourceDirName":"platform/biostar_x/release-notes","slug":"/platform/biostar_x/release-notes/101","permalink":"/docs/platform/biostar_x/release-notes/101","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/release-notes/101.mdx","tags":[],"version":"current","frontMatter":{"id":"101","title":"버전 1.0.1","isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"BioStar X 릴리스 노트","permalink":"/docs/platform/biostar_x/release-notes"},"next":{"title":"버전 1.0.0","permalink":"/docs/platform/biostar_x/release-notes/100"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-release-notes-101-mdx-cde.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_release_notes_101_mdx_cde_namespaceObject = JSON.parse('{"id":"platform/biostar_x/release-notes/101","title":"Version 1.0.1","description":"Release2025-12-29","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/release-notes/101.mdx","sourceDirName":"platform/biostar_x/release-notes","slug":"/platform/biostar_x/release-notes/101","permalink":"/docs/en/platform/biostar_x/release-notes/101","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/release-notes/101.mdx","tags":[],"version":"current","frontMatter":{"id":"101","title":"Version 1.0.1","isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"BioStar X Release Notes","permalink":"/docs/en/platform/biostar_x/release-notes"},"next":{"title":"Version 1.0.0","permalink":"/docs/en/platform/biostar_x/release-notes/100"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/release-notes/101.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/release-notes/101.mdx
 
 
 const frontMatter = {
 	id: 101,
-	title: '버전 1.0.1',
+	title: 'Version 1.0.1',
 	isTranslationMissing: false
 };
-const contentTitle = '버전 1.0.1 (빌드 번호 1.0.1.354)';
+const contentTitle = 'Version 1.0.1 (Build No. 1.0.1.355)';
 
 const assets = {
 
@@ -37,12 +37,12 @@ const assets = {
 
 
 const toc = [{
-  "value": "신규 기능 및 개선",
-  "id": "신규-기능-및-개선",
+  "value": "New Features and Improvements",
+  "id": "new-features-and-improvements",
   "level": 2
 }, {
-  "value": "버그 수정",
-  "id": "버그-수정",
+  "value": "Bug Fixes",
+  "id": "bug-fixes",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -65,106 +65,108 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.header, {
       children: (0,jsx_runtime.jsx)(_components.h1, {
-        id: "버전-101-빌드-번호-101354",
-        children: "버전 1.0.1 (빌드 번호 1.0.1.354)"
+        id: "version-101-build-no-101355",
+        children: "Version 1.0.1 (Build No. 1.0.1.355)"
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["릴리스", (0,jsx_runtime.jsx)(Separator, {}), "2025-12-29"]
+      children: ["Release", (0,jsx_runtime.jsx)(Separator, {}), "2025-12-29"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "신규-기능-및-개선",
-      children: "신규 기능 및 개선"
+      id: "new-features-and-improvements",
+      children: "New Features and Improvements"
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "상단 메뉴바에서 접속 중인 계정의 기본 설정 및 비밀번호를 변경 할 수 있는 메뉴 추가"
+          children: "Added the menu in the top navigation bar to change the signed-in account’s Preference settings and password."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["일부 메뉴에서 인쇄 또는 내보내기 작업 시 사유를 입력하고, 입력한 사유를 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "감사 추적"
-          }), "에서 확인할 수 있도록 개선"]
+          children: ["Improved to allow entering a reason when printing or exporting in certain menus, and to view the entered reason in the ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Audit Trail"
+          }), "."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "사용자"
+                children: "User"
               }), ": ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "인쇄"
+                children: "Print"
               }), " / ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "CSV 내보내기"
+                children: "CSV Export"
               }), " / ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "데이터 파일로 내보내기"
+                children: "Data File Export"
               })]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "데이터"
+                children: "Data"
               }), ": ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "인쇄"
+                children: "Print"
               }), " / ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "CSV 내보내기"
+                children: "CSV Export"
               })]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "로그인 실패 시 감사 추적에서 이력을 확인할 수 있도록 개선"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Improved to allow viewing the history in the ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Audit Trail"
+          }), " upon login failure."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["BioStar X ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "근태 관리(T&A) 라이선스"
-          }), "를 모든 기본 라이선스(디바이스 매니저 이상)에서 활성화할 수 있도록 변경"]
+          children: ["Improved to allow the BioStar X ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Attendance Management (T&A) license"
+          }), " to be activated on all base licenses (Device Manager or higher)."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["BioStar X ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "운용 규모(Capacity) 업그레이드"
-          }), "를 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "에센셜"
-          }), " 라이선스부터 지원하도록 개선"]
+          children: ["Improved to support the BioStar X ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Capacity upgrade"
+          }), " starting from the ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Essential"
+          }), " license."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "얼굴"
-          }), " 인증수단 표기 변경"]
+          children: ["Rename the ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Face"
+          }), " credential"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "얼굴"
+              children: "Face"
             }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "IR 페이스"
+              children: "IR Face"
             })]
           }), "\n"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "버그-수정",
-      children: "버그 수정"
+      id: "bug-fixes",
+      children: "Bug Fixes"
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(BugLists, {
       children: (0,jsx_runtime.jsxs)(_components.ol, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["시스템 안정성 향상을 위한 버그 수정 및 서비스 최적화 작업 진행 ", (0,jsx_runtime.jsx)(Badge, {
+            children: ["Fixed bugs and optimized services to improve overall system stability. ", (0,jsx_runtime.jsx)(Badge, {
               children: "1.0.0"
             })]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: ["Improved the startup performance of the ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X Core Web Service"
-            }), "의 기동 시간을 개선하고, 서비스가 중지되었거나 시작 중인 상태에서 로그인 시도 시 표시되는 팝업 메시지를 더 명확하게 개선 ", (0,jsx_runtime.jsx)(Badge, {
+            }), " and clarified the popup message that appears when attempting to sign in while the service is stopped or still starting. ", (0,jsx_runtime.jsx)(Badge, {
               children: "1.0.0"
             })]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["서로 다른 장치에서 같은 사용자의 인증 이벤트가 동일한 시간대에 발생한 경우, ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "인원 점검"
-            }), "을 실행하면 서버가 종료되던 문제 ", (0,jsx_runtime.jsx)(Badge, {
+            children: ["Fixed a server crash that occurred when running ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Roll Call"
+            }), " after the same user’s authentication events were generated at the same timestamp (DEVDT) on different devices. ", (0,jsx_runtime.jsx)(Badge, {
               children: "1.0.0"
             })]
           }), "\n"]

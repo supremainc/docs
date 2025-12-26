@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["95789"], {
-96010: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["90445"], {
+79374: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,18 +9,18 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_ja_docusaurus_plugin_content_docs_current_platform_biostar_x_release_notes_101_mdx_f93_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_x_release_notes_101_mdx_37d_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-ja-docusaurus-plugin-content-docs-current-platform-biostar-x-release-notes-101-mdx-f93.json
-var site_i_18_n_ja_docusaurus_plugin_content_docs_current_platform_biostar_x_release_notes_101_mdx_f93_namespaceObject = JSON.parse('{"id":"platform/biostar_x/release-notes/101","title":"Version 1.0.1","description":"Release2025-12-29","source":"@site/i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/release-notes/101.mdx","sourceDirName":"platform/biostar_x/release-notes","slug":"/platform/biostar_x/release-notes/101","permalink":"/docs/ja/platform/biostar_x/release-notes/101","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/release-notes/101.mdx","tags":[],"version":"current","frontMatter":{"id":"101","title":"Version 1.0.1","isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"BioStar X リリースノート","permalink":"/docs/ja/platform/biostar_x/release-notes"},"next":{"title":"Version 1.0.0","permalink":"/docs/ja/platform/biostar_x/release-notes/100"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-es-docusaurus-plugin-content-docs-current-platform-biostar-x-release-notes-101-mdx-37d.json
+var site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_x_release_notes_101_mdx_37d_namespaceObject = JSON.parse('{"id":"platform/biostar_x/release-notes/101","title":"Version 1.0.1","description":"Release2025-12-29","source":"@site/i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/release-notes/101.mdx","sourceDirName":"platform/biostar_x/release-notes","slug":"/platform/biostar_x/release-notes/101","permalink":"/docs/es/platform/biostar_x/release-notes/101","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/release-notes/101.mdx","tags":[],"version":"current","frontMatter":{"id":"101","title":"Version 1.0.1","isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Notas de la versión de BioStar X","permalink":"/docs/es/platform/biostar_x/release-notes"},"next":{"title":"Version 1.0.0","permalink":"/docs/es/platform/biostar_x/release-notes/100"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/release-notes/101.mdx
+;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/release-notes/101.mdx
 
 
 const frontMatter = {
@@ -28,7 +28,7 @@ const frontMatter = {
 	title: 'Version 1.0.1',
 	isTranslationMissing: false
 };
-const contentTitle = 'Version 1.0.1 (Build No. 1.0.1.354)';
+const contentTitle = 'Version 1.0.1 (Build No. 1.0.1.355)';
 
 const assets = {
 
@@ -65,8 +65,8 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.header, {
       children: (0,jsx_runtime.jsx)(_components.h1, {
-        id: "version-101-build-no-101354",
-        children: "Version 1.0.1 (Build No. 1.0.1.354)"
+        id: "version-101-build-no-101355",
+        children: "Version 1.0.1 (Build No. 1.0.1.355)"
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["Release", (0,jsx_runtime.jsx)(Separator, {}), "2025-12-29"]
