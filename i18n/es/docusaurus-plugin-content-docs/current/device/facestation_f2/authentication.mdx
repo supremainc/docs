@@ -108,145 +108,145 @@ Cambie la configuración de la autenticación facial.
 
    * <Cmd sid="ui_229" product="dev" />: Defina la posición y el tamaño del área donde el dispositivo detecta rostros durante la autenticación facial.
 
-     :::info
+      :::info
 
-     Para un rendimiento óptimo, se recomienda usar los valores predeterminados de las subopciones de <Cmd sid="ui_229" product="dev" />. Los valores predeterminados de cada opción son los siguientes:
+      Para un rendimiento óptimo, se recomienda usar los valores predeterminados de las subopciones de <Cmd sid="ui_229" product="dev" />. Los valores predeterminados de cada opción son los siguientes:
 
-     * Ángulo máximo de orientación de la cabeza: 15
+      * Ángulo máximo de orientación de la cabeza: 15
 
-     * Distancia de detección: mín. 30 cm, máx. 100 cm
+      * Distancia de detección: mín. 30 cm, máx. 100 cm
 
-     * Búsqueda amplia: desactivada
+      * Búsqueda amplia: desactivada
 
-     :::
+      :::
 
    * <Cmd sid="ui_060" product="dev" />: Al activar <Cmd sid="ui_060" product="dev" />, podrá enrolar la <Cmd sid="ui_340" product="dev" /> emitida por BioStar X. <Cmd sid="ui_340" product="dev" /> permite la autenticación biométrica sin almacenar datos de usuario en el servidor BioStar X, Airfob Portal o dispositivo, al guardar la plantilla biométrica del usuario en una tarjeta de acceso móvil.
 
-     :::info
+      :::info
 
-     Para obtener más información sobre <Cmd sid="ui_340" product="dev" />, consulte la [Guía del administrador de BioStar X](../../platform/biostar_x/enroll-credential-mobile#template-on-mobile).
+      Para obtener más información sobre <Cmd sid="ui_340" product="dev" />, consulte la [Guía del administrador de BioStar X](../../platform/biostar_x/enroll-credential-mobile#template-on-mobile).
 
-     :::
+      :::
 
    * <Cmd sid="ui_157" product="dev" />: Configure para almacenar tanto las imágenes reales como las plantillas en Visual Face, o para guardar solo las plantillas sin imágenes. Si se desactiva, se eliminarán todas las imágenes almacenadas de rostros visuales y los rostros visuales enrolados posteriormente almacenarán solo las plantillas, sin imágenes.
 
-     :::info
+      :::info
 
      Para administrar esta configuración, utilice BioStar 2 v2.9.7 o superior.
 
-     :::
+      :::
 
    * <Cmd sid="ui_149" product="dev" />: Configura el nivel de seguridad para la autenticación 1:N.
 
    * <Cmd sid="ui_278" product="dev" />: Configure el modo de funcionamiento del dispositivo para la autenticación facial.
 
-     * <Cmd sid="ui_359" product="dev" />: La coincidencia visual e infrarroja funciona conjuntamente para aumentar la precisión de la autenticación facial.
+      * <Cmd sid="ui_359" product="dev" />: La coincidencia visual e infrarroja funciona conjuntamente para aumentar la precisión de la autenticación facial.
 
-     * <Cmd sid="ui_159" product="dev" />: Los usuarios pueden autenticarse rápidamente mientras caminan dentro del rango de autenticación del dispositivo.
+      * <Cmd sid="ui_159" product="dev" />: Los usuarios pueden autenticarse rápidamente mientras caminan dentro del rango de autenticación del dispositivo.
 
    * <Cmd sid="ui_247" product="dev" />: Evite la autenticación de usuarios con rostros falsificados, como fotografías. Se activa cuando <Cmd sid="ui_278" product="dev" /> está configurado en <Cmd sid="ui_359" product="dev" />.
 
    * <Cmd sid="ui_070" product="dev" />: Permite cambiar ajustes avanzados de autenticación facial, como la detección de mascarilla y las funciones de la cámara térmica.
 
-     * <Cmd sid="ui_368" product="dev" />: Permite establecer el modo de confirmación según la finalidad.
+      * <Cmd sid="ui_368" product="dev" />: Permite establecer el modo de confirmación según la finalidad.
 
-     * <Cmd sid="ui_264" product="dev" />: Permite definir el estado de notificación para fallos de autenticación debidos a la ausencia de mascarilla o a temperatura superior al estándar.
+      * <Cmd sid="ui_264" product="dev" />: Permite definir el estado de notificación para fallos de autenticación debidos a la ausencia de mascarilla o a temperatura superior al estándar.
 
-     * <Cmd sid="ui_123" product="dev" />: Configure si se utiliza la detección de mascarillas.
+      * <Cmd sid="ui_123" product="dev" />: Configure si se utiliza la detección de mascarillas.
 
-       * <Cmd sid="ui_165" product="dev" />: Los usuarios sin mascarilla serán rechazados y el evento sin mascarilla se registrará en los registros.
+         * <Cmd sid="ui_165" product="dev" />: Los usuarios sin mascarilla serán rechazados y el evento sin mascarilla se registrará en los registros.
 
-       * <Cmd sid="ui_164" product="dev" />: Los usuarios sin mascarilla aún podrán autenticarse, pero se registrará un evento sin mascarilla.
+         * <Cmd sid="ui_164" product="dev" />: Los usuarios sin mascarilla aún podrán autenticarse, pero se registrará un evento sin mascarilla.
 
    * <Cmd sid="ui_236" product="dev" />: Puede establecer si se utilizará la cámara térmica.
 
-     * <Cmd sid="ui_165" product="dev" />: Los usuarios con temperatura superior al rango estándar serán rechazados y el evento se registrará como temperatura superior al estándar.
+      * <Cmd sid="ui_165" product="dev" />: Los usuarios con temperatura superior al rango estándar serán rechazados y el evento se registrará como temperatura superior al estándar.
 
-     * <Cmd sid="ui_164" product="dev" />: Los usuarios con temperatura superior al rango estándar aún podrán autenticarse, pero el evento se registrará como temperatura superior al estándar.
+      * <Cmd sid="ui_164" product="dev" />: Los usuarios con temperatura superior al rango estándar aún podrán autenticarse, pero el evento se registrará como temperatura superior al estándar.
 
 :::info
 
 * Al usar <Cmd sid="ui_123" product="dev" /> o <Cmd sid="ui_236" product="dev" />, configure <Cmd sid="ui_368" product="dev" /> según la finalidad del dispositivo.
 
-  * <Cmd sid="ui_267" product="dev" />: Después de la autenticación, verifica si el usuario lleva mascarilla o mide la temperatura.
+   * <Cmd sid="ui_267" product="dev" />: Después de la autenticación, verifica si el usuario lleva mascarilla o mide la temperatura.
 
-  * <Cmd sid="ui_369" product="dev" />: Después de comprobar si el usuario lleva mascarilla o de medir la temperatura, realiza la autenticación. Al usar este modo, los usuarios sin mascarilla o con temperatura superior al estándar no pueden autenticarse.
+   * <Cmd sid="ui_369" product="dev" />: Después de comprobar si el usuario lleva mascarilla o de medir la temperatura, realiza la autenticación. Al usar este modo, los usuarios sin mascarilla o con temperatura superior al estándar no pueden autenticarse.
 
-  * <Cmd sid="ui_370" product="dev" />: El dispositivo solo puede utilizarse para verificar si se lleva mascarilla o para medir la temperatura. Al usar este modo, los usuarios que lleven mascarilla o que estén por debajo de la temperatura estándar pueden ingresar independientemente de la autenticación.
+   * <Cmd sid="ui_370" product="dev" />: El dispositivo solo puede utilizarse para verificar si se lleva mascarilla o para medir la temperatura. Al usar este modo, los usuarios que lleven mascarilla o que estén por debajo de la temperatura estándar pueden ingresar independientemente de la autenticación.
 
 * Cuando <Cmd sid="ui_236" product="dev" /> se ajusta a <Cmd sid="ui_161" product="dev" />, se activan las opciones avanzadas de la cámara térmica.
 
-  * <Cmd sid="ui_196" product="dev" />: Puede establecer la unidad de visualización de la temperatura.
+   * <Cmd sid="ui_196" product="dev" />: Puede establecer la unidad de visualización de la temperatura.
 
-  * <Cmd sid="ui_099" product="dev" />: Puede establecer la temperatura mínima de referencia para restringir el acceso. Los usuarios con temperatura superficial inferior a <Cmd sid="ui_099" product="dev" /> serán rechazados. <Cmd sid="ui_099" product="dev" /> puede establecerse en un rango de 1℃~45℃ y no puede configurarse por encima de <Cmd sid="ui_106" product="dev" />.
+   * <Cmd sid="ui_099" product="dev" />: Puede establecer la temperatura mínima de referencia para restringir el acceso. Los usuarios con temperatura superficial inferior a <Cmd sid="ui_099" product="dev" /> serán rechazados. <Cmd sid="ui_099" product="dev" /> puede establecerse en un rango de 1℃~45℃ y no puede configurarse por encima de <Cmd sid="ui_106" product="dev" />.
 
-  * <Cmd sid="ui_106" product="dev" />: Puede establecer la temperatura máxima de referencia para restringir el acceso. Los usuarios con temperatura superficial superior a <Cmd sid="ui_106" product="dev" /> serán rechazados. <Cmd sid="ui_106" product="dev" /> puede establecerse en un rango de 1℃~45℃ y no puede configurarse por debajo de <Cmd sid="ui_099" product="dev" />.
+   * <Cmd sid="ui_106" product="dev" />: Puede establecer la temperatura máxima de referencia para restringir el acceso. Los usuarios con temperatura superficial superior a <Cmd sid="ui_106" product="dev" /> serán rechazados. <Cmd sid="ui_106" product="dev" /> puede establecerse en un rango de 1℃~45℃ y no puede configurarse por debajo de <Cmd sid="ui_099" product="dev" />.
 
-  * <Cmd sid="ui_240" product="dev" />: Puede establecer si se guardará el registro de temperatura del usuario. Si utiliza esta opción, tanto el éxito de la autenticación como el valor de temperatura del usuario se guardarán en el registro; si no se utiliza, solo se registrará el éxito de la autenticación.
+   * <Cmd sid="ui_240" product="dev" />: Puede establecer si se guardará el registro de temperatura del usuario. Si utiliza esta opción, tanto el éxito de la autenticación como el valor de temperatura del usuario se guardarán en el registro; si no se utiliza, solo se registrará el éxito de la autenticación.
 
-  * <Cmd sid="ui_235" product="dev" />: Establece si el video infrarrojo se muestra en la pantalla del dispositivo.
+   * <Cmd sid="ui_235" product="dev" />: Establece si el video infrarrojo se muestra en la pantalla del dispositivo.
 
-  * <Cmd sid="ui_114" product="dev" />: Configura el dispositivo para que detecte automáticamente la zona de interés (ROI) para medir la temperatura del usuario. Por ejemplo, si hay otras luces instaladas cerca, esta opción permite que la cámara térmica detecte y mida la temperatura del usuario en lugar de esa iluminación.
+   * <Cmd sid="ui_114" product="dev" />: Configura el dispositivo para que detecte automáticamente la zona de interés (ROI) para medir la temperatura del usuario. Por ejemplo, si hay otras luces instaladas cerca, esta opción permite que la cámara térmica detecte y mida la temperatura del usuario en lugar de esa iluminación.
 
-  * <Cmd sid="ui_331" product="dev" />: Establece opciones detalladas de la cámara para una medición precisa.
+   * <Cmd sid="ui_331" product="dev" />: Establece opciones detalladas de la cámara para una medición precisa.
 
 * Cuando <Cmd sid="ui_236" product="dev" /> se ajusta a <Cmd sid="ui_161" product="dev" />, configura opciones detalladas de la cámara térmica para una medición precisa según el entorno de instalación.
 
-  * <Cmd sid="ui_243" product="dev" />: Configure la distancia entre el usuario y la cámara térmica.
+   * <Cmd sid="ui_243" product="dev" />: Configure la distancia entre el usuario y la cámara térmica.
 
-  * <Cmd sid="ui_296" product="dev" />: Configure la emisividad infrarroja.
+   * <Cmd sid="ui_296" product="dev" />: Configure la emisividad infrarroja.
 
-  * <Cmd sid="ui_045" product="dev" />, <Cmd sid="ui_046" product="dev" />, <Cmd sid="ui_048" product="dev" />, <Cmd sid="ui_047" product="dev" />: Permite configurar manualmente la ROI (región de interés) cuando <Cmd sid="ui_114" product="dev" /> está ajustado a <Cmd sid="ui_162" product="dev" />. Ajuste la ubicación y el tamaño de la ROI para especificar el área donde la cámara térmica medirá la temperatura. <Cmd sid="ui_045" product="dev" /> indica las posiciones izquierda y derecha de la región de interés; cuanto mayor sea este valor, más se desplazará la región hacia la derecha de la pantalla. <Cmd sid="ui_046" product="dev" /> indica las posiciones superior e inferior de la región de interés; cuanto mayor sea este valor, más se desplazará la región hacia arriba. <Cmd sid="ui_048" product="dev" /> y <Cmd sid="ui_047" product="dev" /> indican el tamaño de la región de interés; al aumentar ambos valores, el área para medir la temperatura se amplía. Por ejemplo, si los valores de <Cmd sid="ui_045" product="dev" />, <Cmd sid="ui_046" product="dev" />, <Cmd sid="ui_048" product="dev" />, <Cmd sid="ui_047" product="dev" /> se cambian de los valores predeterminados a 40, 15, 70 y 40 respectivamente, la región de interés cambiará como se muestra a continuación.
+   * <Cmd sid="ui_045" product="dev" />, <Cmd sid="ui_046" product="dev" />, <Cmd sid="ui_048" product="dev" />, <Cmd sid="ui_047" product="dev" />: Permite configurar manualmente la ROI (región de interés) cuando <Cmd sid="ui_114" product="dev" /> está ajustado a <Cmd sid="ui_162" product="dev" />. Ajuste la ubicación y el tamaño de la ROI para especificar el área donde la cámara térmica medirá la temperatura. <Cmd sid="ui_045" product="dev" /> indica las posiciones izquierda y derecha de la región de interés; cuanto mayor sea este valor, más se desplazará la región hacia la derecha de la pantalla. <Cmd sid="ui_046" product="dev" /> indica las posiciones superior e inferior de la región de interés; cuanto mayor sea este valor, más se desplazará la región hacia arriba. <Cmd sid="ui_048" product="dev" /> y <Cmd sid="ui_047" product="dev" /> indican el tamaño de la región de interés; al aumentar ambos valores, el área para medir la temperatura se amplía. Por ejemplo, si los valores de <Cmd sid="ui_045" product="dev" />, <Cmd sid="ui_046" product="dev" />, <Cmd sid="ui_048" product="dev" />, <Cmd sid="ui_047" product="dev" /> se cambian de los valores predeterminados a 40, 15, 70 y 40 respectivamente, la región de interés cambiará como se muestra a continuación.
 
-  <Columns>
-    <Column className="text--center">
-      <Image src="/img/device/auth-roi1.png" width={200} alone />
+   <Columns>
+   <Column className="text--center">
+   <Image src="/img/device/auth-roi1.png" width={200} alone />
 
-      Si la ROI está configurada con el valor predeterminado
-    </Column>
+   Si la ROI está configurada con el valor predeterminado
+   </Column>
 
-    <Column className="text--center">
-      <Image src="/img/device/auth-roi2.png" width={200} alone />
+   <Column className="text--center">
+   <Image src="/img/device/auth-roi2.png" width={200} alone />
 
-      ROI X(%), ROI Y(%), ancho de ROI (%), alto de ROI (%)<br />Cuando los valores se cambian a 40, 15, 70 y 40, respectivamente
-    </Column>
-  </Columns>
+   ROI X(%), ROI Y(%), ancho de ROI (%), alto de ROI (%)<br />Cuando los valores se cambian a 40, 15, 70 y 40, respectivamente
+   </Column>
+   </Columns>
 
-  * <Cmd sid="ui_241" product="dev" />: Configure la cámara termográfica para corregir la temperatura de forma autónoma, teniendo en cuenta el uso ambiental del dispositivo y la temperatura circundante.
+   * <Cmd sid="ui_241" product="dev" />: Configure la cámara termográfica para corregir la temperatura de forma autónoma, teniendo en cuenta el uso ambiental del dispositivo y la temperatura circundante.
 
-  * <Cmd sid="ui_242" product="dev" />: Ajuste las mediciones de temperatura para que aumenten o disminuyan en un valor constante según el entorno de uso del producto. Por ejemplo, si la lectura de temperatura siempre se mide 0.1℃ más alta, establezca el valor de corrección de temperatura en -0.1.
+   * <Cmd sid="ui_242" product="dev" />: Ajuste las mediciones de temperatura para que aumenten o disminuyan en un valor constante según el entorno de uso del producto. Por ejemplo, si la lectura de temperatura siempre se mide 0.1℃ más alta, establezca el valor de corrección de temperatura en -0.1.
 
-  * <Cmd sid="ui_017" product="dev" />: Si la cámara termográfica está correctamente conectada, se mostrará la versión del firmware de dicha cámara.
+   * <Cmd sid="ui_017" product="dev" />: Si la cámara termográfica está correctamente conectada, se mostrará la versión del firmware de dicha cámara.
 
 * Para un rendimiento óptimo, se recomienda usar los valores predeterminados en las subopciones de <Cmd sid="ui_331" product="dev" />. Los valores predeterminados de cada opción son los siguientes:
 
-  * <Cmd sid="ui_243" product="dev" />: 100
+   * <Cmd sid="ui_243" product="dev" />: 100
 
-  * <Cmd sid="ui_296" product="dev" />: 0.98
+   * <Cmd sid="ui_296" product="dev" />: 0.98
 
-  * <Cmd sid="ui_045" product="dev" />: 30
+   * <Cmd sid="ui_045" product="dev" />: 30
 
-  * <Cmd sid="ui_046" product="dev" />: 25
+   * <Cmd sid="ui_046" product="dev" />: 25
 
-  * <Cmd sid="ui_048" product="dev" />: 50
+   * <Cmd sid="ui_048" product="dev" />: 50
 
-  * <Cmd sid="ui_047" product="dev" />: 55
+   * <Cmd sid="ui_047" product="dev" />: 55
 
-  Cuando use el ROI como configuración predeterminada, se mostrará una guía amarilla en el área de ROI de la pantalla durante la autenticación, como se muestra a continuación. Cuando el rostro del usuario esté alineado dentro de esa área durante la autenticación, se podrán realizar mediciones de temperatura precisas. Cuando cambie la configuración manualmente o use un ROI dinámico, la guía amarilla no se mostrará.
+   Cuando use el ROI como configuración predeterminada, se mostrará una guía amarilla en el área de ROI de la pantalla durante la autenticación, como se muestra a continuación. Cuando el rostro del usuario esté alineado dentro de esa área durante la autenticación, se podrán realizar mediciones de temperatura precisas. Cuando cambie la configuración manualmente o use un ROI dinámico, la guía amarilla no se mostrará.
 
-  <Columns>
-    <Column className="text--center">
-      <Image src="/img/device/auth-static-roi.png" width={200} />
+   <Columns>
+   <Column className="text--center">
+   <Image src="/img/device/auth-static-roi.png" width={200} />
 
-      Si la ROI está configurada con el valor predeterminado
-    </Column>
+   Si la ROI está configurada con el valor predeterminado
+   </Column>
 
-    <Column className="text--center">
-      <Image src="/img/device/auth-dynamic-roi.png" width={200} />
+   <Column className="text--center">
+   <Image src="/img/device/auth-dynamic-roi.png" width={200} />
 
-      Al cambiar la configuración de ROI o usar ROI dinámico
-    </Column>
-  </Columns>
+   Al cambiar la configuración de ROI o usar ROI dinámico
+   </Column>
+   </Columns>
 
 * Las funciones de autenticación con mascarilla y de cámara termográfica no están disponibles en los dispositivos esclavos.
 
@@ -322,16 +322,16 @@ Configura la opción de visualización del resultado de autenticación.
 
    * <Cmd sid="ui_169" product="dev" />: Selecciona cómo aparece el ID de usuario en la pantalla de resultados de autenticación del dispositivo.
 
-     * <Cmd sid="ui_307" product="dev" />: Muestra el ID de usuario completo.
+      * <Cmd sid="ui_307" product="dev" />: Muestra el ID de usuario completo.
 
-     * <Cmd sid="ui_316" product="dev" />: Mostrar solo el primer carácter del ID de usuario.
+      * <Cmd sid="ui_316" product="dev" />: Mostrar solo el primer carácter del ID de usuario.
 
-     * <Cmd sid="ui_357" product="dev" />: No mostrar el ID de usuario.
+      * <Cmd sid="ui_357" product="dev" />: No mostrar el ID de usuario.
 
    * <Cmd sid="ui_177" product="dev" />: Seleccionar cómo aparece el nombre de usuario en la pantalla de resultados de autenticación del dispositivo.
 
-     * <Cmd sid="ui_307" product="dev" />: Mostrar el nombre de usuario completo.
+      * <Cmd sid="ui_307" product="dev" />: Mostrar el nombre de usuario completo.
 
-     * <Cmd sid="ui_316" product="dev" />: Mostrar solo el primer carácter del nombre de usuario.
+      * <Cmd sid="ui_316" product="dev" />: Mostrar solo el primer carácter del nombre de usuario.
 
-     * <Cmd sid="ui_357" product="dev" />: No mostrar el nombre de usuario.
+      * <Cmd sid="ui_357" product="dev" />: No mostrar el nombre de usuario.

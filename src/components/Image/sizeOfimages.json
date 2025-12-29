@@ -835,11 +835,11 @@
     "width": 1200,
     "height": 250
   },
-  "/docs/img/biostarx-before-start-new-database.png": {
+  "/img/biostarx-before-start-new-database.png": {
     "width": 700,
     "height": 531
   },
-  "/docs/img/biostarx-checkpoint.png": {
+  "/img/biostarx-checkpoint.png": {
     "width": 800,
     "height": 327
   },
@@ -1067,11 +1067,11 @@
     "width": 500,
     "height": 392
   },
-  "/docs/img/biostarx-install-comm-server-login.png": {
+  "/img/biostarx-install-comm-server-login.png": {
     "width": 499,
     "height": 392
   },
-  "/docs/img/biostarx-install-comm-server-port-settings.png": {
+  "/img/biostarx-install-comm-server-port-settings.png": {
     "width": 500,
     "height": 392
   },
@@ -1391,15 +1391,15 @@
     "width": 600,
     "height": 594
   },
-  "/docs/img/biostarx-new-user-credential-ir-face-nth.png": {
+  "/img/biostarx-new-user-credential-ir-face-nth.png": {
     "width": 600,
     "height": 210
   },
-  "/docs/img/biostarx-new-user-credential-ir-face.png": {
+  "/img/biostarx-new-user-credential-ir-face.png": {
     "width": 600,
     "height": 521
   },
-  "/docs/img/biostarx-new-user-credential-mobile-csn-assign.png": {
+  "/img/biostarx-new-user-credential-mobile-csn-assign.png": {
     "width": 1134,
     "height": 574
   },
@@ -2163,11 +2163,11 @@
     "width": 800,
     "height": 262
   },
-  "/docs/img/biostarx-settings-credential-irface-group-match.png": {
+  "/img/biostarx-settings-credential-irface-group-match.png": {
     "width": 1200,
     "height": 395
   },
-  "/docs/img/biostarx-settings-credential-smart-card-desfire.png": {
+  "/img/biostarx-settings-credential-smart-card-desfire.png": {
     "width": 800,
     "height": 303
   },
@@ -2231,11 +2231,11 @@
     "width": 600,
     "height": 163
   },
-  "/docs/img/biostarx-settings-external-remote-access.png": {
+  "/img/biostarx-settings-external-remote-access.png": {
     "width": 1000,
     "height": 257
   },
-  "/docs/img/biostarx-settings-license-active-license.png": {
+  "/img/biostarx-settings-license-active-license.png": {
     "width": 800,
     "height": 580
   },
@@ -2447,7 +2447,7 @@
     "width": 444,
     "height": 362
   },
-  "/docs/img/biostarx-settings-server-server-matching.png": {
+  "/img/biostarx-settings-server-server-matching.png": {
     "width": 1200,
     "height": 330
   },
@@ -2471,11 +2471,11 @@
     "width": 510,
     "height": 139
   },
-  "/docs/img/biostarx-settings-system-audit-trail-export-csv.png": {
+  "/img/biostarx-settings-system-audit-trail-export-csv.png": {
     "width": 600,
     "height": 279
   },
-  "/docs/img/biostarx-settings-system-audit-trail-list.png": {
+  "/img/biostarx-settings-system-audit-trail-list.png": {
     "width": 1000,
     "height": 249
   },
@@ -2499,7 +2499,7 @@
     "width": 735,
     "height": 285
   },
-  "/docs/img/biostarx-settings-system-restore-check-ver.png": {
+  "/img/biostarx-settings-system-restore-check-ver.png": {
     "width": 1200,
     "height": 539
   },
@@ -2939,11 +2939,11 @@
     "width": 400,
     "height": 338
   },
-  "/docs/img/biostarx-user-account-popup.png": {
+  "/img/biostarx-user-account-popup.png": {
     "width": 200,
     "height": 104
   },
-  "/docs/img/biostarx-user-add-user-01.png": {
+  "/img/biostarx-user-add-user-01.png": {
     "width": 1200,
     "height": 182
   },
@@ -2959,11 +2959,11 @@
     "width": 800,
     "height": 222
   },
-  "/docs/img/biostarx-user-change-pw.png": {
+  "/img/biostarx-user-change-pw.png": {
     "width": 500,
     "height": 303
   },
-  "/docs/img/biostarx-user-credential-set-emergency-opening-warning.png": {
+  "/img/biostarx-user-credential-set-emergency-opening-warning.png": {
     "width": 480,
     "height": 202
   },
@@ -2971,15 +2971,15 @@
     "width": 800,
     "height": 225
   },
-  "/docs/img/biostarx-user-export-csv-popup.png": {
+  "/img/biostarx-user-export-csv-popup.png": {
     "width": 600,
     "height": 299
   },
-  "/docs/img/biostarx-user-export-csv.png": {
+  "/img/biostarx-user-export-csv.png": {
     "width": 1200,
     "height": 252
   },
-  "/docs/img/biostarx-user-export-data-select-device.png": {
+  "/img/biostarx-user-export-data-select-device.png": {
     "width": 600,
     "height": 288
   },
@@ -3071,7 +3071,7 @@
     "width": 600,
     "height": 688
   },
-  "/docs/img/biostarx-users-list-order.png": {
+  "/img/biostarx-users-list-order.png": {
     "width": 1200,
     "height": 429
   },
@@ -3083,7 +3083,7 @@
     "width": 800,
     "height": 167
   },
-  "/docs/img/biostarx-users-list-view-profile.png": {
+  "/img/biostarx-users-list-view-profile.png": {
     "width": 1200,
     "height": 569
   },
@@ -3095,7 +3095,7 @@
     "width": 650,
     "height": 547
   },
-  "/docs/img/biostarx-users-search-result.png": {
+  "/img/biostarx-users-search-result.png": {
     "width": 1200,
     "height": 202
   },
@@ -3311,19 +3311,19 @@
     "width": 720,
     "height": 1281
   },
-  "/docs/img/common/biostarx-settings-external-remote-access-ngrok-cloud-endpoint-setting.png": {
+  "/img/common/biostarx-settings-external-remote-access-ngrok-cloud-endpoint-setting.png": {
     "width": 1200,
     "height": 539
   },
-  "/docs/img/common/biostarx-settings-external-remote-access-ngrok-cloud-endpoint.png": {
+  "/img/common/biostarx-settings-external-remote-access-ngrok-cloud-endpoint.png": {
     "width": 750,
     "height": 502
   },
-  "/docs/img/common/biostarx-settings-external-remote-access-ngrok-select.png": {
+  "/img/common/biostarx-settings-external-remote-access-ngrok-select.png": {
     "width": 700,
     "height": 303
   },
-  "/docs/img/common/biostarx-settings-floor-camera-adjust.png": {
+  "/img/common/biostarx-settings-floor-camera-adjust.png": {
     "width": 400,
     "height": 280
   },
@@ -3503,7 +3503,11 @@
     "width": 93,
     "height": 50
   },
-  "/docs/img/common/ico-authmode-card.png": {
+  "/img/common/ico-authmode-card-qr-bs3m.png": {
+    "width": 156,
+    "height": 80
+  },
+  "/img/common/ico-authmode-card.png": {
     "width": 50,
     "height": 50
   },
@@ -3511,7 +3515,11 @@
     "width": 50,
     "height": 50
   },
-  "/docs/img/common/ico-authmode-face-fs2.png": {
+  "/img/common/ico-authmode-face-bs3m.png": {
+    "width": 80,
+    "height": 80
+  },
+  "/img/common/ico-authmode-face-fs2.png": {
     "width": 35,
     "height": 35
   },
@@ -3523,7 +3531,11 @@
     "width": 35,
     "height": 35
   },
-  "/docs/img/common/ico-authmode-fingerprint.png": {
+  "/img/common/ico-authmode-fingerprint-bs3m.png": {
+    "width": 80,
+    "height": 80
+  },
+  "/img/common/ico-authmode-fingerprint.png": {
     "width": 50,
     "height": 50
   },
@@ -3539,7 +3551,11 @@
     "width": 50,
     "height": 50
   },
-  "/docs/img/common/ico-authmode-pin-bln2.png": {
+  "/img/common/ico-authmode-id-bs3m.png": {
+    "width": 80,
+    "height": 80
+  },
+  "/img/common/ico-authmode-pin-bln2.png": {
     "width": 87,
     "height": 87
   },
@@ -3551,7 +3567,11 @@
     "width": 50,
     "height": 50
   },
-  "/docs/img/common/ico-card-printer-play.png": {
+  "/img/common/ico-authmode-pin-bs3m.png": {
+    "width": 80,
+    "height": 80
+  },
+  "/img/common/ico-card-printer-play.png": {
     "width": 20,
     "height": 20
   },
@@ -3635,7 +3655,7 @@
     "width": 500,
     "height": 808
   },
-  "/docs/img/device/bew3-installation_distance.png": {
+  "/img/device/bew3-installation_distance.png": {
     "width": 492,
     "height": 340
   },
@@ -3679,7 +3699,11 @@
     "width": 1000,
     "height": 452
   },
-  "/docs/img/device/bln2-Administrator-two-step-auth.png": {
+  "/img/device/biostation3max-main.png": {
+    "width": 1000,
+    "height": 452
+  },
+  "/img/device/bln2-Administrator-two-step-auth.png": {
     "width": 200,
     "height": 160
   },
@@ -3723,7 +3747,7 @@
     "width": 200,
     "height": 160
   },
-  "/docs/img/device/bln2-master-admin-edit.png": {
+  "/img/device/bln2-master-admin-edit.png": {
     "width": 200,
     "height": 160
   },
@@ -4043,7 +4067,135 @@
     "width": 250,
     "height": 444
   },
-  "/docs/img/device/cables-layout-xp2.png": {
+  "/img/device/bs3m-add-auth-mode.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-add-dst.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-add-user1.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-add-user2.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-auth-result-display-option.png": {
+    "width": 250,
+    "height": 101
+  },
+  "/img/device/bs3m-dashboard.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-date-time.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-device-info.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-display-sound.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-edit-server.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-ethernet.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-event-log-usage.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-face.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-intercom.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-license1.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-license2.png": {
+    "width": 250,
+    "height": 444
+  },
+  "/img/device/bs3m-memory-info.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-operation.png": {
+    "width": 250,
+    "height": 142
+  },
+  "/img/device/bs3m-osdp-setting.png": {
+    "width": 250,
+    "height": 142
+  },
+  "/img/device/bs3m-pin.png": {
+    "width": 250,
+    "height": 60
+  },
+  "/img/device/bs3m-regulatory-licenses.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-relay.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-rtsp.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-search.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-setting-list-master-admin.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-setting-master-admin-credential1.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-setting-master-admin-credential2.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-setting-master-admin-edit.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-setting-master-admin-start.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-ta.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-usb-memory.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-user-usage.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/cables-layout-xp2.png": {
     "width": 718,
     "height": 770
   },
@@ -4099,11 +4251,11 @@
     "width": 1445,
     "height": 948
   },
-  "/docs/img/device/cs20-main.png": {
+  "/img/device/cs20-main.png": {
     "width": 1200,
     "height": 508
   },
-  "/docs/img/device/cs40-led-status.png": {
+  "/img/device/cs40-led-status.png": {
     "width": 2847,
     "height": 2079
   },
@@ -4375,7 +4527,11 @@
     "width": 1144,
     "height": 737
   },
-  "/docs/img/device/installation-automatic-door-fs2.png": {
+  "/img/device/installation-automatic-door-bs3m.png": {
+    "width": 937,
+    "height": 734
+  },
+  "/img/device/installation-automatic-door-fs2.png": {
     "width": 901,
     "height": 696
   },
@@ -4395,7 +4551,7 @@
     "width": 1129,
     "height": 631
   },
-  "/docs/img/device/installation-automatic-door-xs2.png": {
+  "/img/device/installation-automatic-door-xs2.png": {
     "width": 876,
     "height": 774
   },
@@ -4439,11 +4595,11 @@
     "width": 272,
     "height": 320
   },
-  "/docs/img/device/installation-device1-xs2.png": {
+  "/img/device/installation-device1-xs2.png": {
     "width": 308,
     "height": 509
   },
-  "/docs/img/device/installation-device2-bep2.png": {
+  "/img/device/installation-device2-bep2.png": {
     "width": 167,
     "height": 380
   },
@@ -4455,11 +4611,11 @@
     "width": 472,
     "height": 320
   },
-  "/docs/img/device/installation-device2-xs2.png": {
+  "/img/device/installation-device2-xs2.png": {
     "width": 292,
     "height": 613
   },
-  "/docs/img/device/installation-device3-bep2.png": {
+  "/img/device/installation-device3-bep2.png": {
     "width": 120,
     "height": 400
   },
@@ -4471,11 +4627,11 @@
     "width": 260,
     "height": 178
   },
-  "/docs/img/device/installation-device3-xs2.png": {
+  "/img/device/installation-device3-xs2.png": {
     "width": 214,
     "height": 659
   },
-  "/docs/img/device/installation-door-button-connection-dm20.png": {
+  "/img/device/installation-door-button-connection-dm20.png": {
     "width": 1136,
     "height": 723
   },
@@ -4607,7 +4763,11 @@
     "width": 985,
     "height": 621
   },
-  "/docs/img/device/installation-input-connection-fs2.png": {
+  "/img/device/installation-input-connection-bs3m.png": {
+    "width": 979,
+    "height": 606
+  },
+  "/img/device/installation-input-connection-fs2.png": {
     "width": 976,
     "height": 496
   },
@@ -4623,7 +4783,7 @@
     "width": 1097,
     "height": 615
   },
-  "/docs/img/device/installation-input-connection-xs2.png": {
+  "/img/device/installation-input-connection-xs2.png": {
     "width": 974,
     "height": 564
   },
@@ -4659,7 +4819,11 @@
     "width": 908,
     "height": 425
   },
-  "/docs/img/device/installation-network-direct-connection-cs20.png": {
+  "/img/device/installation-network-direct-connection-bs3m.png": {
+    "width": 881,
+    "height": 399
+  },
+  "/img/device/installation-network-direct-connection-cs20.png": {
     "width": 934,
     "height": 480
   },
@@ -4687,7 +4851,7 @@
     "width": 1023,
     "height": 346
   },
-  "/docs/img/device/installation-network-direct-connection-xs2.png": {
+  "/img/device/installation-network-direct-connection-xs2.png": {
     "width": 1061,
     "height": 481
   },
@@ -4715,7 +4879,11 @@
     "width": 1163,
     "height": 479
   },
-  "/docs/img/device/installation-network-hub-connection-cs20.png": {
+  "/img/device/installation-network-hub-connection-bs3m.png": {
+    "width": 1138,
+    "height": 445
+  },
+  "/img/device/installation-network-hub-connection-cs20.png": {
     "width": 998,
     "height": 629
   },
@@ -4743,7 +4911,7 @@
     "width": 1016,
     "height": 392
   },
-  "/docs/img/device/installation-network-hub-connection-xs2.png": {
+  "/img/device/installation-network-hub-connection-xs2.png": {
     "width": 1082,
     "height": 486
   },
@@ -4771,7 +4939,11 @@
     "width": 966,
     "height": 635
   },
-  "/docs/img/device/installation-power-connection-cs20.png": {
+  "/img/device/installation-power-connection-bs3m.png": {
+    "width": 999,
+    "height": 579
+  },
+  "/img/device/installation-power-connection-cs20.png": {
     "width": 892,
     "height": 398
   },
@@ -4823,7 +4995,7 @@
     "width": 969,
     "height": 366
   },
-  "/docs/img/device/installation-power-connection-xs2.png": {
+  "/img/device/installation-power-connection-xs2.png": {
     "width": 993,
     "height": 519
   },
@@ -4859,7 +5031,11 @@
     "width": 1047,
     "height": 593
   },
-  "/docs/img/device/installation-relay-fail-safe-lock-cs20.png": {
+  "/img/device/installation-relay-fail-safe-lock-bs3m.png": {
+    "width": 1057,
+    "height": 497
+  },
+  "/img/device/installation-relay-fail-safe-lock-cs20.png": {
     "width": 832,
     "height": 284
   },
@@ -4903,7 +5079,7 @@
     "width": 952,
     "height": 402
   },
-  "/docs/img/device/installation-relay-fail-safe-lock-xs2.png": {
+  "/img/device/installation-relay-fail-safe-lock-xs2.png": {
     "width": 1002,
     "height": 478
   },
@@ -4931,7 +5107,11 @@
     "width": 1009,
     "height": 576
   },
-  "/docs/img/device/installation-relay-fail-secure-lock-cs20.png": {
+  "/img/device/installation-relay-fail-secure-lock-bs3m.png": {
+    "width": 1059,
+    "height": 498
+  },
+  "/img/device/installation-relay-fail-secure-lock-cs20.png": {
     "width": 833,
     "height": 283
   },
@@ -4975,7 +5155,7 @@
     "width": 955,
     "height": 464
   },
-  "/docs/img/device/installation-relay-fail-secure-lock-xs2.png": {
+  "/img/device/installation-relay-fail-secure-lock-xs2.png": {
     "width": 1013,
     "height": 532
   },
@@ -5043,7 +5223,11 @@
     "width": 1194,
     "height": 786
   },
-  "/docs/img/device/installation-sio2-connection-fs2.png": {
+  "/img/device/installation-sio2-connection-bs3m.png": {
+    "width": 917,
+    "height": 938
+  },
+  "/img/device/installation-sio2-connection-fs2.png": {
     "width": 894,
     "height": 677
   },
@@ -5091,7 +5275,11 @@
     "width": 896,
     "height": 839
   },
-  "/docs/img/device/installation-standalone-connection-fs2.png": {
+  "/img/device/installation-standalone-connection-bs3m.png": {
+    "width": 968,
+    "height": 845
+  },
+  "/img/device/installation-standalone-connection-fs2.png": {
     "width": 933,
     "height": 648
   },
@@ -5111,7 +5299,7 @@
     "width": 1114,
     "height": 738
   },
-  "/docs/img/device/installation-standalone-connection-xs2.png": {
+  "/img/device/installation-standalone-connection-xs2.png": {
     "width": 990,
     "height": 712
   },
@@ -5147,7 +5335,11 @@
     "width": 434,
     "height": 198
   },
-  "/docs/img/device/installation-wall1-fs2.png": {
+  "/img/device/installation-wall1-bs3m.png": {
+    "width": 431,
+    "height": 205
+  },
+  "/img/device/installation-wall1-fs2.png": {
     "width": 458,
     "height": 325
   },
@@ -5167,7 +5359,7 @@
     "width": 446,
     "height": 256
   },
-  "/docs/img/device/installation-wall1-xs2.png": {
+  "/img/device/installation-wall1-xs2.png": {
     "width": 447,
     "height": 269
   },
@@ -5191,7 +5383,11 @@
     "width": 482,
     "height": 385
   },
-  "/docs/img/device/installation-wall2-fs2.png": {
+  "/img/device/installation-wall2-bs3m.png": {
+    "width": 462,
+    "height": 372
+  },
+  "/img/device/installation-wall2-fs2.png": {
     "width": 481,
     "height": 402
   },
@@ -5211,7 +5407,7 @@
     "width": 480,
     "height": 398
   },
-  "/docs/img/device/installation-wall2-xs2.png": {
+  "/img/device/installation-wall2-xs2.png": {
     "width": 462,
     "height": 372
   },
@@ -5231,7 +5427,11 @@
     "width": 1120,
     "height": 482
   },
-  "/docs/img/device/installation-wiegand-in-connection-cs20.png": {
+  "/img/device/installation-wiegand-in-connection-bs3m.png": {
+    "width": 926,
+    "height": 472
+  },
+  "/img/device/installation-wiegand-in-connection-cs20.png": {
     "width": 646,
     "height": 356
   },
@@ -5271,7 +5471,7 @@
     "width": 1105,
     "height": 570
   },
-  "/docs/img/device/installation-wiegand-inout-connection-xs2.png": {
+  "/img/device/installation-wiegand-inout-connection-xs2.png": {
     "width": 879,
     "height": 581
   },
@@ -5295,7 +5495,11 @@
     "width": 1117,
     "height": 481
   },
-  "/docs/img/device/installation-wiegand-out-connection-fs2.png": {
+  "/img/device/installation-wiegand-out-connection-bs3m.png": {
+    "width": 923,
+    "height": 468
+  },
+  "/img/device/installation-wiegand-out-connection-fs2.png": {
     "width": 840,
     "height": 444
   },
@@ -5379,7 +5583,11 @@
     "width": 732,
     "height": 925
   },
-  "/docs/img/device/name-function-each-part-extm-sc.png": {
+  "/img/device/name-function-each-part-bs3m.png": {
+    "width": 816,
+    "height": 905
+  },
+  "/img/device/name-function-each-part-extm-sc.png": {
     "width": 1132,
     "height": 439
   },
@@ -5399,7 +5607,7 @@
     "width": 1287,
     "height": 720
   },
-  "/docs/img/device/name-function-each-part-outside-encr.png": {
+  "/img/device/name-function-each-part-outside-encr.png": {
     "width": 683,
     "height": 663
   },
@@ -5431,7 +5639,7 @@
     "width": 1000,
     "height": 452
   },
-  "/docs/img/device/securemodule-main.png": {
+  "/img/device/securemodule-main.png": {
     "width": 1000,
     "height": 452
   },
@@ -5471,19 +5679,19 @@
     "width": 1000,
     "height": 452
   },
-  "/docs/img/device/xpassq2-main.png": {
+  "/img/device/xpassq2-main.png": {
     "width": 1000,
     "height": 452
   },
-  "/docs/img/device/xpasss2-main.png": {
+  "/img/device/xpasss2-main.png": {
     "width": 1000,
     "height": 452
   },
-  "/docs/img/device/xpass_q2.png": {
+  "/img/device/xpass_q2.png": {
     "width": 37,
     "height": 85
   },
-  "/docs/img/device/xpd2-template-auth-cardtype.png": {
+  "/img/device/xpd2-template-auth-cardtype.png": {
     "width": 998,
     "height": 267
   },
@@ -5571,7 +5779,7 @@
     "width": 998,
     "height": 785
   },
-  "/docs/img/device/xs2-administrator-two-step-auth.png": {
+  "/img/device/xs2-administrator-two-step-auth.png": {
     "width": 250,
     "height": 417
   },
@@ -5619,7 +5827,11 @@
     "width": 250,
     "height": 418
   },
-  "/docs/img/device/xs2-eventlog.png": {
+  "/img/device/xs2-error-two-step-authentication.png": {
+    "width": 560,
+    "height": 465
+  },
+  "/img/device/xs2-eventlog.png": {
     "width": 250,
     "height": 417
   },
@@ -5639,23 +5851,23 @@
     "width": 250,
     "height": 86
   },
-  "/docs/img/device/xs2-master-admin-setting-credential1.png": {
+  "/img/device/xs2-master-admin-setting-credential1.png": {
     "width": 250,
     "height": 417
   },
-  "/docs/img/device/xs2-master-admin-setting-credential2.png": {
+  "/img/device/xs2-master-admin-setting-credential2.png": {
     "width": 250,
     "height": 417
   },
-  "/docs/img/device/xs2-master-admin-setting-main.png": {
+  "/img/device/xs2-master-admin-setting-main.png": {
     "width": 250,
     "height": 417
   },
-  "/docs/img/device/xs2-master-admin.png": {
+  "/img/device/xs2-master-admin.png": {
     "width": 250,
     "height": 417
   },
-  "/docs/img/device/xs2-memory.png": {
+  "/img/device/xs2-memory.png": {
     "width": 250,
     "height": 418
   },
@@ -6275,11 +6487,11 @@
     "width": 1200,
     "height": 250
   },
-  "/docs/img/en/biostarx-before-start-new-database.png": {
+  "/img/en/biostarx-before-start-new-database.png": {
     "width": 720,
     "height": 412
   },
-  "/docs/img/en/biostarx-checkpoint.png": {
+  "/img/en/biostarx-checkpoint.png": {
     "width": 800,
     "height": 327
   },
@@ -6503,11 +6715,11 @@
     "width": 500,
     "height": 392
   },
-  "/docs/img/en/biostarx-install-comm-server-login.png": {
+  "/img/en/biostarx-install-comm-server-login.png": {
     "width": 499,
     "height": 392
   },
-  "/docs/img/en/biostarx-install-comm-server-port-settings.png": {
+  "/img/en/biostarx-install-comm-server-port-settings.png": {
     "width": 500,
     "height": 392
   },
@@ -6751,11 +6963,11 @@
     "width": 1200,
     "height": 539
   },
-  "/docs/img/en/biostarx-new-user-credential-1.png": {
+  "/img/en/biostarx-new-user-credential-1.png": {
     "width": 1069,
     "height": 210
   },
-  "/docs/img/en/biostarx-new-user-credential-authmod-default.png": {
+  "/img/en/biostarx-new-user-credential-authmod-default.png": {
     "width": 1069,
     "height": 210
   },
@@ -6831,15 +7043,15 @@
     "width": 600,
     "height": 594
   },
-  "/docs/img/en/biostarx-new-user-credential-ir-face-nth.png": {
+  "/img/en/biostarx-new-user-credential-ir-face-nth.png": {
     "width": 600,
     "height": 210
   },
-  "/docs/img/en/biostarx-new-user-credential-ir-face.png": {
+  "/img/en/biostarx-new-user-credential-ir-face.png": {
     "width": 600,
     "height": 521
   },
-  "/docs/img/en/biostarx-new-user-credential-mobile-csn-assign.png": {
+  "/img/en/biostarx-new-user-credential-mobile-csn-assign.png": {
     "width": 1135,
     "height": 576
   },
@@ -6863,7 +7075,7 @@
     "width": 1082,
     "height": 238
   },
-  "/docs/img/en/biostarx-new-user-credential.png": {
+  "/img/en/biostarx-new-user-credential.png": {
     "width": 1069,
     "height": 210
   },
@@ -7599,11 +7811,11 @@
     "width": 800,
     "height": 258
   },
-  "/docs/img/en/biostarx-settings-credential-irface-group-match.png": {
+  "/img/en/biostarx-settings-credential-irface-group-match.png": {
     "width": 1200,
     "height": 398
   },
-  "/docs/img/en/biostarx-settings-credential-smart-card-desfire.png": {
+  "/img/en/biostarx-settings-credential-smart-card-desfire.png": {
     "width": 800,
     "height": 300
   },
@@ -7667,11 +7879,11 @@
     "width": 600,
     "height": 163
   },
-  "/docs/img/en/biostarx-settings-external-remote-access.png": {
+  "/img/en/biostarx-settings-external-remote-access.png": {
     "width": 1000,
     "height": 259
   },
-  "/docs/img/en/biostarx-settings-license-active-license.png": {
+  "/img/en/biostarx-settings-license-active-license.png": {
     "width": 800,
     "height": 588
   },
@@ -7859,7 +8071,7 @@
     "width": 447,
     "height": 359
   },
-  "/docs/img/en/biostarx-settings-server-server-matching.png": {
+  "/img/en/biostarx-settings-server-server-matching.png": {
     "width": 1200,
     "height": 328
   },
@@ -7883,11 +8095,11 @@
     "width": 510,
     "height": 131
   },
-  "/docs/img/en/biostarx-settings-system-audit-trail-export-csv.png": {
+  "/img/en/biostarx-settings-system-audit-trail-export-csv.png": {
     "width": 600,
     "height": 279
   },
-  "/docs/img/en/biostarx-settings-system-audit-trail-list.png": {
+  "/img/en/biostarx-settings-system-audit-trail-list.png": {
     "width": 1000,
     "height": 240
   },
@@ -7911,7 +8123,7 @@
     "width": 735,
     "height": 285
   },
-  "/docs/img/en/biostarx-settings-system-restore-check-ver.png": {
+  "/img/en/biostarx-settings-system-restore-check-ver.png": {
     "width": 1200,
     "height": 539
   },
@@ -8327,11 +8539,11 @@
     "width": 400,
     "height": 333
   },
-  "/docs/img/en/biostarx-user-account-popup.png": {
+  "/img/en/biostarx-user-account-popup.png": {
     "width": 200,
     "height": 104
   },
-  "/docs/img/en/biostarx-user-add-user-01.png": {
+  "/img/en/biostarx-user-add-user-01.png": {
     "width": 1200,
     "height": 182
   },
@@ -8347,11 +8559,11 @@
     "width": 800,
     "height": 214
   },
-  "/docs/img/en/biostarx-user-change-pw.png": {
+  "/img/en/biostarx-user-change-pw.png": {
     "width": 500,
     "height": 303
   },
-  "/docs/img/en/biostarx-user-credential-set-emergency-opening-warning.png": {
+  "/img/en/biostarx-user-credential-set-emergency-opening-warning.png": {
     "width": 480,
     "height": 202
   },
@@ -8359,15 +8571,15 @@
     "width": 800,
     "height": 227
   },
-  "/docs/img/en/biostarx-user-export-csv-popup.png": {
+  "/img/en/biostarx-user-export-csv-popup.png": {
     "width": 600,
     "height": 299
   },
-  "/docs/img/en/biostarx-user-export-csv.png": {
+  "/img/en/biostarx-user-export-csv.png": {
     "width": 1200,
     "height": 252
   },
-  "/docs/img/en/biostarx-user-export-data-select-device.png": {
+  "/img/en/biostarx-user-export-data-select-device.png": {
     "width": 600,
     "height": 288
   },
@@ -8455,7 +8667,7 @@
     "width": 600,
     "height": 688
   },
-  "/docs/img/en/biostarx-users-list-order.png": {
+  "/img/en/biostarx-users-list-order.png": {
     "width": 1200,
     "height": 429
   },
@@ -8467,7 +8679,7 @@
     "width": 800,
     "height": 167
   },
-  "/docs/img/en/biostarx-users-list-view-profile.png": {
+  "/img/en/biostarx-users-list-view-profile.png": {
     "width": 1200,
     "height": 568
   },
@@ -8479,7 +8691,7 @@
     "width": 650,
     "height": 547
   },
-  "/docs/img/en/biostarx-users-search-result.png": {
+  "/img/en/biostarx-users-search-result.png": {
     "width": 1200,
     "height": 214
   },
@@ -8631,7 +8843,7 @@
     "width": 590,
     "height": 943
   },
-  "/docs/img/en/device/bew3-installation_distance.png": {
+  "/img/en/device/bew3-installation_distance.png": {
     "width": 482,
     "height": 337
   },
@@ -8647,7 +8859,11 @@
     "width": 1165,
     "height": 629
   },
-  "/docs/img/en/device/bln2-administrator-two-step-auth.png": {
+  "/img/en/device/bln2-administrator-two-step-auth.png": {
+    "width": 200,
+    "height": 160
+  },
+  "/img/en/device/bln2-auth-authmode.png": {
     "width": 200,
     "height": 160
   },
@@ -8691,7 +8907,31 @@
     "width": 200,
     "height": 160
   },
-  "/docs/img/en/device/bln2-master-admin-edit.png": {
+  "/img/en/device/bln2-master-admin-edit.png": {
+    "width": 200,
+    "height": 160
+  },
+  "/img/en/device/bln2-master-admin-error-message.png": {
+    "width": 200,
+    "height": 160
+  },
+  "/img/en/device/bln2-master-admin-setting-credential1.png": {
+    "width": 200,
+    "height": 160
+  },
+  "/img/en/device/bln2-master-admin-setting-credential2.png": {
+    "width": 200,
+    "height": 160
+  },
+  "/img/en/device/bln2-master-admin-setting-main.png": {
+    "width": 200,
+    "height": 160
+  },
+  "/img/en/device/bln2-master-admin.png": {
+    "width": 200,
+    "height": 160
+  },
+  "/img/en/device/bln2-menu.png": {
     "width": 200,
     "height": 160
   },
@@ -8743,7 +8983,11 @@
     "width": 320,
     "height": 240
   },
-  "/docs/img/en/device/bs2a-administrator-two-step-auth.png": {
+  "/img/en/device/bs2a-administrator-two-step-auth.png": {
+    "width": 320,
+    "height": 240
+  },
+  "/img/en/device/bs2a-all-menu.png": {
     "width": 320,
     "height": 240
   },
@@ -8799,7 +9043,31 @@
     "width": 320,
     "height": 240
   },
-  "/docs/img/en/device/bs2a-key-menu.png": {
+  "/img/en/device/bs2a-master-admin-edit.png": {
+    "width": 320,
+    "height": 240
+  },
+  "/img/en/device/bs2a-master-admin-error-message.png": {
+    "width": 320,
+    "height": 240
+  },
+  "/img/en/device/bs2a-master-admin-setting-credential1.png": {
+    "width": 320,
+    "height": 240
+  },
+  "/img/en/device/bs2a-master-admin-setting-credential2.png": {
+    "width": 320,
+    "height": 240
+  },
+  "/img/en/device/bs2a-master-admin-setting-main.png": {
+    "width": 320,
+    "height": 240
+  },
+  "/img/en/device/bs2a-master-admin.png": {
+    "width": 320,
+    "height": 240
+  },
+  "/img/en/device/bs2a-memory.png": {
     "width": 320,
     "height": 240
   },
@@ -9011,7 +9279,135 @@
     "width": 250,
     "height": 444
   },
-  "/docs/img/en/device/device-manager-app-setting.png": {
+  "/img/en/device/bs3m-add-auth-mode.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-add-dst.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-add-user1.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-add-user2.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-auth-result-display-option.png": {
+    "width": 250,
+    "height": 101
+  },
+  "/img/en/device/bs3m-dashboard.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-date-time.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-device-info.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-display-sound.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-edit-server.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-ethernet.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-event-log-usage.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-face.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-intercom.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-license1.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-license2.png": {
+    "width": 250,
+    "height": 444
+  },
+  "/img/en/device/bs3m-memory-info.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-operation.png": {
+    "width": 250,
+    "height": 142
+  },
+  "/img/en/device/bs3m-osdp-setting.png": {
+    "width": 250,
+    "height": 142
+  },
+  "/img/en/device/bs3m-pin.png": {
+    "width": 250,
+    "height": 60
+  },
+  "/img/en/device/bs3m-regulatory-licenses.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-relay.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-rtsp.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-search.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-setting-list-master-admin.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-setting-master-admin-credential1.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-setting-master-admin-credential2.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-setting-master-admin-edit.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-setting-master-admin-start.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-ta.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-usb-memory.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-user-usage.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/device-manager-app-setting.png": {
     "width": 2360,
     "height": 1964
   },
@@ -9187,11 +9583,11 @@
     "width": 931,
     "height": 713
   },
-  "/docs/img/en/device/installation-automatic-door-bew2.png": {
+  "/img/en/device/installation-automatic-door-bew2.png": {
     "width": 934,
     "height": 618
   },
-  "/docs/img/en/device/installation-automatic-door-bew3.png": {
+  "/img/en/device/installation-automatic-door-bew3.png": {
     "width": 899,
     "height": 689
   },
@@ -9227,7 +9623,7 @@
     "width": 1130,
     "height": 629
   },
-  "/docs/img/en/device/installation-automatic-door-xs2.png": {
+  "/img/en/device/installation-automatic-door-xs2.png": {
     "width": 871,
     "height": 769
   },
@@ -9323,11 +9719,11 @@
     "width": 1054,
     "height": 551
   },
-  "/docs/img/en/device/installation-input-connection-bew2.png": {
+  "/img/en/device/installation-input-connection-bew2.png": {
     "width": 979,
     "height": 481
   },
-  "/docs/img/en/device/installation-input-connection-bew3.png": {
+  "/img/en/device/installation-input-connection-bew3.png": {
     "width": 832,
     "height": 559
   },
@@ -9359,7 +9755,7 @@
     "width": 1095,
     "height": 609
   },
-  "/docs/img/en/device/installation-input-connection-xs2.png": {
+  "/img/en/device/installation-input-connection-xs2.png": {
     "width": 973,
     "height": 558
   },
@@ -9375,11 +9771,11 @@
     "width": 1059,
     "height": 578
   },
-  "/docs/img/en/device/installation-network-hub-connection-bew2.png": {
+  "/img/en/device/installation-network-hub-connection-bew2.png": {
     "width": 1134,
     "height": 558
   },
-  "/docs/img/en/device/installation-network-hub-connection-bew3.png": {
+  "/img/en/device/installation-network-hub-connection-bew3.png": {
     "width": 1033,
     "height": 507
   },
@@ -9423,7 +9819,7 @@
     "width": 1024,
     "height": 397
   },
-  "/docs/img/en/device/installation-network-hub-connection-xs2.png": {
+  "/img/en/device/installation-network-hub-connection-xs2.png": {
     "width": 1075,
     "height": 483
   },
@@ -9431,15 +9827,15 @@
     "width": 1069,
     "height": 514
   },
-  "/docs/img/en/device/installation-power-connection-ber2.png": {
+  "/img/en/device/installation-power-connection-ber2.png": {
     "width": 936,
     "height": 714
   },
-  "/docs/img/en/device/installation-power-connection-bew2.png": {
+  "/img/en/device/installation-power-connection-bew2.png": {
     "width": 1000,
     "height": 770
   },
-  "/docs/img/en/device/installation-power-connection-bln2.png": {
+  "/img/en/device/installation-power-connection-bln2.png": {
     "width": 993,
     "height": 499
   },
@@ -9503,7 +9899,7 @@
     "width": 969,
     "height": 365
   },
-  "/docs/img/en/device/installation-power-connection-xs2.png": {
+  "/img/en/device/installation-power-connection-xs2.png": {
     "width": 993,
     "height": 520
   },
@@ -9515,11 +9911,11 @@
     "width": 1142,
     "height": 545
   },
-  "/docs/img/en/device/installation-relay-fail-safe-lock-bew2.png": {
+  "/img/en/device/installation-relay-fail-safe-lock-bew2.png": {
     "width": 1056,
     "height": 515
   },
-  "/docs/img/en/device/installation-relay-fail-safe-lock-bew3.png": {
+  "/img/en/device/installation-relay-fail-safe-lock-bew3.png": {
     "width": 802,
     "height": 444
   },
@@ -9579,7 +9975,7 @@
     "width": 958,
     "height": 405
   },
-  "/docs/img/en/device/installation-relay-fail-safe-lock-xs2.png": {
+  "/img/en/device/installation-relay-fail-safe-lock-xs2.png": {
     "width": 1004,
     "height": 475
   },
@@ -9587,11 +9983,11 @@
     "width": 1142,
     "height": 517
   },
-  "/docs/img/en/device/installation-relay-fail-secure-lock-bew2.png": {
+  "/img/en/device/installation-relay-fail-secure-lock-bew2.png": {
     "width": 1016,
     "height": 492
   },
-  "/docs/img/en/device/installation-relay-fail-secure-lock-bew3.png": {
+  "/img/en/device/installation-relay-fail-secure-lock-bew3.png": {
     "width": 802,
     "height": 446
   },
@@ -9651,7 +10047,7 @@
     "width": 957,
     "height": 460
   },
-  "/docs/img/en/device/installation-relay-fail-secure-lock-xs2.png": {
+  "/img/en/device/installation-relay-fail-secure-lock-xs2.png": {
     "width": 1014,
     "height": 535
   },
@@ -9699,11 +10095,11 @@
     "width": 848,
     "height": 934
   },
-  "/docs/img/en/device/installation-sio2-connection-bew2.png": {
+  "/img/en/device/installation-sio2-connection-bew2.png": {
     "width": 940,
     "height": 942
   },
-  "/docs/img/en/device/installation-sio2-connection-bew3.png": {
+  "/img/en/device/installation-sio2-connection-bew3.png": {
     "width": 1141,
     "height": 1053
   },
@@ -9739,7 +10135,7 @@
     "width": 1213,
     "height": 674
   },
-  "/docs/img/en/device/installation-sio2-connection-xs2.png": {
+  "/img/en/device/installation-sio2-connection-xs2.png": {
     "width": 825,
     "height": 903
   },
@@ -9747,11 +10143,11 @@
     "width": 904,
     "height": 934
   },
-  "/docs/img/en/device/installation-standalone-connection-bew2.png": {
+  "/img/en/device/installation-standalone-connection-bew2.png": {
     "width": 990,
     "height": 773
   },
-  "/docs/img/en/device/installation-standalone-connection-bew3.png": {
+  "/img/en/device/installation-standalone-connection-bew3.png": {
     "width": 1171,
     "height": 822
   },
@@ -9787,7 +10183,7 @@
     "width": 1099,
     "height": 721
   },
-  "/docs/img/en/device/installation-standalone-connection-xs2.png": {
+  "/img/en/device/installation-standalone-connection-xs2.png": {
     "width": 986,
     "height": 707
   },
@@ -9807,11 +10203,11 @@
     "width": 377,
     "height": 223
   },
-  "/docs/img/en/device/installation-wall1-bew2.png": {
+  "/img/en/device/installation-wall1-bew2.png": {
     "width": 436,
     "height": 237
   },
-  "/docs/img/en/device/installation-wall1-bln2.png": {
+  "/img/en/device/installation-wall1-bln2.png": {
     "width": 428,
     "height": 262
   },
@@ -9823,7 +10219,7 @@
     "width": 472,
     "height": 224
   },
-  "/docs/img/en/device/installation-wall1-fs2.png": {
+  "/img/en/device/installation-wall1-fs2.png": {
     "width": 441,
     "height": 313
   },
@@ -9843,7 +10239,7 @@
     "width": 450,
     "height": 259
   },
-  "/docs/img/en/device/installation-wall1-xs2.png": {
+  "/img/en/device/installation-wall1-xs2.png": {
     "width": 445,
     "height": 264
   },
@@ -9851,11 +10247,11 @@
     "width": 419,
     "height": 379
   },
-  "/docs/img/en/device/installation-wall2-bew2.png": {
+  "/img/en/device/installation-wall2-bew2.png": {
     "width": 466,
     "height": 315
   },
-  "/docs/img/en/device/installation-wall2-bln2.png": {
+  "/img/en/device/installation-wall2-bln2.png": {
     "width": 525,
     "height": 440
   },
@@ -9887,11 +10283,11 @@
     "width": 479,
     "height": 399
   },
-  "/docs/img/en/device/installation-wall2-xs2.png": {
+  "/img/en/device/installation-wall2-xs2.png": {
     "width": 452,
     "height": 366
   },
-  "/docs/img/en/device/installation-wiegand-in-connection-bew2.png": {
+  "/img/en/device/installation-wiegand-in-connection-bew2.png": {
     "width": 636,
     "height": 578
   },
@@ -9947,7 +10343,7 @@
     "width": 1102,
     "height": 565
   },
-  "/docs/img/en/device/installation-wiegand-inout-connection-xs2.png": {
+  "/img/en/device/installation-wiegand-inout-connection-xs2.png": {
     "width": 871,
     "height": 578
   },
@@ -9955,11 +10351,11 @@
     "width": 1087,
     "height": 676
   },
-  "/docs/img/en/device/installation-wiegand-out-connection-bew2.png": {
+  "/img/en/device/installation-wiegand-out-connection-bew2.png": {
     "width": 642,
     "height": 578
   },
-  "/docs/img/en/device/installation-wiegand-out-connection-bew3.png": {
+  "/img/en/device/installation-wiegand-out-connection-bew3.png": {
     "width": 646,
     "height": 446
   },
@@ -10023,15 +10419,15 @@
     "width": 774,
     "height": 938
   },
-  "/docs/img/en/device/name-function-each-part-ber2.png": {
+  "/img/en/device/name-function-each-part-ber2.png": {
     "width": 753,
     "height": 930
   },
-  "/docs/img/en/device/name-function-each-part-bew2.png": {
+  "/img/en/device/name-function-each-part-bew2.png": {
     "width": 1007,
     "height": 632
   },
-  "/docs/img/en/device/name-function-each-part-bln2.png": {
+  "/img/en/device/name-function-each-part-bln2.png": {
     "width": 384,
     "height": 901
   },
@@ -10043,7 +10439,7 @@
     "width": 805,
     "height": 925
   },
-  "/docs/img/en/device/name-function-each-part-extm-sc.png": {
+  "/img/en/device/name-function-each-part-extm-sc.png": {
     "width": 1156,
     "height": 435
   },
@@ -10059,11 +10455,11 @@
     "width": 1623,
     "height": 1719
   },
-  "/docs/img/en/device/name-function-each-part-inside-encr.png": {
+  "/img/en/device/name-function-each-part-inside-encr.png": {
     "width": 1201,
     "height": 770
   },
-  "/docs/img/en/device/name-function-each-part-outside-encr.png": {
+  "/img/en/device/name-function-each-part-outside-encr.png": {
     "width": 668,
     "height": 660
   },
@@ -10183,7 +10579,7 @@
     "width": 998,
     "height": 785
   },
-  "/docs/img/en/device/xs2-administrator-two-step-auth.png": {
+  "/img/en/device/xs2-administrator-two-step-auth.png": {
     "width": 250,
     "height": 417
   },
@@ -10231,7 +10627,11 @@
     "width": 250,
     "height": 416
   },
-  "/docs/img/en/device/xs2-eventlog.png": {
+  "/img/en/device/xs2-error-two-step-authentication.png": {
+    "width": 560,
+    "height": 466
+  },
+  "/img/en/device/xs2-eventlog.png": {
     "width": 250,
     "height": 417
   },
@@ -10251,23 +10651,23 @@
     "width": 250,
     "height": 86
   },
-  "/docs/img/en/device/xs2-master-admin-setting-credential1.png": {
+  "/img/en/device/xs2-master-admin-setting-credential1.png": {
     "width": 250,
     "height": 417
   },
-  "/docs/img/en/device/xs2-master-admin-setting-credential2.png": {
+  "/img/en/device/xs2-master-admin-setting-credential2.png": {
     "width": 250,
     "height": 417
   },
-  "/docs/img/en/device/xs2-master-admin-setting-main.png": {
+  "/img/en/device/xs2-master-admin-setting-main.png": {
     "width": 250,
     "height": 417
   },
-  "/docs/img/en/device/xs2-master-admin.png": {
+  "/img/en/device/xs2-master-admin.png": {
     "width": 250,
     "height": 417
   },
-  "/docs/img/en/device/xs2-memory.png": {
+  "/img/en/device/xs2-memory.png": {
     "width": 250,
     "height": 416
   },
@@ -10583,95 +10983,95 @@
     "width": 800,
     "height": 466
   },
-  "/docs/img/products/bioentry-p2.png": {
+  "/img/products/bioentry-p2.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/products/bioentry-r2.png": {
+  "/img/products/bioentry-r2.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/products/bioentry-w2.png": {
+  "/img/products/bioentry-w2.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/products/bioentry-w3.png": {
+  "/img/products/bioentry-w3.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/products/biolite-n2.png": {
+  "/img/products/biolite-n2.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/products/biostation-2.png": {
+  "/img/products/biostation-2.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/products/biostation-2a.png": {
+  "/img/products/biostation-2a.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/products/biostation-3.png": {
+  "/img/products/biostation-3.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/products/biostation-a2.png": {
+  "/img/products/biostation-a2.png": {
     "width": 388,
     "height": 384
   },
-  "/docs/img/products/biostation-l2.png": {
+  "/img/products/biostation-l2.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/products/corestation-20.png": {
+  "/img/products/corestation-20.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/products/corestation.png": {
+  "/img/products/corestation.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/products/di-24.png": {
+  "/img/products/di-24.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/products/dm-20.png": {
+  "/img/products/dm-20.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/products/facelite.png": {
+  "/img/products/facelite.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/products/facestation-2.png": {
+  "/img/products/facestation-2.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/products/facestation-f2.png": {
+  "/img/products/facestation-f2.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/products/im-120.png": {
+  "/img/products/im-120.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/products/om-120.png": {
+  "/img/products/om-120.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/products/sio2.png": {
+  "/img/products/sio2.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/products/xpass-2.png": {
+  "/img/products/xpass-2.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/products/xstation-2.png": {
+  "/img/products/xstation-2.png": {
     "width": 384,
     "height": 384
   },
-  "/docs/img/settings-custom-interface-add-quick-action.png": {
+  "/img/settings-custom-interface-add-quick-action.png": {
     "width": 550,
     "height": 356
   },
