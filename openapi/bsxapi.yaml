@@ -11356,6 +11356,10 @@ paths:
               properties:
                 Query:
                   $ref: '#/components/schemas/ExportCSV'
+                reason:
+                  type: string
+                  description: Reason for exporting audit data (Supported in v1.0.1 and later)
+                  example: "For compliance"
             example:
               Query:
                 offset: 0
@@ -14274,6 +14278,10 @@ components:
               example: false
         adv_criteria:
           $ref: '#/components/schemas/AdvancedSearchCriteria'
+        reaseon:
+          type: string
+          description: Reason for generating the user report
+          example: "For audit purposes"
 
     UserReportResponse:
       type: object
@@ -14365,6 +14373,10 @@ components:
                 order_by: "user_id:false"
                 user_group_ids: [1121]
                 user_operator_level_id: 0
+        reason:
+          type: string
+          description: Reason for exporting user data (Supported in v1.0.1 and later)
+          example: "For device migration"
     
     UserCsvImportInput:
       type: object
@@ -14617,6 +14629,10 @@ components:
                 user_operator_level_id: 0
                 limit: 1000
                 order_by: "user_id:false"
+        reason:
+          type: string
+          description: Reason for exporting user data (Supported in v1.0.1 and later)
+          example: "For backup"
     UserSearchInput:
       type: object
       description: Input for basic user search functionality

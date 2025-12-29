@@ -214,6 +214,7 @@ const sidebars = {
           },
           items: [
             'platform/biostar_x/before-start',
+            'platform/biostar_x/supported-device',
             'platform/biostar_x/system-requirements',
           ],
         },
@@ -273,6 +274,7 @@ const sidebars = {
                 'platform/biostar_x/enroll-credential-securitylevel',
                 'platform/biostar_x/enroll-credential-authmode',
                 'platform/biostar_x/enroll-credential-fingerprint',
+                'platform/biostar_x/enroll-credential-ir-face',
                 'platform/biostar_x/enroll-credential-face',
                 'platform/biostar_x/enroll-credential-card',
                 'platform/biostar_x/enroll-credential-mobile',
@@ -463,6 +465,7 @@ const sidebars = {
                 'platform/biostar_x/settings-credential-wiegand-format',
                 'platform/biostar_x/settings-credential-smart-format',
                 'platform/biostar_x/settings-credential-mobile-access-card',
+                'platform/biostar_x/settings-credential-ir-face-group-matching'
               ]
             },
             'platform/biostar_x/settings-card-printer',

@@ -484,6 +484,13 @@ body[data-rh] .redocusaurus {
     margin-right: 10px;
   }
 
+  .enroll-credential-ir-face::before {
+    content: url(./img/icon_credential_ir_face.png);
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
   .enroll-credential-face::before {
     content: url(./img/icon_credential_face.png);
     width: 20px;
@@ -970,6 +977,9 @@ body[data-rh] .redocusaurus {
     }
     .text--center {
       text-align: center;
+    }
+    .bold {
+      font-weight: bold;
     }
     .padding--t1rem {
       padding-top: 1rem !important;

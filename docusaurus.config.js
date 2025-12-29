@@ -199,6 +199,14 @@ const config = {
             '/_unused/**',
             '/products/**',
             '/platform/biostar_air/**',
+            '/device/**',
+            '/products/**',
+            '/bsx-license-calculator/**',
+            '/en/products/**',
+            '/en/common/**',
+            '/en/_unused/**',
+            '/en/platform/biostar_air/**',
+            '/en/device/**'
           ],
           autoSectionDepth: 2
         }
@@ -460,7 +468,7 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        additionalLanguages: [ ],
+        additionalLanguages: [ 'powershell', 'bash' ],
         theme: prismThemes.github,
         darkTheme: prismThemes.vsDark,
       },

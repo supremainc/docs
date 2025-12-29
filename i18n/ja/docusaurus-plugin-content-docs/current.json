@@ -40,7 +40,7 @@
     "description": "The label for category 'UI 알아보기' in sidebar 'biostarx'"
   },
   "sidebar.legal.category.Legal": {
-    "message": "法的事項",
+    "message": "Legal",
     "description": "The label for category 'Legal' in sidebar 'legal'"
   },
   "sidebar.reference.category.참조 문서": {
@@ -296,7 +296,7 @@
     "description": "The label for category '근태 관리 사용하기' in sidebar 'biostarx'"
   },
   "sidebar.biostarx.category.방문자 신청 및 관리하기": {
-    "message": "訪問者の申請と管理の管理と申請ではないかな？...下の要約では합니다がこの部分 シ럽지한名령적갈ееВажноである",
+    "message": "訪問者の申請と管理",
     "description": "The label for category '방문자 신청 및 관리하기' in sidebar 'biostarx'"
   },
   "sidebar.biostation3.category.Release Notes": {

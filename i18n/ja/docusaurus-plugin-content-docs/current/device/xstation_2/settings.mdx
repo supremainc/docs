@@ -61,7 +61,7 @@ BioStar Device SDK の詳細については、Suprema ナレッジベースの [
 
    <Image src='/img/device/xs2-network-ethernet.png' />
 
-   * <Cmd sid='ui_012' product='dev' />：DHCPの使用有無を設定します。 DHCP設定をオフにすると、ユーザーは <Cmd sid='ui_290' product='dev' />、<Cmd sid='ui_029' product='dev' />、<Cmd sid='ui_068' product='dev' />、<Cmd sid='ui_192' product='dev' />、<Cmd sid='ui_111' product='dev' /> を編集できます。
+   * <Cmd sid='ui_012' product='dev' />：DHCPの使用有無を設定します。 DHCP設定をオフにすると、ユーザーは<Cmd sid='ui_290' product='dev' />, <Cmd sid='ui_029' product='dev' />, <Cmd sid='ui_068' product='dev' />, <Cmd sid='ui_192' product='dev' />を変更できます。
 
    * <Cmd sid='ui_290' product='dev' />：デバイスのポートを設定できます。
 
@@ -251,8 +251,6 @@ import DocumentA from '../../common/_device-license-info.mdx'
 
 3. タンパー発生時にすべてのユーザー、すべてのログ、セキュリティキーが削除されるように設定するには、<Cmd sid='ui_150' product='dev' />設定をオンにしてください。
 
-{/*
-
 ### マスター管理者
 
 マスター管理者の認証手段を変更できます。
@@ -275,7 +273,7 @@ import DocumentA from '../../common/_device-license-info.mdx'
 
 * 少なくとも 2 種類以上のクレデンシャルを登録する必要があります。
 
-* この機能は、ファームウェア v#.#.# 以上を搭載した新しいデバイスでのみ使用できます。
+* この機能はファームウェア v1.4.0 以上の新しいデバイスでのみ使用できます。
 
 :::
 
@@ -291,13 +289,13 @@ import DocumentA from '../../common/_device-license-info.mdx'
 
 :::info
 
-* <Cmd sid='ui_073' product='dev' /> はファームウェアを v#.#.# 以上にアップグレードした後に使用できます。また、一度 v#.#.# 以上にアップグレードすると、それより低いバージョンへダウングレードすることはできません。
+* <Cmd sid='ui_073' product='dev' /> はファームウェアを v1.4.0 以上にアップグレードした後に使用でき、アップグレード後に下位バージョンへダウングレードすることはできません。
 
 * <Cmd sid='ui_073' product='dev' /> オプションを有効にしていない場合、1 段階認証がデフォルトです。
 
 * すべての管理者に2種類以上のクレデンシャルが登録されていない状態で有効化すると、設定は失敗しエラーメッセージが表示されます。 すべての管理者に2種類以上のクレデンシャルを登録してから、再試行してください。
 
-  <Image src='/img/how-to/error-two-step-authentication.png' className='none' width='300px' />
+  <Image src='/img/device/xs2-error-two-step-authentication.png' width={200} />
 
 :::
 
@@ -306,7 +304,6 @@ import DocumentA from '../../common/_device-license-info.mdx'
 <Cmd sid='ui_073' product='dev' /> を有効にした後にすべての管理者のクレデンシャルを 2 種未満に削除すると、BioStar X に接続できない状況では管理者メニューにアクセスできなくなります。 そのため、管理者クレデンシャルを削除する際は十分に注意してください。
 
 :::
-\*/}
 
 ### デバイスの再起動
 

@@ -7,16 +7,13 @@
         {
           "product": [
             "biostation_3",
-            "biostation_2",
             "biostation_2a",
             "facestation_f2",
             "bioentry_n2",
             "biolite_n2",
-            "biostation_a2",
-            "biostation_l2",
-            "facelite",
             "facestation_2",
-            "xstation_2"
+            "xstation_2",
+            "biostation_3_max"
           ],
           "question": "電源が供給されていますが、動作しません。",
           "answer": [
@@ -35,16 +32,13 @@
         {
           "product": [
             "biostation_3",
-            "biostation_2",
             "biostation_2a",
             "facestation_f2",
             "bioentry_n2",
             "biolite_n2",
-            "biostation_a2",
-            "biostation_l2",
-            "facelite",
             "facestation_2",
-            "xstation_2"
+            "xstation_2",
+            "biostation_3_max"
           ],
           "question": "PINを紛失しました。",
           "answer": [
@@ -55,16 +49,13 @@
         {
           "product": [
             "biostation_3",
-            "biostation_2",
             "biostation_2a",
             "facestation_f2",
             "bioentry_n2",
             "biolite_n2",
-            "biostation_a2",
-            "biostation_l2",
-            "facelite",
             "facestation_2",
-            "xstation_2"
+            "xstation_2",
+            "biostation_3_max"
           ],
           "question": "PINを入力してから<span class='cmd'>OK</span>ボタンを押しても、施錠されたドアを開けられません。",
           "answer": [
@@ -93,6 +84,17 @@
             "モバイル端末で受け取ったQR/バーコードの場合は、画面が見やすいようにモバイル端末の明るさを調整するか、画面を拭いてから再度お試しください。",
             "問題が解決しない場合は、QR/バーコードを発行した管理者にお問い合わせください。"
           ]
+        },
+        {
+          "product": [
+            "biostation_3_max"
+          ],
+          "question": "QR/バーコードがうまく読み取れません。",
+          "answer": [
+            "<a href='getting-started#how-to-scan-qrbarcode'>正しいQR/バーコード認証方法</a>を確認してから再度お試しください。",
+            "モバイル端末で受け取ったQR/バーコードの場合は、画面が見やすいようにモバイル端末の明るさを調整するか、画面を拭いてから再度お試しください。",
+            "問題が解決しない場合は、QR/バーコードを発行した管理者にお問い合わせください。"
+          ]
         }
       ]
     }
@@ -106,8 +108,8 @@
           "product": [
             "biostation_3",
             "facestation_f2",
-            "facelite",
-            "facestation_2"
+            "facestation_2",
+            "biostation_3_max"
           ],
           "question": "登録はされたものの顔認証がうまくいかず、エラーが多発します。",
           "answer": [
@@ -119,8 +121,8 @@
           "product": [
             "biostation_3",
             "facestation_f2",
-            "facelite",
-            "facestation_2"
+            "facestation_2",
+            "biostation_3_max"
           ],
           "question": "突然顔認証ができなくなりました。",
           "answer": [
@@ -130,7 +132,8 @@
         {
           "product": [
             "biostation_3",
-            "facestation_f2"
+            "facestation_f2",
+            "biostation_3_max"
           ],
           "question": "<span class='cmd'>マスク検出</span>機能を<span class='cmd'>使用</span>に設定しましたが、マスク着用時に顔認証がうまくいかずエラーが多発します。",
           "answer": [
@@ -139,7 +142,8 @@
         },
         {
           "product": [
-            "facestation_f2"
+            "facestation_f2",
+            "facestation_2"
           ],
           "question": "サーマルカメラ使用時に温度が正常に測定されません。",
           "answer": [
@@ -149,7 +153,8 @@
         },
         {
           "product": [
-            "facestation_f2"
+            "facestation_f2",
+            "facestation_2"
           ],
           "question": "サーマルカメラ使用時に温度が低すぎて測定されます。",
           "answer": [
@@ -167,12 +172,11 @@
         {
           "product": [
             "bioentry_n2",
-            "biostation_2",
             "biostation_2a",
             "biolite_n2",
-            "biostation_a2",
-            "biostation_l2",
-            "facestation_f2"
+            "xstation_2",
+            "facestation_f2",
+            "biostation_3_max"
           ],
           "question": "登録はされたものの指紋認証がうまくいかず、エラーが多発します。",
           "answer": [
@@ -185,11 +189,11 @@
         {
           "product": [
             "bioentry_n2",
-            "biostation_2",
             "biostation_2a",
             "biolite_n2",
-            "biostation_a2",
-            "biostation_l2"
+            "xstation_2",
+            "facestation_f2",
+            "biostation_3_max"
           ],
           "question": "突然指紋認証ができなくなりました。",
           "answer": [
@@ -201,9 +205,11 @@
         {
           "product": [
             "bioentry_n2",
-            "biostation_2",
             "biostation_2a",
-            "biolite_n2"
+            "biolite_n2",
+            "xstation_2",
+            "facestation_f2",
+            "biostation_3_max"
           ],
           "question": "指紋センサーが起動しません。",
           "answer": [
@@ -221,16 +227,13 @@
         {
           "product": [
             "biostation_3",
-            "biostation_2",
             "biostation_2a",
             "facestation_f2",
             "bioentry_n2",
             "biolite_n2",
-            "biostation_a2",
-            "biostation_l2",
-            "facelite",
             "facestation_2",
-            "xstation_2"
+            "xstation_2",
+            "biostation_3_max"
           ],
           "question": "ドアを閉めてもロック装置が施錠されません。",
           "answer": [
@@ -248,16 +251,13 @@
         {
           "product": [
             "biostation_3",
-            "biostation_2",
             "biostation_2a",
             "facestation_f2",
             "bioentry_n2",
             "biolite_n2",
-            "biostation_a2",
-            "biostation_l2",
-            "facelite",
             "facestation_2",
-            "xstation_2"
+            "xstation_2",
+            "biostation_3_max"
           ],
           "question": "突然時刻が合わなくなりました。",
           "answer": [
@@ -275,16 +275,13 @@
         {
           "product": [
             "biostation_3",
-            "biostation_2",
             "biostation_2a",
             "facestation_f2",
             "bioentry_n2",
             "biolite_n2",
-            "biostation_a2",
-            "biostation_l2",
-            "facelite",
             "facestation_2",
-            "xstation_2"
+            "xstation_2",
+            "biostation_3_max"
           ],
           "question": "管理者PINを紛失して管理者モードに入れません。",
           "answer": [
@@ -304,7 +301,8 @@
           "product": [
             "biostation_3",
             "biolite_n2",
-            "biostation_2a"
+            "biostation_2a",
+            "xstation_2"
           ],
           "question": "既存装置でファームウェアをアップグレードした後、マスター管理者設定が表示されません。",
           "answer": [

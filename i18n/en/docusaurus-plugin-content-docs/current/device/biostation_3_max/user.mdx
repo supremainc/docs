@@ -1,0 +1,164 @@
+---
+id: user
+title: User
+description: Describes how to register, edit, delete, and manage users.
+keywords:
+  - Enrollment
+  - Edit
+  - Delete
+  - Manage
+---
+
+Describes how to register, edit, delete, and manage users.
+
+## Registering user information {#registering-user-information}
+
+You can register user information that includes biometric authentication data.
+
+1. Press <Image src="/img/common/ico-menu.svg" ico alone /> and authenticate with the Admin level credential.
+
+2. Select <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-add.svg" ico alone /> and set the desired item. User usage information appears.
+
+   <div className="grid-container">
+     <Image src="/img/device/bs3m-add-user1.png" />
+
+     <Image src="/img/device/bs3m-add-user2.png" />
+   </div>
+
+   * <Image src="/img/common/ico-photo.svg" ico alone />: Register a user photo.
+
+   * **Name**: Enter the user name.
+
+   * **ID**: Enter a number between 1 and 4294967295 to register a user ID. If <Cmd sid="ui_168" product="dev" /> is set to <Cmd sid="ui_237" product="dev" />, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
+
+   * <Cmd sid="ui_228" product="dev" />: You can register a face for user authentication. Press <Cmd sid="ui_228" product="dev" /> → <Cmd sid="ui_108" product="dev" /> and follow the instructions on the screen to enroll your face. To add more faces, press <Image src="/img/common/ico-add.svg" ico alone />. Please refer to [Enrolling user faces](#enrolling-user-faces) to learn more about face enrollment.
+
+   * <Cmd sid="ui_312" product="dev" />: <Badge only>BS3M-ODB, BS3M-OAPB</Badge> Enroll a fingerprint for user authentication. Press <Cmd sid="ui_312" product="dev" /> → <Cmd sid="ui_108" product="dev" /> and follow the on-screen instructions to enroll a fingerprint. Press <Image src="/img/common/ico-add.svg" ico alone /> to enroll more fingerprints. For more information on fingerprint registration, refer to [User fingerprint enrollment](#enrolling-user-fingerprint).
+
+   * <Cmd sid="ui_323" product="dev" />: You can enroll a card for user authentication. Press <Cmd sid="ui_323" product="dev" /> → <Cmd sid="ui_108" product="dev" />, then scan the card to assign it to the user at the RF card authentication unit. To enroll more cards, press <Cmd sid="ui_323" product="dev" /> → <Image src="/img/common/ico-add.svg" ico alone />.
+
+   * <Cmd sid="ui_040" product="dev" />: You can enter the PIN you want to use. Press <Cmd sid="ui_040" product="dev" /> → <Cmd sid="ui_108" product="dev" /> and enter the PIN you want to use. For confirmation, enter the PIN once more and then press <Cmd sid="ui_037" product="dev" />. Enter a number between 8 and 16 digits to prevent leaking.
+
+   * <Cmd sid="ui_172" product="dev" />: You can select permissions to assign to the user.
+
+     :::info
+
+     Available menus vary according to the set user level.
+
+     * <Cmd sid="ui_075" product="dev" />: This is a general user level, and the menu is not available.
+
+     * <Cmd sid="ui_300" product="dev" />: You can use all menus.
+
+     * <Cmd sid="ui_194" product="dev" />: You can use the menus <Cmd sid="ui_256" product="dev" />, <Cmd sid="ui_366" product="dev" />, <Cmd sid="ui_280" product="dev" />, <Cmd sid="ui_344" product="dev" />, <Cmd sid="ui_255" product="dev" />.
+
+     * <Cmd sid="ui_171" product="dev" />: You can use the menus <Cmd sid="ui_166" product="dev" />, <Cmd sid="ui_255" product="dev" />.
+
+     :::
+
+   * <Cmd sid="ui_250" product="dev" />: You can set the duration for using the user account.
+
+   * <Cmd sid="ui_371" product="dev" />: You can set the extended personal authentication mode. This mode allows you to combine user authentication methods, including both faces. Otherwise, you can use the device’s basic authentication mode.
+
+3. Press <Cmd sid="ui_295" product="dev" /> to complete the registration of user information.
+
+### Enrolling user faces {#enrolling-user-faces}
+
+import EnrollingFace from '../../common/_enrolling-face-warning.mdx';
+
+1. Press <Image src="/img/common/ico-menu.svg" ico alone /> and authenticate with the Admin level credential.
+
+2. Select <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-add.svg" ico alone />.
+
+3. Press <Cmd sid="ui_228" product="dev" /> → <Cmd sid="ui_108" product="dev" />.
+
+4. Adjust a distance between the face and screen and look straight at the camera of the device.
+
+5. After the shooting is complete, press <Cmd sid="ui_367" product="dev" /> → <Cmd sid="ui_295" product="dev" />. To retake your face picture, press <Cmd sid="ui_294" product="dev" />.
+
+   :::info
+
+   * The visual face data of this product are not compatible with face templates of FaceStation F2.
+
+   * Face information for this product can also be batch enrolled by uploading a photo in BioStar X or importing a CSV file, not just on the device. You can also enroll visual face with your smartphone via a link sent from BioStar 2. For more information on each registration method, please refer to the [BioStar X Administrator Guide](../../platform/biostar_x/enroll-credential-face).
+
+   * To use a Visual Face feature correctly, take a picture by following instructions below.
+
+   <EnrollingFace />
+
+   :::
+
+## User fingerprint registration <Badge only>BS3M-ODB, BS3M-OAPB</Badge> {#enrolling-user-fingerprint}
+
+1. Press <Image src="/img/common/ico-menu.svg" ico alone /> and authenticate with the Admin level credential.
+
+2. Select <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-add.svg" ico alone />.
+
+3. Tap <Cmd sid="ui_312" product="dev" /> → <Cmd sid="ui_108" product="dev" />.
+
+4. After scanning the fingerprint of the finger to be enrolled, scan the same finger's fingerprint again.
+
+:::info
+
+* Fingerprint enrollment is only available on BS3M-ODB and BS3M-OAPB.
+
+* Place the finger deep enough to contact with the sensor completely.
+
+* Place the center of the fingerprint in the center of the sensor.
+
+* If a finger has a cut or the fingerprint is blurry, select another finger for the fingerprint.
+
+* Enter accurately according to the on-screen instructions when authenticating fingerprints.
+
+* If you make the finger upright so that the contact area with the sensor is decreased or the angle of finger is warped, fingerprint authentication may not be performed.
+
+:::
+
+## Modifying User Information
+
+User Management or Administrator can modify the registered user information. Add the user's face, fingerprint, or card, and modify the PIN and level.
+
+1. Press <Image src="/img/common/ico-menu.svg" ico alone /> and authenticate with the Admin level credential.
+
+2. Click <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-search.svg" ico alone />.
+
+3. Select your search terms. You can search for users using <Cmd sid="ui_299" product="dev" />, <Cmd sid="ui_167" product="dev" />, <Cmd sid="ui_253" product="dev" />, <Cmd sid="ui_228" product="dev" />, <Cmd sid="ui_322" product="dev" />.
+
+4. Select the user to modify.
+
+5. Modify the information by referring to [Registering user information](#registering-user-information) and press <Cmd sid="ui_037" product="dev" />.
+
+   * To delete a user, select <Image src="/img/common/ico-delete.svg" ico alone /> and then press <Cmd sid="ui_367" product="dev" />.
+
+:::info
+
+<Cmd sid="ui_320" product="dev" /> can be registered in BioStar X. For more information on registering access groups, refer to the [BioStar X Administrator Guide](../../platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+
+:::
+
+## Delete All Users
+
+You can delete all registered users at once.
+
+1. Press <Image src="/img/common/ico-menu.svg" ico alone /> and authenticate with the Admin level credential.
+
+2. Select <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-delete.svg" ico alone />.
+
+3. Select <Cmd sid="ui_303" product="dev" /> to check, then press <Cmd sid="ui_037" product="dev" />.
+
+4. To delete all users, press <Cmd sid="ui_367" product="dev" />.
+
+## View User Usage
+
+View the number of registered users, faces, cards, and fingerprints at a glance.
+
+1. Press <Image src="/img/common/ico-menu.svg" ico alone /> and authenticate with the Admin level credential.
+
+2. Press <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-info.svg" ico alone />. User usage information appears.
+
+   <Image src="/img/device/bs3m-user-usage.png" />
+
+:::info
+
+The number of fingerprints can be viewed only on BS3M-ODB and BS3M-OAPB.
+
+:::

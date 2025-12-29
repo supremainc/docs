@@ -1,27 +1,11 @@
 {
-  "access": {
-    "name": "Acceso",
-    "description": "El acto de acceder a una zona o a activos determinados."
+  "onetoone_auth": {
+    "name": "Autenticación 1:1",
+    "description": "Método de autenticación que verifica al usuario comparando los datos biométricos de la persona uno a uno con los datos biométricos almacenados en la base de datos."
   },
-  "access_control": {
-    "name": "Control de acceso",
-    "description": "El acto de restringir que personas no autorizadas accedan a la infraestructura y a los activos. El acceso realizado por personas autorizadas se registra en el registro."
-  },
-  "access_group": {
-    "name": "Grupo de Acceso",
-    "description": "Un grupo de usuarios que tiene derecho a acceder a una puerta o grupo de puertas específico durante un periodo de tiempo programado."
-  },
-  "access_level": {
-    "name": "Nivel de Acceso",
-    "description": "El derecho a acceder a la puerta durante un periodo de tiempo programado."
-  },
-  "access_on_card": {
-    "name": "Acceso en tarjeta",
-    "description": "Una tarjeta en la que se registra la información del ID del usuario, las credenciales y el grupo de acceso."
-  },
-  "access_rule": {
-    "name": "Regla Acceso",
-    "description": "Una regla referente al acceso a una puerta o grupo de puertas determinado durante un periodo de tiempo programado."
+  "onetomany_auth": {
+    "name": "Autenticación 1:N",
+    "description": "Método de autenticación que obtiene la información del usuario de una base de datos. Identifica a una persona comparando su información biométrica con la información de todas las bases de datos registradas."
   },
   "acid": {
     "name": "ACID",
@@ -31,281 +15,17 @@
     "name": "Red ad hoc",
     "description": "Una red configurada de forma autónoma por cada dispositivo sin depender de infraestructura de red como una estación base o un punto de acceso. En esta red se forma una topología dinámica y autónoma a pesar de que cada dispositivo se comunique mediante una interfaz inalámbrica, ya que cada dispositivo puede moverse libremente gracias a una función de enrutamiento que permite superar las limitaciones de distancia de la comunicación inalámbrica."
   },
-  "administrator": {
-    "name": "Administrador",
-    "description": "El usuario que tiene acceso completo al software de configuración."
-  },
-  "aes": {
-    "name": "AES (Estándar de cifrado avanzado)",
-    "description": "El Estándar de cifrado avanzado (AES) es una especificación para el cifrado de datos electrónicos establecida por el Instituto Nacional de Estándares y Tecnología (NIST) de EE. UU."
-  },
-  "alarm": {
-    "name": "Alarma",
-    "description": "Entre los eventos que ocurren en el sistema, es el tipo de evento que requiere acción sin demora."
-  },
-  "alarm_action": {
-    "name": "Acción de alarma",
-    "description": "Acciones que ejecutan automáticamente actividades como controlar el dispositivo y enviar correos electrónicos cuando se produce una alarma o un determinado evento."
-  },
-  "alert": {
-    "name": "Alerta",
-    "description": "El acto de mostrar o reenviar en tiempo real un evento de alarma ocurrido en el sistema."
-  },
-  "analog_intercom": {
-    "name": "Intercomunicador analógico",
-    "description": "Un teléfono intercomunicador que consta de un conmutador analógico y una red."
-  },
   "ansi378": {
     "name": "ANSI 378",
     "description": "Los estándares de plantillas de huellas dactilares definidos por el Instituto Nacional Estadounidense de Estándares (ANSI)."
-  },
-  "access_point": {
-    "name": "AP (Punto de acceso)",
-    "description": "Dispositivo para implementar una LAN inalámbrica. Un punto de acceso crea una conexión a la red inalámbrica a través de una LAN cableada."
-  },
-  "apb": {
-    "name": "APB (Anti-passback)",
-    "description": "Método estructural utilizado para controlar el acceso. Esta función usa dispositivos de control de acceso instalados tanto dentro como fuera de la puerta, de modo que se requiere autenticación para acceder a la zona. En los sistemas de control de acceso basados en tarjeta, si una persona entra a una zona siguiendo a la persona de delante sin pasar su tarjeta por el lector, la puerta no se abre cuando la persona intenta salir de la zona, y posteriormente se produce un evento de anti-passback. El anti-passback se clasifica en APB duro y APB suave. Si se infringe el anti-passback, el evento se crea inmediatamente y el APB duro no permite el acceso al usuario, mientras que el APB suave todavía permite el acceso."
-  },
-  "api": {
-    "name": "API (Interfaz de programación de aplicaciones)",
-    "description": "Un API es un conjunto de protocolos, herramientas e instrucciones para implementar aplicaciones de software. En el caso del desarrollo de aplicaciones web, el API especifica cómo debe enviar el sistema las solicitudes y qué tipo de respuestas correspondientes se deben esperar. El API puede incluir funciones como la gestión de archivos y el procesamiento de ventanas/video/caracteres para facilitar el proceso de desarrollo de aplicaciones a los desarrolladores de aplicaciones de terceros."
-  },
-  "arm": {
-    "name": "Sólo Armar",
-    "description": "El acto de monitorear una zona específica para prevenir delitos y accidentes. Un sistema de seguridad permite monitoreo las 24 horas, notificaciones de alarma, grabaciones, etc."
-  },
-  "audit_trail": {
-    "name": "Registro de auditoría",
-    "description": "Los datos registrados sobre los cambios en el sistema. El registro de auditoría permite buscar información sobre actividad de usuarios no autorizados, el procesamiento de la actividad de usuarios, etc."
-  },
-  "auth": {
-    "name": "Autenticación",
-    "description": "El acto de verificar las credenciales ingresadas por un usuario para identificarlo."
-  },
-  "auth_mode": {
-    "name": "Modo de autenticación",
-    "description": "Una combinación de credenciales requeridas para la autenticación."
-  },
-  "backlight": {
-    "name": "Retroiluminación",
-    "description": "Una luz que se emite desde la parte posterior del LCD de un dispositivo para mejorar la legibilidad."
-  },
-  "backlight_timeout": {
-    "name": "Tiempo de espera de la retroiluminación",
-    "description": "Duración durante la cual la retroiluminación permanece encendida."
-  },
-  "bandwidth": {
-    "name": "Ancho de banda",
-    "description": "Rango de frecuencias en el que se pueden realizar determinadas funciones; se mide en hercios (Hz). Es la cantidad de información que puede transmitirse a través de un cable u otro medio durante un periodo de tiempo. Cuanto mayor sea el ancho de banda de frecuencia, más información se puede enviar durante un determinado periodo de tiempo."
-  },
-  "batch_enrollment": {
-    "name": "Inscripción por lotes",
-    "description": "El acto de registrar múltiples tarjetas de acceso en el servidor BioStar. Las tarjetas registradas pueden asignarse a usuarios individuales."
-  },
-  "bifurcation": {
-    "name": "Bifurcación",
-    "description": "Punto donde dos crestas de la huella dactilar se unen o se separan."
-  },
-  "biometric_auth": {
-    "name": "Autenticación biométrica",
-    "description": "El acto de determinar si la información biométrica proporcionada por una persona coincide con la información sobre sus características biométricas previamente registrada."
-  },
-  "biometric_information": {
-    "name": "Información biométrica",
-    "description": "Información utilizada para identificar a cada individuo. Información relacionada con las características físicas y de comportamiento únicas de una persona, incluida la huella dactilar, la firma, el patrón de venas, el rostro, la voz, el iris, los genes, etc."
-  },
-  "biometrics": {
-    "name": "Biometría",
-    "description": "Tecnología que extrae y analiza las características físicas y de comportamiento de las personas mediante un dispositivo automatizado para la identificación de cada individuo."
-  },
-  "blacklist": {
-    "name": "Lista Negra",
-    "description": "Lista de tarjetas cuya autenticación se rechaza en el dispositivo BioStar. Cuando una tarjeta se pierde o es robada, se puede prevenir su uso indebido registrando el ID de la tarjeta en la lista negra."
-  },
-  "ble": {
-    "name": "BLE (Bluetooth Low Energy)",
-    "description": "Tecnología Bluetooth que puede transmitir y recibir datos de bajo consumo y bajo volumen dentro de una distancia de aproximadamente 10 m utilizando la banda de frecuencia de 2.4 GHz. El Bluetooth de bajo consumo se aplica principalmente a dispositivos pequeños en los que el suministro de energía es limitado debido a su bajo consumo energético. También se utiliza en el control de acceso en forma de tarjetas de identificación móviles."
-  },
-  "bluetooth": {
-    "name": "Bluetooth",
-    "description": "Tecnología de comunicación que permite la transmisión y recepción bidireccional de datos a corta distancia. Cada tipo de Bluetooth presenta características diferentes según la distancia de transmisión, el método de transmisión, el consumo de energía, etc."
-  },
-  "break": {
-    "name": "Descanso",
-    "description": "Breve período de descanso durante las horas de trabajo. Cada pausa se calcula como el tiempo entre el inicio y el fin de la misma."
-  },
-  "brute_attack": {
-    "name": "Ataque de fuerza bruta",
-    "description": "También denominado ataque de fuerza bruta, este término se refiere al acto de introducir todos los valores posibles para descifrar contraseñas."
-  },
-  "bypass_card": {
-    "name": "Tarjeta de bypass",
-    "description": "Tarjeta que permite acceder a una zona específica omitiendo el proceso de autenticación. Por ejemplo, quienes poseen esta tarjeta pueden pasar por la puerta sin necesidad de realizar una serie de procedimientos de seguridad (autenticación)."
-  },
-  "card": {
-    "name": "Tarjeta",
-    "description": "Medio de información portátil en forma de tarjeta. Almacena información para la identificación."
-  },
-  "card_id": {
-    "name": "ID Tarjeta",
-    "description": "Número de serie asignado a una tarjeta según el formato definido por una empresa, organización o departamento. Un ID de tarjeta puede ser asignado por el fabricante de la tarjeta o creado en un formato definido por una empresa u organización en particular."
-  },
-  "card_layout": {
-    "name": "Diseño de la tarjeta",
-    "description": "La disposición y estructura de los datos dentro de una tarjeta."
-  },
-  "card_mode": {
-    "name": "Modo de tarjeta",
-    "description": "Método para autenticar a los titulares de tarjetas. Existen dos modos de tarjeta: modo Card ID y modo Template-on-Card. El modo Card ID compara el ID de usuario almacenado en el dispositivo con la información de la huella dactilar, en referencia al ID de tarjeta almacenado en la tarjeta. Mientras que el modo Template-on-Card identifica a un usuario verificando si la huella dactilar ingresada por el usuario coincide con la información de la huella almacenada en la tarjeta."
-  },
-  "card_reader": {
-    "name": "Lector de tarjetas",
-    "description": "Dispositivo que lee la información almacenada en las tarjetas y la transmite al controlador."
-  },
-  "cde": {
-    "name": "CDE (Conformance Decision Engine)",
-    "description": "Uno de los procedimientos del algoritmo de coincidencia de huellas dactilares de Suprema. Este paso determina si la imagen de huella dactilar obtenida es válida antes de procesarla y extraer las minucias de la huella."
-  },
-  "clean_room": {
-    "name": "Sala limpia",
-    "description": "Espacio en el que se puede controlar, según sea necesario, el material particulado suspendido en el aire, como polvo, virus, polvos metálicos y células."
-  },
-  "client": {
-    "name": "Cliente",
-    "description": "Entidad que solicita servicio al servidor a través de una red."
-  },
-  "controller": {
-    "name": "Controladora",
-    "description": "Dispositivo que evalúa los derechos de acceso basándose en la información de credenciales obtenida de un lector y controla la entrada y salida del lector."
-  },
-  "contact_card": {
-    "name": "Tarjeta con contacto",
-    "description": "Tarjeta con un chip dorado o plateado adherido a la superficie. Para la transmisión de datos, una tarjeta con contacto debe insertarse en un terminal de tarjetas para poner el chip en contacto directo con el terminal."
-  },
-  "contactless_card": {
-    "name": "Tarjeta sin contacto",
-    "description": "Tarjeta que se comunica con un terminal de tarjetas mediante su antena de bobina incorporada. Este tipo de tarjeta permite la transmisión de datos usando un campo magnético sin entrar en contacto con un terminal de tarjetas."
-  },
-  "credential": {
-    "name": "Credencial",
-    "description": "Datos utilizados para identificar a los usuarios. Firmas digitales, tarjetas inteligentes, datos biométricos, nombres de usuario, contraseñas, etc., son ejemplos comunes de credenciales."
-  },
-  "csn": {
-    "name": "CSN (Número de serie de la tarjeta)",
-    "description": "Un número de serie asignado a una tarjeta por el fabricante."
-  },
-  "daisy_chain": {
-    "name": "Conexión en cadena",
-    "description": "Una conexión en cadena es un esquema de cableado en el que los dispositivos de hardware se conectan en secuencia."
-  },
-  "dst": {
-    "name": "Horario de verano (DST)",
-    "description": "También llamado horario de verano, el DST es la práctica de adelantar los relojes cierta cantidad de tiempo respecto al horario estándar para ahorrar energía mediante un uso más eficiente de la luz diurna en verano."
-  },
-  "dbms": {
-    "name": "DBMS (Sistema de gestión de bases de datos)",
-    "description": "Un DBMS es un software que controla y gestiona las bases de datos y que interactúa con un usuario o una aplicación para acceder a los datos en la base de datos."
-  },
-  "decryption": {
-    "name": "Descifrado",
-    "description": "La acción de recuperar datos cifrados utilizando claves de descifrado. Los datos cifrados solo pueden descifrarse con una clave simétrica que se corresponda con la clave utilizada para cifrar dichos datos."
-  },
-  "device": {
-    "name": "Dispositivo",
-    "description": "Un dispositivo de control de acceso que puede controlarse en BioStar."
-  },
-  "device_id": {
-    "name": "ID Dispositivo",
-    "description": "Un número único asignado para identificar cada dispositivo de hardware en BioStar."
   },
   "dhcp": {
     "name": "DHCP",
     "description": "Un protocolo de comunicación utilizado para la asignación y gestión automática de los parámetros necesarios para la comunicación TCP/IP."
   },
-  "diode": {
-    "name": "Diodo",
-    "description": "Un componente que controla el flujo de corriente en una sola dirección. Se utiliza para evitar la corriente inversa que ocurre momentáneamente cuando funciona la cerradura de la puerta."
-  },
   "dip_switch": {
     "name": "Interruptor DIP",
     "description": "Un interruptor DIP es un conmutador de encendido/apagado que se usa para controlar el comportamiento de la placa de circuitos de un dispositivo sin modificar el hardware."
-  },
-  "direct_mode": {
-    "name": "Modo directo",
-    "description": "Un modo en el que el cliente BioStar 2 busca directamente dispositivos conectables y se conecta a ellos. En este modo, el cliente es responsable de comunicarse con los dispositivos y los servidores. Cuando se realiza una búsqueda de dispositivos en el servidor, se muestra una lista de dispositivos disponibles y el administrador puede seleccionar de la lista el dispositivo al que desea conectarse."
-  },
-  "disarm": {
-    "name": "Desarmar",
-    "description": "La acción de suspender el funcionamiento de un sistema de alarma activado para una zona específica."
-  },
-  "door": {
-    "name": "Puerta",
-    "description": "Un lugar en el que se instala un dispositivo físico de control de acceso. Es un concepto espacial que constituye la base del control de acceso."
-  },
-  "door_group": {
-    "name": "Grupo de puertas",
-    "description": "Un grupo de puertas creado para facilitar la administración. Los eventos pueden supervisarse por grupo de puertas. Es un componente de un grupo de acceso."
-  },
-  "door_sensor": {
-    "name": "Sensor de puerta",
-    "description": "Un sensor que detecta el estado de la puerta. Puede comprobar varios estados, como abierta, cerrada, mantenida abierta y forzada."
-  },
-  "dual_auth": {
-    "name": "Modo doble",
-    "description": "Un método de autenticación en el que las credenciales de dos personas diferentes se ingresan en secuencia dentro de un tiempo limitado."
-  },
-  "dummy_reader": {
-    "name": "Lector ficticio",
-    "description": "Un dispositivo que no almacena ni procesa datos de usuario, sino que lee credenciales como rostros, huellas y tarjetas, y transmite esos datos al dispositivo de control."
-  },
-  "duress": {
-    "name": "Dedo de coacción",
-    "description": "Una huella dactilar seleccionada para generar un evento determinado durante el registro de huellas. Si un usuario se autentica con esa huella, la autenticación se registra en el log como autenticación de huella bajo coacción. El administrador del sistema puede configurar una alarma aparte usando ese registro."
-  },
-  "eer": {
-    "name": "EER (Tasa de error igual)",
-    "description": "Como indicador del rendimiento biométrico, la EER (Equal Error Rate) es el punto donde se cruzan la FAR (False Acceptance Rate) y la FRR (False Rejection Rate). Un dispositivo con una EER más baja se considera más preciso."
-  },
-  "encryption": {
-    "name": "Cifrado",
-    "description": "La acción de transformar la información de modo que resulte imposible reconocer su significado original. Almacenar o transferir información en forma cifrada es un método de protección de la misma."
-  },
-  "encryption_key": {
-    "name": "Clave Encriptación",
-    "description": "Una cadena de bits generada para el cifrado. Las claves de cifrado se diseñan mediante algoritmos que impiden que sean adivinadas. En general, las claves más largas hacen que el descifrado sea más difícil."
-  },
-  "enrollment": {
-    "name": "Enrolamiento",
-    "description": "Serie de pasos utilizada para registrar la información biométrica de los usuarios en un sistema biométrico. Incluye muestreo, creación de plantillas, almacenamiento, etc."
-  },
-  "entrance_limit_zone": {
-    "name": "Zona de límite de entrada",
-    "description": "Una zona que restringe el acceso en horarios específicos. Puede configurarse para limitar la autenticación o la cantidad de autenticaciones."
-  },
-  "epoxy_potted": {
-    "name": "Encapsulado en epoxi",
-    "description": "Material que protege el circuito al evitar que el agua de lluvia penetre en el dispositivo cuando está instalado al aire libre."
-  },
-  "event": {
-    "name": "Evento",
-    "description": "Interacción entre un usuario, el dispositivo y la puerta. Los eventos se registran en un log en el servidor BioStar. Incluyen éxitos y fallos de autenticación, cambios en el estado de la puerta, alarmas, etc."
-  },
-  "exit_button": {
-    "name": "Botón de salida",
-    "description": "Botón usado para abrir la puerta. Al presionarlo, la puerta se abre. Puede utilizarse en puertas y zonas que no requieren autenticación adicional."
-  },
-  "export": {
-    "name": "Exportar",
-    "description": "Operación realizada por un programa que utiliza un formato de datos particular. Consiste en almacenar datos en un formato compatible con otros programas."
-  },
-  "face_detection": {
-    "name": "Detección facial",
-    "description": "Función que, después de verificar la credencial de un usuario, toma una foto de su rostro antes de otorgar acceso para que el evento y la imagen facial se almacenen juntos. La autenticación falla si no se detecta el rostro del usuario. Cuando se ha almacenado la imagen del rostro, si es necesario, es posible identificar al usuario comparando dicha imagen con el ID de usuario registrado cuando ocurrió el evento."
-  },
-  "face_recognition": {
-    "name": "Autenticación facial",
-    "description": "Tecnología y sistema de autenticación que identifica a las personas según sus rasgos faciales."
   },
   "fail_safe_lock": {
     "name": "Cerradura fail safe",
@@ -315,77 +35,9 @@
     "name": "Cerradura fail secure",
     "description": "Significa que el sistema entra en modo de seguridad en caso de corte de energía. Si se interrumpe la alimentación de las puertas de un sitio crítico, como un banco, las puertas permanecerán bloqueadas."
   },
-  "fake_fp": {
-    "name": "Huella dactilar falsa",
-    "description": "Una huella dactilar falsa hecha de papel, silicona, goma, etc., para emular la huella de otra persona."
-  },
-  "far": {
-    "name": "FAR (Tasa de aceptación falsa)",
-    "description": "Criterio utilizado al comparar la precisión de distintos sistemas biométricos. Representa la probabilidad de reconocer incorrectamente a una persona no registrada como registrada."
-  },
   "fastcgi": {
     "name": "FastCGI",
     "description": "FastCGI es un complemento para servidores web que permite a un proceso atender varias solicitudes CGI (Common Gateway Interface) a la vez con mayor velocidad."
-  },
-  "fp": {
-    "name": "Huella",
-    "description": "Los patrones curvos que se observan en las yemas de los dedos."
-  },
-  "fp_recognition": {
-    "name": "Reconocimiento de huellas dactilares",
-    "description": "Tecnología y sistema de autenticación que reconoce a las personas según la información de imagen de las huellas dactilares únicas de cada individuo."
-  },
-  "fp_scanner": {
-    "name": "Escáner de huellas dactilares",
-    "description": "Dispositivo que escanea las huellas dactilares de los usuarios para registrarlas en la base de datos."
-  },
-  "fp_sensor": {
-    "name": "Sensor de huellas dactilares",
-    "description": "En la tecnología de reconocimiento de huellas dactilares, es el dispositivo de entrada de imagen que obtiene la información de la huella, la cual representa las características únicas de un individuo, o el área donde se coloca el dedo, para que el escáner pueda leer la huella."
-  },
-  "fp_template": {
-    "name": "Plantilla de huella dactilar",
-    "description": "Conjunto de información de huellas dactilares que consiste en una serie de minucias, como bifurcaciones y puntos finales de las crestas observadas en las imágenes de las huellas. Las plantillas de huellas se utilizan para la identificación, comparando la ubicación y el número de minucias."
-  },
-  "fire_alarm_zone": {
-    "name": "Zona de alarma contra incendios",
-    "description": "Zona configurada para abrir o bloquear todas las puertas o ascensores ubicados dentro de ella en caso de incendio."
-  },
-  "firmwall": {
-    "name": "Firmwall",
-    "description": "Dispositivo controlado electrónicamente que abre o cierra contactos eléctricos para afectar a otros dispositivos."
-  },
-  "firmware": {
-    "name": "Firmware",
-    "description": "Programa o archivo micro almacenado en una ROM para controlar el hardware del producto."
-  },
-  "floating_shift": {
-    "name": "Turno flotante",
-    "description": "Una de las reglas de asistencia proporcionadas por BioStar. Este método no implica horarios de llegada y salida preestablecidos; aplica las reglas de asistencia del día según la hora de llegada del usuario."
-  },
-  "forced_open": {
-    "name": "Apertura forzada",
-    "description": "Estado en el que el sensor de puerta detecta la apertura sin que haya ocurrido un evento normal de apertura, como la autenticación del usuario o el uso del botón de salida."
-  },
-  "frr": {
-    "name": "FRR (Tasa de rechazo falso)",
-    "description": "Criterio utilizado al comparar la precisión de distintos sistemas biométricos. Representa la probabilidad de reconocer erróneamente a una persona registrada como no registrada."
-  },
-  "global_zone": {
-    "name": "Zona global",
-    "description": "Zona en la que un servidor y un dispositivo maestro están conectados vía TCP/IP, y el dispositivo maestro y un dispositivo esclavo se conectan vía RS-485. El servidor desempeña el rol de maestro para la zona."
-  },
-  "grace": {
-    "name": "Gracia",
-    "description": "Tiempo permitido en las reglas de asistencia. Por ejemplo, si establece la hora de inicio de trabajo a las 9:00 y el tiempo permitido a 10 minutos, el personal que llegue entre las 9:00 y las 9:10 no se considerará tarde."
-  },
-  "graphic_map": {
-    "name": "Mapa gráfico",
-    "description": "Uno de los métodos de monitoreo proporcionados por BioStar. Esta función permite verificar y controlar en tiempo real el estado de las puertas desde el mapa."
-  },
-  "held_open": {
-    "name": "Mantenida abierta",
-    "description": "Estado en el que la puerta permanece abierta durante más tiempo del máximo configurado. Puede activar una alarma."
   },
   "hf_card": {
     "name": "Tarjeta HF (alta frecuencia)",
@@ -403,37 +55,17 @@
     "name": "Tarjeta IC (tarjeta de circuito integrado)",
     "description": "Tarjeta con un circuito integrado semiconductor incorporado, también llamada tarjeta inteligente. Las tarjetas IC pueden leer y escribir datos, y poseen mayor capacidad de almacenamiento y mayor durabilidad que las tarjetas magnéticas, de modo que los datos almacenados no se dañan al entrar en contacto con imanes. Además, las tarjetas IC pueden incorporar diversas funciones de seguridad como cifrado de datos y configurarse para que solo sean compatibles con lectores de especificaciones particulares, por lo que ofrecen una excelente seguridad y funcionalidad."
   },
-  "io": {
-    "name": "E/S",
-    "description": "Abreviatura de entrada/salida."
-  },
-  "io_device": {
-    "name": "Dispositivo de E/S",
-    "description": "Dispositivo que realiza funciones de entrada/salida de información."
-  },
   "ik_rating": {
     "name": "Clasificación IK",
     "description": "Sistema de clasificación internacional que define el grado de protección de un producto contra impactos físicos."
   },
+  "io": {
+    "name": "E/S",
+    "description": "Abreviatura de entrada/salida."
+  },
   "ip_rating": {
     "name": "Clasificación IP",
     "description": "Sistema de clasificación internacional que define el grado de protección de un producto contra sólidos y líquidos."
-  },
-  "import": {
-    "name": "Importar",
-    "description": "Acción de transferir datos de una computadora a su propio sistema."
-  },
-  "intercom": {
-    "name": "Interfono",
-    "description": "Sistema de comunicación que se instala generalmente en un edificio o institución mediante una central privada (PBX)."
-  },
-  "interlock_zone": {
-    "name": "Zona de enclavamiento",
-    "description": "Zona situada entre dos o más puertas. En esta zona, si una puerta está abierta o se ha desbloqueado, el resto de las puertas permanecerán cerradas. Por lo general se aplica en laboratorios y plantas de producción donde es necesario controlar partículas en suspensión, como el polvo, o en lugares donde se requiere por motivos de seguridad y protección."
-  },
-  "intrusion_alarm_zone": {
-    "name": "Zona de alarma de intrusión",
-    "description": "Zona configurada para emitir un sonido de advertencia o una señal de relé si una persona no autorizada intenta una intrusión después de activar (Arm). Normalmente esta zona comienza a monitorear tras la jornada laboral y emite una alarma o señal preestablecida cuando se detecta un intento de intrusión."
   },
   "iso19749-2": {
     "name": "ISO 19749-2",
@@ -443,117 +75,17 @@
     "name": "JSON",
     "description": "JSON es una forma de representación de datos que utiliza caracteres, paréntesis y símbolos para transmitir objetos de datos. Puede utilizarse en varios lenguajes de programación como PHP, C#, Python, etc."
   },
-  "kernel": {
-    "name": "Kernel",
-    "description": "Componente central de un sistema operativo. Administra recursos importantes como la memoria y los procesos. Se carga en la memoria durante el arranque para proporcionar diversos servicios básicos."
-  },
   "lan": {
     "name": "LAN (red de área local)",
     "description": "Sistema de red con líneas de comunicación que conecta computadoras, impresoras y otros dispositivos en un área limitada, como un edificio, para que puedan interactuar entre sí."
-  },
-  "vacation": {
-    "name": "Ausencia",
-    "description": "Acción de ausentarse del trabajo con un motivo o permiso predefinido, o el período de la ausencia en sí."
-  },
-  "leave_manage": {
-    "name": "Gestión de ausencias",
-    "description": "Acción de gestionar las ausencias del personal debido a vacaciones, viajes de negocios, tareas externas, etc."
   },
   "lf_card": {
     "name": "Tarjeta LF (baja frecuencia)",
     "description": "Tarjeta electrónica que opera en la banda de baja frecuencia de 120-140 kHz."
   },
-  "live_face_detection": {
-    "name": "Detección de rostro en vivo (LFD)",
-    "description": "Tecnología que detecta rostros falsificados, por ejemplo, máscaras y fotografías."
-  },
-  "live_fp_detection": {
-    "name": "Detección de dedo en vivo (LFD)",
-    "description": "Tecnología que detecta huellas dactilares falsas copiadas con goma, silicona, arcilla, pegamento, película, etc."
-  },
-  "lvv": {
-    "name": "Vista Video en Vivo",
-    "description": "Método de monitoreo basado en video. BioStar proporciona pantallas de cámaras IP y registros de eventos en tiempo real, y permite abrir/cerrar puertas manualmente."
-  },
-  "local_zone": {
-    "name": "Zona local",
-    "description": "Zona configurada mediante una conexión RS-485 entre dispositivos. El rol de maestro de la zona lo desempeña el dispositivo maestro, no el servidor."
-  },
-  "lock": {
-    "name": "Cerrar",
-    "description": "Dispositivo electromecánico que se conecta al sistema de control de acceso para bloquear la puerta. Se refiere a todos los dispositivos electrónicos integrados o instalados en la puerta."
-  },
-  "log": {
-    "name": "Registro",
-    "description": "Registros de todos los eventos ocurridos en el sistema, la red, el dispositivo, la puerta, etc."
-  },
-  "lsb": {
-    "name": "LSB (bit menos significativo)",
-    "description": "Bit en la posición más baja de los datos binarios (el bit más a la derecha) o su contenido. Es lo opuesto al MSB (bit más significativo)."
-  },
-  "mag_card": {
-    "name": "Tarjeta de banda magnética",
-    "description": "Tarjeta que almacena datos alterando el magnetismo de su cinta magnética. Para transmitir datos, la cinta magnética adherida a un lado de la tarjeta debe ser leída por un terminal. Solo se pueden almacenar tipos limitados y pequeñas cantidades de datos en este tipo de tarjeta, y los datos grabados pueden alterarse o dañarse al entrar en contacto con un imán. Además, dado que las tarjetas de banda magnética no ofrecen suficiente seguridad porque no utilizan cifrado de datos, están siendo reemplazadas cada vez más por tarjetas IC en diversos ámbitos, incluido el control de acceso."
-  },
-  "man_trap": {
-    "name": "Sas de seguridad",
-    "description": "Sistema físico de control de acceso que previene accesos no autorizados y separa zonas de seguridad de zonas no seguras."
-  },
-  "master_device": {
-    "name": "Dispositivo maestro",
-    "description": "Entre los dispositivos conectados mediante RS-485, el dispositivo que cumple la función de controlador. Procesa datos supervisando periódicamente al dispositivo esclavo. También se denomina dispositivo host."
-  },
-  "matching_timeout": {
-    "name": "Tiempo de espera de coincidencia",
-    "description": "Límite de tiempo asignado para la coincidencia del dispositivo o del servidor. La coincidencia falla si no se completa dentro de ese límite."
-  },
-  "meal_deduct": {
-    "name": "Deducción Comida",
-    "description": "Acción de excluir los tiempos de comida al calcular el total de horas laborales diarias."
-  },
-  "message_timeout": {
-    "name": "Tiempo de espera del mensaje",
-    "description": "Tiempo durante el cual un mensaje se muestra cuando no hay interacción del usuario."
-  },
-  "minutiae": {
-    "name": "Minucias",
-    "description": "Detalles específicos en los surcos de una huella dactilar que se utilizan para reconocerla."
-  },
-  "mobile_card": {
-    "name": "Tarjeta móvil",
-    "description": "Tarjeta que almacena datos del usuario y credenciales en un dispositivo móvil y realiza autenticaciones mediante tecnología NFC o BLE. Las tarjetas móviles ofrecen niveles más altos de seguridad y comodidad que las tarjetas de plástico y tienen la ventaja de reducir los gastos de emisión y administración de tarjetas, ya que utilizan dispositivos móviles que la mayoría de las personas usa a diario."
-  },
-  "model_number": {
-    "name": "Número de modelo",
-    "description": "Número genérico asignado por el fabricante a un dispositivo para identificar su tipo."
-  },
-  "monitoring": {
-    "name": "Monitorizar",
-    "description": "Actividad de vigilancia para fines específicos. El monitoreo del control de acceso y la gestión de tiempo y asistencia se refiere a verificar eventos de control de acceso y de tiempo y asistencia de usuarios, así como a verificar y controlar en tiempo real el estado de dispositivos, puertas y zonas."
-  },
-  "msb": {
-    "name": "MSB (bit más significativo)",
-    "description": "Bit en la posición más alta de los datos binarios (el bit más a la izquierda) o su contenido. Es lo opuesto al LSB (bit menos significativo)."
-  },
-  "mtu": {
-    "name": "MTU (unidad máxima de transmisión)",
-    "description": "Cantidad máxima de paquetes que pueden transmitirse a través de la red."
-  },
-  "multi_rfid": {
-    "name": "Tecnología multi-RFID",
-    "description": "Tecnología que permite que un mismo dispositivo lea tarjetas que operan en diferentes bandas de frecuencia, como 125 kHz y 13.56 MHz."
-  },
-  "muster_zone": {
-    "name": "Zona de reunión",
-    "description": "Zona designada para la reunión de personas en caso de emergencia, como un incendio. Se utiliza para monitorear la cantidad y la lista de personal en una zona determinada y para notificar a los administradores mediante una alarma o alerta si un usuario permanece en una zona determinada durante un período establecido."
-  },
   "nc": {
     "name": "NC (normalmente cerrado)",
     "description": "Acción en la que el relé permanece cerrado en estado normal pero se abre cuando el dispositivo opera. La corriente fluye a través del circuito conectado porque el relé permanecía cerrado previamente."
-  },
-  "nfc": {
-    "name": "NFC (Near Field Communication)",
-    "description": "Tecnología RFID aplicada a terminales móviles que permite la transmisión y recepción bidireccional de datos a corta distancia. Con el aumento de la penetración de los teléfonos inteligentes, esta tecnología se utiliza cada vez más en diversos campos como finanzas y comunicaciones, y también se aplica al control de acceso en forma de tarjetas de identificación móviles."
   },
   "no": {
     "name": "NO (normalmente abierto)",
@@ -563,197 +95,53 @@
     "name": "NVR (grabador de video en red)",
     "description": "Función que graba y supervisa videos de los puntos de acceso mediante cámaras o dispositivos de video instalados en la red y que gestiona los eventos que ocurren."
   },
-  "noise": {
-    "name": "Ruido",
-    "description": "Las señales eléctricas que ocultan o dificultan la identificación de otras señales."
-  },
-  "open": {
-    "name": "Abierto",
-    "description": "Estado en el que no circula corriente porque un cable se ha roto, lo que provoca la apertura del circuito."
-  },
-  "optical_fp_sensor": {
-    "name": "Sensor óptico de huellas dactilares",
-    "description": "Sensor que extrae información de huellas dactilares mediante luz."
-  },
   "osdp": {
     "name": "OSDP (Open Supervised Device Protocol)",
     "description": "Protocolo estándar RS-485 desarrollado como mejora de la interfaz Wiegand, mediante la cual solo era posible la comunicación unidireccional de un lector a un controlador. Este protocolo permite procesar grandes cantidades de datos en un entorno de comunicación bidireccional entre lector y controlador, así como transmitir datos biométricos. La compatibilidad con este protocolo también permite la conectividad con dispositivos de terceros, por lo que se pueden sustituir fácilmente los componentes de un sistema existente según sea necesario."
   },
-  "output_relay": {
-    "name": "Relés de salida",
-    "description": "Dispositivo controlado electrónicamente que abre o cierra contactos eléctricos para afectar a otros dispositivos."
-  },
-  "overtime": {
-    "name": "Horas Extra",
-    "description": "El tiempo trabajado que supera la jornada diaria establecida por la Ley de Normas Laborales o por los reglamentos de la empresa. El tiempo extra puede incluir trabajo anticipado, trabajo adicional, trabajo en días festivos, etc."
-  },
-  "password": {
-    "name": "Contraseña",
-    "description": "Cadena que una persona utiliza junto con su ID de usuario para la autenticación."
-  },
-  "pin": {
-    "name": "PIN (Número de identificación personal)",
-    "description": "Número de serie asignado a una persona para su identificación."
-  },
-  "port_number": {
-    "name": "Número de puerto",
-    "description": "Número de puerto utilizado para la intercomunicación en TCP/UDP. Su rango va de 0 a 65535."
-  },
-  "private_auth": {
-    "name": "Autenticación privada",
-    "description": "Método de autenticación en el que la autenticación del usuario se realiza según la combinación de credenciales especificada por el administrador. Este método tiene prioridad sobre otros métodos de autenticación."
-  },
-  "puch": {
-    "name": "Marcaje",
-    "description": "Evento que indica la hora de inicio o de fin del trabajo."
-  },
-  "punch_in": {
-    "name": "Marcaje entrada",
-    "description": "Acción de registrar la hora de llegada al lugar de trabajo."
-  },
-  "punch_out": {
-    "name": "Marcaje salida",
-    "description": "Acción de registrar la hora de salida del lugar de trabajo."
-  },
-  "relay": {
-    "name": "Relé",
-    "description": "Dispositivo de control que ejecuta automáticamente la apertura y el cierre del circuito eléctrico según los cambios de corriente, tensión, frecuencia, etc., de otro circuito eléctrico."
-  },
-  "initialize_reset": {
-    "name": "Restablecimiento",
-    "description": "Acción de restaurar la configuración de hardware, software, etc., a los valores predeterminados especificados."
+  "poe": {
+    "name": "PoE (Power over Ethernet)",
+    "description": "El sistema suministra energía al dispositivo a través de un cable Ethernet. El uso de un solo cable para transmitir datos y suministrar energía simplifica la instalación y la expansión y reduce los costos de cableado."
   },
   "rest": {
     "name": "REST (Representational State Transfer)",
     "description": "REST es un estilo arquitectónico para sistemas distribuidos como la web. REST se integra con sistemas externos mediante URI HTTP y se comunica con los verbos HTTP (GET, POST, PUT, DELETE, etc.)."
   },
-  "restart": {
-    "name": "Reinicio",
-    "description": "Acción de apagar y encender por la fuerza debido a un error relacionado con la ejecución del programa durante el funcionamiento del dispositivo."
+  "rf": {
+    "name": "RF (Radio Frequency)",
+    "description": "La radiofrecuencia es una onda electromagnética que se utiliza para detectar o transmitir información a corta o larga distancia. Se emplea principalmente en comunicaciones, tecnología RFID, redes inalámbricas y otros campos."
   },
-  "ridge": {
-    "name": "Cresta",
-    "description": "Una cresta es una curva que representa una huella dactilar y que consta de una curva continua, un punto final donde la cresta se corta a mitad de camino y una bifurcación donde dos crestas se unen; estos puntos se denominan minucias."
+  "rfid": {
+    "name": "RFID (Radio-Frequency Identification)",
+    "description": "Tecnología que autentica e identifica identificadores mediante RF (Radio Frequency). La información se almacena en una etiqueta RFID compuesta por una antena y un chip, y un lector RFID lee la etiqueta para identificar la información."
+  },
+  "rfid_tag": {
+    "name": "Etiqueta RFID (Radio-Frequency Identification)",
+    "description": "Etiqueta electrónica que se coloca en una tarjeta u otro objeto y almacena información de identificación única de la persona u objeto. Un lector RFID lee de forma inalámbrica la información almacenada en la etiqueta mediante ondas de radio. Una etiqueta RFID suele constar de un pequeño procesador, memoria, una antena pequeña y una batería, y puede clasificarse en varios tipos según si admite lectura y escritura, si incluye una fuente de alimentación interna y su banda de RF (radiofrecuencia)."
+  },
+  "rte": {
+    "name": "Botón RTE (request to exit)",
+    "description": "Botón para abrir la puerta desde el interior. Al presionarlo, la puerta se abre. El botón puede utilizarse en puertas y zonas que no requieren autenticación adicional al salir."
   },
   "rs485": {
     "name": "RS-485",
     "description": "Protocolo estándar de comunicación serial que admite redes domésticas. RS-232 tiene una velocidad de transferencia baja y un alcance de transmisión corto, mientras que RS-485 permite que todos los dispositivos transmitan y reciban datos en la misma línea."
   },
-  "scan": {
-    "name": "Escanear",
-    "description": "Acción de colocar un dedo sobre la superficie del sensor o moverlo a velocidad constante para convertir la información de la huella dactilar en datos digitales."
-  },
-  "fp_scan_timeout": {
-    "name": "Tiempo de espera de escaneo",
-    "description": "Límite de tiempo para ingresar la información de la huella dactilar."
-  },
-  "security_level": {
-    "name": "Nivel seguridad",
-    "description": "Exactitud del nivel de coincidencia de huellas dactilares necesario para identificar a los usuarios. Con un nivel de seguridad más alto, la tasa de rechazo falso (FRR) también puede ser mayor."
-  },
-  "semiconductor_fp_sensor": {
-    "name": "Sensor de huellas dactilares por semiconductor",
-    "description": "Varios sensores dispuestos sobre un semiconductor que detectan eléctricamente la información de la huella dactilar."
-  },
-  "sensor_sensitivity": {
-    "name": "Sensibilidad del sensor",
-    "description": "Nivel de precisión en la detección de imágenes de huellas dactilares. Con una sensibilidad más alta es más fácil obtener imágenes de la huella, pero, como también aumenta la sensibilidad al ruido, puede resultar más difícil realizar una detección de imágenes precisa."
-  },
-  "serial_comm": {
-    "name": "Comunicación serial",
-    "description": "Método de comunicación que transmite varios bits en secuencia. RS-232 y RS-485 son ejemplos populares."
-  },
-  "server": {
-    "name": "Servidor",
-    "description": "Programa informático que presta servicios a otros programas o computadora en la que se ejecuta un programa de servidor."
-  },
-  "server_matching": {
-    "name": "Coincidencia en el servidor",
-    "description": "Función que compara la información de credenciales almacenada en el servidor con la información de credenciales ingresada por un usuario."
-  },
-  "slave_device": {
-    "name": "Dispositivo esclavo",
-    "description": "Entre los dispositivos conectados mediante RS-485, el dispositivo que solo realiza funciones de entrada y salida. No contiene información de usuarios y es controlado por el dispositivo maestro."
-  },
-  "suprema_template": {
-    "name": "Plantilla Suprema",
-    "description": "Tipo de plantilla de huella dactilar definido por Suprema."
-  },
-  "sdk": {
-    "name": "SDK (Software Development Kit)",
-    "description": "Un SDK es un conjunto de herramientas de desarrollo de software que permite a los desarrolladores crear aplicaciones para un paquete de software, marco de software, plataforma de hardware, sistema informático o entorno de desarrollo similar en particular."
-  },
-  "synchronization": {
-    "name": "Sincronizar",
-    "description": "Acción de hacer coincidir con precisión la hora, la información, etc., entre diferentes sistemas o redes."
-  },
-  "tna": {
-    "name": "T&A (Tiempo y Asistencia)",
-    "description": "Función de control que recopila y rastrea información sobre los empleados y sus horas de trabajo, como asistencia y ausencias."
-  },
-  "tna_event": {
-    "name": "Evento de T&A",
-    "description": "Evento que indica el estado de T&A (Tiempo y Asistencia) de los empleados. Registra las horas de entrada y salida de los empleados y calcula cuántas horas trabajaron en un período determinado."
-  },
-  "tna_rule": {
-    "name": "Regla de T&A",
-    "description": "Regla definida por el administrador para evaluar y gestionar las horas trabajadas por los empleados."
-  },
-  "tamper": {
-    "name": "Tamper",
-    "description": "Método para supervisar el estado del dispositivo. Se puede configurar una manipulación para que, si el dispositivo se desajusta del soporte en el que está instalado debido a factores externos, se active una alarma o se registre el evento en el servidor."
+  "ssl": {
+    "name": "SSL (Secure Sockets Layer)",
+    "description": "Se refiere a un protocolo de cifrado utilizado por clientes y servidores web para garantizar la seguridad y la integridad de los datos al comunicarse por una red."
   },
   "tcpip": {
     "name": "TCP/IP",
     "description": "Abreviatura de Transmission Control Protocol/Internet Protocol. Es un protocolo de comunicación entre computadoras y una combinación de TCP e IP."
   },
-  "template": {
-    "name": "Plantilla",
-    "description": "Datos almacenados creados a partir de la extracción y codificación de características biométricas. Se utilizan para identificar a un usuario comparándolos con la muestra biométrica ingresada por el usuario en un sistema o dispositivo biométrico."
+  "tls": {
+    "name": "TLS (Transport Layer Security)",
+    "description": "Se refiere a un protocolo de cifrado utilizado por clientes y servidores web para garantizar la seguridad y la integridad de los datos al comunicarse por una red."
   },
-  "template_on_card": {
-    "name": "Template-on-Card",
-    "description": "Método utilizado para almacenar la información del usuario y la plantilla de huella dactilar en una tarjeta inteligente."
-  },
-  "time_sync": {
-    "name": "Sincronización de hora",
-    "description": "Función que sincroniza la hora entre distintos dispositivos o sistemas en una red."
-  },
-  "timezone": {
-    "name": "Zona horaria",
-    "description": "Zona geográfica que usa el mismo estándar de tiempo. Se puede usar para configurar la hora del dispositivo o de BioStar para controlar el acceso."
-  },
-  "transaction": {
-    "name": "Transacción",
-    "description": "Una transacción es una unidad de trabajo que consta de recuperación de datos, actualizaciones y otras operaciones. Para evitar el uso de datos temporalmente inconsistentes tras las actualizaciones, una transacción se procesa de una sola vez. Al utilizar una transacción se deben cumplir las propiedades ACID."
-  },
-  "trigger_action": {
-    "name": "Acción desencadenada",
-    "description": "Acciones que ejecutan automáticamente actividades como controlar el dispositivo y enviar correos electrónicos cuando se produce una alarma o un determinado evento."
-  },
-  "upgrade": {
-    "name": "Actualizar",
-    "description": "Acción de mejorar el rendimiento del hardware o del software sustituyendo el producto existente por una versión nueva o mejorada."
-  },
-  "user": {
-    "name": "Usuario",
-    "description": "Persona que usa el dispositivo Suprema."
-  },
-  "user_group": {
-    "name": "Grupo usuario",
-    "description": "Grupo de usuarios creado para facilitar la administración. Es un componente del grupo de acceso."
-  },
-  "user_id": {
-    "name": "ID Usuario",
-    "description": "Código de identificación compuesto por letras, números o una combinación de ambos que se utiliza para identificar a un usuario en particular."
-  },
-  "user_sync": {
-    "name": "Sincronización de usuarios",
-    "description": "Acción de enviar automáticamente al dispositivo la información de usuario que se ha modificado en el servidor BioStar."
-  },
-  "voice_prompt": {
-    "name": "Mensaje de voz",
-    "description": "Función que presenta las opciones disponibles a los usuarios mediante una voz grabada."
+  "uhf": {
+    "name": "UHF (Ultra High Frequency)",
+    "description": "La ultra alta frecuencia (UHF) es una onda electromagnética con frecuencias entre 300 y 3,000 MHz. Se utiliza en varios campos de comunicación, incluidos la radiodifusión por satélite, las comunicaciones móviles como los teléfonos celulares, la televisión digital terrestre, la radio aeronáutica y la tecnología RFID. Debido a su alta frecuencia, tiene una longitud de onda corta de 1–10 cm y es altamente direccional."
   },
   "voip": {
     "name": "VoIP",
@@ -763,12 +151,748 @@
     "name": "Wiegand",
     "description": "Método que transfiere una pequeña cantidad de datos usando D0 y D1. Generalmente se utiliza como método de comunicación entre el lector y el controlador de un dispositivo de control de acceso."
   },
-  "wlan": {
-    "name": "LAN inalámbrica",
-    "description": "Red de área local que utiliza tecnología de radiofrecuencia (RF). Con un terminal equipado con una tarjeta WLAN, se puede usar la red de comunicación dentro de cierta distancia desde el punto en el que está instalado un punto de acceso (AP)."
+  "import": {
+    "name": "Importar",
+    "description": "Acción de transferir datos de una computadora a su propio sistema."
+  },
+  "audit_trail": {
+    "name": "Registro de auditoría",
+    "description": "Los datos registrados sobre los cambios en el sistema. El registro de auditoría permite buscar información sobre actividad de usuarios no autorizados, el procesamiento de la actividad de usuarios, etc."
+  },
+  "forced_open": {
+    "name": "Apertura forzada",
+    "description": "Estado en el que el sensor de puerta detecta la apertura sin que haya ocurrido un evento normal de apertura, como la autenticación del usuario o el uso del botón de salida."
+  },
+  "private_auth": {
+    "name": "Autenticación privada",
+    "description": "Método de autenticación en el que la autenticación del usuario se realiza según la combinación de credenciales especificada por el administrador. Este método tiene prioridad sobre otros métodos de autenticación."
+  },
+  "pin": {
+    "name": "PIN (Número de identificación personal)",
+    "description": "Número de serie asignado a una persona para su identificación."
+  },
+  "alert": {
+    "name": "Alerta",
+    "description": "El acto de mostrar o reenviar en tiempo real un evento de alarma ocurrido en el sistema."
+  },
+  "arm": {
+    "name": "Sólo Armar",
+    "description": "El acto de monitorear una zona específica para prevenir delitos y accidentes. Un sistema de seguridad permite monitoreo las 24 horas, notificaciones de alarma, grabaciones, etc."
+  },
+  "intrusion_alarm_zone": {
+    "name": "Zona de alarma de intrusión",
+    "description": "Zona configurada para emitir un sonido de advertencia o una señal de relé si una persona no autorizada intenta una intrusión después de activar (Arm). Normalmente esta zona comienza a monitorear tras la jornada laboral y emite una alarma o señal preestablecida cuando se detecta un intento de intrusión."
+  },
+  "disarm": {
+    "name": "Desarmar",
+    "description": "La acción de suspender el funcionamiento de un sistema de alarma activado para una zona específica."
   },
   "zone": {
     "name": "Zona",
     "description": "Grupo de dispositivos sujeto a reglas de acceso. Se utiliza para supervisar eventos."
+  },
+  "aes": {
+    "name": "AES (Estándar de cifrado avanzado)",
+    "description": "El Estándar de cifrado avanzado (AES) es una especificación para el cifrado de datos electrónicos establecida por el Instituto Nacional de Estándares y Tecnología (NIST) de EE. UU."
+  },
+  "administrator": {
+    "name": "Administrador",
+    "description": "El usuario que tiene acceso completo al software de configuración."
+  },
+  "optical_fp_sensor": {
+    "name": "Sensor óptico de huellas dactilares",
+    "description": "Sensor que extrae información de huellas dactilares mediante luz."
+  },
+  "graphic_map": {
+    "name": "Mapa gráfico",
+    "description": "Uno de los métodos de monitoreo proporcionados por BioStar. Esta función permite verificar y controlar en tiempo real el estado de las puertas desde el mapa."
+  },
+  "nfc": {
+    "name": "NFC (Near Field Communication)",
+    "description": "Tecnología RFID aplicada a terminales móviles que permite la transmisión y recepción bidireccional de datos a corta distancia. Con el aumento de la penetración de los teléfonos inteligentes, esta tecnología se utiliza cada vez más en diversos campos como finanzas y comunicaciones, y también se aplica al control de acceso en forma de tarjetas de identificación móviles."
+  },
+  "tna": {
+    "name": "T&A (Tiempo y Asistencia)",
+    "description": "Función de control que recopila y rastrea información sobre los empleados y sus horas de trabajo, como asistencia y ausencias."
+  },
+  "tna_rule": {
+    "name": "Regla de T&A",
+    "description": "Regla definida por el administrador para evaluar y gestionar las horas trabajadas por los empleados."
+  },
+  "tna_event": {
+    "name": "Evento de T&A",
+    "description": "Evento que indica el estado de T&A (Tiempo y Asistencia) de los empleados. Registra las horas de entrada y salida de los empleados y calcula cuántas horas trabajaron en un período determinado."
+  },
+  "global_zone": {
+    "name": "Zona global",
+    "description": "Zona en la que un servidor y un dispositivo maestro están conectados vía TCP/IP, y el dispositivo maestro y un dispositivo esclavo se conectan vía RS-485. El servidor desempeña el rol de maestro para la zona."
+  },
+  "payroll_sys": {
+    "name": "Sistema de nómina",
+    "description": "Calcula los salarios totales en función de las horas de trabajo, la asistencia y otros factores fiscales de los empleados para pagar sueldos precisos."
+  },
+  "export": {
+    "name": "Exportar",
+    "description": "Operación realizada por un programa que utiliza un formato de datos particular. Consiste en almacenar datos en un formato compatible con otros programas."
+  },
+  "noise": {
+    "name": "Ruido",
+    "description": "Las señales eléctricas que ocultan o dificultan la identificación de otras señales."
+  },
+  "direct_mode": {
+    "name": "Modo directo",
+    "description": "Un modo en el que el cliente BioStar 2 busca directamente dispositivos conectables y se conecta a ellos. En este modo, el cliente es responsable de comunicarse con los dispositivos y los servidores. Cuando se realiza una búsqueda de dispositivos en el servidor, se muestra una lista de dispositivos disponibles y el administrador puede seleccionar de la lista el dispositivo al que desea conectarse."
+  },
+  "diode": {
+    "name": "Diodo",
+    "description": "Un componente que controla el flujo de corriente en una sola dirección. Se utiliza para evitar la corriente inversa que ocurre momentáneamente cuando funciona la cerradura de la puerta."
+  },
+  "short": {
+    "name": "Cortocircuito",
+    "description": "Los cables están en cortocircuito. Normalmente ocurre debido a cables dañados o sobrecorriente."
+  },
+  "open": {
+    "name": "Abierto",
+    "description": "Estado en el que no circula corriente porque un cable se ha roto, lo que provoca la apertura del circuito."
+  },
+  "bandwidth": {
+    "name": "Ancho de banda",
+    "description": "Rango de frecuencias en el que se pueden realizar determinadas funciones; se mide en hercios (Hz). Es la cantidad de información que puede transmitirse a través de un cable u otro medio durante un periodo de tiempo. Cuanto mayor sea el ancho de banda de frecuencia, más información se puede enviar durante un determinado periodo de tiempo."
+  },
+  "dummy_reader": {
+    "name": "Lector ficticio",
+    "description": "Un dispositivo que no almacena ni procesa datos de usuario, sino que lee credenciales como rostros, huellas y tarjetas, y transmite esos datos al dispositivo de control."
+  },
+  "daisy_chain": {
+    "name": "Conexión en cadena",
+    "description": "Una conexión en cadena es un esquema de cableado en el que los dispositivos de hardware se conectan en secuencia."
+  },
+  "dbms": {
+    "name": "DBMS (Sistema de gestión de bases de datos)",
+    "description": "Un DBMS es un software que controla y gestiona las bases de datos y que interactúa con un usuario o una aplicación para acceder a los datos en la base de datos."
+  },
+  "door_contact": {
+    "name": "Contacto de puerta",
+    "description": "Otro término para un sensor de puerta. Sensor magnético que se utiliza para comprobar el estado actual (cerrada/abierta) de una puerta."
+  },
+  "synchronization": {
+    "name": "Sincronizar",
+    "description": "Acción de hacer coincidir con precisión la hora, la información, etc., entre diferentes sistemas o redes."
+  },
+  "eer": {
+    "name": "EER (Tasa de error igual)",
+    "description": "Como indicador del rendimiento biométrico, la EER (Equal Error Rate) es el punto donde se cruzan la FAR (False Acceptance Rate) y la FRR (False Rejection Rate). Un dispositivo con una EER más baja se considera más preciso."
+  },
+  "enrollment": {
+    "name": "Enrolamiento",
+    "description": "Serie de pasos utilizada para registrar la información biométrica de los usuarios en un sistema biométrico. Incluye muestreo, creación de plantillas, almacenamiento, etc."
+  },
+  "log": {
+    "name": "Registro",
+    "description": "Registros de todos los eventos ocurridos en el sistema, la red, el dispositivo, la puerta, etc."
+  },
+  "local_zone": {
+    "name": "Zona local",
+    "description": "Zona configurada mediante una conexión RS-485 entre dispositivos. El rol de maestro de la zona lo desempeña el dispositivo maestro, no el servidor."
+  },
+  "relay": {
+    "name": "Relé",
+    "description": "Dispositivo de control que ejecuta automáticamente la apertura y el cierre del circuito eléctrico según los cambios de corriente, tensión, frecuencia, etc., de otro circuito eléctrico."
+  },
+  "mag_card": {
+    "name": "Tarjeta de banda magnética",
+    "description": "Tarjeta que almacena datos alterando el magnetismo de su cinta magnética. Para transmitir datos, la cinta magnética adherida a un lado de la tarjeta debe ser leída por un terminal. Solo se pueden almacenar tipos limitados y pequeñas cantidades de datos en este tipo de tarjeta, y los datos grabados pueden alterarse o dañarse al entrar en contacto con un imán. Además, dado que las tarjetas de banda magnética no ofrecen suficiente seguridad porque no utilizan cifrado de datos, están siendo reemplazadas cada vez más por tarjetas IC en diversos ámbitos, incluido el control de acceso."
+  },
+  "master_device": {
+    "name": "Dispositivo maestro",
+    "description": "Entre los dispositivos conectados mediante RS-485, el dispositivo que cumple la función de controlador. Procesa datos supervisando periódicamente al dispositivo esclavo. También se denomina dispositivo host."
+  },
+  "matching_timeout": {
+    "name": "Tiempo de espera de coincidencia",
+    "description": "Límite de tiempo asignado para la coincidencia del dispositivo o del servidor. La coincidencia falla si no se completa dentro de ese límite."
+  },
+  "man_trap": {
+    "name": "Sas de seguridad",
+    "description": "Sistema físico de control de acceso que previene accesos no autorizados y separa zonas de seguridad de zonas no seguras."
+  },
+  "multi_rfid": {
+    "name": "Tecnología multi-RFID",
+    "description": "Tecnología que permite que un mismo dispositivo lea tarjetas que operan en diferentes bandas de frecuencia, como 125 kHz y 13.56 MHz."
+  },
+  "message_timeout": {
+    "name": "Tiempo de espera del mensaje",
+    "description": "Tiempo durante el cual un mensaje se muestra cuando no hay interacción del usuario."
+  },
+  "monitoring": {
+    "name": "Monitorizar",
+    "description": "Actividad de vigilancia para fines específicos. El monitoreo del control de acceso y la gestión de tiempo y asistencia se refiere a verificar eventos de control de acceso y de tiempo y asistencia de usuarios, así como a verificar y controlar en tiempo real el estado de dispositivos, puertas y zonas."
+  },
+  "model_number": {
+    "name": "Número de modelo",
+    "description": "Número genérico asignado por el fabricante a un dispositivo para identificar su tipo."
+  },
+  "mobile_card": {
+    "name": "Tarjeta móvil",
+    "description": "Tarjeta que almacena datos del usuario y credenciales en un dispositivo móvil y realiza autenticaciones mediante tecnología NFC o BLE. Las tarjetas móviles ofrecen niveles más altos de seguridad y comodidad que las tarjetas de plástico y tienen la ventaja de reducir los gastos de emisión y administración de tarjetas, ya que utilizan dispositivos móviles que la mayoría de las personas usa a diario."
+  },
+  "wlan": {
+    "name": "LAN inalámbrica",
+    "description": "Red de área local que utiliza tecnología de radiofrecuencia (RF). Con un terminal equipado con una tarjeta WLAN, se puede usar la red de comunicación dentro de cierta distancia desde el punto en el que está instalado un punto de acceso (AP)."
+  },
+  "access_point": {
+    "name": "AP (Punto de acceso)",
+    "description": "Dispositivo para implementar una LAN inalámbrica. Un punto de acceso crea una conexión a la red inalámbrica a través de una LAN cableada."
+  },
+  "brute_attack": {
+    "name": "Ataque de fuerza bruta",
+    "description": "También denominado ataque de fuerza bruta, este término se refiere al acto de introducir todos los valores posibles para descifrar contraseñas."
+  },
+  "ups": {
+    "name": "UPS (Uninterruptible Power Supply system)",
+    "description": "Proporciona energía de emergencia durante un cierto período mediante una batería interna cuando la fuente de alimentación principal se interrumpe debido a un corte de energía u otras razones. Se utiliza principalmente en instalaciones donde es esencial un suministro eléctrico estable, como comunicaciones, radiodifusión, instalaciones médicas, centros de datos e infraestructuras."
+  },
+  "biometric_information": {
+    "name": "Información biométrica",
+    "description": "Información utilizada para identificar a cada individuo. Información relacionada con las características físicas y de comportamiento únicas de una persona, incluida la huella dactilar, la firma, el patrón de venas, el rostro, la voz, el iris, los genes, etc."
+  },
+  "biometrics": {
+    "name": "Biométrico",
+    "description": "Tecnología que extrae y analiza las características físicas y de comportamiento de las personas mediante un dispositivo automatizado para la identificación de cada individuo."
+  },
+  "biometric_auth": {
+    "name": "Autenticación biométrica",
+    "description": "El acto de determinar si la información biométrica proporcionada por una persona coincide con la información sobre sus características biométricas previamente registrada."
+  },
+  "semiconductor_fp_sensor": {
+    "name": "Sensor de huellas dactilares por semiconductor",
+    "description": "Varios sensores dispuestos sobre un semiconductor que detectan eléctricamente la información de la huella dactilar."
+  },
+  "waterproof": {
+    "name": "Impermeable",
+    "description": "Tratamiento que evita que los líquidos se filtren en el dispositivo debido a la lluvia o inundaciones y afecten su funcionamiento."
+  },
+  "firewall": {
+    "name": "Firewall",
+    "description": "Este sistema de seguridad impide que terceros no autorizados accedan a la red que utilizan las PC de individuos y organizaciones para filtrar información o dañar el sistema. Un firewall se ubica en el límite entre internet externo y la red privada interna, permitiendo o bloqueando los intentos de acceso entrantes según una lista de control de acceso predefinida."
+  },
+  "backlight": {
+    "name": "Retroiluminación",
+    "description": "Una luz que se emite desde la parte posterior del LCD de un dispositivo para mejorar la legibilidad."
+  },
+  "backlight_timeout": {
+    "name": "Tiempo de espera de la retroiluminación",
+    "description": "Duración durante la cual la retroiluminación permanece encendida."
+  },
+  "parallel_port": {
+    "name": "Puerto paralelo",
+    "description": "Puerto de entrada y salida que transmite datos simultáneamente a través de una interfaz paralela."
+  },
+  "security_level": {
+    "name": "Nivel seguridad",
+    "description": "Exactitud del nivel de coincidencia de huellas dactilares necesario para identificar a los usuarios. Con un nivel de seguridad más alto, la tasa de rechazo falso (FRR) también puede ser mayor."
+  },
+  "secure_tamper": {
+    "name": "Sabotaje",
+    "description": "Esta función elimina inmediatamente toda la información sobre usuarios, registros, claves de cifrado y certificados SSL almacenados en el dispositivo cuando este se separa del soporte y se produce una manipulación."
+  },
+  "decryption": {
+    "name": "Descifrado",
+    "description": "La acción de recuperar datos cifrados utilizando claves de descifrado. Los datos cifrados solo pueden descifrarse con una clave simétrica que se corresponda con la clave utilizada para cifrar dichos datos."
+  },
+  "frr": {
+    "name": "FRR (Tasa de rechazo falso)",
+    "description": "Criterio utilizado al comparar la precisión de distintos sistemas biométricos. Representa la probabilidad de reconocer erróneamente a una persona registrada como no registrada."
+  },
+  "leave_manage": {
+    "name": "Gestión de ausencias",
+    "description": "Acción de gestionar las ausencias del personal debido a vacaciones, viajes de negocios, tareas externas, etc."
+  },
+  "bifurcation": {
+    "name": "Bifurcación",
+    "description": "Punto donde dos crestas de la huella dactilar se unen o se separan."
+  },
+  "blacklist": {
+    "name": "Lista Negra",
+    "description": "Lista de tarjetas cuya autenticación se rechaza en el dispositivo BioStar. Cuando una tarjeta se pierde o es robada, se puede prevenir su uso indebido registrando el ID de la tarjeta en la lista negra."
+  },
+  "bluetooth": {
+    "name": "Bluetooth",
+    "description": "Tecnología de comunicación que permite la transmisión y recepción bidireccional de datos a corta distancia. Cada tipo de Bluetooth presenta características diferentes según la distancia de transmisión, el método de transmisión, el consumo de energía, etc."
+  },
+  "contactless_card": {
+    "name": "Tarjeta sin contacto",
+    "description": "Tarjeta que se comunica con un terminal de tarjetas mediante su antena de bobina incorporada. Este tipo de tarjeta permite la transmisión de datos usando un campo magnético sin entrar en contacto con un terminal de tarjetas."
+  },
+  "user": {
+    "name": "Usuario",
+    "description": "Persona que usa el dispositivo Suprema."
+  },
+  "user_id": {
+    "name": "ID Usuario",
+    "description": "Código de identificación compuesto por letras, números o una combinación de ambos que se utiliza para identificar a un usuario en particular."
+  },
+  "user_group": {
+    "name": "Grupo usuario",
+    "description": "Grupo de usuarios creado para facilitar la administración. Es un componente del grupo de acceso."
+  },
+  "user_sync": {
+    "name": "Sincronización de usuarios",
+    "description": "Acción de enviar automáticamente al dispositivo la información de usuario que se ha modificado en el servidor BioStar."
+  },
+  "weatherproof": {
+    "name": "Resistente al agua",
+    "description": "Se refiere a un nivel de resistencia al agua ligeramente inferior al impermeable."
+  },
+  "server": {
+    "name": "Servidor",
+    "description": "Programa informático que presta servicios a otros programas o computadora en la que se ejecuta un programa de servidor."
+  },
+  "server_matching": {
+    "name": "Coincidencia en el servidor",
+    "description": "Función que compara la información de credenciales almacenada en el servidor con la información de credenciales ingresada por un usuario."
+  },
+  "server_mode": {
+    "name": "Modo servidor",
+    "description": "Ingrese la dirección IP del servidor directamente en el dispositivo para conectar el servidor y el dispositivo. Debido a que la dirección se introduce de forma directa, el dispositivo no corre riesgo de conectarse a otro servidor o cliente, y si la conexión se pierde, se reconecta automáticamente para lograr un entorno de red estable."
+  },
+  "sensor_sensitivity": {
+    "name": "Sensibilidad del sensor",
+    "description": "Nivel de precisión en la detección de imágenes de huellas dactilares. Con una sensibilidad más alta es más fácil obtener imágenes de la huella, pero, como también aumenta la sensibilidad al ruido, puede resultar más difícil realizar una detección de imágenes precisa."
+  },
+  "muster_zone": {
+    "name": "Zona de reunión",
+    "description": "Zona designada para la reunión de personas en caso de emergencia, como un incendio. Se utiliza para monitorear la cantidad y la lista de personal en una zona determinada y para notificar a los administradores mediante una alarma o alerta si un usuario permanece en una zona determinada durante un período establecido."
+  },
+  "sdk": {
+    "name": "SDK (Software Development Kit)",
+    "description": "Un SDK es un conjunto de herramientas de desarrollo de software que permite a los desarrolladores crear aplicaciones para un paquete de software, marco de software, plataforma de hardware, sistema informático o entorno de desarrollo similar en particular."
+  },
+  "shrink_tube": {
+    "name": "Tubo termorretráctil",
+    "description": "Elastómero de caucho en forma de tubo que se contrae cuando se aplica calor, utilizado principalmente para proteger los cables de dispositivos electrónicos contra roturas, corrosión e ingreso de agua."
+  },
+  "suprema_template": {
+    "name": "Plantilla Suprema",
+    "description": "Tipo de plantilla de huella dactilar definido por Suprema."
+  },
+  "smart_card": {
+    "name": "Tarjeta Inteligente",
+    "description": "Tarjeta electrónica que opera en la banda de 13.56 MHz y puede leer y escribir datos. Una tarjeta HF puede incorporar varias funciones de seguridad, como cifrado de datos y la posibilidad de que solo un lector específico pueda leerla."
+  },
+  "scan": {
+    "name": "Escanear",
+    "description": "Acción de colocar un dedo sobre la superficie del sensor o moverlo a velocidad constante para convertir la información de la huella dactilar en datos digitales."
+  },
+  "schedule_unlock": {
+    "name": "Apertura Programada",
+    "description": "Abre puertas en determinadas áreas según un horario predefinido."
+  },
+  "schedule_lock": {
+    "name": "Cierre Programado",
+    "description": "Cierra puertas en determinadas áreas según un horario predefinido."
+  },
+  "slave_device": {
+    "name": "Dispositivo esclavo",
+    "description": "Entre los dispositivos conectados mediante RS-485, el dispositivo que solo realiza funciones de entrada y salida. No contiene información de usuarios y es controlado por el dispositivo maestro."
+  },
+  "puch": {
+    "name": "Marcaje",
+    "description": "Evento que indica la hora de inicio o de fin del trabajo."
+  },
+  "time_sync": {
+    "name": "Sincronización de hora",
+    "description": "Función que sincroniza la hora entre distintos dispositivos o sistemas en una red."
+  },
+  "overtime": {
+    "name": "Horas Extra",
+    "description": "El tiempo trabajado que supera la jornada diaria establecida por la Ley de Normas Laborales o por los reglamentos de la empresa. El tiempo extra puede incluir trabajo anticipado, trabajo adicional, trabajo en días festivos, etc."
+  },
+  "serial_comm": {
+    "name": "Comunicación serial",
+    "description": "Método de comunicación que transmite varios bits en secuencia. RS-232 y RS-485 son ejemplos populares."
+  },
+  "meal_deduct": {
+    "name": "Deducción Comida",
+    "description": "Acción de excluir los tiempos de comida al calcular el total de horas laborales diarias."
+  },
+  "real_time_log": {
+    "name": "Registro Tiempo Real",
+    "description": "Registros de eventos en tiempo real en cada punto de acceso (AP)."
+  },
+  "lvv": {
+    "name": "Vista Video en Vivo",
+    "description": "Método de monitoreo basado en video. BioStar proporciona pantallas de cámaras IP y registros de eventos en tiempo real, y permite abrir/cerrar puertas manualmente."
+  },
+  "analog_intercom": {
+    "name": "Intercomunicador analógico",
+    "description": "Un teléfono intercomunicador que consta de un conmutador analógico y una red."
+  },
+  "apb": {
+    "name": "APB (Anti-passback)",
+    "description": "Un método estructural utilizado para controlar el acceso. Esta función utiliza dispositivos de control de acceso instalados tanto dentro como fuera de la puerta, de modo que se requiere autenticación para acceder a la zona. En los sistemas de control de acceso basados en tarjetas, si una persona ingresa a una zona siguiendo a la persona de adelante sin pasar su tarjeta por el lector, la puerta no se abre cuando la persona intenta salir de la zona y, posteriormente, se genera un evento de <b>anti-passback</b>.<br/><b>Anti-passback</b> se clasifica en APB rígido y APB suave. Si se viola el <b>anti-passback</b>, el evento de <b>anti-passback</b> se crea de inmediato y el APB rígido no permite el acceso al usuario, mientras que el APB suave aún lo permite."
+  },
+  "alarm": {
+    "name": "Alarma",
+    "description": "Entre los eventos que ocurren en el sistema, es el tipo de evento que requiere acción sin demora."
+  },
+  "alarm_action": {
+    "name": "Acción de alarma",
+    "description": "Acciones que ejecutan automáticamente actividades como controlar el dispositivo y enviar correos electrónicos cuando se produce una alarma o un determinado evento."
+  },
+  "password": {
+    "name": "Contraseña",
+    "description": "Cadena que una persona utiliza junto con su ID de usuario para la autenticación."
+  },
+  "encryption": {
+    "name": "Cifrado",
+    "description": "La acción de transformar la información de modo que resulte imposible reconocer su significado original. Almacenar o transferir información en forma cifrada es un método de protección de la misma."
+  },
+  "encryption_key": {
+    "name": "Clave Encriptación",
+    "description": "Una cadena de bits generada para el cifrado. Las claves de cifrado se diseñan mediante algoritmos que impiden que sean adivinadas. En general, las claves más largas hacen que el descifrado sea más difícil."
+  },
+  "access_on_card": {
+    "name": "Acceso en tarjeta",
+    "description": "Una tarjeta en la que se registra la información del ID del usuario, las credenciales y el grupo de acceso."
+  },
+  "face_detection": {
+    "name": "Detección facial",
+    "description": "Función que, después de verificar la credencial de un usuario, toma una foto de su rostro antes de otorgar acceso para que el evento y la imagen facial se almacenen juntos. La autenticación falla si no se detecta el rostro del usuario. Cuando se ha almacenado la imagen del rostro, si es necesario, es posible identificar al usuario comparando dicha imagen con el ID de usuario registrado cuando ocurrió el evento."
+  },
+  "face_recognition": {
+    "name": "Autenticación facial",
+    "description": "Tecnología y sistema de autenticación que identifica a las personas según sus rasgos faciales."
+  },
+  "upgrade": {
+    "name": "Actualizar",
+    "description": "Acción de mejorar el rendimiento del hardware o del software sustituyendo el producto existente por una versión nueva o mejorada."
+  },
+  "epoxy_potted": {
+    "name": "Encapsulado en epoxi",
+    "description": "Material que protege el circuito al evitar que el agua de lluvia penetre en el dispositivo cuando está instalado al aire libre."
+  },
+  "live_face_detection": {
+    "name": "Detección de rostro en vivo (LFD)",
+    "description": "Tecnología que detecta rostros falsificados, por ejemplo, máscaras y fotografías."
+  },
+  "fake_fp": {
+    "name": "Huella dactilar falsa",
+    "description": "Una huella dactilar falsa hecha de papel, silicona, goma, etc., para emular la huella de otra persona."
+  },
+  "live_fp_detection": {
+    "name": "Detección de dedo en vivo (LFD)",
+    "description": "Tecnología que detecta huellas dactilares falsas copiadas con goma, silicona, arcilla, pegamento, película, etc."
+  },
+  "floating_shift": {
+    "name": "Turno flotante",
+    "description": "Una de las reglas de asistencia proporcionadas por BioStar. Este método no implica horarios de llegada y salida preestablecidos; aplica las reglas de asistencia del día según la hora de llegada del usuario."
+  },
+  "ridge": {
+    "name": "Cresta",
+    "description": "Una cresta es una curva que representa una huella dactilar y que consta de una curva continua, un punto final donde la cresta se corta a mitad de camino y una bifurcación donde dos crestas se unen; estos puntos se denominan minucias."
+  },
+  "voice_prompt": {
+    "name": "Mensaje de voz",
+    "description": "Función que presenta las opciones disponibles a los usuarios mediante una voz grabada."
+  },
+  "api": {
+    "name": "API (Interfaz de programación de aplicaciones)",
+    "description": "Un API es un conjunto de protocolos, herramientas e instrucciones para implementar aplicaciones de software. En el caso del desarrollo de aplicaciones web, el API especifica cómo debe enviar el sistema las solicitudes y qué tipo de respuestas correspondientes se deben esperar. El API puede incluir funciones como la gestión de archivos y el procesamiento de ventanas/video/caracteres para facilitar el proceso de desarrollo de aplicaciones a los desarrolladores de aplicaciones de terceros."
+  },
+  "event": {
+    "name": "Evento",
+    "description": "Interacción entre un usuario, el dispositivo y la puerta. Los eventos se registran en un log en el servidor BioStar. Incluyen éxitos y fallos de autenticación, cambios en el estado de la puerta, alarmas, etc."
+  },
+  "dual_auth": {
+    "name": "Modo doble",
+    "description": "Un método de autenticación en el que las credenciales de dos personas diferentes se ingresan en secuencia dentro de un tiempo limitado."
+  },
+  "auth": {
+    "name": "Autenticación",
+    "description": "El acto de verificar las credenciales ingresadas por un usuario para identificarlo."
+  },
+  "auth_mode": {
+    "name": "Modo de autenticación",
+    "description": "Una combinación de credenciales requeridas para la autenticación."
+  },
+  "interlock_zone": {
+    "name": "Zona de enclavamiento",
+    "description": "Zona situada entre dos o más puertas. En esta zona, si una puerta está abierta o se ha desbloqueado, el resto de las puertas permanecerán cerradas. Por lo general se aplica en laboratorios y plantas de producción donde es necesario controlar partículas en suspensión, como el polvo, o en lugares donde se requiere por motivos de seguridad y protección."
+  },
+  "intercom": {
+    "name": "Interfono",
+    "description": "Sistema de comunicación que se instala generalmente en un edificio o institución mediante una central privada (PBX)."
+  },
+  "batch_enrollment": {
+    "name": "Inscripción por lotes",
+    "description": "El acto de registrar múltiples tarjetas de acceso en el servidor BioStar. Las tarjetas registradas pueden asignarse a usuarios individuales."
+  },
+  "dst": {
+    "name": "Horario de verano (DST)",
+    "description": "También llamado horario de verano, el DST es la práctica de adelantar los relojes cierta cantidad de tiempo respecto al horario estándar para ahorrar energía mediante un uso más eficiente de la luz diurna en verano."
+  },
+  "io_device": {
+    "name": "Dispositivo de E/S",
+    "description": "Dispositivo que realiza funciones de entrada/salida de información."
+  },
+  "lock": {
+    "name": "Cerrar",
+    "description": "Dispositivo electromecánico que se conecta al sistema de control de acceso para bloquear la puerta. Se refiere a todos los dispositivos electrónicos integrados o instalados en la puerta."
+  },
+  "held_open": {
+    "name": "Mantenida abierta",
+    "description": "Estado en el que la puerta permanece abierta durante más tiempo del máximo configurado. Puede activar una alarma."
+  },
+  "device": {
+    "name": "Dispositivo",
+    "description": "Un dispositivo de control de acceso que puede controlarse en BioStar."
+  },
+  "device_id": {
+    "name": "ID Dispositivo",
+    "description": "Un número único asignado para identificar cada dispositivo de hardware en BioStar."
+  },
+  "restart": {
+    "name": "Reinicio",
+    "description": "Acción de apagar y encender por la fuerza debido a un error relacionado con la ejecución del programa durante el funcionamiento del dispositivo."
+  },
+  "ble": {
+    "name": "BLE (Bluetooth Low Energy)",
+    "description": "Tecnología Bluetooth que puede transmitir y recibir datos de bajo consumo y bajo volumen dentro de una distancia de aproximadamente 10 m utilizando la banda de frecuencia de 2.4 GHz. El Bluetooth de bajo consumo se aplica principalmente a dispositivos pequeños en los que el suministro de energía es limitado debido a su bajo consumo energético. También se utiliza en el control de acceso en forma de tarjetas de identificación móviles."
+  },
+  "cde": {
+    "name": "CDE (Conformance Decision Engine)",
+    "description": "Uno de los procedimientos del algoritmo de coincidencia de huellas dactilares de Suprema. Este paso determina si la imagen de huella dactilar obtenida es válida antes de procesarla y extraer las minucias de la huella."
+  },
+  "contact_card": {
+    "name": "Tarjeta con contacto",
+    "description": "Tarjeta con un chip dorado o plateado adherido a la superficie. Para la transmisión de datos, una tarjeta con contacto debe insertarse en un terminal de tarjetas para poner el chip en contacto directo con el terminal."
+  },
+  "termination": {
+    "name": "Resistor de terminación",
+    "description": "Este resistor se conecta al final de una conexión en cadena para evitar reflexiones de señal y mantener la calidad de la señal en la comunicación RS-485. Reduce los errores de comunicación y garantiza una transmisión de datos confiable."
+  },
+  "intelligent_reader": {
+    "name": "Lector de tarjetas inteligente",
+    "description": "Dispositivo que almacena información de usuario y acceso y autentica las credenciales ingresadas para autorizar el acceso del usuario."
+  },
+  "fp": {
+    "name": "Huella",
+    "description": "Los patrones curvos que se observan en las yemas de los dedos."
+  },
+  "fp_sensor": {
+    "name": "Sensor de huellas dactilares",
+    "description": "En la tecnología de reconocimiento de huellas dactilares, es el dispositivo de entrada de imagen que obtiene la información de la huella, la cual representa las características únicas de un individuo, o el área donde se coloca el dedo, para que el escáner pueda leer la huella."
+  },
+  "fp_scanner": {
+    "name": "Escáner de huellas dactilares",
+    "description": "Dispositivo que escanea las huellas dactilares de los usuarios para registrarlas en la base de datos."
+  },
+  "fp_recognition": {
+    "name": "Reconocimiento de huellas dactilares",
+    "description": "Tecnología y sistema de autenticación que reconoce a las personas según la información de imagen de las huellas dactilares únicas de cada individuo."
+  },
+  "fp_scan_timeout": {
+    "name": "Tiempo de espera de escaneo",
+    "description": "Límite de tiempo para ingresar la información de la huella dactilar."
+  },
+  "fp_template": {
+    "name": "Plantilla de huella dactilar",
+    "description": "Conjunto de información de huellas dactilares que consiste en una serie de minucias, como bifurcaciones y puntos finales de las crestas observadas en las imágenes de las huellas. Las plantillas de huellas se utilizan para la identificación, comparando la ubicación y el número de minucias."
+  },
+  "stp": {
+    "name": "Par trenzado blindado",
+    "description": "Cable envuelto en blindaje para bloquear el ruido externo y reducir la interferencia de señales eléctricas. Se utiliza principalmente en fábricas o exteriores con interferencia de señal significativa o donde se requiere comunicación de alta velocidad."
+  },
+  "clean_room": {
+    "name": "Sala limpia",
+    "description": "Espacio en el que se puede controlar, según sea necesario, el material particulado suspendido en el aire, como polvo, virus, polvos metálicos y células."
+  },
+  "initialize_reset": {
+    "name": "Restablecimiento",
+    "description": "Acción de restaurar la configuración de hardware, software, etc., a los valores predeterminados especificados."
+  },
+  "mtu": {
+    "name": "MTU (unidad máxima de transmisión)",
+    "description": "Cantidad máxima de paquetes que pueden transmitirse a través de la red."
+  },
+  "msb": {
+    "name": "MSB (bit más significativo)",
+    "description": "Bit en la posición más alta de los datos binarios (el bit más a la izquierda) o su contenido. Es lo opuesto al LSB (bit menos significativo)."
+  },
+  "lsb": {
+    "name": "LSB (bit menos significativo)",
+    "description": "Bit en la posición más baja de los datos binarios (el bit más a la derecha) o su contenido. Es lo opuesto al MSB (bit más significativo)."
+  },
+  "punch_in": {
+    "name": "Marcaje entrada",
+    "description": "Acción de registrar la hora de llegada al lugar de trabajo."
+  },
+  "output_relay": {
+    "name": "Relés de salida",
+    "description": "Dispositivo controlado electrónicamente que abre o cierra contactos eléctricos para afectar a otros dispositivos."
+  },
+  "access": {
+    "name": "Acceso",
+    "description": "El acto de acceder a una zona o a activos determinados."
+  },
+  "access_rule": {
+    "name": "Regla Acceso",
+    "description": "Una regla referente al acceso a una puerta o grupo de puertas determinado durante un periodo de tiempo programado."
+  },
+  "access_group": {
+    "name": "Grupo de acceso",
+    "description": "Un grupo de usuarios que tiene derecho a acceder a una puerta o grupo de puertas específico durante un periodo de tiempo programado."
+  },
+  "access_level": {
+    "name": "Nivel de acceso",
+    "description": "El derecho a acceder a la puerta durante un periodo de tiempo programado."
+  },
+  "entrance_limit_zone": {
+    "name": "Zona de límite de entrada",
+    "description": "Una zona que restringe el acceso en horarios específicos. Puede configurarse para limitar la autenticación o la cantidad de autenticaciones."
+  },
+  "access_control": {
+    "name": "Control de acceso",
+    "description": "El acto de restringir que personas no autorizadas accedan a la infraestructura y a los activos. El acceso realizado por personas autorizadas se registra en el registro."
+  },
+  "door": {
+    "name": "Puerta",
+    "description": "Un lugar en el que se instala un dispositivo físico de control de acceso. Es un concepto espacial que constituye la base del control de acceso."
+  },
+  "door_group": {
+    "name": "Grupo de puertas",
+    "description": "Un grupo de puertas creado para facilitar la administración. Los eventos pueden supervisarse por grupo de puertas. Es un componente de un grupo de acceso."
+  },
+  "door_sensor": {
+    "name": "Sensor de puerta",
+    "description": "Un sensor que detecta el estado de la puerta. Puede comprobar varios estados, como abierta, cerrada, mantenida abierta y forzada."
+  },
+  "card": {
+    "name": "tarjeta",
+    "description": "Medio de información portátil en forma de tarjeta. Almacena información para la identificación."
+  },
+  "card_id": {
+    "name": "ID Tarjeta",
+    "description": "Número de serie asignado a una tarjeta según el formato definido por una empresa, organización o departamento. Un ID de tarjeta puede ser asignado por el fabricante de la tarjeta o creado en un formato definido por una empresa u organización en particular."
+  },
+  "card_layout": {
+    "name": "Diseño de la tarjeta",
+    "description": "La disposición y estructura de los datos dentro de una tarjeta."
+  },
+  "card_mode": {
+    "name": "Modo de tarjeta",
+    "description": "Método para autenticar a los titulares de tarjetas. Existen dos modos de tarjeta: modo Card ID y modo Template-on-Card. El modo Card ID compara el ID de usuario almacenado en el dispositivo con la información de la huella dactilar, en referencia al ID de tarjeta almacenado en la tarjeta. Mientras que el modo Template-on-Card identifica a un usuario verificando si la huella dactilar ingresada por el usuario coincide con la información de la huella almacenada en la tarjeta."
+  },
+  "csn": {
+    "name": "CSN (Número de serie de la tarjeta)",
+    "description": "Un número de serie asignado a una tarjeta por el fabricante."
+  },
+  "card_reader": {
+    "name": "Lector de tarjetas",
+    "description": "Dispositivo que lee la información almacenada en las tarjetas y la transmite al controlador."
+  },
+  "kernel": {
+    "name": "Kernel",
+    "description": "Componente central de un sistema operativo. Administra recursos importantes como la memoria y los procesos. Se carga en la memoria durante el arranque para proporcionar diversos servicios básicos."
+  },
+  "controller": {
+    "name": "Controladora",
+    "description": "Dispositivo que evalúa los derechos de acceso basándose en la información de credenciales obtenida de un lector y controla la entrada y salida del lector."
+  },
+  "credential": {
+    "name": "Credencial",
+    "description": "Datos utilizados para identificar a los usuarios. Firmas digitales, tarjetas inteligentes, datos biométricos, nombres de usuario, contraseñas, etc., son ejemplos comunes de credenciales."
+  },
+  "client": {
+    "name": "Cliente",
+    "description": "Entidad que solicita servicio al servidor a través de una red."
+  },
+  "far": {
+    "name": "FAR (Tasa de aceptación falsa)",
+    "description": "Criterio utilizado al comparar la precisión de distintos sistemas biométricos. Representa la probabilidad de reconocer incorrectamente a una persona no registrada como registrada."
+  },
+  "transaction": {
+    "name": "Transacción",
+    "description": "Una transacción es una unidad de trabajo que consta de recuperación de datos, actualizaciones y otras operaciones. Para evitar el uso de datos temporalmente inconsistentes tras las actualizaciones, una transacción se procesa de una sola vez. Al utilizar una transacción se deben cumplir las propiedades ACID."
+  },
+  "tamper": {
+    "name": "Tamper",
+    "description": "Método para supervisar el estado del dispositivo. Se puede configurar una manipulación para que, si el dispositivo se desajusta del soporte en el que está instalado debido a factores externos, se active una alarma o se registre el evento en el servidor."
+  },
+  "tailgating": {
+    "name": "Tailgating",
+    "description": "Como un método de acceso no autorizado mediante autenticación fraudulenta, se refiere al acto de una persona que no tiene derechos de acceso a un área restringida y entra siguiendo a la persona que va delante. También se conoce como “ingreso de dos personas” y es uno de los métodos de acceso no autorizado más representativos junto con el <b>Piggybacking</b>. En general, el <b>Tailgating</b> se refiere al acceso no autorizado sin intención, mientras que el <b>Piggybacking</b> se refiere al acceso no autorizado con intención."
+  },
+  "template": {
+    "name": "Plantilla",
+    "description": "Datos almacenados creados a partir de la extracción y codificación de características biométricas. Se utilizan para identificar a un usuario comparándolos con la muestra biométrica ingresada por el usuario en un sistema o dispositivo biométrico."
+  },
+  "template_on_card": {
+    "name": "Template-on-Card",
+    "description": "Método utilizado para almacenar la información del usuario y la plantilla de huella dactilar en una tarjeta inteligente."
+  },
+  "punch_out": {
+    "name": "Marcaje salida",
+    "description": "Acción de registrar la hora de salida del lugar de trabajo."
+  },
+  "exit_button": {
+    "name": "Botón de salida",
+    "description": "Botón usado para abrir la puerta. Al presionarlo, la puerta se abre. Puede utilizarse en puertas y zonas que no requieren autenticación adicional."
+  },
+  "trigger_action": {
+    "name": "Acción desencadenada",
+    "description": "Acciones que ejecutan automáticamente actividades como controlar el dispositivo y enviar correos electrónicos cuando se produce una alarma o un determinado evento."
+  },
+  "minutiae": {
+    "name": "Minucias",
+    "description": "Detalles específicos en los surcos de una huella dactilar que se utilizan para reconocerla."
+  },
+  "tilting_bracket": {
+    "name": "Soporte inclinable",
+    "description": "Soporte con ángulo ajustable. Se utiliza principalmente con dispositivos de autenticación facial o reconocimiento de iris."
+  },
+  "firmware": {
+    "name": "Firmware",
+    "description": "Programa o archivo micro almacenado en una ROM para controlar el hardware del producto."
+  },
+  "port_number": {
+    "name": "Número de puerto",
+    "description": "Número de puerto utilizado para la intercomunicación en TCP/UDP. Su rango va de 0 a 65535."
+  },
+  "timezone": {
+    "name": "Zona horaria",
+    "description": "Zona geográfica que usa el mismo estándar de tiempo. Se puede usar para configurar la hora del dispositivo o de BioStar para controlar el acceso."
+  },
+  "protocol": {
+    "name": "Protocolo",
+    "description": "Reglas de comunicación utilizadas para intercambiar datos entre sistemas o terminales."
+  },
+  "piggybacking": {
+    "name": "Piggybacking",
+    "description": "Como un método de acceso no autorizado mediante autenticación fraudulenta, se refiere al acto de una persona que no tiene derechos de acceso a un área restringida y entra siguiendo a la persona que va delante. También se conoce como “Piggybacking” o “Piggyback” y es uno de los métodos de acceso no autorizado más representativos junto con el <b>Tailgating</b>. En general, el <b>Tailgating</b> se refiere al acceso no autorizado sin intención, mientras que el <b>Piggybacking</b> se refiere al acceso no autorizado con intención."
+  },
+  "bypass_card": {
+    "name": "Tarjeta de bypass",
+    "description": "Tarjeta que permite acceder a una zona específica omitiendo el proceso de autenticación. Por ejemplo, quienes poseen esta tarjeta pueden pasar por la puerta sin necesidad de realizar una serie de procedimientos de seguridad (autenticación)."
+  },
+  "grace": {
+    "name": "Gracia",
+    "description": "Tiempo permitido en las reglas de asistencia. Por ejemplo, si establece la hora de inicio de trabajo a las 9:00 y el tiempo permitido a 10 minutos, el personal que llegue entre las 9:00 y las 9:10 no se considerará tarde."
+  },
+  "duress": {
+    "name": "Dedo de coacción",
+    "description": "Una huella dactilar seleccionada para generar un evento determinado durante el registro de huellas. Si un usuario se autentica con esa huella, la autenticación se registra en el log como autenticación de huella bajo coacción. El administrador del sistema puede configurar una alarma aparte usando ese registro."
+  },
+  "fire_alarm_zone": {
+    "name": "Zona de alarma contra incendios",
+    "description": "Zona configurada para abrir o bloquear todas las puertas o ascensores ubicados dentro de ella en caso de incendio."
+  },
+  "vacation": {
+    "name": "Ausencia",
+    "description": "Acción de ausentarse del trabajo con un motivo o permiso predefinido, o el período de la ausencia en sí."
+  },
+  "break": {
+    "name": "Descanso",
+    "description": "Breve período de descanso durante las horas de trabajo. Cada pausa se calcula como el tiempo entre el inicio y el fin de la misma."
   }
 }

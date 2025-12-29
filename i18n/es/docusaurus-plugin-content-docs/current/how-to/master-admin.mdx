@@ -4,8 +4,8 @@ title: Introducción a la función Master Admin y guía de configuración
 description: Proporciona una guía para configurar el Master Admin, que mejora la seguridad del dispositivo al reforzar los permisos de administrador.
 keywords:
   - Administrador Principal
-  - Administrador
   - Maestro
+  - Administrador Principal
 ---
 
 La función de **Master Admin** está diseñada para **mejorar la seguridad del dispositivo** al **reforzar los privilegios de administrador** y **evitar el acceso no autorizado y cambios de configuración**.<br />Con esta función, **debe registrar un Master Admin** en el nuevo dispositivo y solo los Master Admin registrados pueden acceder al menú de administrador y cambiar la configuración del dispositivo.
@@ -24,7 +24,7 @@ La función de **Master Admin** está disponible **solo en productos Suprema que
 
 ### ¿Qué es un Master Admin?
 
-Si utiliza el dispositivo sin configurar un administrador, cualquiera puede acceder al menú de administrador y cambiar la configuración del dispositivo. La función de Master Admin soluciona esta vulnerabilidad de seguridad al obligar a configurar un administrador general.
+Si se utiliza el dispositivo sin configurar un administrador, cualquiera podrá acceder al menú de administración y cambiar la configuración del dispositivo. La función de administrador maestro aplica la configuración administrativa general para solucionar estas vulnerabilidades de seguridad.
 
 ### Productos compatibles con Master Admin
 
@@ -68,24 +68,24 @@ En dispositivos nuevos, registrar un **Master Admin** es obligatorio desde el pr
 
 :::info
 
-* En los dispositivos nuevos, la pantalla de registro de **Master Admin** aparece al iniciar por primera vez. No puede avanzar a la siguiente pantalla a menos que registre un Master Admin.
+* En los dispositivos nuevos, la pantalla de registro de **Master Admin** aparece al iniciar por primera vez. Si no registra un Master Admin, el uso del dispositivo estará restringido.
 
 * Incluso si asigna un administrador general del dispositivo mediante BioStar 2, debe registrar un **Master Admin** para utilizar todas las funciones del dispositivo.
 
-* El nuevo dispositivo no puede degradarse a una versión inferior.
+* Los dispositivos nuevos no pueden realizar degradaciones de firmware.
 
 :::
 
 <details>
   <summary>**Registrar un Master Admin en un dispositivo nuevo**</summary>
 
-  #### Registrar un Master Admin en un dispositivo nuevo
+  #### Inscribir administrador maestro en un dispositivo nuevo
 
   1. Cuando enciende un dispositivo nuevo por primera vez, aparece la pantalla de registro de **Master Admin**.
 
      <Image src="/img/how-to/setting-master-admin-1.png" caption width="300px" />
 
-  2. Para registrar un **Master Admin**, debe inscribir al menos dos tipos de credenciales. Seleccione e inscriba los dos tipos de credenciales que prefiera.
+  2. Para registrar un **Master Admin**, debe inscribir al menos dos tipos de credenciales. Seleccione e inscriba las dos credenciales deseadas.
 
      <Image src="/img/how-to/setting-master-admin-2.png" caption width="300px" />
 
@@ -127,13 +127,13 @@ En dispositivos nuevos, registrar un **Master Admin** es obligatorio desde el pr
 
      :::note
 
-     **Condiciones de inscripción**
+     **Condiciones de enrolamiento**
 
-     * Se deben inscribir al menos dos tipos diferentes de credenciales.
+     * Debe enrolar al menos dos tipos de credenciales.
 
-     * Las mismas condiciones se aplican tanto a dispositivos nuevos como a los que se actualicen mediante firmware.
+     * Las mismas condiciones se aplican tanto a dispositivos nuevos como a dispositivos con actualización de firmware.
 
-     * Todas las credenciales compatibles con el dispositivo pueden usarse para autenticación.
+     * Todas las credenciales compatibles con el dispositivo pueden utilizarse como medios de autenticación.
 
      :::
 
@@ -193,7 +193,7 @@ Los dispositivos actualizados mediante firmware no ofrecen la configuración de 
 
   :::info
 
-  * Si no todos los administradores tienen al menos dos tipos de credenciales, la activación fallará y aparecerá un mensaje de error.<br />Inscriba al menos dos tipos de credenciales para todos los administradores y vuelva a intentarlo.
+  * Si no todos los administradores tienen al menos dos tipos de credenciales, la activación fallará y aparecerá un mensaje de error.<br />Enrole dos tipos de credenciales para todos los administradores e inténtelo nuevamente.
 
   <Image src="/img/how-to/error-two-step-authentication.png" caption width="300px" />
 
@@ -221,25 +221,3 @@ Los dispositivos actualizados mediante firmware no ofrecen la configuración de 
 import FaqData from './faqs.json';
 
 <FaqsItems data={FaqData} />
-
-{/* ## [TBD] Setting Master Admin via BioStar 2
-
-:::info
-
-* The Master Admin feature is supported from BioStar 2 v2.9.11.
-
-* Los dispositivos actualizados mediante firmware no muestran el menú Master Admin en la configuración de administrador de BioStar 2.
-
-:::
-
-## [TBD] Edición por lotes de Master Admin
-
-* Puede editar por lotes Admin 2-step Authentication y la inscripción de credenciales.
-
-* La edición por lotes sobrescribe con las credenciales inscritas.
-
-* Puede inscribir credenciales de face, fingerprint, card y PIN.
-
-* Si el dispositivo seleccionado no admite un tipo de credencial, la edición por lotes fallará para ese dispositivo.
-
-* Los dispositivos nuevos también deben cumplir la condición mínima de dos credenciales; de lo contrario, la edición por lotes para ese dispositivo fallará. */}

@@ -20,9 +20,9 @@ export function NextStep({ notitle, children }) {
     );
 }
 
-export function NextItem({ children, to }) {
+export function NextItem({ children, to, target }) {
     return (
-        <Link to={to} className={styles.nextStepContent}>
+        <Link to={to} className={styles.nextStepContent} target={target}>
             {children}
         </Link>
     );

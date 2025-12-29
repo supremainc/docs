@@ -61,7 +61,7 @@ Cambie los ajustes de red del dispositivo, como Ethernet, servidor, OSDP, etc.
 
    <Image src="/img/device/xs2-network-ethernet.png" />
 
-   * <Cmd sid="ui_012" product="dev" />: Configure si se utiliza DHCP. Al desactivar la configuración de DHCP, se pueden modificar <Cmd sid="ui_290" product="dev" />, <Cmd sid="ui_029" product="dev" />, <Cmd sid="ui_068" product="dev" />, <Cmd sid="ui_192" product="dev" />, <Cmd sid="ui_111" product="dev" />.
+   * <Cmd sid="ui_012" product="dev" />: Configure si se utiliza DHCP. Desactive la configuración DHCP para permitir que los usuarios modifiquen <Cmd sid="ui_290" product="dev" />, <Cmd sid="ui_029" product="dev" />, <Cmd sid="ui_068" product="dev" /> y <Cmd sid="ui_192" product="dev" />.
 
    * <Cmd sid="ui_290" product="dev" />: Configure el puerto del dispositivo.
 
@@ -250,6 +250,58 @@ Configura si se utiliza el tamper de seguridad. Cuando el tamper está activado,
 2. Selecciona <Cmd sid="ui_280" product="dev" />.
 
 3. Activa <Cmd sid="ui_150" product="dev" /> para eliminar los datos de todos los usuarios registrados, todos los registros y las claves de seguridad cuando ocurra un evento de tamper.
+
+### Administrador Principal
+
+Cambie el método de autenticación del administrador maestro.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Seleccione <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_128" product="dev" />.
+
+3. Configure los métodos de autenticación deseados.
+
+   <div className="grid-container">
+     <Image src="/img/device/xs2-master-admin.png" />
+
+     <Image src="/img/device/xs2-master-admin-setting-credential2.png" />
+   </div>
+
+:::info
+
+* Debe enrolar al menos dos tipos de credenciales.
+
+* Esta función solo está disponible en dispositivos con firmware versión 1.4.0 o superior.
+
+:::
+
+### Autenticación en dos pasos del administrador {#admin-2-step-authentication}
+
+Los dispositivos con firmware actualizado no ofrecen la configuración <Cmd sid="ui_128" product="dev" />; mejore la seguridad del dispositivo elevando los privilegios de administrador completo mediante la opción <Cmd sid="ui_073" product="dev" />.
+
+1. Haz clic en <Image src="/img/common/ico-menu2.svg" ico alone /> y autentícate con privilegios de administrador.
+
+2. Seleccione <Cmd sid="ui_280" product="dev" /> → <Cmd sid="ui_073" product="dev" />.
+
+   <Image src="/img/device/xs2-administrator-two-step-auth.png" />
+
+:::info
+
+* <Cmd sid="ui_073" product="dev" /> está disponible después de actualizar el firmware a la v1.4.0 o posterior, y el firmware no se puede revertir a una versión anterior después de la actualización.
+
+* El primer paso de autenticación es el predeterminado a menos que la opción <Cmd sid="ui_073" product="dev" /> esté habilitada.
+
+* Si no hay dos tipos de credenciales enroladas para todos los administradores, la activación falla y se muestra un mensaje de error. Enrole dos tipos de credenciales para todos los administradores e inténtelo nuevamente.
+
+  <Image src="/img/device/xs2-error-two-step-authentication.png" width={200} />
+
+:::
+
+:::caution
+
+Si elimina las credenciales de todos los administradores por debajo del tipo 2 después de habilitar <Cmd sid="ui_073" product="dev" />, ya no tendrá acceso al menú de administrador ni podrá conectarse a BioStar X. Por lo tanto, tenga especial cuidado al eliminar las credenciales de administrador.
+
+:::
 
 ### Reiniciar dispositivo
 

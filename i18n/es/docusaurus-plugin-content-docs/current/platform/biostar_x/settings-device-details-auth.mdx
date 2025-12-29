@@ -60,16 +60,6 @@ Configure el modo de autenticación del dispositivo, los permisos, la coincidenc
 
     * Firmware de BioStation 2 1.2.0 o posterior
 
-    * Firmware de BioLite Net 2.2.0 o posterior
-
-    * Firmware de BioEntry Plus 2.2.0 o posterior
-
-    * Firmware de BioEntry W 2.2.0 o posterior
-
-    * Firmware de XPass 2.2.0 o posterior
-
-    * Firmware de XPass S2 2.2.0 o posterior
-
     * Firmware de BioLite N2 1.0.0 o posterior
 
     * Versión de firmware de XPass D2 1.0.0 o superior
@@ -241,7 +231,7 @@ En el grupo <Cmd sid="user.credential.barcode" product="2" />, puedes configurar
 
 * <Cmd sid="device.info.useVisualBarcode" product="2" />: Define si se utiliza la autenticación QR/código de barras a través de la cámara del dispositivo.
 
-* <Cmd sid="device.info.qrCameraTimeout" product="2" />: Define el tiempo de espera de escaneo de la cámara. Si un QR/código de barras no se escanea dentro del tiempo especificado, la autenticación fallará.
+* <Cmd sid="device.info.qrCameraTimeout" product="2" />: Define el tiempo de espera de escaneo de la cámara. Si un QR/barcode no se escanea dentro del tiempo especificado, la autenticación fallará.
 
 * <Cmd sid="device.info.normalize" product="2" />: Configura la autenticación de códigos QR con los mismos datos que las tarjetas CSN o Wiegand emitidas a los usuarios.
 
@@ -249,7 +239,7 @@ En el grupo <Cmd sid="user.credential.barcode" product="2" />, puedes configurar
 
 * <Cmd sid="device.info.useBarcodeScanner" product="2" />: Define si se utiliza el escáner del dispositivo para la autenticación QR/código de barras.
 
-* <Cmd sid="device.info.qrScanTimeout" product="2" />: Define el tiempo de espera de escaneo. Si un QR/código de barras no se escanea dentro del tiempo especificado, la autenticación fallará.
+* <Cmd sid="device.info.qrScanTimeout" product="2" />: Define el tiempo de espera de escaneo. Si un QR/barcode no se escanea dentro del tiempo especificado, la autenticación fallará.
 
 :::info
 
@@ -293,7 +283,7 @@ Puedes seleccionar los tipos y formatos de tarjetas CSN y definir el orden de by
 
   * <Cmd sid="common.general" product="2" />: Lee y muestra el número de serie (CSN) de la tarjeta sin conversión adicional.
 
-  * <Cmd sid="common.wiegand" product="2" />: Transforma y muestra el número de serie (CSN) de la tarjeta según el formato Wiegand definido por el usuario. Para información sobre cómo establecer un nuevo formato Wiegand, consulta [el siguiente](settings-credential-wiegand-format).
+  * <Cmd sid="common.wiegand" product="2" />: Transforma y muestra el número de serie (CSN) de la tarjeta según el formato Wiegand definido por el usuario. Para obtener información sobre cómo configurar un nuevo formato Wiegand, consulta [lo siguiente](settings-credential-wiegand-format).
 
 ### <Cmd sid="device.card.Wiegand" product="2" />
 
@@ -303,7 +293,7 @@ Selecciona los tipos de tarjetas Wiegand y define los formatos Wiegand. Elija el
 
 :::info
 
-Para información sobre cómo establecer un nuevo formato Wiegand, consulta [el siguiente](settings-credential-wiegand-format).
+Para obtener información sobre cómo configurar un nuevo formato Wiegand, consulta [lo siguiente](settings-credential-wiegand-format).
 
 :::
 
