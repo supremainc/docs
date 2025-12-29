@@ -243,7 +243,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/sns_img02.jpg',
+      image: 'https://supremadocs.blob.core.windows.net/img/sns_img02.jpg',
       docs: {
         sidebar: {
           hideable: true,
