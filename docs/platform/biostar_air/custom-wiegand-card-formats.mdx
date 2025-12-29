@@ -1,47 +1,83 @@
 ---
 id: custom-wiegand-card-formats
-title: 커스텀 Wiegand 카드 형식
+title: 커스텀 Wiegand 카드 형식 설정하기
 description: 기존 출입 통제 시스템에서 원활하게 마이그레이션하기 위한 시설 코드, ID 세그먼트, 패리티 비트, 비트 할당을 비롯하여 BioStar Air v2.10에서 사용자 정의 Wiegand 카드 형식을 만들고 구성하는 방법을 안내합니다.
 keywords: [Wiegand, 카드 형식, BioStar Air]
 ---
 
-**v2.10**(2025년 8월)에서는 Wiegand 카드 형식을 이제 **BioStation 3** 및 **BioEntry W3** 장치에서 지원합니다. 모든 BioStar Air 호환 리더기는 2025년 말까지 지원될 예정입니다.
+기존 출입 통제 시스템에서 원활하게 마이그레이션하기 위한 시설 코드, ID 세그먼트, 패리티 비트, 비트 할당을 비롯하여 BioStar Air v2.10에서 사용자 정의 Wiegand 카드 형식을 만들고 구성하는 방법을 안내합니다.
 
+## Wiegand 카드 형식 목록 {#cardFormatMenu}
 
-## 카드 형식으로 이동
+화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' />을 클릭하세요. **Wiegand 형식** 및 **SIA**, **HID 형식**을 포함한, 특별한 카드 형식을 생성 및 관리, 조회할 수 있습니다. 이미 카드가 제공된 기존 출입 통제 솔루션에서 마이그레이션하는 사이트에서 유용하게 사용할 수 있습니다.
 
-BioStar Air 포털에서 **Settings** → **Card Format**으로 이동하세요.
+<Image src='/img/air/bsair-settings-card-format.png' />
 
+* BioStar Air에 포함된 기본 형식을 포함해 등록된 모든 Wiegand 카드 형식을 조회할 수 있습니다.
 
-## 카드 형식
+* 카드 형식의 이름, 설명, 총 비트 수, 비트 미리보기 및 세부 비트 할당을 확인할 수 있습니다.
 
-**Wiegand 형식** 및 **SIA**, **HID 형식**을 포함한, 특별한 카드 형식을 생성 및 관리, 조회할 수 있습니다. 이 기능은 이미 카드가 제공된 기존 출입 통제 솔루션에서 마이그레이션하는 사이트에서 유용하게 사용할 수 있습니다.
+* 이름, 설명, 총 비트 수 및 세부 비트 할당을 포함하여 새로운 사용자 정의 카드 형식을 구성할 수 있습니다. 시스템은 시각적 확인을 위한 비트 미리보기를 제공합니다.
 
-| 기능 | 설명 |
-| --- | --- |
-| **카드 형식 목록** | BioStar Air에 포함된 기본 형식을 포함해 등록된 모든 Wiegand 카드 형식을 조회할 수 있습니다. |
-| **Wiegand 카드 형식 상세 조회** | 카드 형식의 이름, 설명, 총 비트 수, 비트 미리보기 및 세부 비트 할당을 확인할 수 있습니다. |
-| **Wiegand 카드 형식 추가** | 이름, 설명, 총 비트 수 및 세부 비트 할당을 포함하여 새로운 사용자 정의 카드 형식을 구성할 수 있습니다. 시스템은 시각적 확인을 위한 비트 미리보기를 제공합니다. |
+:::info
+
+**v2.10**(2025년 8월)에서는 Wiegand 카드 형식을 **BioStation 3** 및 **BioEntry W3** 장치에서 지원합니다. 모든 BioStar Air 호환 장치는 2025년 말까지 지원할 예정입니다.
+
+:::
 
 
 ## Wiegand 카드 형식 추가
 
-1. **Detail**: 형식에 대한 **이름**을 입력하세요. **설명** 및 **총 비트** 항목은 선택 사항입니다.
+기본 제공하는 Wiegand 카드 형식 외에 새로운 사용자 정의 Wiegand 카드 형식을 추가할 수 있습니다.
 
-1. **Bit Preview**: 형식의 모든 비트에 대한 시각적 표현을 확인하고, 시설 코드, ID, 패리티 비트 및 할당되지 않은 비트에 대한 할당을 확인하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' />을 클릭하세요.
 
-1. **Bit Assignment** 설정:
+1. 화면 오른쪽 상단의 <Cmd sid='wiegand_card_format_title_popup_add' product='air' /> 버튼을 클릭하세요.
 
-    - **Facility Code**: 비트 범위를 활성화/비활성화하고 할당합니다.
+1. <Cmd sid='wiegand_card_format_title_popup_add' product='air' /> 창이 나타나면 <Cmd sid='wiegand_card_format_label_detail' product='air' /> 섹션에서 이름 및 설명(선택 사항), 총 비트를 입력하세요.
 
-    - **ID**: 시작 및 종료 비트와 함께 하나 이상의 ID 세그먼트를 추가합니다.
+   <Image src='/img/air/bsair-settings-card-format-add-wiegand.png' />
 
-    - **Parity Bit**: 홀수/짝수 패리티 비트를 정의된 시작 및 종료 범위와 함께 추가합니다.
+1. 총 비트를 입력하면 <Cmd sid='wiegand_card_format_label_bit_preview' product='air' />가 활성화되며, <Cmd sid='wiegand_card_format_label_bit_assignment' product='air' /> 섹션에서 비트 할당을 구성하세요.
 
-1.  새로운 카드 형식을 추가하려면 **Save** 버튼을 클릭하세요.
+   <Image src='/img/air/bsair-settings-card-format-add-wiegand-assign-bit.png' caption />
 
-**Wiegand 카드 형식 추가**
+   - <Cmd sid='wiegand_card_format_label_bit_preview_facility_code' product='air' />: 식별 코드 사용하려면 토글 스위치를 클릭해 활성화하세요. <Cmd sid='wiegand_card_format_label_start_bit' product='air' />와 <Cmd sid='wiegand_card_format_label_end_bit' product='air' />를 입력하세요.
 
-<Image src='/img/air/air-custom-wiegand-card-format-01.png' alone />
+   - <Cmd sid='wiegand_card_format_label_bit_preview_id' product='air' />: 시작 및 종료 비트를 지정하여 하나 이상의 ID 세그먼트를 추가하세요.
 
-<Image src='/img/air/air-custom-wiegand-card-format-02.png' alone />
+   - <Cmd sid='wiegand_card_format_label_position' product='air' />: 시작 및 종료 비트를 지정하여 홀수/짝수 패리티 비트를 추가하세요.
+
+1.  새로운 카드 형식을 추가하려면 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+
+## 카드 형식 수정 {#editCardFormat}
+
+기존 Wiegand 카드 형식을 수정하려면 다음 단계를 따르세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' />을 클릭하세요.
+
+1. 수정하려는 카드 형식을 클릭하세요.
+
+1. <Cmd sid='wiegand_card_format_title_popup_edit' product='air' /> 창이 나타나면 필요한 항목을 수정하세요.
+
+   <Image src='/img/air/bsair-settings-card-format-edit-wiegand.png' />
+
+1. 수정한 카드 형식을 저장하려면 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+
+## 카드 형식 삭제 {#deleteCardFormat}
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' />을 클릭하세요.
+
+1. 삭제하려는 카드 형식의 체크박스를 클릭하세요. 1개 이상의 카드 형식을 선택할 수 있습니다.
+
+1. 목록 상단의 <IcAirRemove /> 버튼을 클릭하세요.
+
+1. 메시지 창이 나타나면 <Cmd sid='btn_yes' product='air' /> 버튼을 클릭하세요.
+
+:::info
+
+기본 제공되는 5개의 Wiegand 카드 형식은 삭제할 수 없습니다.
+
+:::
