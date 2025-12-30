@@ -227,7 +227,7 @@ module.exports = function () {
                                                         border: none;
                                                         font-size: 16px;
                                                     " onclick="signIn()">
-                                                        Microsoft 계정으로 로그인
+                                                        Sign in with your Microsoft account
                                                     </div>
                                                 </div>
                                             \`;
