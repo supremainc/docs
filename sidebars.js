@@ -187,7 +187,6 @@ const sidebars = {
             'platform/biostar_air/opening-doors-with-mobile-credentials',
             'platform/biostar_air/suprema-pass-app-advanced-features',
             'platform/biostar_air/suprema-pass-app-sensitivity-settings',
-            'platform/biostar_air/troubleshooting-suprema-pass-app',
           ]
         },
         {
@@ -230,6 +229,7 @@ const sidebars = {
           items: [
             'platform/biostar_air/troubleshooting-adding-users-in-bulk',
             'platform/biostar_air/location-services-issues',
+            'platform/biostar_air/troubleshooting-suprema-pass-app',
           ]
         },
         {
