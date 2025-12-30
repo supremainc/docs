@@ -146,8 +146,8 @@ const sidebars = {
               },
               items: [
                 'platform/biostar_air/monitoring-event-and-audit-logs',
-                'platform/biostar_air/monitoring-door-status',
                 'platform/biostar_air/monitoring-alert-report-history',
+                'platform/biostar_air/monitoring-door-status',
               ]
             },
             {
@@ -160,6 +160,10 @@ const sidebars = {
             {
               type: 'category',
               label: 'Settings',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/settings',
+              },
               items: [
                 'platform/biostar_air/managing-administrators',
                 'platform/biostar_air/site-settings',
@@ -167,29 +171,31 @@ const sidebars = {
                 'platform/biostar_air/customizing-email-templates',
                 'platform/biostar_air/settings-alert-report',
                 'platform/biostar_air/custom-wiegand-card-formats',
-                'platform/biostar_air/managing-sites-with-phone',
               ]
             }
           ]
         },
+        'platform/biostar_air/managing-sites-with-app',
         {
           type: 'category',
-          label: 'How-to Guides',
+          label: 'Using Mobile Credentials',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_air/suprema-pass-app-overview'
+          },
+          items: [
+            'platform/biostar_air/opening-doors-with-mobile-credentials',
+            'platform/biostar_air/suprema-pass-app-advanced-features',
+            'platform/biostar_air/suprema-pass-app-sensitivity-settings',
+            'platform/biostar_air/troubleshooting-suprema-pass-app',
+          ]
+        },
+        {
+          type: 'category',
+          label: '활용 안내',
           items: [
             'platform/biostar_air/configuring-reports',
             'platform/biostar_air/reports-time-attendance-reports',
-            {
-              type: 'category',
-              label: 'Using Mobile Credentials',
-              items: [
-                'platform/biostar_air/suprema-pass-app-overview',
-                'platform/biostar_air/opening-doors-with-mobile-credentials',
-                'platform/biostar_air/suprema-pass-app-advanced-features',
-                'platform/biostar_air/suprema-pass-app-sensitivity-settings',
-                'platform/biostar_air/troubleshooting-suprema-pass-app',
-                'platform/biostar_air/location-services-issues',
-              ]
-            },
             'platform/biostar_air/sip-intercom-for-biostation3',
           ]
         },
@@ -223,6 +229,7 @@ const sidebars = {
           label: '문제 해결',
           items: [
             'platform/biostar_air/troubleshooting-adding-users-in-bulk',
+            'platform/biostar_air/location-services-issues',
           ]
         },
         {
