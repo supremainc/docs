@@ -209,7 +209,7 @@
                                                         border: none;
                                                         font-size: 16px;
                                                     " onclick="signIn()">
-                                                        Microsoft 계정으로 로그인
+                                                        Sign in with your Microsoft account
                                                     </div>
                                                 </div>
                                             `,document.body.innerHTML=e)}function a(e){null!==e?(c.setActiveAccount(e.account),console.log("Authentication successful:",e.account.username),window.location.reload()):l()}c.initialize().then(()=>{c.handleRedirectPromise().then(a).catch(e=>{console.error("Redirect handling error:",e)}),l()}).catch(e=>{console.error("MSAL initialization error:",e)}),window.signIn=function(){c.loginPopup(o).then(a).catch(function(e){console.error("Login error:",e),("popup_window_error"===e.errorCode||"empty_window_error"===e.errorCode)&&c.loginRedirect(o)})}}"loading"===document.readyState?document.addEventListener("DOMContentLoaded",n):n()}()}"loading"===document.readyState?document.addEventListener("DOMContentLoaded",e):e()}()</script></body>
