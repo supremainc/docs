@@ -179,7 +179,7 @@ class ImageUploader {
             const remoteMTime = properties.lastModified;
 
             if (remoteMTime && localMTime <= remoteMTime) {
-                console.log(`   ⏭️ 동일한 파일 (수정 시간): 업로드 건너뛰기`);
+                // console.log(`   ⏭️ 동일한 파일 (수정 시간): 업로드 건너뛰기`);
                 return false;
             } else {
                 console.log(`   🔄 파일 변경됨 (수정 시간): 업로드 필요`);
