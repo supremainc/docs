@@ -68,10 +68,11 @@ function _createMdxContent(props) {
     p: "p",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Anno, Badge, Image, SpecSection} = _components;
+  }, {Anno, Badge, Image, PageBreak, SpecSection} = _components;
   if (!Anno) _missingMdxReference("Anno", true);
   if (!Badge) _missingMdxReference("Badge", true);
   if (!Image) _missingMdxReference("Image", true);
+  if (!PageBreak) _missingMdxReference("PageBreak", true);
   if (!SpecSection) _missingMdxReference("SpecSection", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
@@ -86,7 +87,7 @@ function _createMdxContent(props) {
       data: bs3m_specs_namespaceObject._.qO
     }), "\n", "\n", (0,jsx_runtime.jsx)(SpecSection, {
       data: bs3m_specs_namespaceObject._.yp
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "크기-및-무게",
       children: "크기 및 무게"
     }), "\n", (0,jsx_runtime.jsx)(Badge, {

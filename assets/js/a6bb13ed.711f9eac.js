@@ -81,13 +81,17 @@ const toc = [{
   "id": "인증-결과-표시-옵션",
   "level": 2
 }, {
+  "value": "얼굴 &amp; 지문",
+  "id": "얼굴--지문",
+  "level": 2
+}, {
   "value": "얼굴",
   "id": "얼굴",
-  "level": 2
+  "level": 3
 }, {
   "value": "지문 <Badge>BS3M-ODB, BS3M-OAPB</Badge>",
   "id": "fingerprint",
-  "level": 2
+  "level": 3
 }, {
   "value": "근태",
   "id": "근태",
@@ -181,7 +185,7 @@ function _createMdxContent(props) {
           }), "을 누르면 추가한 크리덴셜을 삭제할 수 있습니다."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/bs3m-add-auth-mode.png"
-        }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Image, {
@@ -295,7 +299,7 @@ function _createMdxContent(props) {
           }), "를 누르세요."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "인증-모드-편집",
       children: "인증 모드 편집"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
@@ -529,7 +533,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "인증-결과-표시-옵션",
       children: "인증 결과 표시 옵션"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -619,6 +623,9 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "얼굴--지문",
+      children: "얼굴 & 지문"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "얼굴",
       children: "얼굴"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -638,15 +645,26 @@ function _createMdxContent(props) {
             sid: "ui_256",
             product: "dev"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_228",
+            sid: "ui_376",
             product: "dev"
           }), "을 선택하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "원하는 항목을 변경하세요."
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/bs3m-face.png"
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "ui_377",
+            product: "dev"
+          }), "이나 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "ui_231",
+            product: "dev"
+          }), " 설정에서 원하는 항목을 변경하세요."]
+        }), "\n", (0,jsx_runtime.jsxs)("div", {
+          className: "grid-container",
+          children: [(0,jsx_runtime.jsx)(Image, {
+            src: "/img/device/bs3m-face.png"
+          }), (0,jsx_runtime.jsx)(Image, {
+            src: "/img/device/bs3m-face-recognition.png"
+          })]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -675,7 +693,9 @@ function _createMdxContent(props) {
                 product: "dev"
               }), ": 설정한 시간 동안 인증을 완료하지 못하면 인증에 실패합니다."]
             }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_117",
@@ -919,7 +939,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsxs)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsxs)(_components.h3, {
       id: "fingerprint",
       children: ["지문 ", (0,jsx_runtime.jsx)(Badge, {
         only: true,
@@ -942,16 +962,18 @@ function _createMdxContent(props) {
             sid: "ui_256",
             product: "dev"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_312",
+            sid: "ui_376",
             product: "dev"
           }), "을 선택하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "원하는 항목을 변경하세요."
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
+            sid: "ui_378",
+            product: "dev"
+          }), "에서 원하는 항목을 변경하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/auth-fingerprint.png",
-          width: 300
+          src: "/img/device/bs3m-finger.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

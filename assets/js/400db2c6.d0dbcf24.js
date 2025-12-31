@@ -64,9 +64,10 @@ function _createMdxContent(props) {
     p: "p",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, Image} = _components;
+  }, {Cmd, Image, PageBreak} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
+  if (!PageBreak) _missingMdxReference("PageBreak", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "장치에서 발생한 이벤트 기록을 확인하는 방법을 설명합니다."
@@ -113,7 +114,7 @@ function _createMdxContent(props) {
           }), "를 누르면 조건에 맞는 로그가 화면에 나타납니다."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "전체-로그-삭제",
       children: "전체 로그 삭제"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {

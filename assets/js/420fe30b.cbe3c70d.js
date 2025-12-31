@@ -261,7 +261,9 @@ function _createMdxContent(props) {
                 children: "-"
               }), "의 조합을 ID로 사용할 수 있으며, 최대 32자까지 입력할 수 있습니다."]
             }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_228",
@@ -281,9 +283,7 @@ function _createMdxContent(props) {
                 children: "사용자 얼굴 등록"
               }), "을 참고하세요."]
             }), "\n"]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_312",
@@ -429,7 +429,7 @@ function _createMdxContent(props) {
           }), "을 누르세요."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "enrolling-user-faces",
       children: "사용자 얼굴 등록"
     }), "\n", "\n", (0,jsx_runtime.jsxs)(_components.ol, {
@@ -500,7 +500,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsx)(_enrolling_face_warning/* ["default"] */.Ay, {})]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsxs)(_components.h2, {
       id: "enrolling-user-fingerprint",
       children: ["사용자 지문 등록 ", (0,jsx_runtime.jsx)(Badge, {
         only: true,
@@ -570,7 +570,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "사용자-정보-편집",
       children: "사용자 정보 편집"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -694,7 +694,7 @@ function _createMdxContent(props) {
           }), "을 누르세요."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "사용자-등록현황-보기",
       children: "사용자 등록현황 보기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
