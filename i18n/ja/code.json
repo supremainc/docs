@@ -2,1116 +2,1116 @@
    "externalLinks.BioStation2a.desc": {
       "message": "AI プロセッサによる驚異的な指紋認証性能"
    },
-  "externalLinks.BioEntryW3.desc": {
-    "message": "シンプルで耐久性が高く、安全な AI ベースの顔認証デバイス"
-  },
-  "externalLinks.BioStation3.desc": {
-    "message": "次世代の入退室管理ソリューション"
-  },
-  "externalLinks.FaceStationF2.desc": {
-    "message": "フュージョン顔認証装置"
-  },
-  "externalLinks.XStation2.desc": {
-    "message": "次世代モバイル入退室認証端末"
-  },
-  "externalLinks.BioentryP2.desc": {
-    "message": "コンパクト指紋認証端末"
-  },
-  "externalLinks.XPass2.desc": {
-    "message": "屋外対応コンパクト RFID リーダー"
-  },
-  "externalLinks.XPassS2.desc": {
-    "message": "IP RFID 入退室制御端末"
-  },
-  "externalLinks.Aiirfobpatch.desc": {
-    "message": "モバイルアクセスカード変換装置"
-  },
-  "externalLinks.CoreStation.desc": {
-    "message": "インテリジェント生体認証コントローラー"
-  },
-  "externalLinks.CoreStation20.desc": {
-    "message": "強力なセキュリティと柔軟な拡張性"
-  },
-  "externalLinks.CoreStationEnclosure.desc": {
-    "message": "CoreStation 専用エンクロージャー"
-  },
-  "externalLinks.peripheral.im120.desc": {
-    "message": "マルチ入力拡張モジュール"
-  },
-  "externalLinks.peripheral.om120.desc": {
-    "message": "マルチ出力制御モジュール"
-  },
-  "externalLinks.peripheral.di24.desc": {
-    "message": "拡張可能な制御、途切れのない入退室"
-  },
-  "externalLinks.peripheral.sio2.desc": {
-    "message": "扉用セキュリティコントロールモジュール"
-  },
-  "externalLinks.peripheral.extendedmodule.desc": {
-    "message": "拡張型通信・セキュリティモジュール"
-  },
-  "externalLinks.apps.devicemanager.desc": {
-    "message": "モバイルベース入退室装置管理アプリケーション"
-  },
-  "externalLinks.apps.setupmanager.desc": {
-    "message": "集中型入退室管理ウェブサーバー"
-  },
-  "theme.docs.breadcrumbs.navAriaLabel": {
-    "message": "パンくずリスト",
-    "description": "The ARIA label for the breadcrumbs"
-  },
-  "theme.admonition.caution": {
-    "message": "注意",
-    "description": "The default label used for the Caution admonition (:::caution)"
-  },
-  "theme.admonition.danger": {
-    "message": "危険",
-    "description": "The default label used for the Danger admonition (:::danger)"
-  },
-  "theme.admonition.info": {
-    "message": "情報",
-    "description": "The default label used for the Info admonition (:::info)"
-  },
-  "theme.admonition.note": {
-    "message": "注記",
-    "description": "The default label used for the Note admonition (:::note)"
-  },
-  "theme.admonition.tip": {
-    "message": "ヒント",
-    "description": "The default label used for the Tip admonition (:::tip)"
-  },
-  "theme.admonition.warning": {
-    "message": "警告",
-    "description": "The default label used for the Warning admonition (:::warning)"
-  },
-  "theme.docs.breadcrumbs.home": {
-    "message": "ホーム",
-    "description": "The ARIA label for the home page in the breadcrumbs"
-  },
-  "theme.ErrorPageContent.title": {
-    "message": "ページにエラーが発生しました。",
-    "description": "The title of the fallback page when the page crashed"
-  },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "トップへスクロール",
-    "description": "The ARIA label for the back to top button"
-  },
-  "theme.blog.archive.title": {
-    "message": "投稿一覧",
-    "description": "The page & hero title of the blog archive page"
-  },
-  "theme.blog.archive.description": {
-    "message": "投稿一覧",
-    "description": "The page & hero description of the blog archive page"
-  },
-  "theme.blog.paginator.navAriaLabel": {
-    "message": "ブログ投稿一覧をナビゲート",
-    "description": "The ARIA label for the blog pagination"
-  },
-  "theme.blog.paginator.newerEntries": {
-    "message": "前のページ",
-    "description": "The label used to navigate to the newer blog posts page (previous page)"
-  },
-  "theme.blog.paginator.olderEntries": {
-    "message": "次のページ",
-    "description": "The label used to navigate to the older blog posts page (next page)"
-  },
-  "theme.blog.post.paginator.navAriaLabel": {
-    "message": "ブログ投稿をナビゲート",
-    "description": "The ARIA label for the blog posts pagination"
-  },
-  "theme.blog.post.paginator.newerPost": {
-    "message": "前の投稿",
-    "description": "The blog post button label to navigate to the newer/previous post"
-  },
-  "theme.blog.post.paginator.olderPost": {
-    "message": "次の投稿",
-    "description": "The blog post button label to navigate to the older/next post"
-  },
-  "theme.tags.tagsPageLink": {
-    "message": "すべてのタグを表示",
-    "description": "The label of the link targeting the tag list page"
-  },
-  "theme.colorToggle.ariaLabel": {
-    "message": "ダークモードとライトモードを切り替え (現在 {mode})",
-    "description": "The ARIA label for the color mode toggle"
-  },
-  "theme.colorToggle.ariaLabel.mode.dark": {
-    "message": "ダークモード",
-    "description": "The name for the dark color mode"
-  },
-  "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "ライトモード",
-    "description": "The name for the light color mode"
-  },
-  "theme.docs.DocCard.categoryDescription.plurals": {
-    "message": "{count} 件のドキュメント",
-    "description": "The default description for a category card in the generated index about how many items this category includes"
-  },
-  "theme.docs.paginator.navAriaLabel": {
-    "message": "ドキュメントページ",
-    "description": "The ARIA label for the docs pagination"
-  },
-  "theme.docs.paginator.previous": {
-    "message": "前へ",
-    "description": "The label used to navigate to the previous doc"
-  },
-  "theme.docs.paginator.next": {
-    "message": "次へ",
-    "description": "The label used to navigate to the next doc"
-  },
-  "theme.docs.tagDocListPageTitle.nDocsTagged": {
-    "message": "{count} 件のドキュメントが",
-    "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
-  },
-  "theme.docs.tagDocListPageTitle": {
-    "message": "{nDocsTagged} 件が「{tagName}」タグに分類されています",
-    "description": "The title of the page for a docs tag"
-  },
-  "theme.docs.versionBadge.label": {
-    "message": "バージョン：{versionLabel}"
-  },
-  "theme.docs.versions.unreleasedVersionLabel": {
-    "message": "{siteTitle} {versionLabel} のドキュメントはまだ正式公開されていません。",
-    "description": "The label used to tell the user that he's browsing an unreleased doc version"
-  },
-  "theme.docs.versions.unmaintainedVersionLabel": {
-    "message": "{siteTitle} {versionLabel} のドキュメントは更新が終了しています。",
-    "description": "The label used to tell the user that he's browsing an unmaintained doc version"
-  },
-  "theme.docs.versions.latestVersionSuggestionLabel": {
-    "message": "最新のドキュメントは {latestVersionLink} ({versionLabel}) をご覧ください。",
-    "description": "The label used to tell the user to check the latest version"
-  },
-  "theme.docs.versions.latestVersionLinkLabel": {
-    "message": "最新バージョン",
-    "description": "The label used for the latest version suggestion link label"
-  },
-  "theme.common.editThisPage": {
-    "message": "このページを編集",
-    "description": "The link label to edit the current page"
-  },
-  "theme.common.headingLinkTitle": {
-    "message": "{heading} への直接リンク",
-    "description": "Title for link to heading"
-  },
-  "theme.lastUpdated.atDate": {
-    "message": " {date} に",
-    "description": "The words used to describe on which date a page has been last updated"
-  },
-  "theme.lastUpdated.byUser": {
-    "message": " {user} が",
-    "description": "The words used to describe by who the page has been last updated"
-  },
-  "theme.lastUpdated.lastUpdatedAtBy": {
-    "message": "最終更新：{atDate}{byUser}",
-    "description": "The sentence used to display when a page has been last updated, and by who"
-  },
-  "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "バージョン",
-    "description": "The label for the navbar versions dropdown on mobile view"
-  },
-  "theme.NotFound.title": {
-    "message": "ページが見つかりません。",
-    "description": "The title of the 404 page"
-  },
-  "theme.tags.tagsListLabel": {
-    "message": "タグ：",
-    "description": "The label alongside a tag list"
-  },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "閉じる",
-    "description": "The ARIA label for close button of announcement bar"
-  },
-  "theme.blog.sidebar.navAriaLabel": {
-    "message": "最近のブログ記事を閲覧",
-    "description": "The ARIA label for recent posts in the blog sidebar"
-  },
-  "theme.CodeBlock.copied": {
-    "message": "コピーしました",
-    "description": "The copied button label on code blocks"
-  },
-  "theme.CodeBlock.copyButtonAriaLabel": {
-    "message": "クリップボードにコードをコピー",
-    "description": "The ARIA label for copy code blocks button"
-  },
-  "theme.CodeBlock.copy": {
-    "message": "コピー",
-    "description": "The copy button label on code blocks"
-  },
-  "theme.CodeBlock.wordWrapToggle": {
-    "message": "折り返しを切り替え",
-    "description": "The title attribute for toggle word wrapping button of code block lines"
-  },
-  "theme.DocSidebarItem.expandCategoryAriaLabel": {
-    "message": "サイドバー分類 '{label}' を展開",
-    "description": "The ARIA label to expand the sidebar category"
-  },
-  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "サイドバー分類 '{label}' を折りたたむ",
-    "description": "The ARIA label to collapse the sidebar category"
-  },
-  "theme.NavBar.navAriaLabel": {
-    "message": "メイン",
-    "description": "The ARIA label for the main navigation"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "言語",
-    "description": "The label for the mobile language switcher dropdown"
-  },
-  "theme.NotFound.p1": {
-    "message": "お探しのページが見つかりません。",
-    "description": "The first paragraph of the 404 page"
-  },
-  "theme.NotFound.p2": {
-    "message": "リンク切れをサイト管理者にお知らせください。",
-    "description": "The 2nd paragraph of the 404 page"
-  },
-  "theme.TOCCollapsible.toggleButtonLabel": {
-    "message": "目次を表示",
-    "description": "The label used by the button on the collapsible TOC component"
-  },
-  "theme.blog.post.readMore": {
-    "message": "続きを読む",
-    "description": "The label used in blog post item excerpts to link to full blog posts"
-  },
-  "theme.blog.post.readMoreLabel": {
-    "message": "「{title}」をさらに読む",
-    "description": "The ARIA label for the link to full blog posts from excerpts"
-  },
-  "theme.blog.post.readingTime.plurals": {
-    "message": "約 {readingTime} 分",
-    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
-  },
-  "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "サイドバーを隠す",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
-  "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "サイドバーを隠す",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
-  "theme.docs.sidebar.navAriaLabel": {
-    "message": "ドキュメントサイドバー",
-    "description": "The ARIA label for the sidebar navigation"
-  },
-  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
-    "message": "サイドバーを閉じる",
-    "description": "The ARIA label for close button of mobile sidebar"
-  },
-  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
-    "message": "← メインメニューに戻る",
-    "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
-  },
-  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
-    "message": "サイドバーを展開/折りたたむ",
-    "description": "The ARIA label for hamburger menu button of mobile navigation"
-  },
-  "theme.docs.sidebar.expandButtonTitle": {
-    "message": "サイドバーを開く",
-    "description": "The ARIA label and title attribute for expand button of doc sidebar"
-  },
-  "theme.docs.sidebar.expandButtonAriaLabel": {
-    "message": "サイドバーを開く",
-    "description": "The ARIA label and title attribute for expand button of doc sidebar"
-  },
-  "theme.blog.post.plurals": {
-    "message": "{count}件の投稿",
-    "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
-  },
-  "theme.blog.tagTitle": {
-    "message": "「{tagName}」タグに関連する{nPosts}件の投稿があります。",
-    "description": "The title of the page for a blog tag"
-  },
-  "theme.blog.author.pageTitle": {
-    "message": "{authorName} - {nPosts}",
-    "description": "The title of the page for a blog author"
-  },
-  "theme.blog.authorsList.pageTitle": {
-    "message": "著者",
-    "description": "The title of the authors page"
-  },
-  "theme.blog.authorsList.viewAll": {
-    "message": "すべての著者を表示",
-    "description": "The label of the link targeting the blog authors page"
-  },
-  "theme.blog.author.noPosts": {
-    "message": "この著者にはまだ投稿がありません。",
-    "description": "The text for authors with 0 blog post"
-  },
-  "theme.contentVisibility.unlistedBanner.title": {
-    "message": "インデックスされていないドキュメント",
-    "description": "The unlisted content banner title"
-  },
-  "theme.contentVisibility.unlistedBanner.message": {
-    "message": "このドキュメントはインデックスされません。検索エンジンはこのドキュメントをインデックスせず、URLを知っているユーザーのみがアクセスできます。",
-    "description": "The unlisted content banner message"
-  },
-  "theme.contentVisibility.draftBanner.title": {
-    "message": "作成中のページ",
-    "description": "The draft content banner title"
-  },
-  "theme.contentVisibility.draftBanner.message": {
-    "message": "このページはまだ作成中です。開発環境でのみ表示され、本番ビルドには含まれません。",
-    "description": "The draft content banner message"
-  },
-  "theme.ErrorPageContent.tryAgain": {
-    "message": "再試行",
-    "description": "The label of the button to try again rendering when the React error boundary captures an error"
-  },
-  "theme.common.skipToMainContent": {
-    "message": "本文へスキップ",
-    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
-  },
-  "theme.tags.tagsPageTitle": {
-    "message": "タグ",
-    "description": "The title of the tag list page"
-  },
-  "theme.docs.nextStep": {
-    "message": "次のステップ"
-  },
-  "theme.docs.overview.viewContent": {
-    "message": "コンテンツを見る"
-  },
-  "theme.docs.glossary.all": {
-    "message": "すべて",
-    "description": "The label for the glossary all button"
-  },
-  "theme.figureCaption.desc": {
-    "message": "上記の画像は例示です。実際の画面とは異なる場合があります。"
-  },
-  "theme.cover.address": {
-    "message": "<b>Suprema Inc</b><br/>17F Parkview Tower, 248, Jeongjail-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, 13554, Rep. of KOREA<br/>電話: +82 31 783 4502 | Fax: +82 31 783 4503 | お問い合わせ: sales_sys@supremainc.com"
-  },
-  "theme.cover.copyright": {
-    "message": "© 2025 Suprema Inc. 本書に記載されているSuprema、製品名、番号はSupremaの登録商標です。記載されている会社名および製品名は各社の商標または登録商標です。製品の外観、製造状態および仕様は予告なく変更される場合があります。"
-  },
-  "theme.cover.qrCodetext": {
-    "message": "For more information about Suprema’s global branch offices,<br/>visit the webpage below by scanning the QR code.<br/>https://supremainc.com/en/about/global-office.asp"
-  },
-  "theme.revision.badge": {
-    "message": "発生バージョン"
-  },
-  "index.search": {
-    "message": "検索"
-  },
-  "index.biostarx.description": {
-    "message": "入退室管理の限界を超える新たなセキュリティ基準、AIベースの統合セキュリティプラットフォーム"
-  },
-  "windows.key.start": {
-    "message": "開始"
-  },
-  "biostar2.install.ok": {
-    "message": "OK"
-  },
-  "biostar2.install.agree": {
-    "message": "同意する"
-  },
-  "biostar2.install.next": {
-    "message": "次へ"
-  },
-  "biostar2.install.expressInstall": {
-    "message": "簡易インストール"
-  },
-  "biostar2.install.customInstall": {
-    "message": "カスタムインストール"
-  },
-  "biostar2.install.btnInstall": {
-    "message": "インストール"
-  },
-  "biostar2.install.complete": {
-    "message": "完了"
-  },
-  "specs.common.supported": {
-    "message": "対応"
-  },
-  "specs.common.Notsupported": {
-    "message": "非対応"
-  },
-  "specs.credentials": {
-    "message": "クレデンシャル"
-  },
-  "specs.credentials.biometrics": {
-    "message": "生体認証"
-  },
-  "specs.credentials.biometrics.face": {
-    "message": "顔"
-  },
-  "specs.credentials.biometrics.fingerprint": {
-    "message": "指紋"
-  },
-  "specs.credentials.rfcard": {
-    "message": "RFカード"
-  },
-  "specs.credentials.rf_distance": {
-    "message": "RF認証距離"
-  },
-  "specs.credentials.multi_controller": {
-    "message": "マルチコントローラー"
-  },
-  "specs.credentials.mobile": {
-    "message": "モバイル"
-  },
-  "specs.credentials.keypad": {
-    "message": "スクランブルキーパッド（PIN）"
-  },
-  "specs.credentials.qr_barcode": {
-    "message": "QR/バーコード"
-  },
-  "specs.credentials.biometrics.face.auth_distance": {
-    "message": "認証距離"
-  },
-  "specs.credentials.biometrics.face.auth_height": {
-    "message": "認証高さ"
-  },
-  "specs.credentials.biometrics.face.matching_speed": {
-    "message": "マッチング速度"
-  },
-  "specs.credentials.biometrics.face.live_face_detection": {
-    "message": "偽顔検出"
-  },
-  "specs.credentials.biometrics.fingerprint.image_dimension": {
-    "message": "画像サイズ"
-  },
-  "specs.credentials.biometrics.fingerprint.image_bit_depth": {
-    "message": "画像ビット深度"
-  },
-  "specs.credentials.biometrics.fingerprint.resolution": {
-    "message": "解像度"
-  },
-  "specs.credentials.biometrics.fingerprint.template": {
-    "message": "テンプレート"
-  },
-  "specs.credentials.biometrics.fingerprint.extractor_matcher": {
-    "message": "抽出／照合"
-  },
-  "specs.credentials.biometrics.fingerprint.sensor_certificates": {
-    "message": "センサー認証"
-  },
-  "specs.credentials.biometrics.fingerprint.live_fingerprint_detection": {
-    "message": "偽造指紋検出"
-  },
-  "specs.general": {
-    "message": "一般"
-  },
-  "specs.general.modelName": {
-    "message": "モデル名"
-  },
-  "specs.general.cpu": {
-    "message": "CPU"
-  },
-  "specs.general.memory": {
-    "message": "メモリ"
-  },
-  "specs.general.crypto_chip": {
-    "message": "暗号チップ"
-  },
-  "specs.general.lcd_type": {
-    "message": "ディスプレイ"
-  },
-  "specs.general.led_type": {
-    "message": "LED"
-  },
-  "specs.general.led_type.multiColor": {
-    "message": "マルチカラー"
-  },
-  "specs.general.lcd_resolution": {
-    "message": "画面解像度"
-  },
-  "specs.general.sound": {
-    "message": "サウンド"
-  },
-  "specs.general.operating_temp": {
-    "message": "動作温度"
-  },
-  "specs.general.storage_temp": {
-    "message": "保管温度"
-  },
-  "specs.general.operating_humidity": {
-    "message": "動作湿度"
-  },
-  "specs.general.storage_humidity": {
-    "message": "保管湿度"
-  },
-  "specs.general.operating_condition": {
-    "message": "動作環境条件"
-  },
-  "specs.general.camera": {
-    "message": "カメラ"
-  },
-  "specs.general.camera_type": {
-    "message": "カメラタイプ"
-  },
-  "specs.general.camera_resolution": {
-    "message": "カメラ解像度"
-  },
-  "specs.general.camera_angle": {
-    "message": "カメラ角度"
-  },
-  "specs.general.ip_rating": {
-    "message": "IP等級"
-  },
-  "specs.general.ik_rating": {
-    "message": "IK等級"
-  },
-  "specs.general.certifications": {
-    "message": "認証"
-  },
-  "specs.general.supported_products": {
-    "message": "対応製品"
-  },
-  "specs.general.material": {
-    "message": "材質"
-  },
-  "specs.storage": {
-    "message": "ストレージ"
-  },
-  "specs.storage.max_users": {
-    "message": "最大ユーザー数"
-  },
-  "specs.storage.max_credentials_1n": {
-    "message": "最大クレデンシャル数（1:N）"
-  },
-  "specs.storage.max_credentials_1on1": {
-    "message": "最大クレデンシャル数（1:1）"
-  },
-  "specs.storage.max_text_logs": {
-    "message": "最大テキストログ数"
-  },
-  "specs.storage.max_image_logs": {
-    "message": "最大イメージログ数"
-  },
-  "specs.storage.max_card": {
-    "message": "最大カード数"
-  },
-  "specs.interface": {
-    "message": "インターフェース"
-  },
-  "specs.interface.ethernet": {
-    "message": "イーサネット"
-  },
-  "specs.interface.wifi": {
-    "message": "Wi-Fi"
-  },
-  "specs.interface.network_protocol": {
-    "message": "ネットワークプロトコル"
-  },
-  "specs.interface.rs485": {
-    "message": "RS-485"
-  },
-  "specs.interface.rs232c": {
-    "message": "RS-232C"
-  },
-  "specs.interface.rs485_protocol": {
-    "message": "RS-485通信プロトコル"
-  },
-  "specs.interface.wiegand": {
-    "message": "Wiegand"
-  },
-  "specs.interface.input": {
-    "message": "入力"
-  },
-  "specs.interface.output": {
-    "message": "出力"
-  },
-  "specs.interface.supervised": {
-    "message": "スーパーバイズド入力"
-  },
-  "specs.interface.auxInput": {
-    "message": "AUX入力"
-  },
-  "specs.interface.ttl_input": {
-    "message": "TTL入力"
-  },
-  "specs.interface.relay": {
-    "message": "リレー"
-  },
-  "specs.interface.poe": {
-    "message": "PoE"
-  },
-  "specs.interface.poe_plus": {
-    "message": "PoE+"
-  },
-  "specs.interface.interphone": {
-    "message": "インターホン"
-  },
-  "specs.interface.rtsp": {
-    "message": "RTSP"
-  },
-  "specs.interface.usb": {
-    "message": "USB"
-  },
-  "specs.interface.usb_ext": {
-    "message": "USB拡張ポート"
-  },
-  "specs.interface.tamper": {
-    "message": "タンパー"
-  },
-  "specs.interface.samSlot": {
-    "message": "SAMカードスロット"
-  },
-  "specs.interface.led": {
-    "message": "LED"
-  },
-  "specs.interface.beep": {
-    "message": "Beep"
-  },
-  "specs.power": {
-    "message": "電気仕様"
-  },
-  "specs.power.power": {
-    "message": "電源"
-  },
-  "specs.power.power_output": {
-    "message": "電源出力"
-  },
-  "specs.power.powerSupply": {
-    "message": "電源装置（SMPS）AC入力"
-  },
-  "specs.power.switch_input_vih": {
-    "message": "スイッチ入力VIH"
-  },
-  "specs.power.led_beep_input_vih": {
-    "message": "LED、Beep 入力 VIH"
-  },
-  "specs.power.switch_input_vil": {
-    "message": "スイッチ入力VIL"
-  },
-  "specs.power.led_beep_input_vil": {
-    "message": "LED、Beep 入力 VIL"
-  },
-  "specs.power.switch_pullup": {
-    "message": "スイッチプルアップ抵抗"
-  },
-  "specs.power.led_beep_pullup": {
-    "message": "LED、Beep プルアップ抵抗"
-  },
-  "specs.power.wiegand_voh": {
-    "message": "Wiegand出力VOH"
-  },
-  "specs.power.wiegand_vol": {
-    "message": "Wiegand出力VOL"
-  },
-  "specs.power.wiegand_pullup": {
-    "message": "Wiegand出力プルアップ抵抗"
-  },
-  "specs.power.relay": {
-    "message": "リレー"
-  },
-  "specs.power.poe12vout": {
-    "message": "PoE（12V 出力）"
-  },
-  "specs.power.poe_plus12vout": {
-    "message": "PoE+（12V 出力）"
-  },
-  "specs.size_weight": {
-    "message": "サイズと重量"
-  },
-  "specs.size_weight.size": {
-    "message": "サイズ"
-  },
-  "specs.size_weight.weight": {
-    "message": "重量"
-  },
-  "specs.size_weight.device": {
-    "message": "デバイス"
-  },
-  "specs.size_weight.bracket": {
-    "message": "ブラケット"
-  },
-  "specs.size_weight.bracket.weight_include": {
-    "message": "（ワッシャーおよびボルト含む）"
-  },
-  "specs.power_supply": {
-    "message": "電源供給装置"
-  },
-  "specs.power_supply.modelName": {
-    "message": "モデル名"
-  },
-  "specs.power_supply.vendor": {
-    "message": "ベンダー"
-  },
-  "specs.power_supply.input": {
-    "message": "入力"
-  },
-  "specs.power_supply.output": {
-    "message": "出力"
-  },
-  "specs.backup_battery": {
-    "message": "バックアップバッテリー"
-  },
-  "specs.backup_battery.modelName": {
-    "message": "モデル名"
-  },
-  "specs.backup_battery.vendor": {
-    "message": "ベンダー"
-  },
-  "specs.backup_battery.voltage": {
-    "message": "電圧"
-  },
-  "specs.backup_battery.capacity": {
-    "message": "容量"
-  },
-  "externalLinks.FaceStation2.desc": {
-    "message": "顔認証入退勤端末"
-  },
-  "externalLinks.BioStationL2.desc": {
-    "message": "指紋認証入退勤端末"
-  },
-  "externalLinks.BioLiteN2.desc": {
-    "message": "屋外型指紋認証入退勤装置"
-  },
-  "externalLinks.BioentryW2.desc": {
-    "message": "屋外型指紋認証入退室端末"
-  },
-  "theme.SearchPage.documentsFound.plurals": {
-    "message": "{count} 件のドキュメントが見つかりました。",
-    "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
-  },
-  "theme.SearchPage.existingResultsTitle": {
-    "message": "「{query}」の検索結果",
-    "description": "The search page title for non-empty query"
-  },
-  "theme.SearchPage.emptyResultsTitle": {
-    "message": "ドキュメントを検索。",
-    "description": "The search page title for empty query"
-  },
-  "theme.SearchPage.inputPlaceholder": {
-    "message": "検索語を入力。",
-    "description": "The placeholder for search page input"
-  },
-  "theme.SearchPage.inputLabel": {
-    "message": "検索",
-    "description": "The ARIA label for search page input"
-  },
-  "theme.SearchPage.algoliaLabel": {
-    "message": "Algolia で検索",
-    "description": "The description label for Algolia mention"
-  },
-  "theme.SearchPage.noResultsText": {
-    "message": "検索結果がありません。",
-    "description": "The paragraph for empty search result"
-  },
-  "theme.SearchPage.fetchingNewResults": {
-    "message": "新しい検索結果を読み込み中です。",
-    "description": "The paragraph for fetching new search results"
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "他の検索結果を表示"
-  },
-  "theme.SearchBar.label": {
-    "message": "検索",
-    "description": "The ARIA label and placeholder for search button"
-  },
-  "theme.SearchModal.searchBox.resetButtonTitle": {
-    "message": "検索語をリセット",
-    "description": "The label and ARIA label for search box reset button"
-  },
-  "theme.SearchModal.searchBox.cancelButtonText": {
-    "message": "キャンセル",
-    "description": "The label and ARIA label for search box cancel button"
-  },
-  "theme.SearchModal.startScreen.recentSearchesTitle": {
-    "message": "最近",
-    "description": "The title for recent searches"
-  },
-  "theme.SearchModal.startScreen.noRecentSearchesText": {
-    "message": "最近の検索語はありません",
-    "description": "The text when there are no recent searches"
-  },
-  "theme.SearchModal.startScreen.saveRecentSearchButtonTitle": {
-    "message": "この検索語を保存",
-    "description": "The title for save recent search button"
-  },
-  "theme.SearchModal.startScreen.removeRecentSearchButtonTitle": {
-    "message": "この検索語を最近の検索語から削除",
-    "description": "The title for remove recent search button"
-  },
-  "theme.SearchModal.startScreen.favoriteSearchesTitle": {
-    "message": "お気に入り",
-    "description": "The title for favorite searches"
-  },
-  "theme.SearchModal.startScreen.removeFavoriteSearchButtonTitle": {
-    "message": "この検索語をお気に入りから削除",
-    "description": "The title for remove favorite search button"
-  },
-  "theme.SearchModal.errorScreen.titleText": {
-    "message": "結果を読み込めません",
-    "description": "The title for error screen"
-  },
-  "theme.SearchModal.errorScreen.helpText": {
-    "message": "インターネット接続を再確認してください。",
-    "description": "The help text for error screen"
-  },
-  "theme.SearchModal.footer.selectText": {
-    "message": "で選択",
-    "description": "The select text for footer"
-  },
-  "theme.SearchModal.footer.selectKeyAriaLabel": {
-    "message": "Enter キー",
-    "description": "The ARIA label for select key in footer"
-  },
-  "theme.SearchModal.footer.navigateText": {
-    "message": "で移動",
-    "description": "The navigate text for footer"
-  },
-  "theme.SearchModal.footer.navigateUpKeyAriaLabel": {
-    "message": "上矢印キー",
-    "description": "The ARIA label for navigate up key in footer"
-  },
-  "theme.SearchModal.footer.navigateDownKeyAriaLabel": {
-    "message": "下矢印キー",
-    "description": "The ARIA label for navigate down key in footer"
-  },
-  "theme.SearchModal.footer.closeText": {
-    "message": "で閉じる",
-    "description": "The close text for footer"
-  },
-  "theme.SearchModal.footer.closeKeyAriaLabel": {
-    "message": "Esc キー",
-    "description": "The ARIA label for close key in footer"
-  },
-  "theme.SearchModal.footer.searchByText": {
-    "message": "検索提供",
-    "description": "The 'Powered by' text for footer"
-  },
-  "theme.SearchModal.noResultsScreen.noResultsText": {
-    "message": "検索結果なし",
-    "description": "The text when there are no results"
-  },
-  "theme.SearchModal.noResultsScreen.suggestedQueryText": {
-    "message": "他の推奨検索語",
-    "description": "The text for suggested query"
-  },
-  "theme.SearchModal.noResultsScreen.reportMissingResultsText": {
-    "message": "検索結果がないのはエラーだと思いますか？",
-    "description": "The text for reporting missing results"
-  },
-  "theme.SearchModal.noResultsScreen.reportMissingResultsLinkText": {
-    "message": "お知らせください。",
-    "description": "The link text for reporting missing results"
-  },
-  "theme.SearchModal.placeholder": {
-    "message": "ドキュメント検索",
-    "description": "The placeholder of the input of the DocSearch pop-up modal"
-  },
-  "theme.colorToggle.ariaLabel.mode.system": {
-    "message": "システムモード",
-    "description": "The name for the system color mode"
-  },
-  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
-    "message": "ドロップダウンを展開",
-    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
-  },
-  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
-    "message": "ドロップダウンを折りたたむ",
-    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
-  },
-  "theme.mslogin.buttonText": {
-    "message": "🔑 Microsoft アカウントでログイン",
-    "description": "The text for the login button"
-  },
-  "theme.typedefstruct.fieldDetails": {
-    "message": "フィールド詳細"
-  },
-  "theme.typedefstruct.availableValue": {
-    "message": "可能な値"
-  },
-  "theme.typedefstruct.value": {
-    "message": "値"
-  },
-  "theme.typedefstruct.description": {
-    "message": "説明"
-  },
-  "theme.typedefstruct.references": {
-    "message": "参考"
-  },
-  "theme.typedefstruct.relatedStructs": {
-    "message": "関連構造体"
-  },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "（新しいタブで開く）",
-    "description": "The ARIA label for the external link icon"
-  },
-  "theme.SearchModal.searchBox.placeholderText": {
-    "message": "ドキュメント検索",
-    "description": "The placeholder text for the main search input field"
-  },
-  "theme.SearchModal.searchBox.placeholderTextAskAi": {
-    "message": "別の質問をする...",
-    "description": "The placeholder text when in AI question mode"
-  },
-  "theme.SearchModal.searchBox.placeholderTextAskAiStreaming": {
-    "message": "回答中...",
-    "description": "The placeholder text for search box when AI is streaming an answer"
-  },
-  "theme.SearchModal.searchBox.enterKeyHint": {
-    "message": "検索",
-    "description": "The hint for the search box enter key text"
-  },
-  "theme.SearchModal.searchBox.enterKeyHintAskAi": {
-    "message": "入力",
-    "description": "The hint for the Ask AI search box enter key text"
-  },
-  "theme.SearchModal.searchBox.searchInputLabel": {
-    "message": "検索",
-    "description": "The ARIA label for search input"
-  },
-  "theme.SearchModal.searchBox.backToKeywordSearchButtonText": {
-    "message": "キーワード検索に戻る",
-    "description": "The text for back to keyword search button"
-  },
-  "theme.SearchModal.searchBox.backToKeywordSearchButtonAriaLabel": {
-    "message": "キーワード検索に戻る",
-    "description": "The ARIA label for back to keyword search button"
-  },
-  "theme.SearchModal.startScreen.recentConversationsTitle": {
-    "message": "最近の会話",
-    "description": "The title for recent conversations"
-  },
-  "theme.SearchModal.startScreen.removeRecentConversationButtonTitle": {
-    "message": "この会話を履歴から削除",
-    "description": "The title for remove recent conversation button"
-  },
-  "theme.SearchModal.resultsScreen.askAiPlaceholder": {
-    "message": "AIに質問：",
-    "description": "The placeholder text for Ask AI input"
-  },
-  "theme.SearchModal.askAiScreen.disclaimerText": {
-    "message": "回答はAIが生成するため、誤りを含む場合があります。内容をご確認ください。",
-    "description": "The disclaimer text for AI answers"
-  },
-  "theme.SearchModal.askAiScreen.relatedSourcesText": {
-    "message": "関連ソース",
-    "description": "The text for related sources"
-  },
-  "theme.SearchModal.askAiScreen.thinkingText": {
-    "message": "考え中...",
-    "description": "The text when AI is thinking"
-  },
-  "theme.SearchModal.askAiScreen.copyButtonText": {
-    "message": "コピー",
-    "description": "The text for copy button"
-  },
-  "theme.SearchModal.askAiScreen.copyButtonCopiedText": {
-    "message": "コピーしました！",
-    "description": "The text for copy button when copied"
-  },
-  "theme.SearchModal.askAiScreen.copyButtonTitle": {
-    "message": "コピー",
-    "description": "The title for copy button"
-  },
-  "theme.SearchModal.askAiScreen.likeButtonTitle": {
-    "message": "高評価",
-    "description": "The title for like button"
-  },
-  "theme.SearchModal.askAiScreen.dislikeButtonTitle": {
-    "message": "低評価",
-    "description": "The title for dislike button"
-  },
-  "theme.SearchModal.askAiScreen.thanksForFeedbackText": {
-    "message": "フィードバックありがとうございます！",
-    "description": "The text for thanks for feedback"
-  },
-  "theme.SearchModal.askAiScreen.preToolCallText": {
-    "message": "検索中...",
-    "description": "The text before tool call"
-  },
-  "theme.SearchModal.askAiScreen.duringToolCallText": {
-    "message": "検索中：",
-    "description": "The text during tool call"
-  },
-  "theme.SearchModal.askAiScreen.afterToolCallText": {
-    "message": "検索完了：",
-    "description": "The text after tool call"
-  },
-  "theme.SearchModal.footer.submitQuestionText": {
-    "message": "質問を送信",
-    "description": "The submit question text for footer"
-  },
-  "theme.SearchModal.footer.backToSearchText": {
-    "message": "検索に戻る",
-    "description": "The back to search text for footer"
-  },
-  "externalLinks.peripheral.dm20.desc": {
-    "message": "多扉セキュリティ I/O モジュール"
-  },
-  "feedback.components.sendFeedback": {
-    "message": "フィードバックを送信"
-  },
-  "feedback.components.thanksForFeedback": {
-    "message": "フィードバックをお寄せいただきありがとうございます。"
-  },
-  "feedback.components.successSubtext": {
-    "message": "ご意見はドキュメント改善に役立てます。"
-  },
-  "feedback.components.feedbackTitle": {
-    "message": "このページは役に立ちましたか？"
-  },
-  "feedback.components.feedbackDescription": {
-    "message": "お寄せいただいたフィードバックはドキュメント品質向上に大いに役立ちます。"
-  },
-  "feedback.components.feedbackTypeGood": {
-    "message": "役に立ちました。"
-  },
-  "feedback.components.feedbackTypeBad": {
-    "message": "改善が必要です。"
-  },
-  "feedback.components.quickSubmitButton.onGoing": {
-    "message": "送信中..."
-  },
-  "feedback.components.quickSubmitButton.idle": {
-    "message": "クイック送信（追加意見なし）"
-  },
-  "feedback.components.feedbackDetail": {
-    "message": "評価の詳細を教えてください。"
-  },
-  "feedback.components.required": {
-    "message": "(必須)"
-  },
-  "feedback.components.optional": {
-    "message": "(任意)"
-  },
-  "feedback.component.feedbackTextarea.negativePlaceholder": {
-    "message": "ドキュメントの問題点を詳しくお書きいただければ、可能な限り反映いたします。"
-  },
-  "feedback.component.feedbackTextarea.positivePlaceholder": {
-    "message": "改善が必要な点や追加のご意見を自由にご記入ください。"
-  },
-  "feedback.component.requiredNote": {
-    "message": "* 必須入力"
-  },
-  "feedback.components.errorMessage": {
-    "message": "フィードバックの送信中にエラーが発生しました。しばらくしてから再試行してください。"
-  },
-  "feedback.components.validationError": {
-    "message": "改善が必要な部分について詳細なご意見をご記入ください。"
-  },
-  "feedback.component.feedbackCompletedMessage": {
-    "message": "フィードバックを送信"
-  },
-  "feedback.component.cancelButton.label": {
-    "message": "フィードバック入力をキャンセル"
-  },
-  "feedback.component.privacyNote": {
-    "message": "送信されたフィードバックはドキュメント改善の目的にのみ使用され、個人を特定できる情報は収集されません。"
-  },
-  "externalLinks.XPassQ2.desc": {
-    "message": "カードおよびQR/バーコード認証対応入退室装置"
-  },
-  "externalLinks.dev.sdk.desc": {
-    "message": "指紋認証デバイスのコア機能を<br/>サードパーティ製ソフトウェアと完全に統合"
-  },
-  "externalLinks.dev.xapi.desc": {
-    "message": "BioStar XのすべてのAPIを<br/>一目で確認できるAPIドキュメント"
-  },
-  "externalLinks.dev.2api.desc": {
-    "message": "BioStar 2のすべてのAPIを<br/>一目で確認できるAPIドキュメント"
-  },
-  "externalLinks.dev.gsdk.desc": {
-    "message": "多様なプログラミング言語をサポートする<br/>クロスプラットフォームソリューション"
-  },
-  "externalLinks.dev.svpsdk.desc": {
-    "message": "Suprema デバイスの主要機能を<br/>他ソフトウェアでサポート"
-  }
+   "externalLinks.BioEntryW3.desc": {
+      "message": "シンプルで耐久性が高く、安全な AI ベースの顔認証デバイス"
+   },
+   "externalLinks.BioStation3.desc": {
+      "message": "次世代の入退室管理ソリューション"
+   },
+   "externalLinks.FaceStationF2.desc": {
+      "message": "フュージョン顔認証装置"
+   },
+   "externalLinks.XStation2.desc": {
+      "message": "次世代モバイル入退室認証端末"
+   },
+   "externalLinks.BioentryP2.desc": {
+      "message": "コンパクト指紋認証端末"
+   },
+   "externalLinks.XPass2.desc": {
+      "message": "屋外対応コンパクト RFID リーダー"
+   },
+   "externalLinks.XPassS2.desc": {
+      "message": "IP RFID 入退室制御端末"
+   },
+   "externalLinks.Aiirfobpatch.desc": {
+      "message": "モバイルアクセスカード変換装置"
+   },
+   "externalLinks.CoreStation.desc": {
+      "message": "インテリジェント生体認証コントローラー"
+   },
+   "externalLinks.CoreStation20.desc": {
+      "message": "強力なセキュリティと柔軟な拡張性"
+   },
+   "externalLinks.CoreStationEnclosure.desc": {
+      "message": "CoreStation 専用エンクロージャー"
+   },
+   "externalLinks.peripheral.im120.desc": {
+      "message": "マルチ入力拡張モジュール"
+   },
+   "externalLinks.peripheral.om120.desc": {
+      "message": "マルチ出力制御モジュール"
+   },
+   "externalLinks.peripheral.di24.desc": {
+      "message": "拡張可能な制御、途切れのない入退室"
+   },
+   "externalLinks.peripheral.sio2.desc": {
+      "message": "扉用セキュリティコントロールモジュール"
+   },
+   "externalLinks.peripheral.extendedmodule.desc": {
+      "message": "拡張型通信・セキュリティモジュール"
+   },
+   "externalLinks.apps.devicemanager.desc": {
+      "message": "モバイルベース入退室装置管理アプリケーション"
+   },
+   "externalLinks.apps.setupmanager.desc": {
+      "message": "集中型入退室管理ウェブサーバー"
+   },
+   "theme.docs.breadcrumbs.navAriaLabel": {
+      "message": "パンくずリスト",
+      "description": "The ARIA label for the breadcrumbs"
+   },
+   "theme.admonition.caution": {
+      "message": "注意",
+      "description": "The default label used for the Caution admonition (:::caution)"
+   },
+   "theme.admonition.danger": {
+      "message": "危険",
+      "description": "The default label used for the Danger admonition (:::danger)"
+   },
+   "theme.admonition.info": {
+      "message": "情報",
+      "description": "The default label used for the Info admonition (:::info)"
+   },
+   "theme.admonition.note": {
+      "message": "注記",
+      "description": "The default label used for the Note admonition (:::note)"
+   },
+   "theme.admonition.tip": {
+      "message": "ヒント",
+      "description": "The default label used for the Tip admonition (:::tip)"
+   },
+   "theme.admonition.warning": {
+      "message": "警告",
+      "description": "The default label used for the Warning admonition (:::warning)"
+   },
+   "theme.docs.breadcrumbs.home": {
+      "message": "ホーム",
+      "description": "The ARIA label for the home page in the breadcrumbs"
+   },
+   "theme.ErrorPageContent.title": {
+      "message": "ページにエラーが発生しました。",
+      "description": "The title of the fallback page when the page crashed"
+   },
+   "theme.BackToTopButton.buttonAriaLabel": {
+      "message": "トップへスクロール",
+      "description": "The ARIA label for the back to top button"
+   },
+   "theme.blog.archive.title": {
+      "message": "投稿一覧",
+      "description": "The page & hero title of the blog archive page"
+   },
+   "theme.blog.archive.description": {
+      "message": "投稿一覧",
+      "description": "The page & hero description of the blog archive page"
+   },
+   "theme.blog.paginator.navAriaLabel": {
+      "message": "ブログ投稿一覧をナビゲート",
+      "description": "The ARIA label for the blog pagination"
+   },
+   "theme.blog.paginator.newerEntries": {
+      "message": "前のページ",
+      "description": "The label used to navigate to the newer blog posts page (previous page)"
+   },
+   "theme.blog.paginator.olderEntries": {
+      "message": "次のページ",
+      "description": "The label used to navigate to the older blog posts page (next page)"
+   },
+   "theme.blog.post.paginator.navAriaLabel": {
+      "message": "ブログ投稿をナビゲート",
+      "description": "The ARIA label for the blog posts pagination"
+   },
+   "theme.blog.post.paginator.newerPost": {
+      "message": "前の投稿",
+      "description": "The blog post button label to navigate to the newer/previous post"
+   },
+   "theme.blog.post.paginator.olderPost": {
+      "message": "次の投稿",
+      "description": "The blog post button label to navigate to the older/next post"
+   },
+   "theme.tags.tagsPageLink": {
+      "message": "すべてのタグを表示",
+      "description": "The label of the link targeting the tag list page"
+   },
+   "theme.colorToggle.ariaLabel": {
+      "message": "ダークモードとライトモードを切り替え (現在 {mode})",
+      "description": "The ARIA label for the color mode toggle"
+   },
+   "theme.colorToggle.ariaLabel.mode.dark": {
+      "message": "ダークモード",
+      "description": "The name for the dark color mode"
+   },
+   "theme.colorToggle.ariaLabel.mode.light": {
+      "message": "ライトモード",
+      "description": "The name for the light color mode"
+   },
+   "theme.docs.DocCard.categoryDescription.plurals": {
+      "message": "{count} 件のドキュメント",
+      "description": "The default description for a category card in the generated index about how many items this category includes"
+   },
+   "theme.docs.paginator.navAriaLabel": {
+      "message": "ドキュメントページ",
+      "description": "The ARIA label for the docs pagination"
+   },
+   "theme.docs.paginator.previous": {
+      "message": "前へ",
+      "description": "The label used to navigate to the previous doc"
+   },
+   "theme.docs.paginator.next": {
+      "message": "次へ",
+      "description": "The label used to navigate to the next doc"
+   },
+   "theme.docs.tagDocListPageTitle.nDocsTagged": {
+      "message": "{count} 件のドキュメントが",
+      "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+   },
+   "theme.docs.tagDocListPageTitle": {
+      "message": "{nDocsTagged} 件が「{tagName}」タグに分類されています",
+      "description": "The title of the page for a docs tag"
+   },
+   "theme.docs.versionBadge.label": {
+      "message": "バージョン：{versionLabel}"
+   },
+   "theme.docs.versions.unreleasedVersionLabel": {
+      "message": "{siteTitle} {versionLabel} のドキュメントはまだ正式公開されていません。",
+      "description": "The label used to tell the user that he's browsing an unreleased doc version"
+   },
+   "theme.docs.versions.unmaintainedVersionLabel": {
+      "message": "{siteTitle} {versionLabel} のドキュメントは更新が終了しています。",
+      "description": "The label used to tell the user that he's browsing an unmaintained doc version"
+   },
+   "theme.docs.versions.latestVersionSuggestionLabel": {
+      "message": "最新のドキュメントは {latestVersionLink} ({versionLabel}) をご覧ください。",
+      "description": "The label used to tell the user to check the latest version"
+   },
+   "theme.docs.versions.latestVersionLinkLabel": {
+      "message": "最新バージョン",
+      "description": "The label used for the latest version suggestion link label"
+   },
+   "theme.common.editThisPage": {
+      "message": "このページを編集",
+      "description": "The link label to edit the current page"
+   },
+   "theme.common.headingLinkTitle": {
+      "message": "{heading} への直接リンク",
+      "description": "Title for link to heading"
+   },
+   "theme.lastUpdated.atDate": {
+      "message": " {date} に",
+      "description": "The words used to describe on which date a page has been last updated"
+   },
+   "theme.lastUpdated.byUser": {
+      "message": " {user} が",
+      "description": "The words used to describe by who the page has been last updated"
+   },
+   "theme.lastUpdated.lastUpdatedAtBy": {
+      "message": "最終更新：{atDate}{byUser}",
+      "description": "The sentence used to display when a page has been last updated, and by who"
+   },
+   "theme.navbar.mobileVersionsDropdown.label": {
+      "message": "バージョン",
+      "description": "The label for the navbar versions dropdown on mobile view"
+   },
+   "theme.NotFound.title": {
+      "message": "ページが見つかりません。",
+      "description": "The title of the 404 page"
+   },
+   "theme.tags.tagsListLabel": {
+      "message": "タグ：",
+      "description": "The label alongside a tag list"
+   },
+   "theme.AnnouncementBar.closeButtonAriaLabel": {
+      "message": "閉じる",
+      "description": "The ARIA label for close button of announcement bar"
+   },
+   "theme.blog.sidebar.navAriaLabel": {
+      "message": "最近のブログ記事を閲覧",
+      "description": "The ARIA label for recent posts in the blog sidebar"
+   },
+   "theme.CodeBlock.copied": {
+      "message": "コピーしました",
+      "description": "The copied button label on code blocks"
+   },
+   "theme.CodeBlock.copyButtonAriaLabel": {
+      "message": "クリップボードにコードをコピー",
+      "description": "The ARIA label for copy code blocks button"
+   },
+   "theme.CodeBlock.copy": {
+      "message": "コピー",
+      "description": "The copy button label on code blocks"
+   },
+   "theme.CodeBlock.wordWrapToggle": {
+      "message": "折り返しを切り替え",
+      "description": "The title attribute for toggle word wrapping button of code block lines"
+   },
+   "theme.DocSidebarItem.expandCategoryAriaLabel": {
+      "message": "サイドバー分類 '{label}' を展開",
+      "description": "The ARIA label to expand the sidebar category"
+   },
+   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+      "message": "サイドバー分類 '{label}' を折りたたむ",
+      "description": "The ARIA label to collapse the sidebar category"
+   },
+   "theme.NavBar.navAriaLabel": {
+      "message": "メイン",
+      "description": "The ARIA label for the main navigation"
+   },
+   "theme.navbar.mobileLanguageDropdown.label": {
+      "message": "言語",
+      "description": "The label for the mobile language switcher dropdown"
+   },
+   "theme.NotFound.p1": {
+      "message": "お探しのページが見つかりません。",
+      "description": "The first paragraph of the 404 page"
+   },
+   "theme.NotFound.p2": {
+      "message": "リンク切れをサイト管理者にお知らせください。",
+      "description": "The 2nd paragraph of the 404 page"
+   },
+   "theme.TOCCollapsible.toggleButtonLabel": {
+      "message": "目次を表示",
+      "description": "The label used by the button on the collapsible TOC component"
+   },
+   "theme.blog.post.readMore": {
+      "message": "続きを読む",
+      "description": "The label used in blog post item excerpts to link to full blog posts"
+   },
+   "theme.blog.post.readMoreLabel": {
+      "message": "「{title}」をさらに読む",
+      "description": "The ARIA label for the link to full blog posts from excerpts"
+   },
+   "theme.blog.post.readingTime.plurals": {
+      "message": "約 {readingTime} 分",
+      "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+   },
+   "theme.docs.sidebar.collapseButtonTitle": {
+      "message": "サイドバーを隠す",
+      "description": "The title attribute for collapse button of doc sidebar"
+   },
+   "theme.docs.sidebar.collapseButtonAriaLabel": {
+      "message": "サイドバーを隠す",
+      "description": "The title attribute for collapse button of doc sidebar"
+   },
+   "theme.docs.sidebar.navAriaLabel": {
+      "message": "ドキュメントサイドバー",
+      "description": "The ARIA label for the sidebar navigation"
+   },
+   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+      "message": "サイドバーを閉じる",
+      "description": "The ARIA label for close button of mobile sidebar"
+   },
+   "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+      "message": "← メインメニューに戻る",
+      "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
+   },
+   "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+      "message": "サイドバーを展開/折りたたむ",
+      "description": "The ARIA label for hamburger menu button of mobile navigation"
+   },
+   "theme.docs.sidebar.expandButtonTitle": {
+      "message": "サイドバーを開く",
+      "description": "The ARIA label and title attribute for expand button of doc sidebar"
+   },
+   "theme.docs.sidebar.expandButtonAriaLabel": {
+      "message": "サイドバーを開く",
+      "description": "The ARIA label and title attribute for expand button of doc sidebar"
+   },
+   "theme.blog.post.plurals": {
+      "message": "{count}件の投稿",
+      "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+   },
+   "theme.blog.tagTitle": {
+      "message": "「{tagName}」タグに関連する{nPosts}件の投稿があります。",
+      "description": "The title of the page for a blog tag"
+   },
+   "theme.blog.author.pageTitle": {
+      "message": "{authorName} - {nPosts}",
+      "description": "The title of the page for a blog author"
+   },
+   "theme.blog.authorsList.pageTitle": {
+      "message": "著者",
+      "description": "The title of the authors page"
+   },
+   "theme.blog.authorsList.viewAll": {
+      "message": "すべての著者を表示",
+      "description": "The label of the link targeting the blog authors page"
+   },
+   "theme.blog.author.noPosts": {
+      "message": "この著者にはまだ投稿がありません。",
+      "description": "The text for authors with 0 blog post"
+   },
+   "theme.contentVisibility.unlistedBanner.title": {
+      "message": "インデックスされていないドキュメント",
+      "description": "The unlisted content banner title"
+   },
+   "theme.contentVisibility.unlistedBanner.message": {
+      "message": "このドキュメントはインデックスされません。検索エンジンはこのドキュメントをインデックスせず、URLを知っているユーザーのみがアクセスできます。",
+      "description": "The unlisted content banner message"
+   },
+   "theme.contentVisibility.draftBanner.title": {
+      "message": "作成中のページ",
+      "description": "The draft content banner title"
+   },
+   "theme.contentVisibility.draftBanner.message": {
+      "message": "このページはまだ作成中です。開発環境でのみ表示され、本番ビルドには含まれません。",
+      "description": "The draft content banner message"
+   },
+   "theme.ErrorPageContent.tryAgain": {
+      "message": "再試行",
+      "description": "The label of the button to try again rendering when the React error boundary captures an error"
+   },
+   "theme.common.skipToMainContent": {
+      "message": "本文へスキップ",
+      "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+   },
+   "theme.tags.tagsPageTitle": {
+      "message": "タグ",
+      "description": "The title of the tag list page"
+   },
+   "theme.docs.nextStep": {
+      "message": "次のステップ"
+   },
+   "theme.docs.overview.viewContent": {
+      "message": "コンテンツを見る"
+   },
+   "theme.docs.glossary.all": {
+      "message": "すべて",
+      "description": "The label for the glossary all button"
+   },
+   "theme.figureCaption.desc": {
+      "message": "上記の画像は例示です。実際の画面とは異なる場合があります。"
+   },
+   "theme.cover.address": {
+      "message": "<b>Suprema Inc</b><br/>17F Parkview Tower, 248, Jeongjail-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, 13554, Rep. of KOREA<br/>電話: +82 31 783 4502 | Fax: +82 31 783 4503 | お問い合わせ: sales_sys@supremainc.com"
+   },
+   "theme.cover.copyright": {
+      "message": "© 2025 Suprema Inc. 本書に記載されているSuprema、製品名、番号はSupremaの登録商標です。記載されている会社名および製品名は各社の商標または登録商標です。製品の外観、製造状態および仕様は予告なく変更される場合があります。"
+   },
+   "theme.cover.qrCodetext": {
+      "message": "For more information about Suprema’s global branch offices,<br/>visit the webpage below by scanning the QR code.<br/>https://supremainc.com/en/about/global-office.asp"
+   },
+   "theme.revision.badge": {
+      "message": "発生バージョン"
+   },
+   "index.search": {
+      "message": "検索"
+   },
+   "index.biostarx.description": {
+      "message": "入退室管理の限界を超える新たなセキュリティ基準、AIベースの統合セキュリティプラットフォーム"
+   },
+   "windows.key.start": {
+      "message": "開始"
+   },
+   "biostar2.install.ok": {
+      "message": "OK"
+   },
+   "biostar2.install.agree": {
+      "message": "同意する"
+   },
+   "biostar2.install.next": {
+      "message": "次へ"
+   },
+   "biostar2.install.expressInstall": {
+      "message": "簡易インストール"
+   },
+   "biostar2.install.customInstall": {
+      "message": "カスタムインストール"
+   },
+   "biostar2.install.btnInstall": {
+      "message": "インストール"
+   },
+   "biostar2.install.complete": {
+      "message": "完了"
+   },
+   "specs.common.supported": {
+      "message": "対応"
+   },
+   "specs.common.Notsupported": {
+      "message": "非対応"
+   },
+   "specs.credentials": {
+      "message": "クレデンシャル"
+   },
+   "specs.credentials.biometrics": {
+      "message": "生体認証"
+   },
+   "specs.credentials.biometrics.face": {
+      "message": "顔"
+   },
+   "specs.credentials.biometrics.fingerprint": {
+      "message": "指紋"
+   },
+   "specs.credentials.rfcard": {
+      "message": "RFカード"
+   },
+   "specs.credentials.rf_distance": {
+      "message": "RF認証距離"
+   },
+   "specs.credentials.multi_controller": {
+      "message": "マルチコントローラー"
+   },
+   "specs.credentials.mobile": {
+      "message": "モバイル"
+   },
+   "specs.credentials.keypad": {
+      "message": "スクランブルキーパッド（PIN）"
+   },
+   "specs.credentials.qr_barcode": {
+      "message": "QR/バーコード"
+   },
+   "specs.credentials.biometrics.face.auth_distance": {
+      "message": "認証距離"
+   },
+   "specs.credentials.biometrics.face.auth_height": {
+      "message": "認証高さ"
+   },
+   "specs.credentials.biometrics.face.matching_speed": {
+      "message": "マッチング速度"
+   },
+   "specs.credentials.biometrics.face.live_face_detection": {
+      "message": "偽顔検出"
+   },
+   "specs.credentials.biometrics.fingerprint.image_dimension": {
+      "message": "画像サイズ"
+   },
+   "specs.credentials.biometrics.fingerprint.image_bit_depth": {
+      "message": "画像ビット深度"
+   },
+   "specs.credentials.biometrics.fingerprint.resolution": {
+      "message": "解像度"
+   },
+   "specs.credentials.biometrics.fingerprint.template": {
+      "message": "テンプレート"
+   },
+   "specs.credentials.biometrics.fingerprint.extractor_matcher": {
+      "message": "抽出／照合"
+   },
+   "specs.credentials.biometrics.fingerprint.sensor_certificates": {
+      "message": "センサー認証"
+   },
+   "specs.credentials.biometrics.fingerprint.live_fingerprint_detection": {
+      "message": "偽造指紋検出"
+   },
+   "specs.general": {
+      "message": "一般"
+   },
+   "specs.general.modelName": {
+      "message": "モデル名"
+   },
+   "specs.general.cpu": {
+      "message": "CPU"
+   },
+   "specs.general.memory": {
+      "message": "メモリ"
+   },
+   "specs.general.crypto_chip": {
+      "message": "暗号チップ"
+   },
+   "specs.general.lcd_type": {
+      "message": "ディスプレイ"
+   },
+   "specs.general.led_type": {
+      "message": "LED"
+   },
+   "specs.general.led_type.multiColor": {
+      "message": "マルチカラー"
+   },
+   "specs.general.lcd_resolution": {
+      "message": "画面解像度"
+   },
+   "specs.general.sound": {
+      "message": "サウンド"
+   },
+   "specs.general.operating_temp": {
+      "message": "動作温度"
+   },
+   "specs.general.storage_temp": {
+      "message": "保管温度"
+   },
+   "specs.general.operating_humidity": {
+      "message": "動作湿度"
+   },
+   "specs.general.storage_humidity": {
+      "message": "保管湿度"
+   },
+   "specs.general.operating_condition": {
+      "message": "動作環境条件"
+   },
+   "specs.general.camera": {
+      "message": "カメラ"
+   },
+   "specs.general.camera_type": {
+      "message": "カメラタイプ"
+   },
+   "specs.general.camera_resolution": {
+      "message": "カメラ解像度"
+   },
+   "specs.general.camera_angle": {
+      "message": "カメラ角度"
+   },
+   "specs.general.ip_rating": {
+      "message": "IP等級"
+   },
+   "specs.general.ik_rating": {
+      "message": "IK等級"
+   },
+   "specs.general.certifications": {
+      "message": "認証"
+   },
+   "specs.general.supported_products": {
+      "message": "対応製品"
+   },
+   "specs.general.material": {
+      "message": "材質"
+   },
+   "specs.storage": {
+      "message": "ストレージ"
+   },
+   "specs.storage.max_users": {
+      "message": "最大ユーザー数"
+   },
+   "specs.storage.max_credentials_1n": {
+      "message": "最大クレデンシャル数（1:N）"
+   },
+   "specs.storage.max_credentials_1on1": {
+      "message": "最大クレデンシャル数（1:1）"
+   },
+   "specs.storage.max_text_logs": {
+      "message": "最大テキストログ数"
+   },
+   "specs.storage.max_image_logs": {
+      "message": "最大イメージログ数"
+   },
+   "specs.storage.max_card": {
+      "message": "最大カード数"
+   },
+   "specs.interface": {
+      "message": "インターフェース"
+   },
+   "specs.interface.ethernet": {
+      "message": "イーサネット"
+   },
+   "specs.interface.wifi": {
+      "message": "Wi-Fi"
+   },
+   "specs.interface.network_protocol": {
+      "message": "ネットワークプロトコル"
+   },
+   "specs.interface.rs485": {
+      "message": "RS-485"
+   },
+   "specs.interface.rs232c": {
+      "message": "RS-232C"
+   },
+   "specs.interface.rs485_protocol": {
+      "message": "RS-485通信プロトコル"
+   },
+   "specs.interface.wiegand": {
+      "message": "Wiegand"
+   },
+   "specs.interface.input": {
+      "message": "入力"
+   },
+   "specs.interface.output": {
+      "message": "出力"
+   },
+   "specs.interface.supervised": {
+      "message": "スーパーバイズド入力"
+   },
+   "specs.interface.auxInput": {
+      "message": "AUX入力"
+   },
+   "specs.interface.ttl_input": {
+      "message": "TTL入力"
+   },
+   "specs.interface.relay": {
+      "message": "リレー"
+   },
+   "specs.interface.poe": {
+      "message": "PoE"
+   },
+   "specs.interface.poe_plus": {
+      "message": "PoE+"
+   },
+   "specs.interface.interphone": {
+      "message": "インターホン"
+   },
+   "specs.interface.rtsp": {
+      "message": "RTSP"
+   },
+   "specs.interface.usb": {
+      "message": "USB"
+   },
+   "specs.interface.usb_ext": {
+      "message": "USB拡張ポート"
+   },
+   "specs.interface.tamper": {
+      "message": "タンパー"
+   },
+   "specs.interface.samSlot": {
+      "message": "SAMカードスロット"
+   },
+   "specs.interface.led": {
+      "message": "LED"
+   },
+   "specs.interface.beep": {
+      "message": "Beep"
+   },
+   "specs.power": {
+      "message": "電気仕様"
+   },
+   "specs.power.power": {
+      "message": "電源"
+   },
+   "specs.power.power_output": {
+      "message": "電源出力"
+   },
+   "specs.power.powerSupply": {
+      "message": "電源装置（SMPS）AC入力"
+   },
+   "specs.power.switch_input_vih": {
+      "message": "スイッチ入力VIH"
+   },
+   "specs.power.led_beep_input_vih": {
+      "message": "LED、Beep 入力 VIH"
+   },
+   "specs.power.switch_input_vil": {
+      "message": "スイッチ入力VIL"
+   },
+   "specs.power.led_beep_input_vil": {
+      "message": "LED、Beep 入力 VIL"
+   },
+   "specs.power.switch_pullup": {
+      "message": "スイッチプルアップ抵抗"
+   },
+   "specs.power.led_beep_pullup": {
+      "message": "LED、Beep プルアップ抵抗"
+   },
+   "specs.power.wiegand_voh": {
+      "message": "Wiegand出力VOH"
+   },
+   "specs.power.wiegand_vol": {
+      "message": "Wiegand出力VOL"
+   },
+   "specs.power.wiegand_pullup": {
+      "message": "Wiegand出力プルアップ抵抗"
+   },
+   "specs.power.relay": {
+      "message": "リレー"
+   },
+   "specs.power.poe12vout": {
+      "message": "PoE（12V 出力）"
+   },
+   "specs.power.poe_plus12vout": {
+      "message": "PoE+（12V 出力）"
+   },
+   "specs.size_weight": {
+      "message": "サイズと重量"
+   },
+   "specs.size_weight.size": {
+      "message": "サイズ"
+   },
+   "specs.size_weight.weight": {
+      "message": "重量"
+   },
+   "specs.size_weight.device": {
+      "message": "デバイス"
+   },
+   "specs.size_weight.bracket": {
+      "message": "ブラケット"
+   },
+   "specs.size_weight.bracket.weight_include": {
+      "message": "（ワッシャーおよびボルト含む）"
+   },
+   "specs.power_supply": {
+      "message": "電源供給装置"
+   },
+   "specs.power_supply.modelName": {
+      "message": "モデル名"
+   },
+   "specs.power_supply.vendor": {
+      "message": "ベンダー"
+   },
+   "specs.power_supply.input": {
+      "message": "入力"
+   },
+   "specs.power_supply.output": {
+      "message": "出力"
+   },
+   "specs.backup_battery": {
+      "message": "バックアップバッテリー"
+   },
+   "specs.backup_battery.modelName": {
+      "message": "モデル名"
+   },
+   "specs.backup_battery.vendor": {
+      "message": "ベンダー"
+   },
+   "specs.backup_battery.voltage": {
+      "message": "電圧"
+   },
+   "specs.backup_battery.capacity": {
+      "message": "容量"
+   },
+   "externalLinks.FaceStation2.desc": {
+      "message": "顔認証入退勤端末"
+   },
+   "externalLinks.BioStationL2.desc": {
+      "message": "指紋認証入退勤端末"
+   },
+   "externalLinks.BioLiteN2.desc": {
+      "message": "屋外型指紋認証入退勤装置"
+   },
+   "externalLinks.BioentryW2.desc": {
+      "message": "屋外型指紋認証入退室端末"
+   },
+   "theme.SearchPage.documentsFound.plurals": {
+      "message": "{count} 件のドキュメントが見つかりました。",
+      "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+   },
+   "theme.SearchPage.existingResultsTitle": {
+      "message": "「{query}」の検索結果",
+      "description": "The search page title for non-empty query"
+   },
+   "theme.SearchPage.emptyResultsTitle": {
+      "message": "ドキュメントを検索。",
+      "description": "The search page title for empty query"
+   },
+   "theme.SearchPage.inputPlaceholder": {
+      "message": "検索語を入力。",
+      "description": "The placeholder for search page input"
+   },
+   "theme.SearchPage.inputLabel": {
+      "message": "検索",
+      "description": "The ARIA label for search page input"
+   },
+   "theme.SearchPage.algoliaLabel": {
+      "message": "Algolia で検索",
+      "description": "The description label for Algolia mention"
+   },
+   "theme.SearchPage.noResultsText": {
+      "message": "検索結果がありません。",
+      "description": "The paragraph for empty search result"
+   },
+   "theme.SearchPage.fetchingNewResults": {
+      "message": "新しい検索結果を読み込み中です。",
+      "description": "The paragraph for fetching new search results"
+   },
+   "theme.SearchBar.seeAll": {
+      "message": "他の検索結果を表示"
+   },
+   "theme.SearchBar.label": {
+      "message": "検索",
+      "description": "The ARIA label and placeholder for search button"
+   },
+   "theme.SearchModal.searchBox.resetButtonTitle": {
+      "message": "検索語をリセット",
+      "description": "The label and ARIA label for search box reset button"
+   },
+   "theme.SearchModal.searchBox.cancelButtonText": {
+      "message": "キャンセル",
+      "description": "The label and ARIA label for search box cancel button"
+   },
+   "theme.SearchModal.startScreen.recentSearchesTitle": {
+      "message": "最近",
+      "description": "The title for recent searches"
+   },
+   "theme.SearchModal.startScreen.noRecentSearchesText": {
+      "message": "最近の検索語はありません",
+      "description": "The text when there are no recent searches"
+   },
+   "theme.SearchModal.startScreen.saveRecentSearchButtonTitle": {
+      "message": "この検索語を保存",
+      "description": "The title for save recent search button"
+   },
+   "theme.SearchModal.startScreen.removeRecentSearchButtonTitle": {
+      "message": "この検索語を最近の検索語から削除",
+      "description": "The title for remove recent search button"
+   },
+   "theme.SearchModal.startScreen.favoriteSearchesTitle": {
+      "message": "お気に入り",
+      "description": "The title for favorite searches"
+   },
+   "theme.SearchModal.startScreen.removeFavoriteSearchButtonTitle": {
+      "message": "この検索語をお気に入りから削除",
+      "description": "The title for remove favorite search button"
+   },
+   "theme.SearchModal.errorScreen.titleText": {
+      "message": "結果を読み込めません",
+      "description": "The title for error screen"
+   },
+   "theme.SearchModal.errorScreen.helpText": {
+      "message": "インターネット接続を再確認してください。",
+      "description": "The help text for error screen"
+   },
+   "theme.SearchModal.footer.selectText": {
+      "message": "で選択",
+      "description": "The select text for footer"
+   },
+   "theme.SearchModal.footer.selectKeyAriaLabel": {
+      "message": "Enter キー",
+      "description": "The ARIA label for select key in footer"
+   },
+   "theme.SearchModal.footer.navigateText": {
+      "message": "で移動",
+      "description": "The navigate text for footer"
+   },
+   "theme.SearchModal.footer.navigateUpKeyAriaLabel": {
+      "message": "上矢印キー",
+      "description": "The ARIA label for navigate up key in footer"
+   },
+   "theme.SearchModal.footer.navigateDownKeyAriaLabel": {
+      "message": "下矢印キー",
+      "description": "The ARIA label for navigate down key in footer"
+   },
+   "theme.SearchModal.footer.closeText": {
+      "message": "で閉じる",
+      "description": "The close text for footer"
+   },
+   "theme.SearchModal.footer.closeKeyAriaLabel": {
+      "message": "Esc キー",
+      "description": "The ARIA label for close key in footer"
+   },
+   "theme.SearchModal.footer.searchByText": {
+      "message": "検索提供",
+      "description": "The 'Powered by' text for footer"
+   },
+   "theme.SearchModal.noResultsScreen.noResultsText": {
+      "message": "検索結果なし",
+      "description": "The text when there are no results"
+   },
+   "theme.SearchModal.noResultsScreen.suggestedQueryText": {
+      "message": "他の推奨検索語",
+      "description": "The text for suggested query"
+   },
+   "theme.SearchModal.noResultsScreen.reportMissingResultsText": {
+      "message": "検索結果がないのはエラーだと思いますか？",
+      "description": "The text for reporting missing results"
+   },
+   "theme.SearchModal.noResultsScreen.reportMissingResultsLinkText": {
+      "message": "お知らせください。",
+      "description": "The link text for reporting missing results"
+   },
+   "theme.SearchModal.placeholder": {
+      "message": "ドキュメント検索",
+      "description": "The placeholder of the input of the DocSearch pop-up modal"
+   },
+   "theme.colorToggle.ariaLabel.mode.system": {
+      "message": "システムモード",
+      "description": "The name for the system color mode"
+   },
+   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+      "message": "ドロップダウンを展開",
+      "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+   },
+   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+      "message": "ドロップダウンを折りたたむ",
+      "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+   },
+   "theme.mslogin.buttonText": {
+      "message": "🔑 Microsoft アカウントでログイン",
+      "description": "The text for the login button"
+   },
+   "theme.typedefstruct.fieldDetails": {
+      "message": "フィールド詳細"
+   },
+   "theme.typedefstruct.availableValue": {
+      "message": "可能な値"
+   },
+   "theme.typedefstruct.value": {
+      "message": "値"
+   },
+   "theme.typedefstruct.description": {
+      "message": "説明"
+   },
+   "theme.typedefstruct.references": {
+      "message": "参考"
+   },
+   "theme.typedefstruct.relatedStructs": {
+      "message": "関連構造体"
+   },
+   "theme.IconExternalLink.ariaLabel": {
+      "message": "（新しいタブで開く）",
+      "description": "The ARIA label for the external link icon"
+   },
+   "theme.SearchModal.searchBox.placeholderText": {
+      "message": "ドキュメント検索",
+      "description": "The placeholder text for the main search input field"
+   },
+   "theme.SearchModal.searchBox.placeholderTextAskAi": {
+      "message": "別の質問をする...",
+      "description": "The placeholder text when in AI question mode"
+   },
+   "theme.SearchModal.searchBox.placeholderTextAskAiStreaming": {
+      "message": "回答中...",
+      "description": "The placeholder text for search box when AI is streaming an answer"
+   },
+   "theme.SearchModal.searchBox.enterKeyHint": {
+      "message": "検索",
+      "description": "The hint for the search box enter key text"
+   },
+   "theme.SearchModal.searchBox.enterKeyHintAskAi": {
+      "message": "入力",
+      "description": "The hint for the Ask AI search box enter key text"
+   },
+   "theme.SearchModal.searchBox.searchInputLabel": {
+      "message": "検索",
+      "description": "The ARIA label for search input"
+   },
+   "theme.SearchModal.searchBox.backToKeywordSearchButtonText": {
+      "message": "キーワード検索に戻る",
+      "description": "The text for back to keyword search button"
+   },
+   "theme.SearchModal.searchBox.backToKeywordSearchButtonAriaLabel": {
+      "message": "キーワード検索に戻る",
+      "description": "The ARIA label for back to keyword search button"
+   },
+   "theme.SearchModal.startScreen.recentConversationsTitle": {
+      "message": "最近の会話",
+      "description": "The title for recent conversations"
+   },
+   "theme.SearchModal.startScreen.removeRecentConversationButtonTitle": {
+      "message": "この会話を履歴から削除",
+      "description": "The title for remove recent conversation button"
+   },
+   "theme.SearchModal.resultsScreen.askAiPlaceholder": {
+      "message": "AIに質問：",
+      "description": "The placeholder text for Ask AI input"
+   },
+   "theme.SearchModal.askAiScreen.disclaimerText": {
+      "message": "回答はAIが生成するため、誤りを含む場合があります。内容をご確認ください。",
+      "description": "The disclaimer text for AI answers"
+   },
+   "theme.SearchModal.askAiScreen.relatedSourcesText": {
+      "message": "関連ソース",
+      "description": "The text for related sources"
+   },
+   "theme.SearchModal.askAiScreen.thinkingText": {
+      "message": "考え中...",
+      "description": "The text when AI is thinking"
+   },
+   "theme.SearchModal.askAiScreen.copyButtonText": {
+      "message": "コピー",
+      "description": "The text for copy button"
+   },
+   "theme.SearchModal.askAiScreen.copyButtonCopiedText": {
+      "message": "コピーしました！",
+      "description": "The text for copy button when copied"
+   },
+   "theme.SearchModal.askAiScreen.copyButtonTitle": {
+      "message": "コピー",
+      "description": "The title for copy button"
+   },
+   "theme.SearchModal.askAiScreen.likeButtonTitle": {
+      "message": "高評価",
+      "description": "The title for like button"
+   },
+   "theme.SearchModal.askAiScreen.dislikeButtonTitle": {
+      "message": "低評価",
+      "description": "The title for dislike button"
+   },
+   "theme.SearchModal.askAiScreen.thanksForFeedbackText": {
+      "message": "フィードバックありがとうございます！",
+      "description": "The text for thanks for feedback"
+   },
+   "theme.SearchModal.askAiScreen.preToolCallText": {
+      "message": "検索中...",
+      "description": "The text before tool call"
+   },
+   "theme.SearchModal.askAiScreen.duringToolCallText": {
+      "message": "検索中：",
+      "description": "The text during tool call"
+   },
+   "theme.SearchModal.askAiScreen.afterToolCallText": {
+      "message": "検索完了：",
+      "description": "The text after tool call"
+   },
+   "theme.SearchModal.footer.submitQuestionText": {
+      "message": "質問を送信",
+      "description": "The submit question text for footer"
+   },
+   "theme.SearchModal.footer.backToSearchText": {
+      "message": "検索に戻る",
+      "description": "The back to search text for footer"
+   },
+   "externalLinks.peripheral.dm20.desc": {
+      "message": "多扉セキュリティ I/O モジュール"
+   },
+   "feedback.components.sendFeedback": {
+      "message": "フィードバックを送信"
+   },
+   "feedback.components.thanksForFeedback": {
+      "message": "フィードバックをお寄せいただきありがとうございます。"
+   },
+   "feedback.components.successSubtext": {
+      "message": "ご意見はドキュメント改善に役立てます。"
+   },
+   "feedback.components.feedbackTitle": {
+      "message": "このページは役に立ちましたか？"
+   },
+   "feedback.components.feedbackDescription": {
+      "message": "お寄せいただいたフィードバックはドキュメント品質向上に大いに役立ちます。"
+   },
+   "feedback.components.feedbackTypeGood": {
+      "message": "役に立ちました。"
+   },
+   "feedback.components.feedbackTypeBad": {
+      "message": "改善が必要です。"
+   },
+   "feedback.components.quickSubmitButton.onGoing": {
+      "message": "送信中..."
+   },
+   "feedback.components.quickSubmitButton.idle": {
+      "message": "クイック送信（追加意見なし）"
+   },
+   "feedback.components.feedbackDetail": {
+      "message": "評価の詳細を教えてください。"
+   },
+   "feedback.components.required": {
+      "message": "(必須)"
+   },
+   "feedback.components.optional": {
+      "message": "(任意)"
+   },
+   "feedback.component.feedbackTextarea.negativePlaceholder": {
+      "message": "ドキュメントの問題点を詳しくお書きいただければ、可能な限り反映いたします。"
+   },
+   "feedback.component.feedbackTextarea.positivePlaceholder": {
+      "message": "改善が必要な点や追加のご意見を自由にご記入ください。"
+   },
+   "feedback.component.requiredNote": {
+      "message": "* 必須入力"
+   },
+   "feedback.components.errorMessage": {
+      "message": "フィードバックの送信中にエラーが発生しました。しばらくしてから再試行してください。"
+   },
+   "feedback.components.validationError": {
+      "message": "改善が必要な部分について詳細なご意見をご記入ください。"
+   },
+   "feedback.component.feedbackCompletedMessage": {
+      "message": "フィードバックを送信"
+   },
+   "feedback.component.cancelButton.label": {
+      "message": "フィードバック入力をキャンセル"
+   },
+   "feedback.component.privacyNote": {
+      "message": "送信されたフィードバックはドキュメント改善の目的にのみ使用され、個人を特定できる情報は収集されません。"
+   },
+   "externalLinks.XPassQ2.desc": {
+      "message": "カードおよびQR/バーコード認証対応入退室装置"
+   },
+   "externalLinks.dev.sdk.desc": {
+      "message": "指紋認証デバイスのコア機能を<br/>サードパーティ製ソフトウェアと完全に統合"
+   },
+   "externalLinks.dev.xapi.desc": {
+      "message": "BioStar XのすべてのAPIを<br/>一目で確認できるAPIドキュメント"
+   },
+   "externalLinks.dev.2api.desc": {
+      "message": "BioStar 2のすべてのAPIを<br/>一目で確認できるAPIドキュメント"
+   },
+   "externalLinks.dev.gsdk.desc": {
+      "message": "多様なプログラミング言語をサポートする<br/>クロスプラットフォームソリューション"
+   },
+   "externalLinks.dev.svpsdk.desc": {
+      "message": "Suprema デバイスの主要機能を<br/>他ソフトウェアでサポート"
+   }
 }
