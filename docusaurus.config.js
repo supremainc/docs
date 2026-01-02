@@ -125,6 +125,7 @@ const config = {
           path: 'changelogs',
           editLocalizedFiles: false,
           blogTitle: 'Change Logs',
+          blogDescription: 'Suprema product change logs',
           routeBasePath: 'changelogs',
           showReadingTime: true,
           blogSidebarCount: 'ALL',
