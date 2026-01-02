@@ -31,13 +31,11 @@ Configura el modo de autenticación. Utilice <Cmd sid="ui_228" product="dev" />,
 5. Después de configurar el modo de autenticación deseado, configura <Cmd sid="ui_203" product="dev" />.
 
    <div className="overflow-x">
-
-   | Categoría | Descripción |
-   | :-: | --- |
-   | Rostro | - <Image src="/img/common/ico-authmode-face-bs3.png" ico alone />: Este modo utiliza únicamente autenticación facial.<br />- <Image src="/img/common/ico-authmode-face-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo requiere autenticación facial seguida de la introducción de un PIN. |
-   | Tarjeta / Código QR | - <Image src="/img/common/ico-authmode-card-bs3.png" ico alone />: Este modo utiliza solo la autenticación por tarjeta / código QR.<br />- <Image src="/img/common/ico-authmode-card-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3.png" ico alone />: Este modo requiere autenticación con tarjeta / código QR seguida de autenticación facial.<br />- <Image src="/img/common/ico-authmode-card-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo requiere autenticación mediante tarjeta / código QR seguida de ingreso de PIN.<br />- <Image src="/img/common/ico-authmode-card-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3.png" ico alone /> / <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo requiere autenticación con tarjeta / código QR seguida de autenticación facial o introducción de PIN.<br />- <Image src="/img/common/ico-authmode-card-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo utiliza autenticación facial y PIN después de la autenticación con tarjeta / código QR. |
-   | ID | - <Image src="/img/common/ico-authmode-id-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3.png" ico alone />: Este modo requiere la introducción de ID seguida de autenticación facial.<br />- <Image src="/img/common/ico-authmode-id-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo requiere ingresar un ID seguido de ingreso de PIN.<br />- <Image src="/img/common/ico-authmode-id-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3.png" ico alone /> / <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo requiere la introducción de ID seguida de autenticación facial o introducción de PIN.<br />- <Image src="/img/common/ico-authmode-id-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo utiliza autenticación facial y PIN después de la introducción de ID. |
-
+     | Categoría | Descripción |
+     | :-: | --- |
+     | Rostro | - <Image src="/img/common/ico-authmode-face-bs3.png" ico alone />: Este modo utiliza únicamente autenticación facial.<br />- <Image src="/img/common/ico-authmode-face-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo requiere autenticación facial seguida de la introducción de un PIN. |
+     | Tarjeta / Código QR | - <Image src="/img/common/ico-authmode-card-bs3.png" ico alone />: Este modo utiliza solo la autenticación por tarjeta / código QR.<br />- <Image src="/img/common/ico-authmode-card-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3.png" ico alone />: Este modo requiere autenticación con tarjeta / código QR seguida de autenticación facial.<br />- <Image src="/img/common/ico-authmode-card-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo requiere autenticación mediante tarjeta / código QR seguida de ingreso de PIN.<br />- <Image src="/img/common/ico-authmode-card-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3.png" ico alone /> / <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo requiere autenticación con tarjeta / código QR seguida de autenticación facial o introducción de PIN.<br />- <Image src="/img/common/ico-authmode-card-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo utiliza autenticación facial y PIN después de la autenticación con tarjeta / código QR. |
+     | ID | - <Image src="/img/common/ico-authmode-id-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3.png" ico alone />: Este modo requiere la introducción de ID seguida de autenticación facial.<br />- <Image src="/img/common/ico-authmode-id-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo requiere ingresar un ID seguido de ingreso de PIN.<br />- <Image src="/img/common/ico-authmode-id-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3.png" ico alone /> / <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo requiere la introducción de ID seguida de autenticación facial o introducción de PIN.<br />- <Image src="/img/common/ico-authmode-id-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-face-bs3.png" ico alone /> + <Image src="/img/common/ico-authmode-pin-bs3.png" ico alone />: Este modo utiliza autenticación facial y PIN después de la introducción de ID. |
    </div>
 
    :::info
@@ -174,33 +172,33 @@ Cambie la configuración de la autenticación facial.
 
    * <Cmd sid="ui_229" product="dev" />: Defina la posición y el tamaño del área donde el dispositivo detecta rostros durante la autenticación facial.
 
-      :::info
+     :::info
 
-      Para un rendimiento óptimo, se recomienda usar los valores predeterminados de las subopciones de <Cmd sid="ui_229" product="dev" />. Los valores predeterminados de cada opción son los siguientes:
+     Para un rendimiento óptimo, se recomienda usar los valores predeterminados de las subopciones de <Cmd sid="ui_229" product="dev" />. Los valores predeterminados de cada opción son los siguientes:
 
-      * Ángulo máximo de orientación de la cabeza: 15
+     * Ángulo máximo de orientación de la cabeza: 15
 
-      * Distancia de detección: mín. 30 cm, máx. 100 cm
+     * Distancia de detección: mín. 30 cm, máx. 100 cm
 
-      * Búsqueda amplia: desactivada
+     * Búsqueda amplia: desactivada
 
-      :::
+     :::
 
    * <Cmd sid="ui_060" product="dev" />: Al activar <Cmd sid="ui_060" product="dev" />, podrá enrolar la <Cmd sid="ui_340" product="dev" /> emitida por BioStar X. <Cmd sid="ui_340" product="dev" /> permite la autenticación biométrica sin almacenar datos de usuario en el servidor BioStar X, Airfob Portal o dispositivo, al guardar la plantilla biométrica del usuario en una tarjeta de acceso móvil.
 
-      :::info
+     :::info
 
-      Para obtener más información sobre <Cmd sid="ui_340" product="dev" />, consulte la [Guía del administrador de BioStar X](../../platform/biostar_x/enroll-credential-mobile#template-on-mobile).
+     Para obtener más información sobre <Cmd sid="ui_340" product="dev" />, consulte la [Guía del administrador de BioStar X](../../platform/biostar_x/enroll-credential-mobile#template-on-mobile).
 
-      :::
+     :::
 
    * <Cmd sid="ui_157" product="dev" />: Configure para almacenar tanto las imágenes reales como las plantillas en Visual Face, o para guardar solo las plantillas sin imágenes. Si se desactiva, se eliminarán todas las imágenes almacenadas de rostros visuales y los rostros visuales enrolados posteriormente almacenarán solo las plantillas, sin imágenes.
 
-      :::info
+     :::info
 
-      Para administrar esta configuración, utilice Biostar 2 v2.9.7 o superior.
+     Para administrar esta configuración, utilice BioStar 2 v2.9.7 o superior.
 
-      :::
+     :::
 
    * <Cmd sid="ui_149" product="dev" />: Configura el nivel de seguridad para la autenticación 1:N.
 
@@ -212,13 +210,13 @@ Cambie la configuración de la autenticación facial.
 
    * <Cmd sid="ui_247" product="dev" />: Evite la autenticación de usuarios con rostros falsificados, como fotografías. Se activa cuando <Cmd sid="ui_278" product="dev" /> está configurado en <Cmd sid="ui_359" product="dev" />.
 
-      :::info
+     :::info
 
-      * El rendimiento de la función anti-spoofing facial se ha mejorado para aprobar la prueba iBeta Level 1 ISO 30107-3 de detección de ataques de presentación.
+     * El rendimiento de la función anti-spoofing facial se ha mejorado para aprobar la prueba iBeta Level 1 ISO 30107-3 de detección de ataques de presentación.
 
-      * Con luz solar intensa, se recomienda usar la función <Cmd sid="ui_247" product="dev" /> como <Cmd sid="ui_152" product="dev" />.
+     * Con luz solar intensa, se recomienda usar la función <Cmd sid="ui_247" product="dev" /> como <Cmd sid="ui_152" product="dev" />.
 
-      :::
+     :::
 
    * <Cmd sid="ui_070" product="dev" />: Cambie las configuraciones avanzadas para la autenticación facial, como la detección de mascarillas.
 
@@ -226,29 +224,29 @@ Cambie la configuración de la autenticación facial.
 
      * <Cmd sid="ui_067" product="dev" />: Defina el método para comprobar si se lleva mascarilla. Se activa cuando <Cmd sid="ui_123" product="dev" /> está configurado en <Cmd sid="ui_161" product="dev" />.
 
-         :::info
+       :::info
 
-         * <Cmd sid="ui_127" product="dev" />: A los usuarios que no usan mascarilla se les niega la autenticación y se registra un evento de incumplimiento de uso de mascarilla.
+       * <Cmd sid="ui_127" product="dev" />: A los usuarios que no usan mascarilla se les niega la autenticación y se registra un evento de incumplimiento de uso de mascarilla.
 
-         * <Cmd sid="ui_126" product="dev" />: Los usuarios que no usan mascarilla aún pueden autenticarse, pero se registra un evento de incumplimiento de uso de mascarilla.
+       * <Cmd sid="ui_126" product="dev" />: Los usuarios que no usan mascarilla aún pueden autenticarse, pero se registra un evento de incumplimiento de uso de mascarilla.
 
-         * <Cmd sid="ui_125" product="dev" />: Solo los usuarios que no usan mascarilla pueden autenticarse y, cuando se utiliza este modo, el modo de verificación de mascarilla se fija en <Cmd sid="ui_369" product="dev" />.
+       * <Cmd sid="ui_125" product="dev" />: Solo los usuarios que no usan mascarilla pueden autenticarse y, cuando se utiliza este modo, el modo de verificación de mascarilla se fija en <Cmd sid="ui_369" product="dev" />.
 
-         :::
+       :::
 
      * <Cmd sid="ui_124" product="dev" />: Establece la sensibilidad para detectar el uso de mascarilla. Se activa cuando <Cmd sid="ui_123" product="dev" /> está configurado en <Cmd sid="ui_161" product="dev" />.
 
      * <Cmd sid="ui_368" product="dev" />: Establece el modo de confirmación según el propósito del dispositivo.
 
-         :::info
+       :::info
 
-         * <Cmd sid="ui_267" product="dev" />: Después de la autenticación, verifica si el usuario lleva mascarilla.
+       * <Cmd sid="ui_267" product="dev" />: Después de la autenticación, verifica si el usuario lleva mascarilla.
 
-         * <Cmd sid="ui_369" product="dev" />: Autentica después de comprobar si el usuario lleva mascarilla.
+       * <Cmd sid="ui_369" product="dev" />: Autentica después de comprobar si el usuario lleva mascarilla.
 
-         * <Cmd sid="ui_370" product="dev" />: El dispositivo solo se puede usar para comprobar si se lleva mascarilla. Cuando este modo está activado, cualquier usuario que lleve mascarilla puede acceder, sin importar la autenticación.
+       * <Cmd sid="ui_370" product="dev" />: El dispositivo solo se puede usar para comprobar si se lleva mascarilla. Cuando este modo está activado, cualquier usuario que lleve mascarilla puede acceder, sin importar la autenticación.
 
-         :::
+       :::
 
 ## T&A (Tiempo y Asistencia)
 
