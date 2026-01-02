@@ -121,7 +121,15 @@ const config = {
             'back/**.{js,jsx,ts,tsx,md,mdx}',
           ]
         },
-        blog: false,
+        blog: {
+          path: 'changelogs',
+          editLocalizedFiles: false,
+          blogTitle: 'Change Logs',
+          routeBasePath: 'changelogs',
+          showReadingTime: true,
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'All Change Logs',
+        },
         theme: {
           customCss: './src/css/custom.scss',
         },
@@ -435,6 +443,11 @@ const config = {
             label: 'Reference',
             position: 'right',
             docId: 'reference/index'
+          },
+          {
+            to: 'changelogs',
+            label: 'Change Logs',
+            position: 'right',
           },
           {
             type: 'doc',
