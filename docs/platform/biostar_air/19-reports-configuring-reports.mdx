@@ -1,131 +1,158 @@
 ---
 id: configuring-reports
-title: 보고서 구성하기
-description: BioStar Air에서 자동 이메일 전송을 통해 사용자 보고서, 이벤트 로그 보고서, 감사 로그 보고서 생성 및 필터링, 예약하는 방법을 안내합니다.
-keywords: [보고서, BioStar Air]
+title: 리포트 구성하기
+description: BioStar Air에서 자동 이메일 전송을 통해 사용자 리포트, 이벤트 로그 리포트, 변경 로그 리포트 생성 및 필터링, 예약하는 방법을 안내합니다.
+keywords: [리포트, BioStar Air]
 ---
 
 import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+import ReportNotes from '../../common/_bsair-report-config-note.mdx';
 
-# 사용자 및 로그 보고서 구성하기
-
-## 기능 개요 {#feature-overview}
-
-BioStar Air의 보고서는 필요한 보고서 유형에 따라 다양한 화면에서 구성할 수 있습니다. 이 문서에서는 사용자, 이벤트 로그 및 감사 로그에 대한 보고서를 생성하고 예약하는 방법을 안내합니다.
+BioStar Air의 리포트는 리포트 유형에 따라 다양한 화면에서 구성할 수 있습니다. 이 문서에서는 사용자, 이벤트 로그 및 변경 로그에 대한 리포트를 생성하고 예약하는 방법을 안내합니다.
 
 <CustomerNote />
 
 
-## 보고서 구성으로 이동하기 {#accessing-report-configuration}
+## 리포트 구성으로 이동 {#accessing-report-configuration}
 
-보고서 유형에 따라 진입 경로가 다릅니다.
+리포트 유형에 따라 진입 경로가 다릅니다.
 
-* 사용자 보고서: **User Management** → **Users**로 이동하세요.
+* 사용자 리포트: <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />
 
-* 이벤트 로그 또는 관리자 작업 보고서: **Monitoring** → **Event Logs** 또는 **Audit Logs**로 이동하세요.
+* 이벤트 로그 리포트: <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' />
 
-이 화면에서 상단 도구 모음에 있는 보고서 아이콘(문서 아이콘)을 찾으세요. 위로 마우스를 가져가면 **Report**라는 라벨이 표시됩니다. 클릭하면 보고서 설정 화면으로 이동합니다.
+* 변경 로그 리포트: <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='audit_logs_submenu' product='air' />
 
-
-## 사용자 보고서 구성하기 {#configuring-user-reports}
-
-1. 보고서 이름을 입력하세요.
-
-1. **Filters**를 클릭하고 기준을 선택하세요.
-
-   * 사용자 유형
-
-   * 카드 유형
-
-   * 사용자 상태
-
-   * 사용자 그룹
-
-   * 출입 등급
-
-   * 층 등급
-
-1. **Add Report**를 클릭하고 저장하세요.
-
-1. 화면 하단의 **보고서 목록**에서 생성된 모든 보고서를 확인할 수 있습니다.
-
-1. 보고서를 **PDF** 또는 **CSV**로 내보내려면 **Download** 아이콘을 클릭하세요. 보고서가 준비되면 이메일로 다운로드 링크를 전송합니다.
-
-1. 보고서를 제거하려면 **Delete** 버튼을 클릭하세요.
-
-<Image src='/img/air/air-sitemanagement-configuring-user-reports.png' alone />
+위 메뉴에서 목록 상단의 도구 모음에서 <IcAirReport width='20' height='20' title='Report' /> 버튼을 클릭하세요. 리포트 설정 화면으로 이동합니다.
 
 
-## 이벤트 로그 보고서 구성하기 {#configuring-event-log-reports}
+## 사용자 리포트 구성 {#configuring-user-reports}
 
-1. **Monitoring** → **Event Logs**로 이동하세요.
+사이트에 등록된 사용자 현황을 파악할 수 있는 사용자 리포트를 구성할 수 있습니다.
 
-1. **Report** 버튼을 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />로 이동하세요.
 
-1. 다음 중 원하는 필터를 선택하세요.
+1. 사용자 목록 상단의 도구 모음에서 <IcAirReport width='20' height='20' title='Report' /> 버튼을 클릭하세요.
 
-   * 이벤트
+1. <Cmd sid='report_popup_title' product='air' /> 창이 나타나면 리포트 이름을 입력하세요.
 
-   * 사용자 유형
+   <Image src='/img/air/bsair-user-report-setting.png' />
 
-   * 장치 그룹
+1. 각 필터 옵션에서 리포트에 포함할 항목을 선택하세요.
 
-   * 장치 별칭
+1. 생성한 리포트를 저장하려면 <Cmd sid='report_form_text_add' product='air' /> 버튼을 클릭하세요.
 
-   * 사용자 그룹
+1. 하단에 <Cmd sid='report_form_text_title' product='air' />이 생성되며, 관리자의 이메일로 다운로드 링크가 전송됩니다.
 
-   * 출입 등급
+<Image src='/img/air/bsair-user-report-setting-list.png' />
 
-   * 장치 ID
+:::info
 
-   * 출입문
+<ReportNotes />
 
-<Image src='/img/air/air-sitemanagement-configuring-log-reports.png' alone />
+* 사용자 관리에 대한 자세한 내용은 [다음 문서](managing-users)를 참고하세요.
 
-
-## 감사 로그 보고서 구성하기 {#configuring-audit-log-reports}
-
-1. **Monitoring** → **Audit Logs**로 이동하세요.
-
-1. **Report** 버튼을 클릭하세요.
-
-1. 다음 중 원하는 필터를 선택하세요.
-
-   * **Account**: 사용자 또는 사용자 그룹을 선택합니다.
-
-   * **Action**: 특정 작업을 선택합니다.
-
-   * **Admin**: 관리자 등급을 선택합니다.
-
-   * **Type**: 작업 유형으로 필터링합니다.
+:::
 
 
-## 보고서 예약하기 {#scheduling-reports}
+## 이벤트 로그 리포트 구성 {#configuring-event-log-reports}
 
-1. **Site Settings** → **Alerts**으로 이동하세요.
+사이트에서 발생한 이벤트 로그에 대한 리포트를 구성할 수 있습니다.
 
-1. **Add Alert**(오른쪽 상단의 파란색 버튼)를 클릭하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' />로 이동하세요.
+
+1. 로그 목록 상단의 도구 모음에서 <IcAirReport width='20' height='20' title='Report' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='report_popup_title' product='air' /> 창이 나타나면 리포트 이름을 입력하세요.
+
+   <Image src='/img/air/bsair-report-eventlog-report-setting.png' />
+
+1. 각 필터 옵션에서 리포트에 포함할 항목을 선택하세요.
+
+1. 생성한 리포트를 저장하려면 <Cmd sid='report_form_text_add' product='air' /> 버튼을 클릭하세요.
+
+1. 하단에 <Cmd sid='report_form_text_title' product='air' />이 생성되며, 관리자의 이메일로 다운로드 링크가 전송됩니다.
+
+<Image src='/img/air/bsair-report-eventlog-report-setting-result.png' />
+
+:::info
+
+<ReportNotes />
+
+* 이벤트 로그에 대한 자세한 내용은 [다음 문서](monitoring-event-and-audit-logs)를 참고하세요.
+
+:::
+
+
+## 변경 로그 리포트 구성 {#configuring-audit-log-reports}
+
+관리자가 수행한 변경 사항에 대한 변경 로그 리포트를 구성할 수 있습니다.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='audit_logs_submenu' product='air' />로 이동하세요.
+
+1. 로그 목록 상단의 도구 모음에서 <IcAirReport width='20' height='20' title='Report' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='report_popup_title' product='air' /> 창이 나타나면 리포트 이름을 입력하세요.
+
+   <Image src='/img/air/bsair-report-audit-trail-report-setting.png' />
+
+1. 각 필터 옵션에서 리포트에 포함할 항목을 선택하세요.
+
+1. 생성한 리포트를 저장하려면 <Cmd sid='report_form_text_add' product='air' /> 버튼을 클릭하세요.
+
+1. 하단에 <Cmd sid='report_form_text_title' product='air' />이 생성되며, 관리자의 이메일로 다운로드 링크가 전송됩니다.
+
+<Image src='/img/air/bsair-report-audit-trail-report-setting-result.png' />
+
+:::info
+
+<ReportNotes />
+
+* 변경 로그에 대한 자세한 내용은 [다음 문서](monitoring-event-and-audit-logs)를 참고하세요.
+
+:::
+
+
+## 리포트 생성 예약 {#scheduling-reports}
+
+특정 시간 간격으로 리포트를 자동 생성하고 관리자에게 전송할 수 있습니다.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='alerts.alert_sub_menu_title' product='air' />로 이동하세요.
+
+1. 화면 오른쪽 상단의 <Cmd sid='alerts.add_alert_btn' product='air' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='alerts.add_alert_btn' product='air' /> 패널이 나타나면 <Cmd sid='alerts.report_type' product='air' /> 탭을 선택하세요.
+
+   <Image src='/img/air/bsair-settings-alert-add-report.png' />
 
 1. **Report**를 경고 유형으로 선택하세요.
 
-1. 보고서 이름을 선택하세요.
+1. <Cmd sid='alerts.alert_condition' product='air' /> 섹션의 <Cmd sid='name_column' product='air' />에서 생성할 리포트 종류를 선택하세요.
 
-1. 보고서 일정을 설정하세요.
+1. <Cmd sid='schedules_label' product='air' />에서 리포트 생성 주기를 선택하세요.
 
-   * 매주 또는 매월
+   * <Cmd sid='weekly_option' product='air' /> 또는 <Cmd sid='monthly_option' product='air' /> 중에서 선택하세요.
 
-   * 보고서를 전송할 구체적인 날짜를 선택하세요.
+   * 리포트를 전송할 구체적인 날짜를 선택하세요.
 
-   * 모든 보고서는 선택한 날 자정에 전송됩니다.
+   * 모든 리포트는 선택한 날 자정에 전송됩니다.
 
-1. 대상 수신자를 선택하세요.
+1. <Cmd sid='alerts.alert_target' product='air' />에서 알림을 받을 대상을 선택하세요.
 
    * 특정 관리자 레벨의 모든 관리자
 
    * 개별 관리자
 
-1. **전송 방법**을 선택하세요.
+1. <Cmd sid='alerts.alert_send_by' product='air' />에서 알림을 전송할 수단을 선택하세요.
 
-   * 보고서는 **이메일로만 전송**할 수 있습니다.
+   * 리포트는 이메일로만 전송할 수 있습니다.
 
-   * SMS 또는 푸시 알림을 통해 전송할 수 없습니다.
+   * 문자 메시지 또는 앱 푸시 알림을 통해 전송할 수 없습니다.
+
+1. 각 항목의 설정을 구성한 후 저장하려면 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+:::info
+
+리포트 생성 예약에 대한 자세한 내용은 [다음 문서](settings-alert-report#reportGeneration)를 참고하세요.
+
+:::
