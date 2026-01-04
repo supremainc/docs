@@ -80,6 +80,28 @@ info:
 
     Above example shows that the required value will be placed on {id}
 
+
+
+    ## Import the Postman collection
+
+    To import the Postman collection online, follow these steps:
+
+    1. Click the **Download** button at the top of this page to download the OpenAPI specification file(`bsxapi.yaml`).
+
+    2. Go to <a href="https://web.postman.co/home" target="_blank" rel="noopener noreferrer">Postman</a> and sign in.
+
+    3. Select your workspace from the workspace selector in the top left. Or create a workspace if you don't have one.
+
+    4. Click **Import** in the sidebar.
+
+    5. Select downloaded file, or drag the file into the import window.
+
+       <img src="https://assets.postman.com/postman-docs/v10/import-export-import-ui-v10-20.jpg" width="600px" />
+
+    6. Click **Import** to complete the process.
+
+
+
     ## Release Notes
 
     **2025-09-30**
