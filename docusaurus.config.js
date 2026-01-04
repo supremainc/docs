@@ -122,11 +122,11 @@ const config = {
           ]
         },
         blog: {
-          path: 'changelogs',
+          path: 'changelog',
           editLocalizedFiles: false,
           blogTitle: 'Changelog',
           blogDescription: 'Suprema product change logs',
-          routeBasePath: 'changelogs',
+          routeBasePath: 'changelog',
           showReadingTime: true,
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'All Changelogs',
@@ -446,8 +446,8 @@ const config = {
             docId: 'reference/index'
           },
           {
-            to: 'changelogs',
-            label: 'Change Logs',
+            to: 'changelog',
+            label: 'Changelog',
             position: 'right',
           },
           {
