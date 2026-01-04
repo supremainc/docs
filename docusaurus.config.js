@@ -124,12 +124,12 @@ const config = {
         blog: {
           path: 'changelogs',
           editLocalizedFiles: false,
-          blogTitle: 'Change Logs',
+          blogTitle: 'Changelog',
           blogDescription: 'Suprema product change logs',
           routeBasePath: 'changelogs',
           showReadingTime: true,
           blogSidebarCount: 'ALL',
-          blogSidebarTitle: 'All Change Logs',
+          blogSidebarTitle: 'All Changelogs',
         },
         theme: {
           customCss: './src/css/custom.scss',
