@@ -24,6 +24,7 @@ on:
           - "한국어"
           - "English"
           - "日本語"
+          - "Español"
       document_number:
         description: "문서 번호 (예: 101.00.BS3)"
         required: true
@@ -128,6 +129,11 @@ jobs:
           LANG_DISPLAY="日本語"
           BACK_COVER="back-cover-ja.pdf"
           COVER_VERSION="バージョン ${{ github.event.inputs.version }}"
+        elif [ "${{ github.event.inputs.language }}" = "Español" ]; then
+          LANG_CODE="ES"
+          LANG_DISPLAY="Español"
+          BACK_COVER="back-cover-es.pdf"
+          COVER_VERSION="Versión ${{ github.event.inputs.version }}"
         else
           LANG_CODE="KO"
           LANG_DISPLAY="한국어"
