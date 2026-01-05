@@ -1507,9 +1507,9 @@ body[data-rh] .redocusaurus {
         }
       }
     }
-    ol {
+    ol, ul {
       li {
-        page-break-inside: avoid;
+        page-break-inside: auto;
       }
     }
     table {
