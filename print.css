@@ -71,6 +71,10 @@ img {
     padding: 0;
   }
 
+  img[src*='name-function-each-part-bs3m.png'] {
+    width: 100% !important;
+  }
+
   .theme-back-to-top-button {
     display: none;
   }
