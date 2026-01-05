@@ -19,10 +19,7 @@ img {
 
 @page {
   size: A4;
-  margin-top: 0.7in;
-  margin-bottom: 0.7in;
-  margin-left: 0.5in;
-  margin-right: 0.5in;
+  margin: 0.7in 0.5in;
   prince-shrink-to-fit: none;
   @top-right { content: string(doctitle);font-size: .75rem;font-family: 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans'; }
   @bottom-center { content: counter(page);font-size: .75rem;font-family: 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans'; }
@@ -62,6 +59,13 @@ img {
   .footer {
     display: none !important;
   }
+
+  div[class*='docRoot'] main > .container {
+    margin: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    max-width: 100% !important;
+  }
   
   div[class*='docItemCol'] {
     padding: 0;
@@ -73,10 +77,8 @@ img {
   .markdown {
     -webkit-print-color-adjust: exact !important;   /* Chrome, Safari, Edge */
     print-color-adjust: exact !important;
-  }
-  .markdown {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
+    max-width: 100%;
+    margin-top: 0 !important;
   }
   .markdown h1 {
       font-size: 2rem;
@@ -150,6 +152,10 @@ img {
   }
   .markdown section.row article > a.padding--lg {
       padding: 20px !important;
+  }
+
+  .markdown .padding-bottom--lg {
+    padding: 0 !important;
   }
   .theme-doc-footer {
       display: none;
