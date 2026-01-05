@@ -1773,7 +1773,7 @@ function getting_started_createMdxContent(props) {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_205",
                     product: "dev"
-                  }), " 모드일 때 마스터 장치와 연결이 끊어진 상태"]
+                  }), " 모드일 때 마스터 장치와 연결이 끊어진 상태 ", (0,jsx_runtime.jsx)(PageBreak, {})]
                 }), "\n"]
               }), "\n"]
             }), "\n"]
