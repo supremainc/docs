@@ -1485,6 +1485,10 @@ body[data-rh] .redocusaurus {
         margin-right: auto;
         max-width: 65% !important;
       }
+      img[src*="name-function-each-part"] {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
       img.full {
         max-width: 100% !important;
       }
