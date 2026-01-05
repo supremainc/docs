@@ -1291,6 +1291,12 @@ body[data-rh] .redocusaurus {
     margin-left: 0.5in;
     margin-right: 0.5in;
   }
+  div[class*='docRoot'] main > .container {
+    margin: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    max-width: 100% !important;
+  }
   div[class*='docItemCol'] {
     padding: 0;
   }
@@ -1307,6 +1313,8 @@ body[data-rh] .redocusaurus {
   .markdown {
     -webkit-print-color-adjust: exact !important;   /* Chrome, Safari, Edge */
     print-color-adjust: exact !important;                 /*Firefox*/
+    max-width: 100%;
+    margin-top: 0 !important;
     h1 { 
       font-size: 2rem;
       margin-top: 0;
