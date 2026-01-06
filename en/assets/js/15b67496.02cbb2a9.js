@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["3232"], {
-60165: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["38378"], {
+59323: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -17,20 +17,20 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "プラグインの管理",
-  "id": "プラグインの管理",
+  "value": "Plugin management",
+  "id": "plugin-management",
   "level": 2
 }, {
-  "value": "プラグイン一覧の確認",
-  "id": "プラグイン一覧の確認",
+  "value": "Check plugin list",
+  "id": "check-plugin-list",
   "level": 3
 }, {
-  "value": "プラグインの編集",
-  "id": "プラグインの編集",
+  "value": "Edit plugin",
+  "id": "edit-plugin",
   "level": 3
 }, {
-  "value": "プラグインの削除",
-  "id": "プラグインの削除",
+  "value": "Delete plugin",
+  "id": "delete-plugin",
   "level": 3
 }];
 function _createMdxContent(props) {
@@ -53,41 +53,41 @@ function _createMdxContent(props) {
   if (!Start) _missingMdxReference("Start", true);
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "プラグインの管理",
-      children: "プラグインの管理"
+      id: "plugin-management",
+      children: "Plugin management"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["「", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+      children: ["You can manage the plugins installed through ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "BioStar X Service Manager"
-      }), "」でインストールしたプラグインを管理できます。"]
+      }), "."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Windows で ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Start, {}), " → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+      children: ["Click ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Start, {}), " → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "BioStar X"
       }), " → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "BioStar X Service Manager"
-      }), " をクリックします。 「", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: "BioStar X Service Manager"
-      }), "」画面のサイトメニューで", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+      }), " on Windows. Click ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
         children: "PLUGINS"
-      }), "をクリックします。"]
+      }), " in the site menu of the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "BioStar X Service Manager"
+      }), " screen."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "プラグイン一覧の確認",
-      children: "プラグイン一覧の確認"
+      id: "check-plugin-list",
+      children: "Check plugin list"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "ユーザーが登録したすべてのプラグインを確認できます。"
+      children: "You can see all the plugins registered by the user."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
       src: "/img/common/biostarx-sm-plugins-list.png",
       alone: true
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "プラグインの編集",
-      children: "プラグインの編集"
+      id: "edit-plugin",
+      children: "Edit plugin"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["プラグイン一覧から編集するプラグインをクリックします。 プラグイン情報の編集画面が表示されます。 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+      children: ["Click the plugin you want to edit from the plugin list. The plugin information edit screen appears. You can edit the plugin name (", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
         children: "Plugin Name"
-      }), "（プラグイン名）、", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+      }), "), description (", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
         children: "Description"
-      }), "（説明）、", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+      }), "), and icon (", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
         children: "Plugin Icon"
-      }), "（アイコン）を編集できます。"]
+      }), ")."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
       src: "/img/common/biostarx-sm-plugins-list-edit.png",
       alone: true
@@ -95,30 +95,30 @@ function _createMdxContent(props) {
       type: "info",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
-          children: "Session Bridge"
-        }), "が有効な状態では、", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
           children: "Plugin Address"
-        }), "は編集できません。"]
+        }), " cannot be edited when ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: "Session Bridge"
+        }), " is enabled."]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "プラグインの削除",
-      children: "プラグインの削除"
+      id: "delete-plugin",
+      children: "Delete plugin"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "プラグイン一覧で削除するプラグインの一番左のチェックボックスをクリックして選択します。"
+          children: "Select the plugin to delete by clicking the checkbox on the far left of the plugin list."
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["画面右上の", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(IcTrash2, {}), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["Click the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(IcTrash2, {}), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Delete"
-          }), "ボタンをクリックします。"]
+          }), " button in the upper right corner of the screen."]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["確認メッセージが表示されたら ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["When the confirmation message appears, click ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "OK"
-          }), " をクリックします。"]
+          }), "."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
@@ -126,16 +126,14 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "勤怠管理ライセンスを適用して追加された勤怠管理 (T&A) プラグインは削除できません。"
+            children: "The time and attendance (T&A) plugin added with the time and attendance license cannot be deleted."
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["勤怠管理プラグインは", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-              children: "アドバンス"
-            }), "（Advanced）ライセンス以上で、追加オプションとして使用できます。 ライセンスポリシーの詳細は", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+            children: ["The time and attendance management plugin is available as an additional option. For more information on licensing policies, refer to ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
               href: "../biostar_x/licensing#features-add-ons",
-              children: "次のドキュメント"
-            }), "を参照してください。"]
+              children: "the following"
+            }), "."]
           }), "\n"]
         }), "\n"]
       })
@@ -161,7 +159,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-54438: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+24116: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -178,16 +176,16 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "プラグインの登録",
+  "value": "Register plugin",
   "id": "register-plugin",
   "level": 2
 }, {
-  "value": "プラグイン情報の入力",
-  "id": "プラグイン情報の入力",
+  "value": "Enter plugin information",
+  "id": "enter-plugin-information",
   "level": 3
 }, {
-  "value": "ランチャー画面で確認",
-  "id": "ランチャー画面で確認",
+  "value": "Check on the launcher screen",
+  "id": "check-on-the-launcher-screen",
   "level": 3
 }];
 function _createMdxContent(props) {
@@ -211,27 +209,27 @@ function _createMdxContent(props) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
       id: "register-plugin",
-      children: "プラグインの登録"
+      children: "Register plugin"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Windows で ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Start, {}), " → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: ["Click ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Start, {}), " → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
             children: "BioStar X"
           }), " → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
             children: "BioStar X Service Manager"
-          }), " をクリックします。"]
+          }), " on Windows."]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["画面左側のサイドメニューで", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["Click ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "PLUGINS"
-          }), "をクリックします。"]
+          }), " in the left side menu."]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["画面右上の", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["Click the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Add Plugin"
-          }), "ボタンをクリックします。"]
+          }), " button in the upper right."]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/common/biostarx-sm-plugins-add.png",
           width: "60%",
@@ -239,9 +237,9 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["Enter plugin information on the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Add New Plugin"
-          }), "画面でプラグイン情報を入力します。"]
+          }), " screen."]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/common/biostarx-sm-plugins-add-new.png",
           width: "60%",
@@ -249,66 +247,66 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["プラグイン情報を入力し、登録を完了するには", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["Enter plugin information and click ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Apply"
-          }), "ボタンをクリックします。"]
+          }), " to complete registration."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.admonition, {
       type: "info",
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+        children: ["If you have activated ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
           children: "Session Bridge"
-        }), "を有効にした場合、画面下部から証明書をダウンロードできます。 証明書は", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        }), ", you can download the certificate at the bottom of the screen. The certificate is required for secure communication between ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
           children: "BioStar X"
-        }), "とプラグイン間のセキュア通信に必要です。 証明書を紛失した場合は再度ダウンロードできます。 このとき既存の証明書は無効になります。"]
+        }), " and the plugin. If you lose the certificate, you can download it again. At this time, the existing certificate will be invalidated."]
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
         src: "/img/common/biostarx-sm-plugins-download-certification.png",
         alone: true
       })]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "プラグイン情報の入力",
-      children: "プラグイン情報の入力"
+      id: "enter-plugin-information",
+      children: "Enter plugin information"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Plugin Name"
-          }), "：プラグイン名を入力します。 最大48文字まで入力できます。 既に登録されているプラグインと同じ名前は使用できません。"]
+          }), ": Enter the name of the plugin. You can enter up to 48 characters. You cannot use the same name as an existing registered plugin."]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Description"
-          }), "：プラグインの説明を入力します。 最大500文字まで入力できます。"]
+          }), ": Enter a description of the plugin. You can enter up to 500 characters."]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Plugin Address"
-          }), "：プラグインのアドレスを入力します。 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          }), ": Enter the address of the plugin. It must be a valid URL starting with ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
             children: "http://"
-          }), "または", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          }), " or ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
             children: "https://"
-          }), "で始まる有効なURLである必要があり、既に登録されているプラグインと同じアドレスは使用できません。"]
+          }), ", and you cannot use the same address as an existing registered plugin."]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Plugin Icon"
-          }), "：プラグインのアイコンをアップロードします。"]
+          }), ": Upload the plugin's icon."]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "対応フォーマットはJPEG、PNG、SVG、GIFです。"
+              children: "Supported formats are JPEG, PNG, SVG, GIF."
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "ファイルサイズの上限は1MBで、0KBの空ファイルはアップロードできません。"
+              children: "The maximum file size is 1MB, and 0KB empty files cannot be uploaded."
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "アップロードされた画像は104×104ピクセルに自動リサイズされます。"
+              children: "Uploaded images will be automatically resized to 104×104 pixels."
             }), "\n"]
           }), "\n"]
         }), "\n"]
@@ -316,7 +314,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Session Bridge"
-          }), "：セッションブリッジを使用する場合は有効にします。 この機能を使用すると、BioStar Xユーザーの権限が自動継承され、プラグインにアクセスする際に別途ログインする必要がありません。"]
+          }), ": Activate to use the session bridge. Using this feature automatically inherits permissions for BioStar X users, so no separate login is required when accessing the plugin."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
@@ -324,25 +322,25 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["アイコンをアップロードしない場合は、プラグイン名の先頭文字を使ってアイコンが自動生成されます。 アップロードしたアイコンは", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(IcTrash2, {}), "ボタンをクリックして削除でき、削除すると自動生成アイコンに切り替わります。"]
+            children: ["If you do not upload an icon, an icon will be generated automatically from the first letter of the plugin name. The uploaded icon can be deleted by clicking the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(IcTrash2, {}), " button, and it will be replaced with the automatically generated icon upon deletion."]
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+            children: ["Once ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
               children: "Session Bridge"
-            }), "を有効にすると無効化できず、セキュリティ上の理由からプラグインアドレスを変更できません。"]
+            }), " is activated, it cannot be deactivated, and the plugin address cannot be changed for security reasons."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "ランチャー画面で確認",
-      children: "ランチャー画面で確認"
+      id: "check-on-the-launcher-screen",
+      children: "Check on the launcher screen"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), "の", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+      children: ["You can see the added plugins on the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
         sid: "shell.header.launcher"
-      }), "画面で追加したプラグインを確認できます。"]
+      }), " screen of ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), "."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
       src: "/img/biostarx-added-plugins-launcher.png"
     })]
@@ -367,7 +365,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-9832: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+52236: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -376,31 +374,31 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_ja_docusaurus_plugin_content_docs_current_platform_plugins_registration_guide_mdx_edd_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_plugins_registration_guide_mdx_15b_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-ja-docusaurus-plugin-content-docs-current-platform-plugins-registration-guide-mdx-edd.json
-var site_i_18_n_ja_docusaurus_plugin_content_docs_current_platform_plugins_registration_guide_mdx_edd_namespaceObject = JSON.parse('{"id":"platform/plugins/registration-guide","title":"登録と管理","description":"BioStar Xにプラグインを登録して管理する方法を案内します。","source":"@site/i18n/ja/docusaurus-plugin-content-docs/current/platform/plugins/registration-guide.mdx","sourceDirName":"platform/plugins","slug":"/platform/plugins/registration-guide","permalink":"/docs/ja/platform/plugins/registration-guide","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/plugins/registration-guide.mdx","tags":[],"version":"current","frontMatter":{"id":"registration-guide","title":"登録と管理","description":"BioStar Xにプラグインを登録して管理する方法を案内します。","keywords":["プラグイン登録","管理","Service Manager","Session Bridge"],"isTranslationMissing":false},"sidebar":"bsxplugins","previous":{"title":"開発ガイド","permalink":"/docs/ja/platform/plugins/development-guide"},"next":{"title":"トラブルシューティング","permalink":"/docs/ja/platform/plugins/troubleshooting"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-plugins-registration-guide-mdx-15b.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_plugins_registration_guide_mdx_15b_namespaceObject = JSON.parse('{"id":"platform/plugins/registration-guide","title":"Registration and Management","description":"Guide on how to register and manage plugins in BioStar X.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/plugins/registration-guide.mdx","sourceDirName":"platform/plugins","slug":"/platform/plugins/registration-guide","permalink":"/docs/en/platform/plugins/registration-guide","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/plugins/registration-guide.mdx","tags":[],"version":"current","frontMatter":{"id":"registration-guide","title":"Registration and Management","description":"Guide on how to register and manage plugins in BioStar X.","keywords":["Plugin Registration","Manage","Service Manager","Session Bridge"],"isTranslationMissing":false},"sidebar":"bsxplugins","previous":{"title":"Development Guide","permalink":"/docs/en/platform/plugins/development-guide"},"next":{"title":"Troubleshooting","permalink":"/docs/en/platform/plugins/troubleshooting"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-// EXTERNAL MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/common/_bsx-register-plugin.mdx
-var _bsx_register_plugin = __webpack_require__(54438);
-// EXTERNAL MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/common/_bsx-manage-plugins.mdx
-var _bsx_manage_plugins = __webpack_require__(60165);
-;// CONCATENATED MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/platform/plugins/registration-guide.mdx
+// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_bsx-register-plugin.mdx
+var _bsx_register_plugin = __webpack_require__(24116);
+// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_bsx-manage-plugins.mdx
+var _bsx_manage_plugins = __webpack_require__(59323);
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/plugins/registration-guide.mdx
 
 
 const frontMatter = {
 	id: 'registration-guide',
-	title: '登録と管理',
-	description: 'BioStar Xにプラグインを登録して管理する方法を案内します。',
+	title: 'Registration and Management',
+	description: 'Guide on how to register and manage plugins in BioStar X.',
 	keywords: [
-		'プラグイン登録',
-		'管理',
+		'Plugin Registration',
+		'Manage',
 		'Service Manager',
 		'Session Bridge'
 	],
@@ -419,8 +417,8 @@ const assets = {
 
 
 const toc = [{
-  "value": "登録前の準備事項",
-  "id": "登録前の準備事項",
+  "value": "Preparations before registration",
+  "id": "preparations-before-registration",
   "level": 2
 }, ..._bsx_register_plugin/* .toc */.RM, ..._bsx_manage_plugins/* .toc */.RM];
 function _createMdxContent(props) {
@@ -437,36 +435,36 @@ function _createMdxContent(props) {
   };
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["開発したプラグインを", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["Guide on how to register and manage developed plugins in ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X Service Manager"
-      }), "に登録して管理する方法を案内します。"]
+      }), "."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "登録前の準備事項",
-      children: "登録前の準備事項"
+      id: "preparations-before-registration",
+      children: "Preparations before registration"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.strong, {
-            children: "プラグインサーバーの実行"
+            children: "Run Plugin Server"
           })
         }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["プラグインを登録する前に必ずプラグインサーバーが実行中である必要があります。 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["The plugin server must be running before registering the plugin. ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), "は登録プロセスでプラグインサーバーへのアクセス性を確認します。"]
+          }), " checks the accessibility of the plugin server during the registration process."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.strong, {
-            children: "ネットワークアクセスの確認"
+            children: "Check Network Access"
           })
         }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: ["Ensure that the ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), "サーバーからプラグインサーバーへアクセスできるか確認してください。"]
+          }), " server can access the plugin server."]
         }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
           children: (0,jsx_runtime.jsx)(_components.code, {
             className: "language-bash",
-            children: "# BioStar Xサーバーからテスト\ncurl -H \"X-BioStar-Ping: test123\" http://localhost:8000/bsx\n"
+            children: "# Test from BioStar X Server\ncurl -H \"X-BioStar-Ping: test123\" http://localhost:8000/bsx\n"
           })
         }), "\n"]
       }), "\n"]

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["28055"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["56342"], {
 19858: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
@@ -130,9 +130,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["Usa el complemento de gestión de asistencia mediante opciones adicionales en la licencia ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-              children: "Advanced"
-            }), " o superior. Para obtener más información sobre las políticas de licencias, consulta ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+            children: ["Usa el complemento de gestión de asistencia mediante opciones adicionales. Para obtener más información sobre las políticas de licencias, consulta ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
               href: "../biostar_x/licensing#features-add-ons",
               children: "lo siguiente"
             }), "."]
@@ -367,188 +365,110 @@ function _missingMdxReference(id, component) {
 
 
 }),
-78878: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-__webpack_require__.d(__webpack_exports__, {
-  Ay: () => (MDXContent),
-  RM: () => (toc)
-});
-/* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(74848);
-/* ESM import */var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(84429);
-
-
-const frontMatter = (/* unused pure expression or super */ null && ({}));
-const contentTitle = (/* unused pure expression or super */ null && (undefined));
-
-
-
-
-
-const toc = [{
-  "value": "¿Qué son los plugins?",
-  "id": "qué-son-los-plugins",
-  "level": 2
-}];
-function _createMdxContent(props) {
-  const _components = {
-    a: "a",
-    admonition: "admonition",
-    h2: "h2",
-    li: "li",
-    p: "p",
-    strong: "strong",
-    ul: "ul",
-    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
-    ...props.components
-  }, {Include, Xclude} = _components;
-  if (!Include) _missingMdxReference("Include", true);
-  if (!Xclude) _missingMdxReference("Xclude", true);
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "qué-son-los-plugins",
-      children: "¿Qué son los plugins?"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Los plugins de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), " son extensiones de la plataforma ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), " que proporcionan funciones adicionales para cumplir con los requisitos de los clientes o integrarse con sistemas existentes."]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Xclude, {
-      product: "biostar_x",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
-        type: "info",
-        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Se requiere una licencia de plugin para utilizar las funciones de plugins. Para obtener más información sobre la política de licencias, consulte ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
-            href: "../biostar_x/licensing",
-            children: "la siguiente"
-          }), "."]
-        })
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "biostar_x",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
-        type: "info",
-        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-            children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-              children: ["Se requiere una licencia de plugin para utilizar las funciones de plugins. Para obtener más información sobre la política de licencias, consulte ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
-                href: "../biostar_x/licensing",
-                children: "la siguiente"
-              }), "."]
-            }), "\n"]
-          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-            children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-              children: ["Para obtener más información sobre el desarrollo de plugins, consulte ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
-                href: "../plugins",
-                children: "la siguiente"
-              }), "."]
-            }), "\n"]
-          }), "\n"]
-        })
-      })
-    })]
-  });
-}
-function MDXContent(props = {}) {
-  const {wrapper: MDXLayout} = {
-    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
-    ...props.components
-  };
-  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
-    ...props,
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
-      ...props
-    })
-  }) : _createMdxContent(props);
-}
-function _missingMdxReference(id, component) {
-  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
-}
-
-
-
-}),
-78963: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+14990: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  frontMatter: () => (/* binding */ plugins_frontMatter),
-  toc: () => (/* binding */ plugins_toc),
-  "default": () => (/* binding */ plugins_MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_x_plugins_mdx_9b4_namespaceObject),
+  frontMatter: () => (/* binding */ frontMatter),
+  toc: () => (/* binding */ toc),
+  "default": () => (/* binding */ MDXContent),
+  metadata: () => (/* reexport */ site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_plugins_registration_guide_mdx_556_namespaceObject),
   assets: () => (/* binding */ assets),
-  contentTitle: () => (/* binding */ plugins_contentTitle)
+  contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-es-docusaurus-plugin-content-docs-current-platform-biostar-x-plugins-mdx-9b4.json
-var site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_x_plugins_mdx_9b4_namespaceObject = JSON.parse('{"id":"platform/biostar_x/plugins","title":"Plugin","description":"Los complementos de BioStar X mejoran la plataforma BioStar X con funciones adicionales para satisfacer requisitos específicos de los clientes o integrarse con sistemas existentes.","source":"@site/i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/plugins.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/plugins","permalink":"/docs/es/platform/biostar_x/plugins","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/plugins.mdx","tags":[],"version":"current","frontMatter":{"id":"plugins","title":"Plugin","description":"Los complementos de BioStar X mejoran la plataforma BioStar X con funciones adicionales para satisfacer requisitos específicos de los clientes o integrarse con sistemas existentes.","keywords":["Plugin","BioStar X"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Integrar el registro de eventos de dispositivos virtuales","permalink":"/docs/es/platform/biostar_x/settings-virtual-device-event-log"},"next":{"title":"Cómo usar tiempo y asistencia","permalink":"/docs/es/platform/biostar_x/tna"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-es-docusaurus-plugin-content-docs-current-platform-plugins-registration-guide-mdx-556.json
+var site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_plugins_registration_guide_mdx_556_namespaceObject = JSON.parse('{"id":"platform/plugins/registration-guide","title":"Registro y administración","description":"Guía sobre cómo registrar y administrar complementos en BioStar X.","source":"@site/i18n/es/docusaurus-plugin-content-docs/current/platform/plugins/registration-guide.mdx","sourceDirName":"platform/plugins","slug":"/platform/plugins/registration-guide","permalink":"/docs/es/platform/plugins/registration-guide","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/plugins/registration-guide.mdx","tags":[],"version":"current","frontMatter":{"id":"registration-guide","title":"Registro y administración","description":"Guía sobre cómo registrar y administrar complementos en BioStar X.","keywords":["Registro de complementos","Gestionar","Service Manager","Puente de sesión"],"isTranslationMissing":false},"sidebar":"bsxplugins","previous":{"title":"Guía de desarrollo","permalink":"/docs/es/platform/plugins/development-guide"},"next":{"title":"Solución de problemas","permalink":"/docs/es/platform/plugins/troubleshooting"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_bsx-what-is-plugins.mdx
-var _bsx_what_is_plugins = __webpack_require__(78878);
-;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_bsx-plugins-usage-example.mdx
+// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_bsx-register-plugin.mdx
+var _bsx_register_plugin = __webpack_require__(57167);
+// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_bsx-manage-plugins.mdx
+var _bsx_manage_plugins = __webpack_require__(19858);
+;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/platform/plugins/registration-guide.mdx
 
 
-const frontMatter = (/* unused pure expression or super */ null && ({}));
-const contentTitle = (/* unused pure expression or super */ null && (undefined));
+const frontMatter = {
+	id: 'registration-guide',
+	title: 'Registro y administración',
+	description: 'Guía sobre cómo registrar y administrar complementos en BioStar X.',
+	keywords: [
+		'Registro de complementos',
+		'Gestionar',
+		'Service Manager',
+		'Puente de sesión'
+	],
+	isTranslationMissing: false
+};
+const contentTitle = undefined;
 
+const assets = {
+
+};
+
+/*## 플러그인 등록 및 확인*/
+/*플러그인 관리*/
 
 
 
 
 const toc = [{
-  "value": "Casos de uso clave",
-  "id": "casos-de-uso-clave",
+  "value": "Preparativos antes del registro",
+  "id": "preparativos-antes-del-registro",
   "level": 2
-}];
+}, ..._bsx_register_plugin/* .toc */.RM, ..._bsx_manage_plugins/* .toc */.RM];
 function _createMdxContent(props) {
   const _components = {
+    code: "code",
     h2: "h2",
     li: "li",
+    ol: "ol",
     p: "p",
+    pre: "pre",
     strong: "strong",
-    ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
   };
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.h2, {
-      id: "casos-de-uso-clave",
-      children: "Casos de uso clave"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Integre diversos sistemas externos mediante el sistema de complementos de ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), ". Los casos de uso representativos son los siguientes."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+    children: [(0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Guía sobre cómo registrar y administrar complementos desarrollados en ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BioStar X Service Manager"
+      }), "."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "preparativos-antes-del-registro",
+      children: "Preparativos antes del registro"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Sistema de gestión de asistencia"
-          }), ": Integración con soluciones externas de T&A (tiempo y asistencia)"]
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Ejecutar el servidor de complementos"
+          })
+        }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["El servidor de complementos debe estar en ejecución antes de registrar el complemento. ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), " verifica la accesibilidad del servidor de complementos durante el proceso de registro."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Sistema de gestión de visitantes"
-          }), ": Integración con sistemas independientes de registro y gestión de visitantes"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Solución de informes"
-          }), ": Integración con herramientas de informes y análisis personalizables"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Integración con sistemas de terceros"
-          }), ": Integración de datos con sistemas empresariales existentes como ERP y HRM"]
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Verificar el acceso a la red"
+          })
+        }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Asegura que el servidor de ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), " pueda acceder al servidor de complementos."]
+        }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            className: "language-bash",
+            children: "# Test from BioStar X Server\ncurl -H \"X-BioStar-Ping: test123\" http://localhost:8000/bsx\n"
+          })
         }), "\n"]
       }), "\n"]
-    })]
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_bsx_register_plugin/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_bsx_manage_plugins/* ["default"] */.Ay, {})]
   });
 }
 function MDXContent(props = {}) {
@@ -562,91 +482,6 @@ function MDXContent(props = {}) {
       ...props
     })
   }) : _createMdxContent(props);
-}
-
-
-// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_bsx-register-plugin.mdx
-var _bsx_register_plugin = __webpack_require__(57167);
-// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_bsx-manage-plugins.mdx
-var _bsx_manage_plugins = __webpack_require__(19858);
-;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/plugins.mdx
-
-
-const plugins_frontMatter = {
-	id: 'plugins',
-	title: 'Plugin',
-	description: 'Los complementos de BioStar X mejoran la plataforma BioStar X con funciones adicionales para satisfacer requisitos específicos de los clientes o integrarse con sistemas existentes.',
-	keywords: [
-		'Plugin',
-		'BioStar X'
-	],
-	isTranslationMissing: false
-};
-const plugins_contentTitle = undefined;
-
-const assets = {
-
-};
-
-/*## 플러그인(Plugins)이란?*/
-/*## 주요 활용 사례*/
-/*## 플러그인 등록 및 확인*/
-/*플러그인 관리*/
-
-
-
-
-
-
-const plugins_toc = [..._bsx_what_is_plugins/* .toc */.RM, {
-  "value": "Complementos de BioStar X",
-  "id": "complementos-de-biostar-x",
-  "level": 2
-}, ...toc, ..._bsx_register_plugin/* .toc */.RM, ..._bsx_manage_plugins/* .toc */.RM];
-function plugins_createMdxContent(props) {
-  const _components = {
-    a: "a",
-    admonition: "admonition",
-    h2: "h2",
-    p: "p",
-    strong: "strong",
-    ...(0,lib/* .useMDXComponents */.R)(),
-    ...props.components
-  }, {DocCardList} = _components;
-  if (!DocCardList) _missingMdxReference("DocCardList", true);
-  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: ["\n", "\n", (0,jsx_runtime.jsx)(_bsx_what_is_plugins/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "complementos-de-biostar-x",
-      children: "Complementos de BioStar X"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Lista de complementos disponibles a través de opciones adicionales para licencias superiores a ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Advanced"
-      }), "."]
-    }), "\n", (0,jsx_runtime.jsx)(DocCardList, {}), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["Para más información sobre la política de licencias, consulta ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "licensing#features-add-ons",
-          children: "lo siguiente"
-        }), "."]
-      })
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(MDXContent, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_bsx_register_plugin/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_bsx_manage_plugins/* ["default"] */.Ay, {})]
-  });
-}
-function plugins_MDXContent(props = {}) {
-  const {wrapper: MDXLayout} = {
-    ...(0,lib/* .useMDXComponents */.R)(),
-    ...props.components
-  };
-  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
-    ...props,
-    children: (0,jsx_runtime.jsx)(plugins_createMdxContent, {
-      ...props
-    })
-  }) : plugins_createMdxContent(props);
-}
-function _missingMdxReference(id, component) {
-  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
 }
 
 
