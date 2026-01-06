@@ -198,14 +198,7 @@ const sidebars = {
             'platform/biostar_air/sip-intercom-for-biostation3',
           ]
         },
-        {
-          type: 'category',
-          label: 'Video Management',
-          items: [
-            'platform/biostar_air/ip-camera-support-and-configuration',
-            'platform/biostar_air/video-troubleshooting',
-          ]
-        },
+        'platform/biostar_air/ip-camera-support-and-configuration',
         {
           type: 'category',
           label: 'Partners and Integrations',
@@ -230,6 +223,7 @@ const sidebars = {
             'platform/biostar_air/troubleshooting-adding-users-in-bulk',
             'platform/biostar_air/location-services-issues',
             'platform/biostar_air/troubleshooting-suprema-pass-app',
+            'platform/biostar_air/video-troubleshooting',
           ]
         },
         {

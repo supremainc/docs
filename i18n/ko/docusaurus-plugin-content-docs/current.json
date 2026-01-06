@@ -172,7 +172,7 @@
     "description": "The label for category Video Management in sidebar biostar_air"
   },
   "sidebar.biostar_air.category.Using Mobile Credentials": {
-    "message": "모바일 크리덴셜 사용하기",
+    "message": "모바일 크리덴셜",
     "description": "The label for category Using Mobile Credentials in sidebar biostar_air"
   },
   "sidebar.biostar_air.category.Partners and Integrations": {
