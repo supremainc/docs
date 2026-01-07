@@ -303,7 +303,7 @@
     "message": "Release Notes",
     "description": "The label for category 릴리스 노트 in sidebar biostation3"
   },
-  "sidebar.biostarx.category.Release Notes": {
+  "sidebar.biostarx.category.릴리스 노트": {
     "message": "Release Notes",
     "description": "The label for category 'Release Notes' in sidebar 'biostarx'"
   },
