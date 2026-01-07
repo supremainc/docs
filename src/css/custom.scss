@@ -715,6 +715,10 @@ footer {
       padding-bottom: .8rem;
     }
   }
+
+  p + table {
+    margin-top: .7rem;
+  }
   
   blockquote {
     margin-top: .5rem;
