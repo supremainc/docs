@@ -27,11 +27,11 @@ BioStar Air는 관리자가 CSV 파일을 사용하여 여러 사용자를 한 �
 
 1. 화면 오른쪽 상단의 <Cmd sid='add_user_btn' product='air' /> → <Cmd sid='user_actions_import_title' product='air' />를 클릭하세요.
 
-    <Image src='/img/air/bsair-add-bulk-import-user.png' />
+   <Image src='/img/air/bsair-add-bulk-import-user.png' />
 
 1. <Cmd sid='user_actions_import_title' product='air' /> 패널이 나타나면 <Cmd sid='user_actions_import_download_btn_text' product='air' /> 버튼을 클릭하세요.
 
-    <Image src='/img/air/bsair-add-bulk-import-user-download-csv-template.png' />
+   <Image src='/img/air/bsair-add-bulk-import-user-download-csv-template.png' />
 
 1. CSV 템플릿 파일(*biostar-import-user-csv-example.csv*)을 로컬에 저장하세요.
 
@@ -46,11 +46,11 @@ CSV 템플릿을 다운로드하고 각 사용자에 대한 필수 세부 정보
 
 * <Cmd sid='user_csv_example_header11' product='air' className='bold' />: <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_groups_submenu' product='air' />에서 그룹 아이디를 확인할 수 있습니다.
 
-  <Image src='/img/air/bsair-user-group-list-check-ids.png' />
+   <Image src='/img/air/bsair-user-group-list-check-ids.png' />
 
 * <Cmd sid='user_csv_example_header12' product='air' className='bold' /> : <Cmd sid='access_menu' product='air' /> → <Cmd sid='access_levels_submenu' product='air' />에서 출입 레벨 아이디를 확인할 수 있습니다. <Cmd sid='full_access' product='air' className='bold' />은 항상 **1**로 설정됩니다. 쉼표(`,`)를 구분자로 여러 출입 레벨을 지정할 수 있습니다.
 
-  <Image src='/img/air/bsair-ac-level-list-check-ids.png' />
+   <Image src='/img/air/bsair-ac-level-list-check-ids.png' />
 
 * <Cmd sid='user_csv_example_header7' product='air' className='bold' />: 이메일을 통해 초대장을 발송한다면 필수로 입력하세요.
 
@@ -70,25 +70,25 @@ CSV 템플릿을 다운로드하고 각 사용자에 대한 필수 세부 정보
 
 * **CSV 템플릿**
 
-  * 각 정의된 형식(사용자 정의 또는 기본)은 CSV 파일에서 별도의 열로 표시됩니다.
+   * 각 정의된 형식(사용자 정의 또는 기본)은 CSV 파일에서 별도의 열로 표시됩니다.
 
-    > <Cmd sid='rf_card_data_format_option_1' product='air' className='bold' />, <Cmd sid='rf_card_data_format_option_2' product='air' className='bold' />, <Cmd sid='rf_card_data_format_option_3' product='air' className='bold' />, <Cmd sid='rf_card_data_format_option_4' product='air' className='bold' />, <Cmd sid='rf_card_data_format_option_5' product='air' className='bold' />
+      > <Cmd sid='rf_card_data_format_option_1' product='air' className='bold' />, <Cmd sid='rf_card_data_format_option_2' product='air' className='bold' />, <Cmd sid='rf_card_data_format_option_3' product='air' className='bold' />, <Cmd sid='rf_card_data_format_option_4' product='air' className='bold' />, <Cmd sid='rf_card_data_format_option_5' product='air' className='bold' />
 
-  * 여러 항목을 단일 필드에 입력할 때는 슬래시(`/`)로 구분하세요.
+   * 여러 항목을 단일 필드에 입력할 때는 슬래시(`/`)로 구분하세요.
 
-  * 카드 이름 주위에는 작은 따옴표(`'`)를 사용할 수 있습니다. 큰 따옴표(`"`)를 사용하면 오류가 발생할 수 있습니다.
+   * 카드 이름 주위에는 작은 따옴표(`'`)를 사용할 수 있습니다. 큰 따옴표(`"`)를 사용하면 오류가 발생할 수 있습니다.
 
-    > ✅ 'CardName' | ❌ "CardName"
+      > ✅ 'CardName' | ❌ "CardName"
 
-  :::note
+   :::note
 
-  **예시**
+   **예시**
 
-  * 시설 코드가 있는 경우: *1234567-100-'Main Office Card'* (`CardID`-`FacilityCode`-`'CardName'`)
+   * 시설 코드가 있는 경우: *1234567-100-'Main Office Card'* (`CardID`-`FacilityCode`-`'CardName'`)
 
-  * 여러 세그먼트가 있는 경우: *12-3456-78-'Lab Entry Card'*
+   * 여러 세그먼트가 있는 경우: *12-3456-78-'Lab Entry Card'*
 
-  :::
+   :::
 
 ### 여러 카드 지원
 
@@ -96,9 +96,9 @@ CSV 템플릿을 다운로드하고 각 사용자에 대한 필수 세부 정보
 
 * **CSV 템플릿**
 
-  * 단일 카드는 CSN 카드 번호를 입력합니다.
+   * 단일 카드는 CSN 카드 번호를 입력합니다.
 
-  * 여러 카드를 등록할 때는 CSN 카드 번호를 슬래시(`/`)로 구분하세요.
+   * 여러 카드를 등록할 때는 CSN 카드 번호를 슬래시(`/`)로 구분하세요.
 
 :::note
 
@@ -117,25 +117,25 @@ CSV 파일 준비를 완료하면 업로드하세요.
 
 1. 화면 오른쪽 상단의 <Cmd sid='add_user_btn' product='air' /> → <Cmd sid='user_actions_import_title' product='air' />를 클릭하세요.
 
-    <Image src='/img/air/bsair-add-bulk-import-user.png' />
+   <Image src='/img/air/bsair-add-bulk-import-user.png' />
 
 1. <Cmd sid='user_actions_import_title' product='air' /> 패널이 나타나면 <Cmd sid='face_register_upload_csv_text_select_file' product='air' /> 버튼을 클릭하세요.
 
-    <Image src='/img/air/bsair-add-bulk-import-user-select-csv.png' />
+   <Image src='/img/air/bsair-add-bulk-import-user-select-csv.png' />
 
 1. 앞서 준비한 CSV 파일을 선택하세요.
 
-    :::note
+   :::note
 
-    사용자의 프로필 이미지가 준비되어 있다면 <Cmd sid='face_register_upload_face_photo' product='air' /> 옵션을 활성화하세요. 자세한 내용은 [다음 문서](#uploadProfileImages)를 참고하세요.
+   사용자의 프로필 이미지가 준비되어 있다면 <Cmd sid='face_register_upload_face_photo' product='air' /> 옵션을 활성화하세요. 자세한 내용은 [다음 문서](#uploadProfileImages)를 참고하세요.
 
-    :::
+   :::
 
 1. 화면 오른쪽 하단의 <Cmd sid='new_popup_import_users_btn_next' product='air' /> 버튼을 클릭하세요.
 
 1. <Cmd sid='user_actions_import_data_preview' product='air' /> 섹션에서 첫번째 열의 데이터 정확성을 검토하세요.
 
-    <Image src='/img/air/bsair-add-bulk-import-user-csv-data-preview.png' />
+   <Image src='/img/air/bsair-add-bulk-import-user-csv-data-preview.png' />
 
 1. 데이터에 문제가 없다면 오른쪽 하단의 <Cmd sid='user_actions_import_btn' product='air' /> 버튼을 클릭하세요.
 
@@ -168,7 +168,7 @@ CSV 업로드 프로세스가 개선되어 **행별 오류 피드백**을 제공
 
 1. CSV 파일의 <Cmd sid='user_csv_example_header1' product='air' className='bold' /> 열과 일치하는 프로필 이미지 파일을 준비하세요.
 
-    예, *601.jpg* 파일은 사용자 아이디 **601**에 해당합니다.
+   예, *601.jpg* 파일은 사용자 아이디 **601**에 해당합니다.
 
 1. <Cmd sid='user_actions_import_title' product='air' /> 패널에서 CSV 파일을 업로드 후 <Cmd sid='face_register_upload_face_photo' product='air' /> 옵션을 활성화하세요.
 
