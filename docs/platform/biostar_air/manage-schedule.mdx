@@ -1,0 +1,65 @@
+---
+id: manage-schedule
+title: 스케줄 관리하기
+description: BioStar Air에서 출입문과 엘리베이터의 접근을 제어하기 위해 스케줄을 생성하고 관리하는 방법입니다.
+keywords: [스케줄, 관리, BioStar Air]
+---
+
+스케줄을 생성하여 특정 요일과 시간대에 출입문이나 엘리베이터의 출입을 허용하거나 제한하세요. 휴일 그룹과 함께 사용하면 출입 규칙을 더욱 세밀하게 조정할 수 있습니다.
+
+:::info
+
+* 휴일 그룹은 스케줄 보다 우선합니다. 항상 출입이 필요한 사용자에게는 제한 없는 출입 권한을 부여하세요.
+
+* 휴일 그룹 설정에 대한 자세한 내용은 [다음 문서](manage-holiday-group)를 참고하세요.
+
+* 출입문에 스케줄을 적용하는 방법에 대한 자세한 내용은 [다음 문서](managing-door-schedules)를 참고하세요.
+
+* 엘리베이터의 층마다 출입을 제어하는 스케줄 설정에 대한 자세한 내용은 [다음 문서](manage-elevator)를 참고하세요.
+
+:::
+
+
+## 스케줄 추가 {#addSchedule}
+
+import AddScheduleItem from '../../common/_add-schedule-item.mdx';
+
+<AddScheduleItem />
+
+:::info
+
+* 출입을 허용하는 열림 스케줄과 출입을 제한하는 잠김 스케줄을 추가하여 출입문에 적용할 수 있습니다. 출입문에 스케줄을 적용하는 방법에 대한 자세한 내용은 [다음 문서](managing-door-schedules)를 참고하세요.
+
+* 엘리베이터의 층마다 출입을 제어하는 스케줄 설정에 대한 자세한 내용은 [다음 문서](manage-elevator)를 참고하세요.
+
+:::
+
+
+## 스케줄 수정 {#editSchedule}
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='access_menu' product='air' /> → <Cmd sid='schedules_submenu' product='air' />을 클릭하세요.
+
+1. 목록에서 수정할 스케줄을 클릭하세요. 또는 스케줄의 체크박스를 클릭하고 목록 상단의 <IcAirEdit /> 버튼을 클릭하세요.
+
+1. <Cmd sid='schedule_edit_title' product='air' /> 패널이 나타나면 필요한 정보를 변경하거나 일정을 수정하세요.
+
+   <Image src='/img/air/bsair-access-mng-schedule-edit.png' />
+
+1. 수정 사항을 저장하려면 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+
+## 스케줄 삭제 {#deleteSchedule}
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='access_menu' product='air' /> → <Cmd sid='schedules_submenu' product='air' />을 클릭하세요.
+
+1. 목록에서 삭제할 스케줄의 체크박스를 클릭하세요. 1개 이상의 스케줄을 선택할 수 있습니다.
+
+1. 목록 상단의 <IcAirRemove /> 버튼을 클릭하세요.
+
+1. 경고 메시지 창이 나타나면 <Cmd sid='btn_yes' product='air' /> 버튼을 클릭하세요.
+
+:::info
+
+스케줄을 삭제하면 모든 관련 섹션에서 스케줄이 제거됩니다. 예를 들어, 출입문이나 엘리베이터에 적용된 스케줄이 삭제되면 해당 출입문이나 엘리베이터에서 더 이상 스케줄이 적용되지 않습니다.
+
+:::

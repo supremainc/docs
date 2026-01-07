@@ -1,7 +1,7 @@
 ---
 id: configuring-the-airfob-patch-and-tag
-title: Airfob 패치(Patch)와 태그(Tag) 구성하기
-description: 기존 출입 통제 시스템을 BioStar Air로 업그레이드하기 위해 Airfob 패치 및 태그 장치를 구성하고, BLE 모드 설정, 카드 ID 커스텀 출력 방법을 안내합니다.
+title: 에어팝 패치(Patch)와 태그(Tag) 구성하기
+description: 기존 출입 통제 시스템을 BioStar Air로 업그레이드하기 위해 에어팝 패치 및 태그 장치를 구성하고, BLE 모드 설정, 카드 ID 커스텀 출력 방법을 안내합니다.
 keywords: [Airfob, Patch, Tag, configuration]
 ---
 
@@ -9,48 +9,68 @@ import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
 ## 장치 개요 {#device-overview}
 
-Airfob Patch 및 Tag 장치는 기존 출입 통제 리더기 또는 출입문 잠금을 BioStar Air 모바일 크리덴셜과 호환될 수 있도록 업그레이드했습니다.
+에어팝 패치 및 태그 장치는 기존 출입 통제 리더기 또는 출입문 잠금을 BioStar Air 모바일 크리덴셜과 호환될 수 있도록 업그레이드했습니다.
 
-* **Airfob Patch**: 유선 리더기 및 인터콤에 적합하며, 배선 없이 부착할 수 있는 에너지 하베스팅(Energy-Harvesting) 장치입니다.
+* **에어팝 패치**: 유선 리더기 및 인터콤에 적합하며, 배선 없이 부착할 수 있는 에너지 하베스팅(Energy-Harvesting) 장치입니다.
 
-* **Airfob Tag**: 동전형 셀 배터리를 장착하여 출입문 잠금 장치와 같은 배터리 구동 장치에 적합합니다.
+* **에어팝 태그**: 동전형 셀 배터리를 장착하여 출입문 잠금 장치와 같은 배터리 구동 장치에 적합합니다.
+
+:::info
+
+* 에어팝 패치 및 태그 장치는 MIFARE 1K 기술과 호환되지만 125 KHz '저주파' 리더기 또는 잠금 장치와는 호환되지 않습니다.
+
+* 에어팝 패치 및 태그 장치는 모바일 기기에서 암호화된 Bluetooth BioStar Air 크리덴셜을 인증하고 MIFARE RFID 신호를 에뮬레이션하여 작동합니다. 테이프를 사용하여 리더기 및 잠금 장치에 부착되며 배선이 필요하지 않습니다.
+
+:::
+
 
 <CustomerNote />
 
 
-## 호환성 {#compatibility}
+## 구성 단계 {#configurationSteps}
 
-두 장치는 MIFARE 1K 기술과 호환되지만 125 KHz '저주파' 리더기 또는 잠금 장치와는 호환하지 않습니다.
-
-
-## 기능성 {#functionality}
-
-이 장치는 모바일 기기에서 암호화된 Bluetooth BioStar Air 크리덴셜을 인증하고 MIFARE RFID 신호를 에뮬레이션하여 작동합니다. 테이프를 사용하여 리더기 및 잠금 장치에 부착되며 배선이 필요하지 않습니다.
-
-
-## 구성 단계 {#configuration-steps}
-
-Tag 또는 Patch를 설치하고 BioStar Air 앱에 등록하세요. 다음 단계를 따라 장치를 구성하세요.
+에어팝 패치 또는 태그를 설치하고 BioStar Air 앱에 등록하세요. 다음 단계를 따라 장치를 구성하세요.
 
 <Steps>
 <Step>
 
-### 앱 실행 {#access-the-app}
+### 앱 실행 {#accessApp}
 
-* 모바일 기기에서 **BioStar Air** 앱을 실행하세요.
+<Columns>
+<Column className='width--20'>
+<Image src='/img/air/bsair-device-aifob-login-app.png' />
+</Column>
 
-* Tag 또는 Patch 장치를 등록한 사이트에 로그인하세요.
+<Column className='padding--l10'>
 
+1. 모바일 기기에서 **BioStar Air** 앱을 실행하세요.
+
+1. 에어팝 패치 또는 태그 장치를 등록한 사이트에 로그인하세요.
+
+</Column>
+</Columns>
 </Step>
 <Step>
 
-### 장치 설정으로 이동 {#navigate-to-device-settings}
+### 장치 설정으로 이동 {#navigateToDeviceSettings}
 
-* 메뉴 바에서 **Access Point**를 탭하세요.
+<Columns>
+<Column className='width--20'>
+<Image src='/img/air/bsair-device-aifob-app-device.png' />
+</Column>
 
-* 등록된 장치 목록을 확인하려면 **Device**를 선택하세요.
+<Column className='padding--l10'>
 
-* 구성할 Patch 또는 Tag 장치를 선택하세요.
+1. **BioStar Air** 앱 초기 화면에서 하단의 <Cmd sid='site_setting_tab_management' product='air' />를 탭하세요.
+
+1. 등록된 장치 목록을 확인하려면 <Cmd sid='devices_card' product='air' />를 탭하세요.
+
+1. 장치 목록에서 에어팝 패치 또는 태그 장치를 선택하세요.
+
+</Column>
+</Columns>
+
+
 
 </Step>
 <Step>
@@ -59,14 +79,14 @@ Tag 또는 Patch를 설치하고 BioStar Air 앱에 등록하세요. 다음 단�
 
 * 모바일 기기를 장치에 가까이 가져가세요.
 
-* 앱에서 **BLE Mode**를 활성화하세요.
+* 앱에서 <Cmd>BLE 모드</Cmd>를 활성화하세요.
 
 </Step>
 <Step>
 
 ### 카드 ID 출력 방법 설정 {#set-card-id-output-method}
 
-* **Card ID Output Method**로 스크롤하고 **Edit**를 탭하세요.
+* **Card ID Output Method**로 스크롤하여 이동하고 **Edit**를 탭하세요.
 
 * **User Card ID** 옆에 있는 **Select**를 탭하세요.
 
@@ -88,11 +108,9 @@ Tag 또는 Patch를 설치하고 BioStar Air 앱에 등록하세요. 다음 단�
 
 ### 설정 저장 {#save-your-settings}
 
-* 모바일 기기를 장치 근처에 두고 **Save**를 눌러 선택 내용을 확인하세요.
+* 모바일 기기를 장치 근처에 두고 <Cmd sid='save_btn' product='air' /> 버튼을 탭하고 선택 내용을 확인하세요.
 
 * 업데이트 완료 메시지가 나타납니다.
 
 </Step>
 </Steps>
-
-이 단계를 따르면 Airfob Patch 및 Tag 장치가 특정 출입 통제 요구 사항을 충족하도록 올바르게 구성할 수 있습니다.
