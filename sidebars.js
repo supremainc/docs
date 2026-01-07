@@ -72,7 +72,7 @@ const sidebars = {
           },
           items: [
             'platform/biostar_air/getting-started',
-            'platform/biostar_air/biostar-air-login',
+            'platform/biostar_air/site-selector',
             {
               type: 'category',
               label: 'User Management',
@@ -118,7 +118,7 @@ const sidebars = {
               },
               items: [
                 'platform/biostar_air/managing-registered-doors',
-                'platform/biostar_air/managing-door-and-device-groups',
+                'platform/biostar_air/managing-door-groups',
                 'platform/biostar_air/managing-door-schedules',
               ]
             },
