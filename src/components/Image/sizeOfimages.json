@@ -59,6 +59,1054 @@
     "width": 806,
     "height": 566
   },
+  "/img/air/bsair-ac-level-list-check-ids.png": {
+    "width": 1590,
+    "height": 312
+  },
+  "/img/air/bsair-access-authority-set.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-access-mng-ac-level-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-access-mng-ac-level-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-access-mng-ac-level.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-access-mng-floor-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-access-mng-floor-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-access-mng-floor.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-access-mng-holiday-add-new-day.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-access-mng-holiday-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-access-mng-holiday-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-access-mng-holiday.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-access-mng-schedule-add-holiday-group.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-access-mng-schedule-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-access-mng-schedule-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-access-mng-schedule.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-account-settings-account.png": {
+    "width": 600,
+    "height": 630
+  },
+  "/img/air/bsair-account-settings-alert-report.png": {
+    "width": 600,
+    "height": 630
+  },
+  "/img/air/bsair-account-settings-management.png": {
+    "width": 600,
+    "height": 630
+  },
+  "/img/air/bsair-add-bulk-import-user-csv-complete.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-add-bulk-import-user-csv-data-preview.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-add-bulk-import-user-csv-error.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-add-bulk-import-user-download-csv-template.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-add-bulk-import-user-profile-images.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-add-bulk-import-user-select-csv.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-add-bulk-import-user-with-face-photo.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-add-bulk-import-user.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-add-user-access-info.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-add-user-credential-credential-type-face-qr.png": {
+    "width": 598,
+    "height": 526
+  },
+  "/img/air/bsair-add-user-credential-credential-type-face.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-add-user-credential-credential-type-invite-link.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-add-user-credential-credential-type-mobile.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-add-user-credential-credential-type-pin.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-add-user-credential-credential-type-rfcard-2type.png": {
+    "width": 1267,
+    "height": 736
+  },
+  "/img/air/bsair-add-user-credential-credential-type-rfcard.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-add-user-credential-credential-type-web.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-add-user-credential-user-type-regular.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-add-user-credential-user-type-temporary.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-add-user-select-card-template.png": {
+    "width": 1305,
+    "height": 1023
+  },
+  "/img/air/bsair-adv-rollcall-add-device-group.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-adv-rollcall-add-user-group.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-adv-rollcall-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-adv-rollcall-history-details.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-adv-rollcall-history.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-adv-rollcall.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-app-bs3-sip-account-settings-intercom.png": {
+    "width": 1266,
+    "height": 1162
+  },
+  "/img/air/bsair-app-bs3-sip-account-settings.png": {
+    "width": 400,
+    "height": 788
+  },
+  "/img/air/bsair-app-mng-user-action.png": {
+    "width": 590,
+    "height": 1142
+  },
+  "/img/air/bsair-app-mng-user-add.png": {
+    "width": 1285,
+    "height": 1142
+  },
+  "/img/air/bsair-app-mng-user-bulk-actions.png": {
+    "width": 590,
+    "height": 1142
+  },
+  "/img/air/bsair-app-mng-user-edit.png": {
+    "width": 590,
+    "height": 1142
+  },
+  "/img/air/bsair-app-mng-user-filter.png": {
+    "width": 1285,
+    "height": 1142
+  },
+  "/img/air/bsair-app-mng-user-group.png": {
+    "width": 1285,
+    "height": 1142
+  },
+  "/img/air/bsair-app-mng-user.png": {
+    "width": 1285,
+    "height": 1172
+  },
+  "/img/air/bsair-chrome-develope.png": {
+    "width": 1278,
+    "height": 881
+  },
+  "/img/air/bsair-device-aifob-app-device.png": {
+    "width": 1062,
+    "height": 2135
+  },
+  "/img/air/bsair-device-aifob-login-app.png": {
+    "width": 1062,
+    "height": 2135
+  },
+  "/img/air/bsair-device-bs3-info-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-bs3-sip-account-settings-intercom.png": {
+    "width": 970,
+    "height": 676
+  },
+  "/img/air/bsair-device-bs3-sip-account-settings.png": {
+    "width": 400,
+    "height": 363
+  },
+  "/img/air/bsair-device-camera-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-camera.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-details-qr-reader.png": {
+    "width": 875,
+    "height": 583
+  },
+  "/img/air/bsair-device-mng-device-set-tna.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-mng-edit-group.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-mng-edit-timezone.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-mng-fw-upgrade.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-mng-group-add-group.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-mng-group-init.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-mng-group-list.png": {
+    "width": 1920,
+    "height": 487
+  },
+  "/img/air/bsair-device-mng-list-edit-details.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-mng-list-fw-column-align.png": {
+    "width": 1920,
+    "height": 740
+  },
+  "/img/air/bsair-device-mng-list-fw-update.png": {
+    "width": 1920,
+    "height": 738
+  },
+  "/img/air/bsair-device-mng-list-group-mng.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-mng-list-info.png": {
+    "width": 1619,
+    "height": 703
+  },
+  "/img/air/bsair-device-mng-list-tools.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-mng-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-two-fator-auth.png": {
+    "width": 499,
+    "height": 479
+  },
+  "/img/air/bsair-door-assign-camera.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-door-group-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-door-group-added-group.png": {
+    "width": 1920,
+    "height": 497
+  },
+  "/img/air/bsair-door-group-edit-name.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-door-group.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-door-mng-edit-door-sio2-enable.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-door-mng-edit-door-sio2-settings.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-door-mng-registered-door-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-door-mng-registered-door-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-door-mng-registered-door-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-door-mng-registered-door-report-list.png": {
+    "width": 812,
+    "height": 655
+  },
+  "/img/air/bsair-door-mng-registered-door-report.png": {
+    "width": 812,
+    "height": 633
+  },
+  "/img/air/bsair-door-mng-registered-door-schedule.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-door-mng-schedule-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-door-mng-schedule-setting-lock.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-door-mng-schedule-setting-unlock.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-elevator-mng-add-config-floor.png": {
+    "width": 868,
+    "height": 883
+  },
+  "/img/air/bsair-elevator-mng-add-floor-config.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-elevator-mng-add-floor.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-elevator-mng-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-elevator-mng-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-elevator-mng.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-gettingstarted-access-level-mng-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-gettingstarted-access-level-mng.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-gettingstarted-dashboard.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-gettingstarted-device-mng.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-gettingstarted-door-group-mng-add.png": {
+    "width": 500,
+    "height": 428
+  },
+  "/img/air/bsair-gettingstarted-door-group-mng.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-gettingstarted-door-mng-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-gettingstarted-door-mng.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-gettingstarted-holiday-group-mng-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-gettingstarted-holiday-group-mng.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-gettingstarted-login.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-gettingstarted-schedule-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-gettingstarted-schedule.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-gettingstarted-setting-admin-invite.png": {
+    "width": 400,
+    "height": 435
+  },
+  "/img/air/bsair-gettingstarted-setting-admin.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-gettingstarted-user-group-mng-add-aclevel-details.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-gettingstarted-user-group-mng-add-credential-details.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-gettingstarted-user-group-mng-add-user-details.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-gettingstarted-user-group-mng-add-user.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-gettingstarted-user-group-mng-add.png": {
+    "width": 438,
+    "height": 344
+  },
+  "/img/air/bsair-gettingstarted-user-group-mng.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-linkpass-credential.png": {
+    "width": 1280,
+    "height": 737
+  },
+  "/img/air/bsair-mobile-adv-rollcall-complete.png": {
+    "width": 1061,
+    "height": 2140
+  },
+  "/img/air/bsair-mobile-adv-rollcall-start.png": {
+    "width": 1061,
+    "height": 2142
+  },
+  "/img/air/bsair-mobile-adv-rollcall.png": {
+    "width": 5609,
+    "height": 2372
+  },
+  "/img/air/bsair-mobile-card-template-intro.png": {
+    "width": 1868,
+    "height": 867
+  },
+  "/img/air/bsair-mobile-device-fw-update.png": {
+    "width": 5610,
+    "height": 2372
+  },
+  "/img/air/bsair-mobile-monitoring-door-status-control.png": {
+    "width": 1060,
+    "height": 2135
+  },
+  "/img/air/bsair-mobile-monitoring-door-status.png": {
+    "width": 5609,
+    "height": 2372
+  },
+  "/img/air/bsair-mobile-monitoring-eventlog.png": {
+    "width": 5609,
+    "height": 2372
+  },
+  "/img/air/bsair-monitoring-alert-report-history.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-monitoring-auditlog-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-monitoring-door-status-control-always-open.png": {
+    "width": 1593,
+    "height": 207
+  },
+  "/img/air/bsair-monitoring-door-status-control-lock-mode.png": {
+    "width": 1593,
+    "height": 207
+  },
+  "/img/air/bsair-monitoring-door-status-more-func.png": {
+    "width": 1623,
+    "height": 274
+  },
+  "/img/air/bsair-monitoring-door-status.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-monitoring-event-log-list-column-set.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-monitoring-event-log-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-monitoring-eventlog-apply-masking.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-monitoring-eventlog-auto-refresh.png": {
+    "width": 196,
+    "height": 239
+  },
+  "/img/air/bsair-monitoring-eventlog-list-custom-table.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-monitoring-eventlog-list-filter.png": {
+    "width": 1920,
+    "height": 540
+  },
+  "/img/air/bsair-monitoring-eventlog-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-monitoring-eventlog-report-added.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-monitoring-eventlog-report-download.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-monitoring-eventlog-report-setting.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-monitoring-eventlog-set-datetime.png": {
+    "width": 768,
+    "height": 386
+  },
+  "/img/air/bsair-monitoring-realtime-camera.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-monitoring-recorded-camera.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-register-device-step-01.png": {
+    "width": 5610,
+    "height": 2372
+  },
+  "/img/air/bsair-register-device-step.png": {
+    "width": 6901,
+    "height": 2372
+  },
+  "/img/air/bsair-remove-device-step.png": {
+    "width": 6901,
+    "height": 2372
+  },
+  "/img/air/bsair-report-audit-trail-report-setting-result.png": {
+    "width": 812,
+    "height": 655
+  },
+  "/img/air/bsair-report-audit-trail-report-setting.png": {
+    "width": 812,
+    "height": 633
+  },
+  "/img/air/bsair-report-eventlog-report-setting-result.png": {
+    "width": 812,
+    "height": 760
+  },
+  "/img/air/bsair-report-eventlog-report-setting.png": {
+    "width": 812,
+    "height": 760
+  },
+  "/img/air/bsair-settings-admin-change-role.png": {
+    "width": 1625,
+    "height": 414
+  },
+  "/img/air/bsair-settings-admin-deactive-result.png": {
+    "width": 1616,
+    "height": 348
+  },
+  "/img/air/bsair-settings-admin-deactive.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-admin-invite.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-admin.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-alert-add-event-log.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-alert-add-report.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-alert-event-log-setting.png": {
+    "width": 869,
+    "height": 612
+  },
+  "/img/air/bsair-settings-alert-n-report.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-alert-system-setting.png": {
+    "width": 869,
+    "height": 435
+  },
+  "/img/air/bsair-settings-card-format-add-wiegand-assign-bit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-card-format-add-wiegand.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-card-format-edit-wiegand.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-card-format.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-dst-add-auto.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-dst-add-manual.png": {
+    "width": 1685,
+    "height": 368
+  },
+  "/img/air/bsair-settings-dst-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-dst-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-dst.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-email-add-admin.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-email-add-style.png": {
+    "width": 851,
+    "height": 821
+  },
+  "/img/air/bsair-settings-email-add-user.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-email-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-email.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-site-additional-feature-webhook.png": {
+    "width": 1553,
+    "height": 413
+  },
+  "/img/air/bsair-settings-site-additional-feature.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-site-addtional-feature-video-mangement.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-site-info.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-site-management.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-site-security.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-site-setting.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-site-tab-settings-enable-tna.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-site-tab-settings-tna-mng.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-site-tab-settings.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-site-selector-top.png": {
+    "width": 1920,
+    "height": 276
+  },
+  "/img/air/bsair-site-selector.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-sp-app-contact-admin.png": {
+    "width": 3980,
+    "height": 2461
+  },
+  "/img/air/bsair-sp-app-contact-qrcode.png": {
+    "width": 2577,
+    "height": 2461
+  },
+  "/img/air/bsair-sp-app-menus.png": {
+    "width": 1179,
+    "height": 2556
+  },
+  "/img/air/bsair-sp-app-set-access-log.png": {
+    "width": 5392,
+    "height": 2445
+  },
+  "/img/air/bsair-sp-app-set-advanced-sensitivity.png": {
+    "width": 5392,
+    "height": 2445
+  },
+  "/img/air/bsair-sp-app-set-advanced.png": {
+    "width": 5392,
+    "height": 2445
+  },
+  "/img/air/bsair-sp-app-set-connection-mode.png": {
+    "width": 2584,
+    "height": 2445
+  },
+  "/img/air/bsair-sp-app-set-support.png": {
+    "width": 5392,
+    "height": 2445
+  },
+  "/img/air/bsair-sp-app-set-twofactor.png": {
+    "width": 5392,
+    "height": 2445
+  },
+  "/img/air/bsair-upload-profile-image-adjust.png": {
+    "width": 452,
+    "height": 605
+  },
+  "/img/air/bsair-upload-profile-image.png": {
+    "width": 200,
+    "height": 186
+  },
+  "/img/air/bsair-usage-settings-site-tna-report-config-down.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-usage-settings-site-tna-report-config-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-usage-settings-site-tna-report-config.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-usage-settings-site.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-user-details-edit-info.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-user-details-manage-status.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-user-details-remove.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-user-details.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-user-group-assign-popup.png": {
+    "width": 704,
+    "height": 641
+  },
+  "/img/air/bsair-user-group-assign-result.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-user-group-assign.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-user-group-edit-popup.png": {
+    "width": 438,
+    "height": 288
+  },
+  "/img/air/bsair-user-group-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-user-group-list-check-ids.png": {
+    "width": 1591,
+    "height": 427
+  },
+  "/img/air/bsair-user-group-remove.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-user-info-credential-face-add.png": {
+    "width": 906,
+    "height": 432
+  },
+  "/img/air/bsair-user-info-credential-face.png": {
+    "width": 906,
+    "height": 440
+  },
+  "/img/air/bsair-user-list-multi-select-remove-opt.png": {
+    "width": 1610,
+    "height": 663
+  },
+  "/img/air/bsair-user-list-multi-select.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-user-list-multi-user-batch-action.png": {
+    "width": 1610,
+    "height": 663
+  },
+  "/img/air/bsair-user-list-overview.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-user-list-search.png": {
+    "width": 1614,
+    "height": 711
+  },
+  "/img/air/bsair-user-list-tool-aclevel.png": {
+    "width": 311,
+    "height": 204
+  },
+  "/img/air/bsair-user-list-tool-mobile-tag.png": {
+    "width": 473,
+    "height": 257
+  },
+  "/img/air/bsair-user-list-user-filtering.png": {
+    "width": 497,
+    "height": 179
+  },
+  "/img/air/bsair-user-list-user-template.png": {
+    "width": 704,
+    "height": 758
+  },
+  "/img/air/bsair-user-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-user-mobile-card-template-adjust-image.png": {
+    "width": 750,
+    "height": 740
+  },
+  "/img/air/bsair-user-mobile-card-template-apply-all.png": {
+    "width": 1920,
+    "height": 675
+  },
+  "/img/air/bsair-user-mobile-card-template-apply-user-details.png": {
+    "width": 1299,
+    "height": 1015
+  },
+  "/img/air/bsair-user-mobile-card-template-apply-user-edit.png": {
+    "width": 1190,
+    "height": 249
+  },
+  "/img/air/bsair-user-mobile-card-template-card-config-font.png": {
+    "width": 820,
+    "height": 311
+  },
+  "/img/air/bsair-user-mobile-card-template-card-config-setting.png": {
+    "width": 226,
+    "height": 357
+  },
+  "/img/air/bsair-user-mobile-card-template-card-config.png": {
+    "width": 863,
+    "height": 1075
+  },
+  "/img/air/bsair-user-mobile-card-template-edit-confirm.png": {
+    "width": 624,
+    "height": 287
+  },
+  "/img/air/bsair-user-mobile-card-template-new-card.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-user-mobile-card-template-new.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-user-mobile-card-template-remove.png": {
+    "width": 1920,
+    "height": 675
+  },
+  "/img/air/bsair-user-mobile-card-template-set-default.png": {
+    "width": 1920,
+    "height": 675
+  },
+  "/img/air/bsair-user-mobile-card-template.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-user-report-setting-list.png": {
+    "width": 812,
+    "height": 737
+  },
+  "/img/air/bsair-user-report-setting.png": {
+    "width": 812,
+    "height": 570
+  },
+  "/img/air/bsair-user-sub-group-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-user-sub-group-popup.png": {
+    "width": 438,
+    "height": 454
+  },
+  "/img/air/bsair-using-app-dashboard.png": {
+    "width": 1062,
+    "height": 2135
+  },
+  "/img/air/bsair-using-app-devices.png": {
+    "width": 1062,
+    "height": 2135
+  },
+  "/img/air/bsair-using-app-monitoring.png": {
+    "width": 1061,
+    "height": 2135
+  },
+  "/img/air/bsair-using-app-users.png": {
+    "width": 1061,
+    "height": 2108
+  },
+  "/img/air/bsair-zone-alarm-add-basic-config.png": {
+    "width": 1000,
+    "height": 537
+  },
+  "/img/air/bsair-zone-alarm-add-method-card.png": {
+    "width": 598,
+    "height": 663
+  },
+  "/img/air/bsair-zone-alarm-add-method-detect.png": {
+    "width": 599,
+    "height": 584
+  },
+  "/img/air/bsair-zone-alarm-add-method-device.png": {
+    "width": 598,
+    "height": 481
+  },
+  "/img/air/bsair-zone-alarm-add-method-input.png": {
+    "width": 599,
+    "height": 678
+  },
+  "/img/air/bsair-zone-alarm-add-method.png": {
+    "width": 1000,
+    "height": 701
+  },
+  "/img/air/bsair-zone-alarm-add-set-alarm.png": {
+    "width": 599,
+    "height": 687
+  },
+  "/img/air/bsair-zone-alarm-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-zone-alarm-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-zone-alarm-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-zone-alarm.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/img/banner/biostar2_6_banner.jpg": {
     "width": 1920,
     "height": 400
@@ -3399,7 +4447,15 @@
     "width": 250,
     "height": 400
   },
+  "/img/device/bs3m-face-recognition.png": {
+    "width": 250,
+    "height": 400
+  },
   "/img/device/bs3m-face.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-finger.png": {
     "width": 250,
     "height": 400
   },
@@ -3413,7 +4469,7 @@
   },
   "/img/device/bs3m-license2.png": {
     "width": 250,
-    "height": 444
+    "height": 400
   },
   "/img/device/bs3m-memory-info.png": {
     "width": 250,
@@ -5190,6 +6246,894 @@
   "/img/device/xstation2-main.png": {
     "width": 800,
     "height": 533
+  },
+  "/img/en/air/bsair-access-authority-set.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-access-mng-ac-level-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-access-mng-ac-level-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-access-mng-ac-level.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-access-mng-floor-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-access-mng-floor-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-access-mng-floor.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-access-mng-holiday-add-new-day.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-access-mng-holiday-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-access-mng-holiday-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-access-mng-holiday.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-access-mng-schedule-add-holiday-group.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-access-mng-schedule-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-access-mng-schedule-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-access-mng-schedule.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-account-settings-account.png": {
+    "width": 600,
+    "height": 630
+  },
+  "/img/en/air/bsair-account-settings-alert-report.png": {
+    "width": 600,
+    "height": 630
+  },
+  "/img/en/air/bsair-account-settings-management.png": {
+    "width": 600,
+    "height": 630
+  },
+  "/img/en/air/bsair-add-user-access-info.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-add-user-credential-credential-type-face-qr.png": {
+    "width": 598,
+    "height": 526
+  },
+  "/img/en/air/bsair-add-user-credential-credential-type-face.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-add-user-credential-credential-type-invite-link.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-add-user-credential-credential-type-pin.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-add-user-credential-credential-type-rfcard-2type.png": {
+    "width": 1267,
+    "height": 736
+  },
+  "/img/en/air/bsair-add-user-credential-credential-type-rfcard.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-add-user-credential-credential-type-web.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-add-user-credential-user-type-regular.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-add-user-credential-user-type-temporary.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-add-user-select-card-template.png": {
+    "width": 1305,
+    "height": 1023
+  },
+  "/img/en/air/bsair-adv-rollcall-add-device-group.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-adv-rollcall-add-user-group.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-adv-rollcall-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-adv-rollcall-history-details.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-adv-rollcall-history.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-adv-rollcall.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-app-bs3-sip-account-settings.png": {
+    "width": 400,
+    "height": 788
+  },
+  "/img/en/air/bsair-app-mng-user-action.png": {
+    "width": 590,
+    "height": 1142
+  },
+  "/img/en/air/bsair-app-mng-user-add.png": {
+    "width": 1285,
+    "height": 1142
+  },
+  "/img/en/air/bsair-app-mng-user-bulk-actions.png": {
+    "width": 590,
+    "height": 1142
+  },
+  "/img/en/air/bsair-app-mng-user-edit.png": {
+    "width": 590,
+    "height": 1142
+  },
+  "/img/en/air/bsair-app-mng-user-filter.png": {
+    "width": 1285,
+    "height": 1142
+  },
+  "/img/en/air/bsair-app-mng-user-group.png": {
+    "width": 1285,
+    "height": 1142
+  },
+  "/img/en/air/bsair-app-mng-user.png": {
+    "width": 1285,
+    "height": 1172
+  },
+  "/img/en/air/bsair-device-aifob-app-device.png": {
+    "width": 1062,
+    "height": 2135
+  },
+  "/img/en/air/bsair-device-aifob-login-app.png": {
+    "width": 1062,
+    "height": 2135
+  },
+  "/img/en/air/bsair-device-bs3-info-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-bs3-sip-account-settings-intercom.png": {
+    "width": 970,
+    "height": 676
+  },
+  "/img/en/air/bsair-device-bs3-sip-account-settings.png": {
+    "width": 400,
+    "height": 363
+  },
+  "/img/en/air/bsair-device-camera-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-camera.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-details-qr-reader.png": {
+    "width": 875,
+    "height": 583
+  },
+  "/img/en/air/bsair-device-mng-device-set-tna.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-mng-edit-group.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-mng-edit-timezone.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-mng-fw-upgrade.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-mng-group-add-group.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-mng-group-init.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-mng-group-list.png": {
+    "width": 1920,
+    "height": 487
+  },
+  "/img/en/air/bsair-device-mng-list-edit-details.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-mng-list-fw-column-align.png": {
+    "width": 1920,
+    "height": 740
+  },
+  "/img/en/air/bsair-device-mng-list-fw-update.png": {
+    "width": 1920,
+    "height": 740
+  },
+  "/img/en/air/bsair-device-mng-list-group-mng.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-two-fator-auth.png": {
+    "width": 499,
+    "height": 479
+  },
+  "/img/en/air/bsair-door-assign-camera.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-door-group-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-door-group-added-group.png": {
+    "width": 1920,
+    "height": 497
+  },
+  "/img/en/air/bsair-door-group-edit-name.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-door-group.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-door-mng-edit-door-sio2-enable.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-door-mng-edit-door-sio2-settings.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-door-mng-registered-door-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-door-mng-registered-door-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-door-mng-registered-door-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-door-mng-registered-door-report-list.png": {
+    "width": 812,
+    "height": 655
+  },
+  "/img/en/air/bsair-door-mng-registered-door-report.png": {
+    "width": 812,
+    "height": 633
+  },
+  "/img/en/air/bsair-door-mng-registered-door-schedule.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-door-mng-schedule-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-door-mng-schedule-setting-lock.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-door-mng-schedule-setting-unlock.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-elevator-mng-add-floor-config.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-elevator-mng-add-floor.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-elevator-mng-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-elevator-mng-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-elevator-mng.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-gettingstarted-access-level-mng-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-gettingstarted-access-level-mng.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-gettingstarted-dashboard.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-gettingstarted-holiday-group-mng-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-gettingstarted-holiday-group-mng.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-gettingstarted-login.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-gettingstarted-schedule-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-gettingstarted-schedule.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-gettingstarted-setting-admin-invite.png": {
+    "width": 400,
+    "height": 435
+  },
+  "/img/en/air/bsair-gettingstarted-setting-admin.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-gettingstarted-user-group-mng-add-aclevel-details.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-gettingstarted-user-group-mng-add-credential-details.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-gettingstarted-user-group-mng-add-user-details.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-gettingstarted-user-group-mng-add-user.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-gettingstarted-user-group-mng-add.png": {
+    "width": 438,
+    "height": 344
+  },
+  "/img/en/air/bsair-gettingstarted-user-group-mng.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-linkpass-credential.png": {
+    "width": 1286,
+    "height": 734
+  },
+  "/img/en/air/bsair-mobile-adv-rollcall-complete.png": {
+    "width": 1061,
+    "height": 2140
+  },
+  "/img/en/air/bsair-mobile-adv-rollcall-start.png": {
+    "width": 1061,
+    "height": 2141
+  },
+  "/img/en/air/bsair-mobile-adv-rollcall.png": {
+    "width": 5609,
+    "height": 2372
+  },
+  "/img/en/air/bsair-mobile-card-template-intro.png": {
+    "width": 1868,
+    "height": 867
+  },
+  "/img/en/air/bsair-mobile-device-fw-update.png": {
+    "width": 5611,
+    "height": 2372
+  },
+  "/img/en/air/bsair-mobile-monitoring-door-status.png": {
+    "width": 5609,
+    "height": 2372
+  },
+  "/img/en/air/bsair-mobile-monitoring-eventlog.png": {
+    "width": 5609,
+    "height": 2372
+  },
+  "/img/en/air/bsair-monitoring-alert-report-history.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-monitoring-auditlog-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-monitoring-event-log-list-column-set.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-monitoring-event-log-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-monitoring-eventlog-apply-masking.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-monitoring-eventlog-auto-refresh.png": {
+    "width": 228,
+    "height": 239
+  },
+  "/img/en/air/bsair-monitoring-eventlog-list-custom-table.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-monitoring-eventlog-list-filter.png": {
+    "width": 1920,
+    "height": 540
+  },
+  "/img/en/air/bsair-monitoring-eventlog-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-monitoring-eventlog-report-added.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-monitoring-eventlog-report-download.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-monitoring-eventlog-report-setting.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-monitoring-eventlog-set-datetime.png": {
+    "width": 768,
+    "height": 386
+  },
+  "/img/en/air/bsair-monitoring-realtime-camera.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-monitoring-recorded-camera.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-register-device-step.png": {
+    "width": 6901,
+    "height": 2372
+  },
+  "/img/en/air/bsair-remove-device-step.png": {
+    "width": 6901,
+    "height": 2372
+  },
+  "/img/en/air/bsair-report-audit-trail-report-setting-result.png": {
+    "width": 812,
+    "height": 655
+  },
+  "/img/en/air/bsair-report-audit-trail-report-setting.png": {
+    "width": 812,
+    "height": 633
+  },
+  "/img/en/air/bsair-report-eventlog-report-setting-result.png": {
+    "width": 812,
+    "height": 760
+  },
+  "/img/en/air/bsair-report-eventlog-report-setting.png": {
+    "width": 812,
+    "height": 760
+  },
+  "/img/en/air/bsair-settings-admin-change-role.png": {
+    "width": 1625,
+    "height": 414
+  },
+  "/img/en/air/bsair-settings-admin-deactive-result.png": {
+    "width": 1616,
+    "height": 348
+  },
+  "/img/en/air/bsair-settings-admin-deactive.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-admin-invite.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-admin.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-alert-add-event-log.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-alert-add-report.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-alert-event-log-setting.png": {
+    "width": 869,
+    "height": 612
+  },
+  "/img/en/air/bsair-settings-alert-n-report.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-alert-system-setting.png": {
+    "width": 869,
+    "height": 435
+  },
+  "/img/en/air/bsair-settings-card-format-add-wiegand-assign-bit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-card-format-add-wiegand.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-card-format-edit-wiegand.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-card-format.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-dst-add-auto.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-dst-add-manual.png": {
+    "width": 1685,
+    "height": 368
+  },
+  "/img/en/air/bsair-settings-dst-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-dst-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-dst.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-email-add-admin.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-email-add-style.png": {
+    "width": 851,
+    "height": 821
+  },
+  "/img/en/air/bsair-settings-email-add-user.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-email-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-email.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-site-additional-feature-webhook.png": {
+    "width": 1553,
+    "height": 413
+  },
+  "/img/en/air/bsair-settings-site-additional-feature.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-site-addtional-feature-video-mangement.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-site-info.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-site-management.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-site-security.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-site-setting.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-site-tab-settings-enable-tna.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-site-tab-settings-tna-mng.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-site-tab-settings.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-site-selector-top.png": {
+    "width": 1920,
+    "height": 276
+  },
+  "/img/en/air/bsair-site-selector.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-sp-app-contact-admin.png": {
+    "width": 3980,
+    "height": 2465
+  },
+  "/img/en/air/bsair-sp-app-contact-qrcode.png": {
+    "width": 2577,
+    "height": 2461
+  },
+  "/img/en/air/bsair-sp-app-menus.png": {
+    "width": 1179,
+    "height": 2556
+  },
+  "/img/en/air/bsair-sp-app-set-access-log.png": {
+    "width": 5392,
+    "height": 2483
+  },
+  "/img/en/air/bsair-sp-app-set-advanced-1.png": {
+    "width": 5392,
+    "height": 2483
+  },
+  "/img/en/air/bsair-sp-app-set-advanced.png": {
+    "width": 5392,
+    "height": 2483
+  },
+  "/img/en/air/bsair-sp-app-set-connection-mode-1.png": {
+    "width": 5392,
+    "height": 2483
+  },
+  "/img/en/air/bsair-sp-app-set-connection-mode.png": {
+    "width": 2584,
+    "height": 2483
+  },
+  "/img/en/air/bsair-sp-app-set-support.png": {
+    "width": 5392,
+    "height": 2483
+  },
+  "/img/en/air/bsair-upload-profile-image-adjust.png": {
+    "width": 452,
+    "height": 605
+  },
+  "/img/en/air/bsair-upload-profile-image.png": {
+    "width": 200,
+    "height": 186
+  },
+  "/img/en/air/bsair-usage-settings-site-tna-report-config-down.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-usage-settings-site-tna-report-config-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-usage-settings-site-tna-report-config.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-usage-settings-site.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-user-details-edit-info.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-user-details-manage-status.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-user-details-remove.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-user-details.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-user-group-assign-popup.png": {
+    "width": 704,
+    "height": 641
+  },
+  "/img/en/air/bsair-user-group-assign-result.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-user-group-edit-popup.png": {
+    "width": 438,
+    "height": 288
+  },
+  "/img/en/air/bsair-user-group-edit.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-user-group-remove.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-user-info-credential-face-add.png": {
+    "width": 906,
+    "height": 432
+  },
+  "/img/en/air/bsair-user-info-credential-face.png": {
+    "width": 906,
+    "height": 440
+  },
+  "/img/en/air/bsair-user-list-multi-select-remove-opt.png": {
+    "width": 1622,
+    "height": 665
+  },
+  "/img/en/air/bsair-user-list-multi-select.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-user-list-multi-user-batch-action.png": {
+    "width": 1622,
+    "height": 665
+  },
+  "/img/en/air/bsair-user-list-overview.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-user-list-search.png": {
+    "width": 1617,
+    "height": 694
+  },
+  "/img/en/air/bsair-user-list-tool-aclevel.png": {
+    "width": 311,
+    "height": 198
+  },
+  "/img/en/air/bsair-user-list-tool-mobile-tag.png": {
+    "width": 477,
+    "height": 257
+  },
+  "/img/en/air/bsair-user-list-user-filtering.png": {
+    "width": 391,
+    "height": 188
+  },
+  "/img/en/air/bsair-user-list-user-template.png": {
+    "width": 704,
+    "height": 758
+  },
+  "/img/en/air/bsair-user-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-user-mobile-card-template-adjust-image.png": {
+    "width": 750,
+    "height": 740
+  },
+  "/img/en/air/bsair-user-mobile-card-template-apply-all.png": {
+    "width": 1920,
+    "height": 675
+  },
+  "/img/en/air/bsair-user-mobile-card-template-apply-user-details.png": {
+    "width": 1299,
+    "height": 1015
+  },
+  "/img/en/air/bsair-user-mobile-card-template-apply-user-edit.png": {
+    "width": 1190,
+    "height": 236
+  },
+  "/img/en/air/bsair-user-mobile-card-template-card-config-font.png": {
+    "width": 820,
+    "height": 293
+  },
+  "/img/en/air/bsair-user-mobile-card-template-card-config-setting.png": {
+    "width": 226,
+    "height": 357
+  },
+  "/img/en/air/bsair-user-mobile-card-template-card-config.png": {
+    "width": 863,
+    "height": 1075
+  },
+  "/img/en/air/bsair-user-mobile-card-template-edit-confirm.png": {
+    "width": 624,
+    "height": 287
+  },
+  "/img/en/air/bsair-user-mobile-card-template-new-card.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-user-mobile-card-template-new.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-user-mobile-card-template-remove.png": {
+    "width": 1920,
+    "height": 675
+  },
+  "/img/en/air/bsair-user-mobile-card-template-set-default.png": {
+    "width": 1920,
+    "height": 675
+  },
+  "/img/en/air/bsair-user-mobile-card-template.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-user-report-setting-list.png": {
+    "width": 812,
+    "height": 737
+  },
+  "/img/en/air/bsair-user-report-setting.png": {
+    "width": 812,
+    "height": 570
+  },
+  "/img/en/air/bsair-user-sub-group-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-user-sub-group-popup.png": {
+    "width": 438,
+    "height": 454
+  },
+  "/img/en/air/bsair-using-app-dashboard.png": {
+    "width": 1062,
+    "height": 2135
+  },
+  "/img/en/air/bsair-using-app-devices.png": {
+    "width": 1062,
+    "height": 2135
+  },
+  "/img/en/air/bsair-using-app-monitoring.png": {
+    "width": 1061,
+    "height": 2135
+  },
+  "/img/en/air/bsair-using-app-users.png": {
+    "width": 1061,
+    "height": 2108
   },
   "/img/en/biostar-298-deleted-csn-mobile-card-1.png": {
     "width": 340,
@@ -7563,6 +9507,22 @@
     "width": 600,
     "height": 292
   },
+  "/img/en/bsair-monitoring-door-status-control-always-open.png": {
+    "width": 1593,
+    "height": 207
+  },
+  "/img/en/bsair-monitoring-door-status-control-lock-mode.png": {
+    "width": 1593,
+    "height": 207
+  },
+  "/img/en/bsair-monitoring-door-status-more-func.png": {
+    "width": 1623,
+    "height": 274
+  },
+  "/img/en/bsair-monitoring-door-status.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/img/en/cardpresso-print-server-short-cut.png": {
     "width": 600,
     "height": 443
@@ -8015,7 +9975,15 @@
     "width": 250,
     "height": 400
   },
+  "/img/en/device/bs3m-face-recognition.png": {
+    "width": 250,
+    "height": 400
+  },
   "/img/en/device/bs3m-face.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-finger.png": {
     "width": 250,
     "height": 400
   },
@@ -8029,7 +9997,7 @@
   },
   "/img/en/device/bs3m-license2.png": {
     "width": 250,
-    "height": 444
+    "height": 400
   },
   "/img/en/device/bs3m-memory-info.png": {
     "width": 250,
