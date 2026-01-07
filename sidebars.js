@@ -171,6 +171,7 @@ const sidebars = {
                 'platform/biostar_air/customizing-email-templates',
                 'platform/biostar_air/settings-alert-report',
                 'platform/biostar_air/custom-wiegand-card-formats',
+                'platform/biostar_air/account-settings',
               ]
             }
           ]
