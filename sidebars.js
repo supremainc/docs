@@ -171,6 +171,7 @@ const sidebars = {
                 'platform/biostar_air/customizing-email-templates',
                 'platform/biostar_air/settings-alert-report',
                 'platform/biostar_air/custom-wiegand-card-formats',
+                'platform/biostar_air/account-settings',
               ]
             }
           ]
@@ -196,6 +197,7 @@ const sidebars = {
             'platform/biostar_air/configuring-reports',
             'platform/biostar_air/reports-time-attendance-reports',
             'platform/biostar_air/sip-intercom-for-biostation3',
+            'platform/biostar_air/e200-qr-scanner'
           ]
         },
         'platform/biostar_air/ip-camera-support-and-configuration',
@@ -212,13 +214,6 @@ const sidebars = {
           ]
         },
         'platform/biostar_air/integration-quickstart',
-        {
-          type: 'category',
-          label: 'Hardware',
-          items: [
-            'platform/biostar_air/wiring-and-configuration',
-          ]
-        },
         {
           type: 'category',
           label: '문제 해결',
