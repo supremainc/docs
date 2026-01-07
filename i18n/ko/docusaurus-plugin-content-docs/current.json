@@ -173,7 +173,7 @@
   },
   "sidebar.biostar_air.category.Using Mobile Credentials": {
     "message": "모바일 크리덴셜",
-    "description": "The label for category Using Mobile Credentials in sidebar biostar_air"
+    "description": "The label for category 'Using Mobile Credentials' in sidebar 'biostar_air'"
   },
   "sidebar.biostar_air.category.Partners and Integrations": {
     "message": "파트너 및 통합",
@@ -466,5 +466,25 @@
   "sidebar.xpassq2.category.XPass Q2": {
     "message": "XPass Q2",
     "description": "The label for category 'XPass Q2' in sidebar 'xpassq2'"
+  },
+  "sidebar.biostar_air.category.BioStar Air란?": {
+    "message": "BioStar Air란?",
+    "description": "The label for category 'BioStar Air란?' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.출입 권한 관리": {
+    "message": "출입 권한 관리",
+    "description": "The label for category '출입 권한 관리' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.활용 안내": {
+    "message": "활용 안내",
+    "description": "The label for category '활용 안내' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.파트너 포털": {
+    "message": "파트너 포털",
+    "description": "The label for category '파트너 포털' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.문제 해결": {
+    "message": "문제 해결",
+    "description": "The label for category '문제 해결' in sidebar 'biostar_air'"
   }
 }
