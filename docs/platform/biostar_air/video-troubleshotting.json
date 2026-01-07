@@ -9,7 +9,7 @@
   },
   {
     "question": "비디오 코덱 호환성 확인",
-    "answer": "녹화된 비디오가 <b>H.264</b> 코덱을 사용하고 있는지 확인하세요. BioStar Air는 H.265 코덱을 지원하지 않습니다."
+    "answer": "녹화된 비디오가 <b>H.264</b> 코덱을 사용하고 있는지 확인하세요. BioStar Air는 <b>H.265</b> 코덱을 지원하지 않습니다."
   },
   {
     "question": "코덱이 변경된 경우 SD 카드 포맷",
@@ -17,6 +17,6 @@
   },
   {
     "question": "ONVIF 준수 제품 목록 참조",
-    "answer": "카메라가 ONVIF 표준을 충족하는지 확실하지 않은 경우 <a href='https://www.onvif.org' target='_blank'>ONVIF</a>를 방문하여 호환성을 확인하세요."
+    "answer": "카메라가 ONVIF 표준을 충족하는지 확실하지 않은 경우 <a href='https://www.onvif.org' target='_blank'>ONVIF</a> 사이트를 방문하여 호환성을 확인하세요."
   }
 ]

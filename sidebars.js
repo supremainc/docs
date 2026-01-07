@@ -201,14 +201,17 @@ const sidebars = {
         'platform/biostar_air/ip-camera-support-and-configuration',
         {
           type: 'category',
-          label: 'Partners and Integrations',
+          label: '파트너 포털',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_air/intro-to-partner-portal',
+          },
           items: [
-            'platform/biostar_air/intro-to-partner-portal',
             'platform/biostar_air/biostar-air-partner-portal-detailed-use',
             'platform/biostar_air/federated-sites',
-            'platform/biostar_air/integration-quickstart',
           ]
         },
+        'platform/biostar_air/integration-quickstart',
         {
           type: 'category',
           label: 'Hardware',
