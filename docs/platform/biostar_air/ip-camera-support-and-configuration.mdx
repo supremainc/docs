@@ -1,15 +1,13 @@
 ---
 id: ip-camera-support-and-configuration
-title: IP 카메라 지원 및 설정하기
+title: IP 카메라 지원 및 설정
 description: BioStar Air에서 ONVIF 호환 IP 카메라 설정, 라이브 및 녹화된 비디오 스트림 구성, 카메라 영상을 출입 이벤트와 통합하는 방법을 안내합니다.
 keywords: [IP 카메라, BioStar Air, 카메라 구성]
 ---
 
-## 개요 {#overview}
+BioStar Air는 에어팝 엣지(Airfob Edge) 장치와 동일한 네트워크에 연결된 IP 카메라를 자동 감지합니다. 카메라는 장치를 게이트웨이로 사용하므로 네트워크 비디오 레코더(Network Video Recorder, NVR)가 필요하지 않습니다. 대신 카메라는 내장 SD 카드 저장 장치를 사용합니다.
 
-BioStar Air는 Airfob Edge 리더기와 동일한 네트워크에 연결된 IP 카메라를 자동 감지합니다. 카메라는 리더기를 게이트웨이로 사용하므로 네트워크 비디오 레코더(Network Video Recorder, NVR)가 필요하지 않습니다. 대신 카메라는 내장 SD 카드 저장 장치를 사용합니다.
-
-Airfob Edge 리더기 또는 XPass 2를 각각 설치했다면 BioStar Air는 아래와 같은 동시 라이브 뷰 스트림을 표시할 수 있습니다.
+에어팝 엣지(Airfob Edge) 장치 또는 XPass 2를 각각 설치했다면 BioStar Air는 아래와 같은 동시 라이브 뷰 스트림을 표시할 수 있습니다.
 
 * 최대 2대의 카메라에서 Full HD 해상도(1080p)
 
@@ -17,39 +15,45 @@ Airfob Edge 리더기 또는 XPass 2를 각각 설치했다면 BioStar Air는 �
 
 이 사양은 XStation 2를 사용할 때 두 배로 증가합니다.
 
+:::info
+
+BioStar Air에 카메라를 등록한 후 녹화된 비디오가 재생되지 않으면 [다음 문서](video-troubleshooting)를 참고하세요.
+
+:::
+
 
 ## 호환성 {#compatibility}
 
-* **Onvif Profiles**: IP 카메라는 Onvif 프로필 S 및/또는 G와 호환되어야 합니다.
+* **Onvif Profiles**: IP 카메라는 Onvif 프로필 S 또는 G와 호환되어야 합니다.
 
-  * **Onvif Profile S**: 라이브 비디오 스트리밍
+   * **Onvif Profile S**: 라이브 비디오 스트리밍
 
-  * **Onvif Profile G**: 녹화된 비디오를 SD 카드에 저장
+   * **Onvif Profile G**: 녹화된 비디오를 SD 카드에 저장
 
 * **SD 카드**: IP 카메라는 나중에 녹화한 영상을 재생할 수 있도록 내장 SD 카드가 있어야 합니다. 
 
-  :::note
+   :::note
 
-  SanDisk microSDXC Class10 Max Endurance 256GB 또는 512GB를 권장합니다.
+   SanDisk microSDXC Class10 Max Endurance 256GB 또는 512GB를 권장합니다.
 
-  :::
+   :::
 
-* **인코딩**: 카메라는 H.264(AVC)를 지원해야 하며 활성 CODEC으로 설정되어 있어야 합니다. BioStar Air는 현재 H.265를 지원하지 않습니다.
+* **인코딩**: 카메라는 H.264(AVC)를 지원해야 하며 활성 코덱으로 설정되어 있어야 합니다. BioStar Air는 현재 H.265를 지원하지 않습니다.
 
-* **추천 브랜드**: Hanwha, Hikvision 및 Dahua 카메라와의 호환성이 뛰어납니다. 다른 브랜드와의 호환성은 Onvif 프로필 준수 여부에 따라 달라질 수 있습니다.
+* **추천 브랜드**: 한화(Hanwhavision) 및 하이크비전(Hikvision), 다후아(Dahua) 카메라와의 호환성이 뛰어납니다. 다른 브랜드와의 호환성은 Onvif 프로필 준수 여부에 따라 달라질 수 있습니다. 테스트 및 검증된 장치 목록에 대한 자세한 내용은 [다음 문서](#tested-devices)를 참고하세요.
 
-* **새 카메라 테스트**: 테스트하고 싶은 다른 카메라 브랜드가 있다면 서비스 팀에 문의하세요.
+* 테스트하고 싶은 다른 카메라 브랜드가 있다면 서비스 팀에 문의하세요.
 
 
 ## 기능 소개 {#functionality}
 
-BioStar Air 앱에서 아래와 같은 작업을 수행할 수 있습니다.
+BioStar Air 포털 또는 모바일 앱에서 아래와 같은 작업을 수행할 수 있습니다.
 
 * 실시간 카메라 피드를 볼 수 있습니다.
 
 * 녹화된 카메라 영상을 볼 수 있습니다.
 
-* 출근 이벤트와 관련된 카메라 영상에 접근합니다.
+* 출근 이벤트와 관련된 카메라 영상에 접근할 수 있습니다.
 
 
 ## 사용 안내 {#instructions}
@@ -59,29 +63,35 @@ BioStar Air 앱에서 아래와 같은 작업을 수행할 수 있습니다.
 
 ### IP 카메라 연결
 
-* **네트워크 연결**: IP 카메라가 Airfob Edge 리더기 또는 Airfob Edge 리더기 Ultimate와 동일한 네트워크에 연결되어 있는지 확인하세요.
+* **네트워크 연결**: IP 카메라가 에어팝 엣지(Airfob Edge) 장치 또는 에어팝 엣지(Airfob Edge) 장치 Ultimate와 동일한 네트워크에 연결되어 있는지 확인하세요.
 
 * **Onvif 활성화**: 카메라에서 Onvif가 활성화되어 있는지 확인하세요.
 
-* **리더기 등록**: 리더기가 사이트에 등록되어 있는지 확인하세요.
+* **장치 등록**: 장치가 BioStar Air 포털에 등록되어 있는지 확인하세요.
 
 </Step>
 <Step>
 
 ### BioStar Air 로그인
 
-**마스터 관리자**만 비디오 관리 활성화와 같은 사이트 설정을 변경할 수 있습니다. 마스터 권한으로 로그인하세요.
+**마스터** 관리자만 비디오 관리 활성화와 같은 사이트 설정을 변경할 수 있습니다. [BioStar Air 포털](https://admin.biostarair.com/)에 **마스터** 권한으로 로그인하세요.
 
 </Step>
 <Step>
 
 ### 비디오 관리 활성화
 
-**Settings** → **Site** → **Additional Features** → **Video Management**로 이동하여 비디오 관리를 활성화하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' />를 클릭하세요.
+
+1. <Cmd sid='site_setting_qr_reader_tab' product='air' /> 탭을 클릭하세요.
+
+1. <Cmd sid='site_setting_video_management' product='air' /> 옵션을 활성화하세요.
+
+<Image src='/img/air/bsair-settings-site-addtional-feature-video-mangement.png' />
 
 :::info
 
-이 기능은 마스터 레벨의 관리자만 활성화할 수 있습니다.
+이 기능은 **마스터** 레벨의 관리자만 활성화할 수 있습니다.
 
 :::
 
@@ -90,59 +100,90 @@ BioStar Air 앱에서 아래와 같은 작업을 수행할 수 있습니다.
 
 ### 카메라 추가
 
-* **Device Management** → **Cameras** → **+ Add Camera**으로 이동하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='cameras_groups_submenu' product='air' />를 클릭하세요.
 
-* **Select Device (Reader)**: 게이트웨이 역할을 할 리더기를 선택하세요. 리더기는 펌웨어 2.5.1 버전 이상이 설치되어 있어야 하며, 카메라와 동일한 네트워크에 있어야 합니다.
+   <Image src='/img/air/bsair-device-camera.png' />
 
-* **Automatic Search**: BioStar Air는 자동으로 네트워크에서 카메라를 검색합니다.
+1. 화면 오른쪽 상단의 <Cmd sid='cameras_list_title_add_button' product='air' /> 버튼을 클릭하세요.
 
-* **Camera Registration**: 카메라를 등록하려면 ID와 비밀번호를 입력해야 할 수 있습니다.
+1. <Cmd sid='cameras_templ_title_modal' product='air' /> 창이 나타나면 게이트웨이 역할을 할 장치를 선택하세요.
+
+   <Image src='/img/air/bsair-device-camera-add.png' caption />
+
+1. 카메라를 추가하려면 아래 정보를 설정하세요.
+
+   * <Cmd sid='cameras_add_camera_input_name' product='air' />: 카메라 이름을 입력하세요.
+   
+   * <Cmd sid='recent_action_device_column' product='air' />: 카메라를 구분할 이름을 선택하세요.
+
+   * <Cmd sid='cameras_add_camera_input_id' product='air' />: 카메라에 접속할 아이디를 입력하세요.
+
+   * <Cmd sid='cameras_add_camera_input_pass' product='air' />: 카메라에 접속할 비밀번호를 입력하세요.
+
+1. 선택한 카메라를 추가하려면 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+:::info
+
+* 장치는 펌웨어 2.5.1 버전 이상이 설치되어 있어야 하며, 카메라와 동일한 네트워크에 있어야 합니다.
+
+* BioStar Air는 자동으로 네트워크에서 카메라를 검색합니다.
+
+:::
 
 </Step>
 <Step>
 
 ### 출입문과 연결
 
-* **Door Management** → **Registered Doors**으로 이동하세요.
+추가한 카메라를 출입문과 연결하여 출입 이벤트와 관련 영상을 연동할 수 있습니다.
 
-* **Assign Devices**: 출입문을 선택한 다음, **Assign Devices** 섹션에서 카메라를 선택하세요. 카메라가 출입문에 연결되어 이벤트 로그에서 관련 영상을 볼 수 있습니다.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' />을 클릭하세요.
+
+1. 목록에서 카메라를 할당할 출입문을 클릭하세요.
+
+1. <Cmd sid='edit_door.title' product='air' /> 패널이 나타나면 <Cmd sid='door_auxiliary_device' product='air' /> 섹션으로 스크롤하세요.
+
+1. <Cmd sid='door_product_column6' product='air' /> 옵션에서 추가한 카메라를 선택하세요.
+
+   <Image src='/img/air/bsair-door-assign-camera.png' />
+
+1. 변경 사항을 저장하려면 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
 
 </Step>
 <Step>
 
-### Live Camera 영상 보기
+### 실시간 카메라 영상 보기
 
-* **Monitoring** → **Real-Time Video**로 이동하여 실시간 비디오 스트림을 시청하세요.
+추가한 카메라의 영상을 실시간으로 볼 수 있습니다. 화면 왼쪽 사이드바에서 <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='realtime_video_submenu' product='air' />를 클릭하세요.
 
-* **동시 스트림**: 설치된 각 Airfob Edge Reader에 대해 최대 2개의 Full HD (1080p) 실시간 스트림을 볼 수 있습니다.
+<Image src='/img/air/bsair-monitoring-realtime-camera.png' caption />
 
-* **Additional Streams**: 더 많은 실시간 스트림을 보려면 더 많은 리더기를 추가하거나 카메라 해상도를 줄이세요. (**Device Management** → **Cameras** → 카메라 클릭 → **Profile**)
+* 설치된 각 에어팝 엣지(Airfob Edge) 장치에 대해 최대 2개의 Full HD (1080p) 실시간 스트림을 볼 수 있습니다.
+
+* 더 많은 실시간 스트림을 보려면 더 많은 장치를 추가하거나 카메라 해상도를 줄이세요. 
+
+   > <Cmd sid='device_menu' product='air' /> → <Cmd sid='cameras_groups_submenu' product='air' /> → 목록에서 카메라 클릭 → <Cmd sid='cameras_edit_camera_name_profile' product='air' />
 
 </Step>
 <Step>
 
 ### 녹화된 카메라 영상 보기
 
-**Monitoring** → **Recorded Video**로 이동하여 녹화된 비디오 스트림을 시청하세요.
+녹화된 비디오 스트림을 볼 수 있습니다. 화면 왼쪽 사이드바에서 <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='recorded_video_submenu' product='air' />를 클릭하세요.
+
+<Image src='/img/air/bsair-monitoring-recorded-camera.png' caption />
 
 </Step>
 <Step>
 
 ### 이벤트 영상 보기
 
-**Monitoring** → **Event Logs**로 이동하세요. 관련 비디오 클립이 있는 이벤트 로그를 찾아 재생 버튼을 클릭하면 영상을 시청할 수 있습니다.
-
-</Step>
-<Step>
-
-### 추가 설정 살펴보기
-
-앱 내에서 탐색할 수 있는 다양한 설정이 있습니다. 이 문서는 공식 사용 설명서가 출시될 때까지 임시로 참고할 수 있도록 작성되었습니다.
+화면 왼쪽 사이드바에서 <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' />를 클릭하세요. 관련 비디오 클립이 있는 이벤트 로그를 찾아 재생 버튼을 클릭하면 영상을 시청할 수 있습니다.
 
 </Step>
 </Steps>
 
-## 테스트 및 확인된 장치 
+## 테스트 및 검증된 장치 목록 {#tested-devices}
 
 <div className='overflow-x'>
 
@@ -164,23 +205,27 @@ BioStar Air 앱에서 아래와 같은 작업을 수행할 수 있습니다.
 </div>
 
 
-## IP 카메라에서 ONVIF를 활성화하기 위한 일반 단계
+## IP 카메라의 ONVIF 활성화 방법
 
-1. **카메라의 웹 인터페이스에 로그인**: 웹 브라우저를 열고, 카메라의 IP 주소를 입력하세요. 관리자 크리덴셜로 인증하여 로그인하세요.
+1. 웹 브라우저를 열고, 카메라의 IP 주소를 입력하세요. 
 
-1. **네트워크 또는 구성 설정으로 이동**: **Network** 또는 **Configuration** 섹션을 찾으세요.
+1. 관리자 크리덴셜로 인증 후 로그인하세요.
 
-1. **ONVIF 프로토콜 활성화**: ONVIF 또는 개방형 네트워크 비디오 인터페이스를 활성화하세요.
+1. **Network** 또는 **Configuration** 섹션으로 이동하세요.
 
-1. **ONVIF 프로필 또는 사용자 설정**: 필요한 경우 ONVIF 전용 사용자 프로필을 생성하세요.
+1. ONVIF 또는 개방형 네트워크 비디오 인터페이스를 활성화하세요.
 
-1. **저장 및 연결 테스트**: 설정을 저장하고 Airfob Space에서 ONVIF 연결을 테스트하세요.
+1. 필요에 따라 ONVIF 전용 사용자 프로필을 생성하세요.
+
+1. 설정을 저장하고 BioStar Air에서 ONVIF 연결을 테스트하세요.
 
 
-## 추가 팁
+:::tip
 
-* **펌웨어 업데이트**: 카메라와 리더기를 최신 펌웨어로 업데이트하세요.
+* **펌웨어 업데이트**: 카메라와 장치를 최신 펌웨어로 업데이트하세요.
 
-* **포트 포워딩**: 필요한 경우 ONVIF에 대한 포트 포워딩을 구성하세요.
+* **포트 포워딩**: 필요에 따라 ONVIF에 대한 포트 포워딩을 구성하세요.
 
 * **Third-Party 도구**: ONVIF Device Manager를 사용하여 카메라 설정 및 기능을 확인하세요.
+
+:::

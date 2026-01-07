@@ -7,82 +7,108 @@ keywords: [firmware, upgrade, BioStar Air]
 
 import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
 
-## 기능 개요 {#feature-overview}
-
 BioStar Air의 펌웨어를 업그레이드하여 장치의 성능을 향상시키고 보안을 강화하며 새로운 기능을 활용할 수 있습니다. 이 과정은 간단하며 BioStar Air 웹 포털이나 BioStar Air 모바일 앱을 통해 실행할 수 있습니다.
 
 <CustomerNote />
 
 
-## 펌웨어 업그레이드 {#navigating-to-the-feature}
+## BioStar Air 포털
 
-웹 포털을 통해 펌웨어를 업그레이드할 수 있습니다.
+[BioStar Air](https://admin.biostarair.com) 포털에 로그인한 후 다음 단계를 따라 펌웨어를 업그레이드하세요.
 
-* [admin.biostarair.com](https://admin.biostarair.com)로 이동하여 로그인하세요.
+### 개별 장치의 펌웨어 업그레이드 {#upgradingFirmwareAdeviceViaWebPortal}
 
-* 왼쪽 사이드바에서 **Device Management** → **Registered Devices**로 이동하세요.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' />를 클릭하세요.
+
+1. 장치 목록에서 펌웨어 업그레이드할 장치를 클릭하세요.
+
+1. <Cmd sid='device_edit_title' product='air' /> 창이 나타나면 <Cmd sid='device_edit_device_info' product='air' /> 섹션으로 이동하세요.
+
+1. <Cmd sid='firmware_update_btn' product='air' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-device-mng-fw-upgrade.png' caption />
+
+1. 장치에 따라 최신 펌웨어 버전 **2.9** 또는 **2.10** 버전(2025년 8월 기준)을 선택하고 업데이트를 확인하세요.
 
 
-## 단계별 사용 안내 {#step-by-step-instructions}
+### 일괄 펌웨어 업그레이드 {#upgradingFirmwareInBulkViaWebPortal}
 
-### 웹 포털에서 다수의 장치 펌웨어 업그레이드 {#upgrading-firmware-in-bulk-via-web-portal}
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' />를 클릭하세요.
 
-1. [admin.biostarair.com](https://admin.biostarair.com)로 로그인하세요.
+1. 장치 목록의 <Cmd sid='device_fw_column' product='air' /> 열에서 각 장치의 현재 버전을 확인하세요.
 
-1. **Device Management** → **Registered Devices**로 이동하세요.
+1. 장치를 펌웨어 버전별로 정렬하려면 <Cmd sid='device_fw_column' product='air' /> 열의 오른쪽에 있는 화살표 버튼을 클릭하세요.
 
-1. 각 장치의 현재 버전을 확인하려면 **Firmware** 열(왼쪽에서 두 번째)을 찾으세요.
+   <Image src='/img/air/bsair-device-mng-list-fw-column-align.png' />
 
-1. 열 제목 옆의 화살표 버튼을 사용하여 장치를 펌웨어 버전별로 정렬하세요.
+1. 업그레이드할 각 장치 왼쪽의 체크박스를 클릭하세요.
 
-1. 구형 펌웨어 버전(2025년 8월 기준 **2.9** 버전 이하)을 실행 중인 장치를 선택하려면 왼쪽의 확인란을 선택하세요.
+   :::note
 
-1. 화면 상단의 도구 모음에서 톱니바퀴 아이콘을 클릭하세요.
+   2025년 8월 기준 **2.9** 버전 이하가 설치된 장치가 구형 버전입니다.
 
-1. 아이콘 위에 마우스를 올려 **Update Firmware**라고 표시되는지 확인하고 클릭하세요.
+   :::
 
-1. 리더기에 따라 최신 펌웨어 버전 **2.9** 또는 **2.10** 버전(2025년 8월 기준)을 선택하고 업데이트를 확인하세요.
+1. 장치 목록 상단의 <IcAirFw width='24px' height='24px' /> 버튼을 클릭하세요.
 
-<Image src='/img/air/air-device-management-upgrade-fw.png' alone />
+   <Image src='/img/air/bsair-device-mng-list-fw-update.png' />
 
-<Image src='/img/air/air-device-management-upgrade-fw-list.png' alone />
+1. <Cmd sid='update_fw_text' product='air' /> 창이 나타나면 최신 펌웨어 버전을 선택하고 <Cmd sid='btn_ok' product='air' /> 버튼을 클릭하세요.
 
-### 웹 포털에서 개별 장치의 펌웨어 업그레이드 {#upgrading-firmware-for-an-individual-device-via-web-portal}
+1. 메시지 창이 나타나면 내용을 확인하고 <Cmd sid='btn_ok' product='air' /> 버튼을 클릭하세요.
 
-1. **Registered Devices** 목록에서 장치 이름을 클릭하세요.
+:::info
 
-1. **Edit Device** 화면에서 **Device Info** 섹션으로 스크롤하세요.
+* 펌웨어 업그레이드는 5\~10분 정도 소요될 수 있으며, 장치를 사용할 수 없습니다.
 
-1. **Firmware Update** 버튼을 클릭하세요.
+* 장치의 전원을 끄지 마세요.
 
-1. 리더기에 따라 최신 펌웨어 버전 **2.9** 또는 **2.10** 버전(2025년 8월 기준)을 선택하고 업데이트를 확인하세요.
+* 펌웨어 업그레이드를 완료한 후 장치는 자동 재시작합니다.
 
-<Image src='/img/air/air-device-management-upgrade-fw-edit-device.png' alone />
+:::
 
-### 모바일 앱에서 펌웨어 업그레이드 {#upgrading-firmware-via-biostar-air-mobile-app}
 
-BioStar Air 앱을 사용하여 iOS 또는 안드로이드 환경에서 펌웨어를 업그레이드하는 과정은 웹 포털과 유사합니다.
+## 모바일 앱 {#upgradingFirmwareViaMobileApp}
+
+iOS 또는 안드로이드 환경의 모바일 기기에서 BioStar Air 앱을 사용하여 펌웨어를 업그레이드하는 과정을 안내합니다.
+
+<Image src='/img/air/bsair-mobile-device-fw-update.png' />
 
 1. 모바일 기기에서 BioStar Air 앱을 실행하고 로그인하세요.
 
-1. 장치 목록으로 이동하여 장치의 펌웨어 버전을 확인하세요.
+1. <Cmd sid='devices_card' product='air' /> 카드를 탭하세요.
 
-1. 구형 버전을 실행 중인 장치를 선택하고 펌웨어 업데이트 옵션을 선택하세요.
+1. 장치 목록에서 펌웨어 업그레이드할 장치를 탭하세요.
 
-1. 리더기에 따라 최신 펌웨어 버전 **2.9** 또는 **2.10** 버전(2025년 8월 기준)을 선택하고 업데이트를 확인하세요.
+1. <Cmd sid='firmware_update_btn' product='air' /> 버튼을 탭하세요.
+
+1. 최신 펌웨어 버전을 선택하고 <Cmd sid='btn_ok' product='air' /> 버튼을 탭하세요.
+
+1. 메시지 창이 나타나면 내용을 확인하고 <Cmd sid='btn_ok' product='air' /> 버튼을 탭하세요.
+
+:::info
+
+* 펌웨어 업그레이드는 5\~10분 정도 소요될 수 있으며, 장치를 사용할 수 없습니다.
+
+* 장치의 전원을 끄지 마세요.
+
+* 펌웨어 업그레이드를 완료한 후 장치는 자동 재시작합니다.
+
+:::
 
 
-## 공통 이슈 및 고려사항 {#common-issues-considerations}
+## 참고 사항 {#additionalNotes}
 
-* 펌웨어 업데이트하려면 **장치는 온라인 상태**여야 합니다. **Product** 열에서 장치 상태를 확인하세요. 장치 이미지 옆에 녹색 점이 표시되면 온라인 상태입니다.
+* 펌웨어 업데이트하려면 **장치는 온라인 상태**여야 합니다. <Cmd sid='device_product_column' product='air' /> 열에서 장치 상태를 확인하세요. 장치 이미지 옆에 녹색 점(<StatusOK />)이 표시되면 온라인 상태입니다.
 
 * 펌웨어 업데이트 중에는 장치가 **일시적으로 오프라인 상태**가 되지만 **3\~5분** 이내에 다시 연결되어야 합니다.
 
 * 중단을 피하기 위해 펌웨어 업데이트는 **업무 시간 외**에 실행하기를 권장합니다.
 
+* 새 펌웨어가 업데이트되면 알림을 받을 수 있도록 설정할 수 있습니다. 알림 설정에 대한 자세한 내용은 [다음 문서](settings-alert-report#addSystemAlert)를 참고하세요.
 
-## 장치 관리 더 알아보기 {#learn-more-about-device-management}
+:::info
 
-다음 제공하는 영상을 통해 BioStar Air의 장치 관리 기능을 더 자세히 알아보세요.
+장치 관리에 대한 자세한 내용은 [다음 문서](managing-registered-devices)를 참고하세요.
 
-<YouTube videoId="lpMPkMyjr-c" />
+:::

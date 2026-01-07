@@ -1,0 +1,140 @@
+---
+id: settings-alert-report
+title: 알림 및 리포트 설정하기
+description: BioStar Air에서 이벤트 알림과 자동 리포트를 설정하는 단계별 방법을 안내합니다.
+keywords: [BioStar Air, 알림 설정, 리포트 설정, 시스템 알림, 사용자 리포트]
+---
+
+알림과 리포트를 설정하면 시스템 이벤트와 보안 상황을 자동으로 감지하고 추적할 수 있습니다. 이 문서에서는 BioStar Air에서 알림 및 리포트 설정을 구성하는 방법을 안내합니다.
+
+알림 및 리포트 설정을 통해 다음과 같은 효과를 얻을 수 있습니다.
+
+- 보안 위협이나 시스템 문제를 즉시 감지하고 관리자에게 실시간 알림을 보냅니다.
+
+- 시스템 상태 및 사용자 활동에 대한 리포트를 자동 생성하여 관리 효율성을 높일 수 있습니다.
+
+
+## 알림 추가 {#addAlert}
+
+사이트에서 발생하는 특정 이벤트 로그, 시스템에 대한 알림을 설정할 수 있습니다.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='alerts.alert_sub_menu_title' product='air' />를 클릭하세요.
+
+1. 화면 오른쪽 상단의 <Cmd sid='alerts.add_alert_btn' product='air' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='alerts.add_alert_btn' product='air' /> 패널이 나타나면 <Cmd sid='alerts.event_log_type' product='air' />, <Cmd sid='alerts.system_type' product='air' /> 탭 중 하나를 선택하세요.
+
+   <Image src='/img/air/bsair-settings-alert-add-event-log.png' />
+
+1. 각 항목의 설정을 구성한 후 저장하려면 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+
+### 조건 설정 {#conditionSettings}
+
+#### 이벤트 로그 {#eventLog}
+
+<Cmd sid='alerts.event_log_type' product='air' /> 탭에서 이벤트 종류에 따라 알림 발생 조건을 설정할 수 있습니다.
+
+<Image src='/img/air/bsair-settings-alert-event-log-setting.png' />
+
+* <Cmd sid='alerts.events_block_title' product='air' />: 알림을 설정할 이벤트 종류를 선택하세요. 사전 정의된 <Cmd sid='alerts.preset_events_block_title' product='air' />을 선택할 수도 있습니다.
+
+* <Cmd sid='door_label' product='air' />: 출입문을 선택하세요. 선택한 출입문에서 이벤트가 발생할 경우 알림을 전송합니다. 1개 이상의 출입문을 선택할 수 있습니다.
+
+* <Cmd sid='alerts.frequency_and_duration_label' product='air' />: 설정한 시간 동안 특정 빈도로 이벤트가 발생할 경우 알림을 전송합니다. 예를 들어, 5분 동안 3회 이상 이벤트가 발생할 경우 알림을 전송하도록 설정할 수 있습니다.
+
+#### 시스템 {#system}
+
+<Image src='/img/air/bsair-settings-alert-system-setting.png' />
+
+<Cmd sid='alerts.system_type' product='air' /> 탭에서 시스템 상태에 따라 알림 발생 조건을 설정할 수 있습니다.선택할 수 있는 옵션은 다음과 같습니다.
+
+* <Cmd sid='low_credit_reminders' product='air' />
+
+* <Cmd sid='low_credit_site_suspension' product='air' />
+
+* <Cmd sid='low_credit_sms_less_than_10' product='air' />
+
+* <Cmd sid='low_apb_battery' product='air' />
+
+* <Cmd sid='new_fw_availabel' product='air' />
+
+
+### 알림 대상 설정 {#alertTargetSettings}
+
+<Cmd sid='alerts.alert_target' product='air' />에서 알림을 받을 대상을 설정할 수 있습니다. 관리자 권한별 사용자를 선택할 수 있고, 개별 사용자를 선택할 수 있습니다.
+
+
+### 전송 방법 설정 {#alertSendMethodSettings}
+
+<Cmd sid='alerts.alert_send_by' product='air' />에서 알림을 전송할 수단을 선택하세요. 이메일, 문자 메시지, 앱 푸시 알림의 방법으로 알림을 전송할 수 있습니다.
+
+:::info
+
+문자 메시지 전송은 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='credit_center_submenu' product='air' />에서 SMS 크레딧을 충전해야 사용할 수 있습니다.
+
+:::
+
+
+## 리포트 생성 {#reportGeneration}
+
+특정 시간 간격으로 리포트를 자동 생성하고 관리자에게 전송할 수 있습니다. 이벤트 로그 발생 현황 및 사용자 현황에 대한 리포트를 생성할 수 있습니다.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='alerts.alert_sub_menu_title' product='air' />를 클릭하세요.
+
+1. 화면 오른쪽 상단의 <Cmd sid='alerts.add_alert_btn' product='air' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='alerts.add_alert_btn' product='air' /> 패널이 나타나면 <Cmd sid='alerts.report_type' product='air' /> 탭을 선택하세요.
+
+   <Image src='/img/air/bsair-settings-alert-add-report.png' />
+
+1. 각 항목의 설정을 구성한 후 저장하려면 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+### 조건 설정 {#reportConditionSettings}
+
+리포트 종류와 생성 주기를 설정하세요.
+
+* <Cmd sid='name_column' product='air' />: 생성할 리포트 종류를 선택하세요.
+
+   - <Cmd sid='alerts.report_event_log' product='air' />: 선택한 기간 동안의 이벤트 로그 발생 현황에 대한 리포트를 생성합니다.
+
+   - <Cmd sid='alerts.report_user' product='air' />: 선택한 기간 동안의 사용자 현황에 대한 리포트를 생성합니다.
+
+* <Cmd sid='schedules_label' product='air' />: 리포트 생성 주기를 선택하세요. <Cmd sid='weekly_option' product='air' />, <Cmd sid='monthly_option' product='air' /> 중에서 선택할 수 있습니다.
+
+### 알림 대상 설정 {#reportAlertTargetSettings}
+
+<Cmd sid='alerts.alert_target' product='air' />에서 알림을 받을 대상을 설정할 수 있습니다. 관리자 권한별 사용자를 선택할 수 있고, 개별 사용자를 선택할 수 있습니다.
+
+
+### 전송 방법 설정 {#reportAlertSendMethodSettings}
+
+<Cmd sid='alerts.alert_send_by' product='air' />에서 알림을 전송할 수단을 선택하세요.
+
+:::info
+
+리포트는 **이메일로만 전송**할 수 있습니다. 문자 메시지 또는 앱 푸시 알림을 통해 전송할 수 없습니다.
+
+:::
+
+
+## 알림 및 리포트 수정 {#editAlertReport}
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='alerts.alert_sub_menu_title' product='air' />를 클릭하세요.
+
+1. 목록에서 수정하려는 알림 또는 리포트를 클릭하세요.
+
+1. <Cmd sid='alerts.edit_alert_header' product='air' /> 또는 <Cmd sid='alerts.edit_report_header' product='air' /> 패널이 나타나면 필요한 항목을 수정하세요.
+
+1. 변경 사항을 저장하려면 하단의 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+
+## 알림 및 리포트 삭제 {#deleteAlertReport}
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='alerts.alert_sub_menu_title' product='air' />를 클릭하세요.
+
+1. 목록에서 수정하려는 알림 또는 리포트의 체크박스를 클릭하세요. 한 개 이상의 항목을 선택할 수 있습니다.
+
+1. 목록 왼쪽 상단의 <IcAirRemove /> 버튼을 클릭하세요.
+
+1. 메시지 창이 나타나면 <Cmd sid='delete_action' product='air' /> 버튼을 클릭하세요.

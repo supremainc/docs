@@ -1,44 +1,38 @@
 ---
 id: integration-quickstart
-title: API 통합 시작하기
+title: API 통합
 description: BioStar Air 데모 사이트 설정, 호환 리더기 등록, API 키 생성, 클라우드 API와의 통합 테스트 방법을 알아보세요.
 keywords: [API 통합, 빠른 시작, BioStar Air]
 ---
 
-## 개요 {#overview}
-
-이 문서에서는 BioStar Air 데모 사이트 설정, 호환 BioStar Air 리더기 연결 및 등록, 클라우드 API를 사용한 통합 테스트 방법을 안내합니다.
-
-이전에 BioStar 2에서 작업한 적이 있다면 많은 개념이 친숙하게 느껴질 것입니다. 그러나 BioStar Air는 완전히 클라우드 기반입니다.
+이 문서에서는 BioStar Air 데모 사이트 설정, 호환 BioStar Air 리더기 연결 및 등록, 클라우드 API를 사용한 통합 테스트 방법을 안내합니다. 이전에 BioStar 2에서 작업한 적이 있다면 많은 개념이 친숙하게 느껴질 것입니다. 그러나 BioStar Air는 완전히 클라우드 기반입니다.
 
 
-## 시작하기 {#getting-started}
+## 사전 요구 사항 {#pre-requisites}
 
-### 사전 요구 사항 {#pre-requisites}
-
-아래 사항을 확인하세요.
+시작하기 전에 다음 사항을 확인하세요.
 
 * 공장 초기화된 펌웨어를 설치한 **BioStar Air 호환 장치**를 준비하세요.
 
-  * XP2-AIR, XS2-AIR, BEW3-AIR, BS3-AIR, BLN2-AIR
+   * XP2-AIR, XS2-AIR, BEW3-AIR, BS3-AIR, BLN2-AIR
 
-  * 장치는 공인 슈프리마 대리점을 통해 구매할 수 있습니다.
+   * 장치는 공인 슈프리마 대리점을 통해 구매할 수 있습니다.
 
-* 장치는 이더넷을 통해 인터넷에 연결됩니다.
+* 장치는 이더넷을 통해 인터넷에 연결되어 있어야 합니다.
 
 * 네트워크에서 아웃바운드 액세스를 허용하세요.
 
-  * Port 443 (HTTPS)
+   * Port 443 (HTTPS)
 
-  * Port 5671 (MQTT over TLS)
+   * Port 5671 (MQTT over TLS)
 
 
-## Step 1: 데모 환경과 API 키 설정 {#step-1-demo-setup}
+## Step 1: 데모 환경과 API 키 설정 {#demo-setup}
 
 <Steps>
 <Step>
 
-### 회원 가입 및 로그인 {#sign-up-and-log-in}
+### 회원 가입 및 로그인
 
 * [BioStar Air Developer](https://developers.biostarair.com/login)로 이동하세요.
 
@@ -49,74 +43,74 @@ keywords: [API 통합, 빠른 시작, BioStar Air]
 </Step>
 <Step>
 
-### 데모 애플리케이션 생성 {#create-a-demo-application}
+### 데모 애플리케이션 생성
 
-* **API** → **Management**로 이동하세요.
+1. **API** → **Management**로 이동하세요.
 
-* **\+ Register**를 클릭하세요.
+1. **\+ Register** 버튼을 클릭하세요.
 
-* **Demo**를 애플리케이션 유형으로 선택하세요.
+1. 애플리케이션 유형을 **Demo**로 선택하세요.
 
-* 애플리케이션 이름을 입력하고 **Register**를 클릭하세요.
+1. 애플리케이션 이름을 입력하고 **Register** 버튼을 클릭하세요.
 
-* 데모 사이트 로그인 크리덴셜(이메일 및 비밀번호)이 포함된 엑셀 파일을 다운로드하려면 **Download**를 클릭하세요.
-
-</Step>
-<Step>
-
-### API 키 발급 {#issue-an-api-key}
-
-* **Application Management**에서 등록한 애플리케이션을 클릭하세요.
-
-* **API Management**로 스크롤하세요.
-
-* **Add**를 클릭하세요.
-
-* 이름을 입력하고 확인하세요. 생성된 키를 저장하세요.
+1. 데모 사이트 로그인 크리덴셜(이메일 및 비밀번호)이 포함된 엑셀 파일을 다운로드하려면 **Download** 버튼을 클릭하세요.
 
 </Step>
 <Step>
 
-### 데모 포털 로그인 {#log-into-the-demo-portal}
+### API 키 발급
 
-* [Demo Portal](https://demo.airfobspace.com/login)로 이동하세요.
+1. **Application Management**에서 등록한 애플리케이션을 클릭하세요.
 
-* 엑셀 파일의 이메일 및 비밀번호로 로그인하세요.
+1. **API Management**로 스크롤하세요.
 
-* 방금 생성한 API 키를 입력하세요.
+1. **Add** 버튼을 클릭하세요.
+
+1. 이름을 입력하고 확인하세요. 생성된 키를 저장하세요.
+
+</Step>
+<Step>
+
+### 데모 포털 로그인
+
+1. [Demo Portal](https://demo.airfobspace.com/login)로 이동하세요.
+
+1. 엑셀 파일의 이메일 및 비밀번호로 로그인하세요.
+
+1. 방금 생성한 API 키를 입력하세요.
 
 </Step>
 </Steps>
 
 
-## Step 2: 리더 등록 {#register-the-reader}
+## Step 2: 장치 등록 {#registerDevices}
 
-BioStar Air Demo App (안드로이드 전용)을 사용하세요:
+모바일 기기에 BioStar Air Demo App(안드로이드 전용)을 사용하세요.
 
-1. 앱을 다운로드하세요. [DeviceRegistration.zip](https://moca-public-file-share.s3.ap-northeast-2.amazonaws.com/DeviceRegistration.zip)
+1. 다음 링크를 클릭해 모바일 앱을 다운로드하세요. [DeviceRegistration.zip](https://moca-public-file-share.s3.ap-northeast-2.amazonaws.com/DeviceRegistration.zip)
 
 1. 엑셀 파일의 크리덴셜로 로그인하세요.
 
-1. 안드로이드 모바일 기기를 리더기 근처(BLE 범위)로 가져가세요.
+1. 안드로이드 환경의 모바일 기기를 리더기 근처(BLE 범위)로 가져가세요.
 
-    * **All Menu** → **Devices** → **+** (오른쪽 상단 모서리)를 탭하세요.
+   * **All Menu** → **Devices**에서 오른쪽 상단의 <IcAdd /> 버튼을 탭하세요.
 
-    * 장치를 찾고 **Register**를 탭하세요.
+   * 장치를 검색하고 **Register** 버튼을 탭하세요.
 
-1. 리더기에서 소리가 나고 재부팅되며 등록된 장치 목록에 나타납니다.
+1. 장치에서 소리가 나고 재부팅되며 등록된 장치 목록에 나타납니다.
 
-:::note
+:::info
 
-리더기는 모바일 앱을 통해서만 등록할 수 있습니다. 웹 포털에서는 등록할 수 없습니다. API 기반 등록에는 파트너에게 제공되지 않는 암호화 인증서가 필요합니다.
+장치는 모바일 앱을 통해서만 등록할 수 있습니다. 웹 포털에서는 등록할 수 없습니다. API 기반 등록에는 파트너에게 제공되지 않는 암호화 인증서가 필요합니다.
 
 :::
 
 
-## Step 3: 리더기 관리
+## Step 3: 장치 관리
 
-장치를 관리하려면 다음 중 하나를 사용하세요.
+데모 앱 또는 데모 웹 포털에서 장치를 관리할 수 있습니다.
 
-* **Airfob Pro Demo App**
+* **BioStar Air Demo App**
 
 * **Demo Web Portal**: [https://demo.airfobspace.com/login](https://demo.airfobspace.com/login)
 
@@ -134,28 +128,28 @@ BioStar Air Demo App (안드로이드 전용)을 사용하세요:
 
 API 통합은 가능한 한 아래의 범위로 제한하세요.
 
-* 사용자 생애 주기 관리 (생성/업데이트/삭제)
+* 사용자 라이프사이클(lifecycle) 관리(생성/업데이트/삭제)
 
-* 자격 증명 관리 (모바일, RF 카드, 생체 인식)
+* 자격 증명 관리(모바일, RF 카드, 생체 인식)
 
-관리자가 기존 BioStar Air 웹 및 모바일 관리 앱을 사용할 수 있도록 허용합니다.
+관리자가 기존 BioStar Air 웹 및 모바일 관리 앱을 사용할 수 있도록 허용하세요.
 
 * 출입 등급
 
 * 일정
 
-* 출입문 및 리더기 설정
+* 출입문 및 장치 설정
 
 * 사이트 설정
 
-## Optional: API 로그인 절차 (Postman 또는 Programmatic) {#optional-api-login-flow}
 
-<Steps>
-<Step>
+## Optional: API 로그인 절차 {#optional-api-login-flow}
+
+[Postman](https://www.postman.com/) 또는 프로그래밍 방식으로 API 호출을 수행할 수 있습니다.
 
 ### 로그인 {#login}
 
-**Endpoint**: 로그인
+**Endpoint**: `login`
 
 **Payload**:
 
@@ -168,33 +162,26 @@ API 통합은 가능한 한 아래의 범위로 제한하세요.
 
 Bearer 토큰(JWT)을 반환합니다.
 
-</Step>
-<Step>
 
-### Get Self Accounts {#get-self-accounts}
+### 계정 정보 조회{#get-self-accounts}
 
-**Endpoint**: getSelfAccounts
+**Endpoint**: `getSelfAccounts`
 
 **Authorization**: Bearer Token
 
 접근 가능한 사이트 및 계정 목록을 반환합니다.
 
-</Step>
-<Step>
 
 ### 계정에 로그인 {#login-to-account}
 
-**Endpoint**: loginAccount
+**Endpoint**: `loginAccount`
 
 **Authorization**: Bearer Token
 
 특정 사이트 토큰을 반환합니다.
 
-</Step>
-</Steps>
 
-
-## 웹 브라우저에서 Bearer 토큰 얻는 방법 {#how-to-get-your-bearer-token}
+## 웹 브라우저에서 Bearer 토큰 얻는 방법 {#getYourBearerToken}
 
 ### Chrome/Edge (Windows 또는 Mac) {#chrome-edge}
 
@@ -206,15 +193,17 @@ Bearer 토큰(JWT)을 반환합니다.
 
 1. API 호출을 검색하세요. 
 
-    > 예, groups, login
+   > 예, `groups`, `login`
 
-1. 요청을 클릭하세요.
+1. 목록에서 요청을 클릭하세요.
 
 1. **Headers** 탭으로 이동하세요.
 
 1. 요청 헤더에서 `Authorization: Bearer ...`를 찾으세요.
 
 1. 오른쪽 마우스를 클릭하고 토큰을 복사하세요.
+
+<Image src='/img/air/bsair-chrome-develope.png' alone />
 
 ### Safari (Mac) {#safari}
 
@@ -256,12 +245,11 @@ Bearer 토큰(JWT)을 반환합니다.
 
 ## Demo vs Production {#demo-vs-production}
 
-* **Demo Sites**는 테스트를 위해 개발자 포털을 통해 생성됩니다.
+* 테스트를 위한 **Demo** 사이트는 [개발자 포털](https://developers.biostarair.com/login)을 통해 생성됩니다.
 
-* **Production Sites**는 파트너 포털을 통해 생성되며 사이트 ID, 사용자 이메일 및 비밀번호가 필요합니다. Production 사이트는 승인된 판매자 또는 슈프리마 지사만 생성할 수 있습니다.
+* **Production** 사이트는 [파트너 포털](https://partner.biostarair.com/)을 통해 생성되며 사이트 ID, 사용자 이메일 및 비밀번호가 필요합니다. Production 사이트는 승인된 판매자 또는 슈프리마 지사만 생성할 수 있습니다.
 
-
-## 주요 참고사항 {#important-notes}
+:::info
 
 * 사용자 ID와 계정 ID는 다릅니다. 혼동하지 마세요.
 
@@ -270,6 +258,8 @@ Bearer 토큰(JWT)을 반환합니다.
 * 항상 최신 Bearer 토큰을 사용하세요.
 
 * 브라우저에서 복사한 Bearer 토큰은 Postman에서 재사용할 수 있습니다.
+
+:::
 
 
 ## 도움이 필요하세요? {#need-help}

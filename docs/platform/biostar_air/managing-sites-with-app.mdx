@@ -1,0 +1,147 @@
+---
+id: managing-sites-with-app
+title: 모바일 앱
+description: BioStar Air 모바일 앱을 통해 모바일 기기에서 사용자 관리, 이벤트 모니터링, 장치 제어 및 관리 작업 수행 방법을 안내합니다.
+keywords: [BioStar Air, 모바일 앱, 출입 통제, 이벤트 모니터링]
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+BioStar Air 앱은 BioStar Air 웹 포털과 동일한 모든 기능을 제공합니다. 사용자는 모바일 장치에서 직접 출입 통제를 관리하고, 이벤트 로그를 모니터링하며, 장치를 제어하고, 관리 작업을 수행할 수 있습니다.
+
+<CustomerNote />
+
+
+## 모바일 앱 사용하기 {#navigating-to-the-feature}
+
+모바일 기기에서 BioStar Air 앱을 다운로드하고 로그인하세요.
+
+* 모바일 기기에 BioStar Air 앱을 다운로드하여 설치하세요.
+
+   * [iOS](https://apps.apple.com/us/app/airfob-pro/id1659959609)
+
+   * [Android](https://play.google.com/store/apps/details?id=com.mocainc.afs2pro)
+
+* [BioStar Air 웹 포털](https://admin.biostarair.com/)에서 사용하는 아이디와 비밀번호로 로그인하세요.
+
+:::info
+
+* 웹 버전과 동일한 크리덴셜로 로그인했는지 확인하세요.
+
+* BLE mode로 업데이트하려면 장치에 가까이 있어야 합니다.
+
+* 실시간 비디오 모니터링과 같은 일부 기능은 연결된 카메라가 필요합니다.
+
+:::
+
+<Columns className='mt--50'>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-using-app-dashboard.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+### 대시보드 {#dashboard-overview}
+
+모바일 앱에 로그인하면 초기 화면의 <Cmd sid='dashboard_menu' product='air' />에서 아래와 같은 정보를 제공합니다.
+
+* 일일 사용자 출입 수
+
+* 총 등록된 활성 사용자 수
+
+* 연결된 장치 수
+
+* 크레딧 상태
+
+* (카메라가 연결된 경우) 연결된 카메라
+
+</Column>
+</Columns>
+
+<Columns className='mt-50'>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-using-app-users.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+### 사용자 관리 {#user-management}
+
+초기 화면의 <Cmd sid='users_card' product='air' /> 카드를 탭하거나 <Cmd sid='site_setting_tab_management' product='air' /> → <Cmd sid='user_submenu' product='air' />를 차례로 탭하세요.
+
+* 사용자를 선택하고 세부 정보를 확인하세요.
+
+* 사용자 상태를 수정(재발급, 일시 중지, 삭제 또는 활성화)할 수 있습니다.
+
+* 새 사용자를 추가하려면 <IcAdd /> 버튼을 탭하고 필요한 세부 정보를 입력하세요.
+
+:::info
+
+사용자 관리에 대한 자세한 내용은 [다음 문서](managing-users)를 참고하세요.
+
+:::
+
+</Column>
+</Columns>
+
+<Columns className='mt-50'>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-using-app-monitoring.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+### 모니터링 {#monitoring}
+
+<Cmd sid='monitoring_menu' product='air' />에서는 아래와 같은 정보를 제공합니다.
+
+* <Cmd sid='event_logs_submenu' product='air' />: 이벤트 로그와 감사 로그를 모니터링하고 분석할 수 있습니다. 자세한 내용은 [다음 문서](monitoring-event-and-audit-logs)를 참고하세요.
+
+* <Cmd sid='alerts_history.alerts_history_submenu' product='air' />: 웹 포털과 모바일 앱을 통해 이전에 발생한 알림과 생성된 리포트 내역을 조회할 수 있습니다. 자세한 내용은 [다음 문서](monitoring-alert-report-history)를 참고하세요.
+
+* <Cmd sid='door_status_submenu' product='air' />: 사이트에 연결된 출입문의 상태를 실시간으로 모니터링할 수 있습니다. 자세한 내용은 [다음 문서](monitoring-door-status)를 참고하세요.
+
+   * 출입문 상태를 확인하고 원격으로 제어할 수 있습니다.
+
+   * 한 번 탭하여 출입문을 편집하거나 길게 눌러 여러 출입문을 선택하고 일괄 작업을 수행할 수 있습니다.
+
+   * 출입문을 <Cmd sid='event_log_unlock_mode' product='air' /> 또는 <Cmd sid='event_log_lock_mode' product='air' />로 설정하면 릴레이 설정 또는 일정을 무시합니다.
+
+   * 필요에 따라 사용하지 않는 출입문은 삭제하세요.
+
+* (연결된 카메라가 있는 경우) 실시간 비디오
+
+</Column>
+</Columns>
+
+<Columns className='mt-50'>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-using-app-devices.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+### 장치 {#devices}
+
+초기 화면의 <Cmd sid='devices_card' product='air' /> 카드를 탭하거나 <Cmd sid='site_setting_tab_management' product='air' /> → <Cmd sid='devices_card' product='air' />를 차례로 탭하세요.
+
+* 모든 등록된 장치를 확인할 수 있습니다.
+
+* 장치를 선택하고 편집, 펌웨어 업데이트 또는 재부팅할 수 있습니다.
+
+* 네트워크에 연결되지 않은 장치는 펌웨어 업데이트를 위해 모바일 기기와 가까운 거리에서 **BLE 모드**를 사용하세요.
+
+* 새 장치를 추가하려면 <IcAdd /> 버튼을 탭하세요.
+
+:::info
+
+장치 관리에 대한 자세한 내용은 [다음 문서](manage-device)를 참고하세요.
+
+:::
+
+</Column>
+</Columns>

@@ -37,162 +37,208 @@ const sidebars = {
       ]
     }
   ],
-  // biostar_air: [
-  //   {
-  //     type: 'category',
-  //     label: 'BioStar Air',
-  //     collapsed: false,
-  //     collapsible: false,
-  //     className: 'p-title',
-  //     link: {
-  //       type: 'doc',
-  //       id: 'platform/biostar_air/index',
-  //     },
-  //     items: [
-  //       {
-  //         type: 'category',
-  //         label: 'Overview',
-  //         items: [
-  //           'platform/biostar_air/what-is-biostar-air',
-  //           'platform/biostar_air/access-control-hardware-compatibility',
-  //           'platform/biostar_air/security-overview',
-  //           'platform/biostar_air/site-setup-networking',
-  //           'platform/biostar_air/biostar-air-migration',
-  //         ]
-  //       },
-  //       {
-  //         type: 'category',
-  //         label: 'Site Management',
-  //         items: [
-  //           'platform/biostar_air/getting-started',
-  //           'platform/biostar_air/biostar-air-login',
-  //           {
-  //             type: 'category',
-  //             label: 'User Management',
-  //             items: [
-  //               'platform/biostar_air/managing-users',
-  //               'platform/biostar_air/adding-individual-users',
-  //               'platform/biostar_air/adding-users-in-bulk',
-  //               'platform/biostar_air/troubleshooting-adding-users-in-bulk',
-  //               'platform/biostar_air/user-card-types',
-  //               'platform/biostar_air/managing-user-groups',
-  //               'platform/biostar_air/managing-card-templates',
-  //               'platform/biostar_air/managing-adding-users',
-  //               'platform/biostar_air/linkpass-credentials',
-  //             ]
-  //           },
-  //           {
-  //             type: 'category',
-  //             label: 'Device Management',
-  //             items: [
-  //               'platform/biostar_air/managing-registered-devices',
-  //               'platform/biostar_air/configuring-ta',
-  //               'platform/biostar_air/configuring-the-airfob-patch-and-tag',
-  //               'platform/biostar_air/configuring-the-sio2-secure-module',
-  //               'platform/biostar_air/how-to-upgrade-firmware',
-  //               'platform/biostar_air/biometric-readers-and-credentials',
-  //             ]
-  //           },
-  //           {
-  //             type: 'category',
-  //             label: 'Door Management',
-  //             items: [
-  //               'platform/biostar_air/managing-registered-doors',
-  //               'platform/biostar_air/managing-door-and-device-groups',
-  //               'platform/biostar_air/managing-door-schedules',
-  //             ]
-  //           },
-  //           {
-  //             type: 'category',
-  //             label: 'Monitoring',
-  //             items: [
-  //               'platform/biostar_air/event-and-audit-logs',
-  //               'platform/biostar_air/monitoring-door-status',
-  //             ]
-  //           },
-  //           {
-  //             type: 'category',
-  //             label: 'Reports',
-  //             items: [
-  //               'platform/biostar_air/configuring-reports',
-  //               'platform/biostar_air/reports-time-attendance-reports',
-  //             ]
-  //           },
-  //           {
-  //             type: 'category',
-  //             label: 'Settings',
-  //             items: [
-  //               'platform/biostar_air/managing-administrators',
-  //               'platform/biostar_air/site-settings',
-  //               'platform/biostar_air/daylight-saving-time',
-  //               'platform/biostar_air/customizing-email-templates',
-  //               'platform/biostar_air/managing-sites-with-phone',
-  //               'platform/biostar_air/custom-wiegand-card-formats'
-  //             ]
-  //           },
-  //           {
-  //             type: 'category',
-  //             label: 'Advanced Features',
-  //             items: [
-  //               'platform/biostar_air/managing-door-access',
-  //               'platform/biostar_air/managing-elevator-access',
-  //               'platform/biostar_air/managing-roll-call-fire-muster',
-  //               'platform/biostar_air/sip-intercom-for-biostation3'
-  //             ]
-  //           },
-  //         ]
-  //       },
-  //       {
-  //         type: 'category',
-  //         label: 'Video Management',
-  //         items: [
-  //           'platform/biostar_air/ip-camera-support-and-configuration',
-  //           'platform/biostar_air/video-troubleshooting',
-  //         ]
-  //       },
-  //       {
-  //         type: 'category',
-  //         label: 'Using Mobile Credentials',
-  //         items: [
-  //           'platform/biostar_air/suprema-pass-app-overview',
-  //           'platform/biostar_air/opening-doors-with-mobile-credentials',
-  //           'platform/biostar_air/suprema-pass-app-advanced-features',
-  //           'platform/biostar_air/suprema-pass-app-sensitivity-settings',
-  //           'platform/biostar_air/troubleshooting-suprema-pass-app',
-  //           'platform/biostar_air/location-services-issues',
-  //         ]
-  //       },
-  //       {
-  //         type: 'category',
-  //         label: 'Partners and Integrations',
-  //         items: [
-  //           'platform/biostar_air/intro-to-partner-portal',
-  //           'platform/biostar_air/biostar-air-partner-portal-detailed-use',
-  //           'platform/biostar_air/federated-sites',
-  //           'platform/biostar_air/integration-quickstart',
-  //         ]
-  //       },
-  //       {
-  //         type: 'category',
-  //         label: 'Hardware',
-  //         items: [
-  //           'platform/biostar_air/wiring-and-configuration',
-  //         ]
-  //       },
-  //       {
-  //         type: 'html',
-  //         value: '<hr />'
-  //       },
-  //       {
-  //         type: 'category',
-  //         label: 'Release Notes',
-  //         items: [
-  //           'platform/biostar_air/release-notes/v2_10'
-  //         ]
-  //       }
-  //     ]
-  //   }
-  // ],
+  biostar_air: [
+    {
+      type: 'category',
+      label: 'BioStar Air',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'platform/biostar_air/index',
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'BioStar Air란?',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_air/what-is-biostar-air',
+          },
+          items: [
+            'platform/biostar_air/access-control-hardware-compatibility',
+            'platform/biostar_air/security-overview',
+            'platform/biostar_air/site-setup-networking',
+            'platform/biostar_air/biostar-air-migration',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Site Management',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_air/site-management',
+          },
+          items: [
+            'platform/biostar_air/getting-started',
+            'platform/biostar_air/site-selector',
+            {
+              type: 'category',
+              label: 'User Management',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/managing-users',
+              },
+              items: [
+                'platform/biostar_air/adding-individual-users',
+                'platform/biostar_air/user-management-user-list',
+                'platform/biostar_air/adding-users-in-bulk',
+                'platform/biostar_air/managing-user-groups',
+                'platform/biostar_air/managing-card-templates',
+                'platform/biostar_air/managing-adding-users',
+                'platform/biostar_air/user-card-types',
+                'platform/biostar_air/linkpass-credentials',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Device Management',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/manage-device',
+              },
+              items: [
+                'platform/biostar_air/register-device',
+                'platform/biostar_air/managing-registered-devices',
+                'platform/biostar_air/manage-device-group',
+                'platform/biostar_air/configuring-ta',
+                'platform/biostar_air/configuring-the-airfob-patch-and-tag',
+                'platform/biostar_air/configuring-the-sio2-secure-module',
+                'platform/biostar_air/how-to-upgrade-firmware',
+                'platform/biostar_air/biometric-readers-and-credentials',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Door Management',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/manage-door',
+              },
+              items: [
+                'platform/biostar_air/managing-registered-doors',
+                'platform/biostar_air/managing-door-groups',
+                'platform/biostar_air/managing-door-schedules',
+              ]
+            },
+            'platform/biostar_air/manage-elevator',
+            {
+              type: 'category',
+              label: '출입 권한 관리',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/manage-access-authority',
+              },
+              items: [
+                'platform/biostar_air/manage-holiday-group',
+                'platform/biostar_air/manage-schedule',
+                'platform/biostar_air/manage-access-level',
+                'platform/biostar_air/manage-floor-level',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Monitoring',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/monitoring',
+              },
+              items: [
+                'platform/biostar_air/monitoring-event-and-audit-logs',
+                'platform/biostar_air/monitoring-alert-report-history',
+                'platform/biostar_air/monitoring-door-status',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Advanced Features',
+              items: [
+                'platform/biostar_air/managing-roll-call-fire-muster',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Settings',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/settings',
+              },
+              items: [
+                'platform/biostar_air/managing-administrators',
+                'platform/biostar_air/site-settings',
+                'platform/biostar_air/daylight-saving-time',
+                'platform/biostar_air/customizing-email-templates',
+                'platform/biostar_air/settings-alert-report',
+                'platform/biostar_air/custom-wiegand-card-formats',
+                'platform/biostar_air/account-settings',
+              ]
+            }
+          ]
+        },
+        'platform/biostar_air/managing-sites-with-app',
+        {
+          type: 'category',
+          label: 'Using Mobile Credentials',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_air/suprema-pass-app-overview'
+          },
+          items: [
+            'platform/biostar_air/opening-doors-with-mobile-credentials',
+            'platform/biostar_air/suprema-pass-app-advanced-features',
+            'platform/biostar_air/suprema-pass-app-sensitivity-settings',
+          ]
+        },
+        {
+          type: 'category',
+          label: '활용 안내',
+          items: [
+            'platform/biostar_air/configuring-reports',
+            'platform/biostar_air/reports-time-attendance-reports',
+            'platform/biostar_air/sip-intercom-for-biostation3',
+            'platform/biostar_air/e200-qr-scanner'
+          ]
+        },
+        'platform/biostar_air/ip-camera-support-and-configuration',
+        {
+          type: 'category',
+          label: '파트너 포털',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_air/intro-to-partner-portal',
+          },
+          items: [
+            'platform/biostar_air/biostar-air-partner-portal-detailed-use',
+            'platform/biostar_air/federated-sites',
+          ]
+        },
+        'platform/biostar_air/integration-quickstart',
+        {
+          type: 'category',
+          label: '문제 해결',
+          items: [
+            'platform/biostar_air/troubleshooting-adding-users-in-bulk',
+            'platform/biostar_air/location-services-issues',
+            'platform/biostar_air/troubleshooting-suprema-pass-app',
+            'platform/biostar_air/video-troubleshooting',
+          ]
+        },
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: 'Release Notes',
+          items: [
+            'platform/biostar_air/release-notes/v2_11',
+            'platform/biostar_air/release-notes/v2_10'
+          ]
+        }
+      ]
+    }
+  ],
   biostarx: [
     {
       type: 'category',

@@ -735,7 +735,15 @@ body[data-rh] .redocusaurus {
       padding-bottom: .8rem;
     }
   }
+
+  p + table {
+    margin-top: .7rem;
+  }
   
+  blockquote {
+    margin-top: .5rem;
+  }
+
   // ul ul, ul ol, ol ol, ol ul {
   //   margin: 1rem 0;
   // }
@@ -743,6 +751,7 @@ body[data-rh] .redocusaurus {
     list-style-type: disc;
     ul {
       list-style-type: none;
+      margin-top: var(--ifm-list-paragraph-margin);
       li::before {
         content: "‒";
         position: absolute;
@@ -824,6 +833,7 @@ body[data-rh] .redocusaurus {
 
   figure {
     margin-left: 0;
+    margin-right: 0;
     img {
       border: 1px solid;
       margin-left: 0;
@@ -960,6 +970,9 @@ body[data-rh] .redocusaurus {
     .width--20 {
       max-width: 20%;
     }
+    .width--23 {
+      max-width: 23%;
+    }
     .width--30 {
       max-width: 30%;
     }
@@ -989,6 +1002,12 @@ body[data-rh] .redocusaurus {
     }
     .padding--l20 {
       padding-left: 20px !important;
+    }
+    .padding--l40 {
+      padding-left: 40px !important;
+    }
+    .mt--50 {
+      margin-top: 50px;
     }
   }
 

@@ -1,0 +1,161 @@
+---
+id: managing-administrators
+title: 관리자 관리하기
+description: BioStar Air에서 관리자 초대, 역할 등급 지정, 권한 관리, 옵저버(Observer), 오퍼레이터(Operator), 관리자(Administrator) 및 마스터(Master) 역할에 대한 출입 통제 설정 방법을 안내합니다.
+keywords: [관리자, 역할, 출입 통제 설정]
+---
+
+BioStar Air의 관리자 기능을 사용하면 조직 내 관리자 계정을 관리하고, 역할을 할당하고, 출입 등급을 제어할 수 있습니다. 이를 통해 보안 및 관리 제어를 유지하면서 적합한 담당자에게 적절한 권한을 부여할 수 있습니다.
+
+:::tip
+
+관리자 관리에 대한 동영상 가이드를 시청하려면 다음 영상을 참고하세요.
+
+<YouTube videoId="pUyNLeTfGRI" />
+
+:::
+
+## 관리자 보기 {#viewAdmin}
+
+화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_submenu' product='air' />를 클릭하세요.
+
+<Image src='/img/air/bsair-settings-admin.png' />
+
+<Cmd sid='admin_submenu' product='air' /> 메뉴에서는 모든 활성 관리자 목록을 확인할 수 있습니다. 관리자 목록에는 다음 정보를 포함합니다.
+
+* 이름
+
+* 이메일 주소
+
+* 전화 번호
+
+* 초대자
+
+* 초대 날짜
+
+* 관리자 권한
+
+* 계정 상태(활성/비활성)
+
+
+## 관리자 비활성화 {#deactiveAdmin}
+
+관리자를 삭제하는 대신 계정을 비활성화할 수 있으며, 필요 시 다시 활성화할 수 있습니다.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_submenu' product='air' />를 클릭하세요.
+
+1. 목록에서 비활성화할 관리자를 찾으세요.
+
+1. <Cmd sid='column_admin_account_status' product='air' /> 열에서 토글 스위치를 클릭하세요.
+
+   <Image src='/img/air/bsair-settings-admin-deactive.png' />
+
+1. 메시지 창이 나타나면 <Cmd sid='btn_ok' product='air' /> 버튼을 클릭하세요.
+
+<Cmd sid='column_admin_account_status' product='air' /> 열의 상태가 <Cmd sid='admin_status_disabled' product='air' /> 상태로 변경됩니다.
+
+<Image src='/img/air/bsair-settings-admin-deactive-result.png' />
+
+:::info
+
+관리자 비활성화 기능은 관리자의 권한에 따라 제한될 수 있습니다. <Cmd sid='master_role' product='air' className='bold' /> 권한을 가진 관리자는 다른 <Cmd sid='master_role' product='air' className='bold' /> 관리자를 비활성화할 수 없습니다.
+
+:::
+
+
+## 관리자 역할 변경 {#changing-an-administrators-role}
+
+관리자는 자신보다 낮은 레벨의 관리자 역할을 변경할 수 있습니다.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_submenu' product='air' />를 클릭하세요.
+
+1. 목록에서 역할을 변경할 관리자를 찾으세요.
+
+1. <Cmd sid='column_admin_level' product='air' /> 열에서 새 관리자 레벨을 선택하세요.
+
+   <Image src='/img/air/bsair-settings-admin-change-role.png' />
+
+1. 메시지 창이 나타나면 <Cmd sid='btn_ok' product='air' /> 버튼을 클릭하세요.
+
+:::note
+
+<Cmd sid='master_role' product='air' className='bold' /> 관리자만이 다른 관리자에게 <Cmd sid='master_role' product='air' className='bold' /> 권한을 할당하거나 수정할 수 있습니다.
+
+:::
+
+## 새로운 관리자 초대 {#inviteNewAdmin}
+
+새로운 관리자를 추가할 수 있습니다.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_submenu' product='air' />를 클릭하세요.
+
+1. 화면 오른쪽 상단의 <Cmd sid='btn_invite' product='air' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='admin_invitation_title' product='air' /> 창이 나타나면 이메일 주소를 입력하세요.
+
+   <Image src='/img/air/bsair-settings-admin-invite.png' />
+
+1. <Cmd sid='admin_invitation_input2' product='air' />에서 새로운 관리자에게 할당할 역할을 선택하세요.
+
+1. 초대장을 보내려면 <Cmd sid='send_btn' product='air' /> 버튼을 클릭하세요.
+
+:::note
+
+* 각 관리자는 고유한 이메일 주소를 가져야 합니다. 필요하다면 별칭 주소(예: erik+training@example.com)를 사용할 수 있습니다.
+
+* 초대 메일을 받은 관리자는 이메일 내의 링크를 클릭하세요. 계정을 등록하지 않은 관리자는 회원 가입을 진행하세요. 이미 계정이 있는 관리자는 로그인 후 바로 **사이트**에 진입할 수 있습니다.
+
+:::
+
+
+## 관리자 레벨 {#administrator-levels}
+
+BioStar Air의 각 관리자 레벨은 특정 권한을 가지며, 높은 레벨은 낮은 레벨의 권한을 상속받습니다.
+
+:::info
+
+각 관리자 역할은 BioStar Air 전반에 걸쳐 서로 다른 권한을 가지고 있습니다. <Cmd sid='observer_role' product='air' className='bold' />는 가장 제한된 접근을 가지며, 화면에 나타나지 않는 제한된 메뉴가 있습니다.
+
+:::
+
+### <Cmd sid='observer_role' product='air' className='normal' /> (Lowest Level) {#observer}
+
+* <Cmd sid='dashboard_menu' product='air' /> 대시보드와 로그를 **볼 수 있습니다**.
+
+* 로그를 **내보내고** 보고서를 생성할 수 있습니다.
+
+* 설정, 사용자 또는 장치를 수정할 수 **없습니다**.
+
+* 메뉴 진입에 제한됩니다. 대부분의 메뉴가 화면에 나타나지 않습니다.
+
+### <Cmd sid='operator_role' product='air' className='normal' /> {#operator}
+
+* <Cmd sid='user_submenu' product='air' /> 및 <Cmd sid='user_groups_submenu' product='air' /> <Cmd sid='access_levels_submenu' product='air' />, <Cmd sid='schedules_submenu' product='air' />, <Cmd sid='holiday_groups_submenu' product='air' />을 관리할 수 있습니다.
+
+* 장치 제어 또는 관리 설정에 대한 접근 권한이 **없습니다**.
+
+* 일상적인 사용자 및 출입 구성을 관리하는 데 적합합니다.
+
+### <Cmd sid='admin_role' product='air' className='normal' /> {#administrator}
+
+* 새로운 관리자를 **초대할 수 있습니다**. 하지만 <Cmd sid='master_role' product='air' className='bold' /> 역할을 할당할 수는 없습니다.
+
+* **전체 장치 제어** 권한이 있어 설정을 수정하고 연결된 장치를 관리할 수 있습니다.
+
+* <Cmd sid='master_role' product='air' className='bold' /> 역할의 관리자를 삭제하거나 수정할 수 없습니다.
+
+* 일반적으로 시스템 관리를 담당하는 IT 담당자에게 역할을 할당할 것을 권장합니다.
+
+### <Cmd sid='master_role' product='air' className='normal' /> (Highest Level) {#master}
+
+* 모든 설정 및 기능에 **전체 접근** 권한이 있습니다.
+
+* **Administrators**에 의해 삭제되거나 수정될 수 **없습니다**.
+
+* **하위 사이트**를 생성하여 다양한 위치 또는 조직을 관리할 수 있습니다.
+
+* **사이트 설정**을 구성할 수 있으며, 여기에는 중요한 시스템 전체 구성도 포함됩니다.
+
+* 다른 관리자가 로그인하기 전에 **약관**에 동의할 책임이 있습니다.
+
+* 일반적으로 회사 소유자 또는 높은 신뢰를 받는 임원에게 할당할 수 있습니다.
