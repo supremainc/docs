@@ -38,6 +38,7 @@ const assets = {
 
 };
 
+/*카드 및 QR/바코드 인증을 지원하는 출입 통제 장치입니다.*/
 
 
 const toc = [];
@@ -50,9 +51,7 @@ function _createMdxContent(props) {
   }, {Overview} = _components;
   if (!Overview) _missingMdxReference("Overview", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "카드 및 QR/바코드 인증을 지원하는 출입 통제 장치입니다."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+    children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.img, {
         alt: "Example banner",
         src: (__webpack_require__(12167)/* ["default"] */.A) + "",

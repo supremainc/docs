@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["53497"], {
-33895: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["77462"], {
+98329: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -17,44 +17,44 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "ケーブルとコネクタ",
-  "id": "ケーブルとコネクタ",
+  "value": "케이블 및 커넥터",
+  "id": "케이블-및-커넥터",
   "level": 2
 }, {
-  "value": "電源",
-  "id": "電源",
+  "value": "전원",
+  "id": "전원",
   "level": 3
 }, {
-  "value": "リレー",
-  "id": "リレー",
+  "value": "릴레이",
+  "id": "릴레이",
   "level": 3
 }, {
   "value": "RS-485",
   "id": "rs-485",
   "level": 3
 }, {
-  "value": "入力",
-  "id": "入力",
+  "value": "Input",
+  "id": "input",
   "level": 3
 }, {
-  "value": "Wiegand入力",
-  "id": "wiegand入力",
+  "value": "Wiegand 입력",
+  "id": "wiegand-입력",
   "level": 3
 }, {
-  "value": "Wiegand出力",
-  "id": "wiegand出力",
+  "value": "Wiegand 출력",
+  "id": "wiegand-출력",
   "level": 3
 }, {
-  "value": "Wiegand入出力",
-  "id": "wiegand入出力",
+  "value": "Wiegand 입출력",
+  "id": "wiegand-입출력",
   "level": 3
 }, {
-  "value": "イーサネット",
-  "id": "イーサネット",
+  "value": "이더넷",
+  "id": "이더넷",
   "level": 3
 }, {
-  "value": "リーダー、ロック電源出力",
-  "id": "リーダーロック電源出力",
+  "value": "리더, 락 전원 출력",
+  "id": "리더-락-전원-출력",
   "level": 3
 }];
 function _createMdxContent(props) {
@@ -76,11 +76,11 @@ function _createMdxContent(props) {
   if (!Xclude) _missingMdxReference("Xclude", true);
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "ケーブルとコネクタ",
-      children: "ケーブルとコネクタ"
+      id: "케이블-및-커넥터",
+      children: "케이블 및 커넥터"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "電源",
-      children: "電源"
+      id: "전원",
+      children: "전원"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Xclude, {
       product: "bioentry_p2,xpass_q2,biostation_3_max",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
@@ -103,11 +103,11 @@ function _createMdxContent(props) {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.thead, {
             children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "ピン"
+                children: "핀"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "名称"
+                children: "명칭"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "色"
+                children: "색상"
               })]
             })
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tbody, {
@@ -117,7 +117,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "PWR +VDC"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "赤(白線)"
+                children: "빨간색(흰띠)"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -125,7 +125,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "PWR GND"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "黒(白線)"
+                children: "검은색(흰띠)"
               })]
             })]
           })]
@@ -143,11 +143,11 @@ function _createMdxContent(props) {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.thead, {
             children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "ピン"
+                children: "핀"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "名称"
+                children: "명칭"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "色"
+                children: "색상"
               })]
             })
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tbody, {
@@ -157,7 +157,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "PWR +VDC"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "赤"
+                children: "빨간색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -165,15 +165,15 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "PWR GND"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "黒"
+                children: "검은색"
               })]
             })]
           })]
         })
       })]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "リレー",
-      children: "リレー"
+      id: "릴레이",
+      children: "릴레이"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
       src: "/img/device/cable-relay-3pin.svg",
       className: "none",
@@ -184,11 +184,11 @@ function _createMdxContent(props) {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.thead, {
           children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
             children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-              children: "ピン"
+              children: "핀"
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-              children: "名称"
+              children: "명칭"
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-              children: "色"
+              children: "색상"
             })]
           })
         }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tbody, {
@@ -198,7 +198,7 @@ function _createMdxContent(props) {
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
               children: "RLY NO"
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-              children: "白"
+              children: "흰색"
             })]
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
             children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -206,7 +206,7 @@ function _createMdxContent(props) {
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
               children: "RLY COM"
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-              children: "青"
+              children: "파란색"
             })]
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
             children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -214,7 +214,7 @@ function _createMdxContent(props) {
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
               children: "RLY NC"
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-              children: "オレンジ"
+              children: "주황색"
             })]
           })]
         })]
@@ -232,11 +232,11 @@ function _createMdxContent(props) {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.thead, {
           children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
             children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-              children: "ピン"
+              children: "핀"
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-              children: "名称"
+              children: "명칭"
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-              children: "色"
+              children: "색상"
             })]
           })
         }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tbody, {
@@ -246,7 +246,7 @@ function _createMdxContent(props) {
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
               children: "485 TRXP"
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-              children: "青"
+              children: "파란색"
             })]
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
             children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -254,7 +254,7 @@ function _createMdxContent(props) {
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
               children: "485 TRXN"
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-              children: "黄"
+              children: "노란색"
             })]
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
             children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -262,7 +262,7 @@ function _createMdxContent(props) {
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
               children: "485 GND"
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-              children: "黒"
+              children: "검은색"
             })]
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
             children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -270,14 +270,14 @@ function _createMdxContent(props) {
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
               children: "SH GND"
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-              children: "灰"
+              children: "회색"
             })]
           })]
         })]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "入力",
-      children: "入力"
+      id: "input",
+      children: "Input"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Include, {
       product: "biostation_3,biostation_2a,xpass_q2",
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
@@ -290,11 +290,11 @@ function _createMdxContent(props) {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.thead, {
             children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "ピン"
+                children: "핀"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "名称"
+                children: "명칭"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "色"
+                children: "색상"
               })]
             })
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tbody, {
@@ -304,7 +304,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "INPUT0"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "赤"
+                children: "빨간색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -312,7 +312,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "INPUT1"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "黄"
+                children: "노란색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -320,7 +320,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "INPUT2"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "オレンジ"
+                children: "주황색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -328,7 +328,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "INPUT GND"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "黒"
+                children: "검은색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -336,7 +336,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "SH GND"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "灰"
+                children: "회색"
               })]
             })]
           })]
@@ -354,11 +354,11 @@ function _createMdxContent(props) {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.thead, {
             children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "ピン"
+                children: "핀"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "名称"
+                children: "명칭"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "色"
+                children: "색상"
               })]
             })
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tbody, {
@@ -368,7 +368,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "INPUT0"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "赤"
+                children: "빨간색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -376,7 +376,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "INPUT1"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "黄"
+                children: "노란색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -384,7 +384,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "INPUT GND"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "黒"
+                children: "검은색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -392,7 +392,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "SH GND"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "灰"
+                children: "회색"
               })]
             })]
           })]
@@ -410,11 +410,11 @@ function _createMdxContent(props) {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.thead, {
             children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "ピン"
+                children: "핀"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "名称"
+                children: "명칭"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "色"
+                children: "색상"
               })]
             })
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tbody, {
@@ -424,7 +424,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "INPUT0"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "赤"
+                children: "빨간색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -432,7 +432,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "INPUT1"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "黄"
+                children: "노란색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -440,7 +440,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "INPUT2"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "オレンジ"
+                children: "주황색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -448,7 +448,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "INPUT GND"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "黒"
+                children: "검은색"
               })]
             })]
           })]
@@ -457,8 +457,8 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(PageBreak, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Include, {
       product: "biostation_3,biostation_2a",
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-        id: "wiegand入力",
-        children: "Wiegand入力"
+        id: "wiegand-입력",
+        children: "Wiegand 입력"
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
         src: "/img/device/cable-wiegand-4pin.svg",
         className: "none",
@@ -469,11 +469,11 @@ function _createMdxContent(props) {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.thead, {
             children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "ピン"
+                children: "핀"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "名称"
+                children: "명칭"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "色"
+                children: "색상"
               })]
             })
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tbody, {
@@ -483,7 +483,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "WG D0"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "緑"
+                children: "초록색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -491,7 +491,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "WG D1"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "白"
+                children: "흰색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -499,7 +499,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "WG GND"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "黒"
+                children: "검은색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -507,14 +507,14 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "SH GND"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "灰"
+                children: "회색"
               })]
             })]
           })]
         })
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-        id: "wiegand出力",
-        children: "Wiegand出力"
+        id: "wiegand-출력",
+        children: "Wiegand 출력"
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
         src: "/img/device/cable-wiegand-4pin.svg",
         className: "none",
@@ -525,11 +525,11 @@ function _createMdxContent(props) {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.thead, {
             children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "ピン"
+                children: "핀"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "名称"
+                children: "명칭"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "色"
+                children: "색상"
               })]
             })
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tbody, {
@@ -539,7 +539,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "WG D0"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "緑"
+                children: "초록색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -547,7 +547,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "WG D1"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "白"
+                children: "흰색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -555,7 +555,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "WG GND"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "黒"
+                children: "검은색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -563,7 +563,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "SH GND"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "灰"
+                children: "회색"
               })]
             })]
           })]
@@ -572,8 +572,8 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Include, {
       product: "facestation_f2,facestation_2,bioentry_p2,xpass_q2,biostation_3_max",
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-        id: "wiegand入出力",
-        children: "Wiegand入出力"
+        id: "wiegand-입출력",
+        children: "Wiegand 입출력"
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
         src: "/img/device/cable-wiegand-4pin.svg",
         className: "none",
@@ -584,11 +584,11 @@ function _createMdxContent(props) {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.thead, {
             children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "ピン"
+                children: "핀"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "名称"
+                children: "명칭"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "色"
+                children: "색상"
               })]
             })
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tbody, {
@@ -598,7 +598,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "WG D0"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "緑"
+                children: "초록색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -606,7 +606,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "WG D1"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "白"
+                children: "흰색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -614,7 +614,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "WG GND"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "黒"
+                children: "검은색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -622,7 +622,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "SH GND"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "灰"
+                children: "회색"
               })]
             })]
           })]
@@ -631,8 +631,8 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Include, {
       product: "bioentry_p2",
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-        id: "イーサネット",
-        children: "イーサネット"
+        id: "이더넷",
+        children: "이더넷"
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
         src: "/img/device/cable-ethernet-4pin.svg",
         className: "none",
@@ -643,11 +643,11 @@ function _createMdxContent(props) {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.thead, {
             children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "ピン"
+                children: "핀"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "名称"
+                children: "명칭"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "色"
+                children: "색상"
               })]
             })
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tbody, {
@@ -657,7 +657,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "ENET RXN"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "黄"
+                children: "노란색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -665,7 +665,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "ENET RXP"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "緑"
+                children: "초록색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -673,7 +673,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "ENET TXN"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "赤"
+                children: "빨간색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -681,7 +681,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "ENET TXP"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "黒"
+                children: "검은색"
               })]
             })]
           })]
@@ -690,8 +690,8 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Include, {
       product: "xpass_q2",
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-        id: "リーダーロック電源出力",
-        children: "リーダー、ロック電源出力"
+        id: "리더-락-전원-출력",
+        children: "리더, 락 전원 출력"
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
         src: "/img/device/cable-dcout.svg",
         className: "none",
@@ -702,11 +702,11 @@ function _createMdxContent(props) {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.thead, {
             children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "ピン"
+                children: "핀"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "名称"
+                children: "명칭"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
-                children: "色"
+                children: "색상"
               })]
             })
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tbody, {
@@ -716,7 +716,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "DC OUT"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "赤(黒線)"
+                children: "빨간색 (검은 띠)"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -724,7 +724,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "DC GND"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "黒"
+                children: "검은색"
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -732,7 +732,7 @@ function _createMdxContent(props) {
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: "DC GND"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
-                children: "灰"
+                children: "회색"
               })]
             })]
           })]
@@ -760,7 +760,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-81465: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+34075: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -790,13 +790,13 @@ function _createMdxContent(props) {
     type: "info",
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-        children: "同梱品は設置環境によって異なる場合があります。"
+        children: "구성품은 설치 환경에 따라 달라질 수 있습니다."
       }), "\n"]
     }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Xclude, {
       product: "corestation_20,corestation_40,doorinterface,doormodule,inputmodule,outputmodule,securemodule,extendedmodule,extendedmodule_sc",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-          children: "ブラケットと製品を組み立てる際は、セキュリティを向上させるため、製品固定用ネジの代わりに同梱のブラケット固定用ネジ（星形）を使用できます。"
+          children: "브래킷과 제품을 조립할 때 향상된 보안을 위해 제품 고정용 나사 대신 동봉된 브래킷 고정용 나사(별 모양)를 이용할 수 있습니다."
         }), "\n"]
       })
     })]
@@ -821,7 +821,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-75532: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+22536: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -830,34 +830,34 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_ja_docusaurus_plugin_content_docs_current_device_xpass_q_2_getting_started_mdx_b1a_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_device_xpass_q_2_getting_started_mdx_34c_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-ja-docusaurus-plugin-content-docs-current-device-xpass-q-2-getting-started-mdx-b1a.json
-var site_i_18_n_ja_docusaurus_plugin_content_docs_current_device_xpass_q_2_getting_started_mdx_b1a_namespaceObject = JSON.parse('{"id":"device/xpass_q2/getting-started","title":"はじめに","description":"デバイスを使用するための初期手順を案内します。","source":"@site/i18n/ja/docusaurus-plugin-content-docs/current/device/xpass_q2/getting-started.mdx","sourceDirName":"device/xpass_q2","slug":"/device/xpass_q2/getting-started","permalink":"/docs/ja/device/xpass_q2/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/xpass_q2/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"はじめに","description":"デバイスを使用するための初期手順を案内します。","keywords":["同梱物","名称","機能","ケーブル","コネクター"],"isTranslationMissing":false},"sidebar":"xpassq2","previous":{"title":"安全のための注意事項","permalink":"/docs/ja/device/xpass_q2/safety-instructions"},"next":{"title":"インストール","permalink":"/docs/ja/device/xpass_q2/installation"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-xpass-q-2-getting-started-mdx-34c.json
+var site_docs_device_xpass_q_2_getting_started_mdx_34c_namespaceObject = JSON.parse('{"id":"device/xpass_q2/getting-started","title":"시작하기","description":"장치 사용을 위한 초기 절차를 안내합니다.","source":"@site/docs/device/xpass_q2/getting-started.mdx","sourceDirName":"device/xpass_q2","slug":"/device/xpass_q2/getting-started","permalink":"/docs/device/xpass_q2/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/xpass_q2/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"시작하기","description":"장치 사용을 위한 초기 절차를 안내합니다.","keywords":["구성품","명칭","기능","케이블","커넥터"],"isTranslationMissing":false},"sidebar":"xpassq2","previous":{"title":"안전을 위한 주의 사항","permalink":"/docs/device/xpass_q2/safety-instructions"},"next":{"title":"설치하기","permalink":"/docs/device/xpass_q2/installation"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-// EXTERNAL MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/common/_getting-started-components-note.mdx
-var _getting_started_components_note = __webpack_require__(81465);
-// EXTERNAL MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/common/_getting-started-cables-and-connectors.mdx
-var _getting_started_cables_and_connectors = __webpack_require__(33895);
-;// CONCATENATED MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/device/xpass_q2/getting-started.mdx
+// EXTERNAL MODULE: ./docs/common/_getting-started-components-note.mdx
+var _getting_started_components_note = __webpack_require__(34075);
+// EXTERNAL MODULE: ./docs/common/_getting-started-cables-and-connectors.mdx
+var _getting_started_cables_and_connectors = __webpack_require__(98329);
+;// CONCATENATED MODULE: ./docs/device/xpass_q2/getting-started.mdx
 
 
 const frontMatter = {
 	id: 'getting-started',
-	title: 'はじめに',
-	description: 'デバイスを使用するための初期手順を案内します。',
+	title: '시작하기',
+	description: '장치 사용을 위한 초기 절차를 안내합니다.',
 	keywords: [
-		'同梱物',
-		'名称',
-		'機能',
-		'ケーブル',
-		'コネクター'
+		'구성품',
+		'명칭',
+		'기능',
+		'케이블',
+		'커넥터'
 	],
 	isTranslationMissing: false
 };
@@ -874,36 +874,36 @@ const assets = {
 
 
 const toc = [{
-  "value": "同梱物",
-  "id": "同梱物",
+  "value": "구성품",
+  "id": "구성품",
   "level": 2
 }, ..._getting_started_components_note/* .toc */.RM, {
-  "value": "各部の名称と機能",
-  "id": "各部の名称と機能",
+  "value": "각 부분의 명칭 및 기능",
+  "id": "각-부분의-명칭-및-기능",
   "level": 2
 }, ..._getting_started_cables_and_connectors/* .toc */.RM, {
-  "value": "QR/バーコードおよびデバイスライセンスに関する注意事項",
-  "id": "qrバーコードおよびデバイスライセンスに関する注意事項",
+  "value": "QR/바코드 및 장치 라이선스에 대한 참고 사항",
+  "id": "qr바코드-및-장치-라이선스에-대한-참고-사항",
   "level": 2
 }, {
-  "value": "正しいQR/バーコード認証方法",
+  "value": "올바른 QR/바코드 인증 방법",
   "id": "how-to-scan-qrbarcode",
   "level": 3
 }, {
-  "value": "バーコードの種類と最小認識サイズ",
-  "id": "バーコードの種類と最小認識サイズ",
+  "value": "바코드 종류 및 최소 인식 크기",
+  "id": "바코드-종류-및-최소-인식-크기",
   "level": 3
 }, {
-  "value": "基本サポート",
-  "id": "基本サポート",
+  "value": "기본 지원",
+  "id": "기본-지원",
   "level": 4
 }, {
-  "value": "Camera QRライセンス適用時",
-  "id": "camera-qrライセンス適用時",
+  "value": "Camera QR 라이선스 적용 시",
+  "id": "camera-qr-라이선스-적용-시",
   "level": 4
 }, {
-  "value": "デバイスライセンスに関する注意事項",
-  "id": "デバイスライセンスに関する注意事項",
+  "value": "장치 라이선스 참고 사항",
+  "id": "장치-라이선스-참고-사항",
   "level": 3
 }];
 function _createMdxContent(props) {
@@ -935,10 +935,10 @@ function _createMdxContent(props) {
   if (!Td) _missingMdxReference("Td", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "デバイスを使用するための初期手順を案内します。"
+      children: "장치 사용을 위한 초기 절차를 안내합니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "同梱物",
-      children: "同梱物"
+      id: "구성품",
+      children: "구성품"
     }), "\n", (0,jsx_runtime.jsx)(Table, {
       className: "component",
       children: (0,jsx_runtime.jsxs)(Tbody, {
@@ -976,11 +976,11 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Td, {
             children: "XPass Q2"
           }), (0,jsx_runtime.jsx)(Td, {
-            children: "壁掛けブラケット"
+            children: "벽걸이용 브래킷"
           }), (0,jsx_runtime.jsx)(Td, {
-            children: "クイックガイド"
+            children: "퀵 가이드"
           }), (0,jsx_runtime.jsx)(Td, {
-            children: "オープンソースライセンスガイド"
+            children: "오픈소스라이선스 가이드"
           })]
         })]
       })
@@ -1023,21 +1023,21 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsxs)(Row, {
           className: "center",
           children: [(0,jsx_runtime.jsx)(Td, {
-            children: "接続ケーブル"
+            children: "연결 케이블"
           }), (0,jsx_runtime.jsx)(Td, {
-            children: "固定用ネジ ×2"
+            children: "고정용 나사 x2"
           }), (0,jsx_runtime.jsx)(Td, {
-            children: "ブラケット固定用ネジ（星形）"
+            children: "브래킷 고정용 나사(별 모양)"
           }), (0,jsx_runtime.jsx)(Td, {
-            children: "ダイオード"
+            children: "다이오드"
           }), (0,jsx_runtime.jsx)(Td, {
-            children: "120 Ω 抵抗"
+            children: "120 Ω 저항"
           })]
         })]
       })
     }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_getting_started_components_note/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "各部の名称と機能",
-      children: "各部の名称と機能"
+      id: "각-부분의-명칭-및-기능",
+      children: "각 부분의 명칭 및 기능"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/name-function-each-part-xpq2.png",
       className: "none",
@@ -1046,160 +1046,162 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "LED状態表示灯"
-          }), "：製品の動作状態を表示します。"]
+            children: "LED 상태 표시등"
+          }), ": 제품의 작동 상태가 표시됩니다."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "緑：認証成功"
+              children: "초록색: 인증 성공"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "赤：認証失敗"
+              children: "빨간색: 인증 실패"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "青色／水色が点滅：正常動作中"
+              children: "파란색/하늘색 점멸: 정상 동작 상태"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "青／緑点滅："
+              children: "파란색/초록색 점멸:"
             }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_012",
                     product: "dev"
-                  }), "を有効に設定すると、IP アドレスを取得できない状態"]
+                  }), "를 사용으로 설정 시 IP 주소를 받아오지 못하는 상태"]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_205",
                     product: "dev"
-                  }), " モードのとき、マスター装置との接続が切断された状態"]
+                  }), " 모드일 때 마스터 장치와 연결이 끊어진 상태"]
                 }), "\n"]
               }), "\n"]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "赤／紫点滅：デバイスロック状態"
+              children: "빨간색/보라색 점멸: 장치 잠금 상태"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "緑色が点滅：入力待機状態"
+              children: "초록색 점멸: 입력 대기 상태"
             }), "\n"]
           }), "\n"]
         }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "LED照明"
-          }), "：QR／バーコードスキャナー周辺で動きを検知するとLEDが自動的に点灯します。"]
+            children: "LED 조명"
+          }), ": QR/바코드 스캐너 주변에서 움직임이 감지되면 LED가 자동으로 켜집니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "QR／バーコードスキャナー"
-          }), "：入退室のための認証用QR／バーコードを読み取る部分です。"]
+            children: "QR/바코드 스캐너"
+          }), ": 출입을 위해 인증용 QR/바코드를 인식시키는 부분입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "RFカード・モバイル入退出カードリーダー"
-          }), "：入退出のためにRFカードまたはモバイル入退出カードを読み取る部分です。"]
+            children: "RF 카드 및 모바일 출입카드 인식부"
+          }), ": 출입을 위해 RF 카드 또는 모바일 출입카드를 인식시키는 부분입니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "USB（Type-C）メモリスロット"
-          }), "：USBメモリを接続します。"]
+            children: "USB (Type-C) 메모리 슬롯"
+          }), ": USB 메모리를 연결합니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.strong, {
-            children: "初期化ボタン"
+            children: "초기화 버튼"
           })
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["ネットワーク設定を初期化します。 詳細については", (0,jsx_runtime.jsx)(_components.a, {
+              children: ["네트워크 설정을 초기화합니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
                 href: "installation#reset-network-settings",
-                children: "ネットワーク設定の初期化"
-              }), "を参照してください。"]
+                children: "네트워크 설정 초기화"
+              }), "를 참고하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["デバイスに保存されたすべての情報と証明書を削除し、設定を初期化します。 詳細については", (0,jsx_runtime.jsx)(_components.a, {
+              children: ["장치에 저장된 모든 정보와 인증서를 삭제하고 설정을 초기화합니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
                 href: "installation#factory-reset",
-                children: "工場出荷時リセット"
-              }), "を参照してください。"]
+                children: "공장 초기화"
+              }), "를 참고하세요."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "イーサネット"
-          }), "：イーサネットケーブルを接続します。"]
+            children: "이더넷"
+          }), ": 이더넷 케이블을 연결합니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "RS-485（4ピン）"
-          }), "：RS-485ケーブルを接続します。"]
+            children: "RS-485 (4핀)"
+          }), ": RS-485 케이블을 연결합니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Input（5ピン）"
-          }), "：Inputケーブルを接続します。"]
+            children: "Input (5핀)"
+          }), ": Input 케이블을 연결합니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "リレー（3ピン）"
-          }), "：リレーケーブルを接続します。"]
+            children: "릴레이 (3핀)"
+          }), ": 릴레이 케이블을 연결합니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "電源（2ピン）"
-          }), "：電源ケーブルを接続します。"]
+            children: "전원 (2핀)"
+          }), ": 전원 케이블을 연결합니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "USB拡張ポート（5ピン）"
-          }), "：他のアクセサリ製品を接続できます。"]
+            children: "USB 확장 포트 (5핀)"
+          }), ": 기타 액세서리 제품을 연결할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Wiegand入出力 (4ピン)"
-          }), "：Wiegand入出力ケーブルを接続します。"]
+            children: "Wiegand 입출력 (4핀)"
+          }), ": Wiegand 입출력 케이블을 연결합니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "リーダー電源出力（3ピン）"
-          }), "：リーダー電源出力ケーブルを接続します。"]
+            children: "리더 전원 출력 (3핀)"
+          }), ": 리더 전원 출력 케이블을 연결합니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "ロック電源出力（3ピン）"
-          }), "：ロック電源出力ケーブルを接続します。"]
+            children: "락 전원 출력 (3핀)"
+          }), ": 락 전원 출력 케이블을 연결합니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_getting_started_cables_and_connectors/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "qrバーコードおよびデバイスライセンスに関する注意事項",
-      children: "QR/バーコードおよびデバイスライセンスに関する注意事項"
+      id: "qr바코드-및-장치-라이선스에-대한-참고-사항",
+      children: "QR/바코드 및 장치 라이선스에 대한 참고 사항"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "how-to-scan-qrbarcode",
-      children: "正しいQR/バーコード認証方法"
+      children: "올바른 QR/바코드 인증 방법"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "ユーザーにQR/バーコードを発行して認証手段として利用できます。 認識率を高めるため、案内に従い、正しくQR／バーコードをスキャンしてください。"
+      children: "사용자에게 QR/바코드를 발급하여 인증 수단으로 사용할 수 있습니다. 인식률을 높이기 위해 안내에 따라 올바르게 QR/바코드를 스캔하세요."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/qr-scanning-xpq2.svg",
       className: "none",
@@ -1208,36 +1210,36 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "装置のスキャナーとQR／バーコードの距離を5〜15 cmに保ってください。"
+          children: "장치의 스캐너와 QR/바코드 사이의 거리를 5~15 cm로 유지하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "QR／バーコードがスキャナーの中央に来るように配置してください。"
+          children: "QR/바코드를 스캐너 중앙에 오도록 위치시키세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "モバイルデバイスでダウンロードしたQR/バーコードで認証する場合、画面が見えやすいようにモバイルデバイスの明るさを調整します。"
+          children: "모바일 장치에 내려받은 QR/바코드로 인증할 경우 화면이 잘 보이도록 모바일 장치의 밝기를 조정하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "位置、距離、照度が適切でない場合、QR／バーコードの認識に時間がかかる、または失敗することがあります。"
+          children: "위치, 거리, 밝기가 적절하지 않으면 QR/바코드 인식이 오래 걸리거나 실패할 수 있습니다."
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "バーコードの種類と最小認識サイズ",
-      children: "バーコードの種類と最小認識サイズ"
+      id: "바코드-종류-및-최소-인식-크기",
+      children: "바코드 종류 및 최소 인식 크기"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "バーコードの種類ごとに認識可能な最小バーコードサイズの例です。"
+      children: "바코드 종류 별로 인식할 수 있는 최소 바코드 크기 예시입니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "実際の認識率は印刷品質、エンコード、照明、カメラ解像度、撮影距離などの環境により異なる場合があります。"
+        children: "실제 인식률은 인쇄 품질, 인코딩, 조명, 카메라 해상도, 촬영 거리 등 환경에 따라 달라질 수 있습니다."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "基本サポート",
-      children: "基本サポート"
+      id: "기본-지원",
+      children: "기본 지원"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "本製品は基本的にQR Codeをサポートしています。"
+      children: "이 제품은 기본적으로 QR Code를 지원합니다."
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "overflow-x cols3--20-20-60",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -1247,17 +1249,17 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "バーコードタイプ"
+              children: "바코드 유형"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "最小認識サイズ"
+              children: "최소 인식 크기"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "left"
               },
-              children: "例値（文字数）"
+              children: "예시 값(문자수)"
             })]
           })
         }), (0,jsx_runtime.jsx)(_components.tbody, {
@@ -1276,14 +1278,14 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "left"
               },
-              children: "英数字32文字"
+              children: "영숫자 32자"
             })]
           })
         })]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "camera-qrライセンス適用時",
-      children: "Camera QRライセンス適用時"
+      id: "camera-qr-라이선스-적용-시",
+      children: "Camera QR 라이선스 적용 시"
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "overflow-x cols3--20-20-60",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -1293,17 +1295,17 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "バーコードタイプ"
+              children: "바코드 유형"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "最小認識サイズ"
+              children: "최소 인식 크기"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "left"
               },
-              children: "例値（文字数）"
+              children: "예시 값(문자수)"
             })]
           })
         }), (0,jsx_runtime.jsxs)(_components.tbody, {
@@ -1322,7 +1324,7 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "left"
               },
-              children: "英数字32文字"
+              children: "영숫자 32자"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -1339,7 +1341,7 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "left"
               },
-              children: "英数字32文字"
+              children: "영숫자 32자"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -1356,7 +1358,7 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "left"
               },
-              children: "英数字32文字"
+              children: "영숫자 32자"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -1373,7 +1375,7 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "left"
               },
-              children: "英数字32文字"
+              children: "영숫자 32자"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -1390,7 +1392,7 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "left"
               },
-              children: "英数字32文字"
+              children: "영숫자 32자"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -1407,7 +1409,7 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "left"
               },
-              children: "英数字16文字"
+              children: "영숫자 16자"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -1424,7 +1426,7 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "left"
               },
-              children: "英数字16文字"
+              children: "영숫자 16자"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -1441,7 +1443,7 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "left"
               },
-              children: "数字8文字（データ7文字 + チェックサム1文字）"
+              children: "숫자 8자(데이터 7자 + 체크섬 1자)"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -1458,7 +1460,7 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "left"
               },
-              children: "数字13文字（データ12文字 + チェックサム1文字）"
+              children: "숫자 13자(데이터 12자 + 체크섬 1자)"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -1475,7 +1477,7 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "left"
               },
-              children: "数字12文字（データ11文字 + チェックサム1文字）"
+              children: "숫자 12자(데이터 11자 + 체크섬 1자)"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -1492,33 +1494,33 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "left"
               },
-              children: "数字8文字（データ7文字 + チェックサム1文字）"
+              children: "숫자 8자(데이터 7자 + 체크섬 1자)"
             })]
           })]
         })]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "デバイスライセンスに関する注意事項",
-      children: "デバイスライセンスに関する注意事項"
+      id: "장치-라이선스-참고-사항",
+      children: "장치 라이선스 참고 사항"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "より多様なQR/バーコード認証を使用するには、別途デバイスライセンスが必要です。 デバイスライセンスを発行するには、購入先にお問い合わせください。"
+          children: "더 다양한 QR/바코드 인증을 사용하려면 별도의 장치 라이선스가 필요합니다. 장치 라이선스를 발급하려면 구입처에 문의하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "デバイスライセンスファイルは暗号化されているため、任意に変更できません。"
+          children: "장치 라이선스 파일은 암호화된 파일이므로 임의로 수정할 수 없습니다."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "デバイスライセンスはデバイスIDを基準に発行されます。 不正な方法でデバイスIDを変更した場合、ライセンスの保証サービスは提供されません。"
+          children: "장치 라이선스는 장치 ID를 기준으로 발급됩니다. 비정상적인 방법으로 장치 ID를 변경할 경우 라이선스에 대한 보증 서비스가 제공되지 않습니다."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["デバイスライセンスの詳細については、", (0,jsx_runtime.jsx)(_components.a, {
+          children: ["장치 라이선스에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "../../platform/biostar_x/settings-license-device-license",
-            children: "BioStar X 管理者ガイド"
-          }), "を参照してください。"]
+            children: "BioStar X 관리자 설명서"
+          }), "를 참조하세요."]
         }), "\n"]
       }), "\n"]
     })]

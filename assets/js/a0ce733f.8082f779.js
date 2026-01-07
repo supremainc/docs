@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["54698"], {
-84795: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["80494"], {
+52276: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -35,7 +35,7 @@ function _createMdxContent(props) {
       product: "xpass_s2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-          children: "El dispositivo puede utilizarse como controlador de múltiples puertas con los dispositivos esclavos mediante el cable RS-485. Los dispositivos esclavos se utilizan como lectores ficticios y la autenticación se realiza en el dispositivo maestro."
+          children: "RS-485 케이블로 슬레이브 장치를 연결하여 제품을 다중 출입문 제어 장치로 사용할 수 있습니다. 슬레이브 장치는 더미 리더로 사용되며 인증은 마스터 장치에서 수행합니다."
         }), "\n"]
       })
     }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
@@ -43,23 +43,23 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["Si un dispositivo de autenticación por huella digital está configurado como esclavo en ", props.product, ", no se puede agregar otro ", props.product, " como esclavo."]
+            children: ["지문 인식 장치가 ", props.product, "의 슬레이브 장치로 구성된 경우 다른 ", props.product, "를 슬레이브 장치로 추가할 수 없습니다."]
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["Si el dispositivo de autenticación por huella digital es el dispositivo maestro, no se puede agregar ", props.product, " como dispositivo esclavo."]
+            children: ["지문 인식 장치가 마스터 장치일 때 ", props.product, "를 슬레이브 장치로 추가할 수 없습니다."]
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["Cuando se conecta ", props.product, " como dispositivo esclavo mientras ", props.product, " es el dispositivo maestro, solo se puede agregar un ", props.product, " como dispositivo esclavo."]
+            children: [props.product, "가 마스터 장치이고 ", props.product, "를 슬레이브 장치로 연결할 때 1대의 ", props.product, "만 슬레이브 장치로 추가할 수 있습니다."]
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["Cuando ", props.product, " es el dispositivo maestro y otro ", props.product, " se conecta a él como esclavo, se puede conectar adicionalmente un Secure I/O 2 y un DM-20 cada uno."]
+            children: [props.product, "가 마스터 장치이고 ", props.product, "를 슬레이브 장치로 연결할 때 Secure I/O 2와 DM-20을 각각 1대씩 추가로 연결할 수 있습니다."]
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["Cuando ", props.product, " es el dispositivo maestro y otro ", props.product, " está conectado a él como esclavo, no se pueden conectar OM-120 adicionales."]
+            children: [props.product, "가 마스터 장치이고 ", props.product, "를 슬레이브 장치로 연결할 때 OM-120을 추가로 연결할 수 없습니다."]
           }), "\n"]
         }), "\n"]
       })
@@ -67,35 +67,35 @@ function _createMdxContent(props) {
       product: "biostation_3,facestation_f2,biostation_3_max",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: [props.product, " no puede utilizarse como dispositivo esclavo cuando ", props.product_2, " es el dispositivo maestro y viceversa."]
+          children: [props.product_2, "가 마스터 장치일 때 ", props.product, "를 슬레이브 장치로 사용할 수 없으며, 반대의 경우로도 사용할 수 없습니다."]
         }), "\n"]
       })
     }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "bioentry_w3,biostation_2a,biolite_n2,bioentry_p2,bioentry_w2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-          children: "Si se conecta XPass o XPass 2 al dispositivo maestro, solo se puede usar la autenticación con tarjeta."
+          children: "XPass 또는 XPass 2가 마스터 장치로 연결될 경우 카드 인증만 사용할 수 있습니다."
         }), "\n"]
       })
     }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "xpass_2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-          children: "Si usa este producto como dispositivo maestro, el dispositivo esclavo solo puede utilizar autenticación por tarjeta."
+          children: "이 제품을 마스터 장치로 사용하는 경우 슬레이브 장치에서는 카드 인증만 사용할 수 있습니다."
         }), "\n"]
       })
     }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "xpass_q2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-          children: "Cuando este producto opera como maestro, en el esclavo solo está disponible la autenticación por tarjeta o QR/Barcode."
+          children: "이 제품을 마스터 장치로 사용할 경우 슬레이브 장치에서는 카드나 QR/바코드 인증만 사용할 수 있습니다."
         }), "\n"]
       })
     }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "xpass_2,xpass_q2,xpass_s2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-          children: "Conecte hasta 31 dispositivos esclavos a un dispositivo maestro."
+          children: "하나의 마스터 장치당 최대 31대의 슬레이브 장치를 연결할 수 있습니다."
         }), "\n"]
       })
     }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
@@ -103,20 +103,20 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "El número máximo de dispositivos esclavos que se pueden conectar varía según el método de autenticación, el número de usuarios y el número de dispositivos. Ten en cuenta también que la cantidad de dispositivos esclavos afecta el rendimiento de autenticación."
+            children: "연결할 수 있는 최대 슬레이브 장치 수는 인증 방법, 사용자 수, 장치 수에 따라 달라지며 슬레이브 장치 수는 인증 속도에 영향을 줍니다."
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "Conecte hasta 31 dispositivos esclavos a un dispositivo maestro. El ancho de banda de RS-485 permite conectar hasta 7 dispositivos de autenticación por huella."
+            children: "하나의 마스터 장치당 최대 31대의 슬레이브 장치를 연결할 수 있습니다. RS-485 대역폭으로 인해 최대 7대의 지문 인식 장치를 연결할 수 있습니다."
           }), "\n"]
         }), "\n"]
       })
     }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: ["Para más información, comuníquese con el ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
-          href: "https://support.supremainc.com",
-          children: "Equipo de soporte técnico de Suprema"
-        }), "."]
+        children: ["더 자세한 내용은 슈프리마 기술 지원팀(", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+          href: "mailto:CS@suprema.co.kr",
+          children: "CS@suprema.co.kr"
+        }), ")에 문의하세요."]
       }), "\n"]
     })]
   });
@@ -140,7 +140,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-17265: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+83544: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -157,7 +157,7 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "Restablecimiento de fábrica",
+  "value": "공장 초기화",
   "id": "factory-reset",
   "level": 2
 }];
@@ -174,27 +174,27 @@ function _createMdxContent(props) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
       id: "factory-reset",
-      children: "Restablecimiento de fábrica"
+      children: "공장 초기화"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Elimina toda la información almacenada en el dispositivo e inicializa la configuración."
+      children: "장치에 저장된 모든 정보와 루트 인증서를 삭제하고 설정을 초기화합니다."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Encienda el dispositivo."
+          children: "전원을 켜세요."
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Presione rápidamente el botón de reinicio tres veces."
+          children: "초기화 버튼을 빠르게 세 번 누르세요."
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Presione el botón de reinicio una vez más cuando el LED del dispositivo parpadee ", props.name, "."]
+          children: ["장치의 LED가 ", props.name, "으로 깜박거릴 때 초기화 버튼을 한 번 더 누르세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
       type: "info",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Utilice Factory Default solo cuando el certificado raíz esté almacenado en el dispositivo."
+        children: "장치에 저장된 루트 인증서가 존재하지 않을 경우 공장 초기화를 진행할 수 없습니다."
       })
     })]
   });
@@ -215,7 +215,7 @@ function MDXContent(props = {}) {
 
 
 }),
-52139: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+97902: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -232,8 +232,8 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "Conexión de entrada",
-  "id": "conexión-de-entrada",
+  "value": "Input 연결",
+  "id": "input-연결",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -246,8 +246,8 @@ function _createMdxContent(props) {
   if (!Include) _missingMdxReference("Include", true);
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "conexión-de-entrada",
-      children: "Conexión de entrada"
+      id: "input-연결",
+      children: "Input 연결"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "biostation_3",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
@@ -354,7 +354,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-14870: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+43333: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -371,20 +371,20 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "Conexión de red",
-  "id": "conexión-de-red",
+  "value": "네트워크 연결",
+  "id": "네트워크-연결",
   "level": 2
 }, {
   "value": "TCP/IP",
   "id": "tcpip",
   "level": 3
 }, {
-  "value": "Conexión LAN (conexión a un concentrador)",
-  "id": "conexión-lan-conexión-a-un-concentrador",
+  "value": "LAN 연결 (허브와 연결)",
+  "id": "lan-연결-허브와-연결",
   "level": 4
 }, {
-  "value": "Conexión LAN (conexión directa a una PC)",
-  "id": "conexión-lan-conexión-directa-a-una-pc",
+  "value": "LAN 연결 (PC와 직접 연결)",
+  "id": "lan-연결-pc와-직접-연결",
   "level": 4
 }];
 function _createMdxContent(props) {
@@ -404,23 +404,23 @@ function _createMdxContent(props) {
   if (!Include) _missingMdxReference("Include", true);
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "conexión-de-red",
-      children: "Conexión de red"
+      id: "네트워크-연결",
+      children: "네트워크 연결"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
       id: "tcpip",
       children: "TCP/IP"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h4, {
-      id: "conexión-lan-conexión-a-un-concentrador",
-      children: "Conexión LAN (conexión a un concentrador)"
+      id: "lan-연결-허브와-연결",
+      children: "LAN 연결 (허브와 연결)"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "bioentry_w3,facestation_f2,corestation_40,corestation_20,bioentry_w2,biolite_n2,biostation_2a,biostation_3,facestation_2,xpass_s2,xstation_2,biostation_3_max",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Conecte el producto a un concentrador con un cable CAT-5 estándar."
+        children: "일반 타입의 CAT-5 케이블을 사용하여 허브와 연결할 수 있습니다."
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "bioentry_p2,xpass_2,xpass_q2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Conéctese al concentrador con un cable CAT-5e estándar."
+        children: "일반 타입의 CAT-5e 케이블을 사용하여 허브와 연결할 수 있습니다."
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "biostation_3",
@@ -523,29 +523,29 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Include, {
       product: "bioentry_w2",
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Use un concentrador PSE para suministrar energía mediante PoE."
+        children: "PoE를 이용해 전원을 공급하려면 PSE 허브를 사용하세요."
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
         src: "/img/device/installation-network-hub-connection-bew2.png",
         width: "70%",
         className: "none"
       })]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h4, {
-      id: "conexión-lan-conexión-directa-a-una-pc",
-      children: "Conexión LAN (conexión directa a una PC)"
+      id: "lan-연결-pc와-직접-연결",
+      children: "LAN 연결 (PC와 직접 연결)"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "bioentry_w3,facestation_f2,bioentry_w2,biolite_n2,biostation_2a,biostation_3,facestation_2,xstation_2,biostation_3_max",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Este dispositivo cuenta con función automática MDI/MDIX, por lo que puede conectarse directamente a una PC utilizando un cable CAT-5 recto estándar o un cable cruzado."
+        children: "이 제품은 자동 MDI/MDIX 기능을 가지고 있으므로 크로스 케이블이나 일반 스트레이트 타입의 CAT-5 케이블로 PC와 직접 연결할 수 있습니다."
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "xpass_s2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "El producto admite auto MDI/MDIX, lo que permite la conexión directa a una PC con un cable CAT-5 estándar."
+        children: "이 제품은 자동 MDI/MDIX 기능을 가지고 있으므로 일반 타입의 CAT-5 케이블로 PC와 직접 연결할 수 있습니다."
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "bioentry_p2,xpass_2,corestation_40,corestation_20",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Este producto incluye funcionalidad automática MDI/MDIX y permite la conexión directa a una PC con un cable CAT-5e estándar."
+        children: "이 제품은 자동 MDI/MDIX 기능을 가지고 있으므로 일반 타입의 CAT-5e 케이블로 PC와 직접 연결할 수 있습니다."
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "corestation_20",
@@ -553,18 +553,18 @@ function _createMdxContent(props) {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Badge, {
           only: true,
           children: "CS-20P"
-        }), " admite PoE+, que suministra energía a través de un cable Ethernet. Al usar PoE+, solo se admite una conexión de cerradura."]
+        }), " 이더넷 케이블을 통해 전원을 공급하는 PoE+를 지원합니다. PoE+ 사용 시에는 Lock 연결을 하나만 지원합니다."]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "xpass_q2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "Este dispositivo cuenta con MDI/MDIX automático, por lo que puede conectarse directamente a una PC mediante un cable cruzado o un cable CAT-5e recto estándar."
+            children: "이 제품은 자동 MDI/MDIX 기능을 가지고 있으므로 크로스 케이블이나 일반 스트레이트 타입의 CAT-5e 케이블로 PC와 직접 연결할 수 있습니다."
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
             type: "caution",
             children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "Algunos concentradores o conmutadores no estándar podrían no admitir MDI/MDIX automático."
+              children: "일부 비표준 허브/스위치에서는 자동 MDI/MDIX 기능이 지원되지 않을 수 있습니다."
             })
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
@@ -572,7 +572,7 @@ function _createMdxContent(props) {
             children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Badge, {
               only: true,
               children: "XPQ2-APB"
-            }), " admite PoE que suministra energía a través del cable Ethernet."]
+            }), " 이더넷 케이블을 통해 전원을 공급하는 PoE를 지원합니다."]
           }), "\n"]
         }), "\n"]
       })
@@ -660,7 +660,7 @@ function _createMdxContent(props) {
       product: "bioentry_p2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
         src: "/img/device/installation-network-direct-connection-bep2.png",
-        width: "60%",
+        width: "65%",
         className: "none",
         alone: true
       })
@@ -701,19 +701,19 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.admonition, {
         type: "info",
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Consulte la siguiente información al utilizar un conmutador de red gigabit."
+          children: "기가 비트 이더넷 스위치를 사용할 때 아래 정보를 확인하세요."
         }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "Use un cable Cat5e UTP (par trenzado sin blindaje)."
+              children: "CAT-5e 비차폐 꼬임선(UTP)을 사용하세요."
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "Utilice los 4 pares (8 hilos) del cable para la conexión de red."
+              children: "4 쌍(8 선)을 모두 네트워크 연결로 사용하세요."
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "NO utilice el par de cables para otro propósito."
+              children: "네트워크 케이블의 일부 쌍이나 선을 다른 용도로 사용하지 마세요."
             }), "\n"]
           }), "\n"]
         })]
@@ -740,7 +740,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-69181: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+65842: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -758,8 +758,8 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "Conexión de la fuente de alimentación",
-  "id": "conexión-de-la-fuente-de-alimentación",
+  "value": "전원 연결",
+  "id": "전원-연결",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -790,8 +790,8 @@ function _createMdxContent(props) {
   if (!Xclude) _missingMdxReference("Xclude", true);
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "conexión-de-la-fuente-de-alimentación",
-      children: "Conexión de la fuente de alimentación"
+      id: "전원-연결",
+      children: "전원 연결"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "bioentry_w3",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
@@ -938,7 +938,7 @@ function _createMdxContent(props) {
         product: "bioentry_w3,bioentry_w2",
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-            children: "Se recomienda usar una fuente de alimentación clase 2 listada."
+            children: "Listed Class 2 전원 장치 사용을 권장합니다."
           }), "\n"]
         })
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
@@ -946,11 +946,11 @@ function _createMdxContent(props) {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "La alimentación del dispositivo debe usar una fuente de alimentación externa de 12 VCC listada de Clase 2 o una fuente de alimentación PoE UL294B."
+              children: "장치의 전원 장치는 외부 12VDC Listed Class 2 전원 장치 또는 UL294B PoE 전원 장치를 사용해야 합니다."
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "Conecte la fuente de alimentación \"PSC-100A\" y la batería \"Casil CA 1270\" para cumplir con ULC S319."
+              children: "ULC S319를 만족하기 위해 'PSC-100A' 전원 공급 장치 및 'Casil CA 1270' 배터리를 연결해야 합니다."
             }), "\n"]
           }), "\n"]
         })
@@ -958,33 +958,33 @@ function _createMdxContent(props) {
         product: "bioentry_w3,biostation_2a,biostation_3,xstation_2,bioentry_w2,xpass_q2",
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-            children: "NO conecte el dispositivo a la fuente de alimentación de CC (o adaptador) y a la alimentación PoE al mismo tiempo."
+            children: "전원 장치(또는 어댑터)와 PoE 전원 장치를 함께 연결하지 마세요."
           }), "\n"]
         })
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
         product: "corestation_20,corestation_40,doormodule,inputmodule,outputmodule,securemodule",
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-            children: "Asegúrese de usar alimentación independiente para el dispositivo de control de acceso y los productos."
+            children: "출입 통제 장치와 제품에 연결하는 전원은 반드시 분리하여 사용하세요."
           }), "\n"]
         })
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
         product: "doorinterface",
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-            children: "Asegúrese de usar alimentación independiente para el lector y los productos."
+            children: "리더와 제품에 연결하는 전원은 반드시 분리하여 사용하세요."
           }), "\n"]
         })
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "Use un adaptador de alimentación aprobado por IEC/EN 62368-1 que admita un consumo de energía mayor que el del producto. Si desea conectar y usar otro dispositivo al adaptador de alimentación, utilice un adaptador con una capacidad de corriente igual o mayor que el consumo total requerido por el terminal y el otro dispositivo."
+            children: "전원 어댑터는 IEC/EN 62368-1 승인을 받은 제품으로 단말기의 소모 전력 이상의 제품을 사용하세요. 전원 어댑터에 다른 기기를 연결하여 사용하려면 단말기의 소모 전력과 다른 기기에 필요한 소모 전력을 합한 전류 용량 이상의 어댑터를 사용해야 합니다."
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-              children: ["Consulte la sección ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+              children: ["최대 소모전류 규격은 제품 사양의 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
                 href: "product-specifications#specs.power",
-                children: "Power"
-              }), " en las especificaciones del producto para conocer el consumo máximo de corriente."]
+                children: "전원"
+              }), "을 참고하세요."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
@@ -992,7 +992,7 @@ function _createMdxContent(props) {
         product: "corestation_20,corestation_40,doorinterface,inputmodule,outputmodule,securemodule",
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-            children: "Use una fuente de alimentación independiente para Secure I/O 2, la cerradura eléctrica y el producto, respectivamente. Si conecta y usa la misma fuente de alimentación para estos dispositivos, estos pueden funcionar incorrectamente."
+            children: "Secure I/O 2, 전기정(전기식 잠금장치), 제품은 반드시 개별 전원을 사용하세요. 전원을 함께 연결하여 사용하면 장치가 오작동할 수 있습니다."
           }), "\n"]
         })
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
@@ -1000,16 +1000,16 @@ function _createMdxContent(props) {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "Al conectar la alimentación, tenga en cuenta la distancia entre el dispositivo y la fuente de alimentación. Conecte el dispositivo lo más cerca posible de la fuente de alimentación para que la longitud del cable sea mínima. Si las conexiones de los cables se realizan de forma incorrecta, el dispositivo puede funcionar incorrectamente. Se recomienda usar un cable de 16 AWG o 18 AWG si el producto está lejos de la fuente de alimentación. La distancia de conexión puede variar según el estándar del cable utilizado y el entorno de instalación. Este producto admite alimentación de 24 VCC y 12 VCC; verifique la longitud máxima según la especificación del cable para asegurarse de que la unidad reciba alimentación adecuada."
+              children: "전원 연결 시 제품과 전원 장치 간의 거리에 주의하세요. 제품과 전원 장치는 최대한 가깝게 설치해야 합니다. 올바르게 연결하지 않을 경우 제품이 오작동할 수 있으므로 주의하세요. 제품과 전원 장치의 거리가 먼 경우 16 AWG 또는 18 AWG 케이블을 사용할 것을 권장합니다. 사용하는 케이블의 규격과 설치 환경에 따라 연결할 수 있는 거리가 다를 수 있습니다. 이 제품은 DC 24V와 DC 12V 전원을 모두 지원하므로, 각 케이블 규격에 따른 최대 연장 길이를 확인하여 전원을 올바르게 연결하세요."
             }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Table, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Thead, {
                 children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Row, {
                   children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Th, {
                     rowspan: "2",
-                    children: "Estándar de cable"
+                    children: "케이블 규격"
                   }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Th, {
                     colspan: "2",
-                    children: "Máx. longitud extendida"
+                    children: "최대 연장 길이"
                   })]
                 }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Row, {
                   children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Th, {
@@ -1053,16 +1053,16 @@ function _createMdxContent(props) {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "Al conectar la alimentación, tenga en cuenta la distancia entre el dispositivo y la fuente de alimentación. Conecte el dispositivo lo más cerca posible de la fuente de alimentación para que la longitud del cable sea mínima. Si las conexiones de los cables se realizan de forma incorrecta, el dispositivo puede funcionar incorrectamente. Se recomienda usar un cable de 16 AWG o 18 AWG si el producto está lejos de la fuente de alimentación. La distancia de conexión puede variar según el estándar del cable utilizado y el entorno de instalación."
+              children: "전원 연결 시 제품과 전원 장치 간의 거리에 주의하세요. 제품과 전원 장치는 최대한 가깝게 설치해야 합니다. 올바르게 연결하지 않을 경우 제품이 오작동할 수 있으므로 주의하세요. 제품과 전원 장치의 거리가 먼 경우 16 AWG 또는 18 AWG 케이블을 사용할 것을 권장합니다. 사용하는 케이블의 규격과 설치 환경에 따라 연결할 수 있는 거리가 다를 수 있습니다."
             }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Table, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Thead, {
                 children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Row, {
                   children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Th, {
                     rowspan: "2",
-                    children: "Estándar de cable"
+                    children: "케이블 규격"
                   }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Th, {
                     colspan: "2",
-                    children: "Máx. longitud extendida"
+                    children: "최대 연장 길이"
                   })]
                 })
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Tbody, {
@@ -1091,13 +1091,13 @@ function _createMdxContent(props) {
         })
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-          children: "NO extienda la longitud del cable de alimentación al usar el adaptador de alimentación."
+          children: "전원 어댑터를 사용할 경우 전원 케이블의 길이를 임의로 연장하지 마세요."
         }), "\n"]
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
         product: "biostation_3,xstation_2,facestation_2,bioentry_w3,facestation_f2,biostation_3_max",
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-            children: "NO utilice CAT5 UTP de 2 hilos para la alimentación."
+            children: "CAT5 UTP 2-Wire 케이블을 전원 공급 용도로 사용하지 마세요."
           }), "\n"]
         })
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
@@ -1105,7 +1105,7 @@ function _createMdxContent(props) {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "Las señales de alarma se transmiten mediante contactos de relé a través de los pines de estado AC OK y de batería con voltaje bajo."
+              children: "알람 신호는 릴레이 접점 방식으로 AC OK 및 배터리 저전압 상태 핀을 통해 전송됩니다."
             }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
               className: "overflow-x",
               children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.table, {
@@ -1115,17 +1115,17 @@ function _createMdxContent(props) {
                       style: {
                         textAlign: "center"
                       },
-                      children: "Función"
+                      children: "기능"
                     }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
                       style: {
                         textAlign: "center"
                       },
-                      children: "Descripción"
+                      children: "설명"
                     }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
                       style: {
                         textAlign: "center"
                       },
-                      children: "Estado del relé"
+                      children: "릴레이 상태"
                     })]
                   })
                 }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tbody, {
@@ -1135,29 +1135,29 @@ function _createMdxContent(props) {
                       style: {
                         textAlign: "center"
                       },
-                      children: "Confirmación de alimentación de CA"
+                      children: "AC 전원 확인"
                     }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                       style: {
                         textAlign: "center"
                       },
-                      children: "La alimentación de CA está encendida"
+                      children: "AC 전원 켜짐"
                     }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                       style: {
                         textAlign: "center"
                       },
-                      children: "Cortocircuito"
+                      children: "단락"
                     })]
                   }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
                     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                       style: {
                         textAlign: "center"
                       },
-                      children: "La alimentación de CA está apagada"
+                      children: "AC 전원 꺼짐"
                     }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                       style: {
                         textAlign: "center"
                       },
-                      children: "Abierto"
+                      children: "단선"
                     })]
                   }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
                     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
@@ -1165,29 +1165,29 @@ function _createMdxContent(props) {
                       style: {
                         textAlign: "center"
                       },
-                      children: "Estado de batería con voltaje bajo"
+                      children: "배터리 저전압 상태"
                     }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                       style: {
                         textAlign: "center"
                       },
-                      children: "Cuando el voltaje de la batería es inferior a 11 V"
+                      children: "배터리 전압이 11 V 이하일 때"
                     }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                       style: {
                         textAlign: "center"
                       },
-                      children: "Cortocircuito"
+                      children: "단락"
                     })]
                   }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
                     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                       style: {
                         textAlign: "center"
                       },
-                      children: "Cuando el voltaje de la batería es superior a 11 V"
+                      children: "배터리 전압이 11 V 이상일 때"
                     }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                       style: {
                         textAlign: "center"
                       },
-                      children: "Abierto"
+                      children: "단선"
                     })]
                   })]
                 })]
@@ -1195,27 +1195,27 @@ function _createMdxContent(props) {
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "Se requiere una fuente de alimentación externa para usar la función de señal de alarma. El voltaje máximo aplicado es de 30 V y la corriente máxima de absorción es de 1 A."
+              children: "알람 신호 기능을 사용하려면 외부 전원 소스가 필요합니다. 최대 인가 전압은 30 V이며, 최대 싱크 전류는 1 A입니다."
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "La alimentación PoE debe cumplir con el Código Eléctrico Nacional, ANSI / NFPA 70, Artículo 725.121, requisitos de potencia de circuitos de Clase 2 y Clase 3."
+              children: "PoE 전원은 National Electrical Code, ANSI / NFPA 70, Article 725.121, 클래스 2 및 클래스 3 회로의 전원을 준수해야합니다."
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "Las conexiones de cable 5e son la categoría de rendimiento mínima recomendada. La categoría de rendimiento debe coincidir con la velocidad de transmisión requerida en el sitio de instalación."
+              children: "5e 케이블 연결은 권장하는 최소 성능 범주입니다. 성능 범주는 설치 현장에서 요구되는 전송 속도와 일치해야 합니다."
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "El calibre mínimo del conductor que se puede conectar entre el PSE o inyector de energía y el PD es de 26 AWG (0.13 mm2) para cables de parcheo. Para cables horizontales o verticales (riser), el calibre mínimo del conductor es de 24 AWG (0.21 mm2)."
+              children: "PSE 또는 전력 인젝터와 PD 사이에 연결할 수 있는 최소 도체 게이지는 패치 코드의 경우 26 AWG(0.13 mm2)입니다. 수평 또는 라이저 케이블의 경우 24 AWG(0.21 mm2)입니다."
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "Al suministrar energía mediante PoE, se debe cumplir UL294B o UL294 8ª edición."
+              children: "PoE를 이용해 전원을 공급할 경우 UL294B 또는 UL294 8th Edition을 준수해야 합니다."
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "El cumplimiento de las especificaciones IEEE 802.3 (at o af) no cuenta como parte de este requisito."
+              children: "IEEE 802.3 (at 또는 af) 사양의 준수는 이 요구 사항의 일환으로 치부되지 않습니다."
             }), "\n"]
           }), "\n"]
         })
@@ -1225,7 +1225,7 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
         type: "info",
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Se recomienda conectar y usar una fuente de alimentación ininterrumpida (UPS) para evitar fallas de energía."
+          children: "전원 장애를 막기 위해 무정전 전원 장치(UPS)를 연결하여 사용할 것을 권장합니다."
         })
       })
     })]
@@ -1250,7 +1250,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-76629: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+35078: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -1267,20 +1267,20 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "Conexión del relé",
-  "id": "conexión-del-relé",
+  "value": "릴레이 연결",
+  "id": "릴레이-연결",
   "level": 2
 }, {
-  "value": "Cerradura fail safe",
-  "id": "cerradura-fail-safe",
+  "value": "Fail Safe Lock",
+  "id": "fail-safe-lock",
   "level": 3
 }, {
-  "value": "Cerradura fail secure",
-  "id": "cerradura-fail-secure",
+  "value": "Fail Secure Lock",
+  "id": "fail-secure-lock",
   "level": 3
 }, {
-  "value": "Conexión de puerta automática",
-  "id": "conexión-de-puerta-automática",
+  "value": "자동문 연결",
+  "id": "자동문-연결",
   "level": 3
 }];
 function _createMdxContent(props) {
@@ -1299,13 +1299,13 @@ function _createMdxContent(props) {
   if (!PageBreak) _missingMdxReference("PageBreak", true);
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "conexión-del-relé",
-      children: "Conexión del relé"
+      id: "릴레이-연결",
+      children: "릴레이 연결"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "cerradura-fail-safe",
-      children: "Cerradura fail safe"
+      id: "fail-safe-lock",
+      children: "Fail Safe Lock"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Para utilizar la cerradura Fail Safe, conecte el relé N/C como se muestra en la figura a continuación. Normalmente circula corriente a través del relé de la cerradura Fail Safe. Cuando se activa el relé y se bloquea el flujo de corriente, la puerta se abrirá. Si se corta la alimentación del producto debido a un fallo de energía o a un factor externo, la puerta se abrirá."
+      children: "Fail Safe Lock을 사용하려면 아래 그림과 같이 N/C 릴레이를 연결하세요. Fail Safe Lock은 평상 시 릴레이 회로에 전류가 흐르며, 릴레이가 동작하여 전류를 일시적으로 차단하면 출입문이 열립니다. 정전이 되거나 외부 요인으로 장치의 전원이 끊길 경우 출입문이 열립니다."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "biostation_3",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
@@ -1402,28 +1402,28 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "Instale un diodo en ambos extremos del cable de la cerradura, como se muestra en la figura, para proteger el relé de la corriente inversa que se produce cuando la cerradura funciona."
+            children: "출입문 잠금 장치가 작동할 때 발생하는 역전류로부터 릴레이를 보호하기 위해 그림과 같이 출입문 잠금 장치 배선 양쪽에 다이오드를 설치하세요."
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "Utilice una fuente de alimentación independiente para el producto y la cerradura."
+            children: "제품과 출입문 잠금 장치는 별도의 전원을 사용하세요."
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "Los lectores inteligentes independientes de Suprema contienen relés internos que pueden bloquear/desbloquear puertas directamente sin controladores externos para mayor comodidad. Sin embargo, para aplicaciones de control de acceso que requieren seguridad, NO se recomienda utilizar el relé interno de un lector a fin de evitar manipulaciones que puedan desbloquear la puerta. Para estas aplicaciones, se recomienda encarecidamente usar una unidad de relé independiente para el control de la cerradura, como Secure I/O 2, DM-20 o CoreStation de Suprema, instaladas en el lado seguro de la puerta."
+            children: "슈프리마의 지능형 장치에는 편의를 제공하기 위해 별도의 컨트롤러 없이 독립형으로 연결하여 출입문을 직접 열거나 잠글 수 있도록 하는 릴레이가 내장되어 있습니다. 그러나 향상된 보안이 요구되는 출입통제 애플리케이션의 경우 잠재적으로 출입문 잠금 해제를 유발할 수 있는 변조 공격을 방지하기 위해 장치에 내장된 릴레이를 사용하지 않는 것이 좋습니다. 이러한 애플리케이션의 경우 잠금 제어를 위해 출입문 내부의 안전한 위치에 설치된 슈프리마의 Secure I/O 2, DM-20, CoreStation과 같은 별도의 릴레이 장치를 사용할 것을 권장합니다."
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
       type: "info",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Preste atención a la dirección de instalación del diodo. Instale el diodo cerca de la cerradura."
+        children: "다이오드의 설치 방향에 주의하세요. 다이오드는 출입문 잠금 장치와 가깝게 설치하세요."
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(PageBreak, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "cerradura-fail-secure",
-      children: "Cerradura fail secure"
+      id: "fail-secure-lock",
+      children: "Fail Secure Lock"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Conecte el relé N/O como se muestra en la figura para usar la cerradura fail secure. Normalmente no circula corriente por el relé de la cerradura fail secure. Cuando el relé active el flujo de corriente, la puerta se abrirá. Si la alimentación del producto se interrumpe debido a un corte de energía o a un factor externo, la puerta se bloqueará."
+      children: "Fail Secure Lock을 사용하려면 아래 그림과 같이 N/O 릴레이를 연결하세요. Fail Secure Lock은 평상 시 릴레이 회로에 전류가 흐르지 않으며, 릴레이가 동작하여 전류가 흐르면 출입문이 열립니다. 정전이 되거나 외부 요인으로 장치의 전원이 끊길 경우 출입문이 잠깁니다."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "biostation_3",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
@@ -1520,26 +1520,26 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "Instale un diodo en ambos extremos del cable de la cerradura, como se muestra en la figura, para proteger el relé de la corriente inversa que se produce cuando la cerradura funciona."
+            children: "출입문 잠금 장치가 작동할 때 발생하는 역전류로부터 릴레이를 보호하기 위해 그림과 같이 출입문 잠금 장치 배선 양쪽에 다이오드를 설치하세요."
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "Utilice una fuente de alimentación independiente para el producto y la cerradura."
+            children: "제품과 출입문 잠금 장치는 별도의 전원을 사용하세요."
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "Los lectores inteligentes independientes de Suprema contienen relés internos que pueden bloquear/desbloquear puertas directamente sin controladores externos para mayor comodidad. Sin embargo, para aplicaciones de control de acceso que requieren seguridad, NO se recomienda utilizar el relé interno de un lector a fin de evitar manipulaciones que puedan desbloquear la puerta. Para estas aplicaciones, se recomienda encarecidamente usar una unidad de relé independiente para el control de la cerradura, como Secure I/O 2, DM-20 o CoreStation de Suprema, instaladas en el lado seguro de la puerta."
+            children: "슈프리마의 지능형 장치에는 편의를 제공하기 위해 별도의 컨트롤러 없이 독립형으로 연결하여 출입문을 직접 열거나 잠글 수 있도록 하는 릴레이가 내장되어 있습니다. 그러나 향상된 보안이 요구되는 출입통제 애플리케이션의 경우 잠재적으로 출입문 잠금 해제를 유발할 수 있는 변조 공격을 방지하기 위해 장치에 내장된 릴레이를 사용하지 않는 것이 좋습니다. 이러한 애플리케이션의 경우 잠금 제어를 위해 출입문 내부의 안전한 위치에 설치된 슈프리마의 Secure I/O 2, DM-20, CoreStation과 같은 별도의 릴레이 장치를 사용할 것을 권장합니다."
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
       type: "info",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Preste atención a la dirección de instalación del diodo. Instale el diodo cerca de la cerradura."
+        children: "다이오드의 설치 방향에 주의하세요. 다이오드는 출입문 잠금 장치와 가깝게 설치하세요."
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(PageBreak, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "conexión-de-puerta-automática",
-      children: "Conexión de puerta automática"
+      id: "자동문-연결",
+      children: "자동문 연결"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "biostation_3",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
@@ -1653,7 +1653,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-60891: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+78324: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -1670,7 +1670,7 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "Inicializar la configuración de red",
+  "value": "네트워크 설정 초기화",
   "id": "reset-network-settings",
   "level": 2
 }];
@@ -1688,49 +1688,49 @@ function _createMdxContent(props) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
       id: "reset-network-settings",
-      children: "Inicializar la configuración de red"
+      children: "네트워크 설정 초기화"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Inicialice la configuración de red del dispositivo."
+      children: "장치의 네트워크 설정을 초기화합니다."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Encienda el dispositivo."
+          children: "전원을 켜세요."
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Presione el botón de reinicio hasta que el dispositivo se reinicie automáticamente."
+          children: "장치가 자동으로 재부팅될 때까지 초기화 버튼을 누르세요."
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Conecte el dispositivo usando la información de red inicializada."
+          children: "초기화된 네트워크 정보를 이용해 장치를 연결하세요."
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-                children: "Dirección TCP/IP"
-              }), ": asignación de dirección DHCP (si la asignación de dirección DHCP falla, se establecerá en 169.254.x.x)."]
+                children: "TCP/IP 주소"
+              }), ": DHCP 주소 할당 (DHCP 주소 할당을 실패하면 169.254.x.x로 설정됩니다.)"]
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-                children: "Modo servidor"
-              }), ": Deshabilitar"]
+                children: "서버 모드"
+              }), ": 사용 해제"]
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
               children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
                 children: "RS-485"
-              }), ": predeterminado, 115200 bps"]
+              }), ": 기본값, 115200 bps"]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Cambie la información de TCP/IP o RS-485."
+          children: "TCP/IP나 RS-485 정보를 변경하세요."
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Compruebe si la información de red está configurada correctamente después de apagar y encender el equipo."
+          children: "전원을 끄고 켠 뒤 네트워크 정보가 올바르게 설정되었는지 확인하세요."
         }), "\n"]
       }), "\n"]
     })]
@@ -1752,7 +1752,7 @@ function MDXContent(props = {}) {
 
 
 }),
-15794: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+71651: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -1769,8 +1769,8 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "Conectar Secure I/O 2",
-  "id": "conectar-secure-io-2",
+  "value": "Secure I/O 2 연결",
+  "id": "secure-io-2-연결",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -1786,22 +1786,22 @@ function _createMdxContent(props) {
   if (!Include) _missingMdxReference("Include", true);
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "conectar-secure-io-2",
-      children: "Conectar Secure I/O 2"
+      id: "secure-io-2-연결",
+      children: "Secure I/O 2 연결"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Secure I/O 2 es un dispositivo de E/S que se puede conectar al producto con el cable RS-485. La seguridad puede mantenerse incluso si se pierde la conexión entre el producto y Secure I/O 2 o si el suministro de energía al producto se interrumpe debido a factores externos."
+      children: "제품에 I/O 장치인 Secure I/O 2를 RS-485로 연결할 수 있습니다. 제품과 Secure I/O 2의 연결이 끊기거나 외부 요인에 의해 제품의 전원이 차단되더라도 보안을 유지할 수 있습니다."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Utilice un par trenzado AWG24 con una longitud máxima de 1.2 km para el cable RS-485."
+          children: "RS-485 케이블은 AWG24, 꼬임선(Twisted Pair), 최대 길이 1.2 km를 사용하세요."
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Se recomienda usar cables RS-485 con una impedancia característica de 120 Ω."
+          children: "RS-485 케이블은 특성 임피던스가 120 Ω인 케이블을 사용하는 것을 권장합니다."
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Si se conecta mediante una cadena en serie RS-485, conecte la resistencia de terminación (120 Ω) en ambos extremos de la conexión en cadena. Si se conecta en la línea media, el nivel de señal se reducirá y el rendimiento de comunicación se verá afectado. Asegúrese de conectarlas en ambos extremos de la conexión en cadena."
+          children: "RS-485 데이지 체인으로 연결할 경우 종단 저항(120Ω)을 데이지 체인 연결의 양 끝에 연결하세요. 중간 선로에 연결할 경우 신호 레벨이 작아져 통신 성능이 떨어지므로 반드시 데이지 체인 연결의 양 끝에 연결하세요."
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
@@ -1917,7 +1917,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-8859: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+90530: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -1934,8 +1934,8 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "Conectar como independiente",
-  "id": "conectar-como-independiente",
+  "value": "독립형 연결",
+  "id": "독립형-연결",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -1950,10 +1950,10 @@ function _createMdxContent(props) {
   if (!Include) _missingMdxReference("Include", true);
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "conectar-como-independiente",
-      children: "Conectar como independiente"
+      id: "독립형-연결",
+      children: "독립형 연결"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "El producto puede conectarse directamente a la cerradura, el botón y el sensor de puerta sin necesidad de conectar un dispositivo de E/S adicional."
+      children: "별도의 I/O 장치를 연결하지 않고 제품을 직접 출입문 잠금 장치, 퇴실 버튼, 출입문 센서 등에 연결할 수 있습니다."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "biostation_3",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
@@ -2048,7 +2048,7 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
       type: "caution",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Los lectores inteligentes independientes de Suprema contienen relés internos que pueden bloquear/desbloquear puertas directamente sin controladores externos para mayor comodidad. Sin embargo, para aplicaciones de control de acceso que requieren seguridad, NO se recomienda utilizar el relé interno de un lector a fin de evitar manipulaciones que puedan desbloquear la puerta. Para estas aplicaciones, se recomienda encarecidamente usar una unidad de relé independiente para el control de la cerradura, como Secure I/O 2, DM-20 o CoreStation de Suprema, instaladas en el lado seguro de la puerta."
+        children: "슈프리마의 지능형 장치에는 편의를 제공하기 위해 별도의 컨트롤러 없이 독립형으로 연결하여 출입문을 직접 열거나 잠글 수 있도록 하는 릴레이가 내장되어 있습니다. 그러나 향상된 보안이 요구되는 출입통제 애플리케이션의 경우 잠재적으로 출입문 잠금 해제를 유발할 수 있는 변조 공격을 방지하기 위해 장치에 내장된 릴레이를 사용하지 않는 것이 좋습니다. 이러한 애플리케이션의 경우 잠금 제어를 위해 출입문 내부의 안전한 위치에 설치된 슈프리마의 Secure I/O 2, DM-20, CoreStation과 같은 별도의 릴레이 장치를 사용할 것을 권장합니다."
       })
     })]
   });
@@ -2072,7 +2072,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-4225: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+14682: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -2089,8 +2089,8 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "Conexión Wiegand",
-  "id": "conexión-wiegand",
+  "value": "Wiegand 연결",
+  "id": "wiegand-연결",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -2106,8 +2106,8 @@ function _createMdxContent(props) {
   if (!Include) _missingMdxReference("Include", true);
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "conexión-wiegand",
-      children: "Conexión Wiegand"
+      id: "wiegand-연결",
+      children: "Wiegand 연결"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "corestation_20,doorinterface",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
@@ -2125,7 +2125,7 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Include, {
       product: "doormodule",
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Conecte el producto a una fuente de alimentación de 12 V y 3.1 A al conectar un dispositivo Wiegand."
+        children: "Wiegand 장치를 연결하여 사용할 경우 제품과 12 V, 3.1 A 전원을 연결하세요."
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
         src: "/img/device/installation-wiegand-in-connection-dm20.png",
         width: "65%",
@@ -2133,17 +2133,17 @@ function _createMdxContent(props) {
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
         type: "info",
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Utilice una fuente de alimentación de 12 V y hasta 1.5 A al conectar un dispositivo Wiegand al producto. Al conectar un dispositivo que requiere 1.0 A a ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: ["제품에 Wiegand 장치를 연결하면 12 V, 최대 1.5 A의 전원을 사용할 수 있습니다. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
             children: "WIEGAND 0"
-          }), ", solo se pueden usar 500 mA en ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          }), "에 1.0 A가 필요한 장치를 연결하면 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
             children: "WIEGAND 1"
-          }), "."]
+          }), "에서는 500 mA만 사용할 수 있습니다."]
         })
       })]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Include, {
       product: "biostation_3,bioentry_w3,biostation_2a,facestation_2,bioentry_w2,xpass_s2,biostation_3_max",
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Se usa como dispositivo de entrada Wiegand."
+        children: "Wiegand 입력 장치로 사용"
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
         product: "biostation_3",
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
@@ -2194,7 +2194,7 @@ function _createMdxContent(props) {
           className: "none"
         })
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Se usa como dispositivo de salida Wiegand."
+        children: "Wiegand 출력 장치로 사용"
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
         product: "biostation_3",
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
@@ -2248,7 +2248,7 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Include, {
       product: "facestation_f2,biolite_n2,xstation_2,bioentry_p2,xpass_2,xpass_q2",
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Use como dispositivo de entrada o salida Wiegand."
+        children: "Wiegand 입력 또는 출력 장치로 사용"
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
         product: "facestation_f2",
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
@@ -2281,7 +2281,7 @@ function _createMdxContent(props) {
         product: "xpass_2",
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/device/installation-wiegand-inout-connection-xp2.png",
-          width: "45%",
+          width: "65%",
           className: "none"
         })
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
@@ -2314,7 +2314,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-39468: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+62380: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -2323,52 +2323,52 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_es_docusaurus_plugin_content_docs_current_device_xpass_q_2_installation_mdx_e20_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_device_xpass_q_2_installation_mdx_a0c_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-es-docusaurus-plugin-content-docs-current-device-xpass-q-2-installation-mdx-e20.json
-var site_i_18_n_es_docusaurus_plugin_content_docs_current_device_xpass_q_2_installation_mdx_e20_namespaceObject = JSON.parse('{"id":"device/xpass_q2/installation","title":"Instalación","description":"Ofrece los procedimientos completos de instalación y ejemplos de conexión necesarios para el dispositivo.","source":"@site/i18n/es/docusaurus-plugin-content-docs/current/device/xpass_q2/installation.mdx","sourceDirName":"device/xpass_q2","slug":"/device/xpass_q2/installation","permalink":"/docs/es/device/xpass_q2/installation","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/xpass_q2/installation.mdx","tags":[],"version":"current","frontMatter":{"id":"installation","title":"Instalación","description":"Ofrece los procedimientos completos de instalación y ejemplos de conexión necesarios para el dispositivo.","keywords":["Soporte","Alimentación","Red","Entrada","Relé","Independiente","E/S Segura","Wiegand"],"isTranslationMissing":false},"sidebar":"xpassq2","previous":{"title":"Primeros pasos","permalink":"/docs/es/device/xpass_q2/getting-started"},"next":{"title":"Especificaciones del producto","permalink":"/docs/es/device/xpass_q2/product-specifications"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-xpass-q-2-installation-mdx-a0c.json
+var site_docs_device_xpass_q_2_installation_mdx_a0c_namespaceObject = JSON.parse('{"id":"device/xpass_q2/installation","title":"설치하기","description":"설치에 필요한 전체 과정과 연결 예시를 제공합니다.","source":"@site/docs/device/xpass_q2/installation.mdx","sourceDirName":"device/xpass_q2","slug":"/device/xpass_q2/installation","permalink":"/docs/device/xpass_q2/installation","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/xpass_q2/installation.mdx","tags":[],"version":"current","frontMatter":{"id":"installation","title":"설치하기","description":"설치에 필요한 전체 과정과 연결 예시를 제공합니다.","keywords":["브래킷","전원","네트워크","입력","릴레이","독립형","Secure I/O","Wiegand"],"isTranslationMissing":false},"sidebar":"xpassq2","previous":{"title":"시작하기","permalink":"/docs/device/xpass_q2/getting-started"},"next":{"title":"제품 사양","permalink":"/docs/device/xpass_q2/product-specifications"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_device-power-connection.mdx
-var _device_power_connection = __webpack_require__(69181);
-// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_device-network-connection.mdx
-var _device_network_connection = __webpack_require__(14870);
-// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_device-input-connetion.mdx
-var _device_input_connetion = __webpack_require__(52139);
-// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_device-relay-connection.mdx
-var _device_relay_connection = __webpack_require__(76629);
-// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_device-standalone-connection.mdx
-var _device_standalone_connection = __webpack_require__(8859);
-// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_device-connection-standalone-secure-notes.mdx
-var _device_connection_standalone_secure_notes = __webpack_require__(84795);
-// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_device-secure-io2-connection.mdx
-var _device_secure_io2_connection = __webpack_require__(15794);
-// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_device-wiegand-connection.mdx
-var _device_wiegand_connection = __webpack_require__(4225);
-// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_device-reset-network-settings.mdx
-var _device_reset_network_settings = __webpack_require__(60891);
-// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_device-factory-reset.mdx
-var _device_factory_reset = __webpack_require__(17265);
-;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/device/xpass_q2/installation.mdx
+// EXTERNAL MODULE: ./docs/common/_device-power-connection.mdx
+var _device_power_connection = __webpack_require__(65842);
+// EXTERNAL MODULE: ./docs/common/_device-network-connection.mdx
+var _device_network_connection = __webpack_require__(43333);
+// EXTERNAL MODULE: ./docs/common/_device-input-connetion.mdx
+var _device_input_connetion = __webpack_require__(97902);
+// EXTERNAL MODULE: ./docs/common/_device-relay-connection.mdx
+var _device_relay_connection = __webpack_require__(35078);
+// EXTERNAL MODULE: ./docs/common/_device-standalone-connection.mdx
+var _device_standalone_connection = __webpack_require__(90530);
+// EXTERNAL MODULE: ./docs/common/_device-connection-standalone-secure-notes.mdx
+var _device_connection_standalone_secure_notes = __webpack_require__(52276);
+// EXTERNAL MODULE: ./docs/common/_device-secure-io2-connection.mdx
+var _device_secure_io2_connection = __webpack_require__(71651);
+// EXTERNAL MODULE: ./docs/common/_device-wiegand-connection.mdx
+var _device_wiegand_connection = __webpack_require__(14682);
+// EXTERNAL MODULE: ./docs/common/_device-reset-network-settings.mdx
+var _device_reset_network_settings = __webpack_require__(78324);
+// EXTERNAL MODULE: ./docs/common/_device-factory-reset.mdx
+var _device_factory_reset = __webpack_require__(83544);
+;// CONCATENATED MODULE: ./docs/device/xpass_q2/installation.mdx
 
 
 const frontMatter = {
 	id: 'installation',
-	title: 'Instalación',
-	description: 'Ofrece los procedimientos completos de instalación y ejemplos de conexión necesarios para el dispositivo.',
+	title: '설치하기',
+	description: '설치에 필요한 전체 과정과 연결 예시를 제공합니다.',
 	keywords: [
-		'Soporte',
-		'Alimentación',
-		'Red',
-		'Entrada',
-		'Relé',
-		'Independiente',
-		'E/S Segura',
+		'브래킷',
+		'전원',
+		'네트워크',
+		'입력',
+		'릴레이',
+		'독립형',
+		'Secure I/O',
 		'Wiegand'
 	],
 	isTranslationMissing: false
@@ -2403,32 +2403,32 @@ const assets = {
 
 
 const toc = [{
-  "value": "Fijar el soporte y el producto",
-  "id": "fijar-el-soporte-y-el-producto",
+  "value": "브래킷 및 제품 고정",
+  "id": "브래킷-및-제품-고정",
   "level": 2
 }, ..._device_power_connection/* .toc */.RM, {
-  "value": "Conectar alimentación del lector y la cerradura",
-  "id": "conectar-alimentación-del-lector-y-la-cerradura",
+  "value": "리더, 락 전원 연결",
+  "id": "리더-락-전원-연결",
   "level": 2
 }, {
-  "value": "Conectar alimentación del lector",
-  "id": "conectar-alimentación-del-lector",
+  "value": "리더 전원 연결",
+  "id": "리더-전원-연결",
   "level": 3
 }, {
-  "value": "Conectar alimentación de la cerradura",
-  "id": "conectar-alimentación-de-la-cerradura",
+  "value": "락(출입문 잠금 장치) 전원 연결",
+  "id": "락출입문-잠금-장치-전원-연결",
   "level": 3
 }, {
-  "value": "Especificaciones de alimentación del lector y la cerradura",
-  "id": "especificaciones-de-alimentación-del-lector-y-la-cerradura",
+  "value": "전원별 리더 및 락 전력 사양",
+  "id": "전원별-리더-및-락-전력-사양",
   "level": 3
 }, {
-  "value": "Longitud máxima de extensión según especificación de cable",
-  "id": "longitud-máxima-de-extensión-según-especificación-de-cable",
+  "value": "케이블 규격별 최대 연장 길이",
+  "id": "케이블-규격별-최대-연장-길이",
   "level": 3
 }, ..._device_network_connection/* .toc */.RM, ..._device_input_connetion/* .toc */.RM, ..._device_relay_connection/* .toc */.RM, ..._device_standalone_connection/* .toc */.RM, ..._device_connection_standalone_secure_notes/* .toc */.RM, ..._device_secure_io2_connection/* .toc */.RM, ..._device_connection_standalone_secure_notes/* .toc */.RM, ..._device_wiegand_connection/* .toc */.RM, ..._device_reset_network_settings/* .toc */.RM, ..._device_factory_reset/* .toc */.RM, {
-  "value": "Actualización de firmware",
-  "id": "actualización-de-firmware",
+  "value": "펌웨어 업그레이드",
+  "id": "펌웨어-업그레이드",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -2462,14 +2462,14 @@ function _createMdxContent(props) {
   if (!Thead) _missingMdxReference("Thead", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "Ofrece los procedimientos completos de instalación y ejemplos de conexión necesarios para el dispositivo."
+      children: "설치에 필요한 전체 과정과 연결 예시를 제공합니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "fijar-el-soporte-y-el-producto",
-      children: "Fijar el soporte y el producto"
+      id: "브래킷-및-제품-고정",
+      children: "브래킷 및 제품 고정"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Asegura firmemente el soporte con los tornillos de fijación en el lugar donde se montará el producto."
+          children: "제품을 장착할 위치에 고정용 나사를 이용하여 브래킷을 단단히 고정하세요."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/installation-device1-xpq2.svg",
           className: "none",
@@ -2480,11 +2480,11 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "Si instalas el producto en una pared de concreto, perfora un agujero, inserta un anclaje de PVC y sujétalo con un tornillo de fijación."
+                children: "제품을 콘크리트 벽에 설치할 경우 드릴로 구멍을 뚫어 PVC 앵커를 끼운 뒤 고정용 나사로 고정하세요."
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "Para evitar interferencias de RF, se debe mantener una distancia mínima de separación."
+                children: "RF 신호 간섭을 피하기 위해 최소 이격 거리를 확인하여 설치하세요."
               }), "\n"]
             }), "\n"]
           }), (0,jsx_runtime.jsxs)(Columns, {
@@ -2503,12 +2503,12 @@ function _createMdxContent(props) {
                         style: {
                           textAlign: "center"
                         },
-                        children: "Espesor de pared"
+                        children: "벽 두께"
                       }), (0,jsx_runtime.jsx)(_components.th, {
                         style: {
                           textAlign: "center"
                         },
-                        children: "Distancia"
+                        children: "거리"
                       })]
                     })
                   }), (0,jsx_runtime.jsxs)(_components.tbody, {
@@ -2562,13 +2562,13 @@ function _createMdxContent(props) {
             })]
           }), (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-              children: "Al utilizar una credencial de acceso móvil, instala los dispositivos manteniendo una distancia mínima de 1 m entre ellos para evitar interferencias BLE."
+              children: "모바일 출입카드를 사용할 경우 BLE 신호 간섭을 피하기 위해 장치 사이에 최소 1 m 이상의 거리를 두고 설치하세요."
             }), "\n"]
           })]
-        }), "\n"]
+        }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Aprieta los cuatro tornillos que sujetan la cubierta del cable."
+          children: "케이블 커버에 끼워져 있는 4개의 나사를 돌려 단단히 고정하세요."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/installation-device2-xpq2.svg",
           className: "none",
@@ -2577,12 +2577,12 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsx)(_components.p, {
-            children: "Asegúrate de que la cubierta del cable esté completamente cerrada después de conectarla al producto para mantener las características de resistencia al agua y al polvo (clasificación IP65)."
+            children: "IP65 등급을 만족하기 위해 제품과 케이블을 연결한 뒤 반드시 케이블 커버를 사용해야 합니다."
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Monta el producto en el soporte fijado."
+          children: "고정된 브래킷 위에 제품을 장착하세요."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/installation-device3-xpq2.svg",
           className: "none",
@@ -2591,7 +2591,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Gira los tornillos de fijación para ensamblar el producto con el soporte."
+          children: "제품 고정용 나사를 돌려 제품과 브래킷을 조립하세요."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/installation-device4-xpq2.svg",
           className: "none",
@@ -2600,30 +2600,30 @@ function _createMdxContent(props) {
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsx)(_components.p, {
-            children: "Al ensamblar el producto con el soporte, puedes usar el tornillo de fijación del soporte incluido (en forma de estrella) en lugar del tornillo de fijación del producto para aumentar la seguridad."
+            children: "브래킷과 제품을 조립할 때 향상된 보안을 위해 제품 고정용 나사 대신 동봉된 브래킷 고정용 나사(별 모양)를 이용할 수 있습니다."
           })
         }), "\n"]
       }), "\n"]
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_power_connection/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "conectar-alimentación-del-lector-y-la-cerradura",
-      children: "Conectar alimentación del lector y la cerradura"
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_power_connection/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "리더-락-전원-연결",
+      children: "리더, 락 전원 연결"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "conectar-alimentación-del-lector",
-      children: "Conectar alimentación del lector"
+      id: "리더-전원-연결",
+      children: "리더 전원 연결"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/installation-reader-power-connection-xpq2.png",
       className: "none",
       width: "65%"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "conectar-alimentación-de-la-cerradura",
-      children: "Conectar alimentación de la cerradura"
+      id: "락출입문-잠금-장치-전원-연결",
+      children: "락(출입문 잠금 장치) 전원 연결"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/installation-lock-power-connection-xpq2.png",
       className: "none",
       width: "65%"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "especificaciones-de-alimentación-del-lector-y-la-cerradura",
-      children: "Especificaciones de alimentación del lector y la cerradura"
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "전원별-리더-및-락-전력-사양",
+      children: "전원별 리더 및 락 전력 사양"
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -2633,17 +2633,17 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "Alimentación"
+              children: "전원"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "Corriente máxima del lector"
+              children: "리더 최대 전류"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "Corriente máxima de la cerradura"
+              children: "락 최대 전류"
             })]
           })
         }), (0,jsx_runtime.jsxs)(_components.tbody, {
@@ -2686,7 +2686,7 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "PoE (salida de 12 V)"
+              children: "PoE (12V 출력)"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -2696,22 +2696,22 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "No compatible"
+              children: "지원하지 않음"
             })]
           })]
         })]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "longitud-máxima-de-extensión-según-especificación-de-cable",
-      children: "Longitud máxima de extensión según especificación de cable"
+      id: "케이블-규격별-최대-연장-길이",
+      children: "케이블 규격별 최대 연장 길이"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "La distancia que se puede conectar puede variar según las especificaciones del cable y el entorno de instalación utilizado para la conexión de alimentación. Si las conexiones de los cables se realizan de forma incorrecta, el dispositivo puede funcionar incorrectamente. El producto admite DC 12 V, DC 24 V y PoE. Verifica la longitud máxima de extensión para cada calibre de cable y conecta la alimentación correctamente."
+      children: "전원 연결 시 사용하는 케이블의 규격과 설치 환경에 따라 연결할 수 있는 거리가 다를 수 있습니다. 올바르게 연결하지 않을 경우 장치가 오작동할 수 있으므로 주의하세요. 이 제품은 DC 12V, DC 24V, PoE 전원을 모두 지원하므로, 각 케이블 규격에 따른 최대 연장 길이를 확인하여 전원을 올바르게 연결하세요."
     }), "\n", (0,jsx_runtime.jsxs)(Table, {
       children: [(0,jsx_runtime.jsxs)(Thead, {
         children: [(0,jsx_runtime.jsxs)(Row, {
           children: [(0,jsx_runtime.jsx)(Th, {
             rowspan: 2,
-            children: "Especificación del cable"
+            children: "케이블 규격"
           }), (0,jsx_runtime.jsx)(Th, {
             colspan: 2,
             children: "DC 12V"
@@ -2720,19 +2720,19 @@ function _createMdxContent(props) {
             children: "DC 24V"
           }), (0,jsx_runtime.jsx)(Th, {
             colspan: 2,
-            children: "PoE (salida de 12 V)"
+            children: "PoE (12V 출력)"
           })]
         }), (0,jsx_runtime.jsxs)(Row, {
           children: [(0,jsx_runtime.jsx)(Th, {
-            children: "Lector (500 mA)"
+            children: "리더 (500 mA)"
           }), (0,jsx_runtime.jsx)(Th, {
-            children: "Cerradura (1.2 A)"
+            children: "락 (1.2 A)"
           }), (0,jsx_runtime.jsx)(Th, {
-            children: "Lector (250 mA)"
+            children: "리더 (250 mA)"
           }), (0,jsx_runtime.jsx)(Th, {
-            children: "Cerradura (600 mA)"
+            children: "락 (600 mA)"
           }), (0,jsx_runtime.jsx)(Th, {
-            children: "Lector (500 mA)"
+            children: "리더 (500 mA)"
           })]
         })]
       }), (0,jsx_runtime.jsxs)(Tbody, {
@@ -2786,76 +2786,76 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "La longitud máxima de extensión real puede variar según la resistencia del fabricante y modelo del cable."
+        children: "케이블 제조사 및 제품별 저항치 차이에 따라 실제 최대 연장 길이는 달라질 수 있습니다."
       })
-    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_network_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_input_connetion/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_relay_connection/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_standalone_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_secure_io2_connection/* ["default"] */.Ay, {}), "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_wiegand_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_reset_network_settings/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_factory_reset/* ["default"] */.Ay, {
-      name: "verde"
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_network_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_input_connetion/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_relay_connection/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_standalone_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_secure_io2_connection/* ["default"] */.Ay, {}), "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_wiegand_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_reset_network_settings/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_factory_reset/* ["default"] */.Ay, {
+      name: "초록색"
     }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "actualización-de-firmware",
-      children: "Actualización de firmware"
+      id: "펌웨어-업그레이드",
+      children: "펌웨어 업그레이드"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Conecta una memoria USB para actualizar el firmware."
+      children: "장치에 USB 메모리를 연결하여 펌웨어를 업그레이드할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Guarda el archivo de firmware en una memoria USB para la actualización."
+          children: "USB 메모리에 업그레이드할 펌웨어 파일을 저장하세요."
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsx)(_components.p, {
-            children: "Se recomienda guardar solo un archivo de firmware en la memoria USB para la actualización."
+            children: "USB 메모리에는 펌웨어 파일을 하나만 저장하여 업그레이드하는 것을 권장합니다."
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Conecta la memoria USB al dispositivo."
+          children: "장치에 USB 메모리를 연결하세요."
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsx)(_components.p, {
-            children: "La autenticación se suspende temporalmente mientras se lee la memoria USB."
+            children: "USB 메모리를 읽는 동안 출입 인증 기능이 일시적으로 중단됩니다."
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Cuando el LED/zumbador indique una solicitud de autenticación, autentica con una credencial de administrador."
+          children: "인증 요청을 알리는 LED/버저가 동작하면 관리자 권한 인증 수단으로 인증하세요."
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["Registra el administrador en BioStar X para el dispositivo. No puedes continuar con la actualización de firmware si no hay un administrador registrado en el dispositivo. Para obtener información detallada sobre cómo registrar un administrador, consulta la ", (0,jsx_runtime.jsx)(_components.a, {
+                children: ["BioStar X에서 장치에 관리자를 등록하세요. 장치에 관리자가 등록되어 있지 않을 경우 펌웨어 업그레이드를 진행할 수 없습니다. 관리자 등록 방법에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
                   href: "../../platform/biostar_x/set-permission",
-                  children: "Guía de administrador de BioStar X"
-                }), "."]
+                  children: "BioStar X 관리자 설명서"
+                }), "를 참고하세요."]
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "Solo se permite un intento de autenticación por inserción de memoria USB."
+                children: "인증 시도는 USB 메모리 삽입당 1회만 가능합니다."
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "Si la autenticación falla, el LED/zumbador indicará la falla y la lectura de la USB terminará. Desconecta la memoria USB y vuelve a conectarla al dispositivo."
+                children: "인증 실패 시, 실패를 알리는 LED/버저가 동작한 후 USB 읽기 상태가 종료됩니다. USB 메모리를 분리한 후 장치에 다시 연결하세요."
               }), "\n"]
             }), "\n"]
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Tras la autenticación correcta del administrador, el dispositivo realiza una actualización de firmware e indica la actualización con el LED."
+          children: "관리자 인증에 성공하면 장치는 펌웨어 업그레이드를 수행하며, 업그레이드 중임을 LED로 표시합니다."
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsx)(_components.p, {
-            children: "Si falta el archivo de firmware o está dañado, la actualización no se realizará y el LED/zumbador indicará la falla."
+            children: "펌웨어 파일이 없거나 손상된 경우 업그레이드는 진행되지 않으며, 실패 상태를 LED/버저로 표시합니다."
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "El dispositivo se reinicia automáticamente cuando la actualización de firmware se completa."
+          children: "펌웨어 업그레이드가 완료되면 장치가 자동으로 재시작됩니다."
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "caution",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "No desconectes la fuente de alimentación mientras actualizas el firmware del dispositivo. El dispositivo puede fallar."
+        children: "펌웨어 업그레이드 진행 중 전원 공급이 중단되지 않도록 주의하세요. 고장의 원인이 됩니다."
       })
     })]
   });

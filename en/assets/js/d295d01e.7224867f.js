@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["45308"], {
-75851: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["25202"], {
+26348: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,26 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_ja_docusaurus_plugin_content_docs_current_device_xpass_q_2_index_mdx_aad_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_xpass_q_2_index_mdx_d29_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-ja-docusaurus-plugin-content-docs-current-device-xpass-q-2-index-mdx-aad.json
-var site_i_18_n_ja_docusaurus_plugin_content_docs_current_device_xpass_q_2_index_mdx_aad_namespaceObject = JSON.parse('{"id":"device/xpass_q2/index","title":"XPass Q2","description":"カードおよびQR/バーコード認証に対応したアクセス制御装置です。","source":"@site/i18n/ja/docusaurus-plugin-content-docs/current/device/xpass_q2/index.mdx","sourceDirName":"device/xpass_q2","slug":"/device/xpass_q2/","permalink":"/docs/ja/device/xpass_q2/","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/xpass_q2/index.mdx","tags":[],"version":"current","frontMatter":{"title":"XPass Q2","description":"カードおよびQR/バーコード認証に対応したアクセス制御装置です。","keywords":["XPass Q2","カードおよびQR/バーコード認証対応アクセス制御装置"],"isTranslationMissing":false},"sidebar":"xpassq2","next":{"title":"安全のための注意事項","permalink":"/docs/ja/device/xpass_q2/safety-instructions"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-xpass-q-2-index-mdx-d29.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_xpass_q_2_index_mdx_d29_namespaceObject = JSON.parse('{"id":"device/xpass_q2/index","title":"XPass Q2","description":"Access control device that supports card and QR/Barcode authentication.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/xpass_q2/index.mdx","sourceDirName":"device/xpass_q2","slug":"/device/xpass_q2/","permalink":"/docs/en/device/xpass_q2/","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/xpass_q2/index.mdx","tags":[],"version":"current","frontMatter":{"title":"XPass Q2","description":"Access control device that supports card and QR/Barcode authentication.","keywords":["XPass Q2","Access control device that supports card and QR/Barcode authentication"],"isTranslationMissing":false},"sidebar":"xpassq2","next":{"title":"Safety Instructions","permalink":"/docs/en/device/xpass_q2/safety-instructions"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/device/xpass_q2/index.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/xpass_q2/index.mdx
 
 
 const frontMatter = {
 	title: 'XPass Q2',
-	description: 'カードおよびQR/バーコード認証に対応したアクセス制御装置です。',
+	description: 'Access control device that supports card and QR/Barcode authentication.',
 	keywords: [
 		'XPass Q2',
-		'カードおよびQR/バーコード認証対応アクセス制御装置'
+		'Access control device that supports card and QR/Barcode authentication'
 	],
 	isTranslationMissing: false
 };
@@ -38,6 +38,7 @@ const assets = {
 
 };
 
+/*Access control device that supports card and QR/Barcode authentication.*/
 
 
 const toc = [];
@@ -50,11 +51,9 @@ function _createMdxContent(props) {
   }, {Overview} = _components;
   if (!Overview) _missingMdxReference("Overview", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "カードおよびQR/バーコード認証に対応したアクセス制御装置です。"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+    children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.img, {
-        alt: "バナーの例",
+        alt: "Example banner",
         src: (__webpack_require__(12167)/* ["default"] */.A) + "",
         width: "1000",
         height: "452"

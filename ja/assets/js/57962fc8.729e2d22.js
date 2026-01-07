@@ -432,14 +432,13 @@ function _createMdxContent(props) {
     p: "p",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {PageBreak} = _components;
-  if (!PageBreak) _missingMdxReference("PageBreak", true);
+  };
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "製品が準拠する規制および認証に関する情報を提供します。"
     }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_fcc_compliance_information/* ["default"] */.Ay, {
       name: "Class A"
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_ic_information/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_ce/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_more_information/* ["default"] */.Ay, {})]
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_ic_information/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_ce/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_more_information/* ["default"] */.Ay, {})]
   });
 }
 function MDXContent(props = {}) {
@@ -453,9 +452,6 @@ function MDXContent(props = {}) {
       ...props
     })
   }) : _createMdxContent(props);
-}
-function _missingMdxReference(id, component) {
-  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
 }
 
 

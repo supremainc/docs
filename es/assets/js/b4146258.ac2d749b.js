@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["75865"], {
-21673: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["5362"], {
+8692: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -17,8 +17,8 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "EU Declaration of Conformity (CE)",
-  "id": "eu-declaration-of-conformity-ce",
+  "value": "Declaración de conformidad de la UE (CE)",
+  "id": "declaración-de-conformidad-de-la-ue-ce",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -34,45 +34,45 @@ function _createMdxContent(props) {
   if (!Include) _missingMdxReference("Include", true);
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "eu-declaration-of-conformity-ce",
-      children: "EU Declaration of Conformity (CE)"
+      id: "declaración-de-conformidad-de-la-ue-ce",
+      children: "Declaración de conformidad de la UE (CE)"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "This product is CE marked according to the provisions of the Radio Equipment Directive (RED) 2014/53/EU."
+      children: "Este producto cuenta con la marca CE conforme a las disposiciones de la Directiva de Equipos Radioeléctricos (RED) 2014/53/UE."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Hereby, Suprema Inc. declares that this product is in compliance with the essential requirements and other relevant provisions of Radio Equipment Directive (RED) 2014/53/EU and is marked with the CE mark. This device is a Class 1 radio device according to the instructions."
+      children: "Por la presente, Suprema Inc. declara que este producto cumple con los requisitos esenciales y otras disposiciones pertinentes de la Directiva de Equipos Radioeléctricos (RED) 2014/53/UE y lleva la marca CE. Este dispositivo es un equipo de radio Clase 1 según las instrucciones."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "biostation_3,facestation_f2,xstation_2,bioentry_w2,bioentry_w3,biostation_3_max",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-          children: "Bluetooth transmit power: -0.1 dBm"
+          children: "Potencia de transmisión Bluetooth: -0.1 dBm"
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "biolite_n2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-          children: "Bluetooth transmit power: -7.9 dBm"
+          children: "Potencia de transmisión Bluetooth: -7.9 dBm"
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "xpass_d2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-          children: "Bluetooth transmit power: -0.44 dBm"
+          children: "Potencia de transmisión Bluetooth: -0.44 dBm"
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "xpass_2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-          children: "Bluetooth transmit power: 2.1 dBm"
+          children: "Potencia de transmisión Bluetooth: 2.1 dBm"
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "facestation_2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["Bluetooth transmit power: ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Badge, {
+          children: ["Potencia de transmisión Bluetooth: ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Badge, {
             only: true,
             children: "FS2-AWB"
           }), " 0.049 mW"]
@@ -82,21 +82,21 @@ function _createMdxContent(props) {
       product: "xpass_q2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-          children: "Bluetooth transmit power: -1.83 dBm"
+          children: "Potencia de transmisión Bluetooth: -1.83 dBm"
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "biostation_3,facestation_f2,biolite_n2,xstation_2,xpass_d2,bioentry_w2,xpass_2,bioentry_w3,xpass_q2,biostation_3_max",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-          children: "Bluetooth frequency: 2402~2480 MHz"
+          children: "Frecuencia Bluetooth: 2402~2480 MHz"
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "facestation_2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["Bluetooth frequency: ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Badge, {
+          children: ["Frecuencia Bluetooth: ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Badge, {
             only: true,
             children: "FS2-AWB"
           }), " 2402~2480 MHz"]
@@ -106,28 +106,28 @@ function _createMdxContent(props) {
       product: "biostation_3,biostation_2a,facestation_f2,xstation_2,facestation_2,xpass_d2,bioentry_w2,xpass_2,bioentry_w3,xpass_q2,biostation_3_max",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-          children: "NFC frequency: 13.56 MHz"
+          children: "Frecuencia NFC: 13.56 MHz"
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "biolite_n2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-          children: "NFC frequency: 129.2 MHz"
+          children: "Frecuencia NFC: 129.2 MHz"
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "biostation_3,biostation_2a,facestation_f2,xstation_2,facestation_2,xpass_d2,bioentry_w2,xpass_2,bioentry_w3,xpass_q2,biostation_3_max",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-          children: "RFID frequency: 13.56 MHz + 125 kHz"
+          children: "Frecuencia RFID: 13.56 MHz + 125 kHz"
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "biolite_n2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-          children: "RFID frequency: 13.56 MHz"
+          children: "Frecuencia RFID: 13.56 MHz"
         }), "\n"]
       })
     })]
@@ -152,7 +152,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-36452: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+68889: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -169,8 +169,8 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "FCC Compliance Information",
-  "id": "fcc-compliance-information",
+  "value": "Información de cumplimiento de la FCC",
+  "id": "información-de-cumplimiento-de-la-fcc",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -185,32 +185,32 @@ function _createMdxContent(props) {
   };
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "fcc-compliance-information",
-      children: "FCC Compliance Information"
+      id: "información-de-cumplimiento-de-la-fcc",
+      children: "Información de cumplimiento de la FCC"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "THIS DEVICE COMPLIES WITH PART 15 OF THE FCC RULES."
+      children: "ESTE DISPOSITIVO CUMPLE CON LA PARTE 15 DE LAS NORMAS DE LA FCC."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Operation is subject to the following two conditions:"
+      children: "El funcionamiento está sujeto a las siguientes dos condiciones:"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "This device may not cause harmful interference, and"
+          children: "Este dispositivo no debe causar interferencias perjudiciales, y"
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "This device must accept any interference received, including interference that may cause undesired operation."
+          children: "Este dispositivo debe aceptar cualquier interferencia recibida, incluida la interferencia que pueda causar un funcionamiento no deseado."
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.admonition, {
       type: "info",
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-        children: ["This equipment has been tested and found to comply with the limits for a ", props.name, " digital device, pursuant to part 15 of the FCC Rules. These limits are designed to provide reasonable protection against harmful interference when the equipment is operated in a commercial environment. This equipment generates, uses, and can radiate radio frequency energy and, if not installed and used in accordance with the instruction manual, may cause harmful interference to radio communications. Operation of this equipment in a residential area is likely to cause harmful interference in which case the user will be required to correct the interference at his own expense."]
+        children: ["Este equipo ha sido probado y se determinó que cumple con los límites para un dispositivo digital ", props.name, ", de conformidad con la parte 15 de las normas de la FCC. Estos límites están diseñados para proporcionar una protección razonable contra interferencias perjudiciales cuando el equipo se opera en un entorno comercial. Este equipo genera, utiliza y puede irradiar energía de radiofrecuencia y, si no se instala y utiliza de acuerdo con el manual de instrucciones, puede causar interferencias perjudiciales en las comunicaciones por radio. El funcionamiento de este equipo en un área residencial probablemente cause interferencias perjudiciales; en tal caso, se requerirá que el usuario corrija la interferencia a su propio costo."]
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "Any changes or modifications not expressly approved by the party responsible for compliance could void the user’s authority to operate this equipment."
+        children: "Cualquier cambio o modificación que no esté expresamente aprobado por la parte responsable del cumplimiento podría anular la autoridad del usuario para operar este equipo."
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "This transmitter must not be co-located or operating in conjunction with any other antenna or transmitter."
+        children: "Este transmisor no debe colocarse ni operar junto con ninguna otra antena o transmisor."
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-        children: "This equipment complies with FCC radiation exposure limits set forth for an uncontrolled environment. This equipment should be installed and operated with minimum distance 20 cm between the radiator and your body. Do not install or operate this device and its antenna in conjunction with any other antenna or RF transmission device."
+        children: "Este equipo cumple con los límites de exposición a radiación establecidos por la FCC para un entorno no controlado. Este equipo debe instalarse y operarse manteniendo una distancia mínima de 20 cm entre el radiador y su cuerpo. No instale ni opere este dispositivo y su antena junto con ninguna otra antena o dispositivo de transmisión RF."
       })]
     })]
   });
@@ -231,7 +231,7 @@ function MDXContent(props = {}) {
 
 
 }),
-99192: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+97349: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -248,8 +248,8 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "IC information",
-  "id": "ic-information",
+  "value": "Información de IC",
+  "id": "información-de-ic",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -264,20 +264,20 @@ function _createMdxContent(props) {
   };
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "ic-information",
-      children: "IC information"
+      id: "información-de-ic",
+      children: "Información de IC"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "This device complies with Industry Canada’s licence-exempt RSSs."
+      children: "Este dispositivo cumple con las RSS exentas de licencia de Industry Canada."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Operation is subject to the following two conditions:"
+      children: "El funcionamiento está sujeto a las siguientes dos condiciones:"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "This device may not cause interference; and"
+          children: "Este dispositivo no debe causar interferencias, y"
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "This device must accept any interference, including interference that may cause undesired operation of the device."
+          children: "Este dispositivo debe aceptar cualquier interferencia recibida, incluidas las interferencias que puedan causar un funcionamiento no deseado."
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
@@ -313,7 +313,7 @@ function MDXContent(props = {}) {
 
 
 }),
-70771: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+48410: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -368,7 +368,7 @@ function MDXContent(props = {}) {
 
 
 }),
-52030: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+82397: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -377,34 +377,34 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_xpass_q_2_regulatory_information_mdx_207_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_es_docusaurus_plugin_content_docs_current_device_xpass_q_2_regulatory_information_mdx_b41_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-xpass-q-2-regulatory-information-mdx-207.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_xpass_q_2_regulatory_information_mdx_207_namespaceObject = JSON.parse('{"id":"device/xpass_q2/regulatory-information","title":"Regulatory Information","description":"Provides information on regulations and certifications complied with by the product.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/xpass_q2/regulatory-information.mdx","sourceDirName":"device/xpass_q2","slug":"/device/xpass_q2/regulatory-information","permalink":"/docs/en/device/xpass_q2/regulatory-information","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/xpass_q2/regulatory-information.mdx","tags":[],"version":"current","frontMatter":{"id":"regulatory-information","title":"Regulatory Information","description":"Provides information on regulations and certifications complied with by the product.","keywords":["Regulatory","FCC","CE"],"isTranslationMissing":false},"sidebar":"xpassq2","previous":{"title":"Product Specifications","permalink":"/docs/en/device/xpass_q2/product-specifications"},"next":{"title":"Appendices","permalink":"/docs/en/device/xpass_q2/appendices"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-es-docusaurus-plugin-content-docs-current-device-xpass-q-2-regulatory-information-mdx-b41.json
+var site_i_18_n_es_docusaurus_plugin_content_docs_current_device_xpass_q_2_regulatory_information_mdx_b41_namespaceObject = JSON.parse('{"id":"device/xpass_q2/regulatory-information","title":"Información reglamentaria","description":"Proporciona información sobre las normativas y certificaciones que cumple el producto.","source":"@site/i18n/es/docusaurus-plugin-content-docs/current/device/xpass_q2/regulatory-information.mdx","sourceDirName":"device/xpass_q2","slug":"/device/xpass_q2/regulatory-information","permalink":"/docs/es/device/xpass_q2/regulatory-information","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/xpass_q2/regulatory-information.mdx","tags":[],"version":"current","frontMatter":{"id":"regulatory-information","title":"Información reglamentaria","description":"Proporciona información sobre las normativas y certificaciones que cumple el producto.","keywords":["Normativa","FCC","CE"],"isTranslationMissing":false},"sidebar":"xpassq2","previous":{"title":"Especificaciones del producto","permalink":"/docs/es/device/xpass_q2/product-specifications"},"next":{"title":"Apéndices","permalink":"/docs/es/device/xpass_q2/appendices"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_fcc-compliance-information.mdx
-var _fcc_compliance_information = __webpack_require__(36452);
-// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_ic-information.mdx
-var _ic_information = __webpack_require__(99192);
-// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_ce.mdx
-var _ce = __webpack_require__(21673);
-// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_more-information.mdx
-var _more_information = __webpack_require__(70771);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/xpass_q2/regulatory-information.mdx
+// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_fcc-compliance-information.mdx
+var _fcc_compliance_information = __webpack_require__(68889);
+// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_ic-information.mdx
+var _ic_information = __webpack_require__(97349);
+// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_ce.mdx
+var _ce = __webpack_require__(8692);
+// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_more-information.mdx
+var _more_information = __webpack_require__(48410);
+;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/device/xpass_q2/regulatory-information.mdx
 
 
 const frontMatter = {
 	id: 'regulatory-information',
-	title: 'Regulatory Information',
-	description: 'Provides information on regulations and certifications complied with by the product.',
+	title: 'Información reglamentaria',
+	description: 'Proporciona información sobre las normativas y certificaciones que cumple el producto.',
 	keywords: [
-		'Regulatory',
+		'Normativa',
 		'FCC',
 		'CE'
 	],
@@ -432,14 +432,13 @@ function _createMdxContent(props) {
     p: "p",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {PageBreak} = _components;
-  if (!PageBreak) _missingMdxReference("PageBreak", true);
+  };
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "Provides information on regulations and certifications complied with by the product."
+      children: "Proporciona información sobre las normativas y certificaciones que cumple el producto."
     }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_fcc_compliance_information/* ["default"] */.Ay, {
       name: "Class A"
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_ic_information/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_ce/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_more_information/* ["default"] */.Ay, {})]
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_ic_information/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_ce/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_more_information/* ["default"] */.Ay, {})]
   });
 }
 function MDXContent(props = {}) {
@@ -453,9 +452,6 @@ function MDXContent(props = {}) {
       ...props
     })
   }) : _createMdxContent(props);
-}
-function _missingMdxReference(id, component) {
-  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
 }
 
 
