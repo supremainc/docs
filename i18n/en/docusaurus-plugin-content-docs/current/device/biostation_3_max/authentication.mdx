@@ -72,6 +72,8 @@ Fingerprint authentication is available only on BS3M-ODB and BS3M-OAPB.
 
 4. To delete the selected item, press <Cmd sid="ui_037" product="dev" />.
 
+<PageBreak />
+
 ## Operation
 
 ### Server matching
@@ -93,6 +95,8 @@ You can set up server matching.
    * If you use <Cmd sid="ui_185" product="dev" />, you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to the [BioStar X Administrator Guide](../../platform/biostar_x/settings-server-server#servermatching).
 
    :::
+
+<PageBreak />
 
 ### QR authentication
 
@@ -126,6 +130,8 @@ Set whether to use the scramble keypad when entering passwords.
 
    * <Cmd sid="ui_204" product="dev" />: The positions of numeric keys can be scrambled randomly when entering a password to prevent password leaks.
 
+<PageBreak />
+
 ## Auth result display option
 
 You can set the auth result display option.
@@ -138,31 +144,39 @@ You can set the auth result display option.
 
    * <Cmd sid="ui_169" product="dev" />: Select how the user ID appears on the device's authentication result screen.
 
-     * <Cmd sid="ui_307" product="dev" />: Show the entire user ID.
+      * <Cmd sid="ui_307" product="dev" />: Show the entire user ID.
 
-     * <Cmd sid="ui_316" product="dev" />: Show only the first character of the user ID.
+      * <Cmd sid="ui_316" product="dev" />: Show only the first character of the user ID.
 
-     * <Cmd sid="ui_357" product="dev" />: Do not show the user ID.
+      * <Cmd sid="ui_357" product="dev" />: Do not show the user ID.
 
    * <Cmd sid="ui_177" product="dev" />: Select how the user name appears on the device's authentication result screen.
 
-     * <Cmd sid="ui_307" product="dev" />: Show the entire user name.
+      * <Cmd sid="ui_307" product="dev" />: Show the entire user name.
 
-     * <Cmd sid="ui_316" product="dev" />: Show only the first character of the user name.
+      * <Cmd sid="ui_316" product="dev" />: Show only the first character of the user name.
 
-     * <Cmd sid="ui_357" product="dev" />: Do not show the user name.
+      * <Cmd sid="ui_357" product="dev" />: Do not show the user name.
 
-## Face
+<PageBreak />
+
+## Face & fingerprint
+
+### Face
 
 You can change the configuration for facial authentication.
 
 1. Press <Image src="/img/common/ico-menu.svg" ico alone /> and authenticate with the Admin level credential.
 
-2. Select <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_228" product="dev" />.
+2. Select <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_376" product="dev" />.
 
-3. Change the desired item.
+3. Change the desired item in <Cmd sid="ui_377" product="dev" /> or <Cmd sid="ui_231" product="dev" /> settings.
 
-   <Image src="/img/device/bs3m-face.png" />
+   <div className="grid-container">
+     <Image src="/img/device/bs3m-face.png" />
+
+     <Image src="/img/device/bs3m-face-recognition.png" />
+   </div>
 
    * <Cmd sid="ui_140" product="dev" />: Set the sensitivity to detect motion around the device. When <Cmd sid="ui_140" product="dev" /> is set to <Cmd sid="ui_091" product="dev" />, touch the screen to authenticate your face.
 
@@ -174,93 +188,93 @@ You can change the configuration for facial authentication.
 
    * <Cmd sid="ui_229" product="dev" />: Set the position and size of the area where the device detects faces during face authentication.
 
-     :::info
+      :::info
 
-     For optimal performance, it is recommended to use default settings for the sub-options of <Cmd sid="ui_229" product="dev" />. The default values of each option are as follows:
+      For optimal performance, it is recommended to use default settings for the sub-options of <Cmd sid="ui_229" product="dev" />. The default values of each option are as follows:
 
-     * Maximum Head Pose Angle: 15
+      * Maximum Head Pose Angle: 15
 
-     * Detection Distance: Min 30 cm, Max 100 cm
+      * Detection Distance: Min 30 cm, Max 100 cm
 
-     * Wide Search: Deactivated
+      * Wide Search: Deactivated
 
-     :::
+      :::
+
+   <PageBreak />
 
    * <Cmd sid="ui_060" product="dev" />: By activating <Cmd sid="ui_060" product="dev" />, you can enroll the <Cmd sid="ui_340" product="dev" /> issued by BioStar X. <Cmd sid="ui_340" product="dev" /> allows biometric authentication without storing user data on the BioStar X server, Airfob Portal, or device by storing the user's biometric template on a mobile access card.
 
-     :::info
+      :::info
 
-     For more information about <Cmd sid="ui_340" product="dev" />, refer to the [BioStar X Administrator Guide](../../platform/biostar_x/enroll-credential-mobile#template-on-mobile).
+      For more information about <Cmd sid="ui_340" product="dev" />, refer to the [BioStar X Administrator Guide](../../platform/biostar_x/enroll-credential-mobile#template-on-mobile).
 
-     :::
+      :::
 
    * <Cmd sid="ui_157" product="dev" />: You can set to store both the actual images and templates in Visual Face, or to store only the templates without saving the actual images. If disabled, all stored images of visual faces will be deleted, and newly enrolled visual faces will store templates excluding images.
 
-     :::info
+      :::info
 
-     After disabling this setting, use BioStar 2 v2.9.7 or higher.
+      After disabling this setting, connect to BioStar 2 v2.9.7 or later or BioStar X.
 
-     :::
+      :::
 
    * <Cmd sid="ui_149" product="dev" />: You can set the security level for 1:N authentication.
 
    * <Cmd sid="ui_278" product="dev" />: You can set the operating mode of the device for face authentication.
 
-     * <Cmd sid="ui_359" product="dev" />: Both visual and infrared matching work to increase the accuracy of face authentication.
+      * <Cmd sid="ui_359" product="dev" />: Both visual and infrared matching work to increase the accuracy of face authentication.
 
-     * <Cmd sid="ui_159" product="dev" />: Users can perform rapid authentication while walking within the device's authentication range.
+      * <Cmd sid="ui_159" product="dev" />: Users can perform rapid authentication while walking within the device's authentication range.
 
    * <Cmd sid="ui_247" product="dev" />: You can prevent user authentication with spoofed faces such as photos. Activated when <Cmd sid="ui_278" product="dev" /> is set to <Cmd sid="ui_359" product="dev" />.
 
-     :::info
+      :::info
 
-     * Face anti-spoofing performance has been improved to pass the iBeta Level 1 ISO 30107-3 Presentation Attack Detection Test.
+      In strong sunlight, it is recommended to use the <Cmd sid="ui_247" product="dev" /> function as <Cmd sid="ui_152" product="dev" />.
 
-     * In strong sunlight, it is recommended to use the <Cmd sid="ui_247" product="dev" /> function as <Cmd sid="ui_152" product="dev" />.
-
-     :::
+      :::
 
    * <Cmd sid="ui_070" product="dev" />: You can change advanced settings for facial authentication, such as mask detection.
 
-     * <Cmd sid="ui_123" product="dev" />: You can set whether to use mask detection.
+      * <Cmd sid="ui_123" product="dev" />: You can set whether to use mask detection.
 
-     * <Cmd sid="ui_067" product="dev" />: You can set the method to check if a mask is worn. This is activated when the <Cmd sid="ui_123" product="dev" /> is set to <Cmd sid="ui_161" product="dev" />.
+      * <Cmd sid="ui_067" product="dev" />: You can set the method to check if a mask is worn. This is activated when the <Cmd sid="ui_123" product="dev" /> is set to <Cmd sid="ui_161" product="dev" />.
 
-       :::info
+         :::info
 
-       * <Cmd sid="ui_127" product="dev" />: Users not wearing a mask are denied authentication, and a mask non-compliance event log is recorded.
+         * <Cmd sid="ui_127" product="dev" />: Users not wearing a mask are denied authentication, and a mask non-compliance event log is recorded.
 
-       * <Cmd sid="ui_126" product="dev" />: Users not wearing a mask can still authenticate, but a mask non-compliance event log is recorded.
+         * <Cmd sid="ui_126" product="dev" />: Users not wearing a mask can still authenticate, but a mask non-compliance event log is recorded.
 
-       * <Cmd sid="ui_125" product="dev" />: Only users not wearing a mask can be authenticated, and when this mode is used, the mask check mode is fixed to <Cmd sid="ui_369" product="dev" />.
+         * <Cmd sid="ui_125" product="dev" />: Only users not wearing a mask can be authenticated, and when this mode is used, the mask check mode is fixed to <Cmd sid="ui_369" product="dev" />.
 
-       :::
+         :::
 
-     * <Cmd sid="ui_124" product="dev" />: Set the sensitivity for detecting mask usage. This is activated when the <Cmd sid="ui_123" product="dev" /> is set to <Cmd sid="ui_161" product="dev" />.
+      * <Cmd sid="ui_124" product="dev" />: Set the sensitivity for detecting mask usage. This is activated when the <Cmd sid="ui_123" product="dev" /> is set to <Cmd sid="ui_161" product="dev" />.
 
-     * <Cmd sid="ui_368" product="dev" />: Set the confirmation mode according to the purpose of the device.
+      * <Cmd sid="ui_368" product="dev" />: Set the confirmation mode according to the purpose of the device.
 
-       :::info
+         :::info
 
-       * <Cmd sid="ui_267" product="dev" />: After authentication, check whether the user is wearing a mask.
+         * <Cmd sid="ui_267" product="dev" />: After authentication, check whether the user is wearing a mask.
 
-       * <Cmd sid="ui_369" product="dev" />: Authenticate after checking whether the user is wearing a mask.
+         * <Cmd sid="ui_369" product="dev" />: Authenticate after checking whether the user is wearing a mask.
 
-       * <Cmd sid="ui_370" product="dev" />: The device can only be used to check if a mask is worn. When this mode is activated, any user wearing a mask can access it regardless of authentication.
+         * <Cmd sid="ui_370" product="dev" />: The device can only be used to check if a mask is worn. When this mode is activated, any user wearing a mask can access it regardless of authentication.
 
-       :::
+         :::
 
-## Fingerprint <Badge only>BS3M-ODB, BS3M-OAPB</Badge> {#fingerprint}
+### Fingerprint <Badge only>BS3M-ODB, BS3M-OAPB</Badge> {#fingerprint}
 
 You can change the settings for fingerprint authentication.
 
 1. Press <Image src="/img/common/ico-menu.svg" ico alone /> and authenticate with the Admin level credential.
 
-2. Select <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_312" product="dev" />.
+2. Select <Cmd sid="ui_256" product="dev" /> → <Cmd sid="ui_376" product="dev" />.
 
-3. Change the desired item.
+3. Change the desired item in <Cmd sid="ui_378" product="dev" />.
 
-   <Image src="/img/device/auth-fingerprint.png" width={300} />
+   <Image src="/img/device/bs3m-finger.png" />
 
    * <Cmd sid="ui_149" product="dev" />: You can set the security level for 1:N authentication.
 

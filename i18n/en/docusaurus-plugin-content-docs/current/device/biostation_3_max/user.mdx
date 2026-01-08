@@ -31,6 +31,8 @@ You can register user information that includes biometric authentication data.
 
    * **ID**: Enter a number between 1 and 4294967295 to register a user ID. If <Cmd sid="ui_168" product="dev" /> is set to <Cmd sid="ui_237" product="dev" />, you can use a combination of alphanumeric characters and symbols `_` `-` as the ID, with a maximum of 32 characters.
 
+   <PageBreak />
+
    * <Cmd sid="ui_228" product="dev" />: You can register a face for user authentication. Press <Cmd sid="ui_228" product="dev" /> → <Cmd sid="ui_108" product="dev" /> and follow the instructions on the screen to enroll your face. To add more faces, press <Image src="/img/common/ico-add.svg" ico alone />. Please refer to [Enrolling user faces](#enrolling-user-faces) to learn more about face enrollment.
 
    * <Cmd sid="ui_312" product="dev" />: <Badge only>BS3M-ODB, BS3M-OAPB</Badge> Enroll a fingerprint for user authentication. Press <Cmd sid="ui_312" product="dev" /> → <Cmd sid="ui_108" product="dev" /> and follow the on-screen instructions to enroll a fingerprint. Press <Image src="/img/common/ico-add.svg" ico alone /> to enroll more fingerprints. For more information on fingerprint registration, refer to [User fingerprint enrollment](#enrolling-user-fingerprint).
@@ -61,6 +63,8 @@ You can register user information that includes biometric authentication data.
 
 3. Press <Cmd sid="ui_295" product="dev" /> to complete the registration of user information.
 
+<PageBreak />
+
 ### Enrolling user faces {#enrolling-user-faces}
 
 import EnrollingFace from '../../common/_enrolling-face-warning.mdx';
@@ -77,7 +81,7 @@ import EnrollingFace from '../../common/_enrolling-face-warning.mdx';
 
    :::info
 
-   * The visual face data of this product are not compatible with face templates of FaceStation F2.
+   * The visual face data of this product are not compatible with face templates of FaceStation 2 or FaceLite.
 
    * Face information for this product can also be batch enrolled by uploading a photo in BioStar X or importing a CSV file, not just on the device. You can also enroll visual face with your smartphone via a link sent from BioStar 2. For more information on each registration method, please refer to the [BioStar X Administrator Guide](../../platform/biostar_x/enroll-credential-face).
 
@@ -86,6 +90,8 @@ import EnrollingFace from '../../common/_enrolling-face-warning.mdx';
    <EnrollingFace />
 
    :::
+
+<PageBreak />
 
 ## User fingerprint registration <Badge only>BS3M-ODB, BS3M-OAPB</Badge> {#enrolling-user-fingerprint}
 
@@ -99,7 +105,7 @@ import EnrollingFace from '../../common/_enrolling-face-warning.mdx';
 
 :::info
 
-* Fingerprint enrollment is only available on BS3M-ODB and BS3M-OAPB.
+* Fingerprint enrollment is available only for BS3M-ODB and BS3M-OAPB products.
 
 * Place the finger deep enough to contact with the sensor completely.
 
@@ -121,7 +127,7 @@ User Management or Administrator can modify the registered user information. Add
 
 2. Click <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-search.svg" ico alone />.
 
-3. Select your search terms. You can search for users using <Cmd sid="ui_299" product="dev" />, <Cmd sid="ui_167" product="dev" />, <Cmd sid="ui_253" product="dev" />, <Cmd sid="ui_228" product="dev" />, <Cmd sid="ui_322" product="dev" />.
+3. Select your search terms. You can search for users using <Cmd sid="ui_299" product="dev" />, <Cmd sid="ui_167" product="dev" />, <Cmd sid="ui_253" product="dev" />, <Cmd sid="ui_228" product="dev" />, <Cmd sid="ui_312" product="dev" />, <Cmd sid="ui_322" product="dev" />.
 
 4. Select the user to modify.
 
@@ -131,9 +137,13 @@ User Management or Administrator can modify the registered user information. Add
 
 :::info
 
-<Cmd sid="ui_320" product="dev" /> can be registered in BioStar X. For more information on registering access groups, refer to the [BioStar X Administrator Guide](../../platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
+* Fingerprint search is available only on BS3M-ODB and BS3M-OAPB.
+
+* <Cmd sid="ui_320" product="dev" /> can be registered in BioStar X. For more information on registering access groups, refer to the [BioStar X Administrator Guide](../../platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup).
 
 :::
+
+<PageBreak />
 
 ## Delete All Users
 
