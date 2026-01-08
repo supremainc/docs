@@ -441,9 +441,10 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, Image} = _components;
+  }, {Cmd, Image, PageBreak} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
+  if (!PageBreak) _missingMdxReference("PageBreak", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "Provides information on regulations and certifications complied with by the product."
@@ -454,7 +455,7 @@ function _createMdxContent(props) {
       children: "You can check the license, regulatory certification, and compliance marks on the product."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "CE / FCC / IC / KC / UKCA / RCM / MIC / TELEC"
+        children: "CE / UKCA / KC / FCC / IC / RCM / RoHS / REACH / WEEE / SIG / MIC / TELEC / ETL Listed to UL 294"
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -482,9 +483,9 @@ function _createMdxContent(props) {
           src: "/img/device/bs3m-regulatory-licenses.png"
         }), "\n"]
       }), "\n"]
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_fcc_compliance_information/* ["default"] */.Ay, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_fcc_compliance_information/* ["default"] */.Ay, {
       name: "Class A"
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_ic_information/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_ce/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_more_information/* ["default"] */.Ay, {})]
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_ic_information/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_ce/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_more_information/* ["default"] */.Ay, {})]
   });
 }
 function MDXContent(props = {}) {

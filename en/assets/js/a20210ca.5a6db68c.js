@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["8533"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["64176"], {
 5623: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
@@ -338,12 +338,12 @@ function _createMdxContent(props) {
       id: "lan-connection-connecting-to-a-hub",
       children: "LAN connection (connecting to a hub)"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "bioentry_w3,facestation_f2,corestation_40,corestation_20,bioentry_w2,biolite_n2,biostation_2a,biostation_3,facestation_2,xpass_s2,xstation_2,biostation_3_max",
+      product: "bioentry_w3,facestation_f2,corestation_40,corestation_20,bioentry_w2,biolite_n2,biostation_2a,biostation_3,facestation_2,xpass_s2,xstation_2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: "You can connect the product to a hub using a general type CAT-5 cable."
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "bioentry_p2,xpass_2,xpass_q2",
+      product: "bioentry_p2,xpass_2,xpass_q2,biostation_3_max",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: "You can connect to the hub using a standard CAT-5e cable."
       })
@@ -458,9 +458,14 @@ function _createMdxContent(props) {
       id: "lan-connection-connecting-to-a-pc-directly",
       children: "LAN connection (connecting to a PC directly)"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "bioentry_w3,facestation_f2,bioentry_w2,biolite_n2,biostation_2a,biostation_3,facestation_2,xstation_2,biostation_3_max",
+      product: "bioentry_w3,facestation_f2,bioentry_w2,biolite_n2,biostation_2a,biostation_3,facestation_2,xstation_2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: "This device has an automatic MDI/MDIX function so that it can be connected to a PC directly using a normal straight type CAT-5 cable or a cross cable."
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
+      product: "biostation_3_max",
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+        children: "This device features automatic MDI/MDIX, so it can connect directly to a PC using either a cross cable or a standard straight CAT-5e cable."
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "xpass_s2",
@@ -2260,7 +2265,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-2340: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+4996: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -2269,13 +2274,13 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_facestation_2_installation_mdx_d44_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_facestation_f_2_installation_mdx_a20_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-facestation-2-installation-mdx-d44.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_facestation_2_installation_mdx_d44_namespaceObject = JSON.parse('{"id":"device/facestation_2/installation","title":"Installation","description":"Provides the complete installation procedures and connection examples required for the device.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/facestation_2/installation.mdx","sourceDirName":"device/facestation_2","slug":"/device/facestation_2/installation","permalink":"/docs/en/device/facestation_2/installation","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/facestation_2/installation.mdx","tags":[],"version":"current","frontMatter":{"id":"installation","title":"Installation","description":"Provides the complete installation procedures and connection examples required for the device.","keywords":["Bracket","Power","Network","Input","Relay","Standalone","Secure I/O","Wiegand"],"isTranslationMissing":false},"sidebar":"facestation2","previous":{"title":"Getting Started","permalink":"/docs/en/device/facestation_2/getting-started"},"next":{"title":"How to Use","permalink":"/docs/en/device/facestation_2/using-device"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-facestation-f-2-installation-mdx-a20.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_facestation_f_2_installation_mdx_a20_namespaceObject = JSON.parse('{"id":"device/facestation_f2/installation","title":"Installation","description":"Provides the complete installation procedures and connection examples required for the device.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/facestation_f2/installation.mdx","sourceDirName":"device/facestation_f2","slug":"/device/facestation_f2/installation","permalink":"/docs/en/device/facestation_f2/installation","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/facestation_f2/installation.mdx","tags":[],"version":"current","frontMatter":{"id":"installation","title":"Installation","description":"Provides the complete installation procedures and connection examples required for the device.","keywords":["Bracket","Power","Network","Input","Relay","Standalone","Secure I/O","Wiegand"],"isTranslationMissing":false},"sidebar":"facestationf2","previous":{"title":"Getting Started","permalink":"/docs/en/device/facestation_f2/getting-started"},"next":{"title":"How to Use","permalink":"/docs/en/device/facestation_f2/using-device"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -2298,7 +2303,7 @@ var _device_connection_standalone_secure_notes = __webpack_require__(5623);
 var _device_secure_io2_connection = __webpack_require__(40275);
 // EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_device-wiegand-connection.mdx
 var _device_wiegand_connection = __webpack_require__(98538);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/facestation_2/installation.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/facestation_f2/installation.mdx
 
 
 const frontMatter = {
@@ -2347,20 +2352,11 @@ const toc = [{
   "value": "Fixing the bracket and the product",
   "id": "fixing-the-bracket-and-the-product",
   "level": 2
-}, {
-  "value": "General bracket",
-  "id": "general-bracket",
-  "level": 3
-}, ..._installation_bracket_notes/* .toc */.RM, {
-  "value": "Tilting Bracket",
-  "id": "tilting-bracket",
-  "level": 3
 }, ..._installation_bracket_notes/* .toc */.RM, ..._device_power_connection/* .toc */.RM, ..._device_network_connection/* .toc */.RM, ..._device_input_connetion/* .toc */.RM, ..._device_relay_connection/* .toc */.RM, ..._device_standalone_connection/* .toc */.RM, ..._device_connection_standalone_secure_notes/* .toc */.RM, ..._device_secure_io2_connection/* .toc */.RM, ..._device_connection_standalone_secure_notes/* .toc */.RM, ..._device_wiegand_connection/* .toc */.RM];
 function _createMdxContent(props) {
   const _components = {
     admonition: "admonition",
     h2: "h2",
-    h3: "h3",
     li: "li",
     ol: "ol",
     p: "p",
@@ -2383,26 +2379,31 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "fixing-the-bracket-and-the-product",
       children: "Fixing the bracket and the product"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "general-bracket",
-      children: "General bracket"
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsx)(_components.p, {
+        children: "This document describes the installation method based on the FSF2-ODB model shape. Use the same method to install the FSF2-DB and FSF2-AB models."
+      })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "Determine the correct position to install the bracket using the provided drilling template."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-recommended-fs2.svg",
+          src: "/img/device/installation-recommended-fsf2.png",
           className: "none",
+          width: "35%",
           alone: true
         }), "\n", (0,jsx_runtime.jsx)(_installation_bracket_notes/* ["default"] */.Ay, {
-          height: 110
+          height1: 124,
+          height2: 127
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "Secure the bracket tightly using the fixing screws at the location where the product will be mounted."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device1-fs2.svg",
+          src: "/img/device/installation-device1-fsf2.png",
           className: "none",
+          width: "25%",
           alone: true
         }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
           type: "info",
@@ -2420,7 +2421,7 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsxs)(Column, {
               className: "text--center",
               children: [(0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/installation-wall1-fs2.png",
+                src: "/img/device/installation-wall1-fsf2.png",
                 className: "none",
                 width: "60%"
               }), (0,jsx_runtime.jsx)("div", {
@@ -2451,7 +2452,7 @@ function _createMdxContent(props) {
                         style: {
                           textAlign: "center"
                         },
-                        children: "283 mm"
+                        children: "200 mm"
                       })]
                     }), (0,jsx_runtime.jsxs)(_components.tr, {
                       children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -2463,7 +2464,7 @@ function _createMdxContent(props) {
                         style: {
                           textAlign: "center"
                         },
-                        children: "275 mm"
+                        children: "180 mm"
                       })]
                     }), (0,jsx_runtime.jsxs)(_components.tr, {
                       children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -2475,7 +2476,7 @@ function _createMdxContent(props) {
                         style: {
                           textAlign: "center"
                         },
-                        children: "260 mm"
+                        children: "150 mm"
                       })]
                     })]
                   })]
@@ -2484,9 +2485,9 @@ function _createMdxContent(props) {
             }), (0,jsx_runtime.jsx)(Column, {
               className: "text--center",
               children: (0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/installation-wall2-fs2.png",
+                src: "/img/device/installation-wall2-fsf2.png",
                 className: "none",
-                width: "60%"
+                width: "65%"
               })
             })]
           }), (0,jsx_runtime.jsxs)(_components.ul, {
@@ -2497,162 +2498,25 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Mount the product on the fixed bracket."
+          children: "After installing the cable cover, tighten the six screws in the cover firmly, and mount the product on the fixed bracket."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device2-fs2.svg",
+          src: "/img/device/installation-device2-fsf2.png",
           className: "none",
-          alone: true
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Rotate the fixing screws to assemble the product with the bracket."
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device3-fs2.svg",
-          className: "none",
+          width: "25%",
           alone: true
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsx)(_components.p, {
-            children: "When assembling the product with the bracket, you can use the included bracket fixing screw (Star Shaped) instead of the product fixing screw for enhanced security."
+            children: "IMake sure that the cable cover is completely closed after connecting it to the product to maintain the water-resistant and dust-resistant features (IP65 rating)."
           })
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "tilting-bracket",
-      children: "Tilting Bracket"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "This product can be installed to allow angle adjustments during certification using a dedicated tilting bracket. The dedicated tilting bracket is sold separately."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Determine the correct position to install the bracket using the provided drilling template."
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-recommended-fs2.svg",
-          className: "none",
-          alone: true
-        }), "\n", (0,jsx_runtime.jsx)(_installation_bracket_notes/* ["default"] */.Ay, {
-          height: 110
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Secure the tilting bracket firmly at the location where the product will be mounted using the screws designed for the tilting bracket."
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device-tilt_bracket1-fs2.svg",
-          className: "none",
-          alone: true
-        }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-          type: "info",
-          children: [(0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "If installing the product on a concrete wall, drill a hole, insert a PVC anchor, and secure it with a fixing screw."
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "To avoid RF interference, a minimum separation distance must be maintained."
-              }), "\n"]
-            }), "\n"]
-          }), (0,jsx_runtime.jsxs)(Columns, {
-            children: [(0,jsx_runtime.jsxs)(Column, {
-              className: "text--center",
-              children: [(0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/installation-wall1-fs2.png",
-                className: "none",
-                width: "60%"
-              }), (0,jsx_runtime.jsx)("div", {
-                className: "overflow-x",
-                children: (0,jsx_runtime.jsxs)(_components.table, {
-                  children: [(0,jsx_runtime.jsx)(_components.thead, {
-                    children: (0,jsx_runtime.jsxs)(_components.tr, {
-                      children: [(0,jsx_runtime.jsx)(_components.th, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "Wall thickness"
-                      }), (0,jsx_runtime.jsx)(_components.th, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "Distance"
-                      })]
-                    })
-                  }), (0,jsx_runtime.jsxs)(_components.tbody, {
-                    children: [(0,jsx_runtime.jsxs)(_components.tr, {
-                      children: [(0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "100 mm"
-                      }), (0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "283 mm"
-                      })]
-                    }), (0,jsx_runtime.jsxs)(_components.tr, {
-                      children: [(0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "120 mm"
-                      }), (0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "275 mm"
-                      })]
-                    }), (0,jsx_runtime.jsxs)(_components.tr, {
-                      children: [(0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "150 mm"
-                      }), (0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "260 mm"
-                      })]
-                    })]
-                  })]
-                })
-              })]
-            }), (0,jsx_runtime.jsx)(Column, {
-              className: "text--center",
-              children: (0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/installation-wall2-fs2.png",
-                className: "none",
-                width: "60%"
-              })
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-              children: "When using a mobile access card, install devices maintaining a minimum distance of 1 m between devices to avoid BLE interference."
-            }), "\n"]
-          })]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Secure the bracket firmly on top of the tilting bracket."
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device-tilt_bracket2-fs2.svg",
-          className: "none",
-          alone: true
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Mount the product on the fixed bracket."
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device-tilt_bracket3-fs2.svg",
-          className: "none",
-          alone: true
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "Rotate the fixing screws to assemble the product with the bracket."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device-tilt_bracket4-fs2.svg",
+          src: "/img/device/installation-device3-fsf2.png",
           className: "none",
+          width: "25%",
           alone: true
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
@@ -2662,9 +2526,11 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_power_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_network_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_input_connetion/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_relay_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_standalone_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {
-      product: "FaceStation 2"
+      product: "FaceStation F2",
+      product_2: "BioStation 3"
     }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_secure_io2_connection/* ["default"] */.Ay, {}), "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {
-      product: "FaceStation 2"
+      product: "FaceStation F2",
+      product_2: "BioStation 3"
     }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_wiegand_connection/* ["default"] */.Ay, {})]
   });
 }

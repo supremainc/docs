@@ -1593,10 +1593,11 @@ function getting_started_createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Badge, Cmd, Image, Row, Table, Tbody, Td} = _components;
+  }, {Badge, Cmd, Image, PageBreak, Row, Table, Tbody, Td} = _components;
   if (!Badge) getting_started_missingMdxReference("Badge", true);
   if (!Cmd) getting_started_missingMdxReference("Cmd", true);
   if (!Image) getting_started_missingMdxReference("Image", true);
+  if (!PageBreak) getting_started_missingMdxReference("PageBreak", true);
   if (!Row) getting_started_missingMdxReference("Row", true);
   if (!Table) getting_started_missingMdxReference("Table", true);
   if (!Tbody) getting_started_missingMdxReference("Tbody", true);
@@ -1784,7 +1785,7 @@ function getting_started_createMdxContent(props) {
               children: "Yellow blinking: Waiting for input."
             }), "\n"]
           }), "\n"]
-        }), "\n"]
+        }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -1889,9 +1890,9 @@ function getting_started_createMdxContent(props) {
           }), ": Connects the USB memory."]
         }), "\n"]
       }), "\n"]
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_getting_started_cables_and_connectors/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(MDXContent, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_face_enrollment_authentication_method/* ["default"] */.Ay, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_getting_started_cables_and_connectors/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(MDXContent, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_face_enrollment_authentication_method/* ["default"] */.Ay, {
       name: "90-100 cm"
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_enroll_fingerprint/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_enroll_fingerprint/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "notes-on-qrbarcode-and-device-license",
       children: "Notes on QR/Barcode and Device License"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
@@ -1906,7 +1907,7 @@ function getting_started_createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Keep the distance between the device's camera and the QR/barcode at 5-20 cm."
+          children: "Keep the distance between the device's camera and the QR/barcode at 8-25 cm."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {

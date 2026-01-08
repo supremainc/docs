@@ -826,7 +826,7 @@ function _createMdxContent(props) {
             }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
               type: "info",
               children: (0,jsx_runtime.jsx)(_components.p, {
-                children: "After disabling this setting, use BioStar 2 v2.9.7 or higher."
+                children: "After disabling this setting, connect to BioStar 2 v2.9.7 or later or BioStar X."
               })
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {

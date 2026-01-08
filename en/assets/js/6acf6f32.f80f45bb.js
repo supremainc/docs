@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["28576"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["71089"], {
 5623: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
@@ -413,12 +413,12 @@ function _createMdxContent(props) {
       id: "lan-connection-connecting-to-a-hub",
       children: "LAN connection (connecting to a hub)"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "bioentry_w3,facestation_f2,corestation_40,corestation_20,bioentry_w2,biolite_n2,biostation_2a,biostation_3,facestation_2,xpass_s2,xstation_2,biostation_3_max",
+      product: "bioentry_w3,facestation_f2,corestation_40,corestation_20,bioentry_w2,biolite_n2,biostation_2a,biostation_3,facestation_2,xpass_s2,xstation_2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: "You can connect the product to a hub using a general type CAT-5 cable."
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "bioentry_p2,xpass_2,xpass_q2",
+      product: "bioentry_p2,xpass_2,xpass_q2,biostation_3_max",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: "You can connect to the hub using a standard CAT-5e cable."
       })
@@ -533,9 +533,14 @@ function _createMdxContent(props) {
       id: "lan-connection-connecting-to-a-pc-directly",
       children: "LAN connection (connecting to a PC directly)"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "bioentry_w3,facestation_f2,bioentry_w2,biolite_n2,biostation_2a,biostation_3,facestation_2,xstation_2,biostation_3_max",
+      product: "bioentry_w3,facestation_f2,bioentry_w2,biolite_n2,biostation_2a,biostation_3,facestation_2,xstation_2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: "This device has an automatic MDI/MDIX function so that it can be connected to a PC directly using a normal straight type CAT-5 cable or a cross cable."
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
+      product: "biostation_3_max",
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+        children: "This device features automatic MDI/MDIX, so it can connect directly to a PC using either a cross cable or a standard straight CAT-5e cable."
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "xpass_s2",
@@ -2314,7 +2319,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-79801: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+94117: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -2323,13 +2328,13 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_bioentry_w_2_installation_mdx_73e_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_xpass_q_2_installation_mdx_6ac_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-bioentry-w-2-installation-mdx-73e.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_bioentry_w_2_installation_mdx_73e_namespaceObject = JSON.parse('{"id":"device/bioentry_w2/installation","title":"Installation","description":"Provides the complete installation procedures and connection examples required for the device.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/bioentry_w2/installation.mdx","sourceDirName":"device/bioentry_w2","slug":"/device/bioentry_w2/installation","permalink":"/docs/en/device/bioentry_w2/installation","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/bioentry_w2/installation.mdx","tags":[],"version":"current","frontMatter":{"id":"installation","title":"Installation","description":"Provides the complete installation procedures and connection examples required for the device.","keywords":["Bracket","Power","Network","Input","Relay","Standalone","Secure I/O","Wiegand"],"isTranslationMissing":false},"sidebar":"bioentryw2","previous":{"title":"Getting Started","permalink":"/docs/en/device/bioentry_w2/getting-started"},"next":{"title":"Product Specifications","permalink":"/docs/en/device/bioentry_w2/product-specifications"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-xpass-q-2-installation-mdx-6ac.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_xpass_q_2_installation_mdx_6ac_namespaceObject = JSON.parse('{"id":"device/xpass_q2/installation","title":"Installation","description":"Provides the complete installation procedures and connection examples required for the device.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/xpass_q2/installation.mdx","sourceDirName":"device/xpass_q2","slug":"/device/xpass_q2/installation","permalink":"/docs/en/device/xpass_q2/installation","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/xpass_q2/installation.mdx","tags":[],"version":"current","frontMatter":{"id":"installation","title":"Installation","description":"Provides the complete installation procedures and connection examples required for the device.","keywords":["Bracket","Power","Network","Input","Relay","Standalone","Secure I/O","Wiegand"],"isTranslationMissing":false},"sidebar":"xpassq2","previous":{"title":"Getting Started","permalink":"/docs/en/device/xpass_q2/getting-started"},"next":{"title":"Product Specifications","permalink":"/docs/en/device/xpass_q2/product-specifications"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -2354,7 +2359,7 @@ var _device_wiegand_connection = __webpack_require__(98538);
 var _device_reset_network_settings = __webpack_require__(24804);
 // EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_device-factory-reset.mdx
 var _device_factory_reset = __webpack_require__(9672);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/bioentry_w2/installation.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/xpass_q2/installation.mdx
 
 
 const frontMatter = {
@@ -2387,7 +2392,6 @@ const assets = {
 /*공통 노트*/
 /*## Secure I/O 2 연결*/
 /*공통 노트*/
-/*BEW2 UL향 문구*/
 /*## Wiegand 연결*/
 /*## 네트워크 설정 초기화*/
 /*## 공장 초기화*/
@@ -2407,11 +2411,37 @@ const toc = [{
   "value": "Fixing the bracket and the product",
   "id": "fixing-the-bracket-and-the-product",
   "level": 2
-}, ..._device_power_connection/* .toc */.RM, ..._device_network_connection/* .toc */.RM, ..._device_input_connetion/* .toc */.RM, ..._device_relay_connection/* .toc */.RM, ..._device_standalone_connection/* .toc */.RM, ..._device_connection_standalone_secure_notes/* .toc */.RM, ..._device_secure_io2_connection/* .toc */.RM, ..._device_connection_standalone_secure_notes/* .toc */.RM, ..._device_wiegand_connection/* .toc */.RM, ..._device_reset_network_settings/* .toc */.RM, ..._device_factory_reset/* .toc */.RM];
+}, ..._device_power_connection/* .toc */.RM, {
+  "value": "Connect reader and lock power",
+  "id": "connect-reader-and-lock-power",
+  "level": 2
+}, {
+  "value": "Connect reader power",
+  "id": "connect-reader-power",
+  "level": 3
+}, {
+  "value": "Connect lock power",
+  "id": "connect-lock-power",
+  "level": 3
+}, {
+  "value": "Power-specific reader and lock power specifications",
+  "id": "power-specific-reader-and-lock-power-specifications",
+  "level": 3
+}, {
+  "value": "Maximum extension length by cable specification",
+  "id": "maximum-extension-length-by-cable-specification",
+  "level": 3
+}, ..._device_network_connection/* .toc */.RM, ..._device_input_connetion/* .toc */.RM, ..._device_relay_connection/* .toc */.RM, ..._device_standalone_connection/* .toc */.RM, ..._device_connection_standalone_secure_notes/* .toc */.RM, ..._device_secure_io2_connection/* .toc */.RM, ..._device_connection_standalone_secure_notes/* .toc */.RM, ..._device_wiegand_connection/* .toc */.RM, ..._device_reset_network_settings/* .toc */.RM, ..._device_factory_reset/* .toc */.RM, {
+  "value": "Firmware upgrade",
+  "id": "firmware-upgrade",
+  "level": 2
+}];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
     admonition: "admonition",
     h2: "h2",
+    h3: "h3",
     li: "li",
     ol: "ol",
     p: "p",
@@ -2424,10 +2454,17 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Column, Columns, Image} = _components;
+  }, {Column, Columns, Image, PageBreak, Row, Table, Tbody, Td, Th, Thead} = _components;
   if (!Column) _missingMdxReference("Column", true);
   if (!Columns) _missingMdxReference("Columns", true);
   if (!Image) _missingMdxReference("Image", true);
+  if (!PageBreak) _missingMdxReference("PageBreak", true);
+  if (!Row) _missingMdxReference("Row", true);
+  if (!Table) _missingMdxReference("Table", true);
+  if (!Tbody) _missingMdxReference("Tbody", true);
+  if (!Td) _missingMdxReference("Td", true);
+  if (!Th) _missingMdxReference("Th", true);
+  if (!Thead) _missingMdxReference("Thead", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "Provides the complete installation procedures and connection examples required for the device."
@@ -2439,8 +2476,9 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "Secure the bracket tightly using the fixing screws at the location where the product will be mounted."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device1-bew2.svg",
+          src: "/img/device/installation-device1-xpq2.svg",
           className: "none",
+          width: "20%",
           alone: true
         }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
           type: "info",
@@ -2458,7 +2496,7 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsxs)(Column, {
               className: "text--center",
               children: [(0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/installation-wall1-bew2.png",
+                src: "/img/device/installation-wall1-xpq2.png",
                 className: "none",
                 width: "60%"
               }), (0,jsx_runtime.jsx)("div", {
@@ -2522,37 +2560,47 @@ function _createMdxContent(props) {
             }), (0,jsx_runtime.jsx)(Column, {
               className: "text--center",
               children: (0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/installation-wall2-bew2.png",
+                src: "/img/device/installation-wall2-xpq2.png",
                 className: "none",
                 width: "60%"
               })
             })]
           }), (0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "When using a mobile access card, install devices maintaining a minimum distance of 1 m between devices to avoid BLE interference."
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "Wireless electronic products must be used in the same manner as physical credentials and must transmit user data over short distances."
-              }), "\n"]
+            children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+              children: "When using a mobile access card, install devices maintaining a minimum distance of 1 m between devices to avoid BLE interference."
             }), "\n"]
           })]
+        }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Tighten the four screws securing the cable cover."
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/device/installation-device2-xpq2.svg",
+          className: "none",
+          width: "20%",
+          alone: true
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "IMake sure that the cable cover is completely closed after connecting it to the product to maintain the water-resistant and dust-resistant features (IP65 rating)."
+          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "Mount the product on the fixed bracket."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device2-bew2.svg",
+          src: "/img/device/installation-device3-xpq2.svg",
           className: "none",
+          width: "35%",
           alone: true
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "Rotate the fixing screws to assemble the product with the bracket."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device3-bew2.svg",
+          src: "/img/device/installation-device4-xpq2.svg",
           className: "none",
+          width: "15%",
           alone: true
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
@@ -2561,15 +2609,259 @@ function _createMdxContent(props) {
           })
         }), "\n"]
       }), "\n"]
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_power_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_network_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_input_connetion/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_relay_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_standalone_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_secure_io2_connection/* ["default"] */.Ay, {}), "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {}), "\n", "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-          children: "This description of the Secure I/O 2 connection method has not been evaluated by UL294 standards."
-        }), "\n"]
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_power_connection/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "connect-reader-and-lock-power",
+      children: "Connect reader and lock power"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "connect-reader-power",
+      children: "Connect reader power"
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/device/installation-reader-power-connection-xpq2.png",
+      className: "none",
+      width: "65%"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "connect-lock-power",
+      children: "Connect lock power"
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/device/installation-lock-power-connection-xpq2.png",
+      className: "none",
+      width: "65%"
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "power-specific-reader-and-lock-power-specifications",
+      children: "Power-specific reader and lock power specifications"
+    }), "\n", (0,jsx_runtime.jsx)("div", {
+      className: "overflow-x",
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              style: {
+                textAlign: "center"
+              },
+              children: "Power"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              style: {
+                textAlign: "center"
+              },
+              children: "Maximum reader current"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              style: {
+                textAlign: "center"
+              },
+              children: "Maximum lock current"
+            })]
+          })
+        }), (0,jsx_runtime.jsxs)(_components.tbody, {
+          children: [(0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "DC 12V"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "500 mA"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "1.2 A"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "DC 24V"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "250 mA"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "600 mA"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "PoE (12V out)"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "500 mA"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              style: {
+                textAlign: "center"
+              },
+              children: "Not supported"
+            })]
+          })]
+        })]
       })
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_wiegand_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_reset_network_settings/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_factory_reset/* ["default"] */.Ay, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "maximum-extension-length-by-cable-specification",
+      children: "Maximum extension length by cable specification"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "The distance that can be connected may vary depending on the cable specifications and installation environment used for power connection. If cable connections are made improperly it may cause the device to malfunction. The product supports DC 12 V, DC 24 V, and PoE. Check the maximum extension length for each cable gauge and connect the power correctly."
+    }), "\n", (0,jsx_runtime.jsxs)(Table, {
+      children: [(0,jsx_runtime.jsxs)(Thead, {
+        children: [(0,jsx_runtime.jsxs)(Row, {
+          children: [(0,jsx_runtime.jsx)(Th, {
+            rowspan: 2,
+            children: "Cable Specification"
+          }), (0,jsx_runtime.jsx)(Th, {
+            colspan: 2,
+            children: "DC 12V"
+          }), (0,jsx_runtime.jsx)(Th, {
+            colspan: 2,
+            children: "DC 24V"
+          }), (0,jsx_runtime.jsx)(Th, {
+            colspan: 2,
+            children: "PoE (12V Output)"
+          })]
+        }), (0,jsx_runtime.jsxs)(Row, {
+          children: [(0,jsx_runtime.jsx)(Th, {
+            children: "Reader (500 mA)"
+          }), (0,jsx_runtime.jsx)(Th, {
+            children: "Lock (1.2 A)"
+          }), (0,jsx_runtime.jsx)(Th, {
+            children: "Reader (250 mA)"
+          }), (0,jsx_runtime.jsx)(Th, {
+            children: "Lock (600 mA)"
+          }), (0,jsx_runtime.jsx)(Th, {
+            children: "Reader (500 mA)"
+          })]
+        })]
+      }), (0,jsx_runtime.jsxs)(Tbody, {
+        children: [(0,jsx_runtime.jsxs)(Row, {
+          className: "center",
+          children: [(0,jsx_runtime.jsx)(Td, {
+            children: "14 AWG"
+          }), (0,jsx_runtime.jsx)(Td, {
+            children: "190 m"
+          }), (0,jsx_runtime.jsx)(Td, {
+            children: "95 m"
+          }), (0,jsx_runtime.jsx)(Td, {
+            children: "770 m"
+          }), (0,jsx_runtime.jsx)(Td, {
+            children: "385 m"
+          }), (0,jsx_runtime.jsx)(Td, {
+            children: "190 m"
+          })]
+        }), (0,jsx_runtime.jsxs)(Row, {
+          className: "center",
+          children: [(0,jsx_runtime.jsx)(Td, {
+            children: "16 AWG"
+          }), (0,jsx_runtime.jsx)(Td, {
+            children: "120 m"
+          }), (0,jsx_runtime.jsx)(Td, {
+            children: "60 m"
+          }), (0,jsx_runtime.jsx)(Td, {
+            children: "480 m"
+          }), (0,jsx_runtime.jsx)(Td, {
+            children: "240 m"
+          }), (0,jsx_runtime.jsx)(Td, {
+            children: "120 m"
+          })]
+        }), (0,jsx_runtime.jsxs)(Row, {
+          className: "center",
+          children: [(0,jsx_runtime.jsx)(Td, {
+            children: "18 AWG"
+          }), (0,jsx_runtime.jsx)(Td, {
+            children: "75 m"
+          }), (0,jsx_runtime.jsx)(Td, {
+            children: "35 m"
+          }), (0,jsx_runtime.jsx)(Td, {
+            children: "300 m"
+          }), (0,jsx_runtime.jsx)(Td, {
+            children: "150 m"
+          }), (0,jsx_runtime.jsx)(Td, {
+            children: "75 m"
+          })]
+        })]
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsx)(_components.p, {
+        children: "The actual maximum extension length can vary depending on the resistance of the cable manufacturer and model."
+      })
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_network_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_input_connetion/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_relay_connection/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_standalone_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_secure_io2_connection/* ["default"] */.Ay, {}), "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_wiegand_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_reset_network_settings/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_factory_reset/* ["default"] */.Ay, {
       name: "green"
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "firmware-upgrade",
+      children: "Firmware upgrade"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "You can connect a USB memory stick to upgrade the firmware."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Save the firmware file to a USB memory stick for upgrade."
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "It is recommended to save only one firmware file on the USB memory stick for the upgrade."
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Connect the USB memory stick to the device."
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "Authentication is temporarily suspended while the USB memory is being read."
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "When the LED/buzzer indicates an authentication request, authenticate with an administrator credential."
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: ["Register the administrator on BioStar X for the device. You cannot proceed with the firmware upgrade if an administrator is not registered on the device. For detailed information on how to register an administrator, please refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+                  href: "../../platform/biostar_x/set-permission",
+                  children: "BioStar X Administrator Guide"
+                }), "."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "Only one authentication attempt is allowed per USB memory insertion."
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                children: "If authentication fails, the LED/buzzer indicates the failure and USB reading ends. Disconnect the USB memory and reconnect it to the device."
+              }), "\n"]
+            }), "\n"]
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "After successful administrator authentication, the device performs a firmware upgrade and indicates the upgrade with the LED."
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "If the firmware file is missing or corrupted, the upgrade does not proceed and the LED/buzzer indicates failure."
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "The device restarts automatically after the firmware upgrade is complete."
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "caution",
+      children: (0,jsx_runtime.jsx)(_components.p, {
+        children: "Do not disconnect the power supply while upgrading the firmware of the device. The device may malfunction."
+      })
     })]
   });
 }

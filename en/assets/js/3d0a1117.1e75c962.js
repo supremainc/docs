@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["76544"], {
-98022: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["44654"], {
+92910: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,18 +9,18 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_max_authentication_mdx_5f2_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_facestation_f_2_authentication_mdx_3d0_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-biostation-3-max-authentication-mdx-5f2.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_max_authentication_mdx_5f2_namespaceObject = JSON.parse('{"id":"device/biostation_3_max/authentication","title":"Authentication","description":"Describes the supported authentication methods and authentication procedures.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3_max/authentication.mdx","sourceDirName":"device/biostation_3_max","slug":"/device/biostation_3_max/authentication","permalink":"/docs/en/device/biostation_3_max/authentication","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3_max/authentication.mdx","tags":[],"version":"current","frontMatter":{"id":"authentication","title":"Authentication","description":"Describes the supported authentication methods and authentication procedures.","keywords":["Authentication mode","Operation","PIN","Face","T&A (Time and Attendance)"],"isTranslationMissing":false},"sidebar":"biostation3max","previous":{"title":"User","permalink":"/docs/en/device/biostation_3_max/user"},"next":{"title":"Settings","permalink":"/docs/en/device/biostation_3_max/settings"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-facestation-f-2-authentication-mdx-3d0.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_facestation_f_2_authentication_mdx_3d0_namespaceObject = JSON.parse('{"id":"device/facestation_f2/authentication","title":"Authentication","description":"Describes the supported authentication methods and authentication procedures.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/facestation_f2/authentication.mdx","sourceDirName":"device/facestation_f2","slug":"/device/facestation_f2/authentication","permalink":"/docs/en/device/facestation_f2/authentication","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/facestation_f2/authentication.mdx","tags":[],"version":"current","frontMatter":{"id":"authentication","title":"Authentication","description":"Describes the supported authentication methods and authentication procedures.","keywords":["Authentication mode","Operation","PIN","Face","T&A (Time and Attendance)"],"isTranslationMissing":false},"sidebar":"facestationf2","previous":{"title":"User","permalink":"/docs/en/device/facestation_f2/user"},"next":{"title":"Settings","permalink":"/docs/en/device/facestation_f2/settings"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3_max/authentication.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/facestation_f2/authentication.mdx
 
 
 const frontMatter = {
@@ -61,36 +61,24 @@ const toc = [{
   "id": "delete-auth-mode",
   "level": 3
 }, {
-  "value": "Operation",
-  "id": "operation",
-  "level": 2
-}, {
   "value": "Server matching",
   "id": "server-matching",
-  "level": 3
-}, {
-  "value": "QR authentication",
-  "id": "qr-authentication",
-  "level": 3
-}, {
-  "value": "PIN",
-  "id": "pin",
-  "level": 2
-}, {
-  "value": "Auth result display option",
-  "id": "auth-result-display-option",
   "level": 2
 }, {
   "value": "Face",
   "id": "face",
   "level": 2
 }, {
-  "value": "Fingerprint <Badge>BS3M-ODB, BS3M-OAPB</Badge>",
+  "value": "Fingerprint <Badge>FSF2-ODB</Badge>",
   "id": "fingerprint",
   "level": 2
 }, {
   "value": "T&amp;A (Time and Attendance)",
   "id": "ta-time-and-attendance",
+  "level": 2
+}, {
+  "value": "Auth result display option",
+  "id": "auth-result-display-option",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -105,9 +93,11 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Badge, Cmd, Image} = _components;
+  }, {Badge, Cmd, Column, Columns, Image} = _components;
   if (!Badge) _missingMdxReference("Badge", true);
   if (!Cmd) _missingMdxReference("Cmd", true);
+  if (!Column) _missingMdxReference("Column", true);
+  if (!Columns) _missingMdxReference("Columns", true);
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
@@ -115,27 +105,12 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "authentication-mode",
       children: "Authentication mode"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Set the authentication mode. Combine ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "ui_228",
-        product: "dev"
-      }), "PIN, ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "ui_040",
-        product: "dev"
-      }), "Card / QR Code", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "ui_312",
-        product: "dev"
-      }), ", and ", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "ui_020",
-        product: "dev"
-      }), "ID", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "ui_323",
-        product: "dev"
-      }), " to create authentication modes and set a schedule for each mode."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Set the authentication mode. You can use face, fingerprint, PIN, card, and ID in combination as authentication modes, and you can also set the schedule for each authentication mode."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "Fingerprint authentication is available only on BS3M-ODB and BS3M-OAPB."
+        children: "Fingerprint authentication is only available on the FSF2-ODB product."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "registering-auth-mode",
@@ -157,87 +132,23 @@ function _createMdxContent(props) {
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_261",
             product: "dev"
+          }), " → ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-add2.svg",
+            ico: true,
+            alone: true
           }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Select ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/common/ico-add.svg",
-            ico: true,
-            alone: true
-          }), "."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Pressing ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-add1.svg",
             ico: true,
             alone: true
-          }), " will display the credential that can be added on the screen. Select the credentials to add. Press the ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/common/ico-cancel.svg",
-            ico: true,
-            alone: true
-          }), " while the credential is added, and the added credential will be deleted."]
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/bs3m-add-auth-mode.png"
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-face-bs3m.png",
-                ico: true,
-                alone: true
-              }), ": Face, ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-fingerprint-bs3m.png",
-                ico: true,
-                alone: true
-              }), ": Fingerprint, ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-card-qr-bs3m.png",
-                ico: true,
-                alone: true
-              }), ": Card / QR code, ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-id-bs3m.png",
-                ico: true,
-                alone: true
-              }), ": ID, ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-pin-bs3m.png",
-                ico: true,
-                alone: true
-              }), ": PIN"]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["You can combine selected authentication methods to authenticate all in order or choose to authenticate only some of the selected methods. For example, with the combination ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-card-qr-bs3m.png",
-                ico: true,
-                alone: true
-              }), " + ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-face-bs3m.png",
-                ico: true,
-                alone: true
-              }), " + ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-pin-bs3m.png",
-                ico: true,
-                alone: true
-              }), ", authenticate with card / QR code, face, and PIN. With the combination ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-card-qr-bs3m.png",
-                ico: true,
-                alone: true
-              }), " + ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-face-bs3m.png",
-                ico: true,
-                alone: true
-              }), " / ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-pin-bs3m.png",
-                ico: true,
-                alone: true
-              }), ", authenticate with card / QR code first, and then enter either face or PIN."]
-            }), "\n"]
-          }), "\n"]
+          }), " and choose the authentication method you want to use. To set an additional authentication method, select it in the same way and combine it."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["After setting the desired authentication mode, set ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Set ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_203",
             product: "dev"
           }), "."]
@@ -246,10 +157,41 @@ function _createMdxContent(props) {
           children: (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: ["You can combine selected authentication methods to authenticate all in order or choose to authenticate only some of the selected methods. For example, when combined as ", (0,jsx_runtime.jsx)(Image, {
+                  src: "/img/common/ico-authmode-card.png",
+                  ico: true,
+                  alone: true
+                }), " + ", (0,jsx_runtime.jsx)(Image, {
+                  src: "/img/common/ico-authmode-face-bs3.png",
+                  ico: true,
+                  alone: true
+                }), " + ", (0,jsx_runtime.jsx)(Image, {
+                  src: "/img/common/ico-authmode-pin-bs3.png",
+                  ico: true,
+                  alone: true
+                }), ", you must authenticate the card, face, and PIN; when combined as ", (0,jsx_runtime.jsx)(Image, {
+                  src: "/img/common/ico-authmode-card.png",
+                  ico: true,
+                  alone: true
+                }), " + ", (0,jsx_runtime.jsx)(Image, {
+                  src: "/img/common/ico-authmode-face-bs3.png",
+                  ico: true,
+                  alone: true
+                }), " / ", (0,jsx_runtime.jsx)(Image, {
+                  src: "/img/common/ico-authmode-pin-bs3.png",
+                  ico: true,
+                  alone: true
+                }), ", you must authenticate the card and then enter the face or PIN."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                 children: [(0,jsx_runtime.jsx)(Cmd, {
                   sid: "ui_203",
                   product: "dev"
-                }), " can be set in BioStar X. If no schedule is set, only ", (0,jsx_runtime.jsx)(Cmd, {
+                }), " can be set in BioStar X. If there is no schedule set, only ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_163",
+                  product: "dev"
+                }), " and ", (0,jsx_runtime.jsx)(Cmd, {
                   sid: "ui_361",
                   product: "dev"
                 }), " can be selected."]
@@ -262,25 +204,6 @@ function _createMdxContent(props) {
                 }), " settings, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
                   href: "../../platform/biostar_x/settings-schedule",
                   children: "BioStar X Administrator Guide"
-                }), "."]
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["To use ", (0,jsx_runtime.jsx)(Cmd, {
-                  sid: "ui_042",
-                  product: "dev"
-                }), " authentication, ", (0,jsx_runtime.jsx)(Cmd, {
-                  sid: "ui_256",
-                  product: "dev"
-                }), " must be clicked and ", (0,jsx_runtime.jsx)(Cmd, {
-                  sid: "ui_265",
-                  product: "dev"
-                }), " must have ", (0,jsx_runtime.jsx)(Cmd, {
-                  sid: "ui_041",
-                  product: "dev"
-                }), " activated, and a separate device license is required. For more information, refer to ", (0,jsx_runtime.jsx)(_components.a, {
-                  href: "settings#license",
-                  children: "License"
                 }), "."]
               }), "\n"]
             }), "\n"]
@@ -366,17 +289,20 @@ function _createMdxContent(props) {
           children: ["To delete the selected item, press ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_037",
             product: "dev"
-          }), "."]
+          }), ", then press ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "ui_367",
+            product: "dev"
+          }), ". Press ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "ui_321",
+            product: "dev"
+          }), " to return to the previous screen."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "operation",
-      children: "Operation"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "server-matching",
       children: "Server matching"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "You can set up server matching."
+      children: "You can set up server matching. Using server matching means that user authentication is performed on BioStar X, not on the device. Server matching can be useful when there is too much user information on the device or when the device is installed outside the entrance door."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -388,235 +314,59 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["After pressing ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Press ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_256",
             product: "dev"
-          }), ", activate ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_265",
-            product: "dev"
-          }), " in ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_187",
+          }), " then enable ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "ui_185",
             product: "dev"
           }), "."]
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/bs3m-operation.png"
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "ui_187",
-              product: "dev"
-            }), ": When server matching is set, user authentication is performed by BioStar X without the device performing user authentication. It can be used when the device has too much user information or when the device is installed outside."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-          type: "info",
-          children: (0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: [(0,jsx_runtime.jsx)(Cmd, {
-                  sid: "ui_185",
-                  product: "dev"
-                }), " can only use cards and IDs."]
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["If you use ", (0,jsx_runtime.jsx)(Cmd, {
-                  sid: "ui_185",
-                  product: "dev"
-                }), ", you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
-                  href: "../../platform/biostar_x/settings-server-server#servermatching",
-                  children: "BioStar X Administrator Guide"
-                }), "."]
-              }), "\n"]
-            }), "\n"]
-          })
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "qr-authentication",
-      children: "QR authentication"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "You can activate QR code authentication."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/common/ico-menu.svg",
-            ico: true,
-            alone: true
-          }), " and authenticate with the Admin level credential."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["After pressing ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_256",
-            product: "dev"
-          }), ", activate ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_265",
-            product: "dev"
-          }), " for ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_041",
-            product: "dev"
-          }), "."]
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/bs3m-operation.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_041",
+              children: [(0,jsx_runtime.jsx)(Badge, {
+                only: true,
+                children: "FSF2-ODB"
+              }), ": ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_186",
                 product: "dev"
-              }), ": Set whether to use QR code authentication through the device's camera."]
+              })]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_329",
+              children: [(0,jsx_runtime.jsx)(Badge, {
+                only: true,
+                children: "FSF2-DB, FSF2-AB"
+              }), ": ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_187",
                 product: "dev"
-              }), ": You can set up authentication with a QR code that has the same data as the CSN card or Wiegand card issued to the user. This can only be set when ", (0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_041",
-                product: "dev"
-              }), " is activated."]
+              })]
             }), "\n"]
           }), "\n"]
-        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-          type: "info",
-          children: (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["A separate device license is required to use ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "ui_041",
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "ui_185",
               product: "dev"
-            }), ". For more information, refer to ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "settings#license",
-              children: "License"
+            }), " can only use fingerprint, card, and ID."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["If you use ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "ui_185",
+              product: "dev"
+            }), ", you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "../../platform/biostar_x/settings-server-server#servermatching",
+              children: "BioStar X Administrator Guide"
             }), "."]
-          })
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "pin",
-      children: "PIN"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Set whether to use the scramble keypad when entering passwords."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/common/ico-menu.svg",
-            ico: true,
-            alone: true
-          }), " and authenticate with the Admin level credential."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["After pressing ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_256",
-            product: "dev"
-          }), ", set whether to use ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_040",
-            product: "dev"
-          }), " in ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_204",
-            product: "dev"
-          }), "."]
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/bs3m-pin.png"
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "ui_204",
-              product: "dev"
-            }), ": The positions of numeric keys can be scrambled randomly when entering a password to prevent password leaks."]
           }), "\n"]
         }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "auth-result-display-option",
-      children: "Auth result display option"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "You can set the auth result display option."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/common/ico-menu.svg",
-            ico: true,
-            alone: true
-          }), " and authenticate with the Admin level credential."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["After pressing ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_256",
-            product: "dev"
-          }), ", change the desired items in ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_259",
-            product: "dev"
-          }), "."]
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/bs3m-auth-result-display-option.png"
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_169",
-                product: "dev"
-              }), ": Select how the user ID appears on the device's authentication result screen."]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "ui_307",
-                    product: "dev"
-                  }), ": Show the entire user ID."]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "ui_316",
-                    product: "dev"
-                  }), ": Show only the first character of the user ID."]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "ui_357",
-                    product: "dev"
-                  }), ": Do not show the user ID."]
-                }), "\n"]
-              }), "\n"]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_177",
-                product: "dev"
-              }), ": Select how the user name appears on the device's authentication result screen."]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "ui_307",
-                    product: "dev"
-                  }), ": Show the entire user name."]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "ui_316",
-                    product: "dev"
-                  }), ": Show only the first character of the user name."]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "ui_357",
-                    product: "dev"
-                  }), ": Do not show the user name."]
-                }), "\n"]
-              }), "\n"]
-            }), "\n"]
-          }), "\n"]
-        }), "\n"]
-      }), "\n"]
+      })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "face",
       children: "Face"
@@ -645,9 +395,26 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "Change the desired item."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/bs3m-face.png"
+          src: "/img/device/fsf2-auth.png",
+          width: 300
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_308",
+                product: "dev"
+              }), ": You can manually adjust the brightness of the device light. Set the brightness with ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_152",
+                product: "dev"
+              }), " or ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_107",
+                product: "dev"
+              }), " or select ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_162",
+                product: "dev"
+              }), " to turn the light off."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_140",
@@ -746,7 +513,7 @@ function _createMdxContent(props) {
             }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
               type: "info",
               children: (0,jsx_runtime.jsx)(_components.p, {
-                children: "After disabling this setting, use BioStar 2 v2.9.7 or higher."
+                children: "After disabling this setting, connect to BioStar 2 v2.9.7 or later or BioStar X."
               })
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -791,138 +558,398 @@ function _createMdxContent(props) {
                 sid: "ui_359",
                 product: "dev"
               }), "."]
-            }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-              type: "info",
-              children: (0,jsx_runtime.jsxs)(_components.ul, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                    children: "Face anti-spoofing performance has been improved to pass the iBeta Level 1 ISO 30107-3 Presentation Attack Detection Test."
-                  }), "\n"]
-                }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                  children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                    children: ["In strong sunlight, it is recommended to use the ", (0,jsx_runtime.jsx)(Cmd, {
-                      sid: "ui_247",
-                      product: "dev"
-                    }), " function as ", (0,jsx_runtime.jsx)(Cmd, {
-                      sid: "ui_152",
-                      product: "dev"
-                    }), "."]
-                  }), "\n"]
-                }), "\n"]
-              })
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_070",
                 product: "dev"
-              }), ": You can change advanced settings for facial authentication, such as mask detection."]
+              }), ": You can change advanced settings for face authentication, such as mask detection and thermal imaging camera functions."]
             }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "ui_368",
+                    product: "dev"
+                  }), ": You can set the confirmation mode according to the purpose."]
+                }), "\n"]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "ui_264",
+                    product: "dev"
+                  }), ": You can set the notification status for authentication failures due to no mask worn or exceeding the standard temperature."]
+                }), "\n"]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_123",
                     product: "dev"
                   }), ": You can set whether to use mask detection."]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "ui_067",
-                    product: "dev"
-                  }), ": You can set the method to check if a mask is worn. This is activated when the ", (0,jsx_runtime.jsx)(Cmd, {
-                    sid: "ui_123",
-                    product: "dev"
-                  }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
-                    sid: "ui_161",
-                    product: "dev"
-                  }), "."]
-                }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-                  type: "info",
-                  children: (0,jsx_runtime.jsxs)(_components.ul, {
-                    children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                        children: [(0,jsx_runtime.jsx)(Cmd, {
-                          sid: "ui_127",
-                          product: "dev"
-                        }), ": Users not wearing a mask are denied authentication, and a mask non-compliance event log is recorded."]
-                      }), "\n"]
-                    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                        children: [(0,jsx_runtime.jsx)(Cmd, {
-                          sid: "ui_126",
-                          product: "dev"
-                        }), ": Users not wearing a mask can still authenticate, but a mask non-compliance event log is recorded."]
-                      }), "\n"]
-                    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                        children: [(0,jsx_runtime.jsx)(Cmd, {
-                          sid: "ui_125",
-                          product: "dev"
-                        }), ": Only users not wearing a mask can be authenticated, and when this mode is used, the mask check mode is fixed to ", (0,jsx_runtime.jsx)(Cmd, {
-                          sid: "ui_369",
-                          product: "dev"
-                        }), "."]
-                      }), "\n"]
+                }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+                  children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                    children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                      children: [(0,jsx_runtime.jsx)(Cmd, {
+                        sid: "ui_165",
+                        product: "dev"
+                      }), ": Users without masks will be denied authentication, and maskless events will be recorded in the logs."]
                     }), "\n"]
-                  })
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "ui_124",
-                    product: "dev"
-                  }), ": Set the sensitivity for detecting mask usage. This is activated when the ", (0,jsx_runtime.jsx)(Cmd, {
-                    sid: "ui_123",
-                    product: "dev"
-                  }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
-                    sid: "ui_161",
-                    product: "dev"
-                  }), "."]
-                }), "\n"]
-              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(Cmd, {
-                    sid: "ui_368",
-                    product: "dev"
-                  }), ": Set the confirmation mode according to the purpose of the device."]
-                }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-                  type: "info",
-                  children: (0,jsx_runtime.jsxs)(_components.ul, {
-                    children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-                      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                        children: [(0,jsx_runtime.jsx)(Cmd, {
-                          sid: "ui_267",
-                          product: "dev"
-                        }), ": After authentication, check whether the user is wearing a mask."]
-                      }), "\n"]
-                    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                        children: [(0,jsx_runtime.jsx)(Cmd, {
-                          sid: "ui_369",
-                          product: "dev"
-                        }), ": Authenticate after checking whether the user is wearing a mask."]
-                      }), "\n"]
-                    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-                      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                        children: [(0,jsx_runtime.jsx)(Cmd, {
-                          sid: "ui_370",
-                          product: "dev"
-                        }), ": The device can only be used to check if a mask is worn. When this mode is activated, any user wearing a mask can access it regardless of authentication."]
-                      }), "\n"]
+                  }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                    children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                      children: [(0,jsx_runtime.jsx)(Cmd, {
+                        sid: "ui_164",
+                        product: "dev"
+                      }), ": Users without masks can still authenticate, but a maskless event will be logged."]
                     }), "\n"]
-                  })
+                  }), "\n"]
+                }), "\n"]
+              }), "\n"]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_236",
+                product: "dev"
+              }), ": You can set whether to use the thermal camera."]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "ui_165",
+                    product: "dev"
+                  }), ": Users exceeding the standard temperature range will be denied authentication, and the event will be logged as exceeding the standard temperature."]
+                }), "\n"]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "ui_164",
+                    product: "dev"
+                  }), ": Users exceeding the standard temperature range can still authenticate, but the event will be logged as temperature exceeding the standard."]
                 }), "\n"]
               }), "\n"]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["When using ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "ui_123",
+              product: "dev"
+            }), " or ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "ui_236",
+              product: "dev"
+            }), ", you can set ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "ui_368",
+              product: "dev"
+            }), " according to the device's purpose."]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_267",
+                  product: "dev"
+                }), ": After authentication, check whether the user is wearing a mask or measure temperature."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_369",
+                  product: "dev"
+                }), ": After checking whether the user is wearing a mask or measuring temperature, perform authentication. When using this mode, users without masks or exceeding the standard temperature cannot perform authentication."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_370",
+                  product: "dev"
+                }), ": The device can only be used for checking whether a mask is worn or for measuring temperature. When using this mode, users wearing masks or below the standard temperature can enter regardless of authentication."]
+              }), "\n"]
+            }), "\n"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["When ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "ui_236",
+              product: "dev"
+            }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "ui_161",
+              product: "dev"
+            }), ", advanced setting options for thermal imaging cameras are activated."]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_196",
+                  product: "dev"
+                }), ": You can set the temperature display unit."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_099",
+                  product: "dev"
+                }), ": You can set the minimum reference temperature to restrict access. Users with surface temperatures lower than ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_099",
+                  product: "dev"
+                }), " will be denied authentication. ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_099",
+                  product: "dev"
+                }), " can be set in the range of 1℃~45℃ and cannot be set higher than ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_106",
+                  product: "dev"
+                }), "."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_106",
+                  product: "dev"
+                }), ": You can set the maximum reference temperature to restrict access. Users with surface temperatures higher than ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_106",
+                  product: "dev"
+                }), " will be denied authentication. ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_106",
+                  product: "dev"
+                }), " can be set in the range of 1℃~45℃ and cannot be set lower than ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_099",
+                  product: "dev"
+                }), "."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_240",
+                  product: "dev"
+                }), ": You can set whether to save the user's temperature log. Using this option, both the success of authentication and the user's temperature value will be saved in the log; if not used, only the success of authentication will be logged."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_235",
+                  product: "dev"
+                }), ": Set whether to display infrared video on the device screen."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_114",
+                  product: "dev"
+                }), ": Set the device to automatically detect the area of interest (ROI) for measuring the user's temperature. For example, if there are other lights installed nearby, this option allows the thermal imaging camera to detect and measure the user's temperature instead of that lighting."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_331",
+                  product: "dev"
+                }), ": Set detailed options for the camera for accurate measurement."]
+              }), "\n"]
+            }), "\n"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["When ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "ui_236",
+              product: "dev"
+            }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "ui_161",
+              product: "dev"
+            }), ", you can set detailed options for the thermal imaging camera for accurate measurement according to the installation environment."]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_243",
+                  product: "dev"
+                }), ": Set the distance between the user and the thermal camera."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_296",
+                  product: "dev"
+                }), ": Set the infrared emissivity."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_045",
+                  product: "dev"
+                }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_046",
+                  product: "dev"
+                }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_048",
+                  product: "dev"
+                }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_047",
+                  product: "dev"
+                }), ": You can set the ROI (Region of Interest) manually when ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_114",
+                  product: "dev"
+                }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_162",
+                  product: "dev"
+                }), ". Adjust the ROI location and size to specify the area where the thermal camera will measure temperature. ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_045",
+                  product: "dev"
+                }), " indicates the left and right positions of the region of interest, and the larger this value, the further the region moves to the right of the screen. ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_046",
+                  product: "dev"
+                }), " indicates the top and bottom positions of the region of interest, and the larger this value, the further the region moves up. ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_048",
+                  product: "dev"
+                }), " and ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_047",
+                  product: "dev"
+                }), " indicate the size of the region of interest; as both values increase, the area for measuring temperature widens. For example, if the values of ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_045",
+                  product: "dev"
+                }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_046",
+                  product: "dev"
+                }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_048",
+                  product: "dev"
+                }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_047",
+                  product: "dev"
+                }), " are changed from default values to 40, 15, 70, 40 respectively, the region of interest will change as shown below."]
+              }), "\n"]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(Columns, {
+            children: [(0,jsx_runtime.jsxs)(Column, {
+              className: "text--center",
+              children: [(0,jsx_runtime.jsx)(Image, {
+                src: "/img/device/auth-roi1.png",
+                width: 200,
+                alone: true
+              }), (0,jsx_runtime.jsx)(_components.p, {
+                children: "If the ROI is set to the default value"
+              })]
+            }), (0,jsx_runtime.jsxs)(Column, {
+              className: "text--center",
+              children: [(0,jsx_runtime.jsx)(Image, {
+                src: "/img/device/auth-roi2.png",
+                width: 200,
+                alone: true
+              }), (0,jsx_runtime.jsxs)(_components.p, {
+                children: ["ROI X(%), ROI Y(%), ROI width(%), ROI height(%)", (0,jsx_runtime.jsx)("br", {}), "When the values are changed to 40, 15, 70, and 40, respectively"]
+              })]
+            })]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_241",
+                  product: "dev"
+                }), ": You can set the thermal imaging camera to correct the temperature autonomously, considering the environmental usage of the device and the surrounding temperature."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_242",
+                  product: "dev"
+                }), ": Depending on the product usage environment, you can adjust the temperature measures to be increased or decreased by a constant value. For example, if the temperature reading is always measured 0.1℃ higher, set the temperature correction value to -0.1."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_017",
+                  product: "dev"
+                }), ": If the thermal imaging camera is properly connected, the firmware version of that camera will be displayed."]
+              }), "\n"]
+            }), "\n"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["For optimal performance, it is recommended to use default settings for the sub-options of ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "ui_331",
+              product: "dev"
+            }), ". The default values of each option are as follows:"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_243",
+                  product: "dev"
+                }), ": 100"]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_296",
+                  product: "dev"
+                }), ": 0.98"]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_045",
+                  product: "dev"
+                }), ": 30"]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_046",
+                  product: "dev"
+                }), ": 25"]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_048",
+                  product: "dev"
+                }), ": 50"]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_047",
+                  product: "dev"
+                }), ": 55"]
+              }), "\n"]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "When using the ROI as the default setting, a yellow guide will be displayed in the ROI area of the screen during authentication as shown below. When the user's face is aligned within that area during authentication, accurate temperature measurements can be made. When manually changing the settings or using dynamic ROI, the yellow guide is not displayed."
+          }), "\n", (0,jsx_runtime.jsxs)(Columns, {
+            children: [(0,jsx_runtime.jsxs)(Column, {
+              className: "text--center",
+              children: [(0,jsx_runtime.jsx)(Image, {
+                src: "/img/device/auth-static-roi.png",
+                width: 200
+              }), (0,jsx_runtime.jsx)(_components.p, {
+                children: "If the ROI is set to the default value"
+              })]
+            }), (0,jsx_runtime.jsxs)(Column, {
+              className: "text--center",
+              children: [(0,jsx_runtime.jsx)(Image, {
+                src: "/img/device/auth-dynamic-roi.png",
+                width: 200
+              }), (0,jsx_runtime.jsx)(_components.p, {
+                children: "When changing ROI settings or using dynamic ROI"
+              })]
+            })]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "Mask authentication and thermal imaging camera functions are not available on slave devices."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "The thermal imaging camera supports TCM10-FSF2."
+          }), "\n"]
+        }), "\n"]
+      })
     }), "\n", (0,jsx_runtime.jsxs)(_components.h2, {
       id: "fingerprint",
       children: ["Fingerprint ", (0,jsx_runtime.jsx)(Badge, {
         only: true,
-        children: "BS3M-ODB, BS3M-OAPB"
+        children: "FSF2-ODB"
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "You can change the settings for fingerprint authentication."
@@ -1065,7 +1092,8 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "Change the desired item."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/bs3m-ta.png"
+          src: "/img/device/auth-tna.png",
+          width: 300
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -1079,20 +1107,14 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_086",
                 product: "dev"
-              }), ": Add time and attendance events. To register attendance events, select ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": Add time and attendance events. Select ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_086",
                 product: "dev"
               }), " → ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-add.svg",
+                src: "/img/common/ico-add2.svg",
                 ico: true,
                 alone: true
-              }), " and then set the icon to display on the screen, ", (0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_085",
-                product: "dev"
-              }), ", and ", (0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_203",
-                product: "dev"
-              }), "."]
+              }), " to add a time and attendance event, then set the icon to display, the event name, and the schedule."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -1126,6 +1148,100 @@ function _createMdxContent(props) {
                 sid: "ui_279",
                 product: "dev"
               }), ": Select whether to use job codes."]
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "auth-result-display-option",
+      children: "Auth result display option"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "You can set the auth result display option."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "ui_256",
+            product: "dev"
+          }), "."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Set the desired items in ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "ui_259",
+            product: "dev"
+          }), "."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/device/auth-result-display-option.png",
+          width: 300
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_169",
+                product: "dev"
+              }), ": Select how the user ID appears on the device's authentication result screen."]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "ui_307",
+                    product: "dev"
+                  }), ": Show the entire user ID."]
+                }), "\n"]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "ui_316",
+                    product: "dev"
+                  }), ": Show only the first character of the user ID."]
+                }), "\n"]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "ui_357",
+                    product: "dev"
+                  }), ": Do not show the user ID."]
+                }), "\n"]
+              }), "\n"]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_177",
+                product: "dev"
+              }), ": Select how the user name appears on the device's authentication result screen."]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "ui_307",
+                    product: "dev"
+                  }), ": Show the entire user name."]
+                }), "\n"]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "ui_316",
+                    product: "dev"
+                  }), ": Show only the first character of the user name."]
+                }), "\n"]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "ui_357",
+                    product: "dev"
+                  }), ": Do not show the user name."]
+                }), "\n"]
+              }), "\n"]
             }), "\n"]
           }), "\n"]
         }), "\n"]

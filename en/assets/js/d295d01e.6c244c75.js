@@ -38,7 +38,7 @@ const assets = {
 
 };
 
-/*Access control device that supports card and QR/Barcode authentication.*/
+/*카드 및 QR/바코드 인증을 지원하는 출입 통제 장치입니다.*/
 
 
 const toc = [];

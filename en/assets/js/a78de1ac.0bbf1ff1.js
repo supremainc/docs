@@ -191,10 +191,11 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Badge, Cmd, Image} = _components;
+  }, {Badge, Cmd, Image, PageBreak} = _components;
   if (!Badge) _missingMdxReference("Badge", true);
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
+  if (!PageBreak) _missingMdxReference("PageBreak", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "Describes how to register, edit, delete, and manage users."
@@ -260,7 +261,9 @@ function _createMdxContent(props) {
                 children: "-"
               }), " as the ID, with a maximum of 32 characters."]
             }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_228",
@@ -426,7 +429,7 @@ function _createMdxContent(props) {
           }), " to complete the registration of user information."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "enrolling-user-faces",
       children: "Enrolling user faces"
     }), "\n", "\n", (0,jsx_runtime.jsxs)(_components.ol, {
@@ -480,7 +483,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "The visual face data of this product are not compatible with face templates of FaceStation F2."
+                children: "The visual face data of this product are not compatible with face templates of FaceStation 2 or FaceLite."
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -497,7 +500,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsx)(_enrolling_face_warning/* ["default"] */.Ay, {})]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsxs)(_components.h2, {
       id: "enrolling-user-fingerprint",
       children: ["User fingerprint registration ", (0,jsx_runtime.jsx)(Badge, {
         only: true,
@@ -543,7 +546,7 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Fingerprint enrollment is only available on BS3M-ODB and BS3M-OAPB."
+            children: "Fingerprint enrollment is available only for BS3M-ODB and BS3M-OAPB products."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -607,6 +610,9 @@ function _createMdxContent(props) {
             sid: "ui_228",
             product: "dev"
           }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "ui_312",
+            product: "dev"
+          }), ", ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_322",
             product: "dev"
           }), "."]
@@ -639,16 +645,24 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(Cmd, {
-          sid: "ui_320",
-          product: "dev"
-        }), " can be registered in BioStar X. For more information on registering access groups, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "../../platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup",
-          children: "BioStar X Administrator Guide"
-        }), "."]
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "Fingerprint search is available only on BS3M-ODB and BS3M-OAPB."
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "ui_320",
+              product: "dev"
+            }), " can be registered in BioStar X. For more information on registering access groups, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "../../platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup",
+              children: "BioStar X Administrator Guide"
+            }), "."]
+          }), "\n"]
+        }), "\n"]
       })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "delete-all-users",
       children: "Delete All Users"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {

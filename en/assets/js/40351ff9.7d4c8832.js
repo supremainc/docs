@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["15728"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["42462"], {
 5623: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
@@ -140,6 +140,167 @@ function _missingMdxReference(id, component) {
 
 
 }),
+91082: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+__webpack_require__.d(__webpack_exports__, {
+  Ay: () => (MDXContent),
+  RM: () => (toc)
+});
+/* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(74848);
+/* ESM import */var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(84429);
+
+
+const frontMatter = (/* unused pure expression or super */ null && ({}));
+const contentTitle = (/* unused pure expression or super */ null && (undefined));
+
+
+
+
+
+const toc = [{
+  "value": "Door sensor and exit button",
+  "id": "door-sensor-and-exit-button",
+  "level": 2
+}, {
+  "value": "Exit button",
+  "id": "exit-button",
+  "level": 2
+}, {
+  "value": "Door sensor",
+  "id": "door-sensor",
+  "level": 2
+}, {
+  "value": "Exit button",
+  "id": "exit-button-1",
+  "level": 2
+}, {
+  "value": "Door sensor",
+  "id": "door-sensor-1",
+  "level": 2
+}, {
+  "value": "Door sensor and exit button",
+  "id": "door-sensor-and-exit-button-1",
+  "level": 2
+}, {
+  "value": "Exit button, door sensor",
+  "id": "exit-button-door-sensor",
+  "level": 3
+}, {
+  "value": "Alarm, emergency switch",
+  "id": "alarm-emergency-switch",
+  "level": 3
+}];
+function _createMdxContent(props) {
+  const _components = {
+    admonition: "admonition",
+    h2: "h2",
+    h3: "h3",
+    p: "p",
+    strong: "strong",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
+    ...props.components
+  }, {Image, Include} = _components;
+  if (!Image) _missingMdxReference("Image", true);
+  if (!Include) _missingMdxReference("Include", true);
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Include, {
+      product: "corestation_20,doorinterface",
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+        id: "door-sensor-and-exit-button",
+        children: "Door sensor and exit button"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+        children: "SUPERVISED INPUT ports No. 0 - No. 5 can be set to be used for normal Input or Supervised Input."
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
+        src: "/img/device/installation-door-senser-rte-connection-cs20.png",
+        width: "45%",
+        className: "none"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
+        type: "info",
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+          children: ["The SUPERVISED INPUT ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+            children: "Alarm"
+          }), " port can be used by connecting 1 kΩ, 2.2 kΩ, 4.7 kΩ, or 10 kΩ resistors. After connecting the appropriate resistor to the input device, set the resistor value the same in BioStar X."]
+        })
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Include, {
+      product: "doormodule",
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+        id: "exit-button",
+        children: "Exit button"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+        children: "The IN0(SP), IN1(SP), IN4(SP), IN5(SP) ports support the Supervised Input feature and operate only as N/C. To avoid using Supervised Input, connect to the IN2, IN3, IN6, IN7 ports."
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
+        src: "/img/device/installation-door-button-connection-dm20.png",
+        width: "65%",
+        className: "none"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+        id: "door-sensor",
+        children: "Door sensor"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+        children: "The IN0(SP), IN1(SP), IN4(SP), IN5(SP) ports support the Supervised Input feature and operate only as N/C. To avoid using Supervised Input, connect to the IN2, IN3, IN6, IN7 ports."
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
+        src: "/img/device/installation-door-button-connection-dm20.png",
+        width: "65%",
+        className: "none"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Include, {
+      product: "securemodule",
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+        id: "exit-button-1",
+        children: "Exit button"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
+        src: "/img/device/installation-door-button-connection-sio2.png",
+        width: "60%",
+        className: "none"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+        id: "door-sensor-1",
+        children: "Door sensor"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
+        src: "/img/device/installation-door-sensor-connection-sio2.png",
+        width: "60%",
+        className: "none"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Include, {
+      product: "xpass_s2",
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+        id: "door-sensor-and-exit-button-1",
+        children: "Door sensor and exit button"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+        id: "exit-button-door-sensor",
+        children: "Exit button, door sensor"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
+        src: "/img/device/installation-input-door-connection-xps2.png",
+        width: "70%",
+        className: "none"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+        id: "alarm-emergency-switch",
+        children: "Alarm, emergency switch"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
+        src: "/img/device/installation-input-alarm-connection-xps2.png",
+        width: "70%",
+        className: "none"
+      })]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}
+
+
+
+}),
 9672: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
@@ -215,145 +376,6 @@ function MDXContent(props = {}) {
 
 
 }),
-8318: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-__webpack_require__.d(__webpack_exports__, {
-  Ay: () => (MDXContent),
-  RM: () => (toc)
-});
-/* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(74848);
-/* ESM import */var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(84429);
-
-
-const frontMatter = (/* unused pure expression or super */ null && ({}));
-const contentTitle = (/* unused pure expression or super */ null && (undefined));
-
-
-
-
-
-const toc = [{
-  "value": "Input connection",
-  "id": "input-connection",
-  "level": 2
-}];
-function _createMdxContent(props) {
-  const _components = {
-    h2: "h2",
-    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
-    ...props.components
-  }, {Image, Include} = _components;
-  if (!Image) _missingMdxReference("Image", true);
-  if (!Include) _missingMdxReference("Include", true);
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "input-connection",
-      children: "Input connection"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "biostation_3",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-ttl-input-connection-bs3.png",
-        width: "60%",
-        className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "biostation_3_max",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-bs3m.png",
-        width: "65%",
-        className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "bioentry_w3",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-bew3.png",
-        width: "55%",
-        className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "biostation_2a",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-bs2a.png",
-        width: "60%",
-        className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "facestation_f2",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-fsf2.png",
-        width: "60%",
-        className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "biolite_n2",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-bln2.png",
-        width: "60%",
-        className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "xstation_2",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-xs2.png",
-        width: "60%",
-        className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "facestation_2",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-fs2.png",
-        width: "60%",
-        className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "bioentry_p2",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-bep2.png",
-        width: "65%",
-        className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "bioentry_w2",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-bew2.png",
-        width: "60%",
-        className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "xpass_2",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-xp2.png",
-        width: "65%",
-        className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "xpass_q2",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-xpq2.png",
-        width: "70%",
-        className: "none"
-      })
-    })]
-  });
-}
-function MDXContent(props = {}) {
-  const {wrapper: MDXLayout} = {
-    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
-    ...props.components
-  };
-  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
-    ...props,
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
-      ...props
-    })
-  }) : _createMdxContent(props);
-}
-function _missingMdxReference(id, component) {
-  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
-}
-
-
-
-}),
 67509: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
@@ -413,12 +435,12 @@ function _createMdxContent(props) {
       id: "lan-connection-connecting-to-a-hub",
       children: "LAN connection (connecting to a hub)"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "bioentry_w3,facestation_f2,corestation_40,corestation_20,bioentry_w2,biolite_n2,biostation_2a,biostation_3,facestation_2,xpass_s2,xstation_2,biostation_3_max",
+      product: "bioentry_w3,facestation_f2,corestation_40,corestation_20,bioentry_w2,biolite_n2,biostation_2a,biostation_3,facestation_2,xpass_s2,xstation_2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: "You can connect the product to a hub using a general type CAT-5 cable."
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "bioentry_p2,xpass_2,xpass_q2",
+      product: "bioentry_p2,xpass_2,xpass_q2,biostation_3_max",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: "You can connect to the hub using a standard CAT-5e cable."
       })
@@ -533,9 +555,14 @@ function _createMdxContent(props) {
       id: "lan-connection-connecting-to-a-pc-directly",
       children: "LAN connection (connecting to a PC directly)"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "bioentry_w3,facestation_f2,bioentry_w2,biolite_n2,biostation_2a,biostation_3,facestation_2,xstation_2,biostation_3_max",
+      product: "bioentry_w3,facestation_f2,bioentry_w2,biolite_n2,biostation_2a,biostation_3,facestation_2,xstation_2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
         children: "This device has an automatic MDI/MDIX function so that it can be connected to a PC directly using a normal straight type CAT-5 cable or a cross cable."
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
+      product: "biostation_3_max",
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+        children: "This device features automatic MDI/MDIX, so it can connect directly to a PC using either a cross cable or a standard straight CAT-5e cable."
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "xpass_s2",
@@ -2314,127 +2341,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-55054: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-__webpack_require__.d(__webpack_exports__, {
-  Ay: () => (MDXContent),
-  RM: () => (toc)
-});
-/* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(74848);
-/* ESM import */var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(84429);
-
-
-const frontMatter = (/* unused pure expression or super */ null && ({}));
-const contentTitle = (/* unused pure expression or super */ null && (undefined));
-
-
-
-
-
-const toc = [];
-function _createMdxContent(props) {
-  const _components = {
-    admonition: "admonition",
-    li: "li",
-    p: "p",
-    ul: "ul",
-    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
-    ...props.components
-  }, {Badge, Include, Xclude} = _components;
-  if (!Badge) _missingMdxReference("Badge", true);
-  if (!Include) _missingMdxReference("Include", true);
-  if (!Xclude) _missingMdxReference("Xclude", true);
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.admonition, {
-    type: "info",
-    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Xclude, {
-      product: "facestation_f2,biostation_3_max",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["The optimal height for installing device is ", props.height, " cm."]
-        }), "\n"]
-      })
-    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "facestation_f2",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "The optimal height to install the device is as follows."
-          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-            children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-              children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Badge, {
-                  only: true,
-                  children: "FSF2-ODB"
-                }), ": ", props.height1, " cm"]
-              }), "\n"]
-            }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-              children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Badge, {
-                  only: true,
-                  children: "FSF2-DB, FSF2-AB"
-                }), ": ", props.height2, " cm"]
-              }), "\n"]
-            }), "\n"]
-          }), "\n"]
-        }), "\n"]
-      })
-    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "biostation_3_max",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "The optimal height to install the device is as follows."
-          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-            children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-              children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Badge, {
-                  only: true,
-                  children: "BS3M-ODB, BS3M-OAPB"
-                }), ": ", props.height1, " cm"]
-              }), "\n"]
-            }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-              children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Badge, {
-                  only: true,
-                  children: "BS3M-DB, BS3M-APB"
-                }), ": ", props.height2, " cm"]
-              }), "\n"]
-            }), "\n"]
-          }), "\n"]
-        }), "\n"]
-      })
-    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Install the device where it does not reach the direct sunlight or UV light."
-        }), "\n"]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Adjust the installation position so that the face is not exposed to direct sunlight when a user tries to authenticate."
-        }), "\n"]
-      }), "\n"]
-    })]
-  });
-}
-function MDXContent(props = {}) {
-  const {wrapper: MDXLayout} = {
-    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
-    ...props.components
-  };
-  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
-    ...props,
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
-      ...props
-    })
-  }) : _createMdxContent(props);
-}
-function _missingMdxReference(id, component) {
-  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
-}
-
-
-
-}),
-71317: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+17529: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -2443,25 +2350,23 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_bioentry_w_3_installation_mdx_b18_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_xpass_s_2_installation_mdx_403_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-bioentry-w-3-installation-mdx-b18.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_bioentry_w_3_installation_mdx_b18_namespaceObject = JSON.parse('{"id":"device/bioentry_w3/installation","title":"Installation","description":"Provides the complete installation procedures and connection examples required for the device.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/bioentry_w3/installation.mdx","sourceDirName":"device/bioentry_w3","slug":"/device/bioentry_w3/installation","permalink":"/docs/en/device/bioentry_w3/installation","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/bioentry_w3/installation.mdx","tags":[],"version":"current","frontMatter":{"id":"installation","title":"Installation","description":"Provides the complete installation procedures and connection examples required for the device.","keywords":["Bracket","Power","Network","Input","Relay","Standalone","Secure I/O","Wiegand"],"isTranslationMissing":false},"sidebar":"bioentryw3","previous":{"title":"Getting Started","permalink":"/docs/en/device/bioentry_w3/getting-started"},"next":{"title":"Product Specifications","permalink":"/docs/en/device/bioentry_w3/product-specifications"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-xpass-s-2-installation-mdx-403.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_xpass_s_2_installation_mdx_403_namespaceObject = JSON.parse('{"id":"device/xpass_s2/installation","title":"Installation","description":"Provides the complete installation procedures and connection examples required for the device.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/xpass_s2/installation.mdx","sourceDirName":"device/xpass_s2","slug":"/device/xpass_s2/installation","permalink":"/docs/en/device/xpass_s2/installation","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/xpass_s2/installation.mdx","tags":[],"version":"current","frontMatter":{"id":"installation","title":"Installation","description":"Provides the complete installation procedures and connection examples required for the device.","keywords":["Bracket","Extension Bracket","Power","Network","Input","Relay","Standalone","Secure I/O","Wiegand"],"isTranslationMissing":false},"sidebar":"xpasss2","previous":{"title":"Getting Started","permalink":"/docs/en/device/xpass_s2/getting-started"},"next":{"title":"Product Specifications","permalink":"/docs/en/device/xpass_s2/product-specifications"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_installation-bracket-notes.mdx
-var _installation_bracket_notes = __webpack_require__(55054);
 // EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_device-power-connection.mdx
 var _device_power_connection = __webpack_require__(71010);
 // EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_device-network-connection.mdx
 var _device_network_connection = __webpack_require__(67509);
-// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_device-input-connetion.mdx
-var _device_input_connetion = __webpack_require__(8318);
+// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_device-door-sensor-connection.mdx
+var _device_door_sensor_connection = __webpack_require__(91082);
 // EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_device-relay-connection.mdx
 var _device_relay_connection = __webpack_require__(62966);
 // EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_device-standalone-connection.mdx
@@ -2476,7 +2381,7 @@ var _device_wiegand_connection = __webpack_require__(98538);
 var _device_reset_network_settings = __webpack_require__(24804);
 // EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_device-factory-reset.mdx
 var _device_factory_reset = __webpack_require__(9672);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/bioentry_w3/installation.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/xpass_s2/installation.mdx
 
 
 const frontMatter = {
@@ -2485,6 +2390,7 @@ const frontMatter = {
 	description: 'Provides the complete installation procedures and connection examples required for the device.',
 	keywords: [
 		'Bracket',
+		'Extension Bracket',
 		'Power',
 		'Network',
 		'Input',
@@ -2503,7 +2409,7 @@ const assets = {
 
 /*## 전원 연결*/
 /*## 네트워크 연결*/
-/*## Input 연결*/
+/*## 출입문 센서 및 퇴실 버튼 연결*/
 /*## 릴레이 연결*/
 /*## 독립형 연결*/
 /*공통 노트*/
@@ -2524,36 +2430,30 @@ const assets = {
 
 
 
-
 const toc = [{
   "value": "Fixing the bracket and the product",
   "id": "fixing-the-bracket-and-the-product",
   "level": 2
-}, ..._installation_bracket_notes/* .toc */.RM, ..._device_power_connection/* .toc */.RM, ..._device_network_connection/* .toc */.RM, ..._device_input_connetion/* .toc */.RM, ..._device_relay_connection/* .toc */.RM, ..._device_standalone_connection/* .toc */.RM, ..._device_connection_standalone_secure_notes/* .toc */.RM, ..._device_secure_io2_connection/* .toc */.RM, ..._device_connection_standalone_secure_notes/* .toc */.RM, ..._device_wiegand_connection/* .toc */.RM, ..._device_reset_network_settings/* .toc */.RM, ..._device_factory_reset/* .toc */.RM, {
-  "value": "Firmware upgrade",
-  "id": "firmware-upgrade",
-  "level": 2
-}];
+}, {
+  "value": "General bracket",
+  "id": "general-bracket",
+  "level": 3
+}, {
+  "value": "Extension Bracket",
+  "id": "extension-bracket",
+  "level": 3
+}, ..._device_power_connection/* .toc */.RM, ..._device_network_connection/* .toc */.RM, ..._device_door_sensor_connection/* .toc */.RM, ..._device_relay_connection/* .toc */.RM, ..._device_standalone_connection/* .toc */.RM, ..._device_connection_standalone_secure_notes/* .toc */.RM, ..._device_secure_io2_connection/* .toc */.RM, ..._device_connection_standalone_secure_notes/* .toc */.RM, ..._device_wiegand_connection/* .toc */.RM, ..._device_reset_network_settings/* .toc */.RM, ..._device_factory_reset/* .toc */.RM];
 function _createMdxContent(props) {
   const _components = {
-    a: "a",
     admonition: "admonition",
     h2: "h2",
+    h3: "h3",
     li: "li",
     ol: "ol",
     p: "p",
-    table: "table",
-    tbody: "tbody",
-    td: "td",
-    th: "th",
-    thead: "thead",
-    tr: "tr",
-    ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Column, Columns, Image} = _components;
-  if (!Column) _missingMdxReference("Column", true);
-  if (!Columns) _missingMdxReference("Columns", true);
+  }, {Image} = _components;
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
@@ -2561,120 +2461,28 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "fixing-the-bracket-and-the-product",
       children: "Fixing the bracket and the product"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "general-bracket",
+      children: "General bracket"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Determine the location to mount the product."
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-recommended-bew3.svg",
-          className: "none",
-          alone: true
-        }), "\n", (0,jsx_runtime.jsx)(_installation_bracket_notes/* ["default"] */.Ay, {
-          height: 137
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "Secure the bracket tightly using the fixing screws at the location where the product will be mounted."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device1-bew3.svg",
+          src: "/img/device/installation-device1-xps2.png",
           className: "none",
           alone: true
-        }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
-          children: [(0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "If installing the product on a concrete wall, drill a hole, insert a PVC anchor, and secure it with a fixing screw."
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "To avoid RF interference, a minimum separation distance must be maintained."
-              }), "\n"]
-            }), "\n"]
-          }), (0,jsx_runtime.jsxs)(Columns, {
-            children: [(0,jsx_runtime.jsxs)(Column, {
-              className: "text--center",
-              children: [(0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/bew3-installation_distance1.png",
-                className: "none",
-                width: "60%"
-              }), (0,jsx_runtime.jsx)("div", {
-                className: "overflow-x",
-                children: (0,jsx_runtime.jsxs)(_components.table, {
-                  children: [(0,jsx_runtime.jsx)(_components.thead, {
-                    children: (0,jsx_runtime.jsxs)(_components.tr, {
-                      children: [(0,jsx_runtime.jsx)(_components.th, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "Wall thickness"
-                      }), (0,jsx_runtime.jsx)(_components.th, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "Distance"
-                      })]
-                    })
-                  }), (0,jsx_runtime.jsxs)(_components.tbody, {
-                    children: [(0,jsx_runtime.jsxs)(_components.tr, {
-                      children: [(0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "100 mm"
-                      }), (0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "270 mm"
-                      })]
-                    }), (0,jsx_runtime.jsxs)(_components.tr, {
-                      children: [(0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "120 mm"
-                      }), (0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "250 mm"
-                      })]
-                    }), (0,jsx_runtime.jsxs)(_components.tr, {
-                      children: [(0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "150 mm"
-                      }), (0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "170 mm"
-                      })]
-                    })]
-                  })]
-                })
-              })]
-            }), (0,jsx_runtime.jsx)(Column, {
-              className: "text--center",
-              children: (0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/bew3-installation_distance.png",
-                className: "none",
-                width: "65%"
-              })
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-              children: "When using a mobile access card, install devices maintaining a minimum distance of 1 m between devices to avoid BLE interference."
-            }), "\n"]
-          })]
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "If installing the product on a concrete wall, drill a hole, insert a PVC anchor, and secure it with a fixing screw."
+          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "Mount the product on the fixed bracket."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device2-bew3.svg",
+          src: "/img/device/installation-device2-xps2.png",
           className: "none",
           alone: true
         }), "\n"]
@@ -2682,7 +2490,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "Rotate the fixing screws to assemble the product with the bracket."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device3-bew3.svg",
+          src: "/img/device/installation-device3-xps2.png",
           className: "none",
           alone: true
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -2692,70 +2500,55 @@ function _createMdxContent(props) {
           })
         }), "\n"]
       }), "\n"]
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_power_connection/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)("div", {
-      className: "page-break"
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_network_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_input_connetion/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_relay_connection/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)("div", {
-      className: "page-break"
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_standalone_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)("div", {
-      className: "page-break"
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_secure_io2_connection/* ["default"] */.Ay, {}), "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_wiegand_connection/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)("div", {
-      className: "page-break"
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_reset_network_settings/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_factory_reset/* ["default"] */.Ay, {
-      name: "green"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "firmware-upgrade",
-      children: "Firmware upgrade"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "You can connect a USB memory stick to upgrade the firmware."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "extension-bracket",
+      children: "Extension Bracket"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Save the firmware file to a USB memory stick for upgrade."
+          children: "Assemble the standard bracket and extension bracket using the fixed screws included with the extension bracket."
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/device/installation-device-bracket1-xps2.png",
+          className: "none",
+          alone: true
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Secure the extension bracket firmly in position using the fixed screws."
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/device/installation-device-bracket2-xps2.png",
+          className: "none",
+          alone: true
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsx)(_components.p, {
-            children: "It is recommended to save only one firmware file on the USB memory stick for the upgrade."
+            children: "If installing the product on a concrete wall, drill a hole, insert a PVC anchor, and secure it with a fixing screw."
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Connect the USB memory stick to the device."
+          children: "Mount the product on the secured extension bracket."
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/device/installation-device-bracket3-xps2.png",
+          className: "none",
+          alone: true
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "If the 'Admin Auth Required' message appears, authenticate using administrator credentials."
-        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-          type: "info",
-          children: (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["Register the administrator on BioStar X for the device. You cannot proceed with the firmware upgrade if an administrator is not registered on the device. For detailed information on how to register an administrator, please refer to the ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "../../platform/biostar_x/set-permission",
-              children: "BioStar X Administrator Guide"
-            }), "."]
-          })
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Once the administrator authentication is successful, the firmware file will be transferred to the device."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "When the firmware file transfer is complete, a message to remove the USB memory stick will appear on the screen. Remove the USB memory stick."
+          children: "Screw the product screws to assemble the product and extension bracket."
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/device/installation-device-bracket4-xps2.png",
+          className: "none",
+          alone: true
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsx)(_components.p, {
-            children: "If you do not remove the USB memory stick, the firmware upgrade will run again after the device restarts."
+            children: "When assembling the extension bracket and product, you can use the included bracket fixing screws (star-shaped) instead of the product screws for enhanced security."
           })
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "After proceeding with the firmware upgrade, the device will restart automatically."
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "caution",
-      children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "Do not disconnect the power supply while upgrading the firmware of the device. The device may malfunction."
-      })
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_power_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_network_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_door_sensor_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_relay_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_standalone_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_secure_io2_connection/* ["default"] */.Ay, {}), "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_wiegand_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_reset_network_settings/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_factory_reset/* ["default"] */.Ay, {
+      name: "Yellow"
     })]
   });
 }

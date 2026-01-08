@@ -205,9 +205,10 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, Image} = _components;
+  }, {Cmd, Image, PageBreak} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
+  if (!PageBreak) _missingMdxReference("PageBreak", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "Provides instructions on how to set system and device configurations."
@@ -348,7 +349,7 @@ function _createMdxContent(props) {
           children: "BioStar Device SDK page"
         }), " on the Suprema Knowledge Base."]
       })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "network",
       children: "Network"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -445,7 +446,7 @@ function _createMdxContent(props) {
           }), "."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "server",
       children: "Server"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
@@ -532,7 +533,7 @@ function _createMdxContent(props) {
           }), "."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "osdp-settings",
       children: "OSDP settings"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
@@ -599,7 +600,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "device",
       children: "Device"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
@@ -706,7 +707,7 @@ function _createMdxContent(props) {
           }), "."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "license",
       children: "License"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -748,7 +749,7 @@ function _createMdxContent(props) {
           }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/bs3m-license1.png"
-        }), "\n"]
+        }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "Licenses that can be activated appear on the screen. Activate the desired license."
@@ -759,7 +760,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsx)(_device_license_info/* ["default"] */.Ay, {})
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "relay",
       children: "Relay"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -837,7 +838,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "date-time",
       children: "Date & Time"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -929,7 +930,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "daylight-saving-time",
       children: "Daylight saving time"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -1015,7 +1016,7 @@ function _createMdxContent(props) {
           }), "."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "device-information",
       children: "Device Information"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -1080,7 +1081,7 @@ function _createMdxContent(props) {
           product: "dev"
         }), ", you can check the entire hash value in a pop-up message."]
       })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "memory-information",
       children: "Memory information"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -1110,7 +1111,7 @@ function _createMdxContent(props) {
           src: "/img/device/bs3m-memory-info.png"
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "usb-memory",
       children: "USB memory"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -1351,7 +1352,7 @@ function _createMdxContent(props) {
           children: ["Press ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_373",
             product: "dev"
-          }), " to save after setting the desired authentication method."]
+          }), " to set the desired authentication method and save."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/bs3m-setting-master-admin-edit.png"
         }), "\n"]
@@ -1361,7 +1362,7 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsx)(_components.p, {
         children: "You must enroll at least two types of credentials."
       })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "restart-device",
       children: "Restart device"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -1503,7 +1504,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "user-id-type",
       children: "User ID type"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {

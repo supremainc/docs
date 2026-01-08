@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-biostation-3-max-index-mdx-609.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_max_index_mdx_609_namespaceObject = JSON.parse('{"id":"device/biostation_3_max/index","title":"BioStation 3 Max","description":"BioStation 3 Max description","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3_max/index.mdx","sourceDirName":"device/biostation_3_max","slug":"/device/biostation_3_max/","permalink":"/docs/en/device/biostation_3_max/","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3_max/index.mdx","tags":[],"version":"current","frontMatter":{"title":"BioStation 3 Max","description":"BioStation 3 Max description","keywords":["BioStation 3 Max","BioStation 3 Max overview"],"isTranslationMissing":false},"sidebar":"biostation3max","next":{"title":"Safety Instructions","permalink":"/docs/en/device/biostation_3_max/safety-instructions"}}')
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_max_index_mdx_609_namespaceObject = JSON.parse('{"id":"device/biostation_3_max/index","title":"BioStation 3 Max","description":"BioStation 3 Max description","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3_max/index.mdx","sourceDirName":"device/biostation_3_max","slug":"/device/biostation_3_max/","permalink":"/docs/en/device/biostation_3_max/","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3_max/index.mdx","tags":[],"version":"current","frontMatter":{"title":"BioStation 3 Max","description":"BioStation 3 Max description","keywords":["BioStation 3 Max","keywords2"],"isTranslationMissing":false},"sidebar":"biostation3max","next":{"title":"Safety Instructions","permalink":"/docs/en/device/biostation_3_max/safety-instructions"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -28,7 +28,7 @@ const frontMatter = {
 	description: 'BioStation 3 Max description',
 	keywords: [
 		'BioStation 3 Max',
-		'BioStation 3 Max overview'
+		'keywords2'
 	],
 	isTranslationMissing: false
 };
@@ -38,6 +38,7 @@ const assets = {
 
 };
 
+/*BioStation 3 Max 설명*/
 
 
 const toc = [];
@@ -50,9 +51,7 @@ function _createMdxContent(props) {
   }, {Overview} = _components;
   if (!Overview) _missingMdxReference("Overview", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStation 3 Max description"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+    children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.img, {
         alt: "Example banner",
         src: (__webpack_require__(15602)/* ["default"] */.A) + "",
