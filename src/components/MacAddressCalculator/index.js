@@ -23,7 +23,7 @@ export default function MacAddressCalculator() {
     const cleanSerial = serial.replace(/\D/g, '');
     
     if (cleanSerial.length !== 9) {
-      setError('일련 번호는 9자리 숫자여야 합니다.');
+      setError('Serial number must be 9 digits.');
       setHexValue('');
       setLastThreeBytes('');
       setMacAddress('');
@@ -33,7 +33,7 @@ export default function MacAddressCalculator() {
     const serialNum = parseInt(cleanSerial, 10);
     
     if (isNaN(serialNum)) {
-      setError('유효한 숫자를 입력하세요.');
+      setError('Please enter a valid number.');
       return;
     }
 
@@ -74,7 +74,7 @@ export default function MacAddressCalculator() {
     <div className={styles.calculator}>
       <div className={styles.inputSection}>
         <label htmlFor="serialNumber" className={styles.label}>
-          일련 번호 (9자리)
+          Serial number (9 digits)
         </label>
         <div className={styles.inputGroup}>
           <input
@@ -82,7 +82,7 @@ export default function MacAddressCalculator() {
             type="text"
             value={serialNumber}
             onChange={handleInputChange}
-            placeholder="예: 546089489"
+            placeholder="e.g., 546089489"
             className={styles.input}
             maxLength="9"
           />
@@ -91,7 +91,7 @@ export default function MacAddressCalculator() {
             className={styles.exampleButton}
             type="button"
           >
-            예시 입력
+            Input example
           </button>
           {serialNumber && (
             <button 
@@ -99,7 +99,7 @@ export default function MacAddressCalculator() {
               className={styles.clearButton}
               type="button"
             >
-              지우기
+              Clear
             </button>
           )}
         </div>
@@ -114,9 +114,9 @@ export default function MacAddressCalculator() {
             onClick={() => navigator.clipboard.writeText(macAddress)}
             className={styles.copyButton}
             type="button"
-            title="클립보드에 복사"
+            title="Copy to clipboard"
           >
-            📋 복사
+            📋 Copy
           </button>
         </div>
       )}
