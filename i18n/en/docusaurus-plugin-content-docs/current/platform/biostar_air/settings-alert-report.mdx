@@ -1,0 +1,137 @@
+---
+id: settings-alert-report
+title: Set Up Alerts and Reports
+description: This article provides step-by-step instructions to configure event alerts and automatic reports in BioStar Air.
+keywords:
+  - BioStar Air
+  - Alert setting
+  - Report setting
+  - System alerts
+  - User reports
+---
+
+Setting up alerts and reports enables automatic detection and tracking of system events and security situations. This article explains how to configure alert and report settings in BioStar Air.
+
+Alert and report settings provide the following benefits.
+
+* Immediately detect security threats or system issues and send real-time alerts to administrators.
+
+* Automatically generate reports on system status and user activity to improve management efficiency.
+
+## Add alerts {#addAlert}
+
+Configure alerts for specific event logs and system status on the site.
+
+1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="alerts.alert_sub_menu_title" product="air" /> in the left sidebar.
+
+2. Click <Cmd sid="alerts.add_alert_btn" product="air" /> at the top right of the screen.
+
+3. When the <Cmd sid="alerts.add_alert_btn" product="air" /> panel appears, choose either the <Cmd sid="alerts.event_log_type" product="air" /> or <Cmd sid="alerts.system_type" product="air" /> tab.
+
+   <Image src="/img/air/bsair-settings-alert-add-event-log.png" />
+
+4. After configuring each item, click <Cmd sid="save_btn" product="air" /> to save.
+
+### Set conditions {#conditionSettings}
+
+#### Event log {#eventLog}
+
+In the <Cmd sid="alerts.event_log_type" product="air" /> tab, set alert conditions by event type.
+
+<Image src="/img/air/bsair-settings-alert-event-log-setting.png" />
+
+* <Cmd sid="alerts.events_block_title" product="air" />: Select the event types to alert. A predefined <Cmd sid="alerts.preset_events_block_title" product="air" /> can also be selected.
+
+* <Cmd sid="door_label" product="air" />: Select door. Send an alert when an event occurs at the selected door. More than one door can be selected.
+
+* <Cmd sid="alerts.frequency_and_duration_label" product="air" />: Send an alert when events occur at a specified frequency within the defined time period. For example, configure the system to send an alert if an event occurs three times within five minutes.
+
+#### System {#system}
+
+<Image src="/img/air/bsair-settings-alert-system-setting.png" />
+
+In the <Cmd sid="alerts.system_type" product="air" /> tab, set alert conditions based on system status. The available options are as follows.
+
+* <Cmd sid="low_credit_reminders" product="air" />
+
+* <Cmd sid="low_credit_site_suspension" product="air" />
+
+* <Cmd sid="low_credit_sms_less_than_10" product="air" />
+
+* <Cmd sid="low_apb_battery" product="air" />
+
+* <Cmd sid="new_fw_availabel" product="air" />
+
+### Set alert recipients {#alertTargetSettings}
+
+Use <Cmd sid="alerts.alert_target" product="air" /> to designate alert recipients. Select users by administrator role or select individual users.
+
+### Set delivery method {#alertSendMethodSettings}
+
+Choose the delivery method in <Cmd sid="alerts.alert_send_by" product="air" />. Alerts are delivered by email, SMS, or app push notification.
+
+:::info
+
+SMS delivery is available only after recharging SMS credits in <Cmd sid="settings_menu" product="air" /> → <Cmd sid="credit_center_submenu" product="air" />.
+
+:::
+
+## Generate reports {#reportGeneration}
+
+Automatically generate reports at defined intervals and send them to administrators. Generate reports on event log activity and user status.
+
+1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="alerts.alert_sub_menu_title" product="air" /> in the left sidebar.
+
+2. Click <Cmd sid="alerts.add_alert_btn" product="air" /> at the top right of the screen.
+
+3. When the <Cmd sid="alerts.add_alert_btn" product="air" /> panel appears, select the <Cmd sid="alerts.report_type" product="air" /> tab.
+
+   <Image src="/img/air/bsair-settings-alert-add-report.png" />
+
+4. After configuring each item, click <Cmd sid="save_btn" product="air" /> to save.
+
+### Set conditions {#reportConditionSettings}
+
+Configure report type and generation interval.
+
+* <Cmd sid="name_column" product="air" />: Select the report type to generate.
+
+  * <Cmd sid="alerts.report_event_log" product="air" />: Generates a report on event log activity for the selected period.
+
+  * <Cmd sid="alerts.report_user" product="air" />: Generates a report on user status for the selected period.
+
+* <Cmd sid="schedules_label" product="air" />: Select the report generation interval. Choose between <Cmd sid="weekly_option" product="air" /> and <Cmd sid="monthly_option" product="air" />.
+
+### Set report recipients {#reportAlertTargetSettings}
+
+Use <Cmd sid="alerts.alert_target" product="air" /> to designate alert recipients. Select users by administrator role or select individual users.
+
+### Set delivery method {#reportAlertSendMethodSettings}
+
+Choose the delivery method in <Cmd sid="alerts.alert_send_by" product="air" />.
+
+:::info
+
+Reports are delivered **by email only**. They are not delivered by SMS or app push notification.
+
+:::
+
+## Edit alerts and reports {#editAlertReport}
+
+1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="alerts.alert_sub_menu_title" product="air" /> in the left sidebar.
+
+2. Click the alert or report to edit in the list.
+
+3. When the <Cmd sid="alerts.edit_alert_header" product="air" /> or <Cmd sid="alerts.edit_report_header" product="air" /> panel appears, edit the necessary items.
+
+4. Click <Cmd sid="save_btn" product="air" /> at the bottom to save the changes.
+
+## Delete alerts and reports {#deleteAlertReport}
+
+1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="alerts.alert_sub_menu_title" product="air" /> in the left sidebar.
+
+2. Select the checkbox of the alert or report to delete in the list. More than one item can be selected.
+
+3. Click <IcAirRemove /> at the top left of the list.
+
+4. When the message window appears, click <Cmd sid="delete_action" product="air" />.

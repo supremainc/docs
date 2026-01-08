@@ -1,0 +1,151 @@
+---
+id: managing-sites-with-app
+title: Mobile App
+description: BioStar Air mobile app guides you on managing users, monitoring events, and performing device control and management tasks on a mobile device.
+keywords:
+  - BioStar Air
+  - Mobile App
+  - Access control
+  - Event monitoring
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+The BioStar Air app offers all the same features as the BioStar Air web portal. Users can manage access control, monitor event logs, control devices, and perform administrative tasks directly from a mobile device.
+
+<CustomerNote />
+
+## Use the mobile app {#navigating-to-the-feature}
+
+Download the BioStar Air app on your mobile device and log in.
+
+* Download and install the BioStar Air app on your mobile device.
+
+  * [iOS](https://apps.apple.com/us/app/airfob-pro/id1659959609)
+
+  * [Android](https://play.google.com/store/apps/details?id=com.mocainc.afs2pro)
+
+* Log in using the same ID and password you use for the [BioStar Air web portal](https://admin.biostarair.com/).
+
+:::info
+
+* Verify that you logged in with the same credentials as the web version.
+
+* Stay close to the device to update it in BLE mode.
+
+* Certain features, such as real-time video monitoring, require a connected camera.
+
+:::
+
+<Columns className="mt--50">
+<Column className="width--23">
+
+<Image src="/img/air/bsair-using-app-dashboard.png" />
+
+</Column>
+<Column className="padding--l20">
+
+### Dashboard {#dashboard-overview}
+
+After logging in to the mobile app, <Cmd sid="dashboard_menu" product="air" /> on the home screen provides the following information.
+
+* Daily user accesses
+
+* Total active registered users
+
+* Connected devices
+
+* Credit status
+
+* Connected camera (if a camera is connected)
+
+</Column>
+</Columns>
+
+<Columns className="mt-50">
+<Column className="width--23">
+
+<Image src="/img/air/bsair-using-app-users.png" />
+
+</Column>
+<Column className="padding--l20">
+
+### User management {#user-management}
+
+Tap the <Cmd sid="users_card" product="air" /> card on the home screen, or tap <Cmd sid="site_setting_tab_management" product="air" /> → <Cmd sid="user_submenu" product="air" /> in sequence.
+
+* Select a user and review the details.
+
+* Modify user status (reissue, suspend, delete, or activate).
+
+* Tap the <IcAdd /> button and enter the required details to add a new user.
+
+:::info
+
+For more information on managing users, refer to [the following](managing-users).
+
+:::
+
+</Column>
+</Columns>
+
+<Columns className="mt-50">
+<Column className="width--23">
+
+<Image src="/img/air/bsair-using-app-monitoring.png" />
+
+</Column>
+
+<Column className="padding--l20">
+
+### Monitoring {#monitoring}
+
+<Cmd sid="monitoring_menu" product="air" /> provides the following information.
+
+* <Cmd sid="event_logs_submenu" product="air" />: Monitor and analyze event logs and audit logs. For more information on this, refer to [the following](monitoring-event-and-audit-logs).
+
+* <Cmd sid="alerts_history.alerts_history_submenu" product="air" />: View past alerts and generated report history through the web portal and mobile app. For more information on this, refer to [the following](monitoring-alert-report-history).
+
+* <Cmd sid="door_status_submenu" product="air" />: Monitor the real-time status of doors connected to the site. For more information on this, refer to [the following](monitoring-door-status).
+
+   * Check door status and control it remotely.
+
+   * Tap a door once to edit it, or press and hold to select multiple doors and perform batch actions.
+
+   * Setting a door to <Cmd sid="event_log_unlock_mode" product="air" /> or <Cmd sid="event_log_lock_mode" product="air" /> overrides relay settings or schedules.
+
+   * Delete unused doors as needed.
+
+* Real-time video (if a camera is connected)
+
+</Column>
+</Columns>
+
+<Columns className="mt-50">
+<Column className="width--23">
+
+<Image src="/img/air/bsair-using-app-devices.png" />
+
+</Column>
+<Column className="padding--l20">
+
+### Devices {#devices}
+
+Tap the <Cmd sid="devices_card" product="air" /> card on the home screen, or tap <Cmd sid="site_setting_tab_management" product="air" /> → <Cmd sid="devices_card" product="air" /> in sequence.
+
+* View all registered devices.
+
+* Select a device to edit, update firmware, or reboot it.
+
+* If the device is not connected to the network, use **BLE mode** close to the device to update its firmware.
+
+* Tap the <IcAdd /> button to add a new device.
+
+:::info
+
+For more information on device management, refer to [the following](manage-device).
+
+:::
+
+</Column>
+</Columns>

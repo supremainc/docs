@@ -1,0 +1,81 @@
+---
+id: managing-door-groups
+title: Manage Door Group
+description: This guide explains how to configure and manage door groups in BioStar Air. This simplifies access control configuration and streamlines system management.
+keywords:
+  - Door group
+  - Device Group
+  - BioStar Air
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+Door groups provide a way to organize access points systematically in BioStar Air. Grouping doors simplifies access level configuration and system management.
+
+:::info
+
+For more information on device group management, refer to [the following](manage-device-group).
+
+:::
+
+<CustomerNote />
+
+## Add door group {#addingDoorGroups}
+
+1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_groups_submenu" product="air" /> in the left sidebar.
+
+2. Click <Cmd sid="doors_group_add_btn" product="air" /> at the top right of the screen.
+
+   <Image src="/img/air/bsair-door-group.png" />
+
+3. When the <Cmd sid="doors_group_title_add_popup_overlay" product="air" /> window appears, enter the door group name.
+
+   <Image src="/img/air/bsair-door-group-add.png" />
+
+   :::note
+
+   Click <Cmd sid="device_group_label_checkbox" product="air" /> and select the parent group to add the device group as a subgroup of a specific group.
+
+   :::
+
+4. In <Cmd sid="doors_group_label_add_device" product="air" />, select the doors to include in the group.
+
+5. Click <Cmd sid="btn_ok" product="air" /> to save the door group.
+
+The door group list shows the newly added group and the number of doors it contains. Click a door group to view the doors it contains.
+
+<Image src="/img/air/bsair-door-group-added-group.png" />
+
+:::info
+
+* Doors added to a subgroup are not automatically included in the parent group.
+
+* Add an empty parent group without devices or doors.
+
+:::
+
+## Rename door group {#renamingDoorGroups}
+
+1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_groups_submenu" product="air" /> in the left sidebar.
+
+2. Check the checkbox for the door group you wish to rename in the list.
+
+3. Click <IcAirEdit /> at the top of the door group list.
+
+4. When the <Cmd sid="doors_group_title_edit_popup_overlay" product="air" /> window appears, enter the new group name.
+
+   <Image src="/img/air/bsair-door-group-edit-name.png" />
+
+5. Click <Cmd sid="btn_ok" product="air" /> to save the new group name.
+
+## Delete door group {#deletingDoorGroups}
+
+1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_groups_submenu" product="air" /> in the left sidebar.
+
+2. Check the checkbox for the door group you wish to delete in the list.
+
+3. Click <IcAirRemove /> at the top of the door group list.
+
+4. When a warning message appears, click <Cmd sid="btn_yes" product="air" />.
+
+The selected door group is removed from the list. Its subgroups are also deleted. Deleting a group does not delete its doors.

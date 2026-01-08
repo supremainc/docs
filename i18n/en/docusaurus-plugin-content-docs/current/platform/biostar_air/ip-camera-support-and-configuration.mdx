@@ -1,0 +1,229 @@
+---
+id: ip-camera-support-and-configuration
+title: IP Camera Support and Settings
+description: Set up ONVIF-compatible IP cameras in BioStar Air, configure live and recorded video streams, and integrate camera footage with access events.
+keywords:
+  - IP camera
+  - BioStar Air
+  - camera configuration
+---
+
+BioStar Air automatically detects IP cameras connected to the same network as Airfob Edge. Because the cameras use the device as a gateway, a network video recorder (NVR) is not required. Instead, the cameras use the built-in SD card storage.
+
+With an Airfob Edge or XPass 2 installed, BioStar Air can display the following concurrent live view streams.
+
+* Up to two cameras at Full HD resolution (1080p)
+
+* Up to four cameras at HD resolution (720p)
+
+These specifications double when XStation 2 is used.
+
+:::info
+
+If recorded video does not play after registering the camera in BioStar Air, refer to [the following](video-troubleshooting).
+
+:::
+
+## Compatibility {#compatibility}
+
+* **Onvif profiles**: The IP camera must be compatible with Onvif profile S or G.
+
+  * **Onvif profile S**: Live video streaming
+
+  * **Onvif profile G**: Recorded video stored on the SD card
+
+* **SD card**: The IP camera must have a built-in SD card so that recorded footage can be played back later.
+
+  :::note
+
+  Use SanDisk microSDXC Class10 Max Endurance 256 GB or 512 GB.
+
+  :::
+
+* **Encoding**: The camera must support H.264 (AVC) and it must be set as the active codec. BioStar Air currently does not support H.265.
+
+* **Recommended brands**: HanwhaVision, Hikvision, and Dahua cameras are highly compatible. Compatibility with other brands may vary depending on Onvif profile compliance. For more information on the tested and verified devices list, refer to [the following](#tested-devices).
+
+* Contact the service team to test other camera brands.
+
+## Functionality overview {#functionality}
+
+Perform the following actions in the BioStar Air portal or mobile app.
+
+* View live camera feeds.
+
+* View recorded camera footage.
+
+* Access camera footage related to access events.
+
+## Instructions {#instructions}
+
+<Steps>
+<Step>
+
+### Connect IP cameras
+
+* **Network connection**: Ensure that the IP camera is on the same network as the Airfob Edge or Airfob Edge Ultimate.
+
+* **Enable Onvif**: Make sure Onvif is enabled on the camera.
+
+* **Device registration**: Make sure the device is registered in the BioStar Air portal.
+
+</Step>
+<Step>
+
+### Log in to BioStar Air
+
+**Master** administrators can change site settings such as enabling Video Management. Log in to the [BioStar Air portal](https://admin.biostarair.com/) with **master** privileges.
+
+</Step>
+<Step>
+
+### Enable video management
+
+1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar.
+
+2. Click the <Cmd sid="site_setting_qr_reader_tab" product="air" /> tab.
+
+3. Enable <Cmd sid="site_setting_video_management" product="air" />.
+
+<Image src="/img/air/bsair-settings-site-addtional-feature-video-mangement.png" />
+
+:::info
+
+Only **master**-level administrators can enable this feature.
+
+:::
+
+</Step>
+<Step>
+
+### Add camera
+
+1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="cameras_groups_submenu" product="air" /> in the left sidebar.
+
+   <Image src="/img/air/bsair-device-camera.png" />
+
+2. Click <Cmd sid="cameras_list_title_add_button" product="air" /> at the top right of the screen.
+
+3. When the <Cmd sid="cameras_templ_title_modal" product="air" /> window appears, select the device that will act as the gateway.
+
+   <Image src="/img/air/bsair-device-camera-add.png" caption />
+
+4. Set the following information to add the camera.
+
+   * <Cmd sid="cameras_add_camera_input_name" product="air" />: Enter the camera name.
+
+   * <Cmd sid="recent_action_device_column" product="air" />: Select a name to identify the camera.
+
+   * <Cmd sid="cameras_add_camera_input_id" product="air" />: Enter the ID to connect to the camera.
+
+   * <Cmd sid="cameras_add_camera_input_pass" product="air" />: Enter the password to connect to the camera.
+
+5. Click <Cmd sid="save_btn" product="air" /> to add the selected camera.
+
+:::info
+
+* The device must run firmware version 2.5.1 or later and be on the same network as the camera.
+
+* BioStar Air automatically discovers cameras on the network.
+
+:::
+
+</Step>
+<Step>
+
+### Link to a door
+
+Link the added camera to a door to associate video with access events.
+
+1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar.
+
+2. Click the door in the list to assign a camera.
+
+3. When the <Cmd sid="edit_door.title" product="air" /> panel appears, scroll to <Cmd sid="door_auxiliary_device" product="air" />.
+
+4. Select the camera you added from <Cmd sid="door_product_column6" product="air" />.
+
+   <Image src="/img/air/bsair-door-assign-camera.png" />
+
+5. Click <Cmd sid="save_btn" product="air" /> to save the changes.
+
+</Step>
+<Step>
+
+### View live camera video
+
+View live video from the added cameras. Click <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="realtime_video_submenu" product="air" /> in the left sidebar.
+
+<Image src="/img/air/bsair-monitoring-realtime-camera.png" caption />
+
+* View up to two Full HD (1080p) live streams per installed Airfob Edge.
+
+* Add more devices or reduce camera resolution to view more live streams.
+
+   > <Cmd sid="device_menu" product="air" /> → <Cmd sid="cameras_groups_submenu" product="air" /> → Click camera in the list → <Cmd sid="cameras_edit_camera_name_profile" product="air" />
+
+</Step>
+<Step>
+
+### View recorded camera video
+
+View recorded video streams. Click <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="recorded_video_submenu" product="air" /> in the left sidebar.
+
+<Image src="/img/air/bsair-monitoring-recorded-camera.png" caption />
+
+</Step>
+<Step>
+
+### View event video
+
+Click <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="event_logs_submenu" product="air" /> in the left sidebar. Find an event log with an associated video clip and click play to watch it.
+
+</Step>
+</Steps>
+
+## Tested and verified devices list {#tested-devices}
+
+<div className="overflow-x">
+
+| No | Manufacturer | Model number | Device type | Onvif profile | Resolution |
+| --- | --- | --- | --- | --- | --- |
+| 1 | Hanwha Techwin | QNV-C8011R | Camera | S, G, T, M | 2592x1944 |
+| 2 | Hanwha Techwin | QND-6022R | Camera | S, G, T | 1920x1080 |
+| 3 | Hanwha Techwin | MMI-600R | Camera | S, T | 1920x1080 |
+| 4 | HIKVISION | DS-2CD2025FWD-I | Camera | S, G, T | 1920x1080 |
+| 5 | HIKVISION | DS-2CD2166G2-I | Camera | S, G, T | 3200×1800 |
+| 6 | HIKVISION | DS-2CD1121-I | Camera | S | 1920x1080 |
+| 7 | Dahua | DHI-NVR2104HS-P-S3 | NVR | S, G, T | 12MP |
+| 8 | Dahua | IPC-HDBW3249E-AS-NI | Camera | S, G, T | 1920×1080 |
+| 9 | Dahua | SD22204UEN-GN | Camera | S, G, T | 1920×1080 |
+| 10 | Dahua | DH-IPC-HFW1230DT-STW-VN | Camera | S, T | 1920×1080 |
+| 11 | Marruy | IPC-A32E-L | Camera | S, T | 2304×1296 |
+| 12 | TP-Link | Tapo C210 | Camera | S | 2304×1296 |
+
+</div>
+
+## Enable ONVIF on an IP camera
+
+1. Open a web browser and enter the camera's IP address.
+
+2. Authenticate with administrator credentials and log in.
+
+3. Go to the **Network** or **Configuration** section.
+
+4. Enable ONVIF or the open network video interface.
+
+5. Create an ONVIF-only user profile if necessary.
+
+6. Save the settings and test the ONVIF connection in BioStar Air.
+
+:::tip
+
+* **Firmware update**: Update the camera and the device to the latest firmware.
+
+* **Port forwarding**: Configure port forwarding for ONVIF if required.
+
+* **Third-party tools**: Use ONVIF Device Manager to verify camera settings and functionality.
+
+:::

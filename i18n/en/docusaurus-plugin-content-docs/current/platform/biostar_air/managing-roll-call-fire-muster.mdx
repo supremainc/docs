@@ -1,0 +1,150 @@
+---
+id: managing-roll-call-fire-muster
+title: How to Use Roll Call
+description: Learn how to set muster zones, start roll calls, track user safety status, and generate roll call history reports in BioStar Air.
+keywords:
+  - Roll Call
+  - Roll Call
+  - Fire Alarm Zone
+  - BioStar Air
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+With BioStar Air's roll call and fire evacuation guidance features, organizations can track which employees have safely evacuated the building during an emergency. By setting muster zones and using the BioStar Air mobile app, administrators can quickly account for all users and generate roll call history reports.
+
+:::info
+
+* **Ensure that muster zones are correctly assigned to user groups** to avoid confusion.
+
+* **Regularly test** the roll call feature to ensure smooth operation during a real emergency.
+
+* Use **access events** to verify attendance for safety compliance.
+
+:::
+
+:::tip
+
+Watch the following video for a roll call and muster zone guide.
+
+<YouTube videoId="F0dnR7VmfAo" />
+
+:::
+
+<CustomerNote />
+
+## Set muster zones {#settingMusterPoints}
+
+A muster zone is a designated location where users authenticate their credentials to indicate they are safe during an emergency.
+
+1. Click <Cmd sid="advanced_menu" product="air" /> → <Cmd sid="roll_call_submenu" product="air" /> in the left sidebar.
+
+2. Click <Cmd sid="add_muster_point_btn" product="air" /> at the top right of the screen.
+
+   <Image src="/img/air/bsair-adv-rollcall.png" />
+
+3. Enter a name and an optional description when the <Cmd sid="add_muster_point_title" product="air" /> panel appears.
+
+   <Image src="/img/air/bsair-adv-rollcall-add.png" />
+
+4. In the <Cmd sid="add_muster_point_devices_title" product="air" /> section, add the device group or device to assign to the muster zone. Select the checkbox for the device group or device, and click <Cmd sid="add_btn" product="air" />.
+
+   <Image src="/img/air/bsair-adv-rollcall-add-device-group.png" />
+
+5. In the <Cmd sid="add_muster_point_user_groups_title" product="air" /> section, select the user groups that must report when they arrive at the muster zone. Select the checkbox for the user group, and click <Cmd sid="add_btn" product="air" />.
+
+   <Image src="/img/air/bsair-adv-rollcall-add-user-group.png" />
+
+6. Click <Cmd sid="save_btn" product="air" /> to save the muster zone settings.
+
+:::note
+
+**Best practices for muster zones**
+
+* Make the muster zone name and description clear and easy to understand. For example, use names like 'East Parking Lot' or 'Main Building Lobby'.
+
+* When adding multiple devices to a muster zone, select a device group instead of individual devices. Device groups let you manage multiple devices at once. For more information on device group management, refer to [the following](manage-device-group).
+
+* In a large campus with multiple buildings, assign **only relevant users** to a specific muster zone.
+
+* Wired access control devices support both mobile and card authentication, whereas Airfob Tag and Airfob Patch support only mobile credentials.
+
+:::
+
+## Start roll call on mobile {#startingRollcallonMobile}
+
+Start a roll call and check attendance in the BioStar Air mobile app.
+
+<Image src="/img/air/bsair-mobile-adv-rollcall.png" className="none" />
+
+1. Open the BioStar Air app on your mobile device and log in.
+
+2. Tap <Cmd en="All Menu">All Menu</Cmd> → <Cmd sid="roll_call_submenu" product="air" /> at the bottom of the screen.
+
+3. Tap <Cmd en="Roll Call Start">Roll Call Start</Cmd>.
+
+4. A list of all users who must gather at the muster location appears.
+
+### Mark users safe {#marking-users-safe}
+
+<Columns>
+<Column className="width--20">
+
+<Image src="/img/air/bsair-mobile-adv-rollcall-start.png" />
+
+</Column>
+<Column className="padding--l20">
+
+Administrators or users can mark themselves safe in the following ways.
+
+* An administrator can press and hold the **check mark** next to a user’s name in the mobile app to mark the user safe.
+
+* Users tag their credential on a device at the assigned muster zone.
+
+* Filter users by **muster group**.
+
+* Use search to find a specific person.
+
+</Column>
+</Columns>
+
+### Complete roll call {#completingRollCall}
+
+<Columns>
+<Column className="width--20">
+
+<Image src="/img/air/bsair-mobile-adv-rollcall-complete.png" />
+
+</Column>
+<Column className="padding--l20">
+
+Complete the roll call when any of the following conditions are met.
+
+* All users have arrived at the muster zone and been marked safe
+
+* The administrator manually marks all users safe
+
+* 24 hours have passed
+
+</Column>
+</Columns>
+
+## View roll call history {#viewingRollCallHistory}
+
+View the history of previous roll calls.
+
+1. Click <Cmd sid="advanced_menu" product="air" /> → <Cmd sid="roll_call_submenu" product="air" /> in the left sidebar.
+
+2. Click the <Cmd sid="roll_call_history_tab" product="air" /> tab.
+
+   <Image src="/img/air/bsair-adv-rollcall-history.png" />
+
+3. Click a completed roll call entry to view its details.
+
+<Image src="/img/air/bsair-adv-rollcall-history-details.png" />
+
+* View the list of all access events recorded during the roll call.
+
+* Check whether each user was marked safe or unconfirmed.
+
+* Check the start and end times of the roll call.

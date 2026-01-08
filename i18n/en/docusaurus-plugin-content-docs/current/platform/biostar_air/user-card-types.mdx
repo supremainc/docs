@@ -1,0 +1,123 @@
+---
+id: user-card-types
+title: User Card and Credential Types
+description: This article introduces the user types (regular and temporary) supported from BioStar Air version 2.6 and the credentials available for each type. Regular users can use Mobile Card, RF card, QR code, LinkPass, face, and PIN, while temporary users can use the web-based dynamic QR code and LinkPass.
+keywords:
+  - User Management
+  - BioStar Air
+  - User card types
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+From BioStar Air version 2.6, two user types were introduced to enhance user management.
+
+* <Cmd sid="user_regular_card_type" product="air" />: A user who is a regular member of an organization or facility and requires long-term, ongoing access. All credential types can be issued.
+
+* <Cmd sid="user_temporary_card_type" product="air" />: A visitor or non-regular member who needs short-term, limited access. This can include guests, external visitors, short-term contractors, delivery couriers, and so on. Only <Cmd sid="user_form_input20" product="air" /> credentials, including QR code and LinkPass, can be issued.
+
+:::info
+
+For more information on issuing credentials when adding or editing users, refer to [the following](adding-individual-users#issuingCredentials).
+
+:::
+
+<CustomerNote />
+
+:::tip
+
+Watch the video below for a tutorial on user and card types.
+
+<YouTube videoId="xTxIzG-30S0" />
+
+:::
+
+## Regular user card types {#regular-user-card-typs}
+
+The credentials you can issue to regular users are as follows.
+
+:::info
+
+For instructions on using mobile credentials with the Suprema Pass app, refer to [the following](suprema-pass-app-overview).
+
+:::
+
+### <Cmd sid="card_type_mobile" product="air" className="normal" /> {#mobileCard}
+
+* A unique card ID is assigned automatically; set it manually if required.
+
+* When using an **Airfob Tag** or **Airfob Patch**, integrate with an existing access control system by using the mobile card number as the card serial number.
+
+* For compatibility with a previous system, the mobile card ID can match the RF card number of the former site.
+
+### <Cmd sid="card_type_rf" product="air" className="normal" /> {#rfCard}
+
+* Add up to eight RFID cards per user.
+
+* Configure <Cmd sid="rf_card_type" product="air" />(CSN or Wiegand), <Cmd sid="wiegand_card_id" product="air" />, and <Cmd sid="rf_card_name" product="air" /> to simplify management when multiple cards are assigned.
+
+* Select a reader in <Cmd sid="newest_rf_card_text_device" product="air" /> to scan an existing RFID card with a connected Suprema device.
+
+* If an existing RF card has a **CSN** (card serial number), enter the CSN manually.
+
+### <Cmd sid="card_type_option3" product="air" className="normal" /> {#qrCode}
+
+* Regular users can use the **QR code** of a mobile card.
+
+* Access the QR code by tapping the button on the mobile card interface.
+
+### <Cmd sid="card_type_option4" product="air" className="normal" /> {#linkPass}
+
+* Send a web link to the user's email address or phone number.
+
+* The user opens the received link in a web browser and clicks <Cmd sid="web_card_preview_button1" product="air" /> to gain access.
+
+:::info
+
+For more information on LinkPass credentials, refer to [the following](linkpass-credentials).
+
+:::
+
+### Facial authentication {#face}
+
+* Add up to two face profile images per user.
+
+* Register through a connected reader or by uploading an image.
+
+* Send an email link to the user, then capture a photo with a mobile device camera to register.
+
+### PIN {#pin}
+
+Set a 4–16-digit PIN to use as part of two-factor authentication (2FA).
+
+## Temporary user card types {#temporary-user-card-typs}
+
+Temporary users do not receive mobile or RFID cards. Instead, issue **web-based credentials** that do not require an app download. Available options are as follows:
+
+### <Cmd sid="card_type_option3" product="air" className="normal" /> {#TempQrCode}
+
+* Send via email or text message.
+
+* Accessible through a web browser.
+
+* Use a **dynamic QR code**, which updates every five minutes, to enhance security.
+
+### <Cmd sid="card_type_option4" product="air" className="normal" /> {#TempLinkPass}
+
+Send a web link to the user via email or text message. The user gains access by clicking <Cmd sid="web_card_preview_button1" product="air" /> in a web browser.
+
+:::info
+
+For more information on LinkPass credentials, refer to [the following](linkpass-credentials).
+
+:::
+
+## Managing access levels {#managing-access-levels}
+
+Set **access levels** to control where credentials are allowed, regardless of whether the user is regular or temporary.
+
+:::caution
+
+If the user is temporary, assign restrictive access levels carefully and avoid issuing credentials with unlimited access.
+
+:::

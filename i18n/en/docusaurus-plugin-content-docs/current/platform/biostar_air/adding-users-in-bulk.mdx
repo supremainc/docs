@@ -1,0 +1,201 @@
+---
+id: adding-users-in-bulk
+title: Add Users in Bulk
+description: Learn how to efficiently add multiple users at once by uploading a CSV file in BioStar Air Portal, configure bulk access levels, and manage profile images.
+keywords:
+  - User Management
+  - BioStar Air
+  - bulk users
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+With BioStar Air, administrators can add multiple users at once using a CSV file. This feature is useful for efficiently handling employee onboarding, site upgrades, or temporary access requirements.
+
+<CustomerNote />
+
+:::tip
+
+Refer to the following video for a step�by�step guide to adding multiple users in bulk.
+
+<YouTube videoId="gOi2nP0Ag5o" />
+
+:::
+
+## Download the CSV template {#downloadCSVTemplate}
+
+Follow these steps to download the CSV template file.
+
+1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+
+2. Click <Cmd sid="add_user_btn" product="air" /> → <Cmd sid="user_actions_import_title" product="air" /> at the top right of the screen.
+
+   <Image src="/img/air/bsair-add-bulk-import-user.png" />
+
+3. When the <Cmd sid="user_actions_import_title" product="air" /> panel appears, click <Cmd sid="user_actions_import_download_btn_text" product="air" />.
+
+   <Image src="/img/air/bsair-add-bulk-import-user-download-csv-template.png" />
+
+4. Save the CSV template file (*biostar-import-user-csv-example.csv*) locally.
+
+## Prepare the CSV file {#preparing-the-csv-file}
+
+Download the CSV template and enter the required details for each user.
+
+### Key input fields {#keyInputFields}
+
+The key fields to enter are as follows.
+
+* <Cmd sid="user_csv_example_header11" product="air" className="bold" />: Check the group ID in <Cmd sid="user_menu" product="air" />  <Cmd sid="user_groups_submenu" product="air" />.
+
+   <Image src="/img/air/bsair-user-group-list-check-ids.png" />
+
+* <Cmd sid="user_csv_example_header12" product="air" className="bold" />: Check the access level ID in <Cmd sid="access_menu" product="air" />  <Cmd sid="access_levels_submenu" product="air" />. <Cmd sid="full_access" product="air" className="bold" /> is always set to **1**. Use commas (`,`) as separators to specify multiple access levels.
+
+   <Image src="/img/air/bsair-ac-level-list-check-ids.png" />
+
+* <Cmd sid="user_csv_example_header7" product="air" className="bold" />: Enter this if you plan to send invitations by email.
+
+* <Cmd sid="user_csv_example_header8" product="air" className="bold" />: Enter this if you plan to send invitations by mobile SMS.
+
+:::caution
+
+<Cmd sid="user_csv_example_header7" product="air" className="bold" /> and <Cmd sid="user_csv_example_header8" product="air" className="bold" /> must not be duplicated. Uploading a CSV file with duplicate values may cause errors.
+
+:::
+
+### Support for custom Wiegand formats
+
+* Freely configure **any Wiegand format**, including facility codes, segments, parity bits, and more.
+
+* HID Corporate 1000 and iCLASS SE and Seos formats are supported.
+
+* **CSV template**
+
+   * Each defined format (custom or default) appears as a separate column in the CSV file.
+
+      > <Cmd sid="rf_card_data_format_option_1" product="air" className="bold" />, <Cmd sid="rf_card_data_format_option_2" product="air" className="bold" />, <Cmd sid="rf_card_data_format_option_3" product="air" className="bold" />, <Cmd sid="rf_card_data_format_option_4" product="air" className="bold" />, <Cmd sid="rf_card_data_format_option_5" product="air" className="bold" />
+
+  * Separate multiple entries in a single field with a slash (`/`).
+
+  * Use single quotes (`'`) around the card name. Avoid using double quotes (`"`); they may cause errors.
+
+      > ✅ 'CardName' | ❌ "CardName"
+
+   :::note
+
+   **Example**
+
+   * With a facility code: *1234567-100-'Main Office Card'* (`CardID`-`FacilityCode`-`'CardName'`)
+
+   * With multiple segments: *12-3456-78-'Lab Entry Card'*
+
+   :::
+
+### Support for multiple cards
+
+* Assign up to eight CSN or Wiegand card formats per user.
+
+* **CSV template**
+
+   * For a single card, enter the CSN card number.
+
+   * Separate CSN card numbers with a slash (`/`) when enrolling multiple cards.
+
+:::note
+
+**Card naming format**: `CSN`-`'Card Name'`
+
+Example: *1234567-'Main Entry'* / *7654321-'Back Door'*
+
+:::
+
+## Upload the CSV file {#uploading-the-csv-file}
+
+After preparing the CSV file, upload it.
+
+1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+
+2. Click <Cmd sid="add_user_btn" product="air" /> → <Cmd sid="user_actions_import_title" product="air" /> at the top right of the screen.
+
+   <Image src="/img/air/bsair-add-bulk-import-user.png" />
+
+3. When the <Cmd sid="user_actions_import_title" product="air" /> panel appears, click <Cmd sid="face_register_upload_csv_text_select_file" product="air" />.
+
+   <Image src="/img/air/bsair-add-bulk-import-user-select-csv.png" />
+
+4. Select the CSV file you prepared.
+
+   :::note
+
+   If the users' profile images are ready, enable the <Cmd sid="face_register_upload_face_photo" product="air" /> option. For more information on uploading profile images, refer to [the following](#uploadProfileImages).
+
+   :::
+
+5. Click <Cmd sid="new_popup_import_users_btn_next" product="air" />.
+
+6. In the <Cmd sid="user_actions_import_data_preview" product="air" /> section, review the accuracy of the data in the first column.
+
+   <Image src="/img/air/bsair-add-bulk-import-user-csv-data-preview.png" />
+
+7. If there are no issues, click <Cmd sid="user_actions_import_btn" product="air" /> in the bottom right corner.
+
+After the upload completes, you can import user images or issue mobile cards in bulk on the next screen. Select the desired action.
+
+<Image src="/img/air/bsair-add-bulk-import-user-csv-complete.png" />
+
+:::info
+
+* Do not use special characters other than commas (`,`) in the CSV file name.
+
+* The maximum CSV file size is **5MB**.
+
+* Alternatively, drag and drop the CSV file into the <Cmd sid="user_actions_import_upload_text" product="air" /> field of the <Cmd sid="user_actions_import_title" product="air" /> panel.
+
+:::
+
+### Validate CSV import
+
+The CSV upload process now provides **row-level error feedback**, making troubleshooting easier. If errors occur during upload, a detailed report is provided for review. Click <Cmd sid="user_actions_import_download_btn_text" product="air" /> to download the report.
+
+<Image src="/img/air/bsair-add-bulk-import-user-csv-error.png" />
+
+## Upload user profile images {#uploadProfileImages}
+
+Profile images can be uploaded automatically with the CSV file or manually in bulk later.
+
+<Image src="/img/air/bsair-add-bulk-import-user-with-face-photo.png" />
+
+1. Prepare profile image files that match the <Cmd sid="user_csv_example_header1" product="air" className="bold" /> column in the CSV file.
+
+   For example, the *601.jpg* file corresponds to user ID **601**.
+
+2. After uploading the CSV file in the <Cmd sid="user_actions_import_title" product="air" /> panel, enable the <Cmd sid="face_register_upload_face_photo" product="air" /> option.
+
+3. Click <Cmd sid="face_register_upload_face_photo_select_folder" product="air" />, then select the folder that contains the profile images.
+
+:::note
+
+**File format requirements**
+
+* Supported formats: *.jpg*, *.jpeg*, *.png*
+
+* File size limit: **1 MB** per image
+
+:::
+
+:::tip
+
+If profile images were not ready when the CSV file was uploaded, use <Cmd sid="image_upload_action" product="air" />(<IcAirUpface />) in the user list to add them later.
+
+<Image src="/img/air/bsair-add-bulk-import-user-profile-images.png" />
+
+:::
+
+## Finalize the bulk upload {#finalizing-the-bulk-upload}
+
+After all user data and images are uploaded, the system processes the entries, and the new users appear in the list with their assigned credentials.
+
+## Troubleshooting
+
+If you encounter issues with CSV upload, refer to more detailed documentation that helps resolve common problems. The document also includes Excel formulas that help validate data and remove duplicates. <DocLink docId="platform/biostar_air/troubleshooting-adding-users-in-bulk" />

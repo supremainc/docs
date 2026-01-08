@@ -1,0 +1,491 @@
+---
+id: managing-registered-devices
+title: Manage Registered Devices
+description: Check the connection status of registered Suprema devices in the BioStar Air portal and configure detailed settings such as facial authentication, card setting, network, and firmware. Manage multiple devices efficiently through individual management and bulk actions.
+keywords:
+  - Device Management
+  - Device Settings
+  - BioStar Air
+  - Biometric
+  - Card Setting
+  - Firmware Upgrade
+  - Network settings
+---
+
+Monitor the status of registered Suprema devices and configure detailed settings in the BioStar Air portal. Operate the security system effectively by managing various features such as facial authentication, card authentication, network, and firmware updates individually or in bulk.
+
+:::info
+
+Internet access is required to use certain features such as Remote Access, Facial Authentication, QR code access, and Firmware Upgrade.
+
+:::
+
+:::caution
+
+Starting with BioStar Air 2.10 (including BioStation 3), several new device configuration features were added. Because not all devices support every feature, menu options vary by device and firmware version.
+
+:::
+
+:::tip
+
+Refer to the following video to watch the device registration and management guide.
+
+<YouTube videoId="lpMPkMyjr-c" />
+
+:::
+
+## Register Device
+
+Devices can be registered only in the BioStar Air mobile app for iOS or Android. You cannot register devices from the web portal. Refer to [the following](register-device) for detailed instructions on registering devices in the mobile app.
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+<CustomerNote />
+
+## Device connection status {#device-connection-status}
+
+Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar. Check each device’s connection status from the status icons in the device list.
+
+<Image src="/img/air/bsair-device-mng-list.png" />
+
+* <StatusOK /> **Green**: The device is online, can be controlled remotely, and can accept and update QR authentication.
+
+* <StatusFail /> **Red**: The device is offline.
+
+* <StatusUpdating /> **Orange**: Firmware is updating.
+
+* ⚪ **No dot**: The device has no network connection. (e.g., Airfob Patch)
+
+* ⚠️ **Warning icon**: Synchronization is required between the server and the biometric device.
+
+## Device list information {#viewing-device-information}
+
+Each column in the <Cmd sid="device_submenu" product="air" /> device list includes the following information.
+
+<Image src="/img/air/bsair-device-mng-list-info.png" />
+
+* <Cmd sid="device_product_column" product="air" />: The device name and model retrieved from the Suprema database.
+
+* <Cmd sid="device_nickname_column" product="air" />: A user-editable field for easier identification. Edit it in the <Cmd sid="device_edit_title" product="air" /> window that appears after clicking the device in the list.
+
+* <Cmd sid="device_id_column" product="air" />: The unique identifier assigned to the device.
+
+* <Cmd sid="device_group_column" product="air" />: The group to which the device belongs.
+
+* <Cmd sid="device_battery_column" product="air" />: Available only on battery-powered devices.
+
+* <Cmd sid="device_fw_column" product="air" />: The currently installed firmware version.
+
+* <Cmd sid="device_timezone_column" product="air" />: The time zone set on the device.
+
+## Editing individual device information and settings {#editing-individual-device}
+
+1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+
+2. Click the device you want to edit in the list.
+
+3. The <Cmd sid="device_edit_title" product="air" /> window appears.
+
+   <Image src="/img/air/bsair-device-mng-list-edit-details.png" />
+
+4. Edit the device’s details or settings.
+
+5. Click <Cmd sid="save_btn" product="air" /> at the bottom to save the changes.
+
+Refer to the sections below for details on each field and setting option.
+
+### <Cmd sid="device_edit_device_info" product="air" className="normal" /> {#deviceInfo}
+
+The <Cmd sid="device_edit_device_info" product="air" /> section shows basic information such as device name, model, serial number, and firmware version.
+
+Below the basic information, use the **Action** functions to manage the device.
+
+* <Cmd sid="firmware_update_btn" product="air" />: Update the device firmware to the latest version.
+
+* <Cmd sid="device_edit_actions_reboot" product="air" />: Reboot the device remotely when an issue or anomaly occurs.
+
+* <Cmd sid="device_edit_actions_factory_reset" product="air" />: Initialize all settings stored on the device. This action deletes all settings and data on the device.
+
+* <Cmd sid="device_edit_actions_factory_reset" product="air" /> <Cmd sid="device_edit_actions_excluding_network" product="air" />: Initialize all settings except the network settings. This action deletes all settings and data but keeps the network settings.
+
+Use the settings below the **Action** section to configure basic options.
+
+* <Cmd sid="device_editable_fields_nick_name" product="air" />: The alias shown in the device list and logs. You can edit this field directly.
+
+* <Cmd sid="device_editable_fields_timezone" product="air" />: Set the device time zone to keep logs consistent when the site and device clocks differ. Activate the <Cmd sid="device_field_dst_usage" product="air" /> option to apply daylight saving time (DST).
+
+* <Cmd sid="device_editable_fields_hands_free" product="air" />: Extend the BLE range.
+
+* <Cmd sid="device_editable_fields_qr_reader" product="air" />: Confirm that an RS-485 QR reader is connected to the device.
+
+   :::info
+
+   * When a QR reader is connected to the device, you cannot use another RS-485 device.
+
+   * When using an SIO2, you cannot use a QR reader on the device connected to that door.
+
+   :::
+
+* <Cmd sid="device_editable_fields_card" product="air" />: Activate or deactivate card authentication. DESFire and Felica card formats are supported.
+
+   :::info
+
+   This feature is supported only by XPass 2 and X-Station 2 devices.
+
+   :::
+
+* <Cmd sid="device_editable_fields_beep_setting" product="air" />: Configure the success beep for access authentication.
+
+   :::info
+
+   Support may vary by device.
+
+   :::
+
+### <Cmd sid="device_card_title" product="air" /> {#cardSettings}
+
+:::caution
+
+On XPass 2 and X-Station 2 devices, card settings appear in the <Cmd sid="device_edit_device_info" product="air" /> section and have limited support. A firmware update scheduled for late 2025 will improve this limitation.
+
+:::
+
+#### <Cmd sid="device_editable_fields_card" product="air" className="normal" /> {#nfcRfcard}
+
+Click the toggle switch to turn card access authentication on or off.
+
+* <Cmd sid="rf_card_type" product="air" />: MIFARE, DESFire, Felica, EM4100, iCLASS, SEOS, HID Prox
+
+   :::info
+
+   * The EM4100 card format applies to BioStation 3 and BioEntry W3; more devices will be supported in late 2025.
+
+   * The HID Prox card format may not be supported depending on the device.
+
+   :::
+
+* <Cmd sid="device_editable_fields_card_byte_order" product="air" />
+
+   * <Cmd>MSB</Cmd>: Processes card data in order from large byte units to small byte units, sequentially storing the card serial number (CSN) from left to right.
+
+   * <Cmd>LSB</Cmd>: Processes card data in order from small byte units to large byte units, storing the card serial number (CSN).
+
+* <Cmd sid="device_card_field_data_reading_method" product="air" />: Select CSN (default) or Wiegand format.
+
+:::info
+
+BioStar Air includes five default formats. Add more formats in <Cmd sid="settings_menu" product="air" /> → <Cmd sid="card_format_submenu" product="air" />.
+
+:::
+
+#### <Cmd sid="device_card_wiegand_card" product="air" className="normal" /> {#device_card_wiegand_card}
+
+Activate iCLASS SE/SEOS and HID Prox card authentication.
+
+:::info
+
+Support may vary by device.
+
+:::
+
+### <Cmd sid="new_layout_nav_title_network" product="air" className="normal " /> {#network}
+
+* <Cmd sid="device_editable_fields_use_dhcp" product="air" />: Configure the device to obtain an IP address automatically.
+
+   To set the network manually, disable <Cmd sid="device_editable_fields_use_dhcp" product="air" /> and fill in the following fields.
+
+* <Cmd sid="device_editable_fields_ip_address" product="air" />
+
+* <Cmd sid="device_editable_fields_gateway" product="air" />
+
+* <Cmd sid="device_editable_fields_dns_address" product="air" />
+
+* <Cmd sid="device_editable_fields_subnet_mask" product="air" />
+
+:::note
+
+WLAN settings may appear but are currently disabled.
+
+:::
+
+### <Cmd sid="new_layout_nav_title_authentication" product="air" className="normal" /> {#authentication}
+
+* <Cmd sid="new_layout_nav_title_authentication_txt1" product="air" />: Select single- or multi-factor authentication. Combine face, RF card, ID, and PIN.
+
+* <Cmd sid="device_bs3_authen_display_user_name" product="air" /> / <Cmd sid="device_bs3_authen_display_user_id" product="air" />: Choose whether to show the user name or ID on the authentication screen. Select <Cmd sid="device_bs3_authen_display_user_name_txt3" product="air" /> to hide them.
+
+   :::note
+
+   This feature is available only on devices with a screen.
+
+   :::
+
+* <Cmd sid="new_layout_nav_title_authentication_auth_timeout" product="air" />: Authentication fails if the credential is not authenticated within the set time.
+
+:::info
+
+The <Cmd sid="new_layout_nav_title_authentication" product="air" /> section appears only on biometric-only devices that support PIN or face/fingerprint authentication.
+
+:::
+
+### <Cmd sid="new_layout_nav_title_face" product="air" className="normal" /> {#faceAuthentication}
+
+:::info
+
+Available only on biometric devices.
+
+:::
+
+#### <Cmd sid="site_setting_tab_security" product="air" className="normal" /> {#faceSecurity}
+
+* <Cmd sid="new_layout_device_bew3_block_7_title" product="air" />: Prevent user authentication with spoofed faces such as photos.
+
+* <Cmd sid="new_layout_device_bew3_block_7_text2" product="air" />: Check for duplicate registrations when enrolling facea.
+
+#### <Cmd sid="device_face_detection" product="air" className="normal" /> {#faceDetection}
+
+* <Cmd sid="new_layout_device_bew3_block_2_title" product="air" />: Set the sensitivity for detecting movement around the device.
+
+* <Cmd sid="new_layout_device_bew3_block_3_title" product="air" />: Set the maximum rotation angle allowed for a face.
+
+* <Cmd sid="new_layout_device_bew3_block_5_title" product="air" />: Expand the area in the camera view where faces are recognized.
+
+* <Cmd sid="new_layout_device_bew3_block_4_title" product="air" /> <Cmd sid="new_layout_device_bew3_block_4_title_cm" product="air" />: Set the minimum and maximum recognition distance.
+
+* <Cmd sid="new_layout_device_bew3_block_8_title" product="air" /> <Cmd sid="new_layout_device_bew3_block_8_title_cm" product="air" />: If a face is not enrolled within the set time during enrollment, the process is canceled.
+
+#### <Cmd sid="new_layout_device_bew3_block_8_1_text" product="air" className="normal" /> {#maskDetection}
+
+Activate the <Cmd sid="new_layout_device_bew3_block_8_1_text" product="air" /> option to configure mask detection.
+
+* <Cmd sid="new_layout_device_bew3_block_8_2_text" product="air" />: Select mask detection sensitivity.
+
+* <Cmd sid="new_layout_device_bew3_block_8_3_text" product="air" />
+
+   * <Cmd sid="new_layout_device_bew3_block_8_3_value1" product="air" />: Users not wearing a mask are denied authentication, and a mask-non-compliance event log is recorded.
+
+   * <Cmd sid="new_layout_device_bew3_block_8_3_value2" product="air" />: Users not wearing a mask can still authenticate, but a mask-non-compliance event log is recorded.
+
+* <Cmd sid="new_layout_device_bew3_block_8_4_text" product="air" />
+
+   * <Cmd sid="new_layout_device_bew3_block_8_4_value1" product="air" />: After authentication, check mask usage or measure temperature.
+
+   * <Cmd sid="new_layout_device_bew3_block_8_4_value2" product="air" />: Check mask usage or measure temperature before authentication. In this case, users not wearing a mask or exceeding the threshold temperature cannot authenticate.
+
+   * <Cmd sid="new_layout_device_bew3_block_8_4_value3" product="air" />: Use the device only to check mask usage or measure temperature. Users wearing a mask or having a temperature below the threshold can enter regardless of authentication.
+
+:::info
+
+When using non-face credentials, the timing of "before" and "after" is usually important.
+
+:::
+
+### <Cmd sid="new_layout_nav_title_tna" product="air" className="normal" />(Time & Attendance, T&A) {#tna}
+
+When this feature is enabled, <Cmd sid="device_edit_tna_event_label" product="air" className="bold" /> is logged in **Event Log** and used in <Cmd sid="tna_report" product="air" className="bold" />.
+
+* <Cmd sid="new_device_edit_tna_toogle" product="air" />: Click the toggle switch to turn attendance management on or off.
+
+* <Cmd sid="device_edit_tna_mode_label" product="air" />: Select the desired attendance mode.
+
+   * <Cmd sid="device_edit_tna_mode_option2" product="air" />: When the attendance key appears on the screen, the user selects the attendance event during authentication.
+
+   * <Cmd sid="device_edit_tna_mode_option3" product="air" />: Attendance events change automatically according to the set schedule. You can select a schedule to apply to attendance events.
+
+   * <Cmd sid="device_edit_tna_mode_option4" product="air" />: The user continues to use the last selected attendance event.
+
+   * <Cmd sid="device_edit_tna_mode_option5" product="air" />: Only the selected attendance event is available.
+
+   * <Cmd sid="device_edit_tna_mode_option6" product="air" />: When presenting a mobile credential, the Suprema Pass app lets the user select the attendance event.
+
+### <Cmd sid="device_bs3_sound_label" product="air" className="normal" /> {#device_bs3_sound_label}
+
+:::info
+
+The <Cmd sid="device_bs3_sound_label" product="air" /> section is available only on biometric-only devices. Other devices may show basic options such as <Cmd sid="device_editable_fields_beep_setting" product="air" /> in different sections.
+
+:::
+
+#### <Cmd sid="device_bs3_sound_label2" product="air" className="normal" /> {#device_bs3_sound_label2}
+
+* <Cmd sid="device_bs3_sound_label3" product="air" />: Reduce LCD brightness when the device is not in use to lower unnecessary power consumption.
+
+* <Cmd sid="device_bs3_sound_label4" product="air" />: Keep the backlight always on or dim it after inactivity.
+
+* <Cmd sid="device_bs3_sound_backlight" product="air" />: Set the time before the backlight turns off automatically.
+
+* <Cmd sid="user_form_input3" product="air" />: Set the language shown on the device screen.
+
+* <Cmd sid="device_bs3_sound_home_screen" product="air" />: Configure the items displayed on the device’s home screen background.
+
+   * <Cmd sid="device_bs3_sound_home_screen_txt1" product="air" />: Display the default image on the home screen.
+
+   * <Cmd sid="device_bs3_sound_home_screen_txt2" product="air" />: Display a user-registered image on the home screen.
+
+   * <Cmd sid="device_bs3_sound_home_screen_txt3" product="air" />: Display administrator input on the home screen.
+
+   :::note
+
+   After clicking <Cmd sid="audit_action_update" product="air" /> and saving, the image or notice no longer appears in the edit screen but remains on the device.
+
+   :::
+
+#### <Cmd sid="device_bs3_sound_home_screen_sound" product="air" className="normal" /> {#device_bs3_sound_home_screen_sound}
+
+* <Cmd sid="device_bs3_sound_home_screen_soung_use_voice" product="air" />: Use voice guidance instead of notification tones.
+
+* <Cmd sid="device_bs3_sound_home_screen_soung_device" product="air" />: Adjust the volume of sounds generated by the device.
+
+* <Cmd sid="device_bs3_sound_home_screen_soung_speaker" product="air" /> / <Cmd sid="device_bs3_sound_home_screen_microphone" product="air" />: Adjust the output or input volume when using the IP intercom feature.
+
+   :::note
+
+   This feature is available only on the BioStation 3 device.
+
+   :::
+
+### <Cmd sid="new_layout_nav_title_wiegandout" product="air" className="normal" /> {#wiegandoutput}
+
+This feature integrates with external systems (e.g., alarm panels). Activate the <Cmd sid="use_wiegand_out_label" product="air" /> option to use this feature.
+
+* <Cmd sid="wiegand_output_mode" product="air" />: Configure the Wiegand signal output mode.
+
+   * <Cmd sid="user_regular_card_type" product="air" />: Scan cards using the configured Wiegand format. You can set error codes and select values to be sent if Wiegand card authentication fails.
+
+   * <Cmd sid="device_wiegand_output_mode_bypass" product="air" />: Send the CSN regardless of Wiegand authentication. Set this if you are using it as a device without door control functionality.
+
+* <Cmd sid="wiegand_output_info" product="air" />: Select the information output during authentication.
+
+* <Cmd sid="wiegand_pulse_width" product="air" />: Set the pulse width for the Wiegand signal.
+
+* <Cmd sid="wiegand_pulse_interval" product="air" />: Set the pulse interval for the Wiegand signal.
+
+* <Cmd sid="mobile_consecutive_tag" product="air" />: Tag mobile cards consecutively without wait time.
+
+* <Cmd sid="devices_weigand_out_consecutive_lable" product="air" />: Set the maximum number of consecutive mobile card tags.
+
+:::info
+
+The <Cmd sid="mobile_consecutive_tag" product="air" /> feature is supported in Suprema Pass app 2.9.0 or later.
+
+:::
+
+### <Cmd sid="device_intercom_title" product="air" className="normal" /> {#intercom}
+
+* <Cmd sid="device_intercom_txt_use_intercom" product="air" />: Activate or deactivate the IP intercom feature.
+
+* <Cmd sid="device_intercom_txt_sip_server_transport" product="air" />: Choose the SIP transport method when configuring the intercom’s SIP server.
+
+* <Cmd sid="device_intercom_txt_sip_server_address" product="air" />: Enter the SIP server address.
+
+* <Cmd sid="device_intercom_txt_sip_server_port" product="air" />: Enter the SIP server port.
+
+* <Cmd sid="device_intercom_txt_registration_duration" product="air" />: Enter the registration duration. The device attempts to register with the SIP server every time the registration duration expires.
+
+* <Cmd sid="device_intercom_txt_sip_username" product="air" />: Enter the SIP account username.
+
+* <Cmd sid="login_password" product="air" />: Enter the SIP account password.
+
+* <Cmd sid="device_intercom_txt_sip_authorization_id" product="air" />: Enter the SIP account authorization ID.
+
+* <Cmd sid="device_intercom_txt_outbound_proxy_server" product="air" />: Use a separate outbound proxy server for SIP services if required.
+
+* <Cmd sid="device_intercom_extension_number" product="air" />: Add or edit extension numbers.
+
+* <Cmd sid="device_intercom_video_resolution" product="air" />: Select the video resolution when using the intercom.
+
+* <Cmd sid="device_intercom_open_door_button" product="air" />: Specify a button to unlock the door during a call.
+
+:::info
+
+The IP intercom feature is supported only on BioStation 3.
+
+:::
+
+### <Cmd sid="device_bs3_secure_tamper" product="air" className="normal" /> {#secureTamper}
+
+If a tamper event occurs, configure the device to delete **all user information**, **all logs**, and **security keys** stored on the device.
+
+### <Cmd sid="device_bs3_rtsp" product="air" className="normal" /> {#rtspStreaming}
+
+Configure details for **Real Time Streaming Protocol** (RTSP) streaming. The device's camera can stream live video.
+
+* <Cmd sid="device_bs3_rtsp_address" product="air" />: RTSP server address.
+
+* <Cmd sid="device_bs3_rtsp_port" product="air" />: Enter the RTSP server port.
+
+* <Cmd sid="user_info_id" product="air" /> / <Cmd sid="login_password" product="air" />: Enter the RTSP server ID and password.
+
+* <Cmd sid="device_bs3_rtsp_video" product="air" />: Select the video resolution when using RTSP.
+
+:::info
+
+The RTSP streaming feature is supported only on BioStation 3.
+
+:::
+
+### <Cmd sid="new_layout_nav_title_sensitivity" product="air" className="normal" /> {#rssiSensitivity}
+
+Adjust the RSSI value to set how close the mobile device must be to unlock the door.
+
+* Lower values help block unintended activation.
+
+* Higher values improve detection in high-interference environments.
+
+## Bulk device actions {#bulkDeviceActions}
+
+Use the controls at the top of the device list to manage multiple devices at once.
+
+<Image src="/img/air/bsair-device-mng-list-tools.png" />
+
+* <IcAirRef width="24px" height="24px" />: Refresh the device list and device status.
+
+* <IcAirRemove width="24px" height="24px" />: Delete devices registered to the site.
+
+   :::warning
+
+   Only online devices can be deleted permanently. If the device is offline, delete it first in the BioStar Air mobile app before adding it to another site. Refer to [the following](#removingDevice) for detailed instructions on deleting devices in the mobile app.
+
+   :::
+
+   :::note
+
+   **Supported devices**
+
+   * BioStation 3, BioEntry W3: all firmware versions
+
+   * XPass 2, X-Station 2: v2.11 or later
+
+   :::
+
+* <IcAirFw width="24px" height="24px" />: Update the firmware of selected devices. Refer to [the following](how-to-upgrade-firmware) for more information on upgrading firmware.
+
+* <IcAirCloud width="24px" height="24px" />: Synchronize biometric templates from selected devices to the server.
+
+* <IcAirGroup width="24px" height="24px" />: Assign selected devices to a group. For more information on device group management, refer to [the following](manage-device-group).
+
+* <IcAirByte width="24px" height="24px" />: Switch the RF card byte order of the selected device in the list to <Cmd>MSB</Cmd> or <Cmd>LSB</Cmd>.
+
+   * <Cmd>MSB</Cmd>: Processes card data in order from large byte units to small byte units, sequentially storing the card serial number (CSN) from left to right.
+
+   * <Cmd>LSB</Cmd>: Processes card data in order from small byte units to large byte units, storing the card serial number (CSN).
+
+* <IcAirDset width="24px" height="24px" />: Import settings originally configured in standalone mode.
+
+* <IcAirUpd width="24px" height="24px" />: Update the status of selected devices.
+
+## Deleting devices in the mobile app {#removingDevice}
+
+<Image src="/img/air/bsair-remove-device-step.png" className="none" />
+
+1. Open the BioStar Air app on your mobile device.
+
+2. Tap the <Cmd sid="devices_card" product="air" /> card.
+
+3. Touch and hold the device you want to delete. Select any additional devices to delete.
+
+4. Tap the <IcAirRemove /> button at the bottom right.
+
+5. In the pop-up, choose whether to delete the linked door.
+
+6. Tap <Cmd sid="device_delete" product="air" />.

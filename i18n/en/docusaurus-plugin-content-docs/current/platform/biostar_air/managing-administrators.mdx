@@ -1,0 +1,161 @@
+---
+id: managing-administrators
+title: Manage Administrators
+description: Learn how to invite administrators, assign role levels, manage permissions, and configure access control for the observer, operator, administrator, and master roles in BioStar Air.
+keywords:
+  - Administrator
+  - roles
+  - Access Control Settings
+---
+
+Use the administrator feature in BioStar Air to manage administrator accounts, assign roles, and control access levels within your organization. This enables you to maintain security and administrative control while granting the appropriate privileges to the right personnel.
+
+:::tip
+
+Watch the following video for a guide on managing administrators.
+
+<YouTube videoId="pUyNLeTfGRI" />
+
+:::
+
+## View administrators {#viewAdmin}
+
+Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> in the left sidebar.
+
+<Image src="/img/air/bsair-settings-admin.png" />
+
+The <Cmd sid="admin_submenu" product="air" /> menu shows a list of all active administrators. The administrator list includes the following information.
+
+* Name
+
+* Email address
+
+* Phone number
+
+* Inviter
+
+* Invitation date
+
+* Administrator role
+
+* Account status (active/inactive)
+
+## Deactivate administrators {#deactiveAdmin}
+
+Instead of deleting an administrator, deactivate the account and reactivate it when needed.
+
+1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> in the left sidebar.
+
+2. Find the administrator to deactivate in the list.
+
+3. Click the toggle switch in the <Cmd sid="column_admin_account_status" product="air" /> column.
+
+   <Image src="/img/air/bsair-settings-admin-deactive.png" />
+
+4. When the message window appears, click <Cmd sid="btn_ok" product="air" />Yes.
+
+The status in the <Cmd sid="column_admin_account_status" product="air" /> column changes to <Cmd sid="admin_status_disabled" product="air" />.
+
+<Image src="/img/air/bsair-settings-admin-deactive-result.png" />
+
+:::info
+
+The ability to deactivate administrators may be restricted by the administrator's role. Administrators with the <Cmd sid="master_role" product="air" className="bold" /> role cannot deactivate other <Cmd sid="master_role" product="air" className="bold" /> administrators.
+
+:::
+
+## Change an administrator's role {#changing-an-administrators-role}
+
+Administrators can change the roles of administrators at a lower level.
+
+1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> in the left sidebar.
+
+2. Find the administrator to change in the list.
+
+3. Select the new administrator level in the <Cmd sid="column_admin_level" product="air" /> column.
+
+   <Image src="/img/air/bsair-settings-admin-change-role.png" />
+
+4. When the message window appears, click <Cmd sid="btn_ok" product="air" />Yes.
+
+:::note
+
+Only <Cmd sid="master_role" product="air" className="bold" /> administrators can assign or modify the <Cmd sid="master_role" product="air" className="bold" /> role for other administrators.
+
+:::
+
+## Invite new administrators {#inviteNewAdmin}
+
+Add new administrators.
+
+1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> in the left sidebar.
+
+2. Click <Cmd sid="btn_invite" product="air" /> at the top right of the screen.
+
+3. When the <Cmd sid="admin_invitation_title" product="air" /> window appears, enter the email address.
+
+   <Image src="/img/air/bsair-settings-admin-invite.png" />
+
+4. In <Cmd sid="admin_invitation_input2" product="air" />, select the role to assign to the new administrator.
+
+5. Click <Cmd sid="send_btn" product="air" /> to send the invitation.
+
+:::note
+
+* Each administrator must have a unique email address. If necessary, use an alias address (for example, erik+training@example.com).
+
+* Click the link in the invitation email. Sign up if the administrator does not have an account. If the administrator already has an account, log in to access the **site** directly.
+
+:::
+
+## Administrator levels {#administrator-levels}
+
+Each administrator level in BioStar Air has specific permissions, and higher levels inherit the permissions of lower levels.
+
+:::info
+
+Each administrator role has different permissions across BioStar Air. <Cmd sid="observer_role" product="air" className="bold" /> has the most restricted access and some menus are hidden.
+
+:::
+
+### <Cmd sid="observer_role" product="air" className="normal" /> (Lowest Level) {#observer}
+
+* <Cmd sid="dashboard_menu" product="air" /> dashboard and logs **can be viewed**.
+
+* **Export** logs and generate reports.
+
+* **Cannot modify** settings, users, or devices.
+
+* Access to menus is restricted. Most menus do not appear on the screen.
+
+### <Cmd sid="operator_role" product="air" className="normal" /> {#operator}
+
+* Can manage <Cmd sid="user_submenu" product="air" />, <Cmd sid="user_groups_submenu" product="air" />, <Cmd sid="access_levels_submenu" product="air" />, <Cmd sid="schedules_submenu" product="air" />, and <Cmd sid="holiday_groups_submenu" product="air" />.
+
+* **No access** to device control or management settings.
+
+* Suitable for managing everyday user and access configurations.
+
+### <Cmd sid="admin_role" product="air" className="normal" /> {#administrator}
+
+* **Can invite** new administrators. However, cannot assign the <Cmd sid="master_role" product="air" className="bold" /> role.
+
+* Has **full device control** authority to modify settings and manage connected devices.
+
+* Cannot delete or modify administrators with the <Cmd sid="master_role" product="air" className="bold" /> role.
+
+* This role is typically recommended for IT staff responsible for system management.
+
+### <Cmd sid="master_role" product="air" className="normal" /> (Highest Level) {#master}
+
+* Has **full access** to all settings and features.
+
+* Cannot be deleted or modified by **administrators**.
+
+* Can create **subsites** to manage different locations or organizations.
+
+* Can configure **site settings**, including critical system-wide configurations.
+
+* Responsible for accepting the **terms** before other administrators log in.
+
+* Usually assigned to the company owner or a highly trusted executive.

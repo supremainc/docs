@@ -756,7 +756,7 @@
     "description": "The act of restricting unauthorized people from accessing the infrastructure and assets. Access made by authorized individuals is recorded in the log."
   },
   "door": {
-    "name": "Door",
+    "name": "Doors",
     "description": "A place in which a physical device for access control is installed. A spatial concept that forms the basis for access control."
   },
   "door_group": {

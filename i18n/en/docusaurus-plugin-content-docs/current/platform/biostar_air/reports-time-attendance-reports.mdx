@@ -1,0 +1,69 @@
+---
+id: reports-time-attendance-reports
+title: Configure Time and Attendance Report
+description: This guide explains how to configure the basic time and attendance report in BioStar Air. It supports on-site work hour tracking, CSV export options, and API integration.
+keywords:
+  - reports
+  - time and attendance
+  - BioStar Air
+---
+
+The time and attendance (T&A) report in BioStar Air is a simple **on-site work hour** report. It shows employees' start and end times based on event logs.
+
+This feature is designed for basic reporting without complex configuration options. Time and attendance systems can have various requirements depending on local regulations. If the built-in time and attendance report does not meet your organization's needs, use a third-party T&A solution. Export event logs to **CSV** or integrate directly with third-party T&A software by using the BioStar Air API.
+
+:::info
+
+* The built-in time and attendance report is intentionally simple and may not meet all compliance requirements.
+
+* If complex T&A rules exist (for example, local labor laws or shift patterns), use a third-party T&A solution.
+
+* Export event logs to CSV for manual processing or use the API to integrate automatically with other systems.
+
+:::
+
+Follow these steps to generate a time and attendance (T&A) report.
+
+1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar.
+
+2. In the <Cmd sid="site_setting_tab_setting" product="air" /> tab, click <Cmd sid="tna_report" product="air" /> → <Cmd sid="tna_setting" product="air" />.
+
+   <Image src="/img/air/bsair-usage-settings-site.png" />
+
+   :::note
+
+   Click the toggle on the right to enable <Cmd sid="tna_report" product="air" />.
+
+   :::
+
+3. When the <Cmd sid="report_popup_title" product="air" /> window appears, enter a name for the report.
+
+   <Image src="/img/air/bsair-usage-settings-site-tna-report-config.png" />
+
+4. Select the users or user groups to include in the report.
+
+5. Click <Cmd sid="report_form_text_add" product="air" />.
+
+6. A downloadable report is generated in <Cmd sid="report_form_text_title" product="air" />.
+
+   <Image src="/img/air/bsair-usage-settings-site-tna-report-config-list.png" />
+
+7. Click <IcAirDown width="20" height="20" title="Download" /> to download the report.
+
+8. When the <Cmd sid="report_download_popup_title" product="air" /> window appears, select a date and time range.
+
+   <Image src="/img/air/bsair-usage-settings-site-tna-report-config-down.png" />
+
+9. Click <Cmd sid="report_download_popup_button_title" product="air" />.
+
+After the report is generated, a download link is sent to the administrator's email. Download the report from the email in PDF or CSV format.
+
+:::info
+
+* Enable <Cmd sid="user_template_item" product="air" /> and select the desired template items to include user templates in the report.
+
+* The report is available for download for 24 hours after the download email is received. After that period, the report is no longer available.
+
+* Configure an automated schedule in <Cmd sid="alerts.alert_sub_menu_title" product="air" />. For more information, refer to [the following](settings-alert-report#reportGenerationAlerts).
+
+:::

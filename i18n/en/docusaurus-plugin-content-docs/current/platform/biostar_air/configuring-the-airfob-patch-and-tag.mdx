@@ -1,0 +1,114 @@
+---
+id: configuring-the-airfob-patch-and-tag
+title: Configure Airfob Patch and Tag
+description: This guide explains how to configure Airfob Patch and Tag, set BLE mode, and customize the card ID output to upgrade an existing access control system to BioStar Air.
+keywords:
+  - Airfob
+  - Patch
+  - Tag
+  - configuration
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+## Device overview {#device-overview}
+
+The Airfob Patch and Tag upgrade an existing access control reader or door lock to work with BioStar Air mobile credentials.
+
+* **Airfob Patch**: An energy-harvesting device for wired readers and intercoms that attaches without additional wiring.
+
+* **Airfob Tag**: Fits battery-powered devices such as door locks using a coin-cell battery.
+
+:::info
+
+* The Airfob Patch and Tag are compatible with MIFARE 1K technology but are not compatible with 125 kHz low-frequency readers or locks.
+
+* They authenticate encrypted Bluetooth BioStar Air credentials from a mobile device and operate by emulating a MIFARE RFID signal. They attach to readers and locks with tape and require no wiring.
+
+:::
+
+<CustomerNote />
+
+## Configuration steps {#configurationSteps}
+
+Install the Airfob Patch or Tag and register it to the BioStar Air app. Follow these steps to configure the device.
+
+<Steps>
+<Step>
+### Run the app {#accessApp}
+
+<Columns>
+<Column className="width--20">
+<Image src="/img/air/bsair-device-aifob-login-app.png" />
+</Column>
+
+<Column className="padding--l10">
+
+1. Run BioStar Air on your mobile device.
+
+2. Sign in to the site where the Airfob Patch or Tag is registered.
+
+</Column>
+</Columns>
+</Step>
+<Step>
+
+### Go to device settings {#navigateToDeviceSettings}
+
+<Columns>
+<Column className="width--20">
+<Image src="/img/air/bsair-device-aifob-app-device.png" />
+</Column>
+
+<Column className="padding--l10">
+
+1. On the BioStar Air home screen, tap <Cmd sid="site_setting_tab_management" product="air" /> at the bottom.
+
+2. To view the registered devices, tap <Cmd sid="devices_card" product="air" />.
+
+3. Select the Airfob Patch or Tag from the device list.
+
+</Column>
+</Columns>
+</Step>
+<Step>
+
+### Enable BLE mode {#enable-ble-mode}
+
+* Hold the mobile device close to the unit.
+
+* Activate the <Cmd>BLE Mode</Cmd> in the app.
+
+</Step>
+<Step>
+
+### Set the card ID output method {#set-card-id-output-method}
+
+* Scroll to Card ID Output Method and tap Edit.
+
+* Tap Select next to User Card ID.
+
+</Step>
+<Step>
+
+### Choose the output method {#choose-the-output-method}
+
+* **None**: Select this option when you do not want to send a card ID. Useful for time and attendance to extend battery life.
+
+* **Fixed Device**: Sends the pre-programmed fixed card ID. Useful for door locks or intercoms that require each RFID card to be programmed individually. Only this fixed card ID appears in the device logs.
+
+* **User Card ID**: Sends a unique card ID for each user that matches the existing RFID card number in the access control system. This enables seamless integration without issuing new physical cards.
+
+* **Direct Input**: Manually specify the card ID to be sent. Useful for custom configurations where one ID must be used on multiple units.
+
+</Step>
+<Step>
+
+### Save your settings {#save-your-settings}
+
+* Keep the mobile device near the unit, tap <Cmd sid="save_btn" product="air" />, and confirm the selections.
+
+* The update complete message appears.
+
+</Step>
+</Steps>

@@ -1,0 +1,146 @@
+---
+id: site-settings
+title: Configure Site Settings
+description: This article explains how to configure the site profile, security settings, time zones, authentication options, and additional features to optimize BioStar Air management.
+keywords:
+  - Site settings
+  - configure
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+Managing site settings in BioStar Air is essential for effective administration. This article describes the available settings and how to configure them.
+
+:::tip
+
+Refer to the following video to watch a guide on site settings.
+
+<YouTube videoId="5v5xF8JcHcg" />
+
+:::
+
+<CustomerNote />
+
+## Set site information {#siteProfile}
+
+Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar. Use the <Cmd sid="site_setting_tab_profile" product="air" /> tab to modify the site's basic information.
+
+<Image src="/img/air/bsair-settings-site-info.png" />
+
+* <Cmd sid="site_profile_input2" product="air" />: The site name. Enter a new name and click <Cmd sid="rename_site_apply_btn" product="air" />. Change it at any time.
+
+* <Cmd sid="site_profile_input1" product="air" />: A unique identifier required for support requests. Copy and provide the site ID when communicating with the MOCA team.
+
+* <Cmd sid="site_profile_input3" product="air" />: Set when the site is created and cannot be changed later. Request changes through the BioStar Air Partner Portal.
+
+## Configure site settings {#siteSettings}
+
+Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar. Use the <Cmd sid="site_setting_tab_setting" product="air" /> tab to configure site settings.
+
+<Image src="/img/air/bsair-settings-site-setting.png" />
+
+* <Cmd sid="site_profile_input4" product="air" />: Change the time zone at any time. Logs and events are recorded according to the configured time zone.
+
+  * <Cmd sid="device_field_dst_usage" product="air" />: Enable or disable daylight saving time for specific regions.
+
+* <Cmd sid="site_profile_input8" product="air" />: Enable the time and attendance (T&A) feature. After enabling the T&A feature, click <Cmd sid="tna_setting" product="air" /> to configure detailed settings. For more information on details, refer to [the following](configuring-ta).
+
+* <Cmd sid="tna_report" product="air" />: Generate time and attendance (T&A) reports. After enabling the report feature, click <Cmd sid="tna_setting" product="air" /> to configure report conditions. For more information on details, refer to [the following](reports-time-attendance-reports).
+
+* <Cmd sid="site_profile_input7" product="air" />: Enable the Long Touch feature to remotely open doors from a certain distance.
+
+* <Cmd sid="site_setting_ble_background" product="air" />: Allow mobile cards while the Suprema Pass app runs in background mode. When enabled, users can open a door without launching the app.
+
+* <Cmd sid="display_face_preview_setting" product="air" />: Show a face preview when issuing face credentials.
+
+* <Cmd sid="site_profile_input5" product="air" />: Set how event log times are displayed.
+
+   * <Cmd sid="event_log_time_display_setting1" product="air" />: Show event logs based on each device's time zone.
+
+   * <Cmd sid="event_log_time_display_setting2" product="air" />: Show logs according to the site's time zone. Useful when all devices are in one location. See the <Cmd sid="site_profile_input4" product="air" /> option.
+
+* <Cmd sid="new_setting_label_msb" product="air" />: Configure how card data is transmitted when using Airfob Patch with third-party readers.
+
+   :::note
+
+   This setting applies only to patch devices and can be adjusted to match the type of third-party device to which the patch is attached.
+
+   :::
+
+* <Cmd sid="validity_period_label" product="air" />: Set the default validity period for mobile credentials.
+
+   :::info
+
+   Admins can set a separate expiration date for each user's credentials. For more information on details, refer to [the following](adding-individual-users#setting-access-levels-and-validity).
+
+   :::
+
+## Security settings {#securitySettings}
+
+Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar. Use the <Cmd sid="site_setting_tab_security" product="air" /> tab to configure site security settings.
+
+<Image src="/img/air/bsair-settings-site-security.png" />
+
+* <Cmd sid="site_security_input1" product="air" />: Lock administrator accounts that have been inactive for more than 90 days.
+
+* <Cmd sid="site_security_input2" product="air" />: Require email two-factor authentication each time an administrator signs in.
+
+* <Cmd sid="site_security_input3" product="air" />: Grant 'full access' to new users by default when no other access rights are selected. If this setting is disabled, assign access levels manually. Temporary users are not granted full access automatically even if the setting above is enabled.
+
+   :::note
+
+   For more information on managing access levels, refer to [the following](manage-access-level).
+
+   :::
+
+* <Cmd sid="site_security_input4" product="air" />: Require password reset every 30, 60, or 90 days.
+
+* <Cmd sid="site_security_input6" product="air" />: Set how long mobile credentials remain valid when the device is offline.
+
+   :::note
+
+   * The default is 5 minutes and can be set from 1 minute to 8 days.
+
+   * This helps balance security and convenience, especially at remote sites with limited network connectivity.
+
+   :::
+
+## Management {#management}
+
+Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar. The only option available in the <Cmd sid="site_setting_tab_management" product="air" /> tab is <Cmd sid="delete_site" product="air" />. This action is irreversible, and only the **master administrator** can delete a site.
+
+<Image src="/img/air/bsair-settings-site-management.png" />
+
+## Options {#additionalFeatures}
+
+Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar. Use the <Cmd sid="site_setting_qr_reader_tab" product="air" /> tab to enable or disable additional features.
+
+<Image src="/img/air/bsair-settings-site-additional-feature.png" />
+
+* <Cmd sid="site_setting_qr_label" product="air" />: Supports QR code readers. Disable this option if you do not use a QR reader.
+
+* <Cmd sid="site_setting_video_management" product="air" />: Supports ONVIF-compliant IP cameras. Enable this feature to integrate BioStar Air with video surveillance. After enabling the feature, click <Cmd sid="setting_label" product="air" /> to set the event log playback time.
+
+   :::note
+
+   For more information on video management, refer to [the following](ip-camera-support-and-configuration).
+
+   :::
+
+* <Cmd sid="site_setting_webhook_title" product="air" />: Enable webhooks to send BioStar Air events to external systems. After enabling the feature, configure the fields below.
+
+   <Image src="/img/air/bsair-settings-site-additional-feature-webhook.png" />
+
+   * <Cmd sid="site_setting_webhook_url" product="air" />: Enter the endpoint address of the external server that will receive events. Example: `https://example.com/webhook-endpoint`
+
+   * <Cmd sid="site_setting_webhook_secret" product="air" />: A security token used to verify that the webhook request originated from a trusted server. The sending server encrypts the payload with the security key using SHA-256 and sends it in the `X-Signature` header.
+
+   * <Cmd sid="site_setting_webhook_form_send_text" product="air" />: Verify that the webhook works correctly. Send a test message to confirm that the external server receives and responds to the request.
+
+   :::info
+
+   * After entering all required information, click <Cmd sid="save_btn" product="air" />.
+
+   * Click <Cmd sid="new_button_reset" product="air" /> to initialize the entered information.
+
+   :::

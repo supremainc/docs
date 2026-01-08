@@ -1,0 +1,165 @@
+---
+id: suprema-pass-app-advanced-features
+title: Advanced Features
+description: This guide explains how to configure Bluetooth and NFC authentication modes, enable two-factor authentication with a PIN or biometric option, review access logs, and use support features in the Suprema Pass app.
+keywords:
+  - Advanced Features
+  - Suprema Pass app
+  - two-factor authentication
+  - access logs
+  - support options
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+The Suprema Pass app includes advanced settings and security options to enhance the user experience and access control features. Users can configure authentication methods, enable two-factor authentication, review access logs, report issues, and use support features.
+
+<CustomerNote />
+
+## Configure connection method {#connectingSetting}
+
+Select a preferred connection method to communicate with the access control device. On the Suprema Pass app home screen, tap <IcHamberg /> in the upper right corner, then select the desired mode in <Cmd>Connection Method</Cmd>.
+
+<Image src="/img/air/bsair-sp-app-set-connection-mode.png" width="50%" className="none" />
+
+### Bluetooth {#bluetooth}
+
+Choose between two Bluetooth authentication modes.
+
+* <Cmd>Only while App is on Screen</Cmd>: Authenticate with a mobile card only when the app is open on the mobile device. This mode saves battery but requires manually launching the app before approaching the door.
+
+* <Cmd>Background Mode</Cmd>: Authenticate with a mobile card even if the device screen is off when the app runs in the background. This mode is more convenient but consumes more battery. If the app closes, relaunch it to resume background functions.
+
+### NFC {#nfc}
+
+NFC authentication is available only on Android devices. Use NFC alone or with Bluetooth for faster entry.
+
+:::info
+
+Android users with an NFC-compatible device can use NFC with Bluetooth.
+
+:::
+
+## Two-factor authentication (2FA) {#twoFactorAuth}
+
+Enable two-factor authentication with a **PIN, pattern, or biometric authentication** (face or fingerprint) for additional security.
+
+<Image src="/img/air/bsair-sp-app-set-twofactor.png" className="none" />
+
+:::info
+
+* This feature is not supported in <Cmd>Background Mode</Cmd> connections because the app screen must remain open during access authentication.
+
+* If the PIN or pattern is forgotten, reinstall the app and reactivate the mobile card.
+
+* Supported features may vary depending on the mobile device.
+
+:::
+
+### iOS users {#ios}
+
+1. On the Suprema Pass app home screen, tap <IcHamberg /> in the upper right corner.
+
+2. Set the connection method to <Cmd>Only while App is on Screen</Cmd>.
+
+3. Tap <Cmd>Two-Factor Authentication</Cmd>.
+
+4. Tap <Cmd>Register PIN</Cmd>.
+
+5. Enter the six-digit PIN.
+
+6. When the success message appears, tap **OK**.
+
+:::info
+
+* Tap <Cmd>Change PIN</Cmd>, then enter the new PIN to change the PIN.
+
+* Enable <Cmd>Biometric Authentication</Cmd> and follow the setup instructions to use biometrics.
+
+:::
+
+### Android users {#android}
+
+1. On the Suprema Pass app home screen, tap <IcHamberg /> in the upper right corner.
+
+2. Set the connection method to <Cmd>Only while App is on Screen</Cmd> or <Cmd>NFC</Cmd>.
+
+3. Tap <Cmd>Two-Factor Authentication</Cmd>.
+
+4. Tap <Cmd>PIN</Cmd> → <Cmd>Register PIN</Cmd> or <Cmd>Pattern</Cmd> → <Cmd>Register Pattern</Cmd>.
+
+5. Enter the selected PIN or pattern.
+
+6. When the success message appears, tap **OK**.
+
+:::info
+
+* Tap <Cmd>Change PIN</Cmd>, then enter the new PIN to change the PIN.
+
+* Tap <Cmd>Change Pattern</Cmd>, then enter the new pattern to change the pattern.
+
+* Enable <Cmd>Biometric Authentication</Cmd> and follow the setup instructions to use biometrics.
+
+:::
+
+## Access logs {#accesslogs}
+
+Use access records to track entry attempts and troubleshoot entry-related issues.
+
+<Image src="/img/air/bsair-sp-app-set-access-log.png" className="none" />
+
+1. On the Suprema Pass app home screen, tap <IcHamberg /> in the upper right corner.
+
+2. Tap <Cmd>Access Logs</Cmd>.
+
+3. Select a site, then set the start and end dates.
+
+4. Tap <Cmd>Search</Cmd>.
+
+## Support center {#supportCenter}
+
+Go to <Cmd>Support Center</Cmd> for additional support.
+
+<Image src="/img/air/bsair-sp-app-set-support.png" className="none" />
+
+1. On the Suprema Pass app home screen, tap <IcHamberg /> in the upper right corner.
+
+2. Tap <Cmd>More</Cmd>.
+
+3. Tap <Cmd>Support Center</Cmd>.
+
+4. Go to the **Suprema Technical Support** page.
+
+:::note
+
+* Search questions or review FAQs.
+
+* If support is needed, tap the chat icon in the lower right corner to submit a ticket to the MOCA Systems team.
+
+:::
+
+## Advanced Settings
+
+Tap <IcHamberg /> in the upper right corner on the Suprema Pass app home screen, then select <Cmd>More</Cmd> → <Cmd>Advanced Settings</Cmd> to use the following additional features.
+
+<Image src="/img/air/bsair-sp-app-set-advanced.png" className="none" />
+
+* **Location setting**: Select <Cmd>Global</Cmd> or <Cmd>EU</Cmd> server based on your location. Select <Cmd>Auto</Cmd> to have the app detect your location and choose the appropriate server.
+
+* <Cmd>Bluetooth Authentication</Cmd>: Enable <Cmd>Unwanted door opening prevention</Cmd> to block Bluetooth authentication when the mobile device is stationary.
+
+* <Cmd>Sensitivity Settings</Cmd>: Adjust the Bluetooth sensitivity between the mobile device and the Airfob device. For more information, refer to [the following](suprema-pass-app-sensitivity-settings).
+
+## Options {#additionalFeatures}
+
+Tap <IcHamberg /> in the upper right corner on the Suprema Pass app home screen, then select <Cmd>More</Cmd> to use the following additional features.
+
+* <Cmd>Theme</Cmd>: Set the app's color mode. Select <Cmd>Light</Cmd>, <Cmd>Dark</Cmd>, or <Cmd>System</Cmd> mode.
+
+* <Cmd>Bug Report</Cmd>: Write detailed information, such as the error occurrence context and reproduction steps, to submit the bug report to the developer.
+
+* <Cmd>App Details</Cmd>: Check the model name, OS version, BLE support and status of the mobile device.
+
+* <Cmd>App License</Cmd>: View the open-source license information used in the Suprema Pass app.
+
+* <Cmd>Terms & Conditions</Cmd>: View the terms of use for the BioStar Air platform.

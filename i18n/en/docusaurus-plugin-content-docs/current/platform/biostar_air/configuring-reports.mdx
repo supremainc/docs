@@ -1,0 +1,153 @@
+---
+id: configuring-reports
+title: Configure Reports
+description: This guide explains how to create, filter, and schedule user, event log, and audit log reports through automatic email in BioStar Air.
+keywords:
+  - Report
+  - BioStar Air
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+import ReportNotes from '../../common/_bsair-report-config-note.mdx';
+
+Reports in BioStar Air can be configured from different pages depending on the report type. This article explains how to create and schedule user, event log, and audit log reports.
+
+<CustomerNote />
+
+## Access report configuration {#accessing-report-configuration}
+
+The entry path differs by report type.
+
+* User report: <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" />
+
+* Event log report: <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="event_logs_submenu" product="air" />
+
+* Audit log report: <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="audit_logs_submenu" product="air" />
+
+Click <IcAirReport width="20" height="20" title="Report" /> in the toolbar at the top of the list. The report settings page appears.
+
+## Configure user reports {#configuring-user-reports}
+
+Configure a user report to view the current status of users registered on the site.
+
+1. Go to <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+
+2. In the toolbar at the top of the user list, click <IcAirReport width="20" height="20" title="Report" />.
+
+3. When the <Cmd sid="report_popup_title" product="air" /> window appears, enter a report name.
+
+   <Image src="/img/air/bsair-user-report-setting.png" />
+
+4. Select the items to include in the report from each filter option.
+
+5. Click <Cmd sid="report_form_text_add" product="air" /> to save the report.
+
+6. A <Cmd sid="report_form_text_title" product="air" /> is created at the bottom, and a download link is sent to the administrator’s email.
+
+<Image src="/img/air/bsair-user-report-setting-list.png" />
+
+:::info
+
+<ReportNotes />
+
+* For more information on managing users, refer to [the following](managing-users).
+
+:::
+
+## Configure event log reports {#configuring-event-log-reports}
+
+Configure a report on event logs generated on the site.
+
+1. Go to <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="event_logs_submenu" product="air" /> in the left sidebar.
+
+2. In the toolbar at the top of the log list, click <IcAirReport width="20" height="20" title="Report" />.
+
+3. When the <Cmd sid="report_popup_title" product="air" /> window appears, enter a report name.
+
+   <Image src="/img/air/bsair-report-eventlog-report-setting.png" />
+
+4. Select the items to include in the report from each filter option.
+
+5. Click <Cmd sid="report_form_text_add" product="air" /> to save the report.
+
+6. A <Cmd sid="report_form_text_title" product="air" /> is created at the bottom, and a download link is sent to the administrator’s email.
+
+<Image src="/img/air/bsair-report-eventlog-report-setting-result.png" />
+
+:::info
+
+<ReportNotes />
+
+* For more information on event logs, refer to [the following](monitoring-event-and-audit-logs).
+
+:::
+
+## Configure audit log reports {#configuring-audit-log-reports}
+
+Configure an audit log report on changes made by administrators.
+
+1. Go to <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="audit_logs_submenu" product="air" /> in the left sidebar.
+
+2. In the toolbar at the top of the log list, click <IcAirReport width="20" height="20" title="Report" />.
+
+3. When the <Cmd sid="report_popup_title" product="air" /> window appears, enter a report name.
+
+   <Image src="/img/air/bsair-report-audit-trail-report-setting.png" />
+
+4. Select the items to include in the report from each filter option.
+
+5. Click <Cmd sid="report_form_text_add" product="air" /> to save the report.
+
+6. A <Cmd sid="report_form_text_title" product="air" /> is created at the bottom, and a download link is sent to the administrator’s email.
+
+<Image src="/img/air/bsair-report-audit-trail-report-setting-result.png" />
+
+:::info
+
+<ReportNotes />
+
+* For more information on audit logs, refer to [the following](monitoring-event-and-audit-logs).
+
+:::
+
+## Schedule reports {#scheduling-reports}
+
+Automatically generate reports at defined intervals and send them to administrators.
+
+1. Go to <Cmd sid="settings_menu" product="air" /> → <Cmd sid="alerts.alert_sub_menu_title" product="air" /> in the left sidebar.
+
+2. Click <Cmd sid="alerts.add_alert_btn" product="air" /> at the top right of the screen.
+
+3. When the <Cmd sid="alerts.add_alert_btn" product="air" /> panel appears, select the <Cmd sid="alerts.report_type" product="air" /> tab.
+
+   <Image src="/img/air/bsair-settings-alert-add-report.png" />
+
+4. In the <Cmd sid="alerts.alert_condition" product="air" /> section, select the report type to generate from <Cmd sid="name_column" product="air" />.
+
+5. Select the report schedule from <Cmd sid="schedules_label" product="air" />.
+
+   * Select either <Cmd sid="weekly_option" product="air" /> or <Cmd sid="monthly_option" product="air" />.
+
+   * Select the specific date to send the report.
+
+   * All reports are sent at midnight on the selected day.
+
+6. Select the recipients from <Cmd sid="alerts.alert_target" product="air" />.
+
+   * All administrators of a specific level
+
+   * Individual administrator
+
+7. Choose the delivery method in <Cmd sid="alerts.alert_send_by" product="air" />.
+
+   * Reports can only be sent by email.
+
+   * They are not delivered by SMS or app push notification.
+
+8. After configuring each item, click <Cmd sid="save_btn" product="air" /> to save.
+
+:::info
+
+For more information on scheduling reports, refer to [the following](settings-alert-report#reportGeneration).
+
+:::

@@ -1,0 +1,105 @@
+---
+id: federated-sites
+title: Federated Sites
+description: Set up and manage federated sites in BioStar Air for multi-tenant buildings and multi-branch organizations through centralized control.
+keywords:
+  - federated
+  - sites
+  - BioStar Air
+---
+
+BioStar Air provides **federated sites**, enabling a primary site to seamlessly manage multiple subsites. This feature is ideal for multi-tenant buildings or organizations with multiple branches and offers centralized control through distributed access management.
+
+By leveraging the federated site feature in BioStar Air, administrators effectively manage access in complex environments and deliver a secure, scalable, and streamlined experience for all stakeholders.
+
+## What is a federated site? {#whatFederatedSites}
+
+**Federated sites** support a hierarchical structure in which a **primary site** manages one or more **subsites**. An administrator of the primary site—called the **federation administrator**—can directly access and manage subsites from the BioStar Air interface.
+
+Federated sites are useful in the following situations.
+
+### Multi-tenant building
+
+For example, in a commercial building where each floor is occupied by a different company, configure the system as follows.
+
+* **Master account** for the building
+
+* **Subaccount** for each tenant company
+
+This setup authorizes only employees with access to a specific floor, simplifying building management.
+
+### Multi-branch organization
+
+A company with offices in multiple locations can configure the system as follows.
+
+* Manage global settings through a **master account**
+
+* Create a **subaccount** for each branch
+
+For example, a company with ten offices worldwide can use a federated structure to streamline management.
+
+## Set up federated sites {#setFederatedSites}
+
+<Steps>
+<Step>
+
+### Access Partner Portal
+
+URL: [https://partner.biostarair.com](https://partner.biostarair.com)
+
+* Only partners and installers can use the BioStar Air Partner Portal.
+
+* End customers must contact an installer to configure this feature.
+
+</Step>
+<Step>
+
+### Create primary site
+
+1. Log in to the [Partner Portal](https://partner.biostarair.com).
+
+2. Click **Create Site**, and in **Site Profile** select **Federated Site**.
+
+   * This step **must** be performed when first setting up the site.
+
+   * A standard site cannot be converted to a federated site later.
+
+3. Add a federation site administrator on the same screen.
+
+   * A **federation site administrator** added in the Partner Portal can access the primary site and all subsites.
+
+   * A **general administrator** added in BioStar Air can manage only individual sites.
+
+</Step>
+<Step>
+
+### Add subsites
+
+1. After the primary site is set as a federated site, the **Site List** shows an option to create subsites.
+
+2. Click **Create Subsite** and configure it like any other site.
+
+</Step>
+</Steps>
+
+## Important considerations {#important-considerations}
+
+### User and device management {#user-and-reader-management}
+
+* Add users and devices separately to each subsite.
+
+* A device can be registered to only one site at a time. Select either the primary site or a subsite.
+
+### Primary site usage {#primary-site-usage}
+
+* Certain customers use the primary site only as an access point for subsite management and do not register any users or devices in the primary site.
+
+* **Example 1**: A company with three branch offices sets up a primary site with no devices and creates a subsite for each branch.
+
+* **Example 2**: A company with headquarters and three branches registers users and devices at headquarters (the primary site) and sets up subsites for the branches.
+
+### Billing {#billing}
+
+* Billing is calculated based on the number of registered devices (readers) per site.
+
+* There is no additional cost to create a primary site without registered devices.

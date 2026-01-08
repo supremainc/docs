@@ -1,0 +1,189 @@
+---
+id: managing-user-groups
+title: Manage User Groups
+description: This guide explains how to create, organize, and manage user groups and lower groups to efficiently categorize users and control access in BioStar Air.
+keywords:
+  - User Management
+  - BioStar Air
+  - User group
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+In BioStar Air, administrators can categorize users by department, role, or other criteria through user groups. This enables more efficient configuration and management of access control.
+
+<CustomerNote />
+
+:::tip
+
+Refer to the following video to watch the guide on managing user groups.
+
+<YouTube videoId="sNxu5pQuOsI" />
+
+:::
+
+## Create group {#creatingUserGroup}
+
+Create a new user group.
+
+1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" /> in the left sidebar.
+
+   <Image src="/img/air/bsair-gettingstarted-user-group-mng.png" />
+
+2. Click <Cmd sid="add_user_group_btn" product="air" /> at the top right of the screen.
+
+3. When the <Cmd sid="add_user_group_popup_title" product="air" /> window appears, enter the user group name.
+
+   <Image src="/img/air/bsair-gettingstarted-user-group-mng-add.png" />
+
+4. Click <Cmd sid="save_btn" product="air" /> to create the group.
+
+5. When a warning message appears, click <Cmd sid="btn_yes" product="air" />.
+
+:::info
+
+Deleting a group does not delete the users in that group. The users are only removed from the group.
+
+:::
+
+## Create lower group {#creatingSubgroup}
+
+Use lower groups to further categorize user groups. However, lower groups are **not hierarchical**. This means users in a lower group are not automatically included in the upper group.
+
+1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" /> in the left sidebar.
+
+2. Click <Cmd sid="add_user_group_btn" product="air" /> at the top right of the screen.
+
+3. When the <Cmd sid="add_user_group_popup_title" product="air" /> window appears, click the <Cmd sid="add_sub_group_text" product="air" /> option.
+
+   <Image src="/img/air/bsair-user-sub-group-popup.png" />
+
+4. From <Cmd sid="select_group_placeholder" product="air" />, select the upper group.
+
+5. Enter the group name in <Cmd sid="user_subgroup_name_input" product="air" />.
+
+6. Click <Cmd sid="save_btn" product="air" /> to create the lower group.
+
+The newly created lower group appears indented under the upper group in the user group list.
+
+<Image src="/img/air/bsair-user-sub-group-list.png" />
+
+## Assign users to a group {#assigning-users-to-a-group}
+
+After creating a user group, add users to it.
+
+1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+
+2. Click the checkbox next to the users to assign to the group in the user list.
+
+3. Click <IcAirGroup /> at the top left of the user list.
+
+   <Image src="/img/air/bsair-user-group-assign.png" />
+
+4. When the <Cmd sid="manage_user_groups_header" product="air" /> window appears, select the upper or lower group to assign the users.
+
+   <Image src="/img/air/bsair-user-group-assign-popup.png" width="50%" />
+
+5. Click <Cmd sid="save_btn" product="air" /> to save the group settings.
+
+Confirm that the users are assigned to the new group in the <Cmd sid="user_table_column5" product="air" /> column of the user list.
+
+<Image src="/img/air/bsair-user-group-assign-result.png" />
+
+Return to <Cmd sid="user_groups_submenu" product="air" /> to confirm that the group's <Cmd sid="user_groups_table_col2" product="air" /> is updated.
+
+## Remove or move group {#disableGroup}
+
+Remove users from a group or move them to another group.
+
+1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+
+2. Click the checkbox next to the users to remove from or move between groups in the user list.
+
+   :::note
+
+   When moving users, first select users from the same group, then proceed.
+
+   :::
+
+3. Click <IcAirGroup /> at the top left of the user list.
+
+4. When the <Cmd sid="manage_user_groups_header" product="air" /> window appears, perform one of the following:
+
+   * To unassign the group, clear the selected group's checkbox.
+
+   * To move the group, select the checkbox for the current group and then choose the target group.
+
+5. Click <Cmd sid="save_btn" product="air" /> to save the group settings.
+
+Confirm the group changes in the <Cmd sid="user_table_column5" product="air" /> column of the user list.
+
+## Edit group name {#editGroupName}
+
+Modify the name of an existing user group.
+
+1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" /> in the left sidebar.
+
+2. Click the checkbox for the user group to edit in the list.
+
+3. Click <IcAirEdit /> at the top left of the user group list.
+
+   <Image src="/img/air/bsair-user-group-edit.png" />
+
+4. When the <Cmd sid="edit_user_group_btn" product="air" /> window appears, edit the group name.
+
+   <Image src="/img/air/bsair-user-group-edit-popup.png" />
+
+5. Click <Cmd sid="save_btn" product="air" /> to save the changes.
+
+:::info
+
+The group name can be edited only when a single group is selected.
+
+:::
+
+## Delete group {#deleteGroup}
+
+Delete any user groups that are no longer needed.
+
+1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" /> in the left sidebar.
+
+2. Click the checkbox for the user group to delete in the list.
+
+3. Click <IcAirRemove /> at the top left of the user group list.
+
+   <Image src="/img/air/bsair-user-group-remove.png" />
+
+---
+
+## Understand user group totals {#understanding-user-group-totals}
+
+### User group composition
+
+User groups are not organized hierarchically.
+
+* Users in a lower group do **not** automatically appear in the upper group.
+
+* The upper group’s total user count does not include lower group members unless they are added manually.
+
+* Selecting a lower group shows only the users assigned to that lower group.
+
+### Can users belong to multiple user groups? {#can-a-user-belong-to-multiple-user-groups}
+
+Users in BioStar Air can belong to **multiple user groups**.
+
+In BioStar 2, user groups were typically linked to a single department. BioStar Air separates these, allowing more dynamic use.
+
+* Filter the user list by group to quickly manage access levels.
+
+   > e.g., HR department
+
+* Create context-specific groups that span multiple departments.
+
+   > e.g., men’s locker room
+
+* User groups are used for **event log filtering** and **report generation**.
+
+* Assign user groups to **muster zone** devices or device groups to enforce specific safety protocols.
+
+This flexibility makes it easier to manage overlapping user roles and access scenarios.

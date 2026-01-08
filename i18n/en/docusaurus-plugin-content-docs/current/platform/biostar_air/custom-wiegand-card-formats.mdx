@@ -1,0 +1,83 @@
+---
+id: custom-wiegand-card-formats
+title: Set Custom Wiegand Card Format
+description: Create and configure a custom Wiegand card format in BioStar Air v2.10—including facility codes, ID segments, parity bits, and bit assignments—to migrate smoothly from an existing access control system.
+keywords:
+  - Wiegand
+  - Card format
+  - BioStar Air
+---
+
+Create and configure a custom Wiegand card format in BioStar Air v2.10—including facility codes, ID segments, parity bits, and bit assignments—to migrate smoothly from an existing access control system.
+
+## Wiegand card format list {#cardFormatMenu}
+
+Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="card_format_submenu" product="air" /> in the left sidebar. Create, manage, and view special card formats, including Wiegand, SIA, and HID formats. Useful for sites migrating from an existing access control solution with pre-issued cards.
+
+<Image src="/img/air/bsair-settings-card-format.png" />
+
+* View all registered Wiegand card formats, including the default formats included in BioStar Air.
+
+* Check the format's name, description, total bits, bit preview, and detailed bit assignments.
+
+* Configure a new custom card format, including its name, description, total bits, and detailed bit assignments. The system provides a bit preview for visual verification.
+
+:::info
+
+As of v2.10 (August 2025), Wiegand card formats are supported on BioStation 3 and BioEntry W3 devices. All BioStar Air-compatible devices will be supported by the end of 2025.
+
+:::
+
+## Add a card format
+
+Add a new custom Wiegand card format in addition to the built-in formats.
+
+1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="card_format_submenu" product="air" /> in the left sidebar.
+
+2. Click <Cmd sid="wiegand_card_format_title_popup_add" product="air" /> at the top right of the screen.
+
+3. When the <Cmd sid="wiegand_card_format_title_popup_add" product="air" /> window appears, enter the name, optional description, and total bits in the <Cmd sid="wiegand_card_format_label_detail" product="air" /> section.
+
+   <Image src="/img/air/bsair-settings-card-format-add-wiegand.png" />
+
+4. Enter the total bits to activate <Cmd sid="wiegand_card_format_label_bit_preview" product="air" />, then configure bit assignment in the <Cmd sid="wiegand_card_format_label_bit_assignment" product="air" /> section.
+
+   <Image src="/img/air/bsair-settings-card-format-add-wiegand-assign-bit.png" caption />
+
+   * <Cmd sid="wiegand_card_format_label_bit_preview_facility_code" product="air" />: Click the toggle switch to enable the facility code. Enter <Cmd sid="wiegand_card_format_label_start_bit" product="air" /> and <Cmd sid="wiegand_card_format_label_end_bit" product="air" />.
+
+   * <Cmd sid="wiegand_card_format_label_bit_preview_id" product="air" />: Specify start and end bits to add one or more ID segments.
+
+   * <Cmd sid="wiegand_card_format_label_position" product="air" />: Specify start and end bits to add odd/even parity bits.
+
+5. Click <Cmd sid="save_btn" product="air" /> to add the new card format.
+
+## Edit card format {#editCardFormat}
+
+Follow these steps to edit an existing Wiegand card format.
+
+1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="card_format_submenu" product="air" /> in the left sidebar.
+
+2. Click the card format to edit.
+
+3. When the <Cmd sid="wiegand_card_format_title_popup_edit" product="air" /> window appears, edit the required fields.
+
+   <Image src="/img/air/bsair-settings-card-format-edit-wiegand.png" />
+
+4. Click <Cmd sid="save_btn" product="air" /> to save the edited card format.
+
+## Delete card format {#deleteCardFormat}
+
+1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="card_format_submenu" product="air" /> in the left sidebar.
+
+2. Click the checkbox for the card format to delete. Select one or more card formats.
+
+3. Click <IcAirRemove /> at the top of the list.
+
+4. When the message window appears, click <Cmd sid="btn_yes" product="air" />.
+
+:::info
+
+The five built-in Wiegand card formats cannot be deleted.
+
+:::

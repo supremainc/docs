@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Verify ONVIF profile G support",
+    "answer": "Check whether the camera supports ONVIF Profile G by searching for the model name on <a href='https://www.onvif.org' target='_blank'>ONVIF's conformant products page</a>. ONVIF Profile G is required for recorded video playback."
+  },
+  {
+    "question": "Test video playback in camera settings",
+    "answer": "<ul><li>Log into the camera’s settings via its web interface.</li><li>Ensure that you can view the live camera feed and recorded videos.</li><li>Be aware that some cameras may restrict simultaneous playback of recorded videos in both the portal and the settings menu. If playback works in the camera settings but not in BioStar Air, try closing the settings interface and testing again.</li></ul>"
+  },
+  {
+    "question": "Check video codec compatibility",
+    "answer": "Ensure that the recorded video is using the <b>H.264</b> codec, as BioStar Air does not support <b>H.265</b>."
+  },
+  {
+    "question": "Format the SD card if codec was changed",
+    "answer": "If the video codec was changed at any point, the existing recordings may not play correctly. Formatting the SD card may be necessary for the new settings to take effect. This solution has been confirmed to resolve playback issues on some camera models."
+  },
+  {
+    "question": "Reference ONVIF's conformant products list",
+    "answer": "If you are unsure whether your camera meets ONVIF standards, visit the <a href='https://www.onvif.org' target='_blank'>ONVIF website</a> to verify compatibility."
+  }
+]

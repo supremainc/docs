@@ -1,0 +1,105 @@
+---
+id: daylight-saving-time
+title: Configure Daylight Saving Time (DST)
+description: Learn how to configure automatic and manual DST settings in BioStar Air, enable DST for devices, and manage time zone adjustments across multiple locations.
+keywords:
+  - Daylight Saving Time
+  - DST
+  - time zone
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+Use Daylight Saving Time (DST) settings to configure how the site adjusts time. This is especially important for ensuring consistent and accurate time tracking when managing a site with visitors across multiple time zones.
+
+:::tip
+
+Watch the following video for a guide to configuring Daylight Saving Time (DST) settings.
+
+<YouTube videoId="e51UOKLECz8" />
+
+:::
+
+:::info
+
+Consider the following when reviewing <Cmd sid="event_logs_submenu" product="air" className="normal" />.
+
+* If device time is configured, event log timestamps adjust to each device's DST time.
+
+* If site time is configured, timestamps adjust according to the site's DST configuration instead of each device.
+
+:::
+
+<CustomerNote />
+
+## Add a new DST configuration {#addingNewdst}
+
+1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="daylight_saving_time_submenu" product="air" /> in the left sidebar.
+
+2. Click <Cmd sid="btn_add_DST" product="air" /> at the top right of the screen.
+
+   <Image src="/img/air/bsair-settings-dst.png" />
+
+3. Select the desired item from <Cmd sid="device_editable_fields_timezone" product="air" /> when the <Cmd sid="dst_add_modal_title" product="air" /> panel appears.
+
+   <Image src="/img/air/bsair-settings-dst-add.png" />
+
+### Automatic configuration {#autoConfig}
+
+In the <Cmd sid="dst_add_modal_subtitle_setting_dst" product="air" /> section, click <Cmd sid="dst_auto" product="air" />, and then click <Cmd sid="save_btn" product="air" /> at the bottom. The DST configuration for the selected time zone is added automatically.
+
+<Image src="/img/air/bsair-settings-dst-add-auto.png" />
+
+### Manual configuration {#manualConfig}
+
+Set the appropriate start and end times for the time zone to configure manually.
+
+<Image src="/img/air/bsair-settings-dst-add-manual.png" />
+
+* <Cmd sid="date_label" product="air" />: Select the dates when DST starts and ends.
+
+* <Cmd sid="dropdown_label_week" product="air" />: Select the weeks when DST starts and ends.
+
+Click <Cmd sid="save_btn" product="air" /> at the bottom to save the DST configuration.
+
+## Edit an existing DST configuration {#editingDstConfiguration}
+
+1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="daylight_saving_time_submenu" product="air" /> in the left sidebar.
+
+2. Click the DST configuration you want to edit in the list. Alternatively, select the checkbox and click <IcAirEdit /> at the top.
+
+3. Modify the start and end times when the <Cmd sid="dst_update_modal_title" product="air" /> panel appears.
+
+   <Image src="/img/air/bsair-settings-dst-edit.png" caption />
+
+4. Click <Cmd sid="save_btn" product="air" /> at the bottom to save the changes.
+
+## Enable DST for devices {#enablingDstForDevices}
+
+Enable DST on each device to ensure accurate time adjustment.
+
+1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+
+2. Click the device to which you want to apply the DST settings in the list.
+
+3. Select the desired time zone in the <Cmd sid="device_editable_fields_timezone" product="air" /> section, and enable the <Cmd sid="device_field_dst_usage" product="air" /> option.
+
+   <Image src="/img/air/bsair-device-mng-edit-timezone.png" />
+
+4. Click <Cmd sid="save_btn" product="air" /> at the bottom to save the changes.
+
+:::note
+
+This setting is enabled by default for time zones where DST applies.
+
+:::
+
+## Delete a DST configuration {#deleteDst}
+
+1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="daylight_saving_time_submenu" product="air" /> in the left sidebar.
+
+2. Select the checkbox for the DST configuration you want to delete in the list. You can select more than one DST configuration.
+
+3. Click <IcAirRemove /> at the top of the screen.
+
+4. Click <Cmd sid="btn_delete" product="air" /> when the message window appears.

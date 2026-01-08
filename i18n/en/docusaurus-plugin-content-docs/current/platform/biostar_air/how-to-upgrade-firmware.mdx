@@ -1,0 +1,113 @@
+---
+id: how-to-upgrade-firmware
+title: Firmware upgrade
+description: Provide instructions to upgrade device firmware individually or in bulk through the web portal and mobile app. It also includes version checks and troubleshooting tips for BioStar Air.
+keywords:
+  - firmware
+  - upgrade
+  - BioStar Air
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+Upgrade BioStar Air firmware to enhance device performance, strengthen security, and take advantage of new features. This simple process can be performed through the BioStar Air web portal or mobile app.
+
+<CustomerNote />
+
+## BioStar Air portal
+
+Log in to the [BioStar Air](https://admin.biostarair.com) portal and follow these steps to upgrade firmware.
+
+### Upgrade firmware for an individual device {#upgradingFirmwareAdeviceViaWebPortal}
+
+1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+
+2. Click the device in the device list that you want to upgrade.
+
+3. When the <Cmd sid="device_edit_title" product="air" /> window appears, go to the <Cmd sid="device_edit_device_info" product="air" /> section.
+
+4. Click <Cmd sid="firmware_update_btn" product="air" />.
+
+   <Image src="/img/air/bsair-device-mng-fw-upgrade.png" caption />
+
+5. Depending on the device, select the latest firmware version, **2.9** or **2.10** (as of August 2025), and confirm the update.
+
+### Upgrade firmware in bulk {#upgradingFirmwareInBulkViaWebPortal}
+
+1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+
+2. Check the current version for each device in the <Cmd sid="device_fw_column" product="air" /> column in the device list.
+
+3. Click the arrow on the right side of the <Cmd sid="device_fw_column" product="air" /> column to sort devices by firmware version.
+
+   <Image src="/img/air/bsair-device-mng-list-fw-column-align.png" />
+
+4. Select the checkbox to the left of each device you want to upgrade.
+
+   :::note
+
+   Devices with version **2.9** or earlier installed are considered outdated as of August 2025.
+
+   :::
+
+5. Click the <IcAirFw width="24px" height="24px" /> button at the top of the device list.
+
+   <Image src="/img/air/bsair-device-mng-list-fw-update.png" />
+
+6. When the <Cmd sid="update_fw_text" product="air" /> window appears, select the latest firmware version, and click <Cmd sid="btn_ok" product="air" />.
+
+7. When the message window appears, review the information and click <Cmd sid="btn_ok" product="air" />.
+
+:::info
+
+* Firmware upgrade may take 5–10 minutes, during which the device is unavailable.
+
+* Do not power off the device.
+
+* The device restarts automatically after the firmware upgrade is complete.
+
+:::
+
+## Mobile app {#upgradingFirmwareViaMobileApp}
+
+This section explains how to upgrade firmware using the BioStar Air app on iOS or Android mobile devices.
+
+<Image src="/img/air/bsair-mobile-device-fw-update.png" />
+
+1. Open the BioStar Air app on your mobile device and log in.
+
+2. Tap the <Cmd sid="devices_card" product="air" /> card.
+
+3. Tap the device in the list whose firmware you want to upgrade.
+
+4. Tap <Cmd sid="firmware_update_btn" product="air" />.
+
+5. Select the latest firmware version and tap <Cmd sid="btn_ok" product="air" />.
+
+6. When the message window appears, review the information and tap <Cmd sid="btn_ok" product="air" />.
+
+:::info
+
+* Firmware upgrade may take 5–10 minutes, during which the device is unavailable.
+
+* Do not power off the device.
+
+* The device restarts automatically after the firmware upgrade is complete.
+
+:::
+
+## Notes {#additionalNotes}
+
+* Devices must be **online** to update firmware. Check the device status in the <Cmd sid="device_product_column" product="air" /> column. A green dot (<StatusOK />) next to the device image indicates the device is online.
+
+* During a firmware update, the device becomes **temporarily offline**, but it should reconnect within **3–5 minutes**.
+
+* To avoid disruption, run firmware updates **outside business hours**.
+
+* Configure notifications to receive alerts when new firmware is updated. For more information on notification settings, refer to [the following](settings-alert-report#addSystemAlert).
+
+:::info
+
+For more information on device management, refer to [the following](managing-registered-devices).
+
+:::
