@@ -34,7 +34,7 @@ slug: 2026-01-02-changelog
 
 * [가상 장치](../platform/biostar_x/settings-virtual-device-event-log) 기능으로 이벤트 로그 연동 가이드 추가
 
-* 사용자 및 데이터, 감사 추적 관련 메뉴에서 인쇄 또는 내보내기 작업 시 사유를 입력 기능 추가에 따른 가이드 업데이트
+* 사용자 및 데이터, 감사 추적 관련 메뉴에서 인쇄 또는 내보내기 작업 시 사유를 입력할 수 있는 기능 추가에 따른 가이드 업데이트
 
   * [사용자 정보 내보내기/가져오기](../platform/biostar_x/export-import-user-info)
 
