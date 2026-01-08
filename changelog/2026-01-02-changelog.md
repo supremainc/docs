@@ -56,7 +56,7 @@ slug: 2026-01-02-changelog
 
 ## Devices
 
-최신의 장치 매뉴얼을 모두 업데이트했습니다. Suprema Docs에서 확인할 수 있는 장치 매뉴얼은 아래와 같습니다.
+최신의 장치 매뉴얼을 모두 업데이트했습니다. **Suprema Docs**에서 확인할 수 있는 장치 매뉴얼은 아래와 같습니다.
 
 ### Biometric Devices
 
