@@ -172,10 +172,10 @@
           "label": "CPU",
           "label_id": "specs.general.cpu",
           "value": {
-            "ko": "1.8 GHz Quad Core",
-            "en": "1.8 GHz Quad Core",
-            "es": "1.8 GHz Quad Core",
-            "ja": "1.8 GHz クアッドコア"
+            "ko": "1.4 GHz Quad Core",
+            "en": "1.4 GHz Quad Core",
+            "es": "1.4 GHz Quad Core",
+            "ja": "1.4 GHz クアッドコア"
           }
         },
         "memory": {
@@ -279,10 +279,10 @@
           "label": "인증",
           "label_id": "specs.general.certifications",
           "value": {
-            "ko": "CE, UKCA, KC, FCC, IC, RCM, RoHS, REACH, WEEE, EAC, MIC, TELEC, ETL Listed to UL 294",
-            "en": "CE, UKCA, KC, FCC, IC, RCM, RoHS, REACH, WEEE, EAC, MIC, TELEC, ETL Listed to UL 294",
-            "es": "CE, UKCA, KC, FCC, IC, RCM, RoHS, REACH, WEEE, EAC, MIC, TELEC, ETL Listed to UL 294",
-            "ja": "CE、UKCA、KC、FCC、IC、RCM、RoHS、REACH、WEEE、EAC、MIC、TELEC、ETL Listed to UL 294"
+            "ko": "CE, UKCA, KC, FCC, IC, RCM, RoHS, REACH, WEEE, SIG, MIC, TELEC, ETL Listed to UL 294",
+            "en": "CE, UKCA, KC, FCC, IC, RCM, RoHS, REACH, WEEE, SIG, MIC, TELEC, ETL Listed to UL 294",
+            "es": "CE, UKCA, KC, FCC, IC, RCM, RoHS, REACH, WEEE, SIG, MIC, TELEC, ETL Listed to UL 294",
+            "ja": "CE、UKCA、KC、FCC、IC、RCM、RoHS、REACH、WEEE、SIG、MIC、TELEC、ETL Listed to UL 294"
           }
         }
       }
