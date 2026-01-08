@@ -54,6 +54,8 @@
     "@types/md5": "^2.3.5",
     "@types/node": "^22.7.4",
     "axios": "^1.9.0",
+    "baseline-browser-mapping": "^2.9.12",
+    "caniuse-lite": "^1.0.30001762",
     "cheerio": "^1.0.0",
     "commander": "^12.1.0",
     "convert-json-to-dot": "^1.0.5",

@@ -1,0 +1,194 @@
+---
+id: managing-registered-doors
+title: Manage Registered Doors
+description: This guide explains how to manage registered doors, configure entry devices, set relays, and configure door schedules in BioStar Air.
+keywords:
+  - Door Management
+  - BioStar Air
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+The door management feature in BioStar Air guides administrators on assigning entry and exit devices, configuring relays, and arranging access points through schedules. Doors provide a system that controls access and tracks user movement for security, fire evacuation, and time and attendance management (T&A).
+
+:::tip
+
+Watch the following video for a tutorial on registering and managing doors.
+
+<YouTube videoId="g7fUC-9f0qM" />
+
+:::
+
+<CustomerNote />
+
+## View registered doors {#registeredDoors}
+
+Doors are automatically created when you register a device. A door is created if you select the <Cmd en="Create a door with this device">이 장치로 출입문 만들기</Cmd> option in the final step of device registration.
+
+Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar to view registered doors.
+
+<Image src="/img/air/bsair-door-mng-registered-door-list.png" />
+
+The door list provides the following information.
+
+* <Cmd sid="door_status_column1" product="air" />: The name of the door. This is usually assigned automatically during device registration, but administrators can change the door name.
+
+* <Cmd sid="door_product_column2" product="air" />: Device that authenticates users entering the door.
+
+* <Cmd sid="door_product_column3" product="air" />: Device that authenticates users exiting the door.
+
+* <Cmd sid="door_product_column4" product="air" />: Name of the group assigned to the door.
+
+* <Cmd sid="door_product_column5" product="air" />: Description of the door's location.
+
+* <Cmd sid="door_product_column6" product="air" />: Shows the connected camera if the integrated CCTV feature is supported.
+
+:::info
+
+* The door list offers a filtering option only for the <Cmd sid="door_product_column4" product="air" /> column. Click <IcAirFilter /> and set the desired conditions.
+
+* For more information on registering devices in the BioStar Air mobile app, refer to [the following](register-device).
+
+:::
+
+## Door management tools {#doorManagementTools}
+
+When one or more doors are selected in the list, administrators can manage them using the following tools.
+
+* <IcAirEdit width="24px" height="24px" />: Edit door information or change the settings of assigned devices. This option is available only when one door is selected. For more information on details, refer to [the following](#editingDoors).
+
+* <IcAirRef width="24px" height="24px" />: Update the status of the selected doors in the list.
+
+* <IcAirRemove width="24px" height="24px" />: Remove the selected doors from the site.
+
+* <IcAirSchedule width="24px" height="24px" />: Set a schedule for door open and lock states. For more information on details, refer to [the following](managing-door-schedules).
+
+* <IcAirGroup width="24px" height="24px" />: Group the selected doors.
+
+* <IcAirReport width="24px" height="24px" />: Generate door reports.
+
+## Add doors {#addingDoor}
+
+Follow these steps to add a new door.
+
+1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar.
+
+2. Click <Cmd sid="add_doors.title" product="air" /> at the top right of the screen.
+
+3. When the <Cmd sid="add_doors.title" product="air" /> panel appears, enter <Cmd sid="add_doors.door_name" product="air" />.
+
+   <Image src="/img/air/bsair-door-mng-registered-door-add.png" />
+
+4. Select <Cmd sid="door_product_column2" product="air" /> and <Cmd sid="door_product_column3" product="air" />.
+
+5. If a camera is installed, assign <Cmd sid="door_product_column6" product="air" />.
+
+6. Click <Cmd sid="save_btn" product="air" /> to save and add the door settings.
+
+:::note
+
+**Rules for assigning devices to doors**
+
+* Each device can be assigned to **one door** only.
+
+* If a device is already registered but does not appear in the available device list, check whether it is assigned to another door. If it is assigned to another door, remove it from that door and try again.
+
+:::
+
+## Edit doors {#editingDoors}
+
+Follow these steps to edit door details and settings.
+
+1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar.
+
+2. Click the door you want to edit in the list. Or select the checkbox to the left of the door and click <IcAirEdit /> in the top left sidebar.
+
+3. When the <Cmd sid="edit_door.title" product="air" /> panel appears, edit <Cmd sid="add_doors.door_name" product="air" /> and <Cmd sid="door_product_column5" product="air" />.
+
+   <Image src="/img/air/bsair-door-mng-registered-door-edit.png" />
+
+4. Select the device for door entry authentication from the <Cmd sid="door_entry_and_exit" product="air" /> section.
+
+   * <Cmd sid="door_product_column2" product="air" />: Select the device that authenticates users entering the door.
+
+   * <Cmd sid="door_product_column3" product="air" />: Select the device that authenticates users exiting the door.
+
+   * <Cmd sid="door_product_column6" product="air" />: Connect a CCTV camera for event logs if the integrated CCTV feature is supported.
+
+5. Configure the relay device in the <Cmd sid="door_auxiliary_device" product="air" /> section.
+
+   * <Cmd sid="add_doors.door_relay" product="air" />: Select the relay device that controls the door lock.
+
+   * <Cmd sid="add_doors.relay_ignoring_door_sensor" product="air" />: Enable this option to resolve the issue.
+
+6. Configure additional settings.
+
+   * If installed, select the port to set to <Cmd sid="device_editable_fields_exit_btn" product="air" />.
+
+   * Select the port to set to <Cmd sid="device_editable_fields_door_sensor" product="air" />.
+
+   * Set how long the door remains open in <Cmd sid="add_doors.open_time" product="air" />. (Default: 3 seconds)
+
+7. Click <Cmd sid="save_btn" product="air" /> to apply the changes.
+
+:::info
+
+* We recommend assigning a relay located inside the secure area as <Cmd sid="door_product_column3" product="air" />.
+
+* <Cmd sid="door_product_column2" product="air" /> and <Cmd sid="door_product_column3" product="air" /> must be connected to **separate networks**. In a master–slave configuration, connection over Wiegand or RS-485 is not possible.
+
+* For more information on configuring the SIO2 secure module, refer to [the following](configuring-the-sio2-secure-module).
+
+:::
+
+## Manage doors on mobile {#managingDoorsOnMobile}
+
+Administrators can manage doors directly in the BioStar Air mobile app.
+
+1. Open the BioStar Air app on your mobile device and log in.
+
+2. On the home screen, tap <Cmd sid="site_setting_tab_management" product="air" /> at the bottom.
+
+3. Tap the <Cmd sid="door_label" product="air" /> card.
+
+4. View all registered doors.
+
+### Add doors
+
+Tap <IcAdd /> at the top right, and enter the required details to add a new door.
+
+### Edit doors
+
+Tap a door in the list to edit its details or configure the following settings.
+
+* Assign entry and exit devices
+
+* Set relays
+
+* Configure exit button and door sensor
+
+## Generate door reports {#generatingDoorReports}
+
+Generate door reports and send them to the administrator's email. A door report provides information about users who accessed through the door.
+
+1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar.
+
+2. Click <IcAirReport /> at the top of the door list.
+
+3. When the <Cmd sid="report_popup_title" product="air" /> window appears, enter a report name.
+
+   <Image src="/img/air/bsair-door-mng-registered-door-report.png" />
+
+4. Select the items to include in the report.
+
+5. Click <Cmd sid="report_form_text_add" product="air" /> to save the report.
+
+6. A <Cmd sid="report_form_text_title" product="air" /> is created and a download link is sent to the administrator's email.
+
+<Image src="/img/air/bsair-door-mng-registered-door-report-list.png" />
+
+:::info
+
+In <Cmd sid="report_form_text_title" product="air" />, search for, edit, download, or delete generated reports.
+
+:::

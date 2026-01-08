@@ -1,124 +1,117 @@
 ---
 id: integration-quickstart
-title: Getting Started with API Integrations
-description: Learn how to set up a BioStar Air demo site, register compatible readers, generate API keys, and start testing integrations with cloud APIs.
-keywords: [integration, quickstart, BioStar Air]
+title: API Integration
+description: Set up the BioStar Air demo site, register compatible readers, generate API keys, and test integration with the cloud API.
+keywords:
+  - API Integration
+  - Quick start
+  - BioStar Air
 ---
 
-## Overview {#overview}
+This article explains how to set up the BioStar Air demo site, connect and register compatible BioStar Air readers, and test integration with the cloud API. If you have worked with BioStar 2 before, many concepts will feel familiar. However, BioStar Air is completely cloud-based.
 
-This guide walks you through how to set up a BioStar Air demo site, connect and register a BioStar Air-compatible readers to it, and begin testing your integration using our cloud APIs.
+## Prerequisites {#pre-requisites}
 
-If you’ve previously worked with BioStar 2, many concepts will feel familiar—but BioStar Air is fully cloud-native.
+Before you start, check the following.
 
+* Prepare a **BioStar Air-compatible device** with factory-initialized firmware.
 
-## Getting Started {#getting-started}
+   * XP2-AIR, XS2-AIR, BEW3-AIR, BS3-AIR, BLN2-AIR
 
-### Pre-Requisites {#pre-requisites}
+   * Devices can be purchased through authorized Suprema distributors.
 
-Ensure the following:
+* The device must be connected to the internet via Ethernet.
 
-* You have a **BioStar Air compatible device**with factory-loaded firmware:
+* Allow outbound access on the network.
 
-  * XP2-AIR, XS2-AIR, BEW3-AIR, BS3-AIR, BLN2-AIR
+   * Port 443 (HTTPS)
 
-  * Devices may be purchased through authorized Suprema dealers
+   * Port 5671 (MQTT over TLS)
 
-* The device is connected to the internet via Ethernet.
-
-* Your network allows outbound access on:
-
-  * Port 443 (HTTPS)
-  * Port 5671 (MQTT over TLS)
-
-
-## Step 1: Set Up Your Demo Environment & API Key {#step-1-demo-setup}
+## Step 1: Set up the demo environment and API key {#demo-setup}
 
 <Steps>
 <Step>
 
-### Sign Up and Log In {#sign-up-and-log-in}
+### Sign up and log in
 
-* Go to: [https://developers.biostarair.com/login](https://developers.biostarair.com/login)
+* Go to [BioStar Air Developer](https://developers.biostarair.com/login).
 
-* Click **Sign Up**, fill out the form, and wait for approval.
+* Click **Sign Up**, complete the form, and wait for approval.
 
-* Once approved, log in using your credentials.
-
-</Step>
-<Step>
-
-### Create a Demo Application {#create-a-demo-application}
-
-* Navigate to **API** → **Management**.
-
-* Click **\+ Register**.
-
-* Choose **Demo** as the application type.
-
-* Enter a name for your application and click **Register**.
-
-* Click **Download** to retrieve an Excel file containing your demo site login credentials (email and password).
+* After approval, log in with your credentials.
 
 </Step>
 <Step>
 
-### Issue an API Key {#issue-an-api-key}
+### Create a demo application
 
-* Under **Application Management** click into your registered application.
+1. Go to **API** → **Management**.
 
-* Scroll to **API Management**.
+2. Click **+ Register**.
 
-* Click **Add**.
+3. Select **Demo** as the application type.
 
-* Enter a name and confirm. Save the generated key.
+4. Enter an application name and click **Register**.
+
+5. Click **Download** to download the Excel file with the demo site login credentials (email and password).
 
 </Step>
 <Step>
 
-### Log Into the Demo Portal {#log-into-the-demo-portal}
+### Generate an API key
 
-* Navigate to the [Demo Portal](https://demo.airfobspace.com/login).
+1. In **Application Management**, click the application you registered.
 
-* Log in with the email and password from the Excel file.
+2. Scroll to **API Management**.
 
-* Enter the API Key you just created.
+3. Click **Add**.
+
+4. Enter a name and confirm. Save the generated key.
+
+</Step>
+<Step>
+
+### Log in to the demo portal
+
+1. Go to the [Demo Portal](https://demo.airfobspace.com/login).
+
+2. Log in with the email and password from the Excel file.
+
+3. Enter the API key you just generated.
 
 </Step>
 </Steps>
 
+## Step 2: Register devices {#registerDevices}
 
-## Step 2: Register the Reader {#register-the-reader}
+Use the BioStar Air Demo App (Android only) on your mobile device.
 
-Use the BioStar Air Demo App (Android only):
+1. Click the following link to download the mobile app. [DeviceRegistration.zip](https://moca-public-file-share.s3.ap-northeast-2.amazonaws.com/DeviceRegistration.zip)
 
-1. Download the app: [DeviceRegistration.zip](https://moca-public-file-share.s3.ap-northeast-2.amazonaws.com/DeviceRegistration.zip)
+2. Log in with the credentials from the Excel file.
 
-1. Log in with the credentials from the Excel file.
+3. Move your Android device near the reader (within BLE range).
 
-1. Bring your Android phone near the reader (BLE range), then:
+   * In **All Menu** → **Devices**, tap the <IcAdd /> button in the upper right.
 
-    * Tap **All Menu** → **Devices** → **+** (upper right corner).
+   * Search for the device and tap **Register**.
 
-    * Locate your device and tap **Register**.
+4. The device beeps, reboots, and appears in the registered device list.
 
-1. The reader will chime, reboot, and appear under Registered Devices.
+:::info
 
-:::note
-
-Readers can only be registered using the mobile app. Web registration is not supported. API-based registration requires a cryptographic certificate not provided to partners.
+Devices can only be registered through the mobile app. You cannot register devices from the web portal. API-based registration requires an encryption certificate that is not provided to partners.
 
 :::
 
+## Step 3: Manage devices
 
-## Step 3: Manage the Reader
+Manage devices from the demo app or the demo web portal.
 
-Manage the device using either:
+* **BioStar Air Demo App**
 
-* The **Airfob Pro Demo App**
-
-* The **Demo Web Portal**: [https://demo.airfobspace.com/login](https://demo.airfobspace.com/login)
-
+* **Demo Web Portal**: [https://demo.airfobspace.com/login](https://demo.airfobspace.com/login)
 
 ## API Base URLs {#api-base-urls}
 
@@ -128,33 +121,31 @@ Manage the device using either:
 | Production - Europe | https://e-afs-api.airfob.com/v1/ |
 | Production - Korea | https://a-afs-api.airfob.com/v1/ (for all non-EU customers) |
 
+## Recommended API integration scope {#recommended-integration-scope}
 
-## Recommended Integration Scope {#recommended-integration-scope}
-
-When possible limit your integration to:
+Limit your API integration to the scope below whenever possible.
 
 * User lifecycle management (create/update/delete)
 
 * Credential management (mobile, RF card, biometric)
 
-Allow administrators to use the existing BioStar Air web and mobile admin apps for:
+Allow administrators to continue using the existing BioStar Air web and mobile management apps.
 
-* Access levels
+* Access level
 
 * Schedules
 
-* Door and reader settings
+* Door and device settings
 
 * Site settings
 
-## Optional: API Login Flow (Postman or Programmatic) {#optional-api-login-flow}
+## Optional: API login flow {#optional-api-login-flow}
 
-<Steps>
-<Step>
+Make API calls with [Postman](https://www.postman.com/) or programmatically.
 
-### Login {#login}
+### Log in {#login}
 
-**Endpoint**: login
+**Endpoint**: `login`
 
 **Payload**:
 
@@ -165,72 +156,65 @@ Allow administrators to use the existing BioStar Air web and mobile admin apps f
 }
 ```
 
-Returns a Bearer Token (JWT).
+Returns a Bearer token (JWT).
 
-</Step>
-<Step>
+### Get account information{#get-self-accounts}
 
-### Get Self Accounts {#get-self-accounts}
-
-**Endpoint**: getSelfAccounts
+**Endpoint**: `getSelfAccounts`
 
 **Authorization**: Bearer Token
 
-Returns a list of accessible sites/accounts.
+Returns a list of accessible sites and accounts.
 
-</Step>
-<Step>
+### Log in to an account {#login-to-account}
 
-### Login to an Account {#login-to-account}
-
-**Endpoint**: loginAccount
+**Endpoint**: `loginAccount`
 
 **Authorization**: Bearer Token
 
 Returns a site-specific token.
 
-</Step>
-</Steps>
-
-
-## How to Get Your Bearer Token (Browser Method) {#how-to-get-your-bearer-token}
+## How to get a Bearer token from a web browser {#getYourBearerToken}
 
 ### Chrome/Edge (Windows or Mac) {#chrome-edge}
 
-1. Press <Kbd>F12</Kbd> or <Kbd>Ctrl/Cmd + Shift + I</Kbd>.
+1. In the web browser, press <Kbd>F12</Kbd> or <Kbd>Ctrl/Cmd + Shift + I</Kbd>.
 
-1. Go to the **Network** tab.
+2. Go to the **Network** tab.
 
-1. Reload the page.
+3. Refresh the page.
 
-1. Search for API calls. (e.g., groups, login)
+4. Search for API calls.
 
-1. Click on the request.
+   > e.g., `groups`, `login`
 
-1. Go to the **Headers** tab.
+5. Click the request in the list.
 
-1. Look for `Authorization: Bearer ...` in Request Headers.
+6. Go to the **Headers** tab.
 
-1. Right-click and copy the token.
+7. In the request headers, find `Authorization: Bearer ...`.
+
+8. Right-click and copy the token.
+
+<Image src="/img/air/bsair-chrome-develope.png" alone />
 
 ### Safari (Mac) {#safari}
 
-1. Enable **Develop** menu: Safari → Preferences → Advanced → Check **Show Develop menu**
+1. Enable the **Develop** menu. In Safari, go to Preferences → Advanced and check **Show Develop menu**.
 
-1. Open **Develop** → **Show Web Inspector**.
+2. Go to **Develop** → **Show Web Inspector**.
 
-1. Go to **Network** tab.
+3. Go to the **Network** tab.
 
-1. Reload the page.
+4. Refresh the page.
 
-1. Filter and inspect an API call.
+5. Filter and inspect API calls.
 
-1. Copy the `Authorization: Bearer` token from the request headers.
+6. Copy the `Authorization: Bearer` token from the request headers.
 
+## User management API calls {#user-management-api-calls}
 
-## User Management API Calls {#user-management-api-calls}
-
-Once logged in, use these endpoints to manage users:
+After logging in, use the following endpoints to manage users.
 
 * `getUsers`
 
@@ -240,41 +224,41 @@ Once logged in, use these endpoints to manage users:
 
 * `suspendUsers`
 
-Always include the Bearer Token in the Authorization header.
+Always include a Bearer token in the Authorization header.
 
 :::note
 
-To activate a user, you must assign at least one credential type. (e.g., RF Card, Mobile, Linkpass)
+To activate a user, assign at least one credential type.
+
+> e.g., RF card, mobile, LinkPass
 
 :::
 
+## Demo vs production {#demo-vs-production}
 
-## Demo vs Production {#demo-vs-production}
+* A **Demo** site for testing is created through the [Developer Portal](https://developers.biostarair.com/login).
 
-* **Demo Sites** are created via the Developer Portal for testing.
+* A **Production** site is created through the [Partner Portal](https://partner.biostarair.com/) and requires a site ID, user email, and password. Only authorized resellers or Suprema branches can create a production site.
 
-* **Production Sites** are created via the Partner Portal and require site ID, user email, and password. Production sites can only be created by authorized dealers or Suprema branch offices.
+:::info
 
+* User IDs and account IDs are different. Do not confuse them.
 
-## Important Notes {#important-notes}
+* If you manage multiple sites, store passwords securely.
 
-* User ID and Account ID are different — do not confuse them.
+* Always use the latest Bearer token.
 
-* Store passwords securely if managing multiple sites.
+* A Bearer token copied from the browser can be reused in Postman.
 
-* Always use the most recent Bearer Token.
+:::
 
-* Bearer Tokens copied from the browser can be reused in Postman.
+## Need help? {#need-help}
 
+Open a ticket in the Suprema Technical Support Portal. [https://support.supremainc.com](https://support.supremainc.com)
 
-## Need Help? {#need-help}
+## Sample application {#sample-application}
 
-Open a ticket on the Suprema Technical Support Portal: [https://support.supremainc.com](https://support.supremainc.com)
-
-
-## Sample Application {#sample-application}
-
-Need an example? The following is sample code for a Python app that lets you bulk suspend users by uploading a CSV file via the API.
+The following sample code is a Python app that uploads a CSV file via the API and bulk deactivates users.
 
 ```python title='Python'
 import requests
@@ -404,4 +388,3 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-

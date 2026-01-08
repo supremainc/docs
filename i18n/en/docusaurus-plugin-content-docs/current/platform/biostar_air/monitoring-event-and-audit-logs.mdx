@@ -1,0 +1,177 @@
+---
+id: monitoring-event-and-audit-logs
+title: Use Event and Change Logs
+description: This guide explains how to monitor and analyze event and audit logs in BioStar Air, apply filters, export data, and track administrative activity.
+keywords:
+  - Monitoring
+  - Event Logs
+  - BioStar Air
+---
+
+One of the key advantages of a cloud access control platform is the ability to monitor site activity anytime, anywhere. This document explains how to monitor and analyze event and audit logs in BioStar Air.
+
+:::tip
+
+Watch the following video for a tutorial on event and audit logs.
+
+<YouTube videoId="nwIEYyK-uAg" />
+
+:::
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+<CustomerNote />
+
+## <Cmd sid="event_logs_submenu" product="air" className="bold" />
+
+Go to <Cmd sid="event_logs_submenu" product="air" /> to view event logs. Click <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="event_logs_submenu" product="air" /> in the left sidebar. The <Cmd sid="event_logs_submenu" product="air" /> screen shows a table with details including event time and name, door name, device alias, user type, and user name.
+
+<Image src="/img/air/bsair-monitoring-eventlog-list.png" />
+
+## <Cmd sid="audit_logs_submenu" product="air" className="bold" />
+
+Go to <Cmd sid="audit_logs_submenu" product="air" /> to view audit logs. Click <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="audit_logs_submenu" product="air" /> in the left sidebar. The <Cmd sid="audit_logs_submenu" product="air" /> screen displays logs that track administrator actions. The audit log table includes information such as operation time, email address, admin privilege, operation type, menu path, and operation details.
+
+<Image src="/img/air/bsair-monitoring-auditlog-list.png" />
+
+## Sort and manage logs
+
+### <Cmd sid="column_filter_modal_title" product="air" className="normal" />
+
+Customize table columns to show or hide information. Reorder columns to place frequently used ones at the front. Click the <IcAirColumn /> button at the top of the event log list. The <Cmd sid="column_filter_modal_title" product="air" /> window appears.
+
+<Image src="/img/air/bsair-monitoring-eventlog-list-custom-table.png" />
+
+* Select or clear the checkboxes for columns to show or hide.
+
+* To reorder columns, click and drag a column to the desired position.
+
+* Click <Cmd sid="column_filter_modal_save_btn" product="air" /> to save the <Cmd sid="column_filter_modal_title" product="air" /> settings.
+
+* Click <Cmd sid="column_filter_modal_apply_btn" product="air" /> to apply <Cmd sid="column_filter_modal_title" product="air" /> to the log list without saving.
+
+* Click <Cmd sid="column_filter_modal_reset_btn" product="air" /> to cancel the changes in <Cmd sid="column_filter_modal_title" product="air" /> and restore the initial state.
+
+:::info
+
+* When you click <Cmd sid="column_filter_modal_save_btn" product="air" />, the settings remain even after navigating to another menu. When you click <Cmd sid="column_filter_modal_apply_btn" product="air" />, the changes apply only to the current list and revert after you leave the page.
+
+* <Cmd sid="audit_logs_submenu" product="air" /> does not support the <Cmd sid="column_filter_modal_title" product="air" /> feature.
+
+:::
+
+### Filter logs {#filtering-event-logs}
+
+Filter logs to quickly find the information you need. Click the <IcAirLogfilter width="20" height="20" title="Filter" /> button at the top of the log list. When the <Cmd sid="logs_filters_action_btn" product="air" /> window appears, select the desired value for each item.
+
+<Image src="/img/air/bsair-monitoring-eventlog-list-filter.png" />
+
+:::info
+
+* Click <Cmd sid="column_filter_modal_save_btn" product="air" /> or <Cmd sid="filters_action2" product="air" /> to save the settings so they remain after navigating to another menu. Click <Cmd sid="column_filter_modal_apply_btn" product="air" /> or <Cmd sid="filters_action3" product="air" /> to apply the changes only to the current list; they will revert when you navigate away.
+
+* Click <Cmd sid="column_filter_modal_reset_btn" product="air" /> or <Cmd sid="filters_action1" product="air" /> to cancel the changes and return to the initial state.
+
+:::
+
+### Configure reports {#generatingReports}
+
+Generate reports for events that occurred during a specific period by filtering log data.
+
+1. Click the <IcAirReport width="20" height="20" title="Report" /> button at the top of the log list.
+
+2. When the <Cmd sid="report_popup_title" product="air" /> window appears, enter a report name.
+
+   <Image src="/img/air/bsair-monitoring-eventlog-report-setting.png" caption />
+
+3. Select the items to include in the report.
+
+4. Click <Cmd sid="report_form_text_add" product="air" /> to save the configured report.
+
+5. A report is created with the name set in <Cmd sid="report_form_text_title" product="air" />.
+
+   <Image src="/img/air/bsair-monitoring-eventlog-report-added.png" caption />
+
+6. To download the generated report, click the <IcAirDown width="20" height="20" title="Download" /> button next to the report name.
+
+7. When the <Cmd sid="report_download_popup_title" product="air" /> window appears, select the period to query events and click <Cmd sid="report_download_popup_button_title" product="air" />.
+
+   <Image src="/img/air/bsair-monitoring-eventlog-report-download.png" caption />
+
+A download link is sent to the administrator's email.
+
+:::info
+
+<Cmd sid="report_form_text_title" product="air" /> lets you search for, edit, download, or delete the reports created.
+
+:::
+
+### Mask personal data {#dataMasking}
+
+Mask personal data in logs to protect sensitive information. When personal data masking is enabled, information such as user names, email addresses, and phone numbers is partially hidden.
+
+To enable personal data masking, click the <IcAirMask width="20" height="20" title="Apply Masking" /> button at the top of the log list. In the pop-up menu, enable <Cmd sid="apply_masking_title" product="air" /> and click <Cmd sid="save_btn" product="air" />.
+
+<Image src="/img/air/bsair-monitoring-eventlog-apply-masking.png" caption />
+
+### Use the toolbar {#usingToolbar}
+
+Use the toolbar at the top of the log list to manage logs more efficiently.
+
+* To sort logs by date, select a date and time range, then click <Cmd sid="column_filter_modal_apply_btn" product="air" />. Click <Cmd sid="column_filter_modal_reset_btn" product="air" /> to reset the date.
+
+   <Image src="/img/air/bsair-monitoring-eventlog-set-datetime.png" />
+
+   :::note
+
+   <Cmd sid="audit_logs_submenu" product="air" /> automatically filters logs when you select a start and end date.
+
+   :::
+
+* In the <Cmd sid="search_placeholder" product="air" /> input field, enter specific keywords to search logs. Enter one of the following: RF card ID, user ID, email, or name.
+
+   :::note
+
+   <Cmd sid="audit_logs_submenu" product="air" /> does not support the search function.
+
+   :::
+
+* Click <IcAirDown width="20" height="20" title="Export" /> to save logs as a CSV or PDF file.
+
+* Click <IcAirRef width="20" height="20" title="Refresh" /> at the top of the list to refresh logs.
+
+* To refresh at a specific interval, select 5 seconds or 1 minute in <Cmd sid="auto_refresh_btn" product="air" /> at the bottom left of the list.
+
+   <Image src="/img/air/bsair-monitoring-eventlog-auto-refresh.png" />
+
+   :::note
+
+   <Cmd sid="audit_logs_submenu" product="air" /> does not support the refresh function.
+
+   :::
+
+## Use event logs on mobile {#usingEventLogsOnMobile}
+
+<Image src="/img/air/bsair-mobile-monitoring-eventlog.png" className="none" />
+
+1. Open the BioStar Air app on your mobile device and log in.
+
+2. Tap <Cmd sid="monitoring_menu" product="air" /> at the bottom of the home screen.
+
+3. Tap the <Cmd sid="event_logs_submenu" product="air" /> card.
+
+4. Scroll through the event log list to view its contents.
+
+:::info
+
+* <Cmd sid="logs_filters_action_btn" product="air" />: Filter event logs.
+
+* <IcSearch width="20" height="20" title="Search" />: Search by specific keywords. Enter one of the following: RF card ID, user ID, email, or name.
+
+* <IcAirReportApp width="20" height="20" title="Report" />: Generate reports. For more information on report creation, refer to [the following](#generatingReports).
+
+* <IcAirDown width="20" height="20" title="Download" />: Download reports as CSV or PDF files.
+
+* <IcAirMask width="20" height="20" title="Apply Masking" />: Apply personal data masking.
+
+:::

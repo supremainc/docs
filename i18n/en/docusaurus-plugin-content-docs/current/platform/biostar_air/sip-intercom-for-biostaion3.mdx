@@ -1,96 +1,110 @@
 ---
 id: sip-intercom-for-biostation3
-title: SIP Intercom for BioStation 3
-description: Learn how to configure SIP intercom functionality in BioStation 3 for two-way audio calls, remote door control via DTMF commands, and call reception through BioStar Air Web and mobile app.
-keywords: [SIP, Intercom, BioStation 3]
+title: BioStation 3 SIP Intercom
+description: Learn how to configure the SIP intercom feature on BioStation 3 for two-way audio calls, remote door control via DTMF commands, and call reception through the BioStar Air web and mobile apps.
+keywords:
+  - SIP
+  - Intercom
+  - BioStation 3
 ---
 
-# SIP Intercom Configuration
+# Configure SIP intercom
 
-Starting from **BioStar Air v2.10**, SIP intercom functionality is supported on the **BioStation 3** (BS3). This enables two-way audio calls between the reader and administrators, as well as remote door unlocking.
+As of **BioStar Air v2.10**, **BioStation 3** (BS3) supports the SIP intercom feature. This enables two-way voice calls between the reader and administrators and remote door unlocking.
 
 :::info
 
-This feature requires a SIP server, which must be purchased and configured separately. Suprema does not provide SIP service.
+A SIP server is required to use this feature; purchase and configure it separately. Suprema does not provide SIP services.
 
 :::
 
+## SIP
 
-## About SIP
+**Session Initiation Protocol** (SIP) is a communication protocol widely used to initiate, maintain, and terminate real-time voice and video calls over IP networks. In this context, SIP lets BioStation 3 act as an intercom endpoint that can place and receive calls through a compatible SIP service.
 
-The **Session Initiation Protocol** (**SIP**) is a communication protocol widely used for initiating, maintaining, and terminating real-time voice and video calls over IP networks. In this case, SIP enables the BioStation 3 to act as an intercom endpoint, making and receiving calls through a compatible SIP service.
+## Receive calls
 
+Answer calls received from BioStation 3 in the following ways.
 
-## Receiving Calls
+* **BioStar Air Web**: Receive calls directly in a web browser
 
-Incoming calls from the BioStation 3 can be received via:
+* **BioStar Air Mobile App** (iOS / Android): Receive calls on the go
 
-* **BioStar Air Web**: Receive calls directly in your web browser.
+## Remote door control
 
-* **BioStar Air Mobile App** (iOS / Android): Receive calls on the go.
+When answering a SIP call, use **DTMF commands** to unlock the door:
 
+* Hardware SIP phone
 
-## Remote Door Control
+* BioStar Air mobile app
 
-When answering a SIP call, doors can be opened using **DTMF commands** from:
+* BioStar Air Web interface
 
-* A physical SIP phone
+## Configuration steps
 
-* The BioStar Air Mobile App
-
-* The BioStar Air Web interface
-
-
-## Configuration Steps
-
-Configuration is required in two places: device settings and administrator account settings.
+Configure this in device settings and administrator account settings.
 
 <Steps>
 <Step>
 
 ### Device Settings
 
-1. Go to **Device Management** in the BioStar Air Portal.
+1. Log in to the [BioStar Air portal](https://admin.biostarair.com).
 
-1. Select your **BioStation 3** from the device list.
+2. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
 
-1. Enter the following SIP server details:
+3. In the device list, click **BioStation 3**.
 
-    * **Server Address**
+4. Go to the <Cmd sid="device_intercom_title" product="air" /> section and enable the <Cmd sid="device_intercom_txt_use_intercom" product="air" /> option.
 
-    * **Port**
+5. Enter the SIP server information.
 
-    * **Login Credentials** (username and password)
+   <Image src="/img/air/air-intercom-configuration-edit-device.png" alone className="none" caption />
 
-<Image src='/img/air/air-intercom-configuration-edit-device.png' alone className='none' />
+   * <Cmd sid="device_intercom_txt_sip_server_address" product="air" />
+
+   * <Cmd sid="device_intercom_txt_sip_server_port" product="air" />
+
+   * <Cmd sid="device_intercom_txt_sip_username" product="air" /> / <Cmd sid="login_password" product="air" />
+
+6. Click <Cmd sid="save_btn" product="air" /> to save the changes.
 
 </Step>
 <Step>
 
-### Account Settings
+### Account settings
 
-1. Each administrator who needs to receive calls must log in to the BioStar Air Portal or Mobile App.
+Route calls from BioStation 3 to a browser or app.
 
-1. In **Account Settings**, add the same SIP login information used in the device configuration.
+1. For each administrator who needs to receive calls, log in to the BioStar Air portal or mobile app.
 
-1. This allows calls from the BioStation 3 to be routed to their browser or app.
+2. Go to **Account settings**.
 
-<Image src='/img/air/air-intercom-configuration-account-setting.png' alone className='none' />
+   * In the [BioStar Air portal](https://admin.biostarair.com), click the user profile icon in the upper-right corner and select <Cmd sid="settings_menu" product="air" />.
 
-<Image src='/img/air/air-intercom-configuration-edit-device.png' alone className='none' />
+      <Image src="/img/air/bsair-device-bs3-sip-account-settings.png" />
+
+   * BioStar Air mobile app: On the home screen, tap <Cmd>All Menu</Cmd> at the bottom, then tap the user profile area.
+
+      <Image src="/img/air/bsair-app-bs3-sip-account-settings.png" width="38%" className="none" />
+
+3. When the <Cmd sid="settings_menu" product="air" /> window appears, click the <Cmd sid="device_intercom_title" product="air" /> tab and add the SIP server login information.
+
+   <Image src="/img/air/bsair-device-bs3-sip-account-settings-intercom.png" className="none" />
+
+4. Click <Cmd sid="save_btn" product="air" /> to save the settings.
 
 </Step>
 </Steps>
 
+## Verified SIP providers
 
-## Tested SIP Providers
+BioStation 3 has been tested and confirmed to work properly with the providers below.
 
-The BioStation 3 has been tested and confirmed to work well with the following providers:
+* [RingCentral](https://www.ringcentral.com/)
 
-* RingCentral
+* [FreePBX](https://www.freepbx.org/)
 
-* FreePBX
+* [Linphone](https://www.linphone.org/)
 
-* Linphone
-
-* Linhome
+* [Linhome](https://www.linhome.org/)

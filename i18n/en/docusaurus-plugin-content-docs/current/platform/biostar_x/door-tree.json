@@ -7,7 +7,7 @@
         "type": "door-group",
         "children": [
           {
-            "name": "Door",
+            "name": "Doors",
             "type": "door-device",
             "children": [
               {

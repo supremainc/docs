@@ -1,0 +1,223 @@
+---
+id: user-management-user-list
+title: Manage Users
+description: Provides information on the additional features available in the user list.
+keywords:
+  - BioStar Air
+  - User Management
+  - User list
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+<CustomerNote />
+
+## User list
+
+The user list shows all users registered in BioStar Air at a glance. View each user's details and use the filter and sort features to quickly find specific users. Edit, delete, and assign groups to users directly from the user list.
+
+<Image src="/img/air/bsair-user-list-overview.png" />
+
+Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+
+### User Information
+
+The table in the user list provides the following information.
+
+* <Cmd sid="user_table_column8" product="air" />: Indicates whether the user is a regular or temporary user. For more information on regular and temporary users, refer to [the following](user-card-types).
+
+* <Cmd sid="user_table_column1" product="air" />: The user's name.
+
+* <Cmd sid="user_info_id" product="air" />: The user's unique ID.
+
+* <Cmd sid="user_table_column2" product="air" />: Shows the credentials issued to the user. For more information on credential types, refer to [the following](user-card-types).
+
+* <Cmd sid="user_table_column3" product="air" />: The validity period of the credentials issued to the user.
+
+* <Cmd sid="user_table_column4" product="air" />: Indicates whether the user is active or inactive.
+
+* <Cmd sid="user_table_column5" product="air" />: The group to which the user belongs. For more information on user groups, refer to [the following](managing-user-groups).
+
+* <Cmd sid="user_table_column6" product="air" />: The access level assigned to the user. For more information on access levels, refer to [the following](manage-access-level).
+
+* <Cmd sid="user_table_column7" product="air" />: The user's permissions for floors they can access. For more information on floor levels, refer to [the following](manage-floor-level).
+
+### Filter {#userFiltering}
+
+Use the filter feature in the top header of the user list. Click <IcAirFilter /> in the header to set the desired conditions.
+
+<Image src="/img/air/bsair-user-list-user-filtering.png" />
+
+:::info
+
+Click <IcAirFilterReset /> at the top of the user list to reset the applied filter conditions.
+
+:::
+
+### Additional features
+
+The features available at the top of the user list are as follows.
+
+* <IcAirGroup width="24px" height="24px" />: Assign, remove, or move the selected users to a group. For more information on user group management, refer to [the following](managing-user-groups).
+
+* <IcAirLock width="24px" height="24px" />: Change the access level of the selected users. For more information on managing access levels, refer to [the following](manage-access-level).
+
+   <Image src="/img/air/bsair-user-list-tool-aclevel.png" />
+
+* <IcAirMtag width="24px" height="24px" />: Allow the selected users to tag mobile cards consecutively without waiting time. The Suprema Pass app supports this starting from version 2.9.0.
+
+   <Image src="/img/air/bsair-user-list-tool-mobile-tag.png" />
+
+* <IcAirUtemplate width="24px" height="24px" />: Apply a user template to the selected users. Add any other information needed in addition to the default user information.
+
+   <Image src="/img/air/bsair-user-list-user-template.png" width="43%" />
+
+* <IcAirDown width="24px" height="24px" />: Export the selected user information to a PDF or CSV file.
+
+* <IcAirUpface width="24px" height="24px" />: Upload user images in bulk. The name of each image file to upload must match the user's ID.
+
+   For example, the file 601.jpg corresponds to user ID 601.
+
+   :::note
+
+   **File format requirements**
+
+   * Supported formats: *.jpg*, *.jpeg*, *.png*
+
+   * File size limit: **1 MB** per image
+
+   :::
+
+* <IcAirFaceLink width="26px" height="26px" />: Send a face enrollment link to the selected users by email or text message. When a user clicks the link and enrolls their face on the webpage, they are granted access via facial authentication.
+
+   :::note
+
+   The link cannot be sent to users without a registered email address or phone number.
+
+   :::
+
+* <IcAirFilterReset width="26px" height="26px" />: Reset all filters applied to the user list. This feature is available only when filters are applied. For more information on applying filters, refer to [the following](#userFiltering).
+
+* <IcAirReport width="26px" height="26px" />: Configure user reports. After a report is generated, it is sent to the administrator's email. For more information on report settings, refer to [the following](#userReportSettings).
+
+## Edit users {#editUserDetails}
+
+Follow these steps to edit a user's details or change their credentials.
+
+1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+
+2. Click the user you want to edit in the list.
+
+   <Image src="/img/air/bsair-user-list.png" />
+
+3. Click <IcAirEdit /> in the top right of the user details.
+
+   <Image src="/img/air/bsair-user-details.png" />
+
+4. Edit the required details when the <Cmd sid="user_edit_header" product="air" /> window appears.
+
+   <Image src="/img/air/bsair-user-details-edit-info.png" />
+
+5. After editing, click <Cmd sid="save_btn" product="air" /> at the bottom right.
+
+## Manage user status {#manageUserStatus}
+
+Activate or suspend a user's access permissions. Reissue credentials as well.
+
+### Individual user
+
+1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+
+2. Click the user in the list to change their status.
+
+3. Select the desired action at the top of the user details.
+
+<Image src="/img/air/bsair-user-details-manage-status.png" />
+
+* <IcAirActive width="24px" height="24px" />: Restore access permissions to suspended users. Use this feature when the user is suspended.
+
+* <IcAirReissue width="24px" height="24px" />: Reissue credentials. Use this feature when the user's credentials have expired or are unavailable.
+
+* <IcAirSuspend width="24px" height="24px" />: Block the user's access. Use this feature when the user is active.
+
+### Batch actions
+
+1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+
+2. Click the checkbox of each user in the list to change their status. You can select more than one user.
+
+3. Click <IcAirMore /> at the top left of the screen and select the desired action from the pop-up menu.
+
+<Image src="/img/air/bsair-user-list-multi-user-batch-action.png" />
+
+* <Cmd sid="user_activate_action" product="air" />: Restore access permissions to suspended users. Use this feature when the user is suspended.
+
+* <Cmd sid="user_reactivate_action" product="air" />: Reissue credentials. Use this feature when the user's credentials have expired or are unavailable.
+
+* <Cmd sid="suspend_action" product="air" />: Block the user's access. Use this feature when the user is active.
+
+## Delete users {#deleteUser}
+
+:::caution
+
+Deleted users cannot be recovered. Be sure to verify before deleting.
+
+:::
+
+### Individual user {#deleteSingleUser}
+
+1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+
+2. Click the user you want to delete in the list.
+
+   <Image src="/img/air/bsair-user-list.png" />
+
+3. Click <span className="air-remove"><IcAirRemove /></span> in the user details.
+
+   <Image src="/img/air/bsair-user-details-remove.png" />
+
+4. When a warning message appears, click <Cmd sid="btn_ok" product="air" />.
+
+### Delete multiple users {#deleteMultipleUsers}
+
+1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+
+2. Click the checkbox of each user you want to delete in the list. You can select more than one user.
+
+   <Image src="/img/air/bsair-user-list-multi-select.png" />
+
+3. Click <IcAirMore /> → <Cmd sid="delete_action" product="air" /> at the top left of the screen.
+
+   <Image src="/img/air/bsair-user-list-multi-select-remove-opt.png" />
+
+4. When a warning message appears, click <Cmd sid="btn_ok" product="air" />.
+
+## Configure user reports {#userReportSettings}
+
+Create a user report and send it to the administrator's email.
+
+1. Click <IcAirReport /> at the top of the user list.
+
+2. When the <Cmd sid="report_popup_title" product="air" /> window appears, enter a report name.
+
+   <Image src="/img/air/bsair-user-report-setting.png" />
+
+3. Select the items to include in the report from each filter option.
+
+4. Click <Cmd sid="report_form_text_add" product="air" /> to save the report.
+
+5. A <Cmd sid="report_form_text_title" product="air" /> is created and a download link is sent to the administrator's email.
+
+<Image src="/img/air/bsair-user-report-setting-list.png" />
+
+:::info
+
+In <Cmd sid="report_form_text_title" product="air" />, search for, edit, download, or delete generated reports.
+
+:::
+
+## Search users {#searchUsers}
+
+Use the search field in the top right of the user list to quickly find specific users. Search by user name, ID, or phone number.
+
+<Image src="/img/air/bsair-user-list-search.png" />

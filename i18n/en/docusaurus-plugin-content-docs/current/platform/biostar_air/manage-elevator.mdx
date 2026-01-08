@@ -1,0 +1,161 @@
+---
+id: manage-elevator
+title: Manage Elevators
+description: BioStar Air supports elevator access control using Suprema's OM-120 module.
+keywords:
+  - BioStar Air
+  - OM-120
+  - elevator access control
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+BioStar Air supports elevator access control using Suprema's OM-120 module. With the OM-120 module, administrators can integrate with Suprema or Airfob access control devices to control floor access. A daisy chain of OM-120 devices supports up to 144 floors.
+
+<CustomerNote />
+
+:::tip
+
+Watch the following video guide on managing elevators.
+
+<YouTube videoId="szCBlVFdrBo" />
+
+:::
+
+## Requirements
+
+Meet the following requirements to enable the elevator access control feature.
+
+* [Suprema OM-120 module](https://supremainc.com/en/hardware/pd_om-120.asp): Each module supports up to 12 floors. Connecting up to 12 OM-120 modules to a single access control device supports up to 144 floors.
+
+* A Suprema or Airfob access control device capable of connecting to the OM-120 is required.
+
+* Proper wiring to the elevator control panel is required. For wiring details, contact the elevator manufacturer.
+
+* Floor access schedules take precedence, and holiday settings can override the normal access rules.
+
+## Set elevator access control
+
+Follow these steps to set elevator access control.
+
+### Connect devices and modules
+
+1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+
+2. Click the access control device with an OM-120 module from the device list.
+
+3. In the <Cmd sid="module_found_slots_title" product="air" /> section, select the OM-120 module, then click <Cmd sid="save_btn" product="air" />.
+
+:::info
+
+If the OM-120 module is not detected, click <Cmd sid="module_found_module_search_button" product="air" />.
+
+:::
+
+### Register elevators
+
+1. Click <Cmd sid="elevator_menu" product="air" /> → <Cmd sid="elevators_submenu" product="air" /> in the left sidebar.
+
+2. Click <Cmd sid="elevators.add_elevator_btn" product="air" /> at the top right of the screen.
+
+   <Image src="/img/air/bsair-elevator-mng.png" />
+
+3. When the <Cmd sid="add_elevator.title" product="air" /> panel appears, enter <Cmd sid="add_elevator.device_info.field1" product="air" /> and <Cmd sid="add_elevator.device_info.field2" product="air" /> (optional).
+
+   <Image src="/img/air/bsair-elevator-mng-add.png" />
+
+4. In the <Cmd sid="add_elevator.assign_device_and_modules.title" product="air" /> section, select the device and module for access authentication.
+
+   * <Cmd sid="add_elevator.assign_device_and_modules.field1" product="air" />: Select the device for access authentication.
+
+   * <Cmd sid="add_elevator.assign_device_and_modules.field2" product="air" />: Select the OM-120 module that will control the elevator button relay.
+
+   * <Cmd sid="add_elevator.assign_device_and_modules.field3" product="air" />: Set the time for which the floor button remains active after authentication is complete. After this time, the relay will not signal the floor button.
+
+5. In the <Cmd sid="add_elevator.floors_configuration.title" product="air" /> section, enter the number of floors to control and click <Cmd sid="add_elevator.floors_configuration.apply_btn" product="air" />.
+
+6. Set each floor's name, relay number, and schedule.
+
+   <Image src="/img/air/bsair-elevator-mng-add-config-floor.png" alone caption />
+
+   * <Cmd sid="add_elevator.floors_configuration.floors_table.column1" product="air" />: Enter the floor name. Use easily identifiable names such as 1F, Lobby, or Conference Floor.
+
+   * <Cmd sid="add_elevator.floors_configuration.floors_table.column2" product="air" />: Select the relay output that corresponds to each floor button on the elevator control panel.
+
+   * <Cmd sid="add_elevator.floors_configuration.floors_table.column3" product="air" />: Set the schedule for accessing each floor. For example, restrict access to the maintenance floor outside working hours.
+
+7. Click <Cmd sid="save_btn" product="air" /> to save and register the elevator settings.
+
+:::info
+
+* Each OM-120 module supports up to 12 floors. Connect multiple OM-120 modules in a daisy chain to expand up to 144 floors.
+
+* In the <Cmd sid="add_elevator.floors_configuration.title" product="air" /> section, click <IcAirRemove /> to delete a floor.
+
+* For more information on registering schedules, refer to [the following](manage-schedule).
+
+:::
+
+## Set floor access permissions
+
+Set floor access permissions to manage which floors a specific user or group can access.
+
+1. Click <Cmd sid="access_menu" product="air" /> → <Cmd sid="floor_levels_submenu" product="air" /> in the left sidebar.
+
+2. Click <Cmd sid="floor_levels_title_add_button" product="air" /> at the top right of the screen.
+
+   <Image src="/img/air/bsair-elevator-mng-add-floor.png" />
+
+3. When the <Cmd sid="add_floor_levels_add_floors_title" product="air" /> panel appears, enter <Cmd sid="floor_levels_list_column_name" product="air" /> and (optional) <Cmd sid="add_floor_levels_description_column" product="air" />.
+
+   > For example, Security team, Cleaning staff
+
+   <Image src="/img/air/bsair-elevator-mng-add-floor-config.png" />
+
+4. In the <Cmd sid="add_floor_levels_add_floors" product="air" /> section, select the floors to apply the floor level to.
+
+5. In the <Cmd sid="floor_levels_list_column_schedule_name" product="air" /> section, set the access schedule.
+
+   > For example, allow cleaning staff to access only outside working hours.
+
+6. If necessary, add <Cmd sid="floor_levels_label_holiday_grp" product="air" /> to restrict access on specific dates.
+
+7. Click <Cmd sid="save_btn" product="air" /> to add the floor level.
+
+:::info
+
+For more information on managing floor levels, refer to [the following](manage-floor-level).
+
+:::
+
+## Edit elevators
+
+Follow these steps to change the details or settings of a registered elevator.
+
+1. Click <Cmd sid="elevator_menu" product="air" /> → <Cmd sid="elevators_submenu" product="air" /> in the left sidebar.
+
+2. In the list, click the elevator to edit. Alternatively, select the elevator's checkbox and click <IcAirEdit /> at the top of the list.
+
+3. When the <Cmd sid="edit_elevator.title" product="air" /> panel appears, change the necessary information or modify the settings.
+
+   <Image src="/img/air/bsair-elevator-mng-edit.png" />
+
+4. Click <Cmd sid="save_btn" product="air" /> to save the changes.
+
+:::info
+
+To update an elevator's status in the list, select its checkbox and click <IcAirRef /> at the top of the list.
+
+:::
+
+## Delete elevators
+
+Follow these steps to delete a registered elevator.
+
+1. Click <Cmd sid="elevator_menu" product="air" /> → <Cmd sid="elevators_submenu" product="air" /> in the left sidebar.
+
+2. Select the checkbox of the elevator to delete in the list. Select one or more elevators.
+
+3. Click <IcAirRemove /> at the top of the list.
+
+4. When a warning message appears, click <Cmd sid="btn_yes" product="air" />.

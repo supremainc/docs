@@ -1,0 +1,62 @@
+---
+id: e200-qr-scanner
+title: Wire and Configure E200 QR Scanner
+description: Wire and configure BioStar Air devices for optimal performance.
+keywords:
+  - wiring
+  - configuration
+  - BioStar Air
+---
+
+## Step 1: Wire {#wiring}
+
+Connect the E200-series QR scanner using the included adapter cable as shown below.
+
+* The green terminal block has pins labeled **1 through 4**, arranged **right-to-left** when you face the front of the connector.
+
+   | Pin | Wire color | Feature |
+   | :-: | --- | --- |
+   | 1 | Black | Negative / Ground |
+   | 2 | Red | Positive (V+) |
+   | 3 | Yellow (white stripe) | RS-485 TRXN |
+   | 4 | Blue (white stripe) | RS-485 TRXP |
+
+   :::info
+
+   The wiring direction is the exact opposite of many other connectors. Check the orientation again before wiring.
+
+   :::
+
+* Attach the 4-pin connector to the CON port on the bottom of the QR scanner. Because the connector is **polarized** (keyed), it fits only one way.
+
+   <Image src="/img/air/air-hardware-qr-reader-diagram.png" width="80%" alone />
+
+## Step 2: Enable the QR reader {#enable-qr-reader}
+
+1. Sign in to the [BioStar Air portal](https://admin.biostarair.com) (web or app).
+
+2. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+
+3. Click the device that has the connected E200 QR scanner.
+
+4. Enable the <Cmd sid="device_editable_fields_qr_reader" product="air" /> option in the <Cmd sid="device_edit_device_info" product="air" /> section.
+
+   <Image src="/img/air/bsair-device-details-qr-reader.png" />
+
+5. Click <Cmd sid="save_btn" product="air" /> to save the changes.
+
+:::info
+
+Enabling the QR reader prevents you from using other RS-485 devices (for example, an SIO2) on the same reader.
+
+:::
+
+## Step 3: Configure the QR scanner {#configure-qr-scanner}
+
+By default, the **E200 QR scanner** is set to a baud rate of **115,200**. Change the baud rate to **9,600** to use it with Suprema devices.
+
+Connect the QR scanner to the device and **scan the barcode below** to apply the new baud rate.
+
+<Image src="/img/air/air-hardware-qr-reader-barcode.png" alone />
+
+When the wiring is correct and the Suprema device is connected to the network, use the **dynamic QR credentials** provided through BioStar Air.

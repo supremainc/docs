@@ -1,105 +1,96 @@
 ---
 id: security-overview
-title: Security Overview
-description: Learn about comprehensive security measures in BioStar Air, including end-to-end encryption, ISO 27001 certification, mobile credential protection, and vulnerability management practices that safeguard your access control system.
-keywords: [security, Biostar Air]
+title: Security Framework
+description: Learn about BioStar Air's comprehensive security measures. Includes end-to-end encryption, ISO 27001 certification, mobile credential protection, and vulnerability management practices.
+keywords:
+  - security
+  - BioStar Air
 ---
 
-# Security Measures for BioStar Air and Suprema Pass Mobile Access
+BioStar Air is Suprema's secure, cloud-based mobile access control solution. Suprema's hardware, software, and firmware engineering teams work according to a "security by design" principle. Every layer of the system architecture and every communication touchpoint is designed to maintain privacy and data integrity.
 
-## Feature Overview
+**Key measures**:
 
-BioStar Air is Suprema's secure, cloud-based mobile access control solution. Suprema's hardware, software, and firmware engineering teams are guided by a "secure by design" principle. Every layer of our system architecture and every communication touchpoint is built to protect privacy and maintain data integrity.
+* Data protection and encryption of the BioStar Air management portal and database
 
-**Key measures include**:
+* Encryption and protection of data in transit between the BioStar Air API and clients
 
-* Securing and encrypting data in the BioStar Air Admin Portal and its database
+* Encryption of mobile card data stored on the smartphone
 
-* Encrypting and protecting data as it travels between the BioStar Air API and clients
+* Protection of communication between the smartphone and reader (Suprema Pass)
 
-* Encrypting mobile card data stored on smartphones
+* Prevention of mobile credential forgery (Suprema Pass)
 
-* Securing communications between smartphones and readers (Suprema Pass)
+## ISO 27001 certification
 
-* Implementing forgery prevention for mobile credentials (Suprema Pass)
+BioStar Air has obtained ISO 27001 certification, meeting global standards for data protection management, security controls, and privacy management. Established in August 2019, ISO 27001 compliance also aligns with similar regulations such as the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).
 
+## Proven technology for end-to-end security
 
-## ISO 27001 Certification
+### Secure portal access and data protection
 
-BioStar Air has achieved ISO 27001 certification, meeting global standards for data protection management, security controls, and personal information management. First established in August 2019, ISO 27001 compliance also aligns with the General Data Protection Regulation (GDPR) and similar legislation such as the California Consumer Privacy Act (CCPA).
+The BioStar Air management portal runs on an AWS Amazon RDS encrypted DB instance that uses AES-256 or stronger encryption. All personal data is additionally encrypted.
 
+### Encrypted communication with the BioStar Air API
 
-## Proven Technologies for End-to-End Security
+All communication with the BioStar Air REST API is encrypted with TLS 1.2 over HTTPS and requires an access token (1-hour expiration by default). AWS API Gateway throttles API requests to prevent brute-force attacks.
 
-### Secure Portal Access & Data Protection
+### Encrypted and hashed mobile card IDs
 
-The BioStar Air Admin Portal runs on AWS Amazon RDS encrypted DB instances using AES-256 or better encryption. Additional encryption is applied to all personal data.
+Mobile card ID numbers are encrypted with AES-256 to prevent exposure on third-party servers. Card data is digitally signed for authenticity verification.
 
+### Secure storage of mobile cards on the device
 
-### Encrypted Communication with BioStar Air API
+Suprema Pass mobile credentials and related data are encrypted with AES-256. Encryption keys are stored in the device's trusted execution environment (TEE), such as Secure Enclave (Apple) or TrustZone (ARM).
 
-All communication with the BioStar Air REST API is encrypted using TLS 1.2 over HTTPS and requires an access token (default one-hour expiry). AWS API Gateway throttles API requests to prevent brute force attacks.
+### Secure communication between the mobile device and reader
 
-### Encrypted and Hashed Mobile Card IDs
+To block replay attacks over Bluetooth Low Energy (BLE), BioStar Air uses a one-time encryption key for each connection and terminates the connection immediately after transmission, preventing man-in-the-middle (MITM) attacks.
 
-Mobile card ID numbers are encrypted using AES-256 to prevent exposure on third-party servers. Card data is digitally signed to verify authenticity.
+### Mobile card forgery prevention
 
-### Secure Storage of Mobile Cards on Smartphones
+Each Suprema Pass mobile credential is protected by a PKI-based digital signature unique to each BioStar Air site. A proprietary verification process detects any attempt at modification or forgery.
 
-Suprema Pass mobile credentials and associated data are encrypted with AES-256. Encryption keys are stored in the phone's Trusted Execution Environment (TEE), such as Secure Enclave (Apple) or TrustZone (ARM).
+## Vulnerability management
 
-### Secure Communication between Phones and Readers
+Suprema's information security team leads vulnerability management, supported by external security experts.
 
-To prevent “replay attacks” over Bluetooth Low Energy (BLE), BioStar Air uses one-time encryption keys for each connection and terminates the connection immediately after transfer, preventing man-in-the-middle (MITM) attacks.
+* Continuous automated threat scans
 
-### Mobile Card Forgery Prevention
+* Annual ISO 27001 renewal audit with full system review
 
-Each Suprema Pass mobile credential is protected by PKI-based digital signatures unique to each BioStar Air site. Proprietary verification processes detect any modification or forgery attempts.
+* Penetration testing and risk assessment before major releases
 
-
-## Vulnerability Management
-
-Suprema's Information Security Team leads vulnerability management, supported by external security specialists.
-
-* Continuous automated scanning for threats
-
-* Annual ISO 27001 renewal audits with full system review
-
-* Penetration testing and risk assessments before major releases
-
-* Spot checks for password hygiene, social engineering resilience, and procedure compliance
+* Checks for password hygiene, social-engineering resistance, and procedural compliance
 
 * Comprehensive documentation and reporting of all vulnerabilities and remediation actions
 
+## Risk assessment approach
 
-## Risk Assessment Approach
+Assets are classified according to confidentiality, integrity, and availability ratings. Threats are identified, vulnerabilities are assessed, and risks are evaluated based on likelihood and impact. Mitigation actions are prioritized according to risk severity.
 
-Assets are classified by confidentiality, integrity, and availability ratings. Threats are identified, vulnerabilities assessed, and risks evaluated based on likelihood and impact. Mitigation measures are prioritized according to risk severity.
+## Multi-factor authentication (MFA)
 
+Multi-factor authentication (MFA) is being rolled out in phases.
 
-## Multi-Factor Authentication (MFA)
+* Email-based 2FA for administrator accounts
 
-MFA is being implemented in stages:
+* Passcode-based 2FA for the BioStar Air app
 
-* Email-based 2FA for admin accounts
+* Automatic lock of inactive administrator accounts after 90 days
 
-* Passcode-based 2FA for the BioStar Air App
-
-* Automatic lockout of inactive admin accounts after 90 days
-
-* Configurable password expiry (30, 60, 90 days)
-
+* Configurable password expiration (30, 60, or 90 days)
 
 ## Frequently Asked Questions
 
-* Data in transit encryption: TLS 1.2
+* Data encryption in transit: TLS 1.2
 
-* Data at rest encryption: AES-256
+* Data encryption at rest: AES-256
 
 * DoS protection: AWS API Gateway request throttling
 
 * Service availability: 98–99% uptime (per contract SLA)
 
-* API security: Token-based authentication, HTTPS-only, strict endpoint validation
+* API security: token-based authentication, HTTPS only, strict endpoint validation
 
-* Portal access: Cloud-based for global management; private cloud options under development
+* Portal access: cloud-based for global management; private cloud option under development

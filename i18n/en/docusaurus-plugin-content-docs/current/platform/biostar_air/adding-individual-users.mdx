@@ -1,0 +1,197 @@
+---
+id: adding-individual-users
+title: Add Users
+description: Learn how to add, edit, and delete users in BioStar Air. Step-by-step guidance on selecting the user type, issuing credentials (mobile card, RF card, web card, face, PIN), and setting access levels and validity periods.
+keywords:
+  - user management
+  - BioStar Air
+  - adding users
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+This document provides step-by-step instructions on adding and managing individual users in BioStar Air. It covers the entire process of selecting the user type (regular or temporary), issuing the appropriate credentials, and setting access levels and validity periods. It also includes how to edit or delete the added user’s information.
+
+<CustomerNote />
+
+:::tip
+
+Refer to the following video for step-by-step guidance on the entire process of adding a new user.
+
+<YouTube videoId="FTgpsYPlP8k" />
+
+:::
+
+## Add users {#addingUsers}
+
+1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+
+2. A list of users appears.
+
+3. Click <Cmd sid="add_user_btn" product="air" /> → <Cmd sid="add_user_btn" product="air" /> at the top right of the screen.
+
+<Image src="/img/air/bsair-gettingstarted-user-group-mng-add-user.png" />
+
+When the <Cmd sid="add_user_form_header" product="air" /> window appears, enter and configure the required information in each section. Set the required fields in all sections and click <Cmd sid="add_user_card_activate_btn" product="air" /> at the bottom right.
+
+### Enter user information {#userInformation}
+
+Enter the new user's basic information in the <Cmd sid="user_detail" product="air" /> section.
+
+<Image src="/img/air/bsair-gettingstarted-user-group-mng-add-user-details.png" />
+
+* <Cmd sid="user_form_input1" product="air" />: Enter a specific ID manually or allow the system to generate it sequentially.
+
+* <Cmd sid="user_form_input3" product="air" />: Select the user's default language.
+
+* <Cmd sid="user_form_input5" product="air" />: Select the group to which the user belongs.
+
+* <Cmd sid="user_form_input2" product="air" />: Enter the user's full name.
+
+* <Cmd sid="user_form_input18" product="air" />: Enter the user's title.
+
+* <Cmd sid="user_form_input4" product="air" />: Enter the name of the user's department.
+
+* <Cmd sid="user_form_input11" product="air" />: Upload the user's profile image. For more information on details, refer to [the following](#uploadProfileImage).
+
+:::info
+
+* <span className="require">\*</span> indicates a required field.
+
+* Enter the user's email and phone number in <Cmd sid="user_form_input8" product="air" /> in the <Cmd sid="credential_detail" product="air" /> section.
+
+:::
+
+### Upload profile image {#uploadProfileImage}
+
+1. Hover over the profile image area and click the plus icon.
+
+   <Image src="/img/air/bsair-upload-profile-image.png" />
+
+2. Select the image file saved locally.
+
+3. When the <Cmd sid="crop_image_header" product="air" /> window appears, adjust the photo to the desired size. Click <Cmd sid="fit_this_image" product="air" /> to resize the image automatically.
+
+   <Image src="/img/air/bsair-upload-profile-image-adjust.png" />
+
+4. Click <Cmd sid="save_btn" product="air" /> to save the uploaded image as the profile image.
+
+### Select user type {#selecting-user-type}
+
+Select whether the user you are adding in the <Cmd sid="credential_detail" product="air" /> section is a regular user or a visitor. The credential types that can be issued vary by user type.
+
+* <Cmd sid="user_regular_card_type" product="air" />: A user who is a regular member of an organization or facility and requires long-term, ongoing access. All credential types can be issued.
+
+   <Image src="/img/air/bsair-add-user-credential-user-type-regular.png" />
+
+* <Cmd sid="user_temporary_card_type" product="air" />: A visitor or non-regular member who needs short-term, limited access. This can include guests, external visitors, short-term contractors, delivery couriers, and so on. Only <Cmd sid="user_form_input20" product="air" /> credentials, including QR code and LinkPass, can be issued.
+
+   <Image src="/img/air/bsair-add-user-credential-user-type-temporary.png" />
+
+:::info
+
+* <Cmd sid="user_regular_card_type" product="air" /> users are automatically assigned the full access level, whereas <Cmd sid="user_temporary_card_type" product="air" /> users must manually select an access level.
+
+* <Cmd sid="user_table_column8" product="air" /> is supported in BioStar Air version 2.6 or higher.
+
+:::
+
+### Issue credentials {#issuingCredentials}
+
+Enter user information, and then set the credentials to use for access authentication in the <Cmd sid="credential_detail" product="air" /> section. Each credential has a toggle switch to enable or disable it.
+
+* <Cmd sid="card_type_mobile" product="air" />: Use the Suprema Pass mobile app as an access authentication method. The administrator can edit the card ID number.
+
+   <Image src="/img/air/bsair-add-user-credential-credential-type-mobile.png" />
+
+* <Cmd sid="card_type_rf" product="air" />: Add up to eight RFID cards per user for access authentication. Click <Cmd sid="add_btn" product="air" />.
+
+   <Image src="/img/air/bsair-add-user-credential-credential-type-rfcard.png" />
+
+   Configure the card type (CSN or Wiegand), card ID, and card name. Select a reader in <Cmd sid="newest_rf_card_text_device" product="air" />. Alternatively, scan a physical RFID card with the connected reader.
+
+   <Image src="/img/air/bsair-add-user-credential-credential-type-rfcard-2type.png" className="none" />
+
+* <Cmd sid="user_form_input20" product="air" />: Use <Cmd sid="card_type_option3" product="air" /> or <Cmd sid="card_type_option4" product="air" /> as access authentication methods.
+
+   <Image src="/img/air/bsair-add-user-credential-credential-type-web.png" />
+
+   :::note
+
+   <Cmd sid="card_type_option3" product="air" /> appears only after enabling <Cmd sid="site_setting_qr_label" product="air" /> at <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> → <Cmd sid="site_setting_qr_reader_tab" product="air" />.
+
+   :::
+
+* <Cmd sid="card_type_option5" product="air" />: Add up to two face profile images for access authentication. Upload an existing image or register through a reader. Alternatively, send a link by email so the user enrolls directly with the mobile device’s camera.
+
+   <Image src="/img/air/bsair-add-user-credential-credential-type-face.png" />
+
+   * <Cmd sid="select_file" product="air" />: Select an image file saved locally to upload.
+
+   * <Cmd sid="register_on_device" product="air" />: Enroll a face image using the connected reader.
+
+   * <Cmd sid="register_on_mobile" product="air" />: Scan a QR code with a mobile device’s camera to open a link for face image enrollment.
+
+      <Image src="/img/air/bsair-add-user-credential-credential-type-face-qr.png" width="50%" />
+
+* <Cmd sid="card_type_option6" product="air" />: Set a 4–16-digit PIN to use as part of two-factor authentication (2FA).
+
+   <Image src="/img/air/bsair-add-user-credential-credential-type-pin.png" />
+
+### Send invitation link {#sendingInvitationLink}
+
+Email the Suprema Pass app download link to users who use <Cmd sid="card_type_mobile" product="air" /> or <Cmd sid="user_form_input20" product="air" />. Enter the email address (required) and phone number (optional).
+
+<Image src="/img/air/bsair-add-user-credential-credential-type-invite-link.png" />
+
+:::info
+
+Recharge SMS credits in <Cmd sid="settings_menu" product="air" /> → <Cmd sid="credit_center_submenu" product="air" /> to use the <Cmd sid="user_form_input10" product="air" /> option.
+
+:::
+
+### Set access levels and validity {#setting-access-levels-and-validity}
+
+After selecting credentials, configure the credential validity period, access levels, and floor levels in the <Cmd sid="access_detail" product="air" /> section.
+
+<Image src="/img/air/bsair-add-user-access-info.png" />
+
+* <Cmd sid="card_valid_period" product="air" />: Set the validity period of the credentials issued to the user. Click <IcInfinity /> to leave the expiration date open-ended.
+
+* <Cmd sid="user_form_input12" product="air" />: Select the access levels for the user. Grant full access or choose a predefined access level.
+
+* <Cmd sid="user_form_input19" product="air" />: Select the floor levels the user can access.
+
+* <Cmd sid="user_device_manager" product="air" />: Allow the user to manage access permissions on a specific reader.
+
+* <Cmd sid="mobile_consecutive_tag" product="air" />: Allows consecutive mobile card tags without wait time. This feature is supported in Suprema Pass app version 2.9.0 or higher.
+
+:::info
+
+* <Cmd sid="user_form_input12" product="air" /> can be assigned permanently (expires with the credential) or temporarily (expires before the credential).
+
+* <Cmd sid="user_device_manager" product="air" /> is available only for X-Station 2 users who have access to the admin menu.
+
+:::
+
+### Select card template {#selectingCardTemplate}
+
+Click <IcAirL /> or <IcAirR /> under Card Template in the right panel to change the card template design.
+
+<Image src="/img/air/bsair-add-user-select-card-template.png" width="70%" />
+
+### Save or activate the user {#saving-or-activating-the-user}
+
+After configuring all user settings, choose one of the following options.
+
+* Click <Cmd sid="save_btn" product="air" /> to save the user for later activation.
+
+* Click <Cmd sid="add_user_card_activate_btn" product="air" /> to issue and activate the credentials immediately.
+
+<NextStep>
+<NextItem to="adding-users-in-bulk">
+
+After learning how to add individual users, proceed to the next step to register multiple users at once.
+
+</NextItem>
+</NextStep>

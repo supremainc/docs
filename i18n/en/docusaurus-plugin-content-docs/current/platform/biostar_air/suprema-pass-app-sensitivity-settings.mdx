@@ -1,0 +1,55 @@
+---
+id: suprema-pass-app-sensitivity-settings
+title: Set Sensitivity
+description: Learn how to adjust Bluetooth detection sensitivity in the Suprema Pass app to prevent unintended authentication, improve detection range, and resolve Apple Pay interference issues.
+keywords:
+  - sensitivity settings
+  - Bluetooth
+  - Airfob
+---
+
+import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+
+With the **Sensitivity Settings** feature, users can adjust the Bluetooth detection sensitivity between the mobile device and Airfob. This customization helps ensure smooth authentication and reduce unwanted access attempts or authentication failures.
+
+<CustomerNote />
+
+:::info
+
+Because Bluetooth signal strength varies by mobile device model, users may experience different detection ranges. Environmental factors such as walls, interference, or the placement of Airfob can also affect Bluetooth detection.
+
+:::
+
+## Adjust the sensitivity setting {#how-to-adjust-the-sensitivity-setting}
+
+Users can fine-tune Bluetooth authentication sensitivity based on the mobile device’s Bluetooth strength and personal preference.
+
+<Image src="/img/air/bsair-sp-app-set-advanced-sensitivity.png" className="none" />
+
+1. On the Suprema Pass app home screen, tap <IcHamberg /> in the upper right corner.
+
+2. Tap <Cmd>More</Cmd>.
+
+3. Tap <Cmd>Advanced Settings</Cmd>.
+
+4. Tap <Cmd>Sensitivity Settings</Cmd>, then move the slider to adjust sensitivity.
+
+:::info
+
+* Move the slider toward <IcMinus /> to lower the sensitivity and block unintended authentication.
+
+  > For example, when the mobile device is on a desk
+
+* If authentication fails, move the slider toward <IcAdd /> to increase the sensitivity. However, the mobile device must be very close to Airfob.
+
+:::
+
+:::tip
+
+**iOS user tips**
+
+Bringing an iPhone with Apple Pay close to Airfob triggers Apple Pay. This occurs because the device’s NFC area is detected along with Airfob mobile card authentication.
+
+**Solution**: Adjust the sensitivity setting toward <IcAdd /> so that Airfob detects the mobile device’s Bluetooth signal earlier, eliminating the need for physical contact with the device. This allows smooth access while blocking Apple Pay from being triggered.
+
+:::
