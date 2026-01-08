@@ -12,15 +12,15 @@ slug: 2026-01-02-changelog
 
 ## BioStar X
 
-* [BioStar X v1.0.1 릴리스 노트](../platform/biostar_x/release-notes/101)를 배포했습니다.
+* [BioStar X v1.0.1 릴리스 노트](../platform/biostar_x/release-notes/101) 배포
 
-* [IR 페이스](../platform/biostar_x/enroll-credential-ir-face) 크리덴셜 추가에 따른 문서를 추가했습니다.
+* [IR 페이스](../platform/biostar_x/enroll-credential-ir-face) 크리덴셜이 추가되어 관련 가이드 추가
 
-* [리모트 액세스](../platform/biostar_x/settings-remote-access) 설정 및 사용 안내 문서를 추가했습니다.
+* [리모트 액세스](../platform/biostar_x/settings-remote-access) 설정 및 사용 안내 가이드 추가
 
-* [가상 장치](../platform/biostar_x/settings-virtual-device-event-log) 기능을 사용해 이벤트 로그를 연동할 수 있습니다.
+* [가상 장치](../platform/biostar_x/settings-virtual-device-event-log) 기능으로 이벤트 로그 연동 가이드 추가
 
-* 사용자 및 데이터, 감사 추적 관련 메뉴에서 CSV 또는 PDF 내보내기 시 내보내기 사유를 기입해야 함을 안내하는 내용을 추가했습니다.
+* 사용자 및 데이터, 감사 추적 관련 메뉴에서 인쇄 또는 내보내기 작업 시 사유를 입력 기능 추가에 따른 가이드 업데이트
 
   * [사용자 정보 내보내기/가져오기](../platform/biostar_x/export-import-user-info)
 
@@ -28,7 +28,7 @@ slug: 2026-01-02-changelog
 
   * [감사 추적 관리하기](../platform/biostar_x/settings-system-audit-trail)
 
-* [라이선스 정책](../platform/biostar_x/licensing)의 세부 내역을 변경했습니다.
+* [라이선스 정책](../platform/biostar_x/licensing) 세부 내역을 변경
 
   * Base License 없을 때 장치 추가 불가 안내
 
@@ -36,9 +36,9 @@ slug: 2026-01-02-changelog
 
   * 최대 관리자 수 설명 추가
 
-* [BioStar X API](../api/bsxapi) 문서를 추가했습니다.
+* [BioStar X API](../api/bsxapi) 문서 추가
 
-* 복잡한 라이선스 요구 사항을 해결하는 데 도움이 되는 [BioStar X 라이선스 계산기](../bsx-license-calculator) 페이지를 추가했습니다.
+* 복잡한 라이선스 요구 사항을 해결하는 데 도움이 되는 [BioStar X 라이선스 계산기](../bsx-license-calculator) 페이지 추가
 
 ## Devices
 
