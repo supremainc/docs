@@ -98,6 +98,6 @@ Updated all the latest device manuals. The device manuals available in **Suprema
 * [Device Manager](../device/device_manager)
 * [CoreStation Setup Manager](../device/corestation_setup_manager)
 
-## 향후 계획 및 기대효과
+## What’s next and expected benefits
 
 **Suprema Docs** will continue to evolve. We will keep updating the content to improve completeness and quality, so it better meets the needs of our customers and partners. Internally, it will also help you quickly share accurate information needed for product development, technical support, and sales activities. We also plan to expand multilingual support in the near future. Documentation in Japanese and Spanish will be released soon.
