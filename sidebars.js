@@ -1585,27 +1585,64 @@ const sidebars = {
       ],
     },
   ],
-  // xpassq2: [
-  //   {
-  //     type: 'category',
-  //     label: 'XPass Q2',
-  //     collapsed: false,
-  //     collapsible: false,
-  //     className: 'p-title',
-  //     link: {
-  //       type: 'doc',
-  //       id: 'device/xpass_q2/index',
-  //     },
-  //     items: [
-  //       'device/xpass_q2/safety-instructions',
-  //       'device/xpass_q2/getting-started',
-  //       'device/xpass_q2/installation',
-  //       'device/xpass_q2/product-specifications',
-  //       'device/xpass_q2/regulatory-information',
-  //       'device/xpass_q2/appendices',
-  //     ],
-  //   },
-  // ],
+//   biostation3max: [
+//     {
+//       type: 'category',
+//       label: 'BioStation 3 Max',
+//       collapsed: false,
+//       collapsible: false,
+//       className: 'p-title',
+//       link: {
+//         type: 'doc',
+//         id: 'device/biostation_3_max/index',
+//       },
+//       items: [
+//         'device/biostation_3_max/safety-instructions',
+//         'device/biostation_3_max/getting-started',
+//         'device/biostation_3_max/installation',
+//         {
+//           type: 'category',
+//           label: '사용하기',
+//           link: {
+//             type: 'doc',
+//             id: 'device/biostation_3_max/using-device',
+//           },
+//           items: [
+//             'device/biostation_3_max/admin-menu',
+//             'device/biostation_3_max/user',
+//             'device/biostation_3_max/authentication',
+//             'device/biostation_3_max/settings',
+//             'device/biostation_3_max/event-log',
+//           ],
+//         },
+//         'device/biostation_3_max/troubleshooting',
+//         'device/biostation_3_max/product-specifications',
+//         'device/biostation_3_max/regulatory-information',
+//         'device/biostation_3_max/appendices',
+//       ],
+//     },
+//   ],
+//   xpassq2: [
+//     {
+//       type: 'category',
+//       label: 'XPass Q2',
+//       collapsed: false,
+//       collapsible: false,
+//       className: 'p-title',
+//       link: {
+//         type: 'doc',
+//         id: 'device/xpass_q2/index',
+//       },
+//       items: [
+//         'device/xpass_q2/safety-instructions',
+//         'device/xpass_q2/getting-started',
+//         'device/xpass_q2/installation',
+//         'device/xpass_q2/product-specifications',
+//         'device/xpass_q2/regulatory-information',
+//         'device/xpass_q2/appendices',
+//       ],
+//     },
+//   ],
   biostation2a: [
     {
       type: 'category',

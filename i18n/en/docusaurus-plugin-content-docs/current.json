@@ -486,5 +486,13 @@
   "sidebar.biostar_air.category.문제 해결": {
     "message": "Troubleshooting",
     "description": "The label for category '문제 해결' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostation3max.category.BioStation 3 Max": {
+    "message": "BioStation 3 Max",
+    "description": "The label for category 'BioStation 3 Max' in sidebar 'biostation3max'"
+  },
+  "sidebar.biostation3max.category.사용하기": {
+    "message": "How to Use",
+    "description": "The label for category '사용하기' in sidebar 'biostation3max'"
   }
 }
