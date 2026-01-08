@@ -142,5 +142,9 @@
   "item.label.CoreStation Setup Manager": {
     "message": "CoreStation Setup Manager",
     "description": "Navbar item with label CoreStation Setup Manager"
+  },
+  "item.label.Changelog": {
+    "message": "Changelog",
+    "description": "Navbar item with label Changelog"
   }
 }
