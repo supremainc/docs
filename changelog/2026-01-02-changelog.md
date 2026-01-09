@@ -18,7 +18,7 @@ slug: 2026-01-02-changelog
 
 * **릴리스 노트**
 
-아래는 2026년 1월의 주요 [업데이트 내역](./changelog/2026-01-02-changelog)입니다.
+아래는 2026년 1월의 주요 업데이트 내역입니다.
 
 ![Suprema Docs](/img/changelogs-202501.png)
 
