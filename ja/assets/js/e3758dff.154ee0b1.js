@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["37242"], {
-31737: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["55352"], {
+41538: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,26 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_x_supported_device_mdx_b49_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_ja_docusaurus_plugin_content_docs_current_platform_biostar_x_supported_device_mdx_e37_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-supported-device-mdx-b49.json
-var site_docs_platform_biostar_x_supported_device_mdx_b49_namespaceObject = JSON.parse('{"id":"platform/biostar_x/supported-device","title":"지원 장치","description":"BioStar X 플랫폼에서 지원하는 장치 목록을 확인하세요.","source":"@site/docs/platform/biostar_x/supported-device.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/supported-device","permalink":"/docs/platform/biostar_x/supported-device","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/supported-device.mdx","tags":[],"version":"current","frontMatter":{"id":"supported-device","title":"지원 장치","description":"BioStar X 플랫폼에서 지원하는 장치 목록을 확인하세요.","keywords":["지원 장치","BioStar X"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"시작하기 전에","permalink":"/docs/platform/biostar_x/before-start"},"next":{"title":"시스템 최소 요구사항","permalink":"/docs/platform/biostar_x/system-requirements"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-ja-docusaurus-plugin-content-docs-current-platform-biostar-x-supported-device-mdx-e37.json
+var site_i_18_n_ja_docusaurus_plugin_content_docs_current_platform_biostar_x_supported_device_mdx_e37_namespaceObject = JSON.parse('{"id":"platform/biostar_x/supported-device","title":"対応デバイス","description":"BioStar X プラットフォームが対応するデバイス一覧を確認します。","source":"@site/i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/supported-device.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/supported-device","permalink":"/docs/ja/platform/biostar_x/supported-device","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/supported-device.mdx","tags":[],"version":"current","frontMatter":{"id":"supported-device","title":"対応デバイス","description":"BioStar X プラットフォームが対応するデバイス一覧を確認します。","keywords":["対応デバイス","BioStar X"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"開始する前に","permalink":"/docs/ja/platform/biostar_x/before-start"},"next":{"title":"システム最小要件","permalink":"/docs/ja/platform/biostar_x/system-requirements"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./docs/platform/biostar_x/supported-device.mdx
+;// CONCATENATED MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/supported-device.mdx
 
 
 const frontMatter = {
 	id: 'supported-device',
-	title: '지원 장치',
-	description: 'BioStar X 플랫폼에서 지원하는 장치 목록을 확인하세요.',
+	title: '対応デバイス',
+	description: 'BioStar X プラットフォームが対応するデバイス一覧を確認します。',
 	keywords: [
-		'지원 장치',
+		'対応デバイス',
 		'BioStar X'
 	],
 	isTranslationMissing: false
@@ -54,7 +54,7 @@ function _createMdxContent(props) {
   if (!Columns) _missingMdxReference("Columns", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar X 플랫폼에서 지원하는 장치 목록입니다."
+      children: "BioStar X プラットフォームが対応するデバイス一覧です。"
     }), "\n", (0,jsx_runtime.jsxs)(Columns, {
       children: [(0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
@@ -96,6 +96,20 @@ function _createMdxContent(props) {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.img, {
+            alt: "X-Station 2",
+            src: (__webpack_require__(5740)/* ["default"] */.A) + "",
+            width: "384",
+            height: "384"
+          })
+        }), (0,jsx_runtime.jsx)(_components.p, {
+          children: "X-Station 2"
+        })]
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(Columns, {
+      children: [(0,jsx_runtime.jsxs)(Column, {
+        className: "text--center bold",
+        children: [(0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.img, {
             alt: "FaceStation F2",
             src: (__webpack_require__(17543)/* ["default"] */.A) + "",
             width: "384",
@@ -104,19 +118,17 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsx)(_components.p, {
           children: "FaceStation F2"
         })]
-      })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(Columns, {
-      children: [(0,jsx_runtime.jsxs)(Column, {
+      }), (0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.img, {
-            alt: "FaceStation 2",
-            src: (__webpack_require__(53941)/* ["default"] */.A) + "",
+            alt: "XPass 2",
+            src: (__webpack_require__(56727)/* ["default"] */.A) + "",
             width: "384",
             height: "384"
           })
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "FaceStation 2"
+          children: "XPass 2"
         })]
       }), (0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
@@ -142,31 +154,19 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsx)(_components.p, {
           children: "BioLite N2"
         })]
-      }), (0,jsx_runtime.jsxs)(Column, {
-        className: "text--center bold",
-        children: [(0,jsx_runtime.jsx)(_components.p, {
-          children: (0,jsx_runtime.jsx)(_components.img, {
-            alt: "BioEntry W2",
-            src: (__webpack_require__(87729)/* ["default"] */.A) + "",
-            width: "384",
-            height: "384"
-          })
-        }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "BioEntry W2"
-        })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(Columns, {
       children: [(0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.img, {
-            alt: "BioEntry P2",
-            src: (__webpack_require__(92732)/* ["default"] */.A) + "",
+            alt: "XPass D2",
+            src: (__webpack_require__(56727)/* ["default"] */.A) + "",
             width: "384",
             height: "384"
           })
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "BioEntry P2"
+          children: "XPass D2"
         })]
       }), (0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
@@ -184,25 +184,25 @@ function _createMdxContent(props) {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.img, {
-            alt: "X-Station 2",
-            src: (__webpack_require__(5740)/* ["default"] */.A) + "",
+            alt: "BioEntry P2",
+            src: (__webpack_require__(92732)/* ["default"] */.A) + "",
             width: "384",
             height: "384"
           })
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "X-Station 2"
+          children: "BioEntry P2"
         })]
       }), (0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.img, {
-            alt: "XPass 2",
-            src: (__webpack_require__(56727)/* ["default"] */.A) + "",
+            alt: "FaceStation 2",
+            src: (__webpack_require__(53941)/* ["default"] */.A) + "",
             width: "384",
             height: "384"
           })
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "XPass 2"
+          children: "FaceStation 2"
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(Columns, {
@@ -210,13 +210,25 @@ function _createMdxContent(props) {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.img, {
-            alt: "XPass D2",
-            src: (__webpack_require__(56727)/* ["default"] */.A) + "",
+            alt: "BioEntry W2",
+            src: (__webpack_require__(87729)/* ["default"] */.A) + "",
             width: "384",
             height: "384"
           })
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "XPass D2"
+          children: "BioEntry W2"
+        })]
+      }), (0,jsx_runtime.jsxs)(Column, {
+        className: "text--center bold",
+        children: [(0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.img, {
+            alt: "BioStation L2",
+            src: (__webpack_require__(1840)/* ["default"] */.A) + "",
+            width: "384",
+            height: "384"
+          })
+        }), (0,jsx_runtime.jsx)(_components.p, {
+          children: "BioStation L2"
         })]
       }), (0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
@@ -241,18 +253,6 @@ function _createMdxContent(props) {
           })
         }), (0,jsx_runtime.jsx)(_components.p, {
           children: "BioStation 2"
-        })]
-      }), (0,jsx_runtime.jsxs)(Column, {
-        className: "text--center bold",
-        children: [(0,jsx_runtime.jsx)(_components.p, {
-          children: (0,jsx_runtime.jsx)(_components.img, {
-            alt: "BioStation L2",
-            src: (__webpack_require__(1840)/* ["default"] */.A) + "",
-            width: "384",
-            height: "384"
-          })
-        }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "BioStation L2"
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(Columns, {

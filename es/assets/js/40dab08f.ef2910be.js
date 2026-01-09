@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["89824"], {
-20100: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["85171"], {
+39209: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,26 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_supported_device_mdx_ed5_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_x_supported_device_mdx_40d_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-supported-device-mdx-ed5.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_supported_device_mdx_ed5_namespaceObject = JSON.parse('{"id":"platform/biostar_x/supported-device","title":"Supported Devices","description":"Check the list of devices supported by the BioStar X platform.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/supported-device.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/supported-device","permalink":"/docs/en/platform/biostar_x/supported-device","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/supported-device.mdx","tags":[],"version":"current","frontMatter":{"id":"supported-device","title":"Supported Devices","description":"Check the list of devices supported by the BioStar X platform.","keywords":["Supported Devices","BioStar X"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Before Start","permalink":"/docs/en/platform/biostar_x/before-start"},"next":{"title":"System Minimum Requirements","permalink":"/docs/en/platform/biostar_x/system-requirements"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-es-docusaurus-plugin-content-docs-current-platform-biostar-x-supported-device-mdx-40d.json
+var site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_x_supported_device_mdx_40d_namespaceObject = JSON.parse('{"id":"platform/biostar_x/supported-device","title":"Dispositivos compatibles","description":"Consulta la lista de dispositivos compatibles con la plataforma BioStar X.","source":"@site/i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/supported-device.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/supported-device","permalink":"/docs/es/platform/biostar_x/supported-device","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/supported-device.mdx","tags":[],"version":"current","frontMatter":{"id":"supported-device","title":"Dispositivos compatibles","description":"Consulta la lista de dispositivos compatibles con la plataforma BioStar X.","keywords":["Dispositivos compatibles","BioStar X"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Antes de comenzar","permalink":"/docs/es/platform/biostar_x/before-start"},"next":{"title":"Requisitos mínimos del sistema","permalink":"/docs/es/platform/biostar_x/system-requirements"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/supported-device.mdx
+;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/supported-device.mdx
 
 
 const frontMatter = {
 	id: 'supported-device',
-	title: 'Supported Devices',
-	description: 'Check the list of devices supported by the BioStar X platform.',
+	title: 'Dispositivos compatibles',
+	description: 'Consulta la lista de dispositivos compatibles con la plataforma BioStar X.',
 	keywords: [
-		'Supported Devices',
+		'Dispositivos compatibles',
 		'BioStar X'
 	],
 	isTranslationMissing: false
@@ -54,7 +54,7 @@ function _createMdxContent(props) {
   if (!Columns) _missingMdxReference("Columns", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "The following devices are supported by the BioStar X platform."
+      children: "Los siguientes dispositivos son compatibles con la plataforma BioStar X."
     }), "\n", (0,jsx_runtime.jsxs)(Columns, {
       children: [(0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
@@ -96,6 +96,20 @@ function _createMdxContent(props) {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.img, {
+            alt: "X-Station 2",
+            src: (__webpack_require__(5740)/* ["default"] */.A) + "",
+            width: "384",
+            height: "384"
+          })
+        }), (0,jsx_runtime.jsx)(_components.p, {
+          children: "X-Station 2"
+        })]
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(Columns, {
+      children: [(0,jsx_runtime.jsxs)(Column, {
+        className: "text--center bold",
+        children: [(0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.img, {
             alt: "FaceStation F2",
             src: (__webpack_require__(17543)/* ["default"] */.A) + "",
             width: "384",
@@ -104,19 +118,17 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsx)(_components.p, {
           children: "FaceStation F2"
         })]
-      })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(Columns, {
-      children: [(0,jsx_runtime.jsxs)(Column, {
+      }), (0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.img, {
-            alt: "FaceStation 2",
-            src: (__webpack_require__(53941)/* ["default"] */.A) + "",
+            alt: "XPass 2",
+            src: (__webpack_require__(56727)/* ["default"] */.A) + "",
             width: "384",
             height: "384"
           })
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "FaceStation 2"
+          children: "XPass 2"
         })]
       }), (0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
@@ -142,31 +154,19 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsx)(_components.p, {
           children: "BioLite N2"
         })]
-      }), (0,jsx_runtime.jsxs)(Column, {
-        className: "text--center bold",
-        children: [(0,jsx_runtime.jsx)(_components.p, {
-          children: (0,jsx_runtime.jsx)(_components.img, {
-            alt: "BioEntry W2",
-            src: (__webpack_require__(87729)/* ["default"] */.A) + "",
-            width: "384",
-            height: "384"
-          })
-        }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "BioEntry W2"
-        })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(Columns, {
       children: [(0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.img, {
-            alt: "BioEntry P2",
-            src: (__webpack_require__(92732)/* ["default"] */.A) + "",
+            alt: "XPass D2",
+            src: (__webpack_require__(56727)/* ["default"] */.A) + "",
             width: "384",
             height: "384"
           })
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "BioEntry P2"
+          children: "XPass D2"
         })]
       }), (0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
@@ -184,25 +184,25 @@ function _createMdxContent(props) {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.img, {
-            alt: "X-Station 2",
-            src: (__webpack_require__(5740)/* ["default"] */.A) + "",
+            alt: "BioEntry P2",
+            src: (__webpack_require__(92732)/* ["default"] */.A) + "",
             width: "384",
             height: "384"
           })
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "X-Station 2"
+          children: "BioEntry P2"
         })]
       }), (0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.img, {
-            alt: "XPass 2",
-            src: (__webpack_require__(56727)/* ["default"] */.A) + "",
+            alt: "FaceStation 2",
+            src: (__webpack_require__(53941)/* ["default"] */.A) + "",
             width: "384",
             height: "384"
           })
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "XPass 2"
+          children: "FaceStation 2"
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(Columns, {
@@ -210,13 +210,25 @@ function _createMdxContent(props) {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.img, {
-            alt: "XPass D2",
-            src: (__webpack_require__(56727)/* ["default"] */.A) + "",
+            alt: "BioEntry W2",
+            src: (__webpack_require__(87729)/* ["default"] */.A) + "",
             width: "384",
             height: "384"
           })
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "XPass D2"
+          children: "BioEntry W2"
+        })]
+      }), (0,jsx_runtime.jsxs)(Column, {
+        className: "text--center bold",
+        children: [(0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.img, {
+            alt: "BioStation L2",
+            src: (__webpack_require__(1840)/* ["default"] */.A) + "",
+            width: "384",
+            height: "384"
+          })
+        }), (0,jsx_runtime.jsx)(_components.p, {
+          children: "BioStation L2"
         })]
       }), (0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
@@ -241,18 +253,6 @@ function _createMdxContent(props) {
           })
         }), (0,jsx_runtime.jsx)(_components.p, {
           children: "BioStation 2"
-        })]
-      }), (0,jsx_runtime.jsxs)(Column, {
-        className: "text--center bold",
-        children: [(0,jsx_runtime.jsx)(_components.p, {
-          children: (0,jsx_runtime.jsx)(_components.img, {
-            alt: "BioStation L2",
-            src: (__webpack_require__(1840)/* ["default"] */.A) + "",
-            width: "384",
-            height: "384"
-          })
-        }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "BioStation L2"
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(Columns, {
@@ -297,7 +297,7 @@ function _createMdxContent(props) {
         children: [(0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.img, {
             alt: "Input Module",
-            src: (__webpack_require__(42724)/* ["default"] */.A) + "",
+            src: (__webpack_require__(20343)/* ["default"] */.A) + "",
             width: "384",
             height: "384"
           })
@@ -489,7 +489,7 @@ __webpack_require__.d(__webpack_exports__, {
 /* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/facestation-f2-bca2ce0eafad480229e294a301669c6d.png");
 
 }),
-42724: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+20343: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 });
