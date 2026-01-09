@@ -18,7 +18,7 @@ slug: 2026-01-02-changelog
 
 * **Release Notes**
 
-Below is a summary of the key [updates for January 2026](./changelog/2026-01-02-changelog).
+Below is a summary of the key updates for January 2026.
 
 ![Suprema Docs](/img/changelogs-202501.png)
 
