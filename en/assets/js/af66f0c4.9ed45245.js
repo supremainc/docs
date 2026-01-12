@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["21105"], {
-20993: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["138"], {
+49169: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -27,7 +27,7 @@ function _createMdxContent(props) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
     type: "note",
     children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "2025년 5월 이전에 BioStar Air 출입 통제 서비스를 사용하기 시작한 고객은 현재 Suprema Pass 앱으로 새로 설계된 Airfob Space 앱을 계속 사용할 수 있습니다. 두 앱 모두 동일한 기능을 제공하며 완벽하게 호환됩니다. 기존 사용자는 전환할 필요가 없으며, 모바일 인증 정보가 두 앱 모두에서 원활하게 작동합니다."
+      children: "Customers who began using BioStar Air access control before May 2025 may still be using the Airfob Space app, which has since been rebranded as the Suprema Pass app. Both apps offer identical functionality and are fully compatible. There is no need for existing users to switch — mobile credentials work seamlessly across both."
     })
   });
 }
@@ -47,7 +47,7 @@ function MDXContent(props = {}) {
 
 
 }),
-32034: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+7186: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -56,32 +56,32 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_air_user_management_user_list_mdx_310_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_air_user_management_user_list_mdx_af6_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-user-management-user-list-mdx-310.json
-var site_docs_platform_biostar_air_user_management_user_list_mdx_310_namespaceObject = JSON.parse('{"id":"platform/biostar_air/user-management-user-list","title":"사용자 관리하기","description":"사용자 목록에서 제공하는 부가 기능에 대해 안내합니다.","source":"@site/docs/platform/biostar_air/user-management-user-list.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/user-management-user-list","permalink":"/docs/es/platform/biostar_air/user-management-user-list","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/user-management-user-list.mdx","tags":[],"version":"current","frontMatter":{"id":"user-management-user-list","title":"사용자 관리하기","description":"사용자 목록에서 제공하는 부가 기능에 대해 안내합니다.","keywords":["BioStar Air","사용자 관리","사용자 목록"],"isTranslationMissing":true},"sidebar":"biostar_air","previous":{"title":"사용자 추가하기","permalink":"/docs/es/platform/biostar_air/adding-individual-users"},"next":{"title":"일괄 작업으로 사용자 추가하기","permalink":"/docs/es/platform/biostar_air/adding-users-in-bulk"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-air-user-management-user-list-mdx-af6.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_air_user_management_user_list_mdx_af6_namespaceObject = JSON.parse('{"id":"platform/biostar_air/user-management-user-list","title":"Manage Users","description":"Provides information on the additional features available in the user list.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/user-management-user-list.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/user-management-user-list","permalink":"/docs/en/platform/biostar_air/user-management-user-list","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/user-management-user-list.mdx","tags":[],"version":"current","frontMatter":{"id":"user-management-user-list","title":"Manage Users","description":"Provides information on the additional features available in the user list.","keywords":["BioStar Air","User Management","User list"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"Add Users","permalink":"/docs/en/platform/biostar_air/adding-individual-users"},"next":{"title":"Add Users in Bulk","permalink":"/docs/en/platform/biostar_air/adding-users-in-bulk"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-// EXTERNAL MODULE: ./docs/common/_biostarair-customer-notice.mdx
-var _biostarair_customer_notice = __webpack_require__(20993);
-;// CONCATENATED MODULE: ./docs/platform/biostar_air/user-management-user-list.mdx
+// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_biostarair-customer-notice.mdx
+var _biostarair_customer_notice = __webpack_require__(49169);
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/user-management-user-list.mdx
 
 
 const frontMatter = {
 	id: 'user-management-user-list',
-	title: '사용자 관리하기',
-	description: '사용자 목록에서 제공하는 부가 기능에 대해 안내합니다.',
+	title: 'Manage Users',
+	description: 'Provides information on the additional features available in the user list.',
 	keywords: [
 		'BioStar Air',
-		'사용자 관리',
-		'사용자 목록'
+		'User Management',
+		'User list'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -93,55 +93,55 @@ const assets = {
 
 
 const toc = [..._biostarair_customer_notice/* .toc */.RM, {
-  "value": "사용자 목록",
-  "id": "사용자-목록",
+  "value": "User list",
+  "id": "user-list",
   "level": 2
 }, {
-  "value": "사용자 정보",
-  "id": "사용자-정보",
+  "value": "User Information",
+  "id": "user-information",
   "level": 3
 }, {
-  "value": "필터링",
+  "value": "Filter",
   "id": "userFiltering",
   "level": 3
 }, {
-  "value": "추가 기능",
-  "id": "추가-기능",
+  "value": "Additional features",
+  "id": "additional-features",
   "level": 3
 }, {
-  "value": "사용자 수정",
+  "value": "Edit users",
   "id": "editUserDetails",
   "level": 2
 }, {
-  "value": "사용자 상태 관리",
+  "value": "Manage user status",
   "id": "manageUserStatus",
   "level": 2
 }, {
-  "value": "개별 사용자",
-  "id": "개별-사용자",
+  "value": "Individual user",
+  "id": "individual-user",
   "level": 3
 }, {
-  "value": "일괄 작업",
-  "id": "일괄-작업",
+  "value": "Batch actions",
+  "id": "batch-actions",
   "level": 3
 }, {
-  "value": "사용자 삭제",
+  "value": "Delete users",
   "id": "deleteUser",
   "level": 2
 }, {
-  "value": "개별 사용자",
+  "value": "Individual user",
   "id": "deleteSingleUser",
   "level": 3
 }, {
-  "value": "일괄 삭제",
+  "value": "Delete multiple users",
   "id": "deleteMultipleUsers",
   "level": 3
 }, {
-  "value": "사용자 리포트 설정",
+  "value": "Configure user reports",
   "id": "userReportSettings",
   "level": 2
 }, {
-  "value": "사용자 검색",
+  "value": "Search users",
   "id": "searchUsers",
   "level": 2
 }];
@@ -180,142 +180,142 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_biostarair_customer_notice/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "사용자-목록",
-      children: "사용자 목록"
+      id: "user-list",
+      children: "User list"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자 목록에서는 BioStar Air에 등록된 모든 사용자를 한눈에 확인할 수 있습니다. 각 사용자의 세부 정보를 보고, 필터링 및 정렬 기능을 활용하여 특정 사용자를 쉽게 찾을 수 있습니다. 또한, 사용자 목록에서 직접 사용자 편집, 삭제, 그룹 할당 등의 작업을 수행할 수 있습니다."
+      children: "The user list shows all users registered in BioStar Air at a glance. View each user's details and use the filter and sort features to quickly find specific users. Edit, delete, and assign groups to users directly from the user list."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/air/bsair-user-list-overview.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "user_menu",
         product: "air"
       }), " → ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "user_submenu",
         product: "air"
-      }), "를 클릭하세요."]
+      }), " in the left sidebar."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "사용자-정보",
-      children: "사용자 정보"
+      id: "user-information",
+      children: "User Information"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자 목록의 테이블에서 제공하는 정보는 아래와 같습니다."
+      children: "The table in the user list provides the following information."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user_table_column8",
             product: "air"
-          }), ": 사용자가 일반 사용자인지 임시 사용자인지 나타냅니다. 일반 및 임시 사용자에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          }), ": Indicates whether the user is a regular or temporary user. For more information on regular and temporary users, refer to ", (0,jsx_runtime.jsx)(_components.a, {
             href: "user-card-types",
-            children: "다음 문서"
-          }), "를 참고하세요."]
+            children: "the following"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user_table_column1",
             product: "air"
-          }), ": 사용자의 이름입니다."]
+          }), ": The user's name."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user_info_id",
             product: "air"
-          }), ": 사용자의 고유 아이디입니다."]
+          }), ": The user's unique ID."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user_table_column2",
             product: "air"
-          }), ": 사용자에게 발급한 크리덴셜을 나타냅니다. 크리덴셜의 종류에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          }), ": Shows the credentials issued to the user. For more information on credential types, refer to ", (0,jsx_runtime.jsx)(_components.a, {
             href: "user-card-types",
-            children: "다음 문서"
-          }), "를 참고하세요."]
+            children: "the following"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user_table_column3",
             product: "air"
-          }), ": 사용자에게 발급한 크리덴셜의 유효 기간입니다."]
+          }), ": The validity period of the credentials issued to the user."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user_table_column4",
             product: "air"
-          }), ": 해당 사용자의 활성화 또는 비활성화 상태를 나타냅니다."]
+          }), ": Indicates whether the user is active or inactive."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user_table_column5",
             product: "air"
-          }), ": 사용자가 속한 그룹입니다. 사용자 그룹에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          }), ": The group to which the user belongs. For more information on user groups, refer to ", (0,jsx_runtime.jsx)(_components.a, {
             href: "managing-user-groups",
-            children: "다음 문서"
-          }), "를 참고하세요."]
+            children: "the following"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user_table_column6",
             product: "air"
-          }), ": 사용자에게 할당한 출입 레벨입니다. 출입 레벨에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          }), ": The access level assigned to the user. For more information on access levels, refer to ", (0,jsx_runtime.jsx)(_components.a, {
             href: "manage-access-level",
-            children: "다음 문서"
-          }), "를 참고하세요."]
+            children: "the following"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user_table_column7",
             product: "air"
-          }), ": 사용자가 출입할 수 있는 층에 대한 권한입니다. 층 레벨에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          }), ": The user's permissions for floors they can access. For more information on floor levels, refer to ", (0,jsx_runtime.jsx)(_components.a, {
             href: "manage-floor-level",
-            children: "다음 문서"
-          }), "를 참고하세요."]
+            children: "the following"
+          }), "."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "userFiltering",
-      children: "필터링"
+      children: "Filter"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["사용자 목록의 상단 헤더 영역에서 필털이 기능을 이용할 수 있습니다. 헤더 영역의 ", (0,jsx_runtime.jsx)(IcAirFilter, {}), " 버튼을 클릭하면 원하는 조건을 설정할 수 있습니다."]
+      children: ["Use the filter feature in the top header of the user list. Click ", (0,jsx_runtime.jsx)(IcAirFilter, {}), " in the header to set the desired conditions."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/air/bsair-user-list-user-filtering.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["적용한 필터 조건을 초기화하려면 사용자 목록 상단의 ", (0,jsx_runtime.jsx)(IcAirFilterReset, {}), " 버튼을 클릭하세요."]
+        children: ["Click ", (0,jsx_runtime.jsx)(IcAirFilterReset, {}), " at the top of the user list to reset the applied filter conditions."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "추가-기능",
-      children: "추가 기능"
+      id: "additional-features",
+      children: "Additional features"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자 목록 상단에서 제공하는 기능은 아래와 같습니다."
+      children: "The features available at the top of the user list are as follows."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(IcAirGroup, {
             width: "24px",
             height: "24px"
-          }), ": 선택한 사용자에게 그룹을 할당하거나 제외, 이동할 수 있습니다. 사용자 그룹 관리에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          }), ": Assign, remove, or move the selected users to a group. For more information on user group management, refer to ", (0,jsx_runtime.jsx)(_components.a, {
             href: "managing-user-groups",
-            children: "다음 문서"
-          }), "를 참고하세요."]
+            children: "the following"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(IcAirLock, {
             width: "24px",
             height: "24px"
-          }), ": 선택한 사용자의 출입 레벨을 변경할 수 있습니다. 출입 레벨 관리에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          }), ": Change the access level of the selected users. For more information on managing access levels, refer to ", (0,jsx_runtime.jsx)(_components.a, {
             href: "manage-access-level",
-            children: "다음 문서"
-          }), "를 참고하세요."]
+            children: "the following"
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/air/bsair-user-list-tool-aclevel.png"
         }), "\n"]
@@ -324,7 +324,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(IcAirMtag, {
             width: "24px",
             height: "24px"
-          }), ": 선택한 사용자에게 대기 시간 없이 연속으로 모바일 카드를 태그할 수 있도록 설정할 수 있습니다. 슈프리마 패스 앱은 2.9.0 버전 이상에서 지원합니다."]
+          }), ": Allow the selected users to tag mobile cards consecutively without waiting time. The Suprema Pass app supports this starting from version 2.9.0."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/air/bsair-user-list-tool-mobile-tag.png"
         }), "\n"]
@@ -333,7 +333,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(IcAirUtemplate, {
             width: "24px",
             height: "24px"
-          }), ": 선택한 사용자에게 사용자 템플릿을 적용할 수 있습니다. 기본 설정된 사용자 정보 외에 필요한 다른 정보를 추가할 수 있습니다."]
+          }), ": Apply a user template to the selected users. Add any other information needed in addition to the default user information."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/air/bsair-user-list-user-template.png",
           width: "43%"
@@ -343,26 +343,26 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(IcAirDown, {
             width: "24px",
             height: "24px"
-          }), ": 선택한 사용자 정보를 PDF 또는 CSV 파일로 내보낼 수 있습니다."]
+          }), ": Export the selected user information to a PDF or CSV file."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(IcAirUpface, {
             width: "24px",
             height: "24px"
-          }), ": 사용자 이미지를 일괄 업로드할 수 있습니다. 업로드하는 이미지 파일의 이름은 사용자 아이디와 일치해야 합니다."]
+          }), ": Upload user images in bulk. The name of each image file to upload must match the user's ID."]
         }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "예, 601.jpg 파일은 사용자 아이디 601에 해당합니다."
+          children: "For example, the file 601.jpg corresponds to user ID 601."
         }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
           type: "note",
           children: [(0,jsx_runtime.jsx)(_components.p, {
             children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "파일 형식 요구사항"
+              children: "File format requirements"
             })
           }), (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["지원되는 형식: ", (0,jsx_runtime.jsx)(_components.em, {
+                children: ["Supported formats: ", (0,jsx_runtime.jsx)(_components.em, {
                   children: ".jpg"
                 }), ", ", (0,jsx_runtime.jsx)(_components.em, {
                   children: ".jpeg"
@@ -372,9 +372,9 @@ function _createMdxContent(props) {
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["파일 크기 제한: 이미지당 ", (0,jsx_runtime.jsx)(_components.strong, {
-                  children: "1MB"
-                })]
+                children: ["File size limit: ", (0,jsx_runtime.jsx)(_components.strong, {
+                  children: "1 MB"
+                }), " per image"]
               }), "\n"]
             }), "\n"]
           })]
@@ -384,11 +384,11 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(IcAirFaceLink, {
             width: "26px",
             height: "26px"
-          }), ": 선택한 사용자에게 얼굴 등록 링크를 이메일 또는 문자 메시지로 전송할 수 있습니다. 사용자가 링크를 클릭해 웹 페이지에서 얼굴을 등록하면, 얼굴 인증을 통해 출입할 수 있는 권한이 부여됩니다."]
+          }), ": Send a face enrollment link to the selected users by email or text message. When a user clicks the link and enrolls their face on the webpage, they are granted access via facial authentication."]
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "note",
           children: (0,jsx_runtime.jsx)(_components.p, {
-            children: "이메일과 휴대폰 번호가 등록되어 있지 않은 사용자에게는 링크를 전송할 수 없습니다."
+            children: "The link cannot be sent to users without a registered email address or phone number."
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -396,93 +396,93 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(IcAirFilterReset, {
             width: "26px",
             height: "26px"
-          }), ": 사용자 목록에 적용된 필터를 초기화합니다. 이 기능은 필터링이 적용된 상태에서 사용할 수 있습니다. 필터링 적용 방법에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          }), ": Reset all filters applied to the user list. This feature is available only when filters are applied. For more information on applying filters, refer to ", (0,jsx_runtime.jsx)(_components.a, {
             href: "#userFiltering",
-            children: "다음 문서"
-          }), "를 참고하세요."]
+            children: "the following"
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(IcAirReport, {
             width: "26px",
             height: "26px"
-          }), ": 사용자 리포트를 설정할 수 있습니다. 리포트를 생성을 완료하면 관리자의 이메일로 전송됩니다. 리포트 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
+          }), ": Configure user reports. After a report is generated, it is sent to the administrator's email. For more information on report settings, refer to ", (0,jsx_runtime.jsx)(_components.a, {
             href: "#userReportSettings",
-            children: "다음 문서"
-          }), "를 참고하세요."]
+            children: "the following"
+          }), "."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "editUserDetails",
-      children: "사용자 수정"
+      children: "Edit users"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자의 세부 정보를 수정하거나 크리덴셜을 변경하려면 다음 단계를 따르세요."
+      children: "Follow these steps to edit a user's details or change their credentials."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user_menu",
             product: "air"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user_submenu",
             product: "air"
-          }), "를 클릭하세요."]
+          }), " in the left sidebar."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "목록에서 수정할 사용자를 클릭하세요."
+          children: "Click the user you want to edit in the list."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/air/bsair-user-list.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["사용자 세부 정보 오른쪽 상단의 ", (0,jsx_runtime.jsx)(IcAirEdit, {}), " 버튼을 클릭하세요."]
+          children: ["Click ", (0,jsx_runtime.jsx)(IcAirEdit, {}), " in the top right of the user details."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/air/bsair-user-details.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["Edit the required details when the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user_edit_header",
             product: "air"
-          }), " 창이 나타나면 필요한 세부 정보를 수정하세요."]
+          }), " window appears."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/air/bsair-user-details-edit-info.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["수정을 완료하면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["After editing, click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "save_btn",
             product: "air"
-          }), " 버튼을 클릭하세요."]
+          }), " at the bottom right."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "manageUserStatus",
-      children: "사용자 상태 관리"
+      children: "Manage user status"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자의 출입 권한을 활성화하거나 일시 정지할 수 있습니다. 또한 크리덴셜을 재발급할 수도 있습니다."
+      children: "Activate or suspend a user's access permissions. Reissue credentials as well."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "개별-사용자",
-      children: "개별 사용자"
+      id: "individual-user",
+      children: "Individual user"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user_menu",
             product: "air"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user_submenu",
             product: "air"
-          }), "를 클릭하세요."]
+          }), " in the left sidebar."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "사용자 목록에서 상태를 변경할 사용자를 클릭하세요."
+          children: "Click the user in the list to change their status."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "사용자 세부 정보 상단에서 원하는 기능을 선택하세요."
+          children: "Select the desired action at the top of the user details."
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
@@ -492,45 +492,48 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(IcAirActive, {
             width: "24px",
-            height: "24px"
-          }), ": 일시 정지된 사용자의 출입 권한을 다시 부여합니다. 이 기능은 사용자가 일시 정지된 상태일 때 사용할 수 있습니다."]
+            height: "24px",
+            title: "Activate"
+          }), ": Activate the user's access permissions. Use this for initial activation of new users or reactivation of suspended users."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(IcAirReissue, {
             width: "24px",
-            height: "24px"
-          }), ": 크리덴셜을 다시 발급합니다. 이 기능은 사용자의 크리덴셜이 만료되었거나, 크리덴셜을 사용할 수 없어 새로 발급할 때 사용할 수 있습니다."]
+            height: "24px",
+            title: "Reissue"
+          }), ": Reissue credentials. Use this feature when the user's credentials have expired or are unavailable."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(IcAirSuspend, {
             width: "24px",
-            height: "24px"
-          }), ": 사용자의 출입을 차단합니다. 이 기능은 사용자가 활성화된 상태일 때 사용할 수 있습니다."]
+            height: "24px",
+            title: "Suspend"
+          }), ": Block the user's access. Use this feature when the user is active."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "일괄-작업",
-      children: "일괄 작업"
+      id: "batch-actions",
+      children: "Batch actions"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user_menu",
             product: "air"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user_submenu",
             product: "air"
-          }), "를 클릭하세요."]
+          }), " in the left sidebar."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "사용자 목록에서 상태를 변경할 사용자의 체크박스를 클릭하세요. 1명 이상의 사용자를 선택할 수 있습니다."
+          children: "Click the checkbox of each user in the list to change their status. You can select more than one user."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["화면 왼쪽 상단의 ", (0,jsx_runtime.jsx)(IcAirMore, {}), " 버튼을 클릭하고 팝업 메뉴에서 원하는 작업을 선택하세요."]
+          children: ["Click ", (0,jsx_runtime.jsx)(IcAirMore, {}), " at the top left of the screen and select the desired action from the pop-up menu."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
@@ -540,145 +543,142 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user_activate_action",
-            product: "air",
-            title: "Activate"
-          }), ": 사용자의 출입 권한을 활성화합니다. 새 사용자의 초기 활성화 또는 일시 정지된 사용자의 재활성화 시 사용하세요."]
+            product: "air"
+          }), ": Activate the user's access permissions. Use this for initial activation of new users or reactivation of suspended users."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user_reactivate_action",
-            product: "air",
-            title: "Reissue"
-          }), ": 크리덴셜을 다시 발급합니다. 이 기능은 사용자의 크리덴셜이 만료되었거나, 크리덴셜을 사용할 수 없어 새로 발급할 때 사용할 수 있습니다."]
+            product: "air"
+          }), ": Reissue credentials. Use this feature when the user's credentials have expired or are unavailable."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "suspend_action",
-            product: "air",
-            title: "Suspend"
-          }), ": 사용자의 출입을 차단합니다. 이 기능은 사용자가 활성화된 상태일 때 사용할 수 있습니다."]
+            product: "air"
+          }), ": Block the user's access. Use this feature when the user is active."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "deleteUser",
-      children: "사용자 삭제"
+      children: "Delete users"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "caution",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "삭제한 사용자는 복구할 수 없습니다. 삭제하기 전에 반드시 확인하세요."
+        children: "Deleted users cannot be recovered. Be sure to verify before deleting."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "deleteSingleUser",
-      children: "개별 사용자"
+      children: "Individual user"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user_menu",
             product: "air"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user_submenu",
             product: "air"
-          }), "를 클릭하세요."]
+          }), " in the left sidebar."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "목록에서 삭제할 사용자를 클릭하세요."
+          children: "Click the user you want to delete in the list."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/air/bsair-user-list.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["사용자 세부 정보에서 ", (0,jsx_runtime.jsx)("span", {
+          children: ["Click ", (0,jsx_runtime.jsx)("span", {
             className: "air-remove",
             children: (0,jsx_runtime.jsx)(IcAirRemove, {})
-          }), " 버튼을 클릭하세요."]
+          }), " in the user details."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/air/bsair-user-details-remove.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["경고 메시지 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["When a warning message appears, click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "btn_ok",
             product: "air"
-          }), " 버튼을 클릭하세요."]
+          }), "."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "deleteMultipleUsers",
-      children: "일괄 삭제"
+      children: "Delete multiple users"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user_menu",
             product: "air"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user_submenu",
             product: "air"
-          }), "를 클릭하세요."]
+          }), " in the left sidebar."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "목록에서 삭제할 사용자의 체크박스를 클릭하세요. 1명 이상의 사용자를 선택할 수 있습니다."
+          children: "Click the checkbox of each user you want to delete in the list. You can select more than one user."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/air/bsair-user-list-multi-select.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["화면 왼쪽 상단의 ", (0,jsx_runtime.jsx)(IcAirMore, {}), " → ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click ", (0,jsx_runtime.jsx)(IcAirMore, {}), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "delete_action",
             product: "air"
-          }), "를 클릭하세요."]
+          }), " at the top left of the screen."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/air/bsair-user-list-multi-select-remove-opt.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["경고 메시지 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["When a warning message appears, click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "btn_ok",
             product: "air"
-          }), " 버튼을 클릭하세요."]
+          }), "."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "userReportSettings",
-      children: "사용자 리포트 설정"
+      children: "Configure user reports"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자 리포트를 생성하여 관리자의 이메일로 전송할 수 있습니다."
+      children: "Create a user report and send it to the administrator's email."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["사용자 목록 상단의 ", (0,jsx_runtime.jsx)(IcAirReport, {}), " 버튼을 클릭하세요."]
+          children: ["Click ", (0,jsx_runtime.jsx)(IcAirReport, {}), " at the top of the user list."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["When the ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "report_popup_title",
             product: "air"
-          }), " 창이 나타나면 리포트 이름을 입력하세요."]
+          }), " window appears, enter a report name."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/air/bsair-user-report-setting.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "각 필터 옵션에서 리포트에 포함할 항목을 선택하세요."
+          children: "Select the items to include in the report from each filter option."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["생성한 리포트를 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "report_form_text_add",
             product: "air"
-          }), " 버튼을 클릭하세요."]
+          }), " to save the report."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["A ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "report_form_text_title",
             product: "air"
-          }), "이 생성되며 관리자의 이메일로 다운로드 링크가 전송됩니다."]
+          }), " is created and a download link is sent to the administrator's email."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
@@ -686,16 +686,16 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(Cmd, {
+        children: ["In ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "report_form_text_title",
           product: "air"
-        }), "에서 생성된 리포트를 검색하거나, 수정, 다운로드, 삭제할 수 있습니다."]
+        }), ", search for, edit, download, or delete generated reports."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "searchUsers",
-      children: "사용자 검색"
+      children: "Search users"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "사용자 목록 오른쪽 상단의 검색 입력 필드를 통해 특정 사용자를 빠르게 찾을 수 있습니다. 사용자 이름, 아이디, 전화번호를 기준으로 검색할 수 있습니다."
+      children: "Use the search field in the top right of the user list to quickly find specific users. Search by user name, ID, or phone number."
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/air/bsair-user-list-search.png"
     })]
