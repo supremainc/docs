@@ -212,7 +212,6 @@ const sidebars = {
             'platform/biostar_air/configuring-reports',
             'platform/biostar_air/reports-time-attendance-reports',
             'platform/biostar_air/sip-intercom-for-biostation3',
-            'platform/biostar_air/e200-qr-scanner'
           ]
         },
         'platform/biostar_air/ip-camera-support-and-configuration',
