@@ -740,11 +740,11 @@
     "description": "A rule concerning access to a certain door/door group during a scheduled period of time."
   },
   "access_group": {
-    "name": "Access group",
+    "name": "Access Group",
     "description": "A user group that has the right to access a specified door/door group during a scheduled period of time."
   },
   "access_level": {
-    "name": "Access level",
+    "name": "Access Level",
     "description": "The right to access the door during a scheduled period of time."
   },
   "entrance_limit_zone": {
@@ -756,7 +756,7 @@
     "description": "The act of restricting unauthorized people from accessing the infrastructure and assets. Access made by authorized individuals is recorded in the log."
   },
   "door": {
-    "name": "Doors",
+    "name": "Door",
     "description": "A place in which a physical device for access control is installed. A spatial concept that forms the basis for access control."
   },
   "door_group": {
@@ -768,7 +768,7 @@
     "description": "A sensor that detects the state of the door. There are various types of states such as open, closed, held open, and forced open that can be checked."
   },
   "card": {
-    "name": "card",
+    "name": "Card",
     "description": "A portable information medium in the form of a card. It stores information for identification."
   },
   "card_id": {
