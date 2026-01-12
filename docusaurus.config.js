@@ -121,7 +121,16 @@ const config = {
             'back/**.{js,jsx,ts,tsx,md,mdx}',
           ]
         },
-        blog: false,
+        blog: {
+          path: 'changelog',
+          editLocalizedFiles: false,
+          blogTitle: 'Changelog',
+          blogDescription: 'Suprema product change logs',
+          routeBasePath: 'changelog',
+          showReadingTime: true,
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'All Changelogs',
+        },
         theme: {
           customCss: './src/css/custom.scss',
         },
@@ -435,6 +444,11 @@ const config = {
             label: 'Reference',
             position: 'right',
             docId: 'reference/index'
+          },
+          {
+            to: 'changelog',
+            label: 'Changelog',
+            position: 'right',
           },
           {
             type: 'doc',
