@@ -47,11 +47,11 @@ files: [
       "/docs/reference/**/smartcardissue.mdx",
       "/docs/*/*/release-notes/*.mdx",
       "/docs/common/_ic-information.mdx",
-      "/docs/device/**/*.mdx",
-      "/docs/platform/biostar_x/*.mdx",
-      "/docs/platform/plugins/*.mdx",
-      "/docs/how-to/*.mdx",
-      "/docs/how-to/*.json",
+      # "/docs/device/**/*.mdx",
+      # "/docs/platform/biostar_x/*.mdx",
+      # "/docs/platform/plugins/*.mdx",
+      # "/docs/how-to/*.mdx",
+      # "/docs/how-to/*.json",
       # "/docs/platform/biostar_air/**/*.mdx",
     ]
   }
