@@ -494,5 +494,9 @@
   "sidebar.biostation3max.category.사용하기": {
     "message": "사용하기",
     "description": "The label for category '사용하기' in sidebar 'biostation3max'"
+  },
+  "sidebar.biostar_air.category.하드웨어 설치": {
+    "message": "하드웨어 설치",
+    "description": "The label for category '하드웨어 설치' in sidebar 'biostar_air'"
   }
 }
