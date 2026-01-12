@@ -543,24 +543,21 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user_activate_action",
-            product: "air",
-            title: "Activate"
+            product: "air"
           }), ": 사용자의 출입 권한을 활성화합니다. 새 사용자의 초기 활성화 또는 일시 정지된 사용자의 재활성화 시 사용하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user_reactivate_action",
-            product: "air",
-            title: "Reissue"
+            product: "air"
           }), ": 크리덴셜을 다시 발급합니다. 이 기능은 사용자의 크리덴셜이 만료되었거나, 크리덴셜을 사용할 수 없어 새로 발급할 때 사용할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "suspend_action",
-            product: "air",
-            title: "Suspend"
+            product: "air"
           }), ": 사용자의 출입을 차단합니다. 이 기능은 사용자가 활성화된 상태일 때 사용할 수 있습니다."]
         }), "\n"]
       }), "\n"]

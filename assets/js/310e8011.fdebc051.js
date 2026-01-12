@@ -62,7 +62,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-user-management-user-list-mdx-310.json
-var site_docs_platform_biostar_air_user_management_user_list_mdx_310_namespaceObject = JSON.parse('{"id":"platform/biostar_air/user-management-user-list","title":"사용자 관리하기","description":"사용자 목록에서 제공하는 부가 기능에 대해 안내합니다.","source":"@site/docs/platform/biostar_air/user-management-user-list.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/user-management-user-list","permalink":"/docs/es/platform/biostar_air/user-management-user-list","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/user-management-user-list.mdx","tags":[],"version":"current","frontMatter":{"id":"user-management-user-list","title":"사용자 관리하기","description":"사용자 목록에서 제공하는 부가 기능에 대해 안내합니다.","keywords":["BioStar Air","사용자 관리","사용자 목록"],"isTranslationMissing":true},"sidebar":"biostar_air","previous":{"title":"사용자 추가하기","permalink":"/docs/es/platform/biostar_air/adding-individual-users"},"next":{"title":"일괄 작업으로 사용자 추가하기","permalink":"/docs/es/platform/biostar_air/adding-users-in-bulk"}}')
+var site_docs_platform_biostar_air_user_management_user_list_mdx_310_namespaceObject = JSON.parse('{"id":"platform/biostar_air/user-management-user-list","title":"사용자 관리하기","description":"사용자 목록에서 제공하는 부가 기능에 대해 안내합니다.","source":"@site/docs/platform/biostar_air/user-management-user-list.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/user-management-user-list","permalink":"/docs/platform/biostar_air/user-management-user-list","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/user-management-user-list.mdx","tags":[],"version":"current","frontMatter":{"id":"user-management-user-list","title":"사용자 관리하기","description":"사용자 목록에서 제공하는 부가 기능에 대해 안내합니다.","keywords":["BioStar Air","사용자 관리","사용자 목록"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"사용자 추가하기","permalink":"/docs/platform/biostar_air/adding-individual-users"},"next":{"title":"일괄 작업으로 사용자 추가하기","permalink":"/docs/platform/biostar_air/adding-users-in-bulk"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -81,7 +81,7 @@ const frontMatter = {
 		'사용자 관리',
 		'사용자 목록'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -543,24 +543,21 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user_activate_action",
-            product: "air",
-            title: "Activate"
+            product: "air"
           }), ": 사용자의 출입 권한을 활성화합니다. 새 사용자의 초기 활성화 또는 일시 정지된 사용자의 재활성화 시 사용하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user_reactivate_action",
-            product: "air",
-            title: "Reissue"
+            product: "air"
           }), ": 크리덴셜을 다시 발급합니다. 이 기능은 사용자의 크리덴셜이 만료되었거나, 크리덴셜을 사용할 수 없어 새로 발급할 때 사용할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "suspend_action",
-            product: "air",
-            title: "Suspend"
+            product: "air"
           }), ": 사용자의 출입을 차단합니다. 이 기능은 사용자가 활성화된 상태일 때 사용할 수 있습니다."]
         }), "\n"]
       }), "\n"]

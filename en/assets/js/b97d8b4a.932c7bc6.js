@@ -175,6 +175,8 @@ function _createMdxContent(props) {
       }), " or ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "EU Server"
       }), " based on your location."]
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/air/bsair-gettingstarted-login.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
@@ -183,8 +185,6 @@ function _createMdxContent(props) {
           children: "following document"
         }), "."]
       })
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/air/bsair-gettingstarted-login.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "dashboard-overview",
       children: "Review the dashboard"
