@@ -110,7 +110,7 @@ const config = {
             '**/_*.{md,mdx}',
             'device/xpass_q2/**.{md,mdx}',
             'device/biostation_3_max/**.{md,mdx}',
-            // 'platform/biostar_air/**/**.{md,mdx}',
+            'platform/biostar_air/**/**.{md,mdx}',
           ],
           rehypePlugins: [ rehypeExtendedTable ],
         },
