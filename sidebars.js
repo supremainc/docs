@@ -59,8 +59,19 @@ const sidebars = {
           items: [
             'platform/biostar_air/access-control-hardware-compatibility',
             'platform/biostar_air/security-overview',
-            'platform/biostar_air/site-setup-networking',
             'platform/biostar_air/biostar-air-migration',
+          ]
+        },
+        {
+          type: 'category',
+          label: '하드웨어 설치',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_air/hardware-setup',
+          },
+          items: [
+            'platform/biostar_air/e200-qr-scanner',
+            'platform/biostar_air/site-setup-networking',
           ]
         },
         {
@@ -193,6 +204,10 @@ const sidebars = {
         {
           type: 'category',
           label: '활용 안내',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_air/how-to-guide',
+          },
           items: [
             'platform/biostar_air/configuring-reports',
             'platform/biostar_air/reports-time-attendance-reports',
