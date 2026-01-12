@@ -32,9 +32,9 @@ Below is a summary of the key updates for January 2026.
 
 * Added guide for [Remote Access](../platform/biostar_x/settings-remote-access) configuration and usage
 
-* Added guide for linking event logs using the [Virtual Device](../platform/biostar_x/settings-virtual-device-event-log) feature
+* Added guide for integrating event logs using the [Virtual Device](../platform/biostar_x/settings-virtual-device-event-log) feature
 
-* Updated guides for the ability to enter a reason when exporting or printing user data, data, and audit trail menus
+* Updated guides for the ability to enter a reason when exporting or printing user, data, and audit trail menus
 
   * [Export/Import User Information](../platform/biostar_x/export-import-user-info)
 
