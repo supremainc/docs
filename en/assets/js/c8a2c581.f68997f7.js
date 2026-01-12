@@ -101,7 +101,7 @@ function _createMdxContent(props) {
       id: "authentication-mode",
       children: "Authentication mode"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Set the authentication mode. You can use ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["Set the authentication mode. You can combine ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "ui_228",
         product: "dev"
       }), ", ", (0,jsx_runtime.jsx)(Cmd, {
@@ -113,7 +113,7 @@ function _createMdxContent(props) {
       }), ", and ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "ui_020",
         product: "dev"
-      }), " in combination as authentication modes, and you can set schedules for each authentication mode."]
+      }), " for authentication mode, and you can also set schedules for each authentication mode."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "registering-auth-mode",
       children: "Registering auth mode"

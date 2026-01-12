@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["18757"], {
-99997: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["76544"], {
+98022: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,18 +9,18 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_xstation_2_authentication_mdx_5cd_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_max_authentication_mdx_5f2_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-xstation-2-authentication-mdx-5cd.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_xstation_2_authentication_mdx_5cd_namespaceObject = JSON.parse('{"id":"device/xstation_2/authentication","title":"Authentication","description":"Describes the supported authentication methods and authentication procedures.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/xstation_2/authentication.mdx","sourceDirName":"device/xstation_2","slug":"/device/xstation_2/authentication","permalink":"/docs/en/device/xstation_2/authentication","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/xstation_2/authentication.mdx","tags":[],"version":"current","frontMatter":{"id":"authentication","title":"Authentication","description":"Describes the supported authentication methods and authentication procedures.","keywords":["Authentication mode","Operation","PIN","Fingerprint","T&A (Time and Attendance)"],"isTranslationMissing":false},"sidebar":"xstation2","previous":{"title":"User","permalink":"/docs/en/device/xstation_2/user"},"next":{"title":"Settings","permalink":"/docs/en/device/xstation_2/settings"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-biostation-3-max-authentication-mdx-5f2.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_max_authentication_mdx_5f2_namespaceObject = JSON.parse('{"id":"device/biostation_3_max/authentication","title":"Authentication","description":"Describes the supported authentication methods and authentication procedures.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3_max/authentication.mdx","sourceDirName":"device/biostation_3_max","slug":"/device/biostation_3_max/authentication","permalink":"/docs/en/device/biostation_3_max/authentication","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3_max/authentication.mdx","tags":[],"version":"current","frontMatter":{"id":"authentication","title":"Authentication","description":"Describes the supported authentication methods and authentication procedures.","keywords":["Authentication mode","Operation","PIN","Face","T&A (Time and Attendance)"],"isTranslationMissing":false},"sidebar":"biostation3max","previous":{"title":"User","permalink":"/docs/en/device/biostation_3_max/user"},"next":{"title":"Settings","permalink":"/docs/en/device/biostation_3_max/settings"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/xstation_2/authentication.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3_max/authentication.mdx
 
 
 const frontMatter = {
@@ -31,7 +31,7 @@ const frontMatter = {
 		'Authentication mode',
 		'Operation',
 		'PIN',
-		'Fingerprint',
+		'Face',
 		'T&A (Time and Attendance)'
 	],
 	isTranslationMissing: false
@@ -65,6 +65,14 @@ const toc = [{
   "id": "operation",
   "level": 2
 }, {
+  "value": "Server matching",
+  "id": "server-matching",
+  "level": 3
+}, {
+  "value": "QR authentication",
+  "id": "qr-authentication",
+  "level": 3
+}, {
   "value": "PIN",
   "id": "pin",
   "level": 2
@@ -73,16 +81,20 @@ const toc = [{
   "id": "auth-result-display-option",
   "level": 2
 }, {
-  "value": "QR/Barcode Authentication Options",
-  "id": "qrbarcode-authentication-options",
+  "value": "Face &amp; fingerprint",
+  "id": "face--fingerprint",
   "level": 2
 }, {
-  "value": "Fingerprint settings <Badge>XS2-ODPB, XS2-OAPB</Badge>",
-  "id": "fingerprint-settings-xs2-odpb-xs2-oapb",
-  "level": 2
+  "value": "Face",
+  "id": "face",
+  "level": 3
 }, {
-  "value": "Attendance Mode",
-  "id": "attendance-mode",
+  "value": "Fingerprint <Badge>BS3M-ODB, BS3M-OAPB</Badge>",
+  "id": "fingerprint",
+  "level": 3
+}, {
+  "value": "T&amp;A (Time and Attendance)",
+  "id": "ta-time-and-attendance",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -94,19 +106,14 @@ function _createMdxContent(props) {
     li: "li",
     ol: "ol",
     p: "p",
-    table: "table",
-    tbody: "tbody",
-    td: "td",
-    th: "th",
-    thead: "thead",
-    tr: "tr",
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Badge, Cmd, Image} = _components;
+  }, {Badge, Cmd, Image, PageBreak} = _components;
   if (!Badge) _missingMdxReference("Badge", true);
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
+  if (!PageBreak) _missingMdxReference("PageBreak", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "Describes the supported authentication methods and authentication procedures."
@@ -114,7 +121,10 @@ function _createMdxContent(props) {
       id: "authentication-mode",
       children: "Authentication mode"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Set the authentication mode. You can use ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["Set the authentication mode. You can combine ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "ui_228",
+        product: "dev"
+      }), ", ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "ui_312",
         product: "dev"
       }), ", ", (0,jsx_runtime.jsx)(Cmd, {
@@ -126,11 +136,11 @@ function _createMdxContent(props) {
       }), ", and ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "ui_020",
         product: "dev"
-      }), " in combination for authentication modes, and you can also set a schedule for each authentication mode."]
+      }), " for authentication mode, and you can also set schedules for each authentication mode."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "Fingerprint authentication is only available for the XS2-ODPB and XS2-OAPB products."
+        children: "Fingerprint authentication is available only on BS3M-ODB and BS3M-OAPB."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "registering-auth-mode",
@@ -138,11 +148,11 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/common/ico-menu2.svg",
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
             ico: true,
             alone: true
-          }), " and authenticate with administrator privileges."]
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -157,7 +167,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Select ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/common/ico-add2.svg",
+            src: "/img/common/ico-add.svg",
             ico: true,
             alone: true
           }), "."]
@@ -174,7 +184,61 @@ function _createMdxContent(props) {
             alone: true
           }), " while the credential is added, and the added credential will be deleted."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/xs2-auth-authmode.png"
+          src: "/img/device/bs3m-add-auth-mode.png"
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Image, {
+                src: "/img/common/ico-authmode-face-bs3m.png",
+                ico: true,
+                alone: true
+              }), ": Face, ", (0,jsx_runtime.jsx)(Image, {
+                src: "/img/common/ico-authmode-fingerprint-bs3m.png",
+                ico: true,
+                alone: true
+              }), ": Fingerprint, ", (0,jsx_runtime.jsx)(Image, {
+                src: "/img/common/ico-authmode-card-qr-bs3m.png",
+                ico: true,
+                alone: true
+              }), ": Card / QR code, ", (0,jsx_runtime.jsx)(Image, {
+                src: "/img/common/ico-authmode-id-bs3m.png",
+                ico: true,
+                alone: true
+              }), ": ID, ", (0,jsx_runtime.jsx)(Image, {
+                src: "/img/common/ico-authmode-pin-bs3m.png",
+                ico: true,
+                alone: true
+              }), ": PIN"]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: ["You can combine selected authentication methods to authenticate all in order or choose to authenticate only some of the selected methods. For example, with the combination ", (0,jsx_runtime.jsx)(Image, {
+                src: "/img/common/ico-authmode-card-qr-bs3m.png",
+                ico: true,
+                alone: true
+              }), " + ", (0,jsx_runtime.jsx)(Image, {
+                src: "/img/common/ico-authmode-face-bs3m.png",
+                ico: true,
+                alone: true
+              }), " + ", (0,jsx_runtime.jsx)(Image, {
+                src: "/img/common/ico-authmode-pin-bs3m.png",
+                ico: true,
+                alone: true
+              }), ", authenticate with card / QR code, face, and PIN. With the combination ", (0,jsx_runtime.jsx)(Image, {
+                src: "/img/common/ico-authmode-card-qr-bs3m.png",
+                ico: true,
+                alone: true
+              }), " + ", (0,jsx_runtime.jsx)(Image, {
+                src: "/img/common/ico-authmode-face-bs3m.png",
+                ico: true,
+                alone: true
+              }), " / ", (0,jsx_runtime.jsx)(Image, {
+                src: "/img/common/ico-authmode-pin-bs3m.png",
+                ico: true,
+                alone: true
+              }), ", authenticate with card / QR code first, and then enter either face or PIN."]
+            }), "\n"]
+          }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -182,147 +246,6 @@ function _createMdxContent(props) {
             sid: "ui_203",
             product: "dev"
           }), "."]
-        }), "\n", (0,jsx_runtime.jsx)("div", {
-          className: "overflow-x",
-          children: (0,jsx_runtime.jsxs)(_components.table, {
-            children: [(0,jsx_runtime.jsx)(_components.thead, {
-              children: (0,jsx_runtime.jsxs)(_components.tr, {
-                children: [(0,jsx_runtime.jsx)(_components.th, {
-                  style: {
-                    textAlign: "center"
-                  },
-                  children: "Category"
-                }), (0,jsx_runtime.jsx)(_components.th, {
-                  children: "Description"
-                })]
-              })
-            }), (0,jsx_runtime.jsxs)(_components.tbody, {
-              children: [(0,jsx_runtime.jsxs)(_components.tr, {
-                children: [(0,jsx_runtime.jsx)(_components.td, {
-                  style: {
-                    textAlign: "center"
-                  },
-                  children: "Fingerprint"
-                }), (0,jsx_runtime.jsxs)(_components.td, {
-                  children: ["- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-fingerprint.png",
-                    ico: true,
-                    alone: true
-                  }), ": This mode uses only fingerprint.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-fingerprint.png",
-                    ico: true,
-                    alone: true
-                  }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-pin-bs3.png",
-                    ico: true,
-                    alone: true
-                  }), ": This mode requires entering a PIN after authenticating via fingerprint."]
-                })]
-              }), (0,jsx_runtime.jsxs)(_components.tr, {
-                children: [(0,jsx_runtime.jsx)(_components.td, {
-                  style: {
-                    textAlign: "center"
-                  },
-                  children: "Card / QR Code"
-                }), (0,jsx_runtime.jsxs)(_components.td, {
-                  children: ["- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-card-bs3.png",
-                    ico: true,
-                    alone: true
-                  }), ": This mode uses only card / QR code authentication.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-card-bs3.png",
-                    ico: true,
-                    alone: true
-                  }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-fingerprint.png",
-                    ico: true,
-                    alone: true
-                  }), ": This mode requires authentication via card/QR code followed by fingerprint authentication.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-card-bs3.png",
-                    ico: true,
-                    alone: true
-                  }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-pin-bs3.png",
-                    ico: true,
-                    alone: true
-                  }), ": This mode requires card / QR code authentication followed by PIN entry.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-card-bs3.png",
-                    ico: true,
-                    alone: true
-                  }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-fingerprint.png",
-                    ico: true,
-                    alone: true
-                  }), " / ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-pin-bs3.png",
-                    ico: true,
-                    alone: true
-                  }), ": This mode allows for authentication via card/QR code followed by either fingerprint or PIN entry.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-card-bs3.png",
-                    ico: true,
-                    alone: true
-                  }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-fingerprint.png",
-                    ico: true,
-                    alone: true
-                  }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-pin-bs3.png",
-                    ico: true,
-                    alone: true
-                  }), ": This mode uses both fingerprint authentication and PIN entry after authentication via card/QR code."]
-                })]
-              }), (0,jsx_runtime.jsxs)(_components.tr, {
-                children: [(0,jsx_runtime.jsx)(_components.td, {
-                  style: {
-                    textAlign: "center"
-                  },
-                  children: "ID"
-                }), (0,jsx_runtime.jsxs)(_components.td, {
-                  children: ["- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-id-bs3.png",
-                    ico: true,
-                    alone: true
-                  }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-fingerprint.png",
-                    ico: true,
-                    alone: true
-                  }), ": This mode requires entering an ID followed by fingerprint authentication.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-id-bs3.png",
-                    ico: true,
-                    alone: true
-                  }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-pin-bs3.png",
-                    ico: true,
-                    alone: true
-                  }), ": This mode requires ID entry followed by PIN entry.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-id-bs3.png",
-                    ico: true,
-                    alone: true
-                  }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-fingerprint.png",
-                    ico: true,
-                    alone: true
-                  }), " / ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-pin-bs3.png",
-                    ico: true,
-                    alone: true
-                  }), ": This mode allows for entering an ID followed by either fingerprint authentication or entering a PIN.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-id-bs3.png",
-                    ico: true,
-                    alone: true
-                  }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-fingerprint.png",
-                    ico: true,
-                    alone: true
-                  }), " + ", (0,jsx_runtime.jsx)(Image, {
-                    src: "/img/common/ico-authmode-pin-bs3.png",
-                    ico: true,
-                    alone: true
-                  }), ": This mode uses both fingerprint authentication and PIN entry after entering an ID."]
-                })]
-              })]
-            })]
-          })
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsxs)(_components.ul, {
@@ -349,18 +272,18 @@ function _createMdxContent(props) {
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                 children: ["To use ", (0,jsx_runtime.jsx)(Cmd, {
-                  sid: "ui_043",
+                  sid: "ui_042",
                   product: "dev"
-                }), " authentication on XS2-DPB, XS2-APB, XS2-ODPB, and XS2-OAPB models, ", (0,jsx_runtime.jsx)(Cmd, {
-                  sid: "ui_043",
-                  product: "dev"
-                }), " must be activated in ", (0,jsx_runtime.jsx)(Cmd, {
+                }), " authentication, ", (0,jsx_runtime.jsx)(Cmd, {
                   sid: "ui_256",
                   product: "dev"
-                }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-                  sid: "ui_044",
+                }), " must be clicked and ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_265",
                   product: "dev"
-                }), ", and a separate device license is required. For more information, refer to ", (0,jsx_runtime.jsx)(_components.a, {
+                }), " must have ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_041",
+                  product: "dev"
+                }), " activated, and a separate device license is required. For more information, refer to ", (0,jsx_runtime.jsx)(_components.a, {
                   href: "settings#license",
                   children: "License"
                 }), "."]
@@ -382,11 +305,11 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/common/ico-menu2.svg",
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
             ico: true,
             alone: true
-          }), " and authenticate with administrator privileges."]
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -419,11 +342,11 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/common/ico-menu2.svg",
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
             ico: true,
             alone: true
-          }), " and authenticate with administrator privileges."]
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -451,54 +374,124 @@ function _createMdxContent(props) {
           }), "."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "operation",
       children: "Operation"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "server-matching",
+      children: "Server matching"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "You can set up server matching."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/common/ico-menu2.svg",
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
             ico: true,
             alone: true
-          }), " and authenticate with administrator privileges."]
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["After pressing ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_256",
             product: "dev"
-          }), ", change the desired item in ", (0,jsx_runtime.jsx)(Cmd, {
+          }), ", activate ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_265",
+            product: "dev"
+          }), " in ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "ui_187",
             product: "dev"
           }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/xs2-auth.png"
+          src: "/img/device/bs3m-operation.png"
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
+              sid: "ui_187",
+              product: "dev"
+            }), ": When server matching is set, user authentication is performed by BioStar X without the device performing user authentication. It can be used when the device has too much user information or when the device is installed outside."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsxs)(_components.ul, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_185",
+                  product: "dev"
+                }), " can only use cards and IDs."]
+              }), "\n"]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                children: ["If you use ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_185",
+                  product: "dev"
+                }), ", you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+                  href: "../../platform/biostar_x/settings-server-server#servermatching",
+                  children: "BioStar X Administrator Guide"
+                }), "."]
+              }), "\n"]
+            }), "\n"]
+          })
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "qr-authentication",
+      children: "QR authentication"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "You can activate QR code authentication."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
+            ico: true,
+            alone: true
+          }), " and authenticate with the Admin level credential."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["After pressing ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "ui_256",
+            product: "dev"
+          }), ", activate ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "ui_265",
+            product: "dev"
+          }), " for ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "ui_041",
+            product: "dev"
+          }), "."]
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/device/bs3m-operation.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_260",
+                sid: "ui_041",
                 product: "dev"
-              }), ": If authentication is not completed within the set time, authentication will fail. It can be set to 3 to 20 seconds."]
+              }), ": Set whether to use QR code authentication through the device's camera."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_185",
+                sid: "ui_329",
                 product: "dev"
-              }), ": When server matching is set, the device does not perform user authentication; BioStar X performs user authentication. It can be used when the device has too much user information or when the device is installed outside."]
+              }), ": You can set up authentication with a QR code that has the same data as the CSN card or Wiegand card issued to the user. This can only be set when ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_041",
+                product: "dev"
+              }), " is activated."]
             }), "\n"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["If you use ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "ui_185",
+            children: ["A separate device license is required to use ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "ui_041",
               product: "dev"
-            }), ", you must enable server matching on both the device and BioStar X. For more information about BioStar X server matching settings, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "../../platform/biostar_x/settings-server-server#servermatching",
-              children: "BioStar X Administrator Guide"
+            }), ". For more information, refer to ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "settings#license",
+              children: "License"
             }), "."]
           })
         }), "\n"]
@@ -511,11 +504,11 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/common/ico-menu2.svg",
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
             ico: true,
             alone: true
-          }), " and authenticate with administrator privileges."]
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -530,7 +523,7 @@ function _createMdxContent(props) {
             product: "dev"
           }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/xs2-auth1.png"
+          src: "/img/device/bs3m-pin.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
@@ -540,7 +533,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "auth-result-display-option",
       children: "Auth result display option"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -548,11 +541,11 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/common/ico-menu2.svg",
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
             ico: true,
             alone: true
-          }), " and authenticate with administrator privileges."]
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -564,7 +557,7 @@ function _createMdxContent(props) {
             product: "dev"
           }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/xs2-auth2.png"
+          src: "/img/device/bs3m-auth-result-display-option.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -629,154 +622,350 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "qrbarcode-authentication-options",
-      children: "QR/Barcode Authentication Options"
+    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "face--fingerprint",
+      children: "Face & fingerprint"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "face",
+      children: "Face"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "You can set QR/Barcode authentication."
+      children: "You can change the configuration for facial authentication."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/common/ico-menu2.svg",
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
             ico: true,
             alone: true
-          }), " and authenticate with administrator privileges."]
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["After pressing ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_256",
             product: "dev"
-          }), ", enable ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_043",
-            product: "dev"
-          }), " in ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_044",
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "ui_376",
             product: "dev"
           }), "."]
         }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Change the desired item in ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "ui_377",
+            product: "dev"
+          }), " or ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "ui_231",
+            product: "dev"
+          }), " settings."]
+        }), "\n", (0,jsx_runtime.jsxs)("div", {
+          className: "grid-container",
+          children: [(0,jsx_runtime.jsx)(Image, {
+            src: "/img/device/bs3m-face.png"
+          }), (0,jsx_runtime.jsx)(Image, {
+            src: "/img/device/bs3m-face-recognition.png"
+          })]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_140",
+                product: "dev"
+              }), ": Set the sensitivity to detect motion around the device. When ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_140",
+                product: "dev"
+              }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_091",
+                product: "dev"
+              }), ", touch the screen to authenticate your face."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_115",
+                product: "dev"
+              }), ": If the face is not enrolled within the set time, the face registration will be canceled."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_260",
+                product: "dev"
+              }), ": If authentication is not completed within the set time, authentication fails."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_117",
+                product: "dev"
+              }), ": You can check for duplicate faces during face registration."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_229",
+                product: "dev"
+              }), ": Set the position and size of the area where the device detects faces during face authentication."]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+              type: "info",
+              children: [(0,jsx_runtime.jsxs)(_components.p, {
+                children: ["For optimal performance, it is recommended to use default settings for the sub-options of ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_229",
+                  product: "dev"
+                }), ". The default values of each option are as follows:"]
+              }), (0,jsx_runtime.jsxs)(_components.ul, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                    children: "Maximum Head Pose Angle: 15"
+                  }), "\n"]
+                }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                    children: "Detection Distance: Min 30 cm, Max 100 cm"
+                  }), "\n"]
+                }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                    children: "Wide Search: Deactivated"
+                  }), "\n"]
+                }), "\n"]
+              })]
+            }), "\n"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_060",
+                product: "dev"
+              }), ": By activating ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_060",
+                product: "dev"
+              }), ", you can enroll the ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_340",
+                product: "dev"
+              }), " issued by BioStar X. ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_340",
+                product: "dev"
+              }), " allows biometric authentication without storing user data on the BioStar X server, Airfob Portal, or device by storing the user's biometric template on a mobile access card."]
+            }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+              type: "info",
+              children: (0,jsx_runtime.jsxs)(_components.p, {
+                children: ["For more information about ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_340",
+                  product: "dev"
+                }), ", refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+                  href: "../../platform/biostar_x/enroll-credential-mobile#template-on-mobile",
+                  children: "BioStar X Administrator Guide"
+                }), "."]
+              })
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_157",
+                product: "dev"
+              }), ": You can set to store both the actual images and templates in Visual Face, or to store only the templates without saving the actual images. If disabled, all stored images of visual faces will be deleted, and newly enrolled visual faces will store templates excluding images."]
+            }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+              type: "info",
+              children: (0,jsx_runtime.jsx)(_components.p, {
+                children: "After disabling this setting, connect to BioStar 2 v2.9.7 or later or BioStar X."
+              })
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_149",
+                product: "dev"
+              }), ": You can set the security level for 1", ":N", " authentication."]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_278",
+                product: "dev"
+              }), ": You can set the operating mode of the device for face authentication."]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "ui_359",
+                    product: "dev"
+                  }), ": Both visual and infrared matching work to increase the accuracy of face authentication."]
+                }), "\n"]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "ui_159",
+                    product: "dev"
+                  }), ": Users can perform rapid authentication while walking within the device's authentication range."]
+                }), "\n"]
+              }), "\n"]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_247",
+                product: "dev"
+              }), ": You can prevent user authentication with spoofed faces such as photos. Activated when ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_278",
+                product: "dev"
+              }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_359",
+                product: "dev"
+              }), "."]
+            }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+              type: "info",
+              children: (0,jsx_runtime.jsxs)(_components.p, {
+                children: ["In strong sunlight, it is recommended to use the ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_247",
+                  product: "dev"
+                }), " function as ", (0,jsx_runtime.jsx)(Cmd, {
+                  sid: "ui_152",
+                  product: "dev"
+                }), "."]
+              })
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
+                sid: "ui_070",
+                product: "dev"
+              }), ": You can change advanced settings for facial authentication, such as mask detection."]
+            }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+              children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "ui_123",
+                    product: "dev"
+                  }), ": You can set whether to use mask detection."]
+                }), "\n"]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "ui_067",
+                    product: "dev"
+                  }), ": You can set the method to check if a mask is worn. This is activated when the ", (0,jsx_runtime.jsx)(Cmd, {
+                    sid: "ui_123",
+                    product: "dev"
+                  }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
+                    sid: "ui_161",
+                    product: "dev"
+                  }), "."]
+                }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+                  type: "info",
+                  children: (0,jsx_runtime.jsxs)(_components.ul, {
+                    children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                        children: [(0,jsx_runtime.jsx)(Cmd, {
+                          sid: "ui_127",
+                          product: "dev"
+                        }), ": Users not wearing a mask are denied authentication, and a mask non-compliance event log is recorded."]
+                      }), "\n"]
+                    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                        children: [(0,jsx_runtime.jsx)(Cmd, {
+                          sid: "ui_126",
+                          product: "dev"
+                        }), ": Users not wearing a mask can still authenticate, but a mask non-compliance event log is recorded."]
+                      }), "\n"]
+                    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                        children: [(0,jsx_runtime.jsx)(Cmd, {
+                          sid: "ui_125",
+                          product: "dev"
+                        }), ": Only users not wearing a mask can be authenticated, and when this mode is used, the mask check mode is fixed to ", (0,jsx_runtime.jsx)(Cmd, {
+                          sid: "ui_369",
+                          product: "dev"
+                        }), "."]
+                      }), "\n"]
+                    }), "\n"]
+                  })
+                }), "\n"]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "ui_124",
+                    product: "dev"
+                  }), ": Set the sensitivity for detecting mask usage. This is activated when the ", (0,jsx_runtime.jsx)(Cmd, {
+                    sid: "ui_123",
+                    product: "dev"
+                  }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
+                    sid: "ui_161",
+                    product: "dev"
+                  }), "."]
+                }), "\n"]
+              }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                  children: [(0,jsx_runtime.jsx)(Cmd, {
+                    sid: "ui_368",
+                    product: "dev"
+                  }), ": Set the confirmation mode according to the purpose of the device."]
+                }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+                  type: "info",
+                  children: (0,jsx_runtime.jsxs)(_components.ul, {
+                    children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                        children: [(0,jsx_runtime.jsx)(Cmd, {
+                          sid: "ui_267",
+                          product: "dev"
+                        }), ": After authentication, check whether the user is wearing a mask."]
+                      }), "\n"]
+                    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                        children: [(0,jsx_runtime.jsx)(Cmd, {
+                          sid: "ui_369",
+                          product: "dev"
+                        }), ": Authenticate after checking whether the user is wearing a mask."]
+                      }), "\n"]
+                    }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                        children: [(0,jsx_runtime.jsx)(Cmd, {
+                          sid: "ui_370",
+                          product: "dev"
+                        }), ": The device can only be used to check if a mask is worn. When this mode is activated, any user wearing a mask can access it regardless of authentication."]
+                      }), "\n"]
+                    }), "\n"]
+                  })
+                }), "\n"]
+              }), "\n"]
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(Badge, {
-      only: true,
-      children: "XS2-QDPB, XS2-QAPB"
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/device/xs2-auth3.png"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_043",
-            product: "dev"
-          }), ": Select whether to use QR/Barcode authentication."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_374",
-            product: "dev"
-          }), ": If QR/Barcode is not scanned within the set time, authentication fails. Set between 4 and 10 seconds."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_329",
-            product: "dev"
-          }), ": You can set up authentication with a QR code that has the same data as the CSN card or Wiegand card issued to the user."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(Badge, {
-      only: true,
-      children: "XS2-DPB, XS2-APB, XS2-ODPB, XS2-OAPB"
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
-      src: "/img/device/xs2-auth3-1.png"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_043",
-            product: "dev"
-          }), ": Select whether to use QR/Barcode authentication."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_375",
-            product: "dev"
-          }), ": If QR/Barcode is not scanned within the set time, authentication fails. Set between 3 and 20 seconds. Available only when ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_043",
-            product: "dev"
-          }), " is enabled."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_140",
-            product: "dev"
-          }), ": Set the sensitivity for detecting movement around the device. Available only when ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_043",
-            product: "dev"
-          }), " is enabled."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_329",
-            product: "dev"
-          }), ": You can set up authentication with a QR code that has the same data as the CSN card or Wiegand card issued to the user. Available only when ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_043",
-            product: "dev"
-          }), " is enabled."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["To use ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "ui_043",
-          product: "dev"
-        }), " authentication on XS2-DPB, XS2-APB, XS2-ODPB, and XS2-OAPB models, ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "ui_043",
-          product: "dev"
-        }), " must be activated in ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "ui_256",
-          product: "dev"
-        }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-          sid: "ui_044",
-          product: "dev"
-        }), ", and a separate device license is required. For more information, refer to ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "settings#license",
-          children: "License"
-        }), "."]
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.h2, {
-      id: "fingerprint-settings-xs2-odpb-xs2-oapb",
-      children: ["Fingerprint settings ", (0,jsx_runtime.jsx)(Badge, {
+    }), "\n", (0,jsx_runtime.jsxs)(_components.h3, {
+      id: "fingerprint",
+      children: ["Fingerprint ", (0,jsx_runtime.jsx)(Badge, {
         only: true,
-        children: "XS2-ODPB, XS2-OAPB"
+        children: "BS3M-ODB, BS3M-OAPB"
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "You can change the settings for fingerprint authentication."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/common/ico-menu2.svg",
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
             ico: true,
             alone: true
-          }), " and authenticate with administrator privileges."]
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["After pressing ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_256",
             product: "dev"
-          }), ", change the desired items in ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_312",
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "ui_376",
+            product: "dev"
+          }), "."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Change the desired item in ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "ui_378",
             product: "dev"
           }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/xs2-auth4.png"
+          src: "/img/device/bs3m-finger.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -825,11 +1014,6 @@ function _createMdxContent(props) {
                 sid: "ui_057",
                 product: "dev"
               }), ". Changing the template format blocks the use of all previously stored fingerprints, so proceed with caution."]
-            }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-              type: "info",
-              children: (0,jsx_runtime.jsx)(_components.p, {
-                children: "Delete all user fingerprint information and then change the template format. If user fingerprint information is enrolled, you cannot change the template format."
-              })
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -869,30 +1053,34 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "attendance-mode",
-      children: "Attendance Mode"
+      id: "ta-time-and-attendance",
+      children: "T&A (Time and Attendance)"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "You can set how to register T&A mode."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/common/ico-menu2.svg",
+          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
+            src: "/img/common/ico-menu.svg",
             ico: true,
             alone: true
-          }), " and authenticate with administrator privileges."]
+          }), " and authenticate with the Admin level credential."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_256",
             product: "dev"
-          }), ", then change the desired item in ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_083_list",
+          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "ui_079",
             product: "dev"
           }), "."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Change the desired item."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/xs2-auth5.png"
+          src: "/img/device/bs3m-ta.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -910,10 +1098,10 @@ function _createMdxContent(props) {
                 sid: "ui_086",
                 product: "dev"
               }), " → ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-add2.svg",
+                src: "/img/common/ico-add.svg",
                 ico: true,
                 alone: true
-              }), " and set the icons to be displayed on the screen, ", (0,jsx_runtime.jsx)(Cmd, {
+              }), " and then set the icon to display on the screen, ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_085",
                 product: "dev"
               }), ", and ", (0,jsx_runtime.jsx)(Cmd, {

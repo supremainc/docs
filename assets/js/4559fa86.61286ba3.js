@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["17378"], {
-44785: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["2770"], {
+49576: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,28 +9,28 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_air_ip_camera_support_and_configuration_mdx_b5d_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_air_ip_camera_support_and_configuration_mdx_455_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-air-ip-camera-support-and-configuration-mdx-b5d.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_air_ip_camera_support_and_configuration_mdx_b5d_namespaceObject = JSON.parse('{"id":"platform/biostar_air/ip-camera-support-and-configuration","title":"IP Camera Support and Settings","description":"Set up ONVIF-compatible IP cameras in BioStar Air, configure live and recorded video streams, and integrate camera footage with access events.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/ip-camera-support-and-configuration.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/ip-camera-support-and-configuration","permalink":"/docs/en/platform/biostar_air/ip-camera-support-and-configuration","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/ip-camera-support-and-configuration.mdx","tags":[],"version":"current","frontMatter":{"id":"ip-camera-support-and-configuration","title":"IP Camera Support and Settings","description":"Set up ONVIF-compatible IP cameras in BioStar Air, configure live and recorded video streams, and integrate camera footage with access events.","keywords":["IP camera","BioStar Air","camera configuration"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"Wire and Configure E200 QR Scanner","permalink":"/docs/en/platform/biostar_air/e200-qr-scanner"},"next":{"title":"BioStar Air Partner Portal","permalink":"/docs/en/platform/biostar_air/intro-to-partner-portal"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-ip-camera-support-and-configuration-mdx-455.json
+var site_docs_platform_biostar_air_ip_camera_support_and_configuration_mdx_455_namespaceObject = JSON.parse('{"id":"platform/biostar_air/ip-camera-support-and-configuration","title":"IP 카메라 지원 및 설정","description":"BioStar Air에서 ONVIF 호환 IP 카메라 설정, 라이브 및 녹화된 비디오 스트림 구성, 카메라 영상을 출입 이벤트와 통합하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_air/ip-camera-support-and-configuration.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/ip-camera-support-and-configuration","permalink":"/docs/platform/biostar_air/ip-camera-support-and-configuration","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/ip-camera-support-and-configuration.mdx","tags":[],"version":"current","frontMatter":{"id":"ip-camera-support-and-configuration","title":"IP 카메라 지원 및 설정","description":"BioStar Air에서 ONVIF 호환 IP 카메라 설정, 라이브 및 녹화된 비디오 스트림 구성, 카메라 영상을 출입 이벤트와 통합하는 방법을 안내합니다.","keywords":["IP 카메라","BioStar Air","카메라 구성"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"BioStation 3 SIP 인터폰","permalink":"/docs/platform/biostar_air/sip-intercom-for-biostation3"},"next":{"title":"BioStar Air 파트너 포털","permalink":"/docs/platform/biostar_air/intro-to-partner-portal"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/ip-camera-support-and-configuration.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_air/ip-camera-support-and-configuration.mdx
 
 
 const frontMatter = {
 	id: 'ip-camera-support-and-configuration',
-	title: 'IP Camera Support and Settings',
-	description: 'Set up ONVIF-compatible IP cameras in BioStar Air, configure live and recorded video streams, and integrate camera footage with access events.',
+	title: 'IP 카메라 지원 및 설정',
+	description: 'BioStar Air에서 ONVIF 호환 IP 카메라 설정, 라이브 및 녹화된 비디오 스트림 구성, 카메라 영상을 출입 이벤트와 통합하는 방법을 안내합니다.',
 	keywords: [
-		'IP camera',
+		'IP 카메라',
 		'BioStar Air',
-		'camera configuration'
+		'카메라 구성'
 	],
 	isTranslationMissing: false
 };
@@ -43,56 +43,56 @@ const assets = {
 
 
 const toc = [{
-  "value": "Compatibility",
+  "value": "호환성",
   "id": "compatibility",
   "level": 2
 }, {
-  "value": "Functionality overview",
+  "value": "기능 소개",
   "id": "functionality",
   "level": 2
 }, {
-  "value": "Instructions",
+  "value": "사용 안내",
   "id": "instructions",
   "level": 2
 }, {
-  "value": "Connect IP cameras",
-  "id": "connect-ip-cameras",
+  "value": "IP 카메라 연결",
+  "id": "ip-카메라-연결",
   "level": 3
 }, {
-  "value": "Log in to BioStar Air",
-  "id": "log-in-to-biostar-air",
+  "value": "BioStar Air 로그인",
+  "id": "biostar-air-로그인",
   "level": 3
 }, {
-  "value": "Enable video management",
-  "id": "enable-video-management",
+  "value": "비디오 관리 활성화",
+  "id": "비디오-관리-활성화",
   "level": 3
 }, {
-  "value": "Add camera",
-  "id": "add-camera",
+  "value": "카메라 추가",
+  "id": "카메라-추가",
   "level": 3
 }, {
-  "value": "Link to a door",
-  "id": "link-to-a-door",
+  "value": "출입문과 연결",
+  "id": "출입문과-연결",
   "level": 3
 }, {
-  "value": "View live camera video",
-  "id": "view-live-camera-video",
+  "value": "실시간 카메라 영상 보기",
+  "id": "실시간-카메라-영상-보기",
   "level": 3
 }, {
-  "value": "View recorded camera video",
-  "id": "view-recorded-camera-video",
+  "value": "녹화된 카메라 영상 보기",
+  "id": "녹화된-카메라-영상-보기",
   "level": 3
 }, {
-  "value": "View event video",
-  "id": "view-event-video",
+  "value": "이벤트 영상 보기",
+  "id": "이벤트-영상-보기",
   "level": 3
 }, {
-  "value": "Tested and verified devices list",
+  "value": "테스트 및 검증된 장치 목록",
   "id": "tested-devices",
   "level": 2
 }, {
-  "value": "Enable ONVIF on an IP camera",
-  "id": "enable-onvif-on-an-ip-camera",
+  "value": "IP 카메라의 ONVIF 활성화 방법",
+  "id": "ip-카메라의-onvif-활성화-방법",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -122,174 +122,174 @@ function _createMdxContent(props) {
   if (!Steps) _missingMdxReference("Steps", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar Air automatically detects IP cameras connected to the same network as Airfob Edge. Because the cameras use the device as a gateway, a network video recorder (NVR) is not required. Instead, the cameras use the built-in SD card storage."
+      children: "BioStar Air는 에어팝 엣지(Airfob Edge) 장치와 동일한 네트워크에 연결된 IP 카메라를 자동 감지합니다. 카메라는 장치를 게이트웨이로 사용하므로 네트워크 비디오 레코더(Network Video Recorder, NVR)가 필요하지 않습니다. 대신 카메라는 내장 SD 카드 저장 장치를 사용합니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "With an Airfob Edge or XPass 2 installed, BioStar Air can display the following concurrent live view streams."
+      children: "에어팝 엣지(Airfob Edge) 장치 또는 XPass 2를 각각 설치했다면 BioStar Air는 아래와 같은 동시 라이브 뷰 스트림을 표시할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Up to two cameras at Full HD resolution (1080p)"
+          children: "최대 2대의 카메라에서 Full HD 해상도(1080p)"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Up to four cameras at HD resolution (720p)"
+          children: "최대 4대의 카메라에서 HD 해상도(720p)"
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "These specifications double when XStation 2 is used."
+      children: "이 사양은 XStation 2를 사용할 때 두 배로 증가합니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["If recorded video does not play after registering the camera in BioStar Air, refer to ", (0,jsx_runtime.jsx)(_components.a, {
+        children: ["BioStar Air에 카메라를 등록한 후 녹화된 비디오가 재생되지 않으면 ", (0,jsx_runtime.jsx)(_components.a, {
           href: "video-troubleshooting",
-          children: "the following"
-        }), "."]
+          children: "다음 문서"
+        }), "를 참고하세요."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "compatibility",
-      children: "Compatibility"
+      children: "호환성"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Onvif profiles"
-          }), ": The IP camera must be compatible with Onvif profile S or G."]
+            children: "Onvif Profiles"
+          }), ": IP 카메라는 Onvif 프로필 S 또는 G와 호환되어야 합니다."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "Onvif profile S"
-              }), ": Live video streaming"]
+                children: "Onvif Profile S"
+              }), ": 라이브 비디오 스트리밍"]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "Onvif profile G"
-              }), ": Recorded video stored on the SD card"]
+                children: "Onvif Profile G"
+              }), ": 녹화된 비디오를 SD 카드에 저장"]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "SD card"
-          }), ": The IP camera must have a built-in SD card so that recorded footage can be played back later."]
+            children: "SD 카드"
+          }), ": IP 카메라는 나중에 녹화한 영상을 재생할 수 있도록 내장 SD 카드가 있어야 합니다."]
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "note",
           children: (0,jsx_runtime.jsx)(_components.p, {
-            children: "Use SanDisk microSDXC Class10 Max Endurance 256 GB or 512 GB."
+            children: "SanDisk microSDXC Class10 Max Endurance 256GB 또는 512GB를 권장합니다."
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Encoding"
-          }), ": The camera must support H.264 (AVC) and it must be set as the active codec. BioStar Air currently does not support H.265."]
+            children: "인코딩"
+          }), ": 카메라는 H.264(AVC)를 지원해야 하며 활성 코덱으로 설정되어 있어야 합니다. BioStar Air는 현재 H.265를 지원하지 않습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Recommended brands"
-          }), ": HanwhaVision, Hikvision, and Dahua cameras are highly compatible. Compatibility with other brands may vary depending on Onvif profile compliance. For more information on the tested and verified devices list, refer to ", (0,jsx_runtime.jsx)(_components.a, {
+            children: "추천 브랜드"
+          }), ": 한화(Hanwhavision) 및 하이크비전(Hikvision), 다후아(Dahua) 카메라와의 호환성이 뛰어납니다. 다른 브랜드와의 호환성은 Onvif 프로필 준수 여부에 따라 달라질 수 있습니다. 테스트 및 검증된 장치 목록에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "#tested-devices",
-            children: "the following"
-          }), "."]
+            children: "다음 문서"
+          }), "를 참고하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Contact the service team to test other camera brands."
+          children: "테스트하고 싶은 다른 카메라 브랜드가 있다면 서비스 팀에 문의하세요."
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "functionality",
-      children: "Functionality overview"
+      children: "기능 소개"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Perform the following actions in the BioStar Air portal or mobile app."
+      children: "BioStar Air 포털 또는 모바일 앱에서 아래와 같은 작업을 수행할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "View live camera feeds."
+          children: "실시간 카메라 피드를 볼 수 있습니다."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "View recorded camera footage."
+          children: "녹화된 카메라 영상을 볼 수 있습니다."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Access camera footage related to access events."
+          children: "출근 이벤트와 관련된 카메라 영상에 접근할 수 있습니다."
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "instructions",
-      children: "Instructions"
+      children: "사용 안내"
     }), "\n", (0,jsx_runtime.jsxs)(Steps, {
       children: [(0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "connect-ip-cameras",
-          children: "Connect IP cameras"
+          id: "ip-카메라-연결",
+          children: "IP 카메라 연결"
         }), (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "Network connection"
-              }), ": Ensure that the IP camera is on the same network as the Airfob Edge or Airfob Edge Ultimate."]
+                children: "네트워크 연결"
+              }), ": IP 카메라가 에어팝 엣지(Airfob Edge) 장치 또는 에어팝 엣지(Airfob Edge) 장치 Ultimate와 동일한 네트워크에 연결되어 있는지 확인하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "Enable Onvif"
-              }), ": Make sure Onvif is enabled on the camera."]
+                children: "Onvif 활성화"
+              }), ": 카메라에서 Onvif가 활성화되어 있는지 확인하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "Device registration"
-              }), ": Make sure the device is registered in the BioStar Air portal."]
+                children: "장치 등록"
+              }), ": 장치가 BioStar Air 포털에 등록되어 있는지 확인하세요."]
             }), "\n"]
           }), "\n"]
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "log-in-to-biostar-air",
-          children: "Log in to BioStar Air"
+          id: "biostar-air-로그인",
+          children: "BioStar Air 로그인"
         }), (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Master"
-          }), " administrators can change site settings such as enabling Video Management. Log in to the ", (0,jsx_runtime.jsx)(_components.a, {
+            children: "마스터"
+          }), " 관리자만 비디오 관리 활성화와 같은 사이트 설정을 변경할 수 있습니다. ", (0,jsx_runtime.jsx)(_components.a, {
             href: "https://admin.biostarair.com/",
-            children: "BioStar Air portal"
-          }), " with ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "master"
-          }), " privileges."]
+            children: "BioStar Air 포털"
+          }), "에 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "마스터"
+          }), " 권한으로 로그인하세요."]
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "enable-video-management",
-          children: "Enable video management"
+          id: "비디오-관리-활성화",
+          children: "비디오 관리 활성화"
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "settings_menu",
                 product: "air"
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "site_submenu",
                 product: "air"
-              }), " in the left sidebar."]
+              }), "를 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "site_setting_qr_reader_tab",
                 product: "air"
-              }), " tab."]
+              }), " 탭을 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Enable ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "site_setting_video_management",
                 product: "air"
-              }), "."]
+              }), " 옵션을 활성화하세요."]
             }), "\n"]
           }), "\n"]
         }), (0,jsx_runtime.jsx)(Image, {
@@ -297,85 +297,85 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["Only ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "master"
-            }), "-level administrators can enable this feature."]
+            children: ["이 기능은 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "마스터"
+            }), " 레벨의 관리자만 활성화할 수 있습니다."]
           })
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "add-camera",
-          children: "Add camera"
+          id: "카메라-추가",
+          children: "카메라 추가"
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "device_menu",
                 product: "air"
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "cameras_groups_submenu",
                 product: "air"
-              }), " in the left sidebar."]
+              }), "를 클릭하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-device-camera.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "cameras_list_title_add_button",
                 product: "air"
-              }), " at the top right of the screen."]
+              }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["When the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "cameras_templ_title_modal",
                 product: "air"
-              }), " window appears, select the device that will act as the gateway."]
+              }), " 창이 나타나면 게이트웨이 역할을 할 장치를 선택하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-device-camera-add.png",
               caption: true
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Set the following information to add the camera."
+              children: "카메라를 추가하려면 아래 정보를 설정하세요."
             }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "cameras_add_camera_input_name",
                     product: "air"
-                  }), ": Enter the camera name."]
+                  }), ": 카메라 이름을 입력하세요."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "recent_action_device_column",
                     product: "air"
-                  }), ": Select a name to identify the camera."]
+                  }), ": 카메라를 구분할 이름을 선택하세요."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "cameras_add_camera_input_id",
                     product: "air"
-                  }), ": Enter the ID to connect to the camera."]
+                  }), ": 카메라에 접속할 아이디를 입력하세요."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "cameras_add_camera_input_pass",
                     product: "air"
-                  }), ": Enter the password to connect to the camera."]
+                  }), ": 카메라에 접속할 비밀번호를 입력하세요."]
                 }), "\n"]
               }), "\n"]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["선택한 카메라를 추가하려면 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "save_btn",
                 product: "air"
-              }), " to add the selected camera."]
+              }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n"]
         }), (0,jsx_runtime.jsx)(_components.admonition, {
@@ -383,87 +383,87 @@ function _createMdxContent(props) {
           children: (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "The device must run firmware version 2.5.1 or later and be on the same network as the camera."
+                children: "장치는 펌웨어 2.5.1 버전 이상이 설치되어 있어야 하며, 카메라와 동일한 네트워크에 있어야 합니다."
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "BioStar Air automatically discovers cameras on the network."
+                children: "BioStar Air는 자동으로 네트워크에서 카메라를 검색합니다."
               }), "\n"]
             }), "\n"]
           })
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "link-to-a-door",
-          children: "Link to a door"
+          id: "출입문과-연결",
+          children: "출입문과 연결"
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "Link the added camera to a door to associate video with access events."
+          children: "추가한 카메라를 출입문과 연결하여 출입 이벤트와 관련 영상을 연동할 수 있습니다."
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "door_menu",
                 product: "air"
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "door_submenu",
                 product: "air"
-              }), " in the left sidebar."]
+              }), "을 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Click the door in the list to assign a camera."
+              children: "목록에서 카메라를 할당할 출입문을 클릭하세요."
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["When the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "edit_door.title",
                 product: "air"
-              }), " panel appears, scroll to ", (0,jsx_runtime.jsx)(Cmd, {
+              }), " 패널이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "door_auxiliary_device",
                 product: "air"
-              }), "."]
+              }), " 섹션으로 스크롤하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Select the camera you added from ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "door_product_column6",
                 product: "air"
-              }), "."]
+              }), " 옵션에서 추가한 카메라를 선택하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-door-assign-camera.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["변경 사항을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "save_btn",
                 product: "air"
-              }), " to save the changes."]
+              }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n"]
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "view-live-camera-video",
-          children: "View live camera video"
+          id: "실시간-카메라-영상-보기",
+          children: "실시간 카메라 영상 보기"
         }), (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["View live video from the added cameras. Click ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["추가한 카메라의 영상을 실시간으로 볼 수 있습니다. 화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "monitoring_menu",
             product: "air"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "realtime_video_submenu",
             product: "air"
-          }), " in the left sidebar."]
+          }), "를 클릭하세요."]
         }), (0,jsx_runtime.jsx)(Image, {
           src: "/img/air/bsair-monitoring-realtime-camera.png",
           caption: true
         }), (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "View up to two Full HD (1080p) live streams per installed Airfob Edge."
+              children: "설치된 각 에어팝 엣지(Airfob Edge) 장치에 대해 최대 2개의 Full HD (1080p) 실시간 스트림을 볼 수 있습니다."
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Add more devices or reduce camera resolution to view more live streams."
+              children: "더 많은 실시간 스트림을 보려면 더 많은 장치를 추가하거나 카메라 해상도를 줄이세요."
             }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                 children: [(0,jsx_runtime.jsx)(Cmd, {
@@ -472,7 +472,7 @@ function _createMdxContent(props) {
                 }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                   sid: "cameras_groups_submenu",
                   product: "air"
-                }), " → Click camera in the list → ", (0,jsx_runtime.jsx)(Cmd, {
+                }), " → 목록에서 카메라 클릭 → ", (0,jsx_runtime.jsx)(Cmd, {
                   sid: "cameras_edit_camera_name_profile",
                   product: "air"
                 })]
@@ -482,37 +482,37 @@ function _createMdxContent(props) {
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "view-recorded-camera-video",
-          children: "View recorded camera video"
+          id: "녹화된-카메라-영상-보기",
+          children: "녹화된 카메라 영상 보기"
         }), (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["View recorded video streams. Click ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["녹화된 비디오 스트림을 볼 수 있습니다. 화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "monitoring_menu",
             product: "air"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "recorded_video_submenu",
             product: "air"
-          }), " in the left sidebar."]
+          }), "를 클릭하세요."]
         }), (0,jsx_runtime.jsx)(Image, {
           src: "/img/air/bsair-monitoring-recorded-camera.png",
           caption: true
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "view-event-video",
-          children: "View event video"
+          id: "이벤트-영상-보기",
+          children: "이벤트 영상 보기"
         }), (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "monitoring_menu",
             product: "air"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "event_logs_submenu",
             product: "air"
-          }), " in the left sidebar. Find an event log with an associated video clip and click play to watch it."]
+          }), "를 클릭하세요. 관련 비디오 클립이 있는 이벤트 로그를 찾아 재생 버튼을 클릭하면 영상을 시청할 수 있습니다."]
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "tested-devices",
-      children: "Tested and verified devices list"
+      children: "테스트 및 검증된 장치 목록"
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -521,15 +521,15 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsx)(_components.th, {
               children: "No"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "Manufacturer"
+              children: "제조사"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "Model number"
+              children: "모델 번호"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "Device type"
+              children: "장치 유형"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "Onvif profile"
+              children: "Onvif 프로필"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "Resolution"
+              children: "해상도"
             })]
           })
         }), (0,jsx_runtime.jsxs)(_components.tbody, {
@@ -705,36 +705,36 @@ function _createMdxContent(props) {
         })]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "enable-onvif-on-an-ip-camera",
-      children: "Enable ONVIF on an IP camera"
+      id: "ip-카메라의-onvif-활성화-방법",
+      children: "IP 카메라의 ONVIF 활성화 방법"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Open a web browser and enter the camera's IP address."
+          children: "웹 브라우저를 열고, 카메라의 IP 주소를 입력하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Authenticate with administrator credentials and log in."
+          children: "관리자 크리덴셜로 인증 후 로그인하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Go to the ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Network"
-          }), " or ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), " 또는 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Configuration"
-          }), " section."]
+          }), " 섹션으로 이동하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Enable ONVIF or the open network video interface."
+          children: "ONVIF 또는 개방형 네트워크 비디오 인터페이스를 활성화하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Create an ONVIF-only user profile if necessary."
+          children: "필요에 따라 ONVIF 전용 사용자 프로필을 생성하세요."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Save the settings and test the ONVIF connection in BioStar Air."
+          children: "설정을 저장하고 BioStar Air에서 ONVIF 연결을 테스트하세요."
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -743,20 +743,20 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Firmware update"
-            }), ": Update the camera and the device to the latest firmware."]
+              children: "펌웨어 업데이트"
+            }), ": 카메라와 장치를 최신 펌웨어로 업데이트하세요."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Port forwarding"
-            }), ": Configure port forwarding for ONVIF if required."]
+              children: "포트 포워딩"
+            }), ": 필요에 따라 ONVIF에 대한 포트 포워딩을 구성하세요."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Third-party tools"
-            }), ": Use ONVIF Device Manager to verify camera settings and functionality."]
+              children: "Third-Party 도구"
+            }), ": ONVIF Device Manager를 사용하여 카메라 설정 및 기능을 확인하세요."]
           }), "\n"]
         }), "\n"]
       })

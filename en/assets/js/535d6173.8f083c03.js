@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["76544"], {
-98022: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["55002"], {
+95253: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,18 +9,18 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_max_authentication_mdx_5f2_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_authentication_mdx_535_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-biostation-3-max-authentication-mdx-5f2.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_max_authentication_mdx_5f2_namespaceObject = JSON.parse('{"id":"device/biostation_3_max/authentication","title":"Authentication","description":"Describes the supported authentication methods and authentication procedures.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3_max/authentication.mdx","sourceDirName":"device/biostation_3_max","slug":"/device/biostation_3_max/authentication","permalink":"/docs/en/device/biostation_3_max/authentication","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3_max/authentication.mdx","tags":[],"version":"current","frontMatter":{"id":"authentication","title":"Authentication","description":"Describes the supported authentication methods and authentication procedures.","keywords":["Authentication mode","Operation","PIN","Face","T&A (Time and Attendance)"],"isTranslationMissing":false},"sidebar":"biostation3max","previous":{"title":"User","permalink":"/docs/en/device/biostation_3_max/user"},"next":{"title":"Settings","permalink":"/docs/en/device/biostation_3_max/settings"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-biostation-3-authentication-mdx-535.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_authentication_mdx_535_namespaceObject = JSON.parse('{"id":"device/biostation_3/authentication","title":"Authentication","description":"Describes the supported authentication methods and authentication procedures.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/authentication.mdx","sourceDirName":"device/biostation_3","slug":"/device/biostation_3/authentication","permalink":"/docs/en/device/biostation_3/authentication","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/authentication.mdx","tags":[],"version":"current","frontMatter":{"id":"authentication","title":"Authentication","description":"Describes the supported authentication methods and authentication procedures.","keywords":["Authentication mode","Operation","PIN","Face","T&A (Time and Attendance)"],"isTranslationMissing":false},"sidebar":"biostation3","previous":{"title":"User","permalink":"/docs/en/device/biostation_3/user"},"next":{"title":"Settings","permalink":"/docs/en/device/biostation_3/settings"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3_max/authentication.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/authentication.mdx
 
 
 const frontMatter = {
@@ -81,17 +81,9 @@ const toc = [{
   "id": "auth-result-display-option",
   "level": 2
 }, {
-  "value": "Face &amp; fingerprint",
-  "id": "face--fingerprint",
-  "level": 2
-}, {
   "value": "Face",
   "id": "face",
-  "level": 3
-}, {
-  "value": "Fingerprint <Badge>BS3M-ODB, BS3M-OAPB</Badge>",
-  "id": "fingerprint",
-  "level": 3
+  "level": 2
 }, {
   "value": "T&amp;A (Time and Attendance)",
   "id": "ta-time-and-attendance",
@@ -106,14 +98,18 @@ function _createMdxContent(props) {
     li: "li",
     ol: "ol",
     p: "p",
+    table: "table",
+    tbody: "tbody",
+    td: "td",
+    th: "th",
+    thead: "thead",
+    tr: "tr",
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Badge, Cmd, Image, PageBreak} = _components;
-  if (!Badge) _missingMdxReference("Badge", true);
+  }, {Cmd, Image} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
-  if (!PageBreak) _missingMdxReference("PageBreak", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "Describes the supported authentication methods and authentication procedures."
@@ -121,27 +117,19 @@ function _createMdxContent(props) {
       id: "authentication-mode",
       children: "Authentication mode"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Set the authentication mode. Combine ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["Set the authentication mode. You can combine ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "ui_228",
         product: "dev"
-      }), "PIN, ", (0,jsx_runtime.jsx)(Cmd, {
+      }), ", ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "ui_040",
         product: "dev"
-      }), "Card / QR Code", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "ui_312",
+      }), ", ", (0,jsx_runtime.jsx)(Cmd, {
+        sid: "ui_323",
         product: "dev"
       }), ", and ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "ui_020",
         product: "dev"
-      }), "ID", (0,jsx_runtime.jsx)(Cmd, {
-        sid: "ui_323",
-        product: "dev"
-      }), " to create authentication modes and set a schedule for each mode."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "Fingerprint authentication is available only on BS3M-ODB and BS3M-OAPB."
-      })
+      }), " for authentication mode, and you can also set schedules for each authentication mode."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "registering-auth-mode",
       children: "Registering auth mode"
@@ -184,61 +172,7 @@ function _createMdxContent(props) {
             alone: true
           }), " while the credential is added, and the added credential will be deleted."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/bs3m-add-auth-mode.png"
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-face-bs3m.png",
-                ico: true,
-                alone: true
-              }), ": Face, ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-fingerprint-bs3m.png",
-                ico: true,
-                alone: true
-              }), ": Fingerprint, ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-card-qr-bs3m.png",
-                ico: true,
-                alone: true
-              }), ": Card / QR code, ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-id-bs3m.png",
-                ico: true,
-                alone: true
-              }), ": ID, ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-pin-bs3m.png",
-                ico: true,
-                alone: true
-              }), ": PIN"]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["You can combine selected authentication methods to authenticate all in order or choose to authenticate only some of the selected methods. For example, with the combination ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-card-qr-bs3m.png",
-                ico: true,
-                alone: true
-              }), " + ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-face-bs3m.png",
-                ico: true,
-                alone: true
-              }), " + ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-pin-bs3m.png",
-                ico: true,
-                alone: true
-              }), ", authenticate with card / QR code, face, and PIN. With the combination ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-card-qr-bs3m.png",
-                ico: true,
-                alone: true
-              }), " + ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-face-bs3m.png",
-                ico: true,
-                alone: true
-              }), " / ", (0,jsx_runtime.jsx)(Image, {
-                src: "/img/common/ico-authmode-pin-bs3m.png",
-                ico: true,
-                alone: true
-              }), ", authenticate with card / QR code first, and then enter either face or PIN."]
-            }), "\n"]
-          }), "\n"]
+          src: "/img/device/bs3-authmode.png"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -246,6 +180,147 @@ function _createMdxContent(props) {
             sid: "ui_203",
             product: "dev"
           }), "."]
+        }), "\n", (0,jsx_runtime.jsx)("div", {
+          className: "overflow-x",
+          children: (0,jsx_runtime.jsxs)(_components.table, {
+            children: [(0,jsx_runtime.jsx)(_components.thead, {
+              children: (0,jsx_runtime.jsxs)(_components.tr, {
+                children: [(0,jsx_runtime.jsx)(_components.th, {
+                  style: {
+                    textAlign: "center"
+                  },
+                  children: "Category"
+                }), (0,jsx_runtime.jsx)(_components.th, {
+                  children: "Description"
+                })]
+              })
+            }), (0,jsx_runtime.jsxs)(_components.tbody, {
+              children: [(0,jsx_runtime.jsxs)(_components.tr, {
+                children: [(0,jsx_runtime.jsx)(_components.td, {
+                  style: {
+                    textAlign: "center"
+                  },
+                  children: "Face"
+                }), (0,jsx_runtime.jsxs)(_components.td, {
+                  children: ["- ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-face-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), ": This mode uses only facial authentication.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-face-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), " + ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-pin-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), ": This mode requires facial authentication followed by PIN entry."]
+                })]
+              }), (0,jsx_runtime.jsxs)(_components.tr, {
+                children: [(0,jsx_runtime.jsx)(_components.td, {
+                  style: {
+                    textAlign: "center"
+                  },
+                  children: "Card / QR Code"
+                }), (0,jsx_runtime.jsxs)(_components.td, {
+                  children: ["- ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-card-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), ": This mode uses only card / QR code authentication.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-card-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), " + ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-face-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), ": This mode requires card / QR code authentication followed by facial authentication.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-card-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), " + ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-pin-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), ": This mode requires card / QR code authentication followed by PIN entry.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-card-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), " + ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-face-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), " / ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-pin-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), ": This mode requires card / QR code authentication followed by either facial authentication or PIN entry.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-card-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), " + ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-face-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), " + ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-pin-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), ": This mode uses both facial authentication and PIN entry after card / QR code authentication."]
+                })]
+              }), (0,jsx_runtime.jsxs)(_components.tr, {
+                children: [(0,jsx_runtime.jsx)(_components.td, {
+                  style: {
+                    textAlign: "center"
+                  },
+                  children: "ID"
+                }), (0,jsx_runtime.jsxs)(_components.td, {
+                  children: ["- ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-id-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), " + ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-face-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), ": This mode requires ID entry followed by facial authentication.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-id-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), " + ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-pin-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), ": This mode requires ID entry followed by PIN entry.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-id-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), " + ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-face-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), " / ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-pin-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), ": This mode requires ID entry followed by either facial authentication or PIN entry.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-id-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), " + ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-face-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), " + ", (0,jsx_runtime.jsx)(Image, {
+                    src: "/img/common/ico-authmode-pin-bs3.png",
+                    ico: true,
+                    alone: true
+                  }), ": This mode uses both facial authentication and PIN entry after ID entry."]
+                })]
+              })]
+            })]
+          })
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsxs)(_components.ul, {
@@ -374,7 +449,7 @@ function _createMdxContent(props) {
           }), "."]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "operation",
       children: "Operation"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
@@ -404,7 +479,7 @@ function _createMdxContent(props) {
             product: "dev"
           }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/bs3m-operation.png"
+          src: "/img/device/bs3-auth-option.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
@@ -436,7 +511,7 @@ function _createMdxContent(props) {
           })
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "qr-authentication",
       children: "QR authentication"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -463,7 +538,7 @@ function _createMdxContent(props) {
             product: "dev"
           }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/bs3m-operation.png"
+          src: "/img/device/bs3-auth-option-qr.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -523,7 +598,7 @@ function _createMdxContent(props) {
             product: "dev"
           }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/bs3m-pin.png"
+          src: "/img/device/bs3-pin.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
@@ -533,7 +608,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "auth-result-display-option",
       children: "Auth result display option"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -557,7 +632,7 @@ function _createMdxContent(props) {
             product: "dev"
           }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/bs3m-auth-result-display-option.png"
+          src: "/img/device/bs3-auth-result-display-option.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -622,10 +697,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "face--fingerprint",
-      children: "Face & fingerprint"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "face",
       children: "Face"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -645,26 +717,15 @@ function _createMdxContent(props) {
             sid: "ui_256",
             product: "dev"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_376",
+            sid: "ui_228",
             product: "dev"
           }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Change the desired item in ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_377",
-            product: "dev"
-          }), " or ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_231",
-            product: "dev"
-          }), " settings."]
-        }), "\n", (0,jsx_runtime.jsxs)("div", {
-          className: "grid-container",
-          children: [(0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/bs3m-face.png"
-          }), (0,jsx_runtime.jsx)(Image, {
-            src: "/img/device/bs3m-face-recognition.png"
-          })]
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Change the desired item."
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/device/bs3-auth.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -729,9 +790,7 @@ function _createMdxContent(props) {
                 }), "\n"]
               })]
             }), "\n"]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_060",
@@ -814,14 +873,22 @@ function _createMdxContent(props) {
               }), "."]
             }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
               type: "info",
-              children: (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["In strong sunlight, it is recommended to use the ", (0,jsx_runtime.jsx)(Cmd, {
-                  sid: "ui_247",
-                  product: "dev"
-                }), " function as ", (0,jsx_runtime.jsx)(Cmd, {
-                  sid: "ui_152",
-                  product: "dev"
-                }), "."]
+              children: (0,jsx_runtime.jsxs)(_components.ul, {
+                children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+                  children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+                    children: "Face anti-spoofing performance has been improved to pass the iBeta Level 1 ISO 30107-3 Presentation Attack Detection Test."
+                  }), "\n"]
+                }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+                  children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+                    children: ["In strong sunlight, it is recommended to use the ", (0,jsx_runtime.jsx)(Cmd, {
+                      sid: "ui_247",
+                      product: "dev"
+                    }), " function as ", (0,jsx_runtime.jsx)(Cmd, {
+                      sid: "ui_152",
+                      product: "dev"
+                    }), "."]
+                  }), "\n"]
+                }), "\n"]
               })
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -931,127 +998,6 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.h3, {
-      id: "fingerprint",
-      children: ["Fingerprint ", (0,jsx_runtime.jsx)(Badge, {
-        only: true,
-        children: "BS3M-ODB, BS3M-OAPB"
-      })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "You can change the settings for fingerprint authentication."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Press ", (0,jsx_runtime.jsx)(Image, {
-            src: "/img/common/ico-menu.svg",
-            ico: true,
-            alone: true
-          }), " and authenticate with the Admin level credential."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Select ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_256",
-            product: "dev"
-          }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_376",
-            product: "dev"
-          }), "."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Change the desired item in ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "ui_378",
-            product: "dev"
-          }), "."]
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/bs3m-finger.png"
-        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_149",
-                product: "dev"
-              }), ": You can set the security level for 1", ":N", " authentication."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_130",
-                product: "dev"
-              }), ": Set the wait time for fingerprint matching. If authentication is not completed within the set time, it fails."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_254",
-                product: "dev"
-              }), ": View the raw image when scanning a fingerprint."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_197",
-                product: "dev"
-              }), ": Set the fingerprint sensor sensitivity. Set the sensitivity higher to obtain precise fingerprint information."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_003",
-                product: "dev"
-              }), ": Set the fingerprint authentication performance. When you select ", (0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_275",
-                product: "dev"
-              }), ", authentication speed is set according to the total number of fingerprint templates enrolled in the device."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_342",
-                product: "dev"
-              }), ": Set the fingerprint template format. The default is ", (0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_057",
-                product: "dev"
-              }), ". Changing the template format blocks the use of all previously stored fingerprints, so proceed with caution."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_198",
-                product: "dev"
-              }), ": Set to ", (0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_277",
-                product: "dev"
-              }), " to turn on the fingerprint sensor when it detects the user’s finger. Set to ", (0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_362",
-                product: "dev"
-              }), " to keep the sensor always on, even when not scanning fingerprints."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_249",
-                product: "dev"
-              }), ": Set the fake fingerprint detection level. Higher levels for fake fingerprint detection may also increase rejection rates for actual people’s fingerprints."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_116",
-                product: "dev"
-              }), ": Inspect the quality of the scanned fingerprint to save high-quality fingerprint data. When enabled, the device notifies the user if the fingerprint quality is low, helping them scan correctly."]
-            }), "\n"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
-                sid: "ui_118",
-                product: "dev"
-              }), ": Check for duplicate fingerprints during enrollment."]
-            }), "\n"]
-          }), "\n"]
-        }), "\n"]
-      }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "ta-time-and-attendance",
       children: "T&A (Time and Attendance)"
@@ -1080,7 +1026,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "Change the desired item."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/bs3m-ta.png"
+          src: "/img/device/bs3-auth2.png"
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

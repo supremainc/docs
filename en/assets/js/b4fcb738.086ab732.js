@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["98078"], {
-4789: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["69197"], {
+98717: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,24 +9,24 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_docs_platform_biostar_air_sip_intercom_for_biostaion_3_mdx_c3c_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_air_sip_intercom_for_biostaion_3_mdx_b4f_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-sip-intercom-for-biostaion-3-mdx-c3c.json
-var site_docs_platform_biostar_air_sip_intercom_for_biostaion_3_mdx_c3c_namespaceObject = JSON.parse('{"id":"platform/biostar_air/sip-intercom-for-biostation3","title":"BioStation 3 SIP 인터폰","description":"BioStation 3에서 양방향 오디오 통화, DTMF 명령을 통한 원격 도어 제어 및 BioStar Air 웹 및 모바일 앱을 통한 통화 수신을 위한 SIP 인터폰 기능을 구성하는 방법을 안내합니다.","source":"@site/docs/platform/biostar_air/sip-intercom-for-biostaion3.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/sip-intercom-for-biostation3","permalink":"/docs/platform/biostar_air/sip-intercom-for-biostation3","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/sip-intercom-for-biostaion3.mdx","tags":[],"version":"current","frontMatter":{"id":"sip-intercom-for-biostation3","title":"BioStation 3 SIP 인터폰","description":"BioStation 3에서 양방향 오디오 통화, DTMF 명령을 통한 원격 도어 제어 및 BioStar Air 웹 및 모바일 앱을 통한 통화 수신을 위한 SIP 인터폰 기능을 구성하는 방법을 안내합니다.","keywords":["SIP","Intercom","BioStation 3"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"근태 보고서 구성하기","permalink":"/docs/platform/biostar_air/reports-time-attendance-reports"},"next":{"title":"E200 QR Scanner 배선 및 구성","permalink":"/docs/platform/biostar_air/e200-qr-scanner"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-air-sip-intercom-for-biostaion-3-mdx-b4f.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_air_sip_intercom_for_biostaion_3_mdx_b4f_namespaceObject = JSON.parse('{"id":"platform/biostar_air/sip-intercom-for-biostation3","title":"BioStation 3 SIP Intercom","description":"Learn how to configure the SIP intercom feature on BioStation 3 for two-way audio calls, remote door control via DTMF commands, and call reception through the BioStar Air web and mobile apps.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/sip-intercom-for-biostaion3.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/sip-intercom-for-biostation3","permalink":"/docs/en/platform/biostar_air/sip-intercom-for-biostation3","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/sip-intercom-for-biostaion3.mdx","tags":[],"version":"current","frontMatter":{"id":"sip-intercom-for-biostation3","title":"BioStation 3 SIP Intercom","description":"Learn how to configure the SIP intercom feature on BioStation 3 for two-way audio calls, remote door control via DTMF commands, and call reception through the BioStar Air web and mobile apps.","keywords":["SIP","Intercom","BioStation 3"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"Configure Time and Attendance Report","permalink":"/docs/en/platform/biostar_air/reports-time-attendance-reports"},"next":{"title":"IP Camera Support and Settings","permalink":"/docs/en/platform/biostar_air/ip-camera-support-and-configuration"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./docs/platform/biostar_air/sip-intercom-for-biostaion3.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/sip-intercom-for-biostaion3.mdx
 
 
 const frontMatter = {
 	id: 'sip-intercom-for-biostation3',
-	title: 'BioStation 3 SIP 인터폰',
-	description: 'BioStation 3에서 양방향 오디오 통화, DTMF 명령을 통한 원격 도어 제어 및 BioStar Air 웹 및 모바일 앱을 통한 통화 수신을 위한 SIP 인터폰 기능을 구성하는 방법을 안내합니다.',
+	title: 'BioStation 3 SIP Intercom',
+	description: 'Learn how to configure the SIP intercom feature on BioStation 3 for two-way audio calls, remote door control via DTMF commands, and call reception through the BioStar Air web and mobile apps.',
 	keywords: [
 		'SIP',
 		'Intercom',
@@ -34,7 +34,7 @@ const frontMatter = {
 	],
 	isTranslationMissing: false
 };
-const contentTitle = 'SIP 인터폰 설정';
+const contentTitle = 'Configure SIP intercom';
 
 const assets = {
 
@@ -47,28 +47,28 @@ const toc = [{
   "id": "sip",
   "level": 2
 }, {
-  "value": "전화 받기",
-  "id": "전화-받기",
+  "value": "Receive calls",
+  "id": "receive-calls",
   "level": 2
 }, {
-  "value": "원격 출입문 제어",
-  "id": "원격-출입문-제어",
+  "value": "Remote door control",
+  "id": "remote-door-control",
   "level": 2
 }, {
-  "value": "구성 단계",
-  "id": "구성-단계",
+  "value": "Configuration steps",
+  "id": "configuration-steps",
   "level": 2
 }, {
-  "value": "장치 설정",
-  "id": "장치-설정",
+  "value": "Device Settings",
+  "id": "device-settings",
   "level": 3
 }, {
-  "value": "계정 설정",
-  "id": "계정-설정",
+  "value": "Account settings",
+  "id": "account-settings",
   "level": 3
 }, {
-  "value": "검증된 SIP 공급자",
-  "id": "검증된-sip-공급자",
+  "value": "Verified SIP providers",
+  "id": "verified-sip-providers",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -94,116 +94,114 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.header, {
       children: (0,jsx_runtime.jsx)(_components.h1, {
-        id: "sip-인터폰-설정",
-        children: "SIP 인터폰 설정"
+        id: "configure-sip-intercom",
+        children: "Configure SIP intercom"
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
+      children: ["As of ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar Air v2.10"
-      }), "부터는 ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStation 3"
-      }), "(BS3)에서 SIP 인터폰 기능을 지원합니다. 이를 통해 리더기와 관리자 간의 양방향 음성 통화는 물론 원격으로 출입문을 잠금 해제할 수 있습니다."]
+      }), " (BS3) supports the SIP intercom feature. This enables two-way voice calls between the reader and administrators and remote door unlocking."]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "이 기능을 사용하려면 SIP 서버가 필요하며, 별도로 구매 및 구성해야 합니다. 슈프리마는 SIP 서비스를 제공하지 않습니다."
+        children: "A SIP server is required to use this feature; purchase and configure it separately. Suprema does not provide SIP services."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "sip",
       children: "SIP"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "세션 시작 프로토콜"
-      }), "(", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Session Initiation Protocol, SIP"
-      }), ")은 IP 네트워크를 통해 실시간 음성 및 비디오 통화를 시작, 유지 및 종료하는 데 널리 사용되는 통신 프로토콜입니다. 이 경우 SIP는 BioStation 3가 인터폰 엔드포인트로 작동하여 호환되는 SIP 서비스를 통해 전화를 걸고 받을 수 있도록 합니다."]
+        children: "Session Initiation Protocol"
+      }), " (SIP) is a communication protocol widely used to initiate, maintain, and terminate real-time voice and video calls over IP networks. In this context, SIP lets BioStation 3 act as an intercom endpoint that can place and receive calls through a compatible SIP service."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "전화-받기",
-      children: "전화 받기"
+      id: "receive-calls",
+      children: "Receive calls"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStation 3에서 수신된 전화는 아래의 방식으로 받을 수 있습니다."
+      children: "Answer calls received from BioStation 3 in the following ways."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar Air Web"
-          }), ": 웹 브라우저에서 직접 통화 수신"]
+          }), ": Receive calls directly in a web browser"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar Air Mobile App"
-          }), " (iOS / Android): 이동 중에도 통화 수신"]
+          }), " (iOS / Android): Receive calls on the go"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "원격-출입문-제어",
-      children: "원격 출입문 제어"
+      id: "remote-door-control",
+      children: "Remote door control"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["SIP 전화를 받을 때, ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "DTMF 명령"
-      }), "을 사용하여 출입문을 열 수 있습니다:"]
+      children: ["When answering a SIP call, use ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "DTMF commands"
+      }), " to unlock the door:"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "물리적 SIP 전화"
+          children: "Hardware SIP phone"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "BioStar Air 모바일 앱"
+          children: "BioStar Air mobile app"
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "BioStar Air Web 인터페이스"
+          children: "BioStar Air Web interface"
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "구성-단계",
-      children: "구성 단계"
+      id: "configuration-steps",
+      children: "Configuration steps"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "장치 설정 및 관리자 계정 설정에서 구성할 수 있습니다."
+      children: "Configure this in device settings and administrator account settings."
     }), "\n", (0,jsx_runtime.jsxs)(Steps, {
       children: [(0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "장치-설정",
-          children: "장치 설정"
+          id: "device-settings",
+          children: "Device Settings"
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(_components.a, {
+              children: ["Log in to the ", (0,jsx_runtime.jsx)(_components.a, {
                 href: "https://admin.biostarair.com",
-                children: "BioStar Air 포털"
-              }), "에 로그인하세요."]
+                children: "BioStar Air portal"
+              }), "."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "device_menu",
                 product: "air"
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "device_submenu",
                 product: "air"
-              }), "를 클릭하세요."]
+              }), " in the left sidebar."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["장치 목록에서 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: ["In the device list, click ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "BioStation 3"
-              }), "를 클릭하세요."]
+              }), "."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
+              children: ["Go to the ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "device_intercom_title",
                 product: "air"
-              }), " 섹션으로 이동해 ", (0,jsx_runtime.jsx)(Cmd, {
+              }), " section and enable the ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "device_intercom_txt_use_intercom",
                 product: "air"
-              }), " 옵션을 활성화하세요."]
+              }), " option."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "SIP 서버 정보를 입력하세요."
+              children: "Enter the SIP server information."
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/air-intercom-configuration-edit-device.png",
               alone: true,
@@ -234,47 +232,47 @@ function _createMdxContent(props) {
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["변경 사항을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "save_btn",
                 product: "air"
-              }), " 버튼을 클릭하세요."]
+              }), " to save the changes."]
             }), "\n"]
           }), "\n"]
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "계정-설정",
-          children: "계정 설정"
+          id: "account-settings",
+          children: "Account settings"
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "BioStation 3의 통화를 브라우저나 앱으로 라우팅할 수 있습니다."
+          children: "Route calls from BioStation 3 to a browser or app."
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "통화를 수신해야 하는 각 관리자는 BioStar Air 포털 또는 모바일 앱에 로그인하세요."
+              children: "For each administrator who needs to receive calls, log in to the BioStar Air portal or mobile app."
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "계정 설정"
-              }), "으로 이동하세요."]
+              children: ["Go to ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Account settings"
+              }), "."]
             }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: [(0,jsx_runtime.jsx)(_components.a, {
+                  children: ["In the ", (0,jsx_runtime.jsx)(_components.a, {
                     href: "https://admin.biostarair.com",
-                    children: "BioStar Air 포털"
-                  }), ": 화면 오른쪽 상단의 사용자 프로필 아이콘을 클릭한 후 ", (0,jsx_runtime.jsx)(Cmd, {
+                    children: "BioStar Air portal"
+                  }), ", click the user profile icon in the upper-right corner and select ", (0,jsx_runtime.jsx)(Cmd, {
                     sid: "settings_menu",
                     product: "air"
-                  }), "을 선택하세요."]
+                  }), "."]
                 }), "\n", (0,jsx_runtime.jsx)(Image, {
                   src: "/img/air/bsair-device-bs3-sip-account-settings.png"
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: ["BioStar Air 모바일 앱: 초기 화면에서 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
-                    children: "전체 메뉴"
-                  }), "를 탭한 후 사용자 프로필 영역을 탭하세요."]
+                  children: ["BioStar Air mobile app: On the home screen, tap ", (0,jsx_runtime.jsx)(Cmd, {
+                    children: "All Menu"
+                  }), " at the bottom, then tap the user profile area."]
                 }), "\n", (0,jsx_runtime.jsx)(Image, {
                   src: "/img/air/bsair-app-bs3-sip-account-settings.png",
                   width: "38%",
@@ -284,32 +282,32 @@ function _createMdxContent(props) {
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: [(0,jsx_runtime.jsx)(Cmd, {
+              children: ["When the ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "settings_menu",
                 product: "air"
-              }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
+              }), " window appears, click the ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "device_intercom_title",
                 product: "air"
-              }), " 탭을 클릭한 후 SIP 서버 로그인 정보를 추가하세요."]
+              }), " tab and add the SIP server login information."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-device-bs3-sip-account-settings-intercom.png",
               className: "none"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["설정을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "save_btn",
                 product: "air"
-              }), " 버튼을 클릭하세요."]
+              }), " to save the settings."]
             }), "\n"]
           }), "\n"]
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "검증된-sip-공급자",
-      children: "검증된 SIP 공급자"
+      id: "verified-sip-providers",
+      children: "Verified SIP providers"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStation 3는 아래 공급자와 함께 정상 작동함을 테스트 및 확인하였습니다."
+      children: "BioStation 3 has been tested and confirmed to work properly with the providers below."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
