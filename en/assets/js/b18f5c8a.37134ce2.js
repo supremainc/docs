@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["64176"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["15728"], {
 5623: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
@@ -135,6 +135,81 @@ function MDXContent(props = {}) {
 }
 function _missingMdxReference(id, component) {
   throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}
+
+
+
+}),
+9672: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+__webpack_require__.d(__webpack_exports__, {
+  Ay: () => (MDXContent),
+  RM: () => (toc)
+});
+/* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(74848);
+/* ESM import */var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(84429);
+
+
+const frontMatter = (/* unused pure expression or super */ null && ({}));
+const contentTitle = (/* unused pure expression or super */ null && (undefined));
+
+
+
+
+
+const toc = [{
+  "value": "Factory default",
+  "id": "factory-reset",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    admonition: "admonition",
+    h2: "h2",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "factory-reset",
+      children: "Factory default"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Delete all information stored on the device and initialize the settings."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+          children: "Power on."
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+          children: "Quickly press the reset button three times."
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+          children: ["Press the reset button once more when the device's LED blinks ", props.name, "."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+        children: "You can only use Factory Default when the root certificate is stored on the device."
+      })
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
 }
 
 
@@ -635,7 +710,7 @@ function _createMdxContent(props) {
         }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "Use a Cat5e UTP(Unshielded Twisted Pair) cable."
+              children: "Use a CAT-5e UTP(Unshielded Twisted Pair) cable."
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
@@ -1583,6 +1658,105 @@ function _missingMdxReference(id, component) {
 
 
 }),
+24804: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+__webpack_require__.d(__webpack_exports__, {
+  Ay: () => (MDXContent),
+  RM: () => (toc)
+});
+/* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(74848);
+/* ESM import */var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(84429);
+
+
+const frontMatter = (/* unused pure expression or super */ null && ({}));
+const contentTitle = (/* unused pure expression or super */ null && (undefined));
+
+
+
+
+
+const toc = [{
+  "value": "Initialize Network Settings",
+  "id": "reset-network-settings",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    h2: "h2",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "reset-network-settings",
+      children: "Initialize Network Settings"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Initialize the device's network settings."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+          children: "Power on."
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+          children: "Press the reset button until the device automatically reboots."
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+          children: "Connect the device using the initialized network information."
+        }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+                children: "TCP/IP Address"
+              }), ": DHCP address assignment (if DHCP address assignment fails, will be set to 169.254.x.x)."]
+            }), "\n"]
+          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+                children: "Server Mode"
+              }), ": Disable"]
+            }), "\n"]
+          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+                children: "RS-485"
+              }), ": Default, 115200 bps"]
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+          children: "Change the TCP/IP or RS-485 information."
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+          children: "Check if the network information is correctly set after turning the power off and on."
+        }), "\n"]
+      }), "\n"]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+}),
 40275: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
@@ -2265,7 +2439,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-4996: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+71317: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -2274,13 +2448,13 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_facestation_f_2_installation_mdx_a20_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_bioentry_w_3_installation_mdx_b18_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-facestation-f-2-installation-mdx-a20.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_facestation_f_2_installation_mdx_a20_namespaceObject = JSON.parse('{"id":"device/facestation_f2/installation","title":"Installation","description":"Provides the complete installation procedures and connection examples required for the device.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/facestation_f2/installation.mdx","sourceDirName":"device/facestation_f2","slug":"/device/facestation_f2/installation","permalink":"/docs/en/device/facestation_f2/installation","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/facestation_f2/installation.mdx","tags":[],"version":"current","frontMatter":{"id":"installation","title":"Installation","description":"Provides the complete installation procedures and connection examples required for the device.","keywords":["Bracket","Power","Network","Input","Relay","Standalone","Secure I/O","Wiegand"],"isTranslationMissing":false},"sidebar":"facestationf2","previous":{"title":"Getting Started","permalink":"/docs/en/device/facestation_f2/getting-started"},"next":{"title":"How to Use","permalink":"/docs/en/device/facestation_f2/using-device"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-bioentry-w-3-installation-mdx-b18.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_bioentry_w_3_installation_mdx_b18_namespaceObject = JSON.parse('{"id":"device/bioentry_w3/installation","title":"Installation","description":"Provides the complete installation procedures and connection examples required for the device.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/bioentry_w3/installation.mdx","sourceDirName":"device/bioentry_w3","slug":"/device/bioentry_w3/installation","permalink":"/docs/en/device/bioentry_w3/installation","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/bioentry_w3/installation.mdx","tags":[],"version":"current","frontMatter":{"id":"installation","title":"Installation","description":"Provides the complete installation procedures and connection examples required for the device.","keywords":["Bracket","Power","Network","Input","Relay","Standalone","Secure I/O","Wiegand"],"isTranslationMissing":false},"sidebar":"bioentryw3","previous":{"title":"Getting Started","permalink":"/docs/en/device/bioentry_w3/getting-started"},"next":{"title":"Product Specifications","permalink":"/docs/en/device/bioentry_w3/product-specifications"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -2303,7 +2477,11 @@ var _device_connection_standalone_secure_notes = __webpack_require__(5623);
 var _device_secure_io2_connection = __webpack_require__(40275);
 // EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_device-wiegand-connection.mdx
 var _device_wiegand_connection = __webpack_require__(98538);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/facestation_f2/installation.mdx
+// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_device-reset-network-settings.mdx
+var _device_reset_network_settings = __webpack_require__(24804);
+// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_device-factory-reset.mdx
+var _device_factory_reset = __webpack_require__(9672);
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/bioentry_w3/installation.mdx
 
 
 const frontMatter = {
@@ -2337,6 +2515,10 @@ const assets = {
 /*## Secure I/O 2 연결*/
 /*공통 노트*/
 /*## Wiegand 연결*/
+/*## 네트워크 설정 초기화*/
+/*## 공장 초기화*/
+
+
 
 
 
@@ -2352,9 +2534,14 @@ const toc = [{
   "value": "Fixing the bracket and the product",
   "id": "fixing-the-bracket-and-the-product",
   "level": 2
-}, ..._installation_bracket_notes/* .toc */.RM, ..._device_power_connection/* .toc */.RM, ..._device_network_connection/* .toc */.RM, ..._device_input_connetion/* .toc */.RM, ..._device_relay_connection/* .toc */.RM, ..._device_standalone_connection/* .toc */.RM, ..._device_connection_standalone_secure_notes/* .toc */.RM, ..._device_secure_io2_connection/* .toc */.RM, ..._device_connection_standalone_secure_notes/* .toc */.RM, ..._device_wiegand_connection/* .toc */.RM];
+}, ..._installation_bracket_notes/* .toc */.RM, ..._device_power_connection/* .toc */.RM, ..._device_network_connection/* .toc */.RM, ..._device_input_connetion/* .toc */.RM, ..._device_relay_connection/* .toc */.RM, ..._device_standalone_connection/* .toc */.RM, ..._device_connection_standalone_secure_notes/* .toc */.RM, ..._device_secure_io2_connection/* .toc */.RM, ..._device_connection_standalone_secure_notes/* .toc */.RM, ..._device_wiegand_connection/* .toc */.RM, ..._device_reset_network_settings/* .toc */.RM, ..._device_factory_reset/* .toc */.RM, {
+  "value": "Firmware upgrade",
+  "id": "firmware-upgrade",
+  "level": 2
+}];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
     admonition: "admonition",
     h2: "h2",
     li: "li",
@@ -2379,31 +2566,23 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "fixing-the-bracket-and-the-product",
       children: "Fixing the bracket and the product"
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "info",
-      children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "This document describes the installation method based on the FSF2-ODB model shape. Use the same method to install the FSF2-DB and FSF2-AB models."
-      })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Determine the correct position to install the bracket using the provided drilling template."
+          children: "Determine the location to mount the product."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-recommended-fsf2.png",
+          src: "/img/device/installation-recommended-bew3.svg",
           className: "none",
-          width: "35%",
           alone: true
         }), "\n", (0,jsx_runtime.jsx)(_installation_bracket_notes/* ["default"] */.Ay, {
-          height1: 124,
-          height2: 127
+          height: 137
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "Secure the bracket tightly using the fixing screws at the location where the product will be mounted."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device1-fsf2.png",
+          src: "/img/device/installation-device1-bew3.svg",
           className: "none",
-          width: "25%",
           alone: true
         }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
           type: "info",
@@ -2421,7 +2600,7 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsxs)(Column, {
               className: "text--center",
               children: [(0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/installation-wall1-fsf2.png",
+                src: "/img/device/bew3-installation_distance1.png",
                 className: "none",
                 width: "60%"
               }), (0,jsx_runtime.jsx)("div", {
@@ -2452,7 +2631,7 @@ function _createMdxContent(props) {
                         style: {
                           textAlign: "center"
                         },
-                        children: "200 mm"
+                        children: "270 mm"
                       })]
                     }), (0,jsx_runtime.jsxs)(_components.tr, {
                       children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -2464,7 +2643,7 @@ function _createMdxContent(props) {
                         style: {
                           textAlign: "center"
                         },
-                        children: "180 mm"
+                        children: "250 mm"
                       })]
                     }), (0,jsx_runtime.jsxs)(_components.tr, {
                       children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -2476,7 +2655,7 @@ function _createMdxContent(props) {
                         style: {
                           textAlign: "center"
                         },
-                        children: "150 mm"
+                        children: "170 mm"
                       })]
                     })]
                   })]
@@ -2485,7 +2664,7 @@ function _createMdxContent(props) {
             }), (0,jsx_runtime.jsx)(Column, {
               className: "text--center",
               children: (0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/installation-wall2-fsf2.png",
+                src: "/img/device/bew3-installation_distance.png",
                 className: "none",
                 width: "65%"
               })
@@ -2498,25 +2677,18 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "After installing the cable cover, tighten the six screws in the cover firmly, and mount the product on the fixed bracket."
+          children: "Mount the product on the fixed bracket."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device2-fsf2.png",
+          src: "/img/device/installation-device2-bew3.svg",
           className: "none",
-          width: "25%",
           alone: true
-        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-          type: "info",
-          children: (0,jsx_runtime.jsx)(_components.p, {
-            children: "IMake sure that the cable cover is completely closed after connecting it to the product to maintain the water-resistant and dust-resistant features (IP65 rating)."
-          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "Rotate the fixing screws to assemble the product with the bracket."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device3-fsf2.png",
+          src: "/img/device/installation-device3-bew3.svg",
           className: "none",
-          width: "25%",
           alone: true
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
@@ -2525,13 +2697,71 @@ function _createMdxContent(props) {
           })
         }), "\n"]
       }), "\n"]
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_power_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_network_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_input_connetion/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_relay_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_standalone_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {
-      product: "FaceStation F2",
-      product_2: "BioStation 3"
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_secure_io2_connection/* ["default"] */.Ay, {}), "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {
-      product: "FaceStation F2",
-      product_2: "BioStation 3"
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_wiegand_connection/* ["default"] */.Ay, {})]
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_power_connection/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)("div", {
+      className: "page-break"
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_network_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_input_connetion/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_relay_connection/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)("div", {
+      className: "page-break"
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_standalone_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)("div", {
+      className: "page-break"
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_secure_io2_connection/* ["default"] */.Ay, {}), "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_wiegand_connection/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)("div", {
+      className: "page-break"
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_reset_network_settings/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_factory_reset/* ["default"] */.Ay, {
+      name: "green"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "firmware-upgrade",
+      children: "Firmware upgrade"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "You can connect a USB memory stick to upgrade the firmware."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Save the firmware file to a USB memory stick for upgrade."
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "It is recommended to save only one firmware file on the USB memory stick for the upgrade."
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Connect the USB memory stick to the device."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "If the 'Admin Auth Required' message appears, authenticate using administrator credentials."
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["Register the administrator on BioStar X for the device. You cannot proceed with the firmware upgrade if an administrator is not registered on the device. For detailed information on how to register an administrator, please refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "../../platform/biostar_x/set-permission",
+              children: "BioStar X Administrator Guide"
+            }), "."]
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "Once the administrator authentication is successful, the firmware file will be transferred to the device."
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "When the firmware file transfer is complete, a message to remove the USB memory stick will appear on the screen. Remove the USB memory stick."
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "If you do not remove the USB memory stick, the firmware upgrade will run again after the device restarts."
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "After proceeding with the firmware upgrade, the device will restart automatically."
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      type: "caution",
+      children: (0,jsx_runtime.jsx)(_components.p, {
+        children: "Do not disconnect the power supply while upgrading the firmware of the device. The device may malfunction."
+      })
+    })]
   });
 }
 function MDXContent(props = {}) {

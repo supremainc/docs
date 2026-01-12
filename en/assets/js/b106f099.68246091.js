@@ -152,14 +152,14 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {
-          children: ["Added guide for linking event logs using the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
+          children: ["Added guide for integrating event logs using the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
             href: "../platform/biostar_x/settings-virtual-device-event-log",
             children: "Virtual Device"
           }), " feature"]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-          children: "Updated guides for the ability to enter a reason when exporting or printing user data, data, and audit trail menus"
+          children: "Updated guides for the ability to enter a reason when exporting or printing user, data, and audit trail menus"
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
@@ -503,7 +503,7 @@ function MDXProvider(properties) {
 
 }),
 3432: (function (module) {
-module.exports = JSON.parse('{"permalink":"/docs/en/changelog/2026-01-02-changelog","source":"@site/i18n/en/docusaurus-plugin-content-blog/2026-01-02-changelog.md","title":"January 2026","description":"Provides an overview of updates since the initial launch of Suprema Docs through December.","date":"2026-01-02T00:00:00.000Z","tags":[],"readingTime":2.16,"hasTruncateMarker":true,"authors":[],"frontMatter":{"title":"January 2026","description":"Provides an overview of updates since the initial launch of Suprema Docs through December.","slug":"2026-01-02-changelog","isTranslationMissing":false},"unlisted":false}')
+module.exports = JSON.parse('{"permalink":"/docs/en/changelog/2026-01-02-changelog","source":"@site/i18n/en/docusaurus-plugin-content-blog/2026-01-02-changelog.md","title":"January 2026","description":"Provides an overview of updates since the initial launch of Suprema Docs through December.","date":"2026-01-02T00:00:00.000Z","tags":[],"readingTime":2.15,"hasTruncateMarker":true,"authors":[],"frontMatter":{"title":"January 2026","description":"Provides an overview of updates since the initial launch of Suprema Docs through December.","slug":"2026-01-02-changelog","isTranslationMissing":false},"unlisted":false}')
 
 }),
 

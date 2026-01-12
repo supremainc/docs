@@ -111,7 +111,7 @@ function _createMdxContent(props) {
         children: [(0,jsx_runtime.jsx)(Anno, {
           id: "anno4",
           children: "4)"
-        }), " Based on users enrolled without credentials."]
+        }), " The number of users registered without having any credential data."]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",

@@ -165,7 +165,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(IcBw, {}), " ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_279",
             product: "dev"
-          }), ": You can select the user's work code."]
+          }), ": You can select the user's job code."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

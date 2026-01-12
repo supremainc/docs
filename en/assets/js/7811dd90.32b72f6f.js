@@ -209,7 +209,7 @@ function MDXProvider(properties) {
 
 }),
 3432: (function (module) {
-module.exports = JSON.parse('{"permalink":"/docs/en/changelog/2026-01-02-changelog","source":"@site/i18n/en/docusaurus-plugin-content-blog/2026-01-02-changelog.md","title":"January 2026","description":"Provides an overview of updates since the initial launch of Suprema Docs through December.","date":"2026-01-02T00:00:00.000Z","tags":[],"readingTime":2.16,"hasTruncateMarker":true,"authors":[],"frontMatter":{"title":"January 2026","description":"Provides an overview of updates since the initial launch of Suprema Docs through December.","slug":"2026-01-02-changelog","isTranslationMissing":false},"unlisted":false}')
+module.exports = JSON.parse('{"permalink":"/docs/en/changelog/2026-01-02-changelog","source":"@site/i18n/en/docusaurus-plugin-content-blog/2026-01-02-changelog.md","title":"January 2026","description":"Provides an overview of updates since the initial launch of Suprema Docs through December.","date":"2026-01-02T00:00:00.000Z","tags":[],"readingTime":2.15,"hasTruncateMarker":true,"authors":[],"frontMatter":{"title":"January 2026","description":"Provides an overview of updates since the initial launch of Suprema Docs through December.","slug":"2026-01-02-changelog","isTranslationMissing":false},"unlisted":false}')
 
 }),
 

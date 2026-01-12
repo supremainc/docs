@@ -50,10 +50,10 @@
 <p>Added guide for <a class="" href="https://supremainc.github.io/docs/en/platform/biostar_x/settings-remote-access">Remote Access</a> configuration and usage</p>
 </li>
 <li class="">
-<p>Added guide for linking event logs using the <a class="" href="https://supremainc.github.io/docs/en/platform/biostar_x/settings-virtual-device-event-log">Virtual Device</a> feature</p>
+<p>Added guide for integrating event logs using the <a class="" href="https://supremainc.github.io/docs/en/platform/biostar_x/settings-virtual-device-event-log">Virtual Device</a> feature</p>
 </li>
 <li class="">
-<p>Updated guides for the ability to enter a reason when exporting or printing user data, data, and audit trail menus</p>
+<p>Updated guides for the ability to enter a reason when exporting or printing user, data, and audit trail menus</p>
 <ul>
 <li class="">
 <p><a class="" href="https://supremainc.github.io/docs/en/platform/biostar_x/export-import-user-info">Export/Import User Information</a></p>

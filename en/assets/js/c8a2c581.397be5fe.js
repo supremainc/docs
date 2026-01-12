@@ -652,14 +652,14 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_086",
                 product: "dev"
-              }), ": Add time and attendance events."]
+              }), ": Register T&A events."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_082",
                 product: "dev"
-              }), ": Require users to select a time and attendance event during authentication. Available when ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": Set to require a user to select a T&A event when authenticating. Available when ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_083_list",
                 product: "dev"
               }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
@@ -672,7 +672,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_081",
                 product: "dev"
-              }), ": Allow users to use only time and attendance events selected by the administrator. Available when ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": Set to use only a T&A event selected by the administrator. Available when ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_083_list",
                 product: "dev"
               }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
@@ -685,7 +685,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_279",
                 product: "dev"
-              }), ": Select whether to use job codes."]
+              }), ": Set whether to use the job code."]
             }), "\n"]
           }), "\n"]
         }), "\n"]

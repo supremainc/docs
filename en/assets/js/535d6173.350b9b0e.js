@@ -639,28 +639,28 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_169",
                 product: "dev"
-              }), ": Select how the user ID appears on the device's authentication result screen."]
+              }), ": You can select how the user ID is displayed on the authentication result screen of the device."]
             }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_307",
                     product: "dev"
-                  }), ": Show the entire user ID."]
+                  }), ": Displays the entire user ID."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_316",
                     product: "dev"
-                  }), ": Show only the first character of the user ID."]
+                  }), ": Displays only the first letter of the user ID."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_357",
                     product: "dev"
-                  }), ": Do not show the user ID."]
+                  }), ": Do not display the user ID."]
                 }), "\n"]
               }), "\n"]
             }), "\n"]
@@ -669,28 +669,28 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_177",
                 product: "dev"
-              }), ": Select how the user name appears on the device's authentication result screen."]
+              }), ": You can select how the user name is displayed on the authentication result screen of the device."]
             }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_307",
                     product: "dev"
-                  }), ": Show the entire user name."]
+                  }), ": Displays the entire user name."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_316",
                     product: "dev"
-                  }), ": Show only the first character of the user name."]
+                  }), ": Displays only the first letter of the user name."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_357",
                     product: "dev"
-                  }), ": Do not show the user name."]
+                  }), ": Do not display the user name."]
                 }), "\n"]
               }), "\n"]
             }), "\n"]
@@ -1040,7 +1040,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_086",
                 product: "dev"
-              }), ": Add time and attendance events. To register attendance events, select ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": Register T&A events. To register attendance events, select ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_086",
                 product: "dev"
               }), " → ", (0,jsx_runtime.jsx)(Image, {
@@ -1060,7 +1060,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_082",
                 product: "dev"
-              }), ": Require users to select a time and attendance event during authentication. Available when ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": Set to require a user to select a T&A event when authenticating. Available when ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_083_list",
                 product: "dev"
               }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
@@ -1073,7 +1073,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_081",
                 product: "dev"
-              }), ": Allow users to use only time and attendance events selected by the administrator. Available when ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": Set to use only a T&A event selected by the administrator. Available when ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_083_list",
                 product: "dev"
               }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
@@ -1086,7 +1086,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_279",
                 product: "dev"
-              }), ": Select whether to use job codes."]
+              }), ": Set whether to use the job code."]
             }), "\n"]
           }), "\n"]
         }), "\n"]

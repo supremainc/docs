@@ -571,28 +571,28 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_169",
                 product: "dev"
-              }), ": Select how the user ID appears on the device's authentication result screen."]
+              }), ": You can select how the user ID is displayed on the authentication result screen of the device."]
             }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_307",
                     product: "dev"
-                  }), ": Show the entire user ID."]
+                  }), ": Displays the entire user ID."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_316",
                     product: "dev"
-                  }), ": Show only the first character of the user ID."]
+                  }), ": Displays only the first letter of the user ID."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_357",
                     product: "dev"
-                  }), ": Do not show the user ID."]
+                  }), ": Do not display the user ID."]
                 }), "\n"]
               }), "\n"]
             }), "\n"]
@@ -601,28 +601,28 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_177",
                 product: "dev"
-              }), ": Select how the user name appears on the device's authentication result screen."]
+              }), ": You can select how the user name is displayed on the authentication result screen of the device."]
             }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_307",
                     product: "dev"
-                  }), ": Show the entire user name."]
+                  }), ": Displays the entire user name."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_316",
                     product: "dev"
-                  }), ": Show only the first character of the user name."]
+                  }), ": Displays only the first letter of the user name."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_357",
                     product: "dev"
-                  }), ": Do not show the user name."]
+                  }), ": Do not display the user name."]
                 }), "\n"]
               }), "\n"]
             }), "\n"]
@@ -790,28 +790,28 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_130",
                 product: "dev"
-              }), ": Set the wait time for fingerprint matching. If authentication is not completed within the set time, it fails."]
+              }), ": Set the wait time for fingerprint matching. If authentication is not completed within the specified time, it will fail."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_254",
                 product: "dev"
-              }), ": View the raw image when scanning a fingerprint."]
+              }), ": The original image of the scanned fingerprint can be viewed."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_197",
                 product: "dev"
-              }), ": Set the fingerprint sensor sensitivity. Set the sensitivity higher to obtain precise fingerprint information."]
+              }), ": Set the sensitivity of the fingerprint recognition sensor. Set the sensitivity higher to obtain precise fingerprint information."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_003",
                 product: "dev"
-              }), ": Set the fingerprint authentication performance. When you select ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": Set the speed of fingerprint authentication. When you select ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_275",
                 product: "dev"
               }), ", authentication speed is set according to the total number of fingerprint templates enrolled in the device."]
@@ -821,10 +821,10 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_342",
                 product: "dev"
-              }), ": Set the fingerprint template format. The default is ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": Set the fingerprint template format. ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_057",
                 product: "dev"
-              }), ". Changing the template format blocks the use of all previously stored fingerprints, so proceed with caution."]
+              }), " is set as default. Changing the template format will make all previously saved fingerprints unusable, so take care when changing."]
             }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
               type: "info",
               children: (0,jsx_runtime.jsx)(_components.p, {
@@ -839,10 +839,10 @@ function _createMdxContent(props) {
               }), ": Set to ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_277",
                 product: "dev"
-              }), " to turn on the fingerprint sensor when it detects the user’s finger. Set to ", (0,jsx_runtime.jsx)(Cmd, {
+              }), " to turn on the fingerprint sensor when it detects the user’s finger. When set to ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_362",
                 product: "dev"
-              }), " to keep the sensor always on, even when not scanning fingerprints."]
+              }), ", the sensor remains on even when not scanning fingerprints."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -856,14 +856,14 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_116",
                 product: "dev"
-              }), ": Inspect the quality of the scanned fingerprint to save high-quality fingerprint data. When enabled, the device notifies the user if the fingerprint quality is low, helping them scan correctly."]
+              }), ": Assess the quality of scanned fingerprints to save high-quality fingerprint information. Enable to notify the user when fingerprint quality is low, helping them scan fingerprints correctly."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_118",
                 product: "dev"
-              }), ": Check for duplicate fingerprints during enrollment."]
+              }), ": Check for duplicate fingerprints when enrolling."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
@@ -906,7 +906,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_086",
                 product: "dev"
-              }), ": Add time and attendance events. To register attendance events, select ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": Register T&A events. To register attendance events, select ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_086",
                 product: "dev"
               }), " → ", (0,jsx_runtime.jsx)(Image, {
@@ -926,7 +926,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_082",
                 product: "dev"
-              }), ": Require users to select a time and attendance event during authentication. Available when ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": Set to require a user to select a T&A event when authenticating. Available when ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_083_list",
                 product: "dev"
               }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
@@ -939,7 +939,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_081",
                 product: "dev"
-              }), ": Allow users to use only time and attendance events selected by the administrator. Available when ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": Set to use only a T&A event selected by the administrator. Available when ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_083_list",
                 product: "dev"
               }), " is set to ", (0,jsx_runtime.jsx)(Cmd, {
@@ -952,7 +952,7 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_279",
                 product: "dev"
-              }), ": Select whether to use job codes."]
+              }), ": Set whether to use the job code."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
