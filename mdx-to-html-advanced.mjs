@@ -35,6 +35,7 @@ program
   .option('-s, --sidebar <key>', 'Sidebar configuration key', 'bsxplugins')
   .option('-o, --output <file>', 'Output HTML file', 'output.html')
   .option('-t, --template <type>', 'Template type: simple, professional, documentation', 'professional')
+  .option('-p, --product <products>', 'Product filter (comma-separated)', '')
   .option('--toc', 'Generate table of contents', true)
   .option('--max-depth <number>', 'Maximum heading depth for TOC', '3')
   .parse(process.argv);
@@ -140,19 +141,83 @@ function extractHeadingsFromMarkdown(content) {
 }
 
 /**
+ * Process Include/Xclude components based on product option
+ * Include: Shows content only if product matches
+ * Xclude: Hides content if product matches
+ * @param {string} content - Content with Include/Xclude tags
+ * @returns {string} Processed content
+ */
+function processIncludeXclude(content) {
+  const productOption = options.product ? options.product.trim() : '';
+  
+  // If no product specified, remove all Include/Xclude tags
+  if (!productOption) {
+    return content
+      .replace(/<Include[^>]*>[\s\S]*?<\/Include>/g, '')
+      .replace(/<Xclude[^>]*>[\s\S]*?<\/Xclude>/g, '');
+  }
+
+  // Parse product list (comma-separated)
+  const products = productOption.split(',').map(p => p.trim());
+
+  // Process Include tags: keep content if product matches, remove otherwise
+  content = content.replace(/<Include\s+product="([^"]*)">([\s\S]*?)<\/Include>/g, (match, productAttr, childContent) => {
+    const includeProducts = productAttr.split(',').map(p => p.trim());
+    const hasMatch = includeProducts.some(p => products.includes(p));
+    return hasMatch ? childContent : '';
+  });
+
+  // Process Xclude tags: remove content if product matches, keep otherwise
+  content = content.replace(/<Xclude\s+product="([^"]*)">([\s\S]*?)<\/Xclude>/g, (match, productAttr, childContent) => {
+    const xcludeProducts = productAttr.split(',').map(p => p.trim());
+    const hasMatch = xcludeProducts.some(p => products.includes(p));
+    return hasMatch ? '' : childContent;
+  });
+
+  return content;
+}
+
+/**
  * Convert simple markdown to HTML
  * @param {string} mdContent - Markdown content
  * @returns {string} HTML content
  */
 function markdownToHtml(mdContent) {
+  // Debug: Check for Include/Xclude in original content
+  const includeCount = (mdContent.match(/<Include/g) || []).length;
+  const xcludeCount = (mdContent.match(/<Xclude/g) || []).length;
+  
+  if (includeCount > 0 || xcludeCount > 0) {
+    console.log(`[markdownToHtml DEBUG] Original content has ${includeCount} Include, ${xcludeCount} Xclude tags`);
+  }
+  
+  // IMPORTANT: Process Include/Xclude BEFORE escapeHtml, since escapeHtml will convert < and > to entities
+  // This must be done first because escapeHtml will destroy the tags
+  let html = processIncludeXclude(mdContent);
+
   // Remove MDX/JSX comments first, before any other processing
-  let html = mdContent
+  html = html
     .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
-    // Remove JSX component tags (e.g., <Overview />, <Component />, etc.)
-    .replace(/<[A-Z]\w*[^>]*\/>/g, '')
-    .replace(/<[A-Z]\w*[^>]*>[\s\S]*?<\/[A-Z]\w*>/g, '')
+    // Remove remaining JSX component tags (e.g., <Overview />, <Component />, etc.)
+    // BUT KEEP Include/Xclude tags for product filtering
+    .replace(/<(?!Include|Xclude)[A-Z]\w*[^>]*\/>/g, '')
+    .replace(/<(?!Include|Xclude)[A-Z]\w*[^>]*>[\s\S]*?<\/(?!Include|Xclude)[A-Z]\w*>/g, '')
     .trim();
 
+  // Now escape HTML, but preserve Include/Xclude tags by temporarily replacing them
+  // This is important because we need Include/Xclude to remain as tags for proper HTML rendering
+  const includePlaceholders = {};
+  let placeholderIndex = 0;
+  
+  // Replace all Include/Xclude tags with placeholders
+  html = html.replace(/<(Include|Xclude)\s+product="([^"]*)">([\s\S]*?)<\/\1>/g, (match) => {
+    const placeholder = `__INCLUDE_XCLUDE_PLACEHOLDER_${placeholderIndex}__`;
+    includePlaceholders[placeholder] = match;
+    placeholderIndex++;
+    return placeholder;
+  });
+
+  // Now escape HTML (this won't affect our placeholders)
   html = escapeHtml(html);
 
   // Headers
@@ -233,7 +298,14 @@ function markdownToHtml(mdContent) {
     processedLines.push(currentListType === 'ul' ? '</ul>' : '</ol>');
   }
 
-  return processedLines.join('\n');
+  let finalHtml = processedLines.join('\n');
+  
+  // Restore Include/Xclude placeholders
+  for (const [placeholder, original] of Object.entries(includePlaceholders)) {
+    finalHtml = finalHtml.replace(placeholder, original);
+  }
+
+  return finalHtml;
 }
 
 /**
@@ -340,17 +412,19 @@ function processImportsInMdx(content, basePath) {
       const { content: importedMdxContent } = matter(importedContent);
       
       // Remove JSX/MDX syntax from imported content
+      // BUT KEEP Include/Xclude tags for product filtering
       let cleanedContent = importedMdxContent
-        // Remove JSX component opening/closing tags (e.g., <Xclude>, <Include>, etc.)
-        .replace(/<[A-Z]\w*[^>]*>/g, '')
-        .replace(/<\/[A-Z]\w*>/g, '')
-        // Remove self-closing JSX tags (e.g., <Component />)
-        .replace(/<[A-Z]\w*[^>]*\/>/g, '')
+        // Remove JSX component opening/closing tags (EXCEPT Include/Xclude)
+        // Negative lookahead to exclude Include and Xclude
+        .replace(/<(?!Include|Xclude)[A-Z]\w*[^>]*>/g, '')
+        .replace(/<\/(?!Include|Xclude)[A-Z]\w*>/g, '')
+        // Remove self-closing JSX tags (EXCEPT Include/Xclude)
+        .replace(/<(?!Include|Xclude)[A-Z]\w*[^>]*\/>/g, '')
         // Remove MDX comments
         .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
         // Remove import statements
         .replace(/import\s+[\s\S]*?from\s+['"][^'"]+['"]/g, '')
-        // Remove JSX expressions
+        // Remove JSX expressions (but not those inside Include/Xclude)
         .replace(/\{[^}]+\}/g, '');
       
       imports[componentName] = cleanedContent;
@@ -398,7 +472,7 @@ function generateTableOfContents(mdxFiles) {
       if (filteredHeadings.length > 0) {
         tocHtml += '\n<ul>\n';
         filteredHeadings.forEach(heading => {
-          const indent = '  '.repeat(heading.depth - 2);
+          const indent = '  '.repeat(Math.max(0, heading.depth - 2));
           tocHtml += `${indent}<li><a href="#${heading.id}">${escapeHtml(heading.text)}</a></li>\n`;
         });
         tocHtml += '</ul>\n';
@@ -420,338 +494,32 @@ function generateTableOfContents(mdxFiles) {
  * @returns {string} CSS content
  */
 function getTemplateCSS(template) {
-  const cssFilePath = path.join(__dirname, 'mdx-to-html-styles.css');
+  let css = '';
   
-  try {
-    if (fs.existsSync(cssFilePath)) {
-      const externalCSS = fs.readFileSync(cssFilePath, 'utf8');
-      console.log('✓ CSS loaded from mdx-to-html-styles.css');
-      return externalCSS;
+  // Load default CSS
+  const defaultCSSPath = path.join(__dirname, 'default.css');
+  if (fs.existsSync(defaultCSSPath)) {
+    try {
+      css += fs.readFileSync(defaultCSSPath, 'utf8');
+      console.log('✓ CSS loaded from default.css');
+    } catch (error) {
+      console.warn(`⚠️  Failed to load default.css: ${error.message}`);
     }
-  } catch (error) {
-    console.warn(`⚠️  Failed to load CSS file: ${error.message}`);
+  }
+  
+  // Load additional styles CSS (if exists)
+  const stylesCSSPath = path.join(__dirname, 'mdx-to-html-styles.css');
+  if (fs.existsSync(stylesCSSPath)) {
+    try {
+      const additionalCSS = fs.readFileSync(stylesCSSPath, 'utf8');
+      css += '\n\n/* Additional Styles */\n' + additionalCSS;
+      console.log('✓ Additional styles loaded from mdx-to-html-styles.css');
+    } catch (error) {
+      console.warn(`⚠️  Failed to load mdx-to-html-styles.css: ${error.message}`);
+    }
   }
 
-  // Fallback: Embedded CSS
-  const baseCSS = `
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f5f5f5;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 60px 20px;
-      margin: -20px -20px 40px -20px;
-      border-radius: 0 0 8px 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-
-    header p {
-      font-size: 1.1em;
-      opacity: 0.95;
-    }
-
-    .layout {
-      display: grid;
-      grid-template-columns: 250px 1fr;
-      gap: 30px;
-    }
-
-    .toc {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      border-left: 4px solid #667eea;
-      height: fit-content;
-      position: sticky;
-      top: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .toc h2 {
-      margin-bottom: 15px;
-      color: #333;
-      font-size: 1.2em;
-    }
-
-    .toc ul {
-      list-style: none;
-    }
-
-    .toc li {
-      margin: 8px 0;
-    }
-
-    .toc a {
-      color: #667eea;
-      text-decoration: none;
-      transition: color 0.3s, text-decoration 0.3s;
-      display: block;
-      padding: 4px 0;
-    }
-
-    .toc a:hover {
-      color: #764ba2;
-      text-decoration: underline;
-    }
-
-    .toc ul ul {
-      margin-left: 15px;
-      margin-top: 8px;
-      border-left: 1px solid #e0e0e0;
-      padding-left: 10px;
-    }
-
-    .toc ul ul a {
-      font-size: 0.95em;
-    }
-
-    .content {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .doc-section {
-      background: white;
-      padding: 40px;
-      margin-bottom: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: box-shadow 0.3s;
-    }
-
-    .doc-section:hover {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .doc-section h1 {
-      color: #667eea;
-      margin-bottom: 10px;
-      padding-bottom: 15px;
-      border-bottom: 2px solid #e0e0e0;
-      font-size: 2em;
-    }
-
-    .doc-section h2 {
-      color: #764ba2;
-      margin-top: 30px;
-      margin-bottom: 15px;
-      font-size: 1.5em;
-    }
-
-    .doc-section h3 {
-      color: #555;
-      margin-top: 20px;
-      margin-bottom: 10px;
-      font-size: 1.2em;
-    }
-
-    .description {
-      color: #666;
-      font-style: italic;
-      margin-bottom: 20px;
-      padding: 10px 0;
-    }
-
-    .doc-content {
-      line-height: 1.8;
-      color: #444;
-    }
-
-    .doc-content p {
-      margin-bottom: 15px;
-    }
-
-    .doc-content ul,
-    .doc-content ol {
-      margin-left: 20px;
-      margin-bottom: 15px;
-    }
-
-    .doc-content li {
-      margin-bottom: 8px;
-    }
-
-    .doc-content code {
-      background-color: #f4f4f4;
-      padding: 2px 6px;
-      border-radius: 3px;
-      font-family: 'Courier New', Consolas, monospace;
-      color: #d63384;
-      font-size: 0.95em;
-    }
-
-    .doc-content pre {
-      background-color: #2d2d2d;
-      color: #f8f8f2;
-      border-left: 4px solid #667eea;
-      padding: 15px;
-      margin: 15px 0;
-      overflow-x: auto;
-      border-radius: 4px;
-      font-family: 'Courier New', Consolas, monospace;
-    }
-
-    .doc-content pre code {
-      background: none;
-      padding: 0;
-      color: #f8f8f2;
-    }
-
-    .doc-content strong {
-      color: #222;
-      font-weight: 600;
-    }
-
-    .doc-content em {
-      font-style: italic;
-    }
-
-    .doc-content a {
-      color: #667eea;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(102, 126, 234, 0.3);
-      transition: all 0.3s;
-    }
-
-    .doc-content a:hover {
-      border-bottom-color: #667eea;
-      opacity: 0.8;
-    }
-
-    .doc-content table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 15px 0;
-    }
-
-    .doc-content table th,
-    .doc-content table td {
-      border: 1px solid #ddd;
-      padding: 12px;
-      text-align: left;
-    }
-
-    .doc-content table th {
-      background-color: #f9f9f9;
-      font-weight: 600;
-      color: #667eea;
-    }
-
-    .doc-content table tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-
-    .doc-content blockquote {
-      border-left: 4px solid #667eea;
-      padding-left: 15px;
-      margin-left: 0;
-      color: #666;
-      font-style: italic;
-      margin: 15px 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      color: #999;
-      border-top: 1px solid #e0e0e0;
-      margin-top: 60px;
-      font-size: 0.9em;
-    }
-
-    .back-to-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #667eea;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 20px;
-      cursor: pointer;
-      display: none;
-      z-index: 999;
-      transition: background-color 0.3s, opacity 0.3s;
-    }
-
-    .back-to-top:hover {
-      background-color: #764ba2;
-    }
-
-    .back-to-top.show {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    @media (max-width: 1024px) {
-      .layout {
-        grid-template-columns: 1fr;
-      }
-
-      .toc {
-        position: static;
-        margin-bottom: 30px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.8em;
-      }
-
-      .container {
-        padding: 15px;
-      }
-
-      .doc-section {
-        padding: 20px;
-      }
-
-      .toc h2 {
-        font-size: 1em;
-      }
-
-      .doc-section h1 {
-        font-size: 1.5em;
-      }
-
-      .doc-section h2 {
-        font-size: 1.2em;
-      }
-    }
-  `;
-
-  return baseCSS;
+  return css;
 }
 
 /**
@@ -866,7 +634,11 @@ async function main() {
 
     console.log(`📖 Sidebar key: ${sidebarKey}`);
     console.log(`📄 Output file: ${outputFile}`);
-    console.log(`🎨 Template: ${templateType}\n`);
+    console.log(`🎨 Template: ${templateType}`);
+    if (options.product) {
+      console.log(`🏷️  Product filter: ${options.product}`);
+    }
+    console.log('');
 
     // Load sidebars.js
     const sidebarsPath = path.join(__dirname, 'sidebars.js');

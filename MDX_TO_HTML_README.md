@@ -2,6 +2,8 @@
 
 여러 개의 MDX 파일을 하나의 HTML 파일로 변환하는 Node.js 스크립트입니다. Docusaurus의 `sidebars.js` 설정에서 문서 구조를 읽어 통합 HTML 문서를 생성합니다.
 
+> **파일 관리**: 이 도구는 `mdx-to-html-advanced.mjs` 파일 하나만 사용합니다. 외부 스타일시트 `mdx-to-html-styles.css`도 함께 필요합니다.
+
 ## 📋 개요
 
 - **목적**: MDX 파일들을 하나의 통합된 HTML 문서로 변환
@@ -38,50 +40,57 @@ yarn add -D gray-matter commander remark-parse remark-mdx remark-gfm unified uni
 
 ## 🚀 사용법
 
-### 기본 스크립트 (간단한 버전)
+```bash
+node mdx-to-html-advanced.mjs [options]
+```
+
+### 주요 옵션
+
+| 옵션 | 설명 | 기본값 |
+|------|------|--------|
+| `-s, --sidebar <key>` | 사이드바 키 | `bsxplugins` |
+| `-o, --output <file>` | 출력 파일명 | `output.html` |
+| `-t, --template <type>` | 템플릿 타입 (simple, professional, documentation) | `professional` |
+| `-p, --product <products>` | 상품 필터 (쉼표 구분) | 미지정 |
+| `--toc` | 목차 생성 | `true` |
+| `--max-depth <number>` | 목차의 최대 제목 깊이 | `3` |
+| `-h, --help` | 도움말 표시 | - |
+
+### 사용 예시
+
+**기본 설정 사용:**
+```bash
+node mdx-to-html-advanced.mjs
+```
+
+**커스텀 사이드바와 출력 파일:**
+```bash
+node mdx-to-html-advanced.mjs --sidebar bsxplugins --output my-docs.html
+```
+
+**전문적인 템플릿으로 생성:**
+```bash
+node mdx-to-html-advanced.mjs --sidebar platform --template professional --toc --max-depth 2
+```
+
+**상품 필터링 적용:**
+
+Include/Xclude 컴포넌트를 이용하여 특정 상품에 해당하는 내용만 포함할 수 있습니다.
 
 ```bash
-node mdx-to-html.js [sidebar-key] [output-file]
+# biostar_x 상품만 포함
+node mdx-to-html-advanced.mjs --sidebar biostarx --product biostar_x --toc
+
+# 여러 상품 포함 (쉼표로 구분)
+node mdx-to-html-advanced.mjs --sidebar biostarx --product "biostar_x,bioentry_p2" --toc
+
+# 상품 필터 미지정 (모든 Include/Xclude 태그 제거)
+node mdx-to-html-advanced.mjs --sidebar biostarx --toc
 ```
 
-**예시:**
+**도움말 보기:**
 ```bash
-# bsxplugins 사이드바를 output.html로 변환
-node mdx-to-html.js bsxplugins output.html
-
-# 다른 사이드바 사용
-node mdx-to-html.js platform documentation.html
-```
-
-### 고급 스크립트 (향상된 버전)
-
-```bash
-node mdx-to-html-advanced.js [options]
-```
-
-**옵션:**
-```
--s, --sidebar <key>        사이드바 키 (기본값: bsxplugins)
--o, --output <file>        출력 파일명 (기본값: output.html)
--t, --template <type>      템플릿 타입: simple, professional, documentation
---toc                      목차 생성 (기본값: true)
---max-depth <number>       목차의 최대 제목 깊이 (기본값: 3)
--h, --help                 도움말 표시
-```
-
-**예시:**
-```bash
-# 기본 설정 사용
-node mdx-to-html-advanced.js
-
-# 커스텀 사이드바와 출력 파일
-node mdx-to-html-advanced.js --sidebar bsxplugins --output my-docs.html
-
-# 전문적인 템플릿으로 생성
-node mdx-to-html-advanced.js --sidebar platform --template professional --toc --max-depth 2
-
-# 도움말 보기
-node mdx-to-html-advanced.js --help
+node mdx-to-html-advanced.mjs --help
 ```
 
 ## 📁 파일 구조
@@ -100,8 +109,8 @@ workspace/
 │   │   │   └── ...
 │   │   └── ...
 │   └── ...
-├── mdx-to-html.js                 # 기본 변환 스크립트
-└── mdx-to-html-advanced.js        # 고급 변환 스크립트
+├── mdx-to-html-advanced.mjs       # MDX to HTML 변환 스크립트
+└── mdx-to-html-styles.css         # 스타일시트
 ```
 
 ## 🔧 sidebars.js 구조 이해
@@ -248,8 +257,8 @@ node mdx-to-html-advanced.js \
 ### Q: "Sidebar key not found" 오류
 **A**: `sidebars.js`의 올바른 키를 사용하는지 확인하세요.
 ```bash
-# 사용 가능한 키 확인
-node mdx-to-html.js --help
+# 도움말에서 옵션 확인
+node mdx-to-html-advanced.mjs --help
 ```
 
 ### Q: 파일을 찾을 수 없다는 오류
@@ -275,6 +284,64 @@ node mdx-to-html.js --help
 
 `buildHtmlDocument()` 함수에서 최종 HTML 구조를 조정할 수 있습니다.
 
+## 🏷️ 상품 필터링 (Product Filtering)
+
+MDX 파일에서 `<Include>` 및 `<Xclude>` 컴포넌트를 사용하여 특정 상품에 대한 조건부 컨텐츠를 작성할 수 있습니다.
+
+### 사용 예시
+
+**MDX 파일 예시:**
+```jsx
+<Include product="biostar_x">
+:::info
+이 기능은 BioStar X에서만 지원됩니다.
+:::
+</Include>
+
+<Xclude product="biostar_x">
+:::info
+이 기능은 BioStar X를 제외한 모든 제품에서 지원됩니다.
+:::
+</Xclude>
+```
+
+**CLI 명령:**
+```bash
+# biostar_x 상품에 대한 문서 생성
+# Include(product="biostar_x") 내용은 포함, Xclude(product="biostar_x") 내용은 제외
+node mdx-to-html-advanced.js --sidebar biostarx --product biostar_x --toc
+
+# 상품 필터 없이 실행
+# 모든 Include/Xclude 태그는 제거되고 내용은 표시되지 않음
+node mdx-to-html-advanced.js --sidebar biostarx --toc
+```
+
+### 동작 방식
+
+| 상황 | Include 동작 | Xclude 동작 |
+|------|-----------|-----------|
+| `--product biostar_x` 옵션 사용 | product="biostar_x"와 일치하면 내용 포함 | product="biostar_x"와 일치하면 내용 제외 |
+| `--product` 옵션 미사용 | 모든 Include 태그 제거 | 모든 Xclude 태그 제거 |
+
+### 여러 상품 지정
+
+쉼표로 구분하여 여러 상품을 지정할 수 있습니다:
+
+```bash
+node mdx-to-html-advanced.js --sidebar biostarx \
+  --product "biostar_x,bioentry_p2" --toc
+```
+
+이 경우:
+- `<Include product="biostar_x">` 및 `<Include product="bioentry_p2">` 내용 포함
+- `<Xclude product="biostar_x">` 및 `<Xclude product="bioentry_p2">` 내용 제외
+
+### 주의사항
+
+1. product 값은 대소문자를 구분합니다.
+2. 여러 상품은 쉼표로 구분하며, 앞뒤 공백은 자동으로 제거됩니다.
+3. Include/Xclude 태그가 없는 콘텐츠는 필터링 설정과 관계없이 항상 포함됩니다.
+
 ## 📌 주의사항
 
 1. **MDX 컴포넌트**: 일부 Docusaurus 고유 컴포넌트(예: `<Tabs>`, `<Admonition>`)는 현재 기본 HTML로 변환됩니다.
@@ -290,8 +357,13 @@ node mdx-to-html.js --help
 
 ## 🔄 버전 기록
 
-- **v1.0**: 초기 버전 (mdx-to-html.js)
+- **v1.0**: 기본 버전 (mdx-to-html.js)
 - **v2.0**: 고급 기능 추가 (mdx-to-html-advanced.js)
+  - 목차(TOC) 자동 생성
+  - 템플릿 지원 (Simple, Professional, Documentation)
+  - 반응형 CSS
+  - MDX 임포트 처리
+  - 상품 필터링 (Include/Xclude)
 
 ## 📄 라이선스
 
