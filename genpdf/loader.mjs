@@ -91,8 +91,9 @@ export function processImportsInMdx(content, basePath) {
         .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
         // Remove import statements
         .replace(/import\s+[\s\S]*?from\s+['"][^'"]+['"]/g, '')
-        // Remove JSX expressions (but not those inside Include/Xclude)
-        .replace(/\{[^}]+\}/g, '');
+        // Remove JSX expressions (but not those inside code blocks - after ``` or in attributes)
+        // Only remove { } that are NOT part of code fence attributes
+        .replace(/\{(?![\d,\-\s]*\})[^}]+\}/g, '');
       
       imports[componentName] = cleanedContent;
     } catch (error) {

@@ -3,7 +3,7 @@
  */
 
 import { escapeHtml, extractHeadingsFromMarkdown } from './utils.mjs';
-import { markdownToHtml } from './converter.mjs';
+import { markdownToHtml } from './converter-markdown-it.mjs';
 import { getTemplateCSS } from './config.mjs';
 
 /**

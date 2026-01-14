@@ -190,6 +190,11 @@ header p {
   color: #f8f8f2;
 }
 
+.md-code-block__container pre code .md-code-block__line-container .md-code-block__line {
+  width: 100%;
+  white-space: pre-wrap;
+}
+
 .doc-content strong {
   color: #222;
   font-weight: 600;
