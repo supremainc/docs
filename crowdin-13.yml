@@ -22,6 +22,7 @@ files: [
     "escape_special_characters": 0,
     "ignore": [
       "/i18n/en/docusaurus-plugin-content-blog/*.md",
+      "/i18n/en/docusaurus-plugin-content-blog/*.json",
       "/i18n/en/docusaurus-plugin-content-docs/current/legal/*.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/_unused/*.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/common/_apache-license.mdx",
