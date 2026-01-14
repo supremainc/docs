@@ -79,14 +79,14 @@ export function processImportsInMdx(content, basePath) {
       const { content: importedMdxContent } = matter(importedContent);
       
       // Remove JSX/MDX syntax from imported content
-      // BUT KEEP Include/Xclude tags for product filtering
+      // BUT KEEP Include/Xclude/Image/Badge tags for processing
       let cleanedContent = importedMdxContent
-        // Remove JSX component opening/closing tags (EXCEPT Include/Xclude)
-        // Negative lookahead to exclude Include and Xclude
-        .replace(/<(?!Include|Xclude)[A-Z]\w*[^>]*>/g, '')
-        .replace(/<\/(?!Include|Xclude)[A-Z]\w*>/g, '')
-        // Remove self-closing JSX tags (EXCEPT Include/Xclude)
-        .replace(/<(?!Include|Xclude)[A-Z]\w*[^>]*\/>/g, '')
+        // Remove JSX component opening/closing tags (EXCEPT Include/Xclude/Image/Badge)
+        // Negative lookahead to exclude Include, Xclude, Image, and Badge
+        .replace(/<(?!Include|Xclude|Image|Badge)[A-Z]\w*[^>]*>/g, '')
+        .replace(/<\/(?!Include|Xclude|Image|Badge)[A-Z]\w*>/g, '')
+        // Remove self-closing JSX tags (EXCEPT Include/Xclude/Image/Badge)
+        .replace(/<(?!Include|Xclude|Image|Badge)[A-Z]\w*[^>]*\/>/g, '')
         // Remove MDX comments
         .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
         // Remove import statements

@@ -3,7 +3,7 @@
  */
 
 import { escapeHtml, extractHeadingsFromMarkdown } from './utils.mjs';
-import { markdownToHtml } from './converter-markdown-it.mjs';
+import { markdownToHtml } from './converter-rehype.mjs';
 import { getTemplateCSS } from './config.mjs';
 
 /**
@@ -48,9 +48,9 @@ export function generateTableOfContents(mdxFiles, maxDepth = 3) {
  * @param {Array<Object>} mdxFiles - Array of loaded MDX files
  * @param {string} title - Document title
  * @param {Object} options - Generation options (template, toc, maxDepth, language, product, translations)
- * @returns {string} Complete HTML
+ * @returns {Promise<string>} Complete HTML
  */
-export function buildHtmlDocument(mdxFiles, title, options = {}) {
+export async function buildHtmlDocument(mdxFiles, title, options = {}) {
   const {
     template = 'professional',
     toc = true,
@@ -60,13 +60,14 @@ export function buildHtmlDocument(mdxFiles, title, options = {}) {
     translations = {}
   } = options;
 
-  const contentSections = mdxFiles.map(file => {
-    if (!file) return '';
+  const contentSections = [];
+  for (const file of mdxFiles) {
+    if (!file) continue;
     
     const docTitle = file.frontmatter.title || file.docId;
-    const content = markdownToHtml(file.content, translations, product);
+    const content = await markdownToHtml(file.content, translations, product);
     
-    return `
+    contentSections.push(`
     <section class="doc-section" id="${file.headingId}">
       <h1>${escapeHtml(docTitle)}</h1>
       ${file.frontmatter.description ? `<p class="description">${escapeHtml(file.frontmatter.description)}</p>` : ''}
@@ -74,8 +75,10 @@ export function buildHtmlDocument(mdxFiles, title, options = {}) {
         ${content}
       </div>
     </section>
-    `;
-  }).filter(Boolean).join('\n');
+    `);
+  }
+
+  const contentHtml = contentSections.filter(Boolean).join('\n');
 
   const css = getTemplateCSS(template);
   const tocHtml = toc ? generateTableOfContents(mdxFiles, maxDepth) : '';
@@ -101,7 +104,7 @@ ${css}
       ${tocHtml}
       
       <main class="content">
-        ${contentSections}
+        ${contentHtml}
       </main>
     </div>
 

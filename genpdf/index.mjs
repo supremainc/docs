@@ -109,7 +109,7 @@ async function main() {
 
     // Build HTML document
     const title = `${sidebarKey} Documentation`;
-    const htmlContent = buildHtmlDocument(mdxFiles, title, {
+    const htmlContent = await buildHtmlDocument(mdxFiles, title, {
       template: templateType,
       toc: options.toc,
       maxDepth: parseInt(options.maxDepth, 10),
