@@ -36,11 +36,34 @@ program
   .option('-o, --output <file>', 'Output HTML file', 'output.html')
   .option('-t, --template <type>', 'Template type: simple, professional, documentation', 'professional')
   .option('-p, --product <products>', 'Product filter (comma-separated)', '')
+  .option('-l, --language <lang>', 'Language for i18n (ko, en, es, ja)', 'ko')
   .option('--toc', 'Generate table of contents', true)
   .option('--max-depth <number>', 'Maximum heading depth for TOC', '3')
   .parse(process.argv);
 
 const options = program.opts();
+
+/**
+ * Load i18n translations from code.json
+ * @param {string} language - Language code (ko, en, es, ja)
+ * @returns {Object} Loaded translations
+ */
+function loadTranslations(language) {
+  const supportedLanguages = ['ko', 'en', 'es', 'ja'];
+  const lang = supportedLanguages.includes(language) ? language : 'ko';
+  const translationPath = path.join(__dirname, 'i18n', lang, 'code.json');
+  
+  if (!fs.existsSync(translationPath)) {
+    console.warn(`⚠️ Translation file not found for language: ${lang}, falling back to ko`);
+    return loadTranslations('ko');
+  }
+  
+  const content = fs.readFileSync(translationPath, 'utf8');
+  return JSON.parse(content);
+}
+
+// Load translations based on language option
+const translations = loadTranslations(options.language);
 
 /**
  * Parse MDX syntax from string using remark
@@ -141,6 +164,66 @@ function extractHeadingsFromMarkdown(content) {
 }
 
 /**
+ * Process Docusaurus admonitions (:::info, :::note, :::warning, :::danger, :::tip, :::caution)
+ * Converts to HTML div with appropriate alert classes and icons
+ * @param {string} content - Content with admonition syntax
+ * @returns {string} Processed content with HTML admonitions
+ */
+function processAdmonitions(content) {
+  const admonitionTypes = {
+    'info': { class: 'alert--info', icon: 'ⓘ', i18nKey: 'theme.admonition.info' },
+    'note': { class: 'alert--note', icon: '📝', i18nKey: 'theme.admonition.note' },
+    'warning': { class: 'alert--warning', icon: '⚠️', i18nKey: 'theme.admonition.warning' },
+    'danger': { class: 'alert--danger', icon: '🚨', i18nKey: 'theme.admonition.danger' },
+    'tip': { class: 'alert--tip', icon: '💡', i18nKey: 'theme.admonition.tip' },
+    'caution': { class: 'alert--caution', icon: '⚠️', i18nKey: 'theme.admonition.caution' },
+  };
+
+  /**
+   * Get translated title for admonition type
+   * @param {string} type - Admonition type
+   * @param {string} customTitle - Optional custom title from :::type title="..."
+   * @returns {string} Localized title
+   */
+  function getAdmonitionTitle(type, customTitle) {
+    if (customTitle) {
+      return customTitle;
+    }
+    const config = admonitionTypes[type];
+    const i18nKey = config?.i18nKey;
+    if (i18nKey && translations[i18nKey]) {
+      return translations[i18nKey].message;
+    }
+    // Fallback to capitalized type name
+    return type.charAt(0).toUpperCase() + type.slice(1);
+  }
+
+  // Count admonitions before processing
+  const admonitionCount = (content.match(/:::(?:info|note|warning|danger|tip|caution)/g) || []).length;
+
+  // Match :::type (with optional title) followed by content and closing :::
+  // Handle both single-line and multi-line content with flexible whitespace
+  content = content.replace(/:::(info|note|warning|danger|tip|caution)(?:\s+title="([^"]*)")?\s*([\s\S]*?)\s*:::/g, 
+    (match, type, customTitle, bodyContent) => {
+      const config = admonitionTypes[type] || admonitionTypes['info'];
+      const displayTitle = getAdmonitionTitle(type, customTitle);
+      const cleanContent = bodyContent.trim();
+      
+      return `<div class="alert ${config.class}">
+  <div class="admonition-heading">
+    <span class="admonition-icon">${config.icon}</span>
+    <strong>${displayTitle}</strong>
+  </div>
+  <div class="admonition-content">
+    ${cleanContent}
+  </div>
+</div>`;
+    });
+
+  return content;
+}
+
+/**
  * Process Include/Xclude components based on product option
  * Include: Shows content only if product matches
  * Xclude: Hides content if product matches
@@ -183,39 +266,30 @@ function processIncludeXclude(content) {
  * @returns {string} HTML content
  */
 function markdownToHtml(mdContent) {
-  // Debug: Check for Include/Xclude in original content
-  const includeCount = (mdContent.match(/<Include/g) || []).length;
-  const xcludeCount = (mdContent.match(/<Xclude/g) || []).length;
-  
-  if (includeCount > 0 || xcludeCount > 0) {
-    console.log(`[markdownToHtml DEBUG] Original content has ${includeCount} Include, ${xcludeCount} Xclude tags`);
-  }
-  
   // IMPORTANT: Process Include/Xclude BEFORE escapeHtml, since escapeHtml will convert < and > to entities
   // This must be done first because escapeHtml will destroy the tags
   let html = processIncludeXclude(mdContent);
 
-  // Remove MDX/JSX comments first, before any other processing
-  html = html
-    .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
-    // Remove remaining JSX component tags (e.g., <Overview />, <Component />, etc.)
-    // BUT KEEP Include/Xclude tags for product filtering
-    .replace(/<(?!Include|Xclude)[A-Z]\w*[^>]*\/>/g, '')
-    .replace(/<(?!Include|Xclude)[A-Z]\w*[^>]*>[\s\S]*?<\/(?!Include|Xclude)[A-Z]\w*>/g, '')
-    .trim();
-
-  // Now escape HTML, but preserve Include/Xclude tags by temporarily replacing them
-  // This is important because we need Include/Xclude to remain as tags for proper HTML rendering
-  const includePlaceholders = {};
+  // Store Include/Xclude tags to preserve during escapeHtml
+  const preservedTags = {};
   let placeholderIndex = 0;
   
-  // Replace all Include/Xclude tags with placeholders
+  // First, preserve Include/Xclude tags
   html = html.replace(/<(Include|Xclude)\s+product="([^"]*)">([\s\S]*?)<\/\1>/g, (match) => {
-    const placeholder = `__INCLUDE_XCLUDE_PLACEHOLDER_${placeholderIndex}__`;
-    includePlaceholders[placeholder] = match;
+    const placeholder = `__PRESERVED_TAG_${placeholderIndex}__`;
+    preservedTags[placeholder] = match;
     placeholderIndex++;
     return placeholder;
   });
+
+  // Remove MDX/JSX comments and components (before escapeHtml)
+  html = html
+    .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
+    // Remove JSX component tags (e.g., <Overview />, <Component />, etc.)
+    // BUT KEEP Include/Xclude tags via placeholders
+    .replace(/<(?!Include|Xclude)[A-Z]\w*[^>]*\/>/g, '')
+    .replace(/<(?!Include|Xclude)[A-Z]\w*[^>]*>[\s\S]*?<\/(?!Include|Xclude)[A-Z]\w*>/g, '')
+    .trim();
 
   // Now escape HTML (this won't affect our placeholders)
   html = escapeHtml(html);
@@ -239,6 +313,7 @@ function markdownToHtml(mdContent) {
   html = html.replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>');
 
   // Lists - Fixed: proper handling of ul/ol nesting and separation
+  // IMPORTANT: Skip lines that are placeholders to prevent them from being wrapped in <p> tags
   const lines = html.split('\n');
   let currentListType = null; // null, 'ul', or 'ol'
   const processedLines = [];
@@ -300,10 +375,17 @@ function markdownToHtml(mdContent) {
 
   let finalHtml = processedLines.join('\n');
   
-  // Restore Include/Xclude placeholders
-  for (const [placeholder, original] of Object.entries(includePlaceholders)) {
+  // Restore preserved tags (Include/Xclude tags)
+  for (const [placeholder, original] of Object.entries(preservedTags)) {
     finalHtml = finalHtml.replace(placeholder, original);
   }
+  
+  // Now process admonitions AFTER all markdown processing
+  // At this point, admonition syntax (:::info, etc.) should still be in the content
+  finalHtml = processAdmonitions(finalHtml);
+  
+  // Clean up: remove <p> wrappers around admonition divs (processAdmonitions adds HTML that shouldn't be in <p>)
+  finalHtml = finalHtml.replace(/<p>\s*(<div class="alert[^"]*"[\s\S]*?<\/div>)\s*<\/p>/g, '$1');
 
   return finalHtml;
 }
@@ -340,19 +422,37 @@ function extractDocIds(config, docIds = []) {
 }
 
 /**
+ * Get the document base path based on language
+ * @param {string} language - Language code (ko, en, es, ja)
+ * @returns {string} Document base path
+ */
+function getDocBasePath(language) {
+  const supportedLanguages = ['ko', 'en', 'es', 'ja'];
+  const lang = supportedLanguages.includes(language) ? language : 'ko';
+  
+  // Korean uses 'docs', others use i18n structure
+  if (lang === 'ko') {
+    return path.join(__dirname, 'docs');
+  }
+  
+  return path.join(__dirname, 'i18n', lang, 'docusaurus-plugin-content-docs', 'current');
+}
+
+/**
  * Load and parse MDX file
  * @param {string} docId - Document ID
  * @returns {Object|null} Loaded file object or null
  */
 function loadMdxFile(docId) {
-  let filePath = path.join(__dirname, 'docs', `${docId}.mdx`);
+  const docBasePath = getDocBasePath(options.language);
+  let filePath = path.join(docBasePath, `${docId}.mdx`);
   
   if (!fs.existsSync(filePath)) {
-    filePath = path.join(__dirname, 'docs', `${docId}.md`);
+    filePath = path.join(docBasePath, `${docId}.md`);
   }
 
   if (!fs.existsSync(filePath)) {
-    console.warn(`⚠️  File not found: ${docId}`);
+    console.warn(`⚠️  File not found: ${docId} (searched in ${docBasePath})`);
     return null;
   }
 
@@ -566,7 +666,7 @@ function buildHtmlDocument(mdxFiles, title) {
   const toc = options.toc ? generateTableOfContents(mdxFiles) : '';
 
   const html = `<!DOCTYPE html>
-<html lang="ko">
+<html lang="${options.language}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

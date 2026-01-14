@@ -314,3 +314,77 @@ footer {
     font-size: 1.2em;
   }
 }
+/* Docusaurus Admonition Styles */
+.alert {
+  padding: 16px;
+  margin: 16px 0;
+  border-left: 4px solid;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
+
+.alert--info {
+  border-left-color: #0ea5e9;
+  background-color: #ecf7ff;
+}
+
+.alert--note {
+  border-left-color: #8b5cf6;
+  background-color: #f5f3ff;
+}
+
+.alert--tip {
+  border-left-color: #10b981;
+  background-color: #ecfdf5;
+}
+
+.alert--warning {
+  border-left-color: #f59e0b;
+  background-color: #fffbeb;
+}
+
+.alert--danger {
+  border-left-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.alert--caution {
+  border-left-color: #f59e0b;
+  background-color: #fffbeb;
+}
+
+.admonition-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.admonition-icon {
+  margin-right: 8px;
+  font-size: 1.2em;
+  display: inline-block;
+}
+
+.admonition-content {
+  margin-left: 20px;
+}
+
+.admonition-content p {
+  margin: 8px 0;
+}
+
+.admonition-content p:first-child {
+  margin-top: 0;
+}
+
+.admonition-content p:last-child {
+  margin-bottom: 0;
+}
+
+.admonition-content code {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+}
