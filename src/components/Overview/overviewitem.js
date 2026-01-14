@@ -72,9 +72,8 @@ function OverviewLink({item, renderAll}) {
   if (item.type === 'html') {
     return null;
   }
-  
   // 릴리스 관련 항목은 렌더링하지 않음
-  if (item.label?.includes('릴리스') || item.label?.includes('Release') || item.label?.includes('リリースノート') || item.label?.includes('Notas de la versión')) {
+  if (item.label?.toLowerCase().includes('릴리스') || item.label?.toLowerCase().includes('release') || item.label?.toLowerCase().includes('リリースノート') || item.label?.toLowerCase().includes('notas de la versión')) {
     return null;
   }
 
