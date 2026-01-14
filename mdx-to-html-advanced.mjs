@@ -145,7 +145,15 @@ function extractHeadingsFromMarkdown(content) {
  * @returns {string} HTML content
  */
 function markdownToHtml(mdContent) {
-  let html = escapeHtml(mdContent);
+  // Remove MDX/JSX comments first, before any other processing
+  let html = mdContent
+    .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
+    // Remove JSX component tags (e.g., <Overview />, <Component />, etc.)
+    .replace(/<[A-Z]\w*[^>]*\/>/g, '')
+    .replace(/<[A-Z]\w*[^>]*>[\s\S]*?<\/[A-Z]\w*>/g, '')
+    .trim();
+
+  html = escapeHtml(html);
 
   // Headers
   html = html.replace(/^### (.*?)$/gm, '<h3>$1</h3>');

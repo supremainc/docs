@@ -181,6 +181,13 @@ async function mdToHtml(mdContent) {
     // Simple markdown to HTML conversion
     let html = result.toString();
     
+    // Remove MDX/JSX comments and component tags first
+    html = html
+      .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
+      // Remove JSX component tags (e.g., <Overview />, <Component />, etc.)
+      .replace(/<[A-Z]\w*[^>]*\/>/g, '')
+      .replace(/<[A-Z]\w*[^>]*>[\s\S]*?<\/[A-Z]\w*>/g, '');
+    
     // Convert markdown syntax to HTML
     html = html
       .replace(/^### (.*?)$/gm, '<h3>$1</h3>')
