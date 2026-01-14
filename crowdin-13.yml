@@ -53,6 +53,7 @@ files: [
       # "/i18n/en/docusaurus-plugin-content-docs/current/device/**/*.mdx",
       # "/i18n/en/docusaurus-plugin-content-docs/current/how-to/*.mdx",
       # "/i18n/en/docusaurus-plugin-content-docs/current/how-to/*.json",
+      # "/i18n/en/docusaurus-plugin-content-docs/current/platform/**/*.mdx",
     ]
   }
 ]

@@ -53,6 +53,7 @@ files: [
       # "/docs/how-to/*.mdx",
       # "/docs/how-to/*.json",
       # "/docs/platform/biostar_air/**/*.mdx",
+      # "/docs/platform/**/*.mdx",
     ]
   }
 ]
