@@ -31,9 +31,11 @@ keywords:
 
    * **ID**：1～4294967295 の数字を入力してユーザーIDを登録します。 <Cmd sid="ui_168" product="dev" /> を <Cmd sid="ui_237" product="dev" /> に設定した場合、英数字と記号 `_` `-` の組み合わせをIDとして使用でき、最大32文字まで入力できます。
 
+   <PageBreak />
+
    * <Cmd sid="ui_228" product="dev" />：ユーザー認証用の顔を登録します。 <Cmd sid="ui_228" product="dev" /> → <Cmd sid="ui_108" product="dev" />をタップし、画面の指示に従って顔を登録します。 顔を追加登録するには <Image src="/img/common/ico-add.svg" ico alone />をタップします。 顔の登録の詳細は[ユーザー顔登録](#enrolling-user-faces)を参照してください。
 
-   * <Cmd sid="ui_312" product="dev" />：<Badge only>BS3M-ODB, BS3M-OAPB</Badge> ユーザー認証用の指紋を登録できます。 <Cmd sid="ui_312" product="dev" /> → <Cmd sid="ui_108" product="dev" /> を押し、画面の指示に従って指紋を登録します。 指紋をさらに登録するには <Image src="/img/common/ico-add.svg" ico alone /> を押します。 指紋登録の詳細は [ユーザー指紋登録](#enrolling-user-fingerprint) を参照してください。
+   * <Cmd sid="ui_312" product="dev" />：<Badge only>BS3M-ODB, BS3M-OAPB</Badge> ユーザー認証用の指紋を登録できます。 <Cmd sid="ui_312" product="dev" /> → <Cmd sid="ui_108" product="dev" /> を押し、画面の指示に従って指紋を登録します。 指紋をさらに登録するには、<Image src="/img/common/ico-add.svg" ico alone /> をクリックします。 指紋登録の詳細は [ユーザー指紋登録](#enrolling-user-fingerprint) を参照してください。
 
    * <Cmd sid="ui_323" product="dev" />：ユーザー認証用のカードを登録できます。 <Cmd sid="ui_323" product="dev" /> → <Cmd sid="ui_108" product="dev" />をタップし、ユーザーに割り当てるカードをRFカード認証部にスキャンします。 カードを追加登録するには <Cmd sid="ui_323" product="dev" /> → <Image src="/img/common/ico-add.svg" ico alone />をタップします。
 
@@ -61,6 +63,8 @@ keywords:
 
 3. ユーザー情報の登録を完了するには <Cmd sid="ui_295" product="dev" />をタップします。
 
+<PageBreak />
+
 ### ユーザー顔登録 {#enrolling-user-faces}
 
 import EnrollingFace from '../../common/_enrolling-face-warning.mdx';
@@ -77,9 +81,9 @@ import EnrollingFace from '../../common/_enrolling-face-warning.mdx';
 
    :::info
 
-   * 本製品の顔情報は、FaceStation F2 の顔テンプレートと互換性がありません。
+   * 本製品の顔情報は、FaceStation 2およびFaceLiteの顔情報と互換性がありません。
 
-   * 本製品の顔情報は、デバイスだけでなく、BioStar X で写真をアップロードしたり、CSV インポートを通じて一括登録することもできます。 ユーザーに顔登録リンクを送信し、ユーザー自身のモバイルデバイスからも顔を登録できます。 各登録方法の詳細は[BioStar X 管理者ガイド](../../platform/biostar_x/enroll-credential-face)を参照してください。
+   * 本製品の顔情報は、デバイスだけでなく、BioStar X で写真をアップロードしたり、CSV インポートを通じて一括登録することもできます。 ユーザーに顔登録リンクを送信し、ユーザー自身のモバイルデバイスからも顔を登録できます。 それぞれの登録方法の詳細については、<Linkto to="platform/biostar_x/enroll-credential-face">BioStar X 管理者マニュアル</Linkto>をご参照ください。
 
    * 顔を登録する際は次の事項に注意してください。
 
@@ -87,19 +91,21 @@ import EnrollingFace from '../../common/_enrolling-face-warning.mdx';
 
    :::
 
+<PageBreak />
+
 ## ユーザー指紋登録 <Badge only>BS3M-ODB, BS3M-OAPB</Badge> {#enrolling-user-fingerprint}
 
 1. <Image src="/img/common/ico-menu.svg" ico alone />を選択し、管理者権限の認証手段で認証します。
 
 2. <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-add.svg" ico alone />を選択します。
 
-3. <Cmd sid="ui_312" product="dev" /> → <Cmd sid="ui_108" product="dev" /> を押します。
+3. <Cmd sid="ui_312" product="dev" /> → <Cmd sid="ui_108" product="dev" /> をクリックします。
 
 4. 登録する指の指紋をスキャンした後、同じ指の指紋をもう一度スキャンします。
 
 :::info
 
-* 指紋登録は BS3M-ODB、BS3M-OAPB 製品でのみ使用できます。
+* 指紋登録は BS3M-ODB、BS3M-OAPB 製品でのみ利用できます。
 
 * 指がセンサーに完全に接触するよう深く当ててください。
 
@@ -121,7 +127,7 @@ import EnrollingFace from '../../common/_enrolling-face-warning.mdx';
 
 2. <Cmd sid="ui_166" product="dev" /> → <Image src="/img/common/ico-search.svg" ico alone />をクリックします。
 
-3. 使用する検索条件を選択します。 <Cmd sid="ui_299" product="dev" />、<Cmd sid="ui_167" product="dev" />、<Cmd sid="ui_253" product="dev" />、<Cmd sid="ui_228" product="dev" />、<Cmd sid="ui_322" product="dev" />でユーザーを検索します。
+3. 使用する検索条件を選択します。 <Cmd sid="ui_299" product="dev" />, <Cmd sid="ui_167" product="dev" />, <Cmd sid="ui_253" product="dev" />, <Cmd sid="ui_228" product="dev" />, <Cmd sid="ui_312" product="dev" />, <Cmd sid="ui_322" product="dev" /> でユーザーを検索できます。
 
 4. 編集するユーザーを選択します。
 
@@ -131,9 +137,13 @@ import EnrollingFace from '../../common/_enrolling-face-warning.mdx';
 
 :::info
 
-<Cmd sid="ui_320" product="dev" /> は BioStar X で登録できます。 出入グループの登録の詳細は [BioStar X 管理者マニュアル](../../platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup) を参照してください。
+* 指紋検索は BS3M-ODB、BS3M-OAPB 製品でのみ使用できます。
+
+* <Cmd sid="ui_320" product="dev" /> は BioStar X で登録できます。 出入グループ登録の詳細については、<Linkto to="platform/biostar_x/settings-access-control-manage-access-group#addAccessGroup">BioStar X管理者説明書</Linkto>をご参照ください。
 
 :::
+
+<PageBreak />
 
 ## ユーザーの一括削除
 
