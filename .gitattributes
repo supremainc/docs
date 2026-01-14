@@ -3,6 +3,8 @@
 
 # 리눅스/유닉스 환경에서 실행되는 파일만 LF
 *.sh       text eol=lf
+*.mdx      text eol=lf
+*.md       text eol=lf
 Dockerfile text eol=lf
 
 # Windows 전용 파일은 CRLF
