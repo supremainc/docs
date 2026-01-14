@@ -1,14 +1,14 @@
 {
   "title": {
-    "message": "変更履歴",
+    "message": "Changelog",
     "description": "The title for the blog used in SEO"
   },
   "description": {
-    "message": "Suprema製品の変更履歴",
+    "message": "Suprema product change logs",
     "description": "The description for the blog used in SEO"
   },
   "sidebar.title": {
-    "message": "すべての変更履歴",
+    "message": "All Changelogs",
     "description": "The label for the left sidebar"
   }
 }

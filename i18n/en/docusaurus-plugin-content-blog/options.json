@@ -4,11 +4,11 @@
     "description": "The title for the blog used in SEO"
   },
   "description": {
-    "message": "Suprema Product Change Logs",
+    "message": "Suprema product change logs",
     "description": "The description for the blog used in SEO"
   },
   "sidebar.title": {
-    "message": "All Change Logs",
+    "message": "All Changelogs",
     "description": "The label for the left sidebar"
   }
 }
