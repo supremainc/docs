@@ -13,7 +13,7 @@ keywords: [플러그인 개발, 엔드포인트, 세션 브리지, 암호화]
 
 ### 플러그인 등록 엔드포인트
 
-<Badge className='get'>GET</Badge> `/bsx`
+<Badge className='get' only>GET</Badge> `/bsx`
 
 플러그인을 등록할 때 **BioStar X Service Manager**에서 서버 접근성을 확인하기 위해 호출하는 엔드포인트입니다.
 
@@ -62,7 +62,7 @@ curl -H "X-BioStar-Ping: test123" http://localhost:8000/bsx
 
 ### 사용자 인증 콜백 엔드포인트
 
-<Badge className='post'>POST</Badge> `/bsx`
+<Badge className='post' only>POST</Badge> `/bsx`
 
 사용자가 **BioStar X** 웹 인터페이스에서 플러그인 아이콘을 클릭할 때 호출되는 엔드포인트입니다. 이 과정에서 **BioStar X**에 로그한 사용자의 세션(session)을 요청해 응답을 받습니다. 
 
