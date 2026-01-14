@@ -44,6 +44,15 @@ files: [
       "/i18n/en/docusaurus-plugin-content-docs/current/reference/**/smartcardissue.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/*/*/release-notes/*.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/common/_ic-information.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/*.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/**/*.mdx",
+      # "/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/*.mdx",
+      # "/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/**/*.mdx",
+      # "/i18n/en/docusaurus-plugin-content-docs/current/platform/plugins/*.mdx",
+      # "/i18n/en/docusaurus-plugin-content-docs/current/device/*.mdx",
+      # "/i18n/en/docusaurus-plugin-content-docs/current/device/**/*.mdx",
+      # "/i18n/en/docusaurus-plugin-content-docs/current/how-to/*.mdx",
+      # "/i18n/en/docusaurus-plugin-content-docs/current/how-to/*.json",
     ]
   }
 ]
