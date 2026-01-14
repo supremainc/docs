@@ -14,7 +14,7 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "translate": "tsx src/plugins/translate/index.ts",
     "translate:file": "tsx src/plugins/translate/index.ts --file",
-    "mdx-to-html": "node mdx-to-html-advanced.mjs"
+    "mdx-to-html": "node genpdf/index.mjs"
   },
   "dependencies": {
     "@algolia/autocomplete-js": "^1.19.4",
