@@ -91,6 +91,28 @@ function processIncludeXclude(content, productOption = '') {
 }
 
 /**
+ * Process Badge components
+ * <Badge className='get'>GET</Badge> → <span class="badge get">GET</span>
+ * <Badge>content</Badge> → <span class="badge">Affects version: content</span>
+ */
+function processBadgeComponents(content, translations = {}) {
+  // Get 'Affects version' label from translations (code.json structure: { "id": { "message": "..." } })
+  const revisionLabel = (translations['theme.revision.badge'] && translations['theme.revision.badge'].message) || 'Affects version';
+
+  // Badge with className
+  content = content.replace(/<Badge\s+className=['"]([^'"]+)['"]>([^<]*)<\/Badge>/g, (match, className, text) => {
+    return `<span class="badge ${className}">${text}</span>`;
+  });
+
+  // Badge without className (default with revision label prefix from translations)
+  content = content.replace(/<Badge>([^<]*)<\/Badge>/g, (match, text) => {
+    return `<span class="badge">${revisionLabel}:&nbsp;${text}</span>`;
+  });
+
+  return content;
+}
+
+/**
  * Convert markdown to HTML using markdown-it
  * @param {string} mdContent - Markdown content
  * @param {Object} translations - i18n translations object
@@ -103,6 +125,9 @@ export function markdownToHtml(mdContent, translations, productOption = '') {
 
   // Process Include/Xclude FIRST (before any markdown processing)
   let html = processIncludeXclude(mdContent, productOption);
+
+  // Process Badge components (before removing other JSX)
+  html = processBadgeComponents(html, translations);
 
   // Remove MDX/JSX comments and components
   html = html
