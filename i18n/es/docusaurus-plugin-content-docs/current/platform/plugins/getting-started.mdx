@@ -1,15 +1,15 @@
 ---
 id: getting-started
-title: Primeros pasos
-description: Esta guía describe los requisitos y los conceptos básicos para iniciar el desarrollo de complementos de BioStar X.
+title: Primeros Pasos
+description: Esta guía describe los requisitos y los conceptos básicos para iniciar el desarrollo de conector de BioStar X.
 keywords:
-  - Desarrollo de complementos
-  - Primeros pasos
+  - Desarrollo de conector
+  - Primeros Pasos
   - Requisitos
   - Arquitectura
 ---
 
-Esto proporciona los requisitos y conceptos básicos para desarrollar complementos que se integren con **BioStar X**.
+Esto proporciona los requisitos y conceptos básicos para desarrollar conectores que se integren con **BioStar X**.
 
 ## Antes de comenzar
 
@@ -27,13 +27,13 @@ Esto proporciona los requisitos y conceptos básicos para desarrollar complement
 
 * **Servidor BioStar X**: entorno de prueba de **BioStar X**
 
-* **Servidor web de desarrollo**: servidor web para alojar el complemento
+* **Servidor web de desarrollo**: servidor web para alojar el conector
 
 * **Cliente HTTP**: herramientas para probar la API como curl, Postman, etc.
 
-## Arquitectura del complemento
+## Arquitectura del conector
 
-El complemento de **BioStar X** funciona con la siguiente estructura.
+El conector de **BioStar X** funciona con la siguiente estructura.
 
 ```mermaid
 sequenceDiagram
@@ -74,20 +74,20 @@ La clave o el certificado no se pueden volver a descargar a menos que se vuelvan
 
 :::
 
-## Descripción general del funcionamiento del complemento
+## Resumen de la operación del conector
 
-El sistema de complementos de **BioStar X** opera en tres etapas principales.
+El sistema de conector de **BioStar X** opera en tres etapas principales.
 
-1. **Registro del complemento**: registro del servidor del complemento en el Service Manager y verificación de la accesibilidad
+1. **Registro del complemento**: Registro del servidor del conector en el Service Manager y verificación de la accesibilidad
 
 2. **Gestión de certificados**: gestión de claves para una comunicación segura mediante Session Bridge
 
-3. **Ejecución del complemento**: autenticación a través del Session Bridge automático cuando el usuario accede al complemento
+3. **Ejecución del complemento**: Autenticación a través del Session Bridge automático cuando el usuario accede al conector
 
 Para conocer los métodos de implementación específicos en cada etapa, consulte la [guía de desarrollo](./development-guide).
 
 :::info
 
-Los certificados se pueden descargar desde la página de detalles del complemento correspondiente después de registrar el complemento. Si pierdes el certificado, descárgalo de nuevo. En ese momento, el certificado existente se invalidará.
+Los certificados se pueden descargar desde la página de detalles del conector correspondiente después de registrar el conector. Si pierdes el certificado, descárgalo de nuevo. En ese momento, el certificado existente se invalidará.
 
 :::

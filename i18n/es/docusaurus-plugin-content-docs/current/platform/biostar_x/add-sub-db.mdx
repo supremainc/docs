@@ -1,6 +1,6 @@
 ---
 id: add-sub-db
-title: Agregar base de datos auxiliar
+title: Agregar Base de Datos Auxiliar
 description: Al agregar un servidor de comunicación, agrega y conecta una base de datos auxiliar para reducir la carga en el servidor principal.
 keywords:
   - Base de datos
@@ -234,6 +234,7 @@ Sigue los pasos a continuación para enlazar las tablas necesarias en la base de
 - Asegúrate de ingresar la sentencia `CREATE` generada por la consulta anterior en la base de datos auxiliar.
 
    <DbQueryCreate />
+
 </div>
 
 </Step>
@@ -369,19 +370,19 @@ DECLARE @SourceSchema  sysname = N'dbo';
 DECLARE @TargetSchema  sysname = N'dbo';
 
 SELECT
-   'IF OBJECT_ID(N''' + QUOTENAME(@TargetSchema,'') + '.' + QUOTENAME(t.name,'') + ''', ''SN'') IS NOT NULL '
-+ 'DROP SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name) + ';'
-+ 'CREATE SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name)
-+ ' FOR ' + QUOTENAME(@LinkedServer) + '.' + QUOTENAME(DB_NAME()) + '.' + QUOTENAME(s.name) + '.' + QUOTENAME(t.name) + ';'
-AS recreate_synonym_sql
+      'IF OBJECT_ID(N''' + QUOTENAME(@TargetSchema,'') + '.' + QUOTENAME(t.name,'') + ''', ''SN'') IS NOT NULL '
+   + 'DROP SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name) + ';'
+   + 'CREATE SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name)
+   + ' FOR ' + QUOTENAME(@LinkedServer) + '.' + QUOTENAME(DB_NAME()) + '.' + QUOTENAME(s.name) + '.' + QUOTENAME(t.name) + ';'
+   AS recreate_synonym_sql
 FROM sys.tables AS t
 JOIN sys.schemas AS s
-ON s.schema_id = t.schema_id
+   ON s.schema_id = t.schema_id
 WHERE s.name = @SourceSchema
-AND t.is_ms_shipped = 0
-AND t.name NOT LIKE 't_lg[0-9][0-9][0-9][0-9][0-9][0-9]'
-AND t.name NOT LIKE 't_almevt[0-9][0-9][0-9][0-9][0-9][0-9]'
-AND t.name NOT LIKE 't_lgalmtrstrc[0-9][0-9][0-9][0-9][0-9][0-9]'
+   AND t.is_ms_shipped = 0
+   AND t.name NOT LIKE 't_lg[0-9][0-9][0-9][0-9][0-9][0-9]'
+   AND t.name NOT LIKE 't_almevt[0-9][0-9][0-9][0-9][0-9][0-9]'
+   AND t.name NOT LIKE 't_lgalmtrstrc[0-9][0-9][0-9][0-9][0-9][0-9]'
 ORDER BY t.name;
 ```
 
@@ -394,19 +395,19 @@ DECLARE @SourceSchema  sysname = N'dbo';      -- Schema to target in the main DB
 DECLARE @TargetSchema  sysname = N'dbo';      -- Schema to create synonyms in the sub DB (reflected in the output string)
 
 SELECT
-   'IF OBJECT_ID(N''' + QUOTENAME(@TargetSchema,'') + '.' + QUOTENAME(t.name,'') + ''', ''SN'') IS NOT NULL '
-+ 'DROP SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name) + ';'
-+ 'CREATE SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name)
-+ ' FOR ' + QUOTENAME(@LinkedServer) + '.' + QUOTENAME(DB_NAME()) + '.' + QUOTENAME(s.name) + '.' + QUOTENAME(t.name) + ';'
-AS recreate_synonym_sql
+      'IF OBJECT_ID(N''' + QUOTENAME(@TargetSchema,'') + '.' + QUOTENAME(t.name,'') + ''', ''SN'') IS NOT NULL '
+   + 'DROP SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name) + ';'
+   + 'CREATE SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name)
+   + ' FOR ' + QUOTENAME(@LinkedServer) + '.' + QUOTENAME(DB_NAME()) + '.' + QUOTENAME(s.name) + '.' + QUOTENAME(t.name) + ';'
+   AS recreate_synonym_sql
 FROM sys.tables AS t
 JOIN sys.schemas AS s
-ON s.schema_id = t.schema_id
+   ON s.schema_id = t.schema_id
 WHERE s.name = @SourceSchema
-AND t.is_ms_shipped = 0
-AND t.name NOT LIKE 't_lg[0-9][0-9][0-9][0-9][0-9][0-9]'
-AND t.name NOT LIKE 't_almevt[0-9][0-9][0-9][0-9][0-9][0-9]'
-AND t.name NOT LIKE 't_lgalmtrstrc[0-9][0-9][0-9][0-9][0-9][0-9]'
+   AND t.is_ms_shipped = 0
+   AND t.name NOT LIKE 't_lg[0-9][0-9][0-9][0-9][0-9][0-9]'
+   AND t.name NOT LIKE 't_almevt[0-9][0-9][0-9][0-9][0-9][0-9]'
+   AND t.name NOT LIKE 't_lgalmtrstrc[0-9][0-9][0-9][0-9][0-9][0-9]'
 ORDER BY t.name;
 ```
 
