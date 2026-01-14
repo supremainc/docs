@@ -17,7 +17,7 @@ Para desarrollar un conector integrado con **BioStar X**, debe implementar los s
 
 ### Endpoint de registro de conector
 
-<Badge className="get">GET</Badge> `/bsx`
+<Badge className="get" only>GET</Badge> `/bsx`
 
 Este es el endpoint que el **BioStar X Service Manager** llama para comprobar la accesibilidad del servidor al registrar el conector.
 
@@ -65,7 +65,7 @@ curl -H "X-BioStar-Ping: test123" http://localhost:8000/bsx
 
 ### Endpoint de devolución de llamada de autenticación de usuario
 
-<Badge className="post">POST</Badge> `/bsx`
+<Badge className="post" only>POST</Badge> `/bsx`
 
 Este es el endpoint que se llama cuando el usuario hace clic en el ícono del conector en la interfaz web de **BioStar X**. En este proceso, se solicita la sesión del usuario conectado en **BioStar X** y se recibe una respuesta.
 
