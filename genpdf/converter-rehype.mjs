@@ -80,6 +80,25 @@ function extractHeadingText(node) {
 }
 
 /**
+ * Create a remark plugin that converts markdown image paths to absolute file paths
+ * Converts /img/* paths to absolute file system paths for PDF generation
+ */
+function remarkTransformImagePaths(basePath = '') {
+  return (tree) => {
+    visit(tree, 'image', (node) => {
+      if (!node.url) return;
+
+      // Convert /img/... to absolute file path
+      if (node.url.startsWith('/img/')) {
+        if (basePath) {
+          node.url = basePath.replace(/\\/g, '/') + '/static' + node.url;
+        }
+      }
+    });
+  };
+}
+
+/**
  * Create a remark plugin that transforms relative doc links for merged output
  * Since all docs are merged into one HTML, relative links need to point to heading IDs
  * 
@@ -793,6 +812,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(remarkDirective)
     .use(remarkDirectiveToAdmonition)
     .use(remarkRemoveComments)
+    .use(remarkTransformImagePaths, basePath)
     .use(remarkTransformDocLinks, docPath, language)
     .use(remarkAddHeadingIds, headingId)
     .use(remarkProcessIncludeXclude, productOption)
