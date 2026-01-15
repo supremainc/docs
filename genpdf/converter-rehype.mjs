@@ -51,6 +51,102 @@ function extractHeadingText(node) {
 }
 
 /**
+ * Create a remark plugin that transforms relative doc links for merged output
+ * Since all docs are merged into one HTML, relative links need to point to heading IDs
+ * 
+ * docPath format: "platform/plugins/index"
+ * language: "ko", "en", "ja", "es"
+ * Link transformation rules:
+ * - [text](./doc-id) or [text](doc-id) → href='#doc-id' (same group)
+ * - [text](../biostar_x/licensing) → href='https://docs.supremainc.com/platform/biostar_x/licensing' (ko)
+ *                                  → href='https://docs.supremainc.com/en/platform/biostar_x/licensing' (en)
+ * - [text](../../platform/biostar_x/licensing) → similar to above
+ * - [text](doc-id#anchor) → href='#anchor' (same group with anchor)
+ * - [text](../other-group/doc-id#anchor) → href='https://...' (external with anchor)
+ */
+function remarkTransformDocLinks(docPath = '', language = 'ko') {
+  return (tree) => {
+    visit(tree, 'link', (node) => {
+      if (!node.url) return;
+      
+      const url = node.url;
+      // Build base URL based on language
+      const baseUrl = language === 'ko' 
+        ? 'https://docs.supremainc.com'
+        : `https://docs.supremainc.com/${language}`;
+      
+      // Skip if already an absolute URL or starts with # (internal anchor)
+      if (url.startsWith('http') || url.startsWith('https') || url.startsWith('#')) {
+        return;
+      }
+      
+      // Split URL and anchor
+      const [pathPart, anchor] = url.split('#');
+      
+      // Check if this is a relative path with ../ (external doc reference)
+      if (pathPart.includes('..')) {
+        // Calculate absolute path from current docPath
+        // docPath format: "platform/plugins/index"
+        let absolutePath = pathPart;
+        
+        if (docPath) {
+          // Get current directory from docPath
+          const docParts = docPath.split('/');
+          // Remove the file name (last part)
+          const currentDir = docParts.slice(0, -1);
+          
+          // Parse the relative path
+          const pathParts = pathPart.split('/');
+          let upLevels = 0;
+          let docPathSegments = [];
+          
+          for (const part of pathParts) {
+            if (part === '..') {
+              upLevels++;
+            } else if (part !== '.') {
+              docPathSegments.push(part);
+            }
+          }
+          
+          // Calculate absolute path
+          const basePath = currentDir.slice(0, Math.max(0, currentDir.length - upLevels));
+          const fullPath = [...basePath, ...docPathSegments];
+          absolutePath = fullPath.join('/');
+        } else {
+          // No current docPath, remove leading ../ and use as-is
+          absolutePath = pathPart.replace(/^(\.\.\/)+/, '');
+        }
+        
+        // Convert to full URL with language-aware base
+        node.url = `${baseUrl}/${absolutePath}`;
+        
+        // Add anchor if present
+        if (anchor) {
+          node.url += `#${anchor}`;
+        }
+      } else {
+        // Relative doc link in same or sibling group
+        // Extract doc ID from path
+        const [docId, hashAnchor] = pathPart.replace(/^\.\//, '').split('#');
+        
+        // For same-group links, use hash anchor
+        if (docId) {
+          node.url = `#${docId}`;
+        }
+        
+        // If there's an anchor, use it instead
+        if (hashAnchor) {
+          node.url = `#${hashAnchor}`;
+        } else if (anchor) {
+          node.url = `#${anchor}`;
+        }
+      }
+    });
+  };
+}
+
+
+/**
  * Create a remark plugin that adds IDs to headings
  * h1: uses docId (document ID from metadata)
  * h2+: uses explicit [#slug] if present, otherwise generates from content
@@ -321,6 +417,25 @@ function rehypeProcessAdmonitions() {
 }
 
 /**
+ * Create a rehype plugin that adds target="_blank" to external links
+ */
+function rehypeAddTargetBlankToExternalLinks() {
+  return (tree) => {
+    visit(tree, 'element', (node) => {
+      if (!node || node.tagName !== 'a') return;
+      
+      const href = node.properties?.href;
+      if (!href) return;
+      
+      // Add target="_blank" to external links (starting with http or https)
+      if (typeof href === 'string' && (href.startsWith('http://') || href.startsWith('https://'))) {
+        node.properties.target = '_blank';
+      }
+    });
+  };
+}
+
+/**
  * Create a rehype plugin that converts MDX JSX elements to HTML
  */
 function rehypeProcessMdxElements(translations = {}, basePath = '') {
@@ -451,19 +566,21 @@ function rehypeProcessMdxElements(translations = {}, basePath = '') {
 /**
  * Create a unified processor with rehype-mdx-elements support
  */
-function createProcessor(translations = {}, productOption = '', basePath = '', docId = '') {
+function createProcessor(translations = {}, productOption = '', basePath = '', headingId = '', docPath = '', language = 'ko') {
   return unified()
     .use(remarkParse)
     .use(remarkMdx)
     .use(remarkDirective)
     .use(remarkDirectiveToAdmonition)
     .use(remarkRemoveComments)
-    .use(remarkAddHeadingIds, docId)
+    .use(remarkTransformDocLinks, docPath, language)
+    .use(remarkAddHeadingIds, headingId)
     .use(remarkProcessIncludeXclude, productOption)
     .use(remarkPrism)
     .use(remarkRehype, { passThrough: ['mdxJsxFlowElement', 'mdxJsxTextElement'] })
     .use(rehypeAddAdmonitionIcons, translations)
     .use(rehypeProcessAdmonitions)
+    .use(rehypeAddTargetBlankToExternalLinks)
     .use(rehypeProcessMdxElements, translations, basePath)
     .use(rehypeMdxElements, {
       allowedElements: ['Image', 'Badge', 'Include', 'Xclude']
@@ -477,11 +594,13 @@ function createProcessor(translations = {}, productOption = '', basePath = '', d
  * @param {Object} translations - i18n translations object
  * @param {string} productOption - Product filter option
  * @param {string} basePath - Base path for absolute file paths (for PDF generation)
- * @param {string} docId - Document ID for h1 heading
+ * @param {string} headingId - Heading ID for h1 element
+ * @param {string} docPath - Full document path (e.g., 'platform/plugins/index')
+ * @param {string} language - Language code (ko, en, ja, es, etc.)
  * @returns {Promise<string>} HTML content
  */
-export async function markdownToHtml(mdContent, translations = {}, productOption = '', basePath = '', docId = '') {
-  const processor = createProcessor(translations, productOption, basePath, docId);
+export async function markdownToHtml(mdContent, translations = {}, productOption = '', basePath = '', headingId = '', docPath = '', language = 'ko') {
+  const processor = createProcessor(translations, productOption, basePath, headingId, docPath, language);
   
   try {
     const file = await processor.process(mdContent);

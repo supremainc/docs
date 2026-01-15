@@ -140,7 +140,7 @@ export async function buildHtmlDocument(mdxFiles, title, options = {}) {
     const docTitle = file.frontmatter.title || file.docId;
     // Use frontmatter.id if available, otherwise extract from docId
     const h1Id = file.frontmatter.id || file.docId.split('/').pop();
-    const content = await markdownToHtml(file.content, translations, product, basePath, h1Id);
+    const content = await markdownToHtml(file.content, translations, product, basePath, h1Id, file.docId, language);
     
     contentSections.push(`
     <section class="doc-section" id="${file.headingId}">
