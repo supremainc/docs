@@ -40,18 +40,92 @@ export function extractDocIds(config, docIds = []) {
 }
 
 /**
+ * Recursively process import statements in MDX content
+ * Handles nested imports: A imports B, B imports C, etc.
+ * @param {string} filePath - Current file path being processed
+ * @param {Object} processedFiles - Cache to prevent circular imports
+ * @param {Object} imports - Accumulated imports from all levels
+ * @returns {Object} All collected imports
+ */
+function processFileImportsRecursively(filePath, processedFiles = {}, imports = {}) {
+  // Prevent circular imports
+  if (processedFiles[filePath]) {
+    return imports;
+  }
+  processedFiles[filePath] = true;
+
+  try {
+    const fileContent = fs.readFileSync(filePath, 'utf8');
+    const { content: importedMdxContent } = matter(fileContent);
+    const baseDir = path.dirname(filePath);
+
+    // Extract all import statements from this file
+    const importRegex = /import\s+(\w+)\s+from\s+['"]([^'"]+)['"];?/g;
+    let match;
+
+    while ((match = importRegex.exec(importedMdxContent)) !== null) {
+      const componentName = match[1];
+      const importPath = match[2];
+
+      try {
+        // Resolve the actual file path
+        let actualPath = path.join(baseDir, importPath);
+
+        // Try both .mdx and .md extensions
+        if (!fs.existsSync(actualPath)) {
+          if (fs.existsSync(actualPath + '.mdx')) {
+            actualPath = actualPath + '.mdx';
+          } else if (fs.existsSync(actualPath + '.md')) {
+            actualPath = actualPath + '.md';
+          } else {
+            console.warn(`⚠️  Imported file not found: ${importPath}`);
+            continue;
+          }
+        }
+
+        // Normalize path for circular reference detection
+        const normalizedPath = path.normalize(actualPath);
+
+        // Read and clean the imported file
+        const importedFileContent = fs.readFileSync(normalizedPath, 'utf8');
+        const { content: importedFileMdxContent } = matter(importedFileContent);
+
+        let cleanedContent = importedFileMdxContent
+          // Remove MDX comments
+          .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
+          // Remove import statements (including optional semicolon)
+          .replace(/import\s+[\s\S]*?from\s+['"][^'"]+['"];?\s*/g, '')
+          // Remove JSX expressions BUT PRESERVE {props.xxx} patterns
+          .replace(/\{(?!props\.[a-zA-Z_]\w*\})[^}]*\}/g, '');
+
+        // Add this component to imports
+        imports[componentName] = cleanedContent;
+
+        // Recursively process nested imports in this file
+        processFileImportsRecursively(normalizedPath, processedFiles, imports);
+      } catch (error) {
+        console.warn(`⚠️  Error loading nested import ${importPath}: ${error.message}`);
+      }
+    }
+  } catch (error) {
+    console.warn(`⚠️  Error processing nested file ${filePath}: ${error.message}`);
+  }
+
+  return imports;
+}
+
+/**
  * Process import statements in MDX and replace with actual content
  * Handles: import Component from './path/to/file.mdx'
  * And replaces: <Component /> with the imported file's content
+ * Supports nested imports: A imports B, B imports C, etc.
  * @param {string} content - MDX content
  * @param {string} basePath - Base directory for relative imports
+ * @param {string} currentFilePath - Path of the file being processed (for nested imports)
  * @returns {string} Content with imports processed
  */
-export function processImportsInMdx(content, basePath) {
+export function processImportsInMdx(content, basePath, currentFilePath = '') {
   // Extract all import statements
-  // Pattern: import ComponentName from 'path'
-  // Extract all import statements (including optional semicolon)
-  // Pattern: import ComponentName from 'path'; or import ComponentName from 'path'
   const importRegex = /import\s+(\w+)\s+from\s+['"]([^'"]+)['"];?/g;
   const imports = {};
   let match;
@@ -76,29 +150,27 @@ export function processImportsInMdx(content, basePath) {
         }
       }
 
+      // Normalize path for circular reference detection
+      const normalizedPath = path.normalize(actualPath);
+
       // Read the imported file and extract frontmatter
-      const importedContent = fs.readFileSync(actualPath, 'utf8');
+      const importedContent = fs.readFileSync(normalizedPath, 'utf8');
       const { content: importedMdxContent } = matter(importedContent);
       
       // Remove JSX/MDX syntax from imported content
-      // Focus on:
-      // 1. Remove MDX comments
-      // 2. Remove import statements  
-      // 3. Convert {#anchor} for heading IDs
-      // 4. Remove other JSX expressions
-      // 
-      // NOTE: JSX component tags (Include, Xclude, Image, Badge, Cmd, etc.)
-      // are preserved here and will be processed by converter-rehype.mjs plugins
       let cleanedContent = importedMdxContent
         // Remove MDX comments
         .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
         // Remove import statements (including optional semicolon)
         .replace(/import\s+[\s\S]*?from\s+['"][^'"]+['"];?\s*/g, '')
         // Remove JSX expressions BUT PRESERVE {props.xxx} patterns
-        // Excludes: {props.xxx} patterns which will be substituted later
         .replace(/\{(?!props\.[a-zA-Z_]\w*\})[^}]*\}/g, '');
       
       imports[componentName] = cleanedContent;
+
+      // Recursively process nested imports from this file
+      const nestedImports = processFileImportsRecursively(normalizedPath);
+      Object.assign(imports, nestedImports);
     } catch (error) {
       console.warn(`⚠️  Error loading import ${importPath}: ${error.message}`);
     }
