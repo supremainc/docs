@@ -404,6 +404,19 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
         const srcAttr = attributes.find(attr => attr.name === 'src');
         let src = srcAttr ? srcAttr.value : '';
         
+        // Extract optional attributes
+        const classNameAttr = attributes.find(attr => attr.name === 'className');
+        const className = classNameAttr ? classNameAttr.value : '';
+        
+        const widthAttr = attributes.find(attr => attr.name === 'width');
+        const width = widthAttr ? widthAttr.value : '';
+        
+        const heightAttr = attributes.find(attr => attr.name === 'height');
+        const height = heightAttr ? heightAttr.value : '';
+        
+        const altAttr = attributes.find(attr => attr.name === 'alt');
+        const alt = altAttr ? altAttr.value : '';
+        
         const hasAlone = attributes.some(attr => attr.name === 'alone');
         
         // Convert to absolute file system path for PDF generation
@@ -427,6 +440,16 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
         const hasCaption = attributes.some(attr => attr.name === 'caption');
         const hasIco = attributes.some(attr => attr.name === 'ico');
 
+        // Helper function to build img properties
+        const buildImgProperties = (baseSrc) => {
+          const props = { src: baseSrc };
+          if (className) props.className = [className];
+          if (width) props.width = width;
+          if (height) props.height = height;
+          if (alt) props.alt = alt;
+          return props;
+        };
+
         let replacement = null;
 
         if (hasCaption && src) {
@@ -438,7 +461,7 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
               {
                 type: 'element',
                 tagName: 'img',
-                properties: { src },
+                properties: buildImgProperties(src),
                 children: []
               },
               {
@@ -450,10 +473,16 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
             ]
           };
         } else if (hasIco && src) {
+          const imgProps = buildImgProperties(src);
+          if (!imgProps.className) {
+            imgProps.className = ['ico'];
+          } else {
+            imgProps.className.push('ico');
+          }
           replacement = {
             type: 'element',
             tagName: 'img',
-            properties: { src, className: ['ico'] },
+            properties: imgProps,
             children: []
           };
         } else if (src) {
@@ -465,7 +494,7 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
               {
                 type: 'element',
                 tagName: 'img',
-                properties: { src },
+                properties: buildImgProperties(src),
                 children: []
               }
             ]
@@ -509,6 +538,149 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
           tagName: 'span',
           properties: { className: classNames },
           children: [{ type: 'text', value: displayText }]
+        };
+
+        parent.children[index] = replacement;
+      }
+
+      // Process Table components
+      if (node.type === 'mdxJsxFlowElement' && node.name === 'Table') {
+        const attributes = node.attributes || [];
+        const classNameAttr = attributes.find(attr => attr.name === 'className');
+        const tableClassName = classNameAttr ? classNameAttr.value : '';
+
+        const replacement = {
+          type: 'element',
+          tagName: 'div',
+          properties: { className: ['overflow-x'] },
+          children: [
+            {
+              type: 'element',
+              tagName: 'table',
+              properties: tableClassName ? { className: [tableClassName] } : {},
+              children: node.children || []
+            }
+          ]
+        };
+
+        parent.children[index] = replacement;
+      }
+
+      // Process Thead components
+      if (node.type === 'mdxJsxFlowElement' && node.name === 'Thead') {
+        const replacement = {
+          type: 'element',
+          tagName: 'thead',
+          properties: {},
+          children: node.children || []
+        };
+
+        parent.children[index] = replacement;
+      }
+
+      // Process Tbody components
+      if (node.type === 'mdxJsxFlowElement' && node.name === 'Tbody') {
+        const replacement = {
+          type: 'element',
+          tagName: 'tbody',
+          properties: {},
+          children: node.children || []
+        };
+
+        parent.children[index] = replacement;
+      }
+
+      // Process Row (tr) components
+      if (node.type === 'mdxJsxFlowElement' && node.name === 'Row') {
+        const attributes = node.attributes || [];
+        const classNameAttr = attributes.find(attr => attr.name === 'className');
+        const rowClassName = classNameAttr ? classNameAttr.value : '';
+
+        const replacement = {
+          type: 'element',
+          tagName: 'tr',
+          properties: rowClassName ? { className: [rowClassName] } : {},
+          children: node.children || []
+        };
+
+        parent.children[index] = replacement;
+      }
+
+      // Process Th (table header) components
+      if (node.type === 'mdxJsxFlowElement' && node.name === 'Th') {
+        const attributes = node.attributes || [];
+        const colspanAttr = attributes.find(attr => attr.name === 'colspan');
+        const rowspanAttr = attributes.find(attr => attr.name === 'rowspan');
+
+        const properties = {};
+        if (colspanAttr) properties.colspan = parseInt(colspanAttr.value, 10);
+        if (rowspanAttr) properties.rowspan = parseInt(rowspanAttr.value, 10);
+
+        const replacement = {
+          type: 'element',
+          tagName: 'th',
+          properties,
+          children: node.children || []
+        };
+
+        parent.children[index] = replacement;
+      }
+
+      // Process Td (table data) components
+      if (node.type === 'mdxJsxFlowElement' && node.name === 'Td') {
+        const attributes = node.attributes || [];
+        const colspanAttr = attributes.find(attr => attr.name === 'colspan');
+        const rowspanAttr = attributes.find(attr => attr.name === 'rowspan');
+
+        const properties = {};
+        if (colspanAttr) properties.colspan = parseInt(colspanAttr.value, 10);
+        if (rowspanAttr) properties.rowspan = parseInt(rowspanAttr.value, 10);
+
+        const replacement = {
+          type: 'element',
+          tagName: 'td',
+          properties,
+          children: node.children || []
+        };
+
+        parent.children[index] = replacement;
+      }
+
+      // Process Td (table data) text elements (inside paragraphs)
+      if (node.type === 'mdxJsxTextElement' && node.name === 'Td') {
+        const attributes = node.attributes || [];
+        const colspanAttr = attributes.find(attr => attr.name === 'colspan');
+        const rowspanAttr = attributes.find(attr => attr.name === 'rowspan');
+
+        const properties = {};
+        if (colspanAttr) properties.colspan = parseInt(colspanAttr.value, 10);
+        if (rowspanAttr) properties.rowspan = parseInt(rowspanAttr.value, 10);
+
+        const replacement = {
+          type: 'element',
+          tagName: 'td',
+          properties,
+          children: node.children || []
+        };
+
+        parent.children[index] = replacement;
+      }
+
+      // Process Th (table header) text elements (inside paragraphs)
+      if (node.type === 'mdxJsxTextElement' && node.name === 'Th') {
+        const attributes = node.attributes || [];
+        const colspanAttr = attributes.find(attr => attr.name === 'colspan');
+        const rowspanAttr = attributes.find(attr => attr.name === 'rowspan');
+
+        const properties = {};
+        if (colspanAttr) properties.colspan = parseInt(colspanAttr.value, 10);
+        if (rowspanAttr) properties.rowspan = parseInt(rowspanAttr.value, 10);
+
+        const replacement = {
+          type: 'element',
+          tagName: 'th',
+          properties,
+          children: node.children || []
         };
 
         parent.children[index] = replacement;

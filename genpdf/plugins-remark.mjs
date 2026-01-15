@@ -296,3 +296,52 @@ export function remarkDirectiveToAdmonition() {
     });
   };
 }
+
+/**
+ * Create a remark plugin that normalizes Table structure
+ * Unwraps paragraph nodes containing Table elements (Td, Th)
+ * 
+ * Problem: When <Td> appears after newline inside <Row>, remark wraps it in a paragraph
+ * <Row>
+ *   <paragraph>
+ *     <Td>...</Td>
+ *     <Td>...</Td>
+ *   </paragraph>
+ * </Row>
+ * 
+ * Solution: Unwrap paragraph nodes that contain only JSX Table elements
+ */
+export function remarkNormalizeTableStructure() {
+  return (tree) => {
+    visit(tree, (node) => {
+      if (!node || !node.children || !Array.isArray(node.children)) return;
+
+      // Target: Row, Table, Thead, Tbody elements
+      const isTableContainer = (n) => {
+        return n.type === 'mdxJsxFlowElement' && 
+               ['Row', 'Table', 'Thead', 'Tbody'].includes(n.name);
+      };
+
+      // Check each node that is a table container
+      if (!isTableContainer(node)) return;
+
+      // Process children in reverse to safely splice
+      for (let i = node.children.length - 1; i >= 0; i--) {
+        const child = node.children[i];
+        
+        // If child is a paragraph, check its contents
+        if (child.type === 'paragraph' && child.children && Array.isArray(child.children)) {
+          const hasTableElements = child.children.some(n => 
+            (n.type === 'mdxJsxTextElement' || n.type === 'mdxJsxFlowElement') && 
+            ['Td', 'Th', 'Image', 'Badge'].includes(n.name)
+          );
+
+          if (hasTableElements) {
+            // Unwrap: replace paragraph with its children
+            node.children.splice(i, 1, ...child.children);
+          }
+        }
+      }
+    });
+  };
+}

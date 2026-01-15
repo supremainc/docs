@@ -19,7 +19,8 @@ import {
   remarkTransformDocLinks,
   remarkAddHeadingIds,
   remarkProcessIncludeXclude,
-  remarkDirectiveToAdmonition
+  remarkDirectiveToAdmonition,
+  remarkNormalizeTableStructure
 } from './plugins-remark.mjs';
 
 // Import rehype plugins
@@ -54,6 +55,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(remarkTransformDocLinks, docPath, language)
     .use(remarkAddHeadingIds, headingId)
     .use(remarkProcessIncludeXclude, productOption)
+    .use(remarkNormalizeTableStructure)
     
     // Code highlighting
     .use(remarkPrism)
@@ -70,7 +72,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     
     // Convert JSX components to HTML
     .use(rehypeMdxElements, {
-      allowedElements: ['Image', 'Badge']
+      allowedElements: ['Image', 'Badge', 'Table', 'Thead', 'Tbody', 'Row', 'Th', 'Td']
     })
     
     // Stringify to HTML
