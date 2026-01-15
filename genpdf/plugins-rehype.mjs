@@ -704,3 +704,87 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
     });
   };
 }
+/**
+ * Create a rehype plugin that processes Columns and Column components
+ * Converts JSX components to HTML div structure
+ * Columns -> <div class="container center columns"><div class="row">...</div></div>
+ * Column -> <div class="col">...</div>
+ */
+export function rehypeProcessColumnsComponent() {
+  return (tree) => {
+    visit(tree, (node, index, parent) => {
+      if (!node || !parent || index === null) return;
+
+      // Process Columns component
+      if (node.type === 'mdxJsxFlowElement' && node.name === 'Columns') {
+        const attributes = node.attributes || [];
+        const classNameAttr = attributes.find(attr => attr.name === 'className');
+        const styleAttr = attributes.find(attr => attr.name === 'style');
+
+        // Build properties for outer wrapper div
+        const outerProps = {
+          className: ['container', 'center', 'columns']
+        };
+
+        // Build properties for row div
+        const rowProps = {
+          className: ['row']
+        };
+
+        if (classNameAttr) {
+          rowProps.className.push(classNameAttr.value);
+        }
+
+        if (styleAttr) {
+          // Parse inline style if needed
+          rowProps.style = styleAttr.value;
+        }
+
+        // Create replacement structure: container > row > children
+        const replacement = {
+          type: 'element',
+          tagName: 'div',
+          properties: outerProps,
+          children: [
+            {
+              type: 'element',
+              tagName: 'div',
+              properties: rowProps,
+              children: node.children || []
+            }
+          ]
+        };
+
+        parent.children[index] = replacement;
+      }
+
+      // Process Column component
+      if (node.type === 'mdxJsxFlowElement' && node.name === 'Column') {
+        const attributes = node.attributes || [];
+        const classNameAttr = attributes.find(attr => attr.name === 'className');
+        const styleAttr = attributes.find(attr => attr.name === 'style');
+
+        const properties = {
+          className: ['col']
+        };
+
+        if (classNameAttr) {
+          properties.className.push(classNameAttr.value);
+        }
+
+        if (styleAttr) {
+          properties.style = styleAttr.value;
+        }
+
+        const replacement = {
+          type: 'element',
+          tagName: 'div',
+          properties,
+          children: node.children || []
+        };
+
+        parent.children[index] = replacement;
+      }
+    });
+  };
+}

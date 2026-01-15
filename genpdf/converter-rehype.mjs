@@ -31,7 +31,8 @@ import {
   rehypeProcessAdmonitions,
   rehypeProcessCmdComponent,
   rehypeAddTargetBlankToExternalLinks,
-  rehypeProcessMdxElements
+  rehypeProcessMdxElements,
+  rehypeProcessColumnsComponent
 } from './plugins-rehype.mjs';
 
 /**
@@ -73,6 +74,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(rehypeAddTargetBlankToExternalLinks)
     .use(rehypeProcessMdxElements, translations, basePath)
     .use(rehypeProcessCmdComponent, language)
+    .use(rehypeProcessColumnsComponent)
     
     // Convert JSX components to HTML
     .use(rehypeMdxElements, {

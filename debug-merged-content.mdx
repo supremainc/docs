@@ -1,0 +1,886 @@
+
+설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+
+## 브래킷 및 제품 고정
+
+1. 제공된 드릴링 템플릿을 이용하여 제품을 장착할 위치를 정하세요.
+
+    <Image src='/img/device/installation-recommended-bs3.svg' className='none' alone />
+
+    :::info
+    
+    <Xclude product='facestation_f2,biostation_3_max'>
+    
+    * 장치를 설치할 최적의 높이는 136 cm입니다.
+    
+    </Xclude>
+    
+    <Include product='facestation_f2'>
+    
+    * 장치를 설치할 최적의 높이는 아래와 같습니다.
+    
+      * <Badge only>FSF2-ODB</Badge>: {props.height1} cm
+    
+      * <Badge only>FSF2-DB, FSF2-AB</Badge>: {props.height2} cm
+    
+    </Include>
+    
+    <Include product='biostation_3_max'>
+    
+    * 장치를 설치할 최적의 높이는 아래와 같습니다.
+    
+      * <Badge only>BS3M-ODB, BS3M-OAPB</Badge>: {props.height1} cm
+    
+      * <Badge only>BS3M-DB, BS3M-APB</Badge>: {props.height2} cm
+    
+    </Include>
+    
+    * 장치를 직사 광선이나 자외선에 직접 노출된 장소에 설치하지 마세요.
+    
+    * 사용자가 얼굴을 인증할 때 얼굴에 직사광선이 닿지 않도록 설치 위치를 조정하세요.
+    
+    :::
+
+1. 제품을 장착할 위치에 고정용 나사를 이용하여 브래킷을 단단히 고정하세요.
+
+    <Image src='/img/device/installation-device1-bs3.svg' className='none' alone />
+
+    :::info
+
+    * 제품을 콘크리트 벽에 설치할 경우 드릴로 구멍을 뚫어 PVC 앵커를 끼운 뒤 고정용 나사로 고정하세요.
+
+    * RF 신호 간섭을 피하기 위해 최소 이격 거리를 확인하여 설치하세요.
+
+    <Columns>
+    <Column className='text--center'>
+
+    <Image src='/img/device/installation-wall1-bs3.png' className='none' width='60%' />
+
+    <div className='overflow-x'>
+
+    | 벽 두께 | 거리 |
+    | :--: | :--: |
+    | 100 mm | 200 mm |
+    | 120 mm | 180 mm |
+    | 150 mm | 150 mm |
+
+    </div>
+
+    </Column>
+
+    <Column className='text--center'>
+    
+    <Image src='/img/device/installation-wall2-bs3.png' className='none' width='60%' />
+
+    </Column>
+    </Columns>
+
+    * 모바일 출입카드를 사용할 경우 BLE 신호 간섭을 피하기 위해 장치 사이에 최소 1 m 이상의 거리를 두고 설치하세요.
+
+    :::
+
+1. 케이블 커버를 장착한 뒤 커버에 끼워져 있는 6개의 나사를 돌려 단단히 고정하세요.
+
+    <Image src='/img/device/installation-device2-bs3.svg' className='none' alone />
+
+    :::info
+
+    IP65 등급을 만족하기 위해 제품과 케이블을 연결한 뒤 반드시 케이블 커버를 사용해야 합니다.
+
+    :::
+
+1. 고정된 브래킷 위에 제품을 장착하세요.
+
+    <Image src='/img/device/installation-device3-bs3.svg' className='none' alone />
+
+1. 제품 고정용 나사를 돌려 제품과 브래킷을 조립하세요.
+
+    <Image src='/img/device/installation-device4-bs3.svg' className='none' alone />
+
+    :::info
+
+    브래킷과 제품을 조립할 때 향상된 보안을 위해 제품 고정용 나사 대신 동봉된 브래킷 고정용 나사(별 모양)를 이용할 수 있습니다.
+
+    :::
+
+{/* ## 전원 연결 */}
+## 전원 연결
+
+<Include product='bioentry_w3'><Image src='/img/device/bew3-power-connetion.png' width='45%' className='none' /></Include>
+
+<Include product='biostation_3'><Image src='/img/device/installation-power-connection-bs3.png' width='60%' className='none' /></Include>
+
+<Include product='biostation_2a'><Image src='/img/device/installation-power-connection-bs2a.png' width='60%' className='none' /></Include>
+
+<Include product='facestation_f2'><Image src='/img/device/installation-power-connection-fsf2.png' width='60%' className='none' /></Include>
+
+<Include product='corestation_20'><Image src='/img/device/installation-power-connection-cs20.png' width='60%' className='none' /></Include>
+
+<Include product='corestation_40'><Image src='/img/device/installation-power-connection-cs40.png' width='65%' className='none' /></Include>
+
+<Include product='doorinterface'><Image src='/img/device/installation-power-connection-di24.png' width='60%' className='none' /></Include>
+
+<Include product='biolite_n2'><Image src='/img/device/installation-power-connection-bln2.png' width='60%' className='none' /></Include>
+
+<Include product='xstation_2'><Image src='/img/device/installation-power-connection-xs2.png' width='60%' className='none' /></Include>
+
+<Include product='facestation_2'><Image src='/img/device/installation-power-connection-fs2.png' width='60%' className='none' /></Include>
+
+<Include product='bioentry_p2'><Image src='/img/device/installation-power-connection-bep2.png' width='65%' className='none' /></Include>
+
+<Include product='bioentry_w2'><Image src='/img/device/installation-power-connection-bew2.png' width='65%' className='none' /></Include>
+
+<Include product='doormodule'><Image src='/img/device/installation-power-connection-dm20.png' width='60%' className='none' /></Include>
+
+<Include product='inputmodule'><Image src='/img/device/installation-power-connection-im120.png' width='60%' className='none' /></Include>
+
+<Include product='outputmodule'><Image src='/img/device/installation-power-connection-om120.png' width='30%' className='none' /></Include>
+
+<Include product='securemodule'><Image src='/img/device/installation-power-connection-sio2.png' width='45%' className='none' /></Include>
+
+<Include product='xpass_2'><Image src='/img/device/installation-power-connection-xp2.png' width='65%' className='none' /></Include>
+
+<Include product='xpass_s2'><Image src='/img/device/installation-power-connection-xps2.png' width='70%' className='none' /></Include>
+
+<Include product='xpass_q2'><Image src='/img/device/installation-power-connection-xpq2.png' width='55%' className='none' /></Include>
+
+<Include product='biostation_3_max'><Image src='/img/device/installation-power-connection-bs3m.png' width='65%' className='none' /></Include>
+
+:::caution
+
+<Include product='bioentry_w3,bioentry_w2'>
+
+* Listed Class 2 전원 장치 사용을 권장합니다.
+
+</Include>
+
+
+<Include product='bioentry_w2'>
+
+* 장치의 전원 장치는 외부 12VDC Listed Class 2 전원 장치 또는 UL294B PoE 전원 장치를 사용해야 합니다.
+
+* ULC S319를 만족하기 위해 'PSC-100A' 전원 공급 장치 및 'Casil CA 1270' 배터리를 연결해야 합니다.
+
+</Include>
+
+<Include product='bioentry_w3,biostation_2a,biostation_3,xstation_2,bioentry_w2,xpass_q2'>
+
+* 전원 장치(또는 어댑터)와 PoE 전원 장치를 함께 연결하지 마세요.
+
+</Include>
+
+<Include product='corestation_20,corestation_40,doormodule,inputmodule,outputmodule,securemodule'>
+
+* 출입 통제 장치와 제품에 연결하는 전원은 반드시 분리하여 사용하세요.
+
+</Include>
+
+<Include product='doorinterface'>
+
+* 리더와 제품에 연결하는 전원은 반드시 분리하여 사용하세요.
+
+</Include>
+
+* 전원 어댑터는 IEC/EN 62368-1 승인을 받은 제품으로 단말기의 소모 전력 이상의 제품을 사용하세요. 전원 어댑터에 다른 기기를 연결하여 사용하려면 단말기의 소모 전력과 다른 기기에 필요한 소모 전력을 합한 전류 용량 이상의 어댑터를 사용해야 합니다.
+
+  * 최대 소모전류 규격은 제품 사양의 [전원](product-specifications#specs.power)을 참고하세요.
+
+<Xclude product='corestation_20,corestation_40,doorinterface,inputmodule,outputmodule,securemodule'>
+
+* Secure I/O 2, 전기정(전기식 잠금장치), 제품은 반드시 개별 전원을 사용하세요. 전원을 함께 연결하여 사용하면 장치가 오작동할 수 있습니다.
+
+</Xclude>
+
+<Include product='biostation_3,facestation_f2,bioentry_w3,biostation_3_max'>
+
+* 전원 연결 시 제품과 전원 장치 간의 거리에 주의하세요. 제품과 전원 장치는 최대한 가깝게 설치해야 합니다. 올바르게 연결하지 않을 경우 제품이 오작동할 수 있으므로 주의하세요. 제품과 전원 장치의 거리가 먼 경우 16 AWG 또는 18 AWG 케이블을 사용할 것을 권장합니다. 사용하는 케이블의 규격과 설치 환경에 따라 연결할 수 있는 거리가 다를 수 있습니다. 이 제품은 DC 24V와 DC 12V 전원을 모두 지원하므로, 각 케이블 규격에 따른 최대 연장 길이를 확인하여 전원을 올바르게 연결하세요.
+
+  <Table>
+  <Thead>
+  <Row>
+  <Th rowspan='2'>케이블 규격</Th>
+  <Th colspan='2'>최대 연장 길이</Th>
+  </Row>
+  <Row>
+  <Th>DC 12V</Th>
+  <Th>DC 24V</Th>
+  </Row>
+  </Thead>
+  <Tbody>
+  <Row>
+  <Td>16 AWG</Td>
+  <Td>50 m</Td>
+  <Td>150 m</Td>
+  </Row>
+  <Row>
+  <Td>18 AWG</Td>
+  <Td>30 m</Td>
+  <Td>136 m</Td>
+  </Row>
+  <Row>
+  <Td>20 AWG</Td>
+  <Td>20 m</Td>
+  <Td>90 m</Td>
+  </Row>
+  </Tbody>
+  </Table>
+
+</Include>
+
+<Include product='facestation_2'>
+
+* 전원 연결 시 제품과 전원 장치 간의 거리에 주의하세요. 제품과 전원 장치는 최대한 가깝게 설치해야 합니다. 올바르게 연결하지 않을 경우 제품이 오작동할 수 있으므로 주의하세요. 제품과 전원 장치의 거리가 먼 경우 16 AWG 또는 18 AWG 케이블을 사용할 것을 권장합니다. 사용하는 케이블의 규격과 설치 환경에 따라 연결할 수 있는 거리가 다를 수 있습니다.
+
+  <Table>
+  <Thead>
+  <Row>
+  <Th rowspan='2'>케이블 규격</Th>
+  <Th colspan='2'>최대 연장 길이</Th>
+  </Row>
+  </Thead>
+  <Tbody>
+  <Row>
+  <Td>16 AWG</Td>
+  <Td>150 m</Td>
+  </Row>
+  <Row>
+  <Td>18 AWG</Td>
+  <Td>136 m</Td>
+  </Row>
+  <Row>
+  <Td>20 AWG</Td>
+  <Td>90 m</Td>
+  </Row>
+  </Tbody>
+  </Table>
+
+</Include>
+
+* 전원 어댑터를 사용할 경우 전원 케이블의 길이를 임의로 연장하지 마세요.
+
+<Include product='biostation_3,xstation_2,facestation_2,bioentry_w3,facestation_f2,biostation_3_max'>
+
+* CAT5 UTP 2-Wire 케이블을 전원 공급 용도로 사용하지 마세요.
+
+</Include>
+
+<Include product='bioentry_w2'>
+
+* 알람 신호는 릴레이 접점 방식으로 AC OK 및 배터리 저전압 상태 핀을 통해 전송됩니다.
+
+  <div className='overflow-x'>
+
+  | 기능 | 설명 | 릴레이 상태 |
+  | :--: | :--: | :--: |
+  | AC 전원 확인 | AC 전원 켜짐 | 단락 |
+  | ^ | AC 전원 꺼짐 | 단선 |
+  | 배터리 저전압 상태 | 배터리 전압이 11 V 이하일 때 | 단락 |
+  | ^ | 배터리 전압이 11 V 이상일 때 | 단선 |
+
+  </div>
+
+* 알람 신호 기능을 사용하려면 외부 전원 소스가 필요합니다. 최대 인가 전압은 30 V이며, 최대 싱크 전류는 1 A입니다.
+
+* PoE 전원은 National Electrical Code, ANSI / NFPA 70, Article 725.121, 클래스 2 및 클래스 3 회로의 전원을 준수해야합니다.
+
+* 5e 케이블 연결은 권장하는 최소 성능 범주입니다. 성능 범주는 설치 현장에서 요구되는 전송 속도와 일치해야 합니다.
+
+* PSE 또는 전력 인젝터와 PD 사이에 연결할 수 있는 최소 도체 게이지는 패치 코드의 경우 26 AWG(0.13 mm2)입니다. 수평 또는 라이저 케이블의 경우 24 AWG(0.21 mm2)입니다.
+
+* PoE를 이용해 전원을 공급할 경우 UL294B 또는 UL294 8th Edition을 준수해야 합니다.
+
+* IEEE 802.3 (at 또는 af) 사양의 준수는 이 요구 사항의 일환으로 치부되지 않습니다.
+
+</Include>
+
+:::
+
+<Include product='corestation_20,corestation_40,doorinterface,inputmodule,outputmodule'>
+
+:::info
+
+전원 장애를 막기 위해 무정전 전원 장치(UPS)를 연결하여 사용할 것을 권장합니다.
+
+:::
+
+</Include>
+
+{/* ## 네트워크 연결 */}
+## 네트워크 연결
+
+### TCP/IP
+
+#### LAN 연결 (허브와 연결)
+
+<Include product='bioentry_w3,facestation_f2,corestation_40,corestation_20,bioentry_w2,biolite_n2,biostation_2a,biostation_3,facestation_2,xpass_s2,xstation_2'>
+
+일반 타입의 CAT-5 케이블을 사용하여 허브와 연결할 수 있습니다.
+
+</Include>
+
+<Include product='bioentry_p2,xpass_2,xpass_q2,biostation_3_max'>
+
+일반 타입의 CAT-5e 케이블을 사용하여 허브와 연결할 수 있습니다.
+
+</Include>
+
+<Include product='biostation_3'><Image src='/img/device/installation-network-hub-connection-bs3.png' width='75%' className='none' /></Include>
+
+<Include product='biostation_3_max'><Image src='/img/device/installation-network-hub-connection-bs3m.png' width='75%' className='none' /></Include>
+
+<Include product='bioentry_w3'><Image src='/img/device/installation-network-hub-connection-bew3.png' width='65%' className='none' /></Include>
+
+<Include product='biostation_2a'><Image src='/img/device/installation-network-hub-connection-bs2a.png' width='75%' className='none' /></Include>
+
+<Include product='facestation_f2'><Image src='/img/device/installation-network-hub-connection-fsf2.png' width='75%' className='none' /></Include>
+
+<Include product='corestation_20'><Image src='/img/device/installation-network-hub-connection-cs20.png' width='65%' className='none' /></Include>
+
+<Include product='corestation_40'><Image src='/img/device/installation-network-hub-connection-cs40.png' width='65%' className='none' /></Include>
+
+<Include product='biolite_n2'><Image src='/img/device/installation-network-hub-connection-bln2.png' width='70%' className='none' /></Include>
+
+<Include product='xstation_2'><Image src='/img/device/installation-network-hub-connection-xs2.png' width='65%' className='none' /></Include>
+
+<Include product='facestation_2'><Image src='/img/device/installation-network-hub-connection-fs2.png' width='65%' className='none' /></Include>
+
+<Include product='bioentry_p2'><Image src='/img/device/installation-network-hub-connection-bep2.png' width='65%' className='none' /></Include>
+
+<Include product='xpass_2'><Image src='/img/device/installation-network-hub-connection-xp2.png' width='65%' className='none' /></Include>
+
+<Include product='xpass_s2'><Image src='/img/device/installation-network-hub-connection-xps2.png' width='70%' className='none' /></Include>
+
+<Include product='xpass_q2'><Image src='/img/device/installation-network-hub-connection-xpq2.png' width='75%' className='none' /></Include>
+
+<Include product='bioentry_w2'>
+
+PoE를 이용해 전원을 공급하려면 PSE 허브를 사용하세요.
+
+<Image src='/img/device/installation-network-hub-connection-bew2.png' width='70%' className='none' />
+
+</Include>
+
+#### LAN 연결 (PC와 직접 연결)
+
+<Include product='bioentry_w3,facestation_f2,bioentry_w2,biolite_n2,biostation_2a,biostation_3,facestation_2,xstation_2'>
+
+이 제품은 자동 MDI/MDIX 기능을 가지고 있으므로 크로스 케이블이나 일반 스트레이트 타입의 CAT-5 케이블로 PC와 직접 연결할 수 있습니다.
+
+</Include>
+
+<Include product='biostation_3_max'>
+
+이 제품은 자동 MDI/MDIX 기능을 가지고 있으므로 크로스 케이블이나 일반 스트레이트 타입의 CAT-5e 케이블로 PC와 직접 연결할 수 있습니다.
+
+</Include>
+
+<Include product='xpass_s2'>
+
+이 제품은 자동 MDI/MDIX 기능을 가지고 있으므로 일반 타입의 CAT-5 케이블로 PC와 직접 연결할 수 있습니다.
+
+</Include>
+
+<Include product='bioentry_p2,xpass_2,corestation_40,corestation_20'>
+
+이 제품은 자동 MDI/MDIX 기능을 가지고 있으므로 일반 타입의 CAT-5e 케이블로 PC와 직접 연결할 수 있습니다.
+
+</Include>
+
+<Include product='corestation_20'>
+
+<Badge only>CS-20P</Badge> 이더넷 케이블을 통해 전원을 공급하는 PoE+를 지원합니다. PoE+ 사용 시에는 Lock 연결을 하나만 지원합니다.
+
+</Include>
+
+<Include product='xpass_q2'>
+
+* 이 제품은 자동 MDI/MDIX 기능을 가지고 있으므로 크로스 케이블이나 일반 스트레이트 타입의 CAT-5e 케이블로 PC와 직접 연결할 수 있습니다.
+
+  :::caution
+
+  일부 비표준 허브/스위치에서는 자동 MDI/MDIX 기능이 지원되지 않을 수 있습니다.
+
+  :::
+
+* <Badge only>XPQ2-APB</Badge> 이더넷 케이블을 통해 전원을 공급하는 PoE를 지원합니다.
+
+</Include>
+
+<Include product='biostation_3'><Image src='/img/device/installation-network-direct-connection-bs3.png' width='60%' className='none' alone /></Include>
+
+<Include product='biostation_3_max'><Image src='/img/device/installation-network-direct-connection-bs3m.png' width='60%' className='none' alone /></Include>
+
+<Include product='bioentry_w3'><Image src='/img/device/installation-network-direct-connection-bew3.png' width='55%' className='none' alone /></Include>
+
+<Include product='biostation_2a'><Image src='/img/device/installation-network-direct-connection-bs2a.png' width='60%' className='none' alone /></Include>
+
+<Include product='facestation_f2'><Image src='/img/device/installation-network-direct-connection-fsf2.png' width='65%' className='none' alone /></Include>
+
+<Include product='corestation_20'><Image src='/img/device/installation-network-direct-connection-cs20.png' width='60%' className='none' alone /></Include>
+
+<Include product='corestation_40'><Image src='/img/device/installation-network-direct-connection-cs40.png' width='75%' className='none' alone /></Include>
+
+<Include product='biolite_n2'><Image src='/img/device/installation-network-direct-connection-bln2.png' width='70%' className='none' alone /></Include>
+
+<Include product='xstation_2'><Image src='/img/device/installation-network-direct-connection-xs2.png' width='65%' className='none' alone /></Include>
+
+<Include product='facestation_2'><Image src='/img/device/installation-network-direct-connection-fs2.png' width='70%' className='none' alone /></Include>
+
+<Include product='bioentry_p2'><Image src='/img/device/installation-network-direct-connection-bep2.png' width='65%' className='none' alone /></Include>
+
+<Include product='bioentry_w2'><Image src='/img/device/installation-network-direct-connection-bew2.png' width='70%' className='none' alone /></Include>
+
+<Include product='xpass_2'><Image src='/img/device/installation-network-direct-connection-xp2.png' width='65%' className='none' alone /></Include>
+
+<Include product='xpass_s2'><Image src='/img/device/installation-network-direct-connection-xps2.png' width='70%' className='none' alone /></Include>
+
+<Include product='xpass_q2'><Image src='/img/device/installation-network-direct-connection-xpq2.png' width='60%' className='none' alone /></Include>
+
+<Include product='biostation_3,facestation_f2,facestation_2,biostation_3_max'>
+
+:::info
+
+기가 비트 이더넷 스위치를 사용할 때 아래 정보를 확인하세요.
+
+* CAT-5e 비차폐 꼬임선(UTP)을 사용하세요.
+
+* 4 쌍(8 선)을 모두 네트워크 연결로 사용하세요.
+
+* 네트워크 케이블의 일부 쌍이나 선을 다른 용도로 사용하지 마세요.
+
+:::
+
+</Include>
+
+{/* ## Input 연결 */}
+## Input 연결
+
+<Include product='biostation_3'><Image src='/img/device/installation-ttl-input-connection-bs3.png' width='60%' className='none' /></Include>
+
+<Include product='biostation_3_max'><Image src='/img/device/installation-input-connection-bs3m.png' width='65%' className='none' /></Include>
+
+<Include product='bioentry_w3'><Image src='/img/device/installation-input-connection-bew3.png' width='55%' className='none' /></Include>
+
+<Include product='biostation_2a'><Image src='/img/device/installation-input-connection-bs2a.png' width='60%' className='none' /></Include>
+
+<Include product='facestation_f2'><Image src='/img/device/installation-input-connection-fsf2.png' width='60%' className='none' /></Include>
+
+<Include product='biolite_n2'><Image src='/img/device/installation-input-connection-bln2.png' width='60%' className='none' /></Include>
+
+<Include product='xstation_2'><Image src='/img/device/installation-input-connection-xs2.png' width='60%' className='none' /></Include>
+
+<Include product='facestation_2'><Image src='/img/device/installation-input-connection-fs2.png' width='60%' className='none' /></Include>
+
+<Include product='bioentry_p2'><Image src='/img/device/installation-input-connection-bep2.png' width='65%' className='none' /></Include>
+
+<Include product='bioentry_w2'><Image src='/img/device/installation-input-connection-bew2.png' width='60%' className='none' /></Include>
+
+<Include product='xpass_2'><Image src='/img/device/installation-input-connection-xp2.png' width='65%' className='none' /></Include>
+
+<Include product='xpass_q2'><Image src='/img/device/installation-input-connection-xpq2.png' width='70%' className='none' /></Include>
+
+{/* ## 릴레이 연결 */}
+## 릴레이 연결
+
+### Fail Safe Lock
+
+Fail Safe Lock을 사용하려면 아래 그림과 같이 N/C 릴레이를 연결하세요. Fail Safe Lock은 평상 시 릴레이 회로에 전류가 흐르며, 릴레이가 동작하여 전류를 일시적으로 차단하면 출입문이 열립니다. 정전이 되거나 외부 요인으로 장치의 전원이 끊길 경우 출입문이 열립니다.
+
+<Include product='biostation_3'><Image src='/img/device/installation-relay-fail-safe-lock-bs3.png' width='60%' className='none' /></Include>
+
+<Include product='biostation_3_max'><Image src='/img/device/installation-relay-fail-safe-lock-bs3m.png' width='70%' className='none' /></Include>
+
+<Include product='bioentry_w3'><Image src='/img/device/installation-relay-fail-safe-lock-bew3.png' width='55%' className='none' /></Include>
+
+<Include product='biostation_2a'><Image src='/img/device/installation-relay-fail-safe-lock-bs2a.png' width='60%' className='none' /></Include>
+
+<Include product='facestation_f2'><Image src='/img/device/installation-relay-fail-safe-lock-fsf2.png' width='60%' className='none' /></Include>
+
+<Include product='biolite_n2'><Image src='/img/device/installation-relay-fail-safe-lock-bln2.png' width='60%' className='none' /></Include>
+
+<Include product='xstation_2'><Image src='/img/device/installation-relay-fail-safe-lock-xs2.png' width='65%' className='none' /></Include>
+
+<Include product='facestation_2'><Image src='/img/device/installation-relay-fail-safe-lock-fs2.png' width='65%' className='none' /></Include>
+
+<Include product='bioentry_p2'><Image src='/img/device/installation-relay-fail-safe-lock-bep2.png' width='70%' className='none' /></Include>
+
+<Include product='bioentry_w2'><Image src='/img/device/installation-relay-fail-safe-lock-bew2.png' width='65%' className='none' /></Include>
+
+<Include product='xpass_2'><Image src='/img/device/installation-relay-fail-safe-lock-xp2.png' width='65%' className='none' /></Include>
+
+<Include product='xpass_s2'><Image src='/img/device/installation-relay-fail-safe-lock-xps2.png' width='65%' className='none' /></Include>
+
+<Include product='xpass_q2'><Image src='/img/device/installation-relay-fail-safe-lock-xpq2.png' width='70%' className='none' /></Include>
+
+:::caution
+
+* 출입문 잠금 장치가 작동할 때 발생하는 역전류로부터 릴레이를 보호하기 위해 그림과 같이 출입문 잠금 장치 배선 양쪽에 다이오드를 설치하세요.
+
+* 제품과 출입문 잠금 장치는 별도의 전원을 사용하세요.
+
+* 슈프리마의 지능형 장치에는 편의를 제공하기 위해 별도의 컨트롤러 없이 독립형으로 연결하여 출입문을 직접 열거나 잠글 수 있도록 하는 릴레이가 내장되어 있습니다. 그러나 향상된 보안이 요구되는 출입통제 애플리케이션의 경우 잠재적으로 출입문 잠금 해제를 유발할 수 있는 변조 공격을 방지하기 위해 장치에 내장된 릴레이를 사용하지 않는 것이 좋습니다. 이러한 애플리케이션의 경우 잠금 제어를 위해 출입문 내부의 안전한 위치에 설치된 슈프리마의 Secure I/O 2, DM-20, CoreStation과 같은 별도의 릴레이 장치를 사용할 것을 권장합니다.
+
+:::
+
+:::info
+
+다이오드의 설치 방향에 주의하세요. 다이오드는 출입문 잠금 장치와 가깝게 설치하세요.
+
+:::
+
+<PageBreak />
+
+### Fail Secure Lock
+
+Fail Secure Lock을 사용하려면 아래 그림과 같이 N/O 릴레이를 연결하세요. Fail Secure Lock은 평상 시 릴레이 회로에 전류가 흐르지 않으며, 릴레이가 동작하여 전류가 흐르면 출입문이 열립니다. 정전이 되거나 외부 요인으로 장치의 전원이 끊길 경우 출입문이 잠깁니다.
+
+<Include product='biostation_3'><Image src='/img/device/installation-relay-fail-secure-lock-bs3.png' width='60%' className='none' /></Include>
+
+<Include product='biostation_3_max'><Image src='/img/device/installation-relay-fail-secure-lock-bs3m.png' width='70%' className='none' /></Include>
+
+<Include product='bioentry_w3'><Image src='/img/device/installation-relay-fail-secure-lock-bew3.png' width='55%' className='none' /></Include>
+
+<Include product='biostation_2a'><Image src='/img/device/installation-relay-fail-secure-lock-bs2a.png' width='60%' className='none' /></Include>
+
+<Include product='facestation_f2'><Image src='/img/device/installation-relay-fail-secure-lock-fsf2.png' width='60%' className='none' /></Include>
+
+<Include product='biolite_n2'><Image src='/img/device/installation-relay-fail-secure-lock-bln2.png' width='60%' className='none' /></Include>
+
+<Include product='xstation_2'><Image src='/img/device/installation-relay-fail-secure-lock-xs2.png' width='65%' className='none' /></Include>
+
+<Include product='facestation_2'><Image src='/img/device/installation-relay-fail-secure-lock-fs2.png' width='65%' className='none' /></Include>
+
+<Include product='bioentry_p2'><Image src='/img/device/installation-relay-fail-secure-lock-bep2.png' width='70%' className='none' /></Include>
+
+<Include product='bioentry_w2'><Image src='/img/device/installation-relay-fail-secure-lock-bew2.png' width='65%' className='none' /></Include>
+
+<Include product='xpass_2'><Image src='/img/device/installation-relay-fail-secure-lock-xp2.png' width='65%' className='none' /></Include>
+
+<Include product='xpass_s2'><Image src='/img/device/installation-relay-fail-secure-lock-xps2.png' width='65%' className='none' /></Include>
+
+<Include product='xpass_q2'><Image src='/img/device/installation-relay-fail-secure-lock-xpq2.png' width='70%' className='none' /></Include>
+
+:::caution
+
+* 출입문 잠금 장치가 작동할 때 발생하는 역전류로부터 릴레이를 보호하기 위해 그림과 같이 출입문 잠금 장치 배선 양쪽에 다이오드를 설치하세요.
+
+* 제품과 출입문 잠금 장치는 별도의 전원을 사용하세요.
+
+* 슈프리마의 지능형 장치에는 편의를 제공하기 위해 별도의 컨트롤러 없이 독립형으로 연결하여 출입문을 직접 열거나 잠글 수 있도록 하는 릴레이가 내장되어 있습니다. 그러나 향상된 보안이 요구되는 출입통제 애플리케이션의 경우 잠재적으로 출입문 잠금 해제를 유발할 수 있는 변조 공격을 방지하기 위해 장치에 내장된 릴레이를 사용하지 않는 것이 좋습니다. 이러한 애플리케이션의 경우 잠금 제어를 위해 출입문 내부의 안전한 위치에 설치된 슈프리마의 Secure I/O 2, DM-20, CoreStation과 같은 별도의 릴레이 장치를 사용할 것을 권장합니다.
+
+:::
+
+:::info
+
+다이오드의 설치 방향에 주의하세요. 다이오드는 출입문 잠금 장치와 가깝게 설치하세요.
+
+:::
+
+<PageBreak />
+
+### 자동문 연결
+
+<Include product='biostation_3'><Image src='/img/device/installation-automatic-door-bs3.png' width='60%' className='none' /></Include>
+
+<Include product='biostation_3_max'><Image src='/img/device/installation-automatic-door-bs3m.png' width='75%' className='none' /></Include>
+
+<Include product='bioentry_w3'><Image src='/img/device/installation-automatic-door-bew3.png' width='60%' className='none' /></Include>
+
+<Include product='biostation_2a'><Image src='/img/device/installation-automatic-door-bs2a.png' width='60%' className='none' /></Include>
+
+<Include product='facestation_f2'><Image src='/img/device/installation-automatic-door-fsf2.png' width='65%' className='none' /></Include>
+
+<Include product='biolite_n2'><Image src='/img/device/installation-automatic-door-bln2.png' width='70%' className='none' /></Include>
+
+<Include product='xstation_2'><Image src='/img/device/installation-automatic-door-xs2.png' width='70%' className='none' /></Include>
+
+<Include product='facestation_2'><Image src='/img/device/installation-automatic-door-fs2.png' width='70%' className='none' /></Include>
+
+<Include product='bioentry_p2'><Image src='/img/device/installation-automatic-door-bep2.png' width='70%' className='none' /></Include>
+
+<Include product='bioentry_w2'><Image src='/img/device/installation-automatic-door-bew2.png' width='70%' className='none' /></Include>
+
+<Include product='xpass_2'><Image src='/img/device/installation-automatic-door-xp2.png' width='75%' className='none' /></Include>
+
+<Include product='xpass_s2'><Image src='/img/device/installation-automatic-door-xps2.png' width='75%' className='none' /></Include>
+
+<Include product='xpass_q2'><Image src='/img/device/installation-automatic-door-xpq2.png' width='70%' className='none' /></Include>
+
+{/* ## 독립형 연결 */}
+## 독립형 연결
+
+별도의 I/O 장치를 연결하지 않고 제품을 직접 출입문 잠금 장치, 퇴실 버튼, 출입문 센서 등에 연결할 수 있습니다.
+
+<Include product='biostation_3'><Image src='/img/device/installation-standalone-connection-bs3.png' width='60%' className='none' /></Include>
+
+<Include product='biostation_3_max'><Image src='/img/device/installation-standalone-connection-bs3m.png' width='75%' className='none' /></Include>
+
+<Include product='bioentry_w3'><Image src='/img/device/installation-standalone-connection-bew3.png' width='75%' className='none' /></Include>
+
+<Include product='biostation_2a'><Image src='/img/device/installation-standalone-connection-bs2a.png' width='60%' className='none' /></Include>
+
+<Include product='facestation_f2'><Image src='/img/device/installation-standalone-connection-fsf2.png' width='65%' className='none' /></Include>
+
+<Include product='biolite_n2'><Image src='/img/device/installation-standalone-connection-bln2.png' width='70%' className='none' /></Include>
+
+<Include product='xstation_2'><Image src='/img/device/installation-standalone-connection-xs2.png' width='80%' className='none' /></Include>
+
+<Include product='facestation_2'><Image src='/img/device/installation-standalone-connection-fs2.png' width='75%' className='none' /></Include>
+
+<Include product='bioentry_p2'><Image src='/img/device/installation-standalone-connection-bep2.png' width='75%' className='none' /></Include>
+
+<Include product='bioentry_w2'><Image src='/img/device/installation-standalone-connection-bew2.png' width='75%' className='none' /></Include>
+
+<Include product='xpass_2'><Image src='/img/device/installation-standalone-connection-xp2.png' width='75%' className='none' /></Include>
+
+<Include product='xpass_s2'><Image src='/img/device/installation-standalone-connection-xps2.png' width='75%' className='none' /></Include>
+
+<Include product='xpass_q2'><Image src='/img/device/installation-standalone-connection-xpq2.png' width='75%' className='none' /></Include>
+
+:::caution
+
+슈프리마의 지능형 장치에는 편의를 제공하기 위해 별도의 컨트롤러 없이 독립형으로 연결하여 출입문을 직접 열거나 잠글 수 있도록 하는 릴레이가 내장되어 있습니다. 그러나 향상된 보안이 요구되는 출입통제 애플리케이션의 경우 잠재적으로 출입문 잠금 해제를 유발할 수 있는 변조 공격을 방지하기 위해 장치에 내장된 릴레이를 사용하지 않는 것이 좋습니다. 이러한 애플리케이션의 경우 잠금 제어를 위해 출입문 내부의 안전한 위치에 설치된 슈프리마의 Secure I/O 2, DM-20, CoreStation과 같은 별도의 릴레이 장치를 사용할 것을 권장합니다.
+
+:::
+
+{/* 공통 노트 */}
+:::info
+
+<Xclude product='xpass_s2'>
+
+* RS-485 케이블로 슬레이브 장치를 연결하여 제품을 다중 출입문 제어 장치로 사용할 수 있습니다. 슬레이브 장치는 더미 리더로 사용되며 인증은 마스터 장치에서 수행합니다.
+
+</Xclude>
+
+<Include product='biostation_3,facestation_f2,facestation_2'>
+
+* 지문 인식 장치가 BioStation 3의 슬레이브 장치로 구성된 경우 다른 BioStation 3를 슬레이브 장치로 추가할 수 없습니다.
+
+* 지문 인식 장치가 마스터 장치일 때 BioStation 3를 슬레이브 장치로 추가할 수 없습니다.
+
+* BioStation 3가 마스터 장치이고 BioStation 3를 슬레이브 장치로 연결할 때 1대의 BioStation 3만 슬레이브 장치로 추가할 수 있습니다.
+
+* BioStation 3가 마스터 장치이고 BioStation 3를 슬레이브 장치로 연결할 때 Secure I/O 2와 DM-20을 각각 1대씩 추가로 연결할 수 있습니다.
+
+* BioStation 3가 마스터 장치이고 BioStation 3를 슬레이브 장치로 연결할 때 OM-120을 추가로 연결할 수 없습니다.
+
+</Include>
+
+<Include product='biostation_3,facestation_f2,biostation_3_max'>
+
+* FaceStation F2가 마스터 장치일 때 BioStation 3를 슬레이브 장치로 사용할 수 없으며, 반대의 경우로도 사용할 수 없습니다.
+
+</Include>
+
+<Include product='bioentry_w3,biostation_2a,biolite_n2,bioentry_p2,bioentry_w2'>
+
+* XPass 또는 XPass 2가 마스터 장치로 연결될 경우 카드 인증만 사용할 수 있습니다.
+
+</Include>
+
+<Include product='xpass_2'>
+
+* 이 제품을 마스터 장치로 사용하는 경우 슬레이브 장치에서는 카드 인증만 사용할 수 있습니다.
+
+</Include>
+
+<Include product='xpass_q2'>
+
+* 이 제품을 마스터 장치로 사용할 경우 슬레이브 장치에서는 카드나 QR/바코드 인증만 사용할 수 있습니다.
+
+</Include>
+
+<Include product='xpass_2,xpass_q2,xpass_s2'>
+
+* 하나의 마스터 장치당 최대 31대의 슬레이브 장치를 연결할 수 있습니다.
+
+</Include>
+
+<Include product='facestation_f2,bioentry_p2,bioentry_r2,biolite_n2,bioentry_w2,xstation_2,biostation_2a,bioentry_w3,biostation_3,facestation_f2,facestation_2,biostation_3_max'>
+
+* 연결할 수 있는 최대 슬레이브 장치 수는 인증 방법, 사용자 수, 장치 수에 따라 달라지며 슬레이브 장치 수는 인증 속도에 영향을 줍니다.
+
+* 하나의 마스터 장치당 최대 31대의 슬레이브 장치를 연결할 수 있습니다. RS-485 대역폭으로 인해 최대 7대의 지문 인식 장치를 연결할 수 있습니다.
+
+</Include>
+
+* 더 자세한 내용은 슈프리마 기술 지원팀(CS@suprema.co.kr)에 문의하세요.
+
+:::
+
+{/* ## Secure I/O 2 연결 */}
+## Secure I/O 2 연결
+
+제품에 I/O 장치인 Secure I/O 2를 RS-485로 연결할 수 있습니다. 제품과 Secure I/O 2의 연결이 끊기거나 외부 요인에 의해 제품의 전원이 차단되더라도 보안을 유지할 수 있습니다.
+
+* RS-485 케이블은 AWG24, 꼬임선(Twisted Pair), 최대 길이 1.2 km를 사용하세요.
+
+* RS-485 케이블은 특성 임피던스가 120 Ω인 케이블을 사용하는 것을 권장합니다.
+
+* RS-485 데이지 체인으로 연결할 경우 종단 저항(120Ω)을 데이지 체인 연결의 양 끝에 연결하세요. 중간 선로에 연결할 경우 신호 레벨이 작아져 통신 성능이 떨어지므로 반드시 데이지 체인 연결의 양 끝에 연결하세요.
+
+<Include product='biostation_3'><Image src='/img/device/installation-sio2-connection-bs3.png' width='70%' className='none' /></Include>
+
+<Include product='biostation_3_max'><Image src='/img/device/installation-sio2-connection-bs3m.png' width='75%' className='none' /></Include>
+
+<Include product='bioentry_w3'><Image src='/img/device/installation-sio2-connection-bew3.png' width='65%' className='none' /></Include>
+
+<Include product='biostation_2a'><Image src='/img/device/installation-sio2-connection-bs2a.png' width='70%' className='none' /></Include>
+
+<Include product='facestation_f2'><Image src='/img/device/installation-sio2-connection-fsf2.png' width='70%' className='none' /></Include>
+
+<Include product='biolite_n2'><Image src='/img/device/installation-sio2-connection-bln2.png' width='70%' className='none' /></Include>
+
+<Include product='xstation_2'><Image src='/img/device/installation-sio2-connection-xs2.png' width='75%' className='none' /></Include>
+
+<Include product='facestation_2'><Image src='/img/device/installation-sio2-connection-fs2.png' width='65%' className='none' /></Include>
+
+<Include product='bioentry_p2'><Image src='/img/device/installation-sio2-connection-bep2.png' width='70%' className='none' /></Include>
+
+<Include product='bioentry_w2'><Image src='/img/device/installation-sio2-connection-bew2.png' width='70%' className='none' /></Include>
+
+<Include product='xpass_2'><Image src='/img/device/installation-sio2-connection-xp2.png' width='70%' className='none' /></Include>
+
+<Include product='xpass_q2'><Image src='/img/device/installation-sio2-connection-xpq2.png' width='80%' className='none' /></Include>
+
+<Include product='xpass_s2'><Image src='/img/device/installation-sio2-connection-xps2.png' width='80%' className='none' /></Include>
+
+{/* 공통 노트 */}
+:::info
+
+<Xclude product='xpass_s2'>
+
+* RS-485 케이블로 슬레이브 장치를 연결하여 제품을 다중 출입문 제어 장치로 사용할 수 있습니다. 슬레이브 장치는 더미 리더로 사용되며 인증은 마스터 장치에서 수행합니다.
+
+</Xclude>
+
+<Include product='biostation_3,facestation_f2,facestation_2'>
+
+* 지문 인식 장치가 BioStation 3의 슬레이브 장치로 구성된 경우 다른 BioStation 3를 슬레이브 장치로 추가할 수 없습니다.
+
+* 지문 인식 장치가 마스터 장치일 때 BioStation 3를 슬레이브 장치로 추가할 수 없습니다.
+
+* BioStation 3가 마스터 장치이고 BioStation 3를 슬레이브 장치로 연결할 때 1대의 BioStation 3만 슬레이브 장치로 추가할 수 있습니다.
+
+* BioStation 3가 마스터 장치이고 BioStation 3를 슬레이브 장치로 연결할 때 Secure I/O 2와 DM-20을 각각 1대씩 추가로 연결할 수 있습니다.
+
+* BioStation 3가 마스터 장치이고 BioStation 3를 슬레이브 장치로 연결할 때 OM-120을 추가로 연결할 수 없습니다.
+
+</Include>
+
+<Include product='biostation_3,facestation_f2,biostation_3_max'>
+
+* FaceStation F2가 마스터 장치일 때 BioStation 3를 슬레이브 장치로 사용할 수 없으며, 반대의 경우로도 사용할 수 없습니다.
+
+</Include>
+
+<Include product='bioentry_w3,biostation_2a,biolite_n2,bioentry_p2,bioentry_w2'>
+
+* XPass 또는 XPass 2가 마스터 장치로 연결될 경우 카드 인증만 사용할 수 있습니다.
+
+</Include>
+
+<Include product='xpass_2'>
+
+* 이 제품을 마스터 장치로 사용하는 경우 슬레이브 장치에서는 카드 인증만 사용할 수 있습니다.
+
+</Include>
+
+<Include product='xpass_q2'>
+
+* 이 제품을 마스터 장치로 사용할 경우 슬레이브 장치에서는 카드나 QR/바코드 인증만 사용할 수 있습니다.
+
+</Include>
+
+<Include product='xpass_2,xpass_q2,xpass_s2'>
+
+* 하나의 마스터 장치당 최대 31대의 슬레이브 장치를 연결할 수 있습니다.
+
+</Include>
+
+<Include product='facestation_f2,bioentry_p2,bioentry_r2,biolite_n2,bioentry_w2,xstation_2,biostation_2a,bioentry_w3,biostation_3,facestation_f2,facestation_2,biostation_3_max'>
+
+* 연결할 수 있는 최대 슬레이브 장치 수는 인증 방법, 사용자 수, 장치 수에 따라 달라지며 슬레이브 장치 수는 인증 속도에 영향을 줍니다.
+
+* 하나의 마스터 장치당 최대 31대의 슬레이브 장치를 연결할 수 있습니다. RS-485 대역폭으로 인해 최대 7대의 지문 인식 장치를 연결할 수 있습니다.
+
+</Include>
+
+* 더 자세한 내용은 슈프리마 기술 지원팀(CS@suprema.co.kr)에 문의하세요.
+
+:::
+
+{/* ## Wiegand 연결 */}
+## Wiegand 연결
+
+<Include product='corestation_20,doorinterface'><Image src='/img/device/installation-wiegand-in-connection-cs20.png' width='45%' className='none' /></Include>
+
+<Include product='corestation_40'><Image src='/img/device/installation-wiegand-in-connection-cs40.png' width='45%' className='none' /></Include>
+
+<Include product='doormodule'>
+
+Wiegand 장치를 연결하여 사용할 경우 제품과 12 V, 3.1 A 전원을 연결하세요.
+
+<Image src='/img/device/installation-wiegand-in-connection-dm20.png' width='65%' className='none' />
+
+:::info
+
+제품에 Wiegand 장치를 연결하면 12 V, 최대 1.5 A의 전원을 사용할 수 있습니다. **WIEGAND 0**에 1.0 A가 필요한 장치를 연결하면 **WIEGAND 1**에서는 500 mA만 사용할 수 있습니다.
+
+:::
+
+</Include>
+
+<Include product='biostation_3,bioentry_w3,biostation_2a,facestation_2,bioentry_w2,xpass_s2,biostation_3_max'>
+
+Wiegand 입력 장치로 사용
+
+<Include product='biostation_3'><Image src='/img/device/installation-wiegand-in-connection-bs3.png' width='60%' className='none' /></Include>
+
+<Include product='biostation_3_max'><Image src='/img/device/installation-wiegand-in-connection-bs3m.png' width='60%' className='none' /></Include>
+
+<Include product='bioentry_w3'><Image src='/img/device/installation-wiegand-in-connection-bew3.png' width='45%' className='none' /></Include>
+
+<Include product='biostation_2a'><Image src='/img/device/installation-wiegand-in-connection-bs2a.png' width='60%' className='none' /></Include>
+
+<Include product='facestation_2'><Image src='/img/device/installation-wiegand-in-connection-fs2.png' width='55%' className='none' /></Include>
+
+<Include product='bioentry_w2'><Image src='/img/device/installation-wiegand-in-connection-bew2.png' width='40%' className='none' /></Include>
+
+<Include product='xpass_s2'><Image src='/img/device/installation-wiegand-in-connection-xps2.png' width='45%' className='none' /></Include>
+
+Wiegand 출력 장치로 사용
+
+<Include product='biostation_3'><Image src='/img/device/installation-wiegand-out-connection-bs3.png' width='60%' className='none' /></Include>
+
+<Include product='biostation_3_max'><Image src='/img/device/installation-wiegand-out-connection-bs3m.png' width='60%' className='none' /></Include>
+
+<Include product='bioentry_w3'><Image src='/img/device/installation-wiegand-out-connection-bew3.png' width='45%' className='none' /></Include>
+
+<Include product='biostation_2a'><Image src='/img/device/installation-wiegand-out-connection-bs2a.png' width='60%' className='none' /></Include>
+
+<Include product='facestation_2'><Image src='/img/device/installation-wiegand-out-connection-fs2.png' width='55%' className='none' /></Include>
+
+<Include product='bioentry_w2'><Image src='/img/device/installation-wiegand-out-connection-bew2.png' width='40%' className='none' /></Include>
+
+<Include product='xpass_s2'><Image src='/img/device/installation-wiegand-out-connection-xps2.png' width='45%' className='none' /></Include>
+
+</Include>
+
+<Include product='facestation_f2,biolite_n2,xstation_2,bioentry_p2,xpass_2,xpass_q2'>
+
+Wiegand 입력 또는 출력 장치로 사용
+
+<Include product='facestation_f2'><Image src='/img/device/installation-wiegand-in-out-connection-fsf2.png' width='50%' className='none' /></Include>
+
+<Include product='biolite_n2'><Image src='/img/device/installation-wiegand-inout-connection-bln2.png' width='50%' className='none' /></Include>
+
+<Include product='xstation_2'><Image src='/img/device/installation-wiegand-inout-connection-xs2.png' width='55%' className='none' /></Include>
+
+<Include product='bioentry_p2'><Image src='/img/device/installation-wiegand-inout-connection-bep2.png' width='65%' className='none' /></Include>
+
+<Include product='xpass_2'><Image src='/img/device/installation-wiegand-inout-connection-xp2.png' width='65%' className='none' /></Include>
+
+<Include product='xpass_q2'><Image src='/img/device/installation-wiegand-inout-connection-xpq2.png' width='70%' className='none' /></Include>
+
+</Include>
