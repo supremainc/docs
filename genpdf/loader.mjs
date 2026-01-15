@@ -94,11 +94,9 @@ export function processImportsInMdx(content, basePath) {
         .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
         // Remove import statements (including optional semicolon)
         .replace(/import\s+[\s\S]*?from\s+['"][^'"]+['"];?\s*/g, '')
-        // Convert {#anchor} to [#anchor] to avoid JSX parsing issues
-        .replace(/\{#([^}]+)\}/g, '[#$1]')
-        // Remove JSX expressions BUT PRESERVE [#anchor] patterns for heading IDs
-        // Negative lookahead: (?!\[#) excludes [#...] patterns
-        .replace(/\{(?!\[#)(?![\d,\-\s]*\})[^}]+\}/g, '');
+        // Remove JSX expressions BUT PRESERVE {props.xxx} patterns
+        // Excludes: {props.xxx} patterns which will be substituted later
+        .replace(/\{(?!props\.[a-zA-Z_]\w*\})[^}]*\}/g, '');
       
       imports[componentName] = cleanedContent;
     } catch (error) {
@@ -154,6 +152,10 @@ export function processImportsInMdx(content, basePath) {
       return replacedContent;
     });
   }
+
+  // Convert {#anchor} to [#anchor] AFTER props substitution is complete
+  // This must be done after props are substituted to avoid any conflicts
+  processedContent = processedContent.replace(/\{#([^}]+)\}/g, '[#$1]');
 
   return processedContent;
 }
