@@ -50,7 +50,9 @@ export function extractDocIds(config, docIds = []) {
 export function processImportsInMdx(content, basePath) {
   // Extract all import statements
   // Pattern: import ComponentName from 'path'
-  const importRegex = /import\s+(\w+)\s+from\s+['"]([^'"]+)['"]/g;
+  // Extract all import statements (including optional semicolon)
+  // Pattern: import ComponentName from 'path'; or import ComponentName from 'path'
+  const importRegex = /import\s+(\w+)\s+from\s+['"]([^'"]+)['"];?/g;
   const imports = {};
   let match;
 
@@ -90,8 +92,8 @@ export function processImportsInMdx(content, basePath) {
       let cleanedContent = importedMdxContent
         // Remove MDX comments
         .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
-        // Remove import statements
-        .replace(/import\s+[\s\S]*?from\s+['"][^'"]+['"]/g, '')
+        // Remove import statements (including optional semicolon)
+        .replace(/import\s+[\s\S]*?from\s+['"][^'"]+['"];?\s*/g, '')
         // Convert {#anchor} to [#anchor] to avoid JSX parsing issues
         .replace(/\{#([^}]+)\}/g, '[#$1]')
         // Remove JSX expressions BUT PRESERVE [#anchor] patterns for heading IDs
@@ -104,8 +106,8 @@ export function processImportsInMdx(content, basePath) {
     }
   }
 
-  // Remove import statements
-  let processedContent = content.replace(importRegex, '');
+  // Remove import statements (including optional semicolon and trailing whitespace/newlines)
+  let processedContent = content.replace(/import\s+[\w\s]+from\s+['"][^'"]+['"];?\s*\n/g, '');
 
   // Replace component usage with imported content
   // Pattern: <ComponentName props="value" /> or <ComponentName></ComponentName>
