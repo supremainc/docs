@@ -117,15 +117,21 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Linkto, {
-            to: "device/xpass_d2",
-            children: "XPass D2"
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: (0,jsx_runtime.jsx)(Linkto, {
+              to: "device/xpass_d2",
+              children: "XPass D2"
+            })
           }), " ファームウェア バージョン 1.1.0 以上"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(Linkto, {
-          to: "device/xpass_2",
-          children: "XPass 2"
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.strong, {
+            children: (0,jsx_runtime.jsx)(Linkto, {
+              to: "device/xpass_2",
+              children: "XPass 2"
+            })
+          })
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["85335"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["760"], {
 52276: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
@@ -140,7 +140,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-97902: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+16666: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -157,106 +157,128 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "Input 연결",
-  "id": "input-연결",
+  "value": "출입문 센서 및 퇴실 버튼 연결",
+  "id": "출입문-센서-및-퇴실-버튼-연결",
   "level": 2
+}, {
+  "value": "퇴실 버튼",
+  "id": "퇴실-버튼",
+  "level": 2
+}, {
+  "value": "출입문 센서",
+  "id": "출입문-센서",
+  "level": 2
+}, {
+  "value": "퇴실 버튼",
+  "id": "퇴실-버튼-1",
+  "level": 2
+}, {
+  "value": "출입문 센서",
+  "id": "출입문-센서-1",
+  "level": 2
+}, {
+  "value": "출입문 센서 및 퇴실 버튼 연결",
+  "id": "출입문-센서-및-퇴실-버튼-연결-1",
+  "level": 2
+}, {
+  "value": "퇴실 버튼, 출입문 센서",
+  "id": "퇴실-버튼-출입문-센서",
+  "level": 3
+}, {
+  "value": "알람, 비상 스위치",
+  "id": "알람-비상-스위치",
+  "level": 3
 }];
 function _createMdxContent(props) {
   const _components = {
+    admonition: "admonition",
     h2: "h2",
+    h3: "h3",
+    p: "p",
+    strong: "strong",
     ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
     ...props.components
   }, {Image, Include} = _components;
   if (!Image) _missingMdxReference("Image", true);
   if (!Include) _missingMdxReference("Include", true);
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "input-연결",
-      children: "Input 연결"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "biostation_3",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-ttl-input-connection-bs3.png",
-        width: "60%",
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Include, {
+      product: "corestation_20,doorinterface",
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+        id: "출입문-센서-및-퇴실-버튼-연결",
+        children: "출입문 센서 및 퇴실 버튼 연결"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+        children: "SUPERVISED INPUT 0 ~ 5 단자는 일반적인 입력으로 사용하거나 Supervised Input으로 사용하도록 설정할 수 있습니다."
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
+        src: "/img/device/installation-door-senser-rte-connection-cs20.png",
+        width: "45%",
         className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "biostation_3_max",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-bs3m.png",
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
+        type: "info",
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+          children: ["SUPERVISED INPUT ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+            children: "Alarm"
+          }), " 단자는 1㏀, 2.2㏀, 4.7㏀, 10㏀ 저항을 연결하여 사용할 수 있습니다. 연결할 입력 장치에 알맞는 저항을 연결한 뒤 BioStar X에서 저항 값을 동일하게 설정하세요."]
+        })
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Include, {
+      product: "doormodule",
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+        id: "퇴실-버튼",
+        children: "퇴실 버튼"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+        children: "IN0(SP), IN1(SP), IN4(SP), IN5(SP) 단자는 Supervised Input 기능을 지원하며, N/C로만 동작합니다. Supervised Input을 사용하지 않으려면 IN2, IN3, IN6, IN7 단자에 연결하세요."
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
+        src: "/img/device/installation-door-button-connection-dm20.png",
         width: "65%",
         className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "bioentry_w3",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-bew3.png",
-        width: "55%",
-        className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "biostation_2a",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-bs2a.png",
-        width: "60%",
-        className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "facestation_f2",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-fsf2.png",
-        width: "60%",
-        className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "biolite_n2",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-bln2.png",
-        width: "60%",
-        className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "xstation_2",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-xs2.png",
-        width: "60%",
-        className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "facestation_2",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-fs2.png",
-        width: "60%",
-        className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "bioentry_p2",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-bep2.png",
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+        id: "출입문-센서",
+        children: "출입문 센서"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+        children: "IN0(SP), IN1(SP), IN4(SP), IN5(SP) 단자는 Supervised Input 기능을 지원하며, N/C로만 동작합니다. Supervised Input을 사용하지 않으려면 IN2, IN3, IN6, IN7 단자에 연결하세요."
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
+        src: "/img/device/installation-door-button-connection-dm20.png",
         width: "65%",
         className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "bioentry_w2",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-bew2.png",
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Include, {
+      product: "securemodule",
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+        id: "퇴실-버튼-1",
+        children: "퇴실 버튼"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
+        src: "/img/device/installation-door-button-connection-sio2.png",
         width: "60%",
         className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "xpass_2",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-xp2.png",
-        width: "65%",
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+        id: "출입문-센서-1",
+        children: "출입문 센서"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
+        src: "/img/device/installation-door-sensor-connection-sio2.png",
+        width: "60%",
         className: "none"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "xpass_q2",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
-        src: "/img/device/installation-input-connection-xpq2.png",
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Include, {
+      product: "xpass_s2",
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+        id: "출입문-센서-및-퇴실-버튼-연결-1",
+        children: "출입문 센서 및 퇴실 버튼 연결"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+        id: "퇴실-버튼-출입문-센서",
+        children: "퇴실 버튼, 출입문 센서"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
+        src: "/img/device/installation-input-door-connection-xps2.png",
         width: "70%",
         className: "none"
-      })
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+        id: "알람-비상-스위치",
+        children: "알람, 비상 스위치"
+      }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
+        src: "/img/device/installation-input-alarm-connection-xps2.png",
+        width: "70%",
+        className: "none"
+      })]
     })]
   });
 }
@@ -274,6 +296,81 @@ function MDXContent(props = {}) {
 }
 function _missingMdxReference(id, component) {
   throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}
+
+
+
+}),
+83544: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+__webpack_require__.d(__webpack_exports__, {
+  Ay: () => (MDXContent),
+  RM: () => (toc)
+});
+/* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(74848);
+/* ESM import */var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(84429);
+
+
+const frontMatter = (/* unused pure expression or super */ null && ({}));
+const contentTitle = (/* unused pure expression or super */ null && (undefined));
+
+
+
+
+
+const toc = [{
+  "value": "공장 초기화",
+  "id": "factory-reset",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    admonition: "admonition",
+    h2: "h2",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "factory-reset",
+      children: "공장 초기화"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "장치에 저장된 모든 정보와 루트 인증서를 삭제하고 설정을 초기화합니다."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+          children: "전원을 켜세요."
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+          children: "초기화 버튼을 빠르게 세 번 누르세요."
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+          children: ["장치의 LED가 ", props.name, "으로 깜박거릴 때 초기화 버튼을 한 번 더 누르세요."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+        children: "장치에 저장된 루트 인증서가 존재하지 않을 경우 공장 초기화를 진행할 수 없습니다."
+      })
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
 }
 
 
@@ -311,6 +408,10 @@ const toc = [{
   "value": "LAN 연결 (PC와 직접 연결)",
   "id": "lan-연결-pc와-직접-연결",
   "level": 4
+}, {
+  "value": "네트워크 포트 및 서비스",
+  "id": "네트워크-포트-및-서비스",
+  "level": 4
 }];
 function _createMdxContent(props) {
   const _components = {
@@ -320,6 +421,13 @@ function _createMdxContent(props) {
     h4: "h4",
     li: "li",
     p: "p",
+    strong: "strong",
+    table: "table",
+    tbody: "tbody",
+    td: "td",
+    th: "th",
+    thead: "thead",
+    tr: "tr",
     ul: "ul",
     ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
     ...props.components
@@ -647,6 +755,53 @@ function _createMdxContent(props) {
             }), "\n"]
           }), "\n"]
         })]
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h4, {
+      id: "네트워크-포트-및-서비스",
+      children: "네트워크 포트 및 서비스"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "이 제품은 네트워크 통신 및 원활한 서비스 운영을 위해 아래와 같은 포트를 사용합니다."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+      className: "overflow-x col2-2-8",
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.table, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.thead, {
+          children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
+              children: "프로토콜"
+            }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
+              children: "포트"
+            }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.th, {
+              children: "서비스"
+            })]
+          })
+        }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tbody, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+                children: "TCP"
+              })
+            }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
+              children: "51211, 5151"
+            }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
+              children: "서버와 장치 간의 통신 서비스 및 장치 운영 상태 전환 서비스를 위해 사용됩니다."
+            })]
+          }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
+              children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+                children: "UDP"
+              })
+            }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
+              children: "51210"
+            }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
+              children: "네트워크 상에서 장치를 검색하기 위한 장치 검색 서비스에 사용됩니다."
+            })]
+          })]
+        })]
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
+      type: "info",
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+        children: "상기 포트는 제품의 정상적인 네트워크 기능 제공을 위해 사용되며, 방화벽 또는 네트워크 보안 설정 시 해당 포트의 사용이 허용되어야 합니다."
       })
     })]
   });
@@ -1583,6 +1738,105 @@ function _missingMdxReference(id, component) {
 
 
 }),
+78324: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+__webpack_require__.d(__webpack_exports__, {
+  Ay: () => (MDXContent),
+  RM: () => (toc)
+});
+/* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(74848);
+/* ESM import */var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(84429);
+
+
+const frontMatter = (/* unused pure expression or super */ null && ({}));
+const contentTitle = (/* unused pure expression or super */ null && (undefined));
+
+
+
+
+
+const toc = [{
+  "value": "네트워크 설정 초기화",
+  "id": "reset-network-settings",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    h2: "h2",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "reset-network-settings",
+      children: "네트워크 설정 초기화"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "장치의 네트워크 설정을 초기화합니다."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+          children: "전원을 켜세요."
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+          children: "장치가 자동으로 재부팅될 때까지 초기화 버튼을 누르세요."
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+          children: "초기화된 네트워크 정보를 이용해 장치를 연결하세요."
+        }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+                children: "TCP/IP 주소"
+              }), ": DHCP 주소 할당 (DHCP 주소 할당을 실패하면 169.254.x.x로 설정됩니다.)"]
+            }), "\n"]
+          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+                children: "서버 모드"
+              }), ": 사용 해제"]
+            }), "\n"]
+          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+            children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+              children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+                children: "RS-485"
+              }), ": 기본값, 115200 bps"]
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+          children: "TCP/IP나 RS-485 정보를 변경하세요."
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+          children: "전원을 끄고 켠 뒤 네트워크 정보가 올바르게 설정되었는지 확인하세요."
+        }), "\n"]
+      }), "\n"]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+}),
 71651: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
@@ -2145,127 +2399,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-79742: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-__webpack_require__.d(__webpack_exports__, {
-  Ay: () => (MDXContent),
-  RM: () => (toc)
-});
-/* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(74848);
-/* ESM import */var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(84429);
-
-
-const frontMatter = (/* unused pure expression or super */ null && ({}));
-const contentTitle = (/* unused pure expression or super */ null && (undefined));
-
-
-
-
-
-const toc = [];
-function _createMdxContent(props) {
-  const _components = {
-    admonition: "admonition",
-    li: "li",
-    p: "p",
-    ul: "ul",
-    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
-    ...props.components
-  }, {Badge, Include, Xclude} = _components;
-  if (!Badge) _missingMdxReference("Badge", true);
-  if (!Include) _missingMdxReference("Include", true);
-  if (!Xclude) _missingMdxReference("Xclude", true);
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.admonition, {
-    type: "info",
-    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Xclude, {
-      product: "facestation_f2,biostation_3_max",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["장치를 설치할 최적의 높이는 ", props.height, " cm입니다."]
-        }), "\n"]
-      })
-    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "facestation_f2",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "장치를 설치할 최적의 높이는 아래와 같습니다."
-          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-            children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-              children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Badge, {
-                  only: true,
-                  children: "FSF2-ODB"
-                }), ": ", props.height1, " cm"]
-              }), "\n"]
-            }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-              children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Badge, {
-                  only: true,
-                  children: "FSF2-DB, FSF2-AB"
-                }), ": ", props.height2, " cm"]
-              }), "\n"]
-            }), "\n"]
-          }), "\n"]
-        }), "\n"]
-      })
-    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
-      product: "biostation_3_max",
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "장치를 설치할 최적의 높이는 아래와 같습니다."
-          }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-            children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-              children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Badge, {
-                  only: true,
-                  children: "BS3M-ODB, BS3M-OAPB"
-                }), ": ", props.height1, " cm"]
-              }), "\n"]
-            }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-              children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-                children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Badge, {
-                  only: true,
-                  children: "BS3M-DB, BS3M-APB"
-                }), ": ", props.height2, " cm"]
-              }), "\n"]
-            }), "\n"]
-          }), "\n"]
-        }), "\n"]
-      })
-    }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "장치를 직사 광선이나 자외선에 직접 노출된 장소에 설치하지 마세요."
-        }), "\n"]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "사용자가 얼굴을 인증할 때 얼굴에 직사광선이 닿지 않도록 설치 위치를 조정하세요."
-        }), "\n"]
-      }), "\n"]
-    })]
-  });
-}
-function MDXContent(props = {}) {
-  const {wrapper: MDXLayout} = {
-    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */.R)(),
-    ...props.components
-  };
-  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
-    ...props,
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
-      ...props
-    })
-  }) : _createMdxContent(props);
-}
-function _missingMdxReference(id, component) {
-  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
-}
-
-
-
-}),
-46775: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+17912: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -2274,25 +2408,23 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_docs_device_facestation_2_installation_mdx_70e_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_device_xpass_s_2_installation_mdx_87a_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-facestation-2-installation-mdx-70e.json
-var site_docs_device_facestation_2_installation_mdx_70e_namespaceObject = JSON.parse('{"id":"device/facestation_2/installation","title":"설치하기","description":"설치에 필요한 전체 과정과 연결 예시를 제공합니다.","source":"@site/docs/device/facestation_2/installation.mdx","sourceDirName":"device/facestation_2","slug":"/device/facestation_2/installation","permalink":"/docs/device/facestation_2/installation","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/facestation_2/installation.mdx","tags":[],"version":"current","frontMatter":{"id":"installation","title":"설치하기","description":"설치에 필요한 전체 과정과 연결 예시를 제공합니다.","keywords":["브래킷","전원","네트워크","입력","릴레이","독립형","Secure I/O","Wiegand"],"isTranslationMissing":false},"sidebar":"facestation2","previous":{"title":"시작하기","permalink":"/docs/device/facestation_2/getting-started"},"next":{"title":"사용하기","permalink":"/docs/device/facestation_2/using-device"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-xpass-s-2-installation-mdx-87a.json
+var site_docs_device_xpass_s_2_installation_mdx_87a_namespaceObject = JSON.parse('{"id":"device/xpass_s2/installation","title":"설치하기","description":"설치에 필요한 전체 과정과 연결 예시를 제공합니다.","source":"@site/docs/device/xpass_s2/installation.mdx","sourceDirName":"device/xpass_s2","slug":"/device/xpass_s2/installation","permalink":"/docs/device/xpass_s2/installation","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/xpass_s2/installation.mdx","tags":[],"version":"current","frontMatter":{"id":"installation","title":"설치하기","description":"설치에 필요한 전체 과정과 연결 예시를 제공합니다.","keywords":["브래킷","확장 브래킷","전원","네트워크","입력","릴레이","독립형","Secure I/O","Wiegand"],"isTranslationMissing":false},"sidebar":"xpasss2","previous":{"title":"시작하기","permalink":"/docs/device/xpass_s2/getting-started"},"next":{"title":"제품 사양","permalink":"/docs/device/xpass_s2/product-specifications"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-// EXTERNAL MODULE: ./docs/common/_installation-bracket-notes.mdx
-var _installation_bracket_notes = __webpack_require__(79742);
 // EXTERNAL MODULE: ./docs/common/_device-power-connection.mdx
 var _device_power_connection = __webpack_require__(65842);
 // EXTERNAL MODULE: ./docs/common/_device-network-connection.mdx
 var _device_network_connection = __webpack_require__(43333);
-// EXTERNAL MODULE: ./docs/common/_device-input-connetion.mdx
-var _device_input_connetion = __webpack_require__(97902);
+// EXTERNAL MODULE: ./docs/common/_device-door-sensor-connection.mdx
+var _device_door_sensor_connection = __webpack_require__(16666);
 // EXTERNAL MODULE: ./docs/common/_device-relay-connection.mdx
 var _device_relay_connection = __webpack_require__(35078);
 // EXTERNAL MODULE: ./docs/common/_device-standalone-connection.mdx
@@ -2303,7 +2435,11 @@ var _device_connection_standalone_secure_notes = __webpack_require__(52276);
 var _device_secure_io2_connection = __webpack_require__(71651);
 // EXTERNAL MODULE: ./docs/common/_device-wiegand-connection.mdx
 var _device_wiegand_connection = __webpack_require__(14682);
-;// CONCATENATED MODULE: ./docs/device/facestation_2/installation.mdx
+// EXTERNAL MODULE: ./docs/common/_device-reset-network-settings.mdx
+var _device_reset_network_settings = __webpack_require__(78324);
+// EXTERNAL MODULE: ./docs/common/_device-factory-reset.mdx
+var _device_factory_reset = __webpack_require__(83544);
+;// CONCATENATED MODULE: ./docs/device/xpass_s2/installation.mdx
 
 
 const frontMatter = {
@@ -2312,6 +2448,7 @@ const frontMatter = {
 	description: '설치에 필요한 전체 과정과 연결 예시를 제공합니다.',
 	keywords: [
 		'브래킷',
+		'확장 브래킷',
 		'전원',
 		'네트워크',
 		'입력',
@@ -2330,13 +2467,16 @@ const assets = {
 
 /*## 전원 연결*/
 /*## 네트워크 연결*/
-/*## Input 연결*/
+/*## 출입문 센서 및 퇴실 버튼 연결*/
 /*## 릴레이 연결*/
 /*## 독립형 연결*/
 /*공통 노트*/
 /*## Secure I/O 2 연결*/
 /*공통 노트*/
 /*## Wiegand 연결*/
+/*## 네트워크 설정 초기화*/
+/*## 공장 초기화*/
+
 
 
 
@@ -2356,11 +2496,11 @@ const toc = [{
   "value": "일반 브래킷",
   "id": "일반-브래킷",
   "level": 3
-}, ..._installation_bracket_notes/* .toc */.RM, {
-  "value": "틸팅 브래킷",
-  "id": "틸팅-브래킷",
+}, {
+  "value": "확장 브래킷",
+  "id": "확장-브래킷",
   "level": 3
-}, ..._installation_bracket_notes/* .toc */.RM, ..._device_power_connection/* .toc */.RM, ..._device_network_connection/* .toc */.RM, ..._device_input_connetion/* .toc */.RM, ..._device_relay_connection/* .toc */.RM, ..._device_standalone_connection/* .toc */.RM, ..._device_connection_standalone_secure_notes/* .toc */.RM, ..._device_secure_io2_connection/* .toc */.RM, ..._device_connection_standalone_secure_notes/* .toc */.RM, ..._device_wiegand_connection/* .toc */.RM];
+}, ..._device_power_connection/* .toc */.RM, ..._device_network_connection/* .toc */.RM, ..._device_door_sensor_connection/* .toc */.RM, ..._device_relay_connection/* .toc */.RM, ..._device_standalone_connection/* .toc */.RM, ..._device_connection_standalone_secure_notes/* .toc */.RM, ..._device_secure_io2_connection/* .toc */.RM, ..._device_connection_standalone_secure_notes/* .toc */.RM, ..._device_wiegand_connection/* .toc */.RM, ..._device_reset_network_settings/* .toc */.RM, ..._device_factory_reset/* .toc */.RM];
 function _createMdxContent(props) {
   const _components = {
     admonition: "admonition",
@@ -2369,18 +2509,9 @@ function _createMdxContent(props) {
     li: "li",
     ol: "ol",
     p: "p",
-    table: "table",
-    tbody: "tbody",
-    td: "td",
-    th: "th",
-    thead: "thead",
-    tr: "tr",
-    ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Column, Columns, Image} = _components;
-  if (!Column) _missingMdxReference("Column", true);
-  if (!Columns) _missingMdxReference("Columns", true);
+  }, {Image} = _components;
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
@@ -2394,117 +2525,22 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "제공된 드릴링 템플릿을 이용하여 제품을 장착할 위치를 정하세요."
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-recommended-fs2.svg",
-          className: "none",
-          alone: true
-        }), "\n", (0,jsx_runtime.jsx)(_installation_bracket_notes/* ["default"] */.Ay, {
-          height: 110
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "제품을 장착할 위치에 고정용 나사를 이용하여 브래킷을 단단히 고정하세요."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device1-fs2.svg",
+          src: "/img/device/installation-device1-xps2.png",
           className: "none",
           alone: true
-        }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
-          children: [(0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "제품을 콘크리트 벽에 설치할 경우 드릴로 구멍을 뚫어 PVC 앵커를 끼운 뒤 고정용 나사로 고정하세요."
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "RF 신호 간섭을 피하기 위해 최소 이격 거리를 확인하여 설치하세요."
-              }), "\n"]
-            }), "\n"]
-          }), (0,jsx_runtime.jsxs)(Columns, {
-            children: [(0,jsx_runtime.jsxs)(Column, {
-              className: "text--center",
-              children: [(0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/installation-wall1-fs2.png",
-                className: "none",
-                width: "60%"
-              }), (0,jsx_runtime.jsx)("div", {
-                className: "overflow-x",
-                children: (0,jsx_runtime.jsxs)(_components.table, {
-                  children: [(0,jsx_runtime.jsx)(_components.thead, {
-                    children: (0,jsx_runtime.jsxs)(_components.tr, {
-                      children: [(0,jsx_runtime.jsx)(_components.th, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "벽 두께"
-                      }), (0,jsx_runtime.jsx)(_components.th, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "거리"
-                      })]
-                    })
-                  }), (0,jsx_runtime.jsxs)(_components.tbody, {
-                    children: [(0,jsx_runtime.jsxs)(_components.tr, {
-                      children: [(0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "100 mm"
-                      }), (0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "283 mm"
-                      })]
-                    }), (0,jsx_runtime.jsxs)(_components.tr, {
-                      children: [(0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "120 mm"
-                      }), (0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "275 mm"
-                      })]
-                    }), (0,jsx_runtime.jsxs)(_components.tr, {
-                      children: [(0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "150 mm"
-                      }), (0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "260 mm"
-                      })]
-                    })]
-                  })]
-                })
-              })]
-            }), (0,jsx_runtime.jsx)(Column, {
-              className: "text--center",
-              children: (0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/installation-wall2-fs2.png",
-                className: "none",
-                width: "60%"
-              })
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-              children: "모바일 출입카드를 사용할 경우 BLE 신호 간섭을 피하기 위해 장치 사이에 최소 1 m 이상의 거리를 두고 설치하세요."
-            }), "\n"]
-          })]
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "제품을 콘크리트 벽에 설치할 경우 드릴로 구멍을 뚫어 PVC 앵커를 끼운 뒤 고정용 나사로 고정하세요."
+          })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "고정된 브래킷 위에 제품을 장착하세요."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device2-fs2.svg",
+          src: "/img/device/installation-device2-xps2.png",
           className: "none",
           alone: true
         }), "\n"]
@@ -2512,7 +2548,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "제품 고정용 나사를 돌려 제품과 브래킷을 조립하세요."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device3-fs2.svg",
+          src: "/img/device/installation-device3-xps2.png",
           className: "none",
           alone: true
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -2523,154 +2559,55 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "틸팅-브래킷",
-      children: "틸팅 브래킷"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "이 제품은 전용 틸팅 브래킷을 이용해 인증 시 각도 조절이 가능하도록 설치할 수 있습니다. 전용 틸팅 브래킷은 별매품입니다."
+      id: "확장-브래킷",
+      children: "확장 브래킷"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "제공된 드릴링 템플릿을 이용하여 제품을 장착할 위치를 정하세요."
+          children: "확장 브래킷에 포함된 고정용 나사를 이용하여 일반 브래킷과 확장 브래킷을 조립하세요."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-recommended-fs2.svg",
-          className: "none",
-          alone: true
-        }), "\n", (0,jsx_runtime.jsx)(_installation_bracket_notes/* ["default"] */.Ay, {
-          height: 110
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "제품을 장착할 위치에 틸팅 브래킷 고정용 나사를 이용하여 틸팅 브래킷을 단단히 고정하세요."
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device-tilt_bracket1-fs2.svg",
-          className: "none",
-          alone: true
-        }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-          type: "info",
-          children: [(0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "제품을 콘크리트 벽에 설치할 경우 드릴로 구멍을 뚫어 PVC 앵커를 끼운 뒤 고정용 나사로 고정하세요."
-              }), "\n"]
-            }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-              children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "RF 신호 간섭을 피하기 위해 최소 이격 거리를 확인하여 설치하세요."
-              }), "\n"]
-            }), "\n"]
-          }), (0,jsx_runtime.jsxs)(Columns, {
-            children: [(0,jsx_runtime.jsxs)(Column, {
-              className: "text--center",
-              children: [(0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/installation-wall1-fs2.png",
-                className: "none",
-                width: "60%"
-              }), (0,jsx_runtime.jsx)("div", {
-                className: "overflow-x",
-                children: (0,jsx_runtime.jsxs)(_components.table, {
-                  children: [(0,jsx_runtime.jsx)(_components.thead, {
-                    children: (0,jsx_runtime.jsxs)(_components.tr, {
-                      children: [(0,jsx_runtime.jsx)(_components.th, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "벽 두께"
-                      }), (0,jsx_runtime.jsx)(_components.th, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "거리"
-                      })]
-                    })
-                  }), (0,jsx_runtime.jsxs)(_components.tbody, {
-                    children: [(0,jsx_runtime.jsxs)(_components.tr, {
-                      children: [(0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "100 mm"
-                      }), (0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "283 mm"
-                      })]
-                    }), (0,jsx_runtime.jsxs)(_components.tr, {
-                      children: [(0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "120 mm"
-                      }), (0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "275 mm"
-                      })]
-                    }), (0,jsx_runtime.jsxs)(_components.tr, {
-                      children: [(0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "150 mm"
-                      }), (0,jsx_runtime.jsx)(_components.td, {
-                        style: {
-                          textAlign: "center"
-                        },
-                        children: "260 mm"
-                      })]
-                    })]
-                  })]
-                })
-              })]
-            }), (0,jsx_runtime.jsx)(Column, {
-              className: "text--center",
-              children: (0,jsx_runtime.jsx)(Image, {
-                src: "/img/device/installation-wall2-fs2.png",
-                className: "none",
-                width: "60%"
-              })
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.ul, {
-            children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-              children: "모바일 출입카드를 사용할 경우 BLE 신호 간섭을 피하기 위해 장치 사이에 최소 1 m 이상의 거리를 두고 설치하세요."
-            }), "\n"]
-          })]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "틸팅 브래킷 위에 브래킷을 단단히 고정하세요."
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device-tilt_bracket2-fs2.svg",
+          src: "/img/device/installation-device-bracket1-xps2.png",
           className: "none",
           alone: true
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "고정된 브래킷 위에 제품을 장착하세요."
+          children: "제품을 장착할 위치에 고정용 나사를 이용하여 확장 브래킷을 단단히 고정하세요."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device-tilt_bracket3-fs2.svg",
-          className: "none",
-          alone: true
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "제품 고정용 나사를 돌려 제품과 브래킷을 조립하세요."
-        }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/device/installation-device-tilt_bracket4-fs2.svg",
+          src: "/img/device/installation-device-bracket2-xps2.png",
           className: "none",
           alone: true
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsx)(_components.p, {
-            children: "브래킷과 제품을 조립할 때 향상된 보안을 위해 제품 고정용 나사 대신 동봉된 브래킷 고정용 나사(별 모양)를 이용할 수 있습니다."
+            children: "제품을 콘크리트 벽에 설치할 경우 드릴로 구멍을 뚫어 PVC 앵커를 끼운 뒤 고정용 나사로 고정하세요."
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "고정된 확장 브래킷 위에 제품을 장착하세요."
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/device/installation-device-bracket3-xps2.png",
+          className: "none",
+          alone: true
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: "제품 고정용 나사를 돌려 제품과 확장 브래킷을 조립하세요."
+        }), "\n", (0,jsx_runtime.jsx)(Image, {
+          src: "/img/device/installation-device-bracket4-xps2.png",
+          className: "none",
+          alone: true
+        }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+          type: "info",
+          children: (0,jsx_runtime.jsx)(_components.p, {
+            children: "확장 브래킷과 제품을 조립할 때 향상된 보안을 위해 제품 고정용 나사 대신 동봉된 브래킷 고정용 나사(별 모양)를 이용할 수 있습니다."
           })
         }), "\n"]
       }), "\n"]
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_power_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_network_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_input_connetion/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_relay_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_standalone_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {
-      product: "FaceStation 2"
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_secure_io2_connection/* ["default"] */.Ay, {}), "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {
-      product: "FaceStation 2"
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_wiegand_connection/* ["default"] */.Ay, {})]
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_power_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_network_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_door_sensor_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_relay_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_standalone_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_secure_io2_connection/* ["default"] */.Ay, {}), "\n", "\n", (0,jsx_runtime.jsx)(_device_connection_standalone_secure_notes/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_wiegand_connection/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_reset_network_settings/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_factory_reset/* ["default"] */.Ay, {
+      name: "노란색"
+    })]
   });
 }
 function MDXContent(props = {}) {
