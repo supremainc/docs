@@ -389,6 +389,98 @@ footer {
   font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
 }
 
+/* Remark Admonition Styles */
+.admonition {
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-left: 4px solid;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
+
+.admonition-info {
+  border-left-color: #0ea5e9;
+  background-color: #ecf7ff;
+}
+
+.admonition-info svg {
+  color: #0ea5e9 !important;
+}
+
+.admonition-note {
+  border-left-color: #8b5cf6;
+  background-color: #f5f3ff;
+}
+
+.admonition-note svg {
+  color: #8b5cf6 !important;
+}
+
+.admonition-tip {
+  border-left-color: #10b981;
+  background-color: #ecfdf5;
+}
+
+.admonition-tip svg {
+  color: #10b981 !important;
+}
+
+.admonition-warning {
+  border-left-color: #f59e0b;
+  background-color: #fffbeb;
+}
+
+.admonition-warning svg {
+  color: #f59e0b !important;
+}
+
+.admonition-danger {
+  border-left-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.admonition-danger svg {
+  color: #ef4444 !important;
+}
+
+.admonition-caution {
+  border-left-color: #f59e0b;
+  background-color: #fffbeb;
+}
+
+.admonition-caution svg {
+  color: #f59e0b !important;
+}
+
+.admonition > *:first-child {
+  margin-top: 0;
+}
+
+.admonition > *:last-child {
+  margin-bottom: 0;
+}
+
+.admonition ul,
+.admonition ol {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.admonition li {
+  margin: 4px 0;
+}
+
+.admonition p {
+  margin: 8px 0;
+}
+
+.admonition code {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+}
+
 /* Code Block Styles */
 .code-block {
   background-color: #f6f8fa;
@@ -501,4 +593,98 @@ footer {
 
 .api-curl code {
   color: #6f42c1;
+}
+
+/* Prism.js Syntax Highlighting Styles */
+.remark-highlight {
+  background: #282c34;
+  border-radius: 4px;
+  margin: 15px 0;
+  overflow-x: auto;
+  position: relative;
+}
+
+.remark-highlight pre {
+  background: none;
+  margin: 0;
+  padding: 16px 16px;
+  overflow: visible;
+}
+
+.remark-highlight code {
+  background: none;
+  color: #abb2bf;
+  font-family: 'Courier New', Consolas, monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+  padding: 0;
+}
+
+.remark-highlight code .token {
+  color: #abb2bf;
+}
+
+/* Token Colors - One Dark Theme */
+.remark-highlight .token.comment,
+.remark-highlight .token.prolog,
+.remark-highlight .token.doctype,
+.remark-highlight .token.cdata {
+  color: #5c6370;
+}
+
+.remark-highlight .token.punctuation {
+  color: #abb2bf;
+}
+
+.remark-highlight .token.property,
+.remark-highlight .token.tag,
+.remark-highlight .token.boolean,
+.remark-highlight .token.number,
+.remark-highlight .token.constant,
+.remark-highlight .token.symbol,
+.remark-highlight .token.deleted {
+  color: #e06c75;
+}
+
+.remark-highlight .token.selector,
+.remark-highlight .token.attr-name,
+.remark-highlight .token.string,
+.remark-highlight .token.char,
+.remark-highlight .token.builtin,
+.remark-highlight .token.inserted {
+  color: #98c379;
+}
+
+.remark-highlight .token.operator,
+.remark-highlight .token.entity,
+.remark-highlight .token.url,
+.language-css .remark-highlight .token.string,
+.style .remark-highlight .token.string {
+  color: #56b6f2;
+}
+
+.remark-highlight .token.atrule,
+.remark-highlight .token.attr-value,
+.remark-highlight .token.keyword {
+  color: #c678dd;
+}
+
+.remark-highlight .token.function,
+.remark-highlight .token.class-name {
+  color: #61afef;
+}
+
+.remark-highlight .token.regex,
+.remark-highlight .token.important,
+.remark-highlight .token.variable {
+  color: #e5c07b;
+}
+
+.remark-highlight .token.important,
+.remark-highlight .token.bold {
+  font-weight: bold;
+}
+
+.remark-highlight .token.italic {
+  font-style: italic;
 }

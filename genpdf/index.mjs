@@ -115,7 +115,8 @@ async function main() {
       maxDepth: parseInt(options.maxDepth, 10),
       language: options.language,
       product: options.product,
-      translations
+      translations,
+      basePath: ROOT_DIR
     });
 
     // Write output file

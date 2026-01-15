@@ -47,7 +47,7 @@ export function generateTableOfContents(mdxFiles, maxDepth = 3) {
  * Build complete HTML document
  * @param {Array<Object>} mdxFiles - Array of loaded MDX files
  * @param {string} title - Document title
- * @param {Object} options - Generation options (template, toc, maxDepth, language, product, translations)
+ * @param {Object} options - Generation options (template, toc, maxDepth, language, product, translations, basePath)
  * @returns {Promise<string>} Complete HTML
  */
 export async function buildHtmlDocument(mdxFiles, title, options = {}) {
@@ -57,7 +57,8 @@ export async function buildHtmlDocument(mdxFiles, title, options = {}) {
     maxDepth = 3,
     language = 'ko',
     product = '',
-    translations = {}
+    translations = {},
+    basePath = ''
   } = options;
 
   const contentSections = [];
@@ -65,7 +66,7 @@ export async function buildHtmlDocument(mdxFiles, title, options = {}) {
     if (!file) continue;
     
     const docTitle = file.frontmatter.title || file.docId;
-    const content = await markdownToHtml(file.content, translations, product);
+    const content = await markdownToHtml(file.content, translations, product, basePath);
     
     contentSections.push(`
     <section class="doc-section" id="${file.headingId}">
