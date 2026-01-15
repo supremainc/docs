@@ -1,0 +1,40 @@
+---
+id: 151
+title: Firmware Version 1.5.1
+---
+
+# Firmware Version 1.5.1 (Build No. 1.5.1_260105)
+
+Release<Separator/>2026-01-16
+
+:::caution
+
+- After upgrading the firmware to v1.5.0, it is not able to downgrade to an earlier version of the firmware.
+
+- The XP2-MAPB-H model cannot downgrade to firmware version v1.4.3 or lower.
+
+- The XP2-GKDPB model with hardware v1.2.0 or higher cannot downgrade firmware to lower than v1.4.3. The hardware version can be checked in the **DEVICE** menu of BioStar 2.
+
+- Devices with the new BLE chip cannot downgrade to a lower version after upgrading the firmware to v1.3.1 or higher. Devices with existing BLE chips can be downgraded to a lower version.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Improved to distinguish devices that support the **Secure Tamper** feature.
+
+1. Added a distinction code to support 7-byte CSN cards.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Fixed an issue where the **Primary/Secondary Key** values of certain cards were exposed when reading Custom Smart Card settings from the SDK. <Badge>1.4.1</Badge>
+
+</BugLists>
