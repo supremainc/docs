@@ -81,7 +81,8 @@ async function main() {
 
     // Load translations
     const translations = loadTranslations(options.language);
-    console.log(`📚 Translations loaded for language: ${options.language}\n`);
+    console.log(`📚 Translations loaded for language: ${options.language}`);
+    console.log('');
 
     // Extract doc IDs
     const docIds = extractDocIds(sidebars[sidebarKey]);

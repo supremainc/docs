@@ -108,13 +108,49 @@ export function processImportsInMdx(content, basePath) {
   let processedContent = content.replace(importRegex, '');
 
   // Replace component usage with imported content
-  // Pattern: <ComponentName /> or <ComponentName></ComponentName>
+  // Pattern: <ComponentName props="value" /> or <ComponentName></ComponentName>
   for (const [componentName, importedContent] of Object.entries(imports)) {
-    const selfClosingRegex = new RegExp(`<${componentName}\\s*/?>`, 'g');
-    const closingRegex = new RegExp(`<${componentName}[^>]*>.*?</${componentName}>`, 'gs');
+    // Match self-closing tags with attributes: <ComponentName attr1="val1" attr2="val2" />
+    const selfClosingRegex = new RegExp(`<${componentName}([^/>]*)\\s*/?>`, 'g');
+    // Match opening/closing tags with content
+    const closingRegex = new RegExp(`<${componentName}([^>]*)>.*?</${componentName}>`, 'gs');
     
-    processedContent = processedContent.replace(selfClosingRegex, importedContent);
-    processedContent = processedContent.replace(closingRegex, importedContent);
+    // Handle self-closing tags with props
+    processedContent = processedContent.replace(selfClosingRegex, (match, attributes) => {
+      let replacedContent = importedContent;
+      
+      // Extract props from attributes
+      // Pattern: name="value" or name='value'
+      const propRegex = /(\w+)=["']([^"']*?)["']/g;
+      let propMatch;
+      
+      while ((propMatch = propRegex.exec(attributes)) !== null) {
+        const propName = propMatch[1];
+        const propValue = propMatch[2];
+        // Replace {props.propName} with the actual value
+        replacedContent = replacedContent.replace(new RegExp(`\\{props\\.${propName}\\}`, 'g'), propValue);
+      }
+      
+      return replacedContent;
+    });
+    
+    // Handle opening/closing tags with content and props
+    processedContent = processedContent.replace(closingRegex, (match, attributes) => {
+      let replacedContent = importedContent;
+      
+      // Extract props from attributes
+      const propRegex = /(\w+)=["']([^"']*?)["']/g;
+      let propMatch;
+      
+      while ((propMatch = propRegex.exec(attributes)) !== null) {
+        const propName = propMatch[1];
+        const propValue = propMatch[2];
+        // Replace {props.propName} with the actual value
+        replacedContent = replacedContent.replace(new RegExp(`\\{props\\.${propName}\\}`, 'g'), propValue);
+      }
+      
+      return replacedContent;
+    });
   }
 
   return processedContent;

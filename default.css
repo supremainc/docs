@@ -253,6 +253,11 @@ header p {
   color: #a32343;
 }
 
+.doc-content .admonition-warning {
+    border-left-color: #a32343 !important;
+    background-color: #f8e8ec;
+}
+
 footer {
   text-align: center;
   padding: 40px 20px;

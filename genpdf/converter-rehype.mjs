@@ -253,42 +253,61 @@ function remarkAddHeadingIds(docId = '') {
 }
 
 /**
- * Create a remark plugin that processes Include/Xclude components
+ * Create a remark plugin that processes Include/Xclude MDX JSX components
+ * Handles: <Include product='...'>, <Xclude product='...'>
+ * 
+ * Logic matches src/components/Include and src/components/Xclude:
+ * - Include: render if product matches, otherwise remove
+ * - Xclude: remove if product matches, otherwise render
  */
 function remarkProcessIncludeXclude(productOption = '') {
   return (tree) => {
     const products = productOption ? productOption.split(',').map(p => p.trim()) : [];
 
-    visit(tree, (node, index, parent) => {
-      if (!node || !parent || index === null) return;
+    // Process each parent's children to handle Include/Xclude
+    visit(tree, (node) => {
+      if (!node || !node.children || !Array.isArray(node.children)) return;
 
-      // Process Include components
-      if (node.type === 'mdxJsxFlowElement' && node.name === 'Include') {
-        const productAttr = node.attributes?.find(attr => attr.name === 'product')?.value || '';
-        const includeProducts = productAttr.split(',').map(p => p.trim());
+      // Process children in reverse order to safely splice
+      for (let i = node.children.length - 1; i >= 0; i--) {
+        const child = node.children[i];
         
-        if (products.length === 0 || !includeProducts.some(p => products.includes(p))) {
-          // Remove the Include node and its children if product doesn't match or no filter
-          parent.children.splice(index, 1);
+        const isInclude = child.type === 'mdxJsxFlowElement' && child.name === 'Include';
+        const isXclude = child.type === 'mdxJsxFlowElement' && child.name === 'Xclude';
+        
+        if (!isInclude && !isXclude) continue;
+
+        // Extract product attribute
+        const productAttr = child.attributes?.find(attr => attr.name === 'product');
+        const productValue = productAttr?.value || '';
+        const productList = productValue.split(',').map(p => p.trim()).filter(p => p);
+
+        let shouldKeepChildren = false;
+        let shouldRemove = false;
+
+        if (isInclude) {
+          // Include: keep children if product matches
+          if (products.length > 0 && productList.some(p => products.includes(p))) {
+            shouldKeepChildren = true;
+          } else {
+            shouldRemove = true;
+          }
         } else {
-          // Keep only the children, remove the wrapper
-          const children = node.children || [];
-          parent.children.splice(index, 1, ...children);
+          // Xclude: remove if product matches, otherwise keep children
+          if (products.length > 0 && productList.some(p => products.includes(p))) {
+            shouldRemove = true;
+          } else {
+            shouldKeepChildren = true;
+          }
         }
-      }
 
-      // Process Xclude components
-      if (node.type === 'mdxJsxFlowElement' && node.name === 'Xclude') {
-        const productAttr = node.attributes?.find(attr => attr.name === 'product')?.value || '';
-        const xcludeProducts = productAttr.split(',').map(p => p.trim());
-        
-        if (products.length === 0 || xcludeProducts.some(p => products.includes(p))) {
-          // Remove the Xclude node and its children if product matches or no filter
-          parent.children.splice(index, 1);
-        } else {
-          // Keep only the children, remove the wrapper
-          const children = node.children || [];
-          parent.children.splice(index, 1, ...children);
+        if (shouldRemove) {
+          // Remove the element completely
+          node.children.splice(i, 1);
+        } else if (shouldKeepChildren) {
+          // Replace with children only
+          const children = child.children || [];
+          node.children.splice(i, 1, ...children);
         }
       }
     });
@@ -324,22 +343,74 @@ function rehypeAddAdmonitionIcons(translations = {}) {
     info: '#0ea5e9',
     note: '#8b5cf6',
     tip: '#10b981',
-    warning: '#f59e0b',
+    warning: '#a32343',
     danger: '#ef4444',
     caution: '#f59e0b'
   };
 
-  // Get labels from translations
-  const labelMap = {
-    info: (translations['theme.admonition.info']?.message) || '알아두기',
-    note: (translations['theme.admonition.note']?.message) || '노트',
-    tip: (translations['theme.admonition.tip']?.message) || '팁',
-    warning: (translations['theme.admonition.warning']?.message) || '경고',
-    danger: (translations['theme.admonition.danger']?.message) || '위험',
-    caution: (translations['theme.admonition.caution']?.message) || '주의'
+  // Debug: Check translations object
+  const hasTranslations = Object.keys(translations).length > 0;
+  const hasAdmonitionKeys = Object.keys(translations).filter(k => k.startsWith('theme.admonition')).length;
+  
+  if (hasTranslations && hasAdmonitionKeys > 0) {
+    // Log only if translations are actually loaded
+    if (translations['theme.admonition.note']) {
+      // console.log('[DEBUG] theme.admonition.note:', translations['theme.admonition.note']);
+    }
+  }
+
+  // Get labels from translations with proper fallbacks
+  // Helper function to safely get label
+  const getAdmonitionLabel = (type) => {
+    const key = `theme.admonition.${type}`;
+    const trans = translations[key];
+    const isValid = trans && typeof trans === 'object' && trans.message;
+    
+    // If translation exists and has message property, use it
+    if (isValid) {
+      return trans.message;
+    }
+    
+    // Fallback labels in Korean
+    const fallbacks = {
+      info: '알아두기',
+      note: '참고',
+      tip: '팁',
+      warning: '경고',
+      danger: '위험',
+      caution: '주의'
+    };
+    
+    return fallbacks[type] || type;
   };
 
-  // SVG paths for icons
+  const labelMap = {
+    info: getAdmonitionLabel('info'),
+    note: getAdmonitionLabel('note'),
+    tip: getAdmonitionLabel('tip'),
+    warning: getAdmonitionLabel('warning'),
+    danger: getAdmonitionLabel('danger'),
+    caution: getAdmonitionLabel('caution')
+  };
+
+  // CRITICAL: If all labels are the same value, there's a problem
+  const uniqueLabels = new Set(Object.values(labelMap));
+  if (uniqueLabels.size === 1) {
+    // All labels are the same! This is the bug!
+    // Fallback: Assign direct values instead of using getAdmonitionLabel
+    const directLabels = {
+      info: translations['theme.admonition.info']?.message || '알아두기',
+      note: translations['theme.admonition.note']?.message || '참고',
+      tip: translations['theme.admonition.tip']?.message || '팁',
+      warning: translations['theme.admonition.warning']?.message || '경고',
+      danger: translations['theme.admonition.danger']?.message || '위험',
+      caution: translations['theme.admonition.caution']?.message || '주의'
+    };
+    // Only use direct labels if they're different
+    if (new Set(Object.values(directLabels)).size > 1) {
+      Object.assign(labelMap, directLabels);
+    }
+  }  // SVG paths for icons
   const iconPaths = {
     info: 'M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z',
     note: 'M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z',
@@ -355,17 +426,29 @@ function rehypeAddAdmonitionIcons(translations = {}) {
 
       // Find admonition divs and add icon wrapper
       if (node.tagName === 'div') {
-        const classes = node.properties?.className || [];
-        const isAdmonition = Array.isArray(classes) && classes.some(c => c?.includes('admonition-'));
+        let classes = node.properties?.className || [];
+        
+        // className can be: 
+        // 1. ['admonition', 'admonition-warning'] - array of strings
+        // 2. ['admonition admonition-warning'] - single string in array (from remark-directive)
+        // 3. 'admonition admonition-warning' - plain string
+        
+        let classString = '';
+        if (Array.isArray(classes)) {
+          classString = classes.join(' ');
+        } else if (typeof classes === 'string') {
+          classString = classes;
+        }
+        
+        const isAdmonition = classString.includes('admonition-');
         
         if (isAdmonition) {
-          // Extract admonition type from className
-          const typeClass = classes.find(c => c?.startsWith('admonition-'));
-          const type = typeClass?.replace('admonition-', '') || 'info';
+          // Extract admonition type from className string
+          const match = classString.match(/admonition-(\w+)/);
+          const type = match ? match[1] : 'info';
           const color = colorMap[type] || '#666';
           const label = labelMap[type] || type;
           const iconPath = iconPaths[type] || iconPaths.info;
-          
           // Create icon SVG element
           const iconElement = {
             type: 'element',
@@ -690,24 +773,36 @@ function rehypeProcessMdxElements(translations = {}, basePath = '') {
     visit(tree, (node, index, parent) => {
       if (!node || !parent || index === null) return;
 
-      // Process Image components
-      if (node.type === 'mdxJsxFlowElement' && node.name === 'Image') {
+      // Process Image components (both flow and text elements - for headings)
+      if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Image') {
         const attributes = node.attributes || [];
         const srcAttr = attributes.find(attr => attr.name === 'src');
         let src = srcAttr ? srcAttr.value : '';
         
+        const hasAlone = attributes.some(attr => attr.name === 'alone');
+        
         // Convert to absolute file system path for PDF generation
+        // alone attribute means: don't add language-specific prefix, but still convert /img/ paths
         if (src && basePath) {
-          // Remove leading slashes and normalize
-          const normalizedSrc = src.replace(/^\//, '').replace(/^img\//, '');
-          src = basePath.replace(/\\/g, '/') + '/static/img/' + normalizedSrc;
-        } else if (src && !src.startsWith('/')) {
-          // Fallback: normalize relative paths to web absolute paths
+          if (src.startsWith('/img/')) {
+            // Web absolute path - convert to file system absolute path
+            const normalizedSrc = src.replace(/^\/img\//, '');
+            src = basePath.replace(/\\/g, '/') + '/static/img/' + normalizedSrc;
+          } else if (!src.startsWith('/') && !hasAlone) {
+            // Relative path without alone attribute - normalize to web absolute path
+            src = src.replace(/^\.\//, '/img/').replace(/^\.\.\/img\//, '/img/').replace(/^\.\.\//, '/');
+            if (!src.startsWith('/')) {
+              src = '/img/' + src;
+            }
+          }
+        } else if (src && !src.startsWith('/') && !basePath && !hasAlone) {
+          // No basePath but need to convert relative paths
           src = src.replace(/^\.\//, '/img/').replace(/^\.\.\/img\//, '/img/').replace(/^\.\.\//, '/');
           if (!src.startsWith('/')) {
             src = '/img/' + src;
           }
         }
+        // If hasAlone is true and src is relative (not /img/), keep src as-is
         
         const hasCaption = attributes.some(attr => attr.name === 'caption');
         const hasIco = attributes.some(attr => attr.name === 'ico');
@@ -824,7 +919,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(rehypeProcessMdxElements, translations, basePath)
     .use(rehypeProcessCmdComponent, language)
     .use(rehypeMdxElements, {
-      allowedElements: ['Image', 'Badge', 'Include', 'Xclude']
+      allowedElements: ['Image', 'Badge']
     })
     .use(rehypeStringify);
 }
