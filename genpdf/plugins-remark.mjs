@@ -215,6 +215,67 @@ export function remarkAddHeadingIds(docId = '') {
 }
 
 /**
+ * Recursively process Include/Xclude components and their nested children
+ * @param {Object} node - Node to process
+ * @param {Array<string>} products - List of selected products
+ */
+function processIncludeXcludeRecursive(node, products) {
+  if (!node || !node.children || !Array.isArray(node.children)) {
+    return;
+  }
+
+  // Process children in reverse order to safely splice
+  for (let i = node.children.length - 1; i >= 0; i--) {
+    const child = node.children[i];
+    
+    const isInclude = child.type === 'mdxJsxFlowElement' && child.name === 'Include';
+    const isXclude = child.type === 'mdxJsxFlowElement' && child.name === 'Xclude';
+    
+    if (isInclude || isXclude) {
+      // Extract product attribute
+      const productAttr = child.attributes?.find(attr => attr.name === 'product');
+      const productValue = productAttr?.value || '';
+      const productList = productValue.split(',').map(p => p.trim()).filter(p => p);
+
+      let shouldKeepChildren = false;
+      let shouldRemove = false;
+
+      if (isInclude) {
+        // Include: keep children if product matches
+        if (products.length > 0 && productList.some(p => products.includes(p))) {
+          shouldKeepChildren = true;
+        } else {
+          shouldRemove = true;
+        }
+      } else {
+        // Xclude: remove if product matches, otherwise keep children
+        if (products.length > 0 && productList.some(p => products.includes(p))) {
+          shouldRemove = true;
+        } else {
+          shouldKeepChildren = true;
+        }
+      }
+
+      if (shouldRemove) {
+        // Remove the element completely
+        node.children.splice(i, 1);
+      } else if (shouldKeepChildren) {
+        // First, recursively process nested Include/Xclude within this node's children
+        // BEFORE replacing the component tag itself
+        processIncludeXcludeRecursive(child, products);
+        
+        // Replace the component tag with its children
+        const children = child.children || [];
+        node.children.splice(i, 1, ...children);
+      }
+    } else {
+      // For non-Include/Xclude nodes, recursively process their children
+      processIncludeXcludeRecursive(child, products);
+    }
+  }
+}
+
+/**
  * Create a remark plugin that processes Include/Xclude MDX JSX components
  * Handles: <Include product='...'>, <Xclude product='...'>
  * 
@@ -226,53 +287,8 @@ export function remarkProcessIncludeXclude(productOption = '') {
   return (tree) => {
     const products = productOption ? productOption.split(',').map(p => p.trim()) : [];
 
-    // Process each parent's children to handle Include/Xclude
-    visit(tree, (node) => {
-      if (!node || !node.children || !Array.isArray(node.children)) return;
-
-      // Process children in reverse order to safely splice
-      for (let i = node.children.length - 1; i >= 0; i--) {
-        const child = node.children[i];
-        
-        const isInclude = child.type === 'mdxJsxFlowElement' && child.name === 'Include';
-        const isXclude = child.type === 'mdxJsxFlowElement' && child.name === 'Xclude';
-        
-        if (!isInclude && !isXclude) continue;
-
-        // Extract product attribute
-        const productAttr = child.attributes?.find(attr => attr.name === 'product');
-        const productValue = productAttr?.value || '';
-        const productList = productValue.split(',').map(p => p.trim()).filter(p => p);
-
-        let shouldKeepChildren = false;
-        let shouldRemove = false;
-
-        if (isInclude) {
-          // Include: keep children if product matches
-          if (products.length > 0 && productList.some(p => products.includes(p))) {
-            shouldKeepChildren = true;
-          } else {
-            shouldRemove = true;
-          }
-        } else {
-          // Xclude: remove if product matches, otherwise keep children
-          if (products.length > 0 && productList.some(p => products.includes(p))) {
-            shouldRemove = true;
-          } else {
-            shouldKeepChildren = true;
-          }
-        }
-
-        if (shouldRemove) {
-          // Remove the element completely
-          node.children.splice(i, 1);
-        } else if (shouldKeepChildren) {
-          // Replace with children only
-          const children = child.children || [];
-          node.children.splice(i, 1, ...children);
-        }
-      }
-    });
+    // Start recursive processing from root
+    processIncludeXcludeRecursive(tree, products);
   };
 }
 
