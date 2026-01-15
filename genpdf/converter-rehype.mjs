@@ -7,6 +7,8 @@ import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkMdx from 'remark-mdx';
 import remarkGfm from 'remark-gfm';
+import remarkDirective from 'remark-directive';
+import remarkCalloutDirectives from '@microflash/remark-callout-directives';
 import remarkPrism from 'remark-prism';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
@@ -17,6 +19,7 @@ import { rehypeMdxElements } from 'rehype-mdx-elements';
 import {
   remarkRemoveComments,
   remarkTransformImagePaths,
+  remarkProcessTextDirective,
   remarkTransformDocLinks,
   remarkAddHeadingIds,
   remarkProcessIncludeXclude,
@@ -25,8 +28,6 @@ import {
 
 // Import rehype plugins
 import {
-  rehypeAddAdmonitionIcons,
-  rehypeProcessAdmonitions,
   rehypeProcessCmdComponent,
   rehypeAddTargetBlankToExternalLinks,
   rehypeProcessMdxElements,
@@ -48,6 +49,9 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkMdx)
+    .use(remarkDirective)
+    .use(remarkCalloutDirectives)
+    .use(remarkProcessTextDirective)  // Convert accidental textDirective to plain text
     .use(remarkRemoveComments)
     
     // Markdown transformations
@@ -65,8 +69,6 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     
     // HTML transformations
     .use(rehypeExtendedTable)
-    .use(rehypeAddAdmonitionIcons, translations)
-    .use(rehypeProcessAdmonitions)
     .use(rehypeAddTargetBlankToExternalLinks)
     .use(rehypeProcessMdxElements, translations, basePath)
     .use(rehypeProcessCmdComponent, language)

@@ -316,27 +316,6 @@ export function remarkProcessIncludeXclude(productOption = '') {
 }
 
 /**
- * Create a remark plugin that converts directive nodes to admonition containers
- */
-export function remarkDirectiveToAdmonition() {
-  return (tree) => {
-    visit(tree, 'containerDirective', (node) => {
-      // Convert containerDirective to blockquote-like structure that rehype can understand
-      const type = node.name;
-      const validAdmonitions = ['info', 'note', 'tip', 'warning', 'danger', 'caution'];
-      
-      if (!validAdmonitions.includes(type)) return;
-
-      // Create a blockquote with data-admonition attribute
-      node.data = node.data || {};
-      node.data.hProperties = node.data.hProperties || {};
-      node.data.hProperties.className = [`admonition admonition-${type}`];
-      node.data.hProperties['data-admonition'] = type;
-    });
-  };
-}
-
-/**
  * Create a remark plugin that normalizes Table structure
  * Unwraps paragraph nodes containing Table elements (Td, Th)
  * 
