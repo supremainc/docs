@@ -40,10 +40,6 @@ const toc = [{
   "value": "신규 기능 및 개선",
   "id": "신규-기능-및-개선",
   "level": 2
-}, {
-  "value": "버그 수정",
-  "id": "버그-수정",
-  "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
@@ -60,9 +56,7 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Badge, BugLists, Separator} = _components;
-  if (!Badge) _missingMdxReference("Badge", true);
-  if (!BugLists) _missingMdxReference("BugLists", true);
+  }, {Separator} = _components;
   if (!Separator) _missingMdxReference("Separator", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.header, {
@@ -115,19 +109,6 @@ function _createMdxContent(props) {
           children: "7 바이트 CSN 카드를 지원하도록 구분 코드 추가"
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "버그-수정",
-      children: "버그 수정"
-    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(BugLists, {
-      children: (0,jsx_runtime.jsxs)(_components.ol, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["SDK에서 커스텀 스마트 카드 설정을 읽을 때 일부 카드의 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "기본/보조 사이트 키"
-          }), " 값이 노출되던 문제 ", (0,jsx_runtime.jsx)(Badge, {
-            children: "1.4.1"
-          })]
-        }), "\n"]
-      })
     })]
   });
 }

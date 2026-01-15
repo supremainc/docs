@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-xpass-2-release-notes-151-mdx-976.json
-var site_docs_device_xpass_2_release_notes_151_mdx_976_namespaceObject = JSON.parse('{"id":"device/xpass_2/release-notes/151","title":"펌웨어 버전 1.5.1","description":"릴리즈2026-01-16","source":"@site/docs/device/xpass_2/release-notes/151.mdx","sourceDirName":"device/xpass_2/release-notes","slug":"/device/xpass_2/release-notes/151","permalink":"/docs/device/xpass_2/release-notes/151","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/xpass_2/release-notes/151.mdx","tags":[],"version":"current","frontMatter":{"id":"151","title":"펌웨어 버전 1.5.1","isTranslationMissing":false},"sidebar":"xpass2","previous":{"title":"XPass 2 릴리스 노트","permalink":"/docs/device/xpass_2/release-notes/"},"next":{"title":"펌웨어 버전 1.5.0","permalink":"/docs/device/xpass_2/release-notes/150"}}')
+var site_docs_device_xpass_2_release_notes_151_mdx_976_namespaceObject = JSON.parse('{"id":"device/xpass_2/release-notes/151","title":"펌웨어 버전 1.5.1","description":"릴리즈2026-01-16","source":"@site/docs/device/xpass_2/release-notes/151.mdx","sourceDirName":"device/xpass_2/release-notes","slug":"/device/xpass_2/release-notes/151","permalink":"/docs/es/device/xpass_2/release-notes/151","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/xpass_2/release-notes/151.mdx","tags":[],"version":"current","frontMatter":{"id":"151","title":"펌웨어 버전 1.5.1","isTranslationMissing":true},"sidebar":"xpass2","previous":{"title":"XPass 2 Release Notes","permalink":"/docs/es/device/xpass_2/release-notes/"},"next":{"title":"Firmware Version 1.5.0","permalink":"/docs/es/device/xpass_2/release-notes/150"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,7 +26,7 @@ var lib = __webpack_require__(84429);
 const frontMatter = {
 	id: 151,
 	title: '펌웨어 버전 1.5.1',
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = '펌웨어 버전 1.5.1 (빌드 번호 1.5.1_260105)';
 
@@ -39,10 +39,6 @@ const assets = {
 const toc = [{
   "value": "신규 기능 및 개선",
   "id": "신규-기능-및-개선",
-  "level": 2
-}, {
-  "value": "버그 수정",
-  "id": "버그-수정",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -60,9 +56,7 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Badge, BugLists, Separator} = _components;
-  if (!Badge) _missingMdxReference("Badge", true);
-  if (!BugLists) _missingMdxReference("BugLists", true);
+  }, {Separator} = _components;
   if (!Separator) _missingMdxReference("Separator", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.header, {
@@ -115,19 +109,6 @@ function _createMdxContent(props) {
           children: "7 바이트 CSN 카드를 지원하도록 구분 코드 추가"
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "버그-수정",
-      children: "버그 수정"
-    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(BugLists, {
-      children: (0,jsx_runtime.jsxs)(_components.ol, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["SDK에서 커스텀 스마트 카드 설정을 읽을 때 일부 카드의 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "기본/보조 사이트 키"
-          }), " 값이 노출되던 문제 ", (0,jsx_runtime.jsx)(Badge, {
-            children: "1.4.1"
-          })]
-        }), "\n"]
-      })
     })]
   });
 }

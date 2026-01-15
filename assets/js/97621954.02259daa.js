@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["43110"], {
-84200: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["15551"], {
+58749: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,26 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_xpass_2_release_notes_151_mdx_08d_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_device_xpass_2_release_notes_151_mdx_976_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-xpass-2-release-notes-151-mdx-08d.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_xpass_2_release_notes_151_mdx_08d_namespaceObject = JSON.parse('{"id":"device/xpass_2/release-notes/151","title":"Firmware Version 1.5.1","description":"Release2026-01-16","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/xpass_2/release-notes/151.mdx","sourceDirName":"device/xpass_2/release-notes","slug":"/device/xpass_2/release-notes/151","permalink":"/docs/en/device/xpass_2/release-notes/151","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/xpass_2/release-notes/151.mdx","tags":[],"version":"current","frontMatter":{"id":"151","title":"Firmware Version 1.5.1","isTranslationMissing":false},"sidebar":"xpass2","previous":{"title":"XPass 2 Release Notes","permalink":"/docs/en/device/xpass_2/release-notes/"},"next":{"title":"Firmware Version 1.5.0","permalink":"/docs/en/device/xpass_2/release-notes/150"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-xpass-2-release-notes-151-mdx-976.json
+var site_docs_device_xpass_2_release_notes_151_mdx_976_namespaceObject = JSON.parse('{"id":"device/xpass_2/release-notes/151","title":"펌웨어 버전 1.5.1","description":"릴리즈2026-01-16","source":"@site/docs/device/xpass_2/release-notes/151.mdx","sourceDirName":"device/xpass_2/release-notes","slug":"/device/xpass_2/release-notes/151","permalink":"/docs/device/xpass_2/release-notes/151","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/xpass_2/release-notes/151.mdx","tags":[],"version":"current","frontMatter":{"id":"151","title":"펌웨어 버전 1.5.1","isTranslationMissing":false},"sidebar":"xpass2","previous":{"title":"XPass 2 릴리스 노트","permalink":"/docs/device/xpass_2/release-notes/"},"next":{"title":"펌웨어 버전 1.5.0","permalink":"/docs/device/xpass_2/release-notes/150"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/xpass_2/release-notes/151.mdx
+;// CONCATENATED MODULE: ./docs/device/xpass_2/release-notes/151.mdx
 
 
 const frontMatter = {
 	id: 151,
-	title: 'Firmware Version 1.5.1',
+	title: '펌웨어 버전 1.5.1',
 	isTranslationMissing: false
 };
-const contentTitle = 'Firmware Version 1.5.1 (Build No. 1.5.1_260105)';
+const contentTitle = '펌웨어 버전 1.5.1 (빌드 번호 1.5.1_260105)';
 
 const assets = {
 
@@ -37,12 +37,8 @@ const assets = {
 
 
 const toc = [{
-  "value": "New Features and Improvements",
-  "id": "new-features-and-improvements",
-  "level": 2
-}, {
-  "value": "Bug Fixes",
-  "id": "bug-fixes",
+  "value": "신규 기능 및 개선",
+  "id": "신규-기능-및-개선",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -60,74 +56,59 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Badge, BugLists, Separator} = _components;
-  if (!Badge) _missingMdxReference("Badge", true);
-  if (!BugLists) _missingMdxReference("BugLists", true);
+  }, {Separator} = _components;
   if (!Separator) _missingMdxReference("Separator", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.header, {
       children: (0,jsx_runtime.jsx)(_components.h1, {
-        id: "firmware-version-151-build-no-151_260105",
-        children: "Firmware Version 1.5.1 (Build No. 1.5.1_260105)"
+        id: "펌웨어-버전-151-빌드-번호-151_260105",
+        children: "펌웨어 버전 1.5.1 (빌드 번호 1.5.1_260105)"
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Release", (0,jsx_runtime.jsx)(Separator, {}), "2026-01-16"]
+      children: ["릴리즈", (0,jsx_runtime.jsx)(Separator, {}), "2026-01-16"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "caution",
       children: [(0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "After upgrading the firmware to v1.5.0, it is not able to downgrade to an earlier version of the firmware."
+            children: "펌웨어를 v1.5.0 이상으로 업그레이드 한 뒤 하위 버전으로 다운그레이드 할 수 없습니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "The XP2-MAPB-H model cannot downgrade to firmware version v1.4.3 or lower."
+            children: "XP2-MAPB-H 모델의 경우 펌웨어를 v1.4.3 이하로 다운그레이드 할 수 없습니다."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["The XP2-GKDPB model with hardware v1.2.0 or higher cannot downgrade firmware to lower than v1.4.3. The hardware version can be checked in the ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "DEVICE"
-            }), " menu of BioStar 2."]
+            children: ["하드웨어 v1.2.0 이상의 XP2-GKDPB 모델은 펌웨어를 v1.4.3 이하 버전으로 다운그레이드 할 수 없습니다. 하드웨어 버전은 BioStar 2의 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "장치"
+            }), " 메뉴에서 확인할 수 있습니다."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Devices with the new BLE chip cannot downgrade to a lower version after upgrading the firmware to v1.3.1 or higher. Devices with existing BLE chips can be downgraded to a lower version."
+            children: "신규 BLE 칩이 적용된 장치의 경우 펌웨어를 v1.3.1 이상으로 업그레이드 한 뒤 하위 버전으로 다운그레이드 할 수 없습니다. 기존 BLE 칩이 적용된 장치는 하위 버전으로 다운그레이드 할 수 있습니다."
           }), "\n"]
         }), "\n"]
       }), (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["For more information, check the serial number of the device and contact the ", (0,jsx_runtime.jsx)(_components.a, {
+        children: ["장치의 펌웨어 다운그레이드 가능 여부 및 신규 BLE 칩 적용 여부는 장치의 시리얼 번호를 확인한 뒤 ", (0,jsx_runtime.jsx)(_components.a, {
           href: "https://supremainc.com",
-          children: "Suprema"
-        }), "."]
+          children: "슈프리마 홈페이지"
+        }), "에 문의하십시오."]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "new-features-and-improvements",
-      children: "New Features and Improvements"
+      id: "신규-기능-및-개선",
+      children: "신규 기능 및 개선"
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Improved to distinguish devices that support the ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Secure Tamper"
-          }), " feature."]
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "보안 탬퍼"
+          }), " 기능을 지원하는 장치를 구분하도록 개선"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Added a distinction code to support 7-byte CSN cards."
+          children: "7 바이트 CSN 카드를 지원하도록 구분 코드 추가"
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "bug-fixes",
-      children: "Bug Fixes"
-    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(BugLists, {
-      children: (0,jsx_runtime.jsxs)(_components.ol, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["Fixed an issue where the ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Primary/Secondary Key"
-          }), " values of certain cards were exposed when reading Custom Smart Card settings from the SDK. ", (0,jsx_runtime.jsx)(Badge, {
-            children: "1.4.1"
-          })]
-        }), "\n"]
-      })
     })]
   });
 }
