@@ -33,6 +33,7 @@ crowdin upload -b main
 - import
 - details
 - summary
+- Linkto
 
 영어에 남아있는 한글 정규식 검색
 
