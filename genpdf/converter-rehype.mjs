@@ -33,6 +33,82 @@ function remarkRemoveComments() {
 }
 
 /**
+ * Extract heading text content from node
+ */
+function extractHeadingText(node) {
+  let text = '';
+  function traverse(n) {
+    if (n.type === 'text') {
+      text += n.value;
+    } else if (n.children && Array.isArray(n.children)) {
+      n.children.forEach(child => traverse(child));
+    }
+  }
+  if (node.children) {
+    node.children.forEach(child => traverse(child));
+  }
+  return text;
+}
+
+/**
+ * Create a remark plugin that adds IDs to headings
+ * h1: uses docId (document ID from metadata)
+ * h2+: uses explicit [#slug] if present, otherwise generates from content
+ */
+function remarkAddHeadingIds(docId = '') {
+  return (tree) => {
+    visit(tree, 'heading', (node) => {
+      if (!node.children || node.children.length === 0) return;
+
+      // h1: use docId
+      if (node.depth === 1 && docId) {
+        node.data = node.data || {};
+        node.data.hProperties = node.data.hProperties || {};
+        node.data.hProperties.id = docId;
+        return;
+      }
+
+      // h2+: check for explicit [#slug] or generate from content
+      if (node.depth >= 2) {
+        let slug = null;
+        const lastChild = node.children[node.children.length - 1];
+
+        // Check if last child contains [#slug] pattern
+        if (lastChild && lastChild.type === 'text') {
+          const slugMatch = lastChild.value.match(/\s*\[#([^\]]+)\]\s*$/);
+          if (slugMatch) {
+            slug = slugMatch[1];
+            // Remove the [#slug] from the text
+            lastChild.value = lastChild.value.replace(/\s*\[#[^\]]+\]\s*$/, '').trimEnd();
+          }
+        }
+
+        // If no explicit slug, generate from content
+        if (!slug) {
+          const textContent = extractHeadingText(node);
+          if (textContent) {
+            slug = textContent
+              .toLowerCase()
+              .trim()
+              .replace(/[^\w\s\-가-힣]/g, '')  // Keep Korean chars and hyphens
+              .replace(/\s+/g, '-')
+              .replace(/-+/g, '-')
+              .replace(/^-+|-+$/g, '');
+          }
+        }
+
+        // Apply the ID
+        if (slug) {
+          node.data = node.data || {};
+          node.data.hProperties = node.data.hProperties || {};
+          node.data.hProperties.id = slug;
+        }
+      }
+    });
+  };
+}
+
+/**
  * Create a remark plugin that processes Include/Xclude components
  */
 function remarkProcessIncludeXclude(productOption = '') {
@@ -375,13 +451,14 @@ function rehypeProcessMdxElements(translations = {}, basePath = '') {
 /**
  * Create a unified processor with rehype-mdx-elements support
  */
-function createProcessor(translations = {}, productOption = '', basePath = '') {
+function createProcessor(translations = {}, productOption = '', basePath = '', docId = '') {
   return unified()
     .use(remarkParse)
     .use(remarkMdx)
     .use(remarkDirective)
     .use(remarkDirectiveToAdmonition)
     .use(remarkRemoveComments)
+    .use(remarkAddHeadingIds, docId)
     .use(remarkProcessIncludeXclude, productOption)
     .use(remarkPrism)
     .use(remarkRehype, { passThrough: ['mdxJsxFlowElement', 'mdxJsxTextElement'] })
@@ -400,10 +477,11 @@ function createProcessor(translations = {}, productOption = '', basePath = '') {
  * @param {Object} translations - i18n translations object
  * @param {string} productOption - Product filter option
  * @param {string} basePath - Base path for absolute file paths (for PDF generation)
+ * @param {string} docId - Document ID for h1 heading
  * @returns {Promise<string>} HTML content
  */
-export async function markdownToHtml(mdContent, translations = {}, productOption = '', basePath = '') {
-  const processor = createProcessor(translations, productOption, basePath);
+export async function markdownToHtml(mdContent, translations = {}, productOption = '', basePath = '', docId = '') {
+  const processor = createProcessor(translations, productOption, basePath, docId);
   
   try {
     const file = await processor.process(mdContent);

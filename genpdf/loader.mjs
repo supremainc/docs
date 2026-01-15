@@ -91,9 +91,11 @@ export function processImportsInMdx(content, basePath) {
         .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
         // Remove import statements
         .replace(/import\s+[\s\S]*?from\s+['"][^'"]+['"]/g, '')
-        // Remove JSX expressions (but not those inside code blocks - after ``` or in attributes)
-        // Only remove { } that are NOT part of code fence attributes
-        .replace(/\{(?![\d,\-\s]*\})[^}]+\}/g, '');
+        // Convert {#anchor} to [#anchor] to avoid JSX parsing issues
+        .replace(/\{#([^}]+)\}/g, '[#$1]')
+        // Remove JSX expressions BUT PRESERVE [#anchor] patterns for heading IDs
+        // Negative lookahead: (?!\[#) excludes [#...] patterns
+        .replace(/\{(?!\[#)(?![\d,\-\s]*\})[^}]+\}/g, '');
       
       imports[componentName] = cleanedContent;
     } catch (error) {

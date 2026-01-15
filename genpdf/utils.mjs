@@ -56,11 +56,24 @@ export function extractHeadingsFromMarkdown(content) {
 
   while ((match = headingRegex.exec(content)) !== null) {
     const depth = match[1].length;
-    const text = match[2].trim();
+    let text = match[2].trim();
+    let id = null;
+
+    // Check for explicit [#slug] pattern
+    const slugMatch = text.match(/\s*\[#([^\]]+)\]\s*$/);
+    if (slugMatch) {
+      id = slugMatch[1];
+      // Remove [#slug] from display text
+      text = text.replace(/\s*\[#[^\]]+\]\s*$/, '').trimEnd();
+    } else {
+      // Auto-generate ID from text
+      id = generateHeadingId(text);
+    }
+
     headings.push({
       depth,
       text,
-      id: generateHeadingId(text)
+      id
     });
   }
 
