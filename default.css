@@ -248,6 +248,11 @@ header p {
   margin: 15px 0;
 }
 
+.doc-content .cmd {
+  font-weight: bold;
+  color: #a32343;
+}
+
 footer {
   text-align: center;
   padding: 40px 20px;

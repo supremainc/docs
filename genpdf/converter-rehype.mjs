@@ -12,6 +12,35 @@ import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import { rehypeMdxElements } from 'rehype-mdx-elements';
 import { visit } from 'unist-util-visit';
+import { readFileSync } from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+// Get current directory for relative imports
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Cmd component locale imports
+const cmdKo = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/ko.json`, 'utf-8'));
+const cmdEn = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/en.json`, 'utf-8'));
+const cmdEs = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/es.json`, 'utf-8'));
+const cmdJa = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/ja.json`, 'utf-8'));
+
+const cmdXKo = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/x/ko.json`, 'utf-8'));
+const cmdXEn = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/x/en.json`, 'utf-8'));
+const cmdXEs = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/x/es.json`, 'utf-8'));
+const cmdXJa = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/x/ja.json`, 'utf-8'));
+
+const cmdDevKo = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/device/ko.json`, 'utf-8'));
+const cmdDevEn = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/device/en.json`, 'utf-8'));
+
+const cmdAirKo = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/air/ko.json`, 'utf-8'));
+const cmdAirEn = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/air/en.json`, 'utf-8'));
+const cmdAirEs = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/air/es.json`, 'utf-8'));
+const cmdAirJa = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/air/ja.json`, 'utf-8'));
+
+const glossaryKo = JSON.parse(readFileSync(`${__dirname}/../i18n/ko/glossary.json`, 'utf-8'));
+const glossaryEn = JSON.parse(readFileSync(`${__dirname}/../i18n/en/glossary.json`, 'utf-8'));
 
 /**
  * Create a remark plugin that removes MDX comments
@@ -284,7 +313,7 @@ function rehypeAddAdmonitionIcons(translations = {}) {
   // Get labels from translations
   const labelMap = {
     info: (translations['theme.admonition.info']?.message) || '알아두기',
-    note: (translations['theme.admonition.note']?.message) || '참고',
+    note: (translations['theme.admonition.note']?.message) || '노트',
     tip: (translations['theme.admonition.tip']?.message) || '팁',
     warning: (translations['theme.admonition.warning']?.message) || '경고',
     danger: (translations['theme.admonition.danger']?.message) || '위험',
@@ -412,6 +441,197 @@ function rehypeProcessAdmonitions() {
           return;
         }
       }
+    });
+  };
+}
+
+/**
+ * Create a rehype plugin that processes <Cmd> components
+ * Converts MDX Cmd JSX elements to span elements with proper locale text
+ * 
+ * Supports:
+ * - <Cmd sid='key' product='dev' /> - Device locale
+ * - <Cmd sid='key' product='air' /> - Air locale
+ * - <Cmd sid='key' product='2' /> - Standard locale (with '2' to 'X' conversion)
+ * - <Cmd sid='key' /> - Default (x) locale
+ * - <Cmd code='i18n.key' /> - i18n code reference
+ * - <Cmd>Direct text</Cmd> - Direct children text
+ */
+function rehypeProcessCmdComponent(language = 'ko') {
+  // Create locale maps based on language
+  const cmdLocaleMap = {
+    ko: cmdKo,
+    en: cmdEn,
+    es: cmdEs,
+    ja: cmdJa,
+  };
+
+  const cmdXLocaleMap = {
+    ko: cmdXKo,
+    en: cmdXEn,
+    es: cmdXEs,
+    ja: cmdXJa,
+  };
+
+  const deviceLocaleMap = {
+    ko: cmdDevKo,
+    en: cmdDevEn,
+  };
+
+  const airLocaleMap = {
+    ko: cmdAirKo,
+    en: cmdAirEn,
+    es: cmdAirEs,
+    ja: cmdAirJa,
+  };
+
+  const glossaryMap = {
+    ko: glossaryKo,
+    en: glossaryEn,
+  };
+
+  // Helper function to extract text from children
+  const extractText = (nodes) => {
+    if (!Array.isArray(nodes)) return '';
+    return nodes
+      .map(child => {
+        if (child.type === 'text') return child.value;
+        if (child.type === 'element' && child.tagName === 'br') return ' ';
+        if (child.children) return extractText(child.children);
+        return '';
+      })
+      .join('');
+  };
+
+  return (tree) => {
+    // Visit only JSX elements
+    visit(tree, (node, index, parent) => {
+      if (!node || !parent || index === null) return;
+
+      // Process Cmd JSX elements (text and flow elements)
+      const isCmdElement = (node.type === 'mdxJsxTextElement' || node.type === 'mdxJsxFlowElement') 
+        && node.name === 'Cmd';
+      
+      if (!isCmdElement) return;
+
+      const attributes = node.attributes || [];
+      const sidAttr = attributes.find(attr => attr.name === 'sid')?.value;
+      const codeAttr = attributes.find(attr => attr.name === 'code')?.value;
+      const productAttr = attributes.find(attr => attr.name === 'product')?.value;
+      const classNameAttr = attributes.find(attr => attr.name === 'className')?.value || '';
+      const tipAttr = attributes.find(attr => attr.name === 'tip')?.value;
+
+      const classNames = classNameAttr ? ['cmd', classNameAttr] : ['cmd'];
+      let textContent = '';
+      let tooltipContent = '';
+
+      // Case 1: sid attribute - lookup in locale files
+      if (sidAttr) {
+        let localeText = null;
+
+        if (productAttr === '2') {
+          // Standard product locale with '2' to 'X' conversion for specific keys
+          const locale = cmdLocaleMap[language] || cmdEn;
+          localeText = locale[sidAttr];
+          if (localeText && ['biostar.login', 'audit.setting.server.server_addr', 'audit.setting.server.server_port'].includes(sidAttr)) {
+            localeText = localeText.replace('2', 'X');
+          }
+        } else if (productAttr === 'dev') {
+          // Device locale - can be device-specific
+          const locale = deviceLocaleMap[language] || deviceLocaleMap.en;
+          const sidValue = locale[sidAttr];
+          
+          if (sidValue) {
+            const isGroupType = typeof sidValue === 'object' && !Array.isArray(sidValue);
+            if (isGroupType) {
+              // Device-specific variant - for PDF, use 'common' as fallback
+              localeText = sidValue['common'] || null;
+            } else {
+              localeText = sidValue;
+            }
+          }
+        } else if (productAttr === 'air') {
+          // Air product locale
+          const locale = airLocaleMap[language] || airLocaleMap.en;
+          localeText = locale[sidAttr];
+        } else {
+          // Default (x) locale
+          const locale = cmdXLocaleMap[language] || cmdXEn;
+          localeText = locale[sidAttr];
+          // Replace placeholder
+          if (localeText) {
+            localeText = localeText.replace('{{value}}', 'N');
+          }
+        }
+
+        // Clean up HTML tags
+        if (localeText) {
+          textContent = localeText
+            .replace(/ <br\/><br\/> /g, ' ')
+            .replace(/ <br\/><br\/>$/g, '')
+            .replace(/^<br\/><br\/> /g, '')
+            .replace(/ <\/br> /g, ' ')
+            .replace(/ <br \/>/g, ' ')
+            .replace(/ <br>/g, ' ')
+            .replace(/<br> /g, ' ')
+            .replace(/<br\/>/g, ' ')
+            .replace(/ <br> /g, ' ')
+            .replace(/ <\/br> /g, ' ')
+            .replace(/<br>/g, ' ')
+            .replace(/<\/br>/g, ' ')
+            .replace(/&sol;/g, '/')
+            .replace(/\\xB0\\x43/g, '℃')
+            .replace(/\\xB0\\x46/g, '℉')
+            .trim();
+        }
+
+        // Add tooltip if tip attribute exists
+        if (tipAttr) {
+          const glossary = glossaryMap[language] || glossaryEn;
+          const tipContent = glossary[tipAttr]?.description;
+          if (tipContent) {
+            tooltipContent = tipContent;
+          }
+        }
+      }
+      // Case 2: code attribute - i18n reference
+      else if (codeAttr) {
+        // For PDF generation, we'll use the code as fallback text
+        // since i18n translate function is not available in Node.js context
+        textContent = codeAttr;
+      }
+      // Case 3: Direct children text
+      else if (node.children && node.children.length > 0) {
+        textContent = extractText(node.children);
+      }
+
+      // Build replacement element
+      const children = [];
+      
+      if (textContent) {
+        children.push({
+          type: 'text',
+          value: textContent
+        });
+      }
+
+      if (tooltipContent) {
+        children.push({
+          type: 'element',
+          tagName: 'div',
+          properties: { className: ['tooltip'] },
+          children: [{ type: 'text', value: tooltipContent }]
+        });
+      }
+
+      const replacement = {
+        type: 'element',
+        tagName: 'span',
+        properties: { className: classNames },
+        children: children
+      };
+
+      parent.children[index] = replacement;
     });
   };
 }
@@ -582,6 +802,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(rehypeProcessAdmonitions)
     .use(rehypeAddTargetBlankToExternalLinks)
     .use(rehypeProcessMdxElements, translations, basePath)
+    .use(rehypeProcessCmdComponent, language)
     .use(rehypeMdxElements, {
       allowedElements: ['Image', 'Badge', 'Include', 'Xclude']
     })

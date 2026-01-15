@@ -79,14 +79,15 @@ export function processImportsInMdx(content, basePath) {
       const { content: importedMdxContent } = matter(importedContent);
       
       // Remove JSX/MDX syntax from imported content
-      // BUT KEEP Include/Xclude/Image/Badge tags for processing
+      // Focus on:
+      // 1. Remove MDX comments
+      // 2. Remove import statements  
+      // 3. Convert {#anchor} for heading IDs
+      // 4. Remove other JSX expressions
+      // 
+      // NOTE: JSX component tags (Include, Xclude, Image, Badge, Cmd, etc.)
+      // are preserved here and will be processed by converter-rehype.mjs plugins
       let cleanedContent = importedMdxContent
-        // Remove JSX component opening/closing tags (EXCEPT Include/Xclude/Image/Badge)
-        // Negative lookahead to exclude Include, Xclude, Image, and Badge
-        .replace(/<(?!Include|Xclude|Image|Badge)[A-Z]\w*[^>]*>/g, '')
-        .replace(/<\/(?!Include|Xclude|Image|Badge)[A-Z]\w*>/g, '')
-        // Remove self-closing JSX tags (EXCEPT Include/Xclude/Image/Badge)
-        .replace(/<(?!Include|Xclude|Image|Badge)[A-Z]\w*[^>]*\/>/g, '')
         // Remove MDX comments
         .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
         // Remove import statements
