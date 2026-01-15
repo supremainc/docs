@@ -7,9 +7,11 @@ import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkMdx from 'remark-mdx';
 import remarkDirective from 'remark-directive';
+import remarkGfm from 'remark-gfm';
 import remarkPrism from 'remark-prism';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
+import { rehypeExtendedTable } from 'rehype-extended-table';
 import { rehypeMdxElements } from 'rehype-mdx-elements';
 
 // Import remark plugins
@@ -45,6 +47,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
   return unified()
     // Markdown parsing and normalization
     .use(remarkParse)
+    .use(remarkGfm)
     .use(remarkMdx)
     .use(remarkDirective)
     .use(remarkDirectiveToAdmonition)
@@ -64,6 +67,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(remarkRehype, { passThrough: ['mdxJsxFlowElement', 'mdxJsxTextElement'] })
     
     // HTML transformations
+    .use(rehypeExtendedTable)
     .use(rehypeAddAdmonitionIcons, translations)
     .use(rehypeProcessAdmonitions)
     .use(rehypeAddTargetBlankToExternalLinks)
@@ -72,7 +76,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     
     // Convert JSX components to HTML
     .use(rehypeMdxElements, {
-      allowedElements: ['Image', 'Badge', 'Table', 'Thead', 'Tbody', 'Row', 'Th', 'Td']
+      allowedElements: ['Image', 'Badge', 'Table', 'Thead', 'Tbody', 'Row', 'Th', 'Td', 'div']
     })
     
     // Stringify to HTML

@@ -506,6 +506,22 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
         }
       }
 
+      // Process div components
+      if (node.type === 'mdxJsxFlowElement' && node.name === 'div') {
+        const attributes = node.attributes || [];
+        const classNameAttr = attributes.find(attr => attr.name === 'className');
+        const className = classNameAttr ? classNameAttr.value : '';
+
+        const replacement = {
+          type: 'element',
+          tagName: 'div',
+          properties: className ? { className: [className] } : {},
+          children: node.children || []
+        };
+
+        parent.children[index] = replacement;
+      }
+
       // Process Badge components
       if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Badge') {
         const attributes = node.attributes || [];
