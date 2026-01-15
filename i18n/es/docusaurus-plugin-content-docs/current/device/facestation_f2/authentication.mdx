@@ -38,7 +38,7 @@ La autenticación por huella solo está disponible en el producto FSF2-ODB.
 
    * <Cmd sid="ui_203" product="dev" /> se puede configurar en BioStar X. Si no hay un horario configurado, solo se pueden seleccionar <Cmd sid="ui_163" product="dev" /> y <Cmd sid="ui_361" product="dev" />.
 
-   * Para obtener más información sobre la configuración de <Cmd sid="ui_203" product="dev" />, consulta la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-schedule).
+   * Para más información sobre la configuración de <Cmd sid="ui_203" product="dev" />, consulte la <Linkto to="platform/biostar_x/settings-schedule">Guía del administrador de BioStar X</Linkto>.
 
    :::
 
@@ -80,7 +80,7 @@ Configura la autenticación en servidor. El uso de la autenticación en servidor
 
 * <Cmd sid="ui_185" product="dev" /> solo puede usar huella, tarjeta e ID.
 
-* Si utilizas <Cmd sid="ui_185" product="dev" />, debes habilitar la coincidencia en el servidor tanto en el dispositivo como en BioStar X. Para obtener más información sobre la configuración de coincidencia en el servidor de BioStar X, consulta la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-server-server#servermatching).
+* Si usa <Cmd sid="ui_185" product="dev" />, habilite la coincidencia con el servidor tanto en el dispositivo como en BioStar X. Para obtener información detallada sobre la configuración de la coincidencia con servidor en BioStar X, consulte la <Linkto to="platform/biostar_x/settings-server-server#servermatching">Guía del administrador de BioStar X</Linkto>.
 
 :::
 
@@ -124,7 +124,7 @@ Cambie la configuración de la autenticación facial.
 
       :::info
 
-      Para obtener más información sobre <Cmd sid="ui_340" product="dev" />, consulte la [Guía del administrador de BioStar X](../../platform/biostar_x/enroll-credential-mobile#template-on-mobile).
+      Para más información sobre <Cmd sid="ui_340" product="dev" />, consulta la <Linkto to="platform/biostar_x/enroll-credential-mobile#template-on-mobile">Guía del administrador de BioStar X</Linkto>.
 
       :::
 
@@ -132,7 +132,7 @@ Cambie la configuración de la autenticación facial.
 
       :::info
 
-      Para administrar esta configuración, utilice BioStar 2 v2.9.7 o superior.
+      Después de desactivar esta configuración, conéctate a BioStar 2 v2.9.7 o superior o a BioStar X.
 
       :::
 
@@ -199,17 +199,17 @@ Cambie la configuración de la autenticación facial.
    * <Cmd sid="ui_045" product="dev" />, <Cmd sid="ui_046" product="dev" />, <Cmd sid="ui_048" product="dev" />, <Cmd sid="ui_047" product="dev" />: Permite configurar manualmente la ROI (región de interés) cuando <Cmd sid="ui_114" product="dev" /> está ajustado a <Cmd sid="ui_162" product="dev" />. Ajuste la ubicación y el tamaño de la ROI para especificar el área donde la cámara térmica medirá la temperatura. <Cmd sid="ui_045" product="dev" /> indica las posiciones izquierda y derecha de la región de interés; cuanto mayor sea este valor, más se desplazará la región hacia la derecha de la pantalla. <Cmd sid="ui_046" product="dev" /> indica las posiciones superior e inferior de la región de interés; cuanto mayor sea este valor, más se desplazará la región hacia arriba. <Cmd sid="ui_048" product="dev" /> y <Cmd sid="ui_047" product="dev" /> indican el tamaño de la región de interés; al aumentar ambos valores, el área para medir la temperatura se amplía. Por ejemplo, si los valores de <Cmd sid="ui_045" product="dev" />, <Cmd sid="ui_046" product="dev" />, <Cmd sid="ui_048" product="dev" />, <Cmd sid="ui_047" product="dev" /> se cambian de los valores predeterminados a 40, 15, 70 y 40 respectivamente, la región de interés cambiará como se muestra a continuación.
 
    <Columns>
-   <Column className="text--center">
-   <Image src="/img/device/auth-roi1.png" width={200} alone />
+      <Column className="text--center">
+         <Image src="/img/device/auth-roi1.png" width={200} alone />
 
-   Si la ROI está configurada con el valor predeterminado
-   </Column>
+         Si la ROI está configurada con el valor predeterminado
+      </Column>
 
-   <Column className="text--center">
-   <Image src="/img/device/auth-roi2.png" width={200} alone />
+      <Column className="text--center">
+         <Image src="/img/device/auth-roi2.png" width={200} alone />
 
-   ROI X(%), ROI Y(%), ancho de ROI (%), alto de ROI (%)<br />Cuando los valores se cambian a 40, 15, 70 y 40, respectivamente
-   </Column>
+         ROI X(%), ROI Y(%), ancho de ROI (%), alto de ROI (%)<br />Cuando los valores se cambian a 40, 15, 70 y 40, respectivamente
+      </Column>
    </Columns>
 
    * <Cmd sid="ui_241" product="dev" />: Configure la cámara termográfica para corregir la temperatura de forma autónoma, teniendo en cuenta el uso ambiental del dispositivo y la temperatura circundante.
@@ -235,17 +235,17 @@ Cambie la configuración de la autenticación facial.
    Cuando use el ROI como configuración predeterminada, se mostrará una guía amarilla en el área de ROI de la pantalla durante la autenticación, como se muestra a continuación. Cuando el rostro del usuario esté alineado dentro de esa área durante la autenticación, se podrán realizar mediciones de temperatura precisas. Cuando cambie la configuración manualmente o use un ROI dinámico, la guía amarilla no se mostrará.
 
    <Columns>
-   <Column className="text--center">
-   <Image src="/img/device/auth-static-roi.png" width={200} />
+      <Column className="text--center">
+         <Image src="/img/device/auth-static-roi.png" width={200} />
 
-   Si la ROI está configurada con el valor predeterminado
-   </Column>
+         Si la ROI está configurada con el valor predeterminado
+      </Column>
 
-   <Column className="text--center">
-   <Image src="/img/device/auth-dynamic-roi.png" width={200} />
+      <Column className="text--center">
+         <Image src="/img/device/auth-dynamic-roi.png" width={200} />
 
-   Al cambiar la configuración de ROI o usar ROI dinámico
-   </Column>
+         Al cambiar la configuración de ROI o usar ROI dinámico
+      </Column>
    </Columns>
 
 * Las funciones de autenticación con mascarilla y de cámara termográfica no están disponibles en los dispositivos esclavos.

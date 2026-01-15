@@ -29,10 +29,14 @@ crowdin upload -b main
 - Magnify
 - NextStep, NextItem
 - DbQueryCreate
-- 주석 {/**/}
+- Linkto
+- Badge
 - import
 - details
 - summary
+- /value
+- 주석 {/**/}
+
 
 영어에 남아있는 한글 정규식 검색
 
