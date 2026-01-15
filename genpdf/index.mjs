@@ -53,12 +53,12 @@ async function main() {
     const outputFile = options.output;
     const templateType = options.template;
 
-    console.log(`📖 Sidebar key: ${sidebarKey}`);
-    console.log(`📄 Output file: ${outputFile}`);
-    console.log(`🎨 Template: ${templateType}`);
-    console.log(`🌍 Language: ${options.language}`);
+    console.log(`> Sidebar key: ${sidebarKey}`);
+    console.log(`> Output file: ${outputFile}`);
+    console.log(`> Template: ${templateType}`);
+    console.log(`> Language: ${options.language}`);
     if (options.product) {
-      console.log(`🏷️  Product filter: ${options.product}`);
+      console.log(`> Product filter: ${options.product}`);
     }
     console.log('');
 

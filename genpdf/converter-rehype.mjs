@@ -6,7 +6,6 @@
 import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkMdx from 'remark-mdx';
-import remarkDirective from 'remark-directive';
 import remarkGfm from 'remark-gfm';
 import remarkPrism from 'remark-prism';
 import remarkRehype from 'remark-rehype';
@@ -21,7 +20,6 @@ import {
   remarkTransformDocLinks,
   remarkAddHeadingIds,
   remarkProcessIncludeXclude,
-  remarkDirectiveToAdmonition,
   remarkNormalizeTableStructure
 } from './plugins-remark.mjs';
 
@@ -50,8 +48,6 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkMdx)
-    .use(remarkDirective)
-    .use(remarkDirectiveToAdmonition)
     .use(remarkRemoveComments)
     
     // Markdown transformations

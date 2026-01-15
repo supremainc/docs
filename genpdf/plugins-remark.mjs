@@ -6,6 +6,29 @@
 import { visit } from 'unist-util-visit';
 
 /**
+ * Create a remark plugin that handles text directives
+ * Text directives like `:N:` should be converted to plain text
+ * This prevents directive syntax from breaking content like "1:N" authentication modes
+ */
+export function remarkProcessTextDirective() {
+  return (tree) => {
+    visit(tree, 'textDirective', (node, index, parent) => {
+      if (!parent || index === null) return;
+
+      // Replace textDirective node with plain text
+      // This handles cases where patterns like "1:N " get parsed as directives
+      // Reconstruct the directive as plain text: :name:
+      const plainText = {
+        type: 'text',
+        value: `:${node.name}:`
+      };
+
+      parent.children[index] = plainText;
+    });
+  };
+}
+
+/**
  * Create a remark plugin that removes MDX comments
  */
 export function remarkRemoveComments() {
