@@ -149,6 +149,7 @@ img {
       display: inline;
       flex: none !important;
       width: 50%;
+      page-break-inside: avoid;
   }
   .markdown section.row article > a.padding--lg {
       padding: 20px !important;
