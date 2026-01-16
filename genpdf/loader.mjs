@@ -95,8 +95,8 @@ function processFileImportsRecursively(filePath, processedFiles = {}, imports = 
           .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
           // Remove import statements (including optional semicolon)
           .replace(/import\s+[\s\S]*?from\s+['"][^'"]+['"];?\s*/g, '')
-          // Remove JSX expressions BUT PRESERVE {props.xxx} patterns
-          .replace(/\{(?!props\.[a-zA-Z_]\w*\})[^}]*\}/g, '');
+          // Remove JSX expressions BUT PRESERVE {props.xxx} patterns AND {#anchor} patterns
+          .replace(/\{(?!props\.[a-zA-Z_]\w*\}|#[a-z0-9\-]+\})[^}]*\}/g, '');
 
         // Add this component to imports
         imports[componentName] = cleanedContent;
@@ -163,8 +163,8 @@ export function processImportsInMdx(content, basePath, currentFilePath = '') {
         .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
         // Remove import statements (including optional semicolon)
         .replace(/import\s+[\s\S]*?from\s+['"][^'"]+['"];?\s*/g, '')
-        // Remove JSX expressions BUT PRESERVE {props.xxx} patterns
-        .replace(/\{(?!props\.[a-zA-Z_]\w*\})[^}]*\}/g, '');
+        // Remove JSX expressions BUT PRESERVE {props.xxx} patterns AND {#anchor} patterns
+        .replace(/\{(?!props\.[a-zA-Z_]\w*\}|#[a-z0-9\-]+\})[^}]*\}/g, '');
       
       imports[componentName] = cleanedContent;
 
