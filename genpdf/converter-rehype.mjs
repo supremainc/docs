@@ -14,6 +14,8 @@ import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import { rehypeExtendedTable } from 'rehype-extended-table';
 import { rehypeMdxElements } from 'rehype-mdx-elements';
+import fs from 'fs';
+import path from 'path';
 
 // Import remark plugins
 import {
@@ -31,8 +33,48 @@ import {
   rehypeProcessCmdComponent,
   rehypeAddTargetBlankToExternalLinks,
   rehypeProcessMdxElements,
-  rehypeProcessColumnsComponent
+  rehypeProcessColumnsComponent,
+  rehypeAddCalloutIcons,
+  rehypeRemoveNoteIndicator
 } from './plugins-rehype.mjs';
+
+/**
+ * 언어와 타입에 따라 code.json에서 번역문 로드
+ */
+function loadAdmonitionTexts(language = 'ko') {
+  const langMap = {
+    ko: 'i18n/ko/code.json',
+    en: 'i18n/en/code.json',
+    es: 'i18n/es/code.json',
+    ja: 'i18n/ja/code.json'
+  };
+
+  const filePath = langMap[language] || langMap['ko'];
+  
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8');
+    const data = JSON.parse(content);
+    
+    return {
+      note: data['theme.admonition.note']?.message || 'Note',
+      info: data['theme.admonition.info']?.message || 'Info',
+      caution: data['theme.admonition.caution']?.message || 'Caution',
+      warning: data['theme.admonition.warning']?.message || 'Warning',
+      danger: data['theme.admonition.danger']?.message || 'Danger',
+      tip: data['theme.admonition.tip']?.message || 'Tip'
+    };
+  } catch (error) {
+    console.warn(`Failed to load admonition texts for language ${language}:`, error.message);
+    return {
+      note: 'Note',
+      info: 'Info',
+      caution: 'Caution',
+      warning: 'Warning',
+      danger: 'Danger',
+      tip: 'Tip'
+    };
+  }
+}
 
 /**
  * Create a unified processor with rehype-mdx-elements support
@@ -44,13 +86,41 @@ import {
  * 4. Process HTML-level transforms (components, formatting)
  */
 function createProcessor(translations = {}, productOption = '', basePath = '', headingId = '', docPath = '', language = 'ko') {
+  const admonitionTexts = loadAdmonitionTexts(language);
+  
   return unified()
     // Markdown parsing and normalization
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkMdx)
     .use(remarkDirective)
-    .use(remarkCalloutDirectives)
+    .use(remarkCalloutDirectives, {
+      aliases: {
+        caution: 'deter',
+        danger: 'deter',
+        important: 'assert',
+        info: 'assert',
+        tip: 'commend',
+        warning: 'warn'
+      },
+      callouts: {
+        note: {
+          title: admonitionTexts.note
+        },
+        assert: {
+          title: admonitionTexts.info
+        },
+        deter: {
+          title: admonitionTexts.caution
+        },
+        warn: {
+          title: admonitionTexts.warning
+        },
+        commend: {
+          title: admonitionTexts.tip
+        }
+      }
+    })
     .use(remarkProcessTextDirective)  // Convert accidental textDirective to plain text
     .use(remarkRemoveComments)
     
@@ -65,7 +135,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(remarkPrism)
     
     // Convert to HTML
-    .use(remarkRehype, { passThrough: ['mdxJsxFlowElement', 'mdxJsxTextElement'] })
+    .use(remarkRehype, { passThrough: ['mdxJsxFlowElement', 'mdxJsxTextElement'], allowDangerousHtml: true })
     
     // HTML transformations
     .use(rehypeExtendedTable)
@@ -73,6 +143,8 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(rehypeProcessMdxElements, translations, basePath)
     .use(rehypeProcessCmdComponent, language)
     .use(rehypeProcessColumnsComponent)
+    .use(rehypeAddCalloutIcons)
+    .use(rehypeRemoveNoteIndicator)
     
     // Convert JSX components to HTML
     .use(rehypeMdxElements, {
@@ -80,7 +152,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     })
     
     // Stringify to HTML
-    .use(rehypeStringify);
+    .use(rehypeStringify, { allowDangerousHtml: true });
 }
 
 /**

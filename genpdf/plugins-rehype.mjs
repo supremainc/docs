@@ -788,3 +788,64 @@ export function rehypeProcessColumnsComponent() {
     });
   };
 }
+
+/**
+ * Rehype plugin to add SVG icons to callout hint elements
+ */
+export function rehypeAddCalloutIcons() {
+  const iconMap = {
+    'callout-note': '<svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg>',
+    'callout-assert': '<svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>',
+    'callout-deter': '<svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg>',
+    'callout-warn': '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="#A32343" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert mr-2 text-red-500"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" fill="none"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>',
+    'callout-commend': '<svg viewBox="0 0 14 16"><path fillRule="evenodd" d="M13 1H1c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h4v3l4-3h4c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9h-4v2l-3-2H1V2h12v8z"/></svg>'
+  };
+
+  return (tree) => {
+    visit(tree, 'element', (node) => {
+      // Find callout-hint elements within callout asides
+      if (node.tagName === 'aside' && node.properties?.className?.includes('callout')) {
+        // Get the callout type from className
+        const calloutClass = node.properties.className.find((c) => c.startsWith('callout-'));
+        
+        if (calloutClass && iconMap[calloutClass]) {
+          // Recursively find and update callout-hint
+          visit(node, 'element', (child) => {
+            if (child.tagName === 'div' && child.properties?.className?.includes('callout-hint')) {
+              // Add SVG as an HTML element
+              child.children = [
+                {
+                  type: 'raw',
+                  value: iconMap[calloutClass]
+                }
+              ];
+              return false; // Don't visit children
+            }
+          });
+        }
+      }
+    });
+  };
+}
+
+/**
+ * Rehype plugin to remove callout-title from note type callouts
+ */
+export function rehypeRemoveNoteIndicator() {
+  return (tree) => {
+    visit(tree, 'element', (node) => {
+      // Find callout-note asides and remove callout-title from callout-indicator
+      if (node.tagName === 'aside' && node.properties?.className?.includes('callout-note')) {
+        visit(node, 'element', (child) => {
+          // Find callout-indicator and remove callout-title from its children
+          if (child.tagName === 'div' && child.properties?.className?.includes('callout-indicator')) {
+            child.children = child.children.filter(
+              (grandchild) => !(grandchild.tagName === 'div' && grandchild.properties?.className?.includes('callout-title'))
+            );
+            return false; // Don't visit children
+          }
+        });
+      }
+    });
+  };
+}
