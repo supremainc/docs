@@ -144,11 +144,11 @@ Este producto incluye funcionalidad automática MDI/MDIX y permite la conexión 
 
 * Este dispositivo cuenta con MDI/MDIX automático, por lo que puede conectarse directamente a una PC mediante un cable cruzado o un cable CAT-5e recto estándar.
 
-  :::caution
+   :::caution
 
-  Algunos concentradores o conmutadores no estándar podrían no admitir MDI/MDIX automático.
+   Algunos concentradores o conmutadores no estándar podrían no admitir MDI/MDIX automático.
 
-  :::
+   :::
 
 * <Badge only>XPQ2-APB</Badge> admite PoE que suministra energía a través del cable Ethernet.
 
@@ -259,3 +259,20 @@ Consulte la siguiente información al utilizar un conmutador de red gigabit.
 :::
 
 </Include>
+
+#### Puertos y servicios de red
+
+Este dispositivo usa los siguientes puertos para la comunicación en red y el funcionamiento estable del servicio.
+
+<div className="overflow-x col2--20-80">
+| Protocolo | Descripción del servicio |
+| :-: | --- |
+| **TCP** | Se utiliza para los servicios de comunicación entre el servidor y el dispositivo, así como para el servicio de cambio de estado operativo del dispositivo. |
+| **UDP** | Se usa para el servicio de detección del dispositivo, que permite buscar dispositivos en la red. |
+</div>
+
+:::info
+
+Estos puertos se utilizan para proporcionar las funciones normales de red del producto. Al configurar reglas de firewall o ajustes de seguridad de red, permite el uso de estos puertos.
+
+:::
