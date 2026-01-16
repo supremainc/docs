@@ -16,6 +16,8 @@ import { rehypeExtendedTable } from 'rehype-extended-table';
 import { rehypeMdxElements } from 'rehype-mdx-elements';
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
 // Import remark plugins
 import {
@@ -25,7 +27,8 @@ import {
   remarkTransformDocLinks,
   remarkAddHeadingIds,
   remarkProcessIncludeXclude,
-  remarkNormalizeTableStructure
+  remarkNormalizeTableStructure,
+  remarkProcessFaqs
 } from './plugins-remark.mjs';
 
 // Import rehype plugins
@@ -129,6 +132,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(remarkTransformDocLinks, docPath, language)
     .use(remarkAddHeadingIds, headingId)
     .use(remarkProcessIncludeXclude, productOption)
+    .use(remarkProcessFaqs, productOption, language)  // Process Faqs component
     .use(remarkNormalizeTableStructure)
     
     // Code highlighting

@@ -4,6 +4,7 @@
  */
 
 import { visit } from 'unist-util-visit';
+import fs from 'fs';
 
 /**
  * Create a remark plugin that handles text directives
@@ -363,3 +364,160 @@ export function remarkNormalizeTableStructure() {
     });
   };
 }
+
+/**
+ * Remark plugin to process <Faqs /> component
+ * Converts Faqs JSX elements to structured content
+ */
+export function remarkProcessFaqs(productOption = '', language = 'ko') {
+  return (tree) => {
+    const langMap = {
+      ko: 'i18n/ko/faqs.json',
+      en: 'i18n/en/faqs.json',
+      ja: 'i18n/ja/faqs.json',
+      es: 'i18n/es/faqs.json'
+    };
+
+    const faqsFilePath = langMap[language] || langMap['ko'];
+    let faqsData = [];
+
+    try {
+      const content = fs.readFileSync(faqsFilePath, 'utf-8');
+      faqsData = JSON.parse(content);
+    } catch (error) {
+      console.warn(`Failed to load FAQs from ${faqsFilePath}:`, error.message);
+      return;
+    }
+
+    const productList = productOption ? productOption.split(',').map(p => p.trim()) : null;
+
+    visit(tree, (node, index, parent) => {
+      if (!node || !parent || index === null) return;
+
+      // Check for <Faqs /> MDX component
+      const isFaqElement = (node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Faqs';
+      
+      if (!isFaqElement) return;
+
+      // Filter FAQs by product
+      const filteredCategories = faqsData
+        .map(cat => {
+          const contentsArr = Array.isArray(cat.category.contents)
+            ? cat.category.contents
+            : [cat.category.contents];
+          const filteredContents = productList
+            ? contentsArr.filter(faq => faq.product.some(p => productList.includes(p)))
+            : contentsArr;
+          return filteredContents.length > 0
+            ? { 
+                title: cat.category.title, 
+                hid: cat.category.hid, 
+                contents: filteredContents.map(faq => ({
+                  ...faq,
+                  // Convert href='...#anchor' to href='#anchor' (remove path before #)
+                  answer: Array.isArray(faq.answer)
+                    ? faq.answer.map(a => a.replace(/href='[^']*#/g, "href='#"))
+                    : faq.answer.replace(/href='[^']*#/g, "href='#")
+                }))
+              }
+            : null;
+        })
+        .filter(Boolean);
+
+      if (filteredCategories.length === 0) {
+        // Replace with empty message
+        parent.children[index] = {
+          type: 'paragraph',
+          children: [{ type: 'text', value: 'There are no FAQs for this product.' }]
+        };
+        return;
+      }
+
+      // Build FAQ sections with MDX JSX wrapper
+      const categoryContent = [];
+
+      filteredCategories.forEach((cat) => {
+        // Category wrapper with class
+        const categoryItems = [];
+
+        // Add category heading
+        categoryItems.push({
+          type: 'heading',
+          depth: 3,
+          children: [{ type: 'text', value: cat.title }]
+        });
+
+        // Add FAQ items
+        cat.contents.forEach((faq, faqIdx) => {
+          // FAQ item wrapper
+          const faqItemContent = [];
+
+          // Question
+          faqItemContent.push({
+            type: 'paragraph',
+            properties: { className: ['faq-question'] },
+            children: [
+              { type: 'text', value: 'Q. ' },
+              {
+                type: 'html',
+                value: faq.question
+              }
+            ]
+          });
+
+          // Answer
+          const answerItems = Array.isArray(faq.answer) ? faq.answer : [faq.answer];
+          const answerChildren = answerItems.map((a, i) => ({
+            type: 'listItem',
+            children: [
+              {
+                type: 'paragraph',
+                children: [
+                  {
+                    type: 'html',
+                    value: a
+                  }
+                ]
+              }
+            ]
+          }));
+
+          faqItemContent.push({
+            type: 'list',
+            ordered: false,
+            properties: { className: ['faq-answer'] },
+            children: answerChildren
+          });
+
+          // Wrap FAQ item in div with faq-item class
+          categoryItems.push({
+            type: 'mdxJsxFlowElement',
+            name: 'div',
+            attributes: [{ type: 'mdxAttribute', name: 'className', value: 'faq-item' }],
+            children: faqItemContent
+          });
+        });
+
+        // Wrap category in div with faq-category class
+        categoryContent.push({
+          type: 'mdxJsxFlowElement',
+          name: 'div',
+          attributes: [{ type: 'mdxAttribute', name: 'className', value: 'faq-category' }],
+          children: categoryItems
+        });
+      });
+
+      // Wrap all FAQs in container div
+      const faqContainer = {
+        type: 'mdxJsxFlowElement',
+        name: 'div',
+        attributes: [{ type: 'mdxAttribute', name: 'className', value: 'faq-container' }],
+        children: categoryContent
+      };
+
+      // Replace Faqs component with generated content
+      parent.children[index] = faqContainer;
+    });
+  };
+}
+
