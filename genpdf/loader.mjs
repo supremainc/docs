@@ -295,6 +295,9 @@ export function processImportsInMdx(content, basePath, currentFilePath = '') {
   // Remove import statements (including optional semicolon and trailing whitespace/newlines)
   let processedContent = content.replace(/import\s+[\w\s]+from\s+['"][^'"]+['"];?\s*\n/g, '');
 
+  // Note: Anno components are left as JSX and will be converted in rehype processing
+  // They will be handled by rehypeProcessMdxElements plugin
+
   // Process JSON imports and create variable assignments for SpecSection components
   // Store JSON data in script block for component access
   let variableDeclarations = '';

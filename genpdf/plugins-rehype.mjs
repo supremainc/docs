@@ -753,6 +753,41 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
     visit(tree, (node, index, parent) => {
       if (!node || !parent || index === null) return;
 
+      // Process Anno components (annotation references) - can be either flow or text element
+      if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Anno') {
+        const attributes = node.attributes || [];
+        const idAttr = attributes.find(attr => attr.name === 'id');
+        
+        console.log('ℹ️  Processing Anno component:', { id: idAttr?.value, childrenCount: node.children?.length });
+        
+        if (idAttr && idAttr.value) {
+          const annoId = idAttr.value;
+          const childText = node.children?.[0]?.value || '';
+          
+          console.log('   ✓ Anno created:', { id: annoId, text: childText });
+          
+          // Convert <Anno id="anno1">1)</Anno> to <span id='anno1'><a href='#anno1_dest'>1)</a></span>
+          const annoNode = {
+            type: 'element',
+            tagName: 'span',
+            properties: { id: annoId },
+            children: [
+              {
+                type: 'element',
+                tagName: 'a',
+                properties: { href: `#${annoId}_dest` },
+                children: [
+                  { type: 'text', value: childText }
+                ]
+              }
+            ]
+          };
+          
+          parent.children[index] = annoNode;
+          return;
+        }
+      }
+
       // Process SpecSection components
       if (node.type === 'mdxJsxFlowElement' && node.name === 'SpecSection') {
         console.log('ℹ️  Processing SpecSection:', node.attributes?.map(a => `${a.name}=${a.value?.substring(0, 50)}...`).join(','));
