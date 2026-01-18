@@ -11,14 +11,50 @@ import { generateHeadingId, extractHeadingsFromMarkdown } from './utils.mjs';
 /**
  * Recursively extract doc IDs from sidebar configuration
  * Also includes link.id from category items
+ * Excludes release notes sections (type: html followed by category with label '릴리스 노트' or 'Release Notes')
  * @param {Array|Object} config - Sidebar configuration
  * @param {Array} docIds - Accumulator
+ * @param {number} index - Current index in array (for skipping release notes)
  * @returns {Array} Array of doc IDs
  */
-export function extractDocIds(config, docIds = []) {
+export function extractDocIds(config, docIds = [], index = 0) {
   if (Array.isArray(config)) {
-    config.forEach(item => extractDocIds(item, docIds));
+    // Process array with index tracking to detect and skip release notes patterns
+    for (let i = 0; i < config.length; i++) {
+      const item = config[i];
+      const nextItem = config[i + 1];
+      
+      // Skip this item if it's a category with release notes label
+      // (This is the category that comes after type: html)
+      if (item.type === 'category' && 
+          nextItem === undefined && // nextItem doesn't exist or is skipped
+          (item.label === '릴리스 노트' || item.label === 'Release Notes')) {
+        continue;
+      }
+      
+      // Skip next item if current is html and next is release notes category
+      if (item.type === 'html' && 
+          nextItem && 
+          nextItem.type === 'category' &&
+          (nextItem.label === '릴리스 노트' || nextItem.label === 'Release Notes')) {
+        i++; // Skip the next item (release notes category)
+        continue;
+      }
+      
+      extractDocIds(item, docIds, i);
+    }
   } else if (typeof config === 'object' && config !== null) {
+    // Skip if this is a release notes category
+    if (config.type === 'category' && 
+        (config.label === '릴리스 노트' || config.label === 'Release Notes')) {
+      return docIds;
+    }
+    
+    // Skip html type items (they're just visual separators)
+    if (config.type === 'html') {
+      return docIds;
+    }
+    
     // Handle link.id for categories
     if (config.link && config.link.type === 'doc' && config.link.id) {
       docIds.push(config.link.id);
