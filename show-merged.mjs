@@ -2,7 +2,7 @@ import path from 'path';
 import { loadMdxFile } from './genpdf/loader.mjs';
 
 // 현재 파일을 merge
-const merged = loadMdxFile('device/biostation_3/getting-started', 'ko');
+const merged = loadMdxFile('device/biostation_3/product-specifications', 'ko');
 
 if (merged) {
   console.log('='.repeat(80));

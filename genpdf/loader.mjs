@@ -7,6 +7,11 @@ import path from 'path';
 import matter from 'gray-matter';
 import { getDocBasePath } from './config.mjs';
 import { generateHeadingId, extractHeadingsFromMarkdown } from './utils.mjs';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const ROOT_DIR = path.dirname(__dirname);
 
 /**
  * Recursively extract doc IDs from sidebar configuration
@@ -151,10 +156,45 @@ function processFileImportsRecursively(filePath, processedFiles = {}, imports = 
 }
 
 /**
+ * Resolve Docusaurus path aliases (@site, etc.) to actual file paths
+ * @param {string} importPath - Import path with potential @site alias
+ * @returns {string} Resolved actual file path
+ */
+function resolveDocusaurusPath(importPath) {
+  if (importPath.startsWith('@site/')) {
+    return importPath.replace('@site/', ROOT_DIR + path.sep);
+  }
+  return importPath;
+}
+
+/**
+ * Load JSON file and convert to variable assignment
+ * For: import specs from '@site/static/specs/bs3_specs.json'
+ * Creates: const specs = {...}
+ * @param {string} filePath - Path to JSON file
+ * @returns {string|null} Variable assignment string or null if failed
+ */
+function loadJsonAsVariable(filePath, varName) {
+  try {
+    const resolvedPath = resolveDocusaurusPath(filePath);
+    if (fs.existsSync(resolvedPath)) {
+      const jsonContent = fs.readFileSync(resolvedPath, 'utf8');
+      const jsonData = JSON.parse(jsonContent);
+      // Return as inline JavaScript (will be embedded in content)
+      return `<script>window.${varName} = ${JSON.stringify(jsonData)};</script>`;
+    }
+  } catch (error) {
+    console.warn(`⚠️  Failed to load JSON file ${filePath}: ${error.message}`);
+  }
+  return null;
+}
+
+/**
  * Process import statements in MDX and replace with actual content
  * Handles: import Component from './path/to/file.mdx'
  * And replaces: <Component /> with the imported file's content
  * Supports nested imports: A imports B, B imports C, etc.
+ * Also handles JSON imports: import specs from '@site/static/specs/bs3_specs.json'
  * @param {string} content - MDX content
  * @param {string} basePath - Base directory for relative imports
  * @param {string} currentFilePath - Path of the file being processed (for nested imports)
@@ -164,6 +204,7 @@ export function processImportsInMdx(content, basePath, currentFilePath = '') {
   // Extract all import statements
   const importRegex = /import\s+(\w+)\s+from\s+['"]([^'"]+)['"];?/g;
   const imports = {};
+  const jsonVariables = [];
   let match;
 
   while ((match = importRegex.exec(content)) !== null) {
@@ -171,7 +212,38 @@ export function processImportsInMdx(content, basePath, currentFilePath = '') {
     const importPath = match[2];
     
     try {
-      // Resolve the actual file path
+      // Check if this is a JSON import
+      if (importPath.endsWith('.json')) {
+        // Try to load JSON file
+        let jsonPath = importPath;
+        
+        // Handle @site alias
+        if (jsonPath.startsWith('@site/')) {
+          jsonPath = jsonPath.replace('@site/', ROOT_DIR + path.sep);
+        } else {
+          // Relative path
+          jsonPath = path.join(basePath, jsonPath);
+        }
+        
+        if (fs.existsSync(jsonPath)) {
+          try {
+            const jsonContent = fs.readFileSync(jsonPath, 'utf8');
+            const jsonData = JSON.parse(jsonContent);
+            // Store JSON data for use in components
+            imports[componentName] = JSON.stringify(jsonData);
+            console.log(`✓ Loaded JSON: ${componentName} from ${importPath}`);
+            continue;
+          } catch (error) {
+            console.warn(`⚠️  Failed to parse JSON file ${importPath}: ${error.message}`);
+            continue;
+          }
+        } else {
+          console.warn(`⚠️  JSON file not found: ${importPath}`);
+          continue;
+        }
+      }
+      
+      // Resolve the actual file path for MDX/MD files
       let actualPath = path.join(basePath, importPath);
       
       // Try both .mdx and .md extensions
@@ -199,8 +271,8 @@ export function processImportsInMdx(content, basePath, currentFilePath = '') {
         .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
         // Remove import statements (including optional semicolon)
         .replace(/import\s+[\s\S]*?from\s+['"][^'"]+['"];?\s*/g, '')
-        // Remove JSX expressions BUT PRESERVE {props.xxx} patterns AND {#anchor} patterns
-        .replace(/\{(?!props\.[a-zA-Z_]\w*\}|#[a-z0-9\-]+\})[^}]*\}/g, '');
+        // Remove JSX expressions BUT PRESERVE {props.xxx} patterns AND {#anchor} patterns AND {variable.property} patterns
+        .replace(/\{(?!props\.[a-zA-Z_]\w*\}|#[a-z0-9\-]+\}|[a-zA-Z_]\w*(?:\.[a-zA-Z_]\w*)*\})[^}]*\}/g, '');
       
       imports[componentName] = cleanedContent;
 
@@ -212,12 +284,82 @@ export function processImportsInMdx(content, basePath, currentFilePath = '') {
     }
   }
 
+  // Collect imported JSON variable names for later reference
+  const jsonVariableNames = new Set();
+  for (const [varName, jsonData] of Object.entries(imports)) {
+    if (typeof jsonData === 'string' && (jsonData.startsWith('{') || jsonData.startsWith('['))) {
+      jsonVariableNames.add(varName);
+    }
+  }
+
   // Remove import statements (including optional semicolon and trailing whitespace/newlines)
   let processedContent = content.replace(/import\s+[\w\s]+from\s+['"][^'"]+['"];?\s*\n/g, '');
 
-  // Replace component usage with imported content
+  // Process JSON imports and create variable assignments for SpecSection components
+  // Store JSON data in script block for component access
+  let variableDeclarations = '';
+  for (const [varName, jsonData] of Object.entries(imports)) {
+    // Check if this is JSON data (string that looks like stringified JSON)
+    try {
+      if (typeof jsonData === 'string' && (jsonData.startsWith('{') || jsonData.startsWith('['))) {
+        // This is a JSON import - store as component-accessible variable
+        // We'll inject this as a script that runs before MDX processing
+        // For now, we'll use a data attribute approach with escaped JSON
+        // Replace {varName} or {varName.property} with literal object notation
+        const jsonObj = JSON.parse(jsonData);
+        
+        // Find all SpecSection components with this variable and their property paths
+        const specSectionPattern = new RegExp(`<SpecSection\\s+data={${varName}((?:\\.[a-zA-Z_]\\w*)+)}\\s*/>`, 'g');
+        let specMatch;
+        let matchCount = 0;
+        
+        while ((specMatch = specSectionPattern.exec(processedContent)) !== null) {
+          matchCount++;
+          const propertyPath = specMatch[1]; // e.g., ".credentials", ".general", etc.
+          
+          // Extract the nested property value
+          let dataValue = jsonObj;
+          for (const part of propertyPath.split('.').filter(p => p)) {
+            dataValue = dataValue[part];
+            if (!dataValue) break;
+          }
+          
+          if (dataValue) {
+            const escapedJson = Buffer.from(JSON.stringify(dataValue)).toString('base64');
+            // Replace this specific SpecSection with its own data
+            const fullMatch = specMatch[0];
+            processedContent = processedContent.replace(fullMatch, `<SpecSection _jsonData="${escapedJson}" />`);
+          }
+        }
+        
+        if (matchCount > 0) {
+          console.log(`✓ Found ${matchCount} SpecSection components using ${varName}`);
+        }
+      }
+    } catch (e) {
+      console.warn(`Failed to process JSON variable ${varName}:`, e.message);
+    }
+  }
+
+  // Replace component usage with imported content (for MDX components, not JSON)
+  // Filter out JSON imports from component replacement
+  const mdxImports = Object.fromEntries(
+    Object.entries(imports).filter(([_, value]) => {
+      try {
+        if (typeof value === 'string' && (value.startsWith('{') || value.startsWith('['))) {
+          JSON.parse(value);
+          return false; // Skip JSON data
+        }
+        return true;
+      } catch {
+        return true; // Include non-JSON
+      }
+    })
+  );
+
+  // Replace MDX component usage with imported content
   // Pattern: <ComponentName props="value" /> or <ComponentName></ComponentName>
-  for (const [componentName, importedContent] of Object.entries(imports)) {
+  for (const [componentName, importedContent] of Object.entries(mdxImports)) {
     // Match self-closing tags with attributes: <ComponentName attr1="val1" attr2="val2" />
     const selfClosingRegex = new RegExp(`<${componentName}([^/>]*)\\s*/?>`, 'g');
     // Match opening/closing tags with content

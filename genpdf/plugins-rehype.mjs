@@ -7,6 +7,8 @@ import { visit } from 'unist-util-visit';
 import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import rehypeParse from 'rehype-parse';
+import { unified } from 'unified';
 
 // Get current directory for relative imports
 const __filename = fileURLToPath(import.meta.url);
@@ -33,6 +35,359 @@ const cmdAirJa = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/air
 
 const glossaryKo = JSON.parse(readFileSync(`${__dirname}/../i18n/ko/glossary.json`, 'utf-8'));
 const glossaryEn = JSON.parse(readFileSync(`${__dirname}/../i18n/en/glossary.json`, 'utf-8'));
+
+/**
+ * Helper function to create AST nodes for SpecSection
+ * Directly builds rehype AST matching React component structure
+ */
+function buildSpecSectionAst(data, language = 'ko') {
+  if (!data) {
+    console.warn('⚠️  No data in SpecSection');
+    return null;
+  }
+
+  // Log data structure to understand the issue
+  console.log('📊 Data structure:', {
+    keys: Object.keys(data),
+    hasItems: !!data.items,
+    dataType: typeof data
+  });
+
+  // Data is now a single section: { label: "...", label_id: "...", items: { ... } }
+  if (!data.items || typeof data.items !== 'object') {
+    console.warn('⚠️  No items in section data');
+    return null;
+  }
+
+  /**
+   * Parse HTML string to AST nodes
+   */
+  const parseHtmlToAst = (htmlString) => {
+    if (!htmlString || typeof htmlString !== 'string') return [];
+    try {
+      const ast = unified()
+        .use(rehypeParse, { fragment: true })
+        .parse(htmlString);
+      return ast.children || [];
+    } catch (error) {
+      console.error('❌ HTML parsing error:', error.message);
+      return [{ type: 'text', value: htmlString }];
+    }
+  };
+
+  /**
+   * Detect if string contains HTML tags
+   */
+  const isHtmlString = (str) => {
+    if (typeof str !== 'string') return false;
+    return /<[a-z][\s\S]*>/i.test(str);
+  };
+
+  /**
+   * Build annotation sup element
+   */
+  const buildAnnotationSup = (id) => {
+    if (!id) return null;
+    return {
+      type: 'element',
+      tagName: 'sup',
+      properties: { id: `${id}_dest` },
+      children: [
+        {
+          type: 'element',
+          tagName: 'a',
+          properties: { href: `#${id}` },
+          children: []
+        }
+      ]
+    };
+  };
+
+  /**
+   * Build list items from array or object values
+   */
+  const buildListItems = (items) => {
+    if (!items) return [];
+    const itemsList = Array.isArray(items) ? items : Object.values(items);
+    return itemsList.map(item => ({
+      type: 'element',
+      tagName: 'li',
+      properties: {},
+      children: typeof item === 'string' ? [{ type: 'text', value: item }] : [{ type: 'text', value: String(item) }]
+    }));
+  };
+
+  /**
+   * Build AST nodes for value content
+   */
+  const buildValueChildren = (value) => {
+    if (value === null || value === undefined) return [{ type: 'text', value: '' }];
+
+    if (typeof value === 'string') {
+      // Check if string contains HTML tags
+      if (isHtmlString(value)) {
+        // Parse HTML and wrap in <p>
+        const parsedNodes = parseHtmlToAst(value);
+        return [
+          {
+            type: 'element',
+            tagName: 'p',
+            properties: {},
+            children: parsedNodes
+          }
+        ];
+      }
+      
+      return [
+        {
+          type: 'element',
+          tagName: 'p',
+          properties: {},
+          children: [{ type: 'text', value }]
+        }
+      ];
+    }
+
+    if (typeof value === 'boolean') {
+      const text = value ? '지원' : '미지원';
+      return [
+        {
+          type: 'element',
+          tagName: 'p',
+          properties: {},
+          children: [{ type: 'text', value: text }]
+        }
+      ];
+    }
+
+    if (Array.isArray(value)) {
+      return [
+        {
+          type: 'element',
+          tagName: 'ul',
+          properties: {},
+          children: buildListItems(value)
+        }
+      ];
+    }
+
+    if (typeof value === 'object' && value[language]) {
+      return buildValueChildren(value[language]);
+    }
+
+    if (typeof value === 'object' && value.ko) {
+      return buildValueChildren(value.ko);
+    }
+
+    return [{ type: 'text', value: '' }];
+  };
+
+  /**
+   * Build AST for a single item within a section
+   */
+  const buildItemNode = (item) => {
+    const rowChildren = [];
+
+    // Header
+    const headerLabel = item.label || item.label_id || '레이블 없음';
+    console.log('    📝 Building item:', headerLabel, '| type:', item.type);
+    
+    // Build header children with annotation support
+    const headerChildren = [{ type: 'text', value: headerLabel }];
+    if (item.annotation_label) {
+      const annotSup = buildAnnotationSup(item.annotation_label);
+      if (annotSup) headerChildren.push(annotSup);
+    }
+    
+    rowChildren.push({
+      type: 'element',
+      tagName: 'div',
+      properties: { className: ['techspecsRowheader'] },
+      children: headerChildren
+    });
+
+    // Body
+    const bodyChildren = [];
+
+    if (item.type === 'model' && item.items) {
+      // Model type: key-value pairs
+      Object.values(item.items).forEach(subitem => {
+        // Build left column with label and optional annotation
+        const leftChildren = subitem.label_id ? 
+          [{ type: 'text', value: subitem.label || '' }] :
+          (subitem.label && isHtmlString(subitem.label) ?
+            parseHtmlToAst(subitem.label) :
+            [{ type: 'text', value: subitem.label || '' }]);
+        
+        // Build right column children
+        const rightChildren = buildValueChildren(subitem.value);
+        if (subitem.annotation_value) {
+          const annotSup = buildAnnotationSup(subitem.annotation_value);
+          if (annotSup) rightChildren.push(annotSup);
+        }
+        
+        bodyChildren.push({
+          type: 'element',
+          tagName: 'div',
+          properties: { className: ['row'] },
+          children: [
+            {
+              type: 'element',
+              tagName: 'div',
+              properties: { className: ['column', 'small_l1'] },
+              children: leftChildren
+            },
+            {
+              type: 'element',
+              tagName: 'div',
+              properties: { className: ['column', 'small_l2'] },
+              children: rightChildren
+            }
+          ]
+        });
+      });
+    } else if (item.type === 'biometric' && item.items) {
+      // Biometric type with credential types (face, fingerprint, etc.)
+      Object.values(item.items).forEach(subitem => {
+        if (subitem.type === 'face' || subitem.type === 'fingerprint') {
+          // Show the credential type label with badge
+          const credLabel = subitem.label || subitem.label_id || '';
+          const credChildren = [{ type: 'text', value: credLabel }];
+          
+          // Add badge if present
+          if (subitem.badge) {
+            credChildren.push({
+              type: 'element',
+              tagName: 'span',
+              properties: { className: ['badge', 'only'] },
+              children: [{ type: 'text', value: subitem.badge }]
+            });
+          }
+          
+          bodyChildren.push({
+            type: 'element',
+            tagName: 'div',
+            properties: { className: ['biometric-item'] },
+            children: [
+              {
+                type: 'element',
+                tagName: 'p',
+                properties: { className: ['credential-type'] },
+                children: credChildren
+              }
+            ]
+          });
+
+          // Show nested items (auth_distance, auth_height, etc.)
+          if (subitem.items) {
+            const featureList = [];
+            Object.values(subitem.items).forEach(feature => {
+              const featureLabel = feature.label || feature.label_id || '';
+              const featureValue = buildValueChildren(feature.value);
+              const featureChildren = [
+                {
+                  type: 'element',
+                  tagName: 'strong',
+                  properties: {},
+                  children: [{ type: 'text', value: featureLabel + ':' }]
+                },
+                ...featureValue
+              ];
+              
+              // Add annotation if present
+              if (feature.annotation_label) {
+                const annotSup = buildAnnotationSup(feature.annotation_label);
+                if (annotSup) featureChildren.push(annotSup);
+              }
+              
+              featureList.push({
+                type: 'element',
+                tagName: 'div',
+                properties: { className: ['feature'] },
+                children: featureChildren
+              });
+            });
+            bodyChildren.push(...featureList);
+          }
+        }
+      });
+    } else if (!item.type && item.items) {
+      // Default type with items - usually just display the items
+      Object.values(item.items).forEach(subitem => {
+        const sublabel = subitem.label || subitem.label_id || '';
+        const subvalue = buildValueChildren(subitem.value);
+        
+        // Add annotation if present
+        if (subitem.annotation_value) {
+          const annotSup = buildAnnotationSup(subitem.annotation_value);
+          if (annotSup) subvalue.push(annotSup);
+        }
+        
+        bodyChildren.push({
+          type: 'element',
+          tagName: 'div',
+          properties: { className: ['item-row'] },
+          children: [
+            {
+              type: 'element',
+              tagName: 'span',
+              properties: { className: ['item-label'] },
+              children: [{ type: 'text', value: sublabel + ':' }]
+            },
+            {
+              type: 'element',
+              tagName: 'span',
+              properties: { className: ['item-value'] },
+              children: subvalue
+            }
+          ]
+        });
+      });
+    } else if (!item.type && item.value !== undefined) {
+      // Default type with direct value
+      const valueChildren = buildValueChildren(item.value);
+      
+      // Add annotation if present
+      if (item.annotation_value) {
+        const annotSup = buildAnnotationSup(item.annotation_value);
+        if (annotSup) valueChildren.push(annotSup);
+      }
+      
+      bodyChildren.push(...valueChildren);
+    }
+
+    rowChildren.push({
+      type: 'element',
+      tagName: 'div',
+      properties: { className: ['techspecsBody'] },
+      children: bodyChildren.length > 0 ? bodyChildren : [{ type: 'text', value: '' }]
+    });
+
+    return {
+      type: 'element',
+      tagName: 'div',
+      properties: { className: ['techspecSection'] },
+      children: rowChildren
+    };
+  };
+
+  /**
+   * Build all items from the current section
+   */
+  const allItems = [];
+  Object.values(data.items).forEach(item => {
+    allItems.push(buildItemNode(item));
+  });
+
+  console.log('✓ Built', allItems.length, 'item nodes');
+
+  return {
+    type: 'element',
+    tagName: 'div',
+    properties: { className: ['techspec'] },
+    children: allItems.length > 0 ? allItems : [{ type: 'text', value: 'No specifications available' }]
+  };
+}
 
 /**
  * Create a rehype plugin that adds icons and labels to admonitions
@@ -397,6 +752,73 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
 
     visit(tree, (node, index, parent) => {
       if (!node || !parent || index === null) return;
+
+      // Process SpecSection components
+      if (node.type === 'mdxJsxFlowElement' && node.name === 'SpecSection') {
+        console.log('ℹ️  Processing SpecSection:', node.attributes?.map(a => `${a.name}=${a.value?.substring(0, 50)}...`).join(','));
+        const attributes = node.attributes || [];
+        
+        // Try to find data attribute (direct) or _jsonData attribute (base64-encoded from loader)
+        let dataAttr = attributes.find(attr => attr.name === 'data');
+        let jsonDataAttr = attributes.find(attr => attr.name === '_jsonData');
+        
+        let data = null;
+        
+        if (dataAttr) {
+          try {
+            // Direct data attribute processing
+            if (dataAttr.type === 'mdxJsxAttributeValueExpression') {
+              data = dataAttr.value;
+            } else if (typeof dataAttr.value === 'string') {
+              data = JSON.parse(dataAttr.value);
+            }
+          } catch (error) {
+            console.warn('⚠️  Failed to parse data attribute:', error.message);
+          }
+        } else if (jsonDataAttr && jsonDataAttr.value) {
+          try {
+            // Base64-encoded data from loader
+            const base64String = jsonDataAttr.value;
+            console.log('ℹ️  Decoding base64 data...');
+            const jsonString = Buffer.from(base64String, 'base64').toString('utf-8');
+            data = JSON.parse(jsonString);
+            console.log('✓ SpecSection data decoded successfully');
+          } catch (error) {
+            console.warn('⚠️  Failed to decode _jsonData:', error.message);
+          }
+        }
+        
+        if (data) {
+          try {
+            // Log data structure to understand the format
+            console.log('📋 Data structure:', {
+              keys: Object.keys(data),
+              biostation3Keys: data.biostation3 ? Object.keys(data.biostation3) : 'N/A'
+            });
+            
+            // Check if data is wrapped in product key (e.g., { biostation3: { items: {...} } })
+            let specData = data;
+            if (data.biostation3 && !data.items) {
+              specData = data.biostation3;
+              console.log('📍 Using biostation3 as spec data');
+            }
+            
+            // Build AST nodes directly from React component structure
+            const astNode = buildSpecSectionAst(specData, 'ko');
+            
+            if (astNode) {
+              parent.children[index] = astNode;
+              console.log('✓ SpecSection AST built and rendered');
+            } else {
+              console.warn('⚠️  buildSpecSectionAst returned null');
+            }
+          } catch (error) {
+            console.warn('⚠️  Failed to build SpecSection AST:', error.message);
+            console.warn(error.stack);
+          }
+        }
+        return;
+      }
 
       // Process Image components (both flow and text elements - for headings)
       if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Image') {
