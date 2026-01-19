@@ -47,11 +47,11 @@ function buildSpecSectionAst(data, language = 'ko') {
   }
 
   // Log data structure to understand the issue
-  console.log('📊 Data structure:', {
-    keys: Object.keys(data),
-    hasItems: !!data.items,
-    dataType: typeof data
-  });
+  // console.log('📊 Data structure:', {
+  //   keys: Object.keys(data),
+  //   hasItems: !!data.items,
+  //   dataType: typeof data
+  // });
 
   // Data is now a single section: { label: "...", label_id: "...", items: { ... } }
   if (!data.items || typeof data.items !== 'object') {
@@ -190,7 +190,7 @@ function buildSpecSectionAst(data, language = 'ko') {
 
     // Header
     const headerLabel = item.label || item.label_id || '레이블 없음';
-    console.log('    📝 Building item:', headerLabel, '| type:', item.type);
+    // console.log('    📝 Building item:', headerLabel, '| type:', item.type);
     
     // Build header children with annotation support
     const headerChildren = [{ type: 'text', value: headerLabel }];
@@ -758,13 +758,13 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
         const attributes = node.attributes || [];
         const idAttr = attributes.find(attr => attr.name === 'id');
         
-        console.log('ℹ️  Processing Anno component:', { id: idAttr?.value, childrenCount: node.children?.length });
+        // console.log('ℹ️  Processing Anno component:', { id: idAttr?.value, childrenCount: node.children?.length });
         
         if (idAttr && idAttr.value) {
           const annoId = idAttr.value;
           const childText = node.children?.[0]?.value || '';
           
-          console.log('   ✓ Anno created:', { id: annoId, text: childText });
+          // console.log('   ✓ Anno created:', { id: annoId, text: childText });
           
           // Convert <Anno id="anno1">1)</Anno> to <span id='anno1'><a href='#anno1_dest'>1)</a></span>
           const annoNode = {
@@ -826,16 +826,16 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
         if (data) {
           try {
             // Log data structure to understand the format
-            console.log('📋 Data structure:', {
-              keys: Object.keys(data),
-              biostation3Keys: data.biostation3 ? Object.keys(data.biostation3) : 'N/A'
-            });
+            // console.log('📋 Data structure:', {
+            //   keys: Object.keys(data),
+            //   biostation3Keys: data.biostation3 ? Object.keys(data.biostation3) : 'N/A'
+            // });
             
             // Check if data is wrapped in product key (e.g., { biostation3: { items: {...} } })
             let specData = data;
             if (data.biostation3 && !data.items) {
               specData = data.biostation3;
-              console.log('📍 Using biostation3 as spec data');
+              // console.log('📍 Using biostation3 as spec data');
             }
             
             // Build AST nodes directly from React component structure
@@ -843,9 +843,9 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
             
             if (astNode) {
               parent.children[index] = astNode;
-              console.log('✓ SpecSection AST built and rendered');
+              // console.log('✓ SpecSection AST built and rendered');
             } else {
-              console.warn('⚠️  buildSpecSectionAst returned null');
+              // console.warn('⚠️  buildSpecSectionAst returned null');
             }
           } catch (error) {
             console.warn('⚠️  Failed to build SpecSection AST:', error.message);
@@ -1024,16 +1024,9 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
 
         const replacement = {
           type: 'element',
-          tagName: 'div',
-          properties: { className: ['overflow-x'] },
-          children: [
-            {
-              type: 'element',
-              tagName: 'table',
-              properties: tableClassName ? { className: [tableClassName] } : {},
-              children: node.children || []
-            }
-          ]
+          tagName: 'table',
+          properties: tableClassName ? { className: [tableClassName] } : {},
+          children: node.children || []
         };
 
         parent.children[index] = replacement;

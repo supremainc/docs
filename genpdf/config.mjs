@@ -55,26 +55,16 @@ export function getTemplateCSS(template) {
   let css = '';
   
   // Load default CSS
-  const defaultCSSPath = path.join(ROOT_DIR, 'default.css');
+  const defaultCSSPath = path.join(__dirname, 'default.css');
   if (fs.existsSync(defaultCSSPath)) {
     try {
-      css += fs.readFileSync(defaultCSSPath, 'utf8');
+      css = fs.readFileSync(defaultCSSPath, 'utf8');
       console.log('✓ CSS loaded from default.css');
     } catch (error) {
       console.warn(`⚠️  Failed to load default.css: ${error.message}`);
     }
-  }
-  
-  // Load additional styles CSS (if exists)
-  const stylesCSSPath = path.join(ROOT_DIR, 'mdx-to-html-styles.css');
-  if (fs.existsSync(stylesCSSPath)) {
-    try {
-      const additionalCSS = fs.readFileSync(stylesCSSPath, 'utf8');
-      css += '\n\n/* Additional Styles */\n' + additionalCSS;
-      console.log('✓ Additional styles loaded from mdx-to-html-styles.css');
-    } catch (error) {
-      console.warn(`⚠️  Failed to load mdx-to-html-styles.css: ${error.message}`);
-    }
+  } else {
+    console.warn('⚠️  default.css not found');
   }
 
   return css;
