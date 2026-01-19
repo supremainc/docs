@@ -112,7 +112,16 @@ async function main() {
     console.log(`✅ Successfully loaded ${mdxFiles.length} documents\n`);
 
     // Build HTML document
-    const title = `${sidebarKey} Documentation`;
+    // Get the top-level label from sidebar configuration
+    let topLevelLabel = sidebarKey;
+    if (Array.isArray(sidebars[sidebarKey]) && sidebars[sidebarKey].length > 0) {
+      const firstItem = sidebars[sidebarKey][0];
+      if (firstItem.label) {
+        topLevelLabel = firstItem.label;
+      }
+    }
+    
+    const title = `${topLevelLabel}`;
     const htmlContent = await buildHtmlDocument(mdxFiles, title, {
       template: templateType,
       toc: options.toc,
