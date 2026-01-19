@@ -775,6 +775,19 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
     visit(tree, (node, index, parent) => {
       if (!node || !parent || index === null) return;
 
+      // Process PageBreak components - convert to div with page-break class
+      if (node.type === 'mdxJsxFlowElement' && node.name === 'PageBreak') {
+        const pageBreakNode = {
+          type: 'element',
+          tagName: 'div',
+          properties: { className: ['page-break'] },
+          children: []
+        };
+        
+        parent.children[index] = pageBreakNode;
+        return;
+      }
+
       // Process Anno components (annotation references) - can be either flow or text element
       if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Anno') {
         const attributes = node.attributes || [];
