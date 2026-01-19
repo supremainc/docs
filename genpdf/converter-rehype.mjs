@@ -1,6 +1,11 @@
 /**
  * Markdown to HTML conversion using rehype-mdx-elements
  * Main processor combining remark and rehype plugins
+ * 
+ * NOTE: Inline HTML <br/> tags are protected during processing by converting them
+ * to a placeholder string (___BREAKPLACEHOLDER___) that survives the markdown/HTML
+ * pipeline, then restored in the output. This is necessary because remarkMdx strips
+ * bare HTML tags by default.
  */
 
 import { unified } from 'unified';
@@ -94,7 +99,10 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
   
   return unified()
     // Markdown parsing and normalization
-    .use(remarkParse)
+    .use(remarkParse, { 
+      slateLexer: false,
+      // Allow HTML blocks and inline HTML
+    })
     .use(remarkGfm)
     .use(remarkMdx)
     .use(remarkDirective)
@@ -140,7 +148,12 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(remarkPrism)
     
     // Convert to HTML
-    .use(remarkRehype, { passThrough: ['mdxJsxFlowElement', 'mdxJsxTextElement'], allowDangerousHtml: true })
+    .use(remarkRehype, { 
+      passThrough: ['mdxJsxFlowElement', 'mdxJsxTextElement'], 
+      allowDangerousHtml: true,
+      // Preserve HTML elements like <br/>, <hr/>, etc.
+      clobberPrefix: ''
+    })
     
     // Adjust heading levels based on document depth in hierarchy
     .use(function adjustHeadingLevelsByDepth() {
@@ -200,11 +213,49 @@ export async function markdownToHtml(
   language = 'ko',
   docDepth = 0
 ) {
+  // Protect <br/> tags by converting to a safe marker that survives processing
+  const BR_PLACEHOLDER = '___BREAKPLACEHOLDER___';
+  const hasBr = mdContent.includes('<br');
+  let processedContent = mdContent;
+  let brCount = 0;
+  
+  if (hasBr) {
+    // Replace all br tag variations
+    processedContent = mdContent.replace(/<br\s*\/?>/gi, () => {
+      brCount++;
+      return BR_PLACEHOLDER;
+    });
+  }
+  
   const processor = createProcessor(translations, productOption, basePath, headingId, docPath, language, docDepth);
   
   try {
-    const file = await processor.process(mdContent);
-    return file.value;
+    const file = await processor.process(processedContent);
+    let output = file.value;
+    
+    // Restore <br/> tags - unwrap any formatting tags that may have been added around br
+    if (hasBr && brCount > 0) {
+      // Keep unwrapping until no more changes
+      let maxIterations = 10;
+      while (maxIterations-- > 0) {
+        const before = output;
+        
+        // Remove <tag><br/></tag> patterns
+        output = output.replace(/<em><strong><br\/><\/strong><\/em>/g, '<br/>');
+        output = output.replace(/<strong><br\/><\/strong>/g, '<br/>');
+        output = output.replace(/<em><br\/><\/em>/g, '<br/>');
+        output = output.replace(/<[a-z]+><br\/><\/[a-z]+>/gi, '<br/>');
+        output = output.replace(/<[a-z]+[^>]*><br\/><\/[a-z]+>/gi, '<br/>');
+        
+        // Replace any remaining placeholders
+        output = output.replace(/BREAKPLACEHOLDER/g, '<br/>');
+        output = output.replace(/___BREAKPLACEHOLDER___/g, '<br/>');
+        
+        if (before === output) break; // No more changes
+      }
+    }
+    
+    return output;
   } catch (error) {
     console.error('Error processing markdown:', error.message);
     return '';
