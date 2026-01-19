@@ -457,7 +457,10 @@ export function remarkProcessFaqs(productOption = '', language = 'ko') {
             type: 'paragraph',
             properties: { className: ['faq-question'] },
             children: [
-              { type: 'text', value: 'Q. ' },
+              {
+                type: 'html',
+                value: '<span class="question__mark">Q.</span>'
+              },
               {
                 type: 'html',
                 value: faq.question
