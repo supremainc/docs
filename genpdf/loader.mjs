@@ -197,15 +197,15 @@ function processFileImportsRecursively(filePath, processedFiles = {}, imports = 
         const importedFileContent = fs.readFileSync(normalizedPath, 'utf8');
         const { content: importedFileMdxContent } = matter(importedFileContent);
 
-      let cleanedContent = importedMdxContent
-        // Remove MDX comments
-        .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
-        // Remove import statements (including optional semicolon)
-        .replace(/import\s+[\s\S]*?from\s+['"][^'"]+['"];?\s*/g, '')
-        // Remove JSX expressions BUT PRESERVE {props.xxx} patterns AND {#anchor} patterns
-        .replace(/\{(?!props\.[a-zA-Z_]\w*\}|#[a-z0-9\-]+\})[^}]*\}/g, '');
-      
-      imports[componentName] = cleanedContent;
+        let cleanedContent = importedFileMdxContent
+          // Remove MDX comments
+          .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
+          // Remove import statements (including optional semicolon)
+          .replace(/import\s+[\s\S]*?from\s+['"][^'"]+['"];?\s*/g, '')
+          // Remove JSX expressions BUT PRESERVE {props.xxx} patterns AND {#anchor} patterns
+          .replace(/\{(?!props\.[a-zA-Z_]\w*\}|#[a-z0-9\-]+\})[^}]*\}/g, '');
+        
+        imports[componentName] = cleanedContent;
 
         // Recursively process nested imports in this file
         processFileImportsRecursively(normalizedPath, processedFiles, imports);

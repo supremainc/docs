@@ -792,7 +792,7 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
           const annoNode = {
             type: 'element',
             tagName: 'span',
-            properties: { id: annoId },
+            properties: { id: annoId, className: ['annotation'] },
             children: [
               {
                 type: 'element',

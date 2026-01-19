@@ -1,6 +1,10 @@
 /* MDX to HTML Default Styles */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Coptic&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&display=swap');
 
+:root {
+  --ifm-color-cmd: #a32343;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,8 +30,8 @@ html[lang='en'] *, html[lang='en-US'] *, html[lang='es-419'] *, html[lang='es'] 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #f5f5f5;
+  width: 800px;
+  margin: 0 auto;
 }
 
 .container {
@@ -56,73 +60,79 @@ header p {
 }
 
 .layout {
-  display: grid;
-  grid-template-columns: 250px 1fr;
-  gap: 30px;
+  display: block;
 }
 
 .toc {
   background: white;
-  padding: 20px;
-  border-radius: 8px;
-  border-left: 4px solid #667eea;
   height: fit-content;
-  position: sticky;
+  position: relative;
   top: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 100px;
 }
 
 .toc h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--ifm-color-cmd);
+  text-transform: uppercase;
   margin-bottom: 15px;
-  color: #333;
-  font-size: 1.2em;
 }
 
 .toc ul {
   list-style: none;
+  margin-top: 20px;
 }
 
 .toc li {
   margin: 8px 0;
 }
 
-.toc a {
-  color: #667eea;
-  text-decoration: none;
-  transition: color 0.3s, text-decoration 0.3s;
-  display: block;
-  padding: 4px 0;
+.toc > ul > li > a {
+  display: none;
 }
 
-.toc a:hover {
-  color: #764ba2;
-  text-decoration: underline;
+.toc > ul > li > ul > li {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  padding-top: 28px;
+}
+
+.toc > ul ul li a {
+  color: var(--ifm-color-cmd);
+  border-bottom: .5pt solid rgba(0, 0, 0, 0.7);
+  display: block;
+  padding-bottom: 8.5pt;
+}
+
+.toc > ul ul li ul li a {
+  font-weight: normal;
+  font-size: 1rem;
+  color: #000;
+  border-bottom: none;
+  padding-bottom: 5px;
 }
 
 .toc ul ul {
-  margin-left: 15px;
+  margin-left: 0px;
   margin-top: 8px;
-  border-left: 1px solid #e0e0e0;
-  padding-left: 10px;
 }
 
 .toc ul ul a {
-  font-size: 0.95em;
+  text-decoration: none;
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
+  display: block;
+}
+
+.content .doc-section:first-of-type {
+  display: none;
 }
 
 .doc-section {
-  background: white;
-  padding: 40px;
-  margin-bottom: 30px;
-}
-
-.doc-section:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  counter-reset: count;
 }
 
 .doc-section h1 {
@@ -134,10 +144,11 @@ header p {
 }
 
 .doc-section h2 {
-  color: #a32343;
+  color: var(--ifm-color-cmd);
   margin-top: 30px;
   margin-bottom: 15px;
   font-size: 2rem;
+  page-break-before: always;
 }
 
 .doc-section h3 {
@@ -285,6 +296,7 @@ header p {
 
 .doc-content ol li p.hasimg img, .doc-content ul li p.hasimg img {
   margin-left: 0;
+  margin-right: 0;
 }
 
 .doc-content img {
@@ -309,9 +321,19 @@ header p {
   width: 100% !important;
 }
 
+.doc-content img[src*='dimension.svg'] {
+  width: 60% !important;
+}
+
+.doc-content img[alt*='Example banner'] {
+  width: 100%;
+}
+
 .doc-content .container {
   max-width: 100%;
   width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .doc-content .container .row {
@@ -433,7 +455,7 @@ header p {
 
 .doc-content .cmd {
   font-weight: bold;
-  color: #a32343;
+  color: var(--ifm-color-cmd);
 }
 
 footer {
@@ -470,43 +492,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@media (max-width: 1024px) {
-  .layout {
-    grid-template-columns: 1fr;
-  }
-
-  .toc {
-    position: static;
-    margin-bottom: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 1.8em;
-  }
-
-  .container {
-    padding: 15px;
-  }
-
-  .doc-section {
-    padding: 20px;
-  }
-
-  .toc h2 {
-    font-size: 1em;
-  }
-
-  .doc-section h1 {
-    font-size: 1.5em;
-  }
-
-  .doc-section h2 {
-    font-size: 1.2em;
-  }
 }
 
 /* Callout/Admonition Styles */
@@ -618,12 +603,12 @@ footer {
 }
 
 .callout-warn {
-  border-left-color: #a32343;
+  border-left-color: var(--ifm-color-cmd);
 }
 
 .callout-warn .callout-hint svg {
-  stroke: #a32343;
-  color: #a32343;
+  stroke: var(--ifm-color-cmd);
+  color: var(--ifm-color-cmd);
 }
 
 .callout-warn {
@@ -655,21 +640,26 @@ footer {
   background-color: #f9f9f9;
 }
 
-.doc-content sup {
+.doc-section sup {
   counter-increment: count;
 }
 
-.doc-content sup#dupl {
+.doc-section sup#dupl {
   counter-increment: none;
 }
 
-.doc-content sup a {
-  color: #a32343;
+.doc-section sup a {
+  color: var(--ifm-color-cmd);
   font-weight: 600;
 }
 
-.doc-content sup a:before {
+.doc-section sup a:before {
   content: counter(count) ")";
+}
+
+.doc-content span.annotation a {
+  color: var(--ifm-color-cmd);
+  font-weight: 600;
 }
 
 .techspec {
@@ -682,7 +672,7 @@ footer {
   width: 100%;
   display: flex;
   position: relative;
-  border-bottom: 1px solid var(--ifm-color-border);
+  border-bottom: 1px solid #adadad;
   padding: 1.5rem 0;
 }
 
@@ -694,7 +684,7 @@ footer {
   float: left;
   width: 22%;
   font-size: 1.1rem;
-  color: var(--ifm-color-color-ol-gray);
+  color: #696969;
 }
 
 .techspecsRowheader a {
@@ -728,7 +718,7 @@ footer {
 }
 
 .techspecsBody ul, .techspecsBody ul li, .techspecsBody ul ul {
-  margin: 0
+  margin: 0 0 0 1.0rem;
 }
 
 .techspecsBody .modelimg {
@@ -777,4 +767,37 @@ footer {
 
 .small_l2:last-of-type ul {
   margin-bottom: 0;
+}
+
+@media print {
+  h2 { string-set: doctitle content() }
+  body {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+  .container header {
+    display: none;
+  }
+}
+
+@page {
+  margin: 0;
+  size: A4;
+  margin-top: 0.7in;
+  margin-bottom: 0.7in;
+  margin-left: 0.5in;
+  margin-right: 0.5in;
+  prince-shrink-to-fit: none;
+  @top-right { 
+    content: string(doctitle);
+    font-size: 10pt;
+    font-family: 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans';
+    color: #626466;
+  }
+  @bottom-center { 
+      content: counter(page);
+      font-size: .75rem;
+      font-family: 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans';
+  }
 }
