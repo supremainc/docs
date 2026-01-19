@@ -888,10 +888,10 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
         const className = classNameAttr ? classNameAttr.value : '';
         
         const widthAttr = attributes.find(attr => attr.name === 'width');
-        const width = widthAttr ? widthAttr.value : '';
+        const width = widthAttr ? widthAttr.value.replace(/px$/, '') : '';
         
         const heightAttr = attributes.find(attr => attr.name === 'height');
-        const height = heightAttr ? heightAttr.value : '';
+        const height = heightAttr ? heightAttr.value.replace(/px$/, '') : '';
         
         const altAttr = attributes.find(attr => attr.name === 'alt');
         const alt = altAttr ? altAttr.value : '';
