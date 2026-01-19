@@ -381,11 +381,33 @@ function buildSpecSectionAst(data, language = 'ko') {
 
   console.log('✓ Built', allItems.length, 'item nodes');
 
+  // Build heading node for the section (matching Specs/index.js Head component)
+  const headingNode = {
+    type: 'element',
+    tagName: 'h3',
+    properties: { 
+      id: data.label_id,
+      className: ['spec-heading']
+    },
+    children: [{ 
+      type: 'text', 
+      value: data.label || data.label_id 
+    }]
+  };
+
   return {
     type: 'element',
     tagName: 'div',
     properties: { className: ['techspec'] },
-    children: allItems.length > 0 ? allItems : [{ type: 'text', value: 'No specifications available' }]
+    children: [
+      headingNode,
+      {
+        type: 'element',
+        tagName: 'div',
+        properties: { className: ['techspec-content'] },
+        children: allItems.length > 0 ? allItems : [{ type: 'text', value: 'No specifications available' }]
+      }
+    ]
   };
 }
 
