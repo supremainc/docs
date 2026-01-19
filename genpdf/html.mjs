@@ -9,8 +9,8 @@ import { getTemplateCSS } from './config.mjs';
 /**
  * Extract headings from generated HTML content
  * @param {string} htmlContent - HTML content to extract headings from
- * @param {number} maxDepth - Maximum heading depth
- * @returns {Array<Object>} Array of heading objects with id, text, and depth (relative to max depth)
+ * @param {number} maxDepth - Maximum heading depth for TOC (relative depth)
+ * @returns {Array<Object>} Array of heading objects with id, text, and depth
  */
 function extractHeadingsFromHtml(htmlContent, maxDepth = 3) {
   const headings = [];
@@ -18,33 +18,22 @@ function extractHeadingsFromHtml(htmlContent, maxDepth = 3) {
   // Match all h1-h6 tags with id attributes
   const hRegex = /<h([1-6])\s+id="([^"]+)">([^<]*)<\/h\1>/g;
   let match;
-  const allHeadings = [];
   
   while ((match = hRegex.exec(htmlContent)) !== null) {
-    allHeadings.push({
-      depth: parseInt(match[1]),
+    const htmlDepth = parseInt(match[1]);
+    headings.push({
+      depth: htmlDepth - 1, // Convert h1→0, h2→1, h3→2, etc. for easier nesting
       id: match[2],
       text: match[3].trim()
     });
   }
   
-  if (allHeadings.length === 0) return [];
+  if (headings.length === 0) return [];
   
-  // Filter headings based on maxDepth, keeping h1 as baseline
-  const minDepth = 1; // Always include h1
-  const effectiveMaxDepth = Math.min(maxDepth, 6);
+  // Filter by maxDepth (only include up to specified depth level)
+  const effectiveMaxDepth = Math.min(maxDepth, 5); // h1-h6 = depth 0-5
   
-  for (const heading of allHeadings) {
-    if (heading.depth === minDepth) {
-      // Always include h1
-      headings.push(heading);
-    } else if (heading.depth <= effectiveMaxDepth) {
-      // Include h2-h3 (or up to maxDepth)
-      headings.push(heading);
-    }
-  }
-  
-  return headings;
+  return headings.filter(h => h.depth <= effectiveMaxDepth);
 }
 
 /**
@@ -55,51 +44,52 @@ function extractHeadingsFromHtml(htmlContent, maxDepth = 3) {
 function generateTocFromHeadings(headings) {
   if (headings.length === 0) return '';
   
-  let tocHtml = '';
-  let lastDepth = 0;
+  let html = '<ul>\n';
+  let currentDepth = 0;
   
   for (let i = 0; i < headings.length; i++) {
     const heading = headings[i];
     const nextHeading = i + 1 < headings.length ? headings[i + 1] : null;
     const nextDepth = nextHeading ? nextHeading.depth : 0;
     
-    // Close lists if we're going up (decreasing depth)
-    while (lastDepth > heading.depth) {
-      tocHtml += '</li>\n</ul>\n';
-      lastDepth--;
+    const item = `<li><a href="#${heading.id}">${escapeHtml(heading.text)}</a>`;
+    
+    // Open new levels if going deeper
+    if (heading.depth > currentDepth) {
+      for (let d = currentDepth; d < heading.depth; d++) {
+        html += '<ul>\n';
+      }
+      currentDepth = heading.depth;
+    }
+    // Close levels if going shallower
+    else if (heading.depth < currentDepth) {
+      for (let d = heading.depth; d < currentDepth; d++) {
+        html += '</li>\n</ul>\n';
+      }
+      html += '</li>\n';
+      currentDepth = heading.depth;
+    }
+    // Same level - close previous item
+    else if (i > 0) {
+      html += '</li>\n';
     }
     
-    // Close previous item if at same level
-    if (lastDepth === heading.depth && lastDepth > 0) {
-      tocHtml += '</li>\n';
-    }
+    // Add item
+    html += item;
     
-    // Open new lists if we're going down (increasing depth)
-    while (lastDepth < heading.depth) {
-      tocHtml += '<ul>\n';
-      lastDepth++;
-    }
-    
-    // Add the heading
-    tocHtml += `<li><a href="#${heading.id}">${escapeHtml(heading.text)}</a>`;
-    
-    // If next item is not deeper, close the li tag
-    if (nextDepth < heading.depth || nextDepth === 0) {
-      tocHtml += '</li>\n';
-      lastDepth = heading.depth;
+    // Look ahead to close if next is shallower or same
+    if (!nextHeading || nextDepth <= heading.depth) {
+      // Will be handled in next iteration or at end
     }
   }
   
-  // Close all remaining open lists
-  while (lastDepth > 0) {
-    if (lastDepth > 1) {
-      tocHtml += '</li>\n';
-    }
-    tocHtml += '</ul>\n';
-    lastDepth--;
+  // Close all remaining open tags
+  while (currentDepth >= 0) {
+    html += '</li>\n</ul>\n';
+    currentDepth--;
   }
   
-  return tocHtml;
+  return html;
 }
 
 /**
@@ -140,11 +130,19 @@ export async function buildHtmlDocument(mdxFiles, title, options = {}) {
     const docTitle = file.frontmatter.title || file.docId;
     // Use frontmatter.id if available, otherwise extract from docId
     const h1Id = file.frontmatter.id || file.docId.split('/').pop();
-    const content = await markdownToHtml(file.content, translations, product, basePath, h1Id, file.docId, language);
+    // Pass depth information to markdown converter for heading level adjustment
+    const docDepth = file.depth || 0;
+    const content = await markdownToHtml(file.content, translations, product, basePath, h1Id, file.docId, language, docDepth);
+    
+    // Calculate heading level based on document depth in sidebar hierarchy
+    // depth 0 = h1, depth 1 = h2, depth 2 = h3, etc.
+    // Limit to h6 (maximum HTML heading level)
+    const headingLevel = Math.min(1 + docDepth, 6);
+    const headingTag = `h${headingLevel}`;
     
     contentSections.push(`
     <section class="doc-section" id="${file.headingId}">
-      <h1 id="${h1Id}">${escapeHtml(docTitle)}</h1>
+      <${headingTag} id="${h1Id}">${escapeHtml(docTitle)}</${headingTag}>
       ${file.frontmatter.description ? `<p class="description">${escapeHtml(file.frontmatter.description)}</p>` : ''}
       <div class="doc-content">
         ${content}

@@ -81,7 +81,73 @@ export function extractDocIds(config, docIds = [], index = 0) {
 }
 
 /**
- * Recursively process import statements in MDX content
+ * Recursively extract doc IDs with depth information from sidebar configuration
+ * Useful for tracking hierarchy level of each document
+ * @param {Array|Object} config - Sidebar configuration
+ * @param {Array} docIds - Accumulator
+ * @param {number} depth - Current depth in hierarchy (0-based)
+ * @returns {Array} Array of { docId, depth } objects
+ */
+export function extractDocIdsWithDepth(config, docIds = [], depth = 0) {
+  if (Array.isArray(config)) {
+    // Process array
+    for (let i = 0; i < config.length; i++) {
+      const item = config[i];
+      const nextItem = config[i + 1];
+      
+      // Skip this item if it's a category with release notes label
+      if (item.type === 'category' && 
+          nextItem === undefined &&
+          (item.label === '릴리스 노트' || item.label === 'Release Notes')) {
+        continue;
+      }
+      
+      // Skip next item if current is html and next is release notes category
+      if (item.type === 'html' && 
+          nextItem && 
+          nextItem.type === 'category' &&
+          (nextItem.label === '릴리스 노트' || nextItem.label === 'Release Notes')) {
+        i++; // Skip the next item (release notes category)
+        continue;
+      }
+      
+      extractDocIdsWithDepth(item, docIds, depth);
+    }
+  } else if (typeof config === 'object' && config !== null) {
+    // Skip if this is a release notes category
+    if (config.type === 'category' && 
+        (config.label === '릴리스 노트' || config.label === 'Release Notes')) {
+      return docIds;
+    }
+    
+    // Skip html type items (they're just visual separators)
+    if (config.type === 'html') {
+      return docIds;
+    }
+    
+    // Handle link.id for categories
+    if (config.link && config.link.type === 'doc' && config.link.id) {
+      docIds.push({ docId: config.link.id, depth });
+    }
+    
+    if (config.type === 'doc') {
+      docIds.push({ docId: config.id, depth });
+    } else if (typeof config === 'string') {
+      docIds.push({ docId: config, depth });
+    }
+    
+    // Process items with increased depth
+    if (config.items && Array.isArray(config.items)) {
+      extractDocIdsWithDepth(config.items, docIds, depth + 1);
+    }
+  } else if (typeof config === 'string') {
+    docIds.push({ docId: config, depth });
+  }
+  return docIds;
+}
+
+/**
+ * Process file imports recursively to collect all import dependencies
  * Handles nested imports: A imports B, B imports C, etc.
  * @param {string} filePath - Current file path being processed
  * @param {Object} processedFiles - Cache to prevent circular imports

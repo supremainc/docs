@@ -139,10 +139,7 @@ header p {
 }
 
 .description {
-  color: #666;
-  font-style: italic;
-  margin-bottom: 20px;
-  padding: 10px 0;
+  display: none;
 }
 
 .doc-content {

@@ -20,7 +20,7 @@ import { fileURLToPath } from 'url';
 import { program } from 'commander';
 import { loadTranslations, ROOT_DIR } from './config.mjs';
 import { extractHeadingsFromMarkdown } from './utils.mjs';
-import { loadMdxFile, extractDocIds } from './loader.mjs';
+import { loadMdxFile, extractDocIds, extractDocIdsWithDepth } from './loader.mjs';
 import { buildHtmlDocument } from './html.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -84,18 +84,21 @@ async function main() {
     console.log(`📚 Translations loaded for language: ${options.language}`);
     console.log('');
 
-    // Extract doc IDs
-    const docIds = extractDocIds(sidebars[sidebarKey]);
-    console.log(`📄 Found ${docIds.length} documents in sidebar\n`);
+    // Extract doc IDs with depth information for hierarchy tracking
+    const docIdsWithDepth = extractDocIdsWithDepth(sidebars[sidebarKey]);
+    console.log(`📄 Found ${docIdsWithDepth.length} documents in sidebar\n`);
 
-    // Load all MDX files
-    const mdxFiles = docIds
-      .map(docId => {
+    // Load all MDX files with depth information
+    const mdxFiles = docIdsWithDepth
+      .map(item => {
+        const docId = typeof item === 'string' ? item : item.docId;
+        const depth = typeof item === 'object' ? item.depth : 0;
         const file = loadMdxFile(docId, options.language);
         if (file) {
           // Skip full AST parsing to avoid MDX syntax errors
           // Just extract basic heading information from raw markdown
           file.headings = extractHeadingsFromMarkdown(file.content);
+          file.depth = depth; // Add depth information to file object
         }
         return file;
       })

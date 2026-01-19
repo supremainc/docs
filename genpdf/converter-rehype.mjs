@@ -12,6 +12,7 @@ import remarkCalloutDirectives from '@microflash/remark-callout-directives';
 import remarkPrism from 'remark-prism';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
+import { visit } from 'unist-util-visit';
 import { rehypeExtendedTable } from 'rehype-extended-table';
 import { rehypeMdxElements } from 'rehype-mdx-elements';
 import fs from 'fs';
@@ -88,7 +89,7 @@ function loadAdmonitionTexts(language = 'ko') {
  * 3. Convert to HTML
  * 4. Process HTML-level transforms (components, formatting)
  */
-function createProcessor(translations = {}, productOption = '', basePath = '', headingId = '', docPath = '', language = 'ko') {
+function createProcessor(translations = {}, productOption = '', basePath = '', headingId = '', docPath = '', language = 'ko', docDepth = 0) {
   const admonitionTexts = loadAdmonitionTexts(language);
   
   return unified()
@@ -141,6 +142,23 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     // Convert to HTML
     .use(remarkRehype, { passThrough: ['mdxJsxFlowElement', 'mdxJsxTextElement'], allowDangerousHtml: true })
     
+    // Adjust heading levels based on document depth in hierarchy
+    .use(function adjustHeadingLevelsByDepth() {
+      return (tree) => {
+        visit(tree, 'element', (node) => {
+          const match = node.tagName.match(/^h([1-6])$/);
+          if (match) {
+            const currentLevel = parseInt(match[1]);
+            // depth 0: h1→h1, depth 1: h1→h2, depth 2: h1→h3, etc.
+            const newLevel = Math.min(currentLevel + docDepth, 6);
+            if (newLevel !== currentLevel) {
+              node.tagName = `h${newLevel}`;
+            }
+          }
+        });
+      };
+    })
+    
     // HTML transformations
     .use(rehypeExtendedTable)
     .use(rehypeAddTargetBlankToExternalLinks)
@@ -169,6 +187,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
  * @param {string} headingId - Heading ID for h1 element
  * @param {string} docPath - Full document path (e.g., 'platform/plugins/index')
  * @param {string} language - Language code (ko, en, ja, es, etc.)
+ * @param {number} docDepth - Document depth in sidebar hierarchy (0=top-level, 1=first nested, etc.)
  * @returns {Promise<string>} HTML content
  */
 export async function markdownToHtml(
@@ -178,9 +197,10 @@ export async function markdownToHtml(
   basePath = '',
   headingId = '',
   docPath = '',
-  language = 'ko'
+  language = 'ko',
+  docDepth = 0
 ) {
-  const processor = createProcessor(translations, productOption, basePath, headingId, docPath, language);
+  const processor = createProcessor(translations, productOption, basePath, headingId, docPath, language, docDepth);
   
   try {
     const file = await processor.process(mdContent);
