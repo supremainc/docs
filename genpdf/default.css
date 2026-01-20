@@ -816,6 +816,10 @@ footer {
   img[src*='dimension.svg'] {
     width: 100% !important;
   }
+  img[src*='ico-menu1.svg'] {
+    height: 16px !important;
+    top: 3px !important;
+  }
   .doc-content ul li {
     page-break-inside: avoid;
   }
