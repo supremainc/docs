@@ -1092,6 +1092,131 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         }
       }
 
+      // Process Magnify components - same as Image component
+      if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Magnify') {
+        const attributes = node.attributes || [];
+        const srcAttr = attributes.find(attr => attr.name === 'src');
+        let src = srcAttr ? srcAttr.value : '';
+        
+        // Extract optional attributes
+        const classNameAttr = attributes.find(attr => attr.name === 'className');
+        const className = classNameAttr ? classNameAttr.value : '';
+        
+        const widthAttr = attributes.find(attr => attr.name === 'width');
+        let width = '';
+        if (widthAttr) {
+          if (typeof widthAttr.value === 'string') {
+            width = widthAttr.value.replace(/px$/, '');
+          } else if (typeof widthAttr.value === 'number') {
+            width = String(widthAttr.value);
+          } else if (typeof widthAttr.value === 'object' && widthAttr.value && widthAttr.value.value !== undefined) {
+            // Handle mdxJsxAttributeValueExpression: { value: 220, type: '...' }
+            width = String(widthAttr.value.value);
+          }
+        }
+        
+        const heightAttr = attributes.find(attr => attr.name === 'height');
+        let height = '';
+        if (heightAttr) {
+          if (typeof heightAttr.value === 'string') {
+            height = heightAttr.value.replace(/px$/, '');
+          } else if (typeof heightAttr.value === 'number') {
+            height = String(heightAttr.value);
+          } else if (typeof heightAttr.value === 'object' && heightAttr.value && heightAttr.value.value !== undefined) {
+            // Handle mdxJsxAttributeValueExpression: { value: 220, type: '...' }
+            height = String(heightAttr.value.value);
+          }
+        }
+        
+        const altAttr = attributes.find(attr => attr.name === 'alt');
+        const alt = altAttr ? altAttr.value : '';
+        
+        const hasAlone = attributes.some(attr => attr.name === 'alone');
+        
+        // Convert to absolute file system path for PDF generation
+        if (src && basePath) {
+          if (src.startsWith('/img/')) {
+            const normalizedSrc = src.replace(/^\/img\//, '');
+            // alone 속성이 없으면 언어 폴더 추가
+            if (!hasAlone) {
+              if (language !== 'ko') {
+                src = basePath.replace(/\\/g, '/') + '/static/img/' + 'en' + '/' + normalizedSrc;
+              } else {
+                src = basePath.replace(/\\/g, '/') + '/static/img/' + normalizedSrc;
+              }
+            } else {
+              src = basePath.replace(/\\/g, '/') + '/static/img/' + normalizedSrc;
+            }
+          } else if (!src.startsWith('/') && !hasAlone) {
+            src = src.replace(/^\.\//, '/img/').replace(/^\.\.\/img\//, '/img/').replace(/^\.\.\//, '/');
+            if (!src.startsWith('/')) {
+              src = '/img/' + language + '/' + src;
+            }
+          }
+        } else if (src && !src.startsWith('/') && !basePath && !hasAlone) {
+          src = src.replace(/^\.\//, '/img/').replace(/^\.\.\/img\//, '/img/').replace(/^\.\.\//, '/');
+          if (!src.startsWith('/')) {
+            src = '/img/' + language + '/' + src;
+          }
+        }
+        
+        const hasCaption = attributes.some(attr => attr.name === 'caption');
+
+        // Helper function to build img properties for Magnify
+        const buildMagnifyImgProperties = (baseSrc) => {
+          const props = { src: baseSrc };
+          // Apply 'none' class by default, unless className is explicitly provided
+          const finalClassName = className || 'none';
+          props.className = [finalClassName];
+          if (width) props.width = width;
+          if (height) props.height = height;
+          if (alt) props.alt = alt;
+          return props;
+        };
+
+        let replacement = null;
+
+        if (hasCaption && src) {
+          replacement = {
+            type: 'element',
+            tagName: 'figure',
+            properties: {},
+            children: [
+              {
+                type: 'element',
+                tagName: 'img',
+                properties: buildMagnifyImgProperties(src),
+                children: []
+              },
+              {
+                type: 'element',
+                tagName: 'figcaption',
+                properties: {},
+                children: [{ type: 'text', value: figureCaptionText }]
+              }
+            ]
+          };
+        } else if (src) {
+          replacement = {
+            type: 'element',
+            tagName: 'p',
+            properties: { className: ['hasimg'] },
+            children: [
+              {
+                type: 'element',
+                tagName: 'img',
+                properties: buildMagnifyImgProperties(src),
+                children: []
+              }
+            ]
+          };
+        }
+
+        if (replacement) {
+          parent.children[index] = replacement;
+        }
+      }
+
       // Process div components
       if (node.type === 'mdxJsxFlowElement' && node.name === 'div') {
         const attributes = node.attributes || [];
@@ -1206,6 +1331,20 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         parent.children[index] = replacement;
       }
 
+      // Helper function to extract numeric value from attribute
+      const getNumericAttributeValue = (attr) => {
+        if (!attr) return null;
+        // Handle string values: "3" or '3'
+        if (typeof attr.value === 'string') {
+          return parseInt(attr.value, 10);
+        }
+        // Handle JSX expression values: {3}
+        if (typeof attr.value === 'object' && attr.value && attr.value.value !== undefined) {
+          return parseInt(attr.value.value, 10);
+        }
+        return null;
+      };
+
       // Process Th (table header) components
       if (node.type === 'mdxJsxFlowElement' && node.name === 'Th') {
         const attributes = node.attributes || [];
@@ -1213,8 +1352,10 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         const rowspanAttr = attributes.find(attr => attr.name === 'rowspan');
 
         const properties = {};
-        if (colspanAttr) properties.colspan = parseInt(colspanAttr.value, 10);
-        if (rowspanAttr) properties.rowspan = parseInt(rowspanAttr.value, 10);
+        const colspan = getNumericAttributeValue(colspanAttr);
+        const rowspan = getNumericAttributeValue(rowspanAttr);
+        if (colspan) properties.colSpan = colspan;
+        if (rowspan) properties.rowSpan = rowspan;
 
         const replacement = {
           type: 'element',
@@ -1233,8 +1374,10 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         const rowspanAttr = attributes.find(attr => attr.name === 'rowspan');
 
         const properties = {};
-        if (colspanAttr) properties.colspan = parseInt(colspanAttr.value, 10);
-        if (rowspanAttr) properties.rowspan = parseInt(rowspanAttr.value, 10);
+        const colspan = getNumericAttributeValue(colspanAttr);
+        const rowspan = getNumericAttributeValue(rowspanAttr);
+        if (colspan) properties.colSpan = colspan;
+        if (rowspan) properties.rowSpan = rowspan;
 
         const replacement = {
           type: 'element',

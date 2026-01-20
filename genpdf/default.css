@@ -357,6 +357,10 @@ html[lang='en'] .doc-content .container table {
   display: flex;
 }
 
+.doc-content .container .row.partname {
+  display: block;
+}
+
 .doc-content .container .col {
   padding-left: 0;
   padding-right: 0;
@@ -528,7 +532,7 @@ footer {
   border-left: 4px solid;
   background-color: #f9f9f9;
   border-radius: 4px;
-  page-break-inside: avoid;
+  break-inside: avoid;
 }
 
 .callout-indicator {
@@ -853,7 +857,7 @@ footer {
   }
 
   .toc ul ul li {
-    page-break-inside: avoid;
+    break-inside: avoid;
   }
   .doc-content table.component p.hasimg img {
     margin: 0 auto;
@@ -947,19 +951,22 @@ footer {
      - ol li:has(.hasimg): 이미지 있는 항목은 한 페이지 유지
   */
   .doc-content ol li ul li {
-    page-break-inside: auto; /* 페이지 나눔 허용 */
+    break-inside: auto; /* 페이지 나눔 허용 */
   }
   ol li:has(.hasimg), .doc-content ul ul li {
-    page-break-inside: avoid; /* 이미지 항목은 한 페이지 유지 */
+    break-inside: avoid; /* 이미지 항목은 한 페이지 유지 */
   }
   .doc-content ol li {
-    page-break-inside: auto;
+    break-inside: auto;
   }
   .doc-content .container .row .col {
     width: 50% !important;
   }
-  .doc-content table {
-    page-break-inside: avoid;
+  .doc-content table tr {
+    break-inside: avoid-page;  /* 최신 CSS 표준 */
+  }
+  .doc-content .container .row.partname .col {
+    width: 100% !important;
   }
   .container header, footer {
     display: none;
