@@ -23,6 +23,7 @@ html[lang='ko'] * {
 
 html[lang='ja-JP'] *, html[lang='ja'] * {
   font-family: 'Noto Sans JP', sans-serif;
+  word-break: break-all;
 }
 
 html[lang='en'] *, html[lang='en-US'] *, html[lang='es-419'] *, html[lang='es'] * {
@@ -147,7 +148,6 @@ header p {
 
 .doc-section h2 {
   color: var(--ifm-color-cmd);
-  margin-top: 30pt;
   margin-bottom: 15pt;
   font-size: 21pt;
   page-break-before: always;
@@ -339,6 +339,18 @@ header p {
   margin: 1rem 0;
 }
 
+.doc-content h4 + .container {
+  margin-top: 0;
+}
+
+.doc-content h4 + .container table {
+  margin-top: 0;
+}
+
+html[lang='en'] .doc-content .container table {
+  font-size: 8.5pt;
+}
+
 .doc-content .container .row {
   margin: 0 calc(1rem * -1);
   flex-wrap: wrap;
@@ -432,7 +444,7 @@ header p {
 
 .doc-content table td {
   border: 1px solid #ddd;
-  padding: 12px;
+  padding: 11px;
   text-align: left;
 }
 
@@ -565,6 +577,10 @@ footer {
   padding-left: 0;
 }
 
+.callout-content ul + p, .callout-content ol + p {
+  margin-top: 8px;
+}
+
 .callout-content li {
   margin: 4px 0;
 }
@@ -679,7 +695,7 @@ footer {
 
 .doc-content span.badge {
   display: inline-block;
-  padding: 0.2rem 0.5rem;
+  padding: 0.1rem 0.2rem;
   font-weight: 600;
   color: var(--ifm-color-nextstep-background);
   background-color: var(--ifm-color-border);
@@ -690,7 +706,11 @@ footer {
   background-color: var(--ifm-color-cmd);
 }
 
-.doc-content .page-break {
+.doc-content h3 span.only, .doc-content h4 span.only {
+  font-size: 10pt;
+}
+
+.doc-content div.page-break {
   page-break-before: always;
 }
 
@@ -784,6 +804,14 @@ footer {
   font-size: 11pt;
   margin-bottom: .5rem;
 }
+
+.techspecsBody .feature + .credential-type {
+  margin-top: .3rem;
+}
+
+.techspecsBody .credential-type span.only {
+  font-size: 9pt;
+}
 .techspecsBody .feature::before {
   content: "•";
   display: inline-block;
@@ -796,10 +824,10 @@ footer {
 }
 
 .small_l1 {
-  width: 25%;
+  width: 20%;
 }
 .small_l2 {
-  width: 75%;
+  width: 80%;
 }
 .small_l2 span {
   margin-left: .5rem;
@@ -823,6 +851,10 @@ footer {
     content: target-counter(attr(href), page);
     float: right;
   }
+
+  .toc ul ul li {
+    page-break-inside: avoid;
+  }
   .doc-content table.component p.hasimg img {
     margin: 0 auto;
   }
@@ -843,6 +875,58 @@ footer {
     width: auto;
     height: 48px;
   }
+  img[src*='component-quick-guide'], img[src*='component-oss-guide'] {
+    width: auto;
+    height: 156px !important;
+  }
+  img[width='90%'] {
+    width: 90% !important;
+  }
+  img[width='80%'] {
+    width: 80% !important;
+  }
+  img[width='75%'] {
+    width: 75% !important;
+  }
+  img[width='70%'] {
+    width: 70% !important;
+  }
+  img[width='65%'] {
+    width: 65% !important;
+  }
+  img[width='60%'] {
+    width: 60% !important;
+  }
+  img[width='55%'] {
+    width: 55% !important;
+  }
+  img[width='50%'] {
+    width: 50% !important;
+  }
+  img[width='45%'] {
+    width: 45% !important;
+  }
+  img[width='40%'] {
+    width: 40% !important;
+  }
+  img[width='35%'] {
+    width: 35% !important;
+  }
+  img[width='30%'] {
+    width: 30% !important;
+  }
+  img[width='25%'] {
+    width: 25% !important;
+  }
+  img[width='20%'] {
+    width: 20% !important;
+  }
+  img[width='15%'] {
+    width: 15% !important;
+  }
+  img[src*='name-function-each-part-bln2'][width='30%'] {
+    width: 30% !important;
+  }
   img[src*='name-function-each-part'], img[src*='product-part'] {
     width: 75% !important;
   }
@@ -853,11 +937,29 @@ footer {
     height: 16px !important;
     top: 3px !important;
   }
-  .doc-content ul li {
-    page-break-inside: avoid;
+  img[src*='ico-star.svg'], img[src*='ico-pound.svg'] {
+    height: 14px !important;
+    top: 3px !important;
+  }
+  /* 페이지 나눔 설정:
+     - .doc-content ol li: 순차적으로 페이지 진행 (페이지 나눔 자유)
+     - .doc-content ol li ul li: 페이지 나눔 허용
+     - ol li:has(.hasimg): 이미지 있는 항목은 한 페이지 유지
+  */
+  .doc-content ol li ul li {
+    page-break-inside: auto; /* 페이지 나눔 허용 */
+  }
+  ol li:has(.hasimg), .doc-content ul ul li {
+    page-break-inside: avoid; /* 이미지 항목은 한 페이지 유지 */
+  }
+  .doc-content ol li {
+    page-break-inside: auto;
   }
   .doc-content .container .row .col {
     width: 50% !important;
+  }
+  .doc-content table {
+    page-break-inside: avoid;
   }
   .container header, footer {
     display: none;
