@@ -1,26 +1,26 @@
 ---
 id: troubleshooting
-title: Solución de problemas
-description: Proporciona soluciones para problemas que puedan ocurrir durante el desarrollo, registro y operación del complemento BioStar X.
+title: Solución de Problemas
+description: Proporciona soluciones para problemas que puedan ocurrir durante el desarrollo, registro y operación del conector BioStar X.
 keywords:
-  - Solución de problemas
+  - Solución de Problemas
   - Depuración
-  - Solución de problemas
+  - Solución de Problemas
 ---
 
-Proporciona soluciones para problemas que puedan ocurrir durante el desarrollo, registro y operación del complemento **BioStar X**.
+Proporciona soluciones para problemas que puedan ocurrir durante el desarrollo, registro y operación del conector **BioStar X**.
 
-## Error de registro del complemento
+## Error de registro del conector
 
-* Verifica que el servidor esté en funcionamiento antes de registrar el complemento.
+* Verifica que el servidor esté en funcionamiento antes de registrar el conector.
 
-* Asegúrate de que el endpoint <Badge className="get">GET</Badge> `/bsx` responda correctamente. Prueba con el comando `curl`.
+* Asegúrate de que el endpoint <Badge className="get" only>GET</Badge> `/bsx` responda correctamente. Prueba con el comando `curl`.
 
   ```bash
   curl -H "X-BioStar-Ping: test123" http://localhost:8000/bsx
   ```
 
-* Verifica si el servidor **BioStar X** puede acceder a la URL del servidor del complemento.
+* Verifica si el servidor **BioStar X** puede acceder a la URL del servidor del conector.
 
 ## Error del callback de autenticación
 
@@ -28,7 +28,7 @@ Proporciona soluciones para problemas que puedan ocurrir durante el desarrollo, 
 
 * Verifica la dirección y el puerto del servidor **BioStar X** en <Cmd>SERVICE SETTINGS</Cmd> del **BioStar X Service Manager**.
 
-* Verifica que la red entre el servidor del complemento y el servidor **BioStar X** esté conectada.
+* Verifica que la red entre el servidor del conector y el servidor **BioStar X** esté conectada.
 
 ## Error de descifrado
 

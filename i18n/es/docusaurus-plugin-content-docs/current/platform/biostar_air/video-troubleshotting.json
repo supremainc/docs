@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Verificar compatibilidad con el perfil ONVIF G",
+    "answer": "Busca el nombre del modelo en <a href='https://www.onvif.org' target='_blank'>la página de productos conformes de ONVIF</a> para comprobar si la cámara es compatible con el perfil ONVIF G. El perfil ONVIF G es necesario para la reproducción de video grabado."
+  },
+  {
+    "question": "Probar la reproducción de video en la configuración de la cámara",
+    "answer": "<ul><li>Inicia sesión en la configuración de la cámara a través de su interfaz web.</li><li>Asegúrate de poder ver tanto la transmisión en vivo como los videos grabados.</li><li>Ten en cuenta que algunas cámaras pueden limitar la reproducción simultánea de videos grabados en el portal y en el menú de configuración. Si la reproducción funciona en la configuración de la cámara pero no en BioStar Air, cierra la interfaz de configuración y prueba de nuevo.</li></ul>"
+  },
+  {
+    "question": "Verificar compatibilidad del códec de video",
+    "answer": "Asegúrate de que el video grabado utilice el códec <b>H.264</b>, ya que BioStar Air no soporta <b>H.265</b>."
+  },
+  {
+    "question": "Formatear la tarjeta SD si se cambió el códec",
+    "answer": "Si en algún momento se cambió el códec de video, las grabaciones existentes podrían no reproducirse correctamente. Puede ser necesario formatear la tarjeta SD para que los nuevos ajustes tengan efecto. Esta solución ha demostrado resolver problemas de reproducción en algunos modelos de cámaras."
+  },
+  {
+    "question": "Consultar la lista de productos conformes de ONVIF",
+    "answer": "Si no estás seguro de que tu cámara cumple con los estándares ONVIF, visita el <a href='https://www.onvif.org' target='_blank'>sitio web de ONVIF</a> para verificar la compatibilidad."
+  }
+]

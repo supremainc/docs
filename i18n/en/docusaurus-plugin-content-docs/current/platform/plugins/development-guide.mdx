@@ -17,7 +17,7 @@ To develop a plugin integrated with **BioStar X**, you must implement the follow
 
 ### Plugin registration endpoint
 
-<Badge className='get'>GET</Badge> `/bsx`
+<Badge className='get' only>GET</Badge> `/bsx`
 
 This is the endpoint called to check server accessibility by the **BioStar X Service Manager** when registering the plugin.
 
@@ -65,7 +65,7 @@ curl -H "X-BioStar-Ping: test123" http://localhost:8000/bsx
 
 ### User authentication callback endpoint
 
-<Badge className='post'>POST</Badge> `/bsx`
+<Badge className='post' only>POST</Badge> `/bsx`
 
 This is the endpoint called when the user clicks the plugin icon in the **BioStar X** web interface. In this process, the session of the logged-in user in **BioStar X** is requested and a response is received. 
 

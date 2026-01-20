@@ -50,7 +50,7 @@ keywords:
 
    * <Cmd sid='ui_203' product='dev' /> は BioStar X で設定できます。 設定したスケジュールがない場合は、<Cmd sid='ui_361' product='dev' /> だけを選択できます。
 
-   * <Cmd sid='ui_203' product='dev' /> の設定について詳しくは、[BioStar X 管理者マニュアル](../../platform/biostar_x/settings-schedule) を参照してください。
+   * <Cmd sid='ui_203' product='dev' />の設定については、<Linkto to='platform/biostar_x/settings-schedule'>BioStar X管理者マニュアル</Linkto>をご参照ください。
 
    * XS2-DPB、XS2-APB、XS2-ODPB、XS2-OAPB モデルで <Cmd sid='ui_043' product='dev' /> 認証を使用するには、<Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_044' product='dev' /> で <Cmd sid='ui_043' product='dev' /> を有効にする必要があり、別途デバイスライセンスが必要です。 詳細は[ライセンス](settings#license)を参照してください。
 
@@ -86,15 +86,15 @@ keywords:
 
    <Image src='/img/device/xs2-auth.png' />
 
-   * <Cmd sid='ui_260' product='dev' />：設定した時間内に認証が完了しない場合、認証は失敗します。 3\~20 秒に設定できます。
+   * <Cmd sid='ui_260' product='dev' />：設定した時間内に認証が完了しない場合、認証は失敗します。 3～20 秒に設定できます。
 
    * <Cmd sid='ui_185' product='dev' />：サーバーマッチングを設定すると、デバイスではユーザー認証を行わず、BioStar X でユーザー認証を実行します。 サーバーマッチングは、デバイスにユーザー情報が多すぎる場合や、ユーザークレデンシャル情報が保存されているデバイスを外部にさらしたくない場合に有用です。
 
-   :::info
+      :::info
 
-   <Cmd sid='ui_185' product='dev' /> を使用する場合は、デバイスと BioStar X の両方でサーバーマッチングを有効にする必要があります。 BioStar X のサーバーマッチング設定の詳細については、[BioStar X 管理者マニュアル](../../platform/biostar_x/settings-server-server#servermatching) を参照してください。
+      <Cmd sid='ui_185' product='dev' /> を使用する場合は、デバイスと BioStar X の両方でサーバーマッチングを有効にする必要があります。 BioStar Xサーバーマッチング設定については、<Linkto to='platform/biostar_x/settings-server-server#servermatching'>BioStar X管理者マニュアル</Linkto>をご参照ください。
 
-   :::
+      :::
 
 ## PIN
 
@@ -148,7 +148,7 @@ QR/バーコード認証を設定できます。
 
 * <Cmd sid='ui_043' product='dev' />：QR/バーコード認証の使用有無を選択できます。
 
-* <Cmd sid='ui_374' product='dev' />：設定した時間内に QR/バーコードをスキャンしない場合、認識は失敗します。 4\~10 秒に設定できます。
+* <Cmd sid='ui_374' product='dev' />：設定した時間内に QR/バーコードをスキャンしない場合、認識は失敗します。 4～10 秒に設定できます。
 
 * <Cmd sid='ui_329' product='dev' />：付与したCSNカードまたはWiegandカードと同じデータを持つQRコードで認証できるように設定します。
 
@@ -158,7 +158,7 @@ QR/バーコード認証を設定できます。
 
 * <Cmd sid='ui_043' product='dev' />：QR/バーコード認証の使用有無を選択できます。
 
-* <Cmd sid='ui_375' product='dev' />：設定した時間内に QR/バーコードをスキャンしない場合、認識は失敗します。 3\~20 秒に設定できます。 <Cmd sid='ui_043' product='dev' /> が有効になっている場合にのみ設定できます。
+* <Cmd sid='ui_375' product='dev' />：設定した時間内に QR/バーコードをスキャンしない場合、認識は失敗します。 3～20 秒に設定できます。 <Cmd sid='ui_043' product='dev' /> が有効になっている場合にのみ設定できます。
 
 * <Cmd sid='ui_140' product='dev' />：デバイス周辺の動きを検知する感度を設定します。 <Cmd sid='ui_043' product='dev' /> が有効になっている場合にのみ設定できます。
 
@@ -182,7 +182,7 @@ XS2-DPB、XS2-APB、XS2-ODPB、XS2-OAPB モデルで <Cmd sid='ui_043' product='
 
    * <Cmd sid='ui_149' product='dev' />：1:N 認証のセキュリティレベルを設定できます。
 
-   * <Cmd sid='ui_130' product='dev' />：指紋マッチング時の待機時間を設定できます。 設定した時間内に認証が完了しない場合、認証は失敗します。
+   * <Cmd sid='ui_130' product='dev' />：指紋マッチング時の待機時間を設定できます。 設定した時間内に認証を完了できないと、認証失敗となります。
 
    * <Cmd sid='ui_254' product='dev' />：指紋をスキャンしたときに元画像を表示できます。
 
@@ -190,7 +190,7 @@ XS2-DPB、XS2-APB、XS2-ODPB、XS2-OAPB モデルで <Cmd sid='ui_043' product='
 
    * <Cmd sid='ui_003' product='dev' />：指紋認証速度を設定できます。 <Cmd sid='ui_275' product='dev' /> を選択すると、端末に登録されている指紋テンプレートの総数に応じて認証パフォーマンスが設定されます。
 
-   * <Cmd sid='ui_342' product='dev' />：指紋テンプレート形式を設定できます。 <Cmd sid='ui_057' product='dev' />がデフォルトで設定されています。テンプレート形式を変更すると、以前に保存されたすべての指紋が使用できなくなるため、変更時は注意してください。
+   * <Cmd sid='ui_342' product='dev' />：指紋テンプレート形式を設定できます。 <Cmd sid='ui_057' product='dev' />が既定で設定されており、テンプレート形式を変更すると以前に保存されたすべての指紋が使用できなくなるため、変更する際は注意してください。
 
      :::info
 
@@ -198,11 +198,11 @@ XS2-DPB、XS2-APB、XS2-ODPB、XS2-OAPB モデルで <Cmd sid='ui_043' product='
 
      :::
 
-   * <Cmd sid='ui_198' product='dev' />：<Cmd sid='ui_277' product='dev' /> に設定すると、指紋センサーがユーザーの指を検知して起動します。 <Cmd sid='ui_362' product='dev' /> に設定すると、指紋をスキャンしていないときでも常にセンサーがオンになります。
+   * <Cmd sid='ui_198' product='dev' />：<Cmd sid='ui_277' product='dev' /> に設定すると、指紋センサーがユーザーの指を検知して起動します。 <Cmd sid='ui_362' product='dev' />に設定すると、指紋をスキャンしていないときでもセンサーが常にオンになります。
 
    * <Cmd sid='ui_249' product='dev' />：偽造指紋検出レベルを設定できます。 偽造指紋検出レベルを高く設定すると、実際の指紋に対する拒否率も高くなる場合があります。
 
-   * <Cmd sid='ui_116' product='dev' />：高品質な指紋情報を保存するために、スキャンした指紋の品質を検査できます。 有効にすると、指紋品質が低い場合にユーザーへ通知し、正しくスキャンできるよう支援します。
+   * <Cmd sid='ui_116' product='dev' />：高品質な指紋情報を保存するために、スキャンした指紋の品質を検査できます。 有効にすると、指紋の品質が低い場合にユーザーに通知して、指紋を正しくスキャンするのを支援します。
 
    * <Cmd sid='ui_118' product='dev' />：指紋登録時に重複指紋かどうかを検査できます。
 

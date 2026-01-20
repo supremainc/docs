@@ -29,10 +29,14 @@ crowdin upload -b main
 - Magnify
 - NextStep, NextItem
 - DbQueryCreate
-- 주석 {/**/}
+- Linkto
+- Badge
 - import
 - details
 - summary
+- /value
+- 주석 {/**/}
+
 
 영어에 남아있는 한글 정규식 검색
 
@@ -55,8 +59,10 @@ crowdin upload -b main
 
 테이블의 unorder list | * -> | -  (공백 포함)
 
-찾아서 삭제할 것: },{
-
+찾아서 삭제할 것
+},{
+}]}{
+   
 ---
 
 물결 사용 -> 하이픈

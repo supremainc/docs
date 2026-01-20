@@ -7,7 +7,7 @@
         "type": "door-group",
         "children": [
           {
-            "name": "Puerta",
+            "name": "Puertas",
             "type": "door-device",
             "children": [
               {
@@ -63,7 +63,7 @@
     "type": "access-control",
     "children": [
       {
-        "name": "Configuración de control de acceso",
+        "name": "Configuración de Control de Acceso",
         "type": "access-zone"
       }
     ]

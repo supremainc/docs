@@ -8,15 +8,15 @@
     "answer": "いいえ。両プラットフォームは同じバックエンドを共有しています。デバイス、ユーザーデータ、設定は両サービス間で完全に互換性があります。"
   },
   {
-    "question": "Airfob Space アプリの代わりに Suprema Pass を使用する必要がありますか？",
-    "answer": "既存のモバイル認証ユーザーを BioStar Air へマイグレーションする必要はありません。<a href='app.airfobspace.com' target='_blank'>app.airfobspace.com</a> の URL または Airfob Pro アプリでユーザーを管理しモバイル認証を発行した場合、そのユーザーには Airfob Space アプリを利用するための招待が送られます。<a href='admin.biostarair.com' target='_blank'>admin.biostarair.com</a> または BioStar Air アプリでユーザーを管理しモバイル認証を発行した場合、そのユーザーには Suprema Pass アプリを利用するための招待が送られます。"
+    "question": "Suprema PassをAirfob Spaceアプリの代わりに使用する必要がありますか？",
+    "answer": "既存のモバイル認証ユーザーをBioStar Airに移行する必要はありません。<a href='app.airfobspace.com' target='_blank'>app.airfobspace.com</a> のURLまたはAirfob Proアプリを使用してユーザーを管理しモバイル認証を発行する場合、当該ユーザーはAirfob Spaceアプリを使用するための招待を受け取ります。<a href='admin.biostarair.com' target='_blank'>admin.biostarair.com</a> またはBioStar Airアプリを使用してユーザーを管理しモバイル認証を発行する場合、当該ユーザーはSuprema Passアプリを使用するための招待を受け取ります。"
   },
   {
     "question": "サポート体制や料金は変更されますか？",
     "answer": "サポートや料金のプロセスに即時の変更はありません。ただし、時間の経過とともに、BioStar Air がドキュメント、サポート、機能発表の主要ブランドになります。"
   },
   {
-    "question": "希望すれば BioStar Air へ切り替えることはできますか？",
+    "question": "希望する場合、BioStar Airに切り替えることはできますか？",
     "answer": "はい。バックエンドを共有しているため移行は簡単ですが、ブランディングや機能の提供に若干の違いが生じる場合があります。<a href='admin.biostarair.com' target='_blank'>admin.biostarair.com</a> と BioStar Air アプリを使用してサイト管理を開始してください。<a href='app.airfobspace.com' target='_blank'>app.airfobspace.com</a> の既存の管理者ログイン情報をそのまま利用できます。"
   },
   {

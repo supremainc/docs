@@ -37,7 +37,7 @@ Define horarios para cada método de autenticación que use huellas.
 
 * Configura <Cmd sid="ui_203" product="dev" /> en BioStar X. Sin horarios definidos, solo se pueden seleccionar <Cmd sid="ui_162" product="dev" /> y <Cmd sid="ui_361" product="dev" />.
 
-* Para obtener más información sobre la configuración de <Cmd sid="ui_203" product="dev" />, consulta la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-schedule).
+* Para más información sobre la configuración de <Cmd sid="ui_203" product="dev" />, consulte la <Linkto to="platform/biostar_x/settings-schedule">Guía del administrador de BioStar X</Linkto>.
 
 :::
 
@@ -69,7 +69,7 @@ Define horarios para cada método de autenticación que use tarjetas.
 
 * Configura <Cmd sid="ui_203" product="dev" /> en BioStar X. Sin horarios definidos, solo se pueden seleccionar <Cmd sid="ui_162" product="dev" /> y <Cmd sid="ui_361" product="dev" />.
 
-* Para obtener más información sobre la configuración de <Cmd sid="ui_203" product="dev" />, consulta la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-schedule).
+* Para más información sobre la configuración de <Cmd sid="ui_203" product="dev" />, consulte la <Linkto to="platform/biostar_x/settings-schedule">Guía del administrador de BioStar X</Linkto>.
 
 :::
 
@@ -99,7 +99,7 @@ Define horarios para cada método de autenticación que use ID.
 
 * Configura <Cmd sid="ui_203" product="dev" /> en BioStar X. Sin horarios definidos, solo se pueden seleccionar <Cmd sid="ui_162" product="dev" /> y <Cmd sid="ui_361" product="dev" />.
 
-* Para obtener más información sobre la configuración de <Cmd sid="ui_203" product="dev" />, consulta la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-schedule).
+* Para más información sobre la configuración de <Cmd sid="ui_203" product="dev" />, consulte la <Linkto to="platform/biostar_x/settings-schedule">Guía del administrador de BioStar X</Linkto>.
 
 :::
 
@@ -119,11 +119,11 @@ Configura cómo registrar el modo T&A.
 
    * <Cmd sid="ui_083_list" product="dev" />: Configura cómo usar el modo de asistencia.
 
-   * <Cmd sid="ui_082" product="dev" />: Exige a los usuarios seleccionar un evento de asistencia durante la autenticación. Al configurar <Cmd sid="ui_372" product="dev" />, se exige seleccionar un evento de tiempo y asistencia durante la autenticación.
+   * <Cmd sid="ui_082" product="dev" />: Configure para exigir que el usuario seleccione un evento de registro y puntualidad al autenticarse. Al configurar <Cmd sid="ui_372" product="dev" />, se exige seleccionar un evento de tiempo y asistencia durante la autenticación.
 
    * <Cmd sid="ui_080" product="dev" />: Configura el uso únicamente de eventos de tiempo y asistencia seleccionados por un administrador. Disponible cuando <Cmd sid="ui_083_list" product="dev" /> está configurado en <Cmd sid="ui_071" product="dev" />.
 
-   * <Cmd sid="ui_279" product="dev" />: Selecciona si usar códigos de trabajo.
+   * <Cmd sid="ui_279" product="dev" />: Configure si se usará el código de puesto.
 
 4. Pulsa **OK** para guardar la configuración.
 
@@ -147,35 +147,35 @@ Cambia los ajustes de autenticación por huella digital.
 
    * <Cmd sid="ui_149" product="dev" />: Configura el nivel de seguridad para la autenticación 1:N.
 
-   * <Cmd sid="ui_130" product="dev" />: Establece el tiempo de espera para la coincidencia de huellas dactilares. Si la autenticación no se completa dentro del tiempo establecido, falla.
+   * <Cmd sid="ui_130" product="dev" />: Establece el tiempo de espera para la coincidencia de huellas dactilares. Si la autenticación no se completa dentro del tiempo especificado, fallará.
 
-   * <Cmd sid="ui_254" product="dev" />: Muestra la imagen sin procesar al escanear una huella dactilar.
+   * <Cmd sid="ui_254" product="dev" />: Se puede ver la imagen original de la huella escaneada.
 
-   * <Cmd sid="ui_197" product="dev" />: Establece la sensibilidad del sensor de huellas dactilares. Establece la sensibilidad más alta para obtener información de huella dactilar precisa.
+   * <Cmd sid="ui_197" product="dev" />: Configure la sensibilidad del sensor de reconocimiento de huellas digitales. Establece la sensibilidad más alta para obtener información de huella dactilar precisa.
 
    * <Cmd sid="ui_249" product="dev" />: Establece el nivel de detección de huellas dactilares falsas. Niveles más altos de detección de huellas falsas pueden aumentar las tasas de rechazo de las huellas reales.
 
-   * <Cmd sid="ui_003" product="dev" />: Establece el rendimiento de autenticación por huella dactilar. Al seleccionar <Cmd sid="ui_275" product="dev" />, la velocidad de autenticación se ajusta según el número total de plantillas de huellas dactilares registradas en el dispositivo.
+   * <Cmd sid="ui_003" product="dev" />: Configure la velocidad de autenticación por huella digital. Al seleccionar <Cmd sid="ui_275" product="dev" />, la velocidad de autenticación se ajusta según el número total de plantillas de huellas dactilares registradas en el dispositivo.
 
-   * <Cmd sid="ui_342" product="dev" />: Establece el formato de la plantilla de huella dactilar. El valor predeterminado es <Cmd sid="ui_057" product="dev" />. Cambiar el formato de la plantilla bloquea el uso de todas las huellas dactilares almacenadas previamente, así que procede con precaución.
+   * <Cmd sid="ui_342" product="dev" />: Establece el formato de la plantilla de huella dactilar. <Cmd sid="ui_057" product="dev" /> está configurado como predeterminado. Al cambiar el formato de la plantilla, las huellas digitales guardadas anteriormente quedarán inutilizables, así que tenga cuidado al modificarlo.
 
-     :::info
+      :::info
 
-     Elimina toda la información de huellas dactilares de los usuarios y luego cambia el formato de la plantilla. Si hay información de huellas dactilares registrada, no es posible cambiar el formato de la plantilla.
+      Elimina toda la información de huellas dactilares de los usuarios y luego cambia el formato de la plantilla. Si hay información de huellas dactilares registrada, no es posible cambiar el formato de la plantilla.
 
-     :::
+      :::
 
-   * <Cmd sid="ui_198" product="dev" />: Establece en <Cmd sid="ui_277" product="dev" /> para encender el sensor de huellas dactilares cuando detecta el dedo del usuario. Establece en <Cmd sid="ui_362" product="dev" /> para mantener el sensor siempre encendido, incluso cuando no se escanean huellas dactilares.
+   * <Cmd sid="ui_198" product="dev" />: Establece en <Cmd sid="ui_277" product="dev" /> para encender el sensor de huellas dactilares cuando detecta el dedo del usuario. Al configurar <Cmd sid="ui_362" product="dev" />, el sensor permanece encendido aunque no se estén escaneando huellas digitales.
 
-   * <Cmd sid="ui_116" product="dev" />: Inspecciona la calidad de la huella escaneada para guardar datos de alta calidad. Cuando está activado, el dispositivo notifica al usuario si la calidad de la huella es baja y le ayuda a escanear correctamente.
+   * <Cmd sid="ui_116" product="dev" />: Evalúe la calidad de las huellas digitales escaneadas para guardar información de alta calidad. Habilite la notificación para avisar al usuario cuando la calidad de la huella digital sea baja, ayudándole a escanearla correctamente.
 
-   * <Cmd sid="ui_118" product="dev" />: Verifica huellas dactilares duplicadas durante el enrolamiento.
+   * <Cmd sid="ui_118" product="dev" />: Verifique si hay huellas digitales duplicadas al registrarlas.
 
 4. Pulsa **OK** para guardar la configuración.
 
-## Coincidencia en el servidor
+## Autenticación en servidor
 
-Configura la coincidencia con el servidor. Cuando se utiliza la coincidencia con el servidor, la autenticación se realiza en BioStar X sin autenticación en el dispositivo. Se puede usar cuando el dispositivo tiene demasiada información de usuarios o cuando el dispositivo está instalado en exteriores.
+Configura la autenticación en servidor. Cuando se utiliza la autenticación en servidor, la autenticación se realiza en BioStar X sin autenticación en el dispositivo. Se puede usar cuando el dispositivo tiene demasiada información de usuarios o cuando el dispositivo está instalado en exteriores.
 
 1. Pulsa **ESC** y autentícate como administrador.
 
@@ -191,7 +191,7 @@ Configura la coincidencia con el servidor. Cuando se utiliza la coincidencia con
 
 * <Cmd sid="ui_185" product="dev" /> solo puede usar <Cmd sid="ui_312" product="dev" />, <Cmd sid="ui_322" product="dev" /> y <Cmd sid="ui_020" product="dev" />.
 
-* Si utilizas <Cmd sid="ui_185" product="dev" />, debes habilitar la coincidencia en el servidor tanto en el dispositivo como en BioStar X. Para obtener más información sobre la configuración de coincidencia en el servidor de BioStar X, consulta la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-server-server#servermatching).
+* Si usa <Cmd sid="ui_185" product="dev" />, habilite la coincidencia con el servidor tanto en el dispositivo como en BioStar X. Para obtener información detallada sobre la configuración de la coincidencia con servidor en BioStar X, consulte la <Linkto to="platform/biostar_x/settings-server-server#servermatching">Guía del administrador de BioStar X</Linkto>.
 
 :::
 
@@ -207,18 +207,18 @@ Configura la opción de visualización del resultado de autenticación.
 
    <Image src="/img/device/bln2-auth5.png" />
 
-   * <Cmd sid="ui_169" product="dev" />: Selecciona cómo aparece el ID de usuario en la pantalla de resultados de autenticación del dispositivo.
+   * <Cmd sid="ui_169" product="dev" />: Seleccione cómo se muestra el ID de usuario en la pantalla de resultados de autenticación del dispositivo.
 
-     * <Cmd sid="ui_138" product="dev" />: Muestra todos los ID de usuario.
+      * <Cmd sid="ui_138" product="dev" />: Muestra todos los ID de usuario.
 
-     * <Cmd sid="ui_316" product="dev" />: Mostrar solo el primer carácter del ID de usuario.
+      * <Cmd sid="ui_316" product="dev" />: Muestra solo la primera letra del ID de usuario.
 
-     * <Cmd sid="ui_357" product="dev" />: No mostrar el ID de usuario.
+      * <Cmd sid="ui_357" product="dev" />: No mostrar el ID de usuario.
 
-   * <Cmd sid="ui_177" product="dev" />: Seleccionar cómo aparece el nombre de usuario en la pantalla de resultados de autenticación del dispositivo.
+   * <Cmd sid="ui_177" product="dev" />: Seleccione cómo se muestra el nombre del usuario en la pantalla de resultados de autenticación del dispositivo.
 
-     * <Cmd sid="ui_138" product="dev" />: Muestra todos los nombres de usuario.
+      * <Cmd sid="ui_138" product="dev" />: Muestra todos los nombres de usuario.
 
-     * <Cmd sid="ui_316" product="dev" />: Mostrar solo el primer carácter del nombre de usuario.
+      * <Cmd sid="ui_316" product="dev" />: Muestra solo la primera letra del nombre del usuario.
 
-     * <Cmd sid="ui_357" product="dev" />: No mostrar el nombre de usuario.
+      * <Cmd sid="ui_357" product="dev" />: No mostrar el nombre del usuario.

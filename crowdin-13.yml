@@ -21,6 +21,8 @@ files: [
     "translation" : "/i18n/%two_letters_code%/**/%original_file_name%",
     "escape_special_characters": 0,
     "ignore": [
+      "/i18n/en/docusaurus-plugin-content-blog/*.md",
+      "/i18n/en/docusaurus-plugin-content-blog/*.json",
       "/i18n/en/docusaurus-plugin-content-docs/current/legal/*.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/_unused/*.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/common/_apache-license.mdx",
@@ -38,11 +40,19 @@ files: [
       "/i18n/en/docusaurus-plugin-content-docs/current/common/_biostarair-customer-notice.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/common/bsx-license/*.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/opensourcelicenses.txt",
-      "/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/*.mdx",
-      "/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/**/*.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/reference/**/smartcardissue.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/*/*/release-notes/*.mdx",
       "/i18n/en/docusaurus-plugin-content-docs/current/common/_ic-information.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/*.mdx",
+      "/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/**/*.mdx",
+      # "/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/*.mdx",
+      # "/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/**/*.mdx",
+      # "/i18n/en/docusaurus-plugin-content-docs/current/platform/plugins/*.mdx",
+      # "/i18n/en/docusaurus-plugin-content-docs/current/device/*.mdx",
+      # "/i18n/en/docusaurus-plugin-content-docs/current/device/**/*.mdx",
+      # "/i18n/en/docusaurus-plugin-content-docs/current/how-to/*.mdx",
+      # "/i18n/en/docusaurus-plugin-content-docs/current/how-to/*.json",
+      # "/i18n/en/docusaurus-plugin-content-docs/current/platform/**/*.mdx",
     ]
   }
 ]

@@ -37,7 +37,7 @@
   },
   "fastcgi": {
     "name": "FastCGI",
-    "description": "FastCGI es un complemento para servidores web que permite a un proceso atender varias solicitudes CGI (Common Gateway Interface) a la vez con mayor velocidad."
+    "description": "FastCGI es un conector para servidores web que permite a un proceso atender varias solicitudes CGI (Common Gateway Interface) a la vez con mayor velocidad."
   },
   "hf_card": {
     "name": "Tarjeta HF (alta frecuencia)",
@@ -309,7 +309,7 @@
   },
   "matching_timeout": {
     "name": "Tiempo de espera de coincidencia",
-    "description": "Límite de tiempo asignado para la coincidencia del dispositivo o del servidor. La coincidencia falla si no se completa dentro de ese límite."
+    "description": "Límite de tiempo asignado para la autenticación del dispositivo o del servidor. La coincidencia falla si no se completa dentro de ese límite."
   },
   "man_trap": {
     "name": "Sas de seguridad",
@@ -448,7 +448,7 @@
     "description": "Programa informático que presta servicios a otros programas o computadora en la que se ejecuta un programa de servidor."
   },
   "server_matching": {
-    "name": "Coincidencia en el servidor",
+    "name": "Autenticación en servidor",
     "description": "Función que compara la información de credenciales almacenada en el servidor con la información de credenciales ingresada por un usuario."
   },
   "server_mode": {
@@ -616,7 +616,7 @@
     "description": "Una combinación de credenciales requeridas para la autenticación."
   },
   "interlock_zone": {
-    "name": "Zona de enclavamiento",
+    "name": "Zona de esclusa",
     "description": "Zona situada entre dos o más puertas. En esta zona, si una puerta está abierta o se ha desbloqueado, el resto de las puertas permanecerán cerradas. Por lo general se aplica en laboratorios y plantas de producción donde es necesario controlar partículas en suspensión, como el polvo, o en lugares donde se requiere por motivos de seguridad y protección."
   },
   "intercom": {
@@ -740,11 +740,11 @@
     "description": "Una regla referente al acceso a una puerta o grupo de puertas determinado durante un periodo de tiempo programado."
   },
   "access_group": {
-    "name": "Grupo de acceso",
+    "name": "Grupo de Acceso",
     "description": "Un grupo de usuarios que tiene derecho a acceder a una puerta o grupo de puertas específico durante un periodo de tiempo programado."
   },
   "access_level": {
-    "name": "Nivel de acceso",
+    "name": "Nivel de Acceso",
     "description": "El derecho a acceder a la puerta durante un periodo de tiempo programado."
   },
   "entrance_limit_zone": {
@@ -768,7 +768,7 @@
     "description": "Un sensor que detecta el estado de la puerta. Puede comprobar varios estados, como abierta, cerrada, mantenida abierta y forzada."
   },
   "card": {
-    "name": "tarjeta",
+    "name": "Tarjeta",
     "description": "Medio de información portátil en forma de tarjeta. Almacena información para la identificación."
   },
   "card_id": {

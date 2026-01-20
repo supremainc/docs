@@ -1,25 +1,25 @@
 ---
 id: development-guide
-title: Guía de desarrollo
-description: Proporciona métodos de desarrollo reales y ejemplos de implementación del complemento de BioStar X.
+title: Guía de Desarrollo
+description: Proporciona métodos de desarrollo reales y ejemplos de implementación del conector de BioStar X.
 keywords:
-  - Desarrollo de complementos
+  - Desarrollo de conector
   - Endpoint
   - Puente de sesión
   - Cifrado
 ---
 
-Ofrece métodos de desarrollo reales y ejemplos de implementación de complementos integrados con **BioStar X**.
+Ofrece métodos de desarrollo reales y ejemplos de implementación de conectores integrados con **BioStar X**.
 
 ## Implementación de endpoint requerida
 
-Para desarrollar un complemento integrado con **BioStar X**, debe implementar los siguientes dos endpoints. Este documento utiliza `/bsx` como ruta de ejemplo.
+Para desarrollar un conector integrado con **BioStar X**, debe implementar los siguientes dos endpoints. Este documento utiliza `/bsx` como ruta de ejemplo.
 
-### Endpoint de registro de complemento
+### Endpoint de registro de conector
 
-<Badge className="get">GET</Badge> `/bsx`
+<Badge className="get" only>GET</Badge> `/bsx`
 
-Este es el endpoint que el **BioStar X Service Manager** llama para comprobar la accesibilidad del servidor al registrar el complemento.
+Este es el endpoint que el **BioStar X Service Manager** llama para comprobar la accesibilidad del servidor al registrar el conector.
 
 #### Formato de solicitud
 
@@ -65,13 +65,13 @@ curl -H "X-BioStar-Ping: test123" http://localhost:8000/bsx
 
 ### Endpoint de devolución de llamada de autenticación de usuario
 
-<Badge className="post">POST</Badge> `/bsx`
+<Badge className="post" only>POST</Badge> `/bsx`
 
-Este es el endpoint que se llama cuando el usuario hace clic en el ícono del complemento en la interfaz web de **BioStar X**. En este proceso, se solicita la sesión del usuario conectado en **BioStar X** y se recibe una respuesta.
+Este es el endpoint que se llama cuando el usuario hace clic en el ícono del conector en la interfaz web de **BioStar X**. En este proceso, se solicita la sesión del usuario conectado en **BioStar X** y se recibe una respuesta.
 
 :::info
 
-Se requiere un certificado para la comunicación segura entre **BioStar X** y el complemento. El certificado puede descargarse desde la página de detalles del complemento después del registro. Para obtener más información, consulte [lo siguiente](registration-guide#register-plugin).
+Se requiere un certificado para la comunicación segura entre **BioStar X** y el conector. El certificado puede descargarse desde la página de detalles del conector después del registro. Para obtener más información, consulte [lo siguiente](registration-guide#register-plugin).
 
 :::
 

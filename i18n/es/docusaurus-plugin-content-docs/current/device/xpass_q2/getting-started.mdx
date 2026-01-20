@@ -1,6 +1,6 @@
 ---
 id: getting-started
-title: Primeros pasos
+title: Primeros Pasos
 description: Proporciona procedimientos iniciales para empezar con el dispositivo.
 keywords:
   - Componentes
@@ -114,9 +114,9 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
 <PageBreak />
 
-* **Luz LED**: El LED se enciende automáticamente cuando se detecta movimiento cerca del escáner de QR/código de barras.
+* **Luz LED**: La luz LED se enciende automáticamente al detectar movimiento cerca del escáner de QR/código de barras.
 
-* **Escáner de QR/código de barras**: Escanea credenciales QR/código de barras para el acceso.
+* **Escáner de QR/código de barras**: Escanea credenciales de QR/código de barras para acceso.
 
 * **Unidad de autenticación de tarjeta RF y tarjeta de acceso móvil**: parte para escanear una tarjeta RFID o una tarjeta de acceso móvil para la entrada.
 
@@ -142,9 +142,9 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
 * **Entrada/salida Wiegand (4 pines)**: Conecta el cable Wiegand de entrada/salida.
 
-* **Salida de alimentación del lector (3 pines)**: Conecte el cable de salida de alimentación del lector.
+* **Salida de alimentación del lector (3 pines)**: Conecta el cable de salida de alimentación del lector.
 
-* **Salida de alimentación de la cerradura (3 pines)**: Conecte el cable de salida de alimentación de la cerradura.
+* **Salida de alimentación de la cerradura (3 pines)**: Conecta el cable de salida de alimentación de la cerradura.
 
 <PageBreak />
 
@@ -160,54 +160,54 @@ import CablesandConnectors from '../../common/_getting-started-cables-and-connec
 
 ### Método correcto de autenticación con QR/código de barras {#how-to-scan-qrbarcode}
 
-Emita un QR/código de barras al usuario para usarlo como medio de autenticación. Escanee el QR/código de barras según las instrucciones para mejorar el reconocimiento.
+Emita un QR/código de barras al usuario para usarlo como medio de autenticación. Escanea el QR/código de barras según las instrucciones para mejorar el reconocimiento.
 
 <Image src="/img/device/qr-scanning-xpq2.svg" className="none" width={300} alone />
 
-* Mantenga una distancia de 5-15 cm entre el escáner del dispositivo y el QR/código de barras.
+* Mantén una distancia de 5-15 cm entre el escáner del dispositivo y el código QR/código de barras.
 
-* Coloque el QR/código de barras en el centro del escáner.
+* Coloca el QR/código de barras en el centro del escáner.
 
 * Si autentica con un QR/código de barras descargado en un dispositivo móvil, ajuste el brillo del dispositivo para que la pantalla sea claramente visible.
 
-* El escaneo de QR/código de barras puede tardar más o fallar si la posición, la distancia o la iluminación son inadecuadas.
+* El escaneo del QR/código de barras puede tardar más o fallar si la posición, distancia o iluminación son inadecuadas.
 
-### Tipos de códigos de barras y tamaño mínimo legible
+### Tipos de código de barras y tamaño mínimo legible
 
-A continuación se muestran ejemplos de los tamaños mínimos de código de barras que se pueden leer para cada tipo.
+A continuación, se muestran ejemplos de los tamaños mínimos de código de barras que se pueden leer para cada tipo.
 
 :::info
 
-Las tasas de lectura reales pueden variar según la calidad de impresión, la codificación, la iluminación, la resolución de la cámara, la distancia de captura y otras condiciones.
+Las tasas reales de lectura pueden variar según la calidad de impresión, la codificación, la iluminación, la resolución de la cámara, la distancia de captura y otras condiciones.
 
 :::
 
-#### Compatibilidad básica
+#### Soporte básico
 
-Este producto es compatible de forma nativa con códigos QR.
+Este producto soporta de forma nativa el Código QR.
 
 <div className="overflow-x cols3--20-20-60">
-  | Tipo de código de barras | Tamaño mínimo legible | Valor de ejemplo (recuento de caracteres) |
+  | Tipo de código de barras | Tamaño mínimo legible | Valor de ejemplo (cantidad de caracteres) |
   | :-: | :-: | :-- |
   | Código QR | 1 cm | 32 caracteres alfanuméricos |
 </div>
 
-#### Cuando se aplica la licencia de cámara QR
+#### Cuando se aplica la licencia Camera QR
 
 <div className="overflow-x cols3--20-20-60">
-  | Tipo de código de barras | Tamaño mínimo legible | Valor de ejemplo (recuento de caracteres) |
+  | Tipo de código de barras | Tamaño mínimo legible | Valor de ejemplo (cantidad de caracteres) |
   | :-: | :-: | :-- |
   | Código QR | 1 cm | 32 caracteres alfanuméricos |
-  | Micro QR Code | 1 cm | 32 caracteres alfanuméricos |
+  | Micro Código QR | 1 cm | 32 caracteres alfanuméricos |
   | Aztec | 1 cm | 32 caracteres alfanuméricos |
   | PDF417 | 3 cm | 32 caracteres alfanuméricos |
   | Data Matrix | 1 cm | 32 caracteres alfanuméricos |
   | Code 39 | 5 cm | 16 caracteres alfanuméricos |
   | Code 128 | 3 cm | 16 caracteres alfanuméricos |
-  | EAN-8 | 1.5 cm | 8 dígitos (7 datos + 1 dígito de verificación) |
-  | EAN-13 | 2 cm | 13 dígitos (12 datos + 1 dígito de verificación) |
-  | UPC-A | 2 cm | 12 dígitos (11 datos + 1 dígito de verificación) |
-  | UPC-E | 1.5 cm | 8 dígitos (7 datos + 1 dígito de verificación) |
+  | EAN-8 | 1.5 cm | 8 dígitos (7 datos + 1 verificación) |
+  | EAN-13 | 2 cm | 13 dígitos (12 datos + 1 verificación) |
+  | UPC-A | 2 cm | 12 dígitos (11 datos + 1 verificación) |
+  | UPC-E | 1.5 cm | 8 dígitos (7 datos + 1 verificación) |
 </div>
 
 ### Notas sobre la licencia del dispositivo
@@ -218,4 +218,4 @@ Este producto es compatible de forma nativa con códigos QR.
 
 * Las licencias de dispositivo se emiten según el ID del dispositivo. Si el ID del dispositivo se cambia de manera inusual, no se proporciona servicio de garantía para la licencia.
 
-* Para obtener más información sobre las licencias de dispositivos, consulte la [Guía del administrador de BioStar X](../../platform/biostar_x/settings-license-device-license).
+* Para obtener información detallada sobre las licencias de dispositivos, consulte la <Linkto to="platform/biostar_x/settings-license-device-license">Guía del administrador de BioStar X</Linkto>.

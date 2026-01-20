@@ -1,0 +1,25 @@
+# 기본은 CRLF
+* text=auto eol=crlf
+
+# 리눅스/유닉스 환경에서 실행되는 파일만 LF
+*.sh       text eol=lf
+*.mdx      text eol=lf
+*.json     text eol=lf
+*.js       text eol=lf
+*.md       text eol=lf
+Dockerfile text eol=lf
+
+# Windows 전용 파일은 CRLF
+*.bat     text eol=crlf
+*.cmd     text eol=crlf
+*.ps1     text eol=crlf
+*.sln     text eol=crlf
+*.vcxproj text eol=crlf
+*.csproj  text eol=crlf
+
+# 바이너리는 변환 금지
+*.png -text
+*.jpg -text
+*.gif -text
+*.pdf -text
+*.zip -text
