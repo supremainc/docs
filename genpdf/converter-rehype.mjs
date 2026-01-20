@@ -3,7 +3,7 @@
  * Main processor combining remark and rehype plugins
  * 
  * NOTE: Inline HTML <br/> tags are protected during processing by converting them
- * to a placeholder string (___BREAKPLACEHOLDER___) that survives the markdown/HTML
+ * to a placeholder string (!!!BREAKPLACEHOLDER!!!) that survives the markdown/HTML
  * pipeline, then restored in the output. This is necessary because remarkMdx strips
  * bare HTML tags by default.
  */
@@ -214,7 +214,7 @@ export async function markdownToHtml(
   docDepth = 0
 ) {
   // Protect <br/> tags by converting to a safe marker that survives processing
-  const BR_PLACEHOLDER = '___BREAKPLACEHOLDER___';
+  const BR_PLACEHOLDER = '!!!BREAKPLACEHOLDER!!!';
   const hasBr = mdContent.includes('<br');
   let processedContent = mdContent;
   let brCount = 0;
@@ -247,9 +247,10 @@ export async function markdownToHtml(
         output = output.replace(/<[a-z]+><br\/><\/[a-z]+>/gi, '<br/>');
         output = output.replace(/<[a-z]+[^>]*><br\/><\/[a-z]+>/gi, '<br/>');
         
-        // Replace any remaining placeholders
+        // Replace any remaining placeholders - including partial/corrupted ones
+        output = output.replace(/!!!<br\/>!!!/g, '<br/>');  // Handle corrupted placeholder
         output = output.replace(/BREAKPLACEHOLDER/g, '<br/>');
-        output = output.replace(/___BREAKPLACEHOLDER___/g, '<br/>');
+        output = output.replace(/!!!BREAKPLACEHOLDER!!!/g, '<br/>');
         
         if (before === output) break; // No more changes
       }

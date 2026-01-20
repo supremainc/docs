@@ -1114,6 +1114,10 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         const classNameAttr = attributes.find(attr => attr.name === 'className');
         const className = classNameAttr ? classNameAttr.value : '';
         
+        // Check for 'only' attribute - presence of attribute means it's true
+        const onlyAttr = attributes.find(attr => attr.name === 'only');
+        const hasOnly = onlyAttr !== undefined; // Attribute exists = true
+        
         let textContent = '';
         if (node.children && node.children.length > 0) {
           const extractText = (nodes) => {
@@ -1129,11 +1133,12 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         }
 
         let displayText = textContent;
-        if (!className && textContent) {
-          displayText = `${revisionLabel}:&nbsp;${textContent}`;
+        // Add revisionLabel only if not 'only' and no className
+        if (!hasOnly && !className && textContent) {
+          displayText = `${revisionLabel}: ${textContent}`;
         }
 
-        const classNames = className ? ['badge', className] : ['badge'];
+        const classNames = className ? ['badge', className] : (hasOnly ? ['badge', 'only'] : ['badge']);
         
         const replacement = {
           type: 'element',
