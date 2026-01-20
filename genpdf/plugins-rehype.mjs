@@ -284,21 +284,23 @@ function buildSpecSectionAst(data, language = 'ko') {
             Object.values(subitem.items).forEach(feature => {
               const featureLabel = feature.label || feature.label_id || '';
               const featureValue = buildValueChildren(feature.value);
+              
+              // Build label with annotation if present
+              const labelChildren = [{ type: 'text', value: featureLabel + ':' }];
+              if (feature.annotation_label) {
+                const annotSup = buildAnnotationSup(feature.annotation_label);
+                if (annotSup) labelChildren.push(annotSup);
+              }
+              
               const featureChildren = [
                 {
                   type: 'element',
                   tagName: 'strong',
                   properties: {},
-                  children: [{ type: 'text', value: featureLabel + ':' }]
+                  children: labelChildren
                 },
                 ...featureValue
               ];
-              
-              // Add annotation if present
-              if (feature.annotation_label) {
-                const annotSup = buildAnnotationSup(feature.annotation_label);
-                if (annotSup) featureChildren.push(annotSup);
-              }
               
               featureList.push({
                 type: 'element',
