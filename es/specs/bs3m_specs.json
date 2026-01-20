@@ -88,6 +88,16 @@
                     "ja": "MINEX 認証取得および準拠"
                   }
                 },
+                "sensor_certificates": {
+                  "label": "센서 인증",
+                  "label_id": "specs.credentials.biometrics.fingerprint.sensor_certificates",
+                  "value": {
+                    "ko": "FBI PIV 및 FBI Mobile ID FAP20",
+                    "en": "FBI PIV and FBI Mobile ID FAP20",
+                    "es": "PIV del FBI e ID móvil FAP20 del FBI",
+                    "ja": "FBI PIV および FBI モバイル ID FAP20"
+                  }
+                },
                 "live_fingerprint_detection": {
                   "label": "위조 지문 검출",
                   "label_id": "specs.credentials.biometrics.fingerprint.live_fingerprint_detection",
