@@ -206,6 +206,13 @@ header p {
   height: 22px;
 }
 
+.doc-content p img.svg-icon, .doc-content li img.svg-icon {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  border: none;
+}
+
 .doc-content ul,
 .doc-content ol {
   margin-left: 25px;
