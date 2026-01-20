@@ -975,26 +975,31 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         
         const hasAlone = attributes.some(attr => attr.name === 'alone');
         
+        // Determine language folder (ko or en for others)
+        const imgLangFolder = language === 'ko' ? 'ko' : 'en';
+        
         // Convert to absolute file system path for PDF generation
-        if (src && basePath) {
+        if (src && basePath && !hasAlone) {
           if (src.startsWith('/img/')) {
             const normalizedSrc = src.replace(/^\/img\//, '');
             // alone 속성이 없으면 언어 폴더 추가
-            if (!hasAlone) {
-              src = basePath.replace(/\\/g, '/') + '/static/img/' + 'en' + '/' + normalizedSrc;
-            } else {
-              src = basePath.replace(/\\/g, '/') + '/static/img/' + normalizedSrc;
-            }
-          } else if (!src.startsWith('/') && !hasAlone) {
+            src = basePath.replace(/\\/g, '/') + '/static/img/' + imgLangFolder + '/' + normalizedSrc;
+          } else if (!src.startsWith('/')) {
             src = src.replace(/^\.\//, '/img/').replace(/^\.\.\/img\//, '/img/').replace(/^\.\.\//, '/');
             if (!src.startsWith('/')) {
-              src = '/img/' + language + '/' + src;
+              src = '/img/' + imgLangFolder + '/' + src;
             }
+          }
+        } else if (src && basePath && hasAlone) {
+          // alone 속성이 있으면 언어 폴더 없이 처리
+          if (src.startsWith('/img/')) {
+            const normalizedSrc = src.replace(/^\/img\//, '');
+            src = basePath.replace(/\\/g, '/') + '/static/img/' + normalizedSrc;
           }
         } else if (src && !src.startsWith('/') && !basePath && !hasAlone) {
           src = src.replace(/^\.\//, '/img/').replace(/^\.\.\/img\//, '/img/').replace(/^\.\.\//, '/');
           if (!src.startsWith('/')) {
-            src = '/img/' + language + '/' + src;
+            src = '/img/' + imgLangFolder + '/' + src;
           }
         }
         

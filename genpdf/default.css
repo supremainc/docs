@@ -789,6 +789,9 @@ footer {
   .docs-content img {
     max-width: 65% !important;
   }
+  img[src*='component-connection-cables'] {
+    height: 110px;
+  }
   img[src*='bew3-component-device'], img[src*='bew3-component-bracket'] {
     height: 164px;
   }
