@@ -909,17 +909,27 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
         const widthAttr = attributes.find(attr => attr.name === 'width');
         let width = '';
         if (widthAttr) {
-          width = typeof widthAttr.value === 'string' 
-            ? widthAttr.value.replace(/px$/, '') 
-            : String(widthAttr.value);
+          if (typeof widthAttr.value === 'string') {
+            width = widthAttr.value.replace(/px$/, '');
+          } else if (typeof widthAttr.value === 'number') {
+            width = String(widthAttr.value);
+          } else if (typeof widthAttr.value === 'object' && widthAttr.value && widthAttr.value.value !== undefined) {
+            // Handle mdxJsxAttributeValueExpression: { value: 220, type: '...' }
+            width = String(widthAttr.value.value);
+          }
         }
         
         const heightAttr = attributes.find(attr => attr.name === 'height');
         let height = '';
         if (heightAttr) {
-          height = typeof heightAttr.value === 'string' 
-            ? heightAttr.value.replace(/px$/, '') 
-            : String(heightAttr.value);
+          if (typeof heightAttr.value === 'string') {
+            height = heightAttr.value.replace(/px$/, '');
+          } else if (typeof heightAttr.value === 'number') {
+            height = String(heightAttr.value);
+          } else if (typeof heightAttr.value === 'object' && heightAttr.value && heightAttr.value.value !== undefined) {
+            // Handle mdxJsxAttributeValueExpression: { value: 220, type: '...' }
+            height = String(heightAttr.value.value);
+          }
         }
         
         const altAttr = attributes.find(attr => attr.name === 'alt');
