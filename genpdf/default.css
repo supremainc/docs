@@ -181,7 +181,7 @@ header p {
 
 .doc-content hr {
   border: none;
-  border: .25pt solid var(--ifm-color-cmd);
+  border: .15pt solid var(--ifm-color-cmd);
   height: 0;
   margin: 25pt 0;
 }
@@ -283,7 +283,7 @@ header p {
 }
 
 .doc-content p.hasimg {
-  width: 100%;
+  display: block;
 }
 
 .doc-content p.hasimg img {
@@ -298,7 +298,7 @@ header p {
 .doc-content img {
   display: block;
   border: 1px solid #696969;
-  max-width: min-content;
+  max-width: 100%;
   height: auto;
 }
 
@@ -785,10 +785,14 @@ footer {
   }
   .doc-content table.component p.hasimg img {
     margin: 0 auto;
-    width: revert-layer !important;
-    height: revert-layer !important;
   }
-  img[src*='component-pvc-anchors2'], img[src*='component-fixing-screws2'] {
+  .docs-content img {
+    max-width: 65% !important;
+  }
+  img[src*='bew3-component-device'], img[src*='bew3-component-bracket'] {
+    height: 164px;
+  }
+  img[src*='component-pvc-anchors2'], img[src*='component-fixing-screws2'], img[src*='component-shrink-tube'] {
     width: auto;
     height: 85px;
   }
@@ -796,7 +800,7 @@ footer {
     width: auto;
     height: 48px;
   }
-  img[src*='name-function-each-part'] {
+  img[src*='name-function-each-part'], img[src*='product-part'] {
     width: 75% !important;
   }
   img[src*='dimension.svg'] {

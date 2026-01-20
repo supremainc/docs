@@ -175,7 +175,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     // HTML transformations
     .use(rehypeExtendedTable)
     .use(rehypeAddTargetBlankToExternalLinks)
-    .use(rehypeProcessMdxElements, translations, basePath)
+    .use(rehypeProcessMdxElements, translations, basePath, language)
     .use(rehypeProcessCmdComponent, language)
     .use(rehypeProcessColumnsComponent)
     .use(rehypeAddCalloutIcons)

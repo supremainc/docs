@@ -36,6 +36,12 @@ const cmdAirJa = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/air
 const glossaryKo = JSON.parse(readFileSync(`${__dirname}/../i18n/ko/glossary.json`, 'utf-8'));
 const glossaryEn = JSON.parse(readFileSync(`${__dirname}/../i18n/en/glossary.json`, 'utf-8'));
 
+// i18n code.json for spec labels and translations
+const codeKo = JSON.parse(readFileSync(`${__dirname}/../i18n/ko/code.json`, 'utf-8'));
+const codeEn = JSON.parse(readFileSync(`${__dirname}/../i18n/en/code.json`, 'utf-8'));
+const codeEs = JSON.parse(readFileSync(`${__dirname}/../i18n/es/code.json`, 'utf-8'));
+const codeJa = JSON.parse(readFileSync(`${__dirname}/../i18n/ja/code.json`, 'utf-8'));
+
 /**
  * Helper function to create AST nodes for SpecSection
  * Directly builds rehype AST matching React component structure
@@ -58,6 +64,34 @@ function buildSpecSectionAst(data, language = 'ko') {
     console.warn('⚠️  No items in section data');
     return null;
   }
+
+  /**
+   * Translate function: Get translated text from i18n code.json
+   * @param {string} id - Translation key (e.g., "specs.credentials")
+   * @returns {string} Translated text or key as fallback
+   */
+  const translate = (id) => {
+    const codeMap = {
+      ko: codeKo,
+      en: codeEn,
+      es: codeEs,
+      ja: codeJa
+    };
+    
+    const codeFile = codeMap[language] || codeKo;
+    
+    if (!codeFile || !codeFile[id]) {
+      // Fallback: return the key itself if translation not found
+      return id;
+    }
+    
+    const translationObj = codeFile[id];
+    if (typeof translationObj === 'object' && translationObj.message) {
+      return translationObj.message;
+    }
+    
+    return id;
+  };
 
   /**
    * Parse HTML string to AST nodes
@@ -149,7 +183,7 @@ function buildSpecSectionAst(data, language = 'ko') {
     }
 
     if (typeof value === 'boolean') {
-      const text = value ? '지원' : '미지원';
+      const text = value ? translate('specs.common.supported') : translate('specs.common.Notsupported');
       return [
         {
           type: 'element',
@@ -188,8 +222,8 @@ function buildSpecSectionAst(data, language = 'ko') {
   const buildItemNode = (item) => {
     const rowChildren = [];
 
-    // Header
-    const headerLabel = item.label || item.label_id || '레이블 없음';
+    // Header - use label_id for translation if available, otherwise use label
+    let headerLabel = item.label_id ? translate(item.label_id) : (item.label || '레이블 없음');
     // console.log('    📝 Building item:', headerLabel, '| type:', item.type);
     
     // Build header children with annotation support
@@ -213,11 +247,11 @@ function buildSpecSectionAst(data, language = 'ko') {
       // Model type: key-value pairs
       Object.values(item.items).forEach(subitem => {
         // Build left column with label and optional annotation
-        const leftChildren = subitem.label_id ? 
-          [{ type: 'text', value: subitem.label || '' }] :
-          (subitem.label && isHtmlString(subitem.label) ?
-            parseHtmlToAst(subitem.label) :
-            [{ type: 'text', value: subitem.label || '' }]);
+        let leftLabel = subitem.label_id ? translate(subitem.label_id) : (subitem.label || '');
+        
+        const leftChildren = isHtmlString(leftLabel) ?
+          parseHtmlToAst(leftLabel) :
+          [{ type: 'text', value: leftLabel }];
         
         // Build right column children
         const rightChildren = buildValueChildren(subitem.value);
@@ -251,7 +285,7 @@ function buildSpecSectionAst(data, language = 'ko') {
       Object.values(item.items).forEach(subitem => {
         if (subitem.type === 'face' || subitem.type === 'fingerprint') {
           // Show the credential type label with badge
-          const credLabel = subitem.label || subitem.label_id || '';
+          const credLabel = subitem.label_id ? translate(subitem.label_id) : (subitem.label || '');
           const credChildren = [{ type: 'text', value: credLabel }];
           
           // Add badge if present
@@ -282,7 +316,7 @@ function buildSpecSectionAst(data, language = 'ko') {
           if (subitem.items) {
             const featureList = [];
             Object.values(subitem.items).forEach(feature => {
-              const featureLabel = feature.label || feature.label_id || '';
+              let featureLabel = feature.label_id ? translate(feature.label_id) : (feature.label || '');
               const featureValue = buildValueChildren(feature.value);
               
               // Build label with annotation if present
@@ -316,7 +350,7 @@ function buildSpecSectionAst(data, language = 'ko') {
     } else if (!item.type && item.items) {
       // Default type with items - usually just display the items
       Object.values(item.items).forEach(subitem => {
-        const sublabel = subitem.label || subitem.label_id || '';
+        let sublabel = subitem.label_id ? translate(subitem.label_id) : (subitem.label || '');
         const subvalue = buildValueChildren(subitem.value);
         
         // Add annotation if present
@@ -384,6 +418,7 @@ function buildSpecSectionAst(data, language = 'ko') {
   console.log('✓ Built', allItems.length, 'item nodes');
 
   // Build heading node for the section (matching Specs/index.js Head component)
+  const headingLabel = data.label_id ? translate(data.label_id) : (data.label || data.label_id);
   const headingNode = {
     type: 'element',
     tagName: 'h3',
@@ -393,7 +428,7 @@ function buildSpecSectionAst(data, language = 'ko') {
     },
     children: [{ 
       type: 'text', 
-      value: data.label || data.label_id 
+      value: headingLabel
     }]
   };
 
@@ -764,7 +799,7 @@ export function rehypeAddTargetBlankToExternalLinks() {
 /**
  * Create a rehype plugin that converts MDX JSX elements to HTML
  */
-export function rehypeProcessMdxElements(translations = {}, basePath = '') {
+export function rehypeProcessMdxElements(translations = {}, basePath = '', language = 'ko') {
   return (tree) => {
     const figureCaptionText = 
       (translations['theme.figureCaption.desc'] && translations['theme.figureCaption.desc'].message) || 
@@ -882,7 +917,7 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
             }
             
             // Build AST nodes directly from React component structure
-            const astNode = buildSpecSectionAst(specData, 'ko');
+            const astNode = buildSpecSectionAst(specData, language);
             
             if (astNode) {
               parent.children[index] = astNode;
@@ -943,17 +978,22 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
         if (src && basePath) {
           if (src.startsWith('/img/')) {
             const normalizedSrc = src.replace(/^\/img\//, '');
-            src = basePath.replace(/\\/g, '/') + '/static/img/' + normalizedSrc;
+            // alone 속성이 없으면 언어 폴더 추가
+            if (!hasAlone) {
+              src = basePath.replace(/\\/g, '/') + '/static/img/' + 'en' + '/' + normalizedSrc;
+            } else {
+              src = basePath.replace(/\\/g, '/') + '/static/img/' + normalizedSrc;
+            }
           } else if (!src.startsWith('/') && !hasAlone) {
             src = src.replace(/^\.\//, '/img/').replace(/^\.\.\/img\//, '/img/').replace(/^\.\.\//, '/');
             if (!src.startsWith('/')) {
-              src = '/img/' + src;
+              src = '/img/' + language + '/' + src;
             }
           }
         } else if (src && !src.startsWith('/') && !basePath && !hasAlone) {
           src = src.replace(/^\.\//, '/img/').replace(/^\.\.\/img\//, '/img/').replace(/^\.\.\//, '/');
           if (!src.startsWith('/')) {
-            src = '/img/' + src;
+            src = '/img/' + language + '/' + src;
           }
         }
         
