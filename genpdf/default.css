@@ -145,16 +145,16 @@ header p {
 
 .doc-section h2 {
   color: var(--ifm-color-cmd);
-  margin-top: 0;
+  margin-top: 30pt;
   margin-bottom: 15pt;
   font-size: 21pt;
   page-break-before: always;
 }
 
 .doc-section h3 {
-  font-size: 15pt;
+  font-size: 17pt;
   color: #000;
-  margin-top: 23pt;
+  margin-top: 28pt;
   padding-bottom: 11.3pt;
 }
 
@@ -166,26 +166,28 @@ header p {
 }
 
 .doc-content h4 {
-  font-size: 10.5pt;
-  margin-top: 17pt;
-  padding-bottom: 5.6pt;
+  font-size: 13pt;
+  font-weight: 500;
+  margin-top: 22pt;
+  margin-bottom: 10pt;
 }
 
 .doc-content h5 {
-  font-size: 10pt;
+  font-size: 11.5pt;
   font-weight: 500;
-  margin: 40px 0 10px 0;
+  margin-top: 18pt;
+  margin-bottom: 11pt;
 }
 
 .doc-content hr {
   border: none;
   border: .25pt solid var(--ifm-color-cmd);
   height: 0;
-  margin-top: 0
+  margin: 25pt 0;
 }
 
 .doc-content h3 + hr {
-  margin-top: 10px;
+  margin-top: 0;
 }
 
 .description {
@@ -206,7 +208,7 @@ header p {
 
 .doc-content ul,
 .doc-content ol {
-  margin-left: 20px;
+  margin-left: 25px;
   margin-bottom: 15px;
 }
 
@@ -216,8 +218,9 @@ header p {
 
 .doc-content ol > li::marker {
   color: #696969;
-  font-size: 1.1rem;
+  /* font-size: 9.5pt; */
   font-weight: 600;
+  margin-left: -3px;
 }
 
 .doc-content ul ul, .doc-content ol > ul ul {
@@ -239,12 +242,8 @@ header p {
   background-color: #dceaffd8;
   border: 1px solid #dceaffd8;
   border-radius: .3em;
-  padding: .1em .2em;
   font-family: Noto Sans Coptic;
-  font-size: .85rem;
-  line-height: 1;
   position: relative;
-  top: -2px;
 }
 
 .doc-content pre {
@@ -279,10 +278,8 @@ header p {
 }
 
 .doc-content a {
-  color: #667eea;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(102, 126, 234, 0.3);
-  transition: all 0.3s;
+  color: var(--ifm-color-cmd);
+  text-decoration: underline;
 }
 
 .doc-content p.hasimg {
@@ -323,8 +320,7 @@ header p {
 .doc-content .container {
   max-width: 100%;
   width: 100%;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 1rem 0;
 }
 
 .doc-content .container .row {
@@ -340,6 +336,10 @@ header p {
 
 .doc-content .container .text--center {
   text-align: center;
+}
+
+.doc-content .container .text--center p.hasimg img {
+  margin: 0 auto;
 }
 
 .doc-content .grid-container {
@@ -363,7 +363,7 @@ header p {
 
 .doc-content .faq-item > p:first-of-type {
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 10px;
 }
 
@@ -414,14 +414,14 @@ header p {
   width: 70%;
 }
 
-.doc-content table td.center {
-  text-align: center;
-}
-
 .doc-content table td {
   border: 1px solid #ddd;
   padding: 12px;
   text-align: left;
+}
+
+.doc-content table td[align='center'] {
+  text-align: center;
 }
 
 .doc-content table tr.center td {
@@ -495,11 +495,12 @@ footer {
 .callout {
   display: block;
   gap: 12px;
-  padding: 10px 10px;
+  padding: 20px 10px;
   margin: 16px 0;
   border-left: 4px solid;
   background-color: #f9f9f9;
   border-radius: 4px;
+  page-break-inside: avoid;
 }
 
 .callout-indicator {
@@ -516,12 +517,12 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1px;
+  margin-top: -4px;
 }
 
 .callout-hint svg {
-  width: 100%;
-  height: 100%;
+  width: 85%;
+  height: 85%;
 }
 
 .callout-title {
@@ -648,6 +649,7 @@ footer {
 .doc-section sup a {
   color: var(--ifm-color-cmd);
   font-weight: 600;
+  font-size: 7pt;
 }
 
 .doc-section sup a:before {
@@ -673,8 +675,8 @@ footer {
   width: 100%;
   display: flex;
   position: relative;
-  border-bottom: 1px solid #adadad;
-  padding: 1.5rem 0;
+  border-bottom: .25pt solid #adadad;
+  padding: 1rem 0;
 }
 
 .techspecSection.noborder {
@@ -684,7 +686,7 @@ footer {
 .techspecsRowheader {
   float: left;
   width: 22%;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   color: #696969;
 }
 
@@ -697,7 +699,7 @@ footer {
   padding-left: 1.5rem;
   font-weight: 600;
   width: 78%;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
 }
 
 .techspecsBody sup {
@@ -719,7 +721,7 @@ footer {
 }
 
 .techspecsBody ul, .techspecsBody ul li, .techspecsBody ul ul {
-  margin: 0 0 0 1.0rem;
+  margin: 0 0 0 .6rem;
 }
 
 .techspecsBody .modelimg {
@@ -777,6 +779,10 @@ footer {
     margin: 0;
     padding: 0;
   }
+  .toc a::after {
+    content: target-counter(attr(href), page);
+    float: right;
+  }
   .doc-content table.component p.hasimg img {
     margin: 0 auto;
     width: revert-layer !important;
@@ -790,11 +796,17 @@ footer {
     width: auto;
     height: 48px;
   }
-  .doc-content img[src*='name-function-each-part'] {
+  img[src*='name-function-each-part'] {
     width: 75% !important;
+  }
+  img[src*='dimension.svg'] {
+    width: 100% !important;
   }
   .doc-content ul li {
     page-break-inside: avoid;
+  }
+  .doc-content .container .row .col {
+    width: 50% !important;
   }
   .container header, footer {
     display: none;

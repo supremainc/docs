@@ -866,11 +866,17 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '') {
             //   biostation3Keys: data.biostation3 ? Object.keys(data.biostation3) : 'N/A'
             // });
             
-            // Check if data is wrapped in product key (e.g., { biostation3: { items: {...} } })
+            // Check if data is wrapped in product key (e.g., { biostation3: { items: {...} }, xpass2: { items: {...} } })
             let specData = data;
-            if (data.biostation3 && !data.items) {
-              specData = data.biostation3;
-              // console.log('📍 Using biostation3 as spec data');
+            if (!data.items) {
+              // Dynamically find the product key (biostation3, xpass2, etc.)
+              for (const key in data) {
+                if (data[key] && typeof data[key] === 'object' && data[key].items) {
+                  specData = data[key];
+                  // console.log(`📍 Using ${key} as spec data`);
+                  break;
+                }
+              }
             }
             
             // Build AST nodes directly from React component structure
