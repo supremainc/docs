@@ -320,11 +320,12 @@ function buildSpecSectionAst(data, language = 'ko') {
               const featureValue = buildValueChildren(feature.value);
               
               // Build label with annotation if present
-              const labelChildren = [{ type: 'text', value: featureLabel + ':' }];
+              const labelChildren = [{ type: 'text', value: featureLabel }];
               if (feature.annotation_label) {
                 const annotSup = buildAnnotationSup(feature.annotation_label);
                 if (annotSup) labelChildren.push(annotSup);
               }
+              labelChildren.push({ type: 'text', value: ':' });
               
               const featureChildren = [
                 {

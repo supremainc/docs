@@ -98,11 +98,29 @@ function generateTocFromHeadings(headings) {
  * @param {number} maxDepth - Maximum heading depth for TOC
  * @returns {string} TOC HTML
  */
-export function generateTableOfContents(contentHtml, maxDepth = 3) {
+export function generateTableOfContents(contentHtml, language, maxDepth = 3) {
   const headings = extractHeadingsFromHtml(contentHtml, maxDepth);
   const tocContent = generateTocFromHeadings(headings);
   
-  return `<nav class="toc" id="toc">\n<h2>목차</h2>\n${tocContent}</nav>\n`;
+  let tocTitle;
+  switch (language) {
+    case 'ko':
+      tocTitle = '목차';
+      break;
+    case 'en':
+      tocTitle = 'CONTENTS';
+      break;
+    case 'es':
+      tocTitle = 'CONTENIDO';
+      break;
+    case 'ja':
+      tocTitle = '目次';
+      break;
+    default:
+      tocTitle = '목차';
+  }
+  
+  return `<nav class="toc" id="toc">\n<h2>${tocTitle}</h2>\n${tocContent}</nav>\n`;
 }
 
 /**
@@ -155,7 +173,7 @@ export async function buildHtmlDocument(mdxFiles, title, options = {}) {
 
   const css = getTemplateCSS(template);
   // Generate TOC after content HTML is created, from actual rendered headings
-  const tocHtml = toc ? generateTableOfContents(contentHtml, maxDepth) : '';
+  const tocHtml = toc ? generateTableOfContents(contentHtml, language, maxDepth) : '';
 
   const html = `<!DOCTYPE html>
 <html lang="${language}">
