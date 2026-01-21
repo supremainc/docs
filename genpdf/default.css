@@ -75,6 +75,10 @@ header p {
   margin-bottom: 100px;
 }
 
+.toc.releasenotes ul ul > li:has(ul) {
+  display: none;
+}
+
 .toc h2 {
   font-size: 1.5em;
   font-weight: bold;
@@ -107,6 +111,12 @@ header p {
   border-bottom: .5pt solid rgba(0, 0, 0, 0.7);
   display: block;
   padding-bottom: 8.5pt;
+}
+
+.toc.releasenotes > ul ul li a {
+  color: #000;
+  border-bottom: none;
+  font-weight: 400;
 }
 
 .toc > ul ul li ul li a {
@@ -151,6 +161,10 @@ header p {
   margin-bottom: 15pt;
   font-size: 21pt;
   page-break-before: always;
+}
+
+.doc-section.releasenotes > h2 {
+  display: none;
 }
 
 .doc-section h3 {
@@ -1024,4 +1038,28 @@ footer {
       font-size: .75rem;
       font-family: 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans';
   }
+}
+
+/* BugLists Component Styles */
+.bug-lists {
+  margin: 1.5rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bug-lists ol,
+.bug-lists ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.bug-lists ol li,
+.bug-lists ul li {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+.bug-lists li::marker {
+  font-weight: 500;
 }
