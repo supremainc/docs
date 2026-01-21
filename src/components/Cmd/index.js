@@ -5,12 +5,18 @@ import { translate } from '@docusaurus/Translate';
 import clsx from 'clsx';
 import koLocale from './ko.json';
 import enLocale from './en.json';
+import jaLocale from './ja.json';
+import esLocale from './es.json';
 import xkoLocale from './x/ko.json';
 import xenLocale from './x/en.json';
+import xjaLocale from './x/ja.json';
+import xesLocale from './x/es.json';
 import devkoLocale from './device/ko.json';
 import devenLocale from './device/en.json';
 import glossary_ko from '@site/i18n/ko/glossary.json';
 import glossary_en from '@site/i18n/en/glossary.json';
+import glossary_ja from '@site/i18n/ja/glossary.json';
+import glossary_es from '@site/i18n/es/glossary.json';
 import air_ko from './air/ko.json';
 import air_en from './air/en.json';
 
@@ -18,9 +24,8 @@ import air_en from './air/en.json';
 const localeMap = {
   ko: koLocale,
   en: enLocale,
-  // 향후 다른 언어 추가 예시:
-  // fr: frLocale,
-  // es: esLocale,
+  ja: jaLocale,
+  es: esLocale,
 };
 
 const deviceLocaleMap = {
@@ -36,16 +41,15 @@ const airLocaleMap = {
 const xlocaleMap = {
   ko: xkoLocale,
   en: xenLocale,
-  // 향후 다른 언어 추가 예시:
-  // fr: frLocale,
-  // es: esLocale,
+  ja: xjaLocale,
+  es: xesLocale,
 };
-
-
 
 const glossaryMap = {
   ko: glossary_ko,
   en: glossary_en,
+  ja: glossary_ja,
+  es: glossary_es,
 };
 
 // 중첩된 JSON 값에 접근하기 위한 함수
@@ -74,12 +78,15 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
             .replace(' <br>', ' ')
             .replace('<br> ', ' ')
             .replace('<br/>', ' ')
+            .replace('<br />', ' ')
             .replace(' <br> ', ' ')
             .replace(' </br> ', ' ')
             .replace('<br>', ' ')
             .replace('</br>', ' ')
+            .replace('<BR>', '')
             .replace('&sol;', '/')
             .replace('\\xB0\\x43', '℃').replace('\\xB0\\x46', '℉')
+            .replace(' <font size="1">※ｵﾝ時 ﾘﾚｰ非動作</font>', '')
           : null;
       }
     } else if (product === 'dev') {

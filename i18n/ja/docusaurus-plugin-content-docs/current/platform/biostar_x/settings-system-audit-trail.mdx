@@ -1,9 +1,9 @@
 ---
 id: settings-system-audit-trail
-title: 監査トレイルを管理する​
+title: 監査履歴を管理する​
 description: ユーザーの接続情報だけでなく、システムで変更されるすべての情報を追跡できます。​
 keywords:
-  - 監査トレイル​
+  - 監査履歴​
   - システム変更履歴​
   - audit trail​
   - ログ管理​
@@ -19,21 +19,21 @@ keywords:
 
 * **コンプライアンス**：アクセス記録の保存や監査レポートの作成ができます。​
 
-## 監査トレイルを使用する {#audit-trail-guide}​
+## 監査履歴を使用する
 
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
 2. 画面左のサイドバーで <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' /> をクリックします。​
 
-3. 監査トレイルの一覧が画面に表示されます。​
+3. 監査履歴の一覧が画面に表示されます。​
 
 <Image src='/img/biostarx-settings-system-audit-trail.png' />
 
 主要な追跡項目の詳細は[以下のドキュメント](#audit-trail-items)を参照してください。​
 
-### 追跡される操作タイプ {#method}​
+### 追跡される操作タイプ
 
-<Cmd sid='auditTrail.filter.title' product='2' /> セクションで <Cmd sid='auditTrail.method' product='2' /> オプションをクリックして、監査トレイルを次の動作タイプで分類します。
+<Cmd sid='auditTrail.filter.title' product='2' /> セクションで <Cmd sid='auditTrail.method' product='2' /> オプションをクリックして、監査履歴を次の動作タイプで分類します。
 
 <Image src='/img/biostarx-settings-system-audit-trail-action-filter.png' />
 
@@ -45,9 +45,9 @@ keywords:
 
 * <Cmd sid='audit.method.2' product='2' />：システム機能の実行（ログイン、デバイス制御など）​
 
-### 権限レベル別の分類 {#permision}​
+### 権限レベル別の分類
 
-管理者レベルに応じて監査トレイルを分類できます。 <Cmd sid='auditTrail.filter.title' product='2' /> セクションで <Cmd sid='user.bioStarOperator' product='2' /> オプションをクリックして、次の権限レベルでフィルタリングします。
+管理者レベルに応じて監査履歴を分類できます。 <Cmd sid='auditTrail.filter.title' product='2' /> セクションで <Cmd sid='user.bioStarOperator' product='2' /> オプションをクリックして、次の権限レベルでフィルタリングします。
 
 * <Cmd sid='audit.permission.1' product='2' />：すべてのシステム機能へのアクセス​
 
@@ -67,7 +67,7 @@ keywords:
 
 ## 期間設定の照会​
 
-照会する期間を設定し、特定期間の監査トレイル履歴を確認します。​
+照会する期間を設定し、特定期間の監査履歴履歴を確認します。​
 
 ### 事前定義された期間で照会​
 
@@ -83,11 +83,11 @@ keywords:
 
 ## フィルター設定​
 
-監査トレイル一覧を効率的に閲覧できるよう、さまざまな条件でフィルターします。​
+監査履歴一覧を効率的に閲覧できるよう、さまざまな条件でフィルターします。​
 
 <Image src='/img/biostarx-settings-system-audit-trail-list.png' />
 
-<Cmd sid='auditTrail.filter.title' product='2' /> セクションで次のオプションを設定できます。​ フィルターオプションは監査トレイル一覧の列項目と一致します。​ ただし、<Cmd sid='auditTrail.content' product='2' /> 列はフィルタリングできません。​
+<Cmd sid='auditTrail.filter.title' product='2' /> セクションで次のオプションを設定できます。​ フィルターオプションは監査履歴一覧の列項目と一致します。​ ただし、<Cmd sid='auditTrail.content' product='2' /> 列はフィルタリングできません。​
 
 * <Cmd sid='common.datetime' product='2' />：イベントが発生した日時​
 
@@ -133,7 +133,7 @@ keywords:
 
 ## CSV へのエクスポート
 
-監査トレイルの一覧をCSVファイルにエクスポートし、外部分析ツールで活用します。​
+監査履歴の一覧をCSVファイルにエクスポートし、外部分析ツールで活用します。​
 
 1. <Cmd sid='auditTrail.filter.title' product='2' /> セクションで必要に応じてフィルターを設定します。​
 
@@ -157,7 +157,7 @@ keywords:
 
 <Column className='padding--l20'>
 
-監査トレイルリストの列の位置を変更したり、非表示にしたりできます。 <Cmd sid='auditTrail.filter.title' product='2' /> セクションの一番右で <IcMoreW /> → <Cmd sid='menu.columnSetting' product='2' /> をクリックします。
+監査履歴リストの列の位置を変更したり、非表示にしたりできます。 <Cmd sid='auditTrail.filter.title' product='2' /> セクションの一番右で <IcMoreW /> → <Cmd sid='menu.columnSetting' product='2' /> をクリックします。
 
 * 列リストで非表示にしたい項目のチェックボックスの選択を解除します。
 
@@ -173,7 +173,7 @@ keywords:
 
 ## 主要監査項目 {#audit-trail-items}
 
-監査トレイルで記録されるすべてのアクティビティをカテゴリ別に整理しました。 各項目をクリックして詳細を確認します。
+監査履歴で記録されるすべてのアクティビティをカテゴリ別に整理しました。 各項目をクリックして詳細を確認します。
 
 <details>
 <summary>**システムアクセス**</summary>
@@ -305,7 +305,7 @@ keywords:
 
 * **モバイルクレデンシャル**：<Cmd sid='audit.setting.mobileCredential.use' product='2' />, <Cmd sid='audit.setting.mobileCredential.notUse' product='2' />
 
-* **監査トレイル**：<Cmd sid='audit.setting.audit.csv_export' product='2' />, <Cmd sid='reportApp.schedulePageTitle' product='2' /> 追加、修正、削除
+* **監査履歴**：<Cmd sid='audit.setting.audit.csv_export' product='2' />, <Cmd sid='reportApp.schedulePageTitle' product='2' /> 追加、修正、削除
 
 </details>
 
