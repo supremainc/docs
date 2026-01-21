@@ -871,13 +871,21 @@ footer {
   img[src*='bew3-component-device'], img[src*='bew3-component-bracket'] {
     height: 164px;
   }
-  img[src*='component-pvc-anchors2'], img[src*='component-fixing-screws2'], img[src*='component-shrink-tube'] {
+  img[src*='component-pvc-anchors2'], img[src*='component-fixing-screws2'], img[src*='component-fixing-screws6'], img[src*='component-shrink-tube'] {
     width: auto;
     height: 85px;
   }
   img[src*='component-bracket-fixing-screw'] {
     width: auto;
     height: 48px;
+  }
+  img[src*='component-screws12'], img[src*='component-spacer6'] {
+    width: auto;
+    height: 63px;
+  }
+  img[src*='component-diode4'] {
+    width: auto;
+    height: 76px;
   }
   img[src*='component-quick-guide'], img[src*='component-oss-guide'] {
     width: auto;

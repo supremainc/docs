@@ -140,16 +140,35 @@ function buildSpecSectionAst(data, language = 'ko') {
 
   /**
    * Build list items from array or object values
+   * Supports HTML tags within list item text
    */
   const buildListItems = (items) => {
     if (!items) return [];
     const itemsList = Array.isArray(items) ? items : Object.values(items);
-    return itemsList.map(item => ({
-      type: 'element',
-      tagName: 'li',
-      properties: {},
-      children: typeof item === 'string' ? [{ type: 'text', value: item }] : [{ type: 'text', value: String(item) }]
-    }));
+    return itemsList.map(item => {
+      let children = [];
+      
+      if (typeof item === 'string') {
+        // Check if string contains HTML tags (e.g., <sup>, <a>, etc.)
+        if (isHtmlString(item)) {
+          // Parse HTML and use parsed nodes as children
+          children = parseHtmlToAst(item);
+        } else {
+          // Plain text string
+          children = [{ type: 'text', value: item }];
+        }
+      } else {
+        // Non-string items: convert to string
+        children = [{ type: 'text', value: String(item) }];
+      }
+      
+      return {
+        type: 'element',
+        tagName: 'li',
+        properties: {},
+        children: children
+      };
+    });
   };
 
   /**
@@ -1396,8 +1415,10 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         const rowspanAttr = attributes.find(attr => attr.name === 'rowspan');
 
         const properties = {};
-        if (colspanAttr) properties.colspan = parseInt(colspanAttr.value, 10);
-        if (rowspanAttr) properties.rowspan = parseInt(rowspanAttr.value, 10);
+        const colspan = getNumericAttributeValue(colspanAttr);
+        const rowspan = getNumericAttributeValue(rowspanAttr);
+        if (colspan) properties.colSpan = colspan;
+        if (rowspan) properties.rowSpan = rowspan;
 
         const replacement = {
           type: 'element',
@@ -1416,8 +1437,10 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         const rowspanAttr = attributes.find(attr => attr.name === 'rowspan');
 
         const properties = {};
-        if (colspanAttr) properties.colspan = parseInt(colspanAttr.value, 10);
-        if (rowspanAttr) properties.rowspan = parseInt(rowspanAttr.value, 10);
+        const colspan = getNumericAttributeValue(colspanAttr);
+        const rowspan = getNumericAttributeValue(rowspanAttr);
+        if (colspan) properties.colSpan = colspan;
+        if (rowspan) properties.rowSpan = rowspan;
 
         const replacement = {
           type: 'element',
