@@ -113,7 +113,7 @@
           ],
           "question": "El rostro está registrado pero la autenticación facial no se realiza correctamente y se producen errores con frecuencia.",
           "answer": [
-            "Consulte <a href='getting-started#cautions-enrolling-faces'>Precauciones para registrar rostros</a> y registre el rostro nuevamente.",
+            "Consulte <a href='getting-started#cautions-enrolling-faces'>Precauciones para enrolar rostros</a> y registre el rostro nuevamente.",
             "Si hay un gran número de rostros registrados, cambie <span class='cmd'>Matching Timeout</span> y vuelva a intentarlo."
           ]
         },
