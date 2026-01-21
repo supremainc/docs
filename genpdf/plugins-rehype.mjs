@@ -9,7 +9,7 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import rehypeParse from 'rehype-parse';
 import { unified } from 'unified';
-import { svgComponentsMap } from './svg-components-map.js';
+import { svgComponentsMap } from './svg-components-map.mjs';
 
 // Get current directory for relative imports
 const __filename = fileURLToPath(import.meta.url);

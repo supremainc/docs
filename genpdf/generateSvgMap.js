@@ -16,7 +16,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const MDX_COMPONENTS_PATH = resolve(__dirname, '../src/theme/MDXComponents.js');
-const OUTPUT_PATH = resolve('./svg-components-map.js');
+const OUTPUT_PATH = resolve('./svg-components-map.mjs');
 
 console.log('📖 MDXComponents.js 파싱 중...');
 console.log(`📁 입력: ${MDX_COMPONENTS_PATH}`);
@@ -49,7 +49,7 @@ try {
     process.exit(1);
   }
 
-  // svg-components-map.js 생성
+  // svg-components-map.mjs 생성
   const mapContent = `/**
  * SVG 컴포넌트 매핑 테이블
  * 자동 생성됨: utils/generateSvgMap.js
