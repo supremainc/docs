@@ -144,6 +144,14 @@ header p {
   display: none;
 }
 
+.doc-section.biostar-x > h1 {
+  display: none;
+}
+
+.content .doc-section.biostar-x:first-of-type {
+  display: block;
+}
+
 .doc-section {
   counter-reset: count;
 }
@@ -270,8 +278,6 @@ header p {
 .doc-content code {
   color: #1549c6;
   background-color: #dceaffd8;
-  border: 1px solid #dceaffd8;
-  border-radius: .3em;
   font-family: Noto Sans Coptic;
   position: relative;
 }
@@ -336,6 +342,10 @@ header p {
   height: auto;
 }
 
+.doc-content figure {
+  margin: 8px 0;
+}
+
 .doc-content img.none {
   border: none;
 }
@@ -377,6 +387,17 @@ html[lang='en'] .doc-content .container table {
 
 .doc-content .container .row.partname {
   display: block;
+}
+
+.doc-content .container .row.supported-device {
+  flex-wrap: nowrap;
+  break-inside: avoid;
+}
+
+.doc-content .container .row.supported-device img {
+  width: 65%;
+  margin: 0 auto;
+  border: none;
 }
 
 .doc-content .container .col {
@@ -676,12 +697,11 @@ footer {
 }
 
 .callout-commend {
-  border-left-color: #00b359;
+  border-left-color: #009400;
 }
 
 .callout-commend .callout-hint svg {
-  stroke: #00b359;
-  color: #00b359;
+  fill: #009400
 }
 
 .callout-commend {

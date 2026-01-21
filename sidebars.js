@@ -312,401 +312,401 @@ const sidebars = {
           ]
         },
         'platform/biostar_x/ui-launcher',
-        {
-          type: 'category',
-          label: '사용자',
-          link: {
-            type: 'doc',
-            id: 'platform/biostar_x/how-to-guide-user',
-          },
-          items: [
-            'platform/biostar_x/user-group-manage',
-            'platform/biostar_x/add-user',
-            'platform/biostar_x/add-user-basic-info',
-            {
-              type: 'category',
-              label: '사용자 크리덴셜 등록하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/enroll-credential'
-              },
-              items: [
-                'platform/biostar_x/enroll-credential-securitylevel',
-                'platform/biostar_x/enroll-credential-authmode',
-                'platform/biostar_x/enroll-credential-fingerprint',
-                'platform/biostar_x/enroll-credential-ir-face',
-                'platform/biostar_x/enroll-credential-face',
-                'platform/biostar_x/enroll-credential-card',
-                'platform/biostar_x/enroll-credential-mobile',
-                'platform/biostar_x/enroll-credential-qrbarcode',
-                'platform/biostar_x/enroll-credential-pin',
-              ]
-            },
-            'platform/biostar_x/set-permission',
-            'platform/biostar_x/set-user-advanced',
-            'platform/biostar_x/view-users',
-            {
-              type: 'category',
-              label: '사용자 관리하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/user-manage'
-              },
-              items: [
-                'platform/biostar_x/edit-user',
-                'platform/biostar_x/delete-user',
-                'platform/biostar_x/transfer-user-info-to-device',
-                // 'platform/biostar_x/delete-user-info-from-device',
-                'platform/biostar_x/trace-user-access-log',
-                'platform/biostar_x/export-import-user-info'
-              ]
-            },
-            // 'platform/biostar_x/user-template',
-            'platform/biostar_x/view-user-by-access',
-            'platform/biostar_x/login-with-mfa',
-            'platform/biostar_x/batch-import-face',
-            'platform/biostar_x/migration-face',
-            'platform/biostar_x/lockoverride'
-          ]
-        },
-        {
-          type: 'category',
-          label: '모니터링',
-          link: {
-            type: 'doc',
-            id: 'platform/biostar_x/how-to-guide-monitoring',
-          },
-          items: [
-            {
-              type: 'category',
-              label: '출입문 모니터링하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/monitoring-door'
-              },
-              items: [
-                'platform/biostar_x/check-door-status',
-                'platform/biostar_x/control-door',
-                'platform/biostar_x/control-door-slave-device',
-                'platform/biostar_x/control-elevator',
-                'platform/biostar_x/control-zone',
-              ]
-            },
-            'platform/biostar_x/monitoring-map',
-            'platform/biostar_x/monitoring-device',
-            'platform/biostar_x/monitoring-video',
-            'platform/biostar_x/monitoring-event'
-          ]
-        },
-        {
-          type: 'category',
-          label: '데이터',
-          link: {
-            type: 'doc',
-            id: 'platform/biostar_x/how-to-guide-data'
-          },
-          items: [
-            'platform/biostar_x/data-generate-reports',
-            'platform/biostar_x/data-automatic-report-schedule',
-            'platform/biostar_x/data-settings'
-          ]
-        },
-        {
-          type: 'category',
-          label: '대시보드',
-          key: "bsxDashboard",
-          link: {
-            type: 'doc',
-            id: 'platform/biostar_x/how-to-guide-dashboard',
-          },
-          items: [
-            'platform/biostar_x/dashboard-adding-widget',
-            'platform/biostar_x/dashboard-edit-widget',
-            'platform/biostar_x/dashboard-delete-widget'
-          ]
-        },
-        {
-          type: 'category',
-          label: '설정',
-          link: {
-            type: 'doc',
-            id: 'platform/biostar_x/how-to-guide-settings',
-          },
-          items: [
-            {
-              type: 'category',
-              label: '장치 관리하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/settings-manage-devices'
-              },
-              items: [
-                'platform/biostar_x/settings-manage-device-group',
-                'platform/biostar_x/settings-adding-devices',
-                'platform/biostar_x/settings-adding-wiegand',
-                'platform/biostar_x/settings-adding-slave-device',
-                'platform/biostar_x/settings-device-manage-device-users',
-                'platform/biostar_x/settings-device-upgrade-firmware',
-                'platform/biostar_x/settings-device-using-functions'
-              ]
-            },
-            {
-              type: 'category',
-              label: '장치 설정하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/settings-device-details'
-              },
-              items: [
-                'platform/biostar_x/settings-device-details-info',
-                'platform/biostar_x/settings-device-details-network',
-                'platform/biostar_x/settings-device-details-auth',
-                'platform/biostar_x/settings-device-details-advanced',
-                'platform/biostar_x/settings-device-details-thermal-mask',
-                'platform/biostar_x/settings-device-details-interphone',
-                'platform/biostar_x/settings-device-details-rtsp'
-              ]
-            },
-            'platform/biostar_x/settings-device-image-log',
-            'platform/biostar_x/settings-device-usb-agent',
-            'platform/biostar_x/settings-device-connection-manager',
-            {
-              type: 'category',
-              label: '출입문 관리하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/settings-manage-door'
-              },
-              items: [
-                'platform/biostar_x/settings-manage-door-group',
-                'platform/biostar_x/settings-door-add',
-                'platform/biostar_x/settings-door-edit-info',
-                'platform/biostar_x/settings-door-delete'
-              ]
-            },
-            {
-              type: 'category',
-              label: '운영 권한 관리하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/settings-manage-account'
-              },
-              items: [
-                'platform/biostar_x/settings-adding-custom-account',
-              ]
-            },
-            {
-              type: 'category',
-              label: '출입 통제 설정하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/settings-access-control'
-              },
-              items: [
-                'platform/biostar_x/settings-access-control-manage-access-level',
-                'platform/biostar_x/settings-access-control-manage-access-group',
-                'platform/biostar_x/settings-access-control-manage-floor-level',
-                'platform/biostar_x/settings-access-control-ac-status'
-              ]
-            },
-            'platform/biostar_x/settings-schedule',
-            'platform/biostar_x/settings-triger-and-action',
-            'platform/biostar_x/settings-event-log-import',
-            'platform/biostar_x/settings-alert',
-            {
-              type: 'category',
-              label: '크리덴셜 관리하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/settings-credential-manage'
-              },
-              items: [
-                'platform/biostar_x/settings-credential-card-manage',
-                'platform/biostar_x/settings-credential-wiegand-format',
-                'platform/biostar_x/settings-credential-smart-format',
-                'platform/biostar_x/settings-credential-mobile-access-card',
-                'platform/biostar_x/settings-credential-ir-face-group-matching'
-              ]
-            },
-            'platform/biostar_x/settings-card-printer',
-            'platform/biostar_x/settings-email-setting',
-            'platform/biostar_x/settings-custom-interface',
-            {
-              type: 'category',
-              label: '서버 설정하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/settings-server',
-              },
-              items: [
-                'platform/biostar_x/settings-server-server',
-                'platform/biostar_x/settings-server-https'
-              ]
-            },
-            {
-              type: 'category',
-              label: '라이선스 활성화하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/settings-license',
-              },
-              items: [
-                'platform/biostar_x/settings-license-biostar-x-license',
-                'platform/biostar_x/settings-license-device-license'
-              ]
-            },
-            {
-              type: 'category',
-              label: '시스템 설정하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/settings-system'
-              },
-              items: [
-                'platform/biostar_x/settings-system-audit-trail',
-                'platform/biostar_x/settings-system-system-backup',
-                'platform/biostar_x/settings-system-system-restore',
-                'platform/biostar_x/settings-system-security',
-                'platform/biostar_x/settings-system-daylight-saving-time'
-              ]
-            },
-            'platform/biostar_x/settings-preferences'
-          ]
-        },
-        {
-          type: 'category',
-          label: '고급 설정',
-          link: {
-            type: 'doc',
-            id: 'platform/biostar_x/how-to-guide-advanced-settings',
-          },
-          items: [
-            {
-              type: 'category',
-              label: '엘리베이터 관리하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/settings-manage-elevators'
-              },
-              items: [
-                'platform/biostar_x/settings-manage-elevators-group',
-                'platform/biostar_x/settings-elevators-add',
-                'platform/biostar_x/settings-elevators-edit-info',
-                'platform/biostar_x/settings-elevators-delete'
-              ]
-            },
-            {
-              type: 'category',
-              label: '고급 출입 통제 설정하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/settings-advanced-ac',
-              },
-              items: [
-                'platform/biostar_x/settings-advanced-ac-apb',
-                'platform/biostar_x/settings-advanced-ac-fire-alarm',
-                'platform/biostar_x/settings-advanced-ac-scheduled-lock',
-                'platform/biostar_x/settings-advanced-ac-scheduled-unlock',
-                'platform/biostar_x/settings-advanced-ac-intrusion-alarm',
-                'platform/biostar_x/settings-advanced-ac-interlock',
-                'platform/biostar_x/settings-advanced-ac-muster',
-                'platform/biostar_x/settings-advanced-ac-occupancy',
-                'platform/biostar_x/settings-advanced-ac-roll-call',
-              ]
-            },
-            {
-              type: 'category',
-              label: '비디오 설정하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/settings-videos'
-              },
-              items: [
-                'platform/biostar_x/settings-video-integration',
-                'platform/biostar_x/settings-videos-camera',
-                'platform/biostar_x/settings-videos-rule',
-              ]
-            },
-            {
-              type: 'category',
-              label: '맵 관리하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/settings-map-management'
-              },
-              items: [
-                'platform/biostar_x/settings-map-manage-floor',
-                'platform/biostar_x/settings-map-manage-facility',
-                'platform/biostar_x/settings-map-manage-area'
-              ]
-            },
-            'platform/biostar_x/settings-visitor',
-            'platform/biostar_x/settings-diretory-integration',
-            'platform/biostar_x/settings-remote-access',
-            'platform/biostar_x/settings-virtual-device-event-log'
-          ]
-        },
-        {
-          type: 'category',
-          label: '플러그인',
-          link: {
-            type: 'doc',
-            id: 'platform/biostar_x/plugins',
-          },
-          items: [
-            {
-              type: 'category',
-              label: '근태 관리 사용하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/tna',
-              },
-              items: [
-                'platform/biostar_x/tna-rule-setting',
-                'platform/biostar_x/tna-rule-shift-paycode',
-                'platform/biostar_x/tna-rule-shift-day',
-                'platform/biostar_x/tna-rule-shift-schedule',
-                'platform/biostar_x/tna-rule-shift-overtime',
-                'platform/biostar_x/tna-rule-schedule',
-                'platform/biostar_x/tna-report',
-                'platform/biostar_x/tna-report-edit',
-                'platform/biostar_x/tna-settings'
-              ]
-            },
-            {
-              type: 'category',
-              label: '방문자 신청 및 관리하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/visitor',
-              },
-              items: [
-                'platform/biostar_x/visitor-register',
-                'platform/biostar_x/visitor-register-manage',
-                'platform/biostar_x/visitor-register-checkin-manage',
-                'platform/biostar_x/visitor-register-checkout-manage',
-                'platform/biostar_x/visitor-register-all-manage',
-                'platform/biostar_x/visitor-remove-expire-personal'
-              ]
-            }
-          ]
-        },
-        {
-          type: 'category',
-          label: 'UI 알아보기',
-          link: {
-            type: 'doc',
-            id: 'platform/biostar_x/ui-overview'
-          },
-          items: [
-            'platform/biostar_x/ui-common',
-            'platform/biostar_x/ui-user',
-            'platform/biostar_x/ui-monitoring',
-            'platform/biostar_x/ui-dashboard',
-            'platform/biostar_x/ui-settings'
-          ]
-        },
-        'platform/biostar_x/licensing'
+        // {
+        //   type: 'category',
+        //   label: '사용자',
+        //   link: {
+        //     type: 'doc',
+        //     id: 'platform/biostar_x/how-to-guide-user',
+        //   },
+        //   items: [
+        //     'platform/biostar_x/user-group-manage',
+        //     'platform/biostar_x/add-user',
+        //     'platform/biostar_x/add-user-basic-info',
+        //     {
+        //       type: 'category',
+        //       label: '사용자 크리덴셜 등록하기',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'platform/biostar_x/enroll-credential'
+        //       },
+        //       items: [
+        //         'platform/biostar_x/enroll-credential-securitylevel',
+        //         'platform/biostar_x/enroll-credential-authmode',
+        //         'platform/biostar_x/enroll-credential-fingerprint',
+        //         'platform/biostar_x/enroll-credential-ir-face',
+        //         'platform/biostar_x/enroll-credential-face',
+        //         'platform/biostar_x/enroll-credential-card',
+        //         'platform/biostar_x/enroll-credential-mobile',
+        //         'platform/biostar_x/enroll-credential-qrbarcode',
+        //         'platform/biostar_x/enroll-credential-pin',
+        //       ]
+        //     },
+        //     'platform/biostar_x/set-permission',
+        //     'platform/biostar_x/set-user-advanced',
+        //     'platform/biostar_x/view-users',
+        //     {
+        //       type: 'category',
+        //       label: '사용자 관리하기',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'platform/biostar_x/user-manage'
+        //       },
+        //       items: [
+        //         'platform/biostar_x/edit-user',
+        //         'platform/biostar_x/delete-user',
+        //         'platform/biostar_x/transfer-user-info-to-device',
+        //         // 'platform/biostar_x/delete-user-info-from-device',
+        //         'platform/biostar_x/trace-user-access-log',
+        //         'platform/biostar_x/export-import-user-info'
+        //       ]
+        //     },
+        //     // 'platform/biostar_x/user-template',
+        //     'platform/biostar_x/view-user-by-access',
+        //     'platform/biostar_x/login-with-mfa',
+        //     'platform/biostar_x/batch-import-face',
+        //     'platform/biostar_x/migration-face',
+        //     'platform/biostar_x/lockoverride'
+        //   ]
+        // },
+        // {
+        //   type: 'category',
+        //   label: '모니터링',
+        //   link: {
+        //     type: 'doc',
+        //     id: 'platform/biostar_x/how-to-guide-monitoring',
+        //   },
+        //   items: [
+        //     {
+        //       type: 'category',
+        //       label: '출입문 모니터링하기',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'platform/biostar_x/monitoring-door'
+        //       },
+        //       items: [
+        //         'platform/biostar_x/check-door-status',
+        //         'platform/biostar_x/control-door',
+        //         'platform/biostar_x/control-door-slave-device',
+        //         'platform/biostar_x/control-elevator',
+        //         'platform/biostar_x/control-zone',
+        //       ]
+        //     },
+        //     'platform/biostar_x/monitoring-map',
+        //     'platform/biostar_x/monitoring-device',
+        //     'platform/biostar_x/monitoring-video',
+        //     'platform/biostar_x/monitoring-event'
+        //   ]
+        // },
+        // {
+        //   type: 'category',
+        //   label: '데이터',
+        //   link: {
+        //     type: 'doc',
+        //     id: 'platform/biostar_x/how-to-guide-data'
+        //   },
+        //   items: [
+        //     'platform/biostar_x/data-generate-reports',
+        //     'platform/biostar_x/data-automatic-report-schedule',
+        //     'platform/biostar_x/data-settings'
+        //   ]
+        // },
+        // {
+        //   type: 'category',
+        //   label: '대시보드',
+        //   key: "bsxDashboard",
+        //   link: {
+        //     type: 'doc',
+        //     id: 'platform/biostar_x/how-to-guide-dashboard',
+        //   },
+        //   items: [
+        //     'platform/biostar_x/dashboard-adding-widget',
+        //     'platform/biostar_x/dashboard-edit-widget',
+        //     'platform/biostar_x/dashboard-delete-widget'
+        //   ]
+        // },
+        // {
+        //   type: 'category',
+        //   label: '설정',
+        //   link: {
+        //     type: 'doc',
+        //     id: 'platform/biostar_x/how-to-guide-settings',
+        //   },
+        //   items: [
+        //     {
+        //       type: 'category',
+        //       label: '장치 관리하기',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'platform/biostar_x/settings-manage-devices'
+        //       },
+        //       items: [
+        //         'platform/biostar_x/settings-manage-device-group',
+        //         'platform/biostar_x/settings-adding-devices',
+        //         'platform/biostar_x/settings-adding-wiegand',
+        //         'platform/biostar_x/settings-adding-slave-device',
+        //         'platform/biostar_x/settings-device-manage-device-users',
+        //         'platform/biostar_x/settings-device-upgrade-firmware',
+        //         'platform/biostar_x/settings-device-using-functions'
+        //       ]
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: '장치 설정하기',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'platform/biostar_x/settings-device-details'
+        //       },
+        //       items: [
+        //         'platform/biostar_x/settings-device-details-info',
+        //         'platform/biostar_x/settings-device-details-network',
+        //         'platform/biostar_x/settings-device-details-auth',
+        //         'platform/biostar_x/settings-device-details-advanced',
+        //         'platform/biostar_x/settings-device-details-thermal-mask',
+        //         'platform/biostar_x/settings-device-details-interphone',
+        //         'platform/biostar_x/settings-device-details-rtsp'
+        //       ]
+        //     },
+        //     'platform/biostar_x/settings-device-image-log',
+        //     'platform/biostar_x/settings-device-usb-agent',
+        //     'platform/biostar_x/settings-device-connection-manager',
+        //     {
+        //       type: 'category',
+        //       label: '출입문 관리하기',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'platform/biostar_x/settings-manage-door'
+        //       },
+        //       items: [
+        //         'platform/biostar_x/settings-manage-door-group',
+        //         'platform/biostar_x/settings-door-add',
+        //         'platform/biostar_x/settings-door-edit-info',
+        //         'platform/biostar_x/settings-door-delete'
+        //       ]
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: '운영 권한 관리하기',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'platform/biostar_x/settings-manage-account'
+        //       },
+        //       items: [
+        //         'platform/biostar_x/settings-adding-custom-account',
+        //       ]
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: '출입 통제 설정하기',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'platform/biostar_x/settings-access-control'
+        //       },
+        //       items: [
+        //         'platform/biostar_x/settings-access-control-manage-access-level',
+        //         'platform/biostar_x/settings-access-control-manage-access-group',
+        //         'platform/biostar_x/settings-access-control-manage-floor-level',
+        //         'platform/biostar_x/settings-access-control-ac-status'
+        //       ]
+        //     },
+        //     'platform/biostar_x/settings-schedule',
+        //     'platform/biostar_x/settings-triger-and-action',
+        //     'platform/biostar_x/settings-event-log-import',
+        //     'platform/biostar_x/settings-alert',
+        //     {
+        //       type: 'category',
+        //       label: '크리덴셜 관리하기',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'platform/biostar_x/settings-credential-manage'
+        //       },
+        //       items: [
+        //         'platform/biostar_x/settings-credential-card-manage',
+        //         'platform/biostar_x/settings-credential-wiegand-format',
+        //         'platform/biostar_x/settings-credential-smart-format',
+        //         'platform/biostar_x/settings-credential-mobile-access-card',
+        //         'platform/biostar_x/settings-credential-ir-face-group-matching'
+        //       ]
+        //     },
+        //     'platform/biostar_x/settings-card-printer',
+        //     'platform/biostar_x/settings-email-setting',
+        //     'platform/biostar_x/settings-custom-interface',
+        //     {
+        //       type: 'category',
+        //       label: '서버 설정하기',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'platform/biostar_x/settings-server',
+        //       },
+        //       items: [
+        //         'platform/biostar_x/settings-server-server',
+        //         'platform/biostar_x/settings-server-https'
+        //       ]
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: '라이선스 활성화하기',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'platform/biostar_x/settings-license',
+        //       },
+        //       items: [
+        //         'platform/biostar_x/settings-license-biostar-x-license',
+        //         'platform/biostar_x/settings-license-device-license'
+        //       ]
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: '시스템 설정하기',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'platform/biostar_x/settings-system'
+        //       },
+        //       items: [
+        //         'platform/biostar_x/settings-system-audit-trail',
+        //         'platform/biostar_x/settings-system-system-backup',
+        //         'platform/biostar_x/settings-system-system-restore',
+        //         'platform/biostar_x/settings-system-security',
+        //         'platform/biostar_x/settings-system-daylight-saving-time'
+        //       ]
+        //     },
+        //     'platform/biostar_x/settings-preferences'
+        //   ]
+        // },
+        // {
+        //   type: 'category',
+        //   label: '고급 설정',
+        //   link: {
+        //     type: 'doc',
+        //     id: 'platform/biostar_x/how-to-guide-advanced-settings',
+        //   },
+        //   items: [
+        //     {
+        //       type: 'category',
+        //       label: '엘리베이터 관리하기',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'platform/biostar_x/settings-manage-elevators'
+        //       },
+        //       items: [
+        //         'platform/biostar_x/settings-manage-elevators-group',
+        //         'platform/biostar_x/settings-elevators-add',
+        //         'platform/biostar_x/settings-elevators-edit-info',
+        //         'platform/biostar_x/settings-elevators-delete'
+        //       ]
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: '고급 출입 통제 설정하기',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'platform/biostar_x/settings-advanced-ac',
+        //       },
+        //       items: [
+        //         'platform/biostar_x/settings-advanced-ac-apb',
+        //         'platform/biostar_x/settings-advanced-ac-fire-alarm',
+        //         'platform/biostar_x/settings-advanced-ac-scheduled-lock',
+        //         'platform/biostar_x/settings-advanced-ac-scheduled-unlock',
+        //         'platform/biostar_x/settings-advanced-ac-intrusion-alarm',
+        //         'platform/biostar_x/settings-advanced-ac-interlock',
+        //         'platform/biostar_x/settings-advanced-ac-muster',
+        //         'platform/biostar_x/settings-advanced-ac-occupancy',
+        //         'platform/biostar_x/settings-advanced-ac-roll-call',
+        //       ]
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: '비디오 설정하기',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'platform/biostar_x/settings-videos'
+        //       },
+        //       items: [
+        //         'platform/biostar_x/settings-video-integration',
+        //         'platform/biostar_x/settings-videos-camera',
+        //         'platform/biostar_x/settings-videos-rule',
+        //       ]
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: '맵 관리하기',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'platform/biostar_x/settings-map-management'
+        //       },
+        //       items: [
+        //         'platform/biostar_x/settings-map-manage-floor',
+        //         'platform/biostar_x/settings-map-manage-facility',
+        //         'platform/biostar_x/settings-map-manage-area'
+        //       ]
+        //     },
+        //     'platform/biostar_x/settings-visitor',
+        //     'platform/biostar_x/settings-diretory-integration',
+        //     'platform/biostar_x/settings-remote-access',
+        //     'platform/biostar_x/settings-virtual-device-event-log'
+        //   ]
+        // },
+        // {
+        //   type: 'category',
+        //   label: '플러그인',
+        //   link: {
+        //     type: 'doc',
+        //     id: 'platform/biostar_x/plugins',
+        //   },
+        //   items: [
+        //     {
+        //       type: 'category',
+        //       label: '근태 관리 사용하기',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'platform/biostar_x/tna',
+        //       },
+        //       items: [
+        //         'platform/biostar_x/tna-rule-setting',
+        //         'platform/biostar_x/tna-rule-shift-paycode',
+        //         'platform/biostar_x/tna-rule-shift-day',
+        //         'platform/biostar_x/tna-rule-shift-schedule',
+        //         'platform/biostar_x/tna-rule-shift-overtime',
+        //         'platform/biostar_x/tna-rule-schedule',
+        //         'platform/biostar_x/tna-report',
+        //         'platform/biostar_x/tna-report-edit',
+        //         'platform/biostar_x/tna-settings'
+        //       ]
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: '방문자 신청 및 관리하기',
+        //       link: {
+        //         type: 'doc',
+        //         id: 'platform/biostar_x/visitor',
+        //       },
+        //       items: [
+        //         'platform/biostar_x/visitor-register',
+        //         'platform/biostar_x/visitor-register-manage',
+        //         'platform/biostar_x/visitor-register-checkin-manage',
+        //         'platform/biostar_x/visitor-register-checkout-manage',
+        //         'platform/biostar_x/visitor-register-all-manage',
+        //         'platform/biostar_x/visitor-remove-expire-personal'
+        //       ]
+        //     }
+        //   ]
+        // },
+        // {
+        //   type: 'category',
+        //   label: 'UI 알아보기',
+        //   link: {
+        //     type: 'doc',
+        //     id: 'platform/biostar_x/ui-overview'
+        //   },
+        //   items: [
+        //     'platform/biostar_x/ui-common',
+        //     'platform/biostar_x/ui-user',
+        //     'platform/biostar_x/ui-monitoring',
+        //     'platform/biostar_x/ui-dashboard',
+        //     'platform/biostar_x/ui-settings'
+        //   ]
+        // },
+        // 'platform/biostar_x/licensing'
       ],
     },
     'platform/biostar_x/appendices',
