@@ -33,7 +33,7 @@ export function extractDocIds(config, docIds = [], index = 0) {
       // (This is the category that comes after type: html)
       if (item.type === 'category' && 
           nextItem === undefined && // nextItem doesn't exist or is skipped
-          (item.label === '릴리스 노트' || item.label === 'Release Notes')) {
+          (item.label === '릴리스 노트' || item.label === 'Release Notes' || item.label === 'リリースノート' || item.label.toLowerCase() === 'notas de la versión')) {
         continue;
       }
       
@@ -41,7 +41,7 @@ export function extractDocIds(config, docIds = [], index = 0) {
       if (item.type === 'html' && 
           nextItem && 
           nextItem.type === 'category' &&
-          (nextItem.label === '릴리스 노트' || nextItem.label === 'Release Notes')) {
+          (item.label === '릴리스 노트' || item.label === 'Release Notes' || item.label === 'リリースノート' || item.label.toLowerCase() === 'notas de la versión')) {
         i++; // Skip the next item (release notes category)
         continue;
       }
@@ -51,7 +51,7 @@ export function extractDocIds(config, docIds = [], index = 0) {
   } else if (typeof config === 'object' && config !== null) {
     // Skip if this is a release notes category
     if (config.type === 'category' && 
-        (config.label === '릴리스 노트' || config.label === 'Release Notes')) {
+        (config.label === '릴리스 노트' || config.label === 'Release Notes' || config.label === 'リリースノート' || config.label.toLowerCase() === 'notas de la versión')) {
       return docIds;
     }
     
