@@ -16,8 +16,7 @@
                "en": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
                "es": "125kHz EM y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
                "ja": "125kHz EM および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>、FeliCa"
-              },
-              "annotation_value": "anno1"
+              }
             },
             "model2": {
               "label": "XP2-MAPB",
@@ -26,8 +25,7 @@
                 "en": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
                 "es": "125kHz EM, HID Prox y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
                 "ja": "125kHz EM、HID Prox および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>、FeliCa、iCLASS SE/SR/Seos"
-              },
-              "annotation_value": "anno1"
+              }
             },
             "model3": {
               "label": "XP2-MAPB-H",
