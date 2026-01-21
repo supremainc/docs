@@ -1252,6 +1252,31 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         parent.children[index] = replacement;
       }
 
+      // Process Steps components
+      if (node.type === 'mdxJsxFlowElement' && node.name === 'Steps') {
+        const replacement = {
+          type: 'element',
+          tagName: 'div',
+          properties: { className: ['fdsteps'] },
+          children: node.children || []
+        };
+
+        parent.children[index] = replacement;
+        return;
+      }
+
+      if (node.type === 'mdxJsxFlowElement' && node.name === 'Step') {
+        const replacement = {
+          type: 'element',
+          tagName: 'div',
+          properties: { className: ['fdstep'] },
+          children: node.children || []
+        };
+
+        parent.children[index] = replacement;
+        return;
+      }
+
       // Process Badge components
       if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Badge') {
         const attributes = node.attributes || [];

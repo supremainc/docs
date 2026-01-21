@@ -16,7 +16,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const MDX_COMPONENTS_PATH = resolve(__dirname, '../src/theme/MDXComponents.js');
-const OUTPUT_PATH = resolve(__dirname, '../genpdf/svg-components-map.js');
+const OUTPUT_PATH = resolve('./svg-components-map.js');
 
 console.log('📖 MDXComponents.js 파싱 중...');
 console.log(`📁 입력: ${MDX_COMPONENTS_PATH}`);

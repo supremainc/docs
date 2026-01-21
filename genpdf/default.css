@@ -5,6 +5,8 @@
   --ifm-color-cmd: #a32343;
   --ifm-color-nextstep-background: #f5f5f5;
   --ifm-color-border: #adadad;
+  --color-fd-secondary-foreground: #e8e8e8;
+  --ifm-color-color-gray: #333;
 }
 
 * {
@@ -219,6 +221,49 @@ header p {
 
 .doc-content h3 + hr {
   margin-top: 0;
+}
+
+.doc-content .fdsteps {
+  counter-reset: step;
+  border-left: 1px solid var(--ifm-color-color-gray);
+  margin-left: 1rem;
+  padding-left: 1rem;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.doc-content .fdstep {
+  padding-bottom: .2rem;
+}
+
+.doc-content .fdstep h2 {
+  padding-top: 0.2rem;
+}
+
+.doc-content .fdstep h4 {
+  margin-top: 2rem;
+}
+
+.doc-content .fdsteps .fdstep:last-of-type {
+  padding-bottom: 0;
+}
+
+.doc-content .fdstep:before {
+  background-color: var(--ifm-color-cmd);
+  color: var(--color-fd-secondary-foreground);
+  content: counter(step);
+  counter-increment: step;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  font-size: 10pt;
+  font-weight: bold;
+  line-height: 1.25rem;
+  display: flex;
+  position: absolute;
+  left: -.7rem;
 }
 
 .description {
