@@ -44,7 +44,8 @@ import {
   rehypeProcessMdxElements,
   rehypeProcessColumnsComponent,
   rehypeAddCalloutIcons,
-  rehypeRemoveNoteIndicator
+  rehypeRemoveNoteIndicator,
+  rehypeProcessBugListsComponent
 } from './plugins-rehype.mjs';
 
 /**
@@ -178,6 +179,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(rehypeProcessMdxElements, translations, basePath, language)
     .use(rehypeProcessCmdComponent, language)
     .use(rehypeProcessColumnsComponent)
+    .use(rehypeProcessBugListsComponent)
     .use(rehypeAddCalloutIcons)
     .use(rehypeRemoveNoteIndicator)
     

@@ -1039,3 +1039,27 @@ footer {
       font-family: 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans';
   }
 }
+
+/* BugLists Component Styles */
+.bug-lists {
+  margin: 1.5rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bug-lists ol,
+.bug-lists ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.bug-lists ol li,
+.bug-lists ul li {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+.bug-lists li::marker {
+  font-weight: 500;
+}
