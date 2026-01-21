@@ -20,7 +20,7 @@ import { fileURLToPath } from 'url';
 import { program } from 'commander';
 import { loadTranslations, ROOT_DIR } from './config.mjs';
 import { extractHeadingsFromMarkdown } from './utils.mjs';
-import { loadMdxFile, extractDocIds, extractDocIdsWithDepth } from './loader.mjs';
+import { loadMdxFile, extractDocIds, extractDocIdsWithDepth, extractReleaseNoteIds, extractReleaseNoteIdsWithDepth } from './loader.mjs';
 import { buildHtmlDocument } from './html.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -37,6 +37,7 @@ program
   .option('-l, --language <lang>', 'Language for i18n (ko, en, es, ja)', 'ko')
   .option('--toc', 'Generate table of contents', true)
   .option('--max-depth <number>', 'Maximum heading depth for TOC', '3')
+  .option('--rn', 'Extract release notes only', false)
   .parse(process.argv);
 
 const options = program.opts();
@@ -82,11 +83,20 @@ async function main() {
     // Load translations
     const translations = loadTranslations(options.language);
     console.log(`📚 Translations loaded for language: ${options.language}`);
+    if (options.rn) {
+      console.log(`📋 Mode: Release Notes only`);
+    }
     console.log('');
 
-    // Extract doc IDs with depth information for hierarchy tracking
-    const docIdsWithDepth = extractDocIdsWithDepth(sidebars[sidebarKey]);
-    console.log(`📄 Found ${docIdsWithDepth.length} documents in sidebar\n`);
+    // Extract doc IDs based on --rn flag
+    let docIdsWithDepth;
+    if (options.rn) {
+      docIdsWithDepth = extractReleaseNoteIdsWithDepth(sidebars[sidebarKey]);
+      console.log(`📄 Found ${docIdsWithDepth.length} release note documents in sidebar\n`);
+    } else {
+      docIdsWithDepth = extractDocIdsWithDepth(sidebars[sidebarKey]);
+      console.log(`📄 Found ${docIdsWithDepth.length} documents in sidebar\n`);
+    }
 
     // Load all MDX files with depth information
     const mdxFiles = docIdsWithDepth
@@ -129,7 +139,8 @@ async function main() {
       language: options.language,
       product: options.product,
       translations,
-      basePath: ROOT_DIR
+      basePath: ROOT_DIR,
+      rn: options.rn
     });
 
     // Write output file

@@ -147,6 +147,125 @@ export function extractDocIdsWithDepth(config, docIds = [], depth = 0) {
 }
 
 /**
+ * Recursively extract release note doc IDs from sidebar configuration
+ * Only extracts items from release notes sections
+ * @param {Array|Object} config - Sidebar configuration
+ * @param {Array} docIds - Accumulator
+ * @returns {Array} Array of doc IDs
+ */
+export function extractReleaseNoteIds(config, docIds = []) {
+  if (Array.isArray(config)) {
+    for (let i = 0; i < config.length; i++) {
+      const item = config[i];
+      extractReleaseNoteIds(item, docIds);
+    }
+    return docIds;
+  } else if (typeof config === 'object' && config !== null) {
+    // Check if this is a release notes category
+    if (config.type === 'category' && 
+        (config.label === '릴리스 노트' || config.label === 'Release Notes' || config.label === 'リリースノート' || (config.label && config.label.toLowerCase() === 'notas de la versión'))) {
+      // Include link.id if it exists
+      if (config.link && config.link.type === 'doc' && config.link.id) {
+        docIds.push(config.link.id);
+      }
+      // Process items within release notes
+      if (config.items && Array.isArray(config.items)) {
+        extractReleaseNoteIds(config.items, docIds);
+      }
+      return docIds;
+    }
+    
+    // Skip html type items (they're just visual separators)
+    if (config.type === 'html') {
+      return docIds;
+    }
+    
+    // For other categories, check if they contain release notes
+    if (config.items && Array.isArray(config.items)) {
+      // Check if any item in this category is a release notes section
+      const hasReleaseNotes = config.items.some(item => 
+        item && typeof item === 'object' && item.type === 'category' &&
+        (item.label === '릴리스 노트' || item.label === 'Release Notes' || item.label === 'リリースノート' || (item.label && item.label.toLowerCase() === 'notas de la versión'))
+      );
+      
+      if (hasReleaseNotes) {
+        // Only process the release notes item
+        for (const item of config.items) {
+          if (item && typeof item === 'object' && item.type === 'category' &&
+              (item.label === '릴리스 노트' || item.label === 'Release Notes' || item.label === 'リリースノート' || (item.label && item.label.toLowerCase() === 'notas de la versión'))) {
+            extractReleaseNoteIds(item, docIds);
+            return docIds;
+          }
+        }
+      }
+    }
+  } else if (typeof config === 'string') {
+    docIds.push(config);
+  }
+  return docIds;
+}
+
+/**
+ * Recursively extract release note doc IDs with depth information from sidebar configuration
+ * Only extracts items from release notes sections with depth tracking
+ * @param {Array|Object} config - Sidebar configuration
+ * @param {Array} docIds - Accumulator
+ * @param {number} depth - Current depth in hierarchy (0-based)
+ * @returns {Array} Array of { docId, depth } objects
+ */
+export function extractReleaseNoteIdsWithDepth(config, docIds = [], depth = 0) {
+  if (Array.isArray(config)) {
+    for (let i = 0; i < config.length; i++) {
+      const item = config[i];
+      extractReleaseNoteIdsWithDepth(item, docIds, depth);
+    }
+    return docIds;
+  } else if (typeof config === 'object' && config !== null) {
+    // Check if this is a release notes category
+    if (config.type === 'category' && 
+        (config.label === '릴리스 노트' || config.label === 'Release Notes' || config.label === 'リリースノート' || (config.label && config.label.toLowerCase() === 'notas de la versión'))) {
+      // Include link.id if it exists
+      if (config.link && config.link.type === 'doc' && config.link.id) {
+        docIds.push({ docId: config.link.id, depth });
+      }
+      // Process items within release notes
+      if (config.items && Array.isArray(config.items)) {
+        extractReleaseNoteIdsWithDepth(config.items, docIds, depth + 1);
+      }
+      return docIds;
+    }
+    
+    // Skip html type items (they're just visual separators)
+    if (config.type === 'html') {
+      return docIds;
+    }
+    
+    // For other categories, check if they contain release notes
+    if (config.items && Array.isArray(config.items)) {
+      // Check if any item in this category is a release notes section
+      const hasReleaseNotes = config.items.some(item => 
+        item && typeof item === 'object' && item.type === 'category' &&
+        (item.label === '릴리스 노트' || item.label === 'Release Notes' || item.label === 'リリースノート' || (item.label && item.label.toLowerCase() === 'notas de la versión'))
+      );
+      
+      if (hasReleaseNotes) {
+        // Only process the release notes item
+        for (const item of config.items) {
+          if (item && typeof item === 'object' && item.type === 'category' &&
+              (item.label === '릴리스 노트' || item.label === 'Release Notes' || item.label === 'リリースノート' || (item.label && item.label.toLowerCase() === 'notas de la versión'))) {
+            extractReleaseNoteIdsWithDepth(item, docIds, depth);
+            return docIds;
+          }
+        }
+      }
+    }
+  } else if (typeof config === 'string') {
+    docIds.push({ docId: config, depth });
+  }
+  return docIds;
+}
+
+/**
  * Process file imports recursively to collect all import dependencies
  * Handles nested imports: A imports B, B imports C, etc.
  * @param {string} filePath - Current file path being processed

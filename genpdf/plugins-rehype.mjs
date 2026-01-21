@@ -1599,3 +1599,31 @@ export function rehypeRemoveNoteIndicator() {
     });
   };
 }
+
+/**
+ * Create a rehype plugin that processes BugLists component
+ * Converts <BugLists> JSX to <div class="bug-lists"> with list styling
+ */
+export function rehypeProcessBugListsComponent() {
+  return (tree) => {
+    visit(tree, (node) => {
+      // Look for mdxJsxFlowElement with name 'BugLists'
+      if (
+        node.type === 'mdxJsxFlowElement' && 
+        node.name === 'BugLists'
+      ) {
+        // Convert to a div with bug-lists class
+        node.type = 'element';
+        node.tagName = 'div';
+        node.name = undefined;
+        
+        // Set className property
+        node.properties = node.properties || {};
+        node.properties.className = ['bug-lists'];
+        
+        // Keep children as-is (they contain the list items)
+        return;
+      }
+    });
+  };
+}
