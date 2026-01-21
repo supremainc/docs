@@ -427,78 +427,92 @@ export function processImportsInMdx(content, basePath, currentFilePath = '') {
 
   // Replace MDX component usage with imported content
   // Pattern: <ComponentName props="value" /> or <ComponentName></ComponentName>
-  for (const [componentName, importedContent] of Object.entries(mdxImports)) {
-    // Match self-closing tags with attributes: <ComponentName attr1="val1" attr2="val2" />
-    const selfClosingRegex = new RegExp(`<${componentName}([^/>]*)\\s*/?>`, 'g');
-    // Match opening/closing tags with content
-    const closingRegex = new RegExp(`<${componentName}([^>]*)>.*?</${componentName}>`, 'gs');
+  // Must repeat until no more replacements occur to handle nested components
+  let previousContent = '';
+  let iterationCount = 0;
+  const maxIterations = 10; // Prevent infinite loops
+  
+  while (previousContent !== processedContent && iterationCount < maxIterations) {
+    previousContent = processedContent;
+    iterationCount++;
     
-    // Handle self-closing tags with props
-    processedContent = processedContent.replace(selfClosingRegex, (match, attributes, offset) => {
-      let replacedContent = importedContent;
+    for (const [componentName, importedContent] of Object.entries(mdxImports)) {
+      // Match self-closing tags with attributes: <ComponentName attr1="val1" attr2="val2" />
+      const selfClosingRegex = new RegExp(`<${componentName}([^/>]*)\\s*/?>`, 'g');
+      // Match opening/closing tags with content
+      const closingRegex = new RegExp(`<${componentName}([^>]*)>.*?</${componentName}>`, 'gs');
       
-      // Extract props from attributes
-      // Pattern: name="value" or name='value' or name={value} (JSX expression)
-      const propRegex = /(\w+)=(?:["']([^"']*?)["']|\{([^}]+)\})/g;
-      let propMatch;
+      // Handle self-closing tags with props
+      processedContent = processedContent.replace(selfClosingRegex, (match, attributes, offset) => {
+        let replacedContent = importedContent;
+        
+        // Extract props from attributes
+        // Pattern: name="value" or name='value' or name={value} (JSX expression)
+        const propRegex = /(\w+)=(?:["']([^"']*?)["']|\{([^}]+)\})/g;
+        let propMatch;
+        
+        while ((propMatch = propRegex.exec(attributes)) !== null) {
+          const propName = propMatch[1];
+          // Group 2: string value (with quotes), Group 3: JSX expression value (without quotes)
+          const propValue = propMatch[2] !== undefined ? propMatch[2] : propMatch[3];
+          // Replace {props.propName} with the actual value
+          replacedContent = replacedContent.replace(new RegExp(`\\{props\\.${propName}\\}`, 'g'), propValue);
+        }
+        
+        // Detect indentation before the component tag
+        const beforeMatch = processedContent.substring(0, offset);
+        const lastNewline = beforeMatch.lastIndexOf('\n');
+        const lineStart = lastNewline === -1 ? 0 : lastNewline + 1;
+        const indent = beforeMatch.substring(lineStart);
+        
+        // Check if the indent is only spaces
+        if (indent.match(/^\s*$/)) {
+          // Apply indentation to all lines of the imported content
+          replacedContent = replacedContent.split('\n').map((line, i) => {
+            return i === 0 ? line : indent + line;
+          }).join('\n');
+        }
+        
+        return replacedContent;
+      });
       
-      while ((propMatch = propRegex.exec(attributes)) !== null) {
-        const propName = propMatch[1];
-        // Group 2: string value (with quotes), Group 3: JSX expression value (without quotes)
-        const propValue = propMatch[2] !== undefined ? propMatch[2] : propMatch[3];
-        // Replace {props.propName} with the actual value
-        replacedContent = replacedContent.replace(new RegExp(`\\{props\\.${propName}\\}`, 'g'), propValue);
-      }
-      
-      // Detect indentation before the component tag
-      const beforeMatch = processedContent.substring(0, offset);
-      const lastNewline = beforeMatch.lastIndexOf('\n');
-      const lineStart = lastNewline === -1 ? 0 : lastNewline + 1;
-      const indent = beforeMatch.substring(lineStart);
-      
-      // Check if the indent is only spaces
-      if (indent.match(/^\s*$/)) {
-        // Apply indentation to all lines of the imported content
-        replacedContent = replacedContent.split('\n').map((line, i) => {
-          return i === 0 ? line : indent + line;
-        }).join('\n');
-      }
-      
-      return replacedContent;
-    });
-    
-    // Handle opening/closing tags with content and props
-    processedContent = processedContent.replace(closingRegex, (match, attributes, offset) => {
-      let replacedContent = importedContent;
-      
-      // Extract props from attributes
-      const propRegex = /(\w+)=(?:["']([^"']*?)["']|\{([^}]+)\})/g;
-      let propMatch;
-      
-      while ((propMatch = propRegex.exec(attributes)) !== null) {
-        const propName = propMatch[1];
-        // Group 2: string value (with quotes), Group 3: JSX expression value (without quotes)
-        const propValue = propMatch[2] !== undefined ? propMatch[2] : propMatch[3];
-        // Replace {props.propName} with the actual value
-        replacedContent = replacedContent.replace(new RegExp(`\\{props\\.${propName}\\}`, 'g'), propValue);
-      }
-      
-      // Detect indentation before the component tag
-      const beforeMatch = processedContent.substring(0, offset);
-      const lastNewline = beforeMatch.lastIndexOf('\n');
-      const lineStart = lastNewline === -1 ? 0 : lastNewline + 1;
-      const indent = beforeMatch.substring(lineStart);
-      
-      // Check if the indent is only spaces
-      if (indent.match(/^\s*$/)) {
-        // Apply indentation to all lines of the imported content
-        replacedContent = replacedContent.split('\n').map((line, i) => {
-          return i === 0 ? line : indent + line;
-        }).join('\n');
-      }
-      
-      return replacedContent;
-    });
+      // Handle opening/closing tags with content and props
+      processedContent = processedContent.replace(closingRegex, (match, attributes, offset) => {
+        let replacedContent = importedContent;
+        
+        // Extract props from attributes
+        const propRegex = /(\w+)=(?:["']([^"']*?)["']|\{([^}]+)\})/g;
+        let propMatch;
+        
+        while ((propMatch = propRegex.exec(attributes)) !== null) {
+          const propName = propMatch[1];
+          // Group 2: string value (with quotes), Group 3: JSX expression value (without quotes)
+          const propValue = propMatch[2] !== undefined ? propMatch[2] : propMatch[3];
+          // Replace {props.propName} with the actual value
+          replacedContent = replacedContent.replace(new RegExp(`\\{props\\.${propName}\\}`, 'g'), propValue);
+        }
+        
+        // Detect indentation before the component tag
+        const beforeMatch = processedContent.substring(0, offset);
+        const lastNewline = beforeMatch.lastIndexOf('\n');
+        const lineStart = lastNewline === -1 ? 0 : lastNewline + 1;
+        const indent = beforeMatch.substring(lineStart);
+        
+        // Check if the indent is only spaces
+        if (indent.match(/^\s*$/)) {
+          // Apply indentation to all lines of the imported content
+          replacedContent = replacedContent.split('\n').map((line, i) => {
+            return i === 0 ? line : indent + line;
+          }).join('\n');
+        }
+        
+        return replacedContent;
+      });
+    }
+  }
+  
+  if (iterationCount >= maxIterations) {
+    console.warn(`⚠️  Component replacement reached max iterations (${maxIterations}). Possible circular component references.`);
   }
 
   // Convert {#anchor} to [#anchor] AFTER props substitution is complete
