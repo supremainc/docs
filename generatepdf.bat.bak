@@ -75,4 +75,4 @@ pdfcpu viewerpref set "./pdf/%OUTPUT%" '{"FitWindow": true, "CenterWindow": true
 @REM 임시 파일 삭제
 del pdf\temp.pdf
 del pdf\front-cover.html
-@REM del pdf\document.html
+del pdf\document.html
