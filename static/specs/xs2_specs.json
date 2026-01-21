@@ -81,18 +81,16 @@
                "en": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
                "es": "125kHz EM y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
                "ja": "125kHz EM および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>、FeliCa"
-              },
-              "annotation_value": "anno1"
+              }
             },
             "model2": {
-              "label": "XS2-APB, XS2-QAPB,</br>XS2-OAPB",
+              "label": "XS2-APB, XS2-QAPB,<br/>XS2-OAPB",
               "value": {
                 "ko": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
                 "en": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
                 "es": "125kHz EM, HID Prox y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
                 "ja": "125kHz EM、HID Prox および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>、FeliCa、iCLASS SE/SR/Seos"
-              },
-              "annotation_value": "anno1"
+              }
             }
           }
         },
@@ -133,14 +131,13 @@
               "value": true
             },
             "model2": {
-              "label": "XS2-DPB, XS2-APB,</br>XS2-ODPB, XS2-OAPB",
+              "label": "XS2-DPB, XS2-APB,<br/>XS2-ODPB, XS2-OAPB",
               "value": {
                 "ko": "지원<sup id='anno4_dest'><a href='#anno4'></a></sup>",
                 "en": "Supported<sup id='anno4_dest'><a href='#anno4'></a></sup>",
                 "es": "Compatible<sup id='anno4_dest'><a href='#anno4'></a></sup>",
                 "ja": "サポート対象<sup id='anno4_dest'><a href='#anno4'></a></sup>"
-              },
-              "annotation_value": "anno4"
+              }
             }
           }
         }
@@ -267,7 +264,7 @@
           "type": "model",
           "items": {
             "model1": {
-              "label": "XS2-DPB, XS2-APB,</br>XS2-QDPB, XS2-QAPB",
+              "label": "XS2-DPB, XS2-APB,<br/>XS2-QDPB, XS2-QAPB",
               "value": {
                "ko": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, TELEC, RoHS, REACH, WEEE",
                "en": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, TELEC, RoHS, REACH, WEEE",
@@ -320,7 +317,7 @@
           "type": "model",
           "items": {
             "model1": {
-              "label": "XS2-DPB, XS2-APB,</br>XS2-QDPB, XS2-QAPB",
+              "label": "XS2-DPB, XS2-APB,<br/>XS2-QDPB, XS2-QAPB",
               "value": {
                 "ko": [ "카드: 500,000", "PIN: 500,000" ],
                 "en": [ "Card: 500,000", "PIN: 500,000" ],

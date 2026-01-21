@@ -1,0 +1,72 @@
+@echo off
+@REM 사전 설정
+@REM PRODUCT_NAME : 제품명
+@REM LANGUAGE : 문서 언어 (한국어, English, 日本語, Español)
+@REM PRODUCT_TYPE : 문서 종류 (예: UG, RN 등) IG: 설치 가이드, UG: 사용자 가이드, AG: 관리자 가이드, RN: 릴리즈 노트, 그 외에는 입력한 내용 그대로 출력됩니다.
+@REM VERSION : 문서 버전 (예: 1.0, 1.0.1 등)
+@REM DOCUMENT_NUMBER : 문서 번호 (예: 101.00.BS3)
+@REM SIDEBAR : sidebar.js 파일에 적용된 키 값을 입력하세요.
+@REM FILTER : 문서가 저장된 경로를 입력하세요. Include, Xclude 컴포넌트에서 사용하기 위한 값입니다.
+@REM RELEASE: 문서의 배포 날짜를 입력하세요.
+
+set PRODUCT_NAME=BioEntry W3
+set LANGUAGE=한국어
+set PRODUCT_TYPE=UG
+set VERSION=1.09
+set DOCUMENT_NUMBER=101.00.BS3
+set SIDEBAR=bioentryw3
+set FILTER=bioentry_w3
+set RELEASE=260121
+
+@REM SVG 파일 맵핑 파일 생성
+node ./genpdf/generateSvgMap.js
+
+@REM Cover 페이지 출력 단계
+node generate-cover-local.js --title="%PRODUCT_NAME%" --subtitle="%PRODUCT_TYPE%" --version="%VERSION%" --lang="%LANGUAGE%" --number="%DOCUMENT_NUMBER%" --output="./pdf/front-cover.html"
+
+@REM MDX to HTML 변환 단계
+if %LANGUAGE%==한국어 (
+  set LANGUAGE_CODE=ko
+  set LANG=KO
+  set BACK=back-cover.pdf
+) else if %LANGUAGE%==English (
+  set LANGUAGE_CODE=en
+  set LANG=EN
+  set BACK=back-cover-en.pdf
+) else if %LANGUAGE%==日本語 (
+  set LANGUAGE_CODE=ja
+  set LANG=JA
+  set BACK=back-cover-ja.pdf
+) else if %LANGUAGE%==Español (
+    set LANGUAGE_CODE=es
+    set LANG=ES
+    set BACK=back-cover-es.pdf
+) else (
+  set LANGUAGE_CODE=ko
+  set LANG=KO
+  set BACK=back-cover.pdf
+)
+
+@REM 문서 생성 단계
+set OUTPUT=%PRODUCT_NAME%_%PRODUCT_TYPE%_%VERSION%_%LANG%_%RELEASE%.pdf
+
+echo Generating PDF: %OUTPUT%
+node genpdf/index.mjs --sidebar %SIDEBAR% --product %FILTER% --language %LANGUAGE_CODE% --toc --output ./pdf/document.html --max-depth 2
+
+@REM PDF 변환 단계
+REM prince ./pdf/front-cover.html ./pdf/document.html -o ./pdf/temp.pdf
+prince ./pdf/front-cover.html ./pdf/document.html -o ./pdf/temp.pdf
+@REM 불필요한 주석 제거 명령
+pdfcpu annot remove -pages 1 ./pdf/temp.pdf Popup Text
+@REM 최종 PDF 병합
+%~dp0\genpdf\pdftk\pdftk "./pdf/temp.pdf" "./%BACK%" cat output "./pdf/%OUTPUT%"
+
+@REM PDF 문서 기본 설정
+pdfcpu pagemode set "./pdf/%OUTPUT%" UseOutlines
+pdfcpu pagelayout set "./pdf/%OUTPUT%" SinglePage
+pdfcpu viewerpref set "./pdf/%OUTPUT%" '{"FitWindow": true, "CenterWindow": true}'
+
+@REM 임시 파일 삭제
+del pdf\temp.pdf
+del pdf\front-cover.html
+del pdf\document.html
