@@ -298,6 +298,10 @@ header p {
   text-decoration: underline;
 }
 
+.doc-content a strong {
+  color: inherit;
+}
+
 .doc-content p.hasimg {
   display: block;
 }
@@ -471,6 +475,14 @@ html[lang='en'] .doc-content .container table {
 
 .doc-content table tr:nth-child(even) {
   background-color: #00000008;
+}
+
+.doc-content table td[rowspan='3'] + td {
+  height: 165px;
+}
+
+.doc-content table td[rowspan='3'] + td:has(img[src*='component-wall-bracket-dm20']) {
+  height: 45%;
 }
 
 .doc-content blockquote {
@@ -865,27 +877,39 @@ footer {
   .docs-content img {
     max-width: 65% !important;
   }
+  img[src*='component-resistor'] {
+    width: auto;
+    height: 30px !important;
+  }
   img[src*='component-connection-cables'] {
-    height: 110px;
+    height: 110px !important;
   }
   img[src*='bew3-component-device'], img[src*='bew3-component-bracket'] {
-    height: 164px;
+    height: 164px !important;
   }
-  img[src*='component-pvc-anchors2'], img[src*='component-fixing-screws2'], img[src*='component-fixing-screws6'], img[src*='component-shrink-tube'] {
+  img[src*='component-pvc-anchors'], img[src*='component-fixing-screws'], img[src*='component-shrink-tube'] {
     width: auto;
-    height: 85px;
+    height: 85px !important;
   }
-  img[src*='component-bracket-fixing-screw'] {
+  img[src*='component-terminal'] {
     width: auto;
-    height: 48px;
+    height: 82px !important;
+  }
+  img[src*='component-bracket-fixing-screw'], img[src*='component-ferrite-core'], img[src*='component-power-cable-screw'], img[src*='component-screws2'] {
+    width: auto;
+    height: 48px !important;
+  }
+  img[src*='component-device-screws'] {
+    width: auto;
+    height: 53px !important;
   }
   img[src*='component-screws12'], img[src*='component-spacer6'] {
     width: auto;
-    height: 63px;
+    height: 63px !important;
   }
   img[src*='component-diode4'] {
     width: auto;
-    height: 76px;
+    height: 76px !important;
   }
   img[src*='component-quick-guide'], img[src*='component-oss-guide'] {
     width: auto;
