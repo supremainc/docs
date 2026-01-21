@@ -11,9 +11,9 @@
 
 set PRODUCT_NAME=BioEntry W3
 set LANGUAGE=한국어
-set PRODUCT_TYPE=UG
-set VERSION=1.09
-set DOCUMENT_NUMBER=101.00.BS3
+set PRODUCT_TYPE=Firmware Release Notes
+set VERSION=1.0.1
+set DOCUMENT_NUMBER=102.00.BW3
 set SIDEBAR=bioentryw3
 set FILTER=bioentry_w3
 set RELEASE=260121
@@ -51,7 +51,13 @@ if %LANGUAGE%==한국어 (
 set OUTPUT=%PRODUCT_NAME%_%PRODUCT_TYPE%_%VERSION%_%LANG%_%RELEASE%.pdf
 
 echo Generating PDF: %OUTPUT%
-node genpdf/index.mjs --sidebar %SIDEBAR% --product %FILTER% --language %LANGUAGE_CODE% --toc --output ./pdf/document.html --max-depth 2
+if "%PRODUCT_TYPE%"=="RN" (
+  node genpdf/index.mjs --sidebar %SIDEBAR% --product %FILTER% --language %LANGUAGE_CODE% --toc --output ./pdf/document.html --max-depth 2 --rn
+) else if "%PRODUCT_TYPE%"=="Firmware Release Notes" (
+  node genpdf/index.mjs --sidebar %SIDEBAR% --product %FILTER% --language %LANGUAGE_CODE% --toc --output ./pdf/document.html --max-depth 2 --rn
+) else (
+  node genpdf/index.mjs --sidebar %SIDEBAR% --product %FILTER% --language %LANGUAGE_CODE% --toc --output ./pdf/document.html --max-depth 2
+)
 
 @REM PDF 변환 단계
 REM prince ./pdf/front-cover.html ./pdf/document.html -o ./pdf/temp.pdf
@@ -69,4 +75,4 @@ pdfcpu viewerpref set "./pdf/%OUTPUT%" '{"FitWindow": true, "CenterWindow": true
 @REM 임시 파일 삭제
 del pdf\temp.pdf
 del pdf\front-cover.html
-del pdf\document.html
+@REM del pdf\document.html
