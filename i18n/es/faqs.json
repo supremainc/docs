@@ -180,7 +180,7 @@
           ],
           "question": "La huella se ha registrado, pero la autenticación de huella no se realiza correctamente y se producen errores con frecuencia.",
           "answer": [
-            "Consulte <a href='getting-started#cautions-enrolling-fingers'>Cómo registrar una huella</a> y vuelva a registrarla.",
+            "Revisa el <a href='getting-started#cautions-enrolling-fingers'>Método correcto de ingreso de huellas dactilares</a> y vuelve a registrar la huella.",
             "Si su huella tiene un corte, el dispositivo puede reconocerla como la huella de otra persona.",
             "Si hay un gran número de huellas registradas, cambie <span class='cmd'>Matching Timeout</span> y vuelva a intentarlo.",
             "La tasa de autenticación puede variar para cada huella debido a diferentes características. Registre la huella de otro dedo."
@@ -261,7 +261,7 @@
           ],
           "question": "De repente, la hora es incorrecta.",
           "answer": [
-            "El dispositivo cuenta con una batería interna, pero si no recibe alimentación durante mucho tiempo, la batería puede agotarse y provocar que la hora sea incorrecta. Puede corregirla consultando <a href='settings#date-time'>Date & Time</a>."
+            "El dispositivo cuenta con una batería interna, pero si no recibe alimentación durante mucho tiempo, la batería puede agotarse y provocar que la hora sea incorrecta. Puede corregirla consultando <a href='settings#date-time'>Fecha y hora</a>."
           ]
         }
       ]
