@@ -5,6 +5,8 @@
   --ifm-color-cmd: #a32343;
   --ifm-color-nextstep-background: #f5f5f5;
   --ifm-color-border: #adadad;
+  --color-fd-secondary-foreground: #e8e8e8;
+  --ifm-color-color-gray: #333;
 }
 
 * {
@@ -144,6 +146,14 @@ header p {
   display: none;
 }
 
+.doc-section.biostar-x > h1 {
+  display: none;
+}
+
+.content .doc-section.biostar-x:first-of-type {
+  display: block;
+}
+
 .doc-section {
   counter-reset: count;
 }
@@ -213,6 +223,49 @@ header p {
   margin-top: 0;
 }
 
+.doc-content .fdsteps {
+  counter-reset: step;
+  border-left: 1px solid var(--ifm-color-color-gray);
+  margin-left: 1rem;
+  padding-left: 1rem;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.doc-content .fdstep {
+  padding-bottom: .2rem;
+}
+
+.doc-content .fdstep h2 {
+  padding-top: 0.2rem;
+}
+
+.doc-content .fdstep h4 {
+  margin-top: 2rem;
+}
+
+.doc-content .fdsteps .fdstep:last-of-type {
+  padding-bottom: 0;
+}
+
+.doc-content .fdstep:before {
+  background-color: var(--ifm-color-cmd);
+  color: var(--color-fd-secondary-foreground);
+  content: counter(step);
+  counter-increment: step;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  font-size: 10pt;
+  font-weight: bold;
+  line-height: 1.25rem;
+  display: flex;
+  position: absolute;
+  left: -.7rem;
+}
+
 .description {
   display: none;
 }
@@ -270,8 +323,6 @@ header p {
 .doc-content code {
   color: #1549c6;
   background-color: #dceaffd8;
-  border: 1px solid #dceaffd8;
-  border-radius: .3em;
   font-family: Noto Sans Coptic;
   position: relative;
 }
@@ -336,6 +387,10 @@ header p {
   height: auto;
 }
 
+.doc-content figure {
+  margin: 8px 0;
+}
+
 .doc-content img.none {
   border: none;
 }
@@ -377,6 +432,17 @@ html[lang='en'] .doc-content .container table {
 
 .doc-content .container .row.partname {
   display: block;
+}
+
+.doc-content .container .row.supported-device {
+  flex-wrap: nowrap;
+  break-inside: avoid;
+}
+
+.doc-content .container .row.supported-device img {
+  width: 65%;
+  margin: 0 auto;
+  border: none;
 }
 
 .doc-content .container .col {
@@ -676,12 +742,11 @@ footer {
 }
 
 .callout-commend {
-  border-left-color: #00b359;
+  border-left-color: #009400;
 }
 
 .callout-commend .callout-hint svg {
-  stroke: #00b359;
-  color: #00b359;
+  fill: #009400
 }
 
 .callout-commend {

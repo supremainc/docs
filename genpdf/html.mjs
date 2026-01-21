@@ -159,7 +159,10 @@ export async function buildHtmlDocument(mdxFiles, title, options = {}) {
     const headingLevel = Math.min(1 + docDepth, 6);
     const headingTag = `h${headingLevel}`;
     
-    const sectionClass = rn ? 'doc-section releasenotes' : 'doc-section';
+    let sectionClass = rn ? 'doc-section releasenotes' : 'doc-section';
+    if (product === 'biostar_x') {
+      sectionClass += ' biostar-x';
+    }
     contentSections.push(`
     <section class="${sectionClass}" id="${file.headingId}">
       <${headingTag} id="${h1Id}">${escapeHtml(docTitle)}</${headingTag}>
