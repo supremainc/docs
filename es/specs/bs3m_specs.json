@@ -276,13 +276,13 @@
         "ip_rating": {
           "label": "IP 등급",
           "label_id": "specs.general.ip_rating",
-          "label_link": "../../reference/glossary#ip_rating",
+          "label_link": "https://docs.supremainc.com/reference/glossary#ip_rating",
           "value": "IP65"
         },
         "ik_rating": {
           "label": "IK 등급",
           "label_id": "specs.general.ik_rating",
-          "label_link": "../../reference/glossary#ik_rating",
+          "label_link": "https://docs.supremainc.com/reference/glossary#ik_rating",
           "value": "IK06"
         },
         "certifications": {
