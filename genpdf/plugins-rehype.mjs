@@ -1763,7 +1763,7 @@ export function rehypeProcessNextStepComponent(language = 'ko') {
               const toAttr = child.attributes?.find(attr => attr.name === 'to');
               const targetAttr = child.attributes?.find(attr => attr.name === 'target');
               
-              const href = toAttr?.value || '#';
+              const href = '#' + toAttr?.value || '#';
               const target = targetAttr?.value || undefined;
               
               // Convert to anchor element
