@@ -21,6 +21,7 @@ html {
 
 html[lang='ko'] * {
   font-family: 'Noto Sans KR', sans-serif;
+  word-break: normal;
 }
 
 html[lang='ja-JP'] *, html[lang='ja'] * {
@@ -31,6 +32,7 @@ html[lang='ja-JP'] *, html[lang='ja'] * {
 
 html[lang='en'] *, html[lang='en-US'] *, html[lang='es-419'] *, html[lang='es'] * {
   font-family: 'Noto Sans', sans-serif;
+  word-break: keep-all;
 }
 
 body {
@@ -38,7 +40,6 @@ body {
   line-height: 1.4;
   margin: 0 auto;
   color: black;
-  word-break: keep-all;
 }
 
 .container {
