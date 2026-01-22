@@ -229,7 +229,6 @@ header p {
 
 .doc-content .fdsteps {
   counter-reset: step;
-  border-left: 0.05pt solid var(--ifm-color-color-gray);
   margin-left: .5rem;
   padding-left: 1rem;
   position: relative;
@@ -240,19 +239,11 @@ header p {
   padding-bottom: .2rem;
 }
 
-.doc-content .fdstep h2 {
-  padding-top: 0.2rem;
-}
-
-.doc-content .fdstep h4 {
-  margin-top: 2rem;
-}
-
 .doc-content .fdsteps .fdstep:last-of-type {
   padding-bottom: 0;
 }
 
-.doc-content .fdstep h5:before, .doc-content .fdstep h6:before {
+.doc-content .fdstep h4:before, .doc-content .fdstep h5:before, .doc-content .fdstep h6:before {
   background-color: var(--ifm-color-cmd);
   color: var(--color-fd-secondary-foreground);
   content: counter(step);
@@ -269,7 +260,7 @@ header p {
   text-align: center;
 }
 
-.doc-content .fdstep h5:before {
+.doc-content .fdstep h4:before, .doc-content .fdstep h5:before {
   top: -2px;
 }
 
@@ -277,7 +268,7 @@ header p {
   top: -1px;
 }
 
-.doc-content .fdstep h5, .doc-content .fdstep h6 {
+.doc-content .fdstep h4, .doc-content .fdstep h5, .doc-content .fdstep h6 {
   position: relative;
   left: -1.2rem;
 }
@@ -514,8 +505,12 @@ html[lang='en'] .doc-content .container table {
   margin: 15px 0;
 }
 
-.doc-content table.component {
+.doc-content table.component, .doc-content .table--licensing table {
   table-layout: fixed;
+}
+
+.doc-content .table--licensing table th {
+  word-break: break-all;
 }
 
 .doc-content table.component p.hasimg img {
@@ -822,6 +817,10 @@ footer {
 
 .doc-content div.page-break {
   page-break-before: always;
+}
+
+.doc-content div.print--invisible {
+  display: none;
 }
 
 .techspec {
