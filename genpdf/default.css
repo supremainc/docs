@@ -369,6 +369,18 @@ header p {
   text-decoration: underline;
 }
 
+.doc-content a.doclink {
+  color: var(--ifm-color-cmd);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.doc-content a.doclink-missing {
+  color: #999;
+  text-decoration: line-through;
+  font-style: italic;
+}
+
 .doc-content a strong {
   color: inherit;
 }
