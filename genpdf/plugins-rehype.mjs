@@ -1278,6 +1278,30 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         return;
       }
 
+      // Process Linkto components
+      if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Linkto') {
+        const attributes = node.attributes || [];
+        const toAttr = attributes.find(attr => attr.name === 'to');
+        const childText = node.children?.[0]?.value || '';
+        const to = toAttr ? toAttr.value : '#';
+        let docsLink;
+        if (language !== 'ko') {
+          docsLink = `https://docs.supremainc.com/${language}/${to}/`;
+        } else {
+          docsLink = `https://docs.supremainc.com/${to}/`;
+        }
+
+        const replacement = {
+          type: 'element',
+          tagName: 'a',
+          properties: { href: docsLink, target: '_blank', rel: 'noopener noreferrer' },
+          children: [{ type: 'text', value: childText }]
+        };
+
+        parent.children[index] = replacement;
+        return;
+      }
+
       // Process Badge components
       if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Badge') {
         const attributes = node.attributes || [];
