@@ -86,10 +86,17 @@ function getSupremaLogoSVG() {
 
 // 언어 감지 함수
 function detectLanguage(lang, number) {
-    const isKorean = lang === "한국어" || (lang !== "English" && lang !== "日本語" && lang !== "Español" && number.startsWith('KO'));
-    const isJapanese = lang === "日本語" || number.startsWith('JA');
-    const isSpanish = lang === "Español" || number.startsWith('ES');
-    return { isKorean, isJapanese, isSpanish };
+    switch (lang) {
+        case "ko":
+            return { isKorean: true, isJapanese: false, isSpanish: false, langCover: '한국어' };
+        case "en":
+            return { isKorean: false, isJapanese: false, isSpanish: false, langCover: 'English' };
+        case "ja":
+            return { isKorean: false, isJapanese: true, isSpanish: false, langCover: '日本語' };
+        case "es":
+            return { isKorean: false, isJapanese: false, isSpanish: true, langCover: 'Español' };
+    }
+    return { isKorean, isJapanese, isSpanish, langCover };
 }
 
 // 언어별 버전 및 번호 레이블 매핑
@@ -170,7 +177,7 @@ function generateCoverHTML(params) {
     } = params;
 
     // 언어 감지
-    const { isKorean, isJapanese, isSpanish } = detectLanguage(lang, number);
+    const { isKorean, isJapanese, isSpanish, langCover } = detectLanguage(lang, number);
     
     // subtitle이 코드(IG, UG, AG)인지 확인하고 적절한 제목으로 변환
     const processedSubtitle = getLocalizedSubtitle(subtitle, isKorean, isJapanese, isSpanish);
@@ -349,7 +356,7 @@ function generateCoverHTML(params) {
             <h1${title.length > 15 ? ' class="small"' : ''}>${title}</h1>
             <div class="subtitle">${processedSubtitle}</div>
             <div class="ver">${processedVersion}</div>
-            <div class="lang">${lang}</div>
+            <div class="lang">${langCover}</div>
             <div class="number">${processedNumber}</div>
         </div>
         <div class="footer">
@@ -405,7 +412,7 @@ function main() {
     const lang = args.lang || '한국어';
     const number = args.number || 'KO 101.00.853';
     const version = args.version || '1.08';
-    const { isKorean, isJapanese, isSpanish } = detectLanguage(lang, number);
+    const { isKorean, isJapanese, isSpanish, langCover } = detectLanguage(lang, number);
     const processedSubtitle = getLocalizedSubtitle(args.subtitle || 'IG', isKorean, isJapanese, isSpanish);
     const { processedVersion } = getProcessedVersionAndNumber(version, number, isKorean, isJapanese, isSpanish);
     
@@ -413,7 +420,7 @@ function main() {
     console.log(`  제품명: ${args.title || 'BioStation 3'}`);
     console.log(`  문서 제목: ${processedSubtitle} (입력값: ${args.subtitle || 'IG'})`);
     console.log(`  버전: ${processedVersion} (입력값: ${version})`);
-    console.log(`  언어: ${lang}`);
+    console.log(`  언어: ${langCover}`);
     console.log(`  문서 번호: ${number}`);
 }
 
