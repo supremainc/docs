@@ -1679,6 +1679,122 @@ export function rehypeProcessBugListsComponent() {
 }
 
 /**
+ * Create a rehype plugin that processes NextStep and NextItem components
+ * Converts Docusaurus NextStep component to HTML structure
+ * 
+ * Structure:
+ * <NextStep> -> <div class="next-step">
+ *   <div class="next-step-title"><h4>다음 단계</h4></div> (notitle이 없을 경우)
+ *   <a class="next-item">...</a> (NextItem들)
+ * <NextItem to="..." target="..."> -> <a href="...">...</a>
+ */
+export function rehypeProcessNextStepComponent(language = 'ko') {
+  return (tree) => {
+    // Get NextStep title from code.json
+    const translate = (id) => {
+      const codeMap = {
+        ko: codeKo,
+        en: codeEn,
+        es: codeEs,
+        ja: codeJa
+      };
+      
+      const codeFile = codeMap[language] || codeKo;
+      
+      if (!codeFile || !codeFile[id]) {
+        return '다음 단계'; // Fallback to Korean
+      }
+      
+      const translationObj = codeFile[id];
+      if (typeof translationObj === 'object' && translationObj.message) {
+        return translationObj.message;
+      }
+      
+      return '다음 단계'; // Fallback
+    };
+    
+    const nextStepTitle = translate('theme.docs.nextStep');
+    
+    visit(tree, 'mdxJsxFlowElement', (node, index, parent) => {
+      if (node.name === 'NextStep') {
+        // Check if notitle attribute exists
+        const notitleAttr = node.attributes?.find(attr => attr.name === 'notitle');
+        const hasNotitle = notitleAttr !== undefined;
+        
+        // Build title section
+        const titleNode = !hasNotitle ? {
+          type: 'element',
+          tagName: 'div',
+          properties: { className: ['next-step-title'] },
+          children: [
+            {
+              type: 'element',
+              tagName: 'h4',
+              properties: {},
+              children: [
+                { type: 'text', value: nextStepTitle }
+              ]
+            }
+          ]
+        } : null;
+        
+        // Convert NextStep container to div
+        node.type = 'element';
+        node.tagName = 'div';
+        node.name = undefined;
+        node.attributes = undefined;
+        node.properties = {
+          className: ['next-step']
+        };
+        
+        // Process children to convert NextItem components
+        const newChildren = [];
+        
+        // Add title if needed
+        if (titleNode) {
+          newChildren.push(titleNode);
+        }
+        
+        // Process and add children
+        if (node.children && Array.isArray(node.children)) {
+          node.children.forEach(child => {
+            if (child.type === 'mdxJsxFlowElement' && child.name === 'NextItem') {
+              // Extract 'to' and 'target' attributes
+              const toAttr = child.attributes?.find(attr => attr.name === 'to');
+              const targetAttr = child.attributes?.find(attr => attr.name === 'target');
+              
+              const href = toAttr?.value || '#';
+              const target = targetAttr?.value || undefined;
+              
+              // Convert to anchor element
+              child.type = 'element';
+              child.tagName = 'a';
+              child.name = undefined;
+              child.attributes = undefined;
+              child.properties = {
+                href: href,
+                className: ['next-item']
+              };
+              
+              if (target) {
+                child.properties.target = target;
+              }
+              
+              newChildren.push(child);
+            } else if (child.type !== 'text' || (child.type === 'text' && child.value?.trim())) {
+              // Keep non-text nodes and non-empty text nodes
+              newChildren.push(child);
+            }
+          });
+        }
+        
+        node.children = newChildren;
+      }
+    });
+  };
+}
+
+/**
  * Create a rehype plugin that processes DocLink components
  * Converts <DocLink docId="..." /> to <a href="#id">{title}</a>
  * 
@@ -1807,6 +1923,111 @@ export function rehypeProcessDocLink(basePath = '', language = 'ko') {
           {
             type: 'text',
             value: metadata.title
+          }
+        ];
+      }
+    });
+  };
+}
+
+/**
+ * Create a rehype plugin that processes Glossary components
+ * Converts <Glossary termid="..." /> to styled glossary content
+ * 
+ * Structure:
+ * <Glossary termid="credential" /> -> <p class="glossary-item">
+ *   <b class="glossary-name">용어명</b>
+ *   <span class="glossary-separator">: </span>
+ *   <span class="glossary-description">설명</span>
+ * </p>
+ */
+export function rehypeProcessGlossaryComponent(language = 'ko') {
+  return (tree) => {
+    const glossaryMap = {
+      ko: glossaryKo,
+      en: glossaryEn,
+    };
+
+    const glossary = glossaryMap[language] || glossaryKo;
+
+    visit(tree, 'mdxJsxFlowElement', (node, index, parent) => {
+      if (node.name === 'Glossary') {
+        // Extract termid attribute
+        const termIdAttr = node.attributes?.find(attr => attr.name === 'termid');
+        const termId = termIdAttr?.value;
+
+        if (!termId) {
+          console.warn('⚠️ Glossary: termid attribute is required');
+          return;
+        }
+
+        const term = glossary[termId];
+        if (!term) {
+          console.warn(`⚠️ Glossary: Term "${termId}" not found in ${language} glossary`);
+          // Create missing term placeholder
+          node.type = 'element';
+          node.tagName = 'span';
+          node.name = undefined;
+          node.attributes = undefined;
+          node.properties = {
+            className: ['glossary-missing'],
+            title: `용어를 찾을 수 없습니다: ${termId}`
+          };
+          node.children = [{ type: 'text', value: termId }];
+          return;
+        }
+
+        const { name, description } = term;
+
+        if (!name || !description) {
+          console.warn(`⚠️ Glossary: Term "${termId}" is incomplete`);
+          return;
+        }
+
+        // Parse HTML description to AST nodes
+        const parseHtmlToAst = (htmlString) => {
+          if (!htmlString || typeof htmlString !== 'string') return [];
+          try {
+            const ast = unified()
+              .use(rehypeParse, { fragment: true })
+              .parse(htmlString);
+            return ast.children || [];
+          } catch (error) {
+            console.error('❌ HTML parsing error in Glossary:', error.message);
+            return [{ type: 'text', value: htmlString }];
+          }
+        };
+
+        // Build glossary item structure
+        const descriptionChildren = parseHtmlToAst(description);
+
+        node.type = 'element';
+        node.tagName = 'p';
+        node.name = undefined;
+        node.attributes = undefined;
+        node.properties = {
+          className: ['glossary-item']
+        };
+        node.children = [
+          {
+            type: 'element',
+            tagName: 'b',
+            properties: { className: ['glossary-name'] },
+            children: [{ type: 'text', value: name }]
+          },
+          {
+            type: 'element',
+            tagName: 'span',
+            properties: { className: ['glossary-separator'] },
+            children: [{ type: 'text', value: ': ' }]
+          },
+          {
+            type: 'element',
+            tagName: 'span',
+            properties: { className: ['glossary-description'] },
+            children: descriptionChildren.length > 0 ? descriptionChildren : [
+              { type: 'text', value: description }
+            ]
           }
         ];
       }

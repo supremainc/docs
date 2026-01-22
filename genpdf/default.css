@@ -381,6 +381,39 @@ header p {
   font-style: italic;
 }
 
+.next-step {
+  margin: 2em 0;
+  padding: 0.75em 0;
+}
+
+.next-step > .next-step-title {
+  margin: 0 0 1.5em 0;
+}
+
+.next-step > .next-step-title h4 {
+  margin: 0;
+  font-size: 13pt;
+  font-weight: 600;
+}
+
+.next-step > .next-item {
+  display: block;
+  padding: 1em;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-bottom: none;
+  color: #000;
+  text-decoration: none;
+}
+
+.next-step > .next-item:last-of-type {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.next-step > .next-item p {
+  margin-bottom: 0;
+}
+
 .doc-content a strong {
   color: inherit;
 }

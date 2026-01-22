@@ -4,11 +4,13 @@ import Link from '@docusaurus/Link';
 // 각 로케일에 맞는 glossary 파일을 정적으로 import
 import glossary_ko from '@site/i18n/ko/glossary.json';
 import glossary_en from '@site/i18n/en/glossary.json';
+import glossary_es from '@site/i18n/es/glossary.json';
 import glossary_ja from '@site/i18n/ja/glossary.json';
 
 const glossaryMap = {
   ko: glossary_ko,
   en: glossary_en,
+  es: glossary_es,
   ja: glossary_ja,
 };
 
