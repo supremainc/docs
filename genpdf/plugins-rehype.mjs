@@ -1278,6 +1278,19 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         return;
       }
 
+      // Process Separator components
+      if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Separator') {
+        const replacement = {
+          type: 'element',
+          tagName: 'span',
+          properties: { className: ['sep'] },
+          children: [{ type: 'text', value: '|' }]
+        };
+
+        parent.children[index] = replacement;
+        return;
+      }
+
       // Process Linkto components
       if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Linkto') {
         const attributes = node.attributes || [];
