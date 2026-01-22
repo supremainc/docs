@@ -1,0 +1,168 @@
+---
+id: settings-external-remote-access
+title: Set up External Remote Access
+description: Guide External Remote Access settings to use ngrok service.
+keywords:
+  - External Remote Access
+  - ngrok
+---
+<Cmd sid='setting.menu.remoteAccessExternal.root' className='normal' /> enables access from an external network to an internal network using the **user-owned ngrok account**. This feature allows remote access to the **BioStar X** server without firewall settings or port forwarding.
+
+:::info
+
+* The <Cmd sid='setting.menu.remoteAccessExternal.root' className='normal' /> feature can be accessed through additional options. For more information on the licensing policy, refer to [the following](https://docs.supremainc.com/en/platform/biostar_x/licensing#features-add-ons).
+
+* To use the <Cmd sid='setting.menu.remoteAccessExternal.root' className='normal' /> feature, you must subscribe to ngrok's **Pay-as-you-go** plan. For more details on ngrok plans, refer to [the following link](https://ngrok.com/pricing).
+
+  Using ngrok's **Free** or **Hobbyist** plans may lead to unstable remote access connections due to bandwidth limitations and simultaneous tunnel restrictions.
+
+:::
+
+:::note
+
+<Cmd sid='setting.menu.remoteAccessExternal.root' className='bold' /> VS <Cmd sid='setting.menu.remoteAccess.root' className='bold' />
+
+* The <Cmd sid='setting.menu.remoteAccess.root' className='bold' /> feature provides users with bot accounts and endpoints from the ngrok Suprema site through licensing purchases, supporting connections from external networks. For more information on the <Cmd sid='setting.menu.remoteAccess.root' className='bold' /> feature, refer to [the following](https://docs.supremainc.com/en/platform/biostar_x/settings-remote-access).
+
+* Conversely, the <Cmd sid='setting.menu.remoteAccessExternal.root' className='bold' /> feature supports connections from external networks to internal networks through the user's own ngrok account. Users must create their own ngrok account and input the ngrok configuration information.
+
+:::
+
+:::caution
+
+* The Remote Access feature is provided through the tunneling service of the third-party service ngrok. Before using the feature, be sure to check the [Remote Access feature usage agreement](https://docs.supremainc.com/en/legal/eula#remote-access-agreement).
+
+* BioStar X simply calls the ngrok API to support connections; the security, safety, and continuity of the internet connection are entirely dependent on the ngrok service. Therefore, Suprema assumes no responsibility for any security incidents, data loss, or system breaches that may occur while using this feature.
+
+* For security reasons, **BioStar X** verifies the validity of the ngrok executable file (`ngrok.exe`). Only files included in the **BioStar X** package are usable, and you cannot arbitrarily use ngrok executables downloaded from external sources. Using unauthorized files may prevent normal operation.
+
+:::
+
+## When should you use it? {#whenShoulduseit}
+
+Use the remote access feature in the following situations:
+
+- When you have an existing ngrok account and need to access the internal **BioStar X** server from an external network
+- When direct access is difficult due to firewall or NAT environments
+- When you want to easily set up remote access without complicated network configurations
+- When you need to temporarily provide access permissions for external access
+
+
+## Before starting {#beforeStart}
+
+### Check network settings {#checkNetworksettings}
+
+To use the <Cmd sid='setting.menu.remoteAccessExternal.root' className='normal' /> feature, communication between the **BioStar X** server and ngrok is required. Check the following in the server's firewall settings.
+
+* **Inbound rules**: Allow inbound traffic for the port used by **BioStar X** (default: **443**)
+* **Outbound rules**: Allow outbound traffic for communication with the ngrok service (port: **443**)
+
+If these rules are not enabled in the firewall settings, you may fail to connect via ngrok.
+
+:::info
+
+ngrok only receives traffic on port **443** for HTTPS endpoints. The ports used on the ngrok domain cannot be changed. For more details, refer to [the following link](https://ngrok.com/docs/faq/faq#can-i-choose-a-different-port-to-receive-traffic-on-my-ngrok-domains).
+
+:::
+
+### Prepare ngrok account and plan {#prepareNgrokAccount}
+
+* Prepare your ngrok account. If you do not have an ngrok account, create one at [the following link](https://dashboard.ngrok.com/signup).
+
+* Subscribe to ngrok plans. The <Cmd sid='setting.menu.remoteAccessExternal.root' className='normal' /> feature provides stable connections on ngrok's **Pay-as-you-go** plan and above. For more details about plans, refer to [the following link](https://ngrok.com/pricing).
+
+### Verify authtoken {#verifyAuthtoken}
+
+Check your **Authtoken** on the ngrok dashboard. The **Authtoken** is a unique authentication key required for **BioStar X** to authenticate with the ngrok service.
+
+1. Log in to the ngrok dashboard.
+2. Click on the **Getting Started** → **Your Authtoken** menu in the left sidebar.
+3. Copy the **Authtoken** value.
+
+:::caution
+
+The **Authtoken** is sensitive authentication information. Be careful not to share it with others.
+
+:::
+
+
+### Prepare endpoint URL {#prepareTheEndpointUrl}
+
+Set the endpoint URL on the ngrok dashboard. The URL follows the format `your-name.ngrok.app`.
+
+1. Log in to the ngrok dashboard.
+2. Click on the **Universal Gateway** → **Endpoints & Traffic Policy** menu in the left sidebar.
+3. Click the **New Endpoint** button at the top right of the screen.
+4. Select **Cloud Endpoint**.
+
+    <Image src='/img/common/biostarx-settings-external-remote-access-ngrok-select.png' alone />
+
+5. In **Bindings**, select **Public** and click the **Create Cloud Endpoint** button.
+
+    <Image src='/img/common/biostarx-settings-external-remote-access-ngrok-cloud-endpoint.png' alone />
+
+6. Click the **Traffic Policy** tab and switch to the **Code** tab.
+7. Check the `on_http_request.actions.config.url` value. Add `.internal` to the end of the endpoint URL to set up internal traffic routing.
+
+    <Image src='/img/common/biostarx-settings-external-remote-access-ngrok-cloud-endpoint-setting.png' alone />
+
+    Example: `your-name.ngrok.app` → `your-name.ngrok.app.internal`
+
+8. After completing the setup, click the **Save** button at the top right of the screen.
+
+:::info
+
+The `.internal` domain is a special domain for ngrok's internal network routing. This ensures that external requests are safely delivered to the internal **BioStar X** server.
+
+:::
+
+
+## <Cmd sid='setting.menu.remoteAccessExternal.root' className='normal' /> settings {#lesscmd-sid'setting.menu.remoteaccessexternal.root'-classname'normal'-greater-settings}
+
+<Steps>
+<Step>
+
+### License activation {#licenseActivation}
+
+1. Log in with the **BioStar X** admin ID.
+2. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+3. Click <Cmd sid='setting.menu.license.root' /> → <Cmd sid='setting.menu.license.biostarXLicense' /> in the left sidebar.
+4. Enter the <Cmd sid='setting.menu.remoteAccessExternal.root' className='bold' /> license key and admin name provided by Suprema and click <Cmd sid='setting.server.license.button.activate' product='2' />.
+
+:::info
+
+For more details on license registration, refer to [the following](https://docs.supremainc.com/en/platform/biostar_x/settings-license-biostar-x-license).
+
+:::
+
+</Step>
+<Step>
+
+### Activate <Cmd sid='setting.menu.remoteAccessExternal.root' className='normal' /> {#enableRemoteAccessExternal}
+
+1. Log in with the **BioStar X** admin ID.
+2. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+3. Click <Cmd sid='setting.menu.remoteAccessExternal.root' /> in the left sidebar.
+4. Change the <Cmd sid='setting.remoteAccess.section.title' /> section option to <Cmd sid='common.use' />.
+
+<Image src='/img/biostarx-settings-external-remote-access.png' />
+
+</Step>
+<Step>
+
+### Enter ngrok configuration information {#enterNgrokConfigurationInformation}
+
+Input your ngrok configuration information.
+
+* <Cmd sid='setting.remoteAccess.field.tunnelToken' />: Enter the **Authtoken**.
+* <Cmd sid='setting.remoteAccess.field.hostURL' />: Enter the endpoint URL. The URL follows the format `your-name.ngrok.app`.
+
+After entering all information, click the <Cmd sid='button.apply' product='2' /> button. If a warning message appears, review the content and click the <Cmd sid='setting.remoteAccess.button.agree' /> button.
+
+</Step>
+
+</Steps>
+
+## Access the endpoint URL {#endpointUrlAccess}
+
+After completing the setup, check if you can access the **BioStar X** server from an external network through the endpoint URL you entered in the <Cmd sid='setting.remoteAccess.field.hostURL' /> field.
