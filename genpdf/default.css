@@ -21,7 +21,7 @@ html {
 
 html[lang='ko'] * {
   font-family: 'Noto Sans KR', sans-serif;
-  word-break: normal;
+  word-break: keep-all;
 }
 
 html[lang='ja-JP'] *, html[lang='ja'] * {
