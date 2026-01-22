@@ -220,7 +220,17 @@ export function remarkAddHeadingIds(docId = '') {
             slug = textContent
               .toLowerCase()
               .trim()
-              .replace(/[^\w\s\-가-힣]/g, '')  // Keep Korean chars and hyphens
+              // Keep CJK characters (Korean, Japanese, Chinese), Latin extended (Spanish, Portuguese, etc.)
+              // and Cyrillic (Russian, Ukrainian, Serbian, Belarusian, etc.)
+              // Unicode ranges: 
+              // - Korean: U+AC00-U+D7AF (가-힣)
+              // - Japanese Hiragana: U+3040-U+309F
+              // - Japanese Katakana: U+30A0-U+30FF
+              // - CJK Unified Ideographs: U+4E00-U+9FFF
+              // - Latin Extended-A: U+0100-U+017F (covers most European languages)
+              // - Latin-1 Supplement: U+00C0-U+00FF (Spanish/Portuguese accents: á, é, í, ó, ú, ñ, ü, etc.)
+              // - Cyrillic: U+0400-U+04FF (Russian, Ukrainian, Serbian, Belarusian, etc.)
+              .replace(/[^\w\s\-가-힣\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF\u00C0-\u00FF\u0100-\u017F\u0400-\u04FF]/g, '')
               .replace(/\s+/g, '-')
               .replace(/-+/g, '-')
               .replace(/^-+|-+$/g, '');
