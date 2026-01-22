@@ -835,6 +835,19 @@ footer {
   display: none;
 }
 
+.doc-content .announcement {
+  padding: 1rem;
+  background: #e0e7ff;
+}
+
+.doc-content .announcement hr {
+  border-color: var(--ifm-color-border);
+}
+
+.doc-content .announcement h5 {
+  margin-top: 0;
+}
+
 .techspec {
   width: 100%;
   display: block;
