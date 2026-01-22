@@ -352,7 +352,7 @@ export function remarkNormalizeTableStructure() {
         if (child.type === 'paragraph' && child.children && Array.isArray(child.children)) {
           const hasTableElements = child.children.some(n => 
             (n.type === 'mdxJsxTextElement' || n.type === 'mdxJsxFlowElement') && 
-            ['Td', 'Th', 'Image', 'Badge'].includes(n.name)
+            ['Td', 'Th', 'Image', 'Badge', 'Linkto'].includes(n.name)
           );
 
           if (hasTableElements) {
