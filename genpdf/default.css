@@ -144,7 +144,7 @@ header p {
   display: block;
 }
 
-.content .doc-section:first-of-type {
+.content .doc-section:first-of-type, .content .doc-section.biostar-x.releasenotes:first-of-type {
   display: none;
 }
 
