@@ -835,6 +835,19 @@ footer {
   display: none;
 }
 
+.doc-content .announcement {
+  padding: 1rem;
+  background: #e0e7ff;
+}
+
+.doc-content .announcement hr {
+  border-color: var(--ifm-color-border);
+}
+
+.doc-content .announcement h5 {
+  margin-top: 0;
+}
+
 .techspec {
   width: 100%;
   display: block;
@@ -932,6 +945,7 @@ footer {
 
 .techspecsBody .credential-type span.only {
   font-size: 9pt;
+  margin-left: 5px;
 }
 .techspecsBody .feature::before {
   content: "•";
@@ -945,10 +959,10 @@ footer {
 }
 
 .small_l1 {
-  width: 20%;
+  width: 30%;
 }
 .small_l2 {
-  width: 80%;
+  width: 70%;
 }
 .small_l2 span {
   margin-left: .5rem;
