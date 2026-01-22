@@ -1929,3 +1929,108 @@ export function rehypeProcessDocLink(basePath = '', language = 'ko') {
     });
   };
 }
+
+/**
+ * Create a rehype plugin that processes Glossary components
+ * Converts <Glossary termid="..." /> to styled glossary content
+ * 
+ * Structure:
+ * <Glossary termid="credential" /> -> <p class="glossary-item">
+ *   <b class="glossary-name">용어명</b>
+ *   <span class="glossary-separator">: </span>
+ *   <span class="glossary-description">설명</span>
+ * </p>
+ */
+export function rehypeProcessGlossaryComponent(language = 'ko') {
+  return (tree) => {
+    const glossaryMap = {
+      ko: glossaryKo,
+      en: glossaryEn,
+    };
+
+    const glossary = glossaryMap[language] || glossaryKo;
+
+    visit(tree, 'mdxJsxFlowElement', (node, index, parent) => {
+      if (node.name === 'Glossary') {
+        // Extract termid attribute
+        const termIdAttr = node.attributes?.find(attr => attr.name === 'termid');
+        const termId = termIdAttr?.value;
+
+        if (!termId) {
+          console.warn('⚠️ Glossary: termid attribute is required');
+          return;
+        }
+
+        const term = glossary[termId];
+        if (!term) {
+          console.warn(`⚠️ Glossary: Term "${termId}" not found in ${language} glossary`);
+          // Create missing term placeholder
+          node.type = 'element';
+          node.tagName = 'span';
+          node.name = undefined;
+          node.attributes = undefined;
+          node.properties = {
+            className: ['glossary-missing'],
+            title: `용어를 찾을 수 없습니다: ${termId}`
+          };
+          node.children = [{ type: 'text', value: termId }];
+          return;
+        }
+
+        const { name, description } = term;
+
+        if (!name || !description) {
+          console.warn(`⚠️ Glossary: Term "${termId}" is incomplete`);
+          return;
+        }
+
+        // Parse HTML description to AST nodes
+        const parseHtmlToAst = (htmlString) => {
+          if (!htmlString || typeof htmlString !== 'string') return [];
+          try {
+            const ast = unified()
+              .use(rehypeParse, { fragment: true })
+              .parse(htmlString);
+            return ast.children || [];
+          } catch (error) {
+            console.error('❌ HTML parsing error in Glossary:', error.message);
+            return [{ type: 'text', value: htmlString }];
+          }
+        };
+
+        // Build glossary item structure
+        const descriptionChildren = parseHtmlToAst(description);
+
+        node.type = 'element';
+        node.tagName = 'p';
+        node.name = undefined;
+        node.attributes = undefined;
+        node.properties = {
+          className: ['glossary-item']
+        };
+        node.children = [
+          {
+            type: 'element',
+            tagName: 'b',
+            properties: { className: ['glossary-name'] },
+            children: [{ type: 'text', value: name }]
+          },
+          {
+            type: 'element',
+            tagName: 'span',
+            properties: { className: ['glossary-separator'] },
+            children: [{ type: 'text', value: ': ' }]
+          },
+          {
+            type: 'element',
+            tagName: 'span',
+            properties: { className: ['glossary-description'] },
+            children: descriptionChildren.length > 0 ? descriptionChildren : [
+              { type: 'text', value: description }
+            ]
+          }
+        ];
+      }
+    });
+  };
+}

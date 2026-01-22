@@ -47,7 +47,8 @@ import {
   rehypeRemoveNoteIndicator,
   rehypeProcessBugListsComponent,
   rehypeProcessNextStepComponent,
-  rehypeProcessDocLink
+  rehypeProcessDocLink,
+  rehypeProcessGlossaryComponent
 } from './plugins-rehype.mjs';
 
 /**
@@ -180,6 +181,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(rehypeAddTargetBlankToExternalLinks)
     .use(rehypeProcessDocLink, basePath, language)
     .use(rehypeProcessNextStepComponent, language)
+    .use(rehypeProcessGlossaryComponent, language)
     .use(rehypeProcessMdxElements, translations, basePath, language)
     .use(rehypeProcessCmdComponent, language)
     .use(rehypeProcessColumnsComponent)
