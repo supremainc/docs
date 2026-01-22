@@ -383,6 +383,15 @@ header p {
   font-style: italic;
 }
 
+.doc-content details summary {
+  font-weight: 600;
+}
+
+.doc-content details ul {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
 .next-step {
   margin: 2em 0;
   padding: 0.75em 0;
@@ -598,6 +607,19 @@ html[lang='en'] .doc-content .container table {
   table-layout: fixed;
 }
 
+.doc-content .col2--20-80 table td:nth-of-type(1) {
+  width: 20%;
+}
+
+.doc-content table td .svg-icon {
+  border: none;
+  margin: 0 auto;
+}
+
+.doc-content .col2--20-80 table td:nth-of-type(2) {
+  width: 20%;
+}
+
 .doc-content .table--licensing table th {
   word-break: break-all;
 }
@@ -676,6 +698,10 @@ html[lang='en'] .doc-content .container table {
 .doc-content .cmd {
   font-weight: bold;
   color: var(--ifm-color-cmd);
+}
+
+.doc-content h3 .cmd.normal, .doc-content h4 .cmd.normal, .doc-content h5 .cmd.normal, .doc-content h6 .cmd.normal {
+  color: #000;
 }
 
 footer {

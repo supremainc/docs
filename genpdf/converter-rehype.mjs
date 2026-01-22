@@ -191,8 +191,8 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     
     // Convert JSX components to HTML
     .use(rehypeMdxElements, {
-      allowedElements: ['Image', 'Badge', 'Table', 'Thead', 'Tbody', 'Row', 'Th', 'Td', 'div', 'SpecSection', 'Steps', 'Step', 'Linkto'],
-      passThrough: ['raw', 'Anno']
+      allowedElements: ['Image', 'Badge', 'Table', 'Thead', 'Tbody', 'Row', 'Th', 'Td', 'div', 'SpecSection', 'Steps', 'Step', 'Linkto', 'details', 'summary'],
+      passThrough: ['raw', 'Anno', 'details', 'summary']
     })
     
     // Stringify to HTML
