@@ -114,7 +114,7 @@
           "question": "登録はされたものの顔認証がうまくいかず、エラーが多発します。",
           "answer": [
             "<a href='getting-started#cautions-enrolling-faces'>顔を登録する際の注意事項</a>を確認してから顔を再登録してください。",
-            "登録されている顔の数が多い場合は、<span class='cmd'>マッチング待機時間</span>を変更してから再度お試しください。"
+            "登録されている顔の数が多い場合は、<span class='cmd'>Matching Timeout</span> を変更してから再度お試しください。"
           ]
         },
         {
@@ -135,7 +135,7 @@
             "facestation_f2",
             "biostation_3_max"
           ],
-          "question": "<span class='cmd'>マスク検出</span>機能を<span class='cmd'>使用</span>に設定しましたが、マスク着用時に顔認証がうまくいかずエラーが多発します。",
+          "question": "<span class='cmd'>Mask Detection</span> 機能を <span class='cmd'>Enabled</span> に設定しましたが、マスク着用時に顔認証がうまくいかずエラーが多発します。",
           "answer": [
             "マスクを鼻先まで下げてから顔を2回認証し、その後鼻を覆って再度顔認証を試してください。問題が続く場合は設置業者にお問い合わせください。"
           ]
@@ -182,7 +182,7 @@
           "answer": [
             "<a href='getting-started#cautions-enrolling-fingers'>正しい指紋入力方法</a>を確認してから指紋を再登録してください。",
             "指紋に傷がある場合、機器が他人の指紋として誤認識することがあります。",
-            "登録されている指紋の数が多い場合は、<span class='cmd'>マッチング待機時間</span>を変更してから再度お試しください。",
+            "登録されている指紋の数が多い場合は、<span class='cmd'>Matching Timeout</span> を変更してから再度お試しください。",
             "指紋ごとの特徴の違いにより認識率が異なるため、別の指の指紋を登録してください。"
           ]
         },
@@ -213,7 +213,7 @@
           ],
           "question": "指紋センサーが起動しません。",
           "answer": [
-            "<span class='cmd'>センサーモード</span>が<span class='cmd'>自動オン</span>に設定されている場合、指紋センサーに指を置いたときのみセンサーがオンになります。常に指紋センサーをオンにしたい場合は、<span class='cmd'>センサーモード</span>を<span class='cmd'>常にオン</span>に設定してください。"
+            "<span class='cmd'>Sensor Mode</span> が <span class='cmd'>Auto On</span> に設定されている場合、指紋センサーに指を置いたときのみセンサーがオンになります。常に指紋センサーをオンにしたい場合は、<span class='cmd'>Sensor Mode</span> を <span class='cmd'>Always On</span> に設定してください。"
           ]
         }
       ]
@@ -306,7 +306,7 @@
           ],
           "question": "既存装置でファームウェアをアップグレードした後、マスター管理者設定が表示されません。",
           "answer": [
-            "既存装置でファームウェアをアップグレードした装置にはマスター管理者設定がありません。<span class='cmd'>管理者2段階認証</span>オプションを通じて全管理者の権限を強化し、装置のセキュリティを向上できます。詳細は<a href='settings#admin-2-step-authentication'>管理者2段階認証</a>オプションを参照してください。"
+            "既存装置でファームウェアをアップグレードした装置にはマスター管理者設定がありません。<span class='cmd'>Admin 2-Step Authentication</span> オプションを通じて全管理者の権限を強化し、装置のセキュリティを向上できます。詳細は<a href='settings#admin-2-step-authentication'>管理者 2 段階認証</a>オプションを参照してください。"
           ]
         }
       ]
