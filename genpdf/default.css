@@ -913,6 +913,10 @@ footer {
   font-weight: 600;
 }
 
+.doc-content span.sep {
+  margin: 0 4px;
+}
+
 .doc-content span.badge {
   display: inline-block;
   padding: 0.1rem 0.2rem;
