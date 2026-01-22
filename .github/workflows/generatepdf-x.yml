@@ -148,7 +148,7 @@ jobs:
           --title="${PRODUCT_NAME}" \
           --subtitle="${DOC_TYPE}" \
           --version="${{ github.event.inputs.version }}" \
-          --lang="한국어" \
+          --lang="ko" \
           --number="${{ github.event.inputs.document_number }}" \
           --output="./pdf/front-cover-ko.html"
         
@@ -176,7 +176,7 @@ jobs:
           --title="${PRODUCT_NAME}" \
           --subtitle="${RN_TYPE}" \
           --version="${{ github.event.inputs.version }}" \
-          --lang="한국어" \
+          --lang="ko" \
           --number="301.00.BSX" \
           --output="./pdf/front-rn-cover-ko.html"
         
@@ -205,7 +205,7 @@ jobs:
           --title="${PRODUCT_NAME}" \
           --subtitle="${DOC_TYPE}" \
           --version="${{ github.event.inputs.version }}" \
-          --lang="English" \
+          --lang="en" \
           --number="301.00.BSX" \
           --output="./pdf/front-cover-en.html"
         
@@ -233,7 +233,7 @@ jobs:
           --title="${PRODUCT_NAME}" \
           --subtitle="${RN_TYPE}" \
           --version="${{ github.event.inputs.version }}" \
-          --lang="English" \
+          --lang="en" \
           --number="${{ github.event.inputs.document_number }}" \
           --output="./pdf/front-rn-cover-en.html"
         
