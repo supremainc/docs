@@ -1,7 +1,7 @@
-@echo off
+﻿@echo off
 @REM 사전 설정
 @REM PRODUCT_NAME : 제품명
-@REM LANGUAGE : 문서 언어 (한국어, English, 日本語, Español)
+@REM LANGUAGE : 언어 코드 (예: ko, en, ja, es)
 @REM PRODUCT_TYPE : 문서 종류 (예: UG, RN 등) IG: 설치 가이드, UG: 사용자 가이드, AG: 관리자 가이드, RN: 릴리즈 노트, 그 외에는 입력한 내용 그대로 출력됩니다.
 @REM VERSION : 문서 버전 (예: 1.0, 1.0.1 등)
 @REM DOCUMENT_NUMBER : 문서 번호 (예: 101.00.BS3)
@@ -10,7 +10,7 @@
 @REM RELEASE: 문서의 배포 날짜를 입력하세요.
 
 set PRODUCT_NAME=BioEntry W3
-set LANGUAGE=한국어
+set LANGUAGE=ko
 set PRODUCT_TYPE=Firmware Release Notes
 set VERSION=1.0.1
 set DOCUMENT_NUMBER=102.00.BW3
@@ -21,42 +21,42 @@ set RELEASE=260121
 @REM SVG 파일 맵핑 파일 생성
 node ./genpdf/generateSvgMap.js
 
-@REM Cover 페이지 출력 단계
-node generate-cover-local.js --title="%PRODUCT_NAME%" --subtitle="%PRODUCT_TYPE%" --version="%VERSION%" --lang="%LANGUAGE%" --number="%DOCUMENT_NUMBER%" --output="./pdf/front-cover.html"
-
 @REM MDX to HTML 변환 단계
-if %LANGUAGE%==한국어 (
-  set LANGUAGE_CODE=ko
+if %LANGUAGE%==ko (
+  set LANG_COVER=한국어
   set LANG=KO
   set BACK=back-cover.pdf
-) else if %LANGUAGE%==English (
-  set LANGUAGE_CODE=en
+) else if %LANGUAGE%==en (
+  set LANG_COVER=English
   set LANG=EN
   set BACK=back-cover-en.pdf
-) else if %LANGUAGE%==日本語 (
-  set LANGUAGE_CODE=ja
+) else if %LANGUAGE%==ja (
+  set LANG_COVER=日本語
   set LANG=JA
   set BACK=back-cover-ja.pdf
-) else if %LANGUAGE%==Español (
-    set LANGUAGE_CODE=es
+) else if %LANGUAGE%==es (
+    set LANG_COVER=Español
     set LANG=ES
     set BACK=back-cover-es.pdf
 ) else (
-  set LANGUAGE_CODE=ko
+  set LANG_COVER=한국어
   set LANG=KO
   set BACK=back-cover.pdf
 )
+
+@REM Cover 페이지 출력 단계
+node generate-cover-local.js --title="%PRODUCT_NAME%" --subtitle="%PRODUCT_TYPE%" --version="%VERSION%" --lang="%LANG_COVER%" --number="%DOCUMENT_NUMBER%" --output="./pdf/front-cover.html"
 
 @REM 문서 생성 단계
 set OUTPUT=%PRODUCT_NAME%_%PRODUCT_TYPE%_%VERSION%_%LANG%_%RELEASE%.pdf
 
 echo Generating PDF: %OUTPUT%
 if "%PRODUCT_TYPE%"=="RN" (
-  node genpdf/index.mjs --sidebar %SIDEBAR% --product %FILTER% --language %LANGUAGE_CODE% --toc --output ./pdf/document.html --max-depth 2 --rn
+  node genpdf/index.mjs --sidebar %SIDEBAR% --product %FILTER% --language %LANGUAGE% --toc --output ./pdf/document.html --max-depth 2 --rn
 ) else if "%PRODUCT_TYPE%"=="Firmware Release Notes" (
-  node genpdf/index.mjs --sidebar %SIDEBAR% --product %FILTER% --language %LANGUAGE_CODE% --toc --output ./pdf/document.html --max-depth 2 --rn
+  node genpdf/index.mjs --sidebar %SIDEBAR% --product %FILTER% --language %LANGUAGE% --toc --output ./pdf/document.html --max-depth 2 --rn
 ) else (
-  node genpdf/index.mjs --sidebar %SIDEBAR% --product %FILTER% --language %LANGUAGE_CODE% --toc --output ./pdf/document.html --max-depth 2
+  node genpdf/index.mjs --sidebar %SIDEBAR% --product %FILTER% --language %LANGUAGE% --toc --output ./pdf/document.html --max-depth 2
 )
 
 @REM PDF 변환 단계
