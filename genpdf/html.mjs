@@ -15,17 +15,48 @@ import { getTemplateCSS } from './config.mjs';
 function extractHeadingsFromHtml(htmlContent, maxDepth = 3) {
   const headings = [];
   
-  // Match all h1-h6 tags with id attributes
-  const hRegex = /<h([1-6])\s+id="([^"]+)">([^<]*)<\/h\1>/g;
+  // Match all h1-h6 tags with or without id attributes
+  // Pattern 1: with id attribute - <h1 id="...">text</h1>
+  const hRegexWithId = /<h([1-6])\s+id="([^"]+)"[^>]*>([^<]*)<\/h\1>/g;
+  // Pattern 2: without id - <h1>text</h1> (will generate id from text)
+  const hRegexNoId = /<h([1-6])[^>]*>([^<]*)<\/h\1>/g;
   let match;
   
-  while ((match = hRegex.exec(htmlContent)) !== null) {
+  // First, collect headings with explicit ids
+  const processedIds = new Set();
+  while ((match = hRegexWithId.exec(htmlContent)) !== null) {
     const htmlDepth = parseInt(match[1]);
     headings.push({
-      depth: htmlDepth - 1, // Convert h1→0, h2→1, h3→2, etc. for easier nesting
+      depth: htmlDepth - 1,
       id: match[2],
       text: match[3].trim()
     });
+    processedIds.add(match[0]);
+  }
+  
+  // Then collect headings without ids and generate ids for them
+  const htmlRegexNoId = /<h([1-6])[^>]*id="[^"]*"[^>]*>([^<]*)<\/h\1>/g;
+  const htmlRegexOnlyNo = /<h([1-6])(?![^>]*id=)[^>]*>([^<]*)<\/h\1>/g;
+  
+  while ((match = htmlRegexOnlyNo.exec(htmlContent)) !== null) {
+    const htmlDepth = parseInt(match[1]);
+    const text = match[2].trim();
+    
+    // Generate ID from text
+    const generatedId = text
+      .toLowerCase()
+      .replace(/[^\w\s\-가-힣\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF\u00C0-\u00FF\u0100-\u017F\u0400-\u04FF]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-')
+      .replace(/^-+|-+$/g, '');
+    
+    if (generatedId) {
+      headings.push({
+        depth: htmlDepth - 1,
+        id: generatedId,
+        text: text
+      });
+    }
   }
   
   if (headings.length === 0) return [];

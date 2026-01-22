@@ -25,7 +25,8 @@ html[lang='ko'] * {
 
 html[lang='ja-JP'] *, html[lang='ja'] * {
   font-family: 'Noto Sans JP', sans-serif;
-  word-break: break-all;
+  word-break: keep-all;
+  word-wrap: break-word;
 }
 
 html[lang='en'] *, html[lang='en-US'] *, html[lang='es-419'] *, html[lang='es'] * {
