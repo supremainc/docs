@@ -617,7 +617,7 @@ html[lang='en'] .doc-content .container table {
 }
 
 .doc-content .col2--20-80 table td:nth-of-type(2) {
-  width: 20%;
+  width: 80%;
 }
 
 .doc-content .table--licensing table th {
