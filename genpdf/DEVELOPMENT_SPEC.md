@@ -39,6 +39,7 @@
 - ✅ 템플릿 기반 CSS 스타일링
 - ✅ 반응형 HTML 생성
 - ✅ DocLink 컴포넌트 지원 (문서 간 링크)
+- ✅ NextStep 컴포넌트 지원 (다음 단계 네비게이션)
 
 ---
 
@@ -74,12 +75,13 @@
      remark.mjs)      rehype.mjs)         rehype.mjs)
          ↓                    ↓                    ↓
     - 주석 제거         - Cmd 컴포넌트       - 깊이 기반
-    - 경로 변환         - DocLink 처리       제목 조정
-    - 링크 변환         - BugLists 처리
-    - Include/Xclude    - 외부링크 처리
-    - 제목 ID 생성      - 테이블 확장
-    - FAQ 처리          - Columns/Column
-    - 테이블 정규화     - Admonition 아이콘
+    - 경로 변환         - NextStep 처리      제목 조정
+    - 링크 변환         - DocLink 처리
+    - Include/Xclude    - BugLists 처리
+    - 제목 ID 생성      - 외부링크 처리
+    - FAQ 처리          - 테이블 확장
+    - 테이블 정규화     - Columns/Column
+                        - Admonition 아이콘
                         - Callout 처리
                         - MDX 요소 변환
                               ↓
@@ -249,14 +251,15 @@ buildHtmlDocument() 호출
 16. HTML 변환 계속 (rehypeExtendedTable)
 17. 외부링크 처리 (rehypeAddTargetBlankToExternalLinks)
 18. DocLink 처리 (rehypeProcessDocLink)
-19. MDX 요소 변환 (rehypeProcessMdxElements)
-20. Cmd 컴포넌트 처리 (rehypeProcessCmdComponent)
-21. Columns 컴포넌트 처리 (rehypeProcessColumnsComponent)
-22. BugLists 컴포넌트 처리 (rehypeProcessBugListsComponent)
-23. Admonition 아이콘 추가 (rehypeAddCalloutIcons)
-24. Note 표시 제거 (rehypeRemoveNoteIndicator)
-25. MDX 요소 변환 (rehypeMdxElements)
-26. HTML 문자열로 변환 (rehypeStringify)
+19. NextStep 처리 (rehypeProcessNextStepComponent)
+20. MDX 요소 변환 (rehypeProcessMdxElements)
+21. Cmd 컴포넌트 처리 (rehypeProcessCmdComponent)
+22. Columns 컴포넌트 처리 (rehypeProcessColumnsComponent)
+23. BugLists 컴포넌트 처리 (rehypeProcessBugListsComponent)
+24. Admonition 아이콘 추가 (rehypeAddCalloutIcons)
+25. Note 표시 제거 (rehypeRemoveNoteIndicator)
+26. MDX 요소 변환 (rehypeMdxElements)
+27. HTML 문자열로 변환 (rehypeStringify)
 ```
 
 **주요 함수**:
@@ -316,12 +319,53 @@ buildHtmlDocument() 호출
 |---------|------|------|------|
 | `rehypeProcessCmdComponent(language)` | `<Cmd>` 처리 | `<Cmd id="key" />` | `<span class="cmd">번역된텍스트</span>` |
 | `rehypeAddTargetBlankToExternalLinks()` | 외부링크 처리 | `<a href="http://...">` | `<a href="..." target="_blank">` |
+| `rehypeProcessNextStepComponent()` | `<NextStep>` 처리 | `<NextStep><NextItem>` | `<div class="next-step"><a class="next-item">` |
 | `rehypeProcessDocLink(basePath, language)` | `<DocLink>` 처리 | `<DocLink docId="..." />` | `<a href="#id">문서제목</a>` |
 | `rehypeProcessMdxElements(translations, basePath, language)` | MDX 요소 변환 | JSX 요소 | HTML 요소 |
 | `rehypeProcessColumnsComponent()` | Columns 처리 | `<Columns>` | `<div class="columns">` |
 | `rehypeAddCalloutIcons()` | Callout 아이콘 추가 | `<div class="callout-*">` | 아이콘 포함 |
 | `rehypeRemoveNoteIndicator()` | Note 표시 제거 | Note 타입 callout | 스타일만 적용 |
 | `rehypeProcessBugListsComponent()` | BugLists 처리 | `<BugLists>` | `<div class="bug-lists">` |
+
+#### `rehypeProcessNextStepComponent()` 상세 설명
+
+**목적**: Docusaurus의 `<NextStep>` 컴포넌트를 스타일링된 다음 단계 네비게이션으로 변환
+
+**기능**:
+- `<NextStep>` 컨테이너를 `<div class="next-step">`으로 변환
+- `<NextItem>` 자식 요소를 앵커 태그 `<a class="next-item">`로 변환
+- `to` 속성을 `href`로 매핑
+- `target` 속성 유지 (있을 경우)
+
+**변환 예시**:
+```mdx
+<NextStep>
+  <NextItem to="/docs/platform/biostar_x/settings-door-add">
+    출입문 등록하기
+  </NextItem>
+</NextStep>
+```
+
+↓ 변환 후
+
+```html
+<div class="next-step">
+  <a href="/docs/platform/biostar_x/settings-door-add" class="next-item">
+    출입문 등록하기
+  </a>
+</div>
+```
+
+**CSS 클래스**:
+- `.next-step`: 컨테이너 (배경색, 왼쪽 테두리, 패딩)
+- `.next-item`: 각 항목 (호버 효과, 스타일 링크)
+
+**스타일링**:
+- 왼쪽 테두리: 4px solid (주 색상)
+- 배경색: 연한 회색 (#f9f9f9)
+- 호버 시: 배경 변경, 그림자 추가
+
+---
 
 #### `rehypeProcessDocLink(basePath, language)` 상세 설명
 
@@ -863,15 +907,15 @@ export function remarkProcessCustomDirective() {
 |------|--------|------|
 | `index.mjs` | ~166 | CLI 진입점 및 오케스트레이션 |
 | `loader.mjs` | ~678 | 파일 로드 및 문서 ID 추출 |
-| `converter-rehype.mjs` | ~270 | 마크다운 → HTML 변환 |
+| `converter-rehype.mjs` | ~271 | 마크다운 → HTML 변환 |
 | `plugins-remark.mjs` | ~527 | Remark 플러그인 모음 |
-| `plugins-rehype.mjs` | ~1755 | Rehype 플러그인 모음 (DocLink 포함) |
+| `plugins-rehype.mjs` | ~1808 | Rehype 플러그인 모음 (DocLink, NextStep 포함) |
 | `html.mjs` | ~234 | HTML 문서 생성 |
 | `config.mjs` | ~66 | 설정 및 i18n |
 | `utils.mjs` | ~82 | 유틸리티 함수 |
-| `default.css` | ~1048 | CSS 스타일시트 (DocLink 스타일 포함) |
+| `default.css` | ~1170 | CSS 스타일시트 (DocLink, NextStep 스타일 포함) |
 
-**총 코드량**: ~4,660+ 줄
+**총 코드량**: ~4,802+ 줄
 
 ---
 
@@ -885,13 +929,14 @@ export function remarkProcessCustomDirective() {
 - [x] 제목 깊이 기반 조정
 - [x] 산품별 필터링
 - [x] 릴리즈 노트 전용 모드
-- [x] 커스텀 컴포넌트 지원 (Cmd, DocLink, BugLists, SpecSection, Columns, etc.)
+- [x] 커스텀 컴포넌트 지원 (Cmd, DocLink, NextStep, BugLists, SpecSection, Columns, etc.)
 - [x] Admonition 스타일링
 - [x] 외부링크 자동 처리
 - [x] 이미지 경로 자동 변환
 - [x] Include/Xclude 조건부 포함
 - [x] 코드 하이라이팅
 - [x] DocLink 컴포넌트 (문서 간 내부 링크)
+- [x] NextStep 컴포넌트 (다음 단계 네비게이션)
 
 ### 한계 및 주의사항 ⚠️
 
@@ -926,6 +971,6 @@ export function remarkProcessCustomDirective() {
 ---
 
 **문서 작성**: 2026-01-21  
-**최종 업데이트**: 2026-01-22 (DocLink 기능 추가)  
-**버전**: 1.1  
+**최종 업데이트**: 2026-01-22 (DocLink, NextStep 기능 추가)  
+**버전**: 1.2  
 **상태**: 완료

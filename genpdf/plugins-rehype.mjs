@@ -1679,6 +1679,122 @@ export function rehypeProcessBugListsComponent() {
 }
 
 /**
+ * Create a rehype plugin that processes NextStep and NextItem components
+ * Converts Docusaurus NextStep component to HTML structure
+ * 
+ * Structure:
+ * <NextStep> -> <div class="next-step">
+ *   <div class="next-step-title"><h4>다음 단계</h4></div> (notitle이 없을 경우)
+ *   <a class="next-item">...</a> (NextItem들)
+ * <NextItem to="..." target="..."> -> <a href="...">...</a>
+ */
+export function rehypeProcessNextStepComponent(language = 'ko') {
+  return (tree) => {
+    // Get NextStep title from code.json
+    const translate = (id) => {
+      const codeMap = {
+        ko: codeKo,
+        en: codeEn,
+        es: codeEs,
+        ja: codeJa
+      };
+      
+      const codeFile = codeMap[language] || codeKo;
+      
+      if (!codeFile || !codeFile[id]) {
+        return '다음 단계'; // Fallback to Korean
+      }
+      
+      const translationObj = codeFile[id];
+      if (typeof translationObj === 'object' && translationObj.message) {
+        return translationObj.message;
+      }
+      
+      return '다음 단계'; // Fallback
+    };
+    
+    const nextStepTitle = translate('theme.docs.nextStep');
+    
+    visit(tree, 'mdxJsxFlowElement', (node, index, parent) => {
+      if (node.name === 'NextStep') {
+        // Check if notitle attribute exists
+        const notitleAttr = node.attributes?.find(attr => attr.name === 'notitle');
+        const hasNotitle = notitleAttr !== undefined;
+        
+        // Build title section
+        const titleNode = !hasNotitle ? {
+          type: 'element',
+          tagName: 'div',
+          properties: { className: ['next-step-title'] },
+          children: [
+            {
+              type: 'element',
+              tagName: 'h4',
+              properties: {},
+              children: [
+                { type: 'text', value: nextStepTitle }
+              ]
+            }
+          ]
+        } : null;
+        
+        // Convert NextStep container to div
+        node.type = 'element';
+        node.tagName = 'div';
+        node.name = undefined;
+        node.attributes = undefined;
+        node.properties = {
+          className: ['next-step']
+        };
+        
+        // Process children to convert NextItem components
+        const newChildren = [];
+        
+        // Add title if needed
+        if (titleNode) {
+          newChildren.push(titleNode);
+        }
+        
+        // Process and add children
+        if (node.children && Array.isArray(node.children)) {
+          node.children.forEach(child => {
+            if (child.type === 'mdxJsxFlowElement' && child.name === 'NextItem') {
+              // Extract 'to' and 'target' attributes
+              const toAttr = child.attributes?.find(attr => attr.name === 'to');
+              const targetAttr = child.attributes?.find(attr => attr.name === 'target');
+              
+              const href = toAttr?.value || '#';
+              const target = targetAttr?.value || undefined;
+              
+              // Convert to anchor element
+              child.type = 'element';
+              child.tagName = 'a';
+              child.name = undefined;
+              child.attributes = undefined;
+              child.properties = {
+                href: href,
+                className: ['next-item']
+              };
+              
+              if (target) {
+                child.properties.target = target;
+              }
+              
+              newChildren.push(child);
+            } else if (child.type !== 'text' || (child.type === 'text' && child.value?.trim())) {
+              // Keep non-text nodes and non-empty text nodes
+              newChildren.push(child);
+            }
+          });
+        }
+        
+        node.children = newChildren;
+      }
+    });
+  };
+}
+
+/**
  * Create a rehype plugin that processes DocLink components
  * Converts <DocLink docId="..." /> to <a href="#id">{title}</a>
  * 
