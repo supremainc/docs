@@ -18,13 +18,13 @@ on:
       language:
         description: "언어 (한국어/English)"
         required: true
-        default: "한국어"
+        default: "ko"
         type: choice
         options:
-          - "한국어"
-          - "English"
-          - "日本語"
-          - "Español"
+          - "ko"
+          - "en"
+          - "ja"
+          - "es"
       document_number:
         description: "문서 번호 (예: 101.00.BS3)"
         required: true
