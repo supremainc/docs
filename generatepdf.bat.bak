@@ -10,8 +10,8 @@
 @REM RELEASE: 문서의 배포 날짜를 입력하세요.
 
 set PRODUCT_NAME=BioEntry W3
-set LANGUAGE=ko
-set PRODUCT_TYPE=Firmware Release Notes
+set LANGUAGE=ja
+set PRODUCT_TYPE=UG
 set VERSION=1.0.1
 set DOCUMENT_NUMBER=102.00.BW3
 set SIDEBAR=bioentryw3
@@ -23,29 +23,24 @@ node ./genpdf/generateSvgMap.js
 
 @REM MDX to HTML 변환 단계
 if %LANGUAGE%==ko (
-  set LANG_COVER=한국어
   set LANG=KO
   set BACK=back-cover.pdf
 ) else if %LANGUAGE%==en (
-  set LANG_COVER=English
   set LANG=EN
   set BACK=back-cover-en.pdf
 ) else if %LANGUAGE%==ja (
-  set LANG_COVER=日本語
   set LANG=JA
   set BACK=back-cover-ja.pdf
 ) else if %LANGUAGE%==es (
-    set LANG_COVER=Español
     set LANG=ES
     set BACK=back-cover-es.pdf
 ) else (
-  set LANG_COVER=한국어
   set LANG=KO
   set BACK=back-cover.pdf
 )
 
 @REM Cover 페이지 출력 단계
-node generate-cover-local.js --title="%PRODUCT_NAME%" --subtitle="%PRODUCT_TYPE%" --version="%VERSION%" --lang="%LANG_COVER%" --number="%DOCUMENT_NUMBER%" --output="./pdf/front-cover.html"
+node generate-cover-local.js --title="%PRODUCT_NAME%" --subtitle="%PRODUCT_TYPE%" --version="%VERSION%" --lang="%LANGUAGE%" --number="%DOCUMENT_NUMBER%" --output="./pdf/front-cover.html"
 
 @REM 문서 생성 단계
 set OUTPUT=%PRODUCT_NAME%_%PRODUCT_TYPE%_%VERSION%_%LANG%_%RELEASE%.pdf
