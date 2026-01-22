@@ -153,52 +153,59 @@ export function extractDocIdsWithDepth(config, docIds = [], depth = 0) {
  * @param {Array} docIds - Accumulator
  * @returns {Array} Array of doc IDs
  */
-export function extractReleaseNoteIds(config, docIds = []) {
+export function extractReleaseNoteIds(config, docIds = [], searchDepth = 0) {
   if (Array.isArray(config)) {
+    // In array context: look for release notes category
     for (let i = 0; i < config.length; i++) {
       const item = config[i];
-      extractReleaseNoteIds(item, docIds);
+      
+      // Check if this is a release notes category
+      if (typeof item === 'object' && item !== null && item.type === 'category' && 
+          (item.label === '릴리스 노트' || item.label === 'Release Notes' || item.label === 'リリースノート' || (item.label && item.label.toLowerCase() === 'notas de la versión'))) {
+        // Found release notes! Process this category and its contents
+        // Add the category's link
+        if (item.link && item.link.type === 'doc' && item.link.id) {
+          docIds.push(item.link.id);
+        }
+        // Process ALL items within release notes
+        if (item.items && Array.isArray(item.items)) {
+          for (const subItem of item.items) {
+            if (typeof subItem === 'string') {
+              docIds.push(subItem);
+            } else if (typeof subItem === 'object' && subItem !== null && subItem.type !== 'html') {
+              extractReleaseNoteIds(subItem, docIds, 0);
+            }
+          }
+        }
+      } else if (typeof item === 'object' && item !== null && item.type === 'category' && searchDepth < 5) {
+        // For other categories, search within them for release notes (up to depth 5)
+        // Only search items, don't recurse to sub-categories directly
+        if (item.items && Array.isArray(item.items)) {
+          extractReleaseNoteIds(item.items, docIds, searchDepth + 1);
+        }
+      }
     }
     return docIds;
   } else if (typeof config === 'object' && config !== null) {
-    // Check if this is a release notes category
+    // For single objects (nested in items), just check if it's a release notes category
     if (config.type === 'category' && 
         (config.label === '릴리스 노트' || config.label === 'Release Notes' || config.label === 'リリースノート' || (config.label && config.label.toLowerCase() === 'notas de la versión'))) {
-      // Include link.id if it exists
+      // This is a release notes category - include its link and all items
       if (config.link && config.link.type === 'doc' && config.link.id) {
         docIds.push(config.link.id);
       }
-      // Process items within release notes
+      // Process ALL items within release notes
       if (config.items && Array.isArray(config.items)) {
-        extractReleaseNoteIds(config.items, docIds);
-      }
-      return docIds;
-    }
-    
-    // Skip html type items (they're just visual separators)
-    if (config.type === 'html') {
-      return docIds;
-    }
-    
-    // For other categories, check if they contain release notes
-    if (config.items && Array.isArray(config.items)) {
-      // Check if any item in this category is a release notes section
-      const hasReleaseNotes = config.items.some(item => 
-        item && typeof item === 'object' && item.type === 'category' &&
-        (item.label === '릴리스 노트' || item.label === 'Release Notes' || item.label === 'リリースノート' || (item.label && item.label.toLowerCase() === 'notas de la versión'))
-      );
-      
-      if (hasReleaseNotes) {
-        // Only process the release notes item
         for (const item of config.items) {
-          if (item && typeof item === 'object' && item.type === 'category' &&
-              (item.label === '릴리스 노트' || item.label === 'Release Notes' || item.label === 'リリースノート' || (item.label && item.label.toLowerCase() === 'notas de la versión'))) {
-            extractReleaseNoteIds(item, docIds);
-            return docIds;
+          if (typeof item === 'string') {
+            docIds.push(item);
+          } else if (typeof item === 'object' && item !== null && item.type !== 'html') {
+            extractReleaseNoteIds(item, docIds, 0);
           }
         }
       }
     }
+    // Skip html type items
   } else if (typeof config === 'string') {
     docIds.push(config);
   }
@@ -213,52 +220,59 @@ export function extractReleaseNoteIds(config, docIds = []) {
  * @param {number} depth - Current depth in hierarchy (0-based)
  * @returns {Array} Array of { docId, depth } objects
  */
-export function extractReleaseNoteIdsWithDepth(config, docIds = [], depth = 0) {
+export function extractReleaseNoteIdsWithDepth(config, docIds = [], depth = 0, searchDepth = 0) {
   if (Array.isArray(config)) {
+    // In array context: look for release notes category
     for (let i = 0; i < config.length; i++) {
       const item = config[i];
-      extractReleaseNoteIdsWithDepth(item, docIds, depth);
+      
+      // Check if this is a release notes category
+      if (typeof item === 'object' && item !== null && item.type === 'category' && 
+          (item.label === '릴리스 노트' || item.label === 'Release Notes' || item.label === 'リリースノート' || (item.label && item.label.toLowerCase() === 'notas de la versión'))) {
+        // Found release notes! Process this category and its contents
+        // Add the category's link
+        if (item.link && item.link.type === 'doc' && item.link.id) {
+          docIds.push({ docId: item.link.id, depth });
+        }
+        // Process ALL items within release notes
+        if (item.items && Array.isArray(item.items)) {
+          for (const subItem of item.items) {
+            if (typeof subItem === 'string') {
+              docIds.push({ docId: subItem, depth: depth + 1 });
+            } else if (typeof subItem === 'object' && subItem !== null && subItem.type !== 'html') {
+              extractReleaseNoteIdsWithDepth(subItem, docIds, depth + 1, 0);
+            }
+          }
+        }
+      } else if (typeof item === 'object' && item !== null && item.type === 'category' && searchDepth < 5) {
+        // For other categories, search within them for release notes (up to depth 5)
+        // Only search items, don't recurse to sub-categories directly
+        if (item.items && Array.isArray(item.items)) {
+          extractReleaseNoteIdsWithDepth(item.items, docIds, depth, searchDepth + 1);
+        }
+      }
     }
     return docIds;
   } else if (typeof config === 'object' && config !== null) {
-    // Check if this is a release notes category
+    // For single objects (nested in items), just check if it's a release notes category
     if (config.type === 'category' && 
         (config.label === '릴리스 노트' || config.label === 'Release Notes' || config.label === 'リリースノート' || (config.label && config.label.toLowerCase() === 'notas de la versión'))) {
-      // Include link.id if it exists
+      // This is a release notes category - include its link and all items
       if (config.link && config.link.type === 'doc' && config.link.id) {
         docIds.push({ docId: config.link.id, depth });
       }
-      // Process items within release notes
+      // Process ALL items within release notes
       if (config.items && Array.isArray(config.items)) {
-        extractReleaseNoteIdsWithDepth(config.items, docIds, depth + 1);
-      }
-      return docIds;
-    }
-    
-    // Skip html type items (they're just visual separators)
-    if (config.type === 'html') {
-      return docIds;
-    }
-    
-    // For other categories, check if they contain release notes
-    if (config.items && Array.isArray(config.items)) {
-      // Check if any item in this category is a release notes section
-      const hasReleaseNotes = config.items.some(item => 
-        item && typeof item === 'object' && item.type === 'category' &&
-        (item.label === '릴리스 노트' || item.label === 'Release Notes' || item.label === 'リリースノート' || (item.label && item.label.toLowerCase() === 'notas de la versión'))
-      );
-      
-      if (hasReleaseNotes) {
-        // Only process the release notes item
         for (const item of config.items) {
-          if (item && typeof item === 'object' && item.type === 'category' &&
-              (item.label === '릴리스 노트' || item.label === 'Release Notes' || item.label === 'リリースノート' || (item.label && item.label.toLowerCase() === 'notas de la versión'))) {
-            extractReleaseNoteIdsWithDepth(item, docIds, depth);
-            return docIds;
+          if (typeof item === 'string') {
+            docIds.push({ docId: item, depth: depth + 1 });
+          } else if (typeof item === 'object' && item !== null && item.type !== 'html') {
+            extractReleaseNoteIdsWithDepth(item, docIds, depth + 1, 0);
           }
         }
       }
     }
+    // Skip html type items
   } else if (typeof config === 'string') {
     docIds.push({ docId: config, depth });
   }
