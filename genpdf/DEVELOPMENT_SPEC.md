@@ -38,6 +38,7 @@
 - ✅ 상세한 로깅 및 에러 처리
 - ✅ 템플릿 기반 CSS 스타일링
 - ✅ 반응형 HTML 생성
+- ✅ DocLink 컴포넌트 지원 (문서 간 링크)
 
 ---
 
@@ -73,12 +74,13 @@
      remark.mjs)      rehype.mjs)         rehype.mjs)
          ↓                    ↓                    ↓
     - 주석 제거         - Cmd 컴포넌트       - 깊이 기반
-    - 경로 변환         - BugLists 처리      제목 조정
-    - 링크 변환         - 외부링크 처리
-    - Include/Xclude    - 테이블 확장
-    - 제목 ID 생성      - Columns/Column
-    - FAQ 처리          - Admonition 아이콘
-    - 테이블 정규화     - Callout 처리
+    - 경로 변환         - DocLink 처리       제목 조정
+    - 링크 변환         - BugLists 처리
+    - Include/Xclude    - 외부링크 처리
+    - 제목 ID 생성      - 테이블 확장
+    - FAQ 처리          - Columns/Column
+    - 테이블 정규화     - Admonition 아이콘
+                        - Callout 처리
                         - MDX 요소 변환
                               ↓
 ┌──────────────────────────────────────────────────────────────────┐
@@ -246,14 +248,15 @@ buildHtmlDocument() 호출
 15. 깊이 기반 제목 조정 (adjustHeadingLevelsByDepth)
 16. HTML 변환 계속 (rehypeExtendedTable)
 17. 외부링크 처리 (rehypeAddTargetBlankToExternalLinks)
-18. MDX 요소 변환 (rehypeProcessMdxElements)
-19. Cmd 컴포넌트 처리 (rehypeProcessCmdComponent)
-20. Columns 컴포넌트 처리 (rehypeProcessColumnsComponent)
-21. BugLists 컴포넌트 처리 (rehypeProcessBugListsComponent)
-22. Admonition 아이콘 추가 (rehypeAddCalloutIcons)
-23. Note 표시 제거 (rehypeRemoveNoteIndicator)
-24. MDX 요소 변환 (rehypeMdxElements)
-25. HTML 문자열로 변환 (rehypeStringify)
+18. DocLink 처리 (rehypeProcessDocLink)
+19. MDX 요소 변환 (rehypeProcessMdxElements)
+20. Cmd 컴포넌트 처리 (rehypeProcessCmdComponent)
+21. Columns 컴포넌트 처리 (rehypeProcessColumnsComponent)
+22. BugLists 컴포넌트 처리 (rehypeProcessBugListsComponent)
+23. Admonition 아이콘 추가 (rehypeAddCalloutIcons)
+24. Note 표시 제거 (rehypeRemoveNoteIndicator)
+25. MDX 요소 변환 (rehypeMdxElements)
+26. HTML 문자열로 변환 (rehypeStringify)
 ```
 
 **주요 함수**:
@@ -313,11 +316,62 @@ buildHtmlDocument() 호출
 |---------|------|------|------|
 | `rehypeProcessCmdComponent(language)` | `<Cmd>` 처리 | `<Cmd id="key" />` | `<span class="cmd">번역된텍스트</span>` |
 | `rehypeAddTargetBlankToExternalLinks()` | 외부링크 처리 | `<a href="http://...">` | `<a href="..." target="_blank">` |
+| `rehypeProcessDocLink(basePath, language)` | `<DocLink>` 처리 | `<DocLink docId="..." />` | `<a href="#id">문서제목</a>` |
 | `rehypeProcessMdxElements(translations, basePath, language)` | MDX 요소 변환 | JSX 요소 | HTML 요소 |
 | `rehypeProcessColumnsComponent()` | Columns 처리 | `<Columns>` | `<div class="columns">` |
 | `rehypeAddCalloutIcons()` | Callout 아이콘 추가 | `<div class="callout-*">` | 아이콘 포함 |
 | `rehypeRemoveNoteIndicator()` | Note 표시 제거 | Note 타입 callout | 스타일만 적용 |
 | `rehypeProcessBugListsComponent()` | BugLists 처리 | `<BugLists>` | `<div class="bug-lists">` |
+
+#### `rehypeProcessDocLink(basePath, language)` 상세 설명
+
+**목적**: Docusaurus의 `<DocLink>` 컴포넌트를 정적 HTML 링크로 변환
+
+**기능**:
+
+- MDX JSX 요소 `<DocLink docId="..." />`를 감지
+- 대상 문서의 frontmatter에서 `title` 메타데이터 추출
+- 파일 ID 기반 해시 링크(`#마지막-세그먼트`) 생성
+- 메타데이터 캐싱으로 I/O 성능 최적화
+
+**다국어 처리**:
+
+```javascript
+// 언어별 문서 경로
+ko: docs/platform/biostar_x/settings-manage-device-group.mdx
+en: i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-manage-device-group.mdx
+es: i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-manage-device-group.mdx
+ja: i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-manage-device-group.mdx
+```
+
+**변환 예시**:
+
+```mdx
+<DocLink docId='platform/biostar_x/settings-manage-device-group' />
+```
+
+↓ 변환 후
+
+```html
+<a href="#settings-manage-device-group" class="doclink">장치 그룹 관리하기</a>
+```
+
+**CSS 클래스**:
+
+- `.doclink`: 정상 링크 (색상: var(--ifm-color-cmd), 밑줄, 굵은 글씨)
+- `.doclink-missing`: 문서 미존재 (회색, 취소선, 이탤릭)
+
+**캐싱 메커니즘**:
+
+- `docLinkCache`: Map 객체로 `${docId}:${lang}` 키 사용
+- 동일 문서 재방문 시 즉시 반환
+- 문서 변환 중 I/O 최소화
+
+**Fallback 처리**:
+
+- 대상 문서 미존재 시: docId를 텍스트로 표시
+- 다른 언어 버전이 없으면: 한국어 버전 사용
+- 제목 미존재 시: 경고 로그 출력 후 생략
 
 ---
 
@@ -809,15 +863,15 @@ export function remarkProcessCustomDirective() {
 |------|--------|------|
 | `index.mjs` | ~166 | CLI 진입점 및 오케스트레이션 |
 | `loader.mjs` | ~678 | 파일 로드 및 문서 ID 추출 |
-| `converter-rehype.mjs` | ~267 | 마크다운 → HTML 변환 |
+| `converter-rehype.mjs` | ~270 | 마크다운 → HTML 변환 |
 | `plugins-remark.mjs` | ~527 | Remark 플러그인 모음 |
-| `plugins-rehype.mjs` | ~1601 | Rehype 플러그인 모음 |
+| `plugins-rehype.mjs` | ~1755 | Rehype 플러그인 모음 (DocLink 포함) |
 | `html.mjs` | ~234 | HTML 문서 생성 |
 | `config.mjs` | ~66 | 설정 및 i18n |
 | `utils.mjs` | ~82 | 유틸리티 함수 |
-| `default.css` | ~1041 | CSS 스타일시트 |
+| `default.css` | ~1048 | CSS 스타일시트 (DocLink 스타일 포함) |
 
-**총 코드량**: ~4,500+ 줄
+**총 코드량**: ~4,660+ 줄
 
 ---
 
@@ -831,12 +885,13 @@ export function remarkProcessCustomDirective() {
 - [x] 제목 깊이 기반 조정
 - [x] 산품별 필터링
 - [x] 릴리즈 노트 전용 모드
-- [x] 커스텀 컴포넌트 지원 (Cmd, BugLists, SpecSection, Columns, etc.)
+- [x] 커스텀 컴포넌트 지원 (Cmd, DocLink, BugLists, SpecSection, Columns, etc.)
 - [x] Admonition 스타일링
 - [x] 외부링크 자동 처리
 - [x] 이미지 경로 자동 변환
 - [x] Include/Xclude 조건부 포함
 - [x] 코드 하이라이팅
+- [x] DocLink 컴포넌트 (문서 간 내부 링크)
 
 ### 한계 및 주의사항 ⚠️
 
@@ -871,5 +926,6 @@ export function remarkProcessCustomDirective() {
 ---
 
 **문서 작성**: 2026-01-21  
-**버전**: 1.0  
+**최종 업데이트**: 2026-01-22 (DocLink 기능 추가)  
+**버전**: 1.1  
 **상태**: 완료

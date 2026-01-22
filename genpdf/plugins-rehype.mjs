@@ -6,10 +6,11 @@
 import { visit } from 'unist-util-visit';
 import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import { dirname, join } from 'path';
 import rehypeParse from 'rehype-parse';
 import { unified } from 'unified';
 import { svgComponentsMap } from './svg-components-map.mjs';
+import matter from 'gray-matter';
 
 // Get current directory for relative imports
 const __filename = fileURLToPath(import.meta.url);
@@ -1648,6 +1649,142 @@ export function rehypeProcessBugListsComponent() {
         
         // Keep children as-is (they contain the list items)
         return;
+      }
+    });
+  };
+}
+
+/**
+ * Create a rehype plugin that processes DocLink components
+ * Converts <DocLink docId="..." /> to <a href="#id">{title}</a>
+ * 
+ * Caches document titles from frontmatter to avoid repeated file I/O
+ */
+export function rehypeProcessDocLink(basePath = '', language = 'ko') {
+  // DocLink cache: { docId: { title, href } }
+  const docLinkCache = new Map();
+  
+  /**
+   * Get document base path for language
+   * @param {string} lang - Language code
+   * @returns {string} Base path for documents
+   */
+  const getDocPath = (lang) => {
+    if (lang === 'ko') {
+      return join(basePath, 'docs');
+    }
+    return join(basePath, 'i18n', lang, 'docusaurus-plugin-content-docs', 'current');
+  };
+  
+  /**
+   * Load document metadata (title and href) from frontmatter
+   * @param {string} docId - Document ID (e.g., 'platform/biostar_x/settings-manage-device-group')
+   * @param {string} lang - Language code
+   * @returns {Object|null} { title, href } or null if not found
+   */
+  const loadDocMetadata = (docId, lang) => {
+    // Check cache first
+    const cacheKey = `${docId}:${lang}`;
+    if (docLinkCache.has(cacheKey)) {
+      return docLinkCache.get(cacheKey);
+    }
+    
+    try {
+      const docPath = getDocPath(lang);
+      const filePath = join(docPath, `${docId}.mdx`);
+      
+      // Check if file exists
+      let fileContent;
+      try {
+        fileContent = readFileSync(filePath, 'utf-8');
+      } catch (err) {
+        // Fallback: try to load from ko if not found in other language
+        if (lang !== 'ko') {
+          const koFilePath = join(getDocPath('ko'), `${docId}.mdx`);
+          try {
+            fileContent = readFileSync(koFilePath, 'utf-8');
+          } catch (err2) {
+            console.warn(`⚠️  DocLink: Document not found - ${docId} (${lang})`);
+            return null;
+          }
+        } else {
+          console.warn(`⚠️  DocLink: Document not found - ${docId}`);
+          return null;
+        }
+      }
+      
+      // Extract frontmatter
+      const { data: frontmatter } = matter(fileContent);
+      
+      if (!frontmatter.title) {
+        console.warn(`⚠️  DocLink: No title in frontmatter - ${docId}`);
+        return null;
+      }
+      
+      // Generate href from last segment of docId
+      const lastSegment = docId.split('/').pop();
+      const metadata = {
+        title: frontmatter.title,
+        href: `#${lastSegment}`
+      };
+      
+      // Cache the result
+      docLinkCache.set(cacheKey, metadata);
+      return metadata;
+    } catch (error) {
+      console.warn(`⚠️  DocLink: Error loading metadata for ${docId}: ${error.message}`);
+      return null;
+    }
+  };
+  
+  return (tree) => {
+    visit(tree, 'mdxJsxFlowElement', (node, index, parent) => {
+      if (node.name === 'DocLink' && node.attributes) {
+        // Extract docId attribute
+        const docIdAttr = node.attributes.find(attr => attr.name === 'docId');
+        
+        if (!docIdAttr || !docIdAttr.value) {
+          console.warn(`⚠️  DocLink: Missing docId attribute`);
+          return;
+        }
+        
+        const docId = docIdAttr.value;
+        const metadata = loadDocMetadata(docId, language);
+        
+        if (!metadata) {
+          // Fallback: use docId as text
+          node.type = 'element';
+          node.tagName = 'a';
+          node.name = undefined;
+          node.attributes = undefined;
+          node.properties = {
+            href: `#${docId.split('/').pop()}`,
+            className: ['doclink', 'doclink-missing']
+          };
+          node.children = [
+            {
+              type: 'text',
+              value: docId
+            }
+          ];
+          return;
+        }
+        
+        // Convert to anchor element
+        node.type = 'element';
+        node.tagName = 'a';
+        node.name = undefined;
+        node.attributes = undefined;
+        node.properties = {
+          href: metadata.href,
+          className: ['doclink']
+        };
+        node.children = [
+          {
+            type: 'text',
+            value: metadata.title
+          }
+        ];
       }
     });
   };
