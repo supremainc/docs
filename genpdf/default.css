@@ -150,6 +150,10 @@ header p {
   display: none;
 }
 
+.doc-section.biostar-x > h2 {
+  break-before: page;
+}
+
 .content .doc-section.biostar-x:first-of-type {
   display: block;
 }
@@ -170,7 +174,7 @@ header p {
   color: var(--ifm-color-cmd);
   margin-bottom: 15pt;
   font-size: 21pt;
-  page-break-before: always;
+  break-before: page;
 }
 
 .doc-section.releasenotes > h2 {
@@ -225,8 +229,8 @@ header p {
 
 .doc-content .fdsteps {
   counter-reset: step;
-  border-left: 1px solid var(--ifm-color-color-gray);
-  margin-left: 1rem;
+  border-left: 0.05pt solid var(--ifm-color-color-gray);
+  margin-left: .5rem;
   padding-left: 1rem;
   position: relative;
   margin-top: 2rem;
@@ -248,22 +252,34 @@ header p {
   padding-bottom: 0;
 }
 
-.doc-content .fdstep:before {
+.doc-content .fdstep h5:before, .doc-content .fdstep h6:before {
   background-color: var(--ifm-color-cmd);
   color: var(--color-fd-secondary-foreground);
   content: counter(step);
   counter-increment: step;
   border-radius: 9999px;
-  justify-content: center;
   align-items: center;
   width: 1.2rem;
   height: 1.2rem;
   font-size: 10pt;
   font-weight: bold;
-  line-height: 1.25rem;
-  display: flex;
-  position: absolute;
-  left: -.7rem;
+  display: inline-block;
+  position: relative;
+  left: -.19rem;
+  text-align: center;
+}
+
+.doc-content .fdstep h5:before {
+  top: -2px;
+}
+
+.doc-content .fdstep h6:before {
+  top: -1px;
+}
+
+.doc-content .fdstep h5, .doc-content .fdstep h6 {
+  position: relative;
+  left: -1.2rem;
 }
 
 .description {
@@ -333,7 +349,6 @@ header p {
   border-left: 4px solid #667eea;
   padding: 15px;
   margin: 15px 0;
-  overflow-x: auto;
   border-radius: 4px;
   font-family: 'Courier New', Consolas, monospace;
 }
