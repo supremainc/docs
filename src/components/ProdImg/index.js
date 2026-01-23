@@ -7,19 +7,9 @@ export default function ProdImg({src, alt, className, alone, width, height}) {
     const { i18n: { currentLocale } } = useDocusaurusContext();
     const isDev = process.env.NODE_ENV === 'development';
     
-    // Generate image path based on environment
-    const baseUrl = 'https://supremadocs.blob.core.windows.net';
-    const imagePath = (() => {
-        const localizedSrc = currentLocale === 'ko' || alone ? 
-            src : 
-            src.replace('/img/', `/img/${currentLocale}/`);
-        
-        if (isDev) {
-            return useBaseUrl(localizedSrc);
-        } else {
-            return `${baseUrl}${localizedSrc}`;
-        }
-    })();
+    currentLocale === 'ko' || alone ? 
+            useBaseUrl(src) : 
+            useBaseUrl(src.replace('/img/', `/img/${currentLocale}/`));
 
     const errTarget = useBaseUrl('/img/default-placeholder-image.webp')
     // console.log('Image path:', imagePath, imageSize[imagePath]);
