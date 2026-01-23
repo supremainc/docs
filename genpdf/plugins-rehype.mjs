@@ -1278,6 +1278,18 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         return;
       }
 
+      if (node.type === 'mdxJsxFlowElement' && node.name === 'Calloutlists') {
+        const replacement = {
+          type: 'element',
+          tagName: 'div',
+          properties: { className: ['calloutLists'] },
+          children: node.children || []
+        };
+
+        parent.children[index] = replacement;
+        return;
+      }
+
       // Process Separator components
       if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Separator') {
         const replacement = {
@@ -1288,6 +1300,47 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         };
 
         parent.children[index] = replacement;
+        return;
+      }
+
+      // Process Status components
+      if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'StatusNormal') {
+        parent.children[index] = {
+          type: 'element',
+          tagName: 'span',
+          properties: { className: ['status', 'normal'] },
+          children: [{ type: 'text', value: '' }]
+        }
+        return;
+      }
+
+      if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'StatusOK') {
+        parent.children[index] = {
+          type: 'element',
+          tagName: 'span',
+          properties: { className: ['status', 'ok'] },
+          children: [{ type: 'text', value: '' }]
+        }
+        return;
+      }
+
+      if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'StatusFail') {
+        parent.children[index] = {
+          type: 'element',
+          tagName: 'span',
+          properties: { className: ['status', 'fail'] },
+          children: [{ type: 'text', value: '' }]
+        }
+        return;
+      }
+
+      if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'StatusUpdating') {
+        parent.children[index] = {
+          type: 'element',
+          tagName: 'span',
+          properties: { className: ['status', 'updating'] },
+          children: [{ type: 'text', value: '' }]
+        }
         return;
       }
 
