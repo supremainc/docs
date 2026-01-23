@@ -172,7 +172,7 @@ header p {
   font-size: 2em;
 }
 
-.doc-section h2 {
+.doc-section h2, .doc-content h2 {
   color: var(--ifm-color-cmd);
   margin-bottom: 15pt;
   font-size: 21pt;
@@ -183,7 +183,7 @@ header p {
   display: none;
 }
 
-.doc-section h3 {
+.doc-section h3, .doc-content h3 {
   font-size: 17pt;
   color: #000;
   margin-top: 28pt;
@@ -197,7 +197,7 @@ header p {
   margin-top: -2px;
 }
 
-.doc-content h4 {
+.doc-section h4, .doc-content h4 {
   font-size: 13pt;
   font-weight: 500;
   margin-top: 22pt;
@@ -487,7 +487,7 @@ html[lang='en'] .doc-content .container table {
 }
 
 .doc-content .columns .row {
-  margin: 0 calc(1rem * -1);
+  margin: 0;
   flex-wrap: wrap;
   display: flex;
 }
@@ -616,6 +616,14 @@ html[lang='en'] .doc-content .container table {
   margin: 0 auto;
 }
 
+.doc-content table td img {
+  display: inline-block;
+}
+
+.doc-content table td img[src*='monitoring-map-zoom-reduce'] {
+  border: none;
+}
+
 .doc-content .col2--20-80 table td:nth-of-type(2) {
   width: 80%;
 }
@@ -702,6 +710,7 @@ html[lang='en'] .doc-content .container table {
 
 .doc-content h3 .cmd.normal, .doc-content h4 .cmd.normal, .doc-content h5 .cmd.normal, .doc-content h6 .cmd.normal {
   color: #000;
+  background: none;
 }
 
 footer {
@@ -917,6 +926,10 @@ footer {
   margin: 0 4px;
 }
 
+span.text-blue-500 {
+  color: #3b82f6;
+}
+
 .doc-content span.badge {
   display: inline-block;
   padding: 0.1rem 0.2rem;
@@ -1103,6 +1116,9 @@ footer {
   .docs-content img {
     max-width: 65% !important;
   }
+  img[src*='monitoring-map-area-tree'] {
+    border: none;
+  }
   img[src*='component-resistor'] {
     width: auto;
     height: 30px !important;
@@ -1203,6 +1219,12 @@ footer {
     height: 14px !important;
     top: 3px !important;
   }
+  img[src*='monitoring-map-area-icon.svg'], img[src*='monitoring-map-floor-door-icon.svg'], img[src*='monitoring-map-camera-icon.svg'], img[src*='monitoring-map-err-camera-icon.svg'], img[src*='ico-floor-unlock-door.svg'], img[src*='ico-floor-locked-door.svg'] {
+    height: 40px;
+    width: auto;
+    border: none;
+    margin: 0 auto;
+  }
   /* 페이지 나눔 설정:
      - .doc-content ol li: 순차적으로 페이지 진행 (페이지 나눔 자유)
      - .doc-content ol li ul li: 페이지 나눔 허용
@@ -1274,4 +1296,60 @@ footer {
 
 .bug-lists li::marker {
   font-weight: 500;
+}
+
+
+/* Status */
+span.ok {
+  background-color: #7ad600;
+}
+
+span.fail {
+  background-color: #ff4f01;
+}
+
+span.updating {
+  background-color: orange;
+}
+
+span.normal {
+  background-color: #aaa;
+}
+
+.status {
+  border-radius: 9999px;
+  width: .75rem;
+  height: .75rem;
+  display: inline-block;
+}
+
+.calloutLists ol {
+  list-style-type: none;
+  counter-reset: callout-counter;
+  padding-left: 0;
+}
+.calloutLists ol > li {
+  counter-increment: callout-counter;
+  position: relative;
+  margin: 16px 0;
+}
+.calloutLists ol li > * {
+  margin-left: 30px;
+}
+
+.calloutLists ol li p .ico {
+  height: 13px;
+  top: 2px;
+}
+.calloutLists ol li::before {
+  content: counter(callout-counter);
+  background: var(--ifm-color-cmd);
+  width: 17px;
+  height: 17px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  top: 0px;
 }
