@@ -588,8 +588,8 @@ export function processImportsInMdx(content, basePath, currentFilePath = '') {
           const propName = propMatch[1];
           // Group 2: string value (with quotes), Group 3: JSX expression value (without quotes)
           const propValue = propMatch[2] !== undefined ? propMatch[2] : propMatch[3];
-          // Replace {props.propName} with the actual value
-          replacedContent = replacedContent.replace(new RegExp(`\\{props\\.${propName}\\}`, 'g'), propValue);
+          // Replace {props.propName} with the actual value (wrapped in quotes for string values)
+          replacedContent = replacedContent.replace(new RegExp(`\\{props\\.${propName}\\}`, 'g'), `'${propValue}'`);
         }
         
         // Detect indentation before the component tag
@@ -621,8 +621,8 @@ export function processImportsInMdx(content, basePath, currentFilePath = '') {
           const propName = propMatch[1];
           // Group 2: string value (with quotes), Group 3: JSX expression value (without quotes)
           const propValue = propMatch[2] !== undefined ? propMatch[2] : propMatch[3];
-          // Replace {props.propName} with the actual value
-          replacedContent = replacedContent.replace(new RegExp(`\\{props\\.${propName}\\}`, 'g'), propValue);
+          // Replace {props.propName} with the actual value (wrapped in quotes for string values)
+          replacedContent = replacedContent.replace(new RegExp(`\\{props\\.${propName}\\}`, 'g'), `'${propValue}'`);
         }
         
         // Detect indentation before the component tag

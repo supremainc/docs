@@ -149,7 +149,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(remarkNormalizeTableStructure)
     
     // Code highlighting
-    .use(remarkPrism)
+    // .use(remarkPrism)
     
     // Convert to HTML
     .use(remarkRehype, { 

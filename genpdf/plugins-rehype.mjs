@@ -1308,7 +1308,7 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         parent.children[index] = {
           type: 'element',
           tagName: 'span',
-          properties: { className: ['status', 'normal'] },
+          properties: { className: ['status', 'normalok'] },
           children: [{ type: 'text', value: '' }]
         }
         return;

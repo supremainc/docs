@@ -3,7 +3,7 @@ import fs from 'fs';
 import { loadMdxFile } from './loader.mjs';
 
 // 현재 파일을 merge
-const merged = loadMdxFile('platform/biostar_x/control-door', 'ko');
+const merged = loadMdxFile('platform/biostar_x/settings-credential-smart-format', 'ko');
 
 if (merged) {
   console.log('='.repeat(80));
