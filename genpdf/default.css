@@ -433,6 +433,10 @@ header p {
   display: block;
 }
 
+.doc-content li > span.cmd + p.hasimg {
+  margin-top: 8px;
+}
+
 .doc-content p.hasimg img {
   margin: auto;
 }
@@ -708,9 +712,13 @@ html[lang='en'] .doc-content .container table {
   color: var(--ifm-color-cmd);
 }
 
-.doc-content h3 .cmd.normal, .doc-content h4 .cmd.normal, .doc-content h5 .cmd.normal, .doc-content h6 .cmd.normal {
+.doc-content h3 .cmd.normal, .doc-content h4 .cmd.normal, .doc-content h5 .cmd.normal, .doc-content h6 .cmd.normal, .doc-content .cmd.normal {
   color: #000;
   background: none;
+}
+
+.doc-content p .cmd.normal {
+  font-weight: normal;
 }
 
 footer {
@@ -1312,7 +1320,7 @@ span.updating {
   background-color: orange;
 }
 
-span.normal {
+span.normalok {
   background-color: #aaa;
 }
 
