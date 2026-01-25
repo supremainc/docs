@@ -343,13 +343,16 @@ header p {
   padding: 15px;
   margin: 15px 0;
   border-radius: 4px;
-  font-family: 'Courier New', Consolas, monospace;
+  font-family: 'Noto Sans Coptic';
+  text-wrap: initial;
+  white-space: pre-wrap;
 }
 
 .doc-content pre code {
   background: none;
   padding: 0;
   color: #f8f8f2;
+  white-space: pre-wrap;
 }
 
 .md-code-block__container pre code .md-code-block__line-container .md-code-block__line {
@@ -949,6 +952,19 @@ span.text-blue-500 {
 
 .doc-content span.only {
   background-color: var(--ifm-color-cmd);
+}
+
+.doc-content span.start-key {
+  display: inline-block;
+}
+
+.doc-content span.start-key img.win-logo {
+  display: inline-block;
+  position: relative;
+  height: 13px;
+  width: auto;
+  border: none;
+  top: 1px;
 }
 
 .doc-content h3 span.only, .doc-content h4 span.only {
