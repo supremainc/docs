@@ -1959,10 +1959,13 @@ export function rehypeProcessNextStepComponent(language = 'ko') {
               // Extract 'to' and 'target' attributes
               const toAttr = child.attributes?.find(attr => attr.name === 'to');
               const targetAttr = child.attributes?.find(attr => attr.name === 'target');
-              
-              const href = '#' + toAttr?.value || '#';
+              let href;
+              if (toAttr.value.startsWith('../../')) {
+                href = 'https://docs.supremainc.com/' + toAttr?.value.replace('../../', '');
+              } else {
+                href = '#' + toAttr?.value || '#';
+              }
               const target = targetAttr?.value || undefined;
-              
               // Convert to anchor element
               child.type = 'element';
               child.tagName = 'a';

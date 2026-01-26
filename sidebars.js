@@ -706,10 +706,10 @@ const sidebars = {
             'platform/biostar_x/ui-settings'
           ]
         },
-        'platform/biostar_x/licensing'
+        'platform/biostar_x/licensing',
+        'platform/biostar_x/appendices',
       ],
     },
-    'platform/biostar_x/appendices',
     {
       type: 'html',
       value: '<hr />'

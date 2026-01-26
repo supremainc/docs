@@ -102,7 +102,7 @@ function replacePropValues(content, props) {
   let replaced = content;
   
   // Attributes that always need quotes when substituted
-  const quotedAttributes = ['hashid', 'id', 'className', 'title', 'alt', 'sid', 'data-', 'aria-'];
+  const quotedAttributes = ['hashid', 'id', 'className', 'title', 'alt', 'sid', 'type', 'data-', 'aria-'];
   
   for (const { propName, propValue } of props) {
     // Replace {props.propName} with the actual value
