@@ -1966,7 +1966,6 @@ export function rehypeProcessNextStepComponent(language = 'ko') {
                 href = '#' + toAttr?.value || '#';
               }
               const target = targetAttr?.value || undefined;
-              console.log('NextItem href:', href);
               // Convert to anchor element
               child.type = 'element';
               child.tagName = 'a';
