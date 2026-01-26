@@ -14,7 +14,6 @@ import remarkMdx from 'remark-mdx';
 import remarkGfm from 'remark-gfm';
 import remarkDirective from 'remark-directive';
 import remarkCalloutDirectives from '@microflash/remark-callout-directives';
-import remarkPrism from 'remark-prism';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import { visit } from 'unist-util-visit';
