@@ -48,7 +48,8 @@ import {
   rehypeProcessBugListsComponent,
   rehypeProcessNextStepComponent,
   rehypeProcessDocLink,
-  rehypeProcessGlossaryComponent
+  rehypeProcessGlossaryComponent,
+  rehypeProcessTreeviewComponent
 } from './plugins-rehype.mjs';
 
 /**
@@ -182,6 +183,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(rehypeProcessDocLink, basePath, language)
     .use(rehypeProcessNextStepComponent, language)
     .use(rehypeProcessGlossaryComponent, language)
+    .use(rehypeProcessTreeviewComponent, language)
     .use(rehypeProcessMdxElements, translations, basePath, language)
     .use(rehypeProcessCmdComponent, language)
     .use(rehypeProcessColumnsComponent)
