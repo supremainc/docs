@@ -337,6 +337,10 @@ header p {
   position: relative;
 }
 
+.doc-content div[data-remark-code-title] + pre {
+  margin-top: 5px;
+}
+
 .doc-content pre {
   background-color: #2d2d2d;
   color: #f8f8f2;
