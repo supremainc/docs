@@ -1383,3 +1383,31 @@ span.normalok {
   position: absolute;
   top: 0px;
 }
+
+.treeview-container {
+  background-color: #2d3748;
+  color: #e2e8f0;
+  padding: 10pt;
+  border-radius: 8px;
+  max-width: 400px;
+  margin-bottom: 1.5rem;
+  break-inside: avoid-page;
+}
+
+.treeview-container .tree-item {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.tree-toggle {
+  margin-right: 8px;
+  width: 16px;
+  text-align: center;
+  color: #a0aec0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
