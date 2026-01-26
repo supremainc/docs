@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["28055"], {
-19858: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["11800"], {
+60165: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -17,20 +17,20 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "Administración de conector",
-  "id": "administración-de-conector",
+  "value": "プラグインの管理",
+  "id": "プラグインの管理",
   "level": 2
 }, {
-  "value": "Revisar la lista de conector",
-  "id": "revisar-la-lista-de-conector",
+  "value": "プラグイン一覧の確認",
+  "id": "プラグイン一覧の確認",
   "level": 3
 }, {
-  "value": "Editar conector",
-  "id": "editar-conector",
+  "value": "プラグインの編集",
+  "id": "プラグインの編集",
   "level": 3
 }, {
-  "value": "Eliminar conector",
-  "id": "eliminar-conector",
+  "value": "プラグインの削除",
+  "id": "プラグインの削除",
   "level": 3
 }];
 function _createMdxContent(props) {
@@ -53,72 +53,72 @@ function _createMdxContent(props) {
   if (!Start) _missingMdxReference("Start", true);
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "administración-de-conector",
-      children: "Administración de conector"
+      id: "プラグインの管理",
+      children: "プラグインの管理"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Administra los conectores instalados a través de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+      children: ["「", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "BioStar X Service Manager"
-      }), "."]
+      }), "」でインストールしたプラグインを管理できます。"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Haz clic en ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Start, {}), " → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+      children: ["Windows で ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Start, {}), " → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "BioStar X"
       }), " → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "BioStar X Service Manager"
-      }), " en Windows. Haz clic en ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
-        children: "PLUGINS"
-      }), " en el menú del sitio de la pantalla de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+      }), " をクリックします。 「", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "BioStar X Service Manager"
-      }), "."]
+      }), "」画面のサイトメニューで", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+        children: "PLUGINS"
+      }), "をクリックします。"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "revisar-la-lista-de-conector",
-      children: "Revisar la lista de conector"
+      id: "プラグイン一覧の確認",
+      children: "プラグイン一覧の確認"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Consulta todos los conectores registrados por el usuario."
+      children: "ユーザーが登録したすべてのプラグインを確認できます。"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
       src: "/img/common/biostarx-sm-plugins-list.png",
       alone: true
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "editar-conector",
-      children: "Editar conector"
+      id: "プラグインの編集",
+      children: "プラグインの編集"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Haz clic en el conector que deseas editar en la lista de conectores. Aparece la pantalla de edición de información del conector. Edita el nombre del conector (", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+      children: ["プラグイン一覧から編集するプラグインをクリックします。 プラグイン情報の編集画面が表示されます。 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
         children: "Plugin Name"
-      }), "), la descripción (", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+      }), "（プラグイン名）、", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
         children: "Description"
-      }), ") y el ícono (", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+      }), "（説明）、", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
         children: "Plugin Icon"
-      }), ")."]
+      }), "（アイコン）を編集できます。"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
       src: "/img/common/biostarx-sm-plugins-list-edit.png",
       alone: true
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
       type: "info",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-        children: ["No se puede editar ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
-          children: "Plugin Address"
-        }), " cuando ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
           children: "Session Bridge"
-        }), " está habilitado."]
+        }), "が有効な状態では、", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: "Plugin Address"
+        }), "は編集できません。"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "eliminar-conector",
-      children: "Eliminar conector"
+      id: "プラグインの削除",
+      children: "プラグインの削除"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Selecciona el conector que deseas eliminar haciendo clic en la casilla de verificación ubicada en el extremo izquierdo de la lista de conectores."
+          children: "プラグイン一覧で削除するプラグインの一番左のチェックボックスをクリックして選択します。"
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Haz clic en ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(IcTrash2, {}), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["画面右上の", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(IcTrash2, {}), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Delete"
-          }), " en la esquina superior derecha de la pantalla."]
+          }), "ボタンをクリックします。"]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Cuando aparezca el mensaje de confirmación, haga clic en ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["確認メッセージが表示されたら ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "OK"
-          }), "."]
+          }), " をクリックします。"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
@@ -126,14 +126,14 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "El conector de tiempo y asistencia (T&A) añadido con la licencia de tiempo y asistencia no se puede eliminar."
+            children: "勤怠管理ライセンスを適用して追加された勤怠管理 (T&A) プラグインは削除できません。"
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["El conector de gestión de tiempo y asistencia está disponible como opción adicional. Para obtener más información sobre las políticas de licencias, consulta ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+            children: ["勤怠管理プラグインは追加オプションで利用できます。 ライセンスポリシーの詳細は", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
               href: "../biostar_x/licensing#features-add-ons",
-              children: "lo siguiente"
-            }), "."]
+              children: "次のドキュメント"
+            }), "を参照してください。"]
           }), "\n"]
         }), "\n"]
       })
@@ -159,7 +159,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-57167: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+54438: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -176,16 +176,16 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "Conector de registro",
+  "value": "プラグインの登録",
   "id": "register-plugin",
   "level": 2
 }, {
-  "value": "Introduzca información del conector",
-  "id": "introduzca-información-del-conector",
+  "value": "プラグイン情報の入力",
+  "id": "プラグイン情報の入力",
   "level": 3
 }, {
-  "value": "Verificar en la pantalla del lanzador",
-  "id": "verificar-en-la-pantalla-del-lanzador",
+  "value": "ランチャー画面で確認",
+  "id": "ランチャー画面で確認",
   "level": 3
 }];
 function _createMdxContent(props) {
@@ -209,27 +209,27 @@ function _createMdxContent(props) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
       id: "register-plugin",
-      children: "Conector de registro"
+      children: "プラグインの登録"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Haz clic en ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Start, {}), " → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: ["Windows で ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Start, {}), " → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
             children: "BioStar X"
           }), " → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
             children: "BioStar X Service Manager"
-          }), " en Windows."]
+          }), " をクリックします。"]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Haz clic en ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["画面左側のサイドメニューで", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "PLUGINS"
-          }), " en el menú lateral izquierdo."]
+          }), "をクリックします。"]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Haz clic en ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["画面右上の", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Add Plugin"
-          }), " en la esquina superior derecha."]
+          }), "ボタンをクリックします。"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/common/biostarx-sm-plugins-add.png",
           width: "60%",
@@ -237,9 +237,9 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Introduzca la información del conector en la pantalla ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Add New Plugin"
-          }), "."]
+          }), "画面でプラグイン情報を入力します。"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/common/biostarx-sm-plugins-add-new.png",
           width: "60%",
@@ -247,66 +247,66 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Introduzca la información del conector y haz clic en ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["プラグイン情報を入力し、登録を完了するには", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Apply"
-          }), " para completar el registro."]
+          }), "ボタンをクリックします。"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.admonition, {
       type: "info",
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-        children: ["Si activaste ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
           children: "Session Bridge"
-        }), ", descarga el certificado en la parte inferior de la pantalla. Se requiere el certificado para la comunicación segura entre ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        }), "を有効にした場合、画面下部から証明書をダウンロードできます。 証明書は", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
           children: "BioStar X"
-        }), " y el conector. Si pierdes el certificado, descárgalo de nuevo. En ese momento, el certificado existente se invalidará."]
+        }), "とプラグイン間のセキュア通信に必要です。 証明書を紛失した場合は再度ダウンロードできます。 このとき既存の証明書は無効になります。"]
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
         src: "/img/common/biostarx-sm-plugins-download-certification.png",
         alone: true
       })]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "introduzca-información-del-conector",
-      children: "Introduzca información del conector"
+      id: "プラグイン情報の入力",
+      children: "プラグイン情報の入力"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Plugin Name"
-          }), ": Introduzca el nombre del conector. Ingresa hasta 48 caracteres. No uses un nombre ya registrado por otro conector."]
+          }), "：プラグイン名を入力します。 最大48文字まで入力できます。 既に登録されているプラグインと同じ名前は使用できません。"]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Description"
-          }), ": Ingresa una descripción del conector. Ingresa hasta 500 caracteres."]
+          }), "：プラグインの説明を入力します。 最大500文字まで入力できます。"]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Plugin Address"
-          }), ": Ingresa la dirección del conector. Debe ser una URL válida que comience con ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          }), "：プラグインのアドレスを入力します。 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
             children: "http://"
-          }), " o ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          }), "または", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
             children: "https://"
-          }), ", y no se debe usar la misma dirección de un conector ya registrado."]
+          }), "で始まる有効なURLである必要があり、既に登録されているプラグインと同じアドレスは使用できません。"]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Plugin Icon"
-          }), ": Carga el ícono del conector."]
+          }), "：プラグインのアイコンをアップロードします。"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "Los formatos compatibles son JPEG, PNG, SVG y GIF."
+              children: "対応フォーマットはJPEG、PNG、SVG、GIFです。"
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "El tamaño máximo del archivo es de 1 MB y no se pueden cargar archivos vacíos de 0 KB."
+              children: "ファイルサイズの上限は1MBで、0KBの空ファイルはアップロードできません。"
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "Las imágenes cargadas se redimensionarán automáticamente a 104×104 píxeles."
+              children: "アップロードされた画像は104×104ピクセルに自動リサイズされます。"
             }), "\n"]
           }), "\n"]
         }), "\n"]
@@ -314,7 +314,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Session Bridge"
-          }), ": Activa Session Bridge. Usar esta característica hereda automáticamente los permisos para los usuarios de BioStar X, por lo que no es necesario iniciar sesión separada al acceder al conector."]
+          }), "：セッションブリッジを使用する場合は有効にします。 この機能を使用すると、BioStar Xユーザーの権限が自動継承され、プラグインにアクセスする際に別途ログインする必要がありません。"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
@@ -322,25 +322,25 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["Si no cargas un ícono, se generará automáticamente uno a partir de la primera letra del nombre del conector. Para eliminar el ícono cargado, haz clic en el botón ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(IcTrash2, {}), "; al eliminarlo se reemplazará por el ícono generado automáticamente."]
+            children: ["アイコンをアップロードしない場合は、プラグイン名の先頭文字を使ってアイコンが自動生成されます。 アップロードしたアイコンは", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(IcTrash2, {}), "ボタンをクリックして削除でき、削除すると自動生成アイコンに切り替わります。"]
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["Una vez que ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
               children: "Session Bridge"
-            }), " esté activado, no se podrá desactivar ni cambiar la dirección del conector por razones de seguridad."]
+            }), "を有効にすると無効化できず、セキュリティ上の理由からプラグインアドレスを変更できません。"]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "verificar-en-la-pantalla-del-lanzador",
-      children: "Verificar en la pantalla del lanzador"
+      id: "ランチャー画面で確認",
+      children: "ランチャー画面で確認"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Los conector agregados aparecen en la pantalla ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
-        sid: "shell.header.launcher"
-      }), " de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "."]
+      }), "の", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+        sid: "shell.header.launcher"
+      }), "画面で追加したプラグインを確認できます。"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
       src: "/img/biostarx-added-plugins-launcher.png"
     })]
@@ -365,7 +365,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-78878: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+71967: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -382,8 +382,8 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "¿Qué son los conectores?",
-  "id": "qué-son-los-conectores",
+  "value": "プラグイン (Plugins) とは？",
+  "id": "プラグイン-plugins-とは",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -402,23 +402,23 @@ function _createMdxContent(props) {
   if (!Xclude) _missingMdxReference("Xclude", true);
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "qué-son-los-conectores",
-      children: "¿Qué son los conectores?"
+      id: "プラグイン-plugins-とは",
+      children: "プラグイン (Plugins) とは？"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Los conectores de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " son extensiones de la plataforma ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+      }), " プラグイン (Plugins) は、", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " que proporcionan funciones adicionales para cumplir con los requisitos de los clientes o integrarse con sistemas existentes."]
+      }), " プラットフォームの拡張機能であり、顧客の特別な要件や既存システムとの連携のために追加機能を提供します。"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Xclude, {
       product: "biostar_x",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
         type: "info",
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Se requiere una licencia de conector para utilizar las funciones de conector. Para obtener más información sobre la política de licencias, consulte ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+          children: ["プラグイン機能を使用するには、プラグインライセンスが必要です。 ライセンス ポリシーの詳細については、", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
             href: "../biostar_x/licensing",
-            children: "la siguiente"
-          }), "."]
+            children: "次のドキュメント"
+          }), " を参照してください。"]
         })
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
@@ -428,17 +428,17 @@ function _createMdxContent(props) {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-              children: ["Se requiere una licencia de conector para utilizar las funciones de conector. Para obtener más información sobre la política de licencias, consulte ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+              children: ["プラグイン機能を使用するには、プラグインライセンスが必要です。 ライセンス ポリシーの詳細については、", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
                 href: "../biostar_x/licensing",
-                children: "la siguiente"
-              }), "."]
+                children: "次のドキュメント"
+              }), " を参照してください。"]
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-              children: ["Para obtener más información sobre el desarrollo de conector, consulte ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+              children: ["プラグイン開発の詳細については、", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
                 href: "../plugins",
-                children: "la siguiente"
-              }), "."]
+                children: "次のドキュメント"
+              }), " を参照してください。"]
             }), "\n"]
           }), "\n"]
         })
@@ -465,7 +465,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-78963: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+91066: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -474,20 +474,20 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ plugins_frontMatter),
   toc: () => (/* binding */ plugins_toc),
   "default": () => (/* binding */ plugins_MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_x_plugins_mdx_9b4_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_ja_docusaurus_plugin_content_docs_current_platform_biostar_x_plugins_mdx_725_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ plugins_contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-es-docusaurus-plugin-content-docs-current-platform-biostar-x-plugins-mdx-9b4.json
-var site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_x_plugins_mdx_9b4_namespaceObject = JSON.parse('{"id":"platform/biostar_x/plugins","title":"Conector","description":"Los conector de BioStar X mejoran la plataforma BioStar X con funciones adicionales para satisfacer requisitos específicos de los clientes o integrarse con sistemas existentes.","source":"@site/i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/plugins.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/plugins","permalink":"/docs/es/platform/biostar_x/plugins","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/plugins.mdx","tags":[],"version":"current","frontMatter":{"id":"plugins","title":"Conector","description":"Los conector de BioStar X mejoran la plataforma BioStar X con funciones adicionales para satisfacer requisitos específicos de los clientes o integrarse con sistemas existentes.","keywords":["Conector","BioStar X"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Integrar el Registro de Eventos de Dispositivos Virtuales","permalink":"/docs/es/platform/biostar_x/settings-virtual-device-event-log"},"next":{"title":"Cómo Usar Tiempo y Asistencia","permalink":"/docs/es/platform/biostar_x/tna"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-ja-docusaurus-plugin-content-docs-current-platform-biostar-x-plugins-mdx-725.json
+var site_i_18_n_ja_docusaurus_plugin_content_docs_current_platform_biostar_x_plugins_mdx_725_namespaceObject = JSON.parse('{"id":"platform/biostar_x/plugins","title":"プラグイン","description":"BioStar Xプラグイン（Plugins）は、BioStar Xプラットフォームの拡張機能であり、顧客の特別な要件や既存システムとの連携のために追加機能を提供します。","source":"@site/i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/plugins.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/plugins","permalink":"/docs/ja/platform/biostar_x/plugins","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/plugins.mdx","tags":[],"version":"current","frontMatter":{"id":"plugins","title":"プラグイン","description":"BioStar Xプラグイン（Plugins）は、BioStar Xプラットフォームの拡張機能であり、顧客の特別な要件や既存システムとの連携のために追加機能を提供します。","keywords":["プラグイン","BioStar X"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"仮想デバイスのイベントログを連携する","permalink":"/docs/ja/platform/biostar_x/settings-virtual-device-event-log"},"next":{"title":"勤怠管理を使用","permalink":"/docs/ja/platform/biostar_x/tna"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_bsx-what-is-plugins.mdx
-var _bsx_what_is_plugins = __webpack_require__(78878);
-;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_bsx-plugins-usage-example.mdx
+// EXTERNAL MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/common/_bsx-what-is-plugins.mdx
+var _bsx_what_is_plugins = __webpack_require__(71967);
+;// CONCATENATED MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/common/_bsx-plugins-usage-example.mdx
 
 
 const frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -498,8 +498,8 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "Casos de uso clave",
-  "id": "casos-de-uso-clave",
+  "value": "主要な活用事例",
+  "id": "主要な活用事例",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -514,36 +514,36 @@ function _createMdxContent(props) {
   };
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.h2, {
-      id: "casos-de-uso-clave",
-      children: "Casos de uso clave"
+      id: "主要な活用事例",
+      children: "主要な活用事例"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Integre diversos sistemas externos mediante el sistema de conector de ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), ". Los casos de uso representativos son los siguientes."]
+      }), " のプラグインシステムを使用して、さまざまな外部システムと連携できます。 代表的な活用事例は次のとおりです。"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Sistema de gestión de asistencia"
-          }), ": Integración con soluciones externas de T&A (tiempo y asistencia)"]
+            children: "勤怠管理システム"
+          }), "：外部 T&A（Time & Attendance）ソリューションとの連携"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Sistema de gestión de visitantes"
-          }), ": Integración con sistemas independientes de registro y gestión de visitantes"]
+            children: "来訪者管理システム"
+          }), "：別途の来訪者登録・管理システムとの連携"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Solución de informes"
-          }), ": Integración con herramientas de informes y análisis personalizables"]
+            children: "レポートソリューション"
+          }), "：カスタムレポートの作成および分析ツールとの連携"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Integración con sistemas de terceros"
-          }), ": Integración de datos con sistemas empresariales existentes como ERP y HRM"]
+            children: "他社システム連携"
+          }), "：ERP、HRM など既存業務システムとのデータ連携"]
         }), "\n"]
       }), "\n"]
     })]
@@ -563,19 +563,19 @@ function MDXContent(props = {}) {
 }
 
 
-// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_bsx-register-plugin.mdx
-var _bsx_register_plugin = __webpack_require__(57167);
-// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_bsx-manage-plugins.mdx
-var _bsx_manage_plugins = __webpack_require__(19858);
-;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/plugins.mdx
+// EXTERNAL MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/common/_bsx-register-plugin.mdx
+var _bsx_register_plugin = __webpack_require__(54438);
+// EXTERNAL MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/common/_bsx-manage-plugins.mdx
+var _bsx_manage_plugins = __webpack_require__(60165);
+;// CONCATENATED MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/plugins.mdx
 
 
 const plugins_frontMatter = {
 	id: 'plugins',
-	title: 'Conector',
-	description: 'Los conector de BioStar X mejoran la plataforma BioStar X con funciones adicionales para satisfacer requisitos específicos de los clientes o integrarse con sistemas existentes.',
+	title: 'プラグイン',
+	description: 'BioStar Xプラグイン（Plugins）は、BioStar Xプラットフォームの拡張機能であり、顧客の特別な要件や既存システムとの連携のために追加機能を提供します。',
 	keywords: [
-		'Conector',
+		'プラグイン',
 		'BioStar X'
 	],
 	isTranslationMissing: false
@@ -597,8 +597,8 @@ const assets = {
 
 
 const plugins_toc = [..._bsx_what_is_plugins/* .toc */.RM, {
-  "value": "Conectores de BioStar X",
-  "id": "conectores-de-biostar-x",
+  "value": "BioStar X提供プラグイン",
+  "id": "biostar-x提供プラグイン",
   "level": 2
 }, ...toc, ..._bsx_register_plugin/* .toc */.RM, ..._bsx_manage_plugins/* .toc */.RM];
 function plugins_createMdxContent(props) {
@@ -606,27 +606,36 @@ function plugins_createMdxContent(props) {
     a: "a",
     admonition: "admonition",
     h2: "h2",
+    li: "li",
     p: "p",
-    strong: "strong",
+    ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {DocCardList} = _components;
-  if (!DocCardList) _missingMdxReference("DocCardList", true);
+  }, {DocLink} = _components;
+  if (!DocLink) _missingMdxReference("DocLink", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: ["\n", "\n", (0,jsx_runtime.jsx)(_bsx_what_is_plugins/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "conectores-de-biostar-x",
-      children: "Conectores de BioStar X"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Lista de conectores disponibles a través de opciones adicionales para licencias superiores a ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Advanced"
-      }), "."]
-    }), "\n", (0,jsx_runtime.jsx)(DocCardList, {}), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      id: "biostar-x提供プラグイン",
+      children: "BioStar X提供プラグイン"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "追加のライセンス オプションを通じて利用できるプラグインのリスト。"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(DocLink, {
+          docId: "platform/biostar_x/tna"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(DocLink, {
+          docId: "platform/biostar_x/visitor"
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["Para más información sobre la política de licencias, consulta ", (0,jsx_runtime.jsx)(_components.a, {
+        children: ["ライセンスポリシーの詳細は", (0,jsx_runtime.jsx)(_components.a, {
           href: "licensing#features-add-ons",
-          children: "lo siguiente"
-        }), "."]
+          children: "次のドキュメント"
+        }), "を参照してください。"]
       })
     }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(MDXContent, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_bsx_register_plugin/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_bsx_manage_plugins/* ["default"] */.Ay, {})]
   });

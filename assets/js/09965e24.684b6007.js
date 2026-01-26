@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["6"], {
-59323: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["17720"], {
+78027: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -17,20 +17,20 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "Plugin management",
-  "id": "plugin-management",
+  "value": "플러그인 관리",
+  "id": "플러그인-관리",
   "level": 2
 }, {
-  "value": "Check plugin list",
-  "id": "check-plugin-list",
+  "value": "플러그인 목록 확인",
+  "id": "플러그인-목록-확인",
   "level": 3
 }, {
-  "value": "Edit plugin",
-  "id": "edit-plugin",
+  "value": "플러그인 수정",
+  "id": "플러그인-수정",
   "level": 3
 }, {
-  "value": "Delete plugin",
-  "id": "delete-plugin",
+  "value": "플러그인 삭제",
+  "id": "플러그인-삭제",
   "level": 3
 }];
 function _createMdxContent(props) {
@@ -53,41 +53,41 @@ function _createMdxContent(props) {
   if (!Start) _missingMdxReference("Start", true);
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "plugin-management",
-      children: "Plugin management"
+      id: "플러그인-관리",
+      children: "플러그인 관리"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["You can manage the plugins installed through ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "BioStar X Service Manager"
-      }), "."]
+      }), "를 통해서 설치한 플러그인을 관리할 수 있습니다."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Click ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Start, {}), " → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+      children: ["Windows에서 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Start, {}), " → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "BioStar X"
       }), " → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "BioStar X Service Manager"
-      }), " on Windows. Click ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
-        children: "PLUGINS"
-      }), " in the site menu of the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+      }), "를 클릭하세요. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "BioStar X Service Manager"
-      }), " screen."]
+      }), " 화면의 사이트 메뉴에서 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+        children: "PLUGINS"
+      }), "를 클릭하세요."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "check-plugin-list",
-      children: "Check plugin list"
+      id: "플러그인-목록-확인",
+      children: "플러그인 목록 확인"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "You can see all the plugins registered by the user."
+      children: "사용자가 등록한 모든 플러그인을 확인할 수 있습니다."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
       src: "/img/common/biostarx-sm-plugins-list.png",
       alone: true
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "edit-plugin",
-      children: "Edit plugin"
+      id: "플러그인-수정",
+      children: "플러그인 수정"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Click the plugin you want to edit from the plugin list. The plugin information edit screen appears. You can edit the plugin name (", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+      children: ["플러그인 목록에서 수정할 플러그인을 클릭하세요. 플러그인 정보 수정 화면이 나타납니다. 플러그인 이름(", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
         children: "Plugin Name"
-      }), "), description (", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+      }), "), 설명(", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
         children: "Description"
-      }), "), and icon (", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+      }), "), 아이콘(", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
         children: "Plugin Icon"
-      }), ")."]
+      }), ") 항목을 수정할 수 있습니다."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
       src: "/img/common/biostarx-sm-plugins-list-edit.png",
       alone: true
@@ -96,29 +96,29 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
           children: "Plugin Address"
-        }), " cannot be edited when ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+        }), "는 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
           children: "Session Bridge"
-        }), " is enabled."]
+        }), "를 활성화한 상태에서는 수정할 수 없습니다."]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "delete-plugin",
-      children: "Delete plugin"
+      id: "플러그인-삭제",
+      children: "플러그인 삭제"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Select the plugin to delete by clicking the checkbox on the far left of the plugin list."
+          children: "플러그인 목록에서 삭제할 플러그인의 가장 왼쪽에 체크 박스를 클릭해 선택하세요."
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Click the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(IcTrash2, {}), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["화면 오른쪽 상단의 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(IcTrash2, {}), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Delete"
-          }), " button in the upper right corner of the screen."]
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["When the confirmation message appears, click ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["확인 메시지가 나타나면 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "OK"
-          }), "."]
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
@@ -126,14 +126,14 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-            children: "The time and attendance (T&A) plugin added with the time and attendance license cannot be deleted."
+            children: "근태 관리 라이선스를 적용해 추가된 근태 관리(T&A) 플러그인은 삭제할 수 없습니다."
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["The time and attendance management plugin is available as an additional option. For more information on licensing policies, refer to ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+            children: ["근태 관리 플러그인은 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
               href: "../biostar_x/licensing#features-add-ons",
-              children: "the following"
-            }), "."]
+              children: "다음 문서"
+            }), "를 참고하세요."]
           }), "\n"]
         }), "\n"]
       })
@@ -159,7 +159,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-24116: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+56100: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -176,16 +176,16 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "Register plugin",
+  "value": "플러그인 등록",
   "id": "register-plugin",
   "level": 2
 }, {
-  "value": "Enter plugin information",
-  "id": "enter-plugin-information",
+  "value": "플러그인 정보 입력",
+  "id": "플러그인-정보-입력",
   "level": 3
 }, {
-  "value": "Check on the launcher screen",
-  "id": "check-on-the-launcher-screen",
+  "value": "런처 화면에서 확인",
+  "id": "런처-화면에서-확인",
   "level": 3
 }];
 function _createMdxContent(props) {
@@ -209,27 +209,27 @@ function _createMdxContent(props) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
       id: "register-plugin",
-      children: "Register plugin"
+      children: "플러그인 등록"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Click ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Start, {}), " → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: ["Windows에서 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Start, {}), " → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
             children: "BioStar X"
           }), " → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
             children: "BioStar X Service Manager"
-          }), " on Windows."]
+          }), "를 클릭하세요."]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Click ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["화면 왼쪽 사이드 메뉴에서 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "PLUGINS"
-          }), " in the left side menu."]
+          }), "를 클릭하세요."]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Click the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["화면 오른쪽 상단의 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Add Plugin"
-          }), " button in the upper right."]
+          }), " 버튼을 클릭하세요."]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/common/biostarx-sm-plugins-add.png",
           width: "60%",
@@ -237,9 +237,9 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Enter plugin information on the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Add New Plugin"
-          }), " screen."]
+          }), " 화면에서 플러그인 정보를 입력하세요."]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/common/biostarx-sm-plugins-add-new.png",
           width: "60%",
@@ -247,66 +247,66 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Enter plugin information and click ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["플러그인 정보를 입력하고 등록을 완료하려면 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Apply"
-          }), " to complete registration."]
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.admonition, {
       type: "info",
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-        children: ["If you have activated ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
           children: "Session Bridge"
-        }), ", you can download the certificate at the bottom of the screen. The certificate is required for secure communication between ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        }), "를 활성화했다면 화면 하단에서 인증서를 다운로드할 수 있습니다. 인증서는 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
           children: "BioStar X"
-        }), " and the plugin. If you lose the certificate, you can download it again. At this time, the existing certificate will be invalidated."]
+        }), "와 플러그인 간의 보안 통신을 위해 필요합니다. 인증서를 분실했다면 새로 다운로드할 수 있습니다. 이때 기존 인증서는 무효화됩니다."]
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
         src: "/img/common/biostarx-sm-plugins-download-certification.png",
         alone: true
       })]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "enter-plugin-information",
-      children: "Enter plugin information"
+      id: "플러그인-정보-입력",
+      children: "플러그인 정보 입력"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Plugin Name"
-          }), ": Enter the name of the plugin. You can enter up to 48 characters. You cannot use the same name as an existing registered plugin."]
+          }), ": 플러그인의 이름을 입력하세요. 최대 48자까지 입력할 수 있습니다. 기존 등록한 플러그인과 같은 이름을 사용할 수 없습니다."]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Description"
-          }), ": Enter a description of the plugin. You can enter up to 500 characters."]
+          }), ": 플러그인의 설명을 입력하세요. 최대 500자까지 입력할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Plugin Address"
-          }), ": Enter the address of the plugin. It must be a valid URL starting with ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          }), ": 플러그인의 주소를 입력하세요. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
             children: "http://"
-          }), " or ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          }), " 또는 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
             children: "https://"
-          }), ", and you cannot use the same address as an existing registered plugin."]
+          }), "로 시작하는 유효한 URL이어야 하며, 기존 등록한 플러그인과 같은 주소를 사용할 수 없습니다."]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Plugin Icon"
-          }), ": Upload the plugin's icon."]
+          }), ": 플러그인의 아이콘을 업로드하세요."]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "Supported formats are JPEG, PNG, SVG, GIF."
+              children: "지원되는 형식은 JPEG, PNG, SVG, GIF입니다."
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "The maximum file size is 1MB, and 0KB empty files cannot be uploaded."
+              children: "파일의 최대 크기는 1MB이며, 0KB 빈 파일은 업로드할 수 없습니다."
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-              children: "Uploaded images will be automatically resized to 104×104 pixels."
+              children: "업로드된 이미지는 104×104 픽셀로 자동 리사이징됩니다."
             }), "\n"]
           }), "\n"]
         }), "\n"]
@@ -314,7 +314,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             children: "Session Bridge"
-          }), ": Activate to use the session bridge. Using this feature automatically inherits permissions for BioStar X users, so no separate login is required when accessing the plugin."]
+          }), ": 세션 브리지를 사용하려면 활성화하세요. 이 기능을 사용하면 BioStar X 사용자의 권한을 자동 상속하여 플러그인 접근 시 별도 로그인이 필요 없습니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
@@ -322,25 +322,25 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["If you do not upload an icon, an icon will be generated automatically from the first letter of the plugin name. The uploaded icon can be deleted by clicking the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(IcTrash2, {}), " button, and it will be replaced with the automatically generated icon upon deletion."]
+            children: ["아이콘을 업로드하지 않으면 플러그인 이름의 첫 글자로 아이콘이 자동 생성됩니다. 업로드한 아이콘은 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(IcTrash2, {}), " 버튼을 클릭해 삭제할 수 있으며, 삭제 시 자동 생성 아이콘으로 변경됩니다."]
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["Once ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+            children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
               children: "Session Bridge"
-            }), " is activated, it cannot be deactivated, and the plugin address cannot be changed for security reasons."]
+            }), "를 활성화하면 비활성화할 수 없으며, 보안상의 이유로 플러그인 주소를 변경할 수 없습니다."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "check-on-the-launcher-screen",
-      children: "Check on the launcher screen"
+      id: "런처-화면에서-확인",
+      children: "런처 화면에서 확인"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["You can see the added plugins on the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
-        sid: "shell.header.launcher"
-      }), " screen of ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "."]
+      }), "의 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+        sid: "shell.header.launcher"
+      }), " 화면에서 추가한 플러그인을 확인할 수 있습니다."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
       src: "/img/biostarx-added-plugins-launcher.png"
     })]
@@ -365,7 +365,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-7913: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+12729: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -382,8 +382,8 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "What are plugins?",
-  "id": "what-are-plugins",
+  "value": "플러그인(Plugins)이란?",
+  "id": "플러그인plugins이란",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -402,23 +402,23 @@ function _createMdxContent(props) {
   if (!Xclude) _missingMdxReference("Xclude", true);
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "what-are-plugins",
-      children: "What are plugins?"
+      id: "플러그인plugins이란",
+      children: "플러그인(Plugins)이란?"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " plugins are extensions of the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+      }), " 플러그인(Plugins)은 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " platform that provide additional features to meet customer requirements or to integrate with existing systems."]
+      }), " 플랫폼의 확장 기능으로, 고객의 특별한 요구사항이나 기존 시스템과의 연동을 위해 추가 기능을 제공합니다."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Xclude, {
       product: "biostar_x",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
         type: "info",
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["A plugin license is required to use plugin features. For more information on the licensing policy, refer to ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+          children: ["플러그인 기능을 사용하려면 플러그인 라이선스가 필요합니다. 라이선스 정책에 대한 자세한 내용은 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
             href: "../biostar_x/licensing",
-            children: "the following"
-          }), "."]
+            children: "다음 문서"
+          }), "를 참고하세요."]
         })
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
@@ -428,17 +428,17 @@ function _createMdxContent(props) {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-              children: ["A plugin license is required to use plugin features. For more information on the licensing policy, refer to ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+              children: ["플러그인 기능을 사용하려면 플러그인 라이선스가 필요합니다. 라이선스 정책에 대한 자세한 내용은 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
                 href: "../biostar_x/licensing",
-                children: "the following"
-              }), "."]
+                children: "다음 문서"
+              }), "를 참고하세요."]
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-              children: ["For more information on plugin development, refer to ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+              children: ["플러그인 개발에 대한 자세한 내용은 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
                 href: "../plugins",
-                children: "the following"
-              }), "."]
+                children: "다음 문서"
+              }), "를 참고하세요."]
             }), "\n"]
           }), "\n"]
         })
@@ -465,7 +465,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-96876: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+28476: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -474,20 +474,20 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ plugins_frontMatter),
   toc: () => (/* binding */ plugins_toc),
   "default": () => (/* binding */ plugins_MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_plugins_mdx_38d_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_plugins_mdx_099_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ plugins_contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-plugins-mdx-38d.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_plugins_mdx_38d_namespaceObject = JSON.parse('{"id":"platform/biostar_x/plugins","title":"Plugin","description":"BioStar X plugins enhance the BioStar X platform with additional features to meet specific customer requirements or integrate with existing systems.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/plugins.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/plugins","permalink":"/docs/en/platform/biostar_x/plugins","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/plugins.mdx","tags":[],"version":"current","frontMatter":{"id":"plugins","title":"Plugin","description":"BioStar X plugins enhance the BioStar X platform with additional features to meet specific customer requirements or integrate with existing systems.","keywords":["Plugin","BioStar X"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Integrate Virtual Device Event Log","permalink":"/docs/en/platform/biostar_x/settings-virtual-device-event-log"},"next":{"title":"How to Use Time & Attendance","permalink":"/docs/en/platform/biostar_x/tna"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-plugins-mdx-099.json
+var site_docs_platform_biostar_x_plugins_mdx_099_namespaceObject = JSON.parse('{"id":"platform/biostar_x/plugins","title":"플러그인","description":"BioStar X 플러그인(Plugins)은 BioStar X 플랫폼의 확장 기능으로, 고객의 특별한 요구사항이나 기존 시스템과의 연동을 위해 추가 기능을 제공합니다.","source":"@site/docs/platform/biostar_x/plugins.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/plugins","permalink":"/docs/platform/biostar_x/plugins","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/plugins.mdx","tags":[],"version":"current","frontMatter":{"id":"plugins","title":"플러그인","description":"BioStar X 플러그인(Plugins)은 BioStar X 플랫폼의 확장 기능으로, 고객의 특별한 요구사항이나 기존 시스템과의 연동을 위해 추가 기능을 제공합니다.","keywords":["플러그인","BioStar X"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"가상 장치 이벤트 로그 연동하기","permalink":"/docs/platform/biostar_x/settings-virtual-device-event-log"},"next":{"title":"근태 관리 사용하기","permalink":"/docs/platform/biostar_x/tna"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_bsx-what-is-plugins.mdx
-var _bsx_what_is_plugins = __webpack_require__(7913);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_bsx-plugins-usage-example.mdx
+// EXTERNAL MODULE: ./docs/common/_bsx-what-is-plugins.mdx
+var _bsx_what_is_plugins = __webpack_require__(12729);
+;// CONCATENATED MODULE: ./docs/common/_bsx-plugins-usage-example.mdx
 
 
 const frontMatter = (/* unused pure expression or super */ null && ({}));
@@ -498,8 +498,8 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "Key use cases",
-  "id": "key-use-cases",
+  "value": "주요 활용 사례",
+  "id": "주요-활용-사례",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -514,36 +514,36 @@ function _createMdxContent(props) {
   };
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.h2, {
-      id: "key-use-cases",
-      children: "Key use cases"
+      id: "주요-활용-사례",
+      children: "주요 활용 사례"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["You can integrate various external systems through the ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " plugins system. The representative use cases are as follows."]
+      }), " 플러그인(Plugins) 시스템을 통해 다양한 외부 시스템과 연동할 수 있습니다. 대표적인 활용 사례는 다음과 같습니다."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Attendance Management System"
-          }), ": Integration with external T&A (Time & Attendance) solutions"]
+            children: "근태 관리 시스템"
+          }), ": 외부 T&A(Time & Attendance) 솔루션과 연동"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Visitor Management System"
-          }), ": Integration with separate visitor registration and management systems"]
+            children: "방문자 관리 시스템"
+          }), ": 별도의 방문자 등록 및 관리 시스템과 연동"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Reporting Solution"
-          }), ": Integration with customizable reporting and analysis tools"]
+            children: "보고서 솔루션"
+          }), ": 사용자 정의 보고서 생성 및 분석 도구 연동"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Third-Party System Integration"
-          }), ": Data integration with existing business systems such as ERP and HRM"]
+            children: "타사 시스템 연동"
+          }), ": ERP, HRM 등 기존 업무 시스템과의 데이터 연동"]
         }), "\n"]
       }), "\n"]
     })]
@@ -563,19 +563,19 @@ function MDXContent(props = {}) {
 }
 
 
-// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_bsx-register-plugin.mdx
-var _bsx_register_plugin = __webpack_require__(24116);
-// EXTERNAL MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/common/_bsx-manage-plugins.mdx
-var _bsx_manage_plugins = __webpack_require__(59323);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/plugins.mdx
+// EXTERNAL MODULE: ./docs/common/_bsx-register-plugin.mdx
+var _bsx_register_plugin = __webpack_require__(56100);
+// EXTERNAL MODULE: ./docs/common/_bsx-manage-plugins.mdx
+var _bsx_manage_plugins = __webpack_require__(78027);
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/plugins.mdx
 
 
 const plugins_frontMatter = {
 	id: 'plugins',
-	title: 'Plugin',
-	description: 'BioStar X plugins enhance the BioStar X platform with additional features to meet specific customer requirements or integrate with existing systems.',
+	title: '플러그인',
+	description: 'BioStar X 플러그인(Plugins)은 BioStar X 플랫폼의 확장 기능으로, 고객의 특별한 요구사항이나 기존 시스템과의 연동을 위해 추가 기능을 제공합니다.',
 	keywords: [
-		'Plugin',
+		'플러그인',
 		'BioStar X'
 	],
 	isTranslationMissing: false
@@ -597,8 +597,8 @@ const assets = {
 
 
 const plugins_toc = [..._bsx_what_is_plugins/* .toc */.RM, {
-  "value": "BioStar X plugins",
-  "id": "biostar-x-plugins",
+  "value": "BioStar X 제공 플러그인",
+  "id": "biostar-x-제공-플러그인",
   "level": 2
 }, ...toc, ..._bsx_register_plugin/* .toc */.RM, ..._bsx_manage_plugins/* .toc */.RM];
 function plugins_createMdxContent(props) {
@@ -606,27 +606,36 @@ function plugins_createMdxContent(props) {
     a: "a",
     admonition: "admonition",
     h2: "h2",
+    li: "li",
     p: "p",
-    strong: "strong",
+    ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {DocCardList} = _components;
-  if (!DocCardList) _missingMdxReference("DocCardList", true);
+  }, {DocLink} = _components;
+  if (!DocLink) _missingMdxReference("DocLink", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: ["\n", "\n", (0,jsx_runtime.jsx)(_bsx_what_is_plugins/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "biostar-x-plugins",
-      children: "BioStar X plugins"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["List of plugins available through additional options for licenses above ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Advanced"
-      }), "."]
-    }), "\n", (0,jsx_runtime.jsx)(DocCardList, {}), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+      id: "biostar-x-제공-플러그인",
+      children: "BioStar X 제공 플러그인"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "라이선스 추가 옵션을 통해 사용할 수 있는 플러그인 목록입니다."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(DocLink, {
+          docId: "platform/biostar_x/tna"
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(DocLink, {
+          docId: "platform/biostar_x/visitor"
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["For more information on licensing policy, refer to ", (0,jsx_runtime.jsx)(_components.a, {
+        children: ["라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
           href: "licensing#features-add-ons",
-          children: "the following"
-        }), "."]
+          children: "다음 문서"
+        }), "를 참고하세요."]
       })
     }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(MDXContent, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_bsx_register_plugin/* ["default"] */.Ay, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_bsx_manage_plugins/* ["default"] */.Ay, {})]
   });
