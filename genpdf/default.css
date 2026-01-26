@@ -392,8 +392,25 @@ header p {
   font-style: italic;
 }
 
+.doc-content details {
+  padding: 2px 15px 15px 15px;
+  background: #e9e9e9;
+  border-radius: 4px;
+  display: block;
+}
+
+.doc-content details p:last-of-type {
+  margin-bottom: 0;
+}
+
 .doc-content details summary {
   font-weight: 600;
+  margin-bottom: 0;
+}
+
+.doc-content details summary::before {
+  content: "▼";
+  margin-right: 4px;
 }
 
 .doc-content details ul {
@@ -820,12 +837,20 @@ footer {
   margin-top: 6px;
 }
 
+.callout-note .callout-content > p:first-of-type {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.callout-note .callout-content > p:only-of-type {
+  margin-bottom: 0;
+}
 .callout-content *:last-of-type {
   margin-bottom: 0;
 }
 
 .callout-content ul,
-.callout-content ol {
+.callout-content ol,
+.callout-content p + ul {
   margin: 8px 0 0 20px;
   padding-left: 0;
 }
@@ -835,7 +860,11 @@ footer {
 }
 
 .callout-content li {
-  margin: 4px 0;
+  margin: 8px 0;
+}
+
+.callout-content li p {
+  margin-bottom: 8px;
 }
 
 /* Callout Type Variants */
@@ -854,6 +883,11 @@ footer {
 
 .callout-note .callout-content {
   margin-left: 0;
+}
+
+.callout-note .callout-content ul:first-of-type,
+.callout-note .callout-content ul:first-of-type li:first-of-type {
+  margin-top: 0;
 }
 
 .callout-title {
