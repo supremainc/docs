@@ -145,7 +145,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(remarkTransformImagePaths, basePath)
     .use(remarkTransformDocLinks, docPath, language)
     .use(remarkAddHeadingIds, headingId)
-    .use(remarkProcessIncludeXclude, productOption)
+    .use(remarkProcessIncludeXclude, productOption, '', headingId)
     .use(remarkProcessFaqs, productOption, language)  // Process Faqs component
     .use(remarkNormalizeTableStructure)
     
