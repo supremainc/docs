@@ -955,6 +955,45 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         return;
       }
 
+      // Process Start components - Windows key indicator
+      if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Start') {
+        const startText = translations['windows.key.start']?.message || 'Start';
+        const winLogoPath = basePath ? basePath.replace(/\\/g, '/') + '/src/components/Winkey/win-logo.svg' : '/img/win-logo.svg';
+        
+        const replacement = {
+          type: 'element',
+          tagName: 'span',
+          properties: { className: ['start-key'] },
+          children: [
+            {
+              type: 'element',
+              tagName: 'span',
+              properties: { className: ['bold'] },
+              children: [{ type: 'text', value: startText }]
+            },
+            {
+              type: 'text',
+              value: ' '
+            },
+            {
+              type: 'element',
+              tagName: 'img',
+              properties: {
+                src: winLogoPath,
+                className: ['win-logo'],
+                alt: 'Key',
+                width: '1rem',
+                height: '1rem'
+              },
+              children: []
+            }
+          ]
+        };
+        
+        parent.children[index] = replacement;
+        return;
+      }
+
       // Process SVG icon components (IcDown, IcUp, IcMenu1, etc.) BEFORE Image processing
       if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && svgComponentsMap[node.name]) {
         const svgPath = svgComponentsMap[node.name];
@@ -1251,6 +1290,41 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         };
 
         parent.children[index] = replacement;
+      }
+
+      // Process Tabs, TabItem components
+      if (node.type === 'mdxJsxFlowElement' && node.name === 'Tabs') {
+        const replacement = {
+          type: 'element',
+          tagName: 'div',
+          properties: { className: ['tabs'] },
+          children: node.children || []
+        };
+
+        parent.children[index] = replacement;
+        return;
+      }
+
+      if (node.type === 'mdxJsxFlowElement' && node.name === 'TabItem') {
+        const attributes = node.attributes || [];
+        const tabTitle = attributes.find(attr => attr.name === 'value')?.value || '';
+        const replacement = {
+          type: 'element',
+          tagName: 'div',
+          properties: { className: ['tabItem'] },
+          children: [
+            {
+              type: 'element',
+              tagName: 'b',
+              properties: { },
+              children: [{ type: 'text', value: tabTitle }]
+            },
+            ... (node.children || [])
+          ]
+        };
+
+        parent.children[index] = replacement;
+        return;
       }
 
       // Process Steps components
