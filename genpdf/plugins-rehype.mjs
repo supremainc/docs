@@ -44,6 +44,22 @@ const codeEn = JSON.parse(readFileSync(`${__dirname}/../i18n/en/code.json`, 'utf
 const codeEs = JSON.parse(readFileSync(`${__dirname}/../i18n/es/code.json`, 'utf-8'));
 const codeJa = JSON.parse(readFileSync(`${__dirname}/../i18n/ja/code.json`, 'utf-8'));
 
+// Treeview SVG icons from static/img/menus
+const treeviewSvgIcons = {
+  'access-level': readFileSync(`${__dirname}/../static/img/menus/ico-aclevel.svg`, 'utf-8'),
+  'door': readFileSync(`${__dirname}/../static/img/menus/ico-acdoor.svg`, 'utf-8'),
+  'door-device': readFileSync(`${__dirname}/../static/img/menus/ico-door-close.svg`, 'utf-8'),
+  'door-sensor': readFileSync(`${__dirname}/../static/img/menus/ico-door-sensor.svg`, 'utf-8'),
+  'door-relay': readFileSync(`${__dirname}/../static/img/menus/ico-relay-lock.svg`, 'utf-8'),
+  'door-arm': readFileSync(`${__dirname}/../static/img/menus/ico-arms.svg`, 'utf-8'),
+  'door-camera': readFileSync(`${__dirname}/../static/img/menus/ico-camera-ok.svg`, 'utf-8'),
+  'floor-level': readFileSync(`${__dirname}/../static/img/menus/ico-floorlv.svg`, 'utf-8'),
+  'access-zone': readFileSync(`${__dirname}/../static/img/menus/ico-zone.svg`, 'utf-8'),
+  'elevator': readFileSync(`${__dirname}/../static/img/menus/ico-flelev.svg`, 'utf-8'),
+  'elevator-device': readFileSync(`${__dirname}/../static/img/menus/ico-elevator.svg`, 'utf-8'),
+  'elevator-schedule': readFileSync(`${__dirname}/../static/img/menus/ico-flelevfl.svg`, 'utf-8')
+};
+
 /**
  * Helper function to create AST nodes for SpecSection
  * Directly builds rehype AST matching React component structure
@@ -1208,6 +1224,120 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         }
       }
 
+      // Process ProdImg components - same as Image but with language-aware path conversion
+      if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'ProdImg') {
+        const attributes = node.attributes || [];
+        const srcAttr = attributes.find(attr => attr.name === 'src');
+        let src = srcAttr ? srcAttr.value : '';
+        
+        // Extract optional attributes
+        const classNameAttr = attributes.find(attr => attr.name === 'className');
+        const className = classNameAttr ? classNameAttr.value : '';
+        
+        const widthAttr = attributes.find(attr => attr.name === 'width');
+        let width = '';
+        if (widthAttr) {
+          if (typeof widthAttr.value === 'string') {
+            width = widthAttr.value.replace(/px$/, '');
+          } else if (typeof widthAttr.value === 'number') {
+            width = String(widthAttr.value);
+          } else if (typeof widthAttr.value === 'object' && widthAttr.value && widthAttr.value.value !== undefined) {
+            width = String(widthAttr.value.value);
+          }
+        }
+        
+        const heightAttr = attributes.find(attr => attr.name === 'height');
+        let height = '';
+        if (heightAttr) {
+          if (typeof heightAttr.value === 'string') {
+            height = heightAttr.value.replace(/px$/, '');
+          } else if (typeof heightAttr.value === 'number') {
+            height = String(heightAttr.value);
+          } else if (typeof heightAttr.value === 'object' && heightAttr.value && heightAttr.value.value !== undefined) {
+            height = String(heightAttr.value.value);
+          }
+        }
+        
+        const altAttr = attributes.find(attr => attr.name === 'alt');
+        const alt = altAttr ? altAttr.value : '';
+        
+        const hasAlone = attributes.some(attr => attr.name === 'alone');
+        
+        // Convert to absolute file system path for PDF generation
+        // ProdImg: alone 속성이 없고 language !== 'ko'일 때만 언어 폴더 추가
+        if (src && basePath) {
+          if (src.startsWith('/img/')) {
+            const normalizedSrc = src.replace(/^\/img\//, '');
+            // alone 속성이 없고 한국어가 아닐 때만 언어 폴더 추가
+            if (!hasAlone && language !== 'ko') {
+              src = basePath.replace(/\\/g, '/') + '/static/img/' + language + '/' + normalizedSrc;
+            } else {
+              src = basePath.replace(/\\/g, '/') + '/static/img/' + normalizedSrc;
+            }
+          }
+        } else if (src && !src.startsWith('/') && !basePath && !hasAlone && language !== 'ko') {
+          // Handle relative paths
+          src = src.replace(/^\.\//, '/img/').replace(/^\.\.\/img\//, '/img/').replace(/^\.\.\//, '/');
+          if (!src.startsWith('/')) {
+            src = '/img/' + language + '/' + src;
+          }
+        }
+        
+        const hasCaption = attributes.some(attr => attr.name === 'caption');
+
+        // Helper function to build img properties
+        const buildImgProperties = (baseSrc) => {
+          const props = { src: baseSrc };
+          if (className) props.className = [className];
+          if (width) props.width = width;
+          if (height) props.height = height;
+          if (alt) props.alt = alt;
+          return props;
+        };
+
+        let replacement = null;
+
+        if (hasCaption && src) {
+          replacement = {
+            type: 'element',
+            tagName: 'figure',
+            properties: {},
+            children: [
+              {
+                type: 'element',
+                tagName: 'img',
+                properties: buildImgProperties(src),
+                children: []
+              },
+              {
+                type: 'element',
+                tagName: 'figcaption',
+                properties: {},
+                children: [{ type: 'text', value: figureCaptionText }]
+              }
+            ]
+          };
+        } else if (src) {
+          replacement = {
+            type: 'element',
+            tagName: 'p',
+            properties: { className: ['hasimg'] },
+            children: [
+              {
+                type: 'element',
+                tagName: 'img',
+                properties: buildImgProperties(src),
+                children: []
+              }
+            ]
+          };
+        }
+
+        if (replacement) {
+          parent.children[index] = replacement;
+        }
+      }
+
       // Process Magnify components - same as Image component
       if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Magnify') {
         const attributes = node.attributes || [];
@@ -2233,4 +2363,288 @@ export function rehypeProcessGlossaryComponent(language = 'ko') {
       }
     });
   };
+}
+
+/**
+ * Create a rehype plugin that processes Treeview components
+ * Converts <Treeview data={treeData} /> to structured HTML tree
+ * 
+ * Supports:
+ * - Default data from Treeview component (dataKo, dataEn)
+ * - External JSON data via data={variable} in MDX
+ * - Base64-encoded JSON data via _jsonData attribute
+ * 
+ * Structure:
+ * <Treeview data={dataObject} /> -> <div class="treeview-container">
+ *   <div class="tree-node">
+ *     <div class="tree-item"><span class="tree-label">Label</span></div>
+ *     <div class="tree-children">...</div>
+ *   </div>
+ * </div>
+ */
+export function rehypeProcessTreeviewComponent(language = 'ko') {
+  // Load default Treeview data
+  const defaultTreeviewData = {
+    ko: [
+      {
+        name: "모든 출입 그룹",
+        children: [
+          {
+            name: "출입 그룹",
+            type: "access-group",
+            children: [
+              {
+                name: "출입 등급 A",
+                type: "access-level",
+                children: [
+                  { name: "출입문 1 - 스케줄", type: "door" },
+                  { name: "출입문 2 - 스케줄", type: "door" }
+                ]
+              },
+              {
+                name: "층 등급 A",
+                type: "floor-level",
+                children: [
+                  {
+                    name: "엘리베이터 B",
+                    type: "elevator",
+                    children: [
+                      { name: "엘리베이터 B 1층 - 스케줄", type: "elevator-schedule" },
+                      { name: "엘리베이터 B 2층 - 스케줄", type: "elevator-schedule" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    en: [
+      {
+        name: "All Access Groups",
+        children: [
+          {
+            name: "Access Group",
+            type: "access-group",
+            children: [
+              {
+                name: "Access Level A",
+                type: "access-level",
+                children: [
+                  { name: "Door 1 - Schedule", type: "door" },
+                  { name: "Door 2 - Schedule", type: "door" }
+                ]
+              },
+              {
+                name: "Floor Level A",
+                type: "floor-level",
+                children: [
+                  {
+                    name: "Elevator B",
+                    type: "elevator",
+                    children: [
+                      { name: "Elevator B 1st Floor - Schedule", type: "elevator-schedule" },
+                      { name: "Elevator B 2nd Floor - Schedule", type: "elevator-schedule" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  };
+
+  return (tree) => {
+    visit(tree, (node, index, parent) => {
+      if (node.type === 'mdxJsxFlowElement' && node.name === 'Treeview') {
+        let treeData = null;
+        
+        // Priority 1: Check for base64-encoded JSON data from loader
+        const jsonDataAttr = node.attributes?.find(attr => attr.name === '_jsonData');
+        if (jsonDataAttr && jsonDataAttr.value) {
+          try {
+            const base64String = jsonDataAttr.value;
+            const jsonString = Buffer.from(base64String, 'base64').toString('utf-8');
+            treeData = JSON.parse(jsonString);
+            console.log('✓ Treeview data decoded from _jsonData');
+          } catch (error) {
+            console.warn('⚠️  Failed to decode Treeview _jsonData:', error.message);
+          }
+        }
+        
+        // Priority 2: Use default data if no external data provided
+        if (!treeData) {
+          treeData = defaultTreeviewData[language] || defaultTreeviewData.en;
+          console.log(`ℹ️  Using default Treeview data for language: ${language}`);
+        }
+        
+        // Build the HTML representation
+        const htmlNode = buildTreeviewHtml(treeData);
+        parent.children[index] = htmlNode;
+      }
+    });
+  };
+}
+
+/**
+ * Helper function to build Treeview HTML structure
+ * Recursively creates tree node elements from data
+ */
+function buildTreeviewHtml(data) {
+  // Helper function to recursively build tree nodes
+  function buildTreeNode(node, level = 0) {
+    const hasChildren = node.children && node.children.length > 0;
+    const levelClass = `level${level}`;
+    const paddingLeft = level > 1 ? (level - 1) * 30 : 0;
+    
+    // Build node icon/toggle
+    const nodeElements = [];
+    
+    // Add toggle/expand button for level 1 nodes with children
+    if (level === 1 && hasChildren) {
+      nodeElements.push({
+        type: 'element',
+        tagName: 'span',
+        properties: { className: ['tree-toggle'] },
+        children: [{ type: 'text', value: '▼' }]
+      });
+    }
+    
+    // Add icon for level > 1 or specific types
+    if (level > 1 || node.type === 'access-zone') {
+      // Special handling for elevator-floor (rendered as a circle dot)
+      if (node.type === 'elevator-floor') {
+        nodeElements.push({
+          type: 'element',
+          tagName: 'span',
+          properties: { 
+            className: ['tree-icon'],
+            style: 'display: inline-block; width: 10px; height: 10px; background-color: #aaa; border-radius: 50%; position: relative; top: 2px;'
+          },
+          children: []
+        });
+      } else {
+        const svgIcon = getSvgIcon(node.type);
+        if (svgIcon) {
+          nodeElements.push({
+            type: 'element',
+            tagName: 'span',
+            properties: { className: ['tree-icon', 'tree-svg-icon'] },
+            children: [svgIcon]
+          });
+        }
+      }
+    }
+    
+    // Add label
+    nodeElements.push({
+      type: 'element',
+      tagName: 'span',
+      properties: { className: ['tree-label'] },
+      children: [{ type: 'text', value: node.name || 'Unnamed' }]
+    });
+    
+    // Build tree item
+    const treeItem = {
+      type: 'element',
+      tagName: 'div',
+      properties: {
+        className: ['tree-item', levelClass],
+        style: `padding-left: ${paddingLeft}px;`
+      },
+      children: nodeElements
+    };
+    
+    // Build tree children if exists
+    const childrenElements = [];
+    if (hasChildren) {
+      for (const child of node.children) {
+        childrenElements.push(buildTreeNode(child, level + 1));
+      }
+    }
+    
+    // Build complete node structure
+    const nodeChildren = [treeItem];
+    if (hasChildren && childrenElements.length > 0) {
+      nodeChildren.push({
+        type: 'element',
+        tagName: 'div',
+        properties: { className: ['tree-children'] },
+        children: childrenElements
+      });
+    }
+    
+    return {
+      type: 'element',
+      tagName: 'div',
+      properties: { className: ['tree-node'] },
+      children: nodeChildren
+    };
+  }
+  
+  // If no data provided, return a placeholder
+  if (!data || (Array.isArray(data) && data.length === 0)) {
+    return {
+      type: 'element',
+      tagName: 'div',
+      properties: { className: ['treeview-container'] },
+      children: [{
+        type: 'element',
+        tagName: 'p',
+        properties: { style: 'color: #999; font-size: 0.9em;' },
+        children: [{ type: 'text', value: '[Treeview component - data not loaded]' }]
+      }]
+    };
+  }
+  
+  // Build tree nodes for all root items
+  const treeNodes = Array.isArray(data) 
+    ? data.map((item, idx) => buildTreeNode(item, 0))
+    : [buildTreeNode(data, 0)];
+  
+  return {
+    type: 'element',
+    tagName: 'div',
+    properties: { className: ['treeview-container'] },
+    children: treeNodes
+  };
+}
+
+/**
+ * Get SVG icon AST nodes for tree node types
+ * Parses SVG content from static/img/menus and returns AST nodes
+ * Uses rehype-parse to convert SVG to rehype AST format
+ * 
+ * @param {string} type - Node type (e.g., 'door', 'access-level', 'elevator')
+ * @returns {Object|null} Rehype AST node or null if not found
+ */
+function getSvgIcon(type) {
+  const svgContent = treeviewSvgIcons[type];
+  if (!svgContent) {
+    return null;
+  }
+  
+  try {
+    // Parse SVG to AST using rehype-parse
+    const processor = unified().use(rehypeParse, { fragment: true });
+    const ast = processor.parse(svgContent);
+    
+    // Return the first child (should be svg element)
+    if (ast.children && ast.children.length > 0) {
+      const svgElement = ast.children[0];
+      // Add height and width attributes for consistent sizing (matching Treeview/index.js)
+      if (svgElement.properties) {
+        svgElement.properties.height = '25';
+        svgElement.properties.width = 'auto';
+      }
+      return svgElement;
+    }
+  } catch (error) {
+    console.warn(`⚠️  Failed to parse SVG for type "${type}":`, error.message);
+  }
+  
+  return null;
 }

@@ -14,6 +14,83 @@ const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.dirname(__dirname);
 
 // ============================================================================
+// DEFAULT TREEVIEW DATA (from src/components/Treeview/index.js)
+// ============================================================================
+
+const DEFAULT_TREEVIEW_DATA = {
+  ko: [
+    {
+      name: "모든 출입 그룹",
+      children: [
+        {
+          name: "출입 그룹",
+          type: "access-group",
+          children: [
+            {
+              name: "출입 등급 A",
+              type: "access-level",
+              children: [
+                { name: "출입문 1 - 스케줄", type: "door" },
+                { name: "출입문 2 - 스케줄", type: "door" }
+              ]
+            },
+            {
+              name: "층 등급 A",
+              type: "floor-level",
+              children: [
+                {
+                  name: "엘리베이터 B",
+                  type: "elevator",
+                  children: [
+                    { name: "엘리베이터 B 1층 - 스케줄", type: "elevator-schedule" },
+                    { name: "엘리베이터 B 2층 - 스케줄", type: "elevator-schedule" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  en: [
+    {
+      name: "All Access Groups",
+      children: [
+        {
+          name: "Access Group",
+          type: "access-group",
+          children: [
+            {
+              name: "Access Level A",
+              type: "access-level",
+              children: [
+                { name: "Door 1 - Schedule", type: "door" },
+                { name: "Door 2 - Schedule", type: "door" }
+              ]
+            },
+            {
+              name: "Floor Level A",
+              type: "floor-level",
+              children: [
+                {
+                  name: "Elevator B",
+                  type: "elevator",
+                  children: [
+                    { name: "Elevator B 1st Floor - Schedule", type: "elevator-schedule" },
+                    { name: "Elevator B 2nd Floor - Schedule", type: "elevator-schedule" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+// ============================================================================
 // REGEX PATTERNS (Centralized to avoid duplication)
 // ============================================================================
 
@@ -49,7 +126,10 @@ const REGEX_PATTERNS = {
   anchors: /\{#([^}]+)\}/g,
   
   // SpecSection with property path: <SpecSection data={varName.property} />
-  specSectionWithProperty: (varName) => new RegExp(`<SpecSection\\s+data={${varName}((?:\\.[a-zA-Z_]\\w*)+)}\\s*/>`, 'g')
+  specSectionWithProperty: (varName) => new RegExp(`<SpecSection\\s+data={${varName}((?:\\.[a-zA-Z_]\\w*)+)}\\s*/>`, 'g'),
+  
+  // Treeview with data attribute: <Treeview data={varName} /> or <Treeview data={varName.property} />
+  treeviewWithData: (varName) => new RegExp(`<Treeview\\s+data={${varName}((?:\\.[a-zA-Z_]\\w*)*)}\\s*/>`, 'g')
 };
 
 // ============================================================================
@@ -692,6 +772,43 @@ export function processImportsInMdx(content, basePath, currentFilePath = '') {
       }
     } catch (e) {
       console.warn(`Failed to process JSON variable ${varName}:`, e.message);
+    }
+  }
+
+  // Process Treeview components with JSON data
+  // Similar to SpecSection, but handles Treeview-specific data structure
+  for (const [varName, jsonData] of Object.entries(imports)) {
+    try {
+      if (typeof jsonData === 'string' && (jsonData.startsWith('[') || jsonData.startsWith('{'))) {
+        // Check if this is a Treeview data import
+        const treeviewPattern = REGEX_PATTERNS.treeviewWithData(varName);
+        let treeviewMatch;
+        let matchCount = 0;
+        
+        while ((treeviewMatch = treeviewPattern.exec(processedContent)) !== null) {
+          matchCount++;
+          const jsonObj = JSON.parse(jsonData);
+          const propertyPath = treeviewMatch[1]; // e.g., "", ".doorTree", etc.
+          
+          let dataValue = jsonObj;
+          if (propertyPath) {
+            // Extract nested property if specified
+            dataValue = extractNestedProperty(jsonObj, propertyPath);
+          }
+          
+          if (dataValue) {
+            const escapedJson = Buffer.from(JSON.stringify(dataValue)).toString('base64');
+            const fullMatch = treeviewMatch[0];
+            processedContent = processedContent.replace(fullMatch, `<Treeview _jsonData="${escapedJson}" />`);
+          }
+        }
+        
+        if (matchCount > 0) {
+          console.log(`✓ Found ${matchCount} Treeview components using ${varName}`);
+        }
+      }
+    } catch (e) {
+      console.warn(`Failed to process Treeview JSON variable ${varName}:`, e.message);
     }
   }
 

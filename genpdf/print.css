@@ -14,10 +14,12 @@
 }
 
 @media print {
-  h1 { -prince-bookmark-level: none }
-  h2 { -prince-bookmark-level: 1 }
-  h3 { -prince-bookmark-level: 2 }
-  h4 { -prince-bookmark-level: 3 }
-  h5 { -prince-bookmark-level: none }
-  h6 { -prince-bookmark-level: none }
+  .doc-section h1 { -prince-bookmark-level: none }
+  .doc-section h2 { -prince-bookmark-level: 1 }
+  .toc h2 { -prince-bookmark-level: none }
+  .doc-section h3 { -prince-bookmark-level: 2 }
+  .doc-section h4 { -prince-bookmark-level: 3 }
+  .doc-section .next-step h4 { -prince-bookmark-level: none }
+  .doc-section h5 { -prince-bookmark-level: none }
+  .doc-section h6 { -prince-bookmark-level: none }
 }
