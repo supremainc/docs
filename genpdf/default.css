@@ -245,7 +245,7 @@ header p {
   padding-bottom: 0;
 }
 
-.doc-content .fdstep h4:before, .doc-content .fdstep h5:before, .doc-content .fdstep h6:before {
+.doc-content .fdstep h3:before, .doc-content .fdstep h4:before, .doc-content .fdstep h5:before, .doc-content .fdstep h6:before {
   background-color: var(--ifm-color-cmd);
   color: var(--color-fd-secondary-foreground);
   content: counter(step);
@@ -262,7 +262,7 @@ header p {
   text-align: center;
 }
 
-.doc-content .fdstep h4:before, .doc-content .fdstep h5:before {
+.doc-content .fdstep h3:before, .doc-content .fdstep h4:before, .doc-content .fdstep h5:before {
   top: -2px;
 }
 
@@ -270,9 +270,10 @@ header p {
   top: -1px;
 }
 
-.doc-content .fdstep h4, .doc-content .fdstep h5, .doc-content .fdstep h6 {
+.doc-content .fdstep h3, .doc-content .fdstep h4, .doc-content .fdstep h5, .doc-content .fdstep h6 {
   position: relative;
   left: -1.2rem;
+  font-size: 13pt;
 }
 
 .description {

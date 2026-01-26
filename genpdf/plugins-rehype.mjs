@@ -994,6 +994,63 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         return;
       }
 
+      // Process Head components - convert to heading elements with ID
+      // <Head level={3} hashid="some-id">콘텐츠</Head> -> <h3 id="some-id">콘텐츠</h3>
+      if (node.type === 'mdxJsxFlowElement' && node.name === 'Head') {
+        const attributes = node.attributes || [];
+        
+        // Extract level prop
+        const levelAttr = attributes.find(attr => attr.name === 'level');
+        let level = 2; // Default to h2
+        
+        if (levelAttr) {
+          if (typeof levelAttr.value === 'number') {
+            level = levelAttr.value;
+          } else if (typeof levelAttr.value === 'object' && levelAttr.value?.value) {
+            // Handle mdxJsxAttributeValueExpression
+            level = levelAttr.value.value;
+          }
+        }
+        
+        // Ensure level is between 1 and 6
+        level = Math.max(1, Math.min(6, level));
+        
+        // Extract hashid prop
+        const hashidAttr = attributes.find(attr => attr.name === 'hashid');
+        let hashid = '';
+        
+        if (hashidAttr) {
+          if (typeof hashidAttr.value === 'string') {
+            hashid = hashidAttr.value;
+          } else if (typeof hashidAttr.value === 'object' && hashidAttr.value?.value) {
+            // Handle mdxJsxAttributeValueExpression (e.g., {props.hashid})
+            hashid = hashidAttr.value.value || '';
+          }
+        }
+        
+        // Extract className prop if present
+        const classNameAttr = attributes.find(attr => attr.name === 'className');
+        let classNames = ['anchor'];
+        
+        if (classNameAttr && typeof classNameAttr.value === 'string') {
+          classNames.push(classNameAttr.value);
+        }
+        
+        // Build heading element with ID and children
+        const headingNode = {
+          type: 'element',
+          tagName: `h${level}`,
+          properties: {
+            id: hashid,
+            className: classNames
+          },
+          children: node.children || []
+        };
+        
+        parent.children[index] = headingNode;
+        return;
+      }
+
       // Process SVG icon components (IcDown, IcUp, IcMenu1, etc.) BEFORE Image processing
       if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && svgComponentsMap[node.name]) {
         const svgPath = svgComponentsMap[node.name];
