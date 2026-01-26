@@ -147,10 +147,6 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(remarkProcessIncludeXclude, productOption, '', headingId)
     .use(remarkProcessFaqs, productOption, language)  // Process Faqs component
     .use(remarkNormalizeTableStructure)
-    
-    // Code highlighting
-    // .use(remarkPrism)
-    
     // Convert to HTML
     .use(remarkRehype, { 
       passThrough: ['mdxJsxFlowElement', 'mdxJsxTextElement'], 
