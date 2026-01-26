@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["91290"], {
-66703: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["92812"], {
+29093: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,29 +9,29 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_video_integration_mdx_7fe_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_x_settings_video_integration_mdx_cf3_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-settings-video-integration-mdx-7fe.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_video_integration_mdx_7fe_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-video-integration","title":"Integrate VMS","description":"This guide explains how to integrate the Video Management System (VMS) for real-time video monitoring and playback on BioStar X.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-video-integration.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-video-integration","permalink":"/docs/en/platform/biostar_x/settings-video-integration","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-video-integration.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-video-integration","title":"Integrate VMS","description":"This guide explains how to integrate the Video Management System (VMS) for real-time video monitoring and playback on BioStar X.","keywords":["Video","Integration","Camera","Settings"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Video Settings","permalink":"/docs/en/platform/biostar_x/settings-videos"},"next":{"title":"Set up the camera","permalink":"/docs/en/platform/biostar_x/settings-videos-camera"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-settings-video-integration-mdx-cf3.json
+var site_docs_platform_biostar_x_settings_video_integration_mdx_cf3_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-video-integration","title":"VMS 연동하기","description":"BioStar X에서 실시간 영상 모니터링 및 녹화 영상 재생을 위한 Video Management System(VMS) 연동 방법을 안내합니다.","source":"@site/docs/platform/biostar_x/settings-video-integration.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-video-integration","permalink":"/docs/platform/biostar_x/settings-video-integration","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-video-integration.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-video-integration","title":"VMS 연동하기","description":"BioStar X에서 실시간 영상 모니터링 및 녹화 영상 재생을 위한 Video Management System(VMS) 연동 방법을 안내합니다.","keywords":["비디오","연동","카메라","설정"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"비디오 설정하기","permalink":"/docs/platform/biostar_x/settings-videos"},"next":{"title":"카메라 설정하기","permalink":"/docs/platform/biostar_x/settings-videos-camera"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-video-integration.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_x/settings-video-integration.mdx
 
 
 const frontMatter = {
 	id: 'settings-video-integration',
-	title: 'Integrate VMS',
-	description: 'This guide explains how to integrate the Video Management System (VMS) for real-time video monitoring and playback on BioStar X.',
+	title: 'VMS 연동하기',
+	description: 'BioStar X에서 실시간 영상 모니터링 및 녹화 영상 재생을 위한 Video Management System(VMS) 연동 방법을 안내합니다.',
 	keywords: [
-		'Video',
-		'Integration',
-		'Camera',
-		'Settings'
+		'비디오',
+		'연동',
+		'카메라',
+		'설정'
 	],
 	isTranslationMissing: false
 };
@@ -44,44 +44,44 @@ const assets = {
 
 
 const toc = [{
-  "value": "Before start",
-  "id": "before-start",
+  "value": "시작하기 전에",
+  "id": "시작하기-전에",
   "level": 2
 }, {
-  "value": "VMS server integration settings",
-  "id": "vms-server-integration-settings",
+  "value": "VMS 서버 연동 설정",
+  "id": "vms-서버-연동-설정",
   "level": 2
 }, {
-  "value": "Install the certificate on the VMS server",
+  "value": "VMS 서버에서 인증서 설치",
   "id": "install-vms-certification",
   "level": 3
 }, {
-  "value": "Activate VMS integration",
-  "id": "activate-vms-integration",
+  "value": "VMS 연동 활성화",
+  "id": "vms-연동-활성화",
   "level": 3
 }, {
-  "value": "Restart service",
-  "id": "restart-service",
+  "value": "서비스 재시작",
+  "id": "서비스-재시작",
   "level": 3
 }, {
-  "value": "Check and configure cameras",
-  "id": "check-and-configure-cameras",
+  "value": "카메라 확인 및 설정",
+  "id": "카메라-확인-및-설정",
   "level": 3
 }, {
-  "value": "Troubleshooting",
+  "value": "문제 해결",
   "id": "video-troubleshooting",
   "level": 3
 }, {
-  "value": "Certificate installation on client PC",
+  "value": "클라이언트 PC에서 인증서 설치",
   "id": "install-client-certification",
   "level": 4
 }, {
-  "value": "VMS event and bookmark settings",
+  "value": "VMS 이벤트 및 북마크 설정",
   "id": "vms-event-bookmark",
   "level": 2
 }, {
-  "value": "Disconnect VMS server integration",
-  "id": "disconnect-vms-server-integration",
+  "value": "VMS 서버 연동 해제",
+  "id": "vms-서버-연동-해제",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -111,116 +111,116 @@ function _createMdxContent(props) {
   if (!Tabs) _missingMdxReference("Tabs", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["The ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Video Management System"
-      }), " (VMS) is a video management system that integrates and manages video from multiple cameras, allowing for recording and playback. Integrating BioStar X with VMS allows you to manage access control and video security on a single platform."]
+      }), "(VMS)는 여러 카메라의 영상을 통합 관리하고 녹화, 재생할 수 있는 영상 관리 시스템입니다. BioStar X와 VMS를 연동하면 출입 통제와 영상 보안을 하나의 플랫폼에서 통합 관리할 수 있습니다."]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "You can gain the following benefits through VMS integration."
+      children: "VMS 연동을 통해 다음과 같은 혜택을 얻을 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Real-time monitoring"
-          }), ": You can view real-time video from cameras connected to doors."]
+            children: "실시간 모니터링"
+          }), ": 출입문과 연결된 카메라의 실시간 영상 확인할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Integrated event management"
-          }), ": You can understand security situations by linking access events with video."]
+            children: "통합 이벤트 관리"
+          }), ": 출입 이벤트와 영상을 연계하여 보안 상황 파악할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Efficient evidence collection"
-          }), ": You can quickly search and replay recorded video from specific points in time."]
+            children: "효율적인 증거 수집"
+          }), ": 특정 시점의 녹화 영상을 빠르게 검색 및 재생할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Bookmark function"
-          }), ": You can add video tags to important event moments for easy retrieval and review."]
+            children: "북마크 기능"
+          }), ": 중요한 이벤트 시점에 영상 태그를 추가하여 쉽게 찾고 검토할 수 있습니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "before-start",
-      children: "Before start"
+      id: "시작하기-전에",
+      children: "시작하기 전에"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["To integrate with the ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Video Management System"
-      }), " (VMS), please check the following items."]
+      }), "(VMS)과 연동하려면 다음 사항을 확인하세요."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["The VMS integration feature is available through additional options for licenses above ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Advanced"
-          }), ". For more information on licensing policy, refer to ", (0,jsx_runtime.jsx)(_components.a, {
+          children: ["VMS 연동 기능은 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "어드밴스"
+          }), "(Advanced) 라이선스 이상에서 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "licensing#features-add-ons",
-            children: "the following"
-          }), "."]
+            children: "다음 문서"
+          }), "를 참고하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Make sure that the VMS server is correctly installed and configured. The VMS server must be in a state that can connect online with ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["VMS 서버가 올바르게 설치되고 구성되었는지 확인하세요. VMS 서버는 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), "."]
+          }), "와 온라인으로 연결 가능한 상태여야 합니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Use a VMS that is compatible with ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), ". You can use ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), "와 호환되는 VMS를 사용하세요. ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X VMS"
-          }), " or the ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), " 또는 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Nx Witness v5.1.5"
-          }), " series of VMS."]
+          }), " 계열의 VMS를 사용할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Prepare the IP address, port number, and administrator account information of the VMS server. This information is needed to connect the VMS server with ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["VMS 서버의 IP 주소, 포트 번호, 관리자 계정 정보를 준비하세요. 이 정보는 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), "."]
+          }), "에서 VMS 서버에 연결하는 데 필요합니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "vms-server-integration-settings",
-      children: "VMS server integration settings"
+      id: "vms-서버-연동-설정",
+      children: "VMS 서버 연동 설정"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Follow the steps below to integrate the VMS server with ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["VMS 서버와 ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "."]
+      }), "를 연동하려면 다음 단계를 따르세요."]
     }), "\n", (0,jsx_runtime.jsxs)(Steps, {
       children: [(0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
           id: "install-vms-certification",
-          children: "Install the certificate on the VMS server"
+          children: "VMS 서버에서 인증서 설치"
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "To play back recorded video from the VMS server, you must use HTTPS protocol. Generate an IP address-based certificate on the VMS server."
+          children: "VMS 서버의 녹화된 영상을 재생하려면 HTTPS 프로토콜을 사용해야 합니다. VMS 서버에서 IP 주소 기반의 인증서를 생성하세요."
         }), (0,jsx_runtime.jsx)(_components.admonition, {
           type: "note",
           children: (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "Before installing the certificate, ensure that Open JDK 21 or higher is installed on the PC where VMS is installed."
+                children: "인증서를 설치하기 전에 VMS를 설치한 PC에 Open JDK 21 이상이 설치되어 있는지 확인하세요."
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["When installing the VMS server and ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: ["VMS 서버와 ", (0,jsx_runtime.jsx)(_components.strong, {
                   children: "BioStar X"
-                }), " on the same server, you will need to install a certificate."]
+                }), "를 같은 서버에 설치할 때는 인증서를 설치해야 합니다."]
               }), "\n"]
             }), "\n"]
           })
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Navigate to the ", (0,jsx_runtime.jsx)(_components.em, {
+              children: [(0,jsx_runtime.jsx)(_components.em, {
                 children: "C:\\Program Files\\BioStar X\\third"
-              }), " path and run the command prompt."]
+              }), " 경로로 이동해 명령 프롬프트를 실행하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Execute the following command."
+              children: "다음 명령어를 실행하세요."
             }), "\n", (0,jsx_runtime.jsxs)(Tabs, {
               groupId: "os",
               defaultValue: "Windows",
@@ -244,126 +244,126 @@ function _createMdxContent(props) {
             }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: ["Enter the path where VMS is installed in the ", (0,jsx_runtime.jsx)(_components.code, {
+                  children: [(0,jsx_runtime.jsx)(_components.code, {
                     children: "<%VENDOR.NAME%>"
-                  }), " section."]
+                  }), " 부분에 VMS를 설치한 경로를 입력하세요."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: ["Enter the IP address of the VMS server in the ", (0,jsx_runtime.jsx)(_components.code, {
+                  children: [(0,jsx_runtime.jsx)(_components.code, {
                     children: "{VMS_IP_ADDRESS}"
-                  }), " section."]
+                  }), " 부분에 VMS 서버의 IP 주소를 입력하세요."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: ["The ", (0,jsx_runtime.jsx)(_components.em, {
+                  children: ["설치한 VMS 제품에 따라 ", (0,jsx_runtime.jsx)(_components.em, {
                     children: "ssl"
-                  }), " path may vary depending on the installed VMS product."]
+                  }), " 경로가 다를 수 있습니다."]
                 }), "\n"]
               }), "\n"]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Check whether the certificate file (", (0,jsx_runtime.jsx)(_components.em, {
+              children: ["VMS를 설치한 경로에서 인증서 파일(", (0,jsx_runtime.jsx)(_components.em, {
                 children: "*.pem"
-              }), ") was created in the path where VMS is installed."]
+              }), ")이 생성되었는지 확인하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Reboot the VMS server."
+              children: "VMS 서버를 재부팅하세요."
             }), "\n"]
           }), "\n"]
         }), (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["If VMS is installed on a different server than ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: ["VMS가 ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), ", copy the ", (0,jsx_runtime.jsx)(_components.em, {
+            }), "와 서로 다른 서버에 설치되어 있다면 ", (0,jsx_runtime.jsx)(_components.em, {
               children: "scaleUtil-1.0-all.jar"
-            }), " file to the VMS server and follow the previous steps."]
+            }), " 파일을 VMS 서버로 복사하고 위 과정을 진행하세요."]
           })
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "activate-vms-integration",
-          children: "Activate VMS integration"
+          id: "vms-연동-활성화",
+          children: "VMS 연동 활성화"
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
-                sid: "shell.header.setting"
-              }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "shell.header.launcher"
-              }), " page."]
+              }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "shell.header.setting"
+              }), "을 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["On the left sidebar, click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "setting.menu.video.root"
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "setting.menu.video.vmsIntegration"
-              }), "."]
+              }), "을 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["If this is your first time accessing, log in with the ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: ["처음 접속한다면 ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "BioStar X"
-              }), " administrator account."]
+              }), " 관리자 계정으로 로그인해야 합니다."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/biostarx-settings-video-integration-login.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Set the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "video.setting.integration.title",
                 product: "2"
-              }), " option to ", (0,jsx_runtime.jsx)(Cmd, {
+              }), " 옵션을 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "common.use",
                 product: "2"
-              }), "."]
+              }), "으로 설정하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/biostarx-settings-video-integration.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Enter the VMS server information."
+              children: "VMS 서버 정보를 입력하세요."
             }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "video.setting.integration.serverAddress",
                     product: "2"
-                  }), ": Enter the IP address of the VMS server."]
+                  }), ": VMS 서버의 IP 주소를 입력하세요."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "video.setting.integration.port",
                     product: "2"
-                  }), ": Enter the port number of the VMS server."]
+                  }), ": VMS 서버의 포트 번호를 입력하세요."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "video.setting.integration.loginId",
                     product: "2"
-                  }), ": Enter the administrator account ID of the VMS server."]
+                  }), ": VMS 서버의 관리자 계정 아이디를 입력하세요."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "video.setting.integration.password",
                     product: "2"
-                  }), ": Enter the administrator account password of the VMS server."]
+                  }), ": VMS 서버의 관리자 계정 비밀번호를 입력하세요."]
                 }), "\n"]
               }), "\n"]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Once you have entered all the VMS server information, click the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["VMS 서버 정보를 모두 입력했으면 화면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "button.apply",
                 product: "2"
-              }), " button at the bottom right of the screen."]
+              }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n"]
         }), (0,jsx_runtime.jsx)(_components.admonition, {
@@ -371,45 +371,45 @@ function _createMdxContent(props) {
           children: (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "If the integration with the VMS server fails and an error message appears, check the server address and administrator account information again. It is also necessary to check whether the VMS server is online and if network connections are blocked due to firewall settings."
+                children: "VMS 서버와 연동에 실패해 오류 메시지가 나타나면 서버 주소 및 관리자 계정 정보 등을 다시 확인하세요. VMS 서버가 온라인 상태인지, 방화벽 설정으로 인해 네트워크 연결이 차단되지 않았는지 점검하는 것도 필요합니다."
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["For more information on the settings in the ", (0,jsx_runtime.jsx)(Cmd, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
                   sid: "video.setting.tag.title",
                   product: "2"
-                }), " section, refer to ", (0,jsx_runtime.jsx)(_components.a, {
+                }), " 섹션의 설정에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
                   href: "#vms-event-bookmark",
-                  children: "the following"
-                }), "."]
+                  children: "다음 문서"
+                }), "를 참고하세요."]
               }), "\n"]
             }), "\n"]
           })
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "restart-service",
-          children: "Restart service"
+          id: "서비스-재시작",
+          children: "서비스 재시작"
         }), (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["The first time you integrate with the VMS server, ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["VMS 서버와 처음 연동하면 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), " will automatically restart the service. If it does not automatically restart, follow the instructions below to manually restart the service."]
+          }), "는 자동으로 서비스를 재시작합니다. 만약 자동으로 재시작하지 않는다면 다음 안내에 따라 수동으로 서비스를 재시작하세요."]
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Start, {}), " → ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: ["Windows에서 ", (0,jsx_runtime.jsx)(Start, {}), " → ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "BioStar X"
               }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "BioStar X Service Manager"
-              }), " on Windows."]
+              }), "를 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["In the ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: [(0,jsx_runtime.jsx)(_components.strong, {
                 children: "All Services"
-              }), " list, click the ", (0,jsx_runtime.jsx)(_components.strong, {
+              }), " 목록에서 아래 서비스의 ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "Stop"
-              }), " button for the services below to stop them."]
+              }), " 버튼을 클릭해 서비스를 중지하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/common/biostarx-sm-restart-service-video.png",
               alone: true
@@ -430,13 +430,13 @@ function _createMdxContent(props) {
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["When the status of the requested service changes from ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: ["중지 요청한 서비스의 상태가 ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "Pending"
-              }), " to ", (0,jsx_runtime.jsx)(_components.strong, {
+              }), "에서 ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "Stopped"
-              }), ", click the ", (0,jsx_runtime.jsx)(_components.strong, {
+              }), "로 변경되면 ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "Start"
-              }), " button to restart the service."]
+              }), " 버튼을 클릭해 서비스를 재시작하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/common/biostarx-sm-restart-service-video-start.png",
               alone: true
@@ -445,114 +445,115 @@ function _createMdxContent(props) {
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "check-and-configure-cameras",
-          children: "Check and configure cameras"
+          id: "카메라-확인-및-설정",
+          children: "카메라 확인 및 설정"
         }), (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["If the VMS server is integrated normally, you can check the connected cameras in the ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["VMS 서버와 정상 연동되었다면 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.menu.video.root"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.menu.video.video"
-          }), " menu. For more information, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+          }), " 메뉴에서 연결된 카메라를 확인할 수 있습니다. 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "settings-videos-camera",
-            children: "the following"
-          }), "."]
+            children: "다음 문서"
+          }), "를 참조하세요."]
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "video-troubleshooting",
-      children: "Troubleshooting"
+      children: "문제 해결"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "If the following situations occur, you can install the certificate from the VMS server onto the client PC to resolve the issue."
+      children: "아래와 같은 상황이 발생한다면 VMS 서버에 설치된 인증서를 클라이언트 PC에 설치해 문제를 해결할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["When accessing ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Video Management System"
-          }), " (VMS) through the browser, and a 'Not secure' warning appears"]
+          }), "(VMS)을 브라우저를 통해서 접속했을 때 '안전하지 않음' 경고가 표시될 때"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["When real-time video plays on the ", (0,jsx_runtime.jsx)(Cmd, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.arena"
-          }), " page but recorded video does not play"]
+          }), " 페이지에서 실시간 영상은 재생되나 녹화 영상이 재생되지 않을 때"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
       id: "install-client-certification",
-      children: "Certificate installation on client PC"
+      children: "클라이언트 PC에서 인증서 설치"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Download the HTTPS certificate installer (", (0,jsx_runtime.jsx)(_components.em, {
-            children: "cert-register.zip"
-          }), ") from the login screen or ", (0,jsx_runtime.jsx)(Cmd, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), "를 설치한 클라이언트 PC에서 로그인 화면 또는 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.setting"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.menu.server.root"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.https.https",
             product: "2"
-          }), " on the client PC where ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), " is installed."]
+          }), "에서 HTTPS 인증서 설치 프로그램(", (0,jsx_runtime.jsx)(_components.em, {
+            children: "cert-register.zip"
+          }), ")을 다운로드하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Unzip the downloaded file and run ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["다운로드한 파일의 압축을 해제한 뒤 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "cert-register.exe"
-          }), " file. ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), " 파일을 실행하세요. ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Enrollment Certification"
-          }), " window will appears."]
+          }), " 창이 나타납니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Select ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "VMS"
-          }), " for ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Target System"
-          }), " and enter the following information."]
+          }), "을 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "VMS"
+          }), "로 선택하고 다음 정보를 입력하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/common/biostarx-settings-server-enrollment-vms-certification.png"
+          src: "/img/common/biostarx-settings-server-enrollment-vms-certification.png",
+          alone: true
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
                 children: "Server Address"
-              }), ": IP address of the VMS server"]
+              }), ": VMS 서버의 IP 주소"]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
                 children: "Port"
-              }), ": Port number of the VMS server"]
+              }), ": VMS 서버의 포트 번호"]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click the ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Enrollment"
-          }), " button."]
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Check the security warning message and click ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Yes"
-          }), "."]
+          children: ["보안 경고 메시지를 확인한 뒤 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "예"
+          }), "를 클릭하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Restart the web browser and check if the recorded video from the VMS server plays normally on the ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["웹 브라우저를 다시 시작한 뒤 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.arena"
-      }), " page."]
+      }), " 페이지에서 VMS 서버의 녹화 영상이 정상 재생되는지 확인하세요."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "vms-event-bookmark",
-      children: "VMS event and bookmark settings"
+      children: "VMS 이벤트 및 북마크 설정"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["You can transmit bookmark tags and event tag information to the integrated VMS server. At this point, you can choose to transmit event logs, door names, device names, and user IDs together. Select the desired options and click the ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["연동한 VMS 서버에 북마크 태그, 이벤트 태그 정보를 전달할 수 있습니다. 이때, 이벤트 로그, 출입문 이름, 장치 이름, 사용자 아이디를 함께 전달할 수 있도록 선택할 수 있습니다. 원하는 옵션을 선택하고 화면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "button.apply",
         product: "2"
-      }), " button at the bottom right of the screen."]
+      }), " 버튼을 클릭하세요."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-video-event-bookmark.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -561,21 +562,21 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "common.language",
             product: "2"
-          }), ": Choose the language for the event and bookmark tags transmitted to the VMS server. You can select either Korean or English."]
+          }), ": VMS 서버에 전달하는 이벤트 및 북마크 태그의 언어를 선택하세요. 한국어 또는 영어를 선택할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "video.setting.tag.bookmark",
             product: "2"
-          }), ": Bookmark tags allow you to easily locate and review videos stored on the VMS server with designations and names for quick identification. Select the information to send with the bookmark tag."]
+          }), ": 북마크 태그는 VMS 서버에 보관된 영상에 표시와 이름이 지정되어 쉽게 찾고 검토할 수 있는 기능입니다. 북마크 태그로 전송할 정보를 선택하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "video.setting.tag.event",
             product: "2"
-          }), ": You can transmit events that occurred at specific moments to the VMS server for logging. Select the information to send with the event tag."]
+          }), ": 특정 시점에 발생한 이벤트를 VMS 서버로 전송해 기록할 수 있습니다. 이벤트 태그로 전송할 정보를 선택하세요."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -583,65 +584,65 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["For more information on the bookmark function in VMS, refer to ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["VMS에서 북마크 기능에 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "https://resources.vmsproxy.com/nx_6.0_help/using_bookmarks.html",
-              children: "the following link"
-            }), "."]
+              children: "다음 링크"
+            }), "를 참고하세요."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["For more information on the event function in VMS, refer to ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["VMS에서 이벤트 기능에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(_components.a, {
               href: "https://resources.vmsproxy.com/nx_6.0_help/events_available_in_vms.html",
-              children: "the following link"
-            }), "."]
+              children: "다음 링크"
+            }), "를 참고하세요."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "disconnect-vms-server-integration",
-      children: "Disconnect VMS server integration"
+      id: "vms-서버-연동-해제",
+      children: "VMS 서버 연동 해제"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "To disconnect the integrated VMS server, follow the steps below. Disconnecting VMS integration will delete all video settings, registered cameras, and rules."
+      children: "연동한 VMS 서버의 연결을 해제하려면 다음 단계를 따르세요. VMS 연동을 해제하면 비디오 설정, 등록한 카메라, 규칙이 모두 삭제됩니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "shell.header.setting"
-          }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.launcher"
-          }), " page."]
+          }), " 페이지에서 ", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.setting"
+          }), "을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["On the left sidebar, click ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.menu.video.root"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.menu.video.vmsIntegration"
-          }), "."]
+          }), "을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Set the ", (0,jsx_runtime.jsx)(Cmd, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "video.setting.integration.title",
             product: "2"
-          }), " option to ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " 옵션을 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.notUse",
             product: "2"
-          }), "."]
+          }), "으로 설정하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click the ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["화면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.apply",
             product: "2"
-          }), " button at the bottom right of the screen."]
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Check the contents of the message window and click the ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["메시지 창의 내용을 확인하고 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.yes",
             product: "2"
-          }), " button."]
+          }), " 버튼을 클릭하세요."]
         }), "\n"]
       }), "\n"]
     })]

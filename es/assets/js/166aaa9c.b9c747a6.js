@@ -512,7 +512,8 @@ function _createMdxContent(props) {
             children: "Target System"
           }), " e ingrese la siguiente información."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/common/biostarx-settings-server-enrollment-vms-certification.png"
+          src: "/img/common/biostarx-settings-server-enrollment-vms-certification.png",
+          alone: true
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
