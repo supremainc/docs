@@ -1224,6 +1224,120 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         }
       }
 
+      // Process ProdImg components - same as Image but with language-aware path conversion
+      if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'ProdImg') {
+        const attributes = node.attributes || [];
+        const srcAttr = attributes.find(attr => attr.name === 'src');
+        let src = srcAttr ? srcAttr.value : '';
+        
+        // Extract optional attributes
+        const classNameAttr = attributes.find(attr => attr.name === 'className');
+        const className = classNameAttr ? classNameAttr.value : '';
+        
+        const widthAttr = attributes.find(attr => attr.name === 'width');
+        let width = '';
+        if (widthAttr) {
+          if (typeof widthAttr.value === 'string') {
+            width = widthAttr.value.replace(/px$/, '');
+          } else if (typeof widthAttr.value === 'number') {
+            width = String(widthAttr.value);
+          } else if (typeof widthAttr.value === 'object' && widthAttr.value && widthAttr.value.value !== undefined) {
+            width = String(widthAttr.value.value);
+          }
+        }
+        
+        const heightAttr = attributes.find(attr => attr.name === 'height');
+        let height = '';
+        if (heightAttr) {
+          if (typeof heightAttr.value === 'string') {
+            height = heightAttr.value.replace(/px$/, '');
+          } else if (typeof heightAttr.value === 'number') {
+            height = String(heightAttr.value);
+          } else if (typeof heightAttr.value === 'object' && heightAttr.value && heightAttr.value.value !== undefined) {
+            height = String(heightAttr.value.value);
+          }
+        }
+        
+        const altAttr = attributes.find(attr => attr.name === 'alt');
+        const alt = altAttr ? altAttr.value : '';
+        
+        const hasAlone = attributes.some(attr => attr.name === 'alone');
+        
+        // Convert to absolute file system path for PDF generation
+        // ProdImg: alone 속성이 없고 language !== 'ko'일 때만 언어 폴더 추가
+        if (src && basePath) {
+          if (src.startsWith('/img/')) {
+            const normalizedSrc = src.replace(/^\/img\//, '');
+            // alone 속성이 없고 한국어가 아닐 때만 언어 폴더 추가
+            if (!hasAlone && language !== 'ko') {
+              src = basePath.replace(/\\/g, '/') + '/static/img/' + language + '/' + normalizedSrc;
+            } else {
+              src = basePath.replace(/\\/g, '/') + '/static/img/' + normalizedSrc;
+            }
+          }
+        } else if (src && !src.startsWith('/') && !basePath && !hasAlone && language !== 'ko') {
+          // Handle relative paths
+          src = src.replace(/^\.\//, '/img/').replace(/^\.\.\/img\//, '/img/').replace(/^\.\.\//, '/');
+          if (!src.startsWith('/')) {
+            src = '/img/' + language + '/' + src;
+          }
+        }
+        
+        const hasCaption = attributes.some(attr => attr.name === 'caption');
+
+        // Helper function to build img properties
+        const buildImgProperties = (baseSrc) => {
+          const props = { src: baseSrc };
+          if (className) props.className = [className];
+          if (width) props.width = width;
+          if (height) props.height = height;
+          if (alt) props.alt = alt;
+          return props;
+        };
+
+        let replacement = null;
+
+        if (hasCaption && src) {
+          replacement = {
+            type: 'element',
+            tagName: 'figure',
+            properties: {},
+            children: [
+              {
+                type: 'element',
+                tagName: 'img',
+                properties: buildImgProperties(src),
+                children: []
+              },
+              {
+                type: 'element',
+                tagName: 'figcaption',
+                properties: {},
+                children: [{ type: 'text', value: figureCaptionText }]
+              }
+            ]
+          };
+        } else if (src) {
+          replacement = {
+            type: 'element',
+            tagName: 'p',
+            properties: { className: ['hasimg'] },
+            children: [
+              {
+                type: 'element',
+                tagName: 'img',
+                properties: buildImgProperties(src),
+                children: []
+              }
+            ]
+          };
+        }
+
+        if (replacement) {
+          parent.children[index] = replacement;
+        }
+      }
+
       // Process Magnify components - same as Image component
       if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Magnify') {
         const attributes = node.attributes || [];
