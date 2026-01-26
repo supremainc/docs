@@ -1,7 +1,7 @@
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import MDXContents from '@theme-original/MDXContent';
-import imageSize from './sizeOfimages.json';
+import imageSize from '../Image/sizeOfimages.json';
 
 export default function ProdImg({src, alt, className, alone, width, height}) {
     const { i18n: { currentLocale } } = useDocusaurusContext();
