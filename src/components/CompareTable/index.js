@@ -27,7 +27,7 @@ function useLocale() {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   
   const getLocale = useCallback((id) => {
-    return Locale[currentLocale]?.[id] || id;
+    return Locale[currentLocale]?.[id] || Locale["en"]?.[id];
   }, [currentLocale]);
   
   return getLocale;

@@ -42,10 +42,11 @@ function ExternalLinkBanner({Svg, title, url, desc, height}) {
 
 export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
+  const cLocale = currentLocale !== 'ko' ? 'en' : 'ko';
   const defaultExternalLinks = [
     {
       title: 'BioStar Device SDK',
-      url: `https://kb.supremainc.com/bs2sdk/doku.php?id=${currentLocale}:start`,
+      url: `https://kb.supremainc.com/bs2sdk/doku.php?id=${cLocale}:start`,
       Svg: require('@site/static/img/biostar2-devicesdk.svg').default,
       height: '45px',
       desc: `${translate({ id: "externalLinks.dev.sdk.desc" })}`
@@ -73,7 +74,7 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
     },
     {
       title: 'SVP Android SDK',
-      url: `https://kb.supremainc.com/svpsdk/doku.php?id=${currentLocale}:getting_started`,
+      url: `https://kb.supremainc.com/svpsdk/doku.php?id=${cLocale}:getting_started`,
       Svg: require('@site/static/img/banner/android-banner.svg').default,
       height: '45px',
       desc: `${translate({ id: "externalLinks.dev.svpsdk.desc" })}`
