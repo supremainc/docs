@@ -726,6 +726,11 @@ html[lang='en'] .doc-content .container table {
   font-weight: normal;
 }
 
+.doc-content p .cmd.bold {
+  font-weight: bold;
+  color: #000;
+}
+
 footer {
   text-align: center;
   padding: 40px 20px;
