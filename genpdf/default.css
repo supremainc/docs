@@ -333,7 +333,7 @@ header p {
 .doc-content code {
   color: #1549c6;
   background-color: #dceaffd8;
-  font-family: Noto Sans Coptic;
+  font-family: 'Noto Sans Coptic', 'Noto Sans KR', 'Noto Sans JP', 'Noto Sans', monospace;
   position: relative;
 }
 
@@ -344,9 +344,10 @@ header p {
   padding: 15px;
   margin: 15px 0;
   border-radius: 4px;
-  font-family: 'Noto Sans Coptic';
+  font-family: 'Noto Sans Coptic', 'Noto Sans KR', 'Noto Sans JP', 'Noto Sans', monospace;
   text-wrap: initial;
   white-space: pre-wrap;
+  break-inside: avoid-page;
 }
 
 .doc-content pre code {
