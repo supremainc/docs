@@ -716,7 +716,7 @@ html[lang='en'] .doc-content .container table {
   color: var(--ifm-color-cmd);
 }
 
-.doc-content h3 .cmd.normal, .doc-content h4 .cmd.normal, .doc-content h5 .cmd.normal, .doc-content h6 .cmd.normal, .doc-content .cmd.normal {
+.doc-content h3 .cmd.normal, .doc-content h4 .cmd.normal, .doc-content h4 .cmd.bold, .doc-content h5 .cmd.normal, .doc-content h5 .cmd.bold, .doc-content h6 .cmd.normal, .doc-content .cmd.normal {
   color: #000;
   background: none;
 }
@@ -1358,15 +1358,19 @@ span.normalok {
   position: relative;
   margin: 16px 0;
 }
-.calloutLists ol li > * {
+.calloutLists ol > li > * {
   margin-left: 30px;
+}
+
+.calloutLists ol > li > ul {
+  margin-left: 48px;
 }
 
 .calloutLists ol li p .ico {
   height: 13px;
   top: 2px;
 }
-.calloutLists ol li::before {
+.calloutLists ol > li::before {
   content: counter(callout-counter);
   background: var(--ifm-color-cmd);
   width: 17px;
