@@ -15,6 +15,7 @@ import remarkGfm from 'remark-gfm';
 import remarkDirective from 'remark-directive';
 import remarkCalloutDirectives from '@microflash/remark-callout-directives';
 import remarkRehype from 'remark-rehype';
+import codeTitle from "remark-code-title";
 import rehypeStringify from 'rehype-stringify';
 import { visit } from 'unist-util-visit';
 import { rehypeExtendedTable } from 'rehype-extended-table';
@@ -148,6 +149,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(remarkProcessFaqs, productOption, language)  // Process Faqs component
     .use(remarkNormalizeTableStructure)
     // Convert to HTML
+    .use(codeTitle)
     .use(remarkRehype, { 
       passThrough: ['mdxJsxFlowElement', 'mdxJsxTextElement'], 
       allowDangerousHtml: true,
