@@ -37,6 +37,8 @@ const cmdAirJa = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/air
 
 const glossaryKo = JSON.parse(readFileSync(`${__dirname}/../i18n/ko/glossary.json`, 'utf-8'));
 const glossaryEn = JSON.parse(readFileSync(`${__dirname}/../i18n/en/glossary.json`, 'utf-8'));
+const glossaryEs = JSON.parse(readFileSync(`${__dirname}/../i18n/es/glossary.json`, 'utf-8'));
+const glossaryJa = JSON.parse(readFileSync(`${__dirname}/../i18n/ja/glossary.json`, 'utf-8'));
 
 // i18n code.json for spec labels and translations
 const codeKo = JSON.parse(readFileSync(`${__dirname}/../i18n/ko/code.json`, 'utf-8'));
@@ -687,6 +689,15 @@ export function rehypeProcessCmdComponent(language = 'ko') {
   const glossaryMap = {
     ko: glossaryKo,
     en: glossaryEn,
+    es: glossaryEs,
+    ja: glossaryJa,
+  };
+
+  const codeLoacleMap = {
+    ko: codeKo,
+    en: codeEn,
+    es: codeEs,
+    ja: codeJa,
   };
 
   const extractText = (nodes) => {
@@ -781,7 +792,9 @@ export function rehypeProcessCmdComponent(language = 'ko') {
           }
         }
       } else if (codeAttr) {
-        textContent = codeAttr;
+        const locale = codeLoacleMap[language] || codeEn;
+        const codeText = locale[codeAttr].message;
+        textContent = codeText || codeAttr;
       } else if (node.children && node.children.length > 0) {
         textContent = extractText(node.children);
       }

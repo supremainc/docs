@@ -400,6 +400,7 @@ header p {
 .next-step {
   margin: 2em 0;
   padding: 0.75em 0;
+  break-inside: avoid-page;
 }
 
 .next-step > .next-step-title {
@@ -724,6 +725,11 @@ html[lang='en'] .doc-content .container table {
 
 .doc-content p .cmd.normal {
   font-weight: normal;
+}
+
+.doc-content p .cmd.bold {
+  font-weight: bold;
+  color: #000;
 }
 
 footer {

@@ -253,8 +253,9 @@ export function remarkAddHeadingIds(docId = '') {
  * @param {Object} node - Node to process
  * @param {Array<string>} products - List of selected products
  * @param {string} typeFilter - Type filter for ref-based matching (optional)
+ * @param {string} docId - Current document ID for pages-based matching (optional)
  */
-function processIncludeXcludeRecursive(node, products, typeFilter = '') {
+function processIncludeXcludeRecursive(node, products, typeFilter = '', docId = '') {
   if (!node || !node.children || !Array.isArray(node.children)) {
     return;
   }
@@ -279,10 +280,15 @@ function processIncludeXcludeRecursive(node, products, typeFilter = '') {
       const refValue = refAttr?.value || '';
       const refList = refValue.split(',').map(r => r.trim()).filter(r => r);
 
+      // Extract pages attribute for document ID-based filtering
+      const pagesAttr = child.attributes?.find(attr => attr.name === 'pages');
+      const pagesValue = pagesAttr?.value || '';
+      const pagesList = pagesValue.split(',').map(p => p.trim()).filter(p => p);
+
       let shouldKeepChildren = false;
       let shouldRemove = false;
 
-      // Check product-based filter first
+      // Check product-based filter
       let productMatches = true;
       if (productList.length > 0) {
         // If product attribute is specified, check if any product matches
@@ -296,8 +302,15 @@ function processIncludeXcludeRecursive(node, products, typeFilter = '') {
         refMatches = refList.includes(typeValue);
       }
 
-      // Combine filters with AND logic
-      const filtersMatch = productMatches && refMatches;
+      // Check pages-based filter (document ID matching)
+      let pagesMatches = true;
+      if (pagesList.length > 0) {
+        // If pages attribute is specified, check if docId matches any pages value
+        pagesMatches = docId && pagesList.includes(docId);
+      }
+
+      // Combine filters with AND logic: all specified filters must match
+      const filtersMatch = productMatches && refMatches && pagesMatches;
 
       if (isInclude) {
         // Include: keep children if all filters match
@@ -321,7 +334,7 @@ function processIncludeXcludeRecursive(node, products, typeFilter = '') {
       } else if (shouldKeepChildren) {
         // First, recursively process nested Include/Xclude within this node's children
         // BEFORE replacing the component tag itself
-        processIncludeXcludeRecursive(child, products, typeFilter);
+        processIncludeXcludeRecursive(child, products, typeFilter, docId);
         
         // Replace the component tag with its children
         const children = child.children || [];
@@ -329,14 +342,14 @@ function processIncludeXcludeRecursive(node, products, typeFilter = '') {
       }
     } else {
       // For non-Include/Xclude nodes, recursively process their children
-      processIncludeXcludeRecursive(child, products, typeFilter);
+      processIncludeXcludeRecursive(child, products, typeFilter, docId);
     }
   }
 }
 
 /**
  * Create a remark plugin that processes Include/Xclude MDX JSX components
- * Handles: <Include product='...' /> | <Include type='...' ref='...' />
+ * Handles: <Include product='...' /> | <Include type='...' ref='...' /> | <Include pages='...' />
  * 
  * Logic matches src/components/Include and src/components/Xclude:
  * - Include: render if filters match, otherwise remove
@@ -345,14 +358,15 @@ function processIncludeXcludeRecursive(node, products, typeFilter = '') {
  * Filter combinations:
  * 1. product attribute: matches if product is in productOption
  * 2. type and ref attributes: matches if typeFilter matches any ref value
- * 3. Both specified: matches if BOTH conditions are true (AND logic)
+ * 3. pages attribute: matches if docId matches any pages value
+ * 4. Multiple specified: matches if ALL conditions are true (AND logic)
  */
-export function remarkProcessIncludeXclude(productOption = '', typeFilter = '') {
+export function remarkProcessIncludeXclude(productOption = '', typeFilter = '', docId = '') {
   return (tree) => {
     const products = productOption ? productOption.split(',').map(p => p.trim()) : [];
 
-    // Start recursive processing from root
-    processIncludeXcludeRecursive(tree, products, typeFilter);
+    // Start recursive processing from root with docId
+    processIncludeXcludeRecursive(tree, products, typeFilter, docId);
   };
 }
 
