@@ -36,6 +36,8 @@ jobs:
           echo "Removing unnecessary image directories..."
           rm -rf build/img || true
           rm -rf build/en/img || true
+          rm -rf build/es/img || true
+          rm -rf build/ja/img || true
           echo "Cleanup completed"
       - name: Deploy to Azure Static Web Apps
         id: builddeploy
