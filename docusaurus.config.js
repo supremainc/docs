@@ -58,17 +58,27 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'ko',
-    locales: ['ko', 'en'],
+    locales: ['ko', 'en', 'es', 'ja'],
     localeConfigs: {
       ko: {
         label: '한국어',
         direction: 'ltr',
         htmlLang: 'ko-KR',
       },
+      es: {
+        label: 'Español',
+        direction: 'ltr',
+        htmlLang: 'es-419',
+      },
       en: {
         label: 'English',
         direction: 'ltr',
         htmlLang: 'en-US',
+      },
+      ja: {
+        label: '日本語',
+        direction: 'ltr',
+        htmlLang: 'ja-JP',
       },
     }
   },

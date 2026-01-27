@@ -14,8 +14,8 @@ import remarkMdx from 'remark-mdx';
 import remarkGfm from 'remark-gfm';
 import remarkDirective from 'remark-directive';
 import remarkCalloutDirectives from '@microflash/remark-callout-directives';
-import remarkPrism from 'remark-prism';
 import remarkRehype from 'remark-rehype';
+import codeTitle from "remark-code-title";
 import rehypeStringify from 'rehype-stringify';
 import { visit } from 'unist-util-visit';
 import { rehypeExtendedTable } from 'rehype-extended-table';
@@ -48,7 +48,8 @@ import {
   rehypeProcessBugListsComponent,
   rehypeProcessNextStepComponent,
   rehypeProcessDocLink,
-  rehypeProcessGlossaryComponent
+  rehypeProcessGlossaryComponent,
+  rehypeProcessTreeviewComponent
 } from './plugins-rehype.mjs';
 
 /**
@@ -144,14 +145,11 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(remarkTransformImagePaths, basePath)
     .use(remarkTransformDocLinks, docPath, language)
     .use(remarkAddHeadingIds, headingId)
-    .use(remarkProcessIncludeXclude, productOption)
+    .use(remarkProcessIncludeXclude, productOption, '', headingId)
     .use(remarkProcessFaqs, productOption, language)  // Process Faqs component
     .use(remarkNormalizeTableStructure)
-    
-    // Code highlighting
-    .use(remarkPrism)
-    
     // Convert to HTML
+    .use(codeTitle)
     .use(remarkRehype, { 
       passThrough: ['mdxJsxFlowElement', 'mdxJsxTextElement'], 
       allowDangerousHtml: true,
@@ -182,6 +180,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(rehypeProcessDocLink, basePath, language)
     .use(rehypeProcessNextStepComponent, language)
     .use(rehypeProcessGlossaryComponent, language)
+    .use(rehypeProcessTreeviewComponent, language)
     .use(rehypeProcessMdxElements, translations, basePath, language)
     .use(rehypeProcessCmdComponent, language)
     .use(rehypeProcessColumnsComponent)
@@ -191,7 +190,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     
     // Convert JSX components to HTML
     .use(rehypeMdxElements, {
-      allowedElements: ['Image', 'Badge', 'Table', 'Thead', 'Tbody', 'Row', 'Th', 'Td', 'div', 'SpecSection', 'Steps', 'Step', 'Linkto', 'details', 'summary'],
+      allowedElements: ['Image', 'Badge', 'Table', 'Thead', 'Tbody', 'Row', 'Th', 'Td', 'div', 'SpecSection', 'Steps', 'Step', 'Linkto', 'details', 'summary', 'span', 'b'],
       passThrough: ['raw', 'Anno', 'details', 'summary']
     })
     

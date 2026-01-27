@@ -252,14 +252,16 @@ buildHtmlDocument() 호출
 17. 외부링크 처리 (rehypeAddTargetBlankToExternalLinks)
 18. DocLink 처리 (rehypeProcessDocLink)
 19. NextStep 처리 (rehypeProcessNextStepComponent)
-20. MDX 요소 변환 (rehypeProcessMdxElements)
-21. Cmd 컴포넌트 처리 (rehypeProcessCmdComponent)
-22. Columns 컴포넌트 처리 (rehypeProcessColumnsComponent)
-23. BugLists 컴포넌트 처리 (rehypeProcessBugListsComponent)
-24. Admonition 아이콘 추가 (rehypeAddCalloutIcons)
-25. Note 표시 제거 (rehypeRemoveNoteIndicator)
-26. MDX 요소 변환 (rehypeMdxElements)
-27. HTML 문자열로 변환 (rehypeStringify)
+20. Glossary 처리 (rehypeProcessGlossaryComponent)
+21. Treeview 처리 (rehypeProcessTreeviewComponent)
+22. MDX 요소 변환 (rehypeProcessMdxElements)
+23. Cmd 컴포넌트 처리 (rehypeProcessCmdComponent)
+24. Columns 컴포넌트 처리 (rehypeProcessColumnsComponent)
+25. BugLists 컴포넌트 처리 (rehypeProcessBugListsComponent)
+26. Admonition 아이콘 추가 (rehypeAddCalloutIcons)
+27. Note 표시 제거 (rehypeRemoveNoteIndicator)
+28. MDX 요소 변환 (rehypeMdxElements)
+29. HTML 문자열로 변환 (rehypeStringify)
 ```
 
 **주요 함수**:
@@ -321,6 +323,7 @@ buildHtmlDocument() 호출
 | `rehypeAddTargetBlankToExternalLinks()` | 외부링크 처리 | `<a href="http://...">` | `<a href="..." target="_blank">` |
 | `rehypeProcessNextStepComponent()` | `<NextStep>` 처리 | `<NextStep><NextItem>` | `<div class="next-step"><a class="next-item">` |
 | `rehypeProcessDocLink(basePath, language)` | `<DocLink>` 처리 | `<DocLink docId="..." />` | `<a href="#id">문서제목</a>` |
+| `rehypeProcessTreeviewComponent(language)` | `<Treeview>` 처리 | `<Treeview data={...} />` | `<div class="treeview-container">트리</div>` |
 | `rehypeProcessMdxElements(translations, basePath, language)` | MDX 요소 변환 | JSX 요소 | HTML 요소 |
 | `rehypeProcessColumnsComponent()` | Columns 처리 | `<Columns>` | `<div class="columns">` |
 | `rehypeAddCalloutIcons()` | Callout 아이콘 추가 | `<div class="callout-*">` | 아이콘 포함 |
@@ -416,6 +419,130 @@ ja: i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-m
 - 대상 문서 미존재 시: docId를 텍스트로 표시
 - 다른 언어 버전이 없으면: 한국어 버전 사용
 - 제목 미존재 시: 경고 로그 출력 후 생략
+
+---
+
+#### `rehypeProcessTreeviewComponent(language)` 상세 설명
+
+**목적**: `<Treeview>` 컴포넌트를 계층 구조의 트리 HTML로 변환
+
+**기능**:
+
+- 기본 데이터셋 로드 (한국어/영어)
+- 외부 JSON 데이터 지원 (base64 인코딩)
+- 재귀적 트리 노드 생성
+- SVG 아이콘 자동 통합
+
+**데이터 로딩 우선순위**:
+
+1. **_jsonData 속성** (loader.mjs에서 인코딩한 JSON)
+2. **기본 데이터셋** (언어별 내장 데이터)
+
+**변환 예시**:
+
+```mdx
+<Treeview />
+```
+
+↓ 변환 후 (기본 데이터)
+
+```html
+<div class="treeview-container">
+  <div class="tree-node">
+    <div class="tree-item level0">
+      <span class="tree-label">모든 출입 그룹</span>
+    </div>
+    <div class="tree-children">
+      <div class="tree-node">
+        <div class="tree-item level1">
+          <span class="tree-toggle">▼</span>
+          <span class="tree-label">출입 그룹</span>
+        </div>
+        <!-- 자식 노드들... -->
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+**SVG 아이콘 통합**:
+
+- 12개 노드 타입용 SVG 파일 자동 로드 (`static/img/menus/`)
+- rehype-parse로 SVG를 HTML AST로 변환
+- 각 아이콘에 `height='25'`, `width='auto'` 속성 적용
+- elevator-floor는 CSS 스타일링된 원형 div로 렌더링
+
+**지원 노드 타입 및 아이콘**:
+
+| 타입 | SVG 파일 | 설명 |
+|------|---------|------|
+| `access-level` | ico-aclevel.svg | 출입 등급 📋 |
+| `door` | ico-acdoor.svg | 출입문 🚪 |
+| `door-device` | ico-door-close.svg | 출입 장치 🔧 |
+| `door-sensor` | ico-door-sensor.svg | 센서 📡 |
+| `door-relay` | ico-relay-lock.svg | 릴레이 🔌 |
+| `door-arm` | ico-arms.svg | 무장 🛡️ |
+| `door-camera` | ico-camera-ok.svg | 카메라 📹 |
+| `floor-level` | ico-floorlv.svg | 층 등급 📐 |
+| `access-zone` | ico-zone.svg | 접근 영역 🗂️ |
+| `elevator` | ico-flelev.svg | 엘리베이터 ⬆️ |
+| `elevator-device` | ico-elevator.svg | 엘리베이터 장치 ⚙️ |
+| `elevator-schedule` | ico-flelevfl.svg | 엘리베이터 스케줄 📅 |
+
+**CSS 클래스**:
+
+- `.treeview-container`: 트리 전체 컨테이너
+- `.tree-node`: 각 트리 노드 래퍼
+- `.tree-item`: 노드 아이템 (토글/아이콘/라벨 포함)
+- `.tree-toggle`: 레벨 1 토글 버튼 (▼)
+- `.tree-icon`: 아이콘 컨테이너
+- `.tree-svg-icon`: SVG 아이콘 전용 클래스
+- `.tree-label`: 노드 라벨 텍스트
+- `.tree-children`: 자식 노드 래퍼
+- `.level0`, `.level1`, `.level2`, ...`: 깊이 기반 클래스
+
+**데이터 구조**:
+
+```javascript
+// 기본 데이터 구조
+[
+  {
+    name: "모든 출입 그룹",
+    children: [
+      {
+        name: "출입 그룹",
+        type: "access-group",
+        children: [
+          {
+            name: "출입 등급 A",
+            type: "access-level",
+            children: [
+              {
+                name: "출입문 1 - 스케줄",
+                type: "door"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
+```
+
+**JSON 데이터 로드 (loader.mjs)**:
+
+```javascript
+// MDX 파일에서
+import doorTree from '../data/doors.json'
+<Treeview data={doorTree} />
+
+// loader.mjs 처리
+// JSON을 추출 → base64 인코딩 → _jsonData 속성으로 변환
+// <Treeview _jsonData="base64EncodedJson" />
+
+// plugins-rehype.mjs에서 디코딩 → 트리 렌더링
+```
 
 ---
 
@@ -906,16 +1033,16 @@ export function remarkProcessCustomDirective() {
 | 파일 | 라인 수 | 목적 |
 |------|--------|------|
 | `index.mjs` | ~166 | CLI 진입점 및 오케스트레이션 |
-| `loader.mjs` | ~678 | 파일 로드 및 문서 ID 추출 |
-| `converter-rehype.mjs` | ~271 | 마크다운 → HTML 변환 |
+| `loader.mjs` | ~848 | 파일 로드, 문서 ID 추출, Treeview JSON 처리 |
+| `converter-rehype.mjs` | ~275 | 마크다운 → HTML 변환 |
 | `plugins-remark.mjs` | ~527 | Remark 플러그인 모음 |
-| `plugins-rehype.mjs` | ~1808 | Rehype 플러그인 모음 (DocLink, NextStep 포함) |
+| `plugins-rehype.mjs` | ~2519 | Rehype 플러그인 모음 (DocLink, NextStep, Treeview 포함) |
 | `html.mjs` | ~234 | HTML 문서 생성 |
 | `config.mjs` | ~66 | 설정 및 i18n |
 | `utils.mjs` | ~82 | 유틸리티 함수 |
-| `default.css` | ~1170 | CSS 스타일시트 (DocLink, NextStep 스타일 포함) |
+| `default.css` | ~1170 | CSS 스타일시트 (DocLink, NextStep, Treeview 스타일 포함) |
 
-**총 코드량**: ~4,802+ 줄
+**총 코드량**: ~5,887+ 줄
 
 ---
 
@@ -929,7 +1056,7 @@ export function remarkProcessCustomDirective() {
 - [x] 제목 깊이 기반 조정
 - [x] 산품별 필터링
 - [x] 릴리즈 노트 전용 모드
-- [x] 커스텀 컴포넌트 지원 (Cmd, DocLink, NextStep, BugLists, SpecSection, Columns, etc.)
+- [x] 커스텀 컴포넌트 지원 (Cmd, DocLink, NextStep, BugLists, SpecSection, Treeview, Columns, etc.)
 - [x] Admonition 스타일링
 - [x] 외부링크 자동 처리
 - [x] 이미지 경로 자동 변환
@@ -937,6 +1064,7 @@ export function remarkProcessCustomDirective() {
 - [x] 코드 하이라이팅
 - [x] DocLink 컴포넌트 (문서 간 내부 링크)
 - [x] NextStep 컴포넌트 (다음 단계 네비게이션)
+- [x] Treeview 컴포넌트 (계층 구조 시각화 + SVG 아이콘)
 
 ### 한계 및 주의사항 ⚠️
 

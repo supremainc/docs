@@ -13,6 +13,253 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.dirname(__dirname);
 
+// ============================================================================
+// DEFAULT TREEVIEW DATA (from src/components/Treeview/index.js)
+// ============================================================================
+
+const DEFAULT_TREEVIEW_DATA = {
+  ko: [
+    {
+      name: "모든 출입 그룹",
+      children: [
+        {
+          name: "출입 그룹",
+          type: "access-group",
+          children: [
+            {
+              name: "출입 등급 A",
+              type: "access-level",
+              children: [
+                { name: "출입문 1 - 스케줄", type: "door" },
+                { name: "출입문 2 - 스케줄", type: "door" }
+              ]
+            },
+            {
+              name: "층 등급 A",
+              type: "floor-level",
+              children: [
+                {
+                  name: "엘리베이터 B",
+                  type: "elevator",
+                  children: [
+                    { name: "엘리베이터 B 1층 - 스케줄", type: "elevator-schedule" },
+                    { name: "엘리베이터 B 2층 - 스케줄", type: "elevator-schedule" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  en: [
+    {
+      name: "All Access Groups",
+      children: [
+        {
+          name: "Access Group",
+          type: "access-group",
+          children: [
+            {
+              name: "Access Level A",
+              type: "access-level",
+              children: [
+                { name: "Door 1 - Schedule", type: "door" },
+                { name: "Door 2 - Schedule", type: "door" }
+              ]
+            },
+            {
+              name: "Floor Level A",
+              type: "floor-level",
+              children: [
+                {
+                  name: "Elevator B",
+                  type: "elevator",
+                  children: [
+                    { name: "Elevator B 1st Floor - Schedule", type: "elevator-schedule" },
+                    { name: "Elevator B 2nd Floor - Schedule", type: "elevator-schedule" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+// ============================================================================
+// REGEX PATTERNS (Centralized to avoid duplication)
+// ============================================================================
+
+const REGEX_PATTERNS = {
+  // Import statements: import ComponentName from 'path'
+  importStatement: /import\s+(\w+)\s+from\s+['"]([^'"]+)['"];?/g,
+  
+  // MDX comments: {/* ... */}
+  mdxComments: /\{\/\*[\s\S]*?\*\/\}/g,
+  
+  // Import declarations (for removal)
+  importDeclarations: /import\s+[\s\S]*?from\s+['"][^'"]+['"];?\s*/g,
+  
+  // JSX expressions to remove, BUT PRESERVE specific patterns:
+  // - {props.xxx}
+  // - {#anchor}
+  // - {숫자}
+  // - {식별자}
+  // - {${...}} (template literals)
+  // - {`template`} (backtick templates)
+  jsxExpressions: /\{(?!`|props\.[a-zA-Z_]\w*\}|#[a-z0-9\-]+\}|[0-9]+\}|[a-zA-Z_][a-zA-Z0-9_\-]*\}|\$\{)[^}]*\}/g,
+  
+  // Props in attributes: name="value" or name='value' or name={value}
+  propsInAttributes: /(\w+)=(?:["']([^"']*?)["']|\{([^}]+)\})/g,
+  
+  // Self-closing component tags: <ComponentName ... />
+  selfClosingComponent: (name) => new RegExp(`<${name}([^/>]*)\\s*/?>`, 'g'),
+  
+  // Component with closing tags: <ComponentName ...>...</ComponentName>
+  closingComponent: (name) => new RegExp(`<${name}([^>]*)>.*?</${name}>`, 'gs'),
+  
+  // Anchor patterns: {#anchor}
+  anchors: /\{#([^}]+)\}/g,
+  
+  // SpecSection with property path: <SpecSection data={varName.property} />
+  specSectionWithProperty: (varName) => new RegExp(`<SpecSection\\s+data={${varName}((?:\\.[a-zA-Z_]\\w*)+)}\\s*/>`, 'g'),
+  
+  // Treeview with data attribute: <Treeview data={varName} /> or <Treeview data={varName.property} />
+  treeviewWithData: (varName) => new RegExp(`<Treeview\\s+data={${varName}((?:\\.[a-zA-Z_]\\w*)*)}\\s*/>`, 'g')
+};
+
+// ============================================================================
+// UTILITY FUNCTIONS
+// ============================================================================
+
+/**
+ * Clean MDX/Markdown content by removing comments, imports, and JSX expressions
+ * Preserves specific patterns: {props.xxx}, {#anchor}, {숫자}, etc.
+ * @param {string} content - Raw MDX content
+ * @returns {string} Cleaned content
+ */
+function cleanMdxContent(content) {
+  return content
+    .replace(REGEX_PATTERNS.mdxComments, '')
+    .replace(REGEX_PATTERNS.importDeclarations, '')
+    .replace(REGEX_PATTERNS.jsxExpressions, '');
+}
+
+/**
+ * Extract props from component attributes string
+ * Returns array of { name, value } objects
+ * @param {string} attributes - Attributes string from component tag
+ * @returns {Array} Array of { propName, propValue } objects
+ */
+function extractPropsFromAttributes(attributes) {
+  const props = [];
+  let match;
+  const regex = REGEX_PATTERNS.propsInAttributes;
+  
+  // Reset regex state
+  regex.lastIndex = 0;
+  
+  while ((match = regex.exec(attributes)) !== null) {
+    const propName = match[1];
+    const propValue = match[2] !== undefined ? match[2] : match[3];
+    props.push({ propName, propValue });
+  }
+  
+  return props;
+}
+
+/**
+ * Replace props in content with actual values
+ * @param {string} content - Content with {props.xxx} placeholders
+ * @param {Array} props - Array of { propName, propValue } objects
+ * @returns {string} Content with props replaced
+ */
+function replacePropValues(content, props) {
+  let replaced = content;
+  
+  // Attributes that always need quotes when substituted
+  const quotedAttributes = ['hashid', 'id', 'className', 'title', 'alt', 'sid', 'type', 'data-', 'aria-'];
+  
+  for (const { propName, propValue } of props) {
+    // Replace {props.propName} with the actual value
+    // Also match ${ variant for template literals: ${props.propName} -> value
+    const bracesRegex = new RegExp(`\\{props\\.${propName}\\}`, 'g');
+    const templateRegex = new RegExp(`\\$\\{props\\.${propName}\\}`, 'g');
+    
+    replaced = replaced.replace(templateRegex, propValue);  // Handle ${props.xxx} first
+    replaced = replaced.replace(bracesRegex, propValue);    // Then handle {props.xxx}
+  }
+  
+  // Add quotes to common attributes that need them
+  for (const attr of quotedAttributes) {
+    // Pattern: hashid=value -> hashid='value' (if not already quoted)
+    replaced = replaced.replace(
+      new RegExp(`\\b${attr}=([^\\s>'"\`]+)(?!['\"])`, 'g'),
+      `${attr}='$1'`
+    );
+  }
+  
+  // Convert JSX template literal syntax to simple string syntax
+  // ONLY for src, href, and similar URL-like attributes
+  // Pattern: src={`...`} -> src='...'
+  // Pattern: href={`...`} -> href='...'
+  replaced = replaced.replace(/src=\{`([^`]*)`\}/g, "src='$1'");
+  replaced = replaced.replace(/href=\{`([^`]*)`\}/g, "href='$1'");
+  
+  return replaced;
+}
+
+/**
+ * Get indentation from content at specified offset
+ * @param {string} content - Full content string
+ * @param {number} offset - Position of component tag
+ * @returns {string} Indentation string
+ */
+function getIndentationAtOffset(content, offset) {
+  const beforeMatch = content.substring(0, offset);
+  const lastNewline = beforeMatch.lastIndexOf('\n');
+  const lineStart = lastNewline === -1 ? 0 : lastNewline + 1;
+  return beforeMatch.substring(lineStart);
+}
+
+/**
+ * Apply indentation to all lines of content
+ * @param {string} content - Content to indent
+ * @param {string} indent - Indentation string
+ * @returns {string} Indented content
+ */
+function applyIndentation(content, indent) {
+  // Only apply if indent contains only spaces
+  if (!indent.match(/^\s*$/)) {
+    return content;
+  }
+  
+  return content.split('\n').map((line, i) => {
+    return i === 0 ? line : indent + line;
+  }).join('\n');
+}
+
+/**
+ * Extract nested property value from object using dot notation path
+ * @param {Object} obj - Object to extract from
+ * @param {string} propertyPath - Property path like ".credentials.general"
+ * @returns {*} Extracted value or undefined
+ */
+function extractNestedProperty(obj, propertyPath) {
+  let value = obj;
+  
+  for (const part of propertyPath.split('.').filter(p => p)) {
+    value = value[part];
+    if (value === undefined) break;
+  }
+  
+  return value;
+}
+
 /**
  * Recursively extract doc IDs from sidebar configuration
  * Also includes link.id from category items
@@ -300,10 +547,11 @@ function processFileImportsRecursively(filePath, processedFiles = {}, imports = 
     const baseDir = path.dirname(filePath);
 
     // Extract all import statements from this file
-    const importRegex = /import\s+(\w+)\s+from\s+['"]([^'"]+)['"];?/g;
     let match;
+    const regex = REGEX_PATTERNS.importStatement;
+    regex.lastIndex = 0;
 
-    while ((match = importRegex.exec(importedMdxContent)) !== null) {
+    while ((match = regex.exec(importedMdxContent)) !== null) {
       const componentName = match[1];
       const importPath = match[2];
 
@@ -330,13 +578,8 @@ function processFileImportsRecursively(filePath, processedFiles = {}, imports = 
         const importedFileContent = fs.readFileSync(normalizedPath, 'utf8');
         const { content: importedFileMdxContent } = matter(importedFileContent);
 
-        let cleanedContent = importedFileMdxContent
-          // Remove MDX comments
-          .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
-          // Remove import statements (including optional semicolon)
-          .replace(/import\s+[\s\S]*?from\s+['"][^'"]+['"];?\s*/g, '')
-          // Remove JSX expressions BUT PRESERVE {props.xxx} patterns AND {#anchor} patterns
-          .replace(/\{(?!props\.[a-zA-Z_]\w*\}|#[a-z0-9\-]+\})[^}]*\}/g, '');
+        // Use centralized cleaning function
+        const cleanedContent = cleanMdxContent(importedFileMdxContent);
         
         imports[componentName] = cleanedContent;
 
@@ -463,14 +706,8 @@ export function processImportsInMdx(content, basePath, currentFilePath = '') {
       const importedContent = fs.readFileSync(normalizedPath, 'utf8');
       const { content: importedMdxContent } = matter(importedContent);
       
-      // Remove JSX/MDX syntax from imported content
-      let cleanedContent = importedMdxContent
-        // Remove MDX comments
-        .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
-        // Remove import statements (including optional semicolon)
-        .replace(/import\s+[\s\S]*?from\s+['"][^'"]+['"];?\s*/g, '')
-        // Remove JSX expressions BUT PRESERVE {props.xxx} patterns AND {#anchor} patterns AND {variable.property} patterns
-        .replace(/\{(?!props\.[a-zA-Z_]\w*\}|#[a-z0-9\-]+\}|[a-zA-Z_]\w*(?:\.[a-zA-Z_]\w*)*\})[^}]*\}/g, '');
+      // Use centralized cleaning function
+      const cleanedContent = cleanMdxContent(importedMdxContent);
       
       imports[componentName] = cleanedContent;
 
@@ -510,7 +747,7 @@ export function processImportsInMdx(content, basePath, currentFilePath = '') {
         const jsonObj = JSON.parse(jsonData);
         
         // Find all SpecSection components with this variable and their property paths
-        const specSectionPattern = new RegExp(`<SpecSection\\s+data={${varName}((?:\\.[a-zA-Z_]\\w*)+)}\\s*/>`, 'g');
+        const specSectionPattern = REGEX_PATTERNS.specSectionWithProperty(varName);
         let specMatch;
         let matchCount = 0;
         
@@ -519,11 +756,7 @@ export function processImportsInMdx(content, basePath, currentFilePath = '') {
           const propertyPath = specMatch[1]; // e.g., ".credentials", ".general", etc.
           
           // Extract the nested property value
-          let dataValue = jsonObj;
-          for (const part of propertyPath.split('.').filter(p => p)) {
-            dataValue = dataValue[part];
-            if (!dataValue) break;
-          }
+          const dataValue = extractNestedProperty(jsonObj, propertyPath);
           
           if (dataValue) {
             const escapedJson = Buffer.from(JSON.stringify(dataValue)).toString('base64');
@@ -539,6 +772,43 @@ export function processImportsInMdx(content, basePath, currentFilePath = '') {
       }
     } catch (e) {
       console.warn(`Failed to process JSON variable ${varName}:`, e.message);
+    }
+  }
+
+  // Process Treeview components with JSON data
+  // Similar to SpecSection, but handles Treeview-specific data structure
+  for (const [varName, jsonData] of Object.entries(imports)) {
+    try {
+      if (typeof jsonData === 'string' && (jsonData.startsWith('[') || jsonData.startsWith('{'))) {
+        // Check if this is a Treeview data import
+        const treeviewPattern = REGEX_PATTERNS.treeviewWithData(varName);
+        let treeviewMatch;
+        let matchCount = 0;
+        
+        while ((treeviewMatch = treeviewPattern.exec(processedContent)) !== null) {
+          matchCount++;
+          const jsonObj = JSON.parse(jsonData);
+          const propertyPath = treeviewMatch[1]; // e.g., "", ".doorTree", etc.
+          
+          let dataValue = jsonObj;
+          if (propertyPath) {
+            // Extract nested property if specified
+            dataValue = extractNestedProperty(jsonObj, propertyPath);
+          }
+          
+          if (dataValue) {
+            const escapedJson = Buffer.from(JSON.stringify(dataValue)).toString('base64');
+            const fullMatch = treeviewMatch[0];
+            processedContent = processedContent.replace(fullMatch, `<Treeview _jsonData="${escapedJson}" />`);
+          }
+        }
+        
+        if (matchCount > 0) {
+          console.log(`✓ Found ${matchCount} Treeview components using ${varName}`);
+        }
+      }
+    } catch (e) {
+      console.warn(`Failed to process Treeview JSON variable ${varName}:`, e.message);
     }
   }
 
@@ -571,40 +841,21 @@ export function processImportsInMdx(content, basePath, currentFilePath = '') {
     
     for (const [componentName, importedContent] of Object.entries(mdxImports)) {
       // Match self-closing tags with attributes: <ComponentName attr1="val1" attr2="val2" />
-      const selfClosingRegex = new RegExp(`<${componentName}([^/>]*)\\s*/?>`, 'g');
+      const selfClosingRegex = REGEX_PATTERNS.selfClosingComponent(componentName);
       // Match opening/closing tags with content
-      const closingRegex = new RegExp(`<${componentName}([^>]*)>.*?</${componentName}>`, 'gs');
+      const closingRegex = REGEX_PATTERNS.closingComponent(componentName);
       
       // Handle self-closing tags with props
       processedContent = processedContent.replace(selfClosingRegex, (match, attributes, offset) => {
         let replacedContent = importedContent;
         
         // Extract props from attributes
-        // Pattern: name="value" or name='value' or name={value} (JSX expression)
-        const propRegex = /(\w+)=(?:["']([^"']*?)["']|\{([^}]+)\})/g;
-        let propMatch;
+        const props = extractPropsFromAttributes(attributes);
+        replacedContent = replacePropValues(replacedContent, props);
         
-        while ((propMatch = propRegex.exec(attributes)) !== null) {
-          const propName = propMatch[1];
-          // Group 2: string value (with quotes), Group 3: JSX expression value (without quotes)
-          const propValue = propMatch[2] !== undefined ? propMatch[2] : propMatch[3];
-          // Replace {props.propName} with the actual value
-          replacedContent = replacedContent.replace(new RegExp(`\\{props\\.${propName}\\}`, 'g'), propValue);
-        }
-        
-        // Detect indentation before the component tag
-        const beforeMatch = processedContent.substring(0, offset);
-        const lastNewline = beforeMatch.lastIndexOf('\n');
-        const lineStart = lastNewline === -1 ? 0 : lastNewline + 1;
-        const indent = beforeMatch.substring(lineStart);
-        
-        // Check if the indent is only spaces
-        if (indent.match(/^\s*$/)) {
-          // Apply indentation to all lines of the imported content
-          replacedContent = replacedContent.split('\n').map((line, i) => {
-            return i === 0 ? line : indent + line;
-          }).join('\n');
-        }
+        // Apply indentation
+        const indent = getIndentationAtOffset(processedContent, offset);
+        replacedContent = applyIndentation(replacedContent, indent);
         
         return replacedContent;
       });
@@ -614,30 +865,12 @@ export function processImportsInMdx(content, basePath, currentFilePath = '') {
         let replacedContent = importedContent;
         
         // Extract props from attributes
-        const propRegex = /(\w+)=(?:["']([^"']*?)["']|\{([^}]+)\})/g;
-        let propMatch;
+        const props = extractPropsFromAttributes(attributes);
+        replacedContent = replacePropValues(replacedContent, props);
         
-        while ((propMatch = propRegex.exec(attributes)) !== null) {
-          const propName = propMatch[1];
-          // Group 2: string value (with quotes), Group 3: JSX expression value (without quotes)
-          const propValue = propMatch[2] !== undefined ? propMatch[2] : propMatch[3];
-          // Replace {props.propName} with the actual value
-          replacedContent = replacedContent.replace(new RegExp(`\\{props\\.${propName}\\}`, 'g'), propValue);
-        }
-        
-        // Detect indentation before the component tag
-        const beforeMatch = processedContent.substring(0, offset);
-        const lastNewline = beforeMatch.lastIndexOf('\n');
-        const lineStart = lastNewline === -1 ? 0 : lastNewline + 1;
-        const indent = beforeMatch.substring(lineStart);
-        
-        // Check if the indent is only spaces
-        if (indent.match(/^\s*$/)) {
-          // Apply indentation to all lines of the imported content
-          replacedContent = replacedContent.split('\n').map((line, i) => {
-            return i === 0 ? line : indent + line;
-          }).join('\n');
-        }
+        // Apply indentation
+        const indent = getIndentationAtOffset(processedContent, offset);
+        replacedContent = applyIndentation(replacedContent, indent);
         
         return replacedContent;
       });
@@ -650,7 +883,7 @@ export function processImportsInMdx(content, basePath, currentFilePath = '') {
 
   // Convert {#anchor} to [#anchor] AFTER props substitution is complete
   // This must be done after props are substituted to avoid any conflicts
-  processedContent = processedContent.replace(/\{#([^}]+)\}/g, '[#$1]');
+  processedContent = processedContent.replace(REGEX_PATTERNS.anchors, '[#$1]');
 
   return processedContent;
 }

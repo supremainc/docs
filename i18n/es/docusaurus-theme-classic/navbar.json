@@ -144,7 +144,7 @@
     "description": "Navbar item with label CoreStation Setup Manager"
   },
   "item.label.Changelog": {
-    "message": "Registro de cambios",
+    "message": "Changelog",
     "description": "Navbar item with label Changelog"
   }
 }
