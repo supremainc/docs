@@ -1,0 +1,61 @@
+name: Generate LLM Documentation
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Deployment?"
+        default: "Suprema"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build Docusaurus site
+        run: yarn build
+
+      - name: Generate LLM documentation
+        uses: osodevops/docusaurus-llm-docs@v1
+        id: llm-docs
+        with:
+          build-dir: './build'
+          output-dir: './build/llm-docs'
+          base-url: 'https://supremainc.github.io/docs'
+          product-name: 'Suprema Docs'
+          tagline: 'Suprema Documentation for LLMs'
+
+      - name: Copy LLM docs to build root
+        run: |
+          cp ${{ steps.llm-docs.outputs.llms-txt-path }} ./build/llms.txt
+          cp ${{ steps.llm-docs.outputs.llms-full-txt-path }} ./build/llms-full.txt
+          cp ${{ steps.llm-docs.outputs.markdown-zip-path }} ./build/markdown.zip
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './build'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
