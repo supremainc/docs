@@ -29,8 +29,8 @@ export default function ProdImg({src, alt, className, alone, width, height}) {
             width: width || 'auto',
             height: height || 'auto'
         } : {
-            width: imageSize[imagePath.replace(baseUrl, '')]?.width || 'auto',
-            height: imageSize[imagePath.replace(baseUrl, '')]?.height || 'auto'
+            width: imageSize[imagePath]?.width || 'auto',
+            height: imageSize[imagePath]?.height || 'auto'
         }),
     };
 
