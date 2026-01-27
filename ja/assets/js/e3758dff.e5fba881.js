@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["85171"], {
-39209: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["55352"], {
+41538: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,26 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_x_supported_device_mdx_40d_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_ja_docusaurus_plugin_content_docs_current_platform_biostar_x_supported_device_mdx_e37_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-es-docusaurus-plugin-content-docs-current-platform-biostar-x-supported-device-mdx-40d.json
-var site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_x_supported_device_mdx_40d_namespaceObject = JSON.parse('{"id":"platform/biostar_x/supported-device","title":"Dispositivos Compatibles","description":"Consulta la lista de dispositivos compatibles con la plataforma BioStar X.","source":"@site/i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/supported-device.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/supported-device","permalink":"/docs/es/platform/biostar_x/supported-device","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/supported-device.mdx","tags":[],"version":"current","frontMatter":{"id":"supported-device","title":"Dispositivos Compatibles","description":"Consulta la lista de dispositivos compatibles con la plataforma BioStar X.","keywords":["Dispositivos Compatibles","BioStar X"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Antes de Comenzar","permalink":"/docs/es/platform/biostar_x/before-start"},"next":{"title":"Requisitos Mínimos del Sistema","permalink":"/docs/es/platform/biostar_x/system-requirements"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-ja-docusaurus-plugin-content-docs-current-platform-biostar-x-supported-device-mdx-e37.json
+var site_i_18_n_ja_docusaurus_plugin_content_docs_current_platform_biostar_x_supported_device_mdx_e37_namespaceObject = JSON.parse('{"id":"platform/biostar_x/supported-device","title":"対応デバイス","description":"BioStar X プラットフォームが対応するデバイス一覧を確認します。","source":"@site/i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/supported-device.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/supported-device","permalink":"/docs/ja/platform/biostar_x/supported-device","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/supported-device.mdx","tags":[],"version":"current","frontMatter":{"id":"supported-device","title":"対応デバイス","description":"BioStar X プラットフォームが対応するデバイス一覧を確認します。","keywords":["対応デバイス","BioStar X"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"開始する前に","permalink":"/docs/ja/platform/biostar_x/before-start"},"next":{"title":"システム最小要件","permalink":"/docs/ja/platform/biostar_x/system-requirements"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/supported-device.mdx
+;// CONCATENATED MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/supported-device.mdx
 
 
 const frontMatter = {
 	id: 'supported-device',
-	title: 'Dispositivos Compatibles',
-	description: 'Consulta la lista de dispositivos compatibles con la plataforma BioStar X.',
+	title: '対応デバイス',
+	description: 'BioStar X プラットフォームが対応するデバイス一覧を確認します。',
 	keywords: [
-		'Dispositivos Compatibles',
+		'対応デバイス',
 		'BioStar X'
 	],
 	isTranslationMissing: false
@@ -54,8 +54,9 @@ function _createMdxContent(props) {
   if (!Columns) _missingMdxReference("Columns", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "Los siguientes dispositivos son compatibles con la plataforma BioStar X."
+      children: "BioStar X プラットフォームが対応するデバイス一覧です。"
     }), "\n", (0,jsx_runtime.jsxs)(Columns, {
+      className: "supported-device",
       children: [(0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
@@ -106,6 +107,7 @@ function _createMdxContent(props) {
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(Columns, {
+      className: "supported-device",
       children: [(0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
@@ -156,6 +158,7 @@ function _createMdxContent(props) {
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(Columns, {
+      className: "supported-device",
       children: [(0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
@@ -206,6 +209,7 @@ function _createMdxContent(props) {
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(Columns, {
+      className: "supported-device",
       children: [(0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
@@ -256,6 +260,7 @@ function _createMdxContent(props) {
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(Columns, {
+      className: "supported-device",
       children: [(0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {
@@ -306,6 +311,7 @@ function _createMdxContent(props) {
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(Columns, {
+      className: "supported-device",
       children: [(0,jsx_runtime.jsxs)(Column, {
         className: "text--center bold",
         children: [(0,jsx_runtime.jsx)(_components.p, {

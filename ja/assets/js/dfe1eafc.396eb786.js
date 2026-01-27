@@ -96,11 +96,9 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["画面左側のサイドバーで ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.menu.credential.root",
-            product: "2"
+            sid: "setting.menu.credential.root"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.menu.credential.card",
-            product: "2"
+            sid: "setting.menu.credential.card"
           }), " をクリックします。"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
@@ -175,11 +173,9 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["画面左側のサイドバーで ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.menu.credential.root",
-            product: "2"
+            sid: "setting.menu.credential.root"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "setting.menu.credential.card",
-            product: "2"
+            sid: "setting.menu.credential.card"
           }), " をクリックします。"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
