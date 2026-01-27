@@ -6,8 +6,8 @@ import imageSize from '../Image/sizeOfimages.json';
 export default function ProdImg({src, alt, className, alone, width, height}) {
     const { i18n: { currentLocale } } = useDocusaurusContext();
     const isDev = process.env.NODE_ENV === 'development';
-    
-    currentLocale === 'ko' || alone ? 
+    const imagePath = 
+        currentLocale === 'ko' || alone ? 
             useBaseUrl(src) : 
             useBaseUrl(src.replace('/img/', `/img/${currentLocale}/`));
 
