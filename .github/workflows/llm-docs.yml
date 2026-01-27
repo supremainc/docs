@@ -1,12 +1,6 @@
 name: Generate LLM Documentation
 
 on:
-  push:
-    branches: [main]
-    # paths:
-    #   - 'docs/**'
-    #   - 'docusaurus.config.js'
-    #   - 'sidebars.js'
   workflow_dispatch:
     inputs:
       name:
