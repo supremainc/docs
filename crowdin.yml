@@ -25,7 +25,7 @@ files: [
     ]
   },
   {
-    "source" : "/docs/**/*",
+    "source" : "/docs/**/*.mdx",
     "translation" : "/i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%",
     "escape_special_characters": 0,
     "ignore": [
@@ -45,7 +45,6 @@ files: [
       "/docs/common/_android-license.mdx",
       "/docs/common/_biostarair-customer-notice.mdx",
       "/docs/common/bsx-license/*.mdx",
-      "/docs/platform/biostar_x/opensourcelicenses.txt",
       "/docs/reference/**/smartcardissue.mdx",
       "/docs/*/*/release-notes/*.mdx",
       "/docs/common/_ic-information.mdx",
@@ -54,8 +53,15 @@ files: [
       # "/docs/platform/plugins/*.mdx",
       # "/docs/how-to/*.mdx",
       # "/docs/how-to/*.json",
-      # "/docs/platform/biostar_air/**/*.mdx",
       # "/docs/platform/**/*.mdx",
-    ]
+      # "/docs/platform/biostar_air/**/*.mdx",
+    ],
+    "type": "markdown"
+  },
+  {
+    "source" : "/docs/**/*.json",
+    "translation" : "/i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%",
+    "escape_special_characters": 0,
+    "type": "json"
   }
 ]
