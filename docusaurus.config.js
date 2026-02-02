@@ -6,6 +6,7 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 import ConfigLocalized from './docusaurus.config.localized.json';
+import 'dotenv/config';
 const {rehypeExtendedTable} = require("rehype-extended-table");
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -40,6 +41,9 @@ const config = {
   url: 'https://docs.supremainc.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
+  customFields: {
+    SUPABASE_SERVICE_ROLE_KEY: process.env.SUPABASE_SERVICE_ROLE_KEY,
+  },
   baseUrl: '/',
   future: {
     v4: {

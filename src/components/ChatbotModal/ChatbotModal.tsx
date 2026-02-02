@@ -15,7 +15,7 @@ interface Message {
 
 const PROJECT_ID = 'gfyiunrxdmzfxmphkymr';
 const API_URL = `https://${PROJECT_ID}.functions.supabase.co/rag-chat`;
-const SUPABASE_SERVICE_ROLE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdmeWl1bnJ4ZG16ZnhtcGhreW1yIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2OTY4MDYxNSwiZXhwIjoyMDg1MjU2NjE1fQ.BWKdOnDMzY3iCwt9spoi3ruJH-RDecLcR66yYLV4BJY';
+const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
 
 export const ChatbotModal: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
