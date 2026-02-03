@@ -54,9 +54,9 @@ files: [
       # "/docs/how-to/*.mdx",
       # "/docs/how-to/*.json",
       # "/docs/platform/**/*.mdx",
-      # "/docs/platform/biostar_air/**/*.mdx",
+      "/docs/platform/biostar_air/**/*.mdx",
     ],
-    "type": "markdown"
+    "type": "mdx_v1"
   },
   {
     "source" : "/docs/**/*.json",

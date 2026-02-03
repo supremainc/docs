@@ -55,7 +55,7 @@ files: [
       # "/i18n/en/docusaurus-plugin-content-docs/current/how-to/*.json",
       # "/i18n/en/docusaurus-plugin-content-docs/current/platform/**/*.mdx",
     ],
-    "type": "markdown"
+    "type": "mdx_v1"
   },
   {
     "source" : "/i18n/en/**/*.json",
