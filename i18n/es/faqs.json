@@ -306,7 +306,7 @@
           ],
           "question": "Después de actualizar el firmware en dispositivos existentes, la configuración de Master Admin no aparece.",
           "answer": [
-            "Los dispositivos actualizados con firmware de dispositivos existentes no admiten la configuración de Master Admin. Puede mejorar la seguridad del dispositivo reforzando los permisos de todos los administradores mediante la opción <span class='cmd'>Admin 2-Step Authentication</span>. Para obtener información detallada, consulte <a href='settings#admin-2-step-authentication'>Admin 2-step Authentication</a>."
+            "Los dispositivos actualizados con firmware de dispositivos existentes no admiten la configuración de Master Admin. Puede mejorar la seguridad del dispositivo reforzando los permisos de todos los administradores mediante la opción <span class='cmd'>Admin 2-Step Authentication</span>. Para obtener información detallada, consulte <a href='settings#admin-2-step-authentication'>Autenticación en dos pasos del administrador</a>."
           ]
         }
       ]
