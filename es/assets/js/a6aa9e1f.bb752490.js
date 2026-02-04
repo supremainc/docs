@@ -1,1202 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["93913"], {
-21531: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  frontMatter: () => (/* binding */ frontMatter),
-  toc: () => (/* binding */ toc),
-  "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_es_docusaurus_plugin_content_docs_current_reference_smartcardissue_mdx_0fe_namespaceObject),
-  assets: () => (/* binding */ assets),
-  contentTitle: () => (/* binding */ contentTitle)
-});
-
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-es-docusaurus-plugin-content-docs-current-reference-smartcardissue-mdx-0fe.json
-var site_i_18_n_es_docusaurus_plugin_content_docs_current_reference_smartcardissue_mdx_0fe_namespaceObject = JSON.parse('{"id":"reference/smartcardissue","title":"How to Issue Suprema Smart Cards","description":"This document provides a technical guide for third-party vendors to issue smart cards compatible with Suprema\'s BioStar platform.","source":"@site/i18n/es/docusaurus-plugin-content-docs/current/reference/smartcardissue.mdx","sourceDirName":"reference","slug":"/reference/smartcardissue","permalink":"/docs/es/reference/smartcardissue","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/reference/smartcardissue.mdx","tags":[],"version":"current","frontMatter":{"id":"smartcardissue","title":"How to Issue Suprema Smart Cards","toc_max_heading_level":3,"isTranslationMissing":false},"sidebar":"reference","previous":{"title":"Comparar Especificaciones","permalink":"/docs/es/reference/compares/controller-devices-specs"}}')
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(74848);
-// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
-var lib = __webpack_require__(84429);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(96540);
-;// CONCATENATED MODULE: ./src/components/TypedefStruct/styles.module.css
-// extracted by css-extract-rspack-plugin
-/* ESM default export */ const styles_module = ({"typedefContainer":"typedefContainer_Wn7J","titleRow":"titleRow_juh5","metadata":"metadata_jjxW","category":"category_KdBD","size":"size_yHpg","version":"version_y0px","description":"description_vl9m","section":"section_UAKO","sectionHeader":"sectionHeader_fRZ_","sectionSubtitle":"sectionSubtitle_Uhu4","hierarchyContainer":"hierarchyContainer_TJKg","hierarchyLevel":"hierarchyLevel_eVaW","nestedLevel":"nestedLevel_fvI8","hierarchyItem":"hierarchyItem_GODh","nestedLeveltop":"nestedLeveltop_mB2_","hierarchyNotes":"hierarchyNotes_QTbs","hierarchyNode":"hierarchyNode_fJgq","nodeHeader":"nodeHeader_VmLc","hierarchyName":"hierarchyName_Xieu","hierarchyType":"hierarchyType_cEEc","hierarchySize":"hierarchySize_iDgU","hierarchyDesc":"hierarchyDesc_qbou","references":"references_Fuyx","referencesLabel":"referencesLabel_ptzV","reference":"reference_oQRT","childrenContainer":"childrenContainer_yihK","structLink":"structLink_tUc1","relatedStruct":"relatedStruct_OSZX","memoryBlocks":"memoryBlocks_TkDs","memoryBlock":"memoryBlock_RkZ2","memoryBlockHeader":"memoryBlockHeader_jD1Y","memoryOffset":"memoryOffset_djHn","memoryFieldName":"memoryFieldName_QGoe","memoryType":"memoryType_KcxH","memorySize":"memorySize_eMk3","memoryDesc":"memoryDesc_np0k","codeBlock":"codeBlock_LQwb","field":"field_RchT","fieldHeader":"fieldHeader_HncE","fieldNumber":"fieldNumber_PrLt","fieldName":"fieldName_xHbg","fieldType":"fieldType_fbjm","fieldSize":"fieldSize_dkeI","fieldRange":"fieldRange_kmek","fieldDescription":"fieldDescription_sT1v","fieldConstants":"fieldConstants_jw4N","relatedStructs":"relatedStructs_KK4K","relatedLabel":"relatedLabel_uofL","dependencyGroup":"dependencyGroup_PDbs","dependencyList":"dependencyList_DTc4","dependency":"dependency_R2lA","depName":"depName_u4Ua","depType":"depType_lMEs","depDesc":"depDesc_T3ac","constantsTable":"constantsTable_GcDj","variantsTable":"variantsTable_UAHC","constantValue":"constantValue_cMnk","constantNote":"constantNote_TGMI","notesList":"notesList_P0Bz","note":"note_FyD5","depDesc_T3ac":"depDesc_T3ac_YWbU"});
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Heading/index.js
-var Heading = __webpack_require__(3381);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Translate.js + 1 modules
-var Translate = __webpack_require__(43789);
-;// CONCATENATED MODULE: ./src/components/TypedefStruct/index.js
-
-
-
-
-
-const TypedefStruct_TypedefStruct = ({ name, description, code, fields = [], constants = [], notes = [], dependencies = [], usedBy = [], size, category, hierarchy = [], linkPrefix = "#" })=>{
-    const renderHierarchy = (items, level = 0)=>{
-        return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-            className: `${styles_module.hierarchyLevel} ${level > 0 ? styles_module.nestedLevel : styles_module.nestedLeveltop}`,
-            children: items.map((item, index)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("ul", {
-                    className: styles_module.hierarchyItem,
-                    children: [
-                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("li", {
-                            className: styles_module.hierarchyNode,
-                            children: [
-                                /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                    className: styles_module.nodeHeader,
-                                    children: [
-                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                            className: styles_module.hierarchyName,
-                                            id: item.name.toLowerCase(),
-                                            children: item.name
-                                        }),
-                                        item.type && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                            className: styles_module.hierarchyType,
-                                            children: item.type
-                                        }),
-                                        item.size && /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
-                                            className: styles_module.hierarchySize,
-                                            children: [
-                                                item.size,
-                                                " ",
-                                                item.size > 1 ? "bytes" : "byte"
-                                            ]
-                                        })
-                                    ]
-                                }),
-                                item.description && /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                    className: styles_module.hierarchyDesc,
-                                    dangerouslySetInnerHTML: {
-                                        __html: item.description
-                                    }
-                                }),
-                                item.notes && /*#__PURE__*/ (0,jsx_runtime.jsx)("ul", {
-                                    className: styles_module.hierarchyNotes,
-                                    children: item.notes.map((note, index)=>/*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
-                                            children: /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                                className: styles_module.hierarchyDesc,
-                                                dangerouslySetInnerHTML: {
-                                                    __html: note
-                                                }
-                                            })
-                                        }, index))
-                                }),
-                                item.constants && item.constants.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                    className: styles_module.fieldConstants,
-                                    children: [
-                                        /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* ["default"] */.A, {
-                                            as: "h6",
-                                            children: (0,Translate/* .translate */.T)({
-                                                id: 'theme.typedefstruct.availableValue'
-                                            })
-                                        }),
-                                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("table", {
-                                            className: styles_module.constantsTable,
-                                            children: [
-                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("thead", {
-                                                    children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("tr", {
-                                                        children: [
-                                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
-                                                                children: (0,Translate/* .translate */.T)({
-                                                                    id: 'theme.typedefstruct.value'
-                                                                })
-                                                            }),
-                                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
-                                                                children: (0,Translate/* .translate */.T)({
-                                                                    id: 'theme.typedefstruct.description'
-                                                                })
-                                                            })
-                                                        ]
-                                                    })
-                                                }),
-                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("tbody", {
-                                                    children: item.constants.map((constant, constIndex)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("tr", {
-                                                            children: [
-                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
-                                                                    className: styles_module.constantValue,
-                                                                    children: constant.value
-                                                                }),
-                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
-                                                                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                                                        dangerouslySetInnerHTML: {
-                                                                            __html: constant.description
-                                                                        }
-                                                                    })
-                                                                })
-                                                            ]
-                                                        }, constIndex))
-                                                })
-                                            ]
-                                        })
-                                    ]
-                                }),
-                                item.references && item.references.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                    className: styles_module.references,
-                                    children: [
-                                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
-                                            className: styles_module.referencesLabel,
-                                            children: [
-                                                (0,Translate/* .translate */.T)({
-                                                    id: 'theme.typedefstruct.references'
-                                                }),
-                                                ":"
-                                            ]
-                                        }),
-                                        item.references.map((ref, refIndex)=>/*#__PURE__*/ (0,jsx_runtime.jsx)("a", {
-                                                href: `${linkPrefix}${ref.toLowerCase()}`,
-                                                className: styles_module.reference,
-                                                children: ref
-                                            }, refIndex))
-                                    ]
-                                })
-                            ]
-                        }),
-                        item.children && item.children.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                            className: styles_module.childrenContainer,
-                            children: renderHierarchy(item.children, level + 1)
-                        })
-                    ]
-                }, index))
-        });
-    };
-    const renderStructLink = (structName)=>{
-        return /*#__PURE__*/ (0,jsx_runtime.jsx)("a", {
-            href: `${linkPrefix}${structName.toLowerCase()}`,
-            className: styles_module.structLink,
-            children: structName
-        });
-    };
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-        className: styles_module.typedefContainer,
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                className: styles_module.header,
-                children: [
-                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                        className: styles_module.titleRow,
-                        children: [
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* ["default"] */.A, {
-                                as: "h3",
-                                id: name.toLowerCase(),
-                                children: name
-                            }),
-                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                className: styles_module.metadata,
-                                children: [
-                                    category && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                        className: styles_module.category,
-                                        children: category
-                                    }),
-                                    size && /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
-                                        className: styles_module.size,
-                                        children: [
-                                            size,
-                                            " ",
-                                            size > 1 ? "bytes" : "byte"
-                                        ]
-                                    })
-                                ]
-                            })
-                        ]
-                    }),
-                    description && /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                        className: styles_module.description,
-                        children: description
-                    })
-                ]
-            }),
-            hierarchy.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                className: styles_module.section,
-                children: /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                    className: styles_module.hierarchyContainer,
-                    children: renderHierarchy(hierarchy)
-                })
-            }),
-            fields.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                className: styles_module.section,
-                children: [
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                        className: styles_module.sectionHeader,
-                        children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* ["default"] */.A, {
-                            as: "h4",
-                            children: (0,Translate/* .translate */.T)({
-                                id: 'theme.typedefstruct.fieldDetails'
-                            })
-                        })
-                    }),
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                        className: styles_module.fieldsList,
-                        children: fields.map((field, index)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                className: styles_module.field,
-                                children: [
-                                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                        className: styles_module.fieldHeader,
-                                        children: [
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                className: styles_module.fieldNumber,
-                                                children: index + 1
-                                            }),
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                className: styles_module.fieldName,
-                                                id: field.name.toLowerCase(),
-                                                children: field.name
-                                            }),
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                className: styles_module.fieldType,
-                                                children: field.type
-                                            }),
-                                            field.size && /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
-                                                className: styles_module.fieldSize,
-                                                children: [
-                                                    field.size,
-                                                    " ",
-                                                    field.size > 1 ? "bytes" : "byte"
-                                                ]
-                                            }),
-                                            field.range && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                className: styles_module.fieldRange,
-                                                children: field.range
-                                            })
-                                        ]
-                                    }),
-                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                        className: styles_module.fieldDescription,
-                                        dangerouslySetInnerHTML: {
-                                            __html: field.description
-                                        }
-                                    }),
-                                    field.constants && field.constants.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                        className: styles_module.fieldConstants,
-                                        children: [
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* ["default"] */.A, {
-                                                as: "h6",
-                                                children: (0,Translate/* .translate */.T)({
-                                                    id: 'theme.typedefstruct.availableValue'
-                                                })
-                                            }),
-                                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("table", {
-                                                className: styles_module.constantsTable,
-                                                children: [
-                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("thead", {
-                                                        children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("tr", {
-                                                            children: [
-                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
-                                                                    children: (0,Translate/* .translate */.T)({
-                                                                        id: 'theme.typedefstruct.value'
-                                                                    })
-                                                                }),
-                                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
-                                                                    children: (0,Translate/* .translate */.T)({
-                                                                        id: 'theme.typedefstruct.description'
-                                                                    })
-                                                                })
-                                                            ]
-                                                        })
-                                                    }),
-                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("tbody", {
-                                                        children: field.constants.map((constant, constIndex)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("tr", {
-                                                                children: [
-                                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
-                                                                        className: styles_module.constantValue,
-                                                                        children: constant.value
-                                                                    }),
-                                                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
-                                                                        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
-                                                                            dangerouslySetInnerHTML: {
-                                                                                __html: constant.description
-                                                                            }
-                                                                        })
-                                                                    })
-                                                                ]
-                                                            }, constIndex))
-                                                    })
-                                                ]
-                                            })
-                                        ]
-                                    }),
-                                    field.relatedStructs && field.relatedStructs.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                        className: styles_module.relatedStructs,
-                                        children: [
-                                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
-                                                className: styles_module.relatedLabel,
-                                                children: [
-                                                    (0,Translate/* .translate */.T)({
-                                                        id: 'theme.typedefstruct.relatedStructs'
-                                                    }),
-                                                    ":"
-                                                ]
-                                            }),
-                                            field.relatedStructs.map((struct, structIndex)=>/*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                    children: renderStructLink(struct)
-                                                }, structIndex))
-                                        ]
-                                    })
-                                ]
-                            }, index))
-                    })
-                ]
-            }),
-            constants.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                className: styles_module.section,
-                children: [
-                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                        className: styles_module.sectionHeader,
-                        children: [
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* ["default"] */.A, {
-                                as: "h4",
-                                children: "상수 정의"
-                            }),
-                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("span", {
-                                className: styles_module.sectionSubtitle,
-                                children: [
-                                    constants.length,
-                                    "개 상수"
-                                ]
-                            })
-                        ]
-                    }),
-                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("table", {
-                        className: styles_module.variantsTable,
-                        children: [
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)("thead", {
-                                children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("tr", {
-                                    children: [
-                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
-                                            children: "값"
-                                        }),
-                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
-                                            children: "설명"
-                                        }),
-                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("th", {
-                                            children: "비고"
-                                        })
-                                    ]
-                                })
-                            }),
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)("tbody", {
-                                children: constants.map((constant, index)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("tr", {
-                                        children: [
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
-                                                className: styles_module.constantValue,
-                                                children: constant.value
-                                            }),
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
-                                                children: constant.description
-                                            }),
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("td", {
-                                                children: constant.note
-                                            })
-                                        ]
-                                    }, index))
-                            })
-                        ]
-                    })
-                ]
-            }),
-            (dependencies.length > 0 || usedBy.length > 0) && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                className: styles_module.section,
-                children: [
-                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                        className: styles_module.sectionHeader,
-                        children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* ["default"] */.A, {
-                            as: "h4",
-                            children: "의존성 관계"
-                        })
-                    }),
-                    dependencies.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                        className: styles_module.dependencyGroup,
-                        children: [
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* ["default"] */.A, {
-                                as: "h5",
-                                children: "이 구조체가 의존하는 타입"
-                            }),
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                                className: styles_module.dependencyList,
-                                children: dependencies.map((dep, index)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                        className: styles_module.dependency,
-                                        children: [
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                className: styles_module.depName,
-                                                children: renderStructLink(dep.name)
-                                            }),
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                className: styles_module.depType,
-                                                children: dep.type
-                                            }),
-                                            dep.description && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                className: styles_module.depDesc,
-                                                children: dep.description
-                                            })
-                                        ]
-                                    }, index))
-                            })
-                        ]
-                    }),
-                    usedBy.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                        className: styles_module.dependencyGroup,
-                        children: [
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* ["default"] */.A, {
-                                as: "h5",
-                                children: "이 구조체를 사용하는 타입"
-                            }),
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
-                                className: styles_module.dependencyList,
-                                children: usedBy.map((use, index)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                        className: styles_module.dependency,
-                                        children: [
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                className: styles_module.depName,
-                                                children: renderStructLink(use.name)
-                                            }),
-                                            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                className: styles_module.depType,
-                                                children: use.type
-                                            }),
-                                            use.description && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
-                                                className: styles_module.depDesc,
-                                                children: use.description
-                                            })
-                                        ]
-                                    }, index))
-                            })
-                        ]
-                    })
-                ]
-            })
-        ]
-    });
-};
-/* ESM default export */ const TypedefStruct = (TypedefStruct_TypedefStruct);
-
-// EXTERNAL MODULE: ./src/components/Image/index.js
-var Image = __webpack_require__(14547);
-;// CONCATENATED MODULE: ./src/components/ResponsiveImageMap/index.js
-
-
-
-function ResponsiveImageMap({ src, alt, className, mapName, areas, originalWidth = 910, originalHeight = 700 // 원본 이미지 높이
- }) {
-    const containerRef = (0,react.useRef)(null);
-    const mapRef = (0,react.useRef)(null);
-    const [isLoaded, setIsLoaded] = (0,react.useState)(false);
-    // 좌표를 현재 이미지 크기에 맞게 조정하는 함수
-    const updateAreaCoords = ()=>{
-        if (!containerRef.current || !mapRef.current || !isLoaded) return;
-        const img = containerRef.current.querySelector('img');
-        if (!img) return;
-        const actualWidth = img.offsetWidth;
-        const actualHeight = img.offsetHeight;
-        if (actualWidth === 0 || actualHeight === 0) return;
-        // 스케일 비율 계산
-        const scaleX = actualWidth / originalWidth;
-        const scaleY = actualHeight / originalHeight;
-        // 모든 area 요소의 좌표 업데이트
-        const areaElements = mapRef.current.querySelectorAll('area');
-        areaElements.forEach((area, index)=>{
-            if (areas[index]) {
-                const originalCoords = areas[index].coords;
-                const newCoords = originalCoords.split(',').map((coord, i)=>{
-                    const num = parseInt(coord);
-                    return Math.round(i % 2 === 0 ? num * scaleX : num * scaleY);
-                }).join(',');
-                area.setAttribute('coords', newCoords);
-            }
-        });
-    };
-    // 이미지 로드 완료 감지
-    (0,react.useEffect)(()=>{
-        if (!containerRef.current) return;
-        const img = containerRef.current.querySelector('img');
-        if (!img) return;
-        const handleImageLoad = ()=>{
-            setIsLoaded(true);
-            setTimeout(updateAreaCoords, 100);
-        };
-        if (img.complete) {
-            handleImageLoad();
-        } else {
-            img.addEventListener('load', handleImageLoad);
-        }
-        return ()=>{
-            img.removeEventListener('load', handleImageLoad);
-        };
-    }, []);
-    // 윈도우 리사이즈 시 좌표 업데이트
-    (0,react.useEffect)(()=>{
-        const handleResize = ()=>{
-            updateAreaCoords();
-        };
-        window.addEventListener('resize', handleResize);
-        // 컴포넌트 마운트 시에도 좌표 업데이트
-        const timer = setTimeout(updateAreaCoords, 200);
-        return ()=>{
-            window.removeEventListener('resize', handleResize);
-            clearTimeout(timer);
-        };
-    }, [
-        isLoaded
-    ]);
-    // 이미지 크기 변화 감지 (ResizeObserver 사용)
-    (0,react.useEffect)(()=>{
-        if (!containerRef.current) return;
-        const resizeObserver = new ResizeObserver(()=>{
-            updateAreaCoords();
-        });
-        resizeObserver.observe(containerRef.current);
-        return ()=>{
-            resizeObserver.disconnect();
-        };
-    }, [
-        isLoaded
-    ]);
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-        ref: containerRef,
-        style: {
-            position: 'relative'
-        },
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsx)("map", {
-                ref: mapRef,
-                id: mapName,
-                name: mapName,
-                children: areas.map((area, index)=>/*#__PURE__*/ (0,jsx_runtime.jsx)("area", {
-                        shape: area.shape,
-                        coords: area.coords,
-                        href: area.href,
-                        title: area.title,
-                        alt: area.alt || area.title
-                    }, index))
-            }),
-            /*#__PURE__*/ (0,jsx_runtime.jsx)(Image/* ["default"] */.A, {
-                src: src,
-                alt: alt,
-                className: className,
-                usemap: `#${mapName}`,
-                alone: true
-            })
-        ]
-    });
-}
-
-;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/reference/smartcardissue.mdx
-
-
-const frontMatter = {
-	id: 'smartcardissue',
-	title: 'How to Issue Suprema Smart Cards',
-	toc_max_heading_level: 3,
-	isTranslationMissing: false
-};
-const contentTitle = undefined;
-
-const assets = {
-
-};
-
-
-
-
-
-const toc = [{
-  "value": "Structure Relationship Diagram",
-  "id": "structure-relationship-diagram",
-  "level": 2
-}, {
-  "value": "Structure Hierarchy",
-  "id": "structure-hierarchy",
-  "level": 2
-}, {
-  "value": "CRC Calculation and Validation",
-  "id": "crc",
-  "level": 2
-}, {
-  "value": "What are hdrCRC and cardCRC?",
-  "id": "hdrcrc-cardcrc",
-  "level": 3
-}, {
-  "value": "How to Calculate CRC",
-  "id": "crc-calculation",
-  "level": 3
-}, {
-  "value": "How to Validate",
-  "id": "crc-validation",
-  "level": 3
-}];
-function _createMdxContent(props) {
-  const _components = {
-    a: "a",
-    admonition: "admonition",
-    code: "code",
-    h2: "h2",
-    h3: "h3",
-    li: "li",
-    ol: "ol",
-    p: "p",
-    pre: "pre",
-    strong: "strong",
-    ul: "ul",
-    ...(0,lib/* .useMDXComponents */.R)(),
-    ...props.components
-  };
-  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "This document provides a technical guide for third-party vendors to issue smart cards compatible with Suprema's BioStar platform."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Card data structure"
-          }), ": Data structure required for the issuance of SCC (Secure Credential Card) and AOC (Access on Card)"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Structure specification"
-          }), ": Detailed requirements for each field that must be complied with during card issuance"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Data integrity"
-          }), ": Method for ensuring the quality of card data through CRC validation"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Implementation reference"
-          }), ": Relationships between structures and how to correctly set data"]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Smart cards issued according to this document operate normally on all BioStar compatible devices from Suprema."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-      type: "info",
-      children: [(0,jsx_runtime.jsx)(_components.p, {
-        children: "Check the following before issuing smart cards."
-      }), (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Compatible devices"
-            }), ": All Suprema devices supported by BioStar"]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Card types"
-            }), ": SCC (Secure Credential Card), AOC (Access on Card)"]
-          }), "\n"]
-        }), "\n"]
-      })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "structure-relationship-diagram",
-      children: "Structure Relationship Diagram"
-    }), "\n", (0,jsx_runtime.jsx)(ResponsiveImageMap, {
-      src: "/img/common/smartcardapi-structure.png",
-      alt: "SmartCard API structure relationship diagram",
-      className: "useMap",
-      mapName: "imgmap2025813133616",
-      originalWidth: 2072,
-      originalHeight: 1192,
-      areas: [{
-        shape: "rect",
-        title: "BS2SmartCardData",
-        coords: "489,507,971,765",
-        href: "#bs2smartcarddata"
-      }, {
-        shape: "rect",
-        title: "BS2SmartCardHeader",
-        coords: "1115,34,1597,609",
-        href: "#bs2smartcardheader"
-      }, {
-        shape: "rect",
-        title: "BS2SmartCardCredentials",
-        coords: "1115,655,1597,868",
-        href: "#bs2smartcardcredentials"
-      }, {
-        shape: "rect",
-        title: "BS2AccessOnCardData",
-        coords: "1115,914,1597,1154",
-        href: "#bs2accessoncarddata"
-      }]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "note",
-      children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "Clicking on the structure in the image will take you to the details of that structure."
-      })
-    }), "\n", (0,jsx_runtime.jsx)("div", {
-      className: "page-break"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "structure-hierarchy",
-      children: "Structure Hierarchy"
-    }), "\n", (0,jsx_runtime.jsx)(TypedefStruct, {
-      name: "BS2SmartCardData",
-      description: "Composite structure containing all data of SmartCard.",
-      category: "Smart Card",
-      size: "1656",
-      hierarchy: [{
-        name: "BS2SmartCardData",
-        type: "composite struct",
-        size: 1656,
-        description: "Container for all SmartCard data",
-        children: [{
-          name: "BS2SmartCardHeader",
-          type: "struct",
-          size: 16,
-          description: "SmartCard header structure",
-          children: [{
-            name: "Checksum Area",
-            description: "The checksum area is used to validate the integrity of card data. For more information, refer to <a href='#crc'>the following</a>.",
-            children: [{
-              name: "hdrCRC",
-              type: "uint16_t",
-              size: 2,
-              description: "Checksum value of the card header. (cardCRC - reserved)"
-            }, {
-              name: "cardCRC",
-              type: "uint16_t",
-              size: 2,
-              description: "Checksum value of card data. (<code>BS2SmartCardHeader.cardType</code> - <code>BS2SmartCardData.accessOnData</code>)"
-            }]
-          }, {
-            name: "Card Metadata",
-            description: "Card type and template information",
-            children: [{
-              name: "cardType",
-              type: "BS2_CARD_TYPE",
-              size: 1,
-              description: "Code value of card type.",
-              constants: [{
-                value: "0x02",
-                description: "Secure Credential Card (SCC)"
-              }, {
-                value: "0x03",
-                description: "Access on Card (AOC)"
-              }]
-            }, {
-              name: "numOfTemplate",
-              type: "uint8_t",
-              size: 1,
-              description: "Number of fingerprint templates. For Access on Card (AOC), templates are stored in <code>BS2SmartCardCredentials</code>. Fingerprints or faces must be stored selectively. Since fingerprints and faces are not stored together, if you want to store a fingerprint template in AOC, <code>numOfFaceTemplate</code> must be set to <code>0</code>.",
-              notes: ["Supports up to 4 fingerprint templates. For more information on fingerprint template data area, refer to <a href='#bs2smartcardcredentials'>the following</a>."]
-            }, {
-              name: "templateSize",
-              type: "uint16_t",
-              size: 2,
-              description: "Size of the fingerprint template. The typical size of a fingerprint template is fixed at 384 bytes. The default for using smart cards in BioStar 2 is 300 bytes, which can be changed as needed, but set the size above 300 bytes to avoid issues with fingerprint matching.",
-              notes: ["When set to 300 bytes, copy 300 bytes into an array of size 384 bytes, and pad the remaining 84 bytes with 0.", "To store 2 fingerprints in a MIFARE 1K Classic card, set each template to 300 bytes."]
-            }, {
-              name: "issueCount",
-              type: "uint16_t",
-              size: 2,
-              description: "Issue number of the smart card. Manage the blacklist by combining card ID and issue number, so manage the issue number accurately. When reissuing the card, increment the issue number by 1."
-            }, {
-              name: "duressMask",
-              type: "uint8_t",
-              size: 1,
-              description: "Mask for whether there is a duress fingerprint."
-            }, {
-              name: "numOfFaceTemplate",
-              type: "uint8_t",
-              size: 1,
-              description: "Indicates the number of face templates. Although the basic template sizes for fingerprints and faces (fingerprint: 384, face: 552) differ, save considering the total size of <code>BS2SmartCardCredentials</code>'s <code>templateData</code>. Since fingerprints and faces are not stored together, if you want to store a face template in an AOC card, <code>numOfTemplate</code> must be set to <code>0</code>.",
-              notes: ["Supports up to 1 face template."]
-            }, {
-              name: "reserved",
-              type: "uint8_t[1]",
-              size: 1,
-              description: "Reserved."
-            }]
-          }, {
-            name: "Authentication Settings",
-            description: "Card authentication modes and options",
-            children: [{
-              name: "cardAuthMode",
-              type: "uint8_t",
-              size: 1,
-              description: "Uses the authentication mode stored on the card instead of the one set on the device.",
-              notes: ["<b>Visual Face</b> base uses <code>cardAuthModeEx</code>."],
-              constants: [{
-                value: "2",
-                description: "Card authentication only"
-              }, {
-                value: "3",
-                description: "Card and fingerprint authentication"
-              }, {
-                value: "4",
-                description: "Card and PIN authentication"
-              }, {
-                value: "5",
-                description: "Fingerprint or PIN authentication after card authentication"
-              }, {
-                value: "6",
-                description: "Card, fingerprint, and PIN authentication"
-              }, {
-                value: "254",
-                description: "Not usable"
-              }, {
-                value: "255",
-                description: "Undefined (operates in a mode defined by the system)"
-              }]
-            }, {
-              name: "cardAuthModeEx",
-              type: "uint8_t",
-              size: 1,
-              description: "<span class='badge'>SDK v2.7.1 or later</span> Setting value for card authentication mode based on <b>Visual Face</b>. Uses the authentication mode stored on the card instead of the one set on the device.",
-              notes: ["Suprema devices are supported on FaceStation F2, BioStation 3, BioEntry W3.", "To apply consistently across all devices, set both <code>cardAuthMode</code> and <code>cardAuthModeEx</code>. Check supported devices."],
-              constants: [{
-                value: "21",
-                description: "Card"
-              }, {
-                value: "22",
-                description: "Card + Face"
-              }, {
-                value: "23",
-                description: "Card + Fingerprint"
-              }, {
-                value: "24",
-                description: "Card + PIN"
-              }, {
-                value: "26",
-                description: "Card + Face or PIN"
-              }, {
-                value: "27",
-                description: "Card + Fingerprint or PIN"
-              }, {
-                value: "28",
-                description: "Card + Face or Fingerprint or PIN"
-              }, {
-                value: "30",
-                description: "Card + Face + PIN"
-              }, {
-                value: "32",
-                description: "Card + Fingerprint + PIN"
-              }, {
-                value: "33",
-                description: "Card + Face or Fingerprint + PIN"
-              }, {
-                value: "254",
-                description: "Not usable"
-              }, {
-                value: "255",
-                description: "Undefined (system-defined mode)"
-              }]
-            }, {
-              name: "useAlphanumericID",
-              type: "uint8_t",
-              size: 1,
-              description: "Flag indicating whether to use Alphanumeric ID."
-            }]
-          }]
-        }, {
-          name: "cardID",
-          type: "uint8_t[BS2_CARD_DATA_SIZE]",
-          size: 32,
-          description: "Card identifier used by the terminal. <b>Access on Card (AOC)</b> uses the entire 32 bytes of the array as Card ID, while <b>Secure Credential Card (SCC)</b> uses 24 bytes of the array as Card ID. <b>Secure Credential Card (SCC)</b> must fill 32 bytes with Card ID (24 bytes), issueCount (4 bytes), and Time Stamp (4 bytes). Fill the cardObjs array of the <code>BS2UserBlob</code> structure with SC Card, and <code>cardObjs</code> must be updated every time the SC Card is issued.",
-          children: [{
-            name: "cardID: Access on Card (AOC)",
-            type: "bytes[0-31]",
-            size: 32,
-            description: "AOC: Uses the entire 32 bytes."
-          }, {
-            name: "cardID: Secure Credential Card (SCC)",
-            type: "bytes[0-31]",
-            size: 32,
-            description: "SCC: Card ID (32 bytes)",
-            children: [{
-              name: "cardID (SCC)",
-              type: "bytes[0-23]",
-              size: 24,
-              description: "SCC: Card ID (24 bytes)"
-            }, {
-              name: "issueCount (SCC)",
-              type: "bytes[24-27]",
-              size: 4,
-              description: "SCC: Issue count"
-            }, {
-              name: "timeStamp (SCC)",
-              type: "bytes[28-31]",
-              size: 4,
-              description: "SCC: Issue time"
-            }]
-          }]
-        }, {
-          name: "BS2SmartCardCredentials",
-          type: "struct",
-          size: 1568,
-          description: "Authentication data area where PIN codes or biometric authentication templates are stored.",
-          children: [{
-            name: "pin",
-            type: "uint8_t[BS2_PIN_HASH_SIZE]",
-            size: 32,
-            description: "PIN code hash value. Use the hash function of the BioStar 2 SDK to generate it with the same hash algorithm as the device.",
-            notes: ["PIN codes cannot be used in third-party tools."]
-          }, {
-            name: "templateData",
-            type: "uint8_t[S2_SMART_CARD_MAX_TEMPLATE_COUNT * BS2_FINGER_TEMPLATE_SIZE]",
-            size: 1536,
-            description: "Fingerprint or face template data area. Store up to 4 fingerprint templates and 1 face template.",
-            children: [{
-              name: "Fingerprint Templates",
-              description: "Supports up to 4 fingerprint templates.",
-              children: [{
-                name: "Template 1",
-                type: "uint8_t[384]",
-                size: 384,
-                description: "First fingerprint template"
-              }, {
-                name: "Template 2",
-                type: "uint8_t[384]",
-                size: 384,
-                description: "Second fingerprint template"
-              }, {
-                name: "Template 3",
-                type: "uint8_t[384]",
-                size: 384,
-                description: "Third fingerprint template"
-              }, {
-                name: "Template 4",
-                type: "uint8_t[384]",
-                size: 384,
-                description: "Fourth fingerprint template"
-              }]
-            }, {
-              name: "Face Template",
-              description: "Supports up to 1 face template with size 552.",
-              children: [{
-                name: "Template 1",
-                type: "uint8_t[552]",
-                size: 552,
-                description: "Face template"
-              }]
-            }]
-          }]
-        }, {
-          name: "BS2AccessOnCardData",
-          type: "struct",
-          size: 40,
-          description: "Area used in AOC cards that contains access group information.",
-          children: [{
-            name: "accessGroupID",
-            type: "uint16_t[BS2_SMART_CARD_MAX_ACCESS_GROUP_COUNT]",
-            size: 32,
-            description: "List of access group IDs. Each group has IDs ranging from 1 to 65535, supporting up to 16 groups.",
-            children: [{
-              name: "Group ID 1",
-              type: "uint16_t",
-              size: 2,
-              description: "First access group"
-            }, {
-              name: "Group ID 2",
-              type: "uint16_t",
-              size: 2,
-              description: "Second access group"
-            }, {
-              name: "...",
-              type: "uint16_t",
-              size: 2,
-              description: "..."
-            }, {
-              name: "Group ID 16",
-              type: "uint16_t",
-              size: 2,
-              description: "Last access group"
-            }]
-          }, {
-            name: "Time Restrictions",
-            description: "Time range for access permissions.",
-            children: [{
-              name: "startTime",
-              type: "BS2_DATETIME",
-              size: 4,
-              description: "Start time for user authentication, with <code>0</code> indicating no restriction. In Unix timestamp format, measured in seconds."
-            }, {
-              name: "endTime",
-              type: "BS2_DATETIME",
-              size: 4,
-              description: "End time for user authentication, with <code>0</code> indicating no restriction. In Unix timestamp format, measured in seconds."
-            }]
-          }]
-        }]
-      }]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "crc",
-      children: "CRC Calculation and Validation"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["CRC-16 CCITT checksums (", (0,jsx_runtime.jsx)(_components.code, {
-        children: "hdrCRC"
-      }), ", ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "cardCRC"
-      }), ") are used for the header and card data respectively, to ensure the integrity of SmartCard data."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "hdrcrc-cardcrc",
-      children: "What are hdrCRC and cardCRC?"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.code, {
-            children: "hdrCRC"
-          }), ": The value calculated using CRC-16 CCITT (polynomial 0x1021, initial value 0xFFFF) for the ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "cardCRC"
-          }), " to ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "reserved"
-          }), " (14 bytes total) of ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "BS2SmartCardHeader"
-          }), "."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.code, {
-            children: "cardCRC"
-          }), ": The value calculated using CRC-16 CCITT (polynomial 0x1021, initial value 0xFFFF) for card data from ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "cardType"
-          }), " to ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "BS2SmartCardData.accessOnData"
-          }), " (total card data excluding the header)."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "crc-calculation",
-      children: "How to Calculate CRC"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["The ", (0,jsx_runtime.jsx)(_components.a, {
-        href: "https://kb.supremainc.com/bs2sdk/doku.php",
-        children: "BioStar 2 SDK"
-      }), " provides the ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "BS2_ComputeCRC16CCITT"
-      }), " function. Below is an example of its use."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-csharp",
-        metastring: "title='Calculate checksum'",
-        children: "// Calculate card data checksum (cardCRC)\nuint16_t cardCRC = 0xFFFF;\nint result = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardType, sizeof(BS2SmartCardData) - offsetof(BS2SmartCardHeader, cardType), &cardCRC);\n\n// Calculate header checksum (hdrCRC)\ncard.header.cardCRC = cardCRC;  // Set the cardCRC value first\nuint16_t hdrCRC = 0xFFFF;\nresult = BS2_ComputeCRC16CCITT((uint8_t*)&card.header.cardCRC, sizeof(BS2SmartCardHeader) - offsetof(BS2SmartCardHeader, cardCRC), &hdrCRC);\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
-      type: "note",
-      children: (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.code, {
-              children: "cardCRC"
-            }), " is calculated from ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "cardType"
-            }), " to ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "accessOnData"
-            }), "."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.code, {
-              children: "hdrCRC"
-            }), " is calculated from ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "cardCRC"
-            }), " to ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "reserved"
-            }), "."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["Always calculate ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "cardCRC"
-            }), " first, set it in the header, then calculate ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "hdrCRC"
-            }), "."]
-          }), "\n"]
-        }), "\n"]
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "crc-validation",
-      children: "How to Validate"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "To validate the integrity of card data when reading, do the following:"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Recalculate CRC using data read from the card."
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "Compare the stored CRC value with the calculated CRC value."
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-csharp",
-        metastring: "title='CRC Validation'",
-        children: "// CRC validation example\nBS2SmartCardData readCard;  // Data read from card\n\n// 1. cardCRC validation\nuint16_t calculatedCardCRC = 0xFFFF;\nBS2_ComputeCRC16CCITT((uint8_t*)&readCard.header.cardType, sizeof(BS2SmartCardData) - offsetof(BS2SmartCardHeader, cardType), &calculatedCardCRC);\n\nif (readCard.header.cardCRC != calculatedCardCRC) {\n    // Card data corruption\n    return ERROR_CARD_DATA_CORRUPTED;\n}\n\n// 2. hdrCRC validation\nuint16_t calculatedHdrCRC = 0xFFFF;\nBS2_ComputeCRC16CCITT((uint8_t*)&readCard.header.cardCRC, sizeof(BS2SmartCardHeader) - offsetof(BS2SmartCardHeader, cardCRC), &calculatedHdrCRC);\n\nif (readCard.header.hdrCRC != calculatedHdrCRC) {\n    // Header data corruption\n    return ERROR_HEADER_DATA_CORRUPTED;\n}\n"
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
-      type: "note",
-      children: [(0,jsx_runtime.jsx)(_components.p, {
-        children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Cautions for CRC Calculation"
-        })
-      }), (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Calculation Order"
-            }), ": Calculate ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "cardCRC"
-            }), " first, set it in the header, and then calculate ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "hdrCRC"
-            }), "."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Structure Alignment"
-            }), ": Ensure the CRC calculation range matches precisely, and be cautious of structure padding and alignment."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Initial Value"
-            }), ": CRC-16 CCITT uses polynomial 0x1021 and ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "initial value 0xFFFF"
-            }), "."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "SDK Function"
-            }), ": The ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "BS2_ComputeCRC16CCITT"
-            }), " function is provided in the ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://kb.supremainc.com/bs2sdk/doku.php",
-              children: "BioStar 2 SDK"
-            }), "."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Data Order"
-            }), ": Input data is processed in little-endian byte order."]
-          }), "\n"]
-        }), "\n"]
-      })]
-    })]
-  });
-}
-function MDXContent(props = {}) {
-  const {wrapper: MDXLayout} = {
-    ...(0,lib/* .useMDXComponents */.R)(),
-    ...props.components
-  };
-  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
-    ...props,
-    children: (0,jsx_runtime.jsx)(_createMdxContent, {
-      ...props
-    })
-  }) : _createMdxContent(props);
-}
-
-
-
-}),
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["77496"], {
 43464: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   A: () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -1226,6 +29,191 @@ const SvgIcoClose = ({
   d: "m12 4-8 8M4 4l8 8"
 })));
 /* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SvgIcoClose);
+
+}),
+55512: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ BlogListPage)
+});
+
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(74848);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(96540);
+// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.mjs
+var clsx = __webpack_require__(39836);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useDocusaurusContext.js
+var useDocusaurusContext = __webpack_require__(13341);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/metadataUtils.js
+var metadataUtils = __webpack_require__(99727);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/ThemeClassNames.js
+var ThemeClassNames = __webpack_require__(16364);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/BlogLayout/index.js + 6 modules
+var BlogLayout = __webpack_require__(7020);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Translate.js + 1 modules
+var Translate = __webpack_require__(43789);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/PaginatorNavLink/index.js
+var PaginatorNavLink = __webpack_require__(58489);
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/BlogListPaginator/index.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ 
+
+
+
+function BlogListPaginator(props) {
+    const { metadata } = props;
+    const { previousPage, nextPage } = metadata;
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("nav", {
+        className: "pagination-nav",
+        "aria-label": (0,Translate/* .translate */.T)({
+            id: 'theme.blog.paginator.navAriaLabel',
+            message: 'Blog list page navigation',
+            description: 'The ARIA label for the blog pagination'
+        }),
+        children: [
+            previousPage && /*#__PURE__*/ (0,jsx_runtime.jsx)(PaginatorNavLink/* ["default"] */.A, {
+                permalink: previousPage,
+                title: /*#__PURE__*/ (0,jsx_runtime.jsx)(Translate/* ["default"] */.A, {
+                    id: "theme.blog.paginator.newerEntries",
+                    description: "The label used to navigate to the newer blog posts page (previous page)",
+                    children: "Newer entries"
+                })
+            }),
+            nextPage && /*#__PURE__*/ (0,jsx_runtime.jsx)(PaginatorNavLink/* ["default"] */.A, {
+                permalink: nextPage,
+                title: /*#__PURE__*/ (0,jsx_runtime.jsx)(Translate/* ["default"] */.A, {
+                    id: "theme.blog.paginator.olderEntries",
+                    description: "The label used to navigate to the older blog posts page (next page)",
+                    children: "Older entries"
+                }),
+                isNext: true
+            })
+        ]
+    });
+}
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/SearchMetadata/index.js
+var SearchMetadata = __webpack_require__(10500);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-blog/lib/client/index.js + 3 modules
+var client = __webpack_require__(19900);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/BlogPostItem/index.js + 44 modules
+var BlogPostItem = __webpack_require__(4206);
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/BlogPostItems/index.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ 
+
+
+
+function BlogPostItems({ items, component: BlogPostItemComponent = BlogPostItem/* ["default"] */.A }) {
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+        children: items.map(({ content: BlogPostContent })=>/*#__PURE__*/ (0,jsx_runtime.jsx)(client/* .BlogPostProvider */["in"], {
+                content: BlogPostContent,
+                children: /*#__PURE__*/ (0,jsx_runtime.jsx)(BlogPostItemComponent, {
+                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(BlogPostContent, {})
+                })
+            }, BlogPostContent.metadata.permalink))
+    });
+}
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
+var Head = __webpack_require__(25895);
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/BlogListPage/StructuredData/index.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ 
+
+
+
+function BlogListPageStructuredData(props) {
+    const structuredData = (0,client/* .useBlogListPageStructuredData */.kJ)(props);
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)(Head/* ["default"] */.A, {
+        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("script", {
+            type: "application/ld+json",
+            children: JSON.stringify(structuredData)
+        })
+    });
+}
+
+;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/BlogListPage/index.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ 
+
+
+
+
+
+
+
+
+
+function BlogListPageMetadata(props) {
+    const { metadata } = props;
+    const { siteConfig: { title: siteTitle } } = (0,useDocusaurusContext/* ["default"] */.A)();
+    const { blogDescription, blogTitle, permalink } = metadata;
+    const isBlogOnlyMode = permalink === '/';
+    const title = isBlogOnlyMode ? siteTitle : blogTitle;
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(metadataUtils/* .PageMetadata */.be, {
+                title: title,
+                description: blogDescription
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(SearchMetadata/* ["default"] */.A, {
+                tag: "blog_posts_list"
+            })
+        ]
+    });
+}
+function BlogListPageContent(props) {
+    const { metadata, items, sidebar } = props;
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(BlogLayout/* ["default"] */.A, {
+        sidebar: sidebar,
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(BlogPostItems, {
+                items: items
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(BlogListPaginator, {
+                metadata: metadata
+            })
+        ]
+    });
+}
+function BlogListPage(props) {
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(metadataUtils/* .HtmlClassNameProvider */.e3, {
+        className: (0,clsx/* ["default"] */.A)(ThemeClassNames/* .ThemeClassNames.wrapper.blogPages */.G.wrapper.blogPages, ThemeClassNames/* .ThemeClassNames.page.blogListPage */.G.page.blogListPage),
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(BlogListPageMetadata, {
+                ...props
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(BlogListPageStructuredData, {
+                ...props
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(BlogListPageContent, {
+                ...props
+            })
+        ]
+    });
+}
+
 
 }),
 14547: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -4114,7 +3102,7 @@ var en_faqs_namespaceObject = JSON.parse('[{"category":{"title":"Power","hid":"p
 ;// CONCATENATED MODULE: ./i18n/ja/faqs.json
 var ja_faqs_namespaceObject = JSON.parse('[{"category":{"title":"電源","hid":"power","contents":[{"product":["biostation_3","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","facestation_2","xstation_2","biostation_3_max"],"question":"電源が供給されていますが、動作しません。","answer":["端末とブラケットが離れている場合、タンパースイッチによって動作しないことがあります。","アダプターまたは電源接続ケーブルを確認してください。"]}]}},{"category":{"title":"PIN","hid":"pin","contents":[{"product":["biostation_3","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","facestation_2","xstation_2","biostation_3_max"],"question":"PIN を紛失しました。","answer":["一般ユーザーの PIN は管理者に依頼してから再入力してください。","管理者 PIN を紛失した場合は、設置業者にお問い合わせください。"]},{"product":["biostation_3","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","facestation_2","xstation_2","biostation_3_max"],"question":"PIN を入力してから <span class=\'cmd\'>OK</span> ボタンを押しても、施錠されたドアを開けられません。","answer":["登録した PIN を正しく入力したか確認してください。","最近 PIN を変更していないか確認してください。","PIN が分からない場合は管理者に依頼してから再入力してください。"]}]}},{"category":{"title":"QR/バーコード","hid":"qrbarcode","contents":[{"product":["xstation_2"],"question":"QR/バーコードがうまく読み取れません。","answer":["<a href=\'getting-started#how-to-scan-qrbarcode\'>正しいQR/バーコード認証方法</a>を確認してから再度お試しください。","<b>XS2-QDPB</b>、<b>XS2-QAPB</b>：ガイドビームがQR/バーコードの中央に来るように位置付けてください。","<b>XS2-DPB</b>、<b>XS2-APB</b>、<b>XS2-ODPB</b>、<b>XS2-OAPB</b>：QR/バーコードをデバイスのスキャン画面中央に来るように位置付けてください。","モバイル端末で受け取ったQR/バーコードの場合は、画面が見やすいようにモバイル端末の明るさを調整するか、画面を拭いてから再度お試しください。","問題が解決しない場合は、QR/バーコードを発行した管理者にお問い合わせください。"]},{"product":["biostation_3_max"],"question":"QR/バーコードがうまく読み取れません。","answer":["<a href=\'getting-started#how-to-scan-qrbarcode\'>正しいQR/バーコード認証方法</a>を確認してから再度お試しください。","モバイル端末で受け取ったQR/バーコードの場合は、画面が見やすいようにモバイル端末の明るさを調整するか、画面を拭いてから再度お試しください。","問題が解決しない場合は、QR/バーコードを発行した管理者にお問い合わせください。"]}]}},{"category":{"title":"顔","hid":"face","contents":[{"product":["biostation_3","facestation_f2","facestation_2","biostation_3_max"],"question":"登録はされたものの顔認証がうまくいかず、エラーが多発します。","answer":["<a href=\'getting-started#cautions-enrolling-faces\'>顔を登録する際の注意事項</a>を確認してから顔を再登録してください。","登録されている顔の数が多い場合は、<span class=\'cmd\'>Matching Timeout</span> を変更してから再度お試しください。"]},{"product":["biostation_3","facestation_f2","facestation_2","biostation_3_max"],"question":"突然顔認証ができなくなりました。","answer":["<a href=\'getting-started#cautions-authenticating-face\'>顔を認証する際の注意事項</a>を確認してから再度お試しください。"]},{"product":["biostation_3","facestation_f2","biostation_3_max"],"question":"<span class=\'cmd\'>Mask Detection</span> 機能を <span class=\'cmd\'>Enabled</span> に設定しましたが、マスク着用時に顔認証がうまくいかずエラーが多発します。","answer":["マスクを鼻先まで下げてから顔を2回認証し、その後鼻を覆って再度顔認証を試してください。問題が続く場合は設置業者にお問い合わせください。"]},{"product":["facestation_f2","facestation_2"],"question":"サーマルカメラ使用時に温度が正常に測定されません。","answer":["端末にサーマルカメラが正常に接続されているか確認してください。","額が隠れていない状態で再度温度測定を試してください。問題が続く場合は設置業者にお問い合わせください。"]},{"product":["facestation_f2","facestation_2"],"question":"サーマルカメラ使用時に温度が低すぎて測定されます。","answer":["冬季にユーザーが長時間屋外の低温にさらされた状態で温度を測定すると、体温より低く測定されることがあります。屋内で1〜2分待機してから再度お試しください。問題が続く場合は設置業者にお問い合わせください。"]}]}},{"category":{"title":"指紋","hid":"fingerprint","contents":[{"product":["bioentry_n2","biostation_2a","biolite_n2","xstation_2","facestation_f2","biostation_3_max"],"question":"登録はされたものの指紋認証がうまくいかず、エラーが多発します。","answer":["<a href=\'getting-started#cautions-enrolling-fingers\'>正しい指紋入力方法</a>を確認してから指紋を再登録してください。","指紋に傷がある場合、機器が他人の指紋として誤認識することがあります。","登録されている指紋の数が多い場合は、<span class=\'cmd\'>Matching Timeout</span> を変更してから再度お試しください。","指紋ごとの特徴の違いにより認識率が異なるため、別の指の指紋を登録してください。"]},{"product":["bioentry_n2","biostation_2a","biolite_n2","xstation_2","facestation_f2","biostation_3_max"],"question":"突然指紋認証ができなくなりました。","answer":["指や指紋センサーに汗、水分、ほこりなどが付着していないか確認し、きれいに拭いてください。","乾いたタオルなどで指と指紋センサーを拭いてから再度お試しください。","指の指紋が非常に乾燥している場合は、息を吹きかけてから再度お試しください。"]},{"product":["bioentry_n2","biostation_2a","biolite_n2","xstation_2","facestation_f2","biostation_3_max"],"question":"指紋センサーが起動しません。","answer":["<span class=\'cmd\'>Sensor Mode</span> が <span class=\'cmd\'>Auto On</span> に設定されている場合、指紋センサーに指を置いたときのみセンサーがオンになります。常に指紋センサーをオンにしたい場合は、<span class=\'cmd\'>Sensor Mode</span> を <span class=\'cmd\'>Always On</span> に設定してください。"]}]}},{"category":{"title":"ドアロック","hid":"doorlock","contents":[{"product":["biostation_3","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","facestation_2","xstation_2","biostation_3_max"],"question":"ドアを閉めてもロック装置が施錠されません。","answer":["電気ロック装置の異常の可能性があります。設置業者による点検を受けてください。"]}]}},{"category":{"title":"時間","hid":"time","contents":[{"product":["biostation_3","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","facestation_2","xstation_2","biostation_3_max"],"question":"突然時刻が合わなくなりました。","answer":["装置には内蔵バッテリーがありますが、長時間電源が供給されないと内蔵バッテリーが放電し、時刻がずれることがあります。<a href=\'settings#date-time\'>日付と時刻</a>メニューを参照して時刻を修正できます。"]}]}},{"category":{"title":"管理者アクセス","hid":"admin","contents":[{"product":["biostation_3","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","facestation_2","xstation_2","biostation_3_max"],"question":"管理者PINを紛失して管理者モードに入れません。","answer":["装置は管理者が入出許可権限を付与するため、メニューに入れるのは管理者のみです。","管理者 PIN を紛失した場合は、設置業者にお問い合わせください。"]}]}},{"category":{"title":"マスター管理者","hid":"admin","contents":[{"product":["biostation_3","biolite_n2","biostation_2a","xstation_2"],"question":"既存装置でファームウェアをアップグレードした後、マスター管理者設定が表示されません。","answer":["既存装置でファームウェアをアップグレードした装置にはマスター管理者設定がありません。<span class=\'cmd\'>Admin 2-Step Authentication</span> オプションを通じて全管理者の権限を強化し、装置のセキュリティを向上できます。詳細は<a href=\'settings#admin-2-step-authentication\'>管理者 2 段階認証</a>オプションを参照してください。"]}]}}]')
 ;// CONCATENATED MODULE: ./i18n/es/faqs.json
-var es_faqs_namespaceObject = JSON.parse('[{"category":{"title":"Alimentación","hid":"power","contents":[{"product":["biostation_3","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","facestation_2","xstation_2","biostation_3_max"],"question":"Se está suministrando energía, pero el dispositivo no funciona.","answer":["Si el terminal y el soporte están muy separados, el dispositivo puede no funcionar debido al interruptor antisabotaje.","Verifique el adaptador o el cable de alimentación."]}]}},{"category":{"title":"PIN","hid":"pin","contents":[{"product":["biostation_3","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","facestation_2","xstation_2","biostation_3_max"],"question":"Perdí mi PIN.","answer":["Para un PIN de usuario normal, solicítelo al administrador e introdúzcalo nuevamente.","Si perdió el PIN de administrador, comuníquese con la empresa de instalación."]},{"product":["biostation_3","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","facestation_2","xstation_2","biostation_3_max"],"question":"Ingresé mi PIN y pulsé el botón <span class=\'cmd\'>OK</span>, pero aún no puedo abrir la puerta.","answer":["Verifique si ingresó el PIN registrado correctamente.","Verifique si ha cambiado el PIN recientemente.","Si no recuerda el PIN, solicítelo al administrador e introdúzcalo nuevamente."]}]}},{"category":{"title":"QR/Código de Barras","hid":"qrbarcode","contents":[{"product":["xstation_2"],"question":"No se puede escanear un código QR/código de barras.","answer":["Consulte <a href=\'getting-started#how-to-scan-qrbarcode\'>Método correcto de autenticación con QR/código de barras</a> y vuelva a intentarlo.","<b>XS2-QDPB</b>, <b>XS2-QAPB</b>: Coloque el haz guía en el centro del código QR.","<b>XS2-DPB</b>, <b>XS2-APB</b>, <b>XS2-ODPB</b>, <b>XS2-OAPB</b>: Coloque el código QR/código de barras en el centro de la pantalla de escaneo del dispositivo.","Ajuste el brillo de su smartphone para que el dispositivo pueda leer el QR/código de barras claramente y vuelva a intentarlo.","Si el problema persiste, comuníquese con el administrador que emitió el QR/código de barras."]},{"product":["biostation_3_max"],"question":"No se puede escanear un código QR/código de barras.","answer":["Consulte <a href=\'getting-started#how-to-scan-qrbarcode\'>Método correcto de autenticación con QR/código de barras</a> y vuelva a intentarlo.","Ajuste el brillo de su smartphone para que el dispositivo pueda leer el QR/código de barras claramente y vuelva a intentarlo.","Si el problema persiste, comuníquese con el administrador que emitió el QR/código de barras."]}]}},{"category":{"title":"Rostro","hid":"face","contents":[{"product":["biostation_3","facestation_f2","facestation_2","biostation_3_max"],"question":"El rostro está registrado pero la autenticación facial no se realiza correctamente y se producen errores con frecuencia.","answer":["Consulte <a href=\'getting-started#cautions-enrolling-faces\'>Precauciones para enrolar rostros</a> y registre el rostro nuevamente.","Si hay un gran número de rostros registrados, cambie <span class=\'cmd\'>Matching Timeout</span> y vuelva a intentarlo."]},{"product":["biostation_3","facestation_f2","facestation_2","biostation_3_max"],"question":"La autenticación facial dejó de funcionar repentinamente.","answer":["Consulte <a href=\'getting-started#cautions-authenticating-face\'>Precauciones para autenticar un rostro</a> y vuelva a intentarlo."]},{"product":["biostation_3","facestation_f2","biostation_3_max"],"question":"<span class=\'cmd\'>Mask Detection</span> está en <span class=\'cmd\'>Enabled</span>, pero la autenticación facial no se realiza correctamente al usar una mascarilla.","answer":["Autentique su rostro dos veces con la mascarilla bajada hasta la punta de la nariz. Luego, autentique su rostro nuevamente usando una mascarilla que cubra completamente la nariz. Si el problema persiste, comuníquese con la empresa de instalación."]},{"product":["facestation_f2","facestation_2"],"question":"La cámara térmica no puede medir la temperatura.","answer":["Verifique que la cámara térmica esté conectada correctamente al terminal.","Mida la temperatura nuevamente sin cubrirse la frente. Si el problema persiste, comuníquese con la empresa de instalación."]},{"product":["facestation_f2","facestation_2"],"question":"La cámara térmica mide una temperatura inferior a la real.","answer":["Si un usuario mide la temperatura después de estar expuesto al frío durante mucho tiempo, la cámara puede medir una temperatura inferior a la real. Espere de 1 a 2 minutos en el interior y vuelva a intentarlo. Si el problema persiste, comuníquese con la empresa de instalación."]}]}},{"category":{"title":"Huella","hid":"fingerprint","contents":[{"product":["bioentry_n2","biostation_2a","biolite_n2","xstation_2","facestation_f2","biostation_3_max"],"question":"La huella se ha registrado, pero la autenticación de huella no se realiza correctamente y se producen errores con frecuencia.","answer":["Revisa el <a href=\'getting-started#cautions-enrolling-fingers\'>Método correcto de ingreso de huellas dactilares</a> y vuelve a registrar la huella.","Si su huella tiene un corte, el dispositivo puede reconocerla como la huella de otra persona.","Si hay un gran número de huellas registradas, cambie <span class=\'cmd\'>Matching Timeout</span> y vuelva a intentarlo.","La tasa de autenticación puede variar para cada huella debido a diferentes características. Registre la huella de otro dedo."]},{"product":["bioentry_n2","biostation_2a","biolite_n2","xstation_2","facestation_f2","biostation_3_max"],"question":"La autenticación de huella dejó de funcionar repentinamente.","answer":["Verifique si el dedo o el sensor de huella tienen sudor, agua o polvo, y límpielos.","Seque su dedo y el sensor de huella con una toalla seca y vuelva a intentarlo.","Si su huella está demasiado seca, sopléela y vuelva a intentarlo."]},{"product":["bioentry_n2","biostation_2a","biolite_n2","xstation_2","facestation_f2","biostation_3_max"],"question":"El sensor de huella no se enciende.","answer":["Cuando <span class=\'cmd\'>Sensor Mode</span> está en <span class=\'cmd\'>Auto On</span>, el sensor solo se encenderá al colocar el dedo sobre él. Si desea que el sensor de huella esté siempre encendido, configure <span class=\'cmd\'>Sensor Mode</span> en <span class=\'cmd\'>Always On</span>."]}]}},{"category":{"title":"Cerradura de puerta","hid":"doorlock","contents":[{"product":["biostation_3","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","facestation_2","xstation_2","biostation_3_max"],"question":"La puerta no se bloquea al cerrarla.","answer":["La cerradura eléctrica puede estar fallando. Solicite una inspección a la empresa de instalación."]}]}},{"category":{"title":"Hora","hid":"time","contents":[{"product":["biostation_3","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","facestation_2","xstation_2","biostation_3_max"],"question":"De repente, la hora es incorrecta.","answer":["El dispositivo cuenta con una batería interna, pero si no recibe alimentación durante mucho tiempo, la batería puede agotarse y provocar que la hora sea incorrecta. Puede corregirla consultando <a href=\'settings#date-time\'>Fecha y hora</a>."]}]}},{"category":{"title":"Acceso de administrador","hid":"admin","contents":[{"product":["biostation_3","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","facestation_2","xstation_2","biostation_3_max"],"question":"Perdí mi PIN de administrador, por lo que no puedo acceder al modo de administrador.","answer":["El administrador otorga un permiso de acceso en el dispositivo, por lo que solo él puede acceder al menú de administrador.","Si perdió el PIN de administrador, comuníquese con la empresa de instalación."]}]}},{"category":{"title":"Administrador Principal","hid":"admin","contents":[{"product":["biostation_3","biolite_n2","biostation_2a","xstation_2"],"question":"Después de actualizar el firmware en dispositivos existentes, la configuración de Master Admin no aparece.","answer":["Los dispositivos actualizados con firmware de dispositivos existentes no admiten la configuración de Master Admin. Puede mejorar la seguridad del dispositivo reforzando los permisos de todos los administradores mediante la opción <span class=\'cmd\'>Admin 2-Step Authentication</span>. Para obtener información detallada, consulte <a href=\'settings#admin-2-step-authentication\'>Admin 2-step Authentication</a>."]}]}}]')
+var es_faqs_namespaceObject = JSON.parse('[{"category":{"title":"Alimentación","hid":"power","contents":[{"product":["biostation_3","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","facestation_2","xstation_2","biostation_3_max"],"question":"Se está suministrando energía, pero el dispositivo no funciona.","answer":["Si el terminal y el soporte están muy separados, el dispositivo puede no funcionar debido al interruptor antisabotaje.","Verifique el adaptador o el cable de alimentación."]}]}},{"category":{"title":"PIN","hid":"pin","contents":[{"product":["biostation_3","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","facestation_2","xstation_2","biostation_3_max"],"question":"Perdí mi PIN.","answer":["Para un PIN de usuario normal, solicítelo al administrador e introdúzcalo nuevamente.","Si perdió el PIN de administrador, comuníquese con la empresa de instalación."]},{"product":["biostation_3","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","facestation_2","xstation_2","biostation_3_max"],"question":"Ingresé mi PIN y pulsé el botón <span class=\'cmd\'>OK</span>, pero aún no puedo abrir la puerta.","answer":["Verifique si ingresó el PIN registrado correctamente.","Verifique si ha cambiado el PIN recientemente.","Si no recuerda el PIN, solicítelo al administrador e introdúzcalo nuevamente."]}]}},{"category":{"title":"QR/Código de Barras","hid":"qrbarcode","contents":[{"product":["xstation_2"],"question":"No se puede escanear un código QR/código de barras.","answer":["Consulte <a href=\'getting-started#how-to-scan-qrbarcode\'>Método correcto de autenticación con QR/código de barras</a> y vuelva a intentarlo.","<b>XS2-QDPB</b>, <b>XS2-QAPB</b>: Coloque el haz guía en el centro del código QR.","<b>XS2-DPB</b>, <b>XS2-APB</b>, <b>XS2-ODPB</b>, <b>XS2-OAPB</b>: Coloque el código QR/código de barras en el centro de la pantalla de escaneo del dispositivo.","Ajuste el brillo de su smartphone para que el dispositivo pueda leer el QR/código de barras claramente y vuelva a intentarlo.","Si el problema persiste, comuníquese con el administrador que emitió el QR/código de barras."]},{"product":["biostation_3_max"],"question":"No se puede escanear un código QR/código de barras.","answer":["Consulte <a href=\'getting-started#how-to-scan-qrbarcode\'>Método correcto de autenticación con QR/código de barras</a> y vuelva a intentarlo.","Ajuste el brillo de su smartphone para que el dispositivo pueda leer el QR/código de barras claramente y vuelva a intentarlo.","Si el problema persiste, comuníquese con el administrador que emitió el QR/código de barras."]}]}},{"category":{"title":"Rostro","hid":"face","contents":[{"product":["biostation_3","facestation_f2","facestation_2","biostation_3_max"],"question":"El rostro está registrado pero la autenticación facial no se realiza correctamente y se producen errores con frecuencia.","answer":["Consulte <a href=\'getting-started#cautions-enrolling-faces\'>Precauciones para enrolar rostros</a> y registre el rostro nuevamente.","Si hay un gran número de rostros registrados, cambie <span class=\'cmd\'>Matching Timeout</span> y vuelva a intentarlo."]},{"product":["biostation_3","facestation_f2","facestation_2","biostation_3_max"],"question":"La autenticación facial dejó de funcionar repentinamente.","answer":["Consulte <a href=\'getting-started#cautions-authenticating-face\'>Precauciones para autenticar un rostro</a> y vuelva a intentarlo."]},{"product":["biostation_3","facestation_f2","biostation_3_max"],"question":"<span class=\'cmd\'>Mask Detection</span> está en <span class=\'cmd\'>Enabled</span>, pero la autenticación facial no se realiza correctamente al usar una mascarilla.","answer":["Autentique su rostro dos veces con la mascarilla bajada hasta la punta de la nariz. Luego, autentique su rostro nuevamente usando una mascarilla que cubra completamente la nariz. Si el problema persiste, comuníquese con la empresa de instalación."]},{"product":["facestation_f2","facestation_2"],"question":"La cámara térmica no puede medir la temperatura.","answer":["Verifique que la cámara térmica esté conectada correctamente al terminal.","Mida la temperatura nuevamente sin cubrirse la frente. Si el problema persiste, comuníquese con la empresa de instalación."]},{"product":["facestation_f2","facestation_2"],"question":"La cámara térmica mide una temperatura inferior a la real.","answer":["Si un usuario mide la temperatura después de estar expuesto al frío durante mucho tiempo, la cámara puede medir una temperatura inferior a la real. Espere de 1 a 2 minutos en el interior y vuelva a intentarlo. Si el problema persiste, comuníquese con la empresa de instalación."]}]}},{"category":{"title":"Huella","hid":"fingerprint","contents":[{"product":["bioentry_n2","biostation_2a","biolite_n2","xstation_2","facestation_f2","biostation_3_max"],"question":"La huella se ha registrado, pero la autenticación de huella no se realiza correctamente y se producen errores con frecuencia.","answer":["Revisa el <a href=\'getting-started#cautions-enrolling-fingers\'>Método correcto de ingreso de huellas dactilares</a> y vuelve a registrar la huella.","Si su huella tiene un corte, el dispositivo puede reconocerla como la huella de otra persona.","Si hay un gran número de huellas registradas, cambie <span class=\'cmd\'>Matching Timeout</span> y vuelva a intentarlo.","La tasa de autenticación puede variar para cada huella debido a diferentes características. Registre la huella de otro dedo."]},{"product":["bioentry_n2","biostation_2a","biolite_n2","xstation_2","facestation_f2","biostation_3_max"],"question":"La autenticación de huella dejó de funcionar repentinamente.","answer":["Verifique si el dedo o el sensor de huella tienen sudor, agua o polvo, y límpielos.","Seque su dedo y el sensor de huella con una toalla seca y vuelva a intentarlo.","Si su huella está demasiado seca, sopléela y vuelva a intentarlo."]},{"product":["bioentry_n2","biostation_2a","biolite_n2","xstation_2","facestation_f2","biostation_3_max"],"question":"El sensor de huella no se enciende.","answer":["Cuando <span class=\'cmd\'>Sensor Mode</span> está en <span class=\'cmd\'>Auto On</span>, el sensor solo se encenderá al colocar el dedo sobre él. Si desea que el sensor de huella esté siempre encendido, configure <span class=\'cmd\'>Sensor Mode</span> en <span class=\'cmd\'>Always On</span>."]}]}},{"category":{"title":"Cerradura de puerta","hid":"doorlock","contents":[{"product":["biostation_3","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","facestation_2","xstation_2","biostation_3_max"],"question":"La puerta no se bloquea al cerrarla.","answer":["La cerradura eléctrica puede estar fallando. Solicite una inspección a la empresa de instalación."]}]}},{"category":{"title":"Hora","hid":"time","contents":[{"product":["biostation_3","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","facestation_2","xstation_2","biostation_3_max"],"question":"De repente, la hora es incorrecta.","answer":["El dispositivo cuenta con una batería interna, pero si no recibe alimentación durante mucho tiempo, la batería puede agotarse y provocar que la hora sea incorrecta. Puede corregirla consultando <a href=\'settings#date-time\'>Fecha y hora</a>."]}]}},{"category":{"title":"Acceso de administrador","hid":"admin","contents":[{"product":["biostation_3","biostation_2a","facestation_f2","bioentry_n2","biolite_n2","facestation_2","xstation_2","biostation_3_max"],"question":"Perdí mi PIN de administrador, por lo que no puedo acceder al modo de administrador.","answer":["El administrador otorga un permiso de acceso en el dispositivo, por lo que solo él puede acceder al menú de administrador.","Si perdió el PIN de administrador, comuníquese con la empresa de instalación."]}]}},{"category":{"title":"Administrador Principal","hid":"admin","contents":[{"product":["biostation_3","biolite_n2","biostation_2a","xstation_2"],"question":"Después de actualizar el firmware en dispositivos existentes, la configuración de Master Admin no aparece.","answer":["Los dispositivos actualizados con firmware de dispositivos existentes no admiten la configuración de Master Admin. Puede mejorar la seguridad del dispositivo reforzando los permisos de todos los administradores mediante la opción <span class=\'cmd\'>Admin 2-Step Authentication</span>. Para obtener información detallada, consulte <a href=\'settings#admin-2-step-authentication\'>Autenticación en dos pasos del administrador</a>."]}]}}]')
 ;// CONCATENATED MODULE: ./src/components/Faqs/index.js
 
 
