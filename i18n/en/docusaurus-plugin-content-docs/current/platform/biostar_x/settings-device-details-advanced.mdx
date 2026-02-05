@@ -27,12 +27,12 @@ Select two types of desired credentials to enroll from the <Cmd sid='device.info
 
 The credentials that can be enrolled as <Cmd sid='device.masterAdmin.title' product='2' /> are as follows:
 
-| Credential Type | Number of Enrollments | Conditions                                                                              |
-| --------------- | :-------------------: | --------------------------------------------------------------------------------------- |
-| card            |        Up to 4        | Supports only CSN and Wiegand types, and cannot enrollmnet duplicates of the same type. |
-| Face            |        Up to 2        | Can only enroll on devices equipped with the same algorithm.                            |
-| Fingerprint     |        Up to 2        | -                                                                                       |
-| PIN             |           1           | Must enter at least 8 digits.                                                           |
+| Credential Type | Number of Enrollments | Conditions |
+| --- | :-: | --- |
+| Card | Up to 4 | Supports only CSN and Wiegand types, and cannot enrollmnet duplicates of the same type. |
+| Face | Up to 2 | Can only enroll on devices equipped with the same algorithm. |
+| Fingerprint | Up to 2 | - |
+| PIN | 1 | Must enter at least 8 digits. |
 
 * To change the enrolled credential, click the <IcEdit /> button to the right of that credential.
 
@@ -104,11 +104,11 @@ Refer to the permissions for each level below.
 
 <div className='table-fixed'>
 
-| Level                                                        | User Information Management | Device Settings |
-| ------------------------------------------------------------ | :-------------------------: | :-------------: |
-| <Cmd sid='device.operatorLevel.all' product='2' />           |              ✔️             |        ✔️       |
-| <Cmd sid='device.operatorLevel.user' product='2' />          |              ✔️             |        ❌        |
-| <Cmd sid='device.operatorLevel.configuration' product='2' /> |              ❌              |        ✔️       |
+| Level | User Information Management | Device Settings |
+| --- | :-: | :-: |
+| <Cmd sid='device.operatorLevel.all' product='2' /> | ✔️ | ✔️ |
+| <Cmd sid='device.operatorLevel.user' product='2' /> | ✔️ | ❌ |
+| <Cmd sid='device.operatorLevel.configuration' product='2' /> | ❌ | ✔️ |
 
 </div>
 
