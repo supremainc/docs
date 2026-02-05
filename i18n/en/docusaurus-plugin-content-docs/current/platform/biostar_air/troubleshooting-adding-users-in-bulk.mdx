@@ -14,7 +14,7 @@ Several customers and partners have reported issues when adding user lists in bu
 
 Starting with v2.10, BioStar Air returns a validation report when a CSV file containing invalid entries is uploaded. Correct the errors, and then upload the file again.
 
-<Image src="/img/air/bsair-add-bulk-import-user-csv-error.png" />
+<Image src='/img/air/bsair-add-bulk-import-user-csv-error.png' />
 
 :::
 
@@ -38,7 +38,7 @@ Starting with v2.10, BioStar Air returns a validation report when a CSV file con
 
 Enter data correctly by referring to the requirements of each column.
 
-#### <Cmd sid="user_csv_example_header1" product="air" className="normal" />
+#### <Cmd sid='user_csv_example_header1' product='air' className='normal' />
 
 * A unique numeric ID for each user.
 
@@ -46,11 +46,11 @@ Enter data correctly by referring to the requirements of each column.
 
 * If you enter user IDs manually
 
-   * Use **numbers only**.
+  * Use **numbers only**. 
 
-   * Use a **unique value**.
+  * Use a **unique value**.
 
-   * Do not include letters, spaces, hyphens, or special characters.
+  * Do not include letters, spaces, hyphens, or special characters.
 
 :::caution
 
@@ -58,37 +58,37 @@ If you need to use a company-specific employee ID that includes letters, do not 
 
 :::
 
-#### <Cmd sid="user_csv_example_header7" product="air" className="normal" />
+#### <Cmd sid='user_csv_example_header7' product='air' className='normal' />
 
 * Use a valid email format. Refer to the [validation formulas](#excelFormulas) to verify the email format.
 
-   * No spaces are allowed.
+  * No spaces are allowed.
 
-   * It must include the at sign (`@`).
+  * It must include the at sign (`@`).
 
-   * The domain must include a period (`.`) and a top-level domain.
+  * The domain must include a period (`.`) and a top-level domain.
 
-      > Example: example.com, gmail.com, suprema.co.kr
+    > Example: example.com, gmail.com, suprema.co.kr
 
-   * There must be no additional period after the address.
+  * There must be no additional period after the address.
 
-   * No special or hidden characters are allowed.
+  * No special or hidden characters are allowed.
 
-   * It must be an email address. Errors such as 'Not provided' may occur.
+  * It must be an email address. Errors such as 'Not provided' may occur.
 
 * The email address **must be unique**. Duplicates are not allowed within the file or among existing users.
 
 * An email address is required when issuing the credentials below.
 
-   * <Cmd sid="card_type_mobile" product="air" />
+  * <Cmd sid='card_type_mobile' product='air' />
 
-   * <Cmd sid="card_type_option3" product="air" />
+  * <Cmd sid='card_type_option3' product='air' />
 
-   * <Cmd sid="card_type_option4" product="air" />
+  * <Cmd sid='card_type_option4' product='air' />
 
 * Users with only an RFID card do not need to enter an email address.
 
-#### <Cmd sid="user_csv_example_header8" product="air" className="normal" />
+#### <Cmd sid='user_csv_example_header8' product='air' className='normal' />
 
 * Providing a phone number is optional when the credential is not delivered via mobile SMS.
 
@@ -113,8 +113,8 @@ Even minor differences—such as omitting the 'Z', using slashes (`/`) instead o
 
 | Credential type | Email or phone number |
 | --- | --- |
-| <Cmd sid="card_type_rf" product="air" /> Only | No. |
-| <Cmd sid="card_type_mobile" product="air" /> / <Cmd sid="card_type_option3" product="air" /> / <Cmd sid="card_type_option4" product="air" /> | Yes, one is required. |
+| <Cmd sid='card_type_rf' product='air' /> Only | No. |
+| <Cmd sid='card_type_mobile' product='air' /> / <Cmd sid='card_type_option3' product='air' /> / <Cmd sid='card_type_option4' product='air' /> | Yes, one is required.    |
 
 * Credentials must be delivered by email address or phone number.
 

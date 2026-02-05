@@ -27,7 +27,7 @@ This document describes the installation procedure based on the BS3M-ODB and BS3
 
 1. Determine the location to mount the product.
 
-   <Image src="/img/device/installation-recommended-fsf2.png" className="none" width="35%" alone />
+   <Image src='/img/device/installation-recommended-fsf2.png' className='none' width='35%' alone />
 
    <InstallationBracketNotes height1={124} height2={127} />
 
@@ -35,7 +35,7 @@ This document describes the installation procedure based on the BS3M-ODB and BS3
 
 2. Secure the bracket tightly using the fixing screws at the location where the product will be mounted.
 
-   <Image src="/img/device/installation-device1-bs3m.svg" className="none" width="30%" alone />
+   <Image src='/img/device/installation-device1-bs3m.svg' className='none' width='30%' alone />
 
    :::info
 
@@ -44,21 +44,27 @@ This document describes the installation procedure based on the BS3M-ODB and BS3
    * To avoid RF interference, a minimum separation distance must be maintained.
 
    <Columns>
-     <Column className="text--center">
-       <Image src="/img/device/installation-wall1-bs3m.png" className="none" width="60%" />
+   <Column className='text--center'>
 
-       <div className="overflow-x">
-         | Wall thickness | Distance |
-         | :-: | :-: |
-         | 100 mm | 200 mm |
-         | 120 mm | 180 mm |
-         | 150 mm | 150 mm |
-       </div>
-     </Column>
+   <Image src='/img/device/installation-wall1-bs3m.png' className='none' width='60%' />
 
-     <Column className="text--center">
-       <Image src="/img/device/installation-wall2-bs3m.png" className="none" width="60%" />
-     </Column>
+   <div className='overflow-x'>
+
+   | Wall thickness | Distance |
+   | :-: | :-: |
+   | 100 mm | 200 mm |
+   | 120 mm | 180 mm |
+   | 150 mm | 150 mm |
+
+   </div>
+
+   </Column>
+
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall2-bs3m.png' className='none' width='60%' />
+
+   </Column>
    </Columns>
 
    * When using a mobile access card, install devices maintaining a minimum distance of 1 m between devices to avoid BLE interference.
@@ -69,7 +75,7 @@ This document describes the installation procedure based on the BS3M-ODB and BS3
 
 3. After installing the cable cover, tighten the six screws in the cover firmly, and mount the product on the fixed bracket.
 
-   <Image src="/img/device/installation-device2-fsf2.png" className="none" width="25%" alone />
+   <Image src='/img/device/installation-device2-fsf2.png' className='none' width='25%' alone />
 
    :::info
 
@@ -79,7 +85,7 @@ This document describes the installation procedure based on the BS3M-ODB and BS3
 
 4. Rotate the fixing screws to assemble the product with the bracket.
 
-   <Image src="/img/device/installation-device3-fsf2.png" className="none" width="25%" alone />
+   <Image src='/img/device/installation-device3-fsf2.png' className='none' width='25%' alone />
 
    :::info
 
@@ -88,19 +94,16 @@ This document describes the installation procedure based on the BS3M-ODB and BS3
    :::
 
 {/* ## 전원 연결 */}
-
 import PowerConnection from "../../common/_device-power-connection.mdx";
 
 <PowerConnection />
 
 {/* ## 네트워크 연결 */}
-
 import NetworkConnection from "../../common/_device-network-connection.mdx";
 
 <NetworkConnection />
 
 {/* ## Input 연결 */}
-
 import InputConnection from "../../common/_device-input-connetion.mdx";
 
 <InputConnection />
@@ -108,7 +111,6 @@ import InputConnection from "../../common/_device-input-connetion.mdx";
 <PageBreak />
 
 {/* ## 릴레이 연결 */}
-
 import RelayConnectioin from "../../common/_device-relay-connection.mdx";
 
 <RelayConnectioin />
@@ -116,33 +118,29 @@ import RelayConnectioin from "../../common/_device-relay-connection.mdx";
 <PageBreak />
 
 {/* ## 독립형 연결 */}
-
 import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
 
 <StandaloneConnection />
 
 {/* 공통 노트 */}
-
 import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
 
-<CommonNotes product="BioStation 3 Max" product_2="FaceStation 2, FaceLite" />
+<CommonNotes product='BioStation 3 Max' product_2='FaceStation 2, FaceLite' />
 
 <PageBreak />
 
 {/* ## Secure I/O 2 연결 */}
-
 import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
 
 <SecureIOConnection />
 
 {/* 공통 노트 */}
 
-<CommonNotes product="BioStation 3 Max" product_2="FaceStation 2, FaceLite" />
+<CommonNotes product='BioStation 3 Max' product_2='FaceStation 2, FaceLite' />
 
 <PageBreak />
 
 {/* ## Wiegand 연결 */}
-
 import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
 
 <WiegandConnection />
