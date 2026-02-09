@@ -169,7 +169,8 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Use a VMS that is compatible with ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), ". You can use ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), ". You can use ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "https://www.supremainc.com/ko/platform/video-ac-integrated-system-biostar-x-vms.asp",
             children: "BioStar X VMS"
           }), " or the ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Nx Witness v5.1.5"
@@ -244,15 +245,15 @@ function _createMdxContent(props) {
             }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: ["Enter the path where VMS is installed in the ", (0,jsx_runtime.jsx)(_components.code, {
+                  children: ["Replace ", (0,jsx_runtime.jsx)(_components.code, {
                     children: "<%VENDOR.NAME%>"
-                  }), " section."]
+                  }), " section with the product name of your VMS."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: ["Enter the IP address of the VMS server in the ", (0,jsx_runtime.jsx)(_components.code, {
+                  children: ["Replace ", (0,jsx_runtime.jsx)(_components.code, {
                     children: "{VMS_IP_ADDRESS}"
-                  }), " section."]
+                  }), " section with the IP address of the VMS server."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

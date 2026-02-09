@@ -169,7 +169,8 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), "와 호환되는 VMS를 사용하세요. ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), "와 호환되는 VMS를 사용하세요. ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "https://www.supremainc.com/ko/platform/video-ac-integrated-system-biostar-x-vms.asp",
             children: "BioStar X VMS"
           }), " 또는 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Nx Witness v5.1.5"
@@ -246,13 +247,13 @@ function _createMdxContent(props) {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(_components.code, {
                     children: "<%VENDOR.NAME%>"
-                  }), " 부분에 VMS를 설치한 경로를 입력하세요."]
+                  }), " 부분을 VMS의 제품명으로 교체하세요."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(_components.code, {
                     children: "{VMS_IP_ADDRESS}"
-                  }), " 부분에 VMS 서버의 IP 주소를 입력하세요."]
+                  }), " 부분을 VMS 서버의 IP 주소로 교체하세요."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
