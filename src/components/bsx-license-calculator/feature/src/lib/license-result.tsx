@@ -1,66 +1,14 @@
 import { useState } from 'react';
-import { LicenseResult as LicenseResultType, getTAType, generatePartNumberList } from '@site/src/components/bsx-license-calculator/core';
+import {
+  LicenseResult as LicenseResultType,
+  getTAType,
+  getPartNumber,
+  generatePartNumberList
+} from '@site/src/components/bsx-license-calculator/core';
 
 interface LicenseResultProps {
   licenseResult: LicenseResultType;
   onReset?: () => void;
-}
-
-// Part number mapping function
-function getPartNumber(type: string, quantity?: number): string {
-  // Base License
-  const baseLicenseMap: Record<string, string> = {
-    'Device Manager': 'BIOSTARX-DEV',
-    'Starter': 'BIOSTARX-STR',
-    'Essential': 'BIOSTARX-ESS',
-    'Advanced': 'BIOSTARX-ADV',
-    'Enterprise': 'BIOSTARX-ENT',
-    'Elite': 'BIOSTARX-ELT',
-  };
-
-  // Capacity
-  const capacityMap: Record<string, string> = {
-    'Door': 'BIOSTARX-UP-DOR',
-    'User': 'BIOSTARX-UP-USR',
-    'Operator': 'BIOSTARX-UP-OPR',
-  };
-
-  // Feature Add-ons
-  if (type === 'T&A') {
-    const taType = getTAType(quantity || 0);
-    if (taType === 'Standard') {
-      return 'BIOSTARX-ADD-TNA-STD';
-    } else if (taType === 'Enterprise') {
-      return 'BIOSTARX-ADD-TNA-ENT';
-    }
-  }
-
-  const featureAddonMap: Record<string, string> = {
-    'Map Monitoring': '', // Part Number not needed
-    'Video Monitoring': 'BIOSTARX-ADD-VID',
-    'GIS Map Monitoring': 'BIOSTARX-ADD-GIS',
-    'Server Matching': 'BIOSTARX-ADD-SVM',
-    'Visitor': 'BIOSTARX-ADD-VST',
-    'Directory Integration': 'BIOSTARX-ADD-DIR',
-    'Roll Call': 'BIOSTARX-ADD-RCL',
-    'Mobile App': 'BIOSTARX-ADD-MOB',
-    'Event Log API': 'BIOSTARX-ADD-EVTAPI',
-    'Remote Access': 'BIOSTARX-ADD-RAC',
-    'BioStar X Plugin': 'BIOSTARX-ADD-PLG',
-  };
-
-  // Package
-  const packageMap: Record<string, string> = {
-    'Advanced AC': 'BIOSTARX-PKG-AAC',
-  };
-
-  return (
-    baseLicenseMap[type] ||
-    capacityMap[type] ||
-    featureAddonMap[type] ||
-    packageMap[type] ||
-    type
-  );
 }
 
 export function LicenseResult({ licenseResult, onReset }: LicenseResultProps) {
@@ -148,8 +96,8 @@ export function LicenseResult({ licenseResult, onReset }: LicenseResultProps) {
           </div>
         )}
 
-        {/* Feature Add-ons */}
-        {licenseResult.featureAddons.length > 0 && (
+        {/* Feature Add-ons (includes packages e.g. Advanced AC) */}
+        {(licenseResult.featureAddons.length > 0 || licenseResult.packages.length > 0) && (
           <div>
             <h3 className="font-semibold mb-2">Feature Add-ons</h3>
             <ul className="list-disc list-inside space-y-1 text-sm">
@@ -158,16 +106,19 @@ export function LicenseResult({ licenseResult, onReset }: LicenseResultProps) {
                   const taType = getTAType(addon.quantity || 0);
                   if (taType) {
                     return (
-                      <li key={index}>
+                      <li key={`addon-${index}`}>
                         {getPartNumber(addon.type, addon.quantity)}
                       </li>
                     );
                   }
                 } else {
-                  return <li key={index}>{getPartNumber(addon.type)}</li>;
+                  return <li key={`addon-${index}`}>{getPartNumber(addon.type)}</li>;
                 }
                 return null;
               })}
+              {licenseResult.packages.map((pkg, index) => (
+                <li key={`pkg-${index}`}>{getPartNumber(pkg)}</li>
+              ))}
             </ul>
           </div>
         )}

@@ -255,6 +255,54 @@ describe('recommendLicense', () => {
       // Advanced에서 Map Monitoring은 featureAddons에 다시 들어가지 않음(기본 포함)
       expect(hasAddon(result, 'Map Monitoring')).toBe(false);
     });
+
+    it('does NOT allow Visitor on Essential (must upgrade to Advanced)', () => {
+      const input = createInput({
+        door: 10,
+        user: 100,
+        operator: 0,
+        featureAddons: {
+          ...createInput().featureAddons,
+          'Visitor': true,
+        },
+      });
+      const result = recommendLicense(input);
+
+      // Visitor는 Advanced 이상에서만 지원
+      expect(result.baseLicense).toBe('Advanced');
+      expect(hasAddon(result, 'Visitor')).toBe(true);
+    });
+
+    // 문서: Feature add-ons (GIS Map, Video, Server Matching, Visitor, Directory Integration, Roll Call) are Advanced+ only
+    it('does NOT allow Directory Integration on Essential (must upgrade to Advanced)', () => {
+      const input = createInput({
+        door: 10,
+        user: 100,
+        operator: 0,
+        featureAddons: {
+          ...createInput().featureAddons,
+          'Directory Integration': true,
+        },
+      });
+      const result = recommendLicense(input);
+      expect(result.baseLicense).toBe('Advanced');
+      expect(hasAddon(result, 'Directory Integration')).toBe(true);
+    });
+
+    it('does NOT allow GIS Map Monitoring on Essential (must upgrade to Advanced)', () => {
+      const input = createInput({
+        door: 10,
+        user: 100,
+        operator: 0,
+        featureAddons: {
+          ...createInput().featureAddons,
+          'GIS Map Monitoring': true,
+        },
+      });
+      const result = recommendLicense(input);
+      expect(result.baseLicense).toBe('Advanced');
+      expect(hasAddon(result, 'GIS Map Monitoring')).toBe(true);
+    });
   });
 
   describe('Advanced', () => {
@@ -427,6 +475,27 @@ describe('recommendLicense', () => {
   });
 
   describe('Feature Add-ons', () => {
+    it('recommends base license by capacity when only license-independent add-ons are selected', () => {
+      // Base license 무관 add-on(Mobile App, Event Log API, Remote Access, Plugin, T&A)만 선택 시 출입문/사용자/오퍼레이터로 Base 결정
+      const dmResult = recommendLicense(
+        createInput({ door: 0, user: 100, operator: 1, featureAddons: { ...createInput().featureAddons, 'Mobile App': true } })
+      );
+      expect(dmResult.baseLicense).toBe('Device Manager');
+      expect(hasAddon(dmResult, 'Mobile App')).toBe(true);
+
+      const starterResult = recommendLicense(
+        createInput({ door: 3, user: 50, operator: 1, featureAddons: { ...createInput().featureAddons, 'Mobile App': true } })
+      );
+      expect(starterResult.baseLicense).toBe('Starter');
+      expect(hasAddon(starterResult, 'Mobile App')).toBe(true);
+
+      const essentialResult = recommendLicense(
+        createInput({ door: 10, user: 500, operator: 5, featureAddons: { ...createInput().featureAddons, 'Event Log API': true } })
+      );
+      expect(essentialResult.baseLicense).toBe('Essential');
+      expect(hasAddon(essentialResult, 'Event Log API')).toBe(true);
+    });
+
     it('includes normal checkbox feature add-ons when supported by base license', () => {
       const input = createInput({
         door: 10,
@@ -446,8 +515,8 @@ describe('recommendLicense', () => {
       });
       const result = recommendLicense(input);
 
-      // Essential 이상에서 supportsFeatureAddons = true
-      expect(['Essential', 'Advanced', 'Enterprise', 'Elite']).toContain(result.baseLicense);
+      // Visitor가 포함되어 있으면 Advanced 이상 필요
+      expect(['Advanced', 'Enterprise', 'Elite']).toContain(result.baseLicense);
       expect(hasAddon(result, 'GIS Map Monitoring')).toBe(true);
       expect(hasAddon(result, 'Visitor')).toBe(true);
       expect(hasAddon(result, 'Directory Integration')).toBe(true);
@@ -625,7 +694,7 @@ describe('recommendLicense', () => {
       });
 
       it('does NOT recommend Device Manager or Starter when other Feature Add-ons (except T&A) are requested', () => {
-        // Device Manager 조건에서 Visitor를 요청하면 Essential 이상이 필요
+        // Device Manager 조건에서 Visitor를 요청하면 Advanced 이상이 필요
         const dmInputWithVisitor = createInput({
           door: 0,
           user: 100,
@@ -638,9 +707,9 @@ describe('recommendLicense', () => {
         });
         const dmResultWithVisitor = recommendLicense(dmInputWithVisitor);
         expect(dmResultWithVisitor.baseLicense).not.toBe('Device Manager');
-        expect(['Essential', 'Advanced', 'Enterprise', 'Elite']).toContain(dmResultWithVisitor.baseLicense);
+        expect(['Advanced', 'Enterprise', 'Elite']).toContain(dmResultWithVisitor.baseLicense);
 
-        // Starter 조건에서 Mobile App을 요청하면 Essential 이상이 필요
+        // Base license 무관 add-on(Mobile App)만 선택 시 용량 기준으로 Base 결정 → Starter 범위면 Starter 추천
         const starterInputWithMobileApp = createInput({
           door: 3,
           user: 50,
@@ -648,12 +717,27 @@ describe('recommendLicense', () => {
           featureAddons: {
             ...createInput().featureAddons,
             'T&A': 100,
-            'Mobile App': true, 
+            'Mobile App': true,
           },
         });
         const starterResultWithMobileApp = recommendLicense(starterInputWithMobileApp);
-        expect(starterResultWithMobileApp.baseLicense).not.toBe('Starter');
-        expect(['Essential', 'Advanced', 'Enterprise', 'Elite']).toContain(starterResultWithMobileApp.baseLicense);
+        expect(starterResultWithMobileApp.baseLicense).toBe('Starter');
+        expect(hasAddon(starterResultWithMobileApp, 'Mobile App')).toBe(true);
+        
+        // Starter 조건에서 Visitor를 요청하면 Advanced 이상이 필요
+        const starterInputWithVisitor = createInput({
+          door: 3,
+          user: 50,
+          operator: 1,
+          featureAddons: {
+            ...createInput().featureAddons,
+            'T&A': 100,
+            'Visitor': true, 
+          },
+        });
+        const starterResultWithVisitor = recommendLicense(starterInputWithVisitor);
+        expect(starterResultWithVisitor.baseLicense).not.toBe('Starter');
+        expect(['Advanced', 'Enterprise', 'Elite']).toContain(starterResultWithVisitor.baseLicense);
       });
     });
   });

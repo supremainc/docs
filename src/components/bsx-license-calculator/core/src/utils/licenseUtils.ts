@@ -1,8 +1,8 @@
 import { LicenseResult } from '../types/license';
 import { getTAType } from '../data/licenseData';
 
-// Part number mapping function
-function getPartNumber(type: string, quantity?: number): string {
+// Part number mapping function (exported for UI display)
+export function getPartNumber(type: string, quantity?: number): string {
   // Base License
   const baseLicenseMap: Record<string, string> = {
     'Device Manager': 'BIOSTARX-DEV',
@@ -125,4 +125,3 @@ export function generatePartNumberList(licenseResult: LicenseResult): string {
 
   return partNumbers.join(', ');
 }
-
