@@ -229,30 +229,29 @@ const packagePrices = {
 ;// CONCATENATED MODULE: ./src/components/bsx-license-calculator/core/src/utils/licenseCalculator.ts
 
 function recommendLicense(input) {
-    // Feature Add-ons나 Advanced AC가 있으면 Device Manager나 Starter 불가
-    const hasFeatureAddons = hasAnyFeatureAddon(input);
+    // Advanced AC 또는 "Advanced tier 전용" add-on이 있으면 Essential 이상 필요
+    // "Base license 무관" add-on(Mobile App, Event Log API, Remote Access, Plugin, T&A)만 있으면 용량으로 Base 결정
+    const hasAddonsRequiringEssentialOrHigher = hasAddonsRequiringEssentialOrHigherTier(input);
     const hasAdvancedAC = input.packages['Advanced AC'];
     // Device Manager 체크 (Door 0인 경우)
     if (input.door === 0) {
-        // Feature Add-ons나 Advanced AC가 있으면 Device Manager 불가
-        if (hasFeatureAddons || hasAdvancedAC) {
+        if (hasAddonsRequiringEssentialOrHigher || hasAdvancedAC) {
             return recommendEssentialOrHigher(input);
         }
         return recommendDeviceManager(input);
     }
-    // Advanced AC가 있으면 Essential 이상 필요
     if (hasAdvancedAC) {
         return recommendEssentialOrHigher(input);
     }
-    // Feature Add-ons가 있으면 Essential 이상 필요
-    if (hasFeatureAddons) {
+    // Advanced tier 전용 add-on이 있을 때만 Essential 이상으로 올림 (무관 add-on만 있으면 용량 기준으로 진행)
+    if (hasAddonsRequiringEssentialOrHigher) {
         return recommendEssentialOrHigher(input);
     }
     // Essential 이상 필요 조건
     if (input.door > 5 || input.user > 100 || input.operator > 1) {
         return recommendEssentialOrHigher(input);
     }
-    // Starter 조건 (Door 1-4, User 1-99, Operator 0)
+    // Starter 조건 (Door 1-5, User 0-100, Operator 0-1)
     if (input.door >= 1 && input.door <= 5 && input.user >= 0 && input.user <= 100 && input.operator >= 0 && input.operator <= 1) {
         const capacityUpgrades = {};
         const featureAddons = calculateFeatureAddons(input, 'Starter');
@@ -300,20 +299,13 @@ function recommendDeviceManager(input) {
 }
 function recommendEssentialOrHigher(input) {
     const needsAdvancedAC = input.packages['Advanced AC'];
-    const needsVideo = input.featureAddons['Video Monitoring'];
     const config = licenseConfigs;
     // 필요한 용량에 따라 적절한 라이센스 선택
     let baseLicense = 'Essential';
-    // Video가 필요하면 Advanced 이상 필요
-    if (needsVideo && !config.Essential.supportsVideo) {
+    // GIS Map, Video, Server Matching, Visitor, Directory Integration, Roll Call 은 Advanced 이상만 가능
+    const needsAdvancedTierAddon = input.featureAddons['Video Monitoring'] || input.featureAddons['Map Monitoring'] || input.featureAddons['GIS Map Monitoring'] || input.featureAddons['Server Matching'] || input.featureAddons['Visitor'] || input.featureAddons['Directory Integration'] || input.featureAddons['Roll Call'];
+    if (needsAdvancedTierAddon && baseLicense === 'Essential') {
         baseLicense = 'Advanced';
-    }
-    // Map Monitoring이 필요하면 Advanced 이상 필요
-    const needsMapMonitoring = input.featureAddons['Map Monitoring'];
-    if (needsMapMonitoring && !config.Essential.includesMapMonitoring) {
-        if (baseLicense === 'Essential') {
-            baseLicense = 'Advanced';
-        }
     }
     // Essential의 max 용량 확인
     if (config.Essential.capacityLimits.door?.max !== undefined && input.door > config.Essential.capacityLimits.door.max || config.Essential.capacityLimits.user?.max !== undefined && input.user > config.Essential.capacityLimits.user.max || config.Essential.capacityLimits.operator?.max !== undefined && input.operator > config.Essential.capacityLimits.operator.max) {
@@ -358,20 +350,14 @@ function recommendEssentialOrHigher(input) {
             baseLicense = 'Elite';
         }
     }
-    // Advanced AC가 필요하고 현재 라이센스가 Essential이면 가격 비교
+    // 문서: "Advanced AC can be purchased as add-ons from the Advanced license tier"
+    // → Essential에서는 Advanced AC 구매 불가, 최소 Advanced 필요
+    if (needsAdvancedAC && baseLicense === 'Essential') {
+        baseLicense = 'Advanced';
+    }
+    // Advanced AC가 필요하고 현재 라이센스가 Advanced면 Enterprise와 가격 비교
     if (needsAdvancedAC) {
-        if (baseLicense === 'Essential') {
-            const essentialUpgrades = calculateCapacityUpgrades(input, 'Essential');
-            const essentialPrice = calculateLicensePrice('Essential', essentialUpgrades);
-            const essentialWithACPrice = essentialPrice + (packagePrices["Advanced AC"] || 0);
-            const advancedPrice = config.Advanced.msrp;
-            // Essential + Advanced AC 와 Essential 가격 비교
-            if (essentialWithACPrice < advancedPrice) {
-                baseLicense = 'Essential';
-            } else {
-                baseLicense = 'Advanced';
-            }
-        } else if (baseLicense === 'Advanced') {
+        if (baseLicense === 'Advanced') {
             // Advanced + Advanced AC vs Enterprise 가격 비교
             const advancedUpgrades = calculateCapacityUpgrades(input, 'Advanced');
             const advancedPrice = calculateLicensePrice('Advanced', advancedUpgrades);
@@ -444,8 +430,21 @@ function calculateFeatureAddons(input, baseLicense) {
             });
         }
     }
-    // Feature Add-ons가 지원되지 않는 라이센스(Device Manager, Starter)에서는 T&A만 추가 가능
+    // Device Manager, Starter에도 추가
+    const licenseIndependentAddons = [
+        'Mobile App',
+        'Event Log API',
+        'Remote Access',
+        'BioStar X Plugin'
+    ];
     if (!config.supportsFeatureAddons) {
+        licenseIndependentAddons.forEach((addon)=>{
+            if (input.featureAddons[addon]) {
+                addons.push({
+                    type: addon
+                });
+            }
+        });
         return addons;
     }
     // Feature Add-ons가 지원되는 라이센스(Essential 이상)에서는 다른 Feature Add-ons도 추가 가능
@@ -476,27 +475,19 @@ function calculateFeatureAddons(input, baseLicense) {
     });
     return addons;
 }
-function hasAnyFeatureAddon(input) {
-    // 체크박스 Feature Add-ons 확인
-    const checkboxAddons = [
+// "Advanced, Enterprise, Elite에만 적용 가능"한 add-on 또는 Advanced AC 선택 시 true
+function hasAddonsRequiringEssentialOrHigherTier(input) {
+    if (input.packages['Advanced AC']) return true;
+    const advancedTierOnlyAddons = [
         'Map Monitoring',
         'Video Monitoring',
         'GIS Map Monitoring',
         'Server Matching',
         'Visitor',
         'Directory Integration',
-        'Roll Call',
-        'Mobile App',
-        'Event Log API',
-        'Remote Access',
-        'BioStar X Plugin'
+        'Roll Call'
     ];
-    for (const addon of checkboxAddons){
-        if (input.featureAddons[addon]) {
-            return true;
-        }
-    }
-    return false;
+    return advancedTierOnlyAddons.some((addon)=>input.featureAddons[addon]);
 }
 function calculateLicensePrice(baseLicense, capacityUpgrades) {
     const basePrice = licenseConfigs[baseLicense].msrp;
@@ -561,7 +552,7 @@ function calculateTotalPrice(baseLicense, capacityUpgrades, featureAddons, packa
 
 ;// CONCATENATED MODULE: ./src/components/bsx-license-calculator/core/src/utils/licenseUtils.ts
 
-// Part number mapping function
+// Part number mapping function (exported for UI display)
 function getPartNumber(type, quantity) {
     // Base License
     const baseLicenseMap = {
@@ -683,51 +674,6 @@ function generatePartNumberList(licenseResult) {
 
 
 
-// Part number mapping function
-function license_result_getPartNumber(type, quantity) {
-    // Base License
-    const baseLicenseMap = {
-        'Device Manager': 'BIOSTARX-DEV',
-        'Starter': 'BIOSTARX-STR',
-        'Essential': 'BIOSTARX-ESS',
-        'Advanced': 'BIOSTARX-ADV',
-        'Enterprise': 'BIOSTARX-ENT',
-        'Elite': 'BIOSTARX-ELT'
-    };
-    // Capacity
-    const capacityMap = {
-        'Door': 'BIOSTARX-UP-DOR',
-        'User': 'BIOSTARX-UP-USR',
-        'Operator': 'BIOSTARX-UP-OPR'
-    };
-    // Feature Add-ons
-    if (type === 'T&A') {
-        const taType = getTAType(quantity || 0);
-        if (taType === 'Standard') {
-            return 'BIOSTARX-ADD-TNA-STD';
-        } else if (taType === 'Enterprise') {
-            return 'BIOSTARX-ADD-TNA-ENT';
-        }
-    }
-    const featureAddonMap = {
-        'Map Monitoring': '',
-        'Video Monitoring': 'BIOSTARX-ADD-VID',
-        'GIS Map Monitoring': 'BIOSTARX-ADD-GIS',
-        'Server Matching': 'BIOSTARX-ADD-SVM',
-        'Visitor': 'BIOSTARX-ADD-VST',
-        'Directory Integration': 'BIOSTARX-ADD-DIR',
-        'Roll Call': 'BIOSTARX-ADD-RCL',
-        'Mobile App': 'BIOSTARX-ADD-MOB',
-        'Event Log API': 'BIOSTARX-ADD-EVTAPI',
-        'Remote Access': 'BIOSTARX-ADD-RAC',
-        'BioStar X Plugin': 'BIOSTARX-ADD-PLG'
-    };
-    // Package
-    const packageMap = {
-        'Advanced AC': 'BIOSTARX-PKG-AAC'
-    };
-    return baseLicenseMap[type] || capacityMap[type] || featureAddonMap[type] || packageMap[type] || type;
-}
 function LicenseResult({ licenseResult, onReset }) {
     const [copied, setCopied] = (0,react.useState)(false);
     const handleCopyToClipboard = async ()=>{
@@ -812,7 +758,7 @@ function LicenseResult({ licenseResult, onReset }) {
                             }),
                             /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
                                 className: "text-lg font-bold text-blue-600",
-                                children: license_result_getPartNumber(licenseResult.baseLicense)
+                                children: getPartNumber(licenseResult.baseLicense)
                             })
                         ]
                     }),
@@ -827,21 +773,21 @@ function LicenseResult({ licenseResult, onReset }) {
                                 children: [
                                     licenseResult.capacityUpgrades.door !== undefined && licenseResult.capacityUpgrades.door > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("li", {
                                         children: [
-                                            license_result_getPartNumber('Door'),
+                                            getPartNumber('Door'),
                                             ": ",
                                             licenseResult.capacityUpgrades.door
                                         ]
                                     }),
                                     licenseResult.capacityUpgrades.user !== undefined && licenseResult.capacityUpgrades.user > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("li", {
                                         children: [
-                                            license_result_getPartNumber('User'),
+                                            getPartNumber('User'),
                                             ": ",
                                             licenseResult.capacityUpgrades.user
                                         ]
                                     }),
                                     licenseResult.capacityUpgrades.operator !== undefined && licenseResult.capacityUpgrades.operator > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("li", {
                                         children: [
-                                            license_result_getPartNumber('Operator'),
+                                            getPartNumber('Operator'),
                                             ": ",
                                             licenseResult.capacityUpgrades.operator
                                         ]
@@ -850,29 +796,34 @@ function LicenseResult({ licenseResult, onReset }) {
                             })
                         ]
                     }),
-                    licenseResult.featureAddons.length > 0 && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                    (licenseResult.featureAddons.length > 0 || licenseResult.packages.length > 0) && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
                         children: [
                             /*#__PURE__*/ (0,jsx_runtime.jsx)("h3", {
                                 className: "font-semibold mb-2",
                                 children: "Feature Add-ons"
                             }),
-                            /*#__PURE__*/ (0,jsx_runtime.jsx)("ul", {
+                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("ul", {
                                 className: "list-disc list-inside space-y-1 text-sm",
-                                children: licenseResult.featureAddons.map((addon, index)=>{
-                                    if (addon.type === 'T&A') {
-                                        const taType = getTAType(addon.quantity || 0);
-                                        if (taType) {
+                                children: [
+                                    licenseResult.featureAddons.map((addon, index)=>{
+                                        if (addon.type === 'T&A') {
+                                            const taType = getTAType(addon.quantity || 0);
+                                            if (taType) {
+                                                return /*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
+                                                    children: getPartNumber(addon.type, addon.quantity)
+                                                }, `addon-${index}`);
+                                            }
+                                        } else {
                                             return /*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
-                                                children: license_result_getPartNumber(addon.type, addon.quantity)
-                                            }, index);
+                                                children: getPartNumber(addon.type)
+                                            }, `addon-${index}`);
                                         }
-                                    } else {
-                                        return /*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
-                                            children: license_result_getPartNumber(addon.type)
-                                        }, index);
-                                    }
-                                    return null;
-                                })
+                                        return null;
+                                    }),
+                                    licenseResult.packages.map((pkg, index)=>/*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
+                                            children: getPartNumber(pkg)
+                                        }, `pkg-${index}`))
+                                ]
                             })
                         ]
                     })
