@@ -91,7 +91,7 @@ describe('generatePartNumberList', () => {
   describe('Feature Add-ons', () => {
     it('includes simple checkbox feature add-ons', () => {
       const result: LicenseResult = {
-        baseLicense: 'Essential',
+        baseLicense: 'Advanced',
         capacityUpgrades: {},
         featureAddons: [
           { type: 'Mobile App' },
@@ -102,7 +102,7 @@ describe('generatePartNumberList', () => {
       };
 
       const partNumberList = generatePartNumberList(result);
-      expect(partNumberList).toBe('BIOSTARX-ESS, BIOSTARX-ADD-MOB, BIOSTARX-ADD-PLG, BIOSTARX-ADD-VST');
+      expect(partNumberList).toBe('BIOSTARX-ADV, BIOSTARX-ADD-MOB, BIOSTARX-ADD-PLG, BIOSTARX-ADD-VST');
     });
 
     it('excludes Map Monitoring (no part number)', () => {
