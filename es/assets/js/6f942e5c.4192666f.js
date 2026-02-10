@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["84619"], {
-25215: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["76668"], {
+19696: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,26 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_licensing_mdx_ebf_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_x_licensing_mdx_6f9_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-licensing-mdx-ebf.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_licensing_mdx_ebf_namespaceObject = JSON.parse('{"id":"platform/biostar_x/licensing","title":"License Policy","description":"This guide provides detailed information about the licensing policy of BioStar X, which is designed with a modular structure.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/licensing.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/licensing","permalink":"/docs/en/platform/biostar_x/licensing","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/licensing.mdx","tags":[],"version":"current","frontMatter":{"id":"licensing","title":"License Policy","description":"This guide provides detailed information about the licensing policy of BioStar X, which is designed with a modular structure.","keywords":["License"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Settings","permalink":"/docs/en/platform/biostar_x/ui-settings"},"next":{"title":"Appendices","permalink":"/docs/en/platform/biostar_x/appendices"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-es-docusaurus-plugin-content-docs-current-platform-biostar-x-licensing-mdx-6f9.json
+var site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_x_licensing_mdx_6f9_namespaceObject = JSON.parse('{"id":"platform/biostar_x/licensing","title":"Política de Licencias​","description":"Esta guía ofrece información detallada sobre la política de licencias de BioStar X, que está diseñado con una estructura modular.","source":"@site/i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/licensing.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/licensing","permalink":"/docs/es/platform/biostar_x/licensing","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/licensing.mdx","tags":[],"version":"current","frontMatter":{"id":"licensing","title":"Política de Licencias​","description":"Esta guía ofrece información detallada sobre la política de licencias de BioStar X, que está diseñado con una estructura modular.","keywords":["Licencia"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Ajustes","permalink":"/docs/es/platform/biostar_x/ui-settings"},"next":{"title":"Apéndices","permalink":"/docs/es/platform/biostar_x/appendices"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/licensing.mdx
+;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/licensing.mdx
 
 
 const frontMatter = {
 	id: 'licensing',
-	title: 'License Policy',
-	description: 'This guide provides detailed information about the licensing policy of BioStar X, which is designed with a modular structure.',
+	title: 'Política de Licencias​',
+	description: 'Esta guía ofrece información detallada sobre la política de licencias de BioStar X, que está diseñado con una estructura modular.',
 	keywords: [
-		'License'
+		'Licencia'
 	],
 	isTranslationMissing: false
 };
@@ -38,30 +38,29 @@ const assets = {
 
 };
 
-/*| **사용자 리모트 액세스** | 시스템 | 사용자의 ngrok 서비스 계정을 사용해 **BioStar X**를 터널링합니다. This allows access to **BioStar X** from an external network. |*/
 /*Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Elevator, Interlock*/
-/*| **얼굴 서버 매칭** | 장치 | - | 고급 지원을 위해 유지보수 계약이 필요합니다. |*/
+/*| **Autenticación en Servidor de Cara** | Dispositivo | - | Se requiere un contrato de mantenimiento anual para soporte avanzado. |*/
 
 
 const toc = [{
-  "value": "Basic License",
-  "id": "basic-license",
+  "value": "licencia básica",
+  "id": "base-license",
   "level": 2
 }, {
-  "value": "Capacity Upgrade",
+  "value": "Ampliación de capacidad",
   "id": "capacity-upgrade",
   "level": 2
 }, {
-  "value": "Feature add-ons",
+  "value": "Complementos de funciones",
   "id": "features-add-ons",
   "level": 2
 }, {
-  "value": "Package",
+  "value": "Paquete",
   "id": "package",
   "level": 2
 }, {
-  "value": "Device License",
-  "id": "device-license",
+  "value": "Licencia de dispositivo",
+  "id": "licencia-de-dispositivo",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -90,35 +89,35 @@ function _createMdxContent(props) {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " is the next generation access control software developed as a successor to ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " es el software de control de acceso de próxima generación desarrollado como sucesor de ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar 2"
-      }), ". Supports various deployment environments of today and the future through an enhanced system architecture, expanded features, and a more flexible licensing model."]
+      }), ". Admite diversos entornos de implementación actuales y futuros gracias a una arquitectura de sistema mejorada, funciones ampliadas y un modelo de licenciamiento más flexible."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " offers a total of five scalable license levels ranging from ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " ofrece un total de cinco niveles de licencia escalables que van desde ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Starter"
-      }), " to ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " hasta ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Elite"
-      }), ", allowing you to choose according to various environments from small businesses to large corporate settings. Designed in a modular structure, it can add a variety of optional features such as video integration, mobile access, and multi-server support."]
+      }), ", lo que permite elegir según distintos entornos, desde pequeñas empresas hasta grandes corporaciones. Diseñado con una estructura modular, puede añadir diversas funciones opcionales como integración de video, acceso móvil y soporte para múltiples servidores."]
     }), "\n", (0,jsx_runtime.jsx)(NextStep, {
       notitle: true,
       children: (0,jsx_runtime.jsx)(NextItem, {
         to: "../../bsx-license-calculator",
         target: "_blank",
         children: (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Use the ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["Usa el ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X License Calculator"
-          }), " to resolve complex licensing requirements. The tool helps determine the required license type and quantity."]
+          }), " para resolver requisitos de licenciamiento complejos. La herramienta ayuda a determinar el tipo y la cantidad de licencias requeridas."]
         })
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "basic-license",
-      children: "Basic License"
+      id: "base-license",
+      children: "licencia básica"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "The basic license"
-      }), " is an essential component for activating and operating the system. This license serves as a foundation for applying additional features or upgrades."]
+        children: "La licencia básica"
+      }), " es un componente esencial para activar y operar el sistema. Esta licencia sirve como base para aplicar funciones adicionales o actualizaciones."]
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "table--licensing overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -135,7 +134,7 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "Starter"
+              children: "Inicial"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
@@ -145,12 +144,12 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "Advanced"
+              children: "Avanzado"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "Enterprise"
+              children: "Corporativa"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
@@ -162,7 +161,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Maximum Number of Doors"
+                children: "Número máximo de puertas"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
@@ -198,7 +197,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Maximum Users"
+                children: "Número máximo de usuarios"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
@@ -234,7 +233,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Maximum Operators"
+                children: "Número máximo de operadores"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
@@ -270,7 +269,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Maximum Connected IP Devices"
+                children: "Número máximo de dispositivos IP conectados"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
@@ -306,7 +305,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Maps"
+                children: "Mapas"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
@@ -363,28 +362,26 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "Add on"
+              children: "Complemento"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "Add on"
+              children: "Complemento"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "Add on"
+              children: "Complemento"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsxs)(_components.td, {
               children: [(0,jsx_runtime.jsx)(_components.a, {
                 href: "#package",
                 children: (0,jsx_runtime.jsx)(_components.strong, {
-                  children: "Advanced Access Control"
+                  children: "Control de acceso avanzado"
                 })
-              }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(_components.em, {
-                children: "(Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Elevator, Interlock)"
-              })]
+              }), (0,jsx_runtime.jsx)("br", {}), "(APB global, alarma contra incendios global, alarma de intrusión, reunión, límite de ocupación, elevador, esclusa)"]
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -404,7 +401,7 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "Add on"
+              children: "Complemento"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -421,16 +418,16 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(_components.a, {
                 href: "#capacity-upgrade",
                 children: (0,jsx_runtime.jsx)(_components.strong, {
-                  children: "Capacity Upgrade"
+                  children: "Ampliación de capacidad"
                 })
               }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(_components.em, {
-                children: "(Doors/Users/Operators)"
+                children: "(Puertas/Usuarios/Operadores)"
               })]
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "Users, Operators only"
+              children: "Usuarios y Operadores únicamente"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -440,22 +437,22 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "Add on"
+              children: "Complemento"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "Add on"
+              children: "Complemento"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "Add on"
+              children: "Complemento"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "Add on"
+              children: "Complemento"
             })]
           })]
         })]
@@ -465,41 +462,41 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["The ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: ["La licencia ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "Device Manager"
-            }), " license is required for customers using third-party software or third-party systems who wish to efficiently manage Suprema devices through ", (0,jsx_runtime.jsx)(_components.strong, {
+            }), " es necesaria para los clientes que utilizan software o sistemas de terceros y desean administrar de manera eficiente los dispositivos Suprema a través de ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
             }), "."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Maximum Operators"
-            }), " refers to the number of users who are granted access permissions to the system."]
+              children: "Operadores máximos"
+            }), " se refiere a la cantidad de usuarios a quienes se les conceden permisos de acceso al sistema."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["If the maximum number of connected IP devices exceeds 1,000, it is recommended to use the ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: ["Si el número máximo de dispositivos IP conectados supera 1,000, se recomienda utilizar el servidor ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "Multi Communication"
-            }), " server."]
+            }), "."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "capacity-upgrade",
-      children: "Capacity Upgrade"
+      children: "Ampliación de capacidad"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["License upgrades are available for holders of ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["Las actualizaciones de licencia están disponibles para los titulares de licencias ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Essential"
       }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Advanced"
       }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Enterprise"
-      }), ", and ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " y ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Elite"
-      }), " licenses. License holders of the ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), ". Los titulares de licencia de ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Device Manager"
-      }), " can only purchase User and Operator Upgrades."]
+      }), " solo pueden comprar actualizaciones de Usuarios y Operadores."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
       children: [(0,jsx_runtime.jsx)(_components.thead, {
         children: (0,jsx_runtime.jsxs)(_components.tr, {
@@ -512,7 +509,7 @@ function _createMdxContent(props) {
             style: {
               textAlign: "center"
             },
-            children: "Number"
+            children: "Cantidad"
           })]
         })
       }), (0,jsx_runtime.jsxs)(_components.tbody, {
@@ -521,7 +518,7 @@ function _createMdxContent(props) {
             style: {
               textAlign: "center"
             },
-            children: "Doors"
+            children: "Puertas"
           }), (0,jsx_runtime.jsx)(_components.td, {
             style: {
               textAlign: "center"
@@ -533,7 +530,7 @@ function _createMdxContent(props) {
             style: {
               textAlign: "center"
             },
-            children: "Users"
+            children: "Usuarios"
           }), (0,jsx_runtime.jsx)(_components.td, {
             style: {
               textAlign: "center"
@@ -545,7 +542,7 @@ function _createMdxContent(props) {
             style: {
               textAlign: "center"
             },
-            children: "Operators"
+            children: "Operadores"
           }), (0,jsx_runtime.jsx)(_components.td, {
             style: {
               textAlign: "center"
@@ -556,26 +553,26 @@ function _createMdxContent(props) {
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "features-add-ons",
-      children: "Feature add-ons"
+      children: "Complementos de funciones"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["The following items can be purchased individually and can be additionally applied to ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["Los siguientes ítems se pueden comprar individualmente y se pueden aplicar adicionalmente a las licencias ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Advanced"
       }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Enterprise"
-      }), ", and ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " y ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Elite"
-      }), " license tiers."]
+      }), "."]
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "cols3--20-20-60 overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
         children: [(0,jsx_runtime.jsx)(_components.thead, {
           children: (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.th, {
-              children: "Feature"
+              children: "Función"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "License Type"
+              children: "Tipo de Licencia"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "Remarks"
+              children: "Observaciones"
             })]
           })
         }), (0,jsx_runtime.jsxs)(_components.tbody, {
@@ -585,9 +582,9 @@ function _createMdxContent(props) {
                 children: "Multi Communication Server Init"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Basic License"
+              children: "Licencia básica"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Basic license – Includes 1 server. An annual maintenance contract is required for support."
+              children: "Licencia básica: incluye 1 servidor. Se requiere un contrato de mantenimiento anual para soporte."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -595,19 +592,19 @@ function _createMdxContent(props) {
                 children: "Multi Communication Server Add-on"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Additional Server"
+              children: "Servidor adicional"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Applied when an additional server is added."
+              children: "Se aplica cuando se agrega un servidor adicional."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "GIS Map"
+                children: "Mapa GIS"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "System"
+              children: "Sistema"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "You can use the GIS map to set up areas, facilities, and floors."
+              children: "Puede usar el mapa GIS para configurar áreas, instalaciones y pisos."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -615,47 +612,47 @@ function _createMdxContent(props) {
                 children: "Video"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Camera"
+              children: "Cámara"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Applies when using a Video Management System (VMS) not provided by Suprema."
+              children: "Se aplica al usar un sistema de gestión de video (VMS) no proporcionado por Suprema."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Server Matching"
+                children: "Autenticación en servidor"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "ID, Card, Fingerprint, IR face"
+              children: "ID, tarjeta, huella digital, rostro IR"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Server matching method compares the ID, card, fingerprint, and IR face stored on the device to the credentials stored in the server database. An annual maintenance contract is required for advanced support."
+              children: "El método de autenticación en servidor compara el ID, la tarjeta, la huella digital y el rostro IR almacenados en el dispositivo con las credenciales almacenadas en la base de datos del servidor. Se requiere un contrato de mantenimiento anual para soporte avanzado."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Visitor"
+                children: "Visitante"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "System"
+              children: "Sistema"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Administrators and operators can track or control visitor access."
+              children: "Los administradores y operadores pueden rastrear o controlar el acceso de visitantes."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Directory Integration"
+                children: "Integración de directorio"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "System"
+              children: "Sistema"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Supports integration with directory services for centralized user management."
+              children: "Admite la integración con servicios de directorio para la gestión centralizada de usuarios."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Roll Call"
+                children: "Llamada de lista"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "System"
+              children: "Sistema"
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "-"
             })]
@@ -665,134 +662,134 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "note",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["Not all cameras connected to the VMS need to be integrated with BioStar X. For example, even if the VMS supports 32 cameras, users only need to purchase a license for the specific camera that they want to integrate with ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: ["No todas las cámaras conectadas al VMS necesitan integrarse con BioStar X. Por ejemplo, incluso si el VMS admite 32 cámaras, los usuarios solo deben comprar una licencia para la cámara específica que desean integrar con ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "BioStar X"
-        }), ", and there is no need to purchase a license for all cameras."]
+        }), " y no es necesario adquirir una licencia para todas las cámaras."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "The following items can be purchased individually and can be added regardless of the basic license."
+      children: "Los siguientes ítems se pueden comprar individualmente y se pueden añadir independientemente de la licencia básica."
     }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
       children: [(0,jsx_runtime.jsx)(_components.thead, {
         children: (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.th, {
-            children: "Feature"
+            children: "Función"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "License Type"
+            children: "Tipo de Licencia"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "Remarks"
+            children: "Observaciones"
           })]
         })
       }), (0,jsx_runtime.jsxs)(_components.tbody, {
         children: [(0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "Mobile App"
+              children: "Aplicación móvil"
             })
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "System"
+            children: "Sistema"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "-"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "Event log API"
+              children: "API de registro de eventos"
             })
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "System"
+            children: "Sistema"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "The system can receive and log event logs via external API. This allows third-party applications or services to insert event data directly into the access control system for centralized logging and reporting."
+            children: "El sistema puede recibir y registrar eventos mediante una API externa. Esto permite que aplicaciones o servicios de terceros inserten datos de eventos directamente en el sistema de control de acceso para registro y generación de informes centralizados."
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "Remote Access"
+              children: "Acceso Remoto"
             })
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "System"
+            children: "Sistema"
           }), (0,jsx_runtime.jsxs)(_components.td, {
-            children: ["Provides a secure tunnel feature that allows access to the ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: ["Proporciona una función de túnel seguro que permite acceder al servidor ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), " server from an external network. ", (0,jsx_runtime.jsx)(_components.strong, {
+            }), " desde una red externa. ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), " also serves as a gateway for external network access to mobile and API.", (0,jsx_runtime.jsx)("br", {}), "Required for using ", (0,jsx_runtime.jsx)(Cmd, {
+            }), " también actúa como una puerta de enlace para el acceso de red externa a móvil y API.", (0,jsx_runtime.jsx)("br", {}), "Necesario para usar la función ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "team.menu.sendFaceMobileEnrollLink"
-            }), " feature."]
+            }), "."]
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "BioStar X Plugin"
+              children: "Conector de BioStar X"
             })
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "System"
+            children: "Sistema"
           }), (0,jsx_runtime.jsxs)(_components.td, {
-            children: ["Supports external plugin integration. A maximum of 10 custom plugins can be used per system. For more information, refer to ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["Admite la integración de conector externos. Se pueden usar hasta 10 conectores personalizados por sistema. Para obtener más información, consulta ", (0,jsx_runtime.jsx)(_components.a, {
               href: "plugins",
-              children: "the following"
+              children: "lo siguiente"
             }), "."]
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsxs)(_components.td, {
             rowSpan: "2",
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Attendance Management"
+              children: "Gestión de asistencia"
             }), " (T&A)"]
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Standard"
+            children: "Estándar"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Supports up to 500 users."
+            children: "Admite hasta 500 usuarios."
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
-            children: "Enterprise"
+            children: "Corporativa"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "There is no limit on the number of users."
+            children: "No hay límite en la cantidad de usuarios."
           })]
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Time & attendance"
-        }), " (T&A) users follow the basic license limit and are allowed up to the maximum user count permitted by the ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: ["Los usuarios de ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "time & attendance"
-        }), " edition. (e.g., 500 users for the Standard edition)"]
+        }), " (T&A) siguen el límite básico de licencias y tienen permitido hasta el número máximo de usuarios permitido por la edición de ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "time & attendance"
+        }), ". (p. ej., 500 usuarios para la edición Standard)"]
       })
-    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "package",
-      children: "Package"
+      children: "Paquete"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["The following item can be purchased as add-ons from the ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["El siguiente elemento se puede adquirir como complemento a partir del nivel de licencia ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Advanced"
-      }), " license tier, and are included by default in ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), ", y está incluido de forma predeterminada en los niveles de licencia ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Enterprise"
-      }), " and ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " y ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Elite"
-      }), " license tiers."]
+      }), "."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "Advanced Access Control"
-        }), ": A package of advanced access control features - Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Elevator Control, and Interlock."]
+        }), ": Un paquete de funciones avanzadas de control de acceso: APB global, alarma contra incendios global, alarma de intrusión, reunión, límite de ocupación, elevador, esclusa."]
       }), "\n"]
     }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "device-license",
-      children: "Device License"
+      id: "licencia-de-dispositivo",
+      children: "Licencia de dispositivo"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Device licenses can be purchased individually and can be added regardless of the basic license. Device licenses are issued based on the serial number (S/N). This feature can only be activated on devices that require a license."
+      children: "Las licencias de dispositivos se pueden comprar individualmente y se pueden agregar independientemente de la licencia básica. Las licencias de dispositivos se emiten según el número de serie (S/N). Esta función solo se puede activar en dispositivos que requieran licencia."
     }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
       children: [(0,jsx_runtime.jsx)(_components.thead, {
         children: (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.th, {
-            children: "Feature"
+            children: "Función"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "License Type"
+            children: "Tipo de Licencia"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "Supported models"
+            children: "Modelos compatibles"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "Remarks"
+            children: "Observaciones"
           })]
         })
       }), (0,jsx_runtime.jsxs)(_components.tbody, {
@@ -802,19 +799,19 @@ function _createMdxContent(props) {
               children: "Camera QR"
             })
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Device"
+            children: "Dispositivo"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "X-Station 2 (no QR reading sensor), BioStation 3"
+            children: "X-Station 2 (sin sensor de lectura de QR), BioStation 3"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "-"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "Wireless Lock"
+              children: "Cerradura inalámbrica"
             })
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Device"
+            children: "Dispositivo"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "CoreStation 40"
           }), (0,jsx_runtime.jsx)(_components.td, {

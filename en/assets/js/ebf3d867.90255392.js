@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["77474"], {
-18933: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["84619"], {
+25215: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,26 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_ja_docusaurus_plugin_content_docs_current_platform_biostar_x_licensing_mdx_af5_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_licensing_mdx_ebf_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-ja-docusaurus-plugin-content-docs-current-platform-biostar-x-licensing-mdx-af5.json
-var site_i_18_n_ja_docusaurus_plugin_content_docs_current_platform_biostar_x_licensing_mdx_af5_namespaceObject = JSON.parse('{"id":"platform/biostar_x/licensing","title":"ライセンス ポリシー","description":"モジュール構造で設計された BioStar X のライセンス ポリシーの詳細を案内します。","source":"@site/i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/licensing.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/licensing","permalink":"/docs/ja/platform/biostar_x/licensing","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/licensing.mdx","tags":[],"version":"current","frontMatter":{"id":"licensing","title":"ライセンス ポリシー","description":"モジュール構造で設計された BioStar X のライセンス ポリシーの詳細を案内します。","keywords":["ライセンス"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"設定","permalink":"/docs/ja/platform/biostar_x/ui-settings"},"next":{"title":"付録","permalink":"/docs/ja/platform/biostar_x/appendices"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-licensing-mdx-ebf.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_licensing_mdx_ebf_namespaceObject = JSON.parse('{"id":"platform/biostar_x/licensing","title":"License Policy","description":"This guide provides detailed information about the licensing policy of BioStar X, which is designed with a modular structure.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/licensing.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/licensing","permalink":"/docs/en/platform/biostar_x/licensing","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/licensing.mdx","tags":[],"version":"current","frontMatter":{"id":"licensing","title":"License Policy","description":"This guide provides detailed information about the licensing policy of BioStar X, which is designed with a modular structure.","keywords":["License"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Settings","permalink":"/docs/en/platform/biostar_x/ui-settings"},"next":{"title":"Appendices","permalink":"/docs/en/platform/biostar_x/appendices"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/licensing.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/licensing.mdx
 
 
 const frontMatter = {
 	id: 'licensing',
-	title: 'ライセンス ポリシー',
-	description: 'モジュール構造で設計された BioStar X のライセンス ポリシーの詳細を案内します。',
+	title: 'License Policy',
+	description: 'This guide provides detailed information about the licensing policy of BioStar X, which is designed with a modular structure.',
 	keywords: [
-		'ライセンス'
+		'License'
 	],
 	isTranslationMissing: false
 };
@@ -38,30 +38,30 @@ const assets = {
 
 };
 
-/*| **사용자 리모트 액세스** | 시스템 | 사용자의 ngrok 서비스 계정을 사용해 **BioStar X**를 터널링합니다. これにより、外部ネットワークからでも **BioStar X** に接続できます。 |*/
+/*| **사용자 리모트 액세스** | 시스템 | 사용자의 ngrok 서비스 계정을 사용해 **BioStar X**를 터널링합니다. This allows access to **BioStar X** from an external network. |*/
 /*Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Elevator, Interlock*/
 /*| **얼굴 서버 매칭** | 장치 | - | 고급 지원을 위해 유지보수 계약이 필요합니다. |*/
 
 
 const toc = [{
-  "value": "基本ライセンス",
-  "id": "basic-license",
+  "value": "Base License",
+  "id": "base-license",
   "level": 2
 }, {
-  "value": "ライセンスアップグレード",
+  "value": "Capacity Upgrade",
   "id": "capacity-upgrade",
   "level": 2
 }, {
-  "value": "機能追加オプション (Feature Add-ons)",
+  "value": "Feature add-ons",
   "id": "features-add-ons",
   "level": 2
 }, {
-  "value": "パッケージ (Package)",
+  "value": "Package",
   "id": "package",
   "level": 2
 }, {
-  "value": "デバイスライセンス",
-  "id": "デバイスライセンス",
+  "value": "Device License",
+  "id": "device-license",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -90,35 +90,35 @@ function _createMdxContent(props) {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " は ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " is the next generation access control software developed as a successor to ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar 2"
-      }), " の後継バージョンとして開発された次世代入退室管理ソフトウェアです。 強化されたシステム アーキテクチャと拡張された機能、そしてより柔軟なライセンス モデルにより、現在および将来のさまざまな導入環境をサポートします。"]
+      }), ". Supports various deployment environments of today and the future through an enhanced system architecture, expanded features, and a more flexible licensing model."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " は ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "スターター"
-      }), "から ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "エリート"
-      }), "まで、合計 5 つの拡張可能なライセンス グレードを提供しており、小規模事業所から大規模企業環境まで、ニーズに合わせて選択できます。 モジュール構造で設計されているため、ビデオ連携、モバイルアクセス、マルチサーバーサポートなどのさまざまなオプション機能を追加できます。"]
+      }), " offers a total of five scalable license levels ranging from ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Starter"
+      }), " to ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Elite"
+      }), ", allowing you to choose according to various environments from small businesses to large corporate settings. Designed in a modular structure, it can add a variety of optional features such as video integration, mobile access, and multi-server support."]
     }), "\n", (0,jsx_runtime.jsx)(NextStep, {
       notitle: true,
       children: (0,jsx_runtime.jsx)(NextItem, {
         to: "../../bsx-license-calculator",
         target: "_blank",
         children: (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["複雑なライセンス要件の解決に役立つ ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X ライセンス計算機"
-          }), " をお試しください。 このツールは、必要に応じたライセンスタイプと数量の決定を支援します。"]
+          children: ["Use the ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X License Calculator"
+          }), " to resolve complex licensing requirements. The tool helps determine the required license type and quantity."]
         })
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "basic-license",
-      children: "基本ライセンス"
+      id: "base-license",
+      children: "Base License"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "基本ライセンス"
-      }), " は、システムを有効化して運用するために必須のコンポーネントです。 このライセンスは、追加機能やアップグレードを適用するための基盤となります。"]
+        children: "The base license"
+      }), " is an essential component for activating and operating the system. This license serves as a foundation for applying additional features or upgrades."]
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "table--licensing overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -130,39 +130,39 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "デバイスマネージャー(Device Manager)"
+              children: "Device Manager"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "スターター(Starter)"
+              children: "Starter"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "エッセンシャル(Essential)"
+              children: "Essential"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "アドバンス(Advanced)"
+              children: "Advanced"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "エンタープライズ(Enterprise)"
+              children: "Enterprise"
             }), (0,jsx_runtime.jsx)(_components.th, {
               style: {
                 textAlign: "center"
               },
-              children: "エリート(Elite)"
+              children: "Elite"
             })]
           })
         }), (0,jsx_runtime.jsxs)(_components.tbody, {
           children: [(0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "最大ドア数"
+                children: "Maximum Number of Doors"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
@@ -198,7 +198,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "最大ユーザー数"
+                children: "Maximum Users"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
@@ -234,7 +234,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "最大管理者数"
+                children: "Maximum Operators"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
@@ -270,7 +270,7 @@ function _createMdxContent(props) {
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "最大接続 IP デバイス数"
+                children: "Maximum Connected IP Devices"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
@@ -304,12 +304,10 @@ function _createMdxContent(props) {
               children: "1,000"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsxs)(_components.td, {
-              children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "マップ"
-              }), "(", (0,jsx_runtime.jsx)(_components.strong, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
                 children: "Maps"
-              }), ")"]
+              })
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -342,12 +340,10 @@ function _createMdxContent(props) {
               children: "✔️"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsxs)(_components.td, {
-              children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "ビデオ"
-              }), "(", (0,jsx_runtime.jsx)(_components.strong, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
                 children: "Video"
-              }), ")"]
+              })
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -367,24 +363,24 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "アドオン"
+              children: "Add on"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "アドオン"
+              children: "Add on"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "アドオン"
+              children: "Add on"
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsxs)(_components.td, {
               children: [(0,jsx_runtime.jsx)(_components.a, {
                 href: "#package",
                 children: (0,jsx_runtime.jsx)(_components.strong, {
-                  children: "高度アクセス制御"
+                  children: "Advanced Access Control"
                 })
               }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(_components.em, {
                 children: "(Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Elevator, Interlock)"
@@ -408,7 +404,7 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "アドオン"
+              children: "Add on"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -425,16 +421,16 @@ function _createMdxContent(props) {
               children: [(0,jsx_runtime.jsx)(_components.a, {
                 href: "#capacity-upgrade",
                 children: (0,jsx_runtime.jsx)(_components.strong, {
-                  children: "ライセンスアップグレード"
+                  children: "Capacity Upgrade"
                 })
               }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(_components.em, {
-                children: "（ドア/ユーザー/管理者）"
+                children: "(Doors/Users/Operators)"
               })]
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "ユーザーおよび管理者のみ対象"
+              children: "Users, Operators only"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -444,22 +440,22 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "アドオン"
+              children: "Add on"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "アドオン"
+              children: "Add on"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "アドオン"
+              children: "Add on"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
               },
-              children: "アドオン"
+              children: "Add on"
             })]
           })]
         })]
@@ -469,41 +465,41 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "デバイスマネージャー"
-            }), " ライセンスは、サードパーティーのソフトウェアまたはシステムを使用するお客様が ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: ["The ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Device Manager"
+            }), " license is required for customers using third-party software or third-party systems who wish to efficiently manage Suprema devices through ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), " を通じて Suprema デバイスを効率的に管理する際に必要なライセンスです。"]
+            }), "."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "最大管理者数"
-            }), " は、システムにアクセス権を付与されたユーザー数を指します。"]
+              children: "Maximum Operators"
+            }), " refers to the number of users who are granted access permissions to the system."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["最大接続 IP デバイス数が 1,000 台以上の場合、", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "マルチコミュニケーション"
-            }), " サーバーの使用を推奨します。"]
+            children: ["If the maximum number of connected IP devices exceeds 1,000, it is recommended to use the ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Multi Communication"
+            }), " server."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "capacity-upgrade",
-      children: "ライセンスアップグレード"
+      children: "Capacity Upgrade"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["ライセンスアップグレードは ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "エッセンシャル"
-      }), "、", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "アドバンス"
-      }), "、", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "エンタープライズ"
-      }), "、", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "エリート"
-      }), " グレードのライセンス保有者に提供されます。 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "デバイスマネージャー"
-      }), " ライセンスの保有者は、ユーザー (User) と管理者 (Operator) のアップグレードのみ購入できます。"]
+      children: ["License upgrades are available for holders of ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Essential"
+      }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Advanced"
+      }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Enterprise"
+      }), ", and ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Elite"
+      }), " licenses. License holders of the ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Device Manager"
+      }), " can only purchase User and Operator Upgrades."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
       children: [(0,jsx_runtime.jsx)(_components.thead, {
         children: (0,jsx_runtime.jsxs)(_components.tr, {
@@ -516,7 +512,7 @@ function _createMdxContent(props) {
             style: {
               textAlign: "center"
             },
-            children: "数"
+            children: "Number"
           })]
         })
       }), (0,jsx_runtime.jsxs)(_components.tbody, {
@@ -525,7 +521,7 @@ function _createMdxContent(props) {
             style: {
               textAlign: "center"
             },
-            children: "ドア"
+            children: "Doors"
           }), (0,jsx_runtime.jsx)(_components.td, {
             style: {
               textAlign: "center"
@@ -537,7 +533,7 @@ function _createMdxContent(props) {
             style: {
               textAlign: "center"
             },
-            children: "ユーザー"
+            children: "Users"
           }), (0,jsx_runtime.jsx)(_components.td, {
             style: {
               textAlign: "center"
@@ -549,7 +545,7 @@ function _createMdxContent(props) {
             style: {
               textAlign: "center"
             },
-            children: "管理者"
+            children: "Operators"
           }), (0,jsx_runtime.jsx)(_components.td, {
             style: {
               textAlign: "center"
@@ -560,108 +556,106 @@ function _createMdxContent(props) {
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "features-add-ons",
-      children: "機能追加オプション (Feature Add-ons)"
+      children: "Feature add-ons"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["以下の項目は個別に購入でき、", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "アドバンス"
-      }), "、", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "エンタープライズ"
-      }), "、", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "エリート"
-      }), " ライセンス グレードに追加できます。"]
+      children: ["The following items can be purchased individually and can be additionally applied to ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Advanced"
+      }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Enterprise"
+      }), ", and ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Elite"
+      }), " license tiers."]
     }), "\n", (0,jsx_runtime.jsx)("div", {
       className: "cols3--20-20-60 overflow-x",
       children: (0,jsx_runtime.jsxs)(_components.table, {
         children: [(0,jsx_runtime.jsx)(_components.thead, {
           children: (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.th, {
-              children: "機能"
+              children: "Feature"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "ライセンス種類"
+              children: "License Type"
             }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "備考"
+              children: "Remarks"
             })]
           })
         }), (0,jsx_runtime.jsxs)(_components.tbody, {
           children: [(0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "マルチコミュニケーションサーバー Init"
+                children: "Multi Communication Server Init"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "基本ライセンス"
+              children: "Base License"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "基本ライセンス – サーバー 1 台が含まれます。 サポートには年間保守契約が必要です。"
+              children: "Base license – Includes 1 server. An annual maintenance contract is required for support."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "マルチコミュニケーションサーバー Add-on"
+                children: "Multi Communication Server Add-on"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "追加サーバー"
+              children: "Additional Server"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "サーバーを 1 台追加するごとに適用されます。"
+              children: "Applied when an additional server is added."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "GIS マップ"
+                children: "GIS Map"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "システム"
+              children: "System"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "GIS マップを利用してエリア（Area）や施設（Facility）、階（Floor）を設定できます。"
+              children: "You can use the GIS map to set up areas, facilities, and floors."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "ビデオ"
+                children: "Video"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "カメラ"
+              children: "Camera"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Suprema が提供しない Video Management System (VMS) を使用する場合に適用されます。"
+              children: "Applies when using a Video Management System (VMS) not provided by Suprema."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "サーバーマッチング"
+                children: "Server Matching"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "ID、カード、指紋、IR フェイス"
+              children: "ID, Card, Fingerprint, IR face"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "デバイスに保存された ID、カード、指紋、IR フェイス情報をサーバーデータベースに保存されたクレデンシャルと照合するサーバーマッチング方式です。 高度なサポートには保守契約が必要です。"
+              children: "Server matching method compares the ID, card, fingerprint, and IR face stored on the device to the credentials stored in the server database. An annual maintenance contract is required for advanced support."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "訪問者"
+                children: "Visitor"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "システム"
+              children: "System"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "管理者およびオペレーターは訪問者の出入りを追跡または制御できます。"
+              children: "Administrators and operators can track or control visitor access."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "ディレクトリ連携"
+                children: "Directory Integration"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "システム"
+              children: "System"
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "中央集権的なユーザー管理のためにディレクトリサービスとの統合をサポートしています。"
+              children: "Supports integration with directory services for centralized user management."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsxs)(_components.td, {
-              children: [(0,jsx_runtime.jsx)(_components.strong, {
-                children: "在室管理"
-              }), "(", (0,jsx_runtime.jsx)(_components.strong, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
                 children: "Roll Call"
-              }), ")"]
+              })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "システム"
+              children: "System"
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "-"
             })]
@@ -671,91 +665,89 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "note",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["VMS に接続されているすべてのカメラを ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: ["Not all cameras connected to the VMS need to be integrated with BioStar X. For example, even if the VMS supports 32 cameras, users only need to purchase a license for the specific camera that they want to integrate with ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "BioStar X"
-        }), " と必ずしも連携する必要はありません。 例えば、VMS が 32 台のカメラをサポートしていても、ユーザーは実際に ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "BioStar X"
-        }), " と連携させる特定のカメラ分だけライセンスを購入すればよく、すべてのカメラ分のライセンスを購入する必要はありません。"]
+        }), ", and there is no need to purchase a license for all cameras."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "以下の項目は個別に購入でき、基本ライセンスに関係なく追加できます。"
+      children: "The following items can be purchased individually and can be added regardless of the base license."
     }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
       children: [(0,jsx_runtime.jsx)(_components.thead, {
         children: (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.th, {
-            children: "機能"
+            children: "Feature"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "ライセンス種類"
+            children: "License Type"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "備考"
+            children: "Remarks"
           })]
         })
       }), (0,jsx_runtime.jsxs)(_components.tbody, {
         children: [(0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "モバイルアプリ"
+              children: "Mobile App"
             })
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "システム"
+            children: "System"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "-"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "イベントログ API"
+              children: "Event log API"
             })
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "システム"
+            children: "System"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "システムは外部 API を通じてイベントログを受信して記録できます。 これにより、他社のアプリケーションやサービスが集中ロギングとレポートのために入退室管理システムにイベントデータを直接追加できます。"
+            children: "The system can receive and log event logs via external API. This allows third-party applications or services to insert event data directly into the access control system for centralized logging and reporting."
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "リモートアクセス"
+              children: "Remote Access"
             })
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "システム"
+            children: "System"
           }), (0,jsx_runtime.jsxs)(_components.td, {
-            children: ["外部ネットワークから ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: ["Provides a secure tunnel feature that allows access to the ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), " サーバーへ接続できるセキュアトンネル機能を提供します。 外部ネットワークから ", (0,jsx_runtime.jsx)(_components.strong, {
+            }), " server from an external network. ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), " モバイルおよび API へのアクセスのゲートウェイとしても機能します。", (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(Cmd, {
+            }), " also serves as a gateway for external network access to mobile and API.", (0,jsx_runtime.jsx)("br", {}), "Required for using ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "team.menu.sendFaceMobileEnrollLink"
-            }), " 機能の使用に必要です。"]
+            }), " feature."]
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "BioStar X プラグイン"
+              children: "BioStar X Plugin"
             })
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "システム"
+            children: "System"
           }), (0,jsx_runtime.jsxs)(_components.td, {
-            children: ["外部プラグインの統合をサポートします。 システムあたり最大 10 個のカスタムプラグインを利用できます。 詳細については ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["Supports external plugin integration. A maximum of 10 custom plugins can be used per system. For more information, refer to ", (0,jsx_runtime.jsx)(_components.a, {
               href: "plugins",
-              children: "以下のドキュメント"
-            }), " を参照してください。"]
+              children: "the following"
+            }), "."]
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsxs)(_components.td, {
             rowSpan: "2",
             children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "勤怠管理"
-            }), "(T&A)"]
+              children: "Attendance Management"
+            }), " (T&A)"]
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "Standard"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "最大 500 ユーザーをサポートします。"
+            children: "Supports up to 500 users."
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: "Enterprise"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "ユーザー数に制限はありません。"
+            children: "There is no limit on the number of users."
           })]
         })]
       })]
@@ -763,66 +755,66 @@ function _createMdxContent(props) {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "勤怠管理"
-        }), " (T&A) のユーザー数は基本ライセンスの制限に従い、", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "勤怠管理"
-        }), " エディションで許可されている最大ユーザー数まで利用できます。 (例: Standard エディションの場合、ユーザー 500 名)"]
+          children: "Time & attendance"
+        }), " (T&A) users follow the base license limit and are allowed up to the maximum user count permitted by the ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "time & attendance"
+        }), " edition. (e.g., 500 users for the Standard edition)"]
       })
     }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "package",
-      children: "パッケージ (Package)"
+      children: "Package"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["以下の項目は ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "アドバンス"
-      }), " ライセンスグレードでは追加オプションとして購入でき、", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "エンタープライズ"
-      }), " および ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "エリート"
-      }), " グレードでは基本で含まれています。"]
+      children: ["The following item can be purchased as add-ons from the ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Advanced"
+      }), " license tier, and are included by default in ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Enterprise"
+      }), " and ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Elite"
+      }), " license tiers."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "高度アクセス制御"
-        }), "：アンチパスバック（Global Anti-Passback）、火災警報（Global Fire Alarm）、警備（Intrusion Alarm）、マスタリング（Mustering）、人数制限（Occupancy Limit）、エレベーター、インターロック（Interlock）などの高度なアクセス制御機能を利用できるパッケージです。"]
+          children: "Advanced Access Control"
+        }), ": A package of advanced access control features - Global APB, Global Fire Alarm, Intrusion Alarm, Mustering, Occupancy Limit, Elevator Control, and Interlock."]
       }), "\n"]
     }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "デバイスライセンス",
-      children: "デバイスライセンス"
+      id: "device-license",
+      children: "Device License"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "デバイスライセンスは個別に購入でき、基本ライセンスに関係なく追加できます。 デバイスライセンスはシリアル番号（S/N）を基準に発行されます。 ライセンスが必要なデバイスでのみ、その機能を有効にできます。"
+      children: "Device licenses can be purchased individually and can be added regardless of the base license. Device licenses are issued based on the serial number (S/N). This feature can only be activated on devices that require a license."
     }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
       children: [(0,jsx_runtime.jsx)(_components.thead, {
         children: (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.th, {
-            children: "機能"
+            children: "Feature"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "ライセンス種類"
+            children: "License Type"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "対応モデル"
+            children: "Supported models"
           }), (0,jsx_runtime.jsx)(_components.th, {
-            children: "備考"
+            children: "Remarks"
           })]
         })
       }), (0,jsx_runtime.jsxs)(_components.tbody, {
         children: [(0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "カメラ QR"
+              children: "Camera QR"
             })
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "デバイス"
+            children: "Device"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "X-Station 2（QR 読取センサーなし）、BioStation 3"
+            children: "X-Station 2 (no QR reading sensor), BioStation 3"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "-"
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.strong, {
-              children: "ワイヤレスロック"
+              children: "Wireless Lock"
             })
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "デバイス"
+            children: "Device"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: "CoreStation 40"
           }), (0,jsx_runtime.jsx)(_components.td, {
