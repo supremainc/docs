@@ -27,12 +27,12 @@ keywords:
 
 <Cmd sid='device.masterAdmin.title' product='2' /> に登録できるクレデンシャルは次のとおりです。
 
-| クレデンシャルの種類 |  登録可能数 | 詳細条件                                      |
-| ---------- | :----: | ----------------------------------------- |
-| カード        | 最大 4 件 | CSN と Wiegand タイプのみ対応し、同一タイプ内で重複登録はできません。 |
-| 顔          | 最大 2 件 | 同じアルゴリズムを搭載したデバイスでのみ登録できます。               |
-| 指紋         | 最大 2 件 | -                                         |
-| PIN        |   1 件  | 8 桁以上の数字を入力できます。                          |
+| クレデンシャルの種類 | 登録可能数 | 詳細条件 |
+| --- | :-: | --- |
+| カード | 最大 4 件 | CSN と Wiegand タイプのみ対応し、同一タイプ内で重複登録はできません。 |
+| 顔 | 最大 2 件 | 同じアルゴリズムを搭載したデバイスでのみ登録できます。 |
+| 指紋 | 最大 2 件 | - |
+| PIN | 1 件 | 8 桁以上の数字を入力できます。 |
 
 * 登録済みのクレデンシャルを変更するには、該当クレデンシャルの右側にある <IcEdit /> ボタンをクリックします。
 
@@ -72,7 +72,7 @@ keywords:
 
 :::info
 
-すべての管理者に2種類以上のクレデンシャルが登録されていない状態で有効化すると、設定は失敗しエラーメッセージが表示されます。 すべての管理者に2種類以上のクレデンシャルを登録してから、再試行してください。
+すべての管理者に2種類以上のクレデンシャルが登録されていない場合、有効化に失敗し、エラーメッセージが表示されます。 すべての管理者に2種類以上のクレデンシャルを登録してから、再試行してください。
 
 <Image src='/img/biostarx-setting-device-adv-error-admin.png' />
 
@@ -104,11 +104,11 @@ keywords:
 
 <div className='table-fixed'>
 
-| 階級                                                           | ユーザー情報管理 | デバイス設定 |
-| ------------------------------------------------------------ | :------: | :----: |
-| <Cmd sid='device.operatorLevel.all' product='2' />           |    ✔️    |   ✔️   |
-| <Cmd sid='device.operatorLevel.user' product='2' />          |    ✔️    |    ❌   |
-| <Cmd sid='device.operatorLevel.configuration' product='2' /> |     ❌    |   ✔️   |
+| 階級 | ユーザー情報管理 | デバイス設定 |
+| --- | :-: | :-: |
+| <Cmd sid='device.operatorLevel.all' product='2' /> | ✔️ | ✔️ |
+| <Cmd sid='device.operatorLevel.user' product='2' /> | ✔️ | ❌ |
+| <Cmd sid='device.operatorLevel.configuration' product='2' /> | ❌ | ✔️ |
 
 </div>
 
@@ -138,7 +138,7 @@ keywords:
 
   * <Cmd sid='device.tna.mode.byUser' product='2' />：ユーザーが認証時に希望する勤怠イベントを選択できます。
 
-  * <Cmd sid='device.tna.mode.bySchedule' product='2' />：設定したスケジュールに従って勤怠イベントが自動で切り替わります。 勤怠イベントに適用するスケジュールを選択します。
+  * <Cmd sid='device.tna.mode.bySchedule' product='2' />：設定したスケジュールに従って勤怠イベントが自動で切り替わります。 勤怠イベントに適用するスケジュールを選択できます。
 
   * <Cmd sid='device.tna.mode.lastChoice' product='2' />：ユーザーが最後に使用した勤怠イベントを継続して使用できます。
 
@@ -176,7 +176,7 @@ keywords:
 
 <details>
 
-<summary>BioEntry P2, BioEntry W2, XPass D2, XPass 2</summary>
+<summary>BioEntry P2、BioEntry W2、XPass D2、XPass 2</summary>
 
 * <Cmd sid='device.info.sound' product='2' />：音声をオンまたはオフに切り替えます。
 
@@ -194,7 +194,7 @@ keywords:
 
 <details>
 
-<summary>BioStation 2, BioStation L2, BioLite N2, FaceLite</summary>
+<summary>BioStation 2、BioStation L2、BioLite N2、FaceLite</summary>
 
 * <Cmd sid='device.info.language' product='2' />：デバイスの画面に表示する言語を設定します。 デバイスに言語リソースファイルを送信するには、<Cmd sid='device.updateResource' product='2' /> をクリックします。
 
@@ -240,7 +240,7 @@ keywords:
 
 <details>
 
-<summary>BioStation 3, BioStation A2, FaceStation 2, FaceStation F2, X-Station 2</summary>
+<summary>BioStation 3、BioStation A2、FaceStation 2、FaceStation F2、X-Station 2</summary>
 
 * <Cmd sid='device.info.language' product='2' />：デバイスの画面に表示する言語を設定します。 デバイスに言語リソースファイルを送信するには、<Cmd sid='device.updateResource' product='2' /> をクリックします。
 

@@ -12,7 +12,7 @@ keywords:
 
 ## 開始前に {#before-start}
 
-* ドアを登録する前に、入退室管理用の入室レベル、入室グループ、フロアレベルを設定してください。 詳細については[以下](settings-access-control)を参照してください。
+* ドアを登録する前に、入退室管理用の入室レベル、入室グループ、フロアレベルを設定してください。 詳細については[次のドキュメント](settings-access-control)を参照してください。
 
 * ドアを登録する前にデバイスを登録してください。 デバイス登録の詳細は、以下のドキュメントを参照してください。
 
@@ -40,7 +40,7 @@ keywords:
 
    * <Cmd sid='common.option' product='2' />：追加オプションを設定してください。 詳細は[以下のドキュメント](#option)を参照してください。
 
-   * <Cmd sid='door.antiPassBack' product='2' />：入退室履歴を管理しセキュリティを強化するアンチパスバック機能を設定します。 詳細は[次のドキュメント](#antipassback)を参照してください。
+   * <Cmd sid='door.antiPassBack' product='2' />：入退室履歴を管理しセキュリティを強化するアンチパスバック機能を設定します。 詳細については[次のドキュメント](#antipassback)を参照してください。
 
    * <Cmd sid='timedAPB.title' product='2' />：アンチパスバック機能の初期化時間を設定できます。 詳細は[次のドキュメント](#timed-apb)を参照してください。
 
@@ -116,7 +116,7 @@ keywords:
 
 * <Cmd sid='common.open' product='2' />：ドア解錠に関するオプションを設定します。
 
-  * <Cmd sid='door.openTime' product='2' />：認証完了後に出入口が開いたままになる時間を設定します。 この時間を過ぎると、出入口は自動的にロックされます。
+  * <Cmd sid='door.openTime' product='2' />：認証完了後に出入口が開いたままになる時間を設定します。 この時間を過ぎると、ドアは自動的にロックされます。
 
   * <Cmd sid='door.openOnce' product='2' />：ドアセンサーがドアの閉鎖を検知すると、ドアが施錠されます。 <Cmd sid='door.option.openCondition.useAutoDoor' product='2' /> を <Cmd sid='door.openOnceOn' product='2' /> に設定すると使用できません。
 
@@ -130,7 +130,7 @@ keywords:
 
 * <Cmd sid='door.dualAuthentication' product='2' />：2人（一般ユーザーと管理者）がクレデンシャルを認証してドアを解錠するよう設定できます。
 
-  * <Cmd sid='common.device' product='2' />：二重認証を使用するデバイスを選択してください。 二重認証を使用しない場合は、<Cmd sid='door.dualAuthentication.approvalType.none' product='2' /> を選択してください。
+  * <Cmd sid='common.device' product='2' />：二重認証を使用するデバイスを選択してください。 二重認証を使用しない場合は<Cmd sid='door.dualAuthentication.approvalType.none' product='2' />を選択してください。
 
   * <Cmd sid='door.schedule' product='2' />：二重認証を適用するスケジュールを選択してください。 目的のスケジュールがない場合は、<Cmd sid='button.plusAddSchedule' product='2' /> をクリックして追加します。
 
@@ -142,7 +142,7 @@ keywords:
 
   * <Cmd sid='door.approvalGroup' product='2' />：管理者が所属するグループを設定します。 このオプションは、<Cmd sid='door.dualAuthentication.approvalType' product='2' /> を <Cmd sid='door.dualAuthentication.approvalType.last' product='2' /> に選択した場合に使用できます。
 
-  * <Cmd sid='door.authenticationTimeout' product='2' />：1回目の認証後から2回目の認証までの待機時間を設定します。 設定された時間内に2回目の認証が完了しない場合、ドアは解錠されません。
+  * <Cmd sid='door.authenticationTimeout' product='2' />：1回目の認証後から2回目の認証までの待機時間を設定します。 設定した時間内に2回目の認証が完了しない場合、階ボタンは有効になりません。
 
   :::info
 

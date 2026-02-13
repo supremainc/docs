@@ -38,11 +38,11 @@ keywords:
 
    <div className='overflow-x'>
 
-   |      区分     | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-   | :---------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-   |      指紋     | - <Image src='/img/common/ico-authmode-fingerprint.png' ico alone />：指紋のみを使用するモードです。<br/>- <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：指紋で認証した後、PIN を入力するモードです。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+   | 区分 | 説明 |
+   | :-: | --- |
+   | 指紋 | - <Image src='/img/common/ico-authmode-fingerprint.png' ico alone />：指紋のみを使用するモードです。<br/>- <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：指紋で認証した後、PIN を入力するモードです。 |
    | カード / QRコード | - <Image src='/img/common/ico-authmode-card-bs3.png' ico alone />：カード / QRコードのみを使用するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone />：カード／QRコードで認証した後、指紋で認証するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：カード / QRコードで認証した後にPINを入力するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：カード／QRコードで認証した後、指紋で認証するか PIN を入力するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：カード／QRコードで認証した後、指紋認証と PIN 入力を両方使用するモードです。 |
-   |      ID     | - <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone />：ID を入力した後、指紋で認証するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：IDを入力した後にPINを入力するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：ID を入力した後、指紋で認証するか PIN を入力するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：ID を入力した後、指紋認証と PIN 入力を両方使用するモードです。                                                                                                                                   |
+   | ID | - <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone />：ID を入力した後、指紋で認証するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：ID を入力した後に PIN を入力するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：ID を入力した後、指紋で認証するか PIN を入力するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：ID を入力した後、指紋認証と PIN 入力を両方使用するモードです。 |
 
    </div>
 
@@ -90,11 +90,11 @@ keywords:
 
    * <Cmd sid='ui_185' product='dev' />：サーバーマッチングを設定すると、デバイスではユーザー認証を行わず、BioStar X でユーザー認証を実行します。 サーバーマッチングは、デバイスにユーザー情報が多すぎる場合や、ユーザークレデンシャル情報が保存されているデバイスを外部にさらしたくない場合に有用です。
 
-      :::info
+     :::info
 
-      <Cmd sid='ui_185' product='dev' /> を使用する場合は、デバイスと BioStar X の両方でサーバーマッチングを有効にする必要があります。 BioStar Xサーバーマッチング設定については、<Linkto to='platform/biostar_x/settings-server-server#servermatching'>BioStar X管理者マニュアル</Linkto>をご参照ください。
+     <Cmd sid='ui_185' product='dev' /> を使用する場合は、デバイスと BioStar X の両方でサーバーマッチングを有効にする必要があります。 BioStar Xサーバーマッチング設定については、<Linkto to='platform/biostar_x/settings-server-server#servermatching'>BioStar X管理者マニュアル</Linkto>をご参照ください。
 
-      :::
+     :::
 
 ## PIN
 
@@ -218,7 +218,7 @@ XS2-DPB、XS2-APB、XS2-ODPB、XS2-OAPB モデルで <Cmd sid='ui_043' product='
 
    * <Cmd sid='ui_083_list' product='dev' />：勤怠モードの使用方法を設定できます。
 
-   * <Cmd sid='ui_086' product='dev' />：勤怠イベントを登録できます。 勤怠イベントを登録するには、<Cmd sid='ui_086' product='dev' /> → <Image src='/img/common/ico-add2.svg' ico alone /> を選択し、画面に表示するアイコン、<Cmd sid='ui_085' product='dev' />、<Cmd sid='ui_203' product='dev' /> を設定してください。
+   * <Cmd sid='ui_086' product='dev' />：勤怠イベントを登録できます。 勤怠イベントを登録するには、<Cmd sid='ui_086' product='dev' /> → <Image src='/img/common/ico-add2.svg' ico alone /> を選択し、画面に表示するアイコン、<Cmd sid='ui_085' product='dev' />、<Cmd sid='ui_203' product='dev' /> を設定します。
 
    * <Cmd sid='ui_082' product='dev' />：ユーザーが認証する際に必ず勤怠イベントを選択するよう設定できます。 <Cmd sid='ui_083_list' product='dev' /> を <Cmd sid='ui_199' product='dev' /> に設定したときに使用できます。
 
