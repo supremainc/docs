@@ -32,11 +32,11 @@ keywords:
 
    <div className='overflow-x'>
 
-   |      区分     | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-   | :---------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   |      顔      | - <Image src='/img/common/ico-authmode-face-bs3.png' ico alone />：顔のみを使用するモードです。<br/>- <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：顔で認証した後にPINを入力するモードです。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+   | 区分 | 説明 |
+   | :-: | --- |
+   | 顔 | - <Image src='/img/common/ico-authmode-face-bs3.png' ico alone />：顔だけを使用するモードです。<br/>- <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：顔で認証した後に PIN を入力するモードです。 |
    | カード / QRコード | - <Image src='/img/common/ico-authmode-card-bs3.png' ico alone />：カード / QRコードのみを使用するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone />：カード / QRコードで認証した後に顔で認証するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：カード / QRコードで認証した後にPINを入力するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：カード / QRコードで認証した後に顔認証またはPIN入力を行うモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：カード / QRコードで認証した後に顔認証とPIN入力の両方を使用するモードです。 |
-   |      ID     | - <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone />：IDを入力した後に顔で認証するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：IDを入力した後にPINを入力するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：IDを入力した後に顔認証またはPIN入力を行うモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：IDを入力した後に顔認証とPIN入力の両方を使用するモードです。                                                                                                                                            |
+   | ID | - <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone />：ID を入力した後に顔で認証するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：ID を入力した後に PIN を入力するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：ID を入力した後に顔で認証するか、PIN を入力するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-face-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：ID を入力した後に顔認証と PIN 入力を両方使用するモードです。 |
 
    </div>
 
@@ -138,19 +138,19 @@ QRコード認証を設定できます。
 
    * <Cmd sid='ui_169' product='dev' />：デバイスの認証結果画面でユーザー ID の表示方法を選択できます。
 
-      * <Cmd sid='ui_307' product='dev' />：ユーザー ID をすべて表示します。
+     * <Cmd sid='ui_307' product='dev' />：ユーザー ID をすべて表示します。
 
-      * <Cmd sid='ui_316' product='dev' />：ユーザー ID の先頭文字のみ表示します。
+     * <Cmd sid='ui_316' product='dev' />：ユーザー ID の先頭文字のみ表示します。
 
-      * <Cmd sid='ui_357' product='dev' />：ユーザー ID を表示しません。
+     * <Cmd sid='ui_357' product='dev' />：ユーザー ID を表示しません。
 
    * <Cmd sid='ui_177' product='dev' />：デバイスの認証結果画面でユーザー名の表示方法を選択できます。
 
-      * <Cmd sid='ui_307' product='dev' />：ユーザー名をすべて表示します。
+     * <Cmd sid='ui_307' product='dev' />：ユーザー名をすべて表示します。
 
-      * <Cmd sid='ui_316' product='dev' />：ユーザー名の先頭文字のみ表示します。
+     * <Cmd sid='ui_316' product='dev' />：ユーザー名の先頭文字のみ表示します。
 
-      * <Cmd sid='ui_357' product='dev' />：ユーザー名を表示しません。
+     * <Cmd sid='ui_357' product='dev' />：ユーザー名を表示しません。
 
 ## 顔
 
@@ -176,7 +176,7 @@ QRコード認証を設定できます。
 
       :::info
 
-      最適な性能を得るために、<Cmd sid='ui_229' product='dev' /> のサブオプションはデフォルト値のまま使用することを推奨します。 各オプションのデフォルト値は次のとおりです。
+      最適な性能を得るために、<Cmd sid='ui_229' product='dev' /> のサブオプションはデフォルト設定のまま使用することを推奨します。 各オプションのデフォルト値は次のとおりです。
 
       * 最大顔回転角度：15
 
@@ -206,9 +206,9 @@ QRコード認証を設定できます。
 
    * <Cmd sid='ui_278' product='dev' />：顔認証時のデバイス動作モードを設定できます。
 
-      * <Cmd sid='ui_359' product='dev' />：ビジュアルと赤外線の両方でマッチングを行い、顔認証の精度を向上させます。
+     * <Cmd sid='ui_359' product='dev' />：ビジュアルと赤外線の両方でマッチングを行い、顔認証の精度を向上させます。
 
-      * <Cmd sid='ui_159' product='dev' />：ユーザーはデバイスの認証範囲内を歩きながらでも顔認証を行うなど、高速に認証を実施できます。
+     * <Cmd sid='ui_159' product='dev' />：ユーザーはデバイスの認証範囲内を歩きながらでも顔認証を行うなど、高速に認証を実施できます。
 
    * <Cmd sid='ui_247' product='dev' />：写真などの偽造顔を用いたユーザー認証を防止できます。 <Cmd sid='ui_278' product='dev' /> を <Cmd sid='ui_359' product='dev' /> に設定すると有効になります。
 
@@ -222,9 +222,9 @@ QRコード認証を設定できます。
 
    * <Cmd sid='ui_070' product='dev' />：マスク検出など顔認証に関する高度な設定を変更できます。
 
-      * <Cmd sid='ui_123' product='dev' />：マスク検出の使用有無を設定できます。
+     * <Cmd sid='ui_123' product='dev' />：マスク検出の使用有無を設定できます。
 
-      * <Cmd sid='ui_067' product='dev' />：マスク着用の確認方法を設定できます。 <Cmd sid='ui_123' product='dev' /> を <Cmd sid='ui_161' product='dev' /> に設定すると有効になります。
+     * <Cmd sid='ui_067' product='dev' />：マスク着用の確認方法を設定できます。 <Cmd sid='ui_123' product='dev' /> を <Cmd sid='ui_161' product='dev' /> に設定すると有効になります。
 
          :::info
 
@@ -236,9 +236,9 @@ QRコード認証を設定できます。
 
          :::
 
-      * <Cmd sid='ui_124' product='dev' />：マスク着用を検知する感度を設定できます。 <Cmd sid='ui_123' product='dev' /> を <Cmd sid='ui_161' product='dev' /> に設定すると有効になります。
+     * <Cmd sid='ui_124' product='dev' />：マスク着用を検知する感度を設定できます。 <Cmd sid='ui_123' product='dev' /> を <Cmd sid='ui_161' product='dev' /> に設定すると有効になります。
 
-      * <Cmd sid='ui_368' product='dev' />：デバイスの用途に応じて確認モードを設定できます。
+     * <Cmd sid='ui_368' product='dev' />：デバイスの用途に応じて確認モードを設定できます。
 
          :::info
 

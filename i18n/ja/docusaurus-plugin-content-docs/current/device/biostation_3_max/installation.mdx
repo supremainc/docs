@@ -27,7 +27,7 @@ import InstallationBracketNotes from '../../common/_installation-bracket-notes.m
 
 1. 製品を取り付ける位置を決めてください。
 
-   <Image src="/img/device/installation-recommended-fsf2.png" className="none" width="35%" alone />
+   <Image src='/img/device/installation-recommended-fsf2.png' className='none' width='35%' alone />
 
    <InstallationBracketNotes height1={124} height2={127} />
 
@@ -35,7 +35,7 @@ import InstallationBracketNotes from '../../common/_installation-bracket-notes.m
 
 2. 製品を取り付ける位置にブラケットを固定ネジでしっかり固定してください。
 
-   <Image src="/img/device/installation-device1-bs3m.svg" className="none" width="30%" alone />
+   <Image src='/img/device/installation-device1-bs3m.svg' className='none' width='30%' alone />
 
    :::info
 
@@ -44,21 +44,27 @@ import InstallationBracketNotes from '../../common/_installation-bracket-notes.m
    * RF信号干渉を回避するため、最小離隔距離を確認して設置してください。
 
    <Columns>
-     <Column className="text--center">
-       <Image src="/img/device/installation-wall1-bs3m.png" className="none" width="60%" />
+   <Column className='text--center'>
 
-       <div className="overflow-x">
-         | 壁の厚さ | 距離 |
-         | :-: | :-: |
-         | 100 mm | 200 mm |
-         | 120 mm | 180 mm |
-         | 150 mm | 150 mm |
-       </div>
-     </Column>
+   <Image src='/img/device/installation-wall1-bs3m.png' className='none' width='60%' />
 
-     <Column className="text--center">
-       <Image src="/img/device/installation-wall2-bs3m.png" className="none" width="60%" />
-     </Column>
+   <div className='overflow-x'>
+
+   | 壁の厚さ | 距離 |
+   | :-: | :-: |
+   | 100 mm | 200 mm |
+   | 120 mm | 180 mm |
+   | 150 mm | 150 mm |
+
+   </div>
+
+   </Column>
+
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall2-bs3m.png' className='none' width='60%' />
+
+   </Column>
    </Columns>
 
    * モバイルアクセスカードを使用する場合、BLE信号の干渉を回避するため、デバイス間に1 m以上の距離を空けて設置してください。
@@ -69,7 +75,7 @@ import InstallationBracketNotes from '../../common/_installation-bracket-notes.m
 
 3. ケーブルカバーを取り付けた後、カバーに差し込まれている6本のネジを締めてしっかり固定し、固定されたブラケットの上に製品を取り付けてください。
 
-   <Image src="/img/device/installation-device2-fsf2.png" className="none" width="25%" alone />
+   <Image src='/img/device/installation-device2-fsf2.png' className='none' width='25%' alone />
 
    :::info
 
@@ -79,7 +85,7 @@ import InstallationBracketNotes from '../../common/_installation-bracket-notes.m
 
 4. 製品固定ネジを締めて、製品とブラケットを組み付けてください。
 
-   <Image src="/img/device/installation-device3-fsf2.png" className="none" width="25%" alone />
+   <Image src='/img/device/installation-device3-fsf2.png' className='none' width='25%' alone />
 
    :::info
 
@@ -88,19 +94,16 @@ import InstallationBracketNotes from '../../common/_installation-bracket-notes.m
    :::
 
 {/* ## 전원 연결 */}
-
 import PowerConnection from "../../common/_device-power-connection.mdx";
 
 <PowerConnection />
 
 {/* ## 네트워크 연결 */}
-
 import NetworkConnection from "../../common/_device-network-connection.mdx";
 
 <NetworkConnection />
 
 {/* ## Input 연결 */}
-
 import InputConnection from "../../common/_device-input-connetion.mdx";
 
 <InputConnection />
@@ -108,7 +111,6 @@ import InputConnection from "../../common/_device-input-connetion.mdx";
 <PageBreak />
 
 {/* ## 릴레이 연결 */}
-
 import RelayConnectioin from "../../common/_device-relay-connection.mdx";
 
 <RelayConnectioin />
@@ -116,33 +118,29 @@ import RelayConnectioin from "../../common/_device-relay-connection.mdx";
 <PageBreak />
 
 {/* ## 독립형 연결 */}
-
 import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
 
 <StandaloneConnection />
 
 {/* 공통 노트 */}
-
 import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
 
-<CommonNotes product="BioStation 3 Max" product_2="FaceStation 2, FaceLite" />
+<CommonNotes product='BioStation 3 Max' product_2='FaceStation 2, FaceLite' />
 
 <PageBreak />
 
 {/* ## Secure I/O 2 연결 */}
-
 import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
 
 <SecureIOConnection />
 
 {/* 공통 노트 */}
 
-<CommonNotes product="BioStation 3 Max" product_2="FaceStation 2, FaceLite" />
+<CommonNotes product='BioStation 3 Max' product_2='FaceStation 2, FaceLite' />
 
 <PageBreak />
 
 {/* ## Wiegand 연결 */}
-
 import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
 
 <WiegandConnection />
