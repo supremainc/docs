@@ -498,5 +498,9 @@
   "sidebar.biostar_air.category.하드웨어 설치": {
     "message": "하드웨어 설치",
     "description": "The label for category '하드웨어 설치' in sidebar 'biostar_air'"
+  },
+  "sidebar.device_manager.category.릴리스 노트": {
+    "message": "릴리스 노트",
+    "description": "The label for category '릴리스 노트' in sidebar 'device_manager'"
   }
 }
