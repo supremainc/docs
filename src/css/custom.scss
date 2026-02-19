@@ -89,6 +89,34 @@ html[lang='ko-KR'] * {
 
 html[lang='ja-JP'] *, html[lang='ja'] * {
   font-family: 'Noto Sans JP', sans-serif;
+  .markdown {
+    .bug--lists {
+      ol {
+        li:has(>.badge) {
+          padding-right: calc(0.5rem + 177px);
+        }
+        li {
+          .badge {
+            width: 177px;
+          }
+          p {
+            padding-right: calc(0.5rem + 177px);
+            .badge {
+              width: 177px;
+            }
+          }
+        }
+      }
+      ul {
+        li {
+          margin-right: 0;
+            p {
+              padding-right: calc(0.5rem + 177px);
+            }
+        }
+      }
+    }
+  }
 }
 
 html[lang='en-US'] *, html[lang='es-419'] *, html[lang='es'] * {
@@ -96,7 +124,13 @@ html[lang='en-US'] *, html[lang='es-419'] *, html[lang='es'] * {
   .markdown {
     .bug--lists {
       ol {
+        li:has(>.badge) {
+          padding-right: calc(0.5rem + 177px);
+        }
         li {
+          .badge {
+            width: 177px;
+          }
           p {
             padding-right: calc(0.5rem + 177px);
             .badge {
@@ -805,6 +839,10 @@ body[data-rh] .redocusaurus {
   .bug--lists {
     ol {
       width: 100%;
+      li:has(>.badge) {
+        margin-bottom: 0;
+        padding-right: calc(0.5rem + 148px);
+      }
       li {
         position: relative;
         &:hover {
