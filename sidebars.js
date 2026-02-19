@@ -1487,7 +1487,33 @@ const sidebars = {
         'device/device_manager/initial-setup',
         'device/device_manager/ip-device-settings',
         'device/device_manager/xpd2-settings',
-        'device/device_manager/appendices'
+        'device/device_manager/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/device_manager/release-notes/index',
+          },
+          items: [
+            'device/device_manager/release-notes/122',
+            'device/device_manager/release-notes/121',
+            'device/device_manager/release-notes/120',
+            'device/device_manager/release-notes/118',
+            'device/device_manager/release-notes/117',
+            'device/device_manager/release-notes/116',
+            'device/device_manager/release-notes/115',
+            'device/device_manager/release-notes/114',
+            'device/device_manager/release-notes/113',
+            'device/device_manager/release-notes/111',
+            'device/device_manager/release-notes/110',
+            'device/device_manager/release-notes/100',
+          ]
+        },
       ]
     }
   ],

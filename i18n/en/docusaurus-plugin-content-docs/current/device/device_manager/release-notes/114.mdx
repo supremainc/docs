@@ -1,0 +1,66 @@
+---
+id: 114
+title: Application Version 1.1.4
+---
+
+# Application Version 1.1.4
+
+Release<Separator/>2022-02-09
+
+:::caution
+
+Improvements in Device Manager v1.1.4 are supported on Android 5.0 Lollipop OS or later, and iOS will be supported in the future. Device Manager v1.1.3 and earlier versions are supported on Android 5.0 Lollipop OS or later, and iOS 9.0 or later.
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Added setting options for XPass D2.
+
+   * Limited the OSDP ID setting range from 0 to 126.
+
+   * Supports setting options for each card type.
+
+   * Supports Byte order setting for CSN and smart card.
+
+   * Added the default Wiegand card formats.
+
+   * Supports DESFire Advanced setting.
+
+   * Supports DEDFire Encryption Type setting.
+
+   * Supports Secure Tamper setting.
+
+   * Improved to display the device ID under the model name when searching for the device.
+
+   * Improved the transmission performance when sending a firmware file for the firmware upgrade.
+
+1. Added the keypad setting to XPass D2 keypad model (XPD2-GKDB).
+
+   * Supports the keypad on/off button: Supports inputting the card ID using the keypad of the device.
+
+   * Supports the option to select a single key or buffered key if inputting the card ID using the keypad when using the device as a Wiegand reader.
+
+   * Added LED operation of the device and user interface of the application according to auth mode operation.
+
+1. Added FW upgrade UI on XPass 2.
+
+   :::info
+
+   Firmware upgrade using Suprema Device Manager will be supported in a future version of XPass 2 firmware.
+
+   :::
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. XPass D2 (Rev2) was downgraded to the firmware of the old version device even though it is not compatible with that firmware. <Badge>1.1.1</Badge>
+
+1. A device disconnection popup occurred on the ‘Scan Card’ screen, and the back and refresh buttons did not work after reconnecting the device. <Badge>1.0.0</Badge>
+
+</BugLists>
