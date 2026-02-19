@@ -1500,7 +1500,7 @@ const sidebars = {
             id: 'device/device_manager/release-notes/index',
           },
           items: [
-            'device/device_manager/release-notes/122',
+            // 'device/device_manager/release-notes/122',
             'device/device_manager/release-notes/121',
             'device/device_manager/release-notes/120',
             'device/device_manager/release-notes/118',
