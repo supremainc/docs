@@ -806,27 +806,35 @@ body[data-rh] .redocusaurus {
     ol {
       width: 100%;
       li {
+        position: relative;
         &:hover {
           background-color: var(--ifm-color-nextstep-background);
+        }
+        .badge {
+          position: absolute;
+          right: 0;
+          top: .4rem;
+          text-align: center;
+          width: 148px;
         }
         p {
           position: relative;
           width: 100%;
           padding: .2rem 0;
-          padding-right: calc(0.5rem + 138px);
+          padding-right: calc(0.5rem + 148px);
           .badge {
             position: absolute;
             right: 0;
             top: .4rem;
             text-align: center;
-            width: 138px;
+            width: 148px;
           }
         }
         ul {
           li {
             margin-right: 0;
             p {
-              padding-right: calc(0.5rem + 138px);
+              padding-right: calc(0.5rem + 148px);
             }
           }
         }
