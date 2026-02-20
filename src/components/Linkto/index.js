@@ -6,6 +6,8 @@ export default function Linkto({ to, children }) {
 
     if (currentLocale !== 'ko') {
         docsLink = `https://docs.supremainc.com/${currentLocale}/`;
+    } else if (currentLocale === 'ru') {
+        docsLink = `https://docs.supremainc.com/en/`;
     } else {
         docsLink = 'https://docs.supremainc.com/';
     }
