@@ -1,0 +1,294 @@
+---
+id: installation
+title: Установка
+description: Содержит полные инструкции по установке и примеры подключения, необходимые для устройства.
+keywords:
+  - Кронштейн
+  - Питание
+  - Сеть
+  - Вход
+  - Реле
+  - Автономный
+  - Secure I/O
+  - Wiegand
+---
+
+Содержит полные инструкции по установке и примеры подключения, необходимые для устройства.
+
+## Крепление кронштейна и устройства
+
+1. Плотно закрепите кронштейн с помощью крепёжных винтов в месте установки устройства.
+
+   <Image src='/img/device/installation-device1-xpq2.svg' className='none' width='20%' alone />
+
+   :::info
+
+   - Если установка производится на бетонную стену, просверлите отверстие, вставьте пластиковый дюбель и закрепите крепёжным винтом.
+
+   - Для предотвращения радиочастотных помех необходимо соблюдать минимальное расстояние между устройствами.
+
+   <Columns>
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall1-xpq2.png' className='none' width='60%' />
+
+   <div className='overflow-x'>
+
+   | Толщина стены | Расстояние |
+   | :-----------: | :--------: |
+   |     100 мм    |   270 мм   |
+   |     120 мм    |   250 мм   |
+   |     150 мм    |   170 мм   |
+
+   </div>
+
+   </Column>
+
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall2-xpq2.png' className='none' width='60%' />
+
+   </Column>
+   </Columns>
+
+   - При использовании мобильных карт доступа устанавливайте устройства с расстоянием не менее 1 м между ними, чтобы избежать помех BLE.
+
+   :::
+
+   <PageBreak />
+
+2. Затяните четыре винта, фиксирующих крышку кабеля.
+
+   <Image src='/img/device/installation-device2-xpq2.svg' className='none' width='20%' alone />
+
+   :::info
+
+   Убедитесь, что крышка кабеля полностью закрыта после подключения к устройству, чтобы обеспечить водо- и пылезащиту (степень защиты IP65).
+
+   :::
+
+3. Установите устройство на закреплённый кронштейн.
+
+   <Image src='/img/device/installation-device3-xpq2.svg' className='none' width='35%' alone />
+
+4. Поверните фиксирующие винты для соединения устройства с кронштейном.
+
+   <Image src='/img/device/installation-device4-xpq2.svg' className='none' width='15%' alone />
+
+   :::info
+
+   При сборке устройства с кронштейном вы можете использовать прилагаемый фиксирующий винт кронштейна (звездообразный) вместо стандартного винта крепления устройства для большей надёжности.
+
+   :::
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+<PageBreak />
+
+## Подключите питание считывателя и замка
+
+### Подключите питание считывателя
+
+<Image src='/img/device/installation-reader-power-connection-xpq2.png' className='none' width='65%' />
+
+### Подключите питание замка
+
+<Image src='/img/device/installation-lock-power-connection-xpq2.png' className='none' width='65%' />
+
+<PageBreak />
+
+### Технические характеристики питания для считывателя и замка
+
+<div className='overflow-x'>
+
+|    Питание    | Максимальный ток считывателя | Максимальный ток замка |
+| :-----------: | :--------------------------: | :--------------------: |
+|     DC 12V    |            500 мА            |          1,2 А         |
+|     DC 24V    |            250 мА            |         600 мА         |
+| PoE (12V out) |            500 мА            |    Не поддерживается   |
+
+</div>
+
+### Максимальная длина удлинителя по спецификациям кабеля
+
+Максимальная длина подключения может варьироваться в зависимости от характеристик кабеля и условий установки при подключении питания. Неправильное подключение кабеля может привести к сбоям в работе устройства. Устройство поддерживает DC 12 В, DC 24 В и PoE. Проверьте максимальную длину удлинителя для каждого сечения кабеля и подключайте питание правильно.
+
+<Table>
+<Thead>
+<Row>
+
+<Th rowspan={2}>Спецификация кабеля</Th>
+
+<Th colspan={2}>DC 12V</Th>
+
+<Th colspan={2}>DC 24V</Th>
+
+<Th colspan={2}>PoE (12V Output)</Th>
+
+</Row>
+<Row>
+
+<Th>Считыватель (500 мА)</Th>
+
+<Th>Замок (1,2 А)</Th>
+
+<Th>Считыватель (250 мА)</Th>
+
+<Th>Замок (600 мА)</Th>
+
+<Th>Считыватель (500 мА)</Th>
+
+</Row>
+</Thead>
+<Tbody>
+
+<Row className='center'>
+<Td>14 AWG</Td>
+<Td>190 м</Td>
+<Td>95 м</Td>
+<Td>770 м</Td>
+<Td>385 м</Td>
+<Td>190 м</Td>
+
+</Row>
+
+<Row className='center'>
+<Td>16 AWG</Td>
+<Td>120 м</Td>
+<Td>60 м</Td>
+<Td>480 м</Td>
+<Td>240 м</Td>
+<Td>120 м</Td>
+</Row>
+
+<Row className='center'>
+<Td>18 AWG</Td>
+<Td>75 м</Td>
+<Td>35 м</Td>
+<Td>300 м</Td>
+<Td>150 м</Td>
+<Td>75 м</Td>
+</Row>
+
+</Tbody>
+</Table>
+
+:::info
+
+Фактическая максимальная длина удлинителя может отличаться в зависимости от сопротивления кабеля, производителя и модели.
+
+:::
+
+<PageBreak />
+
+{/* ## 네트워크 연결 */}
+import NetworkConnection from "../../common/_device-network-connection.mdx";
+
+<NetworkConnection />
+
+{/* ## Input 연결 */}
+import InputConnection from "../../common/_device-input-connetion.mdx";
+
+<InputConnection />
+
+<PageBreak />
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-relay-connection.mdx";
+
+<RelayConnectioin />
+
+<PageBreak />
+
+{/* ## 독립형 연결 */}
+import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
+
+<StandaloneConnection />
+
+{/* 공통 노트 */}
+import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
+
+<CommonNotes />
+
+<PageBreak />
+
+{/* ## Secure I/O 2 연결 */}
+import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
+
+<SecureIOConnection />
+
+{/* 공통 노트 */}
+
+<CommonNotes />
+
+<PageBreak />
+
+{/* ## Wiegand 연결 */}
+import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
+
+<WiegandConnection />
+
+{/* ## 네트워크 설정 초기화 */}
+import Resetnetwork from "../../common/_device-reset-network-settings.mdx";
+
+<Resetnetwork />
+
+<PageBreak />
+
+{/* ## 공장 초기화 */}
+import Factoryreset from "../../common/_device-factory-reset.mdx";
+
+<Factoryreset name='green' />
+
+<PageBreak />
+
+## Обновление прошивки
+
+Вы можете подключить USB-накопитель для обновления прошивки.
+
+1. Сохраните файл прошивки на USB-накопитель для обновления.
+
+   :::info
+
+   Рекомендуется сохранять на USB-накопителе только один файл прошивки для обновления.
+
+   :::
+
+2. Подключите USB-накопитель к устройству.
+
+   :::info
+
+   Во время чтения USB-накопителя аутентификация временно приостанавливается.
+
+   :::
+
+3. Когда светодиод или зуммер запрашивает аутентификацию, выполните вход с правами администратора.
+
+   :::info
+
+   - Зарегистрируйте администратора в BioStar X для устройства. Обновление прошивки невозможно, если в устройстве не зарегистрирован администратор. Для подробных инструкций по регистрации администратора обратитесь к <Linkto to='platform/biostar_x/set-permission'>Руководству администратора BioStar X</Linkto>.
+
+   - При каждом подключении USB-накопителя допускается только одна попытка аутентификации.
+
+   - Если аутентификация не удалась, светодиод или зуммер укажут на ошибку, и чтение USB завершится. Отключите USB-накопитель и подключите его снова к устройству.
+
+   :::
+
+4. После успешной аутентификации администратора устройство начнет обновление прошивки и уведомит об этом с помощью светодиода.
+
+   :::info
+
+   Если файл прошивки отсутствует или поврежден, обновление не начнется, и светодиод или зуммер укажут на ошибку.
+
+   :::
+
+5. Устройство автоматически перезагрузится после завершения обновления прошивки.
+
+:::caution
+
+Не отключайте питание во время обновления прошивки устройства. Устройство может работать неправильно.
+
+:::

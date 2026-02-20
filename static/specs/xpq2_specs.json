@@ -14,6 +14,7 @@
               "value": {
                "ko": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
                "en": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
+               "ru": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
                "es": "125kHz EM y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
                "ja": "125kHz EM および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>、FeliCa"
               }
@@ -23,6 +24,7 @@
               "value": {
                 "ko": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
                 "en": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
+                "ru": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
                 "es": "125kHz EM, HID Prox y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
                 "ja": "125kHz EM、HID Prox および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>、FeliCa、iCLASS SE/SR/Seos"
               }
@@ -35,6 +37,7 @@
           "value": {
             "ko": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
             "en": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
+            "ru": "EM/MIFARE/DESFire/HID iCLASS: 50 мм, HID Prox/FeliCa: 30 мм",
             "es": "EM/MIFARE/DESFire/HID iCLASS: 50 mm, HID Prox/FeliCa: 30 mm",
             "ja": "EM/MIFARE/DESFire/HID iCLASS：50 mm、HID Prox/FeliCa：30 mm"
           },
@@ -46,6 +49,7 @@
           "value": {
             "ko": "NFC, BLE",
             "en": "NFC, BLE",
+            "ru": "NFC, BLE",
             "es": "NFC, BLE",
             "ja": "NFC、BLE"
           }
@@ -84,6 +88,7 @@
           "value": {
             "ko": "다중 색상",
             "en": "Multi-color",
+            "ru": "Многоцветный",
             "es": "Multi-color",
             "ja": "マルチカラー"
           }
@@ -94,6 +99,7 @@
           "value": {
             "ko": "멀티톤 버저",
             "en": "Multi-tone Buzzer",
+            "ru": "Мультитональный зуммер",
             "es": "Timbre de varios tonos",
             "ja": "マルチトーンブザー"
           }
@@ -104,6 +110,7 @@
           "value": {
             "ko": [ "DC 전원: -20 °C ~ 60 °C", "PoE 전원: -20 °C ~ 50 °C" ],
             "en": [ "DC Power: -20 °C ~ 60 °C", "PoE Power: -20 °C ~ 50 °C" ],
+            "ru": [ "Питание DC: -20 °C ~ 60 °C", "Питание PoE: -20 °C ~ 50 °C" ],
             "es": [ "Energía DC: De -20 °C a 60 °C", "Energía PoE: De -20 °C a 50 °C" ],
             "ja": [ "DC 電源：-20 °C ~ 60 °C", "PoE 電源：-20 °C ~ 50 °C" ]
           }
@@ -114,6 +121,7 @@
           "value": {
             "ko": "-40 °C ~ 70 °C",
             "en": "-40 °C ~ 70 °C",
+            "ru": "-40 °C ~ 70 °C",
             "es": "De -40 °C a 70 °C",
             "ja": "-40 °C ~ 70 °C"
           }
@@ -124,6 +132,7 @@
           "value": {
             "ko": "0 % ~ 95 %, 비응축",
             "en": "0 % ~ 95 %, non-condensing",
+            "ru": "0 % ~ 95 %, без конденсации",
             "es": "Del 0 % al 95 %, sin condensación",
             "ja": "0 % ~ 95 %（結露なきこと）"
           }
@@ -134,6 +143,7 @@
           "value": {
             "ko": "0 % ~ 95 %, 비응축",
             "en": "0 % ~ 95 %, non-condensing",
+            "ru": "0 % ~ 95 %, без конденсации",
             "es": "Del 0 % al 95 %, sin condensación",
             "ja": "0 % ~ 95 %（結露なきこと）"
           }
@@ -144,6 +154,7 @@
           "value": {
             "ko": "1개 (QR 전용)",
             "en": "1 Camera (QR only)",
+            "ru": "1 камера (только для QR)",
             "es": "1 Cámara (solo QR)",
             "ja": "1 台のカメラ（QR専用）"
           }
@@ -160,6 +171,7 @@
           "value": {
             "ko": "CE, UKCA, KC, FCC, IC, RCM, SIG, RoHS, REACH, WEEE, EAC, TELEC",
             "en": "CE, UKCA, KC, FCC, IC, RCM, SIG, RoHS, REACH, WEEE, EAC, TELEC",
+            "ru": "CE, UKCA, KC, FCC, IC, RCM, SIG, RoHS, REACH, WEEE, EAC, TELEC",
             "es": "CE, UKCA, KC, FCC, IC, RCM, SIG, RoHS, REACH, WEEE, EAC, TELEC",
             "ja": "CE、UKCA、KC、FCC、IC、RCM、SIG、RoHS、REACH、WEEE、EAC、TELEC"
           }
@@ -183,6 +195,7 @@
             "ko": "카드: 200,000",
             "en": "Card: 200,000",
             "es": "Tarjeta: 200,000",
+            "ru": "Карта: 200,000",
             "ja": "カード：200,000"
           }
         },
@@ -193,6 +206,7 @@
             "ko": "카드: 200,000",
             "en": "Card: 200,000",
             "es": "Tarjeta: 200,000",
+            "ru": "Карта: 200,000",
             "ja": "カード：200,000"
           }
         },
@@ -213,6 +227,7 @@
           "value": {
             "ko": "지원 (10/100 Mbps, 자동 MDI/MDI-X)",
             "en": "Supported (10/100 Mbps, auto MDI/MDI-X)",
+            "ru": "Поддерживается (10/100 Mbps, авто MDI/MDI-X)",
             "es": "Compatible (10/100 Mbps, MDI/MDI-X automática)",
             "ja": "サポート対象（10/100 Mbps、自動 MDI/MDI-X）"
           }
@@ -224,6 +239,7 @@
             "ko": "TCP, UDP",
             "en": "TCP, UDP",
             "es": "TCP, UDP",
+            "ru": "TCP, UDP",
             "ja": "TCP、UDP"
           }
         },
@@ -234,6 +250,7 @@
             "ko": "1채널 마스터/슬레이브 (선택 가능)",
             "en": "1 ch Master / Slave (Selectable)",
             "es": "1 canal maestro/esclavo (seleccionable)",
+            "ru": "1 канал Мастер/Слейв (выбирается)",
             "ja": "1 チャンネルホスト/スレーブ（選択可能）"
           }
         },
@@ -244,6 +261,7 @@
             "ko": "OSDP V2 호환",
             "en": "OSDP V2 compliant",
             "es": "Compatible con OSDP V2",
+            "ru": "Совместимо с OSDP V2",
             "ja": "OSDP V2 準拠"
           }
         },
@@ -254,6 +272,7 @@
             "ko": "1채널 입력/출력 (선택 가능)",
             "en": "1 ch Input / 1 ch Output (Selectable)",
             "es": "Entrada o salida de 1 canal (seleccionable)",
+            "ru": "1 канал Вход / 1 канал Выход (выбирается)",
             "ja": "1 チャンネル入力または 1 チャンネル出力（選択可能）"
           }
         },
@@ -264,6 +283,7 @@
             "ko": "입력 3채널",
             "en": "3 ch Inputs",
             "es": "3 canales de entrada",
+            "ru": "3 канала Вход",
             "ja": "3 チャンネル入力"
           }
         },
@@ -274,6 +294,7 @@
             "ko": "1개",
             "en": "1 relay",
             "es": "1 relé",
+            "ru": "1 реле",
             "ja": "1 リレー"
           }
         },
@@ -292,6 +313,7 @@
                 "ko": "지원 (IEEE 802.3af 호환)",
                 "en": "Supported (IEEE 802.3af compliant)",
                 "es": "Compatible (compatible con IEEE 802.3af)",
+                "ru": "Поддерживается (совместимо с IEEE 802.3af)",
                 "ja": "対応（IEEE 802.3af 互換）"
               }
             }
@@ -304,6 +326,7 @@
             "ko": "USB 2.0 (Type C), 펌웨어 업그레이드만 지원",
             "en": "USB 2.0 (Type C), only FW-Upgrade",
             "es": "USB 2.0 (tipo C), solo actualización de firmware",
+            "ru": "USB 2.0 (Type C), только обновление прошивки",
             "ja": "USB 2.0（Type C）、ファームウェアアップグレードのみ"
           }
         },
@@ -334,7 +357,8 @@
                 "ko": [ "DC OUT 미사용 시 전류: 최대 0.5 A", "DC OUT 사용 시 전류: 최대 2.6 A" ],
                 "en": [ "DC OUT not used Current: Max. 0.5 A", "DC OUT used Current: Max. 2.6 A" ],
                 "es": [ "Corriente con DC OUT no utilizado: Máx. 0.5 A", "Corriente con DC OUT utilizado: Máx. 2.6 A" ],
-                "ja": [ "DC OUT 未使用時の電流：最大 0.5 A", "DC OUT 使用時の電流：最大 2.6 A" ]
+                "ja": [ "DC OUT 未使用時の電流：最大 0.5 A", "DC OUT 使用時の電流：最大 2.6 A" ],
+                "ru": [ "DC OUT не используется Ток: Макс. 0.5 A", "DC OUT используется Ток: Макс. 2.6 A" ]
               }
             },
             "24vdc": {
@@ -343,7 +367,8 @@
                 "ko": [ "DC OUT 미사용 시 전류: 최대 0.3 A", "DC OUT 사용 시 전류: 최대 1.4 A" ],
                 "en": [ "DC OUT not used Current: Max. 0.3 A", "DC OUT used Current: Max. 1.4 A" ],
                 "es": [ "Corriente con DC OUT no utilizado: Máx. 0.3 A", "Corriente con DC OUT utilizado: Máx. 1.4 A" ],
-                "ja": [ "DC OUT 未使用時の電流：最大 0.3 A", "DC OUT 使用時の電流：最大 1.4 A" ]
+                "ja": [ "DC OUT 未使用時の電流：最大 0.3 A", "DC OUT 使用時の電流：最大 1.4 A" ],
+                "ru": [ "DC OUT не используется Ток: Макс. 0.3 A", "DC OUT используется Ток: Макс. 1.4 A" ]
               }
             }
           }
@@ -359,6 +384,7 @@
                 "ko": [ "리더: 최대 0.5 A", "락: 최대 1.2 A" ],
                 "en": [ "Reader: Max. 0.5 A", "Lock: Max. 1.2 A" ],
                 "es": [ "Lector: Máx. 0.5 A", "Bloqueo: Máx. 1.2 A" ],
+                "ru": [ "Читатель: Макс. 0.5 A", "Замок: Макс. 1.2 A" ],
                 "ja": [ "リーダー：最大 0.5 A", "ロック：最大 1.2 A" ]
               }
             },
@@ -368,6 +394,7 @@
                 "ko": [ "리더: 최대 0.25 A", "락: 최대 0.6 A" ],
                 "en": [ "Reader: Max. 0.25 A", "Lock: Max. 0.6 A" ],
                 "es": [ "Lector: Máx. 0.25 A", "Bloqueo: Máx. 0.6 A" ],
+                "ru": [ "Читатель: Макс. 0.25 A", "Замок: Макс. 0.6 A" ],
                 "ja": [ "リーダー：最大 0.25 A", "ロック：最大 0.6 A" ]
               }
             },
@@ -378,6 +405,7 @@
                 "ko": [ "리더: 최대 0.5 A" ],
                 "en": [ "Reader: Max. 0.5 A" ],
                 "es": [ "Lector: Máx. 0.5 A" ],
+                "ru": [ "Читатель: Макс. 0.5 A" ],
                 "ja": [ "リーダー：最大 0.5 A" ]
               }
             }
@@ -390,6 +418,7 @@
             "ko": [ "최소: 3 V", "최대: 5 V" ],
             "en": [ "Min.: 3 V", "Max.: 5 V" ],
             "es": [ "Mín.: 3 V", "Máx.: 5 V" ],
+            "ru": [ "Мин.: 3 V", "Макс.: 5 V" ],
             "ja": [ "最小：3 V", "最大：5 V" ]
           }
         },
@@ -400,6 +429,7 @@
             "ko": "최대: 1 V",
             "en": "Max.: 1 V",
             "es": "Máx.: 1 V",
+            "ru": "Макс.: 1 V",
             "ja": "最大：1 V"
           }
         },
@@ -410,6 +440,7 @@
             "ko": "4.7 kΩ (입력 단자는 4.7 kΩ으로 풀업되어 있습니다.)",
             "en": "4.7 kΩ (The input ports are pulled up with 4.7 kΩ.)",
             "es": "4.7 kΩ (los puertos de entrada se polarizan con 4.7 kΩ)",
+            "ru": "4.7 kΩ (Входные порты подтянуты с помощью 4.7 kΩ)",
             "ja": "4.7 kΩ（入力ポートは 4.7 KΩ でプルアップされる）"
           }
         },
@@ -420,6 +451,7 @@
             "ko": "4.8 V 이상",
             "en": "More than 4.8 V",
             "es": "Más de 4.8 V",
+            "ru": "Более 4.8 V",
             "ja": "4.8 V 以上"
           }
         },
@@ -430,6 +462,7 @@
             "ko": "0.2 V 이하",
             "en": "Less than 0.2 V",
             "es": "Menos de 0.2 V",
+            "ru": "Менее 0.2 V",
             "ja": "0.2 V 未満"
           }
         },
@@ -440,6 +473,7 @@
             "ko": "1 kΩ으로 내부 풀업",
             "en": "Internally pulled up with 1 kΩ",
             "es": "Polarización interna de 1 kΩ",
+            "ru": "Внутренне подтянут с 1 kΩ",
             "ja": "1 kΩ の内部プルアップ"
           }
         },
@@ -450,6 +484,7 @@
             "ko": [ "2 A @ 30 VDC Resistive load", "1 A @ 30 VDC Inductive load" ],
             "en": [ "2 A @ 30 VDC Resistive load", "1 A @ 30 VDC Inductive load" ],
             "es": [ "Carga resistiva de 2 A a 30 VCC", "Carga inductiva de 1 A a 30 VCC" ],
+            "ru": [ "Резистивная нагрузка: 2 A @ 30 VDC", "Индуктивная нагрузка: 1 A @ 30 VDC" ],
             "ja": [ "2 A @ 30 VDC 抵抗負荷", "1 A @ 30 VDC 誘導負荷" ]
           }
         }
