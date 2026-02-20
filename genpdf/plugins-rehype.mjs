@@ -45,6 +45,7 @@ const codeKo = JSON.parse(readFileSync(`${__dirname}/../i18n/ko/code.json`, 'utf
 const codeEn = JSON.parse(readFileSync(`${__dirname}/../i18n/en/code.json`, 'utf-8'));
 const codeEs = JSON.parse(readFileSync(`${__dirname}/../i18n/es/code.json`, 'utf-8'));
 const codeJa = JSON.parse(readFileSync(`${__dirname}/../i18n/ja/code.json`, 'utf-8'));
+const codeRu = JSON.parse(readFileSync(`${__dirname}/../i18n/ru/code.json`, 'utf-8'));
 
 // Treeview SVG icons from static/img/menus
 const treeviewSvgIcons = {
@@ -95,7 +96,8 @@ function buildSpecSectionAst(data, language = 'ko') {
       ko: codeKo,
       en: codeEn,
       es: codeEs,
-      ja: codeJa
+      ja: codeJa,
+      ru: codeRu
     };
     
     const codeFile = codeMap[language] || codeKo;
@@ -698,6 +700,7 @@ export function rehypeProcessCmdComponent(language = 'ko') {
     en: codeEn,
     es: codeEs,
     ja: codeJa,
+    ru: codeRu
   };
 
   const extractText = (nodes) => {
@@ -2036,7 +2039,8 @@ export function rehypeProcessNextStepComponent(language = 'ko') {
         ko: codeKo,
         en: codeEn,
         es: codeEs,
-        ja: codeJa
+        ja: codeJa,
+        ru: codeRu
       };
       
       const codeFile = codeMap[language] || codeKo;

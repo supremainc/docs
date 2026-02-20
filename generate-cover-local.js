@@ -88,15 +88,17 @@ function getSupremaLogoSVG() {
 function detectLanguage(lang, number) {
     switch (lang) {
         case "ko":
-            return { isKorean: true, isJapanese: false, isSpanish: false, langCover: '한국어' };
+            return { isKorean: true, isJapanese: false, isSpanish: false, isRussian: false, langCover: '한국어' };
         case "en":
-            return { isKorean: false, isJapanese: false, isSpanish: false, langCover: 'English' };
+            return { isKorean: false, isJapanese: false, isSpanish: false, isRussian: false, langCover: 'English' };
         case "ja":
-            return { isKorean: false, isJapanese: true, isSpanish: false, langCover: '日本語' };
+            return { isKorean: false, isJapanese: true, isSpanish: false, isRussian: false, langCover: '日本語' };
         case "es":
-            return { isKorean: false, isJapanese: false, isSpanish: true, langCover: 'Español' };
+            return { isKorean: false, isJapanese: false, isSpanish: true, isRussian: false, langCover: 'Español' };
+        case "ru":
+            return { isKorean: false, isJapanese: false, isSpanish: false, isRussian: true, langCover: 'Русский' };
     }
-    return { isKorean, isJapanese, isSpanish, langCover };
+    return { isKorean, isJapanese, isSpanish, isRussian, langCover };
 }
 
 // 언어별 버전 및 번호 레이블 매핑
@@ -106,20 +108,22 @@ function getLocalizedVersionAndNumber() {
             ko: '버전',
             en: 'Version',
             ja: 'バージョン',
-            es: 'Versión'
+            es: 'Versión',
+            ru: 'Версия'
         },
         number: {
             ko: 'KO',
             en: 'EN',
             ja: 'JA',
-            es: 'ES'
+            es: 'ES',
+            ru: 'RU'
         }
     };
 }
 
 // 언어에 따른 버전 및 번호 처리
-function getProcessedVersionAndNumber(version, number, isKorean, isJapanese, isSpanish) {
-    const langCode = isKorean ? 'ko' : isJapanese ? 'ja' : isSpanish ? 'es' : 'en';
+function getProcessedVersionAndNumber(version, number, isKorean, isJapanese, isSpanish, isRussian) {
+    const langCode = isKorean ? 'ko' : isJapanese ? 'ja' : isSpanish ? 'es' : isRussian ? 'ru' : 'en';
     const { version: versionLabel, number: numberLabel } = getLocalizedVersionAndNumber();
     
     const processedVersion = `${versionLabel[langCode]} ${version}`;
@@ -128,31 +132,35 @@ function getProcessedVersionAndNumber(version, number, isKorean, isJapanese, isS
 }
 
 // subtitle 값에 따른 언어별 제목 매핑
-function getLocalizedSubtitle(subtitleCode, isKorean = true, isJapanese = false, isSpanish = false) {
+function getLocalizedSubtitle(subtitleCode, isKorean = true, isJapanese = false, isSpanish = false, isRussian = false) {
     const subtitleMap = {
         'IG': {
             ko: '설치 가이드',
             en: 'INSTALLATION GUIDE',
             ja: '設置ガイド',
-            es: 'Guía de instalación de'
+            es: 'Guía de instalación de',
+            ru: 'Руководство по установке'
         },
         'UG': {
             ko: '사용자 가이드',
             en: 'USER GUIDE',
             ja: 'ユーザーガイド',
-            es: 'Guía de usuario de'
+            es: 'Guía de usuario de',
+            ru: 'Руководство пользователя'
         },
         'AG': {
             ko: '관리자 가이드',
             en: 'Administrator Guide',
             ja: '管理者ガイド',
-            es: 'Guía del administrador de'
+            es: 'Guía del administrador de',
+            ru: 'Руководство администратора'
         },
         'RN': {
             ko: 'Release Notes',
             en: 'Release Notes',
             ja: 'Release Notes',
-            es: 'Release Notes'
+            es: 'Release Notes',
+            ru: 'Release Notes'
         }
     };
 
@@ -162,7 +170,7 @@ function getLocalizedSubtitle(subtitleCode, isKorean = true, isJapanese = false,
         return subtitleCode;
     }
 
-    const langCode = isKorean ? 'ko' : isJapanese ? 'ja' : isSpanish ? 'es' : 'en';
+    const langCode = isKorean ? 'ko' : isJapanese ? 'ja' : isSpanish ? 'es' : isRussian ? 'ru' : 'en';
     return mapping[langCode];
 }
 
@@ -177,13 +185,13 @@ function generateCoverHTML(params) {
     } = params;
 
     // 언어 감지
-    const { isKorean, isJapanese, isSpanish, langCover } = detectLanguage(lang, number);
+    const { isKorean, isJapanese, isSpanish, isRussian, langCover } = detectLanguage(lang, number);
     
     // subtitle이 코드(IG, UG, AG)인지 확인하고 적절한 제목으로 변환
-    const processedSubtitle = getLocalizedSubtitle(subtitle, isKorean, isJapanese, isSpanish);
+    const processedSubtitle = getLocalizedSubtitle(subtitle, isKorean, isJapanese, isSpanish, isRussian);
     
     // 버전과 번호 처리
-    const { processedVersion, processedNumber } = getProcessedVersionAndNumber(version, number, isKorean, isJapanese, isSpanish);
+    const { processedVersion, processedNumber } = getProcessedVersionAndNumber(version, number, isKorean, isJapanese, isSpanish, isRussian);
 
     const logoSVG = getSupremaLogoSVG();
     const logoDataUri = `data:image/svg+xml;base64,${Buffer.from(logoSVG).toString('base64')}`;
@@ -192,7 +200,7 @@ function generateCoverHTML(params) {
     const coverpageClass = title === 'BioStar X' ? 'coverpage bsx' : 'coverpage';
 
     return `<!DOCTYPE html>
-<html lang="${isKorean ? 'ko' : isJapanese ? 'ja' : 'en'}">
+<html lang="${isKorean ? 'ko' : isJapanese ? 'ja' : isSpanish ? 'es' : isRussian ? 'ru' : 'en'}">
 <head>
     <meta charset="utf-8">
     <title>커버 - ${title}</title>

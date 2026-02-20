@@ -147,6 +147,12 @@ export function generateTableOfContents(contentHtml, language, maxDepth = 3, rn 
     case 'ja':
       tocTitle = '目次';
       break;
+    case 'ja':
+      tocTitle = '目次';
+      break;
+    case 'ru':
+      tocTitle = 'Содержание';
+      break;
     default:
       tocTitle = '목차';
   }

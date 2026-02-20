@@ -61,27 +61,27 @@
     "description": "The ARIA label for the breadcrumbs"
   },
   "theme.admonition.caution": {
-    "message": "Caution",
+    "message": "Внимание",
     "description": "The default label used for the Caution admonition (:::caution)"
   },
   "theme.admonition.danger": {
-    "message": "Danger",
+    "message": "Опасность",
     "description": "The default label used for the Danger admonition (:::danger)"
   },
   "theme.admonition.info": {
-    "message": "Info",
+    "message": "Информация",
     "description": "The default label used for the Info admonition (:::info)"
   },
   "theme.admonition.note": {
-    "message": "Note",
+    "message": "Примечание",
     "description": "The default label used for the Note admonition (:::note)"
   },
   "theme.admonition.tip": {
-    "message": "Tip",
+    "message": "Совет",
     "description": "The default label used for the Tip admonition (:::tip)"
   },
   "theme.admonition.warning": {
-    "message": "Warning",
+    "message": "Предупреждение",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
   "theme.docs.breadcrumbs.home": {

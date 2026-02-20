@@ -60,7 +60,8 @@ function loadAdmonitionTexts(language = 'ko') {
     ko: 'i18n/ko/code.json',
     en: 'i18n/en/code.json',
     es: 'i18n/es/code.json',
-    ja: 'i18n/ja/code.json'
+    ja: 'i18n/ja/code.json',
+    ru: 'i18n/ru/code.json'
   };
 
   const filePath = langMap[language] || langMap['ko'];

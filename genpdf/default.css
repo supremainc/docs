@@ -30,7 +30,7 @@ html[lang='ja-JP'] *, html[lang='ja'] * {
   word-wrap: break-word;
 }
 
-html[lang='en'] *, html[lang='en-US'] *, html[lang='es-419'] *, html[lang='es'] * {
+html[lang='en'] *, html[lang='en-US'] *, html[lang='es-419'] *, html[lang='es'] *, html[lang='ru'] * {
   font-family: 'Noto Sans', sans-serif;
   word-break: keep-all;
 }

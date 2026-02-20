@@ -9,14 +9,14 @@
 @REM FILTER : 문서가 저장된 경로를 입력하세요. Include, Xclude 컴포넌트에서 사용하기 위한 값입니다.
 @REM RELEASE: 문서의 배포 날짜를 입력하세요.
 
-set PRODUCT_NAME=BioEntry W3
-set LANGUAGE=ja
+set PRODUCT_NAME=XPass Q2
+set LANGUAGE=ru
 set PRODUCT_TYPE=UG
-set VERSION=1.0.1
-set DOCUMENT_NUMBER=102.00.BW3
-set SIDEBAR=bioentryw3
-set FILTER=bioentry_w3
-set RELEASE=260121
+set VERSION=1.0.0
+set DOCUMENT_NUMBER=102.00.XPQ2
+set SIDEBAR=xpassq2
+set FILTER=xpass_q2
+set RELEASE=260220
 
 @REM SVG 파일 맵핑 파일 생성
 node ./genpdf/generateSvgMap.js
@@ -34,6 +34,9 @@ if %LANGUAGE%==ko (
 ) else if %LANGUAGE%==es (
     set LANG=ES
     set BACK=back-cover-es.pdf
+) else if %LANGUAGE%==ru (
+    set LANG=RU
+    set BACK=back-cover-ru.pdf
 ) else (
   set LANG=KO
   set BACK=back-cover.pdf
