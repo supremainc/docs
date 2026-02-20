@@ -29,3 +29,23 @@ files: [
     "type": "mdx_v1"
   }
 ]
+
+
+# _ce.mdx
+# _device-connection-standalone-secure-notes.mdx
+# _device-factory-reset.mdx
+# _device-input-connetion.mdx
+# _device-network-connection.mdx
+# _device-relay-connection.mdx
+# _device-reset-network-settings.mdx
+# _device-secure-io2-connection.mdx
+# _device-standalone-connection.mdx
+# _device-wiegand-connection.mdx
+# _disclaimers-copyright-notice.mdx
+# _disclaimers.mdx
+# _fcc-compliance-information.mdx
+# _getting-started-cables-and-connectors.mdx
+# _getting-started-components-note.mdx
+# _ic-information.mdx
+# _more-information.mdx
+# _safety-instructions.mdx
