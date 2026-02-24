@@ -35,13 +35,13 @@ Si usas un dominio o nombre de host en lugar de una dirección IP para la comuni
 
 Verifica si hay una contraseña establecida para la cuenta con Host *127.0.0.1* y Usuario root; si no existe, establece una contraseña y otorga permisos.
 
-1. Verifica si hay una contraseña establecida para la cuenta con Host *127.0.0.1* y Usuario root.
+1. Verifica si hay una contraseña establecida para la cuenta con Host *127.0.0.1* y Usuario root. 
 
    ```sql
    SELECT * FROM mysql.user;
    ```
 
-   <Image src="/img/common/biostarx-subdb-mariadb-specific.png" alone />
+   <Image src='/img/common/biostarx-subdb-mariadb-specific.png' alone />
 
    Si está en blanco, la contraseña no está establecida; ejecuta la consulta en los siguientes elementos para agregar una contraseña y otorgar permisos.
 
@@ -128,7 +128,6 @@ FLUSH PRIVILEGES;
 ```
 
 </Step>
-
 <Step>
 
 #### Base de datos auxiliar
@@ -207,33 +206,33 @@ Sigue los pasos a continuación para enlazar las tablas necesarias en la base de
 
 * A continuación se muestra la consulta para generar sentencias `CREATE TABLE` en la base de datos principal.
 
-   ```sql
-   select
-      concat(
-         'CREATE TABLE IF NOT EXISTS <SubDB_AC_Database_Schema>.', table_name,
-         ' ENGINE=FEDERATED ',
-         'CONNECTION=''default/', table_name, ''';'
-      ) as create_table_sql
-   from information_schema.TABLES
-   where TABLE_SCHEMA = '<MainDB_AC_Database_Schema>'
+  ```sql
+  select
+    concat(
+        'CREATE TABLE IF NOT EXISTS <SubDB_AC_Database_Schema>.', table_name,
+        ' ENGINE=FEDERATED ',
+        'CONNECTION=''default/', table_name, ''';'
+    ) as create_table_sql
+  from information_schema.TABLES
+  where TABLE_SCHEMA = '<MainDB_AC_Database_Schema>'
       AND TABLE_TYPE = 'BASE TABLE'
       AND NOT TABLE_NAME REGEXP '^t_lg[0-9]{6}$'
       AND NOT TABLE_NAME REGEXP '^t_almevt[0-9]{6}$'
       AND NOT TABLE_NAME REGEXP '^t_lgalmtrstrc[0-9]{6}$'
-   ORDER BY TABLE_NAME;
-   ```
+  ORDER BY TABLE_NAME;
+  ```
 
-   :::info
+  :::info
 
-   Debido a la naturaleza de FederatedX, se recomienda establecer `Table_type` en 'BASE TABLE'. El `VIEW type` también es posible, pero no recomendado.
+  Debido a la naturaleza de FederatedX, se recomienda establecer `Table_type` en 'BASE TABLE'. El `VIEW type` también es posible, pero no recomendado.
 
-   :::
+  :::
 
-<div className="print--invisible">
+<div className='print--invisible'>
 
-- Asegúrate de ingresar la sentencia `CREATE` generada por la consulta anterior en la base de datos auxiliar.
+* Asegúrate de ingresar la sentencia `CREATE` generada por la consulta anterior en la base de datos auxiliar.
 
-   <DbQueryCreate />
+  <DbQueryCreate />
 
 </div>
 
@@ -250,7 +249,7 @@ Sigue los pasos a continuación para enlazar las tablas necesarias en la base de
 
 4. Ingresa cada elemento en la pantalla de adición de base de datos.
 
-   <Image src="/img/common/biostarx-subdb-sm-add-database.png" alone />
+   <Image src='/img/common/biostarx-subdb-sm-add-database.png' alone />
 
    * <Cmd>Name</Cmd>: Ingresa el nombre de la base de datos.
 
@@ -291,14 +290,13 @@ GRANT ALTER ANY LOGIN TO [biostar_x_user];
 ```
 
 </Step>
-
 <Step>
 
 #### Otorgar permisos para la base de datos auxiliar
 
 1. Conecta User Mapping para las tablas y usuarios en la base de datos auxiliar con una cuenta que tenga privilegios de sysadmin. En este momento, es necesario agregar el rol `db_owner`.
 
-   <Image src="/img/common/biostarx-subdb-user-mapping.png" alone />
+   <Image src='/img/common/biostarx-subdb-user-mapping.png' alone />
 
 2. Otorga los siguientes permisos a la base de datos que se va a agregar.
 
@@ -313,7 +311,6 @@ GRANT ALTER ANY LOGIN TO [biostar_x_user];
    ```
 
 </Step>
-
 <Step>
 
 #### Configuración de Service Manager
@@ -328,7 +325,7 @@ Usa **BioStar X Service Manager** para agregar la base de datos auxiliar.
 
 4. Ingresa cada elemento en la pantalla de adición de base de datos.
 
-   <Image src="/img/common/biostarx-subdb-sm-add-database.png" alone />
+   <Image src='/img/common/biostarx-subdb-sm-add-database.png' alone />
 
    * <Cmd>Name</Cmd>: Ingresa el nombre de la base de datos.
 
@@ -355,7 +352,6 @@ Usa **BioStar X Service Manager** para agregar la base de datos auxiliar.
 :::
 
 </Step>
-
 <Step>
 
 #### Generar la consulta de Linked Temp Table
@@ -368,21 +364,21 @@ GO
 DECLARE @LinkedServer  sysname = N'default';
 DECLARE @SourceSchema  sysname = N'dbo';
 DECLARE @TargetSchema  sysname = N'dbo';
-
+ 
 SELECT
-      'IF OBJECT_ID(N''' + QUOTENAME(@TargetSchema,'') + '.' + QUOTENAME(t.name,'') + ''', ''SN'') IS NOT NULL '
-   + 'DROP SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name) + ';'
-   + 'CREATE SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name)
-   + ' FOR ' + QUOTENAME(@LinkedServer) + '.' + QUOTENAME(DB_NAME()) + '.' + QUOTENAME(s.name) + '.' + QUOTENAME(t.name) + ';'
-   AS recreate_synonym_sql
+    'IF OBJECT_ID(N''' + QUOTENAME(@TargetSchema,'') + '.' + QUOTENAME(t.name,'') + ''', ''SN'') IS NOT NULL '
+  + 'DROP SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name) + ';'
+  + 'CREATE SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name)
+  + ' FOR ' + QUOTENAME(@LinkedServer) + '.' + QUOTENAME(DB_NAME()) + '.' + QUOTENAME(s.name) + '.' + QUOTENAME(t.name) + ';'
+  AS recreate_synonym_sql
 FROM sys.tables AS t
 JOIN sys.schemas AS s
-   ON s.schema_id = t.schema_id
+  ON s.schema_id = t.schema_id
 WHERE s.name = @SourceSchema
-   AND t.is_ms_shipped = 0
-   AND t.name NOT LIKE 't_lg[0-9][0-9][0-9][0-9][0-9][0-9]'
-   AND t.name NOT LIKE 't_almevt[0-9][0-9][0-9][0-9][0-9][0-9]'
-   AND t.name NOT LIKE 't_lgalmtrstrc[0-9][0-9][0-9][0-9][0-9][0-9]'
+  AND t.is_ms_shipped = 0
+  AND t.name NOT LIKE 't_lg[0-9][0-9][0-9][0-9][0-9][0-9]'
+  AND t.name NOT LIKE 't_almevt[0-9][0-9][0-9][0-9][0-9][0-9]'
+  AND t.name NOT LIKE 't_lgalmtrstrc[0-9][0-9][0-9][0-9][0-9][0-9]'
 ORDER BY t.name;
 ```
 
@@ -395,23 +391,23 @@ DECLARE @SourceSchema  sysname = N'dbo';      -- Schema to target in the main DB
 DECLARE @TargetSchema  sysname = N'dbo';      -- Schema to create synonyms in the sub DB (reflected in the output string)
 
 SELECT
-      'IF OBJECT_ID(N''' + QUOTENAME(@TargetSchema,'') + '.' + QUOTENAME(t.name,'') + ''', ''SN'') IS NOT NULL '
-   + 'DROP SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name) + ';'
-   + 'CREATE SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name)
-   + ' FOR ' + QUOTENAME(@LinkedServer) + '.' + QUOTENAME(DB_NAME()) + '.' + QUOTENAME(s.name) + '.' + QUOTENAME(t.name) + ';'
-   AS recreate_synonym_sql
+    'IF OBJECT_ID(N''' + QUOTENAME(@TargetSchema,'') + '.' + QUOTENAME(t.name,'') + ''', ''SN'') IS NOT NULL '
+  + 'DROP SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name) + ';'
+  + 'CREATE SYNONYM ' + QUOTENAME(@TargetSchema) + '.' + QUOTENAME(t.name)
+  + ' FOR ' + QUOTENAME(@LinkedServer) + '.' + QUOTENAME(DB_NAME()) + '.' + QUOTENAME(s.name) + '.' + QUOTENAME(t.name) + ';'
+  AS recreate_synonym_sql
 FROM sys.tables AS t
 JOIN sys.schemas AS s
-   ON s.schema_id = t.schema_id
+  ON s.schema_id = t.schema_id
 WHERE s.name = @SourceSchema
-   AND t.is_ms_shipped = 0
-   AND t.name NOT LIKE 't_lg[0-9][0-9][0-9][0-9][0-9][0-9]'
-   AND t.name NOT LIKE 't_almevt[0-9][0-9][0-9][0-9][0-9][0-9]'
-   AND t.name NOT LIKE 't_lgalmtrstrc[0-9][0-9][0-9][0-9][0-9][0-9]'
+  AND t.is_ms_shipped = 0
+  AND t.name NOT LIKE 't_lg[0-9][0-9][0-9][0-9][0-9][0-9]'
+  AND t.name NOT LIKE 't_almevt[0-9][0-9][0-9][0-9][0-9][0-9]'
+  AND t.name NOT LIKE 't_lgalmtrstrc[0-9][0-9][0-9][0-9][0-9][0-9]'
 ORDER BY t.name;
 ```
 
-<div className="print--invisible">
+<div className='print--invisible'>
 
 :::info
 
@@ -424,7 +420,6 @@ Este es un ejemplo de una instrucción `CREATE` generada por la consulta anterio
 </div>
 
 </Step>
-
 <Step>
 
 #### Ejecutar la consulta en la base de datos auxiliar.
@@ -442,4 +437,5 @@ IF OBJECT_ID(N'[dbo].[T_ACSGRUSS]', 'SN') IS NOT NULL DROP SYNONYM [dbo].[T_ACSG
 ```
 
 </Step>
+
 </Steps>

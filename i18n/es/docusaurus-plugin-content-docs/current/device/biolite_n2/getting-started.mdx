@@ -14,103 +14,89 @@ Proporciona procedimientos iniciales para empezar con el dispositivo.
 
 ## Componentes
 
-<Table className="component">
-  <Tbody>
-    <Row className="center white">
-      <Td>
-        <Image src="/img/device/component-device-bln2.svg" className="none" alone />
-      </Td>
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
 
-      <Td>
-        <Image src="/img/device/component-wall-bracket-bln2.svg" className="none" alone />
-      </Td>
+<Td><Image src='/img/device/component-device-bln2.svg' className='none' alone /></Td>
 
-      <Td>
-        <Image src="/img/device/component-drilling-template-bln2.svg" className="none" alone />
-      </Td>
+<Td><Image src='/img/device/component-wall-bracket-bln2.svg' className='none' alone /></Td>
 
-      <Td>
-        <Image src="/img/device/component-shrink-tube.svg" className="none" alone />
-      </Td>
-    </Row>
+<Td><Image src='/img/device/component-drilling-template-bln2.svg' className='none' alone /></Td>
 
-    <Row className="center">
-      <Td>BioLite N2</Td>
+<Td><Image src='/img/device/component-shrink-tube.svg' className='none' alone /></Td>
 
-      <Td>Soporte de pared</Td>
+</Row>
+<Row className='center'>
 
-      <Td>Plantilla de perforación</Td>
+<Td>BioLite N2</Td>
 
-      <Td>Tubo termorretráctil</Td>
-    </Row>
-  </Tbody>
+<Td>Soporte de pared</Td>
 
-  <Tbody>
-    <Row className="center white">
-      <Td>
-        <Image src="/img/device/component-pvc-anchors2.svg" className="none" alone />
-      </Td>
+<Td>Plantilla de perforación</Td>
 
-      <Td>
-        <Image src="/img/device/component-fixing-screws2.svg" className="none" alone />
-      </Td>
+<Td>Guía rápida</Td>
 
-      <Td>
-        <Image src="/img/device/component-quick-guide.svg" className="none" alone />
-      </Td>
+</Row>
+</Tbody>
 
-      <Td>
-        <Image src="/img/device/component-oss-guide.svg" className="none" alone />
-      </Td>
-    </Row>
+<Tbody>
+<Row className='center white'>
 
-    <Row className="center">
-      <Td>Anclajes de PVC x2</Td>
+<Td><Image src='/img/device/component-pvc-anchors2.svg' className='none' alone /></Td>
 
-      <Td>Tornillos de fijación x2</Td>
+<Td><Image src='/img/device/component-fixing-screws2.svg' className='none' alone /></Td>
 
-      <Td>Guía rápida</Td>
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
 
-      <Td>Guía de software de código abierto</Td>
-    </Row>
-  </Tbody>
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Anclajes de PVC x2</Td>
+
+<Td>Tornillos de fijación x2</Td>
+
+<Td>Guía rápida</Td>
+
+<Td>Guía de software de código abierto</Td>
+
+</Row>
+</Tbody>
 </Table>
 
-<Table className="component">
-  <Tbody>
-    <Row className="center white">
-      <Td>
-        <Image src="/img/device/component-bracket-fixing-screw.svg" className="none" alone />
-      </Td>
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
 
-      <Td>
-        <Image src="/img/device/component-resistor.svg" className="none" alone />
-      </Td>
+<Td><Image src='/img/device/component-bracket-fixing-screw.svg' className='none' alone /></Td>
 
-      <Td>
-        <Image src="/img/device/component-diode1.svg" className="none" alone />
-      </Td>
-    </Row>
+<Td><Image src='/img/device/component-resistor.svg' className='none' alone /></Td>
 
-    <Row className="center">
-      <Td>Tornillo de fijación del soporte (en forma de estrella)</Td>
+<Td><Image src='/img/device/component-diode1.svg' className='none' alone /></Td>
 
-      <Td>Resistencia de 120 Ω</Td>
+</Row>
+<Row className='center'>
 
-      <Td>Diodo</Td>
-    </Row>
-  </Tbody>
+<Td>Tornillo de fijación del soporte (en forma de estrella)</Td>
+
+<Td>Resistencia de 120 Ω</Td>
+
+<Td>Diodo</Td>
+
+</Row>
+</Tbody>
 </Table>
 
 {/* 구성품 노트 */}
-
 import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
 <Componentsnote />
 
 ## Nombre y función de cada parte
 
-<Image src="/img/device/name-function-each-part-bln2.png" className="none" width="30%" />
+<Image src='/img/device/name-function-each-part-bln2.png' className='none' width='30%' />
 
 * **Pantalla**: Proporciona una interfaz de usuario para la operación.
 
@@ -139,41 +125,42 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 ### Cable
 
 <Columns>
-  <Column>
-    <Image src="/img/device/cables-layout-bln2.svg" className="none" width="70%" alone />
-  </Column>
+<Column>
 
-  <Column className="padding--l10">
-    | Pin | Nombre | Color |
-    | :-: | :-: | :-: |
-    | 1 | PWR +VDC | Rojo |
-    | 2 | PWR GND | Negro (franja blanca) |
-    | 3 | 485 TRXP | Azul (franja blanca) |
-    | 4 | 485 TRXN | Amarillo (franja negra) |
-    | 5 | 485 GND | Blanco (franja negra) |
-    | 6 | ENET RXN | Amarillo |
-    | 7 | ENET RXP | Verde |
-    | 8 | ENET TXN | Rojo |
-    | 9 | ENET TXP | Negro |
-    | 10 | RLY NO | Gris (franja blanca) |
-    | 11 | RLY COM | Verde (franja blanca) |
-    | 12 | RLY NC | Naranja (franja blanca) |
-    | 13 | WG D0 | Verde |
-    | 14 | WG D1 | Blanco |
-    | 15 | INPUT GND | Gris |
-    | 16 | INPUT1 | Marrón |
-    | 17 | INPUT0 | Morado |
-  </Column>
+<Image src='/img/device/cables-layout-bln2.svg' className='none' width='70%' alone />
+
+</Column>
+<Column className='padding--l10'>
+
+| Pin | Nombre | Color |
+| :-: | :-: | :-: |
+| 1 | PWR +VDC | Rojo |
+| 2 | PWR GND | Negro (franja blanca) |
+| 3 | 485 TRXP | Azul (franja blanca) |
+| 4 | 485 TRXN | Amarillo (franja negra) |
+| 5 | 485 GND | Blanco (franja negra) |
+| 6 | ENET RXN | Amarillo |
+| 7 | ENET RXP | Verde |
+| 8 | ENET TXN | Rojo |
+| 9 | ENET TXP | Negro |
+| 10 | RLY NO | Gris (franja blanca) |
+| 11 | RLY COM | Verde (franja blanca) |
+| 12 | RLY NC | Naranja (franja blanca) |
+| 13 | WG D0 | Verde |
+| 14 | WG D1 | Blanco |
+| 15 | INPUT GND | Gris |
+| 16 | INPUT1 | Marrón |
+| 17 | INPUT0 | Morado |
+
+</Column>
 </Columns>
 
 {/* 마스터 관리자 설정하기 */}
-
 import Masteradminsettings from '../../common/_device-master-admin-settings.mdx'
 
 <Masteradminsettings />
 
 {/* 올바른 지문 입력 방법 */}
-
 import Enrollfingerprint from '../../common/_enroll-fingerprint.mdx'
 
 <Enrollfingerprint />

@@ -28,36 +28,31 @@ Si se utiliza el dispositivo sin configurar un administrador, cualquiera podrá 
 
 ### Productos compatibles con Master Admin
 
-<Table className="component">
-  <Tbody>
-    <Row className="center white">
-      <Td>
-        <Image src="/img/how-to/BioStation 3-Front.png" className="none" alone width="130px" />
-      </Td>
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
 
-      <Td>
-        <Image src="/img/how-to/BioStation 2a-front.png" className="none" alone width="200px" />
-      </Td>
+<Td><Image src='/img/how-to/BioStation 3-Front.png' className='none' alone width='130px'/></Td>
 
-      <Td>
-        <Image src="/img/how-to/BioLite N2-Front.png" className="none" alone width="110px" />
-      </Td>
+<Td><Image src='/img/how-to/BioStation 2a-front.png' className='none' alone width='200px' /></Td>
 
-      <Td>
-        <Image src="/img/how-to/X-Station 2-Front.png" className="none" alone width="300px" />
-      </Td>
-    </Row>
+<Td><Image src='/img/how-to/BioLite N2-Front.png' className='none' alone width='110px' /></Td>
 
-    <Row className="center">
-      <Td>**BioStation 3**<br />Firmware v1.4.0 o posterior</Td>
+<Td><Image src='/img/how-to/X-Station 2-Front.png' className='none' alone width='300px' /></Td>
 
-      <Td>**BioStation 2a**<br />Firmware v1.2.0 o posterior</Td>
+</Row>
+<Row className='center'>
 
-      <Td>**BioLite N2**<br />Firmware v1.7.0 o posterior</Td>
+<Td>**BioStation 3**<br/>Firmware v1.4.0 o posterior</Td>
 
-      <Td>**X-Station 2**<br />Firmware v1.4.0 o posterior</Td>
-    </Row>
-  </Tbody>
+<Td>**BioStation 2a**<br/>Firmware v1.2.0 o posterior</Td>
+
+<Td>**BioLite N2**<br/>Firmware v1.7.0 o posterior</Td>
+
+<Td>**X-Station 2**<br/>Firmware v1.4.0 o posterior</Td>
+
+</Row>
+</Tbody>
 </Table>
 
 ## Cómo mejorar la seguridad del administrador en dispositivos nuevos o dispositivos existentes con firmware actualizado
@@ -77,93 +72,94 @@ En dispositivos nuevos, registrar un **Master Admin** es obligatorio desde el pr
 :::
 
 <details>
-  <summary>**Registrar un Master Admin en un dispositivo nuevo**</summary>
+<summary>**Registrar un Master Admin en un dispositivo nuevo**</summary>
 
-  #### Inscribir administrador maestro en un dispositivo nuevo
+#### Inscribir administrador maestro en un dispositivo nuevo
 
-  1. Cuando enciende un dispositivo nuevo por primera vez, aparece la pantalla de registro de **Master Admin**.
+1. Cuando enciende un dispositivo nuevo por primera vez, aparece la pantalla de registro de **Master Admin**.
 
-     <Image src="/img/how-to/setting-master-admin-1.png" caption width="300px" />
+   <Image src='/img/how-to/setting-master-admin-1.png' caption width='300px' />
 
-  2. Para registrar un **Master Admin**, debe inscribir al menos dos tipos de credenciales. Seleccione e inscriba las dos credenciales deseadas.
+2. Para registrar un **Master Admin**, debe inscribir al menos dos tipos de credenciales. Seleccione e inscriba las dos credenciales deseadas.
 
-     <Image src="/img/how-to/setting-master-admin-2.png" caption width="300px" />
+   <Image src='/img/how-to/setting-master-admin-2.png' caption width='300px' />
 
-     Las credenciales que pueden inscribirse para **Master Admin** son las siguientes:
+   Las credenciales que pueden inscribirse para **Master Admin** son las siguientes:
 
-     <Table>
-       <Tbody>
-         <Row>
-           <Th>Tipo de credencial</Th>
-           <Th>Cantidad máxima</Th>
-           <Th>Detalles</Th>
-         </Row>
+   <Table>
+   <Tbody>
+   <Row>
+   <Th>Tipo de credencial</Th>
+   <Th>Cantidad máxima</Th>
+   <Th>Detalles</Th>
+   </Row>
+   <Row>
+   <Td>Card</Td>
+   <Td>Hasta 4</Td>
+   <Td>Admite únicamente tipos CSN y Wiegand<br />No se permite inscripción duplicada dentro del mismo tipo</Td>
+   </Row>
+   <Row>
+   <Td>Face</Td>
+   <Td>Hasta 2</Td>
+   <Td>Disponible solo en dispositivos con el mismo algoritmo</Td>
+   </Row>
+   <Row>
+   <Td>Fingerprint</Td>
+   <Td>Hasta 2</Td>
+   <Td>-</Td>
+   </Row>
+   <Row>
+   <Td>PIN</Td>
+   <Td>1</Td>
+   <Td>Mínimo 8 dígitos</Td>
+   </Row>
+   </Tbody>
+   </Table>
 
-         <Row>
-           <Td>Card</Td>
-           <Td>Hasta 4</Td>
-           <Td>Admite únicamente tipos CSN y Wiegand<br />No se permite inscripción duplicada dentro del mismo tipo</Td>
-         </Row>
+   :::note
 
-         <Row>
-           <Td>Face</Td>
-           <Td>Hasta 2</Td>
-           <Td>Disponible solo en dispositivos con el mismo algoritmo</Td>
-         </Row>
+   **Condiciones de enrolamiento**
 
-         <Row>
-           <Td>Fingerprint</Td>
-           <Td>Hasta 2</Td>
-           <Td>-</Td>
-         </Row>
+   * Debe enrolar al menos dos tipos de credenciales.
 
-         <Row>
-           <Td>PIN</Td>
-           <Td>1</Td>
-           <Td>Mínimo 8 dígitos</Td>
-         </Row>
-       </Tbody>
-     </Table>
+   * Las mismas condiciones se aplican tanto a dispositivos nuevos como a dispositivos con actualización de firmware.
 
-     :::note
+   * Todas las credenciales compatibles con el dispositivo pueden utilizarse como medios de autenticación.
 
-     **Condiciones de enrolamiento**
+   :::
 
-     * Debe enrolar al menos dos tipos de credenciales.
+3. Después de inscribir al menos dos tipos de credenciales, presione el botón **Complete** para finalizar el registro de **Master Admin**.
 
-     * Las mismas condiciones se aplican tanto a dispositivos nuevos como a dispositivos con actualización de firmware.
+   <Image src='/img/how-to/setting-master-admin-3.png' caption width='300px' />
 
-     * Todas las credenciales compatibles con el dispositivo pueden utilizarse como medios de autenticación.
+{/* :::warning
 
-     :::
+**Mensaje de advertencia cuando el administrador maestro no está registrado**
 
-  3. Después de inscribir al menos dos tipos de credenciales, presione el botón **Complete** para finalizar el registro de **Master Admin**.
+Si no se configura ni un Administrador Maestro ni un ajuste equivalente, aparecerá un mensaje emergente de advertencia al guardar la configuración.
 
-     <Image src="/img/how-to/setting-master-admin-3.png" caption width="300px" />
+<Image src='/img/how-to/no-register-master-admin.png' alone caption />
 
-  {/* :::warning
+::: */}
 
-  **Warning Message When Master Admin Is Not Registered**
-
-  If neither a Master Admin nor an equivalent setting is configured, a warning popup message will appear when saving settings.
-
-  <Image src='/img/how-to/no-register-master-admin.png' alone caption />
-
-  ::: */}
 </details>
 
 <details>
-  <summary>**Gestionar Master Admin en un dispositivo nuevo**</summary>
+<summary>**Gestionar Master Admin en un dispositivo nuevo**</summary>
 
-  #### Gestionar Master Admin en un dispositivo nuevo
+#### Gestionar Master Admin en un dispositivo nuevo
 
-  En dispositivos nuevos, puede modificar la configuración de **Master Admin** en el menú **Settings → Device → Master Admin**.
+En dispositivos nuevos, puede modificar la configuración de **Master Admin** en el menú **Settings → Device → Master Admin**.
 
-  <div className="grid-container">
-    <Image src="/img/how-to/edit-master-admin-1.png" caption width="300px" />
+<div className='grid-container'>
+  <Image src='/img/device/xs2-master-admin.png' />
 
-    <Image src="/img/how-to/setting-master-admin-4.png" caption width="300px" />
-  </div>
+<Image src='/img/how-to/edit-master-admin-1.png' caption width='300px' />
+
+<Image src='/img/how-to/setting-master-admin-4.png' caption width='300px' />
+
+</div>
+
 </details>
 
 ### Dispositivos actualizados {#admin-two-step-authentication}
@@ -181,29 +177,30 @@ Los dispositivos actualizados mediante firmware no ofrecen la configuración de 
 :::
 
 <details>
-  <summary>**Configurar Admin 2-step Authentication en dispositivos actualizados**</summary>
+<summary>**Configurar Admin 2-step Authentication en dispositivos actualizados**</summary>
 
-  #### Configurar Admin 2-step Authentication en dispositivos actualizados
+#### Configurar Admin 2-step Authentication en dispositivos actualizados
 
-  Puede activar Admin 2-step Authentication en el menú **Settings → Device → Admin 2-step Authentication**.
+Puede activar Admin 2-step Authentication en el menú **Settings → Device → Admin 2-step Authentication**.
 
-  * La opción **Admin 2-step Authentication** aparece solo en dispositivos actualizados al firmware más reciente.
+* La opción **Admin 2-step Authentication** aparece solo en dispositivos actualizados al firmware más reciente.
 
-  <Image src="/img/how-to/setting-two-step-authentication.png" caption width="300px" />
+<Image src='/img/how-to/setting-two-step-authentication.png' caption width='300px' />
 
-  :::info
+:::info
 
-  * Si no todos los administradores tienen al menos dos tipos de credenciales, la activación fallará y aparecerá un mensaje de error.<br />Enrole dos tipos de credenciales para todos los administradores e inténtelo nuevamente.
+* Si no todos los administradores tienen al menos dos tipos de credenciales, la activación fallará y aparecerá un mensaje de error.<br />Enrole dos tipos de credenciales para todos los administradores e inténtelo nuevamente.
 
-  <Image src="/img/how-to/error-two-step-authentication.png" caption width="300px" />
+<Image src='/img/how-to/error-two-step-authentication.png' caption width='300px' />
 
-  :::
+:::
 
-  :::warning
+:::warning
 
-  * Si activa **Admin 2-step Authentication** y luego elimina credenciales de modo que todos los administradores tengan menos de dos tipos, no podrá acceder al menú de administrador si la conexión con BioStar 2 también está indisponible. Por lo tanto, tenga precaución al eliminar credenciales de administrador.
+* Si activa **Admin 2-step Authentication** y luego elimina credenciales de modo que todos los administradores tengan menos de dos tipos, no podrá acceder al menú de administrador si la conexión con BioStar 2 también está indisponible. Por lo tanto, tenga precaución al eliminar credenciales de administrador.
 
-  :::
+:::
+
 </details>
 
 ## Información adicional

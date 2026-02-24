@@ -33,33 +33,33 @@ Para obtener más información sobre la aplicación de licencias, consulte [lo s
 
 ## Registrar dispositivo virtual
 
-1. Haz clic en <Cmd sid="shell.header.setting" /> en la página <Cmd sid="shell.header.launcher" />.
+1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
-2. Haga clic en <Cmd sid="setting.menu.device.root" /> en la barra lateral izquierda.
+2. Haga clic en <Cmd sid='setting.menu.device.root' /> en la barra lateral izquierda.
 
-3. Haga clic en <IcMoreW /> en la parte superior derecha de la lista de dispositivos y seleccione <Cmd sid="device.addVirtualDevice" product="2" />.
+3. Haga clic en <IcMoreW /> en la parte superior derecha de la lista de dispositivos y seleccione <Cmd sid='device.addVirtualDevice' product='2' />.
 
-   <Image src="/img/biostarx-settings-device-add-virtual-device.png" />
+   <Image src='/img/biostarx-settings-device-add-virtual-device.png' />
 
-4. Ingrese la información de configuración cuando aparezca la pantalla <Cmd sid="device.addVirtualDevice" product="2" />.
+4. Ingrese la información de configuración cuando aparezca la pantalla <Cmd sid='device.addVirtualDevice' product='2' />.
 
-   <Image src="/img/biostarx-settings-device-add-virtual-device-settings.png" />
+   <Image src='/img/biostarx-settings-device-add-virtual-device-settings.png' />
 
-   * <Cmd sid="device.info.name" product="2" />: Ingrese el nombre del dispositivo virtual.
+   * <Cmd sid='device.info.name' product='2' />: Ingrese el nombre del dispositivo virtual.
 
-   * <Cmd sid="device.info.group" product="2" />: Seleccione el grupo para asignar el dispositivo virtual.
+   * <Cmd sid='device.info.group' product='2' />: Seleccione el grupo para asignar el dispositivo virtual.
 
-   * <Cmd sid="device.info.deviceId" product="2" />: Ingrese el ID único del dispositivo virtual. Debe especificarse dentro de un rango que no duplique un ID de dispositivo existente.
+   * <Cmd sid='device.info.deviceId' product='2' />: Ingrese el ID único del dispositivo virtual. Debe especificarse dentro de un rango que no duplique un ID de dispositivo existente.
 
-   * <Cmd sid="common.description" product="2" />: Ingrese la descripción del dispositivo virtual.
+   * <Cmd sid='common.description' product='2' />: Ingrese la descripción del dispositivo virtual.
 
-5. Haga clic en <Cmd sid="button.apply" product="2" /> en la parte inferior derecha de la pantalla para registrar el dispositivo virtual.
+5. Haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior derecha de la pantalla para registrar el dispositivo virtual.
 
 :::info
 
-* El <Cmd sid="device.info.deviceId" product="2" /> puede especificarse dentro del rango de 100000 - 999999. Debe especificarse dentro de un rango que no duplique un ID de dispositivo Suprema existente.
+* El <Cmd sid='device.info.deviceId' product='2' /> puede especificarse dentro del rango de 100000 - 999999. Debe especificarse dentro de un rango que no duplique un ID de dispositivo Suprema existente.
 
-* El valor de <Cmd sid="device.info.deviceId" product="2" /> que ya se ha creado no puede modificarse.
+* El valor de <Cmd sid='device.info.deviceId' product='2' /> que ya se ha creado no puede modificarse.
 
 :::
 
@@ -81,17 +81,17 @@ Para obtener más información sobre los grupos de dispositivos, consulte [lo si
 
 * Los dispositivos virtuales aparecen solo en el siguiente menú.
 
-  * <Cmd sid="shell.header.setting" /> → <Cmd sid="setting.menu.device.root" />
+  * <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.device.root' />
 
-  * Vea todos los registros de eventos y la vista previa de eventos en <Cmd sid="shell.header.arena" />
+  * Vea todos los registros de eventos y la vista previa de eventos en <Cmd sid='shell.header.arena' />
 
-  * Recupere registros de eventos desde <Cmd sid="shell.header.data" />
+  * Recupere registros de eventos desde <Cmd sid='shell.header.data' />
 
-* El dispositivo virtual no puede usar las funciones de control de acceso en la puerta ni en <Cmd sid="setting.menu.advancedAc.root" />.
+* El dispositivo virtual no puede usar las funciones de control de acceso en la puerta ni en <Cmd sid='setting.menu.advancedAc.root' />.
 
-* No puede especificarse como dispositivo para la configuración de <Cmd sid="shell.header.tna" />.
+* No puede especificarse como dispositivo para la configuración de <Cmd sid='shell.header.tna' />.
 
-* Los dispositivos virtuales no aparecen en la lista de dispositivos de la barra lateral del menú <Cmd sid="shell.header.arena" />.
+* Los dispositivos virtuales no aparecen en la lista de dispositivos de la barra lateral del menú <Cmd sid='shell.header.arena' />.
 
 * No es posible usar la función de control del dispositivo.
 
@@ -164,19 +164,19 @@ Debe proporcionar los siguientes parámetros al registrar eventos.
 
 Recupere los registros de eventos grabados mediante el dispositivo virtual en el menú.
 
-* <Cmd sid="shell.header.arena" />: Recupere y filtre todos los eventos, vista previa de eventos
+* <Cmd sid='shell.header.arena' />: Recupere y filtre todos los eventos, vista previa de eventos
 
-* <Cmd sid="shell.header.data" />: Recupere y filtre todos los eventos
+* <Cmd sid='shell.header.data' />: Recupere y filtre todos los eventos
 
 :::info
 
-* Para obtener más información sobre la recuperación de eventos en <Cmd sid="shell.header.arena" />, consulte [lo siguiente](monitoring-event).
+* Para obtener más información sobre la recuperación de eventos en <Cmd sid='shell.header.arena' />, consulte [lo siguiente](monitoring-event).
 
-* Para obtener más información sobre <Cmd sid="shell.header.data" />, consulte [lo siguiente](data-generate-reports).
+* Para obtener más información sobre <Cmd sid='shell.header.data' />, consulte [lo siguiente](data-generate-reports).
 
 :::
 
-## Registro de auditoría
+## Registro auditoría
 
 El rastro de auditoría se registra como se muestra en el siguiente ejemplo cuando se registran eventos.
 
@@ -188,13 +188,13 @@ Access granted, 2025/08/05 03:37:49, outside access door on 12th floor, Administ
 
 * Incluso si los eventos se registran por lotes, se crea una entrada de auditoría individual para cada evento.
 
-* Para obtener más información sobre <Cmd sid="setting.menu.system.auditTrail" />, consulte [lo siguiente](settings-system-audit-trail).
+* Para obtener más información sobre <Cmd sid='setting.menu.system.auditTrail' />, consulte [lo siguiente](settings-system-audit-trail).
 
 :::
 
 ## Solución de Problemas
 
-### Si el botón <Cmd sid="device.addVirtualDevice" product="2" className="normal" /> no es visible
+### Si el botón <Cmd sid='device.addVirtualDevice' product='2' className='normal' /> no es visible
 
 Verifique si la licencia **Event Log API** está activada.
 

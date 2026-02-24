@@ -156,7 +156,7 @@
     "description": "Acción de transferir datos de una computadora a su propio sistema."
   },
   "audit_trail": {
-    "name": "Registro de auditoría",
+    "name": "Registro auditoría",
     "description": "Los datos registrados sobre los cambios en el sistema. El registro de auditoría permite buscar información sobre actividad de usuarios no autorizados, el procesamiento de la actividad de usuarios, etc."
   },
   "forced_open": {
@@ -740,11 +740,11 @@
     "description": "Una regla referente al acceso a una puerta o grupo de puertas determinado durante un periodo de tiempo programado."
   },
   "access_group": {
-    "name": "Grupo de Acceso",
+    "name": "Grupo de acceso",
     "description": "Un grupo de usuarios que tiene derecho a acceder a una puerta o grupo de puertas específico durante un periodo de tiempo programado."
   },
   "access_level": {
-    "name": "Nivel de Acceso",
+    "name": "Nivel de acceso",
     "description": "El derecho a acceder a la puerta durante un periodo de tiempo programado."
   },
   "entrance_limit_zone": {

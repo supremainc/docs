@@ -18,7 +18,7 @@ Antes de ejecutar la función de migración de caras, revise los siguientes punt
 
 **¿Qué es la migración de caras?**
 
-Es una función que genera dos tipos de plantillas faciales a partir de las imágenes de usuario ya almacenadas en el servidor de BioStar X. Ejecute <Cmd sid="team.menu.faceMigration" /> para sincronizar solo la plantilla de autenticación facial durante la sincronización de usuarios.
+Es una función que genera dos tipos de plantillas faciales a partir de las imágenes de usuario ya almacenadas en el servidor de BioStar X. Ejecute <Cmd sid='team.menu.faceMigration' /> para sincronizar solo la plantilla de autenticación facial durante la sincronización de usuarios.
 
 :::
 
@@ -33,11 +33,13 @@ Consulte la lista a continuación para conocer los dispositivos que pueden sincr
 * Firmware BioEntry W3 v1.0.0 o posterior
 
 <details>
-  <summary>**Aviso sobre el fin de soporte del firmware FaceStation F2 v1.x.x**</summary>
 
-  **BioStar X** optimizó el rendimiento de la sincronización al cambiar para enviar solo plantillas al sincronizar la cara del usuario con el dispositivo. Por lo tanto, el soporte para el firmware FaceStation F2 v1.x.x, que solo puede extraer plantillas desde el dispositivo, se descontinuará. Si actualmente utiliza el firmware FaceStation F2 versión 1.x.x, actualice al firmware más reciente para usar **BioStar X** con FaceStation F2.
+<summary>**Aviso sobre el fin de soporte del firmware FaceStation F2 v1.x.x**</summary>
 
-  Puede descargar el firmware más reciente desde el [Centro de descargas de Suprema](https://download.supremainc.com/).
+**BioStar X** optimizó el rendimiento de la sincronización al cambiar para enviar solo plantillas al sincronizar la cara del usuario con el dispositivo. Por lo tanto, el soporte para el firmware FaceStation F2 v1.x.x, que solo puede extraer plantillas desde el dispositivo, se descontinuará. Si actualmente utiliza el firmware FaceStation F2 versión 1.x.x, actualice al firmware más reciente para usar **BioStar X** con FaceStation F2.
+
+Puede descargar el firmware más reciente desde el [Centro de descargas de Suprema](https://download.supremainc.com/).
+
 </details>
 
 ### Notas sobre los tipos de plantillas faciales
@@ -52,7 +54,7 @@ Diferencias en los tipos de plantillas faciales para FaceStation F2, BioStation 
 
 * **Tiempo de sincronización entre dispositivos con diferentes tipos de plantillas faciales**
 
-  Antes de continuar con <Cmd sid="team.menu.faceMigration" />, si sincroniza añadiendo BioStation 3 o BioEntry W3 a un entorno que solo utilizaba FaceStation F2, el tipo de plantilla será diferente y se extraerá la plantilla tipo NPU a partir de la imagen, lo que puede tardar bastante tiempo según la cantidad de caras registradas en el servidor.
+  Antes de continuar con <Cmd sid='team.menu.faceMigration' />, si sincroniza añadiendo BioStation 3 o BioEntry W3 a un entorno que solo utilizaba FaceStation F2, el tipo de plantilla será diferente y se extraerá la plantilla tipo NPU a partir de la imagen, lo que puede tardar bastante tiempo según la cantidad de caras registradas en el servidor.
 
 * **Recomendaciones para registrar caras en BioStar X**
 
@@ -62,9 +64,9 @@ Diferencias en los tipos de plantillas faciales para FaceStation F2, BioStation 
 
 ### Avisos relacionados con dispositivos
 
-El archivo de datos de usuario exportado desde **BioStar X** contiene solo plantillas sin imágenes, por lo que no se puede importar en FaceStation F2 y BioStation 3 que utilizan firmware existente.
-
 Al exportar archivos de datos desde FaceStation F2 y BioStation 3, los archivos solo se pueden exportar con versiones de firmware superiores a las siguientes:
+
+El archivo de datos de usuario exportado desde **BioStar X** contiene solo plantillas sin imágenes, por lo que no se puede importar en FaceStation F2 y BioStation 3 que utilizan firmware existente.
 
 * Firmware FaceStation F2 v2.2.0 o posterior
 
@@ -78,21 +80,21 @@ Al utilizar FaceStation F2 o BioStation 3, se recomienda actualizar a la versió
 
 ## Cómo realizar la migración de caras
 
-1. Haz clic en <Cmd sid="shell.header.user" /> en la página <Cmd sid="shell.header.launcher" />.
+1. Haz clic en <Cmd sid='shell.header.user' /> en la página <Cmd sid='shell.header.launcher' />.
 
-2. Seleccione <IcMoreW /> en la esquina superior derecha de la pantalla y haga clic en <Cmd sid="team.menu.faceMigration" />.
+2. Seleccione <IcMoreW/> en la esquina superior derecha de la pantalla y haga clic en <Cmd sid='team.menu.faceMigration' />.
 
-   <Image src="/img/biostarx-user-face-migration.png" />
+   <Image src='/img/biostarx-user-face-migration.png' />
 
-3. Revise el contenido de la ventana emergente de advertencia y haga clic en <Cmd sid="common.button.continue" />.
+3. Revise el contenido de la ventana emergente de advertencia y haga clic en <Cmd sid='common.button.continue' />.
 
-   <Image src="/img/biostarx-user-face-migration-warning.png" width="60%" />
+   <Image src='/img/biostarx-user-face-migration-warning.png' width='60%' />
 
 Migración de caras en curso. Cuando la migración de caras finalice, aparecerá una ventana emergente con los resultados. Mostrará el número total de caras registradas, así como la cantidad de caras migradas correctamente y las que fallaron.
 
 * Después de una migración exitosa, sincronice la información del usuario con el dispositivo para aplicar los cambios. Para obtener más información sobre cómo enviar la información del usuario al dispositivo, consulte [lo siguiente](transfer-user-info-to-device).
 
-* Si la migración de caras falla, descargue una lista de usuarios fallidos en un archivo CSV. Haga clic en <Cmd sid="common.delete" /> para eliminar todas las caras cuya migración falló.
+* Si la migración de caras falla, descargue una lista de usuarios fallidos en un archivo CSV. Haga clic en <Cmd sid='common.delete' /> para eliminar todas las caras cuya migración falló.
 
 :::info
 

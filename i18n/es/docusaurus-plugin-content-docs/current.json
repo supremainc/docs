@@ -32,7 +32,7 @@
     "description": "The label for category '모니터링' in sidebar 'biostarx'"
   },
   "sidebar.biostarx.category.출입문 모니터링하기": {
-    "message": "Monitoreo de Puerta",
+    "message": "Monitorear Puertas",
     "description": "The label for category '출입문 모니터링하기' in sidebar 'biostarx'"
   },
   "sidebar.biostarx.category.UI 알아보기": {
@@ -76,7 +76,7 @@
     "description": "The label for category '엘리베이터 관리하기' in sidebar 'biostarx'"
   },
   "sidebar.biostarx.category.운영 권한 관리하기": {
-    "message": "Administrar Permisos de Operación",
+    "message": "Gestionar Permisos de Operación",
     "description": "The label for category '운영 권한 관리하기' in sidebar 'biostarx'"
   },
   "sidebar.biostarx.category.출입 통제 설정하기": {

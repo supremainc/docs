@@ -14,12 +14,11 @@ Ofrece los procedimientos completos de instalación y ejemplos de conexión nece
 
 Fije firmemente el producto con un tornillo de fijación en el lugar de montaje.
 
-<Image src="/img/device/device-fix-cs20.png" className="none" width="50%" alone />
+<Image src='/img/device/device-fix-cs20.png' className='none' width='50%' alone />
 
 <PageBreak />
 
 {/* ## 전원 연결 */}
-
 import PowerConnection from "../../common/_device-power-connection.mdx";
 
 <PowerConnection />
@@ -39,69 +38,72 @@ import PowerConnection from "../../common/_device-power-connection.mdx";
 La distancia de conexión puede variar según las especificaciones del cable y el entorno de instalación utilizado para la alimentación. Si las conexiones de los cables se realizan de forma incorrecta, el dispositivo puede funcionar incorrectamente. Este producto admite alimentación de 12 V CC, 24 V CC y PoE+. Asegúrese de conectar la alimentación correctamente comprobando la longitud máxima de extensión según la especificación de cada cable.
 
 <Table>
-  <Thead>
-    <Row>
-      <Th rowspan={2}>Especificación del cable</Th>
+<Thead>
+<Row>
 
-      <Th colspan={2}>CC 12V</Th>
+<Th rowspan={2}>Especificación del cable</Th>
 
-      <Th colspan={2}>CC 24V</Th>
+<Th colspan={2}>CC 12V</Th>
 
-      <Th colspan={2}>PoE+ (Salida de 12 V)</Th>
-    </Row>
+<Th colspan={2}>CC 24V</Th>
 
-    <Row>
-      <Th>Lector (300 mA)</Th>
+<Th colspan={2}>PoE+ (Salida de 12 V)</Th>
 
-      <Th>Cerradura (600 mA)</Th>
+</Row>
+<Row>
 
-      <Th>Lector (150 mA)</Th>
+<Th>Lector (300 mA)</Th>
 
-      <Th>Cerradura (300 mA)</Th>
+<Th>Cerradura (600 mA)</Th>
 
-      <Th>Lector (300 mA)</Th>
+<Th>Lector (150 mA)</Th>
 
-      <Th>Cerradura (600 mA)</Th>
-    </Row>
-  </Thead>
+<Th>Cerradura (300 mA)</Th>
 
-  <Tbody>
-    <Row className="center">
-      <Td>14 AWG</Td>
-      <Td>380 m</Td>
-      <Td>190 m</Td>
-      <Td>1540 m</Td>
-      <Td>770 m</Td>
-      <Td>380 m</Td>
-      <Td>190 m</Td>
-    </Row>
+<Th>Lector (300 mA)</Th>
 
-    <Row className="center">
-      <Td>16 AWG</Td>
-      <Td>240 m</Td>
-      <Td>120 m</Td>
-      <Td>960 m</Td>
-      <Td>480 m</Td>
-      <Td>240 m</Td>
-      <Td>120 m</Td>
-    </Row>
+<Th>Cerradura (600 mA)</Th>
 
-    <Row className="center">
-      <Td>18 AWG</Td>
-      <Td>150 m</Td>
-      <Td>75 m</Td>
-      <Td>600 m</Td>
-      <Td>300 m</Td>
-      <Td>150 m</Td>
-      <Td>75 m</Td>
-    </Row>
-  </Tbody>
+</Row>
+</Thead>
+<Tbody>
+
+<Row className='center'>
+<Td>14 AWG</Td>
+<Td>380 m</Td>
+<Td>190 m</Td>
+<Td>1540 m</Td>
+<Td>770 m</Td>
+<Td>380 m</Td>
+<Td>190 m</Td>
+</Row>
+
+<Row className='center'>
+<Td>16 AWG</Td>
+<Td>240 m</Td>
+<Td>120 m</Td>
+<Td>960 m</Td>
+<Td>480 m</Td>
+<Td>240 m</Td>
+<Td>120 m</Td>
+</Row>
+
+<Row className='center'>
+<Td>18 AWG</Td>
+<Td>150 m</Td>
+<Td>75 m</Td>
+<Td>600 m</Td>
+<Td>300 m</Td>
+<Td>150 m</Td>
+<Td>75 m</Td>
+</Row>
+
+</Tbody>
 </Table>
 
 <PageBreak />
 
 {/* ## 네트워크 연결 */}
-
 import NetworkConnection from "../../common/_device-network-connection.mdx";
 
 <NetworkConnection />
@@ -112,7 +114,7 @@ import NetworkConnection from "../../common/_device-network-connection.mdx";
 
 Este producto admite tres puertos RS-485 y, al conectar la interfaz de puerta en cadena, se pueden configurar hasta 34 puertas.
 
-<Image src="/img/device/installation-rs485-connection-cs20.png" width="55%" className="none" />
+<Image src='/img/device/installation-rs485-connection-cs20.png' width='55%' className='none' />
 
 :::info
 
@@ -135,7 +137,6 @@ Este producto admite tres puertos RS-485 y, al conectar la interfaz de puerta en
 <PageBreak />
 
 {/* ## 릴레이 연결 */}
-
 import RelayConnectioin from "../../common/_device-indoor-module-relay-connection.mdx";
 
 <RelayConnectioin />
@@ -143,13 +144,11 @@ import RelayConnectioin from "../../common/_device-indoor-module-relay-connectio
 <PageBreak />
 
 {/* ## Wiegand 연결 */}
-
 import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
 
 <WiegandConnection />
 
 {/* ## 출입문 센서 및 퇴실 버튼 연결 */}
-
 import RtsConnection from "../../common/_device-door-sensor-connection.mdx";
 
 <RtsConnection />
@@ -157,7 +156,6 @@ import RtsConnection from "../../common/_device-door-sensor-connection.mdx";
 <PageBreak />
 
 {/* ## AUX 입력 연결 */}
-
 import AuxConnection from "../../common/_device-aux-connection.mdx";
 
 <AuxConnection />
@@ -166,7 +164,7 @@ import AuxConnection from "../../common/_device-aux-connection.mdx";
 
 Use una tarjeta SAM (Secure Access Module).
 
-<Image src="/img/device/installation-sam-slot-connection-cs20.png" width="40%" className="none" />
+<Image src='/img/device/installation-sam-slot-connection-cs20.png' width='40%' className='none' />
 
 :::info
 
@@ -177,7 +175,6 @@ Use una tarjeta SAM (Secure Access Module).
 <PageBreak />
 
 {/* ## 공장 초기화 {#factory-reset} */}
-
 import FactoryReset from "../../common/_cs-fatory-reset.mdx";
 
 <FactoryReset />

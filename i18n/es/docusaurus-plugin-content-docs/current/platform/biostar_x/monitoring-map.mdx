@@ -11,15 +11,15 @@ keywords:
 
 Esta guía explica cómo monitorear y controlar el estado en tiempo real de puertas y cámaras por zona y piso mediante la función de monitoreo de mapas. El monitoreo de mapas permite navegar fácilmente por áreas y pisos a través de una interfaz visual integrada con Google Maps, habilitando funciones como el control de puertas de acceso y la reproducción de video de cámaras.
 
-Para acceder a la página <Cmd sid="arena.title" />, haz clic en <Cmd sid="arena.title" /> en <Cmd sid="shell.header.launcher" /> o selecciona <Cmd sid="arena.title" /> en el menú de la parte superior izquierda de la pantalla.
+Para acceder a la página <Cmd sid='arena.title' />, haz clic en <Cmd sid='arena.title' /> en <Cmd sid='shell.header.launcher' /> o selecciona <Cmd sid='arena.title' /> en el menú de la parte superior izquierda de la pantalla.
 
 En **BioStar X** se pueden configurar múltiples instalaciones dentro de una sola área. Cada instalación puede tener varios pisos configurados. En un piso, puede configurar la puerta y la cámara según el plano para su monitoreo. Consulte lo siguiente.
 
-![Area structure](/img/common/monitoring-map-area-tree.png)
+![Estructura de área](/img/common/monitoring-map-area-tree.png)
 
-Puede acceder al área configurada en el mapa GIS en el orden Área → Instalación → Piso, como se muestra en la imagen, para monitorear y controlar puertas y cámaras. Esta estructura también se puede ver en la barra lateral de la página <Cmd sid="arena.title" />.
+Puede acceder al área configurada en el mapa GIS en el orden Área → Instalación → Piso, como se muestra en la imagen, para monitorear y controlar puertas y cámaras. Esta estructura también se puede ver en la barra lateral de la página <Cmd sid='arena.title' />.
 
-![Monitoring sidebar](/img/common/monitoring-map-area-tree-example.png)
+![Barra lateral de seguimiento](/img/common/monitoring-map-area-tree-example.png)
 
 :::info
 
@@ -33,31 +33,35 @@ Para obtener más información sobre cómo configurar el mapa, consulte [lo sigu
 
 Los componentes que se muestran en el mapa incluyen el área, las instalaciones y las cámaras conectadas a las instalaciones. Puede acceder al piso a través de la instalación. Puede verificar la puerta y la cámara en el piso.
 
-<Image src="/img/biostarx-monitoring-map-main.png" />
+<Image src='/img/biostarx-monitoring-map-main.png' />
 
-<div className="col2--20-80">
-  | Componente | Descripción |
-  | :-: | --- |
-  | ![Facility icon](/img/common/monitoring-map-area-icon.svg) | **Instalación**: Haga clic en una instalación ubicada en el mapa para ingresar al piso configurado correspondiente. |
-  | ![Door icon](/img/common/monitoring-map-floor-door-icon.svg) | **Puerta**: Haga clic en una puerta ubicada en el mapa para mostrar un menú emergente y controlar esa puerta. Para obtener más información sobre las funciones disponibles, consulte [lo siguiente](control-door). |
-  | ![Camera icon](/img/common/monitoring-map-camera-icon.svg) | **Cámara**: Haga clic en la cámara para reproducir el video de la instalación o piso correspondiente. |
-  | ![Camera error icon](/img/common/monitoring-map-err-camera-icon.svg) | **Error de cámara**: Este mensaje aparece cuando la cámara no está conectada o está apagada. |
-  | <IcFUlockDr width="45" height="45" /> | **Puerta abierta**: La puerta ubicada en el piso está en estado abierto. |
-  | <IcFLockDr width="45" height="45" /> | **Puerta bloqueada**: La puerta ubicada en el piso está bloqueada. |
+<div className='col2--20-80'>
+
+| Componente | Descripción |
+| :-: | --- |
+| ![Icono de la instalación](/img/common/monitoring-map-area-icon.svg) | **Instalación**: Haga clic en una instalación ubicada en el mapa para ingresar al piso configurado correspondiente. |
+| ![Icono de puerta](/img/common/monitoring-map-floor-door-icon.svg) | **Puerta**: Haga clic en una puerta ubicada en el mapa para mostrar un menú emergente y controlar esa puerta. Para obtener más información sobre las funciones disponibles, consulte [lo siguiente](control-door). |
+| ![Icono de la cámara](/img/common/monitoring-map-camera-icon.svg) | **Cámara**: Haga clic en la cámara para reproducir el video de la instalación o piso correspondiente. |
+| ![Icono de error de cámara](/img/common/monitoring-map-err-camera-icon.svg) | **Error de cámara**: Este mensaje aparece cuando la cámara no está conectada o está apagada. |
+| <IcFUlockDr width='45' height='45' /> | **Puerta abierta**: La puerta ubicada en el piso está en estado abierto. |
+| <IcFLockDr width='45' height='45' /> | **Puerta bloqueada**: La puerta ubicada en el piso está bloqueada. |
+
 </div>
 
 ### Opciones {#options}
 
 Las opciones disponibles en el mapa o la capa son las siguientes.
 
-<div className="col2--20-80">
-  | Función | Descripción |
-  | :-: | --- |
-  | ![Zoom/Reduce](/img/common/monitoring-map-zoom-reduce-vertical.svg) / ![Zoom/Reduce](/img/common/monitoring-map-zoom-reduce-horizon.svg) | Puede acercar o alejar haciendo clic en los botones ubicados en la parte superior izquierda y en la inferior derecha del mapa. También puede usar la rueda del ratón para acercar o alejar el mapa. |
-  | <IcZoom /> | Puede acercar o alejar haciendo clic en los botones ubicados en la parte inferior derecha del piso. |
-  | <IcMapmore width="30" height="30" /> | Haga clic en el botón para acceder a funciones adicionales. |
-  | <IcClose width="30" height="30" /> | Para cerrar el mapa o el piso situado en la ventana de video, haga clic en el botón de la parte superior derecha. |
-  | <IcMove width="30" height="30" /> | Al hacer clic y arrastrar mientras mantiene presionado el icono, puede mover el mapa a otra ubicación. |
+<div className='col2--20-80'>
+
+| Función | Descripción |
+| :-: | --- |
+| ![Zoom/Reducción](/img/common/monitoring-map-zoom-reduce-vertical.svg) / ![Zoom/Reducto](/img/common/monitoring-map-zoom-reduce-horizon.svg) | Puede acercar o alejar haciendo clic en los botones ubicados en la parte superior izquierda y en la inferior derecha del mapa. También puede usar la rueda del ratón para acercar o alejar el mapa. |
+| <IcZoom /> | Puede acercar o alejar haciendo clic en los botones ubicados en la parte inferior derecha del piso. |
+| <IcMapmore width='30' height='30' /> | Haga clic en el botón para acceder a funciones adicionales. |
+| <IcClose width='30' height='30' /> | Para cerrar el mapa o el piso situado en la ventana de video, haga clic en el botón de la parte superior derecha. |
+| <IcMove width='30' height='30' /> | Al hacer clic y arrastrar mientras mantiene presionado el icono, puede mover el mapa a otra ubicación. |
+
 </div>
 
 :::info
@@ -72,28 +76,30 @@ Las opciones disponibles en el mapa o la capa son las siguientes.
 
 En la barra lateral izquierda puede verificar el estado de cada puerta y cámara de las instalaciones o pisos. Consulta la información siguiente para el estado de cada icono.
 
-<div className="col2--20-80">
-  | Ícono de estado | Descripción |
-  | :-: | --- |
-  | <IcErr width="35px" height="35px" /> | Hay un error del servidor de comunicación o se perdió la conexión. |
-  | <IcAlert width="40px" height="40px" /> | Se ha producido una alarma en la puerta. Si se detecta merodeo o intrusión, se mostrará el icono correspondiente. |
-  | <IcCamOk width="auto" height="35px" /> | La cámara está conectada. |
-  | <IcCamFail width="auto" height="35px" /> | La cámara está apagada o desconectada. |
+<div className='col2--20-80'>
+
+| Ícono de estado | Descripción |
+| :-: | --- |
+| <IcErr width='35px' height='35px' /> | Hay un error del servidor de comunicación o se perdió la conexión. |
+| <IcAlert width='40px' height='40px' /> | Se ha producido una alarma en la puerta. Si se detecta merodeo o intrusión, se mostrará el icono correspondiente. |
+| <IcCamOk width='auto' height='35px'/> | La cámara está conectada. |
+| <IcCamFail width='auto' height='35px'/> | La cámara está apagada o desconectada. |
+
 </div>
 
 ## Abrir mapa {#open-map}
 
-Si el área está vinculada al mapa GIS, puede mostrar el mapa en la sección <Cmd sid="arena.title" />.
+Si el área está vinculada al mapa GIS, puede mostrar el mapa en la sección <Cmd sid='arena.title' />.
 
 1. En la barra lateral izquierda, seleccione la instalación para verla en el mapa.
 
-2. Haga clic con el botón derecho.
+2. Haga clic con el botón derecho. 
 
-3. Haga clic en <Cmd sid="arena.tree.contextMenu.openMap" /> en el menú emergente.
+3. Haga clic en <Cmd sid='arena.tree.contextMenu.openMap' /> en el menú emergente.
 
-El mapa del área seleccionada se mostrará en la ventana de video de la sección <Cmd sid="arena.title" />.
+El mapa del área seleccionada se mostrará en la ventana de video de la sección <Cmd sid='arena.title' />.
 
-<Image src="/img/monitoring-map-open-map.png" alt="Abrir mapa" />
+<Image src='/img/monitoring-map-open-map.png' alt='Open map' />
 
 :::info
 
@@ -109,27 +115,27 @@ El mapa del área seleccionada se mostrará en la ventana de video de la secció
 
 Para ajustar el tamaño del mapa, haga clic en un área vacía del mapa. En cada esquina aparecerán manijas para cambiar el tamaño. Haga clic y arrastre la manija para ajustarla al tamaño deseado.
 
-<Image src="/img/common/biostarx-monitoring-map-resize.gif" alone />
+<Image src='/img/common/biostarx-monitoring-map-resize.gif' alone />
 
 Para mover el mapa a otra ubicación mientras cambia su tamaño, haga clic en el icono <IcMove /> sobre el mapa y arrástrelo a la posición deseada.
 
-<Image src="/img/common/biostarx-monitoring-map-move.gif" alone />
+<Image src='/img/common/biostarx-monitoring-map-move.gif' alone />
 
 ## Entrar al piso {#entry-floor}
 
 Para ingresar a un piso en el mapa, haga clic en la instalación. Cuando se muestre la lista de pisos accesibles desde el menú emergente, seleccione el piso deseado. Puede verificar los planos, las puertas y las cámaras en el piso seleccionado.
 
-O bien, haga doble clic en el piso en la barra lateral izquierda o haga clic con el botón derecho y seleccione <Cmd sid="arena.tree.contextMenu.openMap" /> en el menú emergente.
+O bien, haga doble clic en el piso en la barra lateral izquierda o haga clic con el botón derecho y seleccione <Cmd sid='arena.tree.contextMenu.openMap' /> en el menú emergente.
 
-<Image src="/img/monitoring-map-select-floor.png" />
+<Image src='/img/monitoring-map-select-floor.png' />
 
 * Al hacer clic en la puerta se mostrará un menú emergente que le permite controlar esa puerta. Para obtener más información sobre las funciones disponibles, consulte [lo siguiente](control-door).
 
-  <Image src="/img/monitoring-map-floor-control-door.png" />
+  <Image src='/img/monitoring-map-floor-control-door.png' />
 
 * Al hacer doble clic en la cámara, se reproduce la transmisión en vivo.
 
-  <Image src="/img/common/monitoring-map-select-floor-play-video.png" alone />
+  <Image src='/img/common/monitoring-map-select-floor-play-video.png' alone />
 
 :::info
 
@@ -147,7 +153,7 @@ O bien, haga doble clic en el piso en la barra lateral izquierda o haga clic con
 
 Para moverse a otro piso, haga clic en la opción de selección en la esquina superior izquierda del mapa y seleccione el piso al que desea ir.
 
-<Image src="/img/common/monitoring-map-select-floor-list-box.png" alone />
+<Image src='/img/common/monitoring-map-select-floor-list-box.png' alone />
 
 :::info
 
@@ -161,19 +167,19 @@ Para moverse a otro piso, haga clic en la opción de selección en la esquina su
 
 * Para controlar la cámara en el mapa o piso, haga clic en el ícono de la cámara. Seleccione la función deseada en el menú emergente.
 
-  <Image src="/img/biostarx-monitoring-map-camera-popup.png" />
+  <Image src='/img/biostarx-monitoring-map-camera-popup.png' />
 
-  * <Cmd sid="map.menu.camera.playVideo" />: Puede ver el video de la cámara en tiempo real.
+  * <Cmd sid='map.menu.camera.playVideo' />: Puede ver el video de la cámara en tiempo real.
 
-  * <Cmd sid="map.menu.camera.showCoverage" /> / <Cmd sid="map.menu.camera.hideCoverage" />: Puede mostrar u ocultar el rango de cobertura de la cámara.
+  * <Cmd sid='map.menu.camera.showCoverage' /> / <Cmd sid='map.menu.camera.hideCoverage' />: Puede mostrar u ocultar el rango de cobertura de la cámara.
 
-  * <Cmd sid="map.menu.door.viewDetail" />: Puede ver información detallada sobre la cámara. Muestra el nombre, grupo, ID, dirección IP, etc., de la cámara en el panel derecho.
+  * <Cmd sid='map.menu.door.viewDetail' />: Puede ver información detallada sobre la cámara. Muestra el nombre, grupo, ID, dirección IP, etc., de la cámara en el panel derecho.
 
-* Para colocar y reproducir la transmisión de la cámara en el mosaico de video, haga doble clic en la cámara en la lista <Cmd sid="arena.map.title" /> en la barra lateral izquierda de la pantalla. O haga clic derecho y seleccione <Cmd sid="arena.tree.contextMenu.openVideo" /> en el menú emergente.
+* Para colocar y reproducir la transmisión de la cámara en el mosaico de video, haga doble clic en la cámara en la lista <Cmd sid='arena.map.title' /> en la barra lateral izquierda de la pantalla. O haga clic derecho y seleccione <Cmd sid='arena.tree.contextMenu.openVideo' /> en el menú emergente.
 
-  <Image src="/img/biostarx-monitoring-map-open-camera.png" />
+  <Image src='/img/biostarx-monitoring-map-open-camera.png' />
 
-  Para ver información detallada como el nombre y el grupo de la cámara, haga clic en <Cmd sid="arena.tree.contextMenu.viewDetail" /> en el menú emergente.
+  Para ver información detallada como el nombre y el grupo de la cámara, haga clic en <Cmd sid='arena.tree.contextMenu.viewDetail' /> en el menú emergente.
 
 :::info
 
