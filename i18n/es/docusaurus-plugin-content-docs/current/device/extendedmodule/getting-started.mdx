@@ -20,77 +20,71 @@ La conexión del módulo de expansión no es compatible con el firmware estánda
 
 ## Componentes
 
-<Table className="component">
-  <Tbody>
-    <Row className="center white">
-      <Td>
-        <Image src="/img/device/component-extm.svg" className="none" alone />
-      </Td>
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
 
-      <Td>
-        <Image src="/img/device/component-pinmap-extm.svg" alone />
-      </Td>
+<Td><Image src='/img/device/component-extm.svg' className='none' alone /></Td>
 
-      <Td>
-        <Image src="/img/device/component-screws2.svg" className="none" alone />
-      </Td>
-    </Row>
+<Td><Image src='/img/device/component-pinmap-extm.svg' alone /></Td>
 
-    <Row className="center">
-      <Td>Módulo de expansión</Td>
+<Td><Image src='/img/device/component-screws2.svg' className='none' alone /></Td>
 
-      <Td>Etiqueta del mapa de pines</Td>
+</Row>
+<Row className='center'>
 
-      <Td>Tornillos de fijación x2</Td>
-    </Row>
-  </Tbody>
+<Td>Módulo de expansión</Td>
+
+<Td>Etiqueta del mapa de pines</Td>
+
+<Td>Tornillos de fijación x2</Td>
+
+</Row>
+</Tbody>
 </Table>
 
-<Table className="component">
-  <Tbody>
-    <Row className="center white">
-      <Td>
-        <Image src="/img/device/cable-rs485-4pin.svg" className="none" alone />
-      </Td>
+<Table className='component'>
+<Tbody>
+<Row className='center white'>
 
-      <Td>
-        <Image src="/img/device/cable-rs485-4pin.svg" className="none" alone />
-      </Td>
-    </Row>
+<Td><Image src='/img/device/cable-rs485-4pin.svg' className='none' alone /></Td>
 
-    <Row className="center">
-      <Td>Cable RS-232C</Td>
+<Td><Image src='/img/device/cable-rs485-4pin.svg' className='none' alone /></Td>
 
-      <Td>Cable RS-485</Td>
-    </Row>
+</Row>
+<Row className='center'>
 
-    <Row className="center white">
-      <Td>
-        <Image src="/img/device/cable-usb-4pin.svg" className="none" alone />
-      </Td>
+<Td>Cable RS-232C</Td>
 
-      <Td>
-        <Image src="/img/device/cable-usb-4pin-short.svg" className="none" alone />
-      </Td>
-    </Row>
+<Td>Cable RS-485</Td>
 
-    <Row className="center">
-      <Td>Cable de conexión al puerto de expansión USB (BioStation 3)</Td>
+</Row>
 
-      <Td>Cable de conexión al puerto de expansión USB (BioStation 2a)</Td>
-    </Row>
-  </Tbody>
+<Row className='center white'>
+
+<Td><Image src='/img/device/cable-usb-4pin.svg' className='none' alone /></Td>
+
+<Td><Image src='/img/device/cable-usb-4pin-short.svg' className='none' alone /></Td>
+
+</Row>
+<Row className='center'>
+
+<Td>Cable de conexión al puerto de expansión USB (BioStation 2a)</Td>
+
+<Td>Cable de conexión al puerto de expansión USB (BioStation 3)</Td>
+
+</Row>
+</Tbody>
 </Table>
 
 {/* 구성품 노트 */}
-
 import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
 <Componentsnote />
 
 ## Nombre y función de cada parte
 
-<Image src="/img/device/name-function-each-part-extm.png" className="none" width="50%" />
+<Image src='/img/device/name-function-each-part-extm.png' className='none' width='50%' />
 
 * **Ranura para tarjeta SAM**: Use tarjetas SAM (Módulo de Acceso Seguro).
 
@@ -104,42 +98,48 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
 ### RS-232C
 
-<Image src="/img/device/cable-rs485-4pin.svg" className="none" alone />
+<Image src='/img/device/cable-rs485-4pin.svg' className='none' alone />
 
-<div className="overflow-x col3--10-20-70">
-  | Pin | Nombre | Color |
-  | --- | --- | --- |
-  | 1 | 232 TX | Azul |
-  | 2 | 232 RX | Amarillo |
-  | 3 | 232 GND | Negro |
-  | 4 | SH GND | Gris |
+<div className='overflow-x col3--10-20-70'>
+
+| Pin | Nombre | Color |
+| --- | --- | --- |
+| 1 | 232 TX | Azul |
+| 2 | 232 RX | Amarillo |
+| 3 | 232 GND | Negro |
+| 4 | SH GND | Gris |
+
 </div>
 
 ### RS-485
 
-<Image src="/img/device/cable-rs485-4pin.svg" className="none" alone />
+<Image src='/img/device/cable-rs485-4pin.svg' className='none' alone />
 
-<div className="overflow-x col3--10-20-70">
-  | Pin | Nombre | Color |
-  | --- | --- | --- |
-  | 1 | 485 TRXP | Azul |
-  | 2 | 485 TRXN | Amarillo |
-  | 3 | 485 GND | Negro |
-  | 4 | SH GND | Gris |
+<div className='overflow-x col3--10-20-70'>
+
+| Pin | Nombre | Color |
+| --- | --- | --- |
+| 1 | 485 TRXP | Azul |
+| 2 | 485 TRXN | Amarillo |
+| 3 | 485 GND | Negro |
+| 4 | SH GND | Gris |
+
 </div>
 
 ### Cable de conexión al puerto de expansión USB
 
-<Image src="/img/device/cable-usb-4pin.svg" className="none" alone />
+<Image src='/img/device/cable-usb-4pin.svg' className='none' alone />
 
-<div className="overflow-x col3--10-20-70">
-  | Pin | Nombre | Color |
-  | --- | --- | --- |
-  | 1 | MAIN VBUS | Rojo |
-  | 2 | MAIN DM | Blanco |
-  | 3 | MAIN DP | Verde |
-  | 4 | NC | - |
-  | 5 | MAIN GND | Negro |
+<div className='overflow-x col3--10-20-70'>
+
+| Pin | Nombre | Color |
+| --- | --- | --- |
+| 1 | MAIN VBUS | Rojo |
+| 2 | MAIN DM | Blanco |
+| 3 | MAIN DP | Verde |
+| 4 | NC | - |
+| 5 | MAIN GND | Negro |
+
 </div>
 
 ## Ejemplo de instalación
@@ -158,4 +158,4 @@ Los dispositivos Suprema que pueden admitir el módulo de expansión son los sig
 
 * **<Linkto to="device/biostation_2a">BioStation 2a</Linkto>**
 
-<Image src="/img/device/installation-example-extm.png" className="none" width="70%" />
+<Image src='/img/device/installation-example-extm.png' className='none' width='70%' />

@@ -19,7 +19,7 @@ Ofrece los procedimientos completos de instalación y ejemplos de conexión nece
 
 1. Asegura firmemente el soporte con los tornillos de fijación en el lugar donde se montará el producto.
 
-   <Image src="/img/device/installation-device1-xpq2.svg" className="none" width="20%" alone />
+   <Image src='/img/device/installation-device1-xpq2.svg' className='none' width='20%' alone />
 
    :::info
 
@@ -28,21 +28,27 @@ Ofrece los procedimientos completos de instalación y ejemplos de conexión nece
    * Para evitar interferencias de RF, se debe mantener una distancia mínima de separación.
 
    <Columns>
-     <Column className="text--center">
-       <Image src="/img/device/installation-wall1-xpq2.png" className="none" width="60%" />
+   <Column className='text--center'>
 
-       <div className="overflow-x">
-         | Espesor de pared | Distancia |
-         | :-: | :-: |
-         | 100 mm | 270 mm |
-         | 120 mm | 250 mm |
-         | 150 mm | 170 mm |
-       </div>
-     </Column>
+   <Image src='/img/device/installation-wall1-xpq2.png' className='none' width='60%' />
 
-     <Column className="text--center">
-       <Image src="/img/device/installation-wall2-xpq2.png" className="none" width="60%" />
-     </Column>
+   <div className='overflow-x'>
+
+   | Espesor de pared | Distancia |
+   | :-: | :-: |
+   | 100 mm | 270 mm |
+   | 120 mm | 250 mm |
+   | 150 mm | 170 mm |
+
+   </div>
+
+   </Column>
+
+   <Column className='text--center'>
+
+   <Image src='/img/device/installation-wall2-xpq2.png' className='none' width='60%' />
+
+   </Column>
    </Columns>
 
    * Al utilizar una credencial de acceso móvil, instala los dispositivos manteniendo una distancia mínima de 1 m entre ellos para evitar interferencias BLE.
@@ -53,7 +59,7 @@ Ofrece los procedimientos completos de instalación y ejemplos de conexión nece
 
 2. Aprieta los cuatro tornillos que sujetan la cubierta del cable.
 
-   <Image src="/img/device/installation-device2-xpq2.svg" className="none" width="20%" alone />
+   <Image src='/img/device/installation-device2-xpq2.svg' className='none' width='20%' alone />
 
    :::info
 
@@ -63,11 +69,11 @@ Ofrece los procedimientos completos de instalación y ejemplos de conexión nece
 
 3. Monta el producto en el soporte fijado.
 
-   <Image src="/img/device/installation-device3-xpq2.svg" className="none" width="35%" alone />
+   <Image src='/img/device/installation-device3-xpq2.svg' className='none' width='35%' alone />
 
 4. Gira los tornillos de fijación para ensamblar el producto con el soporte.
 
-   <Image src="/img/device/installation-device4-xpq2.svg" className="none" width="15%" alone />
+   <Image src='/img/device/installation-device4-xpq2.svg' className='none' width='15%' alone />
 
    :::info
 
@@ -76,33 +82,34 @@ Ofrece los procedimientos completos de instalación y ejemplos de conexión nece
    :::
 
 {/* ## 전원 연결 */}
-
 import PowerConnection from "../../common/_device-power-connection.mdx";
 
 <PowerConnection />
 
 <PageBreak />
 
-## Conecte la alimentación del lector y de la cerradura
+## Conecte la alimentación del lector
 
-### Conecte la alimentación del lector
+### Conecte la alimentación del lector y de la cerradura
 
-<Image src="/img/device/installation-reader-power-connection-xpq2.png" className="none" width="65%" />
+<Image src='/img/device/installation-reader-power-connection-xpq2.png' className='none' width='65%' />
 
 ### Conecte la alimentación de la cerradura
 
-<Image src="/img/device/installation-lock-power-connection-xpq2.png" className="none" width="65%" />
+<Image src='/img/device/installation-lock-power-connection-xpq2.png' className='none' width='65%' />
 
 <PageBreak />
 
 ### Especificaciones de alimentación para lector y cerradura
 
-<div className="overflow-x">
-  | Alimentación | Corriente máxima del lector | Corriente máxima de la cerradura |
-  | :-: | :-: | :-: |
-  | CC 12V | 500 mA | 1.2 A |
-  | CC 24V | 250 mA | 600 mA |
-  | PoE (salida de 12 V) | 500 mA | No compatible |
+<div className='overflow-x'>
+
+| Alimentación | Corriente máxima del lector | Corriente máxima de la cerradura |
+| :-: | :-: | :-: |
+| CC 12V | 500 mA | 1.2 A |
+| CC 24V | 250 mA | 600 mA |
+| PoE (salida de 12 V) | 500 mA | No compatible |
+
 </div>
 
 ### Longitud máxima de extensión según especificación del cable
@@ -110,58 +117,63 @@ import PowerConnection from "../../common/_device-power-connection.mdx";
 La distancia de conexión puede variar según las especificaciones del cable y el entorno de instalación utilizado para la alimentación. Si las conexiones de los cables se realizan de forma incorrecta, el dispositivo puede funcionar incorrectamente. El producto soporta CC 12 V, CC 24 V y PoE. Verifique la longitud máxima de extensión para cada calibre de cable y conecte la alimentación correctamente.
 
 <Table>
-  <Thead>
-    <Row>
-      <Th rowspan={2}>Especificación del cable</Th>
+<Thead>
+<Row>
 
-      <Th colspan={2}>CC 12V</Th>
+<Th rowspan={2}>Especificación del cable</Th>
 
-      <Th colspan={2}>CC 24V</Th>
+<Th colspan={2}>CC 12V</Th>
 
-      <Th colspan={2}>PoE (Salida de 12 V)</Th>
-    </Row>
+<Th colspan={2}>CC 24V</Th>
 
-    <Row>
-      <Th>Lector (500 mA)</Th>
+<Th colspan={2}>PoE (Salida de 12 V)</Th>
 
-      <Th>Cerradura (1.2 A)</Th>
+</Row>
+<Row>
 
-      <Th>Lector (250 mA)</Th>
+<Th>Lector (500 mA)</Th>
 
-      <Th>Cerradura (600 mA)</Th>
+<Th>Cerradura (1.2 A)</Th>
 
-      <Th>Lector (500 mA)</Th>
-    </Row>
-  </Thead>
+<Th>Lector (250 mA)</Th>
 
-  <Tbody>
-    <Row className="center">
-      <Td>14 AWG</Td>
-      <Td>190 m</Td>
-      <Td>95 m</Td>
-      <Td>770 m</Td>
-      <Td>385 m</Td>
-      <Td>190 m</Td>
-    </Row>
+<Th>Cerradura (600 mA)</Th>
 
-    <Row className="center">
-      <Td>16 AWG</Td>
-      <Td>120 m</Td>
-      <Td>60 m</Td>
-      <Td>480 m</Td>
-      <Td>240 m</Td>
-      <Td>120 m</Td>
-    </Row>
+<Th>Lector (500 mA)</Th>
 
-    <Row className="center">
-      <Td>18 AWG</Td>
-      <Td>75 m</Td>
-      <Td>35 m</Td>
-      <Td>300 m</Td>
-      <Td>150 m</Td>
-      <Td>75 m</Td>
-    </Row>
-  </Tbody>
+</Row>
+</Thead>
+<Tbody>
+
+<Row className='center'>
+<Td>14 AWG</Td>
+<Td>190 m</Td>
+<Td>95 m</Td>
+<Td>770 m</Td>
+<Td>385 m</Td>
+<Td>190 m</Td>
+
+</Row>
+
+<Row className='center'>
+<Td>16 AWG</Td>
+<Td>120 m</Td>
+<Td>60 m</Td>
+<Td>480 m</Td>
+<Td>240 m</Td>
+<Td>120 m</Td>
+</Row>
+
+<Row className='center'>
+<Td>18 AWG</Td>
+<Td>75 m</Td>
+<Td>35 m</Td>
+<Td>300 m</Td>
+<Td>150 m</Td>
+<Td>75 m</Td>
+</Row>
+
+</Tbody>
 </Table>
 
 :::info
@@ -173,13 +185,11 @@ La longitud máxima de extensión real puede variar según la resistencia y el m
 <PageBreak />
 
 {/* ## 네트워크 연결 */}
-
 import NetworkConnection from "../../common/_device-network-connection.mdx";
 
 <NetworkConnection />
 
 {/* ## Input 연결 */}
-
 import InputConnection from "../../common/_device-input-connetion.mdx";
 
 <InputConnection />
@@ -187,7 +197,6 @@ import InputConnection from "../../common/_device-input-connetion.mdx";
 <PageBreak />
 
 {/* ## 릴레이 연결 */}
-
 import RelayConnectioin from "../../common/_device-relay-connection.mdx";
 
 <RelayConnectioin />
@@ -195,13 +204,11 @@ import RelayConnectioin from "../../common/_device-relay-connection.mdx";
 <PageBreak />
 
 {/* ## 독립형 연결 */}
-
 import StandaloneConnection from "../../common/_device-standalone-connection.mdx";
 
 <StandaloneConnection />
 
 {/* 공통 노트 */}
-
 import CommonNotes from "../../common/_device-connection-standalone-secure-notes.mdx";
 
 <CommonNotes />
@@ -209,7 +216,6 @@ import CommonNotes from "../../common/_device-connection-standalone-secure-notes
 <PageBreak />
 
 {/* ## Secure I/O 2 연결 */}
-
 import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
 
 <SecureIOConnection />
@@ -221,13 +227,11 @@ import SecureIOConnection from "../../common/_device-secure-io2-connection.mdx";
 <PageBreak />
 
 {/* ## Wiegand 연결 */}
-
 import WiegandConnection from "../../common/_device-wiegand-connection.mdx";
 
 <WiegandConnection />
 
 {/* ## 네트워크 설정 초기화 */}
-
 import Resetnetwork from "../../common/_device-reset-network-settings.mdx";
 
 <Resetnetwork />
@@ -235,10 +239,9 @@ import Resetnetwork from "../../common/_device-reset-network-settings.mdx";
 <PageBreak />
 
 {/* ## 공장 초기화 */}
-
 import Factoryreset from "../../common/_device-factory-reset.mdx";
 
-<Factoryreset name="verde" />
+<Factoryreset name='verde' />
 
 <PageBreak />
 
