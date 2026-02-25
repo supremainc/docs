@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["31699"], {
-89775: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["89387"], {
+13172: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
   RM: () => (toc)
@@ -17,11 +17,11 @@ const contentTitle = (/* unused pure expression or super */ null && (undefined))
 
 
 const toc = [{
-  "value": "Registrar en estado en línea",
+  "value": "オンラインで登録する",
   "id": "registering-online",
   "level": 2
 }, {
-  "value": "Registrar sin conexión",
+  "value": "オフラインで登録する",
   "id": "registering-offline",
   "level": 2
 }];
@@ -42,89 +42,89 @@ function _createMdxContent(props) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
       id: "registering-online",
-      children: "Registrar en estado en línea"
+      children: "オンラインで登録する"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Ingrese su nombre y la clave de licencia recibida y, a continuación, haga clic en ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+      children: ["インターネットに接続されたオンライン環境で ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "BioStar X"
+      }), " ライセンスをアクティベートするには、名前と受け取ったライセンスキーを入力し、", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
         sid: "setting.server.license.button.activate",
         product: "2"
-      }), " para activar la licencia de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: "BioStar X"
-      }), " mientras está en línea con una conexión a Internet."]
+      }), " ボタンをクリックします。"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
       src: "/img/biostarx-tutorial-license-online.png"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
       id: "registering-offline",
-      children: "Registrar sin conexión"
+      children: "オフラインで登録する"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Siga las instrucciones a continuación para activar la licencia de ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+      children: ["閉鎖ネットワーク環境やインターネット接続が制限されたオフライン環境で ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "BioStar X"
-      }), " en un entorno de red cerrado o en un estado sin conexión con acceso limitado a Internet."]
+      }), " ライセンスをアクティベートするには、以下の手順に従ってください。"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["En la sección ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             sid: "setting.xlicense.activation",
             product: "2"
-          }), ", haga clic en ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          }), " セクションで ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             sid: "setting.xlicense.offlineActivation",
             product: "2"
-          }), "."]
+          }), " ボタンをクリックします。"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/biostarx-tutorial-license-offline.png"
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Cuando aparezca la ventana ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             sid: "setting.server.license.title.activateLicenseOffline",
             product: "2"
-          }), ", haga clic en ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          }), " ウィンドウが表示されたら、", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             sid: "setting.xlicense.button.requestOfflineKey",
             product: "2"
-          }), "."]
+          }), " ボタンをクリックします。"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/biostarx-tutorial-license-offline-popup.png"
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Cuando aparezca el cuadro de diálogo, ingrese ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: ["ダイアログが表示されたら、", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             sid: "setting.xlicense.offlineActivation.requestBy",
             product: "2"
-          }), " y ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          }), " と ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             sid: "setting.xlicense.offlineActivation.activationKey",
             product: "2"
-          }), "."]
+          }), " を入力します。"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Image, {
           src: "/img/biostarx-tutorial-license-offline-popup-filed.png",
           className: "none"
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-          children: ["Haga clic en el botón ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
             sid: "setting.server.license.button.download",
             product: "2"
-          }), " para descargar el archivo de solicitud de licencia (", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+          }), " ボタンをクリックして、ライセンス要求ファイル(", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
             children: "*.req"
-          }), ")."]
+          }), ")をダウンロードします。"]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-          children: "Envíelo al lugar de compra."
+          children: "購入先に送信します。"
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Después de recibir el archivo de licencia (", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+      children: ["購入先からライセンスファイル(", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
         children: "*.lic"
-      }), ") del lugar de compra, haga clic en el botón ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+      }), ")を受け取ったら、", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
         sid: "setting.xlicense.offlineActivationTitle",
         product: "2"
-      }), " para cargar el archivo de licencia."]
+      }), " ボタンをクリックしてライセンスファイルをアップロードします。"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.admonition, {
       type: "info",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-        children: ["Si no tiene una clave de licencia, ingrese únicamente ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
+        children: ["ライセンスキーを持っていない場合は、", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Cmd, {
           sid: "setting.xlicense.offlineActivation.requestBy",
           product: "2"
-        }), "."]
+        }), " のみ入力します。"]
       })
     })]
   });
@@ -148,7 +148,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-451: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+36983: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -157,28 +157,28 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_x_register_license_key_mdx_40e_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_ja_docusaurus_plugin_content_docs_current_platform_biostar_x_register_license_key_mdx_bdb_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-es-docusaurus-plugin-content-docs-current-platform-biostar-x-register-license-key-mdx-40e.json
-var site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_x_register_license_key_mdx_40e_namespaceObject = JSON.parse('{"id":"platform/biostar_x/register-license-key","title":"Registrar Clave de Licencia","description":"Activa la licencia de BioStar X para usar funciones adicionales.","source":"@site/i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/register-license-key.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/register-license-key","permalink":"/docs/es/platform/biostar_x/register-license-key","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/register-license-key.mdx","tags":[],"version":"current","frontMatter":{"id":"register-license-key","title":"Registrar Clave de Licencia","description":"Activa la licencia de BioStar X para usar funciones adicionales.","keywords":["Licencia"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Cómo Iniciar Sesión","permalink":"/docs/es/platform/biostar_x/login"},"next":{"title":"Guía de Configuración Inicial","permalink":"/docs/es/platform/biostar_x/initial-setup-guide"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-ja-docusaurus-plugin-content-docs-current-platform-biostar-x-register-license-key-mdx-bdb.json
+var site_i_18_n_ja_docusaurus_plugin_content_docs_current_platform_biostar_x_register_license_key_mdx_bdb_namespaceObject = JSON.parse('{"id":"platform/biostar_x/register-license-key","title":"ライセンスキーを登録する","description":"BioStar X ライセンスを有効化して追加機能を利用してください。","source":"@site/i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/register-license-key.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/register-license-key","permalink":"/docs/ja/platform/biostar_x/register-license-key","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/register-license-key.mdx","tags":[],"version":"current","frontMatter":{"id":"register-license-key","title":"ライセンスキーを登録する","description":"BioStar X ライセンスを有効化して追加機能を利用してください。","keywords":["ライセンス"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"ログインする","permalink":"/docs/ja/platform/biostar_x/login"},"next":{"title":"初期設定ガイド","permalink":"/docs/ja/platform/biostar_x/initial-setup-guide"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-// EXTERNAL MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/common/_register-license-key.mdx
-var _register_license_key = __webpack_require__(89775);
-;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_x/register-license-key.mdx
+// EXTERNAL MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/common/_register-license-key.mdx
+var _register_license_key = __webpack_require__(13172);
+;// CONCATENATED MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/register-license-key.mdx
 
 
 const frontMatter = {
 	id: 'register-license-key',
-	title: 'Registrar Clave de Licencia',
-	description: 'Activa la licencia de BioStar X para usar funciones adicionales.',
+	title: 'ライセンスキーを登録する',
+	description: 'BioStar X ライセンスを有効化して追加機能を利用してください。',
 	keywords: [
-		'Licencia'
+		'ライセンス'
 	],
 	isTranslationMissing: false
 };
@@ -205,44 +205,48 @@ function _createMdxContent(props) {
   if (!Cmd) _missingMdxReference("Cmd", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "Si adquiriste la licencia de BioStar X, registra la clave de licencia para usar más funciones."
+      children: "BioStar X ライセンスを購入した場合は、ライセンスキーを登録してより多くの機能を利用できます。"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Ve a ", (0,jsx_runtime.jsx)(Cmd, {
+      children: [(0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.setting"
       }), " → ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.menu.license.root"
       }), " → ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.menu.license.biostarXLicense"
-      }), "."]
+      }), " メニューに移動します。"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["El método para activar ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["ユーザーのネットワーク環境によって、", (0,jsx_runtime.jsx)(Cmd, {
         sid: "setting.menu.license.biostarXLicense"
-      }), " varía según el entorno de red. Verifique el estado de la red y active la licencia según las instrucciones proporcionadas."]
+      }), " を有効化する方法が異なります。 案内に従ってネットワーク状態を確認し、ライセンスを有効化してください。"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+            children: "ライセンスを登録していない状態では、ユーザーの追加や出入口、デバイスの追加といった一部の機能が制限されます。"
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["Para más información sobre el menú ", (0,jsx_runtime.jsx)(Cmd, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
               sid: "setting.menu.license.root"
-            }), ", consulta ", (0,jsx_runtime.jsx)(_components.a, {
+            }), " メニューの詳細については、", (0,jsx_runtime.jsx)(_components.a, {
               href: "settings-license",
-              children: "lo siguiente"
-            }), "."]
+              children: "次の文書"
+            }), "を参照してください。"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["Para obtener más información sobre la política de licencias, consulta ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["ライセンス ポリシーの詳細については、", (0,jsx_runtime.jsx)(_components.a, {
               href: "licensing",
-              children: "lo siguiente"
-            }), "."]
+              children: "次のドキュメント"
+            }), " を参照してください。"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["Para obtener información sobre los códigos de error de licencias, consulta ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["ライセンスのエラーコードを確認するには", (0,jsx_runtime.jsx)(_components.a, {
               href: "https://reprisesoftware.com/docs/isv/appendix/appendix-b-rlm-status-values.html",
-              children: "el siguiente enlace"
-            }), "."]
+              children: "次のリンク"
+            }), "を参照してください。"]
           }), "\n"]
         }), "\n"]
       })

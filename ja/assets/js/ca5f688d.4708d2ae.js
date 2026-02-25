@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["91290"], {
-66703: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["29029"], {
+93309: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,29 +9,29 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_video_integration_mdx_7fe_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_ja_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_video_integration_mdx_ca5_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-x-settings-video-integration-mdx-7fe.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_video_integration_mdx_7fe_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-video-integration","title":"Integrate VMS","description":"This guide explains how to integrate the Video Management System (VMS) for real-time video monitoring and playback on BioStar X.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-video-integration.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-video-integration","permalink":"/docs/en/platform/biostar_x/settings-video-integration","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-video-integration.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-video-integration","title":"Integrate VMS","description":"This guide explains how to integrate the Video Management System (VMS) for real-time video monitoring and playback on BioStar X.","keywords":["Video","Integration","Camera","Settings"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"Video Settings","permalink":"/docs/en/platform/biostar_x/settings-videos"},"next":{"title":"Set up the camera","permalink":"/docs/en/platform/biostar_x/settings-videos-camera"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-ja-docusaurus-plugin-content-docs-current-platform-biostar-x-settings-video-integration-mdx-ca5.json
+var site_i_18_n_ja_docusaurus_plugin_content_docs_current_platform_biostar_x_settings_video_integration_mdx_ca5_namespaceObject = JSON.parse('{"id":"platform/biostar_x/settings-video-integration","title":"VMS と連携する","description":"BioStar X でリアルタイム映像のモニタリングおよび録画映像の再生を行うための Video Management System (VMS) 連携方法を説明します。","source":"@site/i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-video-integration.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/settings-video-integration","permalink":"/docs/ja/platform/biostar_x/settings-video-integration","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/settings-video-integration.mdx","tags":[],"version":"current","frontMatter":{"id":"settings-video-integration","title":"VMS と連携する","description":"BioStar X でリアルタイム映像のモニタリングおよび録画映像の再生を行うための Video Management System (VMS) 連携方法を説明します。","keywords":["ビデオ","連携","カメラ","設定"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"ビデオ設定","permalink":"/docs/ja/platform/biostar_x/settings-videos"},"next":{"title":"カメラを設定する","permalink":"/docs/ja/platform/biostar_x/settings-videos-camera"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-video-integration.mdx
+;// CONCATENATED MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-video-integration.mdx
 
 
 const frontMatter = {
 	id: 'settings-video-integration',
-	title: 'Integrate VMS',
-	description: 'This guide explains how to integrate the Video Management System (VMS) for real-time video monitoring and playback on BioStar X.',
+	title: 'VMS と連携する',
+	description: 'BioStar X でリアルタイム映像のモニタリングおよび録画映像の再生を行うための Video Management System (VMS) 連携方法を説明します。',
 	keywords: [
-		'Video',
-		'Integration',
-		'Camera',
-		'Settings'
+		'ビデオ',
+		'連携',
+		'カメラ',
+		'設定'
 	],
 	isTranslationMissing: false
 };
@@ -44,44 +44,44 @@ const assets = {
 
 
 const toc = [{
-  "value": "Before start",
-  "id": "before-start",
+  "value": "開始する前に",
+  "id": "開始する前に",
   "level": 2
 }, {
-  "value": "VMS server integration settings",
-  "id": "vms-server-integration-settings",
+  "value": "VMS サーバー連携設定",
+  "id": "vms-サーバー連携設定",
   "level": 2
 }, {
-  "value": "Install the certificate on the VMS server",
+  "value": "VMS サーバーで証明書をインストールする",
   "id": "install-vms-certification",
   "level": 3
 }, {
-  "value": "Activate VMS integration",
-  "id": "activate-vms-integration",
+  "value": "VMS 連携を有効化する",
+  "id": "vms-連携を有効化する",
   "level": 3
 }, {
-  "value": "Restart service",
-  "id": "restart-service",
+  "value": "サービスの再起動",
+  "id": "サービスの再起動",
   "level": 3
 }, {
-  "value": "Check and configure cameras",
-  "id": "check-and-configure-cameras",
+  "value": "カメラの確認と設定",
+  "id": "カメラの確認と設定",
   "level": 3
 }, {
-  "value": "Troubleshooting",
+  "value": "トラブルシューティング",
   "id": "video-troubleshooting",
   "level": 3
 }, {
-  "value": "Certificate installation on client PC",
+  "value": "クライアント PC で証明書をインストールする",
   "id": "install-client-certification",
   "level": 4
 }, {
-  "value": "VMS event and bookmark settings",
+  "value": "VMS イベントとブックマークの設定",
   "id": "vms-event-bookmark",
   "level": 2
 }, {
-  "value": "Disconnect VMS server integration",
-  "id": "disconnect-vms-server-integration",
+  "value": "VMSサーバー連携の解除",
+  "id": "vmsサーバー連携の解除",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -111,117 +111,117 @@ function _createMdxContent(props) {
   if (!Tabs) _missingMdxReference("Tabs", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
-      children: ["The ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Video Management System"
-      }), " (VMS) is a video management system that integrates and manages video from multiple cameras, allowing for recording and playback. Integrating BioStar X with VMS allows you to manage access control and video security on a single platform."]
+      }), " (VMS) は、複数のカメラ映像を統合管理し、録画と再生を行う映像管理システムです。 BioStar X と VMS を連携すると、入退室制御と映像セキュリティを 1 つのプラットフォームで統合管理できます。"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "You can gain the following benefits through VMS integration."
+      children: "VMS 連携により、次のような利点を得られます。"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Real-time monitoring"
-          }), ": You can view real-time video from cameras connected to doors."]
+            children: "リアルタイムモニタリング"
+          }), "：出入口に接続されたカメラのライブ映像を確認できます。"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Integrated event management"
-          }), ": You can understand security situations by linking access events with video."]
+            children: "統合イベント管理"
+          }), "：入退室イベントと映像を関連付けてセキュリティ状況を把握できます。"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Efficient evidence collection"
-          }), ": You can quickly search and replay recorded video from specific points in time."]
+            children: "効率的な証拠収集"
+          }), "：特定の時点の録画映像を迅速に検索して再生できます。"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Bookmark function"
-          }), ": You can add video tags to important event moments for easy retrieval and review."]
+            children: "ブックマーク機能"
+          }), "：重要なイベント時点に映像タグを追加し、簡単に検索および確認できます。"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "before-start",
-      children: "Before start"
+      id: "開始する前に",
+      children: "開始する前に"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["To integrate with the ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Video Management System"
-      }), " (VMS), please check the following items."]
+      }), " (VMS) と連携する前に、次の項目を確認してください。"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["The VMS integration feature is available through additional options for licenses above ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Advanced"
-          }), ". For more information on licensing policy, refer to ", (0,jsx_runtime.jsx)(_components.a, {
+          children: ["VMS 連携機能は ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "アドバンス"
+          }), " (Advanced) ライセンス以上で追加オプションとして利用できます。 ライセンス ポリシーの詳細については、", (0,jsx_runtime.jsx)(_components.a, {
             href: "licensing#features-add-ons",
-            children: "the following"
-          }), "."]
+            children: "次のドキュメント"
+          }), " を参照してください。"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Make sure that the VMS server is correctly installed and configured. The VMS server must be in a state that can connect online with ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["VMS サーバーが正しくインストールおよび構成されていることを確認してください。 VMS サーバーが ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), "."]
+          }), " とオンラインで接続できる状態である必要があります。"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Use a VMS that is compatible with ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), ". You can use ", (0,jsx_runtime.jsx)(_components.a, {
+          }), " と互換性のある VMS を使用してください。 ", (0,jsx_runtime.jsx)(_components.a, {
             href: "https://www.supremainc.com/ko/platform/video-ac-integrated-system-biostar-x-vms.asp",
             children: "BioStar X VMS"
-          }), " or the ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), " または ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Nx Witness v5.1.5"
-          }), " series of VMS."]
+          }), " 系列の VMS を利用できます。"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Prepare the IP address, port number, and administrator account information of the VMS server. This information is needed to connect the VMS server with ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["VMS サーバーの IP アドレス、ポート番号、管理者アカウント情報を準備してください。 これらの情報は ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), "."]
+          }), " が VMS サーバーに接続する際に必要です。"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "vms-server-integration-settings",
-      children: "VMS server integration settings"
+      id: "vms-サーバー連携設定",
+      children: "VMS サーバー連携設定"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Follow the steps below to integrate the VMS server with ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["VMS サーバーと ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "."]
+      }), " を連携するには、次の手順に従ってください。"]
     }), "\n", (0,jsx_runtime.jsxs)(Steps, {
       children: [(0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
           id: "install-vms-certification",
-          children: "Install the certificate on the VMS server"
+          children: "VMS サーバーで証明書をインストールする"
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "To play back recorded video from the VMS server, you must use HTTPS protocol. Generate an IP address-based certificate on the VMS server."
+          children: "VMS サーバーの録画映像を再生するには、HTTPS プロトコルを使用する必要があります。 VMS サーバーで IP アドレスベースの証明書を作成してください。"
         }), (0,jsx_runtime.jsx)(_components.admonition, {
           type: "note",
           children: (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "Before installing the certificate, ensure that Open JDK 21 or higher is installed on the PC where VMS is installed."
+                children: "証明書をインストールする前に、VMS をインストールした PC に Open JDK 21 以上がインストールされていることを確認してください。"
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["When installing the VMS server and ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: ["VMS サーバーと ", (0,jsx_runtime.jsx)(_components.strong, {
                   children: "BioStar X"
-                }), " on the same server, you will need to install a certificate."]
+                }), " を同じサーバーにインストールする場合、証明書をインストールする必要があります。"]
               }), "\n"]
             }), "\n"]
           })
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Navigate to the ", (0,jsx_runtime.jsx)(_components.em, {
+              children: [(0,jsx_runtime.jsx)(_components.em, {
                 children: "C:\\Program Files\\BioStar X\\third"
-              }), " path and run the command prompt."]
+              }), " パスに移動し、コマンドプロンプトを起動してください。"]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Execute the following command."
+              children: "次のコマンドを実行してください。"
             }), "\n", (0,jsx_runtime.jsxs)(Tabs, {
               groupId: "os",
               defaultValue: "Windows",
@@ -245,126 +245,126 @@ function _createMdxContent(props) {
             }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: ["Replace ", (0,jsx_runtime.jsx)(_components.code, {
+                  children: [(0,jsx_runtime.jsx)(_components.code, {
                     children: "<%VENDOR.NAME%>"
-                  }), " section with the product name of your VMS."]
+                  }), " の部分を VMS の製品名に置き換えてください。"]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: ["Replace ", (0,jsx_runtime.jsx)(_components.code, {
+                  children: [(0,jsx_runtime.jsx)(_components.code, {
                     children: "{VMS_IP_ADDRESS}"
-                  }), " section with the IP address of the VMS server."]
+                  }), " 部分を VMS サーバの IP アドレスに置き換えてください。"]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                  children: ["The ", (0,jsx_runtime.jsx)(_components.em, {
+                  children: ["導入した VMS 製品によっては ", (0,jsx_runtime.jsx)(_components.em, {
                     children: "ssl"
-                  }), " path may vary depending on the installed VMS product."]
+                  }), " のパスが異なる場合があります。"]
                 }), "\n"]
               }), "\n"]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Check whether the certificate file (", (0,jsx_runtime.jsx)(_components.em, {
+              children: ["VMS をインストールしたパスに証明書ファイル (", (0,jsx_runtime.jsx)(_components.em, {
                 children: "*.pem"
-              }), ") was created in the path where VMS is installed."]
+              }), ") が生成されていることを確認してください。"]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Reboot the VMS server."
+              children: "VMS サーバーを再起動してください。"
             }), "\n"]
           }), "\n"]
         }), (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["If VMS is installed on a different server than ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: ["VMS が ", (0,jsx_runtime.jsx)(_components.strong, {
               children: "BioStar X"
-            }), ", copy the ", (0,jsx_runtime.jsx)(_components.em, {
+            }), " と別のサーバーにインストールされている場合は、", (0,jsx_runtime.jsx)(_components.em, {
               children: "scaleUtil-1.0-all.jar"
-            }), " file to the VMS server and follow the previous steps."]
+            }), " ファイルを VMS サーバーにコピーして上記の手順を実行してください。"]
           })
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "activate-vms-integration",
-          children: "Activate VMS integration"
+          id: "vms-連携を有効化する",
+          children: "VMS 連携を有効化する"
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
-                sid: "shell.header.setting"
-              }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "shell.header.launcher"
-              }), " page."]
+              }), "ページで", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "shell.header.setting"
+              }), "をクリックします。"]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["On the left sidebar, click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["画面左のサイドバーで ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "setting.menu.video.root"
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "setting.menu.video.vmsIntegration"
-              }), "."]
+              }), " をクリックしてください。"]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["If this is your first time accessing, log in with the ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: ["初めてアクセスする場合は ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "BioStar X"
-              }), " administrator account."]
+              }), " の管理者アカウントでログインする必要があります。"]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/biostarx-settings-video-integration-login.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Set the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "video.setting.integration.title",
                 product: "2"
-              }), " option to ", (0,jsx_runtime.jsx)(Cmd, {
+              }), " オプションを ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "common.use",
                 product: "2"
-              }), "."]
+              }), " に設定してください。"]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/biostarx-settings-video-integration.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Enter the VMS server information."
+              children: "VMS サーバー情報を入力してください。"
             }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "video.setting.integration.serverAddress",
                     product: "2"
-                  }), ": Enter the IP address of the VMS server."]
+                  }), "：VMS サーバーの IP アドレスを入力してください。"]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "video.setting.integration.port",
                     product: "2"
-                  }), ": Enter the port number of the VMS server."]
+                  }), "：VMS サーバーのポート番号を入力してください。"]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "video.setting.integration.loginId",
                     product: "2"
-                  }), ": Enter the administrator account ID of the VMS server."]
+                  }), "：VMS サーバーの管理者アカウント ID を入力してください。"]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "video.setting.integration.password",
                     product: "2"
-                  }), ": Enter the administrator account password of the VMS server."]
+                  }), "：VMS サーバーの管理者アカウントのパスワードを入力してください。"]
                 }), "\n"]
               }), "\n"]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Once you have entered all the VMS server information, click the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["VMS サーバー情報をすべて入力したら、画面右下の ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "button.apply",
                 product: "2"
-              }), " button at the bottom right of the screen."]
+              }), " ボタンをクリックしてください。"]
             }), "\n"]
           }), "\n"]
         }), (0,jsx_runtime.jsx)(_components.admonition, {
@@ -372,45 +372,45 @@ function _createMdxContent(props) {
           children: (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "If the integration with the VMS server fails and an error message appears, check the server address and administrator account information again. It is also necessary to check whether the VMS server is online and if network connections are blocked due to firewall settings."
+                children: "VMS サーバーとの連携に失敗してエラーメッセージが表示された場合は、サーバーアドレスや管理者アカウント情報などを再確認してください。 VMS サーバーがオンライン状態にあるか、ファイアウォール設定によってネットワーク接続がブロックされていないかを確認することも必要です。"
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-                children: ["For more information on the settings in the ", (0,jsx_runtime.jsx)(Cmd, {
+                children: [(0,jsx_runtime.jsx)(Cmd, {
                   sid: "video.setting.tag.title",
                   product: "2"
-                }), " section, refer to ", (0,jsx_runtime.jsx)(_components.a, {
+                }), " セクションの設定の詳細は ", (0,jsx_runtime.jsx)(_components.a, {
                   href: "#vms-event-bookmark",
-                  children: "the following"
-                }), "."]
+                  children: "次のドキュメント"
+                }), " を参照してください。"]
               }), "\n"]
             }), "\n"]
           })
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "restart-service",
-          children: "Restart service"
+          id: "サービスの再起動",
+          children: "サービスの再起動"
         }), (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["The first time you integrate with the VMS server, ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["VMS サーバーと初めて連携すると、", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), " will automatically restart the service. If it does not automatically restart, follow the instructions below to manually restart the service."]
+          }), " はサービスを自動的に再起動します。 自動で再起動しない場合は、次の手順に従って手動でサービスを再起動してください。"]
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Start, {}), " → ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: ["Windows で ", (0,jsx_runtime.jsx)(Start, {}), " → ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "BioStar X"
               }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "BioStar X Service Manager"
-              }), " on Windows."]
+              }), " をクリックします。"]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["In the ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: [(0,jsx_runtime.jsx)(_components.strong, {
                 children: "All Services"
-              }), " list, click the ", (0,jsx_runtime.jsx)(_components.strong, {
+              }), " リストで下記サービスの ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "Stop"
-              }), " button for the services below to stop them."]
+              }), " ボタンをクリックしてサービスを停止してください。"]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/common/biostarx-sm-restart-service-video.png",
               alone: true
@@ -431,13 +431,13 @@ function _createMdxContent(props) {
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["When the status of the requested service changes from ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: ["停止を要求したサービスの状態が ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "Pending"
-              }), " to ", (0,jsx_runtime.jsx)(_components.strong, {
+              }), " から ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "Stopped"
-              }), ", click the ", (0,jsx_runtime.jsx)(_components.strong, {
+              }), " に変わったら、", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "Start"
-              }), " button to restart the service."]
+              }), " ボタンをクリックしてサービスを再起動してください。"]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/common/biostarx-sm-restart-service-video-start.png",
               alone: true
@@ -446,72 +446,72 @@ function _createMdxContent(props) {
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "check-and-configure-cameras",
-          children: "Check and configure cameras"
+          id: "カメラの確認と設定",
+          children: "カメラの確認と設定"
         }), (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["If the VMS server is integrated normally, you can check the connected cameras in the ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["VMS サーバーと正常に連携できた場合、", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.menu.video.root"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.menu.video.video"
-          }), " menu. For more information, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+          }), " メニューで接続されているカメラを確認できます。 詳細は ", (0,jsx_runtime.jsx)(_components.a, {
             href: "settings-videos-camera",
-            children: "the following"
-          }), "."]
+            children: "次のドキュメント"
+          }), " を参照してください。"]
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "video-troubleshooting",
-      children: "Troubleshooting"
+      children: "トラブルシューティング"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "If the following situations occur, you can install the certificate from the VMS server onto the client PC to resolve the issue."
+      children: "次のような状況が発生した場合、VMS サーバーにインストールされている証明書をクライアント PC にインストールして問題を解決できます。"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["When accessing ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["ブラウザーで ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Video Management System"
-          }), " (VMS) through the browser, and a 'Not secure' warning appears"]
+          }), " (VMS) にアクセスした際に「安全ではありません」と警告が表示される場合"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["When real-time video plays on the ", (0,jsx_runtime.jsx)(Cmd, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.arena"
-          }), " page but recorded video does not play"]
+          }), " ページでライブ映像は再生されるが録画映像が再生されない場合"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
       id: "install-client-certification",
-      children: "Certificate installation on client PC"
+      children: "クライアント PC で証明書をインストールする"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Download the HTTPS certificate installer (", (0,jsx_runtime.jsx)(_components.em, {
-            children: "cert-register.zip"
-          }), ") from the login screen or ", (0,jsx_runtime.jsx)(Cmd, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "BioStar X"
+          }), " をインストールしたクライアント PC のログイン画面、または ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.setting"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.menu.server.root"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.https.https",
             product: "2"
-          }), " on the client PC where ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "BioStar X"
-          }), " is installed."]
+          }), " から HTTPS 証明書インストーラ (", (0,jsx_runtime.jsx)(_components.em, {
+            children: "cert-register.zip"
+          }), ") をダウンロードします。"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Unzip the downloaded file and run ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: ["ダウンロードしたファイルを解凍し、", (0,jsx_runtime.jsx)(_components.em, {
             children: "cert-register.exe"
-          }), " file. ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), " ファイルを実行します。 ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Enrollment Certification"
-          }), " window will appears."]
+          }), " ウィンドウが表示されます。"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Select ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "VMS"
-          }), " for ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Target System"
-          }), " and enter the following information."]
+          }), " で ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "VMS"
+          }), " を選択し、次の情報を入力します。"]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/common/biostarx-settings-server-enrollment-vms-certification.png",
           alone: true
@@ -520,41 +520,41 @@ function _createMdxContent(props) {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
                 children: "Server Address"
-              }), ": IP address of the VMS server"]
+              }), "：VMS サーバーの IP アドレス"]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(_components.strong, {
                 children: "Port"
-              }), ": Port number of the VMS server"]
+              }), "：VMS サーバーのポート番号"]
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click the ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: "Enrollment"
-          }), " button."]
+          }), " ボタンをクリックします。"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Check the security warning message and click ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Yes"
-          }), "."]
+          children: ["セキュリティ警告メッセージを確認し、", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "はい"
+          }), " をクリックします。"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Restart the web browser and check if the recorded video from the VMS server plays normally on the ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["Web ブラウザーを再起動し、", (0,jsx_runtime.jsx)(Cmd, {
         sid: "shell.header.arena"
-      }), " page."]
+      }), " ページで VMS サーバーの録画映像が正常に再生されるか確認します。"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "vms-event-bookmark",
-      children: "VMS event and bookmark settings"
+      children: "VMS イベントとブックマークの設定"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["You can transmit bookmark tags and event tag information to the integrated VMS server. At this point, you can choose to transmit event logs, door names, device names, and user IDs together. Select the desired options and click the ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["連携したVMSサーバーにブックマークタグとイベントタグの情報を送信できます。 このとき、イベントログ、ドア名、デバイス名、ユーザーIDも併せて送信するかどうかを選択できます。 必要なオプションを選択し、画面右下の ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "button.apply",
         product: "2"
-      }), " button at the bottom right of the screen."]
+      }), " をクリックしてください。"]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/biostarx-settings-video-event-bookmark.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -563,21 +563,21 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "common.language",
             product: "2"
-          }), ": Choose the language for the event and bookmark tags transmitted to the VMS server. You can select either Korean or English."]
+          }), "：VMSサーバーに送信するイベントタグおよびブックマークタグの言語を選択します。 韓国語または英語を選択できます。"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "video.setting.tag.bookmark",
             product: "2"
-          }), ": Bookmark tags allow you to easily locate and review videos stored on the VMS server with designations and names for quick identification. Select the information to send with the bookmark tag."]
+          }), "：ブックマークタグは、VMSサーバーに保存された映像にラベルと名前を付け、簡単に検索・確認できる機能です。 ブックマークタグで送信する情報を選択します。"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "video.setting.tag.event",
             product: "2"
-          }), ": You can transmit events that occurred at specific moments to the VMS server for logging. Select the information to send with the event tag."]
+          }), "：ある時点で発生したイベントをVMSサーバーに送信して記録できます。 イベントタグで送信する情報を選択します。"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -585,65 +585,65 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["For more information on the bookmark function in VMS, refer to ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://resources.vmsproxy.com/nx_6.0_help/using_bookmarks.html",
-              children: "the following link"
-            }), "."]
+            children: ["VMSのブックマーク機能の詳細は", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://resources.vmsproxy.com/nx_vms_help/using_bookmarks.html",
+              children: "次のリンク"
+            }), "を参照してください。"]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["For more information on the event function in VMS, refer to ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://resources.vmsproxy.com/nx_6.0_help/events_available_in_vms.html",
-              children: "the following link"
-            }), "."]
+            children: ["VMSのイベント機能の詳細は", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://resources.vmsproxy.com/nx_vms_help/configuring_events_and_actions.html",
+              children: "次のリンク"
+            }), "を参照してください。"]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "disconnect-vms-server-integration",
-      children: "Disconnect VMS server integration"
+      id: "vmsサーバー連携の解除",
+      children: "VMSサーバー連携の解除"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "To disconnect the integrated VMS server, follow the steps below. Disconnecting VMS integration will delete all video settings, registered cameras, and rules."
+      children: "連携したVMSサーバーとの接続を解除するには、次の手順に従ってください。 VMS連携を解除すると、ビデオ設定、登録済みカメラ、ルールがすべて削除されます。"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
-            sid: "shell.header.setting"
-          }), " on the ", (0,jsx_runtime.jsx)(Cmd, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "shell.header.launcher"
-          }), " page."]
+          }), "ページで", (0,jsx_runtime.jsx)(Cmd, {
+            sid: "shell.header.setting"
+          }), "をクリックします。"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["On the left sidebar, click ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["画面左のサイドバーで ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.menu.video.root"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "setting.menu.video.vmsIntegration"
-          }), "."]
+          }), " をクリックしてください。"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Set the ", (0,jsx_runtime.jsx)(Cmd, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "video.setting.integration.title",
             product: "2"
-          }), " option to ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " オプションを ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "common.notUse",
             product: "2"
-          }), "."]
+          }), " に設定します。"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Click the ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["画面右下の ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.apply",
             product: "2"
-          }), " button at the bottom right of the screen."]
+          }), " をクリックしてください。"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Check the contents of the message window and click the ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["メッセージウィンドウの内容を確認し、", (0,jsx_runtime.jsx)(Cmd, {
             sid: "button.yes",
             product: "2"
-          }), " button."]
+          }), " をクリックしてください。"]
         }), "\n"]
       }), "\n"]
     })]

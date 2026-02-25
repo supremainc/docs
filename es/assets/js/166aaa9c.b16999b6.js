@@ -586,14 +586,14 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["Para obtener más información sobre la función de marcadores en VMS, consulte ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://resources.vmsproxy.com/nx_6.0_help/using_bookmarks.html",
+              href: "https://resources.vmsproxy.com/nx_vms_help/using_bookmarks.html",
               children: "el siguiente enlace"
             }), "."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["Para obtener más información sobre la función de eventos en VMS, consulte ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://resources.vmsproxy.com/nx_6.0_help/events_available_in_vms.html",
+              href: "https://resources.vmsproxy.com/nx_vms_help/configuring_events_and_actions.html",
               children: "el siguiente enlace"
             }), "."]
           }), "\n"]
