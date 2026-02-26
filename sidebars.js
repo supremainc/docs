@@ -991,6 +991,27 @@ const sidebars = {
       ]
     }
   ],
+  doorinterface_ul: [
+    {
+      type: 'category',
+      label: 'Door Interface UL',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/doorinterface_ul/index',
+      },
+      items: [
+        'device/doorinterface_ul/safety-instructions',
+        'device/doorinterface_ul/getting-started',
+        'device/doorinterface_ul/installation',
+        'device/doorinterface_ul/product-specifications',
+        'device/doorinterface_ul/regulatory-information',
+        'device/doorinterface_ul/appendices',
+      ]
+    }
+  ],
   doormodule: [
     {
       type: 'category',
