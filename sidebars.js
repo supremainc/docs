@@ -912,6 +912,27 @@ const sidebars = {
       ]
     }
   ],
+  corestation20_ul: [
+    {
+      type: 'category',
+      label: 'CoreStation 20 UL',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/corestation_20_ul/index',
+      },
+      items: [
+        'device/corestation_20_ul/safety-instructions',
+        'device/corestation_20_ul/getting-started',
+        'device/corestation_20_ul/installation',
+        'device/corestation_20_ul/product-specifications',
+        'device/corestation_20_ul/regulatory-information',
+        'device/corestation_20_ul/appendices',
+      ]
+    }
+  ],
   enclosure: [
     {
       type: 'category',
