@@ -1,0 +1,54 @@
+---
+id: 120
+title: Firmware Version 1.2.0
+---
+
+# Firmware Version 1.2.0 (Build No. 1.2.0_251014)
+
+Release<Separator/>2025-10-21
+
+:::caution
+
+- After upgrading the firmware to v1.2.0, it is not able to downgrade to an earlier version of the firmware.
+
+- For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Supports the **Master Admin** setting, which grants full administrator privileges.
+
+1. Reflects global cybersecurity standards and the latest security requirements.
+
+1. Added identification code to support recognition of the latest cards.
+
+    - DESFire EV3
+
+1. Improved time synchronization behavior between server and devices.
+
+1. Improved keypad UI when entering username or ID.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. When using **Device → Server** mode, the server IP address is reset if the connection to the DHCP server fails. <Badge>1.0.0</Badge>
+
+1. When a user with more than two cards enrolled attempts card authentication to the Wiegand output device, the ID of a card other than the authenticated card is output. <Badge>1.0.0</Badge>
+
+1. Arm/Disarm actions did not operate correctly on specific Supervised Input port of the DM-20 connected as a slave. <Badge>1.0.0</Badge>
+
+1. Each time the **Device Info** menu is opened, the **WiFi MAC** address is displayed differently. <Badge>1.1.0</Badge>
+
+1. Wiegand format card data of 25 bits or less is not recognized. <Badge>1.0.0</Badge>
+
+1. When multiple devices are connected to a third-party control panel, rebooting one device causes the RS-485 connections of the other devices to be disconnected. <Badge>1.1.0</Badge>
+
+1. After a firmware upgrade, authentication failure occurs with the previously used cards. <Badge>1.1.0</Badge>
+
+</BugLists>
