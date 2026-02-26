@@ -188,10 +188,10 @@
           "label": "Wiegand",
           "label_id": "specs.interface.wiegand",
           "value": {
-            "ko": "2채널 입력 (전압: 12 Vdc / 전류: 최대 1.5 A)",
-            "en": "2 ch Inputs (Voltage: 12 Vdc / Current: Max. 1.5 A)",
-            "es": "Entrada de 2 canales (Voltaje: 12 Vdc / Corriente: Máx. 1.5 A)",
-            "ja": "2 チャンネル入力（電圧：12 Vdc / 電流：最大 1.5 A）"
+            "ko": "2채널 입력",
+            "en": "2 ch Inputs",
+            "es": "Entrada de 2 canales",
+            "ja": "2 チャンネル入力"
           }
         }
       }
