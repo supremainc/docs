@@ -1628,7 +1628,9 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         const childText = node.children?.[0]?.value || '';
         const to = toAttr ? toAttr.value : '#';
         let docsLink;
-        if (language !== 'ko') {
+        if (language === 'ru') {
+          docsLink = `https://docs.supremainc.com/en/${to}`;
+        } else if (language !== 'ko') {
           docsLink = `https://docs.supremainc.com/${language}/${to}`;
         } else {
           docsLink = `https://docs.supremainc.com/${to}`;

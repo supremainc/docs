@@ -501,10 +501,10 @@
     "message": "CPU"
   },
   "specs.general.memory": {
-    "message": "Memory"
+    "message": "Память"
   },
   "specs.general.crypto_chip": {
-    "message": "Crypto Chip"
+    "message": "Крипточип"
   },
   "specs.general.lcd_type": {
     "message": "Тип дисплея"
@@ -699,10 +699,10 @@
     "message": "Реле"
   },
   "specs.power.poe12vout": {
-    "message": "PoE (12V out)"
+    "message": "PoE (выход 12V)"
   },
   "specs.power.poe_plus12vout": {
-    "message": "PoE+ (12V out)"
+    "message": "PoE+ (выход 12V)"
   },
   "specs.size_weight": {
     "message": "Размеры и вес"

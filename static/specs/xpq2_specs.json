@@ -70,12 +70,12 @@
         "cpu": {
           "label": "CPU",
           "label_id": "specs.general.cpu",
-          "value": "1.0 GHz"
+          "value": {"ko": "1.0 GHz", "en": "1.0 GHz", "ru": "1,0 ГГц", "es": "1.0 GHz", "ja": "1.0 GHz"}
         },
         "memory": {
           "label": "메모리",
           "label_id": "specs.general.memory",
-          "value": "8 GB Flash + 256 MB RAM"
+          "value": {"ko": "8 GB Flash + 256 MB RAM", "en": "8 GB Flash + 256 MB RAM", "ru": "8 ГБ Flash + 256 МБ RAM", "es": "8 GB Flash + 256 MB RAM", "ja": "8 GB Flash + 256 MB RAM"}
         },
         "crypto_chip": {
           "label": "크립토 칩",
