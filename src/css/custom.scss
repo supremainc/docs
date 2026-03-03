@@ -1310,6 +1310,22 @@ body[data-rh] .redocusaurus {
   }
 }
 
+@media screen and (max-width: 996px) {
+  .markdown {
+    .container {
+      .padding--l10 {
+        padding-left: 0px !important;
+      }
+      .padding--l20 {
+        padding-left: 0px !important;
+      }
+      .padding--l40 {
+        padding-left: 0px !important;
+      }
+    }
+  }
+}
+
 @media (max-width: 695px) {
   .aa-Autocomplete {
     width: 100%;

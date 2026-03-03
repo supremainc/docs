@@ -97,7 +97,6 @@ const sidebars = {
                 'platform/biostar_air/adding-users-in-bulk',
                 'platform/biostar_air/managing-user-groups',
                 'platform/biostar_air/managing-card-templates',
-                'platform/biostar_air/managing-adding-users',
                 'platform/biostar_air/user-card-types',
                 'platform/biostar_air/linkpass-credentials',
               ]
@@ -161,13 +160,7 @@ const sidebars = {
                 'platform/biostar_air/monitoring-door-status',
               ]
             },
-            {
-              type: 'category',
-              label: 'Advanced Features',
-              items: [
-                'platform/biostar_air/managing-roll-call-fire-muster',
-              ]
-            },
+            'platform/biostar_air/managing-roll-call-fire-muster',
             {
               type: 'category',
               label: 'Settings',
@@ -187,7 +180,18 @@ const sidebars = {
             }
           ]
         },
-        'platform/biostar_air/managing-sites-with-app',
+        {
+          type: 'category',
+          label: '모바일 앱',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_air/managing-sites-with-app',
+          },
+          items: [
+            'platform/biostar_air/managing-adding-users'
+
+          ]
+        },
         {
           type: 'category',
           label: 'Using Mobile Credentials',
