@@ -3,7 +3,7 @@ import MDXContent from '@theme-original/MDXContent';
 import {useLocation} from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-export default function XcludeDoc ({children, product, pages}) {
+export default function XcludeDoc ({children, product, pages, lang}) {
     const { i18n: {currentLocale} } = useDocusaurusContext();
     const location = useLocation();
     
@@ -20,5 +20,10 @@ export default function XcludeDoc ({children, product, pages}) {
         const isPage = Pages.includes(cPage[lastPath]);
         
         return isPage ? null : <MDXContent>{children}</MDXContent>;
+    } else if (lang) {
+        const cLang = Array.isArray(lang) ? lang : lang.split(',');
+        const isLang = cLang.includes(currentLocale);
+
+        return isLang ? null : <MDXContent>{children}</MDXContent>;
     }
 }
