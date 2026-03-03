@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["77496"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["96074"], {
 43464: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   A: () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -29,191 +29,6 @@ const SvgIcoClose = ({
   d: "m12 4-8 8M4 4l8 8"
 })));
 /* ESM default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SvgIcoClose);
-
-}),
-55512: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ BlogListPage)
-});
-
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(74848);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(96540);
-// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.mjs
-var clsx = __webpack_require__(39836);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useDocusaurusContext.js
-var useDocusaurusContext = __webpack_require__(13341);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/metadataUtils.js
-var metadataUtils = __webpack_require__(99727);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/ThemeClassNames.js
-var ThemeClassNames = __webpack_require__(16364);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/BlogLayout/index.js + 6 modules
-var BlogLayout = __webpack_require__(7020);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Translate.js + 1 modules
-var Translate = __webpack_require__(43789);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/PaginatorNavLink/index.js
-var PaginatorNavLink = __webpack_require__(58489);
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/BlogListPaginator/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ 
-
-
-
-function BlogListPaginator(props) {
-    const { metadata } = props;
-    const { previousPage, nextPage } = metadata;
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("nav", {
-        className: "pagination-nav",
-        "aria-label": (0,Translate/* .translate */.T)({
-            id: 'theme.blog.paginator.navAriaLabel',
-            message: 'Blog list page navigation',
-            description: 'The ARIA label for the blog pagination'
-        }),
-        children: [
-            previousPage && /*#__PURE__*/ (0,jsx_runtime.jsx)(PaginatorNavLink/* ["default"] */.A, {
-                permalink: previousPage,
-                title: /*#__PURE__*/ (0,jsx_runtime.jsx)(Translate/* ["default"] */.A, {
-                    id: "theme.blog.paginator.newerEntries",
-                    description: "The label used to navigate to the newer blog posts page (previous page)",
-                    children: "Newer entries"
-                })
-            }),
-            nextPage && /*#__PURE__*/ (0,jsx_runtime.jsx)(PaginatorNavLink/* ["default"] */.A, {
-                permalink: nextPage,
-                title: /*#__PURE__*/ (0,jsx_runtime.jsx)(Translate/* ["default"] */.A, {
-                    id: "theme.blog.paginator.olderEntries",
-                    description: "The label used to navigate to the older blog posts page (next page)",
-                    children: "Older entries"
-                }),
-                isNext: true
-            })
-        ]
-    });
-}
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/SearchMetadata/index.js
-var SearchMetadata = __webpack_require__(10500);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-blog/lib/client/index.js + 3 modules
-var client = __webpack_require__(19900);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/BlogPostItem/index.js + 44 modules
-var BlogPostItem = __webpack_require__(4206);
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/BlogPostItems/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ 
-
-
-
-function BlogPostItems({ items, component: BlogPostItemComponent = BlogPostItem/* ["default"] */.A }) {
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-        children: items.map(({ content: BlogPostContent })=>/*#__PURE__*/ (0,jsx_runtime.jsx)(client/* .BlogPostProvider */["in"], {
-                content: BlogPostContent,
-                children: /*#__PURE__*/ (0,jsx_runtime.jsx)(BlogPostItemComponent, {
-                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(BlogPostContent, {})
-                })
-            }, BlogPostContent.metadata.permalink))
-    });
-}
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
-var Head = __webpack_require__(25895);
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/BlogListPage/StructuredData/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ 
-
-
-
-function BlogListPageStructuredData(props) {
-    const structuredData = (0,client/* .useBlogListPageStructuredData */.kJ)(props);
-    return /*#__PURE__*/ (0,jsx_runtime.jsx)(Head/* ["default"] */.A, {
-        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("script", {
-            type: "application/ld+json",
-            children: JSON.stringify(structuredData)
-        })
-    });
-}
-
-;// CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/BlogListPage/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ 
-
-
-
-
-
-
-
-
-
-function BlogListPageMetadata(props) {
-    const { metadata } = props;
-    const { siteConfig: { title: siteTitle } } = (0,useDocusaurusContext/* ["default"] */.A)();
-    const { blogDescription, blogTitle, permalink } = metadata;
-    const isBlogOnlyMode = permalink === '/';
-    const title = isBlogOnlyMode ? siteTitle : blogTitle;
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsx)(metadataUtils/* .PageMetadata */.be, {
-                title: title,
-                description: blogDescription
-            }),
-            /*#__PURE__*/ (0,jsx_runtime.jsx)(SearchMetadata/* ["default"] */.A, {
-                tag: "blog_posts_list"
-            })
-        ]
-    });
-}
-function BlogListPageContent(props) {
-    const { metadata, items, sidebar } = props;
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(BlogLayout/* ["default"] */.A, {
-        sidebar: sidebar,
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsx)(BlogPostItems, {
-                items: items
-            }),
-            /*#__PURE__*/ (0,jsx_runtime.jsx)(BlogListPaginator, {
-                metadata: metadata
-            })
-        ]
-    });
-}
-function BlogListPage(props) {
-    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(metadataUtils/* .HtmlClassNameProvider */.e3, {
-        className: (0,clsx/* ["default"] */.A)(ThemeClassNames/* .ThemeClassNames.wrapper.blogPages */.G.wrapper.blogPages, ThemeClassNames/* .ThemeClassNames.page.blogListPage */.G.page.blogListPage),
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime.jsx)(BlogListPageMetadata, {
-                ...props
-            }),
-            /*#__PURE__*/ (0,jsx_runtime.jsx)(BlogListPageStructuredData, {
-                ...props
-            }),
-            /*#__PURE__*/ (0,jsx_runtime.jsx)(BlogListPageContent, {
-                ...props
-            })
-        ]
-    });
-}
-
 
 }),
 14547: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -864,7 +679,7 @@ var MDXContent = __webpack_require__(65025);
 
 
 
-function InDoc({ children, product, pages, type, ref }) {
+function InDoc({ children, product, pages, type, ref, lang }) {
     const { i18n: { currentLocale } } = (0,useDocusaurusContext/* ["default"] */.A)();
     const location = (0,react_router/* .useLocation */.zy)();
     if (product) {
@@ -887,6 +702,12 @@ function InDoc({ children, product, pages, type, ref }) {
         return isMatch ? /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* ["default"] */.A, {
             children: children
         }) : null;
+    } else if (lang) {
+        const cLang = Array.isArray(lang) ? lang : lang.split(',');
+        const isLang = cLang.includes(currentLocale);
+        return isLang ? /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* ["default"] */.A, {
+            children: children
+        }) : null;
     }
 }
 
@@ -896,7 +717,7 @@ function InDoc({ children, product, pages, type, ref }) {
 
 
 
-function XcludeDoc({ children, product, pages }) {
+function XcludeDoc({ children, product, pages, lang }) {
     const { i18n: { currentLocale } } = (0,useDocusaurusContext/* ["default"] */.A)();
     const location = (0,react_router/* .useLocation */.zy)();
     if (product) {
@@ -912,6 +733,12 @@ function XcludeDoc({ children, product, pages }) {
         const lastPath = cPage[cPage.length - 1] !== "" ? cPage.length - 1 : cPage.length - 2;
         const isPage = Pages.includes(cPage[lastPath]);
         return isPage ? null : /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* ["default"] */.A, {
+            children: children
+        });
+    } else if (lang) {
+        const cLang = Array.isArray(lang) ? lang : lang.split(',');
+        const isLang = cLang.includes(currentLocale);
+        return isLang ? null : /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* ["default"] */.A, {
             children: children
         });
     }

@@ -101,14 +101,16 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, Image, Start, Step, Steps, TabItem, Tabs} = _components;
+  }, {Cmd, Image, Include, Start, Step, Steps, TabItem, Tabs, Xclude} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
+  if (!Include) _missingMdxReference("Include", true);
   if (!Start) _missingMdxReference("Start", true);
   if (!Step) _missingMdxReference("Step", true);
   if (!Steps) _missingMdxReference("Steps", true);
   if (!TabItem) _missingMdxReference("TabItem", true);
   if (!Tabs) _missingMdxReference("Tabs", true);
+  if (!Xclude) _missingMdxReference("Xclude", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: ["El ", (0,jsx_runtime.jsx)(_components.strong, {
@@ -165,8 +167,11 @@ function _createMdxContent(props) {
             children: "BioStar X"
           }), "."]
         }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(Include, {
+      lang: "ko",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["Utiliza un VMS compatible con ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
           }), ". Utiliza ", (0,jsx_runtime.jsx)(_components.a, {
@@ -176,12 +181,23 @@ function _createMdxContent(props) {
             children: "Nx Witness v5.1.5"
           }), " de VMS."]
         }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Prepara la dirección IP, el número de puerto y la información de la cuenta de administrador del servidor VMS. Esta información es necesaria para conectar el servidor VMS con ", (0,jsx_runtime.jsx)(_components.strong, {
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Xclude, {
+      lang: "ko",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["Utiliza un VMS compatible con ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "BioStar X"
-          }), "."]
+          }), ". Utiliza la serie ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Nx Witness v5.1.5"
+          }), " de VMS."]
         }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Prepara la dirección IP, el número de puerto y la información de la cuenta de administrador del servidor VMS. Esta información es necesaria para conectar el servidor VMS con ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "BioStar X"
+        }), "."]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "configuración-de-integración-del-servidor-vms",
