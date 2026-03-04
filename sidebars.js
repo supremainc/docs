@@ -51,12 +51,9 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'BioStar Air란?',
-          link: {
-            type: 'doc',
-            id: 'platform/biostar_air/what-is-biostar-air',
-          },
+          label: '개요',
           items: [
+            'platform/biostar_air/what-is-biostar-air',
             'platform/biostar_air/access-control-hardware-compatibility',
             'platform/biostar_air/security-overview',
             'platform/biostar_air/biostar-air-migration',
@@ -64,164 +61,141 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: '하드웨어 설치',
-          link: {
-            type: 'doc',
-            id: 'platform/biostar_air/hardware-setup',
-          },
-          items: [
-            'platform/biostar_air/e200-qr-scanner',
-            'platform/biostar_air/site-setup-networking',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Site Management',
-          link: {
-            type: 'doc',
-            id: 'platform/biostar_air/site-management',
-          },
+          label: '사이트 관리자',
           items: [
             'platform/biostar_air/getting-started',
             'platform/biostar_air/site-selector',
             {
+              type: 'doc',
+              label: '관리자 초대 및 역할 관리하기',
+              id: 'platform/biostar_air/managing-administrators'
+            },
+            {
               type: 'category',
-              label: 'User Management',
+              label: 'BioStar Air 앱 시작하기',
               link: {
                 type: 'doc',
-                id: 'platform/biostar_air/managing-users',
+                id: 'platform/biostar_air/managing-sites-with-app',
               },
               items: [
-                'platform/biostar_air/adding-individual-users',
-                'platform/biostar_air/user-management-user-list',
-                'platform/biostar_air/adding-users-in-bulk',
-                'platform/biostar_air/managing-user-groups',
-                'platform/biostar_air/managing-card-templates',
-                'platform/biostar_air/user-card-types',
-                'platform/biostar_air/linkpass-credentials',
+                'platform/biostar_air/managing-users-with-app',
+                'platform/biostar_air/manage-device-with-app',
               ]
             },
             {
               type: 'category',
-              label: 'Device Management',
+              label: '사이트 및 관리자 설정',
               link: {
                 type: 'doc',
-                id: 'platform/biostar_air/manage-device',
+                id: 'platform/biostar_air/site-management',
               },
               items: [
-                'platform/biostar_air/managing-registered-devices',
-                'platform/biostar_air/device-info-settings',
-                'platform/biostar_air/manage-device-group',
-                'platform/biostar_air/configuring-ta',
-                'platform/biostar_air/configuring-the-airfob-patch-and-tag',
-                'platform/biostar_air/configuring-the-sio2-secure-module',
-                'platform/biostar_air/how-to-upgrade-firmware',
-                'platform/biostar_air/biometric-readers-and-credentials',
+                {
+                  type: 'category',
+                  label: '사용자 관리',
+                  link: {
+                    type: 'doc',
+                    id: 'platform/biostar_air/managing-users',
+                  },
+                  items: [
+                    'platform/biostar_air/adding-individual-users',
+                    'platform/biostar_air/user-management-user-list',
+                    'platform/biostar_air/adding-users-in-bulk',
+                    'platform/biostar_air/managing-user-groups',
+                    'platform/biostar_air/managing-card-templates',
+                    'platform/biostar_air/user-card-types',
+                    'platform/biostar_air/linkpass-credentials',
+                  ]
+                },
+                {
+                  type: 'category',
+                  label: '장치 관리',
+                  link: {
+                    type: 'doc',
+                    id: 'platform/biostar_air/manage-device',
+                  },
+                  items: [
+                    'platform/biostar_air/managing-registered-devices',
+                    'platform/biostar_air/device-info-settings',
+                    'platform/biostar_air/manage-device-group',
+                    'platform/biostar_air/configuring-ta',
+                    'platform/biostar_air/configuring-the-airfob-patch-and-tag',
+                    'platform/biostar_air/how-to-upgrade-firmware',
+                    'platform/biostar_air/biometric-readers-and-credentials',
+                  ]
+                },
+                {
+                  type: 'category',
+                  label: '출입문 관리',
+                  link: {
+                    type: 'doc',
+                    id: 'platform/biostar_air/manage-door',
+                  },
+                  items: [
+                    'platform/biostar_air/managing-registered-doors',
+                    'platform/biostar_air/managing-door-groups',
+                    'platform/biostar_air/managing-door-schedules',
+                  ]
+                },
+                'platform/biostar_air/manage-elevator',
+                {
+                  type: 'category',
+                  label: '출입 권한 관리',
+                  link: {
+                    type: 'doc',
+                    id: 'platform/biostar_air/manage-access-authority',
+                  },
+                  items: [
+                    'platform/biostar_air/manage-holiday-group',
+                    'platform/biostar_air/manage-schedule',
+                    'platform/biostar_air/manage-access-level',
+                    'platform/biostar_air/manage-floor-level',
+                  ]
+                },
+                {
+                  type: 'category',
+                  label: 'Monitoring',
+                  link: {
+                    type: 'doc',
+                    id: 'platform/biostar_air/monitoring',
+                  },
+                  items: [
+                    'platform/biostar_air/monitoring-event-and-audit-logs',
+                    'platform/biostar_air/monitoring-alert-report-history',
+                    'platform/biostar_air/monitoring-door-status',
+                  ]
+                },
+                'platform/biostar_air/managing-roll-call-fire-muster',
+                {
+                  type: 'category',
+                  label: '설정',
+                  link: {
+                    type: 'doc',
+                    id: 'platform/biostar_air/settings',
+                  },
+                  items: [
+                    'platform/biostar_air/site-settings',
+                    'platform/biostar_air/daylight-saving-time',
+                    'platform/biostar_air/customizing-email-templates',
+                    'platform/biostar_air/custom-wiegand-card-formats',
+                    'platform/biostar_air/account-settings',
+                  ]
+                },
               ]
             },
             {
               type: 'category',
-              label: 'Door Management',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_air/manage-door',
-              },
+              label: '보고서 구성하기',
               items: [
-                'platform/biostar_air/managing-registered-doors',
-                'platform/biostar_air/managing-door-groups',
-                'platform/biostar_air/managing-door-schedules',
+                'platform/biostar_air/configuring-reports',
+                'platform/biostar_air/reports-time-attendance-reports',
               ]
             },
-            'platform/biostar_air/manage-elevator',
-            {
-              type: 'category',
-              label: '출입 권한 관리',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_air/manage-access-authority',
-              },
-              items: [
-                'platform/biostar_air/manage-holiday-group',
-                'platform/biostar_air/manage-schedule',
-                'platform/biostar_air/manage-access-level',
-                'platform/biostar_air/manage-floor-level',
-              ]
-            },
-            {
-              type: 'category',
-              label: 'Monitoring',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_air/monitoring',
-              },
-              items: [
-                'platform/biostar_air/monitoring-event-and-audit-logs',
-                'platform/biostar_air/monitoring-alert-report-history',
-                'platform/biostar_air/monitoring-door-status',
-              ]
-            },
-            'platform/biostar_air/managing-roll-call-fire-muster',
-            {
-              type: 'category',
-              label: 'Settings',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_air/settings',
-              },
-              items: [
-                'platform/biostar_air/managing-administrators',
-                'platform/biostar_air/site-settings',
-                'platform/biostar_air/daylight-saving-time',
-                'platform/biostar_air/customizing-email-templates',
-                'platform/biostar_air/settings-alert-report',
-                'platform/biostar_air/custom-wiegand-card-formats',
-                'platform/biostar_air/account-settings',
-              ]
-            }
           ]
         },
         {
           type: 'category',
-          label: '모바일 앱',
-          link: {
-            type: 'doc',
-            id: 'platform/biostar_air/managing-sites-with-app',
-          },
-          items: [
-            'platform/biostar_air/managing-adding-users',
-            'platform/biostar_air/register-device',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Using Mobile Credentials',
-          link: {
-            type: 'doc',
-            id: 'platform/biostar_air/suprema-pass-app-overview'
-          },
-          items: [
-            'platform/biostar_air/opening-doors-with-mobile-credentials',
-            'platform/biostar_air/suprema-pass-app-advanced-features',
-            'platform/biostar_air/suprema-pass-app-sensitivity-settings',
-          ]
-        },
-        {
-          type: 'category',
-          label: '활용 안내',
-          link: {
-            type: 'doc',
-            id: 'platform/biostar_air/how-to-guide',
-          },
-          items: [
-            'platform/biostar_air/configuring-reports',
-            'platform/biostar_air/reports-time-attendance-reports',
-            'platform/biostar_air/sip-intercom-for-biostation3',
-          ]
-        },
-        'platform/biostar_air/ip-camera-support-and-configuration',
-        {
-          type: 'category',
-          label: '파트너 포털',
+          label: '파트너 관리자 & 설치',
           link: {
             type: 'doc',
             id: 'platform/biostar_air/intro-to-partner-portal',
@@ -229,9 +203,54 @@ const sidebars = {
           items: [
             'platform/biostar_air/biostar-air-partner-portal-detailed-use',
             'platform/biostar_air/federated-sites',
+            {
+              type: 'category',
+              label: '하드웨어 설치',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/hardware-setup',
+              },
+              items: [
+                'platform/biostar_air/sip-intercom-for-biostation3',
+                'platform/biostar_air/ip-camera-support-and-configuration',
+                'platform/biostar_air/configuring-the-sio2-secure-module',
+                'platform/biostar_air/e200-qr-scanner',
+                'platform/biostar_air/site-setup-networking',
+              ]
+            },
           ]
         },
-        'platform/biostar_air/integration-quickstart',
+        {
+          type: 'category',
+          label: '인증된 사용자',
+          items: [
+            {
+              type: 'category',
+              label: '모바일 크리덴셜 사용하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/suprema-pass-app-overview'
+              },
+              items: [
+                'platform/biostar_air/opening-doors-with-mobile-credentials',
+                'platform/biostar_air/suprema-pass-app-advanced-features',
+                'platform/biostar_air/suprema-pass-app-sensitivity-settings',
+              ]
+            },
+          ]
+        },
+        {
+          type: 'category',
+          label: '고급 기능',
+          items: [
+            'platform/biostar_air/integration-quickstart',
+          ]
+        },
+        // {
+        //   type: 'doc',
+        //   label: '활용 안내',
+        //   id: 'platform/biostar_air/how-to-guide',
+        // },
         {
           type: 'category',
           label: '문제 해결',
@@ -241,8 +260,8 @@ const sidebars = {
           },
           items: [
             'platform/biostar_air/troubleshooting-adding-users-in-bulk',
-            'platform/biostar_air/location-services-issues',
             'platform/biostar_air/troubleshooting-suprema-pass-app',
+            'platform/biostar_air/location-services-issues',
             'platform/biostar_air/video-troubleshooting',
           ]
         },
