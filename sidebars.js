@@ -109,8 +109,8 @@ const sidebars = {
                 id: 'platform/biostar_air/manage-device',
               },
               items: [
-                'platform/biostar_air/register-device',
                 'platform/biostar_air/managing-registered-devices',
+                'platform/biostar_air/device-info-settings',
                 'platform/biostar_air/manage-device-group',
                 'platform/biostar_air/configuring-ta',
                 'platform/biostar_air/configuring-the-airfob-patch-and-tag',
@@ -188,8 +188,8 @@ const sidebars = {
             id: 'platform/biostar_air/managing-sites-with-app',
           },
           items: [
-            'platform/biostar_air/managing-adding-users'
-
+            'platform/biostar_air/managing-adding-users',
+            'platform/biostar_air/register-device',
           ]
         },
         {
