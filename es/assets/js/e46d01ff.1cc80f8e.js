@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["41656"], {
-8094: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["23624"], {
+44957: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,32 +9,32 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_ja_docusaurus_plugin_content_docs_current_device_device_manager_xpd_2_settings_mdx_4e9_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_es_docusaurus_plugin_content_docs_current_device_device_manager_xpd_2_settings_mdx_e46_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-ja-docusaurus-plugin-content-docs-current-device-device-manager-xpd-2-settings-mdx-4e9.json
-var site_i_18_n_ja_docusaurus_plugin_content_docs_current_device_device_manager_xpd_2_settings_mdx_4e9_namespaceObject = JSON.parse('{"id":"device/device_manager/xpd2-settings","title":"XPass D2 を設定する","description":"XPass D2 に適用する設定をあらかじめテンプレートとして作成し、個別デバイスに直接適用できます。","source":"@site/i18n/ja/docusaurus-plugin-content-docs/current/device/device_manager/xpd2-settings.mdx","sourceDirName":"device/device_manager","slug":"/device/device_manager/xpd2-settings","permalink":"/docs/ja/device/device_manager/xpd2-settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/device_manager/xpd2-settings.mdx","tags":[],"version":"current","frontMatter":{"id":"xpd2-settings","title":"XPass D2 を設定する","description":"XPass D2 に適用する設定をあらかじめテンプレートとして作成し、個別デバイスに直接適用できます。","keywords":["XPass D2","テンプレート","デバイス検索","デバイス接続","ファームウェアをアップグレードする","デバイス再起動","管理者パスワード"],"isTranslationMissing":false},"sidebar":"device_manager","previous":{"title":"IPデバイスを設定する","permalink":"/docs/ja/device/device_manager/ip-device-settings"},"next":{"title":"付録","permalink":"/docs/ja/device/device_manager/appendices"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-es-docusaurus-plugin-content-docs-current-device-device-manager-xpd-2-settings-mdx-e46.json
+var site_i_18_n_es_docusaurus_plugin_content_docs_current_device_device_manager_xpd_2_settings_mdx_e46_namespaceObject = JSON.parse('{"id":"device/device_manager/xpd2-settings","title":"Configurar XPass D2","description":"Configura ajustes para aplicar a XPass D2 como plantilla y aplícalos directamente a dispositivos individuales.","source":"@site/i18n/es/docusaurus-plugin-content-docs/current/device/device_manager/xpd2-settings.mdx","sourceDirName":"device/device_manager","slug":"/device/device_manager/xpd2-settings","permalink":"/docs/es/device/device_manager/xpd2-settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/device_manager/xpd2-settings.mdx","tags":[],"version":"current","frontMatter":{"id":"xpd2-settings","title":"Configurar XPass D2","description":"Configura ajustes para aplicar a XPass D2 como plantilla y aplícalos directamente a dispositivos individuales.","keywords":["XPass D2","Plantilla","Búsqueda de dispositivos","Conexión de dispositivos","Actualización de firmware","Reiniciar dispositivo","Contraseña de administrador"],"isTranslationMissing":false},"sidebar":"device_manager","previous":{"title":"Configurar Dispositivo IP","permalink":"/docs/es/device/device_manager/ip-device-settings"},"next":{"title":"Apéndices","permalink":"/docs/es/device/device_manager/appendices"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/device/device_manager/xpd2-settings.mdx
+;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/device/device_manager/xpd2-settings.mdx
 
 
 const frontMatter = {
 	id: 'xpd2-settings',
-	title: 'XPass D2 を設定する',
-	description: 'XPass D2 に適用する設定をあらかじめテンプレートとして作成し、個別デバイスに直接適用できます。',
+	title: 'Configurar XPass D2',
+	description: 'Configura ajustes para aplicar a XPass D2 como plantilla y aplícalos directamente a dispositivos individuales.',
 	keywords: [
 		'XPass D2',
-		'テンプレート',
-		'デバイス検索',
-		'デバイス接続',
-		'ファームウェアをアップグレードする',
-		'デバイス再起動',
-		'管理者パスワード'
+		'Plantilla',
+		'Búsqueda de dispositivos',
+		'Conexión de dispositivos',
+		'Actualización de firmware',
+		'Reiniciar dispositivo',
+		'Contraseña de administrador'
 	],
 	isTranslationMissing: false
 };
@@ -47,83 +47,83 @@ const assets = {
 
 
 const toc = [{
-  "value": "テンプレートを追加する",
+  "value": "Agregar plantilla",
   "id": "template-add",
   "level": 2
 }, {
-  "value": "テンプレート名および管理者パスワードの設定",
-  "id": "テンプレート名および管理者パスワードの設定",
+  "value": "Establecer nombre de plantilla y contraseña de administrador",
+  "id": "establecer-nombre-de-plantilla-y-contraseña-de-administrador",
   "level": 3
 }, {
-  "value": "インターフェース",
-  "id": "インターフェース",
+  "value": "Interfaz",
+  "id": "interfaz",
   "level": 3
 }, {
-  "value": "認証",
-  "id": "認証",
+  "value": "Autenticación",
+  "id": "autenticación",
   "level": 3
 }, {
-  "value": "ウィーガンドカードフォーマット",
-  "id": "ウィーガンドカードフォーマット",
+  "value": "Formato Tarjeta Wiegand",
+  "id": "formato-tarjeta-wiegand",
   "level": 3
 }, {
-  "value": "Suprema スマートカードレイアウト",
-  "id": "suprema-スマートカードレイアウト",
+  "value": "Diseño de Tarjeta Inteligente Suprema",
+  "id": "diseño-de-tarjeta-inteligente-suprema",
   "level": 3
 }, {
-  "value": "カスタムスマートカードレイアウト",
-  "id": "カスタムスマートカードレイアウト",
+  "value": "Diseño de Tarjeta Inteligente Personalizada",
+  "id": "diseño-de-tarjeta-inteligente-personalizada",
   "level": 3
 }, {
-  "value": "キーパッド設定",
-  "id": "キーパッド設定",
+  "value": "Configuración del teclado",
+  "id": "configuración-del-teclado",
   "level": 3
 }, {
-  "value": "その他",
-  "id": "その他",
+  "value": "Otros",
+  "id": "otros",
   "level": 3
 }, {
-  "value": "LED / ブザー",
-  "id": "led--ブザー",
+  "value": "LED / zumbador",
+  "id": "led--zumbador",
   "level": 3
 }, {
-  "value": "テンプレートを適用する",
-  "id": "テンプレートを適用する",
+  "value": "Aplicar plantilla",
+  "id": "aplicar-plantilla",
   "level": 2
 }, {
-  "value": "テンプレートを管理する",
-  "id": "テンプレートを管理する",
+  "value": "Gestionar plantillas",
+  "id": "gestionar-plantillas",
   "level": 2
 }, {
-  "value": "テンプレートを編集する",
-  "id": "テンプレートを編集する",
+  "value": "Editar plantilla",
+  "id": "editar-plantilla",
   "level": 3
 }, {
-  "value": "テンプレートを削除する",
-  "id": "テンプレートを削除する",
+  "value": "Eliminar plantilla",
+  "id": "eliminar-plantilla",
   "level": 3
 }, {
-  "value": "テンプレートをエクスポートする",
-  "id": "テンプレートをエクスポートする",
+  "value": "Exportar plantilla",
+  "id": "exportar-plantilla",
   "level": 3
 }, {
-  "value": "テンプレートをインポートする",
-  "id": "テンプレートをインポートする",
+  "value": "Importar plantilla",
+  "id": "importar-plantilla",
   "level": 3
 }, {
-  "value": "デバイスの検索と接続",
+  "value": "Buscar y conectar dispositivo",
   "id": "device-search-connect",
   "level": 2
 }, {
-  "value": "デバイスのファームウェアをアップグレードする",
+  "value": "Actualizar el firmware del dispositivo",
   "id": "device-firmware-upgrade",
   "level": 2
 }, {
-  "value": "デバイスを再起動する",
-  "id": "デバイスを再起動する",
+  "value": "Reiniciar dispositivo",
+  "id": "reiniciar-dispositivo",
   "level": 2
 }, {
-  "value": "管理者パスワードを変更する",
+  "value": "Cambiar contraseña de administrador",
   "id": "admin-password-change",
   "level": 2
 }];
@@ -131,12 +131,13 @@ function _createMdxContent(props) {
   const _components = {
     a: "a",
     admonition: "admonition",
-    em: "em",
+    code: "code",
     h2: "h2",
     h3: "h3",
     li: "li",
     ol: "ol",
     p: "p",
+    strong: "strong",
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
@@ -146,39 +147,39 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "XPass D2 に適用する設定をあらかじめテンプレートとして作成し、個別デバイスに直接適用できます。 PC で管理プログラムに接続して設定を変更したりコマンドカードを使用する方法と比べて、はるかに速く設定を適用できます。"
+      children: "Configura ajustes para aplicar a XPass D2 como plantilla y aplícalos directamente a dispositivos individuales. Aplica los ajustes mucho más rápido que al acceder al programa de gestión en un PC o usar tarjetas de comando."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["デバイスのファームウェアバージョンが低い場合、いくつかの設定が適用されないことがあります。 すべての設定を適用するには、", (0,jsx_runtime.jsx)(_components.a, {
+        children: ["Es posible que ciertos ajustes no se apliquen si la versión del firmware del dispositivo es antigua. Consulta ", (0,jsx_runtime.jsx)(_components.a, {
           href: "#device-firmware-upgrade",
-          children: "デバイスファームウェアをアップグレードする"
-        }), "を参照してファームウェアをアップグレードしてください。"]
+          children: "Actualizar el firmware del dispositivo"
+        }), " para aplicar todos los ajustes."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "template-add",
-      children: "テンプレートを追加する"
+      children: "Agregar plantilla"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "RS-485 通信、カード形式、キーパッド設定、PIN、LED、ブザーなどを設定した後、テンプレートとして追加できます。 テンプレートを追加すると、複数の個別デバイスを毎回設定せずに、迅速かつ簡単に設定を適用できます。"
+      children: "Configura la comunicación RS-485, el formato de tarjeta, los ajustes del teclado, el PIN, el LED y el zumbador antes de agregarlos como plantilla. Agregar una plantilla permite aplicar ajustes de forma rápida y sencilla sin configurar cada dispositivo individual cada vez."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "モバイル端末で Suprema Device Manager を起動します。"
+          children: "Ejecuta Suprema Device Manager en el dispositivo móvil."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "メイン画面で XPass D2 を選択します。"
+          children: "Selecciona XPass D2 en la pantalla principal."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["Toca ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_338",
             product: "dev"
           }), " → ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-add.svg",
             ico: true,
             alone: true
-          }), " を押します。"]
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/xpd2-template-management-add.png",
           className: "none",
@@ -186,24 +187,24 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "テンプレートを作成するデバイスモデルを選択します。"
+          children: "Selecciona el modelo de dispositivo para el que deseas crear la plantilla."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["各項目を設定した後、テンプレートを保存するには ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Después de configurar cada elemento, toca ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_295",
             product: "dev"
-          }), " を押します。"]
+          }), " para guardar la plantilla."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "テンプレートは最大 100 個まで追加できます。"
+        children: "Se pueden agregar hasta 100 plantillas."
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "テンプレート名および管理者パスワードの設定",
-      children: "テンプレート名および管理者パスワードの設定"
+      id: "establecer-nombre-de-plantilla-y-contraseña-de-administrador",
+      children: "Establecer nombre de plantilla y contraseña de administrador"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/xpd2-template-name-pw.png",
       width: 250
@@ -213,14 +214,14 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_341",
             product: "dev"
-          }), "：希望するテンプレート名を入力します。"]
+          }), ": Ingresa el nombre de plantilla deseado."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_074",
             product: "dev"
-          }), "：管理者パスワードを入力します。"]
+          }), ": Ingresa la contraseña de administrador."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -228,24 +229,24 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "管理者パスワードは 6～32 桁の数字で設定できます。"
+            children: "La contraseña de administrador puede tener de 6 a 32 dígitos."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "管理者パスワードを紛失しないよう注意してください。 管理者パスワードを紛失した場合、テンプレートを適用したデバイスに接続するにはそのデバイスを初期化する必要があります。"
+            children: "Ten cuidado de no perder la contraseña de administrador. Si pierdes la contraseña de administrador, será necesario inicializar el dispositivo para conectarte al dispositivo con la plantilla aplicada."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["管理者パスワードの変更について詳しくは、", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["Para obtener más información sobre cómo cambiar la contraseña de administrador, consulta ", (0,jsx_runtime.jsx)(_components.a, {
               href: "#admin-password-change",
-              children: "管理者パスワードを変更する"
-            }), "を参照してください。"]
+              children: "Cambiar contraseña de administrador"
+            }), "."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "インターフェース",
-      children: "インターフェース"
+      id: "interfaz",
+      children: "Interfaz"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/xpd2-template-interface.png",
       width: 250
@@ -255,19 +256,19 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_038",
             product: "dev"
-          }), "：デバイスとマスターデバイスの通信で使用する OSDP アドレスを設定します。 0～126 の数値で設定できます。"]
+          }), ": Establece la dirección OSDP que se utilizará en la comunicación entre el dispositivo y el dispositivo maestro. Se puede configurar con números del 0 al 126."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_298",
             product: "dev"
-          }), "：RS-485 の転送速度を設定します。"]
+          }), ": Establece la velocidad de transmisión RS-485."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "認証",
-      children: "認証"
+      id: "autenticación",
+      children: "Autenticación"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/xpd2-template-auth-cardtype.png",
       width: 250
@@ -277,35 +278,35 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_328",
             product: "dev"
-          }), "：デバイスで使用するカードタイプを設定できます。"]
+          }), ": Configura el tipo de tarjeta que usará el dispositivo."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_008",
                 product: "dev"
-              }), "：CSN カードタイプを選択し、バイト順序を設定できます。"]
+              }), ": Selecciona el tipo de tarjeta CSN y establece el orden de bytes."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_201",
                 product: "dev"
-              }), "：Suprema が発行したスマートカードタイプを選択できます。"]
+              }), ": Selecciona los tipos de tarjetas inteligentes emitidas por Suprema."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_333",
                 product: "dev"
-              }), "：他社が発行したスマートカードタイプを選択できます。"]
+              }), ": Selecciona los tipos de tarjetas inteligentes emitidas por terceros."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_139",
                 product: "dev"
-              }), "：モバイルカードタイプを設定できます。"]
+              }), ": Configura el tipo de tarjeta móvil."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
@@ -313,17 +314,17 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["バイト順序を ", (0,jsx_runtime.jsx)(Cmd, {
+        children: ["Cuando se establece en ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "ui_034",
           product: "dev"
-        }), " に設定すると、カードデータを処理する際に上位バイトから下位バイトの順に処理し、カードのシリアル番号（CSN）を保存するときに左から右へ順に処理します。 ", (0,jsx_runtime.jsx)(Cmd, {
+        }), ", los datos de la tarjeta se procesan de izquierda a derecha, procesando secuencialmente del byte más grande al más pequeño al guardar el número de serie de la tarjeta (CSN). ", (0,jsx_runtime.jsx)(Cmd, {
           sid: "ui_030",
           product: "dev"
-        }), " は下位バイトから上位バイトの順に処理し、カードのシリアル番号（CSN）を保存します。"]
+        }), " procesa el número de serie de la tarjeta (CSN) del byte más pequeño al más grande al guardarlo."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "ウィーガンドカードフォーマット",
-      children: "ウィーガンドカードフォーマット"
+      id: "formato-tarjeta-wiegand",
+      children: "Formato Tarjeta Wiegand"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/xpd2-template-wiegand-card.png",
       width: 250
@@ -333,14 +334,14 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_354",
             product: "dev"
-          }), "：デバイスに指定する Wiegand カード形式を設定できます。 設定した形式でカードデータが処理されます。"]
+          }), ": Establece el formato de tarjeta Wiegand que se especificará para el dispositivo. Los datos de la tarjeta se procesan según el formato establecido."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_179",
                 product: "dev"
-              }), "：希望するフォーマットがない場合、", (0,jsx_runtime.jsx)(IcAdd, {}), " を押して新しい Wiegand フォーマットを追加できます。"]
+              }), ": Si el formato deseado no está disponible, toca ", (0,jsx_runtime.jsx)(IcAdd, {}), " para agregar un nuevo formato Wiegand."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/device/xpd2-template-wiegand-card-new.png",
               width: 250
@@ -350,46 +351,46 @@ function _createMdxContent(props) {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_253",
                     product: "dev"
-                  }), "：希望する Wiegand フォーマットの名前を入力します。"]
+                  }), ": Ingresa el nombre del formato Wiegand deseado."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_318",
                     product: "dev"
-                  }), "：合計ビット数を入力します。"]
+                  }), ": Ingresa el número total de bits."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_024",
                     product: "dev"
-                  }), "：使用する ID の開始ビットと終了ビットを入力します。 ", (0,jsx_runtime.jsx)(Image, {
+                  }), ": Ingresa los bits inicial y final del ID que deseas usar. Toca ", (0,jsx_runtime.jsx)(Image, {
                     src: "/img/common/ico-add3.svg",
                     ico: true,
                     alone: true
                   }), " ", (0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_319",
                     product: "dev"
-                  }), " を押すと、ID フィールドを追加できます。"]
+                  }), " para agregar un campo de ID."]
                 }), "\n"]
               }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
                 children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
                   children: [(0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_350",
                     product: "dev"
-                  }), "：使用するパリティフィールドの位置と開始ビット、終了ビットを入力します。 ", (0,jsx_runtime.jsx)(Image, {
+                  }), ": Ingresa la posición del campo de paridad y los bits inicial y final que deseas usar. Toca ", (0,jsx_runtime.jsx)(Image, {
                     src: "/img/common/ico-add3.svg",
                     ico: true,
                     alone: true
                   }), " ", (0,jsx_runtime.jsx)(Cmd, {
                     sid: "ui_319",
                     product: "dev"
-                  }), " を押すと、パリティフィールドを追加できます。"]
+                  }), " para agregar un campo de paridad."]
                 }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
                   type: "info",
                   children: (0,jsx_runtime.jsx)(_components.p, {
-                    children: "パリティフィールドを追加するには、合計ビット数を入力します。"
+                    children: "Para agregar un campo de paridad, ingresa el número total de bits."
                   })
                 }), "\n"]
               }), "\n"]
@@ -401,19 +402,19 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_352",
             product: "dev"
-          }), "：Wiegand 信号のパルス幅を設定できます。"]
+          }), ": Configura el ancho de pulso de la señal Wiegand."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_351",
             product: "dev"
-          }), "：Wiegand 信号のパルス間隔を設定できます。"]
+          }), ": Configura el intervalo de pulso de la señal Wiegand."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "suprema-スマートカードレイアウト",
-      children: "Suprema スマートカードレイアウト"
+      id: "diseño-de-tarjeta-inteligente-suprema",
+      children: "Diseño de Tarjeta Inteligente Suprema"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/xpd2-template-suprema-card.png",
       width: 250
@@ -423,45 +424,45 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_151",
             product: "dev"
-          }), "：補助サイトキーの使用有無を設定できます。 補助サイトキーを設定すると、カードの基本キーが一致しない場合に補助サイトキーを使用して認証を実行できます。"]
+          }), ": Define si se utilizará la clave de sitio auxiliar. Al establecer la clave de sitio auxiliar, se puede usar para la autenticación cuando la clave principal de la tarjeta no coincide."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_032",
             product: "dev"
-          }), "：MIFARE カードを設定できます。"]
+          }), ": Configura tarjetas MIFARE."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_379",
                 product: "dev"
-              }), "：セキュリティレベルを SL1 または SL3 に設定できます。"]
+              }), ": Puedes configurar el tipo de cifrado en SL1 o SL3."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_087",
                 product: "dev"
-              }), "：スマートカードとデバイス間の通信を暗号化するキーです。"]
+              }), ": Clave que cifra la comunicación entre las tarjetas inteligentes y el dispositivo."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_151",
                 product: "dev"
-              }), "：カードの基本サイトキーが一致しない場合に使用して認証を実行できます。 補助サイトキーの項目は、前レベルの ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": Úsala para autenticar cuando la clave principal de sitio de la tarjeta no coincide. El campo de clave de sitio auxiliar solo se muestra cuando ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_151",
                 product: "dev"
-              }), " を有効にしたときのみ表示されます。"]
+              }), " del nivel anterior está activado."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_214",
                 product: "dev"
-              }), "：各テンプレートを保存する開始ブロックを選択します。 このブロックはユーザー情報を保存するブロックのインデックスです。既にスマートカードを使用している場合は、保存可能なブロックを設定します。 MIFAREのみ設定できます。"]
+              }), ": Selecciona el bloque inicial donde se almacenará cada plantilla. Este bloque es el índice del bloque donde se almacena la información del usuario; configúrelo en un bloque almacenable si el usuario ya usa la tarjeta inteligente. Solo se puede configurar para MIFARE."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
@@ -470,52 +471,52 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_010",
             product: "dev"
-          }), "：DESFireカードを設定できます。"]
+          }), ": Configura tarjetas DESFire."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_011",
                 product: "dev"
-              }), "：他社が発行したDESFireカードを使用できます。 DESFireのみ設定します。"]
+              }), ": Utiliza tarjetas DESFire emitidas por terceros. Solo se puede configurar DESCire."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_087",
                 product: "dev"
-              }), "：スマートカードとデバイス間の通信を暗号化するキーです。"]
+              }), ": Clave que cifra la comunicación entre las tarjetas inteligentes y el dispositivo."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_151",
                 product: "dev"
-              }), "：カードの基本サイトキーが一致しない場合に使用して認証を実行できます。 補助サイトキーの項目は、前レベルの ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": Úsala para autenticar cuando la clave principal de sitio de la tarjeta no coincide. El campo de clave de sitio auxiliar solo se muestra cuando ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_151",
                 product: "dev"
-              }), " を有効にしたときのみ表示されます。"]
+              }), " del nivel anterior está activado."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_223",
                 product: "dev"
-              }), "：アプリケーションIDを設定してください。 ファイルIDを含む一種のディレクトリとして機能します。 DESFireのみ設定します。"]
+              }), ": Establece el ID de aplicación. Funciona como una especie de directorio que incluye un ID de archivo. Solo se puede configurar DESCire."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_347",
                 product: "dev"
-              }), "：ファイルIDを設定してください。 DESFireのみ設定します。"]
+              }), ": Establece el ID de archivo. Solo se puede configurar DESCire."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_222",
                 product: "dev"
-              }), "：暗号化方式をDES/3DESまたはAESに設定できます。"]
+              }), ": Configura el tipo de cifrado en DES/3DES o AES."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
@@ -524,7 +525,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_202",
             product: "dev"
-          }), "：スマートカード出力のバイト順序を設定できます。"]
+          }), ": Configure el orden de bytes para la salida de tarjeta inteligente."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -532,57 +533,57 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "ui_011",
-              product: "dev"
-            }), " を使用するには、", (0,jsx_runtime.jsx)(Cmd, {
+            children: ["Ingrese correctamente la información de ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_224",
               product: "dev"
-            }), "、", (0,jsx_runtime.jsx)(Cmd, {
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_225",
               product: "dev"
-            }), "、", (0,jsx_runtime.jsx)(Cmd, {
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_348",
               product: "dev"
-            }), "、", (0,jsx_runtime.jsx)(Cmd, {
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_349",
               product: "dev"
-            }), "、", (0,jsx_runtime.jsx)(Cmd, {
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_223",
               product: "dev"
-            }), "、", (0,jsx_runtime.jsx)(Cmd, {
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_347",
               product: "dev"
-            }), "、", (0,jsx_runtime.jsx)(Cmd, {
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_222",
               product: "dev"
-            }), " の情報を正確に入力してください。"]
+            }), " para utilizar ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "ui_011",
+              product: "dev"
+            }), "."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_224",
               product: "dev"
-            }), "、", (0,jsx_runtime.jsx)(Cmd, {
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_348",
               product: "dev"
-            }), " は最大 32 バイトの 16 進数のみ入力できます。"]
+            }), " solo aceptan hasta 32 bytes en hexadecimal."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["バイト順序を ", (0,jsx_runtime.jsx)(Cmd, {
+            children: ["Cuando se establece en ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_034",
               product: "dev"
-            }), " に設定すると、カードデータを処理する際に上位バイトから下位バイトの順に処理し、カードのシリアル番号（CSN）を保存するときに左から右へ順に処理します。 ", (0,jsx_runtime.jsx)(Cmd, {
+            }), ", los datos de la tarjeta se procesan de izquierda a derecha, procesando secuencialmente del byte más grande al más pequeño al guardar el número de serie de la tarjeta (CSN). ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_030",
               product: "dev"
-            }), " は下位バイトから上位バイトの順に処理し、カードのシリアル番号（CSN）を保存します。"]
+            }), " procesa el número de serie de la tarjeta (CSN) del byte más pequeño al más grande al guardarlo."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "カスタムスマートカードレイアウト",
-      children: "カスタムスマートカードレイアウト"
+      id: "diseño-de-tarjeta-inteligente-personalizada",
+      children: "Diseño de Tarjeta Inteligente Personalizada"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/xpd2-template-custom-card.png",
       width: 250
@@ -592,65 +593,65 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_151",
             product: "dev"
-          }), "：補助サイトキーの使用有無を設定できます。 補助サイトキーを設定すると、カードの基本キーが一致しない場合に補助サイトキーを使用して認証を実行できます。"]
+          }), ": Define si se utilizará la clave de sitio auxiliar. Al establecer la clave de sitio auxiliar, se puede usar para la autenticación cuando la clave principal de la tarjeta no coincide."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_032",
             product: "dev"
-          }), "：MIFARE カードを設定できます。"]
+          }), ": Configura tarjetas MIFARE."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_379",
                 product: "dev"
-              }), "：セキュリティレベルを SL1 または SL3 に設定できます。"]
+              }), ": Puedes configurar el tipo de cifrado en SL1 o SL3."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_087",
                 product: "dev"
-              }), "：スマートカードとデバイス間の通信を暗号化するキーです。"]
+              }), ": Clave que cifra la comunicación entre las tarjetas inteligentes y el dispositivo."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_151",
                 product: "dev"
-              }), "：カードの基本サイトキーが一致しない場合に使用して認証を実行できます。 補助サイトキーの項目は、前レベルの ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": Úsala para autenticar cuando la clave principal de sitio de la tarjeta no coincide. El campo de clave de sitio auxiliar solo se muestra cuando ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_151",
                 product: "dev"
-              }), " を有効にしたときのみ表示されます。"]
+              }), " del nivel anterior está activado."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_154",
                 product: "dev"
-              }), "：各テンプレートが保存される開始ブロックを選択してください。 このブロックはユーザー情報を保存するブロックのインデックスです。既にスマートカードを使用している場合は、保存可能なブロックを設定します。 MIFAREのみ設定できます。"]
+              }), ": Seleccione el bloque inicial donde se almacenará cada plantilla. Este bloque es el índice del bloque donde se almacena la información del usuario; configúrelo en un bloque almacenable si el usuario ya usa la tarjeta inteligente. Solo se puede configurar para MIFARE."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_145",
                 product: "dev"
-              }), "：カード番号を読み取る開始位置を設定できます。"]
+              }), ": Configure el punto de inicio para leer el número de tarjeta."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_110",
                 product: "dev"
-              }), "：（設定した ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": Configure el tamaño de los datos que se leerán de la tarjeta (si los valores establecidos de ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_087",
                 product: "dev"
-              }), " と ", (0,jsx_runtime.jsx)(Cmd, {
+              }), " y ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_151",
                 product: "dev"
-              }), " がカードの設定値と同じ場合）読み取るカードのデータサイズを設定できます。"]
+              }), " son iguales a los de la tarjeta)."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
@@ -659,72 +660,72 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_010",
             product: "dev"
-          }), "：DESFireカードを設定できます。"]
+          }), ": Configura tarjetas DESFire."]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_011",
                 product: "dev"
-              }), "：他社が発行したDESFireカードを使用できます。 DESFireのみ設定します。"]
+              }), ": Utiliza tarjetas DESFire emitidas por terceros. Solo se puede configurar DESCire."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_087",
                 product: "dev"
-              }), "：スマートカードとデバイス間の通信を暗号化するキーです。"]
+              }), ": Clave que cifra la comunicación entre las tarjetas inteligentes y el dispositivo."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_151",
                 product: "dev"
-              }), "：カードの基本サイトキーが一致しない場合に使用して認証を実行できます。 補助サイトキーの項目は、前レベルの ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": Úsala para autenticar cuando la clave principal de sitio de la tarjeta no coincide. El campo de clave de sitio auxiliar solo se muestra cuando ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_151",
                 product: "dev"
-              }), " を有効にしたときのみ表示されます。"]
+              }), " del nivel anterior está activado."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_223",
                 product: "dev"
-              }), "：アプリケーションIDを設定してください。 ファイルIDを含む一種のディレクトリとして機能します。 DESFireのみ設定します。"]
+              }), ": Establece el ID de aplicación. Funciona como una especie de directorio que incluye un ID de archivo. Solo se puede configurar DESCire."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_347",
                 product: "dev"
-              }), "：ファイルIDを設定してください。 DESFireのみ設定します。"]
+              }), ": Establece el ID de archivo. Solo se puede configurar DESCire."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_222",
                 product: "dev"
-              }), "：暗号化方式をDES/3DESまたはAESに設定できます。"]
+              }), ": Configura el tipo de cifrado en DES/3DES o AES."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_145",
                 product: "dev"
-              }), "：カード番号を読み取る開始位置を設定できます。"]
+              }), ": Configure el punto de inicio para leer el número de tarjeta."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_110",
                 product: "dev"
-              }), "：（設定した ", (0,jsx_runtime.jsx)(Cmd, {
+              }), ": Configure el tamaño de los datos que se leerán de la tarjeta (si los valores establecidos de ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_087",
                 product: "dev"
-              }), " と ", (0,jsx_runtime.jsx)(Cmd, {
+              }), " y ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "ui_151",
                 product: "dev"
-              }), " がカードの設定値と同じ場合）読み取るカードのデータサイズを設定できます。"]
+              }), " son iguales a los de la tarjeta)."]
             }), "\n"]
           }), "\n"]
         }), "\n"]
@@ -733,7 +734,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_146",
             product: "dev"
-          }), "：スマートカード出力のバイト順序を設定できます。"]
+          }), ": Configure el orden de bytes para la salida de tarjeta inteligente."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -741,57 +742,57 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Cmd, {
-              sid: "ui_011",
-              product: "dev"
-            }), " を使用するには、", (0,jsx_runtime.jsx)(Cmd, {
+            children: ["Ingrese correctamente la información de ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_224",
               product: "dev"
-            }), "、", (0,jsx_runtime.jsx)(Cmd, {
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_225",
               product: "dev"
-            }), "、", (0,jsx_runtime.jsx)(Cmd, {
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_348",
               product: "dev"
-            }), "、", (0,jsx_runtime.jsx)(Cmd, {
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_349",
               product: "dev"
-            }), "、", (0,jsx_runtime.jsx)(Cmd, {
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_223",
               product: "dev"
-            }), "、", (0,jsx_runtime.jsx)(Cmd, {
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_347",
               product: "dev"
-            }), "、", (0,jsx_runtime.jsx)(Cmd, {
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_222",
               product: "dev"
-            }), " の情報を正確に入力してください。"]
+            }), " para utilizar ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "ui_011",
+              product: "dev"
+            }), "."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_224",
               product: "dev"
-            }), "、", (0,jsx_runtime.jsx)(Cmd, {
+            }), ", ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_348",
               product: "dev"
-            }), " は最大 32 バイトの 16 進数のみ入力できます。"]
+            }), " solo aceptan hasta 32 bytes en hexadecimal."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["バイト順序を ", (0,jsx_runtime.jsx)(Cmd, {
+            children: ["Cuando se establece en ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_034",
               product: "dev"
-            }), " に設定すると、カードデータを処理する際に上位バイトから下位バイトの順に処理し、カードのシリアル番号（CSN）を保存するときに左から右へ順に処理します。 ", (0,jsx_runtime.jsx)(Cmd, {
+            }), ", los datos de la tarjeta se procesan de izquierda a derecha, procesando secuencialmente del byte más grande al más pequeño al guardar el número de serie de la tarjeta (CSN). ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_030",
               product: "dev"
-            }), " は下位バイトから上位バイトの順に処理し、カードのシリアル番号（CSN）を保存します。"]
+            }), " procesa el número de serie de la tarjeta (CSN) del byte más pequeño al más grande al guardarlo."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "キーパッド設定",
-      children: "キーパッド設定"
+      id: "configuración-del-teclado",
+      children: "Configuración del teclado"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/xpd2-template-keypad.png",
       width: 250
@@ -801,35 +802,37 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_335",
             product: "dev"
-          }), "：キーパッドの使用可否を設定できます。 キーパッドを有効にすると、キーパッドでカードIDを入力して認証できます。"]
+          }), ": Configure si se utilizará el teclado. Cuando el teclado está activado, autentíquese ingresando el ID de la tarjeta con el teclado."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_219",
             product: "dev"
-          }), "：キーパッドでカードIDを入力する際、キーを押すたびに値を送信します。"]
+          }), ": Envía el valor cada vez que se presiona una tecla al ingresar el ID de la tarjeta en el teclado."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_306",
             product: "dev"
-          }), "：キーパッドでカードIDを入力する際、すべてのキーを押した後に「#」キーを押すと、全値を一括で送信します。"]
+          }), ": Al ingresar el ID de la tarjeta en el teclado, presione todas las teclas necesarias y luego presione la tecla ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "#"
+          }), " para enviar todo el valor de una vez."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_327",
             product: "dev"
-          }), "：デバイスの認証モードをカード＋PINに設定した場合、ユーザーがカードを提示するとLEDを動作させてPIN入力を促すことができます。"]
+          }), ": Cuando el modo de autenticación del dispositivo está configurado en tarjeta + PIN, al presentar la tarjeta se activa el LED para solicitar al usuario que ingrese el PIN."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_147",
             product: "dev"
-          }), "：キーパッドのバックライトをオンまたはオフにできます。"]
+          }), ": Encienda o apague la retroiluminación del teclado."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -840,24 +843,24 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_336",
               product: "dev"
-            }), " は XPD2-GKDB デバイスのテンプレート設定画面にのみ表示されます。"]
+            }), " solo se muestra en la pantalla de configuración de plantillas del dispositivo XPD2-GKDB."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: [(0,jsx_runtime.jsx)(Cmd, {
               sid: "ui_147",
               product: "dev"
-            }), " は XPD2-GKDB ハードウェアV02M、ファームウェアv1.7.1以上でのみサポートされます。"]
+            }), " solo es compatible con el hardware XPD2-GKDB V02M y la versión de firmware v1.7.1 o superior."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "デバイスでキーパッドを通じて入力された値は、基本的に4ビット単位で送信されます。 キーパッドで入力したカードIDは、Wiegandカード形式に従ってカードIDと同じ形式で送信されます。"
+            children: "Los valores ingresados mediante el teclado se transmiten en unidades de 4 bits de forma predeterminada. Los ID de tarjetas ingresados mediante el teclado se envían en el mismo formato que el formato de tarjeta Wiegand."
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "その他",
-      children: "その他"
+      id: "otros",
+      children: "Otros"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/xpd2-template-others.png",
       width: 250
@@ -866,11 +869,11 @@ function _createMdxContent(props) {
         children: [(0,jsx_runtime.jsx)(Cmd, {
           sid: "ui_150",
           product: "dev"
-        }), "：デバイスでタンパーイベントが発生した場合、デバイスに保存されたセキュリティキーを削除するよう設定できます。 セキュリティタンパー機能を使用するには有効にしてください。"]
+        }), ": Configure para que, cuando se produzca un evento de manipulación en el dispositivo, la clave de seguridad almacenada en el dispositivo se elimine. Active la función de manipulación de seguridad para utilizarla."]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "led--ブザー",
-      children: "LED / ブザー"
+      id: "led--zumbador",
+      children: "LED / zumbador"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/device-manager-led-buzzer.png",
       width: 250
@@ -880,28 +883,28 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_272",
             product: "dev"
-          }), "：通常時にデバイスLEDに表示される色を設定できます。"]
+          }), ": Configure los colores que se mostrarán en el LED del dispositivo durante el funcionamiento normal."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_325",
             product: "dev"
-          }), "：デバイスにカードをスキャンする際にデバイスLEDに表示される色とブザー音の再生回数を設定できます。"]
+          }), ": Configure el color que se mostrará en el LED del dispositivo y la cantidad de veces que suena el zumbador al escanear una tarjeta."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_262",
             product: "dev"
-          }), "：認証成功時にデバイスLEDに表示される色とブザー音の再生回数を設定できます。"]
+          }), ": Configure el color que se mostrará en el LED del dispositivo y la cantidad de veces que suena el zumbador cuando la autenticación es correcta."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_263",
             product: "dev"
-          }), "：認証失敗時にデバイスLEDに表示される色とブザー音の再生回数を設定できます。"]
+          }), ": Configure el color que se mostrará en el LED del dispositivo y la cantidad de veces que suena el zumbador cuando la autenticación falla."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -909,46 +912,46 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "LEDは最大3色を交互に繰り返し表示するよう設定できます。 スロットを押して色を選択してください。"
+            children: "El LED puede configurarse para mostrar un máximo de tres colores en patrones alternos. Presione la ranura para elegir un color."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Image, {
+            children: ["Al seleccionar ", (0,jsx_runtime.jsx)(Image, {
               src: "/img/common/ico-cancel2.svg",
               ico: true,
               alone: true
-            }), " を選択すると、該当スロットの色表示順序をスキップし、次の順序のスロットに設定された色が表示されます。"]
+            }), ", se omite la secuencia de color de esa ranura y se muestra el color configurado para la siguiente ranura."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "テンプレートを適用する",
-      children: "テンプレートを適用する"
+      id: "aplicar-plantilla",
+      children: "Aplicar plantilla"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "追加したテンプレートはBLE通信を利用して複数台のデバイスに同一に適用できます。"
+      children: "Las plantillas añadidas pueden aplicarse de manera uniforme a varios dispositivos mediante comunicación BLE."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["デバイスのファームウェアバージョンが低い場合、いくつかの設定が適用されないことがあります。 すべての設定を適用するには、", (0,jsx_runtime.jsx)(_components.a, {
+        children: ["Es posible que ciertos ajustes no se apliquen si la versión del firmware del dispositivo es antigua. Consulta ", (0,jsx_runtime.jsx)(_components.a, {
           href: "#device-firmware-upgrade",
-          children: "デバイスファームウェアをアップグレードする"
-        }), "を参照してファームウェアをアップグレードしてください。"]
+          children: "Actualizar el firmware del dispositivo"
+        }), " para aplicar todos los ajustes."]
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "モバイル機器でBluetooth機能を有効にした後、Suprema Device Managerを起動してください。"
+          children: "Active el Bluetooth en su dispositivo móvil y ejecute Suprema Device Manager."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "メイン画面で XPass D2 を選択します。"
+          children: "Selecciona XPass D2 en la pantalla principal."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["Haga clic en ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_343",
             product: "dev"
-          }), " を押してください。 選択可能なテンプレートの一覧が表示されます。"]
+          }), ". Aparecerá una lista de plantillas disponibles."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/xpd2-template-choose-select.png",
           className: "none",
@@ -956,28 +959,28 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "テンプレート一覧から目的のテンプレートを選択してください。"
+          children: "Seleccione la plantilla deseada de la lista de plantillas."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["Haga clic en ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_212",
             product: "dev"
-          }), " を押してください。"]
+          }), " para continuar."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/xpd2-template-choose-select-start.png",
           width: 250
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "テンプレートを適用するデバイスにモバイル機器の背面を完全に接触させてください。"
+          children: "Asegúrese de que la parte posterior de su dispositivo móvil toque el dispositivo al que desea aplicar la plantilla."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["テンプレート適用が完了したら、", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Una vez completada la aplicación de la plantilla, haga clic en ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_367",
             product: "dev"
-          }), " を押してください。"]
+          }), "."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -985,35 +988,35 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Suprema Device Managerで変更した設定はデバイスにのみ適用され、サーバーには同期されません。"
+            children: "Los ajustes modificados mediante Suprema Device Manager solo se aplican al dispositivo y no se sincronizarán con el servidor."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "デバイスがマスターデバイスと接続されているか、Wiegand出力設定が変更されている場合、Suprema Device Managerにデフォルトキーで接続できません。 Suprema Device Managerに接続するにはデバイスを初期化してください。"
+            children: "Si el dispositivo está conectado al dispositivo maestro o si la configuración de salida Wiegand ha cambiado, no se puede conectar a Suprema Device Manager con la clave principal. Inicialice el dispositivo para conectarlo con Suprema Device Manager."
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "テンプレートを管理する",
-      children: "テンプレートを管理する"
+      id: "gestionar-plantillas",
+      children: "Gestionar plantillas"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "テンプレートを編集する",
-      children: "テンプレートを編集する"
+      id: "editar-plantilla",
+      children: "Editar plantilla"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "モバイル端末で Suprema Device Manager を起動します。"
+          children: "Ejecuta Suprema Device Manager en el dispositivo móvil."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "メイン画面で XPass D2 を選択します。"
+          children: "Selecciona XPass D2 en la pantalla principal."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["Haga clic en ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_338",
             product: "dev"
-          }), " を押してください。"]
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/xpd2-template-management-select.png",
           className: "none",
@@ -1021,44 +1024,44 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "テンプレート一覧から編集するテンプレートを選択します。"
+          children: "Seleccione la plantilla que desea editar de la lista de plantillas."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["「", (0,jsx_runtime.jsx)(_components.a, {
+          children: ["Consulte ", (0,jsx_runtime.jsx)(_components.a, {
             href: "#template-add",
-            children: "テンプレートを追加"
-          }), "」を参照してテンプレートを編集します。"]
+            children: "Agregar plantilla"
+          }), " para editar la plantilla."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["変更した設定を保存するには ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Para guardar los ajustes modificados, haga clic en ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_295",
             product: "dev"
-          }), " を、新しいテンプレートとして保存するには ", (0,jsx_runtime.jsx)(Cmd, {
+          }), "; para guardarlos como una nueva plantilla, haga clic en ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_178",
             product: "dev"
-          }), " を押します。"]
+          }), "."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "テンプレートを削除する",
-      children: "テンプレートを削除する"
+      id: "eliminar-plantilla",
+      children: "Eliminar plantilla"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "モバイル端末で Suprema Device Manager を起動します。"
+          children: "Ejecuta Suprema Device Manager en el dispositivo móvil."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "メイン画面で XPass D2 を選択します。"
+          children: "Selecciona XPass D2 en la pantalla principal."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["Haga clic en ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_338",
             product: "dev"
-          }), " を押してください。"]
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/xpd2-template-management-select.png",
           className: "none",
@@ -1066,43 +1069,43 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "テンプレート一覧で削除するテンプレートを選択します。"
+          children: "Seleccione la plantilla que desea eliminar de la lista de plantillas."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["テンプレートを削除するには ", (0,jsx_runtime.jsx)(Image, {
+          children: ["Toque ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-delete.svg",
             ico: true,
             alone: true
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_367",
             product: "dev"
-          }), " を押します。"]
+          }), " para eliminar una plantilla."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/xpd2-template-management-select-del.png",
           width: 250
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "テンプレートをエクスポートする",
-      children: "テンプレートをエクスポートする"
+      id: "exportar-plantilla",
+      children: "Exportar plantilla"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "XPass D2 設定のテンプレートをアプリからエクスポートできます。"
+      children: "Exporte plantillas para la configuración de XPass D2 desde la aplicación."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "モバイル端末で Suprema Device Manager を起動します。"
+          children: "Ejecuta Suprema Device Manager en el dispositivo móvil."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "メイン画面で XPass D2 を選択します。"
+          children: "Selecciona XPass D2 en la pantalla principal."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["Haga clic en ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_338",
             product: "dev"
-          }), " を押してください。"]
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/xpd2-template-management-export1.png",
           className: "none",
@@ -1110,54 +1113,66 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["テンプレート一覧画面の上部で ", (0,jsx_runtime.jsx)(Image, {
+          children: ["En la parte superior de la lista de plantillas, toque ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-menu1.svg",
             ico: true,
             alone: true
-          }), " を押してから ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " y seleccione ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_339",
             product: "dev"
-          }), " を選択します。"]
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["エクスポートするテンプレートを選択した後、", (0,jsx_runtime.jsx)(Image, {
+          children: ["Después de seleccionar la plantilla para exportar, toque ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-check.svg",
             ico: true,
             alone: true
-          }), " を押します。"]
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/xpd2-template-management-export2.png",
           width: 250
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["テンプレートは Suprema Device Manager アプリケーションのインストールファイルと同じ場所に作成される ", (0,jsx_runtime.jsx)(_components.em, {
-          children: "DeviceManager_TemplateFiles"
-        }), " フォルダーに保存されます。"]
-      })
+      children: [(0,jsx_runtime.jsx)(_components.p, {
+        children: "Los archivos de plantilla se guardan en las siguientes carpetas del dispositivo móvil."
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Android"
+            }), ": Download → DeviceManager_TemplateFiles"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "iOS"
+            }), ": Device"]
+          }), "\n"]
+        }), "\n"]
+      })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "テンプレートをインポートする",
-      children: "テンプレートをインポートする"
+      id: "importar-plantilla",
+      children: "Importar plantilla"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "XPass D2 設定のテンプレートをアプリにインポートできます。"
+      children: "Importe plantillas para la configuración de XPass D2 en la aplicación."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "モバイル端末で Suprema Device Manager を起動します。"
+          children: "Ejecuta Suprema Device Manager en el dispositivo móvil."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "メイン画面で XPass D2 を選択します。"
+          children: "Selecciona XPass D2 en la pantalla principal."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["Haga clic en ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_338",
             product: "dev"
-          }), " を押してください。"]
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/xpd2-template-management-import.png",
           className: "none",
@@ -1165,47 +1180,59 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["テンプレート一覧画面の上部で ", (0,jsx_runtime.jsx)(Image, {
+          children: ["En la parte superior de la lista de plantillas, toque ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-menu1.svg",
             ico: true,
             alone: true
-          }), " を押してから ", (0,jsx_runtime.jsx)(Cmd, {
+          }), " y seleccione ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_337",
             product: "dev"
-          }), " を選択します。"]
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "テンプレートが保存されているフォルダーでインポートするテンプレートを選択します。"
+          children: "Seleccione la plantilla que desea importar de la carpeta donde se almacenan las plantillas."
         }), "\n"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
+    }), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["テンプレートは Suprema Device Manager アプリケーションのインストールファイルと同じ場所に作成される ", (0,jsx_runtime.jsx)(_components.em, {
-          children: "DeviceManager_TemplateFiles"
-        }), " フォルダーに保存されます。"]
-      })
+      children: [(0,jsx_runtime.jsx)(_components.p, {
+        children: "Los archivos de plantilla se guardan en las siguientes carpetas del dispositivo móvil."
+      }), (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Android"
+            }), ": Download → DeviceManager_TemplateFiles"]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "iOS"
+            }), ": Device"]
+          }), "\n"]
+        }), "\n"]
+      })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "device-search-connect",
-      children: "デバイスの検索と接続"
+      children: "Buscar y conectar dispositivo"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "周辺に設置された XPass D2 を検索して接続できます。 Suprema Device Manager と接続すると、デバイスのファームウェアのアップグレードやデバイスの再起動、テンプレートのパスワード変更など、さまざまな機能を利用できます。"
+      children: "Busque y conéctese a los XPass D2 instalados cercanos. Conéctese a Suprema Device Manager para actualizar el firmware del dispositivo o utilizar funciones como reiniciar el dispositivo o cambiar la contraseña de la plantilla."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "モバイル機器でBluetooth機能を有効にした後、Suprema Device Managerを起動してください。"
+          children: "Active el Bluetooth en su dispositivo móvil y ejecute Suprema Device Manager."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "メイン画面で XPass D2 を選択します。"
+          children: "Selecciona XPass D2 en la pantalla principal."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Cmd, {
+          children: ["Haga clic en ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_285",
             product: "dev"
-          }), " を押してください。 接続可能なデバイスの一覧が表示されます。"]
+          }), ". Aparecerá una lista de dispositivos conectables."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/xpd2-template-search-device-select.png",
           className: "none",
@@ -1213,157 +1240,157 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "デバイス一覧でデバイス ID を確認してデバイスを選択するか、接続するデバイスにモバイル機器を近づけます。"
+          children: "Seleccione un dispositivo verificando el ID en la lista de dispositivos o acerque su dispositivo móvil al dispositivo para conectarlo."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["接続パスワードを入力します。 入力したパスワードを画面に表示するには ", (0,jsx_runtime.jsx)(Image, {
+          children: ["Ingrese la contraseña de conexión. Toque ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-password.svg",
             ico: true,
             alone: true
-          }), " を押します。"]
+          }), " para mostrar la contraseña ingresada."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["デバイスの接続を完了するには ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Presione ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_367",
             product: "dev"
-          }), " を押します。"]
+          }), " para completar la conexión del dispositivo."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "device-firmware-upgrade",
-      children: "デバイスのファームウェアをアップグレードする"
+      children: "Actualizar el firmware del dispositivo"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "デバイスのファームウェアを簡単にアップグレードできます。"
+      children: "Actualice fácilmente el firmware del dispositivo."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["ファームウェアをアップグレードするには、モバイル機器にファームウェアファイルをダウンロードする必要があります。 最新ファームウェアは", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["Descargue el archivo de firmware en su dispositivo móvil para actualizar el firmware. Puede descargar el firmware más reciente desde el ", (0,jsx_runtime.jsx)(_components.a, {
               href: "https://download.supremainc.com/",
-              children: "Suprema ダウンロードセンター"
-            }), "からダウンロードできます。"]
+              children: "Centro de descargas de Suprema"
+            }), "."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "ファームウェアのアップグレード中は、デバイスとモバイル機器の距離を 1 m 以内に保ってください。"
+            children: "Durante la actualización del firmware, mantenga una distancia menor a 1 m entre el dispositivo y el dispositivo móvil."
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["「", (0,jsx_runtime.jsx)(_components.a, {
+          children: ["Consulte ", (0,jsx_runtime.jsx)(_components.a, {
             href: "#device-search-connect",
-            children: "デバイスの検索と接続"
-          }), "」を参照して、ファームウェアをアップグレードするデバイスと接続します。"]
+            children: "Buscar y conectar un dispositivo"
+          }), " para conectar el dispositivo al que desea actualizar el firmware."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
+          children: ["Toque ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-option.svg",
             ico: true,
             alone: true
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_018",
             product: "dev"
-          }), " を押します。"]
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/xpd2-template-management-fwupgrade.png",
           width: 250
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "ファームウェアファイルが保存されているパスでファームウェアを選択します。 ファームウェアのアップグレードが実行されます。"
+          children: "Seleccione el firmware desde la ruta donde se guardó el archivo de firmware. La actualización del firmware está en curso."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["ファームウェアのアップグレードを完了するには ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Presione ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_367",
             product: "dev"
-          }), " を押します。"]
+          }), " para completar la actualización del firmware."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "デバイスを再起動する",
-      children: "デバイスを再起動する"
+      id: "reiniciar-dispositivo",
+      children: "Reiniciar dispositivo"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "デバイスを再起動できます。"
+      children: "Reinicie el dispositivo."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["「", (0,jsx_runtime.jsx)(_components.a, {
+          children: ["Consulte ", (0,jsx_runtime.jsx)(_components.a, {
             href: "#device-search-connect",
-            children: "デバイスの検索と接続"
-          }), "」を参照して、再起動するデバイスと接続します。"]
+            children: "Buscar y conectar un dispositivo"
+          }), " para conectar el dispositivo que desea reiniciar."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
+          children: ["Toque ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-option.svg",
             ico: true,
             alone: true
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_287",
             product: "dev"
-          }), " を押します。"]
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/xpd2-template-management-restart.png",
           width: 250
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["デバイスを再起動すると、モバイル機器との BLE 通信が切断されます。 自動で再接続するには、", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Al reiniciar el dispositivo, la conexión de comunicación BLE con el dispositivo móvil se desconectará. Habilite la función ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_276",
             product: "dev"
-          }), " 機能を有効にします。 詳細な設定方法は「", (0,jsx_runtime.jsx)(_components.a, {
+          }), " para reconectar automáticamente. Para obtener instrucciones detalladas de configuración, consulte ", (0,jsx_runtime.jsx)(_components.a, {
             href: "initial-setup#app-settings",
-            children: "アプリを設定する"
-          }), "」を参照してください。"]
+            children: "Configurar los ajustes de la aplicación"
+          }), "."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "admin-password-change",
-      children: "管理者パスワードを変更する"
+      children: "Cambiar contraseña de administrador"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "テンプレートの管理者パスワードを変更できます。"
+      children: "Cambie la contraseña de administrador de la plantilla."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["「", (0,jsx_runtime.jsx)(_components.a, {
+          children: ["Consulte ", (0,jsx_runtime.jsx)(_components.a, {
             href: "#device-search-connect",
-            children: "デバイスの検索と接続"
-          }), "」を参照し、パスワードを変更するテンプレートが適用されたデバイスと接続します。"]
+            children: "Buscar y conectar un dispositivo"
+          }), " para conectar el dispositivo con la plantilla en la que desea cambiar la contraseña."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
+          children: ["Toque ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-option.svg",
             ico: true,
             alone: true
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_156",
             product: "dev"
-          }), " を押します。"]
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/xpd2-template-management-password.png",
           width: 250
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "現在のパスワードと新しいパスワードを入力します。"
+          children: "Ingrese la contraseña actual y la nueva contraseña que utilizará."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-manager-change-password.png",
           width: 250
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["パスワードの変更を完了するには ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Presione ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_367",
             product: "dev"
-          }), " を押します。"]
+          }), " para completar el cambio de contraseña."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -1371,11 +1398,11 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "管理者パスワードは 6～32 桁の数字で設定できます。"
+            children: "La contraseña de administrador puede tener de 6 a 32 dígitos."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "管理者パスワードを紛失しないよう注意してください。 管理者パスワードを紛失した場合、テンプレートを適用したデバイスに接続するにはそのデバイスを初期化する必要があります。"
+            children: "Ten cuidado de no perder la contraseña de administrador. Si pierdes la contraseña de administrador, será necesario inicializar el dispositivo para conectarte al dispositivo con la plantilla aplicada."
           }), "\n"]
         }), "\n"]
       })
