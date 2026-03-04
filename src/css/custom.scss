@@ -626,6 +626,29 @@ body[data-rh] .redocusaurus {
     }
   }
 
+  details.deviceInfo {
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    box-shadow: none;
+    summary {
+      h2 {
+        padding-top: 0;
+        margin-bottom: 0;
+      }
+    }
+    summary::before {
+      top: .9rem
+    }
+    .alert {
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+  }
+
   .overflow-x {
     margin-top: var(--ifm-list-paragraph-margin);
   }
@@ -1326,6 +1349,22 @@ body[data-rh] .redocusaurus {
   footer {
     .sns--right {
       display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .markdown {
+    .container {
+      .padding--l10 {
+        padding-left: 0px !important;
+      }
+      .padding--l20 {
+        padding-left: 0px !important;
+      }
+      .padding--l40 {
+        padding-left: 0px !important;
+      }
     }
   }
 }
