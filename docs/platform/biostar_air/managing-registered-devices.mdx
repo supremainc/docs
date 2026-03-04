@@ -86,9 +86,9 @@ BioStar Air 포털에서 등록된 슈프리마 장치의 상태를 모니터링
 
 <Image src='/img/air/bsair-device-mng-list-tools.png' />
 
-* <IcAirRef width='24px' height='24px' />: 장치 목록 및 장치 상태를 업데이트합니다.
+* <IcAirRef width='24px' height='24px' title='Refresh' />: 장치 목록 및 장치 상태를 업데이트합니다.
 
-* <IcAirRemove width='24px' height='24px' />: 사이트에 등록된 장치를 삭제할 수 있습니다.
+* <IcAirRemove width='24px' height='24px' title='Delete' />: 사이트에 등록된 장치를 삭제할 수 있습니다.
 
    :::warning
 
@@ -96,18 +96,53 @@ BioStar Air 포털에서 등록된 슈프리마 장치의 상태를 모니터링
 
    :::
 
-* <IcAirFw width='24px' height='24px' />: 장치 목록에서 선택한 장치의 펌웨어를 업데이트할 수 있습니다. 펌웨어 업데이트에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/how-to-upgrade-firmware' />를 참고하세요.
+* <IcAirFw width='24px' height='24px' title='Update Firmware' />: 장치 목록에서 선택한 장치의 펌웨어를 업데이트할 수 있습니다. 펌웨어 업데이트에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/how-to-upgrade-firmware' />를 참고하세요.
 
-* <IcAirCloud width='24px' height='24px' />: 장치 목록에서 선택한 장치에서 서버로 생체 인증 템플릿을 동기화할 수 있습니다.
+* <IcAirCloud width='24px' height='24px' title='Sync with Server' />: 장치 목록에서 선택한 장치에서 서버로 생체 인증 템플릿을 동기화할 수 있습니다.
 
-* <IcAirGroup width='24px' height='24px' />: 장치 목록에서 선택한 장치를 그룹에 할당할 수 있습니다. 장치 그룹 관리에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/manage-device-group' />를 참고하세요.
+* <IcAirGroup width='24px' height='24px' title='Manage Groups' />: 장치 목록에서 선택한 장치를 그룹에 할당할 수 있습니다. 장치 그룹 관리에 대한 자세한 내용은 <DocLink inner='#device_group_in_device_list' />를 참고하세요.
 
-* <IcAirByte width='24px' height='24px' />: 장치 목록에서 선택한 장치의 RF 카드 바이트 순서를 <Cmd>MSB</Cmd> 또는 <Cmd>LSB</Cmd>로 전환할 수 있습니다.
+* <IcAirByte width='24px' height='24px' title='RF Card Byte Order' />: 장치 목록에서 선택한 장치의 RF 카드 바이트 순서를 <Cmd>MSB</Cmd> 또는 <Cmd>LSB</Cmd>로 전환할 수 있습니다.
 
    * <Cmd>MSB</Cmd>: 카드 데이터를 처리할 때 큰 바이트 단위에서 작은 바이트 단위 순서로 처리하여 카드 일련 번호(CSN)를 왼쪽에서 오른쪽으로 순차 저장합니다.
 
    * <Cmd>LSB</Cmd>: 카드 데이터를 처리할 때 작은 바이트 단위에서 큰 바이트 단위 순서로 처리하여 카드 일련 번호(CSN)를 저장합니다.
 
-* <IcAirDset width='24px' height='24px' />: 독립 실행 모드에서 원래 설정된 장치의 설정을 가져올 수 있습니다.
+* <IcAirDset width='24px' height='24px' title='Load Device Setting' />: 독립 실행 모드에서 원래 설정된 장치의 설정을 가져올 수 있습니다.
 
-* <IcAirUpd width='24px' height='24px' />: 장치 목록에서 선택한 장치의 상태를 업데이트할 수 있습니다.
+* <IcAirUpd width='24px' height='24px' title='Update Status' />: 장치 목록에서 선택한 장치의 상태를 업데이트할 수 있습니다.
+
+
+## 장치 그룹 관리 {#device_group_in_device_list}
+
+장치 목록에서 개별 장치를 선택하여 장치 그룹에 추가하거나, 기존 그룹에서 제거할 수 있습니다.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' />을 클릭하세요.
+
+1. 장치 그룹 목록에서 그룹에 추가하거나 제거하려는 장치의 체크박스를 클릭하세요.
+
+1. 장치 그룹 목록 상단의 <IcAirGroup width='24px' height='24px' title='Manage Groups' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='manage_device_group_title' product='air' /> 창이 나타나면 선택한 장치를 그룹에 추가하거나 제거하세요.
+
+   <Image src='/img/air/bsair-device-mng-list-group-mng.png' />
+
+   <Cmd sid='manage_device_group_title_two' product='air' />의 체크박스 상태는 아래와 같은 의미를 가집니다.
+
+   * <Cmd sid='manage_device_group_checkbox_state_one' product='air' />: 선택한 장치를 그룹에서 제거합니다.
+
+   * <Cmd sid='manage_device_group_checkbox_state_two' product='air' />: 선택한 장치 중 일부가 그룹에 포함된 상태입니다.
+
+   * <Cmd sid='manage_device_group_checkbox_state_three' product='air' />: 선택한 장치를 그룹에 추가합니다.
+
+1. 변경한 내용을 저장하려면 <Cmd sid='btn_ok' product='air' /> 버튼을 클릭하세요.
+
+:::info
+
+* <Cmd sid='manage_device_group_title' product='air' /> 창에서 다른 그룹을 선택하면 선택한 장치는 해당 그룹으로 이동합니다.
+
+* 장치는 그룹에 중복으로 속할 수 있습니다. 하나의 장치를 여러 그룹에 할당할 수 있습니다.
+
+* 변경한 내용을 초기화하려면 <Cmd sid='device_btn_reset' product='air' /> 버튼을 클릭하세요.
+
+:::
