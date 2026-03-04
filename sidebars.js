@@ -51,9 +51,12 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: '개요',
+          label: 'BioStar Air란?',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_air/what-is-biostar-air'
+          },
           items: [
-            'platform/biostar_air/what-is-biostar-air',
             'platform/biostar_air/access-control-hardware-compatibility',
             'platform/biostar_air/security-overview',
             'platform/biostar_air/biostar-air-migration',
@@ -84,7 +87,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: '사이트 및 관리자 설정',
+              label: '사이트 관리하기',
               link: {
                 type: 'doc',
                 id: 'platform/biostar_air/site-management',
@@ -92,7 +95,7 @@ const sidebars = {
               items: [
                 {
                   type: 'category',
-                  label: '사용자 관리',
+                  label: '사용자',
                   link: {
                     type: 'doc',
                     id: 'platform/biostar_air/managing-users',
@@ -109,7 +112,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: '장치 관리',
+                  label: '장치',
                   link: {
                     type: 'doc',
                     id: 'platform/biostar_air/manage-device',
@@ -166,27 +169,27 @@ const sidebars = {
                   ]
                 },
                 'platform/biostar_air/managing-roll-call-fire-muster',
-                {
-                  type: 'category',
-                  label: '설정',
-                  link: {
-                    type: 'doc',
-                    id: 'platform/biostar_air/settings',
-                  },
-                  items: [
-                    'platform/biostar_air/site-settings',
-                    'platform/biostar_air/daylight-saving-time',
-                    'platform/biostar_air/customizing-email-templates',
-                    'platform/biostar_air/custom-wiegand-card-formats',
-                    'platform/biostar_air/account-settings',
-                  ]
-                },
               ]
             },
             {
               type: 'category',
-              label: '보고서 구성하기',
+              label: '사이트 설정하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/settings',
+              },
               items: [
+                'platform/biostar_air/site-settings',
+              ]
+            },
+            {
+              type: 'category',
+              label: '서비스 구성하기',
+              items: [
+                'platform/biostar_air/daylight-saving-time',
+                'platform/biostar_air/customizing-email-templates',
+                'platform/biostar_air/custom-wiegand-card-formats',
+                'platform/biostar_air/account-settings',
                 'platform/biostar_air/configuring-reports',
                 'platform/biostar_air/reports-time-attendance-reports',
               ]
