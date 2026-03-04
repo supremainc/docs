@@ -1318,6 +1318,14 @@ body[data-rh] .redocusaurus {
       }
     }
   }
+
+  .fit--content {
+    iframe {
+      width: 100%; /* Take full width of its parent container */
+      aspect-ratio: 16 / 9; /* Maintain the 16:9 aspect ratio */
+      height: auto; /* Height adjusts automatically */
+    }
+  }
 }
 
 // Dark theme
