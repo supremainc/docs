@@ -12,9 +12,41 @@ keywords: [BioStar Air, 사용자 관리, 사용자 목록, 크리덴셜, 출입
 
 사용자 목록에서는 BioStar Air에 등록된 모든 사용자를 한눈에 확인할 수 있습니다. 각 사용자의 세부 정보를 보고, 필터링 및 정렬 기능을 활용하여 특정 사용자를 쉽게 찾을 수 있습니다. 또한, 사용자 목록에서 직접 사용자 편집, 삭제, 그룹 할당 등의 작업을 수행할 수 있습니다.
 
-<Image src='/img/air/bsair-user-list-overview.png' />
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
 
 화면 왼쪽 사이드바에서 <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />를 클릭하세요. 
+
+<Image src='/img/air/bsair-user-list-overview.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/air/bsair-app-mng-user.png' className='none' />
+
+</Column>
+<Column className='padding--l40'>
+
+BioStar Air 앱에서 사용자 관리 기능을 사용할 수 있습니다.
+
+1. 모바일 기기에서 **BioStar Air** 앱을 실행하세요.
+
+1. 화면 하단의 탐색바에서 <Cmd sid='site_setting_tab_management' product='air' />를 탭하세요.
+
+1. <Cmd sid='user_submenu' product='air' /> 버튼을 탭하세요.
+
+사용자 목록이 나타납니다. 새로운 사용자를 추가하거나 기존 사용자의 세부 정보를 편집할 수 있습니다.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+
 
 ### 사용자 정보
 
@@ -40,6 +72,9 @@ keywords: [BioStar Air, 사용자 관리, 사용자 목록, 크리덴셜, 출입
 
 ### 필터링 {#userFiltering}
 
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
 사용자 목록의 상단 헤더 영역에서 필터링 기능을 이용할 수 있습니다. 헤더 영역의 <IcAirFilter title='Filter' /> 버튼을 클릭하면 원하는 조건을 설정할 수 있습니다.
 
 <Image src='/img/air/bsair-user-list-user-filtering.png' />
@@ -49,6 +84,24 @@ keywords: [BioStar Air, 사용자 관리, 사용자 목록, 크리덴셜, 출입
 적용한 필터 조건을 초기화하려면 사용자 목록 상단의 <IcAirFilterReset title='Clear Filters' /> 버튼을 클릭하세요.
 
 :::
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+모바일 앱에서 사용자 목록의 사용자를 원하는 기준으로 필터링하여 볼 수 있습니다. 사용자 목록 오른쪽 상단의 <Cmd sid='logs_filters_action_btn' product='air' />를 탭하세요. 사용자는 아래 기준으로 필터링할 수 있습니다.
+
+<Image src='/img/air/bsair-app-mng-user-filter.png' className='none' width='60%' />
+
+* <Cmd sid='user_table_column8' product='air' />: 일반 또는 임시 사용자로 필터링합니다.
+
+* <Cmd sid='user_table_column2' product='air' />: 크리덴셜 종류에 따라 필터링합니다.
+
+* <Cmd sid='user_table_column4' product='air' />: 활성화 상태에 따라 필터링합니다.
+
+* <Cmd sid='user_table_column5' product='air' />: 사용자 그룹에 따라 필터링합니다.
+
+</TabItem>
+</Tabs>
 
 ### 추가 기능
 
@@ -99,7 +152,11 @@ keywords: [BioStar Air, 사용자 관리, 사용자 목록, 크리덴셜, 출입
 
   <Image src='/img/air/bsair-user-list-user-masking.png' />
 
+
 ## 사용자 정보 수정 {#editUserDetails}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
 
 사용자의 세부 정보를 수정하거나 크리덴셜을 변경하려면 다음 단계를 따르세요.
 
@@ -119,16 +176,48 @@ keywords: [BioStar Air, 사용자 관리, 사용자 목록, 크리덴셜, 출입
 
 1. 수정을 완료하면 오른쪽 하단의 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
 
+</TabItem>
+
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/air/bsair-app-mng-user-edit.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+모바일 앱에서 사용자 세부 정보를 수정하려면 다음 단계를 따르세요.
+
+1. 사용자 목록에서 정보를 수정할 사용자를 탭하세요. 
+
+1. 오른쪽 상단의 <IcAirEdit /> 버튼을 탭하세요. 
+
+1. <Cmd sid='user_edit_header' product='air' /> 화면에서 필요한 정보를 수정하세요.
+
+1. 수정 사항을 저장하려면 <Cmd sid='save_btn' product='air' /> 버튼을 탭하세요.
+
+   크리덴셜을 발급하려면 <Cmd sid='add_user_card_activate_btn' product='air' /> 버튼을 사용하세요.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
 :::info
 
 사용자 정보에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/adding-individual-users' />를 참고하세요.
 
 :::
 
-
 ## 사용자 그룹 관리 {#manageUserGroups}
 
 사용자를 사용자 그룹에 할당하거나 이동, 제외하는 방법을 안내합니다. 사용자 그룹 생성 및 관리에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/managing-user-groups' />를 참고하세요.
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
 
 ### 그룹에 사용자 할당하기 {#assigning-users-to-a-group}
 
@@ -181,12 +270,40 @@ keywords: [BioStar Air, 사용자 관리, 사용자 목록, 크리덴셜, 출입
 
 사용자 목록의 <Cmd sid='user_table_column5' product='air' /> 열에서 사용자의 그룹 변경 사항을 확인할 수 있습니다.
 
+</TabItem>
+
+<TabItem value='mobile' label='Mobile'>
+
+모바일 앱에서 사용자 그룹을 관리할 수 있습니다. 사용자 목록 상단의 <IcAirGroup /> 버튼을 탭하세요. 사용자 그룹 목록을 확인할 수 있습니다.
+
+<Image src='/img/air/bsair-app-mng-user-group.png' className='none' width='60%' />
+
+* 그룹에 속한 사용자를 보려면 원하는 그룹의 오른쪽에 <IcBw /> 버튼을 탭하세요.
+
+* 새로운 그룹을 추가하려면 오른쪽 상단의 <IcAdd title='Add' /> 버튼을 탭하세요.
+
+* 그룹 이름을 수정하려면 원하는 그룹을 길게 터치하고 하단의 <IcAirEdit title='Edit' /> 버튼을 탭하세요.
+
+* 그룹을 삭제하려면 원하는 그룹을 길게 터치한 후 하단의 <IcAirRemove title='Remove' /> 버튼을 탭하세요. 하나 이상의 그룹을 선택해 삭제할 수 있습니다.
+
+:::info
+
+사용자 그룹 관리에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/managing-user-groups' />를 참고하세요.
+
+:::
+
+</TabItem>
+</Tabs>
+
 
 ## 사용자 상태 관리 {#manageUserStatus}
 
 사용자의 출입 권한을 활성화하거나 일시 정지할 수 있습니다. 또한 크리덴셜을 재발급할 수도 있습니다.
 
 ### 개별 사용자
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />를 클릭하세요.
 
@@ -202,8 +319,44 @@ keywords: [BioStar Air, 사용자 관리, 사용자 목록, 크리덴셜, 출입
 
 * <IcAirSuspend width='24px' height='24px' title='Suspend' />: 사용자의 출입을 차단합니다. 이 기능은 사용자가 활성화된 상태일 때 사용할 수 있습니다.
 
+</TabItem>
+
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/air/bsair-app-mng-user-action.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+모바일 앱에서 사용자 목록에서 사용자를 탭하세요. <Cmd sid='user_detail' product='air' /> 화면에서 <span className='rect green'><IcAirMore /></span> 버튼을 탭하세요. **사용자 액션** 메뉴가 나타납니다.
+
+* <Cmd sid='user_activate_action' product='air' /> / <Cmd sid='after_suspend_user_reactivate_action' product='air' />: 사용자의 출입 권한을 활성화합니다. 새 사용자의 초기 활성화 또는 일시 정지된 사용자의 재활성화 시 사용하세요.
+
+* <Cmd sid='user_reactivate_action' product='air' />: 사용자의 크리덴셜을 재발급합니다.
+
+* <Cmd sid='suspend_action' product='air' />: 사용자를 일시적으로 비활성화합니다. 일시 중지된 사용자는 출입할 수 없습니다.
+
+* <Cmd sid='delete_action' product='air' />: 사용자를 시스템에서 삭제합니다.
+
+:::info
+
+<Cmd sid='after_suspend_user_reactivate_action' product='air' /> 옵션은 일시 중지된 사용자에게만 표시됩니다.
+
+:::
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
 
 ### 일괄 작업
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />를 클릭하세요.
 
@@ -213,11 +366,45 @@ keywords: [BioStar Air, 사용자 관리, 사용자 목록, 크리덴셜, 출입
 
 <Image src='/img/air/bsair-user-list-multi-user-batch-action.png' />
 
-* <Cmd sid='user_activate_action' product='air' />: 사용자의 출입 권한을 활성화합니다. 새 사용자의 초기 활성화 또는 일시 정지된 사용자의 재활성화 시 사용하세요.
+* <Cmd sid='user_activate_action' product='air' /> / <Cmd sid='after_suspend_user_reactivate_action' product='air' />: 사용자의 출입 권한을 활성화합니다. 새 사용자의 초기 활성화 또는 일시 정지된 사용자의 재활성화 시 사용하세요.
 
 * <Cmd sid='user_reactivate_action' product='air' />: 크리덴셜을 다시 발급합니다. 이 기능은 사용자의 크리덴셜이 만료되었거나, 크리덴셜을 사용할 수 없어 새로 발급할 때 사용할 수 있습니다.
 
 * <Cmd sid='suspend_action' product='air' />: 사용자의 출입을 차단합니다. 이 기능은 사용자가 활성화된 상태일 때 사용할 수 있습니다.
+
+</TabItem>
+
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/air/bsair-app-mng-user-bulk-action.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+모바일 앱에서 사용자 목록에서 상태를 변경할 사용자를 길게 터치하세요. 추가로 상태를 변경할 사용자를 선택하세요. 화면 하단의 **사용자 액션** 메뉴에서 원하는 기능을 탭하세요.
+
+* <Cmd sid='user_activate_action' product='air' /> / <Cmd sid='after_suspend_user_reactivate_action' product='air' />: 사용자의 출입 권한을 활성화합니다. 새 사용자의 초기 활성화 또는 일시 정지된 사용자의 재활성화 시 사용하세요.
+
+* <Cmd sid='user_reactivate_action' product='air' />: 사용자의 크리덴셜을 재발급합니다.
+
+* <Cmd sid='suspend_action' product='air' />: 사용자를 일시적으로 비활성화합니다. 일시 중지된 사용자는 출입할 수 없습니다.
+
+* <Cmd sid='delete_action' product='air' />: 사용자를 시스템에서 삭제합니다.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+:::info
+
+<Cmd sid='after_suspend_user_reactivate_action' product='air' /> 옵션은 일시 중지된 사용자에게만 표시됩니다.
+
+:::
 
 ## 사용자 삭제 {#deleteUser}
 

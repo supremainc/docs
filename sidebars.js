@@ -68,18 +68,7 @@ const sidebars = {
           items: [
             'platform/biostar_air/getting-started',
             'platform/biostar_air/site-selector',
-            {
-              type: 'category',
-              label: 'BioStar Air 앱 시작하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_air/managing-sites-with-app',
-              },
-              items: [
-                'platform/biostar_air/managing-users-with-app',
-                'platform/biostar_air/manage-device-with-app',
-              ]
-            },
+            'platform/biostar_air/managing-sites-with-app',
             {
               type: 'category',
               label: '사이트 관리하기',
@@ -113,6 +102,7 @@ const sidebars = {
                     id: 'platform/biostar_air/manage-device',
                   },
                   items: [
+                    'platform/biostar_air/manage-device-with-app',
                     'platform/biostar_air/managing-registered-devices',
                     'platform/biostar_air/device-info-settings',
                     'platform/biostar_air/manage-device-group',
