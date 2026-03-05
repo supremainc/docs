@@ -69,11 +69,6 @@ const sidebars = {
             'platform/biostar_air/getting-started',
             'platform/biostar_air/site-selector',
             {
-              type: 'doc',
-              label: '관리자 초대 및 역할 관리하기',
-              id: 'platform/biostar_air/managing-administrators'
-            },
-            {
               type: 'category',
               label: 'BioStar Air 앱 시작하기',
               link: {
@@ -191,6 +186,8 @@ const sidebars = {
               },
               items: [
                 'platform/biostar_air/site-settings',
+                'platform/biostar_air/managing-administrators',
+                'platform/biostar_air/account-settings'
               ]
             },
             {
@@ -201,7 +198,6 @@ const sidebars = {
                 'platform/biostar_air/customizing-email-templates',
                 'platform/biostar_air/settings-alert-report',
                 'platform/biostar_air/custom-wiegand-card-formats',
-                'platform/biostar_air/account-settings',
                 'platform/biostar_air/configuring-reports',
                 'platform/biostar_air/reports-time-attendance-reports',
               ]
@@ -256,7 +252,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: '고급 기능',
+          label: '개발자',
           items: [
             'platform/biostar_air/integration-quickstart',
           ]
