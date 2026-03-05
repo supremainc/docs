@@ -154,7 +154,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: '출입 권한 관리',
+                  label: '출입 권한',
                   link: {
                     type: 'doc',
                     id: 'platform/biostar_air/manage-access-authority',
