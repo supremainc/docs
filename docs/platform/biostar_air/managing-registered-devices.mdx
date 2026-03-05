@@ -23,12 +23,18 @@ BioStar Air 포털에서 등록된 슈프리마 장치의 상태를 모니터링
 
 :::
 
+## 장치 목록 조회 {#viewing-device-information}
 
-## 장치 연결 상태 {#device-connection-status}
-
-화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' />를 클릭하세요. 장치 목록에서 상태 아이콘을 통해 각 장치의 연결 상태를 확인할 수 있습니다.
+장치 목록에서는 BioStar Air에 등록된 모든 장치를 확인할 수 있습니다. 각 장치의 연결 상태, 모델명, 펌웨어 버전 등 주요 정보를 한눈에 볼 수 있습니다. 또한 개별 장치를 클릭하여 세부 정보를 확인하고 설정을 수정할 수 있습니다.
 
 <Image src='/img/air/bsair-device-mng-list.png' />
+
+화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' />를 클릭하세요.
+
+
+### 장치 연결 상태 {#device-connection-status}
+
+장치 목록에서 상태 아이콘을 통해 각 장치의 연결 상태를 확인할 수 있습니다.
 
 * <StatusOK/> **녹색**: 온라인 상태로, 해당 장치는 원격으로 제어할 수 있으며, QR 인증을 수락하고 업데이트할 수 있습니다.
 
@@ -41,9 +47,9 @@ BioStar Air 포털에서 등록된 슈프리마 장치의 상태를 모니터링
 * <IcAirWarn /> **주의**: 서버와 장치 간의 동기화가 필요한 상태입니다.
 
 
-## 장치 목록 조회 {#viewing-device-information}
+### 장치 정보 {#device-information}
 
-<Cmd sid='device_submenu' product='air' />의 장치 목록의 각 열은 아래 정보를 포함하고 있습니다.
+장치 목록의 각 열은 아래 정보를 포함하고 있습니다.
 
 <Image src='/img/air/bsair-device-mng-list-info.png' />
 
@@ -60,6 +66,19 @@ BioStar Air 포털에서 등록된 슈프리마 장치의 상태를 모니터링
 * <Cmd sid='device_fw_column' product='air' />: 현재 설치된 펌웨어 버전입니다.
 
 * <Cmd sid='device_timezone_column' product='air' />: 장치에 설정된 시간대입니다.
+
+
+### 필터링 {#deviceFiltering}
+
+장치 목록의 상단 헤더 영역에서 필터링 기능을 이용할 수 있습니다. 헤더 영역의 <IcAirFilter title='Filter' /> 버튼을 클릭하면 원하는 조건을 설정할 수 있습니다.
+
+<Image src='/img/air/bsair-device-mng-list-filter.png' />
+
+:::info
+
+적용한 필터 조건을 초기화하려면 <IcAirFilter title='Filter' /> 버튼을 클릭하고 <Cmd sid='column_filter_modal_reset_btn' product='air' /> 버튼을 선택하세요.
+
+:::
 
 
 

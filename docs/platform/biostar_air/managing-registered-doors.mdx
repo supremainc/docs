@@ -15,14 +15,15 @@ BioStar Air의 출입문 관리 기능은 관리자가 출입 및 퇴출 장치 
 
 :::
 
+## 출입문 목록 조회
 
-## 등록된 출입문 확인 {#registeredDoors}
+출입문 목록에서는 BioStar Air에 등록된 모든 출입문을 확인할 수 있습니다. 각 출입문의 이름, 할당된 장치, 그룹 등 주요 정보를 확인할 수 있습니다. 또한 개별 출입문을 클릭하여 세부 정보를 확인하고 설정을 수정할 수 있습니다.
 
-출입문은 장치 등록 시 자동으로 생성됩니다. 장치 등록 시 마지막 단계에서 <Cmd en='Create a door with this device'>이 장치로 출입문 만들기</Cmd> 옵션을 선택하면 출입문이 생성됩니다.
+<Image src='/img/air/bsair-door-mng-registered-door-list.png' />
 
 등록된 출입문을 확인하려면 화면 왼쪽 사이드바에서 <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' />을 클릭하세요.
 
-<Image src='/img/air/bsair-door-mng-registered-door-list.png' />
+### 출입문 정보
 
 출입문 목록은 다음과 같은 정보를 제공합니다.
 
@@ -34,41 +35,53 @@ BioStar Air의 출입문 관리 기능은 관리자가 출입 및 퇴출 장치 
 
 * <Cmd sid='door_product_column4' product='air' />: 출입문에 할당된 그룹 이름입니다.
 
-* <Cmd sid='door_product_column5' product='air' />: 출입문의 위치에 대한 설명입니다.
+* <Cmd sid='door_product_column5' product='air' />: 출입문에 대한 설명입니다.
 
-* <Cmd sid='door_product_column6' product='air' />: 통합 CCTV 기능이 지원되는 경우 연결된 카메라 정보가 표시됩니다.
+* <Cmd sid='door_product_column6' product='air' />: 출입문과 연결된 카메라 정보가 표시됩니다. <Cmd sid='door_product_column6' product='air' /> 열은 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> → <Cmd sid='site_setting_qr_reader_tab' product='air' />에서 <Cmd sid='site_setting_video_management' product='air' /> 기능을 활성화해야 표시됩니다.
+
+
+
+### 추가 기능
+
+목록에서 하나 또는 여러 개의 출입문을 선택하면 관리자는 제공하는 추가 기능으로 출입문을 관리할 수 있습니다.
+
+* <IcAirEdit width='24px' height='24px' title='Edit' />: 출입문 정보를 수정하거나 할당된 장치의 설정을 변경할 수 있습니다. 한 개의 출입문만 선택해야 이 기능을 사용할 수 있습니다. 자세한 내용은 <DocLink inner='#editingDoors' />을 참고하세요.
+
+* <IcAirRef width='24px' height='24px' title='Refresh' />: 출입문 목록을 새로고침할 수 있습니다.
+
+* <IcAirRemove width='24px' height='24px' title='Delete' />: 목록에서 선택한 출입문을 제거합니다.
+
+* <IcAirSchedule width='24px' height='24px' title='Schedule Settings' />: 출입문 열림 및 잠김 상태를 위한 스케줄을 설정합니다. 자세한 내용은 <DocLink docId='platform/biostar_air/managing-door-schedules' />를 참고하세요.
+
+* <IcAirGroup width='24px' height='24px' title='Manage Groups' />: 목록에서 선택한 출입문을 그룹으로 구성할 수 있습니다. 그룹 관리에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/managing-door-groups' />를 참고하세요.
+
+* <IcAirReport width='24px' height='24px' title='Report' />: 출입문 리포트를 생성할 수 있습니다. 리포트 생성에 대한 자세한 내용은 <DocLink inner='#generatingDoorReports' />을 참고하세요.
+
+
+### 필터링 {#deviceFiltering}
+
+출입문 목록에서는 출입문 그룹을 기준으로 필터링하여 조회할 수 있습니다. <Cmd sid='door_product_column4' product='air' /> 열의 <IcAirFilter title='Filter' /> 버튼을 클릭하고 원하는 그룹을 선택하세요. <Cmd sid='popup_ok_btn' product='air' /> 버튼을 클릭하면 선택한 그룹에 속한 출입문만 표시됩니다.
+
+<Image src='/img/air/bsair-door-mng-list-filter.png' />
 
 :::info
 
-* 출입문 목록에서 필터링 옵셥은 <Cmd sid='door_product_column4' product='air' /> 열만 제공합니다. <IcAirFilter /> 버튼을 클릭하고 원하는 조건을 설정하세요.
-
-* BioStar Air 모바일 앱에서 장치 등록에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/managing-users-with-app' />를 참고하세요.
+적용한 필터 조건을 초기화하려면 <IcAirFilter title='Filter' /> 버튼을 클릭하고 <Cmd sid='column_filter_modal_reset_btn' product='air' /> 버튼을 선택하세요.
 
 :::
 
 
-
-
-## 출입문 관리 도구 {#doorManagementTools}
-
-출입문 목록에서 하나 또는 여러 개의 출입문을 선택하면 관리자는 다음 도구를 통해 출입문을 관리할 수 있습니다.
-
-* <IcAirEdit width='24px' height='24px' />: 출입문 정보를 수정하거나 할당된 장치의 설정을 변경할 수 있습니다. 한 개의 출입문만 선택해야 이 기능을 사용할 수 있습니다. 자세한 내용은 <DocLink inner='#editingDoors' />을 참고하세요.
-
-* <IcAirRef width='24px' height='24px' />: 출입문 목록에서 선택한 출입문의 상태를 업데이트할 수 있습니다.
-
-* <IcAirRemove width='24px' height='24px' />: 출입문 목록에서 선택한 출입문을 사이트에서 제거합니다.
-
-* <IcAirSchedule width='24px' height='24px' />: 출입문 열림 및 잠김 상태를 위한 스케줄을 설정합니다. 자세한 내용은 <DocLink docId='platform/biostar_air/managing-door-schedules' />를 참고하세요.
-
-* <IcAirGroup width='24px' height='24px' />: 출입문 목록에서 선택한 출입문을 그룹으로 구성할 수 있습니다.
-
-* <IcAirReport width='24px' height='24px' />: 출입문 리포트를 생성할 수 있습니다.
-
-
 ## 출입문 추가 {#addingDoor}
 
-새 출입문을 추가하려면 다음 단계를 따르세요.
+### 장치와 함께 추가
+
+모바일 앱에서 장치 등록 시 마지막 단계에서 <Cmd en='Create a door with this device'>이 장치로 출입문 만들기</Cmd> 옵션을 선택하면 출입문을 생성할 수 있습니다. 모바일 앱으로 장치를 등록하는 방법에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/manage-device-with-app' />를 참고하세요.
+
+<Image src='/img/air/bsair-door-mng-register-device-as-door.png' />
+
+### 웹 포털에서 추가
+
+BioStar Air 포털에서 새 출입문을 추가하려면 다음 단계를 따르세요.
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' />을 클릭하세요.
 
@@ -79,8 +92,6 @@ BioStar Air의 출입문 관리 기능은 관리자가 출입 및 퇴출 장치 
    <Image src='/img/air/bsair-door-mng-registered-door-add.png' />
 
 1. <Cmd sid='door_product_column2' product='air' />와 <Cmd sid='door_product_column3' product='air' />를 선택하세요.
-
-1. 설치한 카메라가 있다면 <Cmd sid='door_product_column6' product='air' />를 할당하세요.
 
 1. 출입문 설정을 저장하고 추가하려면 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
 
@@ -113,13 +124,19 @@ BioStar Air의 출입문 관리 기능은 관리자가 출입 및 퇴출 장치 
 
    * <Cmd sid='door_product_column3' product='air' />: 출입문에서 나가는 사용자를 인증하는 장치를 선택하세요.
 
-   * <Cmd sid='door_product_column6' product='air' />: 통합 CCTV 기능이 지원되는 경우 이벤트 로그를 위한 CCTV 카메라를 연결할 수 있습니다.
+   * <Cmd sid='door_product_column6' product='air' />: 이벤트 로그를 위한 CCTV 카메라를 연결할 수 있습니다.
+
+   :::note
+
+   카메라는 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> → <Cmd sid='site_setting_qr_reader_tab' product='air' />에서 <Cmd sid='site_setting_video_management' product='air' /> 기능을 활성화해야 사용할 수 있습니다.
+
+   :::
 
 1. <Cmd sid='door_auxiliary_device' product='air' /> 섹션에서 릴레이 장치를 설정하세요.
 
    * <Cmd sid='add_doors.door_relay' product='air' />: 출입문 잠금을 제어하는 릴레이 장치를 선택하세요.
 
-   * <Cmd sid='add_doors.relay_ignoring_door_sensor' product='air' />: 문제 해결을 위해 이 옵션을 활성화하세요.
+   * <Cmd sid='add_doors.relay_ignoring_door_sensor' product='air' />: 출입문 센서를 무시하도록 릴레이를 설정할 수 있습니다.
 
 1. 추가 설정을 구성하세요.
 
@@ -140,33 +157,6 @@ BioStar Air의 출입문 관리 기능은 관리자가 출입 및 퇴출 장치 
 * SIO2 보안 모듈 구성에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/configuring-the-sio2-secure-module' />를 참고하세요.
 
 :::
-
-
-## 모바일 기기에서 출입문 관리 {#managingDoorsOnMobile}
-
-관리자는 BioStar Air 모바일 앱에서 직접 출입문을 관리할 수 있습니다.
-
-1. 모바일 기기에서 BioStar Air 앱을 실행하고 로그인하세요.
-
-1. 초기 화면에서 하단의 <Cmd sid='site_setting_tab_management' product='air' />를 탭하세요.
-
-1. <Cmd sid='door_label' product='air' /> 카드를 탭하세요.
-
-1. 등록된 모든 출입문을 확인하세요.
-
-### 출입문 추가
-
-새 출입문을 추가하려면 오른쪽 상단의 <IcAdd /> 버튼을 탭하고 필요한 세부정보를 입력하세요.
-
-### 출입문 수정
-
-출입문 목록에서 출입문을 탭하여 세부 정보를 수정하거나 다음 설정을 구성할 수 있습니다.
-
-* 입구 및 출구 장치 할당
-
-* 릴레이 설정
-
-* 퇴출 버튼 및 출입문 센서 구성
 
 
 ## 출입문 리포트 생성 {#generatingDoorReports}
@@ -194,3 +184,29 @@ BioStar Air의 출입문 관리 기능은 관리자가 출입 및 퇴출 장치 
 <Cmd sid='report_form_text_title' product='air' />에서 생성된 리포트를 검색하거나, 수정, 다운로드, 삭제할 수 있습니다.
 
 :::
+
+## 모바일 앱에서 출입문 관리 {#managingDoorsOnMobile}
+
+관리자는 BioStar Air 모바일 앱에서 직접 출입문을 관리할 수 있습니다.
+
+1. 모바일 기기에서 BioStar Air 앱을 실행하고 로그인하세요.
+
+1. 초기 화면에서 하단의 <Cmd sid='site_setting_tab_management' product='air' />를 탭하세요.
+
+1. <Cmd sid='door_label' product='air' /> 카드를 탭하세요.
+
+1. 등록된 모든 출입문을 확인하세요.
+
+### 출입문 추가
+
+새 출입문을 추가하려면 오른쪽 상단의 <IcAdd /> 버튼을 탭하고 필요한 세부정보를 입력하세요.
+
+### 출입문 수정
+
+출입문 목록에서 출입문을 탭하여 세부 정보를 수정하거나 다음 설정을 구성할 수 있습니다.
+
+* 입구 및 출구 장치 할당
+
+* 릴레이 설정
+
+* 퇴출 버튼 및 출입문 센서 구성

@@ -129,7 +129,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: '출입문 관리',
+                  label: '출입문',
                   link: {
                     type: 'doc',
                     id: 'platform/biostar_air/manage-door',
