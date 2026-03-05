@@ -199,6 +199,7 @@ const sidebars = {
               items: [
                 'platform/biostar_air/daylight-saving-time',
                 'platform/biostar_air/customizing-email-templates',
+                'platform/biostar_air/settings-alert-report',
                 'platform/biostar_air/custom-wiegand-card-formats',
                 'platform/biostar_air/account-settings',
                 'platform/biostar_air/configuring-reports',
