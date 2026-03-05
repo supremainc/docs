@@ -140,7 +140,18 @@ const sidebars = {
                     'platform/biostar_air/managing-door-schedules',
                   ]
                 },
-                'platform/biostar_air/manage-elevator',
+                {
+                  type: 'category',
+                  label: '엘리베이터',
+                  link: {
+                    type: 'doc',
+                    id: 'platform/biostar_air/manage-elevator'
+                  },
+                  items: [
+                    'platform/biostar_air/elevator-add-edit-delete',
+                    'platform/biostar_air/elevator-set-floor-access',
+                  ]
+                },
                 {
                   type: 'category',
                   label: '출입 권한 관리',
