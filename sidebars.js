@@ -106,7 +106,6 @@ const sidebars = {
                     'platform/biostar_air/managing-registered-devices',
                     'platform/biostar_air/device-info-settings',
                     'platform/biostar_air/manage-device-group',
-                    'platform/biostar_air/configuring-ta',
                     'platform/biostar_air/configuring-the-airfob-patch-and-tag',
                     'platform/biostar_air/how-to-upgrade-firmware',
                     'platform/biostar_air/biometric-readers-and-credentials',
@@ -175,7 +174,10 @@ const sidebars = {
                 id: 'platform/biostar_air/settings',
               },
               items: [
-                'platform/biostar_air/site-settings',
+                'platform/biostar_air/site-basic-settings',
+                'platform/biostar_air/site-advanced-settings',
+                'platform/biostar_air/site-security-settings',
+                'platform/biostar_air/site-additional-settings',
                 'platform/biostar_air/managing-administrators',
                 'platform/biostar_air/account-settings'
               ]
@@ -183,13 +185,18 @@ const sidebars = {
             {
               type: 'category',
               label: '서비스 구성하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/service-configuration',
+              },
               items: [
                 'platform/biostar_air/daylight-saving-time',
                 'platform/biostar_air/customizing-email-templates',
                 'platform/biostar_air/settings-alert-report',
                 'platform/biostar_air/custom-wiegand-card-formats',
-                'platform/biostar_air/configuring-reports',
+                'platform/biostar_air/configuring-ta',
                 'platform/biostar_air/reports-time-attendance-reports',
+                'platform/biostar_air/configuring-reports',
               ]
             },
           ]
