@@ -65,6 +65,10 @@ const sidebars = {
         {
           type: 'category',
           label: '사이트 관리자',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_air/site-admin-guide',
+          },
           items: [
             'platform/biostar_air/getting-started',
             'platform/biostar_air/site-selector',
@@ -203,17 +207,17 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: '파트너 관리자 & 설치',
+          label: '파트너 및 설치 관리자',
           link: {
             type: 'doc',
-            id: 'platform/biostar_air/intro-to-partner-portal',
+            id: 'platform/biostar_air/partner-install-guide',
           },
           items: [
             'platform/biostar_air/biostar-air-partner-portal-detailed-use',
             'platform/biostar_air/federated-sites',
             {
               type: 'category',
-              label: '하드웨어 설치',
+              label: '하드웨어 설치하기',
               link: {
                 type: 'doc',
                 id: 'platform/biostar_air/hardware-setup',
@@ -231,27 +235,27 @@ const sidebars = {
         {
           type: 'category',
           label: '인증된 사용자',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_air/credential-users-guide',
+          },
           items: [
-            {
-              type: 'category',
-              label: '모바일 크리덴셜 사용하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_air/suprema-pass-app-overview'
-              },
-              items: [
-                'platform/biostar_air/opening-doors-with-mobile-credentials',
-                'platform/biostar_air/suprema-pass-app-advanced-features',
-                'platform/biostar_air/suprema-pass-app-sensitivity-settings',
-              ]
-            },
+            'platform/biostar_air/opening-doors-with-mobile-credentials',
+            'platform/biostar_air/suprema-pass-app-advanced-features',
+            'platform/biostar_air/suprema-pass-app-sensitivity-settings',
           ]
         },
         {
           type: 'category',
           label: '개발자',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_air/developer-guide',
+          },
           items: [
             'platform/biostar_air/integration-quickstart',
+            'platform/biostar_air/api-authentication',
+            'platform/biostar_air/api-user-management',
           ]
         },
         // {
