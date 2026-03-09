@@ -65,26 +65,14 @@ const sidebars = {
         {
           type: 'category',
           label: '사이트 관리자',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_air/site-admin-guide',
+          },
           items: [
             'platform/biostar_air/getting-started',
             'platform/biostar_air/site-selector',
-            {
-              type: 'doc',
-              label: '관리자 초대 및 역할 관리하기',
-              id: 'platform/biostar_air/managing-administrators'
-            },
-            {
-              type: 'category',
-              label: 'BioStar Air 앱 시작하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_air/managing-sites-with-app',
-              },
-              items: [
-                'platform/biostar_air/managing-users-with-app',
-                'platform/biostar_air/manage-device-with-app',
-              ]
-            },
+            'platform/biostar_air/managing-sites-with-app',
             {
               type: 'category',
               label: '사이트 관리하기',
@@ -118,10 +106,10 @@ const sidebars = {
                     id: 'platform/biostar_air/manage-device',
                   },
                   items: [
+                    'platform/biostar_air/manage-device-with-app',
                     'platform/biostar_air/managing-registered-devices',
                     'platform/biostar_air/device-info-settings',
                     'platform/biostar_air/manage-device-group',
-                    'platform/biostar_air/configuring-ta',
                     'platform/biostar_air/configuring-the-airfob-patch-and-tag',
                     'platform/biostar_air/how-to-upgrade-firmware',
                     'platform/biostar_air/biometric-readers-and-credentials',
@@ -190,36 +178,46 @@ const sidebars = {
                 id: 'platform/biostar_air/settings',
               },
               items: [
-                'platform/biostar_air/site-settings',
+                'platform/biostar_air/site-basic-settings',
+                'platform/biostar_air/site-advanced-settings',
+                'platform/biostar_air/site-security-settings',
+                'platform/biostar_air/site-additional-settings',
+                'platform/biostar_air/managing-administrators',
+                'platform/biostar_air/account-settings'
               ]
             },
             {
               type: 'category',
               label: '서비스 구성하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/service-configuration',
+              },
               items: [
                 'platform/biostar_air/daylight-saving-time',
                 'platform/biostar_air/customizing-email-templates',
+                'platform/biostar_air/settings-alert-report',
                 'platform/biostar_air/custom-wiegand-card-formats',
-                'platform/biostar_air/account-settings',
-                'platform/biostar_air/configuring-reports',
+                'platform/biostar_air/configuring-ta',
                 'platform/biostar_air/reports-time-attendance-reports',
+                'platform/biostar_air/configuring-reports',
               ]
             },
           ]
         },
         {
           type: 'category',
-          label: '파트너 관리자 & 설치',
+          label: '파트너 및 설치 관리자',
           link: {
             type: 'doc',
-            id: 'platform/biostar_air/intro-to-partner-portal',
+            id: 'platform/biostar_air/partner-install-guide',
           },
           items: [
             'platform/biostar_air/biostar-air-partner-portal-detailed-use',
             'platform/biostar_air/federated-sites',
             {
               type: 'category',
-              label: '하드웨어 설치',
+              label: '하드웨어 설치하기',
               link: {
                 type: 'doc',
                 id: 'platform/biostar_air/hardware-setup',
@@ -237,27 +235,27 @@ const sidebars = {
         {
           type: 'category',
           label: '인증된 사용자',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_air/credential-users-guide',
+          },
           items: [
-            {
-              type: 'category',
-              label: '모바일 크리덴셜 사용하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_air/suprema-pass-app-overview'
-              },
-              items: [
-                'platform/biostar_air/opening-doors-with-mobile-credentials',
-                'platform/biostar_air/suprema-pass-app-advanced-features',
-                'platform/biostar_air/suprema-pass-app-sensitivity-settings',
-              ]
-            },
+            'platform/biostar_air/opening-doors-with-mobile-credentials',
+            'platform/biostar_air/suprema-pass-app-advanced-features',
+            'platform/biostar_air/suprema-pass-app-sensitivity-settings',
           ]
         },
         {
           type: 'category',
-          label: '고급 기능',
+          label: '개발자',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_air/developer-guide',
+          },
           items: [
             'platform/biostar_air/integration-quickstart',
+            'platform/biostar_air/api-authentication',
+            'platform/biostar_air/api-user-management',
           ]
         },
         // {
