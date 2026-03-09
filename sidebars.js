@@ -58,8 +58,7 @@ const sidebars = {
           },
           items: [
             'platform/biostar_air/access-control-hardware-compatibility',
-            'platform/biostar_air/security-overview',
-            'platform/biostar_air/biostar-air-migration',
+            'platform/biostar_air/security-overview'
           ]
         },
         {
