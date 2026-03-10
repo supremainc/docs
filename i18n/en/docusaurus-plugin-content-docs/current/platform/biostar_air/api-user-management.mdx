@@ -1,0 +1,185 @@
+---
+id: api-user-management
+title: Using the User Management API
+description: This guide explains how to create, update, and deactivate users using the BioStar Air API, outlines the recommended integration scope, and includes Python sample code.
+keywords:
+  - User Management
+  - API
+  - BioStar Air
+  - Python sample code
+---
+
+After obtaining an authentication token, you can manage the user lifecycle through the API. Use endpoints to retrieve, create, update, and deactivate users to automate user management on your BioStar Air site.
+
+## Recommended API integration scope {#recommended-integration-scope}
+
+Limit your API integration to the scope below whenever possible.
+
+* User lifecycle management (create/update/delete)
+
+* Credential management (mobile, RF card, biometric)
+
+Allow administrators to continue using the existing BioStar Air web and mobile management apps.
+
+* Access Level
+
+* Schedules
+
+* Door and device settings
+
+* Site settings
+
+## User management API calls {#user-management-api-calls}
+
+After logging in, use the following endpoints to manage users.
+
+* `getUsers`
+
+* `createUser`
+
+* `updateUser`
+
+* `suspendUsers`
+
+Always include a Bearer token in the Authorization header.
+
+:::note
+
+To activate a user, assign at least one credential type.
+
+> e.g., RF card, mobile, LinkPass
+
+:::
+
+## Sample application {#sample-application}
+
+The following sample code is a Python app that uploads a CSV file via the API and bulk deactivates users.
+
+```python title='Python'
+import requests
+import csv
+import getpass
+from pathlib import Path
+
+def select_server():
+    servers = {
+        "1": ("Demo", "https://demo-afs-api.airfob.com/v1"),
+        "2": ("Global", "https://a-afs-api.airfob.com/v1"),
+        "3": ("EU", "https://e-afs-api.airfob.com/v1")
+    }
+
+    print("Please select a server:")
+    for key, (name, _) in servers.items():
+        print(f"{key}: {name}")
+
+    choice = input("Enter server number: ").strip()
+    return servers.get(choice, (None, None))[1]
+
+def login(base_url, username, password):
+    url = f"{base_url}/login"
+    payload = {"username": username, "password": password}
+    response = requests.post(url, json=payload)
+    response.raise_for_status()
+    data = response.json()
+    token = data.get("access_token")
+    if not token:
+        raise ValueError("Login succeeded but no access_token returned.")
+    print("✅ Login successful.")
+    return token
+
+def login_to_account(base_url, token, account_id):
+    url = f"{base_url}/login/{account_id}"
+    headers = {"Authorization": f"Bearer {token}"}
+    response = requests.post(url, headers=headers)
+    response.raise_for_status()
+    new_token = response.json().get("access_token")
+    if new_token:
+        print(f"✅ Switched to account ID: {account_id}")
+        return new_token
+    return token
+
+def get_accounts(base_url, token):
+    url = f"{base_url}/accounts/self"
+    headers = {"Authorization": f"Bearer {token}"}
+    response = requests.get(url, headers=headers)
+    response.raise_for_status()
+    accounts = response.json().get("accounts", [])
+    return [{"id": acc["id"], "name": acc["site"]["name"]} for acc in accounts]
+
+def suspend_users_from_csv(base_url, csv_path, token):
+    if not Path(csv_path).exists():
+        print(f"❌ File not found: {csv_path}")
+        return
+
+    headers = {"Authorization": f"Bearer {token}"}
+
+    with open(csv_path, newline='', encoding='utf-8-sig') as f:
+        reader = csv.DictReader(f)
+
+        # Normalize headers
+        reader.fieldnames = [field.strip().lower() for field in reader.fieldnames]
+        if 'email' not in reader.fieldnames:
+            print("❌ Missing required 'email' column in CSV.")
+            return
+
+        for row in reader:
+            email = row.get("email")
+            if not email:
+                print("⚠️ Skipping row with missing email.")
+                continue
+
+            # Search user
+            search_url = f"{base_url}/users/search"
+            payload = {"filters": [{"field": "email", "equals": email}]}
+            search_resp = requests.post(search_url, headers=headers, json=payload)
+            if search_resp.status_code != 200:
+                print(f"❌ Failed to search user {email}: {search_resp.text}")
+                continue
+
+            users = search_resp.json().get("users", [])
+            if not users:
+                print(f"❌ No user found with email: {email}")
+                continue
+
+            user_id = users[0]["id"]
+
+            # Suspend user
+            suspend_url = f"{base_url}/users/suspend"
+            suspend_payload = {
+                "ids": [user_id],
+                "certify_by": "none",
+                "use_site_template": True
+            }
+            suspend_resp = requests.post(suspend_url, headers=headers, json=suspend_payload)
+            if suspend_resp.status_code == 200:
+                print(f"✅ Suspended user: {email}")
+            else:
+                print(f"❌ Failed to suspend user {email}: {suspend_resp.text}")
+
+def main():
+    base_url = select_server()
+    if not base_url:
+        print("❌ Invalid selection. Exiting.")
+        return
+
+    print("\n🔑 BioStar Air Login")
+    username = input("Email: ")
+    password = getpass.getpass("Password: ")
+
+    token = login(base_url, username, password)
+    accounts = get_accounts(base_url, token)
+
+    print("\n🌐 Available Sites:")
+    for i, acc in enumerate(accounts):
+        print(f"{i}: {acc['name']} (ID: {acc['id']})")
+
+    selected = int(input("\nSelect site number to log into: "))
+    account_id = accounts[selected]["id"]
+    token = login_to_account(base_url, token, account_id)
+
+    csv_path = input("Enter path to CSV file with user emails: ").strip()
+    suspend_users_from_csv(base_url, csv_path, token)
+
+if __name__ == "__main__":
+    main()
+```

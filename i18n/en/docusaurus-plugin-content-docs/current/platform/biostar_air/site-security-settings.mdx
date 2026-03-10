@@ -1,0 +1,39 @@
+---
+id: site-security-settings
+title: Set Up Security
+description: Learn how to enhance the security of the BioStar Air site by locking administrator accounts, enabling 2-factor authentication, enforcing password policies, and setting mobile credential validity periods.
+keywords:
+  - Site Security
+  - Security Settings
+---
+
+Configure security policies properly to prevent unauthorized access and keep the site secure.
+You can strengthen site security by locking inactive administrator accounts, enabling email-based 2-factor authentication, and setting password change intervals.
+
+Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar. Use the <Cmd sid='site_setting_tab_security' product='air' /> tab to configure site security settings.
+
+<Image src='/img/air/bsair-settings-site-security.png' />
+
+* <Cmd sid='site_security_input1' product='air' />: Lock administrator accounts that have been inactive for more than 90 days.
+
+* <Cmd sid='site_security_input2' product='air' />: Require email two-factor authentication each time an administrator signs in.
+
+* <Cmd sid='site_security_input3' product='air' />: Grant 'full access' to new users by default when no other access rights are selected. If this setting is disabled, assign access levels manually. Temporary users are not granted full access automatically even if the setting above is enabled.
+
+   :::note
+
+   For more information about access levels, see <DocLink docId='platform/biostar_air/manage-access-level' />.
+
+   :::
+
+* <Cmd sid='site_security_input4' product='air' />: Require password reset every 30, 60, or 90 days.
+
+* <Cmd sid='site_security_input6' product='air' />: Set how long mobile credentials remain valid when the device is offline.
+
+   :::note
+
+  * The default is 5 minutes and can be set from 1 minute to 8 days.
+
+  * This helps balance security and convenience, especially at remote sites with limited network connectivity.
+
+   :::
