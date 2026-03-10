@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-getting-started-mdx-bfd.json
-var site_docs_platform_biostar_air_getting_started_mdx_bfd_namespaceObject = JSON.parse('{"id":"platform/biostar_air/getting-started","title":"시작하기","description":"관리자 추가, 장치 등록, 출입문 생성, 접근 권한 구성, 사용자 관리 등을 통해 BioStar Air 사이트 설정 방법을 단계별로 안내합니다.","source":"@site/docs/platform/biostar_air/getting-started.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/getting-started","permalink":"/docs/es/platform/biostar_air/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"시작하기","description":"관리자 추가, 장치 등록, 출입문 생성, 접근 권한 구성, 사용자 관리 등을 통해 BioStar Air 사이트 설정 방법을 단계별로 안내합니다.","keywords":["BioStar Air Portal","설정","가이드"],"isTranslationMissing":true},"sidebar":"biostar_air","previous":{"title":"사이트 관리자","permalink":"/docs/es/platform/biostar_air/site-admin-guide"},"next":{"title":"사이트 선택(Site Selector)","permalink":"/docs/es/platform/biostar_air/site-selector"}}')
+var site_docs_platform_biostar_air_getting_started_mdx_bfd_namespaceObject = JSON.parse('{"id":"platform/biostar_air/getting-started","title":"시작하기","description":"관리자 추가, 장치 등록, 출입문 생성, 접근 권한 구성, 사용자 관리 등을 통해 BioStar Air 사이트 설정 방법을 단계별로 안내합니다.","source":"@site/docs/platform/biostar_air/getting-started.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/getting-started","permalink":"/docs/platform/biostar_air/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"시작하기","description":"관리자 추가, 장치 등록, 출입문 생성, 접근 권한 구성, 사용자 관리 등을 통해 BioStar Air 사이트 설정 방법을 단계별로 안내합니다.","keywords":["BioStar Air Portal","설정","가이드"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"사이트 관리자","permalink":"/docs/platform/biostar_air/site-admin-guide"},"next":{"title":"사이트 선택(Site Selector)","permalink":"/docs/platform/biostar_air/site-selector"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -32,7 +32,7 @@ const frontMatter = {
 		'설정',
 		'가이드'
 	],
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = undefined;
 
@@ -523,7 +523,7 @@ function _createMdxContent(props) {
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
               children: ["출입 레벨 설정을 완료하면 ", (0,jsx_runtime.jsx)(Cmd, {
-                sid: "add_btn",
+                sid: "save_btn",
                 product: "air"
               }), " 버튼을 클릭하세요."]
             }), "\n"]
@@ -601,7 +601,7 @@ function _createMdxContent(props) {
               }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "user_detail",
                 product: "air"
-              }), " 섹션에서 사용자의 ID, 이름, 이메일 등을 입력하세요."]
+              }), " 섹션에서 사용자의 ID, 이름 등을 입력하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-user-group-mng-add-user-details.png"
             }), "\n"]

@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["70103"], {
-49796: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["55183"], {
+63979: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,30 +9,30 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_air_getting_started_mdx_b97_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_platform_biostar_air_getting_started_mdx_bfd_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-air-getting-started-mdx-b97.json
-var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_air_getting_started_mdx_b97_namespaceObject = JSON.parse('{"id":"platform/biostar_air/getting-started","title":"Getting Started","description":"This guide walks you through setting up a BioStar Air site step by step, from adding administrators and registering devices to creating doors, configuring access rights, and managing users.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/getting-started.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/getting-started","permalink":"/docs/en/platform/biostar_air/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"Getting Started","description":"This guide walks you through setting up a BioStar Air site step by step, from adding administrators and registering devices to creating doors, configuring access rights, and managing users.","keywords":["BioStar Air Portal","Settings","Guide"],"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"Site Administrator","permalink":"/docs/en/platform/biostar_air/site-admin-guide"},"next":{"title":"Site Selector","permalink":"/docs/en/platform/biostar_air/site-selector"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-air-getting-started-mdx-bfd.json
+var site_docs_platform_biostar_air_getting_started_mdx_bfd_namespaceObject = JSON.parse('{"id":"platform/biostar_air/getting-started","title":"시작하기","description":"관리자 추가, 장치 등록, 출입문 생성, 접근 권한 구성, 사용자 관리 등을 통해 BioStar Air 사이트 설정 방법을 단계별로 안내합니다.","source":"@site/docs/platform/biostar_air/getting-started.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/getting-started","permalink":"/docs/ja/platform/biostar_air/getting-started","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/getting-started.mdx","tags":[],"version":"current","frontMatter":{"id":"getting-started","title":"시작하기","description":"관리자 추가, 장치 등록, 출입문 생성, 접근 권한 구성, 사용자 관리 등을 통해 BioStar Air 사이트 설정 방법을 단계별로 안내합니다.","keywords":["BioStar Air Portal","설정","가이드"],"isTranslationMissing":true},"sidebar":"biostar_air","previous":{"title":"사이트 관리자","permalink":"/docs/ja/platform/biostar_air/site-admin-guide"},"next":{"title":"사이트 선택(Site Selector)","permalink":"/docs/ja/platform/biostar_air/site-selector"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/getting-started.mdx
+;// CONCATENATED MODULE: ./docs/platform/biostar_air/getting-started.mdx
 
 
 const frontMatter = {
 	id: 'getting-started',
-	title: 'Getting Started',
-	description: 'This guide walks you through setting up a BioStar Air site step by step, from adding administrators and registering devices to creating doors, configuring access rights, and managing users.',
+	title: '시작하기',
+	description: '관리자 추가, 장치 등록, 출입문 생성, 접근 권한 구성, 사용자 관리 등을 통해 BioStar Air 사이트 설정 방법을 단계별로 안내합니다.',
 	keywords: [
 		'BioStar Air Portal',
-		'Settings',
-		'Guide'
+		'설정',
+		'가이드'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -43,51 +43,51 @@ const assets = {
 
 
 const toc = [{
-  "value": "Access the portal",
+  "value": "포털 접속",
   "id": "navigating-to-the-feature",
   "level": 2
 }, {
-  "value": "Review the dashboard",
+  "value": "대시보드 살펴보기",
   "id": "dashboard-overview",
   "level": 2
 }, {
-  "value": "Site setup guide",
+  "value": "사이트 설정 단계별 안내",
   "id": "step-by-step-guide",
   "level": 2
 }, {
-  "value": "Add administrators",
+  "value": "관리자 추가",
   "id": "adding-administrators",
   "level": 3
 }, {
-  "value": "Register devices",
+  "value": "장치 등록",
   "id": "registering-devices",
   "level": 3
 }, {
-  "value": "Create and manage doors",
+  "value": "출입문 생성 및 관리",
   "id": "creating-and-managing-doors",
   "level": 3
 }, {
-  "value": "Categorize doors into groups",
+  "value": "출입문을 그룹으로 분류",
   "id": "categorizing-doors-into-groups",
   "level": 3
 }, {
-  "value": "Configure access rights",
+  "value": "출입 권한 설정",
   "id": "configuring-access-rights",
   "level": 3
 }, {
-  "value": "Set up holiday groups",
+  "value": "휴일 그룹 설정",
   "id": "setting-up-holiday-groups",
   "level": 4
 }, {
-  "value": "Create schedules",
+  "value": "스케줄 만들기",
   "id": "creating-schedules",
   "level": 4
 }, {
-  "value": "Define access levels",
+  "value": "출입 레벨 설정",
   "id": "defining-access-levels",
   "level": 4
 }, {
-  "value": "Create user groups and add users",
+  "value": "사용자 그룹 만들기 및 사용자 추가",
   "id": "creating-user-groups-and-adding-users",
   "level": 3
 }];
@@ -113,36 +113,36 @@ function _createMdxContent(props) {
   if (!Steps) _missingMdxReference("Steps", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "The BioStar Air portal provides a unified interface across the web and mobile apps, delivering a consistent user experience. Through the BioStar Air portal, administrators can manage access control settings, monitor site usage, and seamlessly configure users and devices."
+      children: "BioStar Air 포털은 웹과 모바일 앱 전반에 걸쳐 통합된 인터페이스를 제공하여 일관된 사용자 경험을 제공합니다. BioStar Air 포털을 통해 관리자는 출입 통제 설정을 관리하고, 사이트 사용량을 모니터링하고, 사용자와 기기를 원활하게 구성할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "navigating-to-the-feature",
-      children: "Access the portal"
+      children: "포털 접속"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Open a web browser and go to ", (0,jsx_runtime.jsx)(_components.a, {
+      children: ["BioStar Air 포털에 접속하려면 웹 브라우저를 열고 ", (0,jsx_runtime.jsx)(_components.a, {
         href: "https://admin.biostarair.com",
-        children: "https://admin.biostarair.com"
-      }), " to access the BioStar Air portal. When the login page appears, select ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Global Server"
-      }), " or ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "EU Server"
-      }), " based on your location."]
+        children: "admin.biostarair.com"
+      }), "으로 이동하세요. 로그인 페이지가 나타나면 사용자의 현재 위치에 따라 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "글로벌 서버"
+      }), " 또는 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "EU 서버"
+      }), "를 선택하세요."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/air/bsair-gettingstarted-login.png"
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["You cannot create an account by signing up. The system installer or an existing administrator must invite you to the site. For more information on managing administrator accounts and invitations, see ", (0,jsx_runtime.jsx)(DocLink, {
+        children: ["회원 가입을 통해 계정을 생성할 수 없습니다. 시스템 설치 담당자 또는 기존 관리자가 사이트로 초대해야 합니다. 관리자 계정 관리 및 초대에 대한 자세한 내용은 ", (0,jsx_runtime.jsx)(DocLink, {
           docId: "platform/biostar_air/managing-administrators"
-        }), "."]
+        }), "를 참고하세요."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "dashboard-overview",
-      children: "Review the dashboard"
+      children: "대시보드 살펴보기"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["After logging in, the ", (0,jsx_runtime.jsx)(Cmd, {
+      children: ["로그인하면 사이트의 주요 정보를 확인할 수 있는 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "dashboard_menu",
         product: "air"
-      }), " appears and shows key site information."]
+      }), "가 표시됩니다."]
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/air/bsair-gettingstarted-dashboard.png"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
@@ -151,496 +151,496 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "user_tagged_today",
             product: "air"
-          }), ": View the number of users who accessed the site today."]
+          }), ": 오늘 사이트에 접속한 사용자 수를 확인할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "users_card",
             product: "air"
-          }), ": View the total number of registered and active users. Click the card to open ", (0,jsx_runtime.jsx)(Cmd, {
+          }), ": 등록 및 활성화된 사용자의 총 수를 확인할 수 있습니다. 카드를 클릭하면 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user_menu",
             product: "air"
-          }), "."]
+          }), " 메뉴로 이동할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "devices_card",
             product: "air"
-          }), ": View the number of registered devices. Click the card to open ", (0,jsx_runtime.jsx)(Cmd, {
+          }), ": 등록된 장치 수를 확인할 수 있습니다. 카드를 클릭하면 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "device_menu",
             product: "air"
-          }), "."]
+          }), " 메뉴로 이동할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "credit_status_card",
             product: "air"
-          }), ": View the remaining account credits. Click the card to open ", (0,jsx_runtime.jsx)(Cmd, {
+          }), ": 계정 크레딧의 잔여 잔액을 확인할 수 있습니다. 카드를 클릭하면 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "settings_menu",
             product: "air"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "credit_center_submenu",
             product: "air"
-          }), "."]
+          }), " 메뉴로 이동할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "dashboard_usage_header",
             product: "air"
-          }), ": Sort usage by device group, frequency (daily, weekly, monthly), or custom date range."]
+          }), ": 장치 그룹, 빈도(일일, 주간, 월간) 또는 원하는 날짜를 지정해 범위별로 정렬할 수 있습니다."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "recent_actions_header",
             product: "air"
-          }), ": Shows an activity log of administrator actions such as sign-ins, device updates, and user creation."]
+          }), ": 로그인, 장치 업데이트, 사용자 생성 등 관리자가 수행한 작업에 대한 활동 로그를 표시합니다."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "step-by-step-guide",
-      children: "Site setup guide"
+      children: "사이트 설정 단계별 안내"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Follow these instructions to set up a new site."
+      children: "다음 안내에 따라 새로운 사이트를 설정하세요."
     }), "\n", (0,jsx_runtime.jsxs)(Steps, {
       children: [(0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
           id: "adding-administrators",
-          children: "Add administrators"
+          children: "관리자 추가"
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "Invite administrators."
+          children: "관리자를 초대하세요."
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "settings_menu",
                 product: "air"
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "admin_submenu",
                 product: "air"
-              }), " in the left sidebar."]
+              }), "를 클릭하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-setting-admin.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "btn_invite",
                 product: "air"
-              }), " at the top right of the screen."]
+              }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["When the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "admin_invitation_title",
                 product: "air"
-              }), " window appears, enter the administrator’s email address and assign a role."]
+              }), " 창이 나타나면 관리자의 이메일 주소를 입력하고 역할을 부여하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-setting-admin-invite.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "send_btn",
                 product: "air"
-              }), "."]
+              }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n"]
         }), (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["Site administrators can manage the site, and authenticated users can only access the site through the ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "Suprema Pass"
-            }), " app."]
+            children: ["사이트 관리자는 사이트를 관리할 수 있으며, 인증된 사용자는 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "슈프리마 패스"
+            }), " 앱을 통해서만 접근할 수 있습니다."]
           })
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
           id: "registering-devices",
-          children: "Register devices"
+          children: "장치 등록"
         }), (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Review registered devices or add new ones. Click ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["등록된 장치를 확인하거나 장치를 추가하세요. 화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "device_menu",
             product: "air"
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "device_submenu",
             product: "air"
-          }), " in the left sidebar."]
+          }), "를 클릭하세요."]
         }), (0,jsx_runtime.jsx)(Image, {
           src: "/img/air/bsair-gettingstarted-device-mng.png"
         }), (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "If the device is not registered, ask another administrator to register it on-site with the BioStar Air mobile app."
+              children: "장치를 등록하지 않았다면, 다른 관리자가 BioStar Air 모바일 앱을 사용하여 현장에서 등록해야 합니다."
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["In ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "device_submenu",
                 product: "air"
-              }), ", delete devices, update firmware, and manage device groups."]
+              }), "에서는 장치 삭제, 펌웨어 업데이트 및 장치 그룹을 관리할 수 있습니다."]
             }), "\n"]
           }), "\n"]
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
           id: "creating-and-managing-doors",
-          children: "Create and manage doors"
+          children: "출입문 생성 및 관리"
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "Add doors and assign devices."
+          children: "출입문을 추가하고 장치를 할당하세요."
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "door_menu",
                 product: "air"
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "door_submenu",
                 product: "air"
-              }), " in the left sidebar."]
+              }), "을 클릭하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-door-mng.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["If no doors are listed, click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["출입문이 없으면 화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "doors_group_label_add_device",
                 product: "air"
-              }), " in the upper-right corner."]
+              }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["When the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "add_doors.title",
                 product: "air"
-              }), " panel appears, enter a name and description."]
+              }), " 패널이 나타나면 이름과 설명을 입력하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-door-mng-add.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Assign registered devices to ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["등록된 장치를 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "door_product_column2",
                 product: "air"
-              }), " and ", (0,jsx_runtime.jsx)(Cmd, {
+              }), " 및 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "door_product_column3",
                 product: "air"
-              }), "."]
+              }), "에 할당하세요."]
             }), "\n"]
           }), "\n"]
         }), (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["In ", (0,jsx_runtime.jsx)(Cmd, {
+          children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "door_menu",
             product: "air"
-          }), ", edit or delete doors, configure door schedules, and manage them by group."]
+          }), "에서는 출입문 편집 및 삭제, 출입 스케줄을 설정하고, 그룹으로 관리할 수 있습니다."]
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
           id: "categorizing-doors-into-groups",
-          children: "Categorize doors into groups"
+          children: "출입문을 그룹으로 분류"
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "Categorize doors into groups."
+          children: "출입문을 그룹으로 분류하세요."
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "door_menu",
                 product: "air"
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "door_groups_submenu",
                 product: "air"
-              }), " in the left sidebar."]
+              }), "을 클릭하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-door-group-mng.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "doors_group_add_btn",
                 product: "air"
-              }), " at the top right of the screen."]
+              }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["When the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "doors_group_title_add_popup_overlay",
                 product: "air"
-              }), " window appears, enter a group name such as ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Indoor"
+              }), " 창이 나타나면 그룹 이름을 ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "실내"
               }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Outdoor"
-              }), ", or ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "실외"
+              }), " 또는 ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "Trap Doors"
-              }), ", and select the desired doors."]
+              }), "와 같은 형식으로 이름을 입력하고 원하는 출입문을 선택하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-door-group-mng-add.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["After selecting all doors, click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["출입문을 모두 선택했으면 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "btn_ok",
                 product: "air"
-              }), "."]
+              }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n"]
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
           id: "configuring-access-rights",
-          children: "Configure access rights"
+          children: "출입 권한 설정"
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "Follow these steps to manage access rights."
+          children: "출입 권한을 관리하려면 다음 단계를 따르세요."
         }), (0,jsx_runtime.jsx)(_components.h4, {
           id: "setting-up-holiday-groups",
-          children: "Set up holiday groups"
+          children: "휴일 그룹 설정"
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["In the left sidebar, click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "access_menu",
                 product: "air"
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "holiday_groups_submenu",
                 product: "air"
-              }), "."]
+              }), "을 클릭하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-holiday-group-mng.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "holiday_group_add_btn",
                 product: "air"
-              }), " at the top right of the screen."]
+              }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["When the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "holiday_group_add_title",
                 product: "air"
-              }), " panel appears, enter a name (for example, \"Korea Holidays\")."]
+              }), " 패널이 나타나면 이름을 입력하세요 (예: '한국 휴일')."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-holiday-group-mng-add.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["In the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "add_holidays_title",
                 product: "air"
-              }), " section, set the holidays on which to restrict access, and click ", (0,jsx_runtime.jsx)(Cmd, {
+              }), " 섹션에서 출입을 제한할 공휴일을 설정하고, ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "add_btn",
                 product: "air"
-              }), "."]
+              }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["After adding all holidays, click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["모든 휴일을 추가했으면 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "save_btn",
                 product: "air"
-              }), "."]
+              }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n"]
         }), (0,jsx_runtime.jsx)(_components.h4, {
           id: "creating-schedules",
-          children: "Create schedules"
+          children: "스케줄 만들기"
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "access_menu",
                 product: "air"
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "schedules_submenu",
                 product: "air"
-              }), " in the left sidebar."]
+              }), "을 클릭하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-schedule.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "schedules_add_btn",
                 product: "air"
-              }), " at the top right of the screen."]
+              }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["When the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "schedule_add_title",
                 product: "air"
-              }), " panel appears, enter a name."]
+              }), " 패널이 나타나면 이름을 입력하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-schedule-add.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-              children: "Select the days to activate and link a holiday group."
+              children: "활성화할 요일을 선택하고 휴일 그룹을 연결하세요."
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["When the schedule is complete, click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["스케줄 설정을 완료하면 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "save_btn",
                 product: "air"
-              }), "."]
+              }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n"]
         }), (0,jsx_runtime.jsx)(_components.h4, {
           id: "defining-access-levels",
-          children: "Define access levels"
+          children: "출입 레벨 설정"
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "access_menu",
                 product: "air"
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "access_levels_submenu",
                 product: "air"
-              }), " in the left sidebar."]
+              }), "을 클릭하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-access-level-mng.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "add_access_level",
                 product: "air"
-              }), " at the top right of the screen."]
+              }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["When the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "access_level_title",
                 product: "air"
-              }), " panel appears, enter a name, and assign door groups, individual doors, and schedules."]
+              }), " 패널이 나타나면 이름을 입력한 후, 출입문 그룹, 개별 출입문 및 스케줄을 할당하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-access-level-mng-add.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["When the access level is configured, click ", (0,jsx_runtime.jsx)(Cmd, {
-                sid: "add_btn",
+              children: ["출입 레벨 설정을 완료하면 ", (0,jsx_runtime.jsx)(Cmd, {
+                sid: "save_btn",
                 product: "air"
-              }), "."]
+              }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n"]
         })]
       }), (0,jsx_runtime.jsxs)(Step, {
         children: [(0,jsx_runtime.jsx)(_components.h3, {
           id: "creating-user-groups-and-adding-users",
-          children: "Create user groups and add users"
+          children: "사용자 그룹 만들기 및 사용자 추가"
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "Create a user group and add users to the new group."
+          children: "사용자 그룹을 만들고, 새로운 사용자 그룹에 사용자를 추가하세요."
         }), (0,jsx_runtime.jsxs)(_components.ol, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "user_menu",
                 product: "air"
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "user_groups_submenu",
                 product: "air"
-              }), " in the left sidebar."]
+              }), "을 클릭하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-user-group-mng.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "add_user_group_btn",
                 product: "air"
-              }), " at the top right of the screen."]
+              }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["When the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "add_user_group_popup_title",
                 product: "air"
-              }), " window appears, enter the user group name."]
+              }), " 창이 나타나면 사용자 그룹 이름을 입력하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-user-group-mng-add.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["사용자 그룹을 저장하려면 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "manage_grops_ok_btn",
                 product: "air"
-              }), " to save the user group."]
+              }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["화면 왼쪽 사이드바에서 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "user_menu",
                 product: "air"
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "user_submenu",
                 product: "air"
-              }), " in the left sidebar."]
+              }), "를 클릭하세요."]
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["Click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["화면 오른쪽 상단의 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "add_user_btn",
                 product: "air"
               }), " → ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "add_user_btn",
                 product: "air"
-              }), " at the top right of the screen."]
+              }), "를 클릭하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-user-group-mng-add-user.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["When the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "add_user_form_tab",
                 product: "air"
-              }), " window appears, enter the user ID, name, email address, and other information in the ", (0,jsx_runtime.jsx)(Cmd, {
+              }), " 창이 나타나면 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "user_detail",
                 product: "air"
-              }), " section."]
+              }), " 섹션에서 사용자의 ID, 이름 등을 입력하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-user-group-mng-add-user-details.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["In the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "credential_detail",
                 product: "air"
-              }), " section, enable one or more credential types."]
+              }), " 섹션에서 하나 이상의 인증 수단을 활성화하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-user-group-mng-add-credential-details.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["In the ", (0,jsx_runtime.jsx)(Cmd, {
+              children: [(0,jsx_runtime.jsx)(Cmd, {
                 sid: "access_detail",
                 product: "air"
-              }), " section, select an access level."]
+              }), " 섹션에서 출입 레벨을 선택하세요."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/air/bsair-gettingstarted-user-group-mng-add-aclevel-details.png"
             }), "\n"]
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-              children: ["To finish configuring the user’s access, click ", (0,jsx_runtime.jsx)(Cmd, {
+              children: ["사용자의 접근 설정을 완료하려면 오른쪽 하단의 ", (0,jsx_runtime.jsx)(Cmd, {
                 sid: "add_user_card_activate_btn",
                 product: "air"
-              }), " in the lower-right corner."]
+              }), " 버튼을 클릭하세요."]
             }), "\n"]
           }), "\n"]
         }), (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["In the ", (0,jsx_runtime.jsx)(Cmd, {
+            children: [(0,jsx_runtime.jsx)(Cmd, {
               sid: "user_menu",
               product: "air"
             }), " → ", (0,jsx_runtime.jsx)(Cmd, {
               sid: "user_groups_submenu",
               product: "air"
-            }), " menu, bulk-manage users, reissue, suspend, or delete them, export data, and upload profile images in bulk."]
+            }), " 메뉴에서는 사용자를 대량으로 관리하고, 재발급, 정지 또는 삭제할 수 있으며, 데이터를 내보내고 프로필 이미지를 대량으로 업로드할 수도 있습니다."]
           })
         })]
       })]
@@ -648,38 +648,38 @@ function _createMdxContent(props) {
       type: "tip",
       children: [(0,jsx_runtime.jsx)(_components.p, {
         children: (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Checklist"
+          children: "체크리스트"
         })
       }), (0,jsx_runtime.jsx)(_components.p, {
-        children: "To summarize, follow these steps."
+        children: "위 과정을 요약하자면 다음 단계에 따라 진행할 수 있습니다."
       }), (0,jsx_runtime.jsxs)(_components.ol, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Add administrators."
+            children: "관리자를 추가하세요."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Register devices."
+            children: "장치를 등록하세요."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Create doors and assign devices."
+            children: "출입문을 생성하고 장치를 할당하세요."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Categorize doors into groups."
+            children: "출입문을 그룹으로 분류하세요."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Configure access rights (holidays, schedules, access levels)."
+            children: "출입 권한을 설정하세요 (휴일, 일정, 출입 등급)."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "Create user groups and add users."
+            children: "사용자 그룹을 만들고 사용자를 추가하세요."
           }), "\n"]
         }), "\n"]
       }), (0,jsx_runtime.jsx)(_components.p, {
-        children: "Following these steps sets up the BioStar Air site smoothly. Refer to the individual video tutorials in the user guide for more details."
+        children: "위 단계를 따르면 BioStar Air 사이트를 원활하게 설정할 수 있습니다. 제공하는 사용자 가이드에서 개별 비디오 튜토리얼을 참조하여 더 많은 세부 정보를 확인할 수 있습니다."
       })]
     })]
   });
