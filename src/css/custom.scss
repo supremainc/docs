@@ -817,6 +817,11 @@ body[data-rh] .redocusaurus {
       margin-bottom: 0;
     }
   }
+  ul.tabs {
+    li:last-of-type {
+      margin-bottom: var(--ifm-list-paragraph-margin);
+    }
+  }
   ul + ul {
     // margin-top: -.3rem;
   }
