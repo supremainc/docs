@@ -1,0 +1,86 @@
+---
+id: managing-door-schedules
+title: Manage Door Schedules
+description: Set automatic door locking by time of day, configure unlock times, and manage authentication-based access control options. Schedules ensure safe and controlled access.
+keywords:
+  - door schedule
+  - BioStar Air
+---
+
+You can set door schedules to automatically lock and unlock doors based on time periods. Configure lock and unlock times, and utilize advanced options such as **open after first authentication** to set up secure and controlled access.
+
+:::info
+
+* Schedules apply only to doors and devices that are connected to the internet.
+
+* Holiday groups ignore unlock schedules unless they are configured separately.
+
+* Keep at least one administrator with unrestricted access for emergencies.
+
+:::
+
+## Configure unlock schedules {#configuringUnlockSchedules}
+
+An unlock schedule is the period when a door remains open without authentication. Configure an unlock schedule as instructed below.
+
+1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar.
+
+2. In the list, click the checkbox for the door to configure its unlock schedule.
+
+3. Click <IcAirSchedule title='Schedule Settings' /> at the top of the door list.
+
+4. When the <Cmd sid="lock_unlock_title" product="air" /> window appears, select a predefined schedule or create a new one in the <Cmd sid="unlock" product="air" /> tab.
+
+   <Image src='/img/air/bsair-door-mng-schedule-setting-unlock.png' />
+
+5. Click <Cmd sid="btn_ok" product="air" /> to apply the unlock schedule.
+
+:::info
+
+* When <Cmd sid="unlock_after_first_auth" product="air" /> is enabled, the door stays unlocked according to the selected schedule after the first user authenticates. This option is useful for offices and retail stores where the door must remain locked until the first employee arrives.
+
+* For more information on registering schedules, refer to <DocLink inner='#registeringNewSchedules' />.
+
+:::
+
+## Configure lock schedules {#configuring-lock-schedules}
+
+A lock schedule sets the period during which the door remains locked and cannot be accessed even with valid credentials. Configure a lock schedule as instructed below.
+
+1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar.
+
+2. In the list, click the checkbox for the door to configure its lock schedule.
+
+3. Click <IcAirSchedule title='Schedule Settings' /> at the top of the door list.
+
+4. When the <Cmd sid="lock_unlock_title" product="air" /> window appears, select a predefined schedule or create a new one in the <Cmd sid="lock" product="air" /> tab.
+
+   <Image src='/img/air/bsair-door-mng-schedule-setting-lock.png' />
+
+5. Click <Cmd sid="btn_ok" product="air" /> to apply the lock schedule.
+
+:::info
+
+* Because a lock schedule overrides standard access rights, users cannot set the door to unlocked during the lock period.
+
+* For more information on registering new schedules, refer to <DocLink inner='#registeringNewSchedules' />.
+
+:::
+
+## Register a new schedule {#registeringNewSchedules}
+
+Follow the steps below to register a new schedule.
+
+1. In the <Cmd sid="lock_unlock_title" product="air" /> window, click <Cmd sid="lock_unlock_create_schedules" product="air" />.
+
+   <Image src='/img/air/bsair-door-mng-schedule-setting-add-schedule.png' />
+
+2. On the Add Schedule screen, enter <Cmd sid="schedule_name" product="air" /> and <Cmd sid="schedule_description" product="air" /> (optional).
+
+   <Image src='/img/air/bsair-door-mng-schedule-add.png' />
+
+3. In the <Cmd sid="schedule_section_title_time_intervals" product="air" /> section, select the days and times when the door should be open without authentication, then click <Cmd sid="add_btn" product="air" />.
+
+4. Click <Cmd sid="save_btn" product="air" /> to save the schedule.
+
+After registering a new schedule, return to <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' /> and configure the door schedule.

@@ -1,0 +1,42 @@
+---
+id: site-additional-settings
+title: Configure Additional Features
+description: This guide explains how to enable and configure BioStar Air's additional features, such as QR code readers, IP camera integration, and webhooks.
+keywords:
+  - Additional Site Settings
+  - Additional Settings
+---
+
+You can enable or disable additional features required for site operation, such as support for QR code readers, ONVIF camera integration, and event forwarding to external systems (webhooks).
+
+Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar. Use the <Cmd sid='site_setting_qr_reader_tab' product='air' /> tab to enable or disable additional features.
+
+<Image src='/img/air/bsair-settings-site-additional-feature.png' />
+
+* <Cmd sid='site_setting_qr_label' product='air' />: Supports QR code readers. Disable this option if you do not use a QR reader.
+
+* <Cmd sid='site_setting_video_management' product='air' />: Supports ONVIF-compliant IP cameras. Enable this feature to integrate BioStar Air with video surveillance. After enabling the feature, click <Cmd sid='setting_label' product='air' /> to set the event log playback time.
+
+   :::note
+
+   For more information about video management, see <DocLink docId='platform/biostar_air/ip-camera-support-and-configuration' />.
+
+   :::
+
+* <Cmd sid='site_setting_webhook_title' product='air' />: Enable webhooks to send BioStar Air events to external systems. After enabling the feature, configure the fields below.
+
+  <Image src='/img/air/bsair-settings-site-additional-feature-webhook.png' />
+
+  * <Cmd sid='site_setting_webhook_url' product='air' />: Enter the endpoint address of the external server that will receive events. Example: `https://example.com/webhook-endpoint`
+
+  * <Cmd sid='site_setting_webhook_secret' product='air' />: A security token used to verify that the webhook request originated from a trusted server. The sending server encrypts the payload with the security key using SHA-256 and sends it in the `X-Signature` header.
+
+  * <Cmd sid='site_setting_webhook_form_send_text' product='air' />: Verify that the webhook works correctly. Send a test message to confirm that the external server receives and responds to the request.
+
+   :::info
+
+  * After entering all required information, click <Cmd sid='save_btn' product='air' />.
+
+  * Click <Cmd sid='new_button_reset' product='air' /> to initialize the entered information.
+
+   :::
