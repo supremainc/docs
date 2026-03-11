@@ -306,6 +306,7 @@ const sidebars = {
           items: [
             'platform/biostar_x/manage-server',
             'platform/biostar_x/service-settings',
+            'platform/biostar_x/change-ip',
             'platform/biostar_x/change-port',
             'platform/biostar_x/change-db',
             'platform/biostar_x/add-sub-db'

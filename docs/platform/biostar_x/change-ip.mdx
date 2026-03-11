@@ -1,0 +1,92 @@
+---
+id: change-ip
+title: 메인 서버의 IP 주소 변경하기
+description: BioStar X 메인 서버 설치 후 IP 주소를 변경하는 방법을 안내합니다. Windows 서버 IP 변경부터 BioStar X Service Manager를 통한 적용, 커뮤니케이션 서버 설정까지 전체 절차를 포함합니다.
+keywords: [IP 주소 변경, BioStar X Service Manager, 메인 서버, 커뮤니케이션 서버]
+---
+
+서버의 네트워크 환경이 변경되었거나 초기 설정 후 IP 주소를 변경해야 할 때 이 문서를 참고하세요. BioStar X 메인 서버의 IP을 안전하게 변경하고 연결된 커뮤니케이션 서버를 재구성하는 방법을 안내합니다.
+
+:::info
+
+메인 서버의 IP 주소 변경 기능은 **BioStar X v1.0.2** 이상에서 지원합니다.
+
+:::
+
+## 메인 서버의 IP 주소 변경
+
+**BioStar X**를 설치한 서버에서 먼저 IP 주소를 변경하세요. 외부 네트워크와 연결된 랜 카드의 IP 주소를 변경해야 합니다.
+
+:::info
+
+Windows에서 IP 주소 변경에 대한 자세한 내용은 [Microsoft 고객 지원](https://support.microsoft.com/ko-kr/windows/windows%EC%9D%98-%ED%95%84%EC%88%98-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%84%A4%EC%A0%95-%EB%B0%8F-%EC%9E%91%EC%97%85-f21a9bbc-c582-55cd-35e0-73431160a1b9)에서 확인할 수 있습니다.
+
+{/* Microsoft Support https://support.microsoft.com/en-us/windows/essential-network-settings-and-tasks-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9 */}
+
+:::
+
+
+## 변경된 IP 주소 적용
+
+다음 안내에 따라 **BioStar X**를 설치한 서버의 IP 주소를 변경하세요.
+
+1. Windows에서 <Start/> → **BioStar X** → **BioStar X Service Manager**를 클릭하세요.
+
+1. 웹브라우저를 통해 **BioStar X Service Manager** 창이 나타나면 <Cmd>MAIN SERVER IP</Cmd> 메뉴를 클릭하세요.
+
+   <Image src='/img/common/biostarx-sm-change-ip.png' alone />
+
+   :::note
+
+   랜 카드의 IP 주소를 변경한 후 **BioStar X Service Manager**에 진입하면 로딩 화면이 나타납니다. 1~2분 정도 기다린 후 <Cmd>Main Server IP</Cmd> 화면이 표시됩니다.
+
+   :::
+
+1. <Cmd>Main Server IP Address</Cmd> 항목에서 변경할 IP 주소를 선택하세요.
+
+1. 화면 오른쪽 상단의 <Cmd>Apply</Cmd> 버튼을 클릭하세요.
+
+1. 메시지 창이 나타나면 현재 IP 주소와 변경할 IP 주소를 확인한 후 <Cmd>OK</Cmd> 버튼을 클릭하세요.
+
+   <Image src='/img/common/biostarx-sm-change-ip-warning-message.png' alone />
+
+1. IP 주소 변경이 완료되면 성공 메시지가 나타납니다. <Cmd>OK</Cmd> 버튼을 클릭하세요.
+
+   <Image src='/img/common/biostarx-sm-change-ip-success-message.png' alone />
+
+IP 주소를 변경하면 모든 서비스가 재시작됩니다. IP 주소 변경을 완료하면 웹 브라우저를 통해 변경된 IP 주소로 정상 접속되는지 확인하세요.
+
+:::info
+
+변경할 IP 주소는 수동으로 입력할 수 없으며, <Cmd>Main Server IP Address</Cmd> 항목에 표시된 IP 주소 중에서 선택할 수 있습니다.
+
+:::
+
+
+## 커뮤니케이션 서버 
+
+커뮤니케이션 서버를 추가로 설치했다면 변경한 메인 서버의 IP 주소로 커뮤니케이션 서버의 설정을 변경해야 합니다. 커뮤니케이션 서버를 설치한 서버에서 진행하세요.
+
+1. *C:\\Program Files\\BioStar X Communications Server* 경로로 이동하세요.
+
+1. *CertRegisterWinUI.exe* 파일을 실행하세요.
+
+1. **Enroll Certificate** 창이 나타나면 **Server Address** 입력 필드에 변경한 메인 서버의 IP 주소 및 포트 번호(기본값: 21810)를 입력하세요.
+
+   <Image src='/img/common/biostarx-sm-change-ip-enroll-cert.png' alone />
+
+1. **Enroll** 버튼을 클릭하세요.
+
+메인 서버에 대한 IP 주소 변경이 완료되면 **Certificate registration successful!** 메시지가 나타납니다.
+
+:::info
+
+* 커뮤니케이션 서버를 설치하지 않았다면 이 단계를 건너뛰세요.
+
+* BioStar X를 설치한 메인 서버의 포트 번호를 변경했다면, 메인 서버에서 **BioStar X Service Manager**를 실행하고 <Cmd>SERVICE SETTINGS</Cmd> → <Cmd>BioStar X Coordinator Service</Cmd> 섹션의 <Cmd>Client Port</Cmd> 값을 확인하세요.
+
+  <Image src='/img/common/biostarx-sm-coordinator-s.png' alone />
+
+* 커뮤니케이션 서버 설치에 대한 자세한 내용은 [다음 문서](install-communication-server)를 참고하세요.
+
+:::

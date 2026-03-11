@@ -2,32 +2,36 @@
 id: settings-system-system-restore
 title: 시스템 복원하기
 description: 시스템 백업 파일을 사용하여 BioStar X의 데이터베이스, 설정, 라이선스 등을 이전 상태로 복원하는 방법을 안내합니다.
-keywords: [시스템 복원, restore, 백업 복원, 데이터 복구, BioStar X Restore]
+keywords: [시스템 복원, 백업, 복원]
 ---
 
 **BioStar X**에서 문제가 발생했거나 이전 상태로 되돌려야 할 때 시스템 백업 파일을 사용하여 복원할 수 있습니다. 복원 기능을 사용하면 데이터베이스, 각종 설정, 라이선스 정보 등을 백업 시점의 상태로 되돌릴 수 있습니다.
 
 :::caution
 
-* 복원 작업을 진행하면 현재 시점의 데이터가 백업 시점으로 되돌아 갑니다. 복원하기 전에 현재 상태의 백업을 생성하는 것을 권장합니다. 현재 상태의 백업을 생성하려면 [다음 문서](settings-system-system-backup)를 참고하세요.
-
-* 복원 작업을 진행할 때 복원 대상의 서버 IP 주소가 백업 받은 서버 IP 주소와 다를 경우 복원 작업이 실패할 수 있습니다. 복원 작업을 진행하기 전에 서버 IP 주소를 확인하세요.
+복원 작업을 진행하면 현재 시점의 데이터가 백업 시점으로 되돌아 갑니다. 복원하기 전에 현재 상태의 백업을 생성하는 것을 권장합니다. 현재 상태의 백업을 생성하려면 [다음 문서](settings-system-system-backup)를 참고하세요.
 
 :::
 
 :::info
 
-SQL Server 데이터베이스와 **BioStar X**가 서로 다른 서버에 설치되어 있다면 **BioStar X** 시스템 백업 및 복원을 사용할 수 없습니다.
+* 복원 대상 서버의 IP 주소가 백업 서버와 다른 경우:
+
+  * **BioStar X v1.0.2 이상**: 복원 시 자동으로 변경된 IP 주소를 기준으로 인증서가 재발급됩니다. 별도 작업이 필요하지 않습니다.
+
+  * **BioStar X v1.0.1 이하**: 복원이 실패할 수 있습니다. 복원을 진행하기 전에 서버 IP 주소를 확인하세요.
+
+* SQL Server 데이터베이스와 **BioStar X**가 서로 다른 서버에 설치되어 있다면 **BioStar X** 시스템 백업 및 복원을 사용할 수 없습니다.
 
 :::
 
 1. Windows에서 <Start/> → **BioStar X** → **BioStar X Restore**를 실행하세요.
 
-    * 프로그램 경로: *C:\Program Files\BioStar X\biostar-restore.exe*
+   * 프로그램 경로: *C:\Program Files\BioStar X\biostar-restore.exe*
 
 1. **Select File** 버튼을 클릭하고 복원할 백업 파일을 선택하세요.
 
-    <Image src='/img/common/setting-system-restore.png' className='none' alone />
+   <Image src='/img/common/setting-system-restore.png' className='none' alone />
 
 1. 복원을 시작하려면 **Restore** 버튼을 클릭하세요. 
 
