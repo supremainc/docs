@@ -233,7 +233,7 @@ function _sync_with_integ_createMdxContent(props) {
                 product: "2"
               }), ": 연동된 디렉토리 서비스에서 사용자를 동기화할 때, ", (0,jsx_runtime.jsx)(_components.strong, {
                 children: "BioStar X"
-              }), "에 없는 사용자들을 추가하고, 정보가 변경된 사용자의 정보는 최신화하지만 삭제하지 않습니다."]
+              }), "에 없는 사용자들을 추가하고, 정보가 변경된 사용자의 정보는 업데이트하지만 삭제하지 않습니다."]
             }), "\n", (0,jsx_runtime.jsx)(Image, {
               src: "/img/biostarx-setting-directory-sync-add-update-mode.png"
             }), "\n"]
@@ -261,7 +261,11 @@ function _sync_with_integ_createMdxContent(props) {
           }), ": 자동 동기화 간격을 설정할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "settings.activeDirectory.syncInterval.label",
             product: "2"
-          }), "에 설정한 간격에 따라 자동 동기화됩니다. 분 단위로 입력할 수 있습니다."]
+          }), "에 설정한 간격에 따라 자동 동기화됩니다. 분 단위로 입력할 수 있습니다. 최소 설정값은 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "30"
+          }), "분, 최대 설정값은 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "10,080"
+          }), "분(7일)입니다."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-setting-directory-sync-auto-sync-interval.png"
         }), "\n"]
@@ -312,6 +316,15 @@ function _sync_with_integ_createMdxContent(props) {
               }), "\n"]
             }), "\n"]
           }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["디렉토리 연동을 설정한 상태에서 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X v1.0.2"
+            }), "로 업그레이드한 경우 동기화 모드는 ", (0,jsx_runtime.jsx)(Cmd, {
+              sid: "settings.activeDirectory.syncMode.addEditDelete",
+              product: "2"
+            }), "로 기본 설정됩니다."]
+          }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -345,15 +358,6 @@ function _sync_with_integ_createMdxContent(props) {
               href: "#excludeintegration",
               children: "다음 문서"
             }), "를 참고하세요."]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["디렉토리 연동을 설정한 상태에서 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "BioStar X v1.0.2"
-            }), "로 업그레이드한 경우 동기화 모드는 ", (0,jsx_runtime.jsx)(Cmd, {
-              sid: "settings.activeDirectory.syncMode.addEditDelete",
-              product: "2"
-            }), "로 기본 설정됩니다."]
           }), "\n"]
         }), "\n"]
       })
@@ -1111,7 +1115,7 @@ function settings_diretory_integration_createMdxContent(props) {
           }), " 섹션에서 ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "user.adsync.exclude",
             product: "2"
-          }), " 항목의 체크박스를 클릭하세요."]
+          }), " 옵션을 활성화하세요."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/biostarx-user-advance-exclude-sync.png"
         }), "\n"]

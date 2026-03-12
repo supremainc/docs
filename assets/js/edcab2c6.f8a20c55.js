@@ -75,7 +75,7 @@ function _createMdxContent(props) {
     children: [(0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "BioStar X"
-      }), "의 데이터베이스, 각종 설정, 키 등 주요 정보를 백업할 수 있습니다. ", (0,jsx_runtime.jsx)(Cmd, {
+      }), "의 데이터베이스, 각종 설정, 키 등 주요 정보를 백업할 수 있습니다. 백업 파일에는 암호화 키(enc key), 이미지 로그 경로 등 사용자가 설정한 값도 포함됩니다. ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.backup",
         product: "2"
       }), " 기능을 사용하면 서버의 데이터 손실을 방지하거나 새로운 PC로 이전할 때 사용하세요."]
@@ -291,6 +291,8 @@ function _createMdxContent(props) {
           }), "을 클릭하세요."]
         }), "\n"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "자동 백업 설정 후 정해진 주기마다 백업이 진행됩니다. 자동 백업 실행 중 실패가 발생하면 이벤트 로그 및 감사 추적에 실패 이력이 기록되며, 실패 원인에 대한 상세 정보는 로그 파일에서 확인할 수 있습니다."
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["백업 파일은 ", (0,jsx_runtime.jsx)(Cmd, {
         sid: "common.backup.general",
