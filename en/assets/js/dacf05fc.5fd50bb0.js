@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["64098"], {
-1276: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["74854"], {
+55887: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,26 +9,26 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_docs_device_biostation_3_release_notes_142_mdx_70d_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_release_notes_142_mdx_dac_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-biostation-3-release-notes-142-mdx-70d.json
-var site_docs_device_biostation_3_release_notes_142_mdx_70d_namespaceObject = JSON.parse('{"id":"device/biostation_3/release-notes/142","title":"펌웨어 버전 1.4.2","description":"릴리즈2026-03-12","source":"@site/docs/device/biostation_3/release-notes/142.mdx","sourceDirName":"device/biostation_3/release-notes","slug":"/device/biostation_3/release-notes/142","permalink":"/docs/es/device/biostation_3/release-notes/142","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/release-notes/142.mdx","tags":[],"version":"current","frontMatter":{"id":"142","title":"펌웨어 버전 1.4.2","isTranslationMissing":true},"sidebar":"biostation3","previous":{"title":"BioStation 3 Release Notes","permalink":"/docs/es/device/biostation_3/release-notes/"},"next":{"title":"Firmware Version 1.4.1","permalink":"/docs/es/device/biostation_3/release-notes/141"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-device-biostation-3-release-notes-142-mdx-dac.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_device_biostation_3_release_notes_142_mdx_dac_namespaceObject = JSON.parse('{"id":"device/biostation_3/release-notes/142","title":"Firmware Version 1.4.2","description":"Release2026-03-12","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/release-notes/142.mdx","sourceDirName":"device/biostation_3/release-notes","slug":"/device/biostation_3/release-notes/142","permalink":"/docs/en/device/biostation_3/release-notes/142","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/release-notes/142.mdx","tags":[],"version":"current","frontMatter":{"id":"142","title":"Firmware Version 1.4.2","isTranslationMissing":false},"sidebar":"biostation3","previous":{"title":"BioStation 3 Release Notes","permalink":"/docs/en/device/biostation_3/release-notes/"},"next":{"title":"Firmware Version 1.4.1","permalink":"/docs/en/device/biostation_3/release-notes/141"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./docs/device/biostation_3/release-notes/142.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/device/biostation_3/release-notes/142.mdx
 
 
 const frontMatter = {
 	id: 142,
-	title: '펌웨어 버전 1.4.2',
-	isTranslationMissing: true
+	title: 'Firmware Version 1.4.2',
+	isTranslationMissing: false
 };
-const contentTitle = '펌웨어 버전 1.4.2 (빌드 번호 1.4.2_20260309)';
+const contentTitle = 'Firmware Version 1.4.2 (Build No. 1.4.2_20260309)';
 
 const assets = {
 
@@ -37,12 +37,12 @@ const assets = {
 
 
 const toc = [{
-  "value": "신규 기능 및 개선",
-  "id": "신규-기능-및-개선",
+  "value": "New Features and Improvements",
+  "id": "new-features-and-improvements",
   "level": 2
 }, {
-  "value": "버그 수정",
-  "id": "버그-수정",
+  "value": "Bug Fixes",
+  "id": "bug-fixes",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -67,60 +67,74 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.header, {
       children: (0,jsx_runtime.jsx)(_components.h1, {
-        id: "펌웨어-버전-142-빌드-번호-142_20260309",
-        children: "펌웨어 버전 1.4.2 (빌드 번호 1.4.2_20260309)"
+        id: "firmware-version-142-build-no-142_20260309",
+        children: "Firmware Version 1.4.2 (Build No. 1.4.2_20260309)"
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["릴리즈", (0,jsx_runtime.jsx)(Separator, {}), "2026-03-12"]
+      children: ["Release", (0,jsx_runtime.jsx)(Separator, {}), "2026-03-12"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "caution",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["펌웨어가 v1.4.0인 제품을 사용하는 경우, 반드시 v1.4.1로 업그레이드한 후 사용하세요.", (0,jsx_runtime.jsx)("br", {}), "중요한 보안 및 안정성 개선이 포함되어 있으므로, 반드시 최신 버전으로 업그레이드한 후 사용해야 합니다."]
+            children: ["If you are using a device with firmware version v1.4.0, you must upgrade to v1.4.1 before use.", (0,jsx_runtime.jsx)("br", {}), "As important security and stability improvements are included, using the latest version after the upgrade is mandatory."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "펌웨어를 v1.4.0 이상으로 업그레이드한 뒤 하위 버전으로 다운그레이드할 수 없습니다."
+            children: "After upgrading the firmware to v1.4.0, it is not able to downgrade to an earlier version of the firmware."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["장치의 펌웨어 다운그레이드 가능 여부 및 신규 BLE 칩 적용 여부는 장치의 시리얼 번호를 확인한 뒤 ", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["For more information, check the serial number of the device and contact the ", (0,jsx_runtime.jsx)(_components.a, {
               href: "https://supremainc.com",
-              children: "슈프리마 홈페이지"
-            }), "에 문의하세요."]
+              children: "Suprema"
+            }), "."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "신규-기능-및-개선",
-      children: "신규 기능 및 개선"
+      id: "new-features-and-improvements",
+      children: "New Features and Improvements"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["EU 외 지역 사용자를 위해 ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "마스터 관리자"
-        }), " 기능을 제외한 ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "스탠다드"
-        }), " 펌웨어 제공"]
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Provided ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "standard"
+          }), " firmware for non-EU regions"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: ["Disabled the ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Master Admin"
+              }), " and ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Admin 2-step Authentication"
+              }), " features"]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "Reduced the minimum length for PIN enrollment to 4 digits"
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "버그-수정",
-      children: "버그 수정"
+      id: "bug-fixes",
+      children: "Bug Fixes"
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(BugLists, {
       children: (0,jsx_runtime.jsxs)(_components.ol, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["발급된 MIFARE SL1 카드의 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "기본 사이트 키"
-            }), "를 변경한 후 카드 포맷과 발급이 진행되지 않는 문제 ", (0,jsx_runtime.jsx)(Badge, {
+            children: ["Card format and write failure after changing the ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Primary Key"
+            }), " of an issued MIFARE SL1 card. ", (0,jsx_runtime.jsx)(Badge, {
               children: "1.4.1"
             })]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["BioStar 2에서 슬레이브 장치에 ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "마스터 관리자"
-            }), "용 크리덴셜을 등록한 후, 장치 상세 페이지에 재진입하면 등록된 정보가 표시되지 않는 문제 ", (0,jsx_runtime.jsx)(Badge, {
+            children: ["After enrolling credentials for the ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Master Admin"
+            }), " to the slave device in BioStar 2, the enrolled information is not displayed when re-entering the device details page. ", (0,jsx_runtime.jsx)(Badge, {
               children: "1.4.1"
             })]
           }), "\n"]

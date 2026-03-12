@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-biostation-3-release-notes-142-mdx-70d.json
-var site_docs_device_biostation_3_release_notes_142_mdx_70d_namespaceObject = JSON.parse('{"id":"device/biostation_3/release-notes/142","title":"펌웨어 버전 1.4.2","description":"릴리즈2026-03-12","source":"@site/docs/device/biostation_3/release-notes/142.mdx","sourceDirName":"device/biostation_3/release-notes","slug":"/device/biostation_3/release-notes/142","permalink":"/docs/device/biostation_3/release-notes/142","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/release-notes/142.mdx","tags":[],"version":"current","frontMatter":{"id":"142","title":"펌웨어 버전 1.4.2","isTranslationMissing":false},"sidebar":"biostation3","previous":{"title":"BioStation 3 릴리스 노트","permalink":"/docs/device/biostation_3/release-notes/"},"next":{"title":"펌웨어 버전 1.4.1","permalink":"/docs/device/biostation_3/release-notes/141"}}')
+var site_docs_device_biostation_3_release_notes_142_mdx_70d_namespaceObject = JSON.parse('{"id":"device/biostation_3/release-notes/142","title":"펌웨어 버전 1.4.2","description":"릴리즈2026-03-13","source":"@site/docs/device/biostation_3/release-notes/142.mdx","sourceDirName":"device/biostation_3/release-notes","slug":"/device/biostation_3/release-notes/142","permalink":"/docs/device/biostation_3/release-notes/142","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/biostation_3/release-notes/142.mdx","tags":[],"version":"current","frontMatter":{"id":"142","title":"펌웨어 버전 1.4.2","isTranslationMissing":false},"sidebar":"biostation3","previous":{"title":"BioStation 3 릴리스 노트","permalink":"/docs/device/biostation_3/release-notes/"},"next":{"title":"펌웨어 버전 1.4.1","permalink":"/docs/device/biostation_3/release-notes/141"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -71,7 +71,7 @@ function _createMdxContent(props) {
         children: "펌웨어 버전 1.4.2 (빌드 번호 1.4.2_20260309)"
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["릴리즈", (0,jsx_runtime.jsx)(Separator, {}), "2026-03-12"]
+      children: ["릴리즈", (0,jsx_runtime.jsx)(Separator, {}), "2026-03-13"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "caution",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
@@ -97,11 +97,25 @@ function _createMdxContent(props) {
       children: "신규 기능 및 개선"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["EU 외 지역 사용자를 위해 ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "마스터 관리자"
-        }), " 기능을 제외한 ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "스탠다드"
-        }), " 펌웨어 제공"]
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["EU 외 지역용 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "스탠다드"
+          }), " 펌웨어 제공"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+              children: [(0,jsx_runtime.jsx)(_components.strong, {
+                children: "마스터 관리자"
+              }), " 및 ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "관리자 2단계 인증"
+              }), " 기능 비활성화"]
+            }), "\n"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+              children: "PIN 등록 시 최소 길이 4자리로 완화"
+            }), "\n"]
+          }), "\n"]
+        }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "버그-수정",
