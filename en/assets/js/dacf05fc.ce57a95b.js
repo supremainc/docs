@@ -99,8 +99,8 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: ["Provided ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "standard"
-          }), " firmware for non-EU regions"]
+            children: "global"
+          }), " firmware for non-EU(CE certified) regions"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
