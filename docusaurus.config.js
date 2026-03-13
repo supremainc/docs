@@ -308,6 +308,11 @@ const config = {
             items: [
               {
                 type: 'doc',
+                label: 'ViOnyx',
+                docId: 'device/vionyx/index'
+              },
+              {
+                type: 'doc',
                 label: 'BioEntry W3',
                 docId: 'device/bioentry_w3/index'
               },

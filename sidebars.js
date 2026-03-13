@@ -1683,6 +1683,43 @@ const sidebars = {
 //       ],
 //     },
 //   ],
+  vionyx: [
+    {
+      type: 'category',
+      label: 'ViOnyx',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/vionyx/index',
+      },
+      items: [
+        'device/vionyx/safety-instructions',
+        'device/vionyx/getting-started',
+        'device/vionyx/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/vionyx/using-device',
+          },
+          items: [
+            'device/vionyx/admin-menu',
+            'device/vionyx/user',
+            'device/vionyx/authentication',
+            'device/vionyx/settings',
+            'device/vionyx/event-log',
+          ],
+        },
+        'device/vionyx/troubleshooting',
+        'device/vionyx/product-specifications',
+        'device/vionyx/regulatory-information',
+        'device/vionyx/appendices',
+      ],
+    },
+  ],
   biostation2a: [
     {
       type: 'category',
