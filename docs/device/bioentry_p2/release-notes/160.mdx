@@ -9,9 +9,7 @@ title: 펌웨어 버전 1.6.0
 
 :::caution
 
-- 펌웨어를 v1.6.0 이상으로 업그레이드한 뒤 하위 버전으로 다운그레이드할 수 없습니다.
-
-- SW 기반 **위조 지문 검출** 기능이 추가된 장치의 경우 펌웨어를 v1.5.1 이상으로 업그레이드한 뒤 하위 버전으로 다운그레이드할 수 없습니다.
+- 펌웨어를 v1.5.1 이상으로 업그레이드한 뒤 하위 버전으로 다운그레이드할 수 없습니다.
 
 - BioEntry P2 모델 중 BEP2-OA는 SE프로세서를 통해 HID iCLASS 카드 타입을 지원합니다.<br/>신규 SE 프로세서가 적용된 장치의 경우 펌웨어를 v1.4.4 이상으로 업그레이드한 뒤 하위 버전으로 다운그레이드할 수 없으며, 하위 버전에서 커스터마이징한 펌웨어도 다운그레이드할 수 없습니다. 기존 SE 프로세서가 적용된 장치는 하위 버전으로 다운그레이드할 수 있습니다.
 
@@ -23,59 +21,28 @@ title: 펌웨어 버전 1.6.0
 
 ---
 
- (BPIIFW-298) BSF-2469 고객의 DESFire EV3 (EV1으로 발급) 카드가 BioStation 3에서 읽히지 않는 증상 관련해 Desfire 구분 코드(ATQA 0x0304, SAK 0x20) 추가 - 발생버전: V1.5.1
-
 1. 최신 카드를 인식할 수 있도록 구분 코드 추가
    * DESFire EV3
 
-1. Added identification code to support recognition of the latest cards.
-   * DESFire EV3
-
- (BPIIFW-320) BSF-2503 서버와 장치 간 시간 동기화 관련 동작 개선 - 발생버전: V1.4.2
-
 1. 서버와 장치 간 시간 동기화 관련 동작 개선
-
-1. Improved time synchronization behavior between server and devices.
-
- (BPIIFW-256) [BDP-853] Slave 장치의 Baudrate 설정 기능 지원
 
 1. 슬레이브 장치의 전송 속도를 설정할 수 있는 기능 지원
 
-1. Supports feature to set the baud rate of slave devices.
-
- (BPIIFW-311) Secure Tamper Capability 지원
-
 1. **보안 탬퍼** 기능을 지원하는 장치를 구분하도록 개선
-
-1. Improved to distinguish devices that support the **Secure Tamper** feature.
-
- (BPIIFW-182) [BDP-856] Wiegand Out 후 일정 시간 내 반복적인 인풋 신호를 무시하기
 
 1. 장치를 타사 컨트롤러와 Wiegand로 연결했을 때 컨트롤러로부터 반복적으로 입력되는 인증에 대한 신호를 무시하는 **반복 신호 무시 시간** 기능 지원
 
-1. Supports the **Ignore Repeated Signals Duration** feature, which ignores repetitive authentication signals from the controller when the device is connected to a 3rd party controller via Wiegand.
-
- (BPIIFW-277) [BDP-1066] Wiegand Out 후 일정 시간 내 반복적인 인풋 신호를 무시할 때 이벤트도 남기지 않기
-
 1. **반복 신호 무시 시간** 기능이 작동할 때 이벤트를 기록하지 않도록 지원
-
-1. Supports not logging events when the **Ignore Repeated Signals Duration** feature is activated.
-
- (BPIIFW-291) [BDP-1067] Mifare Plus EV1 SL1, SL3, SL1SL3 Mix Mode 지원[PFE 281]
 
 1. MIFARE Plus EV1 카드의 보안 수준 호환성을 위해 SL1, SL3, SL1/SL3 혼합 모드 지원
    * SL1: MIFARE Classic 호환 모드
    * SL3: AES 기반 고급 보안 모드
 
-Supports SL1, SL3, and SL1/SL3 Mix Mode for security level compatibility with MIFARE Plus EV1 cards.
-   * SL1: Compatible mode with MIFARE Classic
-   * SL3: Advanced security mode based on AES
-
- (BPIIFW-132) SEOS Config Card 처리시간 동안 unknown-CSN인식 무시
-
 1. 장치 부팅 후 1분 동안 SEOS 설정 카드를 CSN으로 인식하지 않도록 개선
 
-1. Improved to not recognize SEOS configuration cards as CSN for 1 minute after device booting.
+1. **수동 잠김**으로 설정된 출입문에 인증 시 인증 실패 이벤트가 발생하고 상태 메시지가 표시되도록 개선
+
+1. BioStar X에서 장치의 여러 상태를 실시간으로 확인할 수 있도록 지원
 
 ## 버그 수정
 
@@ -83,119 +50,42 @@ Supports SL1, SL3, and SL1/SL3 Mix Mode for security level compatibility with MI
 
 <BugLists>
 
- (BPIIFW-262) FISF-2367 신규 SE Chip인 경우 16K16 카드에 대해 키가 맞음에도 실패 처리되는 문제 - 발생버전: V1.4.4
-
 1. 신규 SE 칩 펌웨어를 사용하는 환경에서 일부 스마트 카드 인식에 실패하는 문제 <Badge>1.4.4</Badge>
-
-1. Some smart cards fail to be recognized in environments using the new SE chip firmware. <Badge>1.4.4</Badge>
-
- (BPIIFW-310) Visual Face 포함해 Smart Card발급 후 인증시도 시 유효기간 만료로 인증실패되는 현상 - 발생버전: V1.0.0
 
 1. 인증모드에 비주얼 페이스가 포함되어 발급된 스마트 카드로 인증 시, ‘유효기간 만료’ 메시지가 표시되며 인증에 실패하는 문제 <Badge>1.0.0</Badge>
 
-1. Authentication fails with a ‘period expired’ message when using a smart card issued with a visual face included. <Badge>1.0.0</Badge>
-
- (BPIIFW-312) FISF-2415 [Suprema UK][TouchStar] get Operator 사용 이슈 - 발생버전: V1.0.0
-
 1. SDK에서 getOperator 함수 사용 시 데이터베이스가 마이그레이션되지 않는 문제 <Badge>1.0.0</Badge>
-
-1. The database does not migrate when using the getOperator function in the SDK. <Badge>1.0.0</Badge>
-
- (BPIIFW-319) GSDK로 customsmart card의 key값이 보이는 이슈 - 발생버전: V1.5.1
 
 1. G-SDK를 사용하여 스마트 카드 설정 정보를 가져올 때 카드의 일부 키 값이 마스킹 처리되지 않는 문제 <Badge>1.5.1</Badge>
 
-1. Some key values of the smart card are not masked when retrieving the card settings information using the G-SDK. <Badge>1.5.1</Badge>
-
- (BPIIFW-336) FISF-2438 DST 적용 시 Schedule(Daily)에 따른 Access Group 인증 성공 이상 동작 - 발생버전: V1.0.0
-
 1. 일광절약시간(DST) 적용 시 출입 그룹 인증이 스케줄에 따라 비정상적으로 작동하는 문제 <Badge>1.0.0</Badge>
-
-1. Access group authentication behaves abnormally according to the schedule (Daily) when DST is applied. <Badge>1.0.0</Badge>
-
- (BPIIFW-271) DesFire Custom Smart Card key 레이아웃을 Secondary Key로 설정 시 CSN 으로 인식 - 발생버전: V1.5.1
 
 1. **커스텀 스마트 카드 레이아웃**이 **보조 사이트 키**로 설정된 DESFire 스마트 카드가 CSN 카드로 인식되는 문제 <Badge>1.5.1</Badge>
 
-1. DESFire smart cards with the **Custom Smart Card Layout** set to **Secondary Key** are recognized as CSN cards. <Badge>1.5.1</Badge>
-
- (BPIIFW-259) OSDP 연결 & RS485-Slave 모드 상태에서 Custom Smartcard layout 변경 후 장치 상세 정보창 진입 시 'None'으로 표시 - 발생버전: V1.5.1
-
 1. **RS-485** 모드가 **슬레이브**로 설정된 상태에서 장치의 **커스텀 스마트 카드 레이아웃**과 **바이트 순서**가 설정한대로 저장되지 않는 문제 <Badge>1.5.1</Badge>
-
-1. When the **RS-485** mode is set to **Slave**, the **Custom Smart Card Layout** and **Byte Order** of the device are not saved as set. <Badge>1.5.1</Badge>
-
- (BPIIFW-260) RS485-Slave 모드 상태에서 Custom Smartcard 옵션 미표시 - 발생버전: V1.5.1
 
 1. **RS-485** 모드가 **슬레이브**로 설정된 상태에서 장치 상세 페이지에서 **커스텀 스마트 카드** 옵션이 보이지 않는 문제 <Badge>1.5.1</Badge>
 
-1. **Custom Smart Card** option does not appear on the device detail page when **RS-485** mode is set to **Slave**. <Badge>1.5.1</Badge>
-
- (BPIIFW-276) [카드 2장 이상 등록된 상태] 두번째 등록된 Card로 위겐드 리더에 인증시 첫번째 등록된 카드ID로 출력되는 문제 - 발생버전: V1.5.1
-
 1. 카드가 2개 이상 등록되어있는 사용자가 Wiegand 출력 장치에 카드 인증 시 인증한 카드가 아닌 다른 카드의 ID가 출력되는 문제 <Badge>1.5.1</Badge>
-
-1. When a user with more than two cards enrolled attempts card authentication to the Wiegand output device, the ID of a card other than the authenticated card is output. <Badge>1.5.1</Badge>
-
- (BPIIFW-232) Suprema Smart Card 레이아웃에 Primary Key만 설정되어 있고 Custom Smart Card 레이아웃에 Secondary Key만 설정된 상태에서 - 발생버전: V1.5.1
 
 1. **슈프리마 스마트 카드 레이아웃**에 **기본 사이트 키**만 설정되어 있고, **커스텀 스마트 카드 레이아웃**에 **보조 사이트 키**만 설정된 상태에서 장치를 재시작할 경우, 장치가 커스텀 스마트 카드를 CSN 카드로 인식하는 문제 <Badge>1.5.1</Badge>
 
-1. When the device is restarted with the **Primary Key** set only in the **Suprema Smart Card Layout** and the **Secondary Key** set only in the **Custom Smart Card Layout**, the device recognizes the Custom Smart Card as a CSN card. <Badge>1.5.1</Badge>
-
- (BPIIFW-314) Lift로 구성된 Schedule Unlock Zone을 시작, Slave 연결을 끊고 Schedule Unlock Zone 종료 후 Slave 연결 시 Schedule Unlock Zone에 의한 Relay On이 되는 현상 - 발생버전: V1.0.0
-
 1. 엘리베이터에 **스케줄 개방**이 설정된 상태에서 슬레이브 장치의 RS-485 연결이 해제되고, **스케줄 개방**이 종료된 후 슬레이브 장치가 다시 연결되었을 때 릴레이가 잠금으로 동작하지 않는 문제 <Badge>1.0.0</Badge>
-
-1. When the elevator is set to **Schedule Unlock**, if the RS-485 connection of the slave device is disconnected and then reconnected after the **Schedule Unlock** ends, the relay does not operate as locked. <Badge>1.0.0</Badge>
-
- (BPIIFW-247) 커스텀 스마트 카드 read 부분에서 File Read Key 설정이 '0' 아 아니면 File Read Key 로 먼저 authentication 하도록 수정필요 - 발생버전: V1.5.1
 
 1. **DESFire 고급 설정**을 사용하여 설정된 커스텀 스마트 카드가 인식에 실패하는 문제 <Badge>1.5.1</Badge>
 
-1. Custom smart cards with the **DESFire Advanced** option enabled fail to be recognized. <Badge>1.5.1</Badge>
-
- (BPIIFW-166) custom smartcard 일괄 편집 시 설정한 레이아웃으로 적용 안됨 - 발생버전: V1.5.1
-
 1. **일괄 편집**으로 설정한 **커스텀 스마트 카드 레이아웃**이 장치 상세 페이지에서 적용되지 않는 문제 <Badge>1.5.1</Badge>
-
-1. **Custom Smart Card Layout** set through **Batch Edit** is not applied on the device detail page. <Badge>1.5.1</Badge>
-
- (BPIIFW-206) GetLogExt 종료 조건 수정 - 발생버전: V1.4.4
 
 1. 장치에 로그가 가득 찬 상태에서 새로운 이벤트가 발생하는 경우 새로 생성된 이벤트와 함께 의도치 않은 로그를 가져오는 문제 <Badge>1.4.4</Badge>
 
-1. When the device log is full and a new event occurs, unintended logs are retrieved with the newly generated event. <Badge>1.4.4</Badge>
-
- (BPIIFW-201) [Device SDK] CustomSmart Card 지원 장치 Get device capabilities 시 CustomCard항목 'False'로 표시 - 발생버전: V1.5.1
-
 1. SDK에서 BS2_GetDeviceCapabilities 함수를 이용해 장치에서 지원하는 정보를 불러올 때 커스텀 스마트 카드를 지원하는 장치임에도 CustomClassicPlus와 CustomDesFireEV1 항목이 False로 표시되는 문제 <Badge>1.5.1</Badge>
-
-1. When using the BS2_GetDeviceCapabilities function in the SDK to get information supported by the device, the CustomClassicPlus and CustomDesFireEV1 are displayed as False though the device supports custom smart cards. <Badge>1.5.1</Badge>
-
- (BPIIFW-128) 네트워크 설정 변경 후 장치 REBOOT - 발생버전: V1.0.0
 
 1. BioStar 2에서 장치의 네트워크 설정을 변경하면 장치가 재시작되는 문제 <Badge>1.0.0</Badge>
 
-1. Device abnormally restarts when changing the device’s Network settings in BioStar 2. <Badge>1.0.0</Badge>
-
- (BPIIFW-272) BS2_GetDeviceCapabilities에서 장치별 결과가 Spec과 다른 이슈 - 발생버전: V1.0.0
-
 1. Device SDK에서 BS2_GetDeviceCapabilities API를 사용하여 장치 기능(Capability) 정보를 가져올 때, 얼굴 인증을 지원하지 않는 장치임에도 maxFacePerUser 값이 잘못 표시되는 문제 <Badge>1.0.0</Badge>
-
-1. Incorrect maxFacePerUser value being returned for devices lacking face authentication support when retrieving device capabilities via the BS2_GetDeviceCapabilities API. <Badge>1.0.0</Badge>
-
- (BPIIFW-165) [iClass] SmartCard Type에서 SR/SE 체크/언체크 상관없이 발급된 정보로 리드되는 문제 - 발생버전: V1.4.1
 
 1. 일부 카드가 **슈프리마 스마트 카드** 옵션에서 설정한 것과 다르게 인식되는 문제 <Badge>1.4.1</Badge>
 
-1. Some cards are recognized differently from the settings in the **Suprema Smart Card** option. <Badge>1.4.1</Badge>
-
- (BPIIFW-339) Slave로 Master Admin 적용 장치가 연결된 경우 해당 장치의 장치 상세 정보창 진입시 지원하지 않는 요청 팝업 발생되며 설정변경 불가
-
-1. 
-
- (BPIIFW-289) [BDP-990] Relay가 Locked 되어 있을 때, 인증 시 인증 실패 처리하기
- (BPIIFW-292) [BDP-962] Real Time Status of all devices connected BioStar3
+1. 슬레이브로 연결된 **마스터 관리자** 지원 장치의 상세 페이지에 진입할 때, 오류 팝업이 발생하며 설정을 변경할 수 없는 문제 <Badge>?.?.?</Badge>
 
 </BugLists>
