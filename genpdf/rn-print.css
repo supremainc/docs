@@ -1,0 +1,26 @@
+@prince-pdf {
+  -prince-pdf-page-layout: single-page;
+  -prince-pdf-page-mode: show-bookmarks;
+  -prince-pdf-open-action: zoom(fit-page);
+  -prince-bookmark-state: closed;
+  -prince-shrink-to-fit: none;
+  -prince-image-resolution: 300dpi;        /* set an explicit DPI */
+  -prince-image-resolution: normal;        /* 1 image pixel maps to 1px unit */
+  -prince-image-resolution: auto, normal;  /* auto-detect, fallback to normal */
+  -prince-image-resolution: auto, 96dpi;   /* auto-detect, fallback to 96dpi */
+}
+
+@page:first {
+  @bottom-center { content: normal !important;}
+}
+
+@media print {
+  .doc-section h1 { -prince-bookmark-level: none }
+  .doc-section h2 { -prince-bookmark-level: 1 }
+  .toc h2 { -prince-bookmark-level: none }
+  .doc-section h3 { -prince-bookmark-level: none }
+  .doc-section h4 { -prince-bookmark-level: none }
+  .doc-section .next-step h4 { -prince-bookmark-level: none }
+  .doc-section h5 { -prince-bookmark-level: none }
+  .doc-section h6 { -prince-bookmark-level: none }
+}

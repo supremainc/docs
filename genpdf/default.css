@@ -117,10 +117,31 @@ header p {
   padding-bottom: 8.5pt;
 }
 
+.toc.releasenotes > ul ul {
+  flex-wrap: wrap;
+  display: flex;
+  margin: 0 calc(1rem * -1);
+}
+
+.toc.releasenotes > ul ul > li {
+  flex: 0 0 calc(6/12*100%);
+  width: calc(6/12*100%);
+  padding: 0 1rem;
+}
+
 .toc.releasenotes > ul ul li a {
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  border-bottom: 1px solid #333 !important;
   color: #000;
   border-bottom: none;
   font-weight: 400;
+}
+
+.toc.releasenotes > ul ul li a::before {
+  content: "📄️";
+  margin-right: 5px;
 }
 
 .toc > ul ul li ul li a {
@@ -1176,7 +1197,9 @@ span.text-blue-500 {
     content: target-counter(attr(href), page);
     float: right;
   }
-
+  .toc.releasenotes a::after {
+    content: none;
+  }
   .toc ul ul li {
     break-inside: avoid;
   }

@@ -56,7 +56,13 @@ if "%PRODUCT_TYPE%"=="RN" (
 
 @REM PDF 변환 단계
 REM prince ./pdf/front-cover.html ./pdf/document.html -o ./pdf/temp.pdf
-prince ./pdf/front-cover.html ./pdf/document.html -o ./pdf/temp.pdf
+if "%PRODUCT_TYPE%"=="RN" (
+  prince ./pdf/front-cover.html ./pdf/document.html -o ./pdf/temp.pdf --style=./genpdf/rn-print.css
+) else if "%PRODUCT_TYPE%"=="Firmware Release Notes" (
+  prince ./pdf/front-cover.html ./pdf/document.html -o ./pdf/temp.pdf --style=./genpdf/rn-print.css
+) else (
+  prince ./pdf/front-cover.html ./pdf/document.html -o ./pdf/temp.pdf --style=./genpdf/print.css
+)
 @REM 불필요한 주석 제거 명령
 pdfcpu annot remove -pages 1 ./pdf/temp.pdf Popup Text
 @REM 최종 PDF 병합
