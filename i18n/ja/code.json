@@ -563,6 +563,18 @@
   "specs.general.material": {
     "message": "材質"
   },
+  "specs.general.dimensions": {
+    "message": "寸法 (W x H x D)"
+  },
+  "specs.general.weight": {
+    "message": "重量"
+  },
+  "specs.general.weight.device": {
+    "message": "機器"
+  },
+  "specs.general.weight.bracket": {
+    "message": "ブラケット"
+  },
   "specs.storage": {
     "message": "ストレージ"
   },

@@ -563,6 +563,18 @@
   "specs.general.material": {
     "message": "Material"
   },
+  "specs.general.dimensions": {
+    "message": "Dimensions (W x H x D)"
+  },
+  "specs.general.weight": {
+    "message": "Weight"
+  },
+  "specs.general.weight.device": {
+    "message": "Device"
+  },
+  "specs.general.weight.bracket": {
+    "message": "Bracket"
+  },
   "specs.storage": {
     "message": "Capacity"
   },
