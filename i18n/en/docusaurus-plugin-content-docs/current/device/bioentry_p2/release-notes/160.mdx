@@ -1,0 +1,91 @@
+---
+id: 160
+title: Firmware Version 1.6.0
+---
+
+# Firmware Version 1.6.0 (Build No. 1.6.0_260212)
+
+Release<Separator/>2026-03-13
+
+:::caution
+
+- After upgrading the firmware to v1.5.1 or later, it is not able to downgrade to an earlier version of the firmware.
+
+- BEP2-OA type of BioEntry P2 model support HID iCLASS card type through SE processor.<br/>For devices with the new SE processor, after upgrading the firmware to v1.4.4 or later, you cannot downgrade to a lower version and downgrade the firmware customized in the lower version. Devices with existing SE processor can be downgraded to a lower version.
+
+- For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Added identification code to support recognition of the latest cards.
+   * DESFire EV3
+
+1. Improved time synchronization behavior between server and devices.
+
+1. Supports feature to set the baud rate of slave devices.
+
+1. Improved to distinguish devices that support the **Secure Tamper** feature.
+
+1. Supports the **Ignore Repeated Signals Duration** feature, which ignores repetitive authentication signals from the controller when the device is connected to a 3rd party controller via Wiegand.
+
+1. Supports not logging events when the **Ignore Repeated Signals Duration** feature is activated.
+
+1. Supports SL1, SL3, and SL1/SL3 Mix Mode for security level compatibility with MIFARE Plus EV1 cards.
+   * SL1: Compatible mode with MIFARE Classic
+   * SL3: Advanced security mode based on AES
+
+1. Improved to not recognize SEOS configuration cards as CSN for 1 minute after device booting.
+
+1. Improved so that when authentication is attempted on a door set to **Manual Lock**, an authentication failure event occurs and a locked message appears.
+
+1. Supports real-time monitoring of the device's multiple statuses in BioStar X.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Some smart cards fail to be recognized in environments using the new SE chip firmware. <Badge>1.4.4</Badge>
+
+1. Authentication fails with a ‘period expired’ message when using a smart card issued with a visual face included. <Badge>1.0.0</Badge>
+
+1. The database does not migrate when using the getOperator function in the SDK. <Badge>1.0.0</Badge>
+
+1. Some key values of the smart card are not masked when retrieving the card settings information using the G-SDK. <Badge>1.5.1</Badge>
+
+1. Access group authentication behaves abnormally according to the schedule (Daily) when DST is applied. <Badge>1.0.0</Badge>
+
+1. DESFire smart cards with the **Custom Smart Card Layout** set to **Secondary Key** are recognized as CSN cards. <Badge>1.5.1</Badge>
+
+1. When the **RS-485** mode is set to **Slave**, the **Custom Smart Card Layout** and **Byte Order** of the device are not saved as set. <Badge>1.5.1</Badge>
+
+1. **Custom Smart Card** option does not appear on the device detail page when **RS-485** mode is set to **Slave**. <Badge>1.5.1</Badge>
+
+1. When a user with more than two cards enrolled attempts card authentication to the Wiegand output device, the ID of a card other than the authenticated card is output. <Badge>1.5.1</Badge>
+
+1. When the device is restarted with the **Primary Key** set only in the **Suprema Smart Card Layout** and the **Secondary Key** set only in the **Custom Smart Card Layout**, the device recognizes the Custom Smart Card as a CSN card. <Badge>1.5.1</Badge>
+
+1. When the elevator is set to **Schedule Unlock**, if the RS-485 connection of the slave device is disconnected and then reconnected after the **Schedule Unlock** ends, the relay does not operate as locked. <Badge>1.0.0</Badge>
+
+1. Custom smart cards with the **DESFire Advanced** option enabled fail to be recognized. <Badge>1.5.1</Badge>
+
+1. **Custom Smart Card Layout** set through **Batch Edit** is not applied on the device detail page. <Badge>1.5.1</Badge>
+
+1. When the device log is full and a new event occurs, unintended logs are retrieved with the newly generated event. <Badge>1.4.4</Badge>
+
+1. When using the BS2_GetDeviceCapabilities function in the SDK to get information supported by the device, the CustomClassicPlus and CustomDesFireEV1 are displayed as False though the device supports custom smart cards. <Badge>1.5.1</Badge>
+
+1. Device abnormally restarts when changing the device’s Network settings in BioStar 2. <Badge>1.0.0</Badge>
+
+1. Incorrect maxFacePerUser value being returned for devices lacking face authentication support when retrieving device capabilities via the BS2_GetDeviceCapabilities API. <Badge>1.0.0</Badge>
+
+1. Some cards are recognized differently from the settings in the **Suprema Smart Card** option. <Badge>1.4.1</Badge>
+
+1. The error popup appears and prevents configuration changes when accessing the device detail page of a slave device that supports **Master Admin**. <Badge>?.?.?</Badge>
+
+</BugLists>
