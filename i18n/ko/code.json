@@ -569,6 +569,12 @@
   "specs.general.weight": {
     "message": "무게"
   },
+  "specs.general.weight.device": {
+    "message": "장치"
+  },
+  "specs.general.weight.bracket": {
+    "message": "브래킷"
+  },
   "specs.storage": {
     "message": "저장 용량"
   },

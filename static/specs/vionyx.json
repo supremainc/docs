@@ -62,7 +62,7 @@
             "model2": {
               "label": "브래킷",
               "label_id": "specs.general.weight.bracket",
-              "value": "155.5 x 155.5 x TBD (mm)"
+              "value": "155.5 x 155.5 (mm)"
             }
           }
         },
