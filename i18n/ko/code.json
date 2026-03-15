@@ -752,6 +752,48 @@
   "specs.backup_battery.capacity": {
     "message": "용량"
   },
+  "specs.general.extended_memory": {
+    "message": "확장 메모리"
+  },
+  "specs.camera": {
+    "message": "카메라"
+  },
+  "specs.camera.image_sensor": {
+    "message": "이미지 센서"
+  },
+  "specs.camera.lens": {
+    "message": "렌즈"
+  },
+  "specs.camera.fov": {
+    "message": "시야각 (FOV)"
+  },
+  "specs.camera.min_illumination": {
+    "message": "최저 조도"
+  },
+  "specs.camera.zoom": {
+    "message": "줌 및 PTZ"
+  },
+  "specs.camera.ir_led": {
+    "message": "IR LED"
+  },
+  "specs.video_audio": {
+    "message": "비디오 및 오디오"
+  },
+  "specs.video_audio.video_compression": {
+    "message": "비디오 압축"
+  },
+  "specs.video_audio.wdr": {
+    "message": "WDR"
+  },
+  "specs.video_audio.audio": {
+    "message": "오디오"
+  },
+  "specs.interface.alarm": {
+    "message": "알람"
+  },
+  "specs.interface.audio": {
+    "message": "오디오"
+  },
   "externalLinks.FaceStation2.desc": {
     "message": "얼굴인증 출입근태 단말기"
   },
