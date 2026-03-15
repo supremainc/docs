@@ -564,7 +564,7 @@
     "message": "재질"
   },
   "specs.general.dimensions": {
-    "message": "치수 (W x H x D)"
+    "message": "크기 (W x H x D)"
   },
   "specs.general.weight": {
     "message": "무게"
