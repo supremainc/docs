@@ -1698,21 +1698,8 @@ const sidebars = {
         'device/vionyx/safety-instructions',
         'device/vionyx/getting-started',
         'device/vionyx/installation',
-        {
-          type: 'category',
-          label: '사용하기',
-          link: {
-            type: 'doc',
-            id: 'device/vionyx/using-device',
-          },
-          items: [
-            'device/vionyx/admin-menu',
-            'device/vionyx/user',
-            'device/vionyx/authentication',
-            'device/vionyx/settings',
-            'device/vionyx/event-log',
-          ],
-        },
+        'device/vionyx/web-server-settings',
+        'device/vionyx/maintenance',
         'device/vionyx/troubleshooting',
         'device/vionyx/product-specifications',
         'device/vionyx/regulatory-information',
