@@ -49,6 +49,45 @@
             "ja": "0 % ~ 90 %（結露なきこと）"
           }
         },
+        "dimensions": {
+          "label": "치수",
+          "label_id": "specs.general.dimensions",
+          "type": "model",
+          "items": {
+            "model1": {
+              "label": "장치",
+              "label_id": "specs.general.weight.device",
+              "value": "155.5 x 155.5 x 68.9 (mm)"
+            },
+            "model2": {
+              "label": "브래킷",
+              "label_id": "specs.general.weight.bracket",
+              "value": "155.5 x 155.5 x TBD (mm)"
+            }
+          }
+        },
+        "weight": {
+          "label": "무게",
+          "label_id": "specs.general.weight",
+          "type": "model",
+          "items": {
+            "model1": {
+              "label": "장치",
+              "label_id": "specs.general.weight.device",
+              "value": "TBD g"
+            },
+            "model2": {
+              "label": "브래킷",
+              "label_id": "specs.general.weight.bracket",
+              "value": {
+                "ko": "TBD g (와셔 및 볼트 포함)",
+                "en": "TBD g (including washers and bolts)",
+                "es": "TBD g (incluye arandelas y tornillos)",
+                "ja": "TBD g (ワッシャーおよびボルトを含む)"
+              }
+            }
+          }
+        },
         "ip_rating": {
           "label": "IP 등급",
           "label_id": "specs.general.ip_rating",

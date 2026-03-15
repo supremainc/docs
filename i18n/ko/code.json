@@ -563,6 +563,12 @@
   "specs.general.material": {
     "message": "재질"
   },
+  "specs.general.dimensions": {
+    "message": "크기 (W x H x D)"
+  },
+  "specs.general.weight": {
+    "message": "무게"
+  },
   "specs.storage": {
     "message": "저장 용량"
   },
