@@ -869,7 +869,7 @@ function InDoc({ children, product, pages, type, ref, lang }) {
     const location = (0,react_router/* .useLocation */.zy)();
     if (product) {
         const prods = Array.isArray(product) ? product : product.split(',');
-        const cProd = currentLocale === "ko" ? location.pathname.split("/")[2] : location.pathname.split("/")[3];
+        const cProd = currentLocale === "ko" ? location.pathname.split("/")[3] : location.pathname.split("/")[4];
         const isProduct = prods.includes(cProd.replace('_ul', ''));
         return isProduct ? /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* ["default"] */.A, {
             children: children
@@ -907,7 +907,7 @@ function XcludeDoc({ children, product, pages, lang }) {
     const location = (0,react_router/* .useLocation */.zy)();
     if (product) {
         const prods = Array.isArray(product) ? product : product.split(',');
-        const cProd = currentLocale === "ko" ? location.pathname.split("/")[2] : location.pathname.split("/")[3];
+        const cProd = currentLocale === "ko" ? location.pathname.split("/")[3] : location.pathname.split("/")[4];
         const isProduct = prods.includes(cProd.replace('_ul', ''));
         return isProduct ? null : /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* ["default"] */.A, {
             children: children

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["96074"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["70106"], {
 43464: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   A: () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -483,6 +483,1285 @@ function Admonition(unprocessedProps) {
 
 
 }),
+59932: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  A: () => (/* binding */ DocItemLayout)
+});
+
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(74848);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(96540);
+// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.mjs
+var clsx = __webpack_require__(39836);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/hooks/useWindowSize.js
+var useWindowSize = __webpack_require__(3738);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/doc.js
+var doc = __webpack_require__(68729);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocItem/Paginator/index.js + 1 modules
+var Paginator = __webpack_require__(75383);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocVersionBanner/index.js
+var DocVersionBanner = __webpack_require__(4825);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocVersionBadge/index.js
+var DocVersionBadge = __webpack_require__(50514);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/ThemeClassNames.js
+var ThemeClassNames = __webpack_require__(16364);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Translate.js + 1 modules
+var Translate = __webpack_require__(43789);
+;// CONCATENATED MODULE: ./src/components/Feedback/constants/index.js
+/**
+ * 피드백 시스템 공통 상수 및 설정
+ */ // Google Forms 설정
+const FEEDBACK_CONFIG = {
+    GOOGLE_FORM_ID: '1FAIpQLSc80m8XWDnKO3XJ9ZZ_hJ9iZVcYocu6XjdsGgOwC1vvh_IuxA',
+    ENTRY_IDS: {
+        FEEDBACK_TYPE: 'entry.1129679087',
+        PAGE_URL: 'entry.23458126',
+        DETAIL_CONTENT: 'entry.1070297166'
+    },
+    FORM_FIELDS: {
+        FVV: '1',
+        PAGE_HISTORY: '0'
+    }
+};
+// 피드백 유형 정의
+const FEEDBACK_TYPES = {
+    POSITIVE: 'positive',
+    NEGATIVE: 'negative'
+};
+// 제출 상태 정의
+const SUBMIT_STATUS = {
+    IDLE: 'idle',
+    SUCCESS: 'success',
+    ERROR: 'error',
+    VALIDATION_ERROR: 'validation-error'
+};
+// 피드백 텍스트 매핑
+const FEEDBACK_TEXT_MAP = {
+    [FEEDBACK_TYPES.POSITIVE]: '😊 Good',
+    [FEEDBACK_TYPES.NEGATIVE]: '😫 Bad'
+};
+// 기본 메시지 
+const DEFAULT_MESSAGES = {
+    NEGATIVE_NO_DETAIL: '구체적인 개선 사항은 작성되지 않았습니다.',
+    POSITIVE_QUICK: '빠른 긍정 피드백 (추가 의견 없음)',
+    NO_COMMENT: '추가 의견 없음'
+};
+// 텍스트영역 설정
+const TEXTAREA_CONFIG = {
+    MAX_LENGTH: 1000,
+    ROWS: 4
+};
+// 타이밍 설정
+const TIMING_CONFIG = {
+    SUCCESS_AUTO_CLOSE: 2000,
+    SUCCESS_DISPLAY_TIME: 3000 // 데스크탑용 표시 시간
+};
+// 상태 검증 함수들
+const STATUS_CHECKS = (/* unused pure expression or super */ null && ({
+    isIdle: (status)=>status === SUBMIT_STATUS.IDLE,
+    isSuccess: (status)=>status === SUBMIT_STATUS.SUCCESS,
+    isError: (status)=>status === SUBMIT_STATUS.ERROR,
+    isValidationError: (status)=>status === SUBMIT_STATUS.VALIDATION_ERROR,
+    isSubmitting: (status, isSubmitting)=>isSubmitting
+}));
+/**
+ * Google Forms 제출 URL 생성
+ * @param {string} formId - Google Form ID
+ * @returns {string} 완전한 제출 URL
+ */ function createSubmitUrl(formId = FEEDBACK_CONFIG.GOOGLE_FORM_ID) {
+    return `https://docs.google.com/forms/d/e/${formId}/formResponse`;
+}
+/**
+ * 피드백 유형에 따른 텍스트 반환
+ * @param {string} type - 피드백 유형 ('positive' | 'negative')
+ * @returns {string} 피드백 텍스트
+ */ function getFeedbackText(type) {
+    return FEEDBACK_TEXT_MAP[type] || '';
+}
+/**
+ * 상세 내용 처리 로직
+ * @param {string} detailText - 사용자 입력 텍스트
+ * @param {string} feedbackType - 피드백 유형
+ * @returns {string} 처리된 상세 내용
+ */ function processDetailContent(detailText, feedbackType) {
+    const trimmedText = detailText.trim();
+    if (!trimmedText && feedbackType === FEEDBACK_TYPES.NEGATIVE) {
+        return DEFAULT_MESSAGES.NEGATIVE_NO_DETAIL;
+    } else if (!trimmedText && feedbackType === FEEDBACK_TYPES.POSITIVE) {
+        return DEFAULT_MESSAGES.POSITIVE_QUICK;
+    } else {
+        return trimmedText || DEFAULT_MESSAGES.NO_COMMENT;
+    }
+}
+
+;// CONCATENATED MODULE: ./src/components/Feedback/hooks/useFeedback.js
+
+
+/**
+ * 피드백 기능을 위한 공통 커스텀 훅
+ * @param {Object} config - 설정 객체
+ * @param {string} config.googleFormId - Google Form ID
+ * @param {string} config.feedbackTypeEntryId - 피드백 유형 필드 ID
+ * @param {string} config.pageUrlEntryId - 페이지 URL 필드 ID  
+ * @param {string} config.detailEntryId - 상세 내용 필드 ID
+ * @param {Function} config.onSuccess - 성공 콜백
+ * @param {Function} config.onReset - 초기화 콜백
+ */ function useFeedback({ googleFormId = FEEDBACK_CONFIG.GOOGLE_FORM_ID, feedbackTypeEntryId = FEEDBACK_CONFIG.ENTRY_IDS.FEEDBACK_TYPE, pageUrlEntryId = FEEDBACK_CONFIG.ENTRY_IDS.PAGE_URL, detailEntryId = FEEDBACK_CONFIG.ENTRY_IDS.DETAIL_CONTENT, onSuccess, onReset } = {}) {
+    // 공통 상태
+    const [feedbackType, setFeedbackType] = (0,react.useState)(null);
+    const [detailText, setDetailText] = (0,react.useState)('');
+    const [isSubmitting, setIsSubmitting] = (0,react.useState)(false);
+    const [submitStatus, setSubmitStatus] = (0,react.useState)(SUBMIT_STATUS.IDLE);
+    const [currentPageUrl, setCurrentPageUrl] = (0,react.useState)('');
+    // 페이지 URL 설정
+    (0,react.useEffect)(()=>{
+        if (typeof window !== 'undefined') {
+            setCurrentPageUrl(window.location.href);
+        }
+    }, []);
+    // 피드백 선택 핸들러
+    const handleFeedbackClick = (0,react.useCallback)((type)=>{
+        setFeedbackType(type);
+        setSubmitStatus(SUBMIT_STATUS.IDLE);
+    }, []);
+    // 초기화 함수
+    const resetFeedback = (0,react.useCallback)(()=>{
+        setFeedbackType(null);
+        setDetailText('');
+        setSubmitStatus(SUBMIT_STATUS.IDLE);
+        onReset?.();
+    }, [
+        onReset
+    ]);
+    // Google Forms 제출 로직
+    const submitToGoogleForms = (0,react.useCallback)(async ()=>{
+        try {
+            const formData = new FormData();
+            // 피드백 유형
+            const feedbackTypeText = getFeedbackText(feedbackType);
+            formData.append(feedbackTypeEntryId, feedbackTypeText);
+            // 페이지 URL
+            formData.append(pageUrlEntryId, currentPageUrl);
+            // 상세 내용
+            const processedContent = processDetailContent(detailText, feedbackType);
+            formData.append(detailEntryId, processedContent);
+            // 필수 필드들
+            formData.append('fvv', FEEDBACK_CONFIG.FORM_FIELDS.FVV);
+            formData.append('pageHistory', FEEDBACK_CONFIG.FORM_FIELDS.PAGE_HISTORY);
+            // Google Forms 제출 URL
+            const submitUrl = createSubmitUrl(googleFormId);
+            await fetch(submitUrl, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            });
+            return true;
+        } catch (error) {
+            console.error('Google Forms 제출 오류:', error);
+            return false;
+        }
+    }, [
+        feedbackType,
+        currentPageUrl,
+        detailText,
+        googleFormId,
+        feedbackTypeEntryId,
+        pageUrlEntryId,
+        detailEntryId
+    ]);
+    // 제출 핸들러
+    const handleSubmit = (0,react.useCallback)(async ()=>{
+        if (!feedbackType) return;
+        // 부정 피드백인 경우 상세 내용 필수 검증
+        if (feedbackType === FEEDBACK_TYPES.NEGATIVE && !detailText.trim()) {
+            setSubmitStatus(SUBMIT_STATUS.VALIDATION_ERROR);
+            return;
+        }
+        setIsSubmitting(true);
+        setSubmitStatus(SUBMIT_STATUS.IDLE);
+        const success = await submitToGoogleForms();
+        if (success) {
+            setSubmitStatus(SUBMIT_STATUS.SUCCESS);
+            onSuccess?.(feedbackType, detailText);
+        } else {
+            setSubmitStatus(SUBMIT_STATUS.ERROR);
+        }
+        setIsSubmitting(false);
+    }, [
+        feedbackType,
+        detailText,
+        submitToGoogleForms,
+        onSuccess
+    ]);
+    return {
+        // 상태
+        feedbackType,
+        detailText,
+        isSubmitting,
+        submitStatus,
+        currentPageUrl,
+        // 상태 업데이트
+        setFeedbackType,
+        setDetailText,
+        setSubmitStatus,
+        // 핸들러
+        handleFeedbackClick,
+        handleSubmit,
+        resetFeedback
+    };
+}
+
+;// CONCATENATED MODULE: ./src/components/Feedback/components/CommonComponents.js
+
+
+
+
+/**
+ * 피드백 버튼 컴포넌트
+ */ function FeedbackButtons({ feedbackType, onFeedbackClick, isSubmitting, styles, buttonClassName = '', containerClassName = '' }) {
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+        className: containerClassName,
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)("button", {
+                className: `${styles?.feedbackButton || 'feedback-button'} ${feedbackType === FEEDBACK_TYPES.POSITIVE ? styles?.active || 'active' : ''} ${buttonClassName}`,
+                onClick: ()=>onFeedbackClick(FEEDBACK_TYPES.POSITIVE),
+                disabled: isSubmitting,
+                "aria-label": "Positive feedback: Good",
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                        className: styles?.icon || 'icon',
+                        children: "\uD83D\uDE0A"
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                        children: (0,Translate/* .translate */.T)({
+                            id: 'feedback.components.feedbackTypeGood',
+                            message: '도움이 되었습니다.'
+                        })
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)("button", {
+                className: `${styles?.feedbackButton || 'feedback-button'} ${feedbackType === FEEDBACK_TYPES.NEGATIVE ? styles?.active || 'active' : ''} ${buttonClassName}`,
+                onClick: ()=>onFeedbackClick(FEEDBACK_TYPES.NEGATIVE),
+                disabled: isSubmitting,
+                "aria-label": "Negative feedback: Bad",
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                        className: styles?.icon || 'icon',
+                        children: "\uD83D\uDE2B"
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                        children: (0,Translate/* .translate */.T)({
+                            id: 'feedback.components.feedbackTypeBad',
+                            message: '개선이 필요합니다.'
+                        })
+                    })
+                ]
+            })
+        ]
+    });
+}
+/**
+ * 피드백 텍스트영역 컴포넌트
+ */ function FeedbackTextarea({ feedbackType, detailText, onDetailTextChange, isSubmitting, submitStatus, styles, className = '', showCharacterCount = true }) {
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+        className: className,
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)("label", {
+                htmlFor: "feedback-detail",
+                className: styles?.textareaLabel || 'textarea-label',
+                children: [
+                    (0,Translate/* .translate */.T)({
+                        id: 'feedback.components.feedbackDetail',
+                        message: '평가에 대해 자세히 알려주세요.'
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                        className: styles?.required || 'required',
+                        children: feedbackType === FEEDBACK_TYPES.NEGATIVE ? (0,Translate/* .translate */.T)({
+                            id: 'feedback.components.required',
+                            message: '(필수)'
+                        }) : (0,Translate/* .translate */.T)({
+                            id: 'feedback.components.optional',
+                            message: '(선택사항)'
+                        })
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("textarea", {
+                id: "feedback-detail",
+                className: styles?.feedbackTextarea || 'feedback-textarea',
+                placeholder: feedbackType === FEEDBACK_TYPES.NEGATIVE ? (0,Translate/* .translate */.T)({
+                    id: 'feedback.component.feedbackTextarea.negativePlaceholder',
+                    message: '문서에 문제점을 상세히 작성해 주시면 만족할 수 있도록 반영하겠습니다.'
+                }) : (0,Translate/* .translate */.T)({
+                    id: 'feedback.component.feedbackTextarea.positivePlaceholder',
+                    message: '개선이 필요한 부분이나 추가 의견을 자유롭게 작성해 주세요.'
+                }),
+                value: detailText,
+                onChange: (e)=>onDetailTextChange(e.target.value),
+                disabled: isSubmitting,
+                rows: TEXTAREA_CONFIG.ROWS,
+                maxLength: TEXTAREA_CONFIG.MAX_LENGTH,
+                required: feedbackType === FEEDBACK_TYPES.NEGATIVE,
+                "aria-describedby": "feedback-privacy-note"
+            }),
+            showCharacterCount && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                className: styles?.characterCount || 'character-count',
+                children: [
+                    detailText.length,
+                    " / ",
+                    TEXTAREA_CONFIG.MAX_LENGTH,
+                    feedbackType === FEEDBACK_TYPES.NEGATIVE && detailText.trim().length === 0 && /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                        className: styles?.requiredNote || 'required-note',
+                        children: (0,Translate/* .translate */.T)({
+                            id: 'feedback.component.requiredNote',
+                            message: '* 필수 입력'
+                        })
+                    })
+                ]
+            }),
+            submitStatus === 'validation-error' && /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                className: styles?.errorMessage || 'error-message',
+                role: "alert",
+                children: (0,Translate/* .translate */.T)({
+                    id: 'feedback.components.validationError',
+                    message: '개선이 필요한 부분에 대한 상세한 의견을 작성해 주세요.'
+                })
+            })
+        ]
+    });
+}
+/**
+ * 성공 메시지 컴포넌트
+ */ function SuccessMessage({ styles, className = '' }) {
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+        className: `${styles?.successMessage || 'success-message'} ${className}`,
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                className: styles?.successIcon || 'success-icon',
+                children: "✓"
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                children: (0,Translate/* .translate */.T)({
+                    id: 'feedback.components.thanksForFeedback',
+                    message: '피드백을 제출해 주셔서 감사합니다.'
+                })
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                className: styles?.successSubtext || 'success-subtext',
+                children: (0,Translate/* .translate */.T)({
+                    id: 'feedback.components.successSubtext',
+                    message: '귀하의 의견은 문서 개선에 소중하게 활용됩니다.'
+                })
+            })
+        ]
+    });
+}
+/**
+ * 에러 메시지 컴포넌트
+ */ function ErrorMessage({ styles, className = '' }) {
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+        className: `${styles?.errorMessage || 'error-message'} ${className}`,
+        role: "alert",
+        children: (0,Translate/* .translate */.T)({
+            id: 'feedback.components.errorMessage',
+            message: '피드백 제출 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.'
+        })
+    });
+}
+/**
+ * 제출 버튼 컴포넌트
+ */ function SubmitButton({ isSubmitting, disabled, onClick, feedbackType, detailText, styles, className = '', children }) {
+    const isDisabled = disabled || isSubmitting || feedbackType === FEEDBACK_TYPES.NEGATIVE && !detailText.trim();
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
+        className: `${styles?.submitButton || 'submit-button'} ${className}`,
+        onClick: onClick,
+        disabled: isDisabled,
+        "aria-label": isSubmitting ? (0,Translate/* .translate */.T)({
+            id: 'feedback.components.quickSubmitButton.onGoing',
+            message: '제출 중...'
+        }) : (0,Translate/* .translate */.T)({
+            id: 'feedback.component.feedbackCompletedMessage',
+            message: '피드백 제출'
+        }),
+        children: children || /*#__PURE__*/ (0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
+            children: isSubmitting ? /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                        className: styles?.spinner || 'spinner',
+                        "aria-hidden": "true"
+                    }),
+                    (0,Translate/* .translate */.T)({
+                        id: 'feedback.components.quickSubmitButton.onGoing',
+                        message: '제출 중...'
+                    })
+                ]
+            }) : (0,Translate/* .translate */.T)({
+                id: 'feedback.component.feedbackCompletedMessage',
+                message: '피드백 제출'
+            })
+        })
+    });
+}
+/**
+ * 빠른 제출 버튼 컴포넌트 (긍정 피드백용)
+ */ function QuickSubmitButton({ isSubmitting, onClick, styles, className = '' }) {
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+        className: styles?.quickSubmitSection || 'quick-submit-section',
+        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
+            className: `${styles?.quickSubmitButton || 'quick-submit-button'} ${className}`,
+            onClick: onClick,
+            disabled: isSubmitting,
+            children: isSubmitting ? (0,Translate/* .translate */.T)({
+                id: 'feedback.components.quickSubmitButton.onGoing',
+                message: '제출 중...'
+            }) : (0,Translate/* .translate */.T)({
+                id: 'feedback.components.quickSubmitButton.idle',
+                message: '빠른 제출 (추가 의견 없음)'
+            })
+        })
+    });
+}
+
+;// CONCATENATED MODULE: ./src/components/Feedback/mobile.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const mobile_module = ({"feedbackWidget":"feedbackWidget_j3Il","feedbackTitle":"feedbackTitle_R9ld","selectFeedback":"selectFeedback_eOBc","feedbackButton":"feedbackButton_EJI6","selected":"selected_xjMQ","icon":"icon_kAAf","modalOverlay":"modalOverlay_ulit","modalContent":"modalContent_ZSdd","modalHeader":"modalHeader_Lns1","modalTitle":"modalTitle_Zg5p","closeButton":"closeButton_FeHU","modalBody":"modalBody__5Db","modalDescription":"modalDescription_xFRy","selectedFeedback":"selectedFeedback_B07W","quickSubmitSection":"quickSubmitSection_AwZ_","quickSubmitButton":"quickSubmitButton_QWLE","feedbackForm":"feedbackForm_ux3G","textareaLabel":"textareaLabel_ADIZ","required":"required_c5Yi","feedbackTextarea":"feedbackTextarea_nNPm","characterCount":"characterCount_erCw","requiredNote":"requiredNote_jagi","modalActions":"modalActions_R6kp","submitButton":"submitButton_WnMz","cancelButton":"cancelButton_siXf","spinner":"spinner_iCEV","spin":"spin_moNT","successMessage":"successMessage_W4eg","successIcon":"successIcon_uDmE","successSubtext":"successSubtext_qs5F","errorMessage":"errorMessage_crz9","modalFooter":"modalFooter_Kdcd","privacyNote":"privacyNote_fn6F"});
+;// CONCATENATED MODULE: ./src/components/Feedback/mobile.js
+
+
+
+
+
+
+
+function MobileFeedback() {
+    // 모바일 전용 상태 (모달 관리)
+    const [isModalOpen, setIsModalOpen] = (0,react.useState)(false);
+    // 공통 피드백 로직
+    const { feedbackType, detailText, isSubmitting, submitStatus, setDetailText, handleFeedbackClick: baseFeedbackClick, handleSubmit, resetFeedback } = useFeedback({
+        onSuccess: ()=>{
+            // 모바일에서는 성공 시 자동 닫힘
+            setTimeout(()=>{
+                closeModal();
+            }, TIMING_CONFIG.SUCCESS_AUTO_CLOSE);
+        }
+    });
+    const handleFeedbackClick = (0,react.useCallback)((type)=>{
+        baseFeedbackClick(type);
+        setIsModalOpen(true);
+    }, [
+        baseFeedbackClick
+    ]);
+    const closeModal = (0,react.useCallback)(()=>{
+        setIsModalOpen(false);
+        resetFeedback();
+    }, [
+        resetFeedback
+    ]);
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                className: mobile_module.feedbackWidget,
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                        className: mobile_module.feedbackTitle,
+                        children: (0,Translate/* .translate */.T)({
+                            id: 'feedback.components.feedbackTitle',
+                            message: '이 페이지가 도움이 되었나요?'
+                        })
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)(FeedbackButtons, {
+                        feedbackType: feedbackType,
+                        onFeedbackClick: handleFeedbackClick,
+                        isSubmitting: isSubmitting,
+                        styles: mobile_module,
+                        containerClassName: mobile_module.selectFeedback
+                    })
+                ]
+            }),
+            isModalOpen && /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                className: mobile_module.modalOverlay,
+                onClick: closeModal,
+                children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                    className: mobile_module.modalContent,
+                    onClick: (e)=>e.stopPropagation(),
+                    children: [
+                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                            className: mobile_module.modalHeader,
+                            children: [
+                                /*#__PURE__*/ (0,jsx_runtime.jsxs)("h3", {
+                                    className: mobile_module.modalTitle,
+                                    children: [
+                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                            className: mobile_module.icon,
+                                            children: feedbackType === 'positive' ? '😊' : '😫'
+                                        }),
+                                        /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+                                            children: feedbackType === 'positive' ? (0,Translate/* .translate */.T)({
+                                                id: 'feedback.components.feedbackTypeGood',
+                                                message: '도움이 되었습니다.'
+                                            }) : (0,Translate/* .translate */.T)({
+                                                id: 'feedback.components.feedbackTypeBad',
+                                                message: '개선이 필요합니다.'
+                                            })
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
+                                    className: mobile_module.closeButton,
+                                    onClick: closeModal,
+                                    "aria-label": (0,Translate/* .translate */.T)({
+                                        id: 'theme.SearchModal.searchBox.cancelButtonText',
+                                        message: '취소'
+                                    }),
+                                    children: "\xd7"
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                            className: mobile_module.modalBody,
+                            children: [
+                                /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                                    className: mobile_module.modalDescription,
+                                    children: (0,Translate/* .translate */.T)({
+                                        id: 'feedback.components.feedbackDescription',
+                                        message: '귀하의 피드백은 문서 품질 향상에 큰 도움이 됩니다.'
+                                    })
+                                }),
+                                feedbackType === 'positive' && submitStatus !== 'success' && /*#__PURE__*/ (0,jsx_runtime.jsx)(QuickSubmitButton, {
+                                    isSubmitting: isSubmitting,
+                                    onClick: handleSubmit,
+                                    styles: mobile_module
+                                }),
+                                submitStatus !== 'success' && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                    className: mobile_module.feedbackForm,
+                                    children: [
+                                        /*#__PURE__*/ (0,jsx_runtime.jsx)(FeedbackTextarea, {
+                                            feedbackType: feedbackType,
+                                            detailText: detailText,
+                                            onDetailTextChange: setDetailText,
+                                            isSubmitting: isSubmitting,
+                                            submitStatus: submitStatus,
+                                            styles: mobile_module
+                                        }),
+                                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                            className: mobile_module.modalActions,
+                                            children: [
+                                                /*#__PURE__*/ (0,jsx_runtime.jsx)(SubmitButton, {
+                                                    isSubmitting: isSubmitting,
+                                                    disabled: isSubmitting || feedbackType === 'negative' && !detailText.trim(),
+                                                    onClick: handleSubmit,
+                                                    feedbackType: feedbackType,
+                                                    detailText: detailText,
+                                                    styles: mobile_module,
+                                                    className: mobile_module.submitButton
+                                                }),
+                                                /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
+                                                    className: mobile_module.cancelButton,
+                                                    onClick: closeModal,
+                                                    disabled: isSubmitting,
+                                                    children: (0,Translate/* .translate */.T)({
+                                                        id: 'theme.SearchModal.searchBox.cancelButtonText',
+                                                        message: '취소'
+                                                    })
+                                                })
+                                            ]
+                                        })
+                                    ]
+                                }),
+                                submitStatus === 'success' && /*#__PURE__*/ (0,jsx_runtime.jsx)(SuccessMessage, {
+                                    styles: mobile_module
+                                }),
+                                submitStatus === 'error' && /*#__PURE__*/ (0,jsx_runtime.jsx)(ErrorMessage, {
+                                    styles: mobile_module
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                            className: mobile_module.modalFooter,
+                            children: /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                                className: mobile_module.privacyNote,
+                                children: (0,Translate/* .translate */.T)({
+                                    id: 'feedback.component.privacyNote',
+                                    message: '제출된 피드백은 문서 개선 목적으로만 사용되며, 개인 식별 정보는 수집되지 않습니다.'
+                                })
+                            })
+                        })
+                    ]
+                })
+            })
+        ]
+    });
+}
+
+;// CONCATENATED MODULE: ./src/theme/DocItem/Footer/index.js
+
+
+
+
+
+
+function DocItemFooter() {
+    const { metadata } = (0,doc/* .useDoc */.u)();
+    const { editUrl, lastUpdatedAt, lastUpdatedBy, tags } = metadata;
+    const canDisplayTagsRow = tags.length > 0;
+    const canDisplayEditMetaRow = !!(editUrl || lastUpdatedAt || lastUpdatedBy);
+    const canDisplayFooter = canDisplayTagsRow || canDisplayEditMetaRow;
+    // if (!canDisplayFooter) {
+    //   return null;
+    // }
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("footer", {
+        className: (0,clsx/* ["default"] */.A)(ThemeClassNames/* .ThemeClassNames.docs.docFooter */.G.docs.docFooter, 'docusaurus-mt-lg'),
+        children: /*#__PURE__*/ (0,jsx_runtime.jsx)(MobileFeedback, {})
+    });
+}
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocItem/TOC/Mobile/index.js + 1 modules
+var Mobile = __webpack_require__(22295);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/DocItem/TOC/Desktop/index.js
+var Desktop = __webpack_require__(3032);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Heading/index.js
+var Heading = __webpack_require__(3381);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXContent/index.js
+var MDXContent = __webpack_require__(65025);
+// EXTERNAL MODULE: ./src/theme/Admonition/index.js + 14 modules
+var Admonition = __webpack_require__(71008);
+// EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
+var react_router = __webpack_require__(56347);
+;// CONCATENATED MODULE: ./src/theme/DocItem/Content/index.js
+
+
+
+
+
+
+
+
+
+/**
+ Title can be declared inside md content or declared through
+ front matter and added manually. To make both cases consistent,
+ the added title is added under the same div.markdown block
+ See https://github.com/facebook/docusaurus/pull/4882#issuecomment-853021120
+
+ We render a "synthetic title" if:
+ - user doesn't ask to hide it with front matter
+ - the markdown content does not already contain a top-level h1 heading
+*/ function useSyntheticTitle() {
+    const { metadata, frontMatter, contentTitle } = (0,doc/* .useDoc */.u)();
+    const shouldRender = !frontMatter.hide_title && typeof contentTitle === 'undefined';
+    if (!shouldRender) {
+        return null;
+    }
+    return metadata.title;
+}
+function DocItemContent({ children }) {
+    const { frontMatter } = (0,doc/* .useDoc */.u)();
+    const syntheticTitle = useSyntheticTitle();
+    const headingClassName = frontMatter.heading_className || null;
+    const location = (0,react_router/* .useLocation */.zy)();
+    (0,react.useEffect)(()=>{
+        if (location.hash) {
+            const targetId = location.hash.substring(1);
+            const decodedTargetId = decodeURI(targetId);
+            const targetElement = document.getElementById(decodedTargetId);
+            if (targetElement) {
+                const offset = 160; // 원하는 offset 값 (예: 네비게이션 높이)
+                const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - offset;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }, [
+        location.hash
+    ]);
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+        className: (0,clsx/* ["default"] */.A)(ThemeClassNames/* .ThemeClassNames.docs.docMarkdown */.G.docs.docMarkdown, 'markdown'),
+        children: [
+            syntheticTitle && /*#__PURE__*/ (0,jsx_runtime.jsx)("header", {
+                children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Heading/* ["default"] */.A, {
+                    as: "h1",
+                    className: headingClassName,
+                    children: syntheticTitle
+                })
+            }),
+            frontMatter.isTranslationMissing && /*#__PURE__*/ (0,jsx_runtime.jsxs)(Admonition/* ["default"] */.A, {
+                type: "note",
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("b", {
+                        children: "Not translated"
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("br", {}),
+                    "This page is currently being translated. We will complete the translation as soon as possible."
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* ["default"] */.A, {
+                children: children
+            })
+        ]
+    });
+}
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/docsUtils.js
+var docsUtils = __webpack_require__(39095);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/routesUtils.js
+var routesUtils = __webpack_require__(70406);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
+var Link = __webpack_require__(12801);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
+var useBaseUrl = __webpack_require__(97158);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Icon/Home/index.js
+var Home = __webpack_require__(6122);
+;// CONCATENATED MODULE: ./src/theme/DocBreadcrumbs/Items/Home/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const styles_module = ({"breadcrumbHomeIcon":"breadcrumbHomeIcon_xK9p"});
+;// CONCATENATED MODULE: ./src/theme/DocBreadcrumbs/Items/Home/index.js
+
+
+
+
+
+
+
+function HomeBreadcrumbItem() {
+    const homeHref = (0,useBaseUrl/* ["default"] */.Ay)('/');
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
+        className: "breadcrumbs__item",
+        children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* ["default"] */.A, {
+            "aria-label": (0,Translate/* .translate */.T)({
+                id: 'theme.docs.breadcrumbs.home',
+                message: 'Home page',
+                description: 'The ARIA label for the home page in the breadcrumbs'
+            }),
+            className: "breadcrumbs__link",
+            href: homeHref,
+            children: /*#__PURE__*/ (0,jsx_runtime.jsx)(Home/* ["default"] */.A, {
+                className: styles_module.breadcrumbHomeIcon
+            })
+        })
+    });
+}
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
+var Head = __webpack_require__(25895);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/structuredDataUtils.js
+var structuredDataUtils = __webpack_require__(92131);
+;// CONCATENATED MODULE: ./src/theme/DocBreadcrumbs/StructuredData/index.js
+
+
+
+
+function DocBreadcrumbsStructuredData(props) {
+    const structuredData = (0,structuredDataUtils/* .useBreadcrumbsStructuredData */.D)({
+        breadcrumbs: props.breadcrumbs
+    });
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)(Head/* ["default"] */.A, {
+        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("script", {
+            type: "application/ld+json",
+            children: JSON.stringify(structuredData)
+        })
+    });
+}
+
+;// CONCATENATED MODULE: ./src/components/DocBreadcrumOption/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const DocBreadcrumOption_styles_module = ({"btnprint":"btnprint_MOIq","printbtn":"printbtn_FzsH","feedback__button":"feedback__button_L4gG"});
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/ExecutionEnvironment.js
+var ExecutionEnvironment = __webpack_require__(69774);
+// EXTERNAL MODULE: ./node_modules/prop-types/index.js
+var prop_types = __webpack_require__(5556);
+var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
+;// CONCATENATED MODULE: ./src/components/Feedback/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const Feedback_styles_module = ({"feedbackWidget":"feedbackWidget_k6Vk","fadeInUp":"fadeInUp_O5Jd","feedbackTrigger":"feedbackTrigger_JVwE","feedbackHeader":"feedbackHeader_CqVb","feedbackTitle":"feedbackTitle_wh2Y","closeButton":"closeButton_qj3Z","feedbackDescription":"feedbackDescription_zDNP","feedbackButtons":"feedbackButtons_A_6o","feedbackButton":"feedbackButton_fT9j","active":"active_FsnQ","icon":"icon_umgs","feedbackExpanded":"feedbackExpanded_gP9b","slideDown":"slideDown_D1TK","textareaLabel":"textareaLabel_QIwJ","feedbackTextarea":"feedbackTextarea_LV1g","characterCount":"characterCount_vh7X","feedbackActions":"feedbackActions_ZEj0","submitButton":"submitButton_HBS4","spinner":"spinner_j3TA","spin":"spin_bqa2","cancelButton":"cancelButton_Wdyq","privacyNote":"privacyNote_U2W4","successMessage":"successMessage_D4uZ","successIcon":"successIcon_ft80","successSubtext":"successSubtext_Z5ZA","errorMessage":"errorMessage_tXKP","requiredNote":"requiredNote_mfgl","feedbackSelected":"feedbackSelected_Dxqi","selectedMessage":"selectedMessage_FYJV","selectedActions":"selectedActions_kbEA","expandButton":"expandButton_CONR","submitQuickButton":"submitQuickButton_o0eb","quickSubmitSection":"quickSubmitSection_K5_T","quickSubmitButton":"quickSubmitButton_L3lA"});
+// EXTERNAL MODULE: ./static/img/menus/ico-close.svg
+var ico_close = __webpack_require__(43464);
+;// CONCATENATED MODULE: ./src/components/Feedback/index.js
+
+
+
+
+
+
+
+
+
+function FeedbackWidget({ googleFormId, feedbackTypeEntryId, pageUrlEntryId, detailEntryId }) {
+    // 데스크탑 전용 상태 관리
+    const [isExpanded, setIsExpanded] = (0,react.useState)(false);
+    const [isWidgetOpen, setIsWidgetOpen] = (0,react.useState)(false);
+    // 공통 피드백 로직
+    const { feedbackType, detailText, isSubmitting, submitStatus, setDetailText, handleFeedbackClick: baseFeedbackClick, handleSubmit, resetFeedback } = useFeedback({
+        googleFormId,
+        feedbackTypeEntryId,
+        pageUrlEntryId,
+        detailEntryId,
+        onSuccess: ()=>{
+            // 데스크탑에서는 성공 시 위젯 초기화
+            setTimeout(()=>{
+                resetWidget();
+            }, TIMING_CONFIG.SUCCESS_DISPLAY_TIME);
+        }
+    });
+    const handleFeedbackClick = (0,react.useCallback)((type)=>{
+        baseFeedbackClick(type);
+        setIsExpanded(true); // 피드백 선택 시 바로 확장
+    }, [
+        baseFeedbackClick
+    ]);
+    const handleOpenWidget = (0,react.useCallback)(()=>{
+        setIsWidgetOpen(true);
+    }, []);
+    const handleExpandClick = (0,react.useCallback)(()=>{
+        setIsExpanded(true);
+    }, []);
+    const resetWidget = (0,react.useCallback)(()=>{
+        setIsExpanded(false);
+        setIsWidgetOpen(false);
+        resetFeedback();
+    }, [
+        resetFeedback
+    ]);
+    // 제출 완료 화면
+    if (submitStatus === 'success') {
+        return /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+            children: [
+                /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
+                    className: Feedback_styles_module.feedbackTrigger,
+                    onClick: handleOpenWidget,
+                    "aria-label": (0,Translate/* .translate */.T)({
+                        id: 'feedback.components.sendFeedback',
+                        message: '피드백 제공하기'
+                    }),
+                    children: "Feedback"
+                }),
+                /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                    className: Feedback_styles_module.feedbackWidget,
+                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(SuccessMessage, {
+                        styles: Feedback_styles_module
+                    })
+                })
+            ]
+        });
+    }
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
+                className: Feedback_styles_module.feedbackTrigger,
+                onClick: handleOpenWidget,
+                "aria-label": (0,Translate/* .translate */.T)({
+                    id: 'feedback.components.sendFeedback',
+                    message: '피드백 제공하기'
+                }),
+                children: "Feedback"
+            }),
+            isWidgetOpen && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                className: Feedback_styles_module.feedbackWidget,
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                        className: Feedback_styles_module.feedbackHeader,
+                        children: [
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)("h3", {
+                                className: Feedback_styles_module.feedbackTitle,
+                                children: (0,Translate/* .translate */.T)({
+                                    id: 'feedback.components.feedbackTitle',
+                                    message: '이 페이지가 도움이 되었나요?'
+                                })
+                            }),
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
+                                className: Feedback_styles_module.closeButton,
+                                onClick: ()=>setIsWidgetOpen(false),
+                                "aria-label": (0,Translate/* .translate */.T)({
+                                    id: 'theme.SearchModal.searchBox.cancelButtonText',
+                                    message: '취소'
+                                }),
+                                children: /*#__PURE__*/ (0,jsx_runtime.jsx)(ico_close/* ["default"] */.A, {})
+                            }),
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                                className: Feedback_styles_module.feedbackDescription,
+                                children: (0,Translate/* .translate */.T)({
+                                    id: 'feedback.components.feedbackDescription',
+                                    message: '귀하의 피드백은 문서 품질 향상에 큰 도움이 됩니다.'
+                                })
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                        className: Feedback_styles_module.feedbackButtons,
+                        children: /*#__PURE__*/ (0,jsx_runtime.jsx)(FeedbackButtons, {
+                            feedbackType: feedbackType,
+                            onFeedbackClick: handleFeedbackClick,
+                            isSubmitting: isSubmitting,
+                            styles: Feedback_styles_module,
+                            containerClassName: Feedback_styles_module.feedbackButtons
+                        })
+                    }),
+                    feedbackType === 'positive' && /*#__PURE__*/ (0,jsx_runtime.jsx)(QuickSubmitButton, {
+                        isSubmitting: isSubmitting,
+                        onClick: handleSubmit,
+                        styles: Feedback_styles_module
+                    }),
+                    isExpanded && /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                        className: Feedback_styles_module.feedbackExpanded,
+                        children: [
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)(FeedbackTextarea, {
+                                feedbackType: feedbackType,
+                                detailText: detailText,
+                                onDetailTextChange: setDetailText,
+                                isSubmitting: isSubmitting,
+                                submitStatus: submitStatus,
+                                styles: Feedback_styles_module
+                            }),
+                            submitStatus === 'error' && /*#__PURE__*/ (0,jsx_runtime.jsx)(ErrorMessage, {
+                                styles: Feedback_styles_module
+                            }),
+                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                                className: Feedback_styles_module.feedbackActions,
+                                children: [
+                                    /*#__PURE__*/ (0,jsx_runtime.jsx)(SubmitButton, {
+                                        isSubmitting: isSubmitting,
+                                        disabled: isSubmitting || feedbackType === 'negative' && !detailText.trim(),
+                                        onClick: handleSubmit,
+                                        feedbackType: feedbackType,
+                                        detailText: detailText,
+                                        styles: Feedback_styles_module,
+                                        className: Feedback_styles_module.submitButton
+                                    }),
+                                    /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
+                                        className: Feedback_styles_module.cancelButton,
+                                        onClick: resetWidget,
+                                        disabled: isSubmitting,
+                                        "aria-label": (0,Translate/* .translate */.T)({
+                                            id: "feedback.component.cancelButton.label",
+                                            message: "피드백 입력 취소"
+                                        }),
+                                        children: (0,Translate/* .translate */.T)({
+                                            id: 'theme.SearchModal.searchBox.cancelButtonText',
+                                            message: '취소'
+                                        })
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)("p", {
+                                id: "feedback-privacy-note",
+                                className: Feedback_styles_module.privacyNote,
+                                dangerouslySetInnerHTML: {
+                                    __html: (0,Translate/* .translate */.T)({
+                                        id: 'feedback.component.privacyNote',
+                                        message: '제출된 피드백은 문서 개선 목적으로만 사용되며, 개인 식별 정보는 수집되지 않습니다.'
+                                    })
+                                }
+                            })
+                        ]
+                    })
+                ]
+            })
+        ]
+    });
+}
+// PropTypes 정의
+FeedbackWidget.propTypes = {
+    /** Google Form ID (URL의 /d/e/ 다음 문자열) */ googleFormId: (prop_types_default()).string.isRequired,
+    /** 피드백 유형 필드의 entry ID */ feedbackTypeEntryId: (prop_types_default()).string.isRequired,
+    /** 페이지 URL 필드의 entry ID */ pageUrlEntryId: (prop_types_default()).string.isRequired,
+    /** 상세 내용 필드의 entry ID */ detailEntryId: (prop_types_default()).string.isRequired
+};
+
+;// CONCATENATED MODULE: ./src/components/DocBreadcrumOption/index.js
+
+
+
+
+
+const DocuementButton = ()=>{
+    const [isClient, setIsClient] = (0,react.useState)(false);
+    (0,react.useEffect)(()=>{
+        if (ExecutionEnvironment["default"].canUseDOM) {
+            setIsClient(true);
+        }
+    }, []);
+    const handleButtonClick = ()=>{
+        if (!isClient) return;
+        // 모든 details 요소에 open 속성을 부여하고 하위에 있는 div 요소에 display: block 스타일을 적용
+        const detailsElements = document.querySelectorAll('details');
+        detailsElements.forEach((detailsElement)=>{
+            detailsElement.setAttribute('open', true);
+            const childDivs = detailsElement.querySelectorAll('div');
+            childDivs.forEach((div)=>{
+                div.style.display = 'block';
+                div.style.overflow = 'visible';
+                div.style.height = 'auto';
+            });
+        });
+        window.print();
+    };
+    const curLocation = isClient ? window.location.href : '';
+    const destURL = encodeURIComponent(curLocation);
+    const target = `https://forms.office.com/Pages/ResponsePage.aspx?id=_bYDU8LVnkqxz7A7AWK9TZ3QlIh-_zNBvEgx2mDsll1UQjNOVDhQNEFHUjMyTUw4NUZWWktMTUwwTi4u&r41f093b8508c4bf1996887fab4eb1ad0=${destURL}`;
+    // 팝업 창의 크기와 위치 설정 
+    const popupWidth = 600;
+    const popupHeight = 800;
+    const browserWidth = isClient ? window.innerWidth : 0;
+    const browserHeight = isClient ? window.innerHeight : 0;
+    const left = isClient ? (browserWidth - popupWidth) / 2 + window.screenX : 0;
+    const top = isClient ? (browserHeight - popupHeight) / 2 + window.screenY : 0;
+    const popupOptions = `width=${popupWidth},height=${popupHeight},top=${top},left=${left},resizable=yes,scrollbars=yes`;
+    const gotoFeedback = ()=>{
+        if (!isClient) return;
+        window.open(target, '_blank', popupOptions);
+    };
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+        className: DocBreadcrumOption_styles_module.btnprint,
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("button", {
+                onClick: handleButtonClick,
+                disabled: !isClient,
+                className: DocBreadcrumOption_styles_module.printbtn,
+                children: "PDF"
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(FeedbackWidget, {
+                googleFormId: "1FAIpQLSc80m8XWDnKO3XJ9ZZ_hJ9iZVcYocu6XjdsGgOwC1vvh_IuxA",
+                feedbackTypeEntryId: "entry.1129679087",
+                pageUrlEntryId: "entry.23458126",
+                detailEntryId: "entry.1070297166"
+            })
+        ]
+    });
+};
+/* ESM default export */ const DocBreadcrumOption = (DocuementButton);
+
+;// CONCATENATED MODULE: ./src/theme/DocBreadcrumbs/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const DocBreadcrumbs_styles_module = ({"breadcrumbsContainer":"breadcrumbsContainer_Alpn"});
+;// CONCATENATED MODULE: ./src/theme/DocBreadcrumbs/index.js
+
+
+
+
+
+
+
+
+
+
+
+
+// TODO move to design system folder
+function BreadcrumbsItemLink({ children, href, isLast }) {
+    const className = 'breadcrumbs__link';
+    if (isLast) {
+        return /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+            className: className,
+            children: children
+        });
+    }
+    return href ? /*#__PURE__*/ (0,jsx_runtime.jsx)(Link/* ["default"] */.A, {
+        className: className,
+        href: href,
+        children: /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+            children: children
+        })
+    }) : /*#__PURE__*/ (0,jsx_runtime.jsx)("span", {
+        className: className,
+        children: children
+    });
+}
+// TODO move to design system folder
+function BreadcrumbsItem({ children, active, index }) {
+    return /*#__PURE__*/ (0,jsx_runtime.jsx)("li", {
+        className: (0,clsx/* ["default"] */.A)('breadcrumbs__item', {
+            'breadcrumbs__item--active': active
+        }, 'item-' + String(index + 1)),
+        children: children
+    });
+}
+function DocBreadcrumbs() {
+    const breadcrumbs = (0,docsUtils/* .useSidebarBreadcrumbs */.OF)();
+    const homePageRoute = (0,routesUtils/* .useHomePageRoute */.Dt)();
+    if (!breadcrumbs) {
+        return null;
+    }
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsx)(DocBreadcrumbsStructuredData, {
+                breadcrumbs: breadcrumbs
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)("nav", {
+                className: (0,clsx/* ["default"] */.A)(ThemeClassNames/* .ThemeClassNames.docs.docBreadcrumbs */.G.docs.docBreadcrumbs, DocBreadcrumbs_styles_module.breadcrumbsContainer),
+                "aria-label": (0,Translate/* .translate */.T)({
+                    id: 'theme.docs.breadcrumbs.navAriaLabel',
+                    message: 'Breadcrumbs',
+                    description: 'The ARIA label for the breadcrumbs'
+                }),
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("ul", {
+                        className: "breadcrumbs",
+                        children: [
+                            homePageRoute && /*#__PURE__*/ (0,jsx_runtime.jsx)(HomeBreadcrumbItem, {}),
+                            breadcrumbs.map((item, idx)=>{
+                                const isLast = idx === breadcrumbs.length - 1;
+                                const href = item.type === 'category' && item.linkUnlisted ? undefined : item.href;
+                                return /*#__PURE__*/ (0,jsx_runtime.jsx)(BreadcrumbsItem, {
+                                    index: idx,
+                                    active: isLast,
+                                    children: /*#__PURE__*/ (0,jsx_runtime.jsx)(BreadcrumbsItemLink, {
+                                        href: href,
+                                        isLast: isLast,
+                                        children: item.label
+                                    })
+                                }, idx);
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)(DocBreadcrumOption, {})
+                ]
+            })
+        ]
+    });
+}
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/ContentVisibility/index.js + 3 modules
+var ContentVisibility = __webpack_require__(63718);
+;// CONCATENATED MODULE: ./src/theme/DocItem/Layout/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const Layout_styles_module = ({"docItemContainer":"docItemContainer_c0TR","docItemCol":"docItemCol_z5aJ"});
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TOCItems/index.js + 3 modules
+var TOCItems = __webpack_require__(19333);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TOCCollapsible/index.js + 3 modules
+var TOCCollapsible = __webpack_require__(29135);
+;// CONCATENATED MODULE: ./src/components/GenerateToc/styles.module.css
+// extracted by css-extract-rspack-plugin
+/* ESM default export */ const GenerateToc_styles_module = ({"tableOfContents":"tableOfContents_pzBX","docItemContainer":"docItemContainer_EhBe","tocMobile":"tocMobile_XdKt"});
+;// CONCATENATED MODULE: ./src/components/GenerateToc/index.js
+
+
+
+
+
+
+
+
+function GenerateTOC({ className, device, ...props }) {
+    const [tocItems, setTocItems] = (0,react.useState)([]);
+    const { frontMatter } = (0,doc/* .useDoc */.u)();
+    (0,react.useEffect)(()=>{
+        // 페이지가 렌더링된 후에 TOC를 생성합니다.
+        const headers = document.querySelectorAll('h2:not(.padding--lg h2, .margin-bottom--lg h2), h3:not(.padding--lg h3, .margin-bottom--lg h2), h4:not(.padding--lg h4, .margin-bottom--lg h2)');
+        const collectedToc = Array.from(headers).map((header)=>({
+                value: header.innerText,
+                id: header.id,
+                level: parseInt(header.tagName[1], 10)
+            }));
+        // TOC 데이터 수집
+        setTocItems(collectedToc);
+    }, []);
+    const LINK_CLASS_NAME = 'table-of-contents__link toc-highlight';
+    const LINK_ACTIVE_CLASS_NAME = 'table-of-contents__link--active';
+    if (device === 'desktop') {
+        return /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+            className: (0,clsx/* ["default"] */.A)(GenerateToc_styles_module.tableOfContents, 'thin-scrollbar', className),
+            children: /*#__PURE__*/ (0,jsx_runtime.jsx)(TOCItems/* ["default"] */.A, {
+                toc: tocItems,
+                linkClassName: LINK_CLASS_NAME,
+                linkActiveClassName: LINK_ACTIVE_CLASS_NAME,
+                minHeadingLevel: frontMatter.toc_min_heading_level,
+                maxHeadingLevel: frontMatter.toc_max_heading_level,
+                ...props
+            })
+        });
+    } else if (device === 'mobile') {
+        return /*#__PURE__*/ (0,jsx_runtime.jsx)(TOCCollapsible/* ["default"] */.A, {
+            toc: tocItems,
+            minHeadingLevel: frontMatter.toc_min_heading_level,
+            maxHeadingLevel: frontMatter.toc_max_heading_level,
+            className: (0,clsx/* ["default"] */.A)(ThemeClassNames/* .ThemeClassNames.docs.docTocMobile */.G.docs.docTocMobile, GenerateToc_styles_module.tocMobile)
+        });
+    }
+}
+
+;// CONCATENATED MODULE: ./src/theme/DocItem/Layout/index.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Decide if the toc should be rendered, on mobile or desktop viewports
+ */ function useDocTOC() {
+    const { frontMatter, toc } = (0,doc/* .useDoc */.u)();
+    const windowSize = (0,useWindowSize/* .useWindowSize */.l)();
+    const hidden = frontMatter.hide_table_of_contents;
+    const canRender = !hidden && toc.length > 0;
+    const mobile = canRender ? /*#__PURE__*/ (0,jsx_runtime.jsx)(Mobile/* ["default"] */.A, {}) : undefined;
+    const desktop = canRender && (windowSize === 'desktop' || windowSize === 'ssr') ? /*#__PURE__*/ (0,jsx_runtime.jsx)(Desktop/* ["default"] */.A, {}) : undefined;
+    return {
+        hidden,
+        mobile,
+        desktop
+    };
+}
+function DocItemLayout({ children }) {
+    const docTOC = useDocTOC();
+    const { metadata } = (0,doc/* .useDoc */.u)();
+    return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+        className: "row",
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                className: (0,clsx/* ["default"] */.A)('col', !docTOC.hidden && Layout_styles_module.docItemCol),
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)(ContentVisibility/* ["default"] */.A, {
+                        metadata: metadata
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime.jsx)(DocVersionBanner/* ["default"] */.A, {}),
+                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                        className: Layout_styles_module.docItemContainer,
+                        children: [
+                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("article", {
+                                children: [
+                                    /*#__PURE__*/ (0,jsx_runtime.jsx)(DocBreadcrumbs, {}),
+                                    /*#__PURE__*/ (0,jsx_runtime.jsx)(DocVersionBadge/* ["default"] */.A, {}),
+                                    /*#__PURE__*/ (0,jsx_runtime.jsx)(GenerateTOC, {
+                                        device: "mobile"
+                                    }),
+                                    /*#__PURE__*/ (0,jsx_runtime.jsx)(DocItemContent, {
+                                        children: children
+                                    }),
+                                    /*#__PURE__*/ (0,jsx_runtime.jsx)(DocItemFooter, {})
+                                ]
+                            }),
+                            /*#__PURE__*/ (0,jsx_runtime.jsx)(Paginator/* ["default"] */.A, {})
+                        ]
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsx)("div", {
+                className: "col col--3",
+                children: !docTOC.hidden ? /*#__PURE__*/ (0,jsx_runtime.jsx)(GenerateTOC, {
+                    device: "desktop"
+                }) : null
+            })
+        ]
+    });
+}
+
+
+}),
 47576: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // EXPORTS
@@ -684,7 +1963,7 @@ function InDoc({ children, product, pages, type, ref, lang }) {
     const location = (0,react_router/* .useLocation */.zy)();
     if (product) {
         const prods = Array.isArray(product) ? product : product.split(',');
-        const cProd = currentLocale === "ko" ? location.pathname.split("/")[2] : location.pathname.split("/")[3];
+        const cProd = currentLocale === "ko" ? location.pathname.split("/")[3] : location.pathname.split("/")[4];
         const isProduct = prods.includes(cProd.replace('_ul', ''));
         return isProduct ? /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* ["default"] */.A, {
             children: children
@@ -722,7 +2001,7 @@ function XcludeDoc({ children, product, pages, lang }) {
     const location = (0,react_router/* .useLocation */.zy)();
     if (product) {
         const prods = Array.isArray(product) ? product : product.split(',');
-        const cProd = currentLocale === "ko" ? location.pathname.split("/")[2] : location.pathname.split("/")[3];
+        const cProd = currentLocale === "ko" ? location.pathname.split("/")[3] : location.pathname.split("/")[4];
         const isProduct = prods.includes(cProd.replace('_ul', ''));
         return isProduct ? null : /*#__PURE__*/ (0,jsx_runtime.jsx)(MDXContent/* ["default"] */.A, {
             children: children
