@@ -7,17 +7,21 @@ keywords: [장치]
 
 **BioStar X**에서 장치의 기타 기능을 사용하는 방법을 안내합니다. 장치를 재연결하거나 동기화, 정보 일괄 편집, 장치 삭제 기능을 제공합니다.
 
+## 개별 장치의 관리 기능
+
+한 개의 장치에 대한 관리 기능을 사용하는 방법은 아래와 같습니다.
+
 1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' />를 클릭하세요.
 
-1. <Cmd sid='menu.device.allDeviceGroups' product='2' /> 목록에서 장치를 선택하고 마우스 오른쪽 버튼을 클릭하세요.
+1. <Cmd sid='menu.device.allDeviceGroups' product='2' /> 목록에서 장치를 선택하고 마우스 오른쪽 버튼을 클릭하세요. 또는 장치 목록에서 원하는 장치의 체크박스를 클릭하세요.
 
-1. 팝업 메뉴에서 원하는 기능을 선택하세요.
+   <Image src='/img/biostarx-setting-device-functions.png' />
 
-<Image src='/img/biostarx-setting-device-functions.png' />
+1. 팝업 메뉴 또는 장치 목록 상단에서 원하는 기능을 선택하세요.
 
-팝업 메뉴를 통해 제공하는 기능은 아래를 참고하세요. 장치에 따라 제공하는 기능은 다를 수 있습니다.
+제공하는 기능은 아래를 참고하세요. 장치에 따라 제공하는 기능은 다를 수 있습니다.
 
 * <Cmd sid='button.reconnect' product='2' />: 선택한 장치를 재연결할 수 있습니다. 한 개의 장치를 선택했을 때 사용할 수 있습니다. 이 기능은 **BioStar X**와 연결이 끊겼을 때 사용할 수 있습니다.
 
@@ -44,5 +48,127 @@ keywords: [장치]
 * <Cmd sid='device.menu.addWiegandDevice' product='2' /> 기능에 대한 자세한 내용은 [다음 문서](settings-adding-wiegand)를 참고하세요.
 
 * <Cmd sid='device.menu.searchSlaveDevice' product='2' /> 기능에 대한 자세한 내용은 [다음 문서](settings-adding-slave-device)를 참고하세요.
+
+:::
+
+
+## 여러 장치의 관리 기능
+
+한 개 이상의 장치에 대한 관리 기능을 사용하는 방법은 아래와 같습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' />를 클릭하세요.
+
+1. 장치 목록에서 원하는 장치의 체크박스를 클릭하세요. 1개 이상의 장치를 선택할 수 있습니다.
+
+   <Image src='/img/biostarx-setting-device-list-batch-edit.png' />
+
+1. 장치 목록 상단에서 원하는 기능을 선택하세요.
+
+제공하는 기능은 아래를 참고하세요. 장치에 따라 제공하는 기능은 다를 수 있습니다.
+
+* <Cmd sid='button.syncDevice' product='2' />: 등록한 장치와 **BioStar X**의 모든 사용자 정보를 동기화할 수 있습니다. **BioStar X** 데이터베이스 정보를 기준으로 사용자 정보를 동기화하며, 장치에만 등록한 사용자 정보는 삭제합니다.
+
+* <Cmd sid='button.batchEdit' product='2' />: 선택한 장치의 정보를 일괄 편집할 수 있습니다. 버튼을 클릭하면 <Cmd sid='device.batchEdit' product='2' /> 창이 나타납니다.
+
+  <Image src='/img/biostarx-setting-device-batch-edit.png' />
+
+  :::info
+
+  * 선택한 장치 종류에 따라 <Cmd sid='device.batchEdit' product='2' /> 창에 표시되는 세부 항목이 다를 수 있습니다.
+
+  * 마스터 장치와 슬레이브 장치를 동시에 선택하고 일괄 편집을 클릭하면 <Cmd sid='device.info.authentication' product='2' />과 <Cmd sid='device.info.displaySound' product='2' /> 항목의 일부만 변경할 수 있습니다.
+
+  * <Cmd sid='device.info.authenticationMode' product='2' />는 모델명이 동일한 장치를 선택했을 때만 일괄 편집할 수 있습니다.
+
+  :::
+
+* <Cmd sid='button.firmwareUpgrade' product='2' />: 장치의 펌웨어를 간편하게 업그레이드할 수 있습니다. 자세한 내용은 [다음 문서](settings-device-upgrade-firmware)를 참고하세요.
+
+* <Cmd sid='button.deleteDevice' product='2' />: 선택한 장치를 목록에서 삭제할 수 있습니다. 출입문 또는 구역으로 설정한 장치는 삭제할 수 없습니다.
+
+
+## 장치 내 이벤트 로그 삭제 {#deleteLogsFromDevice}
+
+장치에 저장된 이벤트 로그를 삭제할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' />를 클릭하세요.
+
+1. 장치 목록에서 원하는 장치의 체크박스를 클릭하세요. 1개 이상의 장치를 선택할 수 있습니다.
+
+1. 장치 목록 상단에서 <IcMoreW title='More' /> → <Cmd sid='button.clearLog' product='2' /> 버튼을 클릭하세요.
+
+   <Image src='/img/biostarx-setting-device-list-delete-log.png' />
+
+1. 경고 메시지 창이 나타나면 내용을 확인하고 <Cmd sid='button.continue' product='2' /> 버튼을 클릭하세요.
+
+장치 이벤트 로그 삭제 작업이 완료되면 팝업 메시지가 나타납니다. 대상 장치 수, 성공 장치 수, 실패 장치 수를 확인할 수 있습니다.
+
+:::caution
+
+장치에서 삭제된 이벤트 로그는 복구할 수 없으며, 서버에서 다시 장치로 전송할 수 없습니다. 삭제를 진행하기 전에 장치 이벤트 로그가 서버에 저장되었는지 확인하세요. 또한 선택한 장치에 슬레이브 또는 가상 장치, Wiegand 장치가 포함되어 있다면, 해당 장치는 로그를 저장하지 않아 로그 삭제 대상에서 제외됩니다.
+
+:::
+
+:::info
+
+* 이 기능은 <Cmd sid='ROLE_CODE_ADMIN' product='2' className='bold' /> 권한을 가진 사용자만 사용할 수 있습니다.
+
+* 장치의 이벤트 로그 삭제 이력은 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />에서 확인할 수 있습니다.
+
+:::
+
+
+## 추가 기능
+
+장치 목록을 인쇄하거나 열 설정을 변경하는 등의 추가 기능을 사용할 수 있습니다.
+
+### 장치 목록 인쇄하기
+
+장치 목록을 PDF 또는 SVG 파일 형식으로 저장해 인쇄할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' />를 클릭하세요.
+
+1. 장치 목록 상단의 <IcMoreW title='More' /> 버튼을 클릭하세요.
+
+1. 팝업 메뉴에서 <Cmd sid='button.print' product='2' />를 클릭하세요.
+
+1. <Cmd sid='printOption.dialog.header' product='2' /> 창이 나타나면 <Cmd sid='printOption.fileFormat' product='2' /> 옵션에서 원하는 포맷을 선택하고 나머지 옵션을 설정하세요.
+
+   <Image src='/img/biostarx-setting-device-list-print.png' />
+
+1. <Cmd sid='team.menu.print' /> 버튼을 클릭하세요.
+
+브라우저를 통해 열리는 PDF 또는 SVG 파일을 인쇄할 수 있습니다.
+
+
+### 장치 목록 열(Column) 설정
+
+장치 목록에서 표시되는 열(Column) 설정을 변경할 수 있습니다. 열 설정을 통해 표시할 열을 선택하거나 열의 순서를 변경할 수 있습니다.
+
+1. <Cmd sid='shell.header.launcher' /> 페이지에서 <Cmd sid='shell.header.setting' />을 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='setting.menu.device.root' />를 클릭하세요.
+
+1. 장치 목록 상단의 <IcMoreW title='More' /> 버튼을 클릭하세요.
+
+1. 팝업 메뉴에서 <Cmd sid='menu.columnSetting' product='2' />을 클릭하세요.
+
+1. <Cmd sid='columnSetting.dialog.header' product='2' /> 창이 나타나면 원하는 열을 선택하거나 선택 해제하세요.
+
+   <Image src='/img/biostarx-setting-device-list-column-setting.png' />
+
+1. 열의 순서를 변경하려면 원하는 열을 클릭한 채로 드래그하여 위치를 변경하세요.
+
+1. 설정을 저장하려면 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
+
+:::info
+
+열 설정을 초기화하려면 <Cmd sid='columnSetting.button.defaultColumn' product='2' /> 버튼을 클릭하세요.
 
 :::
