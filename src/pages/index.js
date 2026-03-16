@@ -128,13 +128,16 @@ function Integration() {
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
+  const isDev = process.env.NODE_ENV === 'development';
   
   // 브라우저 언어 탐지 및 자동 리다이렉트
   useEffect(() => {
     // 현재 URL이 루트 경로인지 확인 (언어별 경로가 아닌 경우)
     const currentPath = window.location.pathname;
     const isRootPath = currentPath === '/' || currentPath === '/index.html';
-
+    if (isDev) {
+      return; // 개발 환경에서는 리다이렉트 하지 않음
+    }
     if (isRootPath) {
       // 사용자가 이미 언어를 선택했는지 확인
       const hasUserSelectedLanguage = localStorage.getItem('userHasSelectedLanguage') === 'true';
