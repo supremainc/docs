@@ -8,7 +8,17 @@ keywords:
   - time zone
 ---
 
-Use the Daylight Saving Time (DST) settings to configure how the site adjusts its time. This is especially important for ensuring consistent and accurate time tracking when managing a site with visitors across multiple time zones.
+Use the Daylight Saving Time (DST) settings to configure how the site adjusts its time. This is especially important for ensuring consistent and accurate time tracking when managing a site that has devices and records across multiple time zones.
+
+For accurate time management in BioStar Air, **DST settings in three places** are required:
+
+* **DST Profile**: Defines the start and end date and time of DST for each time zone.
+
+* **Site Time**: Set the time zone applied to the site and event logs.
+
+* **Device Time**: Configure each individual reader so it adjusts its clock correctly.
+
+All three settings must be configured correctly for sites located in time zone that observes Daylight Saving Time.
 
 :::tip
 
@@ -28,7 +38,11 @@ Consider the following when reviewing <Cmd sid="event_logs_submenu" product="air
 
 :::
 
-## Add a new DST configuration {#addingNewdst}
+## Step 1: Create DST profile {#addingNewdst}
+
+A DST profile defines the date and time when DST starts and ends for a specific time zone. You must create a DST profile for each time zone where the site and readers are located.
+
+### Add new profile
 
 1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="daylight_saving_time_submenu" product="air" /> in the left sidebar.
 
@@ -38,31 +52,27 @@ Consider the following when reviewing <Cmd sid="event_logs_submenu" product="air
 
 3. Select the desired item from <Cmd sid="device_editable_fields_timezone" product="air" /> when the <Cmd sid="dst_add_modal_title" product="air" /> panel appears.
 
-   <Image src='/img/air/bsair-settings-dst-add.png' />
+4. Select automatic or manual configuration in <Cmd sid='dst_add_modal_subtitle_setting_dst' product='air' />.
 
-### Automatic configuration {#autoConfig}
+   * **Auto**: The DST configuration for the selected time zone is added automatically. The start and end dates for DST are determined by the standard rules for that time zone.
 
-In the <Cmd sid="dst_add_modal_subtitle_setting_dst" product="air" /> section, click <Cmd sid="dst_auto" product="air" />, and then click <Cmd sid="save_btn" product="air" /> at the bottom. The DST configuration for the selected time zone is added automatically.
+     <Image src='/img/air/bsair-settings-dst-add-auto.png' />
 
-<Image src='/img/air/bsair-settings-dst-add-auto.png' />
+   * **Manual**: Set the appropriate start and end times for the time zone to configure manually.
 
-### Manual configuration {#manualConfig}
+     <Image src='/img/air/bsair-settings-dst-add-manual.png' />
 
-Set the appropriate start and end times for the time zone to configure manually.
+     * <Cmd sid="date_label" product="air" />: Select the dates when DST starts and ends.
 
-<Image src='/img/air/bsair-settings-dst-add-manual.png' />
+     * <Cmd sid="dropdown_label_week" product="air" />: Select the weeks when DST starts and ends.
 
-* <Cmd sid="date_label" product="air" />: Select the dates when DST starts and ends.
+5. Click <Cmd sid='save_btn' product='air' /> at the bottom to save the DST profile.
 
-* <Cmd sid="dropdown_label_week" product="air" />: Select the weeks when DST starts and ends.
-
-Click <Cmd sid="save_btn" product="air" /> at the bottom to save the DST configuration.
-
-## Edit an existing DST configuration {#editingDstConfiguration}
+### Edit existing DST profile {#editingDstConfiguration}
 
 1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="daylight_saving_time_submenu" product="air" /> in the left sidebar.
 
-2. Click the DST configuration you want to edit in the list. Alternatively, select the checkbox and click <IcAirEdit title='Edit' /> at the top.
+2. Click the DST profile you want to edit in the list. Alternatively, select the checkbox and click <IcAirEdit title='Edit' /> at the top.
 
 3. Modify the start and end times when the <Cmd sid="dst_update_modal_title" product="air" /> panel appears.
 
@@ -70,9 +80,51 @@ Click <Cmd sid="save_btn" product="air" /> at the bottom to save the DST configu
 
 4. Click <Cmd sid="save_btn" product="air" /> at the bottom to save the changes.
 
-## Enable DST for devices {#enablingDstForDevices}
+### Delete DST profile {#deleteDstProfile}
 
-Enable DST on each device to ensure accurate time adjustment.
+1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="daylight_saving_time_submenu" product="air" /> in the left sidebar.
+
+2. Click the checkbox for the DST profile you want to delete in the list. You can select one or more profiles.
+
+3. Click <IcAirRemove title='Delete' /> at the top of the screen.
+
+4. When the message window appears, click the <Cmd sid='user_group_yes_btn' product='air' /> button.
+
+## Step 2: Site time settings {#setSiteTime}
+
+The site time determines the default time zone used by the entire system. The following items are affected by this setting:
+
+* Event log timestamps
+
+* Reports and monitoring data
+
+* Default time zone applied when registering a new device
+
+Follow the instructions below to set the site's time zone and enable DST.
+
+1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar.
+
+2. Click <Cmd sid='site_setting_tab_setting' product='air' /> tab.
+
+3. Select the desired time zone in <Cmd sid='site_profile_input4' product='air' />.
+
+   <Image src='/img/air/bsair-settings-site-setting-timezone.png' />
+
+4. Enable <Cmd sid='device_field_dst_usage' product='air' /> to apply daylight saving time to the selected time zone.
+
+:::caution
+
+If the <Cmd sid='device_field_dst_usage' product='air' /> option is not enabled in a time zone where DST applies, the system will not automatically adjust the time, and event logs may appear incorrectly.
+
+:::
+
+## Step 3: Enable DST for devices {#enablingDstForDevices}
+
+Each device connected to BioStar Air maintains its own clock, which is used for access control and attendance records. Configure DST settings for any device located in a time zone where DST applies.
+
+Devices with screens, such as BioStation 3, displays the time. Devices without screens, such as XPass 2, maintain their internal clocks for access control and time and attendance records.
+
+Set DST on all devices, regardless of whether they have a display, to ensure event logs, access records, and attendance data are recorded accurately.
 
 1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
 
@@ -82,20 +134,34 @@ Enable DST on each device to ensure accurate time adjustment.
 
    <Image src='/img/air/bsair-device-mng-edit-timezone.png' />
 
+   :::note
+
+   This setting is enabled by default for time zones where DST applies.
+
+   :::
+
 4. Click <Cmd sid="save_btn" product="air" /> at the bottom to save the changes.
 
-:::note
+:::info
 
-This setting is enabled by default for time zones where DST applies.
+If the device time is not set correctly, the following issues may occur:
+
+* **Access Denied Error**: The access time is set to start at 07:00 AM, but if the device thinks it is 06:00 AM, user entry will be denied.
+
+* **Schedule error**: The lock/unlock at the scheduled time may not be accurate.
+
+* **Record error**: The times in the event log and the time and attendance records do not match the actual time.
 
 :::
 
-## Delete a DST configuration {#deleteDst}
+## Checklist {#checklist}
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="daylight_saving_time_submenu" product="air" /> in the left sidebar.
+To ensure accurate timekeeping in regions that observe Daylight Saving Time (DST), make sure you have completed all three of the following steps.
 
-2. Select the checkbox for the DST configuration you want to delete in the list. You can select more than one DST configuration.
+* **Create DST profiles**: Have you created the DST profiles needed for each time zone?
 
-3. Click <IcAirRemove title='Delete' /> at the top of the screen.
+* **Site time settings**: Have you set the site's time zone and enabled the <Cmd sid='device_field_dst_usage' product='air' /> option?
 
-4. When the message window appears, click the <Cmd sid='user_group_yes_btn' product='air' /> button.
+* **Device DST settings**: Have you set each device's time zone and enabled the <Cmd sid='device_field_dst_usage' product='air' /> option?
+
+If all three are configured correctly, the event logs, access times, and attendance records will all show the correct time.

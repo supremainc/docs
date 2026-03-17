@@ -490,5 +490,9 @@
   "sidebar.biostar_air.category.개발자": {
     "message": "개발자",
     "description": "The label for category '개발자' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.추가 사이트 구성하기": {
+    "message": "추가 사이트 구성하기",
+    "description": "The label for category '추가 사이트 구성하기' in sidebar 'biostar_air'"
   }
 }
