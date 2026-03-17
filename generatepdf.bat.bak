@@ -4,7 +4,7 @@
 @REM LANGUAGE : 언어 코드 (예: ko, en, ja, es)
 @REM PRODUCT_TYPE : 문서 종류 (예: UG, RN 등) IG: 설치 가이드, UG: 사용자 가이드, AG: 관리자 가이드, RN: 릴리즈 노트, 그 외에는 입력한 내용 그대로 출력됩니다.
 @REM VERSION : 문서 버전 (예: 1.0, 1.0.1 등)
-@REM DOCUMENT_NUMBER : 문서 번호 (예: 101.00.BS3)
+@REM DOCUMENT_NUMBER : 문서 번호 (예: IG 101.00.BS3 / UG 102.00.XXX / RN 301.00.XXX)
 @REM SIDEBAR : sidebar.js 파일에 적용된 키 값을 입력하세요.
 @REM FILTER : 문서가 저장된 경로를 입력하세요. Include, Xclude 컴포넌트에서 사용하기 위한 값입니다.
 @REM RELEASE: 문서의 배포 날짜를 입력하세요.
