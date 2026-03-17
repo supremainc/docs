@@ -1,22 +1,22 @@
 ---
-id: monitoring-event-and-audit-logs
-title: 이벤트 및 변경 로그 사용하기
-description: BioStar Air에서 이벤트 로그와 변경 로그를 모니터링 및 분석하고, 필터 적용, 데이터 내보내기 및 관리 활동 추적 방법을 안내합니다.
+id: monitoring-event-logs
+title: 이벤트 로그 사용하기
+description: BioStar Air에서 이벤트 로그를 모니터링 및 분석하고, 필터 적용, 데이터 내보내기 및 관리 활동 추적 방법을 안내합니다.
 keywords: [모니터링, 이벤트 로그, BioStar Air]
 ---
 
-클라우드 출입 통제 플랫폼의 주요 장점 중 하나는 언제 어디서나 사이트 활동을 모니터링할 수 있는 기능입니다. 이 문서는 BioStar Air에서 이벤트 로그와 감사 로그를 모니터링하고 분석하는 방법을 안내합니다.
+클라우드 출입 통제 플랫폼의 주요 장점 중 하나는 언제 어디서나 사이트 활동을 모니터링할 수 있는 기능입니다. 이 문서는 BioStar Air에서 이벤트 로그를 모니터링하고 분석하는 방법을 안내합니다.
 
 :::tip
 
-이벤트 로그 및 변경 로그에 대한 동영상 가이드를 시청하려면 다음 영상을 참고하세요.
+이벤트 로그에 대한 동영상 가이드를 시청하려면 다음 영상을 참고하세요.
 
 <YouTube className='fit--content' videoId="nwIEYyK-uAg" />
 
 :::
 
 
-## <Cmd sid='event_logs_submenu' product='air' className='bold' />
+## 이베트 로그 확인
 
 <Tabs groupId='platform'>
 <TabItem value='web' label='Web'>
@@ -60,16 +60,7 @@ keywords: [모니터링, 이벤트 로그, BioStar Air]
 </Tabs>
 
 
-## <Cmd sid='audit_logs_submenu' product='air' className='bold' />
-
-변경 로그를 확인하려면 <Cmd sid='audit_logs_submenu' product='air' />로 이동하세요. 화면 왼쪽 사이드바에서 <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='audit_logs_submenu' product='air' />를 클릭하세요. <Cmd sid='audit_logs_submenu' product='air' /> 화면에서는 관리자가 수행한 작업을 추적하는 로그를 확인할 수 있습니다. 변경 로그에는 작업 시간 및 이메일 주소, 관리자 권한, 작업 유형, 메뉴 경로, 작업 세부 정보와 같은 정보가 포함된 테이블 목록을 확인할 수 있습니다.
-
-<Image src='/img/air/bsair-monitoring-auditlog-list.png' />
-
-
-## 로그 정렬 및 관리
-
-### <Cmd sid='column_filter_modal_title' product='air' className='normal' />
+## <Cmd sid='column_filter_modal_title' product='air' className='normal' />
 
 테이블의 열을 사용자 지정하여 원하는 정보를 표시하거나 숨길 수 있습니다. 순서를 변경해 자주 사용하는 열을 앞쪽에 배치할 수도 있습니다. 이벤트 로그 목록 상단의 <IcAirColumn title='Customize' /> 버튼을 클릭하세요. <Cmd sid='column_filter_modal_title' product='air' /> 창이 나타납니다.
 
@@ -94,7 +85,7 @@ keywords: [모니터링, 이벤트 로그, BioStar Air]
 :::
 
 
-### 로그 필터링 {#filtering-event-logs}
+## 로그 필터링 {#filtering-event-logs}
 
 로그를 필터링해 원하는 정보를 빠르게 찾을 수 있습니다. 로그 목록 상단의 <IcAirLogfilter width='20' height='20' title='Filters' /> 버튼을 클릭하세요. <Cmd sid='logs_filters_action_btn' product='air' /> 창이 나타나면 각 항목에서 원하는 값을 선택하세요.
 
@@ -109,7 +100,7 @@ keywords: [모니터링, 이벤트 로그, BioStar Air]
 :::
 
 
-### 리포트 설정 {#generatingReports}
+## 리포트 설정 {#generatingReports}
 
 로그 데이터를 필터링하여 특정 기간 동안 발생한 이벤트에 대한 리포트를 생성할 수 있습니다.
 
@@ -117,7 +108,7 @@ keywords: [모니터링, 이벤트 로그, BioStar Air]
 
 1. <Cmd sid='report_popup_title' product='air' /> 창이 나타나면 리포트 이름을 입력하세요.
 
-   <Image src='/img/air/bsair-monitoring-eventlog-report-setting.png' caption />
+   <Image src='/img/air/bsair-monitoring-eventlog-report-setting.png' />
 
 1. 리포트에 포함할 항목을 선택하세요.
 
@@ -125,13 +116,13 @@ keywords: [모니터링, 이벤트 로그, BioStar Air]
 
 1. <Cmd sid='report_form_text_title' product='air' />에 설정한 이름으로 리포트가 생성됩니다.
 
-   <Image src='/img/air/bsair-monitoring-eventlog-report-added.png' caption />
+   <Image src='/img/air/bsair-monitoring-eventlog-report-added.png' />
 
 1. 생성된 리포트를 다운로드하려면 리포트 이름 옆의 <IcAirDown width='20' height='20' title='Download' /> 버튼을 클릭하세요.
 
 1. <Cmd sid='report_download_popup_title' product='air' /> 창이 나타나면 이벤트를 조회할 기간을 선택하고 <Cmd sid='report_download_popup_button_title' product='air' /> 버튼을 클릭하세요.
 
-   <Image src='/img/air/bsair-monitoring-eventlog-report-download.png' caption />
+   <Image src='/img/air/bsair-monitoring-eventlog-report-download.png' />
 
 관리자의 이메일로 다운로드 링크가 전송됩니다.
 
@@ -142,35 +133,24 @@ keywords: [모니터링, 이벤트 로그, BioStar Air]
 :::
 
 
-### 개인정보 마스킹 처리 {#dataMasking}
+## 개인정보 마스킹 처리 {#dataMasking}
 
 로그에서 개인정보를 마스킹 처리하여 민감한 정보를 보호할 수 있습니다. 개인정보 마스킹 처리를 활성화하면 사용자 이름, 이메일 주소 및 전화번호와 같은 정보가 부분적으로 숨겨집니다.
 
 개인정보 마스킹 처리를 활성화하려면 로그 목록 상단의 <IcAirMask width='20' height='20' title='Apply Masking' /> 버튼을 클릭하세요. 팝업 메뉴에서 <Cmd sid='apply_masking_title' product='air' /> 옵션을 활성화하고 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
 
-<Image src='/img/air/bsair-monitoring-eventlog-apply-masking.png' caption />
+<Image src='/img/air/bsair-monitoring-eventlog-apply-masking.png' />
 
-### 도구 모음 사용 {#usingToolbar}
+
+## 기타 기능
 
 로그 목록 상단의 도구 모음을 사용하여 로그를 보다 효율적으로 관리할 수 있습니다.
 
 * 로그를 날짜별로 정렬하려면 날짜 및 시간 범위를 선택한 후  <Cmd sid='column_filter_modal_apply_btn' product='air' /> 버튼을 클릭하세요. 날짜를 재설정하려면 <Cmd sid='column_filter_modal_reset_btn' product='air' /> 버튼을 클릭하세요.
 
-   <Image src='/img/air/bsair-monitoring-eventlog-set-datetime.png' />
-
-   :::note
-
-   <Cmd sid='audit_logs_submenu' product='air' />에서는 시작일과 종료일을 선택하면 로그가 자동 필터링됩니다.
-
-   :::
+  <Image src='/img/air/bsair-monitoring-eventlog-set-datetime.png' />
 
 * <Cmd sid='search_placeholder' product='air' /> 입력 필드에서 특정 키워드를 입력하여 로그를 검색할 수 있습니다. RF 카드 아이디, 사용자 아이디 및 이메일, 이름 중 하나를 입력하세요.
-
-   :::note
-
-   <Cmd sid='audit_logs_submenu' product='air' />에서는 검색 기능을 지원하지 않습니다.
-
-   :::
 
 * 로그를 CSV 또는 PDF 파일로 저장하려면 <IcAirDown width='20' height='20' title='Export' /> 버튼을 클릭하세요.
 
@@ -178,10 +158,4 @@ keywords: [모니터링, 이벤트 로그, BioStar Air]
 
 * 특정 시간 간격으로 새로 고침하려면 목록 왼쪽 하단의 <Cmd sid='auto_refresh_btn' product='air' />에서 5초 또는 1분을 선택하세요.
 
-   <Image src='/img/air/bsair-monitoring-eventlog-auto-refresh.png' />
-
-   :::note
-
-   <Cmd sid='audit_logs_submenu' product='air' />에서는 새로고침 기능을 지원하지 않습니다. 
-
-   :::
+  <Image src='/img/air/bsair-monitoring-eventlog-auto-refresh.png' />
