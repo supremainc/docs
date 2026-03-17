@@ -272,7 +272,7 @@
           }
         },
         "dimensions": {
-          "label": "치수",
+          "label": "크기 (W x H x D)",
           "label_id": "specs.general.dimensions",
           "type": "model",
           "items": {
@@ -301,16 +301,16 @@
             "model1": {
               "label": "장치",
               "label_id": "specs.general.weight.device",
-              "value": [ "BS3M-DB, BS3M-APB: 585 g", "BS3M-ODB, BS3M-OAPB: 670 g" ]
+              "value": [ "BS3M-DB, BS3M-APB: 565 g", "BS3M-ODB, BS3M-OAPB: 640 g" ]
             },
             "model2": {
               "label": "브래킷",
               "label_id": "specs.general.weight.bracket",
               "value": {
-                "ko": ["BS3M-DB, BS3M-APB: 181 g (와셔 및 볼트 포함)", "BS3M-ODB, BS3M-OAPB: 205 g (와셔 및 볼트 포함)"],
-                "en": ["BS3M-DB, BS3M-APB: 181 g (including washers and bolts)", "BS3M-ODB, BS3M-OAPB: 205 g (including washers and bolts)"],
-                "es": ["BS3M-DB, BS3M-APB: 181 g (incluye arandelas y tornillos)", "BS3M-ODB, BS3M-OAPB: 205 g (incluye arandelas y tornillos)"],
-                "ja": ["BS3M-DB, BS3M-APB: 181 g (ワッシャーおよびボルトを含む)", "BS3M-ODB, BS3M-OAPB: 205 g (ワッシャーおよびボルトを含む)"]
+                "ko": ["BS3M-DB, BS3M-APB: 187 g (와셔 및 볼트 포함)", "BS3M-ODB, BS3M-OAPB: 206 g (와셔 및 볼트 포함)"],
+                "en": ["BS3M-DB, BS3M-APB: 187 g (including washers and bolts)", "BS3M-ODB, BS3M-OAPB: 206 g (including washers and bolts)"],
+                "es": ["BS3M-DB, BS3M-APB: 187 g (incluye arandelas y tornillos)", "BS3M-ODB, BS3M-OAPB: 206 g (incluye arandelas y tornillos)"],
+                "ja": ["BS3M-DB, BS3M-APB: 187 g (ワッシャーおよびボルトを含む)", "BS3M-ODB, BS3M-OAPB: 206 g (ワッシャーおよびボルトを含む)"]
               }
             }
           }
