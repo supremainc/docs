@@ -97,12 +97,12 @@ export function AiCamera({ productLinks: productLinksProp }) {
     {
       title: 'ViOnyx',
       url: `/device/vionyx`,
-      img: require('@site/static/img/device/product-vionyx.png').default,
+      img: require('@site/static/img/camera/product-vionyx.png').default,
       desc: `${translate({
         id: "externalLinks.ViOnyx.desc",
         message: "AI 기반 지능형 영상 분석 카메라"
       })}`,
-      height: '55px'
+      height: '60px'
     }
   ];
   const productLinks = productLinksProp || defaultProductLinks;
