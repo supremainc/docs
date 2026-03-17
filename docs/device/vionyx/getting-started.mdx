@@ -2,7 +2,7 @@
 id: getting-started
 title: 시작하기
 description: 장치 사용을 위한 초기 절차를 안내합니다.
-keywords: [ 구성품, 명칭, 기능, 케이블, 마이크, LED ]
+keywords: [구성품, 명칭, 포트, 케이블, PoE+, RS-485, 알람, 릴레이, USB, Micro SD, 마이크, LED]
 ---
 
 장치 사용을 위한 초기 절차를 안내합니다.
@@ -67,9 +67,9 @@ keywords: [ 구성품, 명칭, 기능, 케이블, 마이크, LED ]
 
 <Td><Image src='/img/camera/component-t10-torx-driver-vionyx.png' className='none' width={40} alone /></Td>
 
-<Td><Image src='/img/camera/component-quick-guide.svg' className='none' alone /></Td>
+<Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
 
-<Td><Image src='/img/camera/component-oss-guide.svg' className='none' alone /></Td>
+<Td><Image src='/img/device/component-oss-guide.svg' className='none' alone /></Td>
 
 </Row>
 <Row className='center'>
@@ -97,21 +97,21 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
 <Image src='/img/camera/name-function-each-part-vionyx.svg' className='none' />
 
-* **알람 입력, 릴레이 (5핀)**: 알람 입력과 릴레이 출력 기능이 결합된 5핀 케이블을 연결하세요.
+* **알람 입력, 릴레이 (5핀)**: 알람 입력 및 릴레이 출력을 위한 케이블을 연결합니다.
 
-* **오디오 입출력 (4핀)**: 오디오 입출력 케이블을 연결하세요.
+* **오디오 입출력 (4핀)**: 오디오 입출력을 위한 케이블을 연결합니다.
 
-* **이더넷 (PoE+)**: 이더넷 케이블을 연결하세요. PoE 전원 공급을 지원합니다.
+* **이더넷 (PoE+)**: 이더넷 케이블을 연결합니다. PoE+를 통해 전원을 공급받을 수 있습니다.
 
-* **전원, RS-485 (5핀)**: 전원 공급과 RS-485 통신 기능이 결합된 5핀 케이블을 연결하세요.
+* **전원, RS-485 (5핀)**: 전원 공급 및 RS-485 통신을 위한 케이블을 연결합니다.
 
 * **초기화 버튼**: 모든 설정을 공장 기본값으로 초기화합니다. 자세한 내용은 [공장 초기화](installation#factory-reset)를 참고하세요.
 
-* **Micro SD 카드 슬롯**: Micro SD 카드를 삽입하세요.
+* **Micro SD 카드 슬롯**: Micro SD 카드를 삽입합니다.
 
-* **USB (Type-A)**: Wi-Fi, BLE 등 USB (Type-A) 기반 액세서리를 삽입하세요.
+* **USB (Type-A)**: Wi-Fi, BLE 등 USB 기반 액세서리를 연결합니다.
 
-* **마이크 스위치**: 오디오 녹음 기능을 제어하세요.
+* **마이크 스위치**: 마이크를 물리적으로 조작하여 오디오 녹음을 제어합니다.
 
 <PageBreak />
 
@@ -149,11 +149,11 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
 ### LED 상태 표시등
 
-카메라 커버의 LED 상태 표시등은 색상에 따라 제품의 작동 상태를 나타냅니다.
+카메라 커버 전면에 위치한 LED 상태 표시등은 제품의 작동 및 인증 상태를 색상과 점멸 패턴으로 나타냅니다.
 
 <Image src='/img/camera/led-status-indicator-vionyx.svg' className='none' alone />
 
-| LED | 상태 |
+| LED 색상 | 상태 |
 | :--: | -- |
 | 초록색 | 인증 성공 |
 | 빨간색 | 인증 실패 |
@@ -162,7 +162,7 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
 ### 마이크 스위치 설정
 
-마이크 스위치를 조작하여 카메라에서 마이크를 물리적으로 차단하고 오디오가 녹음되지 않도록 합니다.
+마이크 스위치를 조작하여 카메라에서 마이크를 물리적으로 차단하고 오디오 녹음을 방지할 수 있습니다.
 
 <Image src='/img/camera/microphone-switch-vionyx.svg' className='none' alone />
 
@@ -171,3 +171,9 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 * 오디오 녹음을 차단하려면 마이크 스위치를 왼쪽으로 밀어 마이크를 비활성화하세요.
 
 * Command 계정에서도 오디오 녹음을 비활성화할 수 있습니다.
+
+:::caution
+
+마이크 스위치가 물리적으로 비활성화된 상태에서는 Command 계정에서 설정을 변경하더라도 오디오가 녹음되지 않습니다.
+
+:::
