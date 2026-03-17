@@ -17,6 +17,23 @@
 
 const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
+  aicamwebviewr: [
+    {
+      type: 'category',
+      label: 'AI Cam Web Viewer',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/vionyx_webserver/index',
+      },
+      items: [
+        'device/vionyx_webserver/getting-started',
+        'device/vionyx_webserver/ui-navigation',
+      ]
+    }
+  ],
   bsxplugins: [
     {
       type: 'category',

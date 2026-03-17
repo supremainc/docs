@@ -1205,6 +1205,19 @@ body[data-rh] .redocusaurus {
       }
     }
   }
+  .menu-icon-table {
+    table {
+      td {
+        p.hasimg {
+          margin: 0 auto !important;
+          width: fit-content;
+        }
+        &:first-of-type, &:nth-of-type(2) {
+          width: 20%;
+        }
+      }
+    }
+  }
 
   // Columns
   .container {

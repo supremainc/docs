@@ -19,6 +19,8 @@ import glossary_ja from '@site/i18n/ja/glossary.json';
 import glossary_es from '@site/i18n/es/glossary.json';
 import air_ko from './air/ko.json';
 import air_en from './air/en.json';
+import cam_ko from './cam/ko.json';
+import cam_en from './cam/en.json';
 
 // 다국어 지원을 위한 locale mapping
 const localeMap = {
@@ -36,6 +38,11 @@ const deviceLocaleMap = {
 const airLocaleMap = {
   ko: air_ko,
   en: air_en,
+};
+
+const camLocaleMap = {
+  ko: cam_ko,
+  en: cam_en,
 };
 
 const xlocaleMap = {
@@ -106,6 +113,9 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
       }
     } else if (product === 'air') {
       const locale = airLocaleMap[currentLocale] || airLocaleMap.en;
+      localeText = locale[sid] ? locale[sid].replace('<br/>', '') : null;
+    } else if (product === 'cam') {
+      const locale = camLocaleMap[currentLocale] || camLocaleMap.en;
       localeText = locale[sid] ? locale[sid].replace('<br/>', '') : null;
     } else {
       // const locale = xlocaleMap[currentLocale] || xlocaleMap.en;
