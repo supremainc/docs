@@ -161,7 +161,8 @@ const sidebars = {
                     id: 'platform/biostar_air/monitoring',
                   },
                   items: [
-                    'platform/biostar_air/monitoring-event-and-audit-logs',
+                    'platform/biostar_air/monitoring-event-logs',
+                    'platform/biostar_air/monitoring-audit-logs',
                     'platform/biostar_air/monitoring-alert-report-history',
                     'platform/biostar_air/monitoring-door-status',
                   ]
@@ -187,7 +188,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: '서비스 구성하기',
+              label: '추가 사이트 구성하기',
               link: {
                 type: 'doc',
                 id: 'platform/biostar_air/service-configuration',

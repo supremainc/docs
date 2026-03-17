@@ -27,6 +27,12 @@ Monitor door status in the BioStar Air web portal. Click <Cmd sid="monitoring_me
 
 <Image src='/img/air/bsair-monitoring-door-status.png' />
 
+Check the following items for each door.
+
+* <Cmd sid="door_status_column2" product="air" />: Indicates whether the door is locked or unlocked.
+
+* <Cmd sid="door_status_column3" product="air" />: Indicates whether the door is physically open or closed.
+
 </TabItem>
 <TabItem value='mobile' label='Mobile'>
 
@@ -51,23 +57,43 @@ For more information on door registration and management, refer to <DocLink docI
 
 :::
 
-### Door status indicators {#doorStatusIndicators}
-
-Check the following items for each door.
-
-* <Cmd sid="door_status_column2" product="air" />: Indicates whether the door is locked or unlocked.
-
-* <Cmd sid="door_status_column3" product="air" />: Indicates whether the door is physically open or closed.
-
 ### Unlock a door {#remotely-unlocking-a-door}
 
 Unlock the door remotely when it is online and connected to BioStar Air. 
 
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
 1. In the <Cmd sid="door_status_column4" product="air" /> column, click <Cmd sid="door_open_btn" product="air" />.
 
-2. The status in the <Cmd sid="door_status_column2" product="air" /> column changes to unlocked.
+2. The status in the <Cmd sid='door_status_column2' product='air' /> column changes to unlocked, and a success message appears.
+
+   <Image src='/img/air/bsair-monitoring-door-status-open-door.png' />
 
 3. After the configured time elapses, the door returns to locked.
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--30'>
+
+<Image src='/img/air/bsair-mobile-monitoring-door-open.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+1. Tap <Cmd sid='door_open_btn' product='air' /> to remotely unlock the door. 
+
+2. A success message will appear at the bottom of the screen. 
+
+3. After the configured time elapses, the door returns to locked.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
 
 :::info
 
@@ -78,6 +104,9 @@ For information on setting the duration that the door remains open, refer to <Do
 ### Set always-open mode {#alwaysOpenMode}
 
 Keep a door unlocked indefinitely. Use this when temporary or visitor access is needed.
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
 
 1. In the door list, click <IcAirMore title="Control" /> at the far right of the door to keep open.
 
@@ -91,9 +120,37 @@ Keep a door unlocked indefinitely. Use this when temporary or visitor access is 
 
 Click <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="air" /> to return to normal operation.
 
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--30'>
+
+<Image src='/img/air/bsair-mobile-monitoring-door-status-control.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+1. Tap <IcAirMore title="Control" /> at the far right of the door. 
+
+2. When the <Cmd en='Door Info and Control'>Door Info and Control</Cmd> option appear, tap <Cmd en='Unlock'>Unlock</Cmd>.
+
+3. A success message will appear at the bottom of the screen.
+
+Tap <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="air" /> to return to normal operation.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
 ### Set lock mode {#lockMode}
 
 Keep a door locked regardless of the current schedule. Use this when enhanced security is required.
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
 
 1. In the door list, click <IcAirMore title="Control" /> at the far right of the door to keep locked.
 
@@ -107,25 +164,27 @@ Keep a door locked regardless of the current schedule. Use this when enhanced se
 
 Click <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="air" /> to return to normal operation.
 
-### Control door access on mobile {#controlling-door-access-app}
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
 
 <Columns>
-<Column className='width--20'>
+<Column className='width--30'>
 
-<Image src='/img/air/bsair-mobile-monitoring-door-status-control.png' />
+<Image src='/img/air/bsair-mobile-monitoring-door-lock-mode.png' />
 
 </Column>
 <Column className='padding--l20'>
 
-If the door is connected to the network, the following actions are available.
+1. Tap <IcAirMore title="Control" /> at the far right of the door. 
 
-* <Cmd sid="door_open_btn" product="air" />: Unlock the door remotely.
+2. When the <Cmd en='Door Info and Control'>Door Info and Control</Cmd> option appear, tap <Cmd sid='event_log_lock_mode' product='air' />.
 
-Tap <IcAirMore title="Control" /> at the far right of the door. <Cmd en='Door Info and Control'>Door Info and Control</Cmd> option appears.
+3. A success message will appear at the bottom of the screen.
 
-* <Cmd sid="event_log_unlock_mode" product="air" /> / <Cmd sid="event_log_lock_mode" product="air" />: Set the door to always-open or lock mode regardless of the schedule.
-
-* <Cmd sid="release_icon_tooltip" product="air" />: Release <Cmd sid="event_log_unlock_mode" product="air" /> or <Cmd sid="event_log_lock_mode" product="air" /> and return to normal operation.
+Tap <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="air" /> to return to normal operation.
 
 </Column>
 </Columns>
+
+</TabItem>
+</Tabs>

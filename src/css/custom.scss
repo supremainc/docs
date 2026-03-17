@@ -845,6 +845,9 @@ body[data-rh] .redocusaurus {
     }
   }
   ul.tabs {
+    li::before {
+      content: "";
+    }
     li:last-of-type {
       margin-bottom: var(--ifm-list-paragraph-margin);
     }
@@ -1065,6 +1068,7 @@ body[data-rh] .redocusaurus {
       height: fit-content;
       h2 {
         padding-top: 0;
+        margin-top: 0;
       }
       ul li {
         margin-top: 0;
