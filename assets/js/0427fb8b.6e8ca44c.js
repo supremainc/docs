@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-device-bioentry-p-2-release-notes-160-mdx-042.json
-var site_docs_device_bioentry_p_2_release_notes_160_mdx_042_namespaceObject = JSON.parse('{"id":"device/bioentry_p2/release-notes/160","title":"펌웨어 버전 1.6.0","description":"릴리즈2026-03-13","source":"@site/docs/device/bioentry_p2/release-notes/160.mdx","sourceDirName":"device/bioentry_p2/release-notes","slug":"/device/bioentry_p2/release-notes/160","permalink":"/docs/ja/device/bioentry_p2/release-notes/160","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/bioentry_p2/release-notes/160.mdx","tags":[],"version":"current","frontMatter":{"id":"160","title":"펌웨어 버전 1.6.0","isTranslationMissing":true},"sidebar":"bioentryp2","previous":{"title":"BioEntry P2 Release Notes","permalink":"/docs/ja/device/bioentry_p2/release-notes/"},"next":{"title":"Firmware Version 1.5.2","permalink":"/docs/ja/device/bioentry_p2/release-notes/152"}}')
+var site_docs_device_bioentry_p_2_release_notes_160_mdx_042_namespaceObject = JSON.parse('{"id":"device/bioentry_p2/release-notes/160","title":"펌웨어 버전 1.6.0","description":"릴리즈2026-03-13","source":"@site/docs/device/bioentry_p2/release-notes/160.mdx","sourceDirName":"device/bioentry_p2/release-notes","slug":"/device/bioentry_p2/release-notes/160","permalink":"/docs/device/bioentry_p2/release-notes/160","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/bioentry_p2/release-notes/160.mdx","tags":[],"version":"current","frontMatter":{"id":"160","title":"펌웨어 버전 1.6.0","isTranslationMissing":false},"sidebar":"bioentryp2","previous":{"title":"BioEntry P2 릴리스 노트","permalink":"/docs/device/bioentry_p2/release-notes/"},"next":{"title":"펌웨어 버전 1.5.2","permalink":"/docs/device/bioentry_p2/release-notes/152"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -26,7 +26,7 @@ var lib = __webpack_require__(84429);
 const frontMatter = {
 	id: 160,
 	title: '펌웨어 버전 1.6.0',
-	isTranslationMissing: true
+	isTranslationMissing: false
 };
 const contentTitle = '펌웨어 버전 1.6.0 (빌드 번호 1.6.0_260212)';
 
@@ -186,12 +186,6 @@ function _createMdxContent(props) {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["SDK에서 getOperator 함수 사용 시 데이터베이스가 마이그레이션되지 않는 문제 ", (0,jsx_runtime.jsx)(Badge, {
               children: "1.0.0"
-            })]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["G-SDK를 사용하여 스마트 카드 설정 정보를 가져올 때 카드의 일부 키 값이 마스킹 처리되지 않는 문제 ", (0,jsx_runtime.jsx)(Badge, {
-              children: "1.5.1"
             })]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {

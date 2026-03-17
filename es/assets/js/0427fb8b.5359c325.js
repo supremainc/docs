@@ -190,12 +190,6 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["G-SDK를 사용하여 스마트 카드 설정 정보를 가져올 때 카드의 일부 키 값이 마스킹 처리되지 않는 문제 ", (0,jsx_runtime.jsx)(Badge, {
-              children: "1.5.1"
-            })]
-          }), "\n"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
             children: ["일광절약시간(DST) 적용 시 출입 그룹 인증이 스케줄에 따라 비정상적으로 작동하는 문제 ", (0,jsx_runtime.jsx)(Badge, {
               children: "1.0.0"
             })]
