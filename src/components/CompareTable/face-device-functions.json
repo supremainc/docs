@@ -213,7 +213,7 @@
     "FaceLite": false,
     "FaceStation F2": false,
     "BioStation 3": false,
-    "BioEntry W3": false
+    "BioEntry W3": true
   },
   {
     "category": "advanced",

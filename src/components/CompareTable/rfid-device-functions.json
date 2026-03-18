@@ -6,7 +6,8 @@
     "XPass S2": false,
     "X-Station": false,
     "XPass 2": false,
-    "X-Station 2": false
+    "X-Station 2": false,
+    "XPass Q2": false
   },
   {
     "category": "credential",
@@ -15,7 +16,8 @@
     "XPass S2": false,
     "X-Station": false,
     "XPass 2": false,
-    "X-Station 2": false
+    "X-Station 2": false,
+    "XPass Q2": false
   },
   {
     "category": "credential",
@@ -24,7 +26,8 @@
     "XPass S2": true,
     "X-Station": true,
     "XPass 2": true,
-    "X-Station 2": true
+    "X-Station 2": true,
+    "XPass Q2": true
   },
   {
     "category": "credential",
@@ -33,7 +36,8 @@
     "XPass S2": false,
     "X-Station": false,
     "XPass 2": true,
-    "X-Station 2": true
+    "X-Station 2": true,
+    "XPass Q2": true
   },
   {
     "category": "credential",
@@ -42,7 +46,8 @@
     "XPass S2": false,
     "X-Station": true,
     "XPass 2": "🔶",
-    "X-Station 2": true
+    "X-Station 2": true,
+    "XPass Q2": false
   },
   {
     "category": "credential",
@@ -51,7 +56,8 @@
     "XPass S2": false,
     "X-Station": false,
     "XPass 2": false,
-    "X-Station 2": true
+    "X-Station 2": true,
+    "XPass Q2": false
   },
   {
     "category": "credential",
@@ -60,7 +66,8 @@
     "XPass S2": false,
     "X-Station": false,
     "XPass 2": false,
-    "X-Station 2": true
+    "X-Station 2": true,
+    "XPass Q2": true
   },
   {
     "category": "basic",
@@ -69,7 +76,8 @@
     "XPass S2": true,
     "X-Station": false,
     "XPass 2": true,
-    "X-Station 2": true
+    "X-Station 2": true,
+    "XPass Q2": true
   },
   {
     "category": "basic",
@@ -78,7 +86,8 @@
     "XPass S2": false,
     "X-Station": false,
     "XPass 2": true,
-    "X-Station 2": false
+    "X-Station 2": false,
+    "XPass Q2": false
   },
   {
     "category": "basic",
@@ -87,7 +96,8 @@
     "XPass S2": true,
     "X-Station": true,
     "XPass 2": true,
-    "X-Station 2": true
+    "X-Station 2": true,
+    "XPass Q2": false
   },
   {
     "category": "basic",
@@ -96,7 +106,8 @@
     "XPass S2": false,
     "X-Station": true,
     "XPass 2": false,
-    "X-Station 2": true
+    "X-Station 2": true,
+    "XPass Q2": false
   },
   {
     "category": "basic",
@@ -105,7 +116,8 @@
     "XPass S2": false,
     "X-Station": true,
     "XPass 2": "🔶",
-    "X-Station 2": true
+    "X-Station 2": true,
+    "XPass Q2": false
   },
   {
     "category": "basic",
@@ -114,7 +126,8 @@
     "XPass S2": true,
     "X-Station": true,
     "XPass 2": true,
-    "X-Station 2": true
+    "X-Station 2": true,
+    "XPass Q2": true
   },
   {
     "category": "basic",
@@ -123,7 +136,8 @@
     "XPass S2": false,
     "X-Station": false,
     "XPass 2": false,
-    "X-Station 2": false
+    "X-Station 2": false,
+    "XPass Q2": false
   },
   {
     "category": "basic",
@@ -132,7 +146,8 @@
     "XPass S2": true,
     "X-Station": true,
     "XPass 2": true,
-    "X-Station 2": true
+    "X-Station 2": true,
+    "XPass Q2": true
   },
   {
     "category": "basic",
@@ -141,7 +156,8 @@
     "XPass S2": true,
     "X-Station": true,
     "XPass 2": true,
-    "X-Station 2": true
+    "X-Station 2": true,
+    "XPass Q2": true
   },
   {
     "category": "basic",
@@ -150,7 +166,8 @@
     "XPass S2": true,
     "X-Station": true,
     "XPass 2": true,
-    "X-Station 2": true
+    "X-Station 2": true,
+    "XPass Q2": true
   },
   {
     "category": "advanced",
@@ -159,7 +176,8 @@
     "XPass S2": false,
     "X-Station": true,
     "XPass 2": false,
-    "X-Station 2": true
+    "X-Station 2": true,
+    "XPass Q2": false
   },
   {
     "category": "advanced",
@@ -168,7 +186,8 @@
     "XPass S2": false,
     "X-Station": false,
     "XPass 2": false,
-    "X-Station 2": false
+    "X-Station 2": false,
+    "XPass Q2": false
   },
   {
     "category": "advanced",
@@ -177,7 +196,8 @@
     "XPass S2": false,
     "X-Station": false,
     "XPass 2": false,
-    "X-Station 2": false
+    "X-Station 2": false,
+    "XPass Q2": false
   },
   {
     "category": "advanced",
@@ -186,7 +206,8 @@
     "XPass S2": false,
     "X-Station": true,
     "XPass 2": false,
-    "X-Station 2": true
+    "X-Station 2": true,
+    "XPass Q2": false
   },
   {
     "category": "advanced",
@@ -195,7 +216,8 @@
     "XPass S2": false,
     "X-Station": true,
     "XPass 2": false,
-    "X-Station 2": false
+    "X-Station 2": false,
+    "XPass Q2": false
   },
   {
     "category": "advanced",
@@ -204,7 +226,8 @@
     "XPass S2": false,
     "X-Station": false,
     "XPass 2": true,
-    "X-Station 2": true
+    "X-Station 2": true,
+    "XPass Q2": "🔶"
   },
   {
     "category": "advanced",
@@ -213,7 +236,8 @@
     "XPass S2": false,
     "X-Station": false,
     "XPass 2": true,
-    "X-Station 2": false
+    "X-Station 2": false,
+    "XPass Q2": true
   },
   {
     "category": "advanced",
@@ -222,7 +246,8 @@
     "XPass S2": true,
     "X-Station": true,
     "XPass 2": true,
-    "X-Station 2": true
+    "X-Station 2": true,
+    "XPass Q2": false
   },
   {
     "category": "advanced",
@@ -231,6 +256,7 @@
     "XPass S2": false,
     "X-Station": false,
     "XPass 2": true,
-    "X-Station 2": true
+    "X-Station 2": true,
+    "XPass Q2": true
   }
 ]
