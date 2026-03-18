@@ -1,105 +1,105 @@
 ---
 id: federated-sites
-title: Manage Federated Sites
-description: Set up and manage federated sites in BioStar Air for multi-tenant buildings and multi-branch organizations through centralized control.
+title: Administrar sitios federados
+description: Configure y administre sitios federados en BioStar Air para edificios con múltiples inquilinos y organizaciones con varias sucursales a través de un control centralizado.
 keywords:
-  - federated
-  - sites
+  - federado
+  - sitios
   - BioStar Air
 ---
 
-BioStar Air provides **federated sites**, enabling a primary site to seamlessly manage multiple subsites. This feature is ideal for multi-tenant buildings or organizations with multiple branches and offers centralized control through distributed access management.
+BioStar Air ofrece **sitios federados**, que permiten a un sitio primario gestionar sin problemas múltiples subsitios. Esta función es ideal para edificios con varios inquilinos u organizaciones con múltiples sucursales y proporciona control centralizado mediante la gestión distribuida de accesos.
 
-By leveraging the federated site feature in BioStar Air, administrators effectively manage access in complex environments and deliver a secure, scalable, and streamlined experience for all stakeholders.
+Al aprovechar la función de sitios federados de BioStar Air, los administradores gestionan eficazmente el acceso en entornos complejos y ofrecen una experiencia segura, escalable y optimizada para todas las partes interesadas.
 
-## What is a federated site? {#whatFederatedSites}
+## ¿Qué es un sitio federado? {#whatFederatedSites}
 
-**Federated sites** support a hierarchical structure in which a **primary site** manages one or more **subsites**. An administrator of the primary site—called the **federation administrator**—can directly access and manage subsites from the BioStar Air interface.
+**Los sitios federados** admiten una estructura jerárquica en la que un **sitio primario** gestiona uno o más **subsitios**. Un administrador del sitio primario—denominado **administrador de la federación**—puede acceder y administrar directamente los subsitios desde la interfaz de BioStar Air.
 
-Federated sites are useful in the following situations.
+Los sitios federados son útiles en las siguientes situaciones.
 
-### Multi-tenant building
+### Edificio con múltiples inquilinos
 
-For example, in a commercial building where each floor is occupied by a different company, configure the system as follows.
+Por ejemplo, en un edificio comercial donde cada piso está ocupado por una empresa diferente, configure el sistema de la siguiente manera.
 
-* **Master account** for the building
+* **Cuenta maestra** del edificio
 
-* **Subaccount** for each tenant company
+* **Subcuenta** para cada empresa inquilina
 
-This setup authorizes only employees with access to a specific floor, simplifying building management.
+Esta configuración autoriza únicamente a los empleados que tienen acceso a un piso específico, lo que simplifica la gestión del edificio.
 
-### Multi-branch organization
+### Organización con múltiples sucursales
 
-A company with offices in multiple locations can configure the system as follows.
+Una empresa con oficinas en varias ubicaciones puede configurar el sistema de la siguiente manera.
 
-* Manage global settings through a **master account**
+* Gestione la configuración global mediante una **cuenta maestra**
 
-* Create a **subaccount** for each branch
+* Cree una **subcuenta** para cada sucursal
 
-For example, a company with ten offices worldwide can use a federated structure to streamline management.
+Por ejemplo, una empresa con diez oficinas en todo el mundo puede utilizar una estructura federada para agilizar la gestión.
 
-## Set up federated sites {#setFederatedSites}
+## Configurar sitios federados {#setFederatedSites}
 
 <Steps>
 <Step>
 
-### Access Partner Portal
+### Acceder al Portal de Socios
 
 URL: [https://partner.biostarair.com](https://partner.biostarair.com)
 
-* Only partners and installers can use the BioStar Air Partner Portal.
+* Solo socios e instaladores pueden usar el Portal de Socios de BioStar Air.
 
-* End customers must contact an installer to configure this feature.
-
-</Step>
-<Step>
-
-### Create primary site
-
-1. Log in to the [Partner Portal](https://partner.biostarair.com).
-
-2. Click **Create Site**, and in **Site Profile** select **Federated Site**.
-
-   * This step **must** be performed when first setting up the site.
-
-   * A standard site cannot be converted to a federated site later.
-
-3. Add a federation site administrator on the same screen.
-
-   * A **federation site administrator** added in the Partner Portal can access the primary site and all subsites.
-
-   * A **general administrator** added in BioStar Air can manage only individual sites.
+* Los clientes finales deben ponerse en contacto con un instalador para configurar esta función.
 
 </Step>
 <Step>
 
-### Add subsites
+### Crear sitio primario
 
-1. After the primary site is set as a federated site, the **Site List** shows an option to create subsites.
+1. Inicia sesión en el [Portal de Socios](https://partner.biostarair.com).
 
-2. Click **Create Subsite** and configure it like any other site.
+2. Haz clic en **Crear sitio** y, en **Perfil del sitio**, selecciona **Sitio federado**.
+
+   * Este paso **debe** realizarse al configurar el sitio por primera vez.
+
+   * Un sitio estándar no puede convertirse en un sitio federado más adelante.
+
+3. Agrega un administrador del sitio federado en la misma pantalla.
+
+   * Un **administrador del sitio federado** agregado en el Portal de Socios puede acceder al sitio principal y a todos los subsitios.
+
+   * Un **administrador general** agregado en BioStar Air solo puede administrar sitios individuales.
+
+</Step>
+<Step>
+
+### Agregar subsitios
+
+1. Una vez que el sitio principal está configurado como sitio federado, la **Lista de sitios** muestra la opción para crear subsitios.
+
+2. Haz clic en **Crear subsitio** y configúralo como cualquier otro sitio.
 
 </Step>
 </Steps>
 
-## Important considerations {#important-considerations}
+## Consideraciones importantes {#important-considerations}
 
-### User and device management {#user-and-reader-management}
+### Gestión de usuarios y dispositivos {#user-and-reader-management}
 
-* Add users and devices separately to each subsite.
+* Agrega usuarios y dispositivos por separado a cada subsitio.
 
-* A device can be registered to only one site at a time. Select either the primary site or a subsite.
+* Un dispositivo solo puede registrarse en un sitio a la vez. Selecciona el sitio principal o un subsitio.
 
-### Primary site usage {#primary-site-usage}
+### Uso del sitio principal {#primary-site-usage}
 
-* Certain customers use the primary site only as an access point for subsite management and do not register any users or devices in the primary site.
+* Ciertos clientes usan el sitio principal únicamente como punto de acceso para la gestión de subsitios y no registran usuarios ni dispositivos en el sitio principal.
 
-* **Example 1**: A company with three branch offices sets up a primary site with no devices and creates a subsite for each branch.
+* **Ejemplo 1**: Una empresa con tres sucursales configura un sitio principal sin dispositivos y crea un subsitio para cada sucursal.
 
-* **Example 2**: A company with headquarters and three branches registers users and devices at headquarters (the primary site) and sets up subsites for the branches.
+* **Ejemplo 2**: Una empresa con sede central y tres sucursales registra usuarios y dispositivos en la sede central (el sitio principal) y crea subsitios para las sucursales.
 
-### Billing {#billing}
+### Facturación {#billing}
 
-* Billing is calculated based on the number of registered devices (readers) per site.
+* La facturación se calcula según el número de dispositivos registrados (lectores) por sitio.
 
-* There is no additional cost to create a primary site without registered devices.
+* No hay costo adicional por crear un sitio principal sin dispositivos registrados.

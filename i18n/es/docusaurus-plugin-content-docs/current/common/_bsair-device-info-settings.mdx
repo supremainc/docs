@@ -1,64 +1,64 @@
 ### <Cmd sid='new_layout_nav_title_detail' product='air' className='normal' /> {#deviceInfo}
 
-The <Cmd sid='new_layout_nav_title_detail' product='air' /> section provides basic information — such as the device name, model, serial number, and firmware version — and includes an action menu for controlling features and default settings.
+La sección <Cmd sid='new_layout_nav_title_detail' product='air' /> proporciona información básica — como el nombre del dispositivo, el modelo, el número de serie y la versión de firmware — e incluye un menú de acciones para controlar funciones y ajustes predeterminados.
 
-#### Basic Information
+#### Información básica
 
-View the device's basic information. This information cannot be edited.
+Vea la información básica del dispositivo. Esta información no se puede editar.
 
-* <Cmd sid='device_non_editable_fields_product' product='air' />: The product name.
+* <Cmd sid='device_non_editable_fields_product' product='air' />: El nombre del producto.
 
-* <Cmd sid='device_non_editable_fields_model' product='air' />: The device's model name.
+* <Cmd sid='device_non_editable_fields_model' product='air' />: El nombre del modelo del dispositivo.
 
-* <Cmd sid='device_non_editable_fields_serial' product='air' />: The device's serial number.
+* <Cmd sid='device_non_editable_fields_serial' product='air' />: El número de serie del dispositivo.
 
-* <Cmd sid='device_non_editable_fields_firmware' product='air' />: The firmware version installed on the device.
+* <Cmd sid='device_non_editable_fields_firmware' product='air' />: La versión de firmware instalada en el dispositivo.
 
-#### Actions
+#### Acciones
 
-The **Action** (액션) feature lets you control the device's functions.
+La función **Action** (액션) le permite controlar las funciones del dispositivo.
 
 <Image src='/img/air/bsair-device-mng-edit-actions.png' />
 
-* <Cmd sid='firmware_update_btn' product='air' />: Update the device firmware to the latest version.
+* <Cmd sid='firmware_update_btn' product='air' />: Actualice el firmware del dispositivo a la versión más reciente.
 
-* <Cmd sid='device_edit_actions_reboot' product='air' />: Reboot the device remotely when an issue or anomaly occurs.
+* <Cmd sid='device_edit_actions_reboot' product='air' />: Reinicie el dispositivo de forma remota cuando ocurra un problema o anomalía.
 
-* <Cmd sid='device_edit_actions_factory_reset' product='air' />: Initialize all settings stored on the device. This action deletes all settings and data on the device.
+* <Cmd sid='device_edit_actions_factory_reset' product='air' />: Inicialice todos los ajustes almacenados en el dispositivo. Esta acción elimina todos los ajustes y datos del dispositivo.
 
-* <Cmd sid='device_edit_actions_factory_reset' product='air' /> <Cmd sid='device_edit_actions_excluding_network' product='air' />: Initialize all settings except the network settings. This action deletes all settings and data but keeps the network settings.
+* <Cmd sid='device_edit_actions_factory_reset' product='air' /> <Cmd sid='device_edit_actions_excluding_network' product='air' />: Inicialice todos los ajustes excepto la configuración de red. Esta acción elimina todos los ajustes y datos, pero conserva la configuración de red.
 
-#### Initial Settings
+#### Ajustes iniciales
 
-Modify the device's default settings.
+Modifique los ajustes predeterminados del dispositivo.
 
-* <Cmd sid='device_editable_fields_nick_name' product='air' />: The alias shown in the device list and logs. You can edit this field directly.
+* <Cmd sid='device_editable_fields_nick_name' product='air' />: El alias que aparece en la lista de dispositivos y en los registros. Puede editar este campo directamente.
 
-* <Cmd sid='device_editable_fields_timezone' product='air' />: Set the device time zone to keep logs consistent when the site and device clocks differ. Activate the <Cmd sid='device_field_dst_usage' product='air' /> option to apply daylight saving time (DST).
+* <Cmd sid='device_editable_fields_timezone' product='air' />: Establezca la zona horaria del dispositivo para mantener los registros consistentes cuando los relojes del sitio y del dispositivo difieran. Active la opción <Cmd sid='device_field_dst_usage' product='air' /> para aplicar el horario de verano (DST).
 
 <Include type={props.type} ref='xpass2'>
 
-* <Cmd sid='keypad_use_rf_card_number' product='air' />: Enter the RF card number using the keypad to use it.
+* <Cmd sid='keypad_use_rf_card_number' product='air' />: Ingrese el número de la tarjeta RF mediante el teclado para poder usarla.
 
    :::note
 
-   This feature is supported only on the **XP2-GKDPB** model, which has a keypad.
+   Esta función es compatible únicamente con el modelo **XP2-GKDPB**, que tiene un teclado.
 
    :::
 
 </Include>
 
-* <Cmd sid='device_editable_fields_hands_free' product='air' />: Extend the BLE range.
+* <Cmd sid='device_editable_fields_hands_free' product='air' />: Amplíe el alcance BLE.
 
 <Include type={props.type} ref='ae-mc,xpass2,xs2'>
 
-* <Cmd sid='device_editable_fields_qr_reader' product='air' />: Confirm that an RS-485 QR reader is connected to the device.
+* <Cmd sid='device_editable_fields_qr_reader' product='air' />: Confirme que un lector QR RS-485 esté conectado al dispositivo.
 
    :::note
 
-  * When a QR reader is connected to the device, you cannot use another RS-485 device.
+  * Cuando un lector QR esté conectado al dispositivo, no se puede usar otro dispositivo RS-485.
 
-  * When using an SIO2, you cannot use a QR reader on the device connected to that door.
+  * Si utiliza un SIO2, no podrá usar un lector QR en el dispositivo conectado a esa puerta.
 
    :::
 
@@ -66,13 +66,13 @@ Modify the device's default settings.
 
 <Include type={props.type} ref='ae-mc,xs2'>
 
-* <Cmd sid='device_editable_fields_card' product='air' />: Activate or deactivate card authentication. DESFire and Felica card formats are supported.
+* <Cmd sid='device_editable_fields_card' product='air' />: Active o desactive la autenticación por tarjeta. Se admiten los formatos de tarjeta DESFire y Felica.
 
 </Include>
 
 <Include type={props.type} ref='ae-mc,xpass2'>
 
-* <Cmd sid='device_editable_fields_beep_setting' product='air' />: Configure the success beep for access authentication.
+* <Cmd sid='device_editable_fields_beep_setting' product='air' />: Configure el pitido de confirmación para la autenticación de acceso.
 
 </Include>
 
@@ -82,11 +82,11 @@ Modify the device's default settings.
 
 ### <Cmd sid='device_card_title' product='air' className='normal' /> {#cardSettings}
 
-In the <Cmd sid='device_card_title' product='air' /> section, you can modify card authentication settings.
+En la sección <Cmd sid='device_card_title' product='air' /> puede modificar los ajustes de autenticación por tarjeta.
 
 #### <Cmd sid='device_editable_fields_card' product='air' className='normal' /> {#nfcRfcard}
 
-* <Cmd sid='device_editable_fields_card' product='air' />: Click the toggle switch to enable or disable card access authentication. Select the card types supported for card authentication.
+* <Cmd sid='device_editable_fields_card' product='air' />: Haga clic en el interruptor para activar o desactivar la autenticación de acceso por tarjeta. Seleccione los tipos de tarjeta compatibles.
 
   * <Cmd sid='device_editable_fields_card_em4100' product='air' />
 
@@ -94,27 +94,27 @@ In the <Cmd sid='device_card_title' product='air' /> section, you can modify car
 
 * <Cmd sid='device_editable_fields_card_byte_order' product='air' />
 
-  * <Cmd>MSB</Cmd>: Processes card data in order from large byte units to small byte units, sequentially storing the card serial number (CSN) from left to right.
+  * <Cmd>MSB</Cmd>: Procesa los datos de la tarjeta en orden de unidades de byte grandes a pequeñas, almacenando secuencialmente el número de serie de la tarjeta (CSN) de izquierda a derecha.
 
-  * <Cmd>LSB</Cmd>: Processes card data in order from small byte units to large byte units, storing the card serial number (CSN).
+  * <Cmd>LSB</Cmd>: Procesa los datos de la tarjeta en orden de unidades de byte pequeñas a grandes, almacenando el número de serie de la tarjeta (CSN).
 
-* <Cmd sid='device_card_field_data_reading_method' product='air' />: Select CSN (default) or Wiegand format.
+* <Cmd sid='device_card_field_data_reading_method' product='air' />: Seleccione CSN (predeterminado) o el formato Wiegand.
 
    :::note
 
-   Wiegand supports 5 default formats. Add more formats in <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' />. For more information about custom card format settings, see <DocLink docId='platform/biostar_air/custom-wiegand-card-formats' />.
+   Wiegand admite 5 formatos predeterminados. Agregue más formatos en <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' />. Para más información sobre la configuración de formatos de tarjeta personalizados, consulte <DocLink docId='platform/biostar_air/custom-wiegand-card-formats' />.
 
    :::
 
 #### <Cmd sid='device_card_wiegand_card' product='air' className='normal' /> {#device_card_wiegand_card}
 
-For Wiegand cards, you can select <Cmd sid='device_card_wiegand_card_iclass' product='air' /> and <Cmd sid='device_card_wiegand_card_hid_prox' product='air' />. Click the toggle to enable the feature, then select the desired card format in <Cmd sid='device_card_wiegand_card' product='air' />.
+Para tarjetas Wiegand, seleccione <Cmd sid='device_card_wiegand_card_iclass' product='air' /> y <Cmd sid='device_card_wiegand_card_hid_prox' product='air' />. Haga clic en el interruptor para activar la función y luego seleccione el formato de tarjeta deseado en <Cmd sid='device_card_wiegand_card' product='air' />.
 
 :::info
 
-* Support may vary by device.
+* La compatibilidad puede variar según el dispositivo.
 
-* Wiegand supports 5 default formats. Add more formats in <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' />. For more information about custom card format settings, see <DocLink docId='platform/biostar_air/custom-wiegand-card-formats' />.
+* Wiegand admite 5 formatos predeterminados. Agregue más formatos en <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' />. Para más información sobre la configuración de formatos de tarjeta personalizados, consulte <DocLink docId='platform/biostar_air/custom-wiegand-card-formats' />.
 
 :::
 
@@ -124,11 +124,11 @@ For Wiegand cards, you can select <Cmd sid='device_card_wiegand_card_iclass' pro
 
 ### <Cmd sid='new_layout_nav_title_network' product='air' className='normal ' /> {#network}
 
-Modify the device's network settings.
+Modifique la configuración de red del dispositivo.
 
-* <Cmd sid='device_editable_fields_use_dhcp' product='air' />: Configure the device to obtain an IP address automatically.
+* <Cmd sid='device_editable_fields_use_dhcp' product='air' />: Configure el dispositivo para obtener una dirección IP automáticamente.
 
-   To set the network manually, disable <Cmd sid='device_editable_fields_use_dhcp' product='air' /> and fill in the following fields.
+   Para configurar la red manualmente, desactive <Cmd sid='device_editable_fields_use_dhcp' product='air' /> y complete los siguientes campos.
 
 * <Cmd sid='device_editable_fields_ip_address' product='air' />
 
@@ -146,41 +146,41 @@ Modify the device's network settings.
 
 <Include type={props.type} ref='xpass2'>
 
-* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />: Add authentication methods. Click <Cmd sid='add_btn' product='air' /> to add an authentication method.
+* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />: Agregue métodos de autenticación. Haga clic en <Cmd sid='add_btn' product='air' /> para agregar un método de autenticación.
 
-  * **XP2-MDPB** / **XP2-GDPB**: Only RF cards can be selected as the authentication method.
+  * **XP2-MDPB** / **XP2-GDPB**: Solo se pueden seleccionar tarjetas RF como método de autenticación.
 
-  * **XP2-GKDPB**: You can use a combination of an RF card and a PIN as the authentication method.
+  * **XP2-GKDPB**: Puede usar una combinación de tarjeta RF y PIN como método de autenticación.
 
 </Include>
 
 <Include type={props.type} ref='bew3'>
 
-* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />: Add authentication methods. Click <Cmd sid='add_btn' product='air' /> to add an authentication method. You can use a combination of an RF card and facial recognition as the authentication method.
+* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />: Agregue métodos de autenticación. Haga clic en <Cmd sid='add_btn' product='air' /> para agregar un método de autenticación. Puede usar una combinación de tarjeta RF y reconocimiento facial como método de autenticación.
 
 </Include>
 
 <Include type={props.type} ref='bs3'>
 
-* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />: Add authentication methods. Click <Cmd sid='add_btn' product='air' /> to add an authentication method. You can choose a combination of RF card, face, ID, and PIN for authentication.
+* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />: Agregue métodos de autenticación. Haga clic en <Cmd sid='add_btn' product='air' /> para agregar un método de autenticación. Puede elegir una combinación de tarjeta RF, reconocimiento facial, identificación y PIN para la autenticación.
 
 </Include>
 
 <Include type={props.type} ref='bs3'>
 
-* <Cmd sid='device_bs3_authen_display_user_name' product='air' /> / <Cmd sid='device_bs3_authen_display_user_id' product='air' />: Choose whether to show the user name or ID on the authentication screen. Select <Cmd sid='device_bs3_authen_display_user_name_txt3' product='air' /> to hide them.
+* <Cmd sid='device_bs3_authen_display_user_name' product='air' /> / <Cmd sid='device_bs3_authen_display_user_id' product='air' />: Elija si mostrar el nombre de usuario o el ID en la pantalla de autenticación. Seleccione <Cmd sid='device_bs3_authen_display_user_name_txt3' product='air' /> para ocultarlos.
 
-* <Cmd sid='new_layout_nav_title_authentication_auth_timeout' product='air' />: Authentication fails if the credential is not authenticated within the set time.
+* <Cmd sid='new_layout_nav_title_authentication_auth_timeout' product='air' />: La autenticación fallará si la credencial no se valida dentro del tiempo establecido.
 
 </Include>
 
 <Include type={props.type} ref='xpass2'>
 
-* <Cmd sid='new_layout_nav_title_authentication_auth_timeout' product='air' />: Authentication fails if the credential is not authenticated within the set time.
+* <Cmd sid='new_layout_nav_title_authentication_auth_timeout' product='air' />: La autenticación fallará si la credencial no se valida dentro del tiempo establecido.
 
    :::note
 
-   This feature is supported only on the **XP2-GKDPB** model.
+   Esta función solo es compatible con el modelo **XP2-GKDPB**.
 
    :::
 
@@ -188,7 +188,7 @@ Modify the device's network settings.
 
 :::info
 
-You can configure different authentication methods for the selected schedule. For example, you can allow card-only authentication during work hours and allow card-and-PIN authentication outside work hours.
+Puede configurar distintos métodos de autenticación para el horario seleccionado. Por ejemplo, puede permitir únicamente la autenticación con tarjeta durante el horario laboral y permitir autenticación con tarjeta y PIN fuera del horario laboral.
 
 :::
 
@@ -202,49 +202,49 @@ You can configure different authentication methods for the selected schedule. Fo
 
 #### <Cmd sid='site_setting_tab_security' product='air' className='normal' /> {#faceSecurity}
 
-* <Cmd sid="new_layout_device_bew3_block_7_title" product="air" />: Prevent user authentication with spoofed faces such as photos.
+* <Cmd sid="new_layout_device_bew3_block_7_title" product="air" />: Evite la autenticación de usuarios con rostros falsificados, como fotografías.
 
-* <Cmd sid="new_layout_device_bew3_block_7_text2" product="air" />: Check for duplicate registrations when enrolling facea.
+* <Cmd sid="new_layout_device_bew3_block_7_text2" product="air" />: Verifique registros duplicados al inscribir rostros.
 
 #### <Cmd sid='device_face_detection' product='air' className='normal' /> {#faceDetection}
 
-* <Cmd sid="new_layout_device_bew3_block_2_title" product="air" />: Set the sensitivity for detecting movement around the device.
+* <Cmd sid="new_layout_device_bew3_block_2_title" product="air" />: Establezca la sensibilidad para detectar movimiento alrededor del dispositivo.
 
-* <Cmd sid="new_layout_device_bew3_block_3_title" product="air" />: Set the maximum rotation angle allowed for a face.
+* <Cmd sid="new_layout_device_bew3_block_3_title" product="air" />: Establezca el ángulo máximo de rotación permitido para el rostro.
 
-* <Cmd sid='new_layout_device_bew3_block_5_title' product='air' />: Expand the area in the camera view where faces are recognized.
+* <Cmd sid='new_layout_device_bew3_block_5_title' product='air' />: Amplíe el área en la vista de la cámara donde se reconocen los rostros.
 
-* <Cmd sid='new_layout_device_bew3_block_4_title' product='air' /> <Cmd sid='new_layout_device_bew3_block_4_title_cm' product='air' />: Set the minimum and maximum recognition distance.
+* <Cmd sid='new_layout_device_bew3_block_4_title' product='air' /> <Cmd sid='new_layout_device_bew3_block_4_title_cm' product='air' />: Establezca la distancia mínima y máxima de reconocimiento.
 
-* <Cmd sid='new_layout_device_bew3_block_8_title' product='air' /> <Cmd sid='new_layout_device_bew3_block_8_title_cm' product='air' />: If a face is not enrolled within the set time during enrollment, the process is canceled.
+* <Cmd sid='new_layout_device_bew3_block_8_title' product='air' /> <Cmd sid='new_layout_device_bew3_block_8_title_cm' product='air' />: Si no se registra un rostro dentro del tiempo establecido durante el registro, el proceso se cancelará.
 
 #### <Cmd sid='new_layout_device_bew3_block_8_1_text' product='air' className='normal' /> {#maskDetection}
 
-Activate the <Cmd sid='new_layout_device_bew3_block_8_1_text' product='air' /> option to configure mask detection.
+Active la opción <Cmd sid='new_layout_device_bew3_block_8_1_text' product='air' /> para configurar la detección de mascarillas.
 
-* <Cmd sid="new_layout_device_bew3_block_8_2_text" product="air" />: Select mask detection sensitivity.
+* <Cmd sid="new_layout_device_bew3_block_8_2_text" product="air" />: Seleccione la sensibilidad de la detección de mascarilla.
 
 * <Cmd sid='new_layout_device_bew3_block_8_3_text' product='air' />
 
-  * <Cmd sid="new_layout_device_bew3_block_8_3_value1" product="air" />: Users not wearing a mask are denied authentication, and a mask-non-compliance event log is recorded.
+  * <Cmd sid="new_layout_device_bew3_block_8_3_value1" product="air" />: A los usuarios que no lleven mascarilla se les deniega la autenticación y se registra un evento de incumplimiento del uso de mascarilla.
 
-  * <Cmd sid="new_layout_device_bew3_block_8_3_value2" product="air" />: Users not wearing a mask can still authenticate, but a mask-non-compliance event log is recorded.
+  * <Cmd sid="new_layout_device_bew3_block_8_3_value2" product="air" />: Los usuarios que no lleven mascarilla aún pueden autenticarse, pero se registra un evento de incumplimiento del uso de mascarilla.
 
 * <Cmd sid="new_layout_device_bew3_block_8_4_text" product="air" />
 
-  * <Cmd sid="new_layout_device_bew3_block_8_4_value1" product="air" />: After authentication, check mask usage or measure temperature.
+  * <Cmd sid="new_layout_device_bew3_block_8_4_value1" product="air" />: Después de la autenticación, verifique el uso de mascarilla o mida la temperatura.
 
-  * <Cmd sid="new_layout_device_bew3_block_8_4_value2" product="air" />: Check mask usage or measure temperature before authentication. In this case, users not wearing a mask or exceeding the threshold temperature cannot authenticate.
+  * <Cmd sid="new_layout_device_bew3_block_8_4_value2" product="air" />: Verifique el uso de mascarilla o mida la temperatura antes de la autenticación. En este caso, los usuarios que no lleven mascarilla o cuya temperatura supere el umbral no podrán autenticarse.
 
-  * <Cmd sid="new_layout_device_bew3_block_8_4_value3" product="air" />: Use the device only to check mask usage or measure temperature. Users wearing a mask or having a temperature below the threshold can enter regardless of authentication.
+  * <Cmd sid="new_layout_device_bew3_block_8_4_value3" product="air" />: Utilice el dispositivo solo para comprobar el uso de mascarilla o medir la temperatura. Los usuarios que lleven mascarilla o cuya temperatura esté por debajo del umbral pueden acceder sin autenticarse.
 
-* <Cmd sid='bs3_qr_barcode_toogle1' product='air' />: Set whether to allow QR/barcode authentication via the device's camera.
+* <Cmd sid='bs3_qr_barcode_toogle1' product='air' />: Defina si se permite la autenticación QR/código de barras mediante la cámara del dispositivo.
 
-* <Cmd sid='bs3_qr_barcode_toogle2' product='air' />: Set authentication to accept a QR code containing the same data as the CSN card or Wiegand card issued to the user. This feature is available when the <Cmd sid='bs3_qr_barcode_toogle1' product='air' /> option is enabled.
+* <Cmd sid='bs3_qr_barcode_toogle2' product='air' />: Configure la autenticación para aceptar un código QR que contenga los mismos datos que la tarjeta CSN o la tarjeta Wiegand emitida al usuario. Esta función está disponible cuando la opción <Cmd sid='bs3_qr_barcode_toogle1' product='air' /> está habilitada.
 
 :::info
 
-When using non-face credentials, the timing of "before" and "after" is usually important.
+Al usar credenciales no faciales, el momento de "antes" y "después" suele ser importante.
 
 :::
 
@@ -252,43 +252,43 @@ When using non-face credentials, the timing of "before" and "after" is usually i
 
 ---
 
-### <Cmd sid='new_layout_nav_title_tna' product='air' className='normal' /> (Time & Attendance, T&A) {#tna}
+### <Cmd sid='new_layout_nav_title_tna' product='air' className='normal' /> (Tiempo y asistencia, T&A) {#tna}
 
-When this feature is enabled, <Cmd sid='device_edit_tna_event_label' product='air' className='bold' /> is logged in **Event Log** and used in <Cmd sid='tna_report' product='air' className='bold' />.
+Cuando esta función esté habilitada, <Cmd sid='device_edit_tna_event_label' product='air' className='bold' /> se registra en el **Registro de eventos** y se utiliza en <Cmd sid='tna_report' product='air' className='bold' />.
 
-* <Cmd sid='new_device_edit_tna_toogle' product='air' />: Click the toggle switch to turn attendance management on or off.
+* <Cmd sid='new_device_edit_tna_toogle' product='air' />: Haga clic en el interruptor para activar o desactivar la gestión de asistencia.
 
-* <Cmd sid='device_edit_tna_mode_label' product='air' />: Select the desired attendance mode.
+* <Cmd sid='device_edit_tna_mode_label' product='air' />: Seleccione el modo de asistencia deseado.
 
   <Include type={props.type} ref='bs3'>
 
-  * <Cmd sid='device_edit_tna_mode_option2' product='air' />: When the attendance key appears on the screen, the user selects the attendance event during authentication.
+  * <Cmd sid='device_edit_tna_mode_option2' product='air' />: Cuando la tecla de asistencia aparece en la pantalla, el usuario selecciona el evento de asistencia al autenticarse.
 
   </Include>
 
   <Include type={props.type} ref='ae-mc,xpass2,bew3,bs3,xs2'>
 
-  * <Cmd sid="device_edit_tna_mode_option3" product="air" />: Attendance events change automatically according to the set schedule. You can select a schedule to apply to attendance events.
+  * <Cmd sid="device_edit_tna_mode_option3" product="air" />: Los eventos de asistencia cambian automáticamente según el horario establecido. Puede seleccionar un horario para aplicarlo a los eventos de asistencia.
 
   </Include>
 
   <Include type={props.type} ref='bs3'>
 
-  * <Cmd sid="device_edit_tna_mode_option4" product="air" />: The user continues to use the last selected attendance event.
+  * <Cmd sid="device_edit_tna_mode_option4" product="air" />: El usuario continúa usando el último evento de asistencia seleccionado.
 
   </Include>
 
   <Include type={props.type} ref='ae-mc,xpass2,bew3,bs3,xs2'>
 
-  * <Cmd sid="device_edit_tna_mode_option5" product="air" />: Only the selected attendance event is available.
+  * <Cmd sid="device_edit_tna_mode_option5" product="air" />: Solo se puede usar el evento de asistencia seleccionado.
 
-  * <Cmd sid='device_edit_tna_mode_option6' product='air' />: When presenting a mobile credential, the Suprema Pass app lets the user select the attendance event.
+  * <Cmd sid='device_edit_tna_mode_option6' product='air' />: Al presentar una credencial móvil, la app Suprema Pass permite al usuario seleccionar el evento de asistencia.
 
   </Include>
 
 :::info
 
-For more information on configuring time and attendance, see <DocLink docId='platform/biostar_air/configuring-ta' />.
+Para más información sobre la configuración de tiempo y asistencia, consulte <DocLink docId='platform/biostar_air/configuring-ta' />.
 
 :::
 
@@ -300,35 +300,35 @@ For more information on configuring time and attendance, see <DocLink docId='pla
 
 #### <Cmd sid='device_bs3_sound_label2' product='air' className='normal' /> {#device_bs3_sound_label2}
 
-* <Cmd sid='device_bs3_sound_label3' product='air' />: Reduce LCD brightness when the device is not in use to lower unnecessary power consumption.
+* <Cmd sid='device_bs3_sound_label3' product='air' />: Reduzca el brillo del LCD cuando el dispositivo no esté en uso para disminuir el consumo de energía innecesario.
 
-* <Cmd sid='device_bs3_sound_label4' product='air' />: Keep the backlight always on or dim it after inactivity.
+* <Cmd sid='device_bs3_sound_label4' product='air' />: Mantenga la retroiluminación siempre encendida o atenúela después de inactividad.
 
-* <Cmd sid='device_bs3_sound_backlight' product='air' />: Set the time before the backlight turns off automatically.
+* <Cmd sid='device_bs3_sound_backlight' product='air' />: Configure el tiempo antes de que la retroiluminación se apague automáticamente.
 
-* <Cmd sid='user_form_input3' product='air' />: Set the language shown on the device screen.
+* <Cmd sid='user_form_input3' product='air' />: Configure el idioma que se mostrará en la pantalla del dispositivo.
 
-* <Cmd sid="device_bs3_sound_home_screen" product="air" />: Configure the items displayed on the device’s home screen background.
+* <Cmd sid="device_bs3_sound_home_screen" product="air" />: Configure los elementos que se muestran en el fondo de la pantalla de inicio del dispositivo.
 
-  * <Cmd sid="device_bs3_sound_home_screen_txt1" product="air" />: Display the default image on the home screen.
+  * <Cmd sid="device_bs3_sound_home_screen_txt1" product="air" />: Muestra la imagen predeterminada en la pantalla de inicio.
 
-  * <Cmd sid="device_bs3_sound_home_screen_txt2" product="air" />: Display a user-registered image on the home screen.
+  * <Cmd sid="device_bs3_sound_home_screen_txt2" product="air" />: Muestra una imagen registrada por el usuario en la pantalla de inicio.
 
-  * <Cmd sid="device_bs3_sound_home_screen_txt3" product="air" />: Display administrator input on the home screen.
+  * <Cmd sid="device_bs3_sound_home_screen_txt3" product="air" />: Muestra el contenido ingresado por el administrador en la pantalla de inicio.
 
    :::note
 
-  After clicking <Cmd sid='audit_action_update' product='air' /> and saving, the image or notice no longer appears in the edit screen but remains on the device.
+  Tras hacer clic en <Cmd sid='audit_action_update' product='air' /> y guardar, la imagen o el aviso deja de aparecer en la pantalla de edición, pero permanece en el dispositivo.
 
    :::
 
 #### <Cmd sid='device_bs3_sound_home_screen_sound' product='air' className='normal' /> {#device_bs3_sound_home_screen_sound}
 
-* <Cmd sid="device_bs3_sound_home_screen_soung_use_voice" product="air" />: Use voice guidance instead of notification tones.
+* <Cmd sid="device_bs3_sound_home_screen_soung_use_voice" product="air" />: Usa la guía por voz en lugar de los tonos de notificación.
 
-* <Cmd sid='device_bs3_sound_home_screen_soung_device' product='air' />: Adjust the volume of sounds generated by the device.
+* <Cmd sid='device_bs3_sound_home_screen_soung_device' product='air' />: Ajusta el volumen de los sonidos generados por el dispositivo.
 
-* <Cmd sid='device_bs3_sound_home_screen_soung_speaker' product='air' /> / <Cmd sid='device_bs3_sound_home_screen_microphone' product='air' />: Adjust the output or input volume when using the IP intercom feature.
+* <Cmd sid='device_bs3_sound_home_screen_soung_speaker' product='air' /> / <Cmd sid='device_bs3_sound_home_screen_microphone' product='air' />: Ajusta el volumen de salida o de entrada al usar la función de intercom IP.
 
 </Include>
 
@@ -338,29 +338,29 @@ For more information on configuring time and attendance, see <DocLink docId='pla
 
 ### <Cmd sid='new_layout_nav_title_wiegandout' product='air' className='normal' /> {#wiegandoutput}
 
-This feature integrates with external systems (e.g., alarm panels). Activate the <Cmd sid='use_wiegand_out_label' product='air' /> option to use this feature.
+Esta función se integra con sistemas externos (por ejemplo, paneles de alarma). Activa la opción <Cmd sid='use_wiegand_out_label' product='air' /> para usar esta función.
 
-* <Cmd sid="wiegand_output_mode" product="air" />: Configure the Wiegand signal output mode.
+* <Cmd sid="wiegand_output_mode" product="air" />: Configura el modo de salida de la señal Wiegand.
 
-  * <Cmd sid="user_regular_card_type" product="air" />: Scan cards using the configured Wiegand format.
+  * <Cmd sid="user_regular_card_type" product="air" />: Escanea tarjetas usando el formato Wiegand configurado.
 
-    * <Cmd sid='device_wiegand_output_use_fail_code' product='air' />: You can set error codes and choose the value to send when Wiegand card authentication fails.
+    * <Cmd sid='device_wiegand_output_use_fail_code' product='air' />: Puede establecer códigos de error y elegir el valor a enviar cuando falle la autenticación de la tarjeta Wiegand.
 
-  * <Cmd sid="device_wiegand_output_mode_bypass" product="air" />: Send the CSN regardless of Wiegand authentication. Set this if you are using it as a device without door control functionality.
+  * <Cmd sid="device_wiegand_output_mode_bypass" product="air" />: Envía el CSN independientemente de la autenticación Wiegand. Activa esta opción si lo usas como un dispositivo sin función de control de puertas.
 
-* <Cmd sid="wiegand_output_info" product="air" />: Select the information output during authentication.
+* <Cmd sid="wiegand_output_info" product="air" />: Selecciona la información que se enviará durante la autenticación.
 
-* <Cmd sid="wiegand_pulse_width" product="air" />: Set the pulse width for the Wiegand signal.
+* <Cmd sid="wiegand_pulse_width" product="air" />: Establece el ancho de pulso para la señal Wiegand.
 
-* <Cmd sid="wiegand_pulse_interval" product="air" />: Set the pulse interval for the Wiegand signal.
+* <Cmd sid="wiegand_pulse_interval" product="air" />: Establece el intervalo de pulso para la señal Wiegand.
 
-* <Cmd sid='mobile_consecutive_tag' product='air' />: Tag mobile cards consecutively without wait time.
+* <Cmd sid='mobile_consecutive_tag' product='air' />: Etiqueta tarjetas móviles consecutivamente sin tiempo de espera.
 
-* <Cmd sid='devices_weigand_out_consecutive_lable' product='air' />: Set the maximum number of consecutive mobile card tags.
+* <Cmd sid='devices_weigand_out_consecutive_lable' product='air' />: Define el número máximo de etiquetas consecutivas para tarjetas móviles.
 
 :::info
 
-The <Cmd sid='mobile_consecutive_tag' product='air' /> feature is supported in Suprema Pass app 2.9.0 or later.
+La función <Cmd sid='mobile_consecutive_tag' product='air' /> es compatible con la app Suprema Pass 2.9.0 o posterior.
 
 :::
 
@@ -372,29 +372,29 @@ The <Cmd sid='mobile_consecutive_tag' product='air' /> feature is supported in S
 
 ### <Cmd sid='device_intercom_title' product='air' className='normal' /> {#intercom}
 
-* <Cmd sid='device_intercom_txt_use_intercom' product='air' />: Activate or deactivate the IP intercom feature.
+* <Cmd sid='device_intercom_txt_use_intercom' product='air' />: Activa o desactiva la función de intercom IP.
 
-* <Cmd sid="device_intercom_txt_sip_server_transport" product="air" />: Choose the SIP transport method when configuring the intercom’s SIP server.
+* <Cmd sid="device_intercom_txt_sip_server_transport" product="air" />: Elige el método de transporte SIP al configurar el servidor SIP del intercomunicador.
 
-* <Cmd sid="device_intercom_txt_sip_server_address" product="air" />: Enter the SIP server address.
+* <Cmd sid="device_intercom_txt_sip_server_address" product="air" />: Introduce la dirección del servidor SIP.
 
-* <Cmd sid="device_intercom_txt_sip_server_port" product="air" />: Enter the SIP server port.
+* <Cmd sid="device_intercom_txt_sip_server_port" product="air" />: Introduce el puerto del servidor SIP.
 
-* <Cmd sid='device_intercom_txt_registration_duration' product='air' />: Enter the registration duration. The device attempts to register with the SIP server every time the registration duration expires.
+* <Cmd sid='device_intercom_txt_registration_duration' product='air' />: Introduce la duración del registro. El dispositivo intentará registrarse en el servidor SIP cada vez que expire ese periodo.
 
-* <Cmd sid="device_intercom_txt_sip_username" product="air" />: Enter the SIP account username.
+* <Cmd sid="device_intercom_txt_sip_username" product="air" />: Introduce el nombre de usuario de la cuenta SIP.
 
-* <Cmd sid="login_password" product="air" />: Enter the SIP account password.
+* <Cmd sid="login_password" product="air" />: Introduce la contraseña de la cuenta SIP.
 
-* <Cmd sid="device_intercom_txt_sip_authorization_id" product="air" />: Enter the SIP account authorization ID.
+* <Cmd sid="device_intercom_txt_sip_authorization_id" product="air" />: Introduce el ID de autorización de la cuenta SIP.
 
-* <Cmd sid='device_intercom_txt_outbound_proxy_server' product='air' />: Use a separate outbound proxy server for SIP services if required.
+* <Cmd sid='device_intercom_txt_outbound_proxy_server' product='air' />: Utiliza un servidor proxy saliente separado para los servicios SIP si es necesario.
 
-* <Cmd sid='device_intercom_extension_number' product='air' />: Add or edit extension numbers.
+* <Cmd sid='device_intercom_extension_number' product='air' />: Agrega o edita números de extensión.
 
-* <Cmd sid="device_intercom_video_resolution" product="air" />: Select the video resolution when using the intercom.
+* <Cmd sid="device_intercom_video_resolution" product="air" />: Seleccione la resolución de video al usar el intercomunicador.
 
-* <Cmd sid="device_intercom_open_door_button" product="air" />: Specify a button to unlock the door during a call.
+* <Cmd sid="device_intercom_open_door_button" product="air" />: Seleccione el botón que desbloquea la puerta durante una llamada.
 
 </Include>
 
@@ -404,7 +404,7 @@ The <Cmd sid='mobile_consecutive_tag' product='air' /> feature is supported in S
 
 ### <Cmd sid='device_bs3_secure_tamper' product='air' className='normal' /> {#secureTamper}
 
-If a tamper event occurs, configure the device to delete **all user information**, **all logs**, and **security keys** stored on the device.
+Si ocurre un evento de manipulación, configure el dispositivo para eliminar **toda la información de usuario**, **todos los registros** y **las claves de seguridad** almacenadas en el dispositivo.
 
 </Include>
 
@@ -414,21 +414,21 @@ If a tamper event occurs, configure the device to delete **all user information*
 
 ### <Cmd sid='device_bs3_rtsp' product='air' className='normal' /> {#rtspStreaming}
 
-Configure details for **Real Time Streaming Protocol** (RTSP) streaming. The device's camera can stream live video.
+Configure los detalles del **Protocolo de transmisión en tiempo real** (RTSP). La cámara del dispositivo puede transmitir video en vivo.
 
-* <Cmd sid='device_bs3_rtsp_toogle' product='air' />: Turn RTSP streaming on or off.
+* <Cmd sid='device_bs3_rtsp_toogle' product='air' />: Active o desactive la transmisión RTSP.
 
-* <Cmd sid='device_bs3_rtsp_address' product='air' />: RTSP server address.
+* <Cmd sid='device_bs3_rtsp_address' product='air' />: Dirección del servidor RTSP.
 
-* <Cmd sid='device_bs3_rtsp_port' product='air' />: Enter the RTSP server port.
+* <Cmd sid='device_bs3_rtsp_port' product='air' />: Ingrese el puerto del servidor RTSP.
 
-* <Cmd sid='user_info_id' product='air' /> / <Cmd sid='login_password' product='air' />: Enter the RTSP server ID and password.
+* <Cmd sid='user_info_id' product='air' /> / <Cmd sid='login_password' product='air' />: Ingrese el ID y la contraseña del servidor RTSP.
 
-* <Cmd sid="device_bs3_rtsp_video" product="air" />: Select the video resolution when using RTSP.
+* <Cmd sid="device_bs3_rtsp_video" product="air" />: Seleccione la resolución de video al usar RTSP.
 
 :::info
 
-The RTSP streaming feature is supported only on BioStation 3.
+La función de transmisión RTSP solo es compatible con BioStation 3.
 
 :::
 
@@ -438,17 +438,17 @@ The RTSP streaming feature is supported only on BioStation 3.
 
 ### <Cmd sid='new_layout_nav_title_sensitivity' product='air' className='normal' /> {#rssiSensitivity}
 
-Adjust the RSSI value to set how close the mobile device must be to unlock the door.
+Ajuste el valor RSSI para definir qué tan cerca debe estar el dispositivo móvil para desbloquear la puerta.
 
 <Image src='/img/air/bsair-device-mng-edit-sensitivity.png' />
 
-* Lower values help block unintended activation.
+* Los valores más bajos ayudan a evitar activaciones no deseadas.
 
-* Higher values improve detection in high-interference environments.
+* Los valores más altos mejoran la detección en entornos con mucha interferencia.
 
 :::info
 
-To reset the settings, click <Cmd sid='device_btn_reset' product='air' />.
+Para restablecer la configuración, haga clic en <Cmd sid='device_btn_reset' product='air' />.
 
 :::
 
@@ -458,6 +458,6 @@ To reset the settings, click <Cmd sid='device_btn_reset' product='air' />.
 
 ### <Cmd sid='module_found_slots_title' product='air' className='normal' /> {#moduleFoundSlots}
 
-Option to detect an OM-120 module connected to the device. Click <Cmd sid='add_btn' product='air' /> to detect the module.
+Opción para detectar un módulo OM-120 conectado al dispositivo. Haga clic en <Cmd sid='add_btn' product='air' /> para detectar el módulo.
 
 </Include>

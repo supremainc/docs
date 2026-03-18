@@ -1,79 +1,79 @@
 ---
 id: managing-door-groups
-title: Manage Door Group
-description: Organize doors into groups to manage access control policies more efficiently. Assign access levels and permissions at the group level to simplify meeting complex security requirements.
+title: Administrar Grupo de Puertas
+description: Organice las puertas en grupos para gestionar las políticas de control de acceso de forma más eficiente. Asigne niveles de acceso y permisos a nivel de grupo para facilitar el cumplimiento de requisitos de seguridad complejos.
 keywords:
-  - Door group
-  - Device Group
+  - Grupo de puertas
+  - Grupo Dispositivo
   - BioStar Air
 ---
 
-By grouping doors, you can manage access control policies more efficiently. Apply consistent security policies across multiple doors by setting access levels and permissions for groups at once.
+Al agrupar las puertas, puede gestionar las políticas de control de acceso con mayor eficiencia. Aplique políticas de seguridad coherentes a varias puertas asignando niveles de acceso y permisos a los grupos de forma simultánea.
 
 :::info
 
-* For more information on managing registered doors, see <DocLink docId='platform/biostar_air/managing-registered-doors' />.
+* Para obtener más información sobre la gestión de puertas registradas, consulte <DocLink docId='platform/biostar_air/managing-registered-doors' />.
 
-* For more information about access levels, see <DocLink docId='platform/biostar_air/manage-access-level' />.
+* Para obtener más información sobre los niveles de acceso, consulte <DocLink docId='platform/biostar_air/manage-access-level' />.
 
 :::
 
-## Add door group {#addingDoorGroups}
+## Agregar grupo de puertas {#addingDoorGroups}
 
-1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_groups_submenu" product="air" /> in the left sidebar.
+1. Haga clic en <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_groups_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Click <Cmd sid="doors_group_add_btn" product="air" /> at the top right of the screen.
+2. Haga clic en <Cmd sid="doors_group_add_btn" product="air" /> en la parte superior derecha de la pantalla.
 
    <Image src='/img/air/bsair-door-group.png' />
 
-3. When the <Cmd sid="doors_group_title_add_popup_overlay" product="air" /> window appears, enter the door group name.
+3. Cuando aparezca la ventana <Cmd sid="doors_group_title_add_popup_overlay" product="air" />, ingrese el nombre del grupo de puertas.
 
    <Image src='/img/air/bsair-door-group-add.png' />
 
    :::note
 
-   Click <Cmd sid="device_group_label_checkbox" product="air" /> and select the parent group to add the device group as a subgroup of a specific group.
+   Haga clic en <Cmd sid="device_group_label_checkbox" product="air" /> y seleccione el grupo padre para agregar el grupo de dispositivos como subgrupo de un grupo específico.
 
    :::
 
-4. In <Cmd sid="doors_group_label_add_device" product="air" />, select the doors to include in the group.
+4. En <Cmd sid="doors_group_label_add_device" product="air" />, seleccione las puertas que desea incluir en el grupo.
 
-5. Click <Cmd sid="btn_ok" product="air" /> to save the door group.
+5. Haga clic en <Cmd sid="btn_ok" product="air" /> para guardar el grupo de puertas.
 
-The door group list shows the newly added group and the number of doors it contains. Click a door group to view the doors it contains.
+La lista de grupos de puertas muestra el grupo recién agregado y la cantidad de puertas que contiene. Haga clic en un grupo de puertas para ver las puertas que incluye.
 
 <Image src='/img/air/bsair-door-group-added-group.png' />
 
 :::info
 
-* Doors added to a subgroup are not automatically included in the parent group.
+* Las puertas agregadas a un subgrupo no se incluyen automáticamente en el grupo padre.
 
-* Add an empty parent group without devices or doors.
+* Agregar un grupo padre vacío sin dispositivos ni puertas.
 
 :::
 
-## Rename door group {#renamingDoorGroups}
+## Renombrar grupo de puertas {#renamingDoorGroups}
 
-1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_groups_submenu" product="air" /> in the left sidebar.
+1. Haga clic en <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_groups_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Check the checkbox for the door group you wish to rename in the list.
+2. Marque la casilla del grupo de puertas que desea renombrar en la lista.
 
-3. Click <IcAirEdit title='Edit' /> at the top of the door group list.
+3. Haga clic en <IcAirEdit title='Edit' /> en la parte superior de la lista de grupos de puertas.
 
-4. When the <Cmd sid="doors_group_title_edit_popup_overlay" product="air" /> window appears, enter the new group name.
+4. Cuando aparezca la ventana <Cmd sid="doors_group_title_edit_popup_overlay" product="air" />, ingrese el nuevo nombre del grupo.
 
    <Image src='/img/air/bsair-door-group-edit-name.png' />
 
-5. Click <Cmd sid='popup_ok_btn' product='air' /> to save the changed group name.
+5. Haga clic en <Cmd sid='popup_ok_btn' product='air' /> para guardar el nuevo nombre del grupo.
 
-## Delete door group {#deletingDoorGroups}
+## Eliminar grupo de puertas {#deletingDoorGroups}
 
-1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_groups_submenu" product="air" /> in the left sidebar.
+1. Haga clic en <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_groups_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Check the checkbox for the door group you wish to delete in the list.
+2. Marque la casilla del grupo de puertas que desea eliminar de la lista.
 
-3. Click <IcAirRemove title='Delete' /> at the top of the door group list.
+3. Haga clic en <IcAirRemove title='Delete' /> en la parte superior de la lista de grupos de puertas.
 
-4. When a warning message appears, click <Cmd sid='btn_yes' product='air' />.
+4. Cuando aparezca un mensaje de advertencia, haga clic en <Cmd sid='btn_yes' product='air' />.
 
-The selected door group is removed from the list. Its subgroups are also deleted. The access doors will not be deleted even if the group is deleted.
+El grupo de puertas seleccionado se eliminará de la lista. Sus subgrupos también se eliminarán. Las puertas de acceso no se eliminarán al borrar el grupo.

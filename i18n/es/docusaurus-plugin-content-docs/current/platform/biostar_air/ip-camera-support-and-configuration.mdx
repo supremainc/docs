@@ -1,229 +1,229 @@
 ---
 id: ip-camera-support-and-configuration
-title: IP Camera Support and Setup
-description: Set up ONVIF-compatible IP cameras in BioStar Air, configure live and recorded video streams, and integrate camera footage with access events.
+title: Soporte y configuración de cámaras IP
+description: Configura cámaras IP compatibles con ONVIF en BioStar Air, administra transmisiones de video en vivo y grabadas e integra las grabaciones de las cámaras con los eventos de acceso.
 keywords:
-  - IP camera
+  - Cámara IP
   - BioStar Air
-  - camera configuration
+  - configuración de la cámara
 ---
 
-BioStar Air automatically detects IP cameras connected to the same network as readers compatible with BioStar Air. Because the cameras use the device as a gateway, a network video recorder (NVR) is not required. Instead, the cameras use the built-in SD card storage.
+BioStar Air detecta automáticamente las cámaras IP conectadas a la misma red que los lectores compatibles con BioStar Air. Como las cámaras utilizan el dispositivo como puerta de enlace, no se requiere un grabador de video en red (NVR); en su lugar, las cámaras emplean el almacenamiento integrado en la tarjeta SD.
 
-With a reader compatible with BioStar Air installed, BioStar Air can display the following concurrent live view streams.
+Con un lector compatible con BioStar Air instalado, BioStar Air puede mostrar las siguientes transmisiones en vivo simultáneas.
 
-* Up to two cameras at Full HD resolution (1080p)
+* Hasta dos cámaras en resolución Full HD (1080p)
 
-* Up to four cameras at HD resolution (720p)
+* Hasta cuatro cámaras en resolución HD (720p)
 
-These specifications double when X-Station 2 is used.
+Estas especificaciones se duplican cuando se utiliza la X-Station 2.
 
 :::info
 
-If a recorded video does not play after you register the camera in BioStar Air, see <DocLink docId='platform/biostar_air/video-troubleshooting' />.
+Si un video grabado no se reproduce después de registrar la cámara en BioStar Air, consulte <DocLink docId='platform/biostar_air/video-troubleshooting' />.
 
 :::
 
-## Compatibility {#compatibility}
+## Compatibilidad {#compatibility}
 
-* **Onvif profiles**: The IP camera must be compatible with Onvif profile S or G.
+* **Perfiles ONVIF**: La cámara IP debe ser compatible con el perfil ONVIF S o G.
 
-  * **Onvif profile S**: Live video streaming
+  * **Perfil Onvif S**: transmisión de video en vivo
 
-  * **Onvif profile G**: Recorded video stored on the SD card
+  * **Perfil ONVIF G**: video grabado almacenado en la tarjeta SD
 
-* **SD card**: The IP camera must have a built-in SD card so that recorded footage can be played back later. 
+* **Tarjeta SD**: La cámara IP debe tener una tarjeta SD integrada para que las grabaciones puedan reproducirse posteriormente. 
 
    :::note
 
-   Use SanDisk microSDXC Class10 Max Endurance 256 GB or 512 GB.
+   Utilice SanDisk microSDXC Class10 Max Endurance de 256 GB o 512 GB.
 
    :::
 
-* **Encoding**: The camera must support H.264 (AVC) and it must be set as the active codec. BioStar Air currently does not support H.265.
+* **Codificación**: La cámara debe soportar H.264 (AVC) y este debe configurarse como el códec activo. BioStar Air actualmente no es compatible con H.265.
 
-* **Recommended brands**: HanwhaVision, Hikvision, and Dahua cameras are highly compatible. Compatibility with other brands may vary depending on Onvif profile compliance. For details on the list of tested and verified devices, see <DocLink inner='#tested-devices' />.
+* **Marcas recomendadas**: Las cámaras HanwhaVision, Hikvision y Dahua son altamente compatibles. La compatibilidad con otras marcas puede variar según el cumplimiento del perfil Onvif. Para conocer la lista de dispositivos probados y verificados, consulte <DocLink inner='#tested-devices' />.
 
-* Contact the service team to test other camera brands.
+* Comuníquese con el equipo de servicio para probar otras marcas de cámaras.
 
-## Functionality overview {#functionality}
+## Resumen de la funcionalidad {#functionality}
 
-Perform the following actions in the BioStar Air portal or mobile app.
+Realice las siguientes acciones en el portal de BioStar Air o en la aplicación móvil.
 
-* View live camera feeds.
+* Ver transmisiones en vivo.
 
-* View recorded camera footage.
+* Ver grabaciones de las cámaras.
 
-* Access camera footage related to access events.
+* Acceder a grabaciones de las cámaras relacionadas con eventos de acceso.
 
-## Instructions {#instructions}
+## Instrucciones {#instructions}
 
 <Steps>
 <Step>
 
-### Connect IP cameras
+### Conectar cámaras IP
 
-* **Network connection**: Ensure that the IP camera is on the same network as the reader compatible with BioStar Air.
+* **Conexión de red**: Asegúrese de que la cámara IP esté en la misma red que el lector compatible con BioStar Air.
 
-* **Enable Onvif**: Make sure Onvif is enabled on the camera.
+* **Habilitar Onvif**: Asegúrese de que Onvif esté activado en la cámara.
 
-* **Device registration**: Make sure the device is registered in the BioStar Air portal.
-
-</Step>
-<Step>
-
-### Log in to BioStar Air
-
-**Master** administrators can change site settings such as enabling Video Management. Log in to the [BioStar Air portal](https://admin.biostarair.com/) with **master** privileges.
+* **Registro del dispositivo**: Asegúrese de que el dispositivo esté registrado en el portal de BioStar Air.
 
 </Step>
 <Step>
 
-### Enable video management
+### Iniciar sesión en BioStar Air
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar.
+Los administradores con rol **master** pueden cambiar la configuración del sitio, como habilitar la gestión de video. Inicie sesión en el [portal de BioStar Air](https://admin.biostarair.com/) con privilegios de **master**.
 
-2. Click the <Cmd sid="site_setting_qr_reader_tab" product="air" /> tab.
+</Step>
+<Step>
 
-3. Enable <Cmd sid="site_setting_video_management" product="air" />.
+### Habilitar la gestión de video
+
+1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haz clic en la pestaña <Cmd sid="site_setting_qr_reader_tab" product="air" />.
+
+3. Habilitar <Cmd sid="site_setting_video_management" product="air" />.
 
 <Image src='/img/air/bsair-settings-site-addtional-feature-video-mangement.png' />
 
 :::info
 
-Only **master**-level administrators can enable this feature.
+Solo los administradores con nivel **master** pueden habilitar esta función.
 
 :::
 
 </Step>
 <Step>
 
-### Add camera
+### Añadir cámara
 
-1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="cameras_groups_submenu" product="air" /> in the left sidebar.
+1. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="cameras_groups_submenu" product="air" /> en la barra lateral izquierda.
 
    <Image src='/img/air/bsair-device-camera.png' />
 
-2. Click <Cmd sid="cameras_list_title_add_button" product="air" /> at the top right of the screen.
+2. Haz clic en <Cmd sid="cameras_list_title_add_button" product="air" /> en la esquina superior derecha de la pantalla.
 
-3. When the <Cmd sid="cameras_templ_title_modal" product="air" /> window appears, select the device that will act as the gateway.
+3. Cuando aparezca la ventana <Cmd sid="cameras_templ_title_modal" product="air" />, seleccione el dispositivo que actuará como puerta de enlace.
 
    <Image src='/img/air/bsair-device-camera-add.png' caption />
 
-4. Set the following information to add the camera.
+4. Ingrese la siguiente información para agregar la cámara.
 
-   * <Cmd sid="cameras_add_camera_input_name" product="air" />: Enter the camera name.
+   * <Cmd sid="cameras_add_camera_input_name" product="air" />: Ingrese el nombre de la cámara.
 
-   * <Cmd sid='event_logs_column3' product='air' />: Select a name to identify the camera.
+   * <Cmd sid='event_logs_column3' product='air' />: Seleccione un nombre para identificar la cámara.
 
-   * <Cmd sid="cameras_add_camera_input_id" product="air" />: Enter the ID to connect to the camera.
+   * <Cmd sid="cameras_add_camera_input_id" product="air" />: Ingrese el ID para conectarse a la cámara.
 
-   * <Cmd sid="cameras_add_camera_input_pass" product="air" />: Enter the password to connect to the camera.
+   * <Cmd sid="cameras_add_camera_input_pass" product="air" />: Ingrese la contraseña para conectarse a la cámara.
 
-5. Click <Cmd sid="save_btn" product="air" /> to add the selected camera.
+5. Haz clic en <Cmd sid="save_btn" product="air" /> para agregar la cámara seleccionada.
 
 :::info
 
-* The device must run firmware version 2.5.1 or later and be on the same network as the camera.
+* El dispositivo debe ejecutar la versión de firmware 2.5.1 o posterior y estar en la misma red que la cámara.
 
-* BioStar Air automatically discovers cameras on the network.
+* BioStar Air detecta automáticamente las cámaras en la red.
 
 :::
 
 </Step>
 <Step>
 
-### Link to a door
+### Vincular a una puerta
 
-Link the added camera to a door to associate video with access events.
+Vincule la cámara agregada a una puerta para asociar el video con los eventos de acceso.
 
-1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar.
+1. Haga clic en <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Click the door in the list to assign a camera.
+2. Haz clic en la puerta en la lista para asignarle una cámara.
 
-3. When the <Cmd sid="edit_door.title" product="air" /> panel appears, scroll to <Cmd sid="door_auxiliary_device" product="air" />.
+3. Cuando aparezca el panel <Cmd sid="edit_door.title" product="air" />, desplácese hasta <Cmd sid="door_auxiliary_device" product="air" />.
 
-4. Select the camera you added from <Cmd sid="door_product_column6" product="air" />.
+4. Seleccione la cámara que agregó en <Cmd sid="door_product_column6" product="air" />.
 
    <Image src='/img/air/bsair-door-assign-camera.png' />
 
-5. Click <Cmd sid="save_btn" product="air" /> to save the changes.
+5. Haz clic en <Cmd sid="save_btn" product="air" /> para guardar los cambios.
 
 </Step>
 <Step>
 
-### View live camera video
+### Ver video en vivo de la cámara
 
-View live video from the added cameras. Click <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="realtime_video_submenu" product="air" /> in the left sidebar.
+Ver video en vivo de las cámaras agregadas. Haz clic en <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="realtime_video_submenu" product="air" /> en la barra lateral izquierda.
 
 <Image src='/img/air/bsair-monitoring-realtime-camera.png' caption />
 
-* View up to two Full HD (1080p) live streams per installed reader compatible with BioStar Air.
+* Ver hasta dos transmisiones en vivo Full HD (1080p) por cada lector instalado compatible con BioStar Air.
 
-* Add more devices or reduce camera resolution to view more live streams. 
+* Agrega más dispositivos o reduce la resolución de la cámara para ver más transmisiones en vivo. 
 
-  > <Cmd sid="device_menu" product="air" /> → <Cmd sid="cameras_groups_submenu" product="air" /> → Click camera in the list → <Cmd sid="cameras_edit_camera_name_profile" product="air" />
+  > <Cmd sid="device_menu" product="air" /> → <Cmd sid="cameras_groups_submenu" product="air" /> → Haz clic en la cámara de la lista → <Cmd sid="cameras_edit_camera_name_profile" product="air" />
 
 </Step>
 <Step>
 
-### View recorded camera video
+### Ver video grabado de la cámara
 
-View recorded video streams. Click <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="recorded_video_submenu" product="air" /> in the left sidebar.
+Ver transmisiones de video grabadas. Haz clic en <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="recorded_video_submenu" product="air" /> en la barra lateral izquierda.
 
 <Image src='/img/air/bsair-monitoring-recorded-camera.png' caption />
 
 </Step>
 <Step>
 
-### View event video
+### Ver video del evento
 
-Click <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' /> in the left sidebar. Find an event log with an associated video clip and click play to watch it.
+Haz clic en <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' /> en la barra lateral izquierda. Busca un registro de evento con un clip de video asociado y haz clic en reproducir para verlo.
 
 </Step>
 </Steps>
 
-## Tested and verified devices list {#tested-devices}
+## Lista de dispositivos probados y verificados {#tested-devices}
 
 <div className='overflow-x'>
 
-| No | Manufacturer | Model number | Device type | Onvif profile | Resolution |
+| No | Fabricante | Número de modelo | Tipo de dispositivo | Perfil Onvif | Resolución |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Hanwha Techwin | QNV-C8011R | Camera | S, G, T, M | 2592x1944 |
-| 2 | Hanwha Techwin | QND-6022R | Camera | S, G, T | 1920x1080 |
-| 3 | Hanwha Techwin | MMI-600R | Camera | S, T | 1920x1080 |
-| 4 | HIKVISION | DS-2CD2025FWD-I | Camera | S, G, T | 1920x1080 |
-| 5 | HIKVISION | DS-2CD2166G2-I | Camera | S, G, T | 3200×1800 |
-| 6 | HIKVISION | DS-2CD1121-I | Camera | S | 1920x1080 |
+| 1 | Hanwha Techwin | QNV-C8011R | Cámara | S, G, T, M | 2592x1944 |
+| 2 | Hanwha Techwin | QND-6022R | Cámara | S, G, T | 1920x1080 |
+| 3 | Hanwha Techwin | MMI-600R | Cámara | S, T | 1920x1080 |
+| 4 | HIKVISION | DS-2CD2025FWD-I | Cámara | S, G, T | 1920x1080 |
+| 5 | HIKVISION | DS-2CD2166G2-I | Cámara | S, G, T | 3200×1800 |
+| 6 | HIKVISION | DS-2CD1121-I | Cámara | S | 1920x1080 |
 | 7 | Dahua | DHI-NVR2104HS-P-S3 | NVR | S, G, T | 12MP |
-| 8 | Dahua | IPC-HDBW3249E-AS-NI | Camera | S, G, T | 1920×1080 |
-| 9 | Dahua | SD22204UEN-GN | Camera | S, G, T | 1920×1080 |
-| 10 | Dahua | DH-IPC-HFW1230DT-STW-VN | Camera | S, T | 1920×1080 |
-| 11 | Marruy | IPC-A32E-L | Camera | S, T | 2304×1296 |
-| 12 | TP-Link | Tapo C210 | Camera | S | 2304×1296 |
+| 8 | Dahua | IPC-HDBW3249E-AS-NI | Cámara | S, G, T | 1920×1080 |
+| 9 | Dahua | SD22204UEN-GN | Cámara | S, G, T | 1920×1080 |
+| 10 | Dahua | DH-IPC-HFW1230DT-STW-VN | Cámara | S, T | 1920×1080 |
+| 11 | Marruy | IPC-A32E-L | Cámara | S, T | 2304×1296 |
+| 12 | TP-Link | Tapo C210 | Cámara | S | 2304×1296 |
 
 </div>
 
-## Enable ONVIF on an IP camera
+## Habilitar ONVIF en una cámara IP
 
-1. Open a web browser and enter the camera's IP address. 
+1. Abre un navegador web e ingresa la dirección IP de la cámara. 
 
-2. Authenticate with administrator credentials and log in.
+2. Autentícate con credenciales de administrador e inicia sesión.
 
-3. Go to the **Network** or **Configuration** section.
+3. Ve a la sección **Red** o **Configuración**.
 
-4. Enable ONVIF or the open network video interface.
+4. Activa ONVIF o la interfaz abierta de video en red.
 
-5. Create an ONVIF-only user profile if necessary.
+5. Crea un perfil de usuario solo para ONVIF si es necesario.
 
-6. Save the settings and test the ONVIF connection in BioStar Air.
+6. Guarda la configuración y prueba la conexión ONVIF en BioStar Air.
 
 :::tip
 
-* **Firmware update**: Update the camera and the device to the latest firmware.
+* **Actualización de firmware**: Actualiza la cámara y el dispositivo al firmware más reciente.
 
-* **Port forwarding**: Configure port forwarding for ONVIF if required.
+* **Redirección de puertos**: Configura la redirección de puertos para ONVIF si es necesario.
 
-* **Third-party tools**: Use ONVIF Device Manager to verify camera settings and functionality.
+* **Herramientas de terceros**: Usa ONVIF Device Manager para verificar la configuración y el funcionamiento de la cámara.
 
 :::

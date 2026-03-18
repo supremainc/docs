@@ -1,84 +1,84 @@
 ---
 id: troubleshooting-adding-users-in-bulk
-title: Fix Bulk User Addition Issues
-description: Learn how to troubleshoot common issues when adding users in bulk with the BioStar Air portal.
+title: Solución de problemas al agregar usuarios en masa
+description: Aprenda a solucionar problemas comunes al agregar usuarios en masa desde el portal BioStar Air.
 keywords:
-  - Troubleshooting
-  - bulk users
+  - Solución de Problemas
+  - usuarios masivos
   - BioStar Air
 ---
 
-Several customers and partners have reported issues when adding user lists in bulk. Most issues arise from incorrectly formatted CSV files. Follow the instructions below exactly to ensure the bulk addition feature works as expected.
+Varios clientes y socios han informado problemas al agregar listas de usuarios en masa. La mayoría de estos problemas se deben a archivos CSV con formato incorrecto. Siga exactamente las instrucciones a continuación para asegurarse de que la función de adición masiva funcione como se espera.
 
 :::info
 
-Starting with v2.10, BioStar Air returns a validation report when a CSV file containing invalid entries is uploaded. Correct the errors, and then upload the file again.
+A partir de la versión v2.10, BioStar Air genera un informe de validación cuando se carga un archivo CSV que contiene entradas no válidas. Corrija los errores y vuelva a cargar el archivo.
 
 <Image src='/img/air/bsair-add-bulk-import-user-csv-error.png' />
 
 :::
 
-## Prepare the CSV file
+## Preparar el archivo CSV
 
-### Download the CSV template
+### Descargar la plantilla CSV
 
-1. Go to <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+1. Vaya a <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Click <Cmd sid="add_user_btn" product="air" /> → <Cmd sid="user_actions_import_title" product="air" /> at the top right of the screen.
+2. Haga clic en <Cmd sid="add_user_btn" product="air" /> → <Cmd sid="user_actions_import_title" product="air" /> en la esquina superior derecha de la pantalla.
 
-3. When the <Cmd sid="user_actions_import_title" product="air" /> panel appears, click <Cmd sid="user_actions_import_download_btn_text" product="air" />.
+3. Cuando aparezca el panel <Cmd sid="user_actions_import_title" product="air" />, haga clic en <Cmd sid="user_actions_import_download_btn_text" product="air" />.
 
-4. Save the CSV template file (*biostar-import-user-csv-example.csv*) locally.
+4. Guarde el archivo de plantilla CSV (*biostar-import-user-csv-example.csv*) localmente.
 
-### Use the exact CSV template format
+### Usar el formato exacto de la plantilla CSV
 
-* **Do not manually add or delete columns**. An unexpected column can cause an error.
+* **No agregue ni elimine columnas manualmente**. Una columna inesperada puede causar un error.
 
-* If you need to include additional fields (for example, employee ID or department), use the <Cmd sid='user_setting_templ_action' product='air' />(<IcAirUtemplate />) feature at the top of the user list to add them. When a field is added, the downloaded CSV file automatically includes the corresponding column.
+* Si necesita incluir campos adicionales (por ejemplo, ID de empleado o departamento), utilice la función <Cmd sid='user_setting_templ_action' product='air' />(<IcAirUtemplate />) en la parte superior de la lista de usuarios para agregarlos. Cuando se agrega un campo, el archivo CSV descargado incluye automáticamente la columna correspondiente.
 
-Enter data correctly by referring to the requirements of each column.
+Ingrese los datos correctamente consultando los requisitos de cada columna.
 
 #### <Cmd sid='user_csv_example_header1' product='air' className='normal' />
 
-* A unique numeric ID for each user.
+* Un ID numérico único para cada usuario.
 
-* The <Cmd sid="user_csv_example_header1" product="air" className="bold" /> column **can be left blank**, and the system assigns a value automatically.
+* La columna <Cmd sid="user_csv_example_header1" product="air" className="bold" /> **puede dejarse en blanco**, y el sistema asigna un valor automáticamente.
 
-* If you enter user IDs manually
+* Si ingresa los ID de usuario manualmente
 
-  * Use **numbers only**. 
+  * Utilice **solo números**. 
 
-  * Use a **unique value**.
+  * Utilice un **valor único**.
 
-  * Do not include letters, spaces, hyphens, or special characters.
+  * No incluya letras, espacios, guiones ni caracteres especiales.
 
 :::caution
 
-If you need to use a company-specific employee ID that includes letters, do not use the <Cmd sid="user_csv_example_header1" product="air" className="bold" /> field. Instead, create a custom user field with the <Cmd sid="user_setting_templ_action" product="air" /> feature.
+Si debe usar un ID de empleado específico de la empresa que incluya letras, no utilice el campo <Cmd sid="user_csv_example_header1" product="air" className="bold" />. En su lugar, cree un campo de usuario personalizado con la función <Cmd sid="user_setting_templ_action" product="air" />.
 
 :::
 
 #### <Cmd sid='user_csv_example_header7' product='air' className='normal' />
 
-* Use a valid email format. Refer to the [validation formulas](#excelFormulas) to verify the email format.
+* Utilice un formato de correo electrónico válido. Consulte las [fórmulas de validación](#excelFormulas) para verificar el formato del correo electrónico.
 
-  * No spaces are allowed.
+  * No se permiten espacios.
 
-  * It must include the at sign (`@`).
+  * Debe incluir el signo arroba (`@`).
 
-  * The domain must include a period (`.`) and a top-level domain.
+  * El dominio debe incluir un punto (`.`) y un dominio de nivel superior.
 
-    > Example: example.com, gmail.com, suprema.co.kr
+    > Ejemplo: example.com, gmail.com, suprema.co.kr
 
-  * There must be no additional period after the address.
+  * No debe haber ningún punto adicional después de la dirección.
 
-  * No special or hidden characters are allowed.
+  * No se permiten caracteres especiales ni ocultos.
 
-  * It must be an email address. Errors such as 'Not provided' may occur.
+  * Debe ser una dirección de correo electrónico. Pueden aparecer errores como 'Not provided'.
 
-* The email address **must be unique**. Duplicates are not allowed within the file or among existing users.
+* La dirección de correo electrónico **debe ser única**. No se permiten duplicados ni en el archivo ni entre los usuarios existentes.
 
-* An email address is required when issuing the credentials below.
+* Se requiere una dirección de correo electrónico para emitir las credenciales que aparecen a continuación.
 
   * <Cmd sid='card_type_mobile' product='air' />
 
@@ -86,19 +86,19 @@ If you need to use a company-specific employee ID that includes letters, do not 
 
   * <Cmd sid='card_type_option4' product='air' />
 
-* Users with only an RFID card do not need to enter an email address.
+* Los usuarios que solo tienen una tarjeta RFID no necesitan proporcionar una dirección de correo electrónico.
 
 #### <Cmd sid='user_csv_example_header8' product='air' className='normal' />
 
-* Providing a phone number is optional when the credential is not delivered via mobile SMS.
+* Proporcionar un número de teléfono es opcional cuando la credencial no se entrega vía SMS.
 
-* Like the email address, it **must be unique**, and duplicates are not allowed within the file or among existing users.
+* Al igual que la dirección de correo electrónico, el número de teléfono **debe ser único** y no se permiten duplicados ni en el archivo ni entre los usuarios existentes.
 
-* Use email to deliver credentials when possible. SMS messages incur additional charges.
+* Utilice el correo electrónico para enviar las credenciales cuando sea posible. Los SMS generan cargos adicionales.
 
-#### Dates (<Cmd sid="user_csv_example_header5" product="air" className="normal" /> / <Cmd sid="user_csv_example_header6" product="air" className="normal" />)
+#### Fechas (<Cmd sid="user_csv_example_header5" product="air" className="normal" /> / <Cmd sid="user_csv_example_header6" product="air" className="normal" />)
 
-All date fields must follow the exact format shown below.
+Todos los campos de fecha deben seguir exactamente el formato que se muestra a continuación.
 
 ```plaintext
 YYYY-MM-DDTHH:MM:SS.sssZ
@@ -107,32 +107,32 @@ Example:
 1995-05-09T00:00:00.000Z
 ```
 
-Even minor differences—such as omitting the 'Z', using slashes (`/`) instead of dashes (`—`), or leaving out the time—can cause the upload to fail.
+Incluso pequeñas diferencias—por ejemplo, omitir la 'Z', usar barras (`/`) en lugar de guiones (`—`), o no incluir la hora—pueden causar que la carga falle.
 
-#### Credential requirements
+#### Requisitos de credenciales
 
-| Credential type          | Email or phone number |
+| Tipo de credencial          | Correo electrónico o número de teléfono |
 | --- | --- |
-| <Cmd sid='card_type_rf' product='air' /> Only | No.                       |
-| <Cmd sid='card_type_mobile' product='air' /> / <Cmd sid='card_type_option3' product='air' /> / <Cmd sid='card_type_option4' product='air' /> | Yes, one is required.    |
+| Solo <Cmd sid='card_type_rf' product='air' /> | No.                       |
+| <Cmd sid='card_type_mobile' product='air' /> / <Cmd sid='card_type_option3' product='air' /> / <Cmd sid='card_type_option4' product='air' /> | Sí, se requiere una.    |
 
-* Credentials must be delivered by email address or phone number.
+* Las credenciales deben entregarse a una dirección de correo electrónico o a un número de teléfono.
 
-* Both can be provided, but **mobile credentials** **require at least one**.
+* Se pueden proporcionar ambos, pero las **credenciales móviles** requieren al menos uno.
 
-* Email is free. SMS is charged.
+* El correo electrónico es gratuito. Los SMS generan cargos.
 
-## Excel formulas for pre-validation {#excelFormulas}
+## Fórmulas de Excel para la prevalidación {#excelFormulas}
 
-Before uploading data, use the following formulas in **helper columns** to verify the data.
+Antes de cargar los datos, utilice las siguientes fórmulas en las **columnas auxiliares** para verificar los datos.
 
-### Duplicate email or phone number validation
+### Validación de correos electrónicos o números de teléfono duplicados
 
 ```excel-formula title="Detect Duplicate Emails or Phone Numbers"
 =IF(E2="", "", IF(COUNTIF(E$2:E2, E2)>1, "Duplicate", "First Occurrence"))
 ```
 
-### Date format validation
+### Validación del formato de fecha
 
 ```excel-formula title="Validate ISO 8601 Date Format (Column Q)"
 =IF(Q2="", "", IF(AND(LEN(Q2)=24, 
@@ -146,7 +146,7 @@ Before uploading data, use the following formulas in **helper columns** to verif
   "Valid", "Invalid"))
 ```
 
-### Email format validation
+### Validación del formato de correo electrónico
 
 ```excel-formula title="Validate Email Format (Column E)"
 =IF(TRIM(E2)="", "", IF(AND(
@@ -159,20 +159,20 @@ Before uploading data, use the following formulas in **helper columns** to verif
 ), "Valid", "Invalid"))
 ```
 
-## Encountering errors? {#common-errors}
+## ¿Aparecen errores? {#common-errors}
 
-* Did you download the correct template and not add additional columns?
+* ¿Descargó la plantilla correcta y no agregó columnas adicionales?
 
-* Are all required fields completed for users receiving a mobile credential?
+* ¿Se han completado todos los campos obligatorios para los usuarios que recibirán una credencial móvil?
 
-* Are the email address and phone number unique between the file and existing users?
+* ¿La dirección de correo electrónico y el número de teléfono son únicos tanto en el archivo como entre los usuarios existentes?
 
-* Are the date and email formats correct as specified above?
+* ¿Los formatos de fecha y de correo electrónico son correctos según lo indicado arriba?
 
 :::info
 
-* The service team does not provide file-editing services. If the file fails to upload, use the validation tools above to identify and resolve the issue.
+* El equipo de soporte no ofrece edición de archivos. Si el archivo no se sube, utilice las herramientas de validación anteriores para identificar y resolver el problema.
 
-* This document is designed to enable successful uploads without manual troubleshooting by the service team.
+* Este documento está diseñado para permitir cargas exitosas sin intervención manual por parte del equipo de soporte.
 
 :::

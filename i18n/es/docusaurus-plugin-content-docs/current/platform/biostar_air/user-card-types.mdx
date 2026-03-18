@@ -1,119 +1,119 @@
 ---
 id: user-card-types
-title: User Card and Credential Types
-description: This article introduces the user types (regular and temporary) supported from BioStar Air version 2.6 and the credentials available for each type. Regular users can use Mobile Card, RF card, QR code, LinkPass, face, and PIN, while temporary users can use the web-based dynamic QR code and LinkPass.
+title: Tipos de tarjetas y credenciales de usuario
+description: Este artículo presenta los tipos de usuario (regular y temporal) compatibles desde la versión 2.6 de BioStar Air y las credenciales disponibles para cada uno. Los usuarios regulares pueden usar tarjeta móvil, tarjeta RF, código QR, LinkPass, reconocimiento facial y PIN, mientras que los usuarios temporales pueden usar el código QR dinámico basado en la web y LinkPass.
 keywords:
-  - User Management
+  - Gestión Usuarios
   - BioStar Air
-  - User card types
+  - Tipos de tarjetas de usuario
 ---
 
-From BioStar Air version 2.6, two user types were introduced to enhance user management.
+A partir de la versión 2.6 de BioStar Air se introdujeron dos tipos de usuario para mejorar la gestión.
 
-* <Cmd sid="user_regular_card_type" product="air" />: A user who is a regular member of an organization or facility and requires long-term, ongoing access. All credential types can be issued.
+* <Cmd sid="user_regular_card_type" product="air" />: Un usuario que es miembro regular de una organización o instalación y que requiere acceso a largo plazo. Se pueden emitir todos los tipos de credenciales.
 
-* <Cmd sid="user_temporary_card_type" product="air" />: A visitor or non-regular member who needs short-term, limited access. This can include guests, external visitors, short-term contractors, delivery couriers, and so on. Only <Cmd sid="user_form_input20" product="air" /> credentials, including QR code and LinkPass, can be issued.
+* <Cmd sid="user_temporary_card_type" product="air" />: Un visitante o miembro no regular que necesita acceso limitado y de corta duración. Esto puede incluir huéspedes, visitantes externos, contratistas temporales, mensajeros de entrega, etc. Solo se pueden emitir las credenciales <Cmd sid="user_form_input20" product="air" />, incluyendo el código QR y LinkPass.
 
 :::info
 
-For more information on issuing credentials when adding or editing users, refer to <DocLink docId='platform/biostar_air/adding-individual-users#issuingCredentials' />.
+Para obtener más información sobre la emisión de credenciales al agregar o editar usuarios, consulte <DocLink docId='platform/biostar_air/adding-individual-users#issuingCredentials' />.
 
 :::
 
 :::tip
 
-Watch the video below for a tutorial on user and card types.
+Vea el video a continuación para obtener un tutorial sobre los tipos de usuario y de tarjeta.
 
 <YouTube className='fit--content' videoId="xTxIzG-30S0" />
 
 :::
 
-## Regular user card types {#regular-user-card-typs}
+## Tipos de tarjetas para usuarios regulares {#regular-user-card-typs}
 
-The credentials you can issue to regular users are as follows.
+Las credenciales que puede emitir a los usuarios regulares son las siguientes.
 
 :::info
 
-For more information on how to use mobile credentials with the Suprema Pass app, refer to <DocLink docId='platform/biostar_air/opening-doors-with-mobile-credentials' />.
+Para obtener más información sobre cómo usar credenciales móviles con la aplicación Suprema Pass, consulte <DocLink docId='platform/biostar_air/opening-doors-with-mobile-credentials' />.
 
 :::
 
 ### <Cmd sid='card_type_mobile' product='air' className='normal' /> {#mobileCard}
 
-* A unique **Card ID** is automatically assigned but can also be set manually.
+* Se asigna automáticamente un **ID de tarjeta** único, aunque también puede establecerse manualmente.
 
-* When using an **Airfob Tag** or **Airfob Patch**, integrate with an existing access control system by using the mobile card number as the card serial number.
+* Al usar un **Airfob Tag** o **Airfob Patch**, integre el sistema de control de acceso existente utilizando el número de la tarjeta móvil como número de serie de la tarjeta.
 
-* For compatibility with a previous system, the mobile card ID can match the RF card number of the former site.
+* Para compatibilidad con un sistema anterior, el ID de la tarjeta móvil puede coincidir con el número de tarjeta RF del sitio anterior.
 
 ### <Cmd sid='card_type_rf' product='air' className='normal' /> {#rfCard}
 
-* Add up to eight RFID cards per user.
+* Agregue hasta ocho tarjetas RFID por usuario.
 
-* Configure <Cmd sid="rf_card_type" product="air" />(CSN or Wiegand), <Cmd sid="wiegand_card_id" product="air" />, and <Cmd sid="rf_card_name" product="air" /> to simplify management when multiple cards are assigned.
+* Configure <Cmd sid="rf_card_type" product="air" /> (CSN o Wiegand), <Cmd sid="wiegand_card_id" product="air" />, y <Cmd sid="rf_card_name" product="air" /> para simplificar la gestión cuando se asignan varias tarjetas.
 
-* Select a reader in <Cmd sid="newest_rf_card_text_device" product="air" /> to scan an existing RFID card with a connected Suprema device.
+* Seleccione un lector en <Cmd sid="newest_rf_card_text_device" product="air" /> para escanear una tarjeta RFID existente con un dispositivo Suprema conectado.
 
-* If an existing RF card has a **CSN** (card serial number), enter the CSN manually.
+* Si una tarjeta RF existente tiene un **CSN** (número de serie de la tarjeta), ingrese el CSN manualmente.
 
 ### <Cmd sid='card_type_option3' product='air' className='normal' /> {#qrCode}
 
-* Regular users can use the **QR code** of a mobile card.
+* Los usuarios regulares pueden usar el **código QR** de una tarjeta móvil.
 
-* Access the QR code by tapping the button on the mobile card interface.
+* Acceda al código QR tocando el botón en la interfaz de la tarjeta móvil.
 
 ### <Cmd sid='card_type_option4' product='air' className='normal' /> {#linkPass}
 
-* Send a web link to the user's email address or phone number.
+* Envíe un enlace web a la dirección de correo electrónico o al número de teléfono del usuario.
 
-* The user opens the received link in a web browser and clicks <Cmd sid="web_card_preview_button1" product="air" /> to gain access.
+* El usuario abre el enlace recibido en un navegador web y hace clic en <Cmd sid="web_card_preview_button1" product="air" /> para obtener acceso.
 
 :::info
 
-For more information on LinkPass credentials, refer to <DocLink docId='platform/biostar_air/linkpass-credentials' />.
+Para obtener más información sobre las credenciales LinkPass, consulte <DocLink docId='platform/biostar_air/linkpass-credentials' />.
 
 :::
 
-### Facial authentication {#face}
+### Autenticación facial {#face}
 
-* Add up to two face profile images per user.
+* Agregue hasta dos imágenes de perfil facial por usuario.
 
-* Register through a connected reader or by uploading an image.
+* Regístrate mediante un lector conectado o cargando una imagen.
 
-* Send an email link to the user, then capture a photo with a mobile device camera to enroll.
+* Envía al usuario un enlace por correo electrónico y, a continuación, captura una foto con la cámara del dispositivo móvil para registrarlo.
 
 ### PIN {#pin}
 
-Set a 4–16-digit PIN to use as part of two-factor authentication (2FA).
+Establece un PIN de 4 a 16 dígitos para usar como parte de la autenticación de dos factores (2FA).
 
-## Temporary user card types {#temporary-user-card-typs}
+## Tipos de tarjetas para usuarios temporales {#temporary-user-card-typs}
 
-Temporary users do not receive mobile or RFID cards. Instead, issue **web-based credentials** that do not require an app download. Available options are as follows:
+Los usuarios temporales no reciben tarjetas móviles ni tarjetas RFID. En su lugar, emite **credenciales web** que no requieren la descarga de una aplicación. Las opciones disponibles son las siguientes:
 
 ### <Cmd sid='card_type_option3' product='air' className='normal' /> {#TempQrCode}
 
-* Send via email or text message.
+* Envía por correo electrónico o por mensaje de texto.
 
-* Accessible through a web browser.
+* Accesible a través de un navegador web.
 
-* Use a **dynamic QR code**, which updates every five minutes, to enhance security.
+* Usa un **código QR dinámico**, que se actualiza cada cinco minutos, para mejorar la seguridad.
 
 ### <Cmd sid='card_type_option4' product='air' className='normal' /> {#TempLinkPass}
 
-Send a web link to the user via email or text message. The user gains access by clicking <Cmd sid="web_card_preview_button1" product="air" /> in a web browser.
+Envía al usuario un enlace web por correo electrónico o por mensaje de texto. El usuario obtiene acceso al hacer clic en <Cmd sid="web_card_preview_button1" product="air" /> en un navegador web.
 
 :::info
 
-For more information on LinkPass credentials, refer to <DocLink docId='platform/biostar_air/linkpass-credentials' />.
+Para obtener más información sobre las credenciales LinkPass, consulte <DocLink docId='platform/biostar_air/linkpass-credentials' />.
 
 :::
 
-## Managing access levels {#managing-access-levels}
+## Administrar niveles de acceso {#managing-access-levels}
 
-Set **access levels** to control where credentials are allowed, regardless of whether the user is regular or temporary.
+Configura los **niveles de acceso** para controlar dónde se pueden usar las credenciales, independientemente de si el usuario es regular o temporal.
 
 :::caution
 
-If the user is temporary, assign restrictive access levels carefully and avoid issuing credentials with unlimited access.
+Si el usuario es temporal, asigna con cuidado niveles de acceso restrictivos y evita emitir credenciales con acceso ilimitado.
 
 :::

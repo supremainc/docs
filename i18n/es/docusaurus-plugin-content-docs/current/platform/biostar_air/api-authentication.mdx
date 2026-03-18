@@ -1,29 +1,29 @@
 ---
 id: api-authentication
-title: API Authentication
-description: This article explains the BioStar Air Cloud API authentication flow, lists the API base URLs, describes how to issue Bearer tokens, and shows how to obtain a token from a browser.
+title: Autenticación de la API
+description: Este artículo explica el flujo de autenticación de la API de BioStar Air Cloud, enumera las URL base de la API, describe cómo obtener tokens Bearer y muestra cómo obtener un token desde un navegador.
 keywords:
-  - API authentication
+  - Autenticación de la API
   - Bearer token
-  - API base URL
+  - URL base de la API
   - BioStar Air
 ---
 
-The BioStar Air Cloud API uses Bearer token (JWT)-based authentication. You must obtain a token through the login process before calling the API, and include it in the Authorization header of every request.
+La API de BioStar Air Cloud utiliza autenticación basada en tokens Bearer (JWT). Debe obtener un token mediante el proceso de inicio de sesión antes de hacer llamadas a la API e incluirlo en el encabezado Authorization de cada solicitud.
 
-## API Base URLs {#api-base-urls}
+## URLs base de la API {#api-base-urls}
 
-| Environment | Base URL |
+| Entorno | URL base |
 | --- | --- |
 | Demo | https://demo-afs-api.airfob.com/v1/ |
-| Production - Europe | https://e-afs-api.airfob.com/v1/ |
-| Production - Korea | https://a-afs-api.airfob.com/v1/ (for all non-EU customers) |
+| Producción - Europa | https://e-afs-api.airfob.com/v1/ |
+| Producción - Corea | https://a-afs-api.airfob.com/v1/ (para todos los clientes que no pertenezcan a la UE) |
 
-## API login flow {#api-login-flow}
+## Flujo de inicio de sesión de la API {#api-login-flow}
 
-Make API calls with [Postman](https://www.postman.com/) or programmatically.
+Realice llamadas a la API con [Postman](https://www.postman.com/) o de forma programática.
 
-### Log in {#login}
+### Iniciar sesión {#login}
 
 * **Endpoint**: `login`
 
@@ -36,66 +36,66 @@ Make API calls with [Postman](https://www.postman.com/) or programmatically.
   }
   ```
 
-Returns a Bearer token (JWT).
+Devuelve un token Bearer (JWT).
 
-### Get account information {#get-self-accounts}
+### Obtener información de la cuenta {#get-self-accounts}
 
 * **Endpoint**: `getSelfAccounts`
 
-* **Authorization**: Bearer Token
+* **Authorization**: token Bearer
 
-Returns a list of accessible sites and accounts.
+Devuelve una lista de sitios y cuentas a los que puede acceder.
 
-### Log in to an account {#login-to-account}
+### Iniciar sesión en una cuenta {#login-to-account}
 
 * **Endpoint**: `loginAccount`
 
-* **Authorization**: Bearer Token
+* **Authorization**: token Bearer
 
-Returns a site-specific token.
+Devuelve un token específico del sitio.
 
-## How to get a Bearer token from a web browser {#getYourBearerToken}
+## Cómo obtener un token Bearer desde un navegador web {#getYourBearerToken}
 
-You can obtain the Bearer token directly from your browser using the developer tools, without Postman.
+Puede obtener el token Bearer directamente desde el navegador usando las herramientas de desarrollo, sin necesidad de Postman.
 
-### Chrome/Edge (Windows or Mac) {#chrome-edge}
+### Chrome/Edge (Windows o Mac) {#chrome-edge}
 
-1. In the web browser, press <Kbd>F12</Kbd> or <Kbd>Ctrl/Cmd + Shift + I</Kbd>.
+1. En el navegador web, presione <Kbd>F12</Kbd> o <Kbd>Ctrl/Cmd + Shift + I</Kbd>.
 
-2. Go to the **Network** tab.
+2. Vaya a la pestaña **Network**.
 
-3. Refresh the page.
+3. Actualice la página.
 
-4. Search for API calls.
+4. Busque llamadas a la API.
 
-   > e.g., `groups`, `login`
+   > p. ej., `groups`, `login`
 
-5. Click the request in the list.
+5. Haga clic en la petición en la lista.
 
-6. Go to the **Headers** tab.
+6. Vaya a la pestaña **Headers**.
 
-7. In the request headers, find `Authorization: Bearer ...`.
+7. En los encabezados de la petición, busque `Authorization: Bearer ...`.
 
-8. Right-click the token and copy it.
+8. Haga clic con el botón derecho en el token y cópielo.
 
 <Image src='/img/air/bsair-chrome-develope.png' alone />
 
 ### Safari (Mac) {#safari}
 
-1. Enable the **Developer** menu. In Safari, go to Preferences → Advanced and check **Show Develop menu**.
+1. Active el menú **Developer**. En Safari, vaya a Preferences → Advanced y marque **Show Develop menu**.
 
-2. Go to **Develop** → **Show Web Inspector**.
+2. Vaya a **Develop** → **Show Web Inspector**.
 
-3. Go to the **Network** tab.
+3. Vaya a la pestaña **Network**.
 
-4. Refresh the page.
+4. Actualice la página.
 
-5. Filter and inspect API calls.
+5. Filtre e inspeccione las llamadas a la API.
 
-6. Copy the `Authorization: Bearer` token from the request headers.
+6. Copie el token `Authorization: Bearer` de los encabezados de la petición.
 
 :::info
 
-A Bearer token copied from the browser can be reused in Postman. Always use the latest Bearer token.
+Un token Bearer copiado del navegador puede reutilizarse en Postman. Use siempre el token Bearer más reciente.
 
 :::

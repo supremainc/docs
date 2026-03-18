@@ -1,137 +1,137 @@
 ---
 id: managing-user-groups
-title: Manage User Groups
-description: This guide explains how to create, organize, and manage user groups and subgroups to efficiently categorize users and control access in BioStar Air.
+title: Administrar Grupos de Usuarios
+description: Esta guía explica cómo crear, organizar y administrar grupos y subgrupos de usuarios para clasificar a los usuarios de manera eficiente y controlar el acceso en BioStar Air.
 keywords:
-  - User Management
+  - Gestión Usuarios
   - BioStar Air
-  - User group
+  - Grupo usuario
 ---
 
-Use user groups to classify and manage users by department, role, location, and more. BioStar Air user groups are non-hierarchical, so a user can belong to multiple groups simultaneously, allowing you to freely combine department, role, and location groups. Groups let you manage access levels centrally and efficiently handle event log filtering, report generation, and assigning devices to muster areas.
+Utiliza los grupos de usuarios para clasificar y gestionar usuarios por departamento, rol, ubicación y más. Los grupos de usuarios de BioStar Air no son jerárquicos, por lo que un usuario puede pertenecer a varios grupos al mismo tiempo; esto te permite combinar libremente grupos de departamento, rol y ubicación. Los grupos te permiten administrar los niveles de acceso de forma centralizada y manejar de manera eficiente el filtrado de registros de eventos, la generación de informes y la asignación de dispositivos a zonas de reunión.
 
 :::tip
 
-Refer to the following video to watch the guide on managing user groups.
+Consulta el siguiente video para ver la guía sobre cómo gestionar grupos de usuarios.
 
 <YouTube className='fit--content' videoId="sNxu5pQuOsI" />
 
 :::
 
-## Before start
+## Antes de Comenzar
 
-### User group composition
+### Composición del grupo de usuarios
 
-User groups are not organized hierarchically.
+Los grupos de usuarios no están organizados de forma jerárquica.
 
-* Users in a subgroup do **not** automatically appear in the parent group.
+* Los usuarios en un subgrupo **no** aparecen automáticamente en el grupo principal.
 
-* The parent group’s total user count does not include subgroup members unless they are added manually.
+* El recuento total de usuarios del grupo principal no incluye a los miembros del subgrupo a menos que se los agregue manualmente.
 
-* Selecting a subgroup shows only the users assigned to that subgroup.
+* Al seleccionar un subgrupo, se muestran únicamente los usuarios asignados a ese subgrupo.
 
-### Configure multiple user groups
+### Configurar múltiples grupos de usuarios
 
-Users in BioStar Air can belong to **multiple user groups**.
+Los usuarios en BioStar Air pueden pertenecer a **múltiples grupos de usuarios**.
 
-In BioStar 2, user groups were typically linked to a single department. BioStar Air separates these, allowing more dynamic use.
+En BioStar 2, los grupos de usuarios normalmente estaban vinculados a un único departamento. BioStar Air los separa, lo que permite un uso más dinámico.
 
-* Filter the user list by group to quickly manage access levels.
+* Filtra la lista de usuarios por grupo para administrar rápidamente los niveles de acceso.
 
-  > e.g., HR department
+  > p. ej., departamento de Recursos Humanos
 
-* Create context-specific groups that span multiple departments.
+* Crea grupos específicos que abarquen varios departamentos.
 
-  > e.g., men’s locker room
+  > p. ej., vestuario masculino
 
-* User groups are used for **event log filtering** and **report generation**.
+* Los grupos de usuarios se utilizan para el **filtrado de registros de eventos** y la **generación de informes**.
 
-* Assign user groups to **muster zone** devices or device groups to enforce specific safety protocols.
+* Asigna grupos de usuarios a dispositivos o a grupos de dispositivos de la **zona de reunión** para aplicar protocolos de seguridad específicos.
 
-This flexibility makes it easier to manage overlapping user roles and access scenarios.
+Esta flexibilidad facilita la gestión de roles de usuario superpuestos y de escenarios de acceso.
 
-## Create group {#creatingUserGroup}
+## Crear grupo {#creatingUserGroup}
 
-### Create user group
+### Crear grupo de usuarios
 
-Create a new user group.
+Crear un nuevo grupo de usuarios.
 
-1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" /> in the left sidebar.
+1. Haz clic en <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" /> en la barra lateral izquierda.
 
    <Image src='/img/air/bsair-gettingstarted-user-group-mng.png' />
 
-2. Click <Cmd sid="add_user_group_btn" product="air" /> at the top right of the screen.
+2. Haz clic en <Cmd sid="add_user_group_btn" product="air" /> en la parte superior derecha de la pantalla.
 
-3. When the <Cmd sid="add_user_group_popup_title" product="air" /> window appears, enter the user group name.
+3. Cuando aparezca la ventana <Cmd sid="add_user_group_popup_title" product="air" />, ingresa el nombre del grupo de usuarios.
 
    <Image src='/img/air/bsair-gettingstarted-user-group-mng-add.png' />
 
-4. Click <Cmd sid='manage_grops_ok_btn' product='air' /> to create the group.
+4. Haga clic en <Cmd sid='manage_grops_ok_btn' product='air' /> para crear el grupo.
 
 :::info
 
-* Deleting a group does not delete the users in that group. The users are only removed from the group.
+* Eliminar un grupo no elimina a los usuarios que contiene. Solo se les quita la pertenencia al grupo.
 
-* For more information about assigning users to groups, see <DocLink docId='platform/biostar_air/user-management-user-list#manageUserGroups' />.
+* Para obtener más información sobre cómo asignar usuarios a grupos, consulte <DocLink docId='platform/biostar_air/user-management-user-list#manageUserGroups' />.
 
 :::
 
-### Create subgroup {#creatingSubgroup}
+### Crear subgrupo {#creatingSubgroup}
 
-You can use subgroups to further classify user groups. However, subgroups are **not hierarchical**. This means users in a subgroup are not automatically included in the parent group.
+Puede usar subgrupos para clasificar aún más los grupos de usuarios. Sin embargo, los subgrupos **no son jerárquicos**. Esto significa que los usuarios de un subgrupo no se incluyen automáticamente en el grupo principal.
 
-1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" /> in the left sidebar.
+1. Haz clic en <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Click <Cmd sid="add_user_group_btn" product="air" /> at the top right of the screen.
+2. Haz clic en <Cmd sid="add_user_group_btn" product="air" /> en la parte superior derecha de la pantalla.
 
-3. When the <Cmd sid="add_user_group_popup_title" product="air" /> window appears, click the <Cmd sid="add_sub_group_text" product="air" /> option.
+3. Cuando aparezca la ventana <Cmd sid="add_user_group_popup_title" product="air" />, haz clic en la opción <Cmd sid="add_sub_group_text" product="air" />.
 
    <Image src='/img/air/bsair-user-sub-group-popup.png' />
 
-4. From <Cmd sid="select_group_placeholder" product="air" />, select the parent group.
+4. En <Cmd sid="select_group_placeholder" product="air" />, seleccione el grupo principal.
 
-5. Enter the group name in <Cmd sid='user_subgroup_name_input' product='air' />.
+5. Ingrese el nombre del grupo en <Cmd sid='user_subgroup_name_input' product='air' />.
 
-6. Click <Cmd sid='manage_grops_ok_btn' product='air' /> to create a subgroup.
+6. Haz clic en <Cmd sid='manage_grops_ok_btn' product='air' /> para crear el subgrupo.
 
-The newly created subgroup appears indented under the parent group in the user group list.
+El subgrupo recién creado aparece con sangría debajo del grupo principal en la lista de grupos de usuarios.
 
 <Image src='/img/air/bsair-user-sub-group-list.png' />
 
-## Edit group name {#editGroupName}
+## Editar nombre del grupo {#editGroupName}
 
-Modify the name of an existing user group.
+Modifica el nombre de un grupo de usuarios existente.
 
-1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" /> in the left sidebar.
+1. Haz clic en <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Click the checkbox for the user group to edit in the list.
+2. Marca la casilla del grupo de usuarios que deseas editar en la lista.
 
-3. Click <IcAirEdit title='Edit' /> at the top left of the user group list.
+3. Haz clic en <IcAirEdit title='Edit' /> en la parte superior izquierda de la lista de grupos de usuarios.
 
    <Image src='/img/air/bsair-user-group-edit.png' />
 
-4. When the <Cmd sid="edit_user_group_btn" product="air" /> window appears, edit the group name.
+4. Cuando aparezca la ventana <Cmd sid="edit_user_group_btn" product="air" />, edita el nombre del grupo.
 
    <Image src='/img/air/bsair-user-group-edit-popup.png' />
 
-5. Click <Cmd sid='manage_grops_ok_btn' product='air' /> to save the changes.
+5. Haz clic en <Cmd sid='manage_grops_ok_btn' product='air' /> para guardar los cambios.
 
 :::info
 
-The group name can be edited only when a single group is selected.
+El nombre del grupo solo se puede editar cuando se selecciona un único grupo.
 
 :::
 
-## Delete group {#deleteGroup}
+## Eliminar grupo {#deleteGroup}
 
-Delete any user groups that are no longer needed.
+Elimina los grupos de usuarios que ya no sean necesarios.
 
-1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" /> in the left sidebar.
+1. Haz clic en <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Click the checkbox for the user group to delete in the list.
+2. Marca la casilla del grupo de usuarios que deseas eliminar en la lista.
 
-3. Click <IcAirRemove title='Delete' /> at the top left of the user group list.
+3. Haz clic en <IcAirRemove title='Delete' /> en la parte superior izquierda de la lista de grupos de usuarios.
 
    <Image src='/img/air/bsair-user-group-remove.png' />
 
-4. When a warning message appears, click <Cmd sid='user_group_yes_btn' product='air' />.
+4. Cuando aparezca un mensaje de advertencia, haz clic en <Cmd sid='user_group_yes_btn' product='air' />.

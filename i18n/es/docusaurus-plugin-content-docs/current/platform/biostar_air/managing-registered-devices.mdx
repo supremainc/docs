@@ -1,167 +1,167 @@
 ---
 id: managing-registered-devices
-title: Manage Registered Devices
-description: In the BioStar Air portal, check device connection status, change biometric and card settings, and update firmware. Efficiently manage the security system using individual or bulk operations.
+title: Administrar dispositivos registrados
+description: En el portal de BioStar Air, compruebe el estado de conexión de los dispositivos, modifique la configuración biométrica y de tarjetas y actualice el firmware. Administre el sistema de seguridad de forma eficiente mediante operaciones individuales o masivas.
 keywords:
-  - Device Management
-  - Device Settings
+  - Gestión Dispositivos
+  - Configuración del Dispositivo
   - BioStar Air
-  - Biometric
-  - Card Setting
-  - Firmware Upgrade
-  - Network settings
+  - Biométrico
+  - Configuración de tarjeta
+  - Actualización de firmware
+  - Configuración de red
 ---
 
-View the connection status of registered devices at a glance, change biometric and card settings, or update firmware. Manage a few devices individually and many devices in bulk to operate your security system efficiently.
+Vea de un vistazo el estado de conexión de los dispositivos, cambie la configuración biométrica y de tarjetas o actualice el firmware. Administre algunos dispositivos de forma individual y otros de forma masiva para operar su sistema de seguridad de manera eficiente.
 
 :::info
 
-* Devices can be registered only in the **BioStar Air mobile app** for iOS or Android. You cannot register devices from the web portal. For detailed instructions on registering devices using the mobile app, refer to <DocLink docId='platform/biostar_air/manage-device-with-app' />.
+* Los dispositivos solo se pueden registrar en la **aplicación móvil BioStar Air** para iOS o Android. No es posible registrar dispositivos desde el portal web. Para obtener instrucciones detalladas sobre cómo registrar dispositivos mediante la aplicación móvil, consulte <DocLink docId='platform/biostar_air/manage-device-with-app' />.
 
-* Internet access is required to use certain features, such as **remote access**, **biometric authentication**, **QR code access**, and **firmware updates**.
+* Se requiere acceso a Internet para usar ciertas funciones, como el **acceso remoto**, la **autenticación biométrica**, el **acceso mediante código QR** y las **actualizaciones de firmware**.
 
 :::
 
 :::tip
 
-Refer to the following video to watch the device registration and management guide.
+Consulte el siguiente video para ver la guía de registro y gestión de dispositivos.
 
 <YouTube className='fit--content' videoId="lpMPkMyjr-c" />
 
 :::
 
-## View the device list {#viewing-device-information}
+## Ver la lista de dispositivos {#viewing-device-information}
 
-The device list lets you see all devices registered in BioStar Air at a glance. View key information for each device at a glance, such as connection status, model name, and firmware version. Click a device to view details and modify settings.
+La lista de dispositivos le permite ver de un vistazo todos los dispositivos registrados en BioStar Air. Obtenga información clave de cada dispositivo, como estado de conexión, nombre de modelo y versión de firmware. Haga clic en un dispositivo para ver los detalles y modificar la configuración.
 
 <Image src='/img/air/bsair-device-mng-list.png' />
 
-Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
 
-### Device connection status {#device-connection-status}
+### Estado de conexión del dispositivo {#device-connection-status}
 
-Check each device’s connection status from the status icons in the device list.
+Compruebe el estado de conexión de cada dispositivo mediante los iconos de estado en la lista de dispositivos.
 
-* <StatusOK /> **Green**: The device is online, can be controlled remotely, and can accept and update QR authentication.
+* <StatusOK /> **Verde**: El dispositivo está en línea, puede controlarse de forma remota y puede aceptar y actualizar la autenticación por QR.
 
-* <StatusFail /> **Red**: The device is offline.
+* <StatusFail /> **Rojo**: El dispositivo está desconectado.
 
-* <StatusUpdating /> **Orange**: Firmware is updating.
+* <StatusUpdating /> **Naranja**: Se está actualizando el firmware.
 
-* ⚪ **Not connected**: The device has no network connection. (e.g., Airfob Patch)
+* ⚪ **No conectado**: El dispositivo no tiene conexión a la red. (p. ej., Airfob Patch)
 
-* <IcAirWarn /> **Warning**: Synchronization is required between the server and the device.
+* <IcAirWarn /> **Advertencia**: Se requiere sincronización entre el servidor y el dispositivo.
 
-### Device information {#device-information}
+### Información del dispositivo {#device-information}
 
-Each column in the device list includes the following information.
+Cada columna de la lista de dispositivos contiene la siguiente información.
 
 <Image src='/img/air/bsair-device-mng-list-info.png' />
 
-* <Cmd sid="device_product_column" product="air" />: The device name and model retrieved from the Suprema database.
+* <Cmd sid="device_product_column" product="air" />: El nombre y el modelo del dispositivo obtenidos de la base de datos de Suprema.
 
-* <Cmd sid="device_nickname_column" product="air" />: A user-editable field for easier identification. Edit it in the <Cmd sid="device_edit_title" product="air" /> window that appears after clicking the device in the list.
+* <Cmd sid="device_nickname_column" product="air" />: Un campo editable por el usuario para facilitar su identificación. Edítelo en la ventana <Cmd sid="device_edit_title" product="air" /> que aparece al hacer clic en el dispositivo en la lista.
 
-* <Cmd sid="device_id_column" product="air" />: The unique identifier assigned to the device.
+* <Cmd sid="device_id_column" product="air" />: El identificador único asignado al dispositivo.
 
-* <Cmd sid="device_group_column" product="air" />: The group to which the device belongs.
+* <Cmd sid="device_group_column" product="air" />: El grupo al que pertenece el dispositivo.
 
-* <Cmd sid='device_battery_column' product='air' />: Available only on battery-powered devices. Supported only by AirPop Tag (AirFob Tag) devices.
+* <Cmd sid='device_battery_column' product='air' />: Disponible solo en dispositivos alimentados por batería. Compatible únicamente con los dispositivos AirPop Tag (AirFob Tag).
 
-* <Cmd sid="device_fw_column" product="air" />: The currently installed firmware version.
+* <Cmd sid="device_fw_column" product="air" />: La versión de firmware instalada actualmente.
 
-* <Cmd sid="device_timezone_column" product="air" />: The time zone set on the device.
+* <Cmd sid="device_timezone_column" product="air" />: La zona horaria configurada en el dispositivo.
 
-### Filter {#deviceFiltering}
+### Filtrar {#deviceFiltering}
 
-You can use the filter feature in the top header of the device list. Click <IcAirFilter title='Filter' /> in the header to set the desired conditions.
+Puedes usar la función de filtro en el encabezado superior de la lista de dispositivos. Haz clic en <IcAirFilter title='Filter' /> en el encabezado para establecer las condiciones deseadas.
 
 <Image src='/img/air/bsair-device-mng-list-filter.png' />
 
 :::info
 
-To reset the applied filters, click <IcAirFilter title='Filter' /> and select <Cmd sid='column_filter_modal_reset_btn' product='air' />.
+Para restablecer los filtros aplicados, haga clic en <IcAirFilter title='Filter' /> y seleccione <Cmd sid='column_filter_modal_reset_btn' product='air' />.
 
 :::
 
-## Edit individual device information and settings {#editing-individual-device}
+## Editar la información y los ajustes individuales del dispositivo {#editing-individual-device}
 
-1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+1. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Click the device you want to edit in the list.
+2. Haz clic en el dispositivo que deseas editar en la lista.
 
-3. The <Cmd sid="device_edit_title" product="air" /> window appears.
+3. Aparece la ventana <Cmd sid="device_edit_title" product="air" />.
 
    <Image src='/img/air/bsair-device-mng-list-edit-details.png' caption />
 
-4. Edit the device’s details or settings.
+4. Edita los detalles o la configuración del dispositivo.
 
-5. Click <Cmd sid="save_btn" product="air" /> at the bottom to save the changes.
+5. Haz clic en <Cmd sid="save_btn" product="air" /> en la parte inferior para guardar los cambios.
 
-For more information on editing fields and setting options for each section, see <DocLink docId='platform/biostar_air/device-info-settings' />.
+Para obtener más información sobre cómo editar campos y configurar las opciones de cada sección, consulta <DocLink docId='platform/biostar_air/device-info-settings' />.
 
-## Bulk device actions {#bulkDeviceActions}
+## Acciones masivas para dispositivos {#bulkDeviceActions}
 
-Use the controls at the top of the device list to manage multiple devices at once.
+Usa los controles en la parte superior de la lista de dispositivos para administrar varios dispositivos a la vez.
 
 <Image src='/img/air/bsair-device-mng-list-tools.png' />
 
-* <IcAirRef width='24px' height='24px' title='Refresh' />: Refresh the device list and device status.
+* <IcAirRef width='24px' height='24px' title='Refresh' />: Actualiza la lista de dispositivos y su estado.
 
-* <IcAirRemove width='24px' height='24px' title='Delete' />: Delete devices registered to the site.
+* <IcAirRemove width='24px' height='24px' title='Delete' />: Elimina los dispositivos registrados en el sitio.
 
    :::warning
 
-   Only online devices can be deleted permanently. If the device is offline, delete it first in the BioStar Air mobile app before adding it to another site. For more information on deleting devices using the mobile app, see <DocLink docId='platform/biostar_air/manage-device-with-app#removingDevice' />.
+   Solo los dispositivos en línea pueden eliminarse de forma permanente. Si el dispositivo está fuera de línea, elimínalo primero en la aplicación móvil BioStar Air antes de agregarlo a otro sitio. Para obtener más información sobre cómo eliminar dispositivos mediante la aplicación móvil, consulta <DocLink docId='platform/biostar_air/manage-device-with-app#removingDevice' />.
 
    :::
 
-* <IcAirFw width='24px' height='24px' title='Update Firmware' />: Update the firmware of selected devices. For more information about firmware upgrades, see <DocLink docId='platform/biostar_air/how-to-upgrade-firmware' />.
+* <IcAirFw width='24px' height='24px' title='Update Firmware' />: Actualiza el firmware de los dispositivos seleccionados. Para obtener más información sobre las actualizaciones de firmware, consulta <DocLink docId='platform/biostar_air/how-to-upgrade-firmware' />.
 
-* <IcAirCloud width='24px' height='24px' title='Sync with Server' />: Synchronize biometric templates from selected devices to the server.
+* <IcAirCloud width='24px' height='24px' title='Sync with Server' />: Sincroniza las plantillas biométricas de los dispositivos seleccionados con el servidor.
 
-* <IcAirGroup width='24px' height='24px' title='Manage Groups' />: Assign selected devices to a group. For more information about device group management, see <DocLink inner='#device_group_in_device_list' />.
+* <IcAirGroup width='24px' height='24px' title='Manage Groups' />: Asigna los dispositivos seleccionados a un grupo. Para más información sobre la gestión de grupos de dispositivos, consulta <DocLink inner='#device_group_in_device_list' />.
 
-* <IcAirByte width='24px' height='24px' title='RF Card Byte Order' />: Switch the RF card byte order of the selected device in the list to <Cmd>MSB</Cmd> or <Cmd>LSB</Cmd>.
+* <IcAirByte width='24px' height='24px' title='RF Card Byte Order' />: Cambia el orden de bytes de la tarjeta RF del dispositivo seleccionado en la lista a <Cmd>MSB</Cmd> o <Cmd>LSB</Cmd>.
 
-  * <Cmd>MSB</Cmd>: Processes card data in order from large byte units to small byte units, sequentially storing the card serial number (CSN) from left to right.
+  * <Cmd>MSB</Cmd>: Procesa los datos de la tarjeta en orden de unidades de byte grandes a pequeñas, almacenando secuencialmente el número de serie de la tarjeta (CSN) de izquierda a derecha.
 
-  * <Cmd>LSB</Cmd>: Processes card data in order from small byte units to large byte units, storing the card serial number (CSN).
+  * <Cmd>LSB</Cmd>: Procesa los datos de la tarjeta en orden de unidades de byte pequeñas a grandes, almacenando el número de serie de la tarjeta (CSN).
 
-* <IcAirDset width='24px' height='24px' title='Load Device Setting' />: Import the device settings originally configured in standalone mode.
+* <IcAirDset width='24px' height='24px' title='Load Device Setting' />: Importa los ajustes del dispositivo configurados originalmente en modo autónomo.
 
-* <IcAirUpd width='24px' height='24px' title='Update Status' />: Update the status of the selected devices in the device list.
+* <IcAirUpd width='24px' height='24px' title='Update Status' />: Actualiza el estado de los dispositivos seleccionados en la lista de dispositivos.
 
-## Device group management {#device_group_in_device_list}
+## Gestión de grupos de dispositivos {#device_group_in_device_list}
 
-From the device list, select individual devices to add them to a device group or remove them from an existing group.
+En la lista de dispositivos, selecciona dispositivos individuales para añadirlos a un grupo o retirarlos de uno existente.
 
-1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+1. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Select the checkbox for the device to add to or remove from a group.
+2. Marca la casilla del dispositivo que deseas agregar o quitar de un grupo.
 
-3. Click <IcAirGroup width='24px' height='24px' title='Manage Groups' /> at the top of the device group list.
+3. Haz clic en <IcAirGroup width='24px' height='24px' title='Manage Groups' /> en la parte superior de la lista de grupos de dispositivos.
 
-4. When the <Cmd sid="manage_device_group_title" product="air" /> window appears, add or remove the selected devices from the group.
+4. Cuando aparezca la ventana <Cmd sid="manage_device_group_title" product="air" />, agrega o elimina los dispositivos seleccionados del grupo.
 
    <Image src='/img/air/bsair-device-mng-list-group-mng.png' />
 
-   <Cmd sid="manage_device_group_title_two" product="air" /> checkboxes have the following meanings:
+   Las casillas de verificación de <Cmd sid="manage_device_group_title_two" product="air" /> tienen los siguientes significados:
 
-   * <Cmd sid="manage_device_group_checkbox_state_one" product="air" />: Removes the selected devices from the group.
+   * <Cmd sid="manage_device_group_checkbox_state_one" product="air" />: Elimina los dispositivos seleccionados del grupo.
 
-   * <Cmd sid="manage_device_group_checkbox_state_two" product="air" />: Certain selected devices are currently in the group.
+   * <Cmd sid="manage_device_group_checkbox_state_two" product="air" />: Algunos de los dispositivos seleccionados ya pertenecen al grupo.
 
-   * <Cmd sid="manage_device_group_checkbox_state_three" product="air" />: Adds the selected devices to the group.
+   * <Cmd sid="manage_device_group_checkbox_state_three" product="air" />: Agrega los dispositivos seleccionados al grupo.
 
-5. Click <Cmd sid="btn_ok" product="air" /> to save the changes.
+5. Haz clic en <Cmd sid="btn_ok" product="air" /> para guardar los cambios.
 
 :::info
 
-* Selecting another group in the <Cmd sid="manage_device_group_title" product="air" /> window moves the selected devices to that group.
+* Al seleccionar otro grupo en la ventana <Cmd sid="manage_device_group_title" product="air" />, los dispositivos seleccionados se mueven a ese grupo.
 
-* A device can belong to multiple groups. A single device can be assigned to multiple groups.
+* Un dispositivo puede pertenecer a varios grupos. Ese mismo dispositivo puede asignarse a varios grupos.
 
-* Click <Cmd sid="device_btn_reset" product="air" /> to initialize the changes.
+* Haz clic en <Cmd sid="device_btn_reset" product="air" /> para restablecer los cambios.
 
 :::

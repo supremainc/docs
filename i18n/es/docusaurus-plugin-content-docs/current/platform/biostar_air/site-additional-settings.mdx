@@ -1,42 +1,42 @@
 ---
 id: site-additional-settings
-title: Settings for Additional Features
-description: This guide explains how to enable and configure BioStar Air's additional features, such as QR code readers, IP camera integration, and webhooks.
+title: Configuración de funciones adicionales
+description: Esta guía explica cómo habilitar y configurar las funciones adicionales de BioStar Air, como lectores de códigos QR, integración con cámaras IP y webhooks.
 keywords:
-  - Additional Site Settings
-  - Additional Settings
+  - Configuración adicional del sitio
+  - Configuración adicional
 ---
 
-You can enable or disable additional features required for site operation, such as support for QR code readers, ONVIF camera integration, and event forwarding to external systems (webhooks).
+Puede habilitar o deshabilitar funciones adicionales necesarias para el funcionamiento del sitio, como el soporte para lectores de códigos QR, la integración con cámaras IP compatibles con ONVIF y el reenvío de eventos a sistemas externos (webhooks).
 
-Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar. Use the <Cmd sid='site_setting_qr_reader_tab' product='air' /> tab to enable or disable additional features.
+Haga clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> en la barra lateral izquierda. Utilice la pestaña <Cmd sid='site_setting_qr_reader_tab' product='air' /> para habilitar o deshabilitar funciones adicionales.
 
 <Image src='/img/air/bsair-settings-site-additional-feature.png' />
 
-* <Cmd sid='site_setting_qr_label' product='air' />: Supports QR code readers. Disable this option if you do not use a QR reader.
+* <Cmd sid='site_setting_qr_label' product='air' />: Admite lectores de códigos QR. Desactive esta opción si no utiliza un lector de códigos QR.
 
-* <Cmd sid='site_setting_video_management' product='air' />: Supports ONVIF-compliant IP cameras. Enable this feature to integrate BioStar Air with video surveillance. After enabling the feature, click <Cmd sid='setting_label' product='air' /> to set the event log playback time.
+* <Cmd sid='site_setting_video_management' product='air' />: Admite cámaras IP compatibles con ONVIF. Habilite esta función para integrar BioStar Air con la videovigilancia. Después de habilitarla, haga clic en <Cmd sid='setting_label' product='air' /> para establecer el tiempo de reproducción del registro de eventos.
 
    :::note
 
-   For more information about video management, see <DocLink docId='platform/biostar_air/ip-camera-support-and-configuration' />.
+   Para obtener más información sobre la gestión de video, consulte <DocLink docId='platform/biostar_air/ip-camera-support-and-configuration' />.
 
    :::
 
-* <Cmd sid='site_setting_webhook_title' product='air' />: Enable webhooks to send BioStar Air events to external systems. After enabling the feature, configure the fields below.
+* <Cmd sid='site_setting_webhook_title' product='air' />: Habilite los webhooks para enviar eventos de BioStar Air a sistemas externos. Después de habilitar la función, configure los campos a continuación.
 
   <Image src='/img/air/bsair-settings-site-additional-feature-webhook.png' />
 
-  * <Cmd sid='site_setting_webhook_url' product='air' />: Enter the endpoint address of the external server that will receive events. Example: `https://example.com/webhook-endpoint`
+  * <Cmd sid='site_setting_webhook_url' product='air' />: Ingrese la dirección del endpoint del servidor externo que recibirá los eventos. Ejemplo: `https://example.com/webhook-endpoint`
 
-  * <Cmd sid='site_setting_webhook_secret' product='air' />: A security token used to verify that the webhook request originated from a trusted server. The sending server encrypts the payload with the security key using SHA-256 and sends it in the `X-Signature` header.
+  * <Cmd sid='site_setting_webhook_secret' product='air' />: Un token de seguridad usado para verificar que la solicitud del webhook proviene de un servidor de confianza. El servidor remitente cifra la carga útil con la clave de seguridad usando SHA-256 y la envía en el encabezado `X-Signature`.
 
-  * <Cmd sid='site_setting_webhook_form_send_text' product='air' />: Verify that the webhook works correctly. Send a test message to confirm that the external server receives and responds to the request.
+  * <Cmd sid='site_setting_webhook_form_send_text' product='air' />: Verifique que el webhook funcione correctamente. Envíe un mensaje de prueba para confirmar que el servidor externo recibe y responde a la solicitud.
 
    :::info
 
-  * After entering all required information, click <Cmd sid='save_btn' product='air' />.
+  * Después de introducir toda la información requerida, haga clic en <Cmd sid='save_btn' product='air' />.
 
-  * Click <Cmd sid='new_button_reset' product='air' /> to initialize the entered information.
+  * Haga clic en <Cmd sid='new_button_reset' product='air' /> para inicializar la información introducida.
 
    :::

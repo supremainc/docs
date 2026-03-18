@@ -1,39 +1,38 @@
 ---
 id: site-security-settings
-title: Security Settings
-description: Learn how to enhance the security of the BioStar Air site by locking administrator accounts, enabling 2-factor authentication, enforcing password policies, and setting mobile credential validity periods.
+title: Configuración de seguridad
+description: Descubra cómo mejorar la seguridad del sitio de BioStar Air bloqueando cuentas de administrador, habilitando la autenticación de 2 factores, aplicando políticas de contraseñas y estableciendo periodos de validez para las credenciales móviles.
 keywords:
-  - Site Security
-  - Security Settings
+  - Seguridad del sitio
+  - Configuración de seguridad
 ---
 
-Configure security policies properly to prevent unauthorized access and keep the site secure.
-You can strengthen site security by locking inactive administrator accounts, enabling email-based 2-factor authentication, and setting password change intervals.
+Configure correctamente las políticas de seguridad para evitar el acceso no autorizado y mantener el sitio protegido. Puede reforzar la seguridad bloqueando cuentas de administrador inactivas, habilitando la autenticación de 2 factores por correo electrónico y estableciendo intervalos para el cambio de contraseña.
 
-Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar. Use the <Cmd sid='site_setting_tab_security' product='air' /> tab to configure site security settings.
+Haga clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> en la barra lateral izquierda. Utilice la pestaña <Cmd sid='site_setting_tab_security' product='air' /> para configurar los ajustes de seguridad del sitio.
 
 <Image src='/img/air/bsair-settings-site-security.png' />
 
-* <Cmd sid='site_security_input1' product='air' />: Lock administrator accounts that have been inactive for more than 90 days.
+* <Cmd sid='site_security_input1' product='air' />: Bloquee las cuentas de administrador que hayan estado inactivas por más de 90 días.
 
-* <Cmd sid='site_security_input2' product='air' />: Require email two-factor authentication each time an administrator signs in.
+* <Cmd sid='site_security_input2' product='air' />: Exija autenticación de dos factores por correo electrónico cada vez que un administrador inicie sesión.
 
-* <Cmd sid='site_security_input3' product='air' />: Grant 'full access' to new users by default when no other access rights are selected. If this setting is disabled, assign access levels manually. Temporary users are not granted full access automatically even if the setting above is enabled.
+* <Cmd sid='site_security_input3' product='air' />: Conceda 'acceso total' a los nuevos usuarios de forma predeterminada cuando no se seleccionen otros derechos de acceso. Si esta opción está deshabilitada, asigne los niveles de acceso manualmente. A los usuarios temporales no se les concede acceso total automáticamente, incluso si la opción anterior está activada.
 
    :::note
 
-   For more information about access levels, see <DocLink docId='platform/biostar_air/manage-access-level' />.
+   Para obtener más información sobre los niveles de acceso, consulte <DocLink docId='platform/biostar_air/manage-access-level' />.
 
    :::
 
-* <Cmd sid='site_security_input4' product='air' />: Require password reset every 30, 60, or 90 days.
+* <Cmd sid='site_security_input4' product='air' />: Exija el restablecimiento de la contraseña cada 30, 60 o 90 días.
 
-* <Cmd sid='site_security_input6' product='air' />: Set how long mobile credentials remain valid when the device is offline.
+* <Cmd sid='site_security_input6' product='air' />: Establezca cuánto tiempo permanecen válidas las credenciales móviles cuando el dispositivo está sin conexión.
 
    :::note
 
-  * The default is 5 minutes and can be set from 1 minute to 8 days.
+  * El valor predeterminado es 5 minutos y se puede establecer entre 1 minuto y 8 días.
 
-  * This helps balance security and convenience, especially at remote sites with limited network connectivity.
+  * Esto ayuda a equilibrar la seguridad y la comodidad, especialmente en sitios remotos con conectividad de red limitada.
 
    :::
