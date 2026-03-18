@@ -216,15 +216,11 @@ const config = {
             '/common/**',
             '/_unused/**',
             '/products/**',
-            '/platform/biostar_air/**',
-            '/device/**',
             '/products/**',
             '/bsx-license-calculator/**',
             '/en/products/**',
             '/en/common/**',
             '/en/_unused/**',
-            '/en/platform/biostar_air/**',
-            '/en/device/**'
           ],
           autoSectionDepth: 2
         }
@@ -278,28 +274,22 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            label: 'BioStar X',
+            type: 'dropdown',
+            label: 'Platforms',
             position: 'right',
-            docId: 'platform/biostar_x/index'
+            items: [
+              {
+                type: 'doc',
+                label: 'BioStar X',
+                docId: 'platform/biostar_x/index'
+              },
+              {
+                type: 'doc',
+                label: 'BioStar Air',
+                docId: 'platform/biostar_air/index'
+              }
+            ]
           },
-          // {
-          //   type: 'dropdown',
-          //   label: 'Platforms',
-          //   position: 'right',
-          //   items: [
-          //     {
-          //       type: 'doc',
-          //       label: 'BioStar X',
-          //       docId: 'platform/biostar_x/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'BioStar Air',
-          //       docId: 'platform/biostar_air/index'
-          //     }
-          //   ]
-          // },
           {
             type: 'dropdown',
             label: 'Devices',
