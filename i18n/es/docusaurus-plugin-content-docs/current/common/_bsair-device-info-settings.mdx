@@ -1,0 +1,463 @@
+### <Cmd sid='new_layout_nav_title_detail' product='air' className='normal' /> {#deviceInfo}
+
+The <Cmd sid='new_layout_nav_title_detail' product='air' /> section provides basic information — such as the device name, model, serial number, and firmware version — and includes an action menu for controlling features and default settings.
+
+#### Basic Information
+
+View the device's basic information. This information cannot be edited.
+
+* <Cmd sid='device_non_editable_fields_product' product='air' />: The product name.
+
+* <Cmd sid='device_non_editable_fields_model' product='air' />: The device's model name.
+
+* <Cmd sid='device_non_editable_fields_serial' product='air' />: The device's serial number.
+
+* <Cmd sid='device_non_editable_fields_firmware' product='air' />: The firmware version installed on the device.
+
+#### Actions
+
+The **Action** (액션) feature lets you control the device's functions.
+
+<Image src='/img/air/bsair-device-mng-edit-actions.png' />
+
+* <Cmd sid='firmware_update_btn' product='air' />: Update the device firmware to the latest version.
+
+* <Cmd sid='device_edit_actions_reboot' product='air' />: Reboot the device remotely when an issue or anomaly occurs.
+
+* <Cmd sid='device_edit_actions_factory_reset' product='air' />: Initialize all settings stored on the device. This action deletes all settings and data on the device.
+
+* <Cmd sid='device_edit_actions_factory_reset' product='air' /> <Cmd sid='device_edit_actions_excluding_network' product='air' />: Initialize all settings except the network settings. This action deletes all settings and data but keeps the network settings.
+
+#### Initial Settings
+
+Modify the device's default settings.
+
+* <Cmd sid='device_editable_fields_nick_name' product='air' />: The alias shown in the device list and logs. You can edit this field directly.
+
+* <Cmd sid='device_editable_fields_timezone' product='air' />: Set the device time zone to keep logs consistent when the site and device clocks differ. Activate the <Cmd sid='device_field_dst_usage' product='air' /> option to apply daylight saving time (DST).
+
+<Include type={props.type} ref='xpass2'>
+
+* <Cmd sid='keypad_use_rf_card_number' product='air' />: Enter the RF card number using the keypad to use it.
+
+   :::note
+
+   This feature is supported only on the **XP2-GKDPB** model, which has a keypad.
+
+   :::
+
+</Include>
+
+* <Cmd sid='device_editable_fields_hands_free' product='air' />: Extend the BLE range.
+
+<Include type={props.type} ref='ae-mc,xpass2,xs2'>
+
+* <Cmd sid='device_editable_fields_qr_reader' product='air' />: Confirm that an RS-485 QR reader is connected to the device.
+
+   :::note
+
+  * When a QR reader is connected to the device, you cannot use another RS-485 device.
+
+  * When using an SIO2, you cannot use a QR reader on the device connected to that door.
+
+   :::
+
+</Include>
+
+<Include type={props.type} ref='ae-mc,xs2'>
+
+* <Cmd sid='device_editable_fields_card' product='air' />: Activate or deactivate card authentication. DESFire and Felica card formats are supported.
+
+</Include>
+
+<Include type={props.type} ref='ae-mc,xpass2'>
+
+* <Cmd sid='device_editable_fields_beep_setting' product='air' />: Configure the success beep for access authentication.
+
+</Include>
+
+<Include type={props.type} ref='xpass2,bew3,bs3'>
+
+---
+
+### <Cmd sid='device_card_title' product='air' className='normal' /> {#cardSettings}
+
+In the <Cmd sid='device_card_title' product='air' /> section, you can modify card authentication settings.
+
+#### <Cmd sid='device_editable_fields_card' product='air' className='normal' /> {#nfcRfcard}
+
+* <Cmd sid='device_editable_fields_card' product='air' />: Click the toggle switch to enable or disable card access authentication. Select the card types supported for card authentication.
+
+  * <Cmd sid='device_editable_fields_card_em4100' product='air' />
+
+  * <Cmd sid='device_editable_fields_card_mifare_felica' product='air' />
+
+* <Cmd sid='device_editable_fields_card_byte_order' product='air' />
+
+  * <Cmd>MSB</Cmd>: Processes card data in order from large byte units to small byte units, sequentially storing the card serial number (CSN) from left to right.
+
+  * <Cmd>LSB</Cmd>: Processes card data in order from small byte units to large byte units, storing the card serial number (CSN).
+
+* <Cmd sid='device_card_field_data_reading_method' product='air' />: Select CSN (default) or Wiegand format.
+
+   :::note
+
+   Wiegand supports 5 default formats. Add more formats in <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' />. For more information about custom card format settings, see <DocLink docId='platform/biostar_air/custom-wiegand-card-formats' />.
+
+   :::
+
+#### <Cmd sid='device_card_wiegand_card' product='air' className='normal' /> {#device_card_wiegand_card}
+
+For Wiegand cards, you can select <Cmd sid='device_card_wiegand_card_iclass' product='air' /> and <Cmd sid='device_card_wiegand_card_hid_prox' product='air' />. Click the toggle to enable the feature, then select the desired card format in <Cmd sid='device_card_wiegand_card' product='air' />.
+
+:::info
+
+* Support may vary by device.
+
+* Wiegand supports 5 default formats. Add more formats in <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' />. For more information about custom card format settings, see <DocLink docId='platform/biostar_air/custom-wiegand-card-formats' />.
+
+:::
+
+</Include>
+
+---
+
+### <Cmd sid='new_layout_nav_title_network' product='air' className='normal ' /> {#network}
+
+Modify the device's network settings.
+
+* <Cmd sid='device_editable_fields_use_dhcp' product='air' />: Configure the device to obtain an IP address automatically.
+
+   To set the network manually, disable <Cmd sid='device_editable_fields_use_dhcp' product='air' /> and fill in the following fields.
+
+* <Cmd sid='device_editable_fields_ip_address' product='air' />
+
+* <Cmd sid='device_editable_fields_gateway' product='air' />
+
+* <Cmd sid='device_editable_fields_dns_address' product='air' />
+
+* <Cmd sid='device_editable_fields_subnet_mask' product='air' />
+
+<Include type={props.type} ref='xpass2,bew3,bs3'>
+
+---
+
+### <Cmd sid='new_layout_nav_title_authentication' product='air' className='normal' /> {#authentication}
+
+<Include type={props.type} ref='xpass2'>
+
+* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />: Add authentication methods. Click <Cmd sid='add_btn' product='air' /> to add an authentication method.
+
+  * **XP2-MDPB** / **XP2-GDPB**: Only RF cards can be selected as the authentication method.
+
+  * **XP2-GKDPB**: You can use a combination of an RF card and a PIN as the authentication method.
+
+</Include>
+
+<Include type={props.type} ref='bew3'>
+
+* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />: Add authentication methods. Click <Cmd sid='add_btn' product='air' /> to add an authentication method. You can use a combination of an RF card and facial recognition as the authentication method.
+
+</Include>
+
+<Include type={props.type} ref='bs3'>
+
+* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />: Add authentication methods. Click <Cmd sid='add_btn' product='air' /> to add an authentication method. You can choose a combination of RF card, face, ID, and PIN for authentication.
+
+</Include>
+
+<Include type={props.type} ref='bs3'>
+
+* <Cmd sid='device_bs3_authen_display_user_name' product='air' /> / <Cmd sid='device_bs3_authen_display_user_id' product='air' />: Choose whether to show the user name or ID on the authentication screen. Select <Cmd sid='device_bs3_authen_display_user_name_txt3' product='air' /> to hide them.
+
+* <Cmd sid='new_layout_nav_title_authentication_auth_timeout' product='air' />: Authentication fails if the credential is not authenticated within the set time.
+
+</Include>
+
+<Include type={props.type} ref='xpass2'>
+
+* <Cmd sid='new_layout_nav_title_authentication_auth_timeout' product='air' />: Authentication fails if the credential is not authenticated within the set time.
+
+   :::note
+
+   This feature is supported only on the **XP2-GKDPB** model.
+
+   :::
+
+</Include>
+
+:::info
+
+You can configure different authentication methods for the selected schedule. For example, you can allow card-only authentication during work hours and allow card-and-PIN authentication outside work hours.
+
+:::
+
+</Include>
+
+<Include type={props.type} ref='bew3,bs3'>
+
+---
+
+### <Cmd sid='new_layout_nav_title_face' product='air' className='normal' /> {#faceAuthentication}
+
+#### <Cmd sid='site_setting_tab_security' product='air' className='normal' /> {#faceSecurity}
+
+* <Cmd sid="new_layout_device_bew3_block_7_title" product="air" />: Prevent user authentication with spoofed faces such as photos.
+
+* <Cmd sid="new_layout_device_bew3_block_7_text2" product="air" />: Check for duplicate registrations when enrolling facea.
+
+#### <Cmd sid='device_face_detection' product='air' className='normal' /> {#faceDetection}
+
+* <Cmd sid="new_layout_device_bew3_block_2_title" product="air" />: Set the sensitivity for detecting movement around the device.
+
+* <Cmd sid="new_layout_device_bew3_block_3_title" product="air" />: Set the maximum rotation angle allowed for a face.
+
+* <Cmd sid='new_layout_device_bew3_block_5_title' product='air' />: Expand the area in the camera view where faces are recognized.
+
+* <Cmd sid='new_layout_device_bew3_block_4_title' product='air' /> <Cmd sid='new_layout_device_bew3_block_4_title_cm' product='air' />: Set the minimum and maximum recognition distance.
+
+* <Cmd sid='new_layout_device_bew3_block_8_title' product='air' /> <Cmd sid='new_layout_device_bew3_block_8_title_cm' product='air' />: If a face is not enrolled within the set time during enrollment, the process is canceled.
+
+#### <Cmd sid='new_layout_device_bew3_block_8_1_text' product='air' className='normal' /> {#maskDetection}
+
+Activate the <Cmd sid='new_layout_device_bew3_block_8_1_text' product='air' /> option to configure mask detection.
+
+* <Cmd sid="new_layout_device_bew3_block_8_2_text" product="air" />: Select mask detection sensitivity.
+
+* <Cmd sid='new_layout_device_bew3_block_8_3_text' product='air' />
+
+  * <Cmd sid="new_layout_device_bew3_block_8_3_value1" product="air" />: Users not wearing a mask are denied authentication, and a mask-non-compliance event log is recorded.
+
+  * <Cmd sid="new_layout_device_bew3_block_8_3_value2" product="air" />: Users not wearing a mask can still authenticate, but a mask-non-compliance event log is recorded.
+
+* <Cmd sid="new_layout_device_bew3_block_8_4_text" product="air" />
+
+  * <Cmd sid="new_layout_device_bew3_block_8_4_value1" product="air" />: After authentication, check mask usage or measure temperature.
+
+  * <Cmd sid="new_layout_device_bew3_block_8_4_value2" product="air" />: Check mask usage or measure temperature before authentication. In this case, users not wearing a mask or exceeding the threshold temperature cannot authenticate.
+
+  * <Cmd sid="new_layout_device_bew3_block_8_4_value3" product="air" />: Use the device only to check mask usage or measure temperature. Users wearing a mask or having a temperature below the threshold can enter regardless of authentication.
+
+* <Cmd sid='bs3_qr_barcode_toogle1' product='air' />: Set whether to allow QR/barcode authentication via the device's camera.
+
+* <Cmd sid='bs3_qr_barcode_toogle2' product='air' />: Set authentication to accept a QR code containing the same data as the CSN card or Wiegand card issued to the user. This feature is available when the <Cmd sid='bs3_qr_barcode_toogle1' product='air' /> option is enabled.
+
+:::info
+
+When using non-face credentials, the timing of "before" and "after" is usually important.
+
+:::
+
+</Include>
+
+---
+
+### <Cmd sid='new_layout_nav_title_tna' product='air' className='normal' /> (Time & Attendance, T&A) {#tna}
+
+When this feature is enabled, <Cmd sid='device_edit_tna_event_label' product='air' className='bold' /> is logged in **Event Log** and used in <Cmd sid='tna_report' product='air' className='bold' />.
+
+* <Cmd sid='new_device_edit_tna_toogle' product='air' />: Click the toggle switch to turn attendance management on or off.
+
+* <Cmd sid='device_edit_tna_mode_label' product='air' />: Select the desired attendance mode.
+
+  <Include type={props.type} ref='bs3'>
+
+  * <Cmd sid='device_edit_tna_mode_option2' product='air' />: When the attendance key appears on the screen, the user selects the attendance event during authentication.
+
+  </Include>
+
+  <Include type={props.type} ref='ae-mc,xpass2,bew3,bs3,xs2'>
+
+  * <Cmd sid="device_edit_tna_mode_option3" product="air" />: Attendance events change automatically according to the set schedule. You can select a schedule to apply to attendance events.
+
+  </Include>
+
+  <Include type={props.type} ref='bs3'>
+
+  * <Cmd sid="device_edit_tna_mode_option4" product="air" />: The user continues to use the last selected attendance event.
+
+  </Include>
+
+  <Include type={props.type} ref='ae-mc,xpass2,bew3,bs3,xs2'>
+
+  * <Cmd sid="device_edit_tna_mode_option5" product="air" />: Only the selected attendance event is available.
+
+  * <Cmd sid='device_edit_tna_mode_option6' product='air' />: When presenting a mobile credential, the Suprema Pass app lets the user select the attendance event.
+
+  </Include>
+
+:::info
+
+For more information on configuring time and attendance, see <DocLink docId='platform/biostar_air/configuring-ta' />.
+
+:::
+
+<Include type={props.type} ref='bs3'>
+
+---
+
+### <Cmd sid='device_bs3_sound_label' product='air' className='normal' /> {#device_bs3_sound_label}
+
+#### <Cmd sid='device_bs3_sound_label2' product='air' className='normal' /> {#device_bs3_sound_label2}
+
+* <Cmd sid='device_bs3_sound_label3' product='air' />: Reduce LCD brightness when the device is not in use to lower unnecessary power consumption.
+
+* <Cmd sid='device_bs3_sound_label4' product='air' />: Keep the backlight always on or dim it after inactivity.
+
+* <Cmd sid='device_bs3_sound_backlight' product='air' />: Set the time before the backlight turns off automatically.
+
+* <Cmd sid='user_form_input3' product='air' />: Set the language shown on the device screen.
+
+* <Cmd sid="device_bs3_sound_home_screen" product="air" />: Configure the items displayed on the device’s home screen background.
+
+  * <Cmd sid="device_bs3_sound_home_screen_txt1" product="air" />: Display the default image on the home screen.
+
+  * <Cmd sid="device_bs3_sound_home_screen_txt2" product="air" />: Display a user-registered image on the home screen.
+
+  * <Cmd sid="device_bs3_sound_home_screen_txt3" product="air" />: Display administrator input on the home screen.
+
+   :::note
+
+  After clicking <Cmd sid='audit_action_update' product='air' /> and saving, the image or notice no longer appears in the edit screen but remains on the device.
+
+   :::
+
+#### <Cmd sid='device_bs3_sound_home_screen_sound' product='air' className='normal' /> {#device_bs3_sound_home_screen_sound}
+
+* <Cmd sid="device_bs3_sound_home_screen_soung_use_voice" product="air" />: Use voice guidance instead of notification tones.
+
+* <Cmd sid='device_bs3_sound_home_screen_soung_device' product='air' />: Adjust the volume of sounds generated by the device.
+
+* <Cmd sid='device_bs3_sound_home_screen_soung_speaker' product='air' /> / <Cmd sid='device_bs3_sound_home_screen_microphone' product='air' />: Adjust the output or input volume when using the IP intercom feature.
+
+</Include>
+
+<Include type={props.type} ref='ae-mc,xpass2,bew3,bs3'>
+
+---
+
+### <Cmd sid='new_layout_nav_title_wiegandout' product='air' className='normal' /> {#wiegandoutput}
+
+This feature integrates with external systems (e.g., alarm panels). Activate the <Cmd sid='use_wiegand_out_label' product='air' /> option to use this feature.
+
+* <Cmd sid="wiegand_output_mode" product="air" />: Configure the Wiegand signal output mode.
+
+  * <Cmd sid="user_regular_card_type" product="air" />: Scan cards using the configured Wiegand format.
+
+    * <Cmd sid='device_wiegand_output_use_fail_code' product='air' />: You can set error codes and choose the value to send when Wiegand card authentication fails.
+
+  * <Cmd sid="device_wiegand_output_mode_bypass" product="air" />: Send the CSN regardless of Wiegand authentication. Set this if you are using it as a device without door control functionality.
+
+* <Cmd sid="wiegand_output_info" product="air" />: Select the information output during authentication.
+
+* <Cmd sid="wiegand_pulse_width" product="air" />: Set the pulse width for the Wiegand signal.
+
+* <Cmd sid="wiegand_pulse_interval" product="air" />: Set the pulse interval for the Wiegand signal.
+
+* <Cmd sid='mobile_consecutive_tag' product='air' />: Tag mobile cards consecutively without wait time.
+
+* <Cmd sid='devices_weigand_out_consecutive_lable' product='air' />: Set the maximum number of consecutive mobile card tags.
+
+:::info
+
+The <Cmd sid='mobile_consecutive_tag' product='air' /> feature is supported in Suprema Pass app 2.9.0 or later.
+
+:::
+
+</Include>
+
+<Include type={props.type} ref='bs3'>
+
+---
+
+### <Cmd sid='device_intercom_title' product='air' className='normal' /> {#intercom}
+
+* <Cmd sid='device_intercom_txt_use_intercom' product='air' />: Activate or deactivate the IP intercom feature.
+
+* <Cmd sid="device_intercom_txt_sip_server_transport" product="air" />: Choose the SIP transport method when configuring the intercom’s SIP server.
+
+* <Cmd sid="device_intercom_txt_sip_server_address" product="air" />: Enter the SIP server address.
+
+* <Cmd sid="device_intercom_txt_sip_server_port" product="air" />: Enter the SIP server port.
+
+* <Cmd sid='device_intercom_txt_registration_duration' product='air' />: Enter the registration duration. The device attempts to register with the SIP server every time the registration duration expires.
+
+* <Cmd sid="device_intercom_txt_sip_username" product="air" />: Enter the SIP account username.
+
+* <Cmd sid="login_password" product="air" />: Enter the SIP account password.
+
+* <Cmd sid="device_intercom_txt_sip_authorization_id" product="air" />: Enter the SIP account authorization ID.
+
+* <Cmd sid='device_intercom_txt_outbound_proxy_server' product='air' />: Use a separate outbound proxy server for SIP services if required.
+
+* <Cmd sid='device_intercom_extension_number' product='air' />: Add or edit extension numbers.
+
+* <Cmd sid="device_intercom_video_resolution" product="air" />: Select the video resolution when using the intercom.
+
+* <Cmd sid="device_intercom_open_door_button" product="air" />: Specify a button to unlock the door during a call.
+
+</Include>
+
+<Include type={props.type} ref='bs3,xpass2'>
+
+---
+
+### <Cmd sid='device_bs3_secure_tamper' product='air' className='normal' /> {#secureTamper}
+
+If a tamper event occurs, configure the device to delete **all user information**, **all logs**, and **security keys** stored on the device.
+
+</Include>
+
+<Include type={props.type} ref='bs3'>
+
+---
+
+### <Cmd sid='device_bs3_rtsp' product='air' className='normal' /> {#rtspStreaming}
+
+Configure details for **Real Time Streaming Protocol** (RTSP) streaming. The device's camera can stream live video.
+
+* <Cmd sid='device_bs3_rtsp_toogle' product='air' />: Turn RTSP streaming on or off.
+
+* <Cmd sid='device_bs3_rtsp_address' product='air' />: RTSP server address.
+
+* <Cmd sid='device_bs3_rtsp_port' product='air' />: Enter the RTSP server port.
+
+* <Cmd sid='user_info_id' product='air' /> / <Cmd sid='login_password' product='air' />: Enter the RTSP server ID and password.
+
+* <Cmd sid="device_bs3_rtsp_video" product="air" />: Select the video resolution when using RTSP.
+
+:::info
+
+The RTSP streaming feature is supported only on BioStation 3.
+
+:::
+
+</Include>
+
+---
+
+### <Cmd sid='new_layout_nav_title_sensitivity' product='air' className='normal' /> {#rssiSensitivity}
+
+Adjust the RSSI value to set how close the mobile device must be to unlock the door.
+
+<Image src='/img/air/bsair-device-mng-edit-sensitivity.png' />
+
+* Lower values help block unintended activation.
+
+* Higher values improve detection in high-interference environments.
+
+:::info
+
+To reset the settings, click <Cmd sid='device_btn_reset' product='air' />.
+
+:::
+
+<Include type={props.type} ref='ae-mc,xpass2,xs2'>
+
+---
+
+### <Cmd sid='module_found_slots_title' product='air' className='normal' /> {#moduleFoundSlots}
+
+Option to detect an OM-120 module connected to the device. Click <Cmd sid='add_btn' product='air' /> to detect the module.
+
+</Include>

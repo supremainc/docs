@@ -1,0 +1,137 @@
+---
+id: integration-quickstart
+title: Quick Start
+description: This guide shows how to set up the BioStar Air demo environment, register compatible devices, and generate API keys.
+keywords:
+  - API Integration
+  - Quick start
+  - BioStar Air
+  - Demo
+---
+
+This guide shows how to set up the BioStar Air demo site, connect and register compatible devices, and test cloud API integration. If you have worked with BioStar 2 before, many concepts will feel familiar. BioStar Air is fully cloud-based.
+
+## Prerequisites {#pre-requisites}
+
+Before you start, check the following.
+
+* Prepare a **BioStar Air-compatible device** with factory-initialized firmware.
+
+  * XP2-AIR, XS2-AIR, BEW3-AIR, BS3-AIR, BLN2-AIR
+
+  * Devices can be purchased through authorized Suprema distributors.
+
+* The device must be connected to the internet via Ethernet.
+
+* Allow outbound access on the network.
+
+  * Port 443 (HTTPS)
+
+  * Port 5671 (MQTT over TLS)
+
+## Set up the demo environment and API key {#demo-setup}
+
+<Steps>
+<Step>
+
+### Sign up and log in
+
+* Go to [BioStar Air Developer](https://developers.biostarair.com/login).
+
+* Click **Sign Up**, complete the form, and wait for approval.
+
+* After approval, log in with your credentials.
+
+</Step>
+<Step>
+
+### Create a demo application
+
+1. Go to **API** → **Management**.
+
+2. Click **+ Register**.
+
+3. Select **Demo** as the application type.
+
+4. Enter an application name and click **Register**.
+
+5. Click **Download** to download the Excel file with the demo site login credentials (email and password).
+
+</Step>
+<Step>
+
+### Generate an API key
+
+1. In **Application Management**, click the application you registered.
+
+2. Scroll to **API Management**.
+
+3. Click **Add**.
+
+4. Enter a name and confirm. Save the generated key.
+
+</Step>
+<Step>
+
+### Log in to the demo portal
+
+1. Go to the [Demo Portal](https://demo.airfobspace.com/login).
+
+2. Log in with the email and password from the Excel file.
+
+3. Enter the API key you just generated.
+
+</Step>
+</Steps>
+
+## Register devices {#registerDevices}
+
+Use the BioStar Air Demo App (Android only) on your mobile device.
+
+1. Click the following link to download the mobile app. [DeviceRegistration.zip](https://moca-public-file-share.s3.ap-northeast-2.amazonaws.com/DeviceRegistration.zip)
+
+2. Log in with the credentials from the Excel file.
+
+3. Move your Android device near the reader (within BLE range).
+
+   * In **All Menu** → **Devices**, tap the <IcAdd /> button in the upper right.
+
+   * Search for the device and tap **Register**.
+
+4. The device beeps, reboots, and appears in the registered device list.
+
+:::info
+
+Devices can only be registered through the mobile app. You cannot register devices from the web portal. API-based registration requires an encryption certificate that is not provided to partners.
+
+:::
+
+## Device Management
+
+Manage devices from the demo app or the demo web portal.
+
+* **BioStar Air Demo App**
+
+* **Demo Web Portal**: [https://demo.airfobspace.com/login](https://demo.airfobspace.com/login)
+
+## Demo vs production {#demo-vs-production}
+
+* A **Demo** site for testing is created through the [Developer Portal](https://developers.biostarair.com/login).
+
+* A **Production** site is created through the [Partner Portal](https://partner.biostarair.com/) and requires a site ID, user email, and password. Only authorized resellers or Suprema branches can create a production site.
+
+:::info
+
+* User IDs and account IDs are different. Do not confuse them.
+
+* If you manage multiple sites, store passwords securely.
+
+* Always use the latest Bearer token.
+
+* A Bearer token copied from the browser can be reused in Postman.
+
+:::
+
+## Need help? {#need-help}
+
+Open a ticket in the Suprema Technical Support Portal. [https://support.supremainc.com](https://support.supremainc.com)

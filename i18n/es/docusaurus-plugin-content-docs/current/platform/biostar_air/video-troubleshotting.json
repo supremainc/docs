@@ -1,22 +1,22 @@
 [
   {
-    "question": "Verificar compatibilidad con el perfil ONVIF G",
-    "answer": "Busca el nombre del modelo en <a href='https://www.onvif.org' target='_blank'>la página de productos conformes de ONVIF</a> para comprobar si la cámara es compatible con el perfil ONVIF G. El perfil ONVIF G es necesario para la reproducción de video grabado."
+    "question": "Verify ONVIF profile G support",
+    "answer": "Check whether the camera supports ONVIF Profile G by searching for the model name on <a href='https://www.onvif.org' target='_blank'>ONVIF's conformant products page</a>. ONVIF Profile G is required for recorded video playback."
   },
   {
-    "question": "Probar la reproducción de video en la configuración de la cámara",
-    "answer": "<ul><li>Inicia sesión en la configuración de la cámara a través de su interfaz web.</li><li>Asegúrate de poder ver tanto la transmisión en vivo como los videos grabados.</li><li>Ten en cuenta que algunas cámaras pueden limitar la reproducción simultánea de videos grabados en el portal y en el menú de configuración. Si la reproducción funciona en la configuración de la cámara pero no en BioStar Air, cierra la interfaz de configuración y prueba de nuevo.</li></ul>"
+    "question": "Test video playback in camera settings",
+    "answer": "<ul><li>Log into the camera’s settings via its web interface.</li><li>Ensure that you can view the live camera feed and recorded videos.</li><li>Be aware that some cameras may restrict simultaneous playback of recorded videos in both the portal and the settings menu. If playback works in the camera settings but not in BioStar Air, try closing the settings interface and testing again.</li></ul>"
   },
   {
-    "question": "Verificar compatibilidad del códec de video",
-    "answer": "Asegúrate de que el video grabado utilice el códec <b>H.264</b>, ya que BioStar Air no soporta <b>H.265</b>."
+    "question": "Check video codec compatibility",
+    "answer": "Ensure that the recorded video is using the <b>H.264</b> codec, as BioStar Air does not support <b>H.265</b>."
   },
   {
-    "question": "Formatear la tarjeta SD si se cambió el códec",
-    "answer": "Si en algún momento se cambió el códec de video, las grabaciones existentes podrían no reproducirse correctamente. Puede ser necesario formatear la tarjeta SD para que los nuevos ajustes tengan efecto. Esta solución ha demostrado resolver problemas de reproducción en algunos modelos de cámaras."
+    "question": "Format the SD card if codec was changed",
+    "answer": "If the video codec was changed at any point, the existing recordings may not play correctly. Formatting the SD card may be necessary for the new settings to take effect. This solution has been confirmed to resolve playback issues on some camera models."
   },
   {
-    "question": "Consultar la lista de productos conformes de ONVIF",
-    "answer": "Si no estás seguro de que tu cámara cumple con los estándares ONVIF, visita el <a href='https://www.onvif.org' target='_blank'>sitio web de ONVIF</a> para verificar la compatibilidad."
+    "question": "Reference ONVIF's conformant products list",
+    "answer": "If you are unsure whether your camera meets ONVIF standards, visit the <a href='https://www.onvif.org' target='_blank'>ONVIF website</a> to verify compatibility."
   }
 ]

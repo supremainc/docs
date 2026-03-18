@@ -1,0 +1,65 @@
+---
+id: manage-schedule
+title: Manage Schedules
+description: Create and manage schedules to control access to doors and elevators in BioStar Air.
+keywords:
+  - Schedule
+  - Manage
+  - BioStar Air
+---
+
+Create schedules to allow or restrict access to doors or elevators on specific days and time periods. Use with holiday groups to fine-tune access rules.
+
+:::info
+
+* Holiday groups take precedence over schedules. Grant unrestricted access to users who always need entry.
+
+* For more information about holiday group settings, see <DocLink docId='platform/biostar_air/manage-holiday-group' />.
+
+* For more information about applying schedules to doors, see <DocLink docId='platform/biostar_air/managing-door-schedules' />.
+
+* For more information about configuring schedules to control access to each elevator floor, see <DocLink docId='platform/biostar_air/manage-elevator' />.
+
+:::
+
+## Add schedule {#addSchedule}
+
+import AddScheduleItem from '../../common/_add-schedule-item.mdx';
+
+<AddScheduleItem />
+
+:::info
+
+* Add open schedules to allow access and locked schedules to restrict access, and apply them to doors. For more information about applying schedules to doors, see <DocLink docId='platform/biostar_air/managing-door-schedules' />.
+
+* For more information about configuring schedules to control access to each elevator floor, see <DocLink docId='platform/biostar_air/manage-elevator' />.
+
+:::
+
+## Edit schedule {#editSchedule}
+
+1. Click <Cmd sid="access_menu" product="air" /> → <Cmd sid="schedules_submenu" product="air" /> in the left sidebar.
+
+2. Click the schedule to edit in the list. Alternatively, select the schedule's checkbox and click <IcAirEdit title='Edit' /> at the top of the list.
+
+3. When the <Cmd sid="schedule_edit_title" product="air" /> panel appears, update the required information or modify the schedule.
+
+   <Image src='/img/air/bsair-access-mng-schedule-edit.png' />
+
+4. Click <Cmd sid='save_btn' product='air' /> to save the changes.
+
+## Delete schedule {#deleteSchedule}
+
+1. Click <Cmd sid="access_menu" product="air" /> → <Cmd sid="schedules_submenu" product="air" /> in the left sidebar.
+
+2. Select the checkbox of the schedule to delete in the list. Select one or more schedules.
+
+3. Click <IcAirRemove title='Delete' /> at the top of the list.
+
+4. When a warning message appears, click <Cmd sid='btn_yes' product='air' />.
+
+:::info
+
+Deleting a schedule removes it from all related sections. For example, if a schedule applied to a door or elevator is deleted, the schedule is no longer applied to that door or elevator.
+
+:::
