@@ -44,6 +44,7 @@
     "template": "템플릿",
     "detection": "추출 / 매치",
     "supportExcept": "지원, 별도의 장치 라이선스가 필요합니다.",
+    "supportAdd": "지원, 더 다양한 QR/바코드 인증을 사용하려면 Camera QR 라이선스가 필요합니다.",
     "minex": "MINEX 인증 및 호환",
     "supportSW": "지원 (SW 기반)",
     "supportSWHW": "지원 (HW + SW 기반)",
@@ -99,6 +100,7 @@
     "echoCancle": "24 bit/Voice DSP (에코 제거)",
     "multiToneBuzzer": "멀티톤 버저",
     "operating-temperature": "동작 온도",
+    "operating-temperature-xpq2": "DC 전원: -20℃ ~ 60℃<br/>PoE 전원: -20℃ ~ 50℃",
     "storage-temperature": "보관 온도",
     "operating-humidity": "동작 습도",
     "operating-humidity-spec": "0% ~ 80%, 비응축",
@@ -128,6 +130,7 @@
     "d107b43": "장치: 107g, 브래킷: 43g (와셔 및 볼트 포함)",
     "d136b48": "장치: 136g, 브래킷: 48g (와셔 및 볼트 포함)",
     "d144b30": "장치: 144g, 브래킷: 30g (와셔 및 볼트 포함)",
+    "d213b40": "장치: 213g, 브래킷: 40g (와셔 및 볼트 포함)",
     "d220b52": "장치: 220g, 브래킷: 52g (와셔 및 볼트 포함)",
     "d235b52": "장치: 235g, 브래킷: 52g (와셔 및 볼트 포함)",
     "d343b88": "장치: 343g, 브래킷: 88g (와셔 및 볼트 포함)",
@@ -211,7 +214,8 @@
     "p12v2_1a24v1a": "전압: 12Vdc<br/>전류: 최대 2.1A<br/>전압: 24Vdc<br/>전류: 최대 1A",
     "p12v0_2a24v0_1a": "전압: 12Vdc<br/>전류: 최대 0.2A<br/>전압: 24Vdc<br/>전류: 최대 0.1A",
     "p12v1a24v0_7a": "전압: 12Vdc<br/>전류: 최대 1A<br/>전압: 24Vdc<br/>전류: 최대 0.7A",
-    "p12v1a24v0_6a": "전압: 12Vdc<br/>전류: 최대 1A<br/>전압: 24Vdc<br/>전류: 최대 0.6A"
+    "p12v1a24v0_6a": "전압: 12Vdc<br/>전류: 최대 1A<br/>전압: 24Vdc<br/>전류: 최대 0.6A",
+    "p12v0_5a24v0_3a": "전압: 12Vdc<br/>DC OUT 미사용 시 전류: 최대 0.5A<br/>DC OUT 사용 시 전류: 최대 2.6A<br/>전압: 24Vdc<br/>DC OUT 미사용 시 전류: 최대 0.3A<br/>DC OUT 사용 시 전류: 최대 1.4A"
   },
   "en": {
     "fingerprint_title": "Compare Fingerprint Recognition Devices",
@@ -258,6 +262,7 @@
     "template": "Template",
     "detection": "Extractor / Matcher",
     "supportExcept": "Supported, requires a separate license.",
+    "supportAdd": "Supported, Camera QR license is required to use more diverse QR/barcode authentication.",
     "minex": "MINEX certified and compatible",
     "supportSW": "Supported (SW-based)",
     "supportSWHW": "Supported (HW + SW based)",
@@ -313,6 +318,7 @@
     "echoCancle": "24 bit/Voice DSP (echo cancellation)",
     "multiToneBuzzer": "Multi-tone buzzer",
     "operating-temperature": "Operating Temperature",
+    "operating-temperature-xpq2": "DC Power: -20℃ ~ 60℃<br/>PoE Power: -20℃ ~ 50℃",
     "storage-temperature": "Storage Temperature",
     "operating-humidity": "Operating Humidity",
     "operating-humidity-spec": "0% ~ 80%, non-condensing",
@@ -342,6 +348,7 @@
     "d107b43": "Device: 107g, Bracket: 43g (Including washer and bolt)",
     "d136b48": "Device: 136g, Bracket: 48g (Including washer and bolt)",
     "d144b30": "Device: 144g, Bracket: 30g (Including washer and bolt)",
+    "d213b40": "Device: 213g, Bracket: 40g (Including washer and bolt)",
     "d220b52": "Device: 220g, Bracket: 52g (Including washer and bolt)",
     "d235b52": "Device: 235g, Bracket: 52g (Including washer and bolt)",
     "d343b88": "Device: 343g, Bracket: 88g (Including washer and bolt)",
@@ -425,6 +432,7 @@
     "p12v2_1a24v1a": "Voltage: 12Vdc<br/>Current: Max. 2.1A<br/>Voltage: 24Vdc<br/>Current: Max. 1A",
     "p12v0_2a24v0_1a": "Voltage: 12Vdc<br/>Current: Max. 0.2A<br/>Voltage: 24Vdc<br/>Current: Max. 0.1A",
     "p12v1a24v0_7a": "Voltage: 12Vdc<br/>Current: Max. 1A<br/>Voltage: 24Vdc<br/>Current: Max. 0.7A",
-    "p12v1a24v0_6a": "Voltage: 12Vdc<br/>Current: Max. 1A<br/>Voltage: 24Vdc<br/>Current: Max. 0.6A"
+    "p12v1a24v0_6a": "Voltage: 12Vdc<br/>Current: Max. 1A<br/>Voltage: 24Vdc<br/>Current: Max. 0.6A",
+    "p12v0_5a24v0_3a": "Voltage: 12Vdc<br/>DC OUT not used Current: Max. 0.5A<br/>DC OUT used Current: Max. 2.6A<br/>Voltage: 24Vdc<br/>DC OUT not used Current: Max. 0.3A<br/>DC OUT used Current: Max. 1.4A"
   }
 }
