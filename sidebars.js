@@ -31,6 +31,7 @@ const sidebars = {
       items: [
         'device/vionyx_webserver/getting-started',
         'device/vionyx_webserver/ui-navigation',
+        'device/vionyx_webserver/live-basic',
       ]
     }
   ],

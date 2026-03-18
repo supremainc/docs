@@ -1216,6 +1216,32 @@ body[data-rh] .redocusaurus {
           width: 20%;
         }
       }
+      svg {
+        position: relative;
+        top: 0;
+      }
+    }
+  }
+  .table--viewmode {
+    table  {
+      p.hasimg {
+        margin: 0 auto !important;
+        width: fit-content;
+        img {
+          display: inline-block;
+        }
+      }
+       td {
+        &:first-of-type {
+          width: 10%;
+        }
+        &:nth-of-type(2) {
+          width: 20%;
+        }
+        &:nth-of-type(3) {
+          width: 30%;
+        }
+      }
     }
   }
 

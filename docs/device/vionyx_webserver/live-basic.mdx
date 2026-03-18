@@ -1,7 +1,98 @@
 ---
 id: live-basic
-title: 실시간 영상 모니터링
-description: ViOnyx Web Server에서 실시간으로 카메라 영상을 모니터링하는 방법을 안내합니다.
-keywords: [실시간, 영상, 모니터링, 카메라]
+title: 실시간 영상 보기
+description: VyOnyx Web Server의 Live 메뉴에서 실시간으로 카메라 영상을 확인하고, 채널과 뷰 모드를 선택하고, 화면을 확대/축소하는 방법을 안내합니다.
+keywords: [실시간, 영상, Live, 모니터링, 뷰 모드]
 ---
+
+VyOnyx Web Server의 <Cmd sid='live' product='cam' /> 메뉴에서는 카메라가 촬영 중인 영상을 실시간으로 확인할 수 있습니다. 원하는 채널과 뷰 모드를 선택하고, 화면을 확대하거나 전체 화면으로 볼 수 있습니다.
+
+## Live 뷰 기본 구성
+
+<Cmd sid='live' product='cam' /> 메뉴에 처음 진입하면 다음과 같은 기본 상태로 영상이 표시됩니다.
+
+<Image src='/img/cam-server/vionyx-live-basic.png' />
+
+<div className='menu-icon-table'>
+
+| 항목 | 구성 요소 | 설명 |
+| :-: | :-: | --- |
+| <Num num='1' /> | <Image src='/img/cam-server/ico-content-ai-hide.svg' width='100%' alone className='none' /> | AI 기능이 비활성화된 상태입니다. 아이콘을 클릭해 AI 기능을 활성화할 수 있습니다. |
+| <Num num='2' /> | CH | 채널에 따라 제공하는 뷰 모드를 선택할 수 있습니다. |
+| <Num num='3' /> | <Image src='/img/cam-server/ico-content-full.svg' alone className='none' /> | 촬영 중인 영상을 전체 화면으로 볼 수 있습니다. |
+
+</div>
+
+
+## 채널과 뷰 모드 선택하기
+
+VyOnyx Web Server는 여러 채널과 다양한 뷰 모드를 제공합니다. 화면 아래의 <Cmd>CH</Cmd> 드롭다운 메뉴에서 원하는 채널과 뷰 모드를 선택하세요.
+
+<Image src='/img/cam-server/vionyx-live-basic-select-ch.png' />
+
+**지원하는 채널과 뷰 모드**
+
+<div className='table--viewmode'>
+
+| 채널 | 뷰 모드 | 설명 | 예시 |
+| :--: | -- | -- | :--: |
+| **1ch** | Fisheye (Main/Sub) | 기본 채널의 원본 피시아이 렌즈 영상 | <Image src='/img/cam-server/vionyx-live-basic-fisheye-view-mode.png' width='50%' alone /> |
+| **2ch** | Quad (Main/Sub) | 파노라마 뷰 채널의 4분할 뷰 | <Image src='/img/cam-server/vionyx-live-basic-quad-view-mode.png' width='50%' alone /> |
+
+</div>
+
+:::info
+
+* 각 채널의 Main과 Sub는 서로 다른 해상도의 스트림을 제공합니다. Main은 고화질, Sub는 저화질 스트림입니다.
+
+* 위 이미지는 예시 화면입니다. 실제 화면과 다를 수 있습니다.
+
+:::
+
+
+## 화면 확대 및 축소
+
+마우스를 사용해 화면을 확대하고 축소할 수 있습니다.
+
+* 스크롤 업(위로): 화면 확대(줌 인)
+
+* 스크롤 다운(아래로): 화면 축소(줌 아웃)
+
+* 더블클릭: 원래 크기로 복귀(1배)
+
+:::info
+
+* 1배 ~ 8배까지 화면을 확대할 수 있습니다.
+
+* 화면 확대는 디지털 줌이므로, 높은 배율로 확대하면 영상이 흐릿해질 수 있습니다.
+
+:::
+
+
+## 전체 화면 모드
+
+더 큰 영상을 확인하려면 전체 화면 모드를 사용하세요. 화면 오른쪽 하단의 <Image src='/img/cam-server/ico-content-full.svg' alone className='none' ico /> 버튼을 클릭하세요.
+
+<Image src='/img/cam-server/vionyx-live-basic-full-screen.png' />
+
+* 전체 화면 모드에서도 뷰 모드 변경, 줌 기능을 계속 사용할 수 있습니다.
+
+* 전체 화면 모드를 종료하려면 <Kbd>ESC</Kbd> 키를 누르거나 <Image src='/img/cam-server/ico-content-full.svg' alone className='none' ico /> 버튼을 다시 클릭하세요.
+
+
+## 영상이 재생되지 않을 때
+
+### 네트워크 연결 확인
+
+카메라의 영상이 로드되지 않는다면 다음 단계를 따라 네트워크 연결 상태를 확인하세요.
+
+1. 카메라와 네트워크 연결 상태를 확인하세요.
+
+1. 웹 브라우저에서 **새로고침(F5)** 버튼을 누르세요.
+
+1. 시스템이 자동으로 재연결을 시도합니다.
+
+### 재연결 표시
+
+네트워크 연결이 끊어지면 **Connection lost. Reconnecting...** 메시지가 표시되며, 시스템이 자동으로 재연결을 시도합니다. 재연결에 실패하면 <Cmd sid='retry' product='cam' /> 버튼이 표시됩니다. 버튼을 클릭해 다시 연결을 시도할 수 있습니다.
 
