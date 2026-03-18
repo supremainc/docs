@@ -1,161 +1,161 @@
 ---
 id: managing-administrators
-title: Manage Administrator Accounts and Roles
-description: Learn how to invite administrators, assign role levels, manage permissions, and configure access control for the observer, operator, administrator, and master roles in BioStar Air.
+title: 管理者アカウントおよび役割の管理
+description: BioStar Airでの管理者の招待、役割の割り当て、権限管理、およびオブザーバー(Observer)、オペレーター(Operator)、管理者(Administrator)、マスター(Master)の各役割に対する入退室制御の設定方法を案内します。
 keywords:
-  - Administrator
-  - roles
-  - Access Control Settings
+  - 管理者
+  - 役割
+  - アクセス制御設定
 ---
 
-Use the administrator feature in BioStar Air to manage administrator accounts, assign roles, and control access levels within your organization. This enables you to maintain security and administrative control while granting the appropriate privileges to the right personnel.
+BioStar Airの管理者機能を使用して、組織内の管理者アカウントを管理し、役割を割り当て、入退室レベルを制御できます。 これにより、セキュリティと管理の制御を維持しながら、適切な担当者に適切な権限を付与できます。
 
 :::tip
 
-Watch the following video for a guide on managing administrators.
+管理者管理に関するビデオガイドを見るには、次の動画を参照してください。
 
 <YouTube className='fit--content' videoId="pUyNLeTfGRI" />
 
 :::
 
-## View administrators {#viewAdmin}
+## 管理者の表示 {#viewAdmin}
 
-Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> in the left sidebar.
+画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_submenu' product='air' /> をクリックします。
 
 <Image src='/img/air/bsair-settings-admin.png' />
 
-The <Cmd sid="admin_submenu" product="air" /> menu shows a list of all active administrators. The administrator list includes the following information.
+<Cmd sid='admin_submenu' product='air' /> メニューで、すべてのアクティブな管理者の一覧を確認できます。 管理者一覧には次の情報が含まれます。
 
-* Name
+* 名前
 
-* Email address
+* メールアドレス
 
-* Phone number
+* 電話番号
 
-* Inviter
+* 招待者
 
-* Invitation date
+* 招待日
 
-* Administrator role
+* 管理者権限
 
-* Account status (active/inactive)
+* アカウントの状態（有効/無効）
 
-## Deactivate administrators {#deactiveAdmin}
+## 管理者の無効化 {#deactiveAdmin}
 
-Instead of deleting an administrator, deactivate the account and reactivate it when needed.
+管理者を削除する代わりにアカウントを無効化でき、必要に応じて再度有効化できます。
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_submenu' product='air' /> をクリックします。
 
-2. Find the administrator to deactivate in the list.
+2. 一覧から無効化する管理者を見つけます。
 
-3. Click the toggle switch in the <Cmd sid="column_admin_account_status" product="air" /> column.
+3. <Cmd sid='column_admin_account_status' product='air' /> 列でトグルスイッチをクリックします。
 
    <Image src='/img/air/bsair-settings-admin-deactive.png' />
 
-4. When the message window appears, click the <Cmd sid='admin_status_change_confirm_btn' product='air' /> button.
+4. 確認ダイアログが表示されたら、<Cmd sid='admin_status_change_confirm_btn' product='air' /> をクリックしてください。
 
-The status in the <Cmd sid="column_admin_account_status" product="air" /> column changes to <Cmd sid="admin_status_disabled" product="air" />.
+<Cmd sid='column_admin_account_status' product='air' /> 列の状態が <Cmd sid='admin_status_disabled' product='air' /> に変更されます。
 
 <Image src='/img/air/bsair-settings-admin-deactive-result.png' />
 
 :::info
 
-The ability to deactivate administrators may be restricted by the administrator's role. Administrators with the <Cmd sid="master_role" product="air" className="bold" /> role cannot deactivate other <Cmd sid="master_role" product="air" className="bold" /> administrators.
+管理者の無効化機能は、管理者の権限によって制限される場合があります。 <Cmd sid='master_role' product='air' className='bold' /> 権限を持つ管理者は、他の <Cmd sid='master_role' product='air' className='bold' /> 管理者を無効化できません。
 
 :::
 
-## Change an administrator's role {#changing-an-administrators-role}
+## 管理者の役割変更 {#changing-an-administrators-role}
 
-Administrators can change the roles of administrators at a lower level.
+管理者は自分より低いレベルの管理者の役割を変更できます。
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_submenu' product='air' /> をクリックします。
 
-2. Find the administrator to change in the list.
+2. 一覧から役割を変更する管理者を選びます。
 
-3. Select the new administrator level in the <Cmd sid="column_admin_level" product="air" /> column.
+3. <Cmd sid='column_admin_level' product='air' /> 列で新しい管理者レベルを選択します。
 
    <Image src='/img/air/bsair-settings-admin-change-role.png' />
 
-4. When the message window appears, click the <Cmd sid='admin_status_change_confirm_btn' product='air' /> button.
+4. 確認ダイアログが表示されたら、<Cmd sid='admin_status_change_confirm_btn' product='air' /> をクリックしてください。
 
 :::note
 
-Only <Cmd sid="master_role" product="air" className="bold" /> administrators can assign or modify the <Cmd sid="master_role" product="air" className="bold" /> role for other administrators.
+<Cmd sid='master_role' product='air' className='bold' /> 管理者のみが他の管理者に <Cmd sid='master_role' product='air' className='bold' /> 権限を割り当てたり変更したりできます。
 
 :::
 
-## Invite new administrators {#inviteNewAdmin}
+## 新しい管理者の招待 {#inviteNewAdmin}
 
-Add new administrators.
+新しい管理者を追加できます。
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_submenu' product='air' /> をクリックします。
 
-2. Click <Cmd sid="btn_invite" product="air" /> at the top right of the screen.
+2. 画面右上の <Cmd sid='btn_invite' product='air' /> をクリックします。
 
-3. When the <Cmd sid="admin_invitation_title" product="air" /> window appears, enter the email address.
+3. <Cmd sid='admin_invitation_title' product='air' /> ダイアログが表示されたら、メールアドレスを入力します。
 
    <Image src='/img/air/bsair-settings-admin-invite.png' />
 
-4. In <Cmd sid="admin_invitation_input2" product="air" />, select the role to assign to the new administrator.
+4. <Cmd sid='admin_invitation_input2' product='air' /> で新しい管理者に割り当てる役割を選択します。
 
-5. Click <Cmd sid="send_btn" product="air" /> to send the invitation.
+5. 招待状を送信するには、<Cmd sid='send_btn' product='air' /> をクリックします。
 
 :::note
 
-* Each administrator must have a unique email address. If necessary, use an alias address (for example, erik+training@example.com).
+* 各管理者は固有のメールアドレスを持つ必要があります。 必要に応じてエイリアスアドレス（例：erik+training@example.com）を使用できます。
 
-* Click the link in the invitation email. Sign up if the administrator does not have an account. If the administrator already has an account, log in to access the **site** directly.
+* 招待メールを受け取った管理者は、メール内のリンクをクリックします。 アカウントを持っていない管理者は登録を行います。 既にアカウントを持っている管理者は、ログイン後すぐに**サイト**にアクセスできます。
 
 :::
 
-## Administrator levels {#administrator-levels}
+## 管理者レベル {#administrator-levels}
 
-Each administrator level in BioStar Air has specific permissions, and higher levels inherit the permissions of lower levels.
+BioStar Airの各管理者レベルは特定の権限を持ち、高いレベルは低いレベルの権限を継承します。
 
 :::info
 
-Each administrator role has different permissions across BioStar Air. <Cmd sid="observer_role" product="air" className="bold" /> has the most restricted access and some menus are hidden.
+各管理者の役割は、BioStar Air全体で異なる権限を持っています。 <Cmd sid='observer_role' product='air' className='bold' /> は最も制限されたアクセス権を持ち、画面に表示されない制限されたメニューがあります。
 
 :::
 
-### <Cmd sid="observer_role" product="air" className="normal" /> (Lowest Level) {#observer}
+### <Cmd sid='observer_role' product='air' className='normal' />（最低レベル）{#observer}
 
-* <Cmd sid="dashboard_menu" product="air" /> dashboard and logs **can be viewed**.
+* <Cmd sid='dashboard_menu' product='air' /> のダッシュボードとログを**表示できます**。
 
-* **Export** logs and generate reports.
+* ログを**エクスポートして**レポートを作成できます。
 
-* **Cannot modify** settings, users, or devices.
+* 設定、ユーザー、またはデバイスを変更することは**できません**。
 
-* Access to menus is restricted. Most menus do not appear on the screen.
+* メニューへのアクセスが制限されます。 ほとんどのメニューは画面に表示されません。
 
 ### <Cmd sid='operator_role' product='air' className='normal' /> {#operator}
 
-* Can manage <Cmd sid="user_submenu" product="air" />, <Cmd sid="user_groups_submenu" product="air" />, <Cmd sid="access_levels_submenu" product="air" />, <Cmd sid="schedules_submenu" product="air" />, and <Cmd sid="holiday_groups_submenu" product="air" />.
+* <Cmd sid='user_submenu' product='air' />および <Cmd sid='user_groups_submenu' product='air' />、<Cmd sid='access_levels_submenu' product='air' />、<Cmd sid='schedules_submenu' product='air' />、<Cmd sid='holiday_groups_submenu' product='air' /> を管理できます。
 
-* **No access** to device control or management settings.
+* デバイスの制御や管理設定へのアクセス権は**ありません**。
 
-* Suitable for managing everyday user and access configurations.
+* 日常的なユーザーと入退室構成の管理に適しています。
 
 ### <Cmd sid='admin_role' product='air' className='normal' /> {#administrator}
 
-* **Can invite** new administrators. However, cannot assign the <Cmd sid="master_role" product="air" className="bold" /> role.
+* 新しい管理者を**招待できます**。 ただし、<Cmd sid='master_role' product='air' className='bold' /> 役割を割り当てることはできません。
 
-* Has **full device control** authority to modify settings and manage connected devices.
+* **すべてのデバイス制御**権限があり、設定を変更して接続されたデバイスを管理できます。
 
-* Cannot delete or modify administrators with the <Cmd sid="master_role" product="air" className="bold" /> role.
+* <Cmd sid='master_role' product='air' className='bold' /> 役割の管理者を削除または変更することはできません。
 
-* This role is typically recommended for IT staff responsible for system management.
+* 一般的に、システム管理を担当するIT担当者にこの役割を割り当てることを推奨します。
 
-### <Cmd sid="master_role" product="air" className="normal" /> (Highest Level) {#master}
+### <Cmd sid='master_role' product='air' className='normal' />（最高レベル）{#master}
 
-* Has **full access** to all settings and features.
+* すべての設定と機能に**完全なアクセス**権があります。
 
-* Cannot be deleted or modified by **administrators**.
+* 他の**Administrators**によって削除または変更されることは**ありません**。
 
-* Can create **subsites** to manage different locations or organizations.
+* **サブサイト**を作成して、さまざまな場所や組織を管理できます。
 
-* Can configure **site settings**, including critical system-wide configurations.
+* **サイト設定**を構成でき、ここには重要なシステム全体の構成も含まれます。
 
-* Responsible for accepting the **terms** before other administrators log in.
+* 他の管理者がログインする前に**利用規約**に同意させる責任があります。
 
-* Usually assigned to the company owner or a highly trusted executive.
+* 一般的に会社の所有者や高い信頼を受ける役員に割り当てることができます。

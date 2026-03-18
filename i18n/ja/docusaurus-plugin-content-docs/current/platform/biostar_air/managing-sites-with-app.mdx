@@ -1,35 +1,35 @@
 ---
 id: managing-sites-with-app
-title: Getting Started with the BioStar Air App
-description: BioStar Air mobile app guides you on managing users, monitoring events, and performing device control and management tasks on a mobile device.
+title: BioStar Airアプリのはじめ方
+description: BioStar Airモバイルアプリでモバイル端末からユーザー管理、イベントの監視、デバイスの制御および管理作業を行う方法を案内します。
 keywords:
   - BioStar Air
-  - Mobile App
-  - Access control
-  - Event monitoring
+  - モバイルアプリ
+  - アクセス制御
+  - イベントモニタリング
 ---
 
-The BioStar Air app offers all the same features as the BioStar Air web portal. Users can manage access control, monitor event logs, control devices, and perform administrative tasks directly from a mobile device.
+BioStar Airアプリは、BioStar Airウェブポータルと同等のすべての機能を提供します。 ユーザーはモバイル端末から直接出入管理を行い、イベントログを監視し、デバイスを制御し、管理作業を実行できます。
 
-## Download the mobile app
+## モバイルアプリのダウンロード
 
-Download the BioStar Air app on your mobile device and log in.
+モバイル端末でBioStar Airアプリをダウンロードし、ログインします。
 
-* Download and install the BioStar Air app on your mobile device.
+* モバイル端末にBioStar Airアプリをダウンロードしてインストールします。
 
   * [iOS](https://apps.apple.com/us/app/airfob-pro/id1659959609)
 
   * [Android](https://play.google.com/store/apps/details?id=com.mocainc.afs2pro)
 
-* Log in using the same ID and password you use for the [BioStar Air web portal](https://admin.biostarair.com/).
+* [BioStar Airウェブポータル](https://admin.biostarair.com/)で使用するIDとパスワードでログインします。
 
 :::info
 
-* Verify that you logged in with the same credentials as the web version.
+* ウェブ版と同じ認証情報でログインしていることを確認します。
 
-* Stay close to the device to update it in BLE mode.
+* BLEモードで更新するにはデバイスに近づく必要があります。
 
-* Certain features, such as real-time video monitoring, require a connected camera.
+* ライブビデオ監視などの一部の機能には接続されたカメラが必要です。
 
 :::
 
@@ -41,17 +41,17 @@ Download the BioStar Air app on your mobile device and log in.
 </Column>
 <Column className='padding--l20'>
 
-### Dashboard {#dashboard-overview}
+### ダッシュボード {#dashboard-overview}
 
-After logging in to the mobile app, <Cmd sid="dashboard_menu" product="air" /> on the home screen provides the following information.
+モバイルアプリにログインすると、初期画面の<Cmd sid='dashboard_menu' product='air' />で以下の情報が表示されます。
 
-* Daily user accesses
+* 1日のユーザー入退室数
 
-* Total active registered users
+* 登録されているアクティブユーザーの総数
 
-* Connected devices
+* 接続されたデバイス数
 
-* Credit status
+* クレジットの状態
 
 </Column>
 </Columns>
@@ -64,23 +64,23 @@ After logging in to the mobile app, <Cmd sid="dashboard_menu" product="air" /> o
 </Column>
 <Column className='padding--l20'>
 
-### User management {#user-management}
+### ユーザー管理 {#user-management}
 
-Tap the <Cmd sid="users_card" product="air" /> card on the home screen, or tap <Cmd sid="site_setting_tab_management" product="air" /> → <Cmd sid="user_submenu" product="air" /> in sequence.
+初期画面の<Cmd sid='users_card' product='air' />カードをタップするか、<Cmd sid='site_setting_tab_management' product='air' /> → <Cmd sid='user_submenu' product='air' />の順にタップします。
 
-* Select a user and review the details.
+* ユーザーを選択して詳細を確認します。
 
-* Modify user status (reissue, suspend, delete, or activate).
+* ユーザーの状態を編集（再発行、一時停止、削除、または有効化）できます。
 
-* Tap the <IcAdd /> button and enter the required details to add a new user.
+* 新しいユーザーを追加するには、<IcAdd />ボタンをタップし、必要な詳細情報を入力します。
 
 :::info
 
-* To learn how to add users using the mobile app, see <DocLink docId='platform/biostar_air/adding-individual-users#addingUsersWithMobileApp' />.
+* モバイルアプリでのユーザー追加方法については<DocLink docId='platform/biostar_air/adding-individual-users#addingUsersWithMobileApp' />をご参照ください。
 
-* To learn how to add users through the BioStar Air portal, see <DocLink docId='platform/biostar_air/adding-individual-users' />.
+* BioStar Airポータルでのユーザー追加方法については<DocLink docId='platform/biostar_air/adding-individual-users' />をご参照ください。
 
-* For more information about user management, see <DocLink docId='platform/biostar_air/user-management-user-list' />.
+* ユーザー管理の詳細については<DocLink docId='platform/biostar_air/user-management-user-list' />をご参照ください。
 
 :::
 
@@ -95,25 +95,25 @@ Tap the <Cmd sid="users_card" product="air" /> card on the home screen, or tap <
 </Column>
 <Column className='padding--l20'>
 
-### Monitoring {#monitoring}
+### モニタリング {#monitoring}
 
-<Cmd sid="monitoring_menu" product="air" /> provides the following information.
+<Cmd sid='monitoring_menu' product='air' />では以下の情報が表示されます。
 
-* <Cmd sid="event_logs_submenu" product="air" />: Monitor and analyze event logs and audit logs. For more information, see <DocLink docId='platform/biostar_air/monitoring-event-logs' /> and <DocLink docId='platform/biostar_air/monitoring-audit-logs' />.
+* <Cmd sid='event_logs_submenu' product='air' />: イベントログと監査ログを監視および分析できます。 詳細については、<DocLink docId='platform/biostar_air/monitoring-event-logs' />および<DocLink docId='platform/biostar_air/monitoring-audit-logs' />をご参照ください。
 
-* <Cmd sid="alerts_history.alerts_history_submenu" product="air" />: View past alerts and generated report history through the web portal and mobile app. For more information, see <DocLink docId='platform/biostar_air/monitoring-alert-report-history' />.
+* <Cmd sid='alerts_history.alerts_history_submenu' product='air' />: ウェブポータルとモバイルアプリで以前発生したアラートと作成されたレポートの履歴を確認できます。 詳細については<DocLink docId='platform/biostar_air/monitoring-alert-report-history' />をご参照ください。
 
-* <Cmd sid="door_status_submenu" product="air" />: Monitor the real-time status of doors connected to the site. For more information, see <DocLink docId='platform/biostar_air/monitoring-door-status' />.
+* <Cmd sid='door_status_submenu' product='air' />: サイトに接続されているドアの状態をリアルタイムで監視できます。 詳細については<DocLink docId='platform/biostar_air/monitoring-door-status' />をご参照ください。
 
-  * Check door status and control it remotely.
+  * ドアの状態を確認し、リモートで制御できます。
 
-  * Tap a door once to edit it, or press and hold to select multiple doors and perform batch actions.
+  * 1回タップしてドアを編集するか、長押しして複数のドアを選択し、一括操作を実行できます。
 
-  * Setting a door to <Cmd sid="event_log_unlock_mode" product="air" /> or <Cmd sid="event_log_lock_mode" product="air" /> overrides relay settings or schedules.
+  * ドアを<Cmd sid='event_log_unlock_mode' product='air' />または<Cmd sid='event_log_lock_mode' product='air' />に設定すると、リレー設定またはスケジュールが無視されます。
 
-  * Delete unused doors as needed.
+  * 必要に応じて使用していないドアを削除します。
 
-* Real-time video (if a camera is connected)
+* （接続されたカメラがある場合）ライブビデオ
 
 </Column>
 </Columns>
@@ -126,25 +126,25 @@ Tap the <Cmd sid="users_card" product="air" /> card on the home screen, or tap <
 </Column>
 <Column className='padding--l20'>
 
-### Devices {#devices}
+### デバイス {#devices}
 
-Tap the <Cmd sid="devices_card" product="air" /> card on the home screen, or tap <Cmd sid="site_setting_tab_management" product="air" /> → <Cmd sid="devices_card" product="air" /> in sequence.
+初期画面の<Cmd sid='devices_card' product='air' />カードをタップするか、<Cmd sid='site_setting_tab_management' product='air' /> → <Cmd sid='devices_card' product='air' />の順にタップします。
 
-* View all registered devices.
+* 登録されているすべてのデバイスを確認できます。
 
-* Select a device to edit, update firmware, or reboot it.
+* デバイスを選択して編集、ファームウェアの更新、または再起動ができます。
 
-* If the device is not connected to the network, use **BLE mode** close to the device to update its firmware.
+* ネットワークに接続されていないデバイスは、ファームウェア更新のためにモバイル端末と近い距離で**BLEモード**を使用します。
 
-* Tap the <IcAdd /> button to add a new device.
+* 新しいデバイスを追加するには、<IcAdd />ボタンをタップします。
 
 :::info
 
-For more information about device management, see the following.
+デバイス管理の詳細は以下のドキュメントをご参照ください。
 
 * BioStar Air App: <DocLink docId='platform/biostar_air/manage-device-with-app' />
 
-* BioStar Air portal: <DocLink docId='platform/biostar_air/manage-device' />
+* BioStar Airポータル：<DocLink docId='platform/biostar_air/manage-device' />
 
 :::
 

@@ -1,36 +1,36 @@
 ---
 id: configuring-the-airfob-patch-and-tag
-title: Configure Airfob Patch and Tag
-description: This guide explains how to configure Airfob Patch and Tag, set BLE mode, and customize the card ID output to upgrade an existing access control system to BioStar Air.
+title: Airfob PatchとTagを構成する
+description: 既存の入退室管理システムをBioStar Airにアップグレードするために、Airfob PatchおよびTag機器を構成し、BLEモードの設定とカードIDのカスタム出力方法を案内します。
 keywords:
   - Airfob
   - Patch
   - Tag
-  - configuration
+  - 構成
 ---
 
-The Airfob Patch and Tag upgrade an existing access control reader or door lock to work with BioStar Air mobile credentials.
+Airfob PatchおよびTagは、既存の入退室管理リーダーやドアロックをBioStar Airのモバイルクレデンシャルに対応させるためにアップグレードします。
 
-* **Airfob Patch**: An energy-harvesting device for wired readers and intercoms that attaches without additional wiring.
+* **Airfob Patch**：有線リーダーおよびインターホンに適し、配線不要で取り付け可能なエネルギーハーベスティング(Energy-Harvesting)装置です。
 
-* **Airfob Tag**: Fits battery-powered devices such as door locks using a coin-cell battery.
+* **Airfob Tag**：コイン型セル電池を搭載し、ドアロックなどのバッテリー駆動機器に適しています。
 
 :::info
 
-* The Airfob Patch and Tag are compatible with MIFARE 1K technology but are not compatible with 125 kHz low-frequency readers or locks.
+* Airfob PatchおよびTagはMIFARE 1K技術と互換性がありますが、125 KHzの「低周波」リーダーやロック装置とは互換性がありません。
 
-* They authenticate encrypted Bluetooth BioStar Air credentials from a mobile device and operate by emulating a MIFARE RFID signal. They attach to readers and locks with tape and require no wiring.
+* Airfob PatchおよびTagは、モバイル機器上の暗号化されたBluetooth BioStar Airクレデンシャルを認証し、MIFARE RFID信号をエミュレートして動作します。 テープでリーダーやロック装置に貼り付けられ、配線は不要です。
 
 :::
 
-## Configuration steps {#configurationSteps}
+## 構成手順 {#configurationSteps}
 
-Install the Airfob Patch or Tag and register it to the BioStar Air app. Follow these steps to configure the device.
+Airfob PatchまたはTagを取り付け、BioStar Airアプリに登録してください。 次の手順に従ってデバイスを構成してください。
 
 <Steps>
 <Step>
 
-### Run the app {#accessApp}
+### アプリを起動 {#accessApp}
 
 <Columns>
 <Column className='width--20'>
@@ -39,16 +39,16 @@ Install the Airfob Patch or Tag and register it to the BioStar Air app. Follow t
 
 <Column className='padding--l10'>
 
-1. Run **BioStar Air** on your mobile device.
+1. モバイル機器で **BioStar Air** アプリを起動してください。
 
-2. Sign in to the site where the Airfob Patch or Tag is registered.
+2. Airfob PatchまたはTagを登録したサイトにログインしてください。
 
 </Column>
 </Columns>
 </Step>
 <Step>
 
-### Go to device settings {#navigateToDeviceSettings}
+### デバイス設定に移動 {#navigateToDeviceSettings}
 
 <Columns>
 <Column className='width--20'>
@@ -57,11 +57,11 @@ Install the Airfob Patch or Tag and register it to the BioStar Air app. Follow t
 
 <Column className='padding--l10'>
 
-1. On the **BioStar Air** home screen, tap <Cmd sid='site_setting_tab_management' product='air' /> at the bottom.
+1. **BioStar Air** アプリの初期画面で下部の <Cmd sid='site_setting_tab_management' product='air' /> をタップしてください。
 
-2. To view the registered devices, tap <Cmd sid="devices_card" product="air" />.
+2. 登録済みデバイスの一覧を確認するには <Cmd sid='devices_card' product='air' /> をタップしてください。
 
-3. Select the Airfob Patch or Tag from the device list.
+3. デバイス一覧からAirfob PatchまたはTagを選択してください。
 
 </Column>
 </Columns>
@@ -69,42 +69,42 @@ Install the Airfob Patch or Tag and register it to the BioStar Air app. Follow t
 </Step>
 <Step>
 
-### Enable BLE mode {#enable-ble-mode}
+### BLEモードの有効化 {#enable-ble-mode}
 
-* Hold the mobile device close to the unit.
+* モバイル機器をデバイスに近づけてください。
 
-* Activate the <Cmd>BLE Mode</Cmd> in the app.
-
-</Step>
-<Step>
-
-### Set the card ID output method {#set-card-id-output-method}
-
-* Scroll to **Card ID Output Method** and tap **Edit**.
-
-* Tap **Select** next to **User Card ID**.
+* アプリで <Cmd>BLE モード</Cmd> を有効にしてください。
 
 </Step>
 <Step>
 
-### Choose the output method {#choose-the-output-method}
+### カードID出力方法の設定 {#set-card-id-output-method}
 
-* **None**: Select this option when you do not want to send a card ID. Useful for time and attendance to extend battery life.
+* **Card ID Output Method** までスクロールし、**Edit** をタップしてください。
 
-* **Fixed Device**: Sends the pre-programmed fixed card ID. Useful for door locks or intercoms that require each RFID card to be programmed individually. Only this fixed card ID appears in the device logs.
-
-* **User Card ID**: Sends a unique card ID for each user that matches the existing RFID card number in the access control system. This enables seamless integration without issuing new physical cards.
-
-* **Direct Input**: Manually specify the card ID to be sent. Useful for custom configurations where one ID must be used on multiple units.
+* **User Card ID** の横にある **Select** をタップしてください。
 
 </Step>
 <Step>
 
-### Save your settings {#save-your-settings}
+### 出力方法を選択 {#choose-the-output-method}
 
-* Keep the mobile device near the unit, tap <Cmd sid="save_btn" product="air" />, and confirm the selections.
+* **None**：カードIDを送信しない場合はこのオプションを選択してください。 バッテリー寿命を延ばすための勤怠管理(T&A)用途に有用です。
 
-* The update complete message appears.
+* **Fixed Device**：あらかじめプログラムされた固定カードIDを送信します。 個別にRFIDカードをプログラムする必要があるドアロックやインターホンに適しています。 機器ログにはこの固定カードIDのみが表示されます。
+
+* **User Card ID**：各ユーザーごとに固有のカードIDを送信し、入退室管理システムの既存RFIDカード番号と一致します。 これにより、新しい物理カードを発行せずにシームレスに統合できます。
+
+* **Direct Input**：送信するカードIDを手動で指定します。 複数のデバイスで1つのIDを使用する必要があるカスタム設定に有用です。
+
+</Step>
+<Step>
+
+### 設定の保存 {#save-your-settings}
+
+* モバイル機器をデバイスの近くに置き、 <Cmd sid='save_btn' product='air' /> ボタンをタップして選択内容を確認してください。
+
+* 更新完了のメッセージが表示されます。
 
 </Step>
 </Steps>

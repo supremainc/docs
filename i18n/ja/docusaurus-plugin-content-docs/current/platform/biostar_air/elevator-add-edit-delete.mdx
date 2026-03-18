@@ -1,106 +1,106 @@
 ---
 id: elevator-add-edit-delete
-title: Managing Elevators
-description: Configure elevator access control to manage access to each floor. Connect the OM-120 module to the device, configure the floor button relays, and manage access schedules.
+title: エレベーター管理
+description: エレベーターの入退室制御を設定して、階ごとのアクセスを管理します。 OM-120モジュールを機器に接続し、階ボタンのリレー設定を行ってから、アクセスのスケジュールを管理します。
 keywords:
-  - Elevator
-  - Per-floor access control
+  - エレベーター
+  - 階ごとの入退室制御
   - OM-120
   - BioStar Air
 ---
 
-To configure elevator access control, first connect the OM-120 module to the access control device. Then set each floor's name and relay number, and restrict access times per floor using schedules to enhance security.
+エレベーターの入退室制御を構成するには、まず入退室制御装置にOM-120モジュールを接続します。 次に各階の名称とリレー番号を設定し、各階ごとにアクセス可能な時間帯をスケジュールで制限することで、セキュリティを強化できます。
 
-## Requirements
+## 要件
 
-Meet the following requirements to enable the elevator access control feature.
+エレベーター出入制御機能を有効にするには、次の要件を満たす必要があります。
 
-* [Suprema OM-120 module](https://supremainc.com/en/hardware/pd_om-120.asp): Each module supports up to 12 floors. Connecting up to 12 OM-120 modules to a single access control device supports up to 144 floors.
+* [Suprema OM-120モジュール](https://supremainc.com/en/hardware/pd_om-120.asp): 各モジュールは最大12階まで対応します。 最大12台のOM-120モジュールを1つの出入制御デバイスに接続し、最大144階まで対応できます。
 
-* A device compatible with BioStar Air that can connect to the OM-120 is required.
+* OM-120を接続できるBioStar Air対応のデバイスが必要です。
 
-* Proper wiring to the elevator control panel is required. For wiring details, contact the elevator manufacturer.
+* エレベーター制御盤への適切な配線作業が必要です。 配線の詳細はエレベーターの製造元にお問い合わせください。
 
-* Floor access schedules take precedence, and holiday settings can override the normal access rules.
+* 階別のアクセススケジュールが優先され、休日設定によって通常のアクセスルールを上書きできます。
 
-## Connect devices and modules
+## デバイスとモジュールの接続
 
-1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。
 
-2. Click the access control device with an OM-120 module from the device list.
+2. デバイス一覧でOM-120モジュールが接続された出入制御デバイスをクリックします。
 
-3. In the <Cmd sid='module_found_slots_title' product='air' /> section, click <Cmd sid='add_btn' product='air' />.
+3. <Cmd sid='module_found_slots_title' product='air' /> セクションで <Cmd sid='add_btn' product='air' /> ボタンをクリックしてください。
 
    <Image src='/img/air/bsair-elevator-mng-device-modules.png' />
 
-4. Select the OM-120 module connected to the device, then click <Cmd sid='save_btn' product='air' />.
+4. デバイスに接続されているOM-120モジュールを選択し、<Cmd sid='save_btn' product='air' /> ボタンをクリックしてください。
 
-## Register elevators
+## エレベーター登録
 
-1. Click <Cmd sid="elevator_menu" product="air" /> → <Cmd sid="elevators_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='elevator_menu' product='air' /> → <Cmd sid='elevators_submenu' product='air' /> をクリックします。
 
-2. Click <Cmd sid="elevators.add_elevator_btn" product="air" /> at the top right of the screen.
+2. 画面右上の <Cmd sid='elevators.add_elevator_btn' product='air' /> をクリックします。
 
    <Image src='/img/air/bsair-elevator-mng.png' />
 
-3. When the <Cmd sid="add_elevator.title" product="air" /> panel appears, enter <Cmd sid="add_elevator.device_info.field1" product="air" /> and <Cmd sid="add_elevator.device_info.field2" product="air" /> (optional).
+3. <Cmd sid='add_elevator.title' product='air' /> パネルが表示されたら、<Cmd sid='add_elevator.device_info.field1' product='air' /> および <Cmd sid='add_elevator.device_info.field2' product='air' />(オプション) を入力します。
 
    <Image src='/img/air/bsair-elevator-mng-add.png' />
 
-4. In the <Cmd sid='add_elevator.assign_device_and_modules.title' product='air' /> section, select the device and module for access authentication.
+4. <Cmd sid='add_elevator.assign_device_and_modules.title' product='air' /> セクションで出入認証に使用するデバイスとモジュールを選択します。
 
-   * <Cmd sid='add_elevator.assign_device_and_modules.field1' product='air' />: Select the device for access authentication.
+   * <Cmd sid='add_elevator.assign_device_and_modules.field1' product='air' />：出入認証に使用するデバイスを選択します。
 
-   * <Cmd sid='add_elevator.assign_device_and_modules.field2' product='air' />: Select the OM-120 module that will control the elevator button relay.
+   * <Cmd sid='add_elevator.assign_device_and_modules.field2' product='air' />：エレベーターボタンリレーを制御するOM-120モジュールを選択します。
 
-   * <Cmd sid="add_elevator.assign_device_and_modules.field3" product="air" />: Set the time for which the floor button remains active after authentication is complete. After this time, the relay will not signal the floor button.
+   * <Cmd sid='add_elevator.assign_device_and_modules.field3' product='air' />：認証完了後に階ボタンが有効な状態を維持する時間を設定します。 この時間を過ぎると、リレーは階ボタンに信号を送りません。
 
-5. In the <Cmd sid='add_elevator.floors_configuration.title' product='air' /> section, enter the number of floors to control and click <Cmd sid='add_elevator.floors_configuration.apply_btn' product='air' />.
+5. <Cmd sid='add_elevator.floors_configuration.title' product='air' /> セクションで制御する階数を入力し、<Cmd sid='add_elevator.floors_configuration.apply_btn' product='air' /> をクリックします。
 
-6. Set each floor's name, relay number, and schedule.
+6. 各階の名前、リレー番号、スケジュールを設定します。
 
    <Image src='/img/air/bsair-elevator-mng-add-config-floor.png' alone caption />
 
-   * <Cmd sid='add_elevator.floors_configuration.floors_table.column1' product='air' />: Enter the floor name. Use easily identifiable names such as 1F, Lobby, or Conference Floor.
+   * <Cmd sid='add_elevator.floors_configuration.floors_table.column1' product='air' />：階の名前を入力します。 1階、ロビー、会議室の階など、識別しやすい名前を使用してください。
 
-   * <Cmd sid='add_elevator.floors_configuration.floors_table.column2' product='air' />: Select the relay output that corresponds to each floor button on the elevator control panel.
+   * <Cmd sid='add_elevator.floors_configuration.floors_table.column2' product='air' />：エレベーター制御盤で各階のボタンに対応するリレー出力を選択します。
 
-   * <Cmd sid='add_elevator.floors_configuration.floors_table.column3' product='air' />: Set the schedule for accessing each floor. For example, restrict access to the maintenance floor outside working hours.
+   * <Cmd sid='add_elevator.floors_configuration.floors_table.column3' product='air' />：各階にアクセスできるスケジュールを設定します。 例えば、勤務時間外はメンテナンス階へのアクセスを制限できます。
 
-7. Click <Cmd sid='save_btn' product='air' /> to save and register the elevator settings.
+7. エレベーター設定を保存して登録するには、<Cmd sid='save_btn' product='air' /> をクリックします。
 
 :::info
 
-* Each OM-120 module supports up to 12 floors. Connect multiple OM-120 modules in a daisy chain to expand up to 144 floors.
+* OM-120モジュールあたり最大12階を対応します。 複数のOM-120モジュールをデイジーチェーン方式で接続して、最大144階まで拡張できます。
 
-* In the <Cmd sid='add_elevator.floors_configuration.title' product='air' /> section, click <IcAirRemove title='Delete' /> to delete a floor.
+* <Cmd sid='add_elevator.floors_configuration.title' product='air' /> セクションで階を削除するには、<IcAirRemove title='Delete' /> ボタンをクリックしてください。
 
-* For more information on registering schedules, see <DocLink docId='platform/biostar_air/manage-schedule' />.
+* スケジュール登録方法に関する詳細は、<DocLink docId='platform/biostar_air/manage-schedule' /> を参照してください。
 
 :::
 
-## Edit elevators
+## エレベーター編集
 
-Follow these steps to change the details or settings of a registered elevator.
+登録済みのエレベーターの詳細を変更するか、設定を編集するには、次の手順に従ってください。
 
-1. Click <Cmd sid="elevator_menu" product="air" /> → <Cmd sid="elevators_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='elevator_menu' product='air' /> → <Cmd sid='elevators_submenu' product='air' /> をクリックします。
 
-2. In the list, click the elevator to edit. Alternatively, select the elevator's checkbox and click <IcAirEdit title='Edit' /> at the top of the list.
+2. 一覧から編集するエレベーターをクリックします。 またはエレベーターのチェックボックスをクリックし、一覧上部の<IcAirEdit title='Edit' /> ボタンをクリックしてください。
 
-3. When the <Cmd sid='edit_elevator.title' product='air' /> panel appears, change the necessary information or modify the settings.
+3. <Cmd sid='edit_elevator.title' product='air' /> パネルが表示されたら、必要な情報を変更するか設定を編集します。
 
    <Image src='/img/air/bsair-elevator-mng-edit.png' />
 
-4. Click <Cmd sid='save_btn' product='air' /> to save the changes.
+4. 変更を保存するには、<Cmd sid='save_btn' product='air' /> をクリックします。
 
-## Delete elevators
+## エレベーター削除
 
-Follow these steps to delete a registered elevator.
+登録されたエレベーターを削除するには、次の手順に従ってください。
 
-1. Click <Cmd sid="elevator_menu" product="air" /> → <Cmd sid="elevators_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='elevator_menu' product='air' /> → <Cmd sid='elevators_submenu' product='air' /> をクリックします。
 
-2. Select the checkbox of the elevator to delete in the list. Select one or more elevators.
+2. 一覧で削除するエレベーターのチェックボックスをクリックします。 1台以上のエレベーターを選択できます。
 
-3. Click <IcAirRemove title='Delete' /> at the top of the list.
+3. 一覧上部の<IcAirRemove title='Delete' /> ボタンをクリックしてください。
 
-4. When a warning message appears, click <Cmd sid='btn_yes' product='air' />.
+4. 警告メッセージのウィンドウが表示されたら、<Cmd sid='btn_yes' product='air' /> をクリックします。

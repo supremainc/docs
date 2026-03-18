@@ -1,137 +1,137 @@
 ---
 id: managing-user-groups
-title: Manage User Groups
-description: This guide explains how to create, organize, and manage user groups and subgroups to efficiently categorize users and control access in BioStar Air.
+title: ユーザーグループを管理する
+description: BioStar Airでユーザーを効率的に分類し出入管理を行うために、ユーザーグループおよびサブグループの作成、構成、管理方法を案内します。
 keywords:
-  - User Management
+  - ユーザー管理
   - BioStar Air
-  - User group
+  - ユーザーグループ
 ---
 
-Use user groups to classify and manage users by department, role, location, and more. BioStar Air user groups are non-hierarchical, so a user can belong to multiple groups simultaneously, allowing you to freely combine department, role, and location groups. Groups let you manage access levels centrally and efficiently handle event log filtering, report generation, and assigning devices to muster areas.
+ユーザーグループを使って、組織の部署、役割、拠点などでユーザーを分類・管理してください。 BioStar Airのユーザーグループは階層化されていないため、ユーザーは複数のグループに同時に所属できます。部門グループや役割グループ、拠点グループなどを組み合わせて運用できます。 グループを活用すると、入退室レベルの一括管理に加え、イベントログのフィルタリング、レポート作成、集合エリアへのデバイス割り当てなども効率的に行えます。
 
 :::tip
 
-Refer to the following video to watch the guide on managing user groups.
+ユーザーグループ管理のビデオガイドを視聴するには、以下のビデオを参照します。
 
 <YouTube className='fit--content' videoId="sNxu5pQuOsI" />
 
 :::
 
-## Before start
+## 開始する前に
 
-### User group composition
+### ユーザーグループの構成
 
-User groups are not organized hierarchically.
+ユーザーグループは階層的に構成されていません。
 
-* Users in a subgroup do **not** automatically appear in the parent group.
+* サブグループのユーザーは**自動的に**上位グループに表示されません。
 
-* The parent group’s total user count does not include subgroup members unless they are added manually.
+* 上位グループの総ユーザー数には、サブグループのメンバーは手動で追加しない限り含まれません。
 
-* Selecting a subgroup shows only the users assigned to that subgroup.
+* サブグループを選択すると、該当サブグループに割り当てられたユーザーのみが表示されます。
 
-### Configure multiple user groups
+### 複数のユーザーグループの構成
 
-Users in BioStar Air can belong to **multiple user groups**.
+BioStar Airのユーザーは**複数のグループ**に所属できます。
 
-In BioStar 2, user groups were typically linked to a single department. BioStar Air separates these, allowing more dynamic use.
+BioStar 2では、ユーザーグループは通常単一の部門に紐づいていました。 BioStar Airではこれを分離し、より動的な方法で利用できます。
 
-* Filter the user list by group to quickly manage access levels.
+* グループごとにユーザー一覧をフィルターして出入レベルを素早く管理できます。
 
-  > e.g., HR department
+  > 例：人事部
 
-* Create context-specific groups that span multiple departments.
+* 複数の部門をまたがる状況に合わせたグループを作成できます。
 
-  > e.g., men’s locker room
+  > 例：男性更衣室
 
-* User groups are used for **event log filtering** and **report generation**.
+* ユーザーグループは**イベントログフィルター**および**レポート作成**に使用されます。
 
-* Assign user groups to **muster zone** devices or device groups to enforce specific safety protocols.
+* ユーザーグループを**点呼招集場所**用のデバイスまたはデバイスグループに割り当てて、特定の安全プロトコルを適用できます。
 
-This flexibility makes it easier to manage overlapping user roles and access scenarios.
+この柔軟性により、重複するユーザー役割やアクセスシナリオをより簡単に管理できます。
 
-## Create group {#creatingUserGroup}
+## グループの作成 {#creatingUserGroup}
 
-### Create user group
+### ユーザーグループの作成
 
-Create a new user group.
+新しいユーザーグループを作成します。
 
-1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" /> in the left sidebar.
+1. 画面左側のサイドバーで <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_groups_submenu' product='air' /> をクリックします。
 
    <Image src='/img/air/bsair-gettingstarted-user-group-mng.png' />
 
-2. Click <Cmd sid="add_user_group_btn" product="air" /> at the top right of the screen.
+2. 画面右上の <Cmd sid='add_user_group_btn' product='air' /> をクリックします。
 
-3. When the <Cmd sid="add_user_group_popup_title" product="air" /> window appears, enter the user group name.
+3. <Cmd sid='add_user_group_popup_title' product='air' /> ウィンドウが表示されたら、ユーザーグループ名を入力します。
 
    <Image src='/img/air/bsair-gettingstarted-user-group-mng-add.png' />
 
-4. Click <Cmd sid='manage_grops_ok_btn' product='air' /> to create the group.
+4. グループを作成するには、<Cmd sid='manage_grops_ok_btn' product='air' /> ボタンをクリックしてください。
 
 :::info
 
-* Deleting a group does not delete the users in that group. The users are only removed from the group.
+* グループを削除しても、当該グループに所属するユーザーは削除されません。 ユーザーはグループから解除されるだけです。
 
-* For more information about assigning users to groups, see <DocLink docId='platform/biostar_air/user-management-user-list#manageUserGroups' />.
+* ユーザーをグループに割り当てる方法の詳細は、<DocLink docId='platform/biostar_air/user-management-user-list#manageUserGroups' /> を参照してください。
 
 :::
 
-### Create subgroup {#creatingSubgroup}
+### サブグループの作成 {#creatingSubgroup}
 
-You can use subgroups to further classify user groups. However, subgroups are **not hierarchical**. This means users in a subgroup are not automatically included in the parent group.
+サブグループを使ってユーザーグループをより細かく分類できます。 ただし、サブグループは**階層的ではありません**。 つまり、サブグループのユーザーは親グループに自動的に含まれません。
 
-1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" /> in the left sidebar.
+1. 画面左側のサイドバーで <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_groups_submenu' product='air' /> をクリックします。
 
-2. Click <Cmd sid="add_user_group_btn" product="air" /> at the top right of the screen.
+2. 画面右上の <Cmd sid='add_user_group_btn' product='air' /> をクリックします。
 
-3. When the <Cmd sid="add_user_group_popup_title" product="air" /> window appears, click the <Cmd sid="add_sub_group_text" product="air" /> option.
+3. <Cmd sid='add_user_group_popup_title' product='air' /> ウィンドウが表示されたら、<Cmd sid='add_sub_group_text' product='air' /> オプションをクリックします。
 
    <Image src='/img/air/bsair-user-sub-group-popup.png' />
 
-4. From <Cmd sid="select_group_placeholder" product="air" />, select the parent group.
+4. <Cmd sid='select_group_placeholder' product='air' /> で親グループを選択します。
 
-5. Enter the group name in <Cmd sid='user_subgroup_name_input' product='air' />.
+5. <Cmd sid='user_subgroup_name_input' product='air' /> にグループ名を入力します。
 
-6. Click <Cmd sid='manage_grops_ok_btn' product='air' /> to create a subgroup.
+6. サブグループを作成するには、<Cmd sid='manage_grops_ok_btn' product='air' /> ボタンをクリックしてください。
 
-The newly created subgroup appears indented under the parent group in the user group list.
+作成されたサブグループはユーザーグループ一覧で親グループの下にインデント表示されます。
 
 <Image src='/img/air/bsair-user-sub-group-list.png' />
 
-## Edit group name {#editGroupName}
+## グループ名の編集 {#editGroupName}
 
-Modify the name of an existing user group.
+既に作成されたユーザーグループの名前を編集できます。
 
-1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" /> in the left sidebar.
+1. 画面左側のサイドバーで <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_groups_submenu' product='air' /> をクリックします。
 
-2. Click the checkbox for the user group to edit in the list.
+2. 一覧で編集するユーザーグループのチェックボックスをクリックします。
 
-3. Click <IcAirEdit title='Edit' /> at the top left of the user group list.
+3. ユーザーグループ一覧の左上にある <IcAirEdit title='Edit' /> ボタンをクリックしてください。
 
    <Image src='/img/air/bsair-user-group-edit.png' />
 
-4. When the <Cmd sid="edit_user_group_btn" product="air" /> window appears, edit the group name.
+4. <Cmd sid='edit_user_group_btn' product='air' /> ウィンドウが表示されたら、グループ名を編集します。
 
    <Image src='/img/air/bsair-user-group-edit-popup.png' />
 
-5. Click <Cmd sid='manage_grops_ok_btn' product='air' /> to save the changes.
+5. 編集内容を保存するには、<Cmd sid='manage_grops_ok_btn' product='air' /> ボタンをクリックしてください。
 
 :::info
 
-The group name can be edited only when a single group is selected.
+グループ名の編集は、1つのグループを選択している場合にのみ行えます。
 
 :::
 
-## Delete group {#deleteGroup}
+## グループの削除 {#deleteGroup}
 
-Delete any user groups that are no longer needed.
+使用していないユーザーグループがある場合は削除できます。
 
-1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" /> in the left sidebar.
+1. 画面左側のサイドバーで <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_groups_submenu' product='air' /> をクリックします。
 
-2. Click the checkbox for the user group to delete in the list.
+2. 一覧で削除するユーザーグループのチェックボックスをクリックします。
 
-3. Click <IcAirRemove title='Delete' /> at the top left of the user group list.
+3. ユーザーグループ一覧の左上にある <IcAirRemove title='Delete' /> ボタンをクリックしてください。
 
    <Image src='/img/air/bsair-user-group-remove.png' />
 
-4. When a warning message appears, click <Cmd sid='user_group_yes_btn' product='air' />.
+4. 警告メッセージが表示されたら、<Cmd sid='user_group_yes_btn' product='air' /> ボタンをクリックしてください。

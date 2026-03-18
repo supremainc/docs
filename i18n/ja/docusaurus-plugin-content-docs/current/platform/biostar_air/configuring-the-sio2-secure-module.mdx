@@ -1,100 +1,100 @@
 ---
 id: configuring-the-sio2-secure-module
-title: Configure SIO2 Secure Module
-description: This guide explains how to configure the SIO2 secure module to enhance access control system security.
+title: SIO2 セキュリティモジュールの構成
+description: SIO2 セキュリティモジュールを構成して、入退室管理システムのセキュリティを強化する方法を説明します。
 keywords:
   - SIO2
-  - secure module
-  - configuration
+  - セキュリティモジュール
+  - 構成
 ---
 
-**SIO2 secure module** enhances access control system security by acting as an intermediary between the reader compatible with BioStar Air and relays. It communicates with the reader over an **RS485 cable** and blocks security breaches through encrypted communication.
+**SIO2 セキュリティモジュール**は、BioStar Airと互換性のあるデバイスとリレーの間を仲介し、入退室管理システムのセキュリティを強化します。 **RS485 케이블**を介してリーダーと通信し、暗号化された通信によりセキュリティ違反を防ぎます。
 
 :::caution
 
-Refer to the wiring diagram included in the product package for precise installation instructions for the **SIO2 secure module**. Because installation methods may vary by environment, request professional assistance from a Suprema distributor.
+**SIO2 セキュリティモジュール**の正確な設置手順は、製品パッケージに同梱されている配線図を参照してください。 環境により設置方法が異なる場合があるため、Supremaの代理店に専門的なサポートを依頼してください。
 
 :::
 
-## Enable SIO2 in the BioStar Air portal {#how-to-activate-sio2-in-the-biostar-air-portal}
+## BioStar Air ポータルで SIO2 を有効化する {#how-to-activate-sio2-in-the-biostar-air-portal}
 
-Enable the <Cmd sid="add_doors.sio2" product="air" /> option by following these steps to properly integrate the SIO2 secure module and enhance access control system security.
+SIO2 セキュリティモジュールを正常に統合し、入退室管理システムのセキュリティを強化するには、次の手順に従って <Cmd sid='add_doors.sio2' product='air' /> オプションを有効にしてください。
 
 :::info
 
-If SIO2 is installed but the settings are not changed in the BioStar Air portal, it may not operate.
+SIO2 を設置しても、BioStar Air ポータルで設定を変更しないと動作しないことがあります。
 
 :::
 
 <Steps>
 <Step>
 
-### Register the reader {#register-the-reader}
+### リーダーの登録 {#register-the-reader}
 
-* Verify that the reader, SIO2, and door relay are connected successfully.
+* リーダー、SIO2、およびドアリレーが正常に接続されていることを確認してください。
 
-* Register the reader to the site through the **BioStar Air app**.
-
-</Step>
-<Step>
-
-### Check the device connection {#check-device-connection}
-
-1. Access the [BioStar Air portal](https://admin.biostarair.com/).
-
-2. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
-
-3. In the device list, verify that the device appears in **green** (<StatusOK />) to confirm the connection.
+* **BioStar Air アプリ**を使ってサイトにリーダーを登録してください。
 
 </Step>
 <Step>
 
-### Assign SIO2 to a door {#assign-sio2-to-a-door}
+### デバイス接続の確認 {#check-device-connection}
 
-1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar.
+1. [BioStar Air ポータル](https://admin.biostarair.com/)にアクセスしてください。
 
-2. Click the door linked to the device in the list. Registering the device automatically creates a door.
+2. 画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。
+
+3. デバイス一覧で該当デバイスが**緑**(<StatusOK />)で表示され、接続が完了していることを確認してください。
 
 </Step>
 <Step>
 
-### Enable SIO2 {#enable-sio2}
+### SIO2 をドアに割り当てる {#assign-sio2-to-a-door}
 
-1. When the <Cmd sid="edit_door.title" product="air" /> panel appears, go to <Cmd>Auxiliary Device</Cmd>.
+1. 画面左のサイドバーで <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' /> をクリックしてください。
 
-2. Enable the <Cmd sid="add_doors.sio2" product="air" /> option.
+2. 一覧からデバイスが接続されているドアをクリックしてください。 デバイスが登録されると、ドアが自動的に作成されます。
+
+</Step>
+<Step>
+
+### SIO2 を有効化する {#enable-sio2}
+
+1. <Cmd sid='edit_door.title' product='air' /> パネルが表示されたら、<Cmd>補助デバイス</Cmd> セクションに移動してください。
+
+2. <Cmd sid='add_doors.sio2' product='air' /> オプションを有効にしてください。
 
 <Image src='/img/air/bsair-door-mng-edit-door-sio2-enable.png' />
 
 </Step>
 <Step>
 
-### Configure relay and sensors {#configure-relay-and-sensors}
+### リレーおよびセンサーの構成 {#configure-relay-and-sensors}
 
 <Image src='/img/air/bsair-door-mng-edit-door-sio2-settings.png' caption />
 
-* For <Cmd sid="add_doors.door_relay" product="air" />, select **Relay 0**.
+* <Cmd sid='add_doors.door_relay' product='air' /> では **Relay 0** を選択してください。
 
    :::note
 
-   The SIO2 module has only one door relay port.
+   SIO2 モジュールには1つのドアリレーポートのみがあります。
 
-   :::
+   ：：：
 
-* For <Cmd sid="device_editable_fields_door_sensor" product="air" />, select the input port number of the connected SIO2.
+* <Cmd sid='device_editable_fields_door_sensor' product='air' /> で、接続されている SIO2 の入力ポート番号を選択してください。
 
-* If <Cmd sid="device_editable_fields_exit_btn" product="air" /> is connected, select the corresponding input port on the SIO2.
+* <Cmd sid='device_editable_fields_exit_btn' product='air' /> が接続されている場合は、SIO2 の該当する入力ポートを選択してください。
 
-* If another type of exit device is used, select <Cmd sid="door_product_column3" product="air" />.
+* 別のタイプの出口デバイスを使用する場合は、<Cmd sid='door_product_column3' product='air' /> を選択してください。
 
 </Step>
 <Step>
 
-### Save the settings {#save-the-settings}
+### 設定の保存 {#save-the-settings}
 
-* Click <Cmd sid="save_btn" product="air" /> to apply the settings.
+* 設定を適用するには、<Cmd sid='save_btn' product='air' /> をクリックしてください。
 
-* The SIO2 secure module now operates normally.
+* これで SIO2 セキュリティモジュールは正常に動作します。
 
 </Step>
 </Steps>

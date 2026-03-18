@@ -1,62 +1,62 @@
 ---
 id: e200-qr-scanner
-title: Wiring and Configuring the E200 QR Scanner
-description: Wire and configure BioStar Air devices for optimal performance.
+title: E200 QRスキャナの配線と設定
+description: 最適なパフォーマンスのために BioStar Air の配線と構成方法を案内します。
 keywords:
-  - wiring
-  - configuration
+  - 配線
+  - 構成
   - BioStar Air
 ---
 
-## Step 1: Wire {#wiring}
+## ステップ 1: 配線 {#wiring}
 
-Connect the E200-series QR scanner using the included adapter cable as shown below.
+以下のように同梱のアダプターケーブルを使用して E200 シリーズの QRスキャナを接続します。
 
-* The green terminal block has pins labeled **1 through 4**, arranged **right-to-left** when you face the front of the connector.
+* 緑色の端子ブロックには **1から4** までラベルが付いたピンがあり、コネクタの正面を見たとき **右から左** に並んでいます。
 
-  | Pin | Wire color | Feature |
+  | ピン | 配線色 | 機能 |
   | :-: | --- | --- |
-  | 1 | Black | Negative / Ground |
-  | 2 | Red | Positive (V+) |
-  | 3 | Yellow (white stripe) | RS-485 TRXN |
-  | 4 | Blue (white stripe) | RS-485 TRXP |
+  | 1 | 黒 | Negative / Ground |
+  | 2 | 赤 | Positive (V+) |
+  | 3 | 黄（白線） | RS-485 TRXN |
+  | 4 | 青 (白線) | RS-485 TRXP |
 
    :::info
 
-   The wiring direction is the exact opposite of many other connectors. Check the orientation again before wiring.
+   他の多くのコネクタとは配線の向きが正反対です。 配線する前に向きをもう一度確認してください。
 
-   :::
+   ：：：
 
-* Attach the 4-pin connector to the CON port on the bottom of the QR scanner. Because the connector is **polarized** (keyed), it fits only one way.
+* QRスキャナ下部の CON ポートに 4ピンコネクタを接続します。 このコネクタは **極性**（キー溝がある）ため、1方向にしか合いません。
 
   <Image src='/img/air/air-hardware-qr-reader-diagram.png' width='80%' alone />
 
-## Step 2: Enable the QR reader {#enable-qr-reader}
+## ステップ 2: QRリーダーを有効化 {#enable-qr-reader}
 
-1. Sign in to the [BioStar Air portal](https://admin.biostarair.com) (web or app).
+1. [BioStar Air ポータル](https://admin.biostarair.com)(Web またはアプリ)にログインします。
 
-2. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+2. 画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。
 
-3. Click the device that has the connected E200 QR scanner.
+3. 一覧から E200 QRスキャナを接続した機器をクリックします。
 
-4. Enable the <Cmd sid='device_editable_fields_qr_reader' product='air' /> option in the <Cmd sid='new_layout_nav_title_detail' product='air' /> section.
+4. <Cmd sid='new_layout_nav_title_detail' product='air' /> セクションで <Cmd sid='device_editable_fields_qr_reader' product='air' /> オプションを有効にしてください。
 
    <Image src='/img/air/bsair-device-details-qr-reader.png' />
 
-5. Click <Cmd sid="save_btn" product="air" /> to save the changes.
+5. 変更を保存するには、<Cmd sid='save_btn' product='air' /> をクリックします。
 
 :::info
 
-Enabling the QR reader prevents you from using other RS-485 devices (for example, an SIO2) on the same reader.
+QRリーダーを有効にすると、同じリーダーで他の RS-485 接続機器（例: SIO2）を使用できません。
 
 :::
 
-## Step 3: Configure the QR scanner {#configure-qr-scanner}
+## ステップ 3: QRスキャナの構成 {#configure-qr-scanner}
 
-By default, the **E200 QR scanner** is set to a baud rate of **115,200**. Change the baud rate to **9,600** to use it with Suprema devices.
+デフォルトで **E200 QRスキャナ** は **115,200** の伝送速度に設定されています。 Suprema 機器で使用する場合は、伝送速度を **9,600** に変更する必要があります。
 
-Connect the QR scanner to the device and **scan the barcode below** to apply the new baud rate.
+QRスキャナを機器に接続し、**以下のバーコードをスキャン**して新しい伝送速度を適用します。
 
 <Image src='/img/air/air-hardware-qr-reader-barcode.png' alone />
 
-When the wiring is correct and the Suprema device is connected to the network, use the **dynamic QR credentials** provided through BioStar Air.
+配線が正しく、Suprema 機器がネットワークに接続されている場合、BioStar Air を通じて提供される **ダイナミック QR クレデンシャル** を使用できます。

@@ -1,84 +1,84 @@
 ---
 id: troubleshooting-adding-users-in-bulk
-title: Fix Bulk User Addition Issues
-description: Learn how to troubleshoot common issues when adding users in bulk with the BioStar Air portal.
+title: 一括ユーザー追加の問題
+description: BioStar Air ポータルでユーザーを一括追加する際に発生する一般的な問題の対処方法を説明します。
 keywords:
-  - Troubleshooting
-  - bulk users
+  - トラブルシューティング
+  - 一括ユーザー
   - BioStar Air
 ---
 
-Several customers and partners have reported issues when adding user lists in bulk. Most issues arise from incorrectly formatted CSV files. Follow the instructions below exactly to ensure the bulk addition feature works as expected.
+複数の顧客やパートナーから、ユーザーリストを一括で追加する際に問題が発生するという報告がありました。 ほとんどの問題は、形式が不正なCSVファイルが原因です。 一括追加機能が期待通りに動作するよう、以下の指示に正確に従ってください。
 
 :::info
 
-Starting with v2.10, BioStar Air returns a validation report when a CSV file containing invalid entries is uploaded. Correct the errors, and then upload the file again.
+v2.10から、BioStar Airは不正な項目を含むCSVファイルをアップロードした場合、検証レポートを返します。 エラーを修正した後、ファイルを再アップロードしてください。
 
 <Image src='/img/air/bsair-add-bulk-import-user-csv-error.png' />
 
 :::
 
-## Prepare the CSV file
+## CSVファイルの準備
 
-### Download the CSV template
+### CSVテンプレートのダウンロード
 
-1. Go to <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' /> に移動します。
 
-2. Click <Cmd sid="add_user_btn" product="air" /> → <Cmd sid="user_actions_import_title" product="air" /> at the top right of the screen.
+2. 画面右上の <Cmd sid='add_user_btn' product='air' /> → <Cmd sid='user_actions_import_title' product='air' /> をクリックします。
 
-3. When the <Cmd sid="user_actions_import_title" product="air" /> panel appears, click <Cmd sid="user_actions_import_download_btn_text" product="air" />.
+3. <Cmd sid='user_actions_import_title' product='air' /> パネルが表示されたら、<Cmd sid='user_actions_import_download_btn_text' product='air' /> ボタンをクリックします。
 
-4. Save the CSV template file (*biostar-import-user-csv-example.csv*) locally.
+4. CSVテンプレートファイル(*biostar-import-user-csv-example.csv*)をローカルに保存します。
 
-### Use the exact CSV template format
+### CSVテンプレートの正確な形式を使用する
 
-* **Do not manually add or delete columns**. An unexpected column can cause an error.
+* **列(column)を手動で追加または削除しないでください**。 予期しない列(column)があるとエラーが発生する可能性があります。
 
-* If you need to include additional fields (for example, employee ID or department), use the <Cmd sid='user_setting_templ_action' product='air' />(<IcAirUtemplate />) feature at the top of the user list to add them. When a field is added, the downloaded CSV file automatically includes the corresponding column.
+* 追加フィールド（例：従業員IDまたは部署）を含める必要がある場合は、ユーザー一覧の上部にある<Cmd sid='user_setting_templ_action' product='air' />(<IcAirUtemplate />)機能を使って該当するフィールドを追加してください。 フィールドを追加すると、ダウンロードしたCSVファイルに該当する列が自動的に含まれます。
 
-Enter data correctly by referring to the requirements of each column.
+各列の要件を参照してデータを正しく入力してください。
 
 #### <Cmd sid='user_csv_example_header1' product='air' className='normal' />
 
-* A unique numeric ID for each user.
+* 各ユーザーの一意の数値IDです。
 
-* The <Cmd sid="user_csv_example_header1" product="air" className="bold" /> column **can be left blank**, and the system assigns a value automatically.
+* <Cmd sid='user_csv_example_header1' product='air' className='bold' /> 列は**空にすることができ**、システムが自動的に値を割り当てます。
 
-* If you enter user IDs manually
+* ユーザーIDを手動で入力する場合
 
-  * Use **numbers only**. 
+  * **数字のみ** を使用してください。 
 
-  * Use a **unique value**.
+  * **一意の値** を使用してください。
 
-  * Do not include letters, spaces, hyphens, or special characters.
+  * 文字、空白、ハイフン、または特殊文字を含めないでください。
 
 :::caution
 
-If you need to use a company-specific employee ID that includes letters, do not use the <Cmd sid="user_csv_example_header1" product="air" className="bold" /> field. Instead, create a custom user field with the <Cmd sid="user_setting_templ_action" product="air" /> feature.
+文字を含む会社固有の従業員IDを使用する場合は、<Cmd sid='user_csv_example_header1' product='air' className='bold' /> フィールドを使用しないでください。 代わりに、<Cmd sid='user_setting_templ_action' product='air' /> 機能を使用して別のカスタムユーザーフィールドを作成してください。
 
 :::
 
 #### <Cmd sid='user_csv_example_header7' product='air' className='normal' />
 
-* Use a valid email format. Refer to the [validation formulas](#excelFormulas) to verify the email format.
+* 有効なメール形式を使用してください。 [検証式](#excelFormulas)を参照してメール形式を検証できます。
 
-  * No spaces are allowed.
+  * 空白を含めることはできません。
 
-  * It must include the at sign (`@`).
+  * `@`（アットサイン）を含める必要があります。
 
-  * The domain must include a period (`.`) and a top-level domain.
+  * ドメインにはピリオド(`.`)およびトップレベルドメインを含める必要があります。
 
-    > Example: example.com, gmail.com, suprema.co.kr
+    > 例：example.com、gmail.com、suprema.co.kr
 
-  * There must be no additional period after the address.
+  * アドレスの末尾に追加のピリオドがあってはなりません。
 
-  * No special or hidden characters are allowed.
+  * 特殊文字または不可視文字があってはなりません。
 
-  * It must be an email address. Errors such as 'Not provided' may occur.
+  * メールアドレスである必要があります。 '提供されていません' または '提供しない' のようなエラーが発生する可能性があります。
 
-* The email address **must be unique**. Duplicates are not allowed within the file or among existing users.
+* メールアドレスは**一意である必要があります**。 ファイル内や既存ユーザー間での重複は許可されません。
 
-* An email address is required when issuing the credentials below.
+* 以下のクレデンシャルを発行する場合、メールアドレスは必須です。
 
   * <Cmd sid='card_type_mobile' product='air' />
 
@@ -86,19 +86,19 @@ If you need to use a company-specific employee ID that includes letters, do not 
 
   * <Cmd sid='card_type_option4' product='air' />
 
-* Users with only an RFID card do not need to enter an email address.
+* RFIDカードのみを所持しているユーザーはメールアドレスの入力は不要です。
 
 #### <Cmd sid='user_csv_example_header8' product='air' className='normal' />
 
-* Providing a phone number is optional when the credential is not delivered via mobile SMS.
+* モバイルSMSでクレデンシャルを送信しない場合は任意です。
 
-* Like the email address, it **must be unique**, and duplicates are not allowed within the file or among existing users.
+* メールアドレスと同様に**一意である必要があり**、ファイル内や既存ユーザー間での重複は許可されません。
 
-* Use email to deliver credentials when possible. SMS messages incur additional charges.
+* クレデンシャルを配布する際は、メールを推奨します。 SMSメッセージは追加料金が発生します。
 
-#### Dates (<Cmd sid="user_csv_example_header5" product="air" className="normal" /> / <Cmd sid="user_csv_example_header6" product="air" className="normal" />)
+#### 日付 (<Cmd sid='user_csv_example_header5' product='air' className='normal' /> / <Cmd sid='user_csv_example_header6' product='air' className='normal' />)
 
-All date fields must follow the exact format shown below.
+すべての日付フィールドは以下の正確な形式に従う必要があります。
 
 ```plaintext
 YYYY-MM-DDTHH:MM:SS.sssZ
@@ -107,32 +107,32 @@ Example:
 1995-05-09T00:00:00.000Z
 ```
 
-Even minor differences—such as omitting the 'Z', using slashes (`/`) instead of dashes (`—`), or leaving out the time—can cause the upload to fail.
+'Z'を欠いていたり、ダッシュ(`—`)の代わりにスラッシュ(`/`)を使用したり、時間を省略するなどの些細な違いもアップロード失敗の原因になります。
 
-#### Credential requirements
+#### クレデンシャルの要件
 
-| Credential type          | Email or phone number |
+| クレデンシャル形式          | メールまたは電話番号 |
 | --- | --- |
-| <Cmd sid='card_type_rf' product='air' /> Only | No.                       |
-| <Cmd sid='card_type_mobile' product='air' /> / <Cmd sid='card_type_option3' product='air' /> / <Cmd sid='card_type_option4' product='air' /> | Yes, one is required.    |
+| <Cmd sid='card_type_rf' product='air' /> Only | いいえ。                       |
+| <Cmd sid='card_type_mobile' product='air' /> / <Cmd sid='card_type_option3' product='air' /> / <Cmd sid='card_type_option4' product='air' /> | はい、1つ必要です。    |
 
-* Credentials must be delivered by email address or phone number.
+* クレデンシャルはメールアドレスまたは電話番号を通じて送信される必要があります。
 
-* Both can be provided, but **mobile credentials** **require at least one**.
+* 両方を提供することはできますが、**モバイル形式のクレデンシャル**には**最低1つが必要**です。
 
-* Email is free. SMS is charged.
+* メールは無料です。 SMSは料金が発生します。
 
-## Excel formulas for pre-validation {#excelFormulas}
+## 事前検証のためのExcel数式 {#excelFormulas}
 
-Before uploading data, use the following formulas in **helper columns** to verify the data.
+データをアップロードする前に、**ヘルパー列**で次の数式を使ってデータを確認することを推奨します。
 
-### Duplicate email or phone number validation
+### メールまたは電話番号の重複検証
 
 ```excel-formula title="Detect Duplicate Emails or Phone Numbers"
 =IF(E2="", "", IF(COUNTIF(E$2:E2, E2)>1, "Duplicate", "First Occurrence"))
 ```
 
-### Date format validation
+### 日付形式の検証
 
 ```excel-formula title="Validate ISO 8601 Date Format (Column Q)"
 =IF(Q2="", "", IF(AND(LEN(Q2)=24, 
@@ -146,7 +146,7 @@ Before uploading data, use the following formulas in **helper columns** to verif
   "Valid", "Invalid"))
 ```
 
-### Email format validation
+### メール形式の検証
 
 ```excel-formula title="Validate Email Format (Column E)"
 =IF(TRIM(E2)="", "", IF(AND(
@@ -159,20 +159,20 @@ Before uploading data, use the following formulas in **helper columns** to verif
 ), "Valid", "Invalid"))
 ```
 
-## Encountering errors? {#common-errors}
+## エラーが発生しますか？ {#common-errors}
 
-* Did you download the correct template and not add additional columns?
+* 正しいテンプレートをダウンロードし、列を追加していませんか？
 
-* Are all required fields completed for users receiving a mobile credential?
+* モバイルクレデンシャルを受け取るユーザーのすべての必須フィールドが記入されていますか？
 
-* Are the email address and phone number unique between the file and existing users?
+* メールアドレスと電話番号はファイル内および既存ユーザー間で一意ですか？
 
-* Are the date and email formats correct as specified above?
+* 日付とメール形式は上記の通り正確ですか？
 
 :::info
 
-* The service team does not provide file-editing services. If the file fails to upload, use the validation tools above to identify and resolve the issue.
+* サービスチームはファイルの修正サービスを提供しません。 ファイルがアップロードされない場合は、上記の検証ツールを使用して問題を特定し、解決してください。
 
-* This document is designed to enable successful uploads without manual troubleshooting by the service team.
+* この文書は、サービスチームによる手動のトラブルシューティングなしでアップロードを正常に完了できるように支援するために作成されています。
 
 :::

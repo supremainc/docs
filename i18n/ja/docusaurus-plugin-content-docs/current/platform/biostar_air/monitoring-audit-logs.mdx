@@ -1,93 +1,93 @@
 ---
 id: monitoring-audit-logs
-title: Use Audit Logs
-description: This guide explains how to monitor and analyze audit logs in BioStar Air, apply filters, export data, and track administrative activity.
+title: 変更ログの使い方
+description: BioStar Airで変更ログを監視・分析し、フィルターの適用、データのエクスポート、管理者の操作の追跡方法を案内します。
 keywords:
-  - Monitoring
-  - Audit logs
+  - モニタリング
+  - 変更ログ
   - BioStar Air
 ---
 
-One of the key advantages of a cloud access control platform is the ability to monitor site activity anytime, anywhere. This document explains how to monitor and analyze audit logs in BioStar Air.
+クラウド出入管理プラットフォームの主な利点の一つは、いつでもどこでもサイト活動を監視できることです。 このドキュメントでは、BioStar Airで変更ログを監視・分析する方法を説明します。
 
 :::tip
 
-Watch the following video for a tutorial on audit logs.
+変更ログの動画ガイドを視聴するには、以下の動画をご覧ください。
 
 <YouTube className='fit--content' videoId="nwIEYyK-uAg" />
 
 :::
 
-## View audit logs
+## 変更ログの確認
 
-Go to <Cmd sid="audit_logs_submenu" product="air" /> to view audit logs. Click <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="audit_logs_submenu" product="air" /> in the left sidebar.
+変更ログを確認するには、<Cmd sid='audit_logs_submenu' product='air' /> に移動します。 画面左側のサイドバーで <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='audit_logs_submenu' product='air' /> をクリックします。
 
 <Image src='/img/air/bsair-monitoring-auditlog-list.png' />
 
-Use <Cmd sid='audit_logs_submenu' product='air' /> to track administrator actions. Each log in the list displays a table with information such as operation time, email address, administrator privileges, operation type, menu path, and operation details.
+<Cmd sid='audit_logs_submenu' product='air' />では、管理者が行った操作を追跡できます。 ログ一覧では、作業日時、メールアドレス、管理者権限、操作の種類、メニューのパス、操作の詳細などが表示されます。
 
-## Filter logs {#filtering-event-logs}
+## ログのフィルタリング {#filtering-event-logs}
 
-Filter logs to quickly find the information you need. Click <IcAirLogfilter width='20' height='20' title='Filters' /> at the top of the log list. When the <Cmd sid="logs_filters_action_btn" product="air" /> window appears, select the desired value for each item.
+ログをフィルタリングして、目的の情報を素早く見つけることができます。 ログ一覧の上部にある <IcAirLogfilter width='20' height='20' title='Filters' /> をクリックしてください。 <Cmd sid='logs_filters_action_btn' product='air' /> ウィンドウが表示されたら、各項目で希望の値を選択します。
 
 <Image src='/img/air/bsair-monitoring-audit-log-list-filter.png' />
 
 :::info
 
-* Click <Cmd sid="column_filter_modal_save_btn" product="air" /> or <Cmd sid="filters_action2" product="air" /> to save the settings so they remain after navigating to another menu. Click <Cmd sid='column_filter_modal_apply_btn' product='air' /> or <Cmd sid='filters_action3' product='air' /> to apply the changes only to the current list; they will revert when you navigate away.
+* <Cmd sid='column_filter_modal_save_btn' product='air' /> または <Cmd sid='filters_action2' product='air' /> をクリックすると設定が保存され、他のメニューに移動しても保持されます。 <Cmd sid='column_filter_modal_apply_btn' product='air' /> または <Cmd sid='filters_action3' product='air' /> をクリックすると変更は現在の一覧にのみ適用され、他のメニューに移動すると以前の設定に戻ります。
 
-* <Cmd sid='column_filter_modal_reset_btn' product='air' /> or <Cmd sid='filters_action1' product='air' /> to cancel the changes and return to the initial state.
+* <Cmd sid='column_filter_modal_reset_btn' product='air' /> または <Cmd sid='filters_action1' product='air' /> をクリックして変更を取り消し、初期状態に戻します。
 
 :::
 
-## Configure reports {#generatingReports}
+## レポート設定 {#generatingReports}
 
-Generate reports for events that occurred during a specific period by filtering log data.
+ログデータをフィルタリングして、特定の期間に発生したイベントのレポートを生成できます。
 
-1. Click the <IcAirReport width="20" height="20" title="Report" /> button at the top of the log list.
+1. ログ一覧の上部にある <IcAirReport width='20' height='20' title='Report' /> をクリックします。
 
-2. When the <Cmd sid="report_popup_title" product="air" /> window appears, enter a report name.
+2. <Cmd sid='report_popup_title' product='air' /> ウィンドウが表示されたら、レポート名を入力します。
 
    <Image src='/img/air/bsair-monitoring-auditlog-report-setting.png' />
 
-3. Select the items to include in the report.
+3. レポートに含める項目を選択します。
 
-4. Click <Cmd sid="report_form_text_add" product="air" /> to save the configured report.
+4. <Cmd sid='report_form_text_add' product='air' /> をクリックして設定したレポートを保存します。
 
-5. A report is created with the name set in <Cmd sid="report_form_text_title" product="air" />.
+5. <Cmd sid='report_form_text_title' product='air' /> に指定した名前でレポートが作成されます。
 
    <Image src='/img/air/bsair-monitoring-auditlog-report-added.png' />
 
-6. To download the generated report, click the <IcAirDown width="20" height="20" title="Download" /> button next to the report name.
+6. 作成されたレポートをダウンロードするには、レポート名の横にある <IcAirDown width='20' height='20' title='Download' /> をクリックします。
 
-7. When the <Cmd sid="report_download_popup_title" product="air" /> window appears, select the period to query events and click <Cmd sid="report_download_popup_button_title" product="air" />.
+7. <Cmd sid='report_download_popup_title' product='air' /> ウィンドウが表示されたら、イベントを照会する期間を選択し、<Cmd sid='report_download_popup_button_title' product='air' /> をクリックします。
 
    <Image src='/img/air/bsair-monitoring-auditlog-report-download.png' />
 
-A download link is sent to the administrator's email.
+管理者のメールアドレスにダウンロードリンクが送信されます。
 
 :::info
 
-<Cmd sid="report_form_text_title" product="air" /> lets you search for, edit, download, or delete the reports created.
+<Cmd sid='report_form_text_title' product='air' /> で作成したレポートを検索、編集、ダウンロード、削除できます。
 
 :::
 
-## Mask personal data {#dataMasking}
+## 個人情報のマスキング {#dataMasking}
 
-Mask personal data in logs to protect sensitive information. When personal data masking is enabled, information such as user names, email addresses, and phone numbers is partially hidden.
+ログ内の個人情報をマスキングして、機密情報を保護できます。 個人情報のマスキングを有効にすると、ユーザー名、メールアドレス、電話番号などの情報が部分的に隠されます。
 
-To enable personal data masking, click the <IcAirMask width="20" height="20" title="Apply Masking" /> button at the top of the log list. In the pop-up menu, enable <Cmd sid="apply_masking_title" product="air" /> and click <Cmd sid="save_btn" product="air" />.
+個人情報のマスキングを有効にするには、ログ一覧の上部にある <IcAirMask width='20' height='20' title='Apply Masking' /> をクリックします。 ポップアップメニューで <Cmd sid='apply_masking_title' product='air' /> オプションを有効にし、<Cmd sid='save_btn' product='air' /> をクリックします。
 
 <Image src='/img/air/bsair-monitoring-auditlog-apply-masking.png' />
 
-## Other features
+## その他の機能
 
-Use the toolbar at the top of the log list to manage logs more efficiently.
+ログ一覧の上部にあるツールバーを使用して、ログをより効率的に管理できます。
 
-* To sort logs by date, select a date and time range, then click <Cmd sid='logs_filter_ok_btn' product='air' />.
+* ログを日付順に並べ替えるには、日付と時間の範囲を選択して、<Cmd sid='logs_filter_ok_btn' product='air' />をクリックしてください。
 
   <Image src='/img/air/bsair-monitoring-auditlog-select-date.png' />
 
-* Click <IcAirDown width="20" height="20" title="Export" /> to save logs as a CSV or PDF file.
+* ログをCSVまたはPDFファイルとして保存するには、<IcAirDown width='20' height='20' title='Export' /> をクリックします。
 
-* Click <IcAirRef width='20' height='20' title='Refresh' /> at the top of the list to refresh the log list.
+* ログ一覧を更新するには、一覧上部の <IcAirRef width='20' height='20' title='Refresh' /> ボタンをクリックしてください。

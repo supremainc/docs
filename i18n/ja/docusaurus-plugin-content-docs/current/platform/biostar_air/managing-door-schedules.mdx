@@ -1,86 +1,147 @@
 ---
 id: managing-door-schedules
-title: Manage Door Schedules
-description: Set automatic door locking by time of day, configure unlock times, and manage authentication-based access control options. Schedules ensure safe and controlled access.
+title: 出入口スケジュールの管理
+description: 時間帯ごとに出入口の自動施錠を設定し、解錠時刻を指定したり、認証に基づく入退室制御のオプションを管理したりできます。 スケジュールによって、入退室の安全性と管理性を確保します。
 keywords:
-  - door schedule
+  - 出入口スケジュール
   - BioStar Air
 ---
 
-You can set door schedules to automatically lock and unlock doors based on time periods. Configure lock and unlock times, and utilize advanced options such as **open after first authentication** to set up secure and controlled access.
+出入口のスケジュールを設定すると、時間帯ごとに自動で施錠・解錠できます。 施錠および解錠の時刻を設定し、**初回認証後に解錠**などの高度なオプションを利用して、安全で管理された入退室を実現します。
 
 :::info
 
-* Schedules apply only to doors and devices that are connected to the internet.
+* スケジュールは、インターネットに接続されている出入口および機器にのみ適用できます。
 
-* Holiday groups ignore unlock schedules unless they are configured separately.
+* 休日グループは別途構成されていない限り、解錠スケジュールを無視します。
 
-* Keep at least one administrator with unrestricted access for emergencies.
+* 緊急時に備えて、制限のない入退室権限を持つ管理者を少なくとも1人以上配置する必要があります。
 
 :::
 
-## Configure unlock schedules {#configuringUnlockSchedules}
+## スケジュールが必要な場合
 
-An unlock schedule is the period when a door remains open without authentication. Configure an unlock schedule as instructed below.
+**ドアのスケジュールは必須ではありません**。 ほとんどの施設では基本的なアクセス制御だけで十分です。 認証済みのユーザーが資格情報を提示すると自動的にドアが開くため、追加のスケジュール設定がなくても正常に動作します。
 
-1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar.
+次のような場合にスケジュールを設定してください。
 
-2. In the list, click the checkbox for the door to configure its unlock schedule.
+* 特定の時間帯に誰でも自由に出入りできるようにしたい場合
 
-3. Click <IcAirSchedule title='Schedule Settings' /> at the top of the door list.
+* 特定の時間にすべてのユーザーの出入りを禁止したい場合
 
-4. When the <Cmd sid="lock_unlock_title" product="air" /> window appears, select a predefined schedule or create a new one in the <Cmd sid="unlock" product="air" /> tab.
+* 時間帯ごとにアクセス方針を変えて適用したい場合
+
+<Cmd sid='unlock_schedule' product='air' className='bold' />と <Cmd sid='lock_schedule' product='air' className='bold' />の混同を避けるため、それぞれの動作と使用タイミングを明確に理解してください。
+
+### <Cmd sid='unlock_schedule' product='air' className='bold' /> と <Cmd sid='lock_schedule' product='air' className='bold' />
+
+<div className='table-fixed'>
+
+| 区分 | 開錠スケジュール | 施錠スケジュール |
+| --- | --- | --- |
+| **スケジュール適用中の状態** | 常時開錠 | 常時施錠 |
+| **認証の要否** | 不要、誰でも自由に出入り可能 | 資格情報認証では開錠できない |
+| **手動開錠** | 可能 | サイト管理者のみ可能 |
+| **リレー動作** | 作動し続ける | 作動しない |
+
+</div>
+
+:::info
+
+サイト管理者は、BioStar Air 管理ポータルまたはモバイルアプリで指定された管理者を指します。
+
+:::
+
+## 開錠スケジュール
+
+スケジュールの時間帯中はドアが常に開いており、リレーは作動し続けます。 認証は不要なので、誰でも自由に出入りできます。
+
+### 利用例
+
+* 共用スペースのメイン入口
+
+* 住宅団地内の共用施設
+
+* 勤務時間中のオフィスロビーの入口
+
+### 開錠スケジュールの設定 {#configuringUnlockSchedules}
+
+次の手順に従って解錠スケジュールを構成します。
+
+1. 画面左のサイドバーで <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' /> をクリックしてください。
+
+2. 出入口一覧で、解錠スケジュールを設定するドアのチェックボックスをクリックしてください。
+
+3. 出入口一覧の上部にある <IcAirSchedule title='Schedule Settings' /> ボタンをクリックしてください。
+
+4. <Cmd sid='lock_unlock_title' product='air' /> ウィンドウが表示されたら、<Cmd sid='unlock' product='air' /> タブで事前定義されたスケジュールを選択するか、新しいスケジュールを作成します。
 
    <Image src='/img/air/bsair-door-mng-schedule-setting-unlock.png' />
 
-5. Click <Cmd sid="btn_ok" product="air" /> to apply the unlock schedule.
+5. 解錠スケジュールを適用するには、<Cmd sid='btn_ok' product='air' /> ボタンをクリックします。
 
 :::info
 
-* When <Cmd sid="unlock_after_first_auth" product="air" /> is enabled, the door stays unlocked according to the selected schedule after the first user authenticates. This option is useful for offices and retail stores where the door must remain locked until the first employee arrives.
+* <Cmd sid='unlock_after_first_auth' product='air' /> オプションを有効にすると、ユーザーが初回に認証した後、選択したスケジュールに従ってドアの解錠状態を維持できます。 このオプションは、次のようなケースで有効です。
 
-* For more information on registering schedules, refer to <DocLink inner='#registeringNewSchedules' />.
+  * 従業員が到着してから顧客の入店を許可する小売店
+
+  * 最初の従業員が建物を開錠すれば、その後は他の従業員が自由に出入りできるオフィス
+
+  * 担当者が開錠すれば会員が自由に利用できる会員制施設
+
+* スケジュール登録の詳細は <DocLink inner='#registeringNewSchedules' /> を参照してください。
 
 :::
 
-## Configure lock schedules {#configuring-lock-schedules}
+## 施錠スケジュール
 
-A lock schedule sets the period during which the door remains locked and cannot be accessed even with valid credentials. Configure a lock schedule as instructed below.
+スケジュール時間中はドアが常に施錠され、リレーは作動しません。 有効なクレデンシャルを提示しても認証で解錠できず、サイト管理者のみが手動で解錠できます。
 
-1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar.
+### 利用例
 
-2. In the list, click the checkbox for the door to configure its lock schedule.
+* 特定の時間以降厳格に閉鎖しなければならない区域
 
-3. Click <IcAirSchedule title='Schedule Settings' /> at the top of the door list.
+* プールやジム、その他出入り制限のある施設
 
-4. When the <Cmd sid="lock_unlock_title" product="air" /> window appears, select a predefined schedule or create a new one in the <Cmd sid="lock" product="air" /> tab.
+### 施錠スケジュールの構成 {#configuring-lock-schedules}
+
+次の手順に従って施錠スケジュールを構成します。
+
+1. 画面左のサイドバーで <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' /> をクリックしてください。
+
+2. 出入口一覧で、施錠スケジュールを設定するドアのチェックボックスをクリックしてください。
+
+3. 出入口一覧の上部にある <IcAirSchedule title='Schedule Settings' /> ボタンをクリックしてください。
+
+4. <Cmd sid='lock_unlock_title' product='air' /> ウィンドウが表示されたら、<Cmd sid='lock' product='air' /> タブで事前定義されたスケジュールを選択するか、新しいスケジュールを作成します。
 
    <Image src='/img/air/bsair-door-mng-schedule-setting-lock.png' />
 
-5. Click <Cmd sid="btn_ok" product="air" /> to apply the lock schedule.
+5. 施錠スケジュールを適用するには、<Cmd sid='btn_ok' product='air' /> ボタンをクリックします。
 
 :::info
 
-* Because a lock schedule overrides standard access rights, users cannot set the door to unlocked during the lock period.
+* 施錠スケジュールは標準のアクセス権を無視するため、ユーザーは施錠時間中にドアを解錠状態に変更することはできません。
 
-* For more information on registering new schedules, refer to <DocLink inner='#registeringNewSchedules' />.
+* 新しいスケジュールの登録に関する詳細は <DocLink inner='#registeringNewSchedules' /> を参照してください。
 
 :::
 
-## Register a new schedule {#registeringNewSchedules}
+## 新しいスケジュールの登録 {#registeringNewSchedules}
 
-Follow the steps below to register a new schedule.
+以下の手順に従って新しいスケジュールを登録します。
 
-1. In the <Cmd sid="lock_unlock_title" product="air" /> window, click <Cmd sid="lock_unlock_create_schedules" product="air" />.
+1. <Cmd sid='lock_unlock_title' product='air' /> ウィンドウで、<Cmd sid='lock_unlock_create_schedules' product='air' /> ボタンをクリックします。
 
    <Image src='/img/air/bsair-door-mng-schedule-setting-add-schedule.png' />
 
-2. On the Add Schedule screen, enter <Cmd sid="schedule_name" product="air" /> and <Cmd sid="schedule_description" product="air" /> (optional).
+2. スケジュール追加画面に移動したら、<Cmd sid='schedule_name' product='air' /> と <Cmd sid='schedule_description' product='air' />(任意)を入力します。
 
    <Image src='/img/air/bsair-door-mng-schedule-add.png' />
 
-3. In the <Cmd sid="schedule_section_title_time_intervals" product="air" /> section, select the days and times when the door should be open without authentication, then click <Cmd sid="add_btn" product="air" />.
+3. <Cmd sid='schedule_section_title_time_intervals' product='air' /> セクションで、認証なしでドアが開いている必要がある曜日と時間を選択し、<Cmd sid='add_btn' product='air' /> ボタンをクリックします。
 
-4. Click <Cmd sid="save_btn" product="air" /> to save the schedule.
+4. スケジュールを登録するには、<Cmd sid='save_btn' product='air' /> ボタンをクリックします。
 
-After registering a new schedule, return to <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' /> and configure the door schedule.
+スケジュールを新規登録した後、<Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' /> に戻って、出入口のスケジュールを設定してください。

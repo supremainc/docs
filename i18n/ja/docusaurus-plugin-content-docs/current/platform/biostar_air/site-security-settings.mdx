@@ -1,39 +1,39 @@
 ---
 id: site-security-settings
-title: Security Settings
-description: Learn how to enhance the security of the BioStar Air site by locking administrator accounts, enabling 2-factor authentication, enforcing password policies, and setting mobile credential validity periods.
+title: セキュリティの設定
+description: 管理者アカウントのロック、2段階認証、パスワードポリシー、モバイルクレデンシャルの有効期限など、BioStar Air サイトのセキュリティレベルを向上させる方法をご案内します。
 keywords:
-  - Site Security
-  - Security Settings
+  - サイトのセキュリティ
+  - セキュリティ設定
 ---
 
-Configure security policies properly to prevent unauthorized access and keep the site secure.
-You can strengthen site security by locking inactive administrator accounts, enabling email-based 2-factor authentication, and setting password change intervals.
+不正アクセスを防ぎ、サイトを安全に運用するには、適切なセキュリティポリシーを構成する必要があります。
+非アクティブな管理者アカウントのロック、メールによる2段階認証、パスワード変更の周期設定などにより、サイトのセキュリティレベルを強化できます。
 
-Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar. Use the <Cmd sid='site_setting_tab_security' product='air' /> tab to configure site security settings.
+画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> をクリックします。 <Cmd sid='site_setting_tab_security' product='air' /> タブでサイトのセキュリティに関する設定を構成できます。
 
 <Image src='/img/air/bsair-settings-site-security.png' />
 
-* <Cmd sid='site_security_input1' product='air' />: Lock administrator accounts that have been inactive for more than 90 days.
+* <Cmd sid='site_security_input1' product='air' />：90日以上アクセスしていない管理者アカウントをロック状態に変更できます。
 
-* <Cmd sid='site_security_input2' product='air' />: Require email two-factor authentication each time an administrator signs in.
+* <Cmd sid='site_security_input2' product='air' />：管理者アカウントでログインするたびにメールによる2段階認証を要求できます。
 
-* <Cmd sid='site_security_input3' product='air' />: Grant 'full access' to new users by default when no other access rights are selected. If this setting is disabled, assign access levels manually. Temporary users are not granted full access automatically even if the setting above is enabled.
-
-   :::note
-
-   For more information about access levels, see <DocLink docId='platform/biostar_air/manage-access-level' />.
-
-   :::
-
-* <Cmd sid='site_security_input4' product='air' />: Require password reset every 30, 60, or 90 days.
-
-* <Cmd sid='site_security_input6' product='air' />: Set how long mobile credentials remain valid when the device is offline.
+* <Cmd sid='site_security_input3' product='air' />：他のアクセス権が選択されていない場合、新規ユーザーに「全アクセス権」をデフォルトで付与します。 この設定を無効にすると、アクセスレベルを手動で割り当てる必要があります。 一時ユーザーは、上記の設定が有効でも自動的に全アクセス権を付与されません。
 
    :::note
 
-  * The default is 5 minutes and can be set from 1 minute to 8 days.
+   アクセスレベル管理の詳細は <DocLink docId='platform/biostar_air/manage-access-level' /> を参照してください。
 
-  * This helps balance security and convenience, especially at remote sites with limited network connectivity.
+   ：：：
 
-   :::
+* <Cmd sid='site_security_input4' product='air' />：30日、60日、90日ごとにパスワードをリセットするように設定できます。
+
+* <Cmd sid='site_security_input6' product='air' />：モバイルデバイスがネットワークに接続されていなくてもモバイルクレデンシャルが有効である時間を設定できます。
+
+   :::note
+
+  * デフォルトは5分で、1分から8日の間で設定できます。
+
+  * セキュリティと利便性のバランスをとるのに役立ち、特にネットワーク接続が制限される遠隔サイトで有用です。
+
+   ：：：

@@ -1,63 +1,63 @@
 ---
 id: customizing-email-templates
-title: Customize Email Templates
-description: This guide explains how to create and customize branded email templates for invitations, activation, and notifications in BioStar Air by using logos, personalized content, and multilingual support.
+title: メールテンプレートのカスタマイズ
+description: BioStar Airでロゴ、パーソナライズされたコンテンツ、多言語対応を活用して、ユーザー招待、アクティベーション、通知用のブランドメールテンプレートを作成およびカスタマイズする方法を案内します。
 keywords:
-  - Email template
-  - customization
+  - メールテンプレート
+  - カスタマイズ
 ---
 
-Use the email template feature to customize emails sent to site users so they reflect your company's brand and messaging. Email templates include invitations, activation emails, and other notifications.
+メールテンプレート機能を使って、サイト利用者に送信されるメールを会社のブランドやメッセージに合わせてカスタマイズできます。 メールテンプレートには招待状、アクティベーションメール、およびその他の通知が含まれます。
 
 :::tip
 
-Watch the following video to learn how to configure email templates.
+メールテンプレート設定のビデオガイドを視聴するには、次の動画を参照してください。
 
 <YouTube className='fit--content' videoId="xmgpp6xMBuE" />
 
 :::
 
-## Add email templates {#addEmailTemplate}
+## メールテンプレートの追加 {#addEmailTemplate}
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="email_templates.email_template_menu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='email_templates.email_template_menu' product='air' /> をクリックします。
 
-2. Click <Cmd sid="email_templates.add_template_btn" product="air" /> at the top right of the screen.
+2. 画面右上の <Cmd sid='email_templates.add_template_btn' product='air' /> をクリックします。
 
    <Image src='/img/air/bsair-settings-email.png' />
 
-3. When the <Cmd sid="email_templates.add_email_template" product="air" /> panel appears, set each item. Select the <Cmd sid="user_text" product="air" /> or <Cmd sid="admin_text" product="air" /> tab to configure user or administrator email templates.
+3. <Cmd sid='email_templates.add_email_template' product='air' /> パネルが表示されたら、各項目の設定を構成します。 <Cmd sid='user_text' product='air' /> または <Cmd sid='admin_text' product='air' /> タブを選択して、ユーザーまたは管理者のメールテンプレートを設定できます。
 
 :::info
 
-Create separate email templates for each language. Select the language in <Cmd sid="user_form_input3" product="air" />. Supported languages are as follows:
+言語ごとにメールテンプレートを個別に作成できます。 <Cmd sid='user_form_input3' product='air' /> オプションで言語を選択できます。 サポートされている言語は以下のとおりです。
 
 > English, 한국어, 日本語, Nederlands, Español, Português
 
-More languages will be supported.
+今後さらに多くの言語をサポートする予定です。
 
 :::
 
 ### <Cmd sid='user_text' product='air' className='normal' /> {#user}
 
-Customize the email templates sent to users.
+ユーザーに送信されるメールテンプレートをカスタマイズできます。
 
 <Image src='/img/air/bsair-settings-email-add-user.png' />
 
-* <Cmd sid="email_templates.email_type" product="air" />: Select the email template type to create. Available options are as follows:
+* <Cmd sid='email_templates.email_type' product='air' />：作成するメールテンプレートの種類を選択します。 利用可能なオプションは以下のとおりです。
 
-  * <Cmd sid="email_templates.activate_user" product="air" />: Typically used as an invitation to download a mobile card.
+  * <Cmd sid='email_templates.activate_user' product='air' />：通常、モバイルカードをダウンロードするための招待状として使用します。
 
-  * <Cmd sid="email_templates.reactivate_user" product="air" />: Sends a notification to the user that the mobile card has been reactivated.
+  * <Cmd sid='email_templates.reactivate_user' product='air' />：モバイルカードが再アクティブ化されたことをユーザーに通知します。
 
-  * <Cmd sid="email_templates.reissue_user" product="air" />: Used when issuing a new mobile card.
+  * <Cmd sid='email_templates.reissue_user' product='air' />：新しいモバイルカードを発行する際に使用します。
 
-  * <Cmd sid="email_templates.delete_user" product="air" />: Sends a notification to the user about card deletion.
+  * <Cmd sid='email_templates.delete_user' product='air' />：カード削除に関する通知をユーザーに送信します。
 
-  * <Cmd sid="email_templates.suspend_user" product="air" />: Notifies the user that the card has been suspended.
+  * <Cmd sid='email_templates.suspend_user' product='air' />：カードが一時停止されたことをユーザーに通知します。
 
-  * <Cmd sid="email_templates.upload_user_face" product="air" />: Used to request that the user upload a face photo.
+  * <Cmd sid='email_templates.upload_user_face' product='air' />：ユーザーに顔写真の登録を依頼する際に使用します。
 
-* <Cmd sid="email_templates.card_type" product="air" />: Can be selected for email types that allow mobile card downloads, such as <Cmd sid="email_templates.activate_user" product="air" /> and <Cmd sid="email_templates.reissue_user" product="air" />.
+* <Cmd sid='email_templates.card_type' product='air' />：<Cmd sid='email_templates.activate_user' product='air' /> および <Cmd sid='email_templates.reissue_user' product='air' /> のように、モバイルカードのダウンロードを許可するメール種類で選択できます。
 
   * <Cmd sid='user_card_type_mobile' product='air' />
 
@@ -67,112 +67,112 @@ Customize the email templates sent to users.
 
    :::note
 
-   For more information about credential types, see <DocLink docId='platform/biostar_air/user-card-types' />.
+   クレデンシャルの種類の詳細については、<DocLink docId='platform/biostar_air/user-card-types' />をご参照ください。
 
-   :::
+   ：：：
 
 ### <Cmd sid='admin_text' product='air' className='normal' /> {#admin}
 
-Customize the email templates sent to administrators.
+管理者に送信されるメールテンプレートをカスタマイズできます。
 
 <Image src='/img/air/bsair-settings-email-add-admin.png' />
 
-<Cmd sid="email_templates.email_type" product="air" />: Select the email template type to create. Available options are as follows:
+<Cmd sid='email_templates.email_type' product='air' />：作成するメールテンプレートの種類を選択します。 利用可能なオプションは以下のとおりです。
 
-* <Cmd sid="email_templates.alert_event_log_admin" product="air" />: Sends administrators notifications about events occurring on the site.
+* <Cmd sid='email_templates.alert_event_log_admin' product='air' />：サイトで発生したイベントに関する通知を管理者に送信します。
 
-* <Cmd sid="email_templates.alert_system_admin" product="air" />: Sends system alerts to administrators.
+* <Cmd sid='email_templates.alert_system_admin' product='air' />：システムアラートを管理者に送信します。
 
-* <Cmd sid="email_templates.alert_report_admin" product="air" />: Sends administrators a download link after generating a report.
+* <Cmd sid='email_templates.alert_report_admin' product='air' />：レポートを生成した後、ダウンロードリンクを管理者に送信します。
 
 ### <Cmd sid='email_templates.email_styles' product='air' className='normal' /> {#emailStyles}
 
-Customize the email logo and content. View changes in real time in <Cmd sid="email_templates.preview" product="air" />.
+メールのロゴと内容をカスタマイズできます。 <Cmd sid='email_templates.preview' product='air' /> でリアルタイムに変更を確認できます。
 
 <Image src='/img/air/bsair-settings-email-add-style.png' />
 
-* <Cmd sid="email_templates.logo_image" product="air" />: Upload the logo image to appear in the email.
+* <Cmd sid='email_templates.logo_image' product='air' />：メールに表示するロゴ画像をアップロードします。
 
    :::note
 
-  * File types: JPG, JPEG, PNG
+  * ファイル形式: JPG、JPEG、PNG
 
-  * Minimum resolution: 200 x 60
+  * 最小解像度: 200 x 60
 
-  * File size: 1 MB or less
+  * ファイルサイズ: 1 MB以下
 
-   :::
+   ：：：
 
-* <Cmd sid="email_templates.title_text" product="air" />: Enter the email subject.
+* <Cmd sid='email_templates.title_text' product='air' />：メールの件名を入力します。
 
-* <Cmd sid="email_templates.body_text" product="air" />: Enter the message to display in the email body.
+* <Cmd sid='email_templates.body_text' product='air' />：メール本文に表示するメッセージを入力します。
 
    :::note
 
-   The email body must include HTML keys. Each key is replaced with the recipient's email address, the site name, and other values. Available keys may vary according to the value selected in <Cmd sid="email_templates.email_type" product="air" />.
+   メール本文にはHTMLキー（key）が含まれている必要があります。 キー（key）はそれぞれ受信者のメールアドレスやサイト名などに置き換えられます。 <Cmd sid='email_templates.email_type' product='air' />で選択した値によって使用できるキー（key）は異なる場合があります。
 
-  * **User** tab
+  * **ユーザー** タブ
 
-    * `${email}`: Email address
+    * `${email}`：メールアドレス
 
-    * `${siteName}`: Site name
+    * `${siteName}`：サイト名
 
-  * **Administrator** tab
+  * **管理者** タブ
 
-    * `${email}`: Email address
+    * `${email}`：メールアドレス
 
-    * `${siteName}`: Site name
+    * `${siteName}`：サイト名
 
-    * `${alertType}`: Alert type
+    * `${alertType}`：通知の種類
 
-    * `${alertDetails}`: Alert details
+    * `${alertDetails}`：通知の詳細
 
-    * `${frequency}`: Alert frequency
+    * `${frequency}`：通知の発生頻度
 
-    * `${location}`: Alert location
+    * `${location}`：通知が発生した場所
 
-    * `${userInvolved}`: User involved in the alert
+    * `${userInvolved}`：通知に関連するユーザー
 
-    * `${deviceInvolved}`: Device involved in the alert
+    * `${deviceInvolved}`：通知に関連するデバイス
 
-    * `${dateTime}`: Date and time of the alert
+    * `${dateTime}`：通知が発生した日時
 
-   :::
+   ：：：
 
-* <Cmd sid="email_templates.bottom_text" product="air" />: Enter additional information to appear at the bottom of the email. Add the company address or contact information for compliance or to provide location details to users.
+* <Cmd sid='email_templates.bottom_text' product='air' />：メール下部に表示する追加情報を入力します。 規制遵守のため、またはユーザーに場所の詳細を提供するために、会社の住所や連絡先情報を追加します。
 
 :::info
 
-* Verify that the logo image is in the proper format and size so that it appears correctly in the email.
+* ロゴ画像がメールで適切に表示されるよう、正しい形式とサイズであることを確認します。
 
-* If the current language is not supported, check future updates. More languages will be added.
+* 現在使用している言語がサポートされていない場合は、今後のアップデートを確認してください。 さらに多くの言語を追加する予定です。
 
-* The address field is important for regulatory compliance and clarity, so enter it accurately.
+* 住所欄は規制遵守と明確性のために重要なので、正確に入力してください。
 
-* Click <Cmd sid="save_btn" product="air" /> at the bottom to save the email template.
+* メールテンプレートを保存するには、下部の <Cmd sid='save_btn' product='air' /> をクリックします。
 
-* Click <Cmd sid="new_button_reset" product="air" /> at the bottom to restore the original content after making changes.
+* 既存の内容を変更した後に復元するには、下部の <Cmd sid='new_button_reset' product='air' /> をクリックします。
 
 :::
 
-## Edit email templates {#editEmailTemplate}
+## メールテンプレートの編集 {#editEmailTemplate}
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="email_templates.email_template_menu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='email_templates.email_template_menu' product='air' /> をクリックします。
 
-2. Click the email template you want to edit from the list. Alternatively, select the checkbox and click <IcAirEdit title='Edit' /> at the top.
+2. 一覧から編集するメールテンプレートをクリックします。 またはチェックボックスをクリックし、上部の <IcAirEdit title='Edit' /> ボタンをクリックしてください。
 
-3. When the <Cmd sid="email_templates.edit_email_template" product="air" /> panel appears, edit the necessary items.
+3. <Cmd sid='email_templates.edit_email_template' product='air' /> パネルが表示されたら、必要な項目を修正します。
 
    <Image src='/img/air/bsair-settings-email-edit.png' />
 
-4. Click <Cmd sid="save_btn" product="air" /> at the bottom to save the changes.
+4. 変更を保存するには、下部の <Cmd sid='save_btn' product='air' /> をクリックします。
 
-## Delete email templates {#deleteEmailTemplate}
+## メールテンプレートの削除 {#deleteEmailTemplate}
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="email_templates.email_template_menu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='email_templates.email_template_menu' product='air' /> をクリックします。
 
-2. Select the checkbox of the email template you want to delete from the list. You can select more than one template.
+2. 一覧で削除するメールテンプレートのチェックボックスをクリックします。 1つ以上のテンプレートを選択できます。
 
-3. Click <IcAirRemove /> at the top of the list.
+3. 一覧上部の<IcAirRemove /> をクリックします。
 
-4. Click <Cmd sid="btn_delete" product="air" /> when the message window appears.
+4. メッセージウィンドウが表示されたら、<Cmd sid='btn_delete' product='air' /> をクリックします。

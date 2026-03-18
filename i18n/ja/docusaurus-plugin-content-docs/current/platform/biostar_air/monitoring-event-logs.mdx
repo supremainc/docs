@@ -1,60 +1,60 @@
 ---
 id: monitoring-event-logs
-title: Use Event Logs
-description: This guide explains how to monitor and analyze event logs in BioStar Air, apply filters, export data, and track administrative activity.
+title: イベントログの使い方
+description: BioStar Airでイベントログを監視・分析し、フィルターの適用、データのエクスポート、管理操作の追跡方法について案内します。
 keywords:
-  - Monitoring
-  - Event Logs
+  - モニタリング
+  - イベントログ
   - BioStar Air
 ---
 
-One of the key advantages of a cloud access control platform is the ability to monitor site activity anytime, anywhere. This document explains how to monitor and analyze event logs in BioStar Air.
+クラウド出入管理プラットフォームの主な利点の一つは、いつでもどこでもサイト活動を監視できることです。 このドキュメントでは、BioStar Airでイベントログを監視および分析する方法について説明します。
 
 :::tip
 
-Watch the following video for a tutorial on event logs.
+イベントログの動画ガイドを視聴するには、以下の動画をご覧ください。
 
 <YouTube className='fit--content' videoId="nwIEYyK-uAg" />
 
 :::
 
-## View event logs
+## イベントログの確認
 
 <Tabs groupId='platform'>
 <TabItem value='web' label='Web'>
 
-Go to <Cmd sid='event_logs_submenu' product='air' /> to view event logs. Click <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' /> in the left sidebar. 
+イベントログを確認するには、<Cmd sid='event_logs_submenu' product='air' /> に移動します。 画面左のサイドバーで <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' /> をクリックします。 
 
 <Image src='/img/air/bsair-monitoring-eventlog-list.png' />
 
-The <Cmd sid="event_logs_submenu" product="air" /> screen shows a table with details including event time and name, door name, device alias, user type, and user name.
+<Cmd sid='event_logs_submenu' product='air' /> 画面にはイベント発生時間、イベント名、ドア名、デバイス名、ユーザータイプ、ユーザー名などの詳細を含むテーブル一覧が表示されます。
 
 </TabItem>
 <TabItem value='mobile' label='Mobile'>
 
-This guide explains how to check the event log in the mobile app.
+モバイルアプリでイベントログを確認する方法について説明します。
 
 <Image src='/img/air/bsair-mobile-monitoring-eventlog.png' className='none' />
 
-1. Open the BioStar Air app on your mobile device and log in.
+1. モバイル端末でBioStar Airアプリを起動してログインします。
 
-2. Tap <Cmd sid='monitoring_menu' product='air' /> at the bottom of the home screen.
+2. 初期画面の下部にある <Cmd sid='monitoring_menu' product='air' /> をタップします。
 
-3. Tap the <Cmd sid='event_logs_submenu' product='air' /> card.
+3. <Cmd sid='event_logs_submenu' product='air' /> カードをタップします。
 
-4. Scroll through the event log list to view its contents.
+4. イベントログ一覧をスクロールして内容を確認できます。
 
 :::info
 
-* <Cmd sid='logs_filters_action_btn' product='air' />: Filter event logs.
+* <Cmd sid='logs_filters_action_btn' product='air' />：イベントログをフィルタリングできます。
 
-* <IcSearch width='20' height='20' title='Search' />: Search by specific keywords. Enter one of the following: RF card ID, user ID, email, or name.
+* <IcSearch width='20' height='20' title='Search' />：特定のキーワードを検索できます。 RFカードID、ユーザーID、メールアドレス、氏名のいずれかを入力します。
 
-* <IcAirReportApp width="20" height="20" title="Report" />: Generate reports. For more information on report creation, refer to <DocLink inner='#generatingReports' />.
+* <IcAirReportApp width='20' height='20' title='Report' />：レポートを作成できます。 レポート作成に関する詳細については、<DocLink inner='#generatingReports' />を参照してください。
 
-* <IcAirDown width="20" height="20" title="Download" />: Download reports as CSV or PDF files.
+* <IcAirDown width='20' height='20' title='Download' />：レポートをCSVまたはPDF形式でダウンロードできます。
 
-* <IcAirMask width="20" height="20" title="Apply Masking" />: Apply personal data masking.
+* <IcAirMask width='20' height='20' title='Apply Masking' />：個人情報のマスキングを適用できます。
 
 :::
 
@@ -63,96 +63,96 @@ This guide explains how to check the event log in the mobile app.
 
 ## <Cmd sid='column_filter_modal_title' product='air' className='normal' />
 
-Customize table columns to show or hide information. Reorder columns to place frequently used ones at the front. Click the <IcAirColumn title='Customize' /> button at the top of the event log list. The <Cmd sid="column_filter_modal_title" product="air" /> window appears.
+テーブルの列をカスタマイズして、表示または非表示にする情報を選択できます。 順序を変更して、よく使う列を前方に配置することもできます。 イベントログ一覧の上部にある <IcAirColumn title='Customize' /> をクリックしてください。 <Cmd sid='column_filter_modal_title' product='air' /> ウィンドウが表示されます。
 
 <Image src='/img/air/bsair-monitoring-eventlog-list-custom-table.png' />
 
-* Select or clear the checkboxes for columns to show or hide.
+* 表示または非表示にする列のチェックボックスを選択または解除します。
 
-* To reorder columns, click and drag a column to the desired position.
+* 列の順序を変更するには、該当する列をクリックしたまま目的の位置にドラッグします。
 
-* Click <Cmd sid="column_filter_modal_save_btn" product="air" /> to save the <Cmd sid="column_filter_modal_title" product="air" /> settings.
+* <Cmd sid='column_filter_modal_title' product='air' /> を保存するには、<Cmd sid='column_filter_modal_save_btn' product='air' /> をクリックします。
 
-* Click <Cmd sid="column_filter_modal_apply_btn" product="air" /> to apply <Cmd sid="column_filter_modal_title" product="air" /> to the log list without saving.
+* <Cmd sid='column_filter_modal_title' product='air' /> を保存せずにログ一覧に適用するには、<Cmd sid='column_filter_modal_apply_btn' product='air' /> をクリックします。
 
-* Click <Cmd sid='column_filter_modal_reset_btn' product='air' /> to cancel the changes in <Cmd sid='column_filter_modal_title' product='air' /> and restore the initial state.
+* <Cmd sid='column_filter_modal_title' product='air' /> の変更を取り消して初期状態に戻すには、<Cmd sid='column_filter_modal_reset_btn' product='air' /> をクリックします。
 
 :::info
 
-* When you click <Cmd sid="column_filter_modal_save_btn" product="air" />, the settings remain even after navigating to another menu. When you click <Cmd sid='column_filter_modal_apply_btn' product='air' />, the changes apply only to the current list and revert after you leave the page.
+* <Cmd sid='column_filter_modal_save_btn' product='air' /> をクリックすると設定が保存され、他のメニューに移動しても保持されます。 <Cmd sid='column_filter_modal_apply_btn' product='air' /> をクリックすると変更は現在の一覧にのみ適用され、他のメニューに移動すると以前の設定に戻ります。
 
-* <Cmd sid="audit_logs_submenu" product="air" /> does not support the <Cmd sid="column_filter_modal_title" product="air" /> feature.
+* <Cmd sid='audit_logs_submenu' product='air' /> では <Cmd sid='column_filter_modal_title' product='air' /> 機能はサポートされていません。
 
 :::
 
-## Filter logs {#filtering-event-logs}
+## ログのフィルタリング {#filtering-event-logs}
 
-Filter logs to quickly find the information you need. Click <IcAirLogfilter width='20' height='20' title='Filters' /> at the top of the log list. When the <Cmd sid="logs_filters_action_btn" product="air" /> window appears, select the desired value for each item.
+ログをフィルタリングして、目的の情報を素早く見つけることができます。 ログ一覧の上部にある <IcAirLogfilter width='20' height='20' title='Filters' /> をクリックしてください。 <Cmd sid='logs_filters_action_btn' product='air' /> ウィンドウが表示されたら、各項目で希望の値を選択します。
 
 <Image src='/img/air/bsair-monitoring-eventlog-list-filter.png' />
 
 :::info
 
-* Click <Cmd sid="column_filter_modal_save_btn" product="air" /> or <Cmd sid="filters_action2" product="air" /> to save the settings so they remain after navigating to another menu. Click <Cmd sid='column_filter_modal_apply_btn' product='air' /> or <Cmd sid='filters_action3' product='air' /> to apply the changes only to the current list; they will revert when you navigate away.
+* <Cmd sid='column_filter_modal_save_btn' product='air' /> または <Cmd sid='filters_action2' product='air' /> をクリックすると設定が保存され、他のメニューに移動しても保持されます。 <Cmd sid='column_filter_modal_apply_btn' product='air' /> または <Cmd sid='filters_action3' product='air' /> をクリックすると変更は現在の一覧にのみ適用され、他のメニューに移動すると以前の設定に戻ります。
 
-* <Cmd sid='column_filter_modal_reset_btn' product='air' /> or <Cmd sid='filters_action1' product='air' /> to cancel the changes and return to the initial state.
+* <Cmd sid='column_filter_modal_reset_btn' product='air' /> または <Cmd sid='filters_action1' product='air' /> をクリックして変更を取り消し、初期状態に戻します。
 
 :::
 
-## Configure reports {#generatingReports}
+## レポート設定 {#generatingReports}
 
-Generate reports for events that occurred during a specific period by filtering log data.
+ログデータをフィルタリングして、特定の期間に発生したイベントのレポートを生成できます。
 
-1. Click the <IcAirReport width="20" height="20" title="Report" /> button at the top of the log list.
+1. ログ一覧の上部にある <IcAirReport width='20' height='20' title='Report' /> をクリックします。
 
-2. When the <Cmd sid="report_popup_title" product="air" /> window appears, enter a report name.
+2. <Cmd sid='report_popup_title' product='air' /> ウィンドウが表示されたら、レポート名を入力します。
 
    <Image src='/img/air/bsair-monitoring-eventlog-report-setting.png' />
 
-3. Select the items to include in the report.
+3. レポートに含める項目を選択します。
 
-4. Click <Cmd sid="report_form_text_add" product="air" /> to save the configured report.
+4. <Cmd sid='report_form_text_add' product='air' /> をクリックして設定したレポートを保存します。
 
-5. A report is created with the name set in <Cmd sid="report_form_text_title" product="air" />.
+5. <Cmd sid='report_form_text_title' product='air' /> に指定した名前でレポートが作成されます。
 
    <Image src='/img/air/bsair-monitoring-eventlog-report-added.png' />
 
-6. To download the generated report, click the <IcAirDown width="20" height="20" title="Download" /> button next to the report name.
+6. 作成されたレポートをダウンロードするには、レポート名の横にある <IcAirDown width='20' height='20' title='Download' /> をクリックします。
 
-7. When the <Cmd sid="report_download_popup_title" product="air" /> window appears, select the period to query events and click <Cmd sid="report_download_popup_button_title" product="air" />.
+7. <Cmd sid='report_download_popup_title' product='air' /> ウィンドウが表示されたら、イベントを照会する期間を選択し、<Cmd sid='report_download_popup_button_title' product='air' /> をクリックします。
 
    <Image src='/img/air/bsair-monitoring-eventlog-report-download.png' />
 
-A download link is sent to the administrator's email.
+管理者のメールアドレスにダウンロードリンクが送信されます。
 
 :::info
 
-<Cmd sid="report_form_text_title" product="air" /> lets you search for, edit, download, or delete the reports created.
+<Cmd sid='report_form_text_title' product='air' /> で作成したレポートを検索、編集、ダウンロード、削除できます。
 
 :::
 
-## Mask personal data {#dataMasking}
+## 個人情報のマスキング {#dataMasking}
 
-Mask personal data in logs to protect sensitive information. When personal data masking is enabled, information such as user names, email addresses, and phone numbers is partially hidden.
+ログ内の個人情報をマスキングして、機密情報を保護できます。 個人情報のマスキングを有効にすると、ユーザー名、メールアドレス、電話番号などの情報が部分的に隠されます。
 
-To enable personal data masking, click the <IcAirMask width="20" height="20" title="Apply Masking" /> button at the top of the log list. In the pop-up menu, enable <Cmd sid="apply_masking_title" product="air" /> and click <Cmd sid="save_btn" product="air" />.
+個人情報のマスキングを有効にするには、ログ一覧の上部にある <IcAirMask width='20' height='20' title='Apply Masking' /> をクリックします。 ポップアップメニューで <Cmd sid='apply_masking_title' product='air' /> オプションを有効にし、<Cmd sid='save_btn' product='air' /> をクリックします。
 
 <Image src='/img/air/bsair-monitoring-eventlog-apply-masking.png' />
 
-## Other features
+## その他の機能
 
-Use the toolbar at the top of the log list to manage logs more efficiently.
+ログ一覧の上部にあるツールバーを使用して、ログをより効率的に管理できます。
 
-* To sort logs by date, select a date and time range, then click <Cmd sid="column_filter_modal_apply_btn" product="air" />. Click <Cmd sid="column_filter_modal_reset_btn" product="air" /> to reset the date.
+* ログを日付で並べ替えるには、日付と時間の範囲を選択してから <Cmd sid='column_filter_modal_apply_btn' product='air' /> をクリックします。 日付をリセットするには、<Cmd sid='column_filter_modal_reset_btn' product='air' /> をクリックします。
 
   <Image src='/img/air/bsair-monitoring-eventlog-set-datetime.png' />
 
-* In the <Cmd sid="search_placeholder" product="air" /> input field, enter specific keywords to search logs. Enter one of the following: RF card ID, user ID, email, or name.
+* <Cmd sid='search_placeholder' product='air' /> 入力フィールドに特定のキーワードを入力してログを検索できます。 RFカードID、ユーザーID、メールアドレス、氏名のいずれかを入力します。
 
-* Click <IcAirDown width="20" height="20" title="Export" /> to save logs as a CSV or PDF file.
+* ログをCSVまたはPDFファイルとして保存するには、<IcAirDown width='20' height='20' title='Export' /> をクリックします。
 
-* Click <IcAirRef width="20" height="20" title="Refresh" /> at the top of the list to refresh logs.
+* ログを更新するには、一覧の上部にある <IcAirRef width='20' height='20' title='Refresh' /> をクリックします。
 
-* To refresh at a specific interval, select 5 seconds or 1 minute in <Cmd sid="auto_refresh_btn" product="air" /> at the bottom left of the list.
+* 特定の間隔で自動更新するには、一覧の左下にある <Cmd sid='auto_refresh_btn' product='air' /> で5秒または1分を選択します。
 
   <Image src='/img/air/bsair-monitoring-eventlog-auto-refresh.png' />

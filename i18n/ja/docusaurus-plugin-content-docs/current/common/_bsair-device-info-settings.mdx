@@ -1,78 +1,78 @@
 ### <Cmd sid='new_layout_nav_title_detail' product='air' className='normal' /> {#deviceInfo}
 
-The <Cmd sid='new_layout_nav_title_detail' product='air' /> section provides basic information — such as the device name, model, serial number, and firmware version — and includes an action menu for controlling features and default settings.
+<Cmd sid='new_layout_nav_title_detail' product='air' /> セクションでは、デバイスの名前、モデル名、シリアル番号、ファームウェアバージョンなどの基本情報と、機能を操作するアクションメニューや基本設定オプションが表示されます。
 
-#### Basic Information
+#### 基本情報
 
-View the device's basic information. This information cannot be edited.
+デバイスの基本情報を確認できます。 この情報は編集できません。
 
-* <Cmd sid='device_non_editable_fields_product' product='air' />: The product name.
+* <Cmd sid='device_non_editable_fields_product' product='air' />：デバイスの製品名です。
 
-* <Cmd sid='device_non_editable_fields_model' product='air' />: The device's model name.
+* <Cmd sid='device_non_editable_fields_model' product='air' />：デバイスのモデル名です。
 
-* <Cmd sid='device_non_editable_fields_serial' product='air' />: The device's serial number.
+* <Cmd sid='device_non_editable_fields_serial' product='air' />：デバイスのシリアル番号です。
 
-* <Cmd sid='device_non_editable_fields_firmware' product='air' />: The firmware version installed on the device.
+* <Cmd sid='device_non_editable_fields_firmware' product='air' />：デバイスにインストールされているファームウェアのバージョンです。
 
-#### Actions
+#### アクション機能
 
-The **Action** (액션) feature lets you control the device's functions.
+デバイスの機能を制御できる**アクション**（Action）機能です。
 
 <Image src='/img/air/bsair-device-mng-edit-actions.png' />
 
-* <Cmd sid='firmware_update_btn' product='air' />: Update the device firmware to the latest version.
+* <Cmd sid='firmware_update_btn' product='air' />：デバイスのファームウェアを最新バージョンに更新できます。
 
-* <Cmd sid='device_edit_actions_reboot' product='air' />: Reboot the device remotely when an issue or anomaly occurs.
+* <Cmd sid='device_edit_actions_reboot' product='air' />：デバイスに問題や異常が発生した場合、リモートで再起動できます。
 
-* <Cmd sid='device_edit_actions_factory_reset' product='air' />: Initialize all settings stored on the device. This action deletes all settings and data on the device.
+* <Cmd sid='device_edit_actions_factory_reset' product='air' />：デバイスに保存されているすべての設定を初期化します。 この操作を実行すると、デバイスのすべての設定とデータが削除されます。
 
-* <Cmd sid='device_edit_actions_factory_reset' product='air' /> <Cmd sid='device_edit_actions_excluding_network' product='air' />: Initialize all settings except the network settings. This action deletes all settings and data but keeps the network settings.
+* <Cmd sid='device_edit_actions_factory_reset' product='air' /> <Cmd sid='device_edit_actions_excluding_network' product='air' />：ネットワーク設定を除くすべての設定を初期化します。 この操作を実行すると、デバイスのすべての設定とデータが削除されますが、ネットワーク設定は保持されます。
 
-#### Initial Settings
+#### 基本設定
 
-Modify the device's default settings.
+デバイスの基本設定を変更できます。
 
-* <Cmd sid='device_editable_fields_nick_name' product='air' />: The alias shown in the device list and logs. You can edit this field directly.
+* <Cmd sid='device_editable_fields_nick_name' product='air' />：デバイス一覧およびログに表示されるデバイスの別名です。 直接編集できます。
 
-* <Cmd sid='device_editable_fields_timezone' product='air' />: Set the device time zone to keep logs consistent when the site and device clocks differ. Activate the <Cmd sid='device_field_dst_usage' product='air' /> option to apply daylight saving time (DST).
+* <Cmd sid='device_editable_fields_timezone' product='air' />：サイトとデバイスの時計が異なる場合にログを一貫して保つために、デバイスのタイムゾーンを設定します。 サマータイム（Daylight Saving Time、DST）を適用するには、<Cmd sid='device_field_dst_usage' product='air' /> オプションを有効にします。
 
 <Include type={props.type} ref='xpass2'>
 
-* <Cmd sid='keypad_use_rf_card_number' product='air' />: Enter the RF card number using the keypad to use it.
+* <Cmd sid='keypad_use_rf_card_number' product='air' />：RFカード番号をキーパッドで入力して使用できます。
 
    :::note
 
-   This feature is supported only on the **XP2-GKDPB** model, which has a keypad.
+   この機能はキーパッドをサポートする**XP2-GKDPB**モデルのみで利用できます。
 
-   :::
+   ：：：
 
 </Include>
 
-* <Cmd sid='device_editable_fields_hands_free' product='air' />: Extend the BLE range.
+* <Cmd sid='device_editable_fields_hands_free' product='air' />：BLEの範囲を拡張できます。
 
 <Include type={props.type} ref='ae-mc,xpass2,xs2'>
 
-* <Cmd sid='device_editable_fields_qr_reader' product='air' />: Confirm that an RS-485 QR reader is connected to the device.
+* <Cmd sid='device_editable_fields_qr_reader' product='air' />：デバイスにRS‑485のQRリーダーが接続されていることを確認できます。
 
    :::note
 
-  * When a QR reader is connected to the device, you cannot use another RS-485 device.
+  * QRリーダーを該当デバイスと接続して使用する場合、他のRS-485デバイスを使用できません。
 
-  * When using an SIO2, you cannot use a QR reader on the device connected to that door.
+  * SIO2を使用する場合、その出入り口に接続されているデバイスでQRリーダーを使用できません。
 
-   :::
+   ：：：
 
 </Include>
 
 <Include type={props.type} ref='ae-mc,xs2'>
 
-* <Cmd sid='device_editable_fields_card' product='air' />: Activate or deactivate card authentication. DESFire and Felica card formats are supported.
+* <Cmd sid='device_editable_fields_card' product='air' />：カード認証を有効または無効にできます。 DESFire、Felicaカード形式をサポートしています。
 
 </Include>
 
 <Include type={props.type} ref='ae-mc,xpass2'>
 
-* <Cmd sid='device_editable_fields_beep_setting' product='air' />: Configure the success beep for access authentication.
+* <Cmd sid='device_editable_fields_beep_setting' product='air' />：入退室認証成功時の通知音を設定できます。
 
 </Include>
 
@@ -82,11 +82,11 @@ Modify the device's default settings.
 
 ### <Cmd sid='device_card_title' product='air' className='normal' /> {#cardSettings}
 
-In the <Cmd sid='device_card_title' product='air' /> section, you can modify card authentication settings.
+<Cmd sid='device_card_title' product='air' /> セクションでは、カード認証に関する設定を変更できます。
 
 #### <Cmd sid='device_editable_fields_card' product='air' className='normal' /> {#nfcRfcard}
 
-* <Cmd sid='device_editable_fields_card' product='air' />: Click the toggle switch to enable or disable card access authentication. Select the card types supported for card authentication.
+* <Cmd sid='device_editable_fields_card' product='air' />：トグルスイッチをクリックしてカードによる入退室認証をオンまたはオフにできます。 カード認証に対応するカードの種類を選択してください。
 
   * <Cmd sid='device_editable_fields_card_em4100' product='air' />
 
@@ -94,27 +94,27 @@ In the <Cmd sid='device_card_title' product='air' /> section, you can modify car
 
 * <Cmd sid='device_editable_fields_card_byte_order' product='air' />
 
-  * <Cmd>MSB</Cmd>: Processes card data in order from large byte units to small byte units, sequentially storing the card serial number (CSN) from left to right.
+  * <Cmd>MSB</Cmd>：カードデータを処理するとき、大きいバイト単位から小さいバイト単位の順に処理し、カードシリアル番号 (CSN) を左から右へ順に保存します。
 
-  * <Cmd>LSB</Cmd>: Processes card data in order from small byte units to large byte units, storing the card serial number (CSN).
+  * <Cmd>LSB</Cmd>：カードデータを処理するとき、小さいバイト単位から大きいバイト単位の順に処理してカードシリアル番号 (CSN) を保存します。
 
-* <Cmd sid='device_card_field_data_reading_method' product='air' />: Select CSN (default) or Wiegand format.
+* <Cmd sid='device_card_field_data_reading_method' product='air' />：CSN（デフォルト）または Wiegand 形式を選択できます。
 
    :::note
 
-   Wiegand supports 5 default formats. Add more formats in <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' />. For more information about custom card format settings, see <DocLink docId='platform/biostar_air/custom-wiegand-card-formats' />.
+   Wiegand形式には5つの基本形式が含まれています。 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' /> で、さらに多くの形式を追加できます。 カスタムカード形式の設定の詳細は <DocLink docId='platform/biostar_air/custom-wiegand-card-formats' /> を参照してください。
 
-   :::
+   ：：：
 
 #### <Cmd sid='device_card_wiegand_card' product='air' className='normal' /> {#device_card_wiegand_card}
 
-For Wiegand cards, you can select <Cmd sid='device_card_wiegand_card_iclass' product='air' /> and <Cmd sid='device_card_wiegand_card_hid_prox' product='air' />. Click the toggle to enable the feature, then select the desired card format in <Cmd sid='device_card_wiegand_card' product='air' />.
+Wiegandカードとして、<Cmd sid='device_card_wiegand_card_iclass' product='air' /> と <Cmd sid='device_card_wiegand_card_hid_prox' product='air' /> のカードを選択できます。 トグルスイッチをクリックして機能を有効にした後、<Cmd sid='device_card_wiegand_card' product='air' />で希望するカード形式を選択してください。
 
 :::info
 
-* Support may vary by device.
+* この機能はデバイスによってサポートされない場合があります。
 
-* Wiegand supports 5 default formats. Add more formats in <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' />. For more information about custom card format settings, see <DocLink docId='platform/biostar_air/custom-wiegand-card-formats' />.
+* Wiegand形式には5つの基本形式が含まれています。 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' /> で、さらに多くの形式を追加できます。 カスタムカード形式の設定の詳細は <DocLink docId='platform/biostar_air/custom-wiegand-card-formats' /> を参照してください。
 
 :::
 
@@ -124,11 +124,11 @@ For Wiegand cards, you can select <Cmd sid='device_card_wiegand_card_iclass' pro
 
 ### <Cmd sid='new_layout_nav_title_network' product='air' className='normal ' /> {#network}
 
-Modify the device's network settings.
+デバイスのネットワーク設定を変更できます。
 
-* <Cmd sid='device_editable_fields_use_dhcp' product='air' />: Configure the device to obtain an IP address automatically.
+* <Cmd sid='device_editable_fields_use_dhcp' product='air' />：デバイスがIPアドレスを自動的に取得するように設定できます。
 
-   To set the network manually, disable <Cmd sid='device_editable_fields_use_dhcp' product='air' /> and fill in the following fields.
+   ネットワーク設定を手動で構成するには、<Cmd sid='device_editable_fields_use_dhcp' product='air' /> オプションを無効にして次のフィールドに入力します。
 
 * <Cmd sid='device_editable_fields_ip_address' product='air' />
 
@@ -146,49 +146,49 @@ Modify the device's network settings.
 
 <Include type={props.type} ref='xpass2'>
 
-* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />: Add authentication methods. Click <Cmd sid='add_btn' product='air' /> to add an authentication method.
+* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />：認証方式を追加できます。 <Cmd sid='add_btn' product='air' /> をクリックして認証方式を追加してください。
 
-  * **XP2-MDPB** / **XP2-GDPB**: Only RF cards can be selected as the authentication method.
+  * **XP2-MDPB** / **XP2-GDPB**：認証方式としてRFカードのみを選択できます。
 
-  * **XP2-GKDPB**: You can use a combination of an RF card and a PIN as the authentication method.
+  * **XP2-GKDPB**：認証方式としてRFカードとPINを組み合わせて選択できます。
 
 </Include>
 
 <Include type={props.type} ref='bew3'>
 
-* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />: Add authentication methods. Click <Cmd sid='add_btn' product='air' /> to add an authentication method. You can use a combination of an RF card and facial recognition as the authentication method.
+* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />：認証方式を追加できます。 <Cmd sid='add_btn' product='air' /> をクリックして認証方式を追加してください。 認証方式としてRFカードと顔認証を組み合わせて選択できます。
 
 </Include>
 
 <Include type={props.type} ref='bs3'>
 
-* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />: Add authentication methods. Click <Cmd sid='add_btn' product='air' /> to add an authentication method. You can choose a combination of RF card, face, ID, and PIN for authentication.
+* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />：認証方式を追加できます。 <Cmd sid='add_btn' product='air' /> をクリックして認証方式を追加してください。 認証方式として、RFカード、顔認証、ID、PINを組み合わせて選択できます。
 
 </Include>
 
 <Include type={props.type} ref='bs3'>
 
-* <Cmd sid='device_bs3_authen_display_user_name' product='air' /> / <Cmd sid='device_bs3_authen_display_user_id' product='air' />: Choose whether to show the user name or ID on the authentication screen. Select <Cmd sid='device_bs3_authen_display_user_name_txt3' product='air' /> to hide them.
+* <Cmd sid='device_bs3_authen_display_user_name' product='air' /> / <Cmd sid='device_bs3_authen_display_user_id' product='air' />：認証画面にユーザー名またはIDを表示するかどうかを選択できます。 画面に表示しないように設定するには、<Cmd sid='device_bs3_authen_display_user_name_txt3' product='air' /> オプションを選択します。
 
-* <Cmd sid='new_layout_nav_title_authentication_auth_timeout' product='air' />: Authentication fails if the credential is not authenticated within the set time.
+* <Cmd sid='new_layout_nav_title_authentication_auth_timeout' product='air' />：設定した時間内にクレデンシャルを認証できない場合、認証は失敗します。
 
 </Include>
 
 <Include type={props.type} ref='xpass2'>
 
-* <Cmd sid='new_layout_nav_title_authentication_auth_timeout' product='air' />: Authentication fails if the credential is not authenticated within the set time.
+* <Cmd sid='new_layout_nav_title_authentication_auth_timeout' product='air' />：設定した時間内にクレデンシャルを認証できない場合、認証は失敗します。
 
    :::note
 
-   This feature is supported only on the **XP2-GKDPB** model.
+   この機能は **XP2-GKDPB** モデルでのみ利用できます。
 
-   :::
+   ：：：
 
 </Include>
 
 :::info
 
-You can configure different authentication methods for the selected schedule. For example, you can allow card-only authentication during work hours and allow card-and-PIN authentication outside work hours.
+選択したスケジュールに応じて認証方式を個別に設定できます。 例えば、勤務時間中はカード認証のみを許可し、勤務時間外はカードとPINの組み合わせを許可できます。
 
 :::
 
@@ -202,49 +202,49 @@ You can configure different authentication methods for the selected schedule. Fo
 
 #### <Cmd sid='site_setting_tab_security' product='air' className='normal' /> {#faceSecurity}
 
-* <Cmd sid="new_layout_device_bew3_block_7_title" product="air" />: Prevent user authentication with spoofed faces such as photos.
+* <Cmd sid='new_layout_device_bew3_block_7_title' product='air' />：写真などの偽造顔を用いたユーザー認証を防止できます。
 
-* <Cmd sid="new_layout_device_bew3_block_7_text2" product="air" />: Check for duplicate registrations when enrolling facea.
+* <Cmd sid='new_layout_device_bew3_block_7_text2' product='air' />：顔を登録する際に重複登録をチェックできます。
 
 #### <Cmd sid='device_face_detection' product='air' className='normal' /> {#faceDetection}
 
-* <Cmd sid="new_layout_device_bew3_block_2_title" product="air" />: Set the sensitivity for detecting movement around the device.
+* <Cmd sid='new_layout_device_bew3_block_2_title' product='air' />：デバイス周囲の動きを検知する感度を設定します。
 
-* <Cmd sid="new_layout_device_bew3_block_3_title" product="air" />: Set the maximum rotation angle allowed for a face.
+* <Cmd sid='new_layout_device_bew3_block_3_title' product='air' />：許容される顔の最大回転角度を設定します。
 
-* <Cmd sid='new_layout_device_bew3_block_5_title' product='air' />: Expand the area in the camera view where faces are recognized.
+* <Cmd sid='new_layout_device_bew3_block_5_title' product='air' />：カメラ映像全体で顔を認識する範囲を広げることができます。
 
-* <Cmd sid='new_layout_device_bew3_block_4_title' product='air' /> <Cmd sid='new_layout_device_bew3_block_4_title_cm' product='air' />: Set the minimum and maximum recognition distance.
+* <Cmd sid='new_layout_device_bew3_block_4_title' product='air' /> <Cmd sid='new_layout_device_bew3_block_4_title_cm' product='air' />：顔を認識する最小および最大距離を設定します。
 
-* <Cmd sid='new_layout_device_bew3_block_8_title' product='air' /> <Cmd sid='new_layout_device_bew3_block_8_title_cm' product='air' />: If a face is not enrolled within the set time during enrollment, the process is canceled.
+* <Cmd sid='new_layout_device_bew3_block_8_title' product='air' /> <Cmd sid='new_layout_device_bew3_block_8_title_cm' product='air' />：ユーザーの顔を登録する際、設定した時間内に登録できないと顔登録がキャンセルされます。
 
 #### <Cmd sid='new_layout_device_bew3_block_8_1_text' product='air' className='normal' /> {#maskDetection}
 
-Activate the <Cmd sid='new_layout_device_bew3_block_8_1_text' product='air' /> option to configure mask detection.
+マスク検出機能を設定するには、<Cmd sid='new_layout_device_bew3_block_8_1_text' product='air' /> オプションを有効にします。
 
-* <Cmd sid="new_layout_device_bew3_block_8_2_text" product="air" />: Select mask detection sensitivity.
+* <Cmd sid='new_layout_device_bew3_block_8_2_text' product='air' />：マスク検出感度を選択します。
 
 * <Cmd sid='new_layout_device_bew3_block_8_3_text' product='air' />
 
-  * <Cmd sid="new_layout_device_bew3_block_8_3_value1" product="air" />: Users not wearing a mask are denied authentication, and a mask-non-compliance event log is recorded.
+  * <Cmd sid='new_layout_device_bew3_block_8_3_value1' product='air' />：マスク未着用のユーザーは認証が拒否され、マスク未着用イベントがログに記録されます。
 
-  * <Cmd sid="new_layout_device_bew3_block_8_3_value2" product="air" />: Users not wearing a mask can still authenticate, but a mask-non-compliance event log is recorded.
+  * <Cmd sid='new_layout_device_bew3_block_8_3_value2' product='air' />：マスク未着用のユーザーも認証できますが、マスク未着用イベントがログに記録されます。
 
-* <Cmd sid="new_layout_device_bew3_block_8_4_text" product="air" />
+* <Cmd sid='new_layout_device_bew3_block_8_4_text' product='air' />
 
-  * <Cmd sid="new_layout_device_bew3_block_8_4_value1" product="air" />: After authentication, check mask usage or measure temperature.
+  * <Cmd sid='new_layout_device_bew3_block_8_4_value1' product='air' />：認証を実行した後にユーザーのマスク着用を確認するか、体温を測定します。
 
-  * <Cmd sid="new_layout_device_bew3_block_8_4_value2" product="air" />: Check mask usage or measure temperature before authentication. In this case, users not wearing a mask or exceeding the threshold temperature cannot authenticate.
+  * <Cmd sid='new_layout_device_bew3_block_8_4_value2' product='air' />：ユーザーのマスク着用を確認するか体温を測定した後に認証を実行します。 この場合、マスクを着用していない、または基準温度を超えているユーザーは認証できません。
 
-  * <Cmd sid="new_layout_device_bew3_block_8_4_value3" product="air" />: Use the device only to check mask usage or measure temperature. Users wearing a mask or having a temperature below the threshold can enter regardless of authentication.
+  * <Cmd sid='new_layout_device_bew3_block_8_4_value3' product='air' />：デバイスをマスク着用の確認または体温測定専用としてのみ使用できます。 この場合、認証に関係なく、マスクを着用しているか基準温度以下のユーザーはすべて入場できます。
 
-* <Cmd sid='bs3_qr_barcode_toogle1' product='air' />: Set whether to allow QR/barcode authentication via the device's camera.
+* <Cmd sid='bs3_qr_barcode_toogle1' product='air' />：デバイスのカメラによるQR/バーコード認証の使用可否を設定できます。
 
-* <Cmd sid='bs3_qr_barcode_toogle2' product='air' />: Set authentication to accept a QR code containing the same data as the CSN card or Wiegand card issued to the user. This feature is available when the <Cmd sid='bs3_qr_barcode_toogle1' product='air' /> option is enabled.
+* <Cmd sid='bs3_qr_barcode_toogle2' product='air' />：付与したCSNカードまたはWiegandカードと同じデータを持つQRコードで認証できるように設定できます。 この機能を使用するには、<Cmd sid='bs3_qr_barcode_toogle1' product='air' /> オプションを有効にする必要があります。
 
 :::info
 
-When using non-face credentials, the timing of "before" and "after" is usually important.
+顔以外のクレデンシャルを使用する際は、主に「前」と「後」が重要です。
 
 :::
 
@@ -252,43 +252,43 @@ When using non-face credentials, the timing of "before" and "after" is usually i
 
 ---
 
-### <Cmd sid='new_layout_nav_title_tna' product='air' className='normal' /> (Time & Attendance, T&A) {#tna}
+### <Cmd sid='new_layout_nav_title_tna' product='air' className='normal' />(Time & Attendance, T&A) {#tna}
 
-When this feature is enabled, <Cmd sid='device_edit_tna_event_label' product='air' className='bold' /> is logged in **Event Log** and used in <Cmd sid='tna_report' product='air' className='bold' />.
+この機能を有効にすると、<Cmd sid='device_edit_tna_event_label' product='air' className='bold' /> が **イベントログ** に記録され、<Cmd sid='tna_report' product='air' className='bold' /> に使用されます。
 
-* <Cmd sid='new_device_edit_tna_toogle' product='air' />: Click the toggle switch to turn attendance management on or off.
+* <Cmd sid='new_device_edit_tna_toogle' product='air' />：トグルスイッチをクリックして勤怠管理機能をオンまたはオフにできます。
 
-* <Cmd sid='device_edit_tna_mode_label' product='air' />: Select the desired attendance mode.
+* <Cmd sid='device_edit_tna_mode_label' product='air' />：希望する勤怠モードを選択します。
 
   <Include type={props.type} ref='bs3'>
 
-  * <Cmd sid='device_edit_tna_mode_option2' product='air' />: When the attendance key appears on the screen, the user selects the attendance event during authentication.
+  * <Cmd sid='device_edit_tna_mode_option2' product='air' />：画面に勤怠キーを表示し、認証時にユーザーが勤怠イベントを選択できます。
 
   </Include>
 
   <Include type={props.type} ref='ae-mc,xpass2,bew3,bs3,xs2'>
 
-  * <Cmd sid="device_edit_tna_mode_option3" product="air" />: Attendance events change automatically according to the set schedule. You can select a schedule to apply to attendance events.
+  * <Cmd sid='device_edit_tna_mode_option3' product='air' />：設定したスケジュールに従って勤怠イベントが自動で切り替わります。 勤怠イベントに適用するスケジュールを選択できます。
 
   </Include>
 
   <Include type={props.type} ref='bs3'>
 
-  * <Cmd sid="device_edit_tna_mode_option4" product="air" />: The user continues to use the last selected attendance event.
+  * <Cmd sid='device_edit_tna_mode_option4' product='air' />：ユーザーが最後に使用した勤怠イベントを継続して使用できます。
 
   </Include>
 
   <Include type={props.type} ref='ae-mc,xpass2,bew3,bs3,xs2'>
 
-  * <Cmd sid="device_edit_tna_mode_option5" product="air" />: Only the selected attendance event is available.
+  * <Cmd sid='device_edit_tna_mode_option5' product='air' />：選択した勤怠イベントのみを使用できます。
 
-  * <Cmd sid='device_edit_tna_mode_option6' product='air' />: When presenting a mobile credential, the Suprema Pass app lets the user select the attendance event.
+  * <Cmd sid='device_edit_tna_mode_option6' product='air' />：モバイルクレデンシャルを提示する際、Suprema Passアプリで勤怠イベントを選択できます。
 
   </Include>
 
 :::info
 
-For more information on configuring time and attendance, see <DocLink docId='platform/biostar_air/configuring-ta' />.
+勤怠管理の構成に関する詳細は <DocLink docId='platform/biostar_air/configuring-ta' /> を参照してください。
 
 :::
 
@@ -300,35 +300,35 @@ For more information on configuring time and attendance, see <DocLink docId='pla
 
 #### <Cmd sid='device_bs3_sound_label2' product='air' className='normal' /> {#device_bs3_sound_label2}
 
-* <Cmd sid='device_bs3_sound_label3' product='air' />: Reduce LCD brightness when the device is not in use to lower unnecessary power consumption.
+* <Cmd sid='device_bs3_sound_label3' product='air' />：デバイスを使用していないときに LCD 画面の明るさを下げて不要な電力消費を削減できます。
 
-* <Cmd sid='device_bs3_sound_label4' product='air' />: Keep the backlight always on or dim it after inactivity.
+* <Cmd sid='device_bs3_sound_label4' product='air' />：画面の照明を常にオンにするか、無効化後に暗くなるように設定できます。
 
-* <Cmd sid='device_bs3_sound_backlight' product='air' />: Set the time before the backlight turns off automatically.
+* <Cmd sid='device_bs3_sound_backlight' product='air' />：画面バックライトが自動でオフになるまでの時間を設定します。
 
-* <Cmd sid='user_form_input3' product='air' />: Set the language shown on the device screen.
+* <Cmd sid='user_form_input3' product='air' />：デバイスの画面に表示する言語を設定できます。
 
-* <Cmd sid="device_bs3_sound_home_screen" product="air" />: Configure the items displayed on the device’s home screen background.
+* <Cmd sid='device_bs3_sound_home_screen' product='air' />：デバイスのホーム画面の背景に表示する項目を設定します。
 
-  * <Cmd sid="device_bs3_sound_home_screen_txt1" product="air" />: Display the default image on the home screen.
+  * <Cmd sid='device_bs3_sound_home_screen_txt1' product='air' />：既定の画像をホーム画面に表示します。
 
-  * <Cmd sid="device_bs3_sound_home_screen_txt2" product="air" />: Display a user-registered image on the home screen.
+  * <Cmd sid='device_bs3_sound_home_screen_txt2' product='air' />：ユーザーが登録した画像をデバイスのホーム画面に表示できます。
 
-  * <Cmd sid="device_bs3_sound_home_screen_txt3" product="air" />: Display administrator input on the home screen.
+  * <Cmd sid='device_bs3_sound_home_screen_txt3' product='air' />：管理者が入力した内容をホーム画面に表示できます。
 
    :::note
 
-  After clicking <Cmd sid='audit_action_update' product='air' /> and saving, the image or notice no longer appears in the edit screen but remains on the device.
+  <Cmd sid='audit_action_update' product='air' /> ボタンをクリックして保存すると、画像や通知が編集画面に表示されませんが、デバイスには引き続き表示されます。
 
-   :::
+   ：：：
 
 #### <Cmd sid='device_bs3_sound_home_screen_sound' product='air' className='normal' /> {#device_bs3_sound_home_screen_sound}
 
-* <Cmd sid="device_bs3_sound_home_screen_soung_use_voice" product="air" />: Use voice guidance instead of notification tones.
+* <Cmd sid='device_bs3_sound_home_screen_soung_use_voice' product='air' />：通知音の代わりに音声ガイダンスを使用できます。
 
-* <Cmd sid='device_bs3_sound_home_screen_soung_device' product='air' />: Adjust the volume of sounds generated by the device.
+* <Cmd sid='device_bs3_sound_home_screen_soung_device' product='air' />：デバイスから出る音量を調整できます。
 
-* <Cmd sid='device_bs3_sound_home_screen_soung_speaker' product='air' /> / <Cmd sid='device_bs3_sound_home_screen_microphone' product='air' />: Adjust the output or input volume when using the IP intercom feature.
+* <Cmd sid='device_bs3_sound_home_screen_soung_speaker' product='air' /> / <Cmd sid='device_bs3_sound_home_screen_microphone' product='air' />：IP インターホン機能を使用するときにデバイスから出力または入力される音量を設定できます。
 
 </Include>
 
@@ -338,29 +338,29 @@ For more information on configuring time and attendance, see <DocLink docId='pla
 
 ### <Cmd sid='new_layout_nav_title_wiegandout' product='air' className='normal' /> {#wiegandoutput}
 
-This feature integrates with external systems (e.g., alarm panels). Activate the <Cmd sid='use_wiegand_out_label' product='air' /> option to use this feature.
+外部システム（例：アラームパネル）との統合のための機能です。 この機能を使用するには、<Cmd sid='use_wiegand_out_label' product='air' /> オプションを有効にします。
 
-* <Cmd sid="wiegand_output_mode" product="air" />: Configure the Wiegand signal output mode.
+* <Cmd sid='wiegand_output_mode' product='air' />：Wiegand 信号の出力モードを設定します。
 
-  * <Cmd sid="user_regular_card_type" product="air" />: Scan cards using the configured Wiegand format.
+  * <Cmd sid='user_regular_card_type' product='air' />：設定済みの Wiegand フォーマットでカードをスキャンします。
 
-    * <Cmd sid='device_wiegand_output_use_fail_code' product='air' />: You can set error codes and choose the value to send when Wiegand card authentication fails.
+    * <Cmd sid='device_wiegand_output_use_fail_code' product='air' />：エラーコードを設定でき、Wiegand を使用したカード認証に失敗した場合に送信する値を選択できます。
 
-  * <Cmd sid="device_wiegand_output_mode_bypass" product="air" />: Send the CSN regardless of Wiegand authentication. Set this if you are using it as a device without door control functionality.
+  * <Cmd sid='device_wiegand_output_mode_bypass' product='air' />：Wiegand 認証に関係なく CSN を送信します。 ドア制御機能のないデバイスとして使用する場合に設定します。
 
-* <Cmd sid="wiegand_output_info" product="air" />: Select the information output during authentication.
+* <Cmd sid='wiegand_output_info' product='air' />：認証時にデバイスへ出力する情報を選択します。
 
-* <Cmd sid="wiegand_pulse_width" product="air" />: Set the pulse width for the Wiegand signal.
+* <Cmd sid='wiegand_pulse_width' product='air' />：Wiegand 信号のパルス幅を設定します。
 
-* <Cmd sid="wiegand_pulse_interval" product="air" />: Set the pulse interval for the Wiegand signal.
+* <Cmd sid='wiegand_pulse_interval' product='air' />：Wiegand 信号のパルス間隔を設定します。
 
-* <Cmd sid='mobile_consecutive_tag' product='air' />: Tag mobile cards consecutively without wait time.
+* <Cmd sid='mobile_consecutive_tag' product='air' />：待機時間なしで連続してモバイルカードをタグ付けできます。
 
-* <Cmd sid='devices_weigand_out_consecutive_lable' product='air' />: Set the maximum number of consecutive mobile card tags.
+* <Cmd sid='devices_weigand_out_consecutive_lable' product='air' />：モバイルカードを連続でタグ付けできる最大回数を設定できます。
 
 :::info
 
-The <Cmd sid='mobile_consecutive_tag' product='air' /> feature is supported in Suprema Pass app 2.9.0 or later.
+<Cmd sid='mobile_consecutive_tag' product='air' /> 機能は Suprema Passアプリ 2.9.0 以上でサポートされています。
 
 :::
 
@@ -372,29 +372,29 @@ The <Cmd sid='mobile_consecutive_tag' product='air' /> feature is supported in S
 
 ### <Cmd sid='device_intercom_title' product='air' className='normal' /> {#intercom}
 
-* <Cmd sid='device_intercom_txt_use_intercom' product='air' />: Activate or deactivate the IP intercom feature.
+* <Cmd sid='device_intercom_txt_use_intercom' product='air' />：IPインターホン機能を有効または無効にできます。
 
-* <Cmd sid="device_intercom_txt_sip_server_transport" product="air" />: Choose the SIP transport method when configuring the intercom’s SIP server.
+* <Cmd sid='device_intercom_txt_sip_server_transport' product='air' />：IPインターホンのSIPサーバー設定の際にSIPトランスポート方式を選択してください。
 
-* <Cmd sid="device_intercom_txt_sip_server_address" product="air" />: Enter the SIP server address.
+* <Cmd sid='device_intercom_txt_sip_server_address' product='air' />：SIPサーバーのアドレスを入力してください。
 
-* <Cmd sid="device_intercom_txt_sip_server_port" product="air" />: Enter the SIP server port.
+* <Cmd sid='device_intercom_txt_sip_server_port' product='air' />：SIPサーバーのポートを入力してください。
 
-* <Cmd sid='device_intercom_txt_registration_duration' product='air' />: Enter the registration duration. The device attempts to register with the SIP server every time the registration duration expires.
+* <Cmd sid='device_intercom_txt_registration_duration' product='air' />：登録維持時間を入力します。 デバイスは登録維持時間が終了するたびにSIPサーバーへの登録を試みます。
 
-* <Cmd sid="device_intercom_txt_sip_username" product="air" />: Enter the SIP account username.
+* <Cmd sid='device_intercom_txt_sip_username' product='air' />：SIPアカウントのユーザー名を入力してください。
 
-* <Cmd sid="login_password" product="air" />: Enter the SIP account password.
+* <Cmd sid='login_password' product='air' />：SIPアカウントのパスワードを入力してください。
 
-* <Cmd sid="device_intercom_txt_sip_authorization_id" product="air" />: Enter the SIP account authorization ID.
+* <Cmd sid='device_intercom_txt_sip_authorization_id' product='air' />：SIPアカウントの認証IDを入力してください。
 
-* <Cmd sid='device_intercom_txt_outbound_proxy_server' product='air' />: Use a separate outbound proxy server for SIP services if required.
+* <Cmd sid='device_intercom_txt_outbound_proxy_server' product='air' />：別の（アウトバウンド）プロキシサーバー経由でSIPサービスを使用できます。
 
-* <Cmd sid='device_intercom_extension_number' product='air' />: Add or edit extension numbers.
+* <Cmd sid='device_intercom_extension_number' product='air' />：内線番号を追加または編集できます。
 
-* <Cmd sid="device_intercom_video_resolution" product="air" />: Select the video resolution when using the intercom.
+* <Cmd sid='device_intercom_video_resolution' product='air' />：IPインターホン使用時に出力される映像の解像度を選択してください。
 
-* <Cmd sid="device_intercom_open_door_button" product="air" />: Specify a button to unlock the door during a call.
+* <Cmd sid='device_intercom_open_door_button' product='air' />：通話中にデバイスのドアを開けるためのボタンを指定してください。
 
 </Include>
 
@@ -404,7 +404,7 @@ The <Cmd sid='mobile_consecutive_tag' product='air' /> feature is supported in S
 
 ### <Cmd sid='device_bs3_secure_tamper' product='air' className='normal' /> {#secureTamper}
 
-If a tamper event occurs, configure the device to delete **all user information**, **all logs**, and **security keys** stored on the device.
+デバイスでタンパーイベントが発生した場合、保存されている**全ユーザー情報**、**全ログ**、**セキュリティキー**を削除するように設定できます。
 
 </Include>
 
@@ -414,21 +414,21 @@ If a tamper event occurs, configure the device to delete **all user information*
 
 ### <Cmd sid='device_bs3_rtsp' product='air' className='normal' /> {#rtspStreaming}
 
-Configure details for **Real Time Streaming Protocol** (RTSP) streaming. The device's camera can stream live video.
+**Real Time Streaming Protocol**（RTSP）ストリーミングの詳細項目を設定できます。 デバイスのカメラを通じてリアルタイムで映像を配信できます。
 
-* <Cmd sid='device_bs3_rtsp_toogle' product='air' />: Turn RTSP streaming on or off.
+* <Cmd sid='device_bs3_rtsp_toogle' product='air' />：RTSPストリーミング機能をオンまたはオフに切り替えます。
 
-* <Cmd sid='device_bs3_rtsp_address' product='air' />: RTSP server address.
+* <Cmd sid='device_bs3_rtsp_address' product='air' />：RTSPサーバーのアドレスです。
 
-* <Cmd sid='device_bs3_rtsp_port' product='air' />: Enter the RTSP server port.
+* <Cmd sid='device_bs3_rtsp_port' product='air' />：RTSPサーバーのポートを入力します。
 
-* <Cmd sid='user_info_id' product='air' /> / <Cmd sid='login_password' product='air' />: Enter the RTSP server ID and password.
+* <Cmd sid='user_info_id' product='air' /> / <Cmd sid='login_password' product='air' />：RTSPサーバーのIDとパスワードを入力します。
 
-* <Cmd sid="device_bs3_rtsp_video" product="air" />: Select the video resolution when using RTSP.
+* <Cmd sid='device_bs3_rtsp_video' product='air' />：RTSP 使用時に出力される映像の解像度を選択します。
 
 :::info
 
-The RTSP streaming feature is supported only on BioStation 3.
+RTSPストリーミング機能は BioStation 3 デバイスでのみサポートされます。
 
 :::
 
@@ -438,17 +438,17 @@ The RTSP streaming feature is supported only on BioStation 3.
 
 ### <Cmd sid='new_layout_nav_title_sensitivity' product='air' className='normal' /> {#rssiSensitivity}
 
-Adjust the RSSI value to set how close the mobile device must be to unlock the door.
+入退室のロックを解除するために、モバイル機器とデバイスがどれほど近くにある必要があるかを示すRSSI値を調整できます。
 
 <Image src='/img/air/bsair-device-mng-edit-sensitivity.png' />
 
-* Lower values help block unintended activation.
+* 値が小さいほど、意図しない作動を防ぎます。
 
-* Higher values improve detection in high-interference environments.
+* 値が大きいほど、干渉が多い場所での検出が改善されます。
 
 :::info
 
-To reset the settings, click <Cmd sid='device_btn_reset' product='air' />.
+設定した値を初期化するには、<Cmd sid='device_btn_reset' product='air' /> ボタンをクリックしてください。
 
 :::
 
@@ -458,6 +458,6 @@ To reset the settings, click <Cmd sid='device_btn_reset' product='air' />.
 
 ### <Cmd sid='module_found_slots_title' product='air' className='normal' /> {#moduleFoundSlots}
 
-Option to detect an OM-120 module connected to the device. Click <Cmd sid='add_btn' product='air' /> to detect the module.
+接続されている OM-120 モジュールを検出するためのオプションです。 <Cmd sid='add_btn' product='air' /> ボタンをクリックしてモジュールを検出できます。
 
 </Include>

@@ -1,61 +1,61 @@
 ---
 id: sip-intercom-for-biostation3
-title: Configure SIP Intercom for BioStation 3
-description: Learn how to configure the SIP intercom feature on BioStation 3 for two-way audio calls, remote door control via DTMF commands, and call reception through the BioStar Air web and mobile apps.
+title: BioStation 3 SIPインターホンの設定
+description: BioStation 3で双方向音声通話、DTMFコマンドによる遠隔ドア制御、およびBioStar AirのWebおよびモバイルアプリでの着信に対応するSIPインターホン機能の設定方法を説明します。
 keywords:
   - SIP
-  - Intercom
+  - インターホン
   - BioStation 3
 ---
 
-As of **BioStar Air v2.10**, **BioStation 3** (BS3) supports the SIP intercom feature. This enables two-way voice calls between the reader and administrators and remote door unlocking.
+**BioStar Air v2.10**以降、**BioStation 3**(BS3)はSIPインターホン機能をサポートします。 これによりリーダーと管理者間の双方向音声通話だけでなく、リモートでドアを解錠できます。
 
 :::info
 
-A SIP server is required to use this feature; purchase and configure it separately. Suprema does not provide SIP services.
+この機能を使用するにはSIPサーバーが必要で、別途購入および構成する必要があります。 SupremaはSIPサービスを提供していません。
 
 :::
 
 ## SIP
 
-**Session Initiation Protocol** (SIP) is a communication protocol widely used to initiate, maintain, and terminate real-time voice and video calls over IP networks. In this context, SIP lets BioStation 3 act as an intercom endpoint that can place and receive calls through a compatible SIP service.
+**セッション開始プロトコル**（Session Initiation Protocol, SIP）は、IPネットワーク上でリアルタイムの音声およびビデオ通話を開始、維持、終了するために広く使用される通信プロトコルです。 この場合、SIPはBioStation 3をインターホンエンドポイントとして動作させ、対応するSIPサービスを通じて発信・着信できるようにします。
 
-## Receive calls
+## 着信
 
-Answer calls received from BioStation 3 in the following ways.
+BioStation 3で受信した通話は、以下の方法で受信できます。
 
-* **BioStar Air Web**: Receive calls directly in a web browser
+* **BioStar Air Web**：ウェブブラウザで直接通話を受ける
 
-* **BioStar Air Mobile App** (iOS / Android): Receive calls on the go
+* **BioStar Air Mobile App** (iOS / Android)：移動中でも通話を受ける
 
-## Remote door control
+## リモートドア制御
 
-When answering a SIP call, use **DTMF commands** to unlock the door:
+SIP通話中に、**DTMFコマンド**を使用してドアを開けます：
 
-* Hardware SIP phone
+* 物理的なSIP電話
 
-* BioStar Air mobile app
+* BioStar Air モバイルアプリ
 
-* BioStar Air Web interface
+* BioStar Air Webインターフェース
 
-## Configuration steps
+## 構成手順
 
-Configure this in device settings and administrator account settings.
+デバイス設定および管理者アカウント設定から構成できます。
 
 <Steps>
 <Step>
 
-### Device settings
+### デバイス設定
 
-1. Log in to the [BioStar Air portal](https://admin.biostarair.com).
+1. [BioStar Air ポータル](https://admin.biostarair.com)にログインします。
 
-2. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+2. 画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。
 
-3. In the device list, click **BioStation 3**.
+3. デバイス一覧で **BioStation 3** をクリックします。
 
-4. Go to the <Cmd sid="device_intercom_title" product="air" /> section and enable the <Cmd sid="device_intercom_txt_use_intercom" product="air" /> option.
+4. <Cmd sid='device_intercom_title' product='air' /> セクションに移動し、<Cmd sid='device_intercom_txt_use_intercom' product='air' /> オプションを有効にします。
 
-5. Enter the SIP server information.
+5. SIPサーバー情報を入力します。
 
    <Image src='/img/air/bsair-intercom-configuration-edit-device.png' className='none' caption />
 
@@ -65,23 +65,23 @@ Configure this in device settings and administrator account settings.
 
    * <Cmd sid='device_intercom_txt_sip_username' product='air' /> / <Cmd sid='login_password' product='air' />
 
-6. Click <Cmd sid="save_btn" product="air" /> to save the changes.
+6. 変更を保存するには、<Cmd sid='save_btn' product='air' /> をクリックします。
 
 </Step>
 <Step>
 
-### Account settings
+### アカウント設定
 
-Route calls from BioStation 3 to a browser or app.
+BioStation 3の通話をブラウザやアプリにルーティングできます。
 
-1. For each administrator who needs to receive calls, log in to the BioStar Air portal or mobile app.
+1. 通話を受ける各管理者はBioStar Airポータルまたはモバイルアプリにログインします。
 
-2. Go to **Account settings**.
+2. **アカウント設定**に移動します。
 
    <Tabs groupId='platform'>
    <TabItem value='web' label='Web'>
 
-   Click the user profile icon at the top right of the screen and select <Cmd sid='settings_menu' product='air' />.
+   画面右上のユーザープロフィールアイコンをクリックした後、<Cmd sid='settings_menu' product='air' />を選択してください。
 
    <Image src='/img/air/bsair-device-bs3-sip-account-settings.png' />
 
@@ -89,14 +89,14 @@ Route calls from BioStation 3 to a browser or app.
 
    <TabItem value='mobile' label='Mobile'>
 
-   On the home screen, tap <Cmd>All Menu</Cmd> at the bottom, then tap the user profile area.
+   初期画面の下部にある <Cmd>すべてのメニュー</Cmd> をタップし、その後ユーザープロフィール領域をタップしてください。
 
    <Image src='/img/air/bsair-app-bs3-sip-account-settings.png' width='38%' className='none' />
 
    </TabItem>
    </Tabs>
 
-3. When the <Cmd sid="settings_menu" product="air" /> window appears, click the <Cmd sid="device_intercom_title" product="air" /> tab and add the SIP server login information.
+3. <Cmd sid='settings_menu' product='air' /> ウィンドウが表示されたら、<Cmd sid='device_intercom_title' product='air' /> タブをクリックしてSIPサーバーのログイン情報を追加します。
 
    <Tabs groupId='platform'>
    <TabItem value='web' label='Web'>
@@ -112,14 +112,14 @@ Route calls from BioStation 3 to a browser or app.
    </TabItem>
    </Tabs>
 
-4. Click <Cmd sid="save_btn" product="air" /> to save the settings.
+4. 設定を保存するには、<Cmd sid='save_btn' product='air' /> をクリックします。
 
 </Step>
 </Steps>
 
-## Verified SIP providers
+## 検証済みのSIPプロバイダー
 
-BioStation 3 has been tested and confirmed to work properly with the providers below.
+BioStation 3は以下のプロバイダーで正常に動作することを確認済みです。
 
 * [RingCentral](https://www.ringcentral.com/)
 
