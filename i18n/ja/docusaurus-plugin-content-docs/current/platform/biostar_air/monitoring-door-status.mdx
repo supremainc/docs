@@ -1,0 +1,190 @@
+---
+id: monitoring-door-status
+title: Monitor Door Status
+description: Monitor door status in real time, control locks remotely, and manage door access using the BioStar Air web portal and mobile app.
+keywords:
+  - Monitoring
+  - Door status
+  - BioStar Air
+---
+
+Monitor the status of doors connected to BioStar Air in real time. Check whether a door is locked or unlocked and the status of its relay sensor, and lock or unlock it remotely to control access.
+
+:::tip
+
+Refer to the following video to watch the video guide on monitoring door status.
+
+<YouTube className='fit--content' videoId="_nxSRwst480" />
+
+:::
+
+## Door status monitoring {#monitoringWebPortal}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+Monitor door status in the BioStar Air web portal. Click <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="door_status_submenu" product="air" /> in the left sidebar. View the list of doors registered to BioStar Air.
+
+<Image src='/img/air/bsair-monitoring-door-status.png' />
+
+Check the following items for each door.
+
+* <Cmd sid="door_status_column2" product="air" />: Indicates whether the door is locked or unlocked.
+
+* <Cmd sid="door_status_column3" product="air" />: Indicates whether the door is physically open or closed.
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+Monitor door status using the BioStar Air app on a mobile device.
+
+<Image src='/img/air/bsair-mobile-monitoring-door-status.png' className='none' />
+
+1. Open the BioStar Air app on your mobile device and log in.
+
+2. Tap <Cmd sid='monitoring_menu' product='air' /> at the bottom of the home screen.
+
+3. Tap the <Cmd sid="door_status_submenu" product="air" /> card.
+
+4. View the list of doors registered to BioStar Air.
+
+</TabItem>
+</Tabs>
+
+:::info
+
+For more information on door registration and management, refer to <DocLink docId='platform/biostar_air/managing-registered-doors' />.
+
+:::
+
+### Unlock a door {#remotely-unlocking-a-door}
+
+Unlock the door remotely when it is online and connected to BioStar Air. 
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+1. In the <Cmd sid="door_status_column4" product="air" /> column, click <Cmd sid="door_open_btn" product="air" />.
+
+2. The status in the <Cmd sid='door_status_column2' product='air' /> column changes to unlocked, and a success message appears.
+
+   <Image src='/img/air/bsair-monitoring-door-status-open-door.png' />
+
+3. After the configured time elapses, the door returns to locked.
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--30'>
+
+<Image src='/img/air/bsair-mobile-monitoring-door-open.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+1. Tap <Cmd sid='door_open_btn' product='air' /> to remotely unlock the door. 
+
+2. A success message will appear at the bottom of the screen. 
+
+3. After the configured time elapses, the door returns to locked.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+:::info
+
+For information on setting the duration that the door remains open, refer to <DocLink docId='platform/biostar_air/managing-registered-doors#editingDoors' />.
+
+:::
+
+### Set always-open mode {#alwaysOpenMode}
+
+Keep a door unlocked indefinitely. Use this when temporary or visitor access is needed.
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+1. In the door list, click <IcAirMore title="Control" /> at the far right of the door to keep open.
+
+   <Image src='/img/air/bsair-monitoring-door-status-more-func.png' />
+
+2. Click <Cmd sid="event_log_unlock_mode" product="air" /> in the popup menu.
+
+3. The status in the <Cmd sid="door_status_column4" product="air" /> column changes to <Cmd sid="door_control_unlocked_description" product="air" />.
+
+<Image src='/img/air/bsair-monitoring-door-status-control-always-open.png' />
+
+Click <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="air" /> to return to normal operation.
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--30'>
+
+<Image src='/img/air/bsair-mobile-monitoring-door-status-control.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+1. Tap <IcAirMore title="Control" /> at the far right of the door. 
+
+2. When the <Cmd en='Door Info and Control'>Door Info and Control</Cmd> option appear, tap <Cmd en='Unlock'>Unlock</Cmd>.
+
+3. A success message will appear at the bottom of the screen.
+
+Tap <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="air" /> to return to normal operation.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+### Set lock mode {#lockMode}
+
+Keep a door locked regardless of the current schedule. Use this when enhanced security is required.
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+1. In the door list, click <IcAirMore title="Control" /> at the far right of the door to keep locked.
+
+   <Image src='/img/air/bsair-monitoring-door-status-more-func.png' />
+
+2. Click <Cmd sid="event_log_lock_mode" product="air" /> in the pop-up menu.
+
+3. The status in the <Cmd sid="door_status_column4" product="air" /> column changes to <Cmd sid="door_control_locked_description" product="air" />.
+
+<Image src='/img/air/bsair-monitoring-door-status-control-lock-mode.png' />
+
+Click <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="air" /> to return to normal operation.
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--30'>
+
+<Image src='/img/air/bsair-mobile-monitoring-door-lock-mode.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+1. Tap <IcAirMore title="Control" /> at the far right of the door. 
+
+2. When the <Cmd en='Door Info and Control'>Door Info and Control</Cmd> option appear, tap <Cmd sid='event_log_lock_mode' product='air' />.
+
+3. A success message will appear at the bottom of the screen.
+
+Tap <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="air" /> to return to normal operation.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>

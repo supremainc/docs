@@ -19,6 +19,8 @@ import glossary_ja from '@site/i18n/ja/glossary.json';
 import glossary_es from '@site/i18n/es/glossary.json';
 import air_ko from './air/ko.json';
 import air_en from './air/en.json';
+import air_ja from './air/ja.json';
+import air_es from './air/es.json';
 
 // 다국어 지원을 위한 locale mapping
 const localeMap = {
@@ -37,6 +39,8 @@ const deviceLocaleMap = {
 const airLocaleMap = {
   ko: air_ko,
   en: air_en,
+  ja: air_ja,
+  es: air_es,
 };
 
 const xlocaleMap = {

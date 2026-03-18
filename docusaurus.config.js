@@ -224,12 +224,6 @@ const config = {
           width: '120px',
         },
         items: [
-          // {
-          //   type: 'doc',
-          //   label: 'BioStar X',
-          //   position: 'right',
-          //   docId: 'platform/biostar_x/index'
-          // },
           {
             type: 'dropdown',
             label: 'Platforms',
