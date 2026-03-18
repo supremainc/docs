@@ -1,11 +1,11 @@
 ---
 id: integration-quickstart
-title: API 통합
-description: BioStar Air 데모 사이트 설정, 호환 리더기 등록, API 키 생성, 클라우드 API와의 통합 테스트 방법을 알아보세요.
-keywords: [API 통합, 빠른 시작, BioStar Air]
+title: 빠른 시작하기
+description: BioStar Air 데모 환경 구성, 호환 장치 등록, API 키 발급 방법을 안내합니다.
+keywords: [API 통합, 빠른 시작, BioStar Air, 데모]
 ---
 
-이 문서에서는 BioStar Air 데모 사이트 설정, 호환 BioStar Air 리더기 연결 및 등록, 클라우드 API를 사용한 통합 테스트 방법을 안내합니다. 이전에 BioStar 2에서 작업한 적이 있다면 많은 개념이 친숙하게 느껴질 것입니다. 그러나 BioStar Air는 완전히 클라우드 기반입니다.
+BioStar Air 데모 사이트를 설정하고 호환 장치를 연결·등록하여 클라우드 API 통합을 테스트하는 방법을 안내합니다. BioStar 2에서 작업한 경험이 있다면 많은 개념이 친숙하게 느껴질 것입니다. BioStar Air는 완전한 클라우드 기반 시스템입니다.
 
 
 ## 사전 요구 사항 {#pre-requisites}
@@ -27,7 +27,7 @@ keywords: [API 통합, 빠른 시작, BioStar Air]
    * Port 5671 (MQTT over TLS)
 
 
-## Step 1: 데모 환경과 API 키 설정 {#demo-setup}
+## 데모 환경과 API 키 설정 {#demo-setup}
 
 <Steps>
 <Step>
@@ -83,7 +83,7 @@ keywords: [API 통합, 빠른 시작, BioStar Air]
 </Steps>
 
 
-## Step 2: 장치 등록 {#registerDevices}
+## 장치 등록 {#registerDevices}
 
 모바일 기기에 BioStar Air Demo App(안드로이드 전용)을 사용하세요.
 
@@ -106,7 +106,7 @@ keywords: [API 통합, 빠른 시작, BioStar Air]
 :::
 
 
-## Step 3: 장치 관리
+## 장치 관리
 
 데모 앱 또는 데모 웹 포털에서 장치를 관리할 수 있습니다.
 
@@ -114,133 +114,6 @@ keywords: [API 통합, 빠른 시작, BioStar Air]
 
 * **Demo Web Portal**: [https://demo.airfobspace.com/login](https://demo.airfobspace.com/login)
 
-
-## API Base URLs {#api-base-urls}
-
-| 환경 | Base URL |
-| --- | --- |
-| Demo | https://demo-afs-api.airfob.com/v1/ |
-| Production - Europe | https://e-afs-api.airfob.com/v1/ |
-| Production - Korea | https://a-afs-api.airfob.com/v1/ (EU가 아닌 모든 고객 전용) |
-
-
-## 권장 API 통합 범위 {#recommended-integration-scope}
-
-API 통합은 가능한 한 아래의 범위로 제한하세요.
-
-* 사용자 라이프사이클(lifecycle) 관리(생성/업데이트/삭제)
-
-* 자격 증명 관리(모바일, RF 카드, 생체 인식)
-
-관리자가 기존 BioStar Air 웹 및 모바일 관리 앱을 사용할 수 있도록 허용하세요.
-
-* 출입 등급
-
-* 일정
-
-* 출입문 및 장치 설정
-
-* 사이트 설정
-
-
-## Optional: API 로그인 절차 {#optional-api-login-flow}
-
-[Postman](https://www.postman.com/) 또는 프로그래밍 방식으로 API 호출을 수행할 수 있습니다.
-
-### 로그인 {#login}
-
-**Endpoint**: `login`
-
-**Payload**:
-
-```json
-{
-  "username": "your_email",
-  "password": "your_password"
-}
-```
-
-Bearer 토큰(JWT)을 반환합니다.
-
-
-### 계정 정보 조회{#get-self-accounts}
-
-**Endpoint**: `getSelfAccounts`
-
-**Authorization**: Bearer Token
-
-접근 가능한 사이트 및 계정 목록을 반환합니다.
-
-
-### 계정에 로그인 {#login-to-account}
-
-**Endpoint**: `loginAccount`
-
-**Authorization**: Bearer Token
-
-특정 사이트 토큰을 반환합니다.
-
-
-## 웹 브라우저에서 Bearer 토큰 얻는 방법 {#getYourBearerToken}
-
-### Chrome/Edge (Windows 또는 Mac) {#chrome-edge}
-
-1. 웹 브라우저에서 <Kbd>F12</Kbd> 또는 <Kbd>Ctrl/Cmd + Shift + I</Kbd>를 누르세요.
-
-1. **Network** 탭으로 이동하세요.
-
-1. 페이지를 새로 고침하세요.
-
-1. API 호출을 검색하세요. 
-
-   > 예, `groups`, `login`
-
-1. 목록에서 요청을 클릭하세요.
-
-1. **Headers** 탭으로 이동하세요.
-
-1. 요청 헤더에서 `Authorization: Bearer ...`를 찾으세요.
-
-1. 오른쪽 마우스를 클릭하고 토큰을 복사하세요.
-
-<Image src='/img/air/bsair-chrome-develope.png' alone />
-
-### Safari (Mac) {#safari}
-
-1. **개발자** 메뉴를 확성화하세요. Safari → Preferences → Advanced → **Show Develop menu**를 체크하세요.
-
-1. **Develop** → **Show Web Inspector**으로 이동하세요.
-
-1. **Network** 탭으로 이동하세요.
-
-1. 페이지를 새로 고침하세요.
-
-1. API 호출을 필터링하고 검사하세요.
-
-1. 요청 헤더에서 `Authorization: Bearer` 토큰을 복사하세요.
-
-
-## 사용자 관리 API 호출 {#user-management-api-calls}
-
-로그인 후 다음 엔드포인트를 사용하여 사용자를 관리하세요.
-
-* `getUsers`
-
-* `createUser`
-
-* `updateUser`
-
-* `suspendUsers`
-
-항상 Authorization 헤더에 Bearer 토큰을 포함하세요.
-
-:::note
-
-사용자를 활성화하려면 최소한 하나의 크리덴셜 유형을 할당해야 합니다. 
-
-> 예, RF 카드, 모바일, LinkPass
-
-:::
 
 
 ## Demo vs Production {#demo-vs-production}
@@ -265,138 +138,4 @@ Bearer 토큰(JWT)을 반환합니다.
 ## 도움이 필요하세요? {#need-help}
 
 슈프리마 기술 지원 포털에서 티켓을 여세요. [https://support.supremainc.com](https://support.supremainc.com)
-
-
-## 애플리케이션 예제 {#sample-application}
-
-다음은 API를 통해 CSV 파일을 업로드하고 사용자를 일괄 중단할 수 있는 Python 앱의 샘플 코드입니다.
-
-```python title='Python'
-import requests
-import csv
-import getpass
-from pathlib import Path
-
-def select_server():
-    servers = {
-        "1": ("Demo", "https://demo-afs-api.airfob.com/v1"),
-        "2": ("Global", "https://a-afs-api.airfob.com/v1"),
-        "3": ("EU", "https://e-afs-api.airfob.com/v1")
-    }
-
-    print("Please select a server:")
-    for key, (name, _) in servers.items():
-        print(f"{key}: {name}")
-
-    choice = input("Enter server number: ").strip()
-    return servers.get(choice, (None, None))[1]
-
-def login(base_url, username, password):
-    url = f"{base_url}/login"
-    payload = {"username": username, "password": password}
-    response = requests.post(url, json=payload)
-    response.raise_for_status()
-    data = response.json()
-    token = data.get("access_token")
-    if not token:
-        raise ValueError("Login succeeded but no access_token returned.")
-    print("✅ Login successful.")
-    return token
-
-def login_to_account(base_url, token, account_id):
-    url = f"{base_url}/login/{account_id}"
-    headers = {"Authorization": f"Bearer {token}"}
-    response = requests.post(url, headers=headers)
-    response.raise_for_status()
-    new_token = response.json().get("access_token")
-    if new_token:
-        print(f"✅ Switched to account ID: {account_id}")
-        return new_token
-    return token
-
-def get_accounts(base_url, token):
-    url = f"{base_url}/accounts/self"
-    headers = {"Authorization": f"Bearer {token}"}
-    response = requests.get(url, headers=headers)
-    response.raise_for_status()
-    accounts = response.json().get("accounts", [])
-    return [{"id": acc["id"], "name": acc["site"]["name"]} for acc in accounts]
-
-def suspend_users_from_csv(base_url, csv_path, token):
-    if not Path(csv_path).exists():
-        print(f"❌ File not found: {csv_path}")
-        return
-
-    headers = {"Authorization": f"Bearer {token}"}
-
-    with open(csv_path, newline='', encoding='utf-8-sig') as f:
-        reader = csv.DictReader(f)
-
-        # Normalize headers
-        reader.fieldnames = [field.strip().lower() for field in reader.fieldnames]
-        if 'email' not in reader.fieldnames:
-            print("❌ Missing required 'email' column in CSV.")
-            return
-
-        for row in reader:
-            email = row.get("email")
-            if not email:
-                print("⚠️ Skipping row with missing email.")
-                continue
-
-            # Search user
-            search_url = f"{base_url}/users/search"
-            payload = {"filters": [{"field": "email", "equals": email}]}
-            search_resp = requests.post(search_url, headers=headers, json=payload)
-            if search_resp.status_code != 200:
-                print(f"❌ Failed to search user {email}: {search_resp.text}")
-                continue
-
-            users = search_resp.json().get("users", [])
-            if not users:
-                print(f"❌ No user found with email: {email}")
-                continue
-
-            user_id = users[0]["id"]
-
-            # Suspend user
-            suspend_url = f"{base_url}/users/suspend"
-            suspend_payload = {
-                "ids": [user_id],
-                "certify_by": "none",
-                "use_site_template": True
-            }
-            suspend_resp = requests.post(suspend_url, headers=headers, json=suspend_payload)
-            if suspend_resp.status_code == 200:
-                print(f"✅ Suspended user: {email}")
-            else:
-                print(f"❌ Failed to suspend user {email}: {suspend_resp.text}")
-
-def main():
-    base_url = select_server()
-    if not base_url:
-        print("❌ Invalid selection. Exiting.")
-        return
-
-    print("\n? BioStar Air Login")
-    username = input("Email: ")
-    password = getpass.getpass("Password: ")
-
-    token = login(base_url, username, password)
-    accounts = get_accounts(base_url, token)
-
-    print("\n? Available Sites:")
-    for i, acc in enumerate(accounts):
-        print(f"{i}: {acc['name']} (ID: {acc['id']})")
-
-    selected = int(input("\nSelect site number to log into: "))
-    account_id = accounts[selected]["id"]
-    token = login_to_account(base_url, token, account_id)
-
-    csv_path = input("Enter path to CSV file with user emails: ").strip()
-    suspend_users_from_csv(base_url, csv_path, token)
-
-if __name__ == "__main__":
-    main()
-```
 

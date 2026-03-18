@@ -1,14 +1,12 @@
 ---
 id: sip-intercom-for-biostation3
-title: BioStation 3 SIP Intercom
+title: Configure SIP Intercom for BioStation 3
 description: Learn how to configure the SIP intercom feature on BioStation 3 for two-way audio calls, remote door control via DTMF commands, and call reception through the BioStar Air web and mobile apps.
 keywords:
   - SIP
   - Intercom
   - BioStation 3
 ---
-
-# Configure SIP intercom
 
 As of **BioStar Air v2.10**, **BioStation 3** (BS3) supports the SIP intercom feature. This enables two-way voice calls between the reader and administrators and remote door unlocking.
 
@@ -47,7 +45,7 @@ Configure this in device settings and administrator account settings.
 <Steps>
 <Step>
 
-### Device Settings
+### Device settings
 
 1. Log in to the [BioStar Air portal](https://admin.biostarair.com).
 
@@ -59,7 +57,7 @@ Configure this in device settings and administrator account settings.
 
 5. Enter the SIP server information.
 
-   <Image src='/img/air/air-intercom-configuration-edit-device.png' alone className='none' caption />
+   <Image src='/img/air/bsair-intercom-configuration-edit-device.png' className='none' caption />
 
    * <Cmd sid='device_intercom_txt_sip_server_address' product='air' />
 
@@ -80,17 +78,39 @@ Route calls from BioStation 3 to a browser or app.
 
 2. Go to **Account settings**.
 
-   * In the [BioStar Air portal](https://admin.biostarair.com), click the user profile icon in the upper-right corner and select <Cmd sid="settings_menu" product="air" />.
+   <Tabs groupId='platform'>
+   <TabItem value='web' label='Web'>
 
-      <Image src='/img/air/bsair-device-bs3-sip-account-settings.png' />
+   Click the user profile icon at the top right of the screen and select <Cmd sid='settings_menu' product='air' />.
 
-   * BioStar Air mobile app: On the home screen, tap <Cmd>All Menu</Cmd> at the bottom, then tap the user profile area.
+   <Image src='/img/air/bsair-device-bs3-sip-account-settings.png' />
 
-      <Image src='/img/air/bsair-app-bs3-sip-account-settings.png' width='38%' className='none' />
+   </TabItem>
+
+   <TabItem value='mobile' label='Mobile'>
+
+   On the home screen, tap <Cmd>All Menu</Cmd> at the bottom, then tap the user profile area.
+
+   <Image src='/img/air/bsair-app-bs3-sip-account-settings.png' width='38%' className='none' />
+
+   </TabItem>
+   </Tabs>
 
 3. When the <Cmd sid="settings_menu" product="air" /> window appears, click the <Cmd sid="device_intercom_title" product="air" /> tab and add the SIP server login information.
 
-    <Image src='/img/air/bsair-device-bs3-sip-account-settings-intercom.png' className='none' />
+   <Tabs groupId='platform'>
+   <TabItem value='web' label='Web'>
+
+   <Image src='/img/air/bsair-device-bs3-sip-account-settings-intercom.png' width='60%' />
+
+   </TabItem>
+
+   <TabItem value='mobile' label='Mobile'>
+
+   <Image src='/img/air/bsair-device-bs3-sip-account-settings-intercom-mobile.png' />
+
+   </TabItem>
+   </Tabs>
 
 4. Click <Cmd sid="save_btn" product="air" /> to save the settings.
 

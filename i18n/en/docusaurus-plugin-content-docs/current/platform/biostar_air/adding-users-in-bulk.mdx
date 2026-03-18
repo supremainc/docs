@@ -8,17 +8,13 @@ keywords:
   - bulk users
 ---
 
-import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
-
-With BioStar Air, administrators can add multiple users at once using a CSV file. This feature is useful for efficiently handling employee onboarding, site upgrades, or temporary access requirements.
-
-<CustomerNote />
+If you need to add multiple users at once, use BioStar Air's bulk user import feature. Upload a CSV file to register tens or hundreds of employees in just minutes. You can also bulk-upload profile images while entering user information. This document provides step-by-step instructions for downloading the CSV template, preparing the file, uploading it, managing profile images, and verifying user information after upload.
 
 :::tip
 
-Refer to the following video for a step�by�step guide to adding multiple users in bulk.
+Refer to the following video for a step-by-step guide to adding multiple users in bulk.
 
-<YouTube videoId="gOi2nP0Ag5o" />
+<YouTube className='fit--content' videoId="gOi2nP0Ag5o" />
 
 :::
 
@@ -66,7 +62,7 @@ The key fields to enter are as follows.
 
 ### Support for custom Wiegand formats
 
-* Freely configure **any Wiegand format**, including facility codes, segments, parity bits, and more.
+You can freely configure any Wiegand format, including facility codes, segments, parity bits, and more.
 
 * HID Corporate 1000 and iCLASS SE and Seos formats are supported.
 
@@ -128,11 +124,11 @@ After preparing the CSV file, upload it.
 
    :::note
 
-   If the users' profile images are ready, enable the <Cmd sid="face_register_upload_face_photo" product="air" /> option. For more information on uploading profile images, refer to [the following](#uploadProfileImages).
+   If the users' profile images are ready, enable the <Cmd sid="face_register_upload_face_photo" product="air" /> option. For more information, see <DocLink inner='#uploadProfileImages' />.
 
    :::
 
-5. Click <Cmd sid="new_popup_import_users_btn_next" product="air" />.
+5. Click <Cmd sid='new_popup_import_users_btn_next' product='air' /> at the bottom right of the screen.
 
 6. In the <Cmd sid="user_actions_import_data_preview" product="air" /> section, review the accuracy of the data in the first column.
 
@@ -154,7 +150,7 @@ After the upload completes, you can import user images or issue mobile cards in 
 
 :::
 
-### Validate CSV import
+### CSV File Validation
 
 The CSV upload process now provides **row-level error feedback**, making troubleshooting easier. If errors occur during upload, a detailed report is provided for review. Click <Cmd sid="user_actions_import_download_btn_text" product="air" /> to download the report.
 
@@ -198,4 +194,4 @@ After all user data and images are uploaded, the system processes the entries, a
 
 ## Troubleshooting
 
-If you encounter issues with CSV upload, refer to more detailed documentation that helps resolve common problems. The document also includes Excel formulas that help validate data and remove duplicates. <DocLink docId='platform/biostar_air/troubleshooting-adding-users-in-bulk' />
+If you encounter issues with CSV upload, see <DocLink docId='platform/biostar_air/troubleshooting-adding-users-in-bulk' /> for help troubleshooting common problems. The document also includes Excel formulas that help validate data and remove duplicates.

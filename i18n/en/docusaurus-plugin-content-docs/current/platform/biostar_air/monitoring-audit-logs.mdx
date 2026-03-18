@@ -1,0 +1,93 @@
+---
+id: monitoring-audit-logs
+title: Use Audit Logs
+description: This guide explains how to monitor and analyze audit logs in BioStar Air, apply filters, export data, and track administrative activity.
+keywords:
+  - Monitoring
+  - Audit logs
+  - BioStar Air
+---
+
+One of the key advantages of a cloud access control platform is the ability to monitor site activity anytime, anywhere. This document explains how to monitor and analyze audit logs in BioStar Air.
+
+:::tip
+
+Watch the following video for a tutorial on audit logs.
+
+<YouTube className='fit--content' videoId="nwIEYyK-uAg" />
+
+:::
+
+## View audit logs
+
+Go to <Cmd sid="audit_logs_submenu" product="air" /> to view audit logs. Click <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="audit_logs_submenu" product="air" /> in the left sidebar.
+
+<Image src='/img/air/bsair-monitoring-auditlog-list.png' />
+
+Use <Cmd sid='audit_logs_submenu' product='air' /> to track administrator actions. Each log in the list displays a table with information such as operation time, email address, administrator privileges, operation type, menu path, and operation details.
+
+## Filter logs {#filtering-event-logs}
+
+Filter logs to quickly find the information you need. Click <IcAirLogfilter width='20' height='20' title='Filters' /> at the top of the log list. When the <Cmd sid="logs_filters_action_btn" product="air" /> window appears, select the desired value for each item.
+
+<Image src='/img/air/bsair-monitoring-audit-log-list-filter.png' />
+
+:::info
+
+* Click <Cmd sid="column_filter_modal_save_btn" product="air" /> or <Cmd sid="filters_action2" product="air" /> to save the settings so they remain after navigating to another menu. Click <Cmd sid='column_filter_modal_apply_btn' product='air' /> or <Cmd sid='filters_action3' product='air' /> to apply the changes only to the current list; they will revert when you navigate away.
+
+* <Cmd sid='column_filter_modal_reset_btn' product='air' /> or <Cmd sid='filters_action1' product='air' /> to cancel the changes and return to the initial state.
+
+:::
+
+## Configure reports {#generatingReports}
+
+Generate reports for events that occurred during a specific period by filtering log data.
+
+1. Click the <IcAirReport width="20" height="20" title="Report" /> button at the top of the log list.
+
+2. When the <Cmd sid="report_popup_title" product="air" /> window appears, enter a report name.
+
+   <Image src='/img/air/bsair-monitoring-auditlog-report-setting.png' />
+
+3. Select the items to include in the report.
+
+4. Click <Cmd sid="report_form_text_add" product="air" /> to save the configured report.
+
+5. A report is created with the name set in <Cmd sid="report_form_text_title" product="air" />.
+
+   <Image src='/img/air/bsair-monitoring-auditlog-report-added.png' />
+
+6. To download the generated report, click the <IcAirDown width="20" height="20" title="Download" /> button next to the report name.
+
+7. When the <Cmd sid="report_download_popup_title" product="air" /> window appears, select the period to query events and click <Cmd sid="report_download_popup_button_title" product="air" />.
+
+   <Image src='/img/air/bsair-monitoring-auditlog-report-download.png' />
+
+A download link is sent to the administrator's email.
+
+:::info
+
+<Cmd sid="report_form_text_title" product="air" /> lets you search for, edit, download, or delete the reports created.
+
+:::
+
+## Mask personal data {#dataMasking}
+
+Mask personal data in logs to protect sensitive information. When personal data masking is enabled, information such as user names, email addresses, and phone numbers is partially hidden.
+
+To enable personal data masking, click the <IcAirMask width="20" height="20" title="Apply Masking" /> button at the top of the log list. In the pop-up menu, enable <Cmd sid="apply_masking_title" product="air" /> and click <Cmd sid="save_btn" product="air" />.
+
+<Image src='/img/air/bsair-monitoring-auditlog-apply-masking.png' />
+
+## Other features
+
+Use the toolbar at the top of the log list to manage logs more efficiently.
+
+* To sort logs by date, select a date and time range, then click <Cmd sid='logs_filter_ok_btn' product='air' />.
+
+  <Image src='/img/air/bsair-monitoring-auditlog-select-date.png' />
+
+* Click <IcAirDown width="20" height="20" title="Export" /> to save logs as a CSV or PDF file.
+
+* Click <IcAirRef width='20' height='20' title='Refresh' /> at the top of the list to refresh the log list.

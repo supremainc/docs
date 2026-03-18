@@ -36,13 +36,19 @@ The device group list shows the newly added group and the number of devices in t
 
 <Image src='/img/air/bsair-device-mng-group-list.png' />
 
+:::info
+
+For more information on how to add devices to a group or remove them from an existing group, see <DocLink docId='platform/biostar_air/managing-registered-devices#device_group_in_device_list' />.
+
+:::
+
 ## Rename a device group
 
 1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_groups_submenu" product="air" /> in the left sidebar.
 
 2. Select the checkbox for the device group to rename.
 
-3. Click <IcAirEdit /> at the top of the device group list.
+3. Click <IcAirEdit title='Edit' /> at the top of the device group list.
 
 4. When the <Cmd sid="device_group_title_edit_popup_overlay" product="air" /> window appears, enter the new group name.
 
@@ -50,7 +56,7 @@ The device group list shows the newly added group and the number of devices in t
 
 5. Click <Cmd sid="btn_ok" product="air" /> to save the new group name.
 
-## Deleting a device group
+## Delete a device group
 
 1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_groups_submenu" product="air" /> in the left sidebar.
 
@@ -58,40 +64,6 @@ The device group list shows the newly added group and the number of devices in t
 
 3. Click <IcAirRemove /> at the top of the device group list.
 
-4. When a warning message appears, click <Cmd sid="btn_yes" product="air" />.
+4. When a warning message appears, click <Cmd sid='btn_yes' product='air' />.
 
 The selected device group is deleted from the list. Its subgroups are also deleted. Deleting a group does not delete the devices.
-
-## Manage groups in the device list {#device_group_in_device_list}
-
-From the device list, select individual devices to add them to a device group or remove them from an existing group.
-
-1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
-
-2. Select the checkbox for the device to add to or remove from a group.
-
-3. Click <IcAirGroup /> at the top of the device group list.
-
-4. When the <Cmd sid="manage_device_group_title" product="air" /> window appears, add or remove the selected devices from the group.
-
-   <Image src='/img/air/bsair-device-mng-list-group-mng.png' />
-
-   <Cmd sid="manage_device_group_title_two" product="air" /> checkboxes have the following meanings:
-
-   * <Cmd sid="manage_device_group_checkbox_state_one" product="air" />: Removes the selected devices from the group.
-
-   * <Cmd sid="manage_device_group_checkbox_state_two" product="air" />: Certain selected devices are currently in the group.
-
-   * <Cmd sid="manage_device_group_checkbox_state_three" product="air" />: Adds the selected devices to the group.
-
-5. Click <Cmd sid="btn_ok" product="air" /> to save the changes.
-
-:::info
-
-* Selecting another group in the <Cmd sid="manage_device_group_title" product="air" /> window moves the selected devices to that group.
-
-* A device can belong to multiple groups. A single device can be assigned to multiple groups.
-
-* Click <Cmd sid="device_btn_reset" product="air" /> to initialize the changes.
-
-:::

@@ -2426,7 +2426,7 @@
   "face_register_mobile_block_camera_title": "Camera Access is Blocked",
   "face_register_mobile_block_camera_text": "Please click the lock icon on the left side of the address bar, allow camera access, and refresh the page.",
   "face_register_mobile_error_camera_title": "Unable to Take a Photo",
-  "face_register_mobile_error_camera_text": "This device does not have a connected camera, so taking a photo is not possible.% Please select a file to register your face.",
+  "face_register_mobile_error_camera_text": "This device does not have a connected camera, so taking a photo is not possible. Please select a file to register your face.",
   "face_register_upload_image_not_valid": "Supported file formats: JPG, JPEG, PNG",
   "face_register_upload_face_photo": "Upload Face Photo",
   "face_register_import_users_guide2": "The maximum upload file size is 5MB.",

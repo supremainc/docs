@@ -1,6 +1,6 @@
 ---
 id: ip-camera-support-and-configuration
-title: IP Camera Support and Settings
+title: IP Camera Support and Setup
 description: Set up ONVIF-compatible IP cameras in BioStar Air, configure live and recorded video streams, and integrate camera footage with access events.
 keywords:
   - IP camera
@@ -8,9 +8,9 @@ keywords:
   - camera configuration
 ---
 
-BioStar Air automatically detects IP cameras connected to the same network as Airfob Edge. Because the cameras use the device as a gateway, a network video recorder (NVR) is not required. Instead, the cameras use the built-in SD card storage.
+BioStar Air automatically detects IP cameras connected to the same network as readers compatible with BioStar Air. Because the cameras use the device as a gateway, a network video recorder (NVR) is not required. Instead, the cameras use the built-in SD card storage.
 
-With an Airfob Edge or XPass 2 installed, BioStar Air can display the following concurrent live view streams.
+With a reader compatible with BioStar Air installed, BioStar Air can display the following concurrent live view streams.
 
 * Up to two cameras at Full HD resolution (1080p)
 
@@ -20,7 +20,7 @@ These specifications double when XStation 2 is used.
 
 :::info
 
-If recorded video does not play after registering the camera in BioStar Air, refer to [the following](video-troubleshooting).
+If a recorded video does not play after you register the camera in BioStar Air, see <DocLink docId='platform/biostar_air/video-troubleshooting' />.
 
 :::
 
@@ -42,7 +42,7 @@ If recorded video does not play after registering the camera in BioStar Air, ref
 
 * **Encoding**: The camera must support H.264 (AVC) and it must be set as the active codec. BioStar Air currently does not support H.265.
 
-* **Recommended brands**: HanwhaVision, Hikvision, and Dahua cameras are highly compatible. Compatibility with other brands may vary depending on Onvif profile compliance. For more information on the tested and verified devices list, refer to [the following](#tested-devices).
+* **Recommended brands**: HanwhaVision, Hikvision, and Dahua cameras are highly compatible. Compatibility with other brands may vary depending on Onvif profile compliance. For details on the list of tested and verified devices, see <DocLink inner='#tested-devices' />.
 
 * Contact the service team to test other camera brands.
 
@@ -63,7 +63,7 @@ Perform the following actions in the BioStar Air portal or mobile app.
 
 ### Connect IP cameras
 
-* **Network connection**: Ensure that the IP camera is on the same network as the Airfob Edge or Airfob Edge Ultimate.
+* **Network connection**: Ensure that the IP camera is on the same network as the reader compatible with BioStar Air.
 
 * **Enable Onvif**: Make sure Onvif is enabled on the camera.
 
@@ -114,7 +114,7 @@ Only **master**-level administrators can enable this feature.
 
    * <Cmd sid="cameras_add_camera_input_name" product="air" />: Enter the camera name.
 
-   * <Cmd sid="recent_action_device_column" product="air" />: Select a name to identify the camera.
+   * <Cmd sid='event_logs_column3' product='air' />: Select a name to identify the camera.
 
    * <Cmd sid="cameras_add_camera_input_id" product="air" />: Enter the ID to connect to the camera.
 
@@ -158,7 +158,7 @@ View live video from the added cameras. Click <Cmd sid="monitoring_menu" product
 
 <Image src='/img/air/bsair-monitoring-realtime-camera.png' caption />
 
-* View up to two Full HD (1080p) live streams per installed Airfob Edge.
+* View up to two Full HD (1080p) live streams per installed reader compatible with BioStar Air.
 
 * Add more devices or reduce camera resolution to view more live streams. 
 
@@ -178,7 +178,7 @@ View recorded video streams. Click <Cmd sid="monitoring_menu" product="air" /> �
 
 ### View event video
 
-Click <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="event_logs_submenu" product="air" /> in the left sidebar. Find an event log with an associated video clip and click play to watch it.
+Click <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' /> in the left sidebar. Find an event log with an associated video clip and click play to watch it.
 
 </Step>
 </Steps>

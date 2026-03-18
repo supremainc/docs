@@ -1,0 +1,98 @@
+---
+id: diff-unlock-lock-schedule
+title: Difference Between Unlock and Lock Schedules
+description: Compare the differences between unlock and lock schedules in BioStar Air and learn when to use each one.
+keywords: [Unlock schedule, Lock schedule, Schedule, Access control]
+---
+
+## When Do You Need Schedules
+
+**Door schedules are optional**. Most sites operate effectively with basic access control alone. When an authorized user presents a valid credential, the door unlocks automatically—no additional schedule configuration required.
+
+Configure schedules only in the following situations:
+
+* When you need to allow unrestricted access during specific time periods
+
+* When you need to block all users from entering during specific time periods
+
+* When you need to apply different access policies for different times
+
+To avoid confusion between <Cmd sid='unlock_schedule' product='air' className='bold' /> and <Cmd sid='lock_schedule' product='air' className='bold' /> in BioStar Air, understand how each schedule works and when to use it.
+
+:::info
+
+For more information on configuring door schedules, see <DocLink docId='platform/biostar_air/managing-door-schedules' />.
+
+:::
+
+
+## <Cmd sid='unlock_schedule' product='air' className='bold' /> vs <Cmd sid='lock_schedule' product='air' className='bold' />
+
+<div className='table-fixed'>
+
+| Feature | Unlock Schedule | Lock Schedule |
+| -- | -- | -- |
+| **Door state during schedule** | Always unlocked | Always locked |
+| **Authentication required** | Not required, anyone can freely access | Credentials cannot unlock the door |
+| **Manual unlock** | Possible | Only site administrator can unlock |
+| **Relay operation** | Continuously triggered | Does not trigger |
+
+</div>
+
+:::info
+
+Site administrator refers to designated administrators in the BioStar Air Admin portal or mobile app.
+
+:::
+
+
+## Unlock schedule
+
+### How it works
+
+During the scheduled period, the door remains unlocked and the relay stays continuously triggered. No authentication is required for anyone to enter freely during this time.
+
+### Typical use cases
+
+* Main entrance doors in public areas
+
+* Shared amenities in residential communities
+
+* Office lobby doors during business hours
+
+
+### Unlock after the first authentication (optional)
+
+#### How it works
+
+* When the schedule begins, the door starts in a locked state.
+
+* When the first authorized user presents their credential, the door unlocks.
+
+* The door remains unlocked for the rest of the scheduled period, allowing all users to enter freely.
+
+:::info
+
+For more information on the unlock after first authentication option (<Cmd sid='unlock_after_first_auth' product='air' />), see <DocLink docId='platform/biostar_air/managing-door-schedules#configuringUnlockSchedules' />.
+
+:::
+
+#### Typical use cases
+
+* Retail stores that open only after staff arrive
+
+* Offices where the first employee arriving unlocks the building for others
+
+* Membership facilities that require staff to initiate access before members can enter
+
+## Lock schedule
+
+### How it works
+
+During the scheduled period, the door remains locked and the relay does not trigger. Even if a valid credential is presented, the door cannot be unlocked through authentication. Only a site administrator can manually unlock the door through the BioStar Air Admin portal or mobile app.
+
+### Typical use cases
+
+* Areas that must be strictly closed after certain hours
+
+* Facilities such as pools, gyms, or other restricted areas
