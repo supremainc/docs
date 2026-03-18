@@ -275,6 +275,7 @@ const sidebars = {
             'platform/biostar_air/troubleshooting-suprema-pass-app',
             'platform/biostar_air/location-services-issues',
             'platform/biostar_air/video-troubleshooting',
+            'platform/biostar_air/diff-unlock-lock-schedule',
           ]
         },
         {
