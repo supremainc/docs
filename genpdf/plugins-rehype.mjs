@@ -4,7 +4,7 @@
  */
 
 import { visit } from 'unist-util-visit';
-import { readFileSync } from 'fs';
+import { readFileSync, readdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import rehypeParse from 'rehype-parse';
@@ -2596,6 +2596,142 @@ function buildTreeviewHtml(data) {
     tagName: 'div',
     properties: { className: ['treeview-container'] },
     children: treeNodes
+  };
+}
+
+/**
+ * Process FaqsItems component
+ * Loads JSON data and converts to HTML details/summary structure
+ * @param {string} docPath - Document path (e.g., 'platform/biostar_air/location-services-issues')
+ * @param {string} language - Language code (ko, en, ja, es)
+ */
+export function rehypeProcessFaqsComponent(docPath = '', language = 'ko') {
+  // Helper function to parse HTML string to rehype AST
+  function htmlToAst(htmlString) {
+    try {
+      const parser = unified().use(rehypeParse, { fragment: true });
+      const ast = parser.parse(htmlString);
+      return ast.children || [];
+    } catch (error) {
+      console.warn(`⚠️  Failed to parse HTML: ${error.message}`);
+      return [{ type: 'text', value: htmlString }];
+    }
+  }
+  
+  return (tree) => {
+    visit(tree, (node, index, parent) => {
+      if (node.type === 'mdxJsxFlowElement' && node.name === 'FaqsItems') {
+        // Extract data attribute value (variable name, e.g., 'Locationissues')
+        const dataAttr = node.attributes?.find(attr => attr.name === 'data');
+        
+        if (!dataAttr || !dataAttr.value) {
+          console.warn('⚠️  FaqsItems component missing data attribute');
+          return;
+        }
+
+        // Try to find JSON files in the document's directory
+        const docDir = docPath.substring(0, docPath.lastIndexOf('/'));
+        // Language-aware path: ko uses ./docs, others use ./i18n/{lang}/docusaurus-plugin-content-docs/current
+        const fullDocDir = language === 'ko' 
+          ? `./docs/${docDir}`
+          : `./i18n/${language}/docusaurus-plugin-content-docs/current/${docDir}`;
+
+        // Try to find .json files in the directory
+        let faqData = null;
+        try {
+          // List JSON files in the directory
+          const files = readdirSync(fullDocDir);
+          const jsonFile = files.find(f => f.endsWith('.json') && !f.includes('node_modules'));
+          
+          if (jsonFile) {
+            const jsonPath = join(fullDocDir, jsonFile);
+            const content = readFileSync(jsonPath, 'utf-8');
+            faqData = JSON.parse(content);
+            console.log(`✓ Loaded FAQ data from ${jsonFile}`);
+          }
+        } catch (error) {
+          console.warn(`⚠️  Failed to load FAQ data: ${error.message}`);
+        }
+
+        if (!faqData) {
+          // Fallback: create placeholder
+          parent.children[index] = {
+            type: 'element',
+            tagName: 'div',
+            properties: { className: ['faqs-container'] },
+            children: [{
+              type: 'element',
+              tagName: 'p',
+              properties: { style: 'color: #999; font-size: 0.9em;' },
+              children: [{ type: 'text', value: '[FAQs component - data not loaded]' }]
+            }]
+          };
+          return;
+        }
+
+        // Convert FAQ data to HTML structure
+        const faqItems = Array.isArray(faqData) ? faqData : (faqData.data || []);
+
+        const faqElements = faqItems.map((faq, idx) => {
+          const questionNodes = [];
+          const answerNodes = [];
+
+          // Question content - parse HTML string to AST
+          if (typeof faq.question === 'string') {
+            questionNodes.push({
+              type: 'element',
+              tagName: 'span',
+              properties: { className: ['question'] },
+              children: [{ type: 'text', value: 'Q.' }]
+            });
+            questionNodes.push({
+              type: 'element',
+              tagName: 'span',
+              properties: {},
+              children: htmlToAst(faq.question)
+            });
+          }
+
+          // Answer content - parse HTML string to AST
+          if (typeof faq.answer === 'string' && faq.answer.trim()) {
+            answerNodes.push({
+              type: 'element',
+              tagName: 'div',
+              properties: { className: ['faqBody'] },
+              children: [{
+                type: 'element',
+                tagName: 'div',
+                properties: {},
+                children: htmlToAst(faq.answer)
+              }]
+            });
+          }
+
+          return {
+            type: 'element',
+            tagName: 'details',
+            properties: { className: ['faq'] },
+            children: [
+              {
+                type: 'element',
+                tagName: 'summary',
+                properties: {},
+                children: questionNodes
+              },
+              ...answerNodes
+            ]
+          };
+        });
+
+        // Replace FaqsItems component with HTML structure
+        parent.children[index] = {
+          type: 'element',
+          tagName: 'div',
+          properties: { className: ['faqs-container'] },
+          children: faqElements
+        };
+      }
+    });
   };
 }
 
