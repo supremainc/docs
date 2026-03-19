@@ -52,13 +52,6 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
   const cLocale = currentLocale !== 'ko' ? 'en' : 'ko';
   const defaultExternalLinks = [
     {
-      title: 'BioStar Device SDK',
-      url: `https://kb.supremainc.com/bs2sdk/doku.php?id=${cLocale}:start`,
-      Svg: require('@site/static/img/biostar2-devicesdk.svg').default,
-      height: '45px',
-      desc: `${translate({ id: "externalLinks.dev.sdk.desc" })}`
-    },
-    {
       title: 'BioStar X API',
       url: '/api/bsxapi',
       Svg: require('@site/static/img/biostar-api.svg').default,
@@ -66,18 +59,25 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
       desc: `${translate({ id: "externalLinks.dev.xapi.desc" })}`
     },
     {
-      title: 'BioStar 2 API',
-      url: 'https://bs2api.biostar2.com/',
-      Svg: require('@site/static/img/biostar-api.svg').default,
-      height: '45px',
-      desc: `${translate({ id: "externalLinks.dev.2api.desc" })}`
-    },
-    {
       title: 'BioStar Air Developer',
       url: 'https://developers.biostarair.com',
       Svg: require('@site/static/img/bsair-dev.svg').default,
       height: '45px',
       desc: `${translate({ id: "externalLinks.dev.bsair.desc" })}`
+    },
+    {
+      title: 'BioStar Device SDK',
+      url: `https://kb.supremainc.com/bs2sdk/doku.php?id=${cLocale}:start`,
+      Svg: require('@site/static/img/biostar2-devicesdk.svg').default,
+      height: '45px',
+      desc: `${translate({ id: "externalLinks.dev.sdk.desc" })}`
+    },
+    {
+      title: 'BioStar 2 API',
+      url: 'https://bs2api.biostar2.com/',
+      Svg: require('@site/static/img/biostar-api.svg').default,
+      height: '45px',
+      desc: `${translate({ id: "externalLinks.dev.2api.desc" })}`
     },
     {
       title: 'Suprema G-SDK',
