@@ -1,0 +1,342 @@
+name: Generate PDF-BioStar Air Administrator Guide
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "문서 버전"
+        required: true
+        default: "1.0.0"
+      document_number:
+        description: "문서 번호 (예: 102.00.BSA)"
+        required: true
+        default: "102.00.BSA"
+      release_date:
+        description: "릴리스 날짜 (YYMMDD 형식)"
+        required: true
+        default: "YYMMDD"
+
+permissions:
+  contents: write
+
+env:
+  PRINCE_VER: 16
+  PRODUCT_NAME: "BioStar Air"
+  DOC_TYPE: "Administrator Guide"
+  BASE_URL_KO: "https://docs.supremainc.com/platform/biostar_air"
+  BASE_URL_EN: "https://docs.supremainc.com/en/platform/biostar_air"
+
+jobs:
+  generate-pdf:
+    name: Generate BioStar Air Administrator Guide PDF
+    runs-on: macos-14
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Validate inputs
+      run: |
+        echo "🔍 입력값 검증 중..."
+        
+        # 날짜 형식 검증 (YYMMDD)
+        if ! echo "${{ github.event.inputs.release_date }}" | grep -qE '^[0-9]{6}$'; then
+          echo "❌ 오류: 릴리스 날짜는 YYMMDD 형식이어야 합니다: ${{ github.event.inputs.release_date }}"
+          exit 1
+        fi
+        
+        echo "✅ 모든 입력값이 유효합니다"
+
+    - name: Print workflow inputs
+      run: |
+        echo "=== 워크플로우 입력값 ==="
+        echo "제품명: ${PRODUCT_NAME}"
+        echo "문서 유형: ${DOC_TYPE}"
+        echo "버전: ${{ github.event.inputs.version }}"
+        echo "문서 번호: ${{ github.event.inputs.document_number }}"
+        echo "릴리스 날짜: ${{ github.event.inputs.release_date }}"
+        echo ""
+        echo "=== PDF 생성 URL ==="
+        echo "한국어: ${BASE_URL_KO}"
+        echo "영어: ${BASE_URL_EN}"
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: 'yarn'
+
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
+
+    - name: Install Prince XML
+      run: |
+        echo "📦 Prince XML 설치 중..."
+        curl https://www.princexml.com/download/prince-${{ env.PRINCE_VER }}-macos.zip -O
+        tar zxf prince-${{ env.PRINCE_VER }}-macos.zip
+        cd prince-${{ env.PRINCE_VER }}-macos
+        yes "" | sudo ./install.sh
+        echo "✅ Prince XML 설치 완료"
+
+    - name: Install other tools
+      run: |
+        echo "📦 기타 도구 설치 중..."
+        echo "🔄 Homebrew 업데이트 중..."
+        brew update
+        echo "📦 도구 설치 중: pdfcpu, pdftk-java, gh"
+        brew install pdfcpu pdftk-java gh
+        echo "✅ 모든 도구 설치 완료"
+
+    - name: Setup environment variables
+      run: |
+        echo "📊 환경변수 설정 중..."
+        
+        # 파일명용 안전한 문자열 생성
+        PRODUCT_SAFE="BioStar_Air"
+        DOC_TYPE_SAFE="Administrator_Guide"
+        
+        # 릴리스명 및 태그 설정
+        RELEASE_NAME="${PRODUCT_SAFE}-${DOC_TYPE_SAFE}-v${{ github.event.inputs.version }}"
+        RELEASE_TITLE="BioStar Air Administrator Guide v${{ github.event.inputs.version }}"
+        
+        # PDF 파일명 설정 (한국어/영어)
+        PDF_NAME_KO="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_KO_${{ github.event.inputs.release_date }}_temp.pdf"
+        PDF_NAME_EN="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.release_date }}_temp.pdf"
+        FINAL_PDF_NAME_KO="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_KO_${{ github.event.inputs.release_date }}.pdf"
+        FINAL_PDF_NAME_EN="${PRODUCT_SAFE}_${DOC_TYPE_SAFE}_${{ github.event.inputs.version }}_EN_${{ github.event.inputs.release_date }}.pdf"
+
+        
+        # 환경변수로 저장
+        echo "PRODUCT_SAFE=${PRODUCT_SAFE}" >> $GITHUB_ENV
+        echo "DOC_TYPE_SAFE=${DOC_TYPE_SAFE}" >> $GITHUB_ENV
+        echo "RELEASE_NAME=${RELEASE_NAME}" >> $GITHUB_ENV
+        echo "RELEASE_TITLE=${RELEASE_TITLE}" >> $GITHUB_ENV
+        echo "PDF_NAME_KO=${PDF_NAME_KO}" >> $GITHUB_ENV
+        echo "PDF_NAME_EN=${PDF_NAME_EN}" >> $GITHUB_ENV
+        echo "FINAL_PDF_NAME_KO=${FINAL_PDF_NAME_KO}" >> $GITHUB_ENV
+        echo "FINAL_PDF_NAME_EN=${FINAL_PDF_NAME_EN}" >> $GITHUB_ENV
+        
+        echo "✅ 환경변수 설정 완료:"
+        echo "  🏷️ 태그명: ${RELEASE_NAME}"
+        echo "  📝 릴리스 제목: ${RELEASE_TITLE}"
+        echo "  📄 한국어 PDF: ${FINAL_PDF_NAME_KO}"
+        echo "  📄 영어 PDF: ${FINAL_PDF_NAME_EN}"
+
+    - name: Create PDF output directory
+      run: mkdir -p ./pdf
+
+    - name: Generate Korean PDFs
+      run: |
+        echo "📄 한국어 PDF 생성 시작..."
+        
+        # 한국어 프론트 커버 생성
+        echo "📄 한국어 프론트 커버 생성 중..."
+        node generate-cover-local.js \
+          --title="${PRODUCT_NAME}" \
+          --subtitle="${DOC_TYPE}" \
+          --version="${{ github.event.inputs.version }}" \
+          --lang="ko" \
+          --number="${{ github.event.inputs.document_number }}" \
+          --output="./pdf/front-cover-ko.html"
+        
+        # 프론트 커버 HTML을 PDF로 변환
+        prince "./pdf/front-cover-ko.html" -o "./pdf/front-cover-ko.pdf"
+        
+        # 한국어 메인 문서 PDF 생성
+        echo "📖 한국어 메인 문서 PDF 생성 중..."
+        node generatepdf \
+          -u "${BASE_URL_KO}" \
+          --prince-args="--page-size='a4' --style=./print.css --javascript" \
+          -o "./pdf/${PDF_NAME_KO}" \
+          --dest ./pdf \
+          --include-index
+        
+        echo "✅ 한국어 PDF 생성 완료"
+    
+    - name: Generate English PDFs
+      run: |
+        echo "📄 영어 PDF 생성 시작..."
+        
+        # 영어 프론트 커버 생성
+        echo "📄 영어 프론트 커버 생성 중..."
+        node generate-cover-local.js \
+          --title="${PRODUCT_NAME}" \
+          --subtitle="${DOC_TYPE}" \
+          --version="${{ github.event.inputs.version }}" \
+          --lang="en" \
+          --number="301.00.BSX" \
+          --output="./pdf/front-cover-en.html"
+        
+        # 프론트 커버 HTML을 PDF로 변환
+        prince "./pdf/front-cover-en.html" -o "./pdf/front-cover-en.pdf"
+        
+        # 영어 메인 문서 PDF 생성
+        echo "📖 영어 메인 문서 PDF 생성 중..."
+        node generatepdf \
+          -u "${BASE_URL_EN}" \
+          --prince-args="--page-size='a4' --style=./print.css --javascript" \
+          -o "./pdf/${PDF_NAME_EN}" \
+          --dest ./pdf \
+          --include-index
+        
+        echo "✅ 영어 PDF 생성 완료"
+    
+    - name: Process Korean PDFs
+      run: |
+        echo "🔧 한국어 PDF 처리 중..."
+        
+        # 주석 제거
+        pdfcpu annot remove "./pdf/front-cover-ko.pdf" Popup Text
+        
+        if [ -f "./pdf/${PDF_NAME_KO}" ]; then
+          pdfcpu annot remove -pages 1 "./pdf/${PDF_NAME_KO}" Popup Text
+        else
+          echo "❌ 오류: 한국어 메인 PDF 파일을 찾을 수 없습니다"
+          exit 1
+        fi
+        
+        # PDF 병합
+        echo "📎 한국어 PDF 병합 중..."
+        pdftk "./pdf/front-cover-ko.pdf" "./pdf/${PDF_NAME_KO}" "back-cover.pdf" cat output "./pdf/${FINAL_PDF_NAME_KO}"
+        
+        # 뷰어 설정 적용
+        echo "⚙️ 한국어 PDF 뷰어 설정 적용..."
+        pdfcpu pagemode set "./pdf/${FINAL_PDF_NAME_KO}" UseOutlines
+        pdfcpu pagelayout set "./pdf/${FINAL_PDF_NAME_KO}" SinglePage
+        pdfcpu viewerpref set "./pdf/${FINAL_PDF_NAME_KO}" '{"FitWindow": true, "CenterWindow": true}'
+        
+        echo "✅ 한국어 PDF 처리 완료"
+
+    - name: Process English PDFs
+      run: |
+        echo "🔧 영어 PDF 처리 중..."
+        
+        # 주석 제거
+        pdfcpu annot remove "./pdf/front-cover-en.pdf" Popup Text
+        
+        if [ -f "./pdf/${PDF_NAME_EN}" ]; then
+          pdfcpu annot remove -pages 1 "./pdf/${PDF_NAME_EN}" Popup Text
+        else
+          echo "❌ 오류: 영어 메인 PDF 파일을 찾을 수 없습니다"
+          exit 1
+        fi
+        
+        # PDF 병합
+        echo "📎 영어 PDF 병합 중..."
+        pdftk "./pdf/front-cover-en.pdf" "./pdf/${PDF_NAME_EN}" "back-cover-en.pdf" cat output "./pdf/${FINAL_PDF_NAME_EN}"
+        
+        # 뷰어 설정 적용
+        echo "⚙️ 영어 PDF 뷰어 설정 적용..."
+        pdfcpu pagemode set "./pdf/${FINAL_PDF_NAME_EN}" UseOutlines
+        pdfcpu pagelayout set "./pdf/${FINAL_PDF_NAME_EN}" SinglePage
+        pdfcpu viewerpref set "./pdf/${FINAL_PDF_NAME_EN}" '{"FitWindow": true, "CenterWindow": true}'
+        
+        echo "✅ 영어 PDF 처리 완료"
+
+    - name: Check and prepare release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        echo "� GitHub CLI 인증 확인..."
+        gh auth status
+        
+        echo "�🗑️ 기존 릴리스 및 태그 정리 중: ${RELEASE_NAME}"
+        
+        # 기존 릴리스 삭제 시도 (최대 3회 재시도)
+        for i in {1..3}; do
+          if gh release delete "${RELEASE_NAME}" -y 2>/dev/null; then
+            echo "✅ 기존 릴리스 삭제 완료 (시도 $i/3)"
+            break
+          else
+            if [ $i -eq 3 ]; then
+              echo "ℹ️ 기존 릴리스 없음 또는 삭제 실패 (최종)"
+            else
+              echo "⏳ 릴리스 삭제 재시도 중... ($i/3)"
+              sleep 2
+            fi
+          fi
+        done
+        
+        # 기존 태그 삭제 시도
+        git push origin --delete "${RELEASE_NAME}" 2>/dev/null || echo "ℹ️ 기존 태그 없음 또는 삭제 실패"
+        
+        echo "✅ 릴리스 준비 완료"
+
+    - name: Create GitHub Release and Upload PDFs
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        echo "🆕 새로운 릴리스 생성 및 PDF 업로드 중..."
+        
+        # PDF 파일 존재 및 크기 확인
+        echo "📋 생성된 PDF 파일 확인 중..."
+        PDF_FILES=("${FINAL_PDF_NAME_KO}" "${FINAL_PDF_NAME_EN}" "${FINAL_RN_NAME_KO}" "${FINAL_RN_NAME_EN}")
+        
+        for PDF_FILE in "${PDF_FILES[@]}"; do
+          if [ ! -f "./pdf/${PDF_FILE}" ]; then
+            echo "❌ 오류: PDF 파일을 찾을 수 없습니다: ${PDF_FILE}"
+            echo "📁 현재 pdf 디렉토리 내용:"
+            ls -la ./pdf/
+            exit 1
+          fi
+          FILE_SIZE=$(ls -lh "./pdf/${PDF_FILE}" | awk '{print $5}')
+          echo "📊 ${PDF_FILE} - 크기: ${FILE_SIZE}"
+        done
+        
+        echo "✅ 모든 PDF 파일 확인 완료"
+        
+        # Release Notes
+        cat > release_notes.md << EOF
+        # BioStar X Administrator Guide & Release Notes v${{ github.event.inputs.version }}
+
+        **Version:** ${{ github.event.inputs.version }}
+        **Document number:** ${{ github.event.inputs.document_number }}
+        **Release date:** ${{ github.event.inputs.release_date }}
+        **Create date:** $(date '+%Y-%m-%d %H:%M:%S UTC')
+
+        ## 📥 Downloads
+        - 한국어: 
+          - [${FINAL_PDF_NAME_KO}](https://github.com/${{ github.repository }}/releases/download/${RELEASE_NAME}/${FINAL_PDF_NAME_KO})
+        - English: 
+          - [${FINAL_PDF_NAME_EN}](https://github.com/${{ github.repository }}/releases/download/${RELEASE_NAME}/${FINAL_PDF_NAME_EN})
+
+        ## 📄 Source URLs
+        - 한국어: ${BASE_URL_KO}
+        - English: ${BASE_URL_EN}
+        EOF
+        
+        echo "📌 태그명: ${RELEASE_NAME}"
+        echo "📝 릴리스 제목: ${RELEASE_TITLE}"
+        
+        # 릴리스 생성 및 PDF 업로드 (재시도 로직)
+        for i in {1..3}; do
+          if gh release create "${RELEASE_NAME}" \
+            --title "${RELEASE_TITLE}" \
+            --notes-file release_notes.md \
+            "./pdf/${FINAL_PDF_NAME_KO}" \
+            "./pdf/${FINAL_PDF_NAME_EN}"; then
+            echo "✅ 릴리스 생성 및 PDF 업로드 완료 (시도 $i/3)"
+            break
+          else
+            if [ $i -eq 3 ]; then
+              echo "❌ 릴리스 생성 실패 (최종 시도)"
+              exit 1
+            else
+              echo "⏳ 릴리스 생성 재시도 중... ($i/3)"
+              sleep 5
+            fi
+          fi
+        done
+
+    - name: Show completion summary
+      run: |
+        echo "🎉 PDF 생성 및 릴리스 완료!"
+        echo "=========================="
+        echo "📁 생성된 파일:"
+        ls -lh ./pdf/ | grep -E '\.pdf$' || echo "PDF 파일 없음"
+        echo "=========================="
+        echo "🔗 릴리스: https://github.com/${{ github.repository }}/releases/tag/${RELEASE_NAME}"
+        echo "📝 릴리스 제목: ${RELEASE_TITLE}"
+        echo "🏷️ 태그명: ${RELEASE_NAME}"
+        echo "📄 한국어 PDF: ${FINAL_PDF_NAME_KO}"
+        echo "📄 영어 PDF: ${FINAL_PDF_NAME_EN}"
