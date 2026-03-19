@@ -4,6 +4,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import {translate} from '@docusaurus/Translate';
+import PlaStore from '@site/static/img/ico-playstore.svg';
+import AppStore from '@site/static/img/ico-appstore.svg';
 
 function CardItem({img, title, url, height, desc}) {
   return (
@@ -24,16 +26,21 @@ function CardItem({img, title, url, height, desc}) {
   )
 }
 
-function ExternalLinkBanner({Svg, title, url, desc, height}) {
+function ExternalLinkBanner({Svg, img, title, url, desc, height, play, ios}) {
   return (
     <Link to={url} className={styles.externalLink}>
       <div className={styles.externalLinkitem}>
         <div className={styles.externalLinkLogo}>
-          <div className={styles.circle}>{(Svg) && <Svg role="img" width='100%' height={height} />}</div>
+          <div className={styles.circle}>
+            {(Svg) && <Svg role="img" width='100%' height={height} />}
+            {(img) && <img src={img} width='auto' height={height} />}
+          </div>
         </div>
         <div className={styles.externalLiinkDesc}>
           <Heading as='h3' className={styles.externalLinkTitle}>{title}</Heading>
-          <p className={styles.externalLinkDesc} dangerouslySetInnerHTML={{__html: desc}} />
+          {desc && <p className={styles.externalLinkDesc} dangerouslySetInnerHTML={{__html: desc}} />}
+          {play && <a href={play} target='_blank' className={styles.storeLink}><PlaStore /></a>}
+          {ios && <a href={ios} target='_blank' className={styles.storeLink}><AppStore /></a>}
         </div>
       </div>
     </Link>
@@ -64,6 +71,13 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
       Svg: require('@site/static/img/biostar-api.svg').default,
       height: '45px',
       desc: `${translate({ id: "externalLinks.dev.2api.desc" })}`
+    },
+    {
+      title: 'BioStar Air Developer',
+      url: 'https://developers.biostarair.com',
+      Svg: require('@site/static/img/bsair-dev.svg').default,
+      height: '45px',
+      desc: `${translate({ id: "externalLinks.dev.bsair.desc" })}`
     },
     {
       title: 'Suprema G-SDK',
@@ -400,6 +414,20 @@ export function Peripheral({ productLinks: productLinksProp }) {
 export function Apps({ externalLinks: externalLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const defaultExternalLinks = [
+    {
+      title: 'BioStar Air',
+      play: 'https://play.google.com/store/apps/details?id=com.supremainc.biostarair',
+      ios: 'https://apps.apple.com/app/biostar-air/id6745057397',
+      img: require('/img/bsair-app.png').default,
+      height: '45px'
+    },
+    {
+      title: 'Suprema Pass',
+      play: 'https://play.google.com/store/apps/details?id=com.supremainc.supremapass',
+      ios: 'https://apps.apple.com/no/app/suprema-pass/id6745057639',
+      img: require('/img/sup-pass-app.png').default,
+      height: '45px'
+    },
     {
       title: 'Device Manager',
       url: '/device/device_manager',

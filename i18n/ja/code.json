@@ -1125,5 +1125,8 @@
   },
   "externalLinks.dev.svpsdk.desc": {
     "message": "Suprema デバイスの主要機能を<br/>他ソフトウェアでサポート"
+  },
+  "externalLinks.dev.bsair.desc": {
+    "message": "既存システムとのシームレスなAPI統合"
   }
 }

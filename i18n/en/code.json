@@ -1125,5 +1125,8 @@
   },
   "externalLinks.dev.svpsdk.desc": {
     "message": "Core functions of Suprema devices<br/>Supported by third-party software"
+  },
+  "externalLinks.dev.bsair.desc": {
+    "message": "Seamless API integration with existing systems"
   }
 }
