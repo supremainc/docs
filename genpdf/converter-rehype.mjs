@@ -49,7 +49,8 @@ import {
   rehypeProcessNextStepComponent,
   rehypeProcessDocLink,
   rehypeProcessGlossaryComponent,
-  rehypeProcessTreeviewComponent
+  rehypeProcessTreeviewComponent,
+  rehypeProcessFaqsComponent
 } from './plugins-rehype.mjs';
 
 /**
@@ -142,7 +143,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(remarkRemoveComments)
     
     // Markdown transformations
-    .use(remarkTransformImagePaths, basePath)
+    .use(remarkTransformImagePaths, basePath, language)
     .use(remarkTransformDocLinks, docPath, language)
     .use(remarkAddHeadingIds, headingId)
     .use(remarkProcessIncludeXclude, productOption, '', headingId)
@@ -181,6 +182,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(rehypeProcessNextStepComponent, language)
     .use(rehypeProcessGlossaryComponent, language)
     .use(rehypeProcessTreeviewComponent, language)
+    .use(rehypeProcessFaqsComponent, docPath, language)
     .use(rehypeProcessMdxElements, translations, basePath, language)
     .use(rehypeProcessCmdComponent, language)
     .use(rehypeProcessColumnsComponent)
@@ -190,8 +192,8 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     
     // Convert JSX components to HTML
     .use(rehypeMdxElements, {
-      allowedElements: ['Image', 'Badge', 'Table', 'Thead', 'Tbody', 'Row', 'Th', 'Td', 'div', 'SpecSection', 'Steps', 'Step', 'Linkto', 'details', 'summary', 'span', 'b'],
-      passThrough: ['raw', 'Anno', 'details', 'summary']
+      allowedElements: ['Image', 'Badge', 'Table', 'Thead', 'Tbody', 'Row', 'Th', 'Td', 'div', 'SpecSection', 'Steps', 'Step', 'Linkto', 'details', 'summary', 'span', 'b', 'Head', 'FaqsItems'],
+      passThrough: ['raw', 'Anno', 'details', 'summary', 'Head']
     })
     
     // Stringify to HTML

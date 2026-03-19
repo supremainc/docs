@@ -4,7 +4,7 @@
  */
 
 import { visit } from 'unist-util-visit';
-import { readFileSync } from 'fs';
+import { readFileSync, readdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import rehypeParse from 'rehype-parse';
@@ -1101,10 +1101,11 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
       }
 
       // Process Image components (both flow and text elements - for headings)
+      // NOTE: src paths are already converted to absolute paths by remark plugin
       if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Image') {
         const attributes = node.attributes || [];
         const srcAttr = attributes.find(attr => attr.name === 'src');
-        let src = srcAttr ? srcAttr.value : '';
+        const src = srcAttr ? srcAttr.value : '';
         
         // Extract optional attributes
         const classNameAttr = attributes.find(attr => attr.name === 'className');
@@ -1139,34 +1140,6 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         const altAttr = attributes.find(attr => attr.name === 'alt');
         const alt = altAttr ? altAttr.value : '';
         
-        const hasAlone = attributes.some(attr => attr.name === 'alone');
-        
-        // Convert to absolute file system path for PDF generation
-        if (src && basePath) {
-          if (src.startsWith('/img/')) {
-            const normalizedSrc = src.replace(/^\/img\//, '');
-            // alone 속성이 없으면 언어 폴더 추가
-            if (!hasAlone) {
-              if (language !== 'ko') {
-                src = basePath.replace(/\\/g, '/') + '/static/img/' + 'en' + '/' + normalizedSrc;
-              } else {
-                src = basePath.replace(/\\/g, '/') + '/static/img/' + normalizedSrc;
-              }
-            } else {
-              src = basePath.replace(/\\/g, '/') + '/static/img/' + normalizedSrc;
-            }
-          } else if (!src.startsWith('/') && !hasAlone) {
-            src = src.replace(/^\.\//, '/img/').replace(/^\.\.\/img\//, '/img/').replace(/^\.\.\//, '/');
-            if (!src.startsWith('/')) {
-              src = '/img/' + language + '/' + src;
-            }
-          }
-        } else if (src && !src.startsWith('/') && !basePath && !hasAlone) {
-          src = src.replace(/^\.\//, '/img/').replace(/^\.\.\/img\//, '/img/').replace(/^\.\.\//, '/');
-          if (!src.startsWith('/')) {
-            src = '/img/' + language + '/' + src;
-          }
-        }
         
         const hasCaption = attributes.some(attr => attr.name === 'caption');
         const hasIco = attributes.some(attr => attr.name === 'ico');
@@ -1507,7 +1480,7 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
 
       if (node.type === 'mdxJsxFlowElement' && node.name === 'TabItem') {
         const attributes = node.attributes || [];
-        const tabTitle = attributes.find(attr => attr.name === 'value')?.value || '';
+        const tabTitle = attributes.find(attr => attr.name === 'label')?.value || '';
         const replacement = {
           type: 'element',
           tagName: 'div',
@@ -2220,55 +2193,64 @@ export function rehypeProcessDocLink(basePath = '', language = 'ko') {
     }
   };
   
-  return (tree) => {
-    visit(tree, 'mdxJsxFlowElement', (node, index, parent) => {
-      if (node.name === 'DocLink' && node.attributes) {
-        // Extract docId attribute
-        const docIdAttr = node.attributes.find(attr => attr.name === 'docId');
-        
-        if (!docIdAttr || !docIdAttr.value) {
-          console.warn(`⚠️  DocLink: Missing docId attribute`);
-          return;
-        }
-        
-        const docId = docIdAttr.value;
-        const metadata = loadDocMetadata(docId, language);
-        
-        if (!metadata) {
-          // Fallback: use docId as text
-          node.type = 'element';
-          node.tagName = 'a';
-          node.name = undefined;
-          node.attributes = undefined;
-          node.properties = {
-            href: `#${docId.split('/').pop()}`,
-            className: ['doclink', 'doclink-missing']
-          };
-          node.children = [
-            {
-              type: 'text',
-              value: docId
-            }
-          ];
-          return;
-        }
-        
-        // Convert to anchor element
-        node.type = 'element';
-        node.tagName = 'a';
-        node.name = undefined;
-        node.attributes = undefined;
-        node.properties = {
-          href: metadata.href,
-          className: ['doclink']
-        };
-        node.children = [
-          {
-            type: 'text',
-            value: metadata.title
-          }
-        ];
+  // Helper to process DocLink nodes
+  const processDocLinkNode = (node) => {
+    if (node.name !== 'DocLink' || !node.attributes) return;
+    
+    const docIdAttr = node.attributes.find(attr => attr.name === 'docId');
+    if (!docIdAttr || !docIdAttr.value) {
+      console.warn(`⚠️  DocLink: Missing docId attribute`);
+      return;
+    }
+    
+    let docId = docIdAttr.value;
+    let anchorId = null;
+    
+    // Split by # to separate doc path from anchor
+    // e.g., "platform/biostar_air/adding-individual-users#addingUsersWithMobileApp"
+    //    -> docId: "platform/biostar_air/adding-individual-users", anchorId: "addingUsersWithMobileApp"
+    if (docId.includes('#')) {
+      [docId, anchorId] = docId.split('#');
+    }
+    
+    const metadata = loadDocMetadata(docId, language);
+    const lastSegment = docId.split('/').pop();
+    
+    // Determine href: use anchor if provided, otherwise use metadata or lastSegment
+    let href;
+    if (anchorId) {
+      href = `#${anchorId}`;
+    } else if (metadata) {
+      href = metadata.href;
+    } else {
+      href = `#${lastSegment}`;
+    }
+    
+    // Convert to anchor element
+    node.type = 'element';
+    node.tagName = 'a';
+    node.name = undefined;
+    node.attributes = undefined;
+    node.properties = {
+      href: href,
+      className: metadata ? ['doclink'] : ['doclink', 'doclink-missing']
+    };
+    node.children = [
+      {
+        type: 'text',
+        value: metadata ? metadata.title : docId
       }
+    ];
+  };
+  
+  return (tree) => {
+    // Process both flow-level and inline (text-level) DocLink components
+    visit(tree, 'mdxJsxFlowElement', (node) => {
+      processDocLinkNode(node);
+    });
+    
+    visit(tree, 'mdxJsxTextElement', (node) => {
+      processDocLinkNode(node);
     });
   };
 }
@@ -2623,6 +2605,142 @@ function buildTreeviewHtml(data) {
     tagName: 'div',
     properties: { className: ['treeview-container'] },
     children: treeNodes
+  };
+}
+
+/**
+ * Process FaqsItems component
+ * Loads JSON data and converts to HTML details/summary structure
+ * @param {string} docPath - Document path (e.g., 'platform/biostar_air/location-services-issues')
+ * @param {string} language - Language code (ko, en, ja, es)
+ */
+export function rehypeProcessFaqsComponent(docPath = '', language = 'ko') {
+  // Helper function to parse HTML string to rehype AST
+  function htmlToAst(htmlString) {
+    try {
+      const parser = unified().use(rehypeParse, { fragment: true });
+      const ast = parser.parse(htmlString);
+      return ast.children || [];
+    } catch (error) {
+      console.warn(`⚠️  Failed to parse HTML: ${error.message}`);
+      return [{ type: 'text', value: htmlString }];
+    }
+  }
+  
+  return (tree) => {
+    visit(tree, (node, index, parent) => {
+      if (node.type === 'mdxJsxFlowElement' && node.name === 'FaqsItems') {
+        // Extract data attribute value (variable name, e.g., 'Locationissues')
+        const dataAttr = node.attributes?.find(attr => attr.name === 'data');
+        
+        if (!dataAttr || !dataAttr.value) {
+          console.warn('⚠️  FaqsItems component missing data attribute');
+          return;
+        }
+
+        // Try to find JSON files in the document's directory
+        const docDir = docPath.substring(0, docPath.lastIndexOf('/'));
+        // Language-aware path: ko uses ./docs, others use ./i18n/{lang}/docusaurus-plugin-content-docs/current
+        const fullDocDir = language === 'ko' 
+          ? `./docs/${docDir}`
+          : `./i18n/${language}/docusaurus-plugin-content-docs/current/${docDir}`;
+
+        // Try to find .json files in the directory
+        let faqData = null;
+        try {
+          // List JSON files in the directory
+          const files = readdirSync(fullDocDir);
+          const jsonFile = files.find(f => f.endsWith('.json') && !f.includes('node_modules'));
+          
+          if (jsonFile) {
+            const jsonPath = join(fullDocDir, jsonFile);
+            const content = readFileSync(jsonPath, 'utf-8');
+            faqData = JSON.parse(content);
+            console.log(`✓ Loaded FAQ data from ${jsonFile}`);
+          }
+        } catch (error) {
+          console.warn(`⚠️  Failed to load FAQ data: ${error.message}`);
+        }
+
+        if (!faqData) {
+          // Fallback: create placeholder
+          parent.children[index] = {
+            type: 'element',
+            tagName: 'div',
+            properties: { className: ['faqs-container'] },
+            children: [{
+              type: 'element',
+              tagName: 'p',
+              properties: { style: 'color: #999; font-size: 0.9em;' },
+              children: [{ type: 'text', value: '[FAQs component - data not loaded]' }]
+            }]
+          };
+          return;
+        }
+
+        // Convert FAQ data to HTML structure
+        const faqItems = Array.isArray(faqData) ? faqData : (faqData.data || []);
+
+        const faqElements = faqItems.map((faq, idx) => {
+          const questionNodes = [];
+          const answerNodes = [];
+
+          // Question content - parse HTML string to AST
+          if (typeof faq.question === 'string') {
+            questionNodes.push({
+              type: 'element',
+              tagName: 'span',
+              properties: { className: ['question'] },
+              children: [{ type: 'text', value: 'Q.' }]
+            });
+            questionNodes.push({
+              type: 'element',
+              tagName: 'span',
+              properties: {},
+              children: htmlToAst(faq.question)
+            });
+          }
+
+          // Answer content - parse HTML string to AST
+          if (typeof faq.answer === 'string' && faq.answer.trim()) {
+            answerNodes.push({
+              type: 'element',
+              tagName: 'div',
+              properties: { className: ['faqBody'] },
+              children: [{
+                type: 'element',
+                tagName: 'div',
+                properties: {},
+                children: htmlToAst(faq.answer)
+              }]
+            });
+          }
+
+          return {
+            type: 'element',
+            tagName: 'details',
+            properties: { className: ['faq'] },
+            children: [
+              {
+                type: 'element',
+                tagName: 'summary',
+                properties: {},
+                children: questionNodes
+              },
+              ...answerNodes
+            ]
+          };
+        });
+
+        // Replace FaqsItems component with HTML structure
+        parent.children[index] = {
+          type: 'element',
+          tagName: 'div',
+          properties: { className: ['faqs-container'] },
+          children: faqElements
+        };
+      }
+    });
   };
 }
 
