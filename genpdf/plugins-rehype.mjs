@@ -2113,6 +2113,7 @@ export function rehypeProcessNextStepComponent(language = 'ko') {
 /**
  * Create a rehype plugin that processes DocLink components
  * Converts <DocLink docId="..." /> to <a href="#id">{title}</a>
+ * Also handles <DocLink inner="#anchorId" /> for current page anchor links
  * 
  * Caches document titles from frontmatter to avoid repeated file I/O
  */
@@ -2193,57 +2194,140 @@ export function rehypeProcessDocLink(basePath = '', language = 'ko') {
     }
   };
   
-  // Helper to process DocLink nodes
-  const processDocLinkNode = (node) => {
-    if (node.name !== 'DocLink' || !node.attributes) return;
+  /**
+   * Get heading text from current document tree by anchor ID
+   * @param {Object} tree - Rehype AST tree
+   * @param {string} anchorId - Heading ID (e.g., "changeAccountInfo")
+   * @returns {string|null} Heading text or null if not found
+   */
+  const getHeadingFromTree = (tree, anchorId) => {
+    let headingText = null;
     
-    const docIdAttr = node.attributes.find(attr => attr.name === 'docId');
-    if (!docIdAttr || !docIdAttr.value) {
-      console.warn(`⚠️  DocLink: Missing docId attribute`);
-      return;
-    }
-    
-    let docId = docIdAttr.value;
-    let anchorId = null;
-    
-    // Split by # to separate doc path from anchor
-    // e.g., "platform/biostar_air/adding-individual-users#addingUsersWithMobileApp"
-    //    -> docId: "platform/biostar_air/adding-individual-users", anchorId: "addingUsersWithMobileApp"
-    if (docId.includes('#')) {
-      [docId, anchorId] = docId.split('#');
-    }
-    
-    const metadata = loadDocMetadata(docId, language);
-    const lastSegment = docId.split('/').pop();
-    
-    // Determine href: use anchor if provided, otherwise use metadata or lastSegment
-    let href;
-    if (anchorId) {
-      href = `#${anchorId}`;
-    } else if (metadata) {
-      href = metadata.href;
-    } else {
-      href = `#${lastSegment}`;
-    }
-    
-    // Convert to anchor element
-    node.type = 'element';
-    node.tagName = 'a';
-    node.name = undefined;
-    node.attributes = undefined;
-    node.properties = {
-      href: href,
-      className: metadata ? ['doclink'] : ['doclink', 'doclink-missing']
-    };
-    node.children = [
-      {
-        type: 'text',
-        value: metadata ? metadata.title : docId
+    visit(tree, 'element', (node) => {
+      // Look for any element with matching id attribute
+      if (node.properties?.id === anchorId) {
+        // Extract text from node
+        const text = extractText(node);
+        if (text) {
+          headingText = text;
+          return false; // Stop visiting once found
+        }
       }
-    ];
+    });
+    
+    return headingText;
+  };
+  
+  /**
+   * Extract text content from a node
+   */
+  const extractText = (node) => {
+    if (node.type === 'text') {
+      return node.value;
+    }
+    
+    if (node.children && Array.isArray(node.children)) {
+      return node.children
+        .map(child => extractText(child))
+        .filter(Boolean)
+        .join('');
+    }
+    
+    return '';
   };
   
   return (tree) => {
+    // Pre-process: build a map of anchor IDs to heading texts from current tree
+    const headingMap = new Map();
+    
+    visit(tree, 'element', (node) => {
+      if (node.properties?.id && node.children) {
+        const text = extractText(node);
+        if (text) {
+          headingMap.set(node.properties.id, text);
+        }
+      }
+    });
+    
+    // Helper to process DocLink nodes
+    const processDocLinkNode = (node) => {
+      if (node.name !== 'DocLink' || !node.attributes) return;
+      
+      // Check for 'inner' attribute (current page anchor link)
+      const innerAttr = node.attributes.find(attr => attr.name === 'inner');
+      if (innerAttr && innerAttr.value) {
+        // Inner attribute: current page anchor link
+        // e.g., <DocLink inner="#changeAccountInfo" />
+        const innerValue = innerAttr.value;
+        const anchorId = innerValue.startsWith('#') ? innerValue.substring(1) : innerValue;
+        
+        // Get heading text from current tree
+        const headingText = headingMap.get(anchorId);
+        
+        node.type = 'element';
+        node.tagName = 'a';
+        node.name = undefined;
+        node.attributes = undefined;
+        node.properties = {
+          href: `#${anchorId}`,
+          className: ['doclink', 'doclink-inner']
+        };
+        node.children = [
+          {
+            type: 'text',
+            value: headingText || anchorId
+          }
+        ];
+        return;
+      }
+      
+      // Otherwise, process docId attribute (cross-document link)
+      const docIdAttr = node.attributes.find(attr => attr.name === 'docId');
+      if (!docIdAttr || !docIdAttr.value) {
+        console.warn(`⚠️  DocLink: Missing docId and inner attributes`);
+        return;
+      }
+      
+      let docId = docIdAttr.value;
+      let anchorId = null;
+      
+      // Split by # to separate doc path from anchor
+      // e.g., "platform/biostar_air/adding-individual-users#addingUsersWithMobileApp"
+      //    -> docId: "platform/biostar_air/adding-individual-users", anchorId: "addingUsersWithMobileApp"
+      if (docId.includes('#')) {
+        [docId, anchorId] = docId.split('#');
+      }
+      
+      const metadata = loadDocMetadata(docId, language);
+      const lastSegment = docId.split('/').pop();
+      
+      // Determine href: use anchor if provided, otherwise use metadata or lastSegment
+      let href;
+      if (anchorId) {
+        href = `#${anchorId}`;
+      } else if (metadata) {
+        href = metadata.href;
+      } else {
+        href = `#${lastSegment}`;
+      }
+      
+      // Convert to anchor element
+      node.type = 'element';
+      node.tagName = 'a';
+      node.name = undefined;
+      node.attributes = undefined;
+      node.properties = {
+        href: href,
+        className: metadata ? ['doclink'] : ['doclink', 'doclink-missing']
+      };
+      node.children = [
+        {
+          type: 'text',
+          value: metadata ? metadata.title : docId
+        }
+      ];
+    };
+    
     // Process both flow-level and inline (text-level) DocLink components
     visit(tree, 'mdxJsxFlowElement', (node) => {
       processDocLinkNode(node);
