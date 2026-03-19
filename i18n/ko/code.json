@@ -1125,5 +1125,11 @@
   },
   "externalLinks.dev.svpsdk.desc": {
     "message": "슈프리마 장치의 핵심 기능을<br/>타 소프트웨어에서 지원"
+  },
+  "externalLinks.dev.bsair.desc": {
+    "message": "기존 시스템과의 원활한 API 통합"
+  },
+  "externalLinks.apps.supremapass.desc": {
+    "message": "BioStar Air의 모바일 크리덴셜"
   }
 }

@@ -390,9 +390,40 @@ const config = {
             docId: 'how-to/index'
           },
           {
-            label: 'API',
+            type: 'dropdown',
+            label: 'Developers',
             position: 'right',
-            to: '/api/bsxapi'
+            items: [
+              {
+                label: 'BioStar X API',
+                to: '/api/bsxapi'
+              },
+              {
+                label: 'BioStar Air Developer',
+                to: 'https://developers.biostarair.com',
+                target: '_blank',
+              },
+              {
+                label: 'BioStar Device SDK',
+                to: 'https://kb.supremainc.com/bs2sdk/doku.php',
+                target: '_blank',
+              },
+              {
+                label: 'BioStar 2 API',
+                to: 'https://bs2api.biostar2.com',
+                target: '_blank',
+              },
+              {
+                label: 'Suprema G-SDK',
+                to: 'https://supremainc.github.io/g-sdk',
+                target: '_blank',
+              },
+              {
+                label: 'SVP Android SDK',
+                to: 'https://kb.supremainc.com/svpsdk/doku.php',
+                target: '_blank',
+              },
+            ]
           },
           {
             type: 'doc',
