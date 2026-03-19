@@ -620,15 +620,6 @@ function ExternalLinkCard({ externalLinks: externalLinksProp }) {
     const cLocale = currentLocale !== 'ko' ? 'en' : 'ko';
     const defaultExternalLinks = [
         {
-            title: 'BioStar Device SDK',
-            url: `https://kb.supremainc.com/bs2sdk/doku.php?id=${cLocale}:start`,
-            Svg: (__webpack_require__(1014)/* ["default"] */.A),
-            height: '45px',
-            desc: `${(0,Translate/* .translate */.T)({
-                id: "externalLinks.dev.sdk.desc"
-            })}`
-        },
-        {
             title: 'BioStar X API',
             url: '/api/bsxapi',
             Svg: (__webpack_require__(3704)/* ["default"] */.A),
@@ -638,21 +629,30 @@ function ExternalLinkCard({ externalLinks: externalLinksProp }) {
             })}`
         },
         {
-            title: 'BioStar 2 API',
-            url: 'https://bs2api.biostar2.com/',
-            Svg: (__webpack_require__(3704)/* ["default"] */.A),
-            height: '45px',
-            desc: `${(0,Translate/* .translate */.T)({
-                id: "externalLinks.dev.2api.desc"
-            })}`
-        },
-        {
             title: 'BioStar Air Developer',
             url: 'https://developers.biostarair.com',
             Svg: (__webpack_require__(43240)/* ["default"] */.A),
             height: '45px',
             desc: `${(0,Translate/* .translate */.T)({
                 id: "externalLinks.dev.bsair.desc"
+            })}`
+        },
+        {
+            title: 'BioStar Device SDK',
+            url: `https://kb.supremainc.com/bs2sdk/doku.php?id=${cLocale}:start`,
+            Svg: (__webpack_require__(1014)/* ["default"] */.A),
+            height: '45px',
+            desc: `${(0,Translate/* .translate */.T)({
+                id: "externalLinks.dev.sdk.desc"
+            })}`
+        },
+        {
+            title: 'BioStar 2 API',
+            url: 'https://bs2api.biostar2.com/',
+            Svg: (__webpack_require__(3704)/* ["default"] */.A),
+            height: '45px',
+            desc: `${(0,Translate/* .translate */.T)({
+                id: "externalLinks.dev.2api.desc"
             })}`
         },
         {
