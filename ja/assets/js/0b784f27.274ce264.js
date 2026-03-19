@@ -1,0 +1,222 @@
+"use strict";
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["55200"], {
+58261: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  frontMatter: () => (/* binding */ frontMatter),
+  toc: () => (/* binding */ toc),
+  "default": () => (/* binding */ MDXContent),
+  metadata: () => (/* reexport */ site_i_18_n_ja_docusaurus_plugin_content_docs_current_platform_biostar_air_index_mdx_0b7_namespaceObject),
+  assets: () => (/* binding */ assets),
+  contentTitle: () => (/* binding */ contentTitle)
+});
+
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-ja-docusaurus-plugin-content-docs-current-platform-biostar-air-index-mdx-0b7.json
+var site_i_18_n_ja_docusaurus_plugin_content_docs_current_platform_biostar_air_index_mdx_0b7_namespaceObject = JSON.parse('{"id":"platform/biostar_air/index","title":"BioStar Air","description":"BioStar Airは、生体認証セキュリティ分野の世界的リーダーであるSupremaが開発したクラウドネイティブな入退室管理ソリューションです。","source":"@site/i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_air/index.mdx","sourceDirName":"platform/biostar_air","slug":"/platform/biostar_air/","permalink":"/docs/ja/platform/biostar_air/","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/index.mdx","tags":[],"version":"current","frontMatter":{"title":"BioStar Air","description":"BioStar Airは、生体認証セキュリティ分野の世界的リーダーであるSupremaが開発したクラウドネイティブな入退室管理ソリューションです。","keywords":["BioStar Air","アクセス制御","クラウドベースのソリューション"],"isTranslationMissing":false},"sidebar":"biostar_air","next":{"title":"BioStar Airとは?","permalink":"/docs/ja/platform/biostar_air/what-is-biostar-air"}}')
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(74848);
+// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
+var lib = __webpack_require__(84429);
+;// CONCATENATED MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_air/index.mdx
+
+
+const frontMatter = {
+	title: 'BioStar Air',
+	description: 'BioStar Airは、生体認証セキュリティ分野の世界的リーダーであるSupremaが開発したクラウドネイティブな入退室管理ソリューションです。',
+	keywords: [
+		'BioStar Air',
+		'アクセス制御',
+		'クラウドベースのソリューション'
+	],
+	isTranslationMissing: false
+};
+const contentTitle = undefined;
+
+const assets = {
+
+};
+
+
+
+const toc = [{
+  "value": "ユーザーガイド",
+  "id": "ユーザーガイド",
+  "level": 2
+}, {
+  "value": "ガイドの構成",
+  "id": "ガイドの構成",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    h2: "h2",
+    li: "li",
+    p: "p",
+    ul: "ul",
+    ...(0,lib/* .useMDXComponents */.R)(),
+    ...props.components
+  }, {DocLink, Image, Overview} = _components;
+  if (!DocLink) _missingMdxReference("DocLink", true);
+  if (!Image) _missingMdxReference("Image", true);
+  if (!Overview) _missingMdxReference("Overview", true);
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(_components.p, {
+      children: "BioStar Airは、生体認証セキュリティ分野の世界的リーダーであるSupremaが開発したクラウドネイティブな入退室管理ソリューションです。 オンプレミスインフラの必要性をなくすよう設計されたBioStar Airは、どこからでも管理できる安全で柔軟かつスケーラブルな入退室管理を提供します。 クラウドに直接接続されたスマートリーダーにより、企業は携帯電話やブラウザだけで複数拠点の出入を簡単に制御できます。"
+    }), "\n", (0,jsx_runtime.jsx)(Image, {
+      src: "/img/air/air-main-cover-image.png",
+      alone: true
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "ユーザーガイド",
+      children: "ユーザーガイド"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "ユーザーガイドは、役割ごとに4種類に分かれています。 ご自身の役割に該当するガイドを選択してください。"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(DocLink, {
+            docId: "platform/biostar_air/site-admin-guide"
+          }), "：ユーザーおよびクレデンシャルの登録、機器・ドア・エレベーターの設定、アクセス権の構成、イベント監視、サイト設定およびサービス構成など、BioStar Airサイトの日常運用を担当します。"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(DocLink, {
+            docId: "platform/biostar_air/partner-install-guide"
+          }), "：パートナーポータルによるサイトの作成と管理、リーダー・モジュール・カメラなどのハードウェアの設置およびネットワーク構成を担当します。"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(DocLink, {
+            docId: "platform/biostar_air/credential-users-guide"
+          }), "：Suprema Passアプリでモバイルクレデンシャルを使ってドアを開錠し、認証方式やBluetoothの感度を設定するエンドユーザーです。"]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(DocLink, {
+            docId: "platform/biostar_air/developer-guide"
+          }), "：BioStar Air Cloud APIを通じてユーザー管理やクレデンシャル発行を自動化する開発者向けドキュメントです。"]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "ガイドの構成",
+      children: "ガイドの構成"
+    }), "\n", (0,jsx_runtime.jsx)(Overview, {
+      all: true
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,lib/* .useMDXComponents */.R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
+    ...props,
+    children: (0,jsx_runtime.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}
+
+
+
+}),
+84429: (function (__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+__webpack_require__.d(__webpack_exports__, {
+  R: () => (useMDXComponents),
+  x: () => (MDXProvider)
+});
+/* ESM import */var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(96540);
+/**
+ * @import {MDXComponents} from 'mdx/types.js'
+ * @import {Component, ReactElement, ReactNode} from 'react'
+ */
+
+/**
+ * @callback MergeComponents
+ *   Custom merge function.
+ * @param {Readonly<MDXComponents>} currentComponents
+ *   Current components from the context.
+ * @returns {MDXComponents}
+ *   Additional components.
+ *
+ * @typedef Props
+ *   Configuration for `MDXProvider`.
+ * @property {ReactNode | null | undefined} [children]
+ *   Children (optional).
+ * @property {Readonly<MDXComponents> | MergeComponents | null | undefined} [components]
+ *   Additional components to use or a function that creates them (optional).
+ * @property {boolean | null | undefined} [disableParentContext=false]
+ *   Turn off outer component context (default: `false`).
+ */
+
+
+
+/** @type {Readonly<MDXComponents>} */
+const emptyComponents = {}
+
+const MDXContext = react__WEBPACK_IMPORTED_MODULE_0__.createContext(emptyComponents)
+
+/**
+ * Get current components from the MDX Context.
+ *
+ * @param {Readonly<MDXComponents> | MergeComponents | null | undefined} [components]
+ *   Additional components to use or a function that creates them (optional).
+ * @returns {MDXComponents}
+ *   Current components.
+ */
+function useMDXComponents(components) {
+  const contextComponents = react__WEBPACK_IMPORTED_MODULE_0__.useContext(MDXContext)
+
+  // Memoize to avoid unnecessary top-level context changes
+  return react__WEBPACK_IMPORTED_MODULE_0__.useMemo(
+    function () {
+      // Custom merge via a function prop
+      if (typeof components === 'function') {
+        return components(contextComponents)
+      }
+
+      return {...contextComponents, ...components}
+    },
+    [contextComponents, components]
+  )
+}
+
+/**
+ * Provider for MDX context.
+ *
+ * @param {Readonly<Props>} properties
+ *   Properties.
+ * @returns {ReactElement}
+ *   Element.
+ * @satisfies {Component}
+ */
+function MDXProvider(properties) {
+  /** @type {Readonly<MDXComponents>} */
+  let allComponents
+
+  if (properties.disableParentContext) {
+    allComponents =
+      typeof properties.components === 'function'
+        ? properties.components(emptyComponents)
+        : properties.components || emptyComponents
+  } else {
+    allComponents = useMDXComponents(properties.components)
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
+    MDXContext.Provider,
+    {value: allComponents},
+    properties.children
+  )
+}
+
+
+}),
+
+}]);
