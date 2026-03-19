@@ -594,12 +594,15 @@ html[lang='en'] .doc-content .container table {
 }
 .doc-content .columns .padding--l10 {
   padding-left: 10px !important;
+  flex: 1;
 }
 .doc-content .columns .padding--l20 {
   padding-left: 20px !important;
+  flex: 1;
 }
 .doc-content .columns .padding--l40 {
   padding-left: 40px !important;
+  flex: 1;
 }
 .doc-content .columns .mt--50 {
   margin-top: 50px;
@@ -608,6 +611,10 @@ html[lang='en'] .doc-content .container table {
 .doc-content .columns .col {
   padding-left: 0;
   padding-right: 0;
+}
+
+.doc-content .columns .col h5, .doc-content .columns .col h4, .doc-content .columns .col h3 {
+  margin-top: 0;
 }
 
 .doc-content .columns .text--center p.hasimg img {
@@ -772,6 +779,19 @@ html[lang='en'] .doc-content .container table {
 .doc-content p .cmd.bold {
   font-weight: bold;
   color: #000;
+}
+
+.doc-content .tabItem > b:first-of-type {
+  font-weight: 600;
+  font-size: 10.5pt;
+  border-bottom: .25pt solid #0c47af;
+  display: block;
+  margin-bottom: 1rem;
+  color: #0c47af;
+}
+
+.doc-content .tabItem > img {
+  margin-bottom: 1rem;
 }
 
 footer {

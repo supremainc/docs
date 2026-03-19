@@ -142,7 +142,7 @@ function createProcessor(translations = {}, productOption = '', basePath = '', h
     .use(remarkRemoveComments)
     
     // Markdown transformations
-    .use(remarkTransformImagePaths, basePath)
+    .use(remarkTransformImagePaths, basePath, language)
     .use(remarkTransformDocLinks, docPath, language)
     .use(remarkAddHeadingIds, headingId)
     .use(remarkProcessIncludeXclude, productOption, '', headingId)

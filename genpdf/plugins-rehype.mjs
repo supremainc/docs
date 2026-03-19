@@ -1101,10 +1101,11 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
       }
 
       // Process Image components (both flow and text elements - for headings)
+      // NOTE: src paths are already converted to absolute paths by remark plugin
       if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Image') {
         const attributes = node.attributes || [];
         const srcAttr = attributes.find(attr => attr.name === 'src');
-        let src = srcAttr ? srcAttr.value : '';
+        const src = srcAttr ? srcAttr.value : '';
         
         // Extract optional attributes
         const classNameAttr = attributes.find(attr => attr.name === 'className');
@@ -1139,34 +1140,6 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         const altAttr = attributes.find(attr => attr.name === 'alt');
         const alt = altAttr ? altAttr.value : '';
         
-        const hasAlone = attributes.some(attr => attr.name === 'alone');
-        
-        // Convert to absolute file system path for PDF generation
-        if (src && basePath) {
-          if (src.startsWith('/img/')) {
-            const normalizedSrc = src.replace(/^\/img\//, '');
-            // alone 속성이 없으면 언어 폴더 추가
-            if (!hasAlone) {
-              if (language !== 'ko') {
-                src = basePath.replace(/\\/g, '/') + '/static/img/' + 'en' + '/' + normalizedSrc;
-              } else {
-                src = basePath.replace(/\\/g, '/') + '/static/img/' + normalizedSrc;
-              }
-            } else {
-              src = basePath.replace(/\\/g, '/') + '/static/img/' + normalizedSrc;
-            }
-          } else if (!src.startsWith('/') && !hasAlone) {
-            src = src.replace(/^\.\//, '/img/').replace(/^\.\.\/img\//, '/img/').replace(/^\.\.\//, '/');
-            if (!src.startsWith('/')) {
-              src = '/img/' + language + '/' + src;
-            }
-          }
-        } else if (src && !src.startsWith('/') && !basePath && !hasAlone) {
-          src = src.replace(/^\.\//, '/img/').replace(/^\.\.\/img\//, '/img/').replace(/^\.\.\//, '/');
-          if (!src.startsWith('/')) {
-            src = '/img/' + language + '/' + src;
-          }
-        }
         
         const hasCaption = attributes.some(attr => attr.name === 'caption');
         const hasIco = attributes.some(attr => attr.name === 'ico');
@@ -1507,7 +1480,7 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
 
       if (node.type === 'mdxJsxFlowElement' && node.name === 'TabItem') {
         const attributes = node.attributes || [];
-        const tabTitle = attributes.find(attr => attr.name === 'value')?.value || '';
+        const tabTitle = attributes.find(attr => attr.name === 'label')?.value || '';
         const replacement = {
           type: 'element',
           tagName: 'div',

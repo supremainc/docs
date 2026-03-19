@@ -70,15 +70,51 @@ export function extractHeadingText(node) {
  * Create a remark plugin that converts markdown image paths to absolute file paths
  * Converts /img/* paths to absolute file system paths for PDF generation
  */
-export function remarkTransformImagePaths(basePath = '') {
+export function remarkTransformImagePaths(basePath = '', language = 'ko') {
   return (tree) => {
+    // Process markdown images: ![alt](url)
     visit(tree, 'image', (node) => {
       if (!node.url) return;
 
       // Convert /img/... to absolute file path
       if (node.url.startsWith('/img/')) {
         if (basePath) {
-          node.url = basePath.replace(/\\/g, '/') + '/static' + node.url;
+          const normalizedUrl = node.url.replace(/^\/img\//, '');
+          if (language !== 'ko') {
+            node.url = basePath.replace(/\\/g, '/') + '/static/img/en/' + normalizedUrl;
+          } else {
+            node.url = basePath.replace(/\\/g, '/') + '/static/img/' + normalizedUrl;
+          }
+        }
+      }
+    });
+
+    // Process JSX Image components recursively: <Image src="/img/..." />
+    // This handles nested structures like Tabs > TabItem > Image
+    visit(tree, (node) => {
+      // Check if this is an Image component with src attribute
+      if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && 
+          node.name === 'Image' && 
+          node.attributes && Array.isArray(node.attributes)) {
+        const srcAttr = node.attributes.find(attr => attr.name === 'src');
+        const hasAlone = node.attributes.some(attr => attr.name === 'alone');
+        
+        if (srcAttr && srcAttr.value && typeof srcAttr.value === 'string' && srcAttr.value.startsWith('/img/')) {
+          if (basePath) {
+            const normalizedUrl = srcAttr.value.replace(/^\/img\//, '');
+            
+            // alone 속성이 없으면 언어 폴더 추가
+            if (!hasAlone) {
+              if (language !== 'ko') {
+                srcAttr.value = basePath.replace(/\\/g, '/') + '/static/img/en/' + normalizedUrl;
+              } else {
+                srcAttr.value = basePath.replace(/\\/g, '/') + '/static/img/' + normalizedUrl;
+              }
+            } else {
+              // alone 속성이 있으면 언어 폴더 추가 안함
+              srcAttr.value = basePath.replace(/\\/g, '/') + '/static/img/' + normalizedUrl;
+            }
+          }
         }
       }
     });
