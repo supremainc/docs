@@ -322,10 +322,13 @@ buildHtmlDocument() 호출
 | `rehypeProcessCmdComponent(language)` | `<Cmd>` 처리 | `<Cmd id="key" />` | `<span class="cmd">번역된텍스트</span>` |
 | `rehypeAddTargetBlankToExternalLinks()` | 외부링크 처리 | `<a href="http://...">` | `<a href="..." target="_blank">` |
 | `rehypeProcessNextStepComponent()` | `<NextStep>` 처리 | `<NextStep><NextItem>` | `<div class="next-step"><a class="next-item">` |
-| `rehypeProcessDocLink(basePath, language)` | `<DocLink>` 처리 | `<DocLink docId="..." />` | `<a href="#id">문서제목</a>` |
+| `rehypeProcessDocLink(basePath, language)` | `<DocLink>` 처리 (inner/docId) | `<DocLink inner="#anchor" />` 또는 `<DocLink docId="..." />` | `<a href="#id">텍스트</a>` |
 | `rehypeProcessTreeviewComponent(language)` | `<Treeview>` 처리 | `<Treeview data={...} />` | `<div class="treeview-container">트리</div>` |
-| `rehypeProcessMdxElements(translations, basePath, language)` | MDX 요소 변환 | JSX 요소 | HTML 요소 |
+| `rehypeProcessGlossaryComponent(language)` | `<Glossary>` 처리 (용어집) | `<Glossary termid="key" />` | `<span class="glossary-term">용어 설명</span>` |
+| `rehypeProcessFaqsComponent(docPath, language)` | `<FaqsItems>` 처리 (FAQ) | `<FaqsItems data="IssuesData" />` | `<details><summary>질문</summary>답변</details>` |
+| `rehypeProcessMdxElements(translations, basePath, language)` | MDX 요소 변환 (Image 등) | JSX 요소 | HTML 요소 |
 | `rehypeProcessColumnsComponent()` | Columns 처리 | `<Columns>` | `<div class="columns">` |
+| `rehypeAddAdmonitionIcons(translations)` | Admonition 아이콘 추가 | `<div class="admonition-*">` | 아이콘 + 색상 포함 |
 | `rehypeAddCalloutIcons()` | Callout 아이콘 추가 | `<div class="callout-*">` | 아이콘 포함 |
 | `rehypeRemoveNoteIndicator()` | Note 표시 제거 | Note 타입 callout | 스타일만 적용 |
 | `rehypeProcessBugListsComponent()` | BugLists 처리 | `<BugLists>` | `<div class="bug-lists">` |
@@ -335,12 +338,14 @@ buildHtmlDocument() 호출
 **목적**: Docusaurus의 `<NextStep>` 컴포넌트를 스타일링된 다음 단계 네비게이션으로 변환
 
 **기능**:
+
 - `<NextStep>` 컨테이너를 `<div class="next-step">`으로 변환
 - `<NextItem>` 자식 요소를 앵커 태그 `<a class="next-item">`로 변환
 - `to` 속성을 `href`로 매핑
 - `target` 속성 유지 (있을 경우)
 
 **변환 예시**:
+
 ```mdx
 <NextStep>
   <NextItem to="/docs/platform/biostar_x/settings-door-add">
@@ -360,10 +365,12 @@ buildHtmlDocument() 호출
 ```
 
 **CSS 클래스**:
+
 - `.next-step`: 컨테이너 (배경색, 왼쪽 테두리, 패딩)
 - `.next-item`: 각 항목 (호버 효과, 스타일 링크)
 
 **스타일링**:
+
 - 왼쪽 테두리: 4px solid (주 색상)
 - 배경색: 연한 회색 (#f9f9f9)
 - 호버 시: 배경 변경, 그림자 추가
@@ -376,10 +383,26 @@ buildHtmlDocument() 호출
 
 **기능**:
 
-- MDX JSX 요소 `<DocLink docId="..." />`를 감지
-- 대상 문서의 frontmatter에서 `title` 메타데이터 추출
-- 파일 ID 기반 해시 링크(`#마지막-세그먼트`) 생성
-- 메타데이터 캐싱으로 I/O 성능 최적화
+1. **`inner` 속성 처리** (현재 문서 내 앵커 링크)
+   - 현재 문서의 AST에서 해당 ID를 찾음
+   - ID와 일치하는 요소의 텍스트 자동 추출
+   - 예: `<DocLink inner="#changeAccountInfo" />` → `<a href="#changeAccountInfo">계정 정보 변경</a>`
+
+2. **`docId` 속성 처리** (타 문서 링크)
+   - MDX JSX 요소 `<DocLink docId="..." />`를 감지
+   - `#`로 구분되는 앵커 ID 분리 처리
+   - 대상 문서의 frontmatter에서 `title` 메타데이터 추출
+   - 파일 ID 기반 해시 링크 생성
+   - 메타데이터 캐싱으로 I/O 성능 최적화
+
+**처리 흐름**:
+
+```
+1. 사전 처리: AST 순회하여 모든 ID와 해당 텍스트 맵핑 (headingMap 구성)
+2. 각 <DocLink> 컴포넌트 감지 (flow-level, text-level 모두)
+3. inner 속성이 있으면 headingMap에서 텍스트 조회
+4. inner 없으면 docId로 다른 문서의 제목 로드
+```
 
 **다국어 처리**:
 
@@ -393,6 +416,24 @@ ja: i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-m
 
 **변환 예시**:
 
+**1) inner 속성 (현재 페이지 내 앵커)**:
+
+```mdx
+## 계정 정보 변경 {#changeAccountInfo}
+
+사용자 이름, 비밀번호, 전화번호를 변경할 수 있습니다. 자세한 내용은 <DocLink inner='#changeAccountInfo' />를 참조하세요.
+```
+
+↓ 변환 후
+
+```html
+<h2 id="changeAccountInfo">계정 정보 변경</h2>
+<p>사용자 이름, 비밀번호, 전화번호를 변경할 수 있습니다. 자세한 내용은 
+  <a href="#changeAccountInfo" class="doclink doclink-inner">계정 정보 변경</a>를 참조하세요.</p>
+```
+
+**2) docId 속성 (타 문서 링크)**:
+
 ```mdx
 <DocLink docId='platform/biostar_x/settings-manage-device-group' />
 ```
@@ -403,9 +444,24 @@ ja: i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-m
 <a href="#settings-manage-device-group" class="doclink">장치 그룹 관리하기</a>
 ```
 
+**3) docId + 앵커 ID (타 문서의 특정 섹션)**:
+
+```mdx
+<DocLink docId='platform/biostar_air/adding-individual-users#addingUsersWithMobileApp' />
+```
+
+↓ 변환 후
+
+```html
+<a href="#addingUsersWithMobileApp" class="doclink">모바일 앱으로 사용자 추가하기</a>
+```
+
+(대상 문서의 제목은 로드되지만, href는 `#addingUsersWithMobileApp`으로 현재 문서 내 앵커로 지정)
+
 **CSS 클래스**:
 
 - `.doclink`: 정상 링크 (색상: var(--ifm-color-cmd), 밑줄, 굵은 글씨)
+- `.doclink-inner`: 현재 페이지 내 링크 (추가 스타일링 가능)
 - `.doclink-missing`: 문서 미존재 (회색, 취소선, 이탤릭)
 
 **캐싱 메커니즘**:
@@ -413,12 +469,49 @@ ja: i18n/ja/docusaurus-plugin-content-docs/current/platform/biostar_x/settings-m
 - `docLinkCache`: Map 객체로 `${docId}:${lang}` 키 사용
 - 동일 문서 재방문 시 즉시 반환
 - 문서 변환 중 I/O 최소화
+- headingMap: 현재 문서 AST 기반 ID → 텍스트 맵핑 (매 문서마다 재구성)
 
 **Fallback 처리**:
 
-- 대상 문서 미존재 시: docId를 텍스트로 표시
-- 다른 언어 버전이 없으면: 한국어 버전 사용
-- 제목 미존재 시: 경고 로그 출력 후 생략
+- **inner 속성**: headingMap에 ID 없으면 anchorId를 텍스트로 사용
+- **docId 속성**:
+  - 대상 문서 미존재 시: docId를 텍스트로 표시
+  - 다른 언어 버전이 없으면: 한국어 버전 사용
+  - 제목 미존재 시: 경고 로그 출력 후 docId 사용
+
+**구현 상세**:
+
+```javascript
+// headingMap 사전 구성 (tree 순회 시작 전)
+const headingMap = new Map();
+visit(tree, 'element', (node) => {
+  if (node.properties?.id && node.children) {
+    const text = extractText(node);
+    if (text) {
+      headingMap.set(node.properties.id, text);
+    }
+  }
+});
+
+// inner 속성 처리
+const innerValue = innerAttr.value;  // "#changeAccountInfo"
+const anchorId = innerValue.startsWith('#') ? innerValue.substring(1) : innerValue;
+const headingText = headingMap.get(anchorId);  // "계정 정보 변경"
+
+// docId 속성에서 앵커 분리
+if (docId.includes('#')) {
+  [docId, anchorId] = docId.split('#');
+  // docId: "platform/biostar_air/adding-individual-users"
+  // anchorId: "addingUsersWithMobileApp"
+}
+```
+
+**주의사항**:
+
+- `inner` 속성은 **항상 현재 문서 내** 링크만 처리
+- `docId` 속성의 `#` 이후는 별도 문서의 앵커이므로, href는 `#anchorId`로 지정됨
+- AST 기반 처리이므로 마크다운 파일 읽기 없음 (성능 향상)
+- flow-level과 text-level 두 가지 모두 처리 (문장 내 inline 사용 지원)
 
 ---
 
@@ -543,6 +636,387 @@ import doorTree from '../data/doors.json'
 
 // plugins-rehype.mjs에서 디코딩 → 트리 렌더링
 ```
+
+---
+
+#### `rehypeProcessGlossaryComponent(language)` 상세 설명
+
+**목적**: Docusaurus의 `<Glossary>` 컴포넌트를 용어집 조회 기능으로 변환
+
+**기능**:
+
+- 용어 ID를 기반으로 `glossary.json`에서 용어 정보 검색
+- 용어 설명을 스타일링된 스팬으로 렌더링
+- 다국어 용어집 지원 (ko, en, es, ja)
+- 없는 용어는 경고 로그 출력
+
+**변환 예시**:
+
+```mdx
+계좌를 등록하려면 먼저 <Glossary termid="credential" />를 생성해야 합니다.
+```
+
+↓ 변환 후
+
+```html
+<p>계좌를 등록하려면 먼저 
+  <span class="glossary-term" title="인증에 사용되는 생체 정보, 카드 등">
+    증명서
+  </span>를 생성해야 합니다.</p>
+```
+
+**용어집 데이터 구조** (`i18n/{lang}/glossary.json`):
+
+```json
+{
+  "credential": {
+    "term": "증명서",
+    "description": "인증에 사용되는 생체 정보, 카드 등"
+  },
+  "authentication": {
+    "term": "인증",
+    "description": "사용자의 신원을 확인하는 과정"
+  }
+}
+```
+
+**CSS 클래스**:
+
+- `.glossary-term`: 용어 스팬 (점선 밑줄, 호버 시 배경색)
+- `title` 속성: 용어 설명 (마우스 호버 시 표시)
+
+**다국어 처리**:
+
+- KO: `i18n/ko/glossary.json`
+- EN: `i18n/en/glossary.json`
+- ES: `i18n/es/glossary.json`
+- JA: `i18n/ja/glossary.json`
+
+**Fallback 처리**:
+
+- 언어별 용어집이 없으면 한국어 버전 사용
+- 용어가 없으면 경고 로그 출력 및 자리표시자 표시
+
+---
+
+#### `rehypeProcessFaqsComponent(docPath, language)` 상세 설명
+
+**목적**: Docusaurus의 `<FaqsItems>` 컴포넌트를 확장/축약 가능한 FAQ 구조로 변환
+
+**기능**:
+
+- 문서 디렉토리의 JSON 파일에서 FAQ 데이터 로드
+- 각 FAQ를 `<details>/<summary>` HTML로 렌더링
+- HTML 마크업이 있는 답변 지원 (htmlToAst 헬퍼 사용)
+- 다국어 패스 자동 조정
+- 캐싱을 통한 중복 로드 방지
+
+**변환 예시**:
+
+```mdx
+## FAQ 섹션
+
+<FaqsItems data="CommonIssues" />
+```
+
+**JSON 데이터 파일** (예: `platform/biostar_x/faqs/common-issues.json`):
+
+```json
+{
+  "CommonIssues": [
+    {
+      "q": "비밀번호를 잊었어요",
+      "a": "관리자에게 문의하여 <strong>비밀번호를 재설정</strong>하세요."
+    },
+    {
+      "q": "로그인이 안 되어요",
+      "a": "다음을 확인하세요:\n<ul><li>인터넷 연결</li><li>사용자명 확인</li></ul>"
+    }
+  ]
+}
+```
+
+↓ 변환 후
+
+```html
+<details>
+  <summary>비밀번호를 잊었어요</summary>
+  <div class="faq-answer">
+    관리자에게 문의하여 <strong>비밀번호를 재설정</strong>하세요.
+  </div>
+</details>
+
+<details>
+  <summary>로그인이 안 되어요</summary>
+  <div class="faq-answer">
+    다음을 확인하세요:
+    <ul>
+      <li>인터넷 연결</li>
+      <li>사용자명 확인</li>
+    </ul>
+  </div>
+</details>
+```
+
+**패스 분석**:
+
+- **KO**: `docs/{docDir}/{dataName}.json`
+  - 예: `docs/platform/biostar_x/faqs/common-issues.json`
+  
+- **EN/ES/JA**: `i18n/{lang}/docusaurus-plugin-content-docs/current/{docDir}/{dataName}.json`
+  - 예: `i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_x/faqs/common-issues.json`
+
+**CSS 클래스**:
+
+- `.faq-container`: FAQ 컨테이너 (전체 래퍼)
+- `details`: 확장/축약 요소
+- `summary`: 질문 제목 (클릭 가능)
+- `.faq-answer`: 답변 콘텐츠 영역
+
+**스타일링**:
+
+- 기본: 축약 상태
+- 호버: 배경색 변경
+- 클릭: 상세 내용 펼침
+- 답변에 HTML 마크업 지원 (강조, 리스트 등)
+
+**구현 상세**:
+
+```javascript
+// htmlToAst 헬퍼: HTML 문자열을 rehype AST로 변환
+function htmlToAst(htmlString) {
+  const parser = unified().use(rehypeParse, { fragment: true });
+  const ast = parser.parse(htmlString);
+  return ast.children || [];
+}
+
+// JSON 파일 로드 및 FAQ 렌더링
+const dataAttr = node.attributes?.find(attr => attr.name === 'data');
+const dataName = dataAttr?.value;  // 예: 'CommonIssues'
+
+// 다국어 경로 구성
+const fullDocDir = language === 'ko' 
+  ? `./docs/${docDir}`
+  : `./i18n/${language}/docusaurus-plugin-content-docs/current/${docDir}`;
+
+// JSON 파일 읽기
+const jsonPath = `${fullDocDir}/${dataName}.json`;
+const faqData = JSON.parse(readFileSync(jsonPath, 'utf-8'));
+
+// FAQ 항목 렌더링
+faqData[dataName].forEach(faq => {
+  const summary = { type: 'element', tagName: 'summary', children: [{ type: 'text', value: faq.q }] };
+  const answer = { type: 'element', tagName: 'div', properties: { className: 'faq-answer' }, children: htmlToAst(faq.a) };
+  
+  // <details> 요소 생성
+  parent.children.splice(index, 1, { type: 'element', tagName: 'details', children: [summary, answer] });
+});
+```
+
+**주의사항**:
+
+- JSON 파일명은 `data` 속성 값과 정확히 일치해야 함 (`.json` 제외)
+- 답변은 HTML 문자열로 작성 (마크다운 불가)
+- 특수문자는 HTML 이스케이프 필요
+- 파일 미존재 시 오류 로그 출력 및 컴포넌트 생략
+
+---
+
+#### `rehypeProcessMdxElements(translations, basePath, language)` 상세 설명
+
+**목적**: Docusaurus의 다양한 MDX 요소(Image, SpecSection, Include/Xclude 등)를 정적 HTML 요소로 변환
+
+**기능**:
+
+- **Image 컴포넌트**: `<Image>` → 최적화된 `<img>` 태그
+- **SpecSection 컴포넌트**: 제품 특화 섹션 렌더링
+- **Include 컴포넌트**: 조건부 콘텐츠 포함/제외
+- **Xclude 컴포넌트**: 특정 제품 제외 처리
+- **Tabs 컴포넌트**: 탭 인터페이스 변환
+- 속성 매핑 및 클래스 적용
+
+**Image 컴포넌트 변환 예시**:
+
+```mdx
+<Image src="/img/biostation_3/device-view.png" alt="장치 뷰" width={500} />
+```
+
+↓ 변환 후
+
+```html
+<figure>
+  <img src="/img/biostation_3/device-view.png" alt="장치 뷰" width="500" class="mdx-image" />
+  <figcaption>장치 뷰</figcaption>
+</figure>
+```
+
+**SpecSection 컴포넌트 변환 예시**:
+
+```mdx
+<SpecSection>
+  <SpecItem label="프로세서" value="ARM Cortex-A53" />
+  <SpecItem label="RAM" value="2GB" />
+</SpecSection>
+```
+
+↓ 변환 후
+
+```html
+<div class="spec-section">
+  <div class="spec-item">
+    <span class="spec-label">프로세서</span>
+    <span class="spec-value">ARM Cortex-A53</span>
+  </div>
+  <div class="spec-item">
+    <span class="spec-label">RAM</span>
+    <span class="spec-value">2GB</span>
+  </div>
+</div>
+```
+
+**CSS 클래스**:
+
+- `.mdx-image`: 이미지 래퍼
+- `.spec-section`: 사양 섹션 컨테이너
+- `.spec-item`: 각 사양 항목
+- `.spec-label`: 사양 라벨
+- `.spec-value`: 사양 값
+
+**지원 컴포넌트 목록**:
+
+| 컴포넌트 | 입력 | 출력 |
+|---------|------|------|
+| Image | `<Image src="..." alt="..." />` | `<figure><img /></figure>` |
+| SpecSection | `<SpecSection><SpecItem /></SpecSection>` | `<div class="spec-section">` |
+| Tabs | `<Tabs><TabItem>...</TabItem></Tabs>` | `<div class="tabs-container">` |
+| Include | `<Include product="biostation_3" />` | 조건에 따라 표시/숨김 |
+| Xclude | `<Xclude product="biostation_3" />` | 해당 제품 제외 시 표시 |
+
+**Fallback 처리**:
+
+- 알 수 없는 컴포넌트는 경고 로그만 출력 (HTML 그대로 유지)
+- 필수 속성 부재 시: 자리표시자 값 또는 공백 사용
+
+---
+
+#### `rehypeAddAdmonitionIcons(translations)` 상세 설명
+
+**목적**: Docusaurus의 경고/주의사항(Admonition) 블록에 아이콘과 색상을 추가
+
+**기능**:
+
+- 다섯 가지 Admonition 타입 지원 (note, info, warning, danger, tip)
+- 각 타입별 고유 색상 및 SVG 아이콘 자동 삽입
+- 다국어 라벨 지원
+- CSS 클래스 기반 스타일링
+
+**변환 예시**:
+
+```markdown
+:::note
+이것은 참고 사항입니다.
+:::
+
+:::warning
+주의가 필요합니다!
+:::
+```
+
+↓ 변환 후
+
+```html
+<div class="admonition admonition-note">
+  <div class="admonition-heading">
+    <svg class="admonition-icon" ...><!-- 정보 아이콘 --></svg>
+    <h5>노트</h5>
+  </div>
+  <div class="admonition-content">
+    <p>이것은 참고 사항입니다.</p>
+  </div>
+</div>
+
+<div class="admonition admonition-warning">
+  <div class="admonition-heading">
+    <svg class="admonition-icon" ...><!-- 경고 아이콘 --></svg>
+    <h5>경고</h5>
+  </div>
+  <div class="admonition-content">
+    <p>주의가 필요합니다!</p>
+  </div>
+</div>
+```
+
+**Admonition 타입 및 색상**:
+
+| 타입 | 한국어 라벨 | 색상 | 용도 |
+|------|-----------|------|------|
+| `note` | 노트 | #8b5cf6 (자주색) | 일반 참고 사항 |
+| `info` | 정보 | #0ea5e9 (파랑) | 보충 정보 |
+| `tip` | 팁 | #009400 (초록) | 도움이 되는 팁 |
+| `warning` | 경고 | #a32343 (어두운 빨강) | 주의 필요 |
+| `danger` | 위험 | #ef4444 (빨강) | 중요한 경고 |
+
+**CSS 클래스**:
+
+- `.admonition`: 전체 컨테이너
+- `.admonition-{type}`: 타입별 클래스 (note, info, tip, warning, danger)
+- `.admonition-heading`: 헤더 영역 (아이콘 + 라벨)
+- `.admonition-icon`: SVG 아이콘 (높이 24px)
+- `.admonition-content`: 콘텐츠 영역
+
+**스타일링**:
+
+```css
+.admonition {
+  border-left: 4px solid;
+  border-color: var(--admonition-color);
+  background-color: rgba(var(--admonition-color-rgb), 0.1);
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 4px;
+}
+
+.admonition-note { border-color: #8b5cf6; }
+.admonition-info { border-color: #0ea5e9; }
+.admonition-warning { border-color: #a32343; }
+.admonition-danger { border-color: #ef4444; }
+.admonition-tip { border-color: #009400; }
+```
+
+**구현 상세**:
+
+```javascript
+const colorMap = {
+  info: '#0ea5e9',
+  note: '#8b5cf6',
+  tip: '#009400',
+  warning: '#a32343',
+  danger: '#ef4444',
+  caution: '#f59e0b'
+};
+
+// Admonition 타입 감지 및 아이콘 추가
+visit(tree, 'element', (node, index, parent) => {
+  if (node.className?.includes('admonition')) {
+    const admonitionType = node.className.find(c => c.startsWith('admonition-'));
+    const type = admonitionType?.replace('admonition-', '');
+    const color = colorMap[type];
+    
+    // 헤더에 아이콘 삽입
+    const heading = node.children.find(child => child.className?.includes('admonition-heading'));
+    if (heading) {
+      const icon = createSvgIcon(type, color);
+      heading.children.unshift(icon);
+    }
+  }
+});
+```
+
+**주의사항**:
+
+- Admonition 블록은 Remark 단계에서 처리되고, 이 플러그인은 Rehype 단계에서 아이콘만 추가
+- 다국어 라벨은 i18n 설정에서 자동으로 로드되어야 함
+- SVG 아이콘 파일은 `static/img/admonition/` 디렉토리에 있어야 함
 
 ---
 
