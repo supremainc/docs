@@ -189,7 +189,7 @@ function generateCoverHTML(params) {
     const logoDataUri = `data:image/svg+xml;base64,${Buffer.from(logoSVG).toString('base64')}`;
 
     // coverpage 클래스 결정
-    const coverpageClass = title === 'BioStar X' ? 'coverpage bsx' : 'coverpage';
+    const coverpageClass = title === 'BioStar X' ? 'coverpage bsx' : title === 'BioStar Air' ? 'coverpage bsair' : 'coverpage';
 
     return `<!DOCTYPE html>
 <html lang="${isKorean ? 'ko' : isJapanese ? 'ja' : 'en'}">
