@@ -2193,55 +2193,64 @@ export function rehypeProcessDocLink(basePath = '', language = 'ko') {
     }
   };
   
-  return (tree) => {
-    visit(tree, 'mdxJsxFlowElement', (node, index, parent) => {
-      if (node.name === 'DocLink' && node.attributes) {
-        // Extract docId attribute
-        const docIdAttr = node.attributes.find(attr => attr.name === 'docId');
-        
-        if (!docIdAttr || !docIdAttr.value) {
-          console.warn(`⚠️  DocLink: Missing docId attribute`);
-          return;
-        }
-        
-        const docId = docIdAttr.value;
-        const metadata = loadDocMetadata(docId, language);
-        
-        if (!metadata) {
-          // Fallback: use docId as text
-          node.type = 'element';
-          node.tagName = 'a';
-          node.name = undefined;
-          node.attributes = undefined;
-          node.properties = {
-            href: `#${docId.split('/').pop()}`,
-            className: ['doclink', 'doclink-missing']
-          };
-          node.children = [
-            {
-              type: 'text',
-              value: docId
-            }
-          ];
-          return;
-        }
-        
-        // Convert to anchor element
-        node.type = 'element';
-        node.tagName = 'a';
-        node.name = undefined;
-        node.attributes = undefined;
-        node.properties = {
-          href: metadata.href,
-          className: ['doclink']
-        };
-        node.children = [
-          {
-            type: 'text',
-            value: metadata.title
-          }
-        ];
+  // Helper to process DocLink nodes
+  const processDocLinkNode = (node) => {
+    if (node.name !== 'DocLink' || !node.attributes) return;
+    
+    const docIdAttr = node.attributes.find(attr => attr.name === 'docId');
+    if (!docIdAttr || !docIdAttr.value) {
+      console.warn(`⚠️  DocLink: Missing docId attribute`);
+      return;
+    }
+    
+    let docId = docIdAttr.value;
+    let anchorId = null;
+    
+    // Split by # to separate doc path from anchor
+    // e.g., "platform/biostar_air/adding-individual-users#addingUsersWithMobileApp"
+    //    -> docId: "platform/biostar_air/adding-individual-users", anchorId: "addingUsersWithMobileApp"
+    if (docId.includes('#')) {
+      [docId, anchorId] = docId.split('#');
+    }
+    
+    const metadata = loadDocMetadata(docId, language);
+    const lastSegment = docId.split('/').pop();
+    
+    // Determine href: use anchor if provided, otherwise use metadata or lastSegment
+    let href;
+    if (anchorId) {
+      href = `#${anchorId}`;
+    } else if (metadata) {
+      href = metadata.href;
+    } else {
+      href = `#${lastSegment}`;
+    }
+    
+    // Convert to anchor element
+    node.type = 'element';
+    node.tagName = 'a';
+    node.name = undefined;
+    node.attributes = undefined;
+    node.properties = {
+      href: href,
+      className: metadata ? ['doclink'] : ['doclink', 'doclink-missing']
+    };
+    node.children = [
+      {
+        type: 'text',
+        value: metadata ? metadata.title : docId
       }
+    ];
+  };
+  
+  return (tree) => {
+    // Process both flow-level and inline (text-level) DocLink components
+    visit(tree, 'mdxJsxFlowElement', (node) => {
+      processDocLinkNode(node);
+    });
+    
+    visit(tree, 'mdxJsxTextElement', (node) => {
+      processDocLinkNode(node);
     });
   };
 }
