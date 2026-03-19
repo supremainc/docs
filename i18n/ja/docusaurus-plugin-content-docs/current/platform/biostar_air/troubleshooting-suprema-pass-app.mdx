@@ -1,102 +1,102 @@
 ---
 id: troubleshooting-suprema-pass-app
-title: Fix Mobile Card Issues
-description: Resolve mobile card authentication, Bluetooth and location permission issues, and connection failures in the Suprema Pass app.
+title: モバイルカードが動作しません
+description: Suprema Passアプリでのモバイルカード認証の問題、Bluetoothや位置情報の権限に関する問題、接続失敗の対処方法を説明します。
 keywords:
-  - Troubleshooting
-  - Mobile card
+  - トラブルシューティング
+  - モバイルカード
   - Airfob
 ---
 
-If the mobile card authenticates with the device but the door does not open, follow these steps to resolve the issue.
+モバイルカードは機器と認証されているが、ドアが開かない場合は、以下の案内に従って問題を解決してください。
 
-## Contact your BioStar Air administrator {#contactbsairAdmin}
+## BioStar Air 管理者に問い合わせる {#contactbsairAdmin}
 
-The site administrator can help with mobile card reissuance, temporary mobile device issues, and setting issues.
+サイト管理者はモバイルカードの再発行、一時的なモバイル端末の問題、設定の問題を支援できます。
 
 <Image src='/img/air/bsair-sp-app-contact-admin.png' width='78%' className='none' />
 
-1. In the Suprema Pass app on your mobile device, tap the <IcFunc /> icon below the mobile card.
+1. Suprema Passアプリでモバイルカードの下にある <IcFunc /> アイコンをタップしてください。
 
-2. When the bottom panel appears, tap <Cmd>Contact Admin</Cmd>.
+2. 下部のパネルが表示されたら、<Cmd>管理者に問い合わせる</Cmd>をタップします。
 
-3. When the pop-up window appears, enter a title and message.
+3. ポップアップが表示されたら、タイトルと内容を入力してください。
 
-4. Tap <Cmd>Send</Cmd> to send a message to the administrator.
+4. メッセージを管理者に送信するには、<Cmd>送信</Cmd>をタップします。
 
-## Was the mobile card deleted? {#mobileCardDeleted}
+## モバイルカードが削除されましたか？ {#mobileCardDeleted}
 
-If you changed your mobile device or reinstalled the Suprema Pass app, all mobile cards were deleted for security reasons. Contact the following for mobile card reissuance.
+モバイル端末を変更したりSuprema Passアプリを再インストールした場合、セキュリティ上の理由によりすべてのモバイルカードが削除されます。 以下はモバイルカード再発行の問い合わせ先です。
 
-* **Company Spaces**: HR, IT, security, or operations team
+* **Company Spaces**: HR、IT、セキュリティまたは運用チーム
 
-* **Shared Spaces**: regional administrator or customer service team
+* **Shared Spaces**: エリア管理者またはカスタマーサービスチーム
 
-## Step-by-step troubleshooting guide {#troubleshootingSteps}
+## ステップ別トラブルシューティング {#troubleshootingSteps}
 
 <Steps>
 <Step>
 
-### Did an error message appear in the Suprema Pass app?
+### Suprema Passアプリでエラーメッセージが表示されましたか？
 
-* If the door does not open, try authenticating again in the Suprema Pass app.
+* ドアが開かない場合は、Suprema Passアプリで再認証を試してください。
 
-* If an error message appears, capture a screenshot and share it with your site administrator.
-
-</Step>
-<Step>
-
-### Is Bluetooth enabled on your mobile device?
-
-The mobile card relies on Bluetooth communication between the mobile device and the access controller.
-
-* Make sure Bluetooth is enabled.
-
-* Turn Bluetooth off and back on.
-
-* Restart the mobile device if necessary.
+* エラーメッセージが表示されたら、スクリーンショットを撮ってサイト管理者と共有してください。
 
 </Step>
 <Step>
 
-### Allow location permission for the Suprema Pass app
+### モバイル端末のBluetoothはオンになっていますか？
 
-Bluetooth and NFC authentication require location permission.
+モバイルカードはモバイル端末と出入管理機器間のBluetooth通信に依存します。
 
-1. Go to **Settings** → **Apps** on the mobile device.
+* Bluetoothがオンになっていることを確認してください。
 
-2. Select the **Suprema Pass** app.
+* Bluetoothを一度オフにしてから再度オンにしてください。
 
-3. Under **Permissions** → **Location**, set location access to **Allow all the time** or **Allow only while using the app**.
-
-</Step>
-<Step>
-
-### Check cellular network and Wi-Fi connections
-
-A stable cellular network or Wi-Fi connection is required for mobile card authentication.
+* 必要に応じてモバイル端末を再起動してください。
 
 </Step>
 <Step>
 
-### Are you using the selected connection method?
+### Suprema Passアプリの位置情報権限を許可してください
 
-Check the connection method in the Suprema Pass app.
+BluetoothおよびNFC認証には位置情報権限が必要です。
 
-* On the Suprema Pass app home screen, tap <IcHamberg /> in the upper right corner.
+1. モバイル端末の**設定** → **アプリ**に移動します。
 
-* Check authentication mode in <Cmd>Connection Method</Cmd>.
+2. **Suprema Pass**アプリを選択します。
 
-* Keep the app open in the background when using <Cmd>Background Mode</Cmd>.
+3. **権限** → **位置情報**で位置アクセス許可を**常に許可**または**アプリ使用中のみ許可**に設定します。
 
 </Step>
 <Step>
 
-### Did the mobile device vibrate during authentication?
+### 無線ネットワークとWi‑Fi接続を確認してください
 
-* If the mobile device vibrated but the door did not open, open the Suprema Pass app and try authenticating again.
+モバイルカード認証には安定した無線ネットワークまたはWi‑Fi接続が必要です。
 
-* If an error message appears, capture a screenshot and share it with your site administrator.
+</Step>
+<Step>
+
+### 選択した接続方法を使用しましたか？
+
+Suprema Passアプリで接続方式を確認してください。
+
+* Suprema Passアプリの初期画面で右上の <IcHamberg /> アイコンをタップしてください。
+
+* <Cmd>接続方式</Cmd>で認証モードを確認してください。
+
+* <Cmd>バックグラウンドモード</Cmd>を使用する場合、アプリがバックグラウンドで起動している必要があります。
+
+</Step>
+<Step>
+
+### 認証時にモバイル端末が振動しましたか？
+
+* 端末が振動したがドアが開かなかった場合は、Suprema Passアプリを開いて再認証を試してください。
+
+* エラーメッセージが表示されたら、スクリーンショットを撮ってサイト管理者と共有してください。
 
 </Step>
 </Steps>

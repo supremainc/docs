@@ -1,76 +1,76 @@
 ---
 id: monitoring-door-status
-title: Monitor Door Status
-description: Monitor door status in real time, control locks remotely, and manage door access using the BioStar Air web portal and mobile app.
+title: Supervisar el estado de la puerta
+description: Supervise el estado de las puertas en tiempo real, controle las cerraduras de forma remota y administre el acceso a las puertas desde el portal web y la aplicación móvil de BioStar Air.
 keywords:
-  - Monitoring
-  - Door status
+  - Monitorizar
+  - Estado de la puerta
   - BioStar Air
 ---
 
-Monitor the status of doors connected to BioStar Air in real time. Check whether a door is locked or unlocked and the status of its relay sensor, and lock or unlock it remotely to control access.
+Supervise en tiempo real el estado de las puertas conectadas a BioStar Air. Compruebe si una puerta está bloqueada o desbloqueada y el estado de su sensor de relé, y bloquéela o desbloquéela de forma remota para controlar el acceso.
 
 :::tip
 
-Refer to the following video to watch the video guide on monitoring door status.
+Consulte el siguiente video para ver el tutorial sobre cómo supervisar el estado de las puertas.
 
 <YouTube className='fit--content' videoId="_nxSRwst480" />
 
 :::
 
-## Door status monitoring {#monitoringWebPortal}
+## Supervisión del estado de las puertas {#monitoringWebPortal}
 
 <Tabs groupId='platform'>
 <TabItem value='web' label='Web'>
 
-Monitor door status in the BioStar Air web portal. Click <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="door_status_submenu" product="air" /> in the left sidebar. View the list of doors registered to BioStar Air.
+Supervise el estado de las puertas en el portal web de BioStar Air. Haga clic en <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="door_status_submenu" product="air" /> en la barra lateral izquierda. Vea la lista de puertas registradas en BioStar Air.
 
 <Image src='/img/air/bsair-monitoring-door-status.png' />
 
-Check the following items for each door.
+Revise los siguientes elementos para cada puerta.
 
-* <Cmd sid="door_status_column2" product="air" />: Indicates whether the door is locked or unlocked.
+* <Cmd sid="door_status_column2" product="air" />: Indica si la puerta está bloqueada o desbloqueada.
 
-* <Cmd sid="door_status_column3" product="air" />: Indicates whether the door is physically open or closed.
+* <Cmd sid="door_status_column3" product="air" />: Indica si la puerta está físicamente abierta o cerrada.
 
 </TabItem>
 <TabItem value='mobile' label='Mobile'>
 
-Monitor door status using the BioStar Air app on a mobile device.
+Supervise el estado de las puertas desde la aplicación BioStar Air en un dispositivo móvil.
 
 <Image src='/img/air/bsair-mobile-monitoring-door-status.png' className='none' />
 
-1. Open the BioStar Air app on your mobile device and log in.
+1. Abra la aplicación BioStar Air en su dispositivo móvil e inicie sesión.
 
-2. Tap <Cmd sid='monitoring_menu' product='air' /> at the bottom of the home screen.
+2. Toque <Cmd sid='monitoring_menu' product='air' /> en la parte inferior de la pantalla de inicio.
 
-3. Tap the <Cmd sid="door_status_submenu" product="air" /> card.
+3. Toque la tarjeta <Cmd sid="door_status_submenu" product="air" />.
 
-4. View the list of doors registered to BioStar Air.
+4. Vea la lista de puertas registradas en BioStar Air.
 
 </TabItem>
 </Tabs>
 
 :::info
 
-For more information on door registration and management, refer to <DocLink docId='platform/biostar_air/managing-registered-doors' />.
+Para obtener más información sobre el registro y la gestión de puertas, consulte <DocLink docId='platform/biostar_air/managing-registered-doors' />.
 
 :::
 
-### Unlock a door {#remotely-unlocking-a-door}
+### Desbloquear una puerta {#remotely-unlocking-a-door}
 
-Unlock the door remotely when it is online and connected to BioStar Air. 
+Desbloquee la puerta de forma remota cuando esté en línea y conectada a BioStar Air. 
 
 <Tabs groupId='platform'>
 <TabItem value='web' label='Web'>
 
-1. In the <Cmd sid="door_status_column4" product="air" /> column, click <Cmd sid="door_open_btn" product="air" />.
+1. En la columna <Cmd sid="door_status_column4" product="air" />, haga clic en <Cmd sid="door_open_btn" product="air" />.
 
-2. The status in the <Cmd sid='door_status_column2' product='air' /> column changes to unlocked, and a success message appears.
+2. El estado en la columna <Cmd sid='door_status_column2' product='air' /> cambia a desbloqueado y aparece un mensaje de éxito.
 
    <Image src='/img/air/bsair-monitoring-door-status-open-door.png' />
 
-3. After the configured time elapses, the door returns to locked.
+3. Después de que transcurra el tiempo configurado, la puerta vuelve a estar bloqueada.
 
 </TabItem>
 <TabItem value='mobile' label='Mobile'>
@@ -83,11 +83,11 @@ Unlock the door remotely when it is online and connected to BioStar Air.
 </Column>
 <Column className='padding--l20'>
 
-1. Tap <Cmd sid='door_open_btn' product='air' /> to remotely unlock the door. 
+1. Toque <Cmd sid='door_open_btn' product='air' /> para desbloquear la puerta de forma remota. 
 
-2. A success message will appear at the bottom of the screen. 
+2. Aparecerá un mensaje de éxito en la parte inferior de la pantalla. 
 
-3. After the configured time elapses, the door returns to locked.
+3. Después de que transcurra el tiempo configurado, la puerta vuelve a estar bloqueada.
 
 </Column>
 </Columns>
@@ -97,28 +97,28 @@ Unlock the door remotely when it is online and connected to BioStar Air.
 
 :::info
 
-For information on setting the duration that the door remains open, refer to <DocLink docId='platform/biostar_air/managing-registered-doors#editingDoors' />.
+Para obtener información sobre cómo configurar la duración durante la cual la puerta permanece abierta, consulte <DocLink docId='platform/biostar_air/managing-registered-doors#editingDoors' />.
 
 :::
 
-### Set always-open mode {#alwaysOpenMode}
+### Activar modo siempre abierto {#alwaysOpenMode}
 
-Keep a door unlocked indefinitely. Use this when temporary or visitor access is needed.
+Mantenga una puerta desbloqueada indefinidamente. Úselo cuando se necesite acceso temporal o para visitantes.
 
 <Tabs groupId='platform'>
 <TabItem value='web' label='Web'>
 
-1. In the door list, click <IcAirMore title="Control" /> at the far right of the door to keep open.
+1. En la lista de puertas, haga clic en <IcAirMore title="Control" /> en el extremo derecho de la puerta para mantenerla abierta.
 
    <Image src='/img/air/bsair-monitoring-door-status-more-func.png' />
 
-2. Click <Cmd sid="event_log_unlock_mode" product="air" /> in the popup menu.
+2. Haga clic en <Cmd sid="event_log_unlock_mode" product="air" /> en el menú emergente.
 
-3. The status in the <Cmd sid="door_status_column4" product="air" /> column changes to <Cmd sid="door_control_unlocked_description" product="air" />.
+3. El estado en la columna <Cmd sid="door_status_column4" product="air" /> cambia a <Cmd sid="door_control_unlocked_description" product="air" />.
 
 <Image src='/img/air/bsair-monitoring-door-status-control-always-open.png' />
 
-Click <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="air" /> to return to normal operation.
+Haga clic en <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="air" /> para volver al funcionamiento normal.
 
 </TabItem>
 <TabItem value='mobile' label='Mobile'>
@@ -131,13 +131,13 @@ Click <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product=
 </Column>
 <Column className='padding--l20'>
 
-1. Tap <IcAirMore title="Control" /> at the far right of the door. 
+1. Toque <IcAirMore title="Control" /> en el extremo derecho de la puerta. 
 
-2. When the <Cmd en='Door Info and Control'>Door Info and Control</Cmd> option appear, tap <Cmd en='Unlock'>Unlock</Cmd>.
+2. Cuando aparezca la opción <Cmd en='Door Info and Control'>Door Info and Control</Cmd>, toque <Cmd en='Unlock'>Unlock</Cmd>.
 
-3. A success message will appear at the bottom of the screen.
+3. Aparecerá un mensaje de éxito en la parte inferior de la pantalla.
 
-Tap <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="air" /> to return to normal operation.
+Toque <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="air" /> para volver al funcionamiento normal.
 
 </Column>
 </Columns>
@@ -145,24 +145,24 @@ Tap <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="a
 </TabItem>
 </Tabs>
 
-### Set lock mode {#lockMode}
+### Establecer el modo de bloqueo {#lockMode}
 
-Keep a door locked regardless of the current schedule. Use this when enhanced security is required.
+Mantenga la puerta bloqueada independientemente del horario actual. Úselo cuando se requiera mayor seguridad.
 
 <Tabs groupId='platform'>
 <TabItem value='web' label='Web'>
 
-1. In the door list, click <IcAirMore title="Control" /> at the far right of the door to keep locked.
+1. En la lista de puertas, haga clic en <IcAirMore title="Control" /> en el extremo derecho de la puerta para mantenerla bloqueada.
 
    <Image src='/img/air/bsair-monitoring-door-status-more-func.png' />
 
-2. Click <Cmd sid="event_log_lock_mode" product="air" /> in the pop-up menu.
+2. Haga clic en <Cmd sid="event_log_lock_mode" product="air" /> en el menú emergente.
 
-3. The status in the <Cmd sid="door_status_column4" product="air" /> column changes to <Cmd sid="door_control_locked_description" product="air" />.
+3. El estado en la columna <Cmd sid="door_status_column4" product="air" /> cambia a <Cmd sid="door_control_locked_description" product="air" />.
 
 <Image src='/img/air/bsair-monitoring-door-status-control-lock-mode.png' />
 
-Click <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="air" /> to return to normal operation.
+Haga clic en <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="air" /> para volver al funcionamiento normal.
 
 </TabItem>
 <TabItem value='mobile' label='Mobile'>
@@ -175,13 +175,13 @@ Click <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product=
 </Column>
 <Column className='padding--l20'>
 
-1. Tap <IcAirMore title="Control" /> at the far right of the door. 
+1. Toque <IcAirMore title="Control" /> en el extremo derecho de la puerta. 
 
-2. When the <Cmd en='Door Info and Control'>Door Info and Control</Cmd> option appear, tap <Cmd sid='event_log_lock_mode' product='air' />.
+2. Cuando aparezca la opción <Cmd en='Door Info and Control'>Door Info and Control</Cmd>, toque <Cmd sid='event_log_lock_mode' product='air' />.
 
-3. A success message will appear at the bottom of the screen.
+3. Aparecerá un mensaje de éxito en la parte inferior de la pantalla.
 
-Tap <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="air" /> to return to normal operation.
+Toque <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="air" /> para volver al funcionamiento normal.
 
 </Column>
 </Columns>

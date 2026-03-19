@@ -1,161 +1,161 @@
 ---
 id: managing-administrators
-title: Manage Administrator Accounts and Roles
-description: Learn how to invite administrators, assign role levels, manage permissions, and configure access control for the observer, operator, administrator, and master roles in BioStar Air.
+title: Administrar cuentas y roles de administradores
+description: Aprende cómo invitar a administradores, asignar niveles de rol, gestionar permisos y configurar el control de acceso para los roles observador, operador, administrador y master en BioStar Air.
 keywords:
-  - Administrator
+  - Administrador
   - roles
-  - Access Control Settings
+  - Configuración de Control de Acceso
 ---
 
-Use the administrator feature in BioStar Air to manage administrator accounts, assign roles, and control access levels within your organization. This enables you to maintain security and administrative control while granting the appropriate privileges to the right personnel.
+Utiliza la función de administrador en BioStar Air para gestionar cuentas de administrador, asignar roles y controlar los niveles de acceso en tu organización. Esto te permite mantener la seguridad y el control administrativo, a la vez que otorgas los privilegios adecuados al personal correspondiente.
 
 :::tip
 
-Watch the following video for a guide on managing administrators.
+Mira el siguiente video para ver cómo gestionar administradores.
 
 <YouTube className='fit--content' videoId="pUyNLeTfGRI" />
 
 :::
 
-## View administrators {#viewAdmin}
+## Ver administradores {#viewAdmin}
 
-Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> in the left sidebar.
+Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> en la barra lateral izquierda.
 
 <Image src='/img/air/bsair-settings-admin.png' />
 
-The <Cmd sid="admin_submenu" product="air" /> menu shows a list of all active administrators. The administrator list includes the following information.
+El menú <Cmd sid="admin_submenu" product="air" /> muestra una lista de todos los administradores activos. La lista de administradores incluye la siguiente información.
 
-* Name
+* Nombre
 
-* Email address
+* Dirección de correo electrónico
 
-* Phone number
+* Número de teléfono
 
-* Inviter
+* Invitado por
 
-* Invitation date
+* Fecha de invitación
 
-* Administrator role
+* Rol de administrador
 
-* Account status (active/inactive)
+* Estado de la cuenta (activo/inactivo)
 
-## Deactivate administrators {#deactiveAdmin}
+## Desactivar administradores {#deactiveAdmin}
 
-Instead of deleting an administrator, deactivate the account and reactivate it when needed.
+En lugar de eliminar a un administrador, desactiva la cuenta y reactívala cuando sea necesario.
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> in the left sidebar.
+1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Find the administrator to deactivate in the list.
+2. Busca en la lista al administrador que quieres desactivar.
 
-3. Click the toggle switch in the <Cmd sid="column_admin_account_status" product="air" /> column.
+3. Haz clic en el interruptor de la columna <Cmd sid="column_admin_account_status" product="air" />.
 
    <Image src='/img/air/bsair-settings-admin-deactive.png' />
 
-4. When the message window appears, click the <Cmd sid='admin_status_change_confirm_btn' product='air' /> button.
+4. Cuando aparezca la ventana de mensajes, haz clic en el botón <Cmd sid='admin_status_change_confirm_btn' product='air' />.
 
-The status in the <Cmd sid="column_admin_account_status" product="air" /> column changes to <Cmd sid="admin_status_disabled" product="air" />.
+El estado en la columna <Cmd sid="column_admin_account_status" product="air" /> cambia a <Cmd sid="admin_status_disabled" product="air" />.
 
 <Image src='/img/air/bsair-settings-admin-deactive-result.png' />
 
 :::info
 
-The ability to deactivate administrators may be restricted by the administrator's role. Administrators with the <Cmd sid="master_role" product="air" className="bold" /> role cannot deactivate other <Cmd sid="master_role" product="air" className="bold" /> administrators.
+La capacidad para desactivar administradores puede estar restringida por el rol del administrador. Los administradores con el rol <Cmd sid="master_role" product="air" className="bold" /> no pueden desactivar a otros administradores con el rol <Cmd sid="master_role" product="air" className="bold" />.
 
 :::
 
-## Change an administrator's role {#changing-an-administrators-role}
+## Cambiar el rol de un administrador {#changing-an-administrators-role}
 
-Administrators can change the roles of administrators at a lower level.
+Los administradores pueden cambiar los roles de administradores de nivel inferior.
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> in the left sidebar.
+1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Find the administrator to change in the list.
+2. Busca en la lista al administrador cuyo rol quieres cambiar.
 
-3. Select the new administrator level in the <Cmd sid="column_admin_level" product="air" /> column.
+3. Selecciona el nuevo nivel de administrador en la columna <Cmd sid="column_admin_level" product="air" />.
 
    <Image src='/img/air/bsair-settings-admin-change-role.png' />
 
-4. When the message window appears, click the <Cmd sid='admin_status_change_confirm_btn' product='air' /> button.
+4. Cuando aparezca la ventana de mensajes, haz clic en el botón <Cmd sid='admin_status_change_confirm_btn' product='air' />.
 
 :::note
 
-Only <Cmd sid="master_role" product="air" className="bold" /> administrators can assign or modify the <Cmd sid="master_role" product="air" className="bold" /> role for other administrators.
+Solo los administradores con el rol <Cmd sid="master_role" product="air" className="bold" /> pueden asignar o modificar el rol <Cmd sid="master_role" product="air" className="bold" /> para otros administradores.
 
 :::
 
-## Invite new administrators {#inviteNewAdmin}
+## Invitar a nuevos administradores {#inviteNewAdmin}
 
-Add new administrators.
+Agregar nuevos administradores.
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> in the left sidebar.
+1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Click <Cmd sid="btn_invite" product="air" /> at the top right of the screen.
+2. Haga clic en <Cmd sid="btn_invite" product="air" /> en la esquina superior derecha de la pantalla.
 
-3. When the <Cmd sid="admin_invitation_title" product="air" /> window appears, enter the email address.
+3. Cuando aparezca la ventana <Cmd sid="admin_invitation_title" product="air" />, ingrese la dirección de correo electrónico.
 
    <Image src='/img/air/bsair-settings-admin-invite.png' />
 
-4. In <Cmd sid="admin_invitation_input2" product="air" />, select the role to assign to the new administrator.
+4. En <Cmd sid="admin_invitation_input2" product="air" />, seleccione el rol que se asignará al nuevo administrador.
 
-5. Click <Cmd sid="send_btn" product="air" /> to send the invitation.
+5. Haga clic en <Cmd sid="send_btn" product="air" /> para enviar la invitación.
 
 :::note
 
-* Each administrator must have a unique email address. If necessary, use an alias address (for example, erik+training@example.com).
+* Cada administrador debe tener una dirección de correo electrónico única. Si es necesario, use una dirección alias (por ejemplo, erik+training@example.com).
 
-* Click the link in the invitation email. Sign up if the administrator does not have an account. If the administrator already has an account, log in to access the **site** directly.
+* Haga clic en el enlace del correo electrónico de invitación. Regístrese si el administrador no tiene una cuenta. Si el administrador ya tiene una cuenta, inicie sesión para acceder directamente al **sitio**.
 
 :::
 
-## Administrator levels {#administrator-levels}
+## Niveles de administrador {#administrator-levels}
 
-Each administrator level in BioStar Air has specific permissions, and higher levels inherit the permissions of lower levels.
+Cada nivel de administrador en BioStar Air tiene permisos específicos, y los niveles superiores heredan los permisos de los inferiores.
 
 :::info
 
-Each administrator role has different permissions across BioStar Air. <Cmd sid="observer_role" product="air" className="bold" /> has the most restricted access and some menus are hidden.
+Cada rol de administrador tiene permisos distintos en BioStar Air. <Cmd sid="observer_role" product="air" className="bold" /> tiene el acceso más restringido y algunos menús no se muestran.
 
 :::
 
-### <Cmd sid="observer_role" product="air" className="normal" /> (Lowest Level) {#observer}
+### <Cmd sid="observer_role" product="air" className="normal" /> (Nivel más bajo) {#observer}
 
-* <Cmd sid="dashboard_menu" product="air" /> dashboard and logs **can be viewed**.
+* <Cmd sid="dashboard_menu" product="air" /> y los registros **se pueden ver**.
 
-* **Export** logs and generate reports.
+* **Exportar** registros y generar informes.
 
-* **Cannot modify** settings, users, or devices.
+* **No puede modificar** la configuración, los usuarios ni los dispositivos.
 
-* Access to menus is restricted. Most menus do not appear on the screen.
+* El acceso a los menús está restringido. La mayoría de los menús no se muestran en pantalla.
 
 ### <Cmd sid='operator_role' product='air' className='normal' /> {#operator}
 
-* Can manage <Cmd sid="user_submenu" product="air" />, <Cmd sid="user_groups_submenu" product="air" />, <Cmd sid="access_levels_submenu" product="air" />, <Cmd sid="schedules_submenu" product="air" />, and <Cmd sid="holiday_groups_submenu" product="air" />.
+* Puede administrar <Cmd sid="user_submenu" product="air" />, <Cmd sid="user_groups_submenu" product="air" />, <Cmd sid="access_levels_submenu" product="air" />, <Cmd sid="schedules_submenu" product="air" /> y <Cmd sid="holiday_groups_submenu" product="air" />.
 
-* **No access** to device control or management settings.
+* **Sin acceso** al control de dispositivos ni a la configuración de administración.
 
-* Suitable for managing everyday user and access configurations.
+* Adecuado para administrar la configuración diaria de usuarios y accesos.
 
 ### <Cmd sid='admin_role' product='air' className='normal' /> {#administrator}
 
-* **Can invite** new administrators. However, cannot assign the <Cmd sid="master_role" product="air" className="bold" /> role.
+* **Puede invitar** a nuevos administradores. Sin embargo, no puede asignar el rol <Cmd sid="master_role" product="air" className="bold" />.
 
-* Has **full device control** authority to modify settings and manage connected devices.
+* Cuenta con autoridad de **control total sobre los dispositivos** para modificar la configuración y gestionarlos.
 
-* Cannot delete or modify administrators with the <Cmd sid="master_role" product="air" className="bold" /> role.
+* No puede eliminar ni modificar administradores con el rol <Cmd sid="master_role" product="air" className="bold" />.
 
-* This role is typically recommended for IT staff responsible for system management.
+* Este rol suele recomendarse para el personal de TI responsable de la gestión del sistema.
 
-### <Cmd sid="master_role" product="air" className="normal" /> (Highest Level) {#master}
+### <Cmd sid="master_role" product="air" className="normal" /> (Nivel más alto) {#master}
 
-* Has **full access** to all settings and features.
+* Tiene **acceso total** a todas las configuraciones y funciones.
 
-* Cannot be deleted or modified by **administrators**.
+* No puede eliminarse ni modificarse por los **administradores**.
 
-* Can create **subsites** to manage different locations or organizations.
+* Puede crear **subsitios** para gestionar distintas ubicaciones u organizaciones.
 
-* Can configure **site settings**, including critical system-wide configurations.
+* Puede configurar los **ajustes del sitio**, incluyendo las configuraciones críticas a nivel del sistema.
 
-* Responsible for accepting the **terms** before other administrators log in.
+* Responsable de aceptar los **términos** antes de que otros administradores inicien sesión.
 
-* Usually assigned to the company owner or a highly trusted executive.
+* Generalmente asignado al propietario de la empresa o a un ejecutivo de máxima confianza.

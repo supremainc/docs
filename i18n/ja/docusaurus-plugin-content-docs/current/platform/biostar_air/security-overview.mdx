@@ -1,96 +1,96 @@
 ---
 id: security-overview
-title: Security Framework
-description: Learn about BioStar Air's comprehensive security measures. Includes end-to-end encryption, ISO 27001 certification, mobile credential protection, and vulnerability management practices.
+title: セキュリティ体制
+description: BioStar Airの包括的なセキュリティ対策について説明します。 エンドツーエンド暗号化、ISO 27001認証、モバイル資格情報の保護、脆弱性管理の実践が含まれます。
 keywords:
-  - security
+  - セキュリティ
   - BioStar Air
 ---
 
-BioStar Air is Suprema's secure, cloud-based mobile access control solution. Suprema's hardware, software, and firmware engineering teams work according to a "security by design" principle. Every layer of the system architecture and every communication touchpoint is designed to maintain privacy and data integrity.
+BioStar Airは、Supremaの安全なクラウドベースのモバイル入退室管理ソリューションです。 Supremaのハードウェア、ソフトウェア、ファームウェアのエンジニアリングチームは「設計時のセキュリティ」原則に基づいて作業します。 システムアーキテクチャの全レイヤーおよびすべての通信接点は、プライバシー保護とデータ完全性を維持するように設計されています。
 
-**Key measures**:
+**主な対策**：
 
-* Data protection and encryption of the BioStar Air management portal and database
+* BioStar Air管理ポータルおよびデータベースのデータ保護と暗号化
 
-* Encryption and protection of data in transit between the BioStar Air API and clients
+* BioStar Air APIとクライアント間のデータ送信時の暗号化と保護
 
-* Encryption of mobile card data stored on the smartphone
+* スマートフォンに保存されたモバイルカードデータの暗号化
 
-* Protection of communication between the smartphone and reader (Suprema Pass)
+* スマートフォンとリーダー間の通信保護（Suprema Pass）
 
-* Prevention of mobile credential forgery (Suprema Pass)
+* モバイル資格情報の改ざん防止（Suprema Pass）
 
-## ISO 27001 certification
+## ISO 27001認証
 
-Suprema has obtained ISO 27001 certification, meeting global standards for data protection management, security controls, and privacy management. Established in August 2019, ISO 27001 compliance also aligns with similar regulations such as the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).
+SupremaはISO 27001認証を取得しており、データ保護管理、セキュリティ統制、および個人情報管理に関する国際基準を満たしています。 2019年8月に取得されたISO 27001準拠は、一般データ保護規則（GDPR）やカリフォルニア消費者プライバシー法（CCPA）などの類似の法律とも整合しています。
 
-## Proven technology for end-to-end security
+## エンドツーエンド（End-to-End）セキュリティのための検証済み技術
 
-### Secure portal access and data protection
+### ポータルアクセスおよびデータ保護
 
-The BioStar Air management portal runs on an AWS Amazon RDS encrypted DB instance that uses AES-256 or stronger encryption. All personal data is additionally encrypted.
+BioStar Air管理ポータルは、AES-256以上の暗号化を使用するAWS Amazon RDS暗号化DBインスタンス上で実行されます。 すべての個人データには追加の暗号化が適用されます。
 
-### Encrypted communication with the BioStar Air API
+### BioStar Air APIとの暗号化通信
 
-All communication with the BioStar Air REST API is encrypted with TLS 1.2 over HTTPS and requires an access token (1-hour expiration by default). AWS API Gateway throttles API requests to prevent brute-force attacks.
+BioStar Air REST APIとのすべての通信はHTTPS経由でTLS 1.2を使用して暗号化され、アクセストークン（デフォルトで1時間有効）が必要です。 AWS API Gatewayはブルートフォース攻撃を防ぐためにAPIリクエストを制限します。
 
-### Encrypted and hashed mobile card IDs
+### 暗号化およびハッシュ処理されたモバイルカードID
 
-Mobile card ID numbers are encrypted with AES-256 to prevent exposure on third-party servers. Card data is digitally signed for authenticity verification.
+モバイルカードID番号はAES-256で暗号化され、サードパーティのサーバーで露出するのを防ぎます。 カードデータには真正性確認のためにデジタル署名が行われます。
 
-### Secure storage of mobile cards on the device
+### モバイル機器に保存されたモバイルカードの安全な保存
 
-Suprema Pass mobile credentials and related data are encrypted with AES-256. Encryption keys are stored in the device's trusted execution environment (TEE), such as Secure Enclave (Apple) or TrustZone (ARM).
+Suprema Passのモバイル資格情報および関連データはAES-256で暗号化されます。 暗号化キーはモバイル機器のトラステッド実行環境（TEE）、例えばSecure Enclave（Apple）やTrustZone（ARM）に保存されます。
 
-### Secure communication between the mobile device and reader
+### モバイル機器とリーダー間の安全な通信
 
-To block replay attacks over Bluetooth Low Energy (BLE), BioStar Air uses a one-time encryption key for each connection and terminates the connection immediately after transmission, preventing man-in-the-middle (MITM) attacks.
+Bluetooth Low Energy（BLE）を介した「リプレイ攻撃」を防ぐため、BioStar Airは各接続に対してワンタイム暗号化キーを使用し、送信直後に接続を終了して中間者攻撃（MITM）を防ぎます。
 
-### Mobile card forgery prevention
+### モバイルカード改ざん防止
 
-Each Suprema Pass mobile credential is protected by a PKI-based digital signature unique to each BioStar Air site. A proprietary verification process detects any attempt at modification or forgery.
+各Suprema Passのモバイルクレデンシャルは、各BioStar Airサイト固有のPKIベースのデジタル署名で保護されます。 独自の検証プロセスは改ざんや不正な変更の試みを検出します。
 
-## Vulnerability management
+## 脆弱性管理
 
-Suprema's information security team leads vulnerability management, supported by external security experts.
+Supremaの情報セキュリティチームが脆弱性管理を主導し、外部のセキュリティ専門家が支援します。
 
-* Continuous automated threat scans
+* 継続的な自動化された脅威スキャン
 
-* Annual ISO 27001 renewal audit with full system review
+* 全システムレビューを含む年次ISO 27001更新監査
 
-* Penetration testing and risk assessment before major releases
+* 主要リリース前のペネトレーションテストおよびリスク評価
 
-* Checks for password hygiene, social-engineering resistance, and procedural compliance
+* パスワード管理、ソーシャルエンジニアリング耐性、および手順遵守のためのチェック
 
-* Comprehensive documentation and reporting of all vulnerabilities and remediation actions
+* すべての脆弱性および修正措置に関する包括的な文書化および報告
 
-## Risk assessment approach
+## リスク評価アプローチ
 
-Assets are classified according to confidentiality, integrity, and availability ratings. Threats are identified, vulnerabilities are assessed, and risks are evaluated based on likelihood and impact. Mitigation actions are prioritized according to risk severity.
+資産は機密性、完全性、可用性の評価に基づいて分類されます。 脅威が特定され、脆弱性が評価され、リスクは発生可能性と影響に基づいて評価されます。 緩和策はリスクの重大度に応じて優先順位付けされます。
 
-## Multi-factor authentication (MFA)
+## 多要素認証（MFA）
 
-Multi-factor authentication (MFA) is being rolled out in phases.
+多要素認証（MFA）は段階的に実装されています。
 
-* Email-based 2FA for administrator accounts
+* 管理者アカウントに対するメールベースの2FA
 
-* Passcode-based 2FA for the BioStar Air app
+* BioStar Airアプリに対するパスコードベースの2FA
 
-* Automatic lock of inactive administrator accounts after 90 days
+* 90日後に非アクティブな管理者アカウントを自動ロック
 
-* Configurable password expiration (30, 60, or 90 days)
+* パスワードの有効期限設定が可能（30、60、90日）
 
-## Key security policies
+## 主なセキュリティポリシー
 
-* Data encryption in transit: TLS 1.2
+* 送信中データの暗号化: TLS 1.2
 
-* Data encryption at rest: AES-256
+* 保存中データの暗号化: AES-256
 
-* DoS protection: AWS API Gateway request throttling
+* DoS保護: AWS API Gatewayによるリクエスト制限
 
-* Service availability: 98–99% uptime (per contract SLA)
+* サービス可用性: 99.9% 稼働時間([SLA基準](https://supremainc.com/en/util/biostar-air-service-level-agreement.html))
 
-* API security: token-based authentication, HTTPS only, strict endpoint validation
+* APIセキュリティ: トークンベース認証、HTTPS専用、厳格なエンドポイント検証
 
-* Portal access: cloud-based for global management; a private cloud option is under development
+* ポータルアクセス：グローバル管理向けのクラウドベースのサービスで、プライベートクラウドのオプションは現在開発中です

@@ -140,7 +140,7 @@
     "description": "The label for category 'BioStar Air' in sidebar 'biostar_air'"
   },
   "sidebar.biostar_air.category.Monitoring": {
-    "message": "Monitoring",
+    "message": "モニタリング",
     "description": "The label for category 'Monitoring' in sidebar 'biostar_air'"
   },
   "sidebar.biostarx.category.시작하기": {
@@ -420,11 +420,11 @@
     "description": "The label for category 'XPass Q2' in sidebar 'xpassq2'"
   },
   "sidebar.biostar_air.category.BioStar Air란?": {
-    "message": "What is BioStar Air?",
+    "message": "BioStar Airとは?",
     "description": "The label for category 'BioStar Air란?' in sidebar 'biostar_air'"
   },
   "sidebar.biostar_air.category.문제 해결": {
-    "message": "Troubleshooting",
+    "message": "トラブルシューティング",
     "description": "The label for category '문제 해결' in sidebar 'biostar_air'"
   },
   "sidebar.biostation3max.category.BioStation 3 Max": {
@@ -440,59 +440,59 @@
     "description": "The label for category '릴리스 노트' in sidebar 'device_manager'"
   },
   "sidebar.biostar_air.category.사이트 관리자": {
-    "message": "Site Administrator",
+    "message": "サイト管理者",
     "description": "The label for category '사이트 관리자' in sidebar 'biostar_air'"
   },
   "sidebar.biostar_air.category.사이트 관리하기": {
-    "message": "Manage Sites",
+    "message": "サイトを管理する",
     "description": "The label for category '사이트 관리하기' in sidebar 'biostar_air'"
   },
   "sidebar.biostar_air.category.사용자": {
-    "message": "Users",
+    "message": "ユーザー",
     "description": "The label for category '사용자' in sidebar 'biostar_air'"
   },
   "sidebar.biostar_air.category.장치": {
-    "message": "Devices",
+    "message": "デバイス",
     "description": "The label for category '장치' in sidebar 'biostar_air'"
   },
   "sidebar.biostar_air.category.출입문": {
-    "message": "Doors",
+    "message": "ドア",
     "description": "The label for category '출입문' in sidebar 'biostar_air'"
   },
   "sidebar.biostar_air.category.엘리베이터": {
-    "message": "Elevators",
+    "message": "エレベーター",
     "description": "The label for category '엘리베이터' in sidebar 'biostar_air'"
   },
   "sidebar.biostar_air.category.출입 권한": {
-    "message": "Access Permissions",
+    "message": "アクセス権限",
     "description": "The label for category '출입 권한' in sidebar 'biostar_air'"
   },
   "sidebar.biostar_air.category.사이트 설정하기": {
-    "message": "Configure Site Settings",
+    "message": "サイトを設定する",
     "description": "The label for category '사이트 설정하기' in sidebar 'biostar_air'"
   },
   "sidebar.biostar_air.category.서비스 구성하기": {
-    "message": "Configure Service",
+    "message": "サービスの設定",
     "description": "The label for category '서비스 구성하기' in sidebar 'biostar_air'"
   },
   "sidebar.biostar_air.category.파트너 및 설치 관리자": {
-    "message": "Partners & Installers",
+    "message": "パートナー／導入管理者",
     "description": "The label for category '파트너 및 설치 관리자' in sidebar 'biostar_air'"
   },
   "sidebar.biostar_air.category.하드웨어 설치하기": {
-    "message": "Installing the Hardware",
+    "message": "ハードウェアのセットアップ",
     "description": "The label for category '하드웨어 설치하기' in sidebar 'biostar_air'"
   },
   "sidebar.biostar_air.category.인증된 사용자": {
-    "message": "Credential User",
+    "message": "認証済みユーザー",
     "description": "The label for category '인증된 사용자' in sidebar 'biostar_air'"
   },
   "sidebar.biostar_air.category.개발자": {
-    "message": "Developer",
+    "message": "開発者",
     "description": "The label for category '개발자' in sidebar 'biostar_air'"
   },
   "sidebar.biostar_air.category.추가 사이트 구성하기": {
-    "message": "Additional Site Configuration",
+    "message": "追加サイトの設定",
     "description": "The label for category '추가 사이트 구성하기' in sidebar 'biostar_air'"
   }
 }

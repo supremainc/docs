@@ -1,27 +1,27 @@
 ---
 id: user-management-user-list
-title: Manage Users
-description: Efficiently manage users registered in BioStar Air. You can manage all users within your organization through functions such as viewing user lists, filtering, editing details, assigning groups and access levels, issuing credentials, performing batch operations, and generating reports.
+title: ユーザー管理
+description: BioStar Airに登録されているユーザーを効率的に管理できます。 ユーザー一覧の表示、フィルタリング、詳細情報の編集、グループおよび出入レベルの割り当て、クレデンシャルの発行、一括操作やレポート作成などの機能を通じて、組織内のすべてのユーザーを管理できます。
 keywords:
   - BioStar Air
-  - User Management
-  - User list
-  - Credentials
-  - access level
-  - User group
-  - Report
+  - ユーザー管理
+  - ユーザー一覧
+  - クレデンシャル
+  - 出入レベル
+  - ユーザーグループ
+  - レポート
 ---
 
-The user list is an essential management tool for administrators responsible for access control in an organization. You can perform all user management tasks, including organizational management through user grouping, immediate response to new or departing employees with real-time activation/suspension, integrated management of various credentials, enhanced security through validity period monitoring, and preparation for reporting and auditing through filtering and report generation.
+ユーザー一覧は、組織の出入管理を担当する管理者にとって必須のツールです。 ユーザーのグループ化による組織管理、リアルタイムの有効化／一時停止による入社や退職の社員への即時対応、さまざまなクレデンシャルの統合管理、有効期限の監視によるセキュリティ強化、フィルタリングやレポート作成による報告・監査対応まで、あらゆるユーザー管理業務を行えます。
 
-## View the user list
+## ユーザー一覧の表示
 
-The user list shows all users registered in BioStar Air at a glance. View each user's details and use the filter and sort features to quickly find specific users. Edit, delete, and assign groups to users directly from the user list.
+ユーザー一覧では、BioStar Air に登録されたすべてのユーザーを一目で確認できます。 各ユーザーの詳細を確認し、フィルターや並べ替え機能を活用して特定のユーザーを簡単に見つけることができます。 また、ユーザー一覧から直接ユーザーの編集、削除、グループ割り当てなどの操作を行うことができます。
 
 <Tabs groupId='platform'>
 <TabItem value='web' label='Web'>
 
-Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar. 
+画面左のサイドバーで <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' /> をクリックします。 
 
 <Image src='/img/air/bsair-user-list-overview.png' />
 
@@ -36,15 +36,15 @@ Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product=
 </Column>
 <Column className='padding--l40'>
 
-Use the user management feature in the BioStar Air app.
+BioStar Airアプリでユーザー管理機能を利用できます。
 
-1. Run **BioStar Air** on your mobile device.
+1. モバイル機器で **BioStar Air** アプリを起動してください。
 
-2. Tap <Cmd sid='site_setting_tab_management' product='air' /> in the bottom navigation bar.
+2. 画面下部のナビゲーションバーで <Cmd sid='site_setting_tab_management' product='air' /> をタップします。
 
-3. Tap <Cmd sid="user_submenu" product="air" />.
+3. <Cmd sid='user_submenu' product='air' /> をタップします。
 
-A list of users appears. Add new users or edit existing user details.
+ユーザーリストが表示されます。 新しいユーザーを追加したり、既存ユーザーの詳細情報を編集できます。
 
 </Column>
 </Columns>
@@ -52,132 +52,132 @@ A list of users appears. Add new users or edit existing user details.
 </TabItem>
 </Tabs>
 
-### User information
+### ユーザー情報
 
-The table in the user list provides the following information.
+ユーザー一覧のテーブルで提供される情報は以下のとおりです。
 
-* <Cmd sid="user_table_column8" product="air" />: Indicates whether the user is a regular or temporary user. For more information on regular and temporary users, refer to <DocLink docId='platform/biostar_air/user-card-types' />.
+* <Cmd sid='user_table_column8' product='air' />：ユーザーが一般ユーザーか一時ユーザーかを示します。 一般および一時ユーザーの詳細は <DocLink docId='platform/biostar_air/user-card-types' /> を参照してください。
 
-* <Cmd sid="user_table_column1" product="air" />: The user's name.
+* <Cmd sid='user_table_column1' product='air' />：ユーザーの名前です。
 
-* <Cmd sid="user_info_id" product="air" />: The user's unique ID.
+* <Cmd sid='user_info_id' product='air' />：ユーザーの固有 ID です。
 
-* <Cmd sid="user_table_column2" product="air" />: Shows the credentials issued to the user. For more information on the types of credentials, refer to <DocLink docId='platform/biostar_air/user-card-types' />.
+* <Cmd sid='user_table_column2' product='air' />：ユーザーに付与されたクレデンシャルを示します。 クレデンシャルの種類の詳細は <DocLink docId='platform/biostar_air/user-card-types' /> を参照してください。
 
-* <Cmd sid="user_table_column3" product="air" />: The validity period of the credentials issued to the user.
+* <Cmd sid='user_table_column3' product='air' />：ユーザーに付与されたクレデンシャルの有効期限です。
 
-* <Cmd sid="user_table_column4" product="air" />: Indicates whether the user is active or inactive.
+* <Cmd sid='user_table_column4' product='air' />：該当ユーザーの有効化または無効化の状態を示します。
 
-* <Cmd sid="user_table_column5" product="air" />: The group to which the user belongs. For more information on user groups, refer to <DocLink docId='platform/biostar_air/managing-user-groups' />.
+* <Cmd sid='user_table_column5' product='air' />：ユーザーが所属するグループです。 ユーザーグループの詳細は <DocLink docId='platform/biostar_air/managing-user-groups' /> を参照してください。
 
-* <Cmd sid="user_table_column6" product="air" />: The access level assigned to the user. For more information on access levels, refer to <DocLink docId='platform/biostar_air/manage-access-level' />.
+* <Cmd sid='user_table_column6' product='air' />：ユーザーに割り当てた出入レベルです。 出入レベルの詳細は <DocLink docId='platform/biostar_air/manage-access-level' /> を参照してください。
 
-* <Cmd sid="user_table_column7" product="air" />: The user's permissions for floors they can access. For more information on floor levels, refer to <DocLink docId='platform/biostar_air/manage-floor-level' />.
+* <Cmd sid='user_table_column7' product='air' />：ユーザーが出入できるフロアに関する権限です。 フロアレベルの詳細は <DocLink docId='platform/biostar_air/manage-floor-level' /> を参照してください。
 
-### Filter {#userFiltering}
+### フィルタリング {#userFiltering}
 
 <Tabs groupId='platform'>
 <TabItem value='web' label='Web'>
 
-Use the filter feature in the top header of the user list. Click <IcAirFilter title='Filter' /> in the header to set the desired conditions.
+ユーザー一覧の上部ヘッダー領域でフィルター機能を利用できます。 ヘッダー領域の <IcAirFilter title='Filter' /> ボタンをクリックすると、条件を設定できます。
 
 <Image src='/img/air/bsair-user-list-user-filtering.png' />
 
 :::info
 
-Click <IcAirFilterReset title='Clear Filters' /> at the top of the user list to reset the applied filter conditions.
+適用したフィルター条件を初期化するには、ユーザー一覧上部の <IcAirFilterReset title='Clear Filters' /> ボタンをクリックしてください。
 
 :::
 
 </TabItem>
 <TabItem value='mobile' label='Mobile'>
 
-In the mobile app, you can filter and view users in the user list by the desired criteria. Tap <Cmd sid='logs_filters_action_btn' product='air' /> at the top right of the user list. Users can be filtered by the following criteria.
+モバイルアプリでは、ユーザー一覧を任意の基準でフィルタリングして表示できます。 ユーザー一覧の右上にある <Cmd sid='logs_filters_action_btn' product='air' /> をタップします。 ユーザーは以下の基準でフィルタリングできます。
 
 <Image src='/img/air/bsair-app-mng-user-filter.png' className='none' width='60%' />
 
-* <Cmd sid='user_table_column8' product='air' />: Filters by user type (regular or temporary).
+* <Cmd sid='user_table_column8' product='air' />：通常または一時ユーザーでフィルタリングします。
 
-* <Cmd sid='user_table_column2' product='air' />: Filters by credential type.
+* <Cmd sid='user_table_column2' product='air' />：クレデンシャルの種類でフィルタリングします。
 
-* <Cmd sid='user_table_column4' product='air' />: Filters by activation status.
+* <Cmd sid='user_table_column4' product='air' />：有効状態でフィルタリングします。
 
-* <Cmd sid='user_table_column5' product='air' />: Filters by user group.
+* <Cmd sid='user_table_column5' product='air' />：ユーザーグループでフィルタリングします。
 
 </TabItem>
 </Tabs>
 
-### Additional features {#additionalFunctions}
+### 追加機能 {#additionalFunctions}
 
-The features available at the top of the user list are as follows.
+ユーザー一覧上部で提供される機能は以下のとおりです。
 
-* <IcAirGroup width='24px' height='24px' title='Manage Groups' />: Assign, remove, or move the selected users to a group. For more information, refer to <DocLink inner='#manageUserGroups' />.
+* <IcAirGroup width='24px' height='24px' title='Manage Groups' />：選択したユーザーにグループを割り当てたり、除外・移動したりできます。 詳細は <DocLink inner='#manageUserGroups' /> を参照してください。
 
-* <IcAirLock width='24px' height='24px' title='Set Access' />: Change the access level of the selected users. For more information about access levels, see <DocLink docId='platform/biostar_air/manage-access-level' />.
+* <IcAirLock width='24px' height='24px' title='Set Access' />：選択したユーザーの出入レベルを変更できます。 アクセスレベル管理の詳細は <DocLink docId='platform/biostar_air/manage-access-level' /> を参照してください。
 
   <Image src='/img/air/bsair-user-list-tool-aclevel.png' />
 
-* <IcAirMtag width='24px' height='24px' title='Mobile Consecutive Tag' />: Allow the selected users to tag mobile cards consecutively without waiting time. The Suprema Pass app supports this starting from version 2.9.0.
+* <IcAirMtag width='24px' height='24px' title='Mobile Consecutive Tag' />：選択したユーザーが待ち時間なしで連続してモバイルカードをタップできるように設定できます。 Suprema Pass アプリは 2.9.0 以上でサポートされています。
    <Image src='/img/air/bsair-user-list-tool-mobile-tag.png' />
 
-* <IcAirUtemplate width='24px' height='24px' title='User Template' />: Apply a user template to the selected users. Add any other information needed in addition to the default user information.
+* <IcAirUtemplate width='24px' height='24px' title='User Template' />：選択したユーザーにユーザーテンプレートを適用できます。 既定のユーザー情報に加えて必要な情報を追加できます。
 
   <Image src='/img/air/bsair-user-list-user-template.png' width='43%' />
 
-* <IcAirDown width='24px' height='24px' title='Download' />: Export the selected user information to a PDF or CSV file.
+* <IcAirDown width='24px' height='24px' title='Download' />：選択したユーザー情報を PDF または CSV ファイルにエクスポートできます。
 
-* <IcAirUpface width='24px' height='24px' title='Image Upload' />: Upload user images in bulk. The name of each image file to upload must match the user's ID.
+* <IcAirUpface width='24px' height='24px' title='Image Upload' />：ユーザー画像を一括アップロードできます。 アップロードする画像ファイルの名前はユーザーIDと一致している必要があります。
 
-   For example, the file 601.jpg corresponds to user ID 601.
-
-   :::note
-
-   **File format requirements**
-
-  * Supported formats: *.jpg*, *.jpeg*, *.png*
-
-  * File size limit: **1 MB** per image
-
-   :::
-
-* <IcAirFaceLink width='26px' height='26px' title='Send Face Registration Link' />: Send a face enrollment link to the selected users by email or text message. When a user clicks the link and enrolls their face on the webpage, they are granted access via facial authentication.
+   例：601.jpg ファイルはユーザーID 601 に対応します。
 
    :::note
 
-   The link cannot be sent to users without a registered email address or phone number.
+   **ファイル形式の要件**
+
+  * 対応形式: *.jpg*, *.jpeg*, *.png*
+
+  * ファイルサイズ制限: 画像ごとに **1MB**
 
    :::
 
-* <IcAirFilterReset width='26px' height='26px' title='Clear Filters' />: Reset all filters applied to the user list. This feature is available only when filters are applied. For more information on applying filtering, refer to <DocLink inner='#userFiltering' />.
+* <IcAirFaceLink width='26px' height='26px' title='Send Face Registration Link' />：選択したユーザーに顔登録リンクをメールまたはSMSで送信できます。 ユーザーがリンクをクリックしてウェブページで顔を登録すると、顔認証で出入できる権限が付与されます。
 
-* <IcAirReport width='26px' height='26px' title='Report' />: Configure user reports. After a report is generated, it is sent to the administrator's email. For more information on report configuring, refer to <DocLink inner='#userReport' />.
+   :::note
 
-* <IcAirMask width='24px' height='24px' title='Apply Masking' />: Mask(`***`) the information such as name and ID in the user list to protect privacy. This feature is useful in environments requiring privacy. Select the toggle button to enable this feature, and click <Cmd sid='save_btn' product='air' />.
+   メールまたは携帯電話番号が登録されていないユーザーにはリンクを送信できません。
+
+   :::
+
+* <IcAirFilterReset width='26px' height='26px' title='Clear Filters' />：ユーザー一覧に適用されているフィルターをリセットします。 この機能はフィルターが適用されている状態で利用できます。 フィルタリングの適用方法の詳細は、<DocLink inner='#userFiltering' />を参照してください。
+
+* <IcAirReport width='26px' height='26px' title='Report' />：ユーザーのレポートを設定できます。 リポートの作成が完了すると、管理者のメールに送信されます。 レポート設定の詳細については、<DocLink inner='#userReport' />を参照してください。
+
+* <IcAirMask width='24px' height='24px' title='Apply Masking' />：ユーザー一覧で個人情報保護のために氏名やIDなどをマスク（`***`）できます。 この機能は、個人情報保護が必要な環境で役立ちます。 トグルボタンで機能を有効にし、<Cmd sid='save_btn' product='air' />をクリックしてください。
 
   <Image src='/img/air/bsair-user-list-user-masking.png' />
 
-## Edit user information {#editUserDetails}
+## ユーザー情報の編集 {#editUserDetails}
 
 <Tabs groupId='platform'>
 <TabItem value='web' label='Web'>
 
-Follow these steps to edit a user's details or change their credentials.
+ユーザーの詳細を編集するか、クレデンシャルを変更するには、次の手順に従ってください。
 
-1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' /> をクリックします。
 
-2. Click the user you want to edit in the list.
+2. 一覧で編集するユーザーをクリックします。
 
    <Image src='/img/air/bsair-user-list.png' />
 
-3. Click <IcAirEdit /> in the top right of the user details.
+3. ユーザー詳細の右上にある <IcAirEdit /> ボタンをクリックします。
 
    <Image src='/img/air/bsair-user-details.png' />
 
-4. Edit the required details when the <Cmd sid="user_edit_header" product="air" /> window appears.
+4. <Cmd sid='user_edit_header' product='air' /> ウィンドウが表示されたら、必要な詳細を編集します。
 
    <Image src='/img/air/bsair-user-details-edit-info.png' />
 
-5. After editing, click <Cmd sid="save_btn" product="air" /> at the bottom right.
+5. 編集が完了したら、右下の <Cmd sid='save_btn' product='air' /> ボタンをクリックします。
 
 </TabItem>
 
@@ -191,17 +191,17 @@ Follow these steps to edit a user's details or change their credentials.
 </Column>
 <Column className='padding--l40'>
 
-To edit the detail information of user in the mobile app, follow these steps.
+モバイルアプリでユーザーの詳細情報を編集するには、次の手順に従ってください。
 
-1. Tap the user to edit in the user list. 
+1. ユーザー一覧で編集するユーザーをタップします。 
 
-2. Tap <IcAirEdit /> in the top right. 
+2. 右上の <IcAirEdit /> をタップします。 
 
-3. Edit the necessary information on the <Cmd sid='user_edit_header' product='air' /> screen.
+3. <Cmd sid='user_edit_header' product='air' /> 画面で必要な情報を編集します。
 
-4. To save the changes, tap <Cmd sid='save_btn' product='air' />.
+4. 変更を保存するには <Cmd sid='save_btn' product='air' /> をタップします。
 
-   Use <Cmd sid='add_user_card_activate_btn' product='air' /> to issue credentials.
+   クレデンシャルを発行するには <Cmd sid='add_user_card_activate_btn' product='air' /> を使用します。
 
 </Column>
 </Columns>
@@ -211,114 +211,114 @@ To edit the detail information of user in the mobile app, follow these steps.
 
 :::info
 
-For more information on user information, refer to <DocLink docId='platform/biostar_air/adding-individual-users' />.
+ユーザー情報の詳細については、<DocLink docId='platform/biostar_air/adding-individual-users' />を参照してください。
 
 :::
 
-## Manage user groups {#manageUserGroups}
+## ユーザーグループの管理 {#manageUserGroups}
 
-This guide describes how to assign or move, exclude user from user group. For more information on creating and managing user group, refer to <DocLink docId='platform/biostar_air/managing-user-groups' />.
+ユーザーをユーザーグループに割り当てる、移動する、またはグループから除外する方法をご案内します。 ユーザーグループの作成と管理の詳細については、<DocLink docId='platform/biostar_air/managing-user-groups' />を参照してください。
 
 <Tabs groupId='platform'>
 <TabItem value='web' label='Web'>
 
-### Assign users to a group {#assigning-users-to-a-group}
+### グループへのユーザー割り当て {#assigning-users-to-a-group}
 
-After creating a user group, you can add users to the group from the user list.
+ユーザーグループを作成した後、ユーザー一覧からユーザーを追加できます。
 
-1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' /> をクリックします。
 
-2. Click the checkbox next to the users to assign to the group in the user list.
+2. ユーザー一覧で、先に作成したグループに割り当てるユーザーのチェックボックスをクリックします。
 
-3. Click <IcAirGroup title='Manage Groups' /> at the top left of the user list.
+3. ユーザー一覧の左上にある <IcAirGroup title='Manage Groups' /> をクリックしてください。
 
    <Image src='/img/air/bsair-user-group-assign.png' />
 
-4. When the <Cmd sid='manage_user_groups_header' product='air' /> window appears, select the parent group or subgroup to assign the users.
+4. <Cmd sid='manage_user_groups_header' product='air' /> ウィンドウが表示されたら、ユーザーを割り当てる親グループまたはサブグループを選択します。
 
    <Image src='/img/air/bsair-user-group-assign-popup.png' width='50%' />
 
-5. Complete the selecting, and save group settings, click <Cmd sid='manage_grops_ok_btn' product='air' />.
+5. 選択を完了してグループ設定を保存するには、<Cmd sid='manage_grops_ok_btn' product='air' />をクリックしてください。
 
-Confirm that the users are assigned to the new group in the <Cmd sid='user_table_column5' product='air' /> column of the user list.
+ユーザー一覧の <Cmd sid='user_table_column5' product='air' /> 列で、ユーザーが新しいグループに割り当てられていることを確認できます。
 
 <Image src='/img/air/bsair-user-group-assign-result.png' />
 
-Return to <Cmd sid='user_groups_submenu' product='air' /> to confirm that the group's <Cmd sid='user_groups_table_col2' product='air' /> is updated.
+<Cmd sid='user_groups_submenu' product='air' /> に戻ると、該当グループの <Cmd sid='user_groups_table_col2' product='air' /> が更新されていることを確認できます。
 
-### Remove or move group {#disableGroup}
+### グループの解除または移動 {#disableGroup}
 
-You can exclude users from a user group or move them to another group.
+ユーザーをグループから除外するか、別のグループに移動できます。
 
-1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' /> をクリックします。
 
-2. Click the checkbox next to the users to remove from or move between groups in the user list.
+2. ユーザー一覧で、グループから解除または移動するユーザーのチェックボックスをクリックします。
 
    :::note
 
-   When moving users, first select users from the same group, then proceed.
+   グループを移動する場合は、同じグループのユーザーを選択してから操作を進めます。
 
    :::
 
-3. Click <IcAirGroup /> at the top left of the user list.
+3. ユーザー一覧の左上にある <IcAirGroup /> をクリックします。
 
-4. When the <Cmd sid='manage_user_groups_header' product='air' /> window appears, perform one of the following:
+4. <Cmd sid='manage_user_groups_header' product='air' /> ウィンドウが表示されたら、次のいずれかを行います。
 
-   * To unassign the group, clear the selected group's checkbox.
+   * グループを解除する場合は、選択したグループのチェックボックスをオフにします。
 
-   * To move the group, select the checkbox for the current group and then choose the target group.
+   * グループを移動する場合は、選択したグループのチェックボックスをオンにし、移動先のグループを選択します。
 
-5. Click <Cmd sid='manage_grops_ok_btn' product='air' /> to save the group settings.
+5. グループ設定を保存するには、<Cmd sid='manage_grops_ok_btn' product='air' />をクリックしてください。
 
-Confirm the group changes in the <Cmd sid='user_table_column5' product='air' /> column of the user list.
+ユーザー一覧の <Cmd sid='user_table_column5' product='air' /> 列でユーザーのグループ変更を確認できます。
 
 </TabItem>
 
 <TabItem value='mobile' label='Mobile'>
 
-You can manage user groups in the mobile app. Tap <IcAirGroup /> at the top of the user list. The user group list appears.
+モバイルアプリでユーザーグループを管理できます。 ユーザー一覧の上部にある <IcAirGroup /> をタップします。 ユーザーグループの一覧を確認できます。
 
 <Image src='/img/air/bsair-app-mng-user-group.png' className='none' width='60%' />
 
-* To view users in a group, tap <IcBw /> to the right of the desired group.
+* グループに所属するユーザーを表示するには、対象グループの右側にある <IcBw /> をタップします。
 
-* To add a new group, tap <IcAdd title='Add' /> in the top right.
+* 新しいグループを追加するには、右上の <IcAdd title='Add' /> をタップしてください。
 
-* To edit a group name, long-press the desired group and tap <IcAirEdit title='Edit' /> at the bottom.
+* グループ名を編集するには、対象のグループを長押しし、下部の <IcAirEdit title='Edit' /> をタップしてください。
 
-* To delete a group, long-press the desired group and tap <IcAirRemove title='Remove' /> at the bottom. Select one or more groups to delete them.
+* グループを削除するには、対象のグループを長押ししてから下部の <IcAirRemove title='Remove' /> をタップしてください。 1つ以上のグループを選択して削除できます。
 
 :::info
 
-For more information on managing user group, refer to <DocLink docId='platform/biostar_air/managing-user-groups' />.
+ユーザーグループ管理の詳細については、<DocLink docId='platform/biostar_air/managing-user-groups' />を参照してください。
 
 :::
 
 </TabItem>
 </Tabs>
 
-## Manage user status {#manageUserStatus}
+## ユーザー状態管理 {#manageUserStatus}
 
-Activate or suspend a user's access permissions. Reissue credentials as well.
+ユーザーの出入権限を有効化または一時停止できます。 また、クレデンシャルを再発行することもできます。
 
-### Individual user
+### 個別ユーザー
 
 <Tabs groupId='platform'>
 <TabItem value='web' label='Web'>
 
-1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' /> をクリックします。
 
-2. Click the user in the list to change their status.
+2. ユーザー一覧で状態を変更するユーザーをクリックします。
 
-3. Select the desired action at the top of the user details.
+3. ユーザー詳細の上部で希望する機能を選択します。
 
 <Image src='/img/air/bsair-user-details-manage-status.png' />
 
-* <IcAirActive width="24px" height="24px" title="Activate" />: Activate the user's access permissions. Use this feature for initial activation of new users or reactivation of suspended users.
+* <IcAirActive width='24px' height='24px' title='Activate' />：ユーザーの出入権限を有効にします。 新規ユーザーの初期有効化または一時停止されたユーザーの再有効化時に使用します。
 
-* <IcAirReissue width="24px" height="24px" title="Reissue" />: Reissue credentials. Use this feature when the user's credentials have expired or are unavailable.
+* <IcAirReissue width='24px' height='24px' title='Reissue' />：クレデンシャルを再発行します。 この機能は、ユーザーのクレデンシャルが期限切れになった場合やクレデンシャルが使用できず新しく発行する場合に使用できます。
 
-* <IcAirSuspend width="24px" height="24px" title="Suspend" />: Block the user's access. Use this feature when the user is active.
+* <IcAirSuspend width='24px' height='24px' title='Suspend' />：ユーザーの出入をブロックします。 この機能はユーザーが有効化されている状態で使用できます。
 
 </TabItem>
 
@@ -332,19 +332,19 @@ Activate or suspend a user's access permissions. Reissue credentials as well.
 </Column>
 <Column className='padding--l40'>
 
-In the mobile app, tap a user in the list. In the <Cmd sid='user_detail' product='air' /> screen, tap <span className='rect green'><IcAirMore /></span>. The **User actions** menu appears.
+モバイルアプリのユーザー一覧で、ユーザーをタップします。 <Cmd sid='user_detail' product='air' /> 画面で <span className='rect green'><IcAirMore /></span> をタップします。 **ユーザーアクション** メニューが表示されます。
 
-* <Cmd sid='user_activate_action' product='air' /> / <Cmd sid='after_suspend_user_reactivate_action' product='air' />: Activate the user's access permissions. Use this feature for initial activation of new users or reactivation of suspended users.
+* <Cmd sid='user_activate_action' product='air' /> / <Cmd sid='after_suspend_user_reactivate_action' product='air' />: ユーザーのアクセス権を有効にします。 新規ユーザーの初期有効化または一時停止されたユーザーの再有効化時に使用します。
 
-* <Cmd sid='user_reactivate_action' product='air' />: Reissues the user's credentials.
+* <Cmd sid='user_reactivate_action' product='air' />：ユーザーのクレデンシャルを再発行します。
 
-* <Cmd sid='suspend_action' product='air' />: Temporarily deactivates the user. Suspended users cannot access.
+* <Cmd sid='suspend_action' product='air' />：ユーザーを一時的に無効にします。 一時停止されたユーザーは入退室できません。
 
-* <Cmd sid='delete_action' product='air' />: Deletes the user from the system.
+* <Cmd sid='delete_action' product='air' />：ユーザーをシステムから削除します。
 
 :::info
 
-The <Cmd sid='after_suspend_user_reactivate_action' product='air' /> option appears only for suspended users.
+<Cmd sid='after_suspend_user_reactivate_action' product='air' /> オプションは一時停止されたユーザーにのみ表示されます。
 
 :::
 
@@ -354,24 +354,24 @@ The <Cmd sid='after_suspend_user_reactivate_action' product='air' /> option appe
 </TabItem>
 </Tabs>
 
-### Batch actions
+### 一括操作
 
 <Tabs groupId='platform'>
 <TabItem value='web' label='Web'>
 
-1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' /> をクリックします。
 
-2. Click the checkbox of each user in the list to change their status. You can select more than one user.
+2. ユーザー一覧で状態を変更するユーザーのチェックボックスをクリックします。 1 人以上のユーザーを選択できます。
 
-3. Click <IcAirMore /> at the top left of the screen and select the desired action from the pop-up menu.
+3. 画面左上の <IcAirMore /> ボタンをクリックし、ポップアップメニューで希望する操作を選択します。
 
 <Image src='/img/air/bsair-user-list-multi-user-batch-action.png' />
 
-* <Cmd sid='user_activate_action' product='air' /> / <Cmd sid='after_suspend_user_reactivate_action' product='air' />: Activate the user's access permissions. Use this feature for initial activation of new users or reactivation of suspended users.
+* <Cmd sid='user_activate_action' product='air' /> / <Cmd sid='after_suspend_user_reactivate_action' product='air' />: ユーザーのアクセス権を有効にします。 新規ユーザーの初期有効化または一時停止されたユーザーの再有効化時に使用します。
 
-* <Cmd sid="user_reactivate_action" product="air" />: Reissue credentials. Use this feature when the user's credentials have expired or are unavailable.
+* <Cmd sid='user_reactivate_action' product='air' />：クレデンシャルを再発行します。 この機能は、ユーザーのクレデンシャルが期限切れになった場合やクレデンシャルが使用できず新しく発行する場合に使用できます。
 
-* <Cmd sid="suspend_action" product="air" />: Block the user's access. Use this feature when the user is active.
+* <Cmd sid='suspend_action' product='air' />：ユーザーの出入をブロックします。 この機能はユーザーが有効化されている状態で使用できます。
 
 </TabItem>
 
@@ -385,15 +385,15 @@ The <Cmd sid='after_suspend_user_reactivate_action' product='air' /> option appe
 </Column>
 <Column className='padding--l40'>
 
-In the mobile app, long-press a user in the list to change their status. Select any additional users whose status you want to change. Tap the desired action in the **User actions** menu at the bottom of the screen.
+モバイルアプリのユーザー一覧で、状態を変更するユーザーを長押しします。 追加で状態を変更するユーザーを選択します。 画面下部の**ユーザーアクション**メニューで、希望する機能をタップします。
 
-* <Cmd sid='user_activate_action' product='air' /> / <Cmd sid='after_suspend_user_reactivate_action' product='air' />: Activate the user's access permissions. Use this feature for initial activation of new users or reactivation of suspended users.
+* <Cmd sid='user_activate_action' product='air' /> / <Cmd sid='after_suspend_user_reactivate_action' product='air' />: ユーザーのアクセス権を有効にします。 新規ユーザーの初期有効化または一時停止されたユーザーの再有効化時に使用します。
 
-* <Cmd sid='user_reactivate_action' product='air' />: Reissues the user's credentials.
+* <Cmd sid='user_reactivate_action' product='air' />：ユーザーのクレデンシャルを再発行します。
 
-* <Cmd sid='suspend_action' product='air' />: Temporarily deactivates the user. Suspended users cannot access.
+* <Cmd sid='suspend_action' product='air' />：ユーザーを一時的に無効にします。 一時停止されたユーザーは入退室できません。
 
-* <Cmd sid='delete_action' product='air' />: Deletes the user from the system.
+* <Cmd sid='delete_action' product='air' />：ユーザーをシステムから削除します。
 
 </Column>
 </Columns>
@@ -403,72 +403,72 @@ In the mobile app, long-press a user in the list to change their status. Select 
 
 :::info
 
-The <Cmd sid='after_suspend_user_reactivate_action' product='air' /> option appears only for suspended users.
+<Cmd sid='after_suspend_user_reactivate_action' product='air' /> オプションは一時停止されたユーザーにのみ表示されます。
 
 :::
 
-## Delete users {#deleteUser}
+## ユーザー削除 {#deleteUser}
 
 :::caution
 
-Deleted users cannot be recovered. Be sure to verify before deleting.
+削除されたユーザーは復元できません。 削除する前に必ず確認してください。
 
 :::
 
-### Individual user {#deleteSingleUser}
+### 個別ユーザー {#deleteSingleUser}
 
-1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' /> をクリックします。
 
-2. Click the user you want to delete in the list.
+2. 一覧で削除するユーザーをクリックします。
 
    <Image src='/img/air/bsair-user-list.png' />
 
-3. Click <span className="air-remove"><IcAirRemove /></span> in the user details.
+3. ユーザー詳細で <span className='air-remove'><IcAirRemove /></span> ボタンをクリックします。
 
    <Image src='/img/air/bsair-user-details-remove.png' />
 
-4. When a warning message appears, click <Cmd sid='delete_user_yes_btn' product='air' />.
+4. 警告メッセージが表示されたら、<Cmd sid='delete_user_yes_btn' product='air' /> ボタンをクリックします。
 
-### Delete multiple users {#deleteMultipleUsers}
+### 一括削除 {#deleteMultipleUsers}
 
-1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' /> をクリックします。
 
-2. Click the checkbox of each user you want to delete in the list. You can select more than one user.
+2. 一覧で削除するユーザーのチェックボックスをクリックします。 1 人以上のユーザーを選択できます。
 
    <Image src='/img/air/bsair-user-list-multi-select.png' />
 
-3. Click <IcAirMore /> → <Cmd sid="delete_action" product="air" /> at the top left of the screen.
+3. 画面左上の <IcAirMore /> → <Cmd sid='delete_action' product='air' /> をクリックします。
 
    <Image src='/img/air/bsair-user-list-multi-select-remove-opt.png' />
 
-4. When a warning message appears, click <Cmd sid='delete_user_yes_btn' product='air' />.
+4. 警告メッセージが表示されたら、<Cmd sid='delete_user_yes_btn' product='air' /> ボタンをクリックします。
 
-## Create a user report {#userReport}
+## ユーザーリポートの作成 {#userReport}
 
-Create a user report and send it to the administrator's email. 
+ユーザーリポートを生成して管理者のメールに送信できます。 
 
-1. Click <IcAirReport /> at the top of the user list.
+1. ユーザー一覧上部の <IcAirReport /> ボタンをクリックします。
 
-2. When the <Cmd sid="report_popup_title" product="air" /> window appears, enter a report name.
+2. <Cmd sid='report_popup_title' product='air' /> ウィンドウが表示されたら、レポート名を入力します。
 
    <Image src='/img/air/bsair-user-report-setting.png' />
 
-3. Select the items to include in the report from each filter option.
+3. 各フィルターオプションでレポートに含める項目を選択します。
 
-4. Click <Cmd sid="report_form_text_add" product="air" /> to save the report.
+4. 作成したレポートを保存するには、<Cmd sid='report_form_text_add' product='air' /> をクリックします。
 
-5. A <Cmd sid="report_form_text_title" product="air" /> is created and a download link is sent to the administrator's email.
+5. <Cmd sid='report_form_text_title' product='air' /> が作成され、管理者のメールにダウンロードリンクが送信されます。
 
 <Image src='/img/air/bsair-user-report-setting-list.png' />
 
 :::info
 
-In <Cmd sid="report_form_text_title" product="air" />, search for, edit, download, or delete generated reports.
+<Cmd sid='report_form_text_title' product='air' /> で作成されたリポートを検索、編集、ダウンロード、削除できます。
 
 :::
 
-## Search users {#searchUsers}
+## ユーザー検索 {#searchUsers}
 
-Use the search field in the top right of the user list to quickly find specific users. Search by user name, ID, or phone number.
+ユーザー一覧右上の検索入力フィールドで特定のユーザーを素早く見つけることができます。 ユーザー名、ID、電話番号で検索できます。
 
 <Image src='/img/air/bsair-user-list-search.png' />

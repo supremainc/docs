@@ -1,28 +1,28 @@
 ---
 id: daylight-saving-time
-title: Daylight Saving Time (DST)
-description: Learn how to configure automatic and manual DST settings in BioStar Air, enable DST for devices, and manage time zone adjustments across multiple locations.
+title: Horario de Verano (DST)
+description: Aprende a configurar los ajustes de DST automáticos y manuales en BioStar Air, a habilitar el DST en los dispositivos y a gestionar los ajustes de zona horaria en varias ubicaciones.
 keywords:
-  - Daylight Saving Time
+  - Horario de Verano (DST)
   - DST
-  - time zone
+  - zona horaria
 ---
 
-Use the Daylight Saving Time (DST) settings to configure how the site adjusts its time. This is especially important for ensuring consistent and accurate time tracking when managing a site that has devices and records across multiple time zones.
+Utiliza la configuración del Horario de Verano (DST) para definir cómo el sitio ajusta la hora. Esto es especialmente importante para garantizar un registro coherente y preciso de la hora cuando gestionas un sitio con dispositivos y registros en distintas zonas horarias.
 
-For accurate time management in BioStar Air, **DST settings in three places** are required:
+Para una gestión precisa del tiempo en BioStar Air, es necesario configurar los **ajustes de DST en tres lugares**:
 
-* **DST Profile**: Defines the start and end date and time of DST for each time zone.
+* **Perfil de DST**: Define la fecha y la hora de inicio y fin del DST para cada zona horaria.
 
-* **Site Time**: Set the time zone applied to the site and event logs.
+* **Hora del sitio**: Establece la zona horaria aplicada al sitio y a los registros de eventos.
 
-* **Device Time**: Configure each individual reader so it adjusts its clock correctly.
+* **Hora del dispositivo**: Configura cada lector individual para que ajuste correctamente su reloj.
 
-All three settings must be configured correctly for sites located in time zone that observes Daylight Saving Time.
+Las tres opciones deben configurarse correctamente en los sitios ubicados en zonas horarias que observan el Horario de Verano.
 
 :::tip
 
-Watch the following video for a guide to configuring Daylight Saving Time (DST) settings.
+Consulta el siguiente video para obtener una guía sobre cómo configurar los ajustes del Horario de Verano (DST).
 
 <YouTube className='fit--content' videoId="e51UOKLECz8" />
 
@@ -30,138 +30,138 @@ Watch the following video for a guide to configuring Daylight Saving Time (DST) 
 
 :::info
 
-Consider the following when reviewing <Cmd sid="event_logs_submenu" product="air" className="normal" />.
+Considera lo siguiente al revisar <Cmd sid="event_logs_submenu" product="air" className="normal" />.
 
-* If device time is configured, event log timestamps adjust to each device's DST time.
+* Si la hora del dispositivo está configurada, las marcas de tiempo de los registros de eventos se ajustan al horario de verano de cada dispositivo.
 
-* If site time is configured, timestamps adjust according to the site's DST configuration instead of each device.
+* Si la hora del sitio está configurada, las marcas de tiempo se ajustan según la configuración de DST del sitio en lugar de la de cada dispositivo.
 
 :::
 
-## Step 1: Create DST profile {#addingNewdst}
+## Paso 1: Crear perfil de DST {#addingNewdst}
 
-A DST profile defines the date and time when DST starts and ends for a specific time zone. You must create a DST profile for each time zone where the site and readers are located.
+Un perfil de DST define la fecha y la hora en que el DST comienza y termina para una zona horaria específica. Debe crear un perfil de DST para cada zona horaria en la que se encuentren el sitio y los lectores.
 
-### Add new profile
+### Agregar nuevo perfil
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="daylight_saving_time_submenu" product="air" /> in the left sidebar.
+1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="daylight_saving_time_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Click <Cmd sid="btn_add_DST" product="air" /> at the top right of the screen.
+2. Haz clic en <Cmd sid="btn_add_DST" product="air" /> en la parte superior derecha de la pantalla.
 
    <Image src='/img/air/bsair-settings-dst.png' />
 
-3. Select the desired item from <Cmd sid="device_editable_fields_timezone" product="air" /> when the <Cmd sid="dst_add_modal_title" product="air" /> panel appears.
+3. Selecciona el elemento deseado en <Cmd sid="device_editable_fields_timezone" product="air" /> cuando aparezca el panel <Cmd sid="dst_add_modal_title" product="air" />.
 
-4. Select automatic or manual configuration in <Cmd sid='dst_add_modal_subtitle_setting_dst' product='air' />.
+4. Selecciona la configuración automática o manual en <Cmd sid='dst_add_modal_subtitle_setting_dst' product='air' />.
 
-   * **Auto**: The DST configuration for the selected time zone is added automatically. The start and end dates for DST are determined by the standard rules for that time zone.
+   * **Automático**: La configuración de DST para la zona horaria seleccionada se agrega automáticamente. Las fechas de inicio y fin del DST se determinan según las reglas estándar de esa zona horaria.
 
      <Image src='/img/air/bsair-settings-dst-add-auto.png' />
 
-   * **Manual**: Set the appropriate start and end times for the time zone to configure manually.
+   * **Manual**: Establece manualmente las horas de inicio y fin correspondientes para la zona horaria.
 
      <Image src='/img/air/bsair-settings-dst-add-manual.png' />
 
-     * <Cmd sid="date_label" product="air" />: Select the dates when DST starts and ends.
+     * <Cmd sid="date_label" product="air" />: Selecciona las fechas en las que el DST comienza y termina.
 
-     * <Cmd sid="dropdown_label_week" product="air" />: Select the weeks when DST starts and ends.
+     * <Cmd sid="dropdown_label_week" product="air" />: Selecciona las semanas en las que el DST comienza y termina.
 
-5. Click <Cmd sid='save_btn' product='air' /> at the bottom to save the DST profile.
+5. Haz clic en <Cmd sid='save_btn' product='air' /> en la parte inferior para guardar el perfil DST.
 
-### Edit existing DST profile {#editingDstConfiguration}
+### Editar el perfil DST existente {#editingDstConfiguration}
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="daylight_saving_time_submenu" product="air" /> in the left sidebar.
+1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="daylight_saving_time_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Click the DST profile you want to edit in the list. Alternatively, select the checkbox and click <IcAirEdit title='Edit' /> at the top.
+2. Haz clic en el perfil DST que quieras editar en la lista. Alternativamente, selecciona la casilla y haz clic en <IcAirEdit title='Edit' /> en la parte superior.
 
-3. Modify the start and end times when the <Cmd sid="dst_update_modal_title" product="air" /> panel appears.
+3. Modifica la hora de inicio y de finalización cuando aparezca el panel <Cmd sid="dst_update_modal_title" product="air" />.
 
    <Image src='/img/air/bsair-settings-dst-edit.png' caption />
 
-4. Click <Cmd sid="save_btn" product="air" /> at the bottom to save the changes.
+4. Haz clic en <Cmd sid="save_btn" product="air" /> en la parte inferior para guardar los cambios.
 
-### Delete DST profile {#deleteDstProfile}
+### Eliminar el perfil DST {#deleteDstProfile}
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="daylight_saving_time_submenu" product="air" /> in the left sidebar.
+1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="daylight_saving_time_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Click the checkbox for the DST profile you want to delete in the list. You can select one or more profiles.
+2. Haz clic en la casilla del perfil DST que quieras eliminar en la lista. Puedes seleccionar uno o más perfiles.
 
-3. Click <IcAirRemove title='Delete' /> at the top of the screen.
+3. Haz clic en <IcAirRemove title='Delete' /> en la parte superior de la pantalla.
 
-4. When the message window appears, click the <Cmd sid='user_group_yes_btn' product='air' /> button.
+4. Cuando aparezca la ventana de mensajes, haz clic en el botón <Cmd sid='user_group_yes_btn' product='air' />.
 
-## Step 2: Site time settings {#setSiteTime}
+## Paso 2: Configuración de la hora del sitio {#setSiteTime}
 
-The site time determines the default time zone used by the entire system. The following items are affected by this setting:
+La hora del sitio determina la zona horaria predeterminada que utiliza todo el sistema. Los siguientes elementos se ven afectados por esta configuración:
 
-* Event log timestamps
+* Marcas de tiempo del registro de eventos
 
-* Reports and monitoring data
+* Informes y datos de monitoreo
 
-* Default time zone applied when registering a new device
+* Zona horaria predeterminada aplicada al registrar un nuevo dispositivo
 
-Follow the instructions below to set the site's time zone and enable DST.
+Sigue las instrucciones a continuación para configurar la zona horaria del sitio y habilitar el horario de verano.
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar.
+1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Click <Cmd sid='site_setting_tab_setting' product='air' /> tab.
+2. Haz clic en la pestaña <Cmd sid='site_setting_tab_setting' product='air' />.
 
-3. Select the desired time zone in <Cmd sid='site_profile_input4' product='air' />.
+3. Selecciona la zona horaria deseada en <Cmd sid='site_profile_input4' product='air' />.
 
    <Image src='/img/air/bsair-settings-site-setting-timezone.png' />
 
-4. Enable <Cmd sid='device_field_dst_usage' product='air' /> to apply daylight saving time to the selected time zone.
+4. Habilita <Cmd sid='device_field_dst_usage' product='air' /> para aplicar el horario de verano a la zona horaria seleccionada.
 
 :::caution
 
-If the <Cmd sid='device_field_dst_usage' product='air' /> option is not enabled in a time zone where DST applies, the system will not automatically adjust the time, and event logs may appear incorrectly.
+Si la opción <Cmd sid='device_field_dst_usage' product='air' /> no está habilitada en una zona horaria donde aplica el horario de verano, el sistema no ajustará la hora automáticamente y los registros de eventos pueden mostrarse de forma incorrecta.
 
 :::
 
-## Step 3: Enable DST for devices {#enablingDstForDevices}
+## Paso 3: Habilitar el horario de verano para los dispositivos {#enablingDstForDevices}
 
-Each device connected to BioStar Air maintains its own clock, which is used for access control and attendance records. Configure DST settings for any device located in a time zone where DST applies.
+Cada dispositivo conectado a BioStar Air mantiene su propio reloj, que se usa para el control de acceso y los registros de asistencia. Configura los ajustes de horario de verano para cualquier dispositivo ubicado en una zona horaria donde aplique el horario de verano.
 
-Devices with screens, such as BioStation 3, displays the time. Devices without screens, such as XPass 2, maintain their internal clocks for access control and time and attendance records.
+Los dispositivos con pantalla, como BioStation 3, muestran la hora. Los dispositivos sin pantalla, como XPass 2, mantienen sus relojes internos para el control de acceso y los registros de tiempo y asistencia.
 
-Set DST on all devices, regardless of whether they have a display, to ensure event logs, access records, and attendance data are recorded accurately.
+Configura el horario de verano en todos los dispositivos, tengan o no pantalla, para garantizar que los registros de eventos, los registros de acceso y los datos de asistencia se registren correctamente.
 
-1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+1. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Click the device to which you want to apply the DST settings in the list.
+2. Haz clic en el dispositivo al que quieras aplicar los ajustes de horario de verano en la lista.
 
-3. Select the desired time zone in the <Cmd sid="device_editable_fields_timezone" product="air" /> section, and enable the <Cmd sid="device_field_dst_usage" product="air" /> option.
+3. Selecciona la zona horaria deseada en la sección <Cmd sid="device_editable_fields_timezone" product="air" /> y activa la opción <Cmd sid="device_field_dst_usage" product="air" />.
 
    <Image src='/img/air/bsair-device-mng-edit-timezone.png' />
 
    :::note
 
-   This setting is enabled by default for time zones where DST applies.
+   Esta opción está habilitada de forma predeterminada en las zonas horarias donde se aplica el horario de verano.
 
    :::
 
-4. Click <Cmd sid="save_btn" product="air" /> at the bottom to save the changes.
+4. Haz clic en <Cmd sid="save_btn" product="air" /> en la parte inferior para guardar los cambios.
 
 :::info
 
-If the device time is not set correctly, the following issues may occur:
+Si la hora del dispositivo no está configurada correctamente, pueden ocurrir los siguientes problemas:
 
-* **Access Denied Error**: The access time is set to start at 07:00 AM, but if the device thinks it is 06:00 AM, user entry will be denied.
+* **Error de acceso denegado**: La hora de acceso está configurada para comenzar a las 07:00 AM, pero si el dispositivo cree que son las 06:00 AM, se denegará el acceso al usuario.
 
-* **Schedule error**: The lock/unlock at the scheduled time may not be accurate.
+* **Error de programación**: El bloqueo/desbloqueo a la hora programada puede no ser preciso.
 
-* **Record error**: The times in the event log and the time and attendance records do not match the actual time.
+* **Error en los registros**: Las horas en el registro de eventos y en los registros de tiempo y asistencia no coinciden con la hora real.
 
 :::
 
-## Checklist {#checklist}
+## Lista de verificación {#checklist}
 
-To ensure accurate timekeeping in regions that observe Daylight Saving Time (DST), make sure you have completed all three of the following steps.
+Para garantizar la precisión del horario en las regiones que observan el horario de verano (DST), asegúrate de haber completado las tres acciones siguientes.
 
-* **Create DST profiles**: Have you created the DST profiles needed for each time zone?
+* **Crear perfiles de DST**: ¿Has creado los perfiles de DST necesarios para cada zona horaria?
 
-* **Site time settings**: Have you set the site's time zone and enabled the <Cmd sid='device_field_dst_usage' product='air' /> option?
+* **Configuración horaria del sitio**: ¿Has establecido la zona horaria del sitio y activado la opción <Cmd sid='device_field_dst_usage' product='air' />?
 
-* **Device DST settings**: Have you set each device's time zone and enabled the <Cmd sid='device_field_dst_usage' product='air' /> option?
+* **Ajustes de DST del dispositivo**: ¿Has configurado la zona horaria de cada dispositivo y activado la opción <Cmd sid='device_field_dst_usage' product='air' />?
 
-If all three are configured correctly, the event logs, access times, and attendance records will all show the correct time.
+Si las tres están configuradas correctamente, los registros de eventos, los horarios de acceso y los registros de asistencia mostrarán la hora correcta.

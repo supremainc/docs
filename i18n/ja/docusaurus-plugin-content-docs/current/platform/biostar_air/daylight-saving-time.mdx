@@ -1,28 +1,28 @@
 ---
 id: daylight-saving-time
-title: Daylight Saving Time (DST)
-description: Learn how to configure automatic and manual DST settings in BioStar Air, enable DST for devices, and manage time zone adjustments across multiple locations.
+title: サマータイム（DST）の設定
+description: BioStar Airで自動および手動のDST設定を構成する方法、デバイスでDSTを有効にする方法、および複数のロケーションでタイムゾーン調整を管理する方法を案内します。
 keywords:
-  - Daylight Saving Time
+  - サマータイム
   - DST
-  - time zone
+  - タイムゾーン
 ---
 
-Use the Daylight Saving Time (DST) settings to configure how the site adjusts its time. This is especially important for ensuring consistent and accurate time tracking when managing a site that has devices and records across multiple time zones.
+サマータイム（Daylight Saving Time、DST）を設定することで、サイトの時刻の調整方法を構成できます。 これは、特に複数のタイムゾーンにまたがるデバイスやログがあるサイトを管理する際に、一貫して正確な時刻の追跡を確保するために重要です。
 
-For accurate time management in BioStar Air, **DST settings in three places** are required:
+BioStar Airで正確な時刻管理を行うには、**3箇所でDSTを設定する**必要があります：
 
-* **DST Profile**: Defines the start and end date and time of DST for each time zone.
+* **DSTプロファイル**：各タイムゾーンごとにDSTの開始と終了日時を定義します。
 
-* **Site Time**: Set the time zone applied to the site and event logs.
+* **サイトの時刻**：サイトとイベントログに適用されるタイムゾーンを設定します。
 
-* **Device Time**: Configure each individual reader so it adjusts its clock correctly.
+* **デバイスの時刻**：各デバイスが正しく時刻を調整するように設定します。
 
-All three settings must be configured correctly for sites located in time zone that observes Daylight Saving Time.
+サマータイムを採用しているタイムゾーンにある場合、これら3つの設定すべてが正しく構成されている必要があります。
 
 :::tip
 
-Watch the following video for a guide to configuring Daylight Saving Time (DST) settings.
+日光節約時間（Daylight Saving Time、DST）の設定に関するビデオガイドを見るには、次のビデオを参照してください。
 
 <YouTube className='fit--content' videoId="e51UOKLECz8" />
 
@@ -30,138 +30,138 @@ Watch the following video for a guide to configuring Daylight Saving Time (DST) 
 
 :::info
 
-Consider the following when reviewing <Cmd sid="event_logs_submenu" product="air" className="normal" />.
+<Cmd sid='event_logs_submenu' product='air' className='normal' />を確認する際は、以下の点に注意してください。
 
-* If device time is configured, event log timestamps adjust to each device's DST time.
+* デバイスの時刻が設定されている場合、イベントログのタイムスタンプは各デバイスのDST時間に合わせて調整されます。
 
-* If site time is configured, timestamps adjust according to the site's DST configuration instead of each device.
+* サイトの時刻が設定されている場合、タイムスタンプはデバイスごとではなくサイトのDST構成に従って調整されます。
 
 :::
 
-## Step 1: Create DST profile {#addingNewdst}
+## ステップ1: DSTプロファイルを作成する {#addingNewdst}
 
-A DST profile defines the date and time when DST starts and ends for a specific time zone. You must create a DST profile for each time zone where the site and readers are located.
+DSTプロファイルは、特定のタイムゾーンにおけるDSTの開始日時と終了日時を定義します。 サイトやデバイスがある各タイムゾーンごとにDSTプロファイルを作成する必要があります。
 
-### Add new profile
+### 新しいプロファイルを追加
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="daylight_saving_time_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='daylight_saving_time_submenu' product='air' /> をクリックします。
 
-2. Click <Cmd sid="btn_add_DST" product="air" /> at the top right of the screen.
+2. 画面右上の <Cmd sid='btn_add_DST' product='air' /> をクリックします。
 
    <Image src='/img/air/bsair-settings-dst.png' />
 
-3. Select the desired item from <Cmd sid="device_editable_fields_timezone" product="air" /> when the <Cmd sid="dst_add_modal_title" product="air" /> panel appears.
+3. <Cmd sid='dst_add_modal_title' product='air' />パネルが表示されたら、<Cmd sid='device_editable_fields_timezone' product='air' />で希望する項目を選択します。
 
-4. Select automatic or manual configuration in <Cmd sid='dst_add_modal_subtitle_setting_dst' product='air' />.
+4. <Cmd sid='dst_add_modal_subtitle_setting_dst' product='air' />で自動または手動による構成を選択してください。
 
-   * **Auto**: The DST configuration for the selected time zone is added automatically. The start and end dates for DST are determined by the standard rules for that time zone.
+   * **自動構成**: 選択したタイムゾーンのDST構成が自動的に追加されます。 DSTの開始・終了日は、当該タイムゾーンの標準ルールに従って設定されます。
 
      <Image src='/img/air/bsair-settings-dst-add-auto.png' />
 
-   * **Manual**: Set the appropriate start and end times for the time zone to configure manually.
+   * **手動構成**: 手動で設定するには、該当タイムゾーンの適切な開始時刻と終了時刻を設定してください。
 
      <Image src='/img/air/bsair-settings-dst-add-manual.png' />
 
-     * <Cmd sid="date_label" product="air" />: Select the dates when DST starts and ends.
+     * <Cmd sid='date_label' product='air' />：DSTが開始および終了する日付を選択できます。
 
-     * <Cmd sid="dropdown_label_week" product="air" />: Select the weeks when DST starts and ends.
+     * <Cmd sid='dropdown_label_week' product='air' />：DSTが開始および終了する週を選択できます。
 
-5. Click <Cmd sid='save_btn' product='air' /> at the bottom to save the DST profile.
+5. DSTプロファイルを保存するには、下部の <Cmd sid='save_btn' product='air' /> をクリックしてください。
 
-### Edit existing DST profile {#editingDstConfiguration}
+### 既存のDST構成を編集する {#editingDstConfiguration}
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="daylight_saving_time_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='daylight_saving_time_submenu' product='air' /> をクリックします。
 
-2. Click the DST profile you want to edit in the list. Alternatively, select the checkbox and click <IcAirEdit title='Edit' /> at the top.
+2. 一覧から編集するDSTプロファイルをクリックしてください。 またはチェックボックスをクリックし、上部の <IcAirEdit title='Edit' /> ボタンをクリックしてください。
 
-3. Modify the start and end times when the <Cmd sid="dst_update_modal_title" product="air" /> panel appears.
+3. <Cmd sid='dst_update_modal_title' product='air' />パネルが表示されたら、開始時刻と終了時刻を修正します。
 
    <Image src='/img/air/bsair-settings-dst-edit.png' caption />
 
-4. Click <Cmd sid="save_btn" product="air" /> at the bottom to save the changes.
+4. 変更を保存するには、下部の <Cmd sid='save_btn' product='air' /> をクリックします。
 
-### Delete DST profile {#deleteDstProfile}
+### プロファイルの削除 {#deleteDstProfile}
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="daylight_saving_time_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='daylight_saving_time_submenu' product='air' /> をクリックします。
 
-2. Click the checkbox for the DST profile you want to delete in the list. You can select one or more profiles.
+2. 一覧で削除するDSTプロファイルのチェックボックスをクリックしてください。 1つ以上のプロファイルを選択できます。
 
-3. Click <IcAirRemove title='Delete' /> at the top of the screen.
+3. 画面上部の <IcAirRemove title='Delete' /> ボタンをクリックしてください。
 
-4. When the message window appears, click the <Cmd sid='user_group_yes_btn' product='air' /> button.
+4. メッセージウィンドウが表示されたら、<Cmd sid='user_group_yes_btn' product='air' /> をクリックしてください。
 
-## Step 2: Site time settings {#setSiteTime}
+## ステップ2: サイトの時刻を設定する {#setSiteTime}
 
-The site time determines the default time zone used by the entire system. The following items are affected by this setting:
+サイトの時間はシステム全体で使用されるデフォルトのタイムゾーンを決定します。 この設定の影響を受ける項目は以下のとおりです。
 
-* Event log timestamps
+* イベントログおよび記録のタイムスタンプ
 
-* Reports and monitoring data
+* レポートおよび監視データ
 
-* Default time zone applied when registering a new device
+* 新しいデバイスを登録する際に適用されるデフォルトのタイムゾーン
 
-Follow the instructions below to set the site's time zone and enable DST.
+以下の手順に従ってサイトのタイムゾーンを設定し、DSTを有効にしてください。
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> をクリックします。
 
-2. Click <Cmd sid='site_setting_tab_setting' product='air' /> tab.
+2. <Cmd sid='site_setting_tab_setting' product='air' /> タブをクリックしてください。
 
-3. Select the desired time zone in <Cmd sid='site_profile_input4' product='air' />.
+3. <Cmd sid='site_profile_input4' product='air' /> で希望するタイムゾーンを選択してください。
 
    <Image src='/img/air/bsair-settings-site-setting-timezone.png' />
 
-4. Enable <Cmd sid='device_field_dst_usage' product='air' /> to apply daylight saving time to the selected time zone.
+4. 選択したタイムゾーンでDSTが適用される場合は、 <Cmd sid='device_field_dst_usage' product='air' /> オプションを有効にしてください。
 
 :::caution
 
-If the <Cmd sid='device_field_dst_usage' product='air' /> option is not enabled in a time zone where DST applies, the system will not automatically adjust the time, and event logs may appear incorrectly.
+DSTが適用されるタイムゾーンで <Cmd sid='device_field_dst_usage' product='air' /> オプションを有効にしないと、システムが自動で時刻を調整せず、イベントログに誤った時刻が表示される可能性があります。
 
 :::
 
-## Step 3: Enable DST for devices {#enablingDstForDevices}
+## ステップ3: デバイスでDSTを有効にする {#enablingDstForDevices}
 
-Each device connected to BioStar Air maintains its own clock, which is used for access control and attendance records. Configure DST settings for any device located in a time zone where DST applies.
+BioStar Airに接続されている各デバイスは内蔵時計を保持しており、入退室管理や勤怠記録に使用されます。 DSTが適用されるタイムゾーンにあるデバイスでは、必ずDST設定を行ってください。
 
-Devices with screens, such as BioStation 3, displays the time. Devices without screens, such as XPass 2, maintain their internal clocks for access control and time and attendance records.
+BioStation 3のような画面付きのデバイスは、ユーザーに時刻を表示します。 XPass 2のような画面のないデバイスも内部で時刻を維持し、入退室管理や勤怠記録に使用します。
 
-Set DST on all devices, regardless of whether they have a display, to ensure event logs, access records, and attendance data are recorded accurately.
+画面の有無にかかわらず、すべてのデバイスでDSTを設定する必要があります。そうしないと、イベントログ、入退室記録、勤怠データが正確に記録されません。
 
-1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。
 
-2. Click the device to which you want to apply the DST settings in the list.
+2. 一覧からDST設定を適用するデバイスをクリックしてください。
 
-3. Select the desired time zone in the <Cmd sid="device_editable_fields_timezone" product="air" /> section, and enable the <Cmd sid="device_field_dst_usage" product="air" /> option.
+3. <Cmd sid='device_editable_fields_timezone' product='air' /> セクションで希望するタイムゾーンを選択し、<Cmd sid='device_field_dst_usage' product='air' /> オプションを有効にします。
 
    <Image src='/img/air/bsair-device-mng-edit-timezone.png' />
 
    :::note
 
-   This setting is enabled by default for time zones where DST applies.
+   DSTを適用するタイムゾーンでは、この設定はデフォルトで有効になります。
 
    :::
 
-4. Click <Cmd sid="save_btn" product="air" /> at the bottom to save the changes.
+4. 変更を保存するには、下部の <Cmd sid='save_btn' product='air' /> をクリックします。
 
 :::info
 
-If the device time is not set correctly, the following issues may occur:
+デバイスの時刻が正しく設定されていないと、以下のような問題が発生する可能性があります：
 
-* **Access Denied Error**: The access time is set to start at 07:00 AM, but if the device thinks it is 06:00 AM, user entry will be denied.
+* **入室拒否エラー**：入室時間が07:00からに設定されている場合、デバイスが06:00と認識するとユーザーの入室が拒否されます。
 
-* **Schedule error**: The lock/unlock at the scheduled time may not be accurate.
+* **スケジュールエラー**：予約された時間の施錠/解錠が正確でない可能性があります。
 
-* **Record error**: The times in the event log and the time and attendance records do not match the actual time.
+* **記録エラー**：イベントログと勤怠記録の時刻が実際の時刻と一致しません。
 
 :::
 
-## Checklist {#checklist}
+## チェックリスト {#checklist}
 
-To ensure accurate timekeeping in regions that observe Daylight Saving Time (DST), make sure you have completed all three of the following steps.
+夏時間が適用される地域で正確な時刻管理を保証するには、次の3つの手順をすべて完了したことを確認してください。
 
-* **Create DST profiles**: Have you created the DST profiles needed for each time zone?
+* **DSTプロファイルの作成**：タイムゾーンごとに必要なDSTプロファイルを作成しましたか？
 
-* **Site time settings**: Have you set the site's time zone and enabled the <Cmd sid='device_field_dst_usage' product='air' /> option?
+* **サイトの時刻設定**：サイトのタイムゾーンを設定し、 <Cmd sid='device_field_dst_usage' product='air' /> オプションを有効にしましたか？
 
-* **Device DST settings**: Have you set each device's time zone and enabled the <Cmd sid='device_field_dst_usage' product='air' /> option?
+* **デバイスのDST適用**：各デバイスのタイムゾーンを設定し、 <Cmd sid='device_field_dst_usage' product='air' /> オプションを有効にしましたか？
 
-If all three are configured correctly, the event logs, access times, and attendance records will all show the correct time.
+これら3つがすべて正しく設定されていれば、イベントログやアクセス時間、勤怠記録はすべて正しい時刻で表示されます。

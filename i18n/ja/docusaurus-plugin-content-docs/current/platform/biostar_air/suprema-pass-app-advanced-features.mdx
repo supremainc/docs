@@ -1,161 +1,161 @@
 ---
 id: suprema-pass-app-advanced-features
-title: Set Up Advanced Features
-description: This guide explains how to configure Bluetooth and NFC authentication modes, enable two-factor authentication with a PIN or biometric option, review access logs, and use support features in the Suprema Pass app.
+title: 高度な機能の設定
+description: Suprema PassアプリでBluetoothおよびNFC認証モードの構成方法、PINまたは生体認証オプションによる2段階認証の設定方法、アクセスログの確認方法、サポート機能の利用方法を案内します。
 keywords:
-  - Advanced Features
-  - Suprema Pass app
-  - two-factor authentication
-  - access logs
-  - support options
+  - 高度な機能
+  - uprema Passアプリ
+  - 2段階認証
+  - アクセスログ
+  - サポートオプション
 ---
 
-The Suprema Pass app includes advanced settings and security options to enhance the user experience and access control features. Users can configure authentication methods, enable two-factor authentication, review access logs, report issues, and use support features.
+Suprema Passアプリは、ユーザー体験と入退室管理機能を向上させるための高度な設定とセキュリティオプションを含みます。 ユーザーは認証方法の構成、2段階認証の有効化、アクセスログの確認、問題の報告およびサポート機能の利用ができます。
 
-## Configure connection method {#connectingSetting}
+## 接続方式の設定 {#connectingSetting}
 
-Select a preferred connection method to communicate with the access control device. On the Suprema Pass app home screen, tap <IcHamberg title='Hamburger menu' /> in the upper right corner, then select the desired mode in <Cmd>Connection Method</Cmd>.
+ユーザーは入退室管理機器との通信で使用する接続方式を選択できます。 Suprema Passアプリの初期画面で右上の <IcHamberg title='Hamburger menu' /> アイコンをタップし、<Cmd>接続方式</Cmd>から希望のモードを選んでください。
 
 <Image src='/img/air/bsair-sp-app-set-connection-mode.png' width='50%' className='none' />
 
 ### Bluetooth {#bluetooth}
 
-Choose between two Bluetooth authentication modes.
+ユーザーは2つのBluetooth認証モードから選択できます。
 
-* <Cmd>Only while App is on Screen</Cmd>: Authenticate with a mobile card only when the app is open on the mobile device. This mode saves battery but requires manually launching the app before approaching the door.
+* <Cmd>アプリ起動時</Cmd>: モバイル端末でアプリが開いているときのみモバイルカードで認証できます。 このモードはバッテリーを節約しますが、ドアに近づく前に手動でアプリを起動する必要があります。
 
-* <Cmd>Background Mode</Cmd>: Authenticate with a mobile card even if the device screen is off when the app runs in the background. This mode is more convenient but consumes more battery. If the app closes, relaunch it to resume background functions.
+* <Cmd>バックグラウンドモード</Cmd>: アプリがバックグラウンドで実行されている場合、端末の画面がオフでもモバイルカードで認証できます。 このモードはより便利ですが、バッテリーをより消費します。 アプリが終了した場合、バックグラウンド機能を再開するためにアプリを再起動する必要があります。
 
 ### NFC {#nfc}
 
-NFC authentication is available only on Android devices. Use NFC alone or with Bluetooth for faster entry.
+NFC認証はAndroid端末でのみ利用できます。 ユーザーは迅速な入退室のためにNFCを単独で使用するか、Bluetoothと併用できます。
 
 :::info
 
-Android users with an NFC-compatible device can use NFC with Bluetooth.
+NFC対応端末を使用するAndroidユーザーは、Bluetoothと併用してNFCを使用できます。
 
 :::
 
-## Two-factor authentication (2FA) {#twoFactorAuth}
+## 二段階認証(2FA) {#twoFactorAuth}
 
-Enable two-factor authentication with a **PIN, pattern, or biometric authentication** (face or fingerprint) for additional security.
+追加のセキュリティのために、ユーザーは**PIN、パターン、または生体認証**（顔または指紋）を使用して二段階認証を有効にできます。
 
 <Image src='/img/air/bsair-sp-app-set-twofactor.png' className='none' />
 
 :::info
 
-* This feature is not supported in <Cmd>Background Mode</Cmd> connections because the app screen must remain open during access authentication.
+* この機能は入退室認証時にアプリ画面が開いている必要があるため、<Cmd>バックグラウンドモード</Cmd>の接続方式ではサポートされません。
 
-* If the PIN or pattern is forgotten, reinstall the app and reactivate the mobile card.
+* PINまたはパターンを忘れた場合は、アプリを再インストールしてモバイルカードを再有効化する必要があります。
 
-* Supported features may vary depending on the mobile device.
+* 端末によってサポートされる機能は異なる場合があります。
 
 :::
 
-### iOS users {#ios}
+### iOSユーザー {#ios}
 
-1. On the Suprema Pass app home screen, tap <IcHamberg title='Hamburger menu' /> in the upper right corner.
+1. Suprema Passアプリの初期画面で右上の <IcHamberg title='Hamburger menu' /> アイコンをタップしてください。
 
-2. Set the connection method to <Cmd>Only while App is on Screen</Cmd>.
+2. 接続方式を<Cmd>アプリ起動時</Cmd>に設定してください。
 
-3. Tap <Cmd>Two-Factor Authentication</Cmd>.
+3. <Cmd>二段階認証</Cmd>をタップしてください。
 
-4. Tap <Cmd>Register PIN</Cmd>.
+4. <Cmd>PIN番号登録</Cmd>をタップしてください。
 
-5. Enter the six-digit PIN.
+5. 6桁のPIN番号を入力してください。
 
-6. When the success notification appears, tap <Cmd>OK</Cmd>.
+6. 成功の通知メッセージが表示されたら、<Cmd>OK</Cmd>をタップしてください。
 
 :::info
 
-* Tap <Cmd>Change PIN</Cmd>, then enter the new PIN to change the PIN.
+* PIN番号を変更するには、<Cmd>PIN番号変更</Cmd>をタップしてから新しいPIN番号を入力してください。
 
-* Enable <Cmd>Biometric Authentication</Cmd> and follow the setup instructions to use biometrics.
+* 生体認証機能を使用するには、<Cmd>生体認証</Cmd>を有効にして設定の案内に従ってください。
 
 :::
 
-### Android users {#android}
+### Androidユーザー {#android}
 
-1. On the Suprema Pass app home screen, tap <IcHamberg title='Hamburger menu' /> in the upper right corner.
+1. Suprema Passアプリの初期画面で右上の <IcHamberg title='Hamburger menu' /> アイコンをタップしてください。
 
-2. Set the connection method to <Cmd>Only while App is on Screen</Cmd> or <Cmd>NFC</Cmd>.
+2. 接続方式を<Cmd>アプリ起動時</Cmd>または<Cmd>NFC</Cmd>に設定してください。
 
-3. Tap <Cmd>Two-Factor Authentication</Cmd>.
+3. <Cmd>二段階認証</Cmd>をタップしてください。
 
-4. Tap <Cmd>PIN</Cmd> → <Cmd>Register PIN</Cmd> or <Cmd>Pattern</Cmd> → <Cmd>Register Pattern</Cmd>.
+4. <Cmd>PIN番号</Cmd> → <Cmd>PIN番号登録</Cmd> または <Cmd>パターン</Cmd> → <Cmd>パターン登録</Cmd> をタップしてください。
 
-5. Enter the selected PIN or pattern.
+5. 選択したPIN番号またはパターンを入力してください。
 
-6. When the success notification appears, tap <Cmd>OK</Cmd>.
+6. 成功の通知メッセージが表示されたら、<Cmd>OK</Cmd>をタップしてください。
 
 :::info
 
-* Tap <Cmd>Change PIN</Cmd>, then enter the new PIN to change the PIN.
+* PIN番号を変更するには、<Cmd>PIN番号変更</Cmd>をタップしてから新しいPIN番号を入力してください。
 
-* Tap <Cmd>Change Pattern</Cmd>, then enter the new pattern to change the pattern.
+* パターンを変更するには、<Cmd>パターン変更</Cmd>をタップしてから新しいパターンを入力してください。
 
-* Enable <Cmd>Biometric Authentication</Cmd> and follow the setup instructions to use biometrics.
+* 生体認証機能を使用するには、<Cmd>生体認証</Cmd>を有効にして設定の案内に従ってください。
 
 :::
 
-## Access logs {#accesslogs}
+## アクセスログ {#accesslogs}
 
-Use access records to track entry attempts and troubleshoot entry-related issues.
+アクセス記録を通じてユーザーの入退室の試行を追跡し、入退室に関する問題を解決できます。
 
 <Image src='/img/air/bsair-sp-app-set-access-log.png' className='none' />
 
-1. On the Suprema Pass app home screen, tap <IcHamberg title='Hamburger menu' /> in the upper right corner.
+1. Suprema Passアプリの初期画面で右上の <IcHamberg title='Hamburger menu' /> アイコンをタップしてください。
 
-2. Tap <Cmd>Access Logs</Cmd>.
+2. <Cmd>出入記録</Cmd>をタップしてください。
 
-3. Select a site, then set the start and end dates.
+3. サイトを選択し、開始日と終了日を設定してください。
 
-4. Tap <Cmd>Search</Cmd>.
+4. <Cmd>検索</Cmd>ボタンをタップしてください。
 
-## Support center {#supportCenter}
+## サポートセンター {#supportCenter}
 
-Go to <Cmd>Support Center</Cmd> for additional support.
+追加サポートが必要なユーザーは、<Cmd>サポートセンター</Cmd>に入り、支援を受けることができます。
 
 <Image src='/img/air/bsair-sp-app-set-support.png' className='none' />
 
-1. On the Suprema Pass app home screen, tap <IcHamberg title='Hamburger menu' /> in the upper right corner.
+1. Suprema Passアプリの初期画面で右上の <IcHamberg title='Hamburger menu' /> アイコンをタップしてください。
 
-2. Tap <Cmd>More</Cmd>.
+2. <Cmd>その他</Cmd>をタップしてください。
 
-3. Tap <Cmd>Support Center</Cmd>.
+3. <Cmd>サポートセンター</Cmd>をタップしてください。
 
-4. Go to the **Suprema Technical Support** page.
+4. **Suprema Technical Support**ページに移動します。
 
 :::note
 
-* Search questions or review FAQs.
+* 疑問点を検索するか、よくある質問を確認してください。
 
-* If support is needed, tap the chat icon in the lower right corner to submit a ticket to the MOCA Systems team.
+* サポートが必要な場合は、右下のチャットアイコンをタップしてMOCAシステムチームにサポートチケットを送信できます。
 
 :::
 
-## Advanced Settings
+## 高度な設定
 
-Tap <IcHamberg title='Hamburger menu' /> in the upper right corner on the Suprema Pass app home screen, then select <Cmd>More</Cmd> → <Cmd>Advanced Settings</Cmd> to use the following additional features.
+Suprema Passアプリの初期画面で右上の <IcHamberg title='Hamburger menu' /> アイコンをタップし、<Cmd>その他</Cmd> → <Cmd>高度な設定</Cmd>から次の追加機能を利用できます。
 
 <Image src='/img/air/bsair-sp-app-set-advanced.png' className='none' />
 
-* **Location setting**: Select <Cmd>Global</Cmd> or <Cmd>EU</Cmd> server based on your location. Select <Cmd>Auto</Cmd> to have the app detect your location and choose the appropriate server.
+* **位置設定**：ユーザーの位置に応じて <Cmd>グローバル</Cmd> または <Cmd>EU</Cmd> サーバーを選択してください。 <Cmd>自動</Cmd>を選択すると、アプリが位置を検出して適切なサーバーを選択します。
 
-* <Cmd>Bluetooth Authentication</Cmd>: Enable <Cmd>Unwanted door opening prevention</Cmd> to block Bluetooth authentication when the mobile device is stationary.
+* <Cmd>Bluetooth認証</Cmd>：モバイル端末が動いていないときにBluetooth認証が作動しないようにするには、<Cmd>不要なドア開放の防止</Cmd>オプションを有効にしてください。
 
-* <Cmd>Sensitivity Settings</Cmd>: Adjust the Bluetooth sensitivity between the mobile device and the reader compatible with BioStar Air. For more information, see <DocLink docId='platform/biostar_air/suprema-pass-app-sensitivity-settings' />.
+* <Cmd>感度設定</Cmd>：モバイル端末とBioStar Air対応機器間のBluetooth検出感度を調整できます。 詳細については<DocLink docId='platform/biostar_air/suprema-pass-app-sensitivity-settings' />を参照してください。
 
-## Additional features {#additionalFeatures}
+## 追加機能 {#additionalFeatures}
 
-Tap <IcHamberg title='Hamburger menu' /> in the upper right corner on the Suprema Pass app home screen, then select <Cmd>More</Cmd> to use the following additional features.
+Suprema Passアプリの初期画面で右上の <IcHamberg title='Hamburger menu' /> アイコンをタップし、<Cmd>その他</Cmd>から次の追加機能を利用できます。
 
-* <Cmd>Theme</Cmd>: Set the app's color mode. Select <Cmd>Light</Cmd>, <Cmd>Dark</Cmd>, or <Cmd>System</Cmd> mode.
+* <Cmd>テーマ</Cmd>：アプリのカラーモードを設定できます。 <Cmd>ライト</Cmd>、<Cmd>ダーク</Cmd>、<Cmd>システム</Cmd>モードを選択できます。
 
-* <Cmd>Bug Report</Cmd>: Write detailed information, such as the error occurrence context and reproduction steps, to submit the bug report to the developer.
+* <Cmd>バグレポート</Cmd>：エラー発生状況や再現手順などの詳細を記入して開発者にバグレポートを提出できます。
 
-* <Cmd>App Details</Cmd>: Check the model name, OS version, BLE support and status of the mobile device.
+* <Cmd>アプリ詳細</Cmd>：モバイル端末のモデル名、OSバージョン、BLEサポートおよび状態などの関連情報を確認できます。
 
-* <Cmd>App License</Cmd>: View the open-source license information used in the Suprema Pass app.
+* <Cmd>アプリライセンス</Cmd>：Suprema Passアプリに適用されるオープンソースライセンス情報を確認できます。
 
-* <Cmd>Terms & Conditions</Cmd>: View the terms of use for the BioStar Air platform.
+* <Cmd>利用規約</Cmd>：BioStar Airプラットフォームの利用規約を確認できます。

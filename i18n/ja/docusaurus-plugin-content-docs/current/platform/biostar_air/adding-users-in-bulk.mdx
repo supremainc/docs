@@ -1,197 +1,197 @@
 ---
 id: adding-users-in-bulk
-title: Add Users in Bulk
-description: Learn how to efficiently add multiple users at once by uploading a CSV file in BioStar Air Portal, configure bulk access levels, and manage profile images.
+title: ユーザーを一括で追加する
+description: BioStar Air PortalでCSVファイルのアップロードを使用して複数のユーザーを一度に効率よく追加する方法、大量のアクセスレベルを構成する方法、プロファイル画像を管理する方法を説明します。
 keywords:
-  - User Management
+  - ユーザー管理
   - BioStar Air
-  - bulk users
+  - 一括ユーザー
 ---
 
-If you need to add multiple users at once, use BioStar Air's bulk user import feature. Upload a CSV file to register tens or hundreds of employees in just minutes. You can also bulk-upload profile images while entering user information. This document provides step-by-step instructions for downloading the CSV template, preparing the file, uploading it, managing profile images, and verifying user information after upload.
+ユーザーをまとめて追加する必要がある場合は、BioStar Airの一括ユーザー追加機能をご利用ください。 CSVファイルをアップロードすることで、数十〜数百人分の従業員情報を数分でシステムに登録できます。 ユーザー情報を入力すると同時に、プロフィール画像を一括でアップロードすることもできます。 本ドキュメントでは、CSVテンプレートのダウンロード、ファイルの準備、アップロード、プロフィール画像の管理、およびアップロード後のユーザー情報の検証方法を手順に沿って案内します。
 
 :::tip
 
-Refer to the following video for a step-by-step guide to adding multiple users in bulk.
+複数のユーザーを一括追加する全工程を段階的に説明する次のビデオを参照してください。
 
 <YouTube className='fit--content' videoId="gOi2nP0Ag5o" />
 
 :::
 
-## Download the CSV template {#downloadCSVTemplate}
+## CSVテンプレートをダウンロード {#downloadCSVTemplate}
 
-Follow these steps to download the CSV template file.
+次の手順に従ってCSVテンプレートファイルをダウンロードしてください。
 
-1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' /> をクリックします。
 
-2. Click <Cmd sid="add_user_btn" product="air" /> → <Cmd sid="user_actions_import_title" product="air" /> at the top right of the screen.
+2. 画面右上の <Cmd sid='add_user_btn' product='air' /> → <Cmd sid='user_actions_import_title' product='air' /> をクリックします。
 
    <Image src='/img/air/bsair-add-bulk-import-user.png' />
 
-3. When the <Cmd sid="user_actions_import_title" product="air" /> panel appears, click <Cmd sid="user_actions_import_download_btn_text" product="air" />.
+3. <Cmd sid='user_actions_import_title' product='air' /> パネルが表示されたら、<Cmd sid='user_actions_import_download_btn_text' product='air' /> ボタンをクリックします。
 
    <Image src='/img/air/bsair-add-bulk-import-user-download-csv-template.png' />
 
-4. Save the CSV template file (*biostar-import-user-csv-example.csv*) locally.
+4. CSVテンプレートファイル(*biostar-import-user-csv-example.csv*)をローカルに保存します。
 
-## Prepare the CSV file {#preparing-the-csv-file}
+## CSVファイルの準備 {#preparing-the-csv-file}
 
-Download the CSV template and enter the required details for each user. 
+CSVテンプレートをダウンロードし、各ユーザーの必須情報を入力してください。 
 
-### Key input fields {#keyInputFields}
+### 主要入力フィールド {#keyInputFields}
 
-The key fields to enter are as follows.
+入力する主なフィールドは以下の通りです。
 
-* <Cmd sid="user_csv_example_header11" product="air" className="bold" />: Check the group ID in <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" />.
+* <Cmd sid='user_csv_example_header11' product='air' className='bold' />：<Cmd sid='user_menu' product='air' /> → <Cmd sid='user_groups_submenu' product='air' />でグループIDを確認できます。
 
   <Image src='/img/air/bsair-user-group-list-check-ids.png' />
 
-* <Cmd sid="user_csv_example_header12" product="air" className="bold" />: Check the access level ID in <Cmd sid="access_menu" product="air" /> → <Cmd sid="access_levels_submenu" product="air" />. <Cmd sid="full_access" product="air" className="bold" /> is always set to **1**. Use commas (`,`) as separators to specify multiple access levels.
+* <Cmd sid='user_csv_example_header12' product='air' className='bold' />：<Cmd sid='access_menu' product='air' /> → <Cmd sid='access_levels_submenu' product='air' />でアクセスレベルIDを確認できます。 <Cmd sid='full_access' product='air' className='bold' />は常に**1**に設定されます。 複数のアクセスレベルを指定する際はカンマ（`,`）を区切りとして使用できます。
 
   <Image src='/img/air/bsair-ac-level-list-check-ids.png' />
 
-* <Cmd sid="user_csv_example_header7" product="air" className="bold" />: Enter this if you plan to send invitations by email.
+* <Cmd sid='user_csv_example_header7' product='air' className='bold' />：メールで招待状を送信する場合は必須です。
 
-* <Cmd sid="user_csv_example_header8" product="air" className="bold" />: Enter this if you plan to send invitations by mobile SMS.
+* <Cmd sid='user_csv_example_header8' product='air' className='bold' />：モバイルSMSで招待状を送信する場合は必須です。
 
 :::caution
 
-<Cmd sid="user_csv_example_header7" product="air" className="bold" /> and <Cmd sid="user_csv_example_header8" product="air" className="bold" /> must not be duplicated. Uploading a CSV file with duplicate values may cause errors.
+<Cmd sid='user_csv_example_header7' product='air' className='bold' />と<Cmd sid='user_csv_example_header8' product='air' className='bold' />は重複してはいけません。 重複する値を入力してCSVファイルをアップロードするとエラーが発生する可能性があります。
 
 :::
 
-### Support for custom Wiegand formats
+### カスタムWiegand形式のサポート
 
-You can freely configure any Wiegand format, including facility codes, segments, parity bits, and more.
+ファシリティコード、セグメント、パリティビットなどの情報を含むあらゆるWiegand形式を自由に構成できます。
 
-* HID Corporate 1000 and iCLASS SE and Seos formats are supported.
+* HID Corporate 1000およびiClass SE、SEOS形式をサポートします。
 
-* **CSV template**
+* **CSVテンプレート**
 
-  * Each defined format (custom or default) appears as a separate column in the CSV file.
+  * 各定義された形式（カスタムまたはデフォルト）はCSVファイル内で別々の列として表示されます。
 
-    > <Cmd sid="rf_card_data_format_option_1" product="air" className="bold" />, <Cmd sid="rf_card_data_format_option_2" product="air" className="bold" />, <Cmd sid="rf_card_data_format_option_3" product="air" className="bold" />, <Cmd sid="rf_card_data_format_option_4" product="air" className="bold" />, <Cmd sid="rf_card_data_format_option_5" product="air" className="bold" />
+    > <Cmd sid='rf_card_data_format_option_1' product='air' className='bold' />、<Cmd sid='rf_card_data_format_option_2' product='air' className='bold' />、<Cmd sid='rf_card_data_format_option_3' product='air' className='bold' />、<Cmd sid='rf_card_data_format_option_4' product='air' className='bold' />、<Cmd sid='rf_card_data_format_option_5' product='air' className='bold' />
 
-  * Separate multiple entries in a single field with a slash (`/`).
+  * 複数の項目を単一フィールドに入力する場合はスラッシュ（`/`）で区切ってください。
 
-  * Use single quotes (`'`) around the card name. Avoid using double quotes (`"`); they may cause errors.
+  * カード名は小さい引用符（`'`）で囲むことができます。 ダブルクォート（`'`）を使用するとエラーが発生する可能性があります。
 
-    > ✅ 'CardName' | ❌ "CardName"
+    > ✅ 'CardName' | ❌ 'CardName'
 
    :::note
 
-   **Example**
+   **例**
 
-  * With a facility code: *1234567-100-'Main Office Card'* (`CardID`-`FacilityCode`-`'CardName'`)
+  * ファシリティコードがある場合：*1234567-100-'Main Office Card'*（`CardID`-`FacilityCode`-`'CardName'`）
 
-  * With multiple segments: *12-3456-78-'Lab Entry Card'*
+  * 複数のセグメントがある場合：*12-3456-78-'Lab Entry Card'*
 
    :::
 
-### Support for multiple cards
+### 複数カードのサポート
 
-* Assign up to eight CSN or Wiegand card formats per user.
+* ユーザーごとに最大8つのCSNまたはWiegandカード形式を割り当てることができます。
 
-* **CSV template**
+* **CSVテンプレート**
 
-  * For a single card, enter the CSN card number.
+  * 単一カードの場合はCSNカード番号を入力します。
 
-  * Separate CSN card numbers with a slash (`/`) when enrolling multiple cards.
+  * 複数のカードを登録する場合はCSNカード番号をスラッシュ（`/`）で区切ってください。
 
 :::note
 
-**Card naming format**: `CSN`-`'Card Name'`
+**カード名の指定形式**: `CSN`-`'Card Name'`
 
-Example: *1234567-'Main Entry'* / *7654321-'Back Door'*
+例：*1234567-'Main Entry'* / *7654321-'Back Door'*
 
 :::
 
-## Upload the CSV file {#uploading-the-csv-file}
+## CSVファイルのアップロード {#uploading-the-csv-file}
 
-After preparing the CSV file, upload it.
+CSVファイルの準備が完了したらアップロードしてください。
 
-1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' /> をクリックします。
 
-2. Click <Cmd sid="add_user_btn" product="air" /> → <Cmd sid="user_actions_import_title" product="air" /> at the top right of the screen.
+2. 画面右上の <Cmd sid='add_user_btn' product='air' /> → <Cmd sid='user_actions_import_title' product='air' /> をクリックします。
 
    <Image src='/img/air/bsair-add-bulk-import-user.png' />
 
-3. When the <Cmd sid="user_actions_import_title" product="air" /> panel appears, click <Cmd sid="face_register_upload_csv_text_select_file" product="air" />.
+3. <Cmd sid='user_actions_import_title' product='air' />パネルが表示されたら、<Cmd sid='face_register_upload_csv_text_select_file' product='air' />ボタンをクリックします。
 
    <Image src='/img/air/bsair-add-bulk-import-user-select-csv.png' />
 
-4. Select the CSV file you prepared.
+4. 事前に準備したCSVファイルを選択してください。
 
    :::note
 
-   If the users' profile images are ready, enable the <Cmd sid="face_register_upload_face_photo" product="air" /> option. For more information, see <DocLink inner='#uploadProfileImages' />.
+   ユーザーのプロファイル画像が用意されている場合は、<Cmd sid='face_register_upload_face_photo' product='air' />オプションを有効にします。 詳細については<DocLink inner='#uploadProfileImages' />を参照してください。
 
    :::
 
-5. Click <Cmd sid='new_popup_import_users_btn_next' product='air' /> at the bottom right of the screen.
+5. 画面右下の <Cmd sid='new_popup_import_users_btn_next' product='air' /> ボタンをクリックしてください。
 
-6. In the <Cmd sid="user_actions_import_data_preview" product="air" /> section, review the accuracy of the data in the first column.
+6. <Cmd sid='user_actions_import_data_preview' product='air' />セクションで最初の列のデータの正確性を確認してください。
 
    <Image src='/img/air/bsair-add-bulk-import-user-csv-data-preview.png' />
 
-7. If there are no issues, click <Cmd sid="user_actions_import_btn" product="air" /> in the bottom right corner.
+7. データに問題がなければ、右下の <Cmd sid='user_actions_import_btn' product='air' /> ボタンをクリックしてください。
 
-After the upload completes, you can import user images or issue mobile cards in bulk on the next screen. Select the desired action.
+アップロードが完了すると、次の画面でユーザーの画像を読み込むか、モバイルカードを一括発行できます。 希望する操作を選択してください。
 
 <Image src='/img/air/bsair-add-bulk-import-user-csv-complete.png' />
 
 :::info
 
-* Do not use special characters other than commas (`,`) in the CSV file name.
+* CSVファイル名にはカンマ（`,`）を除く特殊文字は使用できません。
 
-* The maximum CSV file size is **5MB**.
+* アップロード可能なCSVファイルの最大サイズは**5MB**です。
 
-* Alternatively, drag and drop the CSV file into the <Cmd sid="user_actions_import_upload_text" product="air" /> field of the <Cmd sid="user_actions_import_title" product="air" /> panel.
+* <Cmd sid='user_actions_import_title' product='air' />パネルの<Cmd sid='user_actions_import_upload_text' product='air' />フィールドにCSVファイルをドラッグアンドドロップしてアップロードすることもできます。
 
 :::
 
-### CSV File Validation
+### CSVファイルの検証
 
-The CSV upload process now provides **row-level error feedback**, making troubleshooting easier. If errors occur during upload, a detailed report is provided for review. Click <Cmd sid="user_actions_import_download_btn_text" product="air" /> to download the report.
+CSVアップロードプロセスが改善され、**行ごとのエラーのフィードバック**を提供するため、問題の解決が容易になりました。 アップロード中にエラーが発生した場合、エラー内容を確認できる詳細レポートを提供します。 レポートをダウンロードするには、<Cmd sid='user_actions_import_download_btn_text' product='air' />ボタンをクリックしてください。
 
 <Image src='/img/air/bsair-add-bulk-import-user-csv-error.png' />
 
-## Upload user profile images {#uploadProfileImages}
+## ユーザープロファイル画像のアップロード {#uploadProfileImages}
 
-Profile images can be uploaded automatically with the CSV file or manually in bulk later.
+プロファイル画像はCSVファイルと一緒に自動でアップロードするか、後で手動で一括アップロードできます。
 
 <Image src='/img/air/bsair-add-bulk-import-user-with-face-photo.png' />
 
-1. Prepare profile image files that match the <Cmd sid="user_csv_example_header1" product="air" className="bold" /> column in the CSV file.
+1. CSVファイルの<Cmd sid='user_csv_example_header1' product='air' className='bold' />列と一致するプロファイル画像ファイルを用意してください。
 
-   For example, the *601.jpg* file corresponds to user ID **601**.
+   例えば、*601.jpg*ファイルはユーザーID**601**に対応します。
 
-2. After uploading the CSV file in the <Cmd sid="user_actions_import_title" product="air" /> panel, enable the <Cmd sid="face_register_upload_face_photo" product="air" /> option.
+2. <Cmd sid='user_actions_import_title' product='air' />パネルでCSVファイルをアップロードした後、<Cmd sid='face_register_upload_face_photo' product='air' />オプションを有効にしてください。
 
-3. Click <Cmd sid="face_register_upload_face_photo_select_folder" product="air" />, then select the folder that contains the profile images.
+3. <Cmd sid='face_register_upload_face_photo_select_folder' product='air' />ボタンをクリックしてから、プロファイル画像が保存されているフォルダを選択してください。
 
 :::note
 
-**File format requirements**
+**ファイル形式の要件**
 
-* Supported formats: *.jpg*, *.jpeg*, *.png*
+* 対応形式: *.jpg*, *.jpeg*, *.png*
 
-* File size limit: **1 MB** per image
+* ファイルサイズ制限: 画像ごとに **1MB**
 
 :::
 
 :::tip
 
-If profile images were not ready when the CSV file was uploaded, use <Cmd sid="image_upload_action" product="air" />(<IcAirUpface />) in the user list to add them later.
+プロファイル画像がCSVファイルアップロード時に用意されていない場合は、ユーザーリストの<Cmd sid='image_upload_action' product='air' />(<IcAirUpface />)機能を使って後で追加できます。
 
 <Image src='/img/air/bsair-add-bulk-import-user-profile-images.png' />
 
 :::
 
-## Finalize the bulk upload {#finalizing-the-bulk-upload}
+## 一括アップロードの完了 {#finalizing-the-bulk-upload}
 
-After all user data and images are uploaded, the system processes the entries, and the new users appear in the list with their assigned credentials.
+すべてのユーザーデータと画像をアップロードすると、システムが項目を処理し、新しいユーザーが割り当てられたクレデンシャルとともにユーザーリストに表示されます。
 
-## Troubleshooting
+## トラブルシューティング
 
-If you encounter issues with CSV upload, see <DocLink docId='platform/biostar_air/troubleshooting-adding-users-in-bulk' /> for help troubleshooting common problems. The document also includes Excel formulas that help validate data and remove duplicates.
+CSVアップロードに関して問題が発生した場合は、一般的な問題の解決に役立つ<DocLink docId='platform/biostar_air/troubleshooting-adding-users-in-bulk' />を確認してください。 このドキュメントには、データの検証と重複の除去に役立つExcelの式も含まれています。

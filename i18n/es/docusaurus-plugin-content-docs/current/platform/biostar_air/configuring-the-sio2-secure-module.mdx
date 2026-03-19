@@ -1,100 +1,100 @@
 ---
 id: configuring-the-sio2-secure-module
-title: Configure SIO2 Secure Module
-description: This guide explains how to configure the SIO2 secure module to enhance access control system security.
+title: Configurar el módulo seguro SIO2
+description: Esta guía explica cómo configurar el módulo seguro SIO2 para mejorar la seguridad del sistema de control de acceso.
 keywords:
   - SIO2
-  - secure module
-  - configuration
+  - módulo seguro
+  - configuración
 ---
 
-**SIO2 secure module** enhances access control system security by acting as an intermediary between the reader compatible with BioStar Air and relays. It communicates with the reader over an **RS485 cable** and blocks security breaches through encrypted communication.
+**El módulo seguro SIO2** mejora la seguridad del sistema de control de acceso al actuar como intermediario entre el lector compatible con BioStar Air y los relés. Se comunica con el lector mediante un **cable RS485** y evita brechas de seguridad a través de comunicación cifrada.
 
 :::caution
 
-Refer to the wiring diagram included in the product package for precise installation instructions for the **SIO2 secure module**. Because installation methods may vary by environment, request professional assistance from a Suprema distributor.
+Consulte el diagrama de cableado incluido en el paquete del producto para obtener instrucciones precisas de instalación del **módulo seguro SIO2**. Dado que los métodos de instalación pueden variar según el entorno, solicite asistencia profesional a un distribuidor de Suprema.
 
 :::
 
-## Enable SIO2 in the BioStar Air portal {#how-to-activate-sio2-in-the-biostar-air-portal}
+## Habilitar SIO2 en el portal BioStar Air {#how-to-activate-sio2-in-the-biostar-air-portal}
 
-Enable the <Cmd sid="add_doors.sio2" product="air" /> option by following these steps to properly integrate the SIO2 secure module and enhance access control system security.
+Habilite la opción <Cmd sid="add_doors.sio2" product="air" /> siguiendo estos pasos para integrar correctamente el módulo seguro SIO2 y mejorar la seguridad del sistema de control de acceso.
 
 :::info
 
-If SIO2 is installed but the settings are not changed in the BioStar Air portal, it may not operate.
+Si SIO2 está instalado pero no se modifican los ajustes en el portal BioStar Air, podría no funcionar.
 
 :::
 
 <Steps>
 <Step>
 
-### Register the reader {#register-the-reader}
+### Registrar el lector {#register-the-reader}
 
-* Verify that the reader, SIO2, and door relay are connected successfully.
+* Verifique que el lector, el SIO2 y el relé de la puerta estén conectados correctamente.
 
-* Register the reader to the site through the **BioStar Air app**.
-
-</Step>
-<Step>
-
-### Check the device connection {#check-device-connection}
-
-1. Access the [BioStar Air portal](https://admin.biostarair.com/).
-
-2. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
-
-3. In the device list, verify that the device appears in **green** (<StatusOK />) to confirm the connection.
+* Registre el lector en el sitio a través de la **aplicación BioStar Air**.
 
 </Step>
 <Step>
 
-### Assign SIO2 to a door {#assign-sio2-to-a-door}
+### Verificar la conexión del dispositivo {#check-device-connection}
 
-1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar.
+1. Acceda al [portal BioStar Air](https://admin.biostarair.com/).
 
-2. Click the door linked to the device in the list. Registering the device automatically creates a door.
+2. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
+
+3. En la lista de dispositivos, verifique que el dispositivo aparezca en **verde** (<StatusOK />) para confirmar la conexión.
 
 </Step>
 <Step>
 
-### Enable SIO2 {#enable-sio2}
+### Asignar SIO2 a una puerta {#assign-sio2-to-a-door}
 
-1. When the <Cmd sid="edit_door.title" product="air" /> panel appears, go to <Cmd>Auxiliary Device</Cmd>.
+1. Haga clic en <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Enable the <Cmd sid="add_doors.sio2" product="air" /> option.
+2. Haga clic en la puerta vinculada al dispositivo en la lista. Al registrar el dispositivo, se crea automáticamente una puerta.
+
+</Step>
+<Step>
+
+### Habilitar SIO2 {#enable-sio2}
+
+1. Cuando aparezca el panel <Cmd sid="edit_door.title" product="air" />, vaya a <Cmd>Dispositivo auxiliar</Cmd>.
+
+2. Habilite la opción <Cmd sid="add_doors.sio2" product="air" />.
 
 <Image src='/img/air/bsair-door-mng-edit-door-sio2-enable.png' />
 
 </Step>
 <Step>
 
-### Configure relay and sensors {#configure-relay-and-sensors}
+### Configurar relé y sensores {#configure-relay-and-sensors}
 
 <Image src='/img/air/bsair-door-mng-edit-door-sio2-settings.png' caption />
 
-* For <Cmd sid="add_doors.door_relay" product="air" />, select **Relay 0**.
+* Para <Cmd sid="add_doors.door_relay" product="air" />, seleccione **Relay 0**.
 
    :::note
 
-   The SIO2 module has only one door relay port.
+   El módulo SIO2 solo tiene un puerto de relé de puerta.
 
    :::
 
-* For <Cmd sid="device_editable_fields_door_sensor" product="air" />, select the input port number of the connected SIO2.
+* Para <Cmd sid="device_editable_fields_door_sensor" product="air" />, seleccione el número de puerto de entrada del SIO2 conectado.
 
-* If <Cmd sid="device_editable_fields_exit_btn" product="air" /> is connected, select the corresponding input port on the SIO2.
+* Si <Cmd sid="device_editable_fields_exit_btn" product="air" /> está conectado, seleccione el puerto de entrada correspondiente en el SIO2.
 
-* If another type of exit device is used, select <Cmd sid="door_product_column3" product="air" />.
+* Si se utiliza otro tipo de dispositivo de salida, seleccione <Cmd sid="door_product_column3" product="air" />.
 
 </Step>
 <Step>
 
-### Save the settings {#save-the-settings}
+### Guardar la configuración {#save-the-settings}
 
-* Click <Cmd sid="save_btn" product="air" /> to apply the settings.
+* Haga clic en <Cmd sid="save_btn" product="air" /> para aplicar la configuración.
 
-* The SIO2 secure module now operates normally.
+* El módulo seguro SIO2 ahora funciona con normalidad.
 
 </Step>
 </Steps>

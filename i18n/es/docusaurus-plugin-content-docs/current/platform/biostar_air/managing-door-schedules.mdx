@@ -1,86 +1,147 @@
 ---
 id: managing-door-schedules
-title: Manage Door Schedules
-description: Set automatic door locking by time of day, configure unlock times, and manage authentication-based access control options. Schedules ensure safe and controlled access.
+title: Administrar horarios de las puertas
+description: Configure el cierre automático de las puertas según la hora del día, establezca horarios de desbloqueo y administre las opciones de control de acceso basadas en autenticación. Los horarios garantizan un acceso seguro y controlado.
 keywords:
-  - door schedule
+  - horario de la puerta
   - BioStar Air
 ---
 
-You can set door schedules to automatically lock and unlock doors based on time periods. Configure lock and unlock times, and utilize advanced options such as **open after first authentication** to set up secure and controlled access.
+Puede configurar horarios para que las puertas se bloqueen y se desbloqueen automáticamente según períodos de tiempo. Configure los horarios de bloqueo y desbloqueo y utilice opciones avanzadas como **abrir después de la primera autenticación** para mantener un acceso seguro y controlado.
 
 :::info
 
-* Schedules apply only to doors and devices that are connected to the internet.
+* Los horarios solo se aplican a puertas y dispositivos que estén conectados a Internet.
 
-* Holiday groups ignore unlock schedules unless they are configured separately.
+* Los grupos de días festivos ignoran los horarios de desbloqueo a menos que se configuren por separado.
 
-* Keep at least one administrator with unrestricted access for emergencies.
+* Mantenga al menos un administrador con acceso sin restricciones para emergencias.
 
 :::
 
-## Configure unlock schedules {#configuringUnlockSchedules}
+## Cuándo necesita horarios
 
-An unlock schedule is the period when a door remains open without authentication. Configure an unlock schedule as instructed below.
+**Los horarios de las puertas son opcionales**. La mayoría de los sitios funcionan correctamente con el control de acceso básico. Cuando un usuario autorizado presenta una credencial válida, la puerta se desbloquea automáticamente; no es necesaria ninguna configuración adicional de horarios.
 
-1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar.
+Configure los horarios únicamente en las siguientes situaciones:
 
-2. In the list, click the checkbox for the door to configure its unlock schedule.
+* Cuando necesite permitir acceso sin restricciones durante períodos específicos
 
-3. Click <IcAirSchedule title='Schedule Settings' /> at the top of the door list.
+* Cuando necesite bloquear el acceso a todos los usuarios durante períodos específicos
 
-4. When the <Cmd sid="lock_unlock_title" product="air" /> window appears, select a predefined schedule or create a new one in the <Cmd sid="unlock" product="air" /> tab.
+* Cuando necesite aplicar diferentes políticas de acceso en distintos horarios
+
+Para evitar confusiones entre <Cmd sid='unlock_schedule' product='air' className='bold' /> y <Cmd sid='lock_schedule' product='air' className='bold' /> en BioStar Air, comprenda cómo funciona cada uno y cuándo utilizarlo.
+
+### <Cmd sid='unlock_schedule' product='air' className='bold' /> vs <Cmd sid='lock_schedule' product='air' className='bold' />
+
+<div className='table-fixed'>
+
+| Función | Horario de desbloqueo | Horario de bloqueo |
+| --- | --- | --- |
+| **Estado de la puerta durante el horario** | Siempre desbloqueada | Siempre bloqueada |
+| **Autenticación requerida** | No requerida; cualquiera puede acceder libremente | Las credenciales no pueden desbloquear la puerta |
+| **Desbloqueo manual** | Posible | Solo el administrador del sitio puede desbloquearla |
+| **Operación del relé** | Activado de forma continua | No se activa |
+
+</div>
+
+:::info
+
+El término 'Administrador del sitio' se refiere a los administradores designados en el portal BioStar Air Admin o en la aplicación móvil.
+
+:::
+
+## Horario de desbloqueo
+
+Durante el período programado, la puerta permanece desbloqueada y el relé permanece activado de forma continua. No se requiere autenticación; cualquiera puede entrar libremente durante este tiempo.
+
+### Casos de uso típicos
+
+* Puertas principales en áreas públicas
+
+* Áreas comunes en comunidades residenciales
+
+* Puertas del vestíbulo de oficinas durante el horario laboral
+
+### Configurar horarios de desbloqueo {#configuringUnlockSchedules}
+
+Un horario de desbloqueo es el período durante el cual una puerta permanece abierta sin autenticación. Configure un horario de desbloqueo como se indica a continuación.
+
+1. Haga clic en <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> en la barra lateral izquierda.
+
+2. En la lista, marque la casilla de la puerta cuya programación de desbloqueo desea configurar.
+
+3. Haga clic en <IcAirSchedule title='Schedule Settings' /> en la parte superior de la lista de puertas.
+
+4. Cuando aparezca la ventana <Cmd sid="lock_unlock_title" product="air" />, seleccione un horario predefinido o cree uno nuevo en la pestaña <Cmd sid="unlock" product="air" />.
 
    <Image src='/img/air/bsair-door-mng-schedule-setting-unlock.png' />
 
-5. Click <Cmd sid="btn_ok" product="air" /> to apply the unlock schedule.
+5. Haga clic en <Cmd sid="btn_ok" product="air" /> para aplicar el horario de desbloqueo.
 
 :::info
 
-* When <Cmd sid="unlock_after_first_auth" product="air" /> is enabled, the door stays unlocked according to the selected schedule after the first user authenticates. This option is useful for offices and retail stores where the door must remain locked until the first employee arrives.
+* Cuando <Cmd sid="unlock_after_first_auth" product="air" /> esté habilitado, la puerta permanecerá desbloqueada según el horario seleccionado después de que el primer usuario se autentique. Esta opción es útil en oficinas y comercios donde la puerta debe permanecer bloqueada hasta que llegue el primer empleado.
 
-* For more information on registering schedules, refer to <DocLink inner='#registeringNewSchedules' />.
+  * Tiendas que solo abren después de la llegada del personal
+
+  * Oficinas donde el primer empleado en llegar desbloquea el edificio para los demás
+
+  * Instalaciones que requieren que el personal inicie el acceso antes de que los miembros puedan entrar
+
+* Para obtener más información sobre cómo registrar horarios, consulte <DocLink inner='#registeringNewSchedules' />.
 
 :::
 
-## Configure lock schedules {#configuring-lock-schedules}
+## Horario de bloqueo
 
-A lock schedule sets the period during which the door remains locked and cannot be accessed even with valid credentials. Configure a lock schedule as instructed below.
+Durante el período programado, la puerta permanece bloqueada y el relé no se activa. Incluso si se presenta una credencial válida, la puerta no puede desbloquearse mediante autenticación. Solo un administrador del sitio puede desbloquearla manualmente desde el portal BioStar Air Admin o la aplicación móvil.
 
-1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar.
+### Casos de uso típicos
 
-2. In the list, click the checkbox for the door to configure its lock schedule.
+* Áreas que deben permanecer estrictamente cerradas después de ciertas horas
 
-3. Click <IcAirSchedule title='Schedule Settings' /> at the top of the door list.
+* Instalaciones como piscinas, gimnasios u otras áreas restringidas
 
-4. When the <Cmd sid="lock_unlock_title" product="air" /> window appears, select a predefined schedule or create a new one in the <Cmd sid="lock" product="air" /> tab.
+### Configurar horarios de bloqueo {#configuring-lock-schedules}
+
+Un horario de bloqueo define el período durante el cual la puerta permanece bloqueada y no puede abrirse incluso con credenciales válidas. Configure un horario de bloqueo como se indica a continuación.
+
+1. Haga clic en <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> en la barra lateral izquierda.
+
+2. En la lista, marque la casilla de la puerta cuya programación de bloqueo desea configurar.
+
+3. Haga clic en <IcAirSchedule title='Schedule Settings' /> en la parte superior de la lista de puertas.
+
+4. Cuando aparezca la ventana <Cmd sid="lock_unlock_title" product="air" />, seleccione un horario predefinido o cree uno nuevo en la pestaña <Cmd sid="lock" product="air" />.
 
    <Image src='/img/air/bsair-door-mng-schedule-setting-lock.png' />
 
-5. Click <Cmd sid="btn_ok" product="air" /> to apply the lock schedule.
+5. Haga clic en <Cmd sid="btn_ok" product="air" /> para aplicar el horario de bloqueo.
 
 :::info
 
-* Because a lock schedule overrides standard access rights, users cannot set the door to unlocked during the lock period.
+* Debido a que un horario de bloqueo anula los derechos de acceso estándar, los usuarios no pueden dejar la puerta desbloqueada durante el período de bloqueo.
 
-* For more information on registering new schedules, refer to <DocLink inner='#registeringNewSchedules' />.
+* Para obtener más información sobre cómo registrar nuevos horarios, consulte <DocLink inner='#registeringNewSchedules' />.
 
 :::
 
-## Register a new schedule {#registeringNewSchedules}
+## Registrar un nuevo horario {#registeringNewSchedules}
 
-Follow the steps below to register a new schedule.
+Siga los pasos a continuación para registrar un nuevo horario.
 
-1. In the <Cmd sid="lock_unlock_title" product="air" /> window, click <Cmd sid="lock_unlock_create_schedules" product="air" />.
+1. En la ventana <Cmd sid="lock_unlock_title" product="air" />, haga clic en <Cmd sid="lock_unlock_create_schedules" product="air" />.
 
    <Image src='/img/air/bsair-door-mng-schedule-setting-add-schedule.png' />
 
-2. On the Add Schedule screen, enter <Cmd sid="schedule_name" product="air" /> and <Cmd sid="schedule_description" product="air" /> (optional).
+2. En la pantalla Agregar horario, ingrese <Cmd sid="schedule_name" product="air" /> y <Cmd sid="schedule_description" product="air" /> (opcional).
 
    <Image src='/img/air/bsair-door-mng-schedule-add.png' />
 
-3. In the <Cmd sid="schedule_section_title_time_intervals" product="air" /> section, select the days and times when the door should be open without authentication, then click <Cmd sid="add_btn" product="air" />.
+3. En la sección <Cmd sid="schedule_section_title_time_intervals" product="air" />, seleccione los días y los horarios en los que la puerta debe permanecer abierta sin autenticación y, a continuación, haga clic en <Cmd sid="add_btn" product="air" />.
 
-4. Click <Cmd sid="save_btn" product="air" /> to save the schedule.
+4. Haga clic en <Cmd sid="save_btn" product="air" /> para guardar el horario.
 
-After registering a new schedule, return to <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' /> and configure the door schedule.
+Después de registrar un nuevo horario, vuelva a <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' /> y configure el horario de la puerta.

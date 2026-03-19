@@ -1,87 +1,87 @@
 ---
 id: managing-roll-call-fire-muster
-title: Roll Call
-description: Learn how to set muster zones, start roll calls, track user safety status, and generate roll call history reports in BioStar Air.
+title: ロールコール
+description: BioStar Airで集結地点の設定、ロールコールの開始、ユーザーの安全状態の追跡、ロールコール履歴レポートの作成方法を案内します。
 keywords:
-  - Roll Call
-  - Roll Call
-  - Fire Alarm Zone
+  - ロールコール
+  - ロールコール
+  - 火災集結地点
   - BioStar Air
 ---
 
-With BioStar Air's roll call and fire evacuation guidance features, organizations can track which employees have safely evacuated the building during an emergency. By setting muster zones and using the BioStar Air mobile app, administrators can quickly account for all users and generate roll call history reports.
+BioStar Airのロールコールおよび火災避難案内機能により、緊急時にどの従業員が安全に建物から避難したかを追跡できます。 集結地点を設定し、BioStar Airのモバイルアプリを使用すると、管理者はすべてのユーザーを迅速に把握し、ロールコール履歴レポートを作成できます。
 
 :::info
 
-* **Ensure that muster zones are correctly assigned to user groups** to avoid confusion.
+* 混乱を避けるため、ユーザーグループに集結地点が正しく割り当てられていることを確認してください。
 
-* **Regularly test** the roll call feature to ensure smooth operation during a real emergency.
+* 実際の緊急時に備え、ロールコール機能を定期的にテストしてください。
 
-* Use **access events** to verify attendance for safety compliance.
+* 出入記録により、出席を確認できます。
 
 :::
 
 :::tip
 
-Watch the following video for a roll call and muster zone guide.
+ロールコールと集結地点に関する動画ガイドを視聴するには、次の動画を参照してください。
 
 <YouTube className='fit--content' videoId="F0dnR7VmfAo" />
 
 :::
 
-## Set muster zones {#settingMusterPoints}
+## 集結地点の設定 {#settingMusterPoints}
 
-A muster zone is a designated location where users authenticate their credentials to indicate they are safe during an emergency.
+集結地点は、ユーザーが緊急時に自身の安全を示すためにクレデンシャルを認証できる指定場所です。
 
-1. Click <Cmd sid="advanced_menu" product="air" /> → <Cmd sid="roll_call_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='advanced_menu' product='air' /> → <Cmd sid='roll_call_submenu' product='air' /> をクリックします。
 
-2. Click <Cmd sid="add_muster_point_btn" product="air" /> at the top right of the screen.
+2. 画面右上の <Cmd sid='add_muster_point_btn' product='air' /> をクリックします。
 
    <Image src='/img/air/bsair-adv-rollcall.png' />
 
-3. Enter a name and an optional description when the <Cmd sid="add_muster_point_title" product="air" /> panel appears.
+3. <Cmd sid='add_muster_point_title' product='air' /> パネルが表示されたら、名前と説明（任意）を入力します。
 
    <Image src='/img/air/bsair-adv-rollcall-add.png' />
 
-4. In the <Cmd sid="add_muster_point_devices_title" product="air" /> section, add the device group or device to assign to the muster zone. Select the checkbox for the device group or device, and click <Cmd sid="add_btn" product="air" />.
+4. <Cmd sid='add_muster_point_devices_title' product='air' /> セクションで、集結地点に割り当てるデバイスグループまたはデバイスを追加します。 デバイスグループまたはデバイスのチェックボックスをクリックし、<Cmd sid='add_btn' product='air' /> をクリックします。
 
    <Image src='/img/air/bsair-adv-rollcall-add-device-group.png' />
 
-5. In the <Cmd sid="add_muster_point_user_groups_title" product="air" /> section, select the user groups that must report when they arrive at the muster zone. Select the checkbox for the user group, and click <Cmd sid="add_btn" product="air" />.
+5. <Cmd sid='add_muster_point_user_groups_title' product='air' /> セクションで、集結地点に到着した際に報告すべきユーザーグループを選択します。 ユーザーグループのチェックボックスをクリックし、<Cmd sid='add_btn' product='air' /> をクリックします。
 
    <Image src='/img/air/bsair-adv-rollcall-add-user-group.png' />
 
-6. Click <Cmd sid="save_btn" product="air" /> to save the muster zone settings.
+6. 集結地点の設定を保存するには、<Cmd sid='save_btn' product='air' /> をクリックします。
 
 :::note
 
-**Best practices for muster zones**
+**集結地点に関するベストプラクティス**
 
-* Make the muster zone name and description clear and easy to understand. For example, use names like 'East Parking Lot' or 'Main Building Lobby'.
+* 集結地点の名前と説明は、明確で分かりやすく指定してください。 例：'東側駐車場'または'本館ロビー'のように指定できます。
 
-* When adding multiple devices to a muster zone, select a device group instead of individual devices. Device groups let you manage multiple devices at once. For more information on device group management, refer to <DocLink docId='platform/biostar_air/manage-device-group' />.
+* 集結地点に複数のデバイスを追加する場合は、個別のデバイスを選択するよりもデバイスグループを選択することを推奨します。 デバイスグループを使用すると、複数のデバイスを一度に管理できます。 デバイスグループ管理の詳細については、<DocLink docId='platform/biostar_air/manage-device-group' />をご参照ください。
 
-* In a large campus with multiple buildings, assign **only relevant users** to a specific muster zone.
+* 複数の建物がある大規模キャンパスでは、**関連するユーザーのみ**を特定の集結地点に割り当ててください。
 
-* Wired access control devices support both mobile and card authentication, whereas Airfob Tag and Airfob Patch support only mobile credentials.
+* 有線の入退室制御デバイスはモバイルとカード認証の両方をサポートしますが、Airfob TagやAirfob Patchはモバイルクレデンシャルのみをサポートします。
 
 :::
 
-## Start roll call on mobile {#startingRollcallonMobile}
+## モバイルでロールコールを開始する {#startingRollcallonMobile}
 
-Start a roll call and check attendance in the BioStar Air mobile app.
+BioStar Airモバイルアプリでロールコールを開始し、出席を確認します。
 
 <Image src='/img/air/bsair-mobile-adv-rollcall.png' className='none' />
 
-1. Open the BioStar Air app on your mobile device and log in.
+1. モバイル端末でBioStar Airアプリを起動してログインします。
 
-2. Tap <Cmd en="All Menu">All Menu</Cmd> → <Cmd sid="roll_call_submenu" product="air" /> at the bottom of the screen.
+2. 画面下部の <Cmd en='All Menu'>すべてのメニュー</Cmd> → <Cmd sid='roll_call_submenu' product='air' /> を順にタップします。
 
-3. Tap <Cmd en="Roll Call Start">Roll Call Start</Cmd>.
+3. <Cmd en='Roll Call Start'>ロールコール開始</Cmd> ボタンをタップします。
 
-4. A list of all users who must gather at the muster location appears.
+4. 集結場所に集まるべきすべてのユーザーの一覧が表示されます。
 
-### Mark users safe {#marking-users-safe}
+### ユーザーを安全とマークする {#marking-users-safe}
 
 <Columns>
 <Column className='width--20'>
@@ -91,20 +91,20 @@ Start a roll call and check attendance in the BioStar Air mobile app.
 </Column>
 <Column className='padding--l20'>
 
-Administrators or users can mark themselves safe in the following ways.
+管理者またはユーザーは、以下の方法で自身を安全とマークできます。
 
-* An administrator can press and hold the **check mark** next to a user’s name in the mobile app to mark the user safe.
+* 管理者はモバイルアプリでユーザー名の横にある**チェックマーク**ボタンを長押しして、ユーザーを安全にチェックできます。
 
-* Users tag their credential on a device at the assigned muster zone.
+* ユーザーは指定された集結地点でデバイスに自身のクレデンシャルをタグ付けします。
 
-* Filter users by **muster group**.
+* ユーザーは**集結グループ**でフィルタできます。
 
-* Use search to find a specific person.
+* 検索機能を使用して特定の個人を探せます。
 
 </Column>
 </Columns>
 
-### Complete roll call {#completingRollCall}
+### ロールコールの完了 {#completingRollCall}
 
 <Columns>
 <Column className='width--20'>
@@ -114,33 +114,33 @@ Administrators or users can mark themselves safe in the following ways.
 </Column>
 <Column className='padding--l20'>
 
-Complete the roll call when any of the following conditions are met.
+以下の条件を満たしたら、ロールコールを完了します。
 
-* All users have arrived at the muster zone and been marked safe
+* すべてのユーザーが集結地点に到着し、安全とマークされたとき
 
-* The administrator manually marks all users safe
+* 管理者がすべてのユーザーを手動で安全とマークしたとき
 
-* 24 hours have passed
+* 24時間経過したとき
 
 </Column>
 </Columns>
 
-## View roll call history {#viewingRollCallHistory}
+## ロールコール履歴の表示 {#viewingRollCallHistory}
 
-View the history of previous roll calls.
+以前に実施したロールコールの履歴を確認できます。
 
-1. Click <Cmd sid="advanced_menu" product="air" /> → <Cmd sid="roll_call_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='advanced_menu' product='air' /> → <Cmd sid='roll_call_submenu' product='air' /> をクリックします。
 
-2. Click the <Cmd sid="roll_call_history_tab" product="air" /> tab.
+2. <Cmd sid='roll_call_history_tab' product='air' /> タブをクリックしてください。
 
    <Image src='/img/air/bsair-adv-rollcall-history.png' />
 
-3. Click a completed roll call entry to view its details.
+3. 詳細を確認するには、完了したロールコール項目をクリックします。
 
 <Image src='/img/air/bsair-adv-rollcall-history-details.png' />
 
-* View the list of all access events recorded during the roll call.
+* ロールコール中に記録されたすべての入退室イベントの一覧を確認できます。
 
-* Check whether each user was marked safe or unconfirmed.
+* ユーザーが安全とマークされているか確認されていないかの詳細を確認できます。
 
-* Check the start and end times of the roll call.
+* ロールコールの開始および完了時間を確認できます。

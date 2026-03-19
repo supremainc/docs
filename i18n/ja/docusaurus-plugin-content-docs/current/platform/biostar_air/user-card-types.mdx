@@ -1,119 +1,119 @@
 ---
 id: user-card-types
-title: User Card and Credential Types
-description: This article introduces the user types (regular and temporary) supported from BioStar Air version 2.6 and the credentials available for each type. Regular users can use Mobile Card, RF card, QR code, LinkPass, face, and PIN, while temporary users can use the web-based dynamic QR code and LinkPass.
+title: ユーザーのカードとクレデンシャルの種類
+description: BioStar Air 2.6 以上でサポートされるユーザーの種類（一般／一時）と各種類のクレデンシャルについて説明します。 一般ユーザーは Mobile Card、RF Card、QRコード、LinkPass、Face、PIN を使用でき、一時ユーザーはウェブベースの Dynamic QR Code と LinkPass を使用できます。
 keywords:
-  - User Management
+  - ユーザー管理
   - BioStar Air
-  - User card types
+  - ユーザーのカードタイプ
 ---
 
-From BioStar Air version 2.6, two user types were introduced to enhance user management.
+BioStar Air 2.6 以降、ユーザー管理を改善するために2種類のユーザータイプが導入されました。
 
-* <Cmd sid="user_regular_card_type" product="air" />: A user who is a regular member of an organization or facility and requires long-term, ongoing access. All credential types can be issued.
+* <Cmd sid='user_regular_card_type' product='air' />：組織または施設の正規メンバーで、長期かつ継続的な入退室権限が必要なユーザーです。 すべてのクレデンシャルタイプを発行できます。
 
-* <Cmd sid="user_temporary_card_type" product="air" />: A visitor or non-regular member who needs short-term, limited access. This can include guests, external visitors, short-term contractors, delivery couriers, and so on. Only <Cmd sid="user_form_input20" product="air" /> credentials, including QR code and LinkPass, can be issued.
+* <Cmd sid='user_temporary_card_type' product='air' />: 短期かつ限定的な入退室権限を必要とする訪問者または非正規メンバーです。 ゲスト、外部来訪者、短期契約者、配達員などが該当します。 <Cmd sid='user_form_input20' product='air' /> のクレデンシャルのみ発行でき、QRコードとLinkPassが含まれます。
 
 :::info
 
-For more information on issuing credentials when adding or editing users, refer to <DocLink docId='platform/biostar_air/adding-individual-users#issuingCredentials' />.
+ユーザーを追加または編集する際のクレデンシャル発行に関する詳細は、<DocLink docId='platform/biostar_air/adding-individual-users#issuingCredentials' />を参照してください。
 
 :::
 
 :::tip
 
-Watch the video below for a tutorial on user and card types.
+ユーザーとカードの種類に関するビデオガイドを視聴するには、以下の動画を参照してください。
 
 <YouTube className='fit--content' videoId="xTxIzG-30S0" />
 
 :::
 
-## Regular user card types {#regular-user-card-typs}
+## 一般ユーザーのカードタイプ {#regular-user-card-typs}
 
-The credentials you can issue to regular users are as follows.
+一般ユーザーに発行できるクレデンシャルの種類は以下の通りです。
 
 :::info
 
-For more information on how to use mobile credentials with the Suprema Pass app, refer to <DocLink docId='platform/biostar_air/opening-doors-with-mobile-credentials' />.
+Suprema Pass アプリでのモバイルクレデンシャルの使い方については、<DocLink docId='platform/biostar_air/opening-doors-with-mobile-credentials' />を参照してください。
 
 :::
 
 ### <Cmd sid='card_type_mobile' product='air' className='normal' /> {#mobileCard}
 
-* A unique **Card ID** is automatically assigned but can also be set manually.
+* 固有の **カードID** は自動割り当てされますが、手動で設定することもできます。
 
-* When using an **Airfob Tag** or **Airfob Patch**, integrate with an existing access control system by using the mobile card number as the card serial number.
+* **Airfob Tag** または **Airfob Patch** を使用する場合、モバイルカード番号をカードのシリアル番号として使用し、既存の出入管理システムと統合できます。
 
-* For compatibility with a previous system, the mobile card ID can match the RF card number of the former site.
+* 既存システムとの互換性のため、モバイルカードIDは以前のサイトのRFカード番号と一致させることができます。
 
 ### <Cmd sid='card_type_rf' product='air' className='normal' /> {#rfCard}
 
-* Add up to eight RFID cards per user.
+* ユーザーごとに最大8枚のRFIDカードを追加できます。
 
-* Configure <Cmd sid="rf_card_type" product="air" />(CSN or Wiegand), <Cmd sid="wiegand_card_id" product="air" />, and <Cmd sid="rf_card_name" product="air" /> to simplify management when multiple cards are assigned.
+* 複数のカードが割り当てられる場合に管理を簡素化するため、<Cmd sid='rf_card_type' product='air' />(CSNまたはWiegand)、<Cmd sid='wiegand_card_id' product='air' />、および <Cmd sid='rf_card_name' product='air' /> を構成できます。
 
-* Select a reader in <Cmd sid="newest_rf_card_text_device" product="air" /> to scan an existing RFID card with a connected Suprema device.
+* 接続されたSupremaデバイスを使用して既存のRFIDカードをスキャンするには、<Cmd sid='newest_rf_card_text_device' product='air' /> 項目でリーダーを選択してください。
 
-* If an existing RF card has a **CSN** (card serial number), enter the CSN manually.
+* 既存のRFカードに **CSN**（カードシリアル番号）がある場合、CSNを手動で入力できます。
 
 ### <Cmd sid='card_type_option3' product='air' className='normal' /> {#qrCode}
 
-* Regular users can use the **QR code** of a mobile card.
+* 一般ユーザーはモバイルカードの **QRコード** を使用できます。
 
-* Access the QR code by tapping the button on the mobile card interface.
+* QRコードはモバイルカードのインターフェースのボタンを押して使用できます。
 
 ### <Cmd sid='card_type_option4' product='air' className='normal' /> {#linkPass}
 
-* Send a web link to the user's email address or phone number.
+* ユーザーのメールまたは携帯電話番号にウェブリンクを送信します。
 
-* The user opens the received link in a web browser and clicks <Cmd sid="web_card_preview_button1" product="air" /> to gain access.
+* ユーザーは受け取ったリンクをウェブブラウザで開き、<Cmd sid='web_card_preview_button1' product='air' /> ボタンをクリックして入退室できます。
 
 :::info
 
-For more information on LinkPass credentials, refer to <DocLink docId='platform/biostar_air/linkpass-credentials' />.
+LinkPass クレデンシャルの詳細については、<DocLink docId='platform/biostar_air/linkpass-credentials' />を参照してください。
 
 :::
 
-### Facial authentication {#face}
+### 顔認証 {#face}
 
-* Add up to two face profile images per user.
+* ユーザーごとに最大2つの顔プロファイル画像を追加できます。
 
-* Register through a connected reader or by uploading an image.
+* 接続されたリーダーまたは画像アップロードで登録できます。
 
-* Send an email link to the user, then capture a photo with a mobile device camera to enroll.
+* ユーザーにメールリンクを送信した後、モバイル端末のカメラで写真を撮影して登録できます。
 
 ### PIN {#pin}
 
-Set a 4–16-digit PIN to use as part of two-factor authentication (2FA).
+4～16桁のPINを設定し、2段階認証（2FA）の一部として使用できます。
 
-## Temporary user card types {#temporary-user-card-typs}
+## 一時ユーザーのカードタイプ {#temporary-user-card-typs}
 
-Temporary users do not receive mobile or RFID cards. Instead, issue **web-based credentials** that do not require an app download. Available options are as follows:
+一時ユーザーはモバイルまたはRFIDカードを受け取りません。 代わりに、アプリのダウンロードが不要な **ウェブベースのクレデンシャル** を発行できます。 利用できるオプションは以下の通りです。
 
 ### <Cmd sid='card_type_option3' product='air' className='normal' /> {#TempQrCode}
 
-* Send via email or text message.
+* メールまたはSMSで送信します。
 
-* Accessible through a web browser.
+* ウェブブラウザでアクセスできます。
 
-* Use a **dynamic QR code**, which updates every five minutes, to enhance security.
+* セキュリティを強化するため、5分ごとに更新される **Dynamic QR Code**（動的QRコード）を使用します。
 
 ### <Cmd sid='card_type_option4' product='air' className='normal' /> {#TempLinkPass}
 
-Send a web link to the user via email or text message. The user gains access by clicking <Cmd sid="web_card_preview_button1" product="air" /> in a web browser.
+メールまたはSMSでウェブリンクをユーザーに送信します。 ユーザーはウェブブラウザで<Cmd sid='web_card_preview_button1' product='air' /> ボタンをクリックすると入退室できます。
 
 :::info
 
-For more information on LinkPass credentials, refer to <DocLink docId='platform/biostar_air/linkpass-credentials' />.
+LinkPass クレデンシャルの詳細については、<DocLink docId='platform/biostar_air/linkpass-credentials' />を参照してください。
 
 :::
 
-## Managing access levels {#managing-access-levels}
+## アクセスレベルの管理 {#managing-access-levels}
 
-Set **access levels** to control where credentials are allowed, regardless of whether the user is regular or temporary.
+一般ユーザーであれ一時ユーザーであれ、**アクセスレベル**を設定してクレデンシャルが許可される場所を制御する必要があります。
 
 :::caution
 
-If the user is temporary, assign restrictive access levels carefully and avoid issuing credentials with unlimited access.
+一時ユーザーの場合は、制限されたアクセスレベルを慎重に割り当て、無制限のアクセス権が付与されたクレデンシャルを付与しないよう注意してください。
 
 :::

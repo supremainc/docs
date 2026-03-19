@@ -1,96 +1,96 @@
 ---
 id: site-setup-networking
-title: Identify Network Ports and Devices
-description: Set network ports for BioStar Air-compatible devices and check MAC addresses.
+title: ネットワークポートとデバイスの特定
+description: BioStar Air対応デバイスのネットワークポートを設定し、MACアドレスを確認してください。
 keywords:
-  - networking
-  - ports
+  - ネットワーキング
+  - ポート
 ---
 
 import MacAddressCalculator from '@site/src/components/MacAddressCalculator';
 
-BioStar Air and compatible devices must access specific network ports for seamless connection. Network ports allow secure communication between compatible devices, cloud services, and user applications. Administrators may need to verify a BioStar Air-compatible device's MAC address from its serial number for network configuration tasks.
+BioStar Air対応デバイスが円滑に接続するためには、特定のネットワークポートへのアクセスが必要です。 ネットワークポートを介して、対応デバイス、クラウドサービス、およびユーザーアプリケーション間で安全に通信できます。 管理者はネットワーク設定を行う際、BioStar Air対応デバイスのシリアル番号からMACアドレスを確認する必要がある場合があります。
 
-## Required network ports
+## 必須ネットワークポート
 
-Verify that the following ports are open on the network firewall.
+次のポートがネットワークファイアウォールで開いていることを確認してください。
 
-* **6379**, **6381**: Redis Ports
+* **6379**, **6381**：Redis ポート
 
-   Used to synchronize user information, handle fast event logging, manage sessions, and serve as a message broker for signaling between devices and the cloud.
+   ユーザー情報の同期、迅速なイベントロギングの処理、セッション管理、デバイスとクラウド間のシグナル処理のためのメッセージブローカーとして使用されます。
 
-* **5671**: AMQP over TLS (RabbitMQ)
+* **5671**：TLS上のAMQP (RabbitMQ)
 
-   Provides a secure messaging protocol for real-time communication between services.
+   サービス間のリアルタイム通信のための安全なメッセージングプロトコルを提供します。
 
-* **443**: HTTPS (TLS)
+* **443**：HTTPS (TLS)
 
-   Used for standard secure web traffic and required for the following services:
+   標準のセキュアなウェブトラフィックとして使用され、以下のサービスで必要です：
 
-  * Access to the management portal web app through a web browser
+  * ウェブブラウザで管理ポータルのWebアプリにアクセスする
 
-  * BioStar Air mobile app (iOS/Android)
+  * BioStar Airモバイルアプリ (iOS/Android)
 
-  * API calls
+  * API呼び出し
 
-  * Device firmware updates through the cloud
+  * クラウド経由でのデバイスのファームウェア更新
 
-  * Device login and authentication services
+  * デバイスのログインおよび認証サービス
 
-* When using BioStar Air's built-in video management feature:
+* BioStar Airの組み込みビデオ管理機能を使用する場合：
 
-  * Web-socket domain: eu-wss-api.airfob.com
+  * WebSocketドメイン：eu-wss-api.airfob.com
 
-  * Web-socket Port: 3500
+  * WebSocketポート：3500
 
-  * TURN/STUN Ports: 80, 443, 3478, 5349
+  * TURN/STUNポート：80, 443, 3478, 5349
 
 :::info
 
-Verify access to the following endpoints for device login and authentication.
+デバイスのログインおよび認証のために、次のエンドポイントへのアクセスを確認してください。
 
-* [https://e-afs-api.airfob.com/v1/device/login](https://e-afs-api.airfob.com/v1/device/login) (Europe)
+* [https://e-afs-api.airfob.com/v1/device/login](https://e-afs-api.airfob.com/v1/device/login)（ヨーロッパ）
 
-* [https://afs-api.airfob.com/v1/device/login](https://afs-api.airfob.com/v1/device/login) (Rest of world)
+* [https://afs-api.airfob.com/v1/device/login](https://afs-api.airfob.com/v1/device/login)（その他の地域）
 
 :::
 
-## Check the MAC address from the serial number
+## シリアル番号からMACアドレスを確認する
 
-In certain cases, administrators need to determine a BioStar Air-compatible reader's MAC address using only its serial number. This is useful for tasks such as adding the device to a whitelist before adding it to the network.
+場合によっては、BioStar Air対応リーダーのMACアドレスをシリアル番号のみで確認する必要があることがあります。 これは、デバイスをネットワークに追加する前にホワイトリストに登録するなどの作業に便利です。
 
-### Steps
+### 手順
 
-1. **Find the serial number**:
+1. **シリアル番号を見つける**：
 
-   Locate the 9-digit serial number on the back of the device.
+   デバイスの背面で9桁のシリアル番号を探してください。
 
-2. **Convert the serial number to hexadecimal**:
+2. **シリアル番号を16進数に変換する**：
 
-   Use a calculator or an online tool to convert the serial number from decimal to hexadecimal.
+   電卓やオンラインツールを使用して、シリアル番号を10進数から16進数に変換してください。
 
-3. **Extract the last 3 bytes**:
+3. **最後の3バイトを抽出する**：
 
-   Take the last six characters from the hexadecimal value. These six characters represent the last 3 bytes.
+   16進値から最後の6文字を取得してください。 最後の6文字は最後の3バイトを表します。
 
-4. **Build the MAC address**:
+4. **MACアドレスの構成**：
 
-   The MAC address always starts with `00:17:FC:`. Append the last 3 bytes (six characters) from the hexadecimal value, separating each pair with a colon.
+   MACアドレスは常に`00:17:FC:`で始まります。 16進値から最後の3バイト（6文字）を取り出し、各ペアをコロンで区切って追加してください。
 
-### Example
+### 例
 
-1. **Serial number**: 546089489
+1. **シリアル番号**：546089489
 
-2. **Hexadecimal**: 208CAA11
+2. **16進数に変換**：208CAA11
 
-3. **Last 3 bytes**: 8CAA11
+3. **最後の3バイトを抽出**：8CAA11
 
-4. **MAC address**: 00:17:FC:8C:AA:11
+4. **MACアドレスの構成**：00:17:FC:8C:AA:11
 
-These steps allow accurate identification of a BioStar Air-compatible reader on the network using its serial number.
+これらの手順に従うことで、シリアル番号を使用してネットワーク上のBioStar Air対応リーダーを正確に特定できます。
 
-### MAC address converter
+### MACアドレス変換ツール
 
-Enter the device's serial number below to get its MAC address instantly.
+下にデバイスのシリアル番号を入力すると、MACアドレスをすぐに確認できます。
 
 <MacAddressCalculator />

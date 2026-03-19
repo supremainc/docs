@@ -1,36 +1,36 @@
 ---
 id: configuring-the-airfob-patch-and-tag
-title: Configure Airfob Patch and Tag
-description: This guide explains how to configure Airfob Patch and Tag, set BLE mode, and customize the card ID output to upgrade an existing access control system to BioStar Air.
+title: Configurar Airfob Patch y Tag
+description: Esta guía explica cómo configurar el Airfob Patch y el Tag, establecer el modo BLE y personalizar la salida del ID de tarjeta para actualizar un sistema de control de acceso existente a BioStar Air.
 keywords:
   - Airfob
   - Patch
   - Tag
-  - configuration
+  - configuración
 ---
 
-The Airfob Patch and Tag upgrade an existing access control reader or door lock to work with BioStar Air mobile credentials.
+El Airfob Patch y el Tag actualizan un lector de control de acceso o una cerradura existente para que funcionen con credenciales móviles de BioStar Air.
 
-* **Airfob Patch**: An energy-harvesting device for wired readers and intercoms that attaches without additional wiring.
+* **Airfob Patch**: Un dispositivo que aprovecha la energía para lectores con cable e intercomunicadores, y se instala sin necesidad de cableado adicional.
 
-* **Airfob Tag**: Fits battery-powered devices such as door locks using a coin-cell battery.
+* **Airfob Tag**: Se adapta a dispositivos alimentados por batería, como cerraduras que usan una pila tipo botón.
 
 :::info
 
-* The Airfob Patch and Tag are compatible with MIFARE 1K technology but are not compatible with 125 kHz low-frequency readers or locks.
+* El Airfob Patch y el Tag son compatibles con la tecnología MIFARE 1K, pero no son compatibles con lectores o cerraduras de baja frecuencia de 125 kHz.
 
-* They authenticate encrypted Bluetooth BioStar Air credentials from a mobile device and operate by emulating a MIFARE RFID signal. They attach to readers and locks with tape and require no wiring.
+* Autentican credenciales Bluetooth cifradas de BioStar Air desde un dispositivo móvil y funcionan emulando una señal RFID MIFARE. Se adhieren a lectores y cerraduras con cinta y no requieren cableado.
 
 :::
 
-## Configuration steps {#configurationSteps}
+## Pasos de configuración {#configurationSteps}
 
-Install the Airfob Patch or Tag and register it to the BioStar Air app. Follow these steps to configure the device.
+Instala el Airfob Patch o Tag y regístralo en la aplicación BioStar Air. Sigue estos pasos para configurar el dispositivo.
 
 <Steps>
 <Step>
 
-### Run the app {#accessApp}
+### Abre la aplicación {#accessApp}
 
 <Columns>
 <Column className='width--20'>
@@ -39,16 +39,16 @@ Install the Airfob Patch or Tag and register it to the BioStar Air app. Follow t
 
 <Column className='padding--l10'>
 
-1. Run **BioStar Air** on your mobile device.
+1. Abre **BioStar Air** en tu dispositivo móvil.
 
-2. Sign in to the site where the Airfob Patch or Tag is registered.
+2. Inicia sesión en el sitio donde está registrado el Airfob Patch o Tag.
 
 </Column>
 </Columns>
 </Step>
 <Step>
 
-### Go to device settings {#navigateToDeviceSettings}
+### Ve a la configuración del dispositivo {#navigateToDeviceSettings}
 
 <Columns>
 <Column className='width--20'>
@@ -57,11 +57,11 @@ Install the Airfob Patch or Tag and register it to the BioStar Air app. Follow t
 
 <Column className='padding--l10'>
 
-1. On the **BioStar Air** home screen, tap <Cmd sid='site_setting_tab_management' product='air' /> at the bottom.
+1. En la pantalla principal de **BioStar Air**, toca <Cmd sid='site_setting_tab_management' product='air' /> en la parte inferior.
 
-2. To view the registered devices, tap <Cmd sid="devices_card" product="air" />.
+2. Para ver los dispositivos registrados, toca <Cmd sid="devices_card" product="air" />.
 
-3. Select the Airfob Patch or Tag from the device list.
+3. Selecciona el Airfob Patch o Tag de la lista de dispositivos.
 
 </Column>
 </Columns>
@@ -69,42 +69,42 @@ Install the Airfob Patch or Tag and register it to the BioStar Air app. Follow t
 </Step>
 <Step>
 
-### Enable BLE mode {#enable-ble-mode}
+### Activa el modo BLE {#enable-ble-mode}
 
-* Hold the mobile device close to the unit.
+* Acerca el dispositivo móvil a la unidad.
 
-* Activate the <Cmd>BLE Mode</Cmd> in the app.
-
-</Step>
-<Step>
-
-### Set the card ID output method {#set-card-id-output-method}
-
-* Scroll to **Card ID Output Method** and tap **Edit**.
-
-* Tap **Select** next to **User Card ID**.
+* Activa <Cmd>Modo BLE</Cmd> en la aplicación.
 
 </Step>
 <Step>
 
-### Choose the output method {#choose-the-output-method}
+### Configura el método de salida del ID de tarjeta {#set-card-id-output-method}
 
-* **None**: Select this option when you do not want to send a card ID. Useful for time and attendance to extend battery life.
+* Desplázate hasta **Método de salida del ID de tarjeta** y toca **Editar**.
 
-* **Fixed Device**: Sends the pre-programmed fixed card ID. Useful for door locks or intercoms that require each RFID card to be programmed individually. Only this fixed card ID appears in the device logs.
-
-* **User Card ID**: Sends a unique card ID for each user that matches the existing RFID card number in the access control system. This enables seamless integration without issuing new physical cards.
-
-* **Direct Input**: Manually specify the card ID to be sent. Useful for custom configurations where one ID must be used on multiple units.
+* Toca **Seleccionar** junto a **ID de tarjeta de usuario**.
 
 </Step>
 <Step>
 
-### Save your settings {#save-your-settings}
+### Selecciona el método de salida {#choose-the-output-method}
 
-* Keep the mobile device near the unit, tap <Cmd sid="save_btn" product="air" />, and confirm the selections.
+* **Ninguno**: Seleccione esta opción cuando no desee enviar un ID de tarjeta. Útil para el control de tiempo y asistencia, ya que prolonga la vida útil de la batería.
 
-* The update complete message appears.
+* **Dispositivo fijo**: Envía el ID de tarjeta fijo preprogramado. Útil para cerraduras o intercomunicadores que requieren programar cada tarjeta RFID de forma individual. Solo este ID fijo aparece en los registros del dispositivo.
+
+* **ID de tarjeta de usuario**: Envía un ID de tarjeta único para cada usuario que coincide con el número de tarjeta RFID registrado en el sistema de control de acceso. Esto permite una integración sin necesidad de emitir nuevas tarjetas físicas.
+
+* **Entrada directa**: Especifique manualmente el ID de la tarjeta que se enviará. Útil para configuraciones personalizadas en las que un mismo ID debe utilizarse en varias unidades.
+
+</Step>
+<Step>
+
+### Guardar la configuración {#save-your-settings}
+
+* Mantenga el dispositivo móvil cerca de la unidad, toque <Cmd sid="save_btn" product="air" /> y confirme las selecciones.
+
+* Se muestra el mensaje 'Actualización completada'.
 
 </Step>
 </Steps>

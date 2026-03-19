@@ -1,50 +1,50 @@
 ---
 id: site-advanced-settings
-title: Advanced Settings
-description: Use the advanced settings on the BioStar Air site to configure the system to meet your organization's requirements. You can configure various options, including time zone, time and attendance, mobile authentication, and reader compatibility.
+title: 高度設定
+description: BioStar Air サイトの高度な設定で、システムを組織の要件に合わせて構成してください。 タイムゾーン、勤怠管理、モバイル認証、リーダーとの互換性など、さまざまなオプションを設定できます。
 keywords:
-  - Advanced Settings
-  - configure
+  - 高度な設定
+  - 構成する
 ---
 
-Configure advanced options to optimize BioStar Air for your organization's work environment. Set the time zone and daylight saving time, enable time and attendance, and adjust mobile authentication methods and how event logs are displayed.
+高度なオプションを設定して、BioStar Air を組織の業務環境に合わせて最適化してください。 タイムゾーンとサマータイムを設定し、勤怠管理を有効にし、モバイル認証方式やイベントログの表示方法を調整できます。
 
-Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar. Use the <Cmd sid='site_setting_tab_setting' product='air' /> tab to configure site settings.
+画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> をクリックします。 <Cmd sid='site_setting_tab_setting' product='air' />：サイトの設定を構成できます。
 
 <Image src='/img/air/bsair-settings-site-setting.png' />
 
-* <Cmd sid='site_profile_input4' product='air' />: Change the time zone at any time. Logs and events are recorded according to the configured time zone. For more information, refer to <DocLink docId='platform/biostar_air/daylight-saving-time' />.
+* <Cmd sid='site_profile_input4' product='air' />：タイムゾーンはいつでも変更できます。 設定したタイムゾーンに従ってログとイベントを記録します。 詳細については、<DocLink docId='platform/biostar_air/daylight-saving-time' />を参照してください。
 
-  * <Cmd sid='device_field_dst_usage' product='air' />: Enable or disable daylight saving time for specific regions.
+  * <Cmd sid='device_field_dst_usage' product='air' />：特定地域で適用されるサマータイムを有効化または無効化できます。
 
-* <Cmd sid='site_profile_input8' product='air' />: Enable the time and attendance (T&A) feature. After enabling the T&A feature, click <Cmd sid='tna_setting' product='air' /> to configure detailed settings. For more information, refer to <DocLink docId='platform/biostar_air/configuring-ta' />.
+* <Cmd sid='site_profile_input8' product='air' />：勤怠管理（T&A）機能を有効化できます。 勤怠管理機能を有効化した後、<Cmd sid='tna_setting' product='air' /> ボタンをクリックして詳細設定を構成してください。 詳細については、<DocLink docId='platform/biostar_air/configuring-ta' />を参照してください。
 
-* <Cmd sid='tna_report' product='air' />: Generate time and attendance (T&A) reports. After enabling the report feature, click <Cmd sid='tna_setting' product='air' /> to configure report conditions. For more information, refer to <DocLink docId='platform/biostar_air/reports-time-attendance-reports' />.
+* <Cmd sid='tna_report' product='air' />：勤怠レポート（T&A Report）を生成できます。 勤怠レポート機能を有効化した後、<Cmd sid='tna_setting' product='air' /> ボタンをクリックしてレポート生成条件を構成してください。 詳細については、<DocLink docId='platform/biostar_air/reports-time-attendance-reports' />を参照してください。
 
-* <Cmd sid='site_profile_input7' product='air' />: Enable the Long Touch feature to remotely open doors from a certain distance.
+* <Cmd sid='site_profile_input7' product='air' />：一定距離離れた出入口を遠隔で開けられるロングタッチ（Long Touch）機能を有効化できます。
 
-* <Cmd sid='site_setting_ble_background' product='air' />: Allow mobile cards while the Suprema Pass app runs in background mode. When enabled, users can open a door without launching the app.
+* <Cmd sid='site_setting_ble_background' product='air' />：Suprema Passアプリがバックグラウンドモードのときにモバイルカードの使用を許可します。 この設定を有効化すると、ユーザーはアプリを開かなくてもドアを開けられます。
 
-* <Cmd sid='display_face_preview_setting' product='air' />: Show a face preview when issuing face credentials.
+* <Cmd sid='display_face_preview_setting' product='air' />：顔クレデンシャル発行時に顔写真プレビューを表示できます。
 
-* <Cmd sid='site_profile_input5' product='air' />: Set how event log times are displayed.
+* <Cmd sid='site_profile_input5' product='air' />：イベントログの時刻表示方法を設定します。
 
-  * <Cmd sid='event_log_time_display_setting1' product='air' />: Show event logs based on each device's time zone.
+  * <Cmd sid='event_log_time_display_setting1' product='air' />：各デバイスの設定で構成したタイムゾーンに基づいてイベントログを表示します。
 
-  * <Cmd sid='event_log_time_display_setting2' product='air' />: Show logs according to the site's time zone. Useful when all devices are in one location. See the <Cmd sid='site_profile_input4' product='air' /> option.
+  * <Cmd sid='event_log_time_display_setting2' product='air' />：サイトのタイムゾーンに従ってログを表示します。 すべてのデバイスが同一場所にあるサイトに適しています。 <Cmd sid='site_profile_input4' product='air' /> オプションを参照してください。
 
-* <Cmd sid='new_setting_label_msb' product='air' />: Configure how card data is transmitted when using Airfob Patch with third-party readers.
+* <Cmd sid='new_setting_label_msb' product='air' />：Airfob Patchをサードパーティ製リーダーと併用する際のカードデータ送信方法を設定します。
 
    :::note
 
-   This setting applies only to patch devices and can be adjusted to match the type of third-party device to which the patch is attached.
+   パッチデバイス専用の設定で、パッチを取り付けるサードパーティ製デバイスのタイプに合わせて設定できます。
 
    :::
 
-* <Cmd sid='validity_period_label' product='air' />: Set the default validity period for mobile credentials.
+* <Cmd sid='validity_period_label' product='air' />：モバイルクレデンシャルのデフォルト有効期間を設定します。
 
    :::note
 
-   Admins can set a separate expiration date for each user's credentials. For more information, refer to <DocLink docId='platform/biostar_air/adding-individual-users#setting-access-levels-and-validity' />.
+   管理者は個々のユーザーのクレデンシャルに対して個別の有効期限を設定できます。 詳細については、<DocLink docId='platform/biostar_air/adding-individual-users#setting-access-levels-and-validity' />を参照してください。
 
    :::

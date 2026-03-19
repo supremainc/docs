@@ -1,137 +1,137 @@
 ---
 id: integration-quickstart
-title: Quick Start
-description: This guide shows how to set up the BioStar Air demo environment, register compatible devices, and generate API keys.
+title: クイックスタート
+description: BioStar Airのデモ環境の構築、対応デバイスの登録、APIキーの発行方法についてご案内します。
 keywords:
-  - API Integration
-  - Quick start
+  - API 統合
+  - クイックスタート
   - BioStar Air
-  - Demo
+  - デモ
 ---
 
-This guide shows how to set up the BioStar Air demo site, connect and register compatible devices, and test cloud API integration. If you have worked with BioStar 2 before, many concepts will feel familiar. BioStar Air is fully cloud-based.
+BioStar Airのデモサイトを設定し、対応デバイスを接続・登録してクラウドAPI連携をテストする方法をご案内します。 BioStar 2で作業した経験があるなら、多くの概念が馴染み深く感じられるでしょう。 BioStar Airは完全なクラウドベースのシステムです。
 
-## Prerequisites {#pre-requisites}
+## 事前要件 {#pre-requisites}
 
-Before you start, check the following.
+開始する前に次の項目を確認する。
 
-* Prepare a **BioStar Air-compatible device** with factory-initialized firmware.
+* 工場出荷時に初期化されたファームウェアを搭載した**BioStar Air対応機器**を用意する。
 
-  * XP2-AIR, XS2-AIR, BEW3-AIR, BS3-AIR, BLN2-AIR
+  * XP2-AIR、XS2-AIR、BEW3-AIR、BS3-AIR、BLN2-AIR
 
-  * Devices can be purchased through authorized Suprema distributors.
+  * 機器は認定のSuprema販売代理店を通じて購入できる。
 
-* The device must be connected to the internet via Ethernet.
+* 機器はイーサネット経由でインターネットに接続されている必要がある。
 
-* Allow outbound access on the network.
+* ネットワークでアウトバウンドアクセスを許可する。
 
   * Port 443 (HTTPS)
 
   * Port 5671 (MQTT over TLS)
 
-## Set up the demo environment and API key {#demo-setup}
+## デモ環境とAPIキーの設定 {#demo-setup}
 
 <Steps>
 <Step>
 
-### Sign up and log in
+### サインアップとログイン
 
-* Go to [BioStar Air Developer](https://developers.biostarair.com/login).
+* [BioStar Air Developer](https://developers.biostarair.com/login) に移動する。
 
-* Click **Sign Up**, complete the form, and wait for approval.
+* 「**サインアップ**」をクリックし、フォームを記入して承認を待つ。
 
-* After approval, log in with your credentials.
-
-</Step>
-<Step>
-
-### Create a demo application
-
-1. Go to **API** → **Management**.
-
-2. Click **+ Register**.
-
-3. Select **Demo** as the application type.
-
-4. Enter an application name and click **Register**.
-
-5. Click **Download** to download the Excel file with the demo site login credentials (email and password).
+* 承認が完了したら、クレデンシャルを使ってログインする。
 
 </Step>
 <Step>
 
-### Generate an API key
+### デモアプリケーションの作成
 
-1. In **Application Management**, click the application you registered.
+1. 「**API**」→「**Management**」に移動する。
 
-2. Scroll to **API Management**.
+2. 「**+ Register**」ボタンをクリックする。
 
-3. Click **Add**.
+3. アプリケーションタイプを**Demo**に選択する。
 
-4. Enter a name and confirm. Save the generated key.
+4. アプリケーション名を入力し、**Register**ボタンをクリックする。
+
+5. デモサイトのログインクレデンシャル（メールとパスワード）を含むExcelファイルをダウンロードするには、**Download**ボタンをクリックする。
 
 </Step>
 <Step>
 
-### Log in to the demo portal
+### APIキーの発行
 
-1. Go to the [Demo Portal](https://demo.airfobspace.com/login).
+1. 「**Application Management**」で登録したアプリケーションをクリックする。
 
-2. Log in with the email and password from the Excel file.
+2. 「**API Management**」までスクロールする。
 
-3. Enter the API key you just generated.
+3. 「**Add**」ボタンをクリックする。
+
+4. 名前を入力して確認する。 生成されたキーを保存する。
+
+</Step>
+<Step>
+
+### デモポータルへのログイン
+
+1. [Demo Portal](https://demo.airfobspace.com/login) に移動する。
+
+2. Excelファイルのメールとパスワードでログインする。
+
+3. 先ほど生成したAPIキーを入力する。
 
 </Step>
 </Steps>
 
-## Register devices {#registerDevices}
+## デバイスの登録 {#registerDevices}
 
-Use the BioStar Air Demo App (Android only) on your mobile device.
+モバイル機器でBioStar Air Demo App（Android専用）を使用する。
 
-1. Click the following link to download the mobile app. [DeviceRegistration.zip](https://moca-public-file-share.s3.ap-northeast-2.amazonaws.com/DeviceRegistration.zip)
+1. 次のリンクをクリックしてモバイルアプリをダウンロードする。 [DeviceRegistration.zip](https://moca-public-file-share.s3.ap-northeast-2.amazonaws.com/DeviceRegistration.zip)
 
-2. Log in with the credentials from the Excel file.
+2. Excelファイルのクレデンシャルでログインする。
 
-3. Move your Android device near the reader (within BLE range).
+3. Android端末をリーダーの近く（BLEの範囲内）に持っていく。
 
-   * In **All Menu** → **Devices**, tap the <IcAdd /> button in the upper right.
+   * 「**All Menu**」→「**Devices**」で右上の<IcAdd />ボタンをタップする。
 
-   * Search for the device and tap **Register**.
+   * デバイスを検索して**Register**ボタンをタップする。
 
-4. The device beeps, reboots, and appears in the registered device list.
+4. 機器が音を出して再起動し、登録済みデバイス一覧に表示される。
 
 :::info
 
-Devices can only be registered through the mobile app. You cannot register devices from the web portal. API-based registration requires an encryption certificate that is not provided to partners.
+デバイスはモバイルアプリを通じてのみ登録できる。 ウェブポータルでは登録できない。 APIベースの登録には、パートナーに提供されない暗号化証明書が必要である。
 
 :::
 
-## Device Management
+## デバイス管理
 
-Manage devices from the demo app or the demo web portal.
+デモアプリまたはデモウェブポータルでデバイスを管理できる。
 
 * **BioStar Air Demo App**
 
 * **Demo Web Portal**: [https://demo.airfobspace.com/login](https://demo.airfobspace.com/login)
 
-## Demo vs production {#demo-vs-production}
+## Demo vs Production {#demo-vs-production}
 
-* A **Demo** site for testing is created through the [Developer Portal](https://developers.biostarair.com/login).
+* **Demo**サイト（テスト用）は[開発者ポータル](https://developers.biostarair.com/login)から作成される。
 
-* A **Production** site is created through the [Partner Portal](https://partner.biostarair.com/) and requires a site ID, user email, and password. Only authorized resellers or Suprema branches can create a production site.
+* **Production**サイトは[パートナーポータル](https://partner.biostarair.com/)から作成され、サイトID、ユーザーのメールアドレスおよびパスワードが必要となる。 Productionサイトは承認された販売店またはSupremaの支店のみが作成できる。
 
 :::info
 
-* User IDs and account IDs are different. Do not confuse them.
+* ユーザーIDとアカウントIDは異なる。 混同しないこと。
 
-* If you manage multiple sites, store passwords securely.
+* 複数のサイトを管理する場合は、パスワードを安全に保管する。
 
-* Always use the latest Bearer token.
+* 常に最新のBearerトークンを使用する。
 
-* A Bearer token copied from the browser can be reused in Postman.
+* ブラウザからコピーしたBearerトークンはPostmanで再利用できる。
 
 :::
 
-## Need help? {#need-help}
+## サポートが必要ですか？ {#need-help}
 
-Open a ticket in the Suprema Technical Support Portal. [https://support.supremainc.com](https://support.supremainc.com)
+Supremaのテクニカルサポートポータルでチケットを作成する。 [https://support.supremainc.com](https://support.supremainc.com)

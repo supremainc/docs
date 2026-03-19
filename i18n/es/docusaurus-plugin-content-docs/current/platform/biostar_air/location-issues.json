@@ -1,26 +1,26 @@
 [
   {
-    "question": "Why Am I Being Asked to Enable Location Services?",
-    "answer": "The Suprema Pass app communicates with access control devices using Bluetooth. On Android devices, enabling location services is required by the operating system for Bluetooth functionality. On iOS, location permissions are necessary for using the app in background mode."
+    "question": "¿Por qué se me solicita activar los servicios de ubicación?",
+    "answer": "La app Suprema Pass se comunica con los dispositivos de control de acceso mediante Bluetooth. En dispositivos Android, el sistema operativo exige activar los servicios de ubicación para que funcione el Bluetooth. En iOS, se requieren permisos de ubicación para usar la app en modo en segundo plano."
   },
   {
-    "question": "Does the Airfob App Store My Location Data?",
-    "answer": "<b>No</b>. The Suprema Pass app does not track or store GPS-based location data, nor does it share this data with third parties.While the app uses Bluetooth location services for authentication, access logs are only recorded in the site administrator portal. The Suprema Pass app, Suprema, and MOCA System do not store or use any personal location data."
+    "question": "¿La app Airfob almacena mis datos de ubicación?",
+    "answer": "<b>No</b>. La app Suprema Pass no rastrea ni almacena datos de ubicación basados en GPS, ni los comparte con terceros. Aunque la app utiliza servicios de ubicación mediante Bluetooth para la autenticación, los registros de acceso se guardan únicamente en el portal del administrador del sitio. La app Suprema Pass, Suprema y el sistema MOCA no almacenan ni utilizan ningún dato de ubicación personal."
   },
   {
-    "question": "Will Enabling Location Services Drain My Phone's Battery?",
-    "answer": "<b>No</b>. Unlike other apps that use GPS, the Suprema Pass app does not rely on GPS location services, so it does not increase battery consumption."
+    "question": "¿Activar los servicios de ubicación agotará la batería de mi teléfono?",
+    "answer": "<b>No</b>. A diferencia de otras apps que usan GPS, la app Suprema Pass no utiliza servicios de ubicación basados en GPS; por lo tanto, no incrementa el consumo de batería."
   },
   {
-    "question": "Am I Required to Enable Location Services to Use the Suprema Pass?",
-    "answer": "<ul><li><b>Android users</b>: Yes, location services must be enabled due to Android’s Bluetooth policy.</li><li><b>iOS users</b>: Required only for background mode. If using the \"Only while app on screen\" mode, location permissions are not needed.</li></ul>"
+    "question": "¿Debo activar los servicios de ubicación para usar la app Suprema Pass?",
+    "answer": "<ul><li><b>Usuarios de Android</b>: Sí, se deben activar los servicios de ubicación debido a la política de Bluetooth de Android.</li><li><b>Usuarios de iOS</b>: Requerido solo para el uso en segundo plano. Si se usa el modo \"Solo mientras la app está en pantalla\", no se necesitan permisos de ubicación.</li></ul>"
   },
   {
-    "question": "Location Permission Requirements by Connection Method:",
-    "answer": "<ul><li><b>Only while app on screen</b>: Location permission can be set to \"Allow only while using the app.\" (Not required on iOS.)</li><li><b>Background mode (Always)</b>: Location permission must be set to \"Always allow.\"</li><li><b>NFC Mode</b>: Android users must agree to location permissions.</li></ul>"
+    "question": "Requisitos de permisos de ubicación según el método de conexión:",
+    "answer": "<ul><li><b>Solo mientras la app está en pantalla</b>: El permiso de ubicación puede establecerse en \"Permitir solo mientras se usa la app\". (No se requiere en iOS.)</li><li><b>Modo en segundo plano (Siempre)</b>: El permiso de ubicación debe configurarse en \"Permitir siempre\".</li><li><b>Modo NFC</b>: Los usuarios de Android deben aceptar los permisos de ubicación.</li></ul>"
   },
   {
-    "question": "Why Does My Phone Randomly Ask Me to Agree to Location Services?",
-    "answer": "<ol><li>If you select \"Don't Allow\" or \"Allow Once,\" your phone may continue prompting you to enable location services. This is controlled by iOS or Android, not by the Suprema Pass app.</li><li>For iOS users, even if \"Always Allow\" is selected, Apple may still display periodic confirmation messages as part of its security policies. Please continue to click \"Always Allow\" or mobile credentials may not work consistently. Features like Background Mode and Long Press may be disabled randomly.</li></ol>"
+    "question": "¿Por qué mi teléfono me pide aleatoriamente que active los servicios de ubicación?",
+    "answer": "<ol><li>Si seleccionas \"No permitir\" o \"Permitir una vez\", es posible que tu teléfono siga solicitando que actives los servicios de ubicación. Esto lo controlan iOS o Android, no la app Suprema Pass.</li><li>En iOS, incluso si seleccionas \"Permitir siempre\", Apple puede seguir mostrando mensajes de confirmación periódicos como parte de sus políticas de seguridad. Sigue seleccionando \"Permitir siempre\"; de lo contrario, las credenciales móviles podrían no funcionar de forma consistente. Funciones como el modo en segundo plano y la pulsación larga pueden deshabilitarse aleatoriamente.</li></ol>"
   }
 ]

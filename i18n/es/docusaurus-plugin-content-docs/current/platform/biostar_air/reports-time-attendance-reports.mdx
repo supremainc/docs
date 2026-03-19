@@ -1,69 +1,69 @@
 ---
 id: reports-time-attendance-reports
-title: Time and Attendance Report
-description: This guide explains how to configure the basic time and attendance report in BioStar Air. It supports on-site work hour tracking, CSV export options, and API integration.
+title: Informe de tiempo y asistencia
+description: Esta guía explica cómo configurar el informe básico de tiempo y asistencia en BioStar Air. Permite el seguimiento de horas de trabajo presenciales, opciones de exportación a CSV e integración mediante la API.
 keywords:
-  - reports
-  - time and attendance
+  - informes
+  - tiempo y asistencia
   - BioStar Air
 ---
 
-The time and attendance (T&A) report in BioStar Air is a simple **on-site work hour** report. It shows employees' start and end times based on event logs.
+El informe de tiempo y asistencia (T&A) en BioStar Air es un informe sencillo sobre las **horas de trabajo presenciales**. Muestra las horas de entrada y salida de los empleados según los registros de eventos.
 
-This feature is designed for basic reporting without complex configuration options. Time and attendance systems can have various requirements depending on local regulations. If the built-in time and attendance report does not meet your organization's needs, use a third-party T&A solution. Export event logs to **CSV** or integrate directly with third-party T&A software by using the BioStar Air API.
+Esta función está diseñada para informes básicos sin opciones de configuración complejas. Los sistemas de tiempo y asistencia pueden tener requisitos diversos según la normativa local. Si el informe integrado de tiempo y asistencia no satisface las necesidades de tu organización, utiliza una solución T&A de terceros. Exporta los registros de eventos en **CSV** o integra directamente con software T&A de terceros mediante la API de BioStar Air.
 
 :::info
 
-* The built-in time and attendance report is intentionally simple and may not meet all compliance requirements.
+* El informe integrado de tiempo y asistencia es intencionalmente sencillo y puede no cumplir todos los requisitos normativos.
 
-* If complex T&A rules exist (for example, local labor laws or shift patterns), use a third-party T&A solution.
+* Si existen reglas complejas de T&A (por ejemplo, leyes laborales locales o esquemas de turnos), utiliza una solución T&A de terceros.
 
-* Export event logs to CSV for manual processing or use the API to integrate automatically with other systems.
+* Exporta los registros de eventos en CSV para su procesamiento manual o utiliza la API para integrarlos automáticamente con otros sistemas.
 
 :::
 
-Follow these steps to generate a time and attendance (T&A) report.
+Sigue estos pasos para generar un informe de tiempo y asistencia (T&A).
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar.
+1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> en la barra lateral izquierda.
 
-2. In the <Cmd sid="site_setting_tab_setting" product="air" /> tab, click <Cmd sid="tna_report" product="air" /> → <Cmd sid="tna_setting" product="air" />.
+2. En la pestaña <Cmd sid="site_setting_tab_setting" product="air" />, haz clic en <Cmd sid="tna_report" product="air" /> → <Cmd sid="tna_setting" product="air" />.
 
    <Image src='/img/air/bsair-usage-settings-site.png' />
 
    :::note
 
-   Click the toggle on the right to enable <Cmd sid="tna_report" product="air" />.
+   Haz clic en el interruptor a la derecha para activar <Cmd sid="tna_report" product="air" />.
 
    :::
 
-3. When the <Cmd sid="report_popup_title" product="air" /> window appears, enter a name for the report.
+3. Cuando aparezca la ventana <Cmd sid="report_popup_title" product="air" />, escribe un nombre para el informe.
 
    <Image src='/img/air/bsair-usage-settings-site-tna-report-config.png' />
 
-4. Select the users or user groups to include in the report.
+4. Selecciona los usuarios o grupos de usuarios que deseas incluir en el informe.
 
-5. Click <Cmd sid="report_form_text_add" product="air" />.
+5. Haz clic en <Cmd sid="report_form_text_add" product="air" />.
 
-6. A downloadable report is generated in <Cmd sid="report_form_text_title" product="air" />.
+6. Se genera un informe descargable en <Cmd sid="report_form_text_title" product="air" />.
 
    <Image src='/img/air/bsair-usage-settings-site-tna-report-config-list.png' />
 
-7. Click <IcAirDown width="20" height="20" title="Download" /> to download the report.
+7. Haz clic en <IcAirDown width="20" height="20" title="Download" /> para descargar el informe.
 
-8. When the <Cmd sid="report_download_popup_title" product="air" /> window appears, select a date and time range.
+8. Cuando aparezca la ventana <Cmd sid="report_download_popup_title" product="air" />, selecciona un rango de fecha y hora.
 
    <Image src='/img/air/bsair-usage-settings-site-tna-report-config-down.png' />
 
-9. Click <Cmd sid="report_download_popup_button_title" product="air" />.
+9. Haz clic en <Cmd sid="report_download_popup_button_title" product="air" />.
 
-After the report is generated, a download link is sent to the administrator's email. Download the report from the email in PDF or CSV format.
+Una vez generado el informe, se envía un enlace de descarga al correo electrónico del administrador. Descarga el informe desde ese correo en formato PDF o CSV.
 
 :::info
 
-* Enable <Cmd sid="user_template_item" product="air" /> and select the desired template items to include user templates in the report.
+* Activa <Cmd sid="user_template_item" product="air" /> y selecciona los elementos de plantilla que quieras incluir en el informe.
 
-* The report is available for download for 24 hours after the download email is received. After that period, the report is no longer available.
+* El informe estará disponible para descargar durante 24 horas después de recibir el correo con el enlace de descarga. Tras ese período, ya no estará disponible.
 
-* Configure an automated schedule in <Cmd sid="alerts.alert_sub_menu_title" product="air" />. For more information, refer to <DocLink docId='platform/biostar_air/settings-alert-report#reportGeneration' />.
+* Configura una programación automática en <Cmd sid="alerts.alert_sub_menu_title" product="air" />. Para más información, consulta <DocLink docId='platform/biostar_air/settings-alert-report#reportGeneration' />.
 
 :::

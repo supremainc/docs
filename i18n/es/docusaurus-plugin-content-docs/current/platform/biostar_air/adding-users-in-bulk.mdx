@@ -1,197 +1,197 @@
 ---
 id: adding-users-in-bulk
-title: Add Users in Bulk
-description: Learn how to efficiently add multiple users at once by uploading a CSV file in BioStar Air Portal, configure bulk access levels, and manage profile images.
+title: Agregar usuarios masivamente
+description: Aprenda a agregar varios usuarios de forma eficiente subiendo un archivo CSV al portal BioStar Air, configurar niveles de acceso por lotes y administrar las imágenes de perfil.
 keywords:
-  - User Management
+  - Gestión Usuarios
   - BioStar Air
-  - bulk users
+  - usuarios masivos
 ---
 
-If you need to add multiple users at once, use BioStar Air's bulk user import feature. Upload a CSV file to register tens or hundreds of employees in just minutes. You can also bulk-upload profile images while entering user information. This document provides step-by-step instructions for downloading the CSV template, preparing the file, uploading it, managing profile images, and verifying user information after upload.
+Si necesita agregar varios usuarios a la vez, utilice la función de importación masiva de usuarios de BioStar Air. Suba un archivo CSV para registrar decenas o cientos de empleados en solo minutos. También puede subir masivamente imágenes de perfil al introducir la información de los usuarios. Este documento ofrece instrucciones paso a paso para descargar la plantilla CSV, preparar el archivo, subirlo, gestionar las imágenes de perfil y verificar la información de los usuarios tras la importación.
 
 :::tip
 
-Refer to the following video for a step-by-step guide to adding multiple users in bulk.
+Consulte el siguiente video para obtener una guía paso a paso sobre cómo agregar varios usuarios de forma masiva.
 
 <YouTube className='fit--content' videoId="gOi2nP0Ag5o" />
 
 :::
 
-## Download the CSV template {#downloadCSVTemplate}
+## Descargar la plantilla CSV {#downloadCSVTemplate}
 
-Follow these steps to download the CSV template file.
+Siga estos pasos para descargar la plantilla CSV.
 
-1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+1. Haga clic en <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Click <Cmd sid="add_user_btn" product="air" /> → <Cmd sid="user_actions_import_title" product="air" /> at the top right of the screen.
+2. Haga clic en <Cmd sid="add_user_btn" product="air" /> → <Cmd sid="user_actions_import_title" product="air" /> en la esquina superior derecha de la pantalla.
 
    <Image src='/img/air/bsair-add-bulk-import-user.png' />
 
-3. When the <Cmd sid="user_actions_import_title" product="air" /> panel appears, click <Cmd sid="user_actions_import_download_btn_text" product="air" />.
+3. Cuando aparezca el panel <Cmd sid="user_actions_import_title" product="air" />, haga clic en <Cmd sid="user_actions_import_download_btn_text" product="air" />.
 
    <Image src='/img/air/bsair-add-bulk-import-user-download-csv-template.png' />
 
-4. Save the CSV template file (*biostar-import-user-csv-example.csv*) locally.
+4. Guarde el archivo de plantilla CSV (*biostar-import-user-csv-example.csv*) localmente.
 
-## Prepare the CSV file {#preparing-the-csv-file}
+## Preparar el archivo CSV {#preparing-the-csv-file}
 
-Download the CSV template and enter the required details for each user. 
+Descargue la plantilla CSV e ingrese los datos requeridos para cada usuario. 
 
-### Key input fields {#keyInputFields}
+### Campos clave {#keyInputFields}
 
-The key fields to enter are as follows.
+Los campos clave a ingresar son los siguientes.
 
-* <Cmd sid="user_csv_example_header11" product="air" className="bold" />: Check the group ID in <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" />.
+* <Cmd sid="user_csv_example_header11" product="air" className="bold" />: Verifique el ID del grupo en <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" />.
 
   <Image src='/img/air/bsair-user-group-list-check-ids.png' />
 
-* <Cmd sid="user_csv_example_header12" product="air" className="bold" />: Check the access level ID in <Cmd sid="access_menu" product="air" /> → <Cmd sid="access_levels_submenu" product="air" />. <Cmd sid="full_access" product="air" className="bold" /> is always set to **1**. Use commas (`,`) as separators to specify multiple access levels.
+* <Cmd sid="user_csv_example_header12" product="air" className="bold" />: Verifique el ID del nivel de acceso en <Cmd sid="access_menu" product="air" /> → <Cmd sid="access_levels_submenu" product="air" />. <Cmd sid="full_access" product="air" className="bold" /> siempre está establecido en **1**. Use comas (`,`) como separadores para especificar varios niveles de acceso.
 
   <Image src='/img/air/bsair-ac-level-list-check-ids.png' />
 
-* <Cmd sid="user_csv_example_header7" product="air" className="bold" />: Enter this if you plan to send invitations by email.
+* <Cmd sid="user_csv_example_header7" product="air" className="bold" />: Ingréselo si planea enviar invitaciones por correo electrónico.
 
-* <Cmd sid="user_csv_example_header8" product="air" className="bold" />: Enter this if you plan to send invitations by mobile SMS.
+* <Cmd sid="user_csv_example_header8" product="air" className="bold" />: Ingréselo si planea enviar invitaciones por SMS.
 
 :::caution
 
-<Cmd sid="user_csv_example_header7" product="air" className="bold" /> and <Cmd sid="user_csv_example_header8" product="air" className="bold" /> must not be duplicated. Uploading a CSV file with duplicate values may cause errors.
+<Cmd sid="user_csv_example_header7" product="air" className="bold" /> y <Cmd sid="user_csv_example_header8" product="air" className="bold" /> no deben duplicarse. Subir un archivo CSV con valores duplicados puede provocar errores.
 
 :::
 
-### Support for custom Wiegand formats
+### Compatibilidad con formatos Wiegand personalizados
 
-You can freely configure any Wiegand format, including facility codes, segments, parity bits, and more.
+Puede configurar libremente cualquier formato Wiegand, incluidos códigos de instalación, segmentos, bits de paridad y más.
 
-* HID Corporate 1000 and iCLASS SE and Seos formats are supported.
+* Se admiten los formatos HID Corporate 1000, iCLASS SE y Seos.
 
-* **CSV template**
+* **Plantilla CSV**
 
-  * Each defined format (custom or default) appears as a separate column in the CSV file.
+  * Cada formato definido (personalizado o predeterminado) aparece como una columna separada en el archivo CSV.
 
     > <Cmd sid="rf_card_data_format_option_1" product="air" className="bold" />, <Cmd sid="rf_card_data_format_option_2" product="air" className="bold" />, <Cmd sid="rf_card_data_format_option_3" product="air" className="bold" />, <Cmd sid="rf_card_data_format_option_4" product="air" className="bold" />, <Cmd sid="rf_card_data_format_option_5" product="air" className="bold" />
 
-  * Separate multiple entries in a single field with a slash (`/`).
+  * Separe varias entradas en un solo campo con una barra (`/`).
 
-  * Use single quotes (`'`) around the card name. Avoid using double quotes (`"`); they may cause errors.
+  * Use comillas simples (`'`) alrededor del nombre de la tarjeta. Evite usar comillas dobles (`"`); pueden provocar errores.
 
-    > ✅ 'CardName' | ❌ "CardName"
+    > ✅ 'Nombre de la tarjeta' | ❌ "Nombre de la tarjeta"
 
    :::note
 
-   **Example**
+   **Ejemplo**
 
-  * With a facility code: *1234567-100-'Main Office Card'* (`CardID`-`FacilityCode`-`'CardName'`)
+  * Con un código de instalación: *1234567-100-'Main Office Card'* (`CardID`-`FacilityCode`-`'CardName'`)
 
-  * With multiple segments: *12-3456-78-'Lab Entry Card'*
+  * Con varios segmentos: *12-3456-78-'Lab Entry Card'*
 
    :::
 
-### Support for multiple cards
+### Soporte para múltiples tarjetas
 
-* Assign up to eight CSN or Wiegand card formats per user.
+* Asigne hasta ocho formatos de tarjeta CSN o Wiegand por usuario.
 
-* **CSV template**
+* **Plantilla CSV**
 
-  * For a single card, enter the CSN card number.
+  * Para una sola tarjeta, ingrese el número CSN.
 
-  * Separate CSN card numbers with a slash (`/`) when enrolling multiple cards.
+  * Separe los números de tarjeta CSN con una barra (`/`) al registrar múltiples tarjetas.
 
 :::note
 
-**Card naming format**: `CSN`-`'Card Name'`
+**Formato de nombre de tarjeta**: `CSN`-`'Card Name'`
 
-Example: *1234567-'Main Entry'* / *7654321-'Back Door'*
+Ejemplo: *1234567-'Main Entry'* / *7654321-'Back Door'*
 
 :::
 
-## Upload the CSV file {#uploading-the-csv-file}
+## Subir el archivo CSV {#uploading-the-csv-file}
 
-After preparing the CSV file, upload it.
+Una vez preparado el archivo CSV, cárguelo.
 
-1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+1. Haga clic en <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Click <Cmd sid="add_user_btn" product="air" /> → <Cmd sid="user_actions_import_title" product="air" /> at the top right of the screen.
+2. Haga clic en <Cmd sid="add_user_btn" product="air" /> → <Cmd sid="user_actions_import_title" product="air" /> en la esquina superior derecha de la pantalla.
 
    <Image src='/img/air/bsair-add-bulk-import-user.png' />
 
-3. When the <Cmd sid="user_actions_import_title" product="air" /> panel appears, click <Cmd sid="face_register_upload_csv_text_select_file" product="air" />.
+3. Cuando aparezca el panel <Cmd sid="user_actions_import_title" product="air" />, haga clic en <Cmd sid="face_register_upload_csv_text_select_file" product="air" />.
 
    <Image src='/img/air/bsair-add-bulk-import-user-select-csv.png' />
 
-4. Select the CSV file you prepared.
+4. Seleccione el archivo CSV que preparó.
 
    :::note
 
-   If the users' profile images are ready, enable the <Cmd sid="face_register_upload_face_photo" product="air" /> option. For more information, see <DocLink inner='#uploadProfileImages' />.
+   Si las imágenes de perfil de los usuarios están listas, active la opción <Cmd sid="face_register_upload_face_photo" product="air" />. Para más información, consulte <DocLink inner='#uploadProfileImages' />.
 
    :::
 
-5. Click <Cmd sid='new_popup_import_users_btn_next' product='air' /> at the bottom right of the screen.
+5. Haga clic en <Cmd sid='new_popup_import_users_btn_next' product='air' /> en la esquina inferior derecha de la pantalla.
 
-6. In the <Cmd sid="user_actions_import_data_preview" product="air" /> section, review the accuracy of the data in the first column.
+6. En la sección <Cmd sid="user_actions_import_data_preview" product="air" />, revise la precisión de los datos en la primera columna.
 
    <Image src='/img/air/bsair-add-bulk-import-user-csv-data-preview.png' />
 
-7. If there are no issues, click <Cmd sid="user_actions_import_btn" product="air" /> in the bottom right corner.
+7. Si no hay problemas, haga clic en <Cmd sid="user_actions_import_btn" product="air" /> en la esquina inferior derecha.
 
-After the upload completes, you can import user images or issue mobile cards in bulk on the next screen. Select the desired action.
+Después de que finalice la carga, podrá importar imágenes de usuarios o emitir tarjetas móviles en lote en la siguiente pantalla. Seleccione la acción deseada.
 
 <Image src='/img/air/bsair-add-bulk-import-user-csv-complete.png' />
 
 :::info
 
-* Do not use special characters other than commas (`,`) in the CSV file name.
+* No use caracteres especiales distintos de las comas (`,`) en el nombre del archivo CSV.
 
-* The maximum CSV file size is **5MB**.
+* El tamaño máximo del archivo CSV es **5MB**.
 
-* Alternatively, drag and drop the CSV file into the <Cmd sid="user_actions_import_upload_text" product="air" /> field of the <Cmd sid="user_actions_import_title" product="air" /> panel.
+* Alternativamente, arrastre y suelte el archivo CSV en el campo <Cmd sid="user_actions_import_upload_text" product="air" /> del panel <Cmd sid="user_actions_import_title" product="air" />.
 
 :::
 
-### CSV File Validation
+### Validación del archivo CSV
 
-The CSV upload process now provides **row-level error feedback**, making troubleshooting easier. If errors occur during upload, a detailed report is provided for review. Click <Cmd sid="user_actions_import_download_btn_text" product="air" /> to download the report.
+El proceso de carga de CSV ahora proporciona **retroalimentación de errores a nivel de fila**, lo que facilita la solución de problemas. Si se producen errores durante la carga, se ofrece un informe detallado para su revisión. Haga clic en <Cmd sid="user_actions_import_download_btn_text" product="air" /> para descargar el informe.
 
 <Image src='/img/air/bsair-add-bulk-import-user-csv-error.png' />
 
-## Upload user profile images {#uploadProfileImages}
+## Subir imágenes de perfil de usuario {#uploadProfileImages}
 
-Profile images can be uploaded automatically with the CSV file or manually in bulk later.
+Las imágenes de perfil se pueden subir automáticamente con el archivo CSV o cargarlas manualmente de forma masiva más adelante.
 
 <Image src='/img/air/bsair-add-bulk-import-user-with-face-photo.png' />
 
-1. Prepare profile image files that match the <Cmd sid="user_csv_example_header1" product="air" className="bold" /> column in the CSV file.
+1. Prepare los archivos de imagen de perfil que coincidan con la columna <Cmd sid="user_csv_example_header1" product="air" className="bold" /> del archivo CSV.
 
-   For example, the *601.jpg* file corresponds to user ID **601**.
+   Por ejemplo, el archivo *601.jpg* corresponde al usuario con ID **601**.
 
-2. After uploading the CSV file in the <Cmd sid="user_actions_import_title" product="air" /> panel, enable the <Cmd sid="face_register_upload_face_photo" product="air" /> option.
+2. Después de cargar el archivo CSV en el panel <Cmd sid="user_actions_import_title" product="air" />, habilite la opción <Cmd sid="face_register_upload_face_photo" product="air" />.
 
-3. Click <Cmd sid="face_register_upload_face_photo_select_folder" product="air" />, then select the folder that contains the profile images.
+3. Haga clic en <Cmd sid="face_register_upload_face_photo_select_folder" product="air" />, luego seleccione la carpeta que contiene las imágenes de perfil.
 
 :::note
 
-**File format requirements**
+**Requisitos de formato de archivo**
 
-* Supported formats: *.jpg*, *.jpeg*, *.png*
+* Formatos compatibles: *.jpg*, *.jpeg*, *.png*
 
-* File size limit: **1 MB** per image
+* Límite de tamaño de archivo: **1 MB** por imagen
 
 :::
 
 :::tip
 
-If profile images were not ready when the CSV file was uploaded, use <Cmd sid="image_upload_action" product="air" />(<IcAirUpface />) in the user list to add them later.
+Si las imágenes de perfil no estaban listas cuando se cargó el archivo CSV, utilice <Cmd sid="image_upload_action" product="air" />(<IcAirUpface />) en la lista de usuarios para agregarlas más tarde.
 
 <Image src='/img/air/bsair-add-bulk-import-user-profile-images.png' />
 
 :::
 
-## Finalize the bulk upload {#finalizing-the-bulk-upload}
+## Finalizar la carga masiva {#finalizing-the-bulk-upload}
 
-After all user data and images are uploaded, the system processes the entries, and the new users appear in the list with their assigned credentials.
+Una vez que se han cargado todos los datos de usuario y las imágenes, el sistema procesa las entradas y los nuevos usuarios aparecen en la lista con las credenciales asignadas.
 
-## Troubleshooting
+## Solución de Problemas
 
-If you encounter issues with CSV upload, see <DocLink docId='platform/biostar_air/troubleshooting-adding-users-in-bulk' /> for help troubleshooting common problems. The document also includes Excel formulas that help validate data and remove duplicates.
+Si tiene problemas al cargar el CSV, consulte <DocLink docId='platform/biostar_air/troubleshooting-adding-users-in-bulk' /> para obtener ayuda con la solución de problemas comunes. El documento también incluye fórmulas de Excel que le ayudan a validar los datos y a eliminar duplicados.

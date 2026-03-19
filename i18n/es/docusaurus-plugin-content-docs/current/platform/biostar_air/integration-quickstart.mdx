@@ -1,137 +1,137 @@
 ---
 id: integration-quickstart
-title: Quick Start
-description: This guide shows how to set up the BioStar Air demo environment, register compatible devices, and generate API keys.
+title: Inicio rápido
+description: Esta guía muestra cómo configurar el entorno de demostración de BioStar Air, registrar dispositivos compatibles y generar claves de API.
 keywords:
-  - API Integration
-  - Quick start
+  - Integración de la API
+  - Inicio rápido
   - BioStar Air
   - Demo
 ---
 
-This guide shows how to set up the BioStar Air demo site, connect and register compatible devices, and test cloud API integration. If you have worked with BioStar 2 before, many concepts will feel familiar. BioStar Air is fully cloud-based.
+Esta guía explica cómo configurar el sitio de demostración de BioStar Air, conectar y registrar dispositivos compatibles y probar la integración de la API en la nube. Si has trabajado con BioStar 2 antes, muchos conceptos te resultarán familiares. BioStar Air está completamente basado en la nube.
 
-## Prerequisites {#pre-requisites}
+## Requisitos previos {#pre-requisites}
 
-Before you start, check the following.
+Antes de comenzar, comprueba lo siguiente.
 
-* Prepare a **BioStar Air-compatible device** with factory-initialized firmware.
+* Prepara un **dispositivo compatible con BioStar Air** con el firmware en estado de fábrica.
 
   * XP2-AIR, XS2-AIR, BEW3-AIR, BS3-AIR, BLN2-AIR
 
-  * Devices can be purchased through authorized Suprema distributors.
+  * Los dispositivos pueden comprarse a través de distribuidores autorizados de Suprema.
 
-* The device must be connected to the internet via Ethernet.
+* El dispositivo debe estar conectado a Internet mediante Ethernet.
 
-* Allow outbound access on the network.
+* Permite el acceso saliente en la red.
 
-  * Port 443 (HTTPS)
+  * Puerto 443 (HTTPS)
 
-  * Port 5671 (MQTT over TLS)
+  * Puerto 5671 (MQTT sobre TLS)
 
-## Set up the demo environment and API key {#demo-setup}
+## Configura el entorno de demostración y la clave de API {#demo-setup}
 
 <Steps>
 <Step>
 
-### Sign up and log in
+### Regístrate e inicia sesión
 
-* Go to [BioStar Air Developer](https://developers.biostarair.com/login).
+* Ve a [BioStar Air Developer](https://developers.biostarair.com/login).
 
-* Click **Sign Up**, complete the form, and wait for approval.
+* Haz clic en **Regístrate**, completa el formulario y espera la aprobación.
 
-* After approval, log in with your credentials.
-
-</Step>
-<Step>
-
-### Create a demo application
-
-1. Go to **API** → **Management**.
-
-2. Click **+ Register**.
-
-3. Select **Demo** as the application type.
-
-4. Enter an application name and click **Register**.
-
-5. Click **Download** to download the Excel file with the demo site login credentials (email and password).
+* Después de la aprobación, inicia sesión con tus credenciales.
 
 </Step>
 <Step>
 
-### Generate an API key
+### Crea una aplicación de demostración
 
-1. In **Application Management**, click the application you registered.
+1. Ve a **API** → **Gestión**.
 
-2. Scroll to **API Management**.
+2. Haz clic en **+ Registrar**.
 
-3. Click **Add**.
+3. Selecciona **Demo** como tipo de aplicación.
 
-4. Enter a name and confirm. Save the generated key.
+4. Introduce un nombre para la aplicación y haz clic en **Registrar**.
+
+5. Haz clic en **Descargar** para obtener el archivo Excel con las credenciales de acceso al sitio de demostración (correo electrónico y contraseña).
 
 </Step>
 <Step>
 
-### Log in to the demo portal
+### Generar una clave API
 
-1. Go to the [Demo Portal](https://demo.airfobspace.com/login).
+1. En **Gestión de aplicaciones**, haz clic en la aplicación que registraste.
 
-2. Log in with the email and password from the Excel file.
+2. Desplázate hasta **Gestión de API**.
 
-3. Enter the API key you just generated.
+3. Haz clic en **Agregar**.
+
+4. Introduce un nombre y confírmalo. Guarda la clave generada.
+
+</Step>
+<Step>
+
+### Inicia sesión en el portal de demostración
+
+1. Ve al [Portal de demostración](https://demo.airfobspace.com/login).
+
+2. Inicia sesión con el correo electrónico y la contraseña del archivo Excel.
+
+3. Introduce la clave API que acabas de generar.
 
 </Step>
 </Steps>
 
-## Register devices {#registerDevices}
+## Registrar dispositivos {#registerDevices}
 
-Use the BioStar Air Demo App (Android only) on your mobile device.
+Usa la aplicación BioStar Air Demo (solo Android) en tu dispositivo móvil.
 
-1. Click the following link to download the mobile app. [DeviceRegistration.zip](https://moca-public-file-share.s3.ap-northeast-2.amazonaws.com/DeviceRegistration.zip)
+1. Haz clic en el siguiente enlace para descargar la aplicación móvil. [DeviceRegistration.zip](https://moca-public-file-share.s3.ap-northeast-2.amazonaws.com/DeviceRegistration.zip)
 
-2. Log in with the credentials from the Excel file.
+2. Inicia sesión con las credenciales del archivo Excel.
 
-3. Move your Android device near the reader (within BLE range).
+3. Acerca tu dispositivo Android al lector (dentro del alcance BLE).
 
-   * In **All Menu** → **Devices**, tap the <IcAdd /> button in the upper right.
+   * En **Menú principal** → **Dispositivos**, pulsa el botón <IcAdd /> en la esquina superior derecha.
 
-   * Search for the device and tap **Register**.
+   * Busca el dispositivo y pulsa **Registrar**.
 
-4. The device beeps, reboots, and appears in the registered device list.
+4. El dispositivo emite un pitido, se reinicia y aparece en la lista de dispositivos registrados.
 
 :::info
 
-Devices can only be registered through the mobile app. You cannot register devices from the web portal. API-based registration requires an encryption certificate that is not provided to partners.
+Los dispositivos solo se pueden registrar a través de la aplicación móvil. No es posible registrar dispositivos desde el portal web. El registro mediante API requiere un certificado de cifrado que no se proporciona a los socios.
 
 :::
 
-## Device Management
+## Gestión Dispositivos
 
-Manage devices from the demo app or the demo web portal.
+Gestiona los dispositivos desde la app Demo o desde el portal web de demostración.
 
 * **BioStar Air Demo App**
 
-* **Demo Web Portal**: [https://demo.airfobspace.com/login](https://demo.airfobspace.com/login)
+* **Portal web de demostración**: [https://demo.airfobspace.com/login](https://demo.airfobspace.com/login)
 
-## Demo vs production {#demo-vs-production}
+## Demo vs producción {#demo-vs-production}
 
-* A **Demo** site for testing is created through the [Developer Portal](https://developers.biostarair.com/login).
+* Un sitio **Demo** para pruebas se crea a través del [Portal de desarrolladores](https://developers.biostarair.com/login).
 
-* A **Production** site is created through the [Partner Portal](https://partner.biostarair.com/) and requires a site ID, user email, and password. Only authorized resellers or Suprema branches can create a production site.
+* Un sitio de producción se crea a través del [Portal de socios](https://partner.biostarair.com/) y requiere un ID de sitio, correo electrónico de usuario y contraseña. Solo los revendedores autorizados o las sucursales de Suprema pueden crear un sitio de producción.
 
 :::info
 
-* User IDs and account IDs are different. Do not confuse them.
+* Los ID de usuario y los ID de cuenta son diferentes. No los confundas.
 
-* If you manage multiple sites, store passwords securely.
+* Si administra varios sitios, guarde las contraseñas de forma segura.
 
-* Always use the latest Bearer token.
+* Utilice siempre el token Bearer más reciente.
 
-* A Bearer token copied from the browser can be reused in Postman.
+* Un token Bearer copiado del navegador puede reutilizarse en Postman.
 
 :::
 
-## Need help? {#need-help}
+## ¿Necesita ayuda? {#need-help}
 
-Open a ticket in the Suprema Technical Support Portal. [https://support.supremainc.com](https://support.supremainc.com)
+Abra un ticket en el Portal de Soporte Técnico de Suprema. [https://support.supremainc.com](https://support.supremainc.com)

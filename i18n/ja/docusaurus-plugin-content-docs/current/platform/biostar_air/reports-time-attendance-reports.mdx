@@ -1,69 +1,69 @@
 ---
 id: reports-time-attendance-reports
-title: Time and Attendance Report
-description: This guide explains how to configure the basic time and attendance report in BioStar Air. It supports on-site work hour tracking, CSV export options, and API integration.
+title: 勤怠レポートを構成する
+description: BioStar Airで基本的な勤怠レポートを構成する方法を説明します。 現場の勤務時間の追跡、CSVエクスポートオプション、API統合に対応しています。
 keywords:
-  - reports
-  - time and attendance
+  - レポート
+  - 勤怠
   - BioStar Air
 ---
 
-The time and attendance (T&A) report in BioStar Air is a simple **on-site work hour** report. It shows employees' start and end times based on event logs.
+BioStar Airの勤怠レポート（T&A Report）は、簡単な**現場の勤務時間**レポートです。 イベントログに基づき、従業員の出勤時刻と退勤時刻を表示します。
 
-This feature is designed for basic reporting without complex configuration options. Time and attendance systems can have various requirements depending on local regulations. If the built-in time and attendance report does not meet your organization's needs, use a third-party T&A solution. Export event logs to **CSV** or integrate directly with third-party T&A software by using the BioStar Air API.
+この機能は、複雑な構成オプションを必要としない基本的なレポート向けに設計されています。 勤怠システムは地域の規制によりさまざまな要件がある場合があります。 標準の勤怠レポートが組織の要件を満たさない場合は、サードパーティのT&Aソリューションを使用することを推奨します。 イベントログは**CSVでエクスポート**するか、BioStar Air APIを使用してサードパーティの勤怠ソフトウェアと直接統合できます。
 
 :::info
 
-* The built-in time and attendance report is intentionally simple and may not meet all compliance requirements.
+* 標準の勤怠レポートは意図的に簡素に設計されており、すべてのコンプライアンス要件を満たさない場合があります。
 
-* If complex T&A rules exist (for example, local labor laws or shift patterns), use a third-party T&A solution.
+* 複雑な勤怠ルール（例：地域の労働法、シフトパターン）がある場合は、サードパーティの勤怠ソリューションを使用してください。
 
-* Export event logs to CSV for manual processing or use the API to integrate automatically with other systems.
+* イベントログをCSVにエクスポートして手動で処理するか、APIを使用して他のシステムと自動的に統合できます。
 
 :::
 
-Follow these steps to generate a time and attendance (T&A) report.
+勤怠レポート（T&A Report）を作成するには、次の手順に従ってください。
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> をクリックします。
 
-2. In the <Cmd sid="site_setting_tab_setting" product="air" /> tab, click <Cmd sid="tna_report" product="air" /> → <Cmd sid="tna_setting" product="air" />.
+2. <Cmd sid='site_setting_tab_setting' product='air' /> タブで <Cmd sid='tna_report' product='air' /> → <Cmd sid='tna_setting' product='air' /> をクリックします。
 
    <Image src='/img/air/bsair-usage-settings-site.png' />
 
    :::note
 
-   Click the toggle on the right to enable <Cmd sid="tna_report" product="air" />.
+   <Cmd sid='tna_report' product='air' /> 機能を有効にするには、右側のトグルスイッチをクリックします。
 
    :::
 
-3. When the <Cmd sid="report_popup_title" product="air" /> window appears, enter a name for the report.
+3. <Cmd sid='report_popup_title' product='air' /> ウィンドウが表示されたら、レポート名を入力します。
 
    <Image src='/img/air/bsair-usage-settings-site-tna-report-config.png' />
 
-4. Select the users or user groups to include in the report.
+4. レポートに含めるユーザーまたはユーザーグループを選択します。
 
-5. Click <Cmd sid="report_form_text_add" product="air" />.
+5. <Cmd sid='report_form_text_add' product='air' /> をクリックします。
 
-6. A downloadable report is generated in <Cmd sid="report_form_text_title" product="air" />.
+6. <Cmd sid='report_form_text_title' product='air' /> にダウンロード可能なレポートが生成されます。
 
    <Image src='/img/air/bsair-usage-settings-site-tna-report-config-list.png' />
 
-7. Click <IcAirDown width="20" height="20" title="Download" /> to download the report.
+7. レポートをダウンロードするには、<IcAirDown width='20' height='20' title='Download' /> をクリックします。
 
-8. When the <Cmd sid="report_download_popup_title" product="air" /> window appears, select a date and time range.
+8. <Cmd sid='report_download_popup_title' product='air' /> ウィンドウが表示されたら、日付と時刻の範囲を選択します。
 
    <Image src='/img/air/bsair-usage-settings-site-tna-report-config-down.png' />
 
-9. Click <Cmd sid="report_download_popup_button_title" product="air" />.
+9. <Cmd sid='report_download_popup_button_title' product='air' /> をクリックします。
 
-After the report is generated, a download link is sent to the administrator's email. Download the report from the email in PDF or CSV format.
+レポートの生成が完了すると、管理者のメールアドレスにダウンロードリンクが送信されます。 メールからPDFまたはCSV形式でレポートをダウンロードできます。
 
 :::info
 
-* Enable <Cmd sid="user_template_item" product="air" /> and select the desired template items to include user templates in the report.
+* レポートにユーザーテンプレートを含めるには、<Cmd sid='user_template_item' product='air' /> を有効にし、希望するテンプレート項目を選択します。
 
-* The report is available for download for 24 hours after the download email is received. After that period, the report is no longer available.
+* レポートダウンロード用のメールを受信してから24時間以内にレポートをダウンロードできます。 期間が終了すると、ダウンロードできなくなります。
 
-* Configure an automated schedule in <Cmd sid="alerts.alert_sub_menu_title" product="air" />. For more information, refer to <DocLink docId='platform/biostar_air/settings-alert-report#reportGeneration' />.
+* <Cmd sid='alerts.alert_sub_menu_title' product='air' /> で自動化されたスケジュールを設定することもできます。 詳細は<DocLink docId='platform/biostar_air/settings-alert-report#reportGeneration' />をご参照ください。
 
 :::

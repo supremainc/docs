@@ -1,28 +1,28 @@
 ---
 id: manage-schedule
-title: Manage Schedules
-description: Create and manage schedules to control access to doors and elevators in BioStar Air.
+title: スケジュールを管理する
+description: BioStar Airでドアとエレベーターへのアクセスを制御するために、スケジュールを作成して管理する方法です。
 keywords:
-  - Schedule
-  - Manage
+  - スケジュール
+  - 管理
   - BioStar Air
 ---
 
-Create schedules to allow or restrict access to doors or elevators on specific days and time periods. Use with holiday groups to fine-tune access rules.
+スケジュールを作成して、特定の曜日と時間帯にドアやエレベーターへの入退室を許可または制限します。 祝日グループと併用すると、出入りルールをさらに細かく調整できます。
 
 :::info
 
-* Holiday groups take precedence over schedules. Grant unrestricted access to users who always need entry.
+* 祝日グループはスケジュールより優先されます。 常に出入りが必要なユーザーには、制限のないアクセス権を付与してください。
 
-* For more information about holiday group settings, see <DocLink docId='platform/biostar_air/manage-holiday-group' />.
+* 祝日グループの設定の詳細については <DocLink docId='platform/biostar_air/manage-holiday-group' /> をご参照ください。
 
-* For more information about applying schedules to doors, see <DocLink docId='platform/biostar_air/managing-door-schedules' />.
+* ドアにスケジュールを適用する方法の詳細については <DocLink docId='platform/biostar_air/managing-door-schedules' /> をご参照ください。
 
-* For more information about configuring schedules to control access to each elevator floor, see <DocLink docId='platform/biostar_air/manage-elevator' />.
+* エレベーターの各階での入退室を制御するスケジュール設定の詳細については <DocLink docId='platform/biostar_air/manage-elevator' /> をご参照ください。
 
 :::
 
-## Add schedule {#addSchedule}
+## スケジュールを追加 {#addSchedule}
 
 import AddScheduleItem from '../../common/_add-schedule-item.mdx';
 
@@ -30,36 +30,36 @@ import AddScheduleItem from '../../common/_add-schedule-item.mdx';
 
 :::info
 
-* Add open schedules to allow access and locked schedules to restrict access, and apply them to doors. For more information about applying schedules to doors, see <DocLink docId='platform/biostar_air/managing-door-schedules' />.
+* 入室を許可する開錠スケジュールと入室を制限する施錠スケジュールを追加して、ドアに適用できます。 ドアにスケジュールを適用する方法の詳細については <DocLink docId='platform/biostar_air/managing-door-schedules' /> をご参照ください。
 
-* For more information about configuring schedules to control access to each elevator floor, see <DocLink docId='platform/biostar_air/manage-elevator' />.
+* エレベーターの各階での入退室を制御するスケジュール設定の詳細については <DocLink docId='platform/biostar_air/manage-elevator' /> をご参照ください。
 
 :::
 
-## Edit schedule {#editSchedule}
+## スケジュールを編集 {#editSchedule}
 
-1. Click <Cmd sid="access_menu" product="air" /> → <Cmd sid="schedules_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='access_menu' product='air' /> → <Cmd sid='schedules_submenu' product='air' /> をクリックします。
 
-2. Click the schedule to edit in the list. Alternatively, select the schedule's checkbox and click <IcAirEdit title='Edit' /> at the top of the list.
+2. 一覧から編集するスケジュールをクリックします。 または、スケジュールのチェックボックスをクリックして、一覧上部の <IcAirEdit title='Edit' /> ボタンをクリックしてください。
 
-3. When the <Cmd sid="schedule_edit_title" product="air" /> panel appears, update the required information or modify the schedule.
+3. <Cmd sid='schedule_edit_title' product='air' /> パネルが表示されたら、必要な情報を変更するかスケジュールを編集します。
 
    <Image src='/img/air/bsair-access-mng-schedule-edit.png' />
 
-4. Click <Cmd sid='save_btn' product='air' /> to save the changes.
+4. 変更を保存するには、<Cmd sid='save_btn' product='air' /> をクリックします。
 
-## Delete schedule {#deleteSchedule}
+## スケジュールを削除 {#deleteSchedule}
 
-1. Click <Cmd sid="access_menu" product="air" /> → <Cmd sid="schedules_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='access_menu' product='air' /> → <Cmd sid='schedules_submenu' product='air' /> をクリックします。
 
-2. Select the checkbox of the schedule to delete in the list. Select one or more schedules.
+2. 一覧から削除するスケジュールのチェックボックスをクリックします。 1件以上のスケジュールを選択できます。
 
-3. Click <IcAirRemove title='Delete' /> at the top of the list.
+3. 一覧上部の<IcAirRemove title='Delete' /> ボタンをクリックしてください。
 
-4. When a warning message appears, click <Cmd sid='btn_yes' product='air' />.
+4. 警告メッセージのウィンドウが表示されたら、<Cmd sid='btn_yes' product='air' /> をクリックします。
 
 :::info
 
-Deleting a schedule removes it from all related sections. For example, if a schedule applied to a door or elevator is deleted, the schedule is no longer applied to that door or elevator.
+スケジュールを削除すると、すべての関連セクションからスケジュールが削除されます。 例えば、ドアやエレベーターに適用されているスケジュールが削除されると、当該ドアやエレベーターにはもはやスケジュールが適用されません。
 
 :::

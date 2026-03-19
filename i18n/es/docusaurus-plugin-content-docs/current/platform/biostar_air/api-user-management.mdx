@@ -1,37 +1,37 @@
 ---
 id: api-user-management
-title: Using the User Management API
-description: This guide explains how to create, update, and deactivate users using the BioStar Air API, outlines the recommended integration scope, and includes Python sample code.
+title: Uso de la API de gestión de usuarios
+description: Esta guía explica cómo crear, actualizar y desactivar usuarios mediante la API de BioStar Air, describe el alcance de integración recomendado e incluye código de ejemplo en Python.
 keywords:
-  - User Management
+  - Gestión Usuarios
   - API
   - BioStar Air
-  - Python sample code
+  - Código de ejemplo en Python
 ---
 
-After obtaining an authentication token, you can manage the user lifecycle through the API. Use endpoints to retrieve, create, update, and deactivate users to automate user management on your BioStar Air site.
+Después de obtener un token de autenticación, puedes gestionar el ciclo de vida de los usuarios a través de la API. Utiliza los endpoints para recuperar, crear, actualizar y desactivar usuarios y así automatizar la gestión de usuarios en tu sitio de BioStar Air.
 
-## Recommended API integration scope {#recommended-integration-scope}
+## Alcance recomendado para la integración con la API {#recommended-integration-scope}
 
-Limit your API integration to the scope below whenever possible.
+Limita la integración con la API al alcance que se muestra a continuación, siempre que sea posible.
 
-* User lifecycle management (create/update/delete)
+* Gestión del ciclo de vida de los usuarios (crear/actualizar/eliminar)
 
-* Credential management (mobile, RF card, biometric)
+* Gestión de credenciales (móvil, tarjeta RF, biométrica)
 
-Allow administrators to continue using the existing BioStar Air web and mobile management apps.
+Permite que los administradores sigan usando las aplicaciones web y móviles de gestión de BioStar Air.
 
-* Access Level
+* Nivel de acceso
 
-* Schedules
+* Horarios
 
-* Door and device settings
+* Configuración de puertas y dispositivos
 
-* Site settings
+* Configuración del sitio
 
-## User management API calls {#user-management-api-calls}
+## Llamadas a la API de gestión de usuarios {#user-management-api-calls}
 
-After logging in, use the following endpoints to manage users.
+Después de iniciar sesión, utiliza los siguientes endpoints para gestionar usuarios.
 
 * `getUsers`
 
@@ -41,19 +41,19 @@ After logging in, use the following endpoints to manage users.
 
 * `suspendUsers`
 
-Always include a Bearer token in the Authorization header.
+Incluye siempre un token Bearer en el encabezado Authorization.
 
 :::note
 
-To activate a user, assign at least one credential type.
+Para activar a un usuario, asigna al menos un tipo de credencial.
 
-> e.g., RF card, mobile, LinkPass
+> p. ej., tarjeta RF, móvil, LinkPass
 
 :::
 
-## Sample application {#sample-application}
+## Aplicación de ejemplo {#sample-application}
 
-The following sample code is a Python app that uploads a CSV file via the API and bulk deactivates users.
+El siguiente código de ejemplo es una aplicación en Python que sube un archivo CSV a través de la API y desactiva usuarios en masa.
 
 ```python title='Python'
 import requests

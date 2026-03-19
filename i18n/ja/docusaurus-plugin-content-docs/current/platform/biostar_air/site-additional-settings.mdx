@@ -1,42 +1,42 @@
 ---
 id: site-additional-settings
-title: Settings for Additional Features
-description: This guide explains how to enable and configure BioStar Air's additional features, such as QR code readers, IP camera integration, and webhooks.
+title: 拡張機能の設定
+description: QRコードリーダー、IPカメラ連携、Webhookなど、BioStar Airの拡張機能を有効化して構成する方法を案内します。
 keywords:
-  - Additional Site Settings
-  - Additional Settings
+  - サイトの追加設定
+  - 追加設定
 ---
 
-You can enable or disable additional features required for site operation, such as support for QR code readers, ONVIF camera integration, and event forwarding to external systems (webhooks).
+QRコードリーダーの利用可否、ONVIFカメラ連携、外部システムへのイベント送信（Webhook）など、サイト運営に必要な拡張機能を有効化または無効化できます。
 
-Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar. Use the <Cmd sid='site_setting_qr_reader_tab' product='air' /> tab to enable or disable additional features.
+画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> をクリックします。 <Cmd sid='site_setting_qr_reader_tab' product='air' /> タブで追加機能を有効化または無効化できます。
 
 <Image src='/img/air/bsair-settings-site-additional-feature.png' />
 
-* <Cmd sid='site_setting_qr_label' product='air' />: Supports QR code readers. Disable this option if you do not use a QR reader.
+* <Cmd sid='site_setting_qr_label' product='air' />：QRコードリーダーをサポートします。 QRリーダーを使用しない場合は、該当オプションを無効にしてください。
 
-* <Cmd sid='site_setting_video_management' product='air' />: Supports ONVIF-compliant IP cameras. Enable this feature to integrate BioStar Air with video surveillance. After enabling the feature, click <Cmd sid='setting_label' product='air' /> to set the event log playback time.
+* <Cmd sid='site_setting_video_management' product='air' />：ONVIF互換のIPカメラをサポートします。 BioStar Airとビデオ監視を統合するには、この機能を有効化してください。 機能を有効化した後、<Cmd sid='setting_label' product='air' /> ボタンをクリックするとイベントログの再生時間を設定できます。
 
    :::note
 
-   For more information about video management, see <DocLink docId='platform/biostar_air/ip-camera-support-and-configuration' />.
+   ビデオ管理の詳細については、<DocLink docId='platform/biostar_air/ip-camera-support-and-configuration' />をご参照ください。
 
    :::
 
-* <Cmd sid='site_setting_webhook_title' product='air' />: Enable webhooks to send BioStar Air events to external systems. After enabling the feature, configure the fields below.
+* <Cmd sid='site_setting_webhook_title' product='air' />：Webhookを有効化して、BioStar Airのイベントを外部システムに送信できます。 この機能を有効化した後、以下の項目を設定してください。
 
   <Image src='/img/air/bsair-settings-site-additional-feature-webhook.png' />
 
-  * <Cmd sid='site_setting_webhook_url' product='air' />: Enter the endpoint address of the external server that will receive events. Example: `https://example.com/webhook-endpoint`
+  * <Cmd sid='site_setting_webhook_url' product='air' />：イベントを受信する外部サーバーのエンドポイントアドレスを入力してください。 例：`https://example.com/webhook-endpoint`
 
-  * <Cmd sid='site_setting_webhook_secret' product='air' />: A security token used to verify that the webhook request originated from a trusted server. The sending server encrypts the payload with the security key using SHA-256 and sends it in the `X-Signature` header.
+  * <Cmd sid='site_setting_webhook_secret' product='air' />：Webhookリクエストが信頼できる送信サーバーから送信されたかを検証するためのセキュリティトークンです。 発信サーバーはセキュリティキーを使用してデータ本文（Payload）をSHA256で暗号化し、ヘッダーに `X-Signature` として送信します。
 
-  * <Cmd sid='site_setting_webhook_form_send_text' product='air' />: Verify that the webhook works correctly. Send a test message to confirm that the external server receives and responds to the request.
+  * <Cmd sid='site_setting_webhook_form_send_text' product='air' />：Webhookが正しく動作するかどうかを確認できます。 テストメッセージを送信して外部サーバーがリクエストを受信し応答するかを検証してください。
 
    :::info
 
-  * After entering all required information, click <Cmd sid='save_btn' product='air' />.
+  * 必要な情報をすべて入力したら、<Cmd sid='save_btn' product='air' /> ボタンをクリックしてください。
 
-  * Click <Cmd sid='new_button_reset' product='air' /> to initialize the entered information.
+  * 入力した情報を初期化するには、<Cmd sid='new_button_reset' product='air' /> ボタンをクリックしてください。
 
    :::

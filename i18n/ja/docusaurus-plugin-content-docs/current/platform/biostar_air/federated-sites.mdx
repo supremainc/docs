@@ -1,105 +1,105 @@
 ---
 id: federated-sites
-title: Manage Federated Sites
-description: Set up and manage federated sites in BioStar Air for multi-tenant buildings and multi-branch organizations through centralized control.
+title: フェデレーションサイトの管理
+description: 集中管理により、マルチテナントビルや複数拠点の組織向けに、BioStar Airでフェデレーションサイトを設定および管理する方法を説明します。
 keywords:
-  - federated
-  - sites
+  - フェデレーション
+  - サイト
   - BioStar Air
 ---
 
-BioStar Air provides **federated sites**, enabling a primary site to seamlessly manage multiple subsites. This feature is ideal for multi-tenant buildings or organizations with multiple branches and offers centralized control through distributed access management.
+BioStar Airは**フェデレーションサイト**を作成し、親サイトから複数のサブサイトを円滑に管理できる機能を提供します。 この機能はマルチテナントビルや複数拠点を運営する組織に適しており、分散した入退室管理に対して集中管理を提供します。
 
-By leveraging the federated site feature in BioStar Air, administrators effectively manage access in complex environments and deliver a secure, scalable, and streamlined experience for all stakeholders.
+BioStar Airのフェデレーションサイト機能を活用することで、管理者は複雑な環境の入退室を効果的に管理し、すべての利害関係者に対して安全でスケーラブルかつ簡素化された体験を提供します。
 
-## What is a federated site? {#whatFederatedSites}
+## フェデレーションサイトとは？ {#whatFederatedSites}
 
-**Federated sites** support a hierarchical structure in which a **primary site** manages one or more **subsites**. An administrator of the primary site—called the **federation administrator**—can directly access and manage subsites from the BioStar Air interface.
+**フェデレーションサイト**は、**プライマリサイト**が1つ以上の**サブサイト**を管理する階層構造をサポートします。 **フェデレーション管理者**と呼ばれるプライマリサイトの管理者は、BioStar Airの画面から直接サブサイトにアクセスして管理できます。
 
-Federated sites are useful in the following situations.
+フェデレーションサイトは次のような状況で有用です。
 
-### Multi-tenant building
+### マルチテナントビル
 
-For example, in a commercial building where each floor is occupied by a different company, configure the system as follows.
+例えば、各フロアに異なる会社が入居している商業ビルでは、以下のように構成できます。
 
-* **Master account** for the building
+* ビル用の**マスターアカウント**
 
-* **Subaccount** for each tenant company
+* 各テナント会社用の**サブアカウント**
 
-This setup authorizes only employees with access to a specific floor, simplifying building management.
+この構成により、特定フロアへのアクセスが許可された従業員のみがアクセスできるようにして、ビル管理者の管理を簡素化できます。
 
-### Multi-branch organization
+### 複数拠点の組織
 
-A company with offices in multiple locations can configure the system as follows.
+複数の場所にオフィスがある会社は、以下のように構成できます。
 
-* Manage global settings through a **master account**
+* **マスターアカウント**でグローバル設定を管理
 
-* Create a **subaccount** for each branch
+* 各拠点用の**サブアカウント**を作成
 
-For example, a company with ten offices worldwide can use a federated structure to streamline management.
+例えば、世界中に10のオフィスがある企業は、フェデレーション構造を使って管理を簡素化できます。
 
-## Set up federated sites {#setFederatedSites}
+## フェデレーションサイトの設定 {#setFederatedSites}
 
 <Steps>
 <Step>
 
-### Access Partner Portal
+### パートナーポータルにアクセス
 
-URL: [https://partner.biostarair.com](https://partner.biostarair.com)
+アクセスURL: [https://partner.biostarair.com](https://partner.biostarair.com)
 
-* Only partners and installers can use the BioStar Air Partner Portal.
+* BioStar Airのパートナーポータルはパートナーおよび導入業者のみが利用できます。
 
-* End customers must contact an installer to configure this feature.
-
-</Step>
-<Step>
-
-### Create primary site
-
-1. Log in to the [Partner Portal](https://partner.biostarair.com).
-
-2. Click **Create Site**, and in **Site Profile** select **Federated Site**.
-
-   * This step **must** be performed when first setting up the site.
-
-   * A standard site cannot be converted to a federated site later.
-
-3. Add a federation site administrator on the same screen.
-
-   * A **federation site administrator** added in the Partner Portal can access the primary site and all subsites.
-
-   * A **general administrator** added in BioStar Air can manage only individual sites.
+* 最終顧客がこの機能を設定するには導入業者にお問い合わせください。
 
 </Step>
 <Step>
 
-### Add subsites
+### プライマリサイトの作成
 
-1. After the primary site is set as a federated site, the **Site List** shows an option to create subsites.
+1. [パートナーポータル](https://partner.biostarair.com)にログインしてください。
 
-2. Click **Create Subsite** and configure it like any other site.
+2. **サイト作成**をクリックし、**サイトプロファイル**で**フェデレーションサイト**を選択してください。
+
+   * この手順はサイトを初めて設定する際に**必ず**実行する必要があります。
+
+   * 通常のサイトは後からフェデレーションサイトに変更できません。
+
+3. 同じ画面でフェデレーションサイト管理者を追加してください。
+
+   * パートナーポータルで追加された**フェデレーションサイト管理者**は、プライマリサイトとすべてのサブサイトにアクセスできます。
+
+   * BioStar Air上で追加された**一般管理者**は個別サイトのみ管理できます。
+
+</Step>
+<Step>
+
+### サブサイトの追加
+
+1. プライマリサイトがフェデレーションサイトに設定されると、**サイト一覧**にサブサイトを作成するオプションが表示されます。
+
+2. **サブサイト作成**をクリックし、他のサイトと同様に構成してください。
 
 </Step>
 </Steps>
 
-## Important considerations {#important-considerations}
+## 重要な考慮事項 {#important-considerations}
 
-### User and device management {#user-and-reader-management}
+### ユーザーおよびデバイス管理 {#user-and-reader-management}
 
-* Add users and devices separately to each subsite.
+* ユーザーとデバイスは各サブサイトごとに個別に追加する必要があります。
 
-* A device can be registered to only one site at a time. Select either the primary site or a subsite.
+* デバイスは一度に1つのサイトにのみ登録できます。 プライマリサイトまたはサブサイトのいずれかを選択してください。
 
-### Primary site usage {#primary-site-usage}
+### プライマリサイトの使用 {#primary-site-usage}
 
-* Certain customers use the primary site only as an access point for subsite management and do not register any users or devices in the primary site.
+* 一部の顧客はプライマリサイトをサブサイト管理のアクセスポイントとしてのみ使用し、プライマリサイトにユーザーやデバイスを登録しません。
 
-* **Example 1**: A company with three branch offices sets up a primary site with no devices and creates a subsite for each branch.
+* **例1**: 3つの支社オフィスを持つ企業は、デバイスを持たないプライマリサイトを設定し、各支社ごとにサブサイトを作成します。
 
-* **Example 2**: A company with headquarters and three branches registers users and devices at headquarters (the primary site) and sets up subsites for the branches.
+* **例2**: 本社と3つの支社を持つ会社は、本社（プライマリサイト）でユーザーとデバイスを登録し、支社用のサブサイトを設定します。
 
-### Billing {#billing}
+### 請求 {#billing}
 
-* Billing is calculated based on the number of registered devices (readers) per site.
+* 請求はサイトごとに登録されたデバイス（リーダー）の数に基づいて計算されます。
 
-* There is no additional cost to create a primary site without registered devices.
+* 登録されたデバイスがないプライマリサイトを作成する際に追加料金は発生しません。

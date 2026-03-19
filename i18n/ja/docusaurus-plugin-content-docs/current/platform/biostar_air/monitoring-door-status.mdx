@@ -1,76 +1,76 @@
 ---
 id: monitoring-door-status
-title: Monitor Door Status
-description: Monitor door status in real time, control locks remotely, and manage door access using the BioStar Air web portal and mobile app.
+title: ドアの状態を監視する
+description: BioStar Airのウェブポータルとモバイルアプリを使用して、ドアの状態をリアルタイムで監視し、施錠をリモートで制御し、ドアのアクセスを管理する方法を説明します。
 keywords:
-  - Monitoring
-  - Door status
+  - モニタリング
+  - ドアの状態
   - BioStar Air
 ---
 
-Monitor the status of doors connected to BioStar Air in real time. Check whether a door is locked or unlocked and the status of its relay sensor, and lock or unlock it remotely to control access.
+BioStar Airシステムに接続されているドアの状態をリアルタイムで監視できます。 管理者はドアの施錠／解錠状態やリレーセンサーの状態を確認し、ドアを施錠または解錠してリモートでドアのアクセスを制御できます。
 
 :::tip
 
-Refer to the following video to watch the video guide on monitoring door status.
+ドアの状態監視に関するビデオガイドを見るには、以下の動画を参照してください。
 
 <YouTube className='fit--content' videoId="_nxSRwst480" />
 
 :::
 
-## Door status monitoring {#monitoringWebPortal}
+## 出入口の状態モニタリング {#monitoringWebPortal}
 
 <Tabs groupId='platform'>
 <TabItem value='web' label='Web'>
 
-Monitor door status in the BioStar Air web portal. Click <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="door_status_submenu" product="air" /> in the left sidebar. View the list of doors registered to BioStar Air.
+BioStar Airのウェブポータルでドアの状態を監視できます。 画面左側のサイドバーで <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='door_status_submenu' product='air' /> をクリックします。 BioStar Airに登録されたドアの一覧を確認できます。
 
 <Image src='/img/air/bsair-monitoring-door-status.png' />
 
-Check the following items for each door.
+各ドアでは以下の項目を確認できます。
 
-* <Cmd sid="door_status_column2" product="air" />: Indicates whether the door is locked or unlocked.
+* <Cmd sid='door_status_column2' product='air' />：ドアの施錠/解錠状態を表示します。
 
-* <Cmd sid="door_status_column3" product="air" />: Indicates whether the door is physically open or closed.
+* <Cmd sid='door_status_column3' product='air' />：ドアが物理的に開いているか閉じているかを表示します。
 
 </TabItem>
 <TabItem value='mobile' label='Mobile'>
 
-Monitor door status using the BioStar Air app on a mobile device.
+モバイル端末でBioStar Airアプリを使ってドアの状態を確認できます。
 
 <Image src='/img/air/bsair-mobile-monitoring-door-status.png' className='none' />
 
-1. Open the BioStar Air app on your mobile device and log in.
+1. モバイル端末でBioStar Airアプリを起動してログインします。
 
-2. Tap <Cmd sid='monitoring_menu' product='air' /> at the bottom of the home screen.
+2. 初期画面の下部にある <Cmd sid='monitoring_menu' product='air' /> をタップします。
 
-3. Tap the <Cmd sid="door_status_submenu" product="air" /> card.
+3. <Cmd sid='door_status_submenu' product='air' /> カードをタップします。
 
-4. View the list of doors registered to BioStar Air.
+4. BioStar Airに登録されたドアの一覧を確認できます。
 
 </TabItem>
 </Tabs>
 
 :::info
 
-For more information on door registration and management, refer to <DocLink docId='platform/biostar_air/managing-registered-doors' />.
+出入口の登録と管理の詳細については、<DocLink docId='platform/biostar_air/managing-registered-doors' /> を参照してください。
 
 :::
 
-### Unlock a door {#remotely-unlocking-a-door}
+### ドアの解錠 {#remotely-unlocking-a-door}
 
-Unlock the door remotely when it is online and connected to BioStar Air. 
+ドアがオンラインでBioStar Airに接続されている場合、リモートで解錠できます。 
 
 <Tabs groupId='platform'>
 <TabItem value='web' label='Web'>
 
-1. In the <Cmd sid="door_status_column4" product="air" /> column, click <Cmd sid="door_open_btn" product="air" />.
+1. <Cmd sid='door_status_column4' product='air' /> 列で <Cmd sid='door_open_btn' product='air' /> ボタンをクリックします。
 
-2. The status in the <Cmd sid='door_status_column2' product='air' /> column changes to unlocked, and a success message appears.
+2. <Cmd sid='door_status_column2' product='air' /> 列の状態が解錠に変更され、成功メッセージが表示されます。
 
    <Image src='/img/air/bsair-monitoring-door-status-open-door.png' />
 
-3. After the configured time elapses, the door returns to locked.
+3. 設定された時間が経過すると、ドアは再び施錠状態に戻ります。
 
 </TabItem>
 <TabItem value='mobile' label='Mobile'>
@@ -83,11 +83,11 @@ Unlock the door remotely when it is online and connected to BioStar Air.
 </Column>
 <Column className='padding--l20'>
 
-1. Tap <Cmd sid='door_open_btn' product='air' /> to remotely unlock the door. 
+1. 遠隔で出入口を解錠するには、<Cmd sid='door_open_btn' product='air' /> ボタンをタップします。 
 
-2. A success message will appear at the bottom of the screen. 
+2. 画面下部に成功メッセージが表示されます。 
 
-3. After the configured time elapses, the door returns to locked.
+3. 設定された時間が経過すると、ドアは再び施錠状態に戻ります。
 
 </Column>
 </Columns>
@@ -97,28 +97,28 @@ Unlock the door remotely when it is online and connected to BioStar Air.
 
 :::info
 
-For information on setting the duration that the door remains open, refer to <DocLink docId='platform/biostar_air/managing-registered-doors#editingDoors' />.
+出入口が開いたままの時間を設定する方法については、<DocLink docId='platform/biostar_air/managing-registered-doors#editingDoors' /> を参照してください。
 
 :::
 
-### Set always-open mode {#alwaysOpenMode}
+### 常時開放モードの設定 {#alwaysOpenMode}
 
-Keep a door unlocked indefinitely. Use this when temporary or visitor access is needed.
+ドアを無期限に開放状態にできます。 訪問者や一時的な入場が必要な場合に便利です。
 
 <Tabs groupId='platform'>
 <TabItem value='web' label='Web'>
 
-1. In the door list, click <IcAirMore title="Control" /> at the far right of the door to keep open.
+1. ドア一覧で開放状態にするドアの最も右にある <IcAirMore title='Control' /> ボタンをクリックします。
 
    <Image src='/img/air/bsair-monitoring-door-status-more-func.png' />
 
-2. Click <Cmd sid="event_log_unlock_mode" product="air" /> in the popup menu.
+2. ポップアップメニューで <Cmd sid='event_log_unlock_mode' product='air' /> をクリックします。
 
-3. The status in the <Cmd sid="door_status_column4" product="air" /> column changes to <Cmd sid="door_control_unlocked_description" product="air" />.
+3. <Cmd sid='door_status_column4' product='air' /> 列に <Cmd sid='door_control_unlocked_description' product='air' /> として状態が変更されます。
 
 <Image src='/img/air/bsair-monitoring-door-status-control-always-open.png' />
 
-Click <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="air" /> to return to normal operation.
+正常な動作に戻すには <IcAirMore title='Control' /> → <Cmd sid='release_icon_tooltip' product='air' /> をクリックします。
 
 </TabItem>
 <TabItem value='mobile' label='Mobile'>
@@ -131,13 +131,13 @@ Click <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product=
 </Column>
 <Column className='padding--l20'>
 
-1. Tap <IcAirMore title="Control" /> at the far right of the door. 
+1. ドアの最も右にある <IcAirMore title='Control' /> ボタンをタップします。 
 
-2. When the <Cmd en='Door Info and Control'>Door Info and Control</Cmd> option appear, tap <Cmd en='Unlock'>Unlock</Cmd>.
+2. <Cmd en='Door Info and Control'>出入口情報と制御</Cmd> オプションが表示されたら、<Cmd en='Unlock'>常時開放モード</Cmd> をタップします。
 
-3. A success message will appear at the bottom of the screen.
+3. 画面下部に成功メッセージが表示されます。
 
-Tap <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="air" /> to return to normal operation.
+正常な動作に戻すには <IcAirMore title='Control' /> → <Cmd sid='release_icon_tooltip' product='air' /> をタップします。
 
 </Column>
 </Columns>
@@ -145,24 +145,24 @@ Tap <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="a
 </TabItem>
 </Tabs>
 
-### Set lock mode {#lockMode}
+### 施錠モードの設定 {#lockMode}
 
-Keep a door locked regardless of the current schedule. Use this when enhanced security is required.
+現在のスケジュールに関係なくドアを施錠状態に維持できます。 セキュリティを強化する必要がある場合に有用です。
 
 <Tabs groupId='platform'>
 <TabItem value='web' label='Web'>
 
-1. In the door list, click <IcAirMore title="Control" /> at the far right of the door to keep locked.
+1. ドア一覧で施錠状態にするドアの最も右にある <IcAirMore title='Control' /> ボタンをクリックします。
 
    <Image src='/img/air/bsair-monitoring-door-status-more-func.png' />
 
-2. Click <Cmd sid="event_log_lock_mode" product="air" /> in the pop-up menu.
+2. ポップアップメニューで <Cmd sid='event_log_lock_mode' product='air' /> をクリックします。
 
-3. The status in the <Cmd sid="door_status_column4" product="air" /> column changes to <Cmd sid="door_control_locked_description" product="air" />.
+3. <Cmd sid='door_status_column4' product='air' /> 列に <Cmd sid='door_control_locked_description' product='air' /> として状態が変更されます。
 
 <Image src='/img/air/bsair-monitoring-door-status-control-lock-mode.png' />
 
-Click <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="air" /> to return to normal operation.
+正常な動作に戻すには <IcAirMore title='Control' /> → <Cmd sid='release_icon_tooltip' product='air' /> をクリックします。
 
 </TabItem>
 <TabItem value='mobile' label='Mobile'>
@@ -175,13 +175,13 @@ Click <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product=
 </Column>
 <Column className='padding--l20'>
 
-1. Tap <IcAirMore title="Control" /> at the far right of the door. 
+1. ドアの最も右にある <IcAirMore title='Control' /> ボタンをタップします。 
 
-2. When the <Cmd en='Door Info and Control'>Door Info and Control</Cmd> option appear, tap <Cmd sid='event_log_lock_mode' product='air' />.
+2. <Cmd en='Door Info and Control'>出入口情報と制御</Cmd> オプションが表示されたら、<Cmd sid='event_log_lock_mode' product='air' /> をタップします。
 
-3. A success message will appear at the bottom of the screen.
+3. 画面下部に成功メッセージが表示されます。
 
-Tap <IcAirMore title="Control" /> → <Cmd sid="release_icon_tooltip" product="air" /> to return to normal operation.
+正常な動作に戻すには <IcAirMore title='Control' /> → <Cmd sid='release_icon_tooltip' product='air' /> をタップします。
 
 </Column>
 </Columns>

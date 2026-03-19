@@ -1,161 +1,161 @@
 ---
 id: suprema-pass-app-advanced-features
-title: Set Up Advanced Features
-description: This guide explains how to configure Bluetooth and NFC authentication modes, enable two-factor authentication with a PIN or biometric option, review access logs, and use support features in the Suprema Pass app.
+title: Configurar funciones avanzadas
+description: Esta guía explica cómo configurar los modos de autenticación por Bluetooth y NFC, habilitar la autenticación de dos factores con PIN o autenticación biométrica, revisar los registros de acceso y utilizar las opciones de soporte en la app Suprema Pass.
 keywords:
-  - Advanced Features
+  - Funciones Avanzadas
   - Suprema Pass app
-  - two-factor authentication
-  - access logs
-  - support options
+  - autenticación de dos factores
+  - registros de acceso
+  - opciones de soporte
 ---
 
-The Suprema Pass app includes advanced settings and security options to enhance the user experience and access control features. Users can configure authentication methods, enable two-factor authentication, review access logs, report issues, and use support features.
+La app Suprema Pass incluye ajustes avanzados y opciones de seguridad para mejorar la experiencia del usuario y las funciones de control de acceso. Los usuarios pueden configurar los métodos de autenticación, habilitar la autenticación de dos factores, revisar los registros de acceso, reportar problemas y usar las opciones de soporte.
 
-## Configure connection method {#connectingSetting}
+## Configurar método de conexión {#connectingSetting}
 
-Select a preferred connection method to communicate with the access control device. On the Suprema Pass app home screen, tap <IcHamberg title='Hamburger menu' /> in the upper right corner, then select the desired mode in <Cmd>Connection Method</Cmd>.
+Seleccione un método de conexión preferido para comunicarse con el dispositivo de control de acceso. En la pantalla principal de la app Suprema Pass, toque <IcHamberg title='Hamburger menu' /> en la esquina superior derecha, luego seleccione el modo deseado en <Cmd>Método de conexión</Cmd>.
 
 <Image src='/img/air/bsair-sp-app-set-connection-mode.png' width='50%' className='none' />
 
 ### Bluetooth {#bluetooth}
 
-Choose between two Bluetooth authentication modes.
+Elija entre dos modos de autenticación por Bluetooth.
 
-* <Cmd>Only while App is on Screen</Cmd>: Authenticate with a mobile card only when the app is open on the mobile device. This mode saves battery but requires manually launching the app before approaching the door.
+* <Cmd>Solo mientras la app esté en pantalla</Cmd>: autenticar con la tarjeta móvil únicamente cuando la app esté abierta en el dispositivo. Este modo ahorra batería, pero requiere abrir la app manualmente antes de acercarse a la puerta.
 
-* <Cmd>Background Mode</Cmd>: Authenticate with a mobile card even if the device screen is off when the app runs in the background. This mode is more convenient but consumes more battery. If the app closes, relaunch it to resume background functions.
+* <Cmd>Modo en segundo plano</Cmd>: autenticar con la tarjeta móvil incluso si la pantalla del dispositivo está apagada cuando la app se ejecuta en segundo plano. Este modo es más cómodo pero consume más batería. Si la app se cierra, vuelva a abrirla para reanudar las funciones en segundo plano.
 
 ### NFC {#nfc}
 
-NFC authentication is available only on Android devices. Use NFC alone or with Bluetooth for faster entry.
+La autenticación por NFC está disponible solo en dispositivos Android. Utilice NFC solo o junto con Bluetooth para un acceso más rápido.
 
 :::info
 
-Android users with an NFC-compatible device can use NFC with Bluetooth.
+Los usuarios de Android con un dispositivo compatible con NFC pueden usar NFC junto con Bluetooth.
 
 :::
 
-## Two-factor authentication (2FA) {#twoFactorAuth}
+## Autenticación de dos factores (2FA) {#twoFactorAuth}
 
-Enable two-factor authentication with a **PIN, pattern, or biometric authentication** (face or fingerprint) for additional security.
+Habilite la autenticación de dos factores con un **PIN, un patrón o autenticación biométrica** (reconocimiento facial o huella dactilar) para mayor seguridad.
 
 <Image src='/img/air/bsair-sp-app-set-twofactor.png' className='none' />
 
 :::info
 
-* This feature is not supported in <Cmd>Background Mode</Cmd> connections because the app screen must remain open during access authentication.
+* Esta función no es compatible con las conexiones en <Cmd>Modo en segundo plano</Cmd> porque la pantalla de la app debe permanecer abierta durante la autenticación de acceso.
 
-* If the PIN or pattern is forgotten, reinstall the app and reactivate the mobile card.
+* Si se olvida el PIN o el patrón, reinstale la app y reactive la tarjeta móvil.
 
-* Supported features may vary depending on the mobile device.
+* Las funciones compatibles pueden variar según el dispositivo móvil.
 
 :::
 
-### iOS users {#ios}
+### usuarios de iOS {#ios}
 
-1. On the Suprema Pass app home screen, tap <IcHamberg title='Hamburger menu' /> in the upper right corner.
+1. En la pantalla principal de la app Suprema Pass, toque <IcHamberg title='Hamburger menu' /> en la esquina superior derecha.
 
-2. Set the connection method to <Cmd>Only while App is on Screen</Cmd>.
+2. Establezca el método de conexión en <Cmd>Solo mientras la app esté en pantalla</Cmd>.
 
-3. Tap <Cmd>Two-Factor Authentication</Cmd>.
+3. Toque <Cmd>Autenticación de dos factores</Cmd>.
 
-4. Tap <Cmd>Register PIN</Cmd>.
+4. Toque <Cmd>Registrar PIN</Cmd>.
 
-5. Enter the six-digit PIN.
+5. Ingrese el PIN de seis dígitos.
 
-6. When the success notification appears, tap <Cmd>OK</Cmd>.
+6. Cuando aparezca la notificación de éxito, toque <Cmd>Aceptar</Cmd>.
 
 :::info
 
-* Tap <Cmd>Change PIN</Cmd>, then enter the new PIN to change the PIN.
+* Toque <Cmd>Cambiar PIN</Cmd>, luego ingrese el nuevo PIN para cambiarlo.
 
-* Enable <Cmd>Biometric Authentication</Cmd> and follow the setup instructions to use biometrics.
+* Active <Cmd>Autenticación Biométrica</Cmd> y siga las instrucciones de configuración para usar la biometría.
 
 :::
 
-### Android users {#android}
+### Usuarios Android {#android}
 
-1. On the Suprema Pass app home screen, tap <IcHamberg title='Hamburger menu' /> in the upper right corner.
+1. En la pantalla principal de la app Suprema Pass, toque <IcHamberg title='Hamburger menu' /> en la esquina superior derecha.
 
-2. Set the connection method to <Cmd>Only while App is on Screen</Cmd> or <Cmd>NFC</Cmd>.
+2. Configure el método de conexión en <Cmd>Solo mientras la aplicación esté en pantalla</Cmd> o <Cmd>NFC</Cmd>.
 
-3. Tap <Cmd>Two-Factor Authentication</Cmd>.
+3. Toque <Cmd>Autenticación de dos factores</Cmd>.
 
-4. Tap <Cmd>PIN</Cmd> → <Cmd>Register PIN</Cmd> or <Cmd>Pattern</Cmd> → <Cmd>Register Pattern</Cmd>.
+4. Toque <Cmd>PIN</Cmd> → <Cmd>Registrar PIN</Cmd> o <Cmd>Patrón</Cmd> → <Cmd>Registrar Patrón</Cmd>.
 
-5. Enter the selected PIN or pattern.
+5. Ingrese el PIN o patrón seleccionado.
 
-6. When the success notification appears, tap <Cmd>OK</Cmd>.
+6. Cuando aparezca la notificación de éxito, toque <Cmd>Aceptar</Cmd>.
 
 :::info
 
-* Tap <Cmd>Change PIN</Cmd>, then enter the new PIN to change the PIN.
+* Toque <Cmd>Cambiar PIN</Cmd>, luego ingrese el nuevo PIN para cambiarlo.
 
-* Tap <Cmd>Change Pattern</Cmd>, then enter the new pattern to change the pattern.
+* Toque <Cmd>Cambiar Patrón</Cmd>, luego ingrese el nuevo patrón para cambiarlo.
 
-* Enable <Cmd>Biometric Authentication</Cmd> and follow the setup instructions to use biometrics.
+* Active <Cmd>Autenticación Biométrica</Cmd> y siga las instrucciones de configuración para usar la biometría.
 
 :::
 
-## Access logs {#accesslogs}
+## Registros de acceso {#accesslogs}
 
-Use access records to track entry attempts and troubleshoot entry-related issues.
+Utilice los registros de acceso para rastrear intentos de acceso y solucionar problemas relacionados con el acceso.
 
 <Image src='/img/air/bsair-sp-app-set-access-log.png' className='none' />
 
-1. On the Suprema Pass app home screen, tap <IcHamberg title='Hamburger menu' /> in the upper right corner.
+1. En la pantalla principal de la app Suprema Pass, toque <IcHamberg title='Hamburger menu' /> en la esquina superior derecha.
 
-2. Tap <Cmd>Access Logs</Cmd>.
+2. Toque <Cmd>Registros de acceso</Cmd>.
 
-3. Select a site, then set the start and end dates.
+3. Seleccione un sitio y luego establezca las fechas de inicio y fin.
 
-4. Tap <Cmd>Search</Cmd>.
+4. Toque <Cmd>Buscar</Cmd>.
 
-## Support center {#supportCenter}
+## Centro de soporte {#supportCenter}
 
-Go to <Cmd>Support Center</Cmd> for additional support.
+Vaya a <Cmd>Centro de soporte</Cmd> para obtener asistencia adicional.
 
 <Image src='/img/air/bsair-sp-app-set-support.png' className='none' />
 
-1. On the Suprema Pass app home screen, tap <IcHamberg title='Hamburger menu' /> in the upper right corner.
+1. En la pantalla principal de la app Suprema Pass, toque <IcHamberg title='Hamburger menu' /> en la esquina superior derecha.
 
-2. Tap <Cmd>More</Cmd>.
+2. Toque <Cmd>Más</Cmd>.
 
-3. Tap <Cmd>Support Center</Cmd>.
+3. Toque <Cmd>Centro de soporte</Cmd>.
 
-4. Go to the **Suprema Technical Support** page.
+4. Vaya a la página **Soporte técnico de Suprema**.
 
 :::note
 
-* Search questions or review FAQs.
+* Busque preguntas o revise las preguntas frecuentes.
 
-* If support is needed, tap the chat icon in the lower right corner to submit a ticket to the MOCA Systems team.
+* Si necesita asistencia, toque el icono de chat en la esquina inferior derecha para enviar un ticket al equipo de MOCA Systems.
 
 :::
 
-## Advanced Settings
+## Configuración Avanzada
 
-Tap <IcHamberg title='Hamburger menu' /> in the upper right corner on the Suprema Pass app home screen, then select <Cmd>More</Cmd> → <Cmd>Advanced Settings</Cmd> to use the following additional features.
+Toque <IcHamberg title='Hamburger menu' /> en la esquina superior derecha de la pantalla de inicio de la aplicación Suprema Pass, luego seleccione <Cmd>Más</Cmd> → <Cmd>Configuración Avanzada</Cmd> para usar las siguientes funciones adicionales.
 
 <Image src='/img/air/bsair-sp-app-set-advanced.png' className='none' />
 
-* **Location setting**: Select <Cmd>Global</Cmd> or <Cmd>EU</Cmd> server based on your location. Select <Cmd>Auto</Cmd> to have the app detect your location and choose the appropriate server.
+* **Configuración de ubicación**: Seleccione el servidor <Cmd>Global</Cmd> o <Cmd>EU</Cmd> según su ubicación. Seleccione <Cmd>Auto</Cmd> para que la app detecte su ubicación y elija el servidor adecuado.
 
-* <Cmd>Bluetooth Authentication</Cmd>: Enable <Cmd>Unwanted door opening prevention</Cmd> to block Bluetooth authentication when the mobile device is stationary.
+* <Cmd>Autenticación Bluetooth</Cmd>: Active <Cmd>Prevención de apertura no deseada</Cmd> para bloquear la autenticación Bluetooth cuando el dispositivo móvil está inmóvil.
 
-* <Cmd>Sensitivity Settings</Cmd>: Adjust the Bluetooth sensitivity between the mobile device and the reader compatible with BioStar Air. For more information, see <DocLink docId='platform/biostar_air/suprema-pass-app-sensitivity-settings' />.
+* <Cmd>Configuración de Sensibilidad</Cmd>: Ajuste la sensibilidad Bluetooth entre el dispositivo móvil y el lector compatible con BioStar Air. Para más información, consulte <DocLink docId='platform/biostar_air/suprema-pass-app-sensitivity-settings' />.
 
-## Additional features {#additionalFeatures}
+## Funciones adicionales {#additionalFeatures}
 
-Tap <IcHamberg title='Hamburger menu' /> in the upper right corner on the Suprema Pass app home screen, then select <Cmd>More</Cmd> to use the following additional features.
+Toca <IcHamberg title='Hamburger menu' /> en la esquina superior derecha de la pantalla principal de la app Suprema Pass, luego selecciona <Cmd>Más</Cmd> para acceder a las siguientes funciones.
 
-* <Cmd>Theme</Cmd>: Set the app's color mode. Select <Cmd>Light</Cmd>, <Cmd>Dark</Cmd>, or <Cmd>System</Cmd> mode.
+* <Cmd>Tema</Cmd>: Establece el modo de color de la app. Selecciona <Cmd>Claro</Cmd>, <Cmd>Oscuro</Cmd> o <Cmd>Sistema</Cmd>.
 
-* <Cmd>Bug Report</Cmd>: Write detailed information, such as the error occurrence context and reproduction steps, to submit the bug report to the developer.
+* <Cmd>Informe de errores</Cmd>: Escribe información detallada, como el contexto en el que ocurrió el error y los pasos para reproducirlo, para enviar el informe al desarrollador.
 
-* <Cmd>App Details</Cmd>: Check the model name, OS version, BLE support and status of the mobile device.
+* <Cmd>Detalles de la app</Cmd>: Consulta el nombre del modelo, la versión del sistema operativo y el soporte y el estado de BLE del dispositivo móvil.
 
-* <Cmd>App License</Cmd>: View the open-source license information used in the Suprema Pass app.
+* <Cmd>Licencia de la app</Cmd>: Consulta la información sobre las licencias de código abierto utilizadas en la app Suprema Pass.
 
-* <Cmd>Terms & Conditions</Cmd>: View the terms of use for the BioStar Air platform.
+* <Cmd>Términos y condiciones</Cmd>: Consulta los términos de uso de la plataforma BioStar Air.

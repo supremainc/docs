@@ -1,37 +1,37 @@
 ---
 id: api-user-management
-title: Using the User Management API
-description: This guide explains how to create, update, and deactivate users using the BioStar Air API, outlines the recommended integration scope, and includes Python sample code.
+title: ユーザー管理APIの使い方
+description: BioStar Air APIを使ってユーザーを作成・更新・停止する方法、推奨される連携範囲、ならびにPythonのサンプルコードを紹介します。
 keywords:
-  - User Management
+  - ユーザー管理
   - API
   - BioStar Air
-  - Python sample code
+  - Pythonのサンプル
 ---
 
-After obtaining an authentication token, you can manage the user lifecycle through the API. Use endpoints to retrieve, create, update, and deactivate users to automate user management on your BioStar Air site.
+認証トークンを取得したら、APIを使ってユーザーのライフサイクルを管理できます。 ユーザーの取得、作成、更新、停止などのエンドポイントを使用して、BioStar Airサイトのユーザーを自動化して管理できます。
 
-## Recommended API integration scope {#recommended-integration-scope}
+## 推奨されるAPI統合範囲 {#recommended-integration-scope}
 
-Limit your API integration to the scope below whenever possible.
+API統合は可能な限り以下の範囲に限定する。
 
-* User lifecycle management (create/update/delete)
+* ユーザーライフサイクル（作成/更新/削除）の管理
 
-* Credential management (mobile, RF card, biometric)
+* クレデンシャル管理（mobile、RFカード、生体認証）
 
-Allow administrators to continue using the existing BioStar Air web and mobile management apps.
+管理者が既存のBioStar Airウェブおよびモバイル管理アプリを使用できるようにする。
 
-* Access Level
+* 入退室レベル
 
-* Schedules
+* スケジュール
 
-* Door and device settings
+* ドアおよびデバイス設定
 
-* Site settings
+* サイト設定
 
-## User management API calls {#user-management-api-calls}
+## ユーザー管理API呼び出し {#user-management-api-calls}
 
-After logging in, use the following endpoints to manage users.
+ログイン後、次のエンドポイントを使用してユーザーを管理する。
 
 * `getUsers`
 
@@ -41,19 +41,19 @@ After logging in, use the following endpoints to manage users.
 
 * `suspendUsers`
 
-Always include a Bearer token in the Authorization header.
+常にAuthorizationヘッダにBearerトークンを含める。
 
 :::note
 
-To activate a user, assign at least one credential type.
+ユーザーを有効化するには、少なくとも1つのクレデンシャルタイプを割り当てる必要がある。
 
-> e.g., RF card, mobile, LinkPass
+> 例: RFカード、mobile、LinkPass
 
 :::
 
-## Sample application {#sample-application}
+## アプリケーション例 {#sample-application}
 
-The following sample code is a Python app that uploads a CSV file via the API and bulk deactivates users.
+以下は、APIを介してCSVファイルをアップロードし、ユーザーを一括で停止できるPythonアプリのサンプルコードです。
 
 ```python title='Python'
 import requests

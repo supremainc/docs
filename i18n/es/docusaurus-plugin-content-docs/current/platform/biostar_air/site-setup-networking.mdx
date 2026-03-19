@@ -1,96 +1,96 @@
 ---
 id: site-setup-networking
-title: Identify Network Ports and Devices
-description: Set network ports for BioStar Air-compatible devices and check MAC addresses.
+title: Identificar puertos y dispositivos de red
+description: Configure los puertos de red de los dispositivos compatibles con BioStar Air y verifique las direcciones MAC.
 keywords:
-  - networking
-  - ports
+  - redes
+  - puertos
 ---
 
 import MacAddressCalculator from '@site/src/components/MacAddressCalculator';
 
-BioStar Air and compatible devices must access specific network ports for seamless connection. Network ports allow secure communication between compatible devices, cloud services, and user applications. Administrators may need to verify a BioStar Air-compatible device's MAC address from its serial number for network configuration tasks.
+BioStar Air y los dispositivos compatibles deben acceder a puertos de red específicos para garantizar una conexión fluida. Estos puertos permiten la comunicación segura entre los dispositivos compatibles, los servicios en la nube y las aplicaciones de los usuarios. En ciertos casos, los administradores necesitan determinar la dirección MAC de un dispositivo compatible con BioStar Air a partir de su número de serie para realizar tareas de configuración de red.
 
-## Required network ports
+## Puertos de red necesarios
 
-Verify that the following ports are open on the network firewall.
+Verifique que los siguientes puertos estén abiertos en el firewall de la red.
 
-* **6379**, **6381**: Redis Ports
+* **6379**, **6381**: Puertos de Redis
 
-   Used to synchronize user information, handle fast event logging, manage sessions, and serve as a message broker for signaling between devices and the cloud.
+   Se utilizan para sincronizar la información de usuario, gestionar el registro rápido de eventos, administrar sesiones y actuar como un intermediario de mensajes para la señalización entre los dispositivos y la nube.
 
-* **5671**: AMQP over TLS (RabbitMQ)
+* **5671**: AMQP sobre TLS (RabbitMQ)
 
-   Provides a secure messaging protocol for real-time communication between services.
+   Proporciona un protocolo de mensajería seguro para la comunicación en tiempo real entre servicios.
 
 * **443**: HTTPS (TLS)
 
-   Used for standard secure web traffic and required for the following services:
+   Se utiliza para el tráfico web estándar y seguro y es necesario para los siguientes servicios:
 
-  * Access to the management portal web app through a web browser
+  * Acceso a la aplicación web del portal de administración desde un navegador
 
-  * BioStar Air mobile app (iOS/Android)
+  * Aplicación móvil BioStar Air (iOS/Android)
 
-  * API calls
+  * Llamadas a la API
 
-  * Device firmware updates through the cloud
+  * Actualizaciones de firmware de los dispositivos a través de la nube
 
-  * Device login and authentication services
+  * Servicios de inicio de sesión y autenticación para dispositivos
 
-* When using BioStar Air's built-in video management feature:
+* Al usar la función integrada de gestión de video de BioStar Air:
 
-  * Web-socket domain: eu-wss-api.airfob.com
+  * Dominio WebSocket: eu-wss-api.airfob.com
 
-  * Web-socket Port: 3500
+  * Puerto WebSocket: 3500
 
-  * TURN/STUN Ports: 80, 443, 3478, 5349
+  * Puertos TURN/STUN: 80, 443, 3478, 5349
 
 :::info
 
-Verify access to the following endpoints for device login and authentication.
+Verifique el acceso a los siguientes puntos de conexión para el inicio de sesión y la autenticación de dispositivos.
 
 * [https://e-afs-api.airfob.com/v1/device/login](https://e-afs-api.airfob.com/v1/device/login) (Europe)
 
-* [https://afs-api.airfob.com/v1/device/login](https://afs-api.airfob.com/v1/device/login) (Rest of world)
+* [https://afs-api.airfob.com/v1/device/login](https://afs-api.airfob.com/v1/device/login) (Rest del mundo)
 
 :::
 
-## Check the MAC address from the serial number
+## Comprobar la dirección MAC a partir del número de serie
 
-In certain cases, administrators need to determine a BioStar Air-compatible reader's MAC address using only its serial number. This is useful for tasks such as adding the device to a whitelist before adding it to the network.
+En algunos casos, los administradores necesitan determinar la dirección MAC de un lector compatible con BioStar Air utilizando únicamente su número de serie. Esto resulta útil para tareas como añadir el dispositivo a una lista blanca antes de conectarlo a la red.
 
-### Steps
+### Pasos
 
-1. **Find the serial number**:
+1. **Localice el número de serie**:
 
-   Locate the 9-digit serial number on the back of the device.
+   Localice el número de serie de 9 dígitos en la parte posterior del dispositivo.
 
-2. **Convert the serial number to hexadecimal**:
+2. **Convierta el número de serie a hexadecimal**:
 
-   Use a calculator or an online tool to convert the serial number from decimal to hexadecimal.
+   Utilice una calculadora o una herramienta en línea para convertir el número de serie de decimal a hexadecimal.
 
-3. **Extract the last 3 bytes**:
+3. **Extraiga los últimos 3 bytes**:
 
-   Take the last six characters from the hexadecimal value. These six characters represent the last 3 bytes.
+   Tome los últimos seis caracteres del valor hexadecimal; estos seis caracteres representan los últimos 3 bytes.
 
-4. **Build the MAC address**:
+4. **Construya la dirección MAC**:
 
-   The MAC address always starts with `00:17:FC:`. Append the last 3 bytes (six characters) from the hexadecimal value, separating each pair with a colon.
+   La dirección MAC siempre comienza con `00:17:FC:`. Añada los últimos 3 bytes (seis caracteres) del valor hexadecimal, separando cada par con dos puntos.
 
-### Example
+### Ejemplo
 
-1. **Serial number**: 546089489
+1. **Número de serie**: 546089489
 
 2. **Hexadecimal**: 208CAA11
 
-3. **Last 3 bytes**: 8CAA11
+3. **Últimos 3 bytes**: 8CAA11
 
-4. **MAC address**: 00:17:FC:8C:AA:11
+4. **Dirección MAC**: 00:17:FC:8C:AA:11
 
-These steps allow accurate identification of a BioStar Air-compatible reader on the network using its serial number.
+Estos pasos permiten identificar con precisión un lector compatible con BioStar Air en la red mediante su número de serie.
 
-### MAC address converter
+### Convertidor de direcciones MAC
 
-Enter the device's serial number below to get its MAC address instantly.
+Ingrese a continuación el número de serie del dispositivo para obtener su dirección MAC al instante.
 
 <MacAddressCalculator />

@@ -1,114 +1,114 @@
 ---
 id: how-to-upgrade-firmware
-title: Firmware upgrade
-description: Provide instructions to upgrade device firmware individually or in bulk through the web portal and mobile app. It also includes version checks and troubleshooting tips for BioStar Air.
+title: ファームウェアをアップグレードする
+description: ウェブポータルとモバイルアプリを使って装置のファームウェアを一括または個別にアップグレードする方法を案内します。 BioStar Airのバージョン確認とトラブルシューティングのヒントも含まれます。
 keywords:
-  - firmware
-  - upgrade
+  - ファームウェア
+  - アップグレード
   - BioStar Air
 ---
 
-Upgrade BioStar Air firmware to enhance device performance, strengthen security, and take advantage of new features. This simple process can be performed through the BioStar Air web portal or mobile app.
+BioStar Airのファームウェアをアップグレードして装置のパフォーマンスを向上させ、セキュリティを強化し、新機能を活用できます。 この手順は簡単で、BioStar AirのウェブポータルまたはBioStar Airのモバイルアプリから実行できます。
 
 :::info
 
-To upgrade the firmware in the BioStar Air mobile app, refer to <DocLink docId='platform/biostar_air/manage-device-with-app#upgradingFirmwareViaMobileApp' />.
+BioStar Air モバイルアプリでファームウェアをアップグレードするには、<DocLink docId='platform/biostar_air/manage-device-with-app#upgradingFirmwareViaMobileApp' />をご参照ください。
 
 :::
 
-## Before start
+## 開始する前に
 
-* Devices must be **online** to update firmware. Check the device status in the <Cmd sid='device_product_column' product='air' /> column of the device list. A green dot (<StatusOK />) next to the device image indicates the device is online.
+* ファームウェアをアップデートするには、装置が**オンライン状態**である必要があります。 <Cmd sid='device_product_column' product='air' /> 列で装置の状態を確認してください。 装置の画像の横に緑の点(<StatusOK />)が表示されていればオンライン状態です。
 
-* During a firmware update, the device becomes **temporarily offline**, but it should reconnect within **3–5 minutes**.
+* ファームウェア更新中はデバイスが**一時的にオフライン状態**になりますが、**3\~5分**以内に再接続されます。
 
-* We recommend running firmware updates outside business hours, as devices become temporarily offline.
+* ファームウェア更新中は装置が一時的にオフラインになりますので、業務時間外に実施することをおすすめします。
 
-* Configure notifications to receive alerts when new firmware is updated. For more information on alert settings, see <DocLink docId='platform/biostar_air/settings-alert-report#addAlert' />.
+* 新しいファームウェアがアップデートされると通知を受け取るよう設定できます。 通知設定の詳細は、<DocLink docId='platform/biostar_air/settings-alert-report#addAlert' />をご参照ください。
 
 :::info
 
-For more information on device management, see <DocLink docId='platform/biostar_air/managing-registered-devices' />.
+装置管理の詳細は、<DocLink docId='platform/biostar_air/managing-registered-devices' />をご参照ください。
 
 :::
 
-## Upgrade the firmware for an individual device {#upgradingFirmwareAdeviceViaWebPortal}
+## 個別の装置のファームウェアアップグレード {#upgradingFirmwareAdeviceViaWebPortal}
 
 <Tabs groupId='platform'>
 <TabItem value='web' label='Web'>
 
-Log in to the [BioStar Air](https://admin.biostarair.com) portal and follow these steps to upgrade firmware.
+[BioStar Air](https://admin.biostarair.com) ポータルにログインした後、次の手順に従ってファームウェアをアップグレードします。
 
-1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。
 
-2. Click the device in the device list that you want to upgrade.
+2. 装置一覧でアップグレードする装置をクリックします。
 
-3. When the <Cmd sid='device_edit_title' product='air' /> window appears, go to the <Cmd sid='new_layout_nav_title_detail' product='air' /> section.
+3. <Cmd sid='device_edit_title' product='air' /> ウィンドウが表示されたら、<Cmd sid='new_layout_nav_title_detail' product='air' /> セクションに移動してください。
 
-4. Click <Cmd sid="firmware_update_btn" product="air" />.
+4. <Cmd sid='firmware_update_btn' product='air' /> をクリックします。
 
    <Image src='/img/air/bsair-device-mng-fw-upgrade.png' caption />
 
-5. Select the latest firmware version for the device and confirm the update.
+5. 装置に応じて最新のファームウェアバージョンを選択し、更新を確認してください。
 
 </TabItem>
 <TabItem value='mobile' label='Mobile'>
 
-This guide explains how to upgrade the firmware using the mobile app.
+モバイルアプリでのファームウェアアップグレード手順を説明します。
 
 <Image src='/img/air/bsair-mobile-device-fw-update.png' className='none' />
 
-1. Open the BioStar Air app on your mobile device and log in.
+1. モバイル端末でBioStar Airアプリを起動してログインします。
 
-2. Tap the <Cmd sid="devices_card" product="air" /> card.
+2. <Cmd sid='devices_card' product='air' /> カードをタップします。
 
-3. Tap the device in the list whose firmware you want to upgrade.
+3. 装置一覧でアップグレードする装置をタップします。
 
-4. Tap <Cmd sid="firmware_update_btn" product="air" />.
+4. <Cmd sid='firmware_update_btn' product='air' /> をタップします。
 
-5. Select the latest firmware version and tap <Cmd sid="btn_ok" product="air" />.
+5. 最新のファームウェアバージョンを選択して <Cmd sid='btn_ok' product='air' /> をタップします。
 
-6. When the message window appears, review the information and tap <Cmd sid='device_btn_confirm' product='air' />.
+6. メッセージウィンドウが表示されたら、内容を確認して <Cmd sid='device_btn_confirm' product='air' /> をタップしてください。
 
 :::info
 
-* Firmware upgrade may take 5–10 minutes, during which the device is unavailable.
+* ファームウェアのアップグレードには約5〜10分かかる場合があり、その間装置は使用できません。
 
-* Do not power off the device.
+* 装置の電源を切らないでください。
 
-* The device restarts automatically after the firmware upgrade is complete.
+* ファームウェアアップグレード完了後、装置は自動的に再起動します。
 
 :::
 
 </TabItem>
 </Tabs>
 
-## Upgrade firmware on multiple devices at once {#upgradingFirmwareInBulkViaWebPortal}
+## 複数の装置を一括でアップグレード {#upgradingFirmwareInBulkViaWebPortal}
 
-1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。
 
-2. Check the current version for each device in the <Cmd sid="device_fw_column" product="air" /> column in the device list.
+2. 装置一覧の <Cmd sid='device_fw_column' product='air' /> 列で各装置の現在のバージョンを確認します。
 
-3. Click the arrow on the right side of the <Cmd sid="device_fw_column" product="air" /> column to sort devices by firmware version.
+3. 装置をファームウェアバージョンごとに並べ替えるには、<Cmd sid='device_fw_column' product='air' /> 列の右側にある矢印ボタンをクリックします。
 
    <Image src='/img/air/bsair-device-mng-list-fw-column-align.png' />
 
-4. Select the checkbox to the left of each device you want to upgrade.
+4. アップグレードする各装置の左側にあるチェックボックスをクリックします。
 
-5. Click the <IcAirFw width='24px' height='24px' title='Update Firmware' /> button at the top of the device list.
+5. 装置一覧の上部にある <IcAirFw width='24px' height='24px' title='Update Firmware' /> ボタンをクリックしてください。
 
    <Image src='/img/air/bsair-device-mng-list-fw-update.png' />
 
-6. When the <Cmd sid="update_fw_text" product="air" /> window appears, select the latest firmware version, and click <Cmd sid="btn_ok" product="air" />.
+6. <Cmd sid='update_fw_text' product='air' /> ウィンドウが表示されたら、最新のファームウェアバージョンを選択して <Cmd sid='btn_ok' product='air' /> をクリックします。
 
-7. When the message window appears, review the information and click <Cmd sid='device_btn_confirm' product='air' />.
+7. メッセージウィンドウが表示されたら、内容を確認して <Cmd sid='device_btn_confirm' product='air' /> をクリックしてください。
 
 :::info
 
-* Firmware upgrade may take 5–10 minutes, during which the device is unavailable.
+* ファームウェアのアップグレードには約5〜10分かかる場合があり、その間装置は使用できません。
 
-* Do not power off the device.
+* 装置の電源を切らないでください。
 
-* The device restarts automatically after the firmware upgrade is complete.
+* ファームウェアアップグレード完了後、装置は自動的に再起動します。
 
 :::

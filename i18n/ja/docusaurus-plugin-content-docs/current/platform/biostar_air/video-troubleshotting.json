@@ -1,22 +1,22 @@
 [
   {
-    "question": "Verify ONVIF profile G support",
-    "answer": "Check whether the camera supports ONVIF Profile G by searching for the model name on <a href='https://www.onvif.org' target='_blank'>ONVIF's conformant products page</a>. ONVIF Profile G is required for recorded video playback."
+    "question": "ONVIF Profile Gの対応を確認する",
+    "answer": "<a href='https://www.onvif.org' target='_blank'>ONVIF互換製品ページ</a>でモデル名を検索して、カメラがONVIF Profile Gに対応しているか確認する。録画ビデオを再生するにはONVIF Profile Gが必要です。"
   },
   {
-    "question": "Test video playback in camera settings",
-    "answer": "<ul><li>Log into the camera’s settings via its web interface.</li><li>Ensure that you can view the live camera feed and recorded videos.</li><li>Be aware that some cameras may restrict simultaneous playback of recorded videos in both the portal and the settings menu. If playback works in the camera settings but not in BioStar Air, try closing the settings interface and testing again.</li></ul>"
+    "question": "カメラ設定で映像再生をテストする",
+    "answer": "<ul><li>ウェブインターフェースでカメラの設定にログインする。</li><li>ライブ映像と録画映像が表示できるか確認する。</li><li>一部のカメラはポータルや設定メニューで録画映像の同時再生を制限することがある。カメラ設定では再生できるがBioStar Airでは再生できない場合は、設定画面を閉じて再度テストする。</li></ul>"
   },
   {
-    "question": "Check video codec compatibility",
-    "answer": "Ensure that the recorded video is using the <b>H.264</b> codec, as BioStar Air does not support <b>H.265</b>."
+    "question": "ビデオコーデックの互換性を確認する",
+    "answer": "<b>H.264</b>コーデックを使用しているか確認する。BioStar Airは<b>H.265</b>コーデックをサポートしていない。"
   },
   {
-    "question": "Format the SD card if codec was changed",
-    "answer": "If the video codec was changed at any point, the existing recordings may not play correctly. Formatting the SD card may be necessary for the new settings to take effect. This solution has been confirmed to resolve playback issues on some camera models."
+    "question": "コーデック変更時はSDカードをフォーマットする",
+    "answer": "ビデオコーデックが変更された場合、既存の録画が正しく再生されないことがあります。新しい設定を適用するにはSDカードのフォーマットが必要な場合があります。この解決策は一部のカメラモデルで再生問題を解決することが確認されています。"
   },
   {
-    "question": "Reference ONVIF's conformant products list",
-    "answer": "If you are unsure whether your camera meets ONVIF standards, visit the <a href='https://www.onvif.org' target='_blank'>ONVIF website</a> to verify compatibility."
+    "question": "ONVIF準拠製品一覧を参照する",
+    "answer": "<a href='https://www.onvif.org' target='_blank'>ONVIF</a>サイトにアクセスして互換性を確認する。"
   }
 ]

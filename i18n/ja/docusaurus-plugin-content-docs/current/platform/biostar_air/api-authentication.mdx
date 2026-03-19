@@ -1,33 +1,33 @@
 ---
 id: api-authentication
-title: API Authentication
-description: This article explains the BioStar Air Cloud API authentication flow, lists the API base URLs, describes how to issue Bearer tokens, and shows how to obtain a token from a browser.
+title: API認証
+description: BioStar Air Cloud APIの認証フロー、APIベースURLの一覧、Bearerトークンの発行方法、およびウェブブラウザでBearerトークンを取得する方法について説明します。
 keywords:
-  - API authentication
-  - Bearer token
-  - API base URL
+  - API認証
+  - Bearerトークン
+  - APIベースURL
   - BioStar Air
 ---
 
-The BioStar Air Cloud API uses Bearer token (JWT)-based authentication. You must obtain a token through the login process before calling the API, and include it in the Authorization header of every request.
+BioStar Air Cloud APIはBearerトークン（JWT）ベースの認証を使用します。 APIを呼び出す前にログインしてトークンを取得し、すべてのリクエストのAuthorizationヘッダーにトークンを含める必要があります。
 
-## API Base URLs {#api-base-urls}
+## APIベースURL {#api-base-urls}
 
-| Environment | Base URL |
+| 環境 | Base URL |
 | --- | --- |
 | Demo | https://demo-afs-api.airfob.com/v1/ |
 | Production - Europe | https://e-afs-api.airfob.com/v1/ |
-| Production - Korea | https://a-afs-api.airfob.com/v1/ (for all non-EU customers) |
+| Production - Korea | https://a-afs-api.airfob.com/v1/（EU以外のすべての顧客向け） |
 
-## API login flow {#api-login-flow}
+## APIログイン手順 {#api-login-flow}
 
-Make API calls with [Postman](https://www.postman.com/) or programmatically.
+[Postman](https://www.postman.com/) またはプログラムからAPI呼び出しを行うことができる。
 
-### Log in {#login}
+### ログイン {#login}
 
-* **Endpoint**: `login`
+* **Endpoint**：`login`
 
-* **Payload**:
+* **Payload**：
 
   ```json
   {
@@ -36,66 +36,66 @@ Make API calls with [Postman](https://www.postman.com/) or programmatically.
   }
   ```
 
-Returns a Bearer token (JWT).
+Bearerトークン（JWT）を返す。
 
-### Get account information {#get-self-accounts}
+### アカウント情報の取得 {#get-self-accounts}
 
-* **Endpoint**: `getSelfAccounts`
+* **Endpoint**：`getSelfAccounts`
 
-* **Authorization**: Bearer Token
+* **Authorization**：Bearer Token
 
-Returns a list of accessible sites and accounts.
+アクセス可能なサイトおよびアカウントの一覧を返す。
 
-### Log in to an account {#login-to-account}
+### アカウントにログイン {#login-to-account}
 
-* **Endpoint**: `loginAccount`
+* **Endpoint**：`loginAccount`
 
-* **Authorization**: Bearer Token
+* **Authorization**：Bearer Token
 
-Returns a site-specific token.
+特定サイトのトークンを返す。
 
-## How to get a Bearer token from a web browser {#getYourBearerToken}
+## ウェブブラウザでBearerトークンを取得する方法 {#getYourBearerToken}
 
-You can obtain the Bearer token directly from your browser using the developer tools, without Postman.
+Postmanを使わずに、ブラウザの開発者ツールで直接Bearerトークンを取得できます。
 
-### Chrome/Edge (Windows or Mac) {#chrome-edge}
+### Chrome/Edge（WindowsまたはMac）{#chrome-edge}
 
-1. In the web browser, press <Kbd>F12</Kbd> or <Kbd>Ctrl/Cmd + Shift + I</Kbd>.
+1. ウェブブラウザで<Kbd>F12</Kbd>または<Kbd>Ctrl/Cmd + Shift + I</Kbd>を押す。
 
-2. Go to the **Network** tab.
+2. **Network** タブに移動する。
 
-3. Refresh the page.
+3. ページをリロードする。
 
-4. Search for API calls.
+4. API呼び出しを検索する。
 
-   > e.g., `groups`, `login`
+   > 例: `groups`, `login`
 
-5. Click the request in the list.
+5. リストからリクエストをクリックする。
 
-6. Go to the **Headers** tab.
+6. 「**Headers**」タブに移動する。
 
-7. In the request headers, find `Authorization: Bearer ...`.
+7. リクエストヘッダで`Authorization: Bearer ...`を探す。
 
-8. Right-click the token and copy it.
+8. 右クリックしてトークンをコピーしてください。
 
 <Image src='/img/air/bsair-chrome-develope.png' alone />
 
-### Safari (Mac) {#safari}
+### Safari（Mac）{#safari}
 
-1. Enable the **Developer** menu. In Safari, go to Preferences → Advanced and check **Show Develop menu**.
+1. 「開発者」メニューを有効にしてください。 Safari → Preferences → Advanced → **Show Develop menu**をチェックする。
 
-2. Go to **Develop** → **Show Web Inspector**.
+2. **Develop** → **Show Web Inspector** に移動する。
 
-3. Go to the **Network** tab.
+3. **Network** タブに移動する。
 
-4. Refresh the page.
+4. ページをリロードする。
 
-5. Filter and inspect API calls.
+5. API呼び出しをフィルタリングして検査する。
 
-6. Copy the `Authorization: Bearer` token from the request headers.
+6. リクエストヘッダから`Authorization: Bearer`トークンをコピーする。
 
 :::info
 
-A Bearer token copied from the browser can be reused in Postman. Always use the latest Bearer token.
+ブラウザからコピーしたBearerトークンはPostmanで再利用できる。 常に最新のBearerトークンを使用してください。
 
 :::

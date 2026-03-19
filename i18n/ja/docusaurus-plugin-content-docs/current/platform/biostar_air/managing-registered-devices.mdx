@@ -1,167 +1,167 @@
 ---
 id: managing-registered-devices
-title: Manage Registered Devices
-description: In the BioStar Air portal, check device connection status, change biometric and card settings, and update firmware. Efficiently manage the security system using individual or bulk operations.
+title: 登録済みデバイスの管理
+description: BioStar Air ポータルでデバイスの接続状態を確認し、生体認証やカード設定を変更したり、ファームウェアを更新できます。 個別または一括でセキュリティシステムを効率的に管理できます。
 keywords:
-  - Device Management
-  - Device Settings
+  - デバイス管理
+  - デバイス設定
   - BioStar Air
-  - Biometric
-  - Card Setting
-  - Firmware Upgrade
-  - Network settings
+  - 生体認証
+  - カード設定
+  - ファームウェアのアップデート
+  - ネットワーク設定
 ---
 
-View the connection status of registered devices at a glance, change biometric and card settings, or update firmware. Manage a few devices individually and many devices in bulk to operate your security system efficiently.
+登録されたデバイスの接続状態を一目で確認し、生体認証やカード設定を変更したり、ファームウェアを更新できます。 少数のデバイスは個別に、多数のデバイスは一括で管理できるため、セキュリティシステムを効率的に運用できます。
 
 :::info
 
-* Devices can be registered only in the **BioStar Air mobile app** for iOS or Android. You cannot register devices from the web portal. For detailed instructions on registering devices using the mobile app, refer to <DocLink docId='platform/biostar_air/manage-device-with-app' />.
+* デバイスは iOS または Android の **BioStar Air モバイルアプリ**でのみ登録できます。 ウェブポータルでは登録できない。 モバイルアプリでのデバイス登録方法の詳細は <DocLink docId='platform/biostar_air/manage-device-with-app' /> を参照してください。
 
-* Internet access is required to use certain features, such as **remote access**, **biometric authentication**, **QR code access**, and **firmware updates**.
+* **リモート接続**、**生体認証**、**QRコードによる入退室**、**ファームウェアの更新**など一部の機能を利用するには、デバイスがインターネットに接続されている必要があります。
 
 :::
 
 :::tip
 
-Refer to the following video to watch the device registration and management guide.
+デバイスの登録と管理に関するビデオガイドを見るには、次のビデオを参照してください。
 
 <YouTube className='fit--content' videoId="lpMPkMyjr-c" />
 
 :::
 
-## View the device list {#viewing-device-information}
+## デバイス一覧の表示 {#viewing-device-information}
 
-The device list lets you see all devices registered in BioStar Air at a glance. View key information for each device at a glance, such as connection status, model name, and firmware version. Click a device to view details and modify settings.
+デバイス一覧では、BioStar Air に登録されたすべてのデバイスを一目で確認できます。 各デバイスの接続状態、モデル名、ファームウェアバージョンなどの主要な情報を一目で確認できます。 また、各デバイスをクリックして詳細情報を確認し、設定を変更できます。
 
 <Image src='/img/air/bsair-device-mng-list.png' />
 
-Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。
 
-### Device connection status {#device-connection-status}
+### デバイス接続状況 {#device-connection-status}
 
-Check each device’s connection status from the status icons in the device list.
+デバイス一覧のステータスアイコンで各デバイスの接続状態を確認できます。
 
-* <StatusOK /> **Green**: The device is online, can be controlled remotely, and can accept and update QR authentication.
+* <StatusOK /> **緑**: オンライン状態で、該当デバイスをリモートで制御でき、QR認証を受け入れ、アップデートできます。
 
-* <StatusFail /> **Red**: The device is offline.
+* <StatusFail /> **赤**: オフライン状態のデバイスです。
 
-* <StatusUpdating /> **Orange**: Firmware is updating.
+* <StatusUpdating /> **オレンジ**: ファームウェアをアップデート中です。
 
-* ⚪ **Not connected**: The device has no network connection. (e.g., Airfob Patch)
+* ⚪ **接続なし**：ネットワークに接続されていないデバイスです。 (例：Airfob Patch)
 
-* <IcAirWarn /> **Warning**: Synchronization is required between the server and the device.
+* <IcAirWarn /> **注意**：サーバーとデバイス間の同期が必要な状態です。
 
-### Device information {#device-information}
+### デバイス情報 {#device-information}
 
-Each column in the device list includes the following information.
+デバイス一覧の各列には、以下の情報が含まれます。
 
 <Image src='/img/air/bsair-device-mng-list-info.png' />
 
-* <Cmd sid="device_product_column" product="air" />: The device name and model retrieved from the Suprema database.
+* <Cmd sid='device_product_column' product='air' />：Supremaデータベースから取得したデバイス名とモデル名です。
 
-* <Cmd sid="device_nickname_column" product="air" />: A user-editable field for easier identification. Edit it in the <Cmd sid="device_edit_title" product="air" /> window that appears after clicking the device in the list.
+* <Cmd sid='device_nickname_column' product='air' />：識別しやすいようにユーザーが編集できる項目です。 デバイス一覧でデバイスをクリックすると表示される <Cmd sid='device_edit_title' product='air' /> ウィンドウで変更できます。
 
-* <Cmd sid="device_id_column" product="air" />: The unique identifier assigned to the device.
+* <Cmd sid='device_id_column' product='air' />：デバイスに割り当てられた固有識別子です。
 
-* <Cmd sid="device_group_column" product="air" />: The group to which the device belongs.
+* <Cmd sid='device_group_column' product='air' />：デバイスが属するグループです。
 
-* <Cmd sid='device_battery_column' product='air' />: Available only on battery-powered devices. Supported only by AirPop Tag (AirFob Tag) devices.
+* <Cmd sid='device_battery_column' product='air' />：バッテリー駆動のデバイスで確認できます。 エアポップタグ(AirFob Tag) デバイスのみ対応しています。
 
-* <Cmd sid="device_fw_column" product="air" />: The currently installed firmware version.
+* <Cmd sid='device_fw_column' product='air' />：現在インストールされているファームウェアのバージョンです。
 
-* <Cmd sid="device_timezone_column" product="air" />: The time zone set on the device.
+* <Cmd sid='device_timezone_column' product='air' />：デバイスに設定されているタイムゾーンです。
 
-### Filter {#deviceFiltering}
+### フィルタリング {#deviceFiltering}
 
-You can use the filter feature in the top header of the device list. Click <IcAirFilter title='Filter' /> in the header to set the desired conditions.
+デバイス一覧の上部ヘッダー領域でフィルター機能を利用できます。 ヘッダー領域の <IcAirFilter title='Filter' /> ボタンをクリックすると、条件を設定できます。
 
 <Image src='/img/air/bsair-device-mng-list-filter.png' />
 
 :::info
 
-To reset the applied filters, click <IcAirFilter title='Filter' /> and select <Cmd sid='column_filter_modal_reset_btn' product='air' />.
+適用したフィルター条件を初期化するには、<IcAirFilter title='Filter' /> ボタンをクリックし、<Cmd sid='column_filter_modal_reset_btn' product='air' /> ボタンを選択してください。
 
 :::
 
-## Edit individual device information and settings {#editing-individual-device}
+## 個別デバイス情報および設定の編集 {#editing-individual-device}
 
-1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+1. 画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。
 
-2. Click the device you want to edit in the list.
+2. 一覧から編集するデバイスをクリックします。
 
-3. The <Cmd sid="device_edit_title" product="air" /> window appears.
+3. <Cmd sid='device_edit_title' product='air' /> ウィンドウが表示されます。
 
    <Image src='/img/air/bsair-device-mng-list-edit-details.png' caption />
 
-4. Edit the device’s details or settings.
+4. デバイスの詳細情報または設定を編集します。
 
-5. Click <Cmd sid="save_btn" product="air" /> at the bottom to save the changes.
+5. 変更を保存するには、下部の <Cmd sid='save_btn' product='air' /> をクリックします。
 
-For more information on editing fields and setting options for each section, see <DocLink docId='platform/biostar_air/device-info-settings' />.
+各セクションごとの詳細情報の編集および設定オプションの詳細は <DocLink docId='platform/biostar_air/device-info-settings' /> を参照してください。
 
-## Bulk device actions {#bulkDeviceActions}
+## デバイス一括操作 {#bulkDeviceActions}
 
-Use the controls at the top of the device list to manage multiple devices at once.
+デバイス一覧上部で提供される機能により、複数のデバイスを一度に管理できます。
 
 <Image src='/img/air/bsair-device-mng-list-tools.png' />
 
-* <IcAirRef width='24px' height='24px' title='Refresh' />: Refresh the device list and device status.
+* <IcAirRef width='24px' height='24px' title='Refresh' />：デバイス一覧とデバイスの状態を更新します。
 
-* <IcAirRemove width='24px' height='24px' title='Delete' />: Delete devices registered to the site.
+* <IcAirRemove width='24px' height='24px' title='Delete' />：サイトに登録されたデバイスを削除できます。
 
    :::warning
 
-   Only online devices can be deleted permanently. If the device is offline, delete it first in the BioStar Air mobile app before adding it to another site. For more information on deleting devices using the mobile app, see <DocLink docId='platform/biostar_air/manage-device-with-app#removingDevice' />.
+   オンラインのデバイスのみ永続的に削除できます。 デバイスがオフラインの場合、別のサイトに追加する前に BioStar Air モバイルアプリで先に削除してください。 モバイルアプリでのデバイス削除方法の詳細は <DocLink docId='platform/biostar_air/manage-device-with-app#removingDevice' /> を参照してください。
 
    :::
 
-* <IcAirFw width='24px' height='24px' title='Update Firmware' />: Update the firmware of selected devices. For more information about firmware upgrades, see <DocLink docId='platform/biostar_air/how-to-upgrade-firmware' />.
+* <IcAirFw width='24px' height='24px' title='Update Firmware' />：デバイス一覧で選択したデバイスのファームウェアを更新できます。 ファームウェアの更新に関する詳細は <DocLink docId='platform/biostar_air/how-to-upgrade-firmware' /> を参照してください。
 
-* <IcAirCloud width='24px' height='24px' title='Sync with Server' />: Synchronize biometric templates from selected devices to the server.
+* <IcAirCloud width='24px' height='24px' title='Sync with Server' />：デバイス一覧で選択したデバイスからサーバーに生体認証テンプレートを同期できます。
 
-* <IcAirGroup width='24px' height='24px' title='Manage Groups' />: Assign selected devices to a group. For more information about device group management, see <DocLink inner='#device_group_in_device_list' />.
+* <IcAirGroup width='24px' height='24px' title='Manage Groups' />：デバイス一覧で選択したデバイスをグループに割り当てることができます。 デバイスグループの管理の詳細については、<DocLink inner='#device_group_in_device_list' />を参照してください。
 
-* <IcAirByte width='24px' height='24px' title='RF Card Byte Order' />: Switch the RF card byte order of the selected device in the list to <Cmd>MSB</Cmd> or <Cmd>LSB</Cmd>.
+* <IcAirByte width='24px' height='24px' title='RF Card Byte Order' />：デバイス一覧で選択したデバイスのRFカードのバイト順を<Cmd>MSB</Cmd>または<Cmd>LSB</Cmd>に切り替えられます。
 
-  * <Cmd>MSB</Cmd>: Processes card data in order from large byte units to small byte units, sequentially storing the card serial number (CSN) from left to right.
+  * <Cmd>MSB</Cmd>：カードデータを処理するとき、大きいバイト単位から小さいバイト単位の順に処理し、カードシリアル番号 (CSN) を左から右へ順に保存します。
 
-  * <Cmd>LSB</Cmd>: Processes card data in order from small byte units to large byte units, storing the card serial number (CSN).
+  * <Cmd>LSB</Cmd>：カードデータを処理するとき、小さいバイト単位から大きいバイト単位の順に処理してカードシリアル番号 (CSN) を保存します。
 
-* <IcAirDset width='24px' height='24px' title='Load Device Setting' />: Import the device settings originally configured in standalone mode.
+* <IcAirDset width='24px' height='24px' title='Load Device Setting' />：スタンドアロンモードで、元の設定を持つデバイスの設定を読み込むことができます。
 
-* <IcAirUpd width='24px' height='24px' title='Update Status' />: Update the status of the selected devices in the device list.
+* <IcAirUpd width='24px' height='24px' title='Update Status' />：デバイス一覧で選択したデバイスの状態を更新できます。
 
-## Device group management {#device_group_in_device_list}
+## デバイスグループの管理 {#device_group_in_device_list}
 
-From the device list, select individual devices to add them to a device group or remove them from an existing group.
+デバイス一覧で個別のデバイスを選択して、グループに追加したり既存のグループから削除したりできます。
 
-1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+1. 画面左側のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックしてください。
 
-2. Select the checkbox for the device to add to or remove from a group.
+2. デバイスグループ一覧で、グループに追加または削除するデバイスのチェックボックスをクリックします。
 
-3. Click <IcAirGroup width='24px' height='24px' title='Manage Groups' /> at the top of the device group list.
+3. デバイスグループ一覧の上部にある <IcAirGroup width='24px' height='24px' title='Manage Groups' /> ボタンをクリックしてください。
 
-4. When the <Cmd sid="manage_device_group_title" product="air" /> window appears, add or remove the selected devices from the group.
+4. <Cmd sid='manage_device_group_title' product='air' /> ウィンドウが表示されたら、選択したデバイスをグループに追加または削除します。
 
    <Image src='/img/air/bsair-device-mng-list-group-mng.png' />
 
-   <Cmd sid="manage_device_group_title_two" product="air" /> checkboxes have the following meanings:
+   <Cmd sid='manage_device_group_title_two' product='air' /> のチェックボックスの状態は、以下の意味を持ちます。
 
-   * <Cmd sid="manage_device_group_checkbox_state_one" product="air" />: Removes the selected devices from the group.
+   * <Cmd sid='manage_device_group_checkbox_state_one' product='air' />：選択したデバイスをグループから削除します。
 
-   * <Cmd sid="manage_device_group_checkbox_state_two" product="air" />: Certain selected devices are currently in the group.
+   * <Cmd sid='manage_device_group_checkbox_state_two' product='air' />：選択したデバイスの一部がグループに含まれている状態です。
 
-   * <Cmd sid="manage_device_group_checkbox_state_three" product="air" />: Adds the selected devices to the group.
+   * <Cmd sid='manage_device_group_checkbox_state_three' product='air' />：選択したデバイスをグループに追加します。
 
-5. Click <Cmd sid="btn_ok" product="air" /> to save the changes.
+5. 変更内容を保存するには、<Cmd sid='btn_ok' product='air' /> ボタンをクリックします。
 
 :::info
 
-* Selecting another group in the <Cmd sid="manage_device_group_title" product="air" /> window moves the selected devices to that group.
+* <Cmd sid='manage_device_group_title' product='air' /> ウィンドウで別のグループを選択すると、選択したデバイスはそのグループに移動します。
 
-* A device can belong to multiple groups. A single device can be assigned to multiple groups.
+* デバイスはグループに重複して所属できます。 1つのデバイスを複数のグループに割り当てることができます。
 
-* Click <Cmd sid="device_btn_reset" product="air" /> to initialize the changes.
+* 変更内容を初期化するには、<Cmd sid='device_btn_reset' product='air' /> ボタンをクリックします。
 
 :::

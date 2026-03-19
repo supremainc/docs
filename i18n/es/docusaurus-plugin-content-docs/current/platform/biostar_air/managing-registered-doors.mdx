@@ -1,182 +1,182 @@
 ---
 id: managing-registered-doors
-title: Manage Registered Doors
-description: Assign access devices to registered doors, configure relays, and manage access schedules. Control access for security, fire evacuation, and time and attendance management.
+title: Administrar puertas registradas
+description: Asigne dispositivos de acceso a las puertas registradas, configure relés y administre los horarios de acceso. Controle el acceso para seguridad, evacuación en caso de incendio y control de tiempo y asistencia.
 keywords:
-  - Door Management
+  - Administración de Puertas
   - BioStar Air
 ---
 
-Assign access devices to registered doors, configure relays, and set access schedules. Systematically control access for security, fire evacuation, and time and attendance (T&A).
+Asigne dispositivos de acceso a las puertas registradas, configure relés y establezca los horarios de acceso. Controle el acceso de forma sistemática para la seguridad, la evacuación en caso de incendio y el control de tiempo y asistencia (T&A).
 
 :::tip
 
-Watch the following video for a tutorial on registering and managing doors.
+Vea el siguiente video para aprender a registrar y administrar puertas.
 
 <YouTube className='fit--content' videoId="g7fUC-9f0qM" />
 
 :::
 
-## View Door List
+## Ver la lista de puertas
 
-The door list displays all doors registered in BioStar Air at a glance. View key information for each door, such as its name, assigned devices, and group. Click a door in the list to view details and modify settings.
+La lista de puertas muestra todas las puertas registradas en BioStar Air de un vistazo. Vea información clave de cada puerta, como su nombre, los dispositivos asignados y el grupo. Haga clic en una puerta de la lista para ver los detalles y modificar la configuración.
 
 <Image src='/img/air/bsair-door-mng-registered-door-list.png' />
 
-Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar to view registered doors.
+Haga clic en <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> en la barra lateral izquierda para ver las puertas registradas.
 
-### Door information
+### Información de la puerta
 
-The door list provides the following information.
+La lista de puertas muestra la siguiente información.
 
-* <Cmd sid="door_status_column1" product="air" />: The name of the door. This is usually assigned automatically during device registration, but administrators can change the door name.
+* <Cmd sid="door_status_column1" product="air" />: El nombre de la puerta. Normalmente se asigna automáticamente durante el registro del dispositivo, pero los administradores pueden cambiarlo.
 
-* <Cmd sid="door_product_column2" product="air" />: Device that authenticates users entering the door.
+* <Cmd sid="door_product_column2" product="air" />: Dispositivo que autentica a los usuarios al ingresar por la puerta.
 
-* <Cmd sid="door_product_column3" product="air" />: Device that authenticates users exiting the door.
+* <Cmd sid="door_product_column3" product="air" />: Dispositivo que autentica a los usuarios al salir por la puerta.
 
-* <Cmd sid="door_product_column4" product="air" />: Name of the group assigned to the door.
+* <Cmd sid="door_product_column4" product="air" />: Nombre del grupo asignado a la puerta.
 
-* <Cmd sid='door_product_column5' product='air' />: Description of the door.
+* <Cmd sid='door_product_column5' product='air' />: Descripción de la puerta.
 
-* <Cmd sid='door_product_column6' product='air' />: Displays camera information linked to the door. <Cmd sid='door_product_column6' product='air' /> column appears only after you enable the <Cmd sid='site_setting_video_management' product='air' /> feature at <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> → <Cmd sid='site_setting_qr_reader_tab' product='air' />.
+* <Cmd sid='door_product_column6' product='air' />: Muestra la información de la cámara asociada a la puerta. La columna <Cmd sid='door_product_column6' product='air' /> aparece solo después de habilitar la función <Cmd sid='site_setting_video_management' product='air' /> en <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> → <Cmd sid='site_setting_qr_reader_tab' product='air' />.
 
-### Additional features
+### Funciones adicionales
 
-When one or more doors are selected in the list, administrators can manage them using the following tools.
+Cuando se selecciona una o más puertas en la lista, los administradores pueden gestionarlas mediante las siguientes herramientas.
 
-* <IcAirEdit width='24px' height='24px' title='Edit' />: Edit door information or change the settings of assigned devices. This option is available only when one door is selected. For more information, see <DocLink inner='#editingDoors' />.
+* <IcAirEdit width='24px' height='24px' title='Edit' />: Editar la información de la puerta o cambiar la configuración de los dispositivos asignados. Esta opción está disponible solo cuando se selecciona una puerta. Para obtener más información, consulte <DocLink inner='#editingDoors' />.
 
-* <IcAirRef width='24px' height='24px' title='Refresh' />: Refresh the door list.
+* <IcAirRef width='24px' height='24px' title='Refresh' />: Actualizar la lista de puertas.
 
-* <IcAirRemove width='24px' height='24px' title='Delete' />: Remove the selected doors from the list.
+* <IcAirRemove width='24px' height='24px' title='Delete' />: Eliminar las puertas seleccionadas de la lista.
 
-* <IcAirSchedule width='24px' height='24px' title='Schedule Settings' />: Set a schedule for door open and locked states. For more information on managing door schedules, see <DocLink docId='platform/biostar_air/managing-door-schedules' />.
+* <IcAirSchedule width='24px' height='24px' title='Schedule Settings' />: Establecer un horario para los estados de apertura y bloqueo de la puerta. Para obtener más información sobre cómo gestionar los horarios de las puertas, consulte <DocLink docId='platform/biostar_air/managing-door-schedules' />.
 
-* <IcAirGroup width='24px' height='24px' title='Manage Groups' />: Group the selected doors. For more information on managing door groups, see <DocLink docId='platform/biostar_air/managing-door-groups' />.
+* <IcAirGroup width='24px' height='24px' title='Manage Groups' />: Agrupar las puertas seleccionadas. Para obtener más información sobre cómo gestionar los grupos de puertas, consulte <DocLink docId='platform/biostar_air/managing-door-groups' />.
 
-* <IcAirReport width='24px' height='24px' title='Report' />: Generate door reports. For more information on generating door reports, see <DocLink inner='#generatingDoorReports' />.
+* <IcAirReport width='24px' height='24px' title='Report' />: Generar informes de las puertas. Para obtener más información sobre cómo generar informes de puertas, consulte <DocLink inner='#generatingDoorReports' />.
 
-### Filter {#deviceFiltering}
+### Filtrar {#deviceFiltering}
 
-Filter the door list by door group. Click the <Cmd sid='door_product_column4' product='air' /> column's <IcAirFilter title='Filter' /> button and select the desired group. Click <Cmd sid='popup_ok_btn' product='air' /> to show only the doors in the selected group.
+Filtre la lista de puertas por grupo. Haga clic en la columna <Cmd sid='door_product_column4' product='air' /> y en su botón <IcAirFilter title='Filter' /> y seleccione el grupo deseado. Haga clic en <Cmd sid='popup_ok_btn' product='air' /> para mostrar solo las puertas del grupo seleccionado.
 
 <Image src='/img/air/bsair-door-mng-list-filter.png' />
 
 :::info
 
-To reset the applied filters, click <IcAirFilter title='Filter' /> and select <Cmd sid='column_filter_modal_reset_btn' product='air' />.
+Para restablecer los filtros aplicados, haga clic en <IcAirFilter title='Filter' /> y seleccione <Cmd sid='column_filter_modal_reset_btn' product='air' />.
 
 :::
 
-## Add doors {#addingDoor}
+## Agregar puertas {#addingDoor}
 
-### Add with a device
+### Agregar usando un dispositivo
 
-In the final step of device registration in the mobile app, select the <Cmd en='Create a door with this device'>Create a door with this device</Cmd> option to create a door. For more information on how to register a device with the mobile app, see <DocLink docId='platform/biostar_air/manage-device-with-app' />.
+En el paso final del registro del dispositivo en la aplicación móvil, seleccione la opción <Cmd en='Create a door with this device'>Create a door with this device</Cmd> para crear una puerta. Para obtener más información sobre cómo registrar un dispositivo con la aplicación móvil, consulte <DocLink docId='platform/biostar_air/manage-device-with-app' />.
 
 <Image src='/img/air/bsair-door-mng-register-device-as-door.png' />
 
-### Add from the web portal
+### Agregar desde el portal web
 
-Follow the steps below to add a new door in the BioStar Air portal.
+Siga los pasos a continuación para agregar una nueva puerta en el portal BioStar Air.
 
-1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar.
+1. Haga clic en <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Click <Cmd sid="add_doors.title" product="air" /> at the top right of the screen.
+2. Haga clic en <Cmd sid="add_doors.title" product="air" /> en la parte superior derecha de la pantalla.
 
-3. When the <Cmd sid="add_doors.title" product="air" /> panel appears, enter <Cmd sid="add_doors.door_name" product="air" />.
+3. Cuando aparezca el panel <Cmd sid="add_doors.title" product="air" />, ingrese <Cmd sid="add_doors.door_name" product="air" />.
 
    <Image src='/img/air/bsair-door-mng-registered-door-add.png' />
 
-4. Select <Cmd sid="door_product_column2" product="air" /> and <Cmd sid="door_product_column3" product="air" />.
+4. Seleccione <Cmd sid="door_product_column2" product="air" /> y <Cmd sid="door_product_column3" product="air" />.
 
-5. Click <Cmd sid="save_btn" product="air" /> to save and add the door settings.
+5. Haga clic en <Cmd sid="save_btn" product="air" /> para guardar y agregar la configuración de la puerta.
 
 :::note
 
-**Rules for assigning devices to doors**
+**Reglas para asignar dispositivos a puertas**
 
-* Each device can be assigned to **one door** only.
+* Cada dispositivo solo puede asignarse a **una sola puerta**.
 
-* If a device is already registered but does not appear in the available device list, check whether it is assigned to another door. If it is assigned to another door, remove it from that door and try again.
+* Si un dispositivo ya está registrado pero no aparece en la lista de dispositivos disponibles, verifique si está asignado a otra puerta. Si lo está, quítelo de esa puerta e inténtelo de nuevo.
 
 :::
 
-## Edit doors {#editingDoors}
+## Editar puertas {#editingDoors}
 
-Follow these steps to edit door details and settings.
+Siga estos pasos para editar los detalles y la configuración de la puerta.
 
-1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar.
+1. Haga clic en <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Click the door you want to edit in the list. Or select the checkbox to the left of the door and click <IcAirEdit /> in the top left sidebar.
+2. Haga clic en la puerta que desea editar en la lista. O seleccione la casilla a la izquierda de la puerta y haga clic en <IcAirEdit /> en la barra lateral superior izquierda.
 
-3. When the <Cmd sid="edit_door.title" product="air" /> panel appears, edit <Cmd sid="add_doors.door_name" product="air" /> and <Cmd sid="door_product_column5" product="air" />.
+3. Cuando aparezca el panel <Cmd sid="edit_door.title" product="air" />, edite <Cmd sid="add_doors.door_name" product="air" /> y <Cmd sid="door_product_column5" product="air" />.
 
    <Image src='/img/air/bsair-door-mng-registered-door-edit.png' />
 
-4. Select the device for door entry authentication from the <Cmd sid="door_entry_and_exit" product="air" /> section.
+4. Seleccione el dispositivo para la autenticación de entrada de la puerta en la sección <Cmd sid="door_entry_and_exit" product="air" />.
 
-   * <Cmd sid="door_product_column2" product="air" />: Select the device that authenticates users entering the door.
+   * <Cmd sid="door_product_column2" product="air" />: Seleccione el dispositivo que autentica a los usuarios al entrar por la puerta.
 
-   * <Cmd sid="door_product_column3" product="air" />: Select the device that authenticates users exiting the door.
+   * <Cmd sid="door_product_column3" product="air" />: Seleccione el dispositivo que autentica a los usuarios al salir por la puerta.
 
-   * <Cmd sid='door_product_column6' product='air' />: You can connect a CCTV camera for event logs.
+   * <Cmd sid='door_product_column6' product='air' />: Puede conectar una cámara CCTV para los registros de eventos.
 
    :::note
 
-   To use the camera, enable the <Cmd sid='site_setting_video_management' product='air' /> feature under <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> → <Cmd sid='site_setting_qr_reader_tab' product='air' />.
+   Para usar la cámara, habilite la función <Cmd sid='site_setting_video_management' product='air' /> en <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> → <Cmd sid='site_setting_qr_reader_tab' product='air' />.
 
    :::
 
-5. Configure the relay device in the <Cmd sid="door_auxiliary_device" product="air" /> section.
+5. Configure el dispositivo relé en la sección <Cmd sid="door_auxiliary_device" product="air" />.
 
-   * <Cmd sid="add_doors.door_relay" product="air" />: Select the relay device that controls the door lock.
+   * <Cmd sid="add_doors.door_relay" product="air" />: Seleccione el dispositivo relé que controla la cerradura de la puerta.
 
-   * <Cmd sid='add_doors.relay_ignoring_door_sensor' product='air' />: Set the relay to ignore the door sensor.
+   * <Cmd sid='add_doors.relay_ignoring_door_sensor' product='air' />: Configure el relé para ignorar el sensor de la puerta.
 
-6. Configure additional settings.
+6. Configure los ajustes adicionales.
 
-   * If installed, select the port to set to <Cmd sid="device_editable_fields_exit_btn" product="air" />.
+   * Si está instalado, seleccione el puerto para configurarlo como <Cmd sid="device_editable_fields_exit_btn" product="air" />.
 
-   * Select the port to set to <Cmd sid="device_editable_fields_door_sensor" product="air" />.
+   * Seleccione el puerto para configurarlo como <Cmd sid="device_editable_fields_door_sensor" product="air" />.
 
-   * Set how long the door remains open in <Cmd sid="add_doors.open_time" product="air" />. (Default: 3 seconds)
+   * Establezca el tiempo que la puerta permanece abierta en <Cmd sid="add_doors.open_time" product="air" />. (Predeterminado: 3 segundos)
 
-7. Click <Cmd sid="save_btn" product="air" /> to apply the changes.
+7. Haz clic en <Cmd sid="save_btn" product="air" /> para aplicar los cambios.
 
 :::info
 
-* We recommend assigning a relay located inside the secure area as <Cmd sid="door_product_column3" product="air" />.
+* Recomendamos asignar un relé ubicado dentro del área segura como <Cmd sid="door_product_column3" product="air" />.
 
-* <Cmd sid="door_product_column2" product="air" /> and <Cmd sid="door_product_column3" product="air" /> must be connected to **separate networks**. In a master–slave configuration, connection over Wiegand or RS-485 is not possible.
+* <Cmd sid="door_product_column2" product="air" /> y <Cmd sid="door_product_column3" product="air" /> deben estar conectados a **redes separadas**. En una configuración maestro–esclavo, la conexión mediante Wiegand o RS-485 no es posible.
 
-* For more information on configuring the SIO2 secure module, see <DocLink docId='platform/biostar_air/configuring-the-sio2-secure-module' />.
+* Para obtener más información sobre cómo configurar el módulo SIO2 Secure, consulte <DocLink docId='platform/biostar_air/configuring-the-sio2-secure-module' />.
 
 :::
 
-## Generate door reports {#generatingDoorReports}
+## Generar informes de puertas {#generatingDoorReports}
 
-Generate door reports and send them to the administrator's email. A door report provides information about users who accessed through the door.
+Genere informes de puertas y envíelos al correo electrónico del administrador. Un informe de puerta proporciona información sobre los usuarios que ingresaron por esa puerta.
 
-1. Click <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> in the left sidebar.
+1. Haga clic en <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Click <IcAirReport title='Report' /> at the top of the door list.
+2. Haga clic en <IcAirReport title='Report' /> en la parte superior de la lista de puertas.
 
-3. When the <Cmd sid="report_popup_title" product="air" /> window appears, enter a report name.
+3. Cuando aparezca la ventana <Cmd sid="report_popup_title" product="air" />, ingrese un nombre para el informe.
 
    <Image src='/img/air/bsair-door-mng-registered-door-report.png' />
 
-4. Select the items to include in the report.
+4. Seleccione los elementos que desea incluir en el informe.
 
-5. Click <Cmd sid="report_form_text_add" product="air" /> to save the report.
+5. Haga clic en <Cmd sid="report_form_text_add" product="air" /> para guardar el informe.
 
-6. A <Cmd sid="report_form_text_title" product="air" /> is created and a download link is sent to the administrator's email.
+6. Se crea un <Cmd sid="report_form_text_title" product="air" /> y se envía un enlace de descarga al correo electrónico del administrador.
 
 <Image src='/img/air/bsair-door-mng-registered-door-report-list.png' />
 
 :::info
 
-In <Cmd sid="report_form_text_title" product="air" />, search for, edit, download, or delete generated reports.
+En <Cmd sid="report_form_text_title" product="air" />, busque, edite, descargue o elimine los informes generados.
 
 :::

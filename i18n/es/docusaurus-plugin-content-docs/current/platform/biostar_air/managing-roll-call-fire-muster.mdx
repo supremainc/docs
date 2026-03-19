@@ -1,87 +1,87 @@
 ---
 id: managing-roll-call-fire-muster
-title: Roll Call
-description: Learn how to set muster zones, start roll calls, track user safety status, and generate roll call history reports in BioStar Air.
+title: Llamada Roll
+description: Aprenda a configurar zonas de reunión, iniciar listas de asistencia, supervisar el estado de seguridad de los usuarios y generar informes históricos de listas de asistencia en BioStar Air.
 keywords:
-  - Roll Call
-  - Roll Call
-  - Fire Alarm Zone
+  - Llamada Roll
+  - Llamada Roll
+  - Zona de alarma contra incendios
   - BioStar Air
 ---
 
-With BioStar Air's roll call and fire evacuation guidance features, organizations can track which employees have safely evacuated the building during an emergency. By setting muster zones and using the BioStar Air mobile app, administrators can quickly account for all users and generate roll call history reports.
+Con las funciones de lista de asistencia y guía de evacuación contra incendios de BioStar Air, las organizaciones pueden comprobar qué empleados han evacuado el edificio de forma segura durante una emergencia. Al configurar zonas de reunión y usar la aplicación móvil de BioStar Air, los administradores pueden contabilizar rápidamente a todos los usuarios y generar informes históricos de las listas de asistencia.
 
 :::info
 
-* **Ensure that muster zones are correctly assigned to user groups** to avoid confusion.
+* **Asegúrese de que las zonas de reunión estén asignadas correctamente a los grupos de usuarios** para evitar confusiones.
 
-* **Regularly test** the roll call feature to ensure smooth operation during a real emergency.
+* **Pruebe regularmente** la función de lista de asistencia para garantizar un funcionamiento fluido durante una emergencia real.
 
-* Use **access events** to verify attendance for safety compliance.
+* Utilice los **eventos de acceso** para verificar la asistencia y cumplir con las normas de seguridad.
 
 :::
 
 :::tip
 
-Watch the following video for a roll call and muster zone guide.
+Vea el siguiente video para obtener una guía sobre la lista de asistencia y las zonas de reunión.
 
 <YouTube className='fit--content' videoId="F0dnR7VmfAo" />
 
 :::
 
-## Set muster zones {#settingMusterPoints}
+## Configurar zonas de reunión {#settingMusterPoints}
 
-A muster zone is a designated location where users authenticate their credentials to indicate they are safe during an emergency.
+Una zona de reunión es un lugar designado donde los usuarios autentican sus credenciales para indicar que están seguros durante una emergencia.
 
-1. Click <Cmd sid="advanced_menu" product="air" /> → <Cmd sid="roll_call_submenu" product="air" /> in the left sidebar.
+1. Haga clic en <Cmd sid="advanced_menu" product="air" /> → <Cmd sid="roll_call_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Click <Cmd sid="add_muster_point_btn" product="air" /> at the top right of the screen.
+2. Haga clic en <Cmd sid="add_muster_point_btn" product="air" /> en la esquina superior derecha de la pantalla.
 
    <Image src='/img/air/bsair-adv-rollcall.png' />
 
-3. Enter a name and an optional description when the <Cmd sid="add_muster_point_title" product="air" /> panel appears.
+3. Ingrese un nombre y una descripción opcional cuando aparezca el panel <Cmd sid="add_muster_point_title" product="air" />.
 
    <Image src='/img/air/bsair-adv-rollcall-add.png' />
 
-4. In the <Cmd sid="add_muster_point_devices_title" product="air" /> section, add the device group or device to assign to the muster zone. Select the checkbox for the device group or device, and click <Cmd sid="add_btn" product="air" />.
+4. En la sección <Cmd sid="add_muster_point_devices_title" product="air" />, agregue el grupo de dispositivos o el dispositivo que desea asignar a la zona de reunión. Seleccione la casilla del grupo de dispositivos o del dispositivo y haga clic en <Cmd sid="add_btn" product="air" />.
 
    <Image src='/img/air/bsair-adv-rollcall-add-device-group.png' />
 
-5. In the <Cmd sid="add_muster_point_user_groups_title" product="air" /> section, select the user groups that must report when they arrive at the muster zone. Select the checkbox for the user group, and click <Cmd sid="add_btn" product="air" />.
+5. En la sección <Cmd sid="add_muster_point_user_groups_title" product="air" />, seleccione los grupos de usuarios que deben reportarse al llegar a la zona de reunión. Seleccione la casilla del grupo de usuarios y haga clic en <Cmd sid="add_btn" product="air" />.
 
    <Image src='/img/air/bsair-adv-rollcall-add-user-group.png' />
 
-6. Click <Cmd sid="save_btn" product="air" /> to save the muster zone settings.
+6. Haga clic en <Cmd sid="save_btn" product="air" /> para guardar la configuración de la zona de reunión.
 
 :::note
 
-**Best practices for muster zones**
+**Mejores prácticas para las zonas de reunión**
 
-* Make the muster zone name and description clear and easy to understand. For example, use names like 'East Parking Lot' or 'Main Building Lobby'.
+* Haga que el nombre y la descripción de la zona de reunión sean claros y fáciles de entender. Por ejemplo, use nombres como "Estacionamiento Este" o "Vestíbulo del Edificio Principal".
 
-* When adding multiple devices to a muster zone, select a device group instead of individual devices. Device groups let you manage multiple devices at once. For more information on device group management, refer to <DocLink docId='platform/biostar_air/manage-device-group' />.
+* Al añadir varios dispositivos a una zona de reunión, seleccione un grupo de dispositivos en lugar de dispositivos individuales. Los grupos de dispositivos le permiten gestionar varios dispositivos a la vez. Para más información sobre la gestión de grupos de dispositivos, consulte <DocLink docId='platform/biostar_air/manage-device-group' />.
 
-* In a large campus with multiple buildings, assign **only relevant users** to a specific muster zone.
+* En un campus grande con varios edificios, asigne **solo a los usuarios relevantes** a una zona de reunión específica.
 
-* Wired access control devices support both mobile and card authentication, whereas Airfob Tag and Airfob Patch support only mobile credentials.
+* Los dispositivos de control de acceso cableados admiten tanto la autenticación móvil como por tarjeta, mientras que Airfob Tag y Airfob Patch admiten solo credenciales móviles.
 
 :::
 
-## Start roll call on mobile {#startingRollcallonMobile}
+## Iniciar lista de asistencia en la aplicación móvil {#startingRollcallonMobile}
 
-Start a roll call and check attendance in the BioStar Air mobile app.
+Inicie una lista de asistencia y verifique la asistencia en la aplicación móvil BioStar Air.
 
 <Image src='/img/air/bsair-mobile-adv-rollcall.png' className='none' />
 
-1. Open the BioStar Air app on your mobile device and log in.
+1. Abra la aplicación BioStar Air en su dispositivo móvil e inicie sesión.
 
-2. Tap <Cmd en="All Menu">All Menu</Cmd> → <Cmd sid="roll_call_submenu" product="air" /> at the bottom of the screen.
+2. Toque <Cmd en="All Menu">All Menu</Cmd> → <Cmd sid="roll_call_submenu" product="air" /> en la parte inferior de la pantalla.
 
-3. Tap <Cmd en="Roll Call Start">Roll Call Start</Cmd>.
+3. Toque <Cmd en="Roll Call Start">Roll Call Start</Cmd>.
 
-4. A list of all users who must gather at the muster location appears.
+4. Se muestra una lista con todos los usuarios que deben reunirse en el punto de encuentro.
 
-### Mark users safe {#marking-users-safe}
+### Marcar a los usuarios como seguros {#marking-users-safe}
 
 <Columns>
 <Column className='width--20'>
@@ -91,20 +91,20 @@ Start a roll call and check attendance in the BioStar Air mobile app.
 </Column>
 <Column className='padding--l20'>
 
-Administrators or users can mark themselves safe in the following ways.
+Los administradores o los usuarios pueden marcarse como seguros de las siguientes formas.
 
-* An administrator can press and hold the **check mark** next to a user’s name in the mobile app to mark the user safe.
+* Un administrador puede mantener presionada la **marca de verificación** junto al nombre de un usuario en la app móvil para marcarlo como seguro.
 
-* Users tag their credential on a device at the assigned muster zone.
+* Los usuarios acercan su credencial a un dispositivo en la zona de reunión asignada.
 
-* Filter users by **muster group**.
+* Filtrar usuarios por **grupo de reunión**.
 
-* Use search to find a specific person.
+* Usa la búsqueda para encontrar a una persona concreta.
 
 </Column>
 </Columns>
 
-### Complete roll call {#completingRollCall}
+### Completar el pase de lista {#completingRollCall}
 
 <Columns>
 <Column className='width--20'>
@@ -114,33 +114,33 @@ Administrators or users can mark themselves safe in the following ways.
 </Column>
 <Column className='padding--l20'>
 
-Complete the roll call when any of the following conditions are met.
+Completa el pase de lista cuando se cumpla cualquiera de las siguientes condiciones.
 
-* All users have arrived at the muster zone and been marked safe
+* Todos los usuarios han llegado al punto de encuentro y han sido marcados como seguros
 
-* The administrator manually marks all users safe
+* El administrador marca manualmente a todos los usuarios como seguros
 
-* 24 hours have passed
+* Han pasado 24 horas
 
 </Column>
 </Columns>
 
-## View roll call history {#viewingRollCallHistory}
+## Ver el historial de pases de lista {#viewingRollCallHistory}
 
-View the history of previous roll calls.
+Ver el historial de pases de lista anteriores.
 
-1. Click <Cmd sid="advanced_menu" product="air" /> → <Cmd sid="roll_call_submenu" product="air" /> in the left sidebar.
+1. Haga clic en <Cmd sid="advanced_menu" product="air" /> → <Cmd sid="roll_call_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Click the <Cmd sid="roll_call_history_tab" product="air" /> tab.
+2. Haz clic en la pestaña <Cmd sid="roll_call_history_tab" product="air" />.
 
    <Image src='/img/air/bsair-adv-rollcall-history.png' />
 
-3. Click a completed roll call entry to view its details.
+3. Haz clic en una entrada de pase de lista completada para ver sus detalles.
 
 <Image src='/img/air/bsair-adv-rollcall-history-details.png' />
 
-* View the list of all access events recorded during the roll call.
+* Ver la lista de todos los eventos de acceso registrados durante el pase de lista.
 
-* Check whether each user was marked safe or unconfirmed.
+* Comprueba si cada usuario fue marcado como seguro o quedó sin confirmar.
 
-* Check the start and end times of the roll call.
+* Comprueba las horas de inicio y fin del pase de lista.
