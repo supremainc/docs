@@ -434,6 +434,22 @@ header p {
   margin-right: 4px;
 }
 
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.deviceInfo {
+  background: none;
+  padding: 0;
+}
+
+details.deviceInfo summary {
+  font-size: 11pt;
+}
+
 .doc-content details ul {
   margin-top: 0;
   margin-bottom: 8px;
