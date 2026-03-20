@@ -223,12 +223,14 @@ function generateCoverHTML(params) {
             /* Prince XML 렌더링 최적화 */
             -prince-background-image-resolution: 300dpi;
         }
-
-        .bsx {
-            background: #ffffff;
-            background-image: none;
+        .bsair {
+            background: url(../genpdf/resource/air-cover.png) no-repeat center center;
+            background-size: cover;
         }
-        
+        .bsx {
+            background: url(../genpdf/resource/x-cover.png) no-repeat center center;
+            background-size: cover;
+        }        
         .title {
             position: absolute;
             top: 2.0276in;
@@ -241,12 +243,10 @@ function generateCoverHTML(params) {
             flex-direction: column;
             justify-content: center;
         }
-        .bsx .title {
-            background: linear-gradient(163deg, #01AAEB, #D8007F);
-            background: -webkit-linear-gradient(163deg, #01AAEB, #D8007F);
-            border: none;
+        .bsx .title, .bsair .title {
+            background: none;
+            padding: 49px 56px;
         }
-        
         .title h1 {
             font-family: "Montserrat", sans-serif;
             font-weight: bold;
@@ -254,12 +254,11 @@ function generateCoverHTML(params) {
             margin-bottom: 0;
             line-height: 1.1;
         }
-        .bsx .title h1 {
-            font-size: 42pt;
+        .bsx .title h1, .bsair .title h1 {
             border-bottom: 0.5pt solid #fff;
-            padding-bottom: 1.5rem;
+            padding-bottom: 23px;
+            margin-bottom: 23px;
         }
-        
         .title h1.small {
             font-size: 37pt;
             line-height: 1.1;
@@ -268,19 +267,14 @@ function generateCoverHTML(params) {
         .title .subtitle {
             position: relative;
             font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
-            font-weight: 200;
+            font-weight: 500;
             font-size: 26pt;
             margin-bottom: 0;
             line-height: 1.2;
             text-transform: uppercase;
         }
-
-        .bsx .title .subtitle {
-            font-size: 24pt;
-            font-weight: 500;
-            margin-top: 1.5rem;
-            margin-bottom: .5rem;
-            text-transform: none;
+        .bsx .title .subtitle, .bsair .title .subtitle {
+            font-size: 23pt;
         }
         
         .title .ver {
@@ -291,11 +285,10 @@ function generateCoverHTML(params) {
             margin-top: 0.2rem;
             left: 4px;
         }
-
-        .bsx .title .ver {
-            font-weight: normal;
+        .bsx .title .ver,.bsair .title .ver {
+            margin-top: 14px;
+            left: 0;
         }
-        
         .title .lang,
         .title .number {
             font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
@@ -304,16 +297,18 @@ function generateCoverHTML(params) {
             position: relative;
             text-align: right;
         }
-        .bsx .title .lang, .bsx .title .number {
+        .bsx .title .lang, .bsair .title .number {
             font-weight: normal;
         }
         
         .title .lang {
             margin-top: 4.7rem;
         }
-        .bsx .title .lang {
-            margin-top: .8rem;
-            margin-bottom: 1rem;
+        .bsx .title .lang, .bsair .title .lang {
+            margin-top: 15px;
+        }
+        .bsx .title .number, .bsair .title .number {
+            margin-top: 5px;
         }
         
         .footer {

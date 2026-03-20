@@ -7,6 +7,7 @@
   --ifm-color-border: #adadad;
   --color-fd-secondary-foreground: #e8e8e8;
   --ifm-color-color-gray: #333;
+  --ifm-air-main-color: #0c47af;
 }
 
 * {
@@ -90,6 +91,9 @@ header p {
   text-transform: uppercase;
   margin-bottom: 15px;
 }
+.toc.biostar_air h2 {
+  color: var(--ifm-air-main-color);
+}
 
 .toc ul {
   list-style: none;
@@ -115,6 +119,9 @@ header p {
   border-bottom: .5pt solid rgba(0, 0, 0, 0.7);
   display: block;
   padding-bottom: 8.5pt;
+}
+.toc.biostar_air > ul ul li a {
+  color: var(--ifm-air-main-color);
 }
 
 .toc.releasenotes > ul ul {
@@ -144,7 +151,7 @@ header p {
   margin-right: 5px;
 }
 
-.toc > ul ul li ul li a {
+.toc > ul ul li ul li a, .toc.biostar_air > ul ul li ul li a {
   font-weight: normal;
   font-size: 9.5pt;
   color: #000;
@@ -198,6 +205,9 @@ header p {
   margin-bottom: 15pt;
   font-size: 21pt;
   break-before: page;
+}
+.doc-section.biostar-air h2 {
+  color: var(--ifm-air-main-color);
 }
 
 .doc-section.releasenotes > h2 {
@@ -434,6 +444,10 @@ header p {
   margin-right: 4px;
 }
 
+.doc-content details.faq summary::before {
+  content: none;
+}
+
 details > summary {
   list-style: none;
 }
@@ -446,7 +460,26 @@ details.deviceInfo {
   padding: 0;
 }
 
-details.deviceInfo summary {
+details.faq {
+  background: none;
+  padding: 1rem;
+  border: .25px solid var(--ifm-color-border);
+}
+
+details.faq .question {
+  margin-right: 5px;
+}
+
+details.faq .faqBody {
+  margin-left: 1.3rem;
+  margin-top: 1rem
+}
+
+details.faq + details.faq {
+  margin-top: 1rem;
+}
+
+details.deviceInfo summary, details.faq summary {
   font-size: 11pt;
 }
 
