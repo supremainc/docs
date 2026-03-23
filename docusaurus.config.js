@@ -248,6 +248,11 @@ const config = {
             items: [
               {
                 type: 'doc',
+                label: 'ViOnyx',
+                docId: 'device/vionyx/index'
+              },
+              {
+                type: 'doc',
                 label: 'BioStation 3 Max',
                 docId: 'device/biostation_3_max/index'
               },

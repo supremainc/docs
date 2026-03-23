@@ -127,7 +127,7 @@
 * 고장의 원인이 됩니다.
 
 {/* IP67 이상 제품만 적용 */}
-<Include product='bioentry_w2,bioentry_w3,biolite_n2,xpass_2,xpass_d2'>
+<Include product='bioentry_w2,bioentry_w3,biolite_n2,xpass_2,xpass_d2,vionyx'>
 
 **제품을 벽면에 설치할 경우 실리콘 등으로 제품 주위를 밀봉하지 마세요**.
 
@@ -154,7 +154,7 @@
 </Xclude>
 
 {/* SIO2 연결 가능한 제품만 적용 */}
-<Xclude product='corestation_20,corestation_40,doorinterface,xpass_d2,doormodule,inputmodule,outputmodule,securemodule,enclosure,extendedmodule,extendedmodule_sc'>
+<Xclude product='corestation_20,corestation_40,doorinterface,xpass_d2,doormodule,inputmodule,outputmodule,securemodule,enclosure,extendedmodule,extendedmodule_sc,vionyx'>
 
 **제품과 Secure I/O 2, 전기정(전기식 잠금 장치)은 반드시 개별 전원을 사용하세요**.
 
@@ -180,7 +180,7 @@
 </Include>
 
 {/* PoE+ 가능한 제품만 적용 */}
-<Include product='biostation_3,corestation_20,biostation_3_max'>
+<Include product='biostation_3,corestation_20,biostation_3_max,vionyx'>
 
 **전원 장치와 PoE+ 전원을 함께 연결하지 마세요**.
 
@@ -198,7 +198,7 @@
 </Include>
 
 {/* 방수, 방진 가능하지만 케이블 커버 없는 제품만 적용 */}
-<Include product='xpass_2,xpass_d2,bioentry_w3,bioentry_w2,xpass_s2,biolite_n2'>
+<Include product='xpass_2,xpass_d2,bioentry_w3,bioentry_w2,xpass_s2,biolite_n2,vionyx'>
 
 **완전히 노출된 옥외에 설치할 경우 외함을 사용할 것을 권장합니다**.
 
@@ -207,11 +207,48 @@
 </Include>
 
 {/* PoE+ 가능한 제품만 적용 */}
-<Include product='biostation_3,corestation_20,biostation_3_max'>
+<Include product='biostation_3,corestation_20,biostation_3_max,vionyx'>
 
 **PoE+ 전원 연결 시에는 반드시 PoE+ 또는 PoE++ 규격으로 연결하세요**.
 
 * 표준 PoE를 사용할 경우 장치가 불안정하게 동작하거나 영구적으로 손상될 수 있습니다.
+
+</Include>
+
+{/* ViOnyx 전용 */}
+<Include product='vionyx'>
+
+**카메라를 벽면이나 천장에 장착할 때는 흔들림 없이 견고하게 부착하세요**.
+
+* 제품 낙하로 인해 큰 부상의 원인이 됩니다.
+
+**제품 상단에 금속류(동전, 공구 등)의 전도성 물체나 액체가 담긴 용기를 올려두지 마세요**.
+
+* 감전, 화재 또는 물건 낙하로 인한 상해의 원인이 됩니다.
+
+**단일 전원 어댑터에 여러 대의 카메라를 동시에 연결하지 마세요**.
+
+* 허용 전력 용량 초과로 인한 과열 및 화재의 원인이 됩니다.
+
+**제품을 설치하거나 분리할 때는 반드시 안전 장갑을 착용하세요**.
+
+* 작동 중 뜨거워진 장치 표면에 의한 화상의 원인이 됩니다.
+
+**과도한 힘을 주어 제품을 무리하게 조립하거나 설치하지 마세요**.
+
+* 지정되지 않은 공구를 사용하여 강제로 조작할 경우 제품 파손 및 오작동의 원인이 됩니다.
+
+**화학 물질이나 유증기가 발생하는 환경에 카메라를 설치하지 마세요. 조리용 기름 성분도 제품 파손 및 변형을 유발할 수 있으므로 주방 주변에는 설치하지 마세요**.
+
+* 제품에 심각한 물리적 손상의 원인이 됩니다.
+
+**제품 설치 시 외관에 화학 용액이 닿지 않도록 주의하세요**.
+
+* 일부 세척제나 접착제 성분과 같은 화학 용제는 표면에 치명적인 손상의 원인이 됩니다.
+
+**설명서에 명시되지 않은 임의의 방식으로 제품을 설치하거나 분해하지 마세요**.
+
+* 제품의 정상적인 기능 및 성능을 보장할 수 없습니다.
 
 </Include>
 
@@ -234,7 +271,7 @@
 </Xclude>
 
 {/* LCD 화면, 키패드가 있는 제품에만 적용 */}
-<Xclude product='corestation_40,corestation_20,bioentry_w3,doorinterface,bioentry_w2,doormodule,inputmodule,outputmodule,securemodule,xpass_s2,enclosure,extendedmodule,extendedmodule_sc,xpass_q2'>
+<Xclude product='corestation_40,corestation_20,bioentry_w3,doorinterface,bioentry_w2,doormodule,inputmodule,outputmodule,securemodule,xpass_s2,enclosure,extendedmodule,extendedmodule_sc,xpass_q2,vionyx'>
 
 **비밀번호를 타인이 알지 못하도록 관리하고, 주기적으로 변경하세요**.
 
@@ -285,7 +322,7 @@
 
 * 고장의 원인이 됩니다.
 
-<Xclude product='input_module,output_module,door_module,securemodule,corestation_20,doorinterface,doormodule,inputmodule,outputmodule,xpass_s2,enclosure,extendedmodule,extendedmodule_sc'>
+<Xclude product='input_module,output_module,door_module,securemodule,corestation_20,doorinterface,doormodule,inputmodule,outputmodule,xpass_s2,enclosure,extendedmodule,extendedmodule_sc,vionyx'>
 
 :::note
 

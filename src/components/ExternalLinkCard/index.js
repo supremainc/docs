@@ -105,6 +105,31 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
   );
 }
 
+export function AiCamera({ productLinks: productLinksProp }) {
+  const { i18n: { currentLocale } } = useDocusaurusContext();
+  const defaultProductLinks = [
+    {
+      title: 'ViOnyx',
+      url: `/device/vionyx`,
+      img: require('@site/static/img/camera/product-vionyx.png').default,
+      desc: `${translate({
+        id: "externalLinks.ViOnyx.desc",
+        message: "AI 기반 지능형 영상 분석 카메라"
+      })}`,
+      height: '60px'
+    }
+  ];
+  const productLinks = productLinksProp || defaultProductLinks;
+
+  return (
+    <div className={clsx('container', styles.product, styles.grid)}>
+      {productLinks.map((props, idx) => (
+        <CardItem key={idx} {...props} />
+      ))}
+    </div>
+  );
+}
+
 export function BiometricReader({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const defaultProductLinks = [

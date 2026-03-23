@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import {ExternalLinkCard, BiometricReader, RfMobileDevices, IntenlligentController, Peripheral, Apps} from '@site/src/components/ExternalLinkCard';
+import {ExternalLinkCard, AiCamera, BiometricReader, RfMobileDevices, IntenlligentController, Peripheral, Apps} from '@site/src/components/ExternalLinkCard';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
@@ -188,6 +188,11 @@ export default function Home() {
       description={`${siteConfig.tagline}`}>
       <main className={styles.heroLayout}>
         <HomepageHeader />
+
+        <div className={clsx('container', styles.headsec)}>
+          <Heading as='h2'>AI Camera</Heading>
+        </div>
+        <AiCamera />
 
         <div className={clsx('container', styles.headsec)}>
           <Heading as='h2'>Biometric Devices</Heading>

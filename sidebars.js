@@ -1744,31 +1744,6 @@ const sidebars = {
         'device/biostation_3_max/product-specifications',
         'device/biostation_3_max/regulatory-information',
         'device/biostation_3_max/appendices',
-        // {
-        //   type: 'html',
-        //   value: '<hr />'
-        // },
-        // {
-        //   type: 'category',
-        //   label: '릴리스 노트',
-        //   link: {
-        //     type: 'doc',
-        //     id: 'device/biostation_3/release-notes/index',
-        //   },
-        //   items: [
-        //     'device/biostation_3/release-notes/141',
-        //     'device/biostation_3/release-notes/140',
-        //     'device/biostation_3/release-notes/131',
-        //     'device/biostation_3/release-notes/130',
-        //     'device/biostation_3/release-notes/121',
-        //     'device/biostation_3/release-notes/120',
-        //     'device/biostation_3/release-notes/111',
-        //     'device/biostation_3/release-notes/110',
-        //     'device/biostation_3/release-notes/102',
-        //     'device/biostation_3/release-notes/101',
-        //     'device/biostation_3/release-notes/100',
-        //   ]
-        // },
       ],
     },
   ],
