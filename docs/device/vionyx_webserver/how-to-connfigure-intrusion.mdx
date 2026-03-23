@@ -1,0 +1,144 @@
+---
+id: how-to-connfigure-intrusion
+title: 출입 제한 구역 감지 이벤트 설정하기
+description: 특정 구역에 설정한 영역 입장 또는 퇴장 시 실시간으로 이벤트를 받고, 얼굴 영역에서 등록 사용자를 자동으로 인식할 수 있습니다.
+keywords: [AI 분석, 출입자 동선, 얼굴 인식]
+---
+
+침입 감지 이벤트를 설정하면 관리자가 정의한 구역에 사람이 출입할 때마다 실시간으로 이벤트를 발생합니다. 선택적으로 얼굴 영역을 추가하면 해당 영역에서 얼굴을 우선적으로 추적하며, 등록된 사용자는 자동으로 신원을 인식합니다. 보안이 필요한 구역에 미인가자의 침입을 신속하게 감지하고 대응할 수 있습니다.
+
+## 언제 사용하나요?
+
+* 보안이 필요한 구역에 미인가자의 침입 감지
+
+* 업무시간 외 또는 제한된 구역에 누군가 접근했을 때 실시간 알림 받기
+
+* 등록된 직원만 출입 가능한 구역에 미등록자의 진입 여부 확인
+
+* 고위험 구역의 출입 현황 기록 및 추적
+
+
+## 침입 감지 이벤트 생성
+
+침입 감지 이벤트를 생성하면 <Cmd sid='live' product='cam' /> 메뉴에서 특정 구역에 사람이 침입하는 것을 감지하여 이벤트를 발생시킬 수 있습니다. 또한 얼굴 영역을 설정하면 해당 영역에서 얼굴을 우선적으로 추적할 수 있으며, 등록된 사용자는 신원을 자동 인식합니다.
+
+<Steps>
+<Step>
+
+### 이벤트 생성 시작
+
+1. 화면 왼쪽 상단의 <Cmd sid='settings' product='cam' /> 메뉴를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' />를 클릭하세요.
+
+   <Image src='/img/cam-server/ai-analysis-events.png' />
+
+1. 화면 오른쪽 상단의 <Cmd sid='add_button' product='cam' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='select_ai_analysis_type' product='cam' /> 창에서 <Cmd sid='ai_analysis_intrusion' product='cam' />을 선택하고 <Cmd sid='next' product='cam' /> 버튼을 클릭하세요.
+
+   <Image src='/img/cam-server/ai-analysis-events-add-intrusion.png' />
+
+1. <Cmd sid='face_analytics_consent_title' product='cam' /> 팝업이 표시되면 내용을 확인하고 <Cmd sid='face_analytics_consent_agree' product='cam' /> 버튼을 클릭하세요.
+
+   :::note
+
+   * 얼굴 인식 기능을 사용하려면 해당 지역의 관련 규제 법규를 준수해야 합니다. 동의하지 않으면 진행할 수 없습니다.
+
+   * <Cmd sid='face_analytics_consent_title' product='cam' /> 팝업은 최초 한 번만 표시됩니다. 이후 AI 이벤트 생성 시에는 동의한 것으로 간주합니다.
+
+   :::
+
+1. 오른쪽 <Cmd sid='ai_analysis_intrusion' product='cam' /> 패널에서 필요한 설정을 완료하세요.
+
+   <Image src='/img/cam-server/ai-analysis-events-add-intrusion-settings.png' />
+
+</Step>
+<Step>
+
+### 이벤트 이름 설정
+
+<Cmd sid='name' product='cam' /> 입력란에서 AI 이벤트 이름을 입력하세요. 이름은 최대 64자까지 입력할 수 있습니다.
+
+</Step>
+<Step>
+
+### 침입 영역 설정
+
+침입 영역을 설정하세요. 카메라가 설정한 영역의 출입을 감지합니다.
+최소 1개를 설정해야 하며, <Cmd sid='add_button' product='cam' /> 버튼을 클릭해 최대 10개까지 추가할 수 있습니다.
+
+<Image src='/img/cam-server/ai-analysis-events-add-intrusion-settings-entry-area.png' />
+
+* 침입 영역의 이름을 수정할 수 있습니다. 알기 쉽게 이름을 지정하세요. 침입 영역의 이름은 라이브 뷰에서 마우스 오버 시 표시됩니다.
+
+* 침입 영역에서 감지되는 사람의 신원을 자동으로 확인하려면 <Cmd sid='face_matching' product='cam' /> 옵션을 <Cmd sid='on' product='cam' />으로 설정하세요.
+
+* 라이브 뷰에 주황색 상자가 표시되며, 마우스로 모서리 또는 점을 드래그하여 원하는 형태로 조정할 수 있습니다. 가운데 영역을 드래그하여 위치를 이동할 수도 있습니다.
+
+* 설정한 침입 영역의 모양과 크기를 초기화하려면 <IcCamReset title='reset' /> 버튼을 클릭하세요.
+
+* 추가한 침입 영역을 삭제하려면 <IcCamTrash title='delete' /> 버튼을 클릭하세요.
+
+</Step>
+<Step>
+
+### 얼굴 영역 설정(선택 사항)
+
+얼굴을 감지할 영역을 설정하세요. 설정하면 해당 영역에서 얼굴을 우선적으로 추적합니다. 얼굴 영역에서 감지된 사람을 등록된 직원과 미인가자로 구분하여 승인된 출입자와 미인가자를 명확하게 파악할 수 있습니다. 얼굴 영역과 침입 영역은 겹쳐서 설정할 수 있습니다.
+
+<Cmd sid='add_button' product='cam' /> 버튼을 클릭해 최대 10개까지 설정할 수 있습니다.
+
+<Image src='/img/cam-server/ai-analysis-events-add-intrusion-settings-face-area.png' />
+
+* 얼굴 영역의 이름을 수정할 수 있습니다. 알기 쉽게 이름을 지정하세요. 얼굴 영역의 이름은 라이브 뷰에서 마우스 오버 시 표시됩니다.
+
+* 등록된 사용자는 <Cmd sid='live' product='cam' /> 메뉴에서 신원을 자동 인식해 이름이 표시됩니다. 등록되지 않은 사용자는 <Cmd sid='unknown_face' product='cam' />으로 표시됩니다.
+
+* 라이브 뷰에 파란색 상자가 표시되며, 마우스로 모서리 또는 점을 드래그하여 원하는 형태로 조정할 수 있습니다. 가운데 영역을 드래그하여 위치를 이동할 수도 있습니다.
+
+* 설정한 얼굴 영역의 모양과 크기를 초기화하려면 <IcCamReset title='reset' /> 버튼을 클릭하세요.
+
+* 추가한 얼굴 영역을 삭제하려면 <IcCamTrash title='delete' /> 버튼을 클릭하세요.
+
+</Step>
+<Step>
+
+### 이벤트 발생 조건 설정
+
+이벤트 발생 조건을 설정하세요. 진입 또는 퇴장 감지 여부, 이벤트 발생 지연 시간을 설정할 수 있습니다.
+
+* <Cmd sid='event_condition' product='cam' />: 진입(Entry) 또는 퇴장(Exit) 감지 여부를 선택하세요. 둘 다 선택할 수도 있습니다.
+
+* <Cmd sid='every_delay' product='cam' />: 이벤트 발생 지연 시간을 설정하세요. 설정한 시간을 초과했을 때만 이벤트가 발생하며, 최대 60초까지 설정할 수 있습니다.
+
+</Step>
+<Step>
+
+### 설정 저장
+
+모든 설정을 완료한 후 오른쪽 상단의 <Cmd sid='save' product='cam' /> 버튼을 클릭하세요. 이전 화면으로 돌아가며, 새로 생성된 AI 이벤트가 목록에 추가됩니다.
+
+<Image src='/img/cam-server/ai-analysis-events-add-intrusion-settings-complete.png' />
+
+</Step>
+</Steps>
+
+
+## 라이브에서 확인
+
+화면 왼쪽 상단의 <Cmd sid='live' product='cam' /> 메뉴를 클릭하세요. 카메라 영상의 오른쪽 상단의 <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> 아이콘이 켜져 있는지 확인하세요. 설정한 침입 영역과 얼굴 영역이 영상에 오버레이로 표시됩니다. 사람이 침입 영역에 들어오거나 나갈 때마다 이벤트가 발생합니다. 얼굴 영역을 설정했다면 카메라가 해당 영역에서 얼굴을 감지하며, 등록된 사용자는 자동으로 신원이 인식되어 이름으로 표시됩니다.
+
+<Image src='/img/cam-server/ai-analysis-events-intrusion-result.png' />
+
+:::info
+
+* 등록되지 않은 사용자는 <Cmd sid='unknown_face' product='cam' />로 표시됩니다. 등록된 사용자는 이름과 함께 표시합니다.
+
+* 조명이 부족하거나 역광이 있으면 카메라가 얼굴을 인식하지 못할 수 있습니다. 촬영 공간의 조명을 개선하거나 카메라의 위치와 각도를 조정하여 얼굴이 잘 보이도록 하세요.
+
+* 얼굴이 카메라로 향해야 인식됩니다. 옆모습 또는 뒷모습은 인식이 어려울 수 있습니다.
+
+* 너무 많은 이벤트가 발생하면 <Cmd sid='every_delay' product='cam' /> 옵션값을 조정하세요. 이벤트 발생 지연 시간을 늘리면 이벤트 빈도를 줄일 수 있습니다.
+
+:::

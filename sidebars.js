@@ -33,6 +33,7 @@ const sidebars = {
         'device/vionyx_webserver/ui-navigation',
         'device/vionyx_webserver/live-basic',
         'device/vionyx_webserver/how-to-connfigure-people-counting',
+        'device/vionyx_webserver/how-to-connfigure-intrusion',
       ]
     }
   ],
