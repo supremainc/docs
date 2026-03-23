@@ -119,7 +119,8 @@ const config = {
             '_unused/**.{md,mdx}',
             '**/_*.{md,mdx}',
             'device/xpass_q2/**.{md,mdx}',
-            'device/biostation_3_max/**.{md,mdx}'
+            'device/biostation_3_max/**.{md,mdx}',
+            'device/vionyx/**.{md,mdx}'
           ],
           rehypePlugins: [ rehypeExtendedTable ],
         },
