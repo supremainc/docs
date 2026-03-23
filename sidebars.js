@@ -32,6 +32,7 @@ const sidebars = {
         'device/vionyx_webserver/getting-started',
         'device/vionyx_webserver/ui-navigation',
         'device/vionyx_webserver/live-basic',
+        'device/vionyx_webserver/how-to-connfigure-people-counting',
       ]
     }
   ],
