@@ -74,6 +74,26 @@ Used to provide notes or additional information while using the product.
 
 * May cause electric shock or product damage.
 
+{/* ViOnyx 전용 */}
+
+<Include product='vionyx'>
+
+**When mounting the camera on a wall or ceiling, make sure it is securely attached and does not wobble**.
+
+* May cause serious injury if the product falls.
+
+**Do not connect multiple cameras to the same power adapter at the same time**.
+
+* May cause overheating or fire if the rated power capacity is exceeded.
+
+**When installing the camera, keep the installation area clear of other people**.
+
+* May cause serious injury if the product falls or in other accidents.
+
+**Avoid pinching cables or damaging wire insulation, as this can cause product damage or fire**
+
+</Include>
+
 ---
 
 ### Usage
@@ -89,6 +109,16 @@ Used to provide notes or additional information while using the product.
 **Do not bend or break the power cord excessively**.
 
 * May cause fire or electric shock.
+
+{/* ViOnyx 전용 */}
+
+<Include product='vionyx'>
+
+**Do not place conductive metal objects (coins, tools, etc.) or containers of liquid on top of the product**.
+
+* May cause electric shock, fire, or injury from falling objects.
+
+</Include>
 
 <div className='page-break' />
 
@@ -128,7 +158,7 @@ Used to provide notes or additional information while using the product.
 
 {/* IP67 이상 제품만 적용 */}
 
-<Include product='bioentry_w2,bioentry_w3,biolite_n2,xpass_2,xpass_d2'>
+<Include product='bioentry_w2,bioentry_w3,biolite_n2,xpass_2,xpass_d2,vionyx'>
 
 **When installing the product on a wall, do not seal around the product with silicone or similar materials**.
 
@@ -156,7 +186,7 @@ Used to provide notes or additional information while using the product.
 
 {/* SIO2 연결 가능한 제품만 적용 */}
 
-<Xclude product='corestation_20,corestation_40,doorinterface,xpass_d2,doormodule,inputmodule,outputmodule,securemodule,enclosure,extendedmodule,extendedmodule_sc'>
+<Xclude product='corestation_20,corestation_40,doorinterface,xpass_d2,doormodule,inputmodule,outputmodule,securemodule,enclosure,extendedmodule,extendedmodule_sc,vionyx'>
 
 **Ensure that the product and Secure I/O 2, electric lock (electronic locking device) use separate power supplies**.
 
@@ -184,7 +214,7 @@ Used to provide notes or additional information while using the product.
 
 {/* PoE+ 가능한 제품만 적용 */}
 
-<Include product='biostation_3,corestation_20,biostation_3_max'>
+<Include product='biostation_3,corestation_20,biostation_3_max,vionyx'>
 
 **Do not connect the power supply and PoE+ power together**.
 
@@ -204,7 +234,7 @@ Used to provide notes or additional information while using the product.
 
 {/* 방수, 방진 가능하지만 케이블 커버 없는 제품만 적용 */}
 
-<Include product='xpass_2,xpass_d2,bioentry_w3,bioentry_w2,xpass_s2,biolite_n2'>
+<Include product='xpass_2,xpass_d2,bioentry_w3,bioentry_w2,xpass_s2,biolite_n2,vionyx'>
 
 **It is recommended to use an enclosure when installed outdoors with full exposure**.
 
@@ -214,11 +244,41 @@ Used to provide notes or additional information while using the product.
 
 {/* PoE+ 가능한 제품만 적용 */}
 
-<Include product='biostation_3,corestation_20,biostation_3_max'>
+<Include product='biostation_3,corestation_20,biostation_3_max,vionyx'>
 
 **When connecting PoE+ power, make sure to connect it according to PoE+ or PoE++ standards**.
 
 * Using standard PoE may cause devices to operate unstably or be permanently damaged.
+
+</Include>
+
+{/* ViOnyx 전용 */}
+
+<Include product='vionyx'>
+
+**When installing the product on a wall, do not seal around the product with silicone or similar materials**.
+
+* The device may malfunction.
+
+**Remove valuables or fragile items from beneath the installation area before beginning**.
+
+* May lead to unexpected accidents.
+
+**Wear safety gloves when installing or removing the product**.
+
+* May cause burns from hot device surfaces during operation.
+
+**Do not forcefully assemble or install the product**.
+
+* May cause product damage or malfunction.
+
+**Do not install the camera in environments where chemical substances or fumes are present. Cooking oil residues can also cause product damage or deformation, so do not install near kitchens**.
+
+* May cause severe physical damage to the product.
+
+**Keep chemical solutions from coming into contact with the product's exterior during installation**.
+
+* Certain chemical solvents, such as those in some cleaners or adhesives, can cause severe surface damage.
 
 </Include>
 
@@ -242,7 +302,7 @@ Used to provide notes or additional information while using the product.
 
 {/* LCD 화면, 키패드가 있는 제품에만 적용 */}
 
-<Xclude product='corestation_40,corestation_20,bioentry_w3,doorinterface,bioentry_w2,doormodule,inputmodule,outputmodule,securemodule,xpass_s2,enclosure,extendedmodule,extendedmodule_sc,xpass_q2'>
+<Xclude product='corestation_40,corestation_20,bioentry_w3,doorinterface,bioentry_w2,doormodule,inputmodule,outputmodule,securemodule,xpass_s2,enclosure,extendedmodule,extendedmodule_sc,xpass_q2,vionyx'>
 
 **Manage the password so others do not know it, and change it regularly**.
 
@@ -294,7 +354,21 @@ Used to provide notes or additional information while using the product.
 
 * The device may malfunction.
 
-<Xclude product='input_module,output_module,door_module,securemodule,corestation_20,doorinterface,doormodule,inputmodule,outputmodule,xpass_s2,enclosure,extendedmodule,extendedmodule_sc'>
+{/* ViOnyx 전용 */}
+
+<Include product='vionyx'>
+
+**Do not operate or tamper with the product using unapproved tools**.
+
+* May cause product damage or malfunction. Use only the specified tools.
+
+**Do not install or disassemble the product in any way not specified in the manual**.
+
+* May prevent the product from functioning normally or performing as intended.
+
+</Include>
+
+<Xclude product='input_module,output_module,door_module,securemodule,corestation_20,doorinterface,doormodule,inputmodule,outputmodule,xpass_s2,enclosure,extendedmodule,extendedmodule_sc,vionyx'>
 
 :::note
 
