@@ -20,6 +20,18 @@
             "If the terminal and the bracket are far away from each other, the device may not operate due to the temper switch.",
             "Check the adaptor or the power cable."
           ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "No video is being recorded, or the image doesn't appear.",
+          "answer": [
+            "If you're using a power adapter, make sure its output equals or exceeds the camera's maximum power consumption.",
+            "Do not connect a power adapter and PoE+ at the same time. Doing so may cause the device to malfunction.",
+            "If powered via an Ethernet cable, be sure it is connected using PoE+ or PoE++, not standard PoE.",
+            "Check that the network cable is securely connected and that the Ethernet waterproof rubber seal is properly fastened."
+          ]
         }
       ]
     }
@@ -307,6 +319,141 @@
           "question": "After upgrading the firmware on existing devices, the Master Admin setting does not appear.",
           "answer": [
             "Devices upgraded with firmware from existing devices do not support master administrator configuration. You can enhance device security by strengthening the permissions of all administrators through the <span class='cmd'>Admin 2-Step Authentication</span> option. For more detailed information, refer to <a href='settings#admin-2-step-authentication'>Admin 2-step Authentication</a>."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "category": {
+      "title": "Installation and Use",
+      "hid": "vionyx",
+      "contents": [
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "The image appears tilted after installing the camera.",
+          "answer": [
+            "When mounted on a wall, make sure the red triangle on the mount plate points to 12 o'clock (north).",
+            "Rotate the camera body left or right to adjust the installation angle. The maximum adjustment is 8° to each side (15° total). If you need more adjustment, change the mounting plate hole positions and reinstall."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "When Windows 10 users access the web server using Chrome or Firefox, the microphone volume may fluctuate periodically.",
+          "answer": [
+            "This happens when the microphone driver is set to Realtek. Change the microphone driver to \"High Definition Audio Device\" (the Windows default) or install a third-party driver."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "What are the required WAVE file specifications for audio playback during events?",
+          "answer": [
+            "It is recommended to use a sampling rate (sampling rate) of 48000 KHz or lower.",
+            "Use 8-bit or 16-bit samples (bits per sample).",
+            "Only PCM-encoded formats are supported."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "Video images are overlapping.",
+          "answer": [
+            "Make sure two or more cameras are set to different multicast addresses. Using the same address can cause overlapping video."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "The video is not visible.",
+          "answer": [
+            "If video transmission is set to multicast, make sure the local network the camera is connected to has a router that supports multicast."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "A video analysis event occurred, but no alarm was triggered.",
+          "answer": [
+            "Make sure the alarm output port is configured correctly."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "Cannot access the camera from a browser.",
+          "answer": [
+            "Make sure the camera's network settings are correct.",
+            "Make sure the network cable is properly connected.",
+            "If connected via DHCP, ensure the camera has successfully obtained a dynamic IP address.",
+            "If the camera is connected to a router, make sure port forwarding is set up correctly."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "The connection to the web server monitoring the video has been lost.",
+          "answer": [
+            "If another user changes the camera settings or network configuration, the web server's connection will be dropped.",
+            "Make sure the network connection is working."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "The ViOnyx web server cannot detect the camera on the network.",
+          "answer": [
+            "Device communication may be blocked by a firewall or network security settings. Make sure the network allows the ports (TCP/UDP) required for device discovery and communication."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "The microSD card is not recording.",
+          "answer": [
+            "Check if the microSD card is defective.",
+            "Before replacing the microSD card, always disconnect the device from power."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "The microSD card is inserted but not recognized.",
+          "answer": [
+            "Make sure the microSD card is inserted in the correct orientation. microSD cards formatted by other devices may not be compatible with this camera.",
+            "Check that the card's capacity (recommended 16GB–1TB) and manufacturer (Samsung, SanDisk, Transcend) meet the recommended specifications. We recommend using cards designed for continuous write operations, such as High Endurance or Pro Endurance models. Cards from other manufacturers or product lines may vary in compatibility."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "Moisture or water droplets are forming inside the camera.",
+          "answer": [
+            "Make sure the 3 securing screws are fully tightened after installing the cover. If the screws aren't fully tightened, the water and dust resistance (IP66/IP67) may be compromised.",
+            "When wiring the Ethernet and other connection cables, make sure the supplied waterproof rubber seals, joints, and nuts for the Ethernet cable are fastened tightly with no gaps. For unused holes, ensure the waterproof rubber hole plugs are fully inserted."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "AI face and object recognition performance has noticeably declined.",
+          "answer": [
+            "Check whether the lens is directly exposed to sunlight or installed in an area with strong backlighting. Glare or backlighting is a major cause of reduced AI recognition performance."
           ]
         }
       ]
