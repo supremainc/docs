@@ -764,6 +764,48 @@
   "specs.backup_battery.capacity": {
     "message": "Capacity"
   },
+  "specs.general.extended_memory": {
+    "message": "Expandable Memory"
+  },
+  "specs.camera": {
+    "message": "Camera"
+  },
+  "specs.camera.image_sensor": {
+    "message": "Image Sensor"
+  },
+  "specs.camera.lens": {
+    "message": "Lens"
+  },
+  "specs.camera.fov": {
+    "message": "Field of View (FOV)"
+  },
+  "specs.camera.min_illumination": {
+    "message": "Minimum Illumination"
+  },
+  "specs.camera.zoom": {
+    "message": "Zoom and PTZ"
+  },
+  "specs.camera.ir_led": {
+    "message": "IR LED"
+  },
+  "specs.video_audio": {
+    "message": "Video and Audio"
+  },
+  "specs.video_audio.video_compression": {
+    "message": "Video Compression"
+  },
+  "specs.video_audio.wdr": {
+    "message": "WDR"
+  },
+  "specs.video_audio.audio": {
+    "message": "Audio"
+  },
+  "specs.interface.alarm": {
+    "message": "Alarm"
+  },
+  "specs.interface.audio": {
+    "message": "Audio"
+  },
   "externalLinks.FaceStation2.desc": {
     "message": "IP Facial Authentication Terminal"
   },
@@ -1128,5 +1170,8 @@
   },
   "externalLinks.dev.bsair.desc": {
     "message": "Seamless API integration with existing systems"
+  },
+  "externalLinks.apps.supremapass.desc": {
+    "message": "BioStar Air mobile credentials"
   }
 }
