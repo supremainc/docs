@@ -1,0 +1,111 @@
+---
+id: web-server-settings
+title: Accessing and Configuring the Web Server
+description: This topic explains how to set a password and log in the first time you access the ViOnyx Web Server.
+keywords:
+  - keyword1
+  - keyword2
+  - keyword3
+---
+
+This topic explains how to set a password and log in the first time you access the ViOnyx Web Server.
+
+## Accessing the Camera Web Server {#access-web-server}
+
+:::info
+
+On a computer connected to the same network as the camera.
+
+:::
+
+1. Contact Suprema Technical Support (CS@suprema.co.kr) to download the package file (*ViOnyxTool_V1_0_1 4.zip*).
+
+2. Extract the archive, then run *ViOnyxTool.exe*.
+
+   <Image src="/img/camera/web-server-settings1.png" width='80%' alone />
+
+   :::info
+
+   1. If the required programs aren't installed, the tool will open a page where you can download them.
+
+      <Image src="/img/camera/web-server-settings2.png" width='50%' alone />
+
+   2. Install the required programs, then run *ViOnyxTool.exe* again.
+
+   :::
+
+3. Click Search for Cameras.
+
+   <Image src="/img/camera/web-server-settings3.png" width='80%' alone />
+
+4. In the list of discovered cameras, find the serial number (**DeviceID**) of the camera you want to access and note its IP address (**IP Address**).
+
+   <Image src="/img/camera/web-server-settings4.png" width='80%' alone />
+
+5. Please launch the web browser.
+
+6. Enter the camera's IP address (**IP Address**) in the address bar and press **Enter**.
+
+7. The ViOnyx Web Server page appears.
+
+## Set Password
+
+When you first access the ViOnyx Web Server, set a password.
+
+1. See [Accessing the Camera Web Server](#access-web-server), then enter the ViOnyx Web Server's IP address in a web browser.
+
+   <Image src="/img/camera/password-setting1-vionyx.png" />
+
+2. <Cmd>Password</Cmd> field: Enter the password.
+
+3. <Cmd>Confirm Password</Cmd> field: Enter the same password again.
+
+4. Make sure the password you entered meets all of the following requirements.
+
+   :::note
+
+   **Password requirements**
+
+   * **Password Confirmation**: Values in the <Cmd>Password</Cmd> and <Cmd>Confirm Password</Cmd> fields must match exactly.
+
+   * **Length**: Enter between 12 and 64 characters.
+
+   * **Character composition**: Must include at least 1 of each of the following: English uppercase letters (A-Z), English lowercase letters (a-z), digits (0-9), and special characters (`\"` `!` `@` `#` `%` `^` `&` `*` `(` `)` `-` `_` `=` `+` `[` `]` `{` `}`).
+
+     * Spaces, Hangul, and other Unicode characters are not allowed.
+
+   * **Security rules**: To prevent security vulnerabilities, the following patterns are not allowed.
+
+     * Consecutive sequences of 4 or more letters or numbers (e.g., abcd, 1234, 4321)
+
+     * Identical characters or digits repeated 4 or more times (e.g., aaaa, 1111)
+
+     * Contains the user ID (case-insensitive)
+
+     * Common words or patterns that are easy to guess (e.g., password, qwerty)
+
+   :::
+
+5. The <Cmd>Submit</Cmd> button becomes active once all conditions are met. Click the button to finish setting your password.
+
+:::caution
+
+Take care not to lose your password. If you lose your password, you will need to reset the camera.
+
+:::
+
+## How to Log in
+
+After the password is set, you will be automatically redirected to the login page. Enter the administrator ID and the password you set to access the ViOnyx Web server.
+
+<Image src="/img/camera/password-setting2-vionyx.png" />
+
+1. Enter **admin** in the <Cmd>Id</Cmd> field.
+
+   * You can change the administrator ID (admin) in <Cmd>System</Cmd> → <Cmd>Account management</Cmd>.
+
+2. Enter the password you set in the <Cmd>Password</Cmd> field.
+
+3. Click the <Cmd>Login</Cmd> button. After successfully logging in, the ViOnyx Web Server's live camera viewer will appear.
+
+4. Refer to the [ViOnyx Web Server User Manual](#) to set up the camera.
