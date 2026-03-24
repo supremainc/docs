@@ -577,6 +577,10 @@ details.deviceInfo summary, details.faq summary {
   width: 50% !important;
 }
 
+.doc-content img[src*='component-connection-cables-vionyx'] {
+  Height: 20% !important;
+}
+
 .doc-content .container {
   max-width: 100%;
   width: 100%;
