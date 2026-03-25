@@ -39,6 +39,7 @@ const sidebars = {
         'device/vionyx_webserver/edit-delete-ai-event',
         'device/vionyx_webserver/how-to-set-ai-rule',
         'device/vionyx_webserver/how-to-configure-video-profile',
+        'device/vionyx_webserver/how-to-configure-camera-settings',
       ]
     }
   ],
