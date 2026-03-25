@@ -1,0 +1,145 @@
+---
+id: how-to-configure-privacy-overlay
+title: 프라이버시 및 오버레이 설정하기
+description: 민감한 영역을 마스킹하고 얼굴을 자동 블러처리하며, 영상에 날짜/시간과 카메라 이름을 표시하는 방법을 안내합니다.
+keywords: [Privacy, Overlay, 프라이버시, 오버레이, 마스킹, 블러]
+---
+
+<Cmd sid='privacy_overlay' product='cam' className='normal' /> 설정을 사용하면 카메라 영상에 민감한 영역을 가리거나 얼굴을 자동으로 블러 처리할 수 있습니다. 또한 영상에 날짜 및 시간, 카메라 이름을 표시해 영상의 출처와 촬영 시각을 명확히 할 수 있습니다. 모든 설정은 즉시 라이브 뷰에 반영됩니다.
+
+아래와 같은 상황에서 프라이버시 & 오버레이를 설정하세요.
+
+* 사생활 침해가 우려되는 특정 영역을 마스킹하고 싶을 때
+
+* 얼굴 자동 블러로 개인정보 보호 정책을 준수하고 싶을 때
+
+* 녹화 영상에 날짜/시간을 표시해 영상 추적성을 확보하고 싶을 때
+
+* 여러 카메라 운영 시 카메라 이름을 표시해 영상 출처를 명확히 하고 싶을 때
+
+:::info
+
+프라이버시 설정(마스킹, 얼굴 블러)은 영상 표시에만 적용되며, AI 분석은 원본 이미지를 기반으로 수행되어 AI 성능에 영향을 주지 않습니다.
+
+:::
+
+
+## 프라이버시 & 오버레이 설정
+
+1. 화면 왼쪽 상단의 <Cmd sid='settings' product='cam' /> 메뉴를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='basic' product='cam' /> → <Cmd sid='privacy_overlay' product='cam' />를 클릭하세요.
+
+   <Image src='/img/cam-server/cam-webserver-settings-privacy-overlay.png' />
+
+1. 변경 사항을 저장하려면 화면 오른쪽 상단의 <Cmd sid='save' product='cam' /> 버튼을 클릭하세요. 
+
+변경 사항은 저장 후 즉시 카메라에 반영됩니다.
+
+
+## 프라이버시 영역 설정
+
+촬영 영상에서 비공개할 특정 영역을 마스킹할 수 있습니다. 최대 10개 영역까지 설정 가능하며, 각 영역은 움직임 없이 고정됩니다.
+
+### 프라이버시 영역 추가
+
+1. <Cmd sid='area_setting' product='cam' /> 섹션에서 <Cmd sid='add_button' product='cam' /> 버튼을 클릭하세요.
+
+1. 라이브 뷰에 마스킹할 영역이 추가됩니다. 영역의 모서리를 드래그해 크기를 조절하거나 영역 전체를 드래그해 위치를 이동할 수 있습니다.
+
+   <Image src='/img/cam-server/cam-webserver-settings-privacy-overlay-add-area.png' />
+
+1. 마스킹 영역이 생성되면, 우측 설정 패널에서 영역 이름과 순서, 색상을 설정할 수 있습니다.
+
+   * <Cmd sid='name' product='cam' />: 마스킹 영역 이름은 자동 생성되며, 필요에 따라 수정할 수 있습니다.
+
+   * <Cmd sid='order' product='cam' />: 마스킹 영역이 서로 겹칠 때 표시 순서를 조정할 수 있습니다. 숫자가 클수록 위에 표시됩니다.
+
+   * <Cmd sid='color' product='cam' />: 마스킹 영역의 색상을 선택할 수 있습니다.
+
+:::info
+
+* 마스킹된 영역은 모든 뷰 모드(Fisheye, Single Panorama, Double Panorama, Quad View)에 자동으로 적용됩니다.
+
+* 마스킹 영역의 설정을 초기화하려면 <IcCamReset title='reset' /> 버튼을 클릭하세요.
+
+* 마스킹 영역을 삭제하려면 <IcCamTrash title='delete' /> 버튼을 클릭하세요.
+
+:::
+
+
+## 얼굴 프라이버시 설정
+
+카메라가 감지한 얼굴 또는 전신을 자동으로 블러 처리하여 개인정보를 보호할 수 있습니다. <Cmd sid='face_privacy_setting' product='cam' /> 옵션을 활성화하고 원하는 블러 처리 범위를 선택하세요.
+
+<Image src='/img/cam-server/cam-webserver-settings-privacy-overlay-face-body.png' />
+
+* <Cmd>Face Only</Cmd>: 감지된 모든 얼굴이 자동으로 블러 처리됩니다.
+
+* <Cmd>Full Body</Cmd>: 감지된 전신이 자동으로 블러 처리됩니다.
+
+:::info
+
+얼굴 또는 전신이 블러 처리되어도 AI 성능에는 영향을 주지 않습니다. 카메라가 블러 처리된 영상을 표시하는 동시에, AI 분석은 원본 이미지를 기반으로 수행되므로 얼굴 인식, 객체 추적 등의 AI 기능이 정상 작동합니다.
+
+:::
+
+
+## 오버레이 설정
+
+라이브 뷰에 날짜/시간과 카메라 이름을 표시할 수 있습니다. <Cmd sid='overlay' product='cam' /> 옵션을 활성화하고, <Cmd sid='date_and_time_overlay' product='cam' />, <Cmd sid='camera_name' product='cam' />에서 세부 설정을 조정하세요.
+
+<Image src='/img/cam-server/cam-webserver-settings-privacy-overlay-date-camera.png' />
+
+:::info
+
+각 설정은 변경 직후 자동 저장되어 라이브 뷰에 즉시 반영됩니다.
+
+:::
+
+### <Cmd sid='date_and_time_overlay' product='cam' className='normal' />
+
+라이브 뷰에 표시되는 날짜와 시간의 형식과 크기, 색상을 설정할 수 있습니다. 라이브 뷰에서 날짜/시간 위치를 확인하고, 필요하면 마우스로 드래그하여 위치를 조절하세요.
+
+* <Cmd sid='date' product='cam' /> / <Cmd sid='time' product='cam' />: 토글 버튼을 클릭해 날짜 및 시간 오버레이를 켜거나 끌 수 있습니다.
+
+* <Cmd sid='date_format' product='cam' />: 날짜 형식을 선택하세요.
+
+   * YYYY-MM-DD (기본값, 예: 2026-01-12)
+
+   * MM-DD-YYYY (예: 01-12-2026)
+
+   * DD-MM-YYYY (예: 12-01-2026)
+
+* <Cmd sid='time_format' product='cam' />: 시간 형식을 선택하세요.
+
+   * HH:MM:SS (기본값, 예: 13:45:56)
+
+   * HH:MM (초 생략, 예: 13:45)
+
+* <Cmd sid='font_size' product='cam' />: 라이브 뷰에 표시되는 글자 크기를 선택하세요. 1부터 6까지 선택할 수 있습니다.
+
+* <Cmd sid='color' product='cam' />: 라이브 뷰에 표시되는 글자 색상을 선택하세요.
+
+:::info
+
+날짜 및 시간 오버레이는 Fisheye View에만 표시됩니다.
+
+:::
+
+### <Cmd sid='camera_name' product='cam' className='normal' />
+
+라이브 뷰에 카메라 이름을 표시해 영상의 출처를 명확히 할 수 있습니다. 라이브 뷰에서 카메라 이름 위치를 확인하고, 필요하면 마우스로 드래그하여 위치를 조절하세요.
+
+* <Cmd sid='display' product='cam' />: 토글 버튼을 클릭해 카메라 이름 오버레이를 켜거나 끌 수 있습니다.
+
+* <Cmd sid='name' product='cam' />: 카메라 이름을 입력하세요.
+
+* <Cmd sid='font_size' product='cam' />: 라이브 뷰에 표시되는 글자 크기를 선택하세요. 1부터 6까지 선택할 수 있습니다.
+
+* <Cmd sid='color' product='cam' />: 라이브 뷰에 표시되는 글자 색상을 선택하세요.
+
+
+## 설정 저장
+
+설정한 내용은 라이브 뷰에서 바로 확인할 수 있으며, 저장하려면 화면 오른쪽 상단의 <Cmd sid='save' product='cam' /> 버튼을 클릭하세요. 저장된 설정은 카메라에 적용되어 라이브 뷰와 녹화 영상에 반영됩니다.

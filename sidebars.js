@@ -40,6 +40,9 @@ const sidebars = {
         'device/vionyx_webserver/how-to-set-ai-rule',
         'device/vionyx_webserver/how-to-configure-video-profile',
         'device/vionyx_webserver/how-to-configure-camera-settings',
+        'device/vionyx_webserver/how-to-configure-privacy-overlay',
+        'device/vionyx_webserver/how-to-configure-date-time',
+        'device/vionyx_webserver/how-to-configure-network',
       ]
     }
   ],
