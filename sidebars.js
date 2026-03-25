@@ -32,8 +32,12 @@ const sidebars = {
         'device/vionyx_webserver/getting-started',
         'device/vionyx_webserver/ui-navigation',
         'device/vionyx_webserver/live-basic',
-        'device/vionyx_webserver/how-to-connfigure-people-counting',
+        'device/vionyx_webserver/how-to-connfigure-people-tracking',
         'device/vionyx_webserver/how-to-connfigure-intrusion',
+        'device/vionyx_webserver/how-to-connfigure-line-crossing',
+        'device/vionyx_webserver/how-to-connfigure-counting-people',
+        'device/vionyx_webserver/edit-delete-ai-event',
+        'device/vionyx_webserver/how-to-set-ai-rule',
       ]
     }
   ],
