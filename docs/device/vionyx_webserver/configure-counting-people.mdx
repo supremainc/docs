@@ -1,0 +1,147 @@
+---
+id: configure-counting-people
+title: 인원 카운팅 이벤트 설정하기
+description: 지정된 구역에 머무르는 사람의 수를 감지할 수 있습니다.
+keywords: [AI 분석, 출입자 동선, 얼굴 인식]
+---
+
+인원 카운팅 이벤트를 설정하면 지정된 구역에 머무르는 사람의 수를 감지할 수 있습니다. 선택적으로 얼굴 영역을 추가하면 등록된 사용자를 자동으로 신원을 인식합니다.
+
+## 언제 사용하나요?
+
+* 활용 사례 추가 예정
+
+
+## 인원 카운팅 이벤트 생성
+
+인원 카운팅 이벤트를 생성하면 <Cmd sid='live' product='cam' /> 메뉴에서 지정된 구역에 머무르는 사람의 수를 감지할 수 있습니다. 또한 얼굴 영역을 설정하면 해당 영역에서 얼굴을 우선적으로 추적할 수 있으며, 등록된 사용자는 신원을 자동 인식합니다.
+
+<Steps>
+<Step>
+
+### 이벤트 생성 시작
+
+1. 화면 왼쪽 상단의 <Cmd sid='settings' product='cam' /> 메뉴를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' />를 클릭하세요.
+
+   <Image src='/img/cam-server/ai-analysis-events.png' />
+
+1. 화면 오른쪽 상단의 <Cmd sid='add_button' product='cam' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='select_ai_analysis_type' product='cam' /> 창에서 <Cmd sid='ai_analysis_people_counting' product='cam' />을 선택하고 <Cmd sid='next' product='cam' /> 버튼을 클릭하세요.
+
+   <Image src='/img/cam-server/ai-analysis-events-counting-people.png' />
+
+1. <Cmd sid='face_analytics_consent_title' product='cam' /> 팝업이 표시되면 내용을 확인하고 <Cmd sid='face_analytics_consent_agree' product='cam' /> 버튼을 클릭하세요.
+
+   :::note
+
+   * 얼굴 인식 기능을 사용하려면 해당 지역의 관련 규제 법규를 준수해야 합니다. 동의하지 않으면 진행할 수 없습니다.
+
+   * <Cmd sid='face_analytics_consent_title' product='cam' /> 팝업은 최초 한 번만 표시됩니다. 이후 AI 이벤트 생성 시에는 동의한 것으로 간주합니다.
+
+   :::
+
+1. 오른쪽 <Cmd sid='ai_analysis_people_counting' product='cam' /> 패널에서 필요한 설정을 완료하세요.
+
+   <Image src='/img/cam-server/ai-analysis-events-add-counting-people-settings.png' />
+
+</Step>
+<Step>
+
+### 이벤트 이름 설정
+
+<Cmd sid='name' product='cam' /> 입력란에서 AI 이벤트 이름을 입력하세요. 이름은 최대 64자까지 입력할 수 있습니다.
+
+</Step>
+<Step>
+
+### 카운팅 영역 설정
+
+라이브 뷰에서 카운팅 영역을 설정하세요. 카메라에서 설정한 카운팅 영역에 머무르는 사람을 실시간으로 카운팅하고 이벤트를 발생시킵니다. 최소 1개를 설정해야 하며, <Cmd sid='add_button' product='cam' /> 버튼을 클릭해 최대 10개까지 추가할 수 있습니다. 라이브 뷰에 표시되는 카운팅 영역 상자의 모서리 또는 점을 마우스로 드래그하여 원하는 형태로 조정할 수 있습니다. 가운데 영역을 드래그하여 위치를 이동할 수도 있습니다.
+
+<Image src='/img/cam-server/ai-analysis-events-add-counting-people-settings-counting-area.png' />
+
+* <Cmd sid='name' product='cam' />: 카운팅 영역의 이름을 수정할 수 있습니다. 알기 쉽게 이름을 지정하세요. 카운팅 영역의 이름은 라이브 뷰에서 마우스 오버 시 표시됩니다.
+
+* <Cmd sid='color' product='cam' />: 카운팅 영역의 색상을 선택할 수 있습니다. 라이브 뷰에서 카운팅 영역이 선택한 색상으로 표시됩니다.
+
+* <Cmd sid='condition' product='cam' />: 이벤트 발생 조건을 설정하세요. 
+
+   * <Cmd>Every Change</Cmd>: 사람이 카운팅 영역에 들어오거나 나갈 때마다 이벤트 발생
+
+   * <Cmd>Count Limit</Cmd>: 카운팅 영역에 머무르는 사람 수가 지정한 수를 초과할 때 이벤트 발생 (기본값 10명, 최대값 100명)
+
+* <Cmd sid='duration' product='cam' />: 카운팅 영역에 머무르는 사람의 수가 이벤트 발생 조건을 충족해야 하는 최소 시간을 설정하세요. 예를 들어, Duration을 5초로 설정하면 사람이 카운팅 영역에 5초 이상 머물러야 이벤트가 발생합니다. 최대 60초까지 설정할 수 있습니다.
+
+* <Cmd sid='face_matching' product='cam' />: 카운팅 영역에 머무르는 사람의 신원을 자동으로 확인하려면 <Cmd sid='on' product='cam' />으로 설정하세요.
+
+:::info
+
+* 설정한 카운팅 영역의 모양과 크기를 초기화하려면 <IcCamReset title='reset' /> 버튼을 클릭하세요.
+
+* 추가한 카운팅 영역을 삭제하려면 <IcCamTrash title='delete' /> 버튼을 클릭하세요.
+
+:::
+
+</Step>
+<Step>
+
+### 얼굴 영역 설정(선택 사항)
+
+얼굴을 감지할 영역을 설정하세요. 설정하면 해당 영역에서 얼굴을 우선 추적합니다. 얼굴 영역과 카운팅 영역은 겹쳐서 설정할 수 있습니다. <Cmd sid='add_button' product='cam' /> 버튼을 클릭해 최대 10개까지 설정할 수 있습니다. 라이브 뷰에 파란색 상자가 표시되며, 마우스로 모서리 또는 점을 드래그하여 원하는 형태로 조정할 수 있습니다. 가운데 영역을 드래그하여 위치를 이동할 수도 있습니다.
+
+<Image src='/img/cam-server/ai-analysis-events-add-counting-people-settings-face-area.png' />
+
+* <Cmd sid='name' product='cam' />: 얼굴 영역의 이름을 수정할 수 있습니다. 알기 쉽게 이름을 지정하세요. 얼굴 영역의 이름은 라이브 뷰에서 마우스 오버 시 표시됩니다.
+
+:::info
+
+* 등록된 사용자는 <Cmd sid='live' product='cam' /> 메뉴에서 신원을 자동 인식해 이름이 표시됩니다. 등록되지 않은 사용자는 <Cmd sid='unknown_face' product='cam' />으로 표시됩니다.
+
+* 설정한 얼굴 영역의 모양과 크기를 초기화하려면 <IcCamReset title='reset' /> 버튼을 클릭하세요.
+
+* 추가한 얼굴 영역을 삭제하려면 <IcCamTrash title='delete' /> 버튼을 클릭하세요.
+
+:::
+
+</Step>
+<Step>
+
+### 카운팅 초기화 설정
+
+카운팅 영역에 머무르는 사람 수를 초기화하는 조건을 설정하세요.
+
+* <Cmd sid='all_areas_count_reset' product='cam' />: 모든 카운팅 영역의 카운팅을 정해진 시간마다 초기화하려면 <Cmd sid='on' product='cam' />으로 설정하세요. <Cmd sid='reset_time' product='cam' />에서 설정한 시각에 모든 카운팅 영역의 카운팅이 초기화됩니다.
+
+</Step>
+<Step>
+
+### 설정 저장
+
+모든 설정을 완료한 후 오른쪽 상단의 <Cmd sid='save' product='cam' /> 버튼을 클릭하세요. 이전 화면으로 돌아가며, 새로 생성된 AI 이벤트가 목록에 추가됩니다.
+
+<Image src='/img/cam-server/ai-analysis-events-add-counting-people-settings-complete.png' />
+
+</Step>
+</Steps>
+
+
+## 라이브에서 확인
+
+화면 왼쪽 상단의 <Cmd sid='live' product='cam' /> 메뉴를 클릭하세요. 카메라 영상의 오른쪽 상단의 <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> 아이콘이 켜져 있는지 확인하세요. 설정한 카운팅 영역과 얼굴 영역이 영상에 오버레이로 표시됩니다. 카운팅 영역에 머무르는 사람의 수를 `Count: N` 형식으로 표시합니다. 얼굴 영역을 설정했다면 카메라가 해당 영역에서 얼굴을 감지하며, 등록된 사용자는 자동으로 신원이 인식되어 이름을 표시합니다.
+
+<Image src='/img/cam-server/ai-analysis-events-counting-people-result.png' />
+
+:::info
+
+* 등록되지 않은 사용자는 <Cmd sid='unknown_face' product='cam' />로 표시됩니다. 등록된 사용자는 이름과 함께 표시합니다.
+
+* 조명이 부족하거나 역광이 있으면 카메라가 얼굴을 인식하지 못할 수 있습니다. 촬영 공간의 조명을 개선하거나 카메라의 위치와 각도를 조정하여 얼굴이 잘 보이도록 하세요.
+
+* 얼굴이 카메라로 향해야 인식됩니다. 옆모습 또는 뒷모습은 인식이 어려울 수 있습니다.
+
+* 너무 많은 이벤트가 발생하면 <Cmd sid='every_delay' product='cam' /> 옵션값을 조정하세요. 이벤트 발생 지연 시간을 늘리면 이벤트 빈도를 줄일 수 있습니다.
+
+:::
