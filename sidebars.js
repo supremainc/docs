@@ -17,10 +17,10 @@
 
 const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
-  aicamwebviewr: [
+  aicamwebserver: [
     {
       type: 'category',
-      label: 'AI Cam Web Viewer',
+      label: 'AI Cam Web Server',
       collapsed: false,
       collapsible: false,
       className: 'p-title',
@@ -31,18 +31,60 @@ const sidebars = {
       items: [
         'device/vionyx_webserver/getting-started',
         'device/vionyx_webserver/ui-navigation',
-        'device/vionyx_webserver/live-basic',
-        'device/vionyx_webserver/how-to-configure-people-tracking',
-        'device/vionyx_webserver/how-to-configure-intrusion',
-        'device/vionyx_webserver/how-to-configure-line-crossing',
-        'device/vionyx_webserver/how-to-configure-counting-people',
-        'device/vionyx_webserver/edit-delete-ai-event',
-        'device/vionyx_webserver/how-to-set-ai-rule',
-        'device/vionyx_webserver/how-to-configure-video-profile',
-        'device/vionyx_webserver/how-to-configure-camera-settings',
-        'device/vionyx_webserver/how-to-configure-privacy-overlay',
-        'device/vionyx_webserver/how-to-configure-date-time',
-        'device/vionyx_webserver/how-to-configure-network',
+        {
+          type: 'doc',
+          id: 'device/vionyx_webserver/live-basic',
+          className: 'cam--basiclive'
+        },
+        {
+          type: 'category',
+          label: 'AI 이벤트 및 규칙',
+          className: 'ai--event',
+          items: [
+            'device/vionyx_webserver/configure-people-tracking',
+            'device/vionyx_webserver/configure-intrusion',
+            'device/vionyx_webserver/configure-line-crossing',
+            'device/vionyx_webserver/configure-counting-people',
+            'device/vionyx_webserver/edit-delete-ai-event',
+            'device/vionyx_webserver/set-ai-rule'
+          ]
+        },
+        {
+          type: 'category',
+          label: '설정',
+          className: 'cam--settings',
+          items: [
+            'device/vionyx_webserver/configure-video-profile',
+            'device/vionyx_webserver/configure-camera-settings',
+            'device/vionyx_webserver/configure-privacy-overlay',
+            'device/vionyx_webserver/configure-date-time',
+            'device/vionyx_webserver/configure-network'
+          ]
+        },
+        {
+          type: 'category',
+          label: '사람',
+          className: 'cam--people',
+          items: [
+            'device/vionyx_webserver/add-users',
+            'device/vionyx_webserver/modify-delete-users',
+            'device/vionyx_webserver/search-view-users'
+          ]
+        },
+        {
+          type: 'category',
+          label: '시스템',
+          className: 'cam--system',
+          items: [
+            'device/vionyx_webserver/update-device-info',
+            'device/vionyx_webserver/update-firmware',
+            'device/vionyx_webserver/manage-device',
+            'device/vionyx_webserver/upload-audio-clips',
+            'device/vionyx_webserver/update-admin-password',
+            'device/vionyx_webserver/add-operators',
+            'device/vionyx_webserver/view-system-logs'
+          ]
+        }
       ]
     }
   ],
