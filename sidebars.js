@@ -40,6 +40,10 @@ const sidebars = {
           type: 'category',
           label: 'AI 이벤트 및 규칙',
           className: 'ai--event',
+          link: {
+            type: 'doc',
+            id: 'device/vionyx_webserver/configure-ai-events-and-rules',
+          },
           items: [
             'device/vionyx_webserver/configure-people-tracking',
             'device/vionyx_webserver/configure-intrusion',
@@ -53,6 +57,10 @@ const sidebars = {
           type: 'category',
           label: '설정',
           className: 'cam--settings',
+          link: {
+            type: 'doc',
+            id: 'device/vionyx_webserver/configure-camera-device',
+          },
           items: [
             'device/vionyx_webserver/configure-video-profile',
             'device/vionyx_webserver/configure-camera-settings',
@@ -65,6 +73,10 @@ const sidebars = {
           type: 'category',
           label: '사람',
           className: 'cam--people',
+          link: {
+            type: 'doc',
+            id: 'device/vionyx_webserver/manage-people',
+          },
           items: [
             'device/vionyx_webserver/add-users',
             'device/vionyx_webserver/modify-delete-users',
@@ -75,6 +87,10 @@ const sidebars = {
           type: 'category',
           label: '시스템',
           className: 'cam--system',
+          link: {
+            type: 'doc',
+            id: 'device/vionyx_webserver/system-management',
+          },
           items: [
             'device/vionyx_webserver/update-device-info',
             'device/vionyx_webserver/update-firmware',
