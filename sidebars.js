@@ -29,8 +29,16 @@ const sidebars = {
         id: 'device/vionyx_webserver/index',
       },
       items: [
-        'device/vionyx_webserver/getting-started',
-        'device/vionyx_webserver/ui-navigation',
+        {
+          type: 'doc',
+          id: 'device/vionyx_webserver/getting-started',
+          className: 'cam--started'
+        },
+        {
+          type: 'doc',
+          id: 'device/vionyx_webserver/ui-navigation',
+          className: 'cam--navigation'
+        },
         {
           type: 'doc',
           id: 'device/vionyx_webserver/live-basic',

@@ -264,6 +264,14 @@ div[class*='docItemCol'] {
       padding-left: 0;
     }
   }
+  li.cam--started > a {
+    background: url('./img/ico-header-started.svg') no-repeat 10px 7px;
+    padding-left: 37px;
+  }
+  li.cam--navigation > a {
+    background: url('./img/ico-header-interface.svg') no-repeat 10px 7px;
+    padding-left: 37px;
+  }
   li.cam--basiclive > a {
     background: url('./img/ico-header-live.svg') no-repeat 10px 7px;
     padding-left: 37px;
@@ -1363,29 +1371,37 @@ body[data-rh] .redocusaurus {
 }
 
 [data-theme='dark'] .theme-doc-sidebar-menu {
+  li.cam--started > a {
+    background: url('./img/ico-header-started-dark.svg') no-repeat 10px 7px;
+    padding-left: 37px;
+  }
+  li.cam--navigation > a {
+    background: url('./img/ico-header-interface-dark.svg') no-repeat 10px 7px;
+    padding-left: 37px;
+  }
   li.cam--basiclive > a {
     background: url('./img/ico-header-live-dark.svg') no-repeat 10px 7px;
   }
   li.ai--event .menu__list-item-collapsible > a {
-    background: url('./img/ico-header-ai-dark.svg') no-repeat 10px 7px;
+    background: url('./img/ico-header-ai-dark.svg') no-repeat 10px 7px !important;
     &:hover {
       background: url('./img/ico-header-ai-dark.svg') no-repeat 10px 7px !important;
     }
   }
   li.cam--settings .menu__list-item-collapsible > a {
-    background: url('./img/ico-header-settings-dark.svg') no-repeat 10px 7px;
+    background: url('./img/ico-header-settings-dark.svg') no-repeat 10px 7px !important;
     &:hover {
       background: url('./img/ico-header-settings-dark.svg') no-repeat 10px 7px !important;
     }
   }
   li.cam--people .menu__list-item-collapsible > a {
-    background: url('./img/ico-header-people-dark.svg') no-repeat 10px 7px;
+    background: url('./img/ico-header-people-dark.svg') no-repeat 10px 7px !important;
     &:hover {
       background: url('./img/ico-header-people-dark.svg') no-repeat 10px 7px !important;
     }
   }
   li.cam--system .menu__list-item-collapsible > a {
-    background: url('./img/ico-header-system-dark.svg') no-repeat 10px 7px;
+    background: url('./img/ico-header-system-dark.svg') no-repeat 10px 7px !important;
     &:hover {
       background: url('./img/ico-header-system-dark.svg') no-repeat 10px 7px !important;
     }
