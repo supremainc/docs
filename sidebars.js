@@ -20,7 +20,7 @@ const sidebars = {
   aicamwebserver: [
     {
       type: 'category',
-      label: 'AI Cam Web Server',
+      label: 'Vionyx Web Server',
       collapsed: false,
       collapsible: false,
       className: 'p-title',
