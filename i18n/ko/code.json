@@ -56,6 +56,9 @@
   "externalLinks.apps.setupmanager.desc": {
     "message": "중앙집중형 출입통제 관리 웹서버"
   },
+  "externalLinks.ViOnyx.desc": {
+    "message": "AI 기반 지능형 영상 분석 카메라"
+  },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "탐색 경로",
     "description": "The ARIA label for the breadcrumbs"
