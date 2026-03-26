@@ -136,9 +136,12 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     {
       title: 'BioStation 3 Max',
       url: `/device/biostation_3_max`,
-      img: '#',
-      //img: require('@site/static/img/device/xpass_q2.png').default,
-      desc: 'BioStation 3 Max',
+      img: require('@site/static/img/device/biostation_3_max.png').default,
+      desc: `${translate({
+        id: "externalLinks.BioStation3Max.desc",
+        message: "###"
+      })}`,
+      height: '90px'
     },
     {
       title: 'BioEntry W3',
@@ -171,7 +174,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     {
       title: 'FaceStation F2',
       url: '/device/facestation_f2',
-      img: 'https://www.suprema.co.kr/en/asset/images/thumbnail/facestation2_f2.png',
+      img: require('@site/static/img/device/facestation2_f2.png').default,
       desc: `${translate({
         id: "externalLinks.FaceStationF2.desc",
         message: "퓨전 얼굴인증 장치"
@@ -223,7 +226,8 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       url: `/device/bioentry_r2`,
       img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryr2.png',
       desc: `${translate({
-        id: "externalLinks.BioentryP2.desc"
+        id: "externalLinks.BioentryP2.desc",
+        message: "콤팩트 지문인식 단말기"
       })}`,
       height: '90px'
     },
@@ -235,7 +239,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
         id: "externalLinks.XStation2.desc",
         message: "차세대 모바일 출입인증 단말기"
       })}`,
-      height: '90px'
+      height: '100px'
     }
   ];
   const productLinks = productLinksProp || defaultProductLinks;
@@ -267,7 +271,9 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
       img: 'https://supremainc.com/en/asset/images/thumbnail/xStation2.png',
       desc: `${translate({
         id: "externalLinks.XStation2.desc",
-      })}`
+        message: "차세대 모바일 출입인증 단말기"
+      })}`,
+      height: '90px'
     },
     {
       title: 'XPass 2',
@@ -284,6 +290,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
       img: 'https://supremainc.com/ko/asset/images/thumbnail/xpassd2.png',
       desc: `${translate({
         id: "externalLinks.XPass2.desc",
+        message: "옥외형 콤팩트 RFID 리더"
       })}`,
     },
     {
