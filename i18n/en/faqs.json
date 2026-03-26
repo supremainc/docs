@@ -9,7 +9,6 @@
             "biostation_3",
             "biostation_2a",
             "facestation_f2",
-            "bioentry_n2",
             "biolite_n2",
             "facestation_2",
             "xstation_2",
@@ -46,7 +45,6 @@
             "biostation_3",
             "biostation_2a",
             "facestation_f2",
-            "bioentry_n2",
             "biolite_n2",
             "facestation_2",
             "xstation_2",
@@ -63,7 +61,6 @@
             "biostation_3",
             "biostation_2a",
             "facestation_f2",
-            "bioentry_n2",
             "biolite_n2",
             "facestation_2",
             "xstation_2",
@@ -183,7 +180,6 @@
       "contents": [
         {
           "product": [
-            "bioentry_n2",
             "biostation_2a",
             "biolite_n2",
             "xstation_2",
@@ -200,7 +196,6 @@
         },
         {
           "product": [
-            "bioentry_n2",
             "biostation_2a",
             "biolite_n2",
             "xstation_2",
@@ -216,7 +211,6 @@
         },
         {
           "product": [
-            "bioentry_n2",
             "biostation_2a",
             "biolite_n2",
             "xstation_2",
@@ -241,7 +235,6 @@
             "biostation_3",
             "biostation_2a",
             "facestation_f2",
-            "bioentry_n2",
             "biolite_n2",
             "facestation_2",
             "xstation_2",
@@ -265,7 +258,6 @@
             "biostation_3",
             "biostation_2a",
             "facestation_f2",
-            "bioentry_n2",
             "biolite_n2",
             "facestation_2",
             "xstation_2",
@@ -289,7 +281,6 @@
             "biostation_3",
             "biostation_2a",
             "facestation_f2",
-            "bioentry_n2",
             "biolite_n2",
             "facestation_2",
             "xstation_2",
