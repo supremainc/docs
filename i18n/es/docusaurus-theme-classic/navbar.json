@@ -146,5 +146,33 @@
   "item.label.Changelog": {
     "message": "Changelog",
     "description": "Navbar item with label Changelog"
+  },
+  "item.label.Developers": {
+    "message": "Developers",
+    "description": "Elemento de la barra de navegación etiquetado como «Developers»"
+  },
+  "item.label.BioStar X API": {
+    "message": "BioStar X API",
+    "description": "Elemento de la barra de navegación etiquetado como «BioStar X API»"
+  },
+  "item.label.BioStar Air Developer": {
+    "message": "BioStar Air Developer",
+    "description": "Elemento de la barra de navegación etiquetado como «BioStar Air Developer»"
+  },
+  "item.label.BioStar Device SDK": {
+    "message": "BioStar Device SDK",
+    "description": "Elemento de la barra de navegación etiquetado como «BioStar Device SDK»"
+  },
+  "item.label.BioStar 2 API": {
+    "message": "BioStar 2 API",
+    "description": "Elemento de la barra de navegación etiquetado como «BioStar 2 API»"
+  },
+  "item.label.Suprema G-SDK": {
+    "message": "Suprema G-SDK",
+    "description": "Elemento de la barra de navegación etiquetado como «Suprema G-SDK»"
+  },
+  "item.label.SVP Android SDK": {
+    "message": "SVP Android SDK",
+    "description": "Elemento de la barra de navegación etiquetado como «SVP Android SDK»"
   }
 }

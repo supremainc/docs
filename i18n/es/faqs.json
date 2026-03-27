@@ -9,7 +9,6 @@
             "biostation_3",
             "biostation_2a",
             "facestation_f2",
-            "bioentry_n2",
             "biolite_n2",
             "facestation_2",
             "xstation_2",
@@ -19,6 +18,18 @@
           "answer": [
             "Si el terminal y el soporte están muy separados, el dispositivo puede no funcionar debido al interruptor antisabotaje.",
             "Verifique el adaptador o el cable de alimentación."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "No se está grabando video o no aparece la imagen.",
+          "answer": [
+            "Si utiliza un adaptador de corriente, asegúrese de que su salida sea igual o superior al consumo máximo de la cámara.",
+            "No conecte un adaptador de corriente y PoE+ al mismo tiempo. Hacerlo puede provocar un mal funcionamiento del dispositivo.",
+            "Si la cámara se alimenta mediante un cable Ethernet, asegúrese de que esté conectada mediante PoE+ o PoE++, no mediante PoE estándar.",
+            "Verifique que el cable de red esté conectado de forma segura y que el sello de goma impermeable del conector Ethernet esté bien asegurado."
           ]
         }
       ]
@@ -34,7 +45,6 @@
             "biostation_3",
             "biostation_2a",
             "facestation_f2",
-            "bioentry_n2",
             "biolite_n2",
             "facestation_2",
             "xstation_2",
@@ -51,7 +61,6 @@
             "biostation_3",
             "biostation_2a",
             "facestation_f2",
-            "bioentry_n2",
             "biolite_n2",
             "facestation_2",
             "xstation_2",
@@ -171,7 +180,6 @@
       "contents": [
         {
           "product": [
-            "bioentry_n2",
             "biostation_2a",
             "biolite_n2",
             "xstation_2",
@@ -188,7 +196,6 @@
         },
         {
           "product": [
-            "bioentry_n2",
             "biostation_2a",
             "biolite_n2",
             "xstation_2",
@@ -204,7 +211,6 @@
         },
         {
           "product": [
-            "bioentry_n2",
             "biostation_2a",
             "biolite_n2",
             "xstation_2",
@@ -229,7 +235,6 @@
             "biostation_3",
             "biostation_2a",
             "facestation_f2",
-            "bioentry_n2",
             "biolite_n2",
             "facestation_2",
             "xstation_2",
@@ -253,7 +258,6 @@
             "biostation_3",
             "biostation_2a",
             "facestation_f2",
-            "bioentry_n2",
             "biolite_n2",
             "facestation_2",
             "xstation_2",
@@ -277,7 +281,6 @@
             "biostation_3",
             "biostation_2a",
             "facestation_f2",
-            "bioentry_n2",
             "biolite_n2",
             "facestation_2",
             "xstation_2",
@@ -307,6 +310,141 @@
           "question": "Después de actualizar el firmware en dispositivos existentes, la configuración de Master Admin no aparece.",
           "answer": [
             "Los dispositivos actualizados con firmware de dispositivos existentes no admiten la configuración de Master Admin. Puede mejorar la seguridad del dispositivo reforzando los permisos de todos los administradores mediante la opción <span class='cmd'>Admin 2-Step Authentication</span>. Para obtener información detallada, consulte <a href='settings#admin-2-step-authentication'>Autenticación en dos pasos del administrador</a>."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "category": {
+      "title": "Instalación y uso",
+      "hid": "vionyx",
+      "contents": [
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "La imagen aparece inclinada después de instalar la cámara.",
+          "answer": [
+            "Cuando se monte en una pared, asegúrese de que el triángulo rojo de la placa de montaje apunte a las 12 en punto (norte).",
+            "Gire el cuerpo de la cámara hacia la izquierda o la derecha para ajustar el ángulo de instalación. El ajuste máximo es de 8° hacia cada lado (15° en total). Si necesita más ajuste, cambie la posición de los orificios de la placa de montaje y vuelva a instalarla."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "Cuando los usuarios de Windows 10 acceden al servidor web con Chrome o Firefox, el volumen del micrófono puede fluctuar periódicamente.",
+          "answer": [
+            "Esto ocurre cuando el controlador del micrófono está configurado como Realtek. Cambie el controlador del micrófono a \"High Definition Audio Device\" (el predeterminado de Windows) o instale un controlador de terceros."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "¿Cuáles son las especificaciones requeridas de los archivos WAVE para la reproducción de audio durante eventos?",
+          "answer": [
+            "Se recomienda usar una frecuencia de muestreo (sampling rate) de 48000 KHz o inferior.",
+            "Utilice muestras de 8 o 16 bits (bits por muestra).",
+            "Solo se admiten formatos codificados en PCM."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "Las imágenes de video se superponen.",
+          "answer": [
+            "Asegúrese de que dos o más cámaras estén configuradas con direcciones multicast diferentes. Usar la misma dirección puede provocar superposición de video."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "El video no se muestra.",
+          "answer": [
+            "Si la transmisión de video está configurada como multicast, asegúrese de que la red local a la que está conectada la cámara cuente con un enrutador que admita multicast."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "Ocurrió un evento de análisis de video, pero no se activó ninguna alarma.",
+          "answer": [
+            "Asegúrese de que el puerto de salida de la alarma esté configurado correctamente."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "No se puede acceder a la cámara desde un navegador.",
+          "answer": [
+            "Asegúrese de que la configuración de red de la cámara sea correcta.",
+            "Asegúrese de que el cable de red esté conectado correctamente.",
+            "Si está conectada vía DHCP, asegúrese de que la cámara haya obtenido correctamente una dirección IP dinámica.",
+            "Si la cámara está conectada a un router, asegúrese de que el reenvío de puertos esté configurado correctamente."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "Se ha perdido la conexión con el servidor web que monitorea el video.",
+          "answer": [
+            "Si otro usuario cambia la configuración de la cámara o de la red, la conexión con el servidor web se interrumpirá.",
+            "Asegúrese de que la conexión de red funcione."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "El servidor web ViOnyx no puede detectar la cámara en la red.",
+          "answer": [
+            "La comunicación con el dispositivo puede estar bloqueada por un firewall o por la configuración de seguridad de la red. Asegúrese de que la red permita los puertos (TCP/UDP) necesarios para el descubrimiento y la comunicación del dispositivo."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "La tarjeta microSD no está grabando.",
+          "answer": [
+            "Compruebe si la tarjeta microSD está defectuosa.",
+            "Antes de reemplazar la tarjeta microSD, desconecte siempre el dispositivo de la corriente eléctrica."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "La tarjeta microSD está insertada pero no se reconoce.",
+          "answer": [
+            "Asegúrese de que la tarjeta microSD esté insertada en la orientación correcta. Las tarjetas microSD formateadas por otros dispositivos pueden no ser compatibles con esta cámara.",
+            "Compruebe que la capacidad de la tarjeta (recomendada 16GB–1TB) y el fabricante (Samsung, SanDisk, Transcend) cumplan las especificaciones. Recomendamos utilizar tarjetas diseñadas para operaciones de escritura continua, como los modelos High Endurance o Pro Endurance. Las tarjetas de otros fabricantes o de otras líneas de producto pueden variar en compatibilidad."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "Se está formando condensación o gotas de agua en el interior de la cámara.",
+          "answer": [
+            "Asegúrese de que los 3 tornillos de fijación estén completamente apretados después de instalar la tapa. Si los tornillos no están totalmente apretados, la resistencia al agua y al polvo (IP66/IP67) puede verse comprometida.",
+            "Al instalar el cable Ethernet y otros cables de conexión, asegúrese de que los sellos, juntas y tuercas de goma impermeables suministrados para el cable Ethernet estén bien apretados y sin huecos. Para los orificios no utilizados, asegúrese de que los tapones de goma impermeables estén completamente insertados."
+          ]
+        },
+        {
+          "product": [
+            "vionyx"
+          ],
+          "question": "El rendimiento del reconocimiento facial y de objetos por IA ha disminuido notablemente.",
+          "answer": [
+            "Compruebe si la lente está expuesta directamente a la luz solar o si está instalada en un área con fuerte contraluz. El deslumbramiento o el contraluz pueden ser una causa importante de la reducción del rendimiento del reconocimiento por IA."
           ]
         }
       ]
