@@ -31,23 +31,29 @@ You can register user information that includes biometric authentication data.
 
    * <Cmd sid='ui_323' product='dev' />: You can enroll a card for user authentication. Press <Cmd sid='ui_323' product='dev' /> → <Cmd sid='ui_108' product='dev' />, then scan the card to assign it to the user at the RF card authentication unit. To enroll more cards, press <Cmd sid='ui_323' product='dev' /> → <Image src='/img/common/ico-add.svg' ico alone />.
 
-   * <Cmd sid='ui_040' product='dev' />: You can enter the PIN you want to use. Press <Cmd sid='ui_040' product='dev' /> → <Cmd sid='ui_108' product='dev' /> and enter the PIN you want to use. For confirmation, enter the PIN once more and then press <Cmd sid='ui_037' product='dev' />. Enter a number between 8 and 16 digits to prevent leaking.
+   * <Cmd sid='ui_040' product='dev' />: You can enter the PIN you want to use. Press <Cmd sid='ui_040' product='dev' /> → <Cmd sid='ui_108' product='dev' /> and enter the PIN you want to use. For confirmation, enter the PIN once more and then press <Cmd sid='ui_037' product='dev' />. Enter a 4- to 16-digit PIN to prevent it from being exposed.
+
+     :::info
+
+     When using <Cmd sid='ui_128' product='dev' />, enter an 8- to 16-digit number.
+
+     :::
 
    * <Cmd sid='ui_172' product='dev' />: You can select permissions to assign to the user.
 
-      :::info
+     :::info
 
-      Available menus vary according to the set user level.
+     Available menus vary according to the set user level.
 
-      * <Cmd sid='ui_075' product='dev' />: This is a general user level, and the menu is not available.
+     * <Cmd sid='ui_075' product='dev' />: This is a general user level, and the menu is not available.
 
-      * <Cmd sid='ui_300' product='dev' />: You can use all menus.
+     * <Cmd sid='ui_300' product='dev' />: You can use all menus.
 
-      * <Cmd sid='ui_194' product='dev' />: You can use the menus <Cmd sid='ui_256' product='dev' />, <Cmd sid='ui_366' product='dev' />, <Cmd sid='ui_280' product='dev' />, <Cmd sid='ui_103' product='dev' />, <Cmd sid='ui_255' product='dev' />.
+     * <Cmd sid='ui_194' product='dev' />: You can use the menus <Cmd sid='ui_256' product='dev' />, <Cmd sid='ui_366' product='dev' />, <Cmd sid='ui_280' product='dev' />, <Cmd sid='ui_103' product='dev' />, <Cmd sid='ui_255' product='dev' />.
 
-      * <Cmd sid='ui_171' product='dev' />: You can use the menus <Cmd sid='ui_166' product='dev' />, <Cmd sid='ui_255' product='dev' />.
+     * <Cmd sid='ui_171' product='dev' />: You can use the menus <Cmd sid='ui_166' product='dev' />, <Cmd sid='ui_255' product='dev' />.
 
-      :::
+     :::
 
    * <Cmd sid='ui_250' product='dev' />: You can set the duration for using the user account.
 
@@ -77,7 +83,7 @@ import EnrollingFace from '../../common/_enrolling-face-warning.mdx';
 
    * To use a Visual Face feature correctly, take a picture by following instructions below.
 
-      <EnrollingFace />
+     <EnrollingFace />
 
    :::
 

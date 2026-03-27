@@ -56,6 +56,9 @@
   "externalLinks.apps.setupmanager.desc": {
     "message": "集中型入退室管理ウェブサーバー"
   },
+  "externalLinks.ViOnyx.desc": {
+    "message": "AI 搭載のインテリジェント映像解析カメラ"
+  },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "パンくずリスト",
     "description": "The ARIA label for the breadcrumbs"
@@ -764,6 +767,48 @@
   "specs.backup_battery.capacity": {
     "message": "容量"
   },
+  "specs.general.extended_memory": {
+    "message": "拡張メモリ"
+  },
+  "specs.camera": {
+    "message": "カメラ"
+  },
+  "specs.camera.image_sensor": {
+    "message": "イメージセンサー"
+  },
+  "specs.camera.lens": {
+    "message": "レンズ"
+  },
+  "specs.camera.fov": {
+    "message": "視野角（FOV）"
+  },
+  "specs.camera.min_illumination": {
+    "message": "最低照度"
+  },
+  "specs.camera.zoom": {
+    "message": "ズームおよび PTZ"
+  },
+  "specs.camera.ir_led": {
+    "message": "赤外線 LED"
+  },
+  "specs.video_audio": {
+    "message": "映像・音声"
+  },
+  "specs.video_audio.video_compression": {
+    "message": "映像圧縮"
+  },
+  "specs.video_audio.wdr": {
+    "message": "WDR"
+  },
+  "specs.video_audio.audio": {
+    "message": "音声"
+  },
+  "specs.interface.alarm": {
+    "message": "アラーム"
+  },
+  "specs.interface.audio": {
+    "message": "音声"
+  },
   "externalLinks.FaceStation2.desc": {
     "message": "顔認証入退勤端末"
   },
@@ -1127,6 +1172,9 @@
     "message": "Suprema デバイスの主要機能を<br/>他ソフトウェアでサポート"
   },
   "externalLinks.dev.bsair.desc": {
-    "message": "既存システムとのシームレスなAPI統合"
+    "message": "既存システムとの円滑なAPI統合"
+  },
+  "externalLinks.apps.supremapass.desc": {
+    "message": "BioStar Air のモバイル認証情報"
   }
 }
