@@ -15876,6 +15876,7 @@ components:
                 required:
                   - card_type
                   - card_id
+                  - user_id
                 properties:
                   card_type:
                     type: object
@@ -15905,11 +15906,20 @@ components:
                   display_card_id:
                     type: integer
                     description: Display card ID shown in the interface
-                    example: 33333333333
+                    example: 27744052605381570
                   card_id:
                     type: integer
                     description: Input value shown/read when scanning the card. Must be unique
-                    example: 33333333333
+                    example: 27744052605381570
+                  user_id:
+                    type: object
+                    required:
+                      - user_id
+                    properties:
+                      user_id:
+                        type: string
+                        description: ID of the user which the QR will be assigned to.
+                        example: "13"
     WiegandFormatInput:
       type: object
       description: Input for updating Wiegand format configuration

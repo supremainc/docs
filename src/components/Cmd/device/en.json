@@ -461,5 +461,10 @@
   "ui_376": "Face & Finger",
   "ui_377": "Face Operation",
   "ui_378": "Finger Operation",
-  "ui_379": "Security Level"
+  "ui_379": "Security Level",
+  "ui_380": "Door",
+  "ui_381": "Door Control",
+  "ui_382": "Manual Unlock",
+  "ui_383": "Manual Lock",
+  "ui_384": "Normalize"
 }

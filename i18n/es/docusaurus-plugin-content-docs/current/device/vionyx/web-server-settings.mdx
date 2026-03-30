@@ -1,0 +1,111 @@
+---
+id: web-server-settings
+title: Acceso y configuración del servidor web
+description: Este tema explica cómo establecer una contraseña e iniciar sesión la primera vez que acceda al servidor web de ViOnyx.
+keywords:
+  - keyword1
+  - keyword2
+  - keyword3
+---
+
+Este tema explica cómo establecer una contraseña e iniciar sesión la primera vez que acceda al servidor web de ViOnyx.
+
+## Acceso al servidor web de la cámara {#access-web-server}
+
+:::info
+
+En una computadora conectada a la misma red que la cámara.
+
+:::
+
+1. Póngase en contacto con el soporte técnico de Suprema (CS@suprema.co.kr) para descargar el paquete (*ViOnyxTool_V1_0_1 4.zip*).
+
+2. Extraiga el archivo comprimido, luego ejecute *ViOnyxTool.exe*.
+
+   <Image src="/img/camera/web-server-settings1.png" width='80%' alone />
+
+   :::info
+
+   1. Si los programas necesarios no están instalados, la herramienta abrirá una página donde podrá descargarlos.
+
+      <Image src="/img/camera/web-server-settings2.png" width='50%' alone />
+
+   2. Instale los programas necesarios y, a continuación, ejecute de nuevo *ViOnyxTool.exe*.
+
+   :::
+
+3. Haga clic en Buscar cámaras.
+
+   <Image src="/img/camera/web-server-settings3.png" width='80%' alone />
+
+4. En la lista de cámaras detectadas, localice el número de serie (**DeviceID**) de la cámara a la que desea acceder y anote su dirección IP (**IP Address**).
+
+   <Image src="/img/camera/web-server-settings4.png" width='80%' alone />
+
+5. Inicie el navegador web.
+
+6. Introduzca la dirección IP de la cámara (**IP Address**) en la barra de direcciones y presione **Enter**.
+
+7. Aparecerá la página del servidor web de ViOnyx.
+
+## Establecer la contraseña
+
+La primera vez que acceda al servidor web de ViOnyx, establezca una contraseña.
+
+1. Consulte [Acceso al servidor web de la cámara](#access-web-server), luego introduzca la dirección IP del servidor web de ViOnyx en un navegador web.
+
+   <Image src="/img/camera/password-setting1-vionyx.png" />
+
+2. <Cmd>Contraseña</Cmd> campo: Introduzca la contraseña.
+
+3. <Cmd>Confirmar contraseña</Cmd> campo: Introduzca la misma contraseña nuevamente.
+
+4. Asegúrese de que la contraseña que introdujo cumpla con todos los siguientes requisitos.
+
+   :::note
+
+   **Requisitos de la contraseña**
+
+   * **Confirmación de contraseña**: Los valores en los campos <Cmd>Contraseña</Cmd> y <Cmd>Confirmar contraseña</Cmd> deben coincidir exactamente.
+
+   * **Longitud**: Introduzca entre 12 y 64 caracteres.
+
+   * **Composición de caracteres**: Debe incluir al menos 1 de cada uno de los siguientes: letras mayúsculas en inglés (A-Z), letras minúsculas en inglés (a-z), dígitos (0-9) y caracteres especiales (`"` `!` `@` `#` `%` `^` `&` `*` `(` `)` `-` `_` `=` `+` `[` `]` `{` `}`).
+
+     * No se permiten espacios, Hangul ni otros caracteres Unicode.
+
+   * **Reglas de seguridad**: Para evitar vulnerabilidades de seguridad, no se permiten los siguientes patrones.
+
+     * Secuencias consecutivas de 4 o más letras o números (p. ej., abcd, 1234, 4321)
+
+     * Caracteres o dígitos idénticos repetidos 4 o más veces (p. ej., aaaa, 1111)
+
+     * Contiene el ID de usuario (no distingue entre mayúsculas y minúsculas)
+
+     * Palabras o patrones comunes que son fáciles de adivinar (p. ej., password, qwerty)
+
+   :::
+
+5. El botón <Cmd>Submit</Cmd> se activa cuando se cumplen todas las condiciones. Haga clic en el botón para finalizar la configuración de su contraseña.
+
+:::caution
+
+Tenga cuidado de no perder la contraseña. Si la pierde, deberá restablecer la cámara.
+
+:::
+
+## Cómo Iniciar Sesión
+
+Una vez establecida la contraseña, se le redirigirá automáticamente a la página de inicio de sesión. Introduzca el ID de administrador y la contraseña que configuró para acceder al servidor web de ViOnyx.
+
+<Image src="/img/camera/password-setting2-vionyx.png" />
+
+1. Ingrese **admin** en el campo <Cmd>Id</Cmd>.
+
+   * Puede cambiar el ID de administrador (admin) en <Cmd>System</Cmd> → <Cmd>Account management</Cmd>.
+
+2. Ingrese la contraseña que configuró en el campo <Cmd>Password</Cmd>.
+
+3. Haga clic en <Cmd>Login</Cmd>. Tras iniciar sesión correctamente, aparecerá el visor en vivo de la cámara del servidor web de ViOnyx.
+
+4. Consulte el [Manual de usuario del ViOnyx Web Server](#) para configurar la cámara.

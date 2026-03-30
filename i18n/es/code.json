@@ -56,6 +56,9 @@
   "externalLinks.apps.setupmanager.desc": {
     "message": "Servidor web de gestión de control de acceso centralizado"
   },
+  "externalLinks.ViOnyx.desc": {
+    "message": "Cámara inteligente de análisis de video con IA"
+  },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "Ruta de navegación",
     "description": "The ARIA label for the breadcrumbs"
@@ -764,6 +767,48 @@
   "specs.backup_battery.capacity": {
     "message": "Capacidad"
   },
+  "specs.general.extended_memory": {
+    "message": "Memoria ampliable"
+  },
+  "specs.camera": {
+    "message": "Cámara"
+  },
+  "specs.camera.image_sensor": {
+    "message": "Sensor de imagen"
+  },
+  "specs.camera.lens": {
+    "message": "Lente"
+  },
+  "specs.camera.fov": {
+    "message": "Campo de visión (FOV)"
+  },
+  "specs.camera.min_illumination": {
+    "message": "Iluminación mínima"
+  },
+  "specs.camera.zoom": {
+    "message": "Zoom y PTZ"
+  },
+  "specs.camera.ir_led": {
+    "message": "LED IR"
+  },
+  "specs.video_audio": {
+    "message": "Video y audio"
+  },
+  "specs.video_audio.video_compression": {
+    "message": "Compresión de video"
+  },
+  "specs.video_audio.wdr": {
+    "message": "WDR"
+  },
+  "specs.video_audio.audio": {
+    "message": "Audio"
+  },
+  "specs.interface.alarm": {
+    "message": "Alarma"
+  },
+  "specs.interface.audio": {
+    "message": "Audio"
+  },
   "externalLinks.FaceStation2.desc": {
     "message": "Terminal IP de autenticación facial"
   },
@@ -1127,6 +1172,9 @@
     "message": "Funciones principales de los dispositivos Suprema compatibles con software de terceros"
   },
   "externalLinks.dev.bsair.desc": {
-    "message": "Integración perfecta de la API con los sistemas existentes"
+    "message": "Integración fluida de la API con sistemas existentes"
+  },
+  "externalLinks.apps.supremapass.desc": {
+    "message": "Credenciales móviles de BioStar Air"
   }
 }
