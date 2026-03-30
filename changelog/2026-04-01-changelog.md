@@ -12,7 +12,7 @@ slug: 2026-04-01-changelog
 
 ## BioStar Air
 
-* [BioStar Air 관리자 가이드](../platform/biostar_air/) 문서 전체 재구성 및 최적화 완료
+* [BioStar Air 가이드](../platform/biostar_air/) 문서 전체 재구성 및 최적화 완료
 
 * BioStar Air 다국어 지원 확대: 영문, 일본어, 스페인어 번역 추가
 
