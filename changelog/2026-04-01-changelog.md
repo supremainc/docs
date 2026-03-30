@@ -22,7 +22,6 @@ slug: 2026-04-01-changelog
 
 * BioStar Air 목차 구조 개선 및 섹션 재조정
 
-
 ## Devices
 
 최신 장치 문서 추가 및 기존 문서를 업데이트했습니다.
@@ -47,6 +46,10 @@ slug: 2026-04-01-changelog
 
 * 기존 장치 문서 영문 이미지 및 스펙 업데이트
 
+## Developer
+
+* API 문서 업데이트: [Create BioStar X QR](../api/bsxapi#tag/Cards/operation/createCard)
+
 ## 다국어 지원
 
 * 일본어, 스페인어 문서의 완성도 향상
@@ -62,5 +65,3 @@ slug: 2026-04-01-changelog
   * 기술 용어 표준화
 
   * 문장 구조 및 표현 개선
-
-  * BioStar Air, 신규 장치 관련 영문 문서 신규 추가
