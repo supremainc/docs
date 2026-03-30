@@ -1176,5 +1176,9 @@
   },
   "externalLinks.apps.supremapass.desc": {
     "message": "Credenciales móviles de BioStar Air"
+  },
+  "searchBox.refinementList.clearAll": {
+    "message": "Borrar todo",
+    "description": "The label for the button to clear all refinements in the search box"
   }
 }
