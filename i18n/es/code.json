@@ -1180,5 +1180,9 @@
   "searchBox.refinementList.clearAll": {
     "message": "Borrar todo",
     "description": "The label for the button to clear all refinements in the search box"
+  },
+  "searchBox.recentList.clearButton": {
+    "message": "Borrar búsquedas recientes",
+    "description": "The label for the button to clear recent searches in the search box"
   }
 }

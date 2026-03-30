@@ -156,7 +156,42 @@ function useRecentSearches(indexName) {
 }
 
 function RecentSearches({onClose, indexName}) {
-  const recentSearches = useRecentSearches(indexName);
+  const useRecentSearchesData = useRecentSearches(indexName);
+  const [recentSearches, setRecentSearches] = useState(useRecentSearchesData);
+
+  useEffect(() => {
+    const key = `__DOCSEARCH_RECENT_SEARCHES__${indexName}`;
+    const stored = localStorage.getItem(key);
+    if (stored) {
+      try {
+        setRecentSearches(JSON.parse(stored).slice(0, 5));
+      } catch (e) {
+        console.error('Failed to parse recent searches:', e);
+      }
+    }
+  }, [indexName]);
+
+  const handleDeleteRecent = (objectId, e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const key = `__DOCSEARCH_RECENT_SEARCHES__${indexName}`;
+    const stored = localStorage.getItem(key);
+    let searchHistory = [];
+
+    try {
+      searchHistory = JSON.parse(stored || '[]');
+    } catch (err) {
+      console.error('Failed to parse recent searches:', err);
+    }
+
+    // 해당 항목 제거
+    searchHistory = searchHistory.filter(item => item.objectID !== objectId);
+    localStorage.setItem(key, JSON.stringify(searchHistory));
+
+    // 상태 업데이트로 리렌더링 트리거
+    setRecentSearches(searchHistory.slice(0, 5));
+  };
 
   return (
     <div className="search-pop-recent">
@@ -166,17 +201,25 @@ function RecentSearches({onClose, indexName}) {
       {recentSearches.length > 0 ? (
         <ul className="search-pop-recent-list">
           {recentSearches.map((item) => (
-            <li key={item.objectID}>
+            <li key={item.objectID} className="search-pop-recent-item-wrapper">
               <Link
                 to={item.url}
                 className="search-pop-recent-item"
                 onClick={onClose}
               >
                 <div className="search-pop-recent-title">
-                  {item.hierarchy?.lvl1 || item.hierarchy?.lvl0}
+                  {item.hierarchy?.lvl1 || item.hierarchy?.lvl0} 
                   ({item.hierarchy?.lvl0})
                 </div>
               </Link>
+              <button
+                className="search-pop-recent-delete"
+                onClick={(e) => handleDeleteRecent(item.objectID, e)}
+                aria-label={translate({ id: 'searchBox.recentList.clearButton' })}
+                title={translate({ id: 'searchBox.recentList.clearButton' })}
+              >
+                ×
+              </button>
             </li>
           ))}
         </ul>

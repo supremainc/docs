@@ -1180,5 +1180,9 @@
   "searchBox.refinementList.clearAll": {
     "message": "선택 해제",
     "description": "The label for the button to clear all refinements in the search box"
+  },
+  "searchBox.recentList.clearButton": {
+    "message": "최근 검색어 삭제",
+    "description": "The label for the button to clear recent searches in the search box"
   }
 }
