@@ -2015,6 +2015,26 @@
     "width": 1500,
     "height": 598
   },
+  "/img/biostarx-setting-device-list-batch-edit.png": {
+    "width": 1000,
+    "height": 199
+  },
+  "/img/biostarx-setting-device-list-column-setting.png": {
+    "width": 300,
+    "height": 431
+  },
+  "/img/biostarx-setting-device-list-delete-log-info.png": {
+    "width": 400,
+    "height": 168
+  },
+  "/img/biostarx-setting-device-list-delete-log.png": {
+    "width": 1000,
+    "height": 196
+  },
+  "/img/biostarx-setting-device-list-print.png": {
+    "width": 600,
+    "height": 334
+  },
   "/img/biostarx-setting-device-manage-device-users-popup.png": {
     "width": 600,
     "height": 467
@@ -2113,7 +2133,7 @@
   },
   "/img/biostarx-setting-directory-sync-auto-sync-interval.png": {
     "width": 1067,
-    "height": 288
+    "height": 265
   },
   "/img/biostarx-setting-directory-sync-auto.png": {
     "width": 1400,
@@ -2124,8 +2144,8 @@
     "height": 200
   },
   "/img/biostarx-setting-directory-sync-warn-message.png": {
-    "width": 344,
-    "height": 239
+    "width": 550,
+    "height": 206
   },
   "/img/biostarx-setting-directory-unset-warn-message.png": {
     "width": 490,
@@ -2260,8 +2280,8 @@
     "height": 316
   },
   "/img/biostarx-settings-account-add-custom-permission-details-item.png": {
-    "width": 933,
-    "height": 96
+    "width": 500,
+    "height": 252
   },
   "/img/biostarx-settings-account-add-custom-permission-details-menus.png": {
     "width": 933,
@@ -2273,7 +2293,7 @@
   },
   "/img/biostarx-settings-account-add-custom-permission-details.png": {
     "width": 1000,
-    "height": 586
+    "height": 727
   },
   "/img/biostarx-settings-account-add-custom-permission.png": {
     "width": 1000,
@@ -2281,11 +2301,11 @@
   },
   "/img/biostarx-settings-account-add-permission.png": {
     "width": 1000,
-    "height": 834
+    "height": 970
   },
   "/img/biostarx-settings-account-exclude-permission.png": {
     "width": 1000,
-    "height": 753
+    "height": 892
   },
   "/img/biostarx-settings-add-access-floor-level.png": {
     "width": 1200,
@@ -4175,7 +4195,7 @@
     "width": 320,
     "height": 240
   },
-  "/img/device/bs2a-administrator-two-step-auth.png": {
+  "/img/device/bs2a-Administrator-two-step-auth.png": {
     "width": 320,
     "height": 240
   },
@@ -8163,6 +8183,26 @@
     "width": 1683,
     "height": 586
   },
+  "/img/en/biostarx-setting-device-list-batch-edit.png": {
+    "width": 1000,
+    "height": 199
+  },
+  "/img/en/biostarx-setting-device-list-column-setting.png": {
+    "width": 300,
+    "height": 442
+  },
+  "/img/en/biostarx-setting-device-list-delete-log-info.png": {
+    "width": 400,
+    "height": 168
+  },
+  "/img/en/biostarx-setting-device-list-delete-log.png": {
+    "width": 1000,
+    "height": 196
+  },
+  "/img/en/biostarx-setting-device-list-print.png": {
+    "width": 600,
+    "height": 334
+  },
   "/img/en/biostarx-setting-device-manage-device-users-popup.png": {
     "width": 750,
     "height": 586
@@ -8259,6 +8299,10 @@
     "width": 1066,
     "height": 248
   },
+  "/img/en/biostarx-setting-directory-sync-auto-sync-interval.png": {
+    "width": 1067,
+    "height": 247
+  },
   "/img/en/biostarx-setting-directory-sync-auto.png": {
     "width": 1400,
     "height": 242
@@ -8268,8 +8312,8 @@
     "height": 204
   },
   "/img/en/biostarx-setting-directory-sync-warn-message.png": {
-    "width": 347,
-    "height": 293
+    "width": 550,
+    "height": 206
   },
   "/img/en/biostarx-setting-directory-unset-warn-message.png": {
     "width": 490,
@@ -8404,8 +8448,8 @@
     "height": 312
   },
   "/img/en/biostarx-settings-account-add-custom-permission-details-item.png": {
-    "width": 930,
-    "height": 100
+    "width": 500,
+    "height": 254
   },
   "/img/en/biostarx-settings-account-add-custom-permission-details-menus.png": {
     "width": 930,
@@ -8417,7 +8461,7 @@
   },
   "/img/en/biostarx-settings-account-add-custom-permission-details.png": {
     "width": 1000,
-    "height": 591
+    "height": 725
   },
   "/img/en/biostarx-settings-account-add-custom-permission.png": {
     "width": 1000,
@@ -8425,11 +8469,11 @@
   },
   "/img/en/biostarx-settings-account-add-permission.png": {
     "width": 1000,
-    "height": 831
+    "height": 972
   },
   "/img/en/biostarx-settings-account-exclude-permission.png": {
     "width": 1000,
-    "height": 755
+    "height": 893
   },
   "/img/en/biostarx-settings-add-access-floor-level.png": {
     "width": 1200,
@@ -11865,7 +11909,7 @@
   },
   "/img/products/biostation-3max.png": {
     "width": 384,
-    "height": 384
+    "height": 392
   },
   "/img/products/biostation-a2.png": {
     "width": 388,
