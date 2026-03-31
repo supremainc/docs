@@ -1,0 +1,417 @@
+---
+id: adding-individual-users
+title: Agregar usuarios
+description: Aprenda a agregar, editar y eliminar usuarios en BioStar Air. Esta guía paso a paso explica cómo seleccionar el tipo de usuario, emitir credenciales (tarjeta móvil, tarjeta RF, tarjeta web, reconocimiento facial y PIN) y configurar niveles de acceso y períodos de validez.
+keywords:
+  - Gestión Usuarios
+  - BioStar Air
+  - Agregar usuarios
+---
+
+Este documento ofrece instrucciones paso a paso para agregar y administrar usuarios individuales en BioStar Air. Cubre todo el proceso: seleccionar el tipo de usuario (regular o temporal), emitir las credenciales correspondientes y establecer los niveles de acceso y los períodos de validez. También muestra cómo editar o eliminar la información del usuario agregado.
+
+:::tip
+
+Vea el siguiente video para seguir una guía paso a paso sobre el proceso completo de agregar un nuevo usuario.
+
+<YouTube className='fit--content' videoId="FTgpsYPlP8k" />
+
+:::
+
+## Agregar usuarios {#addingUsers}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+1. Haga clic en <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Aparece una lista de usuarios.
+
+3. Haga clic en <Cmd sid="add_user_btn" product="air" /> → <Cmd sid="add_a_user" product="air" /> en la esquina superior derecha de la pantalla.
+
+<Image src='/img/air/bsair-gettingstarted-user-group-mng-add-user.png' />
+
+Cuando aparezca la ventana <Cmd sid='add_a_user' product='air' />, ingrese y configure la información requerida en cada sección. Rellene los campos obligatorios de todas las secciones y haga clic en <Cmd sid="add_user_card_activate_btn" product="air" /> en la esquina inferior derecha.
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/air/bsair-app-mng-user.png' className='none' />
+
+<Image src='/img/air/bsair-app-mng-user-add.png' className='none' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. Inicie sesión con la aplicación móvil.
+
+2. Toque <Cmd sid='site_setting_tab_management' product='air' /> en la parte inferior de la pantalla de inicio.
+
+3. Toque la tarjeta <Cmd sid='user_submenu' product='air' />.
+
+4. Toque <IcAdd title='Add' /> en la parte superior de la lista de usuarios.
+
+Cuando aparezca la pantalla <Cmd sid='add_a_user' product='air' />, ingrese y configure la información requerida en cada sección. Rellene los campos obligatorios de todas las secciones y haga clic en <Cmd sid="add_user_card_activate_btn" product="air" /> en la esquina inferior derecha.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+## Ingrese la información del usuario {#userInformation}
+
+Ingrese la información básica del nuevo usuario en la sección <Cmd sid="user_detail" product="air" />.
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+<Image src='/img/air/bsair-gettingstarted-user-group-mng-add-user-details.png' />
+
+</TabItem>
+
+<TabItem value='mobile' label='Mobile'>
+
+<Image src='/img/air/bsair-app-mng-user-add-info.png' width='30%' />
+
+</TabItem>
+</Tabs>
+
+* <Cmd sid="user_form_input1" product="air" />: Ingrese un ID específico manualmente o permita que el sistema lo genere de forma secuencial.
+
+* <Cmd sid="user_form_input3" product="air" />: Seleccione el idioma predeterminado del usuario.
+
+* <Cmd sid="user_form_input5" product="air" />: Seleccione el grupo al que pertenece el usuario.
+
+* <Cmd sid="user_form_input2" product="air" />: Ingrese el nombre completo del usuario.
+
+* <Cmd sid="user_form_input18" product="air" />: Ingrese el cargo del usuario.
+
+* <Cmd sid="user_form_input4" product="air" />: Ingrese el nombre del departamento del usuario.
+
+* <Cmd sid="user_form_input11" product="air" />: Cargue la imagen de perfil del usuario. Para más información, consulte <DocLink inner='#uploadProfileImage' />.
+
+:::info
+
+* <span className="require">\*</span> indica un campo obligatorio.
+
+* Ingrese el correo electrónico y el número de teléfono del usuario en <Cmd sid="user_form_input8" product="air" /> en la sección <Cmd sid="credential_detail" product="air" />.
+
+:::
+
+## Subir imagen de perfil {#uploadProfileImage}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+1. Pase el cursor sobre el área de la imagen de perfil y haga clic en el icono +.
+
+   <Image src='/img/air/bsair-upload-profile-image.png' />
+
+2. Seleccione el archivo de imagen guardado localmente.
+
+3. Cuando aparezca la ventana <Cmd sid="crop_image_header" product="air" />, ajuste la foto al tamaño deseado. Haga clic en <Cmd sid="fit_this_image" product="air" /> para redimensionarla automáticamente.
+
+   <Image src='/img/air/bsair-upload-profile-image-adjust.png' />
+
+4. Haga clic en <Cmd sid="save_btn" product="air" /> para guardar la imagen cargada como imagen de perfil.
+
+</TabItem>
+
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--30'>
+
+<Image src='/img/air/bsair-app-mng-user-add-image.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+1. Toque la imagen de perfil del usuario.
+
+2. Elija cómo agregar una imagen desde el menú que aparece en la parte inferior.
+
+   * <Cmd en='Choose from library'>Seleccionar de la biblioteca</Cmd>: Seleccione un archivo de imagen guardado en su dispositivo móvil para subirlo.
+
+   * <Cmd en='Take photo'>Tomar foto</Cmd>: Utilice la cámara de su dispositivo móvil para tomar una foto y subirla.
+
+3. Redimensione la imagen cargada a un tamaño adecuado y guárdela.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+## Seleccionar el tipo de usuario {#selecting-user-type}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+Seleccione si el usuario que está agregando en la sección <Cmd sid="credential_detail" product="air" /> es un usuario regular o un visitante. Los tipos de credenciales que se pueden emitir varían según el tipo de usuario.
+
+* <Cmd sid="user_regular_card_type" product="air" />: Un usuario que es miembro regular de una organización o instalación y que requiere acceso a largo plazo. Se pueden emitir todos los tipos de credenciales.
+
+  <Image src='/img/air/bsair-add-user-credential-user-type-regular.png' />
+
+* <Cmd sid="user_temporary_card_type" product="air" />: Un visitante o miembro no regular que necesita acceso limitado y de corta duración. Esto puede incluir huéspedes, visitantes externos, contratistas temporales, mensajeros de entrega, etc. Solo se pueden emitir las credenciales <Cmd sid="user_form_input20" product="air" />, incluyendo el código QR y LinkPass.
+
+  <Image src='/img/air/bsair-add-user-credential-user-type-temporary.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+Seleccione si el usuario que está agregando en <Cmd sid="credential_detail" product="air" /> es un usuario regular o un visitante. Los tipos de credenciales que se pueden emitir varían según el tipo de usuario.
+
+<Image src='/img/air/bsair-app-mng-user-add-type.png' width='60%' className='none' />
+
+* <Cmd sid="user_regular_card_type" product="air" />: Un usuario que es miembro regular de una organización o instalación y que requiere acceso a largo plazo. Se pueden emitir todos los tipos de credenciales.
+
+* <Cmd sid="user_temporary_card_type" product="air" />: Un visitante o miembro no regular que necesita acceso limitado y de corta duración. Esto puede incluir huéspedes, visitantes externos, contratistas temporales, mensajeros de entrega, etc. Solo se pueden emitir las credenciales <Cmd sid="user_form_input20" product="air" />, incluyendo el código QR y LinkPass.
+
+</TabItem>
+</Tabs>
+
+:::info
+
+* A los usuarios <Cmd sid="user_regular_card_type" product="air" /> se les asigna automáticamente el nivel de acceso completo, mientras que los usuarios <Cmd sid="user_temporary_card_type" product="air" /> deben seleccionar manualmente un nivel de acceso.
+
+* La opción <Cmd sid="user_table_column8" product="air" /> es compatible con BioStar Air versión 2.6 o superior.
+
+:::
+
+## Emitir credenciales {#issuingCredentials}
+
+Introduzca la información del usuario y, a continuación, configure las credenciales que se usarán para la autenticación de acceso en la sección <Cmd sid="credential_detail" product="air" />. Cada credencial tiene un interruptor para activarla o desactivarla.
+
+* <Cmd sid="card_type_mobile" product="air" />: Utilice la aplicación móvil Suprema Pass como método de autenticación de acceso. El administrador puede editar el ID de la tarjeta.
+
+  <Tabs groupId='platform'>
+  <TabItem value='web' label='Web'>
+
+  <Image src='/img/air/bsair-add-user-credential-credential-type-mobile.png' />
+
+  </TabItem>
+  <TabItem value='mobile' label='Mobile'>
+
+  <Image src='/img/air/bsair-app-mng-user-add-credential-mobile.png' width='30%' />
+
+  </TabItem>
+  </Tabs>
+
+* <Cmd sid="card_type_rf" product="air" />: Agregue hasta ocho tarjetas RFID por usuario para la autenticación de acceso. Haga clic en <Cmd sid="add_btn" product="air" />.
+
+  <Tabs groupId='platform'>
+  <TabItem value='web' label='Web'>
+
+  <Image src='/img/air/bsair-add-user-credential-credential-type-rfcard.png' />
+
+  </TabItem>
+  <TabItem value='mobile' label='Mobile'>
+
+  <Image src='/img/air/bsair-app-mng-user-add-credential-rfcard.png' width='30%' />
+
+  </TabItem>
+  </Tabs>
+
+  Configure el tipo de tarjeta (CSN o Wiegand), el ID de la tarjeta y el nombre de la tarjeta. Seleccione un lector en <Cmd sid="newest_rf_card_text_device" product="air" />. Opcionalmente, escanee una tarjeta RFID física con el lector conectado.
+
+  <Tabs groupId='platform'>
+  <TabItem value='web' label='Web'>
+
+  <Image src='/img/air/bsair-add-user-credential-credential-type-rfcard-2type.png' className='none' />
+
+  </TabItem>
+  <TabItem value='mobile' label='Mobile'>
+
+  <Image src='/img/air/bsair-app-mng-user-add-credential-rfcard-csn-wiegand.png' width='60%' className='none' />
+
+  </TabItem>
+  </Tabs>
+
+* <Cmd sid="user_form_input20" product="air" />: Utilice <Cmd sid="card_type_option3" product="air" /> o <Cmd sid="card_type_option4" product="air" /> como métodos de autenticación de acceso.
+
+  <Tabs groupId='platform'>
+  <TabItem value='web' label='Web'>
+
+  <Image src='/img/air/bsair-add-user-credential-credential-type-web.png' />
+
+  </TabItem>
+  <TabItem value='mobile' label='Mobile'>
+
+  <Image src='/img/air/bsair-app-mng-user-add-credential-webcard.png' width='30%' />
+
+  </TabItem>
+  </Tabs>
+
+  :::note
+
+  <Cmd sid="card_type_option3" product="air" /> aparece solo después de habilitar <Cmd sid="site_setting_qr_label" product="air" /> en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> → <Cmd sid="site_setting_qr_reader_tab" product="air" />.
+
+  :::
+
+* <Cmd sid="card_type_option5" product="air" />: Añada hasta dos imágenes de perfil facial para la autenticación de acceso. Puede subir una imagen existente o registrarla utilizando un lector conectado. Alternativamente, envíe al usuario un enlace por correo electrónico para que pueda inscribirse directamente con la cámara de su dispositivo móvil.
+
+  <Tabs groupId='platform'>
+  <TabItem value='web' label='Web'>
+
+  <Image src='/img/air/bsair-add-user-credential-credential-type-face.png' />
+
+  * <Cmd sid="select_file" product="air" />: Seleccione un archivo de imagen guardado localmente para subirlo.
+
+  * <Cmd sid='register_on_device' product='air' />: Utilice el lector conectado para registrar una imagen facial.
+
+  * <Cmd sid="register_on_mobile" product="air" />: Escanee un código QR con la cámara del dispositivo móvil para abrir un enlace y registrar una imagen facial.
+
+    <Image src='/img/air/bsair-add-user-credential-credential-type-face-qr.png' width='50%' />
+
+  </TabItem>
+  <TabItem value='mobile' label='Mobile'>
+
+  <Columns>
+  <Column className='width--30'>
+
+  <Image src='/img/air/bsair-app-mng-user-add-credential-face.png' />
+
+  </Column>
+  <Column className='padding--l40'>
+
+  Toque <IcAdd title='Add' /> para agregar una foto de rostro. Elija cómo agregarla desde el menú que aparece en la parte inferior.
+
+  * <Cmd en='Choose from library'>Seleccionar de la biblioteca</Cmd>: Seleccione un archivo de imagen guardado en su dispositivo móvil para subirlo.
+
+  * <Cmd en='Take photo'>Tomar foto</Cmd>: Utilice la cámara de su dispositivo móvil para tomar una foto y subirla.
+
+  * <Cmd sid='use_as_profile_image' product='air' />: Puede usar la imagen actualmente configurada como foto de perfil para su credencial facial.
+
+  :::note
+
+  Para obtener más información sobre cómo registrar una foto de rostro, consulte <Cmd sid='view_photo_guide' product='air' />.
+
+  :::
+
+  </Column>
+  </Columns>
+
+  </TabItem>
+  </Tabs>
+
+* <Cmd sid="card_type_option6" product="air" />: Establezca un PIN de 4 a 16 dígitos para usar como parte de la autenticación de dos factores (2FA).
+
+  <Tabs groupId='platform'>
+  <TabItem value='web' label='Web'>
+
+  <Image src='/img/air/bsair-add-user-credential-credential-type-pin.png' />
+
+  </TabItem>
+  <TabItem value='mobile' label='Mobile'>
+
+  <Image src='/img/air/bsair-app-mng-user-add-credential-pin.png' width='30%' />
+
+  </TabItem>
+  </Tabs>
+
+## Enviar enlace de invitación {#sendingInvitationLink}
+
+Envíe por correo electrónico el enlace de descarga de la aplicación Suprema Pass a los usuarios que utilizan <Cmd sid="card_type_mobile" product="air" /> o <Cmd sid="user_form_input20" product="air" />. Ingrese la dirección de correo electrónico (obligatoria) y el número de teléfono (opcional).
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+<Image src='/img/air/bsair-add-user-credential-credential-type-invite-link.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Image src='/img/air/bsair-app-mng-user-add-invitation.png' width='30%' />
+
+</TabItem>
+</Tabs>
+
+:::info
+
+Solicite la recarga de crédito SMS en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="credit_center_submenu" product="air" /> para usar la opción <Cmd sid="user_form_input10" product="air" />.
+
+:::
+
+## Establecer niveles de acceso y vigencia {#setting-access-levels-and-validity}
+
+Después de seleccionar las credenciales, configure el período de vigencia de las credenciales, los niveles de acceso y los niveles de planta en la sección <Cmd sid="access_detail" product="air" />.
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+<Image src='/img/air/bsair-add-user-access-info.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Image src='/img/air/bsair-app-mng-user-add-validation.png' width='30%' />
+
+</TabItem>
+</Tabs>
+
+* <Cmd sid="card_valid_period" product="air" />: Establezca el período de vigencia de las credenciales emitidas al usuario. Haga clic en <IcInfinity title='No Expiration Date' /> para dejar la fecha de expiración sin límite.
+
+* <Cmd sid="user_form_input12" product="air" />: Seleccione los niveles de acceso para el usuario. Otorgue acceso total o elija un nivel de acceso predefinido.
+
+* <Cmd sid="user_form_input19" product="air" />: Seleccione los niveles de planta a los que el usuario puede acceder.
+
+* <Cmd sid='user_device_manager' product='air' />: Permita que un usuario administre los permisos de acceso en un lector específico.
+
+* <Cmd sid="mobile_consecutive_tag" product="air" />: Permite lecturas consecutivas de tarjetas móviles sin tiempo de espera. Esta función está disponible en la aplicación Suprema Pass versión 2.9.0 o superior.
+
+:::info
+
+* <Cmd sid="user_form_input12" product="air" /> se puede asignar de forma permanente (expira con la credencial) o temporalmente (expira antes de la credencial). Para obtener más información sobre la configuración de niveles de acceso, consulte <DocLink docId='platform/biostar_air/manage-access-level' />.
+
+* Para obtener más información sobre la configuración de niveles de planta, consulte <DocLink docId='platform/biostar_air/manage-floor-level' />.
+
+* La opción <Cmd sid='user_device_manager' product='air' /> está disponible solo para usuarios de X-Station 2 que tengan acceso al menú de administrador del dispositivo X-Station 2.
+
+:::
+
+## Seleccionar plantilla de tarjeta {#selectingCardTemplate}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+Haga clic en <IcAirL /> o <IcAirR /> debajo de Plantilla de tarjeta en el panel derecho para cambiar el diseño.
+
+<Image src='/img/air/bsair-add-user-select-card-template.png' width='70%' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+Seleccione la pestaña <IcAirL /> o <IcAirR /> en <Cmd sid='card_template_preview_header' product='air' /> para cambiar el diseño de la plantilla de tarjeta.
+
+<Image src='/img/air/bsair-app-mng-user-add-card-template.png' width='30%' />
+
+</TabItem>
+</Tabs>
+
+:::info
+
+Para obtener más información sobre cómo crear nuevas plantillas de tarjeta, consulte <DocLink docId='platform/biostar_air/managing-card-templates' />.
+
+:::
+
+## Guardar o activar al usuario {#saving-or-activating-the-user}
+
+Después de configurar todos los ajustes del usuario, elija una de las siguientes opciones.
+
+* Haga clic en <Cmd sid="save_btn" product="air" /> para guardar al usuario para su activación posterior.
+
+* Haga clic en <Cmd sid="add_user_card_activate_btn" product="air" /> para emitir y activar las credenciales de inmediato.
+
+<NextStep>
+<NextItem to='adding-users-in-bulk'>
+
+Una vez que haya aprendido a agregar usuarios uno por uno, aprenda a registrar varios usuarios a la vez.
+
+</NextItem>
+</NextStep>

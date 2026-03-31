@@ -1,0 +1,62 @@
+---
+id: e200-qr-scanner
+title: Cableado y configuración del escáner QR E200
+description: Cablea y configura los dispositivos BioStar Air para un rendimiento óptimo.
+keywords:
+  - cableado
+  - configuración
+  - BioStar Air
+---
+
+## Paso 1: Cablear {#wiring}
+
+Conecta el escáner QR de la serie E200 usando el cable adaptador incluido como se muestra a continuación.
+
+* El bloque de terminales verde tiene pines etiquetados del **1 al 4**, dispuestos de **derecha a izquierda** cuando estés frente al conector.
+
+  | Pin | Color del cable | Función |
+  | :-: | --- | --- |
+  | 1 | Negro | Negativo / Tierra |
+  | 2 | Rojo | Positivo (V+) |
+  | 3 | Amarillo (franja blanca) | RS-485 TRXN |
+  | 4 | Azul (franja blanca) | RS-485 TRXP |
+
+   :::info
+
+   La dirección del cableado es exactamente opuesta a la de muchos otros conectores. Verifica la orientación nuevamente antes de cablear.
+
+   :::
+
+* Conecta el conector de 4 pines al puerto CON en la parte inferior del escáner QR. Como el conector está **polarizado** (con muesca), solo encaja en una posición.
+
+  <Image src='/img/air/air-hardware-qr-reader-diagram.png' width='80%' alone />
+
+## Paso 2: Habilitar el lector QR {#enable-qr-reader}
+
+1. Inicia sesión en el [portal de BioStar Air](https://admin.biostarair.com) (web o app).
+
+2. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
+
+3. Haz clic en el dispositivo que tiene conectado el escáner QR E200.
+
+4. Habilita la opción <Cmd sid='device_editable_fields_qr_reader' product='air' /> en la sección <Cmd sid='new_layout_nav_title_detail' product='air' />.
+
+   <Image src='/img/air/bsair-device-details-qr-reader.png' />
+
+5. Haz clic en <Cmd sid="save_btn" product="air" /> para guardar los cambios.
+
+:::info
+
+Habilitar el lector QR impide que uses otros dispositivos RS-485 (por ejemplo, un SIO2) en el mismo lector.
+
+:::
+
+## Paso 3: Configurar el escáner QR {#configure-qr-scanner}
+
+Por defecto, el **escáner QR E200** viene configurado con una velocidad de baudios de **115,200**. Cambia la velocidad de baudios a **9,600** para usarlo con dispositivos Suprema.
+
+Conecta el escáner QR al dispositivo y **escanea el código de barras a continuación** para aplicar la nueva velocidad de baudios.
+
+<Image src='/img/air/air-hardware-qr-reader-barcode.png' alone />
+
+Cuando el cableado sea correcto y el dispositivo Suprema esté conectado a la red, utiliza las **credenciales QR dinámicas** proporcionadas a través de BioStar Air.

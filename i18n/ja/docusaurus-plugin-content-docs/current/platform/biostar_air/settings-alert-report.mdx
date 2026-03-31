@@ -1,0 +1,141 @@
+---
+id: settings-alert-report
+title: アラートとレポートの設定
+description: BioStar Airでイベントの通知と自動レポートを設定する手順を案内します。
+keywords:
+  - BioStar Air
+  - アラートの設定
+  - レポートの設定
+  - システムアラート
+  - ユーザーレポート
+---
+
+アラートとレポートを設定すると、システムイベントやセキュリティ状況を自動で検知して追跡できます。 この文書では、BioStar Airでアラートとレポートの設定を構成する方法を案内します。
+
+アラートおよびレポートの設定により、次の効果が得られます。
+
+* セキュリティ脅威やシステムの問題を即座に検知し、管理者にリアルタイムで通知します。
+
+* システム状況やユーザーの活動に関するレポートを自動生成して管理効率を高めます。
+
+## アラートの追加 {#addAlert}
+
+サイトで発生する特定のイベントログやシステムに関する通知を設定できます。
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='alerts.alert_sub_menu_title' product='air' /> をクリックします。
+
+2. 画面右上の <Cmd sid='alerts.add_alert_btn' product='air' /> をクリックします。
+
+3. <Cmd sid='alerts.add_alert_btn' product='air' /> パネルが表示されたら、<Cmd sid='alerts.event_log_type' product='air' />、<Cmd sid='alerts.system_type' product='air' /> のいずれかのタブを選択します。
+
+   <Image src='/img/air/bsair-settings-alert-add-event-log.png' />
+
+4. 設定を保存するには、<Cmd sid='save_btn' product='air' /> をクリックします。
+
+### 条件の設定 {#conditionSettings}
+
+#### イベントログ {#eventLog}
+
+<Cmd sid='alerts.event_log_type' product='air' /> タブで、イベント種類に応じて通知発生条件を設定できます。
+
+<Image src='/img/air/bsair-settings-alert-event-log-setting.png' />
+
+* <Cmd sid='alerts.events_block_title' product='air' />：通知を設定するイベント種類を選択します。 事前定義された <Cmd sid='alerts.preset_events_block_title' product='air' /> を選択できます。
+
+* <Cmd sid='door_label' product='air' />：ドアを選択します。 選択したドアでイベントが発生した場合に通知を送信します。 1つ以上のドアを選択できます。
+
+* <Cmd sid='alerts.frequency_and_duration_label' product='air' />：設定した時間内に特定の頻度でイベントが発生した場合に通知を送信します。 例えば、5分間に3回以上イベントが発生した場合に通知を送信するよう設定できます。
+
+#### システム {#system}
+
+<Image src='/img/air/bsair-settings-alert-system-setting.png' />
+
+<Cmd sid='alerts.system_type' product='air' /> タブでシステムの状態に応じて通知発生条件を設定できます。選択できるオプションは次のとおりです。
+
+* <Cmd sid='low_credit_reminders' product='air' />
+
+* <Cmd sid='low_credit_site_suspension' product='air' />
+
+* <Cmd sid='low_credit_sms_less_than_10' product='air' />
+
+* <Cmd sid='low_apb_battery' product='air' />
+
+* <Cmd sid='new_fw_availabel' product='air' />
+
+### 通知対象の設定 {#alertTargetSettings}
+
+<Cmd sid='alerts.alert_target' product='air' /> で通知を受け取る対象を設定できます。 管理者権限別にユーザーを選択したり、個別のユーザーを選択できます。
+
+### 送信方法の設定 {#alertSendMethodSettings}
+
+<Cmd sid='alerts.alert_send_by' product='air' /> で通知の送信手段を選択します。 メール、SMS、アプリのプッシュ通知の方法で通知を送信できます。
+
+:::info
+
+SMS送信を利用するには、SMSクレジットをチャージする必要があります。 残りのSMSクレジットは<Cmd sid='settings_menu' product='air' /> → <Cmd sid='credit_center_submenu' product='air' />で確認できます。
+
+:::
+
+## レポート作成 {#reportGeneration}
+
+特定の時間間隔でレポートを自動生成して管理者に送信できます。 イベントログの発生状況およびユーザー状況に関するレポートを作成できます。
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='alerts.alert_sub_menu_title' product='air' /> をクリックします。
+
+2. 画面右上の <Cmd sid='alerts.add_alert_btn' product='air' /> をクリックします。
+
+3. <Cmd sid='alerts.add_alert_btn' product='air' /> パネルが表示されたら、<Cmd sid='alerts.report_type' product='air' /> タブを選択します。
+
+   <Image src='/img/air/bsair-settings-alert-add-report.png' />
+
+4. 設定を保存するには、<Cmd sid='save_btn' product='air' /> をクリックします。
+
+### 条件設定 {#reportConditionSettings}
+
+レポートの種類と作成周期を設定します。
+
+* <Cmd sid='name_column' product='air' />：作成するレポートの種類を選択します。
+
+  * <Cmd sid='alerts.report_user_tna' product='air' />：選択した期間のユーザーの勤怠状況に関するレポートを作成します。
+
+  * <Cmd sid='alerts.report_audit_trail' product='air' />：選択した期間の変更履歴に関するレポートを作成します。
+
+  * <Cmd sid='alerts.report_event_log' product='air' />：選択した期間のイベントログの発生状況に関するレポートを作成します。
+
+  * <Cmd sid='alerts.report_user' product='air' />：選択した期間のユーザー状況に関するレポートを作成します。
+
+* <Cmd sid='label_title_schedule' product='air' />：レポート作成の頻度を選択してください。 <Cmd sid='weekly_option' product='air' />、<Cmd sid='monthly_option' product='air' /> の中から選択できます。
+
+### 通知対象の設定 {#reportAlertTargetSettings}
+
+<Cmd sid='alerts.alert_target' product='air' /> で通知を受け取る対象を設定できます。 管理者権限別にユーザーを選択したり、個別のユーザーを選択できます。
+
+### 送信方法の設定 {#reportAlertSendMethodSettings}
+
+<Cmd sid='alerts.alert_send_by' product='air' /> で通知の送信手段を選択します。
+
+:::info
+
+レポートは**メールのみで送信**できます。 SMSやアプリのプッシュ通知で送信することはできません。
+
+:::
+
+## アラートおよびレポートの編集 {#editAlertReport}
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='alerts.alert_sub_menu_title' product='air' /> をクリックします。
+
+2. 一覧から編集するアラートまたはレポートをクリックします。
+
+3. <Cmd sid='alerts.edit_alert_header' product='air' /> または <Cmd sid='alerts.edit_report_header' product='air' /> パネルが表示されたら、必要な項目を編集します。
+
+4. 変更を保存するには、下部の <Cmd sid='save_btn' product='air' /> をクリックします。
+
+## アラートおよびレポートの削除 {#deleteAlertReport}
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='alerts.alert_sub_menu_title' product='air' /> をクリックします。
+
+2. 一覧で編集するアラートまたはレポートのチェックボックスをクリックします。 1つ以上の項目を選択できます。
+
+3. 一覧の左上にある<IcAirRemove title='Delete' />ボタンをクリックしてください。
+
+4. メッセージウィンドウが表示されたら、<Cmd sid='btn_delete' product='air' /> をクリックします。

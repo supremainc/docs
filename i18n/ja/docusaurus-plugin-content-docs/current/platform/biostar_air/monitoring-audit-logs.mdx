@@ -1,0 +1,93 @@
+---
+id: monitoring-audit-logs
+title: 変更ログの使い方
+description: BioStar Airで変更ログを監視・分析し、フィルターの適用、データのエクスポート、管理者の操作の追跡方法を案内します。
+keywords:
+  - モニタリング
+  - 変更ログ
+  - BioStar Air
+---
+
+クラウド出入管理プラットフォームの主な利点の一つは、いつでもどこでもサイト活動を監視できることです。 このドキュメントでは、BioStar Airで変更ログを監視・分析する方法を説明します。
+
+:::tip
+
+変更ログの動画ガイドを視聴するには、以下の動画をご覧ください。
+
+<YouTube className='fit--content' videoId="nwIEYyK-uAg" />
+
+:::
+
+## 変更ログの確認
+
+変更ログを確認するには、<Cmd sid='audit_logs_submenu' product='air' /> に移動します。 画面左側のサイドバーで <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='audit_logs_submenu' product='air' /> をクリックします。
+
+<Image src='/img/air/bsair-monitoring-auditlog-list.png' />
+
+<Cmd sid='audit_logs_submenu' product='air' />では、管理者が行った操作を追跡できます。 ログ一覧では、作業日時、メールアドレス、管理者権限、操作の種類、メニューのパス、操作の詳細などが表示されます。
+
+## ログのフィルタリング {#filtering-event-logs}
+
+ログをフィルタリングして、目的の情報を素早く見つけることができます。 ログ一覧の上部にある <IcAirLogfilter width='20' height='20' title='Filters' /> をクリックしてください。 <Cmd sid='logs_filters_action_btn' product='air' /> ウィンドウが表示されたら、各項目で希望の値を選択します。
+
+<Image src='/img/air/bsair-monitoring-audit-log-list-filter.png' />
+
+:::info
+
+* <Cmd sid='column_filter_modal_save_btn' product='air' /> または <Cmd sid='filters_action2' product='air' /> をクリックすると設定が保存され、他のメニューに移動しても保持されます。 <Cmd sid='column_filter_modal_apply_btn' product='air' /> または <Cmd sid='filters_action3' product='air' /> をクリックすると変更は現在の一覧にのみ適用され、他のメニューに移動すると以前の設定に戻ります。
+
+* <Cmd sid='column_filter_modal_reset_btn' product='air' /> または <Cmd sid='filters_action1' product='air' /> をクリックして変更を取り消し、初期状態に戻します。
+
+:::
+
+## レポート設定 {#generatingReports}
+
+ログデータをフィルタリングして、特定の期間に発生したイベントのレポートを生成できます。
+
+1. ログ一覧の上部にある <IcAirReport width='20' height='20' title='Report' /> をクリックします。
+
+2. <Cmd sid='report_popup_title' product='air' /> ウィンドウが表示されたら、レポート名を入力します。
+
+   <Image src='/img/air/bsair-monitoring-auditlog-report-setting.png' />
+
+3. レポートに含める項目を選択します。
+
+4. <Cmd sid='report_form_text_add' product='air' /> をクリックして設定したレポートを保存します。
+
+5. <Cmd sid='report_form_text_title' product='air' /> に指定した名前でレポートが作成されます。
+
+   <Image src='/img/air/bsair-monitoring-auditlog-report-added.png' />
+
+6. 作成されたレポートをダウンロードするには、レポート名の横にある <IcAirDown width='20' height='20' title='Download' /> をクリックします。
+
+7. <Cmd sid='report_download_popup_title' product='air' /> ウィンドウが表示されたら、イベントを照会する期間を選択し、<Cmd sid='report_download_popup_button_title' product='air' /> をクリックします。
+
+   <Image src='/img/air/bsair-monitoring-auditlog-report-download.png' />
+
+管理者のメールアドレスにダウンロードリンクが送信されます。
+
+:::info
+
+<Cmd sid='report_form_text_title' product='air' /> で作成したレポートを検索、編集、ダウンロード、削除できます。
+
+:::
+
+## 個人情報のマスキング {#dataMasking}
+
+ログ内の個人情報をマスキングして、機密情報を保護できます。 個人情報のマスキングを有効にすると、ユーザー名、メールアドレス、電話番号などの情報が部分的に隠されます。
+
+個人情報のマスキングを有効にするには、ログ一覧の上部にある <IcAirMask width='20' height='20' title='Apply Masking' /> をクリックします。 ポップアップメニューで <Cmd sid='apply_masking_title' product='air' /> オプションを有効にし、<Cmd sid='save_btn' product='air' /> をクリックします。
+
+<Image src='/img/air/bsair-monitoring-auditlog-apply-masking.png' />
+
+## その他の機能
+
+ログ一覧の上部にあるツールバーを使用して、ログをより効率的に管理できます。
+
+* ログを日付順に並べ替えるには、日付と時間の範囲を選択して、<Cmd sid='logs_filter_ok_btn' product='air' />をクリックしてください。
+
+  <Image src='/img/air/bsair-monitoring-auditlog-select-date.png' />
+
+* ログをCSVまたはPDFファイルとして保存するには、<IcAirDown width='20' height='20' title='Export' /> をクリックします。
+
+* ログ一覧を更新するには、一覧上部の <IcAirRef width='20' height='20' title='Refresh' /> ボタンをクリックしてください。

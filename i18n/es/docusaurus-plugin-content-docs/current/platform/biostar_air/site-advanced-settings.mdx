@@ -1,0 +1,50 @@
+---
+id: site-advanced-settings
+title: Configuración Avanzada
+description: Utilice la configuración avanzada del sitio BioStar Air para adaptar el sistema a las necesidades de su organización. Puede ajustar varias opciones, como la zona horaria, el control de tiempo y asistencia, la autenticación móvil y la compatibilidad con lectores.
+keywords:
+  - Configuración Avanzada
+  - configurar
+---
+
+Configure las opciones avanzadas para optimizar BioStar Air según el entorno laboral de su organización. Establezca la zona horaria y el horario de verano, habilite el control de tiempo y asistencia y ajuste los métodos de autenticación móvil y la visualización de los registros de eventos.
+
+Haga clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> en la barra lateral izquierda. Utilice la pestaña <Cmd sid='site_setting_tab_setting' product='air' /> para configurar los ajustes del sitio.
+
+<Image src='/img/air/bsair-settings-site-setting.png' />
+
+* <Cmd sid='site_profile_input4' product='air' />: Cambie la zona horaria en cualquier momento. Los registros y eventos se registran según la zona horaria configurada. Para obtener más información, consulte <DocLink docId='platform/biostar_air/daylight-saving-time' />.
+
+  * <Cmd sid='device_field_dst_usage' product='air' />: Active o desactive el horario de verano para determinadas regiones.
+
+* <Cmd sid='site_profile_input8' product='air' />: Active la función de tiempo y asistencia (T&A). Tras activarla, haga clic en <Cmd sid='tna_setting' product='air' /> para configurar los ajustes detallados. Para obtener más información, consulte <DocLink docId='platform/biostar_air/configuring-ta' />.
+
+* <Cmd sid='tna_report' product='air' />: Genere informes de tiempo y asistencia (T&A). Después de activar la función de informes, haga clic en <Cmd sid='tna_setting' product='air' /> para configurar las condiciones del informe. Para obtener más información, consulte <DocLink docId='platform/biostar_air/reports-time-attendance-reports' />.
+
+* <Cmd sid='site_profile_input7' product='air' />: Active la función Long Touch para abrir puertas de forma remota desde cierta distancia.
+
+* <Cmd sid='site_setting_ble_background' product='air' />: Permitir el uso de tarjetas móviles mientras la aplicación Suprema Pass se ejecuta en segundo plano. Cuando está activado, los usuarios pueden abrir una puerta sin abrir la aplicación.
+
+* <Cmd sid='display_face_preview_setting' product='air' />: Mostrar una vista previa del rostro al emitir credenciales faciales.
+
+* <Cmd sid='site_profile_input5' product='air' />: Establezca cómo se muestran las horas en los registros de eventos.
+
+  * <Cmd sid='event_log_time_display_setting1' product='air' />: Mostrar los registros de eventos según la zona horaria de cada dispositivo.
+
+  * <Cmd sid='event_log_time_display_setting2' product='air' />: Mostrar los registros según la zona horaria del sitio. Útil cuando todos los dispositivos están en una misma ubicación. Consulte la opción <Cmd sid='site_profile_input4' product='air' />.
+
+* <Cmd sid='new_setting_label_msb' product='air' />: Configure cómo se transmiten los datos de la tarjeta al usar Airfob Patch con lectores de terceros.
+
+   :::note
+
+   Esta configuración se aplica únicamente a los dispositivos Patch y puede ajustarse para coincidir con el tipo de dispositivo de terceros al que está conectado el Patch.
+
+   :::
+
+* <Cmd sid='validity_period_label' product='air' />: Establezca el período de validez predeterminado para las credenciales móviles.
+
+   :::note
+
+   Los administradores pueden establecer una fecha de caducidad distinta para las credenciales de cada usuario. Para obtener más información, consulte <DocLink docId='platform/biostar_air/adding-individual-users#setting-access-levels-and-validity' />.
+
+   :::

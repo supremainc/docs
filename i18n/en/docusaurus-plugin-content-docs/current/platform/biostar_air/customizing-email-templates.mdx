@@ -7,13 +7,13 @@ keywords:
   - customization
 ---
 
-With BioStar Air's email template feature, customize the emails sent to site users to reflect your company's branding and message. Email templates include invitations, activation emails, and other notifications.
+Use the email template feature to customize emails sent to site users so they reflect your company's brand and messaging. Email templates include invitations, activation emails, and other notifications.
 
 :::tip
 
 Watch the following video to learn how to configure email templates.
 
-<YouTube videoId="xmgpp6xMBuE" />
+<YouTube className='fit--content' videoId="xmgpp6xMBuE" />
 
 :::
 
@@ -45,29 +45,29 @@ Customize the email templates sent to users.
 
 * <Cmd sid="email_templates.email_type" product="air" />: Select the email template type to create. Available options are as follows:
 
-   * <Cmd sid="email_templates.activate_user" product="air" />: Typically used as an invitation to download a mobile card.
+  * <Cmd sid="email_templates.activate_user" product="air" />: Typically used as an invitation to download a mobile card.
 
-   * <Cmd sid="email_templates.reactivate_user" product="air" />: Sends a notification to the user that the mobile card has been reactivated.
+  * <Cmd sid="email_templates.reactivate_user" product="air" />: Sends a notification to the user that the mobile card has been reactivated.
 
-   * <Cmd sid="email_templates.reissue_user" product="air" />: Used when issuing a new mobile card.
+  * <Cmd sid="email_templates.reissue_user" product="air" />: Used when issuing a new mobile card.
 
-   * <Cmd sid="email_templates.delete_user" product="air" />: Sends a notification to the user about card deletion.
+  * <Cmd sid="email_templates.delete_user" product="air" />: Sends a notification to the user about card deletion.
 
-   * <Cmd sid="email_templates.suspend_user" product="air" />: Notifies the user that the card has been suspended.
+  * <Cmd sid="email_templates.suspend_user" product="air" />: Notifies the user that the card has been suspended.
 
-   * <Cmd sid="email_templates.upload_user_face" product="air" />: Used to request that the user upload a face photo.
+  * <Cmd sid="email_templates.upload_user_face" product="air" />: Used to request that the user upload a face photo.
 
 * <Cmd sid="email_templates.card_type" product="air" />: Can be selected for email types that allow mobile card downloads, such as <Cmd sid="email_templates.activate_user" product="air" /> and <Cmd sid="email_templates.reissue_user" product="air" />.
 
-   * <Cmd sid='user_card_type_mobile' product='air' />
+  * <Cmd sid='user_card_type_mobile' product='air' />
 
-   * <Cmd sid='user_card_type_web_link' product='air' />
+  * <Cmd sid='user_card_type_web_qr' product='air' />
 
-   * <Cmd sid='user_card_type_web_qr' product='air' />
+  * <Cmd sid='user_card_type_web_link' product='air' />
 
    :::note
 
-   For more information on credential types, refer to [the following](user-card-types).
+   For more information about credential types, see <DocLink docId='platform/biostar_air/user-card-types' />.
 
    :::
 
@@ -95,11 +95,11 @@ Customize the email logo and content. View changes in real time in <Cmd sid="ema
 
    :::note
 
-   * File types: JPG, JPEG, PNG
+  * File types: JPG, JPEG, PNG
 
-   * Minimum resolution: 200 x 60
+  * Minimum resolution: 200 x 60
 
-   * File size: 1 MB or less
+  * File size: 1 MB or less
 
    :::
 
@@ -111,31 +111,31 @@ Customize the email logo and content. View changes in real time in <Cmd sid="ema
 
    The email body must include HTML keys. Each key is replaced with the recipient's email address, the site name, and other values. Available keys may vary according to the value selected in <Cmd sid="email_templates.email_type" product="air" />.
 
-   * **User** tab
+  * **User** tab
 
-      * `${email}`: Email address
+    * `${email}`: Email address
 
-      * `${siteName}`: Site name
+    * `${siteName}`: Site name
 
-   * **Administrator** tab
+  * **Administrator** tab
 
-      * `${email}`: Email address
+    * `${email}`: Email address
 
-      * `${siteName}`: Site name
+    * `${siteName}`: Site name
 
-      * `${alertType}`: Alert type
+    * `${alertType}`: Alert type
 
-      * `${alertDetails}`: Alert details
+    * `${alertDetails}`: Alert details
 
-      * `${frequency}`: Alert frequency
+    * `${frequency}`: Alert frequency
 
-      * `${location}`: Alert location
+    * `${location}`: Alert location
 
-      * `${userInvolved}`: User involved in the alert
+    * `${userInvolved}`: User involved in the alert
 
-      * `${deviceInvolved}`: Device involved in the alert
+    * `${deviceInvolved}`: Device involved in the alert
 
-      * `${dateTime}`: Date and time of the alert
+    * `${dateTime}`: Date and time of the alert
 
    :::
 
@@ -159,7 +159,7 @@ Customize the email logo and content. View changes in real time in <Cmd sid="ema
 
 1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="email_templates.email_template_menu" product="air" /> in the left sidebar.
 
-2. Click the email template you want to edit from the list. Alternatively, select the checkbox and click <IcAirEdit /> at the top.
+2. Click the email template you want to edit from the list. Alternatively, select the checkbox and click <IcAirEdit title='Edit' /> at the top.
 
 3. When the <Cmd sid="email_templates.edit_email_template" product="air" /> panel appears, edit the necessary items.
 
@@ -175,4 +175,4 @@ Customize the email logo and content. View changes in real time in <Cmd sid="ema
 
 3. Click <IcAirRemove /> at the top of the list.
 
-4. When the message window appears, click <Cmd sid="btn_ok" product="air" />.
+4. Click <Cmd sid="btn_delete" product="air" /> when the message window appears.

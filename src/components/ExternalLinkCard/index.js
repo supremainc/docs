@@ -4,6 +4,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import {translate} from '@docusaurus/Translate';
+import PlaStore from '@site/static/img/ico-playstore.svg';
+import AppStore from '@site/static/img/ico-appstore.svg';
 
 function CardItem({img, title, url, height, desc}) {
   return (
@@ -24,16 +26,21 @@ function CardItem({img, title, url, height, desc}) {
   )
 }
 
-function ExternalLinkBanner({Svg, title, url, desc, height}) {
+function ExternalLinkBanner({Svg, img, title, url, desc, height, play, ios}) {
   return (
     <Link to={url} className={styles.externalLink}>
       <div className={styles.externalLinkitem}>
         <div className={styles.externalLinkLogo}>
-          <div className={styles.circle}>{(Svg) && <Svg role="img" width='100%' height={height} />}</div>
+          <div className={styles.circle}>
+            {(Svg) && <Svg role="img" width='100%' height={height} />}
+            {(img) && <img src={img} width='auto' height={height} />}
+          </div>
         </div>
         <div className={styles.externalLiinkDesc}>
           <Heading as='h3' className={styles.externalLinkTitle}>{title}</Heading>
-          <p className={styles.externalLinkDesc} dangerouslySetInnerHTML={{__html: desc}} />
+          {desc && <p className={styles.externalLinkDesc} dangerouslySetInnerHTML={{__html: desc}} />}
+          {play && <a href={play} target='_blank' className={styles.storeLink}><PlaStore /></a>}
+          {ios && <a href={ios} target='_blank' className={styles.storeLink}><AppStore /></a>}
         </div>
       </div>
     </Link>
@@ -45,18 +52,25 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
   const cLocale = currentLocale !== 'ko' ? 'en' : 'ko';
   const defaultExternalLinks = [
     {
-      title: 'BioStar Device SDK',
-      url: `https://kb.supremainc.com/bs2sdk/doku.php?id=${cLocale}:start`,
-      Svg: require('@site/static/img/biostar2-devicesdk.svg').default,
-      height: '45px',
-      desc: `${translate({ id: "externalLinks.dev.sdk.desc" })}`
-    },
-    {
       title: 'BioStar X API',
       url: '/api/bsxapi',
       Svg: require('@site/static/img/biostar-api.svg').default,
       height: '45px',
       desc: `${translate({ id: "externalLinks.dev.xapi.desc" })}`
+    },
+    {
+      title: 'BioStar Air Developer',
+      url: 'https://developers.biostarair.com',
+      Svg: require('@site/static/img/bsair-dev.svg').default,
+      height: '45px',
+      desc: `${translate({ id: "externalLinks.dev.bsair.desc" })}`
+    },
+    {
+      title: 'BioStar Device SDK',
+      url: `https://kb.supremainc.com/bs2sdk/doku.php?id=${cLocale}:start`,
+      Svg: require('@site/static/img/biostar2-devicesdk.svg').default,
+      height: '45px',
+      desc: `${translate({ id: "externalLinks.dev.sdk.desc" })}`
     },
     {
       title: 'BioStar 2 API',
@@ -91,15 +105,43 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
   );
 }
 
+// export function AiCamera({ productLinks: productLinksProp }) {
+//   const { i18n: { currentLocale } } = useDocusaurusContext();
+//   const defaultProductLinks = [
+//     {
+//       title: 'ViOnyx',
+//       url: `/device/vionyx`,
+//       img: require('@site/static/img/camera/product-vionyx.png').default,
+//       desc: `${translate({
+//         id: "externalLinks.ViOnyx.desc",
+//         message: "AI 기반 지능형 영상 분석 카메라"
+//       })}`,
+//       height: '60px'
+//     }
+//   ];
+//   const productLinks = productLinksProp || defaultProductLinks;
+
+//   return (
+//     <div className={clsx('container', styles.product, styles.grid)}>
+//       {productLinks.map((props, idx) => (
+//         <CardItem key={idx} {...props} />
+//       ))}
+//     </div>
+//   );
+// }
+
 export function BiometricReader({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const defaultProductLinks = [
    //  {
    //    title: 'BioStation 3 Max',
    //    url: `/device/biostation_3_max`,
-   //    img: '#',
-   //    //img: require('@site/static/img/device/xpass_q2.png').default,
-   //    desc: 'BioStation 3 Max',
+   //    img: require('@site/static/img/device/biostation_3_max.png').default,
+   //    desc: `${translate({
+   //      id: "externalLinks.BioStation3Max.desc",
+   //      message: "###"
+   //    })}`,
+   //    height: '90px'
    //  },
     {
       title: 'BioEntry W3',
@@ -132,7 +174,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     {
       title: 'FaceStation F2',
       url: '/device/facestation_f2',
-      img: 'https://www.suprema.co.kr/en/asset/images/thumbnail/facestation2_f2.png',
+      img: require('@site/static/img/device/facestation2_f2.png').default,
       desc: `${translate({
         id: "externalLinks.FaceStationF2.desc",
         message: "퓨전 얼굴인증 장치"
@@ -184,7 +226,8 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       url: `/device/bioentry_r2`,
       img: 'https://supremainc.com/ko/asset/images/thumbnail/bioentryr2.png',
       desc: `${translate({
-        id: "externalLinks.BioentryP2.desc"
+        id: "externalLinks.BioentryP2.desc",
+        message: "콤팩트 지문인식 단말기"
       })}`,
       height: '90px'
     },
@@ -196,7 +239,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
         id: "externalLinks.XStation2.desc",
         message: "차세대 모바일 출입인증 단말기"
       })}`,
-      height: '90px'
+      height: '100px'
     }
   ];
   const productLinks = productLinksProp || defaultProductLinks;
@@ -228,7 +271,9 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
       img: 'https://supremainc.com/en/asset/images/thumbnail/xStation2.png',
       desc: `${translate({
         id: "externalLinks.XStation2.desc",
-      })}`
+        message: "차세대 모바일 출입인증 단말기"
+      })}`,
+      height: '90px'
     },
     {
       title: 'XPass 2',
@@ -245,6 +290,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
       img: 'https://supremainc.com/ko/asset/images/thumbnail/xpassd2.png',
       desc: `${translate({
         id: "externalLinks.XPass2.desc",
+        message: "옥외형 콤팩트 RFID 리더"
       })}`,
     },
     {
@@ -400,6 +446,20 @@ export function Peripheral({ productLinks: productLinksProp }) {
 export function Apps({ externalLinks: externalLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const defaultExternalLinks = [
+    {
+      title: 'BioStar Air',
+      play: 'https://play.google.com/store/apps/details?id=com.supremainc.biostarair',
+      ios: 'https://apps.apple.com/app/biostar-air/id6745057397',
+      img: require('/img/bsair-app.png').default,
+      height: '45px'
+    },
+    {
+      title: 'Suprema Pass',
+      play: 'https://play.google.com/store/apps/details?id=com.supremainc.supremapass',
+      ios: 'https://apps.apple.com/no/app/suprema-pass/id6745057639',
+      img: require('/img/sup-pass-app.png').default,
+      height: '45px'
+    },
     {
       title: 'Device Manager',
       url: '/device/device_manager',

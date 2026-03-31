@@ -1,0 +1,65 @@
+---
+id: manage-schedule
+title: スケジュールを管理する
+description: BioStar Airでドアとエレベーターへのアクセスを制御するために、スケジュールを作成して管理する方法です。
+keywords:
+  - スケジュール
+  - 管理
+  - BioStar Air
+---
+
+スケジュールを作成して、特定の曜日と時間帯にドアやエレベーターへの入退室を許可または制限します。 祝日グループと併用すると、出入りルールをさらに細かく調整できます。
+
+:::info
+
+* 祝日グループはスケジュールより優先されます。 常に出入りが必要なユーザーには、制限のないアクセス権を付与してください。
+
+* 祝日グループの設定の詳細については <DocLink docId='platform/biostar_air/manage-holiday-group' /> をご参照ください。
+
+* ドアにスケジュールを適用する方法の詳細については <DocLink docId='platform/biostar_air/managing-door-schedules' /> をご参照ください。
+
+* エレベーターの各階での入退室を制御するスケジュール設定の詳細については <DocLink docId='platform/biostar_air/manage-elevator' /> をご参照ください。
+
+:::
+
+## スケジュールを追加 {#addSchedule}
+
+import AddScheduleItem from '../../common/_add-schedule-item.mdx';
+
+<AddScheduleItem />
+
+:::info
+
+* 入室を許可する開錠スケジュールと入室を制限する施錠スケジュールを追加して、ドアに適用できます。 ドアにスケジュールを適用する方法の詳細については <DocLink docId='platform/biostar_air/managing-door-schedules' /> をご参照ください。
+
+* エレベーターの各階での入退室を制御するスケジュール設定の詳細については <DocLink docId='platform/biostar_air/manage-elevator' /> をご参照ください。
+
+:::
+
+## スケジュールを編集 {#editSchedule}
+
+1. 画面左のサイドバーで <Cmd sid='access_menu' product='air' /> → <Cmd sid='schedules_submenu' product='air' /> をクリックします。
+
+2. 一覧から編集するスケジュールをクリックします。 または、スケジュールのチェックボックスをクリックして、一覧上部の <IcAirEdit title='Edit' /> ボタンをクリックしてください。
+
+3. <Cmd sid='schedule_edit_title' product='air' /> パネルが表示されたら、必要な情報を変更するかスケジュールを編集します。
+
+   <Image src='/img/air/bsair-access-mng-schedule-edit.png' />
+
+4. 変更を保存するには、<Cmd sid='save_btn' product='air' /> をクリックします。
+
+## スケジュールを削除 {#deleteSchedule}
+
+1. 画面左のサイドバーで <Cmd sid='access_menu' product='air' /> → <Cmd sid='schedules_submenu' product='air' /> をクリックします。
+
+2. 一覧から削除するスケジュールのチェックボックスをクリックします。 1件以上のスケジュールを選択できます。
+
+3. 一覧上部の<IcAirRemove title='Delete' /> ボタンをクリックしてください。
+
+4. 警告メッセージのウィンドウが表示されたら、<Cmd sid='btn_yes' product='air' /> をクリックします。
+
+:::info
+
+スケジュールを削除すると、すべての関連セクションからスケジュールが削除されます。 例えば、ドアやエレベーターに適用されているスケジュールが削除されると、当該ドアやエレベーターにはもはやスケジュールが適用されません。
+
+:::

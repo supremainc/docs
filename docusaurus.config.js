@@ -120,7 +120,7 @@ const config = {
             '**/_*.{md,mdx}',
             'device/xpass_q2/**.{md,mdx}',
             'device/biostation_3_max/**.{md,mdx}',
-            'platform/biostar_air/**/**.{md,mdx}',
+            'device/vionyx/**.{md,mdx}'
           ],
           rehypePlugins: [ rehypeExtendedTable ],
         },
@@ -217,15 +217,11 @@ const config = {
             '/common/**',
             '/_unused/**',
             '/products/**',
-            '/platform/biostar_air/**',
-            '/device/**',
             '/products/**',
             '/bsx-license-calculator/**',
             '/en/products/**',
             '/en/common/**',
             '/en/_unused/**',
-            '/en/platform/biostar_air/**',
-            '/en/device/**'
           ],
           autoSectionDepth: 2
         }
@@ -279,33 +275,37 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            label: 'BioStar X',
+            type: 'dropdown',
+            label: 'Platforms',
             position: 'right',
-            docId: 'platform/biostar_x/index'
+            items: [
+              {
+                type: 'doc',
+                label: 'BioStar X',
+                docId: 'platform/biostar_x/index'
+              },
+              {
+                type: 'doc',
+                label: 'BioStar Air',
+                docId: 'platform/biostar_air/index'
+              }
+            ]
           },
-          // {
-          //   type: 'dropdown',
-          //   label: 'Platforms',
-          //   position: 'right',
-          //   items: [
-          //     {
-          //       type: 'doc',
-          //       label: 'BioStar X',
-          //       docId: 'platform/biostar_x/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'BioStar Air',
-          //       docId: 'platform/biostar_air/index'
-          //     }
-          //   ]
-          // },
           {
             type: 'dropdown',
             label: 'Devices',
             position: 'right',
             items: [
+            //   {
+            //     type: 'doc',
+            //     label: 'ViOnyx',
+            //     docId: 'device/vionyx/index'
+            //   },
+            //   {
+            //     type: 'doc',
+            //     label: 'BioStation 3 Max',
+            //     docId: 'device/biostation_3_max/index'
+            //   },
               {
                 type: 'doc',
                 label: 'BioEntry W3',
@@ -445,9 +445,40 @@ const config = {
             docId: 'how-to/index'
           },
           {
-            label: 'API',
+            type: 'dropdown',
+            label: 'Developers',
             position: 'right',
-            to: '/api/bsxapi'
+            items: [
+              {
+                label: 'BioStar X API',
+                to: '/api/bsxapi'
+              },
+              {
+                label: 'BioStar Air Developer',
+                to: 'https://developers.biostarair.com',
+                target: '_blank',
+              },
+              {
+                label: 'BioStar Device SDK',
+                to: 'https://kb.supremainc.com/bs2sdk/doku.php',
+                target: '_blank',
+              },
+              {
+                label: 'BioStar 2 API',
+                to: 'https://bs2api.biostar2.com',
+                target: '_blank',
+              },
+              {
+                label: 'Suprema G-SDK',
+                to: 'https://supremainc.github.io/g-sdk',
+                target: '_blank',
+              },
+              {
+                label: 'SVP Android SDK',
+                to: 'https://kb.supremainc.com/svpsdk/doku.php',
+                target: '_blank',
+              },
+            ]
           },
           {
             type: 'doc',

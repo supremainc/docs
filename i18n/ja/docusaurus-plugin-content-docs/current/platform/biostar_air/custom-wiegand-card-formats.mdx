@@ -1,0 +1,77 @@
+---
+id: custom-wiegand-card-formats
+title: カスタムWiegandカード形式を設定する
+description: 既存のアクセス制御システムから円滑にマイグレーションするためのファシリティコード、IDセグメント、パリティビット、ビット割り当てなどについて、BioStar Air v2.10でカスタムWiegandカード形式を作成および構成する方法を案内します。
+keywords:
+  - Wiegand
+  - カード形式
+  - BioStar Air
+---
+
+既存のアクセス制御システムから円滑にマイグレーションするためのファシリティコード、IDセグメント、パリティビット、ビット割り当てなどについて、BioStar Air v2.10でカスタムWiegandカード形式を作成および構成する方法を案内します。
+
+## Wiegandカード形式一覧 {#cardFormatMenu}
+
+画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' /> をクリックします。 **Wiegand形式**および**SIA**、**HID形式**を含む、特別なカード形式を作成、管理、参照できます。 既存のカードが提供されているアクセス制御ソリューションからマイグレーションするサイトで役立ちます。
+
+<Image src='/img/air/bsair-settings-card-format.png' />
+
+* BioStar Airに含まれるデフォルト形式を含め、登録されているすべてのWiegandカード形式を参照できます。
+
+* カード形式の名前、説明、総ビット数、ビットプレビューおよび詳細なビット割り当てを確認できます。
+
+* 名前、説明、総ビット数および詳細なビット割り当てを含めて、新しいカスタムカード形式を構成できます。 システムは視覚的確認のためのビットプレビューを提供します。
+
+## カード形式を追加する
+
+デフォルトのWiegandカード形式に加えて、新しいカスタムWiegandカード形式を追加できます。
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' /> をクリックします。
+
+2. 画面右上の <Cmd sid='wiegand_card_format_title_popup_add' product='air' /> ボタンをクリックします。
+
+3. <Cmd sid='wiegand_card_format_title_popup_add' product='air' /> ウィンドウが表示されたら、<Cmd sid='wiegand_card_format_label_detail' product='air' /> セクションで名前と説明（省略可）、総ビット数を入力します。
+
+   <Image src='/img/air/bsair-settings-card-format-add-wiegand.png' />
+
+4. 総ビット数を入力すると、<Cmd sid='wiegand_card_format_label_bit_preview' product='air' />が有効になり、<Cmd sid='wiegand_card_format_label_bit_assignment' product='air' /> セクションでビット割り当てを構成します。
+
+   <Image src='/img/air/bsair-settings-card-format-add-wiegand-assign-bit.png' caption />
+
+   * <Cmd sid='wiegand_card_format_label_bit_preview_facility_code' product='air' />：識別コードを使用するにはトグルスイッチをクリックして有効にします。 <Cmd sid='wiegand_card_format_label_start_bit' product='air' /> と <Cmd sid='wiegand_card_format_label_end_bit' product='air' /> を入力します。
+
+   * <Cmd sid='wiegand_card_format_label_bit_preview_id' product='air' />：開始ビットと終了ビットを指定して1つ以上のIDセグメントを追加します。
+
+   * <Cmd sid='wiegand_card_format_label_bit_preview_parity_bit' product='air' />: 開始ビットと終了ビットを指定して、奇数/偶数のパリティビットを追加します。
+
+5. 新しいカード形式を追加するには、<Cmd sid='save_btn' product='air' /> ボタンをクリックします。
+
+## カード形式を編集する {#editCardFormat}
+
+既存のWiegandカード形式を編集するには、次の手順に従います。
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' /> をクリックします。
+
+2. 編集するカード形式をクリックします。
+
+3. <Cmd sid='wiegand_card_format_title_popup_edit' product='air' /> ウィンドウが表示されたら、必要な項目を修正します。
+
+   <Image src='/img/air/bsair-settings-card-format-edit-wiegand.png' />
+
+4. 編集したカード形式を保存するには、<Cmd sid='save_btn' product='air' /> ボタンをクリックします。
+
+## カード形式を削除する {#deleteCardFormat}
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' /> をクリックします。
+
+2. 削除するカード形式のチェックボックスをクリックします。 1つ以上のカード形式を選択できます。
+
+3. 一覧上部の<IcAirRemove title='Delete' /> ボタンをクリックしてください。
+
+4. メッセージウィンドウが表示されたら、<Cmd sid='btn_yes' product='air' /> ボタンをクリックします。
+
+:::info
+
+デフォルトで提供される5つのWiegandカード形式は削除できません。
+
+:::

@@ -1,0 +1,150 @@
+---
+id: configuring-reports
+title: Crear y programar informes
+description: Esta guía explica cómo crear, filtrar y programar informes de usuarios, de registros de eventos y de auditoría para enviarlos automáticamente por correo electrónico en BioStar Air.
+keywords:
+  - Informe
+  - BioStar Air
+---
+
+import ReportNotes from '../../common/_bsair-report-config-note.mdx';
+
+En BioStar Air, los informes se pueden configurar desde diferentes páginas según el tipo. Este artículo explica cómo crear y programar informes de usuarios, de registros de eventos y de auditoría.
+
+## Acceder a la configuración de informes {#accessing-report-configuration}
+
+La ruta de acceso varía según el tipo de informe.
+
+* Informe de usuarios: <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" />
+
+* Informe de registros de eventos: <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="event_logs_submenu" product="air" />
+
+* Informe de registros de auditoría: <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="audit_logs_submenu" product="air" />
+
+Haga clic en <IcAirReport width="20" height="20" title="Report" /> en la barra de herramientas en la parte superior de la lista. Aparece la página de configuración de informes.
+
+## Configurar informes de usuarios {#configuring-user-reports}
+
+Configure un informe de usuarios para ver el estado actual de los usuarios registrados en el sitio.
+
+1. Vaya a <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> en la barra lateral izquierda.
+
+2. En la barra de herramientas en la parte superior de la lista de usuarios, haga clic en <IcAirReport width="20" height="20" title="Report" />.
+
+3. Cuando aparezca la ventana <Cmd sid="report_popup_title" product="air" />, ingrese un nombre para el informe.
+
+   <Image src='/img/air/bsair-user-report-setting.png' />
+
+4. Seleccione los elementos que desea incluir en el informe en cada opción de filtro.
+
+5. Haga clic en <Cmd sid="report_form_text_add" product="air" /> para guardar el informe.
+
+6. Se crea un <Cmd sid="report_form_text_title" product="air" /> en la parte inferior y se envía un enlace de descarga al correo electrónico del administrador.
+
+<Image src='/img/air/bsair-user-report-setting-list.png' />
+
+:::info
+
+<ReportNotes />
+
+* Para obtener más información sobre la gestión de usuarios, consulte <DocLink docId='platform/biostar_air/managing-users' />.
+
+:::
+
+## Configurar informes de registros de eventos {#configuring-event-log-reports}
+
+Configure un informe sobre los registros de eventos generados en el sitio.
+
+1. Vaya a <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="event_logs_submenu" product="air" /> en la barra lateral izquierda.
+
+2. En la barra de herramientas en la parte superior de la lista de registros, haga clic en <IcAirReport width="20" height="20" title="Report" />.
+
+3. Cuando aparezca la ventana <Cmd sid="report_popup_title" product="air" />, ingrese un nombre para el informe.
+
+   <Image src='/img/air/bsair-report-eventlog-report-setting.png' />
+
+4. Seleccione los elementos que desea incluir en el informe en cada opción de filtro.
+
+5. Haga clic en <Cmd sid="report_form_text_add" product="air" /> para guardar el informe.
+
+6. Se crea un <Cmd sid="report_form_text_title" product="air" /> en la parte inferior y se envía un enlace de descarga al correo electrónico del administrador.
+
+<Image src='/img/air/bsair-report-eventlog-report-setting-result.png' />
+
+:::info
+
+<ReportNotes />
+
+* Para obtener más información sobre los registros de eventos, consulte <DocLink docId='platform/biostar_air/monitoring-event-logs' />.
+
+:::
+
+## Configurar informes de registros de auditoría {#configuring-audit-log-reports}
+
+Configure un informe de auditoría sobre los cambios realizados por los administradores.
+
+1. Vaya a <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="audit_logs_submenu" product="air" /> en la barra lateral izquierda.
+
+2. En la barra de herramientas en la parte superior de la lista de registros, haga clic en <IcAirReport width="20" height="20" title="Report" />.
+
+3. Cuando aparezca la ventana <Cmd sid="report_popup_title" product="air" />, ingrese un nombre para el informe.
+
+   <Image src='/img/air/bsair-report-audit-trail-report-setting.png' />
+
+4. Seleccione los elementos que desea incluir en el informe en cada opción de filtro.
+
+5. Haga clic en <Cmd sid="report_form_text_add" product="air" /> para guardar el informe.
+
+6. Se crea un <Cmd sid="report_form_text_title" product="air" /> en la parte inferior y se envía un enlace de descarga al correo electrónico del administrador.
+
+<Image src='/img/air/bsair-report-audit-trail-report-setting-result.png' />
+
+:::info
+
+<ReportNotes />
+
+* Para obtener más información sobre los registros de auditoría, consulte <DocLink docId='platform/biostar_air/monitoring-audit-logs' />.
+
+:::
+
+## Programar informes {#scheduling-reports}
+
+Genere informes automáticamente en intervalos definidos y envíelos a los administradores.
+
+1. Vaya a <Cmd sid="settings_menu" product="air" /> → <Cmd sid="alerts.alert_sub_menu_title" product="air" /> en la barra lateral izquierda.
+
+2. Haz clic en <Cmd sid="alerts.add_alert_btn" product="air" /> en la parte superior derecha de la pantalla.
+
+3. Cuando aparezca el panel <Cmd sid="alerts.add_alert_btn" product="air" />, selecciona la pestaña <Cmd sid="alerts.report_type" product="air" />.
+
+   <Image src='/img/air/bsair-settings-alert-add-report.png' />
+
+4. En la sección <Cmd sid="alerts.alert_condition" product="air" />, seleccione el tipo de informe a generar desde <Cmd sid="name_column" product="air" />.
+
+5. Seleccione la programación del informe desde <Cmd sid="schedules_label" product="air" />.
+
+   * Seleccione <Cmd sid="weekly_option" product="air" /> o <Cmd sid="monthly_option" product="air" />.
+
+   * Seleccione la fecha específica para enviar el informe.
+
+   * Todos los informes se envían a la medianoche del día seleccionado.
+
+6. Seleccione los destinatarios en <Cmd sid="alerts.alert_target" product="air" />.
+
+   * Todos los administradores de un nivel específico
+
+   * Administrador individual
+
+7. Selecciona el método de envío en <Cmd sid="alerts.alert_send_by" product="air" />.
+
+   * Los informes solo pueden enviarse por correo electrónico.
+
+   * No se entregan por SMS ni por notificación push de la app.
+
+8. Después de configurar cada elemento, haz clic en <Cmd sid="save_btn" product="air" /> para guardar.
+
+:::info
+
+Para obtener más información sobre la programación de la generación de informes, consulte <DocLink docId='platform/biostar_air/settings-alert-report#reportGeneration' />.
+
+:::

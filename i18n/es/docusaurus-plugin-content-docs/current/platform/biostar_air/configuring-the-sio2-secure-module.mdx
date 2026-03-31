@@ -1,0 +1,100 @@
+---
+id: configuring-the-sio2-secure-module
+title: Configurar el módulo seguro SIO2
+description: Esta guía explica cómo configurar el módulo seguro SIO2 para mejorar la seguridad del sistema de control de acceso.
+keywords:
+  - SIO2
+  - módulo seguro
+  - configuración
+---
+
+**El módulo seguro SIO2** mejora la seguridad del sistema de control de acceso al actuar como intermediario entre el lector compatible con BioStar Air y los relés. Se comunica con el lector mediante un **cable RS485** y evita brechas de seguridad a través de comunicación cifrada.
+
+:::caution
+
+Consulte el diagrama de cableado incluido en el paquete del producto para obtener instrucciones precisas de instalación del **módulo seguro SIO2**. Dado que los métodos de instalación pueden variar según el entorno, solicite asistencia profesional a un distribuidor de Suprema.
+
+:::
+
+## Habilitar SIO2 en el portal BioStar Air {#how-to-activate-sio2-in-the-biostar-air-portal}
+
+Habilite la opción <Cmd sid="add_doors.sio2" product="air" /> siguiendo estos pasos para integrar correctamente el módulo seguro SIO2 y mejorar la seguridad del sistema de control de acceso.
+
+:::info
+
+Si SIO2 está instalado pero no se modifican los ajustes en el portal BioStar Air, podría no funcionar.
+
+:::
+
+<Steps>
+<Step>
+
+### Registrar el lector {#register-the-reader}
+
+* Verifique que el lector, el SIO2 y el relé de la puerta estén conectados correctamente.
+
+* Registre el lector en el sitio a través de la **aplicación BioStar Air**.
+
+</Step>
+<Step>
+
+### Verificar la conexión del dispositivo {#check-device-connection}
+
+1. Acceda al [portal BioStar Air](https://admin.biostarair.com/).
+
+2. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
+
+3. En la lista de dispositivos, verifique que el dispositivo aparezca en **verde** (<StatusOK />) para confirmar la conexión.
+
+</Step>
+<Step>
+
+### Asignar SIO2 a una puerta {#assign-sio2-to-a-door}
+
+1. Haga clic en <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haga clic en la puerta vinculada al dispositivo en la lista. Al registrar el dispositivo, se crea automáticamente una puerta.
+
+</Step>
+<Step>
+
+### Habilitar SIO2 {#enable-sio2}
+
+1. Cuando aparezca el panel <Cmd sid="edit_door.title" product="air" />, vaya a <Cmd>Dispositivo auxiliar</Cmd>.
+
+2. Habilite la opción <Cmd sid="add_doors.sio2" product="air" />.
+
+<Image src='/img/air/bsair-door-mng-edit-door-sio2-enable.png' />
+
+</Step>
+<Step>
+
+### Configurar relé y sensores {#configure-relay-and-sensors}
+
+<Image src='/img/air/bsair-door-mng-edit-door-sio2-settings.png' caption />
+
+* Para <Cmd sid="add_doors.door_relay" product="air" />, seleccione **Relay 0**.
+
+   :::note
+
+   El módulo SIO2 solo tiene un puerto de relé de puerta.
+
+   :::
+
+* Para <Cmd sid="device_editable_fields_door_sensor" product="air" />, seleccione el número de puerto de entrada del SIO2 conectado.
+
+* Si <Cmd sid="device_editable_fields_exit_btn" product="air" /> está conectado, seleccione el puerto de entrada correspondiente en el SIO2.
+
+* Si se utiliza otro tipo de dispositivo de salida, seleccione <Cmd sid="door_product_column3" product="air" />.
+
+</Step>
+<Step>
+
+### Guardar la configuración {#save-the-settings}
+
+* Haga clic en <Cmd sid="save_btn" product="air" /> para aplicar la configuración.
+
+* El módulo seguro SIO2 ahora funciona con normalidad.
+
+</Step>
+</Steps>

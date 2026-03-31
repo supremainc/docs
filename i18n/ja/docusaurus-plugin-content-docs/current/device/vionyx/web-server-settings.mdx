@@ -1,0 +1,111 @@
+---
+id: web-server-settings
+title: Webサーバーへの接続と設定
+description: ViOnyx Web Server に初めて接続してパスワードを設定し、ログインする方法を説明します。
+keywords:
+  - keyword1
+  - keyword2
+  - keyword3
+---
+
+ViOnyx Web Server に初めて接続してパスワードを設定し、ログインする方法を説明します。
+
+## カメラのWebサーバーに接続する {#access-web-server}
+
+:::info
+
+カメラと同じネットワークに接続されているコンピュータで操作してください。
+
+:::
+
+1. Suprema の技術サポート（CS@suprema.co.kr）にお問い合わせのうえ、パッケージファイル(*ViOnyxTool_V1_0_1 4.zip*)をダウンロードしてください。
+
+2. 解凍後、*ViOnyxTool.exe* を実行してください。
+
+   <Image src="/img/camera/web-server-settings1.png" width='80%' alone />
+
+   :::info
+
+   1. 必要なプログラムがインストールされていない場合は、該当プログラムのダウンロードページに案内されます。
+
+      <Image src="/img/camera/web-server-settings2.png" width='50%' alone />
+
+   2. 必要なプログラムをインストールした後、*ViOnyxTool.exe* を再度実行してください。
+
+   :::
+
+3. **Search for Cameras** をクリックしてください。
+
+   <Image src="/img/camera/web-server-settings3.png" width='80%' alone />
+
+4. 検索されたカメラ一覧から接続するカメラのシリアル番号(**DeviceID**)を見つけ、IP アドレス(**IP Address**)を確認してください。
+
+   <Image src="/img/camera/web-server-settings4.png" width='80%' alone />
+
+5. Web ブラウザを起動します。
+
+6. アドレスバーにカメラの IP アドレス(**IP Address**)を入力して、**Enter** キーを押してください。
+
+7. ViOnyx Web Server の画面が表示されます。
+
+## パスワードの設定
+
+初回接続時にパスワードを設定してください。
+
+1. [カメラのWebサーバーに接続する](#access-web-server)を参照して、Web ブラウザで ViOnyx Web Server の IP アドレスにアクセスしてください。
+
+   <Image src="/img/camera/password-setting1-vionyx.png" />
+
+2. <Cmd>パスワード</Cmd>入力欄にパスワードを入力してください。
+
+3. <Cmd>パスワード確認</Cmd>入力欄に同じパスワードをもう一度入力してください。
+
+4. 入力したパスワードが以下の要件をすべて満たしていることを確認してください。
+
+   :::note
+
+   **パスワード要件**
+
+   * **パスワード確認**: <Cmd>パスワード</Cmd>と<Cmd>パスワード確認</Cmd>の入力欄の値が正確に一致している必要があります。
+
+   * **長さ**: 12文字以上64文字以下で入力してください。
+
+   * **文字の組み合わせ**: 英大文字(A-Z)、英小文字(a-z)、数字(0-9)、記号(`"` `!` `@` `#` `%` `^` `&` `*` `(` `)` `-` `_` `=` `+` `[` `]` `{` `}`)をそれぞれ1文字以上含める必要があります。
+
+     * 空白、ハングル文字、その他のUnicode文字は使用できません。
+
+   * **セキュリティ規則**: セキュリティ上の脆弱性を防ぐため、次のパターンは使用できません。
+
+     * 4文字以上の連続した文字または数字（例：abcd、1234、4321）
+
+     * 同じ文字や数字が4回以上連続している（例：aaaa、1111）
+
+     * ユーザーIDを含む（大文字と小文字は区別されません）
+
+     * 推測されやすい一般的な単語やパターン（例：password、qwerty）
+
+   :::
+
+5. すべての条件が満たされると、<Cmd>提出</Cmd>ボタンが有効になります。 ボタンをクリックしてパスワードの設定を完了してください。
+
+:::caution
+
+パスワードを紛失しないようご注意ください。 パスワードを紛失した場合は、カメラを初期化する必要があります。
+
+:::
+
+## ログインする
+
+パスワードの設定が完了すると、ログインページへ自動的に移動します。 管理者IDと設定したパスワードを入力して、ViOnyx Web Server に接続してください。
+
+<Image src="/img/camera/password-setting2-vionyx.png" />
+
+1. <Cmd>アイディー</Cmd> 入力欄に **admin** を入力してください。
+
+   * 管理者 ID(admin)は<Cmd>システム</Cmd> → <Cmd>アカウント管理</Cmd>で変更できます。
+
+2. <Cmd>パスワード</Cmd>入力欄に設定したパスワードを入力してください。
+
+3. <Cmd>ログイン</Cmd>ボタンをクリックしてください。 ログインに成功すると、ViOnyx Web Server のカメラのライブビューア画面が表示されます。
+
+4. [ViOnyx Web Server ユーザーガイド](#)を参照してカメラを設定してください。

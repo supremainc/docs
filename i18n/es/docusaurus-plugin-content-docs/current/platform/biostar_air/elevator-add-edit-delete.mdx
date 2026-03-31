@@ -1,0 +1,106 @@
+---
+id: elevator-add-edit-delete
+title: Administrar Elevadores
+description: Configure el control de acceso del ascensor para controlar el acceso a cada piso. Conecte el módulo OM-120 al dispositivo, configure los relés de los botones de cada piso y administre los horarios de acceso.
+keywords:
+  - Elevador
+  - Control de acceso por piso
+  - OM-120
+  - BioStar Air
+---
+
+Para configurar el control de acceso del ascensor, primero conecte el módulo OM-120 al dispositivo de control de acceso. Luego, asigne el nombre y el número de relé de cada piso y restrinja los horarios de acceso por piso para mejorar la seguridad.
+
+## Requisitos
+
+Cumpla los siguientes requisitos para activar la función de control de acceso del ascensor.
+
+* [Suprema OM-120 module](https://supremainc.com/en/hardware/pd_om-120.asp): Cada módulo admite hasta 12 pisos. Conectar hasta 12 módulos OM-120 a un único dispositivo de control de acceso permite controlar hasta 144 pisos.
+
+* Se requiere un dispositivo compatible con BioStar Air que pueda conectarse al OM-120.
+
+* Se requiere un cableado adecuado al panel de control del ascensor. Para detalles sobre el cableado, contacte al fabricante del ascensor.
+
+* Los horarios de acceso por piso tienen prioridad, y la configuración de días festivos puede anular las reglas normales de acceso.
+
+## Conectar dispositivos y módulos
+
+1. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haga clic en el dispositivo de control de acceso que tenga un módulo OM-120 en la lista de dispositivos.
+
+3. En la sección <Cmd sid='module_found_slots_title' product='air' />, haga clic en <Cmd sid='add_btn' product='air' />.
+
+   <Image src='/img/air/bsair-elevator-mng-device-modules.png' />
+
+4. Seleccione el módulo OM-120 conectado al dispositivo y haga clic en <Cmd sid='save_btn' product='air' />.
+
+## Registrar ascensores
+
+1. Haga clic en <Cmd sid="elevator_menu" product="air" /> → <Cmd sid="elevators_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haga clic en <Cmd sid="elevators.add_elevator_btn" product="air" /> en la parte superior derecha de la pantalla.
+
+   <Image src='/img/air/bsair-elevator-mng.png' />
+
+3. Cuando aparezca el panel <Cmd sid="add_elevator.title" product="air" />, ingrese <Cmd sid="add_elevator.device_info.field1" product="air" /> y <Cmd sid="add_elevator.device_info.field2" product="air" /> (opcional).
+
+   <Image src='/img/air/bsair-elevator-mng-add.png' />
+
+4. En la sección <Cmd sid='add_elevator.assign_device_and_modules.title' product='air' />, seleccione el dispositivo y el módulo para la autenticación de acceso.
+
+   * <Cmd sid='add_elevator.assign_device_and_modules.field1' product='air' />: Seleccione el dispositivo para la autenticación de acceso.
+
+   * <Cmd sid='add_elevator.assign_device_and_modules.field2' product='air' />: Seleccione el módulo OM-120 que controlará el relé del botón del ascensor.
+
+   * <Cmd sid="add_elevator.assign_device_and_modules.field3" product="air" />: Establezca el tiempo durante el cual el botón del piso permanecerá activo después de completar la autenticación. Tras ese tiempo, el relé dejará de activar el botón del piso.
+
+5. En la sección <Cmd sid='add_elevator.floors_configuration.title' product='air' />, ingrese el número de pisos a controlar y haga clic en <Cmd sid='add_elevator.floors_configuration.apply_btn' product='air' />.
+
+6. Configure el nombre, el número de relé y el horario de cada piso.
+
+   <Image src='/img/air/bsair-elevator-mng-add-config-floor.png' alone caption />
+
+   * <Cmd sid='add_elevator.floors_configuration.floors_table.column1' product='air' />: Ingrese el nombre del piso. Use nombres fácilmente identificables como 1F, vestíbulo o sala de conferencias.
+
+   * <Cmd sid='add_elevator.floors_configuration.floors_table.column2' product='air' />: Seleccione la salida de relé que corresponde a cada botón de piso en el panel de control del ascensor.
+
+   * <Cmd sid='add_elevator.floors_configuration.floors_table.column3' product='air' />: Establezca el horario de acceso para cada piso. Por ejemplo, puede restringir el acceso al piso de mantenimiento fuera del horario laboral.
+
+7. Haga clic en <Cmd sid='save_btn' product='air' /> para guardar y registrar la configuración del elevador.
+
+:::info
+
+* Cada módulo OM-120 admite hasta 12 pisos. Conecte varios módulos OM-120 en cadena para ampliar hasta 144 pisos.
+
+* En la sección <Cmd sid='add_elevator.floors_configuration.title' product='air' />, haga clic en <IcAirRemove title='Delete' /> para eliminar un piso.
+
+* Para obtener más información sobre cómo registrar horarios, consulte <DocLink docId='platform/biostar_air/manage-schedule' />.
+
+:::
+
+## Editar elevadores
+
+Siga estos pasos para cambiar los detalles o la configuración de un elevador registrado.
+
+1. Haga clic en <Cmd sid="elevator_menu" product="air" /> → <Cmd sid="elevators_submenu" product="air" /> en la barra lateral izquierda.
+
+2. En la lista, haga clic en el elevador que desea editar. Como alternativa, seleccione la casilla del elevador y haga clic en <IcAirEdit title='Edit' /> en la parte superior de la lista.
+
+3. Cuando aparezca el panel <Cmd sid='edit_elevator.title' product='air' />, cambie la información necesaria o modifique la configuración.
+
+   <Image src='/img/air/bsair-elevator-mng-edit.png' />
+
+4. Haga clic en <Cmd sid='save_btn' product='air' /> para guardar los cambios.
+
+## Eliminar elevadores
+
+Siga estos pasos para eliminar un elevador registrado.
+
+1. Haga clic en <Cmd sid="elevator_menu" product="air" /> → <Cmd sid="elevators_submenu" product="air" /> en la barra lateral izquierda.
+
+2. En la lista, seleccione la casilla del elevador que desea eliminar. Puede seleccionar uno o varios elevadores.
+
+3. Haga clic en <IcAirRemove title='Delete' /> en la parte superior de la lista.
+
+4. Cuando aparezca un mensaje de advertencia, haga clic en <Cmd sid='btn_yes' product='air' />.

@@ -1,0 +1,135 @@
+---
+id: sip-intercom-for-biostation3
+title: BioStation 3 SIP 인터폰 설정하기
+description: BioStation 3에서 양방향 오디오 통화, DTMF 명령을 통한 원격 도어 제어 및 BioStar Air 웹 및 모바일 앱을 통한 통화 수신을 위한 SIP 인터폰 기능을 구성하는 방법을 안내합니다.
+keywords: [SIP, Intercom, BioStation 3]
+---
+
+**BioStar Air v2.10**부터는 **BioStation 3**(BS3)에서 SIP 인터폰 기능을 지원합니다. 이를 통해 리더기와 관리자 간의 양방향 음성 통화는 물론 원격으로 출입문을 잠금 해제할 수 있습니다.
+
+:::info
+
+이 기능을 사용하려면 SIP 서버가 필요하며, 별도로 구매 및 구성해야 합니다. 슈프리마는 SIP 서비스를 제공하지 않습니다.
+
+:::
+
+
+## SIP
+
+**세션 시작 프로토콜**(**Session Initiation Protocol, SIP**)은 IP 네트워크를 통해 실시간 음성 및 비디오 통화를 시작, 유지 및 종료하는 데 널리 사용되는 통신 프로토콜입니다. 이 경우 SIP는 BioStation 3가 인터폰 엔드포인트로 작동하여 호환되는 SIP 서비스를 통해 전화를 걸고 받을 수 있도록 합니다.
+
+
+## 전화 받기
+
+BioStation 3에서 수신된 전화는 아래의 방식으로 받을 수 있습니다.
+
+* **BioStar Air Web**: 웹 브라우저에서 직접 통화 수신
+
+* **BioStar Air Mobile App** (iOS / Android): 이동 중에도 통화 수신
+
+
+## 원격 출입문 제어
+
+SIP 전화를 받을 때, **DTMF 명령**을 사용하여 출입문을 열 수 있습니다:
+
+* 물리적 SIP 전화
+
+* BioStar Air 모바일 앱
+
+* BioStar Air Web 인터페이스
+
+
+## 구성 단계
+
+장치 설정 및 관리자 계정 설정에서 구성할 수 있습니다.
+
+<Steps>
+<Step>
+
+### 장치 설정
+
+1. [BioStar Air 포털](https://admin.biostarair.com)에 로그인하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' />를 클릭하세요.
+
+1. 장치 목록에서 **BioStation 3**를 클릭하세요.
+
+1. <Cmd sid='device_intercom_title' product='air' /> 섹션으로 이동해 <Cmd sid='device_intercom_txt_use_intercom' product='air' /> 옵션을 활성화하세요.
+
+1. SIP 서버 정보를 입력하세요.
+
+   <Image src='/img/air/bsair-intercom-configuration-edit-device.png' className='none' caption />
+
+   * <Cmd sid='device_intercom_txt_sip_server_address' product='air' />
+
+   * <Cmd sid='device_intercom_txt_sip_server_port' product='air' />
+
+   * <Cmd sid='device_intercom_txt_sip_username' product='air' /> / <Cmd sid='login_password' product='air' />
+
+1. 변경 사항을 저장하려면 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+
+</Step>
+<Step>
+
+### 계정 설정
+
+BioStation 3의 통화를 브라우저나 앱으로 라우팅할 수 있습니다.
+
+1. 통화를 수신해야 하는 각 관리자는 BioStar Air 포털 또는 모바일 앱에 로그인하세요.
+
+1. **계정 설정**으로 이동하세요.
+
+   <Tabs groupId='platform'>
+   <TabItem value='web' label='Web'>
+
+   화면 오른쪽 상단의 사용자 프로필 아이콘을 클릭한 후 <Cmd sid='settings_menu' product='air' />을 선택하세요.
+
+   <Image src='/img/air/bsair-device-bs3-sip-account-settings.png' />
+
+   </TabItem>
+
+   <TabItem value='mobile' label='Mobile'>
+
+   초기 화면에서 하단의 <Cmd>전체 메뉴</Cmd>를 탭한 후 사용자 프로필 영역을 탭하세요.
+
+   <Image src='/img/air/bsair-app-bs3-sip-account-settings.png' width='38%' className='none' />
+
+   </TabItem>
+   </Tabs>
+
+1. <Cmd sid='settings_menu' product='air' /> 창이 나타나면 <Cmd sid='device_intercom_title' product='air' /> 탭을 클릭한 후 SIP 서버 로그인 정보를 추가하세요.
+
+   <Tabs groupId='platform'>
+   <TabItem value='web' label='Web'>
+
+   <Image src='/img/air/bsair-device-bs3-sip-account-settings-intercom.png' width='60%' />
+
+   </TabItem>
+
+   <TabItem value='mobile' label='Mobile'>
+
+   <Image src='/img/air/bsair-device-bs3-sip-account-settings-intercom-mobile.png' />
+
+   </TabItem>
+   </Tabs>
+
+   
+
+1. 설정을 저장하려면 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+</Step>
+</Steps>
+
+
+## 검증된 SIP 공급자
+
+BioStation 3는 아래 공급자와 함께 정상 작동함을 테스트 및 확인하였습니다.
+
+* [RingCentral](https://www.ringcentral.com/)
+
+* [FreePBX](https://www.freepbx.org/)
+
+* [Linphone](https://www.linphone.org/)
+
+* [Linhome](https://www.linhome.org/)

@@ -1,0 +1,41 @@
+---
+id: site-additional-settings
+title: 추가 기능 설정하기
+description: QR 코드 리더기, IP 카메라 연동, 웹훅 등 BioStar Air의 확장 기능을 활성화하고 구성하는 방법을 안내합니다.
+keywords: [사이트 추가 설정, 추가 설정]
+---
+
+QR 코드 리더기 사용 여부, ONVIF 카메라 연동, 외부 시스템으로의 이벤트 전송(웹훅) 등
+사이트 운영에 필요한 확장 기능을 활성화하거나 비활성화할 수 있습니다.
+
+화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' />를 클릭하세요. <Cmd sid='site_setting_qr_reader_tab' product='air' /> 탭에서 추가 기능을 활성화하거나 비활성화할 수 있습니다.
+
+<Image src='/img/air/bsair-settings-site-additional-feature.png' />
+
+* <Cmd sid='site_setting_qr_label' product='air' />: QR 코드 리더기를 지원합니다. QR 리더기를 사용하지 않는다면 해당 옵션을 비활성화하세요.
+
+* <Cmd sid='site_setting_video_management' product='air' />: ONVIF 호환 IP 카메라를 지원합니다. BioStar Air와 비디오 감시를 통합하려면 이 기능을 활성화하세요. 기능을 활성화한 후 <Cmd sid='setting_label' product='air' /> 버튼을 클릭하면 이벤트 로그 재생 시간을 설정할 수 있습니다. 
+
+   :::note
+
+   비디오 관리에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/ip-camera-support-and-configuration' />을 참고하세요.
+
+   :::
+
+* <Cmd sid='site_setting_webhook_title' product='air' />: 웹훅을 활성화하여 BioStar Air의 이벤트를 외부 시스템으로 전송할 수 있습니다. 이 기능을 활성화한 후 아래 필드를 구성하세요.
+
+   <Image src='/img/air/bsair-settings-site-additional-feature-webhook.png' />
+
+   * <Cmd sid='site_setting_webhook_url' product='air' />: 이벤트를 수신할 외부 서버의 엔드포인트 주소를 입력하세요. 예: `https://example.com/webhook-endpoint`
+
+   * <Cmd sid='site_setting_webhook_secret' product='air' />: 웹훅 요청이 신뢰할 수 있는 발신 서버에서 전송되었는지 검증하는 보안 토큰입니다. 발신 서버는 보안 키를 이용해 데이터 본문(Payload)을 SHA256으로 암호화하고, 헤더에 `X-Signature`로 전송합니다.
+
+   * <Cmd sid='site_setting_webhook_form_send_text' product='air' />: 웹훅이 올바르게 작동하는지 확인할 수 있습니다. 테스트 메시지를 전송하여 외부 서버가 요청을 수신하고 응답하는지 검증하세요.
+
+   :::info
+
+   * 필요한 정보를 모두 입력했다면 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+   * 입력한 정보를 초기화하려면 <Cmd sid='new_button_reset' product='air' /> 버튼을 클릭하세요.
+
+   :::

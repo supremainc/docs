@@ -1,0 +1,152 @@
+---
+id: managing-sites-with-app
+title: Primeros pasos con la aplicación BioStar Air
+description: La aplicación móvil BioStar Air te guía para administrar usuarios, supervisar eventos y realizar tareas de gestión y control de dispositivos desde tu dispositivo móvil.
+keywords:
+  - BioStar Air
+  - Aplicación móvil
+  - Control de acceso
+  - Supervisión de eventos
+---
+
+La aplicación BioStar Air ofrece las mismas funciones que el portal web. Los usuarios pueden gestionar el control de acceso, supervisar los registros de eventos, controlar dispositivos y realizar tareas administrativas directamente desde un dispositivo móvil.
+
+## Descarga la aplicación móvil
+
+Descarga la aplicación BioStar Air en tu dispositivo móvil e inicia sesión.
+
+* Descarga e instala la aplicación BioStar Air en tu dispositivo móvil.
+
+  * [iOS](https://apps.apple.com/us/app/airfob-pro/id1659959609)
+
+  * [Android](https://play.google.com/store/apps/details?id=com.mocainc.afs2pro)
+
+* Inicia sesión con el mismo ID y contraseña que usas para el [portal web de BioStar Air](https://admin.biostarair.com/).
+
+:::info
+
+* Verifica que hayas iniciado sesión con las mismas credenciales que en la versión web.
+
+* Mantente cerca del dispositivo para actualizarlo en modo BLE.
+
+* Algunas funciones, como el monitoreo de video en tiempo real, requieren una cámara conectada.
+
+:::
+
+<Columns className='mt--50'>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-using-app-dashboard.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+### Panel de control {#dashboard-overview}
+
+Después de iniciar sesión en la aplicación móvil, <Cmd sid="dashboard_menu" product="air" /> en la pantalla de inicio muestra la siguiente información.
+
+* Accesos diarios de usuarios
+
+* Total de usuarios registrados activos
+
+* Dispositivos conectados
+
+* Estado de crédito
+
+</Column>
+</Columns>
+
+<Columns className='mt-50'>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-using-app-users.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+### Gestión de usuarios {#user-management}
+
+Toca la tarjeta <Cmd sid="users_card" product="air" /> en la pantalla de inicio, o toca en secuencia <Cmd sid="site_setting_tab_management" product="air" /> → <Cmd sid="user_submenu" product="air" />.
+
+* Selecciona un usuario y revisa los detalles.
+
+* Modifica el estado del usuario (reemitir, suspender, eliminar o activar).
+
+* Toca el botón <IcAdd /> e ingresa los datos requeridos para agregar un nuevo usuario.
+
+:::info
+
+* Para aprender a agregar usuarios desde la aplicación móvil, consulta <DocLink docId='platform/biostar_air/adding-individual-users#addingUsersWithMobileApp' />.
+
+* Para aprender a agregar usuarios a través del portal de BioStar Air, consulta <DocLink docId='platform/biostar_air/adding-individual-users' />.
+
+* Para obtener más información sobre la gestión de usuarios, consulta <DocLink docId='platform/biostar_air/user-management-user-list' />.
+
+:::
+
+</Column>
+</Columns>
+
+<Columns className='mt-50'>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-using-app-monitoring.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+### Supervisión {#monitoring}
+
+<Cmd sid="monitoring_menu" product="air" /> proporciona la siguiente información.
+
+* <Cmd sid="event_logs_submenu" product="air" />: Supervisar y analizar los registros de eventos y de auditoría. Para más información, consulte <DocLink docId='platform/biostar_air/monitoring-event-logs' /> y <DocLink docId='platform/biostar_air/monitoring-audit-logs' />.
+
+* <Cmd sid="alerts_history.alerts_history_submenu" product="air" />: Ver alertas anteriores y el historial de informes generados a través del portal web y la aplicación móvil. Para más información, consulte <DocLink docId='platform/biostar_air/monitoring-alert-report-history' />.
+
+* <Cmd sid="door_status_submenu" product="air" />: Supervisar el estado en tiempo real de las puertas conectadas al sitio. Para más información, consulte <DocLink docId='platform/biostar_air/monitoring-door-status' />.
+
+  * Consultar el estado de la puerta y controlarla de forma remota.
+
+  * Toque una puerta una vez para editarla, o manténgala pulsada para seleccionar varias puertas y realizar acciones en lote.
+
+  * Configurar una puerta en <Cmd sid="event_log_unlock_mode" product="air" /> o <Cmd sid="event_log_lock_mode" product="air" /> anula la configuración del relé o los horarios.
+
+  * Elimine las puertas no utilizadas según sea necesario.
+
+* Video en tiempo real (si hay una cámara conectada)
+
+</Column>
+</Columns>
+
+<Columns className='mt-50'>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-using-app-devices.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+### Dispositivos {#devices}
+
+Toque la tarjeta <Cmd sid="devices_card" product="air" /> en la pantalla de inicio, o toque <Cmd sid="site_setting_tab_management" product="air" /> → <Cmd sid="devices_card" product="air" /> en ese orden.
+
+* Ver todos los dispositivos registrados.
+
+* Seleccione un dispositivo para editarlo, actualizar su firmware o reiniciarlo.
+
+* Si el dispositivo no está conectado a la red, utilice el modo **BLE** cerca del dispositivo para actualizar su firmware.
+
+* Toque el botón <IcAdd /> para agregar un nuevo dispositivo.
+
+:::info
+
+Para obtener más información sobre la gestión de dispositivos, consulte lo siguiente.
+
+* Aplicación BioStar Air: <DocLink docId='platform/biostar_air/manage-device-with-app' />
+
+* Portal BioStar Air: <DocLink docId='platform/biostar_air/manage-device' />
+
+:::
+
+</Column>
+</Columns>

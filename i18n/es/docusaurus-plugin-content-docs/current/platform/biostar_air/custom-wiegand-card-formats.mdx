@@ -1,0 +1,77 @@
+---
+id: custom-wiegand-card-formats
+title: Formato de tarjeta Wiegand personalizado
+description: Cree y configure un formato de tarjeta Wiegand personalizado en BioStar Air v2.10, incluyendo códigos de instalación, segmentos de ID, bits de paridad y asignación de bits, para migrar sin contratiempos desde un sistema de control de acceso existente.
+keywords:
+  - Wiegand
+  - Formato de tarjeta
+  - BioStar Air
+---
+
+Cree y configure un formato de tarjeta Wiegand personalizado en BioStar Air v2.10, incluyendo códigos de instalación, segmentos de ID, bits de paridad y asignación de bits, para migrar sin contratiempos desde un sistema de control de acceso existente.
+
+## Lista de formatos de tarjeta Wiegand {#cardFormatMenu}
+
+Haga clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="card_format_submenu" product="air" /> en la barra lateral izquierda. Cree, administre y vea formatos especiales de tarjeta, incluidos los formatos Wiegand, SIA y HID. Resulta útil para sitios que migran desde una solución de control de acceso existente con tarjetas emitidas previamente.
+
+<Image src='/img/air/bsair-settings-card-format.png' />
+
+* Vea todos los formatos de tarjeta Wiegand registrados, incluidos los predeterminados de BioStar Air.
+
+* Revise el nombre, la descripción, el total de bits, la vista previa y la asignación detallada de bits del formato.
+
+* Configure un nuevo formato de tarjeta personalizado, incluyendo su nombre, descripción, total de bits y la asignación detallada de bits. El sistema ofrece una vista previa de los bits para su verificación visual.
+
+## Agregar un formato de tarjeta
+
+Agregue un nuevo formato de tarjeta Wiegand personalizado además de los formatos integrados.
+
+1. Haga clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="card_format_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haga clic en <Cmd sid="wiegand_card_format_title_popup_add" product="air" /> en la parte superior derecha de la pantalla.
+
+3. Cuando aparezca la ventana <Cmd sid="wiegand_card_format_title_popup_add" product="air" />, ingrese el nombre, la descripción opcional y el número total de bits en la sección <Cmd sid="wiegand_card_format_label_detail" product="air" />.
+
+   <Image src='/img/air/bsair-settings-card-format-add-wiegand.png' />
+
+4. Ingrese el número total de bits para activar <Cmd sid="wiegand_card_format_label_bit_preview" product="air" />, luego configure la asignación de bits en la sección <Cmd sid="wiegand_card_format_label_bit_assignment" product="air" />.
+
+   <Image src='/img/air/bsair-settings-card-format-add-wiegand-assign-bit.png' caption />
+
+   * <Cmd sid="wiegand_card_format_label_bit_preview_facility_code" product="air" />: Haga clic en el interruptor para activar el código de instalación. Ingrese <Cmd sid="wiegand_card_format_label_start_bit" product="air" /> y <Cmd sid="wiegand_card_format_label_end_bit" product="air" />.
+
+   * <Cmd sid="wiegand_card_format_label_bit_preview_id" product="air" />: Especifique los bits de inicio y fin para agregar uno o más segmentos de ID.
+
+   * <Cmd sid='wiegand_card_format_label_bit_preview_parity_bit' product='air' />: Especifique los bits de inicio y fin para agregar bits de paridad impar o par.
+
+5. Haga clic en <Cmd sid="save_btn" product="air" /> para agregar el nuevo formato de tarjeta.
+
+## Editar formato de tarjeta {#editCardFormat}
+
+Siga estos pasos para editar un formato de tarjeta Wiegand existente.
+
+1. Haga clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="card_format_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haga clic en el formato de tarjeta para editarlo.
+
+3. Cuando aparezca la ventana <Cmd sid="wiegand_card_format_title_popup_edit" product="air" />, edite los campos requeridos.
+
+   <Image src='/img/air/bsair-settings-card-format-edit-wiegand.png' />
+
+4. Haga clic en <Cmd sid="save_btn" product="air" /> para guardar el formato de tarjeta editado.
+
+## Eliminar formato de tarjeta {#deleteCardFormat}
+
+1. Haga clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="card_format_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haga clic en la casilla de verificación del formato de tarjeta que desea eliminar. Seleccione uno o más formatos de tarjeta.
+
+3. Haga clic en <IcAirRemove title='Delete' /> en la parte superior de la lista.
+
+4. Cuando aparezca la ventana de mensaje, haga clic en <Cmd sid="btn_yes" product="air" />.
+
+:::info
+
+No se pueden eliminar los cinco formatos de tarjeta Wiegand integrados.
+
+:::

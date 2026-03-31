@@ -129,7 +129,7 @@ function generateTocFromHeadings(headings) {
  * @param {number} maxDepth - Maximum heading depth for TOC
  * @returns {string} TOC HTML
  */
-export function generateTableOfContents(contentHtml, language, maxDepth = 3, rn = false) {
+export function generateTableOfContents(contentHtml, language, maxDepth = 3, rn = false, product) {
   const headings = extractHeadingsFromHtml(contentHtml, maxDepth);
   const tocContent = generateTocFromHeadings(headings);
   
@@ -150,7 +150,10 @@ export function generateTableOfContents(contentHtml, language, maxDepth = 3, rn 
     default:
       tocTitle = '목차';
   }
-  const tocSection = rn ? 'toc releasenotes' : 'toc';
+  let tocSection = rn ? 'toc releasenotes' : 'toc';
+  if (product) {
+    tocSection += ` ${product}`;
+  }
   return `<nav class="${tocSection}" id="toc">\n<h2>${tocTitle}</h2>\n${tocContent}</nav>\n`;
 }
 
@@ -193,6 +196,8 @@ export async function buildHtmlDocument(mdxFiles, title, options = {}) {
     let sectionClass = rn ? 'doc-section releasenotes' : 'doc-section';
     if (product === 'biostar_x') {
       sectionClass += ' biostar-x';
+    } else if (product === 'biostar_air') {
+      sectionClass += ' biostar-air';
     }
     contentSections.push(`
     <section class="${sectionClass}" id="${file.headingId}">
@@ -209,7 +214,7 @@ export async function buildHtmlDocument(mdxFiles, title, options = {}) {
 
   const css = getTemplateCSS(template);
   // Generate TOC after content HTML is created, from actual rendered headings
-  const tocHtml = toc ? generateTableOfContents(contentHtml, language, maxDepth, rn) : '';
+  const tocHtml = toc ? generateTableOfContents(contentHtml, language, maxDepth, rn, product) : '';
 
   const html = `<!DOCTYPE html>
 <html lang="${language}">

@@ -1,0 +1,105 @@
+---
+id: federated-sites
+title: Administrar sitios federados
+description: Configure y administre sitios federados en BioStar Air para edificios con múltiples inquilinos y organizaciones con varias sucursales a través de un control centralizado.
+keywords:
+  - federado
+  - sitios
+  - BioStar Air
+---
+
+BioStar Air ofrece **sitios federados**, que permiten a un sitio primario gestionar sin problemas múltiples subsitios. Esta función es ideal para edificios con varios inquilinos u organizaciones con múltiples sucursales y proporciona control centralizado mediante la gestión distribuida de accesos.
+
+Al aprovechar la función de sitios federados de BioStar Air, los administradores gestionan eficazmente el acceso en entornos complejos y ofrecen una experiencia segura, escalable y optimizada para todas las partes interesadas.
+
+## ¿Qué es un sitio federado? {#whatFederatedSites}
+
+**Los sitios federados** admiten una estructura jerárquica en la que un **sitio primario** gestiona uno o más **subsitios**. Un administrador del sitio primario—denominado **administrador de la federación**—puede acceder y administrar directamente los subsitios desde la interfaz de BioStar Air.
+
+Los sitios federados son útiles en las siguientes situaciones.
+
+### Edificio con múltiples inquilinos
+
+Por ejemplo, en un edificio comercial donde cada piso está ocupado por una empresa diferente, configure el sistema de la siguiente manera.
+
+* **Cuenta maestra** del edificio
+
+* **Subcuenta** para cada empresa inquilina
+
+Esta configuración autoriza únicamente a los empleados que tienen acceso a un piso específico, lo que simplifica la gestión del edificio.
+
+### Organización con múltiples sucursales
+
+Una empresa con oficinas en varias ubicaciones puede configurar el sistema de la siguiente manera.
+
+* Gestione la configuración global mediante una **cuenta maestra**
+
+* Cree una **subcuenta** para cada sucursal
+
+Por ejemplo, una empresa con diez oficinas en todo el mundo puede utilizar una estructura federada para agilizar la gestión.
+
+## Configurar sitios federados {#setFederatedSites}
+
+<Steps>
+<Step>
+
+### Acceder al Portal de Socios
+
+URL: [https://partner.biostarair.com](https://partner.biostarair.com)
+
+* Solo socios e instaladores pueden usar el Portal de Socios de BioStar Air.
+
+* Los clientes finales deben ponerse en contacto con un instalador para configurar esta función.
+
+</Step>
+<Step>
+
+### Crear sitio primario
+
+1. Inicia sesión en el [Portal de Socios](https://partner.biostarair.com).
+
+2. Haz clic en **Crear sitio** y, en **Perfil del sitio**, selecciona **Sitio federado**.
+
+   * Este paso **debe** realizarse al configurar el sitio por primera vez.
+
+   * Un sitio estándar no puede convertirse en un sitio federado más adelante.
+
+3. Agrega un administrador del sitio federado en la misma pantalla.
+
+   * Un **administrador del sitio federado** agregado en el Portal de Socios puede acceder al sitio principal y a todos los subsitios.
+
+   * Un **administrador general** agregado en BioStar Air solo puede administrar sitios individuales.
+
+</Step>
+<Step>
+
+### Agregar subsitios
+
+1. Una vez que el sitio principal está configurado como sitio federado, la **Lista de sitios** muestra la opción para crear subsitios.
+
+2. Haz clic en **Crear subsitio** y configúralo como cualquier otro sitio.
+
+</Step>
+</Steps>
+
+## Consideraciones importantes {#important-considerations}
+
+### Gestión de usuarios y dispositivos {#user-and-reader-management}
+
+* Agrega usuarios y dispositivos por separado a cada subsitio.
+
+* Un dispositivo solo puede registrarse en un sitio a la vez. Selecciona el sitio principal o un subsitio.
+
+### Uso del sitio principal {#primary-site-usage}
+
+* Ciertos clientes usan el sitio principal únicamente como punto de acceso para la gestión de subsitios y no registran usuarios ni dispositivos en el sitio principal.
+
+* **Ejemplo 1**: Una empresa con tres sucursales configura un sitio principal sin dispositivos y crea un subsitio para cada sucursal.
+
+* **Ejemplo 2**: Una empresa con sede central y tres sucursales registra usuarios y dispositivos en la sede central (el sitio principal) y crea subsitios para las sucursales.
+
+### Facturación {#billing}
+
+* La facturación se calcula según el número de dispositivos registrados (lectores) por sitio.
+
+* No hay costo adicional por crear un sitio principal sin dispositivos registrados.

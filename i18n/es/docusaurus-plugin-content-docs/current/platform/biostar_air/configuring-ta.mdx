@@ -1,0 +1,119 @@
+---
+id: configuring-ta
+title: Tiempo y asistencia (T&A)
+description: Esta guía explica cómo configurar los ajustes de T&A en BioStar Air, habilitar el registro móvil de T&A, asignar T&A a dispositivos y exportar los registros de T&A.
+keywords:
+  - T&A
+  - T&A (Tiempo y Asistencia)
+  - BioStar Air
+---
+
+BioStar Air registra los horarios de inicio y fin de turno y de descanso para ofrecer un seguimiento básico de **T&A**, e integrarse con sistemas externos de T&A o exportar los datos. BioStar Air no es un sistema completo de T&A, pero admite el registro de eventos y la integración mediante API con sistemas de nómina y T&A. También genera informes básicos de **horas trabajadas**.
+
+:::tip
+
+Consulta el siguiente video para ver una guía sobre la configuración de T&A.
+
+<YouTube className='fit--content' videoId="Que_LV25W04" />
+
+:::
+
+## Eventos de T&A {#tna_events}
+
+A continuación se indican los eventos de T&A que se pueden registrar. Estos eventos se guardan y pueden exportarse como un archivo CSV o recuperarse mediante la API.
+
+* **Inicio del turno**
+
+* **Fin del turno**
+
+* **Inicio del descanso**
+
+* **Fin del descanso**
+
+## Configurar T&A {#settingTna}
+
+Sigue estos pasos para habilitar y configurar los ajustes de T&A.
+
+1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haz clic en <Cmd sid="site_setting_tab_setting" product="air" /> en la parte superior de la pantalla.
+
+   <Image src='/img/air/bsair-settings-site-tab-settings.png' />
+
+3. Activa <Cmd sid="site_profile_input8" product="air" />.
+
+4. Cuando aparezca la ventana de mensajes, haz clic en el botón <Cmd sid='site_settings_confirm_btn' product='air' />.
+
+5. En <Cmd sid="site_profile_input8" product="air" />, haz clic en <Cmd sid="tna_setting" product="air" />.
+
+   <Image src='/img/air/bsair-settings-site-tab-settings-enable-tna.png' />
+
+6. Cuando aparezca la ventana <Cmd sid="site_profile_input8" product="air" />, establece la etiqueta para <Cmd sid="device_edit_table_head1" product="air" />.
+
+   > Por ejemplo: Inicio del turno, Fin del turno, Inicio del descanso, Fin del descanso
+
+   <Image src='/img/air/bsair-settings-site-tab-settings-tna-mng.png' />
+
+7. Selecciona si el tipo de evento para <Cmd sid="device_edit_table_head1" product="air" /> es **Entrada** o **Salida**.
+
+8. Haz clic en <Cmd sid="save_btn" product="air" /> para guardar la configuración.
+
+## Configurar T&A en dispositivos {#configuringTnaDevices}
+
+Tras activar <Cmd sid="site_profile_input8" product="air" />, especifica los dispositivos que lo usarán.
+
+1. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda. 
+
+2. En la lista de dispositivos, haz clic en el dispositivo que deseas configurar para T&A.
+
+3. Cuando aparezca la ventana <Cmd sid="device_edit_title" product="air" />, ve a la sección <Cmd sid="new_device_edit_tna_title" product="air" />.
+
+   <Image src='/img/air/bsair-device-mng-device-set-tna.png' caption />
+
+4. Haz clic en el interruptor <Cmd sid="new_device_edit_tna_toogle" product="air" /> para habilitar T&A.
+
+5. Haz clic en <Cmd sid="save_btn" product="air" /> para guardar la configuración.
+
+:::note
+
+* Cuando <Cmd sid='device_edit_tna_mode_label' product='air' /> esté configurado en <Cmd sid='device_edit_tna_mode_option6' product='air' />, la opción <Cmd sid='device_edit_tna_mobile_required_label' product='air' /> estará disponible para la selección obligatoria de T&A durante la autenticación de acceso.
+
+* Las etiquetas de eventos de T&A se gestionan a nivel de **sitio** y no se pueden cambiar por dispositivo.
+
+:::
+
+### <Cmd sid='device_edit_tna_mode_label' product='air' className='normal' /> {#device_edit_tna_title}
+
+Un dispositivo registra eventos de T&A de distintas maneras. Selecciona el modo de asistencia deseado en <Cmd sid='device_edit_tna_mode_label' product='air' />.
+
+* <Cmd sid='device_edit_tna_mode_option2' product='air' />: Cuando la tecla de asistencia aparece en la pantalla, el usuario selecciona el evento de asistencia al autenticarse.
+
+* <Cmd sid="device_edit_tna_mode_option3" product="air" />: Registra las horas de entrada y salida según el horario definido. Por ejemplo, los eventos entre las 8:00 a. m. y las 12:00 p. m. se registran como **Entrada**, mientras que los eventos entre la 1:00 p. m. y las 5:00 p. m. se registran como **Salida**.
+
+* <Cmd sid="device_edit_tna_mode_option4" product="air" />: El usuario continúa usando el último evento de asistencia seleccionado.
+
+* <Cmd sid="device_edit_tna_mode_option5" product="air" />: Asigna un código de T&A fijo al dispositivo. Cada autenticación en ese dispositivo registrará el mismo evento de T&A. Usa esta opción para designar el dispositivo para marcar entrada o salida.
+
+* <Cmd sid="device_edit_tna_mode_option6" product="air" />: Requiere que el usuario seleccione un código de T&A antes de la autenticación. El evento de T&A seleccionado se registra en el registro de acceso.
+
+:::info
+
+Los modos de gestión de asistencia compatibles pueden variar según el modelo de dispositivo. Para obtener más información, consulta los modos de T&A específicos del dispositivo en <DocLink docId='platform/biostar_air/device-info-settings' />.
+
+:::
+
+## Ver y exportar registros de T&A {#viewing-and-exporting-t-and-a-logs}
+
+Los eventos de T&A se guardan en el registro de eventos y se pueden revisar o exportar a un archivo CSV.
+
+1. Haz clic en <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' /> en la barra lateral izquierda.
+
+2. Ubica la columna **T&A** en la tabla de registros.
+
+   <Image src='/img/air/bsair-monitoring-event-log-list.png' />
+
+3. Haz clic en <IcAirColumn title='Customize' /> en la parte superior de la tabla de registros para personalizar la vista y mover la columna **T&A** para una mejor visibilidad.
+
+   <Image src='/img/air/bsair-monitoring-event-log-list-column-set.png' />
+
+4. Haz clic en <IcAirDown title='Download' /> y selecciona <Cmd sid='report_download_csv' product='air' /> para descargar los datos como un archivo CSV.

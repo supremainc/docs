@@ -1,0 +1,110 @@
+---
+id: configuring-the-airfob-patch-and-tag
+title: Configurar Airfob Patch y Tag
+description: Esta guía explica cómo configurar el Airfob Patch y el Tag, establecer el modo BLE y personalizar la salida del ID de tarjeta para actualizar un sistema de control de acceso existente a BioStar Air.
+keywords:
+  - Airfob
+  - Patch
+  - Tag
+  - configuración
+---
+
+El Airfob Patch y el Tag actualizan un lector de control de acceso o una cerradura existente para que funcionen con credenciales móviles de BioStar Air.
+
+* **Airfob Patch**: Un dispositivo que aprovecha la energía para lectores con cable e intercomunicadores, y se instala sin necesidad de cableado adicional.
+
+* **Airfob Tag**: Se adapta a dispositivos alimentados por batería, como cerraduras que usan una pila tipo botón.
+
+:::info
+
+* El Airfob Patch y el Tag son compatibles con la tecnología MIFARE 1K, pero no son compatibles con lectores o cerraduras de baja frecuencia de 125 kHz.
+
+* Autentican credenciales Bluetooth cifradas de BioStar Air desde un dispositivo móvil y funcionan emulando una señal RFID MIFARE. Se adhieren a lectores y cerraduras con cinta y no requieren cableado.
+
+:::
+
+## Pasos de configuración {#configurationSteps}
+
+Instala el Airfob Patch o Tag y regístralo en la aplicación BioStar Air. Sigue estos pasos para configurar el dispositivo.
+
+<Steps>
+<Step>
+
+### Abre la aplicación {#accessApp}
+
+<Columns>
+<Column className='width--20'>
+<Image src='/img/air/bsair-device-aifob-login-app.png' />
+</Column>
+
+<Column className='padding--l10'>
+
+1. Abre **BioStar Air** en tu dispositivo móvil.
+
+2. Inicia sesión en el sitio donde está registrado el Airfob Patch o Tag.
+
+</Column>
+</Columns>
+</Step>
+<Step>
+
+### Ve a la configuración del dispositivo {#navigateToDeviceSettings}
+
+<Columns>
+<Column className='width--20'>
+<Image src='/img/air/bsair-device-aifob-app-device.png' />
+</Column>
+
+<Column className='padding--l10'>
+
+1. En la pantalla principal de **BioStar Air**, toca <Cmd sid='site_setting_tab_management' product='air' /> en la parte inferior.
+
+2. Para ver los dispositivos registrados, toca <Cmd sid="devices_card" product="air" />.
+
+3. Selecciona el Airfob Patch o Tag de la lista de dispositivos.
+
+</Column>
+</Columns>
+
+</Step>
+<Step>
+
+### Activa el modo BLE {#enable-ble-mode}
+
+* Acerca el dispositivo móvil a la unidad.
+
+* Activa <Cmd>Modo BLE</Cmd> en la aplicación.
+
+</Step>
+<Step>
+
+### Configura el método de salida del ID de tarjeta {#set-card-id-output-method}
+
+* Desplázate hasta **Método de salida del ID de tarjeta** y toca **Editar**.
+
+* Toca **Seleccionar** junto a **ID de tarjeta de usuario**.
+
+</Step>
+<Step>
+
+### Selecciona el método de salida {#choose-the-output-method}
+
+* **Ninguno**: Seleccione esta opción cuando no desee enviar un ID de tarjeta. Útil para el control de tiempo y asistencia, ya que prolonga la vida útil de la batería.
+
+* **Dispositivo fijo**: Envía el ID de tarjeta fijo preprogramado. Útil para cerraduras o intercomunicadores que requieren programar cada tarjeta RFID de forma individual. Solo este ID fijo aparece en los registros del dispositivo.
+
+* **ID de tarjeta de usuario**: Envía un ID de tarjeta único para cada usuario que coincide con el número de tarjeta RFID registrado en el sistema de control de acceso. Esto permite una integración sin necesidad de emitir nuevas tarjetas físicas.
+
+* **Entrada directa**: Especifique manualmente el ID de la tarjeta que se enviará. Útil para configuraciones personalizadas en las que un mismo ID debe utilizarse en varias unidades.
+
+</Step>
+<Step>
+
+### Guardar la configuración {#save-your-settings}
+
+* Mantenga el dispositivo móvil cerca de la unidad, toque <Cmd sid="save_btn" product="air" /> y confirme las selecciones.
+
+* Se muestra el mensaje 'Actualización completada'.
+
+</Step>
+</Steps>

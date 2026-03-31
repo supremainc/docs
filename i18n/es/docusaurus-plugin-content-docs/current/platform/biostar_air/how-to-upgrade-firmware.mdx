@@ -1,0 +1,114 @@
+---
+id: how-to-upgrade-firmware
+title: Actualización de firmware
+description: Instrucciones para actualizar el firmware de los dispositivos, individualmente o en lote, mediante el portal web y la aplicación móvil. También incluye cómo comprobar la versión y consejos para solucionar problemas en BioStar Air.
+keywords:
+  - firmware
+  - actualizar
+  - BioStar Air
+---
+
+Actualice el firmware de BioStar Air para mejorar el rendimiento del dispositivo, reforzar la seguridad y aprovechar las nuevas funciones. Este proceso sencillo se puede realizar desde el portal web de BioStar Air o desde la aplicación móvil.
+
+:::info
+
+Para actualizar el firmware en la aplicación móvil de BioStar Air, consulte <DocLink docId='platform/biostar_air/manage-device-with-app#upgradingFirmwareViaMobileApp' />.
+
+:::
+
+## Antes de Comenzar
+
+* Los dispositivos deben estar **en línea** para actualizar el firmware. Compruebe el estado del dispositivo en la columna <Cmd sid='device_product_column' product='air' /> de la lista de dispositivos. Un punto verde (<StatusOK />) junto a la imagen del dispositivo indica que el dispositivo está en línea.
+
+* Durante la actualización del firmware, el dispositivo queda **temporalmente sin conexión**, pero debería volver a conectarse en **3–5 minutos**.
+
+* Recomendamos realizar las actualizaciones de firmware fuera del horario laboral, ya que los dispositivos quedan temporalmente desconectados.
+
+* Configure las notificaciones para recibir alertas cuando haya nuevo firmware disponible. Para más información sobre la configuración de alertas, consulte <DocLink docId='platform/biostar_air/settings-alert-report#addAlert' />.
+
+:::info
+
+Para más información sobre la gestión de dispositivos, consulte <DocLink docId='platform/biostar_air/managing-registered-devices' />.
+
+:::
+
+## Actualizar el firmware de un dispositivo individual {#upgradingFirmwareAdeviceViaWebPortal}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+Inicie sesión en el portal [BioStar Air](https://admin.biostarair.com) y siga estos pasos para actualizar el firmware.
+
+1. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haga clic en el dispositivo que desea actualizar en la lista de dispositivos.
+
+3. Cuando aparezca la ventana <Cmd sid='device_edit_title' product='air' />, vaya a la sección <Cmd sid='new_layout_nav_title_detail' product='air' />.
+
+4. Haga clic en <Cmd sid="firmware_update_btn" product="air" />.
+
+   <Image src='/img/air/bsair-device-mng-fw-upgrade.png' caption />
+
+5. Seleccione la versión de firmware más reciente para el dispositivo y confirme la actualización.
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+Esta guía explica cómo actualizar el firmware mediante la aplicación móvil.
+
+<Image src='/img/air/bsair-mobile-device-fw-update.png' className='none' />
+
+1. Abra la aplicación BioStar Air en su dispositivo móvil e inicie sesión.
+
+2. Toque la tarjeta <Cmd sid="devices_card" product="air" />.
+
+3. Toque el dispositivo en la lista cuyo firmware desea actualizar.
+
+4. Toque <Cmd sid="firmware_update_btn" product="air" />.
+
+5. Seleccione la versión de firmware más reciente y toque <Cmd sid="btn_ok" product="air" />.
+
+6. Cuando aparezca la ventana de mensajes, revise la información y toque <Cmd sid='device_btn_confirm' product='air' />.
+
+:::info
+
+* La actualización del firmware puede tardar entre 5 y 10 minutos, durante los cuales el dispositivo no estará disponible.
+
+* No apague el dispositivo.
+
+* El dispositivo se reinicia automáticamente después de completar la actualización de firmware.
+
+:::
+
+</TabItem>
+</Tabs>
+
+## Actualizar el firmware de varios dispositivos a la vez {#upgradingFirmwareInBulkViaWebPortal}
+
+1. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Compruebe la versión actual de cada dispositivo en la columna <Cmd sid="device_fw_column" product="air" /> de la lista de dispositivos.
+
+3. Haga clic en la flecha a la derecha de la columna <Cmd sid="device_fw_column" product="air" /> para ordenar los dispositivos por versión de firmware.
+
+   <Image src='/img/air/bsair-device-mng-list-fw-column-align.png' />
+
+4. Marque la casilla a la izquierda de cada dispositivo que desea actualizar.
+
+5. Haga clic en el botón <IcAirFw width='24px' height='24px' title='Update Firmware' /> en la parte superior de la lista de dispositivos.
+
+   <Image src='/img/air/bsair-device-mng-list-fw-update.png' />
+
+6. Cuando aparezca la ventana <Cmd sid="update_fw_text" product="air" />, seleccione la versión más reciente del firmware y haga clic en <Cmd sid="btn_ok" product="air" />.
+
+7. Cuando aparezca la ventana emergente, revise la información y haga clic en <Cmd sid='device_btn_confirm' product='air' />.
+
+:::info
+
+* La actualización del firmware puede tardar entre 5 y 10 minutos, durante los cuales el dispositivo no estará disponible.
+
+* No apague el dispositivo.
+
+* El dispositivo se reinicia automáticamente después de completar la actualización de firmware.
+
+:::

@@ -1,0 +1,150 @@
+---
+id: configuring-reports
+title: レポートの作成とスケジュール設定
+description: BioStar Airで、自動メール送信を通じてユーザーレポート、イベントログレポート、変更ログレポートを作成、フィルタリング、およびスケジュールする方法を案内します。
+keywords:
+  - レポート
+  - BioStar Air
+---
+
+import ReportNotes from '../../common/_bsair-report-config-note.mdx';
+
+BioStar Airのレポートは、レポートの種類に応じてさまざまな画面で構成できます。 本書では、ユーザー、イベントログ、および変更ログのレポートを作成し、スケジュールする方法を案内します。
+
+## リポート構成に移動 {#accessing-report-configuration}
+
+レポートの種類によってアクセス経路が異なります。
+
+* ユーザー レポート： <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' />
+
+* イベントログ レポート： <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' />
+
+* 変更ログ レポート： <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='audit_logs_submenu' product='air' />
+
+上記のメニューの一覧上部のツールバーで、<IcAirReport width='20' height='20' title='Report' /> をクリックします。 レポート設定画面に移動します。
+
+## ユーザーレポートの構成 {#configuring-user-reports}
+
+サイトに登録されているユーザーの状況を把握できるユーザーレポートを構成できます。
+
+1. 画面左のサイドバーで <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_submenu' product='air' /> に移動します。
+
+2. ユーザー一覧の上部にあるツールバーで、<IcAirReport width='20' height='20' title='Report' /> をクリックします。
+
+3. <Cmd sid='report_popup_title' product='air' /> ウィンドウが表示されたら、レポート名を入力します。
+
+   <Image src='/img/air/bsair-user-report-setting.png' />
+
+4. 各フィルターオプションでレポートに含める項目を選択します。
+
+5. 作成したレポートを保存するには、<Cmd sid='report_form_text_add' product='air' /> をクリックします。
+
+6. 下部に <Cmd sid='report_form_text_title' product='air' /> が作成され、管理者のメールにダウンロードリンクが送信されます。
+
+<Image src='/img/air/bsair-user-report-setting-list.png' />
+
+:::info
+
+<ReportNotes />
+
+* ユーザー管理の詳細については、<DocLink docId='platform/biostar_air/managing-users' /> をご参照ください。
+
+:::
+
+## イベントログレポートの構成 {#configuring-event-log-reports}
+
+サイトで発生したイベントログのレポートを構成できます。
+
+1. 画面左のサイドバーで <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' /> に移動します。
+
+2. ログ一覧の上部にあるツールバーで、<IcAirReport width='20' height='20' title='Report' /> をクリックします。
+
+3. <Cmd sid='report_popup_title' product='air' /> ウィンドウが表示されたら、レポート名を入力します。
+
+   <Image src='/img/air/bsair-report-eventlog-report-setting.png' />
+
+4. 各フィルターオプションでレポートに含める項目を選択します。
+
+5. 作成したレポートを保存するには、<Cmd sid='report_form_text_add' product='air' /> をクリックします。
+
+6. 下部に <Cmd sid='report_form_text_title' product='air' /> が作成され、管理者のメールにダウンロードリンクが送信されます。
+
+<Image src='/img/air/bsair-report-eventlog-report-setting-result.png' />
+
+:::info
+
+<ReportNotes />
+
+* イベントログの詳細については、<DocLink docId='platform/biostar_air/monitoring-event-logs' />をご参照ください。
+
+:::
+
+## 変更ログレポートの構成 {#configuring-audit-log-reports}
+
+管理者が行った変更に関する変更ログのレポートを構成できます。
+
+1. 画面左のサイドバーで <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='audit_logs_submenu' product='air' /> に移動します。
+
+2. ログ一覧の上部にあるツールバーで、<IcAirReport width='20' height='20' title='Report' /> をクリックします。
+
+3. <Cmd sid='report_popup_title' product='air' /> ウィンドウが表示されたら、レポート名を入力します。
+
+   <Image src='/img/air/bsair-report-audit-trail-report-setting.png' />
+
+4. 各フィルターオプションでレポートに含める項目を選択します。
+
+5. 作成したレポートを保存するには、<Cmd sid='report_form_text_add' product='air' /> をクリックします。
+
+6. 下部に <Cmd sid='report_form_text_title' product='air' /> が作成され、管理者のメールにダウンロードリンクが送信されます。
+
+<Image src='/img/air/bsair-report-audit-trail-report-setting-result.png' />
+
+:::info
+
+<ReportNotes />
+
+* 変更ログの詳細については、<DocLink docId='platform/biostar_air/monitoring-audit-logs' />をご参照ください。
+
+:::
+
+## レポート作成のスケジュール {#scheduling-reports}
+
+特定の時間間隔でレポートを自動生成して管理者に送信できます。
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='alerts.alert_sub_menu_title' product='air' /> に移動します。
+
+2. 画面右上の <Cmd sid='alerts.add_alert_btn' product='air' /> をクリックします。
+
+3. <Cmd sid='alerts.add_alert_btn' product='air' /> パネルが表示されたら、<Cmd sid='alerts.report_type' product='air' /> タブを選択します。
+
+   <Image src='/img/air/bsair-settings-alert-add-report.png' />
+
+4. <Cmd sid='alerts.alert_condition' product='air' /> セクションの <Cmd sid='name_column' product='air' /> から作成するレポートの種類を選択します。
+
+5. <Cmd sid='schedules_label' product='air' /> でレポート作成の周期を選択します。
+
+   * <Cmd sid='weekly_option' product='air' /> または <Cmd sid='monthly_option' product='air' /> を選択します。
+
+   * レポートを送信する具体的な日付を選択します。
+
+   * すべてのレポートは、選択した日の午前0時に送信されます。
+
+6. <Cmd sid='alerts.alert_target' product='air' /> で通知を受け取る対象を選択します。
+
+   * 特定の管理者レベルのすべての管理者
+
+   * 個別の管理者
+
+7. <Cmd sid='alerts.alert_send_by' product='air' /> で通知の送信手段を選択します。
+
+   * レポートはメールでのみ送信できます。
+
+   * SMSやアプリのプッシュ通知で送信することはできません。
+
+8. 設定を保存するには、<Cmd sid='save_btn' product='air' /> をクリックします。
+
+:::info
+
+レポート生成のスケジュールの詳細については、<DocLink docId='platform/biostar_air/settings-alert-report#reportGeneration' /> をご参照ください。
+
+:::

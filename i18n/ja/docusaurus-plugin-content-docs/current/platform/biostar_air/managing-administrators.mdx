@@ -1,0 +1,161 @@
+---
+id: managing-administrators
+title: 管理者アカウントおよび役割の管理
+description: BioStar Airでの管理者の招待、役割の割り当て、権限管理、およびオブザーバー(Observer)、オペレーター(Operator)、管理者(Administrator)、マスター(Master)の各役割に対する入退室制御の設定方法を案内します。
+keywords:
+  - 管理者
+  - 役割
+  - アクセス制御設定
+---
+
+BioStar Airの管理者機能を使用して、組織内の管理者アカウントを管理し、役割を割り当て、入退室レベルを制御できます。 これにより、セキュリティと管理の制御を維持しながら、適切な担当者に適切な権限を付与できます。
+
+:::tip
+
+管理者管理に関するビデオガイドを見るには、次の動画を参照してください。
+
+<YouTube className='fit--content' videoId="pUyNLeTfGRI" />
+
+:::
+
+## 管理者の表示 {#viewAdmin}
+
+画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_submenu' product='air' /> をクリックします。
+
+<Image src='/img/air/bsair-settings-admin.png' />
+
+<Cmd sid='admin_submenu' product='air' /> メニューで、すべてのアクティブな管理者の一覧を確認できます。 管理者一覧には次の情報が含まれます。
+
+* 名前
+
+* メールアドレス
+
+* 電話番号
+
+* 招待者
+
+* 招待日
+
+* 管理者権限
+
+* アカウントの状態（有効/無効）
+
+## 管理者の無効化 {#deactiveAdmin}
+
+管理者を削除する代わりにアカウントを無効化でき、必要に応じて再度有効化できます。
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_submenu' product='air' /> をクリックします。
+
+2. 一覧から無効化する管理者を見つけます。
+
+3. <Cmd sid='column_admin_account_status' product='air' /> 列でトグルスイッチをクリックします。
+
+   <Image src='/img/air/bsair-settings-admin-deactive.png' />
+
+4. 確認ダイアログが表示されたら、<Cmd sid='admin_status_change_confirm_btn' product='air' /> をクリックしてください。
+
+<Cmd sid='column_admin_account_status' product='air' /> 列の状態が <Cmd sid='admin_status_disabled' product='air' /> に変更されます。
+
+<Image src='/img/air/bsair-settings-admin-deactive-result.png' />
+
+:::info
+
+管理者の無効化機能は、管理者の権限によって制限される場合があります。 <Cmd sid='master_role' product='air' className='bold' /> 権限を持つ管理者は、他の <Cmd sid='master_role' product='air' className='bold' /> 管理者を無効化できません。
+
+:::
+
+## 管理者の役割変更 {#changing-an-administrators-role}
+
+管理者は自分より低いレベルの管理者の役割を変更できます。
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_submenu' product='air' /> をクリックします。
+
+2. 一覧から役割を変更する管理者を選びます。
+
+3. <Cmd sid='column_admin_level' product='air' /> 列で新しい管理者レベルを選択します。
+
+   <Image src='/img/air/bsair-settings-admin-change-role.png' />
+
+4. 確認ダイアログが表示されたら、<Cmd sid='admin_status_change_confirm_btn' product='air' /> をクリックしてください。
+
+:::note
+
+<Cmd sid='master_role' product='air' className='bold' /> 管理者のみが他の管理者に <Cmd sid='master_role' product='air' className='bold' /> 権限を割り当てたり変更したりできます。
+
+:::
+
+## 新しい管理者の招待 {#inviteNewAdmin}
+
+新しい管理者を追加できます。
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_submenu' product='air' /> をクリックします。
+
+2. 画面右上の <Cmd sid='btn_invite' product='air' /> をクリックします。
+
+3. <Cmd sid='admin_invitation_title' product='air' /> ダイアログが表示されたら、メールアドレスを入力します。
+
+   <Image src='/img/air/bsair-settings-admin-invite.png' />
+
+4. <Cmd sid='admin_invitation_input2' product='air' /> で新しい管理者に割り当てる役割を選択します。
+
+5. 招待状を送信するには、<Cmd sid='send_btn' product='air' /> をクリックします。
+
+:::note
+
+* 各管理者は固有のメールアドレスを持つ必要があります。 必要に応じてエイリアスアドレス（例：erik+training@example.com）を使用できます。
+
+* 招待メールを受け取った管理者は、メール内のリンクをクリックします。 アカウントを持っていない管理者は登録を行います。 既にアカウントを持っている管理者は、ログイン後すぐに**サイト**にアクセスできます。
+
+:::
+
+## 管理者レベル {#administrator-levels}
+
+BioStar Airの各管理者レベルは特定の権限を持ち、高いレベルは低いレベルの権限を継承します。
+
+:::info
+
+各管理者の役割は、BioStar Air全体で異なる権限を持っています。 <Cmd sid='observer_role' product='air' className='bold' /> は最も制限されたアクセス権を持ち、画面に表示されない制限されたメニューがあります。
+
+:::
+
+### <Cmd sid='observer_role' product='air' className='normal' />（最低レベル）{#observer}
+
+* <Cmd sid='dashboard_menu' product='air' /> のダッシュボードとログを**表示できます**。
+
+* ログを**エクスポートして**レポートを作成できます。
+
+* 設定、ユーザー、またはデバイスを変更することは**できません**。
+
+* メニューへのアクセスが制限されます。 ほとんどのメニューは画面に表示されません。
+
+### <Cmd sid='operator_role' product='air' className='normal' /> {#operator}
+
+* <Cmd sid='user_submenu' product='air' />および <Cmd sid='user_groups_submenu' product='air' />、<Cmd sid='access_levels_submenu' product='air' />、<Cmd sid='schedules_submenu' product='air' />、<Cmd sid='holiday_groups_submenu' product='air' /> を管理できます。
+
+* デバイスの制御や管理設定へのアクセス権は**ありません**。
+
+* 日常的なユーザーと入退室構成の管理に適しています。
+
+### <Cmd sid='admin_role' product='air' className='normal' /> {#administrator}
+
+* 新しい管理者を**招待できます**。 ただし、<Cmd sid='master_role' product='air' className='bold' /> 役割を割り当てることはできません。
+
+* **すべてのデバイス制御**権限があり、設定を変更して接続されたデバイスを管理できます。
+
+* <Cmd sid='master_role' product='air' className='bold' /> 役割の管理者を削除または変更することはできません。
+
+* 一般的に、システム管理を担当するIT担当者にこの役割を割り当てることを推奨します。
+
+### <Cmd sid='master_role' product='air' className='normal' />（最高レベル）{#master}
+
+* すべての設定と機能に**完全なアクセス**権があります。
+
+* 他の**Administrators**によって削除または変更されることは**ありません**。
+
+* **サブサイト**を作成して、さまざまな場所や組織を管理できます。
+
+* **サイト設定**を構成でき、ここには重要なシステム全体の構成も含まれます。
+
+* 他の管理者がログインする前に**利用規約**に同意させる責任があります。
+
+* 一般的に会社の所有者や高い信頼を受ける役員に割り当てることができます。

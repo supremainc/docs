@@ -1,0 +1,101 @@
+---
+id: api-authentication
+title: Autenticación de la API
+description: Este artículo explica el flujo de autenticación de la API de BioStar Air Cloud, enumera las URL base de la API, describe cómo obtener tokens Bearer y muestra cómo obtener un token desde un navegador.
+keywords:
+  - Autenticación de la API
+  - Bearer token
+  - URL base de la API
+  - BioStar Air
+---
+
+La API de BioStar Air Cloud utiliza autenticación basada en tokens Bearer (JWT). Debe obtener un token mediante el proceso de inicio de sesión antes de hacer llamadas a la API e incluirlo en el encabezado Authorization de cada solicitud.
+
+## URLs base de la API {#api-base-urls}
+
+| Entorno | URL base |
+| --- | --- |
+| Demo | https://demo-afs-api.airfob.com/v1/ |
+| Producción - Europa | https://e-afs-api.airfob.com/v1/ |
+| Producción - Corea | https://a-afs-api.airfob.com/v1/ (para todos los clientes que no pertenezcan a la UE) |
+
+## Flujo de inicio de sesión de la API {#api-login-flow}
+
+Realice llamadas a la API con [Postman](https://www.postman.com/) o de forma programática.
+
+### Iniciar sesión {#login}
+
+* **Endpoint**: `login`
+
+* **Payload**:
+
+  ```json
+  {
+    "username": "your_email",
+    "password": "your_password"
+  }
+  ```
+
+Devuelve un token Bearer (JWT).
+
+### Obtener información de la cuenta {#get-self-accounts}
+
+* **Endpoint**: `getSelfAccounts`
+
+* **Authorization**: token Bearer
+
+Devuelve una lista de sitios y cuentas a los que puede acceder.
+
+### Iniciar sesión en una cuenta {#login-to-account}
+
+* **Endpoint**: `loginAccount`
+
+* **Authorization**: token Bearer
+
+Devuelve un token específico del sitio.
+
+## Cómo obtener un token Bearer desde un navegador web {#getYourBearerToken}
+
+Puede obtener el token Bearer directamente desde el navegador usando las herramientas de desarrollo, sin necesidad de Postman.
+
+### Chrome/Edge (Windows o Mac) {#chrome-edge}
+
+1. En el navegador web, presione <Kbd>F12</Kbd> o <Kbd>Ctrl/Cmd + Shift + I</Kbd>.
+
+2. Vaya a la pestaña **Network**.
+
+3. Actualice la página.
+
+4. Busque llamadas a la API.
+
+   > p. ej., `groups`, `login`
+
+5. Haga clic en la petición en la lista.
+
+6. Vaya a la pestaña **Headers**.
+
+7. En los encabezados de la petición, busque `Authorization: Bearer ...`.
+
+8. Haga clic con el botón derecho en el token y cópielo.
+
+<Image src='/img/air/bsair-chrome-develope.png' alone />
+
+### Safari (Mac) {#safari}
+
+1. Active el menú **Developer**. En Safari, vaya a Preferences → Advanced y marque **Show Develop menu**.
+
+2. Vaya a **Develop** → **Show Web Inspector**.
+
+3. Vaya a la pestaña **Network**.
+
+4. Actualice la página.
+
+5. Filtre e inspeccione las llamadas a la API.
+
+6. Copie el token `Authorization: Bearer` de los encabezados de la petición.
+
+:::info
+
+Un token Bearer copiado del navegador puede reutilizarse en Postman. Use siempre el token Bearer más reciente.
+
+:::

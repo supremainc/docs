@@ -3,9 +3,4 @@
 <circle cx="8" cy="8" r="8" fill="#D0D0D0"/>
 <path d="M6 12L10 8L6 4" stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<defs>
-<clipPath id="clip0_73_88">
-<rect width="16" height="16" fill="white"/>
-</clipPath>
-</defs>
 </svg>

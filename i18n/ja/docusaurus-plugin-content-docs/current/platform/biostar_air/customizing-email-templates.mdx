@@ -1,0 +1,178 @@
+---
+id: customizing-email-templates
+title: メールテンプレートのカスタマイズ
+description: BioStar Airでロゴ、パーソナライズされたコンテンツ、多言語対応を活用して、ユーザー招待、アクティベーション、通知用のブランドメールテンプレートを作成およびカスタマイズする方法を案内します。
+keywords:
+  - メールテンプレート
+  - カスタマイズ
+---
+
+メールテンプレート機能を使って、サイト利用者に送信されるメールを会社のブランドやメッセージに合わせてカスタマイズできます。 メールテンプレートには招待状、アクティベーションメール、およびその他の通知が含まれます。
+
+:::tip
+
+メールテンプレート設定のビデオガイドを視聴するには、次の動画を参照してください。
+
+<YouTube className='fit--content' videoId="xmgpp6xMBuE" />
+
+:::
+
+## メールテンプレートの追加 {#addEmailTemplate}
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='email_templates.email_template_menu' product='air' /> をクリックします。
+
+2. 画面右上の <Cmd sid='email_templates.add_template_btn' product='air' /> をクリックします。
+
+   <Image src='/img/air/bsair-settings-email.png' />
+
+3. <Cmd sid='email_templates.add_email_template' product='air' /> パネルが表示されたら、各項目の設定を構成します。 <Cmd sid='user_text' product='air' /> または <Cmd sid='admin_text' product='air' /> タブを選択して、ユーザーまたは管理者のメールテンプレートを設定できます。
+
+:::info
+
+言語ごとにメールテンプレートを個別に作成できます。 <Cmd sid='user_form_input3' product='air' /> オプションで言語を選択できます。 サポートされている言語は以下のとおりです。
+
+> English, 한국어, 日本語, Nederlands, Español, Português
+
+今後さらに多くの言語をサポートする予定です。
+
+:::
+
+### <Cmd sid='user_text' product='air' className='normal' /> {#user}
+
+ユーザーに送信されるメールテンプレートをカスタマイズできます。
+
+<Image src='/img/air/bsair-settings-email-add-user.png' />
+
+* <Cmd sid='email_templates.email_type' product='air' />：作成するメールテンプレートの種類を選択します。 利用可能なオプションは以下のとおりです。
+
+  * <Cmd sid='email_templates.activate_user' product='air' />：通常、モバイルカードをダウンロードするための招待状として使用します。
+
+  * <Cmd sid='email_templates.reactivate_user' product='air' />：モバイルカードが再アクティブ化されたことをユーザーに通知します。
+
+  * <Cmd sid='email_templates.reissue_user' product='air' />：新しいモバイルカードを発行する際に使用します。
+
+  * <Cmd sid='email_templates.delete_user' product='air' />：カード削除に関する通知をユーザーに送信します。
+
+  * <Cmd sid='email_templates.suspend_user' product='air' />：カードが一時停止されたことをユーザーに通知します。
+
+  * <Cmd sid='email_templates.upload_user_face' product='air' />：ユーザーに顔写真の登録を依頼する際に使用します。
+
+* <Cmd sid='email_templates.card_type' product='air' />：<Cmd sid='email_templates.activate_user' product='air' /> および <Cmd sid='email_templates.reissue_user' product='air' /> のように、モバイルカードのダウンロードを許可するメール種類で選択できます。
+
+  * <Cmd sid='user_card_type_mobile' product='air' />
+
+  * <Cmd sid='user_card_type_web_qr' product='air' />
+
+  * <Cmd sid='user_card_type_web_link' product='air' />
+
+   :::note
+
+   クレデンシャルの種類の詳細については、<DocLink docId='platform/biostar_air/user-card-types' />をご参照ください。
+
+   :::
+
+### <Cmd sid='admin_text' product='air' className='normal' /> {#admin}
+
+管理者に送信されるメールテンプレートをカスタマイズできます。
+
+<Image src='/img/air/bsair-settings-email-add-admin.png' />
+
+<Cmd sid='email_templates.email_type' product='air' />：作成するメールテンプレートの種類を選択します。 利用可能なオプションは以下のとおりです。
+
+* <Cmd sid='email_templates.alert_event_log_admin' product='air' />：サイトで発生したイベントに関する通知を管理者に送信します。
+
+* <Cmd sid='email_templates.alert_system_admin' product='air' />：システムアラートを管理者に送信します。
+
+* <Cmd sid='email_templates.alert_report_admin' product='air' />：レポートを生成した後、ダウンロードリンクを管理者に送信します。
+
+### <Cmd sid='email_templates.email_styles' product='air' className='normal' /> {#emailStyles}
+
+メールのロゴと内容をカスタマイズできます。 <Cmd sid='email_templates.preview' product='air' /> でリアルタイムに変更を確認できます。
+
+<Image src='/img/air/bsair-settings-email-add-style.png' />
+
+* <Cmd sid='email_templates.logo_image' product='air' />：メールに表示するロゴ画像をアップロードします。
+
+   :::note
+
+  * ファイル形式: JPG、JPEG、PNG
+
+  * 最小解像度: 200 x 60
+
+  * ファイルサイズ: 1 MB以下
+
+   :::
+
+* <Cmd sid='email_templates.title_text' product='air' />：メールの件名を入力します。
+
+* <Cmd sid='email_templates.body_text' product='air' />：メール本文に表示するメッセージを入力します。
+
+   :::note
+
+   メール本文にはHTMLキー（key）が含まれている必要があります。 キー（key）はそれぞれ受信者のメールアドレスやサイト名などに置き換えられます。 <Cmd sid='email_templates.email_type' product='air' />で選択した値によって使用できるキー（key）は異なる場合があります。
+
+  * **ユーザー** タブ
+
+    * `${email}`：メールアドレス
+
+    * `${siteName}`：サイト名
+
+  * **管理者** タブ
+
+    * `${email}`：メールアドレス
+
+    * `${siteName}`：サイト名
+
+    * `${alertType}`：通知の種類
+
+    * `${alertDetails}`：通知の詳細
+
+    * `${frequency}`：通知の発生頻度
+
+    * `${location}`：通知が発生した場所
+
+    * `${userInvolved}`：通知に関連するユーザー
+
+    * `${deviceInvolved}`：通知に関連するデバイス
+
+    * `${dateTime}`：通知が発生した日時
+
+   :::
+
+* <Cmd sid='email_templates.bottom_text' product='air' />：メール下部に表示する追加情報を入力します。 規制遵守のため、またはユーザーに場所の詳細を提供するために、会社の住所や連絡先情報を追加します。
+
+:::info
+
+* ロゴ画像がメールで適切に表示されるよう、正しい形式とサイズであることを確認します。
+
+* 現在使用している言語がサポートされていない場合は、今後のアップデートを確認してください。 さらに多くの言語を追加する予定です。
+
+* 住所欄は規制遵守と明確性のために重要なので、正確に入力してください。
+
+* メールテンプレートを保存するには、下部の <Cmd sid='save_btn' product='air' /> をクリックします。
+
+* 既存の内容を変更した後に復元するには、下部の <Cmd sid='new_button_reset' product='air' /> をクリックします。
+
+:::
+
+## メールテンプレートの編集 {#editEmailTemplate}
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='email_templates.email_template_menu' product='air' /> をクリックします。
+
+2. 一覧から編集するメールテンプレートをクリックします。 またはチェックボックスをクリックし、上部の <IcAirEdit title='Edit' /> ボタンをクリックしてください。
+
+3. <Cmd sid='email_templates.edit_email_template' product='air' /> パネルが表示されたら、必要な項目を修正します。
+
+   <Image src='/img/air/bsair-settings-email-edit.png' />
+
+4. 変更を保存するには、下部の <Cmd sid='save_btn' product='air' /> をクリックします。
+
+## メールテンプレートの削除 {#deleteEmailTemplate}
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='email_templates.email_template_menu' product='air' /> をクリックします。
+
+2. 一覧で削除するメールテンプレートのチェックボックスをクリックします。 1つ以上のテンプレートを選択できます。
+
+3. 一覧上部の<IcAirRemove /> をクリックします。
+
+4. メッセージウィンドウが表示されたら、<Cmd sid='btn_delete' product='air' /> をクリックします。

@@ -1,0 +1,69 @@
+---
+id: reports-time-attendance-reports
+title: Informe de tiempo y asistencia
+description: Esta guía explica cómo configurar el informe básico de tiempo y asistencia en BioStar Air. Permite el seguimiento de horas de trabajo presenciales, opciones de exportación a CSV e integración mediante la API.
+keywords:
+  - informes
+  - tiempo y asistencia
+  - BioStar Air
+---
+
+El informe de tiempo y asistencia (T&A) en BioStar Air es un informe sencillo sobre las **horas de trabajo presenciales**. Muestra las horas de entrada y salida de los empleados según los registros de eventos.
+
+Esta función está diseñada para informes básicos sin opciones de configuración complejas. Los sistemas de tiempo y asistencia pueden tener requisitos diversos según la normativa local. Si el informe integrado de tiempo y asistencia no satisface las necesidades de tu organización, utiliza una solución T&A de terceros. Exporta los registros de eventos en **CSV** o integra directamente con software T&A de terceros mediante la API de BioStar Air.
+
+:::info
+
+* El informe integrado de tiempo y asistencia es intencionalmente sencillo y puede no cumplir todos los requisitos normativos.
+
+* Si existen reglas complejas de T&A (por ejemplo, leyes laborales locales o esquemas de turnos), utiliza una solución T&A de terceros.
+
+* Exporta los registros de eventos en CSV para su procesamiento manual o utiliza la API para integrarlos automáticamente con otros sistemas.
+
+:::
+
+Sigue estos pasos para generar un informe de tiempo y asistencia (T&A).
+
+1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> en la barra lateral izquierda.
+
+2. En la pestaña <Cmd sid="site_setting_tab_setting" product="air" />, haz clic en <Cmd sid="tna_report" product="air" /> → <Cmd sid="tna_setting" product="air" />.
+
+   <Image src='/img/air/bsair-usage-settings-site.png' />
+
+   :::note
+
+   Haz clic en el interruptor a la derecha para activar <Cmd sid="tna_report" product="air" />.
+
+   :::
+
+3. Cuando aparezca la ventana <Cmd sid="report_popup_title" product="air" />, escribe un nombre para el informe.
+
+   <Image src='/img/air/bsair-usage-settings-site-tna-report-config.png' />
+
+4. Selecciona los usuarios o grupos de usuarios que deseas incluir en el informe.
+
+5. Haz clic en <Cmd sid="report_form_text_add" product="air" />.
+
+6. Se genera un informe descargable en <Cmd sid="report_form_text_title" product="air" />.
+
+   <Image src='/img/air/bsair-usage-settings-site-tna-report-config-list.png' />
+
+7. Haz clic en <IcAirDown width="20" height="20" title="Download" /> para descargar el informe.
+
+8. Cuando aparezca la ventana <Cmd sid="report_download_popup_title" product="air" />, selecciona un rango de fecha y hora.
+
+   <Image src='/img/air/bsair-usage-settings-site-tna-report-config-down.png' />
+
+9. Haz clic en <Cmd sid="report_download_popup_button_title" product="air" />.
+
+Una vez generado el informe, se envía un enlace de descarga al correo electrónico del administrador. Descarga el informe desde ese correo en formato PDF o CSV.
+
+:::info
+
+* Activa <Cmd sid="user_template_item" product="air" /> y selecciona los elementos de plantilla que quieras incluir en el informe.
+
+* El informe estará disponible para descargar durante 24 horas después de recibir el correo con el enlace de descarga. Tras ese período, ya no estará disponible.
+
+* Configura una programación automática en <Cmd sid="alerts.alert_sub_menu_title" product="air" />. Para más información, consulta <DocLink docId='platform/biostar_air/settings-alert-report#reportGeneration' />.
+
+:::

@@ -1,0 +1,137 @@
+---
+id: integration-quickstart
+title: クイックスタート
+description: BioStar Airのデモ環境の構築、対応デバイスの登録、APIキーの発行方法についてご案内します。
+keywords:
+  - API 統合
+  - クイックスタート
+  - BioStar Air
+  - デモ
+---
+
+BioStar Airのデモサイトを設定し、対応デバイスを接続・登録してクラウドAPI連携をテストする方法をご案内します。 BioStar 2で作業した経験があるなら、多くの概念が馴染み深く感じられるでしょう。 BioStar Airは完全なクラウドベースのシステムです。
+
+## 事前要件 {#pre-requisites}
+
+開始する前に次の項目を確認する。
+
+* 工場出荷時に初期化されたファームウェアを搭載した**BioStar Air対応機器**を用意する。
+
+  * XP2-AIR、XS2-AIR、BEW3-AIR、BS3-AIR、BLN2-AIR
+
+  * 機器は認定のSuprema販売代理店を通じて購入できる。
+
+* 機器はイーサネット経由でインターネットに接続されている必要がある。
+
+* ネットワークでアウトバウンドアクセスを許可する。
+
+  * Port 443 (HTTPS)
+
+  * Port 5671 (MQTT over TLS)
+
+## デモ環境とAPIキーの設定 {#demo-setup}
+
+<Steps>
+<Step>
+
+### サインアップとログイン
+
+* [BioStar Air Developer](https://developers.biostarair.com/login) に移動する。
+
+* 「**サインアップ**」をクリックし、フォームを記入して承認を待つ。
+
+* 承認が完了したら、クレデンシャルを使ってログインする。
+
+</Step>
+<Step>
+
+### デモアプリケーションの作成
+
+1. 「**API**」→「**Management**」に移動する。
+
+2. 「**+ Register**」ボタンをクリックする。
+
+3. アプリケーションタイプを**Demo**に選択する。
+
+4. アプリケーション名を入力し、**Register**ボタンをクリックする。
+
+5. デモサイトのログインクレデンシャル（メールとパスワード）を含むExcelファイルをダウンロードするには、**Download**ボタンをクリックする。
+
+</Step>
+<Step>
+
+### APIキーの発行
+
+1. 「**Application Management**」で登録したアプリケーションをクリックする。
+
+2. 「**API Management**」までスクロールする。
+
+3. 「**Add**」ボタンをクリックする。
+
+4. 名前を入力して確認する。 生成されたキーを保存する。
+
+</Step>
+<Step>
+
+### デモポータルへのログイン
+
+1. [Demo Portal](https://demo.airfobspace.com/login) に移動する。
+
+2. Excelファイルのメールとパスワードでログインする。
+
+3. 先ほど生成したAPIキーを入力する。
+
+</Step>
+</Steps>
+
+## デバイスの登録 {#registerDevices}
+
+モバイル機器でBioStar Air Demo App（Android専用）を使用する。
+
+1. 次のリンクをクリックしてモバイルアプリをダウンロードする。 [DeviceRegistration.zip](https://moca-public-file-share.s3.ap-northeast-2.amazonaws.com/DeviceRegistration.zip)
+
+2. Excelファイルのクレデンシャルでログインする。
+
+3. Android端末をリーダーの近く（BLEの範囲内）に持っていく。
+
+   * 「**All Menu**」→「**Devices**」で右上の<IcAdd />ボタンをタップする。
+
+   * デバイスを検索して**Register**ボタンをタップする。
+
+4. 機器が音を出して再起動し、登録済みデバイス一覧に表示される。
+
+:::info
+
+デバイスはモバイルアプリを通じてのみ登録できる。 ウェブポータルでは登録できない。 APIベースの登録には、パートナーに提供されない暗号化証明書が必要である。
+
+:::
+
+## デバイス管理
+
+デモアプリまたはデモウェブポータルでデバイスを管理できる。
+
+* **BioStar Air Demo App**
+
+* **Demo Web Portal**: [https://demo.airfobspace.com/login](https://demo.airfobspace.com/login)
+
+## Demo vs Production {#demo-vs-production}
+
+* **Demo**サイト（テスト用）は[開発者ポータル](https://developers.biostarair.com/login)から作成される。
+
+* **Production**サイトは[パートナーポータル](https://partner.biostarair.com/)から作成され、サイトID、ユーザーのメールアドレスおよびパスワードが必要となる。 Productionサイトは承認された販売店またはSupremaの支店のみが作成できる。
+
+:::info
+
+* ユーザーIDとアカウントIDは異なる。 混同しないこと。
+
+* 複数のサイトを管理する場合は、パスワードを安全に保管する。
+
+* 常に最新のBearerトークンを使用する。
+
+* ブラウザからコピーしたBearerトークンはPostmanで再利用できる。
+
+:::
+
+## サポートが必要ですか？ {#need-help}
+
+Supremaのテクニカルサポートポータルでチケットを作成する。 [https://support.supremainc.com](https://support.supremainc.com)

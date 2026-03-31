@@ -21,7 +21,7 @@ La integración con VMS ofrece los siguientes beneficios.
 
 * **Función de marcadores**: Agrega etiquetas de video a momentos de eventos importantes para facilitar su búsqueda y revisión.
 
-## Antes de comenzar
+## Antes de Comenzar
 
 Antes de integrar el **Sistema de Gestión de Video** (VMS), verifica lo siguiente.
 
@@ -52,13 +52,13 @@ Sigue los pasos a continuación para integrar el servidor VMS con **BioStar X**.
 
 ### Instalar el certificado en el servidor VMS {#install-vms-certification}
 
-Para reproducir video grabado desde el servidor VMS, se debe usar el protocolo HTTPS. Genera un certificado basado en dirección IP en el servidor VMS.
+Para reproducir video grabado desde el servidor VMS, se debe usar el protocolo HTTPS. Los certificados SSL estándar se emiten para nombres de dominio, por lo que no son válidos si se accede al servidor VMS mediante su dirección IP. Por lo tanto, debes crear un certificado aparte que incluya la dirección IP del servidor VMS.
 
 :::note
 
 * Antes de instalar el certificado, asegúrate de que Open JDK 21 o superior esté instalado en el PC donde se encuentra instalado el VMS.
 
-* Si instalas el servidor VMS y **BioStar X** en el mismo servidor, debes instalar un certificado.
+* Debes instalar un certificado tanto si el servidor VMS y **BioStar X** están instalados en el mismo servidor como si están en servidores distintos.
 
 :::
 

@@ -1,0 +1,96 @@
+---
+id: security-overview
+title: Marco de seguridad
+description: Conozca las medidas de seguridad integrales de BioStar Air. Incluye cifrado de extremo a extremo, certificación ISO 27001, protección de credenciales móviles y prácticas de gestión de vulnerabilidades.
+keywords:
+  - seguridad
+  - BioStar Air
+---
+
+BioStar Air es la solución segura y basada en la nube de Suprema para control de acceso móvil. Los equipos de ingeniería de hardware, software y firmware de Suprema trabajan según el principio de «seguridad por diseño». Cada capa de la arquitectura del sistema y cada punto de contacto en la comunicación están diseñados para preservar la privacidad y la integridad de los datos.
+
+**Medidas clave**:
+
+* Protección de datos y cifrado del portal de gestión y de la base de datos de BioStar Air
+
+* Cifrado y protección de los datos en tránsito entre la API de BioStar Air y los clientes
+
+* Cifrado de los datos de la tarjeta móvil almacenados en el smartphone
+
+* Protección de la comunicación entre el smartphone y el lector (Suprema Pass)
+
+* Prevención de la falsificación de credenciales móviles (Suprema Pass)
+
+## Certificación ISO 27001
+
+Suprema obtuvo la certificación ISO 27001, cumpliendo con estándares internacionales para la gestión de la protección de datos, los controles de seguridad y la privacidad. La conformidad con ISO 27001, obtenida en agosto de 2019, también se alinea con regulaciones similares como el Reglamento General de Protección de Datos (GDPR) y la Ley de Privacidad del Consumidor de California (CCPA).
+
+## Tecnología probada para la seguridad de extremo a extremo
+
+### Acceso seguro al portal y protección de datos
+
+El portal de gestión de BioStar Air se ejecuta en una instancia cifrada de base de datos Amazon RDS de AWS que utiliza cifrado AES-256 o superior. Además, todos los datos personales están cifrados.
+
+### Comunicación cifrada con la API de BioStar Air
+
+Todas las comunicaciones con la API REST de BioStar Air están cifradas con TLS 1.2 a través de HTTPS y requieren un token de acceso (con expiración predeterminada de 1 hora). AWS API Gateway limita las solicitudes a la API para prevenir ataques de fuerza bruta.
+
+### Identificadores de tarjetas móviles cifrados y con hash
+
+Los identificadores de tarjetas móviles están cifrados con AES-256 para evitar su exposición en servidores de terceros. Los datos de las tarjetas están firmados digitalmente para verificar su autenticidad.
+
+### Almacenamiento seguro de tarjetas móviles en el dispositivo
+
+Las credenciales móviles Suprema Pass y los datos relacionados están cifrados con AES-256. Las claves de cifrado se almacenan en el entorno de ejecución confiable (TEE) del dispositivo, como Secure Enclave (Apple) o TrustZone (ARM).
+
+### Comunicación segura entre el dispositivo móvil y el lector
+
+Para bloquear ataques de repetición sobre Bluetooth Low Energy (BLE), BioStar Air utiliza una clave de cifrado de un solo uso para cada conexión y termina la conexión inmediatamente después de la transmisión, previniendo ataques man-in-the-middle (MITM).
+
+### Prevención de la falsificación de credenciales móviles
+
+Cada credencial móvil Suprema Pass está protegida por una firma digital basada en PKI, única para cada sitio de BioStar Air. Un proceso de verificación propietario detecta cualquier intento de modificación o falsificación.
+
+## Gestión de vulnerabilidades
+
+El equipo de seguridad de la información de Suprema lidera la gestión de vulnerabilidades con el apoyo de expertos externos en seguridad.
+
+* Escaneos automatizados y continuos en busca de amenazas
+
+* Auditoría anual de recertificación ISO 27001 con revisión integral del sistema
+
+* Pruebas de penetración y evaluación de riesgos antes de lanzamientos importantes
+
+* Comprobaciones de la higiene de contraseñas, la resistencia frente a la ingeniería social y el cumplimiento de procedimientos
+
+* Documentación e informes exhaustivos de todas las vulnerabilidades y de las acciones de remediación
+
+## Enfoque de evaluación de riesgos
+
+Los activos se clasifican según su confidencialidad, integridad y disponibilidad. Se identifican las amenazas, se evalúan las vulnerabilidades y se valoran los riesgos en función de su probabilidad e impacto. Las acciones de mitigación se priorizan según la gravedad del riesgo.
+
+## Autenticación multifactor (MFA)
+
+La autenticación multifactor (MFA) se está implementando por fases.
+
+* Autenticación de dos factores por correo electrónico para cuentas de administrador
+
+* Autenticación de dos factores basada en código para la aplicación BioStar Air
+
+* Bloqueo automático de cuentas de administrador inactivas tras 90 días
+
+* Expiración configurable de contraseñas (30, 60 o 90 días)
+
+## Políticas clave de seguridad
+
+* Cifrado de datos en tránsito: TLS 1.2
+
+* Cifrado de datos en reposo: AES-256
+
+* Protección contra DoS: limitación de solicitudes mediante AWS API Gateway
+
+* Disponibilidad del servicio: 99.9% de tiempo de actividad ([según el SLA](https://supremainc.com/en/util/biostar-air-service-level-agreement.html))
+
+* Seguridad de la API: autenticación basada en tokens, solo HTTPS y validación estricta de endpoints
+
+* Acceso al portal: basado en la nube para la gestión global; se está desarrollando una opción de nube privada

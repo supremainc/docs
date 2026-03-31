@@ -5,11 +5,21 @@
       "hid": "power",
       "contents": [
         {
-          "product": [ "biostation_3", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "facestation_2", "xstation_2", "biostation_3_max" ],
+          "product": [ "biostation_3", "biostation_2a", "facestation_f2", "biolite_n2", "facestation_2", "xstation_2", "biostation_3_max" ],
           "question": "전원이 공급되고 있으나 작동하지 않습니다.",
           "answer": [
             "단말기와 브래킷이 떨어져 있으면 탬퍼 스위치에 의해 작동하지 않을 수도 있습니다.",
             "어댑터 또는 전원 연결 케이블을 확인하세요."
+          ]
+        },
+        {
+          "product": [ "vionyx" ],
+          "question": "영상이 촬영되지 않거나 화면이 나타나지 않습니다.",
+          "answer": [
+            "전원 어댑터를 사용하는 경우, 어댑터의 출력이 카메라의 최대 소모 전력 이상인지 확인하세요.",
+            "전원 어댑터와 PoE+ 전원이 동시에 연결되어 있지 않은지 확인하세요. 두 가지 전원을 동시에 연결하면 오작동의 원인이 됩니다.",
+            "이더넷 케이블로 전원을 공급받는 경우, 표준 PoE가 아닌 반드시 PoE+ 또는 PoE++ 규격으로 연결되었는지 확인하세요.",
+            "네트워크 케이블 연결 상태와 이더넷 방수 고무 체결 여부도 함께 확인하세요."
           ]
         }
       ]
@@ -21,7 +31,7 @@
       "hid": "pin",
       "contents": [
         {
-          "product": [ "biostation_3", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "facestation_2", "xstation_2", "biostation_3_max" ],
+          "product": [ "biostation_3", "biostation_2a", "facestation_f2", "biolite_n2", "facestation_2", "xstation_2", "biostation_3_max" ],
           "question": "PIN을 분실했습니다.",
           "answer": [
             "일반 사용자의 PIN은 관리자에게 요청한 뒤 다시 입력하세요.",
@@ -29,7 +39,7 @@
           ]
         },
         {
-          "product": [ "biostation_3", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "facestation_2", "xstation_2", "biostation_3_max" ],
+          "product": [ "biostation_3", "biostation_2a", "facestation_f2", "biolite_n2", "facestation_2", "xstation_2", "biostation_3_max" ],
           "question": "PIN을 입력한 뒤 <span class='cmd'>OK</span> 버튼을 눌러도 잠긴 문을 열 수 없습니다.",
           "answer": [
             "등록한 PIN을 정상적으로 입력하였는지 확인하세요.",
@@ -119,7 +129,7 @@
       "hid": "fingerprint",
       "contents": [
         {
-          "product": [ "bioentry_n2", "biostation_2a", "biolite_n2", "xstation_2", "facestation_f2", "biostation_3_max" ],
+          "product": [ "biostation_2a", "biolite_n2", "xstation_2", "facestation_f2", "biostation_3_max" ],
           "question": "등록은 되었으나 지문 인식이 잘 되지 않고 오류가 많이 납니다.",
           "answer": [
             "<a href='getting-started#cautions-enrolling-fingers'>올바른 지문 입력 방법</a>을 확인한 뒤 지문을 다시 등록하세요.",
@@ -129,7 +139,7 @@
           ]
         },
         {
-          "product": [ "bioentry_n2", "biostation_2a", "biolite_n2", "xstation_2", "facestation_f2", "biostation_3_max" ],
+          "product": [ "biostation_2a", "biolite_n2", "xstation_2", "facestation_f2", "biostation_3_max" ],
           "question": "갑자기 지문 인식이 되지 않습니다.",
           "answer": [
             "손가락이나 지문 센서에 땀, 물기, 먼지 등이 묻어 있는지 확인한 뒤 깨끗이 닦아 주세요.",
@@ -138,7 +148,7 @@
           ]
         },
         {
-          "product": [ "bioentry_n2", "biostation_2a", "biolite_n2", "xstation_2", "facestation_f2", "biostation_3_max" ],
+          "product": [ "biostation_2a", "biolite_n2", "xstation_2", "facestation_f2", "biostation_3_max" ],
           "question": "지문 센서가 켜지지 않습니다.",
           "answer": [
             "<span class='cmd'>센서 모드</span>가 <span class='cmd'>자동 켜짐</span>으로 설정되어 있을 경우 지문 센서에 손가락을 댈 경우에만 센서가 켜집니다. 항상 지문 센서가 켜져 있길 원한다면 <span class='cmd'>센서 모드</span>를 <span class='cmd'>항상 켜짐</span>으로 설정하세요."
@@ -153,7 +163,7 @@
       "hid": "doorlock",
       "contents": [
         {
-          "product": [ "biostation_3", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "facestation_2", "xstation_2", "biostation_3_max" ],
+          "product": [ "biostation_3", "biostation_2a", "facestation_f2", "biolite_n2", "facestation_2", "xstation_2", "biostation_3_max" ],
           "question": "문을 닫아도 잠금 장치는 잠기지 않습니다.",
           "answer": [
             "전기 잠금 장치의 이상일 수 있습니다. 설치 업체를 통해 점검을 받으세요."
@@ -168,7 +178,7 @@
       "hid": "time",
       "contents": [
         {
-          "product": [ "biostation_3", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "facestation_2", "xstation_2", "biostation_3_max" ],
+          "product": [ "biostation_3", "biostation_2a", "facestation_f2", "biolite_n2", "facestation_2", "xstation_2", "biostation_3_max" ],
           "question": "갑자기 시간이 맞지 않습니다.",
           "answer": [
             "장치에는 내장 배터리가 있으나, 오랫동안 전원이 공급되지 않으면 내장 배터리가 방전되어 시간이 달라질 수 있습니다. <a href='settings#date-time'>날짜와 시간</a> 메뉴를 참고하여 시간을 수정할 수 있습니다."
@@ -183,7 +193,7 @@
       "hid": "admin",
       "contents": [
         {
-          "product": [ "biostation_3", "biostation_2a", "facestation_f2", "bioentry_n2", "biolite_n2", "facestation_2", "xstation_2", "biostation_3_max" ],
+          "product": [ "biostation_3", "biostation_2a", "facestation_f2", "biolite_n2", "facestation_2", "xstation_2", "biostation_3_max" ],
           "question": "관리자 PIN을 분실하여 관리자 모드에 진입할 수 없습니다.",
           "answer": [
             "장치는 관리자가 출입 허용 권한을 부여하기 때문에 관리자만 메뉴에 진입할 수 있습니다.",
@@ -203,6 +213,115 @@
           "question": "기존 장치에서 펌웨어 업그레이드 후 마스터 관리자 설정이 보이지 않습니다.",
           "answer": [
             "기존 장치에서 펌웨어 업그레이드한 장치는 마스터 관리자 설정이 제공되지 않습니다. <span class='cmd'>관리자 2단계 인증</span> 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다. 자세한 내용은 <a href='settings#admin-2-step-authentication'>관리자 2단계 인증</a> 옵션을 참조하세요."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "category": {
+      "title": "설치 및 사용",
+      "hid": "vionyx",
+      "contents": [
+        {
+          "product": [ "vionyx" ],
+          "question": "카메라 설치 후 화면이 기울어져 보입니다.",
+          "answer": [
+            "벽면에 설치한 경우, 마운트 플레이트의 빨간색 삼각형이 12시 방향(북쪽)을 향하도록 설치되었는지 확인하세요.",
+            "카메라 본체를 좌우로 회전하여 설치 각도를 보정할 수 있습니다. 최대 조정 범위는 좌우 각 8도(총 15도)입니다. 범위를 초과하는 각도 조정이 필요한 경우, 마운트 플레이트 타공 위치를 변경하여 재설치하세요."
+          ]
+        },
+        {
+          "product": [ "vionyx" ],
+          "question": "Windows 10 사용자가 Chrome, Firefox에서 웹서버에 접속했을 때 마이크 볼륨이 주기적으로 변동됩니다.",
+          "answer": [
+            "마이크 드라이버가 Realtek 드라이버로 설정된 경우에 나타나는 현상입니다. 마이크 드라이버를 High Definition Audio 장치(Windows Default 드라이버) 또는 타사의 드라이버로 변경 설치하세요."
+          ]
+        },
+        {
+          "product": [ "vionyx" ],
+          "question": "이벤트 시 오디오 재생에 필요한 WAVE 파일 사양이 어떻게 되나요?",
+          "answer": [
+          "샘플링 레이트(sampling rate)는 48000 KHz 이하로 사용할 것을 권장합니다.",
+          "샘플 당 비트(bits per sample, bps)는 8/16 bit까지 권장합니다.",
+          "PCM으로 인코딩된 형식만 지원합니다."
+          ]
+        },
+        {
+          "product": [ "vionyx" ],
+          "question": "영상이 겹쳐져 보여요.",
+          "answer": [
+          "두 대 이상의 카메라가 동일한 멀티캐스트 주소를 사용하지 않고 서로 다른 주소로 설정되어 있는지 확인하시기 바랍니다. 동일한 주소를 사용하면 영상이 겹쳐서 보일 수 있습니다."
+          ]
+        },
+        {
+          "product": [ "vionyx" ],
+          "question": "영상이 보이지 않아요.",
+          "answer": [
+          "영상 전송방식이 멀티캐스트로 설정되어 있는 경우, 카메라가 접속한 로컬망에 멀티캐스트를 지원하는 라우터가 존재하는지 확인하세요."
+          ]
+        },
+        {
+          "product": [ "vionyx" ],
+          "question": "영상 분석 이벤트가 발생했는데 알람이 발생하지 않아요.",
+          "answer": [
+          "알람 출력 포트를 올바로 설정했는지 확인하세요."
+          ]
+        },
+                {
+          "product": [ "vionyx" ],
+          "question": "브라우저에서 카메라에 접속할 수 없습니다.",
+          "answer": [
+          "카메라의 네트워크 설정값들이 올바르게 되어 있는지 확인하세요.",
+          "네트워크 케이블은 연결이 올바르게 되어 있는지 확인하세요.",
+          "DHCP로 연결하는 경우 카메라가 정상적으로 유동 IP를 획득했는지 확인하세요.",
+          "카메라가 공유기에 설치되어 있는 경우, 포트 포워딩 설정이 올바르게 되어 있는지 확인하세요."
+          ]
+        },
+        {
+          "product": [ "vionyx" ],
+          "question": "영상을 모니터링 하고 있던 웹서버의 접속이 끊어졌어요.",
+          "answer": [
+          "다른 접속자가 카메라 설정값을 변경하거나, 네트워크 설정을 바꾸거나 하게 되면 접속되어 있던 웹서버는 접속이 끊어집니다.",
+          "네트워크 연결이 잘 되어있는지 확인하세요."
+          ]
+        },
+        {
+          "product": [ "vionyx" ],
+          "question": "ViOnyx 웹서버에서 네트워크에 연결된 카메라가 검색되지 않아요.",
+          "answer": [
+          "방화벽이나 네트워크 보안 설정으로 인해 장치 통신이 차단되었을 수 있습니다. 장치 검색 및 통신을 위한 포트(TCP, UDP) 사용이 네트워크 환경에서 허용되어 있는지 확인하세요."
+          ]
+        },
+        {
+          "product": [ "vionyx" ],
+          "question": "Micro SD 카드에 녹화가 되지 않아요.",
+          "answer": [
+          "Micro SD 카드가 불량인지 확인하세요.",
+          "Micro SD 카드 교체 시 반드시 제품과 전원을 분리한 상태에서 교체하세요."
+          ]
+        },
+        {
+          "product": [ "vionyx" ],
+          "question": "Micro SD 카드를 삽입했지만 인식되지 않습니다.",
+          "answer": [
+          "Micro SD 카드가 올바른 방향으로 정확히 삽입되어 있는지 확인하세요. 다른 기기에서 포맷한 Micro SD 카드는 본 카메라에서의 사용을 보증할 수 없습니다.",
+          "카드의 용량(권장 16GB~1TB)과 제조사(Samsung, SanDisk, Transcend)가 권장 사양에 부합하는지 확인하세요. High Endurance 또는 Pro Endurance 등 지속적인 쓰기 작업에 적합한 제품군의 사용을 권장합니다. 다른 제조사 또는 제품군의 카드는 호환성에 차이가 있을 수 있습니다."
+          ]
+        },
+        {
+          "product": [ "vionyx" ],
+          "question": "카메라 내부에 습기나 물기가 맺힙니다.",
+          "answer": [
+          "커버 결합 후 3개의 고정 나사가 완전히 조여졌는지 확인하세요. 나사를 완전히 조이지 않으면 방수/방진(IP66/IP67) 성능에 문제가 발생할 수 있습니다.",
+          "이더넷 케이블 및 기타 연결 케이블 배선 시, 제공된 이더넷 케이블용 방수 고무, 조인트, 너트 등이 빈틈없이 올바르게 체결되었는지 확인하세요. 사용하지 않는 홀에는 방수 고무 홀 플러그가 끝까지 삽입되어 있어야 합니다."
+          ]
+        },
+        {
+          "product": [ "vionyx" ],
+          "question": "AI 얼굴 및 객체 인식 성능이 눈에 띄게 떨어집니다.",
+          "answer": [
+          "렌즈에 직사광선이 직접 닿거나 역광이 심한 곳에 설치되어 있는지 확인하세요. 빛 번짐이나 역광은 AI 인식률 저하의 주된 원인이 됩니다."
           ]
         }
       ]

@@ -1,0 +1,101 @@
+---
+id: api-authentication
+title: API認証
+description: BioStar Air Cloud APIの認証フロー、APIベースURLの一覧、Bearerトークンの発行方法、およびウェブブラウザでBearerトークンを取得する方法について説明します。
+keywords:
+  - API認証
+  - Bearerトークン
+  - APIベースURL
+  - BioStar Air
+---
+
+BioStar Air Cloud APIはBearerトークン（JWT）ベースの認証を使用します。 APIを呼び出す前にログインしてトークンを取得し、すべてのリクエストのAuthorizationヘッダーにトークンを含める必要があります。
+
+## APIベースURL {#api-base-urls}
+
+| 環境 | Base URL |
+| --- | --- |
+| Demo | https://demo-afs-api.airfob.com/v1/ |
+| Production - Europe | https://e-afs-api.airfob.com/v1/ |
+| Production - Korea | https://a-afs-api.airfob.com/v1/（EU以外のすべての顧客向け） |
+
+## APIログイン手順 {#api-login-flow}
+
+[Postman](https://www.postman.com/) またはプログラムからAPI呼び出しを行うことができる。
+
+### ログイン {#login}
+
+* **Endpoint**：`login`
+
+* **Payload**：
+
+  ```json
+  {
+    "username": "your_email",
+    "password": "your_password"
+  }
+  ```
+
+Bearerトークン（JWT）を返す。
+
+### アカウント情報の取得 {#get-self-accounts}
+
+* **Endpoint**：`getSelfAccounts`
+
+* **Authorization**：Bearer Token
+
+アクセス可能なサイトおよびアカウントの一覧を返す。
+
+### アカウントにログイン {#login-to-account}
+
+* **Endpoint**：`loginAccount`
+
+* **Authorization**：Bearer Token
+
+特定サイトのトークンを返す。
+
+## ウェブブラウザでBearerトークンを取得する方法 {#getYourBearerToken}
+
+Postmanを使わずに、ブラウザの開発者ツールで直接Bearerトークンを取得できます。
+
+### Chrome/Edge（WindowsまたはMac）{#chrome-edge}
+
+1. ウェブブラウザで<Kbd>F12</Kbd>または<Kbd>Ctrl/Cmd + Shift + I</Kbd>を押す。
+
+2. **Network** タブに移動する。
+
+3. ページをリロードする。
+
+4. API呼び出しを検索する。
+
+   > 例: `groups`, `login`
+
+5. リストからリクエストをクリックする。
+
+6. 「**Headers**」タブに移動する。
+
+7. リクエストヘッダで`Authorization: Bearer ...`を探す。
+
+8. 右クリックしてトークンをコピーしてください。
+
+<Image src='/img/air/bsair-chrome-develope.png' alone />
+
+### Safari（Mac）{#safari}
+
+1. 「開発者」メニューを有効にしてください。 Safari → Preferences → Advanced → **Show Develop menu**をチェックする。
+
+2. **Develop** → **Show Web Inspector** に移動する。
+
+3. **Network** タブに移動する。
+
+4. ページをリロードする。
+
+5. API呼び出しをフィルタリングして検査する。
+
+6. リクエストヘッダから`Authorization: Bearer`トークンをコピーする。
+
+:::info
+
+ブラウザからコピーしたBearerトークンはPostmanで再利用できる。 常に最新のBearerトークンを使用してください。
+
+:::

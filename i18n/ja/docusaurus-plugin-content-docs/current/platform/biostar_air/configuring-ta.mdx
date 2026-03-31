@@ -1,0 +1,119 @@
+---
+id: configuring-ta
+title: 勤怠管理（T&A）の設定
+description: BioStar Airで勤怠管理の設定を構成する方法、モバイル勤怠追跡を有効にする方法、デバイスに勤怠管理を割り当てる方法、勤怠記録をエクスポートする方法を説明します。
+keywords:
+  - T&A
+  - 勤怠
+  - BioStar Air
+---
+
+BioStar Airは交代勤務と休憩時間を記録し、基本的な**勤怠管理**(T&A)の追跡機能を提供します。外部勤怠管理システムと連携したりエクスポートしたりできます。 BioStar Airは完全な勤怠管理システムを提供するわけではありませんが、イベントログの記録や給与・勤怠管理システムとのAPI連携をサポートします。 また基本的な**勤務時間**レポートを生成できます。
+
+:::tip
+
+勤怠管理の設定に関する動画ガイドを視聴するには、次のビデオを参照してください。
+
+<YouTube className='fit--content' videoId="Que_LV25W04" />
+
+:::
+
+## 勤怠イベント {#tna_events}
+
+ユーザーは以下の勤怠イベントを記録できます。 勤怠イベントはイベントログに記録され、CSVファイルとしてエクスポートしたりAPIを介して取得したりできます。
+
+* **シフト開始**
+
+* **シフト終了**
+
+* **休憩開始**
+
+* **休憩終了**
+
+## 勤怠管理の設定 {#settingTna}
+
+勤怠管理の設定を有効にし、詳細設定を構成するには次の手順に従ってください。
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> をクリックします。
+
+2. 画面上部の <Cmd sid='site_setting_tab_setting' product='air' /> タブをクリックします。
+
+   <Image src='/img/air/bsair-settings-site-tab-settings.png' />
+
+3. <Cmd sid='site_profile_input8' product='air' /> 機能を有効にします。
+
+4. 確認ダイアログが表示されたら、<Cmd sid='site_settings_confirm_btn' product='air' />をクリックしてください。
+
+5. <Cmd sid='site_profile_input8' product='air' /> 機能で <Cmd sid='tna_setting' product='air' /> ボタンをクリックします。
+
+   <Image src='/img/air/bsair-settings-site-tab-settings-enable-tna.png' />
+
+6. <Cmd sid='site_profile_input8' product='air' /> ウィンドウが表示されたら、<Cmd sid='device_edit_table_head1' product='air' /> のラベルを設定します。
+
+   > 例：シフト開始、シフト終了、休憩開始、休憩終了
+
+   <Image src='/img/air/bsair-settings-site-tab-settings-tna-mng.png' />
+
+7. <Cmd sid='device_edit_table_head1' product='air' /> に対するイベント種別が **Clock-In** または **Clock-Out** かを選択します。
+
+8. 設定を保存するには、<Cmd sid='save_btn' product='air' /> をクリックします。
+
+## デバイスで勤怠機能を設定する {#configuringTnaDevices}
+
+<Cmd sid='site_profile_input8' product='air' /> 機能を有効にすると、これを使用するデバイスを指定できます。
+
+1. 画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。 
+
+2. デバイス一覧から勤怠管理機能を設定するデバイスをクリックします。
+
+3. <Cmd sid='device_edit_title' product='air' /> ウィンドウが表示されたら、<Cmd sid='new_device_edit_tna_title' product='air' /> セクションに移動します。
+
+   <Image src='/img/air/bsair-device-mng-device-set-tna.png' caption />
+
+4. <Cmd sid='new_device_edit_tna_toogle' product='air' /> オプションのトグルボタンをクリックして勤怠管理機能を有効にします。
+
+5. 設定を保存するには、<Cmd sid='save_btn' product='air' /> をクリックします。
+
+:::note
+
+* <Cmd sid='device_edit_tna_mode_label' product='air' />を<Cmd sid='device_edit_tna_mode_option6' product='air' />に設定すると、入退室認証時に勤怠の選択を必須にできる<Cmd sid='device_edit_tna_mobile_required_label' product='air' />オプションを利用できます。
+
+* 勤怠イベントのラベルは**サイト**レベルで管理され、デバイスごとに変更できません。
+
+:::
+
+### <Cmd sid='device_edit_tna_mode_label' product='air' className='normal' /> {#device_edit_tna_title}
+
+デバイスはさまざまな方法で勤怠イベントを記録できます。 <Cmd sid='device_edit_tna_mode_label' product='air' />で希望する勤怠管理モードを選択してください。
+
+* <Cmd sid='device_edit_tna_mode_option2' product='air' />：画面に勤怠キーを表示し、認証時にユーザーが勤怠イベントを選択できます。
+
+* <Cmd sid='device_edit_tna_mode_option3' product='air' />：設定されたスケジュールに従って出勤および退勤時間を記録します。 例えば、8:00 AM ～ 12:00 PM の間に記録されたイベントは **Clock-In** として、1:00 PM ～ 5:00 PM の間に記録されたイベントは **Clock-Out** として記録されます。
+
+* <Cmd sid='device_edit_tna_mode_option4' product='air' />：ユーザーが最後に使用した勤怠イベントを継続して使用できます。
+
+* <Cmd sid='device_edit_tna_mode_option5' product='air' />：固定の勤怠コードをデバイスに割り当てます。 そのデバイスで認証されるたびに同じ勤怠イベントが記録されます。 このオプションにより、該当デバイスを出勤用または退勤用に使用できます。
+
+* <Cmd sid='device_edit_tna_mode_option6' product='air' />：ユーザーは認証する前に勤怠コードを選択する必要があります。 選択した勤怠イベントは入退室ログとともに記録されます。
+
+:::info
+
+機種によって対応している勤怠管理モードが異なる場合があります。 詳細は<DocLink docId='platform/biostar_air/device-info-settings' />の機種別勤怠モードを参照してください。
+
+:::
+
+## 勤怠ログの表示およびエクスポート {#viewing-and-exporting-t-and-a-logs}
+
+勤怠イベントはイベントログに記録され、これを確認したりCSVファイルとしてエクスポートしたりできます。
+
+1. 画面左のサイドバーで <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' /> をクリックします。
+
+2. ログテーブルで**T&A**列(column)を探してください。
+
+   <Image src='/img/air/bsair-monitoring-event-log-list.png' />
+
+3. ログテーブル上部の<IcAirColumn title='Customize' />ボタンをクリックし、カスタマイズして**T&A**列が見やすい位置に移動してください。
+
+   <Image src='/img/air/bsair-monitoring-event-log-list-column-set.png' />
+
+4. データをCSVファイルとしてダウンロードするには、<IcAirDown title='Download' />ボタンをクリックし、<Cmd sid='report_download_csv' product='air' />を選択してください。

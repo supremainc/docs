@@ -1,0 +1,167 @@
+---
+id: daylight-saving-time
+title: Horario de Verano (DST)
+description: Aprende a configurar los ajustes de DST automáticos y manuales en BioStar Air, a habilitar el DST en los dispositivos y a gestionar los ajustes de zona horaria en varias ubicaciones.
+keywords:
+  - Horario de Verano (DST)
+  - DST
+  - zona horaria
+---
+
+Utiliza la configuración del Horario de Verano (DST) para definir cómo el sitio ajusta la hora. Esto es especialmente importante para garantizar un registro coherente y preciso de la hora cuando gestionas un sitio con dispositivos y registros en distintas zonas horarias.
+
+Para una gestión precisa del tiempo en BioStar Air, es necesario configurar los **ajustes de DST en tres lugares**:
+
+* **Perfil de DST**: Define la fecha y la hora de inicio y fin del DST para cada zona horaria.
+
+* **Hora del sitio**: Establece la zona horaria aplicada al sitio y a los registros de eventos.
+
+* **Hora del dispositivo**: Configura cada lector individual para que ajuste correctamente su reloj.
+
+Las tres opciones deben configurarse correctamente en los sitios ubicados en zonas horarias que observan el Horario de Verano.
+
+:::tip
+
+Consulta el siguiente video para obtener una guía sobre cómo configurar los ajustes del Horario de Verano (DST).
+
+<YouTube className='fit--content' videoId="e51UOKLECz8" />
+
+:::
+
+:::info
+
+Considera lo siguiente al revisar <Cmd sid="event_logs_submenu" product="air" className="normal" />.
+
+* Si la hora del dispositivo está configurada, las marcas de tiempo de los registros de eventos se ajustan al horario de verano de cada dispositivo.
+
+* Si la hora del sitio está configurada, las marcas de tiempo se ajustan según la configuración de DST del sitio en lugar de la de cada dispositivo.
+
+:::
+
+## Paso 1: Crear perfil de DST {#addingNewdst}
+
+Un perfil de DST define la fecha y la hora en que el DST comienza y termina para una zona horaria específica. Debe crear un perfil de DST para cada zona horaria en la que se encuentren el sitio y los lectores.
+
+### Agregar nuevo perfil
+
+1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="daylight_saving_time_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haz clic en <Cmd sid="btn_add_DST" product="air" /> en la parte superior derecha de la pantalla.
+
+   <Image src='/img/air/bsair-settings-dst.png' />
+
+3. Selecciona el elemento deseado en <Cmd sid="device_editable_fields_timezone" product="air" /> cuando aparezca el panel <Cmd sid="dst_add_modal_title" product="air" />.
+
+4. Selecciona la configuración automática o manual en <Cmd sid='dst_add_modal_subtitle_setting_dst' product='air' />.
+
+   * **Automático**: La configuración de DST para la zona horaria seleccionada se agrega automáticamente. Las fechas de inicio y fin del DST se determinan según las reglas estándar de esa zona horaria.
+
+     <Image src='/img/air/bsair-settings-dst-add-auto.png' />
+
+   * **Manual**: Establece manualmente las horas de inicio y fin correspondientes para la zona horaria.
+
+     <Image src='/img/air/bsair-settings-dst-add-manual.png' />
+
+     * <Cmd sid="date_label" product="air" />: Selecciona las fechas en las que el DST comienza y termina.
+
+     * <Cmd sid="dropdown_label_week" product="air" />: Selecciona las semanas en las que el DST comienza y termina.
+
+5. Haz clic en <Cmd sid='save_btn' product='air' /> en la parte inferior para guardar el perfil DST.
+
+### Editar el perfil DST existente {#editingDstConfiguration}
+
+1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="daylight_saving_time_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haz clic en el perfil DST que quieras editar en la lista. Alternativamente, selecciona la casilla y haz clic en <IcAirEdit title='Edit' /> en la parte superior.
+
+3. Modifica la hora de inicio y de finalización cuando aparezca el panel <Cmd sid="dst_update_modal_title" product="air" />.
+
+   <Image src='/img/air/bsair-settings-dst-edit.png' caption />
+
+4. Haz clic en <Cmd sid="save_btn" product="air" /> en la parte inferior para guardar los cambios.
+
+### Eliminar el perfil DST {#deleteDstProfile}
+
+1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="daylight_saving_time_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haz clic en la casilla del perfil DST que quieras eliminar en la lista. Puedes seleccionar uno o más perfiles.
+
+3. Haz clic en <IcAirRemove title='Delete' /> en la parte superior de la pantalla.
+
+4. Cuando aparezca la ventana de mensajes, haz clic en el botón <Cmd sid='user_group_yes_btn' product='air' />.
+
+## Paso 2: Configuración de la hora del sitio {#setSiteTime}
+
+La hora del sitio determina la zona horaria predeterminada que utiliza todo el sistema. Los siguientes elementos se ven afectados por esta configuración:
+
+* Marcas de tiempo del registro de eventos
+
+* Informes y datos de monitoreo
+
+* Zona horaria predeterminada aplicada al registrar un nuevo dispositivo
+
+Sigue las instrucciones a continuación para configurar la zona horaria del sitio y habilitar el horario de verano.
+
+1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haz clic en la pestaña <Cmd sid='site_setting_tab_setting' product='air' />.
+
+3. Selecciona la zona horaria deseada en <Cmd sid='site_profile_input4' product='air' />.
+
+   <Image src='/img/air/bsair-settings-site-setting-timezone.png' />
+
+4. Habilita <Cmd sid='device_field_dst_usage' product='air' /> para aplicar el horario de verano a la zona horaria seleccionada.
+
+:::caution
+
+Si la opción <Cmd sid='device_field_dst_usage' product='air' /> no está habilitada en una zona horaria donde aplica el horario de verano, el sistema no ajustará la hora automáticamente y los registros de eventos pueden mostrarse de forma incorrecta.
+
+:::
+
+## Paso 3: Habilitar el horario de verano para los dispositivos {#enablingDstForDevices}
+
+Cada dispositivo conectado a BioStar Air mantiene su propio reloj, que se usa para el control de acceso y los registros de asistencia. Configura los ajustes de horario de verano para cualquier dispositivo ubicado en una zona horaria donde aplique el horario de verano.
+
+Los dispositivos con pantalla, como BioStation 3, muestran la hora. Los dispositivos sin pantalla, como XPass 2, mantienen sus relojes internos para el control de acceso y los registros de tiempo y asistencia.
+
+Configura el horario de verano en todos los dispositivos, tengan o no pantalla, para garantizar que los registros de eventos, los registros de acceso y los datos de asistencia se registren correctamente.
+
+1. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haz clic en el dispositivo al que quieras aplicar los ajustes de horario de verano en la lista.
+
+3. Selecciona la zona horaria deseada en la sección <Cmd sid="device_editable_fields_timezone" product="air" /> y activa la opción <Cmd sid="device_field_dst_usage" product="air" />.
+
+   <Image src='/img/air/bsair-device-mng-edit-timezone.png' />
+
+   :::note
+
+   Esta opción está habilitada de forma predeterminada en las zonas horarias donde se aplica el horario de verano.
+
+   :::
+
+4. Haz clic en <Cmd sid="save_btn" product="air" /> en la parte inferior para guardar los cambios.
+
+:::info
+
+Si la hora del dispositivo no está configurada correctamente, pueden ocurrir los siguientes problemas:
+
+* **Error de acceso denegado**: La hora de acceso está configurada para comenzar a las 07:00 AM, pero si el dispositivo cree que son las 06:00 AM, se denegará el acceso al usuario.
+
+* **Error de programación**: El bloqueo/desbloqueo a la hora programada puede no ser preciso.
+
+* **Error en los registros**: Las horas en el registro de eventos y en los registros de tiempo y asistencia no coinciden con la hora real.
+
+:::
+
+## Lista de verificación {#checklist}
+
+Para garantizar la precisión del horario en las regiones que observan el horario de verano (DST), asegúrate de haber completado las tres acciones siguientes.
+
+* **Crear perfiles de DST**: ¿Has creado los perfiles de DST necesarios para cada zona horaria?
+
+* **Configuración horaria del sitio**: ¿Has establecido la zona horaria del sitio y activado la opción <Cmd sid='device_field_dst_usage' product='air' />?
+
+* **Ajustes de DST del dispositivo**: ¿Has configurado la zona horaria de cada dispositivo y activado la opción <Cmd sid='device_field_dst_usage' product='air' />?
+
+Si las tres están configuradas correctamente, los registros de eventos, los horarios de acceso y los registros de asistencia mostrarán la hora correcta.

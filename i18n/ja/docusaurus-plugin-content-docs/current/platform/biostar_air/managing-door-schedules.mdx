@@ -1,0 +1,147 @@
+---
+id: managing-door-schedules
+title: 出入口スケジュールの管理
+description: 時間帯ごとに出入口の自動施錠を設定し、解錠時刻を指定したり、認証に基づく入退室制御のオプションを管理したりできます。 スケジュールによって、入退室の安全性と管理性を確保します。
+keywords:
+  - 出入口スケジュール
+  - BioStar Air
+---
+
+出入口のスケジュールを設定すると、時間帯ごとに自動で施錠・解錠できます。 施錠および解錠の時刻を設定し、**初回認証後に解錠**などの高度なオプションを利用して、安全で管理された入退室を実現します。
+
+:::info
+
+* スケジュールは、インターネットに接続されている出入口および機器にのみ適用できます。
+
+* 休日グループは別途構成されていない限り、解錠スケジュールを無視します。
+
+* 緊急時に備えて、制限のない入退室権限を持つ管理者を少なくとも1人以上配置する必要があります。
+
+:::
+
+## スケジュールが必要な場合
+
+**ドアのスケジュールは必須ではありません**。 ほとんどの施設では基本的なアクセス制御だけで十分です。 認証済みのユーザーが資格情報を提示すると自動的にドアが開くため、追加のスケジュール設定がなくても正常に動作します。
+
+次のような場合にスケジュールを設定してください。
+
+* 特定の時間帯に誰でも自由に出入りできるようにしたい場合
+
+* 特定の時間にすべてのユーザーの出入りを禁止したい場合
+
+* 時間帯ごとにアクセス方針を変えて適用したい場合
+
+<Cmd sid='unlock_schedule' product='air' className='bold' />と <Cmd sid='lock_schedule' product='air' className='bold' />の混同を避けるため、それぞれの動作と使用タイミングを明確に理解してください。
+
+### <Cmd sid='unlock_schedule' product='air' className='bold' /> と <Cmd sid='lock_schedule' product='air' className='bold' />
+
+<div className='table-fixed'>
+
+| 区分 | 開錠スケジュール | 施錠スケジュール |
+| --- | --- | --- |
+| **スケジュール適用中の状態** | 常時開錠 | 常時施錠 |
+| **認証の要否** | 不要、誰でも自由に出入り可能 | 資格情報認証では開錠できない |
+| **手動開錠** | 可能 | サイト管理者のみ可能 |
+| **リレー動作** | 作動し続ける | 作動しない |
+
+</div>
+
+:::info
+
+サイト管理者は、BioStar Air 管理ポータルまたはモバイルアプリで指定された管理者を指します。
+
+:::
+
+## 開錠スケジュール
+
+スケジュールの時間帯中はドアが常に開いており、リレーは作動し続けます。 認証は不要なので、誰でも自由に出入りできます。
+
+### 利用例
+
+* 共用スペースのメイン入口
+
+* 住宅団地内の共用施設
+
+* 勤務時間中のオフィスロビーの入口
+
+### 開錠スケジュールの設定 {#configuringUnlockSchedules}
+
+次の手順に従って解錠スケジュールを構成します。
+
+1. 画面左のサイドバーで <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' /> をクリックしてください。
+
+2. 出入口一覧で、解錠スケジュールを設定するドアのチェックボックスをクリックしてください。
+
+3. 出入口一覧の上部にある <IcAirSchedule title='Schedule Settings' /> ボタンをクリックしてください。
+
+4. <Cmd sid='lock_unlock_title' product='air' /> ウィンドウが表示されたら、<Cmd sid='unlock' product='air' /> タブで事前定義されたスケジュールを選択するか、新しいスケジュールを作成します。
+
+   <Image src='/img/air/bsair-door-mng-schedule-setting-unlock.png' />
+
+5. 解錠スケジュールを適用するには、<Cmd sid='btn_ok' product='air' /> ボタンをクリックします。
+
+:::info
+
+* <Cmd sid='unlock_after_first_auth' product='air' /> オプションを有効にすると、ユーザーが初回に認証した後、選択したスケジュールに従ってドアの解錠状態を維持できます。 このオプションは、次のようなケースで有効です。
+
+  * 従業員が到着してから顧客の入店を許可する小売店
+
+  * 最初の従業員が建物を開錠すれば、その後は他の従業員が自由に出入りできるオフィス
+
+  * 担当者が開錠すれば会員が自由に利用できる会員制施設
+
+* スケジュール登録の詳細は <DocLink inner='#registeringNewSchedules' /> を参照してください。
+
+:::
+
+## 施錠スケジュール
+
+スケジュール時間中はドアが常に施錠され、リレーは作動しません。 有効なクレデンシャルを提示しても認証で解錠できず、サイト管理者のみが手動で解錠できます。
+
+### 利用例
+
+* 特定の時間以降厳格に閉鎖しなければならない区域
+
+* プールやジム、その他出入り制限のある施設
+
+### 施錠スケジュールの構成 {#configuring-lock-schedules}
+
+次の手順に従って施錠スケジュールを構成します。
+
+1. 画面左のサイドバーで <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' /> をクリックしてください。
+
+2. 出入口一覧で、施錠スケジュールを設定するドアのチェックボックスをクリックしてください。
+
+3. 出入口一覧の上部にある <IcAirSchedule title='Schedule Settings' /> ボタンをクリックしてください。
+
+4. <Cmd sid='lock_unlock_title' product='air' /> ウィンドウが表示されたら、<Cmd sid='lock' product='air' /> タブで事前定義されたスケジュールを選択するか、新しいスケジュールを作成します。
+
+   <Image src='/img/air/bsair-door-mng-schedule-setting-lock.png' />
+
+5. 施錠スケジュールを適用するには、<Cmd sid='btn_ok' product='air' /> ボタンをクリックします。
+
+:::info
+
+* 施錠スケジュールは標準のアクセス権を無視するため、ユーザーは施錠時間中にドアを解錠状態に変更することはできません。
+
+* 新しいスケジュールの登録に関する詳細は <DocLink inner='#registeringNewSchedules' /> を参照してください。
+
+:::
+
+## 新しいスケジュールの登録 {#registeringNewSchedules}
+
+以下の手順に従って新しいスケジュールを登録します。
+
+1. <Cmd sid='lock_unlock_title' product='air' /> ウィンドウで、<Cmd sid='lock_unlock_create_schedules' product='air' /> ボタンをクリックします。
+
+   <Image src='/img/air/bsair-door-mng-schedule-setting-add-schedule.png' />
+
+2. スケジュール追加画面に移動したら、<Cmd sid='schedule_name' product='air' /> と <Cmd sid='schedule_description' product='air' />(任意)を入力します。
+
+   <Image src='/img/air/bsair-door-mng-schedule-add.png' />
+
+3. <Cmd sid='schedule_section_title_time_intervals' product='air' /> セクションで、認証なしでドアが開いている必要がある曜日と時間を選択し、<Cmd sid='add_btn' product='air' /> ボタンをクリックします。
+
+4. スケジュールを登録するには、<Cmd sid='save_btn' product='air' /> ボタンをクリックします。
+
+スケジュールを新規登録した後、<Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' /> に戻って、出入口のスケジュールを設定してください。

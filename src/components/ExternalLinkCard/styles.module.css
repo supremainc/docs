@@ -45,9 +45,21 @@
   padding: .8rem;
 }
 
+.externalLiinkDesc .storeLink {
+  display: inline-block;
+  height: 35px;
+  margin-right: 5px;
+}
+
+.externalLiinkDesc .storeLink svg {
+  height: 35px;
+  width: 105px;
+}
+
 .externalLinkTitle {
   font-family: 'Montserrat', sans-serif !important;
   font-size: 1.2rem;
+  margin-top: 0;
   margin-bottom: .3rem;
   letter-spacing: -0.097rem;
 }
@@ -61,6 +73,10 @@
   flex-wrap: wrap;
   align-content: center;
 
+}
+
+.circle img {
+  margin: 0 auto;
 }
 
 .externalLinkDesc {

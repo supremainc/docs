@@ -1,79 +1,132 @@
 ---
 id: user-management-user-list
 title: Manage Users
-description: Provides information on the additional features available in the user list.
+description: Efficiently manage users registered in BioStar Air. You can manage all users within your organization through functions such as viewing user lists, filtering, editing details, assigning groups and access levels, issuing credentials, performing batch operations, and generating reports.
 keywords:
   - BioStar Air
   - User Management
   - User list
+  - Credentials
+  - access level
+  - User group
+  - Report
 ---
 
-import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
+The user list is an essential management tool for administrators responsible for access control in an organization. You can perform all user management tasks, including organizational management through user grouping, immediate response to new or departing employees with real-time activation/suspension, integrated management of various credentials, enhanced security through validity period monitoring, and preparation for reporting and auditing through filtering and report generation.
 
-<CustomerNote />
-
-## User list
+## View the user list
 
 The user list shows all users registered in BioStar Air at a glance. View each user's details and use the filter and sort features to quickly find specific users. Edit, delete, and assign groups to users directly from the user list.
 
-<Image src='/img/air/bsair-user-list-overview.png' />
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
 
 Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar. 
 
-### User Information
+<Image src='/img/air/bsair-user-list-overview.png' />
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/air/bsair-app-mng-user.png' className='none' />
+
+</Column>
+<Column className='padding--l40'>
+
+Use the user management feature in the BioStar Air app.
+
+1. Run **BioStar Air** on your mobile device.
+
+2. Tap <Cmd sid='site_setting_tab_management' product='air' /> in the bottom navigation bar.
+
+3. Tap <Cmd sid="user_submenu" product="air" />.
+
+A list of users appears. Add new users or edit existing user details.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+### User information
 
 The table in the user list provides the following information.
 
-* <Cmd sid="user_table_column8" product="air" />: Indicates whether the user is a regular or temporary user. For more information on regular and temporary users, refer to [the following](user-card-types).
+* <Cmd sid="user_table_column8" product="air" />: Indicates whether the user is a regular or temporary user. For more information on regular and temporary users, refer to <DocLink docId='platform/biostar_air/user-card-types' />.
 
 * <Cmd sid="user_table_column1" product="air" />: The user's name.
 
 * <Cmd sid="user_info_id" product="air" />: The user's unique ID.
 
-* <Cmd sid="user_table_column2" product="air" />: Shows the credentials issued to the user. For more information on credential types, refer to [the following](user-card-types).
+* <Cmd sid="user_table_column2" product="air" />: Shows the credentials issued to the user. For more information on the types of credentials, refer to <DocLink docId='platform/biostar_air/user-card-types' />.
 
 * <Cmd sid="user_table_column3" product="air" />: The validity period of the credentials issued to the user.
 
 * <Cmd sid="user_table_column4" product="air" />: Indicates whether the user is active or inactive.
 
-* <Cmd sid="user_table_column5" product="air" />: The group to which the user belongs. For more information on user groups, refer to [the following](managing-user-groups).
+* <Cmd sid="user_table_column5" product="air" />: The group to which the user belongs. For more information on user groups, refer to <DocLink docId='platform/biostar_air/managing-user-groups' />.
 
-* <Cmd sid="user_table_column6" product="air" />: The access level assigned to the user. For more information on access levels, refer to [the following](manage-access-level).
+* <Cmd sid="user_table_column6" product="air" />: The access level assigned to the user. For more information on access levels, refer to <DocLink docId='platform/biostar_air/manage-access-level' />.
 
-* <Cmd sid="user_table_column7" product="air" />: The user's permissions for floors they can access. For more information on floor levels, refer to [the following](manage-floor-level).
+* <Cmd sid="user_table_column7" product="air" />: The user's permissions for floors they can access. For more information on floor levels, refer to <DocLink docId='platform/biostar_air/manage-floor-level' />.
 
 ### Filter {#userFiltering}
 
-Use the filter feature in the top header of the user list. Click <IcAirFilter /> in the header to set the desired conditions.
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+Use the filter feature in the top header of the user list. Click <IcAirFilter title='Filter' /> in the header to set the desired conditions.
 
 <Image src='/img/air/bsair-user-list-user-filtering.png' />
 
 :::info
 
-Click <IcAirFilterReset /> at the top of the user list to reset the applied filter conditions.
+Click <IcAirFilterReset title='Clear Filters' /> at the top of the user list to reset the applied filter conditions.
 
 :::
 
-### Additional features
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+In the mobile app, you can filter and view users in the user list by the desired criteria. Tap <Cmd sid='logs_filters_action_btn' product='air' /> at the top right of the user list. Users can be filtered by the following criteria.
+
+<Image src='/img/air/bsair-app-mng-user-filter.png' className='none' width='60%' />
+
+* <Cmd sid='user_table_column8' product='air' />: Filters by user type (regular or temporary).
+
+* <Cmd sid='user_table_column2' product='air' />: Filters by credential type.
+
+* <Cmd sid='user_table_column4' product='air' />: Filters by activation status.
+
+* <Cmd sid='user_table_column5' product='air' />: Filters by user group.
+
+</TabItem>
+</Tabs>
+
+### Additional features {#additionalFunctions}
 
 The features available at the top of the user list are as follows.
 
-* <IcAirGroup width="24px" height="24px" />: Assign, remove, or move the selected users to a group. For more information on user group management, refer to [the following](managing-user-groups).
+* <IcAirGroup width='24px' height='24px' title='Manage Groups' />: Assign, remove, or move the selected users to a group. For more information, refer to <DocLink inner='#manageUserGroups' />.
 
-* <IcAirLock width="24px" height="24px" />: Change the access level of the selected users. For more information on managing access levels, refer to [the following](manage-access-level).
+* <IcAirLock width='24px' height='24px' title='Set Access' />: Change the access level of the selected users. For more information about access levels, see <DocLink docId='platform/biostar_air/manage-access-level' />.
 
   <Image src='/img/air/bsair-user-list-tool-aclevel.png' />
 
-* <IcAirMtag width="24px" height="24px" />: Allow the selected users to tag mobile cards consecutively without waiting time. The Suprema Pass app supports this starting from version 2.9.0.
+* <IcAirMtag width='24px' height='24px' title='Mobile Consecutive Tag' />: Allow the selected users to tag mobile cards consecutively without waiting time. The Suprema Pass app supports this starting from version 2.9.0.
    <Image src='/img/air/bsair-user-list-tool-mobile-tag.png' />
 
-* <IcAirUtemplate width="24px" height="24px" />: Apply a user template to the selected users. Add any other information needed in addition to the default user information.
+* <IcAirUtemplate width='24px' height='24px' title='User Template' />: Apply a user template to the selected users. Add any other information needed in addition to the default user information.
 
   <Image src='/img/air/bsair-user-list-user-template.png' width='43%' />
 
-* <IcAirDown width="24px" height="24px" />: Export the selected user information to a PDF or CSV file.
+* <IcAirDown width='24px' height='24px' title='Download' />: Export the selected user information to a PDF or CSV file.
 
-* <IcAirUpface width="24px" height="24px" />: Upload user images in bulk. The name of each image file to upload must match the user's ID.
+* <IcAirUpface width='24px' height='24px' title='Image Upload' />: Upload user images in bulk. The name of each image file to upload must match the user's ID.
 
    For example, the file 601.jpg corresponds to user ID 601.
 
@@ -81,13 +134,13 @@ The features available at the top of the user list are as follows.
 
    **File format requirements**
 
-   * Supported formats: *.jpg*, *.jpeg*, *.png*
+  * Supported formats: *.jpg*, *.jpeg*, *.png*
 
-   * File size limit: **1 MB** per image
+  * File size limit: **1 MB** per image
 
    :::
 
-* <IcAirFaceLink width="26px" height="26px" />: Send a face enrollment link to the selected users by email or text message. When a user clicks the link and enrolls their face on the webpage, they are granted access via facial authentication.
+* <IcAirFaceLink width='26px' height='26px' title='Send Face Registration Link' />: Send a face enrollment link to the selected users by email or text message. When a user clicks the link and enrolls their face on the webpage, they are granted access via facial authentication.
 
    :::note
 
@@ -95,11 +148,18 @@ The features available at the top of the user list are as follows.
 
    :::
 
-* <IcAirFilterReset width="26px" height="26px" />: Reset all filters applied to the user list. This feature is available only when filters are applied. For more information on applying filters, refer to [the following](#userFiltering).
+* <IcAirFilterReset width='26px' height='26px' title='Clear Filters' />: Reset all filters applied to the user list. This feature is available only when filters are applied. For more information on applying filtering, refer to <DocLink inner='#userFiltering' />.
 
-* <IcAirReport width="26px" height="26px" />: Configure user reports. After a report is generated, it is sent to the administrator's email. For more information on report settings, refer to [the following](#userReportSettings).
+* <IcAirReport width='26px' height='26px' title='Report' />: Configure user reports. After a report is generated, it is sent to the administrator's email. For more information on report configuring, refer to <DocLink inner='#userReport' />.
 
-## Edit users {#editUserDetails}
+* <IcAirMask width='24px' height='24px' title='Apply Masking' />: Mask(`***`) the information such as name and ID in the user list to protect privacy. This feature is useful in environments requiring privacy. Select the toggle button to enable this feature, and click <Cmd sid='save_btn' product='air' />.
+
+  <Image src='/img/air/bsair-user-list-user-masking.png' />
+
+## Edit user information {#editUserDetails}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
 
 Follow these steps to edit a user's details or change their credentials.
 
@@ -119,11 +179,132 @@ Follow these steps to edit a user's details or change their credentials.
 
 5. After editing, click <Cmd sid="save_btn" product="air" /> at the bottom right.
 
+</TabItem>
+
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/air/bsair-app-mng-user-edit.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+To edit the detail information of user in the mobile app, follow these steps.
+
+1. Tap the user to edit in the user list. 
+
+2. Tap <IcAirEdit /> in the top right. 
+
+3. Edit the necessary information on the <Cmd sid='user_edit_header' product='air' /> screen.
+
+4. To save the changes, tap <Cmd sid='save_btn' product='air' />.
+
+   Use <Cmd sid='add_user_card_activate_btn' product='air' /> to issue credentials.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+:::info
+
+For more information on user information, refer to <DocLink docId='platform/biostar_air/adding-individual-users' />.
+
+:::
+
+## Manage user groups {#manageUserGroups}
+
+This guide describes how to assign or move, exclude user from user group. For more information on creating and managing user group, refer to <DocLink docId='platform/biostar_air/managing-user-groups' />.
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+### Assign users to a group {#assigning-users-to-a-group}
+
+After creating a user group, you can add users to the group from the user list.
+
+1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+
+2. Click the checkbox next to the users to assign to the group in the user list.
+
+3. Click <IcAirGroup title='Manage Groups' /> at the top left of the user list.
+
+   <Image src='/img/air/bsair-user-group-assign.png' />
+
+4. When the <Cmd sid='manage_user_groups_header' product='air' /> window appears, select the parent group or subgroup to assign the users.
+
+   <Image src='/img/air/bsair-user-group-assign-popup.png' width='50%' />
+
+5. Complete the selecting, and save group settings, click <Cmd sid='manage_grops_ok_btn' product='air' />.
+
+Confirm that the users are assigned to the new group in the <Cmd sid='user_table_column5' product='air' /> column of the user list.
+
+<Image src='/img/air/bsair-user-group-assign-result.png' />
+
+Return to <Cmd sid='user_groups_submenu' product='air' /> to confirm that the group's <Cmd sid='user_groups_table_col2' product='air' /> is updated.
+
+### Remove or move group {#disableGroup}
+
+You can exclude users from a user group or move them to another group.
+
+1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
+
+2. Click the checkbox next to the users to remove from or move between groups in the user list.
+
+   :::note
+
+   When moving users, first select users from the same group, then proceed.
+
+   :::
+
+3. Click <IcAirGroup /> at the top left of the user list.
+
+4. When the <Cmd sid='manage_user_groups_header' product='air' /> window appears, perform one of the following:
+
+   * To unassign the group, clear the selected group's checkbox.
+
+   * To move the group, select the checkbox for the current group and then choose the target group.
+
+5. Click <Cmd sid='manage_grops_ok_btn' product='air' /> to save the group settings.
+
+Confirm the group changes in the <Cmd sid='user_table_column5' product='air' /> column of the user list.
+
+</TabItem>
+
+<TabItem value='mobile' label='Mobile'>
+
+You can manage user groups in the mobile app. Tap <IcAirGroup /> at the top of the user list. The user group list appears.
+
+<Image src='/img/air/bsair-app-mng-user-group.png' className='none' width='60%' />
+
+* To view users in a group, tap <IcBw /> to the right of the desired group.
+
+* To add a new group, tap <IcAdd title='Add' /> in the top right.
+
+* To edit a group name, long-press the desired group and tap <IcAirEdit title='Edit' /> at the bottom.
+
+* To delete a group, long-press the desired group and tap <IcAirRemove title='Remove' /> at the bottom. Select one or more groups to delete them.
+
+:::info
+
+For more information on managing user group, refer to <DocLink docId='platform/biostar_air/managing-user-groups' />.
+
+:::
+
+</TabItem>
+</Tabs>
+
 ## Manage user status {#manageUserStatus}
 
 Activate or suspend a user's access permissions. Reissue credentials as well.
 
 ### Individual user
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
 
 1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
 
@@ -139,7 +320,44 @@ Activate or suspend a user's access permissions. Reissue credentials as well.
 
 * <IcAirSuspend width="24px" height="24px" title="Suspend" />: Block the user's access. Use this feature when the user is active.
 
+</TabItem>
+
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/air/bsair-app-mng-user-action.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+In the mobile app, tap a user in the list. In the <Cmd sid='user_detail' product='air' /> screen, tap <span className='rect green'><IcAirMore /></span>. The **User actions** menu appears.
+
+* <Cmd sid='user_activate_action' product='air' /> / <Cmd sid='after_suspend_user_reactivate_action' product='air' />: Activate the user's access permissions. Use this feature for initial activation of new users or reactivation of suspended users.
+
+* <Cmd sid='user_reactivate_action' product='air' />: Reissues the user's credentials.
+
+* <Cmd sid='suspend_action' product='air' />: Temporarily deactivates the user. Suspended users cannot access.
+
+* <Cmd sid='delete_action' product='air' />: Deletes the user from the system.
+
+:::info
+
+The <Cmd sid='after_suspend_user_reactivate_action' product='air' /> option appears only for suspended users.
+
+:::
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
 ### Batch actions
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
 
 1. Click <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> in the left sidebar.
 
@@ -149,11 +367,45 @@ Activate or suspend a user's access permissions. Reissue credentials as well.
 
 <Image src='/img/air/bsair-user-list-multi-user-batch-action.png' />
 
-* <Cmd sid="user_activate_action" product="air" />: Activate the user's access permissions. Use this feature for initial activation of new users or reactivation of suspended users.
+* <Cmd sid='user_activate_action' product='air' /> / <Cmd sid='after_suspend_user_reactivate_action' product='air' />: Activate the user's access permissions. Use this feature for initial activation of new users or reactivation of suspended users.
 
 * <Cmd sid="user_reactivate_action" product="air" />: Reissue credentials. Use this feature when the user's credentials have expired or are unavailable.
 
 * <Cmd sid="suspend_action" product="air" />: Block the user's access. Use this feature when the user is active.
+
+</TabItem>
+
+<TabItem value='mobile' label='Mobile'>
+
+<Columns>
+<Column className='width--40'>
+
+<Image src='/img/air/bsair-app-mng-user-bulk-action.png' />
+
+</Column>
+<Column className='padding--l40'>
+
+In the mobile app, long-press a user in the list to change their status. Select any additional users whose status you want to change. Tap the desired action in the **User actions** menu at the bottom of the screen.
+
+* <Cmd sid='user_activate_action' product='air' /> / <Cmd sid='after_suspend_user_reactivate_action' product='air' />: Activate the user's access permissions. Use this feature for initial activation of new users or reactivation of suspended users.
+
+* <Cmd sid='user_reactivate_action' product='air' />: Reissues the user's credentials.
+
+* <Cmd sid='suspend_action' product='air' />: Temporarily deactivates the user. Suspended users cannot access.
+
+* <Cmd sid='delete_action' product='air' />: Deletes the user from the system.
+
+</Column>
+</Columns>
+
+</TabItem>
+</Tabs>
+
+:::info
+
+The <Cmd sid='after_suspend_user_reactivate_action' product='air' /> option appears only for suspended users.
+
+:::
 
 ## Delete users {#deleteUser}
 
@@ -175,7 +427,7 @@ Deleted users cannot be recovered. Be sure to verify before deleting.
 
    <Image src='/img/air/bsair-user-details-remove.png' />
 
-4. When a warning message appears, click <Cmd sid="btn_ok" product="air" />.
+4. When a warning message appears, click <Cmd sid='delete_user_yes_btn' product='air' />.
 
 ### Delete multiple users {#deleteMultipleUsers}
 
@@ -189,9 +441,9 @@ Deleted users cannot be recovered. Be sure to verify before deleting.
 
    <Image src='/img/air/bsair-user-list-multi-select-remove-opt.png' />
 
-4. When a warning message appears, click <Cmd sid="btn_ok" product="air" />.
+4. When a warning message appears, click <Cmd sid='delete_user_yes_btn' product='air' />.
 
-## Configure user reports {#userReportSettings}
+## Create a user report {#userReport}
 
 Create a user report and send it to the administrator's email. 
 

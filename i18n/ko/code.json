@@ -56,6 +56,9 @@
   "externalLinks.apps.setupmanager.desc": {
     "message": "중앙집중형 출입통제 관리 웹서버"
   },
+  "externalLinks.ViOnyx.desc": {
+    "message": "AI 기반 지능형 영상 분석 카메라"
+  },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "탐색 경로",
     "description": "The ARIA label for the breadcrumbs"
@@ -764,6 +767,48 @@
   "specs.backup_battery.capacity": {
     "message": "용량"
   },
+  "specs.general.extended_memory": {
+    "message": "확장 메모리"
+  },
+  "specs.camera": {
+    "message": "카메라"
+  },
+  "specs.camera.image_sensor": {
+    "message": "이미지 센서"
+  },
+  "specs.camera.lens": {
+    "message": "렌즈"
+  },
+  "specs.camera.fov": {
+    "message": "시야각 (FOV)"
+  },
+  "specs.camera.min_illumination": {
+    "message": "최저 조도"
+  },
+  "specs.camera.zoom": {
+    "message": "줌 및 PTZ"
+  },
+  "specs.camera.ir_led": {
+    "message": "IR LED"
+  },
+  "specs.video_audio": {
+    "message": "비디오 및 오디오"
+  },
+  "specs.video_audio.video_compression": {
+    "message": "비디오 압축"
+  },
+  "specs.video_audio.wdr": {
+    "message": "WDR"
+  },
+  "specs.video_audio.audio": {
+    "message": "오디오"
+  },
+  "specs.interface.alarm": {
+    "message": "알람"
+  },
+  "specs.interface.audio": {
+    "message": "오디오"
+  },
   "externalLinks.FaceStation2.desc": {
     "message": "얼굴인증 출입근태 단말기"
   },
@@ -1125,5 +1170,11 @@
   },
   "externalLinks.dev.svpsdk.desc": {
     "message": "슈프리마 장치의 핵심 기능을<br/>타 소프트웨어에서 지원"
+  },
+  "externalLinks.dev.bsair.desc": {
+    "message": "기존 시스템과의 원활한 API 통합"
+  },
+  "externalLinks.apps.supremapass.desc": {
+    "message": "BioStar Air의 모바일 크리덴셜"
   }
 }

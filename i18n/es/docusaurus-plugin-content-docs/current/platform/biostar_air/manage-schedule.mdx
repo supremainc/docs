@@ -1,0 +1,65 @@
+---
+id: manage-schedule
+title: Administrar horarios
+description: Crear y administrar horarios para controlar el acceso a puertas y ascensores en BioStar Air.
+keywords:
+  - Horario
+  - Gestionar
+  - BioStar Air
+---
+
+Crear horarios para permitir o restringir el acceso a puertas o ascensores en días y períodos de tiempo específicos. Úselos junto con grupos de días festivos para ajustar las reglas de acceso.
+
+:::info
+
+* Los grupos de días festivos tienen prioridad sobre los horarios. Conceda acceso sin restricciones a los usuarios que siempre necesitan acceso.
+
+* Para obtener más información sobre la configuración de grupos de días festivos, consulte <DocLink docId='platform/biostar_air/manage-holiday-group' />.
+
+* Para obtener más información sobre cómo aplicar horarios a puertas, consulte <DocLink docId='platform/biostar_air/managing-door-schedules' />.
+
+* Para obtener más información sobre cómo configurar horarios para controlar el acceso a cada piso del ascensor, consulte <DocLink docId='platform/biostar_air/manage-elevator' />.
+
+:::
+
+## Agregar horario {#addSchedule}
+
+import AddScheduleItem from '../../common/_add-schedule-item.mdx';
+
+<AddScheduleItem />
+
+:::info
+
+* Agregue horarios abiertos para permitir el acceso y horarios cerrados para restringirlo, y aplíquelos a las puertas. Para obtener más información sobre cómo aplicar horarios a puertas, consulte <DocLink docId='platform/biostar_air/managing-door-schedules' />.
+
+* Para obtener más información sobre cómo configurar horarios para controlar el acceso a cada piso del ascensor, consulte <DocLink docId='platform/biostar_air/manage-elevator' />.
+
+:::
+
+## Editar horario {#editSchedule}
+
+1. Haz clic en <Cmd sid="access_menu" product="air" /> → <Cmd sid="schedules_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haga clic en el horario que desea editar en la lista. Alternativamente, seleccione la casilla del horario y haga clic en <IcAirEdit title='Edit' /> en la parte superior de la lista.
+
+3. Cuando aparezca el panel <Cmd sid="schedule_edit_title" product="air" />, actualice la información requerida o modifique el horario.
+
+   <Image src='/img/air/bsair-access-mng-schedule-edit.png' />
+
+4. Haga clic en <Cmd sid='save_btn' product='air' /> para guardar los cambios.
+
+## Eliminar horario {#deleteSchedule}
+
+1. Haz clic en <Cmd sid="access_menu" product="air" /> → <Cmd sid="schedules_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Seleccione la casilla del horario que desea eliminar en la lista. Seleccione uno o más horarios.
+
+3. Haga clic en <IcAirRemove title='Delete' /> en la parte superior de la lista.
+
+4. Cuando aparezca un mensaje de advertencia, haga clic en <Cmd sid='btn_yes' product='air' />.
+
+:::info
+
+Al eliminar un horario, este se quita de todas las secciones relacionadas. Por ejemplo, si se elimina un horario aplicado a una puerta o a un ascensor, ya no se aplicará a esa puerta o a ese ascensor.
+
+:::

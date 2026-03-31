@@ -1,0 +1,158 @@
+---
+id: monitoring-event-logs
+title: Usar registros de eventos
+description: Esta guía explica cómo monitorear y analizar los registros de eventos en BioStar Air, aplicar filtros, exportar datos y rastrear la actividad administrativa.
+keywords:
+  - Monitorizar
+  - Registros de eventos
+  - BioStar Air
+---
+
+Una de las ventajas clave de una plataforma de control de acceso en la nube es la capacidad de monitorear la actividad del sitio en cualquier momento y desde cualquier lugar. Este documento explica cómo monitorear y analizar los registros de eventos en BioStar Air.
+
+:::tip
+
+Vea el siguiente video para un tutorial sobre los registros de eventos.
+
+<YouTube className='fit--content' videoId="nwIEYyK-uAg" />
+
+:::
+
+## Ver registros de eventos
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+Vaya a <Cmd sid='event_logs_submenu' product='air' /> para ver los registros de eventos. Haga clic en <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' /> en la barra lateral izquierda. 
+
+<Image src='/img/air/bsair-monitoring-eventlog-list.png' />
+
+La pantalla <Cmd sid="event_logs_submenu" product="air" /> muestra una tabla con detalles que incluyen la hora del evento y su nombre, el nombre de la puerta, el alias del dispositivo, el tipo de usuario y el nombre de usuario.
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+Esta guía explica cómo consultar el registro de eventos en la aplicación móvil.
+
+<Image src='/img/air/bsair-mobile-monitoring-eventlog.png' className='none' />
+
+1. Abra la aplicación BioStar Air en su dispositivo móvil e inicie sesión.
+
+2. Toque <Cmd sid='monitoring_menu' product='air' /> en la parte inferior de la pantalla de inicio.
+
+3. Toque la tarjeta <Cmd sid='event_logs_submenu' product='air' />.
+
+4. Desplácese por la lista de registros de eventos para ver su contenido.
+
+:::info
+
+* <Cmd sid='logs_filters_action_btn' product='air' />: Filtrar registros de eventos.
+
+* <IcSearch width='20' height='20' title='Search' />: Buscar por palabras clave específicas. Ingrese uno de los siguientes: ID de tarjeta RF, ID de usuario, correo electrónico o nombre.
+
+* <IcAirReportApp width="20" height="20" title="Report" />: Generar informes. Para obtener más información sobre la creación de informes, consulte <DocLink inner='#generatingReports' />.
+
+* <IcAirDown width="20" height="20" title="Download" />: Descargar informes en formato CSV o PDF.
+
+* <IcAirMask width="20" height="20" title="Apply Masking" />: Aplicar el enmascaramiento de datos personales.
+
+:::
+
+</TabItem>
+</Tabs>
+
+## <Cmd sid='column_filter_modal_title' product='air' className='normal' />
+
+Personalice las columnas de la tabla para mostrar u ocultar información. Reordene las columnas para colocar las que usa con frecuencia al principio. Haga clic en el botón <IcAirColumn title='Customize' /> en la parte superior de la lista de registros de eventos. Aparecerá la ventana <Cmd sid="column_filter_modal_title" product="air" />.
+
+<Image src='/img/air/bsair-monitoring-eventlog-list-custom-table.png' />
+
+* Seleccione o deseleccione las casillas de las columnas para mostrarlas u ocultarlas.
+
+* Para reordenar las columnas, haga clic y arrastre una columna a la posición deseada.
+
+* Haga clic en <Cmd sid="column_filter_modal_save_btn" product="air" /> para guardar la configuración de <Cmd sid="column_filter_modal_title" product="air" />.
+
+* Haga clic en <Cmd sid="column_filter_modal_apply_btn" product="air" /> para aplicar <Cmd sid="column_filter_modal_title" product="air" /> a la lista de registros de eventos sin guardar.
+
+* Haga clic en <Cmd sid='column_filter_modal_reset_btn' product='air' /> para cancelar los cambios en <Cmd sid='column_filter_modal_title' product='air' /> y restaurar el estado inicial.
+
+:::info
+
+* Al hacer clic en <Cmd sid="column_filter_modal_save_btn" product="air" />, la configuración se mantiene incluso después de navegar a otro menú. Al hacer clic en <Cmd sid='column_filter_modal_apply_btn' product='air' />, los cambios se aplican solo a la lista actual y se revierten al abandonar la página.
+
+* <Cmd sid="audit_logs_submenu" product="air" /> no admite la <Cmd sid="column_filter_modal_title" product="air" />.
+
+:::
+
+## Filtrar registros {#filtering-event-logs}
+
+Filtre los registros para encontrar rápidamente la información que necesita. Haga clic en <IcAirLogfilter width='20' height='20' title='Filters' /> en la parte superior de la lista de registros. Cuando aparezca la ventana <Cmd sid="logs_filters_action_btn" product="air" />, seleccione el valor deseado para cada elemento.
+
+<Image src='/img/air/bsair-monitoring-eventlog-list-filter.png' />
+
+:::info
+
+* Haga clic en <Cmd sid="column_filter_modal_save_btn" product="air" /> o <Cmd sid="filters_action2" product="air" /> para guardar la configuración y que se mantenga al navegar a otro menú. Haga clic en <Cmd sid='column_filter_modal_apply_btn' product='air' /> o <Cmd sid='filters_action3' product='air' /> para aplicar los cambios solo a la lista actual; se revertirán al salir.
+
+* Haga clic en <Cmd sid='column_filter_modal_reset_btn' product='air' /> o <Cmd sid='filters_action1' product='air' /> para cancelar los cambios y volver al estado inicial.
+
+:::
+
+## Configurar informes {#generatingReports}
+
+Genere informes de los eventos ocurridos durante un período determinado, filtrando los datos de los registros.
+
+1. Haga clic en el botón <IcAirReport width="20" height="20" title="Report" /> en la parte superior de la lista de registros.
+
+2. Cuando aparezca la ventana <Cmd sid="report_popup_title" product="air" />, ingrese un nombre para el informe.
+
+   <Image src='/img/air/bsair-monitoring-eventlog-report-setting.png' />
+
+3. Seleccione los elementos que desea incluir en el informe.
+
+4. Haga clic en <Cmd sid="report_form_text_add" product="air" /> para guardar el informe configurado.
+
+5. Se crea un informe con el nombre establecido en <Cmd sid="report_form_text_title" product="air" />.
+
+   <Image src='/img/air/bsair-monitoring-eventlog-report-added.png' />
+
+6. Para descargar el informe generado, haga clic en el botón <IcAirDown width="20" height="20" title="Download" /> junto al nombre del informe.
+
+7. Cuando aparezca la ventana <Cmd sid="report_download_popup_title" product="air" />, seleccione el período para consultar los eventos y haga clic en <Cmd sid="report_download_popup_button_title" product="air" />.
+
+   <Image src='/img/air/bsair-monitoring-eventlog-report-download.png' />
+
+Se envía un enlace de descarga al correo electrónico del administrador.
+
+:::info
+
+<Cmd sid="report_form_text_title" product="air" /> le permite buscar, editar, descargar o eliminar los informes creados.
+
+:::
+
+## Enmascarar datos personales {#dataMasking}
+
+Enmascare los datos personales en los registros para proteger la información sensible. Cuando el enmascaramiento de datos personales está habilitado, información como los nombres de usuario, las direcciones de correo electrónico y los números de teléfono se oculta parcialmente.
+
+Para habilitar el enmascaramiento de datos personales, haga clic en el botón <IcAirMask width="20" height="20" title="Apply Masking" /> en la parte superior de la lista de registros. En el menú emergente, active <Cmd sid="apply_masking_title" product="air" /> y haga clic en <Cmd sid="save_btn" product="air" />.
+
+<Image src='/img/air/bsair-monitoring-eventlog-apply-masking.png' />
+
+## Otras funciones
+
+Utilice la barra de herramientas en la parte superior de la lista para gestionar los registros de forma más eficiente.
+
+* Para ordenar los registros por fecha, seleccione un rango de fecha y hora y, a continuación, haga clic en <Cmd sid="column_filter_modal_apply_btn" product="air" />. Haga clic en <Cmd sid="column_filter_modal_reset_btn" product="air" /> para restablecer la fecha.
+
+  <Image src='/img/air/bsair-monitoring-eventlog-set-datetime.png' />
+
+* En el campo de entrada <Cmd sid="search_placeholder" product="air" />, ingrese palabras clave específicas para buscar en los registros. Ingrese uno de los siguientes: ID de tarjeta RF, ID de usuario, correo electrónico o nombre.
+
+* Haga clic en <IcAirDown width="20" height="20" title="Export" /> para guardar los registros como un archivo CSV o PDF.
+
+* Haga clic en <IcAirRef width="20" height="20" title="Refresh" /> en la parte superior de la lista para actualizar los registros.
+
+* Para actualizar a intervalos específicos, seleccione 5 segundos o 1 minuto en <Cmd sid="auto_refresh_btn" product="air" /> en la parte inferior izquierda de la lista.
+
+  <Image src='/img/air/bsair-monitoring-eventlog-auto-refresh.png' />

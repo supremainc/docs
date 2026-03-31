@@ -1,0 +1,96 @@
+---
+id: site-setup-networking
+title: Identificar puertos y dispositivos de red
+description: Configure los puertos de red de los dispositivos compatibles con BioStar Air y verifique las direcciones MAC.
+keywords:
+  - redes
+  - puertos
+---
+
+import MacAddressCalculator from '@site/src/components/MacAddressCalculator';
+
+BioStar Air y los dispositivos compatibles deben acceder a puertos de red específicos para garantizar una conexión fluida. Estos puertos permiten la comunicación segura entre los dispositivos compatibles, los servicios en la nube y las aplicaciones de los usuarios. En ciertos casos, los administradores necesitan determinar la dirección MAC de un dispositivo compatible con BioStar Air a partir de su número de serie para realizar tareas de configuración de red.
+
+## Puertos de red necesarios
+
+Verifique que los siguientes puertos estén abiertos en el firewall de la red.
+
+* **6379**, **6381**: Puertos de Redis
+
+   Se utilizan para sincronizar la información de usuario, gestionar el registro rápido de eventos, administrar sesiones y actuar como un intermediario de mensajes para la señalización entre los dispositivos y la nube.
+
+* **5671**: AMQP sobre TLS (RabbitMQ)
+
+   Proporciona un protocolo de mensajería seguro para la comunicación en tiempo real entre servicios.
+
+* **443**: HTTPS (TLS)
+
+   Se utiliza para el tráfico web estándar y seguro y es necesario para los siguientes servicios:
+
+  * Acceso a la aplicación web del portal de administración desde un navegador
+
+  * Aplicación móvil BioStar Air (iOS/Android)
+
+  * Llamadas a la API
+
+  * Actualizaciones de firmware de los dispositivos a través de la nube
+
+  * Servicios de inicio de sesión y autenticación para dispositivos
+
+* Al usar la función integrada de gestión de video de BioStar Air:
+
+  * Dominio WebSocket: eu-wss-api.airfob.com
+
+  * Puerto WebSocket: 3500
+
+  * Puertos TURN/STUN: 80, 443, 3478, 5349
+
+:::info
+
+Verifique el acceso a los siguientes puntos de conexión para el inicio de sesión y la autenticación de dispositivos.
+
+* [https://e-afs-api.airfob.com/v1/device/login](https://e-afs-api.airfob.com/v1/device/login) (Europe)
+
+* [https://afs-api.airfob.com/v1/device/login](https://afs-api.airfob.com/v1/device/login) (Rest del mundo)
+
+:::
+
+## Comprobar la dirección MAC a partir del número de serie
+
+En algunos casos, los administradores necesitan determinar la dirección MAC de un lector compatible con BioStar Air utilizando únicamente su número de serie. Esto resulta útil para tareas como añadir el dispositivo a una lista blanca antes de conectarlo a la red.
+
+### Pasos
+
+1. **Localice el número de serie**:
+
+   Localice el número de serie de 9 dígitos en la parte posterior del dispositivo.
+
+2. **Convierta el número de serie a hexadecimal**:
+
+   Utilice una calculadora o una herramienta en línea para convertir el número de serie de decimal a hexadecimal.
+
+3. **Extraiga los últimos 3 bytes**:
+
+   Tome los últimos seis caracteres del valor hexadecimal; estos seis caracteres representan los últimos 3 bytes.
+
+4. **Construya la dirección MAC**:
+
+   La dirección MAC siempre comienza con `00:17:FC:`. Añada los últimos 3 bytes (seis caracteres) del valor hexadecimal, separando cada par con dos puntos.
+
+### Ejemplo
+
+1. **Número de serie**: 546089489
+
+2. **Hexadecimal**: 208CAA11
+
+3. **Últimos 3 bytes**: 8CAA11
+
+4. **Dirección MAC**: 00:17:FC:8C:AA:11
+
+Estos pasos permiten identificar con precisión un lector compatible con BioStar Air en la red mediante su número de serie.
+
+### Convertidor de direcciones MAC
+
+Ingrese a continuación el número de serie del dispositivo para obtener su dirección MAC al instante.
+
+<MacAddressCalculator />

@@ -1,0 +1,141 @@
+---
+id: settings-alert-report
+title: Configurar alertas y informes
+description: Este artículo ofrece instrucciones paso a paso para configurar alertas de eventos e informes automáticos en BioStar Air.
+keywords:
+  - BioStar Air
+  - Configuración de alertas
+  - Configuración de informes
+  - Alertas del sistema
+  - Informes de usuario
+---
+
+Configurar alertas e informes permite detectar y rastrear automáticamente eventos del sistema y situaciones de seguridad. Este artículo explica cómo configurar las opciones de alertas e informes en BioStar Air.
+
+La configuración de alertas e informes ofrece los siguientes beneficios.
+
+* Detecta de inmediato amenazas de seguridad o problemas del sistema y envía alertas en tiempo real a los administradores.
+
+* Genera automáticamente informes sobre el estado del sistema y la actividad de los usuarios para mejorar la eficiencia en la gestión.
+
+## Agregar alertas {#addAlert}
+
+Configura alertas para registros de eventos específicos y para el estado del sistema en el sitio.
+
+1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="alerts.alert_sub_menu_title" product="air" /> en la barra lateral izquierda.
+
+2. Haz clic en <Cmd sid="alerts.add_alert_btn" product="air" /> en la parte superior derecha de la pantalla.
+
+3. Cuando aparezca el panel <Cmd sid="alerts.add_alert_btn" product="air" />, elige la pestaña <Cmd sid="alerts.event_log_type" product="air" /> o la pestaña <Cmd sid="alerts.system_type" product="air" />.
+
+   <Image src='/img/air/bsair-settings-alert-add-event-log.png' />
+
+4. Después de configurar cada elemento, haz clic en <Cmd sid="save_btn" product="air" /> para guardar.
+
+### Establecer condiciones {#conditionSettings}
+
+#### Registro de eventos {#eventLog}
+
+En la pestaña <Cmd sid="alerts.event_log_type" product="air" />, establece condiciones de alerta por tipo de evento.
+
+<Image src='/img/air/bsair-settings-alert-event-log-setting.png' />
+
+* <Cmd sid="alerts.events_block_title" product="air" />: Selecciona los tipos de eventos para los que se enviará una alerta. También se puede seleccionar un <Cmd sid="alerts.preset_events_block_title" product="air" /> predefinido.
+
+* <Cmd sid="door_label" product="air" />: Selecciona una puerta. Envía una alerta cuando ocurra un evento en la puerta seleccionada. Se pueden seleccionar varias puertas.
+
+* <Cmd sid="alerts.frequency_and_duration_label" product="air" />: Envía una alerta cuando los eventos ocurran con una frecuencia determinada dentro del período de tiempo definido. Por ejemplo, configura el sistema para que envíe una alerta si un evento ocurre tres veces en cinco minutos.
+
+#### Sistema {#system}
+
+<Image src='/img/air/bsair-settings-alert-system-setting.png' />
+
+En la pestaña <Cmd sid="alerts.system_type" product="air" />, establece condiciones de alerta basadas en el estado del sistema. Las opciones disponibles son las siguientes.
+
+* <Cmd sid='low_credit_reminders' product='air' />
+
+* <Cmd sid='low_credit_site_suspension' product='air' />
+
+* <Cmd sid='low_credit_sms_less_than_10' product='air' />
+
+* <Cmd sid='low_apb_battery' product='air' />
+
+* <Cmd sid='new_fw_availabel' product='air' />
+
+### Establecer destinatarios de alertas {#alertTargetSettings}
+
+Usa <Cmd sid="alerts.alert_target" product="air" /> para designar a los destinatarios de las alertas. Selecciona usuarios por rol de administrador o elige usuarios individuales.
+
+### Configurar método de envío {#alertSendMethodSettings}
+
+Selecciona el método de envío en <Cmd sid="alerts.alert_send_by" product="air" />. Las alertas se envían por correo electrónico, SMS o notificación push de la aplicación.
+
+:::info
+
+Los mensajes de texto solo se pueden enviar después de recargar los créditos de SMS. Los créditos de SMS restantes se pueden consultar en <Cmd sid='settings_menu' product='air' /> → <Cmd sid='credit_center_submenu' product='air' />.
+
+:::
+
+## Generar informes {#reportGeneration}
+
+Genera informes automáticamente en intervalos definidos y envíalos a los administradores. Genera informes sobre la actividad del registro de eventos y el estado de los usuarios.
+
+1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="alerts.alert_sub_menu_title" product="air" /> en la barra lateral izquierda.
+
+2. Haz clic en <Cmd sid="alerts.add_alert_btn" product="air" /> en la parte superior derecha de la pantalla.
+
+3. Cuando aparezca el panel <Cmd sid="alerts.add_alert_btn" product="air" />, selecciona la pestaña <Cmd sid="alerts.report_type" product="air" />.
+
+   <Image src='/img/air/bsair-settings-alert-add-report.png' />
+
+4. Después de configurar cada elemento, haz clic en <Cmd sid="save_btn" product="air" /> para guardar.
+
+### Configurar condiciones {#reportConditionSettings}
+
+Configura el tipo de informe y el intervalo de generación.
+
+* <Cmd sid="name_column" product="air" />: Selecciona el tipo de informe a generar.
+
+  * <Cmd sid='alerts.report_user_tna' product='air' />: Genera un informe sobre el estado de Tiempo y Asistencia de los usuarios para el período seleccionado.
+
+  * <Cmd sid='alerts.report_audit_trail' product='air' />: Genera un informe sobre el estado del registro de auditoría para el período seleccionado.
+
+  * <Cmd sid="alerts.report_event_log" product="air" />: Genera un informe sobre la actividad del registro de eventos para el período seleccionado.
+
+  * <Cmd sid="alerts.report_user" product="air" />: Genera un informe sobre el estado de los usuarios para el período seleccionado.
+
+* <Cmd sid='label_title_schedule' product='air' />: Selecciona el intervalo de generación de informes. Elige entre <Cmd sid="weekly_option" product="air" /> y <Cmd sid="monthly_option" product="air" />.
+
+### Configurar destinatarios del informe {#reportAlertTargetSettings}
+
+Usa <Cmd sid="alerts.alert_target" product="air" /> para designar a los destinatarios de las alertas. Selecciona usuarios por rol de administrador o elige usuarios individuales.
+
+### Configurar método de envío {#reportAlertSendMethodSettings}
+
+Selecciona el método de envío en <Cmd sid="alerts.alert_send_by" product="air" />.
+
+:::info
+
+Los informes se entregan **únicamente por correo electrónico**. No se envían por SMS ni por notificación push de la aplicación.
+
+:::
+
+## Editar alertas e informes {#editAlertReport}
+
+1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="alerts.alert_sub_menu_title" product="air" /> en la barra lateral izquierda.
+
+2. Haz clic en la alerta o el informe que deseas editar en la lista.
+
+3. Cuando aparezca el panel <Cmd sid="alerts.edit_alert_header" product="air" /> o <Cmd sid="alerts.edit_report_header" product="air" />, edita los elementos necesarios.
+
+4. Haz clic en <Cmd sid="save_btn" product="air" /> en la parte inferior para guardar los cambios.
+
+## Eliminar alertas e informes {#deleteAlertReport}
+
+1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="alerts.alert_sub_menu_title" product="air" /> en la barra lateral izquierda.
+
+2. Selecciona la casilla de la alerta o del informe que deseas eliminar en la lista. Se puede seleccionar más de un elemento.
+
+3. Haga clic en <IcAirRemove title='Delete' /> en la esquina superior izquierda de la lista.
+
+4. Haga clic en <Cmd sid="btn_delete" product="air" /> cuando aparezca la ventana del mensaje.

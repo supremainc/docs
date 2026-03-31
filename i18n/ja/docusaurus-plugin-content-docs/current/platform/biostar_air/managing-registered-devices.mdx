@@ -1,0 +1,167 @@
+---
+id: managing-registered-devices
+title: 登録済みデバイスの管理
+description: BioStar Air ポータルでデバイスの接続状態を確認し、生体認証やカード設定を変更したり、ファームウェアを更新できます。 個別または一括でセキュリティシステムを効率的に管理できます。
+keywords:
+  - デバイス管理
+  - デバイス設定
+  - BioStar Air
+  - 生体認証
+  - カード設定
+  - ファームウェアのアップデート
+  - ネットワーク設定
+---
+
+登録されたデバイスの接続状態を一目で確認し、生体認証やカード設定を変更したり、ファームウェアを更新できます。 少数のデバイスは個別に、多数のデバイスは一括で管理できるため、セキュリティシステムを効率的に運用できます。
+
+:::info
+
+* デバイスは iOS または Android の **BioStar Air モバイルアプリ**でのみ登録できます。 ウェブポータルでは登録できない。 モバイルアプリでのデバイス登録方法の詳細は <DocLink docId='platform/biostar_air/manage-device-with-app' /> を参照してください。
+
+* **リモート接続**、**生体認証**、**QRコードによる入退室**、**ファームウェアの更新**など一部の機能を利用するには、デバイスがインターネットに接続されている必要があります。
+
+:::
+
+:::tip
+
+デバイスの登録と管理に関するビデオガイドを見るには、次のビデオを参照してください。
+
+<YouTube className='fit--content' videoId="lpMPkMyjr-c" />
+
+:::
+
+## デバイス一覧の表示 {#viewing-device-information}
+
+デバイス一覧では、BioStar Air に登録されたすべてのデバイスを一目で確認できます。 各デバイスの接続状態、モデル名、ファームウェアバージョンなどの主要な情報を一目で確認できます。 また、各デバイスをクリックして詳細情報を確認し、設定を変更できます。
+
+<Image src='/img/air/bsair-device-mng-list.png' />
+
+画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。
+
+### デバイス接続状況 {#device-connection-status}
+
+デバイス一覧のステータスアイコンで各デバイスの接続状態を確認できます。
+
+* <StatusOK /> **緑**: オンライン状態で、該当デバイスをリモートで制御でき、QR認証を受け入れ、アップデートできます。
+
+* <StatusFail /> **赤**: オフライン状態のデバイスです。
+
+* <StatusUpdating /> **オレンジ**: ファームウェアをアップデート中です。
+
+* ⚪ **接続なし**：ネットワークに接続されていないデバイスです。 (例：Airfob Patch)
+
+* <IcAirWarn /> **注意**：サーバーとデバイス間の同期が必要な状態です。
+
+### デバイス情報 {#device-information}
+
+デバイス一覧の各列には、以下の情報が含まれます。
+
+<Image src='/img/air/bsair-device-mng-list-info.png' />
+
+* <Cmd sid='device_product_column' product='air' />：Supremaデータベースから取得したデバイス名とモデル名です。
+
+* <Cmd sid='device_nickname_column' product='air' />：識別しやすいようにユーザーが編集できる項目です。 デバイス一覧でデバイスをクリックすると表示される <Cmd sid='device_edit_title' product='air' /> ウィンドウで変更できます。
+
+* <Cmd sid='device_id_column' product='air' />：デバイスに割り当てられた固有識別子です。
+
+* <Cmd sid='device_group_column' product='air' />：デバイスが属するグループです。
+
+* <Cmd sid='device_battery_column' product='air' />：バッテリー駆動のデバイスで確認できます。 エアポップタグ(AirFob Tag) デバイスのみ対応しています。
+
+* <Cmd sid='device_fw_column' product='air' />：現在インストールされているファームウェアのバージョンです。
+
+* <Cmd sid='device_timezone_column' product='air' />：デバイスに設定されているタイムゾーンです。
+
+### フィルタリング {#deviceFiltering}
+
+デバイス一覧の上部ヘッダー領域でフィルター機能を利用できます。 ヘッダー領域の <IcAirFilter title='Filter' /> ボタンをクリックすると、条件を設定できます。
+
+<Image src='/img/air/bsair-device-mng-list-filter.png' />
+
+:::info
+
+適用したフィルター条件を初期化するには、<IcAirFilter title='Filter' /> ボタンをクリックし、<Cmd sid='column_filter_modal_reset_btn' product='air' /> ボタンを選択してください。
+
+:::
+
+## 個別デバイス情報および設定の編集 {#editing-individual-device}
+
+1. 画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。
+
+2. 一覧から編集するデバイスをクリックします。
+
+3. <Cmd sid='device_edit_title' product='air' /> ウィンドウが表示されます。
+
+   <Image src='/img/air/bsair-device-mng-list-edit-details.png' caption />
+
+4. デバイスの詳細情報または設定を編集します。
+
+5. 変更を保存するには、下部の <Cmd sid='save_btn' product='air' /> をクリックします。
+
+各セクションごとの詳細情報の編集および設定オプションの詳細は <DocLink docId='platform/biostar_air/device-info-settings' /> を参照してください。
+
+## デバイス一括操作 {#bulkDeviceActions}
+
+デバイス一覧上部で提供される機能により、複数のデバイスを一度に管理できます。
+
+<Image src='/img/air/bsair-device-mng-list-tools.png' />
+
+* <IcAirRef width='24px' height='24px' title='Refresh' />：デバイス一覧とデバイスの状態を更新します。
+
+* <IcAirRemove width='24px' height='24px' title='Delete' />：サイトに登録されたデバイスを削除できます。
+
+   :::warning
+
+   オンラインのデバイスのみ永続的に削除できます。 デバイスがオフラインの場合、別のサイトに追加する前に BioStar Air モバイルアプリで先に削除してください。 モバイルアプリでのデバイス削除方法の詳細は <DocLink docId='platform/biostar_air/manage-device-with-app#removingDevice' /> を参照してください。
+
+   :::
+
+* <IcAirFw width='24px' height='24px' title='Update Firmware' />：デバイス一覧で選択したデバイスのファームウェアを更新できます。 ファームウェアの更新に関する詳細は <DocLink docId='platform/biostar_air/how-to-upgrade-firmware' /> を参照してください。
+
+* <IcAirCloud width='24px' height='24px' title='Sync with Server' />：デバイス一覧で選択したデバイスからサーバーに生体認証テンプレートを同期できます。
+
+* <IcAirGroup width='24px' height='24px' title='Manage Groups' />：デバイス一覧で選択したデバイスをグループに割り当てることができます。 デバイスグループの管理の詳細については、<DocLink inner='#device_group_in_device_list' />を参照してください。
+
+* <IcAirByte width='24px' height='24px' title='RF Card Byte Order' />：デバイス一覧で選択したデバイスのRFカードのバイト順を<Cmd>MSB</Cmd>または<Cmd>LSB</Cmd>に切り替えられます。
+
+  * <Cmd>MSB</Cmd>：カードデータを処理するとき、大きいバイト単位から小さいバイト単位の順に処理し、カードシリアル番号 (CSN) を左から右へ順に保存します。
+
+  * <Cmd>LSB</Cmd>：カードデータを処理するとき、小さいバイト単位から大きいバイト単位の順に処理してカードシリアル番号 (CSN) を保存します。
+
+* <IcAirDset width='24px' height='24px' title='Load Device Setting' />：スタンドアロンモードで、元の設定を持つデバイスの設定を読み込むことができます。
+
+* <IcAirUpd width='24px' height='24px' title='Update Status' />：デバイス一覧で選択したデバイスの状態を更新できます。
+
+## デバイスグループの管理 {#device_group_in_device_list}
+
+デバイス一覧で個別のデバイスを選択して、グループに追加したり既存のグループから削除したりできます。
+
+1. 画面左側のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックしてください。
+
+2. デバイスグループ一覧で、グループに追加または削除するデバイスのチェックボックスをクリックします。
+
+3. デバイスグループ一覧の上部にある <IcAirGroup width='24px' height='24px' title='Manage Groups' /> ボタンをクリックしてください。
+
+4. <Cmd sid='manage_device_group_title' product='air' /> ウィンドウが表示されたら、選択したデバイスをグループに追加または削除します。
+
+   <Image src='/img/air/bsair-device-mng-list-group-mng.png' />
+
+   <Cmd sid='manage_device_group_title_two' product='air' /> のチェックボックスの状態は、以下の意味を持ちます。
+
+   * <Cmd sid='manage_device_group_checkbox_state_one' product='air' />：選択したデバイスをグループから削除します。
+
+   * <Cmd sid='manage_device_group_checkbox_state_two' product='air' />：選択したデバイスの一部がグループに含まれている状態です。
+
+   * <Cmd sid='manage_device_group_checkbox_state_three' product='air' />：選択したデバイスをグループに追加します。
+
+5. 変更内容を保存するには、<Cmd sid='btn_ok' product='air' /> ボタンをクリックします。
+
+:::info
+
+* <Cmd sid='manage_device_group_title' product='air' /> ウィンドウで別のグループを選択すると、選択したデバイスはそのグループに移動します。
+
+* デバイスはグループに重複して所属できます。 1つのデバイスを複数のグループに割り当てることができます。
+
+* 変更内容を初期化するには、<Cmd sid='device_btn_reset' product='air' /> ボタンをクリックします。
+
+:::

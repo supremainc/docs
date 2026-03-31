@@ -41,6 +41,7 @@ export const svgComponentsMap = {
   IcAirUpd: '/static/img/menus/ico-air-update.svg',
   IcAirUpface: '/static/img/menus/ico-air-upface.svg',
   IcAirUtemplate: '/static/img/menus/ico-air-user-template.svg',
+  IcAirWarn: '/static/img/menus/ico-air-warn.svg',
   IcAlarm: '/static/img/menus/ico-alarm.svg',
   IcAlert: '/static/img/menus/ico-door-alert.svg',
   IcArm: '/static/img/menus/ico-arms.svg',

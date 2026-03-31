@@ -74,6 +74,26 @@
 
 * 感電または製品損傷の原因となります。
 
+{/* ViOnyx 전용 */}
+
+<Include product='vionyx'>
+
+**カメラを壁面や天井に設置する際は、ぐらつきのないようしっかり取り付けてください**。
+
+* 製品が落下すると重大なけがの原因となります。
+
+**単一の電源アダプターに複数台のカメラを同時に接続しないでください**。
+
+* 許容電力を超えると、過熱や火災の原因となります。
+
+**カメラを設置する際は、他の人が設置場所に近づかないように管理してください**。
+
+* 製品の落下やその他の事故により重大なけがの原因となります。
+
+**ケーブルが不適切な場所に挟まったり、電線の被覆が損傷した場合、製品の破損や火災につながる可能性があるため、注意してください。**
+
+</Include>
+
 ---
 
 ### 使用
@@ -89,6 +109,16 @@
 **電源コードを無理に曲げたり破損させたりしないでください**。
 
 * 火災または感電の原因となります。
+
+{/* ViOnyx 전용 */}
+
+<Include product='vionyx'>
+
+**製品の上部に金属類（硬貨、工具など）や導電性の物、または液体を入れた容器を置かないでください**。
+
+* 感電、火災、または物の落下によるけがの原因となります。
+
+</Include>
 
 <div className='page-break' />
 
@@ -128,7 +158,7 @@
 
 {/* IP67 이상 제품만 적용 */}
 
-<Include product='bioentry_w2,bioentry_w3,biolite_n2,xpass_2,xpass_d2'>
+<Include product='bioentry_w2,bioentry_w3,biolite_n2,xpass_2,xpass_d2,vionyx'>
 
 **製品を壁面に設置する場合、シリコンなどで製品周囲を密封しないでください**。
 
@@ -156,7 +186,7 @@
 
 {/* SIO2 연결 가능한 제품만 적용 */}
 
-<Xclude product='corestation_20,corestation_40,doorinterface,xpass_d2,doormodule,inputmodule,outputmodule,securemodule,enclosure,extendedmodule,extendedmodule_sc'>
+<Xclude product='corestation_20,corestation_40,doorinterface,xpass_d2,doormodule,inputmodule,outputmodule,securemodule,enclosure,extendedmodule,extendedmodule_sc,vionyx'>
 
 **製品と Secure I/O 2、電気錠（電気式ロック装置）は必ず個別の電源を使用してください**。
 
@@ -184,7 +214,7 @@
 
 {/* PoE+ 가능한 제품만 적용 */}
 
-<Include product='biostation_3,corestation_20,biostation_3_max'>
+<Include product='biostation_3,corestation_20,biostation_3_max,vionyx'>
 
 **電源装置と PoE+ 電源を同時に接続しないでください**。
 
@@ -204,7 +234,7 @@
 
 {/* 방수, 방진 가능하지만 케이블 커버 없는 제품만 적용 */}
 
-<Include product='xpass_2,xpass_d2,bioentry_w3,bioentry_w2,xpass_s2,biolite_n2'>
+<Include product='xpass_2,xpass_d2,bioentry_w3,bioentry_w2,xpass_s2,biolite_n2,vionyx'>
 
 **完全に露出した屋外に設置する場合は、筐体の使用を推奨します**。
 
@@ -214,11 +244,41 @@
 
 {/* PoE+ 가능한 제품만 적용 */}
 
-<Include product='biostation_3,corestation_20,biostation_3_max'>
+<Include product='biostation_3,corestation_20,biostation_3_max,vionyx'>
 
 **PoE+ 電源を接続する際は、必ず PoE+ または PoE++ 規格で接続してください**。
 
 * 標準 PoE を使用すると、デバイスが不安定に動作したり、永久的に損傷したりする可能性があります。
+
+</Include>
+
+{/* ViOnyx 전용 */}
+
+<Include product='vionyx'>
+
+**製品を壁面に設置する場合、シリコンなどで製品周囲を密封しないでください**。
+
+* 故障の原因になります。
+
+**設置場所の下に貴重品や破損のおそれがある物がある場合は、事前に片付けてください**。
+
+* 予期せぬ事故につながるおそれがあります。
+
+**製品を取り付けたり取り外したりする際は、必ず保護手袋を着用してください**。
+
+* 作動中に熱くなった機器の表面に触れてやけどをするおそれがあります。
+
+**過度の力を加えて製品を無理に組み立てたり取り付けたりしないでください**。
+
+* 製品の破損や誤作動の原因となります。
+
+**化学物質や蒸気が発生する環境にはカメラを設置しないでください**。 **調理用油の成分も製品の破損や変形を引き起こす可能性があるため、キッチン周辺には設置しないでください**。
+
+* 製品に重大な物理的損傷を引き起こす原因となります。
+
+**製品を設置する際は、外観に化学溶液が付着しないよう注意してください**。
+
+* 一部の洗剤や接着剤などの成分を含む化学溶剤は、表面に深刻な損傷を与えるおそれがあります。
 
 </Include>
 
@@ -242,7 +302,7 @@
 
 {/* LCD 화면, 키패드가 있는 제품에만 적용 */}
 
-<Xclude product='corestation_40,corestation_20,bioentry_w3,doorinterface,bioentry_w2,doormodule,inputmodule,outputmodule,securemodule,xpass_s2,enclosure,extendedmodule,extendedmodule_sc,xpass_q2'>
+<Xclude product='corestation_40,corestation_20,bioentry_w3,doorinterface,bioentry_w2,doormodule,inputmodule,outputmodule,securemodule,xpass_s2,enclosure,extendedmodule,extendedmodule_sc,xpass_q2,vionyx'>
 
 **パスワードが他人に知られないように管理し、定期的に変更してください**。
 
@@ -294,7 +354,21 @@
 
 * 故障の原因になります。
 
-<Xclude product='input_module,output_module,door_module,securemodule,corestation_20,doorinterface,doormodule,inputmodule,outputmodule,xpass_s2,enclosure,extendedmodule,extendedmodule_sc'>
+{/* ViOnyx 전용 */}
+
+<Include product='vionyx'>
+
+**指定されていない工具を使用して無理に操作しないでください**。
+
+* 製品の破損や誤作動の原因となります。 必ず規格に合った工具を使用してください。
+
+**取扱説明書に記載されていない方法で製品を設置したり分解したりしないでください**。
+
+* 製品の正常な機能および性能は保証できません。
+
+</Include>
+
+<Xclude product='input_module,output_module,door_module,securemodule,corestation_20,doorinterface,doormodule,inputmodule,outputmodule,xpass_s2,enclosure,extendedmodule,extendedmodule_sc,vionyx'>
 
 :::note
 

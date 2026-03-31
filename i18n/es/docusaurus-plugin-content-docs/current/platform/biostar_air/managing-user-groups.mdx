@@ -1,0 +1,137 @@
+---
+id: managing-user-groups
+title: Administrar Grupos de Usuarios
+description: Esta guía explica cómo crear, organizar y administrar grupos y subgrupos de usuarios para clasificar a los usuarios de manera eficiente y controlar el acceso en BioStar Air.
+keywords:
+  - Gestión Usuarios
+  - BioStar Air
+  - Grupo usuario
+---
+
+Utiliza los grupos de usuarios para clasificar y gestionar usuarios por departamento, rol, ubicación y más. Los grupos de usuarios de BioStar Air no son jerárquicos, por lo que un usuario puede pertenecer a varios grupos al mismo tiempo; esto te permite combinar libremente grupos de departamento, rol y ubicación. Los grupos te permiten administrar los niveles de acceso de forma centralizada y manejar de manera eficiente el filtrado de registros de eventos, la generación de informes y la asignación de dispositivos a zonas de reunión.
+
+:::tip
+
+Consulta el siguiente video para ver la guía sobre cómo gestionar grupos de usuarios.
+
+<YouTube className='fit--content' videoId="sNxu5pQuOsI" />
+
+:::
+
+## Antes de Comenzar
+
+### Composición del grupo de usuarios
+
+Los grupos de usuarios no están organizados de forma jerárquica.
+
+* Los usuarios en un subgrupo **no** aparecen automáticamente en el grupo principal.
+
+* El recuento total de usuarios del grupo principal no incluye a los miembros del subgrupo a menos que se los agregue manualmente.
+
+* Al seleccionar un subgrupo, se muestran únicamente los usuarios asignados a ese subgrupo.
+
+### Configurar múltiples grupos de usuarios
+
+Los usuarios en BioStar Air pueden pertenecer a **múltiples grupos de usuarios**.
+
+En BioStar 2, los grupos de usuarios normalmente estaban vinculados a un único departamento. BioStar Air los separa, lo que permite un uso más dinámico.
+
+* Filtra la lista de usuarios por grupo para administrar rápidamente los niveles de acceso.
+
+  > p. ej., departamento de Recursos Humanos
+
+* Crea grupos específicos que abarquen varios departamentos.
+
+  > p. ej., vestuario masculino
+
+* Los grupos de usuarios se utilizan para el **filtrado de registros de eventos** y la **generación de informes**.
+
+* Asigna grupos de usuarios a dispositivos o a grupos de dispositivos de la **zona de reunión** para aplicar protocolos de seguridad específicos.
+
+Esta flexibilidad facilita la gestión de roles de usuario superpuestos y de escenarios de acceso.
+
+## Crear grupo {#creatingUserGroup}
+
+### Crear grupo de usuarios
+
+Crear un nuevo grupo de usuarios.
+
+1. Haz clic en <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" /> en la barra lateral izquierda.
+
+   <Image src='/img/air/bsair-gettingstarted-user-group-mng.png' />
+
+2. Haz clic en <Cmd sid="add_user_group_btn" product="air" /> en la parte superior derecha de la pantalla.
+
+3. Cuando aparezca la ventana <Cmd sid="add_user_group_popup_title" product="air" />, ingresa el nombre del grupo de usuarios.
+
+   <Image src='/img/air/bsair-gettingstarted-user-group-mng-add.png' />
+
+4. Haga clic en <Cmd sid='manage_grops_ok_btn' product='air' /> para crear el grupo.
+
+:::info
+
+* Eliminar un grupo no elimina a los usuarios que contiene. Solo se les quita la pertenencia al grupo.
+
+* Para obtener más información sobre cómo asignar usuarios a grupos, consulte <DocLink docId='platform/biostar_air/user-management-user-list#manageUserGroups' />.
+
+:::
+
+### Crear subgrupo {#creatingSubgroup}
+
+Puede usar subgrupos para clasificar aún más los grupos de usuarios. Sin embargo, los subgrupos **no son jerárquicos**. Esto significa que los usuarios de un subgrupo no se incluyen automáticamente en el grupo principal.
+
+1. Haz clic en <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haz clic en <Cmd sid="add_user_group_btn" product="air" /> en la parte superior derecha de la pantalla.
+
+3. Cuando aparezca la ventana <Cmd sid="add_user_group_popup_title" product="air" />, haz clic en la opción <Cmd sid="add_sub_group_text" product="air" />.
+
+   <Image src='/img/air/bsair-user-sub-group-popup.png' />
+
+4. En <Cmd sid="select_group_placeholder" product="air" />, seleccione el grupo principal.
+
+5. Ingrese el nombre del grupo en <Cmd sid='user_subgroup_name_input' product='air' />.
+
+6. Haz clic en <Cmd sid='manage_grops_ok_btn' product='air' /> para crear el subgrupo.
+
+El subgrupo recién creado aparece con sangría debajo del grupo principal en la lista de grupos de usuarios.
+
+<Image src='/img/air/bsair-user-sub-group-list.png' />
+
+## Editar nombre del grupo {#editGroupName}
+
+Modifica el nombre de un grupo de usuarios existente.
+
+1. Haz clic en <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Marca la casilla del grupo de usuarios que deseas editar en la lista.
+
+3. Haz clic en <IcAirEdit title='Edit' /> en la parte superior izquierda de la lista de grupos de usuarios.
+
+   <Image src='/img/air/bsair-user-group-edit.png' />
+
+4. Cuando aparezca la ventana <Cmd sid="edit_user_group_btn" product="air" />, edita el nombre del grupo.
+
+   <Image src='/img/air/bsair-user-group-edit-popup.png' />
+
+5. Haz clic en <Cmd sid='manage_grops_ok_btn' product='air' /> para guardar los cambios.
+
+:::info
+
+El nombre del grupo solo se puede editar cuando se selecciona un único grupo.
+
+:::
+
+## Eliminar grupo {#deleteGroup}
+
+Elimina los grupos de usuarios que ya no sean necesarios.
+
+1. Haz clic en <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_groups_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Marca la casilla del grupo de usuarios que deseas eliminar en la lista.
+
+3. Haz clic en <IcAirRemove title='Delete' /> en la parte superior izquierda de la lista de grupos de usuarios.
+
+   <Image src='/img/air/bsair-user-group-remove.png' />
+
+4. Cuando aparezca un mensaje de advertencia, haz clic en <Cmd sid='user_group_yes_btn' product='air' />.

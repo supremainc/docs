@@ -1,0 +1,119 @@
+---
+id: user-card-types
+title: ユーザーのカードとクレデンシャルの種類
+description: BioStar Air 2.6 以上でサポートされるユーザーの種類（一般／一時）と各種類のクレデンシャルについて説明します。 一般ユーザーは Mobile Card、RF Card、QRコード、LinkPass、Face、PIN を使用でき、一時ユーザーはウェブベースの Dynamic QR Code と LinkPass を使用できます。
+keywords:
+  - ユーザー管理
+  - BioStar Air
+  - ユーザーのカードタイプ
+---
+
+BioStar Air 2.6 以降、ユーザー管理を改善するために2種類のユーザータイプが導入されました。
+
+* <Cmd sid='user_regular_card_type' product='air' />：組織または施設の正規メンバーで、長期かつ継続的な入退室権限が必要なユーザーです。 すべてのクレデンシャルタイプを発行できます。
+
+* <Cmd sid='user_temporary_card_type' product='air' />: 短期かつ限定的な入退室権限を必要とする訪問者または非正規メンバーです。 ゲスト、外部来訪者、短期契約者、配達員などが該当します。 <Cmd sid='user_form_input20' product='air' /> のクレデンシャルのみ発行でき、QRコードとLinkPassが含まれます。
+
+:::info
+
+ユーザーを追加または編集する際のクレデンシャル発行に関する詳細は、<DocLink docId='platform/biostar_air/adding-individual-users#issuingCredentials' />を参照してください。
+
+:::
+
+:::tip
+
+ユーザーとカードの種類に関するビデオガイドを視聴するには、以下の動画を参照してください。
+
+<YouTube className='fit--content' videoId="xTxIzG-30S0" />
+
+:::
+
+## 一般ユーザーのカードタイプ {#regular-user-card-typs}
+
+一般ユーザーに発行できるクレデンシャルの種類は以下の通りです。
+
+:::info
+
+Suprema Pass アプリでのモバイルクレデンシャルの使い方については、<DocLink docId='platform/biostar_air/opening-doors-with-mobile-credentials' />を参照してください。
+
+:::
+
+### <Cmd sid='card_type_mobile' product='air' className='normal' /> {#mobileCard}
+
+* 固有の **カードID** は自動割り当てされますが、手動で設定することもできます。
+
+* **Airfob Tag** または **Airfob Patch** を使用する場合、モバイルカード番号をカードのシリアル番号として使用し、既存の出入管理システムと統合できます。
+
+* 既存システムとの互換性のため、モバイルカードIDは以前のサイトのRFカード番号と一致させることができます。
+
+### <Cmd sid='card_type_rf' product='air' className='normal' /> {#rfCard}
+
+* ユーザーごとに最大8枚のRFIDカードを追加できます。
+
+* 複数のカードが割り当てられる場合に管理を簡素化するため、<Cmd sid='rf_card_type' product='air' />(CSNまたはWiegand)、<Cmd sid='wiegand_card_id' product='air' />、および <Cmd sid='rf_card_name' product='air' /> を構成できます。
+
+* 接続されたSupremaデバイスを使用して既存のRFIDカードをスキャンするには、<Cmd sid='newest_rf_card_text_device' product='air' /> 項目でリーダーを選択してください。
+
+* 既存のRFカードに **CSN**（カードシリアル番号）がある場合、CSNを手動で入力できます。
+
+### <Cmd sid='card_type_option3' product='air' className='normal' /> {#qrCode}
+
+* 一般ユーザーはモバイルカードの **QRコード** を使用できます。
+
+* QRコードはモバイルカードのインターフェースのボタンを押して使用できます。
+
+### <Cmd sid='card_type_option4' product='air' className='normal' /> {#linkPass}
+
+* ユーザーのメールまたは携帯電話番号にウェブリンクを送信します。
+
+* ユーザーは受け取ったリンクをウェブブラウザで開き、<Cmd sid='web_card_preview_button1' product='air' /> ボタンをクリックして入退室できます。
+
+:::info
+
+LinkPass クレデンシャルの詳細については、<DocLink docId='platform/biostar_air/linkpass-credentials' />を参照してください。
+
+:::
+
+### 顔認証 {#face}
+
+* ユーザーごとに最大2つの顔プロファイル画像を追加できます。
+
+* 接続されたリーダーまたは画像アップロードで登録できます。
+
+* ユーザーにメールリンクを送信した後、モバイル端末のカメラで写真を撮影して登録できます。
+
+### PIN {#pin}
+
+4～16桁のPINを設定し、2段階認証（2FA）の一部として使用できます。
+
+## 一時ユーザーのカードタイプ {#temporary-user-card-typs}
+
+一時ユーザーはモバイルまたはRFIDカードを受け取りません。 代わりに、アプリのダウンロードが不要な **ウェブベースのクレデンシャル** を発行できます。 利用できるオプションは以下の通りです。
+
+### <Cmd sid='card_type_option3' product='air' className='normal' /> {#TempQrCode}
+
+* メールまたはSMSで送信します。
+
+* ウェブブラウザでアクセスできます。
+
+* セキュリティを強化するため、5分ごとに更新される **Dynamic QR Code**（動的QRコード）を使用します。
+
+### <Cmd sid='card_type_option4' product='air' className='normal' /> {#TempLinkPass}
+
+メールまたはSMSでウェブリンクをユーザーに送信します。 ユーザーはウェブブラウザで<Cmd sid='web_card_preview_button1' product='air' /> ボタンをクリックすると入退室できます。
+
+:::info
+
+LinkPass クレデンシャルの詳細については、<DocLink docId='platform/biostar_air/linkpass-credentials' />を参照してください。
+
+:::
+
+## アクセスレベルの管理 {#managing-access-levels}
+
+一般ユーザーであれ一時ユーザーであれ、**アクセスレベル**を設定してクレデンシャルが許可される場所を制御する必要があります。
+
+:::caution
+
+一時ユーザーの場合は、制限されたアクセスレベルを慎重に割り当て、無制限のアクセス権が付与されたクレデンシャルを付与しないよう注意してください。
+
+:::

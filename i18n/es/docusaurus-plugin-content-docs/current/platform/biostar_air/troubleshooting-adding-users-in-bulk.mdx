@@ -1,0 +1,178 @@
+---
+id: troubleshooting-adding-users-in-bulk
+title: Solución de problemas al agregar usuarios en masa
+description: Aprenda a solucionar problemas comunes al agregar usuarios en masa desde el portal BioStar Air.
+keywords:
+  - Solución de Problemas
+  - usuarios masivos
+  - BioStar Air
+---
+
+Varios clientes y socios han informado problemas al agregar listas de usuarios en masa. La mayoría de estos problemas se deben a archivos CSV con formato incorrecto. Siga exactamente las instrucciones a continuación para asegurarse de que la función de adición masiva funcione como se espera.
+
+:::info
+
+A partir de la versión v2.10, BioStar Air genera un informe de validación cuando se carga un archivo CSV que contiene entradas no válidas. Corrija los errores y vuelva a cargar el archivo.
+
+<Image src='/img/air/bsair-add-bulk-import-user-csv-error.png' />
+
+:::
+
+## Preparar el archivo CSV
+
+### Descargar la plantilla CSV
+
+1. Vaya a <Cmd sid="user_menu" product="air" /> → <Cmd sid="user_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haga clic en <Cmd sid="add_user_btn" product="air" /> → <Cmd sid="user_actions_import_title" product="air" /> en la esquina superior derecha de la pantalla.
+
+3. Cuando aparezca el panel <Cmd sid="user_actions_import_title" product="air" />, haga clic en <Cmd sid="user_actions_import_download_btn_text" product="air" />.
+
+4. Guarde el archivo de plantilla CSV (*biostar-import-user-csv-example.csv*) localmente.
+
+### Usar el formato exacto de la plantilla CSV
+
+* **No agregue ni elimine columnas manualmente**. Una columna inesperada puede causar un error.
+
+* Si necesita incluir campos adicionales (por ejemplo, ID de empleado o departamento), utilice la función <Cmd sid='user_setting_templ_action' product='air' />(<IcAirUtemplate />) en la parte superior de la lista de usuarios para agregarlos. Cuando se agrega un campo, el archivo CSV descargado incluye automáticamente la columna correspondiente.
+
+Ingrese los datos correctamente consultando los requisitos de cada columna.
+
+#### <Cmd sid='user_csv_example_header1' product='air' className='normal' />
+
+* Un ID numérico único para cada usuario.
+
+* La columna <Cmd sid="user_csv_example_header1" product="air" className="bold" /> **puede dejarse en blanco**, y el sistema asigna un valor automáticamente.
+
+* Si ingresa los ID de usuario manualmente
+
+  * Utilice **solo números**. 
+
+  * Utilice un **valor único**.
+
+  * No incluya letras, espacios, guiones ni caracteres especiales.
+
+:::caution
+
+Si debe usar un ID de empleado específico de la empresa que incluya letras, no utilice el campo <Cmd sid="user_csv_example_header1" product="air" className="bold" />. En su lugar, cree un campo de usuario personalizado con la función <Cmd sid="user_setting_templ_action" product="air" />.
+
+:::
+
+#### <Cmd sid='user_csv_example_header7' product='air' className='normal' />
+
+* Utilice un formato de correo electrónico válido. Consulte las [fórmulas de validación](#excelFormulas) para verificar el formato del correo electrónico.
+
+  * No se permiten espacios.
+
+  * Debe incluir el signo arroba (`@`).
+
+  * El dominio debe incluir un punto (`.`) y un dominio de nivel superior.
+
+    > Ejemplo: example.com, gmail.com, suprema.co.kr
+
+  * No debe haber ningún punto adicional después de la dirección.
+
+  * No se permiten caracteres especiales ni ocultos.
+
+  * Debe ser una dirección de correo electrónico. Pueden aparecer errores como 'Not provided'.
+
+* La dirección de correo electrónico **debe ser única**. No se permiten duplicados ni en el archivo ni entre los usuarios existentes.
+
+* Se requiere una dirección de correo electrónico para emitir las credenciales que aparecen a continuación.
+
+  * <Cmd sid='card_type_mobile' product='air' />
+
+  * <Cmd sid='card_type_option3' product='air' />
+
+  * <Cmd sid='card_type_option4' product='air' />
+
+* Los usuarios que solo tienen una tarjeta RFID no necesitan proporcionar una dirección de correo electrónico.
+
+#### <Cmd sid='user_csv_example_header8' product='air' className='normal' />
+
+* Proporcionar un número de teléfono es opcional cuando la credencial no se entrega vía SMS.
+
+* Al igual que la dirección de correo electrónico, el número de teléfono **debe ser único** y no se permiten duplicados ni en el archivo ni entre los usuarios existentes.
+
+* Utilice el correo electrónico para enviar las credenciales cuando sea posible. Los SMS generan cargos adicionales.
+
+#### Fechas (<Cmd sid="user_csv_example_header5" product="air" className="normal" /> / <Cmd sid="user_csv_example_header6" product="air" className="normal" />)
+
+Todos los campos de fecha deben seguir exactamente el formato que se muestra a continuación.
+
+```plaintext
+YYYY-MM-DDTHH:MM:SS.sssZ
+
+Example:
+1995-05-09T00:00:00.000Z
+```
+
+Incluso pequeñas diferencias—por ejemplo, omitir la 'Z', usar barras (`/`) en lugar de guiones (`—`), o no incluir la hora—pueden causar que la carga falle.
+
+#### Requisitos de credenciales
+
+| Tipo de credencial          | Correo electrónico o número de teléfono |
+| --- | --- |
+| Solo <Cmd sid='card_type_rf' product='air' /> | No.                       |
+| <Cmd sid='card_type_mobile' product='air' /> / <Cmd sid='card_type_option3' product='air' /> / <Cmd sid='card_type_option4' product='air' /> | Sí, se requiere una.    |
+
+* Las credenciales deben entregarse a una dirección de correo electrónico o a un número de teléfono.
+
+* Se pueden proporcionar ambos, pero las **credenciales móviles** requieren al menos uno.
+
+* El correo electrónico es gratuito. Los SMS generan cargos.
+
+## Fórmulas de Excel para la prevalidación {#excelFormulas}
+
+Antes de cargar los datos, utilice las siguientes fórmulas en las **columnas auxiliares** para verificar los datos.
+
+### Validación de correos electrónicos o números de teléfono duplicados
+
+```excel-formula title="Detect Duplicate Emails or Phone Numbers"
+=IF(E2="", "", IF(COUNTIF(E$2:E2, E2)>1, "Duplicate", "First Occurrence"))
+```
+
+### Validación del formato de fecha
+
+```excel-formula title="Validate ISO 8601 Date Format (Column Q)"
+=IF(Q2="", "", IF(AND(LEN(Q2)=24, 
+  ISNUMBER(VALUE(MID(Q2,1,4))), MID(Q2,5,1)="-", 
+  ISNUMBER(VALUE(MID(Q2,6,2))), MID(Q2,8,1)="-", 
+  ISNUMBER(VALUE(MID(Q2,9,2))), MID(Q2,11,1)="T", 
+  ISNUMBER(VALUE(MID(Q2,12,2))), MID(Q2,14,1)=":", 
+  ISNUMBER(VALUE(MID(Q2,15,2))), MID(Q2,17,1)=":", 
+  ISNUMBER(VALUE(MID(Q2,18,2))), MID(Q2,20,1)=".", 
+  ISNUMBER(VALUE(MID(Q2,21,3))), RIGHT(Q2,1)="Z"), 
+  "Valid", "Invalid"))
+```
+
+### Validación del formato de correo electrónico
+
+```excel-formula title="Validate Email Format (Column E)"
+=IF(TRIM(E2)="", "", IF(AND(
+  ISNUMBER(FIND("@", E2)),
+  ISNUMBER(FIND(".", E2)),
+  FIND("@", E2) > 1,
+  FIND(".", E2, FIND("@", E2)) > FIND("@", E2) + 1,
+  LEN(E2) - LEN(SUBSTITUTE(E2, "@", "")) = 1,
+  ISERROR(FIND(" ", E2))
+), "Valid", "Invalid"))
+```
+
+## ¿Aparecen errores? {#common-errors}
+
+* ¿Descargó la plantilla correcta y no agregó columnas adicionales?
+
+* ¿Se han completado todos los campos obligatorios para los usuarios que recibirán una credencial móvil?
+
+* ¿La dirección de correo electrónico y el número de teléfono son únicos tanto en el archivo como entre los usuarios existentes?
+
+* ¿Los formatos de fecha y de correo electrónico son correctos según lo indicado arriba?
+
+:::info
+
+* El equipo de soporte no ofrece edición de archivos. Si el archivo no se sube, utilice las herramientas de validación anteriores para identificar y resolver el problema.
+
+* Este documento está diseñado para permitir cargas exitosas sin intervención manual por parte del equipo de soporte.
+
+:::

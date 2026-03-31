@@ -1,0 +1,102 @@
+---
+id: api-authentication
+title: API 인증하기
+description: BioStar Air Cloud API 인증 흐름, API Base URL 목록, Bearer 토큰 발급 및 브라우저에서 토큰을 얻는 방법을 안내합니다.
+keywords: [API 인증, Bearer 토큰, API Base URL, BioStar Air]
+---
+
+BioStar Air Cloud API는 Bearer 토큰(JWT) 기반 인증을 사용합니다. API를 호출하기 전에 로그인 절차를 통해 토큰을 발급받아야 하며, 모든 요청의 Authorization 헤더에 토큰을 포함해야 합니다.
+
+
+## API Base URLs {#api-base-urls}
+
+| 환경 | Base URL |
+| --- | --- |
+| Demo | https://demo-afs-api.airfob.com/v1/ |
+| Production - Europe | https://e-afs-api.airfob.com/v1/ |
+| Production - Korea | https://a-afs-api.airfob.com/v1/ (EU가 아닌 모든 고객 전용) |
+
+
+## API 로그인 절차 {#api-login-flow}
+
+[Postman](https://www.postman.com/) 또는 프로그래밍 방식으로 API 호출을 수행할 수 있습니다.
+
+### 로그인 {#login}
+
+* **Endpoint**: `login`
+
+* **Payload**:
+
+  ```json
+  {
+    "username": "your_email",
+    "password": "your_password"
+  }
+  ```
+
+Bearer 토큰(JWT)을 반환합니다.
+
+
+### 계정 정보 조회 {#get-self-accounts}
+
+* **Endpoint**: `getSelfAccounts`
+
+* **Authorization**: Bearer Token
+
+접근 가능한 사이트 및 계정 목록을 반환합니다.
+
+
+### 계정에 로그인 {#login-to-account}
+
+* **Endpoint**: `loginAccount`
+
+* **Authorization**: Bearer Token
+
+특정 사이트 토큰을 반환합니다.
+
+
+## 웹 브라우저에서 Bearer 토큰 얻는 방법 {#getYourBearerToken}
+
+Postman 없이 브라우저 개발자 도구를 사용해 Bearer 토큰을 직접 얻을 수 있습니다.
+
+### Chrome/Edge (Windows 또는 Mac) {#chrome-edge}
+
+1. 웹 브라우저에서 <Kbd>F12</Kbd> 또는 <Kbd>Ctrl/Cmd + Shift + I</Kbd>를 누르세요.
+
+1. **Network** 탭으로 이동하세요.
+
+1. 페이지를 새로 고침하세요.
+
+1. API 호출을 검색하세요.
+
+   > 예, `groups`, `login`
+
+1. 목록에서 요청을 클릭하세요.
+
+1. **Headers** 탭으로 이동하세요.
+
+1. 요청 헤더에서 `Authorization: Bearer ...`를 찾으세요.
+
+1. 오른쪽 마우스를 클릭하여 토큰을 복사하세요.
+
+<Image src='/img/air/bsair-chrome-develope.png' alone />
+
+### Safari (Mac) {#safari}
+
+1. **개발자** 메뉴를 활성화하세요. Safari → Preferences → Advanced → **Show Develop menu**를 체크하세요.
+
+1. **Develop** → **Show Web Inspector**으로 이동하세요.
+
+1. **Network** 탭으로 이동하세요.
+
+1. 페이지를 새로 고침하세요.
+
+1. API 호출을 필터링하고 검사하세요.
+
+1. 요청 헤더에서 `Authorization: Bearer` 토큰을 복사하세요.
+
+:::info
+
+브라우저에서 복사한 Bearer 토큰은 Postman에서 재사용할 수 있습니다. 항상 최신 토큰을 사용하세요.
+
+:::

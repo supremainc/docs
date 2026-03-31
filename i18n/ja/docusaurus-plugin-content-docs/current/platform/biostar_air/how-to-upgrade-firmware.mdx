@@ -1,0 +1,114 @@
+---
+id: how-to-upgrade-firmware
+title: ファームウェアをアップグレードする
+description: ウェブポータルとモバイルアプリを使って装置のファームウェアを一括または個別にアップグレードする方法を案内します。 BioStar Airのバージョン確認とトラブルシューティングのヒントも含まれます。
+keywords:
+  - ファームウェア
+  - アップグレード
+  - BioStar Air
+---
+
+BioStar Airのファームウェアをアップグレードして装置のパフォーマンスを向上させ、セキュリティを強化し、新機能を活用できます。 この手順は簡単で、BioStar AirのウェブポータルまたはBioStar Airのモバイルアプリから実行できます。
+
+:::info
+
+BioStar Air モバイルアプリでファームウェアをアップグレードするには、<DocLink docId='platform/biostar_air/manage-device-with-app#upgradingFirmwareViaMobileApp' />をご参照ください。
+
+:::
+
+## 開始する前に
+
+* ファームウェアをアップデートするには、装置が**オンライン状態**である必要があります。 <Cmd sid='device_product_column' product='air' /> 列で装置の状態を確認してください。 装置の画像の横に緑の点(<StatusOK />)が表示されていればオンライン状態です。
+
+* ファームウェア更新中はデバイスが**一時的にオフライン状態**になりますが、**3\~5分**以内に再接続されます。
+
+* ファームウェア更新中は装置が一時的にオフラインになりますので、業務時間外に実施することをおすすめします。
+
+* 新しいファームウェアがアップデートされると通知を受け取るよう設定できます。 通知設定の詳細は、<DocLink docId='platform/biostar_air/settings-alert-report#addAlert' />をご参照ください。
+
+:::info
+
+装置管理の詳細は、<DocLink docId='platform/biostar_air/managing-registered-devices' />をご参照ください。
+
+:::
+
+## 個別の装置のファームウェアアップグレード {#upgradingFirmwareAdeviceViaWebPortal}
+
+<Tabs groupId='platform'>
+<TabItem value='web' label='Web'>
+
+[BioStar Air](https://admin.biostarair.com) ポータルにログインした後、次の手順に従ってファームウェアをアップグレードします。
+
+1. 画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。
+
+2. 装置一覧でアップグレードする装置をクリックします。
+
+3. <Cmd sid='device_edit_title' product='air' /> ウィンドウが表示されたら、<Cmd sid='new_layout_nav_title_detail' product='air' /> セクションに移動してください。
+
+4. <Cmd sid='firmware_update_btn' product='air' /> をクリックします。
+
+   <Image src='/img/air/bsair-device-mng-fw-upgrade.png' caption />
+
+5. 装置に応じて最新のファームウェアバージョンを選択し、更新を確認してください。
+
+</TabItem>
+<TabItem value='mobile' label='Mobile'>
+
+モバイルアプリでのファームウェアアップグレード手順を説明します。
+
+<Image src='/img/air/bsair-mobile-device-fw-update.png' className='none' />
+
+1. モバイル端末でBioStar Airアプリを起動してログインします。
+
+2. <Cmd sid='devices_card' product='air' /> カードをタップします。
+
+3. 装置一覧でアップグレードする装置をタップします。
+
+4. <Cmd sid='firmware_update_btn' product='air' /> をタップします。
+
+5. 最新のファームウェアバージョンを選択して <Cmd sid='btn_ok' product='air' /> をタップします。
+
+6. メッセージウィンドウが表示されたら、内容を確認して <Cmd sid='device_btn_confirm' product='air' /> をタップしてください。
+
+:::info
+
+* ファームウェアのアップグレードには約5〜10分かかる場合があり、その間装置は使用できません。
+
+* 装置の電源を切らないでください。
+
+* ファームウェアアップグレード完了後、装置は自動的に再起動します。
+
+:::
+
+</TabItem>
+</Tabs>
+
+## 複数の装置を一括でアップグレード {#upgradingFirmwareInBulkViaWebPortal}
+
+1. 画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。
+
+2. 装置一覧の <Cmd sid='device_fw_column' product='air' /> 列で各装置の現在のバージョンを確認します。
+
+3. 装置をファームウェアバージョンごとに並べ替えるには、<Cmd sid='device_fw_column' product='air' /> 列の右側にある矢印ボタンをクリックします。
+
+   <Image src='/img/air/bsair-device-mng-list-fw-column-align.png' />
+
+4. アップグレードする各装置の左側にあるチェックボックスをクリックします。
+
+5. 装置一覧の上部にある <IcAirFw width='24px' height='24px' title='Update Firmware' /> ボタンをクリックしてください。
+
+   <Image src='/img/air/bsair-device-mng-list-fw-update.png' />
+
+6. <Cmd sid='update_fw_text' product='air' /> ウィンドウが表示されたら、最新のファームウェアバージョンを選択して <Cmd sid='btn_ok' product='air' /> をクリックします。
+
+7. メッセージウィンドウが表示されたら、内容を確認して <Cmd sid='device_btn_confirm' product='air' /> をクリックしてください。
+
+:::info
+
+* ファームウェアのアップグレードには約5〜10分かかる場合があり、その間装置は使用できません。
+
+* 装置の電源を切らないでください。
+
+* ファームウェアアップグレード完了後、装置は自動的に再起動します。
+
+:::

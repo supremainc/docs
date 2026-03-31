@@ -1,0 +1,161 @@
+---
+id: suprema-pass-app-advanced-features
+title: 高度な機能の設定
+description: Suprema PassアプリでBluetoothおよびNFC認証モードの構成方法、PINまたは生体認証オプションによる2段階認証の設定方法、アクセスログの確認方法、サポート機能の利用方法を案内します。
+keywords:
+  - 高度な機能
+  - uprema Passアプリ
+  - 2段階認証
+  - アクセスログ
+  - サポートオプション
+---
+
+Suprema Passアプリは、ユーザー体験と入退室管理機能を向上させるための高度な設定とセキュリティオプションを含みます。 ユーザーは認証方法の構成、2段階認証の有効化、アクセスログの確認、問題の報告およびサポート機能の利用ができます。
+
+## 接続方式の設定 {#connectingSetting}
+
+ユーザーは入退室管理機器との通信で使用する接続方式を選択できます。 Suprema Passアプリの初期画面で右上の <IcHamberg title='Hamburger menu' /> アイコンをタップし、<Cmd>接続方式</Cmd>から希望のモードを選んでください。
+
+<Image src='/img/air/bsair-sp-app-set-connection-mode.png' width='50%' className='none' />
+
+### Bluetooth {#bluetooth}
+
+ユーザーは2つのBluetooth認証モードから選択できます。
+
+* <Cmd>アプリ起動時</Cmd>: モバイル端末でアプリが開いているときのみモバイルカードで認証できます。 このモードはバッテリーを節約しますが、ドアに近づく前に手動でアプリを起動する必要があります。
+
+* <Cmd>バックグラウンドモード</Cmd>: アプリがバックグラウンドで実行されている場合、端末の画面がオフでもモバイルカードで認証できます。 このモードはより便利ですが、バッテリーをより消費します。 アプリが終了した場合、バックグラウンド機能を再開するためにアプリを再起動する必要があります。
+
+### NFC {#nfc}
+
+NFC認証はAndroid端末でのみ利用できます。 ユーザーは迅速な入退室のためにNFCを単独で使用するか、Bluetoothと併用できます。
+
+:::info
+
+NFC対応端末を使用するAndroidユーザーは、Bluetoothと併用してNFCを使用できます。
+
+:::
+
+## 二段階認証(2FA) {#twoFactorAuth}
+
+追加のセキュリティのために、ユーザーは**PIN、パターン、または生体認証**（顔または指紋）を使用して二段階認証を有効にできます。
+
+<Image src='/img/air/bsair-sp-app-set-twofactor.png' className='none' />
+
+:::info
+
+* この機能は入退室認証時にアプリ画面が開いている必要があるため、<Cmd>バックグラウンドモード</Cmd>の接続方式ではサポートされません。
+
+* PINまたはパターンを忘れた場合は、アプリを再インストールしてモバイルカードを再有効化する必要があります。
+
+* 端末によってサポートされる機能は異なる場合があります。
+
+:::
+
+### iOSユーザー {#ios}
+
+1. Suprema Passアプリの初期画面で右上の <IcHamberg title='Hamburger menu' /> アイコンをタップしてください。
+
+2. 接続方式を<Cmd>アプリ起動時</Cmd>に設定してください。
+
+3. <Cmd>二段階認証</Cmd>をタップしてください。
+
+4. <Cmd>PIN番号登録</Cmd>をタップしてください。
+
+5. 6桁のPIN番号を入力してください。
+
+6. 成功の通知メッセージが表示されたら、<Cmd>OK</Cmd>をタップしてください。
+
+:::info
+
+* PIN番号を変更するには、<Cmd>PIN番号変更</Cmd>をタップしてから新しいPIN番号を入力してください。
+
+* 生体認証機能を使用するには、<Cmd>生体認証</Cmd>を有効にして設定の案内に従ってください。
+
+:::
+
+### Androidユーザー {#android}
+
+1. Suprema Passアプリの初期画面で右上の <IcHamberg title='Hamburger menu' /> アイコンをタップしてください。
+
+2. 接続方式を<Cmd>アプリ起動時</Cmd>または<Cmd>NFC</Cmd>に設定してください。
+
+3. <Cmd>二段階認証</Cmd>をタップしてください。
+
+4. <Cmd>PIN番号</Cmd> → <Cmd>PIN番号登録</Cmd> または <Cmd>パターン</Cmd> → <Cmd>パターン登録</Cmd> をタップしてください。
+
+5. 選択したPIN番号またはパターンを入力してください。
+
+6. 成功の通知メッセージが表示されたら、<Cmd>OK</Cmd>をタップしてください。
+
+:::info
+
+* PIN番号を変更するには、<Cmd>PIN番号変更</Cmd>をタップしてから新しいPIN番号を入力してください。
+
+* パターンを変更するには、<Cmd>パターン変更</Cmd>をタップしてから新しいパターンを入力してください。
+
+* 生体認証機能を使用するには、<Cmd>生体認証</Cmd>を有効にして設定の案内に従ってください。
+
+:::
+
+## アクセスログ {#accesslogs}
+
+アクセス記録を通じてユーザーの入退室の試行を追跡し、入退室に関する問題を解決できます。
+
+<Image src='/img/air/bsair-sp-app-set-access-log.png' className='none' />
+
+1. Suprema Passアプリの初期画面で右上の <IcHamberg title='Hamburger menu' /> アイコンをタップしてください。
+
+2. <Cmd>出入記録</Cmd>をタップしてください。
+
+3. サイトを選択し、開始日と終了日を設定してください。
+
+4. <Cmd>検索</Cmd>ボタンをタップしてください。
+
+## サポートセンター {#supportCenter}
+
+追加サポートが必要なユーザーは、<Cmd>サポートセンター</Cmd>に入り、支援を受けることができます。
+
+<Image src='/img/air/bsair-sp-app-set-support.png' className='none' />
+
+1. Suprema Passアプリの初期画面で右上の <IcHamberg title='Hamburger menu' /> アイコンをタップしてください。
+
+2. <Cmd>その他</Cmd>をタップしてください。
+
+3. <Cmd>サポートセンター</Cmd>をタップしてください。
+
+4. **Suprema Technical Support**ページに移動します。
+
+:::note
+
+* 疑問点を検索するか、よくある質問を確認してください。
+
+* サポートが必要な場合は、右下のチャットアイコンをタップしてMOCAシステムチームにサポートチケットを送信できます。
+
+:::
+
+## 高度な設定
+
+Suprema Passアプリの初期画面で右上の <IcHamberg title='Hamburger menu' /> アイコンをタップし、<Cmd>その他</Cmd> → <Cmd>高度な設定</Cmd>から次の追加機能を利用できます。
+
+<Image src='/img/air/bsair-sp-app-set-advanced.png' className='none' />
+
+* **位置設定**：ユーザーの位置に応じて <Cmd>グローバル</Cmd> または <Cmd>EU</Cmd> サーバーを選択してください。 <Cmd>自動</Cmd>を選択すると、アプリが位置を検出して適切なサーバーを選択します。
+
+* <Cmd>Bluetooth認証</Cmd>：モバイル端末が動いていないときにBluetooth認証が作動しないようにするには、<Cmd>不要なドア開放の防止</Cmd>オプションを有効にしてください。
+
+* <Cmd>感度設定</Cmd>：モバイル端末とBioStar Air対応機器間のBluetooth検出感度を調整できます。 詳細については<DocLink docId='platform/biostar_air/suprema-pass-app-sensitivity-settings' />を参照してください。
+
+## 追加機能 {#additionalFeatures}
+
+Suprema Passアプリの初期画面で右上の <IcHamberg title='Hamburger menu' /> アイコンをタップし、<Cmd>その他</Cmd>から次の追加機能を利用できます。
+
+* <Cmd>テーマ</Cmd>：アプリのカラーモードを設定できます。 <Cmd>ライト</Cmd>、<Cmd>ダーク</Cmd>、<Cmd>システム</Cmd>モードを選択できます。
+
+* <Cmd>バグレポート</Cmd>：エラー発生状況や再現手順などの詳細を記入して開発者にバグレポートを提出できます。
+
+* <Cmd>アプリ詳細</Cmd>：モバイル端末のモデル名、OSバージョン、BLEサポートおよび状態などの関連情報を確認できます。
+
+* <Cmd>アプリライセンス</Cmd>：Suprema Passアプリに適用されるオープンソースライセンス情報を確認できます。
+
+* <Cmd>利用規約</Cmd>：BioStar Airプラットフォームの利用規約を確認できます。

@@ -1,0 +1,182 @@
+---
+id: managing-registered-doors
+title: 登録済みドアの管理
+description: 登録済みのドアに入退室用デバイスを割り当て、リレーを設定して入退室スケジュールを管理します。 セキュリティ、避難、勤怠管理のために入退室を制御できます。
+keywords:
+  - ドア管理
+  - BioStar Air
+---
+
+登録済みのドアに入退室デバイスを割り当て、リレーを構成し、入退室スケジュールを設定します。 セキュリティ、避難、勤怠管理（T&A）のために、体系的に入退室を制御できます。
+
+:::tip
+
+ドアの登録と管理に関するビデオガイドを見るには、次のビデオを参照してください。
+
+<YouTube className='fit--content' videoId="g7fUC-9f0qM" />
+
+:::
+
+## ドア一覧
+
+ドア一覧では、BioStar Airに登録されたすべてのドアを一目で確認できます。 各ドアの名前、割り当てられたデバイス、グループなどの主要な情報を確認できます。 また、各ドアをクリックして詳細を確認し、設定を変更できます。
+
+<Image src='/img/air/bsair-door-mng-registered-door-list.png' />
+
+登録済みドアを確認するには、画面左のサイドバーで <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' /> をクリックします。
+
+### ドア情報
+
+ドア一覧には次の情報が表示されます。
+
+* <Cmd sid='door_status_column1' product='air' />：ドアの名前です。 通常はデバイス登録時に自動で割り当てられ、管理者はドア名を変更できます。
+
+* <Cmd sid='door_product_column2' product='air' />：入室するユーザーを認証するデバイスです。
+
+* <Cmd sid='door_product_column3' product='air' />：退室するユーザーを認証するデバイスです。
+
+* <Cmd sid='door_product_column4' product='air' />：ドアに割り当てられたグループ名です。
+
+* <Cmd sid='door_product_column5' product='air' />：ドアに関する説明です。
+
+* <Cmd sid='door_product_column6' product='air' />：ドアに接続されているカメラ情報が表示されます。 <Cmd sid='door_product_column6' product='air' /> 列は <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> → <Cmd sid='site_setting_qr_reader_tab' product='air' />で <Cmd sid='site_setting_video_management' product='air' /> 機能を有効にする必要があります。
+
+### 追加機能
+
+一覧で1つまたは複数のドアを選択すると、管理者は以下の追加機能を使ってドアを管理できます。
+
+* <IcAirEdit width='24px' height='24px' title='Edit' />：ドア情報を編集したり、割り当てられたデバイスの設定を変更できます。 この機能を使用するには、1つのドアのみを選択する必要があります。 詳細については <DocLink inner='#editingDoors' /> を参照してください。
+
+* <IcAirRef width='24px' height='24px' title='Refresh' />：ドア一覧を更新できます。
+
+* <IcAirRemove width='24px' height='24px' title='Delete' />：一覧で選択したドアを削除します。
+
+* <IcAirSchedule width='24px' height='24px' title='Schedule Settings' />：ドアの開閉状態のスケジュールを設定します。 詳細については <DocLink docId='platform/biostar_air/managing-door-schedules' /> を参照してください。
+
+* <IcAirGroup width='24px' height='24px' title='Manage Groups' />：一覧で選択したドアをグループ化できます。 グループ管理の詳細については <DocLink docId='platform/biostar_air/managing-door-groups' /> を参照してください。
+
+* <IcAirReport width='24px' height='24px' title='Report' />：ドアレポートを生成できます。 レポート作成の詳細については <DocLink inner='#generatingDoorReports' /> を参照してください。
+
+### フィルタリング {#deviceFiltering}
+
+ドア一覧では、ドアグループで絞り込んで表示できます。 <Cmd sid='door_product_column4' product='air' /> 列の <IcAirFilter title='Filter' /> ボタンをクリックして、目的のグループを選択してください。 <Cmd sid='popup_ok_btn' product='air' /> をクリックすると、選択したグループに属するドアのみが表示されます。
+
+<Image src='/img/air/bsair-door-mng-list-filter.png' />
+
+:::info
+
+適用したフィルター条件を初期化するには、<IcAirFilter title='Filter' /> ボタンをクリックし、<Cmd sid='column_filter_modal_reset_btn' product='air' /> ボタンを選択してください。
+
+:::
+
+## ドアの追加 {#addingDoor}
+
+### デバイスと一緒に追加する
+
+モバイルアプリでデバイスを登録する際、最終段階で <Cmd en='Create a door with this device'>このデバイスでドアを作成する</Cmd> オプションを選択すると、ドアが作成されます。 モバイルアプリでデバイスを登録する方法の詳細は、<DocLink docId='platform/biostar_air/manage-device-with-app' /> を参照してください。
+
+<Image src='/img/air/bsair-door-mng-register-device-as-door.png' />
+
+### Webポータルで追加
+
+BioStar Air ポータルで新しいドアを追加するには、次の手順に従ってください。
+
+1. 画面左のサイドバーで <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' /> をクリックしてください。
+
+2. 画面右上の <Cmd sid='add_doors.title' product='air' /> ボタンをクリックします。
+
+3. <Cmd sid='add_doors.title' product='air' /> パネルが表示されたら、<Cmd sid='add_doors.door_name' product='air' /> を入力します。
+
+   <Image src='/img/air/bsair-door-mng-registered-door-add.png' />
+
+4. <Cmd sid='door_product_column2' product='air' /> と <Cmd sid='door_product_column3' product='air' /> を選択します。
+
+5. ドア設定を保存して追加するには、<Cmd sid='save_btn' product='air' /> ボタンをクリックします。
+
+:::note
+
+**ドアのデバイス割り当てルール**
+
+* 各デバイスは**1つのドア**のみに割り当てることができます。
+
+* デバイスが既に登録されているのに利用可能なデバイス一覧に表示されない場合は、そのデバイスが他のドアに割り当てられていないか確認してください。 他のドアに割り当てられている場合は、そのドアから削除してから再試行してください。
+
+:::
+
+## ドアの編集 {#editingDoors}
+
+ドアの詳細と設定を編集するには、次の手順に従います。
+
+1. 画面左のサイドバーで <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' /> をクリックしてください。
+
+2. 一覧で編集するドアをクリックします。 または、ドアの左にあるチェックボックスをクリックしてから、画面上部の左側サイドバーの <IcAirEdit /> ボタンをクリックします。
+
+3. <Cmd sid='edit_door.title' product='air' /> パネルが表示されたら、<Cmd sid='add_doors.door_name' product='air' /> と <Cmd sid='door_product_column5' product='air' /> を編集します。
+
+   <Image src='/img/air/bsair-door-mng-registered-door-edit.png' />
+
+4. <Cmd sid='door_entry_and_exit' product='air' /> セクションでドアのユーザー認証用デバイスを選択します。
+
+   * <Cmd sid='door_product_column2' product='air' />：入室するユーザーを認証するデバイスを選択します。
+
+   * <Cmd sid='door_product_column3' product='air' />：退室するユーザーを認証するデバイスを選択します。
+
+   * <Cmd sid='door_product_column6' product='air' />：イベントログ用のCCTVカメラを接続できます。
+
+   :::note
+
+   カメラを使用するには、<Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> → <Cmd sid='site_setting_qr_reader_tab' product='air' /> の <Cmd sid='site_setting_video_management' product='air' /> 機能を有効にする必要があります。
+
+   :::
+
+5. <Cmd sid='door_auxiliary_device' product='air' /> セクションでリレー装置を設定します。
+
+   * <Cmd sid='add_doors.door_relay' product='air' />：ドアロックを制御するリレー装置を選択します。
+
+   * <Cmd sid='add_doors.relay_ignoring_door_sensor' product='air' />：ドアセンサーを無視するようにリレーを設定できます。
+
+6. 追加の設定を構成します。
+
+   * 設置されている場合は、<Cmd sid='device_editable_fields_exit_btn' product='air' /> に設定するポートを選択します。
+
+   * <Cmd sid='device_editable_fields_door_sensor' product='air' /> に設定するポートを選択します。
+
+   * <Cmd sid='add_doors.open_time' product='air' /> でドアが開いた状態を保つ時間を設定します。 （既定値：3秒）
+
+7. 変更を適用するには、<Cmd sid='save_btn' product='air' /> ボタンをクリックします。
+
+:::info
+
+* セキュリティエリア内にあるリレーを <Cmd sid='door_product_column3' product='air' /> に割り当てることを推奨します。
+
+* <Cmd sid='door_product_column2' product='air' /> と <Cmd sid='door_product_column3' product='air' /> は**別々のネットワークに接続**されている必要があります。 マスター・スレーブ構成では Wiegand または RS-485 経由で接続できません。
+
+* SIO2セキュリティモジュールの構成に関する詳細は、<DocLink docId='platform/biostar_air/configuring-the-sio2-secure-module' /> を参照してください。
+
+:::
+
+## ドアレポートの生成 {#generatingDoorReports}
+
+ドアレポートを生成して管理者のメールに送信できます。 ドアレポートはドアを通過したユーザーに関する情報を提供します。
+
+1. 画面左のサイドバーで <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' /> をクリックしてください。
+
+2. ドア一覧の上部にある <IcAirReport title='Report' /> ボタンをクリックします。
+
+3. <Cmd sid='report_popup_title' product='air' /> ウィンドウが表示されたら、レポート名を入力します。
+
+   <Image src='/img/air/bsair-door-mng-registered-door-report.png' />
+
+4. レポートに含める項目を選択します。
+
+5. 作成したレポートを保存するには、<Cmd sid='report_form_text_add' product='air' /> をクリックします。
+
+6. <Cmd sid='report_form_text_title' product='air' /> が作成され、管理者のメールにダウンロードリンクが送信されます。
+
+<Image src='/img/air/bsair-door-mng-registered-door-report-list.png' />
+
+:::info
+
+<Cmd sid='report_form_text_title' product='air' /> で作成されたリポートを検索、編集、ダウンロード、削除できます。
+
+:::

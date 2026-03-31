@@ -1,0 +1,152 @@
+---
+id: managing-sites-with-app
+title: BioStar Airアプリのはじめ方
+description: BioStar Airモバイルアプリでモバイル端末からユーザー管理、イベントの監視、デバイスの制御および管理作業を行う方法を案内します。
+keywords:
+  - BioStar Air
+  - モバイルアプリ
+  - アクセス制御
+  - イベントモニタリング
+---
+
+BioStar Airアプリは、BioStar Airウェブポータルと同等のすべての機能を提供します。 ユーザーはモバイル端末から直接出入管理を行い、イベントログを監視し、デバイスを制御し、管理作業を実行できます。
+
+## モバイルアプリのダウンロード
+
+モバイル端末でBioStar Airアプリをダウンロードし、ログインします。
+
+* モバイル端末にBioStar Airアプリをダウンロードしてインストールします。
+
+  * [iOS](https://apps.apple.com/us/app/airfob-pro/id1659959609)
+
+  * [Android](https://play.google.com/store/apps/details?id=com.mocainc.afs2pro)
+
+* [BioStar Airウェブポータル](https://admin.biostarair.com/)で使用するIDとパスワードでログインします。
+
+:::info
+
+* ウェブ版と同じ認証情報でログインしていることを確認します。
+
+* BLEモードで更新するにはデバイスに近づく必要があります。
+
+* ライブビデオ監視などの一部の機能には接続されたカメラが必要です。
+
+:::
+
+<Columns className='mt--50'>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-using-app-dashboard.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+### ダッシュボード {#dashboard-overview}
+
+モバイルアプリにログインすると、初期画面の<Cmd sid='dashboard_menu' product='air' />で以下の情報が表示されます。
+
+* 1日のユーザー入退室数
+
+* 登録されているアクティブユーザーの総数
+
+* 接続されたデバイス数
+
+* クレジットの状態
+
+</Column>
+</Columns>
+
+<Columns className='mt-50'>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-using-app-users.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+### ユーザー管理 {#user-management}
+
+初期画面の<Cmd sid='users_card' product='air' />カードをタップするか、<Cmd sid='site_setting_tab_management' product='air' /> → <Cmd sid='user_submenu' product='air' />の順にタップします。
+
+* ユーザーを選択して詳細を確認します。
+
+* ユーザーの状態を編集（再発行、一時停止、削除、または有効化）できます。
+
+* 新しいユーザーを追加するには、<IcAdd />ボタンをタップし、必要な詳細情報を入力します。
+
+:::info
+
+* モバイルアプリでのユーザー追加方法については<DocLink docId='platform/biostar_air/adding-individual-users#addingUsersWithMobileApp' />をご参照ください。
+
+* BioStar Airポータルでのユーザー追加方法については<DocLink docId='platform/biostar_air/adding-individual-users' />をご参照ください。
+
+* ユーザー管理の詳細については<DocLink docId='platform/biostar_air/user-management-user-list' />をご参照ください。
+
+:::
+
+</Column>
+</Columns>
+
+<Columns className='mt-50'>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-using-app-monitoring.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+### モニタリング {#monitoring}
+
+<Cmd sid='monitoring_menu' product='air' />では以下の情報が表示されます。
+
+* <Cmd sid='event_logs_submenu' product='air' />: イベントログと監査ログを監視および分析できます。 詳細については、<DocLink docId='platform/biostar_air/monitoring-event-logs' />および<DocLink docId='platform/biostar_air/monitoring-audit-logs' />をご参照ください。
+
+* <Cmd sid='alerts_history.alerts_history_submenu' product='air' />: ウェブポータルとモバイルアプリで以前発生したアラートと作成されたレポートの履歴を確認できます。 詳細については<DocLink docId='platform/biostar_air/monitoring-alert-report-history' />をご参照ください。
+
+* <Cmd sid='door_status_submenu' product='air' />: サイトに接続されているドアの状態をリアルタイムで監視できます。 詳細については<DocLink docId='platform/biostar_air/monitoring-door-status' />をご参照ください。
+
+  * ドアの状態を確認し、リモートで制御できます。
+
+  * 1回タップしてドアを編集するか、長押しして複数のドアを選択し、一括操作を実行できます。
+
+  * ドアを<Cmd sid='event_log_unlock_mode' product='air' />または<Cmd sid='event_log_lock_mode' product='air' />に設定すると、リレー設定またはスケジュールが無視されます。
+
+  * 必要に応じて使用していないドアを削除します。
+
+* （接続されたカメラがある場合）ライブビデオ
+
+</Column>
+</Columns>
+
+<Columns className='mt-50'>
+<Column className='width--23'>
+
+<Image src='/img/air/bsair-using-app-devices.png' />
+
+</Column>
+<Column className='padding--l20'>
+
+### デバイス {#devices}
+
+初期画面の<Cmd sid='devices_card' product='air' />カードをタップするか、<Cmd sid='site_setting_tab_management' product='air' /> → <Cmd sid='devices_card' product='air' />の順にタップします。
+
+* 登録されているすべてのデバイスを確認できます。
+
+* デバイスを選択して編集、ファームウェアの更新、または再起動ができます。
+
+* ネットワークに接続されていないデバイスは、ファームウェア更新のためにモバイル端末と近い距離で**BLEモード**を使用します。
+
+* 新しいデバイスを追加するには、<IcAdd />ボタンをタップします。
+
+:::info
+
+デバイス管理の詳細は以下のドキュメントをご参照ください。
+
+* BioStar Air App: <DocLink docId='platform/biostar_air/manage-device-with-app' />
+
+* BioStar Airポータル：<DocLink docId='platform/biostar_air/manage-device' />
+
+:::
+
+</Column>
+</Columns>

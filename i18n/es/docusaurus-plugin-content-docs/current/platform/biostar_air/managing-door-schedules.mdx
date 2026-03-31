@@ -1,0 +1,147 @@
+---
+id: managing-door-schedules
+title: Administrar horarios de las puertas
+description: Configure el cierre automático de las puertas según la hora del día, establezca horarios de desbloqueo y administre las opciones de control de acceso basadas en autenticación. Los horarios garantizan un acceso seguro y controlado.
+keywords:
+  - horario de la puerta
+  - BioStar Air
+---
+
+Puede configurar horarios para que las puertas se bloqueen y se desbloqueen automáticamente según períodos de tiempo. Configure los horarios de bloqueo y desbloqueo y utilice opciones avanzadas como **abrir después de la primera autenticación** para mantener un acceso seguro y controlado.
+
+:::info
+
+* Los horarios solo se aplican a puertas y dispositivos que estén conectados a Internet.
+
+* Los grupos de días festivos ignoran los horarios de desbloqueo a menos que se configuren por separado.
+
+* Mantenga al menos un administrador con acceso sin restricciones para emergencias.
+
+:::
+
+## Cuándo necesita horarios
+
+**Los horarios de las puertas son opcionales**. La mayoría de los sitios funcionan correctamente con el control de acceso básico. Cuando un usuario autorizado presenta una credencial válida, la puerta se desbloquea automáticamente; no es necesaria ninguna configuración adicional de horarios.
+
+Configure los horarios únicamente en las siguientes situaciones:
+
+* Cuando necesite permitir acceso sin restricciones durante períodos específicos
+
+* Cuando necesite bloquear el acceso a todos los usuarios durante períodos específicos
+
+* Cuando necesite aplicar diferentes políticas de acceso en distintos horarios
+
+Para evitar confusiones entre <Cmd sid='unlock_schedule' product='air' className='bold' /> y <Cmd sid='lock_schedule' product='air' className='bold' /> en BioStar Air, comprenda cómo funciona cada uno y cuándo utilizarlo.
+
+### <Cmd sid='unlock_schedule' product='air' className='bold' /> vs <Cmd sid='lock_schedule' product='air' className='bold' />
+
+<div className='table-fixed'>
+
+| Función | Horario de desbloqueo | Horario de bloqueo |
+| --- | --- | --- |
+| **Estado de la puerta durante el horario** | Siempre desbloqueada | Siempre bloqueada |
+| **Autenticación requerida** | No requerida; cualquiera puede acceder libremente | Las credenciales no pueden desbloquear la puerta |
+| **Desbloqueo manual** | Posible | Solo el administrador del sitio puede desbloquearla |
+| **Operación del relé** | Activado de forma continua | No se activa |
+
+</div>
+
+:::info
+
+El término 'Administrador del sitio' se refiere a los administradores designados en el portal BioStar Air Admin o en la aplicación móvil.
+
+:::
+
+## Horario de desbloqueo
+
+Durante el período programado, la puerta permanece desbloqueada y el relé permanece activado de forma continua. No se requiere autenticación; cualquiera puede entrar libremente durante este tiempo.
+
+### Casos de uso típicos
+
+* Puertas principales en áreas públicas
+
+* Áreas comunes en comunidades residenciales
+
+* Puertas del vestíbulo de oficinas durante el horario laboral
+
+### Configurar horarios de desbloqueo {#configuringUnlockSchedules}
+
+Un horario de desbloqueo es el período durante el cual una puerta permanece abierta sin autenticación. Configure un horario de desbloqueo como se indica a continuación.
+
+1. Haga clic en <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> en la barra lateral izquierda.
+
+2. En la lista, marque la casilla de la puerta cuya programación de desbloqueo desea configurar.
+
+3. Haga clic en <IcAirSchedule title='Schedule Settings' /> en la parte superior de la lista de puertas.
+
+4. Cuando aparezca la ventana <Cmd sid="lock_unlock_title" product="air" />, seleccione un horario predefinido o cree uno nuevo en la pestaña <Cmd sid="unlock" product="air" />.
+
+   <Image src='/img/air/bsair-door-mng-schedule-setting-unlock.png' />
+
+5. Haga clic en <Cmd sid="btn_ok" product="air" /> para aplicar el horario de desbloqueo.
+
+:::info
+
+* Cuando <Cmd sid="unlock_after_first_auth" product="air" /> esté habilitado, la puerta permanecerá desbloqueada según el horario seleccionado después de que el primer usuario se autentique. Esta opción es útil en oficinas y comercios donde la puerta debe permanecer bloqueada hasta que llegue el primer empleado.
+
+  * Tiendas que solo abren después de la llegada del personal
+
+  * Oficinas donde el primer empleado en llegar desbloquea el edificio para los demás
+
+  * Instalaciones que requieren que el personal inicie el acceso antes de que los miembros puedan entrar
+
+* Para obtener más información sobre cómo registrar horarios, consulte <DocLink inner='#registeringNewSchedules' />.
+
+:::
+
+## Horario de bloqueo
+
+Durante el período programado, la puerta permanece bloqueada y el relé no se activa. Incluso si se presenta una credencial válida, la puerta no puede desbloquearse mediante autenticación. Solo un administrador del sitio puede desbloquearla manualmente desde el portal BioStar Air Admin o la aplicación móvil.
+
+### Casos de uso típicos
+
+* Áreas que deben permanecer estrictamente cerradas después de ciertas horas
+
+* Instalaciones como piscinas, gimnasios u otras áreas restringidas
+
+### Configurar horarios de bloqueo {#configuring-lock-schedules}
+
+Un horario de bloqueo define el período durante el cual la puerta permanece bloqueada y no puede abrirse incluso con credenciales válidas. Configure un horario de bloqueo como se indica a continuación.
+
+1. Haga clic en <Cmd sid="door_menu" product="air" /> → <Cmd sid="door_submenu" product="air" /> en la barra lateral izquierda.
+
+2. En la lista, marque la casilla de la puerta cuya programación de bloqueo desea configurar.
+
+3. Haga clic en <IcAirSchedule title='Schedule Settings' /> en la parte superior de la lista de puertas.
+
+4. Cuando aparezca la ventana <Cmd sid="lock_unlock_title" product="air" />, seleccione un horario predefinido o cree uno nuevo en la pestaña <Cmd sid="lock" product="air" />.
+
+   <Image src='/img/air/bsair-door-mng-schedule-setting-lock.png' />
+
+5. Haga clic en <Cmd sid="btn_ok" product="air" /> para aplicar el horario de bloqueo.
+
+:::info
+
+* Debido a que un horario de bloqueo anula los derechos de acceso estándar, los usuarios no pueden dejar la puerta desbloqueada durante el período de bloqueo.
+
+* Para obtener más información sobre cómo registrar nuevos horarios, consulte <DocLink inner='#registeringNewSchedules' />.
+
+:::
+
+## Registrar un nuevo horario {#registeringNewSchedules}
+
+Siga los pasos a continuación para registrar un nuevo horario.
+
+1. En la ventana <Cmd sid="lock_unlock_title" product="air" />, haga clic en <Cmd sid="lock_unlock_create_schedules" product="air" />.
+
+   <Image src='/img/air/bsair-door-mng-schedule-setting-add-schedule.png' />
+
+2. En la pantalla Agregar horario, ingrese <Cmd sid="schedule_name" product="air" /> y <Cmd sid="schedule_description" product="air" /> (opcional).
+
+   <Image src='/img/air/bsair-door-mng-schedule-add.png' />
+
+3. En la sección <Cmd sid="schedule_section_title_time_intervals" product="air" />, seleccione los días y los horarios en los que la puerta debe permanecer abierta sin autenticación y, a continuación, haga clic en <Cmd sid="add_btn" product="air" />.
+
+4. Haga clic en <Cmd sid="save_btn" product="air" /> para guardar el horario.
+
+Después de registrar un nuevo horario, vuelva a <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' /> y configure el horario de la puerta.

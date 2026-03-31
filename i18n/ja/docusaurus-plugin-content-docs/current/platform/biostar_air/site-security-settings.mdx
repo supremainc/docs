@@ -1,0 +1,39 @@
+---
+id: site-security-settings
+title: セキュリティの設定
+description: 管理者アカウントのロック、2段階認証、パスワードポリシー、モバイルクレデンシャルの有効期限など、BioStar Air サイトのセキュリティレベルを向上させる方法をご案内します。
+keywords:
+  - サイトのセキュリティ
+  - セキュリティ設定
+---
+
+不正アクセスを防ぎ、サイトを安全に運用するには、適切なセキュリティポリシーを構成する必要があります。
+非アクティブな管理者アカウントのロック、メールによる2段階認証、パスワード変更の周期設定などにより、サイトのセキュリティレベルを強化できます。
+
+画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> をクリックします。 <Cmd sid='site_setting_tab_security' product='air' /> タブでサイトのセキュリティに関する設定を構成できます。
+
+<Image src='/img/air/bsair-settings-site-security.png' />
+
+* <Cmd sid='site_security_input1' product='air' />：90日以上アクセスしていない管理者アカウントをロック状態に変更できます。
+
+* <Cmd sid='site_security_input2' product='air' />：管理者アカウントでログインするたびにメールによる2段階認証を要求できます。
+
+* <Cmd sid='site_security_input3' product='air' />：他のアクセス権が選択されていない場合、新規ユーザーに「全アクセス権」をデフォルトで付与します。 この設定を無効にすると、アクセスレベルを手動で割り当てる必要があります。 一時ユーザーは、上記の設定が有効でも自動的に全アクセス権を付与されません。
+
+   :::note
+
+   アクセスレベル管理の詳細は <DocLink docId='platform/biostar_air/manage-access-level' /> を参照してください。
+
+   :::
+
+* <Cmd sid='site_security_input4' product='air' />：30日、60日、90日ごとにパスワードをリセットするように設定できます。
+
+* <Cmd sid='site_security_input6' product='air' />：モバイルデバイスがネットワークに接続されていなくてもモバイルクレデンシャルが有効である時間を設定できます。
+
+   :::note
+
+  * デフォルトは5分で、1分から8日の間で設定できます。
+
+  * セキュリティと利便性のバランスをとるのに役立ち、特にネットワーク接続が制限される遠隔サイトで有用です。
+
+   :::

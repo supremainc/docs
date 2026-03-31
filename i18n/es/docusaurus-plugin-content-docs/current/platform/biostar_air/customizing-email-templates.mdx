@@ -1,0 +1,178 @@
+---
+id: customizing-email-templates
+title: Personalizar plantillas de correo electrónico
+description: Esta guía explica cómo crear y personalizar plantillas de correo electrónico con la imagen de su marca para invitaciones, activaciones y notificaciones en BioStar Air, utilizando logotipos, contenido personalizado y soporte multilingüe.
+keywords:
+  - Plantilla de correo electrónico
+  - personalización
+---
+
+Utilice la función de plantillas de correo electrónico para personalizar los correos enviados a los usuarios del sitio, de modo que reflejen la marca y el mensaje de su empresa. Las plantillas incluyen invitaciones, correos de activación y otras notificaciones.
+
+:::tip
+
+Vea el siguiente video para aprender a configurar las plantillas de correo electrónico.
+
+<YouTube className='fit--content' videoId="xmgpp6xMBuE" />
+
+:::
+
+## Agregar plantillas de correo electrónico {#addEmailTemplate}
+
+1. Haga clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="email_templates.email_template_menu" product="air" /> en la barra lateral izquierda.
+
+2. Haga clic en <Cmd sid="email_templates.add_template_btn" product="air" /> en la parte superior derecha de la pantalla.
+
+   <Image src='/img/air/bsair-settings-email.png' />
+
+3. Cuando aparezca el panel <Cmd sid="email_templates.add_email_template" product="air" />, configure cada elemento. Seleccione la pestaña <Cmd sid="user_text" product="air" /> o <Cmd sid="admin_text" product="air" /> para configurar las plantillas de correo electrónico de usuario o de administrador.
+
+:::info
+
+Cree plantillas de correo electrónico separadas para cada idioma. Seleccione el idioma en <Cmd sid="user_form_input3" product="air" />. Los idiomas compatibles son los siguientes:
+
+> English, 한국어, 日本語, Nederlands, Español, Português
+
+Se admitirán más idiomas.
+
+:::
+
+### <Cmd sid='user_text' product='air' className='normal' /> {#user}
+
+Personalice las plantillas de correo electrónico enviadas a los usuarios.
+
+<Image src='/img/air/bsair-settings-email-add-user.png' />
+
+* <Cmd sid="email_templates.email_type" product="air" />: Seleccione el tipo de plantilla de correo electrónico que desea crear. Las opciones disponibles son las siguientes:
+
+  * <Cmd sid="email_templates.activate_user" product="air" />: Se utiliza normalmente como invitación para descargar una tarjeta móvil.
+
+  * <Cmd sid="email_templates.reactivate_user" product="air" />: Envía al usuario una notificación de que la tarjeta móvil ha sido reactivada.
+
+  * <Cmd sid="email_templates.reissue_user" product="air" />: Se utiliza al emitir una nueva tarjeta móvil.
+
+  * <Cmd sid="email_templates.delete_user" product="air" />: Envía al usuario una notificación sobre la eliminación de la tarjeta.
+
+  * <Cmd sid="email_templates.suspend_user" product="air" />: Notifica al usuario que la tarjeta ha sido suspendida.
+
+  * <Cmd sid="email_templates.upload_user_face" product="air" />: Se usa para solicitar al usuario que suba una foto de su rostro.
+
+* <Cmd sid="email_templates.card_type" product="air" />: Se puede seleccionar para tipos de correo que permiten la descarga de la tarjeta móvil, como <Cmd sid="email_templates.activate_user" product="air" /> y <Cmd sid="email_templates.reissue_user" product="air" />.
+
+  * <Cmd sid='user_card_type_mobile' product='air' />
+
+  * <Cmd sid='user_card_type_web_qr' product='air' />
+
+  * <Cmd sid='user_card_type_web_link' product='air' />
+
+   :::note
+
+   Para obtener más información sobre los tipos de credenciales, consulte <DocLink docId='platform/biostar_air/user-card-types' />.
+
+   :::
+
+### <Cmd sid='admin_text' product='air' className='normal' /> {#admin}
+
+Personalice las plantillas de correo electrónico enviadas a los administradores.
+
+<Image src='/img/air/bsair-settings-email-add-admin.png' />
+
+<Cmd sid="email_templates.email_type" product="air" />: Seleccione el tipo de plantilla de correo electrónico que desea crear. Las opciones disponibles son las siguientes:
+
+* <Cmd sid="email_templates.alert_event_log_admin" product="air" />: Envía a los administradores notificaciones sobre eventos en el sitio.
+
+* <Cmd sid="email_templates.alert_system_admin" product="air" />: Envía alertas del sistema a los administradores.
+
+* <Cmd sid="email_templates.alert_report_admin" product="air" />: Envía a los administradores un enlace de descarga después de generar un informe.
+
+### <Cmd sid='email_templates.email_styles' product='air' className='normal' /> {#emailStyles}
+
+Personalice el logotipo y el contenido del correo electrónico. Vea los cambios en tiempo real en <Cmd sid="email_templates.preview" product="air" />.
+
+<Image src='/img/air/bsair-settings-email-add-style.png' />
+
+* <Cmd sid="email_templates.logo_image" product="air" />: Cargue la imagen del logotipo que aparecerá en el correo electrónico.
+
+   :::note
+
+  * Tipos de archivo: JPG, JPEG, PNG
+
+  * Resolución mínima: 200 x 60
+
+  * Tamaño del archivo: 1 MB o menos
+
+   :::
+
+* <Cmd sid="email_templates.title_text" product="air" />: Ingrese el asunto del correo electrónico.
+
+* <Cmd sid="email_templates.body_text" product="air" />: Ingrese el mensaje que se mostrará en el cuerpo del correo electrónico.
+
+   :::note
+
+   El cuerpo del correo electrónico debe incluir claves HTML. Cada clave se reemplaza por la dirección de correo electrónico del destinatario, el nombre del sitio y otros valores. Las claves disponibles pueden variar según el valor seleccionado en <Cmd sid="email_templates.email_type" product="air" />.
+
+  * Pestaña **Usuario**
+
+    * `${email}`: Dirección de correo electrónico
+
+    * `${siteName}`: Nombre del sitio
+
+  * Pestaña **Administrador**
+
+    * `${email}`: Dirección de correo electrónico
+
+    * `${siteName}`: Nombre del sitio
+
+    * `${alertType}`: Tipo de alerta
+
+    * `${alertDetails}`: Detalles de la alerta
+
+    * `${frequency}`: Frecuencia de la alerta
+
+    * `${location}`: Ubicación de la alerta
+
+    * `${userInvolved}`: Usuario involucrado en la alerta
+
+    * `${deviceInvolved}`: Dispositivo involucrado en la alerta
+
+    * `${dateTime}`: Fecha y hora de la alerta
+
+   :::
+
+* <Cmd sid="email_templates.bottom_text" product="air" />: Ingrese información adicional que aparecerá en la parte inferior del correo electrónico. Agregue la dirección de la empresa o la información de contacto para el cumplimiento normativo o para proporcionar detalles de ubicación a los usuarios.
+
+:::info
+
+* Verifique que la imagen del logotipo tenga el formato y tamaño adecuados para que aparezca correctamente en el correo electrónico.
+
+* Si el idioma actual no es compatible, consulte las actualizaciones futuras. Se agregarán más idiomas.
+
+* El campo de dirección es importante para el cumplimiento normativo y la claridad; ingréselo con precisión.
+
+* Haga clic en <Cmd sid="save_btn" product="air" /> en la parte inferior para guardar la plantilla de correo electrónico.
+
+* Haga clic en <Cmd sid="new_button_reset" product="air" /> en la parte inferior para restaurar el contenido original después de realizar cambios.
+
+:::
+
+## Editar plantillas de correo electrónico {#editEmailTemplate}
+
+1. Haga clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="email_templates.email_template_menu" product="air" /> en la barra lateral izquierda.
+
+2. Haz clic en la plantilla de correo electrónico que quieres editar de la lista. O bien, marca la casilla y haz clic en <IcAirEdit title='Edit' /> en la parte superior.
+
+3. Cuando aparezca el panel <Cmd sid="email_templates.edit_email_template" product="air" />, edita los elementos necesarios.
+
+   <Image src='/img/air/bsair-settings-email-edit.png' />
+
+4. Haz clic en <Cmd sid="save_btn" product="air" /> en la parte inferior para guardar los cambios.
+
+## Eliminar plantillas de correo electrónico {#deleteEmailTemplate}
+
+1. Haga clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="email_templates.email_template_menu" product="air" /> en la barra lateral izquierda.
+
+2. Marca la casilla de la plantilla de correo electrónico que quieres eliminar de la lista. Puedes seleccionar más de una plantilla.
+
+3. Haz clic en <IcAirRemove /> en la parte superior de la lista.
+
+4. Haga clic en <Cmd sid="btn_delete" product="air" /> cuando aparezca la ventana del mensaje.

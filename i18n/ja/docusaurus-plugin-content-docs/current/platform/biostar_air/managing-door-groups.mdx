@@ -1,0 +1,79 @@
+---
+id: managing-door-groups
+title: ドアグループを管理する
+description: ドアをグループ化して、アクセス制御ポリシーを効率的に管理できます。 アクセスレベルと権限をグループ単位で割り当てることで、複雑なセキュリティ要件を簡単に実現できます。
+keywords:
+  - ドアグループ
+  - デバイスグループ
+  - BioStar Air
+---
+
+ドアをグループ化すると、アクセス制御ポリシーを効率的に管理できます。 グループごとにアクセスレベルと権限を一括設定して、複数のドアに一貫したセキュリティポリシーを適用できます。
+
+:::info
+
+* ドアの管理に関する詳細は、<DocLink docId='platform/biostar_air/managing-registered-doors' />をご参照ください。
+
+* アクセスレベル管理の詳細は <DocLink docId='platform/biostar_air/manage-access-level' /> を参照してください。
+
+:::
+
+## ドアグループを追加 {#addingDoorGroups}
+
+1. 画面左のサイドバーで <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_groups_submenu' product='air' /> をクリックします。
+
+2. 画面右上の <Cmd sid='doors_group_add_btn' product='air' /> をクリックします。
+
+   <Image src='/img/air/bsair-door-group.png' />
+
+3. <Cmd sid='doors_group_title_add_popup_overlay' product='air' /> ウィンドウが表示されたら、ドアグループ名を入力します。
+
+   <Image src='/img/air/bsair-door-group-add.png' />
+
+   :::note
+
+   特定のグループのサブグループとしてデバイスグループを追加するには、<Cmd sid='device_group_label_checkbox' product='air' /> オプションをクリックし、親グループを選択します。
+
+   :::
+
+4. <Cmd sid='doors_group_label_add_device' product='air' /> でグループに含めるドアを選択します。
+
+5. ドアグループを保存するには、<Cmd sid='btn_ok' product='air' /> をクリックします。
+
+ドアグループ一覧で、新しく追加されたグループとそのグループに含まれるドアの数を確認できます。 ドアグループをクリックすると、そのグループに含まれるドアを確認できます。
+
+<Image src='/img/air/bsair-door-group-added-group.png' />
+
+:::info
+
+* サブグループにドアを追加しても、親グループに自動的に含まれません。
+
+* デバイスやドアがない空の親グループを追加できます。
+
+:::
+
+## ドアグループ名を変更 {#renamingDoorGroups}
+
+1. 画面左のサイドバーで <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_groups_submenu' product='air' /> をクリックします。
+
+2. ドアグループ一覧で、名前を変更するドアグループのチェックボックスをクリックします。
+
+3. ドアグループ一覧上部の<IcAirEdit title='Edit' />ボタンをクリックしてください。
+
+4. <Cmd sid='doors_group_title_edit_popup_overlay' product='air' /> ウィンドウが表示されたら、新しいグループ名を入力します。
+
+   <Image src='/img/air/bsair-door-group-edit-name.png' />
+
+5. 変更したグループ名を保存するには、<Cmd sid='popup_ok_btn' product='air' />ボタンをクリックしてください。
+
+## ドアグループを削除 {#deletingDoorGroups}
+
+1. 画面左のサイドバーで <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_groups_submenu' product='air' /> をクリックします。
+
+2. ドアグループ一覧で、削除するドアグループのチェックボックスをクリックします。
+
+3. ドアグループ一覧上部の<IcAirRemove title='Delete' />ボタンをクリックしてください。
+
+4. 警告メッセージのウィンドウが表示されたら、<Cmd sid='btn_yes' product='air' /> をクリックします。
+
+ドアグループ一覧で選択したドアグループが削除されます。 そのグループのサブグループもすべて削除されます。 グループを削除してもドアは削除されません。

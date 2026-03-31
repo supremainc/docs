@@ -1,0 +1,137 @@
+---
+id: managing-user-groups
+title: ユーザーグループを管理する
+description: BioStar Airでユーザーを効率的に分類し出入管理を行うために、ユーザーグループおよびサブグループの作成、構成、管理方法を案内します。
+keywords:
+  - ユーザー管理
+  - BioStar Air
+  - ユーザーグループ
+---
+
+ユーザーグループを使って、組織の部署、役割、拠点などでユーザーを分類・管理してください。 BioStar Airのユーザーグループは階層化されていないため、ユーザーは複数のグループに同時に所属できます。部門グループや役割グループ、拠点グループなどを組み合わせて運用できます。 グループを活用すると、入退室レベルの一括管理に加え、イベントログのフィルタリング、レポート作成、集合エリアへのデバイス割り当てなども効率的に行えます。
+
+:::tip
+
+ユーザーグループ管理のビデオガイドを視聴するには、以下のビデオを参照します。
+
+<YouTube className='fit--content' videoId="sNxu5pQuOsI" />
+
+:::
+
+## 開始する前に
+
+### ユーザーグループの構成
+
+ユーザーグループは階層的に構成されていません。
+
+* サブグループのユーザーは**自動的に**上位グループに表示されません。
+
+* 上位グループの総ユーザー数には、サブグループのメンバーは手動で追加しない限り含まれません。
+
+* サブグループを選択すると、該当サブグループに割り当てられたユーザーのみが表示されます。
+
+### 複数のユーザーグループの構成
+
+BioStar Airのユーザーは**複数のグループ**に所属できます。
+
+BioStar 2では、ユーザーグループは通常単一の部門に紐づいていました。 BioStar Airではこれを分離し、より動的な方法で利用できます。
+
+* グループごとにユーザー一覧をフィルターして出入レベルを素早く管理できます。
+
+  > 例：人事部
+
+* 複数の部門をまたがる状況に合わせたグループを作成できます。
+
+  > 例：男性更衣室
+
+* ユーザーグループは**イベントログフィルター**および**レポート作成**に使用されます。
+
+* ユーザーグループを**点呼招集場所**用のデバイスまたはデバイスグループに割り当てて、特定の安全プロトコルを適用できます。
+
+この柔軟性により、重複するユーザー役割やアクセスシナリオをより簡単に管理できます。
+
+## グループの作成 {#creatingUserGroup}
+
+### ユーザーグループの作成
+
+新しいユーザーグループを作成します。
+
+1. 画面左側のサイドバーで <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_groups_submenu' product='air' /> をクリックします。
+
+   <Image src='/img/air/bsair-gettingstarted-user-group-mng.png' />
+
+2. 画面右上の <Cmd sid='add_user_group_btn' product='air' /> をクリックします。
+
+3. <Cmd sid='add_user_group_popup_title' product='air' /> ウィンドウが表示されたら、ユーザーグループ名を入力します。
+
+   <Image src='/img/air/bsair-gettingstarted-user-group-mng-add.png' />
+
+4. グループを作成するには、<Cmd sid='manage_grops_ok_btn' product='air' /> ボタンをクリックしてください。
+
+:::info
+
+* グループを削除しても、当該グループに所属するユーザーは削除されません。 ユーザーはグループから解除されるだけです。
+
+* ユーザーをグループに割り当てる方法の詳細は、<DocLink docId='platform/biostar_air/user-management-user-list#manageUserGroups' /> を参照してください。
+
+:::
+
+### サブグループの作成 {#creatingSubgroup}
+
+サブグループを使ってユーザーグループをより細かく分類できます。 ただし、サブグループは**階層的ではありません**。 つまり、サブグループのユーザーは親グループに自動的に含まれません。
+
+1. 画面左側のサイドバーで <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_groups_submenu' product='air' /> をクリックします。
+
+2. 画面右上の <Cmd sid='add_user_group_btn' product='air' /> をクリックします。
+
+3. <Cmd sid='add_user_group_popup_title' product='air' /> ウィンドウが表示されたら、<Cmd sid='add_sub_group_text' product='air' /> オプションをクリックします。
+
+   <Image src='/img/air/bsair-user-sub-group-popup.png' />
+
+4. <Cmd sid='select_group_placeholder' product='air' /> で親グループを選択します。
+
+5. <Cmd sid='user_subgroup_name_input' product='air' /> にグループ名を入力します。
+
+6. サブグループを作成するには、<Cmd sid='manage_grops_ok_btn' product='air' /> ボタンをクリックしてください。
+
+作成されたサブグループはユーザーグループ一覧で親グループの下にインデント表示されます。
+
+<Image src='/img/air/bsair-user-sub-group-list.png' />
+
+## グループ名の編集 {#editGroupName}
+
+既に作成されたユーザーグループの名前を編集できます。
+
+1. 画面左側のサイドバーで <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_groups_submenu' product='air' /> をクリックします。
+
+2. 一覧で編集するユーザーグループのチェックボックスをクリックします。
+
+3. ユーザーグループ一覧の左上にある <IcAirEdit title='Edit' /> ボタンをクリックしてください。
+
+   <Image src='/img/air/bsair-user-group-edit.png' />
+
+4. <Cmd sid='edit_user_group_btn' product='air' /> ウィンドウが表示されたら、グループ名を編集します。
+
+   <Image src='/img/air/bsair-user-group-edit-popup.png' />
+
+5. 編集内容を保存するには、<Cmd sid='manage_grops_ok_btn' product='air' /> ボタンをクリックしてください。
+
+:::info
+
+グループ名の編集は、1つのグループを選択している場合にのみ行えます。
+
+:::
+
+## グループの削除 {#deleteGroup}
+
+使用していないユーザーグループがある場合は削除できます。
+
+1. 画面左側のサイドバーで <Cmd sid='user_menu' product='air' /> → <Cmd sid='user_groups_submenu' product='air' /> をクリックします。
+
+2. 一覧で削除するユーザーグループのチェックボックスをクリックします。
+
+3. ユーザーグループ一覧の左上にある <IcAirRemove title='Delete' /> ボタンをクリックしてください。
+
+   <Image src='/img/air/bsair-user-group-remove.png' />
+
+4. 警告メッセージが表示されたら、<Cmd sid='user_group_yes_btn' product='air' /> ボタンをクリックしてください。

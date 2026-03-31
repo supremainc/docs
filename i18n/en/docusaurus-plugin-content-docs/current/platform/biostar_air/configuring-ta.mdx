@@ -1,6 +1,6 @@
 ---
 id: configuring-ta
-title: Set Time & Attendance (T&A)
+title: Time & Attendance (T&A)
 description: This guide explains how to configure T&A settings in BioStar Air, enable mobile T&A tracking, assign T&A to devices, and export T&A logs.
 keywords:
   - T&A
@@ -8,19 +8,15 @@ keywords:
   - BioStar Air
 ---
 
-import CustomerNote from '../../common/_biostarair-customer-notice.mdx';
-
 BioStar Air records shift and break times to provide basic **T&A** tracking and integrates with external T&A systems or exports the data. BioStar Air is not a complete T&A system, but it supports event logging and API integration with payroll and T&A systems. It also generates basic **working hours** reports.
 
 :::tip
 
 Refer to the following video to watch a video guide on T&A configuration.
 
-<YouTube videoId="Que_LV25W04" />
+<YouTube className='fit--content' videoId="Que_LV25W04" />
 
 :::
-
-<CustomerNote />
 
 ## T&A events {#tna_events}
 
@@ -46,7 +42,7 @@ Follow these steps to enable and configure T&A settings.
 
 3. Activate <Cmd sid="site_profile_input8" product="air" />.
 
-4. When the message window appears, click <Cmd sid="btn_ok" product="air" />.
+4. When the message window appears, click the <Cmd sid='site_settings_confirm_btn' product='air' /> button.
 
 5. In <Cmd sid="site_profile_input8" product="air" />, click <Cmd sid="tna_setting" product="air" />.
 
@@ -72,44 +68,52 @@ After activating <Cmd sid="site_profile_input8" product="air" />, specify the de
 
 3. When the <Cmd sid="device_edit_title" product="air" /> window appears, go to the <Cmd sid="new_device_edit_tna_title" product="air" /> section.
 
-   <Image src='/img/air/bsair-device-mng-device-set-tna.png' />
+   <Image src='/img/air/bsair-device-mng-device-set-tna.png' caption />
 
 4. Click the toggle for <Cmd sid="new_device_edit_tna_toogle" product="air" /> to enable T&A.
 
-5. Click <Cmd sid="device_edit_tna_mobile_required_label" product="air" /> to require T&A selection before authentication.
-
-6. Click <Cmd sid="save_btn" product="air" /> to save the settings.
+5. Click <Cmd sid="save_btn" product="air" /> to save the settings.
 
 :::note
 
-T&A event labels are managed at the **site** level and cannot be changed per device.
+* When <Cmd sid='device_edit_tna_mode_label' product='air' /> is set to <Cmd sid='device_edit_tna_mode_option6' product='air' />, the <Cmd sid='device_edit_tna_mobile_required_label' product='air' /> option is available for mandatory T&A selection during access authentication.
+
+* T&A event labels are managed at the **site** level and cannot be changed per device.
 
 :::
 
-### <Cmd sid='device_edit_tna_title' product='air' className='normal' /> {#device_edit_tna_title}
+### <Cmd sid='device_edit_tna_mode_label' product='air' className='normal' /> {#device_edit_tna_title}
 
-A device records T&A events in several ways.
+A device records T&A events in several ways. Select the desired attendance mode in <Cmd sid='device_edit_tna_mode_label' product='air' />.
 
-* <Cmd sid="device_edit_tna_mode_option1" product="air" />: The device does not record T&A data.
+* <Cmd sid='device_edit_tna_mode_option2' product='air' />: When the attendance key appears on the screen, the user selects the attendance event during authentication.
 
 * <Cmd sid="device_edit_tna_mode_option3" product="air" />: Records clock-in and clock-out times based on the defined schedule. For example, events between 8:00 AM and 12:00 PM are recorded as **Clock-In**, while events between 1:00 PM and 5:00 PM are recorded as **Clock-Out**.
+
+* <Cmd sid="device_edit_tna_mode_option4" product="air" />: The user continues to use the last selected attendance event.
 
 * <Cmd sid="device_edit_tna_mode_option5" product="air" />: Assigns a fixed T&A code to the device. Each authentication on that device records the same T&A event. Use this option to designate the device for clock-in or clock-out.
 
 * <Cmd sid="device_edit_tna_mode_option6" product="air" />: Requires the user to select a T&A code before authentication. The selected T&A event is recorded with the access log.
 
+:::info
+
+Supported attendance management modes may vary depending on the device model. For more information, refer to the device-specific T&A modes in <DocLink docId='platform/biostar_air/device-info-settings' />.
+
+:::
+
 ## View and export T&A logs {#viewing-and-exporting-t-and-a-logs}
 
 T&A events are saved to the event log and can be reviewed or exported to a CSV file.
 
-1. Click <Cmd sid="monitoring_menu" product="air" /> → <Cmd sid="event_logs_submenu" product="air" /> in the left sidebar.
+1. Click <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' /> in the left sidebar.
 
 2. Locate the **T&A** column in the log table.
 
    <Image src='/img/air/bsair-monitoring-event-log-list.png' />
 
-3. Click <IcAirColumn /> at the top of the log table to customize the view and move the **T&A** column for better visibility.
+3. Click <IcAirColumn title='Customize' /> at the top of the log table to customize the view and move the **T&A** column for better visibility.
 
    <Image src='/img/air/bsair-monitoring-event-log-list-column-set.png' />
 
-4. Click <IcAirDown /> and select <Cmd sid="report_download_csv" product="air" /> to download the data as a CSV file.
+4. Click <IcAirDown title='Download' /> and select <Cmd sid='report_download_csv' product='air' /> to download the data as a CSV file.

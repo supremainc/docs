@@ -1,0 +1,463 @@
+### <Cmd sid='new_layout_nav_title_detail' product='air' className='normal' /> {#deviceInfo}
+
+<Cmd sid='new_layout_nav_title_detail' product='air' /> セクションでは、デバイスの名前、モデル名、シリアル番号、ファームウェアバージョンなどの基本情報と、機能を操作するアクションメニューや基本設定オプションが表示されます。
+
+#### 基本情報
+
+デバイスの基本情報を確認できます。 この情報は編集できません。
+
+* <Cmd sid='device_non_editable_fields_product' product='air' />：デバイスの製品名です。
+
+* <Cmd sid='device_non_editable_fields_model' product='air' />：デバイスのモデル名です。
+
+* <Cmd sid='device_non_editable_fields_serial' product='air' />：デバイスのシリアル番号です。
+
+* <Cmd sid='device_non_editable_fields_firmware' product='air' />：デバイスにインストールされているファームウェアのバージョンです。
+
+#### アクション機能
+
+デバイスの機能を制御できる**アクション**（Action）機能です。
+
+<Image src='/img/air/bsair-device-mng-edit-actions.png' />
+
+* <Cmd sid='firmware_update_btn' product='air' />：デバイスのファームウェアを最新バージョンに更新できます。
+
+* <Cmd sid='device_edit_actions_reboot' product='air' />：デバイスに問題や異常が発生した場合、リモートで再起動できます。
+
+* <Cmd sid='device_edit_actions_factory_reset' product='air' />：デバイスに保存されているすべての設定を初期化します。 この操作を実行すると、デバイスのすべての設定とデータが削除されます。
+
+* <Cmd sid='device_edit_actions_factory_reset' product='air' /> <Cmd sid='device_edit_actions_excluding_network' product='air' />：ネットワーク設定を除くすべての設定を初期化します。 この操作を実行すると、デバイスのすべての設定とデータが削除されますが、ネットワーク設定は保持されます。
+
+#### 基本設定
+
+デバイスの基本設定を変更できます。
+
+* <Cmd sid='device_editable_fields_nick_name' product='air' />：デバイス一覧およびログに表示されるデバイスの別名です。 直接編集できます。
+
+* <Cmd sid='device_editable_fields_timezone' product='air' />：サイトとデバイスの時計が異なる場合にログを一貫して保つために、デバイスのタイムゾーンを設定します。 サマータイム（Daylight Saving Time、DST）を適用するには、<Cmd sid='device_field_dst_usage' product='air' /> オプションを有効にします。
+
+<Include type={props.type} ref='xpass2'>
+
+* <Cmd sid='keypad_use_rf_card_number' product='air' />：RFカード番号をキーパッドで入力して使用できます。
+
+   :::note
+
+   この機能はキーパッドをサポートする**XP2-GKDPB**モデルのみで利用できます。
+
+   :::
+
+</Include>
+
+* <Cmd sid='device_editable_fields_hands_free' product='air' />：BLEの範囲を拡張できます。
+
+<Include type={props.type} ref='ae-mc,xpass2,xs2'>
+
+* <Cmd sid='device_editable_fields_qr_reader' product='air' />：デバイスにRS‑485のQRリーダーが接続されていることを確認できます。
+
+   :::note
+
+  * QRリーダーを該当デバイスと接続して使用する場合、他のRS-485デバイスを使用できません。
+
+  * SIO2を使用する場合、その出入り口に接続されているデバイスでQRリーダーを使用できません。
+
+   :::
+
+</Include>
+
+<Include type={props.type} ref='ae-mc,xs2'>
+
+* <Cmd sid='device_editable_fields_card' product='air' />：カード認証を有効または無効にできます。 DESFire、Felicaカード形式をサポートしています。
+
+</Include>
+
+<Include type={props.type} ref='ae-mc,xpass2'>
+
+* <Cmd sid='device_editable_fields_beep_setting' product='air' />：入退室認証成功時の通知音を設定できます。
+
+</Include>
+
+<Include type={props.type} ref='xpass2,bew3,bs3'>
+
+---
+
+### <Cmd sid='device_card_title' product='air' className='normal' /> {#cardSettings}
+
+<Cmd sid='device_card_title' product='air' /> セクションでは、カード認証に関する設定を変更できます。
+
+#### <Cmd sid='device_editable_fields_card' product='air' className='normal' /> {#nfcRfcard}
+
+* <Cmd sid='device_editable_fields_card' product='air' />：トグルスイッチをクリックしてカードによる入退室認証をオンまたはオフにできます。 カード認証に対応するカードの種類を選択してください。
+
+  * <Cmd sid='device_editable_fields_card_em4100' product='air' />
+
+  * <Cmd sid='device_editable_fields_card_mifare_felica' product='air' />
+
+* <Cmd sid='device_editable_fields_card_byte_order' product='air' />
+
+  * <Cmd>MSB</Cmd>：カードデータを処理するとき、大きいバイト単位から小さいバイト単位の順に処理し、カードシリアル番号 (CSN) を左から右へ順に保存します。
+
+  * <Cmd>LSB</Cmd>：カードデータを処理するとき、小さいバイト単位から大きいバイト単位の順に処理してカードシリアル番号 (CSN) を保存します。
+
+* <Cmd sid='device_card_field_data_reading_method' product='air' />：CSN（デフォルト）または Wiegand 形式を選択できます。
+
+   :::note
+
+   Wiegand形式には5つの基本形式が含まれています。 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' /> で、さらに多くの形式を追加できます。 カスタムカード形式の設定の詳細は <DocLink docId='platform/biostar_air/custom-wiegand-card-formats' /> を参照してください。
+
+   :::
+
+#### <Cmd sid='device_card_wiegand_card' product='air' className='normal' /> {#device_card_wiegand_card}
+
+Wiegandカードとして、<Cmd sid='device_card_wiegand_card_iclass' product='air' /> と <Cmd sid='device_card_wiegand_card_hid_prox' product='air' /> のカードを選択できます。 トグルスイッチをクリックして機能を有効にした後、<Cmd sid='device_card_wiegand_card' product='air' />で希望するカード形式を選択してください。
+
+:::info
+
+* この機能はデバイスによってサポートされない場合があります。
+
+* Wiegand形式には5つの基本形式が含まれています。 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='card_format_submenu' product='air' /> で、さらに多くの形式を追加できます。 カスタムカード形式の設定の詳細は <DocLink docId='platform/biostar_air/custom-wiegand-card-formats' /> を参照してください。
+
+:::
+
+</Include>
+
+---
+
+### <Cmd sid='new_layout_nav_title_network' product='air' className='normal ' /> {#network}
+
+デバイスのネットワーク設定を変更できます。
+
+* <Cmd sid='device_editable_fields_use_dhcp' product='air' />：デバイスがIPアドレスを自動的に取得するように設定できます。
+
+   ネットワーク設定を手動で構成するには、<Cmd sid='device_editable_fields_use_dhcp' product='air' /> オプションを無効にして次のフィールドに入力します。
+
+* <Cmd sid='device_editable_fields_ip_address' product='air' />
+
+* <Cmd sid='device_editable_fields_gateway' product='air' />
+
+* <Cmd sid='device_editable_fields_dns_address' product='air' />
+
+* <Cmd sid='device_editable_fields_subnet_mask' product='air' />
+
+<Include type={props.type} ref='xpass2,bew3,bs3'>
+
+---
+
+### <Cmd sid='new_layout_nav_title_authentication' product='air' className='normal' /> {#authentication}
+
+<Include type={props.type} ref='xpass2'>
+
+* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />：認証方式を追加できます。 <Cmd sid='add_btn' product='air' /> をクリックして認証方式を追加してください。
+
+  * **XP2-MDPB** / **XP2-GDPB**：認証方式としてRFカードのみを選択できます。
+
+  * **XP2-GKDPB**：認証方式としてRFカードとPINを組み合わせて選択できます。
+
+</Include>
+
+<Include type={props.type} ref='bew3'>
+
+* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />：認証方式を追加できます。 <Cmd sid='add_btn' product='air' /> をクリックして認証方式を追加してください。 認証方式としてRFカードと顔認証を組み合わせて選択できます。
+
+</Include>
+
+<Include type={props.type} ref='bs3'>
+
+* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />：認証方式を追加できます。 <Cmd sid='add_btn' product='air' /> をクリックして認証方式を追加してください。 認証方式として、RFカード、顔認証、ID、PINを組み合わせて選択できます。
+
+</Include>
+
+<Include type={props.type} ref='bs3'>
+
+* <Cmd sid='device_bs3_authen_display_user_name' product='air' /> / <Cmd sid='device_bs3_authen_display_user_id' product='air' />：認証画面にユーザー名またはIDを表示するかどうかを選択できます。 画面に表示しないように設定するには、<Cmd sid='device_bs3_authen_display_user_name_txt3' product='air' /> オプションを選択します。
+
+* <Cmd sid='new_layout_nav_title_authentication_auth_timeout' product='air' />：設定した時間内にクレデンシャルを認証できない場合、認証は失敗します。
+
+</Include>
+
+<Include type={props.type} ref='xpass2'>
+
+* <Cmd sid='new_layout_nav_title_authentication_auth_timeout' product='air' />：設定した時間内にクレデンシャルを認証できない場合、認証は失敗します。
+
+   :::note
+
+   この機能は **XP2-GKDPB** モデルでのみ利用できます。
+
+   :::
+
+</Include>
+
+:::info
+
+選択したスケジュールに応じて認証方式を個別に設定できます。 例えば、勤務時間中はカード認証のみを許可し、勤務時間外はカードとPINの組み合わせを許可できます。
+
+:::
+
+</Include>
+
+<Include type={props.type} ref='bew3,bs3'>
+
+---
+
+### <Cmd sid='new_layout_nav_title_face' product='air' className='normal' /> {#faceAuthentication}
+
+#### <Cmd sid='site_setting_tab_security' product='air' className='normal' /> {#faceSecurity}
+
+* <Cmd sid='new_layout_device_bew3_block_7_title' product='air' />：写真などの偽造顔を用いたユーザー認証を防止できます。
+
+* <Cmd sid='new_layout_device_bew3_block_7_text2' product='air' />：顔を登録する際に重複登録をチェックできます。
+
+#### <Cmd sid='device_face_detection' product='air' className='normal' /> {#faceDetection}
+
+* <Cmd sid='new_layout_device_bew3_block_2_title' product='air' />：デバイス周囲の動きを検知する感度を設定します。
+
+* <Cmd sid='new_layout_device_bew3_block_3_title' product='air' />：許容される顔の最大回転角度を設定します。
+
+* <Cmd sid='new_layout_device_bew3_block_5_title' product='air' />：カメラ映像全体で顔を認識する範囲を広げることができます。
+
+* <Cmd sid='new_layout_device_bew3_block_4_title' product='air' /> <Cmd sid='new_layout_device_bew3_block_4_title_cm' product='air' />：顔を認識する最小および最大距離を設定します。
+
+* <Cmd sid='new_layout_device_bew3_block_8_title' product='air' /> <Cmd sid='new_layout_device_bew3_block_8_title_cm' product='air' />：ユーザーの顔を登録する際、設定した時間内に登録できないと顔登録がキャンセルされます。
+
+#### <Cmd sid='new_layout_device_bew3_block_8_1_text' product='air' className='normal' /> {#maskDetection}
+
+マスク検出機能を設定するには、<Cmd sid='new_layout_device_bew3_block_8_1_text' product='air' /> オプションを有効にします。
+
+* <Cmd sid='new_layout_device_bew3_block_8_2_text' product='air' />：マスク検出感度を選択します。
+
+* <Cmd sid='new_layout_device_bew3_block_8_3_text' product='air' />
+
+  * <Cmd sid='new_layout_device_bew3_block_8_3_value1' product='air' />：マスク未着用のユーザーは認証が拒否され、マスク未着用イベントがログに記録されます。
+
+  * <Cmd sid='new_layout_device_bew3_block_8_3_value2' product='air' />：マスク未着用のユーザーも認証できますが、マスク未着用イベントがログに記録されます。
+
+* <Cmd sid='new_layout_device_bew3_block_8_4_text' product='air' />
+
+  * <Cmd sid='new_layout_device_bew3_block_8_4_value1' product='air' />：認証を実行した後にユーザーのマスク着用を確認するか、体温を測定します。
+
+  * <Cmd sid='new_layout_device_bew3_block_8_4_value2' product='air' />：ユーザーのマスク着用を確認するか体温を測定した後に認証を実行します。 この場合、マスクを着用していない、または基準温度を超えているユーザーは認証できません。
+
+  * <Cmd sid='new_layout_device_bew3_block_8_4_value3' product='air' />：デバイスをマスク着用の確認または体温測定専用としてのみ使用できます。 この場合、認証に関係なく、マスクを着用しているか基準温度以下のユーザーはすべて入場できます。
+
+* <Cmd sid='bs3_qr_barcode_toogle1' product='air' />：デバイスのカメラによるQR/バーコード認証の使用可否を設定できます。
+
+* <Cmd sid='bs3_qr_barcode_toogle2' product='air' />：付与したCSNカードまたはWiegandカードと同じデータを持つQRコードで認証できるように設定できます。 この機能を使用するには、<Cmd sid='bs3_qr_barcode_toogle1' product='air' /> オプションを有効にする必要があります。
+
+:::info
+
+顔以外のクレデンシャルを使用する際は、主に「前」と「後」が重要です。
+
+:::
+
+</Include>
+
+---
+
+### <Cmd sid='new_layout_nav_title_tna' product='air' className='normal' />(Time & Attendance, T&A) {#tna}
+
+この機能を有効にすると、<Cmd sid='device_edit_tna_event_label' product='air' className='bold' /> が **イベントログ** に記録され、<Cmd sid='tna_report' product='air' className='bold' /> に使用されます。
+
+* <Cmd sid='new_device_edit_tna_toogle' product='air' />：トグルスイッチをクリックして勤怠管理機能をオンまたはオフにできます。
+
+* <Cmd sid='device_edit_tna_mode_label' product='air' />：希望する勤怠モードを選択します。
+
+  <Include type={props.type} ref='bs3'>
+
+  * <Cmd sid='device_edit_tna_mode_option2' product='air' />：画面に勤怠キーを表示し、認証時にユーザーが勤怠イベントを選択できます。
+
+  </Include>
+
+  <Include type={props.type} ref='ae-mc,xpass2,bew3,bs3,xs2'>
+
+  * <Cmd sid='device_edit_tna_mode_option3' product='air' />：設定したスケジュールに従って勤怠イベントが自動で切り替わります。 勤怠イベントに適用するスケジュールを選択できます。
+
+  </Include>
+
+  <Include type={props.type} ref='bs3'>
+
+  * <Cmd sid='device_edit_tna_mode_option4' product='air' />：ユーザーが最後に使用した勤怠イベントを継続して使用できます。
+
+  </Include>
+
+  <Include type={props.type} ref='ae-mc,xpass2,bew3,bs3,xs2'>
+
+  * <Cmd sid='device_edit_tna_mode_option5' product='air' />：選択した勤怠イベントのみを使用できます。
+
+  * <Cmd sid='device_edit_tna_mode_option6' product='air' />：モバイルクレデンシャルを提示する際、Suprema Passアプリで勤怠イベントを選択できます。
+
+  </Include>
+
+:::info
+
+勤怠管理の構成に関する詳細は <DocLink docId='platform/biostar_air/configuring-ta' /> を参照してください。
+
+:::
+
+<Include type={props.type} ref='bs3'>
+
+---
+
+### <Cmd sid='device_bs3_sound_label' product='air' className='normal' /> {#device_bs3_sound_label}
+
+#### <Cmd sid='device_bs3_sound_label2' product='air' className='normal' /> {#device_bs3_sound_label2}
+
+* <Cmd sid='device_bs3_sound_label3' product='air' />：デバイスを使用していないときに LCD 画面の明るさを下げて不要な電力消費を削減できます。
+
+* <Cmd sid='device_bs3_sound_label4' product='air' />：画面の照明を常にオンにするか、無効化後に暗くなるように設定できます。
+
+* <Cmd sid='device_bs3_sound_backlight' product='air' />：画面バックライトが自動でオフになるまでの時間を設定します。
+
+* <Cmd sid='user_form_input3' product='air' />：デバイスの画面に表示する言語を設定できます。
+
+* <Cmd sid='device_bs3_sound_home_screen' product='air' />：デバイスのホーム画面の背景に表示する項目を設定します。
+
+  * <Cmd sid='device_bs3_sound_home_screen_txt1' product='air' />：既定の画像をホーム画面に表示します。
+
+  * <Cmd sid='device_bs3_sound_home_screen_txt2' product='air' />：ユーザーが登録した画像をデバイスのホーム画面に表示できます。
+
+  * <Cmd sid='device_bs3_sound_home_screen_txt3' product='air' />：管理者が入力した内容をホーム画面に表示できます。
+
+   :::note
+
+  <Cmd sid='audit_action_update' product='air' /> ボタンをクリックして保存すると、画像や通知が編集画面に表示されませんが、デバイスには引き続き表示されます。
+
+   :::
+
+#### <Cmd sid='device_bs3_sound_home_screen_sound' product='air' className='normal' /> {#device_bs3_sound_home_screen_sound}
+
+* <Cmd sid='device_bs3_sound_home_screen_soung_use_voice' product='air' />：通知音の代わりに音声ガイダンスを使用できます。
+
+* <Cmd sid='device_bs3_sound_home_screen_soung_device' product='air' />：デバイスから出る音量を調整できます。
+
+* <Cmd sid='device_bs3_sound_home_screen_soung_speaker' product='air' /> / <Cmd sid='device_bs3_sound_home_screen_microphone' product='air' />：IP インターホン機能を使用するときにデバイスから出力または入力される音量を設定できます。
+
+</Include>
+
+<Include type={props.type} ref='ae-mc,xpass2,bew3,bs3'>
+
+---
+
+### <Cmd sid='new_layout_nav_title_wiegandout' product='air' className='normal' /> {#wiegandoutput}
+
+外部システム（例：アラームパネル）との統合のための機能です。 この機能を使用するには、<Cmd sid='use_wiegand_out_label' product='air' /> オプションを有効にします。
+
+* <Cmd sid='wiegand_output_mode' product='air' />：Wiegand 信号の出力モードを設定します。
+
+  * <Cmd sid='user_regular_card_type' product='air' />：設定済みの Wiegand フォーマットでカードをスキャンします。
+
+    * <Cmd sid='device_wiegand_output_use_fail_code' product='air' />：エラーコードを設定でき、Wiegand を使用したカード認証に失敗した場合に送信する値を選択できます。
+
+  * <Cmd sid='device_wiegand_output_mode_bypass' product='air' />：Wiegand 認証に関係なく CSN を送信します。 ドア制御機能のないデバイスとして使用する場合に設定します。
+
+* <Cmd sid='wiegand_output_info' product='air' />：認証時にデバイスへ出力する情報を選択します。
+
+* <Cmd sid='wiegand_pulse_width' product='air' />：Wiegand 信号のパルス幅を設定します。
+
+* <Cmd sid='wiegand_pulse_interval' product='air' />：Wiegand 信号のパルス間隔を設定します。
+
+* <Cmd sid='mobile_consecutive_tag' product='air' />：待機時間なしで連続してモバイルカードをタグ付けできます。
+
+* <Cmd sid='devices_weigand_out_consecutive_lable' product='air' />：モバイルカードを連続でタグ付けできる最大回数を設定できます。
+
+:::info
+
+<Cmd sid='mobile_consecutive_tag' product='air' /> 機能は Suprema Passアプリ 2.9.0 以上でサポートされています。
+
+:::
+
+</Include>
+
+<Include type={props.type} ref='bs3'>
+
+---
+
+### <Cmd sid='device_intercom_title' product='air' className='normal' /> {#intercom}
+
+* <Cmd sid='device_intercom_txt_use_intercom' product='air' />：IPインターホン機能を有効または無効にできます。
+
+* <Cmd sid='device_intercom_txt_sip_server_transport' product='air' />：IPインターホンのSIPサーバー設定の際にSIPトランスポート方式を選択してください。
+
+* <Cmd sid='device_intercom_txt_sip_server_address' product='air' />：SIPサーバーのアドレスを入力してください。
+
+* <Cmd sid='device_intercom_txt_sip_server_port' product='air' />：SIPサーバーのポートを入力してください。
+
+* <Cmd sid='device_intercom_txt_registration_duration' product='air' />：登録維持時間を入力します。 デバイスは登録維持時間が終了するたびにSIPサーバーへの登録を試みます。
+
+* <Cmd sid='device_intercom_txt_sip_username' product='air' />：SIPアカウントのユーザー名を入力してください。
+
+* <Cmd sid='login_password' product='air' />：SIPアカウントのパスワードを入力してください。
+
+* <Cmd sid='device_intercom_txt_sip_authorization_id' product='air' />：SIPアカウントの認証IDを入力してください。
+
+* <Cmd sid='device_intercom_txt_outbound_proxy_server' product='air' />：別の（アウトバウンド）プロキシサーバー経由でSIPサービスを使用できます。
+
+* <Cmd sid='device_intercom_extension_number' product='air' />：内線番号を追加または編集できます。
+
+* <Cmd sid='device_intercom_video_resolution' product='air' />：IPインターホン使用時に出力される映像の解像度を選択してください。
+
+* <Cmd sid='device_intercom_open_door_button' product='air' />：通話中にデバイスのドアを開けるためのボタンを指定してください。
+
+</Include>
+
+<Include type={props.type} ref='bs3,xpass2'>
+
+---
+
+### <Cmd sid='device_bs3_secure_tamper' product='air' className='normal' /> {#secureTamper}
+
+デバイスでタンパーイベントが発生した場合、保存されている**全ユーザー情報**、**全ログ**、**セキュリティキー**を削除するように設定できます。
+
+</Include>
+
+<Include type={props.type} ref='bs3'>
+
+---
+
+### <Cmd sid='device_bs3_rtsp' product='air' className='normal' /> {#rtspStreaming}
+
+**Real Time Streaming Protocol**（RTSP）ストリーミングの詳細項目を設定できます。 デバイスのカメラを通じてリアルタイムで映像を配信できます。
+
+* <Cmd sid='device_bs3_rtsp_toogle' product='air' />：RTSPストリーミング機能をオンまたはオフに切り替えます。
+
+* <Cmd sid='device_bs3_rtsp_address' product='air' />：RTSPサーバーのアドレスです。
+
+* <Cmd sid='device_bs3_rtsp_port' product='air' />：RTSPサーバーのポートを入力します。
+
+* <Cmd sid='user_info_id' product='air' /> / <Cmd sid='login_password' product='air' />：RTSPサーバーのIDとパスワードを入力します。
+
+* <Cmd sid='device_bs3_rtsp_video' product='air' />：RTSP 使用時に出力される映像の解像度を選択します。
+
+:::info
+
+RTSPストリーミング機能は BioStation 3 デバイスでのみサポートされます。
+
+:::
+
+</Include>
+
+---
+
+### <Cmd sid='new_layout_nav_title_sensitivity' product='air' className='normal' /> {#rssiSensitivity}
+
+入退室のロックを解除するために、モバイル機器とデバイスがどれほど近くにある必要があるかを示すRSSI値を調整できます。
+
+<Image src='/img/air/bsair-device-mng-edit-sensitivity.png' />
+
+* 値が小さいほど、意図しない作動を防ぎます。
+
+* 値が大きいほど、干渉が多い場所での検出が改善されます。
+
+:::info
+
+設定した値を初期化するには、<Cmd sid='device_btn_reset' product='air' /> ボタンをクリックしてください。
+
+:::
+
+<Include type={props.type} ref='ae-mc,xpass2,xs2'>
+
+---
+
+### <Cmd sid='module_found_slots_title' product='air' className='normal' /> {#moduleFoundSlots}
+
+接続されている OM-120 モジュールを検出するためのオプションです。 <Cmd sid='add_btn' product='air' /> ボタンをクリックしてモジュールを検出できます。
+
+</Include>

@@ -1,0 +1,229 @@
+---
+id: ip-camera-support-and-configuration
+title: IPカメラのサポートおよび設定
+description: BioStar AirでONVIF互換のIPカメラの設定、ライブおよび録画ビデオストリームの構成、カメラ映像を入退室イベントと統合する方法を案内します。
+keywords:
+  - IPカメラ
+  - BioStar Air
+  - カメラ構成
+---
+
+BioStar Airは、互換デバイスと同じネットワークに接続されたIPカメラを自動的に検出します。 カメラはデバイスをゲートウェイとして使用するため、ネットワークビデオレコーダー（Network Video Recorder, NVR）は不要です。 代わりにカメラは内蔵SDカードストレージを使用します。
+
+互換機器を設置している場合、BioStar Airは以下のような同時ライブビューを表示できます。
+
+* 最大2台のカメラでFull HD解像度（1080p）
+
+* 最大4台のカメラでHD解像度（720p）
+
+この仕様はX-Station 2を使用する場合に2倍になります。
+
+:::info
+
+BioStar Airにカメラを登録した後、録画されたビデオが再生されない場合は、<DocLink docId='platform/biostar_air/video-troubleshooting' />を参照してください。
+
+:::
+
+## 互換性 {#compatibility}
+
+* **Onvif Profiles**：IPカメラはOnvifプロファイルSまたはGと互換性がある必要があります。
+
+  * **Onvif Profile S**：ライブビデオストリーミング
+
+  * **Onvif Profile G**：録画済みビデオをSDカードに保存
+
+* **SDカード**：IPカメラは後で録画した映像を再生できるように内蔵SDカードを備えている必要があります。 
+
+   :::note
+
+   SanDisk microSDXC Class10 Max Endurance 256GBまたは512GBを推奨します。
+
+   :::
+
+* **エンコーディング**：カメラはH.264(AVC)をサポートし、有効なコーデックとして設定されている必要があります。 BioStar Airは現在H.265をサポートしていません。
+
+* **推奨ブランド**：Hanwhavision、Hikvision、Dahuaのカメラとの互換性が高いです。 他ブランドとの互換性はOnvifプロファイルの準拠状況によって異なる場合があります。 テスト済みおよび検証済みデバイスの一覧の詳細については、<DocLink inner='#tested-devices' />を参照してください。
+
+* テストしたい別のカメラブランドがある場合は、サービスチームにお問い合わせください。
+
+## 機能紹介 {#functionality}
+
+BioStar Airポータルまたはモバイルアプリで以下の操作を行えます。
+
+* リアルタイムのカメラフィードを表示できます。
+
+* 録画されたカメラ映像を表示できます。
+
+* 出勤イベントに関連するカメラ映像にアクセスできます。
+
+## 使用方法 {#instructions}
+
+<Steps>
+<Step>
+
+### IPカメラの接続
+
+* **ネットワーク接続**：IPカメラがBioStar Airと互換性のある機器と同じネットワークに接続されていることを確認してください。
+
+* **Onvifの有効化**：カメラでOnvifが有効になっていることを確認します。
+
+* **デバイス登録**：デバイスがBioStar Airポータルに登録されていることを確認します。
+
+</Step>
+<Step>
+
+### BioStar Airへのログイン
+
+**マスター**管理者のみビデオ管理の有効化などサイト設定を変更できます。 [BioStar Airポータル](https://admin.biostarair.com/)に**マスター**権限でログインします。
+
+</Step>
+<Step>
+
+### ビデオ管理の有効化
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> をクリックします。
+
+2. <Cmd sid='site_setting_qr_reader_tab' product='air' /> タブをクリックします。
+
+3. <Cmd sid='site_setting_video_management' product='air' /> オプションを有効にします。
+
+<Image src='/img/air/bsair-settings-site-addtional-feature-video-mangement.png' />
+
+:::info
+
+この機能は**マスター**レベルの管理者のみ有効にできます。
+
+:::
+
+</Step>
+<Step>
+
+### カメラの追加
+
+1. 画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='cameras_groups_submenu' product='air' /> をクリックします。
+
+   <Image src='/img/air/bsair-device-camera.png' />
+
+2. 画面右上の <Cmd sid='cameras_list_title_add_button' product='air' /> ボタンをクリックします。
+
+3. <Cmd sid='cameras_templ_title_modal' product='air' /> ウィンドウが表示されたら、ゲートウェイとして機能するデバイスを選択します。
+
+   <Image src='/img/air/bsair-device-camera-add.png' caption />
+
+4. カメラを追加するには、以下の情報を設定します。
+
+   * <Cmd sid='cameras_add_camera_input_name' product='air' />：カメラ名を入力します。
+
+   * <Cmd sid='event_logs_column3' product='air' />：カメラを区別する名前を選択してください。
+
+   * <Cmd sid='cameras_add_camera_input_id' product='air' />：カメラにアクセスするIDを入力します。
+
+   * <Cmd sid='cameras_add_camera_input_pass' product='air' />：カメラにアクセスするパスワードを入力します。
+
+5. 選択したカメラを追加するには <Cmd sid='save_btn' product='air' /> ボタンをクリックします。
+
+:::info
+
+* デバイスにはファームウェア2.5.1以上がインストールされ、カメラと同じネットワーク上にある必要があります。
+
+* BioStar Airはネットワーク上のカメラを自動的に検出します。
+
+:::
+
+</Step>
+<Step>
+
+### ドアとの接続
+
+追加したカメラをドアに割り当て、入退室イベントに関連する映像を連携できます。
+
+1. 画面左のサイドバーで <Cmd sid='door_menu' product='air' /> → <Cmd sid='door_submenu' product='air' /> をクリックしてください。
+
+2. リストからカメラを割り当てるドアをクリックします。
+
+3. <Cmd sid='edit_door.title' product='air' /> パネルが表示されたら、<Cmd sid='door_auxiliary_device' product='air' /> セクションまでスクロールします。
+
+4. <Cmd sid='door_product_column6' product='air' /> オプションで追加したカメラを選択します。
+
+   <Image src='/img/air/bsair-door-assign-camera.png' />
+
+5. 変更を保存するには、<Cmd sid='save_btn' product='air' /> をクリックします。
+
+</Step>
+<Step>
+
+### リアルタイムカメラ映像の表示
+
+追加したカメラの映像をリアルタイムで確認できます。 画面左のサイドバーで <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='realtime_video_submenu' product='air' /> をクリックします。
+
+<Image src='/img/air/bsair-monitoring-realtime-camera.png' caption />
+
+* BioStar Airと互換性のある機器ごとに、最大2つのフルHD（1080p）ライブストリームを表示できます。
+
+* より多くのリアルタイムストリームを表示するには、デバイスを追加するかカメラの解像度を下げてください。 
+
+  > <Cmd sid='device_menu' product='air' /> → <Cmd sid='cameras_groups_submenu' product='air' /> → リストでカメラをクリック → <Cmd sid='cameras_edit_camera_name_profile' product='air' />
+
+</Step>
+<Step>
+
+### 録画済みカメラ映像の表示
+
+録画されたビデオストリームを表示できます。 画面左のサイドバーで <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='recorded_video_submenu' product='air' /> をクリックします。
+
+<Image src='/img/air/bsair-monitoring-recorded-camera.png' caption />
+
+</Step>
+<Step>
+
+### イベント映像の表示
+
+画面左のサイドバーで <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' /> をクリックします。 関連するビデオクリップがあるイベントログを見つけ、再生ボタンをクリックすると映像を視聴できます。
+
+</Step>
+</Steps>
+
+## テストおよび検証済みデバイス一覧 {#tested-devices}
+
+<div className='overflow-x'>
+
+| No | メーカー | モデル番号 | 機器タイプ | Onvifプロファイル | 解像度 |
+| --- | --- | --- | --- | --- | --- |
+| 1 | Hanwha Techwin | QNV-C8011R | カメラ | S, G, T, M | 2592x1944 |
+| 2 | Hanwha Techwin | QND-6022R | カメラ | S, G, T | 1920x1080 |
+| 3 | Hanwha Techwin | MMI-600R | カメラ | S, T | 1920x1080 |
+| 4 | HIKVISION | DS-2CD2025FWD-I | カメラ | S, G, T | 1920x1080 |
+| 5 | HIKVISION | DS-2CD2166G2-I | カメラ | S, G, T | 3200×1800 |
+| 6 | HIKVISION | DS-2CD1121-I | カメラ | S | 1920x1080 |
+| 7 | Dahua | DHI-NVR2104HS-P-S3 | NVR | S, G, T | 12MP |
+| 8 | Dahua | IPC-HDBW3249E-AS-NI | カメラ | S, G, T | 1920×1080 |
+| 9 | Dahua | SD22204UEN-GN | カメラ | S, G, T | 1920×1080 |
+| 10 | Dahua | DH-IPC-HFW1230DT-STW-VN | カメラ | S, T | 1920×1080 |
+| 11 | Marruy | IPC-A32E-L | カメラ | S, T | 2304×1296 |
+| 12 | TP-Link | Tapo C210 | カメラ | S | 2304×1296 |
+
+</div>
+
+## IPカメラでのONVIF有効化方法
+
+1. ウェブブラウザを開き、カメラのIPアドレスを入力します。 
+
+2. 管理者資格情報で認証してログインします。
+
+3. **Network**または**Configuration**セクションに移動します。
+
+4. ONVIF、またはオープンネットワークビデオインターフェースを有効にします。
+
+5. 必要に応じてONVIF専用のユーザープロファイルを作成します。
+
+6. 設定を保存し、BioStar AirでONVIF接続をテストします。
+
+:::tip
+
+* **ファームウェア更新**：カメラとデバイスを最新のファームウェアに更新してください。
+
+* **ポートフォワーディング**：必要に応じてONVIF用のポートフォワーディングを設定します。
+
+* **サードパーティツール**：ONVIF Device Managerを使用してカメラの設定と機能を確認します。
+
+:::
