@@ -29,8 +29,7 @@
         "XS2-APB": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa, iCLASS SE/SR/Seos"
       },
       "XPass Q2": {
-        "XPQ2-DB": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
-        "XPQ2-APB": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa, iCLASS SE/SR/Seos"
+        "XPQ2-DB": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa"
       }
     }
   },
@@ -64,8 +63,7 @@
         "XS2-APB": "NFC, BLE"
       },
       "XPass Q2": {
-        "XPQ2-DB": "NFC, BLE",
-        "XPQ2-APB": "NFC, BLE"
+        "XPQ2-DB": "NFC, BLE"
       }
     }
   },
@@ -99,8 +97,7 @@
         "XS2-APB": true
       },
       "XPass Q2": {
-        "XPQ2-DB": false,
-        "XPQ2-APB": false
+        "XPQ2-DB": false
       }
     }
   },
@@ -134,8 +131,7 @@
         "XS2-APB": "supportExcept"
       },
       "XPass Q2": {
-        "XPQ2-DB": "supportAdd",
-        "XPQ2-APB": "supportAdd"
+        "XPQ2-DB": "supportAdd"
       }
     }
   },
@@ -169,8 +165,7 @@
         "XS2-APB": "IP65"
       },
       "XPass Q2": {
-        "XPQ2-DB": "IP65",
-        "XPQ2-APB": "IP65"
+        "XPQ2-DB": "IP65"
       }
     }
   },
@@ -204,8 +199,7 @@
         "XS2-APB": false
       },
       "XPass Q2": {
-        "XPQ2-DB": false,
-        "XPQ2-APB": false
+        "XPQ2-DB": false
       }
     }
   },
@@ -239,8 +233,7 @@
         "XS2-APB": "500,000"
       },
       "XPass Q2": {
-        "XPQ2-DB": "200,000",
-        "XPQ2-APB": "200,000"
+        "XPQ2-DB": "200,000"
       }
     }
   },
@@ -274,8 +267,7 @@
         "XS2-APB": "card500pin500"
       },
       "XPass Q2": {
-        "XPQ2-DB": "card200",
-        "XPQ2-APB": "card200"
+        "XPQ2-DB": "card200"
       }
     }
   },
@@ -309,8 +301,7 @@
         "XS2-APB": "5,000,000"
       },
       "XPass Q2": {
-        "XPQ2-DB": "1,000,000",
-        "XPQ2-APB": "1,000,000"
+        "XPQ2-DB": "1,000,000"
       }
     }
   },
@@ -344,8 +335,7 @@
         "XS2-APB": "50,000"
       },
       "XPass Q2": {
-        "XPQ2-DB": false,
-        "XPQ2-APB": false
+        "XPQ2-DB": false
       }
     }
   },
@@ -379,8 +369,7 @@
         "XS2-APB": "1.5 GHz Quad Core"
       },
       "XPass Q2": {
-        "XPQ2-DB": "1 GHz",
-        "XPQ2-APB": "1 GHz"
+        "XPQ2-DB": "1 GHz"
       }
     }
   },
@@ -414,8 +403,7 @@
         "XS2-APB": "16 GB Flash + 1 GB RAM"
       },
       "XPass Q2": {
-        "XPQ2-DB": "8 GB Flash + 256 MB RAM",
-        "XPQ2-APB": "8 GB Flash + 256 MB RAM"
+        "XPQ2-DB": "8 GB Flash + 256 MB RAM"
       }
     }
   },
@@ -449,8 +437,7 @@
         "XS2-APB": true
       },
       "XPass Q2": {
-        "XPQ2-DB": true,
-        "XPQ2-APB": true
+        "XPQ2-DB": true
       }
     }
   },
@@ -484,8 +471,7 @@
         "XS2-APB": "4\" IPS color LCD"
       },
       "XPass Q2": {
-        "XPQ2-DB": false,
-        "XPQ2-APB": false
+        "XPQ2-DB": false
       }
     }
   },
@@ -519,8 +505,7 @@
         "XS2-APB": "480x800"
       },
       "XPass Q2": {
-        "XPQ2-DB": false,
-        "XPQ2-APB": false
+        "XPQ2-DB": false
       }
     }
   },
@@ -554,8 +539,7 @@
         "XS2-APB": false
       },
       "XPass Q2": {
-        "XPQ2-DB": "multiColor",
-        "XPQ2-APB": "multiColor"
+        "XPQ2-DB": "multiColor"
       }
     }
   },
@@ -589,8 +573,7 @@
         "XS2-APB": "24 bit"
       },
       "XPass Q2": {
-        "XPQ2-DB": "multiToneBuzzer",
-        "XPQ2-APB": "multiToneBuzzer"
+        "XPQ2-DB": "multiToneBuzzer"
       }
     }
   },
@@ -624,8 +607,7 @@
         "XS2-APB": "-20℃ ~ 50℃"
       },
       "XPass Q2": {
-        "XPQ2-DB": "operating-temperature-xpq2",
-        "XPQ2-APB": "operating-temperature-xpq2"
+        "XPQ2-DB": "operating-temperature-xpq2"
       }
     }
   },
@@ -659,8 +641,7 @@
         "XS2-APB": "-40℃ ~ 70℃"
       },
       "XPass Q2": {
-        "XPQ2-DB": "-40℃ ~ 70℃",
-        "XPQ2-APB": "-40℃ ~ 70℃"
+        "XPQ2-DB": "-40℃ ~ 70℃"
       }
     }
   },
@@ -694,8 +675,7 @@
         "XS2-APB": "operating-humidity-spec"
       },
       "XPass Q2": {
-        "XPQ2-DB": "operating-humidity-spec95",
-        "XPQ2-APB": "operating-humidity-spec95"
+        "XPQ2-DB": "operating-humidity-spec95"
       }
     }
   },
@@ -729,8 +709,7 @@
         "XS2-APB": "storage-humidity-spec"
       },
       "XPass Q2": {
-        "XPQ2-DB": "operating-humidity-spec95",
-        "XPQ2-APB": "operating-humidity-spec95"
+        "XPQ2-DB": "operating-humidity-spec95"
       }
     }
   },
@@ -764,8 +743,7 @@
         "XS2-APB": "d280b67"
       },
       "XPass Q2": {
-        "XPQ2-DB": "d213b40",
-        "XPQ2-APB": "d213b40"
+        "XPQ2-DB": "d213b40"
       }
     }
   },
@@ -799,8 +777,7 @@
         "XS2-APB": "82 x 159 x 25.9"
       },
       "XPass Q2": {
-        "XPQ2-DB": "50 x 150 x 40.2",
-        "XPQ2-APB": "50 x 150 x 40.2"
+        "XPQ2-DB": "50 x 150 x 40.2"
       }
     }
   },
@@ -834,8 +811,7 @@
         "XS2-APB": "ethernet-spec"
       },
       "XPass Q2": {
-        "XPQ2-DB": "ethernet-spec",
-        "XPQ2-APB": "ethernet-spec"
+        "XPQ2-DB": "ethernet-spec"
       }
     }
   },
@@ -869,8 +845,7 @@
         "XS2-APB": false
       },
       "XPass Q2": {
-        "XPQ2-DB": false,
-        "XPQ2-APB": false
+        "XPQ2-DB": false
       }
     }
   },
@@ -904,8 +879,7 @@
         "XS2-APB": "TCP, UDP"
       },
       "XPass Q2": {
-        "XPQ2-DB": "TCP, UDP",
-        "XPQ2-APB": "TCP, UDP"
+        "XPQ2-DB": "TCP, UDP"
       }
     }
   },
@@ -939,8 +913,7 @@
         "XS2-APB": "1chmasterslave"
       },
       "XPass Q2": {
-        "XPQ2-DB": "1chmasterslave",
-        "XPQ2-APB": "1chmasterslave"
+        "XPQ2-DB": "1chmasterslave"
       }
     }
   },
@@ -974,8 +947,7 @@
         "XS2-APB": "osdpv2"
       },
       "XPass Q2": {
-        "XPQ2-DB": "osdpv2",
-        "XPQ2-APB": "osdpv2"
+        "XPQ2-DB": "osdpv2"
       }
     }
   },
@@ -1009,8 +981,7 @@
         "XS2-APB": "1chin1choutopt1"
       },
       "XPass Q2": {
-        "XPQ2-DB": "1chin1choutopt1",
-        "XPQ2-APB": "1chin1choutopt1"
+        "XPQ2-DB": "1chin1choutopt1"
       }
     }
   },
@@ -1044,8 +1015,7 @@
         "XS2-APB": "2chinput"
       },
       "XPass Q2": {
-        "XPQ2-DB": "3chinput",
-        "XPQ2-APB": "3chinput"
+        "XPQ2-DB": "3chinput"
       }
     }
   },
@@ -1079,8 +1049,7 @@
         "XS2-APB": "1relay"
       },
       "XPass Q2": {
-        "XPQ2-DB": "1relay",
-        "XPQ2-APB": "1relay"
+        "XPQ2-DB": "1relay"
       }
     }
   },
@@ -1114,8 +1083,7 @@
         "XS2-APB": "ieee8023af"
       },
       "XPass Q2": {
-        "XPQ2-DB": false,
-        "XPQ2-APB": "ieee8023af"
+        "XPQ2-DB": false
       }
     }
   },
@@ -1149,8 +1117,7 @@
         "XS2-APB": false
       },
       "XPass Q2": {
-        "XPQ2-DB": false,
-        "XPQ2-APB": false
+        "XPQ2-DB": false
       }
     }
   },
@@ -1184,8 +1151,7 @@
         "XS2-APB": "USB 2.0 (Host)"
       },
       "XPass Q2": {
-        "XPQ2-DB": "usb2firmwareup",
-        "XPQ2-APB": "usb2firmwareup"
+        "XPQ2-DB": "usb2firmwareup"
       }
     }
   },
@@ -1219,8 +1185,7 @@
         "XS2-APB": false
       },
       "XPass Q2": {
-        "XPQ2-DB": false,
-        "XPQ2-APB": false
+        "XPQ2-DB": false
       }
     }
   },
@@ -1254,8 +1219,7 @@
         "XS2-APB": true
       },
       "XPass Q2": {
-        "XPQ2-DB": true,
-        "XPQ2-APB": true
+        "XPQ2-DB": true
       }
     }
   },
@@ -1289,8 +1253,7 @@
         "XS2-APB": "p12ve8a24v5a"
       },
       "XPass Q2": {
-        "XPQ2-DB": "p12v0_5a24v0_3a",
-        "XPQ2-APB": "p12v0_5a24v0_3a"
+        "XPQ2-DB": "p12v0_5a24v0_3a"
       }
     }
   }

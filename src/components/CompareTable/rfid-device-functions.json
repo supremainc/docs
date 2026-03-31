@@ -97,7 +97,7 @@
     "X-Station": true,
     "XPass 2": true,
     "X-Station 2": true,
-    "XPass Q2": false
+    "XPass Q2": true
   },
   {
     "category": "basic",
@@ -227,7 +227,7 @@
     "X-Station": false,
     "XPass 2": true,
     "X-Station 2": true,
-    "XPass Q2": "🔶"
+    "XPass Q2": false
   },
   {
     "category": "advanced",
