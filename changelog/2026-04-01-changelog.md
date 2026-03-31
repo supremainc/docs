@@ -10,7 +10,14 @@ slug: 2026-04-01-changelog
 
 <!-- truncate -->
 
-## BioStar Air
+## Platform
+
+### BioStar X
+
+* [VMS 서버 연동 시 인증서 설치 관련 문서](../platform/biostar_x/settings-video-integration) 업데이트
+
+
+### BioStar Air
 
 * [BioStar Air 가이드](../platform/biostar_air/) 문서 전체 재구성 및 최적화 완료
 
