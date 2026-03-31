@@ -54,7 +54,7 @@ const toc = [{
   "level": 2
 }, {
   "value": "커뮤니케이션 서버",
-  "id": "커뮤니케이션-서버",
+  "id": "communicationServer",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -176,7 +176,7 @@ function _createMdxContent(props) {
         }), " 항목에 표시된 IP 주소 중에서 선택할 수 있습니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "커뮤니케이션-서버",
+      id: "communicationServer",
       children: "커뮤니케이션 서버"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "커뮤니케이션 서버를 추가로 설치했다면 변경한 메인 서버의 IP 주소로 커뮤니케이션 서버의 설정을 변경해야 합니다. 커뮤니케이션 서버를 설치한 서버에서 진행하세요."

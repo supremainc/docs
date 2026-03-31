@@ -15,7 +15,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-platform-biostar-x-change-ip-mdx-9c8.json
-var site_docs_platform_biostar_x_change_ip_mdx_9c8_namespaceObject = JSON.parse('{"id":"platform/biostar_x/change-ip","title":"메인 서버의 IP 주소 변경하기","description":"BioStar X 메인 서버 설치 후 IP 주소를 변경하는 방법을 안내합니다. Windows 서버 IP 변경부터 BioStar X Service Manager를 통한 적용, 커뮤니케이션 서버 설정까지 전체 절차를 포함합니다.","source":"@site/docs/platform/biostar_x/change-ip.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/change-ip","permalink":"/docs/platform/biostar_x/change-ip","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/change-ip.mdx","tags":[],"version":"current","frontMatter":{"id":"change-ip","title":"메인 서버의 IP 주소 변경하기","description":"BioStar X 메인 서버 설치 후 IP 주소를 변경하는 방법을 안내합니다. Windows 서버 IP 변경부터 BioStar X Service Manager를 통한 적용, 커뮤니케이션 서버 설정까지 전체 절차를 포함합니다.","keywords":["IP 주소 변경","BioStar X Service Manager","메인 서버","커뮤니케이션 서버"],"isTranslationMissing":false},"sidebar":"biostarx","previous":{"title":"서비스 설정","permalink":"/docs/platform/biostar_x/service-settings"},"next":{"title":"포트 변경하기","permalink":"/docs/platform/biostar_x/change-port"}}')
+var site_docs_platform_biostar_x_change_ip_mdx_9c8_namespaceObject = JSON.parse('{"id":"platform/biostar_x/change-ip","title":"메인 서버의 IP 주소 변경하기","description":"BioStar X 메인 서버 설치 후 IP 주소를 변경하는 방법을 안내합니다. Windows 서버 IP 변경부터 BioStar X Service Manager를 통한 적용, 커뮤니케이션 서버 설정까지 전체 절차를 포함합니다.","source":"@site/docs/platform/biostar_x/change-ip.mdx","sourceDirName":"platform/biostar_x","slug":"/platform/biostar_x/change-ip","permalink":"/docs/es/platform/biostar_x/change-ip","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_x/change-ip.mdx","tags":[],"version":"current","frontMatter":{"id":"change-ip","title":"메인 서버의 IP 주소 변경하기","description":"BioStar X 메인 서버 설치 후 IP 주소를 변경하는 방법을 안내합니다. Windows 서버 IP 변경부터 BioStar X Service Manager를 통한 적용, 커뮤니케이션 서버 설정까지 전체 절차를 포함합니다.","keywords":["IP 주소 변경","BioStar X Service Manager","메인 서버","커뮤니케이션 서버"],"isTranslationMissing":true},"sidebar":"biostarx","previous":{"title":"Configuración del Servicio","permalink":"/docs/es/platform/biostar_x/service-settings"},"next":{"title":"Cambiar el Puerto","permalink":"/docs/es/platform/biostar_x/change-port"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -33,7 +33,7 @@ const frontMatter = {
 		'메인 서버',
 		'커뮤니케이션 서버'
 	],
-	isTranslationMissing: false
+	isTranslationMissing: true
 };
 const contentTitle = undefined;
 
@@ -54,7 +54,7 @@ const toc = [{
   "level": 2
 }, {
   "value": "커뮤니케이션 서버",
-  "id": "커뮤니케이션-서버",
+  "id": "communicationServer",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -176,7 +176,7 @@ function _createMdxContent(props) {
         }), " 항목에 표시된 IP 주소 중에서 선택할 수 있습니다."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "커뮤니케이션-서버",
+      id: "communicationServer",
       children: "커뮤니케이션 서버"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "커뮤니케이션 서버를 추가로 설치했다면 변경한 메인 서버의 IP 주소로 커뮤니케이션 서버의 설정을 변경해야 합니다. 커뮤니케이션 서버를 설치한 서버에서 진행하세요."

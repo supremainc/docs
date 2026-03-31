@@ -212,7 +212,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: "복원 진행 상황을 확인할 수 있는 메시지가 나타납니다. 복원 작업이 완료될 때까지 기다리세요."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
-          src: "/img/common/setting-system-restore-continue.png",
+          src: "/img/common/setting-system-restore-continues.png",
           className: "none",
           alone: true
         }), "\n"]
@@ -229,10 +229,21 @@ function _createMdxContent(props) {
       alone: true
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
-      children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["복원하는 과정에서 PC가 비정상 종료되면 ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "BioStar X Restore"
-        }), "를 다시 실행하여 복원을 재시도하세요."]
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["복원 과정에서 PC가 비정상 종료되면 ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BioStar X Restore"
+            }), "를 다시 실행하여 복원을 재시도하세요."]
+          }), "\n"]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["복원 대상 서버의 IP 주소가 백업 서버와 다르고, 커뮤니케이션 서버가 연결되어 있다면 인증서를 새로 발급해야 합니다. 커뮤니케이션 서버에서 인증서를 새로 발급하는 방법은 ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "change-ip#communicationServer",
+              children: "다음 문서"
+            }), "를 참고하세요."]
+          }), "\n"]
+        }), "\n"]
       })
     })]
   });
