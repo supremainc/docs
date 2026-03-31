@@ -52,7 +52,7 @@ Follow the steps below to integrate the VMS server with **BioStar X**.
 
 ### Install the certificate on the VMS server {#install-vms-certification}
 
-To play back recorded video from the VMS server, you must use HTTPS protocol. Generate an IP address-based certificate on the VMS server.
+To play back recorded video from the VMS server, you must use HTTPS protocol. Standard SSL certificates are issued for domain names, so they aren't valid when accessing the VMS server by its IP address. Therefore, you need to create a separate certificate that includes the VMS server's IP address.
 
 :::note
 

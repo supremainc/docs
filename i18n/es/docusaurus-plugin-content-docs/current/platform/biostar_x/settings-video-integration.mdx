@@ -52,7 +52,7 @@ Sigue los pasos a continuación para integrar el servidor VMS con **BioStar X**.
 
 ### Instalar el certificado en el servidor VMS {#install-vms-certification}
 
-Para reproducir video grabado desde el servidor VMS, se debe usar el protocolo HTTPS. Genera un certificado basado en dirección IP en el servidor VMS.
+Para reproducir video grabado desde el servidor VMS, se debe usar el protocolo HTTPS. Los certificados SSL estándar se emiten para nombres de dominio, por lo que no son válidos si se accede al servidor VMS mediante su dirección IP. Por lo tanto, debes crear un certificado aparte que incluya la dirección IP del servidor VMS.
 
 :::note
 
