@@ -97,9 +97,11 @@ function HomepageHeader() {
           
             <div className={styles.banner__biostar}>
               <div>
-                <Heading as='h2' className={styles.banner__biostarh2}>통합된 보안, 신뢰의 완성</Heading>
+                <Heading as='h2' className={styles.banner__biostarh2}>
+                  {translate({ id: "index.biostarx.subtitle" })}
+                </Heading>
                 {/* <BioStarLogo width='189' height='52' /> */}
-                <p>BioStar X는 하나의 화면에서 통합 관제·대응이 가능한 비디오 매니지먼트 시스템(VMS)과 대형 엔터프라이즈급 보안에 맞는 확장성/가용성/보안성, 제약 없는 통합과 연결, 그리고 최고수준의 생체보안 출입통제를 갖춘 슈프리마의 통합 보안 플랫폼입니다.</p>
+                <p dangerouslySetInnerHTML={{__html: `${translate({ id: "index.biostarx.description" })}`}} />
               </div>
               <Link to='/platform/biostar_x' className={styles.banner}>
                 <div className={styles.banner__learnmore}>
@@ -112,8 +114,8 @@ function HomepageHeader() {
           <div className={styles.banner__biostar}>
             <div>
               <Cloudicon />
-              <Heading as='h2' className={styles.banner__biostarh2}>Zero on-prem. BioStar Air</Heading>
-              <p>세계에서 가장 진보된 바이오메트릭 장치를 클라우드와 연결하는 유일한 출입 통제 솔루션입니다.</p>
+              <Heading as='h2' className={styles.banner__biostarh2}>{translate({ id: "index.biostarair.subtitle" })}</Heading>
+              <p dangerouslySetInnerHTML={{__html: `${translate({ id: "index.biostarair.description" })}`}} />
             </div>
             <Link to='/platform/biostar_air' className={styles.banner}>
               <div className={styles.banner__learnmore}>

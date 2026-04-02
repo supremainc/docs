@@ -398,8 +398,17 @@
   "index.search": {
     "message": "Search"
   },
+  "index.biostarx.subtitle": {
+    "message": "One Platform. Total Confidence."
+  },
   "index.biostarx.description": {
-    "message": "A new standard for security that goes beyond the limits of access control,<br/>AI-based integrated security platform"
+    "message": "BioStar X is Suprema’s unified security platform, featuring best-in-class biometric access, integrated monitoring, and a resilient backbone built for scale, uptime, and compliance."
+  },
+  "index.biostarair.subtitle": {
+    "message": "Zero on-prem. BioStar Air"
+  },
+  "index.biostarair.description": {
+    "message": "The only access control solution that natively connects the world's most advanced biometric readers to the cloud."
   },
   "windows.key.start": {
     "message": "Start"

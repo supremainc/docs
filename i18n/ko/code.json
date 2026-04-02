@@ -398,8 +398,17 @@
   "index.search": {
     "message": "검색"
   },
+  "index.biostarx.subtitle": {
+    "message": "통합된 보안, 신뢰의 완성"
+  },
   "index.biostarx.description": {
-    "message": "출입통제의 한계를 넘는 보안의 새로운 기준,<br/>AI 기반 통합 보안 플랫폼"
+    "message": "BioStar X는 하나의 화면에서 통합 관제·대응이 가능한 비디오 매니지먼트 시스템(VMS)과 대형 엔터프라이즈급 보안에 맞는 확장성/가용성/보안성, 제약 없는 통합과 연결, 그리고 최고수준의 생체보안 출입통제를 갖춘 슈프리마의 통합 보안 플랫폼입니다."
+  },
+  "index.biostarair.subtitle": {
+    "message": "Zero on-prem. BioStar Air"
+  },
+  "index.biostarair.description": {
+    "message": "세계에서 가장 진보된 바이오메트릭 장치를 클라우드와 연결하는 유일한 출입 통제 솔루션입니다."
   },
   "windows.key.start": {
     "message": "시작"

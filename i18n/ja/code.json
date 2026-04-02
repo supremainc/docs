@@ -398,8 +398,17 @@
   "index.search": {
     "message": "検索"
   },
+  "index.biostarx.subtitle": {
+    "message": "ひとつのプラットフォーム、高度な信頼性"
+  },
   "index.biostarx.description": {
-    "message": "入退室管理の限界を超える新たなセキュリティ基準、AIベースの統合セキュリティプラットフォーム"
+    "message": "BioStar Xは、最高水準の生体認証アクセスと統合モニタリングを備え、スケール・可用性・コンプライアンスに対応する堅牢でレジリエントな基盤上に構築された、Suprema の統合セキュリティプラットフォームです。"
+  },
+  "index.biostarair.subtitle": {
+    "message": "オンプレミスなし。BioStar Air"
+  },
+  "index.biostarair.description": {
+    "message": "世界最先端の生体認証リーダーをクラウドにネイティブ接続する唯一のアクセス制御ソリューションです。"
   },
   "windows.key.start": {
     "message": "開始"
@@ -1157,19 +1166,19 @@
     "message": "カードおよびQR/バーコード認証対応入退室装置"
   },
   "externalLinks.dev.sdk.desc": {
-    "message": "指紋認証デバイスのコア機能を<br/>サードパーティ製ソフトウェアと完全に統合"
+    "message": "指紋認証デバイスのコア機能をサードパーティ製ソフトウェアと完全に統合"
   },
   "externalLinks.dev.xapi.desc": {
-    "message": "BioStar XのすべてのAPIを<br/>一目で確認できるAPIドキュメント"
+    "message": "BioStar XのすべてのAPIを一目で確認できるAPIドキュメント"
   },
   "externalLinks.dev.2api.desc": {
-    "message": "BioStar 2のすべてのAPIを<br/>一目で確認できるAPIドキュメント"
+    "message": "BioStar 2のすべてのAPIを一目で確認できるAPIドキュメント"
   },
   "externalLinks.dev.gsdk.desc": {
-    "message": "多様なプログラミング言語をサポートする<br/>クロスプラットフォームソリューション"
+    "message": "多様なプログラミング言語をサポートするクロスプラットフォームソリューション"
   },
   "externalLinks.dev.svpsdk.desc": {
-    "message": "Suprema デバイスの主要機能を<br/>他ソフトウェアでサポート"
+    "message": "Suprema デバイスの主要機能を他ソフトウェアでサポート"
   },
   "externalLinks.dev.bsair.desc": {
     "message": "既存システムとの円滑なAPI統合"

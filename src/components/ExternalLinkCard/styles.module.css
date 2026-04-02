@@ -166,6 +166,7 @@
 }
 .cardItem .tags code {
   padding: 0 5px;
+  font-weight: 500;
 }
 .cardItem .tags code + code {
   margin-left: 7px;
