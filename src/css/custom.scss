@@ -173,6 +173,16 @@ main .search-pop-trigger {
     transform: scale(1.2);
     opacity: 0.6;
   }
+  &::after {
+    content: "Ctrl + K";
+    position: absolute;
+    right: 17px;
+    font-size: .8rem;
+    color: var(--ifm-color-border);
+    border: 1px solid var(--ifm-color-border);
+    border-radius: 4px;
+    padding: 2px 4px;
+  }
 }
 [data-theme='dark'] main .search-pop-trigger {
   background: #333;
