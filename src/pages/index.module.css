@@ -148,7 +148,7 @@ a.banner {
   margin: 2rem auto;
 }
 .shortcutbanner .compareProduct, .shortcutbanner .howToArticles {
-  background: #F3F3F3;
+  background: var(--ifm-shortcut-banner-background);
   border-radius: 5px;
   padding: 1rem 2rem;
 }
