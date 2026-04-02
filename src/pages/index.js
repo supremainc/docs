@@ -5,14 +5,12 @@ import {ExternalLinkCard, BiometricReader, RfMobileDevices, IntenlligentControll
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
-import {Autocomplete, ProductItem} from '@site/src/components/Autocomplete';
-import '@algolia/autocomplete-theme-classic';
 import { liteClient as algoliasearch } from 'algoliasearch/lite';
-import { autocomplete, getAlgoliaResults } from '@algolia/autocomplete-js';
 import Link from '@docusaurus/Link';
 import {translate} from '@docusaurus/Translate';
 import SupLogo from '@site/static/img/suprema-logo.svg';
 import Cloudicon from '@site/static/img/air-cloud.svg';
+import SearchBar from '@theme/SearchBar';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -34,62 +32,7 @@ function HomepageHeader() {
         </Heading>
         <h3 className={styles.hero__subtitle}>{siteConfig.tagline}</h3>
         <div className={styles.appcontainer}>
-          <Autocomplete
-            openOnFocus={false}
-            getSources={({ query }) => [
-              {
-                sourceId: 'products',
-                getItems({ query }) {
-                  return getAlgoliaResults({
-                    searchClient,
-                    queries: [
-                      {
-                        indexName: indexName,
-                        query,
-                        params: {
-                          hitsPerPage: 10,
-                          attributesToSnippet: ['content:60', 'hierarchy.lvl0', 'hierarchy.lvl1', 'hierarchy.lvl2', 'hierarchy.lvl3', 'hierarchy.lvl4', 'sidelvl2', 'sidelvl3', 'sidelvl4'],
-                          snippetEllipsisText: '…',
-                          // filters: [`lang=${lang}`],
-                          facetFilters: [`language: ${lang}`],
-                          // highlightPreTag: `<mark>`,
-                          // highlightPostTag: `</mark>`,
-                        }
-                      },
-                    ],
-                  });
-                },
-                templates: {
-                  item({ item, components }) {
-                    return <ProductItem hit={item} components={components}/>;
-                  },
-                },
-              },
-            ]}
-            onSubmit={(event) => {
-                // Code to run when the form submits
-                const Searchparam = event.state.query;
-                if (Searchparam) {
-                    const searchUrl = `search?q=${encodeURIComponent(Searchparam)}`;
-                    window.location.href = searchUrl;
-                }
-            }}
-            onStateChange={(state) => {
-                // 검색 결과 목록에서 Enter를 입력하면 해당 item으로 이동하는 코드
-                const curid = state.state.activeItemId !== null ? state.state.activeItemId : false;
-                if (curid !== false) {
-                    const activeUrl = state.state.collections[0].items[curid].url;
-                    const curOrigin = window.location.origin;
-                    const goUrl = activeUrl.replace("https://docs.supremainc.com", curOrigin);
-                    window.onkeydown = (e) => {
-                        if (e.keyCode === 13) {
-                            window.location.href = activeUrl;
-                        }
-                    }
-                }
-            }}
-            // detachedMediaQuery="(max-width: 1280px)"
-          />
+          <SearchBar className={styles.searchTriger} />
         </div>
       </div>
       <div className={clsx('container', styles.containerRef)}>
@@ -123,6 +66,16 @@ function HomepageHeader() {
               </div>
             </Link>
           </div>
+        </div>
+      </div>
+      <div className={clsx('container', styles.shortcutbanner)}>
+        <div className={styles.compareProduct}>
+          <h3>{translate({ id: "index.shortcut.compare.title" })} <Link to='reference/compares'><span>{translate({ id: "index.shortcut.linkText" })}</span></Link></h3>
+          <p>{translate({ id: "index.shortcut.compare.description" })}</p>
+        </div>
+        <div className={styles.howToArticles}>
+          <h3>{translate({ id: "index.shortcut.howto.title" })} <Link to='how-to/'><span>{translate({ id: "index.shortcut.linkText" })}</span></Link></h3>
+          <p>{translate({ id: "index.shortcut.howto.description" })}</p>
         </div>
       </div>
     </header>

@@ -410,6 +410,21 @@
   "index.biostarair.description": {
     "message": "The only access control solution that natively connects the world's most advanced biometric readers to the cloud."
   },
+  "index.shortcut.linkText": {
+    "message": "Go to →"
+  },
+  "index.shortcut.compare.title": {
+    "message": "Compare Product Features and Specifications"
+  },
+  "index.shortcut.compare.description": {
+    "message": "You can compare the features and specifications of each product offered by Suprema. Compare the features and specifications of different products at a glance."
+  },
+  "index.shortcut.howto.title": {
+    "message": "How-to Articles"
+  },
+  "index.shortcut.howto.description": {
+    "message": "Provides user-oriented step-by-step guides to make the most of Suprema's devices and software. Follow the instructions and examples easily."
+  },
   "windows.key.start": {
     "message": "Start"
   },
