@@ -12,23 +12,23 @@ export function Autocomplete(props) {
 
     useEffect(() => {
         if (!containerRef.current) {
-        return undefined;
+            return undefined;
         }
 
         const search = autocomplete({
-        container: containerRef.current,
-        renderer: { createElement, Fragment, render: () => {} },
-        render({ children }, root) {
-            if (!panelRootRef.current || rootRef.current !== root) {
-            rootRef.current = root;
+            container: containerRef.current,
+            renderer: { createElement, Fragment, render: () => {} },
+            render({ children }, root) {
+                if (!panelRootRef.current || rootRef.current !== root) {
+                rootRef.current = root;
 
-            panelRootRef.current?.unmount();
-            panelRootRef.current = createRoot(root);
-            }
+                panelRootRef.current?.unmount();
+                panelRootRef.current = createRoot(root);
+                }
 
-            panelRootRef.current.render(children);
-        },
-        ...props,
+                panelRootRef.current.render(children);
+            },
+            ...props,
         });
 
         return () => {

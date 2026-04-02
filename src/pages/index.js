@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {ExternalLinkCard, BiometricReader, RfMobileDevices, IntenlligentController, Peripheral, Apps} from '@site/src/components/ExternalLinkCard';
@@ -11,7 +11,8 @@ import { liteClient as algoliasearch } from 'algoliasearch/lite';
 import { autocomplete, getAlgoliaResults } from '@algolia/autocomplete-js';
 import Link from '@docusaurus/Link';
 import {translate} from '@docusaurus/Translate';
-import BioStarLogo from '@site/static/img/logo-biostar-x.svg';
+import SupLogo from '@site/static/img/suprema-logo.svg';
+import Cloudicon from '@site/static/img/air-cloud.svg';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -24,86 +25,102 @@ function HomepageHeader() {
   const bsxDesc = translate({
     id: 'index.biostarx.description',
   });
+  
   return (
     <header className={clsx(styles.heroBanner)}>
-      <div className={clsx('container', styles.containerRef)}>
-        <div className={styles.section}>
-          <Heading as='h1' className={styles.hero__title}>
-            {siteConfig.title}
-          </Heading>
-          <p className={styles.hero__subtitle}>{siteConfig.tagline}</p>
-          <div className={styles.appcontainer}>
-            <Autocomplete
-              openOnFocus={false}
-              getSources={({ query }) => [
-                {
-                  sourceId: 'products',
-                  getItems({ query }) {
-                    return getAlgoliaResults({
-                      searchClient,
-                      queries: [
-                        {
-                          indexName: indexName,
-                          query,
-                          params: {
-                            hitsPerPage: 10,
-                            attributesToSnippet: ['content:60', 'hierarchy.lvl0', 'hierarchy.lvl1', 'hierarchy.lvl2', 'hierarchy.lvl3', 'hierarchy.lvl4', 'sidelvl2', 'sidelvl3', 'sidelvl4'],
-                            snippetEllipsisText: '…',
-                            // filters: [`lang=${lang}`],
-                            facetFilters: [`language: ${lang}`],
-                            // highlightPreTag: `<mark>`,
-                            // highlightPostTag: `</mark>`,
-                          }
-                        },
-                      ],
-                    });
-                  },
-                  templates: {
-                    item({ item, components }) {
-                      return <ProductItem hit={item} components={components}/>;
-                    },
+      <div className={styles.hero__header}>
+        <Heading as='h1' className={styles.hero__title}>
+          <SupLogo width={331} height={49} /> <span className={styles.gray}>Docs</span>
+        </Heading>
+        <h3 className={styles.hero__subtitle}>{siteConfig.tagline}</h3>
+        <div className={styles.appcontainer}>
+          <Autocomplete
+            openOnFocus={false}
+            getSources={({ query }) => [
+              {
+                sourceId: 'products',
+                getItems({ query }) {
+                  return getAlgoliaResults({
+                    searchClient,
+                    queries: [
+                      {
+                        indexName: indexName,
+                        query,
+                        params: {
+                          hitsPerPage: 10,
+                          attributesToSnippet: ['content:60', 'hierarchy.lvl0', 'hierarchy.lvl1', 'hierarchy.lvl2', 'hierarchy.lvl3', 'hierarchy.lvl4', 'sidelvl2', 'sidelvl3', 'sidelvl4'],
+                          snippetEllipsisText: '…',
+                          // filters: [`lang=${lang}`],
+                          facetFilters: [`language: ${lang}`],
+                          // highlightPreTag: `<mark>`,
+                          // highlightPostTag: `</mark>`,
+                        }
+                      },
+                    ],
+                  });
+                },
+                templates: {
+                  item({ item, components }) {
+                    return <ProductItem hit={item} components={components}/>;
                   },
                 },
-              ]}
-              onSubmit={(event) => {
-                  // Code to run when the form submits
-                  const Searchparam = event.state.query;
-                  if (Searchparam) {
-                      const searchUrl = `search?q=${encodeURIComponent(Searchparam)}`;
-                      window.location.href = searchUrl;
-                  }
-              }}
-              onStateChange={(state) => {
-                  // 검색 결과 목록에서 Enter를 입력하면 해당 item으로 이동하는 코드
-                  const curid = state.state.activeItemId !== null ? state.state.activeItemId : false;
-                  if (curid !== false) {
-                      const activeUrl = state.state.collections[0].items[curid].url;
-                      const curOrigin = window.location.origin;
-                      const goUrl = activeUrl.replace("https://docs.supremainc.com", curOrigin);
-                      window.onkeydown = (e) => {
-                          if (e.keyCode === 13) {
-                              window.location.href = activeUrl;
-                          }
-                      }
-                  }
-              }}
-              // detachedMediaQuery="(max-width: 1280px)"
-            />
-          </div>
+              },
+            ]}
+            onSubmit={(event) => {
+                // Code to run when the form submits
+                const Searchparam = event.state.query;
+                if (Searchparam) {
+                    const searchUrl = `search?q=${encodeURIComponent(Searchparam)}`;
+                    window.location.href = searchUrl;
+                }
+            }}
+            onStateChange={(state) => {
+                // 검색 결과 목록에서 Enter를 입력하면 해당 item으로 이동하는 코드
+                const curid = state.state.activeItemId !== null ? state.state.activeItemId : false;
+                if (curid !== false) {
+                    const activeUrl = state.state.collections[0].items[curid].url;
+                    const curOrigin = window.location.origin;
+                    const goUrl = activeUrl.replace("https://docs.supremainc.com", curOrigin);
+                    window.onkeydown = (e) => {
+                        if (e.keyCode === 13) {
+                            window.location.href = activeUrl;
+                        }
+                    }
+                }
+            }}
+            // detachedMediaQuery="(max-width: 1280px)"
+          />
         </div>
-        <div className={styles.section__banner}>
-          <Link to='/platform/biostar_x' className={styles.banner}>
+      </div>
+      <div className={clsx('container', styles.containerRef)}>
+        <div className={clsx(styles.section__banner, styles.bsx)}>
+          
             <div className={styles.banner__biostar}>
               <div>
-                <BioStarLogo width='284' height='78' />
-                <Heading as='h2' className={styles.banner__biostarh2}>New BioStar</Heading>
-                <p dangerouslySetInnerHTML={{__html: bsxDesc}} />
+                <Heading as='h2' className={styles.banner__biostarh2}>통합된 보안, 신뢰의 완성</Heading>
+                {/* <BioStarLogo width='189' height='52' /> */}
+                <p>BioStar X는 하나의 화면에서 통합 관제·대응이 가능한 비디오 매니지먼트 시스템(VMS)과 대형 엔터프라이즈급 보안에 맞는 확장성/가용성/보안성, 제약 없는 통합과 연결, 그리고 최고수준의 생체보안 출입통제를 갖춘 슈프리마의 통합 보안 플랫폼입니다.</p>
               </div>
-              <div className={styles.banner__biostar__img}>
-                {/* <img src={require('@site/static/img/banner/biostarx-banner.png').default} width='284px' height='217px'/> */}
-              </div>
+              <Link to='/platform/biostar_x' className={styles.banner}>
+                <div className={styles.banner__learnmore}>
+                  Explore BioStar X →
+                </div>
+              </Link>
             </div>
-          </Link>
+        </div>
+        <div className={clsx(styles.section__banner, styles.bsair)}>
+          <div className={styles.banner__biostar}>
+            <div>
+              <Cloudicon />
+              <Heading as='h2' className={styles.banner__biostarh2}>Zero on-prem. BioStar Air</Heading>
+              <p>세계에서 가장 진보된 바이오메트릭 장치를 클라우드와 연결하는 유일한 출입 통제 솔루션입니다.</p>
+            </div>
+            <Link to='/platform/biostar_air' className={styles.banner}>
+              <div className={styles.banner__learnmore}>
+                Explore BioStar Air →
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     </header>
@@ -187,6 +204,8 @@ export default function Home() {
       title={`${siteConfig.title}`}
       description={`${siteConfig.tagline}`}>
       <main className={styles.heroLayout}>
+        {/* <div className={styles.backBlurSky}></div>
+        <div className={styles.backBlurPink}></div> */}
         <HomepageHeader />
 
         {/* <div className={clsx('container', styles.headsec)}>
@@ -213,16 +232,20 @@ export default function Home() {
           <Heading as='h2'>Peripherals</Heading>
         </div>
         <Peripheral />
-
-        <div className={clsx('container', styles.headsec)}>
-          <Heading as='h2'>APPS</Heading>
+        
+        <div className='container'>
+          <div className={clsx('container', styles.gridappdeveloper)}>
+            <div className={clsx(styles.headsec)}>
+              <Heading as='h2'>Developers</Heading>
+              <ExternalLinkCard />
+            </div>
+            <div className={clsx(styles.headsec)}>
+              <Heading as='h2'>APPS</Heading>
+              <Apps />
+            </div>
+          </div>
         </div>
-        <Apps />
-
-        <div className={clsx('container', styles.headsec)}>
-          <Heading as='h2'>Developers</Heading>
-        </div>
-        <ExternalLinkCard />
+        
       </main>
     </Layout>
   );
