@@ -122,8 +122,8 @@
           ],
           "question": "El rostro está registrado pero la autenticación facial no se realiza correctamente y se producen errores con frecuencia.",
           "answer": [
-            "Consulte <a href='getting-started#cautions-enrolling-faces'>Precauciones para enrolar rostros</a> y registre el rostro nuevamente.",
-            "Si hay un gran número de rostros registrados, cambie <span class='cmd'>Matching Timeout</span> y vuelva a intentarlo."
+            "Consulte <a href='getting-started#cautions-enrolling-faces'>Precauciones para enrolar rostros</a> y vuelva a registrarlo.",
+            "Si hay muchos rostros registrados, cambie <span class='cmd'>Matching Timeout</span> y vuelva a intentarlo."
           ]
         },
         {
@@ -190,7 +190,7 @@
           "answer": [
             "Revisa el <a href='getting-started#cautions-enrolling-fingers'>Método correcto de ingreso de huellas dactilares</a> y vuelve a registrar la huella.",
             "Si su huella tiene un corte, el dispositivo puede reconocerla como la huella de otra persona.",
-            "Si hay un gran número de huellas registradas, cambie <span class='cmd'>Matching Timeout</span> y vuelva a intentarlo.",
+            "Si hay muchas huellas dactilares registradas, cambie <span class='cmd'>Matching Timeout</span> y vuelva a intentarlo.",
             "La tasa de autenticación puede variar para cada huella debido a diferentes características. Registre la huella de otro dedo."
           ]
         },
