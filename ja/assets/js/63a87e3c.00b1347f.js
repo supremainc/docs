@@ -51,7 +51,7 @@ function _createMdxContent(props) {
       id: "著作権に関するお知らせ",
       children: "著作権に関するお知らせ"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "本ウェブサイトの著作権はSupremaに帰属します。 その他の製品名、商標、登録商標に関する権利は、それぞれの所有者である個人または団体に帰属します。"
+      children: "本ウェブサイトの著作権は Suprema に帰属します。 その他の製品名、商標、登録商標に関する権利は、それぞれの所有者である個人または団体に帰属します。"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Xclude, {
       product: "doormodule,outputmodule,securemodule,xpass_s2,enclosure,extendedmodule,corestation_setup_manager",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
@@ -62,67 +62,67 @@ function _createMdxContent(props) {
       product: "bioentry_p2,bioentry_r2,bioentry_w2,biostation_2,biostation_a2,biostation_l2,corestation_40,facestation_2,xpass_2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品のソフトウェアは Linux カーネル 3.x を改変して作成されており、Linux カーネルのライセンスは GPL に従っています。 GPLライセンスの詳細については", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品のソフトウェアは Linux カーネル 3.x を改変して作成されており、Linux カーネルのライセンスは GPL に従っています。 GPL ライセンスの詳細については ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#gnu-general-public-v2-license",
             children: "GNU General Public License"
-          }), "をご覧ください。"]
+          }), " をご覧ください。"]
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "biostation_3,biostation_2a,bioentry_w3,biolite_n2,facelite,facestation_f2,xstation_2,biostation_3_max",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品のソフトウェアは Linux カーネル 4.x を改変して作成されており、Linux カーネルのライセンスは GPL に従っています。 GPLライセンスの詳細については", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品のソフトウェアは Linux カーネル 4.x を改変して作成されており、Linux カーネルのライセンスは GPL に従っています。 GPL ライセンスの詳細については ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#gnu-general-public-v2-license",
             children: "GNU General Public License"
-          }), "をご覧ください。"]
+          }), " をご覧ください。"]
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "corestation_20,doorinterface,xpass_q2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品のソフトウェアは Linux カーネル 5.x を改変して作成されており、Linux カーネルのライセンスは GPL に従っています。 GPLライセンスの詳細については", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品のソフトウェアは Linux カーネル 5.x を改変して作成されており、Linux カーネルのライセンスは GPL に従っています。 GPL ライセンスの詳細については ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#gnu-general-public-v2-license",
             children: "GNU General Public License"
-          }), "をご覧ください。"]
+          }), " をご覧ください。"]
         }), "\n"]
       })
     }), "\n", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "biostation_3,biostation_2a,bioentry_p2,bioentry_r2,bioentry_w2,bioentry_w3,biolite_n2,biostation_2,biostation_l2,corestation_40,facelite,xpass_2,biostation_3_max",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品に含まれる glibc ライブラリは LGPL に従います。 LGPLライセンスの詳細については", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品に含まれる glibc ライブラリは LGPL に従います。 LGPL ライセンスの詳細については ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#gnu-lesser-general-public-v21-license",
             children: "GNU Lesser General Public License"
-          }), "をご覧ください。"]
+          }), " をご覧ください。"]
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "bioentry_p2,bioentry_r2,bioentry_w2,biolite_n2,biostation_2,biostation_l2,corestation_40,facelite,xpass_2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品に含まれる QT ライブラリは LGPL に従います。 LGPLライセンスの詳細については", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品に含まれる QT ライブラリは LGPL に従います。 LGPL ライセンスの詳細については ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#gnu-lesser-general-public-v21-license",
             children: "GNU Lesser General Public License"
-          }), "をご覧ください。"]
+          }), " をご覧ください。"]
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "corestation_20,doorinterface,xpass_q2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品に含まれる uclibc ライブラリは LGPL に従います。 LGPLライセンスの詳細については", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品に含まれる uclibc ライブラリは LGPL に従います。 LGPL ライセンスの詳細については ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#gnu-lesser-general-public-v21-license",
             children: "GNU Lesser General Public License"
-          }), "をご覧ください。"]
+          }), " をご覧ください。"]
         }), "\n"]
       })
     }), "\n", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "xpass_d2,corestation_20,inputmodule",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品には MIT ライセンスに基づいて開発されたソフトウェアが含まれています。 MITライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品には MIT ライセンスに基づいて開発されたソフトウェアが含まれています。 MIT ライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#the-mit-license",
             children: "The MIT License"
           }), " でご確認いただけます。"]
@@ -132,7 +132,7 @@ function _createMdxContent(props) {
       product: "facestation_f2,xstation_2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品に含まれる BoringSSL ライブラリは OpenSSL ライセンスおよび Original SSLeay ライセンスに従います。 BoringSSLライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品に含まれる BoringSSL ライブラリは OpenSSL ライセンスおよび Original SSLeay ライセンスに従います。 BoringSSL ライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#boringssl-license",
             children: "BoringSSL License"
           }), " でご確認いただけます。"]
@@ -142,7 +142,7 @@ function _createMdxContent(props) {
       product: "biostation_3,biostation_2a,bioentry_p2,bioentry_r2,bioentry_w2,bioentry_w3,biolite_n2,biostation_2,biostation_a2,biostation_l2,corestation_20,corestation_40,doorinterface,facelite,facestation_2,facestation_f2,xpass_2,xstation_2,xpass_q2,biostation_3_max",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品に含まれる OpenSSL は OpenSSL ライセンスおよび Original SSLeay ライセンスに従います。 OpenSSLライセンスおよびOriginal SSLeayライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品に含まれる OpenSSL は OpenSSL ライセンスおよび Original SSLeay ライセンスに従います。 OpenSSL ライセンスおよび Original SSLeay ライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#openssl-license",
             children: "OpenSSL License"
           }), " と ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
@@ -155,7 +155,7 @@ function _createMdxContent(props) {
       product: "biostation_a2,facestation_2,facestation_f2,xstation_2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品に含まれる AOSP は Apache ライセンス 2.0 に従います。 Apacheライセンス 2.0 の詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品に含まれる AOSP は Apache ライセンス 2.0 に従います。 Apache ライセンス 2.0 の詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#apache-license",
             children: "Apache License"
           }), " でご確認いただけます。"]
@@ -165,7 +165,7 @@ function _createMdxContent(props) {
       product: "bioentry_w3",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品に含まれる Open CV 4.5 は Apache ライセンスに従います。 Apacheライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品に含まれる Open CV 4.5 は Apache ライセンスに従います。 Apache ライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#apache-license",
             children: "Apache License"
           }), " でご確認いただけます。"]
@@ -175,7 +175,7 @@ function _createMdxContent(props) {
       product: "xpass_q2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品に含まれる ZXing は Apache ライセンスに従います。 Apacheライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品に含まれる ZXing は Apache ライセンスに従います。 Apache ライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#apache-license",
             children: "Apache License"
           }), " でご確認いただけます。"]
@@ -185,7 +185,7 @@ function _createMdxContent(props) {
       product: "bioentry_w3",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品に含まれる NotoSans、NotoNaskh、Pixel12x10、NeoDunggeunmo フォントは SIL Open Font License に従います。 SILオープンフォントライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品に含まれる NotoSans、NotoNaskh、Pixel12x10、NeoDunggeunmo フォントは SIL Open Font License に従います。 SIL オープンフォントライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#sil-open-font-license",
             children: "SIL Open Font License"
           }), " でご確認いただけます。"]
@@ -284,7 +284,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["本製品に含まれるAndroidおよびiOSのライセンスの詳細は、", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+            children: ["本製品に含まれる Android および iOS のライセンスの詳細は、", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
               to: "legal/open-source-licenses#android",
               children: "Android"
             }), " と ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {

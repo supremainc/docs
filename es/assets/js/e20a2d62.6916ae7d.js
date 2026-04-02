@@ -2538,12 +2538,12 @@ const toc = [{
   "id": "fijar-el-soporte-y-el-producto",
   "level": 2
 }, ..._device_power_connection/* .toc */.RM, {
-  "value": "Conecte la alimentación del lector",
-  "id": "conecte-la-alimentación-del-lector",
-  "level": 2
-}, {
   "value": "Conecte la alimentación del lector y de la cerradura",
   "id": "conecte-la-alimentación-del-lector-y-de-la-cerradura",
+  "level": 2
+}, {
+  "value": "Conecte la alimentación del lector",
+  "id": "conecte-la-alimentación-del-lector",
   "level": 3
 }, {
   "value": "Conecte la alimentación de la cerradura",
@@ -2736,11 +2736,11 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_device_power_connection/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "conecte-la-alimentación-del-lector",
-      children: "Conecte la alimentación del lector"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "conecte-la-alimentación-del-lector-y-de-la-cerradura",
       children: "Conecte la alimentación del lector y de la cerradura"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "conecte-la-alimentación-del-lector",
+      children: "Conecte la alimentación del lector"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/installation-reader-power-connection-xpq2.png",
       className: "none",
@@ -2783,7 +2783,7 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "CC 12V"
+              children: "CC 12 V"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -2800,7 +2800,7 @@ function _createMdxContent(props) {
               style: {
                 textAlign: "center"
               },
-              children: "CC 24V"
+              children: "CC 24 V"
             }), (0,jsx_runtime.jsx)(_components.td, {
               style: {
                 textAlign: "center"
@@ -2819,7 +2819,7 @@ function _createMdxContent(props) {
       id: "longitud-máxima-de-extensión-según-especificación-del-cable",
       children: "Longitud máxima de extensión según especificación del cable"
     }), "\n", "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "La distancia de conexión puede variar según las especificaciones del cable y el entorno de instalación utilizado para la alimentación. Si las conexiones de los cables se realizan de forma incorrecta, el dispositivo puede funcionar incorrectamente. Este producto admite fuentes de alimentación de 12 V CC y 24 V CC, por lo que debe verificar la longitud máxima de extensión según la especificación de cada cable y conectar la alimentación correctamente."
+      children: "La distancia de conexión puede variar según las especificaciones del cable y el entorno de instalación utilizado para la alimentación. Si las conexiones de los cables se realizan de forma incorrecta, el dispositivo puede funcionar incorrectamente. Este producto admite fuentes de alimentación de CC 12 V y CC 24 V, por lo que debe verificar la longitud máxima de extensión según la especificación de cada cable y conectar la alimentación correctamente."
     }), "\n", (0,jsx_runtime.jsxs)(Table, {
       children: [(0,jsx_runtime.jsxs)(Thead, {
         children: [(0,jsx_runtime.jsxs)(Row, {

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["64830"], {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["5499"], {
 60254: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.d(__webpack_exports__, {
   Ay: () => (MDXContent),
@@ -51,7 +51,7 @@ function _createMdxContent(props) {
       id: "著作権に関するお知らせ",
       children: "著作権に関するお知らせ"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "本ウェブサイトの著作権はSupremaに帰属します。 その他の製品名、商標、登録商標に関する権利は、それぞれの所有者である個人または団体に帰属します。"
+      children: "本ウェブサイトの著作権は Suprema に帰属します。 その他の製品名、商標、登録商標に関する権利は、それぞれの所有者である個人または団体に帰属します。"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Xclude, {
       product: "doormodule,outputmodule,securemodule,xpass_s2,enclosure,extendedmodule,corestation_setup_manager",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
@@ -62,67 +62,67 @@ function _createMdxContent(props) {
       product: "bioentry_p2,bioentry_r2,bioentry_w2,biostation_2,biostation_a2,biostation_l2,corestation_40,facestation_2,xpass_2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品のソフトウェアは Linux カーネル 3.x を改変して作成されており、Linux カーネルのライセンスは GPL に従っています。 GPLライセンスの詳細については", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品のソフトウェアは Linux カーネル 3.x を改変して作成されており、Linux カーネルのライセンスは GPL に従っています。 GPL ライセンスの詳細については ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#gnu-general-public-v2-license",
             children: "GNU General Public License"
-          }), "をご覧ください。"]
+          }), " をご覧ください。"]
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "biostation_3,biostation_2a,bioentry_w3,biolite_n2,facelite,facestation_f2,xstation_2,biostation_3_max",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品のソフトウェアは Linux カーネル 4.x を改変して作成されており、Linux カーネルのライセンスは GPL に従っています。 GPLライセンスの詳細については", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品のソフトウェアは Linux カーネル 4.x を改変して作成されており、Linux カーネルのライセンスは GPL に従っています。 GPL ライセンスの詳細については ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#gnu-general-public-v2-license",
             children: "GNU General Public License"
-          }), "をご覧ください。"]
+          }), " をご覧ください。"]
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "corestation_20,doorinterface,xpass_q2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品のソフトウェアは Linux カーネル 5.x を改変して作成されており、Linux カーネルのライセンスは GPL に従っています。 GPLライセンスの詳細については", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品のソフトウェアは Linux カーネル 5.x を改変して作成されており、Linux カーネルのライセンスは GPL に従っています。 GPL ライセンスの詳細については ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#gnu-general-public-v2-license",
             children: "GNU General Public License"
-          }), "をご覧ください。"]
+          }), " をご覧ください。"]
         }), "\n"]
       })
     }), "\n", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "biostation_3,biostation_2a,bioentry_p2,bioentry_r2,bioentry_w2,bioentry_w3,biolite_n2,biostation_2,biostation_l2,corestation_40,facelite,xpass_2,biostation_3_max",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品に含まれる glibc ライブラリは LGPL に従います。 LGPLライセンスの詳細については", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品に含まれる glibc ライブラリは LGPL に従います。 LGPL ライセンスの詳細については ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#gnu-lesser-general-public-v21-license",
             children: "GNU Lesser General Public License"
-          }), "をご覧ください。"]
+          }), " をご覧ください。"]
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "bioentry_p2,bioentry_r2,bioentry_w2,biolite_n2,biostation_2,biostation_l2,corestation_40,facelite,xpass_2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品に含まれる QT ライブラリは LGPL に従います。 LGPLライセンスの詳細については", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品に含まれる QT ライブラリは LGPL に従います。 LGPL ライセンスの詳細については ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#gnu-lesser-general-public-v21-license",
             children: "GNU Lesser General Public License"
-          }), "をご覧ください。"]
+          }), " をご覧ください。"]
         }), "\n"]
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "corestation_20,doorinterface,xpass_q2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品に含まれる uclibc ライブラリは LGPL に従います。 LGPLライセンスの詳細については", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品に含まれる uclibc ライブラリは LGPL に従います。 LGPL ライセンスの詳細については ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#gnu-lesser-general-public-v21-license",
             children: "GNU Lesser General Public License"
-          }), "をご覧ください。"]
+          }), " をご覧ください。"]
         }), "\n"]
       })
     }), "\n", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Include, {
       product: "xpass_d2,corestation_20,inputmodule",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品には MIT ライセンスに基づいて開発されたソフトウェアが含まれています。 MITライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品には MIT ライセンスに基づいて開発されたソフトウェアが含まれています。 MIT ライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#the-mit-license",
             children: "The MIT License"
           }), " でご確認いただけます。"]
@@ -132,7 +132,7 @@ function _createMdxContent(props) {
       product: "facestation_f2,xstation_2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品に含まれる BoringSSL ライブラリは OpenSSL ライセンスおよび Original SSLeay ライセンスに従います。 BoringSSLライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品に含まれる BoringSSL ライブラリは OpenSSL ライセンスおよび Original SSLeay ライセンスに従います。 BoringSSL ライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#boringssl-license",
             children: "BoringSSL License"
           }), " でご確認いただけます。"]
@@ -142,7 +142,7 @@ function _createMdxContent(props) {
       product: "biostation_3,biostation_2a,bioentry_p2,bioentry_r2,bioentry_w2,bioentry_w3,biolite_n2,biostation_2,biostation_a2,biostation_l2,corestation_20,corestation_40,doorinterface,facelite,facestation_2,facestation_f2,xpass_2,xstation_2,xpass_q2,biostation_3_max",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品に含まれる OpenSSL は OpenSSL ライセンスおよび Original SSLeay ライセンスに従います。 OpenSSLライセンスおよびOriginal SSLeayライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品に含まれる OpenSSL は OpenSSL ライセンスおよび Original SSLeay ライセンスに従います。 OpenSSL ライセンスおよび Original SSLeay ライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#openssl-license",
             children: "OpenSSL License"
           }), " と ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
@@ -155,7 +155,7 @@ function _createMdxContent(props) {
       product: "biostation_a2,facestation_2,facestation_f2,xstation_2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品に含まれる AOSP は Apache ライセンス 2.0 に従います。 Apacheライセンス 2.0 の詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品に含まれる AOSP は Apache ライセンス 2.0 に従います。 Apache ライセンス 2.0 の詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#apache-license",
             children: "Apache License"
           }), " でご確認いただけます。"]
@@ -165,7 +165,7 @@ function _createMdxContent(props) {
       product: "bioentry_w3",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品に含まれる Open CV 4.5 は Apache ライセンスに従います。 Apacheライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品に含まれる Open CV 4.5 は Apache ライセンスに従います。 Apache ライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#apache-license",
             children: "Apache License"
           }), " でご確認いただけます。"]
@@ -175,7 +175,7 @@ function _createMdxContent(props) {
       product: "xpass_q2",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品に含まれる ZXing は Apache ライセンスに従います。 Apacheライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品に含まれる ZXing は Apache ライセンスに従います。 Apache ライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#apache-license",
             children: "Apache License"
           }), " でご確認いただけます。"]
@@ -185,7 +185,7 @@ function _createMdxContent(props) {
       product: "bioentry_w3",
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-          children: ["本製品に含まれる NotoSans、NotoNaskh、Pixel12x10、NeoDunggeunmo フォントは SIL Open Font License に従います。 SILオープンフォントライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+          children: ["本製品に含まれる NotoSans、NotoNaskh、Pixel12x10、NeoDunggeunmo フォントは SIL Open Font License に従います。 SIL オープンフォントライセンスの詳細は ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
             to: "legal/open-source-licenses#sil-open-font-license",
             children: "SIL Open Font License"
           }), " でご確認いただけます。"]
@@ -284,7 +284,7 @@ function _createMdxContent(props) {
           }), "\n"]
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-            children: ["本製品に含まれるAndroidおよびiOSのライセンスの詳細は、", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
+            children: ["本製品に含まれる Android および iOS のライセンスの詳細は、", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
               to: "legal/open-source-licenses#android",
               children: "Android"
             }), " と ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Linkto, {
@@ -418,7 +418,7 @@ function _missingMdxReference(id, component) {
 
 
 }),
-49490: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+57714: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -427,22 +427,22 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_ja_docusaurus_plugin_content_docs_current_device_bioentry_r_2_appendices_mdx_8ac_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_ja_docusaurus_plugin_content_docs_current_device_corestation_setup_manager_appendices_mdx_519_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-ja-docusaurus-plugin-content-docs-current-device-bioentry-r-2-appendices-mdx-8ac.json
-var site_i_18_n_ja_docusaurus_plugin_content_docs_current_device_bioentry_r_2_appendices_mdx_8ac_namespaceObject = JSON.parse('{"id":"device/bioentry_r2/appendices","title":"付録","description":"製品に含まれる法的通知事項を掲載しています。","source":"@site/i18n/ja/docusaurus-plugin-content-docs/current/device/bioentry_r2/appendices.mdx","sourceDirName":"device/bioentry_r2","slug":"/device/bioentry_r2/appendices","permalink":"/docs/ja/device/bioentry_r2/appendices","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/bioentry_r2/appendices.mdx","tags":[],"version":"current","frontMatter":{"id":"appendices","title":"付録","description":"製品に含まれる法的通知事項を掲載しています。","keywords":["免責事項","著作権","オープンソースライセンス","OSS"],"pagination_next":null,"isTranslationMissing":false},"sidebar":"bioentryr2","previous":{"title":"規制認証情報","permalink":"/docs/ja/device/bioentry_r2/regulatory-information"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-ja-docusaurus-plugin-content-docs-current-device-corestation-setup-manager-appendices-mdx-519.json
+var site_i_18_n_ja_docusaurus_plugin_content_docs_current_device_corestation_setup_manager_appendices_mdx_519_namespaceObject = JSON.parse('{"id":"device/corestation_setup_manager/appendices","title":"付録","description":"製品に含まれる法的通知事項を掲載しています。","source":"@site/i18n/ja/docusaurus-plugin-content-docs/current/device/corestation_setup_manager/appendices.mdx","sourceDirName":"device/corestation_setup_manager","slug":"/device/corestation_setup_manager/appendices","permalink":"/docs/ja/device/corestation_setup_manager/appendices","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/corestation_setup_manager/appendices.mdx","tags":[],"version":"current","frontMatter":{"id":"appendices","title":"付録","description":"製品に含まれる法的通知事項を掲載しています。","keywords":["免責事項","著作権"],"pagination_next":null,"isTranslationMissing":false},"sidebar":"corestation_setup_manager","previous":{"title":"設定","permalink":"/docs/ja/device/corestation_setup_manager/settings"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-// EXTERNAL MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/legal/disclaimers.mdx + 1 modules
-var disclaimers = __webpack_require__(85018);
+// EXTERNAL MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/common/_disclaimers.mdx
+var _disclaimers = __webpack_require__(70547);
 // EXTERNAL MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/common/_disclaimers-copyright-notice.mdx
 var _disclaimers_copyright_notice = __webpack_require__(60254);
-;// CONCATENATED MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/device/bioentry_r2/appendices.mdx
+;// CONCATENATED MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/device/corestation_setup_manager/appendices.mdx
 
 
 const frontMatter = {
@@ -451,9 +451,7 @@ const frontMatter = {
 	description: '製品に含まれる法的通知事項を掲載しています。',
 	keywords: [
 		'免責事項',
-		'著作権',
-		'オープンソースライセンス',
-		'OSS'
+		'著作権'
 	],
 	pagination_next: null,
 	isTranslationMissing: false
@@ -470,7 +468,7 @@ const assets = {
 
 
 
-const toc = [...disclaimers.toc, ..._disclaimers_copyright_notice/* .toc */.RM];
+const toc = [..._disclaimers/* .toc */.RM, ..._disclaimers_copyright_notice/* .toc */.RM];
 function _createMdxContent(props) {
   const _components = {
     p: "p",
@@ -481,7 +479,7 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
       children: "製品に含まれる法的通知事項を掲載しています。"
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(disclaimers["default"], {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_disclaimers_copyright_notice/* ["default"] */.Ay, {})]
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_disclaimers/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(PageBreak, {}), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_disclaimers_copyright_notice/* ["default"] */.Ay, {})]
   });
 }
 function MDXContent(props = {}) {
@@ -498,69 +496,6 @@ function MDXContent(props = {}) {
 }
 function _missingMdxReference(id, component) {
   throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
-}
-
-
-
-}),
-85018: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  frontMatter: () => (/* binding */ frontMatter),
-  toc: () => (/* binding */ toc),
-  "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_ja_docusaurus_plugin_content_docs_current_legal_disclaimers_mdx_feb_namespaceObject),
-  assets: () => (/* binding */ assets),
-  contentTitle: () => (/* binding */ contentTitle)
-});
-
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-ja-docusaurus-plugin-content-docs-current-legal-disclaimers-mdx-feb.json
-var site_i_18_n_ja_docusaurus_plugin_content_docs_current_legal_disclaimers_mdx_feb_namespaceObject = JSON.parse('{"id":"legal/disclaimers","title":"免責事項","description":"Suprema製品と関連する免責事項情報を提供します。","source":"@site/i18n/ja/docusaurus-plugin-content-docs/current/legal/disclaimers.mdx","sourceDirName":"legal","slug":"/legal/disclaimers","permalink":"/docs/ja/legal/disclaimers","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/legal/disclaimers.mdx","tags":[],"version":"current","frontMatter":{"id":"disclaimers","title":"免責事項","description":"Suprema製品と関連する免責事項情報を提供します。","isTranslationMissing":false},"sidebar":"legal","next":{"title":"Software End User License Agreement(EULA)","permalink":"/docs/ja/legal/eula"}}')
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(74848);
-// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
-var lib = __webpack_require__(84429);
-// EXTERNAL MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/common/_disclaimers.mdx
-var _disclaimers = __webpack_require__(70547);
-;// CONCATENATED MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/legal/disclaimers.mdx
-
-
-const frontMatter = {
-	id: 'disclaimers',
-	title: '免責事項',
-	description: 'Suprema製品と関連する免責事項情報を提供します。',
-	isTranslationMissing: false
-};
-const contentTitle = undefined;
-
-const assets = {
-
-};
-
-/*면책 조항*/
-
-
-
-const toc = [..._disclaimers/* .toc */.RM];
-function _createMdxContent(props) {
-  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: ["\n", "\n", (0,jsx_runtime.jsx)(_disclaimers/* ["default"] */.Ay, {})]
-  });
-}
-function MDXContent(props = {}) {
-  const {wrapper: MDXLayout} = {
-    ...(0,lib/* .useMDXComponents */.R)(),
-    ...props.components
-  };
-  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
-    ...props,
-    children: (0,jsx_runtime.jsx)(_createMdxContent, {
-      ...props
-    })
-  }) : _createMdxContent(props);
 }
 
 
