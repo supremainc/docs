@@ -31,31 +31,25 @@ slug: 2026-04-01-changelog
 
 ## Devices
 
-최신 장치 문서 추가 및 기존 문서를 업데이트했습니다.
-
-### 신규 추가 장치
-
-* [BioStation 3 Max (BS3M)](../device/biostation_3_max/) - 새로운 최우수 생체인식 장치
-
-* [XPass Q2](../device/xpass_q2/) - RF/모바일 장치로 QR/바코드 인증 기능 지원
+신규 릴리스 노트를 추가하고 기존 장치 문서를 업데이트했습니다.
 
 ### 장치 문서 업데이트
 
-* **BioEntry W3**: 공장 초기화 및 각 부분 명칭 이미지 SVG 형식으로 개선
+* [XPass 2](../device/xpass_2/release-notes/151): 1.5.1 버전 릴리스 노트 추가
 
-* **BioStation 2a, 3**: 최신 펌웨어 버전 1.2.0, 1.4.0에 대한 릴리스 노트 추가
+<!-- * [BioEntry W3](../device/biostation_3_max/): 1.0.2 버전 릴리스 노트 추가 -->
 
-* **FaceStation F2, FaceStation 2**: 사용자 얼굴 정보 호환성 정보 업데이트
+* [Device Manager](../device/device_manager/release-notes/122): 앱 릴리스 노트 카테고리 신설 및 1.2.2 버전 릴리스 노트 추가
 
-* **X-Station 2, CoreStation 20, DoorInterface**: 최신 버전 릴리스 노트 및 스펙 정보 추가
+* [BioEntry P2](../device/bioentry_p2/release-notes/160): 1.6.0 버전 릴리스 노트 추가
 
-* **Device Manager**: v1.2.2 릴리스 노트 추가, 앱 릴리스 노트 카테고리 신설
-
-* 기존 장치 문서 영문 이미지 및 스펙 업데이트
+* 장치 공장 초기화 버튼 위치 안내 이미지 추가
 
 ## Developer
 
 * API 문서 업데이트: [Create BioStar X QR](../api/bsxapi#tag/Cards/operation/createCard)
+
+* Device SDK: 2.9.12 버전 릴리스 노트 추가
 
 ## 다국어 지원
 
@@ -72,3 +66,7 @@ slug: 2026-04-01-changelog
   * 기술 용어 표준화
 
   * 문장 구조 및 표현 개선
+
+## 오픈 소스 라이선스
+
+* 라이선스 고지문 추가: [BSD-2-Clause](../legal/open-source-licenses#the-2-clause-bsd-license), [BSD-3-Clause](../legal/open-source-licenses#the-3-clause-bsd-license), [EPL](../legal/open-source-licenses#eclipse-public-license), [EDL](../legal/open-source-licenses#eclipse-distribution-license), [LGPLv2.1](../legal/open-source-licenses#gnu-lesser-general-public-v21-license)​, [GPLv2](../legal/open-source-licenses#gnu-general-public-v2-license)​, [ISC](../legal/open-source-licenses#isc-license), [zlib](../legal/open-source-licenses#zlib-license)
