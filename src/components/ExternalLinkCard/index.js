@@ -159,7 +159,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
         id: "externalLinks.BioEntryW3.desc",
         message: "Simple, Durable, Secure<br/>AI 기반 얼굴인증 디바이스"
       })}`,
-      tags: ['AI', 'Face']
+      tags: ['AI', 'Face', 'RTSP']
     },
     {
       title: 'BioStation 2a',
@@ -179,7 +179,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
         id: "externalLinks.BioStation3.desc",
         message: "차세대 출입통제 솔루션"
       })}`,
-      tags: ['AI', 'Face', 'RTSP']
+      tags: ['AI', 'Face', 'RTSP', 'Touch Screen', 'QR/Barcode']
     },
     {
       title: 'FaceStation F2',
@@ -189,7 +189,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
         id: "externalLinks.FaceStationF2.desc",
         message: "퓨전 얼굴인증 장치"
       })}`,
-      tags: ['Fusion Matching', 'Face', 'Fingerprint']
+      tags: ['Fusion Matching', 'Face', 'Fingerprint', 'Touch Screen']
     },
     {
       title: 'FaceStation 2',
@@ -199,7 +199,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
         id: "externalLinks.FaceStation2.desc",
         message: "얼굴 인증 출입근태 단말기"
       })}`,
-      tags: ['Face']
+      tags: ['Face', 'Touch Screen']
     },
     {
       title: 'BioLite N2',
@@ -209,7 +209,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
         id: "externalLinks.BioLiteN2.desc",
         message: "옥외형 지문 인식 출입·근태 장치"
       })}`,
-      tags: ['Fingerprint', 'IP67']
+      tags: ['Fingerprint']
     },
     {
       title: 'BioEntry W2',
@@ -219,7 +219,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
         id: "externalLinks.BioentryW2.desc",
         message: "옥외형 지문인식 출입통제 단말기"
       })}`,
-      tags: ['Fingerprint', 'IP67', 'IK09']
+      tags: ['Fingerprint']
     },
     {
       title: 'BioEntry P2',
@@ -229,7 +229,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
         id: "externalLinks.BioentryP2.desc",
         message: "콤팩트 지문인식 단말기"
       })}`,
-      tags: ['Fingerprint', 'Multi RFID']
+      tags: ['Fingerprint']
     },
     {
       title: 'BioEntry R2',
@@ -239,7 +239,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
         id: "externalLinks.BioentryP2.desc",
         message: "콤팩트 지문인식 단말기"
       })}`,
-      tags: ['Fingerprint', 'Multi RFID']
+      tags: ['Fingerprint']
     },
     {
       title: 'X-Station 2',
@@ -249,7 +249,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
         id: "externalLinks.XStation2.desc",
         message: "차세대 모바일 출입인증 단말기"
       })}`,
-      tags: ['Fingerprint', 'Mobile', 'QR']
+      tags: ['Fingerprint', 'Touch Screen', 'QR/Barcode']
     }
   ];
   const productLinks = productLinksProp || defaultProductLinks;
@@ -283,7 +283,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
         id: "externalLinks.XStation2.desc",
         message: "차세대 모바일 출입인증 단말기"
       })}`,
-      tags: ['Fingerprint', 'Mobile', 'QR']
+      tags: ['Touch Screen', 'QR/Barcode']
     },
     {
       title: 'XPass 2',
@@ -291,9 +291,9 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
       img: require('@site/static/img/cover/xpass-2.jpg').default,
       desc:  `${translate({
         id: "externalLinks.XPass2.desc",
-        message: "옥외형 콤팩트 RFID 리더"
+        message: "옥외형 콤팩트 RFID 장치"
       })}`,
-      tags: ['RFID', 'IP67', 'IK08']
+      tags: ['RFID']
     },
     {
       title: 'XPass D2',
@@ -303,7 +303,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
         id: "externalLinks.XPass2.desc",
         message: "옥외형 콤팩트 RFID 리더"
       })}`,
-      tags: ['RFID', 'IP67', 'IK08']
+      tags: ['RFID', 'Reader']
     },
     {
       title: 'XPass S2',
@@ -313,7 +313,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
         id: "externalLinks.XPassS2.desc",
         message: "IP RFID 출입통제 단말기"
       })}`,
-      tags: ['Network', 'RFID', 'IP65']
+      tags: ['RFID']
     }
   ];
   const productLinks = productLinksProp || defaultProductLinks;
@@ -338,7 +338,7 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
         id: "externalLinks.CoreStation20.desc",
         message: "강력한 보안, 유연한 확장성"
       })}`,
-      tags: ['ACU ', 'Fingerprint', 'RFID']
+      tags: ['ACU', '2 Door']
     },
     {
       title: 'CoreStation',
@@ -348,7 +348,7 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
         id: "externalLinks.CoreStation.desc",
         message: "지능형 바이오인식 컨트롤러"
       })}`,
-      tags: ['ACU ', 'Fingerprint', 'RFID']
+      tags: ['ACU']
     },
     {
       title: 'Enclosure',
@@ -358,7 +358,7 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
         id: "externalLinks.CoreStationEnclosure.desc",
         message: "CoreStation 전용 함체"
       })}`,
-      tags: ['8CH Power Distribution', 'Tamper']
+      tags: ['Protection', 'for CoreStation']
     }
   ];
   const productLinks = productLinksProp || defaultProductLinks;
@@ -395,7 +395,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
         id: "externalLinks.peripheral.im120.desc",
         message: "다중 입력 확장 모듈"
       })}`,
-      tags: ['Input Extension', 'Signal Processing', 'Tamper']
+      tags: ['Input Extension']
     },
     {
       title: 'Output Module',
@@ -406,7 +406,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
         id: "externalLinks.peripheral.om120.desc",
         message: "다중 출력 제어 모듈"
       })}`,
-      tags: ['Relay Module', 'Elevator Control']
+      tags: ['Output Extension', 'Elevator Control']
     },
     {
       title: 'Door Module',
@@ -428,7 +428,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
         id: "externalLinks.peripheral.sio2.desc",
         message: "출입문 보안 컨트롤 모듈"
       })}`,
-      tags: ['Security','Access Control', 'Door']
+      tags: ['Compact']
     },
     {
       title: 'Extended Module',
@@ -438,7 +438,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
         id: "externalLinks.peripheral.extendedmodule.desc",
         message: "확장형 통신 및 보안 모듈"
       })}`,
-      tags: ['Security','RS-485', 'RS-232C', 'SAM']
+      tags: ['Extension', 'SAM']
     },
     {
       title: 'Extended Module-SC',
@@ -448,7 +448,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
         id: "externalLinks.peripheral.extendedmodule.desc",
         message: "확장형 통신 및 보안 모듈"
       })}`,
-      tags: ['Security','RS-485', 'RS-232C']
+      tags: ['Extension']
     }
   ];
   const productLinks = productLinksProp || defaultProductLinks;
