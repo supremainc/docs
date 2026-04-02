@@ -410,6 +410,21 @@
   "index.biostarair.description": {
     "message": "世界最先端の生体認証リーダーをクラウドにネイティブ接続する唯一のアクセス制御ソリューションです。"
   },
+  "index.shortcut.linkText": {
+    "message": "移動 →"
+  },
+  "index.shortcut.compare.title": {
+    "message": "製品機能と仕様比較"
+  },
+  "index.shortcut.compare.description": {
+    "message": "Supremaが提供する各製品の機能と仕様を比較できます。異なる製品の機能と仕様を一目で比較できます。"
+  },
+  "index.shortcut.howto.title": {
+    "message": "ハウツー記事"
+  },
+  "index.shortcut.howto.description": {
+    "message": "Supremaのデバイスとソフトウェアを最大限に活用するための、ユーザー向けステップバイステップガイドを提供します。指示と例に従って簡単に操作できます。"
+  },
   "windows.key.start": {
     "message": "開始"
   },

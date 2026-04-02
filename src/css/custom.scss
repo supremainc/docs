@@ -154,71 +154,32 @@ html[lang='en-US'] *, html[lang='es-419'] *, html[lang='es'] * {
 // 언어별 폰트 설정
 
 // index.js 페이지
-.aa-Autocomplete {
+main .search-pop-trigger {
+  position: relative;
   width: 48%;
   margin: 20px auto !important;
-  z-index: 10;
-  .aa-Form {
-    background: #fff;
-    --aa-input-icon-size: 24px;
-    border: 0;
-    border-radius: 8px;
-    filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.12))
-            drop-shadow(0 1px 10px rgba(0, 0, 0, 0.14))
-            drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12))
-            drop-shadow(0 -1px 3px rgba(0, 0, 0, 0.1));
-    .aa-Label {
-      padding-left: 5px;
-      svg {
-      color: #aaa;
-      }
-    }
-  }
-  .aa-Input {
-    width: 100%;
-    height: 60px;
-    font-size: 1.2rem;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 5px;
+  border: 0;
+  background: #fff;
+  height: 60px;
+  border-radius: 8px;
+  padding: 0;
+  filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.12))
+          drop-shadow(0 1px 10px rgba(0, 0, 0, 0.14))
+          drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12))
+          drop-shadow(0 -1px 3px rgba(0, 0, 0, 0.1));
+  svg {
+    position: absolute;
+    left: 17px;
+    transform: scale(1.2);
+    opacity: 0.6;
   }
 }
-.aa-Panel {
-  width: 70%;
-  border-radius: 5px;
-  background-color: var(--ifm-color-nextstep-background) !important;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin: 0 auto;
-  .aa-Item {
-    border-bottom: 1px solid var(--ifm-color-primary-darkest);
-    &:last-of-type {
-      border-bottom: none;
-    }
-  }
-}
-.aa-ItemContent {
-  a {
-    text-decoration: none;
-    .aa-ItemTitle {
-      h3 {
-        font-size: 1.2rem;
-      }
-      .hit-breadcrums {
-        mark {
-          background-color: yellow;
-        }
-      }
-    }
-    .content {
-      color: #333;
-      mark {
-        background-color: yellow;
-      }
-    }
-  }
-  mark {
-    background-color: yellow !important;
-  }
+[data-theme='dark'] main .search-pop-trigger {
+  background: #333;
+  filter: drop-shadow(0 4px 5px rgba(255, 255, 255, 0.12))
+          drop-shadow(0 1px 10px rgba(255, 255, 255, 0.14))
+          drop-shadow(0 2px 4px rgba(255, 255, 255, 0.12))
+          drop-shadow(0 -1px 3px rgba(255, 255, 255, 0.1));
 }
 // index.js 페이지
 
