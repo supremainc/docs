@@ -1,21 +1,32 @@
 ---
-title: 2026년 4월
+title: 2026년 3월
 description: Suprema Docs의 2월부터 3월까지의 주요 업데이트 내역을 제공합니다.
-slug: 2026-04-01-changelog
+slug: 2026-03-changelog
 ---
 
 **BioStar Air** 사용자라면 이번 업데이트를 놓치면 안 됩니다! 완전히 재구성된 관리자 가이드는 사용자 관리부터 출입 통제, 비디오 감시까지 모든 기능을 한눈에 파악할 수 있도록 정리했습니다.
 
-![Suprema Docs 26.04 Changelogs](/img/changelogs-202604.png)
+![Suprema Docs 26.03 Changelogs](/img/changelogs-202603.png)
 
 <!-- truncate -->
+
+## Docs
+
+* 첫 페이지 디자인 변경
+
+  <!-- 캡쳐 이미지 추가 -->
+
+* 검색 기능 강화
+
+  제품별 검색 기능 추가, 단축키(ctrl + k)로 검색 창 호출
+
+  <!-- 캡쳐 이미지 추가 -->
 
 ## Platform
 
 ### BioStar X
 
 * [VMS 서버 연동 시 인증서 설치 관련 문서](../platform/biostar_x/settings-video-integration) 업데이트
-
 
 ### BioStar Air
 
