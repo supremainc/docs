@@ -48,7 +48,7 @@ function HomepageHeader() {
               </div>
               <Link to='/platform/biostar_x' className={styles.banner}>
                 <div className={styles.banner__learnmore}>
-                  Explore BioStar X →
+                  {translate({ id: "index.heroBanner.shortcut.biostarx" })}
                 </div>
               </Link>
             </div>
@@ -62,7 +62,7 @@ function HomepageHeader() {
             </div>
             <Link to='/platform/biostar_air' className={styles.banner}>
               <div className={styles.banner__learnmore}>
-                Explore BioStar Air →
+                {translate({ id: "index.heroBanner.shortcut.biostarair" })}
               </div>
             </Link>
           </div>
@@ -169,33 +169,33 @@ export default function Home() {
         <AiCamera /> */}
 
         <div className={clsx('container', styles.headsec)}>
-          <Heading as='h2'>Biometric Devices</Heading>
+          <Heading as='h2'>{translate({message: 'index.productTitle.biometricsDevice'})}</Heading>
         </div>
         <BiometricReader />
 
         <div className={clsx('container', styles.headsec)}>
-          <Heading as='h2'>RF/Mobile Devices</Heading>
+          <Heading as='h2'>{translate({message: 'index.productTitle.rfMobileDevices'})}</Heading>
         </div>
         <RfMobileDevices />
 
         <div className={clsx('container', styles.headsec)}>
-          <Heading as='h2'>Intelligent Controller</Heading>
+          <Heading as='h2'>{translate({message: 'index.productTitle.intelligentController'})}</Heading>
         </div>
         <IntenlligentController />
 
         <div className={clsx('container', styles.headsec)}>
-          <Heading as='h2'>Peripherals</Heading>
+          <Heading as='h2'>{translate({message: 'index.productTitle.peripheral'})}</Heading>
         </div>
         <Peripheral />
         
         <div className='container'>
           <div className={clsx('container', styles.gridappdeveloper)}>
             <div className={clsx(styles.headsec)}>
-              <Heading as='h2'>Developers</Heading>
+              <Heading as='h2'>{translate({message: 'index.productTitle.developers'})}</Heading>
               <ExternalLinkCard />
             </div>
             <div className={clsx(styles.headsec)}>
-              <Heading as='h2'>APPS</Heading>
+              <Heading as='h2'>{translate({message: 'index.productTitle.apps'})}</Heading>
               <Apps />
             </div>
           </div>

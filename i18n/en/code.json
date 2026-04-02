@@ -425,6 +425,30 @@
   "index.shortcut.howto.description": {
     "message": "Provides user-oriented step-by-step guides to make the most of Suprema's devices and software. Follow the instructions and examples easily."
   },
+  "index.productTitle.biometricsDevice": {
+    "message": "Biometric Devices"
+  },
+  "index.productTitle.rfMobileDevices": {
+    "message": "RF/Mobile Devices"
+  },
+  "index.productTitle.intelligentController": {
+    "message": "Intelligent Controller"
+  },
+  "index.productTitle.peripheral": {
+    "message": "Peripherals"
+  },
+  "index.productTitle.apps": {
+    "message": "APPS"
+  },
+  "index.productTitle.developers": {
+    "message": "Developers"
+  },
+  "index.heroBanner.shortcut.biostarx": {
+    "message": "Explore BioStar X →"
+  },
+  "index.heroBanner.shortcut.biostarair": {
+    "message": "Explore BioStar Air →"
+  },
   "windows.key.start": {
     "message": "Start"
   },
@@ -1193,7 +1217,7 @@
     "message": "Cross-platform solution supporting various programming languages"
   },
   "externalLinks.dev.svpsdk.desc": {
-    "message": "Core functions of Suprema devices<br/>Supported by third-party software"
+    "message": "Core functions of Suprema devices Supported by third-party software"
   },
   "externalLinks.dev.bsair.desc": {
     "message": "Seamless API integration with existing systems"

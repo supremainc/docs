@@ -425,6 +425,30 @@
   "index.shortcut.howto.description": {
     "message": "슈프리마의 장치와 소프트웨어를 보다 쉽게 활용하기 위한 사용자 중심의 단계별 가이드를 제공합니다. 단계별 설명과 예제를 통해 쉽게 따라할 수 있습니다."
   },
+  "index.productTitle.biometricsDevice": {
+    "message": "바이오인식 장치"
+  },
+  "index.productTitle.rfMobileDevices": {
+    "message": "RF/Mobile 장치"
+  },
+  "index.productTitle.intelligentController": {
+    "message": "지능형 컨트롤러"
+  },
+  "index.productTitle.peripheral": {
+    "message": "주변 장치"
+  },
+  "index.productTitle.apps": {
+    "message": "APPS"
+  },
+  "index.productTitle.developers": {
+    "message": "개발자 센터"
+  },
+  "index.heroBanner.shortcut.biostarx": {
+    "message": "BioStar X 살펴보기 →"
+  },
+  "index.heroBanner.shortcut.biostarair": {
+    "message": "BioStar Air 살펴보기 →"
+  },
   "windows.key.start": {
     "message": "시작"
   },

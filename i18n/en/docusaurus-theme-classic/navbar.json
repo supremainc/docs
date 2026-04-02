@@ -174,5 +174,9 @@
   "item.label.SVP Android SDK": {
     "message": "SVP Android SDK",
     "description": "Navbar item with label SVP Android SDK"
+  },
+  "item.label.AI Cameras": {
+    "message": "AI Cameras",
+    "description": "Navbar item with label AI Cameras"
   }
 }

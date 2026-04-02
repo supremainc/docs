@@ -420,10 +420,34 @@
     "message": "Puedes comparar las funciones y especificaciones de cada producto ofrecido por Suprema. Compara las funciones y especificaciones de diferentes productos de un vistazo."
   },
   "index.shortcut.howto.title": {
-    "message": "Artículos How-to"
+    "message": "Guías de uso"
   },
   "index.shortcut.howto.description": {
     "message": "Proporciona guías paso a paso orientadas al usuario para aprovechar al máximo los dispositivos y el software de Suprema. Sigue las instrucciones y ejemplos fácilmente."
+  },
+  "index.productTitle.biometricsDevice": {
+    "message": "Dispositivos biométricos"
+  },
+  "index.productTitle.rfMobileDevices": {
+    "message": "Dispositivos RF/Móviles"
+  },
+  "index.productTitle.intelligentController": {
+    "message": "Controlador inteligente"
+  },
+  "index.productTitle.peripheral": {
+    "message": "Periféricos"
+  },
+  "index.productTitle.developers": {
+    "message": "Desarrolladores"
+  },
+  "index.productTitle.apps": {
+    "message": "Aplicaciones"
+  },
+  "index.heroBanner.shortcut.biostarx": {
+    "message": "Explorar BioStar X →"
+  },
+  "index.heroBanner.shortcut.biostarair": {
+    "message": "Explorar BioStar Air →"
   },
   "windows.key.start": {
     "message": "Inicio"

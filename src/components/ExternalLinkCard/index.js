@@ -37,11 +37,13 @@ function ExternalLinkBanner({Svg, img, title, url, desc, height, play, ios, link
         </div>
       </div>
       <div className={styles.externalLiinkDesc}>
-        <Heading as='h3' className={styles.externalLinkTitle}>{title}</Heading>
+        <Heading as='h3' className={styles.externalLinkTitle}>
+          {title}
+          {linkText && <span className={styles.externalShortcut}><Link to={url} className={styles.externalLink}>{linkText}</Link></span>}
+        </Heading>
         {desc && <p className={styles.externalLinkDesc} dangerouslySetInnerHTML={{__html: desc}} />}
         {play && <a href={play} target='_blank' className={styles.storeLink}><PlaStore /></a>}
         {ios && <a href={ios} target='_blank' className={styles.storeLink}><AppStore /></a>}
-        {linkText && <p className={styles.externalLinkDesc}><Link to={url} className={styles.externalLink}>{linkText}</Link></p>}
       </div>
     </div>
   );
@@ -57,7 +59,7 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
       Svg: require('@site/static/img/cover-api.svg').default,
       height: '60px',
       desc: `${translate({ id: "externalLinks.dev.xapi.desc" })}`,
-      linkText: 'View API Documentation'
+      linkText: `${translate({ id: "index.shortcut.linkText" })}`
     },
     {
       title: 'BioStar Air Developer',
@@ -65,7 +67,7 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
       Svg: require('@site/static/img/cover-air-dev.svg').default,
       height: '60px',
       desc: `${translate({ id: "externalLinks.dev.bsair.desc" })}`,
-      linkText: 'Visit Developer Portal'
+      linkText: `${translate({ id: "index.shortcut.linkText" })}`
     },
     {
       title: 'BioStar Device SDK',
@@ -73,7 +75,7 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
       Svg: require('@site/static/img/cover-sdk.svg').default,
       height: '60px',
       desc: `${translate({ id: "externalLinks.dev.sdk.desc" })}`,
-      linkText: 'Visit SDK Documentation'
+      linkText: `${translate({ id: "index.shortcut.linkText" })}`
     },
     {
       title: 'BioStar 2 API',
@@ -81,7 +83,7 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
       Svg: require('@site/static/img/cover-bs2-api.svg').default,
       height: '60px',
       desc: `${translate({ id: "externalLinks.dev.2api.desc" })}`,
-      linkText: 'Visit API Documentation'
+      linkText: `${translate({ id: "index.shortcut.linkText" })}`
     },
     {
       title: 'Suprema G-SDK',
@@ -89,7 +91,7 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
       Svg: require('@site/static/img/cover-gsdk.svg').default,
       height: '60px',
       desc: `${translate({ id: "externalLinks.dev.gsdk.desc" })}`,
-      linkText: 'Visit SDK Documentation'
+      linkText: `${translate({ id: "index.shortcut.linkText" })}`
     },
     {
       title: 'SVP Android SDK',
@@ -97,7 +99,7 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
       Svg: require('@site/static/img/cover-svp-sdk.svg').default,
       height: '60px',
       desc: `${translate({ id: "externalLinks.dev.svpsdk.desc" })}`,
-      linkText: 'Visit SDK Documentation'
+      linkText: `${translate({ id: "index.shortcut.linkText" })}`
     }
   ];
   const externalLinks = externalLinksProp || defaultExternalLinks;
@@ -486,7 +488,7 @@ export function Apps({ externalLinks: externalLinksProp }) {
         id: "externalLinks.apps.devicemanager.desc",
         message: "모바일 기반 출입통제 장치 관리 애플리케이션"
       })}`,
-      linkText: 'View Device Manager'
+      linkText: `${translate({ id: "index.shortcut.linkText" })}`
     },
     {
       title: 'CoreStation Setup Manager',
@@ -497,7 +499,7 @@ export function Apps({ externalLinks: externalLinksProp }) {
         id: "externalLinks.apps.setupmanager.desc",
         message: "중앙집중형 출입통제 관리 웹서버"
       })}`,
-      linkText: 'View CoreStation Setup Manager'
+      linkText: `${translate({ id: "index.shortcut.linkText" })}`
     }
   ];
   const externalLinks = externalLinksProp || defaultExternalLinks;

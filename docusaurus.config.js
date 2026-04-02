@@ -496,6 +496,7 @@ const config = {
           {
             to: 'changelog',
             label: 'Changelog',
+            // className: 'changeNew',
             position: 'right',
           },
           {
