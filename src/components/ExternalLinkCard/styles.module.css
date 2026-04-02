@@ -109,7 +109,9 @@
 
 .product.grid .cardItem:hover {
   outline: 2px solid var(--main-text-color);
-  transition: .1s;
+  transition: .2s;
+  transform: scale(1.1);
+  z-index: 500;
 }
 
 .product.grid {
