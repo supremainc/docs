@@ -747,23 +747,23 @@ const sidebars = {
         },
         'platform/biostar_x/licensing',
         'platform/biostar_x/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x/release-notes'
+          },
+          items: [
+            'platform/biostar_x/release-notes/101',
+            'platform/biostar_x/release-notes/100',
+          ]
+        }
       ],
-    },
-    {
-      type: 'html',
-      value: '<hr />'
-    },
-    {
-      type: 'category',
-      label: '릴리스 노트',
-      link: {
-        type: 'doc',
-        id: 'platform/biostar_x/release-notes'
-      },
-      items: [
-        'platform/biostar_x/release-notes/101',
-        'platform/biostar_x/release-notes/100',
-      ]
     }
   ],
   legal: [

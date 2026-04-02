@@ -1185,5 +1185,13 @@
   },
   "externalLinks.apps.supremapass.desc": {
     "message": "BioStar Air mobile credentials"
+  },
+  "searchBox.refinementList.clearAll": {
+    "message": "Clear all",
+    "description": "The label for the button to clear all refinements in the search box"
+  },
+  "searchBox.recentList.clearButton": {
+    "message": "Clear recent searches",
+    "description": "The label for the button to clear recent searches in the search box"
   }
 }

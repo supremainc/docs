@@ -1185,5 +1185,13 @@
   },
   "externalLinks.apps.supremapass.desc": {
     "message": "BioStar Air のモバイル認証情報"
+  },
+  "searchBox.refinementList.clearAll": {
+    "message": "すべてクリア",
+    "description": "The label for the button to clear all refinements in the search box"
+  },
+  "searchBox.recentList.clearButton": {
+    "message": "最近の検索をクリア",
+    "description": "The label for the button to clear recent searches in the search box"
   }
 }
