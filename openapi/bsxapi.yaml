@@ -9644,15 +9644,15 @@ paths:
         (columnmdescription).
 
 
-        > \[ 
-          
-        >
-        {"columnm":"usrid","adcolumnm":"sAMAccountName","use":"true","columnmdescription":"userid"}
-        {"columnm":"nm","adcolumnm":"displayName"
-        ,"use":"true","columnmdescription":"User NAME"} 
-          
-        > \] 
-          
+        ```
+
+        [ 
+          {"columnm":"usrid","adcolumnm":"sAMAccountName", "use":"true","columnmdescription":"userid"}
+          {"columnm":"nm","adcolumnm":"displayName", "use":"true","columnmdescription":"User NAME"} 
+        ]
+
+        ```
+
 
         If you set the payload as above, you can sync the username as well.
       requestBody:
@@ -11064,7 +11064,7 @@ paths:
       summary: Export as CSV
       operationId: exportEventsExport
       description: >-
-        This API is used to export events to a .csv file. Exported .csv will be saved on BioStar X Server installation path. To get it from the server, use Download Events Exported CSV API.
+        This API is used to export events as a `.csv` file. Exported `.csv` will be saved on `[BioStar X Server installation path]/nginx/html/download`. To get it from the server, use [Download Events Exported CSV API](#tag/Events/operation/downloadCsvFilename).
       requestBody:
         content:
           application/json:
@@ -11113,7 +11113,7 @@ paths:
           in: query
           schema:
             type: boolean
-          description: Toggle for the use of centigrade
+          description: Toggle true to set temperature as celcius, false as fahrenheit.
           example: true
       responses:
         '200':
@@ -12665,17 +12665,62 @@ components:
           $ref: '#/components/schemas/QueryConditions'
         offset:
           type: integer
-          description: Offset the response's records by the specified value.
+          description: Shift the response records by n records.
         columns:
           type: array
           items:
             type: string
-          description: List of columns which will be included on the CSV.
+            enum:
+              - datetime
+              - device_id.id
+              - device_id.name
+              - door_id.name
+              - elevator_id.name
+              - event_type_id
+              - user_id
+              - user_group_id
+              - zone_id.name
+              - tna_key
+              - temperature
+              - user_phone
+              - user_email
+          description: >-
+            List of fields which will be exported. Refer to the table below for list of available fields.
+            
+            | **Fields** | **Description** |
+
+            | --- | --- |
+            
+            | `datetime` | Device timestamp (timezone/DST applied) |
+            
+            | `device_id.id` | Device ID (numeric) |
+            
+            | `device_id.name` | Device name |
+            
+            | `door_id.name` | Door name |
+            
+            | `elevator_id.name` | Elevator name + floor information |
+            
+            | `event_type_id` | Event type name (multilingual support) |
+            
+            | `user_id` | User ID + name + IP |
+            
+            | `user_group_id` | User group name |
+            
+            | `zone_id.name` | Zone name |
+            
+            | `tna_key` | TNA caption/key |
+            
+            | `temperature` | Temperature (°C or °F depending on `use_centigrade` setting) |
+            
+            | `user_phone` | User phone number (thermal export) |
+            
+            | `user_email` | User email address (thermal export) |
         headers:
           type: array
           items:
             type: string
-          description: Name of the header on the exported .csv file.
+          description: Name of the header on the exported `.csv` file.
     QueryConditions:
       type: array
       description: A set of conditions to filter the response of the API. On this case, it's using the datetime field to filter according to the values given.
