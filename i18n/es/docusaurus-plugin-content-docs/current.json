@@ -40,7 +40,7 @@
     "description": "The label for category 'UI 알아보기' in sidebar 'biostarx'"
   },
   "sidebar.legal.category.Legal": {
-    "message": "Legal",
+    "message": "Aviso legal",
     "description": "The label for category 'Legal' in sidebar 'legal'"
   },
   "sidebar.reference.category.참조 문서": {
@@ -180,7 +180,7 @@
     "description": "The label for category '지능형 컨트롤러 및 주변 장치' in sidebar 'reference'"
   },
   "sidebar.howto.category.How-to Articles": {
-    "message": "How-to Articles",
+    "message": "Guías de uso",
     "description": "The label for category 'How-to Articles' in sidebar 'howto'"
   },
   "sidebar.biostar_air.category.Release Notes": {

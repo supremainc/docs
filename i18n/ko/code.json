@@ -420,7 +420,7 @@
     "message": "슈프리마에서 제공하는 각 제품의 기능 및 사양을 비교할 수 있습니다. 다양한 제품의 기능 및 사양을 한눈에 비교할 수 있습니다."
   },
   "index.shortcut.howto.title": {
-    "message": "How-to Articles"
+    "message": "제품 활용 가이드"
   },
   "index.shortcut.howto.description": {
     "message": "슈프리마의 장치와 소프트웨어를 보다 쉽게 활용하기 위한 사용자 중심의 단계별 가이드를 제공합니다. 단계별 설명과 예제를 통해 쉽게 따라할 수 있습니다."
@@ -907,6 +907,10 @@
   "theme.SearchBar.label": {
     "message": "검색",
     "description": "The ARIA label and placeholder for search button"
+  },
+  "theme.SearchBar.product.label": {
+    "message": "제품",
+    "description": "The ARIA label and placeholder for product search button"
   },
   "theme.SearchModal.searchBox.resetButtonTitle": {
     "message": "검색어 초기화",

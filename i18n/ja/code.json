@@ -908,6 +908,10 @@
     "message": "検索",
     "description": "The ARIA label and placeholder for search button"
   },
+  "theme.SearchBar.product.label": {
+    "message": "製品",
+    "description": "The ARIA label and placeholder for product search button"
+  },
   "theme.SearchModal.searchBox.resetButtonTitle": {
     "message": "検索語をリセット",
     "description": "The label and ARIA label for search box reset button"

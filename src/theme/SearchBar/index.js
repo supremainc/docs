@@ -492,7 +492,7 @@ export default function SearchPop() {
 
                 <div className="search-pop-body">
                   <aside className="search-pop-sidebar">
-                    <h4>Products</h4>
+                    <h4>{translate({ id: 'theme.SearchBar.product.label' })}</h4>
                     <ClearRefinements
                       classNames={{
                         root: 'search-pop-clear-refinements',
