@@ -14,13 +14,13 @@ slug: 2026-03-changelog
 
 * 첫 페이지 디자인 변경
 
-  <!-- 캡쳐 이미지 추가 -->
+  ![Suprema Docs home](/img/changelogs/changelog-03-home.png)
 
 * 검색 기능 강화
 
   제품별 검색 기능 추가, 단축키(ctrl + k)로 검색 창 호출
 
-  <!-- 캡쳐 이미지 추가 -->
+  ![Suprema Docs home](/img/changelogs/changelog-03-search.png)
 
 ## Platform
 
