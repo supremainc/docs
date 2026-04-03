@@ -237,9 +237,9 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       img: require('@site/static/img/cover/bioentry-r2.jpg').default,
       desc: `${translate({
         id: "externalLinks.BioentryP2.desc",
-        message: "콤팩트 지문인식 단말기"
+        message: "콤팩트 지문인식 리더"
       })}`,
-      tags: ['Fingerprint']
+      tags: ['Fingerprint', 'Reader']
     },
     {
       title: 'X-Station 2',
@@ -417,7 +417,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
         id: "externalLinks.peripheral.dm20.desc",
         message: "다중 출입문 보안 I/O 모듈"
       })}`,
-      tags: ['Security','Access Control', 'Module']
+      tags: ['Door Control', 'I/O Module']
     },
     {
       title: 'Secure Module',
@@ -428,7 +428,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
         id: "externalLinks.peripheral.sio2.desc",
         message: "출입문 보안 컨트롤 모듈"
       })}`,
-      tags: ['Compact']
+      tags: ['Door Control', 'Relay']
     },
     {
       title: 'Extended Module',
