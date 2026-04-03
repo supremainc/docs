@@ -4,7 +4,7 @@ description: Provides an overview of key updates to Suprema Docs from February t
 slug: 2026-03-changelog
 ---
 
-**BioStar Air** users won't want to miss this update! Our completely restructured administrator guide brings all key features—from user management to access control and video surveillance—together in one comprehensive view.
+This March update improves your **Suprema Docs** experience with a more intuitive interface and enhanced search functionality. Meanwhile, the BioStar Air Administrator Guide has been completely restructured to help you understand all features—from user management to access control and video surveillance—at a glance.
 
 ![Suprema Docs 26.03 Changelogs](/img/changelogs-202603.png)
 
