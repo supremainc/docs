@@ -246,16 +246,16 @@ const config = {
             label: 'AI Cameras',
             position: 'right',
             items: [
-              // {
-              //   type: 'doc',
-              //   label: 'ViOnyx',
-              //   docId: 'device/vionyx/index'
-              // },
-              // {
-              //   type: 'doc',
-              //   label: 'ViOnyx Web Server',
-              //   docId: 'device/vionyx_webserver/index'
-              // },
+              {
+                type: 'doc',
+                label: 'ViOnyx',
+                docId: 'device/vionyx/index'
+              },
+              {
+                type: 'doc',
+                label: 'ViOnyx Web Server',
+                docId: 'device/vionyx_webserver/index'
+              },
             ]
           },
           {
@@ -263,17 +263,6 @@ const config = {
             label: 'Devices',
             position: 'right',
             items: [
-            
-            //   {
-            //     type: 'doc',
-            //     label: 'BioStation 3 Max',
-            //     docId: 'device/biostation_3_max/index'
-            //   },
-              {
-                type: 'doc',
-                label: 'ViOnyx',
-                docId: 'device/vionyx/index'
-              },
               {
                 type: 'doc',
                 label: 'BioStation 3 Max',

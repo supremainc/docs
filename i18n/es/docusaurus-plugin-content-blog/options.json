@@ -1,14 +1,14 @@
 {
   "title": {
-    "message": "Changelog",
+    "message": "Registro de cambios",
     "description": "The title for the blog used in SEO"
   },
   "description": {
-    "message": "Suprema product change logs",
+    "message": "Registros de cambios de productos de Suprema",
     "description": "The description for the blog used in SEO"
   },
   "sidebar.title": {
-    "message": "All Changelogs",
+    "message": "Todos los registros de cambios",
     "description": "The label for the left sidebar"
   }
 }
