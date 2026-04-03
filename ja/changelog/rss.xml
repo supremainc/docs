@@ -4,10 +4,114 @@
         <title>Suprema Docs Blog</title>
         <link>https://supremainc.github.io/docs/ja/changelog</link>
         <description>Suprema Docs Blog</description>
-        <lastBuildDate>Fri, 02 Jan 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 03 Apr 2026 01:18:54 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
+        <item>
+            <title><![CDATA[March 2026]]></title>
+            <link>https://supremainc.github.io/docs/ja/changelog/2026-03-changelog</link>
+            <guid>https://supremainc.github.io/docs/ja/changelog/2026-03-changelog</guid>
+            <pubDate>Fri, 03 Apr 2026 01:18:54 GMT</pubDate>
+            <description><![CDATA[Provides an overview of key updates to Suprema Docs from February through March.]]></description>
+            <content:encoded><![CDATA[<p>This March update improves your <strong>Suprema Docs</strong> experience with a more intuitive interface and enhanced search functionality. Meanwhile, the BioStar Air Administrator Guide has been completely restructured to help you understand all features—from user management to access control and video surveillance—at a glance.</p>
+<p><img decoding="async" loading="lazy" alt="Suprema Docs 26.03 Changelogs" src="https://supremainc.github.io/docs/ja/assets/images/changelogs-202603-c15b7331f076c3d94af5e3a46090a663.png" width="800" height="394" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="docs">Docs<a href="https://supremainc.github.io/docs/ja/changelog/2026-03-changelog#docs" class="hash-link" aria-label="Docs への直接リンク" title="Docs への直接リンク" translate="no">​</a></h2>
+<ul>
+<li class="">
+<p>Redesigned home page</p>
+<p><img decoding="async" loading="lazy" alt="Suprema Docs home" src="https://supremainc.github.io/docs/ja/assets/images/changelog-03-home-ea316261191418e4109ce742dbb21e43.png" width="1437" height="1148" class="img_ev3q"></p>
+</li>
+<li class="">
+<p>Enhanced search functionality</p>
+<p>Added product-specific search and keyboard shortcut (Ctrl + K) to open the search bar</p>
+<p><img decoding="async" loading="lazy" alt="Suprema Docs home" src="https://supremainc.github.io/docs/ja/assets/images/changelog-03-search-2bc412d1eb46e0cfe28cf766e016cd2c.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="platform">Platform<a href="https://supremainc.github.io/docs/ja/changelog/2026-03-changelog#platform" class="hash-link" aria-label="Platform への直接リンク" title="Platform への直接リンク" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="biostar-x">BioStar X<a href="https://supremainc.github.io/docs/ja/changelog/2026-03-changelog#biostar-x" class="hash-link" aria-label="BioStar X への直接リンク" title="BioStar X への直接リンク" translate="no">​</a></h3>
+<ul>
+<li class="">Updated documentation for <a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_x/settings-video-integration">VMS Server Integration and Certificate Installation</a></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="biostar-air">BioStar Air<a href="https://supremainc.github.io/docs/ja/changelog/2026-03-changelog#biostar-air" class="hash-link" aria-label="BioStar Air への直接リンク" title="BioStar Air への直接リンク" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p>Completed comprehensive restructuring and optimization of the <a class="" href="https://supremainc.github.io/docs/ja/platform/biostar_air">BioStar Air Administrator Guide</a></p>
+</li>
+<li class="">
+<p>Expanded multilingual support for BioStar Air: English, Japanese, and Spanish translations added</p>
+<ul>
+<li class="">
+<p>Added documentation for key features including user management, access rights management, and video management</p>
+</li>
+<li class="">
+<p>Added English interface images and user interface screenshots</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Improved BioStar Air table of contents structure and reorganized sections</p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="devices">Devices<a href="https://supremainc.github.io/docs/ja/changelog/2026-03-changelog#devices" class="hash-link" aria-label="Devices への直接リンク" title="Devices への直接リンク" translate="no">​</a></h2>
+<p>Added new release notes and updated existing device documentation.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="device-documentation-updates">Device Documentation Updates<a href="https://supremainc.github.io/docs/ja/changelog/2026-03-changelog#device-documentation-updates" class="hash-link" aria-label="Device Documentation Updates への直接リンク" title="Device Documentation Updates への直接リンク" translate="no">​</a></h3>
+<ul>
+<li class=""><a class="" href="https://supremainc.github.io/docs/ja/device/xpass_2/release-notes/151">XPass 2</a>: Added v1.5.1 release notes</li>
+</ul>
+<ul>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/device_manager/release-notes/122">Device Manager</a>: Established new app release notes category and added v1.2.2 release notes</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/ja/device/bioentry_p2/release-notes/160">BioEntry P2</a>: Added v1.6.0 release notes</p>
+</li>
+<li class="">
+<p>Added instructional images for device factory reset button location</p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="developer">Developer<a href="https://supremainc.github.io/docs/ja/changelog/2026-03-changelog#developer" class="hash-link" aria-label="Developer への直接リンク" title="Developer への直接リンク" translate="no">​</a></h2>
+<ul>
+<li class="">
+<p>API documentation updated: <a class="" href="https://supremainc.github.io/docs/ja/api/bsxapi#tag/Cards/operation/createCard">Create BioStar X QR</a></p>
+</li>
+<li class="">
+<p>Device SDK: Added v2.9.12 release notes</p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="multilingual-support">Multilingual Support<a href="https://supremainc.github.io/docs/ja/changelog/2026-03-changelog#multilingual-support" class="hash-link" aria-label="Multilingual Support への直接リンク" title="Multilingual Support への直接リンク" translate="no">​</a></h2>
+<ul>
+<li class="">
+<p>Improved documentation quality for Japanese and Spanish versions</p>
+<ul>
+<li class="">
+<p>Enhanced consistency of document titles and content</p>
+</li>
+<li class="">
+<p>Corrected mistranslations and standardized terminology</p>
+</li>
+<li class="">
+<p>Fixed spacing and grammar issues</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Significantly updated English translation</p>
+<ul>
+<li class="">
+<p>Standardized technical terminology</p>
+</li>
+<li class="">
+<p>Improved sentence structure and phrasing</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="open-source-software-licenses">Open Source Software Licenses<a href="https://supremainc.github.io/docs/ja/changelog/2026-03-changelog#open-source-software-licenses" class="hash-link" aria-label="Open Source Software Licenses への直接リンク" title="Open Source Software Licenses への直接リンク" translate="no">​</a></h2>
+<ul>
+<li class="">Added license attributions: <a class="" href="https://supremainc.github.io/docs/ja/legal/open-source-licenses#the-2-clause-bsd-license">BSD-2-Clause</a>, <a class="" href="https://supremainc.github.io/docs/ja/legal/open-source-licenses#the-3-clause-bsd-license">BSD-3-Clause</a>, <a class="" href="https://supremainc.github.io/docs/ja/legal/open-source-licenses#eclipse-public-license">EPL</a>, <a class="" href="https://supremainc.github.io/docs/ja/legal/open-source-licenses#eclipse-distribution-license">EDL</a>, <a class="" href="https://supremainc.github.io/docs/ja/legal/open-source-licenses#gnu-lesser-general-public-v21-license">LGPLv2.1</a>​, <a class="" href="https://supremainc.github.io/docs/ja/legal/open-source-licenses#gnu-general-public-v2-license">GPLv2</a>​, <a class="" href="https://supremainc.github.io/docs/ja/legal/open-source-licenses#isc-license">ISC</a>, <a class="" href="https://supremainc.github.io/docs/ja/legal/open-source-licenses#zlib-license">zlib</a></li>
+</ul>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[January 2026]]></title>
             <link>https://supremainc.github.io/docs/ja/changelog/2026-01-02-changelog</link>

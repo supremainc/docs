@@ -2,11 +2,115 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://supremainc.github.io/docs/changelog</id>
     <title>Suprema Docs Blog</title>
-    <updated>2026-01-02T00:00:00.000Z</updated>
+    <updated>2026-04-03T01:18:54.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://supremainc.github.io/docs/changelog"/>
     <subtitle>Suprema Docs Blog</subtitle>
     <icon>https://supremainc.github.io/docs/https://supremainc.com/ko/asset/images/common/Website_favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[2026년 3월]]></title>
+        <id>https://supremainc.github.io/docs/changelog/2026-03-changelog</id>
+        <link href="https://supremainc.github.io/docs/changelog/2026-03-changelog"/>
+        <updated>2026-04-03T01:18:54.000Z</updated>
+        <summary type="html"><![CDATA[Suprema Docs의 2월부터 3월까지의 주요 업데이트 내역을 제공합니다.]]></summary>
+        <content type="html"><![CDATA[<p>이번 3월 업데이트는 더욱 직관적인 인터페이스와 강화된 검색 기능으로 <strong>Suprema Docs</strong> 사용 경험을 개선했습니다. 동시에 <strong>BioStar Air</strong> 관리자 가이드를 완전히 재구성하여 사용자 관리부터 출입 통제, 비디오 감시까지 모든 기능을 한눈에 파악할 수 있도록 정리했습니다.</p>
+<p><img decoding="async" loading="lazy" alt="Suprema Docs 26.03 Changelogs" src="https://supremainc.github.io/docs/assets/images/changelogs-202603-c15b7331f076c3d94af5e3a46090a663.png" width="800" height="394" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="docs">Docs<a href="https://supremainc.github.io/docs/changelog/2026-03-changelog#docs" class="hash-link" aria-label="Docs에 대한 직접 링크" title="Docs에 대한 직접 링크" translate="no">​</a></h2>
+<ul>
+<li class="">
+<p>첫 페이지 디자인 변경</p>
+<p><img decoding="async" loading="lazy" alt="Suprema Docs home" src="https://supremainc.github.io/docs/assets/images/changelog-03-home-ea316261191418e4109ce742dbb21e43.png" width="1437" height="1148" class="img_ev3q"></p>
+</li>
+<li class="">
+<p>검색 기능 강화</p>
+<p>제품별 검색 기능 추가, 단축키(ctrl + k)로 검색 창 호출</p>
+<p><img decoding="async" loading="lazy" alt="Suprema Docs home" src="https://supremainc.github.io/docs/assets/images/changelog-03-search-2bc412d1eb46e0cfe28cf766e016cd2c.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="platform">Platform<a href="https://supremainc.github.io/docs/changelog/2026-03-changelog#platform" class="hash-link" aria-label="Platform에 대한 직접 링크" title="Platform에 대한 직접 링크" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="biostar-x">BioStar X<a href="https://supremainc.github.io/docs/changelog/2026-03-changelog#biostar-x" class="hash-link" aria-label="BioStar X에 대한 직접 링크" title="BioStar X에 대한 직접 링크" translate="no">​</a></h3>
+<ul>
+<li class=""><a class="" href="https://supremainc.github.io/docs/platform/biostar_x/settings-video-integration">VMS 서버 연동 시 인증서 설치 관련 문서</a> 업데이트</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="biostar-air">BioStar Air<a href="https://supremainc.github.io/docs/changelog/2026-03-changelog#biostar-air" class="hash-link" aria-label="BioStar Air에 대한 직접 링크" title="BioStar Air에 대한 직접 링크" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/platform/biostar_air">BioStar Air 가이드</a> 문서 전체 재구성 및 최적화 완료</p>
+</li>
+<li class="">
+<p>BioStar Air 다국어 지원 확대: 영문, 일본어, 스페인어 번역 추가</p>
+<ul>
+<li class="">
+<p>사용자 관리, 출입 권한 관리, 비디오 관리 등 주요 기능 문서 추가</p>
+</li>
+<li class="">
+<p>영문 이미지 및 사용자 인터페이스 스크린샷 추가</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>BioStar Air 목차 구조 개선 및 섹션 재조정</p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="devices">Devices<a href="https://supremainc.github.io/docs/changelog/2026-03-changelog#devices" class="hash-link" aria-label="Devices에 대한 직접 링크" title="Devices에 대한 직접 링크" translate="no">​</a></h2>
+<p>신규 릴리스 노트를 추가하고 기존 장치 문서를 업데이트했습니다.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="장치-문서-업데이트">장치 문서 업데이트<a href="https://supremainc.github.io/docs/changelog/2026-03-changelog#%EC%9E%A5%EC%B9%98-%EB%AC%B8%EC%84%9C-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8" class="hash-link" aria-label="장치 문서 업데이트에 대한 직접 링크" title="장치 문서 업데이트에 대한 직접 링크" translate="no">​</a></h3>
+<ul>
+<li class=""><a class="" href="https://supremainc.github.io/docs/device/xpass_2/release-notes/151">XPass 2</a>: 1.5.1 버전 릴리스 노트 추가</li>
+</ul>
+<ul>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/device/device_manager/release-notes/122">Device Manager</a>: 앱 릴리스 노트 카테고리 신설 및 1.2.2 버전 릴리스 노트 추가</p>
+</li>
+<li class="">
+<p><a class="" href="https://supremainc.github.io/docs/device/bioentry_p2/release-notes/160">BioEntry P2</a>: 1.6.0 버전 릴리스 노트 추가</p>
+</li>
+<li class="">
+<p>장치 공장 초기화 버튼 위치 안내 이미지 추가</p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="developer">Developer<a href="https://supremainc.github.io/docs/changelog/2026-03-changelog#developer" class="hash-link" aria-label="Developer에 대한 직접 링크" title="Developer에 대한 직접 링크" translate="no">​</a></h2>
+<ul>
+<li class="">
+<p>API 문서 업데이트: <a class="" href="https://supremainc.github.io/docs/api/bsxapi#tag/Cards/operation/createCard">Create BioStar X QR</a></p>
+</li>
+<li class="">
+<p>Device SDK: 2.9.12 버전 릴리스 노트 추가</p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="다국어-지원">다국어 지원<a href="https://supremainc.github.io/docs/changelog/2026-03-changelog#%EB%8B%A4%EA%B5%AD%EC%96%B4-%EC%A7%80%EC%9B%90" class="hash-link" aria-label="다국어 지원에 대한 직접 링크" title="다국어 지원에 대한 직접 링크" translate="no">​</a></h2>
+<ul>
+<li class="">
+<p>일본어, 스페인어 문서의 완성도 향상</p>
+<ul>
+<li class="">
+<p>문서 제목 및 내용 일관성 개선</p>
+</li>
+<li class="">
+<p>오번역 수정 및 용어 통일</p>
+</li>
+<li class="">
+<p>띄어쓰기 및 문법 수정</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>영문 번역 대폭 업데이트</p>
+<ul>
+<li class="">
+<p>기술 용어 표준화</p>
+</li>
+<li class="">
+<p>문장 구조 및 표현 개선</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="오픈-소스-라이선스">오픈 소스 라이선스<a href="https://supremainc.github.io/docs/changelog/2026-03-changelog#%EC%98%A4%ED%94%88-%EC%86%8C%EC%8A%A4-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4" class="hash-link" aria-label="오픈 소스 라이선스에 대한 직접 링크" title="오픈 소스 라이선스에 대한 직접 링크" translate="no">​</a></h2>
+<ul>
+<li class="">라이선스 고지문 추가: <a class="" href="https://supremainc.github.io/docs/legal/open-source-licenses#the-2-clause-bsd-license">BSD-2-Clause</a>, <a class="" href="https://supremainc.github.io/docs/legal/open-source-licenses#the-3-clause-bsd-license">BSD-3-Clause</a>, <a class="" href="https://supremainc.github.io/docs/legal/open-source-licenses#eclipse-public-license">EPL</a>, <a class="" href="https://supremainc.github.io/docs/legal/open-source-licenses#eclipse-distribution-license">EDL</a>, <a class="" href="https://supremainc.github.io/docs/legal/open-source-licenses#gnu-lesser-general-public-v21-license">LGPLv2.1</a>​, <a class="" href="https://supremainc.github.io/docs/legal/open-source-licenses#gnu-general-public-v2-license">GPLv2</a>​, <a class="" href="https://supremainc.github.io/docs/legal/open-source-licenses#isc-license">ISC</a>, <a class="" href="https://supremainc.github.io/docs/legal/open-source-licenses#zlib-license">zlib</a></li>
+</ul>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2026년 1월]]></title>
         <id>https://supremainc.github.io/docs/changelog/2026-01-02-changelog</id>
