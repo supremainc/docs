@@ -149,7 +149,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
         id: "externalLinks.BioStation3Max.desc",
         message: "###"
       })}`,
-      height: '90px'
+      tags: ['AI', 'Face', 'RTSP', 'Touch Screen']
     },
     {
       title: 'BioEntry W3',
@@ -273,7 +273,8 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
       desc: `${translate({
         id: "externalLinks.XPassQ2.desc",
         message: "카드 및 QR/바코드 인증 지원 출입 통제 장치"
-      })}`
+      })}`,
+      tags: ['Card', 'QR/Barcode']
     },
     {
       title: 'X-Station 2',
