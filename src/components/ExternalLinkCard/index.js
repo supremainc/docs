@@ -144,7 +144,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
     {
       title: 'BioStation 3 Max',
       url: `/device/biostation_3_max`,
-      img: require('@site/static/img/device/biostation_3_max.png').default,
+      img: require('@site/static/img/cover/biostation-3max.jpg').default,
       desc: `${translate({
         id: "externalLinks.BioStation3Max.desc",
         message: "###"
@@ -269,7 +269,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
     {
       title: 'XPass Q2',
       url: `/device/xpass_q2`,
-      img: require('@site/static/img/device/xpass_q2.png').default,
+      img: require('@site/static/img/cover/xpass-q2.jpg').default,
       desc: `${translate({
         id: "externalLinks.XPassQ2.desc",
         message: "카드 및 QR/바코드 인증 지원 출입 통제 장치"
