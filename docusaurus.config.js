@@ -120,7 +120,7 @@ const config = {
             '**/_*.{md,mdx}',
             'device/xpass_q2/**.{md,mdx}',
             'device/biostation_3_max/**.{md,mdx}',
-            'device/vionyx/**.{md,mdx}'
+            // 'device/vionyx/**.{md,mdx}'
           ],
           rehypePlugins: [ rehypeExtendedTable ],
         },
@@ -296,11 +296,11 @@ const config = {
             label: 'Devices',
             position: 'right',
             items: [
-            //   {
-            //     type: 'doc',
-            //     label: 'ViOnyx',
-            //     docId: 'device/vionyx/index'
-            //   },
+              {
+                type: 'doc',
+                label: 'ViOnyx',
+                docId: 'device/vionyx/index'
+              },
             //   {
             //     type: 'doc',
             //     label: 'BioStation 3 Max',
