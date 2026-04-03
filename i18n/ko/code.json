@@ -398,8 +398,56 @@
   "index.search": {
     "message": "검색"
   },
+  "index.biostarx.subtitle": {
+    "message": "통합된 보안, 신뢰의 완성"
+  },
   "index.biostarx.description": {
-    "message": "출입통제의 한계를 넘는 보안의 새로운 기준,<br/>AI 기반 통합 보안 플랫폼"
+    "message": "BioStar X는 하나의 화면에서 통합 관제·대응이 가능한 비디오 매니지먼트 시스템(VMS)과 대형 엔터프라이즈급 보안에 맞는 확장성/가용성/보안성, 제약 없는 통합과 연결, 그리고 최고수준의 생체보안 출입통제를 갖춘 슈프리마의 통합 보안 플랫폼입니다."
+  },
+  "index.biostarair.subtitle": {
+    "message": "Zero on-prem. BioStar Air"
+  },
+  "index.biostarair.description": {
+    "message": "세계에서 가장 진보된 바이오메트릭 장치를 클라우드와 연결하는 유일한 출입 통제 솔루션입니다."
+  },
+  "index.shortcut.linkText": {
+    "message": "바로가기 →"
+  },
+  "index.shortcut.compare.title": {
+    "message": "제품 기능 및 사용 비교"
+  },
+  "index.shortcut.compare.description": {
+    "message": "슈프리마에서 제공하는 각 제품의 기능 및 사양을 비교할 수 있습니다. 다양한 제품의 기능 및 사양을 한눈에 비교할 수 있습니다."
+  },
+  "index.shortcut.howto.title": {
+    "message": "제품 활용 가이드"
+  },
+  "index.shortcut.howto.description": {
+    "message": "슈프리마의 장치와 소프트웨어를 보다 쉽게 활용하기 위한 사용자 중심의 단계별 가이드를 제공합니다. 단계별 설명과 예제를 통해 쉽게 따라할 수 있습니다."
+  },
+  "index.productTitle.biometricsDevice": {
+    "message": "바이오인식 장치"
+  },
+  "index.productTitle.rfMobileDevices": {
+    "message": "RF/Mobile 장치"
+  },
+  "index.productTitle.intelligentController": {
+    "message": "지능형 컨트롤러"
+  },
+  "index.productTitle.peripheral": {
+    "message": "주변 장치"
+  },
+  "index.productTitle.apps": {
+    "message": "APPS"
+  },
+  "index.productTitle.developers": {
+    "message": "개발자 센터"
+  },
+  "index.heroBanner.shortcut.biostarx": {
+    "message": "BioStar X 살펴보기 →"
+  },
+  "index.heroBanner.shortcut.biostarair": {
+    "message": "BioStar Air 살펴보기 →"
   },
   "windows.key.start": {
     "message": "시작"
@@ -860,6 +908,10 @@
     "message": "검색",
     "description": "The ARIA label and placeholder for search button"
   },
+  "theme.SearchBar.product.label": {
+    "message": "제품",
+    "description": "The ARIA label and placeholder for product search button"
+  },
   "theme.SearchModal.searchBox.resetButtonTitle": {
     "message": "검색어 초기화",
     "description": "The label and ARIA label for search box reset button"
@@ -1157,24 +1209,32 @@
     "message": "카드 및 QR/바코드 인증 지원 출입 통제 장치"
   },
   "externalLinks.dev.sdk.desc": {
-    "message": "지문 인식 장치의 핵심 기능을<br/>타사 소프트웨어와 완벽한 통합 지원"
+    "message": "지문 인식 장치의 핵심 기능을 타사 소프트웨어와 완벽한 통합 지원"
   },
   "externalLinks.dev.xapi.desc": {
-    "message": "BioStar X의 모든 API를<br/>한눈에 볼 수 있는 API 문서"
+    "message": "BioStar X의 모든 API를 한눈에 볼 수 있는 API 문서"
   },
   "externalLinks.dev.2api.desc": {
-    "message": "BioStar 2의 모든 API를<br/>한눈에 볼 수 있는 API 문서"
+    "message": "BioStar 2의 모든 API를 한눈에 볼 수 있는 API 문서"
   },
   "externalLinks.dev.gsdk.desc": {
-    "message": "다양한 프로그래밍 언어 지원하는<br/>크로스 플랫폼 솔루션"
+    "message": "다양한 프로그래밍 언어 지원하는 크로스 플랫폼 솔루션"
   },
   "externalLinks.dev.svpsdk.desc": {
-    "message": "슈프리마 장치의 핵심 기능을<br/>타 소프트웨어에서 지원"
+    "message": "슈프리마 장치의 핵심 기능을 타 소프트웨어에서 지원"
   },
   "externalLinks.dev.bsair.desc": {
     "message": "기존 시스템과의 원활한 API 통합"
   },
   "externalLinks.apps.supremapass.desc": {
     "message": "BioStar Air의 모바일 크리덴셜"
+  },
+  "searchBox.refinementList.clearAll": {
+    "message": "선택 해제",
+    "description": "The label for the button to clear all refinements in the search box"
+  },
+  "searchBox.recentList.clearButton": {
+    "message": "최근 검색어 삭제",
+    "description": "The label for the button to clear recent searches in the search box"
   }
 }

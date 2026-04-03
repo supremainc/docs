@@ -17,8 +17,6 @@
     "mdx-to-html": "node genpdf/index.mjs"
   },
   "dependencies": {
-    "@algolia/autocomplete-js": "^1.19.4",
-    "@algolia/autocomplete-theme-classic": "^1.19.4",
     "@docusaurus/core": "^3.9.2",
     "@docusaurus/faster": "^3.9.2",
     "@docusaurus/logger": "^3.9.2",
@@ -34,6 +32,7 @@
     "@mermaid-js/layout-elk": "^0.1.9",
     "@saucelabs/theme-github-codeblock": "^0.3.0",
     "@signalwire/docusaurus-plugin-llms-txt": "^2.0.0-alpha.6",
+    "algoliasearch": "^5.50.0",
     "clsx": "^2.0.0",
     "docusaurus-plugin-image-zoom": "^3.0.1",
     "prism-react-renderer": "^2.4.1",
@@ -41,6 +40,7 @@
     "raw-loader": "^4.0.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-instantsearch": "^7.28.1",
     "react-magnifier": "^3.0.4",
     "react-youtube": "^10.1.0",
     "redocusaurus": "^2.5.0",

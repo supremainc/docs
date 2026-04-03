@@ -398,8 +398,56 @@
   "index.search": {
     "message": "検索"
   },
+  "index.biostarx.subtitle": {
+    "message": "ひとつのプラットフォーム、高度な信頼性"
+  },
   "index.biostarx.description": {
-    "message": "入退室管理の限界を超える新たなセキュリティ基準、AIベースの統合セキュリティプラットフォーム"
+    "message": "BioStar Xは、最高水準の生体認証アクセスと統合モニタリングを備え、スケール・可用性・コンプライアンスに対応する堅牢でレジリエントな基盤上に構築された、Suprema の統合セキュリティプラットフォームです。"
+  },
+  "index.biostarair.subtitle": {
+    "message": "オンプレミスなし。BioStar Air"
+  },
+  "index.biostarair.description": {
+    "message": "世界最先端の生体認証リーダーをクラウドにネイティブ接続する唯一のアクセス制御ソリューションです。"
+  },
+  "index.shortcut.linkText": {
+    "message": "移動 →"
+  },
+  "index.shortcut.compare.title": {
+    "message": "製品機能と仕様比較"
+  },
+  "index.shortcut.compare.description": {
+    "message": "Supremaが提供する各製品の機能と仕様を比較できます。異なる製品の機能と仕様を一目で比較できます。"
+  },
+  "index.shortcut.howto.title": {
+    "message": "活用ガイド"
+  },
+  "index.shortcut.howto.description": {
+    "message": "Supremaのデバイスとソフトウェアを最大限に活用するための、ユーザー向けステップバイステップガイドを提供します。指示と例に従って簡単に操作できます。"
+  },
+  "index.productTitle.biometricsDevice": {
+    "message": "生体認証デバイス"
+  },
+  "index.productTitle.rfMobileDevices": {
+    "message": "RF/モバイルデバイス"
+  },
+  "index.productTitle.intelligentController": {
+    "message": "インテリジェントコントローラー"
+  },
+  "index.productTitle.peripheral": {
+    "message": "周辺機器"
+  },
+  "index.productTitle.apps": {
+    "message": "アプリ"
+  },
+  "index.productTitle.developers": {
+    "message": "開発者センター"
+  },
+  "index.heroBanner.shortcut.biostarx": {
+    "message": "BioStar X を探る →"
+  },
+  "index.heroBanner.shortcut.biostarair": {
+    "message": "BioStar Air を探る →"
   },
   "windows.key.start": {
     "message": "開始"
@@ -860,6 +908,10 @@
     "message": "検索",
     "description": "The ARIA label and placeholder for search button"
   },
+  "theme.SearchBar.product.label": {
+    "message": "製品",
+    "description": "The ARIA label and placeholder for product search button"
+  },
   "theme.SearchModal.searchBox.resetButtonTitle": {
     "message": "検索語をリセット",
     "description": "The label and ARIA label for search box reset button"
@@ -1157,24 +1209,32 @@
     "message": "カードおよびQR/バーコード認証対応入退室装置"
   },
   "externalLinks.dev.sdk.desc": {
-    "message": "指紋認証デバイスのコア機能を<br/>サードパーティ製ソフトウェアと完全に統合"
+    "message": "指紋認証デバイスのコア機能をサードパーティ製ソフトウェアと完全に統合"
   },
   "externalLinks.dev.xapi.desc": {
-    "message": "BioStar XのすべてのAPIを<br/>一目で確認できるAPIドキュメント"
+    "message": "BioStar XのすべてのAPIを一目で確認できるAPIドキュメント"
   },
   "externalLinks.dev.2api.desc": {
-    "message": "BioStar 2のすべてのAPIを<br/>一目で確認できるAPIドキュメント"
+    "message": "BioStar 2のすべてのAPIを一目で確認できるAPIドキュメント"
   },
   "externalLinks.dev.gsdk.desc": {
-    "message": "多様なプログラミング言語をサポートする<br/>クロスプラットフォームソリューション"
+    "message": "多様なプログラミング言語をサポートするクロスプラットフォームソリューション"
   },
   "externalLinks.dev.svpsdk.desc": {
-    "message": "Suprema デバイスの主要機能を<br/>他ソフトウェアでサポート"
+    "message": "Suprema デバイスの主要機能を他ソフトウェアでサポート"
   },
   "externalLinks.dev.bsair.desc": {
     "message": "既存システムとの円滑なAPI統合"
   },
   "externalLinks.apps.supremapass.desc": {
     "message": "BioStar Air のモバイル認証情報"
+  },
+  "searchBox.refinementList.clearAll": {
+    "message": "すべてクリア",
+    "description": "The label for the button to clear all refinements in the search box"
+  },
+  "searchBox.recentList.clearButton": {
+    "message": "最近の検索をクリア",
+    "description": "The label for the button to clear recent searches in the search box"
   }
 }
