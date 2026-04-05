@@ -172,6 +172,7 @@ a.banner {
 @media screen and (max-width: 1023px) {
   .gridappdeveloper {
     grid-template-columns: 1fr !important;
+    padding: 1rem !important;
   }
 }
 
@@ -205,6 +206,9 @@ a.banner {
 }
 @media screen and (max-width: 820px) {
   .containerRef {
+    padding: 0;
+  }
+  .shortcutbanner {
     padding: 0;
   }
 }
@@ -338,13 +342,25 @@ a.banner {
   .heroBanner {
     padding: 1rem;
   }
+  .hero__header {
+    padding-bottom: 2rem;
+  }
   .heroBanner .containerRef {
     padding: 1rem 0;
   }
   .banner__biostar {
     grid-template-columns: 1fr;
   }
+  .section__banner {
+    height: 200px !important;
+  }
   .bsx .banner__biostar {
-    width: 90%;
+    width: 100%;
+  }
+  .banner__biostar p {
+    display: none;
+  }
+  .shortcutbanner {
+    padding: 0;
   }
 }
