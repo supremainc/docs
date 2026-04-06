@@ -1,0 +1,210 @@
+---
+id: bsair-release-notes
+title: BioStar Air
+description: This document provides a summary of feature improvements, bug fixes, and major changes for each version of the BioStar Air platform.
+toc_max_heading_level: 2
+---
+
+## Version 2.11 {#211}
+
+Release<Separator/>2025-11-25
+
+BioStar Air 2.11 continues our commitment to making cloud access control more reliable than traditional on-premise systems. This release introduces major improvements to offline behavior, updates to the admin experience, and powerful new capabilities for BioStation 3.
+
+Whether you're managing a single site or dozens of locations, this update makes BioStar Air easier to use, more resilient, and ready for more complex deployments.
+
+
+### RFID Card Active Sync on XPass 2 and X-Station 2
+
+As part of our long-term goal to exceed the reliability of on-premise access control, we’ve fully re-engineered how BioStar Air handles credential redundancy. With the new **Active Sync** architecture, readers continue working normally even when disconnected from the network.
+
+All primary credential types remain fully functional during network outages:
+
+- **RF Cards**
+
+- **Biometric Templates**
+
+- **Mobile Credentials**
+
+- **PINs**
+
+:::info
+
+You'll still need a network connection to use Dynamic QR and LinkPass Credentials.
+
+:::
+
+Readers still plug in and sync automatically, with no new installation steps. Credential data is continuously synchronized in the background.
+
+This feature is being rolled out by device type:
+
+- **BioStation 3 / BioEntry W3**
+
+  Available now. No firmware update required.
+
+- **XPass 2**
+
+  Rolling out beginning Nov 25, 2025. If firmware v2.11 is not visible yet, please be patient. All customers will receive it by **Dec 9**.
+
+- **X-Station 2**
+
+   Scheduled for release on **Dec 23, 2025**.
+
+
+### Interface Updates
+
+We've made several UI enhancements to simplify everyday administration and reduce repetitive actions.
+
+#### Device List
+
+- Added a **Refresh Status**(<IcAirRef width='24px' height='24px' />) button for situations where the displayed status may be out of date.
+
+- You can now **delete devices directly from the web portal** without using the mobile app. 
+
+  :::note
+
+  Devices must have an active network connection or they will still need to be deleted with the mobile app. Supported on the same schedule as firmware updates listed above.
+
+  :::
+
+#### Personal Information Masking
+
+A new **Mask Personal Information** button hides sensitive user details while viewing event logs, admin logs, or user information on-screen. Helpful for audits or shared-screen reviews.
+
+#### Reports
+
+All dropdown filters are now **searchable**, making it easier to build report templates quickly.
+
+#### User List
+
+Improved the user-selection UI. Admins now see a **visual count of selected users** before performing batch actions.
+
+#### Partner Portal
+
+- Improved **user and device counts**.
+
+- Improved **site deletion workflow** warns you if devices are still registered to the site.
+
+
+### BioStation 3 – Video Gateway Support
+
+BioStation 3 can now operate as a **video gateway**, allowing it to process and relay video streams from multiple 4K cameras simultaneously. This gives sites a powerful and flexible way to deploy video without additional hardware.
+
+To enable:
+
+1. Update your BioStation 3 firmware.
+
+1. Open Device Settings for your BioStation 3.
+
+1. Toggle **Video Gateway** on.
+
+:::info
+
+Refer to our knowledge base article on <DocLink docId='platform/biostar_air/ip-camera-support-and-configuration' />.
+
+:::
+
+---
+
+### Event Logs & Alerts
+
+Previously, some network-disconnection logs were stored on the device and only uploaded once the reader reconnected. This caused delays in alert visibility.
+
+With v2.11:
+
+- **Network disconnection events are now generated server-side**.
+
+- Alerts appear immediately when a reader loses connectivity
+
+- Admins can respond more quickly to wiring issues, outages, or unexpected device behavior
+
+This ensures consistent, real-time awareness, even when devices go offline.
+
+
+---
+
+
+## Version 2.10 {#210}
+
+Release<Separator/>2025-08-12
+
+We're excited to announce BioStar Air 2.10 — a major update that introduces support for our most advanced biometric reader, BioStation 3, along with powerful new features to improve credential management, user setup, and device control. This release gives both administrators and installers more flexibility, security, and ease of use than ever before.
+
+### BioStation 3 Support
+
+BioStation 3 (BS3) is Suprema's flagship intelligent terminal, combining facial authentication, mobile access, card reading, and intercom functionality in one compact device. With BioStar Air 2.10, BS3 is fully supported and manageable from the BioStar Air portal and mobile apps.
+
+**Key BS3 features now available in BioStar Air**:
+
+* **Face Authentication**: Fast Mode for speed, Fusion Mode for enhanced security
+
+* **RFID Support**: MIFARE Classic, FeliCa, DESFire, EM4100 (125 KHz), and select proprietary formats (iCLASS, Prox where supported)
+
+* **Mobile Credentials**: Seamless Suprema Pass integration
+
+* **QR Code Scanning**: Supports dynamic QR codes and CSNs encoded as QR codes (license required)
+
+* **SIP Intercom**: Audio/video calls to the BioStar Air App or web dashboard, with remote door unlock via DTMF
+
+* **Device Branding**: Upload custom logos or wallpapers via the Edit Device screen
+
+* **Time & Attendance Keys**: On-screen event codes for shift start/end and breaks
+
+
+### Smarter Credential Management
+
+#### Custom Wiegand Format Support
+
+Define and manage your own Wiegand formats, including facility codes, segment definitions, and parity bits. Configure from Settings → Credential Formats in the web portal. Formats appear as separate columns in CSV imports, allowing you to:
+
+* Assign multiple cards per user with a / separator
+
+* Optionally name each card inline for clarity
+
+#### Assign Up to 8 Cards Per User
+
+Support for multiple credentials per user has been expanded to allow up to eight RFID cards (CSN or Wiegand) per account.
+
+#### PIN Code Support
+
+Set PINs directly in the Edit User screen or via CSV import. For security, PINs cannot be viewed or exported.
+
+#### Mobile App Enhancements
+
+* **iOS**: Edit User screen now includes a **Read** button to scan cards via a connected reader
+
+* **Android**: NFC-on-phone scan replaced with dropdown-based reader scan (matches iOS behavior)
+
+#### Better CSV Upload Feedback
+
+CSV imports now show line-by-line error messages, making it faster to correct issues.
+
+#### Validity Period Improvements
+
+For "infinite" access periods, the start date is automatically set to today at 00:00. Quick adjustments (+1 day, +1 week, etc.) update only the end date.
+
+
+### Device Management Enhancements
+
+* **Wiegand Output Mode**: Toggle between Normal and Bypass modes per device
+
+* **Firmware Update Safeguard**: Update button is greyed out during active updates
+
+* **Byte Order Settings**: Configure per device or apply in bulk from the Device List
+
+
+### Video Performance Improvements
+
+Backend optimizations improve Uniview camera stream stability and responsiveness. Additional camera brand support is planned for future releases.
+
+
+### Private Reports
+
+One-time reports are now sent only to the admin who generated them, preventing accidental distribution to all administrators.
+
+
+### Real-Time Patch Diagnostics
+
+When registering Airfob Patch, the system now displays live voltage and RSSI readings, making placement and performance testing faster and more accurate.
+
+<YouTube videoId="si2Pu0W8ABw" />

@@ -494,5 +494,13 @@
   "sidebar.biostar_air.category.추가 사이트 구성하기": {
     "message": "추가 사이트 구성하기",
     "description": "The label for category '추가 사이트 구성하기' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.bsairReleaseNotes": {
+    "message": "소프트웨어",
+    "description": "The label for category '소프트웨어' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.펌웨어": {
+    "message": "펌웨어",
+    "description": "The label for category '펌웨어' in sidebar 'biostar_air'"
   }
 }
