@@ -133,6 +133,45 @@
             "ja": "1 台のカメラ（QR専用）"
           }
         },
+        "dimensions": {
+          "label": "크기 (W x H x D)",
+          "label_id": "specs.general.dimensions",
+          "type": "model",
+          "items": {
+            "model1": {
+              "label": "장치",
+              "label_id": "specs.general.weight.device",
+              "value": "50 x 150 x 40.2 (mm)"
+            },
+            "model2": {
+              "label": "브래킷",
+              "label_id": "specs.general.weight.bracket",
+              "value": "41.7 x 140.6 (mm)"
+            }
+          }
+        },
+        "weight": {
+          "label": "무게",
+          "label_id": "specs.general.weight",
+          "type": "model",
+          "items": {
+            "model1": {
+              "label": "장치",
+              "label_id": "specs.general.weight.device",
+              "value": "213 g"
+            },
+            "model2": {
+              "label": "브래킷",
+              "label_id": "specs.general.weight.bracket",
+              "value": {
+                "ko": "40 g (와셔 및 볼트 포함)",
+                "en": "40 g (including washers and bolts)",
+                "es": "40 g (incluye arandelas y tornillos)",
+                "ja": "40 g (ワッシャーおよびボルトを含む)"
+              }
+            }
+          }
+        },
         "ip_rating": {
           "label": "IP 등급",
           "label_id": "specs.general.ip_rating",
