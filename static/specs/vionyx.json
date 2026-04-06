@@ -231,12 +231,7 @@
         "network_protocol": {
           "label": "네트워크 프로토콜",
           "label_id": "specs.interface.network_protocol",
-          "value": {
-            "ko": "ONVIF (Profile G, M, S, T)",
-            "en": "ONVIF (Profile G, M, S, T)",
-            "es": "ONVIF (Profile G, M, S, T)",
-            "ja": "ONVIF (Profile G, M, S, T)"
-          }
+          "value": "ONVIF (Profile S, T)"
         },
         "rs485": {
           "label": "RS-485",
