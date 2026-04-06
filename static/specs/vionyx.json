@@ -4,11 +4,6 @@
       "label": "일반",
       "label_id": "specs.general",
       "items": {
-        "memory": {
-          "label": "메모리",
-          "label_id": "specs.general.memory",
-          "value": "16 GB Flash + 8 GB RAM"
-        },
         "extended_memory": {
           "label": "확장 메모리",
           "label_id": "specs.general.extended_memory",

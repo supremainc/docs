@@ -801,7 +801,7 @@
     "message": "비디오 압축"
   },
   "specs.video_audio.wdr": {
-    "message": "WDR"
+    "message": "광역 역광 보정 (WDR)"
   },
   "specs.video_audio.audio": {
     "message": "오디오"
