@@ -1451,8 +1451,8 @@ body[data-rh] .redocusaurus {
 }
 
 @media screen and (max-width: 1023px) {
-  .aa-Autocomplete {
-    width: 71%;
+  main .search-pop-trigger {
+    width: 70%;
   }
 }
 
@@ -1519,6 +1519,9 @@ body[data-rh] .redocusaurus {
         }
       }
     }
+  }
+  main .search-pop-trigger {
+    width: 100%;
   }
 }
 

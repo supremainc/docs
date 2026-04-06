@@ -467,10 +467,17 @@ export function Apps({ externalLinks: externalLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const defaultExternalLinks = [
     {
-      title: 'BioStar Air',
+      title: 'BioStar X Mobile',
+      play: 'https://play.google.com/store/apps/details?id=com.suprema.biostarmobile',
+      ios: 'https://apps.apple.com/app/biostar-x-mobile/id6741415253',
+      Svg: require('@site/static/img/cover-bsx-app.svg').default,
+      height: '60px'
+    },
+    {
+      title: 'BioStar Air Mobile',
       play: 'https://play.google.com/store/apps/details?id=com.supremainc.biostarair',
       ios: 'https://apps.apple.com/app/biostar-air/id6745057397',
-      Svg: require('@site/static/img/bsair-app.svg').default,
+      img: require('@site/static/img/bsair-app.png').default,
       height: '60px'
     },
     {
@@ -483,7 +490,7 @@ export function Apps({ externalLinks: externalLinksProp }) {
     {
       title: 'Device Manager',
       url: '/device/device_manager',
-      Svg: require('@site/static/img/cover-device-manager.svg').default,
+      img: require('@site/static/img/cover-device-manager.png').default,
       height: '60px',
       desc: `${translate({
         id: "externalLinks.apps.devicemanager.desc",
