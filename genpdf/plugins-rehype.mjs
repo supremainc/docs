@@ -1480,7 +1480,7 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
 
       if (node.type === 'mdxJsxFlowElement' && node.name === 'TabItem') {
         const attributes = node.attributes || [];
-        const tabTitle = attributes.find(attr => attr.name === 'label')?.value || '';
+        const tabTitle = attributes.find(attr => attr.name === 'value')?.value || attributes.find(attr => attr.name === 'label')?.value;
         const replacement = {
           type: 'element',
           tagName: 'div',
