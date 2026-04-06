@@ -12,7 +12,7 @@
 
 [data-theme='dark'] .heroLayout {
   background-color: #1a1a1a;
-  background-image: radial-gradient(#21A9DC1a 0.5px, transparent 1.5px), radial-gradient(#C53F881a 1.5px, #1a1a1a 1.5px);
+  background-image: radial-gradient(#21A9DC1a 0.5px, transparent 2.5px), radial-gradient(#C53F881a 1.5px, #1a1a1a 1.5px);
 }
 .heroBanner {
   padding: 35px 0 10px 0;
