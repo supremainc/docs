@@ -418,6 +418,7 @@ body[data-rh] .redocusaurus {
 // markdown 콘텐츠 스타일 
 .markdown {
   counter-reset: count;
+  counter-reset: column-count;
   header h1 {
     &.confidential::before {
       content: "CONFIDENTIAL";
@@ -859,38 +860,11 @@ body[data-rh] .redocusaurus {
     margin-top: 0;
   }
   ol {
-    li {
+    &>li {
       &::marker {
         color: var(--ifm-color-color-ol-gray);
         font-weight: 600;
         font-size: 1.1rem;
-      }
-    }
-  }
-
-  .grid--ol {
-    counter-reset: gird--ol-counter;
-    &>ol {
-      &>li {
-        counter-increment: gird--ol-counter;
-        display: grid;
-        grid-template-columns: 32px 47% 50%;
-        grid-template-rows: repeat(2, auto);
-        grid-gap: 1rem 0;
-        &::before {
-          content: counter(gird--ol-counter) ".";
-          color: var(--ifm-color-color-ol-gray);
-          font-weight: 600;
-          font-size: 1.1rem;
-          line-height: 1.5;
-        }
-        .theme-admonition {
-          grid-column: span 3;
-          margin-left: 32px;
-          ol {
-            list-style-type: decimal;
-          }
-        }
       }
     }
   }
@@ -1089,6 +1063,12 @@ body[data-rh] .redocusaurus {
   // Column width
   .columns:has(h2) {
     margin-top: 2rem;
+  }
+  .order--continuous {
+    counter-increment: column-count;
+  }
+  .order--continuous ol > li::marker {
+    content: counter(column-count) ". ";
   }
   .columns {
     .col {

@@ -190,6 +190,15 @@ header p {
 
 .doc-section {
   counter-reset: count;
+  counter-reset: column-count;
+}
+
+.doc-content .order--continuous {
+  counter-increment: column-count;
+}
+
+.doc-content .order--continuous ol > li::marker {
+  content: counter(column-count) ". ";
 }
 
 .doc-section h1 {
@@ -446,36 +455,6 @@ header p {
 
 .doc-content details.faq summary::before {
   content: none;
-}
-
-.doc-content .grid--ol {
-  counter-reset: gird--ol-counter;
-}
-
-.doc-content .grid--ol > ol > li {
-  counter-increment: gird--ol-counter;
-  display: grid;
-  grid-template-columns: 25px 57.9% 40%;
-  grid-template-rows: repeat(2, auto);
-  grid-gap: 1rem 0;
-}
-
-.doc-content .grid--ol > ol > li::before {
-  content: counter(gird--ol-counter) ".";
-  color: var(--ifm-color-color-ol-gray);
-  font-weight: 600;
-}
-.doc-content .grid--ol > ol > li > p.hasimg > img {
-  margin-left: 0;
-}
-
-.doc-content .grid--ol > ol > li .callout {
-  grid-column: span 3;
-  margin-left: 25px;
-}
-
-.doc-content .grid--ol > ol > li .callout ol {
-  list-style-type: decimal;
 }
 
 details > summary {
