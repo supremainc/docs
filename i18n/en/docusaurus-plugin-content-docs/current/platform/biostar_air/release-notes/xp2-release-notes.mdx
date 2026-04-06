@@ -1,0 +1,76 @@
+---
+id: xp2-release-notes
+title: XPass 2 Air Firmware
+toc_max_heading_level: 2
+---
+
+## Firmware Version 2.11.2 (Build No. 2.11.2_260112)
+
+Release<Separator/>2025-01-12
+
+This release enhances user synchronization for BioStar Air environments, aligns device behavior with Suprema firmware standards, and improves network configuration stability.
+
+### Key Features and Improvements
+
+#### Authentication
+
+1. Supports authentication using users and access levels stored locally on the device
+
+1. Server-based authentication is not supported in this version and is not required for normal operation
+
+#### User Management
+
+1. Added user synchronization capability
+
+1. Users and access levels are stored directly on the device through synchronization
+
+#### System and Firmware Behavior
+
+1. Firmware is based on Suprema XPass 2 base firmware v1.5.0
+
+1. Device behavior, including LED indicators, is aligned with standard Suprema firmware
+
+   **LED indicators**
+
+   | Color | Description |
+   | --- | --- |
+   | Green | Authentication success |
+   | Red | Authentication failure |
+   | Blue/Cyan blinking | Normal operation |
+   | Blue/Green blinking | Network initialization in progress |
+   | Green blinking | Waiting for input |
+   | Green/White blinking | Connecting to Suprema Pass (BLE) |
+   | White blinking | Connecting to Device Manager |
+
+1. Legacy Airfob Space-specific LED indicators have been removed
+
+#### Compatibility and Migration
+
+1. Compatible with BioStar 2 environments
+
+1. Firmware upgrade is supported from v2.9.0 and earlier to v2.11.2
+
+   * Downgrade to earlier versions (e.g., v2.9.0, v2.8.1) is not supported
+
+#### Firmware Transition Notes
+
+1. Devices can transition between Suprema firmware v1.5.0 and AIR v2.11.2
+
+   * Legacy models (AEM, AE-MC, AE-MU) are not supported when upgrading to Suprema firmware and may become unusable
+
+     These models must remain on BioStar Air firmware v2.9.0 or earlier
+
+
+### Bug Fixes
+
+#### Network
+
+* Fixed an issue where device network settings were unintentionally changed when using a static IP
+
+---
+
+## Firmware Version 2.8.1 (Build No. 2.8.1_250408)
+
+Release<Separator/>2025-04-14
+
+### Initial Firmware Developed.
