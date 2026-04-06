@@ -868,6 +868,33 @@ body[data-rh] .redocusaurus {
     }
   }
 
+  .grid--ol {
+    counter-reset: gird--ol-counter;
+    &>ol {
+      &>li {
+        counter-increment: gird--ol-counter;
+        display: grid;
+        grid-template-columns: 32px 47% 50%;
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 1rem 0;
+        &::before {
+          content: counter(gird--ol-counter) ".";
+          color: var(--ifm-color-color-ol-gray);
+          font-weight: 600;
+          font-size: 1.1rem;
+          line-height: 1.5;
+        }
+        .theme-admonition {
+          grid-column: span 3;
+          margin-left: 32px;
+          ol {
+            list-style-type: decimal;
+          }
+        }
+      }
+    }
+  }
+
   .bug--lists {
     ol {
       width: 100%;
