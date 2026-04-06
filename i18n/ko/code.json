@@ -683,6 +683,9 @@
   "specs.power.powerSupply": {
     "message": "전원 장치 (SMPS) AC INPUT"
   },
+  "specs.power.power_consumption": {
+    "message": "소비 전력"
+  },
   "specs.power.switch_input_vih": {
     "message": "스위치 입력 VIH"
   },

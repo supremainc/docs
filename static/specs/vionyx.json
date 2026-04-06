@@ -4,16 +4,6 @@
       "label": "일반",
       "label_id": "specs.general",
       "items": {
-        "cpu": {
-          "label": "CPU",
-          "label_id": "specs.general.cpu",
-          "value": {
-            "ko": "Ambarella Dual A76 1.6 GHz",
-            "en": "Ambarella Dual A76 1.6 GHz",
-            "es": "Ambarella Dual A76 1.6 GHz",
-            "ja": "Ambarella デュアル A76 1.6 GHz"
-          }
-        },
         "memory": {
           "label": "메모리",
           "label_id": "specs.general.memory",
@@ -33,15 +23,35 @@
           "label": "동작 온도",
           "label_id": "specs.general.operating_temp",
           "value": {
-            "ko": "-40 °C ~ 60 °C",
-            "en": "-40 °C ~ 60 °C",
-            "es": "De -40 °C a 60 °C",
-            "ja": "-40 °C ~ 60 °C"
+            "ko": "-40 °C ~ 50 °C",
+            "en": "-40 °C ~ 50 °C",
+            "es": "De -40 °C a 50 °C",
+            "ja": "-40 °C ~ 50 °C"
+          }
+        },
+        "storage_temp": {
+          "label": "보관 온도",
+          "label_id": "specs.general.storage_temp",
+          "value": {
+            "ko": "-40 °C ~ 70 °C",
+            "en": "-40 °C ~ 70 °C",
+            "es": "De -40 °C a 70 °C",
+            "ja": "-40 °C ~ 70 °C"
           }
         },
         "operating_humidity": {
           "label": "동작 습도",
           "label_id": "specs.general.operating_humidity",
+          "value": {
+            "ko": "0 % ~ 90 %, 비응축",
+            "en": "0 % ~ 90 %, non-condensing",
+            "es": "Del 0 % al 90 %, sin condensación",
+            "ja": "0 % ~ 90 %（結露なきこと）"
+          }
+        },
+        "storage_humidity": {
+          "label": "보관 습도",
+          "label_id": "specs.general.storage_humidity",
           "value": {
             "ko": "0 % ~ 90 %, 비응축",
             "en": "0 % ~ 90 %, non-condensing",
@@ -104,10 +114,10 @@
           "label": "인증",
           "label_id": "specs.general.certifications",
           "value": {
-            "ko": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE",
-            "en": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE",
-            "es": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE",
-            "ja": "CE、UKCA、KC、FCC、IC、RCM、VCCI、RoHS、REACH、WEEE"
+            "ko": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE, CRS/BIS",
+            "en": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE, CRS/BIS",
+            "es": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE, CRS/BIS",
+            "ja": "CE、UKCA、KC、FCC、IC、RCM、VCCI、RoHS、REACH、WEEE、CRS/BIS"
           }
         }
       }
@@ -318,16 +328,22 @@
         "power": {
           "label": "전원",
           "label_id": "specs.power.power",
+          "value": "PoE(IEEE802.3af, Class3), PoE+, 12 Vdc"
+        },
+        "power_consumption": {
+          "label": "소비 전력",
+          "label_id": "specs.power.power_consumption",
           "type": "model",
           "items": {
-            "12vdc": {
-              "label": "12 Vdc",
-              "value": {
-                "ko": "전류: 최대 TBD A",
-                "en": "Current: Max. TBD A",
-                "es": "Corriente: Máx. TBD A",
-                "ja": "電流：最大 TBD A"
-              }
+            "model1": {
+              "label": "PoE (12V 출력)",
+              "label_id": "specs.power.poe12vout",
+              "value": "TBD"
+            },
+            "model2": {
+              "label": "PoE+ (12V 출력)",
+              "label_id": "specs.power.poe_plus12vout",
+              "value": "TBD"
             }
           }
         }

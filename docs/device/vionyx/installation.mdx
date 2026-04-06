@@ -221,9 +221,15 @@ keywords: [ 마운트 플레이트, 전원, 네트워크, 입력, 릴레이 ]
 
 :::
 
-### RS-485 연결
+### RS-485 연결 (지원 예정)
 
 RS-485 통신을 통해 외부 장치와 연결할 수 있습니다. 배선 시 극성(A/B)에 주의하세요.
+
+* RS-485 케이블은 AWG24, 꼬임선(Twisted Pair), 최대 길이 1.2 km를 사용하세요.
+
+* RS-485 케이블은 특성 임피던스가 120 Ω인 케이블을 사용하는 것을 권장합니다.
+
+* RS-485 데이지 체인으로 연결할 경우 종단 저항(120Ω)을 데이지 체인 연결의 양 끝에 연결하세요. 중간 선로에 연결할 경우 신호 레벨이 작아져 통신 성능이 떨어지므로 반드시 데이지 체인 연결의 양 끝에 연결하세요.
 
 <Image src='/img/camera/installation-rs485-connection-vionyx.svg' className='none' />
 
@@ -249,7 +255,7 @@ RS-485 통신을 통해 외부 장치와 연결할 수 있습니다. 배선 시 
 
 :::
 
-### AUDIO 연결
+### AUDIO 연결 (지원 예정)
 
 * 오디오 입력(LINE IN): 오디오 소스를 연결하세요. 제품 전면에 내장 마이크가 지원됩니다.
 
@@ -257,7 +263,7 @@ RS-485 통신을 통해 외부 장치와 연결할 수 있습니다. 배선 시 
 
 <Image src='/img/camera/installation-audio-connection-vionyx.svg' className='none' />
 
-## Micro SD 카드 및 USB 장치 연결
+## Micro SD 카드 및 USB 장치 연결 (지원 예정)
 
 <Image src='/img/camera/installation-usb-sdcard-connection-vionyx.png' className='none' alone />
 
@@ -273,10 +279,28 @@ RS-485 통신을 통해 외부 장치와 연결할 수 있습니다. 배선 시 
 
 * 본 제품은 다음 제조사 제품군의 메모리 카드 사용을 권장합니다.
 
-   * 제조사: Samsung, SanDisk, Transcend
+   * 제조사: Samsung, SanDisk, Transcend, MICRON
 
    * 제품군: High endurance, Pro endurance
 
 * 카드 제조사별/종류별 호환성은 차이가 날 수 있습니다.
+
+:::
+
+## 옥외 설치하기
+
+건물 외부에 설치할 때는 케이블 연결부를 통해 물이 스며들 수 있으므로, 시중에서 판매하는 방수 부틸 고무 테이프를 사용해 방수 처리하세요.
+
+1. 전원, RS-485, ALARM_IN, RELAY 등 연결할 모든 케이블을 연결하세요.
+
+1. 검은색 케이블 자켓(A 부분)을 포함하여 케이블 연결부를 완전히 덮도록 방수 부틸 고무 테이프를 겹쳐 감으세요. 테이프는 연결부에 대해 최소 반 이상 겹치게 붙이세요.
+
+   <Image src='/img/camera/installation-waterproof-taping-vionyx.svg' className='none' width='50%' alone />
+
+:::caution
+
+* 케이블 자켓 부분의 방수처리가 미흡하면 누수가 발생하므로 꼼꼼히 테이핑하세요.
+
+* 방수 부틸 고무 테이프는 신축성이 높아 원래 길이의 2배 이상 늘어나므로, 충분히 당겨서 밀착시켜 사용하세요.
 
 :::
