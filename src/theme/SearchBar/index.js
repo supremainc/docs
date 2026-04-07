@@ -438,19 +438,20 @@ export default function SearchPop() {
               <InstantSearch 
                 searchClient={searchClient} 
                 indexName={indexName}
+                insights={true}
                 indexSettings={{
-                    searchableAttributes: [
-                        'content',
-                        'hierarchy.lvl0',
-                        'hierarchy.lvl1',
-                        'hierarchy.lvl2',
-                        'hierarchy.lvl3',
-                        'hierarchy.lvl4',
-                        'sidelvl2',
-                        'sidelvl3',
-                        'sidelvl4',
-                        'sidelvl5'
-                    ]
+                  searchableAttributes: [
+                    'content',
+                    'hierarchy.lvl0',
+                    'hierarchy.lvl1',
+                    'hierarchy.lvl2',
+                    'hierarchy.lvl3',
+                    'hierarchy.lvl4',
+                    'sidelvl2',
+                    'sidelvl3',
+                    'sidelvl4',
+                    'sidelvl5'
+                  ]
                 }}
                 >
                 <Configure
