@@ -3707,6 +3707,90 @@
     "width": 600,
     "height": 292
   },
+  "/img/bsair-app.png": {
+    "width": 45,
+    "height": 45
+  },
+  "/img/camera/change-silicagel-vionyx.png": {
+    "width": 800,
+    "height": 446
+  },
+  "/img/camera/component-120-resistor1-vionyx.png": {
+    "width": 1060,
+    "height": 413
+  },
+  "/img/camera/component-camera-body-vionyx.png": {
+    "width": 2606,
+    "height": 1845
+  },
+  "/img/camera/component-connection-cables-vionyx.png": {
+    "width": 2319,
+    "height": 1453
+  },
+  "/img/camera/component-cover-vionyx.png": {
+    "width": 2694,
+    "height": 1901
+  },
+  "/img/camera/component-diode1-vionyx.png": {
+    "width": 1060,
+    "height": 420
+  },
+  "/img/camera/component-fixing-screws4-vionyx.png": {
+    "width": 1060,
+    "height": 812
+  },
+  "/img/camera/component-t10-torx-driver-vionyx.png": {
+    "width": 906,
+    "height": 4456
+  },
+  "/img/camera/component-wall-bracket-vionyx.png": {
+    "width": 2269,
+    "height": 2294
+  },
+  "/img/camera/component-waterproof-grommet-ethernet-cable-vionyx.png": {
+    "width": 1400,
+    "height": 1052
+  },
+  "/img/camera/component-waterproof-rubber-hole-plug-vionyx.png": {
+    "width": 1060,
+    "height": 952
+  },
+  "/img/camera/installation-audio-connection-vionyx.png": {
+    "width": 800,
+    "height": 352
+  },
+  "/img/camera/installation-usb-sdcard-connection-vionyx.png": {
+    "width": 430,
+    "height": 360
+  },
+  "/img/camera/installation3-vionyx.png": {
+    "width": 852,
+    "height": 520
+  },
+  "/img/camera/installation9-vionyx.png": {
+    "width": 1398,
+    "height": 853
+  },
+  "/img/camera/password-setting1-vionyx.png": {
+    "width": 1920,
+    "height": 911
+  },
+  "/img/camera/password-setting2-vionyx.png": {
+    "width": 1920,
+    "height": 911
+  },
+  "/img/camera/product-vionyx.png": {
+    "width": 2696,
+    "height": 1992
+  },
+  "/img/camera/web-server-settings1.png": {
+    "width": 1202,
+    "height": 888
+  },
+  "/img/camera/web-server-settings2.png": {
+    "width": 1202,
+    "height": 888
+  },
   "/img/cardpresso-print-server-short-cut.png": {
     "width": 600,
     "height": 444
@@ -4175,6 +4259,10 @@
     "width": 1000,
     "height": 452
   },
+  "/img/device/biostation_3_max.png": {
+    "width": 94,
+    "height": 96
+  },
   "/img/device/bln2-Administrator-two-step-auth.png": {
     "width": 200,
     "height": 160
@@ -4459,6 +4547,14 @@
     "width": 250,
     "height": 444
   },
+  "/img/device/bs3-door-control1.png": {
+    "width": 250,
+    "height": 444
+  },
+  "/img/device/bs3-door-control2.png": {
+    "width": 250,
+    "height": 444
+  },
   "/img/device/bs3-dst.png": {
     "width": 250,
     "height": 444
@@ -4572,6 +4668,14 @@
     "height": 400
   },
   "/img/device/bs3m-display-sound.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-door-control1.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/device/bs3m-door-control2.png": {
     "width": 250,
     "height": 400
   },
@@ -4810,6 +4914,10 @@
   "/img/device/facestation2-main.png": {
     "width": 1000,
     "height": 452
+  },
+  "/img/device/facestation2_f2.png": {
+    "width": 88,
+    "height": 90
   },
   "/img/device/facestationf2-main.png": {
     "width": 1200,
@@ -5816,8 +5924,8 @@
     "height": 198
   },
   "/img/device/installation-wall1-bs3m.png": {
-    "width": 431,
-    "height": 205
+    "width": 336,
+    "height": 168
   },
   "/img/device/installation-wall1-fs2.png": {
     "width": 458,
@@ -9903,6 +10011,18 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/en/camera/installation-audio-connection-vionyx.png": {
+    "width": 800,
+    "height": 352
+  },
+  "/img/en/camera/password-setting1-vionyx.png": {
+    "width": 1912,
+    "height": 948
+  },
+  "/img/en/camera/password-setting2-vionyx.png": {
+    "width": 1912,
+    "height": 948
+  },
   "/img/en/cardpresso-print-server-short-cut.png": {
     "width": 600,
     "height": 443
@@ -10223,6 +10343,14 @@
     "width": 250,
     "height": 444
   },
+  "/img/en/device/bs3-door-control1.png": {
+    "width": 250,
+    "height": 444
+  },
+  "/img/en/device/bs3-door-control2.png": {
+    "width": 250,
+    "height": 444
+  },
   "/img/en/device/bs3-dst.png": {
     "width": 250,
     "height": 444
@@ -10336,6 +10464,14 @@
     "height": 400
   },
   "/img/en/device/bs3m-display-sound.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-door-control1.png": {
+    "width": 250,
+    "height": 400
+  },
+  "/img/en/device/bs3m-door-control2.png": {
     "width": 250,
     "height": 400
   },
@@ -11284,8 +11420,8 @@
     "height": 224
   },
   "/img/en/device/installation-wall1-bs3m.png": {
-    "width": 433,
-    "height": 204
+    "width": 336,
+    "height": 168
   },
   "/img/en/device/installation-wall1-fs2.png": {
     "width": 441,
@@ -11987,6 +12123,10 @@
     "width": 130,
     "height": 28
   },
+  "/img/ico-playstore.png": {
+    "width": 120,
+    "height": 40
+  },
   "/img/monitoring-door-camera-control-open-video.png": {
     "width": 1200,
     "height": 446
@@ -12166,6 +12306,10 @@
   "/img/sns_img02.jpg": {
     "width": 2335,
     "height": 1520
+  },
+  "/img/sup-pass-app.png": {
+    "width": 45,
+    "height": 45
   },
   "/img/visitor-register-manage-view-term.png": {
     "width": 800,
