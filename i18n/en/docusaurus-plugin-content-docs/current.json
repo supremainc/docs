@@ -502,5 +502,9 @@
   "sidebar.biostar_air.category.펌웨어": {
     "message": "Firmware",
     "description": "The label for category '펌웨어' in sidebar 'biostar_air'"
+  },
+  "sidebar.vionyx.category.ViOnyx": {
+    "message": "ViOnyx",
+    "description": "The label for category 'ViOnyx' in sidebar 'vionyx'"
   }
 }

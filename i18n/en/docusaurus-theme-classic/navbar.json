@@ -178,5 +178,9 @@
   "item.label.AI Cameras": {
     "message": "AI Cameras",
     "description": "Navbar item with label AI Cameras"
+  },
+  "item.label.ViOnyx": {
+    "message": "ViOnyx",
+    "description": "Navbar item with label ViOnyx"
   }
 }

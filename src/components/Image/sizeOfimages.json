@@ -2708,8 +2708,8 @@
     "height": 284
   },
   "/docs/img/biostarx-settings-device-add-virtual-device.png": {
-    "width": 1200,
-    "height": 250
+    "width": 1202,
+    "height": 277
   },
   "/docs/img/biostarx-settings-email-contents.png": {
     "width": 894,
@@ -3748,8 +3748,8 @@
     "height": 292
   },
   "/docs/img/bsair-app.png": {
-    "width": 45,
-    "height": 45
+    "width": 60,
+    "height": 60
   },
   "/docs/img/cam-server/ai-analysis-events-add-counting-people-settings-complete.png": {
     "width": 1920,
@@ -4071,10 +4071,6 @@
     "width": 1920,
     "height": 1080
   },
-  "/docs/img/camera/cable-vionyx.png": {
-    "width": 498,
-    "height": 1080
-  },
   "/docs/img/camera/change-silicagel-vionyx.png": {
     "width": 800,
     "height": 446
@@ -4119,6 +4115,10 @@
     "width": 1060,
     "height": 952
   },
+  "/docs/img/camera/installation-audio-connection-vionyx.png": {
+    "width": 800,
+    "height": 352
+  },
   "/docs/img/camera/installation-usb-sdcard-connection-vionyx.png": {
     "width": 430,
     "height": 360
@@ -4144,26 +4144,34 @@
     "height": 1992
   },
   "/docs/img/camera/web-server-settings1.png": {
-    "width": 1022,
-    "height": 861
+    "width": 1202,
+    "height": 888
   },
   "/docs/img/camera/web-server-settings2.png": {
-    "width": 542,
-    "height": 211
-  },
-  "/docs/img/camera/web-server-settings3.png": {
-    "width": 1022,
-    "height": 505
-  },
-  "/docs/img/camera/web-server-settings4.png": {
-    "width": 1022,
-    "height": 507
+    "width": 1202,
+    "height": 888
   },
   "/docs/img/cardpresso-print-server-short-cut.png": {
     "width": 600,
     "height": 444
   },
+  "/docs/img/changelogs/changelog-03-home.png": {
+    "width": 1437,
+    "height": 1148
+  },
+  "/docs/img/changelogs/changelog-03-search.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/docs/img/changelogs-202501.png": {
+    "width": 800,
+    "height": 394
+  },
+  "/docs/img/changelogs-202603.png": {
+    "width": 800,
+    "height": 394
+  },
+  "/docs/img/changelogs-202604.png": {
     "width": 800,
     "height": 394
   },
@@ -4289,7 +4297,7 @@
   },
   "/docs/img/common/biostarx-sm-change-ip.png": {
     "width": 1200,
-    "height": 297
+    "height": 359
   },
   "/docs/img/common/biostarx-sm-cluster-main-01.png": {
     "width": 1200,
@@ -4563,7 +4571,7 @@
     "width": 635,
     "height": 415
   },
-  "/docs/img/common/setting-system-restore-continue.png": {
+  "/docs/img/common/setting-system-restore-continues.png": {
     "width": 635,
     "height": 415
   },
@@ -4578,6 +4586,86 @@
   "/docs/img/common/smartcardapi-structure.png": {
     "width": 2072,
     "height": 1192
+  },
+  "/docs/img/cover/bioentry-p2.png": {
+    "width": 848,
+    "height": 637
+  },
+  "/docs/img/cover/bioentry-r2.jpg": {
+    "width": 539,
+    "height": 449
+  },
+  "/docs/img/cover/bioentry-w2.png": {
+    "width": 600,
+    "height": 527
+  },
+  "/docs/img/cover/bioentry-w3.jpg": {
+    "width": 623,
+    "height": 525
+  },
+  "/docs/img/cover/biolite-n2.png": {
+    "width": 681,
+    "height": 578
+  },
+  "/docs/img/cover/biostation-2a.png": {
+    "width": 647,
+    "height": 500
+  },
+  "/docs/img/cover/biostation-3.jpg": {
+    "width": 629,
+    "height": 543
+  },
+  "/docs/img/cover/biostation-3max.jpg": {
+    "width": 550,
+    "height": 494
+  },
+  "/docs/img/cover/corestation-20.jpg": {
+    "width": 420,
+    "height": 354
+  },
+  "/docs/img/cover/corestation.jpg": {
+    "width": 528,
+    "height": 424
+  },
+  "/docs/img/cover/encr-10.png": {
+    "width": 705,
+    "height": 530
+  },
+  "/docs/img/cover/facestation-2.png": {
+    "width": 1095,
+    "height": 822
+  },
+  "/docs/img/cover/facestation-f2.jpg": {
+    "width": 966,
+    "height": 724
+  },
+  "/docs/img/cover/x-station-2-oapb.png": {
+    "width": 320,
+    "height": 244
+  },
+  "/docs/img/cover/x-station-2-odpb.png": {
+    "width": 320,
+    "height": 244
+  },
+  "/docs/img/cover/xpass-2.jpg": {
+    "width": 450,
+    "height": 336
+  },
+  "/docs/img/cover/xpass-d2.jpg": {
+    "width": 442,
+    "height": 357
+  },
+  "/docs/img/cover/xpass-q2.jpg": {
+    "width": 500,
+    "height": 408
+  },
+  "/docs/img/cover/xpass-s2.jpg": {
+    "width": 524,
+    "height": 621
+  },
+  "/docs/img/cover-device-manager.png": {
+    "width": 60,
+    "height": 60
   },
   "/docs/img/default-placeholder-image.webp": {
     "width": 1200,
@@ -6324,8 +6412,8 @@
     "height": 198
   },
   "/docs/img/device/installation-wall1-bs3m.png": {
-    "width": 431,
-    "height": 205
+    "width": 336,
+    "height": 168
   },
   "/docs/img/device/installation-wall1-fs2.png": {
     "width": 458,
@@ -9461,7 +9549,7 @@
   },
   "/docs/img/en/biostarx-settings-device-add-virtual-device.png": {
     "width": 1200,
-    "height": 253
+    "height": 278
   },
   "/docs/img/en/biostarx-settings-email-contents.png": {
     "width": 894,
@@ -10742,6 +10830,10 @@
   "/docs/img/en/cam-server/vionyx-live-basic.png": {
     "width": 1920,
     "height": 1080
+  },
+  "/docs/img/en/camera/installation-audio-connection-vionyx.png": {
+    "width": 800,
+    "height": 352
   },
   "/docs/img/en/camera/password-setting1-vionyx.png": {
     "width": 1912,
@@ -12148,8 +12240,8 @@
     "height": 224
   },
   "/docs/img/en/device/installation-wall1-bs3m.png": {
-    "width": 433,
-    "height": 204
+    "width": 336,
+    "height": 168
   },
   "/docs/img/en/device/installation-wall1-fs2.png": {
     "width": 441,
@@ -13044,8 +13136,8 @@
     "height": 1520
   },
   "/docs/img/sup-pass-app.png": {
-    "width": 45,
-    "height": 45
+    "width": 60,
+    "height": 60
   },
   "/docs/img/visitor-register-manage-view-term.png": {
     "width": 800,

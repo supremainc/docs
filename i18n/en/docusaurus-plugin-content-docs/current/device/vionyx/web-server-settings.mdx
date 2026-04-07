@@ -3,9 +3,9 @@ id: web-server-settings
 title: Accessing and Configuring the Web Server
 description: This topic explains how to set a password and log in the first time you access the ViOnyx Web Server.
 keywords:
-  - keyword1
-  - keyword2
-  - keyword3
+  - Web Server
+  - Password
+  - Log in
 ---
 
 This topic explains how to set a password and log in the first time you access the ViOnyx Web Server.
@@ -14,37 +14,29 @@ This topic explains how to set a password and log in the first time you access t
 
 :::info
 
-On a computer connected to the same network as the camera.
+* Use a computer connected to the same network as the camera.
+
+* If the camera does not obtain an IP address after a factory reset, it will revert to the default IP address (`https://192.168.1.100:8443`). Use that address to connect.
 
 :::
 
-1. Go to the [Suprema Download Center](https://download.supremainc.com/), log in, and download the installation package (*ViOnyxTool_V1_0_1 4.zip*).
+1. Sign in to [Suprema Download Center](https://download.supremainc.com/) and download the installer package (*VionyxTool.zip*).
 
-2. After extracting the downloaded installation file, run *ViOnyxTool.exe*.
+2. Extract the downloaded installer file, then run *vionyx_tool.exe*.
 
    <Image src="/img/camera/web-server-settings1.png" width='80%' alone />
 
-   :::info
-
-   1. If the required programs aren't installed, the tool will open a page where you can download them.
-
-      <Image src="/img/camera/web-server-settings2.png" width='50%' alone />
-
-   2. Install the required programs, then run *ViOnyxTool.exe* again.
-
-   :::
-
 3. Click Search for Cameras.
 
-   <Image src="/img/camera/web-server-settings3.png" width='80%' alone />
+4. In the list of discovered cameras, find the camera's serial number (**DEVICE ID**) and check the IP address (**IP ADDRESS**).
 
-4. In the list of discovered cameras, find the serial number (**DeviceID**) of the camera you want to access and note its IP address (**IP Address**).
-
-   <Image src="/img/camera/web-server-settings4.png" width='80%' alone />
+   <Image src="/img/camera/web-server-settings2.png" width='80%' alone />
 
 5. Please launch the web browser.
 
-6. Enter the camera's IP address (**IP Address**) in the address bar and press **Enter**.
+6. Enter the camera's IP address including `https://` (**IP ADDRESS**) in the address bar, then press **Enter**.
+
+   > Example: `https://192.168.1.100/`
 
 7. The ViOnyx Web Server page appears.
 
@@ -52,7 +44,9 @@ On a computer connected to the same network as the camera.
 
 When you first access the ViOnyx Web Server, set a password.
 
-1. See [Accessing the Camera Web Server](#access-web-server), then enter the ViOnyx Web Server's IP address in a web browser.
+1. See [Accessing the Camera Web Server](#access-web-server), then open a web browser and go to the ViOnyx Web Server at `https://IP_ADDRESS`.
+
+   > Example: `https://192.168.1.100/`
 
    <Image src="/img/camera/password-setting1-vionyx.png" />
 
@@ -102,10 +96,10 @@ After the password is set, you will be automatically redirected to the login pag
 
 1. Enter **admin** in the <Cmd>Id</Cmd> field.
 
-   * You can change the administrator ID (admin) in <Cmd>System</Cmd> → <Cmd>Account management</Cmd>.
+   * To change the administrator ID (**admin**), go to <Cmd>System</Cmd> → <Cmd>Account management</Cmd>.
 
 2. Enter the password you set in the <Cmd>Password</Cmd> field.
 
 3. Click the <Cmd>Login</Cmd> button. After successfully logging in, the ViOnyx Web Server's live camera viewer will appear.
 
-4. Refer to the [ViOnyx Web Server User Manual](#) to set up the camera.
+4. See the [ViOnyx Web Server User Guide](../vionyx_webserver) to configure the camera.

@@ -849,7 +849,7 @@
     "message": "Video Compression"
   },
   "specs.video_audio.wdr": {
-    "message": "WDR"
+    "message": "Wide Dynamic Range (WDR)"
   },
   "specs.video_audio.audio": {
     "message": "Audio"
