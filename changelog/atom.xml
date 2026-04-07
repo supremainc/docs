@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://supremainc.github.io/docs/changelog</id>
     <title>Suprema Docs Blog</title>
-    <updated>2026-04-07T06:02:53.000Z</updated>
+    <updated>2026-04-07T07:48:46.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://supremainc.github.io/docs/changelog"/>
     <subtitle>Suprema Docs Blog</subtitle>
@@ -11,7 +11,7 @@
         <title type="html"><![CDATA[2026년 3월]]></title>
         <id>https://supremainc.github.io/docs/changelog/2026-03-changelog</id>
         <link href="https://supremainc.github.io/docs/changelog/2026-03-changelog"/>
-        <updated>2026-04-07T06:02:53.000Z</updated>
+        <updated>2026-04-07T07:48:46.000Z</updated>
         <summary type="html"><![CDATA[Suprema Docs의 2월부터 3월까지의 주요 업데이트 내역을 제공합니다.]]></summary>
         <content type="html"><![CDATA[<p>이번 3월 업데이트는 더욱 직관적인 인터페이스와 강화된 검색 기능으로 <strong>Suprema Docs</strong> 사용 경험을 개선했습니다. 동시에 <strong>BioStar Air</strong> 관리자 가이드를 완전히 재구성하여 사용자 관리부터 출입 통제, 비디오 감시까지 모든 기능을 한눈에 파악할 수 있도록 정리했습니다.</p>
 <p><img decoding="async" loading="lazy" alt="Suprema Docs 26.03 Changelogs" src="https://supremainc.github.io/docs/assets/images/changelogs-202603-c15b7331f076c3d94af5e3a46090a663.png" width="800" height="394" class="img_ev3q"></p>
