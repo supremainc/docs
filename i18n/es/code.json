@@ -683,6 +683,9 @@
   "specs.power.powerSupply": {
     "message": "Fuente de alimentación (SMPS) ENTRADA CA"
   },
+  "specs.power.power_consumption": {
+    "message": "Consumo de energía"
+  },
   "specs.power.switch_input_vih": {
     "message": "Entrada de interruptor VIH"
   },

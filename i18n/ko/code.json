@@ -683,6 +683,9 @@
   "specs.power.powerSupply": {
     "message": "전원 장치 (SMPS) AC INPUT"
   },
+  "specs.power.power_consumption": {
+    "message": "소비 전력"
+  },
   "specs.power.switch_input_vih": {
     "message": "스위치 입력 VIH"
   },
@@ -798,7 +801,7 @@
     "message": "비디오 압축"
   },
   "specs.video_audio.wdr": {
-    "message": "WDR"
+    "message": "광역 역광 보정 (WDR)"
   },
   "specs.video_audio.audio": {
     "message": "오디오"

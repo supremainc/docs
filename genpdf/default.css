@@ -190,6 +190,15 @@ header p {
 
 .doc-section {
   counter-reset: count;
+  counter-reset: column-count;
+}
+
+.doc-content .order--continuous {
+  counter-increment: column-count;
+}
+
+.doc-content .order--continuous ol > li::marker {
+  content: counter(column-count) ". ";
 }
 
 .doc-section h1 {
@@ -806,11 +815,11 @@ html[lang='en'] .doc-content .container table {
   background-color: #00000008;
 }
 
-.doc-content table td[rowspan='3'] + td {
+.doc-content table.component td[rowspan='3'] + td {
   height: 165px;
 }
 
-.doc-content table td[rowspan='3'] + td:has(img[src*='component-wall-bracket-dm20']) {
+.doc-content table.component td[rowspan='3'] + td:has(img[src*='component-wall-bracket-dm20']) {
   height: 45%;
 }
 

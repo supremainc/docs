@@ -97,53 +97,65 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
 <Image src='/img/camera/name-function-each-part-vionyx.svg' className='none' />
 
-* **알람 입력, 릴레이 (5핀)**: 알람 입력 및 릴레이 출력을 위한 케이블을 연결합니다.
-
-* **오디오 입출력 (4핀)**: 오디오 입출력을 위한 케이블을 연결합니다.
-
-* **이더넷 (PoE+)**: 이더넷 케이블을 연결합니다. PoE+를 통해 전원을 공급받을 수 있습니다.
-
-* **전원, RS-485 (5핀)**: 전원 공급 및 RS-485 통신을 위한 케이블을 연결합니다.
-
-* **초기화 버튼**: 모든 설정을 공장 기본값으로 초기화합니다. 자세한 내용은 [공장 초기화](installation#factory-reset)를 참고하세요.
-
-* **Micro SD 카드 슬롯**: Micro SD 카드를 삽입합니다.
-
-* **USB (Type-A)**: Wi-Fi, BLE 등 USB 기반 액세서리를 연결합니다.
-
-* **마이크 스위치**: 마이크를 물리적으로 조작하여 오디오 녹음을 제어합니다.
+<div className='overflow-x col2-2-8'>
+| 명칭 | 기능 설명 |
+| -- | -- |
+| **알람 입력, 릴레이 (5핀)** | 알람 입력 및 릴레이 출력을 위한 케이블을 연결합니다. |
+| **오디오 입출력 (4핀)** | 오디오 입출력을 위한 케이블을 연결합니다. |
+| **이더넷 (PoE+)** | 이더넷 케이블을 연결합니다. PoE+를 통해 전원을 공급받을 수 있습니다. |
+| **전원, RS-485 (5핀)** | 전원 공급 및 RS-485 통신을 위한 케이블을 연결합니다. |
+| **초기화 버튼** | 모든 설정을 공장 기본값으로 초기화합니다. 자세한 내용은 [공장 초기화](installation#factory-reset)를 참고하세요. |
+| **Micro SD 카드 슬롯** | Micro SD 카드를 삽입합니다. |
+| **USB (Type-A)** | USB 기반 액세서리를 연결합니다. |
+| **마이크 스위치** | 마이크를 물리적으로 조작하여 오디오 녹음을 제어합니다. |
+</div>
 
 <PageBreak />
 
 ### 케이블 및 커넥터
 
-<Columns className='partname'>
-<Column className='text--center'>
+#### 전원 & RS-485
 
-<Image src='/img/camera/cable-vionyx.png' className='none' width='55%' alone />
+<Image src='/img/camera/cable-vionyx-power-rs485.svg' className='none' width={600} alone />
 
-</Column>
-<Column className='padding--l20'>
-
+<div className='overflow-x table-fixed'>
 | 케이블 | 핀 | 명칭 | 색상 |
-| :--: | :--: | -- | :--: |
+| :--: | :--: | :--: | :--: |
 | POWER | 1 | PWR +VDC | 빨간색 |
 | ^ | 2 | PWR GND | 검은색 |
 | RS-485 | 3 | 485 TRXP | 파란색 |
 | ^ | 4 | 485 TRXN | 노란색 |
 | ^ | 5 | 485 GND | 회색 |
+</div>
+
+#### 알람 입력 & 릴레이
+
+<Image src='/img/camera/cable-vionyx-alarmin-relay.svg' className='none' width={600} alone />
+
+<div className='overflow-x table-fixed'>
+| 케이블 | 핀 | 명칭 | 색상 |
+| :--: | :--: | :--: | :--: |
 | ALARM_IN | 1 | ALARM IN | 보라색 |
 | ^ | 2 | ALARM GND | 검은색 |
 | RELAY | 3 | RLY NC | 주황색 |
 | ^ | 4 | RLY COM | 파란색 |
 | ^ | 5 | RLY NO | 흰색 |
+</div>
+
+<PageBreak />
+
+#### 오디오 입출력
+
+<Image src='/img/camera/cable-vionyx-line-inout.svg' className='none' width={600} alone />
+
+<div className='overflow-x table-fixed'>
+| 케이블 | 핀 | 명칭 | 색상 |
+| :--: | :--: | :--: | :--: |
 | LINE_IN | 1 | LINE IN | 흰색 |
 | ^ | 2 | LINE IN GND | 검은색 |
 | LINE_OUT | 3 | LINE OUT | 흰색 |
 | ^ | 4 | LINE OUT GND | 검은색 |
-
-</Column>
-</Columns>
+</div>
 
 <PageBreak />
 
@@ -160,20 +172,22 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 | 파란색 | 정상 동작 상태 |
 | 파란색/초록색 점멸 | <Cmd sid='ui_012' product='dev' />를 사용으로 설정 시 IP 주소를 받아오지 못하는 상태 |
 
-### 마이크 스위치 설정
+<PageBreak />
+
+### 마이크 스위치 설정 (지원 예정)
 
 마이크 스위치를 조작하여 카메라에서 마이크를 물리적으로 차단하고 오디오 녹음을 방지할 수 있습니다.
 
 <Image src='/img/camera/microphone-switch-vionyx.svg' className='none' alone />
 
-* 오디오 녹음 기능은 기본적으로 활성화되어 있습니다.
+* 오디오 녹음 기능은 기본적으로 비활성화되어 있습니다.
 
-* 오디오 녹음을 차단하려면 마이크 스위치를 왼쪽으로 밀어 마이크를 비활성화하세요.
+* 오디오 녹음을 사용하려면 마이크 스위치를 오른쪽으로 밀어 활성화하세요.
 
-* Command 계정에서도 오디오 녹음을 비활성화할 수 있습니다.
+{/* * ViOnyx 웹 서버에서도 오디오 녹음을 활성/비활성화할 수 있습니다.
 
 :::caution
 
-마이크 스위치가 물리적으로 비활성화된 상태에서는 Command 계정에서 설정을 변경하더라도 오디오가 녹음되지 않습니다.
+제품의 마이크 스위치가 물리적으로 비활성화되어있는 상태에서는 ViOnyx 웹 서버에서 오디오 녹음을 활성화하더라도 오디오가 녹음되지 않습니다.
 
-:::
+::: */}
