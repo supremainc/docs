@@ -1176,5 +1176,8 @@
   },
   "externalLinks.apps.supremapass.desc": {
     "message": "BioStar Air의 모바일 크리덴셜"
+  },
+  "theme.docCardList.prefix.latest": {
+    "message": "최신"
   }
 }

@@ -1176,5 +1176,8 @@
   },
   "externalLinks.apps.supremapass.desc": {
     "message": "BioStar Air mobile credentials"
+  },
+  "theme.docCardList.prefix.latest": {
+    "message": "Latest"
   }
 }

@@ -1176,5 +1176,8 @@
   },
   "externalLinks.apps.supremapass.desc": {
     "message": "Credenciales móviles de BioStar Air"
+  },
+  "theme.docCardList.prefix.latest": {
+    "message": "Último"
   }
 }
