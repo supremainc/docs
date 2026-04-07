@@ -4,21 +4,6 @@
       "label": "일반",
       "label_id": "specs.general",
       "items": {
-        "cpu": {
-          "label": "CPU",
-          "label_id": "specs.general.cpu",
-          "value": {
-            "ko": "Ambarella Dual A76 1.6 GHz",
-            "en": "Ambarella Dual A76 1.6 GHz",
-            "es": "Ambarella Dual A76 1.6 GHz",
-            "ja": "Ambarella デュアル A76 1.6 GHz"
-          }
-        },
-        "memory": {
-          "label": "메모리",
-          "label_id": "specs.general.memory",
-          "value": "16 GB Flash + 8 GB RAM"
-        },
         "extended_memory": {
           "label": "확장 메모리",
           "label_id": "specs.general.extended_memory",
@@ -33,10 +18,20 @@
           "label": "동작 온도",
           "label_id": "specs.general.operating_temp",
           "value": {
-            "ko": "-40 °C ~ 60 °C",
-            "en": "-40 °C ~ 60 °C",
-            "es": "De -40 °C a 60 °C",
-            "ja": "-40 °C ~ 60 °C"
+            "ko": "-40 °C ~ 50 °C",
+            "en": "-40 °C ~ 50 °C",
+            "es": "De -40 °C a 50 °C",
+            "ja": "-40 °C ~ 50 °C"
+          }
+        },
+        "storage_temp": {
+          "label": "보관 온도",
+          "label_id": "specs.general.storage_temp",
+          "value": {
+            "ko": "-40 °C ~ 70 °C",
+            "en": "-40 °C ~ 70 °C",
+            "es": "De -40 °C a 70 °C",
+            "ja": "-40 °C ~ 70 °C"
           }
         },
         "operating_humidity": {
@@ -49,8 +44,18 @@
             "ja": "0 % ~ 90 %（結露なきこと）"
           }
         },
+        "storage_humidity": {
+          "label": "보관 습도",
+          "label_id": "specs.general.storage_humidity",
+          "value": {
+            "ko": "0 % ~ 90 %, 비응축",
+            "en": "0 % ~ 90 %, non-condensing",
+            "es": "Del 0 % al 90 %, sin condensación",
+            "ja": "0 % ~ 90 %（結露なきこと）"
+          }
+        },
         "dimensions": {
-          "label": "치수",
+          "label": "크기 (W x H x D)",
           "label_id": "specs.general.dimensions",
           "type": "model",
           "items": {
@@ -62,7 +67,7 @@
             "model2": {
               "label": "브래킷",
               "label_id": "specs.general.weight.bracket",
-              "value": "155.5 x 155.5 (mm)"
+              "value": "148.15 x 148.15 (mm)"
             }
           }
         },
@@ -74,16 +79,16 @@
             "model1": {
               "label": "장치",
               "label_id": "specs.general.weight.device",
-              "value": "TBD g"
+              "value": "1.8 kg"
             },
             "model2": {
               "label": "브래킷",
               "label_id": "specs.general.weight.bracket",
               "value": {
-                "ko": "TBD g (와셔 및 볼트 포함)",
-                "en": "TBD g (including washers and bolts)",
-                "es": "TBD g (incluye arandelas y tornillos)",
-                "ja": "TBD g (ワッシャーおよびボルトを含む)"
+                "ko": "188 g (와셔 및 볼트 포함)",
+                "en": "188 g (including washers and bolts)",
+                "es": "188 g (incluye arandelas y tornillos)",
+                "ja": "188 g (ワッシャーおよびボルトを含む)"
               }
             }
           }
@@ -104,10 +109,10 @@
           "label": "인증",
           "label_id": "specs.general.certifications",
           "value": {
-            "ko": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE",
-            "en": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE",
-            "es": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE",
-            "ja": "CE、UKCA、KC、FCC、IC、RCM、VCCI、RoHS、REACH、WEEE"
+            "ko": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE, CRS/BIS",
+            "en": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE, CRS/BIS",
+            "es": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE, CRS/BIS",
+            "ja": "CE、UKCA、KC、FCC、IC、RCM、VCCI、RoHS、REACH、WEEE、CRS/BIS"
           }
         }
       }
@@ -187,8 +192,28 @@
           "label_id": "specs.video_audio.video_compression",
           "value": "H.265, H.264, MJPEG"
         },
+        "resolution": {
+          "label": "해상도",
+          "label_id": "specs.video_audio.resolution",
+          "value": "TBD"
+        },
+        "max_framerate": {
+          "label": "최대 프레임레이트",
+          "label_id": "specs.video_audio.max_framerate",
+          "value": "TBD"
+        },
+        "min_illumination": {
+          "label": "최저 조도",
+          "label_id": "specs.video_audio.min_illumination",
+          "value": "TBD"
+        },
+        "video_output": {
+          "label": "영상 출력",
+          "label_id": "specs.video_audio.video_output",
+          "value": "TBD"
+        },
         "wdr": {
-          "label": "WDR",
+          "label": "광역 역광 보정 (WDR)",
           "label_id": "specs.video_audio.wdr",
           "value": "120 dB"
         },
@@ -221,12 +246,7 @@
         "network_protocol": {
           "label": "네트워크 프로토콜",
           "label_id": "specs.interface.network_protocol",
-          "value": {
-            "ko": "ONVIF (Profile G, M, S, T)",
-            "en": "ONVIF (Profile G, M, S, T)",
-            "es": "ONVIF (Profile G, M, S, T)",
-            "ja": "ONVIF (Profile G, M, S, T)"
-          }
+          "value": "ONVIF (Profile S, T)"
         },
         "rs485": {
           "label": "RS-485",
@@ -272,10 +292,20 @@
           "label": "오디오",
           "label_id": "specs.interface.audio",
           "value": {
-            "ko": "1채널 입력, 1채널 출력",
-            "en": "1 ch Input, 1 ch Output",
-            "es": "Entrada de 1 canal, salida de 1 canal",
-            "ja": "1 チャンネル入力、1 チャンネル出力"
+            "ko": ["1채널 입력 (LINE IN, 지원 전압: 2.5 VDC)", "1채널 출력 (LINE OUT, 최대 출력: 1 Vrms)"],
+            "en": ["1-channel input (LINE IN, Supported voltage: 2.5 VDC)", "1-channel output (LINE OUT, Maximum output: 1 Vrms)"],
+            "es": ["Entrada de 1 canal (LINE IN, voltaje admitido: 2.5 VDC)", "Salida de 1 canal (LINE OUT, salida máxima: 1 Vrms)"],
+            "ja": ["1チャンネル入力 (LINE IN、対応電圧: 2.5 VDC)", "1チャンネル出力 (LINE OUT、最大出力: 1 Vrms)"]
+          }
+        },
+        "poe": {
+          "label": "PoE",
+          "label_id": "specs.interface.poe",
+          "value": {
+            "ko": "지원 (IEEE 802.3af 호환)",
+            "en": "Supported (IEEE 802.3af compliant)",
+            "es": "Compatible (compatible con IEEE 802.3af)",
+            "ja": "対応（IEEE 802.3af 互換）"
           }
         },
         "poe_plus": {
@@ -318,15 +348,31 @@
         "power": {
           "label": "전원",
           "label_id": "specs.power.power",
+          "value": "12 Vdc, PoE, PoE+"
+        },
+        "power_consumption": {
+          "label": "소비 전력",
+          "label_id": "specs.power.power_consumption",
           "type": "model",
           "items": {
-            "12vdc": {
-              "label": "12 Vdc",
+            "model1": {
+              "label": "PoE",
+              "label_id": "specs.interface.poe",
               "value": {
-                "ko": "전류: 최대 TBD A",
-                "en": "Current: Max. TBD A",
-                "es": "Corriente: Máx. TBD A",
-                "ja": "電流：最大 TBD A"
+               "ko": ["최대 TBD W, 표준 TBD W", "12 Vdc: 최대 TBD W, 표준 TBD W"],
+               "en": ["최대 TBD W, 표준 TBD W", "12 Vdc: 최대 TBD W, 표준 TBD W"],
+               "es": ["최대 TBD W, 표준 TBD W", "12 Vdc: 최대 TBD W, 표준 TBD W"],
+               "ja": ["최대 TBD W, 표준 TBD W", "12 Vdc: 최대 TBD W, 표준 TBD W"]
+              }
+            },
+            "model2": {
+              "label": "PoE+",
+              "label_id": "specs.interface.poe_plus",
+              "value": {
+               "ko": ["최대 TBD W, 표준 TBD W", "12 Vdc: 최대 TBD W, 표준 TBD W"],
+               "en": ["최대 TBD W, 표준 TBD W", "12 Vdc: 최대 TBD W, 표준 TBD W"],
+               "es": ["최대 TBD W, 표준 TBD W", "12 Vdc: 최대 TBD W, 표준 TBD W"],
+               "ja": ["최대 TBD W, 표준 TBD W", "12 Vdc: 최대 TBD W, 표준 TBD W"]
               }
             }
           }
