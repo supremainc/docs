@@ -540,6 +540,7 @@ const config = {
         appId: 'G6Y3H2PNC3',
         apiKey: '92bd6ee7b06d5a3ec46d8056d39e710a',
         indexName: 'SPDocs',
+        insights: true,
         contextualSearch: true,
         searchParameters: {
           attributesToHighlight: [],
