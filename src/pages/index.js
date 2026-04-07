@@ -189,10 +189,10 @@ export default function Home() {
       <main className={styles.heroLayout}>
         <HomepageHeader />
 
-        <div className={clsx('container', styles.headsec)}>
+        {/* <div className={clsx('container', styles.headsec)}>
           <Heading as='h2'>AI Camera</Heading>
         </div>
-        <AiCamera />
+        <AiCamera /> */}
 
         <div className={clsx('container', styles.headsec)}>
           <Heading as='h2'>Biometric Devices</Heading>

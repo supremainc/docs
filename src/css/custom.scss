@@ -599,6 +599,7 @@ body[data-rh] .redocusaurus {
           font-size: var(--ifm-h4-font-size);
           font-weight: 600;
           padding: 0;
+          margin-top: 0;
         }
         p {
           overflow: hidden;
@@ -606,7 +607,7 @@ body[data-rh] .redocusaurus {
           display: -webkit-box;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 2;
-          line-height: 1.2;
+          line-height: 1.5;
           min-height: 2.5em;
           white-space: normal;
         }
