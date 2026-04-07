@@ -190,6 +190,15 @@ header p {
 
 .doc-section {
   counter-reset: count;
+  counter-reset: column-count;
+}
+
+.doc-content .order--continuous {
+  counter-increment: column-count;
+}
+
+.doc-content .order--continuous ol > li::marker {
+  content: counter(column-count) ". ";
 }
 
 .doc-section h1 {

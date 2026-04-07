@@ -442,6 +442,7 @@ body[data-rh] .redocusaurus {
 // markdown 콘텐츠 스타일 
 .markdown {
   counter-reset: count;
+  counter-reset: column-count;
   header h1 {
     &.confidential::before {
       content: "CONFIDENTIAL";
@@ -1091,6 +1092,12 @@ body[data-rh] .redocusaurus {
   // Column width
   .columns:has(h2) {
     margin-top: 2rem;
+  }
+  .order--continuous {
+    counter-increment: column-count;
+  }
+  .order--continuous ol > li::marker {
+    content: counter(column-count) ". ";
   }
   .columns {
     .col {
