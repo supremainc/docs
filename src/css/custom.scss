@@ -1303,6 +1303,24 @@ body[data-rh] .redocusaurus {
       }
     }
   }
+  .col4--30-10-30-30 {
+    table {
+      td {
+        &:nth-of-type(1) {
+          width: 30%;
+        }
+        &:nth-of-type(2) {
+          width: 10%;
+        }
+        &:nth-of-type(3) {
+          width: 30%;
+        }
+        &:nth-of-type(4) {
+          width: 30%;
+        }
+      }
+    }
+  }
   .menu-icon-table {
     table {
       td {
