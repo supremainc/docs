@@ -340,9 +340,9 @@
               "label_id": "specs.interface.poe",
               "value": {
                "ko": ["최대 TBD W, 표준 TBD W", "12 Vdc: 최대 TBD W, 표준 TBD W"],
-               "en": ["최대 TBD W, 표준 TBD W", "12 Vdc: 최대 TBD W, 표준 TBD W"],
-               "es": ["최대 TBD W, 표준 TBD W", "12 Vdc: 최대 TBD W, 표준 TBD W"],
-               "ja": ["최대 TBD W, 표준 TBD W", "12 Vdc: 최대 TBD W, 표준 TBD W"]
+               "en": ["Max. TBD W, Standard TBD W", "12 Vdc: Max. TBD W, Standard TBD W"],
+               "es": ["Máx. TBD W, Estándar TBD W", "12 Vdc: Máx. TBD W, Estándar TBD W"],
+               "ja": ["最大 TBD W、標準 TBD W", "12 Vdc: 最大 TBD W、標準 TBD W"]
               }
             },
             "model2": {
@@ -350,9 +350,9 @@
               "label_id": "specs.interface.poe_plus",
               "value": {
                "ko": ["최대 TBD W, 표준 TBD W", "12 Vdc: 최대 TBD W, 표준 TBD W"],
-               "en": ["최대 TBD W, 표준 TBD W", "12 Vdc: 최대 TBD W, 표준 TBD W"],
-               "es": ["최대 TBD W, 표준 TBD W", "12 Vdc: 최대 TBD W, 표준 TBD W"],
-               "ja": ["최대 TBD W, 표준 TBD W", "12 Vdc: 최대 TBD W, 표준 TBD W"]
+               "en": ["Max. TBD W, Standard TBD W", "12 Vdc: Max. TBD W, Standard TBD W"],
+               "es": ["Máx. TBD W, Estándar TBD W", "12 Vdc: Máx. TBD W, Estándar TBD W"],
+               "ja": ["最大 TBD W、標準 TBD W", "12 Vdc: 最大 TBD W、標準 TBD W"]
               }
             }
           }
