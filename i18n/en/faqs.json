@@ -354,88 +354,79 @@
           "product": [
             "vionyx"
           ],
-          "question": "Video images are overlapping.",
+          "question": "I can't see the video.",
           "answer": [
-            "Make sure two or more cameras are set to different multicast addresses. Using the same address can cause overlapping video."
+            "If video transmission is set to multicast, ensure the router on the camera's local network supports multicast."
           ]
         },
         {
           "product": [
             "vionyx"
           ],
-          "question": "The video is not visible.",
+          "question": "A video analytics event occurred but no alarm was generated.",
           "answer": [
-            "If video transmission is set to multicast, make sure the local network the camera is connected to has a router that supports multicast."
+            "Ensure the alarm output port is set correctly."
           ]
         },
         {
           "product": [
             "vionyx"
           ],
-          "question": "A video analysis event occurred, but no alarm was triggered.",
+          "question": "Cannot access the camera from the browser.",
           "answer": [
-            "Make sure the alarm output port is configured correctly."
+            "Ensure the camera's network settings are correct.",
+            "Ensure the network cable is connected properly.",
+            "If connected via DHCP, ensure the camera obtained a dynamic IP address.",
+            "If the camera is connected to a router, ensure port forwarding is configured correctly."
           ]
         },
         {
           "product": [
             "vionyx"
           ],
-          "question": "Cannot access the camera from a browser.",
+          "question": "The connection to the web server that was monitoring the video was lost.",
           "answer": [
-            "Make sure the camera's network settings are correct.",
-            "Make sure the network cable is properly connected.",
-            "If connected via DHCP, ensure the camera has successfully obtained a dynamic IP address.",
-            "If the camera is connected to a router, make sure port forwarding is set up correctly."
+            "If another user changes camera or network settings, the connected web server disconnects.",
+            "Ensure the network connection is working."
           ]
         },
         {
           "product": [
             "vionyx"
           ],
-          "question": "The connection to the web server monitoring the video has been lost.",
+          "question": "Cameras connected to the network are not being discovered.",
           "answer": [
-            "If another user changes the camera settings or network configuration, the web server's connection will be dropped.",
-            "Make sure the network connection is working."
+            "Device communication may be blocked by firewall or network security settings. Ensure the ports (TCP, UDP) required for device discovery and communication are allowed on the network."
           ]
         },
         {
           "product": [
             "vionyx"
           ],
-          "question": "The ViOnyx web server cannot detect the camera on the network.",
+          "question": "Recording is not being saved to the Micro SD card.",
           "answer": [
-            "Device communication may be blocked by a firewall or network security settings. Make sure the network allows the ports (TCP/UDP) required for device discovery and communication."
+            "Check whether the Micro SD card is faulty.",
+            "Always power off the device before replacing the Micro SD card."
           ]
         },
         {
           "product": [
             "vionyx"
           ],
-          "question": "The microSD card is not recording.",
+          "question": "The Micro SD card is inserted but not recognized.",
           "answer": [
-            "Check if the microSD card is defective.",
-            "Before replacing the microSD card, always disconnect the device from power."
+            "Ensure the Micro SD card is inserted in the correct orientation. Micro SD cards formatted by other devices cannot be guaranteed to work with this camera.",
+            "Ensure the card capacity (recommended 16GB–1TB) and manufacturer (Samsung, SanDisk, Transcend) meet the recommended specifications. Use High Endurance or Pro Endurance product lines for continuous write operations. Cards from other manufacturers or product lines may vary in compatibility."
           ]
         },
         {
           "product": [
             "vionyx"
           ],
-          "question": "The microSD card is inserted but not recognized.",
+          "question": "Moisture or condensation forms inside the camera.",
           "answer": [
-            "Make sure the microSD card is inserted in the correct orientation. microSD cards formatted by other devices may not be compatible with this camera.",
-            "Check that the card's capacity (recommended 16GB–1TB) and manufacturer (Samsung, SanDisk, Transcend) meet the recommended specifications. We recommend using cards designed for continuous write operations, such as High Endurance or Pro Endurance models. Cards from other manufacturers or product lines may vary in compatibility."
-          ]
-        },
-        {
-          "product": [
-            "vionyx"
-          ],
-          "question": "Moisture or water droplets are forming inside the camera.",
-          "answer": [
-            "Make sure the 3 securing screws are fully tightened after installing the cover. If the screws aren't fully tightened, the water and dust resistance (IP66/IP67) may be compromised.",
-            "When wiring the Ethernet and other connection cables, make sure the supplied waterproof rubber seals, joints, and nuts for the Ethernet cable are fastened tightly with no gaps. For unused holes, ensure the waterproof rubber hole plugs are fully inserted."
+            "After assembling the cover, ensure the 3 retaining screws are fully tightened. Failure to fully tighten the screws may compromise waterproof/dustproof (IP66/IP67) performance.",
+            "When wiring the Ethernet and other cables, ensure the supplied waterproof rubber, joints, and nuts for the Ethernet cable are fully and securely fastened with no gaps. Insert waterproof rubber hole plugs fully into any unused holes."
           ]
         },
         {
@@ -444,7 +435,7 @@
           ],
           "question": "AI face and object recognition performance has noticeably declined.",
           "answer": [
-            "Check whether the lens is directly exposed to sunlight or installed in an area with strong backlighting. Glare or backlighting is a major cause of reduced AI recognition performance."
+            "Ensure the lens is not exposed to direct sunlight or installed in an area with strong backlight. Lens flare or backlighting is a primary cause of reduced AI detection accuracy."
           ]
         }
       ]

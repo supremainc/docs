@@ -109,53 +109,65 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
 <Image src='/img/camera/name-function-each-part-vionyx.svg' className='none' />
 
-* **Alarm input, relay (5-pin)**: Connect the cable for alarm input and relay output.
-
-* **Audio I/O (4-pin)**: Connect the cable for audio input and output.
-
-* **Ethernet (PoE+)**: Connect the Ethernet cable. Power can be supplied via PoE+.
-
-* **Power, RS-485 (5-pin)**: Connect the cable for power supply and RS-485 communication.
-
-* **Reset button**: Restores all settings to factory defaults. For more information on factory initialization, refer to [Factory default](installation#factory-reset).
-
-* **Micro SD card slot**: Insert the Micro SD card.
-
-* **USB (Type-A)**: Connect USB-based accessories such as Wi-Fi and BLE.
-
-* **Microphone switch**: Use the physical microphone switch to control audio recording.
+<div className='overflow-x col2-2-8'>
+| Name | Function |
+| -- | -- |
+| **Alarm input and relay (5-pin)** | Connect the cable for alarm input and relay output. |
+| **Audio input/output (4-pin)** | Connect the cable for audio input/output. |
+| **Ethernet (PoE+)** | Connect the Ethernet cable. Power can be supplied via PoE+. |
+| **Power & RS-485 (5-pin)** | Connect the cable for power and RS-485 communication. |
+| **Reset button** | Reset all settings to factory defaults. For more information on factory initialization, refer to [Factory default](installation#factory-reset). |
+| **Micro SD card slot** | Insert a microSD card. |
+| **USB (Type-A)** | Connect USB-based accessories. |
+| **Microphone switch** | Use the microphone switch to physically enable or disable audio recording. |
+</div>
 
 <PageBreak />
 
 ### Cables and connectors
 
-<Columns className='partname'>
-<Column className='text--center'>
+#### Power & RS-485
 
-<Image src='/img/camera/cable-vionyx.png' className='none' width='55%' alone />
+<Image src='/img/camera/cable-vionyx-power-rs485.svg' className='none' width={600} alone />
 
-</Column>
-<Column className='padding--l20'>
-
+<div className='overflow-x table-fixed'>
 | Cable | Pin | Name | Color |
-| :-: | :-: | --- | :-: |
+| :--: | :--: | :--: | :--: |
 | POWER | 1 | PWR +VDC | Red |
 | ^ | 2 | PWR GND | Black |
 | RS-485 | 3 | 485 TRXP | Blue |
 | ^ | 4 | 485 TRXN | Yellow |
 | ^ | 5 | 485 GND | Gray |
-| ALARM IN | 1 | ALARM IN | Purple |
+</div>
+
+#### Alarm input & relay
+
+<Image src='/img/camera/cable-vionyx-alarmin-relay.svg' className='none' width={600} alone />
+
+<div className='overflow-x table-fixed'>
+| Cable | Pin | Name | Color |
+| :--: | :--: | :--: | :--: |
+| ALARM_IN | 1 | ALARM IN | Purple |
 | ^ | 2 | ALARM GND | Black |
 | RELAY | 3 | RLY NC | Orange |
 | ^ | 4 | RLY COM | Blue |
 | ^ | 5 | RLY NO | White |
-| LINE IN | 1 | LINE IN | White |
-| ^ | 2 | LINE IN GND | Black |
-| LINE OUT | 3 | LINE OUT | White |
-| ^ | 4 | LINE OUT GND | Black |
+</div>
 
-</Column>
-</Columns>
+<PageBreak />
+
+#### Audio input/output
+
+<Image src='/img/camera/cable-vionyx-line-inout.svg' className='none' width={600} alone />
+
+<div className='overflow-x table-fixed'>
+| Cable | Pin | Name | Color |
+| :--: | :--: | :--: | :--: |
+| LINE_IN | 1 | LINE IN | White |
+| ^ | 2 | LINE IN GND | Black |
+| LINE_OUT | 3 | LINE OUT | White |
+| ^ | 4 | LINE OUT GND | Black |
+</div>
 
 <PageBreak />
 
@@ -172,20 +184,22 @@ The LED on the front of the camera cover shows the device's operating and authen
 | Blue | Normal operation |
 | Blue/Green blinking | When setting <Cmd sid='ui_012' product='dev' /> to use, unable to retrieve IP address. |
 
-### Microphone switch settings
+<PageBreak />
+
+### Microphone switch settings (coming soon)
 
 Use the microphone switch to physically disable the camera's microphone and prevent audio recording.
 
 <Image src='/img/camera/microphone-switch-vionyx.svg' className='none' alone />
 
-* Audio recording is enabled by default.
+* Audio recording is disabled by default.
 
-* Slide the microphone switch to the left to disable the microphone and stop audio recording.
+* Slide the microphone switch to the right to enable audio recording.
 
-* Audio recording can also be disabled from the Command account.
+{/* * ViOnyx 웹 서버에서도 오디오 녹음을 활성/비활성화할 수 있습니다.
 
 :::caution
 
-If the microphone switch is physically disabled, audio will not be recorded even if the settings are changed in the Command account.
+제품의 마이크 스위치가 물리적으로 비활성화되어있는 상태에서는 ViOnyx 웹 서버에서 오디오 녹음을 활성화하더라도 오디오가 녹음되지 않습니다.
 
-:::
+::: */}
