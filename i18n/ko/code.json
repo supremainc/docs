@@ -854,18 +854,6 @@
   "specs.video_audio.audio": {
     "message": "오디오"
   },
-  "specs.video_audio.resolution": {
-    "message": "해상도"
-  },
-  "specs.video_audio.max_framerate": {
-    "message": "최대 프레임레이트"
-  },
-  "specs.video_audio.min_illumination": {
-    "message": "최저 조도"
-  },
-  "specs.video_audio.video_output": {
-    "message": "영상 출력"
-  },
   "specs.interface.alarm": {
     "message": "알람"
   },
