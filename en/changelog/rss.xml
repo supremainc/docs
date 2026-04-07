@@ -4,7 +4,7 @@
         <title>Suprema Docs Blog</title>
         <link>https://supremainc.github.io/docs/en/changelog</link>
         <description>Suprema Docs Blog</description>
-        <lastBuildDate>Mon, 06 Apr 2026 23:31:15 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 07 Apr 2026 00:48:48 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[March 2026]]></title>
             <link>https://supremainc.github.io/docs/en/changelog/2026-03-changelog</link>
             <guid>https://supremainc.github.io/docs/en/changelog/2026-03-changelog</guid>
-            <pubDate>Mon, 06 Apr 2026 23:31:15 GMT</pubDate>
+            <pubDate>Tue, 07 Apr 2026 00:48:48 GMT</pubDate>
             <description><![CDATA[Provides an overview of key updates to Suprema Docs from February through March.]]></description>
             <content:encoded><![CDATA[<p>This March update improves your <strong>Suprema Docs</strong> experience with a more intuitive interface and enhanced search functionality. Meanwhile, the BioStar Air Administrator Guide has been completely restructured to help you understand all features—from user management to access control and video surveillance—at a glance.</p>
 <p><img decoding="async" loading="lazy" alt="Suprema Docs 26.03 Changelogs" src="https://supremainc.github.io/docs/en/assets/images/changelogs-202603-c15b7331f076c3d94af5e3a46090a663.png" width="800" height="394" class="img_ev3q"></p>
