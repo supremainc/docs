@@ -192,26 +192,6 @@
           "label_id": "specs.video_audio.video_compression",
           "value": "H.265, H.264, MJPEG"
         },
-        "resolution": {
-          "label": "해상도",
-          "label_id": "specs.video_audio.resolution",
-          "value": "TBD"
-        },
-        "max_framerate": {
-          "label": "최대 프레임레이트",
-          "label_id": "specs.video_audio.max_framerate",
-          "value": "TBD"
-        },
-        "min_illumination": {
-          "label": "최저 조도",
-          "label_id": "specs.video_audio.min_illumination",
-          "value": "TBD"
-        },
-        "video_output": {
-          "label": "영상 출력",
-          "label_id": "specs.video_audio.video_output",
-          "value": "TBD"
-        },
         "wdr": {
           "label": "광역 역광 보정 (WDR)",
           "label_id": "specs.video_audio.wdr",
