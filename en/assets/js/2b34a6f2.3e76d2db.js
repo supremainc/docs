@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["38856"], {
-64636: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["25912"], {
+37831: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,18 +9,18 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_air_release_notes_bsair_release_notes_mdx_ac2_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_air_release_notes_bsair_release_notes_mdx_2b3_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-es-docusaurus-plugin-content-docs-current-platform-biostar-air-release-notes-bsair-release-notes-mdx-ac2.json
-var site_i_18_n_es_docusaurus_plugin_content_docs_current_platform_biostar_air_release_notes_bsair_release_notes_mdx_ac2_namespaceObject = JSON.parse('{"id":"platform/biostar_air/release-notes/bsair-release-notes","title":"BioStar Air","description":"This document provides a summary of feature improvements, bug fixes, and major changes for each version of the BioStar Air platform.","source":"@site/i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_air/release-notes/bsair-release-notes.mdx","sourceDirName":"platform/biostar_air/release-notes","slug":"/platform/biostar_air/release-notes/bsair-release-notes","permalink":"/docs/es/platform/biostar_air/release-notes/bsair-release-notes","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/release-notes/bsair-release-notes.mdx","tags":[],"version":"current","frontMatter":{"id":"bsair-release-notes","title":"BioStar Air","description":"This document provides a summary of feature improvements, bug fixes, and major changes for each version of the BioStar Air platform.","toc_max_heading_level":2,"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"Software","permalink":"/docs/es/platform/biostar_air/release-notes/software"},"next":{"title":"Firmware","permalink":"/docs/es/platform/biostar_air/release-notes/firmware"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-en-docusaurus-plugin-content-docs-current-platform-biostar-air-release-notes-bsair-release-notes-mdx-2b3.json
+var site_i_18_n_en_docusaurus_plugin_content_docs_current_platform_biostar_air_release_notes_bsair_release_notes_mdx_2b3_namespaceObject = JSON.parse('{"id":"platform/biostar_air/release-notes/bsair-release-notes","title":"BioStar Air","description":"This document provides a summary of feature improvements, bug fixes, and major changes for each version of the BioStar Air platform.","source":"@site/i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/release-notes/bsair-release-notes.mdx","sourceDirName":"platform/biostar_air/release-notes","slug":"/platform/biostar_air/release-notes/bsair-release-notes","permalink":"/docs/en/platform/biostar_air/release-notes/bsair-release-notes","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/platform/biostar_air/release-notes/bsair-release-notes.mdx","tags":[],"version":"current","frontMatter":{"id":"bsair-release-notes","title":"BioStar Air","description":"This document provides a summary of feature improvements, bug fixes, and major changes for each version of the BioStar Air platform.","toc_max_heading_level":2,"isTranslationMissing":false},"sidebar":"biostar_air","previous":{"title":"Software","permalink":"/docs/en/platform/biostar_air/release-notes/software"},"next":{"title":"Firmware","permalink":"/docs/en/platform/biostar_air/release-notes/firmware"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/platform/biostar_air/release-notes/bsair-release-notes.mdx
+;// CONCATENATED MODULE: ./i18n/en/docusaurus-plugin-content-docs/current/platform/biostar_air/release-notes/bsair-release-notes.mdx
 
 
 const frontMatter = {
@@ -39,8 +39,8 @@ const assets = {
 
 
 const toc = [{
-  "value": "Version 2.11",
-  "id": "211",
+  "value": "Version 2.11.0",
+  "id": "2110",
   "level": 2
 }, {
   "value": "RFID Card Active Sync on XPass 2 and X-Station 2",
@@ -79,8 +79,8 @@ const toc = [{
   "id": "event-logs--alerts",
   "level": 3
 }, {
-  "value": "Version 2.10",
-  "id": "210",
+  "value": "Version 2.10.0",
+  "id": "2100",
   "level": 2
 }, {
   "value": "BioStation 3 Support",
@@ -349,12 +349,12 @@ function _createMdxContent(props) {
   if (!YouTube) _missingMdxReference("YouTube", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.h2, {
-      id: "211",
-      children: "Version 2.11"
+      id: "2110",
+      children: "Version 2.11.0"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["Release", (0,jsx_runtime.jsx)(Separator, {}), "2025-11-25"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar Air 2.11 continues our commitment to making cloud access control more reliable than traditional on-premise systems. This release introduces major improvements to offline behavior, updates to the admin experience, and powerful new capabilities for BioStation 3."
+      children: "BioStar Air 2.11.0 continues our commitment to making cloud access control more reliable than traditional on-premise systems. This release introduces major improvements to offline behavior, updates to the admin experience, and powerful new capabilities for BioStation 3."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "Whether you're managing a single site or dozens of locations, this update makes BioStar Air easier to use, more resilient, and ready for more complex deployments."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
@@ -561,17 +561,17 @@ function _createMdxContent(props) {
         margin: '4rem 0'
       }
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "210",
-      children: "Version 2.10"
+      id: "2100",
+      children: "Version 2.10.0"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["Release", (0,jsx_runtime.jsx)(Separator, {}), "2025-08-12"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "We're excited to announce BioStar Air 2.10 — a major update that introduces support for our most advanced biometric reader, BioStation 3, along with powerful new features to improve credential management, user setup, and device control. This release gives both administrators and installers more flexibility, security, and ease of use than ever before."
+      children: "We're excited to announce BioStar Air 2.10.0 — a major update that introduces support for our most advanced biometric reader, BioStation 3, along with powerful new features to improve credential management, user setup, and device control. This release gives both administrators and installers more flexibility, security, and ease of use than ever before."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "biostation-3-support",
       children: "BioStation 3 Support"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStation 3 (BS3) is Suprema's flagship intelligent terminal, combining facial authentication, mobile access, card reading, and intercom functionality in one compact device. With BioStar Air 2.10, BS3 is fully supported and manageable from the BioStar Air portal and mobile apps."
+      children: "BioStation 3 (BS3) is Suprema's flagship intelligent terminal, combining facial authentication, mobile access, card reading, and intercom functionality in one compact device. With BioStar Air 2.10.0, BS3 is fully supported and manageable from the BioStar Air portal and mobile apps."
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Key BS3 features now available in BioStar Air"

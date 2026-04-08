@@ -39,8 +39,8 @@ const assets = {
 
 
 const toc = [{
-  "value": "Version 2.11",
-  "id": "211",
+  "value": "Version 2.11.0",
+  "id": "2110",
   "level": 2
 }, {
   "value": "RFID Card Active Sync on XPass 2 and X-Station 2",
@@ -79,8 +79,8 @@ const toc = [{
   "id": "event-logs--alerts",
   "level": 3
 }, {
-  "value": "Version 2.10",
-  "id": "210",
+  "value": "Version 2.10.0",
+  "id": "2100",
   "level": 2
 }, {
   "value": "BioStation 3 Support",
@@ -349,12 +349,12 @@ function _createMdxContent(props) {
   if (!YouTube) _missingMdxReference("YouTube", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.h2, {
-      id: "211",
-      children: "Version 2.11"
+      id: "2110",
+      children: "Version 2.11.0"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["Release", (0,jsx_runtime.jsx)(Separator, {}), "2025-11-25"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStar Air 2.11 continues our commitment to making cloud access control more reliable than traditional on-premise systems. This release introduces major improvements to offline behavior, updates to the admin experience, and powerful new capabilities for BioStation 3."
+      children: "BioStar Air 2.11.0 continues our commitment to making cloud access control more reliable than traditional on-premise systems. This release introduces major improvements to offline behavior, updates to the admin experience, and powerful new capabilities for BioStation 3."
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "Whether you're managing a single site or dozens of locations, this update makes BioStar Air easier to use, more resilient, and ready for more complex deployments."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
@@ -561,17 +561,17 @@ function _createMdxContent(props) {
         margin: '4rem 0'
       }
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "210",
-      children: "Version 2.10"
+      id: "2100",
+      children: "Version 2.10.0"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["Release", (0,jsx_runtime.jsx)(Separator, {}), "2025-08-12"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "We're excited to announce BioStar Air 2.10 — a major update that introduces support for our most advanced biometric reader, BioStation 3, along with powerful new features to improve credential management, user setup, and device control. This release gives both administrators and installers more flexibility, security, and ease of use than ever before."
+      children: "We're excited to announce BioStar Air 2.10.0 — a major update that introduces support for our most advanced biometric reader, BioStation 3, along with powerful new features to improve credential management, user setup, and device control. This release gives both administrators and installers more flexibility, security, and ease of use than ever before."
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "biostation-3-support",
       children: "BioStation 3 Support"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "BioStation 3 (BS3) is Suprema's flagship intelligent terminal, combining facial authentication, mobile access, card reading, and intercom functionality in one compact device. With BioStar Air 2.10, BS3 is fully supported and manageable from the BioStar Air portal and mobile apps."
+      children: "BioStation 3 (BS3) is Suprema's flagship intelligent terminal, combining facial authentication, mobile access, card reading, and intercom functionality in one compact device. With BioStar Air 2.10.0, BS3 is fully supported and manageable from the BioStar Air portal and mobile apps."
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Key BS3 features now available in BioStar Air"

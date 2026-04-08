@@ -417,7 +417,7 @@ function MDXProvider(properties) {
 
 }),
 36597: (function (module) {
-module.exports = JSON.parse('{"permalink":"/docs/changelog/2026-03-changelog","source":"@site/changelog/2026-03-changelog.md","title":"2026년 3월","description":"Suprema Docs의 2월부터 3월까지의 주요 업데이트 내역을 제공합니다.","date":"2026-04-08T06:29:48.000Z","tags":[],"readingTime":1.77,"hasTruncateMarker":true,"authors":[],"frontMatter":{"title":"2026년 3월","description":"Suprema Docs의 2월부터 3월까지의 주요 업데이트 내역을 제공합니다.","slug":"2026-03-changelog","isTranslationMissing":false},"unlisted":false,"nextItem":{"title":"2026년 1월","permalink":"/docs/changelog/2026-01-02-changelog"}}')
+module.exports = JSON.parse('{"permalink":"/docs/changelog/2026-03-changelog","source":"@site/changelog/2026-03-changelog.md","title":"2026년 3월","description":"Suprema Docs의 2월부터 3월까지의 주요 업데이트 내역을 제공합니다.","date":"2026-04-08T06:51:17.000Z","tags":[],"readingTime":1.77,"hasTruncateMarker":true,"authors":[],"frontMatter":{"title":"2026년 3월","description":"Suprema Docs의 2월부터 3월까지의 주요 업데이트 내역을 제공합니다.","slug":"2026-03-changelog","isTranslationMissing":false},"unlisted":false,"nextItem":{"title":"2026년 1월","permalink":"/docs/changelog/2026-01-02-changelog"}}')
 
 }),
 

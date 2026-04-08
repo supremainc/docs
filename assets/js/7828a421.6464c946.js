@@ -55,15 +55,99 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.a, {
-            href: "bsair-release-notes#211",
-            children: "BioStar Air 버전 2.11 릴리스 노트"
+            href: "bsair-release-notes#2110",
+            children: "BioStar Air 버전 2.11.0 릴리스 노트"
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.a, {
+            href: "bsair-release-notes#2100",
+            children: "BioStar Air 버전 2.10.0 릴리스 노트"
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.a, {
+            href: "bsair-release-notes#291",
+            children: "BioStar Air 버전 2.9.1 릴리스 노트"
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.a, {
+            href: "bsair-release-notes#290",
+            children: "BioStar Air 버전 2.9.0 릴리스 노트"
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.a, {
+            href: "bsair-release-notes#280",
+            children: "BioStar Air 버전 2.8.0 릴리스 노트"
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.a, {
+            href: "bsair-release-notes#271",
+            children: "BioStar Air 버전 2.7.1 릴리스 노트"
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.a, {
+            href: "bsair-release-notes#270",
+            children: "BioStar Air 버전 2.7.0 릴리스 노트"
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.a, {
+            href: "bsair-release-notes#260",
+            children: "BioStar Air 버전 2.6.0 릴리스 노트"
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.a, {
+            href: "bsair-release-notes#251",
+            children: "BioStar Air 버전 2.5.1 릴리스 노트"
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.a, {
+            href: "bsair-release-notes#250",
+            children: "BioStar Air 버전 2.5.0 릴리스 노트"
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.a, {
+            href: "bsair-release-notes#240",
+            children: "BioStar Air 버전 2.4.0 릴리스 노트"
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.a, {
+            href: "bsair-release-notes#230",
+            children: "BioStar Air 버전 2.3.0 릴리스 노트"
+          })
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+          children: (0,jsx_runtime.jsx)(_components.a, {
+            href: "bsair-release-notes#220",
+            children: "BioStar Air 버전 2.2.0 릴리스 노트"
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
           children: (0,jsx_runtime.jsx)(_components.a, {
             href: "bsair-release-notes#210",
-            children: "BioStar Air 버전 2.10 릴리스 노트"
+            children: "BioStar Air 버전 2.1.0 릴리스 노트"
           })
         }), "\n"]
       }), "\n"]
