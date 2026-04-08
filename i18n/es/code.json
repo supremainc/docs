@@ -1209,7 +1209,7 @@
     "message": "Los comentarios enviados se utilizan únicamente para mejorar la documentación<br/>y no se recopila información personal identificable."
   },
   "externalLinks.XPassQ2.desc": {
-    "message": "Control de acceso compatible con autenticación por tarjeta y QR/Barcode"
+    "message": "Lector inteligente de QR y RFID"
   },
   "externalLinks.dev.sdk.desc": {
     "message": "Integra funciones de huella dactilar con software de terceros"

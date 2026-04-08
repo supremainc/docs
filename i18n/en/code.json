@@ -1209,7 +1209,7 @@
     "message": "Submitted feedback is used solely for the purpose of improving documentation<br/>and does not collect personally identifiable information."
   },
   "externalLinks.XPassQ2.desc": {
-    "message": "Access control supporting card and QR/Barcode authentication"
+    "message": "Intelligent QR RFID Reader"
   },
   "externalLinks.dev.sdk.desc": {
     "message": "Integrate fingerprint device core functions with third-party software"

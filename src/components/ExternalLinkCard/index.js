@@ -272,7 +272,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
       img: require('@site/static/img/cover/xpass-q2.jpg').default,
       desc: `${translate({
         id: "externalLinks.XPassQ2.desc",
-        message: "카드 및 QR/바코드 인증 지원 출입 통제 장치"
+        message: "지능형 QR RFID 리더"
       })}`,
       tags: ['Card', 'QR/Barcode']
     },
