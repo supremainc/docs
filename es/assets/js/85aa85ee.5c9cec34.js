@@ -68,10 +68,10 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Anno, Image, Linkto, SpecSection} = _components;
+  }, {Anno, Linkto, ProdImg, SpecSection} = _components;
   if (!Anno) _missingMdxReference("Anno", true);
-  if (!Image) _missingMdxReference("Image", true);
   if (!Linkto) _missingMdxReference("Linkto", true);
+  if (!ProdImg) _missingMdxReference("ProdImg", true);
   if (!SpecSection) _missingMdxReference("SpecSection", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
@@ -89,7 +89,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "dimensiones-y-peso",
       children: "Dimensiones y peso"
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
+    }), "\n", (0,jsx_runtime.jsx)(ProdImg, {
       src: "/img/device/xpq2-dimension.svg",
       className: "none"
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(_components.admonition, {

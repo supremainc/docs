@@ -925,11 +925,12 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* .useMDXComponents */.R)(),
     ...props.components
-  }, {Cmd, Image, Linkto, PageBreak, Row, Table, Tbody, Td} = _components;
+  }, {Cmd, Image, Linkto, PageBreak, ProdImg, Row, Table, Tbody, Td} = _components;
   if (!Cmd) _missingMdxReference("Cmd", true);
   if (!Image) _missingMdxReference("Image", true);
   if (!Linkto) _missingMdxReference("Linkto", true);
   if (!PageBreak) _missingMdxReference("PageBreak", true);
+  if (!ProdImg) _missingMdxReference("ProdImg", true);
   if (!Row) _missingMdxReference("Row", true);
   if (!Table) _missingMdxReference("Table", true);
   if (!Tbody) _missingMdxReference("Tbody", true);
@@ -1039,7 +1040,7 @@ function _createMdxContent(props) {
     }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_getting_started_components_note/* ["default"] */.Ay, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "nombre-y-función-de-cada-parte",
       children: "Nombre y función de cada parte"
-    }), "\n", (0,jsx_runtime.jsx)(Image, {
+    }), "\n", (0,jsx_runtime.jsx)(ProdImg, {
       src: "/img/device/name-function-each-part-xpq2.svg",
       className: "none",
       width: "70%"

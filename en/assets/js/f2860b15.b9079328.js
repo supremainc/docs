@@ -415,7 +415,7 @@ function MDXProvider(properties) {
 
 }),
 49934: (function (module) {
-module.exports = JSON.parse('{"permalink":"/docs/en/changelog/2026-03-changelog","source":"@site/i18n/en/docusaurus-plugin-content-blog/2026-03-changelog.md","title":"March 2026","description":"Provides an overview of key updates to Suprema Docs from February through March.","date":"2026-04-08T02:29:07.000Z","tags":[],"readingTime":1.89,"hasTruncateMarker":true,"authors":[],"frontMatter":{"title":"March 2026","description":"Provides an overview of key updates to Suprema Docs from February through March.","slug":"2026-03-changelog","isTranslationMissing":false},"unlisted":false,"nextItem":{"title":"January 2026","permalink":"/docs/en/changelog/2026-01-02-changelog"}}')
+module.exports = JSON.parse('{"permalink":"/docs/en/changelog/2026-03-changelog","source":"@site/i18n/en/docusaurus-plugin-content-blog/2026-03-changelog.md","title":"March 2026","description":"Provides an overview of key updates to Suprema Docs from February through March.","date":"2026-04-08T03:16:39.000Z","tags":[],"readingTime":1.89,"hasTruncateMarker":true,"authors":[],"frontMatter":{"title":"March 2026","description":"Provides an overview of key updates to Suprema Docs from February through March.","slug":"2026-03-changelog","isTranslationMissing":false},"unlisted":false,"nextItem":{"title":"January 2026","permalink":"/docs/en/changelog/2026-01-02-changelog"}}')
 
 }),
 
