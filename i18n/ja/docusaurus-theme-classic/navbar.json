@@ -8,7 +8,7 @@
     "description": "The alt text of navbar logo"
   },
   "item.label.Devices": {
-    "message": "Devices",
+    "message": "デバイス",
     "description": "Navbar item with label Devices"
   },
   "item.label.BioStar 2": {
@@ -20,11 +20,11 @@
     "description": "Navbar item with label BioStar X"
   },
   "item.label.Reference": {
-    "message": "Reference",
+    "message": "リファレンス",
     "description": "Navbar item with label Reference"
   },
   "item.label.Legal": {
-    "message": "Legal",
+    "message": "法的情報",
     "description": "Navbar item with label Legal"
   },
   "item.label.BioStation 3": {
@@ -32,7 +32,7 @@
     "description": "Navbar item with label BioStation 3"
   },
   "item.label.Platforms": {
-    "message": "Platforms",
+    "message": "プラットフォーム",
     "description": "Navbar item with label Platforms"
   },
   "item.label.BioStar Air": {
@@ -40,7 +40,7 @@
     "description": "Navbar item with label BioStar Air"
   },
   "item.label.How-to Articles": {
-    "message": "How-to Articles",
+    "message": "活用ガイド",
     "description": "Navbar item with label How-to Articles"
   },
   "item.label.BioEntry W3": {
@@ -144,11 +144,11 @@
     "description": "Navbar item with label CoreStation Setup Manager"
   },
   "item.label.Changelog": {
-    "message": "Changelog",
+    "message": "更新履歴",
     "description": "Navbar item with label Changelog"
   },
   "item.label.Developers": {
-    "message": "Developers",
+    "message": "開発者センター",
     "description": "Navbar item with label Developers"
   },
   "item.label.BioStar X API": {
@@ -174,5 +174,9 @@
   "item.label.SVP Android SDK": {
     "message": "SVP Android SDK",
     "description": "Navbar item with label SVP Android SDK"
+  },
+  "item.label.AI Cameras": {
+    "message": "AIカメラ",
+    "description": "Navbar item with label AI Cameras"
   }
 }

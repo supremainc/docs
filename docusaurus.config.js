@@ -290,16 +290,29 @@ const config = {
               }
             ]
           },
+          // {
+          //   type: 'dropdown',
+          //   label: 'AI Cameras',
+          //   position: 'right',
+          //   items: [
+          //     {
+          //       type: 'doc',
+          //       label: 'ViOnyx',
+          //       docId: 'device/vionyx/index'
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'ViOnyx Web Server',
+          //       docId: 'device/vionyx_webserver/index'
+          //     },
+          //   ]
+          // },
           {
             type: 'dropdown',
             label: 'Devices',
             position: 'right',
             items: [
-              // {
-              //   type: 'doc',
-              //   label: 'ViOnyx',
-              //   docId: 'device/vionyx/index'
-              // },
+            
             //   {
             //     type: 'doc',
             //     label: 'BioStation 3 Max',
@@ -438,12 +451,6 @@ const config = {
             ]
           },
           {
-            type: 'doc',
-            label: 'How-to Articles',
-            position: 'right',
-            docId: 'how-to/index'
-          },
-          {
             type: 'dropdown',
             label: 'Developers',
             position: 'right',
@@ -488,6 +495,7 @@ const config = {
           {
             to: 'changelog',
             label: 'Changelog',
+            // className: 'changeNew',
             position: 'right',
           },
           {

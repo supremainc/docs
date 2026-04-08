@@ -8,7 +8,7 @@
     "description": "The alt text of navbar logo"
   },
   "item.label.Devices": {
-    "message": "Devices",
+    "message": "Dispositivos",
     "description": "Navbar item with label Devices"
   },
   "item.label.BioStar 2": {
@@ -24,7 +24,7 @@
     "description": "Navbar item with label Reference"
   },
   "item.label.Legal": {
-    "message": "Legal",
+    "message": "Aviso legal",
     "description": "Navbar item with label Legal"
   },
   "item.label.BioStation 3": {
@@ -32,7 +32,7 @@
     "description": "Navbar item with label BioStation 3"
   },
   "item.label.Platforms": {
-    "message": "Platforms",
+    "message": "Plataformas",
     "description": "Navbar item with label Platforms"
   },
   "item.label.BioStar Air": {
@@ -40,7 +40,7 @@
     "description": "Navbar item with label BioStar Air"
   },
   "item.label.How-to Articles": {
-    "message": "How-to Articles",
+    "message": "Guías de uso",
     "description": "Navbar item with label How-to Articles"
   },
   "item.label.BioEntry W3": {
@@ -144,11 +144,11 @@
     "description": "Navbar item with label CoreStation Setup Manager"
   },
   "item.label.Changelog": {
-    "message": "Changelog",
+    "message": "Registro de cambios",
     "description": "Navbar item with label Changelog"
   },
   "item.label.Developers": {
-    "message": "Developers",
+    "message": "Desarrolladores",
     "description": "Elemento de la barra de navegación etiquetado como «Developers»"
   },
   "item.label.BioStar X API": {
@@ -174,5 +174,9 @@
   "item.label.SVP Android SDK": {
     "message": "SVP Android SDK",
     "description": "Elemento de la barra de navegación etiquetado como «SVP Android SDK»"
+  },
+  "item.label.AI Cameras": {
+    "message": "AI Cameras",
+    "description": "Navbar item with label AI Cameras"
   }
 }

@@ -398,8 +398,56 @@
   "index.search": {
     "message": "Search"
   },
+  "index.biostarx.subtitle": {
+    "message": "One Platform. Total Confidence."
+  },
   "index.biostarx.description": {
-    "message": "A new standard for security that goes beyond the limits of access control,<br/>AI-based integrated security platform"
+    "message": "BioStar X is Suprema’s unified security platform, featuring best-in-class biometric access, integrated monitoring, and a resilient backbone built for scale, uptime, and compliance."
+  },
+  "index.biostarair.subtitle": {
+    "message": "Zero on-prem. BioStar Air"
+  },
+  "index.biostarair.description": {
+    "message": "The only access control solution that natively connects the world's most advanced biometric readers to the cloud."
+  },
+  "index.shortcut.linkText": {
+    "message": "Go to →"
+  },
+  "index.shortcut.compare.title": {
+    "message": "Compare Product Features and Specifications"
+  },
+  "index.shortcut.compare.description": {
+    "message": "You can compare the features and specifications of each product offered by Suprema. Compare the features and specifications of different products at a glance."
+  },
+  "index.shortcut.howto.title": {
+    "message": "How-to Articles"
+  },
+  "index.shortcut.howto.description": {
+    "message": "Provides user-oriented step-by-step guides to make the most of Suprema's devices and software. Follow the instructions and examples easily."
+  },
+  "index.productTitle.biometricsDevice": {
+    "message": "Biometric Devices"
+  },
+  "index.productTitle.rfMobileDevices": {
+    "message": "RF/Mobile Devices"
+  },
+  "index.productTitle.intelligentController": {
+    "message": "Intelligent Controller"
+  },
+  "index.productTitle.peripheral": {
+    "message": "Peripherals"
+  },
+  "index.productTitle.apps": {
+    "message": "APPS"
+  },
+  "index.productTitle.developers": {
+    "message": "Developers"
+  },
+  "index.heroBanner.shortcut.biostarx": {
+    "message": "Explore BioStar X →"
+  },
+  "index.heroBanner.shortcut.biostarair": {
+    "message": "Explore BioStar Air →"
   },
   "windows.key.start": {
     "message": "Start"
@@ -863,6 +911,10 @@
     "message": "Search",
     "description": "The ARIA label and placeholder for search button"
   },
+  "theme.SearchBar.product.label": {
+    "message": "Products",
+    "description": "The ARIA label and placeholder for product search button"
+  },
   "theme.SearchModal.searchBox.resetButtonTitle": {
     "message": "Clear the query",
     "description": "The label and ARIA label for search box reset button"
@@ -1172,12 +1224,20 @@
     "message": "Cross-platform solution supporting various programming languages"
   },
   "externalLinks.dev.svpsdk.desc": {
-    "message": "Core functions of Suprema devices<br/>Supported by third-party software"
+    "message": "Core functions of Suprema devices Supported by third-party software"
   },
   "externalLinks.dev.bsair.desc": {
     "message": "Seamless API integration with existing systems"
   },
   "externalLinks.apps.supremapass.desc": {
     "message": "BioStar Air mobile credentials"
+  },
+  "searchBox.refinementList.clearAll": {
+    "message": "Clear all",
+    "description": "The label for the button to clear all refinements in the search box"
+  },
+  "searchBox.recentList.clearButton": {
+    "message": "Clear recent searches",
+    "description": "The label for the button to clear recent searches in the search box"
   }
 }

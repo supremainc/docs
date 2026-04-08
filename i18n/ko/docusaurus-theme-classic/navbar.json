@@ -8,7 +8,7 @@
     "description": "The alt text of navbar logo"
   },
   "item.label.Devices": {
-    "message": "Devices",
+    "message": "장치",
     "description": "Navbar item with label Devices"
   },
   "item.label.BioStar 2": {
@@ -20,11 +20,11 @@
     "description": "Navbar item with label BioStar X"
   },
   "item.label.Reference": {
-    "message": "Reference",
+    "message": "참고 문서",
     "description": "Navbar item with label Reference"
   },
   "item.label.Legal": {
-    "message": "Legal",
+    "message": "법적 고지",
     "description": "Navbar item with label Legal"
   },
   "item.label.BioStation 3": {
@@ -32,7 +32,7 @@
     "description": "Navbar item with label BioStation 3"
   },
   "item.label.Platforms": {
-    "message": "Platforms",
+    "message": "플랫폼",
     "description": "Navbar item with label Platforms"
   },
   "item.label.BioStar Air": {
@@ -40,7 +40,7 @@
     "description": "Navbar item with label BioStar Air"
   },
   "item.label.How-to Articles": {
-    "message": "How-to Articles",
+    "message": "제품 활용 가이드",
     "description": "Navbar item with label How-to Articles"
   },
   "item.label.BioEntry W3": {
@@ -144,11 +144,11 @@
     "description": "Navbar item with label CoreStation Setup Manager"
   },
   "item.label.Changelog": {
-    "message": "Changelog",
+    "message": "업데이트 내역",
     "description": "Navbar item with label Changelog"
   },
   "item.label.Developers": {
-    "message": "Developers",
+    "message": "개발자 센터",
     "description": "Navbar item with label Developers"
   },
   "item.label.BioStar X API": {
@@ -178,5 +178,9 @@
   "item.label.ViOnyx": {
     "message": "ViOnyx",
     "description": "Navbar item with label ViOnyx"
+  },
+  "item.label.AI Cameras": {
+    "message": "AI 카메라",
+    "description": "Navbar item with label AI Cameras"
   }
 }
