@@ -268,7 +268,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
     {
       title: 'XPass Q2',
       url: `/device/xpass_q2`,
-      img: require('@site/static/img/cover/xpass-q2.jpg').default,
+      img: require('@site/static/img/cover/xpassq2.png').default,
       desc: `${translate({
         id: "externalLinks.XPassQ2.desc",
         message: "카드 및 QR/바코드 인증 지원 출입 통제 장치"

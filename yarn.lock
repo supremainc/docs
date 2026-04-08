@@ -10867,11 +10867,7 @@ postcss@^8.5.4:
     picocolors "^1.1.1"
     source-map-js "^1.2.1"
 
-<<<<<<< HEAD
-preact@^10.10.0, preact@^10.13.2:
-=======
 preact@^10.10.0:
->>>>>>> f0da8bd56d128aa90398800a0f331284c1c42209
   version "10.26.2"
   resolved "https://registry.npmjs.org/preact/-/preact-10.26.2.tgz"
   integrity sha512-0gNmv4qpS9HaN3+40CLBAnKe0ZfyE4ZWo5xKlC1rVrr0ckkEvJvAQqKaHANdFKsGstoxrY4AItZ7kZSGVoVjgg==
