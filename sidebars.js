@@ -312,6 +312,7 @@ const sidebars = {
                 'platform/biostar_air/release-notes/bew3-release-notes',
                 'platform/biostar_air/release-notes/bs3-release-notes',
                 'platform/biostar_air/release-notes/xp2-release-notes',
+                'platform/biostar_air/release-notes/xs2-release-notes'
               ]
             }
           ]
