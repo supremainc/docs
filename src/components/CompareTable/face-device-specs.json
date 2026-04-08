@@ -22,12 +22,6 @@
       "BioEntry W3": {
         "BEW3-DB": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
         "BEW3-APB": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa, iCLASS SE/SR/Seos"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
-        "BS3M-APB": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa, iCLASS SE/SR/Seos",
-        "BS3M-ODB": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
-        "BS3M-OAPB": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa, iCLASS SE/SR/Seos"
       }
     }
   },
@@ -54,12 +48,6 @@
       "BioEntry W3": {
         "BEW3-DB": "NFC, BLE",
         "BEW3-APB": "NFC, BLE"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "NFC, BLE",
-        "BS3M-APB": "NFC, BLE",
-        "BS3M-ODB": "NFC, BLE",
-        "BS3M-OAPB": "NFC, BLE"
       }
     }
   },
@@ -86,12 +74,6 @@
       "BioEntry W3": {
         "BEW3-DB": false,
         "BEW3-APB": false
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": true,
-        "BS3M-APB": true,
-        "BS3M-ODB": true,
-        "BS3M-OAPB": true
       }
     }
   },
@@ -118,12 +100,6 @@
       "BioEntry W3": {
         "BEW3-DB": false,
         "BEW3-APB": false
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "supportExcept",
-        "BS3M-APB": "supportExcept",
-        "BS3M-ODB": "supportExcept",
-        "BS3M-OAPB": "supportExcept"
       }
     }
   },
@@ -150,12 +126,6 @@
       "BioEntry W3": {
         "BEW3-DB": "IP67",
         "BEW3-APB": "IP67"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "IP65",
-        "BS3M-APB": "IP65",
-        "BS3M-ODB": "IP65",
-        "BS3M-OAPB": "IP65"
       }
     }
   },
@@ -182,12 +152,6 @@
       "BioEntry W3": {
         "BEW3-DB": "IK08",
         "BEW3-APB": "IK08"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "IK06",
-        "BS3M-APB": "IK06",
-        "BS3M-ODB": "IK06",
-        "BS3M-OAPB": "IK06"
       }
     }
   },
@@ -214,12 +178,6 @@
       "BioEntry W3": {
         "BEW3-DB": "SUPREMA",
         "BEW3-APB": "SUPREMA"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "SUPREMA",
-        "BS3M-APB": "SUPREMA",
-        "BS3M-ODB": "SUPREMA",
-        "BS3M-OAPB": "SUPREMA"
       }
     }
   },
@@ -246,12 +204,6 @@
       "BioEntry W3": {
         "BEW3-DB": "SUPREMA",
         "BEW3-APB": "SUPREMA"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "SUPREMA",
-        "BS3M-APB": "SUPREMA",
-        "BS3M-ODB": "SUPREMA",
-        "BS3M-OAPB": "SUPREMA"
       }
     }
   },
@@ -278,12 +230,6 @@
       "BioEntry W3": {
         "BEW3-DB": true,
         "BEW3-APB": true
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": true,
-        "BS3M-APB": true,
-        "BS3M-ODB": true,
-        "BS3M-OAPB": true
       }
     }
   },
@@ -310,12 +256,6 @@
       "BioEntry W3": {
         "BEW3-DB": false,
         "BEW3-APB": false
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": false,
-        "BS3M-APB": false,
-        "BS3M-ODB": "SUPREMA / ISO 19794-2 / ANSI 378",
-        "BS3M-OAPB": "SUPREMA / ISO 19794-2 / ANSI 378"
       }
     }
   },
@@ -342,12 +282,6 @@
       "BioEntry W3": {
         "BEW3-DB": false,
         "BEW3-APB": false
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": false,
-        "BS3M-APB": false,
-        "BS3M-ODB": "minex",
-        "BS3M-OAPB": "minex"
       }
     }
   },
@@ -374,12 +308,6 @@
       "BioEntry W3": {
         "BEW3-DB": false,
         "BEW3-APB": false
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": false,
-        "BS3M-APB": false,
-        "BS3M-ODB": "supportSW",
-        "BS3M-OAPB": "supportSW"
       }
     }
   },
@@ -406,12 +334,6 @@
       "BioEntry W3": {
         "BEW3-DB": "100,000",
         "BEW3-APB": "100,000"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "100,000",
-        "BS3M-APB": "100,000",
-        "BS3M-ODB": "100,000",
-        "BS3M-OAPB": "100,000"
       }
     }
   },
@@ -438,12 +360,6 @@
       "BioEntry W3": {
         "BEW3-DB": "face30card100",
         "BEW3-APB": "face30card100"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "face50card100",
-        "BS3M-APB": "face50card100",
-        "BS3M-ODB": "face50finger100card100",
-        "BS3M-OAPB": "face50finger100card100"
       }
     }
   },
@@ -470,12 +386,6 @@
       "BioEntry W3": {
         "BEW3-DB": "face30card100",
         "BEW3-APB": "face30card100"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "face100card100pin100",
-        "BS3M-APB": "face100card100pin100",
-        "BS3M-ODB": "face100card100pin100finger100none",
-        "BS3M-OAPB": "face100card100pin100finger100none"
       }
     }
   },
@@ -502,12 +412,6 @@
       "BioEntry W3": {
         "BEW3-DB": "1,000,000",
         "BEW3-APB": "1,000,000"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "5,000,000",
-        "BS3M-APB": "5,000,000",
-        "BS3M-ODB": "5,000,000",
-        "BS3M-OAPB": "5,000,000"
       }
     }
   },
@@ -534,12 +438,6 @@
       "BioEntry W3": {
         "BEW3-DB": "10,000",
         "BEW3-APB": "10,000"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "50,000",
-        "BS3M-APB": "50,000",
-        "BS3M-ODB": "50,000",
-        "BS3M-OAPB": "50,000"
       }
     }
   },
@@ -566,12 +464,6 @@
       "BioEntry W3": {
         "BEW3-DB": "1.5 GHz Quad Core",
         "BEW3-APB": "1.5 GHz Quad Core"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "1.4 GHz Quad Core",
-        "BS3M-APB": "1.4 GHz Quad Core",
-        "BS3M-ODB": "1.4 GHz Quad Core",
-        "BS3M-OAPB": "1.4 GHz Quad Core"
       }
     }
   },
@@ -598,12 +490,6 @@
       "BioEntry W3": {
         "BEW3-DB": "16 GB Flash + 2 GB RAM",
         "BEW3-APB": "16 GB Flash + 2 GB RAM"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "32 GB Flash + 4 GB RAM",
-        "BS3M-APB": "32 GB Flash + 4 GB RAM",
-        "BS3M-ODB": "32 GB Flash + 4 GB RAM",
-        "BS3M-OAPB": "32 GB Flash + 4 GB RAM"
       }
     }
   },
@@ -630,12 +516,6 @@
       "BioEntry W3": {
         "BEW3-DB": true,
         "BEW3-APB": true
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": true,
-        "BS3M-APB": true,
-        "BS3M-ODB": true,
-        "BS3M-OAPB": true
       }
     }
   },
@@ -662,12 +542,6 @@
       "BioEntry W3": {
         "BEW3-DB": "1.3\" PMOLED",
         "BEW3-APB": "1.3\" PMOLED"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "7\" IPS color LCD",
-        "BS3M-APB": "7\" IPS color LCD",
-        "BS3M-ODB": "7\" IPS color LCD",
-        "BS3M-OAPB": "7\" IPS color LCD"
       }
     }
   },
@@ -694,12 +568,6 @@
       "BioEntry W3": {
         "BEW3-DB": false,
         "BEW3-APB": false
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "800x1280",
-        "BS3M-APB": "800x1280",
-        "BS3M-ODB": "800x1280",
-        "BS3M-OAPB": "800x1280"
       }
     }
   },
@@ -726,12 +594,6 @@
       "BioEntry W3": {
         "BEW3-DB": "16 bit",
         "BEW3-APB": "16 bit"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "16 bit",
-        "BS3M-APB": "16 bit",
-        "BS3M-ODB": "16 bit",
-        "BS3M-OAPB": "16 bit"
       }
     }
   },
@@ -758,12 +620,6 @@
       "BioEntry W3": {
         "BEW3-DB": "-20℃ ~ 50℃",
         "BEW3-APB": "-20℃ ~ 50℃"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "-20℃ ~ 50℃",
-        "BS3M-APB": "-20℃ ~ 50℃",
-        "BS3M-ODB": "-20℃ ~ 50℃",
-        "BS3M-OAPB": "-20℃ ~ 50℃"
       }
     }
   },
@@ -790,12 +646,6 @@
       "BioEntry W3": {
         "BEW3-DB": "-40℃ ~ 70℃",
         "BEW3-APB": "-40℃ ~ 70℃"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "-40℃ ~ 70℃",
-        "BS3M-APB": "-40℃ ~ 70℃",
-        "BS3M-ODB": "-40℃ ~ 70℃",
-        "BS3M-OAPB": "-40℃ ~ 70℃"
       }
     }
   },
@@ -822,12 +672,6 @@
       "BioEntry W3": {
         "BEW3-DB": "operating-humidity-spec",
         "BEW3-APB": "operating-humidity-spec"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "operating-humidity-spec",
-        "BS3M-APB": "operating-humidity-spec",
-        "BS3M-ODB": "operating-humidity-spec",
-        "BS3M-OAPB": "operating-humidity-spec"
       }
     }
   },
@@ -854,12 +698,6 @@
       "BioEntry W3": {
         "BEW3-DB": "storage-humidity-spec",
         "BEW3-APB": "storage-humidity-spec"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "storage-humidity-spec",
-        "BS3M-APB": "storage-humidity-spec",
-        "BS3M-ODB": "storage-humidity-spec",
-        "BS3M-OAPB": "storage-humidity-spec"
       }
     }
   },
@@ -886,12 +724,6 @@
       "BioEntry W3": {
         "BEW3-DB": "d283b36",
         "BEW3-APB": "d291b36"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "d565b187",
-        "BS3M-APB": "d565b187",
-        "BS3M-ODB": "d640b206",
-        "BS3M-OAPB": "d640b206"
       }
     }
   },
@@ -918,12 +750,6 @@
       "BioEntry W3": {
         "BEW3-DB": "50 x 160 x 34.15",
         "BEW3-APB": "50 x 160 x 34.15"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "119.8 x 233 x 23.5",
-        "BS3M-APB": "119.8 x 233 x 23.5",
-        "BS3M-ODB": "dim-fsf2odb",
-        "BS3M-OAPB": "dim-fsf2odb"
       }
     }
   },
@@ -950,12 +776,6 @@
       "BioEntry W3": {
         "BEW3-DB": "ethernet-spec",
         "BEW3-APB": "ethernet-spec"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "ethernet-spec1000",
-        "BS3M-APB": "ethernet-spec1000",
-        "BS3M-ODB": "ethernet-spec1000",
-        "BS3M-OAPB": "ethernet-spec1000"
       }
     }
   },
@@ -982,12 +802,6 @@
       "BioEntry W3": {
         "BEW3-DB": false,
         "BEW3-APB": false
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": false,
-        "BS3M-APB": false,
-        "BS3M-ODB": false,
-        "BS3M-OAPB": false
       }
     }
   },
@@ -1014,12 +828,6 @@
       "BioEntry W3": {
         "BEW3-DB": "TCP, UDP",
         "BEW3-APB": "TCP, UDP"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "TCP, UDP",
-        "BS3M-APB": "TCP, UDP",
-        "BS3M-ODB": "TCP, UDP",
-        "BS3M-OAPB": "TCP, UDP"
       }
     }
   },
@@ -1046,12 +854,6 @@
       "BioEntry W3": {
         "BEW3-DB": "1chmasterslave",
         "BEW3-APB": "1chmasterslave"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "1chmasterslave",
-        "BS3M-APB": "1chmasterslave",
-        "BS3M-ODB": "1chmasterslave",
-        "BS3M-OAPB": "1chmasterslave"
       }
     }
   },
@@ -1078,12 +880,6 @@
       "BioEntry W3": {
         "BEW3-DB": "osdpv2",
         "BEW3-APB": "osdpv2"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "osdpv2",
-        "BS3M-APB": "osdpv2",
-        "BS3M-ODB": "osdpv2",
-        "BS3M-OAPB": "osdpv2"
       }
     }
   },
@@ -1110,12 +906,6 @@
       "BioEntry W3": {
         "BEW3-DB": "1chin1chout",
         "BEW3-APB": "1chin1chout"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "1chin1chout",
-        "BS3M-APB": "1chin1chout",
-        "BS3M-ODB": "1chin1chout",
-        "BS3M-OAPB": "1chin1chout"
       }
     }
   },
@@ -1142,12 +932,6 @@
       "BioEntry W3": {
         "BEW3-DB": "3chinput",
         "BEW3-APB": "3chinput"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "3chinput",
-        "BS3M-APB": "3chinput",
-        "BS3M-ODB": "3chinput",
-        "BS3M-OAPB": "3chinput"
       }
     }
   },
@@ -1174,12 +958,6 @@
       "BioEntry W3": {
         "BEW3-DB": "1relay",
         "BEW3-APB": "1relay"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "1relay",
-        "BS3M-APB": "1relay",
-        "BS3M-ODB": "1relay",
-        "BS3M-OAPB": "1relay"
       }
     }
   },
@@ -1206,12 +984,6 @@
       "BioEntry W3": {
         "BEW3-DB": false,
         "BEW3-APB": "ieee8023af"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": false,
-        "BS3M-APB": "ieee8023at",
-        "BS3M-ODB": false,
-        "BS3M-OAPB": "ieee8023at"
       }
     }
   },
@@ -1238,44 +1010,6 @@
       "BioEntry W3": {
         "BEW3-DB": false,
         "BEW3-APB": false
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": true,
-        "BS3M-APB": true,
-        "BS3M-ODB": true,
-        "BS3M-OAPB": true
-      }
-    }
-  },
-  {
-    "category": "interface",
-    "function": "rtsp",
-    "models": {
-      "FaceStation 2": {
-        "FS2-D": false,
-        "FS2-AWB": false
-      },
-      "FaceLite": {
-        "FL-DB": false
-      },
-      "FaceStation F2": {
-        "FSF2-DB": false,
-        "FSF2-AB": false,
-        "FSF2-ODB": false
-      },
-      "BioStation 3": {
-        "BS3-DB": true,
-        "BS3-APWB": true
-      },
-      "BioEntry W3": {
-        "BEW3-DB": true,
-        "BEW3-APB": true
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": true,
-        "BS3M-APB": true,
-        "BS3M-ODB": true,
-        "BS3M-OAPB": true
       }
     }
   },
@@ -1302,12 +1036,6 @@
       "BioEntry W3": {
         "BEW3-DB": "usb2firmwareup",
         "BEW3-APB": "usb2firmwareup"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "USB 2.0 (Type C)",
-        "BS3M-APB": "USB 2.0 (Type C)",
-        "BS3M-ODB": "USB 2.0 (Type C)",
-        "BS3M-OAPB": "USB 2.0 (Type C)"
       }
     }
   },
@@ -1334,12 +1062,6 @@
       "BioEntry W3": {
         "BEW3-DB": false,
         "BEW3-APB": false
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": false,
-        "BS3M-APB": false,
-        "BS3M-ODB": false,
-        "BS3M-OAPB": false
       }
     }
   },
@@ -1366,12 +1088,6 @@
       "BioEntry W3": {
         "BEW3-DB": true,
         "BEW3-APB": true
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": true,
-        "BS3M-APB": true,
-        "BS3M-ODB": true,
-        "BS3M-OAPB": true
       }
     }
   },
@@ -1398,12 +1114,6 @@
       "BioEntry W3": {
         "BEW3-DB": "p12v1a24v0_6a",
         "BEW3-APB": "p12v1a24v0_6a"
-      },
-      "BioStation 3 Max": {
-        "BS3M-DB": "p12v2_1a24v1a",
-        "BS3M-APB": "p12v2_1a24v1a",
-        "BS3M-ODB": "p12v2_1a24v1a",
-        "BS3M-OAPB": "p12v2_1a24v1a"
       }
     }
   }
