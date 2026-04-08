@@ -118,7 +118,6 @@ const config = {
             'common/**.{md,mdx}',
             '_unused/**.{md,mdx}',
             '**/_*.{md,mdx}',
-            'device/xpass_q2/**.{md,mdx}',
             'device/biostation_3_max/**.{md,mdx}',
             'device/vionyx/**.{md,mdx}'
           ],
@@ -356,11 +355,11 @@ const config = {
                 label: 'X-Station 2',
                 docId: 'device/xstation_2/index'
               },
-              // {
-              //   type: 'doc',
-              //   label: 'XPass Q2',
-              //   docId: 'device/xpass_q2/index'
-              // },
+              {
+                type: 'doc',
+                label: 'XPass Q2',
+                docId: 'device/xpass_q2/index'
+              },
               {
                 type: 'doc',
                 label: 'XPass 2',

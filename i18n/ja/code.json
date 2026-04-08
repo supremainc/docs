@@ -1157,7 +1157,7 @@
     "message": "送信されたフィードバックはドキュメント改善の目的にのみ使用され、個人を特定できる情報は収集されません。"
   },
   "externalLinks.XPassQ2.desc": {
-    "message": "カードおよびQR/バーコード認証対応入退室装置"
+    "message": "インテリジェント QR RFID リーダー"
   },
   "externalLinks.dev.sdk.desc": {
     "message": "指紋認証デバイスのコア機能を<br/>サードパーティ製ソフトウェアと完全に統合"
