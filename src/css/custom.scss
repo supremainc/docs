@@ -441,8 +441,7 @@ body[data-rh] .redocusaurus {
 
 // markdown 콘텐츠 스타일 
 .markdown {
-  counter-reset: count;
-  counter-reset: column-count;
+  counter-reset: sup-count column-count;
   header h1 {
     &.confidential::before {
       content: "CONFIDENTIAL";
@@ -1394,7 +1393,7 @@ body[data-rh] .redocusaurus {
   // techspec
   sup {
     // counter-reset: count;
-    counter-increment: count;
+    counter-increment: sup-count;
     a {
       color: var(--ifm-color-cmd);
       font-weight: 600;
@@ -1404,7 +1403,7 @@ body[data-rh] .redocusaurus {
     counter-increment: none;
   }
   sup a::before {
-    content: counter(count)  ")";
+    content: counter(sup-count)  ")";
   }
 
   .svg-none-style {
