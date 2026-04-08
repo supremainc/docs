@@ -1,8 +1,0 @@
-"use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["61833"], {
-32383: (function (module) {
-module.exports = JSON.parse('{"title":"Todos los registros de cambios","items":[{"title":"March 2026","permalink":"/docs/es/changelog/2026-03-changelog","unlisted":false,"date":"2026-04-07T22:41:46.000Z"},{"title":"January 2026","permalink":"/docs/es/changelog/2026-01-02-changelog","unlisted":false,"date":"2026-01-02T00:00:00.000Z"}]}')
-
-}),
-
-}]);
