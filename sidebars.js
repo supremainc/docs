@@ -284,9 +284,37 @@ const sidebars = {
         {
           type: 'category',
           label: 'Release Notes',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_air/release-notes',
+          },
           items: [
-            'platform/biostar_air/release-notes/v2_11',
-            'platform/biostar_air/release-notes/v2_10'
+            {
+              type: 'category',
+              label: '소프트웨어',
+              key: 'bsairReleaseNotes',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/release-notes/software',
+              },
+              items: [
+                'platform/biostar_air/release-notes/bsair-release-notes'
+              ]
+            },
+            {
+              type: 'category',
+              label: '펌웨어',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/release-notes/firmware',
+              },
+              items: [
+                'platform/biostar_air/release-notes/bew3-release-notes',
+                'platform/biostar_air/release-notes/bs3-release-notes',
+                'platform/biostar_air/release-notes/xp2-release-notes',
+                'platform/biostar_air/release-notes/xs2-release-notes'
+              ]
+            }
           ]
         }
       ]

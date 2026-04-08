@@ -1239,5 +1239,8 @@
   "searchBox.recentList.clearButton": {
     "message": "最近の検索をクリア",
     "description": "The label for the button to clear recent searches in the search box"
+  },
+  "theme.docCardList.prefix.latest": {
+    "message": "最新"
   }
 }

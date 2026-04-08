@@ -1,0 +1,178 @@
+---
+id: xp2-release-notes
+title: XPass 2 Air Firmware
+toc_max_heading_level: 2
+---
+
+## Firmware Version 2.11.2 (Build No. 2.11.2_260112)
+
+Release<Separator/>2025-01-12
+
+This release enhances user synchronization for BioStar Air environments, aligns device behavior with Suprema firmware standards, and improves network configuration stability.
+
+### Key Features and Improvements
+
+#### Authentication
+
+1. Supports authentication using users and access levels stored locally on the device.
+
+1. Server-based authentication is not supported in this version and is not required for normal operation.
+
+#### User Management
+
+1. Added user synchronization capability.
+
+1. Users and access levels are stored directly on the device through synchronization.
+
+#### System and Firmware Behavior
+
+1. Firmware is based on Suprema XPass 2 base firmware v1.5.0.
+
+1. Device behavior, including LED indicators, is aligned with standard Suprema firmware.
+
+   **LED indicators**
+
+   | Color | Description |
+   | --- | --- |
+   | Green | Authentication success |
+   | Red | Authentication failure |
+   | Blue/Cyan blinking | Normal operation |
+   | Blue/Green blinking | Network initialization in progress |
+   | Green blinking | Waiting for input |
+   | Green/White blinking | Connecting to Suprema Pass (BLE) |
+   | White blinking | Connecting to Device Manager |
+
+1. Legacy Airfob Space-specific LED indicators have been removed
+
+#### Compatibility and Migration
+
+1. Compatible with BioStar 2 environments.
+
+1. Firmware upgrade is supported from v2.9.0 and earlier to v2.11.2.
+
+   * Downgrade to earlier versions (e.g., v2.9.0, v2.8.1) is not supported.
+
+#### Firmware Transition Notes
+
+1. Devices can transition between Suprema firmware v1.5.0 and AIR v2.11.2.
+
+   * Legacy models (AEM, AE-MC, AE-MU) are not supported when upgrading to Suprema firmware and may become unusable.
+
+     These models must remain on BioStar Air firmware v2.9.0 or earlier.
+
+
+### Bug Fixes
+
+#### Network
+
+1. Fixed an issue where device network settings were unintentionally changed when using a static IP.
+
+
+<hr style={{margin: '4rem 0'}} />
+
+
+## Firmware Version 2.8.1 (Build No. 2.8.1_250408)
+
+Release<Separator/>2025-04-14
+
+### Initial Firmware Developed
+
+
+<hr style={{margin: '4rem 0'}} />
+
+
+## Firmware Version 2.8.0 (Build No. 2.8.0_250115)
+
+Release<Separator/>2025-01-15
+
+This release introduces a new **Event Logs** feature, improves device configuration behavior, and resolves known issues.
+
+### Key Features and Improvements
+
+#### Common
+
+1. Added **Event Logs** feature to monitor the following situations:
+
+   * Door forced open
+
+   * Door held open
+
+1. Improved automatic setting of device timezone to site timezone during device registration via mobile app.
+
+1. Improved local storage of event logs when mobile connection is unavailable.
+
+1. Improved tamper status On/Off reporting issues.
+
+
+### Bug Fixes
+
+#### Airfob Edge Reader Mullion-Specific Fixes
+
+1. Fixed an issue where the sound was not played when opening the door with LinkPass credentials if the warning sound was set to short.
+
+1. Fixed an issue where time errors occurred on the device when disabling Daylight Saving Time (DST) configuration.
+
+
+<hr style={{margin: '4rem 0'}} />
+
+
+## Firmware Version 2.5.1 (Build No. 2.5.1_241025)
+
+Release<Separator/>2024-10-25
+
+This release focuses on stability improvements and device diagnostics.
+
+
+### Key Features and Improvements
+
+1. Added eMMC lifespan monitoring and upload to server.
+
+1. Removed retry limit for network API errors.
+
+1. Increased API timeout to 10 seconds.
+
+
+<hr style={{margin: '4rem 0'}} />
+
+
+## Firmware Version 2.4.1 (Build No. 2.4.1_240708)
+
+Release<Separator/>2024-07-08
+
+### Key Features and Improvements
+
+1. Improved firmware upgrade dependency requirements.
+
+   * Removed the requirement to upgrade to v2.3.1 before installing v2.4.0.
+
+   * Supports direct upgrade to v2.4.1 from the following versions:
+
+     * v2.0.x
+
+     * v2.1.x
+
+     * v2.2.x
+
+     * v2.3.x
+
+
+<hr style={{margin: '4rem 0'}} />
+
+
+## Firmware Version 2.4.0 (Build No. 2.4.0_240603)
+
+Release<Separator/>2024-06-03
+
+This release introduces new authentication features and improves system behavior during initialization and API processing.
+
+### Key Features and Improvements
+
+1. Added video gateway functionality.
+
+1. Supports user authentication by entering RFID card values through the XPass 2 keypad.
+
+   > Example: `123456789#` → Authenticate / `*` → Cancel input
+
+1. Improved API error counting to only count actual API response errors, not timeouts
+
+1. Improved resetting of device time and language settings during initialization

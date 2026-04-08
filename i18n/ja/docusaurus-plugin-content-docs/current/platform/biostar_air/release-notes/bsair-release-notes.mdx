@@ -1,0 +1,690 @@
+---
+id: bsair-release-notes
+title: BioStar Air
+description: This document provides a summary of feature improvements, bug fixes, and major changes for each version of the BioStar Air platform.
+toc_max_heading_level: 2
+---
+
+## Version 2.11.0 {#2110}
+
+Release<Separator/>2025-11-25
+
+BioStar Air 2.11.0 continues our commitment to making cloud access control more reliable than traditional on-premise systems. This release introduces major improvements to offline behavior, updates to the admin experience, and powerful new capabilities for BioStation 3.
+
+Whether you're managing a single site or dozens of locations, this update makes BioStar Air easier to use, more resilient, and ready for more complex deployments.
+
+
+### RFID Card Active Sync on XPass 2 and X-Station 2
+
+As part of our long-term goal to exceed the reliability of on-premise access control, we’ve fully re-engineered how BioStar Air handles credential redundancy. With the new **Active Sync** architecture, readers continue working normally even when disconnected from the network.
+
+All primary credential types remain fully functional during network outages:
+
+- **RF Cards**
+
+- **Biometric Templates**
+
+- **Mobile Credentials**
+
+- **PINs**
+
+:::info
+
+You'll still need a network connection to use Dynamic QR and LinkPass Credentials.
+
+:::
+
+Readers still plug in and sync automatically, with no new installation steps. Credential data is continuously synchronized in the background.
+
+This feature is being rolled out by device type:
+
+- **BioStation 3 / BioEntry W3**
+
+  Available now. No firmware update required.
+
+- **XPass 2**
+
+  Rolling out beginning Nov 25, 2025. If firmware v2.11 is not visible yet, please be patient. All customers will receive it by **Dec 9**.
+
+- **X-Station 2**
+
+   Scheduled for release on **Dec 23, 2025**.
+
+
+### Interface Updates
+
+We've made several UI enhancements to simplify everyday administration and reduce repetitive actions.
+
+#### Device List
+
+- Added a **Refresh Status**(<IcAirRef width='24px' height='24px' />) button for situations where the displayed status may be out of date.
+
+- You can now **delete devices directly from the web portal** without using the mobile app. 
+
+  :::note
+
+  Devices must have an active network connection or they will still need to be deleted with the mobile app. Supported on the same schedule as firmware updates listed above.
+
+  :::
+
+#### Personal Information Masking
+
+A new **Mask Personal Information** button hides sensitive user details while viewing event logs, admin logs, or user information on-screen. Helpful for audits or shared-screen reviews.
+
+#### Reports
+
+All dropdown filters are now **searchable**, making it easier to build report templates quickly.
+
+#### User List
+
+Improved the user-selection UI. Admins now see a **visual count of selected users** before performing batch actions.
+
+#### Partner Portal
+
+- Improved **user and device counts**.
+
+- Improved **site deletion workflow** warns you if devices are still registered to the site.
+
+
+### BioStation 3 – Video Gateway Support
+
+BioStation 3 can now operate as a **video gateway**, allowing it to process and relay video streams from multiple 4K cameras simultaneously. This gives sites a powerful and flexible way to deploy video without additional hardware.
+
+To enable:
+
+1. Update your BioStation 3 firmware.
+
+1. Open Device Settings for your BioStation 3.
+
+1. Toggle **Video Gateway** on.
+
+:::info
+
+Refer to our knowledge base article on <DocLink docId='platform/biostar_air/ip-camera-support-and-configuration' />.
+
+:::
+
+
+### Event Logs & Alerts
+
+Previously, some network-disconnection logs were stored on the device and only uploaded once the reader reconnected. This caused delays in alert visibility.
+
+With v2.11:
+
+- **Network disconnection events are now generated server-side**.
+
+- Alerts appear immediately when a reader loses connectivity
+
+- Admins can respond more quickly to wiring issues, outages, or unexpected device behavior
+
+This ensures consistent, real-time awareness, even when devices go offline.
+
+
+<hr style={{margin: '4rem 0'}} />
+
+
+## Version 2.10.0 {#2100}
+
+Release<Separator/>2025-08-12
+
+We're excited to announce BioStar Air 2.10.0 — a major update that introduces support for our most advanced biometric reader, BioStation 3, along with powerful new features to improve credential management, user setup, and device control. This release gives both administrators and installers more flexibility, security, and ease of use than ever before.
+
+### BioStation 3 Support
+
+BioStation 3 (BS3) is Suprema's flagship intelligent terminal, combining facial authentication, mobile access, card reading, and intercom functionality in one compact device. With BioStar Air 2.10.0, BS3 is fully supported and manageable from the BioStar Air portal and mobile apps.
+
+**Key BS3 features now available in BioStar Air**:
+
+* **Face Authentication**: Fast Mode for speed, Fusion Mode for enhanced security
+
+* **RFID Support**: MIFARE Classic, FeliCa, DESFire, EM4100 (125 KHz), and select proprietary formats (iCLASS, Prox where supported)
+
+* **Mobile Credentials**: Seamless Suprema Pass integration
+
+* **QR Code Scanning**: Supports dynamic QR codes and CSNs encoded as QR codes (license required)
+
+* **SIP Intercom**: Audio/video calls to the BioStar Air App or web dashboard, with remote door unlock via DTMF
+
+* **Device Branding**: Upload custom logos or wallpapers via the Edit Device screen
+
+* **Time & Attendance Keys**: On-screen event codes for shift start/end and breaks
+
+
+### Smarter Credential Management
+
+#### Custom Wiegand Format Support
+
+Define and manage your own Wiegand formats, including facility codes, segment definitions, and parity bits. Configure from Settings → Credential Formats in the web portal. Formats appear as separate columns in CSV imports, allowing you to:
+
+* Assign multiple cards per user with a / separator
+
+* Optionally name each card inline for clarity
+
+#### Assign Up to 8 Cards Per User
+
+Support for multiple credentials per user has been expanded to allow up to eight RFID cards (CSN or Wiegand) per account.
+
+#### PIN Code Support
+
+Set PINs directly in the Edit User screen or via CSV import. For security, PINs cannot be viewed or exported.
+
+#### Mobile App Enhancements
+
+* **iOS**: Edit User screen now includes a **Read** button to scan cards via a connected reader
+
+* **Android**: NFC-on-phone scan replaced with dropdown-based reader scan (matches iOS behavior)
+
+#### Better CSV Upload Feedback
+
+CSV imports now show line-by-line error messages, making it faster to correct issues.
+
+#### Validity Period Improvements
+
+For "infinite" access periods, the start date is automatically set to today at 00:00. Quick adjustments (+1 day, +1 week, etc.) update only the end date.
+
+
+### Device Management Enhancements
+
+* **Wiegand Output Mode**: Toggle between Normal and Bypass modes per device
+
+* **Firmware Update Safeguard**: Update button is greyed out during active updates
+
+* **Byte Order Settings**: Configure per device or apply in bulk from the Device List
+
+
+### Video Performance Improvements
+
+Backend optimizations improve Uniview camera stream stability and responsiveness. Additional camera brand support is planned for future releases.
+
+
+### Private Reports
+
+One-time reports are now sent only to the admin who generated them, preventing accidental distribution to all administrators.
+
+
+### Real-Time Patch Diagnostics
+
+When registering Airfob Patch, the system now displays live voltage and RSSI readings, making placement and performance testing faster and more accurate.
+
+<YouTube className='fit--content' videoId="si2Pu0W8ABw" />
+
+
+<hr style={{margin: '4rem 0'}} />
+
+
+## Version 2.9.1 {#291}
+
+Release<Separator/>2025-05-27
+
+### Key Features and Improvements
+
+#### BioStar Air Portal
+
+1. Supports Microsoft Single Sign-On (SSO)
+
+1. Added basic T&A reports
+
+1. Supports BioEntry W3 facial authentication
+
+#### BioStar Air Partner Portal
+
+1. Added basic T&A reports
+
+
+<hr style={{margin: '4rem 0'}} />
+
+
+## Version 2.9.0 {#290}
+
+Release<Separator/>2025-05-21
+
+This release renames the platform from Airfob Space to BioStar Air. Additionally, the URLs for each platform have been updated as follows:
+
+* [https://admin.biostarair.com](https://admin.biostarair.com)
+
+* [https://developer.biostarair.com](https://developer.biostarair.com)
+
+* [https://partner.biostarair.com](https://partner.biostarair.com)
+
+### Key Features and Improvements
+
+#### BioStar Air Portal
+
+1. Supports AM-AA devices.
+
+1. Supports Webhook.
+
+1. Improved door online status display.
+
+1. Improved sign-up form.
+
+1. Added administrator contact information.
+
+1. Added disposable OTP for XPass 2 keypad.
+
+1. Supports Wiegand Double Badge.
+
+
+#### BioStar Air Partner Portal
+
+1. Added email address masking in the list.
+
+
+#### Suprema Pass Mobile App
+
+1. Improved menu UI.
+
+1. Added BLE connection control using the accelerometer sensor.
+
+1. Updated encryption and decryption keys to allow credential transfer during mobile device migration.
+
+1. Improved batch update for user information and access rights.
+
+1. Supports Double Badge.
+
+
+#### BioStar Air Mobile App
+
+1. Improved overall app UI.
+
+1. Improved menu usability.
+
+1. Improved device registration screen.
+
+1. Added PIN support for keypad devices.
+
+1. Added Support screen.
+
+1. Supports Webhook.
+
+
+### Bug Fixes
+
+#### Suprema Pass Mobile App
+
+1. Fixed minor bugs
+
+
+<hr style={{margin: '4rem 0'}} />
+
+
+## Version 2.8.0 {#280}
+
+Release<Separator/>2024-12-30
+
+### Key Features and Improvements
+
+#### BioStar Air Portal
+
+1. Added access level validity period support.
+
+1. Added Aifob Patch radar support.
+
+1. Added My Info editing for administrators.
+
+1. Added 26-bit Wiegand output.
+
+1. Added camera settings.
+
+1. Added logs and alerts for the following situations:
+
+   * Door held open
+
+   * Door forced open
+
+1. Applied site timezone during device registration.
+
+1. Improved event logging when mobile devices are offline
+
+1. Improved UI behavior when mobile device font size is enlarged.
+
+1. Applied security updates to external development modules.
+
+
+#### BioStar Air Partner Portal / Developers Portal
+
+1. Added global/EU server selection.
+
+1. Applied security updates to external development modules.
+
+
+#### Suprema Pass Mobile App
+
+1. Added RSSI display by device.
+
+1. Added app permission guidance.
+
+1. Added popup guidance for connection method settings.
+
+
+#### BioStar Air Mobile App
+
+1. Added firmware update notifications.
+
+1. Added background mode settings.
+
+1. Added access level validity period display.
+
+1. Added app permission guidance.
+
+1. Added Aifob Patch radar support.
+
+1. Added 26-bit Wiegand output.
+
+1. Improved login UI.
+
+1. Added password change flow after 5 failed login attempts.
+
+1. Added individual video profile settings.
+
+
+<hr style={{margin: '4rem 0'}} />
+
+
+## Version 2.7.1 {#271}
+
+Release<Separator/>2024-10-12
+
+### Key Features and Improvements
+
+1. Added single email login.
+
+:::note
+
+* Web portal and Android will be released first.
+
+* iOS will be released approximately 2-3 days later after App Store review.
+
+* For accounts that require consolidation, please contact the development team.
+
+:::
+
+
+<hr style={{margin: '4rem 0'}} />
+
+
+## Version 2.7.0 {#270}
+
+Release<Separator/>2024-08-22
+
+### Key Features and Improvements
+
+#### BioStar Air Portal
+
+1. Added support center button.
+
+1. Added administrator notifications.
+
+1. Improved internal SDK stability.
+
+1. Improved administrator list display.
+
+1. Improved separating date and time fields in event log export.
+
+1. Added schedule support for exit button behavior.
+
+1. Added partial search for user names in event logs.
+
+1. Improved RF card registration.
+
+1. Improved video UI.
+
+1. Added support center menu on the home screen.
+
+1. Added QR code to the card issuance email download link.
+
+
+#### BioStar Air Mobile App
+
+<Badge only>iOS 1.0.11</Badge> / <Badge only>Android 1.0.12</Badge>
+
+1. Added user image upload for profile settings.
+
+1. Added RFID card reader support to improve RFID card number input speed.
+
+1. Added settings page.
+
+   * **Site Settings**
+
+   * **Administrator Settings**
+
+   * **Daylight Saving Time Settings**
+
+1. Added notifications.
+
+1. Added door schedule feature.
+
+1. Improved CCTV functionality.
+
+1. Improved navigation across all menus.
+
+
+#### BioStar Air Partner Portal
+
+1. Added partner-specific credit policy editing.
+
+
+<hr style={{margin: '4rem 0'}} />
+
+
+## Version 2.6.0 {#260}
+
+Release<Separator/>2024-06-03
+
+### Key Features and Improvements
+
+#### BioStar Air Portal
+
+1. Added video-related functionality.
+
+1. Added Aifob Patch HD support.
+
+1. Added XPass 2 keypad support.
+
+1. Added **Global**/**EU** server selection at login.
+
+1. Added distinction between **Regular** and **Temporary** users.
+
+
+#### Suprema Pass Mobile App
+
+<Badge only>iOS 1.0.20</Badge> / <Badge only>Android 1.0.27</Badge>
+
+1. Added mobile QR credentials.
+
+1. Improved internal SDK stability.
+
+#### BioStar Air Mobile App
+
+<Badge only>iOS 1.0.9</Badge> / <Badge only>Android 1.0.10</Badge>
+
+1. Added camera functionality.
+
+1. Added **Global**/**EU** server selection.
+
+1. Added **Home** and **Monitoring** screens.
+
+1. Added event log viewing.
+
+1. Added support for password change upon expiration.
+
+1. Improved overall UI/UX.
+
+
+<hr style={{margin: '4rem 0'}} />
+
+## Version 2.5.1 {#251}
+
+Release<Separator/>2024-03-14
+
+### Key Features and Improvements
+
+1. Added support for first check-in / last check-out in T&A.
+
+1. Added support for T&A code options.
+
+
+<hr style={{margin: '4rem 0'}} />
+
+
+## Version 2.5.0 {#250}
+
+Release<Separator/>2024-03-12
+
+### Key Features and Improvements
+
+#### BioStar Air Portal
+
+1. Added QR credentials.
+
+1. Added API credentials.
+
+1. Added **User Template** feature.
+
+1. Added hexadecimal card IDs in CSV user import.
+
+1. Added support for MSB/LSB of card IDs.
+
+1. Improved behavior of activate/reactivate buttons.
+
+1. Changed notifications for card suspension/deletion from SMS to push notifications.
+
+1. Improved event logs date filtering.
+
+1. Applied tab-based layout to the **Site Settings**.
+
+
+#### BioStar Air Partner Portal
+
+1. Applied the credit system.
+
+
+<hr style={{margin: '4rem 0'}} />
+
+
+## Version 2.4.0 {#240}
+
+Release<Separator/>2023-12-20
+
+
+### Key Features and Improvements
+
+#### BioStar Air Portal
+
+1. Added Time & Attendance configuration for Aifob Patch.
+
+1. Added device beep settings.
+
+1. Added support for RaonArk door locks.
+
+1. Improved credit center UI.
+
+1. Added Korean chatbot support.
+
+
+#### Suprema Pass Mobile App
+
+<Badge only>iOS 1.0.15</Badge> / <Badge only>Android 1.0.24</Badge>
+
+1. Updated card list design.
+
+
+#### BioStar Air Mobile App
+
+<Badge only>iOS 1.0.7</Badge> / <Badge only>Android 1.0.8</Badge>
+
+1. Added **User** menu.
+
+1. Added **Door** menu.
+
+1. Improved **Device** menu screen.
+
+1. Minor bug fixes and improvements.
+
+
+<hr style={{margin: '4rem 0'}} />
+
+
+## Version 2.3.0 {#230}
+
+Release<Separator/>2023-10-16
+
+### Key Features and Improvements
+
+1. Added elevator support with OM-120.
+
+1. Added mobile time & attendance.
+
+1. Added branch site functionality.
+
+1. Added account lock after 5 failed login attempts.
+
+1. Added APB battery status display in the device list.
+
+
+### Bug Fixes
+
+1. Fixed event log refresh issues.
+
+1. Fixed issue where the end date was not updated when refreshing without a date filter.
+
+1. Fixed issue where the schedule name was not displayed correctly in the admin screen.
+
+1. FFixed additional minor UI issues.
+
+
+<hr style={{margin: '4rem 0'}} />
+
+
+## Version 2.2.0 {#220}
+
+Release<Separator/>2023-08-04
+
+### Key Features and Improvements
+
+1. Added **Door Management** functionality
+
+   * Existing devices are automatically assigned to doors.
+
+   * New doors are automatically created when registering new devices.
+
+1. Added email customization.
+
+1. Added SMS credential issuance.
+
+1. Improved clarity of event log messages.
+
+1. Separated session timeout and duplicate login popups.
+
+1. Updated graph labels for clarity in the **Dashboard**.
+
+
+<hr style={{margin: '4rem 0'}} />
+
+
+## Version 2.1.0 {#210}
+
+Release<Separator/>2023-07-07
+
+### Key Features and Improvements
+
+1. Added **Door Status** menu.
+
+1. Added mobile card ID manual input feature.
+
+1. Improved CSV import/export functionality with multilingual support.
+
+1. Updated table display to show total item counts.
+
+1. Standardized Korean administrator role names:
+
+   * 마스터(Master) / 관리자(Administrator) / 오퍼레이터(Operator) / 옵저버(Observer)
+
+1. Improved date and time display in **Dashboard** and **Event Log**.
+
+1. Improved holiday list display.
+
+
+### Bug Fixes
+
+1. Fixed minor UI and message issues.

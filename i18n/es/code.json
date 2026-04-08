@@ -1239,5 +1239,8 @@
   "searchBox.recentList.clearButton": {
     "message": "Borrar búsquedas recientes",
     "description": "The label for the button to clear recent searches in the search box"
+  },
+  "theme.docCardList.prefix.latest": {
+    "message": "Último"
   }
 }
