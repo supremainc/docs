@@ -1,23 +1,23 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["59389"], {
-4309: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["15605"], {
+70913: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   assets: () => (assets),
   contentTitle: () => (contentTitle),
   "default": () => (MDXContent),
   frontMatter: () => (frontMatter),
-  metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_default_site_i_18_n_en_docusaurus_plugin_content_blog_2026_03_changelog_md_f28_json__WEBPACK_IMPORTED_MODULE_0__),
+  metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_default_site_changelog_2026_03_changelog_md_270_json__WEBPACK_IMPORTED_MODULE_0__),
   toc: () => (toc)
 });
-/* ESM import */var _site_docusaurus_docusaurus_plugin_content_blog_default_site_i_18_n_en_docusaurus_plugin_content_blog_2026_03_changelog_md_f28_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(49934);
+/* ESM import */var _site_docusaurus_docusaurus_plugin_content_blog_default_site_changelog_2026_03_changelog_md_270_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(36597);
 /* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(74848);
 /* ESM import */var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(84429);
 
 
 const frontMatter = {
-	title: 'March 2026',
-	description: 'Provides an overview of key updates to Suprema Docs from February through March.',
+	title: '2026년 3월',
+	description: 'Suprema Docs의 2월부터 3월까지의 주요 업데이트 내역을 제공합니다.',
 	slug: '2026-03-changelog',
 	isTranslationMissing: false
 };
@@ -50,20 +50,20 @@ const toc = [{
   "id": "devices",
   "level": 2
 }, {
-  "value": "Device Documentation Updates",
-  "id": "device-documentation-updates",
+  "value": "장치 문서 업데이트",
+  "id": "장치-문서-업데이트",
   "level": 3
 }, {
   "value": "Developer",
   "id": "developer",
   "level": 2
 }, {
-  "value": "Multilingual Support",
-  "id": "multilingual-support",
+  "value": "다국어 지원",
+  "id": "다국어-지원",
   "level": 2
 }, {
-  "value": "Open Source Software Licenses",
-  "id": "open-source-software-licenses",
+  "value": "오픈 소스 라이선스",
+  "id": "오픈-소스-라이선스",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -81,9 +81,11 @@ function _createMdxContent(props) {
   };
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {
-      children: ["This March update improves your ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
+      children: ["이번 3월 업데이트는 더욱 직관적인 인터페이스와 강화된 검색 기능으로 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
         children: "Suprema Docs"
-      }), " experience with a more intuitive interface and enhanced search functionality. Meanwhile, the BioStar Air Administrator Guide has been completely restructured to help you understand all features—from user management to access control and video surveillance—at a glance."]
+      }), " 사용 경험을 개선했습니다. 동시에 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
+        children: "BioStar Air"
+      }), " 관리자 가이드를 완전히 재구성하여 사용자 관리부터 출입 통제, 비디오 감시까지 모든 기능을 한눈에 파악할 수 있도록 정리했습니다."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
         alt: "Suprema Docs 26.03 Changelogs",
@@ -97,7 +99,7 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-          children: "Redesigned home page"
+          children: "첫 페이지 디자인 변경"
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
           children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
             alt: "Suprema Docs home",
@@ -108,9 +110,9 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-          children: "Enhanced search functionality"
+          children: "검색 기능 강화"
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-          children: "Added product-specific search and keyboard shortcut (Ctrl + K) to open the search bar"
+          children: "제품별 검색 기능 추가, 단축키(ctrl + k)로 검색 창 호출"
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
           children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
             alt: "Suprema Docs home",
@@ -128,10 +130,10 @@ function _createMdxContent(props) {
       children: "BioStar X"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
-        children: ["Updated documentation for ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
           href: "../platform/biostar_x/settings-video-integration",
-          children: "VMS Server Integration and Certificate Installation"
-        })]
+          children: "VMS 서버 연동 시 인증서 설치 관련 문서"
+        }), " 업데이트"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h3, {
       id: "biostar-air",
@@ -139,44 +141,44 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {
-          children: ["Completed comprehensive restructuring and optimization of the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
+          children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
             href: "../platform/biostar_air/",
-            children: "BioStar Air Administrator Guide"
-          })]
+            children: "BioStar Air 가이드"
+          }), " 문서 전체 재구성 및 최적화 완료"]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-          children: "Expanded multilingual support for BioStar Air: English, Japanese, and Spanish translations added"
+          children: "BioStar Air 다국어 지원 확대: 영문, 일본어, 스페인어 번역 추가"
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-              children: "Added documentation for key features including user management, access rights management, and video management"
+              children: "사용자 관리, 출입 권한 관리, 비디오 관리 등 주요 기능 문서 추가"
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-              children: "Added English interface images and user interface screenshots"
+              children: "영문 이미지 및 사용자 인터페이스 스크린샷 추가"
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-          children: "Improved BioStar Air table of contents structure and reorganized sections"
+          children: "BioStar Air 목차 구조 개선 및 섹션 재조정"
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
       id: "devices",
       children: "Devices"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-      children: "Added new release notes and updated existing device documentation."
+      children: "신규 릴리스 노트를 추가하고 기존 장치 문서를 업데이트했습니다."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h3, {
-      id: "device-documentation-updates",
-      children: "Device Documentation Updates"
+      id: "장치-문서-업데이트",
+      children: "장치 문서 업데이트"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
           href: "../device/xpass_2/release-notes/151",
           children: "XPass 2"
-        }), ": Added v1.5.1 release notes"]
+        }), ": 1.5.1 버전 릴리스 노트 추가"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
@@ -184,18 +186,18 @@ function _createMdxContent(props) {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
             href: "../device/device_manager/release-notes/122",
             children: "Device Manager"
-          }), ": Established new app release notes category and added v1.2.2 release notes"]
+          }), ": 앱 릴리스 노트 카테고리 신설 및 1.2.2 버전 릴리스 노트 추가"]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
             href: "../device/bioentry_p2/release-notes/160",
             children: "BioEntry P2"
-          }), ": Added v1.6.0 release notes"]
+          }), ": 1.6.0 버전 릴리스 노트 추가"]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-          children: "Added instructional images for device factory reset button location"
+          children: "장치 공장 초기화 버튼 위치 안내 이미지 추가"
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
@@ -204,59 +206,59 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {
-          children: ["API documentation updated: ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
+          children: ["API 문서 업데이트: ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
             href: "../api/bsxapi#tag/Cards/operation/createCard",
             children: "Create BioStar X QR"
           })]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-          children: "Device SDK: Added v2.9.12 release notes"
+          children: "Device SDK: 2.9.12 버전 릴리스 노트 추가"
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
-      id: "multilingual-support",
-      children: "Multilingual Support"
+      id: "다국어-지원",
+      children: "다국어 지원"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-          children: "Improved documentation quality for Japanese and Spanish versions"
+          children: "일본어, 스페인어 문서의 완성도 향상"
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-              children: "Enhanced consistency of document titles and content"
+              children: "문서 제목 및 내용 일관성 개선"
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-              children: "Corrected mistranslations and standardized terminology"
+              children: "오번역 수정 및 용어 통일"
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-              children: "Fixed spacing and grammar issues"
+              children: "띄어쓰기 및 문법 수정"
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-          children: "Significantly updated English translation"
+          children: "영문 번역 대폭 업데이트"
         }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-              children: "Standardized technical terminology"
+              children: "기술 용어 표준화"
             }), "\n"]
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
             children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-              children: "Improved sentence structure and phrasing"
+              children: "문장 구조 및 표현 개선"
             }), "\n"]
           }), "\n"]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
-      id: "open-source-software-licenses",
-      children: "Open Source Software Licenses"
+      id: "오픈-소스-라이선스",
+      children: "오픈 소스 라이선스"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
-        children: ["Added license attributions: ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
+        children: ["라이선스 고지문 추가: ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
           href: "../legal/open-source-licenses#the-2-clause-bsd-license",
           children: "BSD-2-Clause"
         }), ", ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
@@ -414,8 +416,8 @@ function MDXProvider(properties) {
 
 
 }),
-49934: (function (module) {
-module.exports = JSON.parse('{"permalink":"/docs/en/changelog/2026-03-changelog","source":"@site/i18n/en/docusaurus-plugin-content-blog/2026-03-changelog.md","title":"March 2026","description":"Provides an overview of key updates to Suprema Docs from February through March.","date":"2026-04-08T03:16:39.000Z","tags":[],"readingTime":1.89,"hasTruncateMarker":true,"authors":[],"frontMatter":{"title":"March 2026","description":"Provides an overview of key updates to Suprema Docs from February through March.","slug":"2026-03-changelog","isTranslationMissing":false},"unlisted":false,"nextItem":{"title":"January 2026","permalink":"/docs/en/changelog/2026-01-02-changelog"}}')
+36597: (function (module) {
+module.exports = JSON.parse('{"permalink":"/docs/changelog/2026-03-changelog","source":"@site/changelog/2026-03-changelog.md","title":"2026년 3월","description":"Suprema Docs의 2월부터 3월까지의 주요 업데이트 내역을 제공합니다.","date":"2026-04-08T05:28:34.000Z","tags":[],"readingTime":1.77,"hasTruncateMarker":true,"authors":[],"frontMatter":{"title":"2026년 3월","description":"Suprema Docs의 2월부터 3월까지의 주요 업데이트 내역을 제공합니다.","slug":"2026-03-changelog","isTranslationMissing":false},"unlisted":false,"nextItem":{"title":"2026년 1월","permalink":"/docs/changelog/2026-01-02-changelog"}}')
 
 }),
 

@@ -1,23 +1,23 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["86931"], {
-15715: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["98653"], {
+65655: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   assets: () => (assets),
   contentTitle: () => (contentTitle),
   "default": () => (MDXContent),
   frontMatter: () => (frontMatter),
-  metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_default_site_changelog_2026_03_changelog_md_270_json__WEBPACK_IMPORTED_MODULE_0__),
+  metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_default_site_i_18_n_en_docusaurus_plugin_content_blog_2026_03_changelog_md_f28_json__WEBPACK_IMPORTED_MODULE_0__),
   toc: () => (toc)
 });
-/* ESM import */var _site_docusaurus_docusaurus_plugin_content_blog_default_site_changelog_2026_03_changelog_md_270_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(36597);
+/* ESM import */var _site_docusaurus_docusaurus_plugin_content_blog_default_site_i_18_n_en_docusaurus_plugin_content_blog_2026_03_changelog_md_f28_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(49934);
 /* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(74848);
 /* ESM import */var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(84429);
 
 
 const frontMatter = {
-	title: '2026년 3월',
-	description: 'Suprema Docs의 2월부터 3월까지의 주요 업데이트 내역을 제공합니다.',
+	title: 'March 2026',
+	description: 'Provides an overview of key updates to Suprema Docs from February through March.',
 	slug: '2026-03-changelog',
 	isTranslationMissing: false
 };
@@ -40,11 +40,9 @@ function _createMdxContent(props) {
   };
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {
-      children: ["이번 3월 업데이트는 더욱 직관적인 인터페이스와 강화된 검색 기능으로 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
+      children: ["This March update improves your ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
         children: "Suprema Docs"
-      }), " 사용 경험을 개선했습니다. 동시에 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
-        children: "BioStar Air"
-      }), " 관리자 가이드를 완전히 재구성하여 사용자 관리부터 출입 통제, 비디오 감시까지 모든 기능을 한눈에 파악할 수 있도록 정리했습니다."]
+      }), " experience with a more intuitive interface and enhanced search functionality. Meanwhile, the BioStar Air Administrator Guide has been completely restructured to help you understand all features—from user management to access control and video surveillance—at a glance."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
         alt: "Suprema Docs 26.03 Changelogs",
@@ -170,8 +168,8 @@ function MDXProvider(properties) {
 
 
 }),
-36597: (function (module) {
-module.exports = JSON.parse('{"permalink":"/docs/changelog/2026-03-changelog","source":"@site/changelog/2026-03-changelog.md","title":"2026년 3월","description":"Suprema Docs의 2월부터 3월까지의 주요 업데이트 내역을 제공합니다.","date":"2026-04-08T03:16:39.000Z","tags":[],"readingTime":1.77,"hasTruncateMarker":true,"authors":[],"frontMatter":{"title":"2026년 3월","description":"Suprema Docs의 2월부터 3월까지의 주요 업데이트 내역을 제공합니다.","slug":"2026-03-changelog","isTranslationMissing":false},"unlisted":false,"nextItem":{"title":"2026년 1월","permalink":"/docs/changelog/2026-01-02-changelog"}}')
+49934: (function (module) {
+module.exports = JSON.parse('{"permalink":"/docs/en/changelog/2026-03-changelog","source":"@site/i18n/en/docusaurus-plugin-content-blog/2026-03-changelog.md","title":"March 2026","description":"Provides an overview of key updates to Suprema Docs from February through March.","date":"2026-04-08T05:28:34.000Z","tags":[],"readingTime":1.89,"hasTruncateMarker":true,"authors":[],"frontMatter":{"title":"March 2026","description":"Provides an overview of key updates to Suprema Docs from February through March.","slug":"2026-03-changelog","isTranslationMissing":false},"unlisted":false,"nextItem":{"title":"January 2026","permalink":"/docs/en/changelog/2026-01-02-changelog"}}')
 
 }),
 
