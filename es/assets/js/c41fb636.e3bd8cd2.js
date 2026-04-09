@@ -1,6 +1,6 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["43239"], {
-25036: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["60185"], {
+2488: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -9,37 +9,37 @@ __webpack_require__.d(__webpack_exports__, {
   frontMatter: () => (/* binding */ frontMatter),
   toc: () => (/* binding */ toc),
   "default": () => (/* binding */ MDXContent),
-  metadata: () => (/* reexport */ site_i_18_n_ja_docusaurus_plugin_content_docs_current_device_device_manager_ip_device_settings_mdx_f17_namespaceObject),
+  metadata: () => (/* reexport */ site_i_18_n_es_docusaurus_plugin_content_docs_current_device_device_manager_ip_device_settings_mdx_c41_namespaceObject),
   assets: () => (/* binding */ assets),
   contentTitle: () => (/* binding */ contentTitle)
 });
 
-;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-ja-docusaurus-plugin-content-docs-current-device-device-manager-ip-device-settings-mdx-f17.json
-var site_i_18_n_ja_docusaurus_plugin_content_docs_current_device_device_manager_ip_device_settings_mdx_f17_namespaceObject = JSON.parse('{"id":"device/device_manager/ip-device-settings","title":"IPデバイスを設定する","description":"IPデバイスの設定を変更できます。","source":"@site/i18n/ja/docusaurus-plugin-content-docs/current/device/device_manager/ip-device-settings.mdx","sourceDirName":"device/device_manager","slug":"/device/device_manager/ip-device-settings","permalink":"/docs/ja/device/device_manager/ip-device-settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/device_manager/ip-device-settings.mdx","tags":[],"version":"current","frontMatter":{"id":"ip-device-settings","title":"IPデバイスを設定する","description":"IPデバイスの設定を変更できます。","keywords":["IPデバイス","ネットワーク","サーバー","RS-485","その他","LED/ブザー","デバイス設定","デバイス接続","ファームウェアをアップグレードする","デバイス再起動","設定の初期化","パスワード変更"],"isTranslationMissing":false},"sidebar":"device_manager","previous":{"title":"デバイスを初期設定する","permalink":"/docs/ja/device/device_manager/initial-setup"},"next":{"title":"XPass D2 を設定する","permalink":"/docs/ja/device/device_manager/xpd2-settings"}}')
+;// CONCATENATED MODULE: ./.docusaurus/docusaurus-plugin-content-docs/default/site-i-18-n-es-docusaurus-plugin-content-docs-current-device-device-manager-ip-device-settings-mdx-c41.json
+var site_i_18_n_es_docusaurus_plugin_content_docs_current_device_device_manager_ip_device_settings_mdx_c41_namespaceObject = JSON.parse('{"id":"device/device_manager/ip-device-settings","title":"Configurar Dispositivo IP","description":"Cambie la configuración del dispositivo IP.","source":"@site/i18n/es/docusaurus-plugin-content-docs/current/device/device_manager/ip-device-settings.mdx","sourceDirName":"device/device_manager","slug":"/device/device_manager/ip-device-settings","permalink":"/docs/es/device/device_manager/ip-device-settings","draft":false,"unlisted":false,"editUrl":"https://github.com/supremainc/docs/tree/main/docs/device/device_manager/ip-device-settings.mdx","tags":[],"version":"current","frontMatter":{"id":"ip-device-settings","title":"Configurar Dispositivo IP","description":"Cambie la configuración del dispositivo IP.","keywords":["Dispositivo IP","Red","Servidor","RS-485","Otros","LED/Zumbador","Configuración del dispositivo","Conexión de dispositivos","Actualización de firmware","Reiniciar dispositivo","Inicializar configuración","Cambiar contraseña"],"isTranslationMissing":false},"sidebar":"device_manager","previous":{"title":"Configuración Inicial del Dispositivo","permalink":"/docs/es/device/device_manager/initial-setup"},"next":{"title":"Configurar XPass D2","permalink":"/docs/es/device/device_manager/xpd2-settings"}}')
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(84429);
-;// CONCATENATED MODULE: ./i18n/ja/docusaurus-plugin-content-docs/current/device/device_manager/ip-device-settings.mdx
+;// CONCATENATED MODULE: ./i18n/es/docusaurus-plugin-content-docs/current/device/device_manager/ip-device-settings.mdx
 
 
 const frontMatter = {
 	id: 'ip-device-settings',
-	title: 'IPデバイスを設定する',
-	description: 'IPデバイスの設定を変更できます。',
+	title: 'Configurar Dispositivo IP',
+	description: 'Cambie la configuración del dispositivo IP.',
 	keywords: [
-		'IPデバイス',
-		'ネットワーク',
-		'サーバー',
+		'Dispositivo IP',
+		'Red',
+		'Servidor',
 		'RS-485',
-		'その他',
-		'LED/ブザー',
-		'デバイス設定',
-		'デバイス接続',
-		'ファームウェアをアップグレードする',
-		'デバイス再起動',
-		'設定の初期化',
-		'パスワード変更'
+		'Otros',
+		'LED/Zumbador',
+		'Configuración del dispositivo',
+		'Conexión de dispositivos',
+		'Actualización de firmware',
+		'Reiniciar dispositivo',
+		'Inicializar configuración',
+		'Cambiar contraseña'
 	],
 	isTranslationMissing: false
 };
@@ -52,52 +52,52 @@ const assets = {
 
 
 const toc = [{
-  "value": "デバイス設定を変更する",
-  "id": "デバイス設定を変更する",
+  "value": "Cambiar configuración del dispositivo",
+  "id": "cambiar-configuración-del-dispositivo",
   "level": 2
 }, {
-  "value": "ネットワーク設定",
-  "id": "ネットワーク設定",
+  "value": "Configuración de red",
+  "id": "configuración-de-red",
   "level": 3
 }, {
-  "value": "サーバー",
-  "id": "サーバー",
+  "value": "Servidor",
+  "id": "servidor",
   "level": 3
 }, {
   "value": "RS-485",
   "id": "rs-485",
   "level": 3
 }, {
-  "value": "その他",
-  "id": "その他",
+  "value": "Otros",
+  "id": "otros",
   "level": 3
 }, {
-  "value": "LED / ブザー",
-  "id": "led--ブザー",
+  "value": "LED / zumbador",
+  "id": "led--zumbador",
   "level": 3
 }, {
-  "value": "デバイスを接続する",
+  "value": "Conectar dispositivo",
   "id": "connect-device",
   "level": 2
 }, {
-  "value": "デバイスのファームウェアをアップグレードする",
+  "value": "Actualizar el firmware del dispositivo",
   "id": "device-firmware-upgrade",
   "level": 2
 }, {
-  "value": "デバイスを再起動する",
-  "id": "デバイスを再起動する",
+  "value": "Reiniciar dispositivo",
+  "id": "reiniciar-dispositivo",
   "level": 2
 }, {
-  "value": "設定を初期化する",
-  "id": "設定を初期化する",
+  "value": "Inicializar configuración",
+  "id": "inicializar-configuración",
   "level": 2
 }, {
-  "value": "ネットワーク以外のデバイス設定を初期化する",
-  "id": "ネットワーク以外のデバイス設定を初期化する",
+  "value": "Inicializar configuración del dispositivo excepto red",
+  "id": "inicializar-configuración-del-dispositivo-excepto-red",
   "level": 2
 }, {
-  "value": "デバイスパスワードを変更する",
-  "id": "デバイスパスワードを変更する",
+  "value": "Cambiar contraseña del dispositivo",
+  "id": "cambiar-contraseña-del-dispositivo",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -118,73 +118,73 @@ function _createMdxContent(props) {
   if (!Image) _missingMdxReference("Image", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.p, {
-      children: "IPデバイスの設定を変更できます。 PCで管理プログラムに接続して設定を変更したり、コマンドカードを使用する方法よりも、より迅速かつ便利に設定を変更できます。"
+      children: "Cambie la configuración del dispositivo IP. Cambie la configuración de forma rápida y sencilla en comparación con hacerlo mediante el programa de administración en una PC o mediante tarjetas de comandos."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["デバイスのファームウェアバージョンが低い場合、いくつかの設定が適用されないことがあります。 すべての設定を適用するには、", (0,jsx_runtime.jsx)(_components.a, {
+        children: ["Es posible que ciertos ajustes no se apliquen si la versión del firmware del dispositivo es antigua. Consulta ", (0,jsx_runtime.jsx)(_components.a, {
           href: "#device-firmware-upgrade",
-          children: "デバイスファームウェアをアップグレードする"
-        }), "を参照してファームウェアをアップグレードしてください。"]
+          children: "Actualizar el firmware del dispositivo"
+        }), " para aplicar todos los ajustes."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "デバイス設定を変更する",
-      children: "デバイス設定を変更する"
+      id: "cambiar-configuración-del-dispositivo",
+      children: "Cambiar configuración del dispositivo"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "デバイスのネットワーク、サーバー、RS-485、LEDおよびブザー、その他の設定を変更できます。"
+      children: "Cambie la configuración de red, servidor, RS-485, LED y zumbador, entre otras."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsx)(_components.p, {
-        children: "バイオ認証デバイスはネットワークとサーバー設定のみをサポートします。"
+        children: "Los dispositivos biométricos solo admiten las configuraciones de red y servidor."
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "モバイル機器でBluetooth機能を有効にした後、Suprema Device Managerを起動してください。"
+          children: "Active el Bluetooth en su dispositivo móvil y ejecute Suprema Device Manager."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "メイン画面でIPデバイスを選択します。"
+          children: "Seleccione el dispositivo IP desde la pantalla principal."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "接続可能なデバイス一覧でデバイスIDを確認してデバイスを選択するか、接続するデバイスにモバイル端末を近づけます。"
+          children: "Verifique el ID del dispositivo para seleccionarlo en la lista de dispositivos conectables o acerque el dispositivo móvil al equipo para conectarse."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["デバイスパスワードを設定した後、", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Después de establecer la contraseña del dispositivo, presione ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_367",
             product: "dev"
-          }), " をタップします。 入力したパスワードを画面に表示するには ", (0,jsx_runtime.jsx)(Image, {
+          }), ". Toque ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-password.svg",
             ico: true,
             alone: true
-          }), " を押します。"]
+          }), " para mostrar la contraseña ingresada."]
         }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
           type: "info",
           children: (0,jsx_runtime.jsxs)(_components.ul, {
             children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "デバイスパスワードは6～32桁の数字で設定できます。"
+                children: "La contraseña del dispositivo puede tener entre 6 y 32 caracteres."
               }), "\n"]
             }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
               children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-                children: "デバイスパスワードを紛失しないよう注意してください。 デバイスパスワードを紛失した場合、デバイスに接続するにはそのデバイスを初期化する必要があります。"
+                children: "Procure no perder la contraseña del dispositivo. Si pierde la contraseña del dispositivo, deberá inicializar el equipo para poder conectarse."
               }), "\n"]
             }), "\n"]
           })
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["各項目を設定したら、保存するために ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Después de configurar cada elemento, presione ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_288",
             product: "dev"
-          }), " をタップします。"]
+          }), " para guardar."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "ネットワーク設定",
-      children: "ネットワーク設定"
+      id: "configuración-de-red",
+      children: "Configuración de red"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/ip-device-network.png",
       width: 250
@@ -194,39 +194,39 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_355",
             product: "dev"
-          }), "：デバイスが使用するポートを入力します。"]
+          }), ": Introduzca el puerto que utilizará el dispositivo."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_012",
             product: "dev"
-          }), "：デバイスでDHCPを使用する場合は有効にします。 このオプションを有効にすると、ネットワーク情報を直接入力できません。"]
+          }), ": Active esta opción para que el dispositivo use IP dinámica. Si activa esta opción, no podrá introducir la información de red manualmente."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_029",
             product: "dev"
-          }), "、", (0,jsx_runtime.jsx)(Cmd, {
+          }), ", ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_068",
             product: "dev"
-          }), "、", (0,jsx_runtime.jsx)(Cmd, {
+          }), ", ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_191",
             product: "dev"
-          }), "：デバイスのネットワーク情報を入力します。"]
+          }), ": Introduzca la información de red del dispositivo."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_013",
             product: "dev"
-          }), "：DNSサーバーアドレスを入力します。"]
+          }), ": Introduzca la dirección del servidor DNS."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "サーバー",
-      children: "サーバー"
+      id: "servidor",
+      children: "Servidor"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/ip-device-server.png",
       width: 250
@@ -236,34 +236,34 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_188",
             product: "dev"
-          }), "：サーバー通信方式を設定できます。 サーバーからデバイスを検索して接続する場合は ", (0,jsx_runtime.jsx)(Cmd, {
+          }), ": Configure el método de comunicación del servidor. Para buscar y conectar el dispositivo desde el servidor, seleccione ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_181",
             product: "dev"
-          }), " を選択します。 デバイス側で接続先サーバー情報を設定する場合は ", (0,jsx_runtime.jsx)(Cmd, {
+          }), ". Para establecer la información del servidor para conectar el dispositivo, seleccione ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_281",
             product: "dev"
-          }), " を選択します。"]
+          }), "."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_182",
             product: "dev"
-          }), "：サーバーのIPアドレスを入力します。"]
+          }), ": Introduzca la dirección IP del servidor."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_183",
             product: "dev"
-          }), "：サーバーのドメインアドレスを入力します。"]
+          }), ": Introduzca el dominio del servidor."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_189",
             product: "dev"
-          }), "：サーバーのポートを入力します。"]
+          }), ": Introduzca el puerto del servidor."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
@@ -278,19 +278,19 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_050",
             product: "dev"
-          }), "：RS-485モードを設定します。"]
+          }), ": Configure el modo RS-485."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_298",
             product: "dev"
-          }), "：RS-485 の転送速度を設定します。"]
+          }), ": Establece la velocidad de transmisión RS-485."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "その他",
-      children: "その他"
+      id: "otros",
+      children: "Otros"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/ip-device-others.png",
       width: 250
@@ -300,19 +300,19 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_132",
             product: "dev"
-          }), "：メモリ使用状況を確認できます。"]
+          }), ": Verifique el estado de uso de la memoria."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_150",
             product: "dev"
-          }), "：デバイスでタンパーイベントが発生した場合、保存されている全ユーザー情報、全ログ、セキュリティキーを削除するように設定できます。 セキュリティタンパー機能を使用するには有効にしてください。"]
+          }), ": Si ocurre un evento de sabotaje en el dispositivo, puede configurarlo para eliminar toda la información de usuario, los registros y las claves de seguridad almacenadas. Active la función de manipulación de seguridad para utilizarla."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "led--ブザー",
-      children: "LED / ブザー"
+      id: "led--zumbador",
+      children: "LED / zumbador"
     }), "\n", (0,jsx_runtime.jsx)(Image, {
       src: "/img/device/device-manager-led-buzzer.png",
       width: 250
@@ -322,28 +322,28 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_272",
             product: "dev"
-          }), "：通常時にデバイスLEDに表示される色を設定できます。"]
+          }), ": Configure los colores que se mostrarán en el LED del dispositivo durante el funcionamiento normal."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_325",
             product: "dev"
-          }), "：デバイスにカードをスキャンする際にデバイスLEDに表示される色とブザー音の再生回数を設定できます。"]
+          }), ": Configure el color que se mostrará en el LED del dispositivo y la cantidad de veces que suena el zumbador al escanear una tarjeta."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_262",
             product: "dev"
-          }), "：認証成功時にデバイスLEDに表示される色とブザー音の再生回数を設定できます。"]
+          }), ": Configure el color que se mostrará en el LED del dispositivo y la cantidad de veces que suena el zumbador cuando la autenticación es correcta."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_263",
             product: "dev"
-          }), "：認証失敗時にデバイスLEDに表示される色とブザー音の再生回数を設定できます。"]
+          }), ": Configure el color que se mostrará en el LED del dispositivo y la cantidad de veces que suena el zumbador cuando la autenticación falla."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -351,53 +351,53 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "LEDは最大3色を交互に繰り返し表示するよう設定できます。 スロットを押して色を選択してください。"
+            children: "El LED puede configurarse para mostrar un máximo de tres colores en patrones alternos. Presione la ranura para elegir un color."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(Image, {
+            children: ["Al seleccionar ", (0,jsx_runtime.jsx)(Image, {
               src: "/img/common/ico-cancel2.svg",
               ico: true,
               alone: true
-            }), " を選択すると、該当スロットの色表示順序をスキップし、次の順序のスロットに設定された色が表示されます。"]
+            }), ", se omite la secuencia de color de esa ranura y se muestra el color configurado para la siguiente ranura."]
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "connect-device",
-      children: "デバイスを接続する"
+      children: "Conectar dispositivo"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "周辺に設置されたIPデバイスを検索して接続できます。 Suprema Device Managerに接続すると、デバイスのファームウェアアップグレード、デバイス再起動、設定初期化、ネットワークを除く設定の初期化、管理者パスワード変更など、さまざまな機能を利用できます。"
+      children: "Busque y conéctese a los dispositivos IP instalados cercanos. Cuando esté conectado a Suprema Device Manager, podrá actualizar el firmware del dispositivo, reiniciarlo, inicializar la configuración, inicializar la configuración del dispositivo excepto la red, cambiar la contraseña de administrador y usar varias funciones."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "モバイル機器でBluetooth機能を有効にした後、Suprema Device Managerを起動してください。"
+          children: "Active el Bluetooth en su dispositivo móvil y ejecute Suprema Device Manager."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "メイン画面でIPデバイスを選択します。 接続可能なデバイスの一覧が表示されます。"
+          children: "Seleccione el dispositivo IP desde la pantalla principal. Aparecerá una lista de dispositivos conectables."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/ip-device-connect.png",
           width: 250
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "デバイス一覧でデバイス ID を確認してデバイスを選択するか、接続するデバイスにモバイル機器を近づけます。"
+          children: "Seleccione un dispositivo verificando el ID en la lista de dispositivos o acerque su dispositivo móvil al dispositivo para conectarlo."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["接続パスワードを入力します。 入力したパスワードを画面に表示するには ", (0,jsx_runtime.jsx)(Image, {
+          children: ["Ingrese la contraseña de conexión. Toque ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-password.svg",
             ico: true,
             alone: true
-          }), " を押します。"]
+          }), " para mostrar la contraseña ingresada."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["デバイスの接続を完了するには ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Presione ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_367",
             product: "dev"
-          }), " を押します。"]
+          }), " para completar la conexión del dispositivo."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -406,215 +406,215 @@ function _createMdxContent(props) {
         children: [(0,jsx_runtime.jsx)(Cmd, {
           sid: "ui_291",
           product: "dev"
-        }), "：デバイス一覧画面の上部で ", (0,jsx_runtime.jsx)(IcFilter, {}), " をタップして、目的のデバイスのみが一覧に表示されるように設定できます。"]
+        }), ": En la parte superior de la pantalla de lista de dispositivos, presione ", (0,jsx_runtime.jsx)(IcFilter, {}), " para mostrar solo los dispositivos deseados en la lista."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "device-firmware-upgrade",
-      children: "デバイスのファームウェアをアップグレードする"
+      children: "Actualizar el firmware del dispositivo"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "デバイスのファームウェアを簡単にアップグレードできます。"
+      children: "Actualice fácilmente el firmware del dispositivo."
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       type: "info",
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["ファームウェアをアップグレードするには、モバイル機器にファームウェアファイルをダウンロードする必要があります。 最新ファームウェアは", (0,jsx_runtime.jsx)(_components.a, {
+            children: ["Descargue el archivo de firmware en su dispositivo móvil para actualizar el firmware. Puede descargar el firmware más reciente desde el ", (0,jsx_runtime.jsx)(_components.a, {
               href: "https://download.supremainc.com/",
-              children: "Suprema ダウンロードセンター"
-            }), "からダウンロードできます。"]
+              children: "Centro de descargas de Suprema"
+            }), "."]
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "ファームウェアのアップグレード中は、デバイスとモバイル機器の距離を 1 m 以内に保ってください。"
+            children: "Durante la actualización del firmware, mantenga una distancia menor a 1 m entre el dispositivo y el dispositivo móvil."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "ファームウェアアップグレード機能は XPass 2 でのみサポートされています。"
+            children: "La función de actualización de firmware solo es compatible con el XPass 2."
           }), "\n"]
         }), "\n"]
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.a, {
+          children: ["Consulte ", (0,jsx_runtime.jsx)(_components.a, {
             href: "#connect-device",
-            children: "デバイスを接続する"
-          }), "を参照して、ファームウェアをアップグレードするデバイスに接続します。"]
+            children: "Conectar dispositivo"
+          }), " para conectarse al dispositivo y actualizar el firmware."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
+          children: ["Toque ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-option.svg",
             ico: true,
             alone: true
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_018",
             product: "dev"
-          }), " を押します。"]
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/ip-device-fwupgrade.png",
           width: 250
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "ファームウェアファイルが保存されているパスでファームウェアを選択します。 ファームウェアのアップグレードが実行されます。"
+          children: "Seleccione el firmware desde la ruta donde se guardó el archivo de firmware. La actualización del firmware está en curso."
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["ファームウェアのアップグレードを完了するには ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Presione ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_367",
             product: "dev"
-          }), " を押します。"]
+          }), " para completar la actualización del firmware."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "デバイスを再起動する",
-      children: "デバイスを再起動する"
+      id: "reiniciar-dispositivo",
+      children: "Reiniciar dispositivo"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "デバイスを再起動できます。"
+      children: "Reinicie el dispositivo."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.a, {
+          children: ["Consulte ", (0,jsx_runtime.jsx)(_components.a, {
             href: "#connect-device",
-            children: "デバイスを接続する"
-          }), "を参照して、再起動するデバイスに接続します。"]
+            children: "Conectar dispositivo"
+          }), " para conectarse al dispositivo y reiniciarlo."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
+          children: ["Toque ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-option.svg",
             ico: true,
             alone: true
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_287",
             product: "dev"
-          }), " を押します。"]
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/ip-device-restart.png",
           width: 250
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["デバイスを再起動すると、モバイル機器との BLE 通信が切断されます。 自動で再接続するには、", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Al reiniciar el dispositivo, la conexión de comunicación BLE con el dispositivo móvil se desconectará. Habilite la función ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_276",
             product: "dev"
-          }), " 機能を有効にします。 詳細な設定方法は「", (0,jsx_runtime.jsx)(_components.a, {
+          }), " para reconectar automáticamente. Para obtener instrucciones detalladas de configuración, consulte ", (0,jsx_runtime.jsx)(_components.a, {
             href: "initial-setup#app-settings",
-            children: "アプリを設定する"
-          }), "」を参照してください。"]
+            children: "Configurar los ajustes de la aplicación"
+          }), "."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "設定を初期化する",
-      children: "設定を初期化する"
+      id: "inicializar-configuración",
+      children: "Inicializar configuración"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "デバイス設定を初期化できます。"
+      children: "Inicialice la configuración del dispositivo."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.a, {
+          children: ["Consulte ", (0,jsx_runtime.jsx)(_components.a, {
             href: "#connect-device",
-            children: "デバイスを接続する"
-          }), "を参照して、設定を初期化するデバイスに接続します。"]
+            children: "Conectar dispositivo"
+          }), " para conectarse al dispositivo e inicializar la configuración."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
+          children: ["Toque ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-option.svg",
             ico: true,
             alone: true
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_195",
             product: "dev"
-          }), " をタップします。"]
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/ip-device-restore-default.png",
           width: 250
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["デバイスを初期化すると、適用されているすべての設定が初期値に復元されます。 続行するには ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Si el dispositivo se inicializa, todos los ajustes se restauran a sus valores predeterminados. Presione ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_367",
             product: "dev"
-          }), " をタップします。"]
+          }), " para continuar."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "ネットワーク以外のデバイス設定を初期化する",
-      children: "ネットワーク以外のデバイス設定を初期化する"
+      id: "inicializar-configuración-del-dispositivo-excepto-red",
+      children: "Inicializar configuración del dispositivo excepto red"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "ネットワーク設定を除くデバイス設定を初期化できます。"
+      children: "Inicialice la configuración del dispositivo excepto la de red."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.a, {
+          children: ["Consulte ", (0,jsx_runtime.jsx)(_components.a, {
             href: "#connect-device",
-            children: "デバイスを接続する"
-          }), "を参照して、ネットワーク設定を除く設定を初期化するデバイスに接続します。"]
+            children: "Conectar dispositivo"
+          }), " para conectarse al dispositivo e inicializar la configuración del dispositivo excepto la red."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
+          children: ["Toque ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-option.svg",
             ico: true,
             alone: true
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_105",
             product: "dev"
-          }), " をタップします。"]
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/ip-device-restore-default-network.png",
           width: 250
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["ネットワーク以外のデバイス設定を初期化すると、ネットワークを除くその他の設定が初期化されます。 続行するには ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Si inicializa la configuración del dispositivo excepto la red, se inicializarán las demás configuraciones. Presione ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_367",
             product: "dev"
-          }), " をタップします。"]
+          }), " para continuar."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "デバイスパスワードを変更する",
-      children: "デバイスパスワードを変更する"
+      id: "cambiar-contraseña-del-dispositivo",
+      children: "Cambiar contraseña del dispositivo"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "デバイスのパスワードを変更できます。"
+      children: "Cambie la contraseña del dispositivo."
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.a, {
+          children: ["Consulte ", (0,jsx_runtime.jsx)(_components.a, {
             href: "#connect-device",
-            children: "デバイスを接続する"
-          }), "を参照して、パスワードを変更するデバイスに接続します。"]
+            children: "Conectar dispositivo"
+          }), " para conectarse al dispositivo y cambiar la contraseña."]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(Image, {
+          children: ["Toque ", (0,jsx_runtime.jsx)(Image, {
             src: "/img/common/ico-option.svg",
             ico: true,
             alone: true
           }), " → ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_156",
             product: "dev"
-          }), " を押します。"]
+          }), "."]
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/ip-device-change-password.png",
           width: 250
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-          children: "現在のパスワードと新しいパスワードを入力します。"
+          children: "Ingrese la contraseña actual y la nueva contraseña que utilizará."
         }), "\n", (0,jsx_runtime.jsx)(Image, {
           src: "/img/device/device-manager-change-password.png",
           width: 250
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["パスワードの変更を完了するには ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["Presione ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_367",
             product: "dev"
-          }), " を押します。"]
+          }), " para completar el cambio de contraseña."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
@@ -622,11 +622,11 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsxs)(_components.ul, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "デバイスパスワードは6～32桁の数字で設定できます。"
+            children: "La contraseña del dispositivo puede tener entre 6 y 32 caracteres."
           }), "\n"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
-            children: "デバイスパスワードを紛失しないよう注意してください。 デバイスパスワードを紛失した場合、デバイスに接続するにはそのデバイスを初期化する必要があります。"
+            children: "Procure no perder la contraseña del dispositivo. Si pierde la contraseña del dispositivo, deberá inicializar el equipo para poder conectarse."
           }), "\n"]
         }), "\n"]
       })

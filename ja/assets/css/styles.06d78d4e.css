@@ -3538,7 +3538,7 @@ html:not([data-theme]) .themedComponent--light_NVdE {
 
 .search-pop-refinement-list-label {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 8px;
   padding: 6px;
   border-radius: 6px;
@@ -3546,9 +3546,7 @@ html:not([data-theme]) .themedComponent--light_NVdE {
   font-size: 0.875rem;
   color: var(--ifm-font-color-base);
   transition: all 0.2s ease;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
 }
 
 .search-pop-refinement-list-label:hover {
@@ -3562,6 +3560,7 @@ html:not([data-theme]) .themedComponent--light_NVdE {
 
 .search-pop-refinement-list-checkbox {
   width: 16px;
+  min-width: 16px;
   height: 16px;
   cursor: pointer;
 }
@@ -6923,10 +6922,8 @@ TODO merge this logic back in Infima?
 .cardItem_IQRN .tags_wYJn code {
   padding: 0 5px;
   font-weight: 500;
-  word-break: break-all;
-}
-.cardItem_IQRN .tags_wYJn code + code {
-  margin-left: 7px;
+  display: inline-block;
+  margin-right: 7px;
 }
 .cardItem_IQRN .tags_wYJn code:first-of-type {
   background-color: rgba(33, 169, 220, 0.1);

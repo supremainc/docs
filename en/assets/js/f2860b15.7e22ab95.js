@@ -1,16 +1,16 @@
 "use strict";
-(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["20384"], {
-65804: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+(self["webpackChunksuprema_docs"] = self["webpackChunksuprema_docs"] || []).push([["59389"], {
+4309: (function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   assets: () => (assets),
   contentTitle: () => (contentTitle),
   "default": () => (MDXContent),
   frontMatter: () => (frontMatter),
-  metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_default_site_i_18_n_es_docusaurus_plugin_content_blog_2026_03_changelog_md_1bd_json__WEBPACK_IMPORTED_MODULE_0__),
+  metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_default_site_i_18_n_en_docusaurus_plugin_content_blog_2026_03_changelog_md_f28_json__WEBPACK_IMPORTED_MODULE_0__),
   toc: () => (toc)
 });
-/* ESM import */var _site_docusaurus_docusaurus_plugin_content_blog_default_site_i_18_n_es_docusaurus_plugin_content_blog_2026_03_changelog_md_1bd_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13020);
+/* ESM import */var _site_docusaurus_docusaurus_plugin_content_blog_default_site_i_18_n_en_docusaurus_plugin_content_blog_2026_03_changelog_md_f28_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(49934);
 /* ESM import */var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(74848);
 /* ESM import */var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(84429);
 
@@ -414,8 +414,8 @@ function MDXProvider(properties) {
 
 
 }),
-13020: (function (module) {
-module.exports = JSON.parse('{"permalink":"/docs/es/changelog/2026-03-changelog","source":"@site/i18n/es/docusaurus-plugin-content-blog/2026-03-changelog.md","title":"March 2026","description":"Provides an overview of key updates to Suprema Docs from February through March.","date":"2026-04-08T23:59:13.000Z","tags":[],"readingTime":1.89,"hasTruncateMarker":true,"authors":[],"frontMatter":{"title":"March 2026","description":"Provides an overview of key updates to Suprema Docs from February through March.","slug":"2026-03-changelog","isTranslationMissing":false},"unlisted":false,"nextItem":{"title":"January 2026","permalink":"/docs/es/changelog/2026-01-02-changelog"}}')
+49934: (function (module) {
+module.exports = JSON.parse('{"permalink":"/docs/en/changelog/2026-03-changelog","source":"@site/i18n/en/docusaurus-plugin-content-blog/2026-03-changelog.md","title":"March 2026","description":"Provides an overview of key updates to Suprema Docs from February through March.","date":"2026-04-09T00:41:02.000Z","tags":[],"readingTime":1.89,"hasTruncateMarker":true,"authors":[],"frontMatter":{"title":"March 2026","description":"Provides an overview of key updates to Suprema Docs from February through March.","slug":"2026-03-changelog","isTranslationMissing":false},"unlisted":false,"nextItem":{"title":"January 2026","permalink":"/docs/en/changelog/2026-01-02-changelog"}}')
 
 }),
 

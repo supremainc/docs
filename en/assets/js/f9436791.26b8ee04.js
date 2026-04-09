@@ -534,7 +534,7 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["If you initialize the device, all settings applied to the device will be restored to factory defaults. Press ", (0,jsx_runtime.jsx)(Cmd, {
+          children: ["If the device is initialized, all settings are restored to their default values. Press ", (0,jsx_runtime.jsx)(Cmd, {
             sid: "ui_367",
             product: "dev"
           }), " to continue."]
