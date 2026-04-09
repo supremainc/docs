@@ -13,8 +13,7 @@ const isPreview = process.env.CONTEXT === 'preview';
 const locale = process.env.DOCUSAURUS_CURRENT_LOCALE; // 현재 로케일
 const __DOCUSAURUS_MERMAID_LAYOUT_ELK_ENABLED__ = false;
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
+// Locale constants
 const defaultLocale = 'ko';
 
 function getLocalizedConfigValue(key) {
@@ -87,23 +86,25 @@ const config = {
       },
     }
   },
-  headTags: !isPreview ? [
-    // <meta name="algolia-site-verification"  content="07FFA029DF50324E" />
-    {
-      tagName: 'meta',
-      attributes: {
-        name: 'algolia-site-verification',
-        content: '07FFA029DF50324E',
+  headTags: [
+    ...(!isPreview ? [
+      // <meta name="algolia-site-verification"  content="07FFA029DF50324E" />
+      {
+        tagName: 'meta',
+        attributes: {
+          name: 'algolia-site-verification',
+          content: '07FFA029DF50324E',
+        }
+      },
+      {
+        tagName: 'meta',
+        attributes: {
+          name: 'naver-site-verification',
+          content: '7394a406acc1ba6e18604d3990e23dc407b64bd4',
+        }
       }
-    },
-    {
-      tagName: 'meta',
-      attributes: {
-        name: 'naver-site-verification',
-        content: '7394a406acc1ba6e18604d3990e23dc407b64bd4',
-      }
-    }
-  ] : [],
+    ] : [])
+  ],
   themes: [
     '@saucelabs/theme-github-codeblock',
     '@docusaurus/theme-mermaid'
@@ -123,10 +124,12 @@ const config = {
             'common/**.{md,mdx}',
             '_unused/**.{md,mdx}',
             '**/_*.{md,mdx}',
-            !isPreview ? 'device/biostation_3_max/**.{md,mdx}' : null,
-            !isPreview ? 'device/vionyx/**.{md,mdx}' : null,
-            !isPreview ? 'device/vionyx_webserver/**.{md,mdx}' : null,
-          ].filter(Boolean),
+            ...(!isPreview ? [
+              'device/biostation_3_max/**.{md,mdx}',
+              'device/vionyx/**.{md,mdx}',
+              'device/vionyx_webserver/**.{md,mdx}',
+            ] : []),
+          ],
           rehypePlugins: [ rehypeExtendedTable ],
         },
         pages: {
@@ -302,33 +305,37 @@ const config = {
               }
             ]
           },
-          isPreview ? {
-            type: 'dropdown',
-            label: 'AI Cameras',
-            position: 'right',
-            items: [
-              {
-                type: 'doc',
-                label: 'ViOnyx',
-                docId: 'device/vionyx/index'
-              },
-              {
-                type: 'doc',
-                label: 'ViOnyx Web Server',
-                docId: 'device/vionyx_webserver/index'
-              },
-            ]
-          } : null,
+          ...(!isPreview ? [] : [
+            {
+              type: 'dropdown',
+              label: 'AI Cameras',
+              position: 'right',
+              items: [
+                {
+                  type: 'doc',
+                  label: 'ViOnyx',
+                  docId: 'device/vionyx/index'
+                },
+                {
+                  type: 'doc',
+                  label: 'ViOnyx Web Server',
+                  docId: 'device/vionyx_webserver/index'
+                },
+              ]
+            }
+          ]),
           {
             type: 'dropdown',
             label: 'Devices',
             position: 'right',
             items: [
-              isPreview ? {
-                type: 'doc',
-                label: 'BioStation 3 Max',
-                docId: 'device/biostation_3_max/index'
-              } : null,
+              ...(isPreview ? [
+                {
+                  type: 'doc',
+                  label: 'BioStation 3 Max',
+                  docId: 'device/biostation_3_max/index'
+                }
+              ] : []),
               {
                 type: 'doc',
                 label: 'BioEntry W3',
@@ -459,7 +466,7 @@ const config = {
                 label: 'CoreStation Setup Manager',
                 docId: 'device/corestation_setup_manager/index'
               }
-            ].filter(Boolean)
+            ]
           },
           {
             type: 'dropdown',

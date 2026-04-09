@@ -38,7 +38,6 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
     const imageProps = {
         loading: "lazy",
         decoding: "async",
-        decoding: "async",
         src: imagePath,
         alt: alt,
         onError: onError,
