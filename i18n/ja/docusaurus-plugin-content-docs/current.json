@@ -495,6 +495,10 @@
     "message": "追加サイトの設定",
     "description": "The label for category '추가 사이트 구성하기' in sidebar 'biostar_air'"
   },
+  "sidebar.vionyx.category.ViOnyx": {
+    "message": "ViOnyx",
+    "description": "The label for category 'ViOnyx' in sidebar 'vionyx'"
+  },
   "sidebar.biostar_air.category.bsairReleaseNotes": {
     "message": "ソフトウェア",
     "description": "The label for category '소프트웨어' in sidebar 'biostar_air'"

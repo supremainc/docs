@@ -6,12 +6,23 @@ import { translate } from '@docusaurus/Translate';
 import imageSize from './sizeOfimages.json';
 
 export default function Image({src, alt, className, alone, caption, ico, width, height, usemap}) {
-    const { i18n: { currentLocale } } = useDocusaurusContext();
+    const { i18n: {currentLocale}, siteConfig } = useDocusaurusContext();
+    const isPreview = siteConfig.customFields.context === 'preview';
+    const isDev = process.env.NODE_ENV === 'development';
     
-    const imagePath = 
-        currentLocale === 'ko' || alone ? 
-            useBaseUrl(src) : 
-            useBaseUrl(src.replace('/img/', `/img/en/`));
+    // Generate image path based on environment
+    const baseUrl = 'https://supremadocs.blob.core.windows.net';
+    const imagePath = (() => {
+        const localizedSrc = currentLocale === 'ko' || alone ? 
+            src : 
+            src.replace('/img/', `/img/en/`);
+        
+        if (isDev || isPreview) {
+            return useBaseUrl(localizedSrc);
+        } else {
+            return `${baseUrl}${localizedSrc}`;
+        }
+    })();
 
     const errTarget = useBaseUrl('/img/default-placeholder-image.webp')
     // console.log('Image path:', imagePath, imageSize[imagePath]);
@@ -26,7 +37,6 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
     // width/height 속성이 있을 때만 포함하고, 없으면 속성 자체를 제거
     const imageProps = {
         loading: "lazy",
-        decoding: "async",
         decoding: "async",
         src: imagePath,
         alt: alt,

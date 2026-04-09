@@ -11,6 +11,7 @@ import {translate} from '@docusaurus/Translate';
 import SupLogo from '@site/static/img/suprema-logo.svg';
 import Cloudicon from '@site/static/img/air-cloud.svg';
 import SearchBar from '@theme/SearchBar';
+import { usePreviewContext } from '@site/src/hooks';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -101,7 +102,7 @@ function Integration() {
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   const isDev = process.env.NODE_ENV === 'development';
-  
+  const isPreview = usePreviewContext();
   // 브라우저 언어 탐지 및 자동 리다이렉트
   useEffect(() => {
     // 현재 URL이 루트 경로인지 확인 (언어별 경로가 아닌 경우)
@@ -163,10 +164,12 @@ export default function Home() {
         <div className={styles.backBlurPink}></div> */}
         <HomepageHeader />
 
-        {/* <div className={clsx('container', styles.headsec)}>
-          <Heading as='h2'>AI Camera</Heading>
-        </div>
-        <AiCamera /> */}
+        {isPreview && (
+          <div className={clsx('container', styles.headsec)}>
+            <Heading as='h2'>AI Camera</Heading>
+          </div>
+        )}
+        {isPreview && <AiCamera />}
 
         <div className={clsx('container', styles.headsec)}>
           <Heading as='h2'>{translate({message: 'index.productTitle.biometricsDevice'})}</Heading>
