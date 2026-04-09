@@ -2,6 +2,7 @@
 title: March 2026
 description: Provides an overview of key updates to Suprema Docs from February through March.
 slug: 2026-03-changelog
+date: 2026-04-08T12:00
 ---
 
 This March update improves your **Suprema Docs** experience with a more intuitive interface and enhanced search functionality. Meanwhile, the BioStar Air Administrator Guide has been completely restructured to help you understand all features—from user management to access control and video surveillance—at a glance.
