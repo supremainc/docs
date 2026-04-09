@@ -6,7 +6,8 @@ import { translate } from '@docusaurus/Translate';
 import imageSize from './sizeOfimages.json';
 
 export default function Image({src, alt, className, alone, caption, ico, width, height, usemap}) {
-    const { i18n: { currentLocale } } = useDocusaurusContext();
+    const { i18n: {currentLocale}, siteConfig } = useDocusaurusContext();
+    const isPreview = siteConfig.customFields.context === 'preview';
     const isDev = process.env.NODE_ENV === 'development';
     
     // Generate image path based on environment
@@ -16,7 +17,7 @@ export default function Image({src, alt, className, alone, caption, ico, width, 
             src : 
             src.replace('/img/', `/img/en/`);
         
-        if (isDev) {
+        if (isDev || isPreview) {
             return useBaseUrl(localizedSrc);
         } else {
             return `${baseUrl}${localizedSrc}`;

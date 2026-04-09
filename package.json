@@ -5,7 +5,11 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
+    "start:preview": "cross-env CONTEXT=preview docusaurus start",
+    "sizeOfimages": "node sizeOfimages",
+    "sizeOfimages:preview": "cross-env CONTEXT=preview node sizeOfimages",
     "build": "node sizeOfimages && cross-env DOCUSAURUS_IGNORE_SSG_WARNINGS=true docusaurus build",
+    "build:preview": "yarn run sizeOfimages:preview && cross-env CONTEXT=preview DOCUSAURUS_IGNORE_SSG_WARNINGS=true docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

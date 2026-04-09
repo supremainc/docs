@@ -139,17 +139,18 @@ export function AiCamera({ productLinks: productLinksProp }) {
 }
 
 export function BiometricReader({ productLinks: productLinksProp }) {
-  const { i18n: { currentLocale } } = useDocusaurusContext();
+  const { i18n: { currentLocale }, siteConfig } = useDocusaurusContext();
+  const isPreview = siteConfig.customFields.context === 'preview';
   const defaultProductLinks = [
-   //  {
-   //    title: 'BioStation 3 Max',
-   //    url: `/device/biostation_3_max`,
-   //    img: require('@site/static/img/cover/biostation3max.png').default,
-   //    desc: `${translate({
-   //      id: "externalLinks.BioStation3Max.desc",
-   //      message: "###"
-   //    })}`,
-   //  },
+    isPreview ? {
+      title: 'BioStation 3 Max',
+      url: `/device/biostation_3_max`,
+      img: require('@site/static/img/cover/biostation3max.png').default,
+      desc: `${translate({
+        id: "externalLinks.BioStation3Max.desc",
+        message: "###"
+      })}`,
+    } : null,
     {
       title: 'BioEntry W3',
       url: `/device/bioentry_w3`,
@@ -250,7 +251,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       })}`,
       tags: ['Fingerprint', 'Touch Screen', 'QR/Barcode']
     }
-  ];
+  ].filter(Boolean);
   const productLinks = productLinksProp || defaultProductLinks;
 
   return (

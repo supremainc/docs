@@ -101,7 +101,7 @@ function Integration() {
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   const isDev = process.env.NODE_ENV === 'development';
-  
+  const isPreview = siteConfig.customFields.context === 'preview';
   // 브라우저 언어 탐지 및 자동 리다이렉트
   useEffect(() => {
     // 현재 URL이 루트 경로인지 확인 (언어별 경로가 아닌 경우)
@@ -162,11 +162,15 @@ export default function Home() {
         {/* <div className={styles.backBlurSky}></div>
         <div className={styles.backBlurPink}></div> */}
         <HomepageHeader />
-
-        {/* <div className={clsx('container', styles.headsec)}>
-          <Heading as='h2'>AI Camera</Heading>
-        </div>
-        <AiCamera /> */}
+        
+        {isPreview && (
+          <>
+            <div className={clsx('container', styles.headsec)}>
+              <Heading as='h2'>AI Camera</Heading>
+            </div>
+            <AiCamera />
+          </>
+        )}
 
         <div className={clsx('container', styles.headsec)}>
           <Heading as='h2'>{translate({message: 'index.productTitle.biometricsDevice'})}</Heading>
