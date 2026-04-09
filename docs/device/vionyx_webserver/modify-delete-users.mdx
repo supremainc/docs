@@ -1,0 +1,111 @@
+---
+id: modify-delete-users
+title: 사용자 수정 및 삭제하기
+description: 등록된 사용자의 정보를 편집하고, 사용자를 삭제하며, 사용자 이벤트 로그를 확인하는 방법을 안내합니다.
+keywords: [사용자, 수정, 삭제, 편집, 이벤트, 로그]
+---
+
+등록된 사용자의 정보를 편집하거나 얼굴을 추가/변경할 수 있습니다. 또한 더 이상 필요하지 않은 사용자를 삭제할 수 있으며, 사용자의 활동 이력을 이벤트 로그로 확인할 수 있습니다.
+
+아래와 같은 상황에서 사용자 수정 및 삭제하세요.
+
+* 사용자의 이름, 소속 부서 등 정보를 변경해야 할 때
+
+* 사용자의 얼굴 사진을 업데이트하거나 새로운 얼굴을 추가해야 할 때
+
+* 사용자가 퇴사하거나 시스템에서 제거해야 할 때
+
+* 사용자의 인증 기록 및 변경 이력을 확인하고 싶을 때
+
+:::info
+
+삭제 작업은 되돌릴 수 없습니다. 사용자를 삭제하기 전에 필요한 데이터를 백업하고 신중하게 확인하세요.
+
+:::
+
+
+## 사용자 정보 수정
+
+등록된 사용자의 정보를 편집하거나 얼굴을 추가/변경할 수 있습니다.
+
+1. 화면 왼쪽 상단의 <Cmd sid='people' product='cam' /> 메뉴를 클릭하세요.
+
+1. 사용자 목록에서 수정할 사용자를 클릭하세요.
+
+1. 사용자 상세 정보 팝업이 나타나면 필요한 정보를 수정하세요.
+
+   <Image src='/img/cam-server/cam-webserver-people-edit-detail.png' />
+
+   * <Cmd sid='user_id' product='cam' />: 수정 불가
+
+   * <Cmd sid='name' product='cam' />: 수정 가능
+
+   * <Cmd sid='description' product='cam' />: 수정 가능
+
+   * <Cmd sid='custom_field' product='cam' />: 수정 가능 (중복 불가)
+
+   * <Cmd sid='face_credentials' product='cam' />: 얼굴 추가/변경/삭제 가능
+
+1. 사용자 정보 수정을 완료하면 <Cmd sid='apply' product='cam' /> 버튼을 클릭하세요.
+
+수정을 완료하면 오른쪽 상단에 성공 메시지가 나타나며 사용자 목록으로 돌아갑니다.
+
+:::note
+
+얼굴 사진은 개별적으로 삭제할 수 있습니다. 해당 얼굴 사진 아래의 <IcCamTrash title='delete' /> 버튼을 클릭하세요.
+
+:::
+
+
+## 사용자 삭제
+
+더 이상 필요하지 않은 사용자를 삭제할 수 있습니다.
+
+### 개별 사용자 삭제
+
+1. 화면 왼쪽 상단의 <Cmd sid='people' product='cam' /> 메뉴를 클릭하세요.
+
+1. 사용자 목록에서 삭제할 사용자의 가장 오른쪽에 있는 <IcCamTrash title='delete' /> 버튼을 클릭하세요.
+
+   <Image src='/img/cam-server/cam-webserver-people-list-delete.png' />
+
+1. 삭제 확인 메시지가 나타나면 <Cmd sid='ok' product='cam' /> 버튼을 클릭하세요.
+
+화면 오른쪽 상단에 삭제 확인 메시지가 나타나며 사용자 목록에서 해당 사용자가 제거됩니다.
+
+### 여러 사용자 일괄 삭제
+
+1. 화면 왼쪽 상단의 <Cmd sid='people' product='cam' /> 메뉴를 클릭하세요.
+
+1. 사용자 목록에서 삭제할 사용자의 가장 왼쪽에 있는 체크박스를 클릭하세요. 여러 사용자를 선택할 수 있습니다.
+
+   <Image src='/img/cam-server/cam-webserver-people-list-batch-delete.png' />
+
+1. 화면 오른쪽 상단의 삭제 버튼이 표시되면, <Cmd sid='delete' product='cam' /> 버튼을 클릭하세요.
+
+1. 삭제 확인 메시지가 나타나면 <Cmd sid='ok' product='cam' /> 버튼을 클릭하세요.
+
+화면 오른쪽 상단에 삭제 확인 메시지가 나타나며 사용자 목록에서 해당 사용자가 제거됩니다.
+
+
+## 사용자 이벤트 로그 확인
+
+등록된 사용자의 활동 이력을 이벤트 로그로 확인할 수 있습니다.
+
+1. 화면 왼쪽 상단의 <Cmd sid='people' product='cam' /> 메뉴를 클릭하세요.
+
+1. 사용자 목록에서 이벤트 로그를 확인할 사용자를 클릭하세요.
+
+1. 사용자 상세 정보 팝업이 나타나면 오른쪽에 <Cmd sid='event_logs' product='cam' />에서 이벤트 목록을 확인할 수 있습니다.
+
+<Image src='/img/cam-server/cam-webserver-people-edit-detail.png' />
+
+:::note
+
+* 오른쪽 상단에서 달력 아이콘을 사용하여 특정 날짜의 이벤트를 조회할 수 있습니다.
+
+  <Image src='/img/cam-server/cam-webserver-people-event-log-date.png' />
+
+* 이벤트 로그는 자동 기록되며, 사용자의 모든 중요한 활동을 추적할 수 있습니다.
+
+:::
