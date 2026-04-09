@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksuprema_docs=self.webpackChunksuprema_docs||[]).push([["23064"],{44004:function(e){e.exports=JSON.parse('{"metadata":{"permalink":"/docs/ja/changelog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Suprema\u88FD\u54C1\u306E\u66F4\u65B0\u5C65\u6B74","blogTitle":"\u66F4\u65B0\u5C65\u6B74"}}')}}]);

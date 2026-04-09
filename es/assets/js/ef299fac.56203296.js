@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksuprema_docs=self.webpackChunksuprema_docs||[]).push([["75897"],{22963:function(e){e.exports=JSON.parse('{"metadata":{"permalink":"/docs/es/changelog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Registros de cambios de productos de Suprema","blogTitle":"Registro de cambios"}}')}}]);
