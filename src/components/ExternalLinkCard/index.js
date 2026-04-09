@@ -54,6 +54,7 @@ function ExternalLinkBanner({Svg, img, title, url, desc, height, play, ios, link
 export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const cLocale = currentLocale !== 'ko' ? 'en' : 'ko';
+  const isPreview = usePreviewContext();
   const defaultExternalLinks = useMemo(() => [
     {
       title: 'BioStar X API',
@@ -103,7 +104,7 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
       desc: `${translate({ id: "externalLinks.dev.svpsdk.desc" })}`,
       linkText: `${translate({ id: "index.shortcut.linkText" })}`
     }
-  ], [currentLocale]);
+  ].filter(Boolean), [isPreview, currentLocale]);
   const externalLinks = externalLinksProp || defaultExternalLinks;
 
   return (
@@ -268,6 +269,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
 
 export function RfMobileDevices({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
+  const isPreview = usePreviewContext();
   const defaultProductLinks = useMemo(() => [
     {
       title: 'XPass Q2',
@@ -319,7 +321,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
       })}`,
       tags: ['RFID']
     }
-  ], [currentLocale]);
+  ].filter(Boolean), [isPreview, currentLocale]);
   const productLinks = productLinksProp || defaultProductLinks;
 
   return (
@@ -333,6 +335,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
 
 export function IntenlligentController({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
+  const isPreview = usePreviewContext();
   const defaultProductLinks = useMemo(() => [
     {
       title: 'CoreStation 20',
@@ -364,7 +367,7 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
       })}`,
       tags: ['Protection', 'for CoreStation']
     }
-  ], [currentLocale]);
+  ].filter(Boolean), [isPreview, currentLocale]);
   const productLinks = productLinksProp || defaultProductLinks;
 
   return (
@@ -378,6 +381,7 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
 
 export function Peripheral({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
+  const isPreview = usePreviewContext();
   const defaultProductLinks = useMemo(() => [
     {
       title: 'Door Interface',
@@ -449,7 +453,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
       })}`,
       tags: ['Extension']
     }
-  ], [currentLocale]);
+  ].filter(Boolean), [isPreview, currentLocale]);
   const productLinks = productLinksProp || defaultProductLinks;
 
   return (
@@ -463,6 +467,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
 
 export function Apps({ externalLinks: externalLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
+  const isPreview = usePreviewContext();
   const defaultExternalLinks = useMemo(() => [
     {
       title: 'BioStar X Mobile',
@@ -507,7 +512,7 @@ export function Apps({ externalLinks: externalLinksProp }) {
       })}`,
       linkText: `${translate({ id: "index.shortcut.linkText" })}`
     }
-  ], [currentLocale]);
+  ].filter(Boolean), [isPreview, currentLocale]);
   const externalLinks = externalLinksProp || defaultExternalLinks;
 
   return (
