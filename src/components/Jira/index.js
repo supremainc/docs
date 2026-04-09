@@ -1,15 +1,20 @@
 import Link from '@docusaurus/Link';
 
-export default function Jira({num}) {
+export default function Jira({num, bss}) {
     let jiraLink;
-    if (num.startsWith('SW5') || num.startsWith('FISS') || num.startsWith('BDP')) {
+    if (num) {
         jiraLink = 'https://jira.suprema.co.kr/browse/' + num;
-    } else {
-        jiraLink = 'http://bss-jira.suprema.co.kr:8880/browse/' + num;
-    }
-    return (
-        <Link to={jiraLink} target="_blank" className="jira-link">
+        return (
+            <Link to={jiraLink} target="_blank" className="jira-link">
             [{num}]
-        </Link>
-    )
+            </Link>
+        )
+    } else {
+        jiraLink = 'http://bss-jira.suprema.co.kr:8880/browse/' + bss;
+        return (
+            <Link to={jiraLink} target="_blank" className="jira-link">
+                [{bss}]
+            </Link>
+        )
+    }
 }
