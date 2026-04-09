@@ -4156,8 +4156,8 @@
     "height": 444
   },
   "/docs/img/changelogs/changelog-03-home.png": {
-    "width": 1437,
-    "height": 1148
+    "width": 1332,
+    "height": 1360
   },
   "/docs/img/changelogs/changelog-03-search.png": {
     "width": 1920,
@@ -4603,9 +4603,33 @@
     "width": 623,
     "height": 525
   },
+  "/docs/img/cover/bioentryp2.png": {
+    "width": 370,
+    "height": 270
+  },
+  "/docs/img/cover/bioentryr2.png": {
+    "width": 370,
+    "height": 270
+  },
+  "/docs/img/cover/bioentryw2.png": {
+    "width": 370,
+    "height": 270
+  },
+  "/docs/img/cover/bioentryw3.png": {
+    "width": 370,
+    "height": 270
+  },
   "/docs/img/cover/biolite-n2.png": {
     "width": 681,
     "height": 578
+  },
+  "/docs/img/cover/bioliten2.png": {
+    "width": 370,
+    "height": 270
+  },
+  "/docs/img/cover/biostaion2a.png": {
+    "width": 370,
+    "height": 270
   },
   "/docs/img/cover/biostation-2a.png": {
     "width": 647,
@@ -4619,6 +4643,14 @@
     "width": 550,
     "height": 494
   },
+  "/docs/img/cover/biostation3.png": {
+    "width": 370,
+    "height": 270
+  },
+  "/docs/img/cover/biostation3max.png": {
+    "width": 370,
+    "height": 270
+  },
   "/docs/img/cover/corestation-20.jpg": {
     "width": 420,
     "height": 354
@@ -4627,9 +4659,29 @@
     "width": 528,
     "height": 424
   },
+  "/docs/img/cover/corestation.png": {
+    "width": 370,
+    "height": 270
+  },
+  "/docs/img/cover/corestation20.png": {
+    "width": 370,
+    "height": 270
+  },
+  "/docs/img/cover/doorinterface.png": {
+    "width": 370,
+    "height": 270
+  },
+  "/docs/img/cover/doormodule.png": {
+    "width": 370,
+    "height": 270
+  },
   "/docs/img/cover/encr-10.png": {
     "width": 705,
     "height": 530
+  },
+  "/docs/img/cover/encr10.png": {
+    "width": 370,
+    "height": 270
   },
   "/docs/img/cover/facestation-2.png": {
     "width": 1095,
@@ -4638,6 +4690,30 @@
   "/docs/img/cover/facestation-f2.jpg": {
     "width": 966,
     "height": 724
+  },
+  "/docs/img/cover/facestation2.png": {
+    "width": 370,
+    "height": 270
+  },
+  "/docs/img/cover/facestationf2.png": {
+    "width": 370,
+    "height": 270
+  },
+  "/docs/img/cover/inputmodule.png": {
+    "width": 370,
+    "height": 270
+  },
+  "/docs/img/cover/outputmodule.png": {
+    "width": 370,
+    "height": 270
+  },
+  "/docs/img/cover/securemodule.png": {
+    "width": 370,
+    "height": 270
+  },
+  "/docs/img/cover/vionyx.png": {
+    "width": 370,
+    "height": 270
   },
   "/docs/img/cover/x-station-2-oapb.png": {
     "width": 320,
@@ -4662,6 +4738,30 @@
   "/docs/img/cover/xpass-s2.jpg": {
     "width": 524,
     "height": 621
+  },
+  "/docs/img/cover/xpass2.png": {
+    "width": 370,
+    "height": 270
+  },
+  "/docs/img/cover/xpassd2.png": {
+    "width": 370,
+    "height": 270
+  },
+  "/docs/img/cover/xpassq2.png": {
+    "width": 370,
+    "height": 270
+  },
+  "/docs/img/cover/xpasss2.png": {
+    "width": 370,
+    "height": 270
+  },
+  "/docs/img/cover/xstation2-oapb.png": {
+    "width": 370,
+    "height": 270
+  },
+  "/docs/img/cover/xstation2-odpb.png": {
+    "width": 370,
+    "height": 270
   },
   "/docs/img/cover-device-manager.png": {
     "width": 60,
@@ -5372,8 +5472,8 @@
     "height": 291
   },
   "/docs/img/device/di24-main.png": {
-    "width": 1200,
-    "height": 500
+    "width": 1000,
+    "height": 452
   },
   "/docs/img/device/doormodule-main.png": {
     "width": 1000,
@@ -6972,8 +7072,8 @@
     "height": 417
   },
   "/docs/img/device/xstation2-main.png": {
-    "width": 800,
-    "height": 533
+    "width": 1000,
+    "height": 452
   },
   "/docs/img/en/air/bsair-ac-level-list-check-ids.png": {
     "width": 1591,
