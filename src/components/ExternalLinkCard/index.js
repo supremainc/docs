@@ -1,11 +1,13 @@
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import React, { useMemo } from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import {translate} from '@docusaurus/Translate';
 import PlaStore from '@site/static/img/ico-playstore.svg';
 import AppStore from '@site/static/img/ico-appstore.svg';
+import { usePreviewContext } from '../../hooks';
 
 function CardItem({img, title, url, height, desc, tags}) {
   return (
@@ -52,7 +54,7 @@ function ExternalLinkBanner({Svg, img, title, url, desc, height, play, ios, link
 export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const cLocale = currentLocale !== 'ko' ? 'en' : 'ko';
-  const defaultExternalLinks = [
+  const defaultExternalLinks = useMemo(() => [
     {
       title: 'BioStar X API',
       url: '/api/bsxapi',
@@ -101,7 +103,7 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
       desc: `${translate({ id: "externalLinks.dev.svpsdk.desc" })}`,
       linkText: `${translate({ id: "index.shortcut.linkText" })}`
     }
-  ];
+  ], [currentLocale]);
   const externalLinks = externalLinksProp || defaultExternalLinks;
 
   return (
@@ -115,7 +117,7 @@ export function ExternalLinkCard({ externalLinks: externalLinksProp }) {
 
 export function AiCamera({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
-  const defaultProductLinks = [
+  const defaultProductLinks = useMemo(() => [
     {
       title: 'ViOnyx',
       url: `/device/vionyx`,
@@ -126,7 +128,7 @@ export function AiCamera({ productLinks: productLinksProp }) {
       })}`,
       height: '60px'
     }
-  ];
+  ], [currentLocale]);
   const productLinks = productLinksProp || defaultProductLinks;
 
   return (
@@ -140,8 +142,9 @@ export function AiCamera({ productLinks: productLinksProp }) {
 
 export function BiometricReader({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
-  const defaultProductLinks = [
-    {
+  const isPreview = usePreviewContext();
+  const defaultProductLinks = useMemo(() => [
+    isPreview ? {
       title: 'BioStation 3 Max',
       url: `/device/biostation_3_max`,
       img: require('@site/static/img/cover/biostation3max.png').default,
@@ -150,7 +153,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
         message: "###"
       })}`,
       tags: ['AI', 'Face', 'RTSP', 'Touch Screen']
-    },
+    } : null,
     {
       title: 'BioEntry W3',
       url: `/device/bioentry_w3`,
@@ -251,7 +254,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       })}`,
       tags: ['Fingerprint', 'Touch Screen', 'QR/Barcode']
     }
-  ];
+  ].filter(Boolean), [isPreview, currentLocale]);
   const productLinks = productLinksProp || defaultProductLinks;
 
   return (
@@ -265,7 +268,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
 
 export function RfMobileDevices({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
-  const defaultProductLinks = [
+  const defaultProductLinks = useMemo(() => [
     {
       title: 'XPass Q2',
       url: `/device/xpass_q2`,
@@ -316,7 +319,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
       })}`,
       tags: ['RFID']
     }
-  ];
+  ], [currentLocale]);
   const productLinks = productLinksProp || defaultProductLinks;
 
   return (
@@ -330,7 +333,7 @@ export function RfMobileDevices({ productLinks: productLinksProp }) {
 
 export function IntenlligentController({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
-  const defaultProductLinks = [
+  const defaultProductLinks = useMemo(() => [
     {
       title: 'CoreStation 20',
       url: '/device/corestation_20',
@@ -361,7 +364,7 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
       })}`,
       tags: ['Protection', 'for CoreStation']
     }
-  ];
+  ], [currentLocale]);
   const productLinks = productLinksProp || defaultProductLinks;
 
   return (
@@ -375,7 +378,7 @@ export function IntenlligentController({ productLinks: productLinksProp }) {
 
 export function Peripheral({ productLinks: productLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
-  const defaultProductLinks = [
+  const defaultProductLinks = useMemo(() => [
     {
       title: 'Door Interface',
       url: '/device/doorinterface',
@@ -446,7 +449,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
       })}`,
       tags: ['Extension']
     }
-  ];
+  ], [currentLocale]);
   const productLinks = productLinksProp || defaultProductLinks;
 
   return (
@@ -460,7 +463,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
 
 export function Apps({ externalLinks: externalLinksProp }) {
   const { i18n: { currentLocale } } = useDocusaurusContext();
-  const defaultExternalLinks = [
+  const defaultExternalLinks = useMemo(() => [
     {
       title: 'BioStar X Mobile',
       play: 'https://play.google.com/store/apps/details?id=com.suprema.biostarmobile',
@@ -504,7 +507,7 @@ export function Apps({ externalLinks: externalLinksProp }) {
       })}`,
       linkText: `${translate({ id: "index.shortcut.linkText" })}`
     }
-  ];
+  ], [currentLocale]);
   const externalLinks = externalLinksProp || defaultExternalLinks;
 
   return (

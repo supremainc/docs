@@ -15,9 +15,17 @@
  @type {import('@docusaurus/plugin-content-docs').SidebarsConfig}
  */
 
-const sidebars = {
-  // By default, Docusaurus generates a sidebar from the docs folder structure
-  aicamwebserver: [
+const isPreview = process.env.CONTEXT === 'preview';
+
+/**
+ * Sidebar configuration factory.
+ * @param {boolean} preview - Whether to include preview-only sidebars
+ * @returns {import('@docusaurus/plugin-content-docs').SidebarsConfig} Sidebar configuration
+ */
+function createSidebars(preview) {
+  const sidebars = {
+    // By default, Docusaurus generates a sidebar from the docs folder structure
+    aicamwebserver: [
     {
       type: 'category',
       label: 'Vionyx Web Server',
@@ -2275,4 +2283,14 @@ const sidebars = {
   ]
 };
 
-export default sidebars;
+  // Preview가 아니면 조건부 사이드바 제거 (빌드 최적화)
+  if (!preview) {
+    delete sidebars.biostation3max;
+    delete sidebars.aicamwebserver;
+    delete sidebars.vionyx;
+  }
+
+  return sidebars;
+}
+
+export default createSidebars(isPreview);

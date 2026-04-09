@@ -4,12 +4,23 @@ import MDXContents from '@theme-original/MDXContent';
 import imageSize from '../Image/sizeOfimages.json';
 
 export default function ProdImg({src, alt, className, alone, width, height}) {
-    const { i18n: { currentLocale } } = useDocusaurusContext();
+    const { i18n: {currentLocale}, siteConfig } = useDocusaurusContext();
+    const isPreview = siteConfig.customFields.context === 'preview';
     const isDev = process.env.NODE_ENV === 'development';
-    const imagePath = 
-        currentLocale === 'ko' || alone ? 
-            useBaseUrl(src) : 
-            useBaseUrl(src.replace('/img/', `/img/${currentLocale}/`));
+    
+    // Generate image path based on environment
+    const baseUrl = 'https://supremadocs.blob.core.windows.net';
+    const imagePath = (() => {
+        const localizedSrc = currentLocale === 'ko' || alone ? 
+            src : 
+            src.replace('/img/', `/img/${currentLocale}/`);
+        
+        if (isDev || isPreview) {
+            return useBaseUrl(localizedSrc);
+        } else {
+            return `${baseUrl}${localizedSrc}`;
+        }
+    })();
 
     const errTarget = useBaseUrl('/img/default-placeholder-image.webp')
     // console.log('Image path:', imagePath, imageSize[imagePath]);

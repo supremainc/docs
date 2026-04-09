@@ -3,19 +3,19 @@ const path = require("path");
 const { imageSizeFromFile } = require('image-size/fromFile')
 
 // docusaurus.config.js에서 baseUrl 가져오기
-async function getBaseUrl() {
-    try {
-        const configPath = './docusaurus.config.js';
-        const configContent = await fs.readFile(configPath, 'utf-8');
+// async function getBaseUrl() {
+//     try {
+//         const configPath = './docusaurus.config.js';
+//         const configContent = await fs.readFile(configPath, 'utf-8');
         
-        // baseUrl 값을 정규식으로 추출
-        const baseUrlMatch = configContent.match(/baseUrl:\s*['"`]([^'"`]+)['"`]/);
-        return baseUrlMatch ? baseUrlMatch[1] : '/';
-    } catch (err) {
-        console.warn('Could not read docusaurus.config.js, using default baseUrl "/"');
-        return '/';
-    }
-}
+//         // baseUrl 값을 정규식으로 추출
+//         const baseUrlMatch = configContent.match(/baseUrl:\s*['"`]([^'"`]+)['"`]/);
+//         return baseUrlMatch ? baseUrlMatch[1] : '/';
+//     } catch (err) {
+//         console.warn('Could not read docusaurus.config.js, using default baseUrl "/"');
+//         return '/';
+//     }
+// }
 
 const directoryPath = './static/img';
 
@@ -60,8 +60,9 @@ function collectFileInfo(file, dimensions, baseUrl) {
 
 // 디렉토리와 그 하위 디렉토리의 이미지 파일 정보를 수집
 async function processImages() {
-    const baseUrl = await getBaseUrl();
-    console.log(`Using baseUrl: ${baseUrl}`);
+    const isPreview = process.env.CONTEXT === 'preview';
+    const baseUrl = isPreview ? '/docs/' : '/';
+    console.log(`[${isPreview ? 'PREVIEW' : 'PRODUCTION'}] Using baseUrl: ${baseUrl}`);
     
     await readFilesInDirectory(directoryPath, (file, dimensions) => {
         collectFileInfo(file, dimensions, baseUrl);
