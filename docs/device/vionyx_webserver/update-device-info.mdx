@@ -1,0 +1,121 @@
+---
+id: update-device-info
+title: 카메라 정보 업데이트하기
+description: 카메라의 이름, 메모, 위치 정보와 GPS 좌표를 입력하여 카메라를 효과적으로 관리하는 방법을 안내합니다.
+keywords: [카메라, 정보, 이름, 위치, GPS, 메모]
+---
+
+카메라의 기본 정보를 확인하고, 장치 이름, 설명, 위치 정보를 입력하여 조직에서 여러 대의 카메라를 효과적으로 관리할 수 있습니다.
+
+아래와 같은 상황에서 카메라 정보를 업데이트하세요.
+
+* 설치한 카메라를 조직 내 구별하기 쉬운 이름으로 변경하고 싶을 때
+
+* 카메라의 위치나 설치 장소에 대한 추가 정보를 입력하고 싶을 때
+
+* GPS 좌표를 입력하여 카메라의 정확한 위치를 기록하고 싶을 때
+
+* 여러 대의 카메라를 관리할 때 카메라마다 특정 메모나 설명을 추가하고 싶을 때
+
+:::info
+
+* 모델명, 시리얼 번호, 하드웨어 버전 등은 읽기 전용 정보로 편집할 수 없습니다.
+
+* 카메라 이름, 메모, 위치 정보는 유니코드를 지원하여 한글, 영문, 숫자, 특수문자를 입력할 수 있습니다.
+
+:::
+
+
+## 카메라 기본 정보 확인
+
+카메라의 모델명, 시리얼 번호, 하드웨어 버전 등 기본 정보를 확인하세요.
+
+1. 화면 왼쪽 상단의 <Cmd sid='system' product='cam' /> 메뉴를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_info' product='cam' />를 클릭하세요.
+
+   <Image src='/img/cam-server/cam-webserver-system-device-info.png' />
+
+<Cmd sid='info' product='cam' /> 섹션에서 아래 기본 정보를 확인할 수 있습니다. 읽기 전용으로 편집할 수 없습니다.
+
+* <Cmd sid='model' product='cam' />: 카메라 모델명
+
+* <Cmd sid='device_sn' product='cam' />: 카메라 시리얼 번호
+
+* <Cmd sid='hw_version' product='cam' />: 하드웨어 버전
+
+* <Cmd sid='kernel' product='cam' />: 커널 버전
+
+* <Cmd sid='open_source_license' product='cam' />: 오픈 소스 라이선스 정보를 확인하려면 <Cmd sid='view' product='cam' /> 버튼을 클릭하세요.
+
+
+## 카메라 정보 설정
+
+카메라의 이름, 메모, 위치 정보를 입력하여 효과적으로 관리하세요.
+
+1. 화면 왼쪽 상단의 <Cmd sid='system' product='cam' /> 메뉴를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_info' product='cam' />를 클릭하세요.
+
+### 이름 입력
+
+카메라를 식별하기 쉽도록 사용자 정의 이름을 입력하세요. <Cmd sid='name' product='cam' /> 입력란에 카메라 이름을 입력하세요.
+
+* 최대 64자까지 입력할 수 있습니다.
+
+* 한글, 영문, 숫자, 특수문자(`.`, `-`, `(`, `)`)를 포함할 수 있습니다.
+
+* 예: "입구-1번", "회의실-A" 등
+
+:::info
+
+입력한 카메라 이름은 시스템 메뉴 및 웹 UI 여러 곳에서 표시되어 카메라를 쉽게 식별할 수 있습니다.
+
+:::
+
+### 메모 추가
+
+카메라에 대한 추가 정보나 메모를 입력하세요. <Cmd sid='memo' product='cam' /> 입력란에 메모 또는 설명을 입력하세요.
+
+* 최대 64자까지 입력할 수 있습니다.
+
+* 예: 설치 부서, 관리자 이름, 설치 날짜 등
+
+### 위치 정보 입력
+
+카메라의 설치 위치를 텍스트로 입력하세요. <Cmd sid='location' product='cam' /> 입력란에 카메라의 설치 위치를 입력하세요.
+
+* 최대 64자까지 입력할 수 있습니다.
+
+* 예: '1층 로비 입구', '2층 회의실 대기실'
+
+### 설정 저장
+
+모든 정보를 입력한 후 화면 오른쪽 상단의 <Cmd sid='save' product='cam' /> 버튼을 클릭하세요.
+
+
+## GPS 좌표 설정
+
+카메라의 정확한 지리적 위치를 GPS 좌표로 입력하세요.
+
+1. 화면 왼쪽 상단의 <Cmd sid='system' product='cam' /> 메뉴를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_info' product='cam' />를 클릭하세요.
+
+1. GPS 설정을 활성화하려면 <Cmd sid='info' product='cam' /> 섹션의 <Cmd sid='gps' product='cam' /> 토글 버튼을 클릭하세요.
+
+   <Image src='/img/cam-server/cam-webserver-system-device-info-gps.png' />
+
+1. 경도와 위도 정보를 입력하세요.
+
+   > 예: 서울 (37.5665, 126.9780)
+
+1. 설정을 저장하려면 화면 오른쪽 상단의 <Cmd sid='save' product='cam' /> 버튼을 클릭하세요.
+
+:::info
+
+* GPS 좌표는 십진법(Decimal Degrees, DD) 형식으로 입력해야 합니다.
+
+* GPS 설정을 비활성화하려면 <Cmd sid='gps' product='cam' /> 토글 버튼을 다시 클릭하세요.
+
+:::

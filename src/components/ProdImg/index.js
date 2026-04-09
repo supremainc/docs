@@ -4,7 +4,8 @@ import MDXContents from '@theme-original/MDXContent';
 import imageSize from '../Image/sizeOfimages.json';
 
 export default function ProdImg({src, alt, className, alone, width, height}) {
-    const { i18n: { currentLocale } } = useDocusaurusContext();
+    const { i18n: {currentLocale}, siteConfig } = useDocusaurusContext();
+    const isPreview = siteConfig.customFields.context === 'preview';
     const isDev = process.env.NODE_ENV === 'development';
     
     // Generate image path based on environment
@@ -14,7 +15,7 @@ export default function ProdImg({src, alt, className, alone, width, height}) {
             src : 
             src.replace('/img/', `/img/${currentLocale}/`);
         
-        if (isDev) {
+        if (isDev || isPreview) {
             return useBaseUrl(localizedSrc);
         } else {
             return `${baseUrl}${localizedSrc}`;

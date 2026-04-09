@@ -21,6 +21,8 @@ import air_ko from './air/ko.json';
 import air_en from './air/en.json';
 import air_ja from './air/ja.json';
 import air_es from './air/es.json';
+import cam_ko from './cam/ko.json';
+import cam_en from './cam/en.json';
 
 // 다국어 지원을 위한 locale mapping
 const localeMap = {
@@ -40,6 +42,11 @@ const airLocaleMap = {
   en: air_en,
   ja: air_ja,
   es: air_es,
+};
+
+const camLocaleMap = {
+  ko: cam_ko,
+  en: cam_en,
 };
 
 const xlocaleMap = {
@@ -110,6 +117,9 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
       }
     } else if (product === 'air') {
       const locale = airLocaleMap[currentLocale] || airLocaleMap.en;
+      localeText = locale[sid] ? locale[sid].replace('<br/>', '') : null;
+    } else if (product === 'cam') {
+      const locale = camLocaleMap[currentLocale] || camLocaleMap.en;
       localeText = locale[sid] ? locale[sid].replace('<br/>', '') : null;
     } else {
       // const locale = xlocaleMap[currentLocale] || xlocaleMap.en;

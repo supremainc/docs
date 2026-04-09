@@ -4,12 +4,14 @@ import {useLocation} from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 export default function InDoc ({children, product, pages, type, ref, lang}) {
-    const { i18n: {currentLocale} } = useDocusaurusContext();
+    const { i18n: {currentLocale}, siteConfig } = useDocusaurusContext();
+    const isPreview = siteConfig.customFields.context === 'preview';
     const location = useLocation();
+    const prodSplit = !isPreview ? 2 : 3;
     
     if (product) {
         const prods = Array.isArray(product) ? product : product.split(',');
-        const cProd = currentLocale === "ko" ? location.pathname.split("/")[2] : location.pathname.split("/")[3];
+        const cProd = currentLocale === "ko" ? location.pathname.split("/")[prodSplit] : location.pathname.split("/")[prodSplit + 1];
         const isProduct = prods.includes(cProd);
 
         return isProduct ? <MDXContents>{children}</MDXContents> : null;

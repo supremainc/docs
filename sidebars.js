@@ -15,8 +15,111 @@
  @type {import('@docusaurus/plugin-content-docs').SidebarsConfig}
  */
 
-const sidebars = {
-  // By default, Docusaurus generates a sidebar from the docs folder structure
+const isPreview = process.env.CONTEXT === 'preview';
+
+/**
+ * Sidebar configuration factory.
+ * @param {boolean} preview - Whether to include preview-only sidebars
+ * @returns {import('@docusaurus/plugin-content-docs').SidebarsConfig} Sidebar configuration
+ */
+function createSidebars(preview) {
+  const sidebars = {
+    // By default, Docusaurus generates a sidebar from the docs folder structure
+    aicamwebserver: [
+    {
+      type: 'category',
+      label: 'Vionyx Web Server',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/vionyx_webserver/index',
+      },
+      items: [
+        {
+          type: 'doc',
+          id: 'device/vionyx_webserver/getting-started',
+          className: 'cam--started'
+        },
+        {
+          type: 'doc',
+          id: 'device/vionyx_webserver/ui-navigation',
+          className: 'cam--navigation'
+        },
+        {
+          type: 'doc',
+          id: 'device/vionyx_webserver/live-basic',
+          className: 'cam--basiclive'
+        },
+        {
+          type: 'category',
+          label: 'AI 이벤트 및 규칙',
+          className: 'ai--event',
+          link: {
+            type: 'doc',
+            id: 'device/vionyx_webserver/configure-ai-events-and-rules',
+          },
+          items: [
+            'device/vionyx_webserver/configure-people-tracking',
+            'device/vionyx_webserver/configure-intrusion',
+            'device/vionyx_webserver/configure-line-crossing',
+            'device/vionyx_webserver/configure-counting-people',
+            'device/vionyx_webserver/edit-delete-ai-event',
+            'device/vionyx_webserver/set-ai-rule'
+          ]
+        },
+        {
+          type: 'category',
+          label: '설정',
+          className: 'cam--settings',
+          link: {
+            type: 'doc',
+            id: 'device/vionyx_webserver/configure-camera-device',
+          },
+          items: [
+            'device/vionyx_webserver/configure-video-profile',
+            'device/vionyx_webserver/configure-camera-settings',
+            'device/vionyx_webserver/configure-privacy-overlay',
+            'device/vionyx_webserver/configure-date-time',
+            'device/vionyx_webserver/configure-network'
+          ]
+        },
+        {
+          type: 'category',
+          label: '사람',
+          className: 'cam--people',
+          link: {
+            type: 'doc',
+            id: 'device/vionyx_webserver/manage-people',
+          },
+          items: [
+            'device/vionyx_webserver/add-users',
+            'device/vionyx_webserver/modify-delete-users',
+            'device/vionyx_webserver/search-view-users'
+          ]
+        },
+        {
+          type: 'category',
+          label: '시스템',
+          className: 'cam--system',
+          link: {
+            type: 'doc',
+            id: 'device/vionyx_webserver/system-management',
+          },
+          items: [
+            'device/vionyx_webserver/update-device-info',
+            'device/vionyx_webserver/update-firmware',
+            'device/vionyx_webserver/manage-device',
+            'device/vionyx_webserver/upload-audio-clips',
+            'device/vionyx_webserver/update-admin-password',
+            'device/vionyx_webserver/add-operators',
+            'device/vionyx_webserver/view-system-logs'
+          ]
+        }
+      ]
+    }
+  ],
   bsxplugins: [
     {
       type: 'category',
@@ -1695,43 +1798,43 @@ const sidebars = {
       ],
     },
   ],
-//   biostation3max: [
-//     {
-//       type: 'category',
-//       label: 'BioStation 3 Max',
-//       collapsed: false,
-//       collapsible: false,
-//       className: 'p-title',
-//       link: {
-//         type: 'doc',
-//         id: 'device/biostation_3_max/index',
-//       },
-//       items: [
-//         'device/biostation_3_max/safety-instructions',
-//         'device/biostation_3_max/getting-started',
-//         'device/biostation_3_max/installation',
-//         {
-//           type: 'category',
-//           label: '사용하기',
-//           link: {
-//             type: 'doc',
-//             id: 'device/biostation_3_max/using-device',
-//           },
-//           items: [
-//             'device/biostation_3_max/admin-menu',
-//             'device/biostation_3_max/user',
-//             'device/biostation_3_max/authentication',
-//             'device/biostation_3_max/settings',
-//             'device/biostation_3_max/event-log',
-//           ],
-//         },
-//         'device/biostation_3_max/troubleshooting',
-//         'device/biostation_3_max/product-specifications',
-//         'device/biostation_3_max/regulatory-information',
-//         'device/biostation_3_max/appendices',
-//       ],
-//     },
-//   ],
+  biostation3max: [
+    {
+      type: 'category',
+      label: 'BioStation 3 Max',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/biostation_3_max/index',
+      },
+      items: [
+        'device/biostation_3_max/safety-instructions',
+        'device/biostation_3_max/getting-started',
+        'device/biostation_3_max/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/biostation_3_max/using-device',
+          },
+          items: [
+            'device/biostation_3_max/admin-menu',
+            'device/biostation_3_max/user',
+            'device/biostation_3_max/authentication',
+            'device/biostation_3_max/settings',
+            'device/biostation_3_max/event-log',
+          ],
+        },
+        'device/biostation_3_max/troubleshooting',
+        'device/biostation_3_max/product-specifications',
+        'device/biostation_3_max/regulatory-information',
+        'device/biostation_3_max/appendices',
+      ],
+    },
+  ],
   xpassq2: [
     {
       type: 'category',
@@ -1753,30 +1856,30 @@ const sidebars = {
       ],
     },
   ],
-  // vionyx: [
-  //   {
-  //     type: 'category',
-  //     label: 'ViOnyx',
-  //     collapsed: false,
-  //     collapsible: false,
-  //     className: 'p-title',
-  //     link: {
-  //       type: 'doc',
-  //       id: 'device/vionyx/index',
-  //     },
-  //     items: [
-  //       'device/vionyx/safety-instructions',
-  //       'device/vionyx/getting-started',
-  //       'device/vionyx/installation',
-  //       'device/vionyx/web-server-settings',
-  //       'device/vionyx/maintenance',
-  //       'device/vionyx/troubleshooting',
-  //       'device/vionyx/product-specifications',
-  //       'device/vionyx/regulatory-information',
-  //       'device/vionyx/appendices',
-  //     ],
-  //   },
-  // ],
+  vionyx: [
+    {
+      type: 'category',
+      label: 'ViOnyx',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/vionyx/index',
+      },
+      items: [
+        'device/vionyx/safety-instructions',
+        'device/vionyx/getting-started',
+        'device/vionyx/installation',
+        'device/vionyx/web-server-settings',
+        'device/vionyx/maintenance',
+        'device/vionyx/troubleshooting',
+        'device/vionyx/product-specifications',
+        'device/vionyx/regulatory-information',
+        'device/vionyx/appendices',
+      ],
+    },
+  ],
   biostation2a: [
     {
       type: 'category',
@@ -2135,4 +2238,14 @@ const sidebars = {
   ]
 };
 
-export default sidebars;
+  // Preview가 아니면 조건부 사이드바 제거 (빌드 최적화)
+  if (!preview) {
+    delete sidebars.biostation3max;
+    delete sidebars.aicamwebserver;
+    delete sidebars.vionyx;
+  }
+
+  return sidebars;
+}
+
+export default createSidebars(isPreview);

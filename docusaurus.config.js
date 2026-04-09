@@ -9,11 +9,11 @@ import ConfigLocalized from './docusaurus.config.localized.json';
 const {rehypeExtendedTable} = require("rehype-extended-table");
 
 const isDev = process.env.NODE_ENV === 'development';
+const isPreview = process.env.CONTEXT === 'preview';
 const locale = process.env.DOCUSAURUS_CURRENT_LOCALE; // 현재 로케일
 const __DOCUSAURUS_MERMAID_LAYOUT_ELK_ENABLED__ = false;
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
+// Locale constants
 const defaultLocale = 'ko';
 
 function getLocalizedConfigValue(key) {
@@ -37,10 +37,11 @@ const config = {
   tagline: getLocalizedConfigValue('tagline'),
   favicon: 'https://supremainc.com/ko/asset/images/common/Website_favicon.png',
   // Set the production url of your site here
-  url: 'https://docs.supremainc.com',
+  url: !isPreview ? 'https://docs.supremainc.com' : 'https://supremainc.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: !isPreview ? '/' : '/docs/',
+  noIndex: !isPreview ? false : true,
   future: {
     v4: {
       removeLegacyPostBuildHeadAttribute: true,
@@ -50,6 +51,9 @@ const config = {
   },
   organizationName: 'Suprema.inc', // Usually your GitHub org/user name.
   projectName: 'suprema.docs', // Usually your repo name.
+  customFields: {
+    context: process.env.CONTEXT || 'production'
+  },
   onBrokenLinks: 'throw',
   onBrokenAnchors: 'log',
   onDuplicateRoutes: 'warn',
@@ -83,21 +87,23 @@ const config = {
     }
   },
   headTags: [
-    // <meta name="algolia-site-verification"  content="07FFA029DF50324E" />
-    {
-      tagName: 'meta',
-      attributes: {
-        name: 'algolia-site-verification',
-        content: '07FFA029DF50324E',
+    ...(!isPreview ? [
+      // <meta name="algolia-site-verification"  content="07FFA029DF50324E" />
+      {
+        tagName: 'meta',
+        attributes: {
+          name: 'algolia-site-verification',
+          content: '07FFA029DF50324E',
+        }
+      },
+      {
+        tagName: 'meta',
+        attributes: {
+          name: 'naver-site-verification',
+          content: '7394a406acc1ba6e18604d3990e23dc407b64bd4',
+        }
       }
-    },
-    {
-      tagName: 'meta',
-      attributes: {
-        name: 'naver-site-verification',
-        content: '7394a406acc1ba6e18604d3990e23dc407b64bd4',
-      }
-    }
+    ] : [])
   ],
   themes: [
     '@saucelabs/theme-github-codeblock',
@@ -118,8 +124,11 @@ const config = {
             'common/**.{md,mdx}',
             '_unused/**.{md,mdx}',
             '**/_*.{md,mdx}',
-            'device/biostation_3_max/**.{md,mdx}',
-            'device/vionyx/**.{md,mdx}'
+            ...(!isPreview ? [
+              'device/biostation_3_max/**.{md,mdx}',
+              'device/vionyx/**.{md,mdx}',
+              'device/vionyx_webserver/**.{md,mdx}',
+            ] : []),
           ],
           rehypePlugins: [ rehypeExtendedTable ],
         },
@@ -157,6 +166,8 @@ const config = {
         svgr: {
           svgrConfig: {
             /* SVGR config */
+            role: 'img',
+            titleProp: true,
           },
         },
       }),
@@ -177,21 +188,21 @@ const config = {
   ],
   plugins: [
     // PrivateStarter 플러그인
-    [ './src/plugins/privateStarter', {} ],
+    ...(!isDev ? [['./src/plugins/privateStarter', {}]] : []),
     // Redocusaurus Prism 주입 문제 해결 플러그인
     [ './src/plugins/fix-prism', {} ],
     // MSAL 인증 플러그인은 프로덕션 환경에서만 활성화
-    // ...(!isDev ? [['./src/plugins/msal-auth', {}]] : []),
+    ...(!isDev && isPreview ? [['./src/plugins/msal-auth', {}]] : []),
     [ 'docusaurus-plugin-sass', {} ],
     [ 'docusaurus-plugin-image-zoom', {}],
-    [
+    ...(!isPreview ? [[
       '@docusaurus/plugin-google-gtag',
       {
         trackingID: 'G-98B2Y5C3H6',
         anonymizeIP: true,
       },
-    ],
-    [
+    ]] : []),
+    ...(!isPreview ? [[
       '@signalwire/docusaurus-plugin-llms-txt',
       {
         // v2.0 API 구조로 수정
@@ -216,16 +227,12 @@ const config = {
             '/common/**',
             '/_unused/**',
             '/products/**',
-            '/products/**',
             '/bsx-license-calculator/**',
-            '/en/products/**',
-            '/en/common/**',
-            '/en/_unused/**',
           ],
           autoSectionDepth: 2
         }
       },
-    ],
+    ]] : []),
   ],
   markdown: {
     mermaid: true,
@@ -257,7 +264,15 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'https://supremadocs.blob.core.windows.net/img/sns_img02.jpg',
+      image: !isPreview ? 'https://supremadocs.blob.core.windows.net/img/sns_img02.jpg' : 'img/sns_img02.jpg',
+      ...(isPreview ? {
+        announcementBar: {
+          id: 'annoucementbar',
+          content: getLocalizedConfigValue('announcementBar'),
+          backgroundColor: '#FFB27D',
+          textColor: '#091E42',
+          isCloseable: false,
+      }} : null),
       docs: {
         sidebar: {
           hideable: true,
@@ -268,8 +283,8 @@ const config = {
         title: 'Docs',
         logo: {
           alt: 'Suprema Docs',
-          src: 'https://supremainc.github.io/docs/img/suprema-logo.svg',
-          srcDark: 'https://supremainc.github.io/docs/img/suprema-logo-white.svg',
+          src: !isPreview ? 'https://supremainc.github.io/docs/img/suprema-logo.svg' : 'img/suprema-logo.svg',
+          srcDark: !isPreview ? 'https://supremainc.github.io/docs/img/suprema-logo-white.svg' : 'img/suprema-logo-white.svg',
           width: '120px',
         },
         items: [
@@ -290,34 +305,37 @@ const config = {
               }
             ]
           },
-          // {
-          //   type: 'dropdown',
-          //   label: 'AI Cameras',
-          //   position: 'right',
-          //   items: [
-          //     {
-          //       type: 'doc',
-          //       label: 'ViOnyx',
-          //       docId: 'device/vionyx/index'
-          //     },
-          //     {
-          //       type: 'doc',
-          //       label: 'ViOnyx Web Server',
-          //       docId: 'device/vionyx_webserver/index'
-          //     },
-          //   ]
-          // },
+          ...(!isPreview ? [] : [
+            {
+              type: 'dropdown',
+              label: 'AI Cameras',
+              position: 'right',
+              items: [
+                {
+                  type: 'doc',
+                  label: 'ViOnyx',
+                  docId: 'device/vionyx/index'
+                },
+                {
+                  type: 'doc',
+                  label: 'ViOnyx Web Server',
+                  docId: 'device/vionyx_webserver/index'
+                },
+              ]
+            }
+          ]),
           {
             type: 'dropdown',
             label: 'Devices',
             position: 'right',
             items: [
-            
-            //   {
-            //     type: 'doc',
-            //     label: 'BioStation 3 Max',
-            //     docId: 'device/biostation_3_max/index'
-            //   },
+              ...(isPreview ? [
+                {
+                  type: 'doc',
+                  label: 'BioStation 3 Max',
+                  docId: 'device/biostation_3_max/index'
+                }
+              ] : []),
               {
                 type: 'doc',
                 label: 'BioEntry W3',
@@ -512,21 +530,15 @@ const config = {
             type: 'localeDropdown',
             position: 'right',
           }
-        ],
+        ].filter(Boolean),
       },
       footer: {
         style: 'light',
         logo: {
           alt: 'Suprema Security & biometrics',
-          src: 'https://supremainc.github.io/docs/img/suprema-logo-bottom.svg',
+          src: !isPreview ? 'https://supremadocs.blob.core.windows.net/img/suprema-logo-bottom.svg' : 'img/suprema-logo-bottom.svg',
           width: '173px',
         },
-        links: [
-          {
-            label: 'Stack Overflow',
-            href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-          }
-        ],
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
@@ -544,9 +556,9 @@ const config = {
         config: {}
       },
       algolia: {
-        appId: 'G6Y3H2PNC3',
-        apiKey: '92bd6ee7b06d5a3ec46d8056d39e710a',
-        indexName: 'SPDocs',
+        appId: !isPreview ? 'G6Y3H2PNC3' : '11LXF9EJH7',
+        apiKey: !isPreview ? '92bd6ee7b06d5a3ec46d8056d39e710a' : '4882650c3591013a4db2f9211c31c4f4',
+        indexName: !isPreview ? 'SPDocs' : 'supremaincio',
         insights: true,
         contextualSearch: true,
         searchParameters: {
@@ -555,13 +567,6 @@ const config = {
             'content:35', 'hierarchy.lvl0', 'hierarchy.lvl1', 'hierarchy.lvl2', 'hierarchy.lvl3', 'hierarchy.lvl4', 'sidelvl2', 'sidelvl3', 'sidelvl4'
           ],
           snippetEllipsisText: '…'
-        },
-        searchPagePath: 'search',
-        askAi: {
-          indexName: 'markdown-index', // Markdown index for Ask AI
-          apiKey: '92bd6ee7b06d5a3ec46d8056d39e710a',
-          appId: 'G6Y3H2PNC3',
-          assistantId: 'kyhdNEjfn9nK'
         }
       }
     })

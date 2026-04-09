@@ -256,6 +256,39 @@ div[class*='docItemCol'] {
       padding-left: 0;
     }
   }
+  li.cam--basiclive > a {
+    background: url('./img/ico-header-live.svg') no-repeat 10px 7px;
+    padding-left: 37px;
+  }
+  li.ai--event .menu__list-item-collapsible > a, li.ai--event .menu__list-item-collapsible > a.menu__link--active {
+    background: url('./img/ico-header-ai.svg') no-repeat 10px 7px !important;
+    padding-left: 37px;
+    &:hover {
+      background: url('./img/ico-header-ai.svg') no-repeat 10px 7px !important;
+    }
+  }
+  li.cam--settings .menu__list-item-collapsible > a, li.cam--settings .menu__list-item-collapsible > a.menu__link--active {
+    background: url('./img/ico-header-settings.svg') no-repeat 10px 7px !important;
+    padding-left: 37px;
+    &:hover {
+      background: url('./img/ico-header-settings.svg') no-repeat 10px 7px !important;
+    }
+  }
+  li.cam--people .menu__list-item-collapsible > a, li.cam--people .menu__list-item-collapsible > a.menu__link--active {
+    background: url('./img/ico-header-people.svg') no-repeat 10px 7px !important;
+    padding-left: 37px;
+    &:hover {
+      background: url('./img/ico-header-people.svg') no-repeat 10px 7px !important;
+    }
+  }
+  li.cam--system .menu__list-item-collapsible > a, li.cam--system .menu__list-item-collapsible > a.menu__link--active {
+    background: url('./img/ico-header-system.svg') no-repeat 10px 7px !important;
+    padding-left: 37px;
+    &:hover {
+      background: url('./img/ico-header-system.svg') no-repeat 10px 7px !important;
+      transition: none;
+    }
+  }
   li {
     hr {
       margin: 1rem 64px 1rem 12px;
@@ -1267,6 +1300,45 @@ body[data-rh] .redocusaurus {
       }
     }
   }
+  .menu-icon-table {
+    table {
+      td {
+        p.hasimg {
+          margin: 0 auto !important;
+          width: fit-content;
+        }
+        &:first-of-type, &:nth-of-type(2) {
+          width: 20%;
+        }
+      }
+      svg {
+        position: relative;
+        top: 0;
+      }
+    }
+  }
+  .table--viewmode {
+    table  {
+      p.hasimg {
+        margin: 0 auto !important;
+        width: fit-content;
+        img {
+          display: inline-block;
+        }
+      }
+       td {
+        &:first-of-type {
+          width: 10%;
+        }
+        &:nth-of-type(2) {
+          width: 20%;
+        }
+        &:nth-of-type(3) {
+          width: 30%;
+        }
+      }
+    }
+  }
 
   // Columns
   .container {
@@ -1357,6 +1429,36 @@ body[data-rh] .redocusaurus {
   img.ico[src*="ico-check.svg"],
   img.ico[src*="ico-delete.svg"] {
     filter: invert(1);
+  }
+}
+
+[data-theme='dark'] .theme-doc-sidebar-menu {
+  li.cam--basiclive > a {
+    background: url('./img/ico-header-live-dark.svg') no-repeat 10px 7px;
+  }
+  li.ai--event .menu__list-item-collapsible > a {
+    background: url('./img/ico-header-ai-dark.svg') no-repeat 10px 7px !important;
+    &:hover {
+      background: url('./img/ico-header-ai-dark.svg') no-repeat 10px 7px !important;
+    }
+  }
+  li.cam--settings .menu__list-item-collapsible > a {
+    background: url('./img/ico-header-settings-dark.svg') no-repeat 10px 7px !important;
+    &:hover {
+      background: url('./img/ico-header-settings-dark.svg') no-repeat 10px 7px !important;
+    }
+  }
+  li.cam--people .menu__list-item-collapsible > a {
+    background: url('./img/ico-header-people-dark.svg') no-repeat 10px 7px !important;
+    &:hover {
+      background: url('./img/ico-header-people-dark.svg') no-repeat 10px 7px !important;
+    }
+  }
+  li.cam--system .menu__list-item-collapsible > a {
+    background: url('./img/ico-header-system-dark.svg') no-repeat 10px 7px !important;
+    &:hover {
+      background: url('./img/ico-header-system-dark.svg') no-repeat 10px 7px !important;
+    }
   }
 }
 
