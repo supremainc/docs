@@ -143,6 +143,25 @@
   }
 }
 
+@media (max-width: 430px) {
+  h2[id*='specs.'] {
+    font-size: 1.5rem;
+  }
+  .techspecsBody {
+    font-size: .78rem;
+    padding-left: 0;
+  }
+  .column {
+    margin-right: 7px;
+  }
+  .column + .column {
+    margin-right: 0;
+  }
+  .small_l2 {
+    width: 70%;
+  }
+}
+
 @media print {
   .techspecSection {
     padding: .7rem 0;
