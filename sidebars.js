@@ -1772,6 +1772,7 @@ function createSidebars(preview) {
             id: 'device/biostation_3/release-notes/index',
           },
           items: [
+            'device/biostation_3/release-notes/143',
             'device/biostation_3/release-notes/142',
             'device/biostation_3/release-notes/141',
             'device/biostation_3/release-notes/140',
@@ -2032,6 +2033,7 @@ function createSidebars(preview) {
             id: 'device/xpass_2/release-notes/index',
           },
           items: [
+            'device/xpass_2/release-notes/152',
             'device/xpass_2/release-notes/151',
             'device/xpass_2/release-notes/150',
             'device/xpass_2/release-notes/143',
