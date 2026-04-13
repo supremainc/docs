@@ -8,7 +8,7 @@
 @REM SIDEBAR : sidebar.js 파일에 적용된 키 값을 입력하세요.
 @REM FILTER : 문서가 저장된 경로를 입력하세요. Include, Xclude 컴포넌트에서 사용하기 위한 값입니다.
 @REM RELEASE: 문서의 배포 날짜를 입력하세요.
-@REM CONTEXT: production 또는 preview, preview 브랜치에 해당하는 문서를 출력할 때는 preview를 입력하세요.
+@REM CONTEXT: preview
 
 set PRODUCT_NAME=BioEntry W3
 set LANGUAGE=ja
