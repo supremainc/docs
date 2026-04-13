@@ -31,3 +31,4 @@ nul
 generatepdf.bat
 genpdf/svg-components-map.mjs
 uploadtr.bat
+/genpdf/svg-components-map.mjs
