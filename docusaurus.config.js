@@ -7,6 +7,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import ConfigLocalized from './docusaurus.config.localized.json';
 const {rehypeExtendedTable} = require("rehype-extended-table");
+const remarkCmd = require('./src/plugins/remark-cmd/remark-cmd');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isPreview = process.env.CONTEXT === 'preview';
@@ -130,6 +131,7 @@ const config = {
               'device/vionyx_webserver/**.{md,mdx}',
             ] : []),
           ],
+          remarkPlugins: [[remarkCmd, { locale: locale || 'ko' }]],
           rehypePlugins: [ rehypeExtendedTable ],
         },
         pages: {

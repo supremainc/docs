@@ -1,5 +1,4 @@
 import MDXComponents from '@theme-original/MDXComponents';
-import Cmd from '@site/src/components/Cmd';
 import Include from '@site/src/components/Include';
 import Xclude from '@site/src/components/Xclude';
 import { Steps, Step } from '@site/src/components/Steps';
@@ -169,7 +168,6 @@ import IcCamPeople from '@site/static/img/cam-server/ico-header-people.svg';
 import IcCamSys from '@site/static/img/cam-server/ico-header-system.svg';
 export default {
     ...MDXComponents,
-    Cmd,
     Include,
     Xclude,
     Steps,
