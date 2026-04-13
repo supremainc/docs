@@ -35,6 +35,9 @@ const cmdAirEn = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/air
 const cmdAirEs = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/air/es.json`, 'utf-8'));
 const cmdAirJa = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/air/ja.json`, 'utf-8'));
 
+const cmdCamKo = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/cam/ko.json`, 'utf-8'));
+const cmdCamEn = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/cam/en.json`, 'utf-8'));
+
 const glossaryKo = JSON.parse(readFileSync(`${__dirname}/../i18n/ko/glossary.json`, 'utf-8'));
 const glossaryEn = JSON.parse(readFileSync(`${__dirname}/../i18n/en/glossary.json`, 'utf-8'));
 const glossaryEs = JSON.parse(readFileSync(`${__dirname}/../i18n/es/glossary.json`, 'utf-8'));
@@ -686,6 +689,11 @@ export function rehypeProcessCmdComponent(language = 'ko') {
     ja: cmdAirJa,
   };
 
+  const camLocaleMap = {
+    ko: cmdCamKo,
+    en: cmdCamEn,
+  };
+
   const glossaryMap = {
     ko: glossaryKo,
     en: glossaryEn,
@@ -755,6 +763,9 @@ export function rehypeProcessCmdComponent(language = 'ko') {
           }
         } else if (productAttr === 'air') {
           const locale = airLocaleMap[language] || airLocaleMap.en;
+          localeText = locale[sidAttr];
+        } else if (productAttr === 'cam') {
+          const locale = camLocaleMap[language] || camLocaleMap.en;
           localeText = locale[sidAttr];
         } else {
           const locale = cmdXLocaleMap[language] || cmdXEn;
@@ -1080,11 +1091,50 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         return;
       }
 
+      // Process Num component (1-20 numbered badges)
+      if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Num') {
+        const attributes = node.attributes || [];
+        const numAttr = attributes.find(attr => attr.name === 'num');
+
+        let num = null;
+        if (numAttr) {
+          if (typeof numAttr.value === 'string') {
+            num = parseInt(numAttr.value, 10);
+          } else if (typeof numAttr.value === 'number') {
+            num = numAttr.value;
+          } else if (typeof numAttr.value === 'object' && numAttr.value && numAttr.value.value !== undefined) {
+            // Handle mdxJsxAttributeValueExpression: { value: 1, type: '...' }
+            num = parseInt(numAttr.value.value, 10);
+          }
+        }
+
+        // Validate number range (1-20)
+        if (num && num >= 1 && num <= 20) {
+          // Use simple format: num-1.svg, num-2.svg, etc.
+          const svgPath = `/src/components/Num/num-${num}.svg`;
+          const imgSrc = basePath ? basePath.replace(/\\/g, '/') + svgPath : svgPath;
+
+          const replacement = {
+            type: 'element',
+            tagName: 'img',
+            properties: {
+              src: imgSrc,
+              className: ['num-badge'],
+              alt: `Step ${num}`
+            },
+            children: []
+          };
+
+          parent.children[index] = replacement;
+          return;
+        }
+      }
+
       // Process SVG icon components (IcDown, IcUp, IcMenu1, etc.) BEFORE Image processing
       if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && svgComponentsMap[node.name]) {
         const svgPath = svgComponentsMap[node.name];
         const imgSrc = basePath ? basePath.replace(/\\/g, '/') + svgPath : svgPath;
-        
+
         const replacement = {
           type: 'element',
           tagName: 'img',
@@ -1095,7 +1145,7 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
           },
           children: []
         };
-        
+
         parent.children[index] = replacement;
         return;
       }

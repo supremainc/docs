@@ -72,7 +72,10 @@ async function main() {
     }
 
     const sidebarsModule = await import(`file://${sidebarsPath}`);
-    const sidebars = sidebarsModule.default;
+    const createSidebarsFn = sidebarsModule.default;
+    const sidebars = typeof createSidebarsFn === 'function'
+      ? createSidebarsFn(process.env.CONTEXT === 'preview')
+      : createSidebarsFn;
 
     if (!sidebars[sidebarKey]) {
       console.error(`❌ Sidebar key '${sidebarKey}' not found`);

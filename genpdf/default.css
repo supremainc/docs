@@ -324,7 +324,7 @@ header p {
   margin-bottom: 15px;
 }
 
-.doc-content p img.ico, dt img.ico, dd img.ico, li img.ico {
+.doc-content p img.ico, dt img.ico, dd img.ico, li img.ico, .doc-content img.num-badge {
   display: inline-block;
   position: relative;
   border: none;
@@ -802,7 +802,8 @@ html[lang='en'] .doc-content .container table {
   text-align: center;
 }
 
-.doc-content table tr.center td p.hasimg {
+.doc-content table tr.center td p.hasimg,
+.doc-content table tr td p.hasimg {
   margin: 0;
 }
 
