@@ -2132,6 +2132,25 @@ const sidebars = {
         'device/corestation_setup_manager/appendices'
       ]
     }
+  ],
+  genetec: [
+    {
+      type: 'category',
+      label: 'Genetec',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'integration/genetec/index',
+      },
+      items: [
+        'integration/genetec/installation',
+        'integration/genetec/system-management',
+        'integration/genetec/cardholder-management',
+        'integration/genetec/appendices'
+      ]
+    }
   ]
 };
 
