@@ -29,6 +29,5 @@ spelling_report.json
 .env
 nul
 generatepdf.bat
-genpdf/svg-components-map.mjs
 uploadtr.bat
-/genpdf/svg-components-map.mjs
+./genpdf/svg-components-map.mjs
