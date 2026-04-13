@@ -75,7 +75,7 @@ function extractHeadingsFromHtml(htmlContent, maxDepth = 3) {
 function generateTocFromHeadings(headings) {
   if (headings.length === 0) return '';
   
-  let html = '<ul>\n';
+  let html = '<div>\n';
   let currentDepth = 0;
   
   for (let i = 0; i < headings.length; i++) {
@@ -116,7 +116,7 @@ function generateTocFromHeadings(headings) {
   
   // Close all remaining open tags
   while (currentDepth >= 0) {
-    html += '</li>\n</ul>\n';
+    html += '</li>\n</div>\n';
     currentDepth--;
   }
   

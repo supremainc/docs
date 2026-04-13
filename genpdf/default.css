@@ -80,7 +80,7 @@ header p {
   margin-bottom: 100px;
 }
 
-.toc.releasenotes ul ul > li:has(ul) {
+.toc.releasenotes ul > li:has(ul) {
   display: none;
 }
 
@@ -104,39 +104,40 @@ header p {
   margin: 8px 0;
 }
 
-.toc > ul > li > a {
-  display: none;
-}
-
-.toc > ul > li > ul > li {
+.toc ul > li {
   font-weight: bold;
   font-size: 12pt;
   padding-top: 28px;
 }
 
-.toc > ul ul li a {
+.toc ul li ul li {
+  padding-top: 0;
+}
+
+.toc ul li a {
   color: var(--ifm-color-cmd);
   border-bottom: .5pt solid rgba(0, 0, 0, 0.7);
   display: block;
   padding-bottom: 8.5pt;
+  text-decoration: none;
 }
-.toc.biostar_air > ul ul li a {
+.toc.biostar_air ul li a {
   color: var(--ifm-air-main-color);
 }
 
-.toc.releasenotes > ul ul {
+.toc.releasenotes ul {
   flex-wrap: wrap;
   display: flex;
   margin: 0 calc(1rem * -1);
 }
 
-.toc.releasenotes > ul ul > li {
+.toc.releasenotes ul > li {
   flex: 0 0 calc(6/12*100%);
   width: calc(6/12*100%);
   padding: 0 1rem;
 }
 
-.toc.releasenotes > ul ul li a {
+.toc.releasenotes ul li a {
   padding: 20px;
   border-radius: 5px;
   border: 1px solid #333;
@@ -146,12 +147,12 @@ header p {
   font-weight: 400;
 }
 
-.toc.releasenotes > ul ul li a::before {
+.toc.releasenotes ul li a::before {
   content: "📄️";
   margin-right: 5px;
 }
 
-.toc > ul ul li ul li a, .toc.biostar_air > ul ul li ul li a {
+.toc ul li ul li a, .toc.biostar_air ul li ul li a {
   font-weight: normal;
   font-size: 9.5pt;
   color: #000;
@@ -170,10 +171,8 @@ header p {
 
 .content {
   display: block;
-}
-
-.content .doc-section:first-of-type, .content .doc-section.biostar-x.releasenotes:first-of-type {
-  display: none;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .doc-section.biostar-x > h1 {
@@ -588,6 +587,10 @@ details.deviceInfo summary, details.faq summary {
 
 .doc-content img[src*='component-connection-cables-vionyx'] {
   Height: 20% !important;
+}
+
+.doc-content img[src*='ico-content-ai-hide.svg'] {
+  width: 50% !important;
 }
 
 .doc-content .container {
@@ -1408,6 +1411,9 @@ span.text-blue-500 {
     width: auto;
     border: none;
     margin: 0 auto;
+  }
+  .doc-content img[src*='ico-content-ai-hide.svg'] {
+    width: 30% !important;
   }
   /* 페이지 나눔 설정:
      - .doc-content ol li: 순차적으로 페이지 진행 (페이지 나눔 자유)
