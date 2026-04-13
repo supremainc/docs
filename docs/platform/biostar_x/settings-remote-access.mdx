@@ -9,7 +9,7 @@ keywords: [리모트 액세스, ngrok]
 
 :::info
 
-* 리모트 액세스(Remote Access) 기능은 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing#features-add-ons)를 참고하세요.
+* 리모트 액세스(Remote Access) 기능은 추가 옵션을 통해 사용할 수 있습니다. 라이선스 정책에 대한 자세한 내용은 [다음 문서](licensing#features-add-ons)를 참고하세요. 리모트 액세스 라이선스는 연간 구독 라이선스입니다.
 
 * 리모트 액세스 라이선스를 구매하면 슈프리마에서는 리모트 액세스 라이선스 발급 및 리모트 액세스 사용을 위한 ngrok 슈프리마 사이트의 bot 계정, 엔드포인트를 생성하고 라이선스 문서를 사용자에게 제공합니다.
 
@@ -79,13 +79,27 @@ keywords: [리모트 액세스, ngrok]
 
 슈프리마에서 전달받은 ngrok 설정 정보를 입력하세요.
 
-* <Cmd sid='setting.remoteAccess.field.ngrokUserId' />: ngrok 계정을 입력하세요.
-
 * <Cmd sid='setting.remoteAccess.field.tunnelToken' />: **Authtoken**을 입력하세요.
 
-* <Cmd sid='setting.remoteAccess.field.hostURL' />: 엔드포인트 URL을 입력하세요. URL은 `your-name.bsx.ngrok.app` 형식입니다.
+* <Cmd sid='setting.remoteAccess.field.hostURL' />: 엔드포인트 URL을 입력하세요. URL은 `https://subdomain.bsx.ngrok.app` 형식입니다.
 
-모든 정보를 입력한 후 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요. 경고 메시지 창이 나타나면 내용을 확인하고 <Cmd sid='setting.remoteAccess.button.agree' /> 버튼을 클릭하세요.
+:::info
+
+서브 도메인(`subdomain`)은 아래와 같은 규칙을 따릅니다. 규칙을 준수하지 않은 서브 도메인은 사용할 수 없습니다.
+
+* 영문 알파벳(A-Z, a-z), 숫자(0-9), 하이픈(`-`)만 사용할 수 있습니다.
+
+* 특수 문자, 공백은 사용할 수 없습니다.
+
+:::
+
+1. 모든 정보를 입력한 후 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요. 
+
+1. <Cmd sid='setting.remoteAccess.dialog.label.agreement' /> 창이 나타나면 내용을 확인하세요.
+
+   <Image src='/img/biostarx-settings-remote-access-agree.png' />
+
+1. 약관 동의를 위한 체크박스를 선택하고 <Cmd sid='setting.remoteAccess.button.agree' /> 버튼을 클릭하세요.
 
 </Step>
 
