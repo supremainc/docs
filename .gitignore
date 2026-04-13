@@ -30,4 +30,4 @@ spelling_report.json
 nul
 generatepdf.bat
 uploadtr.bat
-./genpdf/svg-components-map.mjs
+genpdf/svg-components-map.mjs
