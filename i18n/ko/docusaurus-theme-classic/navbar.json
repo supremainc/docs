@@ -151,6 +151,10 @@
     "message": "개발자 센터",
     "description": "Navbar item with label Developers"
   },
+  "item.label.Integration": {
+    "message": "인테그레이션",
+    "description": "Navbar item with label Integration"
+  },
   "item.label.BioStar X API": {
     "message": "BioStar X API",
     "description": "Navbar item with label BioStar X API"
