@@ -1194,6 +1194,13 @@ body[data-rh] .redocusaurus {
       table-layout: fixed;
     }
   }
+  .first--column--center {
+      table {
+         td:first-of-type {
+            text-align: center;
+         }
+      }
+  }
   .cols3--20-20-60 {
     table {
       td {
@@ -1220,6 +1227,21 @@ body[data-rh] .redocusaurus {
         }
         &:nth-of-type(3) {
           width: 40%;
+        }
+      }
+    }
+  }
+  .cols3--10-30-60 {
+    table {
+      td {
+        &:nth-of-type(1) {
+          width: 10%;
+        }
+        &:nth-of-type(2) {
+          width: 30%;
+        }
+        &:nth-of-type(3) {
+          width: 60%;
         }
       }
     }
