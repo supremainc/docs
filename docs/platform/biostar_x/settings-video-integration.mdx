@@ -63,26 +63,32 @@ VMS 서버의 녹화된 영상을 재생하려면 HTTPS 프로토콜을 사용�
 
 1. *C:\Program Files\BioStar X\third* 경로로 이동해 명령 프롬프트를 실행하세요.
 
+   :::note
+
+   VMS가 **BioStar X**와 서로 다른 서버에 설치되어 있다면 *scaleUtil-1.0-all.jar* 파일을 VMS 서버로 복사하고 아래의 과정을 진행하세요.
+
+   :::
+
 1. 다음 명령어를 실행하세요. 
 
-    <Tabs groupId='os' defaultValue='Windows'>
-    <TabItem value="Windows">
-    ```java
-    java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate "C:\Windows\System32\config\systemprofile\AppData\Local\<%VENDOR.NAME%>\<%VENDOR.NAME%> Media Server\ssl" {VMS_IP_ADDRESS}
-    ```
-    </TabItem>
-    <TabItem value="Linux">
-    ```java
-    java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate "/opt/<%VENDOR.NAME%>/mediaserver/var/ssl" {VMS_IP_ADDRESS}
-    ```
-    </TabItem>
-    </Tabs>
+   <Tabs groupId='os' defaultValue='Windows'>
+   <TabItem value="Windows">
+   ```java
+   java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate "C:\Windows\System32\config\systemprofile\AppData\Local\<%VENDOR.NAME%>\<%VENDOR.NAME%> Media Server\ssl" {VMS_IP_ADDRESS}
+   ```
+   </TabItem>
+   <TabItem value="Linux">
+   ```java
+   java -Xverify:none -jar scaleUtil-1.0-obfuscated.jar vmsCertCreate "/opt/<%VENDOR.NAME%>/mediaserver/var/ssl" {VMS_IP_ADDRESS}
+   ```
+   </TabItem>
+   </Tabs>
 
-    - `<%VENDOR.NAME%>` 부분을 VMS의 제품명으로 교체하세요.
-    
-    - `{VMS_IP_ADDRESS}` 부분을 VMS 서버의 IP 주소로 교체하세요.
+   - `<%VENDOR.NAME%>` 부분을 VMS의 제품명으로 교체하세요.
+   
+   - `{VMS_IP_ADDRESS}` 부분을 VMS 서버의 IP 주소로 교체하세요.
 
-    - 설치한 VMS 제품에 따라 *ssl* 경로가 다를 수 있습니다.
+   - 설치한 VMS 제품에 따라 *ssl* 경로가 다를 수 있습니다.
 
 1. VMS를 설치한 경로에서 인증서 파일(*\*.pem*)이 생성되었는지 확인하세요.
 
@@ -90,7 +96,15 @@ VMS 서버의 녹화된 영상을 재생하려면 HTTPS 프로토콜을 사용�
 
 :::info
 
-VMS가 **BioStar X**와 서로 다른 서버에 설치되어 있다면 *scaleUtil-1.0-all.jar* 파일을 VMS 서버로 복사하고 위 과정을 진행하세요.
+VMS에 따라 인증서 설치 경로가 다를 수 있습니다. 아래 예시를 참고하세요.
+
+* **BioStar 2 VMS**: *C:\Windows\System32\config\systemprofile\AppData\Local\Suprema Inc\Suprema Inc. Media Server\ssl*
+
+* **Digital Watchdog** (v.5.1.5 기준): *C:\Windows\System32\config\systemprofile\AppData\Local\Digital Watchdog\Digital Watchdog Media Server\ssl*
+
+* **Hanwha Wave** (v5.1.5 기준): *C:\Windows\System32\config\systemprofile\AppData\Local\Hanwha\Hanwha Media Server\ssl*
+
+* **NX** (v5.1.5 기준): *C:\Windows\System32\config\systemprofile\AppData\Local\Network Optix\Network Optix Media Server\ssl*
 
 :::
 
@@ -105,21 +119,21 @@ VMS가 **BioStar X**와 서로 다른 서버에 설치되어 있다면 *scaleUti
 
 1. 처음 접속한다면 **BioStar X** 관리자 계정으로 로그인해야 합니다.
 
-    <Image src='/img/biostarx-settings-video-integration-login.png' />
+   <Image src='/img/biostarx-settings-video-integration-login.png' />
 
 1. <Cmd sid='video.setting.integration.title' product='2' /> 옵션을 <Cmd sid='common.use' product='2' />으로 설정하세요.
 
-    <Image src='/img/biostarx-settings-video-integration.png' />
+   <Image src='/img/biostarx-settings-video-integration.png' />
 
 1. VMS 서버 정보를 입력하세요.
 
-    * <Cmd sid='video.setting.integration.serverAddress' product='2' />: VMS 서버의 IP 주소를 입력하세요.
+   * <Cmd sid='video.setting.integration.serverAddress' product='2' />: VMS 서버의 IP 주소를 입력하세요.
 
-    * <Cmd sid='video.setting.integration.port' product='2' />: VMS 서버의 포트 번호를 입력하세요.
+   * <Cmd sid='video.setting.integration.port' product='2' />: VMS 서버의 포트 번호를 입력하세요.
 
-    * <Cmd sid='video.setting.integration.loginId' product='2' />: VMS 서버의 관리자 계정 아이디를 입력하세요.
+   * <Cmd sid='video.setting.integration.loginId' product='2' />: VMS 서버의 관리자 계정 아이디를 입력하세요.
 
-    * <Cmd sid='video.setting.integration.password' product='2' />: VMS 서버의 관리자 계정 비밀번호를 입력하세요.
+   * <Cmd sid='video.setting.integration.password' product='2' />: VMS 서버의 관리자 계정 비밀번호를 입력하세요.
 
 1. VMS 서버 정보를 모두 입력했으면 화면 오른쪽 하단의 <Cmd sid='button.apply' product='2' /> 버튼을 클릭하세요.
 
@@ -142,15 +156,15 @@ VMS 서버와 처음 연동하면 **BioStar X**는 자동으로 서비스를 재
 
 1. **All Services** 목록에서 아래 서비스의 **Stop** 버튼을 클릭해 서비스를 중지하세요.
 
-    <Image src='/img/common/biostarx-sm-restart-service-video.png' alone />
+   <Image src='/img/common/biostarx-sm-restart-service-video.png' alone />
 
-    * **BioStar X Unified Gateway Service**
+   * **BioStar X Unified Gateway Service**
 
-    * **BioStar X Core Web Service**
+   * **BioStar X Core Web Service**
 
 1. 중지 요청한 서비스의 상태가 **Pending**에서 **Stopped**로 변경되면 **Start** 버튼을 클릭해 서비스를 재시작하세요.
 
-    <Image src='/img/common/biostarx-sm-restart-service-video-start.png' alone />
+   <Image src='/img/common/biostarx-sm-restart-service-video-start.png' alone />
 
 </Step>
 <Step>
@@ -180,11 +194,11 @@ VMS 서버와 정상 연동되었다면 <Cmd sid='setting.menu.video.root' /> �
 
 1. **Target System**을 **VMS**로 선택하고 다음 정보를 입력하세요.
 
-    <Image src='/img/common/biostarx-settings-server-enrollment-vms-certification.png' alone />
+   <Image src='/img/common/biostarx-settings-server-enrollment-vms-certification.png' alone />
 
-    - **Server Address**: VMS 서버의 IP 주소
+   - **Server Address**: VMS 서버의 IP 주소
 
-    - **Port**: VMS 서버의 포트 번호
+   - **Port**: VMS 서버의 포트 번호
 
 1. **Enrollment** 버튼을 클릭하세요.
 

@@ -64,6 +64,12 @@ To play back recorded video from the VMS server, you must use HTTPS protocol. St
 
 1. Navigate to the *C:\Program Files\BioStar X\third* path and run the command prompt.
 
+   :::note
+
+   If VMS is installed on a different server than **BioStar X**, copy the *scaleUtil-1.0-all.jar* file to the VMS server and follow the next steps.
+
+   :::
+
 2. Execute the following command. 
 
    <Tabs groupId='os' defaultValue='Windows'>
@@ -91,7 +97,15 @@ To play back recorded video from the VMS server, you must use HTTPS protocol. St
 
 :::info
 
-If VMS is installed on a different server than **BioStar X**, copy the *scaleUtil-1.0-all.jar* file to the VMS server and follow the previous steps.
+The installation path of the certificate may vary depending on the VMS. Refer to the examples below.
+
+* **BioStar 2 VMS**: *C:\Windows\System32\config\systemprofile\AppData\Local\Suprema Inc\Suprema Inc. Media Server\ssl*
+
+* **Digital Watchdog** (based on v.5.1.5): *C:\Windows\System32\config\systemprofile\AppData\Local\Digital Watchdog\Digital Watchdog Media Server\ssl*
+
+* **Hanwha Wave** (based on v5.1.5): *C:\Windows\System32\config\systemprofile\AppData\Local\Hanwha\Hanwha Media Server\ssl*
+
+* **NX** (based on v5.1.5): *C:\Windows\System32\config\systemprofile\AppData\Local\Network Optix\Network Optix Media Server\ssl*
 
 :::
 
