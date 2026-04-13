@@ -95,9 +95,11 @@ async function main() {
     let docIdsWithDepth;
     if (options.rn) {
       docIdsWithDepth = extractReleaseNoteIdsWithDepth(sidebars[sidebarKey]);
+      delete docIdsWithDepth[0]; // Remove the first item if it's not a doc ID (e.g., a category)
       console.log(`📄 Found ${docIdsWithDepth.length} release note documents in sidebar\n`);
     } else {
       docIdsWithDepth = extractDocIdsWithDepth(sidebars[sidebarKey]);
+      delete docIdsWithDepth[0]; // Remove the first item if it's not a doc ID (e.g., a category)
       console.log(`📄 Found ${docIdsWithDepth.length} documents in sidebar\n`);
     }
 
