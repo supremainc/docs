@@ -452,6 +452,18 @@ const config = {
           },
           {
             type: 'dropdown',
+            label: 'Integration',
+            position: 'right',
+            items: [
+              {
+                type: 'doc',
+                label: 'Genetec',
+                docId: 'integration/genetec/index'
+              }
+            ]
+          },
+          {
+            type: 'dropdown',
             label: 'Developers',
             position: 'right',
             items: [
