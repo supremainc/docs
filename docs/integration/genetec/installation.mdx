@@ -1,0 +1,134 @@
+---
+id: installation
+title: Installation
+description: Learn how to install the Suprema Plugin for Genetec and configure the Extractor and Device Plugins using the Genetec Config Tool.
+keywords: [ plugin installation, Genetec Config Tool, Suprema Extractor Plugin ]
+---
+
+## Minimum System Requirements
+
+<div className='overflow-x col5--15-10-25'>
+
+| \> | Item | Small Business Server | Medium Business Server | Enterprise Business Server |
+| :-- | :-- | :-- | :-- | :-- |
+| Environment | Total Devices | 50 | 150 | 1000 |
+| System requirement | OS | \> | \> | Microsoft Windows 10 or later (64‑bit) |
+| ^ | CPU | 2 GHz dual‑core | 4 GHz quad‑core | 4 GHz, 16‑core |
+| ^ | RAM | 8 GB | 16 GB | 64 GB |
+| ^ | Communication | \> | \> | Supports the Standard Transmission Control Protocol (TCP/IP) networking communication protocol between servers, clients, and devices. |
+| ^ | ^ | \> | \> | Supports Dynamic Host Configuration Protocol (DHCP) or Static IP address. |
+| ^ | ^ | \> | \> | Supports network configuration. |
+| ^ | ^ | \> | \> | Supports Network Time Protocol (NTP). |
+| ^ | ^ | \> | \> | Supports HTTPS communication protected by Secure Socket Layer (SSL) between the client (web browser) and platform. |
+| ^ | Encryption | \> | \> | Supports AES-256 for Fingerprint Template, and Face Template. |
+| ^ | ^ | \> | \> | Supports AES-256 for Fingerprint Template and Face Template (Optional). |
+
+</div>
+
+## Plugin Installation
+
+1. Run the installation file (setup.exe) as an administrator.
+
+   <Image src='/img/integration/genetec/plugin-installation-setup.png' alone />
+
+1. Click **Next**.
+
+   <Image src='/img/integration/genetec/plugin-installation1.png' alone />
+
+1. Set the path where Suprema Plugin will be installed, then click **Next**.
+
+   <Image src='/img/integration/genetec/plugin-installation2.png' alone />
+
+1. If the installation is ready, click **Next**.
+
+   <Image src='/img/integration/genetec/plugin-installation3.png' alone />
+
+1. The installation will begin. Please wait until it completes successfully.
+
+   <Image src='/img/integration/genetec/plugin-installation4.png' alone />
+
+1. Once the installation is complete, a command prompt window will appear. Press any key to close the window.
+
+   <Image src='/img/integration/genetec/plugin-installation-cmd.png' alone />
+
+1. The Biomini Slim2 (Fingerprint Enrollment Device / USB type) driver installation will start. Click **Install**.
+
+   <Image src='/img/integration/genetec/plugin-installation5.png' alone />
+
+1. Click **Finish**.
+
+   <Image src='/img/integration/genetec/plugin-installation6.png' alone />
+
+1. Return to the Plugin installation windows and click **Close**.
+
+   <Image src='/img/integration/genetec/plugin-installation7.png' alone />
+
+1. Press Any Key to complete.
+
+   <Image src='/img/integration/genetec/plugin-installation-cmd.png' alone />
+
+## Added Suprema Plugin in Genetec Config Tool
+
+1. Run the Genetec **Config Tool**.
+
+   <Image src='/img/integration/genetec/config-tool.png' alone />
+
+1. Click the **Plugins** under **Tasks**.
+
+   <Image src='/img/integration/genetec/config-tool-tasks-plugins.png' alone />
+
+1. Click **Add an entity** under the **Plugins** screen, then select **Plugin** from the list.
+
+   <Image src='/img/integration/genetec/config-tool-plugin.png' alone />
+
+1. In **Select plugin type**, select **Suprema Extractor Plugin** and click **Next**.
+
+   <Image src='/img/integration/genetec/config-tool-extractor-plugin1.png' alone />
+
+1. Enter the **Entity name** and **Entity description**, then click **Next**.
+
+   <Image src='/img/integration/genetec/config-tool-extractor-plugin2.png' alone />
+
+   :::info
+
+   The **Entity description** is optional.
+
+   :::
+
+1. Verify the information and click **Create**.
+
+   <Image src='/img/integration/genetec/config-tool-extractor-plugin3.png' alone />
+
+1. The **Suprema Extractor Plugin** will be created. Click **Close**.
+
+   <Image src='/img/integration/genetec/config-tool-successful.png' alone />
+
+1. Click **Add an entity** under **Plugins** screen, then select **Plugin** from the list.
+
+   <Image src='/img/integration/genetec/config-tool-plugin.png' alone />
+
+1. In **Select plugin type**, select **Suprema Device Plugin** and click **Next**.
+
+   <Image src='/img/integration/genetec/config-tool-device-plugin1.png' alone />
+
+1. Enter the **Entity name** and **Entity description**, then click **Next**.
+
+   <Image src='/img/integration/genetec/config-tool-device-plugin2.png' alone />
+
+   :::info
+
+   The **Entity description** is optional.
+
+   :::
+
+1. Verify the information and click **Create**.
+
+   <Image src='/img/integration/genetec/config-tool-device-plugin3.png' alone />
+
+1. The **Suprema Device Plugin** will be created. Click **Close**.
+
+   <Image src='/img/integration/genetec/config-tool-successful.png' alone />
+
+1. The addition of the **Suprema Plugin** is complete.
+
+   <Image src='/img/integration/genetec/config-tool-add-plugin.png' alone />
