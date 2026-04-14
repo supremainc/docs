@@ -90,9 +90,9 @@ header p {
 }
 
 .layout a.active {
-  color: #a32343; /* 또는 원하는 하이라이트 색상 */
+  color: #3560b9; /* 또는 원하는 하이라이트 색상 */
   font-weight: 600;
-  background-color: #f5f5f5;
+  background-color: #e8eefa;
 }
 
 .toc {
@@ -108,6 +108,7 @@ header p {
 }
 
 .toc h2 {
+  display: none;
   font-size: 1.5em;
   font-weight: bold;
   color: var(--ifm-color-cmd);
