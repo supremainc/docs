@@ -2151,6 +2151,27 @@ const sidebars = {
         'integration/genetec/appendices'
       ]
     }
+  ],
+  gallagher: [
+    {
+      type: 'category',
+      label: 'Gallagher',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'integration/gallagher/index',
+      },
+      items: [
+        'integration/gallagher/purpose',
+        'integration/gallagher/introduction',
+        'integration/gallagher/installation',
+        'integration/gallagher/configuration',
+        'integration/gallagher/integration-gallagher',
+        'integration/gallagher/troubleshooting'
+      ]
+    }
   ]
 };
 

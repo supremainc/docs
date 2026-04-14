@@ -459,6 +459,11 @@ const config = {
                 type: 'doc',
                 label: 'Genetec',
                 docId: 'integration/genetec/index'
+              },
+              {
+                type: 'doc',
+                label: 'Gallagher',
+                docId: 'integration/gallagher/index'
               }
             ]
           },
