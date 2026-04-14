@@ -41,23 +41,59 @@ module.exports = function () {
                                         userAgent: navigator.userAgent
                                     });
                                     
-                                    // Bot/Crawler 감지 함수
-                                    function isAlgoliaCrawler() {
+                                    // 허용된 IP 주소 목록
+                                    const allowedIPs = [
+                                        '34.66.202.43'  // Algolia Crawler IP
+                                    ];
+                                    
+                                    // 사용자 IP 주소 확인
+                                    async function getUserIP() {
+                                        try {
+                                            const response = await fetch('https://api.ipify.org?format=json', { timeout: 3000 });
+                                            const data = await response.json();
+                                            return data.ip;
+                                        } catch (error) {
+                                            console.warn('Failed to retrieve user IP:', error);
+                                            return null;
+                                        }
+                                    }
+                                    
+                                    // IP 주소 기반 화이트리스트 확인
+                                    function isWhitelistedIP(userIP) {
+                                        return allowedIPs.includes(userIP);
+                                    }
+                                    
+                                    // Bot/Crawler 감지 함수 (User Agent 및 IP 기반)
+                                    async function isAlgoliaCrawler() {
                                         if (typeof window === 'undefined' || typeof navigator === 'undefined') return false;
                                         
+                                        // 1단계: User Agent 확인
                                         const userAgent = window.navigator.userAgent;
                                         const isAlgolia = userAgent.includes('Algolia Crawler');
                                         const isJSDOM = userAgent.includes('jsdom');
                                         
                                         if (isAlgolia) {
-                                            console.log('Algolia Crawler detected - Authentication disabled');
+                                            console.log('Algolia Crawler detected via User Agent - Authentication disabled');
+                                            return true;
                                         }
                                         
                                         if (isJSDOM) {
                                             console.log('JSDOM (PDF generation) detected - Authentication disabled');
+                                            return true;
                                         }
                                         
-                                        return isAlgolia || isJSDOM;
+                                        // 2단계: IP 주소 화이트리스트 확인 (User Agent 감지 실패 시 대체)
+                                        try {
+                                            const userIP = await getUserIP();
+                                            if (userIP && isWhitelistedIP(userIP)) {
+                                                console.log('Algolia Crawler detected via IP whitelist (' + userIP + ') - Authentication disabled');
+                                                return true;
+                                            }
+                                        } catch (error) {
+                                            console.warn('IP whitelist check error:', error);
+                                        }
+                                        
+                                        return false;
                                     }
                                     
                                     // 브라우저 호환성 체크
@@ -77,10 +113,11 @@ module.exports = function () {
                                         return { isSupported: true };
                                     }
                                     
-                                    // 인증 활성화 여부 확인 (항상 활성화로 단순화)
-                                    function shouldEnableAuth() {
+                                    // 인증 활성화 여부 확인 (IP 화이트리스트 포함)
+                                    async function shouldEnableAuth() {
                                         // Algolia Crawler 감지 시에만 인증 비활성화
-                                        if (isAlgoliaCrawler()) {
+                                        const isCrawler = await isAlgoliaCrawler();
+                                        if (isCrawler) {
                                             return false;
                                         }
                                         
@@ -130,9 +167,10 @@ module.exports = function () {
                                     };
                                     
                                     // MSAL 인스턴스 초기화 및 인증 처리
-                                    function initializeAuth() {
+                                    async function initializeAuth() {
                                         // 인증이 비활성화된 경우 스킵
-                                        if (!shouldEnableAuth()) {
+                                        const authEnabled = await shouldEnableAuth();
+                                        if (!authEnabled) {
                                             return;
                                         }
                                         
@@ -159,7 +197,6 @@ module.exports = function () {
                                             \`;
                                             return;
                                         }
-                                        
                                         // MSAL 인스턴스 생성
                                         const msalInstance = new window.msal.PublicClientApplication(msalConfig);
                                         
@@ -251,9 +288,15 @@ module.exports = function () {
                                     
                                     // DOM이 로드된 후 초기화
                                     if (document.readyState === 'loading') {
-                                        document.addEventListener('DOMContentLoaded', initializeAuth);
+                                        document.addEventListener('DOMContentLoaded', () => {
+                                            initializeAuth().catch(err => {
+                                                console.error('Authentication initialization error:', err);
+                                            });
+                                        });
                                     } else {
-                                        initializeAuth();
+                                        initializeAuth().catch(err => {
+                                            console.error('Authentication initialization error:', err);
+                                        });
                                     }
                                 }
                                 
