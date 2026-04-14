@@ -32,7 +32,7 @@ program
   .description('Convert multiple MDX files to a single HTML document')
   .option('-s, --sidebar <key>', 'Sidebar configuration key', 'bsxplugins')
   .option('-o, --output <file>', 'Output HTML file', 'output.html')
-  .option('-t, --template <type>', 'Template type: simple, professional, documentation', 'professional')
+  .option('-t, --template <type>', 'Template type: simple, professional, documentation', 'professional', 'embedded')
   .option('-p, --product <products>', 'Product filter (comma-separated)', '')
   .option('-l, --language <lang>', 'Language for i18n (ko, en, es, ja)', 'ko')
   .option('--toc', 'Generate table of contents', true)
