@@ -3,7 +3,7 @@ id: 141-draft
 title: 펌웨어 버전 1.4.1
 ---
 
-# 펌웨어 버전 1.4.1 (빌드 번호 1.4.1_260408)
+# 펌웨어 버전 1.4.1 (빌드 번호 1.4.1_260413)
 
 릴리즈<Separator/>2026-04-15
 
@@ -52,3 +52,29 @@ title: 펌웨어 버전 1.4.1
    - Disabled the **Master Admin** and **Admin 2-step Authentication** features
 
    - Reduced the minimum length for PIN enrollment to 4 digits
+
+<Jira num='ONYXFW-989' /> XPQ2 지원
+
+1. XPass Q2 모델 슬레이브로 연결할 수 있도록 지원
+
+1. Supported connecting the XPass Q2 model as a slave device.
+
+## 버그 수정
+
+---
+
+<BugLists>
+
+<Jira num='ONYXFW-986' /> 잘못된 라이선스 파일(Camera QR)을 등록하는 경우 실패처리 추가
+
+1. 잘못된 라이선스 파일 등록 시 장치가 재부팅되는 문제 <Badge>1.2.0</Badge>
+
+1. Device rebooting when activating an invalid license file. <Badge>1.2.0</Badge>
+
+<Jira num='ONYXFW-972' /> Slave로 연결된 장치에 라이선스 적용한 다음 라이선스 적용 장치 reboot시 라이선스 삭제되는 문제
+
+1. 슬레이브로 연결된 장치에 라이선스 적용 후 카메라 QR이 동작하지 않는 문제 <Badge>1.2.0</Badge>
+
+1. Camera QR not working after applying license to a slave device. <Badge>1.2.0</Badge>
+
+</BugLists>
