@@ -4,7 +4,7 @@
 
 import { escapeHtml, extractHeadingsFromMarkdown } from './utils.mjs';
 import { markdownToHtml } from './converter-rehype.mjs';
-import { getTemplateCSS } from './config.mjs';
+import { getTemplateCSS, getEmbeddedScript } from './config.mjs';
 
 /**
  * Extract headings from generated HTML content
@@ -173,7 +173,8 @@ export async function buildHtmlDocument(mdxFiles, title, options = {}) {
     product = '',
     translations = {},
     basePath = '',
-    rn = false
+    rn = false,
+    version = ''
   } = options;
 
   const contentSections = [];
@@ -215,6 +216,12 @@ export async function buildHtmlDocument(mdxFiles, title, options = {}) {
   const css = getTemplateCSS(template);
   // Generate TOC after content HTML is created, from actual rendered headings
   const tocHtml = toc ? generateTableOfContents(contentHtml, language, maxDepth, rn, product) : '';
+  
+  let Jscript = '';
+
+  if (template === 'embedded') {
+    Jscript = getEmbeddedScript();
+  }
   let copyright;
   switch (language) {
     case 'ko':
@@ -245,7 +252,7 @@ ${css}
   <div class="container">
     <header>
       <h1>${escapeHtml(title)}</h1>
-      <p>생성: ${new Date().toLocaleString('ko-KR')}</p>
+      <p>Version: ${escapeHtml(version)} | Created: ${new Date().toLocaleDateString(language)}</p>
     </header>
 
     <div class="layout">
@@ -255,30 +262,12 @@ ${css}
     <main class="content">
       ${contentHtml}
     </main>
-
-    <footer>
-      <p>${escapeHtml(copyright)}</p>
-    </footer>
   </div>
-
+  <footer>
+    <p>${escapeHtml(copyright)}</p>
+  </footer>
   <button class="back-to-top" id="backToTop" title="맨 위로">↑</button>
-
-  <script>
-    // Back to top button functionality
-    const backToTopBtn = document.getElementById('backToTop');
-    
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) {
-        backToTopBtn.classList.add('show');
-      } else {
-        backToTopBtn.classList.remove('show');
-      }
-    });
-    
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+  ${template === 'embedded' ? `<script>${Jscript}</script>` : ''}
 </body>
 </html>`;
 

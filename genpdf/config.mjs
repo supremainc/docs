@@ -46,6 +46,20 @@ export function getDocBasePath(language) {
   return path.join(ROOT_DIR, 'i18n', lang, 'docusaurus-plugin-content-docs', 'current');
 }
 
+export function getEmbeddedScript() {
+  const JScript = path.join(__dirname, 'embedded.js');
+  if (fs.existsSync(JScript)) {
+    try {
+      return fs.readFileSync(JScript, 'utf8');
+    } catch (error) {
+      console.warn(`⚠️  Failed to load ${JScript}: ${error.message}`);
+    }
+  } else {
+    console.warn(`⚠️  ${JScript} not found`);
+  }
+  return '';
+}
+
 /**
  * Get CSS content from files
  * @param {string} template - Template type

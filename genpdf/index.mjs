@@ -38,6 +38,7 @@ program
   .option('--toc', 'Generate table of contents', true)
   .option('--max-depth <number>', 'Maximum heading depth for TOC', '3')
   .option('--rn', 'Extract release notes only', false)
+  .option('-v, --version <version>', 'Version for release notes (e.g., 1.0.0)', '')
   .parse(process.argv);
 
 const options = program.opts();
@@ -145,7 +146,8 @@ async function main() {
       product: options.product,
       translations,
       basePath: ROOT_DIR,
-      rn: options.rn
+      rn: options.rn,
+      version: options.version
     });
 
     // Write output file

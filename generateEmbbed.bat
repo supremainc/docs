@@ -40,7 +40,7 @@ set OUTPUT=%PRODUCT_NAME%_%PRODUCT_TYPE%_%VERSION%_%LANG%.html
 echo %OUTPUT%
 
 echo Generating HTML: %OUTPUT%
-node genpdf/index.mjs --sidebar %SIDEBAR% --product %FILTER% --language %LANGUAGE% --toc --output ./pdf/%OUTPUT% --max-depth 2 --template embedded
+node genpdf/index.mjs --sidebar %SIDEBAR% --product %FILTER% --language %LANGUAGE% --toc --output ./pdf/%OUTPUT% --max-depth 2 --template embedded --version %VERSION%
 
 echo image to base64
 node genpdf/convert-images-to-base64.mjs ./pdf/%OUTPUT%
