@@ -88,16 +88,17 @@ NTP 서버를 통해 카메라의 시간을 자동으로 정확하게 유지할 
 
    <Image src='/img/cam-server/cam-webserver-settings-date-time-sync-mode.png' />
 
-1. <Cmd sid='ntp_address_1' product='cam' /> (필수) 필드에 NTP 서버 주소를 입력하세요.
+1. <Cmd sid='ntp_address_1' product='cam' />(필수) 필드에 NTP 서버 주소를 입력하세요.
 
    * URL 형식: time.windows.com, time.nist.gov 등
+
    * IP 주소: 192.0.2.1 등
 
 1. (선택) 필요하면 <Cmd sid='ntp_address_2' product='cam' />, <Cmd sid='ntp_address_3' product='cam' />, <Cmd sid='ntp_address_4' product='cam' />에 추가 NTP 서버를 입력하세요.
 
    * 최대 4개 서버까지 설정할 수 있습니다.
 
-   * 주소 1이 응답하지 않으면 자동으로 다음 서버로 전환됩니다.
+   * <Cmd sid='ntp_address_1' product='cam' />이 응답하지 않으면 자동으로 다음 서버로 전환됩니다.
 
 1. 시간 설정을 저장하려면 화면 오른쪽 상단의 <Cmd sid='save' product='cam' /> 버튼을 클릭하세요.
 
@@ -105,13 +106,12 @@ NTP 서버를 통해 카메라의 시간을 자동으로 정확하게 유지할 
 
 :::info
 
-**NTP 서버 우선순위:**
-- 주소 1 (첫 번째) → 주소 2 → 주소 3 → 주소 4 순서로 연결 시도
-- 우선순위 서버가 응답하지 않으면 자동으로 다음 서버를 시도
+**권장 NTP 서버**
 
-**권장 NTP 서버:**
-- time.windows.com (Windows 공용 NTP)
-- time.nist.gov (NIST 공용 NTP)
-- pool.ntp.org (NTP Pool 프로젝트)
+* time.windows.com (Windows 공용 NTP)
+
+* time.nist.gov (NIST 공용 NTP)
+
+* pool.ntp.org (NTP Pool 프로젝트)
 
 :::
