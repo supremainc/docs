@@ -11,7 +11,7 @@ function initScrollSpy() {
   // Intersection Observer 옵션
   const observerOptions = {
     root: null,
-    rootMargin: '130px 0px -50% 0px', // 화면 중간이 기준
+    rootMargin: '147px 0px -80% 0px', // 화면 중간이 기준
     threshold: 0
   };
 
