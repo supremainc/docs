@@ -10,11 +10,18 @@ BioStar Air Cloud API는 Bearer 토큰(JWT) 기반 인증을 사용합니다. AP
 
 ## API Base URLs {#api-base-urls}
 
-| 환경 | Base URL |
-| --- | --- |
-| Demo | https://demo-afs-api.airfob.com/v1/ |
-| Production - Europe | https://e-afs-api.airfob.com/v1/ |
-| Production - Korea | https://a-afs-api.airfob.com/v1/ (EU가 아닌 모든 고객 전용) |
+| 환경 | Base URL | 설명 |
+| --- | --- | --- |
+| Demo(TEST) | [https://sp-demo-api.airfob.com/v1](https://sp-demo-api.airfob.com/v1) | 애플리케이션 유형을 'Demo'로 등록하면 데모 환경 사이트와 사이트 마스터 계정 정보를 csv 파일로 다운로드할 수 있습니다. |
+| Production (LIVE) | [https://sp-api.airfob.com/v1](https://sp-api.airfob.com/v1) | (**자동 라우팅**) 클라이언트 지역에 따라 글로벌 또는 EU 서버를 자동 선택합니다. |
+| ^ | [https://sp-a-api.airfob.com/v1](https://sp-a-api.airfob.com/v1) | (**글로벌 전용**) 글로벌 서버 환경으로 연결됩니다. |
+| ^ | [https://sp-e-api.airfob.com/v1](https://sp-e-api.airfob.com/v1) | (**EU 전용**) EU 서버 환경으로 연결됩니다. |
+
+:::note
+
+**자동 라우팅** 환경은 지역 감지에 따라 예상치 못한 라우팅(routing)이 발생할 수 있습니다.
+
+:::
 
 
 ## API 로그인 절차 {#api-login-flow}
