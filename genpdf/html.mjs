@@ -4,7 +4,7 @@
 
 import { escapeHtml, extractHeadingsFromMarkdown } from './utils.mjs';
 import { markdownToHtml } from './converter-rehype.mjs';
-import { getTemplateCSS } from './config.mjs';
+import { getTemplateCSS, getEmbeddedScript } from './config.mjs';
 
 /**
  * Extract headings from generated HTML content
@@ -115,10 +115,10 @@ function generateTocFromHeadings(headings) {
   }
   
   // Close all remaining open tags
-  while (currentDepth >= 0) {
-    html += '</li>\n</div>\n';
-    currentDepth--;
-  }
+  // while (currentDepth >= 0) {
+  //   html += '</li>\n</div>\n';
+  //   currentDepth--;
+  // }
   
   return html;
 }
@@ -166,14 +166,15 @@ export function generateTableOfContents(contentHtml, language, maxDepth = 3, rn 
  */
 export async function buildHtmlDocument(mdxFiles, title, options = {}) {
   const {
-    template = 'professional',
+    template = options.template || 'professional',
     toc = true,
     maxDepth = 3,
     language = 'ko',
     product = '',
     translations = {},
     basePath = '',
-    rn = false
+    rn = false,
+    version = ''
   } = options;
 
   const contentSections = [];
@@ -215,56 +216,58 @@ export async function buildHtmlDocument(mdxFiles, title, options = {}) {
   const css = getTemplateCSS(template);
   // Generate TOC after content HTML is created, from actual rendered headings
   const tocHtml = toc ? generateTableOfContents(contentHtml, language, maxDepth, rn, product) : '';
+  
+  let Jscript = '';
+
+  if (template === 'embedded') {
+    Jscript = getEmbeddedScript();
+  }
+  let copyright;
+  switch (language) {
+    case 'ko':
+      copyright = 'Copyright © Suprema Inc. All rights reserved. | 주식회사 슈프리마 사업자 등록번호 431-87-00369';
+      break;
+    case 'en':
+      copyright = 'Copyright © Suprema Inc. All rights reserved. | SUPREMA Co., Ltd. Business Registration Number 431-87-00369';
+      break;
+    case 'es':
+      copyright = 'Copyright © Suprema Inc. Todos los derechos reservados. | SUPREMA Co., Ltd. Número de registro de empresa 431-87-00369';
+      break;
+    case 'ja':
+      copyright = 'Copyright © Suprema Inc. All rights reserved. | 株式会社Suprema 事業者登録番号 431-87-00369';
+      break;
+  }
 
   const html = `<!DOCTYPE html>
 <html lang="${language}">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${escapeHtml(title)}</title>
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${escapeHtml(title)}</title>
+<style>
 ${css}
-  </style>
+</style>
 </head>
 <body>
   <div class="container">
     <header>
       <h1>${escapeHtml(title)}</h1>
-      <p>생성: ${new Date().toLocaleString('ko-KR')}</p>
+      <p>Version: ${escapeHtml(version)} | Created: ${new Date().toLocaleDateString(language)}</p>
     </header>
 
     <div class="layout">
       ${tocHtml}
-      
-      <main class="content">
-        ${contentHtml}
-      </main>
     </div>
 
-    <footer>
-      <p>이 문서는 여러 개의 MDX 파일로부터 자동으로 생성되었습니다.</p>
-      <p>생성 시간: ${new Date().toLocaleString('ko-KR')}</p>
-    </footer>
+    <main class="content">
+      ${contentHtml}
+    </main>
   </div>
-
+  <footer>
+    <p>${escapeHtml(copyright)}</p>
+  </footer>
   <button class="back-to-top" id="backToTop" title="맨 위로">↑</button>
-
-  <script>
-    // Back to top button functionality
-    const backToTopBtn = document.getElementById('backToTop');
-    
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) {
-        backToTopBtn.classList.add('show');
-      } else {
-        backToTopBtn.classList.remove('show');
-      }
-    });
-    
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+  ${template === 'embedded' ? `<script>${Jscript}</script>` : ''}
 </body>
 </html>`;
 

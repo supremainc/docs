@@ -32,12 +32,13 @@ program
   .description('Convert multiple MDX files to a single HTML document')
   .option('-s, --sidebar <key>', 'Sidebar configuration key', 'bsxplugins')
   .option('-o, --output <file>', 'Output HTML file', 'output.html')
-  .option('-t, --template <type>', 'Template type: simple, professional, documentation', 'professional')
+  .option('-t, --template <type>', 'Template type: simple, professional, documentation', 'professional', 'embedded')
   .option('-p, --product <products>', 'Product filter (comma-separated)', '')
   .option('-l, --language <lang>', 'Language for i18n (ko, en, es, ja)', 'ko')
   .option('--toc', 'Generate table of contents', true)
   .option('--max-depth <number>', 'Maximum heading depth for TOC', '3')
   .option('--rn', 'Extract release notes only', false)
+  .option('-v, --version <version>', 'Version for release notes (e.g., 1.0.0)', '')
   .parse(process.argv);
 
 const options = program.opts();
@@ -145,7 +146,8 @@ async function main() {
       product: options.product,
       translations,
       basePath: ROOT_DIR,
-      rn: options.rn
+      rn: options.rn,
+      version: options.version
     });
 
     // Write output file

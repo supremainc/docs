@@ -46,6 +46,20 @@ export function getDocBasePath(language) {
   return path.join(ROOT_DIR, 'i18n', lang, 'docusaurus-plugin-content-docs', 'current');
 }
 
+export function getEmbeddedScript() {
+  const JScript = path.join(__dirname, 'embedded.js');
+  if (fs.existsSync(JScript)) {
+    try {
+      return fs.readFileSync(JScript, 'utf8');
+    } catch (error) {
+      console.warn(`⚠️  Failed to load ${JScript}: ${error.message}`);
+    }
+  } else {
+    console.warn(`⚠️  ${JScript} not found`);
+  }
+  return '';
+}
+
 /**
  * Get CSS content from files
  * @param {string} template - Template type
@@ -53,18 +67,24 @@ export function getDocBasePath(language) {
  */
 export function getTemplateCSS(template) {
   let css = '';
-  
-  // Load default CSS
-  const defaultCSSPath = path.join(__dirname, 'default.css');
+  let CSSPath;
+  if (template === 'embedded') {
+    CSSPath = path.join(__dirname, 'embedded.css');
+  } else {
+    CSSPath = path.join(__dirname, `default.css`);
+  }
+  // Load CSS
+  const defaultCSSPath = path.join(CSSPath);
+
   if (fs.existsSync(defaultCSSPath)) {
     try {
       css = fs.readFileSync(defaultCSSPath, 'utf8');
-      console.log('✓ CSS loaded from default.css');
+      console.log(`✓ CSS loaded from ${CSSPath}`);
     } catch (error) {
-      console.warn(`⚠️  Failed to load default.css: ${error.message}`);
+      console.warn(`⚠️  Failed to load ${CSSPath}: ${error.message}`);
     }
   } else {
-    console.warn('⚠️  default.css not found');
+    console.warn(`⚠️  ${CSSPath} not found`);
   }
 
   return css;
