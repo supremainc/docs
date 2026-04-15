@@ -464,6 +464,11 @@ const config = {
                 type: 'doc',
                 label: 'Gallagher',
                 docId: 'integration/gallagher/index'
+              },
+              {
+                type: 'doc',
+                label: 'C•CURE',
+                docId: 'integration/ccure/index'
               }
             ]
           },
