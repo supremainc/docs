@@ -41,7 +41,7 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: !isPreview ? '/' : '/docs/',
-  noIndex: !isPreview ? false : true,
+  noIndex: false,
   future: {
     v4: {
       removeLegacyPostBuildHeadAttribute: true,
