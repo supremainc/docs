@@ -13,11 +13,18 @@ La API de BioStar Air Cloud utiliza autenticación basada en tokens Bearer (JWT)
 
 ## URLs base de la API {#api-base-urls}
 
-| Entorno | URL base |
-| --- | --- |
-| Demo | https://demo-afs-api.airfob.com/v1/ |
-| Producción - Europa | https://e-afs-api.airfob.com/v1/ |
-| Producción - Corea | https://a-afs-api.airfob.com/v1/ (para todos los clientes que no pertenezcan a la UE) |
+| Entorno | URL base | Descripción |
+| --- | --- | --- |
+| Demo (prueba) | [https://sp-demo-api.airfob.com/v1](https://sp-demo-api.airfob.com/v1) | Cuando el tipo de aplicación esté registrado como "Demo", puede descargar el sitio del entorno de demostración y la información de la cuenta maestra del sitio en un archivo csv. |
+| Producción (en vivo) | [https://sp-api.airfob.com/v1](https://sp-api.airfob.com/v1) | (**Auto-Routing**) Selecciona automáticamente el servidor global o el de la UE según la región del cliente. |
+| ^ | [https://sp-a-api.airfob.com/v1](https://sp-a-api.airfob.com/v1) | (**Global Dedicated**) Se conecta al entorno del servidor global. |
+| ^ | [https://sp-e-api.airfob.com/v1](https://sp-e-api.airfob.com/v1) | (**EU Dedicated**) Se conecta al entorno del servidor EU(Europe). |
+
+:::note
+
+El entorno **Auto-Routing** puede ocasionar un enrutamiento inesperado según la detección de la región.
+
+:::
 
 ## Flujo de inicio de sesión de la API {#api-login-flow}
 
