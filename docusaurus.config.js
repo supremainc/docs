@@ -188,6 +188,7 @@ const config = {
     ],
   ],
   plugins: [
+    [ './src/plugins/whatap-monitoring', {} ],
     // PrivateStarter 플러그인
     ...(!isDev && !isPreview ? [['./src/plugins/privateStarter', {}]] : []),
     // Redocusaurus Prism 주입 문제 해결 플러그인
