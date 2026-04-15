@@ -69,7 +69,7 @@ module.exports = function () {
                                         
                                         // 1단계: User Agent 확인
                                         const userAgent = window.navigator.userAgent;
-                                        const isAlgolia = userAgent.includes('Algolia Crawler');
+                                        const isAlgolia = /AlgoliaWebCrawler|Algolia Crawler|algoliasearch/i.test(userAgent);
                                         const isJSDOM = userAgent.includes('jsdom');
                                         
                                         if (isAlgolia) {
