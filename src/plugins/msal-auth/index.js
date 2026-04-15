@@ -23,15 +23,18 @@ module.exports = function () {
                                 // 🚀 맨 처음에 크롤러 감지 (MSAL.js 로드 전)
                                 function isCrawler() {
                                     const ua = navigator?.userAgent || '';
-                                    const crawlerPatterns = /AlgoliaWebCrawler|Algolia Crawler|algoliasearch|jsdom|bot|crawler|spider/i;
+                                    // Algolia Crawler 패턴: "Algolia Crawler/v0.0.0" 형식도 감지
+                                    const crawlerPatterns = /Algolia\s+Crawler|AlgoliaWebCrawler|algoliasearch|jsdom/i;
                                     return crawlerPatterns.test(ua);
                                 }
                                 
                                 console.log('=== Early Crawler Detection ===');
                                 console.log('User Agent:', navigator?.userAgent || 'unknown');
+                                console.log('Is Crawler:', isCrawler());
                                 
                                 if (isCrawler()) {
-                                    console.log('✓ Crawler detected - Skipping MSAL authentication');
+                                    console.log('✓ Algolia Crawler detected - Skipping MSAL authentication');
+                                    console.log('Crawler can now access and index the content');
                                     return;  // 🎯 크롤러면 여기서 종료, MSAL.js 로드 안 함
                                 }
                                 
