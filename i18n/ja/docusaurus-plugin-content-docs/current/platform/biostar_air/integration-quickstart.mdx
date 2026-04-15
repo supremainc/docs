@@ -36,11 +36,17 @@ BioStar Airのデモサイトを設定し、対応デバイスを接続・登録
 
 ### サインアップとログイン
 
-* [BioStar Air Developer](https://developers.biostarair.com/login) に移動する。
+1. [BioStar Air Developer](https://developers.biostarair.com/login) に移動する。
 
-* 「**サインアップ**」をクリックし、フォームを記入して承認を待つ。
+2. 「**サインアップ**」をクリックし、フォームを記入して承認を待つ。
 
-* 承認が完了したら、クレデンシャルを使ってログインする。
+3. 承認が完了したら、ユーザーのメールアドレスとパスワードを使って開発者ポータルにログインしてください。
+
+:::info
+
+開発者ポータルのメールアドレスとパスワードはデモポータルでは使用できません。
+
+:::
 
 </Step>
 <Step>
@@ -55,31 +61,51 @@ BioStar Airのデモサイトを設定し、対応デバイスを接続・登録
 
 4. アプリケーション名を入力し、**Register**ボタンをクリックする。
 
-5. デモサイトのログインクレデンシャル（メールとパスワード）を含むExcelファイルをダウンロードするには、**Download**ボタンをクリックする。
+5. デモアプリケーションの登録が完了すると、*site_info.csv* ファイルをダウンロードできます。
+
+:::info
+
+* *site_info.csv* ファイルには、エイリアスのメールアドレスとパスワードが含まれています。
+
+* デモポータルにログインする際は、必ずこのエイリアスのメールアドレスとパスワードを使用してください。
+
+* **開発者ポータルにログインするためのメールアドレスとパスワードをデモポータルで使用しないでください**。
+
+:::
 
 </Step>
 <Step>
 
 ### APIキーの発行
 
-1. 「**Application Management**」で登録したアプリケーションをクリックする。
+1. 「**API**」→「**Management**」に移動する。
 
-2. 「**API Management**」までスクロールする。
+2. 登録済みのアプリケーションをクリックしてください。
 
-3. 「**Add**」ボタンをクリックする。
+3. 「**API Management**」までスクロールする。
 
-4. 名前を入力して確認する。 生成されたキーを保存する。
+4. 「**Add**」ボタンをクリックする。
+
+5. 名前を入力して確認する。
+
+6. 生成されたAPIキーをコピーして安全に保存してください。
+
+このAPIキーを使って、デモ環境へのAPIリクエストを認証できます。
 
 </Step>
 <Step>
 
 ### デモポータルへのログイン
 
-1. [Demo Portal](https://demo.airfobspace.com/login) に移動する。
+1. 開発者ポータルのメニューで**Demo Portal**をクリックするか、[https://demo.airfobspace.com/login](https://demo.airfobspace.com/login) に直接アクセスしてください。
 
-2. Excelファイルのメールとパスワードでログインする。
+2. *site_info.csv* ファイルに記載されているエイリアスのメールアドレスとパスワードでログインしてください。
 
-3. 先ほど生成したAPIキーを入力する。
+:::info
+
+**開発者ポータルにログインするためのメールアドレスとパスワードをデモポータルで使用しないでください**。
+
+:::
 
 </Step>
 </Steps>
@@ -88,9 +114,9 @@ BioStar Airのデモサイトを設定し、対応デバイスを接続・登録
 
 モバイル機器でBioStar Air Demo App（Android専用）を使用する。
 
-1. 次のリンクをクリックしてモバイルアプリをダウンロードする。 [DeviceRegistration.zip](https://moca-public-file-share.s3.ap-northeast-2.amazonaws.com/DeviceRegistration.zip)
+1. [BioStar Air Developers](https://developers.biostarair.com/portal/biostarair-app) に移動してデモアプリをダウンロードしてください。
 
-2. Excelファイルのクレデンシャルでログインする。
+2. デモアプリを起動し、*site_info.csv* ファイルに記載されているエイリアスのメールアドレスとパスワードでログインしてください。
 
 3. Android端末をリーダーの近く（BLEの範囲内）に持っていく。
 
