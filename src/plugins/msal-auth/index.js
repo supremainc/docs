@@ -20,6 +20,23 @@ module.exports = function () {
                         innerHTML: `
                             // MSAL 라이브러리가 로드될 때까지 대기
                             (function() {
+                                // 🚀 맨 처음에 크롤러 감지 (MSAL.js 로드 전)
+                                function isCrawler() {
+                                    const ua = navigator?.userAgent || '';
+                                    const crawlerPatterns = /AlgoliaWebCrawler|Algolia Crawler|algoliasearch|jsdom|bot|crawler|spider/i;
+                                    return crawlerPatterns.test(ua);
+                                }
+                                
+                                console.log('=== Early Crawler Detection ===');
+                                console.log('User Agent:', navigator?.userAgent || 'unknown');
+                                
+                                if (isCrawler()) {
+                                    console.log('✓ Crawler detected - Skipping MSAL authentication');
+                                    return;  // 🎯 크롤러면 여기서 종료, MSAL.js 로드 안 함
+                                }
+                                
+                                console.log('✓ Regular user detected - Proceed with MSAL authentication');
+                                
                                 function waitForMSAL() {
                                     if (typeof window.msal === 'undefined') {
                                         console.log('Waiting for MSAL library to load...');
@@ -43,30 +60,17 @@ module.exports = function () {
                                     
 
                                     
-                                    // Bot/Crawler 감지 함수 (User Agent 기반)
+                                    // Bot/Crawler 감지 함수 (이중 안전장치)
                                     function isAlgoliaCrawler() {
-                                        if (typeof window === 'undefined' || typeof navigator === 'undefined') return false;
-                                        
-                                        const userAgent = window.navigator.userAgent;
-                                        const isAlgolia = /AlgoliaWebCrawler|Algolia Crawler|algoliasearch/i.test(userAgent);
-                                        const isJSDOM = userAgent.includes('jsdom');
-                                        
-                                        console.log('=== Crawler Detection ===');
-                                        console.log('User Agent:', userAgent);
-                                        console.log('Is Algolia Crawler:', isAlgolia);
-                                        console.log('Is JSDOM:', isJSDOM);
+                                        // 초기 감지에서 이미 크롤러를 걸러냈으므로, 
+                                        // 여기도달한 것은 일반 사용자일 가능성이 높음
+                                        const ua = navigator?.userAgent || '';
+                                        const isAlgolia = /AlgoliaWebCrawler|Algolia Crawler|algoliasearch|jsdom|bot|crawler/i.test(ua);
                                         
                                         if (isAlgolia) {
-                                            console.log('✓ Algolia Crawler detected - Authentication disabled');
+                                            console.log('⚠️ Secondary crawler detection triggered');
                                             return true;
                                         }
-                                        
-                                        if (isJSDOM) {
-                                            console.log('✓ JSDOM (PDF generation) detected - Authentication disabled');
-                                            return true;
-                                        }
-                                        
-                                        console.log('✗ Not a crawler - Authentication required');
                                         return false;
                                     }
                                     
