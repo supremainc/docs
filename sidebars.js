@@ -2172,6 +2172,26 @@ const sidebars = {
         'integration/gallagher/troubleshooting'
       ]
     }
+  ],
+  ccure: [
+    {
+      type: 'category',
+      label: 'C•CURE',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'integration/ccure/index',
+      },
+      items: [
+        'integration/ccure/getting-started',
+        'integration/ccure/installation',
+        'integration/ccure/enrolling-biometrics',
+        'integration/ccure/troubleshooting',
+        'integration/ccure/appendices'
+      ]
+    }
   ]
 };
 
