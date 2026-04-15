@@ -194,7 +194,7 @@ const config = {
     // Redocusaurus Prism 주입 문제 해결 플러그인
     [ './src/plugins/fix-prism', {} ],
     // MSAL 인증 플러그인은 프로덕션 환경에서만 활성화
-    // ...(!isDev && isPreview ? [['./src/plugins/msal-auth', {}]] : []),
+    ...(!isDev && isPreview ? [['./src/plugins/msal-auth', {}]] : []),
     [ 'docusaurus-plugin-sass', {} ],
     [ 'docusaurus-plugin-image-zoom', {}],
     ...(!isPreview ? [[
