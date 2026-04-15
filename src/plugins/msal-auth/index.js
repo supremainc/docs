@@ -41,58 +41,32 @@ module.exports = function () {
                                         userAgent: navigator.userAgent
                                     });
                                     
-                                    // 허용된 IP 주소 목록
-                                    const allowedIPs = [
-                                        '34.66.202.43'  // Algolia Crawler IP
-                                    ];
+
                                     
-                                    // 사용자 IP 주소 확인
-                                    async function getUserIP() {
-                                        try {
-                                            const response = await fetch('https://api.ipify.org?format=json', { timeout: 3000 });
-                                            const data = await response.json();
-                                            return data.ip;
-                                        } catch (error) {
-                                            console.warn('Failed to retrieve user IP:', error);
-                                            return null;
-                                        }
-                                    }
-                                    
-                                    // IP 주소 기반 화이트리스트 확인
-                                    function isWhitelistedIP(userIP) {
-                                        return allowedIPs.includes(userIP);
-                                    }
-                                    
-                                    // Bot/Crawler 감지 함수 (User Agent 및 IP 기반)
-                                    async function isAlgoliaCrawler() {
+                                    // Bot/Crawler 감지 함수 (User Agent 기반)
+                                    function isAlgoliaCrawler() {
                                         if (typeof window === 'undefined' || typeof navigator === 'undefined') return false;
                                         
-                                        // 1단계: User Agent 확인
                                         const userAgent = window.navigator.userAgent;
                                         const isAlgolia = /AlgoliaWebCrawler|Algolia Crawler|algoliasearch/i.test(userAgent);
                                         const isJSDOM = userAgent.includes('jsdom');
                                         
+                                        console.log('=== Crawler Detection ===');
+                                        console.log('User Agent:', userAgent);
+                                        console.log('Is Algolia Crawler:', isAlgolia);
+                                        console.log('Is JSDOM:', isJSDOM);
+                                        
                                         if (isAlgolia) {
-                                            console.log('Algolia Crawler detected via User Agent - Authentication disabled');
+                                            console.log('✓ Algolia Crawler detected - Authentication disabled');
                                             return true;
                                         }
                                         
                                         if (isJSDOM) {
-                                            console.log('JSDOM (PDF generation) detected - Authentication disabled');
+                                            console.log('✓ JSDOM (PDF generation) detected - Authentication disabled');
                                             return true;
                                         }
                                         
-                                        // 2단계: IP 주소 화이트리스트 확인 (User Agent 감지 실패 시 대체)
-                                        try {
-                                            const userIP = await getUserIP();
-                                            if (userIP && isWhitelistedIP(userIP)) {
-                                                console.log('Algolia Crawler detected via IP whitelist (' + userIP + ') - Authentication disabled');
-                                                return true;
-                                            }
-                                        } catch (error) {
-                                            console.warn('IP whitelist check error:', error);
-                                        }
-                                        
+                                        console.log('✗ Not a crawler - Authentication required');
                                         return false;
                                     }
                                     
@@ -113,16 +87,16 @@ module.exports = function () {
                                         return { isSupported: true };
                                     }
                                     
-                                    // 인증 활성화 여부 확인 (IP 화이트리스트 포함)
-                                    async function shouldEnableAuth() {
+                                    // 인증 활성화 여부 확인
+                                    function shouldEnableAuth() {
                                         // Algolia Crawler 감지 시에만 인증 비활성화
-                                        const isCrawler = await isAlgoliaCrawler();
+                                        const isCrawler = isAlgoliaCrawler();
                                         if (isCrawler) {
                                             return false;
                                         }
                                         
                                         // 그 외 모든 경우에 인증 활성화
-                                        console.log('Authentication enabled for all environments');
+                                        console.log('Authentication enabled for regular users');
                                         return true;
                                     }
                                     
@@ -167,9 +141,9 @@ module.exports = function () {
                                     };
                                     
                                     // MSAL 인스턴스 초기화 및 인증 처리
-                                    async function initializeAuth() {
+                                    function initializeAuth() {
                                         // 인증이 비활성화된 경우 스킵
-                                        const authEnabled = await shouldEnableAuth();
+                                        const authEnabled = shouldEnableAuth();
                                         if (!authEnabled) {
                                             return;
                                         }
@@ -288,15 +262,9 @@ module.exports = function () {
                                     
                                     // DOM이 로드된 후 초기화
                                     if (document.readyState === 'loading') {
-                                        document.addEventListener('DOMContentLoaded', () => {
-                                            initializeAuth().catch(err => {
-                                                console.error('Authentication initialization error:', err);
-                                            });
-                                        });
+                                        document.addEventListener('DOMContentLoaded', initializeAuth);
                                     } else {
-                                        initializeAuth().catch(err => {
-                                            console.error('Authentication initialization error:', err);
-                                        });
+                                        initializeAuth();
                                     }
                                 }
                                 
