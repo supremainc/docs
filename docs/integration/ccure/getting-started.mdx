@@ -1,0 +1,218 @@
+---
+id: getting-started
+title: Getting Started
+description: Provides an overview of the Suprema - C•CURE Integration, including prerequisites, minimum system requirements, software components, and a list of supported devices.
+keywords: [Getting Started, System Requirements, Supported Devices]
+---
+
+Before using the Suprema - C•CURE Integration to implement Suprema Biometrics to the C•CURE 9000 Platform for an access control system, both C•CURE 9000 v2.90, v3.0, v3.10 (or later) Server and Suprema BioStar 2 server along with this Integration Setup service must be installed on the same server/workstation where C•CURE server is installed, and C•CURE 9000 v2.90, v3.0, v3.10 (or later) Client for the workstation(s) where it is going to be used along with this integration setup client.
+
+The Server receives event logs, user information, etc. from connected devices and stores them. The integration can be installed easily. Before installation, please check the Minimum System Requirements.
+
+The Suprema - C•CURE Integration installation setup for server and client can be provided upon request made to the [Suprema Team](https://support.supremainc.com).
+
+## Abbreviations
+
+* Software House C•CURE 9000 (C•CURE)
+
+* Suprema’s BioStar 2 (BioStar 2)
+
+* Suprema - C•CURE Integration ("Integration" for short)
+
+This integration comprises the following components:
+
+* Suprema - C•CURE Integration Service (Integration Service)
+
+* Suprema - C•CURE Integration Client (Integration Client)
+
+* Suprema - C•CURE Integration Configuration Tool (Integration CT)
+
+   * The Integration CT is the web-based GUI tool to configure the Integration Service (with no GUI) and to adjust parameters regarding the Integration Client as well.
+
+## Minimum System Requirements
+
+<Table>
+<Thead>
+<Row>
+<Th colspan='2'>C•CURE 9000 Standalone server series L, M, N, P</Th>
+</Row>
+<Row>
+<Th colspan='2'>Recommended hardware and software</Th>
+</Row>
+</Thead>
+<Tbody>
+<Row>
+<Td>Processor</Td>
+<Td>Intel® 3rd Generation Core i7-3770 or greater (8 MB, 3.4 GHz or greater)</Td>
+</Row>
+<Row>
+<Td>Hard Disk Drives</Td>
+<Td>Dual drives: primary drive = 1TB or greater (9000 Runtime); secondary drive = 1TB or greater (data backups). SSD is recommended.</Td>
+</Row>
+<Row>
+<Td>Drive Speed</Td>
+<Td>7,200 RPM or greater</Td>
+</Row>
+<Row>
+<Td>Memory</Td>
+<Td>16GB or greater</Td>
+</Row>
+<Row>
+<Td>Network Adapter Card</Td>
+<Td>Integrated Gigabit Network Port</Td>
+</Row>
+<Row>
+<Td>DVD Drive</Td>
+<Td>Recommended</Td>
+</Row>
+<Row>
+<Td>Video Card</Td>
+<Td>Integrated Video Subsystem (dedicated video accelerator recommended when used as a client workstation)</Td>
+</Row>
+<Row>
+<Td>Database Support (English Only)</Td>
+<Td>
+SQL Server 2014 (SP1 or later) Express (64-bit)<br/>
+SQL Server 2016 Express/Standard/Enterprise SP1 and higher (64-bit)<br/>
+SQL Server 2017 Express (64-bit)<br/>
+SQL Server 2019 Express/Standard/Enterprise (64-bit)
+</Td>
+</Row>
+<Row>
+<Td>Operating System Support</Td>
+<Td>
+Windows 10 Professional & Enterprise (version 1809 or higher) (64-bit)<br/>
+Windows Server 2016 SP1 and higher (64-bit)<br/>
+Windows Server 2019 (64-bit)
+</Td>
+</Row>
+<Row>
+<Td>Web Server</Td>
+<Td>IIS V8.0 or higher for C•CURE Web, C•CURE Go and victor Web Service</Td>
+</Row>
+</Tbody>
+</Table>
+
+:::info
+
+IIS V8.0 is required to install C•CURE Web on the same machine as C•CURE Go or victor Web Service.
+
+:::
+
+<Table>
+<Thead>
+<Row>
+<Th colspan='2'>C•CURE 9000 Standalone server series Q, R, R+, S, S+, T SAS server series L, M, N, P</Th>
+</Row>
+<Row>
+<Th colspan='2'>Recommended hardware and software</Th>
+</Row>
+</Thead>
+<Tbody>
+<Row>
+<Td>Processor</Td>
+<Td>Intel Xeon E3-1240 v5 (3.5 GHz or greater)</Td>
+</Row>
+<Row>
+<Td>Hard Disk Drives</Td>
+<Td>Dual drives: primary drive = 1TB or greater (9000 Runtime); secondary drive = 1TB or greater (data backups). SSD is recommended.</Td>
+</Row>
+<Row>
+<Td>Drive Speed</Td>
+<Td>15,000 RPM or greater</Td>
+</Row>
+<Row>
+<Td>Memory</Td>
+<Td>32GB or greater</Td>
+</Row>
+<Row>
+<Td>Network Adapter Card</Td>
+<Td>Intel Gigabit ET Quad Port Adapter, Gigabit Ethernet NIC, PCle x4</Td>
+</Row>
+<Row>
+<Td>DVD Drive</Td>
+<Td>Recommended</Td>
+</Row>
+<Row>
+<Td>Video Card</Td>
+<Td>Integrated video subsystem (dedicated video accelerator recommended when used as a client workstation)</Td>
+</Row>
+<Row>
+<Td>Database Support (English Only)</Td>
+<Td>
+SQL Server 2016 Standard & Enterprise SP1 and higher (64-bit)<br/>
+SQL Server 2019 Standard & Enterprise (64-bit)
+</Td>
+</Row>
+<Row>
+<Td>Operating System Support</Td>
+<Td>
+Windows 10 Professional & Enterprise (version 1809 or higher) (64-bit)<br/>
+Windows Server 2016 SP1 and higher (64-bit)<br/>
+Windows Server 2019 (64-bit)
+</Td>
+</Row>
+<Row>
+<Td>Web Server</Td>
+<Td>IIS V8.0 or higher for C•CURE Web, C•CURE Go and victor Web Service</Td>
+</Row>
+</Tbody>
+</Table>
+
+:::info
+
+IIS V8.0 is required to install C•CURE Web on the same machine as C•CURE Go or victor Web Service.
+
+:::
+
+* For the best performance, use only the 64-bit operating system.
+
+* Integration CT is optimized for MS Edge, Brave Browser or Google Chrome.
+
+* Please do not use older versions of Windows, that can lead to system instability due to OS libraries incompatibility as Microsoft has made substantial changes in OS libraries compared to older versions of those specified in the previous table.
+
+* If MS SQL Server and Suprema BioStar 2 are installed in different PCs, you should install the Native Client on the PC where BioStar 2 was installed.
+
+   > https://www.microsoft.com/en-us/download/details.aspx?id=50402
+
+## Supported Devices
+
+RFID Devices:
+
+* XPass 2 family
+
+* X-Station 2 family
+
+Facial Devices:
+
+* FaceStation F2
+
+* BioStation 3
+
+* BioEntry W3
+
+Fingerprint Devices:
+
+* BioEntry Family (P2, W2)
+
+* BioLite N2
+
+* BioStation 2, BioStation A2
+
+* X-Station 2 (Finger model)
+
+* BioStation L2
+
+NOT Supported Devices:
+
+* BioEntry R2
+
+* CoreStation
+
+* FaceStation 2 / FaceLite
+
+:::info
+
+USB readers as the BioMini Plus 2 / Slim 2 can be supported through customization. For such please contact latam@supremainc.com.
+
+:::

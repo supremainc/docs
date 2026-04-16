@@ -1,0 +1,181 @@
+---
+id: troubleshooting
+title: Frequently Asked Questions (FAQs)
+description: Provides answers to frequently asked questions (FAQs) about licensing and device compatibility, along with troubleshooting tips for common integration issues.
+keywords: [FAQ, Troubleshooting, License]
+---
+
+<details>
+<summary><IcQuestion />. **If the Suprema devices were acquired through the authorized Software House channel they should be already licensed and ready to add and use with this integration.**</summary>
+
+Please message us https://support.supremainc.com if you are a customer with an existing site:
+
+1. Who’s migrating from another integration.
+
+1. Who wants to implement this integration in your current site.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **This integration is only for C•CURE or can it be used with Tyco/SH’s other access control solutions such as Kantech?**</summary>
+
+You can send an email to latam@supremainc.com and we will suggest some partner integrations you can work with.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **If I already have two separate databases, one in Suprema and the other in C•CURE, how should the integration be done before installing this integration license?**</summary>
+
+The information in the C•CURE database is maintained, any replication of information in another database is handled automatically by the integration.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **How many licenses does the integration system require?**</summary>
+
+You require 3 licenses: C•CURE, BioStar 2 and the Integration itself, for further information please contact your sales representative.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **Are all Suprema readers supported by this Integration?**</summary>
+
+Please visit the “Supported and Unsupported Devices” of this manual.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **Is the Suprema - C•CURE Integration service license permanent? i.e. does it not expire?**</summary>
+
+It’s permanent.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **The license for Suprema devices, does it have a limited number of supported devices?**</summary>
+
+Up to 1,000 devices are supported.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **Which versions of C•CURE 9000 does the integration support?**</summary>
+
+Version 2.9, 3.0 and 3.10.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **Is C•CURE IQ Supported?**</summary>
+
+The support for C•CURE IQ is currently under development, you can expect to have a support for C•CURE IQ from Q2 2026.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **Can enrollment be done from C•CURE 9000?**</summary>
+
+Exactly, the enrollment of users is done from C•CURE.
+
+Massive enrollment features are available from the Integration CT (Advanced version).
+
+</details>
+
+<details>
+<summary><IcQuestion />. **Can I enroll from any Suprema device?**</summary>
+
+Yes, you can enroll from any supported and configured Suprema device.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **Is there a way to enroll faces from an image database?**</summary>
+
+Yes, massive facial pre-enrollment is available in the Advanced version of this integration.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **Can you double authenticate? Fingerprint and card, for example.**</summary>
+
+That’s correct, the authentication scheme can be adjusted for each device using BioStar 2 GUI.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **When a face is added to personnel, is it saved as an image for this cardholder? so that I can use this face, for example to print a card or to appear in the Monitoring Window.**</summary>
+
+Yes, the image used for badging in C•CURE can be used to pre-enroll a facial template (biometric template), this can be done in the Advanced version only.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **For facial pre-enrollment, what considerations should the photo file have, size, resolution, etc.?**</summary>
+
+An image for pre-enrollment, the picture area that covers the face of the person must have at least 250x250 pixels with a minimum resolution of 150 dpi. PNG format is preferred over JPG.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **If I already have a C•CURE 9000 (v2.9, v3.0, v3.10) running and I have a Suprema apart, can I buy both licenses to integrate into an already working system?**</summary>
+
+Yes you can.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **In a system running other integration, and you want to migrate to the Suprema - C•CURE Integration, should you enroll all users again?**</summary>
+
+No, ideally you can make use of your existing data, for any specific assessment please contact your sales representative.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **Will C•CURE be able to accept mobile face pre-enrollment using Suprema Mobile?**</summary>
+
+Not at the moment, but it is already in the functions to be added in the next version.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **If there is a customer with C•CURE and BioStar 2, could these systems be connected?**</summary>
+
+When installing the integration, it takes care to configure the devices and adjust the information for the data found in C•CURE.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **In terms of data reports, whether from staff, timestamps, departments, etc., which ones are available?**</summary>
+
+The reports are available in C•CURE in the same way as they have been handled so far.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **Does the current C•CURE license need to be upgraded in order for the integration to work?**</summary>
+
+Depending on the license class you hold, the specific license data needed for C•CURE 9000 will be provided by Tyco/SH.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **Where can I get training to install and use this Integration and its devices?**</summary>
+
+We’re going to upload the recording to https://suprematraining.talentlms.com/.
+
+</details>
+
+<details>
+<summary><IcQuestion />. **If I have 100,000 users in C•CURE, will the same number of users be transferred to the Suprema devices or can I select the users I want in the Suprema devices?**</summary>
+
+With this integration you can deploy users in the Suprema devices according to C•CURE 9000 clearances.
+
+</details>
+
+## Troubleshooting
+
+| No. | Issue | Primary Check | Possible Fix |
+| :--: | -- | -- | -- |
+| 1 | Cannot enter the Integration<br/>Configuration Tool | Please check the IP address or domain Name | For localhost: https://127.0.0.1:443/modules/SupremaCCURE/index.html<br/>Please make sure of the HTTPS port you have assigned to BioStar 2 with the BioStar Setting program. |
+| 2 | What to do when the "Service Not running" notice shows in the Integration CT. | Please check the Suprema - C•CURE Integration Status in the Windows Services console. | If the service status is not "Started" please go ahead and start it, if you get any sort of issue when doing it please open a ticket in https://support.supremainc.com with all relevant information. |
+| 3 | Any other issue not registered here | Please open a ticket | Please open a ticket in https://support.supremainc.com with all relevant information about the issue you’re experiencing. |
