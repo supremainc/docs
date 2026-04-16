@@ -11,7 +11,7 @@ Remote access via ngrok allows secure access to internal networks from external 
 
 :::info
 
-* The Remote Access feature is available as an additional option. For more information on licensing policy, refer to [the following](licensing#features-add-ons).
+* The Remote Access feature is available as an additional option. For more information on licensing policy, refer to [the following](licensing#features-add-ons). The remote access license is an annual subscription.
 
 * When purchasing the remote access license, Suprema generates a bot account, endpoint, and license document for remote access use on the ngrok Suprema site.
 
@@ -80,13 +80,27 @@ For more information on license registration, refer to [the following](settings-
 
 Enter the ngrok setup information provided by Suprema.
 
-* <Cmd sid='setting.remoteAccess.field.ngrokUserId' />: Enter your ngrok account.
-
 * <Cmd sid='setting.remoteAccess.field.tunnelToken' />: Enter your **Authtoken**.
 
-* <Cmd sid='setting.remoteAccess.field.hostURL' />: Enter the endpoint URL. The URL is in the format `your-name.bsx.ngrok.app`.
+* <Cmd sid='setting.remoteAccess.field.hostURL' />: Enter the endpoint URL. The URL is in the format `https://subdomain.bsx.ngrok.app`.
 
-After entering all the information, click the <Cmd sid='button.apply' product='2' /> button. If a warning message window appears, check the content and click the <Cmd sid='setting.remoteAccess.button.agree' /> button.
+:::info
+
+The subdomain (`subdomain`) must follow the rules below. Subdomains that do not comply with the rules cannot be used.
+
+* Only English letters (A-Z, a-z), numbers (0-9), and hyphens (`-`) are allowed.
+
+* Special characters and spaces are not allowed.
+
+:::
+
+1. After entering all the information, click the <Cmd sid='button.apply' product='2' /> button. 
+
+2. When the <Cmd sid='setting.remoteAccess.dialog.label.agreement' /> window appears, review the contents.
+
+   <Image src='/img/biostarx-settings-remote-access-agree.png' />
+
+3. Select the checkbox to agree to the terms, then click <Cmd sid='setting.remoteAccess.button.agree' />.
 
 </Step>
 
@@ -98,6 +112,10 @@ After completing the setup, verify whether you can access the **BioStar X** serv
 
 :::info
 
-If you cannot access via endpoint URL from an external network, contact the sales point or distributor that issued your license.
+* Access the endpoint URL, then go to <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' /> to check access logs.
+
+  > Example: [Remote Access] 192.168.1.100
+
+* If you cannot access via endpoint URL from an external network, contact the sales point or distributor that issued your license.
 
 :::

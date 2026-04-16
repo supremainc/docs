@@ -17,7 +17,9 @@ After completing the VMS integration, select and set up the cameras to be used i
 
 :::info
 
-Refer to [the following](settings-video-integration) for information on how to integrate with the VMS server.
+* Refer to [the following](settings-video-integration) for information on how to integrate with the VMS server.
+
+* The camera group permission is required to add cameras or configure groups. For more information on camera group permission settings, see [the following document](#addCameraPermission).
 
 :::
 
@@ -79,7 +81,7 @@ You can delete the added cameras.
 
 3. Click the checkbox on the far left of the camera you want to delete from the camera list. You can select more than one camera.
 
-4. Click the <IcTrash /> <Cmd sid='video.camera.delete' product='2' /> button in the upper right corner of the screen.
+4. Click <IcTrash /> <Cmd sid='video.camera.delete' product='2' /> in the upper right corner of the screen.
 
 5. Check the message and click the <Cmd sid='button.yes' product='2' /> button.
 
@@ -92,6 +94,42 @@ If the camera you want to delete is included in a rule, you cannot delete the ca
 :::
 
 ## Camera group settings and management
+
+You can group multiple cameras to manage them systematically by location or purpose. Follow the steps below to create and manage camera groups.
+
+### Camera group permission settings {#addCameraPermission}
+
+Administrators need the camera group permission to add cameras or configure groups. System administrators, user administrators, and monitoring administrators have access to all camera groups. If you need different permission settings, add a custom permission to configure camera group access.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.account.root' /> in the left sidebar.
+
+3. Click <Cmd sid='setting.account.addCustomOperator' product='2' />.
+
+   <Image src='/img/biostarx-settings-account-add-custom-permission.png' />
+
+4. Enter a name and description for the newly created permission.
+
+   <Image src='/img/biostarx-settings-video-camera-add-custom-permission.png' />
+
+5. In <Cmd sid='settings.account.menu.detailSetting' product='2' />, under <Cmd sid='common.permission.module.cameraGroup' product='2' />, select the camera group to assign permissions to.
+
+   <Image src='/img/biostarx-settings-video-camera-add-custom-camera-group.png' />
+
+   * Select <Cmd sid='setting.account.group.allCameraGroups' product='2' /> to grant permissions for all camera groups.
+
+   * To grant permissions for an individual camera group, select the desired group from the camera group list. You can select one or more groups.
+
+6. In <Cmd sid='settings.account.addUser' product='2' />, click <Cmd sid='button.plusAdd' product='2' /> and select the users to assign permissions to.
+
+7. Click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save the settings.
+
+:::info
+
+If you do not have permission for a specific camera group, you cannot view the cameras in that group.
+
+:::
 
 ### Add camera group
 

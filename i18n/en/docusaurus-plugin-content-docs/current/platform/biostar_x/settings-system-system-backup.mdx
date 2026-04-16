@@ -11,7 +11,7 @@ keywords:
   - Restore
 ---
 
-You can back up key information such as the database of **BioStar X**, various settings, and keys. Use the <Cmd sid="common.backup" product='2' /> feature to prevent data loss on the server or when transferring to a new PC.
+You can back up key information such as the database of **BioStar X**, various settings, and keys. Backup files also include user-defined settings, such as the encryption key (enc key) and the image log path. Use the <Cmd sid="common.backup" product='2' /> feature to prevent data loss on the server or when transferring to a new PC.
 
 The supported backup methods are as follows.
 
@@ -47,6 +47,8 @@ Users can create backup files manually.
 
 4. To create a backup file, click the <Cmd sid="backup.backupNow" product='2' /> button.
 
+5. If a warning message appears, review it and click <Cmd sid='button.continue' product='2' />.
+
 Backup files are saved in *zip* format at the path specified in the <Cmd sid='backup.filePath' product='2' /> option. The file name is generated in the format `BioStar_X_Backup_YYYYMMDD_HHMMSS.zip`. Here, `YYYYMMDD` represents the backup date, and `HHMMSS` represents the backup time.
 
 :::info
@@ -76,6 +78,8 @@ When you set automatic backup, the system creates backup files at predefined int
    * <Cmd sid="backup.monthly" product='2' />: Automatically backs up monthly. Set the date for automatic backup in the <Cmd sid='backup.date' product='2' /> option, and set the backup time in the <Cmd sid='backup.time' product='2' /> option.
 
 4. Click <Cmd sid="button.apply" product='2' /> to save the settings.
+
+After you enable automatic backup, backups will run at regular intervals. If an automatic backup fails, the failure will be recorded in the event log and audit trail; detailed information about the cause is available in the log files.
 
 Backup files are saved in *zip* format at the path specified in the <Cmd sid='common.backup.general' product='2' /> section's <Cmd sid='backup.filePath' product='2' /> option. The file name is generated in the format `BioStar_X_Backup_YYYYMMDD_HHMMSS.zip`. Here, `YYYYMMDD` represents the backup date, and `HHMMSS` represents the backup time.
 

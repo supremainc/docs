@@ -22,7 +22,7 @@ keywords:
 
   * TCM10-FSF2
 
-* <Cmd sid='device.mask.useMask' product='2' /> 設定機能はFaceStation F2、BioStation 3、BioEntry W3モデルでサポートします。
+* <Cmd sid='device.mask.useMask' product='2' /> 設定機能はFaceStation F2、BioStation 3、BioEntry W3、BioStation 3 Maxに対応しています。
 
 * ユーザーが任意で変更した内容がある場合は、<Cmd sid='button.apply' product='2' /> をクリックします。 変更内容を保存しないとデバイスに反映されません。
 
@@ -41,6 +41,12 @@ keywords:
   * <Cmd sid='device.thermal.maskCheckModeOff' product='2' />：マスク検出機能を使用しません。
 
 * <Cmd sid='device.thermal.maskdetectlevel' product='2' />：マスク検出感度を選択します。
+
+:::info
+
+<Cmd sid='device.thermal.maskOnlyMode' product='2' /> オプションの詳細は[次のドキュメント](#thermal-mask-verification)を参照してください。
+
+:::
 
 ## 熱画像カメラ設定 {#thermal-camera-settings}
 
@@ -103,7 +109,7 @@ keywords:
 
 ## サーマルおよびマスク確認方式 {#thermal-mask-verification}
 
-<Cmd sid='device.thermal.mode' product='2' /> グループでは、<Cmd sid='device.mask.useMask' product='2' /> または <Cmd sid='device.thermal.useThermalCamera' product='2' /> オプションを <Cmd sid='common.use' product='2' /> に設定すると、デバイスの用途に応じて確認方式を設定できます。
+<Cmd sid='device.thermal.mode' product='2' /> または <Cmd sid='device.thermal.maskOnlyMode' product='2' /> グループでは、<Cmd sid='device.mask.useMask' product='2' /> または <Cmd sid='device.thermal.useThermalCamera' product='2' /> オプションを <Cmd sid='common.use' product='2' /> に設定することで、デバイスの用途に応じた確認方式を選択できます。
 
 * <Cmd sid='device.thermal.authBeforeMode' product='2' />：認証後にユーザーのマスク着用有無を確認するか体温を測定します。
 

@@ -8,17 +8,21 @@ keywords:
 
 **BioStar X** でデバイスのその他の機能を使用する方法を説明します。 デバイスの再接続、同期、情報の一括編集、デバイス削除の機能を提供します。
 
+## 個々のデバイスを管理する機能
+
+一台のデバイスに対する管理機能の使い方は以下のとおりです。
+
 1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
 
 2. 画面左側のサイドバーで <Cmd sid='setting.menu.device.root' /> をクリックしてください。
 
-3. <Cmd sid='menu.device.allDeviceGroups' product='2' /> リストでデバイスを選択し、右クリックしてください。
+3. <Cmd sid='menu.device.allDeviceGroups' product='2' /> リストでデバイスを選択し、右クリックしてください。 または、デバイス一覧で対象のデバイスのチェックボックスをクリックします。
 
-4. ポップアップメニューから目的の機能を選択します。
+   <Image src='/img/biostarx-setting-device-functions.png' />
 
-<Image src='/img/biostarx-setting-device-functions.png' />
+4. ポップアップメニュー、またはデバイス一覧の上部から希望する機能を選択します。
 
-ポップアップメニューで提供される機能は以下を参照します。 提供される機能はデバイスによって異なる場合があります。
+提供される機能については、以下をご参照ください。 提供される機能はデバイスによって異なる場合があります。
 
 * <Cmd sid='button.reconnect' product='2' />：選択したデバイスを再接続できます。 デバイスを 1 台選択した場合に使用できます。 この機能は **BioStar X** との接続が切れたときに使用できます。
 
@@ -45,5 +49,123 @@ keywords:
 * <Cmd sid='device.menu.addWiegandDevice' product='2' /> 機能の詳細は [次のドキュメント](settings-adding-wiegand) を参照します。
 
 * <Cmd sid='device.menu.searchSlaveDevice' product='2' /> 機能の詳細は [次のドキュメント](settings-adding-slave-device) を参照します。
+
+:::
+
+## 複数のデバイスを管理する機能
+
+一台以上のデバイスに対する管理機能の使い方は以下のとおりです。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.device.root' /> をクリックしてください。
+
+3. デバイス一覧で対象のデバイスのチェックボックスをクリックします。 1 台以上のデバイスを選択できます。
+
+   <Image src='/img/biostarx-setting-device-list-batch-edit.png' />
+
+4. デバイス一覧の上部から希望する機能を選択します。
+
+提供される機能については、以下をご参照ください。 提供される機能はデバイスによって異なる場合があります。
+
+* <Cmd sid='button.syncDevice' product='2' />：登録したデバイスと **BioStar X** のすべてのユーザー情報を同期できます。 **BioStar X** のデータベース情報を基準にユーザー情報を同期し、デバイスのみに登録されているユーザー情報は削除します。
+
+* <Cmd sid='button.batchEdit' product='2' />：選択したデバイスの情報を一括編集できます。 ボタンをクリックすると、<Cmd sid='device.batchEdit' product='2' /> ウィンドウが表示されます。
+
+  <Image src='/img/biostarx-setting-device-batch-edit.png' />
+
+  :::info
+
+  * 選択したデバイスの種類によって、<Cmd sid='device.batchEdit' product='2' /> ウィンドウに表示される詳細項目が異なる場合があります。
+
+  * マスターデバイスとスレーブデバイスを同時に選択して一括編集をクリックすると、<Cmd sid='device.info.authentication' product='2' /> と <Cmd sid='device.info.displaySound' product='2' /> 項目の一部のみを変更できます。
+
+  * <Cmd sid='device.info.authenticationMode' product='2' /> は同一モデル名のデバイスを選択した場合にのみ一括編集できます。
+
+  :::
+
+* <Cmd sid='button.firmwareUpgrade' product='2' />：デバイスのファームウェアを簡単にアップグレードできます。 詳細については[次のドキュメント](settings-device-upgrade-firmware)を参照してください。
+
+* <Cmd sid='button.deleteDevice' product='2' />：選択したデバイスを一覧から削除できます。 ドアまたは区画として設定されたデバイスは削除できません。
+
+## デバイス内のイベントログの削除 {#deleteLogsFromDevice}
+
+デバイスに保存されたイベントログを削除できます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.device.root' /> をクリックしてください。
+
+3. デバイス一覧で対象のデバイスのチェックボックスをクリックします。 1 台以上のデバイスを選択できます。
+
+4. デバイス一覧の上部にある <IcMoreW title='More' /> → <Cmd sid='button.clearLog' product='2' /> ボタンをクリックします。
+
+   <Image src='/img/biostarx-setting-device-list-delete-log.png' />
+
+5. 警告メッセージが表示されたら内容を確認し、<Cmd sid='button.continue' product='2' /> ボタンをクリックします。
+
+デバイスのイベントログ削除操作が完了すると、ポップアップメッセージが表示されます。 対象デバイス数、成功したデバイス数、失敗したデバイス数を確認できます。
+
+:::caution
+
+デバイスから削除されたイベントログは復元できず、サーバーから再度デバイスへ送信することはできません。 削除を実行する前に、イベントログがサーバーに保存されていることを確認してください。 また、選択したデバイスにスレーブ、仮想デバイス、または Wiegand デバイスが含まれている場合、これらはログを保存しないため、ログ削除の対象外になります。
+
+:::
+
+:::info
+
+* この機能は <Cmd sid='ROLE_CODE_ADMIN' product='2' className='bold' /> 権限を持つユーザーのみ利用できます。
+
+* デバイスのイベントログ削除履歴は <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' /> で確認できます。
+
+:::
+
+## 追加機能
+
+デバイス一覧を印刷したり、列設定を変更したりするなど、追加機能を利用できます。
+
+### デバイス一覧を印刷する
+
+デバイス一覧をPDFまたはSVG形式で保存して印刷できます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.device.root' /> をクリックしてください。
+
+3. デバイス一覧の上部にある <IcMoreW title='More' /> ボタンをクリックしてください。
+
+4. ポップアップメニューで <Cmd sid='button.print' product='2' /> をクリックしてください。
+
+5. 「<Cmd sid='printOption.dialog.header' product='2' />」ウィンドウが表示されたら、「<Cmd sid='printOption.fileFormat' product='2' />」オプションで目的のフォーマットを選択し、その他のオプションを設定します。
+
+   <Image src='/img/biostarx-setting-device-list-print.png' />
+
+6. <Cmd sid='team.menu.print' /> をクリックしてください。
+
+ブラウザーで開いたPDFまたはSVGファイルを印刷できます。
+
+### デバイス一覧の列(Column)の設定
+
+デバイス一覧に表示される列(Column)の設定を変更できます。 列設定で表示する列を選択したり、列の順序を変更したりできます。
+
+1. <Cmd sid='shell.header.launcher' />ページで<Cmd sid='shell.header.setting' />をクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='setting.menu.device.root' /> をクリックしてください。
+
+3. デバイス一覧の上部にある <IcMoreW title='More' /> ボタンをクリックしてください。
+
+4. ポップアップメニューで <Cmd sid='menu.columnSetting' product='2' /> をクリックしてください。
+
+5. <Cmd sid='columnSetting.dialog.header' product='2' /> ウィンドウが表示されたら、必要な列を選択するか、選択を解除してください。
+
+   <Image src='/img/biostarx-setting-device-list-column-setting.png' />
+
+6. 列の順序を変更するには、目的の列をクリックしたままドラッグして位置を変更します。
+
+7. 設定を保存するには、<Cmd sid='button.apply' product='2' /> をクリックします。
+
+:::info
+
+列設定を初期化するには、<Cmd sid='columnSetting.button.defaultColumn' product='2' /> をクリックします。
 
 :::
