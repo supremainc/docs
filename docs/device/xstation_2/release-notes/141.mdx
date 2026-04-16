@@ -1,11 +1,11 @@
 ---
-id: 141-draft
+id: 141
 title: 펌웨어 버전 1.4.1
 ---
 
-# 펌웨어 버전 1.4.1 (빌드 번호 1.4.1_260413)
+# 펌웨어 버전 1.4.1 (빌드 번호 1.4.1_260415)
 
-릴리즈<Separator/>2026-04-15
+릴리즈<Separator/>2026-04-16
 
 :::caution
 
@@ -21,25 +21,11 @@ title: 펌웨어 버전 1.4.1
 
 ---
 
-<Jira num='ONYXFW-836' /> XS2-Q모델에서 Camera QR 지원
-
 1. XS2-QDPB, XS2-QAPB 모델에서 **카메라 QR** 라이선스 활성화 시 장치 카메라를 활용한 QR 인증 방식을 선택할 수 있도록 지원
-
-1. Supported an option to select QR authentication using the device camera upon **Camera QR** license activation on XS2-QDPB and XS2-QAPB models.
-
-<Jira num='ONYXFW-982' /> (BDP-1343) Desfire EV2 and EV3 features supported by Readers and Software
 
 1. DESFire EV2/EV3 카드에 대한 EV2 Secure Messaging 인증 및 발급 지원
 
-1. Supported EV2 Secure Messaging authentication and issuance for DESFire EV2 and EV3 cards.
-
-<Jira num='ONYXFW-979' /> 장치에서 지원하지 않는 이벤트에 대해 "Undefined Event"로 로그가 남도록 개선
-
 1. 장치에서 지원하지 않는 이벤트 및 에러에 대한 로그 표시 개선
-
-1. Improved log display for unsupported events and errors on the device.
-
-<Jira num='ONYXFW-980' /> CE RED 관련 개선
 
 1. CE(유럽) 외 지역용 **글로벌** 펌웨어 제공
 
@@ -47,17 +33,7 @@ title: 펌웨어 버전 1.4.1
 
    - PIN 등록 시 최소 길이 4자리로 완화
 
-1. Provided **global** firmware for non-CE(EU) regions
-
-   - Disabled the **Master Admin** and **Admin 2-step Authentication** features
-
-   - Reduced the minimum length for PIN enrollment to 4 digits
-
-<Jira num='ONYXFW-989' /> XPQ2 지원
-
 1. XPass Q2 모델 슬레이브로 연결할 수 있도록 지원
-
-1. Supported connecting the XPass Q2 model as a slave device.
 
 ## 버그 수정
 
@@ -65,16 +41,8 @@ title: 펌웨어 버전 1.4.1
 
 <BugLists>
 
-<Jira num='ONYXFW-986' /> 잘못된 라이선스 파일(Camera QR)을 등록하는 경우 실패처리 추가
-
 1. 잘못된 라이선스 파일 등록 시 장치가 재부팅되는 문제 <Badge>1.2.0</Badge>
 
-1. Device rebooting when activating an invalid license file. <Badge>1.2.0</Badge>
-
-<Jira num='ONYXFW-972' /> Slave로 연결된 장치에 라이선스 적용한 다음 라이선스 적용 장치 reboot시 라이선스 삭제되는 문제
-
 1. 슬레이브로 연결된 장치에 라이선스 적용 후 카메라 QR이 동작하지 않는 문제 <Badge>1.2.0</Badge>
-
-1. Camera QR not working after applying license to a slave device. <Badge>1.2.0</Badge>
 
 </BugLists>
