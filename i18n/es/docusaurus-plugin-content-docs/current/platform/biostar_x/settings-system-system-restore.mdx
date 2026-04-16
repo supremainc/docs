@@ -4,46 +4,74 @@ title: Restauración del Sistema
 description: Esta guía explica cómo restaurar la base de datos, la configuración, las licencias, etc. de BioStar X a un estado anterior mediante un archivo de copia de seguridad del sistema.
 keywords:
   - Restauración del Sistema
-  - restaurar
-  - Restaurar copia de seguridad
-  - Recuperación de datos
-  - Restauración de BioStar X
+  - Copia de seguridad
+  - Restaurar
 ---
 
-Use un archivo de copia de seguridad del sistema para restaurar cuando haya un problema con **BioStar X** o necesite volver a un estado anterior. La función de restauración permite devolver la base de datos, varias configuraciones y la información de licencias al estado del momento de la copia de seguridad.
+Use un archivo de copia de seguridad del sistema para restaurar cuando haya un problema con **BioStar X** o necesite volver a un estado anterior. La función de restauración permite devolver la base de datos, la configuración y la información de licencias al estado que tenían en el momento de la copia de seguridad.
 
-:::caution
+## Antes de Comenzar
 
-* Realice la operación de restauración para devolver los datos actuales al punto de la copia de seguridad. Se recomienda crear una copia de seguridad del estado actual antes de restaurar. Consulte [lo siguiente](settings-system-system-backup) para crear una copia de seguridad del estado actual.
-
-* Si la dirección IP del servidor de destino de la restauración difiere de la dirección IP del servidor de copia de seguridad durante la operación de restauración, el proceso puede fallar. Verifique la dirección IP del servidor antes de continuar con la operación de restauración.
-
-:::
-
-:::info
-
-Si la base de datos de SQL Server y **BioStar X** están instalados en servidores diferentes, no se puede usar la copia de seguridad y restauración del sistema de **BioStar X**.
-
-:::
-
-1. En Windows, ejecute <Start /> → **BioStar X** → **BioStar X Restore**.
-
-   * Ruta del programa: *C:\Program Files\BioStar X\biostar-restore.exe*
-
-2. Haga clic en **Select File** y elija el archivo de copia de seguridad que desea restaurar.
-
-   <Image src='/img/common/setting-system-restore.png' className='none' alone />
-
-3. Haga clic en **Restore** para iniciar la restauración. 
-
-Cuando aparezca el mensaje **Starting Biostar services...Done**, la restauración habrá finalizado. Acceda a **BioStar X** para verificar los datos restaurados.
-
-:::info
+Antes de comenzar la restauración del sistema, verifique lo siguiente.
 
 * La restauración no puede continuar si la versión de **BioStar X** en el momento de la copia de seguridad es diferente de la versión actual. Haga clic en <IcInfo /> en la esquina superior derecha de la pantalla para comprobar la versión de **BioStar X**.
 
   <Image src='/img/biostarx-settings-system-restore-check-ver.png' />
 
 * Para comprobar la versión de **BioStar X** en el momento de la copia de seguridad, extraiga el archivo de copia de seguridad y verifique el valor `biostarVersion` en el archivo *sysbackup.conf*.
+
+* Si la base de datos de SQL Server y **BioStar X** están instalados en servidores diferentes, no se puede usar la copia de seguridad y restauración del sistema de **BioStar X**.
+
+* Si la dirección IP del servidor de destino de la restauración difiere de la del servidor de copia de seguridad:
+
+  * **BioStar X v1.0.2 o posterior**: durante la restauración, BioStar X detecta la dirección IP del servidor de destino y reemite el certificado automáticamente en función de la nueva dirección IP. Una vez reemitido el certificado, los servicios que lo usan se vuelven a conectar automáticamente, por lo que no se requiere ninguna acción adicional.
+
+  * **BioStar X v1.0.1 o anterior**: la restauración puede fallar. Verifique la dirección IP del servidor antes de continuar con la restauración.
+
+* Aunque la clave de cifrado o la ruta del registro de imágenes hayan cambiado, la restauración seguirá las rutas de configuración actuales del **BioStar X** de destino. Si no se especifica una ruta personalizada, la restauración utilizará la ruta predeterminada del **BioStar X** de destino.
+
+* Al realizar una restauración, los datos actuales se respaldan automáticamente. Si la restauración falla, puede volver al estado anterior a la restauración.
+
+:::info
+
+Para obtener más información sobre cómo crear una copia de seguridad del sistema, consulte [el siguiente documento](settings-system-system-backup).
+
+:::
+
+## Restauración del Sistema
+
+1. En Windows, ejecute <Start /> → **BioStar X** → **BioStar X Restore**.
+
+   > Ruta del programa: *C:\Program Files\BioStar X\biostar-restore.exe*
+
+2. Haga clic en **Select File** y elija el archivo de copia de seguridad que desea restaurar.
+
+   <Image src='/img/common/setting-system-restore.png' className='none' alone />
+
+3. Haga clic en **Restore** para iniciar la restauración.
+
+4. Valide el archivo de copia de seguridad.
+
+5. Cuando aparezca el mensaje **Puede proceder con la restauración**, ingrese la contraseña de la base de datos y haga clic en **Restaurar**.
+
+   <Image src='/img/common/setting-system-restore-validate.png' className='none' alone />
+
+6. Haga clic en **Restaurar** para confirmar y continuar con la restauración.
+
+   <Image src='/img/common/setting-system-restore-confirm.png'  className='none' alone />
+
+7. Aparece un mensaje que muestra el progreso de la restauración. Espere a que se complete la restauración.
+
+   <Image src='/img/common/setting-system-restore-continues.png' className='none' alone />
+
+Si aparece el mensaje **La restauración ya se ha completado**, la restauración ya ha finalizado. Acceda a **BioStar X** para verificar los datos restaurados.
+
+<Image src='/img/common/setting-system-restore-complete.png' className='none' alone />
+
+:::info
+
+* Si el PC se apaga inesperadamente durante la restauración, ejecute **BioStar X Restore** nuevamente para reintentar la restauración.
+
+* Si la dirección IP del servidor de destino de la restauración difiere de la del servidor de copia de seguridad y hay un servidor de comunicación conectado, se debe reemitir el certificado. Consulte [lo siguiente](change-ip#communicationServer) para obtener instrucciones sobre cómo reemitir el certificado en el servidor de comunicación.
 
 :::

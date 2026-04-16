@@ -26,11 +26,13 @@ Es una función que genera dos tipos de plantillas faciales a partir de las imá
 
 Consulte la lista a continuación para conocer los dispositivos que pueden sincronizar la cara con la plantilla.
 
-* Firmware FaceStation F2 v2.2.0 o posterior
+* Firmware del BioStation 3 Max v1.0.0 o posterior
+
+* Firmware BioEntry W3 v1.0.0 o posterior
 
 * Firmware BioStation 3 v1.3.1 o posterior
 
-* Firmware BioEntry W3 v1.0.0 o posterior
+* Firmware FaceStation F2 v2.2.0 o posterior
 
 <details>
 
@@ -44,9 +46,9 @@ Puede descargar el firmware más reciente desde el [Centro de descargas de Supre
 
 ### Notas sobre los tipos de plantillas faciales
 
-Diferencias en los tipos de plantillas faciales para FaceStation F2, BioStation 3 y BioEntry W3.
+Diferencias en los tipos de plantillas faciales para BioStation 3 Max, BioEntry W3, BioStation 3 y FaceStation F2.
 
-* **Tipo NPU**: BioStation 3, BioEntry W3
+* **Tipo NPU**: BioStation 3 Max, BioEntry W3, BioStation 3
 
 * **Tipo GPU**: FaceStation F2
 
@@ -54,7 +56,7 @@ Diferencias en los tipos de plantillas faciales para FaceStation F2, BioStation 
 
 * **Tiempo de sincronización entre dispositivos con diferentes tipos de plantillas faciales**
 
-  Antes de continuar con <Cmd sid='team.menu.faceMigration' />, si sincroniza añadiendo BioStation 3 o BioEntry W3 a un entorno que solo utilizaba FaceStation F2, el tipo de plantilla será diferente y se extraerá la plantilla tipo NPU a partir de la imagen, lo que puede tardar bastante tiempo según la cantidad de caras registradas en el servidor.
+  Antes de ejecutar <Cmd sid='team.menu.faceMigration' />, tenga en cuenta que si agrega BioStation 3 Max, BioEntry W3 o BioStation 3 a un entorno que anteriormente solo utilizaba FaceStation F2 y luego sincroniza, el tipo de plantilla cambiará y se extraerán plantillas de tipo NPU de las imágenes. Esto puede llevar bastante tiempo, dependiendo del número de rostros registrados en el servidor.
 
 * **Recomendaciones para registrar caras en BioStar X**
 

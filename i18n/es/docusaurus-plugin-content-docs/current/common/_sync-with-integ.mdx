@@ -2,26 +2,46 @@
 
 Sincroniza la información de los usuarios modificada en <strong>{props.name}</strong>.
 
-* <Cmd sid='settings.activeDirectory.SyncDataFromADServer' product='2' />: Selecciona el método de sincronización deseado y establece el intervalo de sincronización.
+* <Cmd sid='settings.activeDirectory.syncMode.label' product='2' />: Seleccione el modo de sincronización deseado.
 
-  * <Cmd sid='common.manual' product='2' />: Cada vez que haces clic en <Cmd sid='settings.activeDirectory.SyncNow' product='2' />, se obtiene y sincroniza la información de los usuarios desde <strong>{props.name}</strong>.
+  * <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' />: Al sincronizar usuarios desde el servicio de directorio vinculado, se agregan los usuarios que no existen en **BioStar X** y se actualizan los usuarios cuya información ha cambiado, sin eliminar a ninguno.
 
-    <Image src='/img/biostarx-setting-directory-sync-manual.png' />
+    <Image src='/img/biostarx-setting-directory-sync-add-update-mode.png' />
 
-  * <Cmd sid='common.auto' product='2' />: La información de usuario se obtiene y sincroniza desde <strong>{props.name}</strong> en el intervalo establecido en el elemento <Cmd sid='settings.activeDirectory.autosyncInterval' product='2' />. Establece el intervalo de sincronización en minutos. El valor mínimo es de **30** minutos y el máximo es de **10,080** minutos (7 días).
+  * <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' />: Sincroniza la información de los usuarios de **BioStar X** para que coincida con la del servicio de directorio vinculado. A diferencia del modo <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' />, los usuarios eliminados en el servicio de directorio también se eliminan en BioStar X.
 
-    <Image src='/img/biostarx-setting-directory-sync-auto.png' />
+    <Image src='/img/biostarx-setting-directory-sync-add-update-delete-mode.png' />
+
+* <Cmd sid='settings.activeDirectory.autoSync.label' product='2' />: Establece el intervalo de sincronización automática. La sincronización se ejecuta automáticamente en el intervalo establecido en <Cmd sid='settings.activeDirectory.syncInterval.label' product='2' />. Ingrese el intervalo en minutos. El valor mínimo es de **30** minutos y el máximo es de **10,080** minutos (7 días).
+
+  <Image src='/img/biostarx-setting-directory-sync-auto-sync-interval.png' />
 
 * <Cmd sid='settings.activeDirectory.lastSynchronized' product='2' />: Revisa la fecha y la hora de la sincronización más reciente.
 
+:::caution
+
+* Al usar el modo <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' />, si existe un grupo con el mismo nombre, ese grupo se conserva en lugar de eliminarse.
+
+* Al usar el modo <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' />
+
+  * **Si ya existe un grupo con el mismo nombre**: no se crea el grupo y se conserva la información del grupo existente. Sin embargo, todos los usuarios de ese grupo se eliminan y luego se vuelven a agregar para reflejar la información más reciente del servicio de directorio. Sin embargo, los usuarios de ese grupo que comparten el mismo nombre se conservan.
+
+  * **Usuarios creados en BioStar X**: Los usuarios creados directamente en **BioStar X** no están vinculados al servicio de directorio. Al sincronizar, actualiza estos usuarios para que su información quede vinculada al servicio de directorio.
+
+  * **Limitaciones**: Después de la sincronización, si ya existe un grupo con el mismo nombre, la información y los miembros de ese grupo pueden no sincronizarse correctamente.
+
+* Si actualizas a **BioStar X v1.0.2** con la integración de directorio habilitada, el modo de sincronización predeterminado será <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' />.
+
+:::
+
 :::info
 
-* Al hacer clic en <Cmd sid='settings.activeDirectory.SyncNow' product='2' />, aparece un mensaje de advertencia. Haz clic en <Cmd sid='button.continue' product='2' /> para continuar. Haz clic en <Cmd sid='button.cancel' product='2' /> para cancelar.
+* Al hacer clic en <Cmd sid='settings.activeDirectory.SyncNow' product='2' />, la información de los usuarios se sincroniza con el servicio de directorio según el modo de sincronización seleccionado.
+
+* Al seleccionar el modo <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' />, aparecerá un mensaje de advertencia. Haz clic en <Cmd sid='button.continue' product='2' /> para continuar. Haz clic en <Cmd sid='button.cancel' product='2' /> para cancelar.
 
   <Image src='/img/biostarx-setting-directory-sync-warn-message.png' />
 
-  Consulta [lo siguiente](#exclude-integration) para excluir usuarios específicos de la sincronización cuando uses la función de integración.
-
-* Cuando el método de sincronización está configurado en <Cmd sid='common.auto' product='2' />, sincroniza de inmediato haciendo clic en <Cmd sid='settings.activeDirectory.SyncNow' product='2' />.
+* Consulta [lo siguiente](#excludeintegration) para excluir usuarios específicos de la sincronización cuando uses la función de integración.
 
 :::

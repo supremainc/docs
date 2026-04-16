@@ -2,6 +2,7 @@
 id: settings-diretory-integration
 title: Configuración de Integración de Directorios
 description: Este documento ofrece orientación para sincronizar y administrar usuarios al integrar Microsoft Entra ID o Active Directory con BioStar X.
+toc_max_heading_level: 2
 ---
 
 import UserGroupFilter from '../../common/_usergroupfilter.mdx';
@@ -26,7 +27,10 @@ La función de configuración de **Entra ID** o **Active Directory** está dispo
 
 :::
 
-## Integra con Entra ID {#intergratewithentraid}
+## Configuración de integración de directorios {#intergratewithentraid}
+
+<Tabs>
+<TabItem label='Entra ID' value='entraid'>
 
 1. Inicia sesión en **BioStar X** con una cuenta de administrador.
 
@@ -118,18 +122,19 @@ Copia el URI de redirección del campo <Cmd sid='settings.activeDirectory.Redire
 <SyncIntegration hashid='syncdatafromEntraid' name='Entra ID' />
 
 </Step>
+<Step>
 
-</Steps>
-
-:::note
+### Guardar configuración
 
 Después de completar todos los ajustes de <Cmd sid='setting.menu.directoryIntegration.root' />, haz clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla para guardar. Consulta [lo siguiente](#checksettings) para verificar los resultados.
 
-<Image src='/img/biostarx-setting-directory-btn-apply.png' />
+</Step>
 
-:::
+</Steps>
 
-## Integra con Active Directory {#integratewithactivedirectory}
+</TabItem>
+
+<TabItem label='Active Directory' value='activedirectory'>
 
 1. Inicia sesión en **BioStar X** con una cuenta de administrador.
 
@@ -217,18 +222,19 @@ El campo `sAMAccountName` no puede contener caracteres especiales. El inicio de 
 <SyncIntegration hashid='syncdatafromAd' name='Active Directory' />
 
 </Step>
+<Step>
 
-</Steps>
-
-:::note
+### Guardar configuración
 
 Después de completar todos los ajustes de <Cmd sid='setting.menu.directoryIntegration.root' />, haz clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla para guardar. Consulta [lo siguiente](#checksettings) para verificar los resultados.
 
-<Image src='/img/biostarx-setting-directory-btn-apply.png' />
+</Step>
+</Steps>
 
-:::
+</TabItem>
+</Tabs>
 
-## Verifique los resultados de la configuración {#checksettings}
+## Ver los resultados de la configuración {#checksettings}
 
 Haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la pantalla para aplicar la configuración de integración con **Entra ID** o **Active Directory**. Consulte lo siguiente para verificar la configuración sincronizada.
 
@@ -238,7 +244,7 @@ Haga clic en <Cmd sid='button.apply' product='2' /> en la parte inferior de la p
 
   <Image src='/img/biostarx-setting-directory-entraid-login.png' />
 
-## Excluir la integración del directorio {#excludeintegration}
+## Excluir de la integración del directorio {#excludeintegration}
 
 Al integrar **Entra ID** o **Active Directory** mediante la función <Cmd sid='setting.menu.directoryIntegration.root' />, los usuarios que no existan en el servicio de directorio podrían eliminarse de **BioStar X**. Si hay usuarios que no desea que se eliminen, exclúyalos de la integración con el siguiente método.
 
@@ -248,7 +254,7 @@ Al integrar **Entra ID** o **Active Directory** mediante la función <Cmd sid='s
 
 3. Haga clic en el usuario que desea excluir de la integración en la lista <Cmd sid='menu.user.allUserGroups' product='2' />.
 
-4. En la pantalla de información detallada del usuario seleccionado, marque la casilla de <Cmd sid='user.adsync.exclude' product='2' /> en <Cmd sid='common.advanced' product='2' />.
+4. Cuando aparezca la pantalla de detalles del usuario seleccionado, en la sección <Cmd sid='common.advanced' product='2' />, habilite la opción <Cmd sid='user.adsync.exclude' product='2' />.
 
    <Image src='/img/biostarx-user-advance-exclude-sync.png' />
 

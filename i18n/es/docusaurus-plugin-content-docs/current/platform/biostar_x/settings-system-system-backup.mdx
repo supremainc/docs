@@ -11,7 +11,7 @@ keywords:
   - Restaurar
 ---
 
-Realice copias de seguridad de información clave, como la base de datos de **BioStar X**, diversos ajustes y claves. Utilice la función <Cmd sid='common.backup' product='2' /> para evitar la pérdida de datos en el servidor o al transferirlos a un nuevo equipo.
+Realice copias de seguridad de información clave, como la base de datos de **BioStar X**, diversos ajustes y claves. Los archivos de copia de seguridad también incluyen configuraciones definidas por el usuario, como la clave de cifrado (enc key) y la ruta del registro de imágenes. Utilice la función <Cmd sid='common.backup' product='2' /> para evitar la pérdida de datos en el servidor o al transferirlos a un nuevo equipo.
 
 Los métodos de copia de seguridad compatibles son los siguientes.
 
@@ -47,6 +47,8 @@ Los usuarios pueden crear archivos de copia de seguridad de forma manual.
 
 4. Para crear un archivo de copia de seguridad, haga clic en el botón <Cmd sid='backup.backupNow' product='2' />.
 
+5. Si aparece un mensaje de advertencia, revíselo y haga clic en <Cmd sid='button.continue' product='2' />.
+
 Los archivos de copia de seguridad se guardan en formato *zip* en la ruta especificada en la opción <Cmd sid='backup.filePath' product='2' />. El nombre del archivo se genera con el formato `BioStar_X_Backup_YYYYMMDD_HHMMSS.zip`. Aquí, `YYYYMMDD` representa la fecha de la copia de seguridad y `HHMMSS` representa la hora.
 
 :::info
@@ -76,6 +78,8 @@ Cuando configure la copia de seguridad automática, el sistema creará archivos 
    * <Cmd sid='backup.monthly' product='2' />: Realiza copias de seguridad mensualmente de forma automática. Configure la fecha para la copia de seguridad automática en la opción <Cmd sid='backup.date' product='2' /> y establezca la hora en la opción <Cmd sid='backup.time' product='2' />.
 
 4. Haga clic en <Cmd sid='button.apply' product='2' /> para guardar la configuración.
+
+Después de habilitar la copia de seguridad automática, las copias de seguridad se ejecutarán a intervalos regulares. Si falla una copia de seguridad automática, dicho fallo quedará registrado en el registro de eventos y en la pista de auditoría. La información detallada sobre la causa está disponible en los archivos de registro.
 
 Los archivos de copia de seguridad se guardan en formato *zip* en la ruta especificada en la opción <Cmd sid='backup.filePath' product='2' /> de la sección <Cmd sid='common.backup.general' product='2' />. El nombre del archivo se genera con el formato `BioStar_X_Backup_YYYYMMDD_HHMMSS.zip`. Aquí, `YYYYMMDD` representa la fecha de la copia de seguridad y `HHMMSS` representa la hora.
 

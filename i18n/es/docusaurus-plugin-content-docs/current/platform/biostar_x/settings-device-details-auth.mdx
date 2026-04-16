@@ -49,9 +49,27 @@ Configure el modo de autenticación del dispositivo, los permisos, la autenticac
 
   <summary>Ver los dispositivos y versiones de firmware que admiten la función <Cmd sid='common.serverMatching' product='2' /></summary>
 
-  * Versión de firmware de CoreStation 1.0.0 o superior
+  * Firmware de BioStation 3 Max, versión 1.0.0 o posterior
+
+  * Firmware de XPass Q2, versión 1.0.0 o posterior
+
+  * BioEntry W3 versión de firmware 1.0.0 o superior
+
+  * BioStation 3 firmware 1.0.0 o superior
+
+  * X-Station 2 versión de firmware 1.0.0 o superior
+
+  * FaceStation F2 versión de firmware 1.0.0 o superior
+
+  * Firmware de XPass 2 1.0.0 o posterior
+
+  * Firmware de BioLite N2 1.0.0 o posterior
+
+  * Versión de firmware de XPass D2 1.0.0 o superior
 
   * Firmware de BioEntry P2 1.0.0 o posterior
+
+  * FaceStation 2 versión de firmware 1.4.0 o superior
 
   * Firmware de BioEntry W2 1.0.0 o posterior
 
@@ -61,25 +79,11 @@ Configure el modo de autenticación del dispositivo, los permisos, la autenticac
 
   * Firmware de BioStation 2 1.2.0 o posterior
 
-  * Firmware de BioLite N2 1.0.0 o posterior
-
-  * Versión de firmware de XPass D2 1.0.0 o superior
-
-  * Firmware de XPass 2 1.0.0 o posterior
-
-  * FaceStation 2 versión de firmware 1.4.0 o superior
-
-  * FaceStation F2 versión de firmware 1.0.0 o superior
-
-  * X-Station 2 versión de firmware 1.0.0 o superior
-
-  * BioStation 3 firmware 1.0.0 o superior
-
-  * BioEntry W3 versión de firmware 1.0.0 o superior
+  * Versión de firmware de CoreStation 1.0.0 o superior
 
   * FaceLite no admite la función de autenticación en servidor.
 
-  * Los dispositivos FaceStation F2, BioStation 3 y BioEntry W3 no pueden usar la autenticación en servidor para la autenticación facial.
+  * Los dispositivos BioStation 3, BioEntry W3 y FaceStation F2 no pueden usar la verificación en servidor para la autenticación facial.
 
   </details>
 
@@ -165,15 +169,15 @@ En el grupo <Cmd sid='device.info.fingerprint' product='2' />, configure los det
 
 * Cambiar la opción <Cmd sid='device.info.templateFormat' product='2' /> en los ajustes de autenticación por huella digital hará que todas las huellas almacenadas previamente queden inutilizables. Asegúrate de seleccionar una plantilla en la opción <Cmd sid='device.info.templateFormat' product='2' /> antes de enrolar las huellas de los usuarios.
 
-* La opción <Cmd sid='device.info.viewImage' product='2' /> es compatible con los modelos BioStation 2, BioStation A2, BioStation L2, BioLite N2, FaceStation F2 (FSF2-ODB) y X-Station 2 (XS2-ODPB, XS2-OAPB).
+* La opción <Cmd sid='device.info.viewImage' product='2' /> es compatible con BioStation 3 Max (BS3M-ODB, BS3M-OAPB), X-Station 2 (XS2-ODPB, XS2-OAPB), FaceStation F2 (FSF2-ODB), BioLite N2, BioStation L2, BioStation A2 y BioStation 2.
 
-* La opción <Cmd sid='device.info.fingerprintLFD' product='2' /> es compatible con los modelos BioStation A2, BioStation L2, BioEntry W2, BioLite N2, FaceStation F2 (FSF2-ODB) y X-Station 2 (XS2-ODPB, XS2-OAPB).
+* La opción <Cmd sid='device.info.fingerprintLFD' product='2' /> es compatible con BioStation 3 Max (BS3M-ODB, BS3M-OAPB), X-Station 2 (XS2-ODPB, XS2-OAPB), FaceStation F2 (FSF2-ODB), BioLite N2, BioStation L2, BioStation A2 y BioEntry W2.
 
 :::
 
 ## Ajustes de autenticación facial
 
-En el grupo <Cmd sid='user.credential.face' product='2' />, puedes configurar los detalles relacionados con la autenticación facial del dispositivo.
+En el grupo <Cmd sid='user.credential.face' product='2' /> o <Cmd sid='user.credential.visualface' product='2' />, puedes configurar los ajustes de autenticación facial del dispositivo.
 
 <Image src='/img/biostarx-setting-device-detail-face.png' />
 
@@ -213,6 +217,8 @@ En el grupo <Cmd sid='user.credential.face' product='2' />, puedes configurar lo
 
 * <Cmd sid='device.info.faceFakeDetection' product='2' />: Evita la autenticación de usuarios mediante rostros falsos, como fotografías. Se activa cuando la opción <Cmd sid='device.info.faceOperationMode' product='2' /> está configurada en <Cmd sid='device.info.face.operation_mode.enable' product='2' />.
 
+* <Cmd sid='device.info.storeVisualFaceImage' product='2' />: Almacena tanto la imagen facial real como una plantilla que contiene únicamente los datos de las características extraídas. Desactive esta opción si no desea almacenar la imagen real.
+
 :::info
 
 * Las opciones disponibles para la configuración pueden variar según el tipo de dispositivo.
@@ -221,7 +227,7 @@ En el grupo <Cmd sid='user.credential.face' product='2' />, puedes configurar lo
 
 * La opción <Cmd sid='device.authmode.settings.lightBrightness' product='2' /> es compatible con firmware FaceStation F2 versión 1.1.0 o superior.
 
-* Las opciones <Cmd sid='device.info.faceDetectSetting' product='2' /> y <Cmd sid='device.info.faceOperationMode' product='2' /> son compatibles con los modelos FaceStation F2 y BioStation 3.
+* Las opciones <Cmd sid='device.info.faceDetectSetting' product='2' /> y <Cmd sid='device.info.faceOperationMode' product='2' /> son compatibles con los modelos BioStation 3 Max, BioStation 3 y FaceStation F2.
 
 :::
 
@@ -231,9 +237,9 @@ En el grupo <Cmd sid='user.credential.barcode' product='2' />, puedes configurar
 
 <Image src='/img/biostarx-setting-device-detail-qrbarcode.png' />
 
-* <Cmd sid='device.info.useVisualBarcode' product='2' />: Define si se utiliza la autenticación QR/código de barras a través de la cámara del dispositivo.
+* <Cmd sid='device.info.useVisualBarcode' product='2' /> / <Cmd sid='device.info.useBarcode' product='2' />: Establece si se usará la autenticación por código QR o código de barras mediante la cámara del dispositivo.
 
-* <Cmd sid='device.info.qrCameraTimeout' product='2' />: Define el tiempo de espera de escaneo de la cámara. Si un QR/barcode no se escanea dentro del tiempo especificado, la autenticación fallará.
+* <Cmd sid='device.info.qrCameraTimeout' product='2' /> / <Cmd sid='device.info.scanTimeout' product='2' />: Establece el tiempo de espera del escaneo de la cámara. Si un QR/barcode no se escanea dentro del tiempo especificado, la autenticación fallará.
 
 * <Cmd sid='device.info.normalize' product='2' />: Configura la autenticación de códigos QR con los mismos datos que las tarjetas CSN o Wiegand emitidas a los usuarios.
 
@@ -243,19 +249,27 @@ En el grupo <Cmd sid='user.credential.barcode' product='2' />, puedes configurar
 
 * <Cmd sid='device.info.qrScanTimeout' product='2' />: Define el tiempo de espera de escaneo. Si un QR/barcode no se escanea dentro del tiempo especificado, la autenticación fallará.
 
+* <Cmd sid='device.info.useQrLed' product='2' />: Establece si se utilizará la iluminación LED del dispositivo al autenticar códigos QR.
+
 :::info
 
 * La opción <Cmd sid='device.info.useVisualBarcode' product='2' /> requiere una licencia de dispositivo independiente. Para más información, consulta [el siguiente](settings-license-device-license).
 
 * Los dispositivos que admiten las opciones <Cmd sid='device.info.useVisualBarcode' product='2' />, <Cmd sid='device.info.qrCameraTimeout' product='2' />, <Cmd sid='device.info.normalize' product='2' /> y <Cmd sid='device.authmode.settings.motionSensor' product='2' /> son los siguientes.
 
-  * X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) versión de firmware 1.2.0 o superior
+  * BioStation 3 Max: versión de firmware 1.1.0 o superior
 
-  * BioStation 3 (BS3-DB, BS3-APWB) versión de firmware 1.1.0 o superior
+  * Versión de firmware 1.1.0 o posterior para BioStation 3
+
+  * X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) versión de firmware 1.2.0 o superior
 
 * Los dispositivos que admiten las opciones <Cmd sid='device.info.useBarcodeScanner' product='2' /> y <Cmd sid='device.info.qrScanTimeout' product='2' /> son los siguientes.
 
   * X-Station 2 (XS2-QDPB, XS2-QAPB)
+
+* Las opciones <Cmd sid='device.info.useBarcode' product='2' />, <Cmd sid='device.info.scanTimeout' product='2' /> y <Cmd sid='device.info.useQrLed' product='2' /> son compatibles con los siguientes dispositivos.
+
+  * Firmware de XPass Q2, versión 1.0.0 o posterior
 
 :::
 
@@ -331,21 +345,25 @@ Seleccione los tipos de tarjetas inteligentes personalizadas emitidas por tercer
 
 <summary>Ver dispositivos y versiones de firmware que admiten tarjetas inteligentes personalizadas</summary>
 
+* BioStation 3 Max: versión de firmware 1.3.0 o superior
+
+* Firmware de XPass Q2, versión 1.0.0 o posterior
+
+* BioEntry W3 versión de firmware 1.0.0 o superior
+
+* BioStation 2a versión de firmware 1.1.0 o superior
+
+* BioStation 3 versión de firmware 1.3.0 o superior
+
+* X-Station 2 versión de firmware 1.3.0 o superior
+
+* BioLite N2 versión de firmware 1.6.2 o superior
+
 * XPass D2 versión de firmware 1.7.1 o superior
 
 * BioEntry P2 versión de firmware 1.5.1 o superior
 
 * BioEntry W2 versión de firmware 1.8.0 o superior
-
-* BioStation 2a versión de firmware 1.1.0 o superior
-
-* X-Station 2 versión de firmware 1.3.0 o superior
-
-* BioStation 3 versión de firmware 1.3.0 o superior
-
-* BioEntry W3 versión de firmware 1.0.0 o superior
-
-* BioLite N2 versión de firmware 1.6.2 o superior
 
 </details>
 
@@ -372,11 +390,14 @@ Especifique cómo funciona el reconocimiento en Template on Mobile y configure e
   * <Cmd>LSB</Cmd>: Procesa los datos de la tarjeta en orden de unidades de bytes pequeñas a grandes.
 
 <details>
+
 <summary>Ver dispositivos y versiones de firmware que admiten plantillas en el móvil</summary>
 
-* BioStation 3 versión de firmware 1.2.0 o superior
+* Firmware de BioStation 3 Max, versión 1.0.0 o posterior
 
 * BioEntry W3 versión de firmware 1.0.0 o superior
+
+* BioStation 3 versión de firmware 1.2.0 o superior
 
 </details>
 

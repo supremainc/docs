@@ -8,17 +8,21 @@ keywords:
 
 Esta guía explica cómo usar funciones adicionales de **BioStar X**. Ofrece opciones para reconectar el dispositivo, sincronizar, editar información por lotes y eliminar el dispositivo.
 
+## Administrar un dispositivo
+
+Siga los pasos a continuación para administrar un solo dispositivo.
+
 1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
 
 2. Haga clic en <Cmd sid='setting.menu.device.root' /> en la barra lateral izquierda.
 
-3. Selecciona el dispositivo en la lista <Cmd sid='menu.device.allDeviceGroups' product='2' /> y haz clic con el botón derecho.
+3. Selecciona el dispositivo en la lista <Cmd sid='menu.device.allDeviceGroups' product='2' /> y haz clic con el botón derecho. O haga clic en la casilla de verificación junto al dispositivo que desea en la lista de dispositivos.
 
-4. Seleccione la función deseada en el menú emergente.
+   <Image src='/img/biostarx-setting-device-functions.png' />
 
-<Image src='/img/biostarx-setting-device-functions.png' />
+4. Seleccione la acción deseada en el menú emergente o en la parte superior de la lista de dispositivos.
 
-Consulta las funciones disponibles mediante el menú emergente que se muestra a continuación. Las funciones proporcionadas pueden variar según el dispositivo.
+Consulte las funciones que se indican a continuación. Las funciones disponibles pueden variar según el dispositivo.
 
 * <Cmd sid='button.reconnect' product='2' />: Reconectar el dispositivo seleccionado. Esta opción está disponible cuando se selecciona un dispositivo. Utiliza esta función cuando se pierda la conexión con **BioStar X**.
 
@@ -45,5 +49,123 @@ Consulta las funciones disponibles mediante el menú emergente que se muestra a 
 * Para obtener más información sobre la función <Cmd sid='device.menu.addWiegandDevice' product='2' />, consulta [lo siguiente](settings-adding-wiegand).
 
 * Para obtener más información sobre la función <Cmd sid='device.menu.searchSlaveDevice' product='2' />, consulta [lo siguiente](settings-adding-slave-device).
+
+:::
+
+## Administrar varios dispositivos
+
+Siga los pasos a continuación para administrar uno o más dispositivos.
+
+1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+
+2. Haga clic en <Cmd sid='setting.menu.device.root' /> en la barra lateral izquierda.
+
+3. Haga clic en la casilla de verificación junto al dispositivo que desea en la lista de dispositivos. Puede seleccionar 1 o más dispositivos.
+
+   <Image src='/img/biostarx-setting-device-list-batch-edit.png' />
+
+4. Seleccione la función deseada en la parte superior de la lista de dispositivos.
+
+Consulte las funciones que se indican a continuación. Las funciones disponibles pueden variar según el dispositivo.
+
+* <Cmd sid='button.syncDevice' product='2' />: Sincronizar toda la información de usuario registrada en el dispositivo con **BioStar X**. Esta sincronización se basa en la base de datos de **BioStar X** y eliminará la información de usuario registrada únicamente en el dispositivo.
+
+* <Cmd sid='button.batchEdit' product='2' />: Editar por lotes la información de los dispositivos seleccionados. Haga clic en el botón para abrir la ventana <Cmd sid='device.batchEdit' product='2' />.
+
+  <Image src='/img/biostarx-setting-device-batch-edit.png' />
+
+  :::info
+
+  * Los detalles que se muestran en la ventana <Cmd sid='device.batchEdit' product='2' /> pueden variar según los tipos de dispositivo seleccionados.
+
+  * Al seleccionar un dispositivo maestro y dispositivos esclavos simultáneamente para la edición por lotes, solo se pueden modificar ciertos elementos dentro de <Cmd sid='device.info.authentication' product='2' /> y <Cmd sid='device.info.displaySound' product='2' />.
+
+  * <Cmd sid='device.info.authenticationMode' product='2' /> solo se puede editar por lotes cuando se seleccionan dispositivos con el mismo nombre de modelo.
+
+  :::
+
+* <Cmd sid='button.firmwareUpgrade' product='2' />: Actualizar fácilmente el firmware del dispositivo. Para obtener más información, consulta [lo siguiente](settings-device-upgrade-firmware).
+
+* <Cmd sid='button.deleteDevice' product='2' />: Eliminar el dispositivo seleccionado de la lista. Los dispositivos configurados como puertas o zonas no se pueden eliminar.
+
+## Eliminar registros de eventos de un dispositivo {#deleteLogsFromDevice}
+
+Puede eliminar los registros de eventos almacenados en el dispositivo.
+
+1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+
+2. Haga clic en <Cmd sid='setting.menu.device.root' /> en la barra lateral izquierda.
+
+3. Haga clic en la casilla de verificación junto al dispositivo que desea en la lista de dispositivos. Puede seleccionar 1 o más dispositivos.
+
+4. Haga clic en <IcMoreW title='More' /> → <Cmd sid='button.clearLog' product='2' /> en la parte superior de la lista de dispositivos.
+
+   <Image src='/img/biostarx-setting-device-list-delete-log.png' />
+
+5. Si aparece un cuadro de advertencia, revise el mensaje y haga clic en el botón <Cmd sid='button.continue' product='2' />.
+
+Cuando se complete la eliminación de los registros de eventos del dispositivo, aparecerá un mensaje emergente. Vea la cantidad de dispositivos objetivo, los exitosos y los que fallaron.
+
+:::caution
+
+Los registros de eventos eliminados de un dispositivo no se pueden recuperar ni reenviar desde el servidor al dispositivo. Antes de proceder con la eliminación, confirme que los registros de eventos del dispositivo están almacenados en el servidor. Además, si entre los dispositivos seleccionados hay dispositivos esclavos, virtuales o Wiegand, estos no almacenan registros y se excluyen de la eliminación de registros.
+
+:::
+
+:::info
+
+* Solo los usuarios con el permiso <Cmd sid='ROLE_CODE_ADMIN' product='2' className='bold' /> pueden usar esta función.
+
+* Vea el historial de eliminación de registros de eventos del dispositivo en <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />.
+
+:::
+
+## Funciones adicionales
+
+Utilice funciones adicionales, como imprimir la lista de dispositivos o cambiar la configuración de las columnas.
+
+### Imprimir la lista de dispositivos
+
+Guarde la lista de dispositivos como un archivo PDF o SVG para imprimir.
+
+1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+
+2. Haga clic en <Cmd sid='setting.menu.device.root' /> en la barra lateral izquierda.
+
+3. Haga clic en <IcMoreW title='More' /> en la parte superior de la lista de dispositivos.
+
+4. Haga clic en <Cmd sid='button.print' product='2' /> en el menú emergente.
+
+5. Cuando aparezca la ventana <Cmd sid='printOption.dialog.header' product='2' />, seleccione el formato deseado en las opciones <Cmd sid='printOption.fileFormat' product='2' /> y configure las demás opciones.
+
+   <Image src='/img/biostarx-setting-device-list-print.png' />
+
+6. Haga clic en <Cmd sid='team.menu.print' />.
+
+Imprima el archivo PDF o SVG que se abre en el navegador.
+
+### Configuración de la columna (Columna) de la lista de dispositivos
+
+Puede cambiar la configuración de la columna (Columna) que se muestra en la lista de dispositivos. En la configuración de columnas, seleccione las columnas que se mostrarán o cambie su orden.
+
+1. Haz clic en <Cmd sid='shell.header.setting' /> en la página <Cmd sid='shell.header.launcher' />.
+
+2. Haga clic en <Cmd sid='setting.menu.device.root' /> en la barra lateral izquierda.
+
+3. Haga clic en <IcMoreW title='More' /> en la parte superior de la lista de dispositivos.
+
+4. Haga clic en <Cmd sid='menu.columnSetting' product='2' /> en el menú emergente.
+
+5. Cuando aparezca la ventana <Cmd sid='columnSetting.dialog.header' product='2' />, seleccione o deseleccione las columnas deseadas.
+
+   <Image src='/img/biostarx-setting-device-list-column-setting.png' />
+
+6. Haga clic y arrastre la columna deseada para cambiar su posición.
+
+7. Haga clic en <Cmd sid='button.apply' product='2' /> para guardar la configuración.
+
+:::info
+
+Haz clic en el botón <Cmd sid='columnSetting.button.defaultColumn' product='2' /> para inicializar la configuración de columnas.
 
 :::
