@@ -22,10 +22,42 @@ import {
 import {liteClient as algoliasearch} from 'algoliasearch/lite';
 import './styles.css';
 
+function getPropertyByPath(obj, path) {
+  return path.split('.').reduce((acc, key) => acc?.[key], obj);
+}
+
+function decodeHtmlEntities(str) {
+  if (!str) return '';
+  let result = str;
+  let prev;
+  do {
+    prev = result;
+    result = result
+      .replace(/&amp;/g, '&')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'");
+  } while (result !== prev);
+  return result;
+}
+
+function CustomHighlight({ attribute, hit }) {
+  const highlightResult = getPropertyByPath(hit._highlightResult, attribute);
+  const value = highlightResult?.value || getPropertyByPath(hit, attribute) || '';
+  return <span dangerouslySetInnerHTML={{ __html: decodeHtmlEntities(value) }} />;
+}
+
+function CustomSnippet({ attribute, hit }) {
+  const snippetResult = getPropertyByPath(hit._snippetResult, attribute);
+  const raw = snippetResult?.value || getPropertyByPath(hit, attribute) || '';
+  const text = decodeHtmlEntities(raw.replace(/<\/?mark>/g, ''));
+  return <span>{text}</span>;
+}
+
 function Hit({hit}) {
   const {siteConfig} = useDocusaurusContext();
   const {indexName} = siteConfig.themeConfig.algolia || {};
-
   // hierarchy에서 마지막 null이 아닌 레벨 찾기
   const getLastHierarchyLevel = () => {
     for (let i = 6; i >= 0; i--) {
@@ -79,7 +111,7 @@ function Hit({hit}) {
       }}
     >
       <div className="search-pop-hit-title">
-        <Highlight attribute={lastLevel} hit={hit} />
+        <CustomHighlight attribute={lastLevel} hit={hit} />
       </div>
       <div className="search-pop-hit-breadcrumb">
         <span>{hit.hierarchy?.lvl0}</span>
@@ -116,7 +148,7 @@ function Hit({hit}) {
       </div>
       {hit.content && (
         <div className="search-pop-hit-snippet">
-          <Snippet attribute="content" hit={hit} />
+          <CustomSnippet attribute="content" hit={hit} />
         </div>
       )}
     </Link>
@@ -313,6 +345,7 @@ function HitsWithQuery({onClose, indexName}) {
       <Hits
         hitComponent={Hit}
         transformItems={transformItems}
+        escapeHTML={true}
         classNames={{
           root: 'search-pop-hits',
           list: 'search-pop-hits-list',
