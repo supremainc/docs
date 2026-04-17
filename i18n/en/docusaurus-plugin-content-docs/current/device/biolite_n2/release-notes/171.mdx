@@ -1,0 +1,36 @@
+---
+id: 171
+title: Firmware Version 1.7.1
+---
+
+# Firmware Version 1.7.1 (Build No. 1.7.1_260416)
+
+Release<Separator/>2026-04-17
+
+:::caution
+
+Devices with the new BLE chip and the SE processor cannot downgrade to a lower version after upgrading the firmware to v1.5.0 or higher. Devices with existing BLE chips and SE processor can be downgraded to a lower version.
+
+After upgrading the firmware to v1.7.0, it is not able to downgrade to an earlier version of the firmware.
+
+For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Supported EV2 Secure Messaging authentication and issuance for DESFire EV2 and EV3 cards.
+
+1. Supports the **Ignore Repeated Signals Duration** feature, which ignores repetitive authentication signals from the controller when the device is connected to a 3rd party controller via Wiegand.
+
+1. Supports not logging events when the **Ignore Repeated Signals Duration** feature is activated.
+
+1. Provided **global** firmware for non-CE(EU) regions
+
+   - Disabled the **Master Admin** and **Admin 2-step Authentication** features
+
+   - Reduced the minimum length for PIN enrollment to 4 digits
+
+1. Improved log display for unsupported events and errors on the device.
