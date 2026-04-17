@@ -4,46 +4,74 @@ title: システムを復元する
 description: システムバックアップファイルを使用して、BioStar X のデータベース、設定、ライセンスなどを以前の状態に復元する方法を案内します。
 keywords:
   - システム復元
+  - バックアップ
   - 復元
-  - バックアップ復元
-  - データ復旧
-  - BioStar X Restore
 ---
 
-**BioStar X** で問題が発生した場合や以前の状態に戻す必要がある場合は、システムバックアップファイルを使用して復元できる。 復元機能を使用すると、データベース、各種設定、ライセンス情報などをバックアップ時点の状態に戻せる。
+**BioStar X** で問題が発生した場合や以前の状態に戻す必要がある場合は、システムバックアップファイルを使用して復元できる。 復元機能を使用すると、データベース、各種設定、ライセンス情報などをバックアップ時点の状態に復元できます。
 
-:::caution
+## 開始する前に
 
-* 復元を実行すると、現在のデータがバックアップ時点の状態に戻る。 復元の前に現在の状態をバックアップすることを推奨する。 現在の状態をバックアップするには [the following](settings-system-system-backup) を参照する。
-
-* 復元を実行する際、復元先サーバーの IP アドレスがバックアップ元サーバーの IP アドレスと異なる場合、復元が失敗する可能性がある。 復元を実行する前にサーバーの IP アドレスを確認する。
-
-:::
-
-:::info
-
-SQL Server データベースと **BioStar X** が別々のサーバーにインストールされている場合、**BioStar X** のシステムバックアップと復元は使用できません。
-
-:::
-
-1. Windows で <Start/> → **BioStar X** → **BioStar X Restore** を実行する。
-
-   * プログラムパス：*C:\\Program Files\\BioStar X\\biostar-restore.exe*
-
-2. **Select File** をクリックし、復元するバックアップファイルを選択する。
-
-   <Image src='/img/common/setting-system-restore.png' className='none' alone />
-
-3. 復元を開始するには **Restore** をクリックする。 
-
-**Starting Biostar services...Done** メッセージが表示されたら、復元が完了した状態だ。 **BioStar X** に接続し、復元されたデータを確認する。
-
-:::info
+システム復元を開始する前に次の項目を確認してください。
 
 * バックアップ時点の **BioStar X** バージョンと現在のバージョンが異なる場合、復元を実行できない。 **BioStar X** のバージョンを確認するには、画面右上の <IcInfo /> をクリックする。
 
   <Image src='/img/biostarx-settings-system-restore-check-ver.png' />
 
 * バックアップ時点の **BioStar X** バージョンを確認するには、バックアップファイルを展開し、*sysbackup.conf* の `biostarVersion` を確認する。
+
+* SQL Server データベースと **BioStar X** が別々のサーバーにインストールされている場合、**BioStar X** のシステムバックアップと復元は使用できません。
+
+* 復元対象サーバーの IP アドレスがバックアップサーバーと異なる場合：
+
+  * **BioStar X v1.0.2 以上**: 復元時に復元先の IP アドレスを検出し、既存の証明書の代わりに新しい IP アドレスに基づいて証明書を自動的に再発行します。 証明書を再発行した後、当該証明書を使用する関連サービスは自動的に再接続されるため、追加の作業は不要です。
+
+  * **BioStar X v1.0.1 以下**: 復元に失敗する可能性があります。 復元を実行する前にサーバーの IP アドレスを確認してください。
+
+* 暗号化キーやイメージログのパスが変更されていても、復元時は復元対象の **BioStar X** の現在の設定パスに従います。 別途パス設定を指定していない場合は、復元対象の **BioStar X** の既定のパスが使用されます。
+
+* 復元を実行する際、現在のデータは自動的にバックアップされるため、復元が失敗しても実行前の状態に戻せます。
+
+:::info
+
+システムバックアップの作成について詳しくは、[以下のドキュメント](settings-system-system-backup)を参照してください。
+
+:::
+
+## システム復元
+
+1. Windows で <Start/> → **BioStar X** → **BioStar X Restore** を実行する。
+
+   > プログラムパス：*C:\\Program Files\\BioStar X\\biostar-restore.exe*
+
+2. **Select File** をクリックし、復元するバックアップファイルを選択する。
+
+   <Image src='/img/common/setting-system-restore.png' className='none' alone />
+
+3. 復元を開始するには **Restore** をクリックする。
+
+4. バックアップファイルの有効性を検証します。
+
+5. 「**You can proceed to restore**」メッセージが表示されたら、データベースのパスワードを入力し、**Restore** ボタンをクリックしてください。
+
+   <Image src='/img/common/setting-system-restore-validate.png' className='none' alone />
+
+6. 確認メッセージが表示されたら、復元を続行するには **Restore** ボタンをクリックしてください。
+
+   <Image src='/img/common/setting-system-restore-confirm.png'  className='none' alone />
+
+7. 復元の進行状況を確認できるメッセージが表示されます。 復元処理が完了するまでお待ちください。
+
+   <Image src='/img/common/setting-system-restore-continues.png' className='none' alone />
+
+「**Restore has already been completed**」メッセージが表示されたら、復元は完了しています。 **BioStar X** に接続し、復元されたデータを確認する。
+
+<Image src='/img/common/setting-system-restore-complete.png' className='none' alone />
+
+:::info
+
+* 復元中にPCが異常終了した場合は、**BioStar X Restore** を再実行して復元を再試行してください。
+
+* 復元対象サーバーの IP アドレスがバックアップサーバーと異なり、かつコミュニケーションサーバーが接続されている場合は、証明書を新たに発行する必要があります。 コミュニケーションサーバーで証明書を新しく発行する方法は、[以下のドキュメント](change-ip#communicationServer)を参照してください。
 
 :::

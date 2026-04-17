@@ -2,26 +2,46 @@
 
 <strong>{props.name}</strong> で変更されたユーザー情報を同期する機能です。
 
-* <Cmd sid='settings.activeDirectory.SyncDataFromADServer' product='2' />：希望する同期方式を選択し、同期間隔を設定できます。
+* <Cmd sid='settings.activeDirectory.syncMode.label' product='2' />：希望する同期モードを選択してください。
 
-  * <Cmd sid='common.manual' product='2' />：<Cmd sid='settings.activeDirectory.SyncNow' product='2' /> ボタンをクリックするたびに <strong>{props.name}</strong> からユーザー情報を取得して同期します。
+  * <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' />：連携されているディレクトリサービスからユーザーを同期する際、**BioStar X** に存在しないユーザーは追加し、変更されたユーザーの情報は更新しますが、削除は行いません。
 
-    <Image src='/img/biostarx-setting-directory-sync-manual.png' />
+    <Image src='/img/biostarx-setting-directory-sync-add-update-mode.png' />
 
-  * <Cmd sid='common.auto' product='2' />：<Cmd sid='settings.activeDirectory.autosyncInterval' product='2' /> 項目で設定した間隔で <strong>{props.name}</strong> からユーザー情報を取得して同期します。 同期間隔は分単位で設定できます。 最小設定値は **30** 分、最大設定値は **10,080** 分（7 日）です。
+  * <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' />：**BioStar X** のユーザー情報を連携先のディレクトリサービスと同じ状態に同期します。 <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' /> モードとは異なり、ディレクトリサービスで削除されたユーザーも削除されます。
 
-    <Image src='/img/biostarx-setting-directory-sync-auto.png' />
+    <Image src='/img/biostarx-setting-directory-sync-add-update-delete-mode.png' />
+
+* <Cmd sid='settings.activeDirectory.autoSync.label' product='2' />：自動同期の間隔を設定できます。 <Cmd sid='settings.activeDirectory.syncInterval.label' product='2' />に設定した間隔で自動的に同期されます。 分単位で入力できます。 最小設定値は **30** 分、最大設定値は **10,080** 分（7 日）です。
+
+  <Image src='/img/biostarx-setting-directory-sync-auto-sync-interval.png' />
 
 * <Cmd sid='settings.activeDirectory.lastSynchronized' product='2' />：直近の同期日時を確認できます。
 
+:::caution
+
+* <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' /> モード使用時、同名のユーザーグループがある場合は削除せずに保持します。
+
+* <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' /> モード使用時
+
+  * **同名のグループが既に存在する場合**：グループは新たに作成されず、既存グループの情報を保持します。 ただし、該当グループに所属するユーザーはディレクトリサービスの最新情報を反映させるため、一旦すべて削除してから再度追加します。 ただし、該当グループ内の同名ユーザーは維持されます。
+
+  * **BioStar Xで作成されたユーザー**：**BioStar X** 上で直接作成したユーザーはディレクトリサービスとは連携されていません。 同期時にこれらのユーザーの情報をディレクトリサービスと紐付けるように更新します。
+
+  * **制限事項**：同期後に同名のグループが既に存在する場合、当該グループの情報と所属ユーザーが正常に同期されない可能性があります。
+
+* ディレクトリ連携を設定した状態で **BioStar X v1.0.2** にアップグレードした場合、同期モードは <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' /> に既定で設定されます。
+
+:::
+
 :::info
 
-* <Cmd sid='settings.activeDirectory.SyncNow' product='2' /> ボタンをクリックすると警告メッセージが表示されます。 メッセージを確認して続行する場合は <Cmd sid='button.continue' product='2' /> ボタンを、キャンセルする場合は <Cmd sid='button.cancel' product='2' /> ボタンをクリックします。
+* <Cmd sid='settings.activeDirectory.SyncNow' product='2' /> ボタンをクリックするたびに、選択した同期モードでディレクトリサービスとユーザー情報を同期します。
+
+* <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' /> モードを選択すると警告メッセージが表示されます。 メッセージを確認して続行する場合は <Cmd sid='button.continue' product='2' /> ボタンを、キャンセルする場合は <Cmd sid='button.cancel' product='2' /> ボタンをクリックします。
 
   <Image src='/img/biostarx-setting-directory-sync-warn-message.png' />
 
-  同期機能で連携する際に特定のユーザーを同期対象から除外するには [次のドキュメント](#exclude-integration) を参照してください。
-
-* 同期方式が <Cmd sid='common.auto' product='2' /> の状態でも、<Cmd sid='settings.activeDirectory.SyncNow' product='2' /> ボタンをクリックすると即時同期できます。
+* 同期機能で連携する際に特定のユーザーを同期対象から除外するには [次のドキュメント](#excludeintegration) を参照してください。
 
 :::

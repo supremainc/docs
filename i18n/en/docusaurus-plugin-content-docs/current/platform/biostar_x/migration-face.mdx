@@ -26,11 +26,13 @@ It is a feature that generates two types of face templates from user images alre
 
 Please refer to the list below for the devices that can synchronize the face with the template.
 
-* FaceStation F2 firmware v2.2.0 or later
+* BioStation 3 Max firmware v1.0.0 or later
+
+* BioEntry W3 firmware v1.0.0 or later
 
 * BioStation 3 firmware v1.3.1 or later
 
-* BioEntry W3 firmware v1.0.0 or later
+* FaceStation F2 firmware v2.2.0 or later
 
 <details>
 
@@ -44,9 +46,9 @@ The latest firmware can be downloaded from the [Suprema Download Center](https:/
 
 ### Notes on face template types
 
-Differences in face template types for FaceStation F2, BioStation 3, and BioEntry W3.
+Differences in face template types for BioStation 3 Max, BioEntry W3, BioStation 3, and FaceStation F2.
 
-* **NPU Type**: BioStation 3, BioEntry W3
+* **NPU Type**: BioStation 3 Max, BioEntry W3, BioStation 3
 
 * **GPU Type**: FaceStation F2
 
@@ -54,7 +56,7 @@ Differences in face template types for FaceStation F2, BioStation 3, and BioEntr
 
 * **Synchronization Time Between Devices with Different Face Template Types**
 
-  Before proceeding with <Cmd sid='team.menu.faceMigration' />, if you synchronize by adding BioStation 3 or BioEntry W3 to an environment that only used FaceStation F2, the template type will differ, and the NPU type template will be extracted from the image, which may take considerable time depending on the number of faces enrolled on the server.
+  Before you run <Cmd sid='team.menu.faceMigration' />, note that if you add BioStation 3 Max, BioEntry W3, or BioStation 3 to an environment that previously used only FaceStation F2 and then synchronize, the template type will change and NPU-type templates will be extracted from the images. This may take a considerable amount of time depending on the number of faces registered on the server.
 
 * **Face Enrollment Recommendations in BioStar X**
 

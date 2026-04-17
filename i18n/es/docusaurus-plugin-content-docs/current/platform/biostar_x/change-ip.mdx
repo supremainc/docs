@@ -1,0 +1,98 @@
+---
+id: change-ip
+title: Cambiar la dirección IP del servidor principal
+description: Esta guía explica cómo cambiar la dirección IP después de instalar el servidor principal de **BioStar X**. Incluye el procedimiento completo, desde cambiar la dirección IP del servidor Windows hasta aplicarla mediante **BioStar X Service Manager** y configurar el Communication Server.
+keywords:
+  - Cambio de dirección IP
+  - BioStar X Service Manager
+  - Servidor principal
+  - Servidor de comunicación
+---
+
+Consulta este documento cuando cambie el entorno de red del servidor o cuando necesites cambiar la dirección IP después de la configuración inicial. Esta guía explica cómo cambiar de forma segura la dirección IP del servidor principal de **BioStar X** y reconfigurar el Servidor de comunicación conectado.
+
+:::info
+
+La función de cambio de dirección IP del servidor principal es compatible con **BioStar X v1.0.2** y versiones posteriores.
+
+:::
+
+## Cambio de dirección IP
+
+Primero, cambia la dirección IP en el servidor donde está instalado **BioStar X**. Cambia la dirección IP del adaptador de red conectado a la red externa.
+
+:::info
+
+Para más información sobre cómo cambiar la dirección IP en Windows, consulta [Microsoft Customer Support](https://support.microsoft.com/en-us/windows/essential-network-settings-and-tasks-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9).
+
+{/* Microsoft Support https://support.microsoft.com/en-us/windows/essential-network-settings-and-tasks-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9 */}
+
+:::
+
+## Aplicar la nueva dirección IP
+
+Sigue los pasos siguientes para cambiar la dirección IP en el servidor donde está instalado **BioStar X**.
+
+1. En Windows, haz clic en <Start/> → **BioStar X** → **BioStar X IP Setting**.
+
+2. Cuando aparezca la ventana <Cmd>BioStar X IP Setting</Cmd>, selecciona la dirección IP que deseas usar en <Cmd>Server Address</Cmd>.
+
+   <Image src='/img/common/biostarx-sm-change-ip.png' alone />
+
+3. Haz clic en el botón <Cmd>Apply</Cmd>.
+
+4. Si aparece un mensaje sobre el cambio de dirección IP, revísalo y haz clic en el botón <Cmd>Yes</Cmd>.
+
+   <Image src='/img/common/biostarx-sm-change-ip-warning-message.png' alone />
+
+5. Espera hasta que finalice el proceso de cambio de dirección IP. Cuando se complete el proceso, aparecerá un mensaje de éxito.
+
+   <Image src='/img/common/biostarx-sm-change-ip-progress-status.png' alone />
+
+6. Si aparece el mensaje **IP change applied successfully**, haz clic en el botón <Cmd>OK</Cmd>.
+
+   <Image src='/img/common/biostarx-sm-change-ip-success.png' alone />
+
+Después de que se complete el cambio de dirección IP, reinicia todos los servicios. Abre un navegador web y verifica que puedas acceder al servidor con la nueva dirección IP.
+
+:::info
+
+* La dirección IP no se puede introducir manualmente; selecciona una de las direcciones IP que figuran en <Cmd>Server Address</Cmd>.
+
+* Puedes ver la nueva dirección IP en **BioStar X Service Manager** → <Cmd>SERVICE SETTINGS</Cmd> → <Cmd>BioStar X Server (Main)</Cmd>, en <Cmd>Server Address</Cmd>.
+
+   ![BioStar X Service Manager Server Address](/img/common/biostarx-sm-change-ip-check.png)
+
+:::
+
+## Actualización del servidor de comunicación {#communicationServer}
+
+Si instalaste un Servidor de comunicación, actualiza su configuración para usar la nueva dirección IP del servidor principal. Ejecuta esto en el servidor donde instalaste el Servidor de comunicación.
+
+1. Ve a *C:\\Program Files\\BioStar X Communications Server*.
+
+2. Ejecuta *biostar-device-cert-enroll.exe*.
+
+3. Cuando aparezca la ventana <Cmd>Certificate Enrollment</Cmd>, introduce la nueva dirección IP del servidor principal en el campo <Cmd>Main Server IP Address</Cmd>.
+
+   <Image src='/img/common/biostarx-sm-change-ip-enroll-cert.png' alone />
+
+4. Si el número de puerto del servidor principal difiere del valor predeterminado (21810), introduce el nuevo número de puerto en el campo <Cmd>BioStar X Coordinator Service Port</Cmd>.
+
+5. Haga clic en el botón <Cmd>Enroll</Cmd>.
+
+Después de actualizar la dirección IP del servidor principal, se muestra un mensaje de confirmación.
+
+<Image src='/img/common/biostarx-sm-change-ip-enroll-cert-success.png' alone />
+
+:::info
+
+* Si no instaló el Communication Server, omita este paso.
+
+* Si cambió el número de puerto en el servidor principal donde está instalado BioStar X, ejecute **BioStar X Service Manager** y verifique el valor <Cmd>Client Port</Cmd> en <Cmd>SERVICE SETTINGS</Cmd> → <Cmd>BioStar X Coordinator Service</Cmd>.
+
+  <Image src='/img/common/biostarx-sm-coordinator-s.png' alone />
+
+* Para obtener más información sobre la instalación de un servidor de comunicación, consulta [lo siguiente](install-communication-server).
+
+:::

@@ -11,7 +11,7 @@ keywords:
 
 :::info
 
-* リモートアクセス（Remote Access）機能は、追加オプションで利用できます。 ライセンス ポリシーの詳細については、[次のドキュメント](licensing#features-add-ons) を参照してください。
+* リモートアクセス（Remote Access）機能は、追加オプションで利用できます。 ライセンス ポリシーの詳細については、[次のドキュメント](licensing#features-add-ons) を参照してください。 リモートアクセスライセンスは年額のサブスクリプションです。
 
 * リモートアクセスライセンスを購入すると、Suprema はリモートアクセスライセンスを発行し、リモートアクセス利用用の ngrok Suprema サイトの bot アカウントとエンドポイントを作成して、ライセンス文書をユーザーに提供します。
 
@@ -80,13 +80,27 @@ keywords:
 
 Suprema から提供された ngrok の設定情報を入力します。
 
-* <Cmd sid='setting.remoteAccess.field.ngrokUserId' />：ngrok アカウントを入力します。
-
 * <Cmd sid='setting.remoteAccess.field.tunnelToken' />：**Authtoken** を入力します。
 
-* <Cmd sid='setting.remoteAccess.field.hostURL' />：エンドポイント URL を入力します。 URL は `your-name.bsx.ngrok.app` 形式です。
+* <Cmd sid='setting.remoteAccess.field.hostURL' />：エンドポイント URL を入力します。 URL は `your-name.bsx.ngrok.app` 形式です。 URL は `https://subdomain.bsx.ngrok.app` 形式です。
 
-すべての情報を入力したら、<Cmd sid='button.apply' product='2' /> ボタンをクリックします。 警告メッセージが表示されたら内容を確認し、<Cmd sid='setting.remoteAccess.button.agree' /> ボタンをクリックします。
+:::info
+
+サブドメイン（`subdomain`）は以下のルールに従います。 ルールに従っていないサブドメインは使用できません。
+
+* 英字（A-Z、a-z）、数字（0-9）、ハイフン（`-`）のみ使用できます。
+
+* 特殊文字や空白は使用できません。
+
+:::
+
+1. すべての情報を入力したら、<Cmd sid='button.apply' product='2' /> ボタンをクリックします。 
+
+2. <Cmd sid='setting.remoteAccess.dialog.label.agreement' />ウィンドウが表示されたら、内容を確認してください。
+
+   <Image src='/img/biostarx-settings-remote-access-agree.png' />
+
+3. 利用規約に同意するチェックボックスをオンにして、<Cmd sid='setting.remoteAccess.button.agree' /> ボタンをクリックしてください。
 
 </Step>
 
@@ -98,6 +112,10 @@ Suprema から提供された ngrok の設定情報を入力します。
 
 :::info
 
-外部ネットワークからエンドポイント URL で接続できない場合は、ライセンスを発行した販売店または代理店にお問い合わせください。
+* エンドポイント URL にアクセスすると、<Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' /> で接続履歴を確認できます。
+
+  > 例: [Remote Access] 192.168.1.100
+
+* 外部ネットワークからエンドポイント URL で接続できない場合は、ライセンスを発行した販売店または代理店にお問い合わせください。
 
 :::

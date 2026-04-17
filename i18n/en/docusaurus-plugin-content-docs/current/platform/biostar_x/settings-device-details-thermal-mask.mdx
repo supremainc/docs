@@ -22,7 +22,7 @@ In the <Cmd sid='device.info.temperMask' product='2' /> or <Cmd sid='device.info
 
   * TCM10-FSF2
 
-* The <Cmd sid='device.mask.useMask' product='2' /> setting feature is supported by FaceStation F2, BioStation 3, and BioEntry W3.
+* The <Cmd sid='device.mask.useMask' product='2' /> setting is supported on the FaceStation F2, BioStation 3, BioEntry W3, and BioStation 3 Max models.
 
 * If the user has made any arbitrary changes, click the <Cmd sid='button.apply' product='2' /> button. Changes will not be applied to the device if not saved.
 
@@ -41,6 +41,12 @@ In the <Cmd sid='device.mask.title' product='2' /> group, you can set whether to
   * <Cmd sid='device.thermal.maskCheckModeOff' product='2' />: Mask detection is not used.
 
 * <Cmd sid='device.thermal.maskdetectlevel' product='2' />: Select the mask detection sensitivity.
+
+:::info
+
+For more information on the <Cmd sid='device.thermal.maskOnlyMode' product='2' /> option, refer to [the following document](#thermal-mask-verification).
+
+:::
 
 ## Thermal camera settings {#thermal-camera-settings}
 
@@ -103,7 +109,7 @@ In the <Cmd sid='device.thermal.title' product='2' /> group, you can set the use
 
 ## Thermal and mask verification methods {#thermal-mask-verification}
 
-<Cmd sid='device.thermal.mode' product='2' /> group allows settings to determine the verification method based on the device's purpose when <Cmd sid='device.mask.useMask' product='2' /> or <Cmd sid='device.thermal.useThermalCamera' product='2' /> options are set to <Cmd sid='common.use' product='2' />.
+In the <Cmd sid='device.thermal.mode' product='2' /> or <Cmd sid='device.thermal.maskOnlyMode' product='2' /> group, set the <Cmd sid='device.mask.useMask' product='2' /> or <Cmd sid='device.thermal.useThermalCamera' product='2' /> option to <Cmd sid='common.use' product='2' /> to configure the verification method based on the device's intended use.
 
 * <Cmd sid='device.thermal.authBeforeMode' product='2' />: Checks the user's mask usage or measures temperature after authentication.
 

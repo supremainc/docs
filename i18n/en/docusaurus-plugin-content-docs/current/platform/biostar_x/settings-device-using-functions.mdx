@@ -8,17 +8,21 @@ keywords:
 
 This guide explains how to use additional features of **BioStar X**. It provides options for reconnecting the device, synchronization, batch information editing, and deleting the device.
 
+## Manage a Single Device
+
+Use the following steps to manage a single device.
+
 1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
 
 2. Click <Cmd sid='setting.menu.device.root' /> in the left sidebar.
 
-3. Select the device from the <Cmd sid='menu.device.allDeviceGroups' product='2' /> list and right-click.
+3. Select the device from the <Cmd sid='menu.device.allDeviceGroups' product='2' /> list and right-click. Or, click the checkbox for the device you want in the device list.
 
-4. Select the desired feature from the pop-up menu.
+   <Image src='/img/biostarx-setting-device-functions.png' />
 
-<Image src='/img/biostarx-setting-device-functions.png' />
+4. Select the desired action from the pop-up menu or from the top of the device list.
 
-Refer to the features available through the pop-up menu below: The features provided may vary depending on the device.
+Refer to the features below. The features provided may vary depending on the device.
 
 * <Cmd sid='button.reconnect' product='2' />: Reconnect the selected device. This option is available when one device is selected. Use this feature when the connection to **BioStar X** is lost.
 
@@ -45,5 +49,123 @@ Refer to the features available through the pop-up menu below: The features prov
 * For more information about the <Cmd sid='device.menu.addWiegandDevice' product='2' /> feature, refer to [the following](settings-adding-wiegand).
 
 * For more information about the <Cmd sid='device.menu.searchSlaveDevice' product='2' /> feature, refer to [the following](settings-adding-slave-device).
+
+:::
+
+## Manage Multiple Devices
+
+Use the following steps to manage one or more devices.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.device.root' /> in the left sidebar.
+
+3. Click the checkbox for the device you want in the device list. You can select 1 or more devices.
+
+   <Image src='/img/biostarx-setting-device-list-batch-edit.png' />
+
+4. Select the desired feature at the top of the device list.
+
+Refer to the features below. The features provided may vary depending on the device.
+
+* <Cmd sid='button.syncDevice' product='2' />: Synchronize all user information registered on the device with **BioStar X**. This synchronization is based on the **BioStar X** database, and user information registered only on the device will be deleted.
+
+* <Cmd sid='button.batchEdit' product='2' />: Batch edit information for the selected devices. Click the button to open the <Cmd sid='device.batchEdit' product='2' /> window.
+
+  <Image src='/img/biostarx-setting-device-batch-edit.png' />
+
+  :::info
+
+  * The details displayed in the <Cmd sid='device.batchEdit' product='2' /> window may vary depending on the selected device types.
+
+  * When selecting a master device and slave devices simultaneously for batch editing, only certain items within <Cmd sid='device.info.authentication' product='2' /> and <Cmd sid='device.info.displaySound' product='2' /> can be modified.
+
+  * <Cmd sid='device.info.authenticationMode' product='2' /> can only be batch edited when devices with the same model name are selected.
+
+  :::
+
+* <Cmd sid='button.firmwareUpgrade' product='2' />: Easily upgrade the device firmware. For more information, refer to [the following](settings-device-upgrade-firmware).
+
+* <Cmd sid='button.deleteDevice' product='2' />: Delete the selected device from the list. Devices set as doors or zones cannot be deleted.
+
+## Delete Event Logs From a Device {#deleteLogsFromDevice}
+
+You can delete event logs stored on the device.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.device.root' /> in the left sidebar.
+
+3. Click the checkbox for the device you want in the device list. You can select 1 or more devices.
+
+4. Click <IcMoreW title='More' /> → <Cmd sid='button.clearLog' product='2' /> at the top of the device list.
+
+   <Image src='/img/biostarx-setting-device-list-delete-log.png' />
+
+5. If a warning dialog appears, review the message and click the <Cmd sid='button.continue' product='2' /> button.
+
+When the device event log deletion is complete, a pop-up message appears. View the number of target devices, successful devices, and failed devices.
+
+:::caution
+
+Event logs deleted from a device cannot be recovered and cannot be resent from the server to the device. Before proceeding with deletion, confirm the device event logs are stored on the server. Also, if the selected devices include slave, virtual, or Wiegand devices, those devices do not store logs and are excluded from log deletion.
+
+:::
+
+:::info
+
+* Only users with the <Cmd sid='ROLE_CODE_ADMIN' product='2' className='bold' /> permission can use this feature.
+
+* View the device event log deletion history at <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' />.
+
+:::
+
+## Additional features
+
+Use additional features such as printing the device list or changing column settings.
+
+### Print device list
+
+Save the device list as a PDF or SVG file for printing.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.device.root' /> in the left sidebar.
+
+3. Click <IcMoreW title='More' /> at the top of the device list.
+
+4. Click <Cmd sid='button.print' product='2' /> in the popup menu.
+
+5. When the <Cmd sid='printOption.dialog.header' product='2' /> window appears, select your desired format in the <Cmd sid='printOption.fileFormat' product='2' /> options and set the other options.
+
+   <Image src='/img/biostarx-setting-device-list-print.png' />
+
+6. Click <Cmd sid='team.menu.print' />.
+
+You can print the PDF or SVG file that opens through the browser.
+
+### Device List Column (Column) Settings
+
+You can change the column (Column) settings displayed in the device list. Through column settings, you can select the columns to be displayed or change the order of the columns.
+
+1. Click <Cmd sid='shell.header.setting' /> on the <Cmd sid='shell.header.launcher' /> page.
+
+2. Click <Cmd sid='setting.menu.device.root' /> in the left sidebar.
+
+3. Click <IcMoreW title='More' /> at the top of the device list.
+
+4. Click <Cmd sid='menu.columnSetting' product='2' /> in the popup menu.
+
+5. When the <Cmd sid='columnSetting.dialog.header' product='2' /> window appears, select or deselect the desired columns.
+
+   <Image src='/img/biostarx-setting-device-list-column-setting.png' />
+
+6. To change the order of the columns, click and drag the desired column to change its position.
+
+7. Click <Cmd sid='button.apply' product='2' /> to save the settings.
+
+:::info
+
+To initialize the column settings, click the <Cmd sid='columnSetting.button.defaultColumn' product='2' /> button.
 
 :::

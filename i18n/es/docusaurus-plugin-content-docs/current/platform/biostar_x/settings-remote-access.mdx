@@ -11,7 +11,7 @@ El acceso remoto a través de ngrok permite acceder de forma segura a redes inte
 
 :::info
 
-* La función de acceso remoto está disponible como una opción adicional. Para más información sobre la política de licencias, consulta [lo siguiente](licensing#features-add-ons).
+* La función de acceso remoto está disponible como una opción adicional. Para más información sobre la política de licencias, consulta [lo siguiente](licensing#features-add-ons). La licencia de acceso remoto es una suscripción anual.
 
 * Al adquirir la licencia de acceso remoto, Suprema genera una cuenta de bot, un endpoint y un documento de licencia para el uso de acceso remoto en el sitio ngrok de Suprema.
 
@@ -80,13 +80,27 @@ Para obtener más información sobre el registro de licencias, consulte [lo sigu
 
 Introduzca la información de configuración de ngrok proporcionada por Suprema.
 
-* <Cmd sid='setting.remoteAccess.field.ngrokUserId' />: Introduzca su cuenta de ngrok.
+* <Cmd sid='setting.remoteAccess.field.tunnelToken' />: Ingrese su **token de autenticación**.
 
-* <Cmd sid='setting.remoteAccess.field.tunnelToken' />: Introduzca su **Authtoken**.
+* <Cmd sid='setting.remoteAccess.field.hostURL' />: Ingrese la URL del endpoint. La URL tiene el formato `https://subdomain.bsx.ngrok.app`.
 
-* <Cmd sid='setting.remoteAccess.field.hostURL' />: Introduzca la URL del endpoint. La URL tiene el formato `your-name.bsx.ngrok.app`.
+:::info
 
-Después de introducir toda la información, haga clic en el botón <Cmd sid='button.apply' product='2' />. Si aparece una ventana de mensaje de advertencia, verifique el contenido y haga clic en el botón <Cmd sid='setting.remoteAccess.button.agree' />.
+El subdominio (`subdomain`) debe cumplir las reglas que se indican a continuación. No se pueden usar subdominios que no cumplan con las reglas.
+
+* Solo se permiten letras del alfabeto inglés (A-Z, a-z), números (0-9) y guiones (`-`).
+
+* No se permiten caracteres especiales ni espacios.
+
+:::
+
+1. Después de introducir toda la información, haga clic en el botón <Cmd sid='button.apply' product='2' />. 
+
+2. Cuando aparezca la ventana <Cmd sid='setting.remoteAccess.dialog.label.agreement' />, revise el contenido.
+
+   <Image src='/img/biostarx-settings-remote-access-agree.png' />
+
+3. Seleccione la casilla para aceptar los términos, luego haga clic en <Cmd sid='setting.remoteAccess.button.agree' />.
 
 </Step>
 
@@ -98,6 +112,10 @@ Después de completar la configuración, verifique si puede acceder al servidor 
 
 :::info
 
-Si no puede acceder mediante la URL del endpoint desde una red externa, póngase en contacto con el punto de venta o distribuidor que emitió su licencia.
+* Acceda a la URL del endpoint, luego vaya a <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.auditTrail' /> para consultar los registros de acceso.
+
+  > Ejemplo: [Acceso remoto] 192.168.1.100
+
+* Si no puede acceder mediante la URL del endpoint desde una red externa, póngase en contacto con el punto de venta o distribuidor que emitió su licencia.
 
 :::

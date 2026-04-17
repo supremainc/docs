@@ -22,7 +22,7 @@ En las secciones <Cmd sid='device.info.temperMask' product='2' /> o <Cmd sid='de
 
   * TCM10-FSF2
 
-* La función de configuración <Cmd sid='device.mask.useMask' product='2' /> es compatible con FaceStation F2, BioStation 3 y BioEntry W3.
+* La configuración <Cmd sid='device.mask.useMask' product='2' /> está disponible en los modelos FaceStation F2, BioStation 3, BioEntry W3 y BioStation 3 Max.
 
 * Si el usuario ha realizado cambios, haga clic en <Cmd sid='button.apply' product='2' />. Los cambios no se aplicarán al dispositivo si no se guardan.
 
@@ -41,6 +41,12 @@ En el grupo <Cmd sid='device.mask.title' product='2' />, puede definir si se uti
   * <Cmd sid='device.thermal.maskCheckModeOff' product='2' />: No se utiliza la detección de máscara.
 
 * <Cmd sid='device.thermal.maskdetectlevel' product='2' />: Seleccione la sensibilidad de la detección de máscara.
+
+:::info
+
+Para obtener más información sobre la opción <Cmd sid='device.thermal.maskOnlyMode' product='2' />, consulte [el siguiente documento](#thermal-mask-verification).
+
+:::
 
 ## Configuración de la cámara térmica {#thermal-camera-settings}
 
@@ -103,7 +109,7 @@ En el grupo <Cmd sid='device.thermal.title' product='2' />, puede establecer el 
 
 ## Métodos de verificación térmica y de mascarilla {#thermal-mask-verification}
 
-<Cmd sid='device.thermal.mode' product='2' /> group permite determinar el método de verificación según el propósito del dispositivo cuando las opciones <Cmd sid='device.mask.useMask' product='2' /> o <Cmd sid='device.thermal.useThermalCamera' product='2' /> están configuradas en <Cmd sid='common.use' product='2' />.
+En el grupo <Cmd sid='device.thermal.mode' product='2' /> o <Cmd sid='device.thermal.maskOnlyMode' product='2' />, establezca la opción <Cmd sid='device.mask.useMask' product='2' /> o <Cmd sid='device.thermal.useThermalCamera' product='2' /> en <Cmd sid='common.use' product='2' /> para configurar el método de verificación según el uso previsto del dispositivo.
 
 * <Cmd sid='device.thermal.authBeforeMode' product='2' />: Comprueba el uso de mascarilla del usuario o mide la temperatura después de la autenticación.
 

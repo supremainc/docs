@@ -10,8 +10,6 @@ import {
   InstantSearch,
   SearchBox,
   Hits,
-  Highlight,
-  Snippet,
   Pagination,
   RefinementList,
   Configure,
@@ -22,10 +20,87 @@ import {
 import {liteClient as algoliasearch} from 'algoliasearch/lite';
 import './styles.css';
 
+function getPropertyByPath(obj, path) {
+  return path.split('.').reduce((acc, key) => acc?.[key], obj);
+}
+
+// <mark> 태그가 HTML 엔티티 중간을 쪼개는 경우를 처리하면서 엔티티를 디코딩
+// 예: <mark>T&amp;a</mark>mp;<mark>A</mark> → <mark>T&amp;A</mark>
+function decodeHighlightHtml(str) {
+  if (!str) return '';
+
+  // 1. 문자 단위로 파싱하며 mark 여부 추적
+  const chars = [];
+  const marks = [];
+  let inMark = false;
+  for (const part of str.split(/(<\/?mark>)/)) {
+    if (part === '<mark>') { inMark = true; continue; }
+    if (part === '</mark>') { inMark = false; continue; }
+    for (const ch of part) {
+      chars.push(ch);
+      marks.push(inMark);
+    }
+  }
+
+  // 2. 엔티티 디코딩 반복 (중첩 인코딩 처리), mark 상태 유지
+  const entityMap = { amp: '&', lt: '<', gt: '>', quot: '"', '#39': "'" };
+  let cur = { chars, marks };
+  let changed = true;
+  while (changed) {
+    changed = false;
+    const next = { chars: [], marks: [] };
+    let i = 0;
+    while (i < cur.chars.length) {
+      if (cur.chars[i] === '&') {
+        let j = i + 1;
+        while (j < cur.chars.length && j <= i + 8 && cur.chars[j] !== ';') j++;
+        if (j < cur.chars.length && cur.chars[j] === ';') {
+          const name = cur.chars.slice(i + 1, j).join('');
+          if (entityMap[name] !== undefined) {
+            // 엔티티를 구성하는 문자 중 하나라도 mark면 결과도 mark
+            next.chars.push(entityMap[name]);
+            next.marks.push(cur.marks.slice(i, j + 1).some(Boolean));
+            i = j + 1;
+            changed = true;
+            continue;
+          }
+        }
+      }
+      next.chars.push(cur.chars[i]);
+      next.marks.push(cur.marks[i]);
+      i++;
+    }
+    cur = next;
+  }
+
+  // 3. HTML 재조립: 디코딩된 특수문자 재이스케이프, mark 구간 복원
+  const esc = (ch) => ch === '&' ? '&amp;' : ch === '<' ? '&lt;' : ch === '>' ? '&gt;' : ch;
+  let html = '';
+  let inMarkHtml = false;
+  for (let i = 0; i < cur.chars.length; i++) {
+    if (cur.marks[i] && !inMarkHtml) { html += '<mark>'; inMarkHtml = true; }
+    else if (!cur.marks[i] && inMarkHtml) { html += '</mark>'; inMarkHtml = false; }
+    html += esc(cur.chars[i]);
+  }
+  if (inMarkHtml) html += '</mark>';
+  return html;
+}
+
+function CustomHighlight({ attribute, hit }) {
+  const highlightResult = getPropertyByPath(hit._highlightResult, attribute);
+  const value = highlightResult?.value || getPropertyByPath(hit, attribute) || '';
+  return <span dangerouslySetInnerHTML={{ __html: decodeHighlightHtml(value) }} />;
+}
+
+function CustomSnippet({ attribute, hit }) {
+  const snippetResult = getPropertyByPath(hit._snippetResult, attribute);
+  const raw = snippetResult?.value || getPropertyByPath(hit, attribute) || '';
+  return <span dangerouslySetInnerHTML={{ __html: decodeHighlightHtml(raw) }} />;
+}
+
 function Hit({hit}) {
   const {siteConfig} = useDocusaurusContext();
   const {indexName} = siteConfig.themeConfig.algolia || {};
-
   // hierarchy에서 마지막 null이 아닌 레벨 찾기
   const getLastHierarchyLevel = () => {
     for (let i = 6; i >= 0; i--) {
@@ -79,7 +154,7 @@ function Hit({hit}) {
       }}
     >
       <div className="search-pop-hit-title">
-        <Highlight attribute={lastLevel} hit={hit} />
+        <CustomHighlight attribute={lastLevel} hit={hit} />
       </div>
       <div className="search-pop-hit-breadcrumb">
         <span>{hit.hierarchy?.lvl0}</span>
@@ -116,7 +191,7 @@ function Hit({hit}) {
       </div>
       {hit.content && (
         <div className="search-pop-hit-snippet">
-          <Snippet attribute="content" hit={hit} />
+          <CustomSnippet attribute="content" hit={hit} />
         </div>
       )}
     </Link>
@@ -313,6 +388,7 @@ function HitsWithQuery({onClose, indexName}) {
       <Hits
         hitComponent={Hit}
         transformItems={transformItems}
+        escapeHTML={true}
         classNames={{
           root: 'search-pop-hits',
           list: 'search-pop-hits-list',

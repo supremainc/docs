@@ -11,7 +11,7 @@ keywords:
   - 復元
 ---
 
-**BioStar X** のデータベース、各種設定、キーなどの主要情報をバックアップできます。 <Cmd sid="common.backup" product='2' /> 機能は、サーバーデータの損失を防止したり、新しい PC へ移行する際に使用します。
+**BioStar X** のデータベース、各種設定、キーなどの主要情報をバックアップできます。 バックアップファイルには、暗号化キー（enc key）や画像ログのパスなど、ユーザーが設定した項目も含まれます。 <Cmd sid="common.backup" product='2' /> 機能は、サーバーデータの損失を防止したり、新しい PC へ移行する際に使用します。
 
 サポートされるバックアップ方式は次のとおりです。
 
@@ -47,6 +47,8 @@ keywords:
 
 4. <Cmd sid="backup.backupNow" product='2' /> をクリックしてバックアップファイルを作成します。
 
+5. 警告メッセージが表示されたら内容を確認し、<Cmd sid='button.continue' product='2' /> ボタンをクリックしてください。
+
 バックアップファイルは <Cmd sid='backup.filePath' product='2' /> オプションで指定したパスに *zip* 形式で保存されます。 ファイル名は `BioStar_X_Backup_YYYYMMDD_HHMMSS.zip` 形式で生成されます。 ここで `YYYYMMDD` はバックアップ日、`HHMMSS` はバックアップ時刻を示します。
 
 :::info
@@ -76,6 +78,8 @@ keywords:
    * <Cmd sid="backup.monthly" product='2' />：毎月自動バックアップします。 <Cmd sid='backup.date' product='2' /> オプションで自動バックアップする日付を設定し、<Cmd sid='backup.time' product='2' /> オプションでバックアップ時刻を設定します。
 
 4. <Cmd sid="button.apply" product='2' /> をクリックして設定を保存します。
+
+自動バックアップを設定すると、定期的にバックアップが実行されます。 自動バックアップの実行中に失敗が発生した場合、イベントログおよび監査トレースに失敗履歴が記録されます。失敗原因の詳細はログファイルで確認できます。
 
 バックアップファイルは <Cmd sid='common.backup.general' product='2' /> セクションの <Cmd sid='backup.filePath' product='2' /> オプションで指定したパスに *zip* 形式で保存されます。 ファイル名は `BioStar_X_Backup_YYYYMMDD_HHMMSS.zip` 形式で生成されます。 ここで `YYYYMMDD` はバックアップ日、`HHMMSS` はバックアップ時刻を示します。
 
