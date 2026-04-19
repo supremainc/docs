@@ -1,0 +1,44 @@
+---
+id: 121
+title: Firmware Version 1.2.1
+---
+
+# Firmware Version 1.2.1 (Build No. 1.2.1_260416)
+
+Release<Separator/>2026-04-17
+
+:::caution
+
+- After upgrading the firmware to v1.2.0, it is not able to downgrade to an earlier version of the firmware.
+
+- For more information, check the serial number of the device and contact the [Suprema](https://supremainc.com).
+
+:::
+
+## New Features and Improvements
+
+---
+
+1. Supports the **Display Result from Controller** feature for displaying authentication success or failure results from a 3rd party controller on the device screen when using **Intelligent Slave**.
+
+1. Improved the device to ignore undefined LED control commands received from a controller.
+
+1. Supports the **Auth Result Display Option** that allows you to select how the user ID and name are displayed on the authentication result screen of the device.
+
+   - **User ID Display**
+
+   - **User Name Display**
+
+1. Supported EV2 Secure Messaging authentication and issuance for DESFire EV2 and EV3 cards.
+
+1. Supports the **Ignore Repeated Signals Duration** feature, which ignores repetitive authentication signals from the controller when the device is connected to a 3rd party controller via Wiegand.
+
+1. Supports not logging events when the **Ignore Repeated Signals Duration** feature is activated.
+
+1. Improved log display for unsupported events and errors on the device.
+
+1. Provided **global** firmware for non-CE(EU) regions
+
+   - Disabled the **Master Admin** and **Admin 2-step Authentication** features
+
+   - Reduced the minimum length for PIN enrollment to 4 digits
