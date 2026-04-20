@@ -188,8 +188,7 @@ header p {
 }
 
 .doc-section {
-  counter-reset: count;
-  counter-reset: column-count;
+  counter-reset: count column-count;
 }
 
 .doc-content .order--continuous {
