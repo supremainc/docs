@@ -7,51 +7,53 @@ keywords: [ keyword1, keyword2, keyword3 ]
 
 ## Setup
 
-### <IcQuestion /> Upgrade only middleware to the new version (Manual process).
+<details className='faqs'>
+<summary>**Upgrade only middleware to the new version (Manual process).**</summary>
 
 If you want to upgrade only middleware you just need to follow the steps shown below.
 
 :::info
 
-If you are upgrading middleware to V1.8.3, Please refer - [Create Migration Manually](#).
+If you are upgrading middleware to V1.8.3, Please refer - [Create Migration Manually](#create-migration-manually).
 
 :::
 
-<Image src='/img/integration/gallagher/.png' alone />
+<Image src='/img/integration/gallagher/setup1-1.png' alone />
 
 **Delete the previous version setup.vbs - shortcut**
 
-<Image src='/img/integration/gallagher/.png' alone />
+<Image src='/img/integration/gallagher/setup1-2.png' alone />
 
 Cut cert and key files from the version you are currently using as shown in the below image.
 
 The default path would be: `C:\Program Files\Suprema Integration with Gallagher\Suprema Integration with Gallagher v(Current working version)\files`
 
-<Image src='/img/integration/gallagher/.png' alone />
+<Image src='/img/integration/gallagher/setup1-3.png' alone />
 
 :::info
 
-If you are upgrading from the 1.8.0 or above version you will need to cut a total of four files, Which are `key.pem`, `cert.pem`, `cronjob_status.txt` and `number_range.txt.`
+* If you are upgrading from the 1.8.0 or above version you will need to cut a total of four files, Which are `key.pem`, `cert.pem`, `cronjob_status.txt` and `number_range.txt.`
+
+* In the 1.7.0 version only number_range is not available so cut the other three files.
+
+   <Image src='/img/integration/gallagher/setup1-4.png' alone />
 
 :::
 
-In the 1.7.0 version only number_range is not available so cut the other three files.
-
-<Image src='/img/integration/gallagher/.png' alone />
-
 Now **paste** the files into the new version of suprema integration with `Gallagher V(new version)\files`, as mentioned above if you are upgrading from 1.8.0 or more you will need to cut 4 file and below image show the image that are pasted to new version with 4 files,so in case if you dont have 4 files just paste 2 files from old version to new version.
 
-<Image src='/img/integration/gallagher/.png' alone />
+<Image src='/img/integration/gallagher/setup1-5.png' alone />
 
 Create short cut of setup.vbs of the latest version of suprema integration with Gallagher and cut the shortcut file.
 
-<Image src='/img/integration/gallagher/.png' alone />
+<Image src='/img/integration/gallagher/setup1-6.png' alone />
 
 Go Run <Kbd>Win + R</Kbd> and paste it on shell:startup and after that restart your desktop.
 
----
+</details>
 
-### <IcQuestion /> If the middleware is not getting started automatically.
+<details className='faqs'>
+<summary>**If the middleware is not getting started automatically.**</summary>
 
 First, make sure that the shortcut of the setup.vbs file is present on the shell:startup. If setup.vbs is not present please paste it to shell:startup and restart your system.
 
@@ -59,11 +61,11 @@ Still, the middleware is not getting started automatically then check for the en
 
 In the *Environment Variables* window (pictured below), select the **Path** variable in the *System Variables* section and click the **Edit** button.
 
-<Image src='/img/integration/gallagher/.png' alone />
+<Image src='/img/integration/gallagher/setup2-1.png' alone />
 
 The edit environment variable window will be open(pictured below), Click on the **New** button and add the `C:\Program Files\nodejs\` path and press the **OK** button.
 
-<Image src='/img/integration/gallagher/.png' alone />
+<Image src='/img/integration/gallagher/setup2-2.png' alone />
 
 Press the **OK** button for the Environment Variables window then press the **OK** button for the system properties.
 
@@ -73,9 +75,10 @@ After creating or modifying the environment variables, restart the computer for 
 
 :::
 
----
+</details>
 
-### <IcQuestion /> To uninstall the middleware prerequisites list.
+<details className='faqs'>
+<summary>**To uninstall the middleware prerequisites list.**</summary>
 
 So below are the steps to uninstall the middleware prerequisites,
 
@@ -87,7 +90,7 @@ So below are the steps to uninstall the middleware prerequisites,
 
 1. After some time when it asks for Runtimee application, Follow the below and **press** OK. Skip this step if it does not apply to you.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/setup3-1.png' alone />
 
 1. Now search for **OpenSSL**, Right click on that and **press** uninstall.
 
@@ -109,47 +112,51 @@ So below are the steps to uninstall the middleware prerequisites,
 
 1. When Uninstallation mode is open, **Select** the Entire application Radio Box and Press **Next**.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/setup3-2.png' alone />
 
 1. Now **go to** the `C:\Users\<YourUser>\AppData\Roaming\pgadmin\sessions` Delete all the files inside this folder.
 
    :::info
 
-   If not able to see the AppData folder: [Open the AppData folder in Windows](#).
+   If not able to see the AppData folder: [Open the AppData folder in Windows](#open-appdata-folder-windows).
 
    :::
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/setup3-3.png' alone />
 
 1. Now **go to** the `C:\Users\<Your User>\AppData\Local` and select PgAdmin and PgAdmin4 folder and **delete** the folders.
 
 1. Now **go to** the `C:\Program Files` and delete the PostgreSQL folder.
 
----
+</details>
 
-### <IcQuestion /> How to Open the AppData folder in Windows.
+<details className='faqs'>
+<summary id="open-appdata-folder-windows">**How to Open the AppData folder in Windows.**</summary>
 
 So if you are using Windows 11, Inside the file manager click on the View tab and **select** Show and **click** on Hidden items.
 
-<Image src='/img/integration/gallagher/.png' alone />
+<Image src='/img/integration/gallagher/setup4-1.png' alone />
 
 If you are using Windows 10, open File Manager and **click on** View and **select Hidden items**.
 
-<Image src='/img/integration/gallagher/.png' alone />
+<Image src='/img/integration/gallagher/setup4-2.png' alone />
 
----
+</details>
 
-### <IcQuestion /> How to generate the thumbprint and certificate manually.
+<details className='faqs'>
+<summary id="manual-thumbprint-certificate-generation">**How to generate the thumbprint and certificate manually.**</summary>
 
 1. To generate Client Certificate Thumbprint, go to Windows PowerShell and run this command to get the certificate thumbprint.
 
    > New-SelfSignedCertificate -CertStoreLocation cert:\currentuser\my -dnsname GallagherRestClientCert
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/setup5-1.png' alone />
 
 1. **Copy** the thumbprint and **Paste the Client Certificate Thumbprint key** into the Client Certificate thumbprint section **Press** the **OK** button and also **Close** the Services and Workstations.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/setup5-2.png' alone />
+
+</details>
 
 ## SSL Certificate Generation
 
@@ -157,25 +164,25 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
 1. Go to **File** → **Add/Remove Snap-in…** you can see below screen.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation1.png' alone />
 
 1. **Select Certificates** and **click** on **Add** button then you will see the below screen where **select** the **My user account** radio button and **click** on **Finish** button.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation2.png' alone />
 
 1. After clicking on the finish you will see the below screen now **click** on the **OK** button. The certificate will be added successfully.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation3.png' alone />
 
 1. Now go to **Certificates - Current User** → **Personal** → **Certificates** and select **GallagherRestClientCert** certificate.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation4.png' alone />
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation5.png' alone />
 
 1. Go to **Details** and **click** on **copy to file**.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation6.png' alone />
 
    Now follow the below screenshots and **click** on **next** simultaneously.
 
@@ -185,45 +192,45 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
    :::
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation7.png' alone />
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation8.png' alone />
 
 1. Now you will see the below screen check the password checkbox and **set** the password as the below password: **G@ll@gher**
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation9.png' alone />
 
 1. Now **browse** the path `C:\Program Files\Suprema Integration with Gallagher\Prerequisites` to export the file and **save** this file as **GallagherRestClient.pfx** then **click** on **Next**.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation10.png' alone />
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation11.png' alone />
 
    **Click** on **Finish** and your certificate will be exported successfully and **close the certificate** and MMC window.
 
 1. Now, go to the path `C:\Program Files\Suprema Integration with Gallagher\Prerequisites` where we exported the **GallagherRestClient.pfx** certificate file, and **double-click** on the **GallagherRestClient.pfx** file, **select** the **Current User** radio button as shown below image then **click** on the **Next**.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation12.png' alone />
 
 1. Now, **browse** the `C:\Program Files\Suprema Integration with Gallagher\Prerequisites` where we saved **GallagherRestClient.pfx** then **click** on the **Next**.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation13.png' alone />
 
 1. Now, **Enter** Password <Cmd>G@ll@gher</Cmd> and **check** the checkbox as shown below the image then **click** on the **Next**.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation14.png' alone />
 
 1. **Select** Place all certificates in the following store Radio button and **browse** the **Trusted Root Certification Authorities** folder then **click** on **OK** and **Next**.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation15.png' alone />
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation16.png' alone />
 
 1. **Click** on **Finish** you will see a security Warning, **click** on **Yes**.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation17.png' alone />
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation18.png' alone />
 
    Now, **go to** the path `C:\Program Files\Suprema Integration with Gallagher\Prerequisites` we saved GallagherRestClient.pfx file, **open** Powershell here, and **Type** **PowerShell** in the Folder URL to open PowerShell.
 
@@ -233,7 +240,7 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
 1. Next, it will ask for the password. So **enter** the password which you set earlier i.e, <Cmd>G@ll@gher</Cmd>.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation19.png' alone />
 
    Your **key.pem** file will be generated successfully.
 
@@ -247,7 +254,7 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
       > command: openssl pkcs12 -in Gallagherrestclient.pfx -clcerts -nokeys -out cert.pem
 
-      <Image src='/img/integration/gallagher/.png' alone />
+      <Image src='/img/integration/gallagher/ssl-certificate-generation20.png' alone />
 
       Next, it will ask for a password. So **enter** the password that we set earlier <Cmd>G@ll@gher</Cmd>.
 
@@ -261,17 +268,16 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
 1. Next **copy** both file **key.pem and cert.pem** and paste that at below path `C:\Program Files\Suprema Integration with Gallagher\Suprema Integration with Gallagher v(lateast version)\files`
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation21.png' alone />
 
----
-
-### <IcQuestion /> Upgrading the middleware from EXE application directly.
+<details className='faqs'>
+<summary>**Upgrading the middleware from EXE application directly.**</summary>
 
 1. If you are upgrading the version, **Press** OK on pop-up.
 
 1. Then **press** Update button.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/middleware-upgrade-from-exe1.png' alone />
 
 1. It will start upgrading the middleware.
 
@@ -283,41 +289,42 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
    :::
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/middleware-upgrade-from-exe2.png' alone />
 
----
+</details>
 
-### <IcQuestion /> Uninstall the middleware from EXE application directly.
+<details className='faqs'>
+<summary>**Uninstall the middleware from EXE application directly.**</summary>
 
 1. **Press** windows <Start/> button, **Search**, **and open** Add or Remove programs.
 
 1. Inside the Apps & features search list, **search** for suprema integration with the Gallagher version, select the version, and **click on** Uninstall it shows a small pop-up **Press** Uninstall another time.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/middleware-uninstall-from-exe1.png' alone />
 
 1. **Press** Yes on the remove all component of integration pop-up.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/middleware-uninstall-from-exe2.png' alone />
 
 1. The uninstallation will start and you can see something like the screens below.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/middleware-uninstall-from-exe3.png' alone />
 
 1. **Press** Yes on the below pop-up.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/middleware-uninstall-from-exe4.png' alone />
 
 1. **Press** Yes for the below pop-up.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/middleware-uninstall-from-exe5.png' alone />
 
 1. **Press** OK.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/middleware-uninstall-from-exe6.png' alone />
 
 1. Now click inside the terminal and **press** enter to complete the uninstalltion process.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/middleware-uninstall-from-exe7.png' alone />
 
 1. **Press** OK on the pop-up below and you have successfully removed the middleware.
 
@@ -327,67 +334,73 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
    :::
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/middleware-uninstall-from-exe8.png' alone />
+
+</details>
 
 ## Middleware
 
-### <IcQuestion /> If the scanning or the syncing of the data in the middleware is extremely slow.
+<details className='faqs'>
+<summary>**If the scanning or the syncing of the data in the middleware is extremely slow.**</summary>
 
-To solve this issue, please [click here](#) and refer to the blog.
+* To solve this issue, please [click here](https://support.supremainc.com/en/support/solutions/articles/24000023469--biostar-2-changing-the-server-ip-register-resolving-https-not-secure-issue-) and refer to the blog.
 
-* You cannot see any card in the middleware if a cardholder card is automatically not created.
+   * You cannot see any card in the middleware if a cardholder card is automatically not created.
 
-#### <IcQuestion /> You need to add 3 privileges to the Operator Group.
+* You need to add 3 privileges to the Operator Group.
 
-<Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/middleware-slow-scan-sync-issue.png' alone />
 
-After adding these three privileges please restart your system.
+   After adding these three privileges please restart your system.
 
----
+</details>
 
-### <IcQuestion /> There is an error on the log-in page stating that “LAN is disconnected or IP is changed for (IP Address).
+<details className='faqs'>
+<summary>**There is an error on the log-in page stating that “LAN is disconnected or IP is changed for (IP Address).**</summary>
 
-To solve this issue, please check the below troubleshooting scenarios:
+* To solve this issue, please check the below troubleshooting scenarios:
 
-1. Make sure the LAN cable is connected.
+   1. Make sure the LAN cable is connected.
 
-1. Check If the IP has not changed and if the IP address is the same for the BioStar 2 Server you have entered the wrong IP Address.
+   1. Check If the IP has not changed and if the IP address is the same for the BioStar 2 Server you have entered the wrong IP Address.
 
-If you receive the error **LAN is disconnected or IP is changed for (IP Address)** on the login screen, you must **Press** the **click here to reset** **button** in the middleware.
+* If you receive the error **LAN is disconnected or IP is changed for (IP Address)** on the login screen, you must **Press** the **click here to reset** **button** in the middleware.
 
-<Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/login-error-lan-disconnected-ip-changed1.png' alone />
 
-It asks for permission to reset the middleware, **Press** the Yes **button**.
+   It asks for permission to reset the middleware, **Press** the Yes **button**.
 
-<Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/login-error-lan-disconnected-ip-changed2.png' alone />
 
-Once it is reset you can see the initial screen for the middleware and follow the further steps.
+   Once it is reset you can see the initial screen for the middleware and follow the further steps.
 
----
+</details>
 
-### <IcQuestion /> If you get an error for "LAN is disconnected or IP is changed for (IP Address)" between running the middleware on any page.
+<details className='faqs'>
+<summary>**If you get an error for "LAN is disconnected or IP is changed for (IP Address)" between running the middleware on any page.**</summary>
 
-To solve this issue, please check the below troubleshooting scenarios:
+* To solve this issue, please check the below troubleshooting scenarios:
 
-1. Make sure the LAN cable is connected.
+   1. Make sure the LAN cable is connected.
 
-1. Check If the IP has not changed and if the IP address is changed for the BioStar 2 Server.
+   1. Check If the IP has not changed and if the IP address is changed for the BioStar 2 Server.
 
-In this case, just go to the settings → Admin Management → IP management section inside the middleware.
+* In this case, just go to the settings → Admin Management → IP management section inside the middleware.
 
-<Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/middleware-lan-disconnected-ip-error1.png' alone />
 
-<Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/middleware-lan-disconnected-ip-error2.png' alone />
 
-Now inside the text box enter the IP address of the BioStar 2 server and the HOST/SERVER name of the middleware press the Submit button to start the BioStar 2 services for the middleware.
+   Now inside the text box enter the IP address of the BioStar 2 server and the HOST/SERVER name of the middleware press the Submit button to start the BioStar 2 services for the middleware.
 
-<Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/middleware-lan-disconnected-ip-error3.png' alone />
 
-After **pressing** the submit **button** you get the success message for IP change and **Press** the Exit setting **button** to leave the setting screen.
+   After **pressing** the submit **button** you get the success message for IP change and **Press** the Exit setting **button** to leave the setting screen.
 
----
+</details>
 
-### <IcQuestion /> How to Use middleware on multiple servers on older versions.
+<details className='faqs'>
+<summary>**How to Use middleware on multiple servers on older versions.**</summary>
 
 From version 1.7.0 we have added one separate screen to get the BioStar 2 server IP address. So this is the solution for use with the middleware version below 1.7.0.
 
@@ -397,21 +410,22 @@ Below are the steps to change the IP address,
 
 1. Go inside the Gallagher command center if you can't see the API key window and are just able to see the login screen, **click on** the reset middleware link and reset the middleware.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/middleware-multi-server-older-versions1.png' alone />
 
 1. After entering the API key for the middleware do the login and open Pgadmin, right-click on the credential table, and view/edit data → All Rows.
 
 1. It will load the data for the table. Now, change the IP address according to your BioStar server IP and press the F6 button to save the changes.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/middleware-multi-server-older-versions2.png' alone />
 
 1. After this, you have to truncate the globaluserrecord table inside Pgadmin.
 
 1. Restart the system to reﬂect the changes.
 
----
+</details>
 
-### <IcQuestion /> Run the middleware on a specific port on two different servers with specific IP addresses/Configure the inbound rules for the middleware.
+<details className='faqs'>
+<summary>**Run the middleware on a specific port on two different servers with specific IP addresses/Configure the inbound rules for the middleware.**</summary>
 
 Below are the instructions to run the middleware on a specific port on two different servers with specific IP addresses.
 
@@ -479,13 +493,13 @@ The below steps need to run on the BioStar 2 server.
 
    :::
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/middleware-port-ip-config-inbound-rules1.png' alone />
 
 1. Configure Scope:
 
    * In the Scope window, you can specify which IP addresses are allowed to send ICMP traﬃc to the server. So local IP addresses leave it as it is and for remote IP addresses fill in the IP address of the Gallagher&Middleware server, now choose These IP addresses: Click on the Add button then in the IP address wizard enter the IP Address of Gallagher&Middleware server, and press OK. please refer below image for reference.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/middleware-port-ip-config-inbound-rules2.png' alone />
 
 1. Configure Action:
 
@@ -505,31 +519,34 @@ The below steps need to run on the BioStar 2 server.
 
    * Right-click on the rule you just created and select **Enable Rule** if it is not enabled automatically. This ensures that the rule is active and will allow ICMP traﬃc.
 
----
+</details>
 
-### <IcQuestion /> If the BioStar server IP changes and Middleware gets slow.
+<details className='faqs'>
+<summary>**If the BioStar server IP changes and Middleware gets slow.**</summary>
 
 If you facing the error where your IP is changed, check the following link: https://support.supremainc.com/en/support/solutions/articles/24000041659--biostar-2-troubleshooting-when-the-server-ip-changed.
 
----
+</details>
 
-### <IcQuestion /> If a thumbprint is not generated while running the EXE file.
+<details className='faqs'>
+<summary>**If a thumbprint is not generated while running the EXE file.**</summary>
 
 If you have installed middleware and a thumbprint is not generated then try again running our EXE file with administrator rights, to do this follow the below instructions.
 
 Right-click on our suprema integration with the gallagher.exe file and **select** Run as administrator option as shown in the below screenshot. Now it asks for permission **click** Yes to run our exe file.
 
-<Image src='/img/integration/gallagher/.png' alone />
+<Image src='/img/integration/gallagher/exe-thumbprint-not-generated1.png' alone />
 
 Still, the thumbprint file is not generated, please go to the `C:\TMP` and share all the log Files with the development team.
 
-<Image src='/img/integration/gallagher/.png' alone />
+<Image src='/img/integration/gallagher/exe-thumbprint-not-generated2.png' alone />
 
-Till then please refer to the article which helps to manually generate the thumbprint. Refer: [How to generate the thumbprint manually](#).
+Till then please refer to the article which helps to manually generate the thumbprint. Refer: [How to generate the thumbprint manually](#manual-thumbprint-certificate-generation).
 
----
+</details>
 
-### <IcQuestion /> Create Migration Manually.
+<details className='faqs'>
+<summary id="create-migration-manually">**Create Migration Manually.**</summary>
 
 We are doing the migrations because from the middleware V1.8.3 is supporting the Hostname so we can use our middleware using the Gallgher workstation client.
 
@@ -539,45 +556,46 @@ To create the migration manually Please follow the steps below:
 
 1. Now **Click on**** the Servers, If it asks for the password use the same **G@ll@gher** as Password, Now **click on** the Databases and **Expand** the Suprema → Schemas → public → Tables. Now **select** the credentials table.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/create-migration-manually1.png' alone />
 
 1. Now **Right Click on** the credentials table, and **select** the Properties option from the list.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/create-migration-manually2.png' alone />
 
 1. Now inside the window **select** the Columns option, then **click on** the + icon, it will generate the new column option for you as shown in the below image!
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/create-migration-manually3.png' alone />
 
 1. Now inside the Columns option, **set** the name as host_name, and **set** the datatype as the character varying, **set** the Length/Precision as 255 and **hit** the Save button.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/create-migration-manually4.png' alone />
 
 1. Now **select** the credentials table, and **Click on** the View Data button.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/create-migration-manually5.png' alone />
 
 1. Now inside the column host_name, **double-click** on the box, and the pop-up will open.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/create-migration-manually6.png' alone />
 
 1. Inside the pop-up write `https://[YOUR-HOST/SYSTEM-NAME]/api` and **Press** OK.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/create-migration-manually7.png' alone />
 
 1. Now **Press** <Kbd>F6</Kbd> to save the changes.
 
----
+</details>
 
-### <IcQuestion /> Steps to Backup PostgreSQL 14 Database, Upgrade to Version 16, and Restore Database.
+<details className='faqs'>
+<summary>**Steps to Backup PostgreSQL 14 Database, Upgrade to Version 16, and Restore Database.**</summary>
 
-**Backup Database in PostgreSQL 14**
+#### Backup Database in PostgreSQL 14
 
 1. Open pgAdmin 4:
 
    * Right-click on the **Suprema** database under the **Databases** section and select **Backup**.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore1.png' alone />
 
 1. Set Backup File Name and Format:
 
@@ -585,27 +603,27 @@ To create the migration manually Please follow the steps below:
 
    * **Click** the file icon to select a save location.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore2.png' alone />
 
 1. Choose Save Location:
 
    * Select the directory where you'd like to save the backup (e.g., Desktop). Enter the file name and press **Save**.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore3.png' alone />
 
 1. Start Backup:
 
    * You’ll see the file name updated with the location you selected. Press the **Backup** button.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore4.png' alone />
 
 1. Confirm Backup Completion:
 
    * A notification will appear once the backup is completed. Now, your database is safely backed up.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore5.png' alone />
 
-**Upgrade PostgreSQL to Version 16**
+#### Upgrade PostgreSQL to Version 16
 
 1. Stop Middleware and PostgreSQL Services:
 
@@ -617,17 +635,17 @@ To create the migration manually Please follow the steps below:
 
 1. Install PostgreSQL 16:
 
-   * Download and install PostgreSQL 16 from the oﬃcial PostgreSQL website, following the installation steps for your operating system, or refer to the link to directly get V.16.4.1: https:\//drive.google.com/file/d/17ehlTpedaGeWezOHZiMd6-ircQhTqBAJ/ view?usp=drive_link.
+   * Download and install PostgreSQL 16 from the oﬃcial PostgreSQL website, following the installation steps for your operating system, or refer to the link to directly get V.16.4.1: https://drive.google.com/file/d/17ehlTpedaGeWezOHZiMd6-ircQhTqBAJ/view?usp=drive_link.
 
 1. Migrate Data (Optional):
 
-   * Please refer to the Restore [Database in Postgresql 16](#).
+   * Please refer to the Restore [Database in Postgresql 16](#database-postgresql).
 
 1. Uninstall PostgreSQL 14 (Optional):
 
-   * After confirming the upgrade, you may uninstall PostgreSQL 14 if it’s no longer needed. Refer: [Uninstall the postgresql14 after upgrading to version 16](#).
+   * After confirming the upgrade, you may uninstall PostgreSQL 14 if it’s no longer needed. Refer: [Uninstall the postgresql14 after upgrading to version 16](#uninstall-postgresql-after-upgrade).
 
-**Restore Database in PostgreSQL 16**
+#### Restore Database in PostgreSQL 16 {#database-postgresql}
 
 1. Open pgAdmin 4 (connected to PostgreSQL 16).
 
@@ -653,9 +671,10 @@ To create the migration manually Please follow the steps below:
 
    * Once the restore is finished, you should see a success message. You can now access and verify your data in PostgreSQL 16.
 
----
+</details>
 
-### <IcQuestion /> Uninstall Postgresql 14 after upgrading the Postgresql to version 16.
+<details className='faqs'>
+<summary id="uninstall-postgresql-after-upgrade">**Uninstall Postgresql 14 after upgrading the Postgresql to version 16.**</summary>
 
 To uninstall Postgresql 14 follow the below steps,
 
@@ -665,7 +684,7 @@ To uninstall Postgresql 14 follow the below steps,
 
 1. Right-click on **PostgreSQL 14** and select **Uninstall**. Follow the prompts to complete the uninstallation.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/uninstall-postgresql14-after-upgrade-to-16-1.png' alone />
 
 1. You might want to check the installation directory (usually in `C:\Program Files\PostgreSQL\14`) and delete any remaining files or folders.
 
@@ -681,10 +700,12 @@ You can manually remove it from pgAdmin by following these steps:
 
 1. **Select** Delete/Remove Server from the context menu.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/uninstall-postgresql14-after-upgrade-to-16-2.png' alone />
 
 1. **Confirm** the deletion prompted.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/uninstall-postgresql14-after-upgrade-to-16-3.png' alone />
 
 This will remove the PostgreSQL 14 server configuration from pgAdmin without affecting your PostgreSQL 16 installation.
+
+</details>
