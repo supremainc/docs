@@ -9,25 +9,108 @@ keywords: [ keyword1, keyword2, keyword3 ]
 
 The following prerequisites are required to use Suprema Integration with Gallagher. Check the support conditions before installing the Suprema Integration with Gallagher.
 
-<div className='overflow-x table-fixed'>
-| \> | Prerequisites |
-| -- | -- |
-| \> | Microsoft Windows 10(x64) or Later |
-| Web browsers | - New Microsoft Edge |
-| Gallagher Command Centre | - Command Center 8.80 or later |
-| Suprema BioStar 2 | - x64 bit<br/>- Version 2.9.3 or later |
-| Software | - Node v16.17.0<br/>- PostgreSQL v14.5<br/>- pgAdmin 4 v6.16<br/>- Win64 OpenSSL 3.0.5 |
-| Middleware system hardware Requirements | - 16 GB RAM<br/>- Windows 10 or later<br/>- 256 GB SSD/1TB HDD<br/>- Intel Iris Xe Graphics (Good to have) |
-| Suprema Biometric Devices | - BioStation 3<br/>- BioLite N2<br/>- FaceStation F2<br/>- BioEntry W2<br/>- XPass 2<br/>- Xstation 2<br/>- BioEntry W3 |
-</div>
+<Table className='table-fixed'>
+<Thead>
+
+<Th colspan='2'>Prerequisites</Th>
+
+</Thead>
+<Tbody>
+<Row>
+
+<Td colspan='2'>Microsoft Windows 10(x64) or Later</Td>
+
+</Row>
+
+<Row>
+
+<Td>Web browsers</Td>
+<Td>New Microsoft Edge</Td>
+
+</Row>
+
+<Row>
+
+<Td>Gallagher Command Centre</Td>
+<Td>Command Center 8.80 or later</Td>
+
+</Row>
+<Row>
+
+<Td>Suprema BioStar 2</Td>
+<Td>
+
+* x64 bit
+
+* Version 2.9.5 or later
+
+</Td>
+
+</Row>
+<Row>
+
+<Td>Software</Td>
+<Td>
+
+* Node v16.17.0
+
+* Postgresql v14.5
+
+* pgAdmin 4 v6.16
+
+* Win64OpenSSL-3.0.5
+
+</Td>
+
+</Row>
+<Row>
+
+<Td>Middleware system hardware Requirements</Td>
+<Td>
+
+* 16 GB RAM
+
+* Windows 10 or later
+
+* 256 GB SSD/1TB HDD
+
+* Intel Iris Xe Graphics (Good to have)
+
+</Td>
+
+</Row>
+<Row>
+
+<Td>Suprema Biometric Devices</Td>
+<Td>
+
+* BioStation 3
+
+* BioLite N2
+
+* FaceStation F2
+
+* BioEntry W2
+
+* XPass 2
+
+* X-Station 2
+
+* BioEntry W3
+
+</Td>
+
+</Row>
+</Tbody>
+</Table>
 
 ## Configuration Flowchart
 
-<Image src='/img/integration/gallagher/configuration-flowchart.png' alone />
+<Image src='/img/integration/gallagher/configuration-flowchart.svg' className='none' width={300} alone />
 
 ## Hardware Wiring Connection
 
-### For Wiegand Connection
+## For Wiegand Connection
 
 Suprema Device - **Reader 1** to HBUS 4 In 2Out n Door Module Wiegand
 
@@ -64,11 +147,11 @@ HBUS 4 In 2Out n Door Module Wiegand to Controller 6000 HBus
 | Vout +ve | Vin |
 </div>
 
-## Wiegand Connection Diagram
+### Wiegand Connection Diagram
 
-<Image src='/img/integration/gallagher/wiegand-connection-diagram.png' alone />
+<Magnify src='/img/integration/gallagher/wiegand-connection-diagram.png' width={600} zoomFactor={.3} mgWidth={500} mgHeight={500} />
 
-### For OSDP Connection
+## For OSDP Connection
 
 Suprema Device OSDP/RS485 **reader 1** to Controller 6000
 
@@ -90,9 +173,9 @@ Suprema Device OSDP/RS485 **reader 2** to Controller 6000
 | Black/White With Black | RS485 2 -ve |
 </div>
 
-#### OSDP Connection Diagram
+### OSDP Connection Diagram
 
-<Image src='/img/integration/gallagher/osdp-connection-diagram.png' alone />
+<Magnify src='/img/integration/gallagher/osdp-connection-diagram.png' width={700} zoomFactor={.3} mgWidth={500} mgHeight={500} />
 
 ## Install Prerequisite Software
 
@@ -108,31 +191,31 @@ Suprema Device OSDP/RS485 **reader 2** to Controller 6000
 
 * The **3E0068 Upgrade Procedure** for upgrading purposes for more information in the Release Notes Folder of your Command Centre ISO Directory.
 
-* You must have to extract Suprema integration With Gallagher.zip to `C:\Program Files\`.
+* You must have to extract `Suprema integration With Gallagher.zip` to `C:\Program Files\`.
 
 :::
 
 1. Inside the Gallagher Command Centre folder vEL.8.80 (or Later) → Setup.exe, **tick the checkbox** and press the **Next** button.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/installation-gallagher1.png' alone />
 
 1. **Click** the *…* button and locate the License file provided in the setup.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/installation-gallagher2.png' alone />
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/installation-gallagher3.png' alone />
 
 1. When you select the correct license file the icon will change to a tick mark then **press** the **Next** button.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/installation-gallagher4.png' alone />
 
 1. **Uncheck** the checkbox of the subnet only and press the **Next** button.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/installation-gallagher5.png' alone />
 
 1. **Select** the Install new SQL option and press the **Next** button.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/installation-gallagher6.png' alone />
 
 1. **Select** the do not install a database template.
 
@@ -144,17 +227,17 @@ Suprema Device OSDP/RS485 **reader 2** to Controller 6000
 
    :::
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/installation-gallagher7.png' alone />
 
 1. Select **Yes** and the installation will start.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/installation-gallagher8.png' alone />
 
 1. After the Installation is complete, press the **Finish** button.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/installation-gallagher9.png' alone />
 
-## Installation of BioStar 2
+### Installation of BioStar 2
 
 1. Open the **BioStar 2.exe** and choose the language & Accept the Agreement press **Next**.
 
@@ -164,25 +247,25 @@ Suprema Device OSDP/RS485 **reader 2** to Controller 6000
 
    :::
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/installation-biostar1.png' alone />
 
 1. Enter your BioStar 2 **Password** here and press the **Next** button.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/installation-biostar2.png' alone />
 
 1. Select **Express** Installation and enter the BioStar 2 password again.
 
 1. Select the location and proceed.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/installation-biostar3.png' alone />
 
 1. Press the **Next** button until you reach the Select the Components screen. Check both options and press the **Next** button.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/installation-biostar4.png' alone />
 
 1. Press the **Install** button to start the installation.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/installation-biostar5.png' alone />
 
 1. **Uncheck** the Install USB Device Agent option and Press the **Finish** button and BioStar 2 is installed on your PC.
 
@@ -192,37 +275,39 @@ Suprema Device OSDP/RS485 **reader 2** to Controller 6000
 
    :::
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/installation-biostar6.png' alone />
 
-## Installation middleware prerequisites
+### Installation middleware prerequisites
 
 :::info
 
-* Before extracting/running Suprema Integration with Gallagher 1.8.6.1.zip please turn off the antivirus.
+* Before extracting/running `Suprema Integration with Gallagher2.0.zip` please turn off the antivirus.
 
-* If you are upgrading from an older version - Please find the solution in the troubleshooting guide.
+* If you are upgrading from an older version, please find the solution in the troubleshooting guide.
 
 :::
 
 1. You need to **run** the Suprema Integration with Gallagher 1.8.6.1 file as administrator inside the Suprema Integration with Gallagher 1.8.6.1 folder. This will install OpenSSL, PostgreSQL, PgAdmin4, and Node.js. Also, this will set up the certifications required for our integration.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/installation-middleware-prerequisite1.png' alone />
 
 1. Press **Yes** when if it asks for allow from an unknown publisher permissions.
 
 1. Press **OK**.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/installation-middleware-prerequisite2.png' alone />
 
 1. Now that you are ready to install the software, press **Install**.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/installation-middleware-prerequisite3.png' alone />
 
 1. It will start the installation for prerequisites, and the software will get installed automatically.
 
+   <Image src='/img/integration/gallagher/installation-middleware-prerequisite4.png' alone />
+
 1. Press **OK**, for below pop-up.
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/installation-middleware-prerequisite5.png' alone />
 
 1. We are done with the prerequisite installation press **Finish**.
 
@@ -232,4 +317,4 @@ Suprema Device OSDP/RS485 **reader 2** to Controller 6000
 
    :::
 
-   <Image src='/img/integration/gallagher/.png' alone />
+   <Image src='/img/integration/gallagher/installation-middleware-prerequisite6.png' alone />
