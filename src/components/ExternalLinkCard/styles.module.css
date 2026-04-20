@@ -128,8 +128,7 @@
   overflow: hidden;
   flex-wrap: wrap;
   align-content: center;
-  background: var(--main-text-color);
-  border-radius: 5px;
+  /* background: var(--main-text-color); */
 }
 .productImg img {
   display: block;
