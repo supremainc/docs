@@ -37,6 +37,7 @@ import YouTube from 'react-youtube';
 import PageBreak from '@site/src/components/Pagebreak';
 import Magnify from "@site/src/components/Magnify";
 import Linkto from "@site/src/components/Linkto";
+import Anchor from '@site/src/components/Anchor';
 // icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
@@ -202,7 +203,7 @@ export default {
     Jira,
     Productpart, Callout, Item,
     SpecSection, SpecSizeWieght, Anno,
-    Faqs, FaqsItems, Calloutlists, DocLink, Treeview, YouTube, PageBreak, Magnify, Linkto,
+    Faqs, FaqsItems, Calloutlists, DocLink, Treeview, YouTube, PageBreak, Magnify, Linkto, Anchor,
     IcSvTime, IcAccount, IcHelp, IcAibtn,
     IcLicense,
     IcAdd, IcMinus,
