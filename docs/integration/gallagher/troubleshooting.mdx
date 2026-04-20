@@ -1,8 +1,8 @@
 ---
 id: troubleshooting
-title: Troubleshooting
-description: troubleshooting description
-keywords: [ keyword1, keyword2, keyword3 ]
+title: Troubleshooting and FAQ
+description: Troubleshooting guide and FAQ for Suprema Integration with Gallagher, covering middleware upgrades, network errors, SSL certificates, and PostgreSQL database management.
+keywords: [ Troubleshooting, SSL Certificate, PostgreSQL ]
 ---
 
 ## Setup
@@ -88,7 +88,7 @@ So below are the steps to uninstall the middleware prerequisites,
 
 1. It asked to uninstall Node.js, **press** Yes and it started uninstalling.
 
-1. After some time when it asks for Runtimee application, Follow the below and **press** OK. Skip this step if it does not apply to you.
+1. After some time when it asks for Runtime application, Follow the below and **press** OK. Skip this step if it does not apply to you.
 
    <Image src='/img/integration/gallagher/setup3-1.png' alone />
 
@@ -158,7 +158,7 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
 </details>
 
-## SSL Certificate Generation
+### SSL Certificate Generation
 
 1. Go to the start menu and **Open** the **MMC** Application.
 
@@ -322,7 +322,7 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
    <Image src='/img/integration/gallagher/middleware-uninstall-from-exe6.png' alone />
 
-1. Now click inside the terminal and **press** enter to complete the uninstalltion process.
+1. Now click inside the terminal and **press** enter to complete the uninstallation process.
 
    <Image src='/img/integration/gallagher/middleware-uninstall-from-exe7.png' alone />
 
@@ -481,7 +481,7 @@ The below steps need to run on the BioStar 2 server.
 
 1. Configure Program:
 
-   * If you want to apply this rule to a specific program, you can specify it here. Since we're dealing with ICMP traﬃc, leave this as **All programs** and click **Next**.
+   * If you want to apply this rule to a specific program, you can specify it here. Since we're dealing with ICMP traffic, leave this as **All programs** and click **Next**.
 
 1. Configure Protocol and Ports:
 
@@ -497,7 +497,7 @@ The below steps need to run on the BioStar 2 server.
 
 1. Configure Scope:
 
-   * In the Scope window, you can specify which IP addresses are allowed to send ICMP traﬃc to the server. So local IP addresses leave it as it is and for remote IP addresses fill in the IP address of the Gallagher&Middleware server, now choose These IP addresses: Click on the Add button then in the IP address wizard enter the IP Address of Gallagher&Middleware server, and press OK. please refer below image for reference.
+   * In the Scope window, you can specify which IP addresses are allowed to send ICMP traffic to the server. So local IP addresses leave it as it is and for remote IP addresses fill in the IP address of the Gallagher&Middleware server, now choose These IP addresses: Click on the Add button then in the IP address wizard enter the IP Address of Gallagher&Middleware server, and press OK. please refer below image for reference.
 
    <Image src='/img/integration/gallagher/middleware-port-ip-config-inbound-rules2.png' alone />
 
@@ -517,7 +517,7 @@ The below steps need to run on the BioStar 2 server.
 
    * After creating the rule, you should see it listed in the Inbound Rules section of the Windows Defender Firewall with Advanced Security console.
 
-   * Right-click on the rule you just created and select **Enable Rule** if it is not enabled automatically. This ensures that the rule is active and will allow ICMP traﬃc.
+   * Right-click on the rule you just created and select **Enable Rule** if it is not enabled automatically. This ensures that the rule is active and will allow ICMP traffic.
 
 </details>
 
@@ -548,13 +548,13 @@ Till then please refer to the article which helps to manually generate the thumb
 <details className='faqs'>
 <summary id="create-migration-manually">**Create Migration Manually.**</summary>
 
-We are doing the migrations because from the middleware V1.8.3 is supporting the Hostname so we can use our middleware using the Gallgher workstation client.
+We are doing the migrations because from the middleware V1.8.3 is supporting the Hostname so we can use our middleware using the Gallagher workstation client.
 
 To create the migration manually Please follow the steps below:
 
 1. Go to the Pgadmin. It asks for the password, Write The password **G@ll@gher** as it default password we set during the installation.
 
-1. Now **Click on**** the Servers, If it asks for the password use the same **G@ll@gher** as Password, Now **click on** the Databases and **Expand** the Suprema → Schemas → public → Tables. Now **select** the credentials table.
+1. Now **Click on** the Servers, If it asks for the password use the same **G@ll@gher** as Password, Now **click on** the Databases and **Expand** the Suprema → Schemas → public → Tables. Now **select** the credentials table.
 
    <Image src='/img/integration/gallagher/create-migration-manually1.png' alone />
 
@@ -635,7 +635,7 @@ To create the migration manually Please follow the steps below:
 
 1. Install PostgreSQL 16:
 
-   * Download and install PostgreSQL 16 from the oﬃcial PostgreSQL website, following the installation steps for your operating system, or refer to the link to directly get V.16.4.1: https://drive.google.com/file/d/17ehlTpedaGeWezOHZiMd6-ircQhTqBAJ/view?usp=drive_link.
+   * Download and install PostgreSQL 16 from the official PostgreSQL website, following the installation steps for your operating system, or refer to the link to directly get V.16.4.1: https://drive.google.com/file/d/17ehlTpedaGeWezOHZiMd6-ircQhTqBAJ/view?usp=drive_link.
 
 1. Migrate Data (Optional):
 

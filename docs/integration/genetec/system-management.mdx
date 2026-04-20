@@ -1,7 +1,7 @@
 ---
 id: system-management
 title: System Management
-description: Provides a comprehensive guide for system management in Genetec Security Center, covering system prerequisites, Suprema device registration and configuration, Synergis Cloud Link assignment, and door hardware settings.
+description: Covers system prerequisites, Suprema device registration and configuration, Synergis Cloud Link assignment, and door hardware settings for Genetec Security Center integration.
 keywords: [ System Configuration, Device Registration, Door Configuration ]
 ---
 
@@ -101,7 +101,7 @@ To ensure proper operation of the Plugin, please enable RIO protocol for Synergi
 
 1. Login to Synergis Cloud Link or Softwire.
 
-1. Click a URL `http://[IPaddress]/Features/DuiRIO/Enabled/Set?value=treu`.
+1. Click a URL `http://[IPaddress]/Features/DuiRIO/Enabled/Set?value=true`.
 
    <Image src='/img/integration/genetec/rio-protocol-login-successful.png' alone />
 
@@ -167,7 +167,7 @@ If you'd like to **extract face templates from cardholder profile images** in GS
 
 1. Click the **Search Device** button. All available devices will appear.
 
-   If Device Communication Mode is set to Device To Server, Please click the Refresh List button in the pane below.
+   If Device Communication Mode is set to Device To Server, please click the Refresh List button in the pane below.
 
    <Image src='/img/integration/genetec/device-management2.png' alone />
 
@@ -270,7 +270,7 @@ You can enter or edit the name and the group of a device. If a new firmware vers
 
 ### Network
 
-You can enter or edit the name and the group of a device. If a new firmware version is available, you can upgrade to it.
+You can configure the network connection settings of the device.
 
 <Image src='/img/integration/genetec/device-settings-network.png' alone />
 
@@ -501,9 +501,9 @@ You can grant full access to users registered within the device without setting 
 <Td>**Fingerprint**</Td>
 <Td>
 
-You can configure the detail settings concerning face authentication.
+You can configure the detail settings concerning fingerprint authentication.
 
-* **1:N Security Level**: You can set a security level to use for face authentication. The higher the security level is set, the false rejection rate (FRR) gets higher, but the false acceptance rate (FAR) gets lower.
+* **1:N Security Level**: You can set a security level to use for fingerprint authentication. The higher the security level is set, the false rejection rate (FRR) gets higher, but the false acceptance rate (FAR) gets lower.
 
 * **Scan Timeout**: If a finger is not registered during the set time when registering a user’s finger, the finger registration will be canceled.
 
@@ -698,15 +698,15 @@ Root Cause:
 
 * Therefore, there is **no way to pre-configure input types before assigning the device to a Door** in Genetec.
 
-   :::caution
+---
 
-   Any input type changes made via:
+<Image src='/img/common/ico-caution.svg' ico /> **Caution**
 
-   **Config Tool** → **Access Control** → **Cloud Link** → **Peripherals Tab** will **not apply to the Suprema device** directly.
+Any input type changes made via:
 
-   :::
+**Config Tool** → **Access Control** → **Cloud Link** → **Peripherals Tab** will **not apply to the Suprema device** directly.
 
-:::note
+---
 
 **Plugin’s Auto Assignment Logic**
 

@@ -1,8 +1,8 @@
 ---
 id: integration-gallagher
 title: Suprema Integration with Gallagher
-description: Suprema Integration with Gallagher description
-keywords: [ keyword1, keyword2, keyword3 ]
+description: User enrollment and device management guide for Suprema Integration with Gallagher, including fingerprint, visual face, card assignment, QR code, and smart card setup.
+keywords: [ User Enrollment, Smart Card, QR Code ]
 ---
 
 1. In Cardholder Viewer search rest and it will load all the windows.
@@ -135,7 +135,7 @@ keywords: [ keyword1, keyword2, keyword3 ]
 
    You can also search for the user with its id **change** the drop-down user name to user id and **search** for a user with id.
 
-**Enroll the User’s Photo ID in the Command Center for Face Template**
+## Enroll the User’s Photo ID in the Command Center for Face Template
 
 1. **Go to** the Administration and **Click** on Personal Data Field and **Press** on New Personal Data Field.
 
@@ -173,13 +173,13 @@ keywords: [ keyword1, keyword2, keyword3 ]
 
    <Image src='/img/integration/gallagher/enroll-face-template8.png' alone />
 
-**Enroll the User’s Email ID in the Command Center for the QR Code**
+## Enroll the User’s Email ID in the Command Center for the QR Code {#enroll-email-qr-code}
 
 1. **Go to** the Administration and **Click** on Personal Data Field and **Press** on New Personal Data Field.
 
    <Image src='/img/integration/gallagher/enroll-template.png' alone />
 
-1. Now inside the pop-up **set** the name as Email and **press** the Close button. In the Data Type field **select** Email as a Data Type and **Tick** the Unique Value checkbox,Don’t change anything here and assign Access Group by **Pressing** on the Add Access Group button inside the Access Group section and **selecting** Suprema Access Zone After **selecting** Access Zone **press** the Add Selection button for the field.
+1. Now inside the pop-up **set** the name as Email and **press** the Close button. In the Data Type field **select** Email as a Data Type and **Tick** the Unique Value checkbox. Don’t change anything here and assign Access Group by **Pressing** on the Add Access Group button inside the Access Group section and **selecting** Suprema Access Zone After **selecting** Access Zone **press** the Add Selection button for the field.
 
    :::info
 
@@ -193,7 +193,7 @@ keywords: [ keyword1, keyword2, keyword3 ]
 
    <Image src='/img/integration/gallagher/enroll-email-qr2.png' alone />
 
-1. Now **go to** the Viewer Configuration and **Press** Click to configure for Cardholder Details. Inside Cardholder Details Configuration **Choose** Selected PDFs and **select** Email field and **press** the Close button. Now **press** the Save button on the bottom left side to save the changes. Right-client on Viewer Configuration and **Press** reload viewer.
+1. Now **go to** the Viewer Configuration and **Press** Click to configure for Cardholder Details. Inside Cardholder Details Configuration **Choose** Selected PDFs and **select** Email field and **press** the Close button. Now **press** the Save button on the bottom left side to save the changes. Right-click on Viewer Configuration and **Press** reload viewer.
 
    <Image src='/img/integration/gallagher/enroll-email-qr3.png' alone />
 
@@ -203,9 +203,9 @@ keywords: [ keyword1, keyword2, keyword3 ]
 
    :::info
 
-   * To configure the SMPT configurations - [Configure SMTP for QR Code](#).
+   * To configure the SMPT configurations - [Configure SMTP for QR Code](configuration#email-config-qr-code).
 
-   * To configure the email address in Gallagher, [email configuration in Gallagher](#).
+   * To configure the email address in Gallagher, [email configuration in Gallagher](#enroll-email-qr-code).
 
    * Configure the QR Card type in Gallagher - [Create QR Code card Type](#).
 
@@ -253,7 +253,7 @@ keywords: [ keyword1, keyword2, keyword3 ]
 
    <Image src='/img/integration/gallagher/enroll-email-qr15.png' alone />
 
-**Default card Selection:-**
+## Default card Selection
 
 1. You can select the default card by **pressing** the radio button for the user.
 
@@ -269,7 +269,7 @@ keywords: [ keyword1, keyword2, keyword3 ]
 
    :::
 
-**Smart card(AOC/TOC):-**
+## Smart Card (AOC/TOC)
 
 :::info
 
@@ -329,7 +329,7 @@ You must have a 2.9.4 or above version of BioStar 2 to use the smartcard feature
 
 1. Now you have to **scan** the same card against the selected device to assign the card to the user. If you are not scanning the same card you will get an error message, else it will write the card for the user and clear all the biometric information for the user.
 
-**HID ICLASS card:-**
+## HID ICLASS card
 
 1. If you want to use the HID ICLASS card option go to settings in the device, **press** the **settings** button, and inside Device Management **select** the device you want to configure and **select** the Wiegand Settings option then scroll down and find the Wiegand settings.
 
@@ -349,14 +349,14 @@ You must have a 2.9.4 or above version of BioStar 2 to use the smartcard feature
 
    <Image src='/img/integration/gallagher/hid-iclass-card3.png' alone />
 
-**QR Code Card:**
+## QR Code Card
 
 1. If you want to use the QR Code card option, go to settings by **pressing** the **settings** button, and inside Device Management, **select** the device you want to configure. Then, **select** the QR Code Settings option, and **enable** the use of QR/Barcode through the camera option settings. **Press** the Apply button to save the changes.
 
    <Image src='/img/integration/gallagher/qr-code-card.png' alone />
 
-**Licensed devices:**
+## Licensed devices
 
-1. If you want to check the devices associated with the **license**, you need to go to **Admin Managment** under **settings** and **click** on the Licensed devices, and then need to **press the** sync button. It will show the latest devices list associated under your license.
+1. If you want to check the devices associated with the **license**, you need to go to **Admin Management** under **settings** and **click** on the Licensed devices, and then need to **press the** sync button. It will show the latest devices list associated under your license.
 
    <Image src='/img/integration/gallagher/licensed-devices.png' alone />
