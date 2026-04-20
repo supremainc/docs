@@ -12,7 +12,7 @@ This guide describes how to register and set up doors. Connect entry and exit de
 
 ## Before start {#before-start}
 
-* Set access levels, access groups, and floor levels for access control before registering doors. For more information, refer to [the following](settings-access-control).
+* Set access levels, access groups, and floor levels for access control before registering doors. For more information, see <DocLink docId='platform/biostar_x/settings-access-control' />.
 
 * Register devices before registering doors. For more information about device registration, refer to the following.
 
@@ -34,17 +34,17 @@ This guide describes how to register and set up doors. Connect entry and exit de
 
 4. When the <Cmd sid='door.addNewDoor' product='2' /> screen appears, set each section item in order.
 
-   * <Cmd sid='common.information' product='2' />: Set the basic information of the door. For more information, refer to [the following](#info).
+   * <Cmd sid='common.information' product='2' />: Set the basic information of the door. For more information, see <DocLink inner='#info' />.
 
-   * <Cmd sid='device.info.configuration' product='2' />: Set devices connected to the door, and entry and exit buttons along with door sensors. For more information, refer to [the following](#configdoor).
+   * <Cmd sid='device.info.configuration' product='2' />: Set devices connected to the door, and entry and exit buttons along with door sensors. For more information, see <DocLink inner='#configdoor' />.
 
-   * <Cmd sid='common.option' product='2' />: Set additional options. For more information, refer to [the following](#option).
+   * <Cmd sid='common.option' product='2' />: Set additional options. For more information, see <DocLink inner='#option' />.
 
-   * <Cmd sid='door.antiPassBack' product='2' />: Set the anti-passback feature to manage access history and enhance security. For more information, refer to [the following](#antipassback).
+   * <Cmd sid='door.antiPassBack' product='2' />: Set the anti-passback feature to manage access history and enhance security. For more information, see <DocLink inner='#antipassback' />.
 
-   * <Cmd sid='timedAPB.title' product='2' />: Set the initialization time for the anti-passback feature. For more information, refer to [the following](#timed-apb).
+   * <Cmd sid='timedAPB.title' product='2' />: Set the initialization time for the anti-passback feature. For more information, see <DocLink inner='#timed-apb' />.
 
-   * <Cmd sid='door.alarm' product='2' />: You can set the alarm to trigger or block device usage when an anti-passback violation occurs. For more information, refer to [the following](#alarm).
+   * <Cmd sid='door.alarm' product='2' />: You can set the alarm to trigger or block device usage when an anti-passback violation occurs. For more information, see <DocLink inner='#alarm' />.
 
 5. Once all configurations are complete, click the <Cmd sid='button.apply' product='2' /> button at the bottom of the screen.
 
@@ -64,7 +64,7 @@ In the <Cmd sid='common.information' product='2' /> section, you can input or ch
 
 * The door name can be up to 48 characters long.
 
-* For more information about registering door groups, refer to [the following](settings-manage-door-group).
+* For more information on registering door groups, see <DocLink docId='platform/biostar_x/settings-manage-door-group' />.
 
 :::
 
@@ -148,9 +148,9 @@ In the <Cmd sid='common.option' product='2' /> section, you can set additional o
 
   * To change the dual authentication of the device configured with the occupant limit setting, modify the settings in the following menu. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='zone.occupancy.title' product='2' />
 
-    For more information about <Cmd sid='zone.occupancy.title' product='2' /> settings, refer to [the following](settings-advanced-ac).
+    For more information on the <Cmd sid='zone.occupancy.title' product='2' /> settings, see <DocLink docId='platform/biostar_x/settings-advanced-ac' />.
 
-  * For more information about schedule settings, refer to [the following](settings-schedule).
+  * For more information on schedule settings, see <DocLink docId='platform/biostar_x/settings-schedule' />.
 
   :::
 
@@ -176,7 +176,7 @@ Refer below to complete the settings in the <Cmd sid='door.antiPassBack' product
 
 :::info
 
-* This can be used when both entry and exit devices are installed, and setting <Cmd sid='door.exitDevice' product='2' /> option to <Cmd sid='common.none' product='2' /> in the <Cmd sid='device.info.configuration' product='2' /> section will render it unusable. For the exit device setup method, refer to [the following](#configdoor).
+* This can be used when both entry and exit devices are installed, and setting <Cmd sid='door.exitDevice' product='2' /> option to <Cmd sid='common.none' product='2' /> in the <Cmd sid='device.info.configuration' product='2' /> section will render it unusable. For more information on setting up the exit device, see <DocLink inner='#configdoor' />.
 
 * The <Cmd sid='door.antiPassBack' product='2' /> section requires a master device configured via RS-485 and a slave device.
 
