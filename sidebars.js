@@ -2284,6 +2284,66 @@ function createSidebars(preview) {
         'device/corestation_setup_manager/appendices'
       ]
     }
+  ],
+  genetec: [
+    {
+      type: 'category',
+      label: 'Genetec',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'integration/genetec/index',
+      },
+      items: [
+        'integration/genetec/installation',
+        'integration/genetec/system-management',
+        'integration/genetec/cardholder-management',
+        'integration/genetec/appendices'
+      ]
+    }
+  ],
+  gallagher: [
+    {
+      type: 'category',
+      label: 'Gallagher',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'integration/gallagher/index',
+      },
+      items: [
+        'integration/gallagher/purpose',
+        'integration/gallagher/introduction',
+        'integration/gallagher/installation',
+        'integration/gallagher/configuration',
+        'integration/gallagher/integration-gallagher',
+        'integration/gallagher/troubleshooting'
+      ]
+    }
+  ],
+  ccure: [
+    {
+      type: 'category',
+      label: 'C•CURE',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'integration/ccure/index',
+      },
+      items: [
+        'integration/ccure/getting-started',
+        'integration/ccure/installation',
+        'integration/ccure/enrolling-biometrics',
+        'integration/ccure/troubleshooting',
+        'integration/ccure/appendices'
+      ]
+    }
   ]
 };
 

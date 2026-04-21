@@ -677,6 +677,41 @@ body[data-rh] .redocusaurus {
     }
   }
 
+  details.faqs {
+    background: var(--main-black);
+    border-radius: none;
+    border: 1px solid var(--main-text-color);
+    summary {
+      padding-left: 3rem;
+    }
+    summary::before {
+      border-color: transparent transparent transparent var(--ifm-color-color-gray);
+    }
+    summary::after {
+      content: "Q";
+      color: var(--ifm-color-border);
+      font-size: 1.8rem;
+      font-weight: bold;
+      position: absolute;
+      left: 1rem;
+      top: -12px;
+    }
+    div[class*='collapsibleContent'] {
+      border-top: 1px solid var(--ifm-color-border);
+      padding-left: 3rem;
+      position: relative;
+    }
+    div[class*='collapsibleContent']::before {
+      content: "A";
+      color: var(--ifm-color-border);
+      font-size: 1.8rem;
+      font-weight: bold;
+      position: absolute;
+      left: 1.2rem;
+      top: 5px;
+    }
+  }
+
   .overflow-x {
     margin-top: var(--ifm-list-paragraph-margin);
   }
@@ -1227,6 +1262,13 @@ body[data-rh] .redocusaurus {
       table-layout: fixed;
     }
   }
+  .first--column--center {
+      table {
+         td:first-of-type {
+            text-align: center;
+         }
+      }
+  }
   .cols3--20-20-60 {
     table {
       td {
@@ -1253,6 +1295,21 @@ body[data-rh] .redocusaurus {
         }
         &:nth-of-type(3) {
           width: 40%;
+        }
+      }
+    }
+  }
+  .cols3--10-30-60 {
+    table {
+      td {
+        &:nth-of-type(1) {
+          width: 10%;
+        }
+        &:nth-of-type(2) {
+          width: 30%;
+        }
+        &:nth-of-type(3) {
+          width: 60%;
         }
       }
     }

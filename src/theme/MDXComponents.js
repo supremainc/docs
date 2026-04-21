@@ -37,6 +37,7 @@ import YouTube from 'react-youtube';
 import PageBreak from '@site/src/components/Pagebreak';
 import Magnify from "@site/src/components/Magnify";
 import Linkto from "@site/src/components/Linkto";
+import Anchor from '@site/src/components/Anchor';
 // icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
@@ -167,6 +168,7 @@ import IcCamLive from '@site/static/img/cam-server/ico-header-live.svg';
 import IcCamSet from '@site/static/img/cam-server/ico-header-settings.svg';
 import IcCamPeople from '@site/static/img/cam-server/ico-header-people.svg';
 import IcCamSys from '@site/static/img/cam-server/ico-header-system.svg';
+import IcQuestion from '@site/static/img/menus/ico-question.svg'; 
 export default {
     ...MDXComponents,
     Cmd,
@@ -207,7 +209,7 @@ export default {
     Jira,
     Productpart, Callout, Item,
     SpecSection, SpecSizeWieght, Anno,
-    Faqs, FaqsItems, Calloutlists, DocLink, Treeview, YouTube, PageBreak, Magnify, Linkto,
+    Faqs, FaqsItems, Calloutlists, DocLink, Treeview, YouTube, PageBreak, Magnify, Linkto, Anchor,
     IcSvTime, IcAccount, IcHelp, IcAibtn,
     IcLicense,
     IcAdd, IcMinus,
@@ -239,5 +241,5 @@ export default {
     IcBack,
     IcAdvSearch, IcSearch,
     IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit, IcEdit2, IcEditUL,
-    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP, IcCamFail, IcCamOk, IcMapmore, IcAlert, IcVidLog, IcReportVid, IcViewAlert, IcRepTrash, IcRepoEdit, IcZoom, IcFLockDr, IcFUlockDr, IcRCplay, IcRCstop, IcRCdone, IcRCinfo, IcRCmemo, IcImgLog, IcList, IcTnaExpand, IcInfinity, IcAirEdit, IcAirRemove, IcAirMore, IcAirUpface, IcAirGroup, IcAirDef, IcAirL, IcAirR, IcAirLock, IcAirMtag, IcAirDown, IcAirFaceLink, IcAirFilterReset, IcAirUtemplate, IcAirReport, IcAirFilter, IcAirActive, IcAirReissue, IcAirSuspend, IcAirRef, IcAirFw, IcAirCloud, IcAirByte, IcAirDset, IcAirUpd, IcAirColumn, IcAirSchedule, IcAirLogfilter, IcAirMask, IcAirReportApp, IcHamberg, IcFunc, IcSpqr, IcAirWarn, IcCamTrash, IcCamReset, IcCamLive, IcCamSet, IcCamPeople, IcCamSys
+    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP, IcCamFail, IcCamOk, IcMapmore, IcAlert, IcVidLog, IcReportVid, IcViewAlert, IcRepTrash, IcRepoEdit, IcZoom, IcFLockDr, IcFUlockDr, IcRCplay, IcRCstop, IcRCdone, IcRCinfo, IcRCmemo, IcImgLog, IcList, IcTnaExpand, IcInfinity, IcAirEdit, IcAirRemove, IcAirMore, IcAirUpface, IcAirGroup, IcAirDef, IcAirL, IcAirR, IcAirLock, IcAirMtag, IcAirDown, IcAirFaceLink, IcAirFilterReset, IcAirUtemplate, IcAirReport, IcAirFilter, IcAirActive, IcAirReissue, IcAirSuspend, IcAirRef, IcAirFw, IcAirCloud, IcAirByte, IcAirDset, IcAirUpd, IcAirColumn, IcAirSchedule, IcAirLogfilter, IcAirMask, IcAirReportApp, IcHamberg, IcFunc, IcSpqr, IcAirWarn, IcCamTrash, IcCamReset, IcCamLive, IcCamSet, IcCamPeople, IcCamSys, IcQuestion
 }
