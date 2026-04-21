@@ -1,0 +1,480 @@
+<!doctype html><html lang=ko-KR dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-integration/ccure/installation" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.2"><title data-rh=true>Suprema - C•CURE Integration Installation | Suprema Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=robots content="noindex, nofollow"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:image content=https://supremainc.github.io/docs/img/sns_img02.jpg /><meta data-rh=true name=twitter:image content=https://supremainc.github.io/docs/img/sns_img02.jpg /><meta data-rh=true property=og:url content=https://supremainc.github.io/docs/integration/ccure/installation /><meta data-rh=true property=og:locale content=ko_KR /><meta data-rh=true property=og:locale:alternate content=en_US /><meta data-rh=true property=og:locale:alternate content=es_419 /><meta data-rh=true property=og:locale:alternate content=ja_JP /><meta data-rh=true name=docusaurus_locale content=ko /><meta data-rh=true name=docsearch:language content=ko /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="Suprema - C•CURE Integration Installation | Suprema Docs"/><meta data-rh=true name=description content="Provides comprehensive instructions for installing and configuring the Suprema - C•CURE Integration, including server and client setup, port requirements, and user synchronization."/><meta data-rh=true property=og:description content="Provides comprehensive instructions for installing and configuring the Suprema - C•CURE Integration, including server and client setup, port requirements, and user synchronization."/><meta data-rh=true name=keywords content="Installation,Configuration,C•CURE Integration"/><link data-rh=true rel=icon href=https://supremainc.com/ko/asset/images/common/Website_favicon.png /><link data-rh=true rel=canonical href=https://supremainc.github.io/docs/integration/ccure/installation /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/integration/ccure/installation hreflang=ko-KR /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/en/integration/ccure/installation hreflang=en-US /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/es/integration/ccure/installation hreflang=es-419 /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/ja/integration/ccure/installation hreflang=ja-JP /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/integration/ccure/installation hreflang=x-default /><link data-rh=true rel=preconnect href=https://11LXF9EJH7-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://supremainc.github.io/docs/integration/ccure/","name":"C•CURE","position":1},{"@type":"ListItem","item":"https://supremainc.github.io/docs/integration/ccure/installation","name":"Suprema - C•CURE Integration Installation","position":2}]}</script><link rel=alternate type=application/rss+xml href=/docs/changelog/rss.xml title="Suprema Docs RSS Feed"><link rel=alternate type=application/atom+xml href=/docs/changelog/atom.xml title="Suprema Docs Atom Feed"><link rel=search type=application/opensearchdescription+xml title="Suprema Docs" href=/docs/opensearch.xml><script>!function(e,t,o,a,s,r){e=e[s]=e[s]||{config:{projectAccessKey:"x60611885oe0j-z1b3umd5ov7i42-x7e2msjl83m655",pcode:49418,sampleRate:100,sessionReplaySampleRate:100,ignorePageUrls:[/^.*localhost.*$/i],collectUserClick:!0}},(s=t.createElement(o)).async=1,s.src=a,(a=t.getElementsByTagName(o)[0]).parentNode.insertBefore(s,a)}(window,document,"script","https://repo.whatap-browser-agent.io/rum/prod/v1/whatap-browser-agent.js","WhatapBrowserAgent",0)</script><script src=https://cdn.jsdelivr.net/npm/@azure/msal-browser@4.21.0/lib/msal-browser.min.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/assets/css/styles.591c5eeb.css /><script src=/docs/assets/js/runtime~main.58889354.js defer></script><script src=/docs/assets/js/main.bf93b5ab.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id=__docusaurus><link rel=preload as=image href=/docs/img/suprema-logo.svg /><link rel=preload as=image href=/docs/img/suprema-logo-white.svg /><link rel=preload as=image href=/docs/img/suprema-logo-bottom.svg /><div role=region aria-label="본문으로 건너뛰기"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>본문으로 건너뛰기</a></div><div class="theme-announcement-bar announcementBar_mb4j" style=background-color:#FFB27D;color:#091E42 role=banner><div class="content_zf74 announcementBarContent_xLdY"><b>이 문서에는 아직 서비스 버전으로 출시되지 않은 콘텐츠가 포함되어 있습니다. 공식적으로 출시된 기능에 대한 설명서는 <a href=https://docs.supremainc.com/integration/ccure/installation/ target=_blank>다음 링크</a>에서 확인하세요.</b></div></div><nav aria-label=메인 class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="사이드바 펼치거나 접기" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/><div class=navbar__logo><img src=/docs/img/suprema-logo.svg alt="Suprema Docs" class="themedComponent_mlkZ themedComponent--light_NVdE" width=120px /><img src=/docs/img/suprema-logo-white.svg alt="Suprema Docs" class="themedComponent_mlkZ themedComponent--dark_xIcU" width=120px /></div><b class="navbar__title text--truncate">Docs</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>플랫폼</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/platform/biostar_x>BioStar X</a><li><a class=dropdown__link href=/docs/platform/biostar_air>BioStar Air</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>AI 카메라</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/device/vionyx>ViOnyx</a><li><a class=dropdown__link href=/docs/device/vionyx_webserver>ViOnyx Web Server</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>장치</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/device/biostation_3_max>BioStation 3 Max</a><li><a class=dropdown__link href=/docs/device/bioentry_w3>BioEntry W3</a><li><a class=dropdown__link href=/docs/device/biostation_2a>BioStation 2a</a><li><a class=dropdown__link href=/docs/device/biostation_3>BioStation 3</a><li><a class=dropdown__link href=/docs/device/facestation_f2>FaceStation F2</a><li><a class=dropdown__link href=/docs/device/facestation_2>FaceStation 2</a><li><a class=dropdown__link href=/docs/device/biolite_n2>BioLite N2</a><li><a class=dropdown__link href=/docs/device/bioentry_w2>BioEntry W2</a><li><a class=dropdown__link href=/docs/device/bioentry_p2>BioEntry P2</a><li><a class=dropdown__link href=/docs/device/bioentry_r2>BioEntry R2</a><li><a class=dropdown__link href=/docs/device/xstation_2>X-Station 2</a><li><a class=dropdown__link href=/docs/device/xpass_q2>XPass Q2</a><li><a class=dropdown__link href=/docs/device/xpass_2>XPass 2</a><li><a class=dropdown__link href=/docs/device/xpass_d2>XPass D2</a><li><a class=dropdown__link href=/docs/device/xpass_s2>XPass S2</a><li><a class=dropdown__link href=/docs/device/corestation_20>CoreStation 20</a><li><a class=dropdown__link href=/docs/device/corestation_40>CoreStation</a><li><a class=dropdown__link href=/docs/device/enclosure>Enclosure</a><li><a class=dropdown__link href=/docs/device/doorinterface>Door Interface</a><li><a class=dropdown__link href=/docs/device/inputmodule>Input Module</a><li><a class=dropdown__link href=/docs/device/outputmodule>Output Module</a><li><a class=dropdown__link href=/docs/device/doormodule>Door Module</a><li><a class=dropdown__link href=/docs/device/securemodule>Secure Module</a><li><a class=dropdown__link href=/docs/device/extendedmodule>Extended Module</a><li><a class=dropdown__link href=/docs/device/extendedmodule_sc>Extended Module-SC</a><li><a class=dropdown__link href=/docs/device/device_manager>Device Manager</a><li><a class=dropdown__link href=/docs/device/corestation_setup_manager>CoreStation Setup Manager</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>인테그레이션</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/integration/genetec>Genetec</a><li><a class=dropdown__link href=/docs/integration/gallagher>Gallagher</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/integration/ccure>C•CURE</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>개발자 센터</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/api/bsxapi>BioStar X API</a><li><a href=https://developers.biostarair.com target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar Air Developer</a><li><a href=https://kb.supremainc.com/bs2sdk/doku.php target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar Device SDK</a><li><a href=https://bs2api.biostar2.com target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar 2 API</a><li><a href=https://supremainc.github.io/g-sdk target=_blank rel="noopener noreferrer" class=dropdown__link>Suprema G-SDK</a><li><a href=https://kb.supremainc.com/svpsdk/doku.php target=_blank rel="noopener noreferrer" class=dropdown__link>SVP Android SDK</a></ul></div><a class="navbar__item navbar__link" href=/docs/reference>참고 문서</a><a class="navbar__item navbar__link" href=/docs/changelog>업데이트 내역</a><a class="navbar__item navbar__link" href=/docs/legal/disclaimers>법적 고지</a><div class=navbarSearchContainer_Bca1><button class=search-pop-trigger aria-label=검색><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 24 24" aria-hidden=true><circle cx=11 cy=11 r=8 stroke=currentColor fill=none stroke-width=1.4 /><path d="m21 21-4.3-4.3" stroke=currentColor fill=none stroke-linecap=round stroke-linejoin=round /></svg><span class=shortCut>Ctrl+K</span></button></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link><svg viewBox="0 0 24 24" width=20 height=20 aria-hidden=true class=iconLanguage_DSK9><path fill=currentColor d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>한국어</a><ul class=dropdown__menu><li><a href=/docs/integration/ccure/installation target=_self rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang=ko-KR>한국어</a><li><a href=/docs/en/integration/ccure/installation target=_self rel="noopener noreferrer" class=dropdown__link lang=en-US>English</a><li><a href=/docs/es/integration/ccure/installation target=_self rel="noopener noreferrer" class=dropdown__link lang=es-419>Español</a><li><a href=/docs/ja/integration/ccure/installation target=_self rel="noopener noreferrer" class=dropdown__link lang=ja-JP>日本語</a></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="시스템 모드" aria-label="어두운 모드와 밝은 모드 전환하기 (현재 시스템 모드)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="맨 위로 스크롤하기" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class=sidebar_njMd><nav aria-label="문서 사이드바" class="menu thin-scrollbar menu_SIkG menuWithAnnouncementBar_GW3s"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item p-title"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--active" href=/docs/integration/ccure><span title=C•CURE class=categoryLinkLabel_W154>C•CURE</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/integration/ccure/getting-started><span title="Getting Started" class=linkLabel_WmDU>Getting Started</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/docs/integration/ccure/installation><span title="Suprema - C•CURE Integration Installation" class=linkLabel_WmDU>Suprema - C•CURE Integration Installation</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/integration/ccure/enrolling-biometrics><span title="Enrolling Biometrics from C•CURE 9000" class=linkLabel_WmDU>Enrolling Biometrics from C•CURE 9000</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/integration/ccure/troubleshooting><span title="Frequently Asked Questions (FAQs)" class=linkLabel_WmDU>Frequently Asked Questions (FAQs)</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/integration/ccure/appendices><span title=Appendices class=linkLabel_WmDU>Appendices</span></a></ul></ul></nav><button type=button title="사이드바 숨기기" aria-label="사이드바 숨기기" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_z5aJ"><div class=docItemContainer_c0TR><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Alpn" aria-label="탐색 경로"><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label=홈 class=breadcrumbs__link href=/docs/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_xK9p><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class="breadcrumbs__item item-1"><a class=breadcrumbs__link href=/docs/integration/ccure><span>C•CURE</span></a><li class="breadcrumbs__item breadcrumbs__item--active item-2"><span class=breadcrumbs__link>Suprema - C•CURE Integration Installation</span></ul><div class=btnprint_MOIq><button disabled class=printbtn_FzsH>PDF</button><button class=feedbackTrigger_JVwE aria-label="피드백 보내기">Feedback</button></div></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_XdKt"><button type=button class="clean-btn tocCollapsibleButton_TO0P">목차 보기</button></div><div class="theme-doc-markdown markdown"><header><h1>Suprema - C•CURE Integration Installation</h1></header><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=pre-requisites>Pre-requisites<a href=#pre-requisites class=hash-link aria-label="Pre-requisites에 대한 직접 링크" title="Pre-requisites에 대한 직접 링크" translate=no>​</a></h2>
+<ul>
+<li class="">
+<p>Software House C•CURE 9000 (versions 2.90, 3.0, 3.10)</p>
+</li>
+<li class="">
+<p>Suprema BioStar 2 (version 2.9.0 and later)</p>
+</li>
+</ul>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>You must install BioStar 2 server and C•CURE 9000 Server in the SAME machine.</div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=considerations>Considerations<a href=#considerations class=hash-link aria-label="Considerations에 대한 직접 링크" title="Considerations에 대한 직접 링크" translate=no>​</a></h2>
+<ul>
+<li class="">
+<p>For specific instructions on how to install and configure C•CURE 9000 or BioStar 2, please refer to the installation manual for each of these platforms.</p>
+</li>
+<li class="">
+<p>If you are using MS SQL 2014 Express (a newer version is better), install the Service Pack 2 by referring to the following web page.</p>
+<blockquote>
+<p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=53168" target=_blank rel="noopener noreferrer" class="">https://www.microsoft.com/en-us/download/details.aspx?id=53168</a></p>
+</blockquote>
+</li>
+<li class="">
+<p>Please bear in mind that due to security reasons this integration does not support HTTP, only HTTPS (over TLS 1.2) then please make sure your BioStar 2 is set to handle HTTPS only.</p>
+</li>
+<li class="">
+<p>The default value for the ports used are as follows. If another program uses the same port the pre-requisites or this integration may not work properly.</p>
+<ul>
+<li class="">
+<p>Suprema - C•CURE Integration</p>
+<div class="overflow-x cols3--20-20-60"><table><thead><tr><th style=text-align:center>Type<th style=text-align:center>Port<th>Description<tbody><tr><td style=text-align:center>Port<td style=text-align:center>7733<td>HTTPS over TLS 1.2<tr><td style=text-align:center>Port<td style=text-align:center>51211<td>Suprema Devices</table></div>
+</li>
+<li class="">
+<p>Suprema BioStar 2 backend service</p>
+<div class="overflow-x cols3--20-20-60"><table><thead><tr><th style=text-align:center>Type<th style=text-align:center>Port<th>Description<tbody><tr><td style=text-align:center>Port<td style=text-align:center>443<td>HTTPS over TLS 1.2<tr><td style=text-align:center>Port<td style=text-align:center>3312<td>When MariaDB schema is used.<tr><td style=text-align:center>Port<td style=text-align:center>9002<td>Web Socket</table></div>
+</li>
+<li class="">
+<p>C•CURE 9000 v2.9 or v3.0</p>
+<div class="overflow-x cols3--20-20-60"><table><thead><tr><th style=text-align:center>Type<th style=text-align:center>Port<th>Description<tbody><tr><td style=text-align:center>Port<td style=text-align:center>161<td>For collecting and organizing information about devices.<tr><td style=text-align:center>Port<td style=text-align:center>2901/2<td>iSTAR Ultra G2 GCM listening port for IP-ACM2 SSL encrypted connection with default certificate/key.<tr><td style=text-align:center>Port<td style=text-align:center>28014<td>TLS 1.3 Signed Certificate delivery port. iSTAR Ultra G2 opens the port. Host delivers the signed certificates.</table></div>
+</li>
+<li class="">
+<p>Microsoft SQL server</p>
+<div class="overflow-x cols3--20-20-60"><table><thead><tr><th style=text-align:center>Type<th style=text-align:center>Port<th>Description<tbody><tr><td style=text-align:center>Port<td style=text-align:center>1433<td>Or as configured</table></div>
+</li>
+</ul>
+</li>
+<li class="">
+<p>The data is transferred under TLS 1.2 with private certificates, sensitive data (user, passwords, configurations) besides the encryption in transport layer, are stored encrypted.</p>
+</li>
+<li class="">
+<p>Before Installation starts, please ENSURE that MS SQL is being configured to:</p>
+<ul>
+<li class="">
+<p>Allow IP connections in the desired port (1433 default), from the desired IP address(es) as shown in the following images.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/tcp-ip-properties1.png width=705 height=445 /></p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/tcp-ip-properties2.png width=524 height=452 /></p>
+</li>
+</ul>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>A PC restart/reboot might be required for the new settings to take effect in MS SQL.</div></div>
+</li>
+<li class="">
+<p>Allow SQL Authentication:</p>
+<ul>
+<li class="">
+<p>In the SQL Server Management Studio: Object Explorer, right click on the <strong>Server</strong> → <strong>Properties</strong> → <strong>Security</strong> → Select <strong>SQL Server and Windows Authentication mode</strong> → <strong>Apply</strong>.</p>
+<div class=grid-container><p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/allow-sql-authentication1.png width=232 height=471 /><p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/allow-sql-authentication2.png width=457 height=294 /></div>
+</li>
+<li class="">
+<p>Windows Authentication and SQL Authentication (Local and Domain based) are supported for this integration.</p>
+</li>
+<li class="">
+<p>For Windows Authentication please be aware that the current Windows user account (where the integration has been installed) must have clearance to C•CURE databases, either for local or domain users. Otherwise, the Integration CT will fail to connect.</p>
+</li>
+<li class="">
+<p>Please mind specific Database configurations when integrating with Active Directory, if you get any issue with the Database connection, please open a ticket to request technical support.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=installation-procedure>Installation Procedure<a href=#installation-procedure class=hash-link aria-label="Installation Procedure에 대한 직접 링크" title="Installation Procedure에 대한 직접 링크" translate=no>​</a></h2>
+<p>The previous BASIC version of this integration has been deprecated. Currently only the ADVANCED version is supported, a specific installer shall be provided to you depending on the integration version you may want to work with.</p>
+<p>This guide is for the ADVANCED version.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=install-server-integration>Install Server Integration<a href=#install-server-integration class=hash-link aria-label="Install Server Integration에 대한 직접 링크" title="Install Server Integration에 대한 직접 링크" translate=no>​</a></h3>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>CrossFire Services may be stopped completely before starting with this installation and start them back again after finishing it.</div></div>
+<ol>
+<li class="">
+<p>Double click on the setup program (Suprema-CCURE_Integration-v2.x.exe).</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/install-server1.png width=400 height=auto /></p>
+</li>
+<li class="">
+<p>First of all, choose which version will you install:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/install-server2.png width=400 height=auto /></p>
+</li>
+<li class="">
+<p>Check the option for <strong>Server</strong>, then click install and it will allow you to start the Installation process for the server integration.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/install-server3.png width=400 height=auto /></p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>As this is a Stub installer you must be aware that a constant Internet connection MUST be provided.</div></div>
+</li>
+<li class="">
+<p>Once the download is finished it will show you the following. Select a language and click <strong>OK</strong>.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/install-server4.png width=350 height=auto /></p>
+</li>
+<li class="">
+<p>The wizard will guide you through the installation process.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/install-server5.png width=496 height=384 /></p>
+</li>
+<li class="">
+<p>To continue with the installation, accept the license agreement, and click <strong>Next</strong>.</p>
+</li>
+<li class="">
+<p>You will observe the Setup performing the installation process.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/install-server6.png width=496 height=384 /></p>
+</li>
+<li class="">
+<p>The Integration Installer may show a couple of CMD windows while showing the setup message:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/install-server7.png width=496 height=386 /></p>
+</li>
+<li class="">
+<p>Once the installation has finished, the setup will show.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/install-server8.png width=496 height=384 /></p>
+</li>
+<li class="">
+<p>A system restart may be needed after the installation.</p>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=install-client-integration>Install Client Integration<a href=#install-client-integration class=hash-link aria-label="Install Client Integration에 대한 직접 링크" title="Install Client Integration에 대한 직접 링크" translate=no>​</a></h3>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>All Administrator Workstation and Monitoring Station instances must be closed before starting with this installation.</div></div>
+<ol>
+<li class="">
+<p>Double click on the setup program (Suprema-CCURE_Integration-v2.x.exe).</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/install-server1.png width=400 height=auto /></p>
+</li>
+<li class="">
+<p>First of all, choose which version will you install:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/install-server2.png width=400 height=auto /></p>
+</li>
+<li class="">
+<p>Check the option for <strong>Client</strong>, then click install and it will allow you to start the Installation process for the client integration.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/install-client3.png width=400 height=auto /></p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>As this is a Stub installer you must be aware that a constant Internet connection MUST be provided.</div></div>
+</li>
+<li class="">
+<p>Once the download is finished it will show you the following. Select a language and click <strong>OK</strong>.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/install-server4.png width=350 height=auto /></p>
+</li>
+<li class="">
+<p>The wizard will guide you through the installation process.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/install-client5.png width=496 height=384 /></p>
+</li>
+<li class="">
+<p>To continue with the installation, accept the license agreement, and click <strong>Next</strong>.</p>
+</li>
+<li class="">
+<p>The Integration Installer may show a couple of CMD windows while showing the setup message:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/install-server7.png width=496 height=386 /></p>
+</li>
+<li class="">
+<p>Close the window once the setup has finished.</p>
+</li>
+</ol>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p>You MUST ensure that the PC has internet access throughout the installation.</p>
+</li>
+<li class="">
+<p>Make sure you turn off the anti-virus during the installation as sometimes it blocks the installation process.</p>
+</li>
+<li class="">
+<p>The Suprema - C•CURE Integration Server setup must be installed in the same PC where C•CURE server and BioStar 2 server are installed.</p>
+</li>
+</ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=login>Login<a href=#login class=hash-link aria-label="Login에 대한 직접 링크" title="Login에 대한 직접 링크" translate=no>​</a></h2>
+<p>The Suprema - C•CURE Integration Configuration Tool is a web-based tool which you can access from anywhere in your Network as long as you have access to the machine where it was installed.</p>
+<p>Through this Configuration Tool you can adjust many settings from this integration.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=first-run>First run<a href=#first-run class=hash-link aria-label="First run에 대한 직접 링크" title="First run에 대한 직접 링크" translate=no>​</a></h2>
+<ol>
+<li class="">
+<p>Run your web browser.</p>
+<ul>
+<li class="">We recommend Brave Browser, Microsoft Edge, or Google Chrome browser.</li>
+</ul>
+</li>
+<li class="">
+<p>The Suprema - C•CURE Integration Configuration Tool can be accessed by:</p>
+<blockquote>
+<p>https://BioStar 2_server_IP_or_Domain_Name<!-- -->:PORT<!-- -->/modules/SupremaCCURE/index.html</p>
+</blockquote>
+<p>Where the PORT should be the same as in the BioStar 2 Server configuration. You can find the appropriate port by checking the "BioStar 2 Settings" app from the Start Menu on the PC where you’ve installed Both C•CURE 9000 Server and BioStar 2 Server.</p>
+<blockquote>
+<p><a href=https://127.0.0.1:443/modules/SupremaCCURE/index.html target=_blank rel="noopener noreferrer" class="">https://127.0.0.1:443/modules/SupremaCCURE/index.html</a></p>
+</blockquote>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>Troubles finding the IP address or domain name? Please refer to the Troubleshooting section.</div></div>
+</li>
+<li class="">
+<p>You shall login with the Suprema Administrator credentials, the administrator account ID is <em>admin</em> and the password is the one you configured when installing BioStar 2 server.</p>
+</li>
+<li class="">
+<p>When you log in for the first time, you may see the "<em>Not secure</em>" warning in screen, this is because private (auto signed) certificates are used, please click <strong>OK</strong> and you’ll see the following login screen.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/first-run1.png width=400 height=auto /></p>
+<p>If right after the previous screen shows, the following notice shows:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/first-run2.png width=400 height=auto /></p>
+<p>Please go to the troubleshooting section: what to do when the <strong>Service Not running</strong> notice shows in the Integration CT.</p>
+</li>
+<li class="">
+<p>In the first run or when you do not have a valid license in the system, you will see the following notice on your screen:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/first-run3.png width=400 height=auto /></p>
+</li>
+<li class="">
+<p>The Integration Configuration Tool shall show a warning message saying you need to go to <strong>System Settings</strong>.</p>
+</li>
+<li class="">
+<p>Once in the <strong>System Settings</strong> you will be able to activate your license(s).</p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=main-menu>Main Menu<a href=#main-menu class=hash-link aria-label="Main Menu에 대한 직접 링크" title="Main Menu에 대한 직접 링크" translate=no>​</a></h2>
+<p>The following menu will be shown:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/main-menu.png width=600 height=auto /></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=adding-devices>Adding Devices<a href=#adding-devices class=hash-link aria-label="Adding Devices에 대한 직접 링크" title="Adding Devices에 대한 직접 링크" translate=no>​</a></h3>
+<p>After you perform the physical connections between your iStar Controller and the Suprema Devices, you can add the devices to the platform using the ADD DEVICES menu from the Suprema - C•CURE Integration Configuration Tool.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/main-ico-devices.png width=140 height=auto /></p>
+<p>Allows you to add or delete new devices to the system. Once selected, click the <strong>Add/Update</strong> button. Currently added Devices will appear on the left column (if any).</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/adding-devices1.png width=400 height=auto /></p>
+<p>Right next to the device icon you’ll see the device status, if green means the devices is online and well, if red the device is not online.</p>
+<p>You will also visualize the Device ID, specific model, and the name with which was registered.</p>
+<p>If you want to add more devices, you can refer to the column on the right side of your screen:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/adding-devices2.png width=400 height=auto /></p>
+<p>After clicking the <strong>Search</strong> button.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/adding-devices3.png width=400 height=auto /></p>
+<p>The results may appear as shown in the following image.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/adding-devices4.png width=500 height=auto /></p>
+<p>Please click the devices you may want to add to the platform and click the <strong>Add Devices</strong> button to perform the action.</p>
+<p>Now, the Normal search will perform a UDP search for Suprema devices on your network, while the Advanced Search:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/adding-devices5.png width=400 height=auto /></p>
+<p>Will perform a TCP Search to a specific pair of IP address and Port to locate one device at a time.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/adding-devices3.png width=400 height=auto /></p>
+<p>The results will appear in your screen.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/adding-devices6.png width=400 height=auto /></p>
+<p>Similarly, as the previous case with the Normal Search, once you select at least one device the <strong>Add Devices</strong> button will enable and let you perform the action.</p>
+<p>After you add at least one device and those added devices are properly configured against the iStar Panel you will be able to add Biometrics to the users from C•CURE 9000 v2.90, v3.0, v3.10.</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p>Please note that your Suprema devices must be properly licensed before adding them to the integration. If they are not licensed, you will not be able to add or to work with them.</p>
+</li>
+<li class="">
+<p>If you have any questions about device licenses, please refer yourself to the QnA section at the end of this document.</p>
+</li>
+</ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=massive-operations-with-the-suprema---ccure-integration>Massive Operations with the Suprema - C•CURE Integration<a href=#massive-operations-with-the-suprema---ccure-integration class=hash-link aria-label="Massive Operations with the Suprema - C•CURE Integration에 대한 직접 링크" title="Massive Operations with the Suprema - C•CURE Integration에 대한 직접 링크" translate=no>​</a></h2>
+<p>These operations are available for your convenience as a way to cold-start with the Integration if you have an system with a number of existing users and credentials under CCURE.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=users-sync>Users Sync<a href=#users-sync class=hash-link aria-label="Users Sync에 대한 직접 링크" title="Users Sync에 대한 직접 링크" translate=no>​</a></h3>
+<p>The Users Menu is available in the Integration Configuration Tool’s Main Menu:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/main-ico-users.png width=140 height=auto /></p>
+<p>You can use this Feature to batch sync All users from CCURE 9000 into Suprema Devices, once you click the menu you will see the following:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/users-sync1.png width=800 height=auto /></p>
+<p>The available options:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/users-sync-select-all.png width=113 height=80 class=none /></p>
+<p>Will allow you to select ALL users or if you click the <strong>All</strong> switch button it will change to:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/users-sync-select-page.png width=129 height=80 class=none /></p>
+<p>That is, to select all users in the <em>current</em> page, that will depend on whether you have set the interface to show 10, 25, 50 or 100 entries at a time as displayed in the following image:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/users-sync2.png width=163 height=128 /></p>
+<p>For either option you select, once you click the <strong>Select</strong> button, you will see the users record to get automatically selected and the <strong>Selected User records</strong> will automatically show how many users have already been selected:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/users-sync3.png width=199 height=32 /></p>
+<p>After you have selected the amount of users you want to sync massively, go ahead and click the <img loading=lazy decoding=async src=/docs/img/menus/ico-sync.png width=79 height=38 class=ico /> button, the following notice will be displayed.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/users-sync4.png width=400 height=auto /></p>
+<p>Once the process finishes you will see a notice like:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/users-sync5.png width=400 height=auto /></p>
+<p>Reporting back to you the results of the operation, showing as well, the amount of successfully processed users, and in case of existing an error with any users the report also will allow you to download a list of the users with error to easy the troubleshooting process.</p>
+<p>The following options:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/users-sync6.png width=475 height=91 class=none /></p>
+<p>The first option as its name states: allows you to make an automatic segmentation of Users depending on the C•CURE Clearances, when you click to activate the option, it will show the following notice:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/users-sync7.png width=400 height=auto /></p>
+<p>There is a guide included in the <span class=cmd>this configuration GUIDE</span> link provided. Therefore, please mind the careful reading of such guide prior applying such change in the users to devices sync process.</p>
+<p>The second option as partially covered in previous section will allow you to Use the C•CURE Personnel Images for Pre-enrollment of Facial Credentials.</p>
+<p>In this menu it will activate the option and will activate the option of carrying out this feature at your demand.</p>
+<p>Then, please follow the same previously explained procedure to select the users you want to include in the process and then click the <img loading=lazy decoding=async src=/docs/img/menus/ico-facial-pre-enrollment.png width=191 height=38 class=ico /> button, please beware that only uses with a profile Image in C•CURE will be processed.</p>
+<p>The following notice will be shown asking you to confirm before continuing:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/users-sync8.png width=400 height=auto /></p>
+<p>As in the previous feature, this process will finish with a report:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/users-sync9.png width=400 height=auto /></p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>Please bear in mind that before starting this option, you need to Sync the users. Unless you are sure that the selected users have already been synced to the Suprema devices.</div></div>
+<p>The GUI will show you how many users have retrieved from CCURE, for example:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/users-sync10.png width=196 height=37 /></p>
+<p>Please bear in mind that the amount shown in here may differ from the number of users shown in C•CURE as the integration will only retrieve user that are:</p>
+<ul>
+<li class="">
+<p>Not disabled.</p>
+</li>
+<li class="">
+<p>Have at least <strong>ONE</strong> active credential, i.e., those credentials that have not set as lost, expired, disabled, revoked, etc.</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=pre-enrollment>Pre-Enrollment<a href=#pre-enrollment class=hash-link aria-label="Pre-Enrollment에 대한 직접 링크" title="Pre-Enrollment에 대한 직접 링크" translate=no>​</a></h3>
+<p>The <em>Pre-Enrollment</em> Menu is available in the Integration Configuration Tool:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/main-ico-pre-enrollment.png width=140 height=auto /></p>
+<p>The Data shown in this dialog will allow you to select individually or massively send an E-mail to users to enable Facial Biometrics Pre-Enrollment from their mobile devices.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/user-available-pre-enrollment1.png width=800 height=auto /></p>
+<p>Please be aware that although you select a user if the selected user(s) doesn’t have an email address already set in their profiles, they will not be included in the process.</p>
+<p>This feature also validates that all needed pre-requisite settings have been already configured, if not it will show you a feedback window for you to know what you still need to configure prior sending the Pre-enrollment links, for example:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/user-available-pre-enrollment2.png width=400 height=auto /></p>
+<p>With this feedback you can direct yourself to the specific setting and revise your configuration, after you do that, you can select the <img loading=lazy decoding=async src=/docs/img/menus/ico-send-pre-enrollment-link.png width=188 height=31 class=ico /> button once again and the process will flow correctly.</p>
+<p>After the process have finished you will be able to receive an email as the one show below:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/user-available-pre-enrollment3.png width=560 height=522 /></p>
+<p>You should follow the instructions given in the URL shown in the email message, and once it is done your pre-enrollment facial credential will be ready the first time you step in front of any supported Suprema device.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=further-available-settings-for-configuration>Further available settings for configuration<a href=#further-available-settings-for-configuration class=hash-link aria-label="Further available settings for configuration에 대한 직접 링크" title="Further available settings for configuration에 대한 직접 링크" translate=no>​</a></h2>
+<p>After you click on the Configuration Menu:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/main-ico-configuration.png width=140 height=auto /></p>
+<p>The following settings will be shown:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/configuration-main.png width=600 height=auto /></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=card-formats>Card Formats<a href=#card-formats class=hash-link aria-label="Card Formats에 대한 직접 링크" title="Card Formats에 대한 직접 링크" translate=no>​</a></h3>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/card-format.png width=500 height=auto /></p>
+<ul>
+<li class="">
+<p>Allows you to configure a Global Facility Code.</p>
+</li>
+<li class="">
+<p>Select and set Wiegand formats to configure the interface between the iStar panel and the Suprema Devices.</p>
+</li>
+<li class="">
+<p>Be advised that if your site has more than one Facility Code, each and every one of the cards under the Credentials tab in the Personnel View MUST have their own Facility Code. Otherwise the synchronization may behave unexpectedly.</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=cloud>Cloud<a href=#cloud class=hash-link aria-label="Cloud에 대한 직접 링크" title="Cloud에 대한 직접 링크" translate=no>​</a></h3>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/cloud1.png width=600 height=auto /></p>
+<p>Allows you to validate a Suprema AC license so that you can made use of the Suprema Cloud functionality.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/cloud2.png width=600 height=auto /></p>
+<p>Once the license is validated you will be able to configure a subdomain name for your server.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=smtp>SMTP<a href=#smtp class=hash-link aria-label="SMTP에 대한 직접 링크" title="SMTP에 대한 직접 링크" translate=no>​</a></h3>
+<p>Will enable you to set-up the SMTP access for your server so that you can make use of the pre-enrollment feature (both individual and massive).</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/smtp1.png width=600 height=auto /></p>
+<p>It also gives you the ability to customize the mail that is going to be sent to your customers or users.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/smtp2.png width=600 height=auto /></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=enrollment-and-privileges>Enrollment and Privileges<a href=#enrollment-and-privileges class=hash-link aria-label="Enrollment and Privileges에 대한 직접 링크" title="Enrollment and Privileges에 대한 직접 링크" translate=no>​</a></h3>
+<p>This menu will enable you to create filters for the enrolling devices available for specific operators according to their respective assigned privileges.</p>
+<p>Therefore, if the operator logged into C•CURE does not have any required privilege for enrolling biometrics, no device will appear available to enroll biometrics for users.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/enrollment-privileges.png width=800 height=auto /></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=visitor-qr>Visitor QR<a href=#visitor-qr class=hash-link aria-label="Visitor QR에 대한 직접 링크" title="Visitor QR에 대한 직접 링크" translate=no>​</a></h3>
+<p>This menu enables you to use the C•CURE Visitor QR as a Access Control credential, that is, when you create a visitor user from C•CURE Portal and send the visitor QR to each visit you are planning to host in your facility this Integration will take care of generating the proper credentials with the exact validity as you selected in the visit period.</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>Suprema Devices require a License validation to enable this feature.</div></div>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/visitor-qr.png width=800 height=auto /></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=system-settings>System Settings<a href=#system-settings class=hash-link aria-label="System Settings에 대한 직접 링크" title="System Settings에 대한 직접 링크" translate=no>​</a></h3>
+<p>You have two options for finding the System Settings. The first one and more direct one is going to the upper navigation bar menu <img loading=lazy decoding=async src=/docs/img/integration/software-house/ico-system-settings.png width=auto height=auto class=ico />. The second one is going first to Configuration from the main Menu:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/system-settings1.png width=500 height=auto /></p>
+<p>Once you are in the System Settings you may configure the following:</p>
+<ul>
+<li class="">
+<p>A valid license</p>
+</li>
+<li class="">
+<p>Suprema’s Credentials (user and password)</p>
+</li>
+<li class="">
+<p>C•CURE 9000 Connection Credentials</p>
+</li>
+<li class="">
+<p>Other settings</p>
+</li>
+</ul>
+<p>Before applying the license, all settings will be disabled until you validate the license.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/system-settings2.png width=800 height=auto /></p>
+<p>With the <em>Advanced</em> license you will have the option to activate your license offline, if you have a basic license the activation will be performed online only.</p>
+<p>As you can see in the previous image with an Advanced license you will also have the feature available of validating Devices licenses offline.</p>
+<p>In this menu you will also see:</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/system-settings3.png width=600 height=auto /></p>
+<p>This menu will allow you to validate or to activate other types of Server licenses as in the case of the <strong>Autoenrollment Kiosk</strong>, for example.</p>
+<p>If you are performing a Server offline license validation:</p>
+<ul>
+<li class="">
+<p>You must enter first your license key and name and then click the <strong>Activate Offline</strong> button.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/system-settings4.png width=400 height=auto /></p>
+</li>
+<li class="">
+<p>Follow the first step in getting the *.req file and send it to your sales representative.</p>
+</li>
+<li class="">
+<p>Once you get the license file you may go to step number 2.</p>
+</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=after-applying-the-license>After applying the license<a href=#after-applying-the-license class=hash-link aria-label="After applying the license에 대한 직접 링크" title="After applying the license에 대한 직접 링크" translate=no>​</a></h4>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/applying-license.png width=400 height=auto /></p>
+<p>After applying the license, the other settings will be enabled.</p>
+<ul>
+<li class="">
+<p>BioStar 2 settings</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/applying-license-biostar2-settings.png width=400 height=auto /></p>
+<ul>
+<li class="">
+<p>You shall use an administrator type account for the integration to work properly.</p>
+</li>
+<li class="">
+<p>After you type the admin account and its password, click <strong>Test Connection</strong>.</p>
+</li>
+<li class="">
+<p>If the connection is successful, the <strong>Save Credentials</strong> button will unblock.</p>
+</li>
+<li class="">
+<p>The <strong>Edit</strong> button will allow you to modify the credentials in case you need.</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>C•CURE 9000 settings</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/applying-license-ccure9000-settings.png width=400 height=auto /></p>
+<ul>
+<li class="">
+<p>In the host field you should enter the IP address or Domain name where the database is installed, example: LOCALHOST\SQLSERVER.</p>
+</li>
+<li class="">
+<p>SQL Server port.</p>
+</li>
+<li class="">
+<p>SQL Authentication or Windows Authentication.</p>
+</li>
+<li class="">
+<p>SQL User and password for the SQL Auth used.</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>GUI</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/applying-license-gui.png width=400 height=auto /></p>
+<ul>
+<li class="">
+<p>The Integration Configuration Tool is offered in English and Spanish.</p>
+</li>
+<li class="">
+<p>Session Timeout is the time for the GUI auto logout (to avoid any unauthorized access).</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=autoenrollment-kiosk>Autoenrollment Kiosk<a href=#autoenrollment-kiosk class=hash-link aria-label="Autoenrollment Kiosk에 대한 직접 링크" title="Autoenrollment Kiosk에 대한 직접 링크" translate=no>​</a></h3>
+<p>Once you activate a server license for this feature, the following menu will appear in the integration’s main menu.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/autoenrollment-kiosk-main.png width=600 height=auto /></p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/ccure/autoenrollment-kiosk.png width=787 height=254 /></p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>The previous information is only valid for an Advanced version of this integration.</div></div>
+<p>For more information on how to use the <strong>Autoenrollment Kiosk</strong>, please refer to the specific user guide and installation manual related to it.</div><footer class="theme-doc-footer docusaurus-mt-lg"><div class=feedbackWidget_j3Il><div class=feedbackTitle_R9ld>이 페이지가 도움이 되었나요?</div><div class=selectFeedback_eOBc><button class="feedbackButton_EJI6  " aria-label="Positive feedback: Good"><span class=icon_kAAf>😊</span><span>도움이 되었습니다.</span></button><button class="feedbackButton_EJI6  " aria-label="Negative feedback: Bad"><span class=icon_kAAf>😫</span><span>개선이 필요합니다.</span></button></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="문서 페이지"><a class="pagination-nav__link pagination-nav__link--prev" href=/docs/integration/ccure/getting-started><div class=pagination-nav__sublabel>이전</div><div class=pagination-nav__label>Getting Started</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/docs/integration/ccure/enrolling-biometrics><div class=pagination-nav__sublabel>다음</div><div class=pagination-nav__label>Enrolling Biometrics from C•CURE 9000</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_pzBX thin-scrollbar"></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer"><div class="container container-fluid"><div class="footer__bottom text--left"><div class=margin-bottom--sm><img src=/docs/img/suprema-logo-bottom.svg alt="Suprema Security & biometrics" class="footer__logo themedComponent_mlkZ themedComponent--light_NVdE" width=173px /><img src=/docs/img/suprema-logo-bottom.svg alt="Suprema Security & biometrics" class="footer__logo themedComponent_mlkZ themedComponent--dark_xIcU" width=173px /></div></div><div class="footer__bottom sns--right"><ul class=sns__list><div class="footer__bottom sns--right"><ul class=sns__list><li><a href=http://pf.kakao.com/_xnkPxes target=_blank rel="noopener noreferrer"><img src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMS1jMDAwIDc5LmRhYmFjYmIsIDIwMjEvMDQvMTQtMDA6Mzk6NDQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkI2RkJBQjg2MUMwRjExRUM5RDMwRjM4MTY2MzYyQjFGIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkI2RkJBQjg1MUMwRjExRUM5RDMwRjM4MTY2MzYyQjFGIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyQzBFRTY4NUMyMjQxMUU4QTQyRkRDRTk1NDQ4RjFGOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyQzBFRTY4NkMyMjQxMUU4QTQyRkRDRTk1NDQ4RjFGOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmegBfoAAAJiSURBVHja7JfPSxZBGMffDTXzBc1fQXjwJhgiJHmR0KMFglEqeQqVwIt4khe6BfXii14kRAQ1CzwpUf9BB+kiePAgKqRgiERK+Yo/0PLt88AsDMvu687uHhTeBz7MvLM7z3znmZln9rUymUzsqtiN2BWynJhrISYmG9iJiaVSKSvseDaW2+CWZXkNXE7xAp5AIxRqj09hCT7Dh0Qise8lxst8iUFEPsUrGIK4jwAcwQgkEXUemRiE3KX4oiJhahKpdgTthhajluUb1ITYlhvQZC9bNjGXnaa5kEJiqv9cqKNNVLooWl0eyR4wvUNalb/AeSbh+P0J7hPuAsoieAY/tOelMGbgz58YZnGLokFreo8IGbyCZ+/UqVqEZkj7jE6D8utpeR7txVr9TAbHUQflvNbeDXUwqcSJbUInHMIgPHbxe2K6TAVafUWdhF7HO7Ww7WifhWr4A0/hdxa/vsXoWe/Cpc22KijXfg/AKMwwAcnIq1n8+hbzV6vXs0QS3mmX/CGZOam1Vaoy7uLHXnJjMUdaXe6fN8x0gfIRTMkehxY1eL/BEU8HEZN2rPcA0ZHIrCHqpbqn7sFXKFPvlMBN2y/v33YckFX6HmcT43kd4GzYIzf8Unkmbpj4ehAzG/Q6eAtbLu2VAYRITvoYOAMzC8kVbbAX8m7agef4uwj12YkDOZoPYT2gEOnXgp+dSL6BcSQOhw1F/INxeED/73475UX8Sb2mPsQmEbFl2jmomAl4DXfUkT6QqwEBB2FmYipG8k+fSoBiP6MMq18xkhyWoctkD5ialfvjnxOTExOR/RdgAL5E3zCETnHQAAAAAElFTkSuQmCC /></a><li><a href=https://blog.naver.com/supremakr target=_blank rel="noopener noreferrer"><img src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDA2IDc5LjE2NDY0OCwgMjAyMS8wMS8xMi0xNTo1MjoyOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6N0RGNEE2MDk3NUEwMTFFQjkzMUFBQkFCMEFFNTg0MzgiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6N0RGNEE2MDg3NUEwMTFFQjkzMUFBQkFCMEFFNTg0MzgiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjFDQjBCRkQwQzIyNDExRTg5Qzg3OTVFRUUwODI2NkJBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjFDQjBCRkQxQzIyNDExRTg5Qzg3OTVFRUUwODI2NkJBIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+GLY+KgAAAe5JREFUeNrs1k1IVFEYxvExJMFFVmgLxYSwFqGi5MYQXISVhEZlrVxogkGgbQRx48KVs4ukCNE+VCpUqF0R1iqEyg+EcRMiEQZuTCeiSPz6H3guHC5zxtnoDMw98GPOvfe9+px3zr2aEQ6HQ6kyDoVSaARhgjBBmCBMWocZk2pH/VNM4/pBhLkpJx31h3EOE7iQ7K/pDf4gA20HFeYMRjGLARTq/DieaJ7vu+cGXuAt+mJ019Q/xLwWdVdb4plXkOkI06PVm1GByyhFFH9j1JuALdaxqb+DS/iCY5hCka6X4arm0b06s4VhfNax6cwtR+0VK8hrdGEFRzGk861WkPfoxar/B7k68wj3kIVl5KLcUVurz5/a/FsK8xwlKFAnzFhDPTbwA4OJ7Jkj+szWE2TGjqP2v1WbrXmedc8/616zuBzNTyTamWZt4kIr2FdH7St0al/MIKLVmzGJX1iwAns1FxN9mkw7z/ueolFH7RzasYnTuKZFml94WzWPFcLbf3XqWNzOeN//N9TgFD7ho9Vqsyk/YN23x96hQR2KaDNv6vpvLa4RZ3W9Ch3xwkxa8xFHJxbFP5ZwP847bUPvoWJUoknnvyfzD6V5zF/iuI7799rA+z221ZEH1rsoKWG6JfjnKggThAnCpHeYXQEGACmhYUqpLPafAAAAAElFTkSuQmCC /></a><li><a href=https://www.facebook.com/supremaglobal target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyMThGRUI1Q0MyMjQxMUU4OEQ1OUEwMUIyN0JGM0Q1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyMThGRUI1REMyMjQxMUU4OEQ1OUEwMUIyN0JGM0Q1NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjIxOEZFQjVBQzIyNDExRTg4RDU5QTAxQjI3QkYzRDU3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjIxOEZFQjVCQzIyNDExRTg4RDU5QTAxQjI3QkYzRDU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+x8dqJAAAAKZJREFUeNpi/P//P8NgAUwMgwiMOmbUMaOOoRZgIVVDV1cXupAqENcBsSMQSwHxbyD+WlZWJkRzx6ABDSA+AcT8SGJsUEz3aGpGc8iAphl7NH40ELMDMSNd0gwaEEVifwHiZYMlN/0d2VkbCHC1OfjR5BiHdMgM+Wh6j8QWRIu+D/R2jBCO9PMJTW601h51zKhjRh0Drj9Gu7ejjhl1zKhjaAwAAgwAHVwYSDKP6cIAAAAASUVORK5CYII="/></a><li><a href=https://www.youtube.com/user/supremainc target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyQzBFRTY4NUMyMjQxMUU4QTQyRkRDRTk1NDQ4RjFGOCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyQzBFRTY4NkMyMjQxMUU4QTQyRkRDRTk1NDQ4RjFGOCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjJDMEVFNjgzQzIyNDExRThBNDJGRENFOTU0NDhGMUY4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjJDMEVFNjg0QzIyNDExRThBNDJGRENFOTU0NDhGMUY4Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+pP+52gAAASRJREFUeNpi/P//P8NgAUwMgwiMOmbUMaOOGXUMrQELIQVdXV2MQKoYiIOBWAyIOYCYE4j5sXjmHxB/BOLvQPwDiF8C8Tog7i0rK/tPsWOAIAWIu0kIaUEoBgElILaEOnA2NaIpnAoxEEatNKOEQ/weED8n0jHK1HKMEA7x60CsBQ3+/2SaQbJjuPDIfQDiNCC2B+KbeNRxU8sxrESoOQzE+qDMR0FGIU4REQCU3VOBOJqm5QwQ/MYTOqDyJh2IS4FYioAZVHHMN2gBhw70gPg+EIsTaQZVHPMOh2NkSYiBt9RKwLepkKbuUMsxq6ngmNXUiqa50AQMqigl0CpJ9MoSlDZ+QivJT9CKcg3UDIKAcbTfNOqYUceMOmbUMaOOYWAACDAAe9Ew/dLdOIYAAAAASUVORK5CYII="/></a><li><a href=https://www.instagram.com/official.suprema/ target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKOSURBVHgB7VbLceJAEB0+BQUXE4I2A28EKyKAjQCIYM2FghPSid8BNgIgAxzBighMBqsQ5BMU333PO+MaU+hr++LSqxr1aKbV86anuzVCpEiR4gsiE0d5MBgYEGY2m62cz+eKnx7mvdPp5GYymU2v13PFR5IhCRieo5kiJi6Xi4PWikIqlAyJ5HK5JxikJ9ZoK3jF4xw9oPry/dVj7EPU0X6gUe97GKG8CAGIzEkExmwYs0Q8zEajkQXZp2chq0HKgZ6hV7DDvyCyBhFTRITyJr7bdLvd6ng8/oMNmXj/FuSdQM+AyD0lDK18FjUh6tj1HXSe0V9hMQfSoDcxbsjvHyFM2RYiCRka5QNGPX3QsqxKuVyeYpGmGoMOxS8cy2y73dqlUuknxlwOMq6wMSHjTiQiw2CkEQaqPl4sFmcw3EB3g2ZzUaTyPfT6eH8A0Uqn02ld24NecjIaqVcyPBosSiIuPFCFl9TcZjqdrg6HA+OjCb2lPDLCjbJOVsQEdleXBG2NyAva7bYHIrauFwexyahzZ6bcmj8ej67s3onPJqOCOZ/PGzcNygwEnkVMJPGMSvM+s0qf47sMYt9yEIRIASxkihMMSqTvEt0G0vcJgWrzyFhTUOhIhDXmtxa86tfwPjLXKa1QKBQe9vs9uw3ozJn+Gpa73c7SB1SJAElPJCXjV6yYNRBM3wWzRlZbZtJK94i2qZfv4TlXJCUDONJYDWJ2PSkXdkJsMOhrIOqbgQqBAcyfGgw5vMcgTvoiASaTSV/+JNfvvkKgzLfkfcYaDocmiD3qFVm8ra6G6vBo8E0NuqYsB00Rgsg3PRhfiP8XpbhYg1DzQ256N0ixqBlhd2DpPSfOHThFihRfEv8AgtdZ9bpVTAkAAAAASUVORK5CYII=" width=35px /></a></ul></div></ul><div class=dropdown><div><button class=dropdown-button>FAMILY SITE <!-- -->+</button></div></div></div></div><div class="container text--left"><div class=footer__copyright>Copyright © Suprema Inc. All rights reserved. | 주식회사 슈프리마 사업자 등록번호 431-87-00369</div></div></footer></div>
+<script>!function(){function e(){let e=navigator?.userAgent||"";return/Algolias+Crawler|AlgoliaWebCrawler|algoliasearch|jsdom/i.test(e)}if(console.log("=== Early Crawler Detection ==="),console.log("User Agent:",navigator?.userAgent||"unknown"),console.log("Is Crawler:",e()),e()){console.log("✓ Algolia Crawler detected - Skipping MSAL authentication"),console.log("Crawler can now access and index the content");return}function o(){if(void 0===window.msal){console.log("Waiting for MSAL library to load..."),setTimeout(o,100);return}console.log("MSAL library loaded successfully"),function(){console.log("MSAL Auth Plugin - Environment info:",{hostname:window.location.hostname,pathname:window.location.pathname,port:window.location.port,protocol:window.location.protocol,userAgent:navigator.userAgent});let e={auth:{clientId:"b6f96dc8-bf6f-40b7-9b85-fc996090bc67",authority:"https://login.microsoftonline.com/5303b6fd-d5c2-4a9e-b1cf-b03b0162bd4d",redirectUri:"https://supremainc.github.io/docs",postLogoutRedirectUri:"https://supremainc.github.io/docs",navigateToLoginRequestUrl:!0},cache:{cacheLocation:"sessionStorage",storeAuthStateInCookie:!1},system:{loggerOptions:{loggerCallback:(e,o,n)=>{if(!n)switch(e){case window.msal.LogLevel.Error:console.error(o);return;case window.msal.LogLevel.Info:console.info(o);return;case window.msal.LogLevel.Verbose:console.debug(o);return;case window.msal.LogLevel.Warning:console.warn(o);return}}}}},o={scopes:["User.Read"]};function n(){let n,t,r,i;if(n=navigator?.userAgent||"",/AlgoliaWebCrawler|Algolia Crawler|algoliasearch|jsdom|bot|crawler/i.test(n)&&(console.log("⚠️ Secondary crawler detection triggered"),1)||(console.log("Authentication enabled for regular users"),0))return;let l=(r=(t=window.navigator.userAgent).indexOf("MSIE "),i=t.indexOf("Trident/"),r>0||i>0?{isSupported:!1,reason:"Internet Explorer is not fully supported. Please use a modern browser."}:{isSupported:!0});if(!l.isSupported){document.body.innerHTML=`
+                                                <div style="
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    height: 100vh;
+                                                    background-color: #333;
+                                                    color: #fff;
+                                                    font-family: Arial, sans-serif;
+                                                    text-align: center;
+                                                    padding: 20px;
+                                                ">
+                                                    <h2>브라우저 호환성 알림</h2>
+                                                    <p>${l.reason}</p>
+                                                    <p>Chrome, Firefox, Safari, 또는 Edge 브라우저를 사용해주세요.</p>
+                                                </div>
+                                            `;return}let c=new window.msal.PublicClientApplication(e);function a(){let e,o=c.getAllAccounts();o&&0!==o.length?1===o.length?(c.setActiveAccount(o[0]),console.log("User authenticated:",o[0].username)):(console.warn("Multiple accounts detected. Using first account."),c.setActiveAccount(o[0])):(e=`
+                                                <div style="
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    height: 100vh;
+                                                    background-color: #333;
+                                                    color: #fff;
+                                                    font-family: Arial, sans-serif;
+                                                ">
+                                                    <div style="
+                                                        background-color: #A32343;
+                                                        color: #fff;
+                                                        padding: 15px 30px;
+                                                        border-radius: 5px;
+                                                        cursor: pointer;
+                                                        font-weight: bold;
+                                                        border: none;
+                                                        font-size: 16px;
+                                                    " onclick="signIn()">
+                                                        Sign in with your Microsoft account
+                                                    </div>
+                                                </div>
+                                            `,document.body.innerHTML=e)}function s(e){null!==e?(c.setActiveAccount(e.account),console.log("Authentication successful:",e.account.username),window.location.reload()):a()}c.initialize().then(()=>{c.handleRedirectPromise().then(s).catch(e=>{console.error("Redirect handling error:",e)}),a()}).catch(e=>{console.error("MSAL initialization error:",e)}),window.signIn=function(){c.loginPopup(o).then(s).catch(function(e){console.error("Login error:",e),("popup_window_error"===e.errorCode||"empty_window_error"===e.errorCode)&&c.loginRedirect(o)})}}"loading"===document.readyState?document.addEventListener("DOMContentLoaded",n):n()}()}console.log("✓ Regular user detected - Proceed with MSAL authentication"),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",o):o()}()</script></body>

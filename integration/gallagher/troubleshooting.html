@@ -1,0 +1,629 @@
+<!doctype html><html lang=ko-KR dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-integration/gallagher/troubleshooting" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.2"><title data-rh=true>Troubleshooting and FAQ | Suprema Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=robots content="noindex, nofollow"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:image content=https://supremainc.github.io/docs/img/sns_img02.jpg /><meta data-rh=true name=twitter:image content=https://supremainc.github.io/docs/img/sns_img02.jpg /><meta data-rh=true property=og:url content=https://supremainc.github.io/docs/integration/gallagher/troubleshooting /><meta data-rh=true property=og:locale content=ko_KR /><meta data-rh=true property=og:locale:alternate content=en_US /><meta data-rh=true property=og:locale:alternate content=es_419 /><meta data-rh=true property=og:locale:alternate content=ja_JP /><meta data-rh=true name=docusaurus_locale content=ko /><meta data-rh=true name=docsearch:language content=ko /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="Troubleshooting and FAQ | Suprema Docs"/><meta data-rh=true name=description content="Troubleshooting guide and FAQ for Suprema Integration with Gallagher, covering middleware upgrades, network errors, SSL certificates, and PostgreSQL database management."/><meta data-rh=true property=og:description content="Troubleshooting guide and FAQ for Suprema Integration with Gallagher, covering middleware upgrades, network errors, SSL certificates, and PostgreSQL database management."/><meta data-rh=true name=keywords content="Troubleshooting,SSL Certificate,PostgreSQL"/><link data-rh=true rel=icon href=https://supremainc.com/ko/asset/images/common/Website_favicon.png /><link data-rh=true rel=canonical href=https://supremainc.github.io/docs/integration/gallagher/troubleshooting /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/integration/gallagher/troubleshooting hreflang=ko-KR /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/en/integration/gallagher/troubleshooting hreflang=en-US /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/es/integration/gallagher/troubleshooting hreflang=es-419 /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/ja/integration/gallagher/troubleshooting hreflang=ja-JP /><link data-rh=true rel=alternate href=https://supremainc.github.io/docs/integration/gallagher/troubleshooting hreflang=x-default /><link data-rh=true rel=preconnect href=https://11LXF9EJH7-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://supremainc.github.io/docs/integration/gallagher/","name":"Gallagher","position":1},{"@type":"ListItem","item":"https://supremainc.github.io/docs/integration/gallagher/troubleshooting","name":"Troubleshooting and FAQ","position":2}]}</script><link rel=alternate type=application/rss+xml href=/docs/changelog/rss.xml title="Suprema Docs RSS Feed"><link rel=alternate type=application/atom+xml href=/docs/changelog/atom.xml title="Suprema Docs Atom Feed"><link rel=search type=application/opensearchdescription+xml title="Suprema Docs" href=/docs/opensearch.xml><script>!function(e,t,o,a,s,r){e=e[s]=e[s]||{config:{projectAccessKey:"x60611885oe0j-z1b3umd5ov7i42-x7e2msjl83m655",pcode:49418,sampleRate:100,sessionReplaySampleRate:100,ignorePageUrls:[/^.*localhost.*$/i],collectUserClick:!0}},(s=t.createElement(o)).async=1,s.src=a,(a=t.getElementsByTagName(o)[0]).parentNode.insertBefore(s,a)}(window,document,"script","https://repo.whatap-browser-agent.io/rum/prod/v1/whatap-browser-agent.js","WhatapBrowserAgent",0)</script><script src=https://cdn.jsdelivr.net/npm/@azure/msal-browser@4.21.0/lib/msal-browser.min.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/assets/css/styles.591c5eeb.css /><script src=/docs/assets/js/runtime~main.58889354.js defer></script><script src=/docs/assets/js/main.bf93b5ab.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id=__docusaurus><link rel=preload as=image href=/docs/img/suprema-logo.svg /><link rel=preload as=image href=/docs/img/suprema-logo-white.svg /><link rel=preload as=image href=/docs/img/suprema-logo-bottom.svg /><div role=region aria-label="본문으로 건너뛰기"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>본문으로 건너뛰기</a></div><div class="theme-announcement-bar announcementBar_mb4j" style=background-color:#FFB27D;color:#091E42 role=banner><div class="content_zf74 announcementBarContent_xLdY"><b>이 문서에는 아직 서비스 버전으로 출시되지 않은 콘텐츠가 포함되어 있습니다. 공식적으로 출시된 기능에 대한 설명서는 <a href=https://docs.supremainc.com/integration/gallagher/troubleshooting/ target=_blank>다음 링크</a>에서 확인하세요.</b></div></div><nav aria-label=메인 class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="사이드바 펼치거나 접기" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/><div class=navbar__logo><img src=/docs/img/suprema-logo.svg alt="Suprema Docs" class="themedComponent_mlkZ themedComponent--light_NVdE" width=120px /><img src=/docs/img/suprema-logo-white.svg alt="Suprema Docs" class="themedComponent_mlkZ themedComponent--dark_xIcU" width=120px /></div><b class="navbar__title text--truncate">Docs</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>플랫폼</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/platform/biostar_x>BioStar X</a><li><a class=dropdown__link href=/docs/platform/biostar_air>BioStar Air</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>AI 카메라</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/device/vionyx>ViOnyx</a><li><a class=dropdown__link href=/docs/device/vionyx_webserver>ViOnyx Web Server</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>장치</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/device/biostation_3_max>BioStation 3 Max</a><li><a class=dropdown__link href=/docs/device/bioentry_w3>BioEntry W3</a><li><a class=dropdown__link href=/docs/device/biostation_2a>BioStation 2a</a><li><a class=dropdown__link href=/docs/device/biostation_3>BioStation 3</a><li><a class=dropdown__link href=/docs/device/facestation_f2>FaceStation F2</a><li><a class=dropdown__link href=/docs/device/facestation_2>FaceStation 2</a><li><a class=dropdown__link href=/docs/device/biolite_n2>BioLite N2</a><li><a class=dropdown__link href=/docs/device/bioentry_w2>BioEntry W2</a><li><a class=dropdown__link href=/docs/device/bioentry_p2>BioEntry P2</a><li><a class=dropdown__link href=/docs/device/bioentry_r2>BioEntry R2</a><li><a class=dropdown__link href=/docs/device/xstation_2>X-Station 2</a><li><a class=dropdown__link href=/docs/device/xpass_q2>XPass Q2</a><li><a class=dropdown__link href=/docs/device/xpass_2>XPass 2</a><li><a class=dropdown__link href=/docs/device/xpass_d2>XPass D2</a><li><a class=dropdown__link href=/docs/device/xpass_s2>XPass S2</a><li><a class=dropdown__link href=/docs/device/corestation_20>CoreStation 20</a><li><a class=dropdown__link href=/docs/device/corestation_40>CoreStation</a><li><a class=dropdown__link href=/docs/device/enclosure>Enclosure</a><li><a class=dropdown__link href=/docs/device/doorinterface>Door Interface</a><li><a class=dropdown__link href=/docs/device/inputmodule>Input Module</a><li><a class=dropdown__link href=/docs/device/outputmodule>Output Module</a><li><a class=dropdown__link href=/docs/device/doormodule>Door Module</a><li><a class=dropdown__link href=/docs/device/securemodule>Secure Module</a><li><a class=dropdown__link href=/docs/device/extendedmodule>Extended Module</a><li><a class=dropdown__link href=/docs/device/extendedmodule_sc>Extended Module-SC</a><li><a class=dropdown__link href=/docs/device/device_manager>Device Manager</a><li><a class=dropdown__link href=/docs/device/corestation_setup_manager>CoreStation Setup Manager</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>인테그레이션</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/integration/genetec>Genetec</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/integration/gallagher>Gallagher</a><li><a class=dropdown__link href=/docs/integration/ccure>C•CURE</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link>개발자 센터</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/api/bsxapi>BioStar X API</a><li><a href=https://developers.biostarair.com target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar Air Developer</a><li><a href=https://kb.supremainc.com/bs2sdk/doku.php target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar Device SDK</a><li><a href=https://bs2api.biostar2.com target=_blank rel="noopener noreferrer" class=dropdown__link>BioStar 2 API</a><li><a href=https://supremainc.github.io/g-sdk target=_blank rel="noopener noreferrer" class=dropdown__link>Suprema G-SDK</a><li><a href=https://kb.supremainc.com/svpsdk/doku.php target=_blank rel="noopener noreferrer" class=dropdown__link>SVP Android SDK</a></ul></div><a class="navbar__item navbar__link" href=/docs/reference>참고 문서</a><a class="navbar__item navbar__link" href=/docs/changelog>업데이트 내역</a><a class="navbar__item navbar__link" href=/docs/legal/disclaimers>법적 고지</a><div class=navbarSearchContainer_Bca1><button class=search-pop-trigger aria-label=검색><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 24 24" aria-hidden=true><circle cx=11 cy=11 r=8 stroke=currentColor fill=none stroke-width=1.4 /><path d="m21 21-4.3-4.3" stroke=currentColor fill=none stroke-linecap=round stroke-linejoin=round /></svg><span class=shortCut>Ctrl+K</span></button></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link><svg viewBox="0 0 24 24" width=20 height=20 aria-hidden=true class=iconLanguage_DSK9><path fill=currentColor d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>한국어</a><ul class=dropdown__menu><li><a href=/docs/integration/gallagher/troubleshooting target=_self rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang=ko-KR>한국어</a><li><a href=/docs/en/integration/gallagher/troubleshooting target=_self rel="noopener noreferrer" class=dropdown__link lang=en-US>English</a><li><a href=/docs/es/integration/gallagher/troubleshooting target=_self rel="noopener noreferrer" class=dropdown__link lang=es-419>Español</a><li><a href=/docs/ja/integration/gallagher/troubleshooting target=_self rel="noopener noreferrer" class=dropdown__link lang=ja-JP>日本語</a></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="시스템 모드" aria-label="어두운 모드와 밝은 모드 전환하기 (현재 시스템 모드)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="맨 위로 스크롤하기" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class=sidebar_njMd><nav aria-label="문서 사이드바" class="menu thin-scrollbar menu_SIkG menuWithAnnouncementBar_GW3s"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item p-title"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--active" href=/docs/integration/gallagher><span title=Gallagher class=categoryLinkLabel_W154>Gallagher</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/integration/gallagher/purpose><span title=Purpose class=linkLabel_WmDU>Purpose</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/integration/gallagher/introduction><span title=Introduction class=linkLabel_WmDU>Introduction</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/integration/gallagher/installation><span title=Installation class=linkLabel_WmDU>Installation</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/integration/gallagher/configuration><span title=Configuration class=linkLabel_WmDU>Configuration</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/integration/gallagher/integration-gallagher><span title="Suprema Integration with Gallagher" class=linkLabel_WmDU>Suprema Integration with Gallagher</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/docs/integration/gallagher/troubleshooting><span title="Troubleshooting and FAQ" class=linkLabel_WmDU>Troubleshooting and FAQ</span></a></ul></ul></nav><button type=button title="사이드바 숨기기" aria-label="사이드바 숨기기" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_z5aJ"><div class=docItemContainer_c0TR><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Alpn" aria-label="탐색 경로"><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label=홈 class=breadcrumbs__link href=/docs/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_xK9p><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class="breadcrumbs__item item-1"><a class=breadcrumbs__link href=/docs/integration/gallagher><span>Gallagher</span></a><li class="breadcrumbs__item breadcrumbs__item--active item-2"><span class=breadcrumbs__link>Troubleshooting and FAQ</span></ul><div class=btnprint_MOIq><button disabled class=printbtn_FzsH>PDF</button><button class=feedbackTrigger_JVwE aria-label="피드백 보내기">Feedback</button></div></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_XdKt"><button type=button class="clean-btn tocCollapsibleButton_TO0P">목차 보기</button></div><div class="theme-doc-markdown markdown"><header><h1>Troubleshooting and FAQ</h1></header><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=setup>Setup<a href=#setup class=hash-link aria-label="Setup에 대한 직접 링크" title="Setup에 대한 직접 링크" translate=no>​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>Upgrade only middleware to the new version (Manual process).</strong></summary><div><div class=collapsibleContent_i85q><p>If you want to upgrade only middleware you just need to follow the steps shown below.<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>If you are upgrading middleware to V1.8.3, Please refer - <a href=#create-migration-manually class="">Create Migration Manually</a>.</div></div><p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup1-1.png width=399 height=206 /><p><strong>Delete the previous version setup.vbs - shortcut</strong><p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup1-2.png width=540 height=122 /><p>Cut cert and key files from the version you are currently using as shown in the below image.<p>The default path would be: <code>C:\Program Files\Suprema Integration with Gallagher\Suprema Integration with Gallagher v(Current working version)\files</code><p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup1-3.png width=540 height=216 /><div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><ul>
+<li class="">
+<p>If you are upgrading from the 1.8.0 or above version you will need to cut a total of four files, Which are <code>key.pem</code>, <code>cert.pem</code>, <code>cronjob_status.txt</code> and <code>number_range.txt.</code></p>
+</li>
+<li class="">
+<p>In the 1.7.0 version only number_range is not available so cut the other three files.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup1-4.png width=540 height=274 /></p>
+</li>
+</ul></div></div><p>Now <strong>paste</strong> the files into the new version of suprema integration with <code>Gallagher V(new version)\files</code>, as mentioned above if you are upgrading from 1.8.0 or more you will need to cut 4 file and below image show the image that are pasted to new version with 4 files,so in case if you dont have 4 files just paste 2 files from old version to new version.<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup1-5.png width=540 height=253 /><p>Create short cut of setup.vbs of the latest version of suprema integration with Gallagher and cut the shortcut file.<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup1-6.png width=540 height=472 /><p>Go Run <kbd class=kbd_QsL_>Win + R</kbd> and paste it on shell<!-- -->:startup<!-- --> and after that restart your desktop.</div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>If the middleware is not getting started automatically.</strong></summary><div><div class=collapsibleContent_i85q><p>First, make sure that the shortcut of the setup.vbs file is present on the shell<!-- -->:startup<!-- -->. If setup.vbs is not present please paste it to shell<!-- -->:startup<!-- --> and restart your system.<p>Still, the middleware is not getting started automatically then check for the environment variable, you can access it by pressing <span class=bold>시작</span> <svg xmlns=http://www.w3.org/2000/svg xml:space=preserve width=1rem height=1rem viewBox="0 0 452.986 452.986"><path d="M165.265 53.107 21.689 81.753v132.531l143.575-2.416V53.107m266.033 192.476-233.18-3.991v164.822l233.18 46.571zm-266.032-4.486L21.69 238.659v132.509l143.575 28.668zM431.297 0l-233.18 46.528V211.35l233.18-3.969z" style=fill:currentColor /></svg> → Edit the system environment variables → Click the <strong>Advanced</strong> tab → <strong>Environment variables</strong> button near the bottom of that tab.<p>In the <em>Environment Variables</em> window (pictured below), select the <strong>Path</strong> variable in the <em>System Variables</em> section and click the <strong>Edit</strong> button.<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup2-1.png width=338 height=305 /><p>The edit environment variable window will be open(pictured below), Click on the <strong>New</strong> button and add the <code>C:\Program Files\nodejs\</code> path and press the <strong>OK</strong> button.<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup2-2.png width=384 height=367 /><p>Press the <strong>OK</strong> button for the Environment Variables window then press the <strong>OK</strong> button for the system properties.<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>After creating or modifying the environment variables, restart the computer for those changes to take effect in Windows.</div></div></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>To uninstall the middleware prerequisites list.</strong></summary><div><div class=collapsibleContent_i85q><p>So below are the steps to uninstall the middleware prerequisites,<ol>
+<li class="">
+<p><strong>Open</strong> the control panel and go to the Programs and Features section.</p>
+</li>
+<li class="">
+<p>Scroll down and <strong>search</strong> Node.js, Right click on that and <strong>select</strong> Uninstall.</p>
+</li>
+<li class="">
+<p>It asked to uninstall Node.js, <strong>press</strong> Yes and it started uninstalling.</p>
+</li>
+<li class="">
+<p>After some time when it asks for Runtime application, Follow the below and <strong>press</strong> OK. Skip this step if it does not apply to you.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup3-1.png width=318 height=267 /></p>
+</li>
+<li class="">
+<p>Now search for <strong>OpenSSL</strong>, Right click on that and <strong>press</strong> uninstall.</p>
+</li>
+<li class="">
+<p>It asked to uninstall OpenSSL, Press <strong>Yes</strong> and it started uninstalling.</p>
+</li>
+<li class="">
+<p>Now search for <strong>PgAdmin 4</strong>, Right-click on that, and <strong>press</strong> uninstall.</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>If you are not able to see/uninstall the PgAdmin 4 just skip the step And follow the next steps.</div></div>
+</li>
+<li class="">
+<p>It asked to uninstall PgAdmin 4, Press <strong>Yes</strong> and it started uninstalling.</p>
+</li>
+<li class="">
+<p>Now <strong>search</strong> for PostgreSQL 14, Right click on that and <strong>press</strong> uninstall.</p>
+</li>
+<li class="">
+<p>It asked to uninstall PostgreSQL 14, Press <strong>Yes</strong> and it started uninstalling.</p>
+</li>
+<li class="">
+<p>When Uninstallation mode is open, <strong>Select</strong> the Entire application Radio Box and Press <strong>Next</strong>.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup3-2.png width=396 height=314 /></p>
+</li>
+<li class="">
+<p>Now <strong>go to</strong> the <code>C:\Users\&lt;YourUser>\AppData\Roaming\pgadmin\sessions</code> Delete all the files inside this folder.</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>If not able to see the AppData folder: <a href=#open-appdata-folder-windows class="">Open the AppData folder in Windows</a>.</div></div>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup3-3.png width=445 height=266 /></p>
+</li>
+<li class="">
+<p>Now <strong>go to</strong> the <code>C:\Users\&lt;Your User>\AppData\Local</code> and select PgAdmin and PgAdmin4 folder and <strong>delete</strong> the folders.</p>
+</li>
+<li class="">
+<p>Now <strong>go to</strong> the <code>C:\Program Files</code> and delete the PostgreSQL folder.</p>
+</li>
+</ol></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary id=open-appdata-folder-windows><strong>How to Open the AppData folder in Windows.</strong></summary><div><div class=collapsibleContent_i85q><p>So if you are using Windows 11, Inside the file manager click on the View tab and <strong>select</strong> Show and <strong>click</strong> on Hidden items.<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup4-1.png width=309 height=380 /><p>If you are using Windows 10, open File Manager and <strong>click on</strong> View and <strong>select Hidden items</strong>.<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup4-2.png width=629 height=91 /></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary id=manual-thumbprint-certificate-generation><strong>How to generate the thumbprint and certificate manually.</strong></summary><div><div class=collapsibleContent_i85q><ol>
+<li class="">
+<p>To generate Client Certificate Thumbprint, go to Windows PowerShell and run this command to get the certificate thumbprint.</p>
+<blockquote>
+<p>New-SelfSignedCertificate -CertStoreLocation cert:\currentuser\my -dnsname GallagherRestClientCert</p>
+</blockquote>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup5-1.png width=624 height=183 /></p>
+</li>
+<li class="">
+<p><strong>Copy</strong> the thumbprint and <strong>Paste the Client Certificate Thumbprint key</strong> into the Client Certificate thumbprint section <strong>Press</strong> the <strong>OK</strong> button and also <strong>Close</strong> the Services and Workstations.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/setup5-2.png width=400 height=277 /></p>
+</li>
+</ol></div></div></details>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=ssl-certificate-generation>SSL Certificate Generation<a href=#ssl-certificate-generation class=hash-link aria-label="SSL Certificate Generation에 대한 직접 링크" title="SSL Certificate Generation에 대한 직접 링크" translate=no>​</a></h3>
+<ol>
+<li class="">
+<p>Go to the start menu and <strong>Open</strong> the <strong>MMC</strong> Application.</p>
+</li>
+<li class="">
+<p>Go to <strong>File</strong> → <strong>Add/Remove Snap-in…</strong> you can see below screen.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation1.png width=520 height=368 /></p>
+</li>
+<li class="">
+<p><strong>Select Certificates</strong> and <strong>click</strong> on <strong>Add</strong> button then you will see the below screen where <strong>select</strong> the <strong>My user account</strong> radio button and <strong>click</strong> on <strong>Finish</strong> button.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation2.png width=520 height=auto /></p>
+</li>
+<li class="">
+<p>After clicking on the finish you will see the below screen now <strong>click</strong> on the <strong>OK</strong> button. The certificate will be added successfully.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation3.png width=596 height=420 /></p>
+</li>
+<li class="">
+<p>Now go to <strong>Certificates - Current User</strong> → <strong>Personal</strong> → <strong>Certificates</strong> and select <strong>GallagherRestClientCert</strong> certificate.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation4.png width=578 height=auto /></p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation5.png width=578 height=271 /></p>
+</li>
+<li class="">
+<p>Go to <strong>Details</strong> and <strong>click</strong> on <strong>copy to file</strong>.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation6.png width=405 height=516 /></p>
+<p>Now follow the below screenshots and <strong>click</strong> on <strong>next</strong> simultaneously.</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>Please validate that the Thumbprint is correct if you have more than one Certificate.</div></div>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation7.png width=380 height=373 /></p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation8.png width=380 height=373 /></p>
+</li>
+<li class="">
+<p>Now you will see the below screen check the password checkbox and <strong>set</strong> the password as the below password: <strong>G@ll@gher</strong></p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation9.png width=380 height=368 /></p>
+</li>
+<li class="">
+<p>Now <strong>browse</strong> the path <code>C:\Program Files\Suprema Integration with Gallagher\Prerequisites</code> to export the file and <strong>save</strong> this file as <strong>GallagherRestClient.pfx</strong> then <strong>click</strong> on <strong>Next</strong>.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation10.png width=380 height=368 /></p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation11.png width=380 height=370 /></p>
+<p><strong>Click</strong> on <strong>Finish</strong> and your certificate will be exported successfully and <strong>close the certificate</strong> and MMC window.</p>
+</li>
+<li class="">
+<p>Now, go to the path <code>C:\Program Files\Suprema Integration with Gallagher\Prerequisites</code> where we exported the <strong>GallagherRestClient.pfx</strong> certificate file, and <strong>double-click</strong> on the <strong>GallagherRestClient.pfx</strong> file, <strong>select</strong> the <strong>Current User</strong> radio button as shown below image then <strong>click</strong> on the <strong>Next</strong>.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation12.png width=380 height=363 /></p>
+</li>
+<li class="">
+<p>Now, <strong>browse</strong> the <code>C:\Program Files\Suprema Integration with Gallagher\Prerequisites</code> where we saved <strong>GallagherRestClient.pfx</strong> then <strong>click</strong> on the <strong>Next</strong>.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation13.png width=380 height=363 /></p>
+</li>
+<li class="">
+<p>Now, <strong>Enter</strong> Password <span class=cmd>G@ll@gher</span> and <strong>check</strong> the checkbox as shown below the image then <strong>click</strong> on the <strong>Next</strong>.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation14.png width=380 height=365 /></p>
+</li>
+<li class="">
+<p><strong>Select</strong> Place all certificates in the following store Radio button and <strong>browse</strong> the <strong>Trusted Root Certification Authorities</strong> folder then <strong>click</strong> on <strong>OK</strong> and <strong>Next</strong>.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation15.png width=380 height=370 /></p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation16.png width=380 height=370 /></p>
+</li>
+<li class="">
+<p><strong>Click</strong> on <strong>Finish</strong> you will see a security Warning, <strong>click</strong> on <strong>Yes</strong>.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation17.png width=380 height=363 /></p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation18.png width=380 height=351 /></p>
+<p>Now, <strong>go to</strong> the path <code>C:\Program Files\Suprema Integration with Gallagher\Prerequisites</code> we saved GallagherRestClient.pfx file, <strong>open</strong> Powershell here, and <strong>Type</strong> <strong>PowerShell</strong> in the Folder URL to open PowerShell.</p>
+</li>
+<li class="">
+<p><strong>Type</strong> the below command to Generate the <strong>key.pem</strong> file.</p>
+<blockquote>
+<p>openssl pkcs12 -in Gallagherrestclient.pfx -nocerts -out key.pem</p>
+</blockquote>
+</li>
+<li class="">
+<p>Next, it will ask for the password. So <strong>enter</strong> the password which you set earlier i.e, <span class=cmd>G@ll@gher</span>.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation19.png width=600 height=auto /></p>
+<p>Your <strong>key.pem</strong> file will be generated successfully.</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>You need to enter the password three times here.</div></div>
+<ol>
+<li class="">
+<p>Next, <strong>type</strong> the below command to Generate a <strong>cert.pem</strong> file:</p>
+<blockquote>
+<p>command: openssl pkcs12 -in Gallagherrestclient.pfx -clcerts -nokeys -out cert.pem</p>
+</blockquote>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation20.png width=600 height=auto /></p>
+<p>Next, it will ask for a password. So <strong>enter</strong> the password that we set earlier <span class=cmd>G@ll@gher</span>.</p>
+<p>Your <strong>cert.pem</strong> file will be generated successfully.</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>You need to enter the password One time here.</div></div>
+</li>
+</ol>
+</li>
+<li class="">
+<p>Next <strong>copy</strong> both file <strong>key.pem and cert.pem</strong> and paste that at below path <code>C:\Program Files\Suprema Integration with Gallagher\Suprema Integration with Gallagher v(lateast version)\files</code></p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/ssl-certificate-generation21.png width=608 height=299 /></p>
+</li>
+</ol>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>Upgrading the middleware from EXE application directly.</strong></summary><div><div class=collapsibleContent_i85q><ol>
+<li class="">
+<p>If you are upgrading the version, <strong>Press</strong> OK on pop-up.</p>
+</li>
+<li class="">
+<p>Then <strong>press</strong> Update button.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-upgrade-from-exe1.png width=490 height=398 /></p>
+</li>
+<li class="">
+<p>It will start upgrading the middleware.</p>
+</li>
+<li class="">
+<p>After Successfully installing the middleware you need <strong>Press</strong> finish button.</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>For latest changes It is necessary to restart the system!</div></div>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-upgrade-from-exe2.png width=490 height=401 /></p>
+</li>
+</ol></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>Uninstall the middleware from EXE application directly.</strong></summary><div><div class=collapsibleContent_i85q><ol>
+<li class="">
+<p><strong>Press</strong> windows <span class=bold>시작</span> <svg xmlns=http://www.w3.org/2000/svg xml:space=preserve width=1rem height=1rem viewBox="0 0 452.986 452.986"><path d="M165.265 53.107 21.689 81.753v132.531l143.575-2.416V53.107m266.033 192.476-233.18-3.991v164.822l233.18 46.571zm-266.032-4.486L21.69 238.659v132.509l143.575 28.668zM431.297 0l-233.18 46.528V211.35l233.18-3.969z" style=fill:currentColor /></svg> button, <strong>Search</strong>, <strong>and open</strong> Add or Remove programs.</p>
+</li>
+<li class="">
+<p>Inside the Apps & features search list, <strong>search</strong> for suprema integration with the Gallagher version, select the version, and <strong>click on</strong> Uninstall it shows a small pop-up <strong>Press</strong> Uninstall another time.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-uninstall-from-exe1.png width=513 height=346 /></p>
+</li>
+<li class="">
+<p><strong>Press</strong> Yes on the remove all component of integration pop-up.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-uninstall-from-exe2.png width=375 height=153 /></p>
+</li>
+<li class="">
+<p>The uninstallation will start and you can see something like the screens below.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-uninstall-from-exe3.png width=587 height=312 /></p>
+</li>
+<li class="">
+<p><strong>Press</strong> Yes on the below pop-up.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-uninstall-from-exe4.png width=328 height=147 /></p>
+</li>
+<li class="">
+<p><strong>Press</strong> Yes for the below pop-up.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-uninstall-from-exe5.png width=376 height=140 /></p>
+</li>
+<li class="">
+<p><strong>Press</strong> OK.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-uninstall-from-exe6.png width=375 height=146 /></p>
+</li>
+<li class="">
+<p>Now click inside the terminal and <strong>press</strong> enter to complete the uninstallation process.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-uninstall-from-exe7.png width=612 height=211 /></p>
+</li>
+<li class="">
+<p><strong>Press</strong> OK on the pop-up below and you have successfully removed the middleware.</p>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>You must need to restart the system to reﬂect the changes.</div></div>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-uninstall-from-exe8.png width=375 height=158 /></p>
+</li>
+</ol></div></div></details>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=middleware>Middleware<a href=#middleware class=hash-link aria-label="Middleware에 대한 직접 링크" title="Middleware에 대한 직접 링크" translate=no>​</a></h2>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>If the scanning or the syncing of the data in the middleware is extremely slow.</strong></summary><div><div class=collapsibleContent_i85q><ul>
+<li class="">
+<p>To solve this issue, please <a href=https://support.supremainc.com/en/support/solutions/articles/24000023469--biostar-2-changing-the-server-ip-register-resolving-https-not-secure-issue- target=_blank rel="noopener noreferrer" class="">click here</a> and refer to the blog.</p>
+<ul>
+<li class="">You cannot see any card in the middleware if a cardholder card is automatically not created.</li>
+</ul>
+</li>
+<li class="">
+<p>You need to add 3 privileges to the Operator Group.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-slow-scan-sync-issue.png width=577 height=330 /></p>
+<p>After adding these three privileges please restart your system.</p>
+</li>
+</ul></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>There is an error on the log-in page stating that “LAN is disconnected or IP is changed for (IP Address).</strong></summary><div><div class=collapsibleContent_i85q><ul>
+<li class="">
+<p>To solve this issue, please check the below troubleshooting scenarios:</p>
+<ol>
+<li class="">
+<p>Make sure the LAN cable is connected.</p>
+</li>
+<li class="">
+<p>Check If the IP has not changed and if the IP address is the same for the BioStar 2 Server you have entered the wrong IP Address.</p>
+</li>
+</ol>
+</li>
+<li class="">
+<p>If you receive the error <strong>LAN is disconnected or IP is changed for (IP Address)</strong> on the login screen, you must <strong>Press</strong> the <strong>click here to reset</strong> <strong>button</strong> in the middleware.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/login-error-lan-disconnected-ip-changed1.png width=589 height=302 /></p>
+<p>It asks for permission to reset the middleware, <strong>Press</strong> the Yes <strong>button</strong>.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/login-error-lan-disconnected-ip-changed2.png width=439 height=138 /></p>
+<p>Once it is reset you can see the initial screen for the middleware and follow the further steps.</p>
+</li>
+</ul></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>If you get an error for "LAN is disconnected or IP is changed for (IP Address)" between running the middleware on any page.</strong></summary><div><div class=collapsibleContent_i85q><ul>
+<li class="">
+<p>To solve this issue, please check the below troubleshooting scenarios:</p>
+<ol>
+<li class="">
+<p>Make sure the LAN cable is connected.</p>
+</li>
+<li class="">
+<p>Check If the IP has not changed and if the IP address is changed for the BioStar 2 Server.</p>
+</li>
+</ol>
+</li>
+<li class="">
+<p>In this case, just go to the settings → Admin Management → IP management section inside the middleware.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-lan-disconnected-ip-error1.png width=519 height=256 /></p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-lan-disconnected-ip-error2.png width=565 height=280 /></p>
+<p>Now inside the text box enter the IP address of the BioStar 2 server and the HOST/SERVER name of the middleware press the Submit button to start the BioStar 2 services for the middleware.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-lan-disconnected-ip-error3.png width=572 height=287 /></p>
+<p>After <strong>pressing</strong> the submit <strong>button</strong> you get the success message for IP change and <strong>Press</strong> the Exit setting <strong>button</strong> to leave the setting screen.</p>
+</li>
+</ul></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>How to Use middleware on multiple servers on older versions.</strong></summary><div><div class=collapsibleContent_i85q><p>From version 1.7.0 we have added one separate screen to get the BioStar 2 server IP address. So this is the solution for use with the middleware version below 1.7.0.<p>Below are the steps to change the IP address,<ol>
+<li class="">
+<p>Go to Pgadmin → tables and right-click on the table and Tuncate → Truncate Restart Identity (for all three tables).</p>
+</li>
+<li class="">
+<p>Go inside the Gallagher command center if you can't see the API key window and are just able to see the login screen, <strong>click on</strong> the reset middleware link and reset the middleware.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-multi-server-older-versions1.png width=584 height=299 /></p>
+</li>
+<li class="">
+<p>After entering the API key for the middleware do the login and open Pgadmin, right-click on the credential table, and view/edit data → All Rows.</p>
+</li>
+<li class="">
+<p>It will load the data for the table. Now, change the IP address according to your BioStar server IP and press the F6 button to save the changes.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-multi-server-older-versions2.png width=593 height=109 /></p>
+</li>
+<li class="">
+<p>After this, you have to truncate the globaluserrecord table inside Pgadmin.</p>
+</li>
+<li class="">
+<p>Restart the system to reﬂect the changes.</p>
+</li>
+</ol></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>Run the middleware on a specific port on two different servers with specific IP addresses/Configure the inbound rules for the middleware.</strong></summary><div><div class=collapsibleContent_i85q><p>Below are the instructions to run the middleware on a specific port on two different servers with specific IP addresses.<p>We found our middleware is using the 28523 port to call the backend of our application (middleware-backend) inside the backend we called the BioStar 2 server APIs so for that the only port used is 443 as it is the web server HTTPS default port.<p>So for this inside the server2 which is the BioStar 2 server we have set the Protocol type as TCP and provide 443,8081 ports for the local port. Leave the remote port option as All ports.<p>Server 1 has Gallagher and Middleware within,<ul>
+<li class="">
+<p>IP Address:192.168.1.68</p>
+</li>
+<li class="">
+<p>Subnet mask:255.255.255.0</p>
+</li>
+<li class="">
+<p>Default Gateway: 162.168.1.1</p>
+</li>
+</ul><p>Server 2 has BioStar 2 within,<ul>
+<li class="">
+<p>IP Address:10.10.104.13</p>
+</li>
+<li class="">
+<p>Subnet mask:255.255.254.0</p>
+</li>
+<li class="">
+<p>Default Gateway: 10.10.104.1</p>
+</li>
+</ul><p>Here are the steps to create Inbound rules:<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>The below steps need to run on the BioStar 2 server.</div></div><ol>
+<li class="">
+<p>Open Windows Defender Firewall Settings:</p>
+<ul>
+<li class="">
+<p>Press the <kbd class=kbd_QsL_>Win + R</kbd> to open the Run dialog.</p>
+</li>
+<li class="">
+<p>Type <code>control firewall.cpl</code> and press Enter. This will open the Windows Defender Firewall settings.</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Access Advanced Settings:</p>
+<ul>
+<li class="">In the Windows Defender Firewall window, you'll see options on the left-hand side. Click on <strong>Advanced settings</strong>. This opens the Windows Defender Firewall with the Advanced Security console.</li>
+</ul>
+</li>
+<li class="">
+<p>Create New Inbound Rule:</p>
+<ul>
+<li class="">
+<p>In the Windows Defender Firewall with Advanced Security console, you'll see options on the left-hand side including <strong>Inbound Rules</strong> and <strong>Outbound Rules</strong>.</p>
+</li>
+<li class="">
+<p>Click on <strong>Inbound Rules</strong>.</p>
+</li>
+<li class="">
+<p>In the right-hand pane, click on <strong>New Rule...</strong>. This opens the New Inbound Rule Wizard.</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Select Rule Type:</p>
+<ul>
+<li class="">In the New Inbound Rule Wizard, select <strong>Custom</strong> and click <strong>Next</strong>.</li>
+</ul>
+</li>
+<li class="">
+<p>Configure Program:</p>
+<ul>
+<li class="">If you want to apply this rule to a specific program, you can specify it here. Since we're dealing with ICMP traffic, leave this as <strong>All programs</strong> and click <strong>Next</strong>.</li>
+</ul>
+</li>
+<li class="">
+<p>Configure Protocol and Ports:</p>
+<ul>
+<li class="">In the Protocol and Ports window, select <strong>TCP</strong> as we are going to work with specific ports. Now inside the local port, we have to select specific Ports and enter 443, and 8081 ports. Leave the Remote Port as All Ports. Then click <strong>Next</strong>.</li>
+</ul>
+<div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>Here we have assigned the 8081 port as BioStar 2 using it for USB devices.</div></div>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-port-ip-config-inbound-rules1.png width=499 height=389 /></p>
+</li>
+<li class="">
+<p>Configure Scope:</p>
+<ul>
+<li class="">In the Scope window, you can specify which IP addresses are allowed to send ICMP traffic to the server. So local IP addresses leave it as it is and for remote IP addresses fill in the IP address of the Gallagher&Middleware server, now choose These IP addresses: Click on the Add button then in the IP address wizard enter the IP Address of Gallagher&Middleware server, and press OK. please refer below image for reference.</li>
+</ul>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/middleware-port-ip-config-inbound-rules2.png width=499 height=407 /></p>
+</li>
+<li class="">
+<p>Configure Action:</p>
+<ul>
+<li class="">In the Action window, select <strong>Allow the connection</strong> and click <strong>Next</strong>.</li>
+</ul>
+</li>
+<li class="">
+<p>Configure Profile:</p>
+<ul>
+<li class="">In the Profile window, select the profiles for which this rule will apply. Typically, you would want to enable this for all profiles (Domain, Private, Public). Then click <strong>Next</strong>.</li>
+</ul>
+</li>
+<li class="">
+<p>Name and Description:</p>
+<ul>
+<li class="">Give your rule a name and description. For example, you can name it <strong>Allow ICMP Echo Request for middleware</strong>. Then click <strong>Finish</strong>.</li>
+</ul>
+</li>
+<li class="">
+<p>Enable the Rule:</p>
+<ul>
+<li class="">
+<p>After creating the rule, you should see it listed in the Inbound Rules section of the Windows Defender Firewall with Advanced Security console.</p>
+</li>
+<li class="">
+<p>Right-click on the rule you just created and select <strong>Enable Rule</strong> if it is not enabled automatically. This ensures that the rule is active and will allow ICMP traffic.</p>
+</li>
+</ul>
+</li>
+</ol></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>If the BioStar server IP changes and Middleware gets slow.</strong></summary><div><div class=collapsibleContent_i85q><p>If you facing the error where your IP is changed, check the following link: <a href=https://support.supremainc.com/en/support/solutions/articles/24000041659--biostar-2-troubleshooting-when-the-server-ip-changed target=_blank rel="noopener noreferrer" class="">https://support.supremainc.com/en/support/solutions/articles/24000041659--biostar-2-troubleshooting-when-the-server-ip-changed</a>.</div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>If a thumbprint is not generated while running the EXE file.</strong></summary><div><div class=collapsibleContent_i85q><p>If you have installed middleware and a thumbprint is not generated then try again running our EXE file with administrator rights, to do this follow the below instructions.<p>Right-click on our suprema integration with the gallagher.exe file and <strong>select</strong> Run as administrator option as shown in the below screenshot. Now it asks for permission <strong>click</strong> Yes to run our exe file.<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/exe-thumbprint-not-generated1.png width=574 height=401 /><p>Still, the thumbprint file is not generated, please go to the <code>C:\TMP</code> and share all the log Files with the development team.<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/exe-thumbprint-not-generated2.png width=637 height=164 /><p>Till then please refer to the article which helps to manually generate the thumbprint. Refer: <a href=#manual-thumbprint-certificate-generation class="">How to generate the thumbprint manually</a>.</div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary id=create-migration-manually><strong>Create Migration Manually.</strong></summary><div><div class=collapsibleContent_i85q><p>We are doing the migrations because from the middleware V1.8.3 is supporting the Hostname so we can use our middleware using the Gallagher workstation client.<p>To create the migration manually Please follow the steps below:<ol>
+<li class="">
+<p>Go to the Pgadmin. It asks for the password, Write The password <strong>G@ll@gher</strong> as it default password we set during the installation.</p>
+</li>
+<li class="">
+<p>Now <strong>Click on</strong> the Servers, If it asks for the password use the same <strong>G@ll@gher</strong> as Password, Now <strong>click on</strong> the Databases and <strong>Expand</strong> the Suprema → Schemas → public → Tables. Now <strong>select</strong> the credentials table.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/create-migration-manually1.png width=289 height=754 /></p>
+</li>
+<li class="">
+<p>Now <strong>Right Click on</strong> the credentials table, and <strong>select</strong> the Properties option from the list.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/create-migration-manually2.png width=399 height=298 /></p>
+</li>
+<li class="">
+<p>Now inside the window <strong>select</strong> the Columns option, then <strong>click on</strong> the + icon, it will generate the new column option for you as shown in the below image!</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/create-migration-manually3.png width=537 height=330 /></p>
+</li>
+<li class="">
+<p>Now inside the Columns option, <strong>set</strong> the name as host_name, and <strong>set</strong> the datatype as the character varying, <strong>set</strong> the Length/Precision as 255 and <strong>hit</strong> the Save button.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/create-migration-manually4.png width=578 height=355 /></p>
+</li>
+<li class="">
+<p>Now <strong>select</strong> the credentials table, and <strong>Click on</strong> the View Data button.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/create-migration-manually5.png width=249 height=510 /></p>
+</li>
+<li class="">
+<p>Now inside the column host_name, <strong>double-click</strong> on the box, and the pop-up will open.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/create-migration-manually6.png width=613 height=101 /></p>
+</li>
+<li class="">
+<p>Inside the pop-up write <code>https://[YOUR-HOST/SYSTEM-NAME]/api</code> and <strong>Press</strong> OK.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/create-migration-manually7.png width=258 height=142 /></p>
+</li>
+<li class="">
+<p>Now <strong>Press</strong> <kbd class=kbd_QsL_>F6</kbd> to save the changes.</p>
+</li>
+</ol></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary><strong>Steps to Backup PostgreSQL 14 Database, Upgrade to Version 16, and Restore Database.</strong></summary><div><div class=collapsibleContent_i85q><h5 class="anchor anchorTargetStickyNavbar_Vzrq" id=backup-database-in-postgresql-14>Backup Database in PostgreSQL 14<a href=#backup-database-in-postgresql-14 class=hash-link aria-label="Backup Database in PostgreSQL 14에 대한 직접 링크" title="Backup Database in PostgreSQL 14에 대한 직접 링크" translate=no>​</a></h5><ol>
+<li class="">
+<p>Open pgAdmin 4:</p>
+<ul>
+<li class="">Right-click on the <strong>Suprema</strong> database under the <strong>Databases</strong> section and select <strong>Backup</strong>.</li>
+</ul>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore1.png width=262 height=410 /></p>
+</li>
+<li class="">
+<p>Set Backup File Name and Format:</p>
+<ul>
+<li class="">
+<p>In the <strong>File name</strong> field, enter <strong>Suprema-backup</strong> as the name, and choose <strong>Directory</strong> as the format.</p>
+</li>
+<li class="">
+<p><strong>Click</strong> the file icon to select a save location.</p>
+</li>
+</ul>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore2.png width=515 height=350 /></p>
+</li>
+<li class="">
+<p>Choose Save Location:</p>
+<ul>
+<li class="">Select the directory where you'd like to save the backup (e.g., Desktop). Enter the file name and press <strong>Save</strong>.</li>
+</ul>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore3.png width=515 height=339 /></p>
+</li>
+<li class="">
+<p>Start Backup:</p>
+<ul>
+<li class="">You’ll see the file name updated with the location you selected. Press the <strong>Backup</strong> button.</li>
+</ul>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore4.png width=515 height=383 /></p>
+</li>
+<li class="">
+<p>Confirm Backup Completion:</p>
+<ul>
+<li class="">A notification will appear once the backup is completed. Now, your database is safely backed up.</li>
+</ul>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore5.png width=515 height=224 /></p>
+</li>
+</ol><h5 class="anchor anchorTargetStickyNavbar_Vzrq" id=upgrade-postgresql-to-version-16>Upgrade PostgreSQL to Version 16<a href=#upgrade-postgresql-to-version-16 class=hash-link aria-label="Upgrade PostgreSQL to Version 16에 대한 직접 링크" title="Upgrade PostgreSQL to Version 16에 대한 직접 링크" translate=no>​</a></h5><ol>
+<li class="">
+<p>Stop Middleware and PostgreSQL Services:</p>
+<ul>
+<li class="">Stop running middleware and terminate PostgreSQL services by stopping processes on ports 28523 and 5432.</li>
+</ul>
+</li>
+<li class="">
+<p>Update Password (if required):</p>
+<ul>
+<li class="">Set the password to <span class=cmd>G@ll@gher</span> to ensure compatibility during the upgrade.</li>
+</ul>
+</li>
+<li class="">
+<p>Install PostgreSQL 16:</p>
+<ul>
+<li class="">Download and install PostgreSQL 16 from the official PostgreSQL website, following the installation steps for your operating system, or refer to the link to directly get V.16.4.1: <a href="https://drive.google.com/file/d/17ehlTpedaGeWezOHZiMd6-ircQhTqBAJ/view?usp=drive_link" target=_blank rel="noopener noreferrer" class="">https://drive.google.com/file/d/17ehlTpedaGeWezOHZiMd6-ircQhTqBAJ/view?usp=drive_link</a>.</li>
+</ul>
+</li>
+<li class="">
+<p>Migrate Data (Optional):</p>
+<ul>
+<li class="">Please refer to the Restore <a href=#database-postgresql class="">Database in Postgresql 16</a>.</li>
+</ul>
+</li>
+<li class="">
+<p>Uninstall PostgreSQL 14 (Optional):</p>
+<ul>
+<li class="">After confirming the upgrade, you may uninstall PostgreSQL 14 if it’s no longer needed. Refer: <a href=#uninstall-postgresql-after-upgrade class="">Uninstall the postgresql14 after upgrading to version 16</a>.</li>
+</ul>
+</li>
+</ol><h5 class="anchor anchorTargetStickyNavbar_Vzrq" id=database-postgresql>Restore Database in PostgreSQL 16<a href=#database-postgresql class=hash-link aria-label="Restore Database in PostgreSQL 16에 대한 직접 링크" title="Restore Database in PostgreSQL 16에 대한 직접 링크" translate=no>​</a></h5><ol>
+<li class="">
+<p>Open pgAdmin 4 (connected to PostgreSQL 16).</p>
+</li>
+<li class="">
+<p>Create a New Database:</p>
+<ul>
+<li class="">
+<p>In pgAdmin, right-click on <strong>Databases</strong> and select <strong>Create</strong> → <strong>Database</strong>.</p>
+</li>
+<li class="">
+<p>Name the database <strong>Suprema</strong> and save.</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Restore the Backup:</p>
+<ul>
+<li class="">Right-click on the newly created <strong>Suprema</strong> database, and select <strong>Restore</strong>.</li>
+</ul>
+</li>
+<li class="">
+<p>Select Backup File:</p>
+<ul>
+<li class="">In the <strong>Filename</strong> field, select the directory backup file (Suprema-backup) you created earlier.</li>
+</ul>
+</li>
+<li class="">
+<p>Initiate Restore:</p>
+<ul>
+<li class="">Click <strong>Restore</strong>. Wait for the process to complete.</li>
+</ul>
+</li>
+<li class="">
+<p>Verify Restore Completion:</p>
+<ul>
+<li class="">Once the restore is finished, you should see a success message. You can now access and verify your data in PostgreSQL 16.</li>
+</ul>
+</li>
+</ol></div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee faqs" data-collapsed=true><summary id=uninstall-postgresql-after-upgrade><strong>Uninstall Postgresql 14 after upgrading the Postgresql to version 16.</strong></summary><div><div class=collapsibleContent_i85q><p>To uninstall Postgresql 14 follow the below steps,<ol>
+<li class="">
+<p>Go to <strong>Control Panel</strong> → <strong>Programs</strong> → <strong>Programs and Features</strong>.</p>
+</li>
+<li class="">
+<p>Find <strong>PostgreSQL 14</strong> in the list of installed programs.</p>
+</li>
+<li class="">
+<p>Right-click on <strong>PostgreSQL 14</strong> and select <strong>Uninstall</strong>. Follow the prompts to complete the uninstallation.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/uninstall-postgresql14-after-upgrade-to-16-1.png width=584 height=372 /></p>
+</li>
+<li class="">
+<p>You might want to check the installation directory (usually in <code>C:\Program Files\PostgreSQL\14</code>) and delete any remaining files or folders.</p>
+</li>
+</ol><div class="theme-admonition theme-admonition-info admonition_Gfwi alert alert--info"><div class=admonitionHeading_f1Ed><span class=admonitionIcon_kpSf><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>알아두기</div><div class=admonitionContent_UjKb><p>If PostgreSQL 14 still shows up in pgAdmin even after uninstalling it, it's likely because pgAdmin is still retaining the server configuration for it.</div></div><p>You can manually remove it from pgAdmin by following these steps:<ol>
+<li class="">
+<p><strong>Right-click</strong> on <strong>PostgreSQL 14</strong> in the Object Explorer panel in pgAdmin.</p>
+</li>
+<li class="">
+<p><strong>Select</strong> Delete/Remove Server from the context menu.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/uninstall-postgresql14-after-upgrade-to-16-2.png width=312 height=319 /></p>
+</li>
+<li class="">
+<p><strong>Confirm</strong> the deletion prompted.</p>
+<p class=hasimg><img loading=lazy decoding=async src=/docs/img/integration/gallagher/uninstall-postgresql14-after-upgrade-to-16-3.png width=459 height=106 /></p>
+</li>
+</ol><p>This will remove the PostgreSQL 14 server configuration from pgAdmin without affecting your PostgreSQL 16 installation.</div></div></details></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class=feedbackWidget_j3Il><div class=feedbackTitle_R9ld>이 페이지가 도움이 되었나요?</div><div class=selectFeedback_eOBc><button class="feedbackButton_EJI6  " aria-label="Positive feedback: Good"><span class=icon_kAAf>😊</span><span>도움이 되었습니다.</span></button><button class="feedbackButton_EJI6  " aria-label="Negative feedback: Bad"><span class=icon_kAAf>😫</span><span>개선이 필요합니다.</span></button></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="문서 페이지"><a class="pagination-nav__link pagination-nav__link--prev" href=/docs/integration/gallagher/integration-gallagher><div class=pagination-nav__sublabel>이전</div><div class=pagination-nav__label>Suprema Integration with Gallagher</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_pzBX thin-scrollbar"></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer"><div class="container container-fluid"><div class="footer__bottom text--left"><div class=margin-bottom--sm><img src=/docs/img/suprema-logo-bottom.svg alt="Suprema Security & biometrics" class="footer__logo themedComponent_mlkZ themedComponent--light_NVdE" width=173px /><img src=/docs/img/suprema-logo-bottom.svg alt="Suprema Security & biometrics" class="footer__logo themedComponent_mlkZ themedComponent--dark_xIcU" width=173px /></div></div><div class="footer__bottom sns--right"><ul class=sns__list><div class="footer__bottom sns--right"><ul class=sns__list><li><a href=http://pf.kakao.com/_xnkPxes target=_blank rel="noopener noreferrer"><img src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMS1jMDAwIDc5LmRhYmFjYmIsIDIwMjEvMDQvMTQtMDA6Mzk6NDQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkI2RkJBQjg2MUMwRjExRUM5RDMwRjM4MTY2MzYyQjFGIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkI2RkJBQjg1MUMwRjExRUM5RDMwRjM4MTY2MzYyQjFGIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyQzBFRTY4NUMyMjQxMUU4QTQyRkRDRTk1NDQ4RjFGOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyQzBFRTY4NkMyMjQxMUU4QTQyRkRDRTk1NDQ4RjFGOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmegBfoAAAJiSURBVHja7JfPSxZBGMffDTXzBc1fQXjwJhgiJHmR0KMFglEqeQqVwIt4khe6BfXii14kRAQ1CzwpUf9BB+kiePAgKqRgiERK+Yo/0PLt88AsDMvu687uHhTeBz7MvLM7z3znmZln9rUymUzsqtiN2BWynJhrISYmG9iJiaVSKSvseDaW2+CWZXkNXE7xAp5AIxRqj09hCT7Dh0Qise8lxst8iUFEPsUrGIK4jwAcwQgkEXUemRiE3KX4oiJhahKpdgTthhajluUb1ITYlhvQZC9bNjGXnaa5kEJiqv9cqKNNVLooWl0eyR4wvUNalb/AeSbh+P0J7hPuAsoieAY/tOelMGbgz58YZnGLokFreo8IGbyCZ+/UqVqEZkj7jE6D8utpeR7txVr9TAbHUQflvNbeDXUwqcSJbUInHMIgPHbxe2K6TAVafUWdhF7HO7Ww7WifhWr4A0/hdxa/vsXoWe/Cpc22KijXfg/AKMwwAcnIq1n8+hbzV6vXs0QS3mmX/CGZOam1Vaoy7uLHXnJjMUdaXe6fN8x0gfIRTMkehxY1eL/BEU8HEZN2rPcA0ZHIrCHqpbqn7sFXKFPvlMBN2y/v33YckFX6HmcT43kd4GzYIzf8Unkmbpj4ehAzG/Q6eAtbLu2VAYRITvoYOAMzC8kVbbAX8m7agef4uwj12YkDOZoPYT2gEOnXgp+dSL6BcSQOhw1F/INxeED/73475UX8Sb2mPsQmEbFl2jmomAl4DXfUkT6QqwEBB2FmYipG8k+fSoBiP6MMq18xkhyWoctkD5ialfvjnxOTExOR/RdgAL5E3zCETnHQAAAAAElFTkSuQmCC /></a><li><a href=https://blog.naver.com/supremakr target=_blank rel="noopener noreferrer"><img src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDA2IDc5LjE2NDY0OCwgMjAyMS8wMS8xMi0xNTo1MjoyOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6N0RGNEE2MDk3NUEwMTFFQjkzMUFBQkFCMEFFNTg0MzgiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6N0RGNEE2MDg3NUEwMTFFQjkzMUFBQkFCMEFFNTg0MzgiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjFDQjBCRkQwQzIyNDExRTg5Qzg3OTVFRUUwODI2NkJBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjFDQjBCRkQxQzIyNDExRTg5Qzg3OTVFRUUwODI2NkJBIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+GLY+KgAAAe5JREFUeNrs1k1IVFEYxvExJMFFVmgLxYSwFqGi5MYQXISVhEZlrVxogkGgbQRx48KVs4ukCNE+VCpUqF0R1iqEyg+EcRMiEQZuTCeiSPz6H3guHC5zxtnoDMw98GPOvfe9+px3zr2aEQ6HQ6kyDoVSaARhgjBBmCBMWocZk2pH/VNM4/pBhLkpJx31h3EOE7iQ7K/pDf4gA20HFeYMRjGLARTq/DieaJ7vu+cGXuAt+mJ019Q/xLwWdVdb4plXkOkI06PVm1GByyhFFH9j1JuALdaxqb+DS/iCY5hCka6X4arm0b06s4VhfNax6cwtR+0VK8hrdGEFRzGk861WkPfoxar/B7k68wj3kIVl5KLcUVurz5/a/FsK8xwlKFAnzFhDPTbwA4OJ7Jkj+szWE2TGjqP2v1WbrXmedc8/616zuBzNTyTamWZt4kIr2FdH7St0al/MIKLVmzGJX1iwAns1FxN9mkw7z/ueolFH7RzasYnTuKZFml94WzWPFcLbf3XqWNzOeN//N9TgFD7ho9Vqsyk/YN23x96hQR2KaDNv6vpvLa4RZ3W9Ch3xwkxa8xFHJxbFP5ZwP847bUPvoWJUoknnvyfzD6V5zF/iuI7799rA+z221ZEH1rsoKWG6JfjnKggThAnCpHeYXQEGACmhYUqpLPafAAAAAElFTkSuQmCC /></a><li><a href=https://www.facebook.com/supremaglobal target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyMThGRUI1Q0MyMjQxMUU4OEQ1OUEwMUIyN0JGM0Q1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyMThGRUI1REMyMjQxMUU4OEQ1OUEwMUIyN0JGM0Q1NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjIxOEZFQjVBQzIyNDExRTg4RDU5QTAxQjI3QkYzRDU3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjIxOEZFQjVCQzIyNDExRTg4RDU5QTAxQjI3QkYzRDU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+x8dqJAAAAKZJREFUeNpi/P//P8NgAUwMgwiMOmbUMaOOoRZgIVVDV1cXupAqENcBsSMQSwHxbyD+WlZWJkRzx6ABDSA+AcT8SGJsUEz3aGpGc8iAphl7NH40ELMDMSNd0gwaEEVifwHiZYMlN/0d2VkbCHC1OfjR5BiHdMgM+Wh6j8QWRIu+D/R2jBCO9PMJTW601h51zKhjRh0Drj9Gu7ejjhl1zKhjaAwAAgwAHVwYSDKP6cIAAAAASUVORK5CYII="/></a><li><a href=https://www.youtube.com/user/supremainc target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyQzBFRTY4NUMyMjQxMUU4QTQyRkRDRTk1NDQ4RjFGOCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyQzBFRTY4NkMyMjQxMUU4QTQyRkRDRTk1NDQ4RjFGOCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjJDMEVFNjgzQzIyNDExRThBNDJGRENFOTU0NDhGMUY4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjJDMEVFNjg0QzIyNDExRThBNDJGRENFOTU0NDhGMUY4Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+pP+52gAAASRJREFUeNpi/P//P8NgAUwMgwiMOmbUMaOOGXUMrQELIQVdXV2MQKoYiIOBWAyIOYCYE4j5sXjmHxB/BOLvQPwDiF8C8Tog7i0rK/tPsWOAIAWIu0kIaUEoBgElILaEOnA2NaIpnAoxEEatNKOEQ/weED8n0jHK1HKMEA7x60CsBQ3+/2SaQbJjuPDIfQDiNCC2B+KbeNRxU8sxrESoOQzE+qDMR0FGIU4REQCU3VOBOJqm5QwQ/MYTOqDyJh2IS4FYioAZVHHMN2gBhw70gPg+EIsTaQZVHPMOh2NkSYiBt9RKwLepkKbuUMsxq6ngmNXUiqa50AQMqigl0CpJ9MoSlDZ+QivJT9CKcg3UDIKAcbTfNOqYUceMOmbUMaOOYWAACDAAe9Ew/dLdOIYAAAAASUVORK5CYII="/></a><li><a href=https://www.instagram.com/official.suprema/ target=_blank rel="noopener noreferrer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKOSURBVHgB7VbLceJAEB0+BQUXE4I2A28EKyKAjQCIYM2FghPSid8BNgIgAxzBighMBqsQ5BMU333PO+MaU+hr++LSqxr1aKbV86anuzVCpEiR4gsiE0d5MBgYEGY2m62cz+eKnx7mvdPp5GYymU2v13PFR5IhCRieo5kiJi6Xi4PWikIqlAyJ5HK5JxikJ9ZoK3jF4xw9oPry/dVj7EPU0X6gUe97GKG8CAGIzEkExmwYs0Q8zEajkQXZp2chq0HKgZ6hV7DDvyCyBhFTRITyJr7bdLvd6ng8/oMNmXj/FuSdQM+AyD0lDK18FjUh6tj1HXSe0V9hMQfSoDcxbsjvHyFM2RYiCRka5QNGPX3QsqxKuVyeYpGmGoMOxS8cy2y73dqlUuknxlwOMq6wMSHjTiQiw2CkEQaqPl4sFmcw3EB3g2ZzUaTyPfT6eH8A0Uqn02ld24NecjIaqVcyPBosSiIuPFCFl9TcZjqdrg6HA+OjCb2lPDLCjbJOVsQEdleXBG2NyAva7bYHIrauFwexyahzZ6bcmj8ej67s3onPJqOCOZ/PGzcNygwEnkVMJPGMSvM+s0qf47sMYt9yEIRIASxkihMMSqTvEt0G0vcJgWrzyFhTUOhIhDXmtxa86tfwPjLXKa1QKBQe9vs9uw3ozJn+Gpa73c7SB1SJAElPJCXjV6yYNRBM3wWzRlZbZtJK94i2qZfv4TlXJCUDONJYDWJ2PSkXdkJsMOhrIOqbgQqBAcyfGgw5vMcgTvoiASaTSV/+JNfvvkKgzLfkfcYaDocmiD3qFVm8ra6G6vBo8E0NuqYsB00Rgsg3PRhfiP8XpbhYg1DzQ256N0ixqBlhd2DpPSfOHThFihRfEv8AgtdZ9bpVTAkAAAAASUVORK5CYII=" width=35px /></a></ul></div></ul><div class=dropdown><div><button class=dropdown-button>FAMILY SITE <!-- -->+</button></div></div></div></div><div class="container text--left"><div class=footer__copyright>Copyright © Suprema Inc. All rights reserved. | 주식회사 슈프리마 사업자 등록번호 431-87-00369</div></div></footer></div>
+<script>!function(){function e(){let e=navigator?.userAgent||"";return/Algolias+Crawler|AlgoliaWebCrawler|algoliasearch|jsdom/i.test(e)}if(console.log("=== Early Crawler Detection ==="),console.log("User Agent:",navigator?.userAgent||"unknown"),console.log("Is Crawler:",e()),e()){console.log("✓ Algolia Crawler detected - Skipping MSAL authentication"),console.log("Crawler can now access and index the content");return}function o(){if(void 0===window.msal){console.log("Waiting for MSAL library to load..."),setTimeout(o,100);return}console.log("MSAL library loaded successfully"),function(){console.log("MSAL Auth Plugin - Environment info:",{hostname:window.location.hostname,pathname:window.location.pathname,port:window.location.port,protocol:window.location.protocol,userAgent:navigator.userAgent});let e={auth:{clientId:"b6f96dc8-bf6f-40b7-9b85-fc996090bc67",authority:"https://login.microsoftonline.com/5303b6fd-d5c2-4a9e-b1cf-b03b0162bd4d",redirectUri:"https://supremainc.github.io/docs",postLogoutRedirectUri:"https://supremainc.github.io/docs",navigateToLoginRequestUrl:!0},cache:{cacheLocation:"sessionStorage",storeAuthStateInCookie:!1},system:{loggerOptions:{loggerCallback:(e,o,n)=>{if(!n)switch(e){case window.msal.LogLevel.Error:console.error(o);return;case window.msal.LogLevel.Info:console.info(o);return;case window.msal.LogLevel.Verbose:console.debug(o);return;case window.msal.LogLevel.Warning:console.warn(o);return}}}}},o={scopes:["User.Read"]};function n(){let n,t,r,i;if(n=navigator?.userAgent||"",/AlgoliaWebCrawler|Algolia Crawler|algoliasearch|jsdom|bot|crawler/i.test(n)&&(console.log("⚠️ Secondary crawler detection triggered"),1)||(console.log("Authentication enabled for regular users"),0))return;let l=(r=(t=window.navigator.userAgent).indexOf("MSIE "),i=t.indexOf("Trident/"),r>0||i>0?{isSupported:!1,reason:"Internet Explorer is not fully supported. Please use a modern browser."}:{isSupported:!0});if(!l.isSupported){document.body.innerHTML=`
+                                                <div style="
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    height: 100vh;
+                                                    background-color: #333;
+                                                    color: #fff;
+                                                    font-family: Arial, sans-serif;
+                                                    text-align: center;
+                                                    padding: 20px;
+                                                ">
+                                                    <h2>브라우저 호환성 알림</h2>
+                                                    <p>${l.reason}</p>
+                                                    <p>Chrome, Firefox, Safari, 또는 Edge 브라우저를 사용해주세요.</p>
+                                                </div>
+                                            `;return}let c=new window.msal.PublicClientApplication(e);function a(){let e,o=c.getAllAccounts();o&&0!==o.length?1===o.length?(c.setActiveAccount(o[0]),console.log("User authenticated:",o[0].username)):(console.warn("Multiple accounts detected. Using first account."),c.setActiveAccount(o[0])):(e=`
+                                                <div style="
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    height: 100vh;
+                                                    background-color: #333;
+                                                    color: #fff;
+                                                    font-family: Arial, sans-serif;
+                                                ">
+                                                    <div style="
+                                                        background-color: #A32343;
+                                                        color: #fff;
+                                                        padding: 15px 30px;
+                                                        border-radius: 5px;
+                                                        cursor: pointer;
+                                                        font-weight: bold;
+                                                        border: none;
+                                                        font-size: 16px;
+                                                    " onclick="signIn()">
+                                                        Sign in with your Microsoft account
+                                                    </div>
+                                                </div>
+                                            `,document.body.innerHTML=e)}function s(e){null!==e?(c.setActiveAccount(e.account),console.log("Authentication successful:",e.account.username),window.location.reload()):a()}c.initialize().then(()=>{c.handleRedirectPromise().then(s).catch(e=>{console.error("Redirect handling error:",e)}),a()}).catch(e=>{console.error("MSAL initialization error:",e)}),window.signIn=function(){c.loginPopup(o).then(s).catch(function(e){console.error("Login error:",e),("popup_window_error"===e.errorCode||"empty_window_error"===e.errorCode)&&c.loginRedirect(o)})}}"loading"===document.readyState?document.addEventListener("DOMContentLoaded",n):n()}()}console.log("✓ Regular user detected - Proceed with MSAL authentication"),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",o):o()}()</script></body>
