@@ -49,7 +49,7 @@ a.banner {
   width: 60%
 }
 .bsair {
-  background: #f3f3f3;
+  background: var(--ifm-shortcut-banner-background);
   color: #222;
   border-top: 4px solid #21A9DC;
   border-left: none;
@@ -58,7 +58,7 @@ a.banner {
 }
 
 .bsair p {
-  color: #5F5E5E;
+  color: var(--ifm-bsair-description-color);
 }
 
 .bsair .banner__biostar  {
@@ -92,15 +92,14 @@ a.banner {
   font-family: 'Montserrat' !important;
   font-size: 30px;
 }
+.bsair .banner__biostarh2 {
+  color: var(--docsearch-muted-color);
+}
 .banner__biostarh2 svg {
   position: relative;
   top: 14px;
 }
-.banner__biostarh2 .bsair {
-  color: var(--ifm-color-cmd);
-  font-family: inherit;
-  font-size: 65px;
-}
+
 .bsx .banner__learnmore {
   background: #fff;
   font-weight: 600;
@@ -112,7 +111,11 @@ a.banner {
 }
 .bsair .banner__learnmore {
   font-weight: 600;
-  color: #21A9DC;
+  color: #fff;
+  background: #279ECE;
+  padding: 0.5rem 1.5rem;
+  width: fit-content;
+  border-radius: 10px;
 }
 .banner__biostar__img {
   text-align: right;
@@ -156,8 +159,12 @@ a.banner {
   border-left: 5px solid #7A438E;
 }
 .shortcutbanner h3 span {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin-left: 8px;
+  color: #fff;
+  background: #4B5FA9;
+  padding: 2px 8px;
+  border-radius: 5px;
 }
 .shortcutbanner .howToArticles {
   border-left: 5px solid #C53F88;
