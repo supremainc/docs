@@ -46,6 +46,8 @@
   --feedback-button-bg: #ffffff;
   --ifm-heading-margin-top: 1.2rem;
   --ifm-shortcut-banner-background: #ebedf0;
+  --ifm-bsair-description-color: #5f5e5e;
+  --ifm-footer-background-color: #d5d5d5;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -77,6 +79,8 @@
   --ifm-feedback-success-bg: rgba(224, 242, 254, 0.8);
   --feedback-button-bg: #333;
   --ifm-shortcut-banner-background: #3a3a3a;
+  --ifm-bsair-description-color: #fff;
+  --ifm-footer-background-color: #000000;
   .navbar__title {
     color: #fff !important;
   }
@@ -180,6 +184,34 @@ main .search-pop-trigger {
     border: 1px solid var(--ifm-color-border);
     border-radius: 4px;
     padding: 2px 9px;
+  }
+}
+main div[class*='cardItem'] div[class*='tags'] {
+  code {
+    &.ai {
+      background: #ccfbf1;
+      color: #0f766e;
+    }
+    &.fusionmatching, &.ndoor, &.nreader, &.sam, &.forcorestation {
+      background: #ffedd5;
+      color: #c2410c;
+    }
+    &.face, &.fingerprint {
+      background: #e0f2fe;
+      color: #0369a1;
+    }
+    &.card, &.rfid, &.qrbarcode {
+      background: #dcfce7;
+      color: #15803d;
+    }
+    &.acu, &.reader, &.iomodule, &.extension, &.protection, &.inputextension, &.outputextension {
+      background: #f1f5f9;
+      color: #334155;
+    }
+    &.touchscreen, &.elevatorcontrol, &.doorcontrol, &.rtsp, &.relay {
+      background: #f3e8ff;
+      color: #7e22ce;
+    }
   }
 }
 [data-theme='dark'] main .search-pop-trigger {
@@ -305,7 +337,7 @@ ul.breadcrumbs {
   }
 }
 footer {
-  border-top: 2px solid #ddd;
+  // background: #d5d5d5 !important;
   .container {
     display: flex;
     justify-content: space-between;
