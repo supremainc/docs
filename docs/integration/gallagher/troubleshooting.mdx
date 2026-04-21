@@ -168,7 +168,7 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
 1. **Select Certificates** and **click** on **Add** button then you will see the below screen where **select** the **My user account** radio button and **click** on **Finish** button.
 
-   <Image src='/img/integration/gallagher/ssl-certificate-generation2.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation2.png' width={520} alone />
 
 1. After clicking on the finish you will see the below screen now **click** on the **OK** button. The certificate will be added successfully.
 
@@ -176,7 +176,7 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
 1. Now go to **Certificates - Current User** → **Personal** → **Certificates** and select **GallagherRestClientCert** certificate.
 
-   <Image src='/img/integration/gallagher/ssl-certificate-generation4.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation4.png' width={578} alone />
 
    <Image src='/img/integration/gallagher/ssl-certificate-generation5.png' alone />
 
@@ -240,7 +240,7 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
 1. Next, it will ask for the password. So **enter** the password which you set earlier i.e, <Cmd>G@ll@gher</Cmd>.
 
-   <Image src='/img/integration/gallagher/ssl-certificate-generation19.png' alone />
+   <Image src='/img/integration/gallagher/ssl-certificate-generation19.png' width={600} alone />
 
    Your **key.pem** file will be generated successfully.
 
@@ -254,7 +254,7 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
       > command: openssl pkcs12 -in Gallagherrestclient.pfx -clcerts -nokeys -out cert.pem
 
-      <Image src='/img/integration/gallagher/ssl-certificate-generation20.png' alone />
+      <Image src='/img/integration/gallagher/ssl-certificate-generation20.png' width={600} alone />
 
       Next, it will ask for a password. So **enter** the password that we set earlier <Cmd>G@ll@gher</Cmd>.
 
@@ -589,7 +589,7 @@ To create the migration manually Please follow the steps below:
 <details className='faqs'>
 <summary>**Steps to Backup PostgreSQL 14 Database, Upgrade to Version 16, and Restore Database.**</summary>
 
-#### Backup Database in PostgreSQL 14
+##### Backup Database in PostgreSQL 14
 
 1. Open pgAdmin 4:
 
@@ -623,7 +623,7 @@ To create the migration manually Please follow the steps below:
 
    <Image src='/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore5.png' alone />
 
-#### Upgrade PostgreSQL to Version 16
+##### Upgrade PostgreSQL to Version 16
 
 1. Stop Middleware and PostgreSQL Services:
 
@@ -645,7 +645,7 @@ To create the migration manually Please follow the steps below:
 
    * After confirming the upgrade, you may uninstall PostgreSQL 14 if it’s no longer needed. Refer: [Uninstall the postgresql14 after upgrading to version 16](#uninstall-postgresql-after-upgrade).
 
-#### Restore Database in PostgreSQL 16 {#database-postgresql}
+##### Restore Database in PostgreSQL 16 {#database-postgresql}
 
 1. Open pgAdmin 4 (connected to PostgreSQL 16).
 

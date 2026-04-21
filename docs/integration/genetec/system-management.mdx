@@ -109,7 +109,7 @@ To ensure proper operation of the Plugin, please enable RIO protocol for Synergi
    
    When the RIO protocol is enabled, the **RIO** tab becomes available on the **Hardware** page under **Config Tool** → **Access Control** → **Cloud Link**. 
 
-   <Image src='/img/integration/genetec/rio-protocol-hardware.png' alone />
+   <Image src='/img/integration/genetec/rio-protocol-hardware.png' width={800} alone />
 
    :::
 
@@ -119,7 +119,7 @@ If you'd like to **extract face templates from cardholder profile images** in GS
 
 * Path: **Config Tool** → **Access Control** → **General settings**
 
-<Image src='/img/integration/genetec/profile-image-quality-setting.png' alone />
+   <Image src='/img/integration/genetec/profile-image-quality-setting.png' width={600} alone />
 
 #### Device setting
 
@@ -155,7 +155,7 @@ If you'd like to **extract face templates from cardholder profile images** in GS
 
 1. In the **Config Tool**, click the **Plugins** under **Tasks**.
 
-   <Image src='/img/integration/genetec/config-tool-tasks-plugins.png' alone />
+   <Image src='/img/integration/genetec/config-tool-tasks-plugins.png' width={800} alone />
 
 1. Click the **Suprema Device Plugin**.
 
@@ -169,17 +169,17 @@ If you'd like to **extract face templates from cardholder profile images** in GS
 
    If Device Communication Mode is set to Device To Server, please click the Refresh List button in the pane below.
 
-   <Image src='/img/integration/genetec/device-management2.png' alone />
+   <Image src='/img/integration/genetec/device-management2.png' width={600} alone />
 
 1. Select the device to add by checking the **Select** box, and click the **Add Devices** button. To register all devices, click the Add **All Devices** button.
 
-   <Image src='/img/integration/genetec/device-management3.png' alone />
+   <Image src='/img/integration/genetec/device-management3.png' width={600} alone />
 
 ## View the Device Sync Information
 
 1. In the **Config Tool**, click the **Plugins** under **Tasks**.
 
-   <Image src='/img/integration/genetec/config-tool-tasks-plugins.png' alone />
+   <Image src='/img/integration/genetec/config-tool-tasks-plugins.png' width={800} alone />
 
 1. Click the **Suprema Device Plugin**.
 
@@ -191,42 +191,42 @@ If you'd like to **extract face templates from cardholder profile images** in GS
 
 1. Synchronization information of connected Suprema devices can be checked.
 
-   <Image src='/img/integration/genetec/device-sync-information2.png' alone />
+   <Image src='/img/integration/genetec/device-sync-information2.png' width={800} alone />
 
-   <Image src='/img/integration/genetec/device-sync-information3.png' alone />
+   <Image src='/img/integration/genetec/device-sync-information3.png' width={800} alone />
 
-<div className='overflow-x cols3--10-30-60'>
-| No. | Item | Description |
-| :--: | -- | -- |
-| 1 | **Device ID** | Displays the Suprema device ID. |
-| 2 | **Device Name** | Displays the Suprema device name. |
-| 3 | **Online Status** | Displays the network status of the device.<br/>- **True** / **False** |
-| 4 | **Sync Status** | Displays the synchronization status of the device.<br/>-	**Idle** /Cache loading/ Biometric downloading/ **Syncing** |
-| 5 | **Device Model** | Displays the Suprema device model. |
-| 6 | **IP Address** | Displays the Suprema device IP Address. |
-| 7 | **Device Port** | Displays the Suprema device port. |
-| 8 | **Device Firmware Version** | Displays the Suprema device firmware version. |
-| 9 | **Failed Users** | Allows checking users who failed to synchronize. |
-| 10 | **Doors (syncing / failed / total)** | Displays the synchronization status of the door. |
-| 11 | **Schedules (syncing / failed / total)** | Displays the synchronization status of the schedule. |
-| 12 | **Access Levels (syncing / failed / total)** | Displays the synchronization status of the access level. |
-| 13 | **Access Groups (syncing / failed / total)** | Displays the synchronization status of the access group. |
-| 14 | **Users (syncing / failed / total)** | Displays the synchronization status of the cardholder. |
-| 15 | **Last Trigger Time** | The time when synchronization with the device was last triggered. |
-| 16 | **Last Success Time** | The time when synchronization with the device was last completed successfully. |
-</div>
+   <div className='overflow-x cols3--10-30-60'>
+   | No. | Item | Description |
+   | :--: | -- | -- |
+   | 1 | **Device ID** | Displays the Suprema device ID. |
+   | 2 | **Device Name** | Displays the Suprema device name. |
+   | 3 | **Online Status** | Displays the network status of the device.<br/>- **True** / **False** |
+   | 4 | **Sync Status** | Displays the synchronization status of the device.<br/>-	**Idle** /Cache loading/ Biometric downloading/ **Syncing** |
+   | 5 | **Device Model** | Displays the Suprema device model. |
+   | 6 | **IP Address** | Displays the Suprema device IP Address. |
+   | 7 | **Device Port** | Displays the Suprema device port. |
+   | 8 | **Device Firmware Version** | Displays the Suprema device firmware version. |
+   | 9 | **Failed Users** | Allows checking users who failed to synchronize. |
+   | 10 | **Doors (syncing / failed / total)** | Displays the synchronization status of the door. |
+   | 11 | **Schedules (syncing / failed / total)** | Displays the synchronization status of the schedule. |
+   | 12 | **Access Levels (syncing / failed / total)** | Displays the synchronization status of the access level. |
+   | 13 | **Access Groups (syncing / failed / total)** | Displays the synchronization status of the access group. |
+   | 14 | **Users (syncing / failed / total)** | Displays the synchronization status of the cardholder. |
+   | 15 | **Last Trigger Time** | The time when synchronization with the device was last triggered. |
+   | 16 | **Last Success Time** | The time when synchronization with the device was last completed successfully. |
+   </div>
 
-:::info
+   :::info
 
-The values displayed for each synchronization status are as follows:
+   The values displayed for each synchronization status are as follows:
 
-* **syncing**: Number of items currently being synchronized with the device.
+   * **syncing**: Number of items currently being synchronized with the device.
 
-* **failed**: Number of items that failed to synchronize with the device.
+   * **failed**: Number of items that failed to synchronize with the device.
 
-* **total**: Number of items that have been successfully synchronized.
+   * **total**: Number of items that have been successfully synchronized.
 
-:::
+   :::
 
 ## Editing Device Settings and Information
 
@@ -234,7 +234,7 @@ Settings and information of registered devices can be edited.
 
 1. In the **Config Tool**, click the **Plugins** under **Tasks**.
 
-   <Image src='/img/integration/genetec/config-tool-tasks-plugins.png' alone />
+   <Image src='/img/integration/genetec/config-tool-tasks-plugins.png' width={800} alone />
 
 1. Open the left arrow of the **Suprema Device Plugin** and select a registered device. The **Device Settings** area will appear.
 
@@ -248,31 +248,31 @@ Settings and information of registered devices can be edited.
 
 You can enter or edit the name and the group of a device. If a new firmware version is available, you can upgrade to it.
 
-<Image src='/img/integration/genetec/device-settings-information.png' alone />
+<Image src='/img/integration/genetec/device-settings-information.png' width={650} alone />
 
 <div className='overflow-x cols3--10-30-60'>
 | No. | Item | Description |
 | :--: | -- | -- |
-| 1 | **Name** | Enter a device name. |
-| 2 | **Description** | View the product name, ID, and IP. |
-| 3 | **Device ID** | View the device ID. |
-| 4 | **Firmware Version** | Click **Upgrade** to install a new firmware version. |
-| 5 | **Kernel Version** | View the kernel version. |
-| 6 | **Time Zone** | Set the time zone of the device. |
-| 7 | **Device Type** | View the device type. |
-| 8 | **Product Name** | View the model name. |
-| 9 | **Hardware Version** | View the hardware version. |
-| 10 | **Time Synchronization with Server** | Select the option to synchronize the time information of the device with the server. |
-| 11 | **Display Date** | View the displayed time. |
-| 12 | **Date Format** | Select a date format. |
-| 13 | **Get Time** | Click the button to fetch the time set in the device. |
+| <Num num='1' /> | **Name** | Enter a device name. |
+| <Num num='2' /> | **Description** | View the product name, ID, and IP. |
+| <Num num='3' /> | **Device ID** | View the device ID. |
+| <Num num='4' /> | **Firmware Version** | Click **Upgrade** to install a new firmware version. |
+| <Num num='5' /> | **Kernel Version** | View the kernel version. |
+| <Num num='6' /> | **Time Zone** | Set the time zone of the device. |
+| <Num num='7' /> | **Device Type** | View the device type. |
+| <Num num='8' /> | **Product Name** | View the model name. |
+| <Num num='9' /> | **Hardware Version** | View the hardware version. |
+| <Num num='10' /> | **Time Synchronization with Server** | Select the option to synchronize the time information of the device with the server. |
+| <Num num='11' /> | **Display Date** | View the displayed time. |
+| <Num num='12' /> | **Date Format** | Select a date format. |
+| <Num num='13' /> | **Get Time** | Click the button to fetch the time set in the device. |
 </div>
 
 ### Network
 
 You can configure the network connection settings of the device.
 
-<Image src='/img/integration/genetec/device-settings-network.png' alone />
+<Image src='/img/integration/genetec/device-settings-network.png' width={650} alone />
 
 <Table className='cols3--10-30-60 first--column--center'>
 <Thead>
@@ -285,7 +285,7 @@ You can configure the network connection settings of the device.
 <Tbody>
 <Row>
 
-<Td>1</Td>
+<Td><Num num='1' /></Td>
 <Td>**TCP/IP**</Td>
 <Td>
 
@@ -305,7 +305,7 @@ You can configure the TCP/IP connection settings of the device.
 
 <Row>
 
-<Td>2</Td>
+<Td><Num num='2' /></Td>
 <Td>**Server**</Td>
 <Td>
 
@@ -323,7 +323,7 @@ You can enter connection settings to use in the server mode.
 
 <Row>
 
-<Td>3</Td>
+<Td><Num num='3' /></Td>
 <Td>**Serial**</Td>
 <Td>
 
@@ -345,7 +345,7 @@ You can configure the user authentication settings of the device.
 
 #### Face Authentication Device
 
-<Image src='/img/integration/genetec/device-settings-authentication1.png' alone />
+<Image src='/img/integration/genetec/device-settings-authentication1.png' width={850} alone />
 
 <Table className='cols3--10-30-60 first--column--center'>
 <Thead>
@@ -358,7 +358,7 @@ You can configure the user authentication settings of the device.
 <Tbody>
 <Row>
 
-<Td>1</Td>
+<Td><Num num='1' /></Td>
 <Td>**Auth Mode**</Td>
 <Td>
 
@@ -372,7 +372,7 @@ Click **+Add** and create an authentication mode by dragging and dropping availa
 
 <Row>
 
-<Td>2</Td>
+<Td><Num num='2' /></Td>
 <Td>**Auth Timeout**</Td>
 <Td>
 
@@ -386,7 +386,7 @@ Set a timeout period for authenticating the second credential after authenticati
 
 <Row>
 
-<Td>3</Td>
+<Td><Num num='3' /></Td>
 <Td>**Full Access**</Td>
 <Td>
 
@@ -398,7 +398,7 @@ You can grant full access to users registered within the device without setting 
 
 <Row>
 
-<Td>4</Td>
+<Td><Num num='4' /></Td>
 <Td>**Face**</Td>
 <Td>
 
@@ -424,7 +424,7 @@ You can configure the detail settings concerning face authentication.
 
 <Row>
 
-<Td>5</Td>
+<Td><Num num='5' /></Td>
 <Td>**Use Suprema Handler**</Td>
 <Td>
 
@@ -444,7 +444,7 @@ Disable this option when the **Suprema device is used as a reader connected to a
 
 #### Fingerprint Authentication Device
 
-<Image src='/img/integration/genetec/device-settings-authentication2.png' alone />
+<Image src='/img/integration/genetec/device-settings-authentication2.png' width={700} alone />
 
 <Table className='cols3--10-30-60 first--column--center'>
 <Thead>
@@ -457,7 +457,7 @@ Disable this option when the **Suprema device is used as a reader connected to a
 <Tbody>
 <Row>
 
-<Td>1</Td>
+<Td><Num num='1' /></Td>
 <Td>**Auth Mode**</Td>
 <Td>
 
@@ -471,7 +471,7 @@ Click **+Add** and create an authentication mode by dragging and dropping availa
 
 <Row>
 
-<Td>2</Td>
+<Td><Num num='2' /></Td>
 <Td>**Auth Timeout**</Td>
 <Td>
 
@@ -485,7 +485,7 @@ Set a timeout period for authenticating the second credential after authenticati
 
 <Row>
 
-<Td>3</Td>
+<Td><Num num='3' /></Td>
 <Td>**Full Access**</Td>
 <Td>
 
@@ -497,7 +497,7 @@ You can grant full access to users registered within the device without setting 
 
 <Row>
 
-<Td>4</Td>
+<Td><Num num='4' /></Td>
 <Td>**Fingerprint**</Td>
 <Td>
 
@@ -529,7 +529,7 @@ You can configure the detail settings concerning fingerprint authentication.
 
 <Row>
 
-<Td>5</Td>
+<Td><Num num='5' /></Td>
 <Td>**Use Suprema Handler**</Td>
 <Td>
 
@@ -551,27 +551,27 @@ Disable this option when the **Suprema device is used as a reader connected to a
 
 You can set the display/sound and wiegand.
 
-<Image src='/img/integration/genetec/device-settings-advanced.png' alone />
+<Image src='/img/integration/genetec/device-settings-advanced.png' width={750} alone />
 
 <div className='overflow-x cols3--10-30-60'>
 | No. | Item | Description |
 | :--: | -- | -- |
-| 1 | **Language** | Sets the display language of the device. |
-| 2 | **Device Volume** | Controls the device’s default volume. |
-| 3 | **Menu Timeout** | Sets the timeout for the menu screen. |
-| 4 | **Intercom Speaker Volume** | Sets the speaker volume when using the Intercom function. |
-| 5 | **Intercom Microphone Volume** | Sets the microphone volume when using the Intercom function. |
-| 6 | **Backlight Timeout** | Sets the timeout for the backlight. |
-| 7 | **Msg. Timeout** | Sets the timeout period for various messages to disappear automatically. |
-| 8 | **Screen Saver** | Sets this option to use the screen saver feature. It reduces unnecessary energy consumption by lowering the brightness of the LCD screen when the device is not in use. |
-| 9 | **Use Voice** | Enables voice guidance. |
-| 10 | **Sound** | Configures the sound effect for boot, authentication success, and authentication failure events.<br/>Click **Find** and select a \*.wav file (less than 500 KB). |
-| 11 | **Input/Output** | You can select input/output mode. |
-| 12 | **Wiegand I/p Format** | You can set a format for Wiegand. |
-| 13 | **Output Mode** | You can set the Wiegand signal output mode. If it is set to **Normal**, a card will be scanned in the set Wiegand format. If it is set to **ByPass**, CSN will be sent regardless of Wiegand authentication. **ByPass** should be set when using the device without an entrance door control function.<br/>If it is set to **Normal** mode, it is possible to set **Fail Code**, and select a value to be transmitted when Wiegand card authentication fails. |
-| 14 | **Pulse Width(μs)** | You can set the pulse width of the Wiegand signal. |
-| 15 | **Pulse Interval(μs)** | You can set the pulse interval of the Wiegand signal. |
-| 16 | **Output info** | You can select the information output to the device when the user authenticates. |
+| <Num num='1' /> | **Language** | Sets the display language of the device. |
+| <Num num='2' /> | **Device Volume** | Controls the device’s default volume. |
+| <Num num='3' /> | **Menu Timeout** | Sets the timeout for the menu screen. |
+| <Num num='4' /> | **Intercom Speaker Volume** | Sets the speaker volume when using the Intercom function. |
+| <Num num='5' /> | **Intercom Microphone Volume** | Sets the microphone volume when using the Intercom function. |
+| <Num num='6' /> | **Backlight Timeout** | Sets the timeout for the backlight. |
+| <Num num='7' /> | **Msg. Timeout** | Sets the timeout period for various messages to disappear automatically. |
+| <Num num='8' /> | **Screen Saver** | Sets this option to use the screen saver feature. It reduces unnecessary energy consumption by lowering the brightness of the LCD screen when the device is not in use. |
+| <Num num='9' /> | **Use Voice** | Enables voice guidance. |
+| <Num num='10' /> | **Sound** | Configures the sound effect for boot, authentication success, and authentication failure events.<br/>Click **Find** and select a \*.wav file (less than 500 KB). |
+| <Num num='11' /> | **Input/Output** | You can select input/output mode. |
+| <Num num='12' /> | **Wiegand I/p Format** | You can set a format for Wiegand. |
+| <Num num='13' /> | **Output Mode** | You can set the Wiegand signal output mode. If it is set to **Normal**, a card will be scanned in the set Wiegand format. If it is set to **ByPass**, CSN will be sent regardless of Wiegand authentication. **ByPass** should be set when using the device without an entrance door control function.<br/>If it is set to **Normal** mode, it is possible to set **Fail Code**, and select a value to be transmitted when Wiegand card authentication fails. |
+| <Num num='14' /> | **Pulse Width(μs)** | You can set the pulse width of the Wiegand signal. |
+| <Num num='15' /> | **Pulse Interval(μs)** | You can set the pulse interval of the Wiegand signal. |
+| <Num num='16' /> | **Output Info** | You can select the information output to the device when the user authenticates. |
 </div>
 
 ### Mask
@@ -580,7 +580,7 @@ You can set the detailed settings of mask detection.
 
 Face authentication devices can detect masks and restrict access to users without masks.
 
-<Image src='/img/integration/genetec/device-settings-mask.png' alone />
+<Image src='/img/integration/genetec/device-settings-mask.png' width={450} alone />
 
 <Table className='cols3--10-30-60 first--column--center'>
 <Thead>
@@ -593,7 +593,7 @@ Face authentication devices can detect masks and restrict access to users withou
 <Tbody>
 <Row>
 
-<Td>1</Td>
+<Td><Num num='1' /></Td>
 <Td>**Mask Detection**</Td>
 <Td>
 
@@ -605,7 +605,7 @@ You can set whether to use mask detection or not. If you select **Use (Deny acce
 
 <Row>
 
-<Td>2</Td>
+<Td><Num num='2' /></Td>
 <Td>**Mask Detect Level**</Td>
 <Td>You can set sensitivity for mask detection.</Td>
 
@@ -613,7 +613,7 @@ You can set whether to use mask detection or not. If you select **Use (Deny acce
 
 <Row>
 
-<Td>3</Td>
+<Td><Num num='3' /></Td>
 <Td>**Check Mode**</Td>
 <Td>
 
@@ -633,30 +633,30 @@ You can set whether to use mask detection or not. If you select **Use (Deny acce
 
 You can set the detailed settings of SIP Intercom.
 
-<Image src='/img/integration/genetec/device-settings-intercom.png' alone />
+<Image src='/img/integration/genetec/device-settings-intercom.png' width={750} alone />
 
 <div className='overflow-x cols3--10-30-60'>
 | No. | Item | Description |
 | :--: | -- | -- |
-| 1 | **SIP Server Address** | Enter SIP server address. |
-| 2 | **SIP Server Port** | Enter SIP server port. |
-| 3 | **SIP Username** | Enter username of your SIP account. |
-| 4 | **Password** | Enter password of your SIP account. |
-| 5 | **Authorization ID** | Enter authorization ID of your SIP account. |
-| 6 | **Registration Duration(sec)** | Enter Registration Duration in seconds. The device (SIP endpoint) tries to register to the SIP server every set Registration Duration.<br/>- Registration Duration can be set between 60 to 600 secs. |
-| 7 | **Open Door Button(DTMF)** | Set a button to open the door on the phone. |
-| 8 | **Outbound Proxy Server** | If your SIP service has a separate (outbound) proxy server, set this to **Use**. |
-| 9 | **Outbound Proxy Server Address** | Enter the outbound proxy server address. |
-| 10 | **Outbound Proxy Server Port** | Enter the outbound proxy server port. |
-| 11 | **Display Extension Number** | If you mind the device displaying extension numbers on the screen, set this to **Not Use**. |
-| 12 | **Extension Number** | Register extension numbers up to 128. Click **Edit** to add or delete.<br/>- **Add**: Add an extension number.<br/>- **Delete**: Delete an extension number. |
+| <Num num='1' /> | **SIP Server Address** | Enter SIP server address. |
+| <Num num='2' /> | **SIP Server Port** | Enter SIP server port. |
+| <Num num='3' /> | **SIP Username** | Enter username of your SIP account. |
+| <Num num='4' /> | **Password** | Enter password of your SIP account. |
+| <Num num='5' /> | **Authorization ID** | Enter authorization ID of your SIP account. |
+| <Num num='6' /> | **Registration Duration(sec)** | Enter Registration Duration in seconds. The device (SIP endpoint) tries to register to the SIP server every set Registration Duration.<br/>- Registration Duration can be set between 60 to 600 secs. |
+| <Num num='7' /> | **Open Door Button(DTMF)** | Set a button to open the door on the phone. |
+| <Num num='8' /> | **Outbound Proxy Server** | If your SIP service has a separate (outbound) proxy server, set this to **Use**. |
+| <Num num='9' /> | **Outbound Proxy Server Address** | Enter the outbound proxy server address. |
+| <Num num='10' /> | **Outbound Proxy Server Port** | Enter the outbound proxy server port. |
+| <Num num='11' /> | **Display Extension Number** | If you mind the device displaying extension numbers on the screen, set this to **Not Use**. |
+| <Num num='12' /> | **Extension Number** | Register extension numbers up to 128. Click **Edit** to add or delete.<br/>- **Add**: Add an extension number.<br/>- **Delete**: Delete an extension number. |
 </div>
 
 ## Assign Device to Cloud Link
 
 1. In the **Config Tool**, click the **Access Control** under **Tasks**.
 
-   <Image src='/img/integration/genetec/config-tool-tasks-access-control.png' alone />
+   <Image src='/img/integration/genetec/config-tool-tasks-access-control.png' width={800} alone />
 
 1. Go to **Manage Suprema Devices** tab at the top of the screen.
 
@@ -672,19 +672,19 @@ You can set the detailed settings of SIP Intercom.
 
 1. Select the device to assign by checking the **Select** box, and click the **Assign** or **Assign Selected** button. To assign all devices, click the **Assign All** button.
 
-   <Image src='/img/integration/genetec/manage-suprema-devices4.png' alone />
+   <Image src='/img/integration/genetec/manage-suprema-devices4.png' width={400} alone />
 
 ## Door Configuration
 
 1. In the **Config Tool**, click the **Area view** under **Tasks**.
 
-   <Image src='/img/integration/genetec/config-tool-tasks-area-view.png' alone />
+   <Image src='/img/integration/genetec/config-tool-tasks-area-view.png' width={800} alone />
 
 1. Select the door and go to the **Hardware** tab.
 
 1. Assign Suprema devices to **Reader**, **Request to exit**, and **Entry sensor**.
 
-   <Image src='/img/integration/genetec/area-view-hardware.png' alone />
+   <Image src='/img/integration/genetec/area-view-hardware.png' width={800} alone />
 
 :::note
 
