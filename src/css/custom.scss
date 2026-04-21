@@ -45,7 +45,7 @@
   --ifm-feedback-success-bg: rgba(224, 242, 254, 0.8);
   --feedback-button-bg: #ffffff;
   --ifm-heading-margin-top: 1.2rem;
-  --ifm-shortcut-banner-background: #f3f3f3;
+  --ifm-shortcut-banner-background: #ebedf0;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -160,38 +160,30 @@ main .search-pop-trigger {
   position: relative;
   width: 48%;
   margin: 20px auto !important;
-  border: 0;
+  border: 2px solid;
   background: #fff;
   height: 60px;
   border-radius: 8px;
   padding: 0;
-  filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.12))
-          drop-shadow(0 1px 10px rgba(0, 0, 0, 0.14))
-          drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12))
-          drop-shadow(0 -1px 3px rgba(0, 0, 0, 0.1));
   svg {
     position: absolute;
     left: 17px;
     transform: scale(1.2);
     opacity: 0.6;
   }
-  &::after {
-    content: "Ctrl + K";
+  .shortCut {
+    display: block;
     position: absolute;
-    right: 17px;
-    font-size: .8rem;
+    right: 19px;
+    font-size: .75rem;
     color: var(--ifm-color-border);
     border: 1px solid var(--ifm-color-border);
     border-radius: 4px;
-    padding: 2px 4px;
+    padding: 2px 9px;
   }
 }
 [data-theme='dark'] main .search-pop-trigger {
   background: #333;
-  filter: drop-shadow(0 4px 5px rgba(255, 255, 255, 0.12))
-          drop-shadow(0 1px 10px rgba(255, 255, 255, 0.14))
-          drop-shadow(0 2px 4px rgba(255, 255, 255, 0.12))
-          drop-shadow(0 -1px 3px rgba(255, 255, 255, 0.1));
 }
 // index.js 페이지
 
@@ -313,6 +305,7 @@ ul.breadcrumbs {
   }
 }
 footer {
+  border-top: 2px solid #ddd;
   .container {
     display: flex;
     justify-content: space-between;

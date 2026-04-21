@@ -111,8 +111,8 @@
 }
 
 .product.grid .cardItem:hover {
-  outline: 2px solid var(--main-text-color);
-  transition: .2s;
+  outline: 2px solid #a42444;
+  transition: .6s;
   transform: scale(1.1);
   z-index: 500;
 }

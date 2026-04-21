@@ -18,6 +18,7 @@ import {
   useSearchBox,
 } from 'react-instantsearch';
 import {liteClient as algoliasearch} from 'algoliasearch/lite';
+import { isWindows, isMacOs, isMobile } from 'react-device-detect';
 import './styles.css';
 
 function getPropertyByPath(obj, path) {
@@ -487,6 +488,7 @@ export default function SearchPop() {
   if (!searchClient || !indexName) {
     return null;
   }
+  const shortCut = isMacOs ? '⌘K' : isWindows ? 'Ctrl+K' : isMobile ? '' : 'Ctrl+K';
 
   return (
     <>
@@ -505,6 +507,7 @@ export default function SearchPop() {
         aria-label={translate({id: 'theme.SearchPage.inputLabel'})}
       >
         <svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" fill="none" stroke-width="1.4"></circle><path d="m21 21-4.3-4.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <span className="shortCut">{shortCut}</span>
       </button>
 
       {isOpen &&
