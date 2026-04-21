@@ -43,6 +43,7 @@
     "proxy-agent": "^6.5.0",
     "raw-loader": "^4.0.2",
     "react": "^19.0.0",
+    "react-device-detect": "^2.2.3",
     "react-dom": "^19.0.0",
     "react-instantsearch": "^7.28.1",
     "react-magnifier": "^3.0.4",

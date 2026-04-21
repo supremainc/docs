@@ -21,7 +21,7 @@ function CardItem({img, title, url, height, desc, tags}) {
           <div className={styles.title}>
             <h3>{title}</h3>
             {(desc) && <p className={styles.desc} dangerouslySetInnerHTML={{__html: desc}} />}
-            {(tags) && <div className={styles.tags}>{tags.map((tag, idx) => <code key={idx}>{tag}</code>)}</div>}
+            {(tags) && <div className={styles.tags}>{tags.map((tag, idx) => <code key={idx} className={tag.replace(/\s/g, '').replace(/\d/g, 'n').replace('/', '').toLowerCase()}>{tag}</code>)}</div>}
           </div>
         }
       </div>
