@@ -1,0 +1,722 @@
+---
+id: system-management
+title: System Management
+description: Covers system prerequisites, Suprema device registration and configuration, Synergis Cloud Link assignment, and door hardware settings for Genetec Security Center integration.
+keywords: [ System Configuration, Device Registration, Door Configuration ]
+---
+
+## System Configuration
+
+### Prerequisites
+
+#### License
+
+1. Software license
+
+   1. Genetec 
+
+      * Security Center: 1ea.
+
+      * SDK Connection: GSC-1SDK-SUPREMA-READ (One license supports 2 connection).
+      
+         1. Config Tool login: 2ea
+
+         1. Security desk login: 1ea
+
+         1. Suprema extractor plugin: 1ea per **Genetec Security Center Server**
+
+         1. Suprema device plugin: 1ea per **Suprema device plugin**
+
+            :::info
+
+            * One device plugin supports up to 4 cloud links (256 Suprema devices), and you can add as many Suprema Device Plugin as you need.
+
+            * Needs total 3 GSC-1SDK-SUPREMA-READ per Server.
+
+            :::
+
+   1. Suprema
+
+      * Plugin license: INT_GEN_GSC
+
+1. Device license
+
+   1. Genetec
+
+      * GSC-Sy-X-1R(E): 1ea per suprema device assigned to door as reader      
+
+   1. Suprema
+
+      * Only devices that it's ID is registered in Server license can be registered in Plugin.
+
+      * Sku: Device model - GEN.
+
+#### Database
+
+1. Permission for SQL database
+
+   To ensure proper operation of the Plugin (Device Plugin and Extractor DB), please grant the SQL account the following permissions:
+
+   1. Server roles:
+
+      * db_creator
+
+      * processadmin
+
+      * public
+
+   1. Database roles:
+
+      * db_backupoperator
+
+      * db_datareader
+
+      * db_datawriter
+
+1. Database size requirements
+
+   The required database storage capacity varies depending on the number of users enrolled with biometric data. When face templates are enrolled, the Suprema Extractor Plugin generates and stores the corresponding templates in its Database.
+
+   :::note
+   
+   * Each face template requires approximately 104 KB of database space.
+
+   * Ensure that sufficient storage capacity is allocated based on the expected number of biometric users.
+
+   :::
+
+   <Image src='/img/integration/genetec/database-size-requirements.png' alone />
+
+#### RIO protocol
+
+To ensure proper operation of the Plugin, please enable RIO protocol for Synergis Cloud Link or Softwire.
+
+##### Process
+
+1. Enter the following URL into your browser.
+
+   > `https://[Unit IP]/Features/DuiRIO/Enabled/Set?value=true`
+
+   <Image src='/img/integration/genetec/rio-protocol-login.png' alone />
+
+1. Login to Synergis Cloud Link or Softwire.
+
+1. Click a URL `http://[IPaddress]/Features/DuiRIO/Enabled/Set?value=true`.
+
+   <Image src='/img/integration/genetec/rio-protocol-login-successful.png' alone />
+
+   :::note
+   
+   When the RIO protocol is enabled, the **RIO** tab becomes available on the **Hardware** page under **Config Tool** → **Access Control** → **Cloud Link**. 
+
+   <Image src='/img/integration/genetec/rio-protocol-hardware.png' width={800} alone />
+
+   :::
+
+#### Profile image quality setting
+
+If you'd like to **extract face templates from cardholder profile images** in GSC, please adjust picture size to ensure picture quality.
+
+* Path: **Config Tool** → **Access Control** → **General settings**
+
+   <Image src='/img/integration/genetec/profile-image-quality-setting.png' width={600} alone />
+
+#### Device setting
+
+1. Removing all users and logs from devices.
+
+1. Factory reset devices.
+
+1. Set User ID type as Alphanumeric.
+
+   :::info
+
+   **Default IP and PW for device admin**
+
+   * ID: su
+
+   * PW: 1234
+   
+   You can change PW from **Config Tool** → **Suprema Plugin Configuration** → **Superadmin Credential** page.
+
+   :::
+
+1. Network setting.
+
+   * Supports DHCP.
+
+   * Network settings required according to site policy.
+
+1. User ID type setting.
+
+   The user ID type must be set to alphanumeric before connecting the device to the Suprema plugin.
+
+## Device Registration
+
+1. In the **Config Tool**, click the **Plugins** under **Tasks**.
+
+   <Image src='/img/integration/genetec/config-tool-tasks-plugins.png' width={800} alone />
+
+1. Click the **Suprema Device Plugin**.
+
+   <Image src='/img/integration/genetec/suprema-device-plugin.png' alone />
+
+1. Go to **Device Management** tab.
+
+   <Image src='/img/integration/genetec/device-management1.png' alone />
+
+1. Click the **Search Device** button. All available devices will appear.
+
+   If Device Communication Mode is set to Device To Server, please click the Refresh List button in the pane below.
+
+   <Image src='/img/integration/genetec/device-management2.png' width={600} alone />
+
+1. Select the device to add by checking the **Select** box, and click the **Add Devices** button. To register all devices, click the Add **All Devices** button.
+
+   <Image src='/img/integration/genetec/device-management3.png' width={600} alone />
+
+## View the Device Sync Information
+
+1. In the **Config Tool**, click the **Plugins** under **Tasks**.
+
+   <Image src='/img/integration/genetec/config-tool-tasks-plugins.png' width={800} alone />
+
+1. Click the **Suprema Device Plugin**.
+
+   <Image src='/img/integration/genetec/suprema-device-plugin.png' alone />
+
+1. Go to **Device Sync Information** tab.
+
+   <Image src='/img/integration/genetec/device-sync-information1.png' alone />
+
+1. Synchronization information of connected Suprema devices can be checked.
+
+   <Image src='/img/integration/genetec/device-sync-information2.png' width={800} alone />
+
+   <Image src='/img/integration/genetec/device-sync-information3.png' width={800} alone />
+
+   <div className='overflow-x cols3--10-30-60'>
+   | No. | Item | Description |
+   | :--: | -- | -- |
+   | 1 | **Device ID** | Displays the Suprema device ID. |
+   | 2 | **Device Name** | Displays the Suprema device name. |
+   | 3 | **Online Status** | Displays the network status of the device.<br/>- **True** / **False** |
+   | 4 | **Sync Status** | Displays the synchronization status of the device.<br/>-	**Idle** /Cache loading/ Biometric downloading/ **Syncing** |
+   | 5 | **Device Model** | Displays the Suprema device model. |
+   | 6 | **IP Address** | Displays the Suprema device IP Address. |
+   | 7 | **Device Port** | Displays the Suprema device port. |
+   | 8 | **Device Firmware Version** | Displays the Suprema device firmware version. |
+   | 9 | **Failed Users** | Allows checking users who failed to synchronize. |
+   | 10 | **Doors (syncing / failed / total)** | Displays the synchronization status of the door. |
+   | 11 | **Schedules (syncing / failed / total)** | Displays the synchronization status of the schedule. |
+   | 12 | **Access Levels (syncing / failed / total)** | Displays the synchronization status of the access level. |
+   | 13 | **Access Groups (syncing / failed / total)** | Displays the synchronization status of the access group. |
+   | 14 | **Users (syncing / failed / total)** | Displays the synchronization status of the cardholder. |
+   | 15 | **Last Trigger Time** | The time when synchronization with the device was last triggered. |
+   | 16 | **Last Success Time** | The time when synchronization with the device was last completed successfully. |
+   </div>
+
+   :::info
+
+   The values displayed for each synchronization status are as follows:
+
+   * **syncing**: Number of items currently being synchronized with the device.
+
+   * **failed**: Number of items that failed to synchronize with the device.
+
+   * **total**: Number of items that have been successfully synchronized.
+
+   :::
+
+## Editing Device Settings and Information
+
+Settings and information of registered devices can be edited.
+
+1. In the **Config Tool**, click the **Plugins** under **Tasks**.
+
+   <Image src='/img/integration/genetec/config-tool-tasks-plugins.png' width={800} alone />
+
+1. Open the left arrow of the **Suprema Device Plugin** and select a registered device. The **Device Settings** area will appear.
+
+   <Image src='/img/integration/genetec/suprema-device-plugin-settings.png' alone />
+
+1. Set the desired options, then click the **Apply** button at the bottom to apply the edited settings.
+
+## Device Settings
+
+### Information
+
+You can enter or edit the name and the group of a device. If a new firmware version is available, you can upgrade to it.
+
+<Image src='/img/integration/genetec/device-settings-information.png' width={650} alone />
+
+<div className='overflow-x cols3--10-30-60'>
+| No. | Item | Description |
+| :--: | -- | -- |
+| <Num num='1' /> | **Name** | Enter a device name. |
+| <Num num='2' /> | **Description** | View the product name, ID, and IP. |
+| <Num num='3' /> | **Device ID** | View the device ID. |
+| <Num num='4' /> | **Firmware Version** | Click **Upgrade** to install a new firmware version. |
+| <Num num='5' /> | **Kernel Version** | View the kernel version. |
+| <Num num='6' /> | **Time Zone** | Set the time zone of the device. |
+| <Num num='7' /> | **Device Type** | View the device type. |
+| <Num num='8' /> | **Product Name** | View the model name. |
+| <Num num='9' /> | **Hardware Version** | View the hardware version. |
+| <Num num='10' /> | **Time Synchronization with Server** | Select the option to synchronize the time information of the device with the server. |
+| <Num num='11' /> | **Display Date** | View the displayed time. |
+| <Num num='12' /> | **Date Format** | Select a date format. |
+| <Num num='13' /> | **Get Time** | Click the button to fetch the time set in the device. |
+</div>
+
+### Network
+
+You can configure the network connection settings of the device.
+
+<Image src='/img/integration/genetec/device-settings-network.png' width={650} alone />
+
+<Table className='cols3--10-30-60 first--column--center'>
+<Thead>
+
+<Th>No.</Th>
+<Th>Item</Th>
+<Th>Description</Th>
+
+</Thead>
+<Tbody>
+<Row>
+
+<Td><Num num='1' /></Td>
+<Td>**TCP/IP**</Td>
+<Td>
+
+You can configure the TCP/IP connection settings of the device.
+
+* **Use DHCP**: Select this option to allow the device to use a dynamic IP address. If this option is selected, network settings cannot be entered.
+
+* **IP Address**, **Subnet Mask**, **Gateway**: Enter network settings of the device.
+
+* **Device Port**: Enter a port to be used by the device.
+
+* **DNS Server**: Enter a DNS server address.
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='2' /></Td>
+<Td>**Server**</Td>
+<Td>
+
+You can enter connection settings to use in the server mode.
+
+* **Device → Server Connection**: Select this option to configure the settings for connecting to the devices. If this option is selected, server network settings can be entered.
+
+* **Server Address**: Enter the IP address or domain name of the server.
+
+* **Server Port**: Enter the port number of the server.
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='3' /></Td>
+<Td>**Serial**</Td>
+<Td>
+
+You can configure the connection mode, and baud rate of devices connected over RS-485.
+
+* **RS-485**: Set a RS-485 mode.
+
+* **Baud Rate**: Set a baud rate of the RS-485 connection.
+
+</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+### Authentication
+
+You can configure the user authentication settings of the device.
+
+#### Face Authentication Device
+
+<Image src='/img/integration/genetec/device-settings-authentication1.png' width={850} alone />
+
+<Table className='cols3--10-30-60 first--column--center'>
+<Thead>
+
+<Th>No.</Th>
+<Th>Item</Th>
+<Th>Description</Th>
+
+</Thead>
+<Tbody>
+<Row>
+
+<Td><Num num='1' /></Td>
+<Td>**Auth Mode**</Td>
+<Td>
+
+You can configure the authentication modes of the device. Use any combinations of fingerprint, ID, card, PIN and face as authentication modes.
+
+Click **+Add** and create an authentication mode by dragging and dropping available options.
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='2' /></Td>
+<Td>**Auth Timeout**</Td>
+<Td>
+
+When using a combination of multiple credentials in **Auth Mode**, the system waits for this length of time to authenticate the second credential.
+
+Set a timeout period for authenticating the second credential after authenticating the first credential. If the second credential is not authenticated within this time, the authentication fails.
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='3' /></Td>
+<Td>**Full Access**</Td>
+<Td>
+
+You can grant full access to users registered within the device without setting any access groups.
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='4' /></Td>
+<Td>**Face**</Td>
+<Td>
+
+You can configure the detail settings concerning face authentication.
+
+* **1:N Security Level**: You can set a security level to use for face authentication. The higher the security level is set, the false rejection rate (FRR) gets higher, but the false acceptance rate (FAR) gets lower.
+
+* **Enrollment Time**: If a face is not registered during the set time when registering a user’s face, the face registration will be canceled.
+
+* **Motion Sensor**: Set the sensitivity for detecting motion near the device.
+
+* **Face Detect Setting**: Set the environment for recognizing the user’s face during face authentication.
+
+   * **Maximum Head Pose Angle**: Set maximum angle of head rotation.
+
+   * **Detection Distance**: Set the minimum and maximum detection distance.
+
+   * **Wide Search**: Set to **ON**, search for a face in the entire camera image.
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='5' /></Td>
+<Td>**Use Suprema Handler**</Td>
+<Td>
+
+This option enables or disables RIO communication between the Suprema device and the Cloud Link.
+
+* **Enable**: Events generated from the Suprema device are sent to the Cloud Link through the Plugin.
+
+* **Disable**: Events generated from the Suprema device are not sent to the Plugin.
+
+Disable this option when the **Suprema device is used as a reader connected to a Mercury controller**.
+
+</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+#### Fingerprint Authentication Device
+
+<Image src='/img/integration/genetec/device-settings-authentication2.png' width={700} alone />
+
+<Table className='cols3--10-30-60 first--column--center'>
+<Thead>
+
+<Th>No.</Th>
+<Th>Item</Th>
+<Th>Description</Th>
+
+</Thead>
+<Tbody>
+<Row>
+
+<Td><Num num='1' /></Td>
+<Td>**Auth Mode**</Td>
+<Td>
+
+You can configure the authentication modes of the device. Use any combinations of fingerprint, ID, card, PIN and face as authentication modes.
+
+Click **+Add** and create an authentication mode by dragging and dropping available options.
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='2' /></Td>
+<Td>**Auth Timeout**</Td>
+<Td>
+
+When using a combination of multiple credentials in **Auth Mode**, the system waits for this length of time to authenticate the second credential.
+
+Set a timeout period for authenticating the second credential after authenticating the first credential. If the second credential is not authenticated within this time, the authentication fails.
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='3' /></Td>
+<Td>**Full Access**</Td>
+<Td>
+
+You can grant full access to users registered within the device without setting any access groups.
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='4' /></Td>
+<Td>**Fingerprint**</Td>
+<Td>
+
+You can configure the detail settings concerning fingerprint authentication.
+
+* **1:N Security Level**: You can set a security level to use for fingerprint authentication. The higher the security level is set, the false rejection rate (FRR) gets higher, but the false acceptance rate (FAR) gets lower.
+
+* **Scan Timeout**: If a finger is not registered during the set time when registering a user’s finger, the finger registration will be canceled.
+
+* **Sensor Sensitivity**:  Set the sensitivity of the fingerprint recognition sensor. Set the sensitivity higher to obtain precise fingerprint information.
+
+* **1:N Fast Mode**: You can set the speed of fingerprint authentication. Selecting **Auto** sets the authentication speed according to the total number of fingerprint templates enrolled on the device.
+
+* **Template Format**: You can check the configured fingerprint template format.
+
+* **Matching Timeout**: Set the timeout for fingerprint matching. If authentication is not completed within the specified time, it will fail.
+
+* **Fingerprint LFD**: Set the level for [fake fingerprint](../../reference/glossary#fake_fp) detection. Higher levels for fake fingerprint detection may also increase rejection rates for actual people’s fingerprints.
+
+* **Sensor Mode**: Set the operating mode of the fingerprint sensor.
+
+   * **Auto On**: The fingerprint sensor turns on by recognizing the user's finger.
+
+   * **Always On**: The fingerprint sensor remains always on.
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='5' /></Td>
+<Td>**Use Suprema Handler**</Td>
+<Td>
+
+This option enables or disables RIO communication between the Suprema device and the Cloud Link.
+
+* **Enable**: Events generated from the Suprema device are sent to the Cloud Link through the Plugin.
+
+* **Disable**: Events generated from the Suprema device are not sent to the Plugin.
+
+Disable this option when the **Suprema device is used as a reader connected to a Mercury controller**.
+
+</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+### Advanced
+
+You can set the display/sound and wiegand.
+
+<Image src='/img/integration/genetec/device-settings-advanced.png' width={750} alone />
+
+<div className='overflow-x cols3--10-30-60'>
+| No. | Item | Description |
+| :--: | -- | -- |
+| <Num num='1' /> | **Language** | Sets the display language of the device. |
+| <Num num='2' /> | **Device Volume** | Controls the device’s default volume. |
+| <Num num='3' /> | **Menu Timeout** | Sets the timeout for the menu screen. |
+| <Num num='4' /> | **Intercom Speaker Volume** | Sets the speaker volume when using the Intercom function. |
+| <Num num='5' /> | **Intercom Microphone Volume** | Sets the microphone volume when using the Intercom function. |
+| <Num num='6' /> | **Backlight Timeout** | Sets the timeout for the backlight. |
+| <Num num='7' /> | **Msg. Timeout** | Sets the timeout period for various messages to disappear automatically. |
+| <Num num='8' /> | **Screen Saver** | Sets this option to use the screen saver feature. It reduces unnecessary energy consumption by lowering the brightness of the LCD screen when the device is not in use. |
+| <Num num='9' /> | **Use Voice** | Enables voice guidance. |
+| <Num num='10' /> | **Sound** | Configures the sound effect for boot, authentication success, and authentication failure events.<br/>Click **Find** and select a \*.wav file (less than 500 KB). |
+| <Num num='11' /> | **Input/Output** | You can select input/output mode. |
+| <Num num='12' /> | **Wiegand I/p Format** | You can set a format for Wiegand. |
+| <Num num='13' /> | **Output Mode** | You can set the Wiegand signal output mode. If it is set to **Normal**, a card will be scanned in the set Wiegand format. If it is set to **ByPass**, CSN will be sent regardless of Wiegand authentication. **ByPass** should be set when using the device without an entrance door control function.<br/>If it is set to **Normal** mode, it is possible to set **Fail Code**, and select a value to be transmitted when Wiegand card authentication fails. |
+| <Num num='14' /> | **Pulse Width(μs)** | You can set the pulse width of the Wiegand signal. |
+| <Num num='15' /> | **Pulse Interval(μs)** | You can set the pulse interval of the Wiegand signal. |
+| <Num num='16' /> | **Output Info** | You can select the information output to the device when the user authenticates. |
+</div>
+
+### Mask
+
+You can set the detailed settings of mask detection.
+
+Face authentication devices can detect masks and restrict access to users without masks.
+
+<Image src='/img/integration/genetec/device-settings-mask.png' width={450} alone />
+
+<Table className='cols3--10-30-60 first--column--center'>
+<Thead>
+
+<Th>No.</Th>
+<Th>Item</Th>
+<Th>Description</Th>
+
+</Thead>
+<Tbody>
+<Row>
+
+<Td><Num num='1' /></Td>
+<Td>**Mask Detection**</Td>
+<Td>
+
+You can set whether to use mask detection or not. If you select **Use (Deny access when failed to detect mask)**, it refuses authentication of users who are not wearing a mask and saves event logs. If you select **Use (Allow access after leaving log when failed to detect mask)** users who are not wearing a mask can authenticate but event logs still be saved.
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='2' /></Td>
+<Td>**Mask Detect Level**</Td>
+<Td>You can set sensitivity for mask detection.</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='3' /></Td>
+<Td>**Check Mode**</Td>
+<Td>
+
+* **Check after authentication**: Authenticate and then detect whether the user is wearing a mask.
+
+* **Check before authentication**: Detect whether the user is wearing a mask and then authenticate. This mode does not attempt to authenticate a user’s identity if they do not wear masks.
+
+* **Check without authentication**: Detect whether a user is wearing a mask without authentication. When this mode is activated, any user wearing a mask can access it regardless of authentication.
+
+</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+### Intercom
+
+You can set the detailed settings of SIP Intercom.
+
+<Image src='/img/integration/genetec/device-settings-intercom.png' width={750} alone />
+
+<div className='overflow-x cols3--10-30-60'>
+| No. | Item | Description |
+| :--: | -- | -- |
+| <Num num='1' /> | **SIP Server Address** | Enter SIP server address. |
+| <Num num='2' /> | **SIP Server Port** | Enter SIP server port. |
+| <Num num='3' /> | **SIP Username** | Enter username of your SIP account. |
+| <Num num='4' /> | **Password** | Enter password of your SIP account. |
+| <Num num='5' /> | **Authorization ID** | Enter authorization ID of your SIP account. |
+| <Num num='6' /> | **Registration Duration(sec)** | Enter Registration Duration in seconds. The device (SIP endpoint) tries to register to the SIP server every set Registration Duration.<br/>- Registration Duration can be set between 60 to 600 secs. |
+| <Num num='7' /> | **Open Door Button(DTMF)** | Set a button to open the door on the phone. |
+| <Num num='8' /> | **Outbound Proxy Server** | If your SIP service has a separate (outbound) proxy server, set this to **Use**. |
+| <Num num='9' /> | **Outbound Proxy Server Address** | Enter the outbound proxy server address. |
+| <Num num='10' /> | **Outbound Proxy Server Port** | Enter the outbound proxy server port. |
+| <Num num='11' /> | **Display Extension Number** | If you mind the device displaying extension numbers on the screen, set this to **Not Use**. |
+| <Num num='12' /> | **Extension Number** | Register extension numbers up to 128. Click **Edit** to add or delete.<br/>- **Add**: Add an extension number.<br/>- **Delete**: Delete an extension number. |
+</div>
+
+## Assign Device to Cloud Link
+
+1. In the **Config Tool**, click the **Access Control** under **Tasks**.
+
+   <Image src='/img/integration/genetec/config-tool-tasks-access-control.png' width={800} alone />
+
+1. Go to **Manage Suprema Devices** tab at the top of the screen.
+
+   <Image src='/img/integration/genetec/access-control-manage-suprema-devices1.png' alone />
+
+1. Enter the **Cloud Link Host** (IP address), **Cloud Link Username** (ID), and **Cloud Link Password**, and then click the **Validate Login** button.
+
+   <Image src='/img/integration/genetec/manage-suprema-devices2.png' alone />
+
+1. Click the **View Devices To Add** button.
+
+   <Image src='/img/integration/genetec/manage-suprema-devices3.png' alone />
+
+1. Select the device to assign by checking the **Select** box, and click the **Assign** or **Assign Selected** button. To assign all devices, click the **Assign All** button.
+
+   <Image src='/img/integration/genetec/manage-suprema-devices4.png' width={400} alone />
+
+## Door Configuration
+
+1. In the **Config Tool**, click the **Area view** under **Tasks**.
+
+   <Image src='/img/integration/genetec/config-tool-tasks-area-view.png' width={800} alone />
+
+1. Select the door and go to the **Hardware** tab.
+
+1. Assign Suprema devices to **Reader**, **Request to exit**, and **Entry sensor**.
+
+   <Image src='/img/integration/genetec/area-view-hardware.png' width={800} alone />
+
+:::note
+
+**Input Configuration Limitation**
+
+In Suprema architecture, **input types (e.g., REX, Door Contact)** can only be configured **after the device is mapped to a Door**.
+
+Root Cause:
+
+* **Suprema SDK requires inputs to be assigned at the Door level**, not at the device level.
+
+* Therefore, there is **no way to pre-configure input types before assigning the device to a Door** in Genetec.
+
+---
+
+<Image src='/img/common/ico-caution.svg' ico /> **Caution**
+
+Any input type changes made via:
+
+**Config Tool** → **Access Control** → **Cloud Link** → **Peripherals Tab** will **not apply to the Suprema device** directly.
+
+---
+
+**Plugin’s Auto Assignment Logic**
+
+<div className='overflow-x table-fixed'>
+| Input Number | Input Type Assigned by Plugin |
+| :--: | :--: |
+| Odd Numbers | NO (Normally Open) |
+| Even Numbers | NC (Normally Closed) |
+</div>
+
+This automatic assignment helps ensure compatibility when mapping inputs post-Door configuration.
+
+:::
