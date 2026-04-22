@@ -55,6 +55,7 @@ files: [
       "/docs/common/_zlib-license.mdx",
       "/docs/reference/**/smartcardissue.mdx",
       "/docs/*/*/release-notes/*.mdx",
+      "/docs/integration/**/*.mdx",
       # "/docs/device/**/*.mdx",
       # "/docs/how-to/*.mdx",
       # "/docs/platform/**/*.mdx",
