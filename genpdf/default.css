@@ -507,7 +507,6 @@ details.deviceInfo summary, details.faq summary {
 .doc-content details.faqs summary {
   margin-left: -24px;
   font-size: 11pt;
-  border-bottom: .5pt solid;
   padding-bottom: 15px;
   padding-left: 24px;
   display: block;
