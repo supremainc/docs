@@ -14,13 +14,13 @@ If you want to upgrade only middleware you just need to follow the steps shown b
 
 :::info
 
-If you are upgrading middleware to V1.8.3, Please refer - [Create Migration Manually](#create-migration-manually).
+If you are upgrading middleware to V1.8.3, please refer: [Create Migration Manually](#create-migration-manually).
 
 :::
 
 <Image src='/img/integration/gallagher/setup1-1.png' alone />
 
-**Delete the previous version setup.vbs - shortcut**
+Delete the previous version `setup.vbs - Shortcut`.
 
 <Image src='/img/integration/gallagher/setup1-2.png' alone />
 
@@ -40,7 +40,7 @@ The default path would be: `C:\Program Files\Suprema Integration with Gallagher\
 
 :::
 
-Now **paste** the files into the new version of suprema integration with `Gallagher V(new version)\files`, as mentioned above if you are upgrading from 1.8.0 or more you will need to cut 4 file and below image show the image that are pasted to new version with 4 files,so in case if you dont have 4 files just paste 2 files from old version to new version.
+Now **paste** the files into the new version of suprema integration with `Gallagher V(new version)\files`, as mentioned above if you are upgrading from 1.8.0 or more you will need to cut 4 file and below image show the image that are pasted to new version with 4 files, so in case if you dont have 4 files just paste 2 files from old version to new version.
 
 <Image src='/img/integration/gallagher/setup1-5.png' alone />
 
@@ -57,17 +57,17 @@ Go Run <Kbd>Win + R</Kbd> and paste it on `shell:startup` and after that restart
 
 First, make sure that the shortcut of the setup.vbs file is present on the `shell:startup`. If setup.vbs is not present please paste it to `shell:startup` and restart your system.
 
-Still, the middleware is not getting started automatically then check for the environment variable, you can access it by pressing <Start/> → Edit the system environment variables → Click the **Advanced** tab → **Environment variables** button near the bottom of that tab.
+Still, the middleware is not getting started automatically then check for the environment variable, you can access it by pressing <Start/> → Edit the system environment variables → click the **Advanced** tab → **Environment variables** button near the bottom of that tab.
 
 In the *Environment Variables* window (pictured below), select the **Path** variable in the *System Variables* section and click the **Edit** button.
 
 <Image src='/img/integration/gallagher/setup2-1.png' alone />
 
-The edit environment variable window will be open(pictured below), Click on the **New** button and add the `C:\Program Files\nodejs\` path and press the **OK** button.
+The edit environment variable window will be open (pictured below), click on the **New** button and add the `C:\Program Files\nodejs\` path and press the **OK** button.
 
 <Image src='/img/integration/gallagher/setup2-2.png' alone />
 
-Press the **OK** button for the Environment Variables window then press the **OK** button for the system properties.
+Press the **OK** button for the *Environment Variables* window then press the **OK** button for the system properties.
 
 :::info
 
@@ -94,7 +94,7 @@ So below are the steps to uninstall the middleware prerequisites,
 
 1. Now search for **OpenSSL**, Right click on that and **press** uninstall.
 
-1. It asked to uninstall OpenSSL, Press **Yes** and it started uninstalling.
+1. It asked to uninstall OpenSSL, press **Yes** and it started uninstalling.
 
 1. Now search for **PgAdmin 4**, Right-click on that, and **press** uninstall.
 
@@ -104,13 +104,13 @@ So below are the steps to uninstall the middleware prerequisites,
 
    :::
 
-1. It asked to uninstall PgAdmin 4, Press **Yes** and it started uninstalling.
+1. It asked to uninstall PgAdmin 4, press **Yes** and it started uninstalling.
 
 1. Now **search** for PostgreSQL 14, Right click on that and **press** uninstall.
 
-1. It asked to uninstall PostgreSQL 14, Press **Yes** and it started uninstalling.
+1. It asked to uninstall PostgreSQL 14, press **Yes** and it started uninstalling.
 
-1. When Uninstallation mode is open, **Select** the Entire application Radio Box and Press **Next**.
+1. When Uninstallation mode is open, **Select** the Entire application Radio Box and press **Next**.
 
    <Image src='/img/integration/gallagher/setup3-2.png' alone />
 
@@ -152,7 +152,7 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
    <Image src='/img/integration/gallagher/setup5-1.png' alone />
 
-1. **Copy** the thumbprint and **Paste the Client Certificate Thumbprint key** into the Client Certificate thumbprint section **Press** the **OK** button and also **Close** the Services and Workstations.
+1. **Copy** the thumbprint and **Paste the Client Certificate Thumbprint key** into the Client Certificate thumbprint section **press** the **OK** button and also **Close** the Services and Workstations.
 
    <Image src='/img/integration/gallagher/setup5-2.png' alone />
 
@@ -180,7 +180,7 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
    <Image src='/img/integration/gallagher/ssl-certificate-generation5.png' alone />
 
-1. Go to **Details** and **click** on **copy to file**.
+1. Go to **Details** and **click** on **Copy to File**.
 
    <Image src='/img/integration/gallagher/ssl-certificate-generation6.png' alone />
 
@@ -196,7 +196,7 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
    <Image src='/img/integration/gallagher/ssl-certificate-generation8.png' alone />
 
-1. Now you will see the below screen check the password checkbox and **set** the password as the below password: **G@ll@gher**
+1. Now you will see the below screen check the password checkbox and **set** the password as the below password: <Cmd>G@ll@gher</Cmd>
 
    <Image src='/img/integration/gallagher/ssl-certificate-generation9.png' alone />
 
@@ -266,14 +266,14 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
       :::
 
-1. Next **copy** both file **key.pem and cert.pem** and paste that at below path `C:\Program Files\Suprema Integration with Gallagher\Suprema Integration with Gallagher v(lateast version)\files`
+1. Next **copy** both file **key.pem and cert.pem** and paste that at below path `C:\Program Files\Suprema Integration with Gallagher\Suprema Integration with Gallagher v(lateast version)\files`.
 
    <Image src='/img/integration/gallagher/ssl-certificate-generation21.png' alone />
 
 <details className='faqs'>
 <summary>**Upgrading the middleware from EXE application directly.**</summary>
 
-1. If you are upgrading the version, **Press** OK on pop-up.
+1. If you are upgrading the version, **press** OK on pop-up.
 
 1. Then **press** Update button.
 
@@ -281,7 +281,7 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
 1. It will start upgrading the middleware.
 
-1. After Successfully installing the middleware you need **Press** finish button.
+1. After Successfully installing the middleware you need **press** Finish button.
 
    :::info
 
@@ -298,7 +298,7 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
 1. **Press** windows <Start/> button, **Search**, **and open** Add or Remove programs.
 
-1. Inside the Apps & features search list, **search** for suprema integration with the Gallagher version, select the version, and **click on** Uninstall it shows a small pop-up **Press** Uninstall another time.
+1. Inside the Apps & features search list, **search** for suprema integration with the Gallagher version, select the version, and **click on** Uninstall it shows a small pop-up **press** Uninstall another time.
 
    <Image src='/img/integration/gallagher/middleware-uninstall-from-exe1.png' alone />
 
@@ -356,7 +356,7 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 </details>
 
 <details className='faqs'>
-<summary>**There is an error on the log-in page stating that “LAN is disconnected or IP is changed for (IP Address).**</summary>
+<summary id="login-lan-disconnected-error">**There is an error on the log-in page stating that "LAN is disconnected or IP is changed for (IP Address)".**</summary>
 
 * To solve this issue, please check the below troubleshooting scenarios:
 
@@ -364,11 +364,11 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
    1. Check If the IP has not changed and if the IP address is the same for the BioStar 2 Server you have entered the wrong IP Address.
 
-* If you receive the error **LAN is disconnected or IP is changed for (IP Address)** on the login screen, you must **Press** the **click here to reset** **button** in the middleware.
+* If you receive the error **LAN is disconnected or IP is changed for (IP Address)** on the login screen, you must **press** the **click here to Reset** **button** in the middleware.
 
    <Image src='/img/integration/gallagher/login-error-lan-disconnected-ip-changed1.png' alone />
 
-   It asks for permission to reset the middleware, **Press** the Yes **button**.
+   It asks for permission to reset the middleware, **press** the Yes **button**.
 
    <Image src='/img/integration/gallagher/login-error-lan-disconnected-ip-changed2.png' alone />
 
@@ -395,7 +395,7 @@ If you are using Windows 10, open File Manager and **click on** View and **selec
 
    <Image src='/img/integration/gallagher/middleware-lan-disconnected-ip-error3.png' alone />
 
-   After **pressing** the submit **button** you get the success message for IP change and **Press** the Exit setting **button** to leave the setting screen.
+   After **pressing** the submit **button** you get the success message for IP change and **press** the Exit setting **button** to leave the setting screen.
 
 </details>
 
@@ -435,17 +435,17 @@ So for this inside the server2 which is the BioStar 2 server we have set the Pro
 
 Server 1 has Gallagher and Middleware within,
 
-* IP Address:192.168.1.68
+* IP Address: 192.168.1.68
 
-* Subnet mask:255.255.255.0
+* Subnet mask: 255.255.255.0
 
 * Default Gateway: 162.168.1.1
 
 Server 2 has BioStar 2 within,
 
-* IP Address:10.10.104.13
+* IP Address: 10.10.104.13
 
-* Subnet mask:255.255.254.0
+* Subnet mask: 255.255.254.0
 
 * Default Gateway: 10.10.104.1
 
@@ -497,7 +497,7 @@ The below steps need to run on the BioStar 2 server.
 
 1. Configure Scope:
 
-   * In the Scope window, you can specify which IP addresses are allowed to send ICMP traffic to the server. So local IP addresses leave it as it is and for remote IP addresses fill in the IP address of the Gallagher&Middleware server, now choose These IP addresses: Click on the Add button then in the IP address wizard enter the IP Address of Gallagher&Middleware server, and press OK. please refer below image for reference.
+   * In the Scope window, you can specify which IP addresses are allowed to send ICMP traffic to the server. So local IP addresses leave it as it is and for remote IP addresses fill in the IP address of the Gallagher&Middleware server, now choose These IP addresses: Click on the Add button then in the IP address wizard enter the IP Address of Gallagher&Middleware server, and press OK. Please refer below image for reference.
 
    <Image src='/img/integration/gallagher/middleware-port-ip-config-inbound-rules2.png' alone />
 
@@ -529,7 +529,7 @@ If you facing the error where your IP is changed, check the following link: http
 </details>
 
 <details className='faqs'>
-<summary>**If a thumbprint is not generated while running the EXE file.**</summary>
+<summary id="thumbprint-not-generated">**If a thumbprint is not generated while running the EXE file.**</summary>
 
 If you have installed middleware and a thumbprint is not generated then try again running our EXE file with administrator rights, to do this follow the below instructions.
 
@@ -554,11 +554,11 @@ To create the migration manually Please follow the steps below:
 
 1. Go to the Pgadmin. It asks for the password, Write The password **G@ll@gher** as it default password we set during the installation.
 
-1. Now **Click on** the Servers, If it asks for the password use the same **G@ll@gher** as Password, Now **click on** the Databases and **Expand** the Suprema → Schemas → public → Tables. Now **select** the credentials table.
+1. Now **click on** the Servers, If it asks for the password use the same **G@ll@gher** as Password, Now **click on** the Databases and **Expand** the Suprema → Schemas → public → Tables. Now **select** the credentials table.
 
    <Image src='/img/integration/gallagher/create-migration-manually1.png' alone />
 
-1. Now **Right Click on** the credentials table, and **select** the Properties option from the list.
+1. Now **Right click on** the credentials table, and **select** the Properties option from the list.
 
    <Image src='/img/integration/gallagher/create-migration-manually2.png' alone />
 
@@ -570,7 +570,7 @@ To create the migration manually Please follow the steps below:
 
    <Image src='/img/integration/gallagher/create-migration-manually4.png' alone />
 
-1. Now **select** the credentials table, and **Click on** the View Data button.
+1. Now **select** the credentials table, and **click on** the View Data button.
 
    <Image src='/img/integration/gallagher/create-migration-manually5.png' alone />
 
@@ -578,11 +578,11 @@ To create the migration manually Please follow the steps below:
 
    <Image src='/img/integration/gallagher/create-migration-manually6.png' alone />
 
-1. Inside the pop-up write `https://[YOUR-HOST/SYSTEM-NAME]/api` and **Press** OK.
+1. Inside the pop-up write `https://[YOUR-HOST/SYSTEM-NAME]/api` and **press** OK.
 
    <Image src='/img/integration/gallagher/create-migration-manually7.png' alone />
 
-1. Now **Press** <Kbd>F6</Kbd> to save the changes.
+1. Now **press** <Kbd>F6</Kbd> to save the changes.
 
 </details>
 
