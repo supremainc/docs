@@ -101,6 +101,7 @@ export const svgComponentsMap = {
   IcNotsync: '/static/img/menus/ico-notsync.svg',
   IcPause: '/static/img/menus/ico-pause.svg',
   IcPlay: '/static/img/menus/ico-play.svg',
+  IcQuestion: '/static/img/menus/ico-question.svg',
   IcRCdone: '/static/img/menus/ico-app-rollcall-done.svg',
   IcRCinfo: '/static/img/menus/ico-app-rollcall-info.svg',
   IcRCmemo: '/static/img/menus/ico-app-rollcall-memo.svg',

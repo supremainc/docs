@@ -260,7 +260,7 @@ function generateCoverHTML(params) {
             margin-bottom: 23px;
         }
         .title h1.small {
-            font-size: 37pt;
+            font-size: 34pt;
             line-height: 1.1;
         }
         
@@ -348,7 +348,7 @@ function generateCoverHTML(params) {
 <body>
     <div class="${coverpageClass}">
         <div class="title">
-            <h1${title.length > 15 ? ' class="small"' : ''}>${title}</h1>
+            <h1${title.length > 20 ? ' class="small"' : ''}>${title}</h1>
             <div class="subtitle">${processedSubtitle}</div>
             <div class="ver">${processedVersion}</div>
             <div class="lang">${langCover}</div>
