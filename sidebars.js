@@ -318,6 +318,8 @@ function createSidebars(preview) {
           items: [
             'platform/biostar_air/biostar-air-partner-portal-detailed-use',
             'platform/biostar_air/federated-sites',
+            'platform/biostar_air/technician-access',
+            'platform/biostar_air/assign-technician',
             {
               type: 'category',
               label: '하드웨어 설치하기',
