@@ -499,11 +499,12 @@ details.deviceInfo summary, details.faq summary {
 .doc-content details.faqs {
   position: relative;
   background: none;
-  border-radius: none;
+  border-radius: 0;
   padding: 0 0 0 24px;
   margin-bottom: 30px;
   break-inside: auto;
   break-before: auto;
+  border-top: .5pt solid;
 }
 .doc-content details.faqs summary {
   margin-left: -24px;
