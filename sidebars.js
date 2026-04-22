@@ -1815,6 +1815,7 @@ function createSidebars(preview) {
             id: 'device/biostation_3/release-notes/index',
           },
           items: [
+            'device/biostation_3/release-notes/144',
             'device/biostation_3/release-notes/143',
             'device/biostation_3/release-notes/142',
             'device/biostation_3/release-notes/141',
