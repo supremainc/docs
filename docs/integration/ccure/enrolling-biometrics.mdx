@@ -31,17 +31,17 @@ In the side panel on the right, you will see a summary for the current User.
 
    <Image src='/img/integration/ccure/enrolling-biometrics6.png' width={800} alone />
 
-The **Please wait** dialog shows while the integration is synchronizing the user with the Suprema devices, once the process is done you will see something similar to:
+   The **Please wait** dialog shows while the integration is synchronizing the user with the Suprema devices, once the process is done you will see something similar to:
 
-<Image src='/img/integration/ccure/enrolling-biometrics7.png' width={800} alone />
+   <Image src='/img/integration/ccure/enrolling-biometrics7.png' width={800} alone />
 
-And as the user is newly created will show no templates, then let’s go and create them.
+   And as the user is newly created will show no templates, then let’s go and create them.
 
-The first step is to add a RFID credential from the Credentials TAB.
+   The first step is to add a RFID credential from the Credentials TAB.
 
-<Image src='/img/integration/ccure/enrolling-biometrics8.png' width={800} alone />
+   <Image src='/img/integration/ccure/enrolling-biometrics8.png' width={800} alone />
 
-Please make sure you have configured at least the below fields:
+   Please make sure you have configured at least the below fields:
 
    1. Card Number.
 
@@ -51,55 +51,55 @@ Please make sure you have configured at least the below fields:
 
    1. Expiration datetime.
 
-After you have added at least these settings, please make sure you click the **Save** button previous to head to the Suprema TAB.
+   After you have added at least these settings, please make sure you click the **Save** button previous to head to the Suprema TAB.
 
-The newly added information will be transferred to the Suprema Devices.
+   The newly added information will be transferred to the Suprema Devices.
 
-<Image src='/img/integration/ccure/enrolling-biometrics9.png' width={800} alone />
+   <Image src='/img/integration/ccure/enrolling-biometrics9.png' width={800} alone />
 
-The process can be as fast as a fraction of second or longer depending on how many devices the information needs to be synced with (please be patient).
+   The process can be as fast as a fraction of second or longer depending on how many devices the information needs to be synced with (please be patient).
 
-After the process has finished you will see the information box.
+   After the process has finished you will see the information box.
 
-<Image src='/img/integration/ccure/enrolling-biometrics10.png' alone />
+   <Image src='/img/integration/ccure/enrolling-biometrics10.png' alone />
 
-Now in the User Details side panel you will see the information updated.
+   Now in the User Details side panel you will see the information updated.
 
-<Image src='/img/integration/ccure/enrolling-biometrics11.png' alone />
+   <Image src='/img/integration/ccure/enrolling-biometrics11.png' alone />
 
-When you have more than one card (up to five according to C•CURE maximum amount of credentials), you will see:
+   When you have more than one card (up to five according to C•CURE maximum amount of credentials), you will see:
 
-<Image src='/img/integration/ccure/enrolling-biometrics12.png' alone />
+   <Image src='/img/integration/ccure/enrolling-biometrics12.png' alone />
 
-:::info
+   :::info
 
-The *Basic* version of this integration will sync only the first available card in the personnel Credentials pool.
+   The *Basic* version of this integration will sync only the first available card in the personnel Credentials pool.
 
-:::
+   :::
 
-Now we are ready to Enroll Biometrics to the current user:
+   Now we are ready to Enroll Biometrics to the current user:
 
-<Image src='/img/integration/ccure/enrolling-biometrics13.png' alone />
+   <Image src='/img/integration/ccure/enrolling-biometrics13.png' alone />
 
-As you can see in the previous image, you are offered the options to enroll RFID Cards, Fingerprints, or Facial Credentials.
+   As you can see in the previous image, you are offered the options to enroll RFID Cards, Fingerprints, or Facial Credentials.
 
-After you select one of them you will see a dynamic panel for each type of Credential in your screen, as reference:
+   After you select one of them you will see a dynamic panel for each type of Credential in your screen, as reference:
 
-<Image src='/img/integration/ccure/enrolling-biometrics14.png' className='none' width={1000} alone />
+   <Image src='/img/integration/ccure/enrolling-biometrics14.png' className='none' width={1000} alone />
 
-When you select the type of credential, the Integration can classify the devices according to their capabilities, hence showing you only those devices capable of handling the credential type you selected. For example:
+   When you select the type of credential, the Integration can classify the devices according to their capabilities, hence showing you only those devices capable of handling the credential type you selected. For example:
 
-<Image src='/img/integration/ccure/enrolling-biometrics15.png' className='none' width={1000} alone />
+   <Image src='/img/integration/ccure/enrolling-biometrics15.png' className='none' width={1000} alone />
 
-Once you select a device, the options in the respective panels will enable to allow you proceed.
+   Once you select a device, the options in the respective panels will enable to allow you proceed.
 
-:::info
+   :::info
 
-Whenever you select a type of Credential the Integration will select only the devices capable of handling the selected credential, if none is found the following message will be displayed.
+   Whenever you select a type of Credential the Integration will select only the devices capable of handling the selected credential, if none is found the following message will be displayed.
 
-<Image src='/img/integration/ccure/enrolling-biometrics16.png' alone />
+   <Image src='/img/integration/ccure/enrolling-biometrics16.png' alone />
 
-:::
+   :::
 
 ## Scanning a Card
 
@@ -249,9 +249,9 @@ When a fingerprint is recognized, it is compared with the initially registered f
 
 <Image src='/img/device/fingerprint-authentication.svg' className='none' alone />
 
-The Suprema devices can recognize a fingerprint regardless of a change in season or finger condition. However, the authentication rate may vary according to the external environment or fingerprint input method.
+The Suprema devices can recognize a fingerprint regardless of a change in season or finger condition.
 
-If the fingerprint authentication cannot be done smoothly, it is recommended to take the following measures.
+However, the authentication rate may vary according to the external environment or fingerprint input method. If the fingerprint authentication cannot be done smoothly, it is recommended to take the following measures.
 
 * If the finger is smeared with water or sweat, dry off the finger and then scan the finger.
 
@@ -297,7 +297,11 @@ Please bear in mind the general guidelines for enrolling Visual Faces:
 
 <Image src='/img/integration/genetec/face-enrollment.png' width={800} alone />
 
-* These guidelines apply for both scanning a face directly from the device or when uploading a facial picture for pre-enrollment.
+:::info
+
+These guidelines apply for both scanning a face directly from the device or when uploading a facial picture for pre-enrollment.
+
+:::
 
 ### Pre-Enrollment
 
