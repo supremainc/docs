@@ -14,6 +14,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  position: relative;
 }
 
 html {
@@ -375,6 +376,9 @@ header p {
   background-color: #dceaffd8;
   font-family: 'Noto Sans Coptic', 'Noto Sans KR', 'Noto Sans JP', 'Noto Sans', monospace;
   position: relative;
+  padding: 1px 3px;
+  border-radius: 5%;
+  font-size: 7.5pt;
 }
 
 .doc-content div[data-remark-code-title] + pre {
@@ -492,6 +496,53 @@ details.deviceInfo summary, details.faq summary {
   font-size: 11pt;
 }
 
+.doc-content details.faqs {
+  position: relative;
+  background: none;
+  border-radius: none;
+  padding: 0 0 0 24px;
+  margin-bottom: 30px;
+  break-inside: auto;
+  break-before: auto;
+}
+.doc-content details.faqs summary {
+  margin-left: -24px;
+  font-size: 11pt;
+  border-bottom: .5pt solid;
+  padding-bottom: 15px;
+  padding-left: 24px;
+  display: block;
+}
+
+.doc-content details.faqs summary::before {
+  content: "Q.";
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #adadad;
+  position: absolute;
+  left: 0;
+  top: -4px;
+}
+.doc-content details.faqs summary + * {
+  position: relative;
+}
+.doc-content details.faqs summary + *::before {
+  content: "A.";
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #adadad;
+  margin-left: 1.5rem;
+  position: absolute;
+  left: -46px;
+  top: 8px;
+}
+.doc-content details.faqs ol, .doc-content details.faqs > ul {
+  margin-top: 16px;
+}
+.doc-content details.faqs h6 {
+  margin-top: 13px;
+}
+
 .doc-content details ul {
   margin-top: 0;
   margin-bottom: 8px;
@@ -534,7 +585,15 @@ details.deviceInfo summary, details.faq summary {
 .doc-content a strong {
   color: inherit;
 }
-
+.doc-content kbd {
+  background-color: #ddd;
+  font-size: 7.5pt;
+  font-weight: 600;
+  padding: 1px 3px;
+  border-radius: 5%;
+  border: 1px solid #ccc;
+  color: #333;
+}
 .doc-content p.hasimg {
   display: block;
 }

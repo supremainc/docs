@@ -1614,7 +1614,18 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         parent.children[index] = replacement;
         return;
       }
+      if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Kbd') {
+        const childText = node.children?.[0]?.value || '';
 
+        const replacement = {
+          type: 'element',
+          tagName: 'kbd',
+          children: [{ type: 'text', value: childText }]
+        }
+        parent.children[index] = replacement;
+        return;
+      }
+      
       if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Anchor') {
         const attributes = node.attributes || [];
         const idAttr = attributes.find(attr => attr.name === 'id');
