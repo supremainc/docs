@@ -7,7 +7,7 @@ keywords: [Installation, Configuration, C•CURE Integration]
 
 ## Pre-requisites
 
-* Software House C•CURE 9000 (versions 2.90, 3.0, 3.10)
+* Software House C•CURE 9000 (version 2.90, 3.0, 3.10)
 
 * Suprema BioStar 2 (version 2.9.0 and later)
 
@@ -62,14 +62,14 @@ You must install BioStar 2 server and C•CURE 9000 Server in the SAME machine.
       <div className='overflow-x cols3--20-20-60'>
       | Type | Port | Description |
       | :--: | :--: | -- |
-      | Port | 1433 | Or as configured |
+      | Port | 1433 | Or as configured. |
       </div>
 
 * The data is transferred under TLS 1.2 with private certificates, sensitive data (user, passwords, configurations) besides the encryption in transport layer, are stored encrypted.
 
 * Before Installation starts, please ENSURE that MS SQL is being configured to:
 
-   * Allow IP connections in the desired port (1433 default), from the desired IP address(es) as shown in the following images.
+   * Allow IP connections in the desired port (1433 default), from the desired IP address (es) as shown in the following images.
 
       <Image src='/img/integration/ccure/tcp-ip-properties1.png' alone />
 
@@ -214,13 +214,13 @@ Through this Configuration Tool you can adjust many settings from this integrati
 
 1. Run your web browser.
 
-   * We recommend Brave Browser, Microsoft Edge, or Google Chrome browser.
+   We recommend Brave Browser, Microsoft Edge, or Google Chrome browser.
 
 1. The Suprema - C•CURE Integration Configuration Tool can be accessed by:
 
    > https:\//BioStar 2_server_IP_or_Domain_Name:PORT/modules/SupremaCCURE/index.html
 
-   Where the PORT should be the same as in the BioStar 2 Server configuration. You can find the appropriate port by checking the "BioStar 2 Settings" app from the Start Menu on the PC where you’ve installed Both C•CURE 9000 Server and BioStar 2 Server.
+   Where the PORT should be the same as in the BioStar 2 Server configuration. You can find the appropriate port by checking the **BioStar 2 Settings** app from the Start Menu on the PC where you’ve installed Both C•CURE 9000 Server and BioStar 2 Server.
 
    > https://127.0.0.1:443/modules/SupremaCCURE/index.html
 
@@ -314,7 +314,7 @@ These operations are available for your convenience as a way to cold-start with 
 
 ### Users Sync
 
-The Users Menu is available in the Integration Configuration Tool’s Main Menu:
+The *Users* Menu is available in the Integration Configuration Tool’s Main Menu:
 
 <Image src='/img/integration/ccure/main-ico-users.png' width={140} alone />
 
@@ -474,19 +474,19 @@ Suprema Devices require a License validation to enable this feature.
 
 ### System Settings
 
-You have two options for finding the System Settings. The first one and more direct one is going to the upper navigation bar menu <Image src='/img/integration/software-house/ico-system-settings.png' ico alone />. The second one is going first to Configuration from the main Menu:
+You have two options for finding the System Settings. The first one and more direct one is going to the upper navigation bar menu <Image src='/img/menus/ico-system-settings.png' ico alone />. The second one is going first to Configuration from the main Menu:
 
-<Image src='/img/integration/ccure/system-settings1.png' width={500} alone />
+<Image src='/img/integration/ccure/system-settings1.png' className='none' width={500} alone />
 
 Once you are in the System Settings you may configure the following:
 
-* A valid license
+* A valid license.
 
-* Suprema’s Credentials (user and password)
+* Suprema’s Credentials (user and password).
 
-* C•CURE 9000 Connection Credentials
+* C•CURE 9000 Connection Credentials.
 
-* Other settings
+* Other settings.
 
 Before applying the license, all settings will be disabled until you validate the license.
 
@@ -508,7 +508,7 @@ If you are performing a Server offline license validation:
 
    <Image src='/img/integration/ccure/system-settings4.png' width={400} alone />
 
-* Follow the first step in getting the \*.req file and send it to your sales representative.
+* Follow the first step in getting the `*.req` file and send it to your sales representative.
 
 * Once you get the license file you may go to step number 2.
 
@@ -534,7 +534,9 @@ After applying the license, the other settings will be enabled.
 
    <Image src='/img/integration/ccure/applying-license-ccure9000-settings.png' width={400} alone />
 
-   * In the host field you should enter the IP address or Domain name where the database is installed, example: LOCALHOST\SQLSERVER.
+   * In the host field you should enter the IP address or Domain name where the database is installed.
+   
+      > Example: LOCALHOST\SQLSERVER
 
    * SQL Server port.
 
