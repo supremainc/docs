@@ -1,0 +1,131 @@
+---
+id: managing-technician
+title: Manage Technician Accounts
+description: This guide explains how to manage technician accounts.
+keywords:
+  - Technician
+---
+
+A technician is a professional granted access to a customer site. To manage technician accounts, invite technicians in the Partner Portal, assign them to sites, and set their permission levels. 
+
+In the BioStar Air portal, modify an invited technician's access permissions or lock/unlock their site access. You can also delete a technician account entirely to remove their site access.
+
+:::info
+
+* For more information on inviting technicians in the Partner Portal and assigning them to sites, see <DocLink docId='platform/biostar_air/technician-overview' />.
+
+* Activities of invited technicians are recorded per account and can be viewed at <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' /> / <Cmd sid='audit_logs_submenu' product='air' />.
+
+:::
+
+## Before start
+
+Before managing technician accounts, ensure that technician accounts are allowed to access the site in the site security settings. If technician accounts are not allowed to access the site in the site security settings, you won't be able to manage them.
+
+1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar.
+
+2. Click the <Cmd sid='site_setting_tab_security' product='air' /> tab.
+
+3. Enable the <Cmd sid='site_security_input7' product='air' /> option.
+
+<Image src='/img/air/bsair-settings-security-allow-technician.png' />
+
+Enabling the <Cmd sid='site_security_input7' product='air' /> option changes the <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_text' product='air' /> menu to the <Cmd sid='title_techincians_settings' product='air' /> menu. The <Cmd sid='admin_text' product='air' /> and <Cmd sid='technicians_text' product='air' /> tabs let you manage admin and technician accounts separately.
+
+<Image src='/img/air/bsair-settings-admin-technician-changes.png' />
+
+## Set technician permissions
+
+Follow the steps below to modify an invited technician's access permissions.
+
+1. Click <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> In the left sidebar.
+
+2. Click the <Cmd sid='technicians_text' product='air' /> tab.
+
+3. In the technician list, click the <Cmd sid='technicians_permissions' product='air' /> column for the technician whose access you want to modify.
+
+   <Image src='/img/air/bsair-settings-admin-technician-permission.png' />
+
+4. Select the desired permission level from the access dropdown.
+
+   <Image src='/img/air/bsair-settings-admin-technician-permission-select.png' />
+
+   * <Cmd sid='inviteTechnicianModal.dropdown_opt1' product='pn' />: Cannot log in to the site.
+
+   * <Cmd sid='techincians_list_permissions_devices_only' product='air' />: Provides access only to the <Cmd sid='dashboard_menu' product='air' /> and <Cmd sid='device_menu' product='air' /> menus.
+
+   * <Cmd sid='techincians_list_permissions_full_excluding_users' product='air' />: Provides access to all menus except <Cmd sid='user_menu' product='air' />, but access to certain setting features is restricted.
+
+   * <Cmd sid='techincians_list_permissions_full_including_users' product='air' />: Provides access to all menus including <Cmd sid='user_menu' product='air' />, but access to certain setting features is restricted.
+
+5. Click <Cmd sid='btn_yes' product='air' /> when the confirmation message window appears.
+
+The technician's access permissions are updated, and a success message appears at the top of the screen.
+
+:::info
+
+<Cmd sid='techincians_list_permissions_full_excluding_users' product='air' /> and <Cmd sid='techincians_list_permissions_full_including_users' product='air' /> have view permission but not edit permission for the following menu paths.
+
+* <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' />
+
+* <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' />
+
+:::
+
+## Lock or unlock technician accounts
+
+If a technician's support is no longer needed, or if access must be restricted for security reasons, you can lock the technician's account to block site access. If you need the technician's support again, you can unlock the account to allow them to access the site.
+
+If you lock an invited technician's account, they won't be able to sign in to the site.
+
+### Lock or unlock an individual technician's account
+
+1. Click <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> In the left sidebar.
+
+2. Click the <Cmd sid='technicians_text' product='air' /> tab.
+
+3. In the technician list, click the toggle in the <Cmd sid='column_admin_account_status' product='air' /> column for the technician whose account you want to lock or unlock.
+
+   <Image src='/img/air/bsair-settings-admin-technician-lock-unlock.png' />
+
+4. When a popup appears, review the message and click <Cmd sid='btn_yes' product='air' />.
+
+### Lock or unlock multiple technician accounts
+
+1. Click <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> In the left sidebar.
+
+2. Click the <Cmd sid='technicians_text' product='air' /> tab.
+
+3. In the technician list, click the checkboxes next to the technicians whose accounts you want to lock or unlock. You can select 1 or more technicians.
+
+4. Click <IcAirPlock title='Lock Account' /> or <IcAirPunlock title='Unlock Account' /> at the top of the technician list.
+
+   <Image src='/img/air/bsair-settings-admin-technician-lock-unlock-batch.png' />
+
+5. When a popup appears, review the message and click <Cmd sid='btn_yes' product='air' />.
+
+The selected technicians' accounts are locked or unlocked, and a success message appears at the top of the screen.
+
+:::info
+
+If selected technicians have mixed lock statuses, a bulk action locks all accounts or unlocks all accounts.
+
+:::
+
+## Delete a technician's account
+
+Deleting an invited technician's account completely removes their access to the site. A deleted technician account cannot be recovered.
+
+1. Click <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> In the left sidebar.
+
+2. Click the <Cmd sid='technicians_text' product='air' /> tab.
+
+3. In the technician list, click the checkbox next to the technician whose account you want to delete. You can select 1 or more technicians.
+
+4. Click <IcAirRemove title='Delete' /> at the top of the technician list.
+
+   <Image src='/img/air/bsair-settings-admin-technician-delete.png' />
+
+5. When a popup appears, review the message and click <Cmd sid='btn_yes' product='air' />.
+
+The selected technicians' accounts are deleted and removed from the technician list, and a success message appears at the top of the screen.

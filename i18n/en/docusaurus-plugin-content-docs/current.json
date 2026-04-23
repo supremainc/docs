@@ -506,5 +506,9 @@
   "sidebar.biostar_air.category.펌웨어": {
     "message": "Firmware",
     "description": "The label for category '펌웨어' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostar_air.category.파트너 기술자 관리하기": {
+    "message": "Manage Partner Technicians",
+    "description": "The label for category '파트너 기술자 관리하기' in sidebar 'biostar_air'"
   }
 }
