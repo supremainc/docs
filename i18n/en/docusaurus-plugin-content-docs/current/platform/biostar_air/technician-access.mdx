@@ -1,0 +1,243 @@
+---
+id: technician-access
+title: Invite Technicians to the Partner Portal
+description: Learn how to invite technicians in the Partner Portal, manage invitation statuses, and edit or delete technician accounts.
+keywords:
+  - Technician
+  - Invite
+  - Manage
+---
+
+Using technician accounts, grant partners and installers limited access to sites without a shared admin account. Technicians are managed centrally in the Partner Portal and can be assigned to individual sites.
+
+**Key Benefits of Technician Accounts**
+
+* **Enhanced Security**: Reduce the risk of unauthorized access by removing shared admin accounts
+
+* **Compliance**: Help meet privacy regulations (such as GDPR) and offer an option to restrict access to user data
+
+* **Access Control**: Configure granular permissions from device access to full administrator privileges
+
+* **Audit Trail**: Record individual technician activities in audit logs to track accountability
+
+* **Increased Efficiency**: Assign and manage technicians across multiple sites without login conflicts
+
+* **Immediate Revocation**: Revoke technician access immediately, at any time
+
+## Invite technicians
+
+Partners must invite technicians to create technician accounts before granting site access. Technician accounts are created using an email address. Invited technicians activate their accounts by accepting the invitation sent to their email.
+
+1. Log in to the [Partner Portal](https://partner.biostarair.com).
+
+2. Click <Cmd sid='technicians.title' product='pn' /> in the left sidebar.
+
+3. Click the <Cmd sid='adminsPage.adminsAndTechnicians' product='pn' /> tab.
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list.png' />
+
+4. Click <Cmd sid='common.button.invite' product='pn' /> at the top right of the screen.
+
+5. When the <Cmd sid='inviteTechnicianModal.title' product='pn' /> window appears, enter the email address of the technician you want to invite.
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-invite.png' />
+
+6. Click <Cmd sid='common.button.add' product='pn' /> when it becomes active.
+
+7. Added technicians appear below the email address input field. Repeat steps 5–6 to invite additional technicians.
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-invite-add.png' />
+
+8. After adding all technicians, click <Cmd sid='common.button.ok' product='pn' />.
+
+9. When the confirmation message appears, click <Cmd sid='common.button.confirm' product='pn' />.
+
+:::info
+
+* Inviting technicians to the Partner Portal does not grant them access to sites; you must invite technicians to each site separately. For more information on inviting a technician to a site, see <DocLink docId='platform/biostar_air/assign-technician' />.
+
+* Technicians who sign up using the invitation email can sign in to the Partner Portal, but their access to menus is limited. They can only change their own password, delete their account, and set their language.
+
+:::
+
+### Invitation status
+
+After inviting a technician, partners can check their invitation status in the technician list. 
+
+#### Pending sign-up
+
+The invitation status is shown as <Cmd sid='adminLCM.pending_status' product='pn' /> until the invited technician accepts the invitation. Invited technicians have up to 7 days to accept the invitation. After 7 days, the invitation expires and the status changes to <Cmd sid='adminLCM.user_status_expired' product='pn' />.
+
+<Image src='/img/air/bsair-partner-admin-technicial-list-pending.png' />
+
+#### Sign-up complete
+
+When a technician accepts the invitation email and completes sign-up, their invitation status changes to <Cmd sid='adminLCM.user_status_accepted' product='pn' />.
+
+<Image src='/img/air/bsair-partner-admin-technicial-list-accepted.png' />
+
+#### Sign-up canceled
+
+If an invited technician's email address was entered incorrectly or the issue is resolved and the invitation is no longer needed, canceling the invitation changes the invitation status to <Cmd sid='adminLCM.user_status_revoked' product='pn' />. For more information on revoking a technician's invitation, see <DocLink inner='#revokeInvite' />.
+
+<Image src='/img/air/bsair-partner-admin-technicial-list-revoked.png' />
+
+## Cancel invitation {#revokeInvite}
+
+Partners can cancel an invitation if they entered the technician's email incorrectly, or if the issue has been resolved and the invitation is no longer needed.
+
+1. In the technician list, select the checkbox for each technician whose invitation status is <Cmd sid='adminLCM.pending_status' product='pn' />. You can select 1 or more technicians.
+
+2. Click <IcAirRevoke title='Revoke Invitation' /> at the top left of the technician list.
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-revoke-technicial.png' />
+
+   :::note
+
+   Only technicians with status <Cmd sid='adminLCM.pending_status' product='pn' /> can have their invitations revoked.
+
+   :::
+
+3. If a popup message appears, review the message and click <Cmd sid='common.button.yes' product='pn' />.
+
+4. When the success message for the canceled invitation appears, click <Cmd sid='common.button.close' product='pn' />.
+
+The invitation status of a revoked technician changes to <Cmd sid='adminLCM.user_status_revoked' product='pn' /> in the technician list.
+
+<Image src='/img/air/bsair-partner-admin-technicial-list-revoked.png' />
+
+## Resend invitation link
+
+Resend the invitation link if an invited technician did not receive the invitation email, lost it, or the invitation link has expired.
+
+1. In the technician list, select the checkbox for each technician whose invitation status is <Cmd sid='adminLCM.pending_status' product='pn' /> or <Cmd sid='adminLCM.user_status_expired' product='pn' />. You can select 1 or more technicians.
+
+2. Click <IcAirResend title='Resend Invitation' /> at the top left of the technician list.
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-resend-invite.png' />
+
+   :::note
+
+   Only technicians with status <Cmd sid='adminLCM.user_status_revoked' product='pn' /> or <Cmd sid='adminLCM.user_status_expired' product='pn' /> can have invitation links resent.
+
+   :::
+
+3. If a popup message appears, review the message and click <Cmd sid='common.button.yes' product='pn' />.
+
+4. When the success message for resending the invitation link appears, click <Cmd sid='common.button.close' product='pn' />.
+
+After resending a technician's invitation link, their invitation status changes to <Cmd sid='adminLCM.pending_status' product='pn' /> in the technician list.
+
+<Image src='/img/air/bsair-partner-admin-technicial-list-pending.png' />
+
+## Manage technicians {#manageTechnician}
+
+After an invited technician accepts the email invitation and completes sign-up, partners can manage them from the technician list. Lock or unlock a technician's account, or modify their access to the site. You can delete a technician account when the technician's support is no longer needed.
+
+### Lock or unlock technician accounts
+
+Technicians who accepted the email invitation and completed the sign-up process can use the <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> option to lock or unlock their account. When an account is locked, the technician cannot log in to the Partner Portal, and account information is retained so the account can be reactivated later if needed.
+
+In the <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> column, locked technicians are shown as <Cmd sid='common.label.locked' product='pn' />, and unlocked technicians are shown as <Cmd sid='common.label.unlocked' product='pn' />.
+
+<Image src='/img/air/bsair-partner-admin-technicial-list-lock-unlock-status.png' />
+
+:::info
+
+* The accounts of technicians who have completed the sign-up process are unlocked by default.
+
+* Accounts invited as both an admin and a technician cannot be locked or unlocked.
+
+:::
+
+#### Lock or unlock an individual technician account
+
+In the technician list, click the toggle button in the <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> column to lock or unlock an individual technician account.
+
+1. In the technician list, click the toggle in the <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> column.
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-lock-unlock.png' />
+
+2. If a popup message appears, review the message and click <Cmd sid='common.button.yes' product='pn' />.
+
+3. When a success message appears confirming the account was locked or unlocked, click <Cmd sid='common.button.close' product='pn' />.
+
+#### Bulk lock or unlock technician accounts
+
+Select multiple technician accounts in the technician list to lock or unlock them in bulk.
+
+1. In the technician list, click the checkbox for each technician to lock or unlock. You can select 1 or more technicians.
+
+2. Click <IcAirPlock title='Lock Account' /> or <IcAirPunlock title='Unlock Account' /> in the upper left corner of the screen.
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-multi-lock-unlock.png' />
+
+3. If a popup message appears, review the message and click <Cmd sid='common.button.yes' product='pn' />.
+
+4. When a success message appears confirming the account was locked or unlocked, click <Cmd sid='common.button.close' product='pn' />.
+
+### Edit site access
+
+Modify site access for technicians who have been granted access to a site.
+
+1. In the technician list, click a technician whose <Cmd sid='common.label.invited_sites' product='pn' /> column indicates 1 or more sites.
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-invited.png' />
+
+2. When the <Cmd sid='editTechnicianModal.title' product='pn' /> window appears, check the list of sites the technician is invited to in <Cmd sid='common.label.invited_sites' product='pn' />.
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-edit.png' width='60%' />
+
+3. Click the toggle button in the <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> column to allow or block site access.
+
+4. Click <Cmd sid='common.button.save' product='pn' /> to save the changes.
+
+5. When a success message appears confirming the site access changes, click <Cmd sid='common.button.close' product='pn' />.
+
+:::info
+
+For more information on granting site access to a technician, see <DocLink docId='platform/biostar_air/assign-technician' />.
+
+:::
+
+### Delete a technician account
+
+You can delete a technician account when the technician's support is no longer needed. Deleting a technician account prevents the technician from logging in to the Partner Portal and permanently removes all information associated with the account from the system.
+
+1. In the technician list, click the checkbox of the technician you want to delete. You can select 1 or more technicians.
+
+2. Click <IcAirRemove title='Delete' /> in the upper left of the screen.
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-delete.png' />
+
+3. If a pop-up message appears, review it and click <Cmd sid='common.button.confirm' product='pn' />.
+
+4. When the success message confirming the technician account deletion appears, click <Cmd sid='common.button.close' product='pn' />.
+
+Deleted technician accounts no longer appear in the technician list.
+
+### Manage technicians by site
+
+You can lock, unlock, or delete accounts for technicians assigned to a site.
+
+1. Click <Cmd sid="menu.label.siteList" product="pn" /> in the left sidebar.
+
+2. Click the site in the site list where you want to allow technician access.
+
+3. When the <Cmd sid="siteListPage.drawer.edit.title" product="pn" /> panel appears, select the <Cmd sid="site.admin_technicans.title" product="pn" /> tab, then the <Cmd sid="site.technicans.title" product="pn" /> tab.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-added-technician.png' />
+
+4. Perform the following actions in <Cmd sid='site.technicans.title' product='pn' />.
+
+   * Click the toggle button in the <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> column to lock or unlock a technician account.
+
+   * Click <IcAirMore title='More' /> → <Cmd sid='common.label.delete' product='pn' /> to delete a technician account.
+
+5. Click <Cmd sid='common.button.apply' product='pn' /> at the bottom to apply the changes.
+
+:::info
+
+Newly registered technician accounts have site access set to <Cmd sid='common.label.locked' product='pn' />. To unlock the <Cmd sid='common.label.locked' product='pn' /> status, use an account with administrator rights for that site in the BioStar Air portal. For more information on assigning technicians to a site and unlocking accounts, see <DocLink docId='platform/biostar_air/assign-technician' />.
+
+:::

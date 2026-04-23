@@ -21,6 +21,8 @@ import air_ko from './air/ko.json';
 import air_en from './air/en.json';
 import air_ja from './air/ja.json';
 import air_es from './air/es.json';
+import partner_ko from './partner/ko.json';
+import partner_en from './partner/en.json';
 import cam_ko from './cam/ko.json';
 import cam_en from './cam/en.json';
 
@@ -43,6 +45,11 @@ const airLocaleMap = {
   en: air_en,
   ja: air_ja,
   es: air_es,
+};
+
+const partnerLocaleMap = {
+  ko: partner_ko,
+  en: partner_en,
 };
 
 const camLocaleMap = {
@@ -118,6 +125,9 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
       }
     } else if (product === 'air') {
       const locale = airLocaleMap[currentLocale] || airLocaleMap.en;
+      localeText = locale[sid] ? locale[sid].replace('<br/>', '') : null;
+    } else if (product === 'pn') {
+      const locale = partnerLocaleMap[currentLocale] || partnerLocaleMap.en;
       localeText = locale[sid] ? locale[sid].replace('<br/>', '') : null;
     } else if (product === 'cam') {
       const locale = camLocaleMap[currentLocale] || camLocaleMap.en;
