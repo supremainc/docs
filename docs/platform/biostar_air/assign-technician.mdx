@@ -1,7 +1,201 @@
 ---
 id: assign-technician
 title: 사이트에 기술자 배정하기
-description: Description
-keywords: [keyword1, keyword2]
+description: 파트너가 사이트에 기술자를 배정하고 관리하는 방법을 알아보세요.
+keywords: [기술자, 배정, 관리]
 ---
 
+파트너는 고색 사이트에 기술자를 배정하고 관리할 수 있습니다. 접근 권한은 파트너가 정의한 권한 수준에 따라 관리되며, 기기 접근 권한부터 완전한 관리자 권한까지 다양하게 설정할 수 있습니다. 사용자 데이터에 대한 접근을 제외하는 옵션도 제공하여 민감한 개인 정보를 보호하면서 설치 및 지원 작업을 수행할 수 있습니다.
+
+:::info
+
+파트너는 기술자를 사이트에 배정할 수 있지만 **사이트 접근은 기본적으로 허용되지 않습니다**. BioStar Air 포털에서 <Cmd sid='site_security_input7' product='air' /> 옵션을 활성화해야 합니다. 자세한 내용은 <DocLink docId='platform/biostar_air/site-security-settings' />를 참고하세요.
+
+:::
+
+## 기술자 배정
+
+사이트에 기술자를 배정하는 방법을 안내합니다.
+
+<Steps>
+<Step>
+
+### 기술자 초대
+
+1. [파트너 포털](https://partner.biostarair.com)에 로그인하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='menu.label.siteList' product='pn' />을 클릭하세요.
+
+1. 사이트 목록에서 기술자를 배정할 사이트를 클릭하세요.
+
+1. <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> 패널이 나타나면 <Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='site.technicans.title' product='pn' /> 탭을 차례로 클릭하세요.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician.png' />
+
+1. <Cmd sid='common.button.invite' product='pn' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='inviteTechniciansModal.title' product='pn' /> 창이 나타나면 <Cmd sid='inviteTechnicianModal.distributor_admins' product='pn' /> 또는 <Cmd sid='inviteTechnicianModal.distributor_technicians' product='pn' /> 목록에서 원하는 계정을 선택하세요.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-invite-list.png' width='60%' />
+
+선택한 계정이 하단의 <Cmd sid='inviteTechnicianModal.selected' product='pn' /> 목록에 표시됩니다.
+
+<Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-invite-list-selected.png' width='60%' />
+
+:::info
+
+* 이름 검색 입력란에 관리자 또는 기술자 이름을 입력해 검색할 수 있습니다.
+
+* 선택한 계정을 취소하려면 <Cmd sid='inviteTechnicianModal.selected' product='pn' /> 목록에서 해당 계정의 오른쪽에 있는 <IcClose title='Remove' /> 버튼을 클릭하세요.
+
+* 사이트에 관리자로 등록된 계정이나 이미 등록된 기술자 계정은 목록에 표시되지 않습니다.
+
+:::
+
+</Step>
+<Step>
+
+### 사이트 접근 권한 설정
+
+초대할 기술자를 모두 선택했다면 사이트 접근 권한을 적용하세요. 적용할 수 있는 권한은 아래와 같습니다.
+
+* <Cmd sid='inviteTechnicianModal.dropdown_opt2' product='pn' />: <Cmd sid='dashboard_menu' product='air' /> 및 <Cmd sid='device_menu' product='air' /> 메뉴에만 접근할 수 있습니다.
+
+* <Cmd sid='inviteTechnicianModal.dropdown_opt3' product='pn' />: <Cmd sid='user_menu' product='air' /> 메뉴를 제외한 모든 메뉴에 접근할 수 있지만, 일부 설정 기능에 대한 접근은 제한됩니다.
+
+* <Cmd sid='inviteTechnicianModal.dropdown_opt4' product='pn' />: <Cmd sid='user_menu' product='air' /> 메뉴를 포함한 모든 메뉴에 접근할 수 있지만, 일부 설정 기능에 대한 접근은 제한됩니다.
+
+:::info
+
+<Cmd sid='inviteTechnicianModal.dropdown_opt3' product='pn' /> 및 <Cmd sid='inviteTechnicianModal.dropdown_opt4' product='pn' />은 다음 메뉴 경로에 대해 보기 권한은 있지만 수정 권한은 없습니다.
+
+* <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' />
+
+* <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' />
+
+:::
+
+
+#### 개별 기술자 권한 설정
+
+개별 기술자에게 서로 다른 권한을 적용할 수 있습니다. 각 계정의 오른쪽에서 원하는 권한 수준을 선택하세요.
+
+<Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-invite-list-selected-each.png' />
+
+#### 모든 기술자에게 동일한 권한 적용
+
+1. 선택한 모든 계정에 동일한 권한을 적용하려면 <Cmd sid='inviteTechnicianModal.apply_site_permissions_to_all' product='pn' /> 옵션에서 원하는 권한 수준을 선택하고 오른쪽의 토글 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-invite-list-selected-batch-01.png' />
+
+1. 팝업 메시지가 나타나면 <Cmd sid='common.button.yes' product='pn' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='inviteTechnicianModal.selected' product='pn' /> 목록의 모든 계정에 선택한 권한이 적용됩니다.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-invite-list-selected-batch-02.png' />
+
+</Step>
+<Step>
+
+### 기술자 초대 완료
+
+1. 기술자 초대 및 권한 설정을 완료하면 <Cmd sid='inviteTechniciansModal.title' product='pn' /> 창에서  <Cmd sid='common.button.confirm' product='pn' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='inviteTechniciansModal.title' product='pn' /> 창이 닫히고, <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> 패널의 <Cmd sid='siteListPage.drawer.edit.profile.invitations.title' product='pn' />에 선택한 기술자들이 표시됩니다.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-invited-list.png' />
+
+1. 초대장을 발송해 기술자에게 사이트 접근 권한을 부여하려면 <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> 패널 하단의 <Cmd sid='common.button.apply' product='pn' /> 버튼을 클릭하세요.
+
+#### 초대 상태 확인
+
+사이트에 초대된 기술자의 초대 상태를 확인할 수 있습니다. 초대 받은 기술자가 이메일을 수락하기 전까지는 초대 상태가 <Cmd sid='adminLCM.pending_status' product='pn' />로 표시됩니다. 초대 받은 기술자는 최대 7일까지 초대를 수락할 수 있으며, 7일이 지나면 초대가 만료되어 <Cmd sid='adminLCM.user_status_expired' product='pn' /> 상태로 변경됩니다.
+
+1. 사이트 목록에서 기술자를 초대한 사이트를 클릭하세요.
+
+1. <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> 패널이 나타나면 <Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='site.technicans.title' product='pn' /> 탭을 차례로 클릭하세요.
+
+1. <Cmd sid='site.technicans.title' product='pn' />에서 초대 상태를 확인할 수 있습니다.
+
+기술자가 사이트에 가입을 완료하면 <Cmd sid='adminLCM.pending_status' product='pn' /> 상태에서 <Cmd sid='adminLCM.user_status_accepted' product='pn' /> 상태로 변경됩니다.
+
+<Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-status.png' />
+
+</Step>
+</Steps>
+
+
+## 초대 취소
+
+사이트에 초대된 기술자의 이메일 주소를 잘못 입력했거나 문제가 해결되어 더 이상 기술자 초대가 필요하지 않을 때, 초대를 취소할 수 있습니다
+
+1. 사이트 목록에서 기술자를 초대한 사이트를 클릭하세요.
+
+1. <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> 패널이 나타나면 <Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='site.technicans.title' product='pn' /> 탭을 차례로 클릭하세요.
+
+1. <Cmd sid='site.technicans.title' product='pn' />에서 <Cmd sid='adminLCM.pending_status' product='pn' /> 상태인 기술자의 가장 오른쪽에 <IcAirMore title='More' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-reinvitation.png' />
+
+1. 팝업 메뉴에서 <Cmd sid='adminLCM.revoke_invitation' product='pn' />를 클릭하세요.
+
+1. 팝업 메시지 창이 나타나면 내용을 확인하고 <Cmd sid='common.button.yes' product='pn' /> 버튼을 클릭하세요.
+
+1. 초대 취소 성공 메시지가 나타나면 <Cmd sid='common.button.close' product='pn' /> 버튼을 클릭하세요.
+
+초대 취소된 기술자는 초대 상태가 <Cmd sid='adminLCM.pending_status' product='pn' /> 상태에서 <Cmd sid='adminLCM.user_status_revoked' product='pn' /> 상태로 변경됩니다.
+
+
+## 초대 링크 재전송
+
+사이트에 초대된 기술자가 초대 이메일을 받지 못했거나 분실한 경우, 초대 링크를 재전송할 수 있습니다.
+
+1. 사이트 목록에서 기술자를 초대한 사이트를 클릭하세요.
+
+1. <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> 패널이 나타나면 <Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='site.technicans.title' product='pn' /> 탭을 차례로 클릭하세요.
+
+1. <Cmd sid='site.technicans.title' product='pn' />에서 <Cmd sid='adminLCM.pending_status' product='pn' /> 또는 <Cmd sid='adminLCM.user_status_expired' product='pn' /> 상태인 기술자의 가장 오른쪽에 <IcAirMore title='More' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-reinvitation.png' />
+
+1. 팝업 메뉴에서 <Cmd sid='adminLCM.resend_invitation_link' product='pn' />을 클릭하세요.
+
+1. 팝업 메시지 창이 나타나면 내용을 확인하고 <Cmd sid='common.button.yes' product='pn' /> 버튼을 클릭하세요.
+
+1. 초대 링크 재전송 성공 메시지가 나타나면 <Cmd sid='common.button.close' product='pn' /> 버튼을 클릭하세요.
+
+
+## BioStar Air 포털에서 기술자 접근 허용 {#allowTechnicianAccess}
+
+기술자가 사이트 초대 메일을 통해 BioStar Air 포털에 가입했더라도 사이트에 대한 접근은 기본적으로 잠금 상태입니다. 다음 안내에 따라 BioStar Air 포털에서 기술자의 사이트 접근을 허용하세요.
+
+### 기술자 접근 옵션 활성화
+
+BioStar Air 포털의 사이트 설정에서 기술자의 사이트 접근을 허용해야 합니다. 이미 <Cmd sid='site_security_input7' product='air' /> 옵션을 활성화했다면 다음 단계로 넘어가세요.
+
+1. [BioStar Air 포털](https://portal.biostarair.com)에 관리자 계정으로 로그인하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' />를 클릭하세요.
+
+1. <Cmd sid='site_setting_tab_security' product='air' /> 탭을 클릭하세요.
+
+1. <Cmd sid='site_security_input7' product='air' /> 옵션을 활성화하세요.
+
+<Image src='/img/air/bsair-settings-security-allow-technician.png' />
+
+
+### 기술자 계정 잠금해제
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' />를 클릭하세요.
+
+1. <Cmd sid='technicians_text' product='air' /> 탭을 클릭하세요.
+
+1. 기술자 목록에서 초대한 기술자의 잠금을 해제하려면 <Cmd sid='column_admin_account_status' product='air' /> 열의 토글 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-settings-admin-allow-technician.png' />
+
+1. 팝업 메시지 창이 나타나면 내용을 확인하고 <Cmd sid='common.button.yes' product='pn' /> 버튼을 클릭하세요.
+
+선택한 기술자의 계정 잠금이 해제되고 사이트 접근이 허용됩니다.
+
+<Image src='/img/air/bsair-settings-admin-allow-technician-unlocked.png' />

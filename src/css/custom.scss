@@ -886,6 +886,7 @@ body[data-rh] .redocusaurus {
     margin-top: 0;
   }
   ol {
+    list-style: decimal;
     &>li {
       &::marker {
         color: var(--ifm-color-color-ol-gray);

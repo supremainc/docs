@@ -63,7 +63,7 @@ keywords: [기술자, 초대, 관리]
 
 #### 가입 대기 상태
 
-초대 받은 기술자는 이메일을 수락하기 전까지는 초대 상태가 <Cmd sid='adminLCM.pending_status' product='pn' />로 표시됩니다. 초대 받은 기술자는 최대 7일까지 초대를 수락할 수 있으며, 7일이 지나면 초대가 만료되어 <Cmd sid='adminLCM.user_status_expired' product='pn' /> 상태로 변경됩니다.
+초대 받은 기술자가 이메일을 수락하기 전까지는 초대 상태가 <Cmd sid='adminLCM.pending_status' product='pn' />로 표시됩니다. 초대 받은 기술자는 최대 7일까지 초대를 수락할 수 있으며, 7일이 지나면 초대가 만료되어 <Cmd sid='adminLCM.user_status_expired' product='pn' /> 상태로 변경됩니다.
 
 <Image src='/img/air/bsair-partner-admin-technicial-list-pending.png' />
 
@@ -75,14 +75,14 @@ keywords: [기술자, 초대, 관리]
 
 #### 가입 취소 상태
 
-초대 받은 기술자의 이메일 주소를 잘못 입력했거나 문제가 해결되어 더 이상 기술자 초대가 필요하지 않아, 초대를 취소하면 초대 상태가 <Cmd sid='adminLCM.user_status_revoked' product='pn' /> 상태로 변경됩니다. 기술자 초대 취소에 대한 자세한 내용은 <DocLink inner='#revokeInvite' />를 참고하세요.
+초대된 기술자의 이메일 주소를 잘못 입력했거나 문제가 해결되어 더 이상 기술자 초대가 필요하지 않을 때, 초대를 취소하면 초대 상태가 <Cmd sid='adminLCM.user_status_revoked' product='pn' /> 상태로 변경됩니다. 기술자 초대 취소에 대한 자세한 내용은 <DocLink inner='#revokeInvite' />를 참고하세요.
 
 <Image src='/img/air/bsair-partner-admin-technicial-list-revoked.png' />
 
 
 ## 초대 취소 {#revokeInvite}
 
-파트너는 초대 받은 기술자의 이메일 주소를 잘못 입력했거나 문제가 해결되어 더 이상 기술자 초대가 필요하지 않을 때, 초대를 취소할 수 있습니다.
+파트너가 초대한 기술자의 이메일 주소를 잘못 입력했거나 문제가 해결되어 더 이상 기술자 초대가 필요하지 않을 때, 초대를 취소할 수 있습니다.
 
 1. 기술자 목록에서 초대 상태가 <Cmd sid='adminLCM.pending_status' product='pn' /> 상태인 기술자의 체크박스를 클릭하세요. 1명 이상의 기술자를 선택할 수 있습니다.
 
@@ -107,7 +107,7 @@ keywords: [기술자, 초대, 관리]
 
 ## 초대 링크 재전송
 
-초대 받은 기술자가 초대 이메일을 받지 못했거나 초대 이메일을 분실했을 때, 또는 초대 링크가 만료되었을 때 초대 링크를 재전송할 수 있습니다.
+초대된 기술자가 초대 이메일을 받지 못했거나 초대 이메일을 분실했을 때, 또는 초대 링크가 만료되었을 때 초대 링크를 재전송할 수 있습니다.
 
 1. 기술자 목록에서 초대 상태가 <Cmd sid='adminLCM.pending_status' product='pn' /> 또는 <Cmd sid='adminLCM.user_status_expired' product='pn' /> 상태인 기술자의 체크박스를 클릭하세요. 1명 이상의 기술자를 선택할 수 있습니다.
 
@@ -130,9 +130,9 @@ keywords: [기술자, 초대, 관리]
 <Image src='/img/air/bsair-partner-admin-technicial-list-pending.png' />
 
 
-## 기술자 관리
+## 기술자 관리 {#manageTechnician}
 
-초대 받은 기술자가 이메일 초대를 수락하여 가입을 완료하면, 기술자 목록에서 해당 기술자를 관리할 수 있습니다. 기술자의 계정을 잠금 또는 해제하거나 사이트에 대한 접근 권한을 수정할 수 있습니다. 더이상 기술자의 지원이 필요하지 않을 때는 기술자 계정을 삭제할 수도 있습니다.
+초대된 기술자가 이메일 초대를 수락하여 가입을 완료하면, 기술자 목록에서 해당 기술자를 관리할 수 있습니다. 기술자의 계정을 잠금 또는 해제하거나 사이트에 대한 접근 권한을 수정할 수 있습니다. 더이상 기술자의 지원이 필요하지 않을 때는 기술자 계정을 삭제할 수도 있습니다.
 
 ### 기술자 계정 잠금/해제
 
@@ -218,3 +218,30 @@ keywords: [기술자, 초대, 관리]
 1. 기술자 계정 삭제 성공 메시지가 나타나면 <Cmd sid='common.button.close' product='pn' /> 버튼을 클릭하세요.
 
 삭제한 기술자 계정은 기술자 목록에서 더이상 표시되지 않습니다.
+
+
+### 사이트별 기술자 관리
+
+사이트에 배정된 기술자의 계정을 잠그거나 해제, 삭제할 수 있습니다.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='menu.label.siteList' product='pn' />을 클릭하세요.
+
+1. 사이트 목록에서 기술자의 접근을 허용할 사이트를 클릭하세요
+
+1. <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> 패널이 나타나면 <Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='site.technicans.title' product='pn' /> 탭을 차례로 클릭하세요.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-added-technician.png' />
+
+1. <Cmd sid='site.technicans.title' product='pn' />에서 아래의 기능을 수행하세요.
+
+   * 기술자 계정을 잠그거나 해제하려면 <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> 열에서 토글 버튼을 클릭하세요.
+
+   * 기술자 계정을 삭제하려면 <IcAirMore title='More' /> → <Cmd sid='common.label.delete' product='pn' />를 클릭하세요.
+
+1. 수정한 내용을 적용하려면 하단의 <Cmd sid='common.button.apply' product='pn' /> 버튼을 클릭하세요.
+
+:::info
+
+최초 등록된 기술자 계정은 사이트에 대한 접근 권한이 <Cmd sid='common.label.locked' product='pn' /> 상태입니다. <Cmd sid='common.label.locked' product='pn' /> 상태를 해제하려면 BioStar Air 포털에서 해당 사이트의 관리자 권한을 가진 계정으로 해제할 수 있습니다. 사이트에 기술자를 배정하고, 계정 잠금 해제에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/assign-technician' />를 참고하세요.
+
+:::
