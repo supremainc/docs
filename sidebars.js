@@ -1,5 +1,7 @@
 // @ts-check
 
+import { type } from 'os';
+
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /**
@@ -286,6 +288,7 @@ function createSidebars(preview) {
                 'platform/biostar_air/site-security-settings',
                 'platform/biostar_air/site-additional-settings',
                 'platform/biostar_air/managing-administrators',
+                'platform/biostar_air/managing-technician',
                 'platform/biostar_air/account-settings'
               ]
             },
@@ -318,8 +321,18 @@ function createSidebars(preview) {
           items: [
             'platform/biostar_air/biostar-air-partner-portal-detailed-use',
             'platform/biostar_air/federated-sites',
-            'platform/biostar_air/technician-access',
-            'platform/biostar_air/assign-technician',
+            {
+              type: 'category',
+              label: '파트너 기술자 관리하기',
+              link: {
+                type: 'doc',
+                id: 'platform/biostar_air/technician-overview',
+              },
+              items: [
+                'platform/biostar_air/technician-access',
+                'platform/biostar_air/assign-technician',
+              ]
+            },
             {
               type: 'category',
               label: '하드웨어 설치하기',

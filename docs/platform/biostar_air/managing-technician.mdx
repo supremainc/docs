@@ -1,0 +1,133 @@
+---
+id: managing-technician
+title: 기술자 계정 관리하기
+description: 기술자 계정 관리 방법을 안내합니다.
+keywords: [기술자]
+---
+
+기술자는 고객 사이트에 대한 접근 권한을 부여받은 전문가입니다. 기술자 계정을 관리하려면 파트너 포털에서 기술자 계정을 초대하고, 각 사이트에 배정하여 권한 수준을 설정해야 합니다. 
+
+BioStar Air 포털에서는 사이트에 초대된 기술자의 접근 권한을 수정하거나 사이트에 대한 접근을 잠그거나 해제할 수 있습니다. 또한, 기술자 계정을 완전히 삭제하여 사이트 접근 권한을 제거할 수도 있습니다.
+
+:::info
+
+* 파트너 포털에서 기술자를 초대하고 사이트에 배정하는 방법에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/technician-overview' />를 참고하세요.
+
+* 기술자로 초대된 사용자의 활동은 <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' />/<Cmd sid='audit_logs_submenu' product='air' />에서 개별 계정으로 기록되어 추적할 수 있습니다.
+
+:::
+
+## 시작하기 전에
+
+기술자 계정을 관리하기 전에, 사이트 보안 설정에서 기술자 계정이 사이트에 접근할 수 있도록 허용되어 있는지 확인하세요. 사이트 보안 설정에서 기술자 계정이 사이트에 접근할 수 있도록 허용되어 있지 않으면, 기술자 계정을 관리할 수 없습니다.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' />를 클릭하세요.
+
+1. <Cmd sid='site_setting_tab_security' product='air' /> 탭을 클릭하세요.
+
+1. <Cmd sid='site_security_input7' product='air' /> 옵션을 활성화하세요.
+
+<Image src='/img/air/bsair-settings-security-allow-technician.png' />
+
+<Cmd sid='site_security_input7' product='air' /> 옵션을 활성화하면 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_text' product='air' /> 메뉴가 <Cmd sid='title_techincians_settings' product='air' /> 메뉴로 변경됩니다. <Cmd sid='admin_text' product='air' />와 <Cmd sid='technicians_text' product='air' /> 탭으로 나뉘어져 관리자 계정과 기술자 계정을 각각 관리할 수 있습니다.
+
+<Image src='/img/air/bsair-settings-admin-technician-changes.png' />
+
+
+## 기술자 권한 설정하기
+
+사이트에 초대된 기술자의 접근 권한을 수정하려면 다음 안내를 따르세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' />를 클릭하세요.
+
+1. <Cmd sid='technicians_text' product='air' /> 탭을 클릭하세요.
+
+1. 기술자 목록에서 접근 권한을 수정할 기술자의 <Cmd sid='technicians_permissions' product='air' /> 열을 클릭하세요.
+
+   <Image src='/img/air/bsair-settings-admin-technician-permission.png' />
+
+1. 접근 권한 선택 목록에서 원하는 권한 수준을 선택하세요.
+
+   <Image src='/img/air/bsair-settings-admin-technician-permission-select.png' />
+
+   * <Cmd sid='inviteTechnicianModal.dropdown_opt1' product='pn' />: 사이트에 로그인할 수 없습니다.
+
+   * <Cmd sid='techincians_list_permissions_devices_only' product='air' />: <Cmd sid='dashboard_menu' product='air' /> 및 <Cmd sid='device_menu' product='air' /> 메뉴에만 접근할 수 있습니다.
+
+   * <Cmd sid='techincians_list_permissions_full_excluding_users' product='air' />: <Cmd sid='user_menu' product='air' /> 메뉴를 제외한 모든 메뉴에 접근할 수 있지만, 일부 설정 기능에 대한 접근은 제한됩니다.
+
+   * <Cmd sid='techincians_list_permissions_full_including_users' product='air' />: <Cmd sid='user_menu' product='air' /> 메뉴를 포함한 모든 메뉴에 접근할 수 있지만, 일부 설정 기능에 대한 접근은 제한됩니다.
+
+1. 변경 확인을 위한 팝업 메시지 창이 나타나면 <Cmd sid='btn_yes' product='air' /> 버튼을 클릭하세요.
+
+화면 상단의 성공 메시지와 함께 해당 기술자의 접근 권한이 변경됩니다.
+
+:::info
+
+<Cmd sid='techincians_list_permissions_full_excluding_users' product='air' /> 및 <Cmd sid='techincians_list_permissions_full_including_users' product='air' />은 다음 메뉴 경로에 대해 보기 권한은 있지만 수정 권한은 없습니다.
+
+* <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' />
+
+* <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' />
+
+:::
+
+
+## 기술자의 계정 잠김/해제
+
+기술자의 지원이 더이상 필요없거나 보안상의 이유로 사이트 접근을 제한해야 한다면, 기술자의 계정을 잠김 처리하여 사이트 접근을 차단할 수 있습니다. 반대로, 기술자의 지원이 다시 필요해진다면, 계정 잠금을 해제하여 사이트 접근을 허용할 수 있습니다.
+
+사이트에 초대된 기술자의 계정을 잠김 처리하면 해당 기술자는 사이트에 로그인할 수 없습니다.
+
+### 개별 기술자 계정 잠김/해제
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' />를 클릭하세요.
+
+1. <Cmd sid='technicians_text' product='air' /> 탭을 클릭하세요.
+
+1. 기술자 목록에서 계정을 잠그거나 해제할 기술자의 <Cmd sid='column_admin_account_status' product='air' /> 열의 토글 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-settings-admin-technician-lock-unlock.png' />
+
+1. 팝업 메시지 창이 나타나면 내용을 확인하고 <Cmd sid='btn_yes' product='air' /> 버튼을 클릭하세요.
+
+### 여러 기술자 계정 일괄 잠김/해제
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' />를 클릭하세요.
+
+1. <Cmd sid='technicians_text' product='air' /> 탭을 클릭하세요.
+
+1. 기술자 목록에서 계정을 잠그거나 해제할 기술자의 체크박스를 클릭하세요. 1명 이상의 기술자를 선택할 수 있습니다.
+
+1. 기술자 목록 상단에서  <IcAirPlock title='Lock Account' /> 또는 <IcAirPunlock title='Unlock Account' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-settings-admin-technician-lock-unlock-batch.png' />
+
+1. 팝업 메시지 창이 나타나면 내용을 확인하고 <Cmd sid='btn_yes' product='air' /> 버튼을 클릭하세요.
+
+화면 상단의 성공 메시지와 함께 선택한 기술자들의 계정이 잠김 처리되거나 해제됩니다.
+
+:::info
+
+선택한 여러 기술자 중 서로 다른 계정 잠금 상태의 기술자가 있더라도, 일괄 작업을 수행하면 모두 잠김 처리되거나 모두 해제됩니다.
+
+:::
+
+
+## 기술자 계정 삭제하기
+
+사이트에 초대된 기술자의 계정을 삭제하면 해당 기술자의 사이트 접근 권한이 완전히 제거됩니다. 기술자 계정이 삭제되면 복구할 수 없습니다.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' />를 클릭하세요.
+
+1. <Cmd sid='technicians_text' product='air' /> 탭을 클릭하세요.
+
+1. 기술자 목록에서 계정을 삭제할 기술자의 체크박스를 클릭하세요. 1명 이상의 기술자를 선택할 수 있습니다.
+
+1. 기술자 목록 상단의 <IcAirRemove title='Delete' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-settings-admin-technician-delete.png' />
+
+1. 팝업 메시지 창이 나타나면 내용을 확인하고 <Cmd sid='btn_yes' product='air' /> 버튼을 클릭하세요.
+
+화면 상단의 성공 메시지와 함께 선택한 기술자들의 계정이 삭제되고, 기술자 목록에서 더이상 표시되지 않습니다.
