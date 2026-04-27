@@ -1229,10 +1229,13 @@ body[data-rh] .redocusaurus {
       table-layout: fixed;
       tr.center td {
         text-align: center;
-        p.hasimg img {
-          margin: 0 auto;
-          width: revert-layer;
-          height: revert-layer;
+        p.hasimg {
+          margin-top: 0 !important;
+          img {
+            margin: 0 auto;
+            width: revert-layer;
+            height: revert-layer;
+          }
         }
       }
       tr.white td {
@@ -1256,6 +1259,35 @@ body[data-rh] .redocusaurus {
     }
     ul {
       margin-bottom: 0;
+    }
+  }
+  .component {
+    table {
+      table-layout: fixed;
+      tr.center td {
+        text-align: center;
+        p.hasimg {
+          margin-top: 0 !important;
+          img {
+            margin: 0 auto;
+            width: revert-layer;
+            height: revert-layer;
+          }
+        }
+      }
+      tr.white td {
+        background-color: #fff;
+      }
+    }
+  }
+  .col2-2-8 {
+    table {
+      td:first-of-type {
+        width: 20%;
+      }
+      td:nth-of-type(2) {
+        width: 80%;
+      }
     }
   }
   .featureList {
