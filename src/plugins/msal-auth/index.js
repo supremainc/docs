@@ -20,6 +20,26 @@ module.exports = function () {
                         innerHTML: `
                             // MSAL 라이브러리가 로드될 때까지 대기
                             (function() {
+                                // 🚀 맨 처음에 크롤러 감지 (MSAL.js 로드 전)
+                                function isCrawler() {
+                                    const ua = navigator?.userAgent || '';
+                                    // Algolia Crawler 패턴: "Algolia Crawler/v0.0.0" 형식도 감지
+                                    const crawlerPatterns = /Algolia\s+Crawler|AlgoliaWebCrawler|algoliasearch|jsdom/i;
+                                    return crawlerPatterns.test(ua);
+                                }
+                                
+                                console.log('=== Early Crawler Detection ===');
+                                console.log('User Agent:', navigator?.userAgent || 'unknown');
+                                console.log('Is Crawler:', isCrawler());
+                                
+                                if (isCrawler()) {
+                                    console.log('✓ Algolia Crawler detected - Skipping MSAL authentication');
+                                    console.log('Crawler can now access and index the content');
+                                    return;  // 🎯 크롤러면 여기서 종료, MSAL.js 로드 안 함
+                                }
+                                
+                                console.log('✓ Regular user detected - Proceed with MSAL authentication');
+                                
                                 function waitForMSAL() {
                                     if (typeof window.msal === 'undefined') {
                                         console.log('Waiting for MSAL library to load...');
@@ -41,18 +61,20 @@ module.exports = function () {
                                         userAgent: navigator.userAgent
                                     });
                                     
-                                    // Bot/Crawler 감지 함수
+
+                                    
+                                    // Bot/Crawler 감지 함수 (이중 안전장치)
                                     function isAlgoliaCrawler() {
-                                        if (typeof window === 'undefined' || typeof navigator === 'undefined') return false;
-                                        
-                                        const userAgent = window.navigator.userAgent;
-                                        const isAlgolia = userAgent.includes('Algolia Crawler');
+                                        // 초기 감지에서 이미 크롤러를 걸러냈으므로, 
+                                        // 여기도달한 것은 일반 사용자일 가능성이 높음
+                                        const ua = navigator?.userAgent || '';
+                                        const isAlgolia = /AlgoliaWebCrawler|Algolia Crawler|algoliasearch|jsdom|bot|crawler/i.test(ua);
                                         
                                         if (isAlgolia) {
-                                            console.log('Algolia Crawler detected - Authentication disabled');
+                                            console.log('⚠️ Secondary crawler detection triggered');
+                                            return true;
                                         }
-                                        
-                                        return isAlgolia;
+                                        return false;
                                     }
                                     
                                     // 브라우저 호환성 체크
@@ -72,15 +94,16 @@ module.exports = function () {
                                         return { isSupported: true };
                                     }
                                     
-                                    // 인증 활성화 여부 확인 (항상 활성화로 단순화)
+                                    // 인증 활성화 여부 확인
                                     function shouldEnableAuth() {
                                         // Algolia Crawler 감지 시에만 인증 비활성화
-                                        if (isAlgoliaCrawler()) {
+                                        const isCrawler = isAlgoliaCrawler();
+                                        if (isCrawler) {
                                             return false;
                                         }
                                         
                                         // 그 외 모든 경우에 인증 활성화
-                                        console.log('Authentication enabled for all environments');
+                                        console.log('Authentication enabled for regular users');
                                         return true;
                                     }
                                     
@@ -94,8 +117,7 @@ module.exports = function () {
                                             navigateToLoginRequestUrl: true
                                         },
                                         cache: {
-                                            cacheLocation: "sessionStorage",
-                                            storeAuthStateInCookie: false
+                                            cacheLocation: "localStorage"
                                         },
                                         system: {
                                             loggerOptions: {
@@ -127,7 +149,8 @@ module.exports = function () {
                                     // MSAL 인스턴스 초기화 및 인증 처리
                                     function initializeAuth() {
                                         // 인증이 비활성화된 경우 스킵
-                                        if (!shouldEnableAuth()) {
+                                        const authEnabled = shouldEnableAuth();
+                                        if (!authEnabled) {
                                             return;
                                         }
                                         
@@ -154,7 +177,6 @@ module.exports = function () {
                                             \`;
                                             return;
                                         }
-                                        
                                         // MSAL 인스턴스 생성
                                         const msalInstance = new window.msal.PublicClientApplication(msalConfig);
                                         
@@ -222,7 +244,7 @@ module.exports = function () {
                                                         border: none;
                                                         font-size: 16px;
                                                     " onclick="signIn()">
-                                                        Microsoft 계정으로 로그인
+                                                        Sign in with your Microsoft account
                                                     </div>
                                                 </div>
                                             \`;
