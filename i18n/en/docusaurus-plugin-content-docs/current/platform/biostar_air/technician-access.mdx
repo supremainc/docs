@@ -66,9 +66,15 @@ After inviting a technician, partners can check their invitation status in the t
 
 #### Pending sign-up
 
-The invitation status is shown as <Cmd sid='adminLCM.pending_status' product='pn' /> until the invited technician accepts the invitation. Invited technicians have up to 7 days to accept the invitation. After 7 days, the invitation expires and the status changes to <Cmd sid='adminLCM.user_status_expired' product='pn' />.
+The invitation status is shown as <Cmd sid='adminLCM.pending_status' product='pn' /> until the invited technician accepts the invitation. Invited technicians can click the link in the email to register an account or sign in to the Partner Portal.
 
 <Image src='/img/air/bsair-partner-admin-technicial-list-pending.png' />
+
+:::info
+
+Invited technicians have up to 7 days to accept the invitation. After 7 days, the invitation expires and the status changes to <Cmd sid='adminLCM.user_status_expired' product='pn' />. An account whose invitation has expired can re-register if the invitation link is resent. For more information on resending invitation links, see <DocLink inner='#resendInvitation' />.
+
+:::
 
 #### Sign-up complete
 
@@ -106,21 +112,15 @@ The invitation status of a revoked technician changes to <Cmd sid='adminLCM.user
 
 <Image src='/img/air/bsair-partner-admin-technicial-list-revoked.png' />
 
-## Resend invitation link
+## Resend invitation link {#resendInvitation}
 
 Resend the invitation link if an invited technician did not receive the invitation email, lost it, or the invitation link has expired.
 
-1. In the technician list, select the checkbox for each technician whose invitation status is <Cmd sid='adminLCM.pending_status' product='pn' /> or <Cmd sid='adminLCM.user_status_expired' product='pn' />. You can select 1 or more technicians.
+1. In the technician list, select the checkbox for each technician whose invitation status is <Cmd sid='adminLCM.pending_status' product='pn' />, <Cmd sid='adminLCM.user_status_expired' product='pn' />, or <Cmd sid='user_status_revoked' product='pn' />. You can select 1 or more technicians.
 
 2. Click <IcAirResend title='Resend Invitation' /> at the top left of the technician list.
 
    <Image src='/img/air/bsair-partner-admin-technicial-list-resend-invite.png' />
-
-   :::note
-
-   Only technicians with status <Cmd sid='adminLCM.user_status_revoked' product='pn' /> or <Cmd sid='adminLCM.user_status_expired' product='pn' /> can have invitation links resent.
-
-   :::
 
 3. If a popup message appears, review the message and click <Cmd sid='common.button.yes' product='pn' />.
 
@@ -222,7 +222,7 @@ You can lock, unlock, or delete accounts for technicians assigned to a site.
 
 1. Click <Cmd sid="menu.label.siteList" product="pn" /> in the left sidebar.
 
-2. Click the site in the site list where you want to allow technician access.
+2. In the site list, click the site where you want to grant technician access.
 
 3. When the <Cmd sid="siteListPage.drawer.edit.title" product="pn" /> panel appears, select the <Cmd sid="site.admin_technicans.title" product="pn" /> tab, then the <Cmd sid="site.technicans.title" product="pn" /> tab.
 
