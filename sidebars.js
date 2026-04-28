@@ -1042,6 +1042,7 @@ function createSidebars(preview) {
             id: 'device/corestation_40/release-notes/index',
           },
           items: [
+            'device/corestation_40/release-notes/172',
             'device/corestation_40/release-notes/171',
             'device/corestation_40/release-notes/161',
             'device/corestation_40/release-notes/153',
@@ -1578,6 +1579,7 @@ function createSidebars(preview) {
             id: 'device/bioentry_p2/release-notes/index',
           },
           items: [
+            'device/bioentry_p2/release-notes/161',
             'device/bioentry_p2/release-notes/160',
             'device/bioentry_p2/release-notes/152',
             'device/bioentry_p2/release-notes/151',
