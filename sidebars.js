@@ -321,6 +321,7 @@ function createSidebars(preview) {
           items: [
             'platform/biostar_air/biostar-air-partner-portal-detailed-use',
             'platform/biostar_air/federated-sites',
+            'platform/biostar_air/partner-administrator',
             {
               type: 'category',
               label: '파트너 기술자 관리하기',
