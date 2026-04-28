@@ -117,8 +117,7 @@ module.exports = function () {
                                             navigateToLoginRequestUrl: true
                                         },
                                         cache: {
-                                            cacheLocation: "sessionStorage",
-                                            storeAuthStateInCookie: false
+                                            cacheLocation: "localStorage"
                                         },
                                         system: {
                                             loggerOptions: {
