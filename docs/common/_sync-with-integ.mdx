@@ -4,11 +4,11 @@
 
 * <Cmd sid='settings.activeDirectory.syncMode.label' product='2' />: 원하는 동기화 방식을 선택하세요.
 
-  * <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' />: 연동된 디렉토리 서비스에서 사용자를 동기화할 때, **BioStar X**에 없는 사용자들을 추가하고, 정보가 변경된 사용자의 정보는 업데이트하지만 삭제하지 않습니다.
+  * <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' />: 연동된 디렉토리 서비스에서 사용자를 동기화할 때, **BioStar X**에 없는 사용자를 추가하고, 정보가 변경된 사용자를 업데이트합니다. 단, **BioStar X**에 등록된 사용자와 Directory Integration 서버에서 삭제된 사용자는 삭제하지 않고 유지합니다.
 
     <Image src='/img/biostarx-setting-directory-sync-add-update-mode.png' />
 
-  * <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' />: **BioStar X**의 사용자 정보를 연동된 디렉토리 서비스와 동일하게 동기화합니다. <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' /> 모드와 달리, 디렉토리 서비스에서 삭제된 사용자도 함께 삭제됩니다.
+  * <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' />: **BioStar X**의 사용자 정보를 연동된 디렉토리 서비스와 완전히 동일하게 동기화합니다. <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' /> 모드와 달리 **BioStar X**의 모든 사용자를 삭제 대상으로 포함하여 동기화합니다.
 
     <Image src='/img/biostarx-setting-directory-sync-add-update-delete-mode.png' />
 
@@ -20,9 +20,19 @@
 
 :::caution
 
+<Include type={props.type} ref='entraId' >
+
 * <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' /> 모드 사용 시 같은 이름의 사용자 그룹이 있다면 삭제하지 않고 유지합니다.
 
-* <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' /> 모드 사용 시
+</Include>
+
+<Include type={props.type} ref='active_directory' >
+
+* <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' /> 모드에서는 같은 이름의 사용자 그룹과 동일한 사용자 아이디(User ID)를 삭제하지 않고 유지합니다.
+
+</Include>
+
+* <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' /> 모드에서는:
 
   * **같은 이름의 그룹이 이미 있는 경우**: 그룹이 새로 생성되지 않고 기존 그룹의 정보를 유지합니다. 다만 해당 그룹에 속한 사용자는 디렉토리 서비스의 최신 정보로 반영하기 위해 모두 제거한 후 다시 추가합니다. 단, 해당 그룹의 같은 이름 사용자는 유지합니다.
 
