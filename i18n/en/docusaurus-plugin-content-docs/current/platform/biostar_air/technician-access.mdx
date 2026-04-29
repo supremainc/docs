@@ -88,9 +88,9 @@ If an invited technician's email address was entered incorrectly or the issue is
 
 <Image src='/img/air/bsair-partner-admin-technicial-list-revoked.png' />
 
-## Cancel invitation {#revokeInvite}
+### Cancel invitation {#revokeInvite}
 
-Partners can cancel an invitation if they entered the technician's email incorrectly, or if the issue has been resolved and the invitation is no longer needed.
+Partners can cancel an invitation if they entered the technician's email incorrectly, or if the issue has been resolved and the invitation is no longer needed. After you cancel an invitation, the user will not be able to use the invitation link to sign up.
 
 1. In the technician list, select the checkbox for each technician whose invitation status is <Cmd sid='adminLCM.pending_status' product='pn' />. You can select 1 or more technicians.
 
@@ -112,11 +112,11 @@ The invitation status of a revoked technician changes to <Cmd sid='adminLCM.user
 
 <Image src='/img/air/bsair-partner-admin-technicial-list-revoked.png' />
 
-## Resend invitation link {#resendInvitation}
+### Resend invitation link {#resendInvitation}
 
 Resend the invitation link if an invited technician did not receive the invitation email, lost it, or the invitation link has expired.
 
-1. In the technician list, select the checkbox for each technician whose invitation status is <Cmd sid='adminLCM.pending_status' product='pn' />, <Cmd sid='adminLCM.user_status_expired' product='pn' />, or <Cmd sid='user_status_revoked' product='pn' />. You can select 1 or more technicians.
+1. In the technician list, select the checkbox for each technician whose invitation status is <Cmd sid='adminLCM.pending_status' product='pn' />, <Cmd sid='adminLCM.user_status_expired' product='pn' />, or <Cmd sid='adminLCM.user_status_revoked' product='pn' />. You can select 1 or more technicians.
 
 2. Click <IcAirResend title='Resend Invitation' /> at the top left of the technician list.
 
@@ -132,7 +132,7 @@ After resending a technician's invitation link, their invitation status changes 
 
 ## Manage technicians {#manageTechnician}
 
-After an invited technician accepts the email invitation and completes sign-up, partners can manage them from the technician list. Lock or unlock a technician's account, or modify their access to the site. You can delete a technician account when the technician's support is no longer needed.
+After an invited technician accepts the email invitation and completes sign-up, partners can manage them from the technician list. Lock or unlock a technician's account, or modify their access to the site. If you no longer need a technician's support, you can delete their account.
 
 ### Lock or unlock technician accounts
 
@@ -160,9 +160,9 @@ In the technician list, click the toggle button in the <Cmd sid='adminLCM.column
 
 2. If a popup message appears, review the message and click <Cmd sid='common.button.yes' product='pn' />.
 
-3. When a success message appears confirming the account was locked or unlocked, click <Cmd sid='common.button.close' product='pn' />.
+3. When the success message confirming the account lock or unlock appears, click <Cmd sid='common.button.close' product='pn' />.
 
-#### Bulk lock or unlock technician accounts
+#### Lock or unlock multiple technician accounts
 
 Select multiple technician accounts in the technician list to lock or unlock them in bulk.
 
@@ -174,11 +174,11 @@ Select multiple technician accounts in the technician list to lock or unlock the
 
 3. If a popup message appears, review the message and click <Cmd sid='common.button.yes' product='pn' />.
 
-4. When a success message appears confirming the account was locked or unlocked, click <Cmd sid='common.button.close' product='pn' />.
+4. When the success message confirming the account lock or unlock appears, click <Cmd sid='common.button.close' product='pn' />.
 
 ### Edit site access
 
-Modify site access for technicians who have been granted access to a site.
+You can modify a technician's site access.
 
 1. In the technician list, click a technician whose <Cmd sid='common.label.invited_sites' product='pn' /> column indicates 1 or more sites.
 
@@ -202,7 +202,7 @@ For more information on granting site access to a technician, see <DocLink docId
 
 ### Delete a technician account
 
-You can delete a technician account when the technician's support is no longer needed. Deleting a technician account prevents the technician from logging in to the Partner Portal and permanently removes all information associated with the account from the system.
+If you no longer need a technician's support, you can delete their account. Deleting a technician account prevents the technician from logging in to the Partner Portal and permanently removes all information associated with the account from the system.
 
 1. In the technician list, click the checkbox of the technician you want to delete. You can select 1 or more technicians.
 
@@ -212,7 +212,7 @@ You can delete a technician account when the technician's support is no longer n
 
 3. If a pop-up message appears, review it and click <Cmd sid='common.button.confirm' product='pn' />.
 
-4. When the success message confirming the technician account deletion appears, click <Cmd sid='common.button.close' product='pn' />.
+4. When the account deletion success message appears, click <Cmd sid='common.button.close' product='pn' />.
 
 Deleted technician accounts no longer appear in the technician list.
 
@@ -222,7 +222,7 @@ You can lock, unlock, or delete accounts for technicians assigned to a site.
 
 1. Click <Cmd sid="menu.label.siteList" product="pn" /> in the left sidebar.
 
-2. In the site list, click the site where you want to grant technician access.
+2. In the site list, click the site where you want to manage technician access.
 
 3. When the <Cmd sid="siteListPage.drawer.edit.title" product="pn" /> panel appears, select the <Cmd sid="site.admin_technicans.title" product="pn" /> tab, then the <Cmd sid="site.technicans.title" product="pn" /> tab.
 

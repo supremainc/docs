@@ -1,14 +1,16 @@
 ---
 id: managing-administrators
 title: Manage Administrator Accounts and Roles
-description: Learn how to invite administrators, assign role levels, manage permissions, and configure access control for the observer, operator, administrator, and master roles in BioStar Air.
+description: This guide explains how to invite administrator accounts to BioStar Air, assign the 4 roles (Observer, Operator, Administrator, and Master), and manage permissions.
 keywords:
   - Administrator
   - roles
   - Access Control Settings
 ---
 
-Use the administrator feature in BioStar Air to manage administrator accounts, assign roles, and control access levels within your organization. This enables you to maintain security and administrative control while granting the appropriate privileges to the right personnel.
+Use BioStar Air's administrator and role management features to effectively control site access. Assign the 4 roles — Observer, Operator, Administrator, and Master — to grant each person only the permissions they need, ensuring both security and operational efficiency.
+
+This document covers the entire administrator account lifecycle, from inviting administrators to assigning roles, managing permissions, and locking accounts.
 
 :::tip
 
@@ -23,6 +25,14 @@ Watch the following video for a guide on managing administrators.
 Click <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> In the left sidebar.
 
 <Image src='/img/air/bsair-settings-admin.png' />
+
+:::info
+
+Enabling the <Cmd sid='site_security_input7' product='air' /> option changes the <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_text' product='air' /> menu to the <Cmd sid='title_techincians_settings' product='air' /> menu. The <Cmd sid='admin_text' product='air' /> and <Cmd sid='technicians_text' product='air' /> tabs let you manage admin and technician accounts separately.
+
+For more information on how to enable <Cmd sid='site_security_input7' product='air' />, see <DocLink docId='platform/biostar_air/managing-technician' />.
+
+:::
 
 ### Administrator List
 
@@ -72,7 +82,6 @@ If an invited administrator's email address was entered incorrectly or the invit
 
 <Image src='/img/air/bsair-settings-admin-invite-revoke-status.png' />
 
-
 ### Administrator levels {#administrator-levels}
 
 Each administrator level in BioStar Air has specific permissions, and higher levels inherit the permissions of lower levels.
@@ -82,6 +91,28 @@ Each administrator level in BioStar Air has specific permissions, and higher lev
 Each administrator role has different permissions across BioStar Air. <Cmd sid="observer_role" product="air" className="bold" /> has the most restricted access and some menus are hidden.
 
 :::
+
+#### Compare permissions
+
+<div className='table-fixed'>
+
+| Feature | Observer | Operator | Administrator | Master |
+| --- | :-: | :-: | :-: | :-: |
+| View Dashboard/Logs | ✔️ | ✔️ | ✔️ | ✔️ |
+| Export Logs and Generate Reports | ✔️ | ✔️ | ✔️ | ✔️ |
+| User Management | ❌ | ✔️ | ✔️ | ✔️ |
+| Manage User Groups | ❌ | ✔️ | ✔️ | ✔️ |
+| Manage Access Levels | ❌ | ✔️ | ✔️ | ✔️ |
+| Manage Schedules | ❌ | ✔️ | ✔️ | ✔️ |
+| Manage Holiday Groups | ❌ | ✔️ | ✔️ | ✔️ |
+| Control and Configure Devices | ❌ | ❌ | ✔️ | ✔️ |
+| Invite Administrators | ❌ | ❌ | ✔️ | ✔️ |
+| Assign Master Role | ❌ | ❌ | ❌ | ✔️ |
+| Edit or Delete Master Administrators | ❌ | ❌ | ❌ | ✔️ |
+| Create Subsites | ❌ | ❌ | ❌ | ✔️ |
+| Configure Site Settings | ❌ | ❌ | ❌ | ✔️ |
+
+</div>
 
 #### <Cmd sid="observer_role" product="air" className="normal" /> (Lowest Level) {#observer}
 
@@ -213,7 +244,7 @@ In the <Cmd sid='column_admin_account_status' product='air' /> column, locked ad
 
 3. When the message window appears, click the <Cmd sid='admin_status_change_confirm_btn' product='air' /> button.
 
-### Bulk lock or unlock administrators
+### Lock or unlock multiple administrators
 
 1. In the administrators list, click the checkbox for the administrator you want to lock or unlock. You can select 1 or more administrators.
 
@@ -225,7 +256,7 @@ In the <Cmd sid='column_admin_account_status' product='air' /> column, locked ad
 
 ## Change an administrator's role {#changing-an-administrators-role}
 
-Administrators can change the roles of administrators at a lower level.
+Administrators can change the roles of administrators at a lower level. Adjust roles when employees' duties change, when their responsibilities expand or contract, or during organizational restructuring. Downgrading a role removes an administrator's access to features they previously had.
 
 1. Find the administrator whose role you want to change in the list.
 
@@ -253,4 +284,4 @@ If you delete an administrator account, that administrator will not be able to l
 
 3. When a popup appears, review the message and click <Cmd sid='btn_yes' product='air' />.
 
-Deleted administrator accounts will no longer appear in the administrators list.
+Deleted administrator accounts no longer appear in the administrator list.
