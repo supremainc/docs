@@ -4,11 +4,15 @@ Sincroniza la información de los usuarios modificada en <strong>{props.name}</s
 
 * <Cmd sid='settings.activeDirectory.syncMode.label' product='2' />: Seleccione el modo de sincronización deseado.
 
-  * <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' />: Al sincronizar usuarios desde el servicio de directorio vinculado, se agregan los usuarios que no existen en **BioStar X** y se actualizan los usuarios cuya información ha cambiado, sin eliminar a ninguno.
+  * <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' />: Al sincronizar usuarios desde el servicio de directorio integrado, se agregarán los usuarios que no estén en **BioStar X** y se actualizarán los usuarios cuya información haya cambiado. Sin embargo, los siguientes usuarios no serán eliminados.
+
+    * Usuarios registrados únicamente en **BioStar X**
+
+    * Usuarios eliminados de <strong>{props.name}</strong>
 
     <Image src='/img/biostarx-setting-directory-sync-add-update-mode.png' />
 
-  * <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' />: Sincroniza la información de los usuarios de **BioStar X** para que coincida con la del servicio de directorio vinculado. A diferencia del modo <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' />, los usuarios eliminados en el servicio de directorio también se eliminan en BioStar X.
+  * <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' />: Sincroniza la información de los usuarios de **BioStar X** para que coincida exactamente con la del servicio de directorio integrado. Sincroniza los usuarios, incluidos aquellos registrados únicamente en **BioStar X** y los eliminados de <strong>{props.name}</strong>, para mantener los datos idénticos en ambos sistemas.
 
     <Image src='/img/biostarx-setting-directory-sync-add-update-delete-mode.png' />
 
@@ -20,9 +24,19 @@ Sincroniza la información de los usuarios modificada en <strong>{props.name}</s
 
 :::caution
 
+<Include type={props.type} ref='entraId' >
+
 * Al usar el modo <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' />, si existe un grupo con el mismo nombre, ese grupo se conserva en lugar de eliminarse.
 
-* Al usar el modo <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' />
+</Include>
+
+<Include type={props.type} ref='active_directory' >
+
+* En el modo <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' />, los grupos de usuarios con el mismo nombre y los usuarios con el mismo ID de usuario no se eliminan; se conservan.
+
+</Include>
+
+* Modo <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' />:
 
   * **Si ya existe un grupo con el mismo nombre**: no se crea el grupo y se conserva la información del grupo existente. Sin embargo, todos los usuarios de ese grupo se eliminan y luego se vuelven a agregar para reflejar la información más reciente del servicio de directorio. Sin embargo, los usuarios de ese grupo que comparten el mismo nombre se conservan.
 

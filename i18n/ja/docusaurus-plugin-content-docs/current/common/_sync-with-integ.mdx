@@ -4,11 +4,15 @@
 
 * <Cmd sid='settings.activeDirectory.syncMode.label' product='2' />：希望する同期モードを選択してください。
 
-  * <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' />：連携されているディレクトリサービスからユーザーを同期する際、**BioStar X** に存在しないユーザーは追加し、変更されたユーザーの情報は更新しますが、削除は行いません。
+  * <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' />：連携先のディレクトリサービスからユーザーを同期する際、**BioStar X**に存在しないユーザーを追加し、情報が変更されたユーザーを更新します。 ただし、次のユーザーは削除せずに保持します。
+
+    * **BioStar X** にのみ登録されているユーザー
+
+    * <strong>{props.name}</strong>から削除されたユーザー
 
     <Image src='/img/biostarx-setting-directory-sync-add-update-mode.png' />
 
-  * <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' />：**BioStar X** のユーザー情報を連携先のディレクトリサービスと同じ状態に同期します。 <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' /> モードとは異なり、ディレクトリサービスで削除されたユーザーも削除されます。
+  * <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' />：**BioStar X** のユーザー情報を連携先のディレクトリサービスと完全に一致するように同期します。 **BioStar X** にのみ登録されているユーザーおよび<strong>{props.name}</strong>から削除されたユーザーをすべて含めて同期するため、双方のデータが一致して管理されます。
 
     <Image src='/img/biostarx-setting-directory-sync-add-update-delete-mode.png' />
 
@@ -20,9 +24,19 @@
 
 :::caution
 
+<Include type={props.type} ref='entraId' >
+
 * <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' /> モード使用時、同名のユーザーグループがある場合は削除せずに保持します。
 
-* <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' /> モード使用時
+</Include>
+
+<Include type={props.type} ref='active_directory' >
+
+* <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' /> モードでは、同名のユーザーグループと同一のユーザーID(User ID)は削除せずに保持します。
+
+</Include>
+
+* <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' /> モードでは：
 
   * **同名のグループが既に存在する場合**：グループは新たに作成されず、既存グループの情報を保持します。 ただし、該当グループに所属するユーザーはディレクトリサービスの最新情報を反映させるため、一旦すべて削除してから再度追加します。 ただし、該当グループ内の同名ユーザーは維持されます。
 

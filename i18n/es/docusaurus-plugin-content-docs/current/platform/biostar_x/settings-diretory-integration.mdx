@@ -44,6 +44,12 @@ La función de configuración de **Entra ID** o **Active Directory** está dispo
 
 5. Configura cada elemento como se indica a continuación.
 
+:::info
+
+Para integrar Entra ID, ve a <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.server' product='2' /> y establece <Cmd sid='setting.userDevice.useridType' product='2' /> en <Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' />.
+
+:::
+
 <Steps>
 <Step>
 
@@ -119,7 +125,7 @@ Copia el URI de redirección del campo <Cmd sid='settings.activeDirectory.Redire
 
 <Step>
 
-<SyncIntegration hashid='syncdatafromEntraid' name='Entra ID' />
+<SyncIntegration hashid='syncdatafromEntraid' name='Entra ID' type='entraId' />
 
 </Step>
 <Step>
@@ -153,7 +159,7 @@ Después de completar todos los ajustes de <Cmd sid='setting.menu.directoryInteg
 * Active Directory está disponible para entornos de sistema con Windows Server 2008 R2 o
   posterior.
 
-* Para usar el servidor Active Directory, establece <Cmd sid='setting.userDevice.useridType' product='2' /> en <Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' /> en <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.server' product='2' />.
+* Para integrar Active Directory, ve a <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.server' product='2' /> y establece <Cmd sid='setting.userDevice.useridType' product='2' /> en <Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' />.
 
 :::
 
@@ -219,7 +225,7 @@ El campo `sAMAccountName` no puede contener caracteres especiales. El inicio de 
 
 <Step>
 
-<SyncIntegration hashid='syncdatafromAd' name='Active Directory' />
+<SyncIntegration hashid='syncdatafromAd' name='Active Directory' type='active_directory' />
 
 </Step>
 <Step>

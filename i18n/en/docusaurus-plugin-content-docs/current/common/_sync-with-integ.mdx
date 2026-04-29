@@ -4,11 +4,15 @@ This feature allows you to synchronize user information changed in <strong>{prop
 
 * <Cmd sid='settings.activeDirectory.syncMode.label' product='2' />: Select the desired synchronization mode.
 
-  * <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' />: When synchronizing users from the linked directory service, add users who don't exist in **BioStar X** and update users whose information has changed, without deleting any.
+  * <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' />: When synchronizing users from the integrated directory service, add users who are not in **BioStar X** and update users whose information has changed. However, the following users will not be deleted.
+
+    * Users registered only in **BioStar X**
+
+    * Users deleted from <strong>{props.name}</strong>
 
     <Image src='/img/biostarx-setting-directory-sync-add-update-mode.png' />
 
-  * <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' />: Synchronize **BioStar X** user information to match the linked directory service. Unlike <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' /> mode, users deleted in the directory service are also removed.
+  * <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' />: Synchronize **BioStar X** user information to match the integrated directory service exactly. Synchronizes users, including those registered only in **BioStar X** and those deleted from <strong>{props.name}</strong>, to keep the data identical on both sides.
 
     <Image src='/img/biostarx-setting-directory-sync-add-update-delete-mode.png' />
 
@@ -20,9 +24,19 @@ This feature allows you to synchronize user information changed in <strong>{prop
 
 :::caution
 
+<Include type={props.type} ref='entraId' >
+
 * When using <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' /> mode, if a group with the same name exists, it is retained rather than deleted.
 
-* When using <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' /> mode
+</Include>
+
+<Include type={props.type} ref='active_directory' >
+
+* In <Cmd sid='settings.activeDirectory.syncMode.addEdit' product='2' /> mode, user groups with the same name and users with the same user ID are not deleted; they are retained.
+
+</Include>
+
+* <Cmd sid='settings.activeDirectory.syncMode.addEditDelete' product='2' /> mode:
 
   * **If a group with the same name already exists**: the group is not created, and the existing group's information is retained. However, all users in that group are removed and then re-added to reflect the directory service's latest information. However, users in that group who share the same name are retained.
 
