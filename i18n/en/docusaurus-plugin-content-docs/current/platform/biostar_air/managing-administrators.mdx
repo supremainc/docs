@@ -1,14 +1,16 @@
 ---
 id: managing-administrators
 title: Manage Administrator Accounts and Roles
-description: Learn how to invite administrators, assign role levels, manage permissions, and configure access control for the observer, operator, administrator, and master roles in BioStar Air.
+description: This guide explains how to invite administrator accounts to BioStar Air, assign the 4 roles (Observer, Operator, Administrator, and Master), and manage permissions.
 keywords:
   - Administrator
   - roles
   - Access Control Settings
 ---
 
-Use the administrator feature in BioStar Air to manage administrator accounts, assign roles, and control access levels within your organization. This enables you to maintain security and administrative control while granting the appropriate privileges to the right personnel.
+Use BioStar Air's administrator and role management features to effectively control site access. Assign the 4 roles — Observer, Operator, Administrator, and Master — to grant each person only the permissions they need, ensuring both security and operational efficiency.
+
+This document covers the entire administrator account lifecycle, from inviting administrators to assigning roles, managing permissions, and locking accounts.
 
 :::tip
 
@@ -20,95 +22,67 @@ Watch the following video for a guide on managing administrators.
 
 ## View administrators {#viewAdmin}
 
-Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> in the left sidebar.
+Click <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> In the left sidebar.
 
 <Image src='/img/air/bsair-settings-admin.png' />
 
-The <Cmd sid="admin_submenu" product="air" /> menu shows a list of all active administrators. The administrator list includes the following information.
+:::info
 
-* Name
+Enabling the <Cmd sid='site_security_input7' product='air' /> option changes the <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_text' product='air' /> menu to the <Cmd sid='title_techincians_settings' product='air' /> menu. The <Cmd sid='admin_text' product='air' /> and <Cmd sid='technicians_text' product='air' /> tabs let you manage admin and technician accounts separately.
 
-* Email address
+For more information on how to enable <Cmd sid='site_security_input7' product='air' />, see <DocLink docId='platform/biostar_air/managing-technician' />.
 
-* Phone number
+:::
 
-* Inviter
+### Administrator List
 
-* Invitation date
+The <Cmd sid='title_techincians_settings' product='air' /> menu shows a list of all administrators. The administrator list includes the following information.
 
-* Administrator role
+* <Cmd sid='admin_table_name_column' product='air' />: The administrator's name.
 
-* Account status (active/inactive)
+* <Cmd sid='column_email' product='air' />: The administrator's email address.
 
-## Deactivate administrators {#deactiveAdmin}
+* <Cmd sid='mobile_card' product='air' />: The administrator's phone number.
 
-Instead of deleting an administrator, deactivate the account and reactivate it when needed.
+* <Cmd sid='column_admin_invite_by' product='air' />: The email address of the person who invited the administrator.
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> in the left sidebar.
+* <Cmd sid='column_admin_date' product='air' />: The date the administrator was invited.
 
-2. Find the administrator to deactivate in the list.
+* <Cmd sid='column_admin_level' product='air' />: The administrator's permission level. For more information, see <DocLink inner='#administrator-levels' />.
 
-3. Click the toggle switch in the <Cmd sid="column_admin_account_status" product="air" /> column.
+* <Cmd sid='invitation_status' product='air' />: The invitation status of the administrator account. For more information, see <DocLink inner='#invitationStatus' />.
 
-   <Image src='/img/air/bsair-settings-admin-deactive.png' />
+* <Cmd sid='column_admin_account_status' product='air' />: The lock status of the administrator account. You can lock or unlock an account. For more information, see <DocLink inner='#deactiveAdmin' />.
 
-4. When the message window appears, click the <Cmd sid='admin_status_change_confirm_btn' product='air' /> button.
+### Invitation Status {#invitationStatus}
 
-The status in the <Cmd sid="column_admin_account_status" product="air" /> column changes to <Cmd sid="admin_status_disabled" product="air" />.
+The administrator list shows each administrator's invitation status.
 
-<Image src='/img/air/bsair-settings-admin-deactive-result.png' />
+#### Pending sign-up
+
+An invited administrator's status appears as <Cmd sid='pending_status' product='air' /> until they accept the email invitation and complete registration. An invited administrator can accept the invitation by clicking the link in the email to register or sign in to access the site.
+
+<Image src='/img/air/bsair-settings-admin-invite-resend-link-pending-status.png' />
 
 :::info
 
-The ability to deactivate administrators may be restricted by the administrator's role. Administrators with the <Cmd sid="master_role" product="air" className="bold" /> role cannot deactivate other <Cmd sid="master_role" product="air" className="bold" /> administrators.
+An invited administrator has up to 7 days to accept the invitation. After 7 days, the invitation expires and the status changes to <Cmd sid='user_status_expired' product='air' />. An account whose invitation has expired can re-register if the invitation link is resent. For more information on resending invitation links, see <DocLink inner='#resendInvitation' />.
 
 :::
 
-## Change an administrator's role {#changing-an-administrators-role}
+#### Sign-up complete
 
-Administrators can change the roles of administrators at a lower level.
+When an invited administrator accepts the email invitation and completes registration, the invitation status changes to <Cmd sid='user_status_accepted' product='air' />. After completing registration, an administrator logs in to the site and accesses menus and features based on their assigned role.
 
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> in the left sidebar.
+<Image src='/img/air/bsair-settings-admin-list-signup-complete.png' />
 
-2. Find the administrator to change in the list.
+#### Sign-up canceled
 
-3. Select the new administrator level in the <Cmd sid="column_admin_level" product="air" /> column.
+If an invited administrator's email address was entered incorrectly or the invitation is no longer needed, canceling the invitation changes the invitation status to <Cmd sid='user_status_revoked' product='air' />. For more information on canceling administrator invitations, see <DocLink inner='#cancelInvitation' />.
 
-   <Image src='/img/air/bsair-settings-admin-change-role.png' />
+<Image src='/img/air/bsair-settings-admin-invite-revoke-status.png' />
 
-4. When the message window appears, click the <Cmd sid='admin_status_change_confirm_btn' product='air' /> button.
-
-:::note
-
-Only <Cmd sid="master_role" product="air" className="bold" /> administrators can assign or modify the <Cmd sid="master_role" product="air" className="bold" /> role for other administrators.
-
-:::
-
-## Invite new administrators {#inviteNewAdmin}
-
-Add new administrators.
-
-1. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> in the left sidebar.
-
-2. Click <Cmd sid="btn_invite" product="air" /> at the top right of the screen.
-
-3. When the <Cmd sid="admin_invitation_title" product="air" /> window appears, enter the email address.
-
-   <Image src='/img/air/bsair-settings-admin-invite.png' />
-
-4. In <Cmd sid="admin_invitation_input2" product="air" />, select the role to assign to the new administrator.
-
-5. Click <Cmd sid="send_btn" product="air" /> to send the invitation.
-
-:::note
-
-* Each administrator must have a unique email address. If necessary, use an alias address (for example, erik+training@example.com).
-
-* Click the link in the invitation email. Sign up if the administrator does not have an account. If the administrator already has an account, log in to access the **site** directly.
-
-:::
-
-## Administrator levels {#administrator-levels}
+### Administrator levels {#administrator-levels}
 
 Each administrator level in BioStar Air has specific permissions, and higher levels inherit the permissions of lower levels.
 
@@ -118,9 +92,31 @@ Each administrator role has different permissions across BioStar Air. <Cmd sid="
 
 :::
 
-### <Cmd sid="observer_role" product="air" className="normal" /> (Lowest Level) {#observer}
+#### Compare permissions
 
-* <Cmd sid="dashboard_menu" product="air" /> dashboard and logs **can be viewed**.
+<div className='table-fixed'>
+
+| Feature | Observer | Operator | Administrator | Master |
+| --- | :-: | :-: | :-: | :-: |
+| View Dashboard/Logs | ✔️ | ✔️ | ✔️ | ✔️ |
+| Export Logs and Generate Reports | ✔️ | ✔️ | ✔️ | ✔️ |
+| User Management | ❌ | ✔️ | ✔️ | ✔️ |
+| Manage User Groups | ❌ | ✔️ | ✔️ | ✔️ |
+| Manage Access Levels | ❌ | ✔️ | ✔️ | ✔️ |
+| Manage Schedules | ❌ | ✔️ | ✔️ | ✔️ |
+| Manage Holiday Groups | ❌ | ✔️ | ✔️ | ✔️ |
+| Control and Configure Devices | ❌ | ❌ | ✔️ | ✔️ |
+| Invite Administrators | ❌ | ❌ | ✔️ | ✔️ |
+| Assign Master Role | ❌ | ❌ | ❌ | ✔️ |
+| Edit or Delete Master Administrators | ❌ | ❌ | ❌ | ✔️ |
+| Create Subsites | ❌ | ❌ | ❌ | ✔️ |
+| Configure Site Settings | ❌ | ❌ | ❌ | ✔️ |
+
+</div>
+
+#### <Cmd sid="observer_role" product="air" className="normal" /> (Lowest Level) {#observer}
+
+* <Cmd sid='dashboard_menu' product='air' /> and logs **can be viewed**.
 
 * **Export** logs and generate reports.
 
@@ -128,7 +124,7 @@ Each administrator role has different permissions across BioStar Air. <Cmd sid="
 
 * Access to menus is restricted. Most menus do not appear on the screen.
 
-### <Cmd sid='operator_role' product='air' className='normal' /> {#operator}
+#### <Cmd sid='operator_role' product='air' className='normal' /> {#operator}
 
 * Can manage <Cmd sid="user_submenu" product="air" />, <Cmd sid="user_groups_submenu" product="air" />, <Cmd sid="access_levels_submenu" product="air" />, <Cmd sid="schedules_submenu" product="air" />, and <Cmd sid="holiday_groups_submenu" product="air" />.
 
@@ -136,7 +132,7 @@ Each administrator role has different permissions across BioStar Air. <Cmd sid="
 
 * Suitable for managing everyday user and access configurations.
 
-### <Cmd sid='admin_role' product='air' className='normal' /> {#administrator}
+#### <Cmd sid='admin_role' product='air' className='normal' /> {#administrator}
 
 * **Can invite** new administrators. However, cannot assign the <Cmd sid="master_role" product="air" className="bold" /> role.
 
@@ -146,7 +142,7 @@ Each administrator role has different permissions across BioStar Air. <Cmd sid="
 
 * This role is typically recommended for IT staff responsible for system management.
 
-### <Cmd sid="master_role" product="air" className="normal" /> (Highest Level) {#master}
+#### <Cmd sid="master_role" product="air" className="normal" /> (Highest Level) {#master}
 
 * Has **full access** to all settings and features.
 
@@ -159,3 +155,133 @@ Each administrator role has different permissions across BioStar Air. <Cmd sid="
 * Responsible for accepting the **terms** before other administrators log in.
 
 * Usually assigned to the company owner or a highly trusted executive.
+
+## Invite new administrators {#inviteNewAdmin}
+
+Add new administrators.
+
+1. Click <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> In the left sidebar.
+
+2. Click <Cmd sid="btn_invite" product="air" /> at the top right of the screen.
+
+3. When the <Cmd sid="admin_invitation_title" product="air" /> window appears, enter the email address.
+
+   <Image src='/img/air/bsair-settings-admin-invite.png' />
+
+4. In <Cmd sid="admin_invitation_input2" product="air" />, select the role to assign to the new administrator.
+
+5. Click <Cmd sid="send_btn" product="air" /> to send the invitation.
+
+Invited accounts appear in the administrator list with <Cmd sid='invitation_status' product='air' /> set to <Cmd sid='pending_status' product='air' />. When an invited account accepts the invitation by email, its <Cmd sid='invitation_status' product='air' /> changes to <Cmd sid='user_status_accepted' product='air' />.
+
+<Image src='/img/air/bsair-settings-admin-invite-pending-status.png' />
+
+:::note
+
+* An invited account can accept the invitation for up to 7 days. If 7 days pass, the invitation expires and the account's status changes to <Cmd sid='user_status_expired' product='air' />.
+
+* Each administrator must have a unique email address. If necessary, use an alias address (for example, erik+training@example.com).
+
+* Click the link in the invitation email. Sign up if the administrator does not have an account. If the administrator already has an account, log in to access the **site** directly.
+
+:::
+
+## Cancel invitation {#cancelInvitation}
+
+If an invited account hasn't accepted the invitation yet, you can cancel it. Canceling the invitation prevents accounts that are pending sign-up from signing up using the invitation link in the email.
+
+1. Click the checkbox for accounts with invitation status <Cmd sid='pending_status' product='air' /> in the administrator list. Select 1 or more accounts.
+
+2. Click <IcAirRevoke title='Revoke Invitation' /> at the top left of the administrator list.
+
+   <Image src='/img/air/bsair-settings-admin-invite-pending-status-revoke.png' />
+
+3. When a popup appears, review the message and click <Cmd sid='btn_yes' product='air' />.
+
+Accounts in the administrator list whose invitations have been revoked change to <Cmd sid='user_status_revoked' product='air' />.
+
+<Image src='/img/air/bsair-settings-admin-invite-revoke-status.png' />
+
+## Resend invitation link {#resendInvitation}
+
+You can resend the invitation link if an invited account didn't receive or lost the invitation email, or if the invitation link has expired. Resending the invitation link lets the user sign up using the new link.
+
+1. Click the checkbox for accounts with invitation status <Cmd sid='pending_status' product='air' />, <Cmd sid='user_status_expired' product='air' /> or <Cmd sid='user_status_revoked' product='air' /> in the administrator list. Select 1 or more accounts.
+
+2. Click <IcAirResend title='Resend Invitation' /> at the top left of the administrator list.
+
+   <Image src='/img/air/bsair-settings-admin-invite-resend-link.png' />
+
+3. When a popup appears, review the message and click <Cmd sid='btn_yes' product='air' />.
+
+Accounts whose invitation link is resent will change to <Cmd sid='pending_status' product='air' />.
+
+<Image src='/img/air/bsair-settings-admin-invite-resend-link-pending-status.png' />
+
+## Lock or unlock administrators {#deactiveAdmin}
+
+Use the <Cmd sid='column_admin_account_status' product='air' /> option to lock or unlock administrators who have completed sign-up by accepting an email invitation. Locking an account prevents the administrator from logging in. Account information is retained so the account can be reactivated later if needed.
+
+In the <Cmd sid='column_admin_account_status' product='air' /> column, locked administrators appear as <Cmd sid='admin_status_disabled' product='air' />, and unlocked administrators appear as <Cmd sid='admin_status_active' product='air' />.
+
+<Image src='/img/air/bsair-settings-admin-list-lock-unlock.png' />
+
+:::info
+
+* Only administrator accounts that have completed sign-up can be locked or unlocked.
+
+* The <Cmd sid='column_admin_account_status' product='air' /> option may be restricted by the administrator's role. Administrators with the <Cmd sid='master_role' product='air' className='bold' /> role cannot lock other administrators with the <Cmd sid='master_role' product='air' className='bold' /> role.
+
+:::
+
+### Lock or unlock an individual administrator
+
+1. Find the administrator to lock or unlock in the list.
+
+2. Click the toggle switch in the <Cmd sid="column_admin_account_status" product="air" /> column.
+
+   <Image src='/img/air/bsair-settings-admin-deactive.png' />
+
+3. When the message window appears, click the <Cmd sid='admin_status_change_confirm_btn' product='air' /> button.
+
+### Lock or unlock multiple administrators
+
+1. In the administrators list, click the checkbox for the administrator you want to lock or unlock. You can select 1 or more administrators.
+
+2. Click <IcAirPlock title='Lock Account' /> or <IcAirPunlock title='Unlock Account' /> in the upper left corner of the screen.
+
+   <Image src='/img/air/bsair-settings-admin-list-batch-lock-unlock.png' />
+
+3. When a popup appears, review the message and click <Cmd sid='btn_yes' product='air' />.
+
+## Change an administrator's role {#changing-an-administrators-role}
+
+Administrators can change the roles of administrators at a lower level. Adjust roles when employees' duties change, when their responsibilities expand or contract, or during organizational restructuring. Downgrading a role removes an administrator's access to features they previously had.
+
+1. Find the administrator whose role you want to change in the list.
+
+2. Select the new administrator level in the <Cmd sid="column_admin_level" product="air" /> column.
+
+   <Image src='/img/air/bsair-settings-admin-change-role.png' />
+
+3. When the message window appears, click the <Cmd sid='admin_status_change_confirm_btn' product='air' /> button.
+
+:::note
+
+Only <Cmd sid="master_role" product="air" className="bold" /> administrators can assign or modify the <Cmd sid="master_role" product="air" className="bold" /> role for other administrators.
+
+:::
+
+## Delete administrator account {#deleteAdmin}
+
+If you delete an administrator account, that administrator will not be able to log in to the site, and the deleted account information cannot be recovered.
+
+1. In the administrators list, click the checkbox for the administrator you want to delete. You can select 1 or more administrators.
+
+2. Click <IcAirRemove title='Delete' /> in the upper left of the screen.
+
+   <Image src='/img/air/bsair-settings-admin-list-delete.png' />
+
+3. When a popup appears, review the message and click <Cmd sid='btn_yes' product='air' />.
+
+Deleted administrator accounts no longer appear in the administrator list.

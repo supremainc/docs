@@ -1,0 +1,125 @@
+---
+id: partner-assign-admin
+title: Invite Site Administrator
+description: Learn how to invite administrators to customer sites and set permissions in the Partner Portal.
+keywords:
+  - Site Administrator
+  - Invite Administrators
+  - Permission settings
+---
+
+Partners can invite administrators to customer sites and set permissions. Manage granular access levels for each administrator to ensure the security and operational efficiency of customer sites.
+
+:::info
+
+* For more information on administrator levels and roles, see <DocLink docId='platform/biostar_air/managing-administrators#administrator-levels' />.
+
+* For more information on inviting administrators and setting roles in the BioStar Air portal, see <DocLink docId='platform/biostar_air/managing-administrators' />.
+
+:::
+
+## Invite a site administrator
+
+Learn how to invite administrators to customer sites and set permissions in the Partner Portal.
+
+1. Log in to the [Partner Portal](https://partner.biostarair.com) with an account assigned the <Cmd sid='admin_role' product='air' className='bold' /> role or higher.
+
+2. Click <Cmd sid="menu.label.siteList" product="pn" /> in the left sidebar.
+
+3. In the site list, click the site where you want to assign an administrator.
+
+4. When the <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> panel appears, click <Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' /> in that order.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-admin-list.png' />
+
+5. Click <Cmd sid="common.button.invite" product="pn" />.
+
+6. When the <Cmd sid='inviteAdminsModal.title' product='pn' /> window appears, select the administrator role to invite from the <Cmd sid='siteListPage.placeholder.adminType' product='pn' /> field.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-invite-admin.png' />
+
+7. Enter the email address of the administrator to invite.
+
+8. Click <Cmd sid='common.button.add' product='pn' /> when it becomes active.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-invite-admin-email.png' width='60%' />
+
+9. Added administrators appear below the email address field. Repeat steps 6–8 to invite additional administrators.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-invited-list.png' width='60%' />
+
+10. After adding all administrators, click <Cmd sid='common.button.ok' product='pn' />.
+
+11. Review the administrators added in <Cmd sid='siteListPage.drawer.edit.profile.invitations.title' product='pn' /> and then click <Cmd sid='common.button.apply' product='pn' /> to send the invitation email.
+
+12. When the success message appears, click <Cmd sid='common.button.confirm' product='pn' />.
+
+## Check invitation status
+
+Check the invitation status of administrators invited to the site. The invitation status is <Cmd sid='adminLCM.pending_status' product='pn' /> until the invited administrator accepts the invitation email. Invited administrators have up to 7 days to accept the invitation; after 7 days the invitation expires and the status changes to <Cmd sid='adminLCM.user_status_expired' product='pn' />.
+
+1. In the site list, click the site where you invited an administrator.
+
+2. When the <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> panel appears, click <Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' /> in that order.
+
+3. Check the invitation status in <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' />.
+
+When an invited administrator completes site enrollment, the status changes from <Cmd sid='adminLCM.pending_status' product='pn' /> to <Cmd sid='adminLCM.user_status_accepted' product='pn' />.
+
+<Image src='/img/air/bsair-partner-admin-sitelist-edit-site-admin-list.png' />
+
+## Cancel invitation
+
+Cancel the invitation if the invited administrator's email address was entered incorrectly or the administrator is no longer needed.
+
+1. In the site list, click the site where you invited an administrator.
+
+2. When the <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> panel appears, click <Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' /> in that order.
+
+3. In <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' />, for any administrator with status <Cmd sid='adminLCM.pending_status' product='pn' />, click <IcAirMore title='More' /> on the far right.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-site-admin-list-more.png' />
+
+4. Click <Cmd sid='adminLCM.revoke_invitation' product='pn' /> in the popup menu.
+
+5. If a popup message appears, review the message and click <Cmd sid='common.button.yes' product='pn' />.
+
+6. When the success message for the canceled invitation appears, click <Cmd sid='common.button.close' product='pn' />.
+
+When an invitation is canceled, the invitation status changes from <Cmd sid='adminLCM.pending_status' product='pn' /> to <Cmd sid='adminLCM.user_status_revoked' product='pn' />.
+
+## Resend invitation link
+
+Resend the invitation link if the invited administrator did not receive the invitation email or has lost it.
+
+1. In the site list, click the site where you invited an administrator.
+
+2. When the <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> panel appears, click <Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' /> in that order.
+
+3. In <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' />, for administrators with status <Cmd sid='adminLCM.pending_status' product='pn' />, <Cmd sid='adminLCM.user_status_expired' product='pn' />, or <Cmd sid='adminLCM.user_status_revoked' product='pn' />, click <IcAirMore title='More' /> on the far right.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-site-admin-list-more.png' />
+
+4. Click <Cmd sid='adminLCM.resend_invitation_link' product='pn' /> in the popup menu.
+
+5. If a popup message appears, review the message and click <Cmd sid='common.button.yes' product='pn' />.
+
+6. When the success message for resending the invitation link appears, click <Cmd sid='common.button.close' product='pn' />.
+
+## Remove administrator
+
+Delete an invited administrator's account. When an administrator's account is deleted, they will no longer be able to sign in to the site, and their access will be fully revoked. Once an administrator account is deleted, it cannot be recovered.
+
+1. In the site list, click the site where you invited an administrator.
+
+2. When the <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> panel appears, click <Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' /> in that order.
+
+3. In <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' />, click <IcAirMore title='More' /> at the far right of the administrator you want to delete.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-site-admin-list-more.png' />
+
+4. Click <Cmd sid='common.button.delete' product='pn' /> in the popup menu.
+
+5. If a pop-up message appears, review it and click <Cmd sid='common.button.confirm' product='pn' />.
+
+6. When the success message confirming the administrator's deletion appears, click <Cmd sid='common.button.close' product='pn' />.
