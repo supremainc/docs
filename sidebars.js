@@ -1570,6 +1570,7 @@ function createSidebars(preview) {
             id: 'device/bioentry_r2/release-notes/index',
           },
           items: [
+            'device/bioentry_r2/release-notes/142',
             'device/bioentry_r2/release-notes/141',
             'device/bioentry_r2/release-notes/140',
             'device/bioentry_r2/release-notes/131',
