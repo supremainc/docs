@@ -12,11 +12,11 @@ import DeviceInfo from '../../common/_bsair-device-info-settings.mdx';
 
 :::info
 
-이 문서는 패널(CS-20) 관리에 초점을 맞추고 있지만, 패널에 연결된 보조 장치도 함께 관리할 수 있습니다. 보조 장치 관리 방법에 대한 자세한 내용은 다음 문서를 참고하세요.
+이 문서는 패널(CS-20) 관리에 초점을 맞추고 있지만, 패널에 연결된 보조 장치도 함께 관리할 수 있습니다. 슬레이브 장치는 일반 장치와 같은 방법으로 관리할 수 있습니다.
 
-* 보조 장치의 정보 수정 및 관리 방법에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/managing-registered-devices' />를 참고하세요.
+* 슬레이브 장치의 정보 수정 및 관리 방법에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/managing-registered-devices' />를 참고하세요.
 
-* 보조 장치 정보 및 설정 옵션에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/device-info-settings' />를 참고하세요.
+* 슬레이브 장치 정보 및 설정 옵션에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/device-info-settings' />를 참고하세요.
 
 * XPass D2 장치 업그레이드에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/how-to-upgrade-firmware##upgradeFirmwareForXPassD2' />를 참고하세요.
 
@@ -82,7 +82,7 @@ import DeviceInfo from '../../common/_bsair-device-info-settings.mdx';
 
    <Image src='/img/air/bsair-device-panel-edit-info.png' />
 
-1. 패널의 세부 정보를 수정하세요.
+1. 패널의 세부 정보 또는 설정을 수정하세요.
 
 1. 변경 사항을 저장하려면 하단의 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
 
@@ -136,6 +136,10 @@ CS-20에 연결된 보조 장치는 새로 고침(<IcAirRef width='24px' height=
 
 패널 목록에서 개별 패널을 선택하여 그룹에 추가하거나, 기존 그룹에서 제거할 수 있습니다.
 
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' />를 클릭하세요.
+
+1. <Cmd sid='device_slaves_panels' product='air' /> 탭을 클릭하세요.
+
 1. 패널 목록에서 그룹에 추가하거나 제거하려는 패널의 체크박스를 클릭하세요.
 
 1. 패널 목록 상단의 <IcAirGroup width='24px' height='24px' title='Manage Groups' /> 버튼을 클릭하세요.
@@ -165,3 +169,24 @@ CS-20에 연결된 보조 장치는 새로 고침(<IcAirRef width='24px' height=
 * 변경한 내용을 초기화하려면 <Cmd sid='device_btn_reset' product='air' /> 버튼을 클릭하세요.
 
 :::
+
+
+## OSDP/Wiegand 장치 정보 수정
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' />를 클릭하세요.
+
+1. <Cmd sid='device_slaves_panels' product='air' /> 탭을 클릭하세요.
+
+1. 목록에서 마스터 장치의 + 아이콘을 클릭해 연결된 보조 장치 목록을 확장하세요.
+
+1. 정보를 수정할 OSDP 또는 Wiegand 보조 장치를 클릭하세요. 
+
+1. 장치 정보 수정 창이 나타나면 세부 정보 또는 설정을 수정하세요.
+
+   <Image src='/img/air/bsair-device-panel-legacy-device-edit.png' className='none' />
+
+   * OSDP 장치: 장치 이름, 네트워크 설정, 인증 설정(RF 카드, RF 카드 + PIN), 인증 대기 시간을 설정할 수 있습니다.
+
+   * Wiegand 장치: 장치 이름을 수정할 수 있습니다.
+
+1. 변경 사항을 저장하려면 하단의 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
