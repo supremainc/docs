@@ -1,0 +1,140 @@
+---
+id: register-panels
+title: 패널 등록 및 보조 장치 구성하기
+description: CoreStation 20 패널을 BioStar Air에 등록하고, RS-485, OSDP, Wiegand 장치를 보조 장치로 구성하는 방법을 안내합니다.
+keywords: [패널, 등록, 관리]
+---
+
+BioStar Air 2.12 버전에서는 CoreStation 20(CS-20) 패널을 통해 출입 제어 시스템을 확장할 수 있습니다. 기존의 RS-485 배선을 활용해 추가 장치를 로컬에 연결하므로 인프라 비용을 절감하면서도 복잡한 출입문 구성을 지원할 수 있습니다.
+
+이 문서에서는 CS-20 패널을 등록하고, RS-485, OSDP, Wiegand 통신 방식의 장치를 보조 장치로 구성하는 방법을 단계별로 안내합니다.
+
+
+## 패널 등록
+
+CoreStation 20(이하 CS-20)은 RS-485 통신을 지원하는 장치와 연결하여 출입 제어 시스템을 확장할 수 있는 기능을 제공합니다. CS-20을 등록하려면 다음 단계를 따르세요.
+
+### 시작하기 전에
+
+* CS-20의 전원이 켜져 있고, **INIT** 버튼을 누르기 위해 물리적으로 접근할 수 있어야 합니다.
+
+* CS-20이 외부 인터넷과 연결되어 있어야 합니다. 네트워크 연결이 불안정한 경우 등록 과정에서 문제가 발생할 수 있습니다.
+
+* 9자리의 시리얼 번호가 필요합니다. 시리얼 번호는 장치 뒷면의 라벨에서 확인할 수 있습니다.
+
+:::info
+
+CoreStation 20에 대한 자세한 내용은 [CoreStation 20 설치 가이드](../../device/corestation_20/index)를 참고하세요.
+
+:::
+
+### CS-20 등록
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' />를 클릭하세요.
+
+1. <Cmd sid='device_slaves_panels' product='air' /> 탭을 클릭하세요.
+
+   <Image src='/img/air/bsair-device-panel-list.png' />
+
+1. 화면 오른쪽 상단의 <Cmd sid='register_cs20' product='air' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='register_cs20' product='air' /> 창이 나타나면 CS-20 패널에서 INIT 버튼을 두번 누르세요.
+
+   <Image src='/img/air/bsair-cs-20-init-button.png' alone />
+
+   :::caution
+
+   **INIT** 버튼을 누른 후 CS-20을 등록 완료할 수 있는 시간은 5분입니다.
+
+   :::
+
+1. 시리얼 번호를 입력하세요.
+
+   <Image src='/img/air/bsair-device-panel-list-register-cs20.png' />
+
+1. 시리얼 번호를 모두 입력한 후 <Cmd sid='register_btn' product='air' /> 버튼을 클릭하세요.
+
+등록을 완료하면 시스템이 보안 연결을 자동 설정하고 패널 목록에 새 CS-20이 표시됩니다. 정상 등록되었다면 장치 이름 옆에 초록색 점이 표시됩니다.
+
+<Image src='/img/air/bsair-device-panel-list-registered-cs20.png' />
+
+:::info
+
+CS-20 등록 과정에 대한 자세한 내용을 확인하려면 <Cmd sid='view_cs20_registration_guide' product='air' /> 버튼을 클릭하세요.
+
+:::
+
+
+## 보조 장치 구성
+
+CS-20을 등록한 후, 다음 중 하나의 방식으로 보조 장치를 구성할 수 있습니다:
+
+| 보조 장치 | 설명 |
+| -- | -- |
+| RS-485 슬레이브 장치 | 기존 RS-485 배선 활용, 표준 통신 프로토콜 |
+| OSDP 장치 | 보안 강화 통신 프로토콜 사용 |
+| Wiegand 장치 | 카드 리더 등 기존 Wiegand 호환 장치 |
+
+### 슬레이브 장치 구성
+
+RS-485 통신을 지원하는 장치를 CS-20에 연결하여 슬레이브 장치로 구성할 수 있습니다. 슬레이브 장치는 패널 목록에서 CS-20 아래에 계층적으로 표시됩니다.
+
+1. 패널 목록에서 등록된 CS-20 패널의 가장 오른쪽에 있는 <IcAirMore title='More' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-more.png' />
+
+1. 팝업 메뉴에서 <Cmd sid='add_slave_devices' product='air' />를 클릭하세요.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-add-slave-device.png' />
+
+   :::note
+
+   검색된 슬레이브 장치가 없으면 <Cmd sid='find_devices' product='air' /> 버튼을 클릭해 CS-20과 연결된 장치를 다시 검색할 수 있습니다.
+
+   :::
+
+1. 연결된 슬레이브 장치가 목록에 표시되면, 각 장치 옆의 체크박스를 클릭해 추가할 장치를 선택하세요.
+
+1. 선택을 완료하면 <Cmd sid='add_btn' product='air' /> 버튼을 클릭하세요.
+
+연결된 슬레이브 장치가 CS-20 아래에 계층적으로 표시됩니다. 이제 패널 목록에서 CS-20과 연결된 모든 장치를 한눈에 확인할 수 있습니다.
+
+<Image src='/img/air/bsair-device-panel-list-master-slave.png' />
+
+
+### OSDP 장치 구성
+
+[OSDP(Open Supervised Device Protocol)](../../reference/glossary#osdp)는 보안이 강화된 통신 프로토콜입니다. 높은 보안이 필요한 환경에서 OSDP 호환 장치를 CS-20에 연결하세요.
+
+1. 패널 목록에서 등록된 CS-20 패널의 가장 오른쪽에 있는 <IcAirMore title='More' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-more.png' />
+
+1. 팝업 메뉴에서 <Cmd sid='add_osdp_devices' product='air' />를 클릭하세요.
+
+1. <Cmd sid='add_osdp_devices' product='air' /> 창이 나타나면 장치를 추가하기 위한 포트를 선택하세요.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-add-osdp-device.png' />
+
+1. 포트를 선택한 후 <Cmd sid='add_btn' product='air' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='device_cs20_add_osdp_devices' product='air' /> 창에서 필요한 설정을 완료한 후 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-add-osdp-device-popup.png' />
+
+
+### Wiegand 장치 구성
+
+Wiegand는 출입 제어 시스템에서 널리 사용되는 통신 프로토콜입니다. CS-20에 Wiegand 장치를 연결하여 Wiegand 슬레이브 장치로 구성할 수 있습니다.
+
+1. 패널 목록에서 등록된 CS-20 패널의 가장 오른쪽에 있는 <IcAirMore title='More' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-more.png' />
+
+1. 팝업 메뉴에서 <Cmd sid='add_wiegand_devices' product='air' />를 클릭하세요.
+
+1. <Cmd sid='add_wiegand_devices' product='air' /> 창이 나타나면 장치를 추가하기 위한 포트를 선택하세요.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-add-wiegand-device.png' />
+
+1. 포트를 선택한 후 <Cmd sid='add_btn' product='air' /> 버튼을 클릭하세요.
