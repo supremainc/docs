@@ -65,6 +65,12 @@ title: 버전 1.0.2
 
    - **Add/Update/Delete**
 
+<Jira bss='BX-5443' /> BioStar X에서 장치의 이벤트 로그 삭제 하기
+
+1. BioStar X에서 장치의 이벤트 로그를 삭제할 수 있는 기능 추가
+
+1. Support for deleting device event logs in BioStar X.
+
 <Jira bss='BX-5374' /> Nx Witness v6 지원
 
 1. VMS 연동 시스템으로 Nx Witness v6 버전 지원
@@ -77,7 +83,83 @@ title: 버전 1.0.2
 
 1. Added support for changing the main server IP address.
 
+<Jira bss='BX-5614' /> 보안 헤더 추가
 <Jira bss='BX-5622' /> DB 접속 비밀번호 암호화 강화
+<Jira bss='BX-5490' /> [Directory Integration] ad server 설정 정보 조회 시 비밀번호가 평문으로 노출되는 문제
+<Jira bss='BX-5618' /> 현대카드 BioStar 2 웹 취약점 진단 결과에 따른 조치 요청
+<Jira bss='BX-5602' /> [보안] GET /api/zones SQL Injection 취약점
+<Jira bss='BX-5491' /> [보안] user 리스트 pdf, svg print 시 생성되는 파일에 권한 없이 접근 가능한 취약점 수정
+<Jira bss='BX-5488' /> [보안] CISA 보안 취약점 개발건
+<Jira bss='BX-5471' /> PDF Export URL 관련 취약점 수정
+
+1. 시스템 보안 취약점 개선
+
+   - 웹 서버 보안 헤더(HTTP Security Headers) 적용
+
+   - 데이터베이스 접속 비밀번호의 암호화 저장 방식 강화
+
+   - XSS 보안 취약점 개선
+
+   - SQL Injection 보안 취약점 개선
+
+   - 사용자 목록 페이지의 접근 권한 관련 보안 취약점 개선
+
+   - 장치 보안 통신 암호화 키 관련 보안 취약점 개선
+
+   - PDF 출력 관련 보안 취약점 개선
+
+1. Improved system security vulnerabilities
+
+   - Application of HTTP security headers for the web server
+
+   - Enhancement of the encryption method for database connection passwords
+
+   - Improved XSS security vulnerabilities
+
+   - Improved SQL Injection security vulnerabilities
+
+   - Improved security vulnerabilities related to access permissions on the user list page
+
+   - Improved security vulnerabilities related to device secure communication and encryption keys
+
+   - Improved security vulnerabilities related to PDF export
+
+<Jira bss='BX-5473' /> Minimist 버전 업그레이드
+<Jira bss='BX-5479' /> 하드코딩된 테스트관련 ID / PW 조정
+<Jira bss='BX-5476' /> DB 비번 암호화 강화 반영
+<Jira bss='BX-5480' /> 사용중인 라이브러리의 보안이슈 개선
+
+1. 근태 관리 보안 취약점 개선
+
+   - Minimist 라이브러리 보안 취약점에 따른 버전 업데이트
+
+   - 스크립트 파일 내 하드코딩된 테스트 계정 정보 제거
+
+   - 데이터베이스 비밀번호 암호화 방식 강화
+
+   - AngularJS, jQuery, Moment.js 라이브러리 버전 업그레이드
+
+1. Security improvements for Time & Attendance
+
+   - Updated the Minimist library to address security vulnerabilities
+
+   - Removed hardcoded test credentials from JavaScript files
+
+   - Enhanced the database password encryption method
+
+   - Upgraded web libraries (AngularJS, jQuery, and Moment.js)
+
+<Jira bss='BX-5616' /> [보안] 업그레이드 시 redis 삭제 권고 팝업 및 삭제
+
+1. BioStar X로 업그레이드 시, 불필요한 Redis가 설치되어 있을 경우 삭제를 권고하는 팝업 메시지 추가
+
+1. Added a popup message recommending the deletion of unnecessary Redis for when upgrading to BioStar X.
+
+<Jira bss='BX-5590' /> [보안] JDK 21 보안 업데이트
+
+1. Open JDK 버전 업데이트
+
+1. Updated Open JDK version.
 
 
 ## 버그 수정
@@ -86,9 +168,9 @@ title: 버전 1.0.2
 
 <BugLists>
 
-1. 시스템 안정성 향상을 위한 버그 수정 및 서비스 최적화 작업 진행
+1. 시스템 안정성 향상을 위한 버그 수정 및 서비스 최적화 작업 진행 <Badge>1.0.1</Badge>
 
-1. Fixed bugs and optimized services to improve overall system stability.
+1. Fixed bugs and optimized services to improve overall system stability. <Badge>1.0.1</Badge>
 
 <Jira bss='BX-6137' /> 네트워크 어댑터가 여러개일때 Exporess DB로 BioStar X 설치시 이슈 수정
 
@@ -102,83 +184,63 @@ title: 버전 1.0.2
 
 1. Unable to upgrade BioStar 2 installed in a custom path to BioStar X. <Badge>1.0.0</Badge>
 
-<Jira bss='BX-5618' /> 현대카드 BioStar 2 웹 취약점 진단 결과에 따른 조치 요청
-<Jira bss='BX-5602' /> [보안] GET /api/zones SQL Injection 취약점
-<Jira bss='BX-5491' /> [보안] user 리스트 pdf, svg print 시 생성되는 파일에 권한 없이 접근 가능한 취약점 수정
-<Jira bss='BX-5488' /> [보안] CISA 보안 취약점 개발건
-
-<Jira bss='BX-5471' /> PDF Export URL 관련 취약점 수정
-
-1. 보안 취약점 개선
-
-   - XSS 보안 취약점 개선
-
-   - SQL Injection 보안 취약점 개선
-
-   - 사용자 목록 페이지의 접근 권한 관련 취약점 개선
-
-   - 장치 보안 통신 암호화 키 관련 보안 취약점 개선
-
-1. Improved security vulnerabilities.
-
-   - Improved XSS security vulnerability.
-
-   - Improved SQL Injection security vulnerabilities.
-
-   - Improved access permissions on the User List page.
-
-   - Improved security vulnerabilities related to device secure communication and encryption keys.
-
-<Jira bss='BX-5616' /> [보안] 업그레이드 시 redis 삭제 권고 팝업 및 삭제
-
-<Jira bss='BX-5614' /> 보안 헤더 추가
-
 <Jira bss='BX-5609' /> 장기 미출입 사용자 내역에 모바일 카드 인증 성공 이벤트는 반영 안되는 이슈
 
-<Jira bss='BX-5608' /> muster zone 을 csv export 를 하면 dst 적용이 안 됨
+1. 장기 미출입 사용자가 모바일 카드 등 특정 크리덴셜로 인증에 성공하더라도 장기 미출입 목록에서 제외되지 않는 문제 <Badge>1.0.0</Badge>
 
-<Jira bss='BX-5605' /> 한 페이지를 넘어가는 CS-40 장치를 트리에서 우클릭 시 메뉴 표시 안됨
+1. Long-term non-access users remaining on the list even after successful authentication with specific credentials (e.g., Mobile Card). <Badge>1.0.0</Badge>
 
+<Jira bss='BX-5608' /> muster zone 을 csv export 를 하면 dst 적용이 안 됨 <Badge>1.0.0</Badge>
 
-<Jira bss='BX-5595' /> BS2A 에서 usb 로 로그 가져오기 기능 미동작 문제
+<Jira bss='BX-5605' /> 한 페이지를 넘어가는 CS-40 장치를 트리에서 우클릭 시 메뉴 표시 안됨 <Badge>1.0.0</Badge>
 
-<Jira bss='BX-5590' /> [보안] JDK 21 보안 업데이트
+<Jira bss='BX-5595' /> BS2A 에서 usb 로 로그 가져오기 기능 미동작 문제 <Badge>1.0.0</Badge>
 
-1. Open JDK 버전 업데이트
+<Jira bss='BX-5497' /> sAMAccountName이 AD 로그인 저장 사양에 맞지 않을 경우 AD 동기화 및 사용자 등록이 안되는 버그 <Badge>???</Badge>
 
-1. Updated Open JDK version.
+1. Active Directory 동기화 시, 사용자의 `sAMAccountName`에 특수 문자 등 특정 규격에 맞지 않는 문자가 포함되어 있으면 사용자 등록이 실패하는 문제 <Badge>???</Badge>
 
-<Jira bss='BX-5497' /> sAMAccountName이 AD 로그인 저장 사양에 맞지 않을 경우 AD 동기화 및 사용자 등록이 안되는 버그
+1. User registration failure during Active Directory synchronization when the `sAMAccountName` contains non-standard characters. <Badge>???</Badge>
 
-<Jira bss='BX-5496' /> Active Directory 연결 정보 입력 시 Base Domain Name에 OU, DC를 소문자도 허용하도록 수정
+<Jira bss='BX-5496' /> Active Directory 연결 정보 입력 시 Base Domain Name에 OU, DC를 소문자도 허용하도록 수정 <Badge>???</Badge>
 
-<Jira bss='BX-5494' /> EntraID의 그룹이 100개 이상 사용할 경우, BioStar2 동기화 시 사용자 그룹 필터를 못 가져오는 이슈
+1. Active Directory 연동 시 **기본 Domain 명**의 키값(OU, DC)을 소문자로 입력하면 동기화가 실패하는 문제 <Badge>???</Badge>
 
-<Jira bss='BX-5493' /> Title, Department 필드에 태국어 글자입력시 Invalid Title로 표기
+1. Improved the Active Directory synchronization logic to support both uppercase and lowercase keys (e.g., ou, dc) in the Base Domain Name. <Badge>???</Badge>
 
-<Jira bss='BX-5492' /> 출입문 그룹 명에 "_" (Underscore)가 있는 그룹을 삭제 시 다른 그룹도 삭제되는 문제
+<Jira bss='BX-5494' /> EntraID의 그룹이 100개 이상 사용할 경우, BioStar2 동기화 시 사용자 그룹 필터를 못 가져오는 이슈 <Badge>???</Badge>
 
+1. Microsoft Entra ID에 등록된 사용자 그룹이 100개를 초과할 경우, 그룹 목록을 불러오지 못하거나 동기화가 정상적으로 진행되지 않는 문제 <Badge>???</Badge>
 
-<Jira bss='BX-5490' /> [Directory Integration] ad server 설정 정보 조회 시 비밀번호가 평문으로 노출되는 문제
+1. Failure to retrieve group lists or synchronize data from Microsoft Entra ID when the number of user groups exceeds 100. <Badge>???</Badge>
 
+<Jira bss='BX-5493' /> Title, Department 필드에 태국어 글자입력시 Invalid Title로 표기 <Badge>???</Badge>
+
+1. 일부 필드에 결합 문자 입력 시 잘못 표시되는 문제 <Badge>???</Badge>
+
+1. Incorrect display when entering combining characters in certain fields. <Badge>???</Badge>
+
+<Jira bss='BX-5492' /> 출입문 그룹 명에 "_" (Underscore)가 있는 그룹을 삭제 시 다른 그룹도 삭제되는 문제 <Badge>1.0.0</Badge>
+
+1. 출입문 그룹 명에 언더스코어(`_`)가 포함된 그룹을 삭제할 때, 이름이 유사한 다른 그룹까지 함께 삭제되는 문제 <Badge>1.0.0</Badge>
+
+1. Unintended deletion of door groups with similar names when deleting a group that includes an underscore (`_`). <Badge>1.0.0</Badge>
 
 <Jira bss='BX-5487' /> DE-620 드라이버 업데이트 패키지 작업
 
-<Jira bss='BX-5480' /> 사용중인 라이브러리의 보안이슈 개선
+1. 특정 운영체제 환경에서 USB Device Agent 설치 시, DE-620 드라이버가 정상적으로 설치되지 않는 문제 <Badge>1.0.0</Badge>
 
-<Jira bss='BX-5479' /> 하드코딩된 테스트관련 ID / PW 조정
-
-<Jira bss='BX-5476' /> DB 비번 암호화 강화 반영
+1. Improved the USB Device Agent installer by including the latest DE-620 drivers to ensure compatibility with Windows 11 security updates. <Badge>1.0.0</Badge>
 
 <Jira bss='BX-5475' /> 암복호화시 이슈되는 컬럼 데이터 부분 변경
 
 <Jira bss='BX-5474' /> report_filter api 개선
 
-<Jira bss='BX-5473' /> Minimist 버전 업그레이드
+1. 관리자 권한이 없는 사용자가 API를 통해 타인의 리포트 필터를 조회할 수 있는 문제 <Badge>1.0.0</Badge>
+
+1. Fixed an issue where non-admin users could access other users' report filters via the API. <Badge>1.0.0</Badge>
 
 <Jira bss='BX-5472' /> Production Library Cleanup
-
-<Jira bss='BX-5443' /> BioStar X에서 장치의 이벤트 로그 삭제 하기
 
 <Jira bss='SW5-253' /> Merge 2.9.12 items to X1.0.2 branch.
 
