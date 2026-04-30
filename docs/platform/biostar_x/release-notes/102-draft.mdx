@@ -13,6 +13,7 @@ title: 버전 1.0.2
 
 <Jira bss='SW5-430' /> X - Q2 지원(X.1.0.1 base) - x 1.0.2 반영 예정
 <Jira bss='BE-3846' /> BioStar2에 BioStation 3 MAX 지원
+<Jira bss='BX-5379' /> [Settings] BioStation 3 Max 신규 장치 지원
 
 1. 신규 장치 연결 지원
 
@@ -52,18 +53,31 @@ title: 버전 1.0.2
 
 <Jira bss='BX-5384' /> Directory Integration 의 사용자 동기화 옵션 추가 (Add/Update Only, Add/Update/Delete)
 
-1. 
+1. 디렉토리 서비스 연동 시 사용자 동기화 방식을 2가지 옵션으로 선택할 수 있도록 지원
+
+   - **추가/업데이트만** (기본값)
+
+   - **추가/업데이트/삭제**
+
+1. Added support for two user synchronization mode options when integrating with a directory service.
+
+   - **Add/Update Only** (Default)
+
+   - **Add/Update/Delete**
 
 <Jira bss='BX-5374' /> Nx Witness v6 지원
 
-1. 
+1. VMS 연동 시스템으로 Nx Witness v6 버전 지원
+
+2. Supported Nx Witness v6 for VMS integration.
 
 <Jira bss='BX-2609' /> [BSX 패키지] [MCS] 서버 IP 변경 시 서버 구동 불가
 
-
-
-1. 메인 서버 IP 주소 변경 기능 지원
 1. 메인 서버의 IP 주소를 변경할 수 있는 기능 지원
+
+1. Added support for changing the main server IP address.
+
+<Jira bss='BX-5622' /> DB 접속 비밀번호 암호화 강화
 
 
 ## 버그 수정
@@ -72,13 +86,38 @@ title: 버전 1.0.2
 
 <BugLists>
 
+1. 시스템 안정성 향상을 위한 버그 수정 및 서비스 최적화 작업 진행
+
+1. Fixed bugs and optimized services to improve overall system stability.
+
 <Jira bss='BX-6137' /> 네트워크 어댑터가 여러개일때 Exporess DB로 BioStar X 설치시 이슈 수정
+
+1. 네트워크 어댑터가 여러 개인 환경에서 BioStar X 설치 후 접속 불가한 문제 <Badge>1.0.0</Badge>
+
+1. BioStar X inaccessible after installation in environments with multiple network adapters. <Badge>1.0.0</Badge>
 
 <Jira bss='BX-5880' /> 커스텀 경로로 설치된 Bs2에서 Bsx로 업그레이드 불가
 
-<Jira bss='BX-5622' /> DB 접속 비밀번호 암호화 강화
+1. 사용자 지정 경로에 설치된 BioStar 2를 BioStar X로 업그레이드할 수 없는 문제 <Badge>1.0.0</Badge>
+
+1. Unable to upgrade BioStar 2 installed in a custom path to BioStar X. <Badge>1.0.0</Badge>
 
 <Jira bss='BX-5618' /> 현대카드 BioStar 2 웹 취약점 진단 결과에 따른 조치 요청
+<Jira bss='BX-5602' /> [보안] GET /api/zones SQL Injection 취약점
+
+써야함
+<Jira bss='BX-5491' /> [보안] user 리스트 pdf, svg print 시 생성되는 파일에 권한 없이 접근 가능한 취약점 수정
+<Jira bss='BX-5488' /> [보안] CISA 보안 취약점 개발건
+<Jira bss='BX-5471' /> PDF Export URL 관련 취약점 수정
+
+
+1. 보안 취약점 개선
+1. Improved security vulnerabilities.
+
+   - XSS 보안 취약점 개선
+   - Improved XSS security vulnerability.
+   - SQL Injection 보안 취약점 개선
+   - Improved SQL Injection security vulnerabilities.
 
 <Jira bss='BX-5616' /> [보안] 업그레이드 시 redis 삭제 권고 팝업 및 삭제
 
@@ -90,11 +129,14 @@ title: 버전 1.0.2
 
 <Jira bss='BX-5605' /> 한 페이지를 넘어가는 CS-40 장치를 트리에서 우클릭 시 메뉴 표시 안됨
 
-<Jira bss='BX-5602' /> [보안] GET /api/zones SQL Injection 취약점
 
 <Jira bss='BX-5595' /> BS2A 에서 usb 로 로그 가져오기 기능 미동작 문제
 
 <Jira bss='BX-5590' /> [보안] JDK 21 보안 업데이트
+
+1. Open JDK 버전 업데이트
+
+1. Updated Open JDK version.
 
 <Jira bss='BX-5497' /> sAMAccountName이 AD 로그인 저장 사양에 맞지 않을 경우 AD 동기화 및 사용자 등록이 안되는 버그
 
@@ -106,11 +148,9 @@ title: 버전 1.0.2
 
 <Jira bss='BX-5492' /> 출입문 그룹 명에 "_" (Underscore)가 있는 그룹을 삭제 시 다른 그룹도 삭제되는 문제
 
-<Jira bss='BX-5491' /> [보안] user 리스트 pdf, svg print 시 생성되는 파일에 권한 없이 접근 가능한 취약점 수정
 
 <Jira bss='BX-5490' /> [Directory Integration] ad server 설정 정보 조회 시 비밀번호가 평문으로 노출되는 문제
 
-<Jira bss='BX-5488' /> [보안] CISA 보안 취약점 개발건
 
 <Jira bss='BX-5487' /> DE-620 드라이버 업데이트 패키지 작업
 
@@ -128,12 +168,8 @@ title: 버전 1.0.2
 
 <Jira bss='BX-5472' /> Production Library Cleanup
 
-<Jira bss='BX-5471' /> PDF Export URL 관련 취약점 수정
-
 <Jira bss='BX-5443' /> BioStar X에서 장치의 이벤트 로그 삭제 하기
 
 <Jira bss='SW5-253' /> Merge 2.9.12 items to X1.0.2 branch.
-
-<Jira bss='BX-5379' /> [Settings] BioStation 3 Max 신규 장치 지원
 
 </BugLists>
