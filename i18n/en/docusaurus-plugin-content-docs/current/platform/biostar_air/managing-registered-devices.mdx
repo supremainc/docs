@@ -58,6 +58,8 @@ Each column in the device list includes the following information.
 
 <Image src='/img/air/bsair-device-mng-list-info.png' />
 
+* <Cmd sid="rs485_type" product="air" />: Available on devices that support RS-485 communication. You can check whether the device is a master or a slave. Devices not set as master or slave appear as <Cmd sid="device_type_default" product="air" />.
+
 * <Cmd sid="device_product_column" product="air" />: The device name and model retrieved from the Suprema database.
 
 * <Cmd sid="device_nickname_column" product="air" />: A user-editable field for easier identification. Edit it in the <Cmd sid="device_edit_title" product="air" /> window that appears after clicking the device in the list.
@@ -106,7 +108,7 @@ Use the controls at the top of the device list to manage multiple devices at onc
 
 <Image src='/img/air/bsair-device-mng-list-tools.png' />
 
-* <IcAirRef width='24px' height='24px' title='Refresh' />: Refresh the device list and device status.
+* <IcAirRef width='24px' height='24px' title='Refresh' />: Refresh the device list.
 
 * <IcAirRemove width='24px' height='24px' title='Delete' />: Delete devices registered to the site.
 
@@ -138,9 +140,9 @@ From the device list, select individual devices to add them to a device group or
 
 1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
 
-2. Select the checkbox for the device to add to or remove from a group.
+2. In the device list, click the checkbox for the device you want to add to or remove from a group.
 
-3. Click <IcAirGroup width='24px' height='24px' title='Manage Groups' /> at the top of the device group list.
+3. Click <IcAirGroup width='24px' height='24px' title='Manage Groups' /> at the top of the device list.
 
 4. When the <Cmd sid="manage_device_group_title" product="air" /> window appears, add or remove the selected devices from the group.
 
