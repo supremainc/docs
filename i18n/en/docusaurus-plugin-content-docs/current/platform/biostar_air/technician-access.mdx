@@ -62,7 +62,7 @@ Partners must invite technicians to create technician accounts before granting s
 
 ### Invitation status
 
-After inviting a technician, partners can check their invitation status in the technician list. 
+After inviting technicians, partners can check each technician’s invitation status in the technician list. 
 
 #### Pending sign-up
 
@@ -72,7 +72,7 @@ The invitation status is shown as <Cmd sid='adminLCM.pending_status' product='pn
 
 :::info
 
-Invited technicians have up to 7 days to accept the invitation. After 7 days, the invitation expires and the status changes to <Cmd sid='adminLCM.user_status_expired' product='pn' />. An account whose invitation has expired can re-register if the invitation link is resent. For more information on resending invitation links, see <DocLink inner='#resendInvitation' />.
+Invited technicians have up to 7 days to accept the invitation. After 7 days, the invitation expires and the status changes to <Cmd sid='adminLCM.user_status_expired' product='pn' />. If an invitation expires, partners can resend the invitation link so the technician can sign up again. For more information on resending invitation links, see <DocLink inner='#resendInvitation' />.
 
 :::
 
@@ -82,9 +82,9 @@ When a technician accepts the invitation email and completes sign-up, their invi
 
 <Image src='/img/air/bsair-partner-admin-technicial-list-accepted.png' />
 
-#### Sign-up canceled
+#### Invitation revoked
 
-If an invited technician's email address was entered incorrectly or the issue is resolved and the invitation is no longer needed, canceling the invitation changes the invitation status to <Cmd sid='adminLCM.user_status_revoked' product='pn' />. For more information on revoking a technician's invitation, see <DocLink inner='#revokeInvite' />.
+Partners can cancel an invitation if they entered the technician's email incorrectly, or if the issue has been resolved and the invitation is no longer needed. The invitation status changes to <Cmd sid='adminLCM.user_status_revoked' product='pn' />. For more information on revoking a technician's invitation, see <DocLink inner='#revokeInvite' />.
 
 <Image src='/img/air/bsair-partner-admin-technicial-list-revoked.png' />
 
@@ -132,11 +132,17 @@ After resending a technician's invitation link, their invitation status changes 
 
 ## Manage technicians {#manageTechnician}
 
-After an invited technician accepts the email invitation and completes sign-up, partners can manage them from the technician list. Lock or unlock a technician's account, or modify their access to the site. If you no longer need a technician's support, you can delete their account.
+After the invited technician accepts the email invitation and completes sign-up, partners can manage the following items in the technician list.
+
+* Lock or unlock technician accounts
+
+* Edit site access
+
+* Delete a technician account
 
 ### Lock or unlock technician accounts
 
-Technicians who accepted the email invitation and completed the sign-up process can use the <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> option to lock or unlock their account. When an account is locked, the technician cannot log in to the Partner Portal, and account information is retained so the account can be reactivated later if needed.
+Partners can lock or unlock technician accounts using the <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> option. Locking a technician account prevents the technician from logging into the Partner Portal and assigned sites. Account information is retained, allowing reactivation when needed.
 
 In the <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> column, locked technicians are shown as <Cmd sid='common.label.locked' product='pn' />, and unlocked technicians are shown as <Cmd sid='common.label.unlocked' product='pn' />.
 
@@ -146,7 +152,7 @@ In the <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> column, l
 
 * The accounts of technicians who have completed the sign-up process are unlocked by default.
 
-* Accounts invited as both an admin and a technician cannot be locked or unlocked.
+* Although a Partner Portal admin account may appear in the technician list if it has technician access to certain sites, that admin account cannot be locked or unlocked from the technician list.
 
 :::
 
@@ -196,13 +202,17 @@ You can modify a technician's site access.
 
 :::info
 
-For more information on granting site access to a technician, see <DocLink docId='platform/biostar_air/assign-technician' />.
+* Once a technician is assigned to a site and permissions are set in the Partner Portal, only an administrator account in the BioStar Air admin portal can change those permissions.
+
+* If a site administrator locks a technician's site access in the BioStar Air portal, it cannot be unlocked from the Partner Portal. To modify a technician's site access, use an account with administrator privileges for that site in the BioStar Air portal.
+
+* For more information on granting site access to a technician, see <DocLink docId='platform/biostar_air/assign-technician' />.
 
 :::
 
-### Delete a technician account
+### Delete technician accounts
 
-If you no longer need a technician's support, you can delete their account. Deleting a technician account prevents the technician from logging in to the Partner Portal and permanently removes all information associated with the account from the system.
+If you no longer need technician's support, you can delete their account. Deleting a technician account prevents the technician from logging in to the Partner Portal and permanently removes all information associated with the account from the system.
 
 1. In the technician list, click the checkbox of the technician you want to delete. You can select 1 or more technicians.
 
