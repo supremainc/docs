@@ -47,7 +47,19 @@ BioStar Air 모바일 앱에서 펌웨어를 업그레이드하려면 <DocLink d
 
    <Image src='/img/air/bsair-device-mng-fw-upgrade.png' caption />
 
-1. 장치에 따라 최신 펌웨어 버전을 선택하고 업데이트를 확인하세요.
+1. <Cmd sid='release_note.modal.title' product='air' /> 창이 나타나면 최신 펌웨어 버전을 선택하고 <Cmd sid='release_note.modal.update' product='air' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-device-mng-fw-upgrade-update.png' width='50%' />
+
+해당 장치가 자동으로 재시작되고 다시 온라인 상태가 될 때까지 기다리세요. 목록의 장치가 녹색 점(<StatusOK />)으로 표시되면 온라인 상태입니다.
+
+:::info
+
+* 해당 펌웨어 버전의 릴리스 노트를 확인하려면 <Cmd sid='release_note.modal.releaseNote' product='air' /> 버튼을 클릭하세요.
+
+* 모든 장치의 펌웨어 릴리스 노트를 확인하려면 <Cmd sid='release_note.panel.viewAllReleaseNotes' product='air' /> 버튼을 클릭하세요.
+
+:::
 
 </TabItem>
 <TabItem value='mobile' label='Mobile'>
@@ -82,8 +94,6 @@ BioStar Air 모바일 앱에서 펌웨어를 업그레이드하려면 <DocLink d
 </Tabs>
 
 
-
-
 ## 여러 장치 한 번에 업그레이드 {#upgradingFirmwareInBulkViaWebPortal}
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' />를 클릭하세요.
@@ -94,15 +104,17 @@ BioStar Air 모바일 앱에서 펌웨어를 업그레이드하려면 <DocLink d
 
    <Image src='/img/air/bsair-device-mng-list-fw-column-align.png' />
 
-1. 업그레이드할 각 장치 왼쪽의 체크박스를 클릭하세요.
+1. 업그레이드할 각 장치 왼쪽의 체크박스를 클릭하세요. 같은 종류의 장치를 선택해야 합니다.
 
 1. 장치 목록 상단의 <IcAirFw width='24px' height='24px' title='Update Firmware' /> 버튼을 클릭하세요.
 
    <Image src='/img/air/bsair-device-mng-list-fw-update.png' />
 
-1. <Cmd sid='update_fw_text' product='air' /> 창이 나타나면 최신 펌웨어 버전을 선택하고 <Cmd sid='btn_ok' product='air' /> 버튼을 클릭하세요.
+1. <Cmd sid='release_note.modal.title' product='air' /> 창이 나타나면 최신 펌웨어 버전을 선택하고 <Cmd sid='release_note.modal.update' product='air' /> 버튼을 클릭하세요.
 
-1. 메시지 창이 나타나면 내용을 확인하고 <Cmd sid='device_btn_confirm' product='air' /> 버튼을 클릭하세요.
+   <Image src='/img/air/bsair-device-mng-fw-upgrade-update.png' width='50%' />
+
+선택한 장치가 자동으로 재시작되고 다시 온라인 상태가 될 때까지 기다리세요. 목록의 장치가 녹색 점(<StatusOK />)으로 표시되면 온라인 상태입니다.
 
 :::info
 
@@ -111,5 +123,50 @@ BioStar Air 모바일 앱에서 펌웨어를 업그레이드하려면 <DocLink d
 * 장치의 전원을 끄지 마세요.
 
 * 펌웨어 업그레이드를 완료한 후 장치는 자동 재시작합니다.
+
+* 해당 펌웨어 버전의 릴리스 노트를 확인하려면 <Cmd sid='release_note.modal.releaseNote' product='air' /> 버튼을 클릭하세요.
+
+* 모든 장치의 펌웨어 릴리스 노트를 확인하려면 <Cmd sid='release_note.panel.viewAllReleaseNotes' product='air' /> 버튼을 클릭하세요.
+
+:::
+
+
+## XPass D2 펌웨어 업그레이드 {#upgradeFirmwareForXPassD2}
+
+XPass D2 장치는 두 가지 펌웨어 구성 요소를 사용합니다.
+
+* **MICOM**: 장치 동작, RS-485 통신, 인증 처리, 안정성, 일반적인 버그 수정 등에 대한 업데이트를 포함합니다.
+
+* **BLE**: Bluetooth 통신과 관련된 업데이트를 포함합니다.
+
+XPass D2 장치는 반드시 **MICOM** → **BLE** 순서로 펌웨어를 업그레이드해야 합니다.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' />를 클릭하세요.
+
+1. <Cmd sid='device_slaves_panels' product='air' /> 탭을 클릭하세요.
+
+1. XPass D2 장치의 체크박스를 클릭하세요. 1개의 장치만 선택할 수 있습니다.
+
+   <Image src='/img/air/bsair-device-panel-fw-up-xpd2-01.png' />
+
+1. 목록 상단의 <IcAirFw width='24px' height='24px' title='Update Firmware' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='release_note.modal.title' product='air' /> 창이 나타나면 **MICOM** 펌웨어 버전을 선택하세요.
+
+   <Image src='/img/air/bsair-device-panel-fw-up-xpd2-02.png' width='50%' />
+
+1. <Cmd sid='release_note.modal.update' product='air' /> 버튼을 클릭하세요.
+
+1. 해당 장치가 자동으로 재시작되고 다시 온라인 상태가 될 때까지 기다리세요. 목록의 장치가 녹색 점(<StatusOK />)으로 표시되면 온라인 상태입니다.
+
+1. 펌웨어 업그레이드 과정을 반복하여 **BLE** 펌웨어 버전을 선택하고 업데이트하세요.
+
+:::caution
+
+* 화면에 표시된 펌웨어 버전 정보만으로는 **MICOM**, **BLE** 각 구성 요소의 설치 상태를 개별 확인하기 어렵습니다. BLE 업그레이드를 완료할 때까지 펌웨어 업그레이드를 계속 진행하세요.
+
+* 장치는 **MICOM** 업데이트 후와 **BLE** 업데이트 후 각각 온라인 상태로 복구됩니다. 녹색 온라인 표시(<StatusOK />)만으로 전체 업그레이드 완료를 확인하지 마세요. 두 단계를 모두 완료했는지 다시 한 번 확인하세요.
+
+* CS-20을 통해 연결된 보조 장치는 한 번에 하나의 장치만 펌웨어를 업그레이드할 수 있습니다.
 
 :::

@@ -3,7 +3,7 @@ import MDXContent from '@theme-original/MDXContent';
 import {useLocation} from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-export default function XcludeDoc ({children, product, pages, lang}) {
+export default function XcludeDoc ({children, product, pages, type, ref, lang}) {
     const { i18n: {currentLocale}, siteConfig } = useDocusaurusContext();
     const isPreview = siteConfig.customFields.context === 'preview';
     const location = useLocation();
@@ -27,5 +27,8 @@ export default function XcludeDoc ({children, product, pages, lang}) {
         const isLang = cLang.includes(currentLocale);
 
         return isLang ? null : <MDXContent>{children}</MDXContent>;
+    } else if (type && ref) {
+        const isMatch = ref.split(',').map(t => t.trim()).includes(type);
+        return isMatch ? null : <MDXContent>{children}</MDXContent>;
     }
 }
