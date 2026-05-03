@@ -103,6 +103,34 @@ Follow the steps below to add a new door in the BioStar Air portal.
 
 :::
 
+:::note
+
+Doors that use master/slave devices
+
+* The door is controlled by a master device (XPass 2 or CoreStation 20).
+
+* An XPass 2 configured as a master can be assigned to only one door, regardless of how many slave devices or modules are assigned.
+
+* An XPass 2 configured as a master can have up to 31 slave devices assigned, and it can add a new door whose relay is controlled by a slave Secure Module (SIO2).
+
+* Doors that use a CoreStation 20 (CS-20) together with a Secure Module (SIO2) cannot be created.
+
+:::
+
+### Door configuration limitations
+
+The following limitations apply to door configuration.
+
+* 1 XPass D2 + SIO2 (relay owned by SIO2)
+
+* 1 XPass 2 + XPass D2 (relay owned by XPass 2)
+
+* 2 XPass D2 (relay owned by XPass 2)
+
+* 1 or 2 OSDP/Wiegand devices (relay owned by CS-20)
+
+* Only 1 SIO2 is allowed per door (relay for I/O): it must be wired to the same XPass 2 as the XPass D2
+
 ## Edit doors {#editingDoors}
 
 Follow these steps to edit door details and settings.
@@ -121,19 +149,19 @@ Follow these steps to edit door details and settings.
 
    * <Cmd sid="door_product_column3" product="air" />: Select the device that authenticates users exiting the door.
 
-   * <Cmd sid='door_product_column6' product='air' />: You can connect a CCTV camera for event logs.
+5. Configure the relay device in the <Cmd sid="door_auxiliary_device" product="air" /> section.
+
+   * <Cmd sid='door_product_column6' product='air' />: Connect CCTV cameras for event logs.
+
+   * <Cmd sid="add_doors.door_relay" product="air" />: Select the relay device that controls the door lock.
+
+   * <Cmd sid='add_doors.relay_ignoring_door_sensor' product='air' />: Set the relay to ignore the door sensor.
 
    :::note
 
    To use the camera, enable the <Cmd sid='site_setting_video_management' product='air' /> feature under <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> → <Cmd sid='site_setting_qr_reader_tab' product='air' />.
 
    :::
-
-5. Configure the relay device in the <Cmd sid="door_auxiliary_device" product="air" /> section.
-
-   * <Cmd sid="add_doors.door_relay" product="air" />: Select the relay device that controls the door lock.
-
-   * <Cmd sid='add_doors.relay_ignoring_door_sensor' product='air' />: Set the relay to ignore the door sensor.
 
 6. Configure additional settings.
 

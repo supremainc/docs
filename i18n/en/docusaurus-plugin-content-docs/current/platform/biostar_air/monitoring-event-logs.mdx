@@ -85,6 +85,26 @@ Customize table columns to show or hide information. Reorder columns to place fr
 
 :::
 
+### Show RF card number column
+
+Add the <Cmd sid='card_type_rf' product='air' /> column to the event log to view the RF card number when a user authenticates using an RF card.
+
+1. Click the <IcAirColumn title='Customize' /> button at the top of the event log list. 
+
+2. When the <Cmd sid='column_filter_modal_title' product='air' /> window appears, check the <Cmd sid='card_type_rf' product='air' /> checkbox and drag it to the desired position.
+
+3. Click the <Cmd sid='column_filter_modal_save_btn' product='air' /> or <Cmd sid='column_filter_modal_apply_btn' product='air' /> button.
+
+4. The <Cmd sid='card_type_rf' product='air' /> column is displayed in the event log list.
+
+<Image src='/img/air/bsair-monitoring-eventlog-list-rf-card.png' />
+
+:::info
+
+The RF card number is shown in the event log only when a user has a single card assigned. If a user has multiple RF cards assigned, the RF card number will not be shown.
+
+:::
+
 ## Filter logs {#filtering-event-logs}
 
 Filter logs to quickly find the information you need. Click <IcAirLogfilter width='20' height='20' title='Filters' /> at the top of the log list. When the <Cmd sid="logs_filters_action_btn" product="air" /> window appears, select the desired value for each item.

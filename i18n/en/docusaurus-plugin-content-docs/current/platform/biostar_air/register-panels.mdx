@@ -1,0 +1,139 @@
+---
+id: register-panels
+title: Panel enrollment and auxiliary device configuration
+description: This guide explains how to register the CoreStation 20 panel with BioStar Air and configure RS-485, OSDP, and Wiegand devices as auxiliary devices.
+keywords:
+  - Panels
+  - Enrollment
+  - Manage
+---
+
+BioStar Air version 2.12 supports expanding the access control system using the CoreStation 20 (CS-20) panel. Using existing RS-485 wiring to connect additional devices locally reduces infrastructure costs while supporting complex door configurations.
+
+This document provides step-by-step instructions to register the CS-20 panel and configure RS-485, OSDP, and Wiegand devices as auxiliary devices.
+
+## Panel enrollment
+
+The CoreStation 20 (CS-20) enables expansion of the access control system by connecting to devices that use RS-485 communication. Follow these steps to enroll the CS-20.
+
+### Before you start
+
+* Ensure the CS-20 is powered on and physically accessible to press the **INIT** button.
+
+* The CS-20 must be connected to the internet. If the network connection is unstable, issues may occur during registration.
+
+* A 9-digit serial number is required. The serial number can be found on the label on the back of the unit.
+
+:::info
+
+For more information on the CoreStation 20, refer to the [CoreStation 20 Installation Guide](../../device/corestation_20/index).
+
+:::
+
+### CS-20 enrollment
+
+1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+
+2. Click the <Cmd sid='device_slaves_panels' product='air' /> tab.
+
+   <Image src='/img/air/bsair-device-panel-list.png' />
+
+3. Click <Cmd sid='register_cs20' product='air' /> at the top right of the screen.
+
+4. When the <Cmd sid='register_cs20' product='air' /> window appears, press the INIT button on the CS-20 panel twice.
+
+   <Image src='/img/air/bsair-cs-20-init-button.png' alone />
+
+   :::caution
+
+   After pressing the **INIT** button, there is a 5-minute window to complete CS-20 enrollment.
+
+   :::
+
+5. Enter the serial number.
+
+   <Image src='/img/air/bsair-device-panel-list-register-cs20.png' />
+
+6. After entering the full serial number, click <Cmd sid='register_btn' product='air' />.
+
+After enrollment is complete, the system automatically sets up a secure connection and displays the new CS-20 in the panel list. If enrollment is successful, a green dot appears next to the device name.
+
+<Image src='/img/air/bsair-device-panel-list-registered-cs20.png' />
+
+:::info
+
+For more information on the CS-20 enrollment process, see <Cmd sid='view_cs20_registration_guide' product='air' />.
+
+:::
+
+## Configure auxiliary devices
+
+After registering the CS-20, configure auxiliary devices using one of the following methods:
+
+| Auxiliary devices | Description |
+| --- | --- |
+| RS-485 slave device | Uses existing RS-485 wiring and a standard communication protocol |
+| OSDP device | Uses a security-enhanced communication protocol |
+| Wiegand device | Existing Wiegand-compatible devices, such as card readers |
+
+### Configure slave devices
+
+Connect devices that support RS-485 communication to the CS-20 to configure them as slave devices. Slave devices appear nested under the CS-20 in the panel list.
+
+1. In the panel list, click <IcAirMore title='More' /> at the far right of the registered CS-20 panel.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-more.png' />
+
+2. Click <Cmd sid='add_slave_devices' product='air' /> to open the <Cmd sid='add_slave_devices' product='air' /> window.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-add-slave-device.png' />
+
+   :::note
+
+   If no slave devices are found, click <Cmd sid='find_devices' product='air' /> to re-scan devices connected to the CS-20.
+
+   :::
+
+3. When connected slave devices appear in the list, click the checkbox next to each device to select the ones to add.
+
+4. Once your selections are complete, click <Cmd sid='add_btn' product='air' />.
+
+Connected slave devices appear nested under the CS-20. View all devices connected to the CS-20 at a glance in the panel list.
+
+<Image src='/img/air/bsair-device-panel-list-master-slave.png' />
+
+### Configure OSDP devices
+
+[OSDP (Open Supervised Device Protocol)](../../reference/glossary#osdp) is a security-enhanced communication protocol. In environments requiring high security, connect OSDP-compatible devices to the CS-20.
+
+1. In the panel list, click <IcAirMore title='More' /> at the far right of the registered CS-20 panel.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-more.png' />
+
+2. Click <Cmd sid='add_osdp_devices' product='air' /> from the popup menu.
+
+3. When the <Cmd sid='add_osdp_devices' product='air' /> window appears, select the port to add the device to.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-add-osdp-device.png' />
+
+4. After selecting a port, click <Cmd sid='add_btn' product='air' />.
+
+5. After completing the required settings in the <Cmd sid='device_cs20_add_osdp_devices' product='air' /> window, click <Cmd sid='save_btn' product='air' />.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-add-osdp-device-popup.png' />
+
+### Configure Wiegand devices
+
+Wiegand is a communication protocol widely used in access control systems. Connect a Wiegand device to the CS-20 to configure it as a Wiegand slave device.
+
+1. In the panel list, click <IcAirMore title='More' /> at the far right of the registered CS-20 panel.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-more.png' />
+
+2. In the popup menu, click <Cmd sid='add_wiegand_devices' product='air' />.
+
+3. When the <Cmd sid='add_wiegand_devices' product='air' /> window appears, select a port to add a device.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-add-wiegand-device.png' />
+
+4. After selecting a port, click <Cmd sid='add_btn' product='air' />.

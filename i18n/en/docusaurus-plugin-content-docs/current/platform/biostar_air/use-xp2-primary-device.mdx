@@ -1,0 +1,64 @@
+---
+id: use-xp2-primary-device
+title: Use XPass 2 as the master device
+description: This document explains how to set XPass 2 as the master device and connect XPass D2 as a slave device.
+keywords:
+  - XPass 2
+  - XPass D2
+---
+
+Set XPass 2 as the master device to connect XPass D2 as a slave device. Manage all access control logic from XPass 2. Configure a door with entry and exit devices without requiring two network connections.
+
+This document provides step-by-step instructions to set XPass 2 as the master device and connect XPass D2 as a slave device. It also explains the features supported and the limitations of the master-slave configuration.
+
+## Before you start
+
+Update the firmware to version 2.12 or later before setting XPass 2 as the master device. For more information about firmware upgrades, see <DocLink docId='platform/biostar_air/how-to-upgrade-firmware' />.
+
+## Set XPass 2 as the master device
+
+1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+
+2. In the device list, click XPass 2.
+
+3. When the <Cmd sid='device_edit_title' product='air' /> window appears, go to the <Cmd sid='new_layout_nav_title_network' product='air' /> section.
+
+4. Change the <Cmd sid='device_xpass2_rs485' product='air' /> setting to <Cmd sid='device_xpass2_rs485_master' product='air' />.
+
+   <Image src='/img/air/bsair-device-xpass2-rs485-set-master.png' />
+
+5. Click <Cmd sid="save_btn" product="air" /> at the bottom to save the changes.
+
+## Add a slave device
+
+Add a slave device such as XPass D2 or Secure Module (SIO2). 
+
+1. In the device list, click <IcAirMore title='More' /> at the far right of the XPass 2 set as the master device.
+
+   <Image src='/img/air/bsair-device-xpass2-add-slave.png' />
+
+2. Click <Cmd sid='add_slave_devices' product='air' /> to open the <Cmd sid='add_slave_devices' product='air' /> window.
+
+   <Image src='/img/air/bsair-device-xpass2-add-slave-find.png' />
+
+   :::note
+
+   If no slave devices are found, click <Cmd sid='find_devices' product='air' /> to search again for devices connected to XPass 2.
+
+   :::
+
+3. When connected slave devices appear in the list, click the checkbox next to each device you want to add.
+
+4. Once your selections are complete, click <Cmd sid='add_btn' product='air' />.
+
+Connected slave devices appear hierarchically under XPass 2. See all devices connected to XPass 2 at a glance in the panel list.
+
+:::info
+
+* For more information about XPass D2, see the [XPass D2 installation guide](../../device/xpass_d2/index).
+
+* An XPass 2 set as the master device can have up to 31 slave devices assigned
+
+* For more information about the Secure Module (SIO2), see the [Secure Module installation guide](../../device/securemodule/index).
+
+:::
