@@ -113,9 +113,13 @@ yarn build:preview
 ### 3. MDX 작성
 
 - 파일명: kebab-case (예: `getting-started.mdx`)
-- 제목: yaml 구성의 title 값
-- 코드 블록: 언어 지정 필수 (예: ` ```typescript `)
-- 이미지: 상대 경로 사용: Image 컴포넌트 사용할 것
+- **제목**: frontmatter의 `title` 필드에 설정 (예: `---\ntitle: Getting Started\n---`)
+- **코드 블록**: 언어 지정 필수 (예: ` ```typescript `)
+- **이미지**: 상대 경로로 직접 참조 가능
+  ```markdown
+  ![Alt text](./images/example.png)
+  ```
+  또는 Image 컴포넌트 사용 가능 (선택사항)
 
 ### 4. 브랜치 관리
 
@@ -126,12 +130,17 @@ yarn build:preview
 
 ### 5. 다국어 지원 (국제화)
 
-- `docs/**/*.md` → 기본 (한국어)
-- `/i18n/en/` → 영어 버전
-- `/i18n/es/` → 스페인어 버전
-- `/i18n/ja/` → 일본어 버전
+기본 문서는 한국어(ko)로 작성하며, 각 언어별 번역본은 아래 구조를 따릅니다:
+
+- **한국어**: `docs/**/*.mdx` (기본)
+- **영어**: `i18n/en/docusaurus-plugin-content-docs/current/**/*.mdx`
+- **스페인어**: `i18n/es/docusaurus-plugin-content-docs/current/**/*.mdx`
+- **일본어**: `i18n/ja/docusaurus-plugin-content-docs/current/**/*.mdx`
+
+**번역 워크플로우**
 - 번역 관련 스크립트: `yarn translate`, `yarn translate:file`
-- 영어 번역 시 주의사항은 [SKILL_ENGLISH_TRANSLATION.md](.github/SKILL_ENGLISH_TRANSLATION.md) 참조
+- Crowdin 통합으로 번역 작업 자동화
+- 영어 번역 시 주의사항은 [skills/english-translation/SKILL.md](.github/skills/english-translation/SKILL.md) 참조
 
 ### 6. PDF 생성
 

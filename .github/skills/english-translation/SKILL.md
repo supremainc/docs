@@ -2,7 +2,7 @@
 name: 영어 번역 기술
 description: 영어 문서 번역 시 따르는 스타일 가이드 및 선호 표현
 type: skill
-applyTo: i18n/en/**
+applyTo: i18n/*/docusaurus-plugin-content-docs/current/**
 ---
 
 # 영어 번역 기술 가이드
