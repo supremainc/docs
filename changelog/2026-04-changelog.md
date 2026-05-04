@@ -34,8 +34,6 @@ slug: 2026-04-changelog
 
 신규 릴리스 노트를 추가하고 새로운 장치 문서를 업데이트했습니다.
 
-### 장치 문서 업데이트
-
 * [XPass Q2 설치 가이드](../device/xpass_q2) 신규 제작
 
 * [XPass D2](../device/xpass_d2/release-notes/183): 1.8.3 버전 릴리스 노트 추가

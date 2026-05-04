@@ -34,8 +34,6 @@ April was a busy month for **Suprema Docs** with new updates across platforms, d
 
 Added new release notes and updated device documentation.
 
-### Device Documentation Updates
-
 * [XPass Q2 Installation Guide](../device/xpass_q2): Newly created
 
 * [XPass D2](../device/xpass_d2/release-notes/183): Added v1.8.3 release notes
