@@ -29,15 +29,18 @@
 .externalLinkitem {
   display: grid;
   grid-template-columns: 95px 1fr;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .externalLinkLogo {
-  height: 95px;
+  height: 69px;
   color: #333;
   align-content: normal;
 }
 
+.externalLiinkDesc {
+  align-content: center;
+}
 .externalLiinkDesc .storeLink {
   display: inline-block;
   height: 35px;
