@@ -1,0 +1,108 @@
+---
+id: 102
+title: Version 1.0.2
+---
+
+# Version 1.0.2 (Build No. 1.0.2.145)
+
+Release<Separator/>2026-05-11
+
+## New Features and Improvements
+
+---
+
+1. Supports new device.
+
+   - BioStation 3 MAX
+
+   - XPass Q2
+
+1. Support for deleting device event logs in BioStar X.
+
+1. Added support for changing the main server IP address.
+
+1. Added support for two user synchronization mode options when integrating with a directory service.
+
+   - **Add/Update Only** (Default)
+
+   - **Add/Update/Delete**
+
+1. Improved Backup and Restore
+
+   - Improved to support restoration even when the server IP address has changed.
+
+   - Improved backups to include data from user-defined paths, such as encryption keys and image logs.
+
+   - Improved the stability of the backup and restore process.
+
+1. Improved to allow administrators to be assigned camera group-based access permissions, restricting access to cameras within designated groups only.
+
+1. Improved system security vulnerabilities
+
+   - Application of HTTP security headers for the web server
+
+   - Enhancement of the encryption method for database connection passwords
+
+   - Improved XSS security vulnerabilities
+
+   - Improved SQL Injection security vulnerabilities
+
+   - Improved security vulnerabilities related to access permissions on the user list page
+
+   - Improved security vulnerabilities related to device secure communication and encryption keys
+
+   - Improved security vulnerabilities related to PDF export
+
+1. Security improvements for Time & Attendance
+
+   - Updated the Minimist library to address security vulnerabilities
+
+   - Removed hardcoded test credentials from JavaScript files
+
+   - Enhanced the database password encryption method
+
+   - Upgraded web libraries (AngularJS, jQuery, and Moment.js)
+
+1. Updated Open JDK version.
+
+1. Supported **Nx Witness v6** for VMS integration.
+
+1. Added a popup message recommending the deletion of unnecessary Redis for when upgrading to BioStar X.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Fixed bugs and optimized services to improve overall system stability. <Badge>1.0.1</Badge>
+
+1. BioStar X inaccessible after installation in environments with multiple network adapters. <Badge>1.0.0</Badge>
+
+1. Unable to upgrade BioStar 2 installed in a custom path to BioStar X. <Badge>1.0.0</Badge>
+
+1. Long-term non-access users remaining on the list even after successful authentication with specific credentials (e.g., Mobile Card). <Badge>1.0.0</Badge>
+
+1. **Daylight Saving Time** (DST) not being applied when exporting the **Muster Status** to CSV or PDF. <Badge>1.0.0</Badge>
+
+1. The context menu not appearing when right-clicking on certain devices in environments with multiple registered devices. <Badge>1.0.0</Badge>
+
+1. Error occurring when importing event log files exported via USB from BioStation 2a. <Badge>1.0.0</Badge>
+
+1. User registration failure during Active Directory synchronization when the `sAMAccountName` contains non-standard characters. <Badge>1.0.0</Badge>
+
+1. Improved the Active Directory synchronization logic to support both uppercase and lowercase keys (e.g., ou, dc) in the Base Domain Name. <Badge>1.0.0</Badge>
+
+1. Failure to retrieve group lists or synchronize data from Microsoft Entra ID when the number of user groups exceeds 100. <Badge>1.0.0</Badge>
+
+1. Incorrect display when entering combining characters in certain fields. <Badge>1.0.0</Badge>
+
+1. Unintended deletion of door groups with similar names when deleting a group that includes an underscore (`_`). <Badge>1.0.0</Badge>
+
+1. Improved the USB Device Agent installer by including the latest DE-620 drivers to ensure compatibility with Windows 11 security updates. <Badge>1.0.0</Badge>
+
+1. Fixed an issue where database migration failed when enabling or disabling the Encrypt Personal Data On DataBase option. <Badge>1.0.0</Badge>
+
+1. Fixed an issue where non-admin users could access other users' report filters via the API. <Badge>1.0.0</Badge>
+
+</BugLists>
