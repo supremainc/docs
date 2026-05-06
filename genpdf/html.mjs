@@ -7,6 +7,41 @@ import { markdownToHtml } from './converter-rehype.mjs';
 import { getTemplateCSS, getEmbeddedScript } from './config.mjs';
 
 /**
+ * Decode HTML entities to plain text
+ * @param {string} text - Text with HTML entities
+ * @returns {string} Decoded text
+ */
+function decodeHtmlEntities(text) {
+  const htmlEntities = {
+    '&amp;': '&',
+    '&lt;': '<',
+    '&gt;': '>',
+    '&quot;': '"',
+    '&#039;': "'",
+    '&#x26;': '&',
+    '&#x3C;': '<',
+    '&#x3E;': '>',
+    '&#x22;': '"',
+    '&#x27;': "'"
+  };
+
+  let decoded = text;
+  for (const [entity, char] of Object.entries(htmlEntities)) {
+    decoded = decoded.replace(new RegExp(entity, 'g'), char);
+  }
+
+  // Handle numeric entities &#123; and &#xABC;
+  decoded = decoded.replace(/&#(\d+);/g, (match, dec) => {
+    return String.fromCharCode(parseInt(dec, 10));
+  });
+  decoded = decoded.replace(/&#x([0-9A-Fa-f]+);/g, (match, hex) => {
+    return String.fromCharCode(parseInt(hex, 16));
+  });
+
+  return decoded;
+}
+
+/**
  * Extract headings from generated HTML content
  * @param {string} htmlContent - HTML content to extract headings from
  * @param {number} maxDepth - Maximum heading depth for TOC (relative depth)
@@ -14,14 +49,14 @@ import { getTemplateCSS, getEmbeddedScript } from './config.mjs';
  */
 function extractHeadingsFromHtml(htmlContent, maxDepth = 3) {
   const headings = [];
-  
+
   // Match all h1-h6 tags with or without id attributes
   // Pattern 1: with id attribute - <h1 id="...">text</h1>
   const hRegexWithId = /<h([1-6])\s+id="([^"]+)"[^>]*>([^<]*)<\/h\1>/g;
   // Pattern 2: without id - <h1>text</h1> (will generate id from text)
   const hRegexNoId = /<h([1-6])[^>]*>([^<]*)<\/h\1>/g;
   let match;
-  
+
   // First, collect headings with explicit ids
   const processedIds = new Set();
   while ((match = hRegexWithId.exec(htmlContent)) !== null) {
@@ -29,7 +64,7 @@ function extractHeadingsFromHtml(htmlContent, maxDepth = 3) {
     headings.push({
       depth: htmlDepth - 1,
       id: match[2],
-      text: match[3].trim()
+      text: decodeHtmlEntities(match[3].trim())
     });
     processedIds.add(match[0]);
   }
@@ -40,8 +75,8 @@ function extractHeadingsFromHtml(htmlContent, maxDepth = 3) {
   
   while ((match = htmlRegexOnlyNo.exec(htmlContent)) !== null) {
     const htmlDepth = parseInt(match[1]);
-    const text = match[2].trim();
-    
+    const text = decodeHtmlEntities(match[2].trim());
+
     // Generate ID from text
     const generatedId = text
       .toLowerCase()
@@ -49,7 +84,7 @@ function extractHeadingsFromHtml(htmlContent, maxDepth = 3) {
       .replace(/\s+/g, '-')
       .replace(/-+/g, '-')
       .replace(/^-+|-+$/g, '');
-    
+
     if (generatedId) {
       headings.push({
         depth: htmlDepth - 1,
@@ -82,7 +117,6 @@ function generateTocFromHeadings(headings) {
     const heading = headings[i];
     const nextHeading = i + 1 < headings.length ? headings[i + 1] : null;
     const nextDepth = nextHeading ? nextHeading.depth : 0;
-    
     const item = `<li><a href="#${heading.id}">${escapeHtml(heading.text)}</a>`;
     
     // Open new levels if going deeper
