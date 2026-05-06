@@ -919,7 +919,7 @@ function createSidebars(preview) {
           ]
         }
       ],
-    }
+    },
   ],
   legal: [
     {
