@@ -1,9 +1,10 @@
 ---
 id: 102
-title: 버전 1.0.2
+title: (초안) 버전 1.0.2
+draft: true
 ---
 
-# 버전 1.0.2 (빌드 번호 1.0.2.XXX)
+# 버전 1.0.2 (빌드 번호 1.0.2.145)
 
 릴리스<Separator/>2026-05-11
 
@@ -73,9 +74,9 @@ title: 버전 1.0.2
 
 <Jira bss='BX-5374' /> Nx Witness v6 지원
 
-1. VMS 연동 시스템으로 Nx Witness v6 버전 지원
+1. VMS 연동 시스템으로 **Nx Witness v6** 버전 지원
 
-2. Supported Nx Witness v6 for VMS integration.
+2. Supported **Nx Witness v6** for VMS integration.
 
 <Jira bss='BX-2609' /> [BSX 패키지] [MCS] 서버 IP 변경 시 서버 구동 불가
 
@@ -190,35 +191,47 @@ title: 버전 1.0.2
 
 1. Long-term non-access users remaining on the list even after successful authentication with specific credentials (e.g., Mobile Card). <Badge>1.0.0</Badge>
 
-<Jira bss='BX-5608' /> muster zone 을 csv export 를 하면 dst 적용이 안 됨 <Badge>1.0.0</Badge>
+<Jira bss='BX-5608' /> muster zone 을 csv export 를 하면 dst 적용이 안 됨
 
-<Jira bss='BX-5605' /> 한 페이지를 넘어가는 CS-40 장치를 트리에서 우클릭 시 메뉴 표시 안됨 <Badge>1.0.0</Badge>
+1. **소집 상태**를 CSV나 PDF로 내보낼 때, **일광 절약 시간**(DST)이 적용되지 않는 문제 <Badge>1.0.0</Badge>
 
-<Jira bss='BX-5595' /> BS2A 에서 usb 로 로그 가져오기 기능 미동작 문제 <Badge>1.0.0</Badge>
+1. **Daylight Saving Time** (DST) not being applied when exporting the **Muster Status** to CSV or PDF. <Badge>1.0.0</Badge>
 
-<Jira bss='BX-5497' /> sAMAccountName이 AD 로그인 저장 사양에 맞지 않을 경우 AD 동기화 및 사용자 등록이 안되는 버그 <Badge>???</Badge>
+<Jira bss='BX-5605' /> 한 페이지를 넘어가는 CS-40 장치를 트리에서 우클릭 시 메뉴 표시 안됨
 
-1. Active Directory 동기화 시, 사용자의 `sAMAccountName`에 특수 문자 등 특정 규격에 맞지 않는 문자가 포함되어 있으면 사용자 등록이 실패하는 문제 <Badge>???</Badge>
+1. 다수의 장치가 등록된 환경에서 일부 장치에 마우스 우클릭 시 컨택스트 메뉴가 나타나지 않는 문제 <Badge>1.0.0</Badge>
 
-1. User registration failure during Active Directory synchronization when the `sAMAccountName` contains non-standard characters. <Badge>???</Badge>
+1. The context menu not appearing when right-clicking on certain devices in environments with multiple registered devices. <Badge>1.0.0</Badge>
 
-<Jira bss='BX-5496' /> Active Directory 연결 정보 입력 시 Base Domain Name에 OU, DC를 소문자도 허용하도록 수정 <Badge>???</Badge>
+<Jira bss='BX-5595' /> BS2A 에서 usb 로 로그 가져오기 기능 미동작 문제
 
-1. Active Directory 연동 시 **기본 Domain 명**의 키값(OU, DC)을 소문자로 입력하면 동기화가 실패하는 문제 <Badge>???</Badge>
+1. BioStation 2a에서 USB로 내보낸 이벤트 로그 파일을 가져올 때 오류가 발생하는 문제 <Badge>1.0.0</Badge>
 
-1. Improved the Active Directory synchronization logic to support both uppercase and lowercase keys (e.g., ou, dc) in the Base Domain Name. <Badge>???</Badge>
+1. Error occurring when importing event log files exported via USB from BioStation 2a. <Badge>1.0.0</Badge>
 
-<Jira bss='BX-5494' /> EntraID의 그룹이 100개 이상 사용할 경우, BioStar2 동기화 시 사용자 그룹 필터를 못 가져오는 이슈 <Badge>???</Badge>
+<Jira bss='BX-5497' /> sAMAccountName이 AD 로그인 저장 사양에 맞지 않을 경우 AD 동기화 및 사용자 등록이 안되는 버그
 
-1. Microsoft Entra ID에 등록된 사용자 그룹이 100개를 초과할 경우, 그룹 목록을 불러오지 못하거나 동기화가 정상적으로 진행되지 않는 문제 <Badge>???</Badge>
+1. Active Directory 동기화 시, 사용자의 `sAMAccountName`에 특수 문자 등 특정 규격에 맞지 않는 문자가 포함되어 있으면 사용자 등록이 실패하는 문제 <Badge>1.0.0</Badge>
 
-1. Failure to retrieve group lists or synchronize data from Microsoft Entra ID when the number of user groups exceeds 100. <Badge>???</Badge>
+1. User registration failure during Active Directory synchronization when the `sAMAccountName` contains non-standard characters. <Badge>1.0.0</Badge>
 
-<Jira bss='BX-5493' /> Title, Department 필드에 태국어 글자입력시 Invalid Title로 표기 <Badge>???</Badge>
+<Jira bss='BX-5496' /> Active Directory 연결 정보 입력 시 Base Domain Name에 OU, DC를 소문자도 허용하도록 수정
 
-1. 일부 필드에 결합 문자 입력 시 잘못 표시되는 문제 <Badge>???</Badge>
+1. Active Directory 연동 시 **기본 Domain 명**의 키값(OU, DC)을 소문자로 입력하면 동기화가 실패하는 문제 <Badge>1.0.0</Badge>
 
-1. Incorrect display when entering combining characters in certain fields. <Badge>???</Badge>
+1. Improved the Active Directory synchronization logic to support both uppercase and lowercase keys (e.g., ou, dc) in the Base Domain Name. <Badge>1.0.0</Badge>
+
+<Jira bss='BX-5494' /> EntraID의 그룹이 100개 이상 사용할 경우, BioStar2 동기화 시 사용자 그룹 필터를 못 가져오는 이슈
+
+1. Microsoft Entra ID에 등록된 사용자 그룹이 100개를 초과할 경우, 그룹 목록을 불러오지 못하거나 동기화가 정상적으로 진행되지 않는 문제 <Badge>1.0.0</Badge>
+
+1. Failure to retrieve group lists or synchronize data from Microsoft Entra ID when the number of user groups exceeds 100. <Badge>1.0.0</Badge>
+
+<Jira bss='BX-5493' /> Title, Department 필드에 태국어 글자입력시 Invalid Title로 표기
+
+1. 일부 필드에 결합 문자 입력 시 잘못 표시되는 문제 <Badge>1.0.0</Badge>
+
+1. Incorrect display when entering combining characters in certain fields. <Badge>1.0.0</Badge>
 
 <Jira bss='BX-5492' /> 출입문 그룹 명에 "_" (Underscore)가 있는 그룹을 삭제 시 다른 그룹도 삭제되는 문제 <Badge>1.0.0</Badge>
 
@@ -234,14 +247,14 @@ title: 버전 1.0.2
 
 <Jira bss='BX-5475' /> 암복호화시 이슈되는 컬럼 데이터 부분 변경
 
+1. 개인 정보 DB 암호화 설정 변경 시, 마이그레이션이 실패하는 문제 <Badge>2.2.0</Badge>
+
+1. Fixed an issue where database migration failed when enabling or disabling the Encrypt Personal Data On DataBase option. <Badge>2.2.0</Badge>
+
 <Jira bss='BX-5474' /> report_filter api 개선
 
 1. 관리자 권한이 없는 사용자가 API를 통해 타인의 리포트 필터를 조회할 수 있는 문제 <Badge>1.0.0</Badge>
 
 1. Fixed an issue where non-admin users could access other users' report filters via the API. <Badge>1.0.0</Badge>
-
-<Jira bss='BX-5472' /> Production Library Cleanup
-
-<Jira bss='SW5-253' /> Merge 2.9.12 items to X1.0.2 branch.
 
 </BugLists>
