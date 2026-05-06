@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import {useThemeConfig} from '@docusaurus/theme-common';
 import Link from '@docusaurus/Link';
+import useBrokenLinks from '@docusaurus/useBrokenLinks';
 import styles from './styles.module.css';
 
 export default function Head ({level, hashid, children, className}) {
@@ -19,6 +20,7 @@ export default function Head ({level, hashid, children, className}) {
     } else {
         hid = hashid;
     }
+    useBrokenLinks().collectAnchor(hid);
     return (
         <Headertag 
             className={clsx(

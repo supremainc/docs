@@ -1,6 +1,7 @@
 import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Link from '@docusaurus/Link';
+import useBrokenLinks from '@docusaurus/useBrokenLinks';
 // 각 로케일에 맞는 glossary 파일을 정적으로 import
 import glossary_ko from '@site/i18n/ko/glossary.json';
 import glossary_en from '@site/i18n/en/glossary.json';
@@ -41,6 +42,12 @@ export function GlossaryAll() {
   } = useDocusaurusContext();
 
   const glossary = glossaryMap[currentLocale] || glossary_en;
+  const brokenLinks = useBrokenLinks();
+
+  // 모든 glossary 용어 앵커 등록
+  Object.keys(glossary).forEach((key) => {
+    brokenLinks.collectAnchor(key);
+  });
 
   // glossary 객체를 key와 value를 포함한 배열로 변환 후 정렬
   const sortedEntries = Object.entries(glossary).sort(([, a], [, b]) =>

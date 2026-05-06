@@ -2,6 +2,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {translate} from '@docusaurus/Translate';
+import useBrokenLinks from '@docusaurus/useBrokenLinks';
 import Head from '@site/src/components/Head';
 import clsx from 'clsx';
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -66,6 +67,79 @@ export function SpecSection({data}) {
   const specs = data.items;
   const { i18n: { currentLocale } } = useDocusaurusContext();
   const glossary = glossaryMap[currentLocale] || glossary_en;
+  const brokenLinks = useBrokenLinks();
+
+  // JSON 값에 포함된 HTML 앵커 추출 및 등록
+  const extractAndRegisterAnchors = (obj) => {
+    if (typeof obj === 'string') {
+      // id='anno*_dest' 패턴 추출 및 등록
+      const matches = obj.match(/id='([^']*_dest)'/g);
+      if (matches) {
+        matches.forEach((match) => {
+          const id = match.replace(/id='|'/g, '');
+          brokenLinks.collectAnchor(id);
+        });
+      }
+      // href='#anno*' 패턴 추출 및 등록
+      const hrefMatches = obj.match(/href='#([^']*?)'/g);
+      if (hrefMatches) {
+        hrefMatches.forEach((match) => {
+          const id = match.replace(/href='#|'/g, '');
+          brokenLinks.collectAnchor(id);
+        });
+      }
+    } else if (typeof obj === 'object' && obj !== null) {
+      Object.values(obj).forEach((value) => {
+        extractAndRegisterAnchors(value);
+      });
+    }
+  };
+
+  // specs의 모든 값에서 앵커 추출
+  extractAndRegisterAnchors(specs);
+
+  // 섹션 제목 앵커 등록
+  if (data.label_id) {
+    const anchorId = `specs.${data.label_id.split('.')[1]}`;
+    brokenLinks.collectAnchor(anchorId);
+
+    // specs.power_supply인 경우 specs.power로도 등록 (enclosure 제품 호환)
+    if (data.label_id.includes('power_supply')) {
+      brokenLinks.collectAnchor('specs.power');
+    }
+  }
+
+  // 컴포넌트 props에 정의된 annotation 앵커 등록
+  Object.values(specs).forEach((item) => {
+    if (item.annotation_label) {
+      brokenLinks.collectAnchor(item.annotation_label);
+      brokenLinks.collectAnchor(`${item.annotation_label}_dest`);
+    }
+    if (item.items) {
+      Object.values(item.items).forEach((subitem) => {
+        if (subitem.annotation_label) {
+          brokenLinks.collectAnchor(subitem.annotation_label);
+          brokenLinks.collectAnchor(`${subitem.annotation_label}_dest`);
+        }
+        if (subitem.annotation_value) {
+          brokenLinks.collectAnchor(subitem.annotation_value);
+          brokenLinks.collectAnchor(`${subitem.annotation_value}_dest`);
+        }
+        if (subitem.items) {
+          Object.values(subitem.items).forEach((subsubitem) => {
+            if (subsubitem.annotation_label) {
+              brokenLinks.collectAnchor(subsubitem.annotation_label);
+              brokenLinks.collectAnchor(`${subsubitem.annotation_label}_dest`);
+            }
+          });
+        }
+      });
+    }
+    if (item.annotation_value) {
+      brokenLinks.collectAnchor(item.annotation_value);
+      brokenLinks.collectAnchor(`${item.annotation_value}_dest`);
+    }
+  });
 
   return (
     <>
