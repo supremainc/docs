@@ -723,6 +723,7 @@ const sidebars = {
         id: 'platform/biostar_x/release-notes'
       },
       items: [
+        'platform/biostar_x/release-notes/102',
         'platform/biostar_x/release-notes/101',
         'platform/biostar_x/release-notes/100',
       ]
