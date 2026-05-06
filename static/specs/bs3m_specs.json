@@ -331,10 +331,10 @@
           "label": "인증",
           "label_id": "specs.general.certifications",
           "value": {
-            "ko": "CE, UKCA, KC, FCC, IC, RCM, RoHS, REACH, WEEE, SIG, MIC, TELEC, ETL Listed to UL 294",
-            "en": "CE, UKCA, KC, FCC, IC, RCM, RoHS, REACH, WEEE, SIG, MIC, TELEC, ETL Listed to UL 294",
-            "es": "CE, UKCA, KC, FCC, IC, RCM, RoHS, REACH, WEEE, SIG, MIC, TELEC, ETL Listed to UL 294",
-            "ja": "CE、UKCA、KC、FCC、IC、RCM、RoHS、REACH、WEEE、SIG、MIC、TELEC、ETL Listed to UL 294"
+            "ko": "CE <span class='badge only'>CE향 모델만 해당</span>, UKCA, KC, FCC, IC, RCM, RoHS, REACH, WEEE, SIG, MIC, TELEC, ETL Listed to UL 294",
+            "en": "CE <span class='badge only'>CE models only</span>, UKCA, KC, FCC, IC, RCM, RoHS, REACH, WEEE, SIG, MIC, TELEC, ETL Listed to UL 294",
+            "es": "CE <span class='badge only'>Solo modelos CE</span>, UKCA, KC, FCC, IC, RCM, RoHS, REACH, WEEE, SIG, MIC, TELEC, ETL Listed to UL 294",
+            "ja": "CE <span class='badge only'>CE モデルのみ</span>、UKCA、KC、FCC、IC、RCM、RoHS、REACH、WEEE、SIG、MIC、TELEC、ETL Listed to UL 294"
           }
         }
       }
