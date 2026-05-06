@@ -37,6 +37,7 @@ import YouTube from 'react-youtube';
 import PageBreak from '@site/src/components/Pagebreak';
 import Magnify from "@site/src/components/Magnify";
 import Linkto from "@site/src/components/Linkto";
+import AnchorCollect from "@site/src/components/AnchorCollect";
 // icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
