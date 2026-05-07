@@ -912,8 +912,7 @@
     "description": "The ARIA label and placeholder for search button"
   },
   "theme.SearchBar.product.label": {
-    "message": "제품",
-    "description": "The ARIA label and placeholder for product search button"
+    "message": "제품"
   },
   "theme.SearchModal.searchBox.resetButtonTitle": {
     "message": "검색어 초기화",
@@ -1233,12 +1232,10 @@
     "message": "BioStar Air의 모바일 크리덴셜"
   },
   "searchBox.refinementList.clearAll": {
-    "message": "선택 해제",
-    "description": "The label for the button to clear all refinements in the search box"
+    "message": "선택 해제"
   },
   "searchBox.recentList.clearButton": {
-    "message": "최근 검색어 삭제",
-    "description": "The label for the button to clear recent searches in the search box"
+    "message": "최근 검색어 삭제"
   },
   "theme.docCardList.prefix.latest": {
     "message": "최신"
