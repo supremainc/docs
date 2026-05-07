@@ -166,6 +166,11 @@ import IcCamLive from '@site/static/img/cam-server/ico-header-live.svg';
 import IcCamSet from '@site/static/img/cam-server/ico-header-settings.svg';
 import IcCamPeople from '@site/static/img/cam-server/ico-header-people.svg';
 import IcCamSys from '@site/static/img/cam-server/ico-header-system.svg';
+import IcPanelFace from '@site/static/img/menus/ico-panel-face.svg';
+import IcKnob from '@site/static/img/menus/ico-rotate-knob.svg';
+import IcCapture from '@site/static/img/menus/ico-cam-capture.svg';
+import IcFull from '@site/static/img/menus/ico-content-full.svg';
+import IcMin from '@site/static/img/menus/ico-mini-screen.svg';
 export default {
     ...MDXComponents,
     Cmd,
@@ -238,5 +243,5 @@ export default {
     IcBack,
     IcAdvSearch, IcSearch,
     IcFw, IcBw, IcFirst, IcLast, IcAscend, IcDescend, IcSet, IcEdit, IcEdit2, IcEditUL,
-    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP, IcCamFail, IcCamOk, IcMapmore, IcAlert, IcVidLog, IcReportVid, IcViewAlert, IcRepTrash, IcRepoEdit, IcZoom, IcFLockDr, IcFUlockDr, IcRCplay, IcRCstop, IcRCdone, IcRCinfo, IcRCmemo, IcImgLog, IcList, IcTnaExpand, IcInfinity, IcAirEdit, IcAirRemove, IcAirMore, IcAirUpface, IcAirGroup, IcAirDef, IcAirL, IcAirR, IcAirLock, IcAirMtag, IcAirDown, IcAirFaceLink, IcAirFilterReset, IcAirUtemplate, IcAirReport, IcAirFilter, IcAirActive, IcAirReissue, IcAirSuspend, IcAirRef, IcAirFw, IcAirCloud, IcAirByte, IcAirDset, IcAirUpd, IcAirColumn, IcAirSchedule, IcAirLogfilter, IcAirMask, IcAirReportApp, IcHamberg, IcFunc, IcSpqr, IcCamTrash, IcCamReset, IcCamLive, IcCamSet, IcCamPeople, IcCamSys
+    IcFw2, IcBw2, IcFirst2, IcLast2, IcSet2, IcTslot, IcEraser, IcCalc, IcCopy2, IcRefresh, IcInfo, IcLogout, IcTips, IcLrot, IcRrot, IcCrop, IcFremove, IcCamrot, IcDorder, IcCurP, IcCamFail, IcCamOk, IcMapmore, IcAlert, IcVidLog, IcReportVid, IcViewAlert, IcRepTrash, IcRepoEdit, IcZoom, IcFLockDr, IcFUlockDr, IcRCplay, IcRCstop, IcRCdone, IcRCinfo, IcRCmemo, IcImgLog, IcList, IcTnaExpand, IcInfinity, IcAirEdit, IcAirRemove, IcAirMore, IcAirUpface, IcAirGroup, IcAirDef, IcAirL, IcAirR, IcAirLock, IcAirMtag, IcAirDown, IcAirFaceLink, IcAirFilterReset, IcAirUtemplate, IcAirReport, IcAirFilter, IcAirActive, IcAirReissue, IcAirSuspend, IcAirRef, IcAirFw, IcAirCloud, IcAirByte, IcAirDset, IcAirUpd, IcAirColumn, IcAirSchedule, IcAirLogfilter, IcAirMask, IcAirReportApp, IcHamberg, IcFunc, IcSpqr, IcCamTrash, IcCamReset, IcCamLive, IcCamSet, IcCamPeople, IcCamSys, IcPanelFace, IcKnob, IcCapture, IcFull, IcMin
 }
