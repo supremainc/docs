@@ -33,6 +33,10 @@ Para más información sobre cómo cambiar la dirección IP en Windows, consulta
 
 Sigue los pasos siguientes para cambiar la dirección IP en el servidor donde está instalado **BioStar X**.
 
+### BioStar X IP Setting
+
+Use la herramienta **BioStar X IP Setting** para cambiar la dirección IP.
+
 1. En Windows, haz clic en <Start/> → **BioStar X** → **BioStar X IP Setting**.
 
 2. Cuando aparezca la ventana <Cmd>BioStar X IP Setting</Cmd>, selecciona la dirección IP que deseas usar en <Cmd>Server Address</Cmd>.
@@ -53,7 +57,7 @@ Sigue los pasos siguientes para cambiar la dirección IP en el servidor donde es
 
    <Image src='/img/common/biostarx-sm-change-ip-success.png' alone />
 
-Después de que se complete el cambio de dirección IP, reinicia todos los servicios. Abre un navegador web y verifica que puedas acceder al servidor con la nueva dirección IP.
+Después de completar el cambio de dirección IP, reinicie todos los servicios.
 
 :::info
 
@@ -63,7 +67,27 @@ Después de que se complete el cambio de dirección IP, reinicia todos los servi
 
    ![BioStar X Service Manager Server Address](/img/common/biostarx-sm-change-ip-check.png)
 
+* Si un dispositivo está registrado en BioStar X con la opción <Cmd sid='device.info.deviceToServerConnection' product='2' />, el administrador debe actualizar manualmente la IP del servidor de ese dispositivo a la nueva dirección IP.
+
 :::
+
+### Modificar la configuración del servidor de base de datos
+
+Si la base de datos está alojada en el mismo servidor que **BioStar X**, detenga todos los servicios y luego edite el archivo *system.conf* de **BioStar X**. Omita este paso si usa un servidor de base de datos externo.
+
+1. En Windows, seleccione <Start/> → **BioStar X Service Manager** → <Cmd>SERVICE SETTINGS</Cmd>, luego haga clic en <Cmd>Stop All</Cmd> para detener todos los servicios.
+
+2. Vaya a *C:\\Program Files\\BioStar X Server*.
+
+3. Abra el archivo *system.conf* con un editor de texto como Notepad.
+
+4. En la sección `database`, cambie el valor `server_ip` a la nueva dirección IP.
+
+5. Guarde y cierre el archivo *system.conf*.
+
+6. En **BioStar X Service Manager**, en <Cmd>SERVICE SETTINGS</Cmd>, haga clic en <Cmd>Start All</Cmd> para reiniciar todos los servicios.
+
+Abra un navegador web y verifique que puede acceder al servidor con la nueva dirección IP.
 
 ## Actualización del servidor de comunicación {#communicationServer}
 
