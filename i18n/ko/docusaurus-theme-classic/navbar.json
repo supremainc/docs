@@ -186,5 +186,9 @@
   "item.label.AI Cameras": {
     "message": "AI 카메라",
     "description": "Navbar item with label AI Cameras"
+  },
+  "item.label.XPass Q2": {
+    "message": "XPass Q2",
+    "description": "Navbar item with label XPass Q2"
   }
 }
