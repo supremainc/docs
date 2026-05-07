@@ -75,7 +75,7 @@ IPアドレスの変更が完了したら、すべてのサービスを再起動
 
 データベースを **BioStar X** と同じサーバーに設置して運用している場合は、すべてのサービスを停止してから **BioStar X** の *system.conf* ファイルを編集してください. 外部データベースサーバーを使用している場合は、この手順をスキップしてください.
 
-1. Windowsで <Start/> → **BioStar X Service Manager** → <Cmd>SERVICE SETTINGS</Cmd> を開き、<Cmd>Stop All</Cmd> ボタンをクリックしてすべてのサービスを停止してください.
+1. Windowsのサービス(service.msc)で**BioStar X**に関連するすべてのサービスを停止してください。
 
 2. *C:\\Program Files\\BioStar X Server* フォルダーに移動してください.
 
@@ -85,7 +85,7 @@ IPアドレスの変更が完了したら、すべてのサービスを再起動
 
 5. *system.conf* ファイルを保存して閉じてください.
 
-6. **BioStar X Service Manager** の <Cmd>SERVICE SETTINGS</Cmd> で <Cmd>Start All</Cmd> ボタンをクリックしてすべてのサービスを再起動してください.
+6. Windowsのサービス(service.msc)で**BioStar X**に関連するすべてのサービスを再起動してください。
 
 ウェブブラウザを開いて、変更後のIPアドレスに正常にアクセスできるか確認してください。
 
