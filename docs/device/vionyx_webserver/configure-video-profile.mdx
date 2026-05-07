@@ -42,7 +42,7 @@ AI 이벤트를 이미 운영 중이라면, 좌우 반전 또는 초기화 시 A
 
 * **CH 1**: 물리 카메라의 원본 Fisheye 화면을 기준으로 운영하는 채널입니다.
 
-* **CH 2**: Panorama 또는 Quad 같은 가공 뷰로 관제 효율을 높여 운영하는 채널입니다.
+* **CH 2**: 파노라마 또는 4분할 화면 같은 가공 뷰로 관제 효율을 높여 운영하는 채널입니다.
 
 카메라 채널별 비디오 프로필 세부 항목을 설정할 수 있습니다.
 
@@ -56,20 +56,26 @@ AI 이벤트를 이미 운영 중이라면, 좌우 반전 또는 초기화 시 A
 
 * <Cmd>CH 2</Cmd>: Fisheye를 제외한 뷰 모드를 선택할 수 있습니다.
 
-  * <Cmd>Single</Cmd>: 피쉬아이 카메라가 촬영한 영상을 보정하여 벽면형 파노라마 형식을 볼 수 있는 모드입니다.
+  * <Cmd sid='view_type_single' product='cam' />: 피쉬아이 카메라가 촬영한 영상을 보정하여 벽면형 파노라마 형식을 볼 수 있는 모드입니다.
 
-  * <Cmd>Double</Cmd>: 360˚ 영역을 촬영한 영상을 왜곡 보정하여 파노라마 형식의 상하 분할 화면으로 볼 수 있는 모드입니다.
+  * <Cmd sid='view_type_double' product='cam' />: 360˚ 영역을 촬영한 영상을 왜곡 보정하여 파노라마 형식의 상하 분할 화면으로 볼 수 있는 모드입니다.
 
-  * <Cmd>Quad View</Cmd>: 사람의 시야에 적합하도록 왜곡 보정한 특정 화면 4개를 동시에 볼 수 있는 모드입니다.
+  * <Cmd sid='view_type_quad' product='cam' />: 사람의 시야에 적합하도록 왜곡 보정한 특정 화면 4개를 동시에 볼 수 있는 모드입니다.
 
 
 ## 스트림 유형 선택
 
-<Cmd sid='stream' product='cam' />에서 설정할 스트림을 선택하세요. **Main Stream** 또는 **Sub Stream** 중 하나를 선택하고, <Cmd sid='profile' product='cam' /> 섹션에서 상세값을 조정하세요.
+<Cmd sid='stream' product='cam' />에서 설정할 스트림을 선택하세요. 메인 또는 서브 스트림 중 하나를 선택하고, <Cmd sid='profile' product='cam' /> 섹션에서 상세값을 조정하세요.
 
-* **Main Stream**: 녹화 및 고화질 모니터링(해상도: 3520 × 3520)
+* <Cmd sid='stream_type_main' product='cam' />: 녹화 및 고화질 모니터링(해상도: 3520 × 3520)
 
-* **Sub Stream**: 저대역폭 원격 모니터링(해상도: 1760 × 1760)
+* <Cmd sid='stream_type_sub' product='cam' />: 저대역폭 원격 모니터링(해상도: 1760 × 1760)
+
+:::info
+
+<Cmd>CH 2</Cmd> 채널은 <Cmd sid='stream_type_sub' product='cam' /> 유형을 지원하지 않습니다.
+
+:::
 
 
 ## 프로필 상세 설정
@@ -86,13 +92,19 @@ AI 이벤트를 이미 운영 중이라면, 좌우 반전 또는 초기화 시 A
 
 * <Cmd sid='resolution' product='cam' />: 프로필에 적용할 해상도입니다. 스트림 유형에 따라 지원하는 해상도가 다릅니다.
 
-   * **Main Stream**: 3520 × 3520
+   * <Cmd sid='stream_type_main' product='cam' />: 3520 × 3520
 
-   * **Sub Stream**: 1760 × 1760
+   * <Cmd sid='stream_type_sub' product='cam' />: 1760 × 1760
+
+   :::note
+
+   <Cmd>CH 2</Cmd> 채널은 <Cmd sid='stream_type_sub' product='cam' /> 유형을 지원하지 않습니다.
+
+   :::
 
 * <Cmd sid='frame_rate' product='cam' />: 초당 프레임 수를 설정하세요. 30, 25, 20, 15, 10 프레임 중 하나를 선택할 수 있습니다.
 
-* <Cmd sid='max_bitrate' product='cam' />: <Cmd sid='bitrate_control' product='cam' /> 옵션이 <Cmd>VBR</Cmd>일 때, 영상의 최대 비트 레이트를 설정할 수 있습니다.
+* <Cmd sid='max_bitrate' product='cam' />: 영상의 최대 비트 레이트를 설정할 수 있습니다.
 
 * <Cmd sid='bitrate_control' product='cam' />: 영상 데이터 제어 방식을 선택하세요.
 
@@ -115,7 +127,11 @@ AI 이벤트를 이미 운영 중이라면, 좌우 반전 또는 초기화 시 A
 
 ## 좌우 반전 설정
 
-설치 위치에 따라 좌우 반전 설정이 필요할 수 있습니다. <Cmd sid='mirror' product='cam' />에서 좌우 반전 설정을 켜거나 끌 수 있습니다. 
+카메라 설치 위치에 따라 좌우 또는 상하 반전 설정이 필요할 수 있습니다. 
+
+* <Cmd sid='mirror' product='cam' />: 좌우 반전 설정을 켜거나 끌 수 있습니다. 
+
+* <Cmd sid='flip' product='cam' />: 상하 반전 설정을 켜거나 끌 수 있습니다.
 
 :::info
 
@@ -135,25 +151,3 @@ AI 이벤트가 설정된 상태에서는 좌우 반전 변경이 제한될 수 
 * Fisheye 모드에서 AI 이벤트가 설정되어 있다면, AI 설정을 삭제하고 진행하세요.
 
 :::
-
-## 참조 정보
-
-### 채널/뷰 모드 정책
-
-| 항목 | 정책 |
-| --- | --- |
-| **CH 1** 뷰 타입 | Fisheye 고정 |
-| **CH 2** 뷰 타입 | Single Panorama / Double Panorama / Quad View |
-
-
-### 스트림 및 인코딩 기본 정보
-
-| 항목 | 지원/기본 정보 |
-| --- | --- |
-| 스트림 | 채널별 Main Stream 1개, Sub Stream 1개 |
-| 코덱 | H.264, H.265, MJPEG |
-| 해상도 | 뷰 모드별 지원 해상도 제공(**Main Stream**: 3520 × 3520 /  **Sub Stream**: 1760 × 1760) |
-| 프레임 레이트 | 30, 25, 20, 15, 10 |
-| 최대 비트레이트 | 100 Kbps \~ 450 Mbps |
-| 비트레이트 제어 | VBR, CBR |
-| GOV 길이 | 1 \~ 300 |

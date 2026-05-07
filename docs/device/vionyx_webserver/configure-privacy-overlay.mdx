@@ -43,7 +43,9 @@ keywords: [Privacy, Overlay, 프라이버시, 오버레이, 마스킹, 블러]
 
 ### 프라이버시 영역 추가
 
-1. <Cmd sid='area_setting' product='cam' /> 섹션에서 <Cmd sid='add_button' product='cam' /> 버튼을 클릭하세요.
+1. <Cmd sid='area_setting' product='cam' /> 섹션의 토글 버튼을 클릭하세요.
+
+1. <Cmd sid='add_button' product='cam' /> 버튼을 클릭하세요.
 
 1. 라이브 뷰에 마스킹할 영역이 추가됩니다. 영역의 모서리를 드래그해 크기를 조절하거나 영역 전체를 드래그해 위치를 이동할 수 있습니다.
 
@@ -57,9 +59,13 @@ keywords: [Privacy, Overlay, 프라이버시, 오버레이, 마스킹, 블러]
 
    * <Cmd sid='color' product='cam' />: 마스킹 영역의 색상을 선택할 수 있습니다.
 
+1. 추가한 마스킹 영역을 저장하려면 화면 오른쪽 상단의 <Cmd sid='save' product='cam' /> 버튼을 클릭하세요.
+
+저장된 마스킹 영역은 라이브 뷰와 녹화 영상에 반영됩니다.
+
 :::info
 
-* 마스킹된 영역은 모든 뷰 모드(Fisheye, Single Panorama, Double Panorama, Quad View)에 자동으로 적용됩니다.
+* 마스킹된 영역은 모든 뷰 모드(피시아이, 싱글 파노라마, 더블 파노라마, 쿼드)에 자동 적용됩니다.
 
 * 마스킹 영역의 설정을 초기화하려면 <IcCamReset title='reset' /> 버튼을 클릭하세요.
 
@@ -74,9 +80,9 @@ keywords: [Privacy, Overlay, 프라이버시, 오버레이, 마스킹, 블러]
 
 <Image src='/img/cam-server/cam-webserver-settings-privacy-overlay-face-body.png' />
 
-* <Cmd>Face Only</Cmd>: 감지된 모든 얼굴이 자동으로 블러 처리됩니다.
+* <Cmd sid='face_only' product='cam' />: 감지된 모든 얼굴이 자동 블러 처리됩니다.
 
-* <Cmd>Full Body</Cmd>: 감지된 전신이 자동으로 블러 처리됩니다.
+* <Cmd sid='full_body' product='cam' />: 감지된 전신이 자동 블러 처리됩니다.
 
 :::info
 
@@ -99,7 +105,7 @@ keywords: [Privacy, Overlay, 프라이버시, 오버레이, 마스킹, 블러]
 
 ### <Cmd sid='date_and_time_overlay' product='cam' className='normal' />
 
-라이브 뷰에 표시되는 날짜와 시간의 형식과 크기, 색상을 설정할 수 있습니다. 라이브 뷰에서 날짜/시간 위치를 확인하고, 필요하면 마우스로 드래그하여 위치를 조절하세요.
+라이브 뷰에 표시되는 날짜와 시간의 형식과 크기, 색상을 설정할 수 있습니다. 라이브 뷰에서 날짜/시간 위치를 확인하고, 필요하면 마우스로 드래그하여 위치나 크기를 조절하세요.
 
 * <Cmd sid='date' product='cam' /> / <Cmd sid='time' product='cam' />: 토글 버튼을 클릭해 날짜 및 시간 오버레이를 켜거나 끌 수 있습니다.
 
@@ -117,7 +123,7 @@ keywords: [Privacy, Overlay, 프라이버시, 오버레이, 마스킹, 블러]
 
    * HH:MM (초 생략, 예: 13:45)
 
-* <Cmd sid='font_size' product='cam' />: 라이브 뷰에 표시되는 글자 크기를 선택하세요. 1부터 6까지 선택할 수 있습니다.
+* <Cmd sid='font_size' product='cam' />: 라이브 뷰에 표시되는 글자 크기를 선택하세요. 1부터 32까지 선택할 수 있습니다.
 
 * <Cmd sid='color' product='cam' />: 라이브 뷰에 표시되는 글자 색상을 선택하세요.
 
@@ -129,13 +135,13 @@ keywords: [Privacy, Overlay, 프라이버시, 오버레이, 마스킹, 블러]
 
 ### <Cmd sid='camera_name' product='cam' className='normal' />
 
-라이브 뷰에 카메라 이름을 표시해 영상의 출처를 명확히 할 수 있습니다. 라이브 뷰에서 카메라 이름 위치를 확인하고, 필요하면 마우스로 드래그하여 위치를 조절하세요.
+라이브 뷰에 카메라 이름을 표시해 영상의 출처를 명확히 할 수 있습니다. 라이브 뷰에서 카메라 이름 위치를 확인하고, 필요하면 마우스로 드래그하여 위치나 크기를 조절하세요.
 
 * <Cmd sid='display' product='cam' />: 토글 버튼을 클릭해 카메라 이름 오버레이를 켜거나 끌 수 있습니다.
 
 * <Cmd sid='name' product='cam' />: 카메라 이름을 입력하세요.
 
-* <Cmd sid='font_size' product='cam' />: 라이브 뷰에 표시되는 글자 크기를 선택하세요. 1부터 6까지 선택할 수 있습니다.
+* <Cmd sid='font_size' product='cam' />: 라이브 뷰에 표시되는 글자 크기를 선택하세요. 1부터 32까지 선택할 수 있습니다.
 
 * <Cmd sid='color' product='cam' />: 라이브 뷰에 표시되는 글자 색상을 선택하세요.
 
