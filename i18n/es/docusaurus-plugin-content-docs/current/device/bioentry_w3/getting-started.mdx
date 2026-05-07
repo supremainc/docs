@@ -125,12 +125,10 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
 <Columns>
 <Column>
-
-<Image src='/img/device/bew3-cables-layout.png' alone width={450} className='none' />
-
+<Image src="/img/device/bew3-cables-layout.png" alone width={450} className="none" />
 </Column>
-<Column className='padding--l10'>
 
+<Column className="padding--l10">
 | Pin | Nombre | Color |
 | :-: | :-: | :-: |
 | 1 | INPUT2 | Naranja |
@@ -142,8 +140,8 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 | 7 | ERX- | Amarillo |
 | 8 | RS485_0 TRXN | Amarillo (franja negra) |
 | 9 | RS485_0 TRXP | Azul (franja blanca) |
-| 10 | RS485_1 TRXN | Amarillo |
-| 11 | RS485_1 TRXP | Azul |
+| 10 | * RS485_1 TRXN | Amarillo |
+| 11 | * RS485_1 TRXP | Azul |
 | 12 | PWR GND | Negro (franja blanca) |
 | 13 | PWR +VDC | Rojo |
 | 14 | VB2 | Marrón |
@@ -159,13 +157,14 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 | 24 | WGD OUT0 | Verde (franja negra) |
 | 25 | WGD IN1 | Blanco |
 | 26 | WGD IN0 | Verde |
-
 </Column>
 </Columns>
 
 :::info
 
-Hay varios conductores de calibre AWG	26, que deben protegerse con aislamiento estándar o material equivalente al realizar el cableado. Además, asegúrese de que el cable no entre en contacto con conductores mayores a 18 AWG (0.82 mm²).
+* Hay varios conductores de calibre AWG 26, que deben protegerse con aislamiento estándar o material equivalente al realizar el cableado. Además, asegúrese de que el cable no entre en contacto con conductores mayores a 18 AWG (0.82 mm²).
+
+* En el **firmware estándar, solo se admite RS485_0 (pines 8 y 9)**. **RS485_1 (pines 10 y 11) solo se puede utilizar con un firmware personalizado.** Si requiere utilizar tanto RS485_0 como RS485_1, comuníquese con el [Equipo de soporte técnico global de Suprema](https://support.supremainc.com).
 
 :::
 
