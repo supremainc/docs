@@ -33,6 +33,10 @@ For more information on changing the IP address on Windows, please refer to [Mic
 
 Follow the steps below to change the IP address on the server where **BioStar X** is installed.
 
+### BioStar X IP Setting
+
+Use the **BioStar X IP Setting** tool to change the IP address.
+
 1. In Windows, click <Start/> → **BioStar X** → **BioStar X IP Setting**.
 
 2. When the <Cmd>BioStar X IP Setting</Cmd> window appears, select the IP address you want to use from <Cmd>Server Address</Cmd>.
@@ -53,7 +57,7 @@ Follow the steps below to change the IP address on the server where **BioStar X*
 
    <Image src='/img/common/biostarx-sm-change-ip-success.png' alone />
 
-After the IP address change completes, restart all services. Open a web browser and verify that you can access the server using the new IP address.
+After the IP address change completes, restart all services.
 
 :::info
 
@@ -63,7 +67,27 @@ After the IP address change completes, restart all services. Open a web browser 
 
    ![BioStar X Service Manager Server Address](/img/common/biostarx-sm-change-ip-check.png)
 
+* If a device is registered to BioStar X with the <Cmd sid='device.info.deviceToServerConnection' product='2' /> option, the administrator must manually update that device's server IP to the new IP address.
+
 :::
+
+### Modify database server settings
+
+If the database is hosted on the same server as **BioStar X**, stop all services, then edit **BioStar X**'s *system.conf* file. Skip this step if you are using an external database server.
+
+1. On Windows, select <Start/> → **BioStar X Service Manager** → <Cmd>SERVICE SETTINGS</Cmd>, then click <Cmd>Stop All</Cmd> to stop all services.
+
+2. Navigate to *C:\Program Files\BioStar X Server*.
+
+3. Open the *system.conf* file with a text editor such as Notepad.
+
+4. In the `database` section, change the `server_ip` value to the new IP address.
+
+5. Save and close the *system.conf* file.
+
+6. In the **BioStar X Service Manager**, under <Cmd>SERVICE SETTINGS</Cmd>, click <Cmd>Start All</Cmd> to restart all services.
+
+Open a web browser and verify that you can access the server using the new IP address.
 
 ## Communication server update {#communicationServer}
 
