@@ -201,6 +201,45 @@
             "jp": [ "IR：200 万画素", "ビジュアル：200 万画素" ]
           }
         },
+        "dimensions": {
+          "label": "크기 (W x H x D)",
+          "label_id": "specs.general.dimensions",
+          "type": "model",
+          "items": {
+            "model1": {
+              "label": "장치",
+              "label_id": "specs.general.weight.device",
+              "value": "50 x 160 x 34.15 (mm)"
+            },
+            "model2": {
+              "label": "브래킷",
+              "label_id": "specs.general.weight.bracket",
+              "value": "39.4 x 153.2 (mm)"
+            }
+          }
+        },
+        "weight": {
+            "label": "무게",
+            "label_id": "specs.general.weight",
+            "type": "model",
+            "items": {
+               "model1": {
+                  "label": "장치",
+                  "label_id": "specs.general.weight.device",
+                  "value": [ "BEW3-DB: 283 g", "BEW3-APB: 291 g" ]
+               },
+               "model2": {
+                  "label": "브래킷",
+                  "label_id": "specs.general.weight.bracket",
+                  "value": {
+                     "ko": ["36 g (와셔 및 볼트 포함)"],
+                     "en": ["36 g (including washers and bolts)"],
+                     "es": ["36 g (incluye arandelas y tornillos)"],
+                     "ja": ["36 g (ワッシャーおよびボルトを含む)"]
+                  }
+               }
+            }
+        },
         "ip_rating": {
           "label": "IP 등급",
           "label_id": "specs.general.ip_rating",
