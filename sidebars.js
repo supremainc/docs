@@ -478,6 +478,7 @@ function createSidebars(preview) {
           items: [
             'platform/biostar_x/manage-server',
             'platform/biostar_x/service-settings',
+            'platform/biostar_x/change-ip',
             'platform/biostar_x/change-port',
             'platform/biostar_x/change-db',
             'platform/biostar_x/add-sub-db'
@@ -892,12 +893,13 @@ function createSidebars(preview) {
             id: 'platform/biostar_x/release-notes'
           },
           items: [
+            'platform/biostar_x/release-notes/102',
             'platform/biostar_x/release-notes/101',
             'platform/biostar_x/release-notes/100',
           ]
         }
       ],
-    }
+    },
   ],
   legal: [
     {

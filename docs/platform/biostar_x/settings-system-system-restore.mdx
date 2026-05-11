@@ -2,43 +2,74 @@
 id: settings-system-system-restore
 title: 시스템 복원하기
 description: 시스템 백업 파일을 사용하여 BioStar X의 데이터베이스, 설정, 라이선스 등을 이전 상태로 복원하는 방법을 안내합니다.
-keywords: [시스템 복원, restore, 백업 복원, 데이터 복구, BioStar X Restore]
+keywords: [시스템 복원, 백업, 복원]
 ---
 
-**BioStar X**에서 문제가 발생했거나 이전 상태로 되돌려야 할 때 시스템 백업 파일을 사용하여 복원할 수 있습니다. 복원 기능을 사용하면 데이터베이스, 각종 설정, 라이선스 정보 등을 백업 시점의 상태로 되돌릴 수 있습니다.
+**BioStar X**에서 문제가 발생했거나 이전 상태로 되돌려야 할 때 시스템 백업 파일을 사용하여 복원할 수 있습니다. 복원 기능을 사용하면 데이터베이스, 각종 설정, 라이선스 정보 등을 백업 시점의 상태로 복원할 수 있습니다.
 
-:::caution
+## 시작하기 전에
 
-* 복원 작업을 진행하면 현재 시점의 데이터가 백업 시점으로 되돌아 갑니다. 복원하기 전에 현재 상태의 백업을 생성하는 것을 권장합니다. 현재 상태의 백업을 생성하려면 [다음 문서](settings-system-system-backup)를 참고하세요.
-
-* 복원 작업을 진행할 때 복원 대상의 서버 IP 주소가 백업 받은 서버 IP 주소와 다를 경우 복원 작업이 실패할 수 있습니다. 복원 작업을 진행하기 전에 서버 IP 주소를 확인하세요.
-
-:::
-
-:::info
-
-SQL Server 데이터베이스와 **BioStar X**가 서로 다른 서버에 설치되어 있다면 **BioStar X** 시스템 백업 및 복원을 사용할 수 없습니다.
-
-:::
-
-1. Windows에서 <Start/> → **BioStar X** → **BioStar X Restore**를 실행하세요.
-
-    * 프로그램 경로: *C:\Program Files\BioStar X\biostar-restore.exe*
-
-1. **Select File** 버튼을 클릭하고 복원할 백업 파일을 선택하세요.
-
-    <Image src='/img/common/setting-system-restore.png' className='none' alone />
-
-1. 복원을 시작하려면 **Restore** 버튼을 클릭하세요. 
-
-**Starting Biostar services...Done** 메시지가 나타나면 복원이 완료된 상태입니다. **BioStar X**에 접속해 복원된 데이터를 확인하세요.
-
-:::info
+시스템 복원을 시작하기 전에 다음 사항을 확인하세요.
 
 * 백업 시점의 **BioStar X** 버전과 현재 버전이 다를 경우 복원을 진행할 수 없습니다. **BioStar X**의 버전을 확인하려면 화면 오른쪽 최상단의 <IcInfo /> 버튼을 클릭하세요.
 
   <Image src='/img/biostarx-settings-system-restore-check-ver.png' />
 
 * 백업 시점의 **BioStar X** 버전을 확인하려면 백업 파일의 압축을 해제하고, *sysbackup.conf* 파일의 `biostarVersion` 값을 확인하세요.
+
+* SQL Server 데이터베이스와 **BioStar X**가 서로 다른 서버에 설치되어 있다면 **BioStar X** 시스템 백업 및 복원을 사용할 수 없습니다.
+
+* 복원 대상 서버의 IP 주소가 백업 서버와 다른 경우:
+
+  * **BioStar X v1.0.2 이상**: 복원 시 복원 대상의 IP 주소를 감지하고, 기존 인증서 대신 새로운 IP 주소 기반으로 인증서를 자동으로 재발급합니다. 인증서 재발급 후 인증서를 사용하는 관련 서비스들이 자동으로 재연결되므로 별도 작업이 필요하지 않습니다.
+
+  * **BioStar X v1.0.1 이하**: 복원을 실패할 수 있습니다. 복원을 진행하기 전에 서버 IP 주소를 확인하세요.
+
+* 암호화 키와 이미지 로그 경로가 변경되었어도 복원 시에는 복원 대상 **BioStar X**의 현재 설정 경로를 따릅니다. 별도의 경로 설정을 지정하지 않았다면 복원 대상 **BioStar X**의 기본 경로를 사용합니다.
+
+* 복원 수행 시 현재 시점의 데이터는 자동으로 백업되므로, 복원이 실패하더라도 복원 수행 이전 시점의 상태로 복원될 수 있습니다.
+
+:::info
+
+시스템 백업 생성에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-system-system-backup' />를 참고하세요.
+
+:::
+
+
+## 시스템 복원
+
+1. Windows에서 <Start/> → **BioStar X** → **BioStar X Restore**를 실행하세요.
+
+   > 프로그램 경로: *C:\Program Files\BioStar X\biostar-restore.exe*
+
+1. **Select File** 버튼을 클릭하고 복원할 백업 파일을 선택하세요.
+
+   <Image src='/img/common/setting-system-restore.png' className='none' alone />
+
+1. 복원을 시작하려면 **Restore** 버튼을 클릭하세요.
+
+1. 백업 파일에 대한 유효성 검증을 진행합니다.
+
+1. **You can proceed to restore** 메시지가 나타나면 데이터베이스 암호를 입력하고 **Restore** 버튼을 클릭하세요.
+
+   <Image src='/img/common/setting-system-restore-validate.png' className='none' alone />
+
+1. 확인 메시지를 확인하고 복원을 계속 진행하려면 **Restore** 버튼을 클릭하세요.
+
+   <Image src='/img/common/setting-system-restore-confirm.png'  className='none' alone />
+
+1. 복원 진행 상황을 확인할 수 있는 메시지가 나타납니다. 복원 작업이 완료될 때까지 기다리세요.
+
+   <Image src='/img/common/setting-system-restore-continues.png' className='none' alone />
+
+**Restore has already been completed** 메시지가 나타나면 복원이 완료된 상태입니다. **BioStar X**에 접속해 복원된 데이터를 확인하세요.
+
+<Image src='/img/common/setting-system-restore-complete.png' className='none' alone />
+
+:::info
+
+* 복원 과정에서 PC가 비정상 종료되면 **BioStar X Restore**를 다시 실행하여 복원을 재시도하세요.
+
+* 복원 대상 서버의 IP 주소가 백업 서버와 다르고, 커뮤니케이션 서버가 연결되어 있다면 인증서를 새로 발급해야 합니다. 커뮤니케이션 서버에서 인증서를 새로 발급하는 방법은 <DocLink docId='platform/biostar_x/change-ip#communicationServer' />를 참고하세요.
 
 :::
