@@ -232,10 +232,10 @@
                   "label": "브래킷",
                   "label_id": "specs.general.weight.bracket",
                   "value": {
-                     "ko": ["36 g (와셔 및 볼트 포함)"],
-                     "en": ["36 g (including washers and bolts)"],
-                     "es": ["36 g (incluye arandelas y tornillos)"],
-                     "ja": ["36 g (ワッシャーおよびボルトを含む)"]
+                     "ko": "36 g (와셔 및 볼트 포함)",
+                     "en": "36 g (including washers and bolts)",
+                     "es": "36 g (incluye arandelas y tornillos)",
+                     "ja": "36 g (ワッシャーおよびボルトを含む)"
                   }
                }
             }
