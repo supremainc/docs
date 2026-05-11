@@ -1,21 +1,43 @@
 ---
 id: manage-device
 title: Devices
-description: Manage the entire device lifecycle in BioStar Air. This guide covers the entire process of operating devices efficiently—from device registration and detailed setting configuration to group management, firmware upgrades, and configuration of biometric authentication and security modules.
+description: Provides guidance on selecting and configuring the optimal device architecture to meet each site's requirements. Provides an overview of the features and operation of BioStar Air's distributed and centralized architectures, and offers selection criteria for scenarios such as new installations, rebuilds, and biometric deployments.
 keywords:
   - Device Management
-  - Register Device
-  - Device settings
-  - Device Group
-  - Firmware upgrade
-  - Biometric
-  - Time Attendance
   - BioStar Air
 ---
 
-Device management in BioStar Air encompasses every stage from registration to operation. Register devices in the mobile app, configure detailed settings such as network, authentication, and firmware in the web portal, and manage devices by group to streamline large-scale deployments.
+BioStar Air's flexible device management settings ensure that sites can be configured exactly as required for any site. In this document, device management refers to the full lifecycle of a device, including registration, configuration, firmware management, monitoring, and ongoing operation.
 
-Customize the system to meet organizational requirements with advanced features such as biometric authentication, attendance management, and security-module configuration.
+BioStar Air supports two different device architectures. Both architectures can be used on the same site, allowing organizations to choose the best approach for each door or area.
+
+## Distributed architecture
+
+In a distributed architecture, each edge device contains its own controller and connects directly to the cloud using Ethernet. Devices continue operating independently during network interruptions and synchronize automatically when connectivity is restored.
+
+Edge devices can also act as controllers for secondary readers connected via RS-485.
+
+This architecture is commonly used for:
+
+* New installations
+
+* Biometric devices
+
+* Deployments where minimizing infrastructure is important
+
+## Centralized architecture
+
+In a centralized architecture, readers connect to a control panel using RS-485 or Wiegand. The control panel connects to the cloud via Ethernet and acts as the controller for downstream devices.
+
+The control panel manages redundancy and access decisions for connected readers during network interruptions.
+
+This architecture is commonly used for:
+
+* Retrofit projects with existing low-voltage wiring
+
+* Sites replacing legacy access control systems
+
+* Deployments with centralized security rooms or panels
 
 ---
 

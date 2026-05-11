@@ -1,0 +1,130 @@
+---
+id: add-manage-device-to-panel
+title: Add and Manage Devices on the Panel
+description: This guide explains how to configure and manage secondary devices connected to the panel.
+keywords:
+  - Secondary devices
+  - CS-20
+  - OSDP
+  - Wiegand
+---
+
+BioStar Air connects multiple types of secondary devices to the CS-20 primary panel. Support for RS-485, OSDP, and Wiegand enables easy integration with existing security systems. This article explains how to configure, manage, and remove secondary devices.
+
+## Configure secondary devices
+
+After registering the CS-20, configure secondary devices using one of the following methods:
+
+| Secondary devices | Description |
+| --- | --- |
+| Suprema RS-485 devices | Connect XPass D2 and OM-120 via existing RS-485 wiring and standard communication protocols. |
+| OSDP device | Uses a security-enhanced communication protocol |
+| Wiegand device | Existing Wiegand-compatible devices, such as card readers |
+
+### Configure secondary devices
+
+Connect devices that support RS-485 communication to the CS-20 to configure them as secondary devices. Secondary devices appear nested under the CS-20 in the panel list.
+
+1. In the panel list, click <IcAirMore title='More' /> at the far right of the registered CS-20 panel.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-more.png' />
+
+2. Click <Cmd sid='add_slave_devices' product='air' /> to open the <Cmd sid='add_slave_devices' product='air' /> window.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-add-slave-device.png' />
+
+   :::note
+
+   If no secondary devices are found, click <Cmd sid='find_devices' product='air' /> to re-scan devices connected to the CS-20.
+
+   :::
+
+3. When connected secondary devices appear in the list, click the checkbox next to each device to select the ones to add.
+
+4. Once your selections are complete, click <Cmd sid='add_btn' product='air' />.
+
+Connected secondary devices appear nested under the CS-20. View all devices connected to the CS-20 at a glance in the panel list.
+
+<Image src='/img/air/bsair-device-panel-list-master-slave.png' />
+
+:::info
+
+* For more information on editing and managing secondary devices, see <DocLink docId='platform/biostar_air/managing-registered-devices' />.
+
+* For more information on secondary device fields and settings, see <DocLink docId='platform/biostar_air/device-info-settings' />.
+
+* For more information on upgrading XPass D2 devices, see <DocLink docId='platform/biostar_air/how-to-upgrade-firmware#upgradeFirmwareForXPassD2' />.
+
+:::
+
+### Configure OSDP devices
+
+[OSDP (Open Supervised Device Protocol)](../../reference/glossary#osdp) is a security-enhanced communication protocol. In environments requiring high security, connect OSDP-compatible devices to the CS-20.
+
+1. In the panel list, click <IcAirMore title='More' /> at the far right of the registered CS-20 panel.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-more.png' />
+
+2. Click <Cmd sid='add_osdp_devices' product='air' /> from the popup menu.
+
+3. When the <Cmd sid='add_osdp_devices' product='air' /> window appears, select the port to add the device to.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-add-osdp-device.png' />
+
+4. After selecting a port, click <Cmd sid='add_btn' product='air' />.
+
+5. After completing the required settings in the <Cmd sid='device_cs20_add_osdp_devices' product='air' /> window, click <Cmd sid='save_btn' product='air' />.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-add-osdp-device-popup.png' />
+
+### Configure Wiegand devices
+
+Wiegand is a communication protocol widely used in access control systems. Connect a Wiegand device to the CS-20 to configure it as a Wiegand secondary device.
+
+1. In the panel list, click <IcAirMore title='More' /> at the far right of the registered CS-20 panel.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-more.png' />
+
+2. In the popup menu, click <Cmd sid='add_wiegand_devices' product='air' />.
+
+3. When the <Cmd sid='add_wiegand_devices' product='air' /> window appears, select a port to add a device.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-add-wiegand-device.png' />
+
+4. After selecting a port, click <Cmd sid='add_btn' product='air' />.
+
+## Edit OSDP/Wiegand device information
+
+1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+
+2. Click the <Cmd sid='device_slaves_panels' product='air' /> tab.
+
+3. Click the primary device's + icon in the list to expand the list of connected secondary devices.
+
+4. Click the OSDP or Wiegand secondary device to edit its information. 
+
+5. When the Edit device information window appears, edit the details or settings.
+
+   <Image src='/img/air/bsair-device-panel-legacy-device-edit.png' className='none' />
+
+   * OSDP device: Set device name, network settings, authentication settings (RF Card, RF Card + PIN), and authentication timeout.
+
+   * Wiegand device: Edit the device name.
+
+6. Click <Cmd sid="save_btn" product="air" /> at the bottom to save the changes.
+
+## Delete secondary devices
+
+1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+
+2. Click the <Cmd sid='device_slaves_panels' product='air' /> tab.
+
+3. Click the primary device's + icon in the list to expand the list of connected secondary devices.
+
+4. Click the checkbox for the secondary device to remove.
+
+5. Click the <IcAirRemove title='Remove' /> button at the top of the list.
+
+   <Image src='/img/air/bsair-device-panel-remove-secondary.png' />
+
+6. When the pop-up appears, click <Cmd sid='device_btn_confirm' product='air' />.

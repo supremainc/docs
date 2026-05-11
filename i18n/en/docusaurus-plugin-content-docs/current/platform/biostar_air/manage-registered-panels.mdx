@@ -1,56 +1,49 @@
 ---
 id: manage-registered-panels
-title: Manage Panels and Auxiliary Devices
-description: This document explains how to view information for registered panels and auxiliary devices, edit details, assign them to groups, and update firmware.
+title: Manage Registered Panels
+description: This guide explains how to view registered panel information, edit details, assign panels to groups, and update firmware.
 keywords:
   - Panels
-  - Auxiliary devices
   - Manage
   - Edit
   - Delete
 ---
 
-Manage all panels and auxiliary devices registered in BioStar Air from a single location. Monitor each device’s status, edit information as needed, organize devices into groups, and update firmware. This document covers all necessary features, from viewing the panel list to managing groups.
+Manage all panels registered in BioStar Air from a single location. Monitor each panel’s status, edit information as needed, organize panels into groups, and update firmware. This document covers all necessary features, from viewing the panel list to managing groups.
 
 import DeviceInfo from '../../common/_bsair-device-info-settings.mdx';
 
 :::info
 
-This document focuses on managing the panel(CS-20), but also covers managing auxiliary devices connected to the panel. Manage slave devices the same way as regular devices.
-
-* For more information on editing and managing slave devices, see <DocLink docId='platform/biostar_air/managing-registered-devices' />.
-
-* For more information on slave device fields and settings, see <DocLink docId='platform/biostar_air/device-info-settings' />.
-
-* For more information on upgrading XPass D2 devices, see <DocLink docId='platform/biostar_air/how-to-upgrade-firmware#upgradeFirmwareForXPassD2' />.
+In BioStar Air, devices are classified as primary devices that act as controllers and secondary devices that connect to controllers. Some systems use the terms Master/Slave for this concept, but BioStar Air documentation does not use those terms.
 
 :::
 
 ## View the panel list
 
-Manage registered panels from the <Cmd sid='device_slaves_panels' product='air' /> tab. The panel list provides key information at a glance, including the type and status of each panel or auxiliary device, name, ID, group, firmware, and time zone.
+Manage registered panels from the <Cmd sid='device_slaves_panels' product='air' /> tab. The panel list provides key information at a glance, including the type and status of each panel or secondary device, name, ID, group, firmware, and time zone.
 
 <Image src='/img/air/bsair-device-panel-list-view.png' />
 
 ### Panel and device status
 
-Check each panel or auxiliary device’s connection status from the status icons in the panel list.
+Check each panel or secondary device’s connection status from the status icons in the panel list.
 
-* <StatusOK/> **Green**: The panel or auxiliary device is online, can be controlled remotely, and can be updated.
+* <StatusOK/> **Green**: The panel or secondary device is online, can be controlled remotely, and can be updated.
 
-* <StatusFail/> **Red**: The panel or auxiliary device is offline.
+* <StatusFail/> **Red**: The panel or secondary device is offline.
 
 * <StatusUpdating /> **Orange**: Firmware is updating.
 
-* <IcAirWarn /> **Warning**: Synchronization is required between the server and the panel or auxiliary device.
+* <IcAirWarn /> **Warning**: Synchronization is required between the server and the panel or secondary device.
 
 ### Panel and device information
 
 Each column in the panel list includes the following information.
 
-* <Cmd sid='rs485_type' product='air' />: Indicates panels or auxiliary devices that support RS-485 communication. Indicates whether the device is a master or a slave.
+* <Cmd sid='rs485_type' product='air' />: Indicates panels or secondary devices that support RS-485 communication. Indicates whether the device is a primary or a secondary.
 
-* <Cmd sid='device_product_column' product='air' />: The panel or auxiliary device name, model, and status retrieved from the Suprema database.
+* <Cmd sid='device_product_column' product='air' />: The panel or secondary device name, model, and status retrieved from the Suprema database.
 
 * <Cmd sid="device_nickname_column" product="air" />: A user-editable field for easier identification. You can edit the information in the window that appears when you click a panel or subdevice in the list.
 
@@ -88,13 +81,15 @@ To reset the applied filters, click <IcAirFilter title='Filter' /> and select <C
 
 5. Click <Cmd sid="save_btn" product="air" /> at the bottom to save the changes.
 
-Refer to the sections below for details on each field and setting option.
+:::info
 
-<DeviceInfo type='cs-20' />
+For more information on editing fields and setting options for each section, see <DocLink docId='platform/biostar_air/device-info-settings#cs-20' />.
 
-## Manage panels and devices
+:::
 
-Select a panel or subdevice in the list to use the management functions at the top.
+## Panel management features
+
+Select a panel in the list to use the management features at the top.
 
 <Image src='/img/air/bsair-device-panel-management-tool.png' />
 
@@ -169,23 +164,3 @@ Select individual panels in the panel list to add them to or remove them from a 
 * Click <Cmd sid="device_btn_reset" product="air" /> to initialize the changes.
 
 :::
-
-## Edit OSDP/Wiegand device information
-
-1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
-
-2. Click the <Cmd sid='device_slaves_panels' product='air' /> tab.
-
-3. Click the master device's + icon in the list to expand the list of connected secondary devices.
-
-4. Click the OSDP or Wiegand secondary device to edit its information. 
-
-5. When the Edit device information window appears, edit the details or settings.
-
-   <Image src='/img/air/bsair-device-panel-legacy-device-edit.png' className='none' />
-
-   * OSDP device: Set device name, network settings, authentication settings (RF Card, RF Card + PIN), and authentication timeout.
-
-   * Wiegand device: Edit the device name.
-
-6. Click <Cmd sid="save_btn" product="air" /> at the bottom to save the changes.
