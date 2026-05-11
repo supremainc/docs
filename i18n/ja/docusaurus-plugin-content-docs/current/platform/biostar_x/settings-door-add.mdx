@@ -12,7 +12,7 @@ keywords:
 
 ## 開始前に {#before-start}
 
-* ドアを登録する前に、入退室管理用の入室レベル、入室グループ、フロアレベルを設定してください。 詳細については[次のドキュメント](settings-access-control)を参照してください。
+* ドアを登録する前に、入退室管理用の入室レベル、入室グループ、フロアレベルを設定してください。 詳しくは <DocLink docId='platform/biostar_x/settings-access-control' /> をご参照ください。
 
 * ドアを登録する前にデバイスを登録してください。 デバイス登録の詳細は、以下のドキュメントを参照してください。
 
@@ -34,17 +34,17 @@ keywords:
 
 4. <Cmd sid='door.addNewDoor' product='2' /> 画面が表示されたら、各セクション項目を順に設定してください。
 
-   * <Cmd sid='common.information' product='2' />：ドアの基本情報を設定します。 詳細は[以下のドキュメント](#info)を参照してください。
+   * <Cmd sid='common.information' product='2' />：ドアの基本情報を設定します。 詳しくは <DocLink inner='#info' /> をご参照ください。
 
-   * <Cmd sid='device.info.configuration' product='2' />：ドアに接続されたデバイス、入室および退室ボタン、ドアセンサーを設定します。 詳細は[次のドキュメント](#configdoor)を参照してください。
+   * <Cmd sid='device.info.configuration' product='2' />：ドアに接続されたデバイス、入室および退室ボタン、ドアセンサーを設定します。 詳しくは <DocLink inner='#configdoor' /> をご参照ください。
 
-   * <Cmd sid='common.option' product='2' />：追加オプションを設定してください。 詳細は[以下のドキュメント](#option)を参照してください。
+   * <Cmd sid='common.option' product='2' />：追加オプションを設定してください。 詳しくは <DocLink inner='#option' /> をご参照ください。
 
-   * <Cmd sid='door.antiPassBack' product='2' />：入退室履歴を管理しセキュリティを強化するアンチパスバック機能を設定します。 詳細については[次のドキュメント](#antipassback)を参照してください。
+   * <Cmd sid='door.antiPassBack' product='2' />：入退室履歴を管理しセキュリティを強化するアンチパスバック機能を設定します。 詳しくは <DocLink inner='#antipassback' /> をご参照ください。
 
-   * <Cmd sid='timedAPB.title' product='2' />：アンチパスバック機能の初期化時間を設定できます。 詳細は[次のドキュメント](#timed-apb)を参照してください。
+   * <Cmd sid='timedAPB.title' product='2' />：アンチパスバック機能の初期化時間を設定できます。 詳しくは <DocLink inner='#timed-apb' /> をご参照ください。
 
-   * <Cmd sid='door.alarm' product='2' />：アンチパスバック違反が発生した際に警報を鳴らしたりデバイスを使用不可にする設定ができます。 詳細は[以下のドキュメント](#alarm)を参照してください。
+   * <Cmd sid='door.alarm' product='2' />：アンチパスバック違反が発生した際に警報を鳴らしたりデバイスを使用不可にする設定ができます。 詳しくは <DocLink inner='#alarm' /> をご参照ください。
 
 5. すべての設定が完了したら、画面最下部の <Cmd sid='button.apply' product='2' /> ボタンをクリックします。
 
@@ -64,7 +64,7 @@ keywords:
 
 * ドア名は最大48文字まで入力できます。
 
-* ドアグループの登録について詳しくは[次のドキュメント](settings-manage-door-group)を参照してください。
+* ドアグループ登録の詳細は <DocLink docId='platform/biostar_x/settings-manage-door-group' /> をご参照ください。
 
 :::
 
@@ -148,9 +148,9 @@ keywords:
 
   * 再室人数制限設定で構成されたデバイスの二重認証を変更するには、次のメニューで設定を修正してください。 <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='zone.occupancy.title' product='2' />
 
-    <Cmd sid='zone.occupancy.title' product='2' /> の設定に関する詳細は[以下](settings-advanced-ac)を参照してください。
+    <Cmd sid='zone.occupancy.title' product='2' /> の設定について詳しくは <DocLink docId='platform/biostar_x/settings-advanced-ac' /> をご参照ください。
 
-  * スケジュール設定の詳細は[次のドキュメント](settings-schedule)を参照してください。
+  * スケジュール設定の詳細については、<DocLink docId='platform/biostar_x/settings-schedule' />をご参照ください。
 
   :::
 
@@ -176,7 +176,7 @@ keywords:
 
 :::info
 
-* 入室デバイスと退室デバイスの両方が設置されている場合に使用でき、<Cmd sid='device.info.configuration' product='2' /> セクションで <Cmd sid='door.exitDevice' product='2' /> オプションを <Cmd sid='common.none' product='2' /> に設定すると使用できません。 退室デバイスの設定方法は[次のドキュメント](#configdoor)を参照してください。
+* 入室デバイスと退室デバイスの両方が設置されている場合に使用でき、<Cmd sid='device.info.configuration' product='2' /> セクションで <Cmd sid='door.exitDevice' product='2' /> オプションを <Cmd sid='common.none' product='2' /> に設定すると使用できません。 退室デバイスの設定方法については <DocLink inner='#configdoor' /> をご参照ください。
 
 * <Cmd sid='door.antiPassBack' product='2' /> セクションを有効にするには、RS-485で接続されたマスター装置とスレーブ装置が必要です。
 

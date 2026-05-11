@@ -23,7 +23,7 @@ You can set the device's authentication mode, permissions, server matching, and 
 
 <Image src='/img/biostarx-setting-device-edit-auth-mode.png' />
 
-* <Cmd sid='device.info.authenticationMode' product='2' />: Set the authentication mode of the device by combining one or more credentials. For more information, refer to [the following](#added-auth-mode).
+* <Cmd sid='device.info.authenticationMode' product='2' />: Set the authentication mode of the device by combining one or more credentials. For more information, see <DocLink inner='#added-auth-mode' />.
 
   * Click the <IcEdit /> button to modify the added authentication mode.
 
@@ -49,9 +49,27 @@ You can set the device's authentication mode, permissions, server matching, and 
 
   <summary>View devices and firmware versions supporting <Cmd sid='common.serverMatching' product='2' /> feature</summary>
 
-  * CoreStation firmware version 1.0.0 or higher
+  * BioStation 3 Max firmware 1.0.0 or later
+
+  * XPass Q2 firmware 1.0.0 or later
+
+  * BioEntry W3 firmware version 1.0.0 or higher
+
+  * BioStation 3 firmware 1.0.0 or higher
+
+  * X-Station 2 firmware 1.0.0 or higher
+
+  * FaceStation F2 firmware 1.0.0 or higher
+
+  * XPass 2 firmware 1.0.0 or higher
+
+  * BioLite N2 firmware 1.0.0 or higher
+
+  * XPass D2 firmware version 1.0.0 or higher
 
   * BioEntry P2 firmware 1.0.0 or higher
+
+  * FaceStation 2 firmware version 1.4.0 or higher
 
   * BioEntry W2 firmware 1.0.0 or higher
 
@@ -61,25 +79,11 @@ You can set the device's authentication mode, permissions, server matching, and 
 
   * BioStation 2 firmware 1.2.0 or higher
 
-  * BioLite N2 firmware 1.0.0 or higher
-
-  * XPass D2 firmware version 1.0.0 or higher
-
-  * XPass 2 firmware 1.0.0 or higher
-
-  * FaceStation 2 firmware version 1.4.0 or higher
-
-  * FaceStation F2 firmware 1.0.0 or higher
-
-  * X-Station 2 firmware 1.0.0 or higher
-
-  * BioStation 3 firmware 1.0.0 or higher
-
-  * BioEntry W3 firmware version 1.0.0 or higher
+  * CoreStation firmware version 1.0.0 or higher
 
   * FaceLite does not support server matching feature.
 
-  * FaceStation F2, BioStation 3, BioEntry W3 devices cannot use server matching for facial authentication.
+  * The BioStation 3, BioEntry W3, and FaceStation F2 devices cannot use server-based matching for facial authentication.
 
   </details>
 
@@ -123,7 +127,7 @@ Set the device's authentication mode in the <Cmd sid='device.info.authentication
 
 :::info
 
-If the desired schedule is not available in the <Cmd sid='schedule.schedule' product='2' /> option, click <IcAdd/> <Cmd sid='schedule.addNewSchedule' product='2' /> to add a new schedule. You can add a new schedule. For more information about schedule settings, refer to [the following](settings-schedule).
+If the desired schedule is not available in the <Cmd sid='schedule.schedule' product='2' /> option, click <IcAdd/> <Cmd sid='schedule.addNewSchedule' product='2' /> to add a new schedule. You can add a new schedule. For more information on schedule settings, see <DocLink docId='platform/biostar_x/settings-schedule' />.
 
 :::
 
@@ -165,15 +169,15 @@ In the <Cmd sid='device.info.fingerprint' product='2' /> group, you can configur
 
 * Changing the <Cmd sid='device.info.templateFormat' product='2' /> option in fingerprint authentication settings will render all previously stored fingerprints unusable. Make sure to select a template in the <Cmd sid='device.info.templateFormat' product='2' /> option before enrolling users' fingerprints.
 
-* The <Cmd sid='device.info.viewImage' product='2' /> option is supported on BioStation 2, BioStation A2, BioStation L2, BioLite N2, FaceStation F2 (FSF2-ODB), and X-Station 2 (XS2-ODPB, XS2-OAPB) models.
+* <Cmd sid='device.info.viewImage' product='2' /> option is supported on BioStation 3 Max (BS3M-ODB, BS3M-OAPB), X-Station 2 (XS2-ODPB, XS2-OAPB), FaceStation F2 (FSF2-ODB), BioLite N2, BioStation L2, BioStation A2, and BioStation 2.
 
-* The <Cmd sid='device.info.fingerprintLFD' product='2' /> option is supported on BioStation A2, BioStation L2, BioEntry W2, BioLite N2, FaceStation F2 (FSF2-ODB), and X-Station 2 (XS2-ODPB, XS2-OAPB) models.
+* <Cmd sid='device.info.fingerprintLFD' product='2' /> option is supported on BioStation 3 Max (BS3M-ODB, BS3M-OAPB), X-Station 2 (XS2-ODPB, XS2-OAPB), FaceStation F2 (FSF2-ODB), BioLite N2, BioStation L2, BioStation A2, and BioEntry W2.
 
 :::
 
 ## Facial authentication settings
 
-In the <Cmd sid='user.credential.face' product='2' /> group, you can configure details related to the device's facial authentication.
+In the <Cmd sid='user.credential.face' product='2' /> or <Cmd sid='user.credential.visualface' product='2' /> group, you can configure the device's facial authentication settings.
 
 <Image src='/img/biostarx-setting-device-detail-face.png' />
 
@@ -213,6 +217,8 @@ In the <Cmd sid='user.credential.face' product='2' /> group, you can configure d
 
 * <Cmd sid='device.info.faceFakeDetection' product='2' />: Prevent user authentication using fake faces such as photos. This is activated when the <Cmd sid='device.info.faceOperationMode' product='2' /> option is set to <Cmd sid='device.info.face.operation_mode.enable' product='2' />.
 
+* <Cmd sid='device.info.storeVisualFaceImage' product='2' />: Stores both the actual facial image and a template containing only the extracted feature data. Disable this setting if you do not want to store the actual image.
+
 :::info
 
 * The options available for configuration may vary depending on the type of device.
@@ -221,7 +227,7 @@ In the <Cmd sid='user.credential.face' product='2' /> group, you can configure d
 
 * The <Cmd sid='device.authmode.settings.lightBrightness' product='2' /> option is supported on FaceStation F2 firmware version 1.1.0 or higher.
 
-* The <Cmd sid='device.info.faceDetectSetting' product='2' /> and <Cmd sid='device.info.faceOperationMode' product='2' /> options are supported in FaceStation F2 and BioStation 3 models.
+* <Cmd sid='device.info.faceDetectSetting' product='2' />, <Cmd sid='device.info.faceOperationMode' product='2' /> options are supported on BioStation 3 Max, BioStation 3, and FaceStation F2 models.
 
 :::
 
@@ -231,9 +237,9 @@ In the <Cmd sid='user.credential.barcode' product='2' /> group, you can configur
 
 <Image src='/img/biostarx-setting-device-detail-qrbarcode.png' />
 
-* <Cmd sid='device.info.useVisualBarcode' product='2' />: Set whether to use QR/barcode authentication through the device's camera.
+* <Cmd sid='device.info.useVisualBarcode' product='2' /> / <Cmd sid='device.info.useBarcode' product='2' />: Set whether to use QR/barcode authentication through the device's camera.
 
-* <Cmd sid='device.info.qrCameraTimeout' product='2' />: Set the camera scan timeout. If a QR/barcode is not scanned within the specified time, authentication will fail.
+* <Cmd sid='device.info.qrCameraTimeout' product='2' /> / <Cmd sid='device.info.scanTimeout' product='2' />: Set the camera scan timeout. If a QR/barcode is not scanned within the specified time, authentication will fail.
 
 * <Cmd sid='device.info.normalize' product='2' />: Set to authenticate QR codes with the same data as CSN cards or Wiegand cards issued to users.
 
@@ -243,19 +249,27 @@ In the <Cmd sid='user.credential.barcode' product='2' /> group, you can configur
 
 * <Cmd sid='device.info.qrScanTimeout' product='2' />: Set the scanning timeout. If a QR/barcode is not scanned within the specified time, authentication will fail.
 
+* <Cmd sid='device.info.useQrLed' product='2' />: Set whether to use the device's LED illumination when authenticating QR codes.
+
 :::info
 
-* The <Cmd sid='device.info.useVisualBarcode' product='2' /> option requires a separate device license. For more information, refer to [the following](settings-license-device-license).
+* The <Cmd sid='device.info.useVisualBarcode' product='2' /> option requires a separate device license. For more information, see <DocLink docId='platform/biostar_x/settings-license-device-license' />.
 
 * The devices supporting <Cmd sid='device.info.useVisualBarcode' product='2' />, <Cmd sid='device.info.qrCameraTimeout' product='2' />, <Cmd sid='device.info.normalize' product='2' />, and <Cmd sid='device.authmode.settings.motionSensor' product='2' /> options are as follows.
 
-  * X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) firmware version 1.2.0 or higher
+  * BioStation 3 Max firmware version 1.1.0 or higher
 
-  * BioStation 3 (BS3-DB, BS3-APWB) firmware version 1.1.0 or higher
+  * BioStation 3 firmware version 1.1.0 or later
+
+  * X-Station 2 (XS2-ODPB, XS2-OAPB, XS2-DPB, XS2-APB) firmware version 1.2.0 or higher
 
 * The devices supporting <Cmd sid='device.info.useBarcodeScanner' product='2' /> and <Cmd sid='device.info.qrScanTimeout' product='2' /> options are as follows.
 
   * X-Station 2 (XS2-QDPB, XS2-QAPB)
+
+* <Cmd sid='device.info.useBarcode' product='2' />, <Cmd sid='device.info.scanTimeout' product='2' />, <Cmd sid='device.info.useQrLed' product='2' /> options are supported on the following devices.
+
+  * XPass Q2 firmware 1.0.0 or later
 
 :::
 
@@ -285,7 +299,7 @@ You can select the types of CSN cards and formats and set the byte order.
 
   * <Cmd sid='common.general' product='2' />: Reads and expresses the card's serial number (CSN) without separate conversion.
 
-  * <Cmd sid='common.wiegand' product='2' />: Transforms and expresses the card's serial number (CSN) according to user-defined Wiegand format. For information about how to set a new Wiegand format, refer to [the following](settings-credential-wiegand-format).
+  * <Cmd sid='common.wiegand' product='2' />: Transforms and expresses the card's serial number (CSN) according to user-defined Wiegand format. See <DocLink docId='platform/biostar_x/settings-credential-wiegand-format' /> to set a new Wiegand format.
 
 ### <Cmd sid='device.card.Wiegand' product='2' />
 
@@ -295,7 +309,7 @@ Select the types of Wiegand cards and set the Wiegand formats. Choose the Wiegan
 
 :::info
 
-For information about how to set a new Wiegand format, refer to [the following](settings-credential-wiegand-format).
+See <DocLink docId='platform/biostar_x/settings-credential-wiegand-format' /> to set a new Wiegand format.
 
 :::
 
@@ -305,7 +319,7 @@ Select the types of Suprema smart cards and set the card layout and byte order.
 
 <Image src='/img/biostarx-setting-device-detail-card-smart.png' />
 
-* <Cmd sid='device.batch.supremaSmartCardLayout' product='2' />: Choose the Suprema smart card layout. For information about how to set a new smart card layout, refer to [the following](settings-credential-smart-format).
+* <Cmd sid='device.batch.supremaSmartCardLayout' product='2' />: Choose the Suprema smart card layout. See <DocLink docId='platform/biostar_x/settings-credential-smart-format' /> to set a new smart card layout.
 
 * <Cmd sid='device.info.supremaSmartCardByteOrder' product='2' />
 
@@ -319,7 +333,7 @@ Select types of custom smart cards issued by third parties and set the card layo
 
 <Image src='/img/biostarx-setting-device-detail-card-custom.png' />
 
-* <Cmd sid='device.batch.customSmartCardLayout' product='2' />: Choose the custom smart card layout. For information about how to set a new smart card layout, refer to [the following](settings-credential-smart-format).
+* <Cmd sid='device.batch.customSmartCardLayout' product='2' />: Choose the custom smart card layout. See <DocLink docId='platform/biostar_x/settings-credential-smart-format' /> to set a new smart card layout.
 
 * <Cmd sid='device.info.customSmartCardByteOrder' product='2' />
 
@@ -331,21 +345,25 @@ Select types of custom smart cards issued by third parties and set the card layo
 
 <summary>View devices and firmware versions supporting custom smart cards</summary>
 
+* BioStation 3 Max firmware version 1.3.0 or higher
+
+* XPass Q2 firmware 1.0.0 or later
+
+* BioEntry W3 firmware version 1.0.0 or higher
+
+* BioStation 2a firmware version 1.1.0 or higher
+
+* BioStation 3 firmware version 1.3.0 or higher
+
+* X-Station 2 firmware version 1.3.0 or higher
+
+* BioLite N2 firmware version 1.6.2 or higher
+
 * XPass D2 firmware version 1.7.1 or higher
 
 * BioEntry P2 firmware version 1.5.1 or higher
 
 * BioEntry W2 firmware version 1.8.0 or higher
-
-* BioStation 2a firmware version 1.1.0 or higher
-
-* X-Station 2 firmware version 1.3.0 or higher
-
-* BioStation 3 firmware version 1.3.0 or higher
-
-* BioEntry W3 firmware version 1.0.0 or higher
-
-* BioLite N2 firmware version 1.6.2 or higher
 
 </details>
 
@@ -375,9 +393,11 @@ You can specify how recognition works on the Template on Mobile and set the byte
 
 <summary>View devices and firmware versions supporting templates on mobile</summary>
 
-* BioStation 3 firmware version 1.2.0 or higher
+* BioStation 3 Max firmware 1.0.0 or later
 
 * BioEntry W3 firmware version 1.0.0 or higher
+
+* BioStation 3 firmware version 1.2.0 or higher
 
 </details>
 

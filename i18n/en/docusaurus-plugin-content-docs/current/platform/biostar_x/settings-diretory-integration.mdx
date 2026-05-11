@@ -2,6 +2,7 @@
 id: settings-diretory-integration
 title: Directory Integration Settings
 description: This document provides guidance on synchronizing and managing users by integrating Microsoft Entra ID or Active Directory with BioStar X.
+toc_max_heading_level: 2
 ---
 
 import UserGroupFilter from '../../common/_usergroupfilter.mdx';
@@ -22,11 +23,14 @@ Integrating with **Entra ID** or **Active Directory** provides the following con
 
 :::info
 
-The **Entra ID** or **Active Directory** settings feature is available through additional options on the **Advance** license and above. For more information on licensing policy, refer to [the following](licensing#features-add-ons).
+The **Entra ID** or **Active Directory** settings feature is available through additional options on the **Advance** license and above. For more information on licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 :::
 
-## Integrate with Entra ID {#intergratewithentraid}
+## Directory Integration Settings {#intergratewithentraid}
+
+<Tabs>
+<TabItem label='Entra ID' value='entraid'>
 
 1. Log in to **BioStar X** with an administrator account.
 
@@ -39,6 +43,12 @@ The **Entra ID** or **Active Directory** settings feature is available through a
    <Image src='/img/biostarx-setting-directory-integ-entraid.png' />
 
 5. Set each item as instructed below.
+
+:::info
+
+To integrate with Entra ID, go to <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.server' product='2' /> and set <Cmd sid='setting.userDevice.useridType' product='2' /> to <Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' />.
+
+:::
 
 <Steps>
 <Step>
@@ -115,21 +125,22 @@ Copy the redirection URI from the <Cmd sid='settings.activeDirectory.Redirection
 
 <Step>
 
-<SyncIntegration hashid='syncdatafromEntraid' name='Entra ID' />
+<SyncIntegration hashid='syncdatafromEntraid' name='Entra ID' type='entraId' />
+
+</Step>
+<Step>
+
+### Save Settings
+
+After completing all settings for <Cmd sid='setting.menu.directoryIntegration.root' />, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save. To view the settings results, see <DocLink inner='#checksettings' />.
 
 </Step>
 
 </Steps>
 
-:::note
+</TabItem>
 
-After completing all settings for <Cmd sid='setting.menu.directoryIntegration.root' />, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save. Refer to [the following](#checksettings) to check the results.
-
-<Image src='/img/biostarx-setting-directory-btn-apply.png' />
-
-:::
-
-## Integrate with Active Directory {#integratewithactivedirectory}
+<TabItem label='Active Directory' value='activedirectory'>
 
 1. Log in to **BioStar X** with an administrator account.
 
@@ -148,7 +159,7 @@ After completing all settings for <Cmd sid='setting.menu.directoryIntegration.ro
 * The Active Directory is available for a system environment with Windows Server 2008 R2 or
   later.
 
-* To use the Active Directory server, set the <Cmd sid='setting.userDevice.useridType' product='2' /> to <Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' /> in the <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.server' product='2' />.
+* To integrate with Active Directory, go to <Cmd sid='common.setting' product='2' /> → <Cmd sid='setting.server' product='2' /> and set <Cmd sid='setting.userDevice.useridType' product='2' /> to <Cmd sid='setting.userDevice.useridType.alphanumeric' product='2' />.
 
 :::
 
@@ -178,7 +189,7 @@ Enter the server information for **Active Directory** and click <Cmd sid='settin
 
   4. View the value of **distinguishedName**.
 
-* <Cmd sid='settings.activeDirectory.secureTransfer' product='2' />: You can use encryption when communicating with the Windows Active Directory server. To install the Active Directory Certificate Services and configure the <Cmd sid='settings.activeDirectory.keystorePassword' product='2' />, refer to [the following](ad-encrypt).
+* <Cmd sid='settings.activeDirectory.secureTransfer' product='2' />: You can use encryption when communicating with the Windows Active Directory server. To install Active Directory Certificate Services and configure the <Cmd sid='settings.activeDirectory.keystorePassword' product='2' />, see <DocLink docId='platform/biostar_x/ad-encrypt' />.
 
   * <Cmd sid='settings.activeDirectory.keystorePassword' product='2' />: Enter the password for the encryption key store of the Windows Active Directory server. You can enter the password when the <Cmd sid='settings.activeDirectory.secureTransfer' product='2' /> is set to <Cmd sid='device.info.enabled' product='2' />.
 
@@ -214,21 +225,22 @@ The `sAMAccountName` field cannot contain special characters. You may fail to lo
 
 <Step>
 
-<SyncIntegration hashid='syncdatafromAd' name='Active Directory' />
+<SyncIntegration hashid='syncdatafromAd' name='Active Directory' type='active_directory' />
 
 </Step>
+<Step>
 
+### Save Settings
+
+After completing all settings for <Cmd sid='setting.menu.directoryIntegration.root' />, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save. To view the settings results, see <DocLink inner='#checksettings' />.
+
+</Step>
 </Steps>
 
-:::note
+</TabItem>
+</Tabs>
 
-After completing all settings for <Cmd sid='setting.menu.directoryIntegration.root' />, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen to save. Refer to [the following](#checksettings) to check the results.
-
-<Image src='/img/biostarx-setting-directory-btn-apply.png' />
-
-:::
-
-## Check the settings results {#checksettings}
+## View settings results {#checksettings}
 
 After completing the integration settings with **Entra ID** or **Active Directory**, click <Cmd sid='button.apply' product='2' /> at the bottom of the screen. Refer to the following to check the synchronized settings.
 
@@ -238,7 +250,7 @@ After completing the integration settings with **Entra ID** or **Active Director
 
   <Image src='/img/biostarx-setting-directory-entraid-login.png' />
 
-## Exclude the directory integration {#excludeintegration}
+## Exclude from directory integration {#excludeintegration}
 
 When integrating with **Entra ID** or **Active Directory** via the <Cmd sid='setting.menu.directoryIntegration.root' /> feature, users who do not exist in the directory service may be deleted from **BioStar X**. If there are users that you do not want to be deleted, you can exclude them from the integration using the following method.
 
@@ -248,7 +260,7 @@ When integrating with **Entra ID** or **Active Directory** via the <Cmd sid='set
 
 3. Click on the user you want to exclude from the integration in the <Cmd sid='menu.user.allUserGroups' product='2' /> list.
 
-4. When the detail information screen of the selected user appears, click the checkbox of <Cmd sid='user.adsync.exclude' product='2' /> in <Cmd sid='common.advanced' product='2' />.
+4. When the selected user's details screen appears, in the <Cmd sid='common.advanced' product='2' /> section, enable the <Cmd sid='user.adsync.exclude' product='2' /> option.
 
    <Image src='/img/biostarx-user-advance-exclude-sync.png' />
 
@@ -256,7 +268,7 @@ When integrating with **Entra ID** or **Active Directory** via the <Cmd sid='set
 
 The selected users will be excluded from integration when using the <Cmd sid='setting.menu.directoryIntegration.root' /> feature.
 
-## Disable the directory integration {#disableIntegration}
+## Disable Directory Integration {#disableIntegration}
 
 To disable the <Cmd sid='settings.activeDirectory.title' product='2' /> feature, follow the steps:
 
