@@ -1,0 +1,131 @@
+---
+id: add-manage-device-to-panel
+title: 패널에 장치 추가 및 관리하기
+description: 패널에 연결된 보조 장치를 구성하고 관리하는 방법을 안내합니다.
+keywords: [보조 장치, CS-20, OSDP, Wiegand]
+---
+
+BioStar Air 시스템은 마스터 장치인 CS-20 패널을 중심으로 여러 종류의 보조 장치를 연결할 수 있습니다. RS-485, OSDP, Wiegand 등 다양한 통신 프로토콜을 지원하여 기존 보안 시스템과의 용이하게 통합할 수 있습니다. 이 문서에서는 보조 장치 구성, 관리, 삭제 방법을 안내합니다.
+
+
+## 보조 장치 구성
+
+CS-20을 등록한 후, 다음 중 하나의 방식으로 보조 장치를 구성할 수 있습니다:
+
+| 보조 장치 | 설명 |
+| -- | -- |
+| 슈프리마 RS-485 장치 | XPass D2 및 OM-120 장치에 기존 RS-485 배선과 표준 통신 프로토콜 사용 |
+| OSDP 장치 | 보안 강화 통신 프로토콜 사용 |
+| Wiegand 장치 | 카드 리더 등 기존 Wiegand 호환 장치 |
+
+### 슬레이브 장치 구성
+
+RS-485 통신을 지원하는 장치를 CS-20에 연결하여 슬레이브 장치로 구성할 수 있습니다. 슬레이브 장치는 패널 목록에서 CS-20 아래에 계층적으로 표시됩니다.
+
+1. 패널 목록에서 등록된 CS-20 패널의 가장 오른쪽에 있는 <IcAirMore title='More' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-more.png' />
+
+1. 팝업 메뉴에서 <Cmd sid='add_slave_devices' product='air' />를 클릭하면 <Cmd sid='add_slave_devices' product='air' /> 창이 나타납니다.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-add-slave-device.png' />
+
+   :::note
+
+   검색된 슬레이브 장치가 없으면 <Cmd sid='find_devices' product='air' /> 버튼을 클릭해 CS-20과 연결된 장치를 다시 검색할 수 있습니다.
+
+   :::
+
+1. 연결된 슬레이브 장치가 목록에 표시되면, 각 장치 옆의 체크박스를 클릭해 추가할 장치를 선택하세요.
+
+1. 선택을 완료하면 <Cmd sid='add_btn' product='air' /> 버튼을 클릭하세요.
+
+연결된 슬레이브 장치가 CS-20 아래에 계층적으로 표시됩니다. 이제 패널 목록에서 CS-20과 연결된 모든 장치를 한눈에 확인할 수 있습니다.
+
+<Image src='/img/air/bsair-device-panel-list-master-slave.png' />
+
+:::info
+
+* 슬레이브 장치의 정보 수정 및 관리 방법에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/managing-registered-devices' />를 참고하세요.
+
+* 슬레이브 장치 정보 및 설정 옵션에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/device-info-settings' />를 참고하세요.
+
+* XPass D2 장치 업그레이드에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/how-to-upgrade-firmware#upgradeFirmwareForXPassD2' />를 참고하세요.
+
+:::
+
+
+### OSDP 장치 구성
+
+[OSDP(Open Supervised Device Protocol)](../../reference/glossary#osdp)는 보안이 강화된 통신 프로토콜입니다. 높은 보안이 필요한 환경에서 OSDP 호환 장치를 CS-20에 연결하세요.
+
+1. 패널 목록에서 등록된 CS-20 패널의 가장 오른쪽에 있는 <IcAirMore title='More' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-more.png' />
+
+1. 팝업 메뉴에서 <Cmd sid='add_osdp_devices' product='air' />를 클릭하세요.
+
+1. <Cmd sid='add_osdp_devices' product='air' /> 창이 나타나면 장치를 추가하기 위한 포트를 선택하세요.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-add-osdp-device.png' />
+
+1. 포트를 선택한 후 <Cmd sid='add_btn' product='air' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='device_cs20_add_osdp_devices' product='air' /> 창에서 필요한 설정을 완료한 후 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-add-osdp-device-popup.png' />
+
+
+### Wiegand 장치 구성
+
+Wiegand는 출입 제어 시스템에서 널리 사용되는 통신 프로토콜입니다. CS-20에 Wiegand 장치를 연결하여 Wiegand 슬레이브 장치로 구성할 수 있습니다.
+
+1. 패널 목록에서 등록된 CS-20 패널의 가장 오른쪽에 있는 <IcAirMore title='More' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-more.png' />
+
+1. 팝업 메뉴에서 <Cmd sid='add_wiegand_devices' product='air' />를 클릭하세요.
+
+1. <Cmd sid='add_wiegand_devices' product='air' /> 창이 나타나면 장치를 추가하기 위한 포트를 선택하세요.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-add-wiegand-device.png' />
+
+1. 포트를 선택한 후 <Cmd sid='add_btn' product='air' /> 버튼을 클릭하세요.
+
+
+## OSDP/Wiegand 장치 정보 수정
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' />를 클릭하세요.
+
+1. <Cmd sid='device_slaves_panels' product='air' /> 탭을 클릭하세요.
+
+1. 목록에서 마스터 장치의 + 아이콘을 클릭해 연결된 보조 장치 목록을 확장하세요.
+
+1. 정보를 수정할 OSDP 또는 Wiegand 보조 장치를 클릭하세요. 
+
+1. 장치 정보 수정 창이 나타나면 세부 정보 또는 설정을 수정하세요.
+
+   <Image src='/img/air/bsair-device-panel-legacy-device-edit.png' className='none' />
+
+   * OSDP 장치: 장치 이름, 네트워크 설정, 인증 설정(RF 카드, RF 카드 + PIN), 인증 대기 시간을 설정할 수 있습니다.
+
+   * Wiegand 장치: 장치 이름을 수정할 수 있습니다.
+
+1. 변경 사항을 저장하려면 하단의 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+
+## 보조 장치 삭제
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' />를 클릭하세요.
+
+1. <Cmd sid='device_slaves_panels' product='air' /> 탭을 클릭하세요.
+
+1. 목록에서 마스터 장치의 + 아이콘을 클릭해 연결된 보조 장치 목록을 확장하세요.
+
+1. 삭제하려는 보조 장치의 체크박스를 클릭하세요.
+
+1. 목록 상단의 <IcAirRemove title='Remove' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-device-panel-remove-secondary.png' />
+
+1. 팝업 메시지 창이 나타나면 <Cmd sid='device_btn_confirm' product='air' /> 버튼을 클릭하세요.

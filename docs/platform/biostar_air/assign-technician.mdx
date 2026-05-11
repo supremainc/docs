@@ -17,7 +17,9 @@ keywords: [기술자, 배정, 관리]
 
 :::info
 
-사이트에 기술자를 초대하기 전에 파트너 포털에서 먼저 기술자 계정을 초대해야 합니다. 자세한 내용은 <DocLink docId='platform/biostar_air/technician-access' />를 참고하세요.
+* 사이트에 기술자를 초대하기 전에 파트너 포털에서 먼저 기술자 계정을 초대해야 합니다. 자세한 내용은 <DocLink docId='platform/biostar_air/technician-access' />를 참고하세요.
+
+* BioStar Air 관리자 포털에서 기술자를 사이트에 배정하는 방법에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/managing-technician' />를 참고하세요.
 
 :::
 
@@ -177,9 +179,31 @@ keywords: [기술자, 배정, 관리]
 1. 초대 링크 재전송 성공 메시지가 나타나면 <Cmd sid='common.button.close' product='pn' /> 버튼을 클릭하세요.
 
 
+## 기술자 계정 잠금/해제
+
+사이트에 배정된 기술자의 계정을 잠그거나 해제할 수 있습니다.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='menu.label.siteList' product='pn' />을 클릭하세요.
+
+1. 사이트 목록에서 기술자의 접근을 관리할 사이트를 클릭하세요.
+
+1. <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> 패널이 나타나면 <Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='site.technicans.title' product='pn' /> 탭을 차례로 클릭하세요.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-added-technician.png' />
+
+1. <Cmd sid='site.technicans.title' product='pn' />에서 기술자 계정을 잠그거나 해제하려면 <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> 열에서 토글 버튼을 클릭하세요.
+
+1. 수정한 내용을 적용하려면 하단의 <Cmd sid='common.button.apply' product='pn' /> 버튼을 클릭하세요.
+
+:::info
+
+최초 등록된 기술자 계정은 사이트에 대한 접근 권한이 <Cmd sid='common.label.locked' product='pn' /> 상태입니다. <Cmd sid='common.label.locked' product='pn' /> 상태를 해제하려면 BioStar Air 포털에서 해당 사이트의 관리자 권한을 가진 계정으로 해제할 수 있습니다.
+
+:::
+
 ## 기술자 삭제
 
-사이트에 초대된 기술자의 계정을 삭제할 수 있습니다. 기술자의 계정이 삭제되면 해당 기술자는 사이트에 로그인할 수 없으며, 사이트 접근 권한이 완전히 제거됩니다. 기술자 계정이 삭제되면 복구할 수 없습니다.
+사이트에 초대된 기술자의 계정을 삭제할 수 있습니다. 기술자의 계정이 삭제되면 해당 기술자는 사이트에 로그인할 수 없으며, 사이트 접근 권한이 제거됩니다.
 
 1. 사이트 목록에서 기술자를 초대한 사이트를 클릭하세요.
 
@@ -195,37 +219,8 @@ keywords: [기술자, 배정, 관리]
 
 1. 기술자 삭제 성공 메시지가 나타나면 <Cmd sid='common.button.close' product='pn' /> 버튼을 클릭하세요.
 
-## BioStar Air 포털에서 기술자 접근 허용 {#allowTechnicianAccess}
+:::info
 
-기술자가 사이트 초대 메일을 통해 BioStar Air 포털에 가입했더라도 사이트에 대한 접근은 기본적으로 잠금 상태입니다. 다음 안내에 따라 BioStar Air 포털에서 기술자의 사이트 접근을 허용하세요.
+삭제된 기술자 계정은 완전히 삭제되는 것이 아니라 해당 사이트에 대한 접근 권한만 제거됩니다. 삭제된 기술자 계정은 사이트에 다시 초대하여 접근 권한을 부여할 수 있습니다.
 
-### 기술자 접근 옵션 활성화
-
-BioStar Air 포털의 사이트 설정에서 기술자의 사이트 접근을 허용해야 합니다. 이미 <Cmd sid='site_security_input7' product='air' /> 옵션을 활성화했다면 다음 단계로 넘어가세요.
-
-1. [BioStar Air 포털](https://portal.biostarair.com)에 관리자 계정으로 로그인하세요.
-
-1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' />를 클릭하세요.
-
-1. <Cmd sid='site_setting_tab_security' product='air' /> 탭을 클릭하세요.
-
-1. <Cmd sid='site_security_input7' product='air' /> 옵션을 활성화하세요.
-
-<Image src='/img/air/bsair-settings-security-allow-technician.png' />
-
-
-### 기술자 계정 잠금해제
-
-1. 화면 왼쪽 사이드바에서 <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' />를 클릭하세요.
-
-1. <Cmd sid='technicians_text' product='air' /> 탭을 클릭하세요.
-
-1. 기술자 목록에서 초대한 기술자의 잠금을 해제하려면 <Cmd sid='column_admin_account_status' product='air' /> 열의 토글 버튼을 클릭하세요.
-
-   <Image src='/img/air/bsair-settings-admin-allow-technician.png' />
-
-1. 팝업 메시지 창이 나타나면 내용을 확인하고 <Cmd sid='common.button.yes' product='pn' /> 버튼을 클릭하세요.
-
-선택한 기술자의 계정 잠금이 해제되고 사이트 접근이 허용됩니다.
-
-<Image src='/img/air/bsair-settings-admin-allow-technician-unlocked.png' />
+:::

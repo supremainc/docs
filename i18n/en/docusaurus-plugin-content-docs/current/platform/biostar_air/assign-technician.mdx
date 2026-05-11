@@ -20,7 +20,9 @@ Partners can assign technicians to customer sites and set permissions. Manage gr
 
 :::info
 
-Before assigning technicians to a site, invite their accounts in the Partner Portal. For more information, see <DocLink docId='platform/biostar_air/technician-access' />.
+* Before assigning technicians to a site, invite their accounts in the Partner Portal. For more information, see <DocLink docId='platform/biostar_air/technician-access' />.
+
+* For more information on assigning technicians to a site in the BioStar Air administrator portal, see <DocLink docId='platform/biostar_air/managing-technician' />.
 
 :::
 
@@ -138,7 +140,7 @@ When a technician completes signing up for the site, their status changes from <
 
 <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-status.png' />
 
-## Cancel invitation
+## Invitation revoked
 
 You can cancel the invitation if the invited technician's email address was entered incorrectly, or if the issue has been resolved and the invitation is no longer needed.
 
@@ -176,9 +178,31 @@ Resend the invitation link if an invited technician didn't receive the invitatio
 
 6. When the success message for resending the invitation link appears, click <Cmd sid='common.button.close' product='pn' />.
 
+## Lock or unlock technician accounts
+
+Lock or unlock accounts for technicians assigned to a site.
+
+1. Click <Cmd sid="menu.label.siteList" product="pn" /> in the left sidebar.
+
+2. In the site list, click the site where you want to manage technician access.
+
+3. When the <Cmd sid="siteListPage.drawer.edit.title" product="pn" /> panel appears, select the <Cmd sid="site.admin_technicans.title" product="pn" /> tab, then the <Cmd sid="site.technicans.title" product="pn" /> tab.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-added-technician.png' />
+
+4. In <Cmd sid='site.technicans.title' product='pn' />, click the toggle button in the <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> column to lock or unlock a technician account.
+
+5. Click <Cmd sid='common.button.apply' product='pn' /> at the bottom to apply the changes.
+
+:::info
+
+Newly registered technician accounts have site access set to <Cmd sid='common.label.locked' product='pn' />. To unlock the <Cmd sid='common.label.locked' product='pn' /> status, use an account with administrator rights for that site in the BioStar Air portal.
+
+:::
+
 ## Delete technician accounts
 
-You can delete the account of a technician invited to the site. After a technician's account is deleted, they cannot sign in to the site and their access is fully revoked. A deleted technician account cannot be recovered.
+You can delete the account of a technician invited to the site. When a technician's account is deleted, they cannot sign in to the site and their access is revoked.
 
 1. In the site list, click the site where you invited the technician.
 
@@ -194,36 +218,8 @@ You can delete the account of a technician invited to the site. After a technici
 
 6. When the success message confirming the technician's account deletion appears, click <Cmd sid='common.button.close' product='pn' />.
 
-## Allow technician access in the BioStar Air Portal {#allowTechnicianAccess}
+:::info
 
-Even if a technician signs up for the BioStar Air Portal through the site invitation email, access to the site is locked by default. Follow the instructions below to allow technician access in the BioStar Air Portal.
+Deleting a technician account does not remove the account entirely; it only revokes access to that site. Re-invite a deleted technician to the site to restore access.
 
-### Enable the technician access option
-
-Allow technician access in the site's settings on the BioStar Air Portal. If <Cmd sid='site_security_input7' product='air' /> is already enabled, proceed to the next step.
-
-1. Log in to the [BioStar Air Portal](https://portal.biostarair.com) with an administrator account.
-
-2. Click <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> in the left sidebar.
-
-3. Click the <Cmd sid='site_setting_tab_security' product='air' /> tab.
-
-4. Enable the <Cmd sid='site_security_input7' product='air' /> option.
-
-<Image src='/img/air/bsair-settings-security-allow-technician.png' />
-
-### Unlock technician account
-
-1. Click <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> in the left sidebar.
-
-2. Click the <Cmd sid='technicians_text' product='air' /> tab.
-
-3. To unlock an invited technician's account in the technician list, click the toggle in the <Cmd sid='column_admin_account_status' product='air' /> column.
-
-   <Image src='/img/air/bsair-settings-admin-allow-technician.png' />
-
-4. If a popup message appears, review the message and click <Cmd sid='common.button.yes' product='pn' />.
-
-The selected technician's account has been unlocked and site access has been granted.
-
-<Image src='/img/air/bsair-settings-admin-allow-technician-unlocked.png' />
+:::

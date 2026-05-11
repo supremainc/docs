@@ -212,13 +212,14 @@ function createSidebars(preview) {
                   items: [
                     'platform/biostar_air/manage-device-with-app',
                     'platform/biostar_air/managing-registered-devices',
-                    'platform/biostar_air/device-info-settings',
-                    'platform/biostar_air/manage-device-group',
                     'platform/biostar_air/register-panels',
                     'platform/biostar_air/manage-registered-panels',
+                    'platform/biostar_air/add-manage-device-to-panel',
+                    'platform/biostar_air/manage-device-group',
+                    'platform/biostar_air/use-xp2-primary-device',
+                    'platform/biostar_air/device-info-settings',
                     'platform/biostar_air/configuring-the-airfob-patch-and-tag',
                     'platform/biostar_air/biometric-readers-and-credentials',
-                    'platform/biostar_air/use-xp2-primary-device',
                     'platform/biostar_air/how-to-upgrade-firmware',
                   ]
                 },
