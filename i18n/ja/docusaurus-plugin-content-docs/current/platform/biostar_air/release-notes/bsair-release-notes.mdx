@@ -5,6 +5,259 @@ description: This document provides a summary of feature improvements, bug fixes
 toc_max_heading_level: 2
 ---
 
+## Version 2.12.0 {#2120}
+
+Release<Separator/>2026-04-23
+
+BioStar Air 2.12.0 continues our commitment to making cloud access control more flexible, scalable, and practical for real-world installations.
+
+This release expands BioStar Air beyond direct-to-cloud device architecture by adding support for **CoreStation 20**, **XPass D2**, **XPass 2 Primary mode**, and **RS-485 device connections**. With these updates, customers and installers can support both direct-to-cloud and controller-based configurations from the same platform.
+
+Whether you are upgrading an existing site, reusing installed wiring, or setting up entry and exit readers, this release gives you more flexibility in how BioStar Air systems are designed and installed.
+
+Version 2.12.0 also introduces **Technician Access** and improves **Administrator Lifecycle Management**, making it easier to manage external support access, administrator invitations, account status, and access permissions.
+
+---
+
+### Controller-Based Architecture and RS-485 Support
+
+BioStar Air now supports controller-based architecture using **CoreStation 20**, **XPass 2 Primary mode**, **XPass D2 secondary readers**, and **RS-485 connections**.
+
+This gives installers more flexibility when working with existing infrastructure. Instead of requiring every device to connect directly to the network, supported secondary devices can now be connected locally through a **CoreStation 20** panel or **XPass 2** primary device.
+
+With this update, you can:
+
+* Register and manage **CoreStation 20** panels in BioStar Air.
+
+* Connect supported secondary devices using **RS-485**.
+
+* Configure **XPass 2** as a primary device.
+
+* Register **XPass D2** as a secondary reader.
+
+* Add supported **OSDP** and **Wiegand** readers to **CoreStation 20**.
+
+This helps support retrofit projects, entry/exit reader configurations, and sites where reusing existing wiring is more practical than adding new network connections for every reader.
+
+#### CoreStation 20 Panel Support
+
+A new <Cmd sid='device_slaves_panels' product='air' className='bold' /> menu has been added under <Cmd sid='device_menu' product='air' className='bold' />.
+
+From this menu, administrators and installers can register CoreStation 20 panels, view panel information and status, discover supported secondary devices, add supported OSDP and Wiegand readers, and configure panel settings.
+
+Supported panel settings include card settings, network settings, serial settings, Wiegand input, supervised input, and secure tamper settings.
+
+Secondary devices connected to CoreStation 20 do not operate independently. Access control decisions are managed by the connected panel.
+
+#### XPass 2 Primary Mode
+
+XPass 2 can now be configured as a **primary device** for supported RS-485 connections.
+
+When XPass 2 is used as a primary device, supported secondary devices such as **XPass D2** and **SIO2** can be connected and managed under the XPass 2 device.
+
+:::note
+
+A firmware upgrade is required before XPass 2 can use RS-485 primary and secondary device connections.
+
+:::
+
+#### XPass D2 Secondary Device Support
+
+XPass D2 is now supported as a **secondary reader** in BioStar Air.
+
+XPass D2 can be added under a supported primary device or panel and used in door configurations. Available settings may vary depending on the XPass D2 model.
+
+:::note
+
+XPass D2 does not operate independently. It depends on the connected primary device or panel for access control operation.
+
+:::
+
+#### OSDP and Wiegand Reader Support with CoreStation 20
+
+CoreStation 20 now supports adding OSDP and Wiegand readers in BioStar Air.
+
+OSDP readers are assigned manually to a port. Wiegand readers are assigned through available Wiegand input slots.
+
+:::note
+
+For Wiegand readers, BioStar Air does not verify physical device presence or wiring status. Correct wiring and input configuration are required for proper operation.
+
+:::
+
+
+#### Important Setup Notes
+
+Before adding or assigning RS-485 devices, check the following:
+
+* RS-485 baud rate, wiring, port selection, and device configuration must match the connected devices.
+
+* Device discovery depends on correct physical wiring and configuration.
+
+* OSDP readers are assigned manually to ports and are not discovered automatically.
+
+* Wiegand reader operation depends on correct input configuration.
+
+* nDevices used for the same door must be connected under the same primary device or panel.
+
+---
+
+### Technician Access
+
+Technician Access allows partners to assign technicians to specific customer sites without creating permanent administrator accounts.
+
+Technicians are managed from the Partner Portal and can be assigned to individual customer sites with a defined access level. Site administrators remain in control because Technician Access must be enabled and unlocked from the customer site before the technician can access it.
+
+Available technician access levels include:
+
+* <Cmd sid='none_option_placeholder_text' product='air' className='bold' />
+
+* <Cmd sid='techincians_list_permissions_devices_only' product='air' className='bold' />
+
+* <Cmd sid='techincians_list_permissions_full_excluding_users' product='air' className='bold' />
+
+* <Cmd sid='techincians_list_permissions_full_including_users' product='air' className='bold' />
+
+This helps partners support installation and troubleshooting work while allowing customers to limit access to sensitive user information.
+
+:::note
+
+Technician Access does not automatically expire. Site administrators should lock or delete technician access when installation or support work is complete.
+
+:::
+
+---
+
+### Administrator Lifecycle Management
+
+We’ve improved administrator management across the BioStar Air Admin Portal and Partner Portal.
+
+Invitations now remain visible after they are sent, making it easier to track pending invitations, resend expired links, and revoke access when needed. This gives administrators better visibility into who has access, who has been invited, and which invitations still require action.
+
+This update adds or improves lifecycle actions such as:
+
+* Viewing invitation status
+
+* Re-sending invitations
+
+* Revoking invitations
+
+* Locking or unlocking accounts
+
+* Deleting administrator or technician access
+
+Invitation statuses include **accepted**, **pending**, **revoked**, and **link expired**.
+
+:::note
+
+Invitation links expire after 7 days. If an invitation expires, an administrator can resend the invitation.
+
+:::
+
+---
+
+### Event Logs and Alerts
+
+We’ve improved event log and alert handling to give administrators better visibility into device and system activity.
+
+With v2.12:
+
+* Network disconnection alerts can now be received in real time when device connectivity is lost.
+
+* New RS-485 connection events are available for secondary devices.
+
+* Exit button events are now recorded in event logs.
+
+* Event logs can now display the RF card ID in a new column.
+
+:::note
+
+If an existing alert was configured for network disconnection events, review the alert settings after the update.
+
+:::
+
+Due to firmware limitations, RF card ID display is available only when the user has a single RF card registered.
+
+---
+
+### Device and Admin Portal Improvements
+
+We’ve made several improvements to simplify everyday administration and reduce extra steps for administrators and installers.
+
+#### Face Registration Link Improvements
+
+Face self-registration links can now be sent from the **User Information** and **Edit User** pages.
+
+Previously, face self-registration links could only be sent from the bulk action menu in the **Registered Users** list. This makes it easier to send a registration link while managing an individual user.
+
+#### BioStation 3 Device Setting Improvements
+
+BioStation 3 device settings have been improved.
+
+This release adds:
+
+* The <Cmd sid='device_edit_tna_mobile_required_label' product='air' className='bold' /> option directly in the BioStation 3 device menu settings in Biostar Air.
+
+* A warning when disabling Video Service while a camera is connected to the BioStation 3.
+
+* Improved syncing priority for users with Device Manager permissions.
+
+:::note
+
+At least one user should be set as a Device Manager to help ensure BioStation 3 device menu access is controlled properly.
+
+:::
+
+#### Firmware Release Notes in Firmware Update Pop-up
+
+The firmware update pop-up now includes links to firmware release notes, making it easier to review firmware changes before updating a device.
+
+#### Elevator Device Registration Guidance
+
+BioStar Air now provides clearer guidance when registering or assigning devices for elevator use.
+
+This helps administrators and installers understand when a device cannot be assigned to an elevator because it is already assigned to a door.
+
+#### Session Timeout Improvement
+
+Session timeout behavior has been improved in the Admin Portal.
+
+Previously, administrators could be logged out after a fixed duration even while actively using the portal. Session timeout now renews based on activity, allowing administrators to remain logged in while actively working.
+
+---
+
+### User, Access Level, and Door Setting Changes
+
+Several user, access level, and door settings have been updated to better match supported device behavior.
+
+Changes include:
+
+* The **PIN** field has been renamed to <Cmd sid='device_authentication_2fa_pin' product='air' className='bold' /> for improved clarity.
+
+* Individual access level validity settings have been removed.
+
+* Each access level can use one holiday group.
+
+* **Exit Button Schedule** has been removed from door settings to align with actual supported device behavior.
+
+---
+
+### Bug Fixes
+
+This release includes over 100 bug fixes and stability improvements.
+
+Notable fixes include:
+
+* Improved validation for usernames during CSV import.
+
+* XPass 2 NFC/RF card setting is now on by default during registration.
+
+* Fixed an issue where the BioStar Air mobile app could crash when pressing the add button in the DST menu.
+
+* Fixed an issue where the iOS app screen could freeze after being invited to a new site.
+
+<hr style={{margin: '4rem 0'}} />
+
 ## Version 2.11.0 {#2110}
 
 Release<Separator/>2025-11-25
