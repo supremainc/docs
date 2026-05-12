@@ -85,6 +85,26 @@ keywords:
 
 :::
 
+### RFカード番号列を表示日るかんが?
+
+イベントログでユーザーがRFカードで認証した場合、<Cmd sid='card_type_rf' product='air' /> 列を追加してRFカード番号を確認できます。
+
+1. イベントログ一覧の上部にある <IcAirColumn title='Customize' /> をクリックしてください。 
+
+2. <Cmd sid='column_filter_modal_title' product='air' /> ウィンドウが表示されたら、<Cmd sid='card_type_rf' product='air' /> のチェックボックスをクリックし、目的の位置にドラッグします。
+
+3. <Cmd sid='column_filter_modal_save_btn' product='air' /> または <Cmd sid='column_filter_modal_apply_btn' product='air' /> ボタンをクリックします。
+
+4. イベントログ一覧に <Cmd sid='card_type_rf' product='air' /> 列が表示されます。
+
+<Image src='/img/air/bsair-monitoring-eventlog-list-rf-card.png' />
+
+:::info
+
+イベントログに表示されるRFカード番号は、ユーザーに割り当てられたカードが1枚の場合のみ表示されます。 ユーザーが複数のRFカードを持っている場合、カード番号は表示されません。
+
+:::
+
 ## ログのフィルタリング {#filtering-event-logs}
 
 ログをフィルタリングして、目的の情報を素早く見つけることができます。 ログ一覧の上部にある <IcAirLogfilter width='20' height='20' title='Filters' /> をクリックしてください。 <Cmd sid='logs_filters_action_btn' product='air' /> ウィンドウが表示されたら、各項目で希望の値を選択します。

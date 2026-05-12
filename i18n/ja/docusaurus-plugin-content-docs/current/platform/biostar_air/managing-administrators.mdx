@@ -1,14 +1,16 @@
 ---
 id: managing-administrators
 title: 管理者アカウントおよび役割の管理
-description: BioStar Airでの管理者の招待、役割の割り当て、権限管理、およびオブザーバー(Observer)、オペレーター(Operator)、管理者(Administrator)、マスター(Master)の各役割に対する入退室制御の設定方法を案内します。
+description: BioStar Airで管理者アカウントを招待し、オブザーバー（Observer）、オペレーター（Operator）、管理者（Administrator）、マスター（Master）の4つの役割を割り当て、権限を管理する方法を案内します。
 keywords:
   - 管理者
   - 役割
   - アクセス制御設定
 ---
 
-BioStar Airの管理者機能を使用して、組織内の管理者アカウントを管理し、役割を割り当て、入退室レベルを制御できます。 これにより、セキュリティと管理の制御を維持しながら、適切な担当者に適切な権限を付与できます。
+BioStar Airの管理者アカウントおよび役割管理により、サイトのアクセス権を効果的に制御できます。 オブザーバー（Observer）、オペレーター（Operator）、管理者（Administrator）、マスター（Master）の4つの役割を割り当て、各担当者に必要な権限のみを付与することで、セキュリティと運用効率を両立させます。
+
+本書では、管理者の招待から役割割当、権限管理、アカウントのロックまで、管理者アカウントのライフサイクル全体を案内します。
 
 :::tip
 
@@ -20,95 +22,67 @@ BioStar Airの管理者機能を使用して、組織内の管理者アカウン
 
 ## 管理者の表示 {#viewAdmin}
 
-画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_submenu' product='air' /> をクリックします。
+画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> をクリックしてください。
 
 <Image src='/img/air/bsair-settings-admin.png' />
 
-<Cmd sid='admin_submenu' product='air' /> メニューで、すべてのアクティブな管理者の一覧を確認できます。 管理者一覧には次の情報が含まれます。
+:::info
 
-* 名前
+<Cmd sid='site_security_input7' product='air' /> オプションを有効にすると、<Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_text' product='air' /> メニューが <Cmd sid='title_techincians_settings' product='air' /> メニューに変更されます。 <Cmd sid='admin_text' product='air' /> と <Cmd sid='technicians_text' product='air' /> タブに分かれ、管理者アカウントと技術者アカウントをそれぞれ管理できます。
 
-* メールアドレス
+<Cmd sid='site_security_input7' product='air' /> オプションを有効にする方法の詳細は <DocLink docId='platform/biostar_air/managing-technician' /> を参照してください。
 
-* 電話番号
+:::
 
-* 招待者
+### 管理者一覧
 
-* 招待日
+<Cmd sid='title_techincians_settings' product='air' /> メニューではすべての管理者の一覧を確認できます。 管理者一覧には次の情報が含まれます。
 
-* 管理者権限
+* <Cmd sid='admin_table_name_column' product='air' />：管理者の名前です。
 
-* アカウントの状態（有効/無効）
+* <Cmd sid='column_email' product='air' />：管理者のメールアドレスです。
 
-## 管理者の無効化 {#deactiveAdmin}
+* <Cmd sid='mobile_card' product='air' />：管理者の電話番号です。
 
-管理者を削除する代わりにアカウントを無効化でき、必要に応じて再度有効化できます。
+* <Cmd sid='column_admin_invite_by' product='air' />：管理者を招待した人のメールアドレスです。
 
-1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_submenu' product='air' /> をクリックします。
+* <Cmd sid='column_admin_date' product='air' />：管理者が招待された日付です。
 
-2. 一覧から無効化する管理者を見つけます。
+* <Cmd sid='column_admin_level' product='air' />：管理者の権限レベルです。 詳しくは <DocLink inner='#administrator-levels' /> を参照してください。
 
-3. <Cmd sid='column_admin_account_status' product='air' /> 列でトグルスイッチをクリックします。
+* <Cmd sid='invitation_status' product='air' />：管理者アカウントの招待状況です。 詳しくは <DocLink inner='#invitationStatus' /> を参照してください。
 
-   <Image src='/img/air/bsair-settings-admin-deactive.png' />
+* <Cmd sid='column_admin_account_status' product='air' />：管理者アカウントのロック状態です。 アカウントをロックまたはロック解除できます。 詳しくは <DocLink inner='#deactiveAdmin' /> を参照してください。
 
-4. 確認ダイアログが表示されたら、<Cmd sid='admin_status_change_confirm_btn' product='air' /> をクリックしてください。
+### 招待状況 {#invitationStatus}
 
-<Cmd sid='column_admin_account_status' product='air' /> 列の状態が <Cmd sid='admin_status_disabled' product='air' /> に変更されます。
+管理者一覧で各管理者の招待状況を確認できます。
 
-<Image src='/img/air/bsair-settings-admin-deactive-result.png' />
+#### 登録待ち 
+
+招待された管理者がメールでの招待を受け入れ、登録を完了するまで、招待状況は <Cmd sid='pending_status' product='air' /> と表示されます。 招待された管理者はメール内のリンクをクリックしてアカウントを登録するか、ログインしてサイトにアクセスできます。
+
+<Image src='/img/air/bsair-settings-admin-invite-resend-link-pending-status.png' />
 
 :::info
 
-管理者の無効化機能は、管理者の権限によって制限される場合があります。 <Cmd sid='master_role' product='air' className='bold' /> 権限を持つ管理者は、他の <Cmd sid='master_role' product='air' className='bold' /> 管理者を無効化できません。
+招待された管理者は最大7日以内に招待を承諾できます。7日を過ぎると招待は失効し、状態は <Cmd sid='user_status_expired' product='air' /> に変更されます。 招待が失効した場合、該当アカウントが再登録できるよう招待リンクを再送できます。 招待リンクの再送の詳細は <DocLink inner='#resendInvitation' /> を参照してください。
 
 :::
 
-## 管理者の役割変更 {#changing-an-administrators-role}
+#### 登録完了 
 
-管理者は自分より低いレベルの管理者の役割を変更できます。
+招待された管理者がメールの招待を受け入れて登録を完了すると、招待状況は <Cmd sid='user_status_accepted' product='air' /> に変更されます。 登録が完了した管理者はログインして、付与された役割に応じたメニューと機能にアクセスできます。
 
-1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_submenu' product='air' /> をクリックします。
+<Image src='/img/air/bsair-settings-admin-list-signup-complete.png' />
 
-2. 一覧から役割を変更する管理者を選びます。
+#### 招待の取り消し状態
 
-3. <Cmd sid='column_admin_level' product='air' /> 列で新しい管理者レベルを選択します。
+招待した管理者のメールアドレスを誤って入力した場合や、もはや管理者招待が不要になった場合、招待を取り消せます。 招待を取り消すと、招待状況が <Cmd sid='user_status_revoked' product='air' /> に変更されます。 管理者招待の取り消しの詳細は <DocLink inner='#cancelInvitation' /> を参照してください。
 
-   <Image src='/img/air/bsair-settings-admin-change-role.png' />
+<Image src='/img/air/bsair-settings-admin-invite-revoke-status.png' />
 
-4. 確認ダイアログが表示されたら、<Cmd sid='admin_status_change_confirm_btn' product='air' /> をクリックしてください。
-
-:::note
-
-<Cmd sid='master_role' product='air' className='bold' /> 管理者のみが他の管理者に <Cmd sid='master_role' product='air' className='bold' /> 権限を割り当てたり変更したりできます。
-
-:::
-
-## 新しい管理者の招待 {#inviteNewAdmin}
-
-新しい管理者を追加できます。
-
-1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_submenu' product='air' /> をクリックします。
-
-2. 画面右上の <Cmd sid='btn_invite' product='air' /> をクリックします。
-
-3. <Cmd sid='admin_invitation_title' product='air' /> ダイアログが表示されたら、メールアドレスを入力します。
-
-   <Image src='/img/air/bsair-settings-admin-invite.png' />
-
-4. <Cmd sid='admin_invitation_input2' product='air' /> で新しい管理者に割り当てる役割を選択します。
-
-5. 招待状を送信するには、<Cmd sid='send_btn' product='air' /> をクリックします。
-
-:::note
-
-* 各管理者は固有のメールアドレスを持つ必要があります。 必要に応じてエイリアスアドレス（例：erik+training@example.com）を使用できます。
-
-* 招待メールを受け取った管理者は、メール内のリンクをクリックします。 アカウントを持っていない管理者は登録を行います。 既にアカウントを持っている管理者は、ログイン後すぐに**サイト**にアクセスできます。
-
-:::
-
-## 管理者レベル {#administrator-levels}
+### 管理者レベル {#administrator-levels}
 
 BioStar Airの各管理者レベルは特定の権限を持ち、高いレベルは低いレベルの権限を継承します。
 
@@ -118,9 +92,31 @@ BioStar Airの各管理者レベルは特定の権限を持ち、高いレベル
 
 :::
 
-### <Cmd sid='observer_role' product='air' className='normal' />（最低レベル）{#observer}
+#### 権限比較
 
-* <Cmd sid='dashboard_menu' product='air' /> のダッシュボードとログを**表示できます**。
+<div className='table-fixed'>
+
+| 機能 | オブザーバー | オペレーター | 管理者 | マスター |
+| --- | :-: | :-: | :-: | :-: |
+| ダッシュボード/ログの参照 | ✔️ | ✔️ | ✔️ | ✔️ |
+| ログのエクスポートおよびレポート作成 | ✔️ | ✔️ | ✔️ | ✔️ |
+| ユーザー管理 | ❌ | ✔️ | ✔️ | ✔️ |
+| ユーザーグループの管理 | ❌ | ✔️ | ✔️ | ✔️ |
+| 出入レベルの管理 | ❌ | ✔️ | ✔️ | ✔️ |
+| スケジュールの管理 | ❌ | ✔️ | ✔️ | ✔️ |
+| 祝日グループの管理 | ❌ | ✔️ | ✔️ | ✔️ |
+| デバイスの制御および設定 | ❌ | ❌ | ✔️ | ✔️ |
+| 管理者の招待 | ❌ | ❌ | ✔️ | ✔️ |
+| マスター役割の割り当て | ❌ | ❌ | ❌ | ✔️ |
+| マスター管理者の編集/削除 | ❌ | ❌ | ❌ | ✔️ |
+| サブサイトの作成 | ❌ | ❌ | ❌ | ✔️ |
+| サイト設定の構成 | ❌ | ❌ | ❌ | ✔️ |
+
+</div>
+
+#### <Cmd sid='observer_role' product='air' className='normal' />（最低レベル）{#observer}
+
+* <Cmd sid='dashboard_menu' product='air' /> とログを**表示できます**。
 
 * ログを**エクスポートして**レポートを作成できます。
 
@@ -128,7 +124,7 @@ BioStar Airの各管理者レベルは特定の権限を持ち、高いレベル
 
 * メニューへのアクセスが制限されます。 ほとんどのメニューは画面に表示されません。
 
-### <Cmd sid='operator_role' product='air' className='normal' /> {#operator}
+#### <Cmd sid='operator_role' product='air' className='normal' /> {#operator}
 
 * <Cmd sid='user_submenu' product='air' />および <Cmd sid='user_groups_submenu' product='air' />、<Cmd sid='access_levels_submenu' product='air' />、<Cmd sid='schedules_submenu' product='air' />、<Cmd sid='holiday_groups_submenu' product='air' /> を管理できます。
 
@@ -136,7 +132,7 @@ BioStar Airの各管理者レベルは特定の権限を持ち、高いレベル
 
 * 日常的なユーザーと入退室構成の管理に適しています。
 
-### <Cmd sid='admin_role' product='air' className='normal' /> {#administrator}
+#### <Cmd sid='admin_role' product='air' className='normal' /> {#administrator}
 
 * 新しい管理者を**招待できます**。 ただし、<Cmd sid='master_role' product='air' className='bold' /> 役割を割り当てることはできません。
 
@@ -146,7 +142,7 @@ BioStar Airの各管理者レベルは特定の権限を持ち、高いレベル
 
 * 一般的に、システム管理を担当するIT担当者にこの役割を割り当てることを推奨します。
 
-### <Cmd sid='master_role' product='air' className='normal' />（最高レベル）{#master}
+#### <Cmd sid='master_role' product='air' className='normal' />（最高レベル）{#master}
 
 * すべての設定と機能に**完全なアクセス**権があります。
 
@@ -159,3 +155,133 @@ BioStar Airの各管理者レベルは特定の権限を持ち、高いレベル
 * 他の管理者がログインする前に**利用規約**に同意させる責任があります。
 
 * 一般的に会社の所有者や高い信頼を受ける役員に割り当てることができます。
+
+## 新しい管理者の招待 {#inviteNewAdmin}
+
+新しい管理者を追加できます。
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> をクリックしてください。
+
+2. 画面右上の <Cmd sid='btn_invite' product='air' /> をクリックします。
+
+3. <Cmd sid='admin_invitation_title' product='air' /> ダイアログが表示されたら、メールアドレスを入力します。
+
+   <Image src='/img/air/bsair-settings-admin-invite.png' />
+
+4. <Cmd sid='admin_invitation_input2' product='air' /> で新しい管理者に割り当てる役割を選択します。
+
+5. 招待状を送信するには、<Cmd sid='send_btn' product='air' /> をクリックします。
+
+招待されたアカウントは管理者一覧で <Cmd sid='invitation_status' product='air' /> が <Cmd sid='pending_status' product='air' /> と表示されます。 招待されたアカウントがメールで招待を受け入れると、<Cmd sid='invitation_status' product='air' /> は <Cmd sid='user_status_accepted' product='air' /> に変更されます。
+
+<Image src='/img/air/bsair-settings-admin-invite-pending-status.png' />
+
+:::note
+
+* 招待されたアカウントは最大7日以内に招待を承諾できます。7日を過ぎると招待は失効し、状態は <Cmd sid='user_status_expired' product='air' /> に変更されます。
+
+* 各管理者は固有のメールアドレスを持つ必要があります。 必要に応じてエイリアスアドレス（例：erik+training@example.com）を使用できます。
+
+* 招待メールを受け取った管理者は、メール内のリンクをクリックします。 アカウントを持っていない管理者は登録を行います。 既にアカウントを持っている管理者は、ログイン後すぐに**サイト**にアクセスできます。
+
+:::
+
+## 招待の取り消し {#cancelInvitation}
+
+招待されたアカウントがまだ招待を承諾していない場合、招待を取り消せます。 招待を取り消すと、登録待ちのアカウントはメールの招待リンクで登録できなくなります。
+
+1. 管理者一覧で招待状況が <Cmd sid='pending_status' product='air' /> のアカウントのチェックボックスをクリックします。 1人以上のアカウントを選択できます。
+
+2. 管理者一覧の左上にある <IcAirRevoke title='Revoke Invitation' /> ボタンをクリックします。
+
+   <Image src='/img/air/bsair-settings-admin-invite-pending-status-revoke.png' />
+
+3. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='btn_yes' product='air' /> ボタンをクリックしてください。
+
+管理者一覧で招待を取り消したアカウントは、招待状況が <Cmd sid='user_status_revoked' product='air' /> に変更されます。
+
+<Image src='/img/air/bsair-settings-admin-invite-revoke-status.png' />
+
+## 招待リンクの再送 {#resendInvitation}
+
+招待されたアカウントが招待メールを受け取っていない、招待メールを紛失した、または招待リンクが期限切れになった場合、招待リンクを再送できます。 招待リンクを再送すると、当該ユーザーは新しい招待リンクで登録できます。
+
+1. 管理者一覧で招待状況が <Cmd sid='pending_status' product='air' />、<Cmd sid='user_status_expired' product='air' />、または <Cmd sid='user_status_revoked' product='air' /> のアカウントのチェックボックスをクリックします。 1人以上のアカウントを選択できます。
+
+2. 管理者一覧の左上にある <IcAirResend title='Resend Invitation' /> ボタンをクリックします。
+
+   <Image src='/img/air/bsair-settings-admin-invite-resend-link.png' />
+
+3. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='btn_yes' product='air' /> ボタンをクリックしてください。
+
+招待リンクを再送したアカウントは、招待状況が <Cmd sid='pending_status' product='air' /> に変更されます。
+
+<Image src='/img/air/bsair-settings-admin-invite-resend-link-pending-status.png' />
+
+## 管理者のロック/ロック解除 {#deactiveAdmin}
+
+メール招待を受け入れて登録を完了した管理者は、<Cmd sid='column_admin_account_status' product='air' /> オプションでアカウントをロックまたはロック解除できます。 アカウントをロックすると、その管理者はサイトにログインできなくなります。アカウント情報は保持され、必要に応じて後で再有効化できます。
+
+ロックされた管理者は <Cmd sid='column_admin_account_status' product='air' /> 列が <Cmd sid='admin_status_disabled' product='air' /> と表示され、ロック解除された管理者は <Cmd sid='admin_status_active' product='air' /> と表示されます。
+
+<Image src='/img/air/bsair-settings-admin-list-lock-unlock.png' />
+
+:::info
+
+* 登録が完了した管理者アカウントのみロックまたはロック解除できます。
+
+* 管理者の <Cmd sid='column_admin_account_status' product='air' /> 機能は、管理者の権限によって制限される場合があります。 <Cmd sid='master_role' product='air' className='bold' /> 権限を持つ管理者は、他の <Cmd sid='master_role' product='air' className='bold' /> 管理者をロックできません。
+
+:::
+
+### 個別の管理者ロック/ロック解除
+
+1. 管理者一覧でロックまたはロック解除する管理者を探します。
+
+2. <Cmd sid='column_admin_account_status' product='air' /> 列でトグルスイッチをクリックします。
+
+   <Image src='/img/air/bsair-settings-admin-deactive.png' />
+
+3. 確認ダイアログが表示されたら、<Cmd sid='admin_status_change_confirm_btn' product='air' /> をクリックしてください。
+
+### 複数管理者のロック/ロック解除
+
+1. 管理者一覧でロックまたはロック解除する管理者のチェックボックスをクリックします。 1人以上の管理者を選択できます。
+
+2. 画面左上の <IcAirPlock title='Lock Account' /> または <IcAirPunlock title='Unlock Account' /> ボタンをクリックします。 
+
+   <Image src='/img/air/bsair-settings-admin-list-batch-lock-unlock.png' />
+
+3. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='btn_yes' product='air' /> ボタンをクリックしてください。
+
+## 管理者の役割変更 {#changing-an-administrators-role}
+
+管理者は自分より低いレベルの管理者の役割を変更できます。 従業員の業務変更、責任範囲の拡大・縮小、組織再編などの際に役割を調整します。 役割を縮小すると、該当の管理者は以前アクセスできた機能にアクセスできなくなります。
+
+1. 管理者一覧で役割を変更する管理者を探します。
+
+2. <Cmd sid='column_admin_level' product='air' /> 列で新しい管理者レベルを選択します。
+
+   <Image src='/img/air/bsair-settings-admin-change-role.png' />
+
+3. 確認ダイアログが表示されたら、<Cmd sid='admin_status_change_confirm_btn' product='air' /> をクリックしてください。
+
+:::note
+
+<Cmd sid='master_role' product='air' className='bold' /> 管理者のみが他の管理者に <Cmd sid='master_role' product='air' className='bold' /> 権限を割り当てたり変更したりできます。
+
+:::
+
+## 管理者アカウントの削除 {#deleteAdmin}
+
+管理者アカウントを削除すると、該当の管理者はサイトにログインできなくなり、削除されたアカウント情報は復元できません。
+
+1. 管理者一覧で削除する管理者のチェックボックスをクリックします。 1人以上の管理者を選択できます。
+
+2. 画面左上の <IcAirRemove title='Delete' /> ボタンをクリックします。 
+
+   <Image src='/img/air/bsair-settings-admin-list-delete.png' />
+
+3. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='btn_yes' product='air' /> ボタンをクリックしてください。
+
+削除した管理者アカウントは管理者一覧に表示されなくなります。

@@ -1,0 +1,210 @@
+---
+id: partner-administrator
+title: パートナー管理者を招待する
+description: パートナーポータルでパートナー管理者アカウントを招待し、役割を割り当て、権限を管理する方法を案内します。
+keywords:
+  - パートナー
+  - 管理者
+  - 役割
+  - 権限
+---
+
+パートナーポータルでパートナー管理者アカウントの招待、役割の割り当て、権限の管理方法を案内します。 パートナー管理者は顧客サイトへのアクセス権を制御して、セキュリティと運用効率を確保できます。
+
+パートナー管理者はオブザーバー(Observer)、オペレーター(Operator)、管理者(Administrator)、マスター(Master)の4つの役割のいずれかに割り当てられ、各役割に応じてアクセス権が異なります。 このドキュメントでは各役割の権限差を比較し、管理者アカウントの招待から権限管理、アカウントのロック/解除、削除までの全工程を段階的に案内します。
+
+## 管理者の役割と権限 {#adminRoles}
+
+パートナーポータルでは管理者に以下の4つの役割のいずれかを割り当てることができます。
+
+* <Cmd sid='observer_role' product='air' className='bold' />：サイト情報を閲覧できますが、変更はできません。
+
+* <Cmd sid='operator_role' product='air' className='bold' />：新しいサイトを設定しクレジットを割り当てることはできますが、管理者権限の変更や新しい管理者の招待はできません。
+
+* <Cmd sid='admin_role' product='air' className='bold' />：他の管理者を招待および管理できますが、マスターレベルのユーザーを削除することはできません。
+
+* <Cmd sid='master_role' product='air' className='bold' />：ポータルに対する完全な管理権限を持ち、ユーザー管理、サイト作成、クレジット配分を含みます。 パートナーポータルアカウントを初めて有効化できるのはマスターレベルのみです。
+
+:::info
+
+マスター管理者以外の権限を持つユーザーがポータルにアクセスするには、まずマスターアカウントを設定して有効化する必要があります。
+
+:::
+
+## 管理者の招待
+
+管理者を招待するには、次の手順に従います。
+
+1. [パートナーポータル](https://partner.biostarair.com)に <Cmd sid='admin_role' product='air' className='bold' /> 権限以上のアカウントでログインします。
+
+2. 画面左のサイドバーで <Cmd sid='site.admin_technicans.title' product='pn' /> をクリックします。
+
+3. 画面右上の <Cmd sid='common.button.invite' product='pn' /> ボタンをクリックします。 
+
+4. <Cmd sid='inviteAdminsModal.title' product='pn' /> ウィンドウが表示されたら、<Cmd sid='siteListPage.placeholder.adminType' product='pn' /> で招待する管理者の役割を選択します。
+
+   <Image src='/img/air/bsair-partner-admin-invite.png' />
+
+5. 招待する管理者のメールアドレスを入力します。
+
+6. <Cmd sid='common.button.add' product='pn' /> ボタンが有効になったらクリックします。
+
+   <Image src='/img/air/bsair-partner-admin-invite-input-email.png' width='60%' />
+
+7. 追加した管理者はメールアドレス入力欄の下に表示されます。 さらに管理者を招待するには、手順4〜6を繰り返します。
+
+   <Image src='/img/air/bsair-partner-admin-invited-list.png' />
+
+8. すべての管理者を追加したら、<Cmd sid='common.button.ok' product='pn' /> ボタンをクリックします。
+
+9. 送信確認メッセージが表示されたら、<Cmd sid='common.button.confirm' product='pn' /> ボタンをクリックします。 
+
+:::info
+
+パートナーポータルに管理者アカウントを招待しても、各サイトへの招待は別途行う必要があります。
+
+:::
+
+### 招待状況 
+
+管理者を招待した後、管理者一覧で招待したアカウントの招待状況を確認できます。
+
+#### 登録待ち 
+
+招待された管理者がメールで招待を承諾してアカウントを有効化するまでは、<Cmd sid='adminLCM.pending_status' product='pn' /> 状態です。 招待された管理者はメール内のリンクをクリックしてアカウントを登録するか、ログインしてパートナーポータルにアクセスできます。
+
+<Image src='/img/air/bsair-partner-admin-list-pending-status.png' />
+
+:::info
+
+招待された管理者は最大7日間招待を承諾できます。7日を過ぎると招待は期限切れとなり、<Cmd sid='adminLCM.user_status_expired' product='pn' /> 状態に変更されます。 招待が失効した場合、該当アカウントが再登録できるよう招待リンクを再送できます。 招待リンクの再送の詳細は <DocLink inner='#resendInvitation' /> を参照してください。
+
+:::
+
+#### 登録完了 
+
+招待された管理者がメールの招待を承諾して登録を完了すると、招待状況は <Cmd sid='adminLCM.user_status_accepted' product='pn' /> に変更されます。
+
+<Image src='/img/air/bsair-partner-admin-list-accepted-status.png' />
+
+#### 招待の取り消し状態
+
+招待した管理者のメールアドレスを誤って入力した場合や、もはや管理者招待が不要になった場合、招待を取り消せます。 招待を取り消すと、招待状況は <Cmd sid='adminLCM.user_status_revoked' product='pn' /> に変更されます。 管理者招待の取消しの詳細は <DocLink inner='#revokeInvite' /> を参照してください。
+
+<Image src='/img/air/bsair-partner-admin-list-revoked-status.png' />
+
+### 招待取り消し {#revokeInvite} 
+
+パートナーが招待した管理者のメールアドレスを誤って入力した場合や、もはや招待が不要な場合は、招待を取り消せます。 招待を取り消すと、該当ユーザーは招待リンクから登録できなくなります。
+
+1. 管理者一覧で招待状況が <Cmd sid='adminLCM.pending_status' product='pn' /> の管理者のチェックボックスをクリックします。 1人以上の管理者を選択できます。
+
+2. 管理者一覧の左上にある <IcAirRevoke title='Revoke Invitation' /> ボタンをクリックします。
+
+   <Image src='/img/air/bsair-partner-admin-list-revoke-invitation.png' />
+
+   :::note
+
+   状態が <Cmd sid='adminLCM.pending_status' product='pn' /> の管理者のみ招待を取り消せます。
+
+   :::
+
+3. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='common.button.yes' product='pn' /> ボタンをクリックしてください。
+
+4. 招待取り消しの成功メッセージが表示されたら、<Cmd sid='common.button.close' product='pn' /> ボタンをクリックしてください。
+
+管理者一覧で招待を取り消した管理者の招待状況は <Cmd sid='adminLCM.user_status_revoked' product='pn' /> に変更されます。
+
+<Image src='/img/air/bsair-partner-admin-list-revoked-status.png' />
+
+### 招待リンクの再送 {#resendInvitation}
+
+招待された管理者が招待メールを受け取っていない、メールを紛失した、または招待リンクが期限切れになった場合は、招待リンクを再送できます。
+
+1. 管理者一覧で招待状況が <Cmd sid='adminLCM.pending_status' product='pn' />、<Cmd sid='adminLCM.user_status_expired' product='pn' />、<Cmd sid='adminLCM.user_status_revoked' product='pn' /> のいずれかの管理者のチェックボックスをクリックします。 1人以上の管理者を選択できます。
+
+2. 管理者一覧の左上にある <IcAirResend title='Resend Invitation' /> ボタンをクリックします。
+
+   <Image src='/img/air/bsair-partner-admin-list-resend-invitation.png' />
+
+3. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='common.button.yes' product='pn' /> ボタンをクリックしてください。
+
+4. 招待リンク再送信の成功メッセージが表示されたら、<Cmd sid='common.button.close' product='pn' /> ボタンをクリックしてください。
+
+管理者一覧で招待リンクを再送した管理者の招待状況は <Cmd sid='adminLCM.pending_status' product='pn' /> に変更されます。
+
+<Image src='/img/air/bsair-partner-admin-list-pending-status.png' />
+
+## 管理者の管理
+
+招待された管理者がメールの招待を承諾して登録を完了すると、管理者一覧で当該管理者を管理できます。 管理者のアカウントをロック/解除したり、権限を変更したりできます。 もはや管理者が不要な場合は、管理者アカウントを削除することもできます。
+
+### 管理者アカウントのロック/解除
+
+メール招待を承諾して登録を完了した管理者は、<Cmd sid='adminLCM.column_admin_account_status' product='pn' /> オプションでアカウントをロックまたは解除できます。 アカウントをロックすると管理者はパートナーポータルにログインできなくなりますが、アカウント情報は保持され、必要な時に再度有効化できます。
+
+ロック状態の管理者は <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> 列が <Cmd sid='common.label.locked' product='pn' /> と表示され、解除された管理者は <Cmd sid='common.label.unlocked' product='pn' /> と表示されます。
+
+<Image src='/img/air/bsair-partner-admin-list-lock-unlock.png' />
+
+:::info
+
+* 登録を完了した管理者のアカウントは、デフォルトでロック解除されています。
+
+* <Cmd sid='admin_role' product='air' className='bold' /> 権限以上のアカウントはロック/解除できません。
+
+:::
+
+#### 個別の管理者ロック/ロック解除
+
+管理者一覧で <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> 列のトグルボタンをクリックして、個別の管理者アカウントをロックまたは解除できます。
+
+1. 管理者一覧で <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> 列のトグルボタンをクリックします。
+
+   <Image src='/img/air/bsair-partner-admin-list-lock-unlock-toggle.png' />
+
+2. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='common.button.confirm' product='pn' /> ボタンをクリックします。 
+
+#### 複数管理者のロック/ロック解除
+
+管理者一覧で複数の管理者アカウントを選択して、一括でロックまたは解除できます。
+
+1. 管理者一覧でロックまたはロック解除する管理者のチェックボックスをクリックします。 1人以上の管理者を選択できます。
+
+2. 画面左上の <IcAirPlock title='Lock Account' /> または <IcAirPunlock title='Unlock Account' /> ボタンをクリックします。 
+
+   <Image src='/img/air/bsair-partner-admin-list-batch-lock-unlock.png' />
+
+3. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='common.button.yes' product='pn' /> ボタンをクリックしてください。
+
+4. アカウントのロック/解除の成功メッセージが表示されたら、<Cmd sid='common.button.close' product='pn' /> ボタンをクリックします。
+
+### 管理者の権限変更
+
+管理者の権限を変更できます。 管理者権限の詳細は <DocLink inner='#adminRoles' /> を参照してください。
+
+1. 管理者一覧で権限を変更する管理者の <Cmd sid='common.label.administrator' product='pn' /> 列をクリックします。
+
+   <Image src='/img/air/bsair-partner-admin-list-change-role.png' />
+
+2. 一覧から変更する権限を選択します。
+
+3. ポップアップメッセージが表示されたら、<Cmd sid='common.button.confirm' product='pn' /> ボタンをクリックします。
+
+管理者一覧で当該ユーザーの権限が変更されます。
+
+### 管理者アカウントの削除
+
+管理者が不要になった場合、管理者アカウントを削除できます。 管理者アカウントを削除すると、該当管理者はパートナーポータルにログインできず、アカウント情報は完全に削除され復元できません。
+
+1. 管理者一覧で削除する管理者のチェックボックスをクリックします。 1人以上の管理者を選択できます。
+
+2. 画面左上の <IcAirRemove title='Delete' /> ボタンをクリックします。 
+
+   <Image src='/img/air/bsair-partner-admin-list-delete.png' />
+
+3. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='common.button.confirm' product='pn' /> ボタンをクリックします。 
+
+4. アカウント削除の成功メッセージが表示されたら、<Cmd sid='common.button.close' product='pn' /> ボタンをクリックします。
+
+削除した管理者アカウントは管理者一覧に表示されなくなります。

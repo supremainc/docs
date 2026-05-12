@@ -1,0 +1,64 @@
+---
+id: use-xp2-primary-device
+title: エッジデバイスをマスター装置として使用する
+description: エッジデバイスをマスター装置に設定し、XPass D2 を補助装置として接続する手順を説明します。
+keywords:
+  - XPass 2
+  - XPass D2
+---
+
+エッジデバイスをマスター装置に設定すると、XPass D2 を補助装置として接続できます。 これにより、すべての入退室制御はエッジデバイスで管理できます。 ドアに入口と出口のデバイスがある構成を、ネットワーク接続を2つ用意することなく構成できます.
+
+この文書では、XPass 2 をマスター装置に設定し、XPass D2 を補助装置として接続する手順を段階的に説明します。 また、マスター‑補助デバイス構成でサポートされる機能と制限についても説明します.
+
+## 開始する前に
+
+XPass 2をマスターデバイスに設定する前に、ファームウェアを **2.12** 以上に更新する必要があります. ファームウェアの更新に関する詳細は <DocLink docId='platform/biostar_air/how-to-upgrade-firmware' /> を参照してください。
+
+## XPass 2をマスターデバイスに変更する
+
+1. 画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。
+
+2. デバイス一覧でXPass 2をクリックします.
+
+3. <Cmd sid='device_edit_title' product='air' /> ウィンドウが表示されたら、<Cmd sid='new_layout_nav_title_network' product='air' /> セクションに移動します.
+
+4. <Cmd sid='device_xpass2_rs485' product='air' /> 設定を <Cmd sid='device_xpass2_rs485_master' product='air' /> に変更します.
+
+   <Image src='/img/air/bsair-device-xpass2-rs485-set-master.png' />
+
+5. 変更を保存するには、下部の <Cmd sid='save_btn' product='air' /> をクリックします。
+
+## 補助デバイスの追加
+
+XPass D2や Secure Module(SIO2)などの補助デバイスを追加できます. 
+
+1. デバイス一覧でマスターに設定したXPass 2の最も右にある <IcAirMore title='More' /> ボタンをクリックします.
+
+   <Image src='/img/air/bsair-device-xpass2-add-slave.png' />
+
+2. ポップアップメニューで <Cmd sid='add_slave_devices' product='air' /> をクリックすると、<Cmd sid='add_slave_devices' product='air' /> ウィンドウが表示されます。
+
+   <Image src='/img/air/bsair-device-xpass2-add-slave-find.png' />
+
+   :::note
+
+   スレーブデバイスが見つからない場合は、<Cmd sid='find_devices' product='air' /> ボタンをクリックしてXPass 2に接続されたデバイスを再検索できます.
+
+   :::
+
+3. 接続されたスレーブデバイスが一覧に表示されたら、追加するデバイスの横にあるチェックボックスをクリックして選択します.
+
+4. 選択が完了したら、<Cmd sid='add_btn' product='air' /> ボタンをクリックしてください。
+
+接続されたスレーブデバイスがXPass 2の下に階層的に表示されます. これでパネル一覧でXPass 2に接続されたすべてのデバイスを一目で確認できます.
+
+:::info
+
+* XPass D2 の詳細は [XPass D2 インストールガイド](../../device/xpass_d2) を参照してください。
+
+* マスターに設定した XPass 2 は最大 31 台の補助デバイスを割り当て可能です。
+
+* Secure Module (SIO2) の詳細は [Secure Module インストールガイド](../../device/securemodule) を参照してください。
+
+:::

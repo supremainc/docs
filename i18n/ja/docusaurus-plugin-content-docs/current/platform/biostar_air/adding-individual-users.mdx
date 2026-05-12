@@ -135,7 +135,7 @@ keywords:
 
 2. 下部に表示されるメニューから、希望する方法で画像を追加してください。
 
-   * <Cmd en='Choose from library'>ライブラリから選択</Cmd>: モバイル端末に保存された画像ファイルを選択してアップロードできます。
+   * <Cmd en='Choose from library'>ライブラリから選択</Cmd>：モバイル端末に保存された画像ファイルを選択してアップロードできます。
 
    * <Cmd en='Take photo'>写真を撮る</Cmd>：モバイル端末のカメラで写真を撮影してアップロードできます。
 
@@ -158,7 +158,7 @@ keywords:
 
   <Image src='/img/air/bsair-add-user-credential-user-type-regular.png' />
 
-* <Cmd sid='user_temporary_card_type' product='air' />: 短期かつ限定的な入退室権限を必要とする訪問者または非正規メンバーです。 ゲスト、外部来訪者、短期契約者、配達員などが該当します。 <Cmd sid='user_form_input20' product='air' /> のクレデンシャルのみ発行でき、QRコードとLinkPassが含まれます。
+* <Cmd sid='user_temporary_card_type' product='air' />：短期かつ限定的な入退室権限を必要とする訪問者または非正規メンバーです。 ゲスト、外部来訪者、短期契約者、配達員などが該当します。 <Cmd sid='user_form_input20' product='air' /> のクレデンシャルのみ発行でき、QRコードとLinkPassが含まれます。
 
   <Image src='/img/air/bsair-add-user-credential-user-type-temporary.png' />
 
@@ -171,7 +171,7 @@ keywords:
 
 * <Cmd sid='user_regular_card_type' product='air' />：組織または施設の正規メンバーで、長期かつ継続的な入退室権限が必要なユーザーです。 すべてのクレデンシャルタイプを発行できます。
 
-* <Cmd sid='user_temporary_card_type' product='air' />: 短期かつ限定的な入退室権限を必要とする訪問者または非正規メンバーです。 ゲスト、外部来訪者、短期契約者、配達員などが該当します。 <Cmd sid='user_form_input20' product='air' /> のクレデンシャルのみ発行でき、QRコードとLinkPassが含まれます。
+* <Cmd sid='user_temporary_card_type' product='air' />：短期かつ限定的な入退室権限を必要とする訪問者または非正規メンバーです。 ゲスト、外部来訪者、短期契約者、配達員などが該当します。 <Cmd sid='user_form_input20' product='air' /> のクレデンシャルのみ発行でき、QRコードとLinkPassが含まれます。
 
 </TabItem>
 </Tabs>
@@ -254,7 +254,7 @@ keywords:
 
   :::
 
-* <Cmd sid='card_type_option5' product='air' />：アクセス認証手段として顔のプロフィール画像を最大2つまで追加できます。 既存の画像をアップロードするか、デバイスで登録できます。 またはメールでリンクを送って、ユーザーがモバイル端末のカメラで直接登録することもできます。
+* <Cmd sid='card_type_option5' product='air' />：アクセス認証手段として顔のプロフィール画像を最大2つまで追加できます。 既存の画像をアップロードするか、デバイスで登録できます。 または、メールやSMSでリンクを送信して、ユーザーがモバイル端末のカメラで直接登録できます。
 
   <Tabs groupId='platform'>
   <TabItem value='web' label='Web'>
@@ -263,11 +263,13 @@ keywords:
 
   * <Cmd sid='select_file' product='air' />：ローカルに保存された画像ファイルを選択してアップロードできます。
 
-  * <Cmd sid='register_on_device' product='air' />: 登録済みのデバイスを使用して顔画像を登録できます。
+  * <Cmd sid='register_on_device' product='air' />：登録済みのデバイスを使用して顔画像を登録できます。
 
   * <Cmd sid='register_on_mobile' product='air' />：モバイル端末のカメラでQRコードをスキャンすると、顔画像を登録できるリンクに移動できます。
 
     <Image src='/img/air/bsair-add-user-credential-credential-type-face-qr.png' width='50%' />
+
+  * <Cmd sid='user_list_send_face_registration_tooltip' product='air' />：ユーザーのメールやSMSに顔登録リンクを送信して、モバイル端末のカメラで顔を直接登録できます。
 
   </TabItem>
   <TabItem value='mobile' label='Mobile'>
@@ -282,9 +284,11 @@ keywords:
 
   顔写真を追加するには <IcAdd title='Add' /> ボタンをタップしてください。 画面下部に表示されるメニューから、任意の方法で顔写真を追加できます。
 
-  * <Cmd en='Choose from library'>ライブラリから選択</Cmd>: モバイル端末に保存された画像ファイルを選択してアップロードできます。
+  * <Cmd en='Choose from library'>ライブラリから選択</Cmd>：モバイル端末に保存された画像ファイルを選択してアップロードできます。
 
   * <Cmd en='Take photo'>写真を撮る</Cmd>：モバイル端末のカメラで写真を撮影してアップロードできます。
+
+  * <Cmd sid='user_list_send_face_registration_tooltip' product='air' />：ユーザーのメールに顔登録リンクを送信し、モバイル端末のカメラで直接顔を登録できます.
 
   * <Cmd sid='use_as_profile_image' product='air' />：プロフィール画像を顔認証用のクレデンシャルとして使用できます。
 
@@ -300,7 +304,7 @@ keywords:
   </TabItem>
   </Tabs>
 
-* <Cmd sid='card_type_option6' product='air' />：4〜16桁のPINを設定して、2要素認証（2FA）の一部として使用できます。
+* <Cmd sid='device_authentication_2fa_pin' product='air' />：4〜16桁のPINを設定して、2要素認証（2FA）の一部として使用できます.
 
   <Tabs groupId='platform'>
   <TabItem value='web' label='Web'>
@@ -361,17 +365,15 @@ keywords:
 
 * <Cmd sid='user_form_input19' product='air' />：ユーザーがアクセスできるフロアレベルを選択してください。
 
-* <Cmd sid='user_device_manager' product='air' />: ユーザーが特定のデバイスでアクセス権を管理できるように許可できます。
+* <Cmd sid='user_device_manager' product='air' />：ユーザーが特定のデバイスでアクセス権を管理できるように許可できます。
 
 * <Cmd sid='mobile_consecutive_tag' product='air' />：ウェイトなしで連続してモバイルカードをタッチできるように許可できます。 この機能はSuprema Passアプリ2.9.0以降でサポートされています。
 
 :::info
 
-* <Cmd sid='user_form_input12' product='air' /> は恒久割り当て（クレデンシャルと共に期限切れ）または一時割り当て（クレデンシャルより先に期限切れ）を設定できます。 アクセスレベルの設定に関する詳細は <DocLink docId='platform/biostar_air/manage-access-level' /> を参照してください。
-
 * フロアレベルの設定に関する詳細は <DocLink docId='platform/biostar_air/manage-floor-level' /> を参照してください。
 
-* <Cmd sid='user_device_manager' product='air' /> オプションは X-Station 2 ユーザーのみ利用可能で、X-Station 2 端末の管理者メニューにアクセスできます。
+* <Cmd sid='user_device_manager' product='air' /> オプションは BioStation 3、X-Station 2 のユーザーのみ利用できます. デバイス管理者に設定されたユーザーは、BioStation 3、X-Station 2 の管理者メニューを利用できます.
 
 :::
 
