@@ -2233,28 +2233,28 @@
         clip-path: url(#clippath-187);
       }
     </style>
-    <linearGradient id="_무제_그라디언트_188" data-name="무제 그라디언트 188" x1="2295" y1="1703.54" x2="2294.66" y2="1712.87" gradientTransform="translate(-1666.41 2282.4) rotate(-85.09) scale(1 .98)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="_무제_그라디언트_188" data-name="무제 그라디언트 188" x1="2765.14" y1="1493.32" x2="2764.8" y2="1502.66" gradientTransform="translate(-1501.06 2768.48) rotate(-85.09) scale(1 .98)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#231815"/>
       <stop offset=".34" stop-color="#595757"/>
       <stop offset=".67" stop-color="#000"/>
       <stop offset="1" stop-color="#595757"/>
     </linearGradient>
-    <linearGradient id="_무제_그라디언트_1881" data-name="무제 그라디언트 188" x1="2269.57" y1="1702.62" x2="2269.23" y2="1711.95" xlink:href="#_무제_그라디언트_188"/>
-    <linearGradient id="_무제_그라디언트_1882" data-name="무제 그라디언트 188" x1="2217.3" y1="1700.73" x2="2216.97" y2="1710.06" xlink:href="#_무제_그라디언트_188"/>
-    <linearGradient id="_무제_그라디언트_226" data-name="무제 그라디언트 226" x1="-2623.15" y1="1342.19" x2="-2611.86" y2="1352.29" gradientTransform="translate(1007.99 -2660.04) rotate(-43.46) scale(.95 1.05) skewX(1.91)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="_무제_그라디언트_1881" data-name="무제 그라디언트 188" x1="2739.71" y1="1492.4" x2="2739.37" y2="1501.74" xlink:href="#_무제_그라디언트_188"/>
+    <linearGradient id="_무제_그라디언트_1882" data-name="무제 그라디언트 188" x1="2687.45" y1="1490.51" x2="2687.11" y2="1499.85" xlink:href="#_무제_그라디언트_188"/>
+    <linearGradient id="_무제_그라디언트_226" data-name="무제 그라디언트 226" x1="-2418.21" y1="1163.1" x2="-2406.93" y2="1173.2" gradientTransform="translate(999.67 -2393.21) rotate(-43.46) scale(.95 1.05) skewX(1.91)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#dcdddd"/>
       <stop offset=".34" stop-color="#f7f8f8"/>
       <stop offset=".67" stop-color="#dcdddd"/>
       <stop offset="1" stop-color="#b5b5b6"/>
     </linearGradient>
-    <linearGradient id="_무제_그라디언트_2261" data-name="무제 그라디언트 226" x1="-2620.34" y1="1338.03" x2="-2609.36" y2="1349.16" xlink:href="#_무제_그라디언트_226"/>
-    <linearGradient id="_무제_그라디언트_137" data-name="무제 그라디언트 137" x1="-2603.11" y1="1324.18" x2="-2592.47" y2="1333.85" gradientTransform="translate(1007.99 -2660.04) rotate(-43.46) scale(.95 1.05) skewX(1.91)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="_무제_그라디언트_2261" data-name="무제 그라디언트 226" x1="-2415.41" y1="1158.94" x2="-2404.42" y2="1170.07" xlink:href="#_무제_그라디언트_226"/>
+    <linearGradient id="_무제_그라디언트_137" data-name="무제 그라디언트 137" x1="-2398.17" y1="1145.09" x2="-2387.54" y2="1154.76" gradientTransform="translate(999.67 -2393.21) rotate(-43.46) scale(.95 1.05) skewX(1.91)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#efefef"/>
       <stop offset=".34" stop-color="#fdfeff"/>
       <stop offset="1" stop-color="#b3b5b6"/>
       <stop offset="1" stop-color="#8d938f"/>
     </linearGradient>
-    <linearGradient id="linear-gradient" x1="-2602.22" y1="1324.16" x2="-2593.2" y2="1324.16" gradientTransform="translate(1007.99 -2660.04) rotate(-43.46) scale(.95 1.05) skewX(1.91)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient" x1="-2397.28" y1="1145.07" x2="-2388.26" y2="1145.07" gradientTransform="translate(999.67 -2393.21) rotate(-43.46) scale(.95 1.05) skewX(1.91)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#999"/>
       <stop offset=".02" stop-color="#979798"/>
       <stop offset=".95" stop-color="#979798"/>
@@ -2273,7 +2273,7 @@
     <clipPath id="clippath-5">
       <rect class="st20" x="198.31" y="32.43" width=".21" height="0" transform="translate(-2.38 42.48) rotate(-12.15)"/>
     </clipPath>
-    <linearGradient id="linear-gradient1" x1="-404.69" y1="-43.36" x2="-404.32" y2="-43.36" gradientTransform="translate(-3353.04 453.13) rotate(171.07) scale(9.05 3.13) skewX(-12.38)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient1" x1="-10.4" y1="196.74" x2="-10.03" y2="196.74" gradientTransform="translate(-182.3 715.99) rotate(171.07) scale(9.05 3.13) skewX(-12.38)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#939494"/>
       <stop offset=".36" stop-color="#fff"/>
       <stop offset=".9" stop-color="#939494"/>
@@ -2285,21 +2285,21 @@
     <clipPath id="clippath-7">
       <path class="st20" d="M198.31,32.46h0s0,0,0,0Z"/>
     </clipPath>
-    <linearGradient id="linear-gradient2" x1="-401.14" y1="-46.1" x2="-401.14" y2="-46.1" gradientTransform="translate(-3135.08 1163.63) rotate(158.92) scale(8.99 3.11) skewX(-12.38)" xlink:href="#linear-gradient1"/>
+    <linearGradient id="linear-gradient2" x1="-6.55" y1="194.53" x2="-6.55" y2="194.53" gradientTransform="translate(2.61 756.81) rotate(158.92) scale(8.99 3.11) skewX(-12.38)" xlink:href="#linear-gradient1"/>
     <clipPath id="clippath-8">
       <rect class="st20" x="198.08" y="32.48" width=".24" height="0" transform="translate(-.38 2.39) rotate(-.69)"/>
     </clipPath>
     <clipPath id="clippath-9">
       <rect class="st20" x="198.08" y="32.48" width=".24" height="0" transform="translate(-2.4 42.44) rotate(-12.15)"/>
     </clipPath>
-    <linearGradient id="linear-gradient3" x1="-403.82" y1="-43.9" x2="-403.45" y2="-43.9" gradientTransform="translate(-3339.19 449.48) rotate(171.07) scale(9.04 3.13) skewX(-12.38)" xlink:href="#linear-gradient1"/>
+    <linearGradient id="linear-gradient3" x1="-9.46" y1="196.33" x2="-9.09" y2="196.33" gradientTransform="translate(-172.7 712.28) rotate(171.07) scale(9.04 3.13) skewX(-12.38)" xlink:href="#linear-gradient1"/>
     <clipPath id="clippath-10">
       <rect class="st20" x="197.28" y="32.65" width=".21" height="0" transform="translate(-.38 2.38) rotate(-.69)"/>
     </clipPath>
     <clipPath id="clippath-11">
       <rect class="st20" x="197.28" y="32.65" width=".21" height="0" transform="translate(-2.45 42.27) rotate(-12.15)"/>
     </clipPath>
-    <linearGradient id="linear-gradient4" x1="-547.68" y1="79.45" x2="-547.31" y2="79.45" gradientTransform="translate(-6801.14 1484.32) rotate(171.07) scale(12.64 4.37) skewX(-12.38)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient4" x1="-167.12" y1="295.21" x2="-166.75" y2="295.21" gradientTransform="translate(-2494.63 1762.68) rotate(171.07) scale(12.64 4.37) skewX(-12.38)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#7a3315"/>
       <stop offset=".04" stop-color="#965e45"/>
       <stop offset=".09" stop-color="#b38a76"/>
@@ -2323,7 +2323,7 @@
     <clipPath id="clippath-13">
       <rect class="st20" x="197.05" y="32.7" width=".24" height="0" transform="translate(-2.47 42.23) rotate(-12.15)"/>
     </clipPath>
-    <linearGradient id="linear-gradient5" x1="-547.48" y1="79.14" x2="-547.1" y2="79.14" gradientTransform="translate(-6792.53 1481.34) rotate(171.07) scale(12.63 4.37) skewX(-12.38)" xlink:href="#linear-gradient4"/>
+    <linearGradient id="linear-gradient5" x1="-166.89" y1="294.95" x2="-166.52" y2="294.95" gradientTransform="translate(-2489.09 1759.67) rotate(171.07) scale(12.63 4.37) skewX(-12.38)" xlink:href="#linear-gradient4"/>
     <clipPath id="clippath-14">
       <path class="st20" d="M204.08,27s.02-.07.06-.1c.02,0,.03,0,.05,0-.01,0-.03,0-.05,0,.01-.01.03-.02.05-.03v-1.07s-.15.03-.15.03v1.09s.04,0,.05-.01h.05s-.06.06-.06.09"/>
     </clipPath>
@@ -3041,7 +3041,7 @@
     <clipPath id="clippath-252">
       <polygon class="st20" points="197.05 32.73 196.85 32.77 196.86 33.55 197.06 33.51 197.05 32.73"/>
     </clipPath>
-    <linearGradient id="linear-gradient6" x1="-563.74" y1="92.99" x2="-563.06" y2="92.99" gradientTransform="translate(-6848.24 3204.78) rotate(158.92) scale(13.22 4.57) skewX(-12.38)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient6" x1="-184.7" y1="306.07" x2="-184.02" y2="306.07" gradientTransform="translate(-2399.73 2534.46) rotate(158.92) scale(13.22 4.57) skewX(-12.38)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#d7d7d8"/>
       <stop offset=".02" stop-color="#a6a6a7"/>
       <stop offset=".02" stop-color="#a4a4a5"/>
@@ -3057,7 +3057,7 @@
     <clipPath id="clippath-254">
       <polygon class="st20" points="197.88 32.55 197.49 32.63 197.5 33.41 197.89 33.33 197.88 32.55"/>
     </clipPath>
-    <linearGradient id="linear-gradient7" x1="-799.05" y1="295.33" x2="-798.52" y2="295.33" gradientTransform="translate(-31968.8 17043.44) rotate(158.88) scale(41.87 14.48) skewX(-12.27)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient7" x1="-442.7" y1="468.27" x2="-442.17" y2="468.27" gradientTransform="translate(-18616.77 14568.84) rotate(158.88) scale(41.87 14.48) skewX(-12.27)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#d7d7d8"/>
       <stop offset=".08" stop-color="#d9dada"/>
       <stop offset=".91" stop-color="#d8d9d9"/>
@@ -3070,70 +3070,70 @@
     <clipPath id="clippath-256">
       <polygon class="st20" points="198.08 32.51 197.88 32.55 197.89 33.33 198.09 33.29 198.08 32.51"/>
     </clipPath>
-    <linearGradient id="linear-gradient8" x1="-474.39" y1="16.13" x2="-473.71" y2="16.13" gradientTransform="translate(-4456.38 1889.9) rotate(158.92) scale(10.5 3.63) skewX(-12.38)" xlink:href="#linear-gradient6"/>
+    <linearGradient id="linear-gradient8" x1="-86.77" y1="244.41" x2="-86.09" y2="244.41" gradientTransform="translate(-852.01 1389.27) rotate(158.92) scale(10.5 3.63) skewX(-12.38)" xlink:href="#linear-gradient6"/>
     <clipPath id="clippath-257">
       <polygon class="st20" points="198.53 33.19 198.91 33.11 198.9 32.33 198.81 32.35 198.52 32.41 198.53 33.19"/>
     </clipPath>
     <clipPath id="clippath-258">
       <polygon class="st20" points="198.9 32.33 198.52 32.41 198.53 33.19 198.91 33.11 198.9 32.33"/>
     </clipPath>
-    <linearGradient id="linear-gradient9" x1="-799.05" y1="295.32" x2="-798.51" y2="295.32" xlink:href="#linear-gradient7"/>
+    <linearGradient id="linear-gradient9" x1="-442.69" y1="468.25" x2="-442.16" y2="468.25" xlink:href="#linear-gradient7"/>
     <clipPath id="clippath-259">
       <polygon class="st20" points="198.91 33.11 199.12 33.07 199.11 32.29 198.9 32.33 198.91 33.11"/>
     </clipPath>
     <clipPath id="clippath-260">
       <polygon class="st20" points="199.11 32.29 198.91 32.33 198.91 33.11 199.12 33.07 199.11 32.29"/>
     </clipPath>
-    <linearGradient id="linear-gradient10" x1="498.31" y1="-819.21" x2="499" y2="-819.21" gradientTransform="translate(1919.99 -1614.62) rotate(158.92) scale(3.24 1.12) skewX(-12.38)" xlink:href="#linear-gradient6"/>
+    <linearGradient id="linear-gradient10" x1="979.37" y1="-425.27" x2="980.06" y2="-425.27" gradientTransform="translate(3271.1 -1662.3) rotate(158.92) scale(3.24 1.12) skewX(-12.38)" xlink:href="#linear-gradient6"/>
     <clipPath id="clippath-261">
       <polygon class="st20" points="199.55 32.97 199.95 32.89 199.94 32.11 199.54 32.19 199.55 32.97"/>
     </clipPath>
     <clipPath id="clippath-262">
       <polygon class="st20" points="199.94 32.11 199.54 32.19 199.55 32.97 199.95 32.89 199.94 32.11"/>
     </clipPath>
-    <linearGradient id="linear-gradient11" x1="-799.03" y1="295.31" x2="-798.5" y2="295.31" xlink:href="#linear-gradient7"/>
+    <linearGradient id="linear-gradient11" x1="-442.68" y1="468.24" x2="-442.15" y2="468.24" xlink:href="#linear-gradient7"/>
     <clipPath id="clippath-263">
       <polygon class="st20" points="199.95 32.89 200.14 32.84 200.14 32.07 199.94 32.11 199.95 32.89"/>
     </clipPath>
     <clipPath id="clippath-264">
       <polygon class="st20" points="200.14 32.07 199.94 32.11 199.95 32.89 200.14 32.84 200.14 32.07"/>
     </clipPath>
-    <linearGradient id="linear-gradient12" x1="978.44" y1="-1229.98" x2="979.13" y2="-1229.98" gradientTransform="translate(2646.03 -2012.44) rotate(158.92) scale(2.42 .84) skewX(-12.38)" xlink:href="#linear-gradient6"/>
+    <linearGradient id="linear-gradient12" x1="1505.51" y1="-754.47" x2="1506.2" y2="-754.47" gradientTransform="translate(3741.83 -2008.8) rotate(158.92) scale(2.42 .84) skewX(-12.38)" xlink:href="#linear-gradient6"/>
     <clipPath id="clippath-265">
       <polygon class="st20" points="203.02 32.23 203.23 32.18 203.22 31.42 203.01 31.46 203.02 32.23"/>
     </clipPath>
     <clipPath id="clippath-266">
       <polygon class="st20" points="203.22 31.41 203.01 31.46 203.02 32.23 203.23 32.18 203.22 31.41"/>
     </clipPath>
-    <linearGradient id="linear-gradient13" x1="-445.22" y1="-8.63" x2="-444.54" y2="-8.63" gradientTransform="translate(-3882.23 1575.12) rotate(158.92) scale(9.85 3.41) skewX(-12.38)" xlink:href="#linear-gradient6"/>
+    <linearGradient id="linear-gradient13" x1="-54.86" y1="224.5" x2="-54.18" y2="224.5" gradientTransform="translate(-478.62 1114.84) rotate(158.92) scale(9.85 3.41) skewX(-12.38)" xlink:href="#linear-gradient6"/>
     <clipPath id="clippath-267">
       <polygon class="st20" points="202 32.45 202.2 32.4 202.19 31.63 201.99 31.68 202 32.45"/>
     </clipPath>
     <clipPath id="clippath-268">
       <polygon class="st20" points="202.19 31.63 201.99 31.68 202 32.45 202.2 32.4 202.19 31.63"/>
     </clipPath>
-    <linearGradient id="linear-gradient14" x1="-143.45" y1="-267.38" x2="-142.76" y2="-267.38" gradientTransform="translate(-467.1 -301.38) rotate(158.92) scale(5.96 2.06) skewX(-12.38)" xlink:href="#linear-gradient6"/>
+    <linearGradient id="linear-gradient14" x1="275.87" y1="17.09" x2="276.55" y2="17.09" gradientTransform="translate(1729.89 -519.1) rotate(158.92) scale(5.96 2.06) skewX(-12.38)" xlink:href="#linear-gradient6"/>
     <clipPath id="clippath-269">
       <polygon class="st20" points="203.93 32.03 204.14 31.99 204.13 31.22 203.92 31.27 203.93 32.03"/>
     </clipPath>
     <clipPath id="clippath-270">
       <polygon class="st20" points="204.13 31.22 203.92 31.27 203.93 32.03 204.14 31.99 204.13 31.22"/>
     </clipPath>
-    <linearGradient id="linear-gradient15" x1="-510.36" y1="47.39" x2="-509.68" y2="47.39" gradientTransform="translate(-5300.48 2355.05) rotate(158.92) scale(11.47 3.97) skewX(-12.38)" xlink:href="#linear-gradient6"/>
+    <linearGradient id="linear-gradient15" x1="-126.27" y1="269.41" x2="-125.59" y2="269.41" gradientTransform="translate(-1395 1793.88) rotate(158.92) scale(11.47 3.97) skewX(-12.38)" xlink:href="#linear-gradient6"/>
     <clipPath id="clippath-271">
       <polygon class="st20" points="200.97 32.67 201.17 32.62 201.16 31.85 200.96 31.89 200.97 32.67"/>
     </clipPath>
     <clipPath id="clippath-272">
       <polygon class="st20" points="201.16 31.85 200.96 31.89 200.97 32.67 201.17 32.62 201.16 31.85"/>
     </clipPath>
-    <linearGradient id="linear-gradient16" x1="707.16" y1="-997.23" x2="707.85" y2="-997.23" gradientTransform="translate(2290.18 -1816.81) rotate(158.92) scale(2.82 .98) skewX(-12.38)" xlink:href="#linear-gradient6"/>
+    <linearGradient id="linear-gradient16" x1="1208.15" y1="-567.96" x2="1208.84" y2="-567.96" gradientTransform="translate(3512.08 -1838.52) rotate(158.92) scale(2.82 .98) skewX(-12.38)" xlink:href="#linear-gradient6"/>
     <clipPath id="clippath-273">
       <polygon class="st20" points="203.46 32.13 203.66 32.09 203.65 31.32 203.45 31.37 203.46 32.13"/>
     </clipPath>
     <clipPath id="clippath-274">
       <polygon class="st20" points="203.65 31.32 203.45 31.37 203.46 32.13 203.66 32.09 203.65 31.32"/>
     </clipPath>
-    <linearGradient id="linear-gradient17" x1="-441.07" y1="-12.05" x2="-440.4" y2="-12.05" gradientTransform="translate(-3806.52 1533.88) rotate(158.92) scale(9.77 3.38) skewX(-12.38)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient17" x1="-50.33" y1="221.76" x2="-49.65" y2="221.76" gradientTransform="translate(-429.29 1078.9) rotate(158.92) scale(9.77 3.38) skewX(-12.38)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#c89867"/>
       <stop offset=".21" stop-color="#dddddc"/>
       <stop offset=".88" stop-color="#c9a06a"/>
@@ -3145,14 +3145,14 @@
     <clipPath id="clippath-276">
       <polygon class="st20" points="203.45 31.37 203.22 31.42 203.23 32.18 203.46 32.13 203.45 31.37"/>
     </clipPath>
-    <linearGradient id="linear-gradient18" x1="-441.24" y1="-11.87" x2="-440.59" y2="-11.87" gradientTransform="translate(-3809.36 1535.58) rotate(158.92) scale(9.77 3.38) skewX(-12.38)" xlink:href="#linear-gradient17"/>
+    <linearGradient id="linear-gradient18" x1="-50.51" y1="221.92" x2="-49.87" y2="221.92" gradientTransform="translate(-431.08 1080.39) rotate(158.92) scale(9.77 3.38) skewX(-12.38)" xlink:href="#linear-gradient17"/>
     <clipPath id="clippath-277">
       <polygon class="st20" points="202.43 32.35 202.64 32.31 202.63 31.54 202.42 31.58 202.43 32.35"/>
     </clipPath>
     <clipPath id="clippath-278">
       <polygon class="st20" points="202.63 31.54 202.42 31.58 202.43 32.35 202.64 32.31 202.63 31.54"/>
     </clipPath>
-    <linearGradient id="linear-gradient19" x1="-172.02" y1="-242.79" x2="-171.34" y2="-242.79" gradientTransform="translate(-670.6 -189.38) rotate(158.92) scale(6.2 2.14) skewX(-12.38)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient19" x1="244.55" y1="36.8" x2="245.23" y2="36.8" gradientTransform="translate(1598.42 -421.57) rotate(158.92) scale(6.2 2.14) skewX(-12.38)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#a3a4a4"/>
       <stop offset=".36" stop-color="#ddddde"/>
       <stop offset=".9" stop-color="#a3a4a4"/>
@@ -3164,28 +3164,28 @@
     <clipPath id="clippath-280">
       <polygon class="st20" points="202.42 31.58 202.19 31.63 202.2 32.4 202.43 32.35 202.42 31.58"/>
     </clipPath>
-    <linearGradient id="linear-gradient20" x1="-173.72" y1="-241.33" x2="-173.08" y2="-241.33" gradientTransform="translate(-683.05 -182.53) rotate(158.92) scale(6.21 2.15) skewX(-12.38)" xlink:href="#linear-gradient19"/>
+    <linearGradient id="linear-gradient20" x1="242.68" y1="37.97" x2="243.33" y2="37.97" gradientTransform="translate(1590.39 -415.63) rotate(158.92) scale(6.21 2.15) skewX(-12.38)" xlink:href="#linear-gradient19"/>
     <clipPath id="clippath-281">
       <polygon class="st20" points="204.37 31.94 204.57 31.89 204.56 31.13 204.36 31.17 204.37 31.94"/>
     </clipPath>
     <clipPath id="clippath-282">
       <polygon class="st20" points="204.56 31.13 204.36 31.17 204.37 31.94 204.57 31.89 204.56 31.13"/>
     </clipPath>
-    <linearGradient id="linear-gradient21" x1="3539.14" y1="-3425.16" x2="3539.83" y2="-3425.16" gradientTransform="translate(3876.86 -2687.92) rotate(158.92) scale(1.03 .36) skewX(-12.38)" xlink:href="#linear-gradient19"/>
+    <linearGradient id="linear-gradient21" x1="4311.42" y1="-2514.92" x2="4312.1" y2="-2514.92" gradientTransform="translate(4541.38 -2597.58) rotate(158.92) scale(1.03 .36) skewX(-12.38)" xlink:href="#linear-gradient19"/>
     <clipPath id="clippath-283">
       <polygon class="st20" points="204.14 31.99 204.37 31.94 204.36 31.17 204.13 31.22 204.14 31.99"/>
     </clipPath>
     <clipPath id="clippath-284">
       <polygon class="st20" points="204.36 31.17 204.13 31.22 204.14 31.99 204.37 31.94 204.36 31.17"/>
     </clipPath>
-    <linearGradient id="linear-gradient22" x1="3541.04" y1="-3425.69" x2="3541.68" y2="-3425.69" gradientTransform="translate(3877.67 -2688.04) rotate(158.92) scale(1.03 .36) skewX(-12.38)" xlink:href="#linear-gradient19"/>
+    <linearGradient id="linear-gradient22" x1="4313.46" y1="-2515.2" x2="4314.1" y2="-2515.2" gradientTransform="translate(4542.08 -2597.68) rotate(158.92) scale(1.03 .36) skewX(-12.38)" xlink:href="#linear-gradient19"/>
     <clipPath id="clippath-285">
       <polygon class="st20" points="201.41 32.57 201.61 32.53 201.6 31.76 201.4 31.8 201.41 32.57"/>
     </clipPath>
     <clipPath id="clippath-286">
       <polygon class="st20" points="201.6 31.76 201.4 31.8 201.41 32.57 201.61 32.53 201.6 31.76"/>
     </clipPath>
-    <linearGradient id="linear-gradient23" x1="659" y1="-956.28" x2="659.68" y2="-956.28" gradientTransform="translate(2214.15 -1775.37) rotate(158.92) scale(2.91 1.01) skewX(-12.38)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient23" x1="1155.36" y1="-535.21" x2="1156.05" y2="-535.21" gradientTransform="translate(3463 -1802.5) rotate(158.92) scale(2.91 1.01) skewX(-12.38)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#6d98b0"/>
       <stop offset=".02" stop-color="#6d98b0"/>
       <stop offset=".21" stop-color="#ddddde"/>
@@ -3198,28 +3198,28 @@
     <clipPath id="clippath-288">
       <polygon class="st20" points="201.4 31.8 201.16 31.85 201.17 32.62 201.41 32.57 201.4 31.8"/>
     </clipPath>
-    <linearGradient id="linear-gradient24" x1="658.13" y1="-955.23" x2="658.77" y2="-955.23" gradientTransform="translate(2212.86 -1774.39) rotate(158.92) scale(2.91 1.01) skewX(-12.38)" xlink:href="#linear-gradient23"/>
+    <linearGradient id="linear-gradient24" x1="1154.4" y1="-534.32" x2="1155.04" y2="-534.32" gradientTransform="translate(3462.25 -1801.62) rotate(158.92) scale(2.91 1.01) skewX(-12.38)" xlink:href="#linear-gradient23"/>
     <clipPath id="clippath-289">
       <polygon class="st20" points="200.38 32.79 200.58 32.75 200.57 31.98 200.37 32.02 200.38 32.79"/>
     </clipPath>
     <clipPath id="clippath-290">
       <polygon class="st20" points="200.57 31.98 200.37 32.02 200.38 32.79 200.58 32.75 200.57 31.98"/>
     </clipPath>
-    <linearGradient id="linear-gradient25" x1="1748.16" y1="-1891.08" x2="1748.85" y2="-1891.08" gradientTransform="translate(3260.87 -2350.75) rotate(158.92) scale(1.72 .59) skewX(-12.38)" xlink:href="#linear-gradient19"/>
+    <linearGradient id="linear-gradient25" x1="2349.12" y1="-1284.56" x2="2349.81" y2="-1284.56" gradientTransform="translate(4139.39 -2303.43) rotate(158.92) scale(1.72 .59) skewX(-12.38)" xlink:href="#linear-gradient19"/>
     <clipPath id="clippath-291">
       <polygon class="st20" points="200.14 32.84 200.38 32.79 200.37 32.02 200.14 32.07 200.14 32.84"/>
     </clipPath>
     <clipPath id="clippath-292">
       <polygon class="st20" points="200.37 32.02 200.14 32.07 200.15 32.84 200.38 32.79 200.37 32.02"/>
     </clipPath>
-    <linearGradient id="linear-gradient26" x1="1739.81" y1="-1883.51" x2="1740.46" y2="-1883.51" gradientTransform="translate(3255.96 -2347.76) rotate(158.92) scale(1.72 .6) skewX(-12.38)" xlink:href="#linear-gradient19"/>
+    <linearGradient id="linear-gradient26" x1="2339.99" y1="-1278.38" x2="2340.64" y2="-1278.38" gradientTransform="translate(4136.11 -2300.77) rotate(158.92) scale(1.72 .6) skewX(-12.38)" xlink:href="#linear-gradient19"/>
     <clipPath id="clippath-293">
       <polygon class="st20" points="199.35 33.02 199.55 32.97 199.54 32.19 199.34 32.24 199.35 33.02"/>
     </clipPath>
     <clipPath id="clippath-294">
       <polygon class="st20" points="199.54 32.19 199.34 32.24 199.35 33.02 199.55 32.97 199.54 32.19"/>
     </clipPath>
-    <linearGradient id="linear-gradient27" x1="299.55" y1="-647.87" x2="300.24" y2="-647.87" gradientTransform="translate(1452.18 -1356.76) rotate(158.92) scale(3.77 1.31) skewX(-12.38)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient27" x1="761.48" y1="-287.85" x2="762.17" y2="-287.85" gradientTransform="translate(2969.07 -1437.77) rotate(158.92) scale(3.77 1.31) skewX(-12.38)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#6c9272"/>
       <stop offset=".32" stop-color="#dddddc"/>
       <stop offset=".64" stop-color="#70a378"/>
@@ -3231,35 +3231,35 @@
     <clipPath id="clippath-296">
       <polygon class="st20" points="199.34 32.24 199.11 32.29 199.12 33.07 199.35 33.02 199.34 32.24"/>
     </clipPath>
-    <linearGradient id="linear-gradient28" x1="301.28" y1="-649.86" x2="301.93" y2="-649.86" gradientTransform="translate(1456.91 -1359.92) rotate(158.92) scale(3.77 1.3) skewX(-12.38)" xlink:href="#linear-gradient27"/>
+    <linearGradient id="linear-gradient28" x1="763.4" y1="-289.5" x2="764.05" y2="-289.5" gradientTransform="translate(2971.9 -1440.55) rotate(158.92) scale(3.77 1.3) skewX(-12.38)" xlink:href="#linear-gradient27"/>
     <clipPath id="clippath-297">
       <polygon class="st20" points="198.32 33.24 198.53 33.19 198.52 32.41 198.31 32.46 198.32 33.24"/>
     </clipPath>
     <clipPath id="clippath-298">
       <polygon class="st20" points="198.52 32.41 198.31 32.46 198.32 33.24 198.53 33.19 198.52 32.41"/>
     </clipPath>
-    <linearGradient id="linear-gradient29" x1="-404.97" y1="-43.48" x2="-404.29" y2="-43.48" gradientTransform="translate(-3184.97 1191.11) rotate(158.92) scale(9.05 3.13) skewX(-12.38)" xlink:href="#linear-gradient19"/>
+    <linearGradient id="linear-gradient29" x1="-10.69" y1="196.62" x2="-10" y2="196.62" gradientTransform="translate(-29.93 780.8) rotate(158.92) scale(9.05 3.13) skewX(-12.38)" xlink:href="#linear-gradient19"/>
     <clipPath id="clippath-299">
       <polygon class="st20" points="198.32 33.24 198.32 33.24 198.31 32.46 198.32 33.24"/>
     </clipPath>
     <clipPath id="clippath-300">
       <path class="st20" d="M198.32,33.24v-.78s0,.78,0,.78Z"/>
     </clipPath>
-    <linearGradient id="linear-gradient30" x1="-401.16" y1="-46.22" x2="-401.14" y2="-46.22" gradientTransform="translate(-3135.08 1163.63) rotate(158.92) scale(8.99 3.11) skewX(-12.38)" xlink:href="#linear-gradient19"/>
+    <linearGradient id="linear-gradient30" x1="-6.57" y1="194.41" x2="-6.55" y2="194.41" gradientTransform="translate(2.61 756.81) rotate(158.92) scale(8.99 3.11) skewX(-12.38)" xlink:href="#linear-gradient19"/>
     <clipPath id="clippath-301">
       <polygon class="st20" points="198.09 33.29 198.32 33.24 198.31 32.46 198.08 32.51 198.09 33.29"/>
     </clipPath>
     <clipPath id="clippath-302">
       <polygon class="st20" points="198.31 32.46 198.08 32.51 198.09 33.29 198.32 33.24 198.31 32.46"/>
     </clipPath>
-    <linearGradient id="linear-gradient31" x1="-404.09" y1="-44.01" x2="-403.44" y2="-44.01" gradientTransform="translate(-3172.21 1184.58) rotate(158.92) scale(9.04 3.13) skewX(-12.38)" xlink:href="#linear-gradient19"/>
+    <linearGradient id="linear-gradient31" x1="-9.73" y1="196.21" x2="-9.08" y2="196.21" gradientTransform="translate(-21.33 775.11) rotate(158.92) scale(9.04 3.13) skewX(-12.38)" xlink:href="#linear-gradient19"/>
     <clipPath id="clippath-303">
       <polygon class="st20" points="197.3 33.46 197.5 33.41 197.49 32.63 197.29 32.68 197.3 33.46"/>
     </clipPath>
     <clipPath id="clippath-304">
       <polygon class="st20" points="197.49 32.63 197.29 32.68 197.3 33.46 197.5 33.41 197.49 32.63"/>
     </clipPath>
-    <linearGradient id="linear-gradient32" x1="-547.92" y1="79.36" x2="-547.23" y2="79.36" gradientTransform="translate(-6338.91 2924.64) rotate(158.92) scale(12.64 4.37) skewX(-12.38)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient32" x1="-167.36" y1="295.13" x2="-166.67" y2="295.13" gradientTransform="translate(-2070.26 2290.47) rotate(158.92) scale(12.64 4.37) skewX(-12.38)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#936f5b"/>
       <stop offset="0" stop-color="#977562"/>
       <stop offset=".07" stop-color="#ad978a"/>
@@ -3281,7 +3281,7 @@
     <clipPath id="clippath-306">
       <polygon class="st20" points="197.29 32.68 197.05 32.73 197.06 33.51 197.3 33.46 197.29 32.68"/>
     </clipPath>
-    <linearGradient id="linear-gradient33" x1="-547.7" y1="79.05" x2="-547.05" y2="79.05" gradientTransform="translate(-6331.13 2919.87) rotate(158.92) scale(12.63 4.37) skewX(-12.38)" xlink:href="#linear-gradient32"/>
+    <linearGradient id="linear-gradient33" x1="-167.11" y1="294.86" x2="-166.46" y2="294.86" gradientTransform="translate(-2065.49 2286.31) rotate(158.92) scale(12.63 4.37) skewX(-12.38)" xlink:href="#linear-gradient32"/>
     <clipPath id="clippath-307">
       <rect class="st20" x="203.01" y="31.43" width=".21" height="0" transform="translate(-.36 2.45) rotate(-.69)"/>
     </clipPath>
@@ -3468,7 +3468,7 @@
     <clipPath id="clippath-368">
       <polygon class="st20" points="197.06 33.51 196.86 33.55 196.86 33.93 197.07 33.89 197.06 33.51"/>
     </clipPath>
-    <linearGradient id="linear-gradient34" x1="-563.63" y1="92.87" x2="-563.11" y2="92.87" gradientTransform="translate(-6848.24 3204.78) rotate(158.92) scale(13.22 4.57) skewX(-12.38)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient34" x1="-184.58" y1="305.95" x2="-184.06" y2="305.95" gradientTransform="translate(-2399.73 2534.46) rotate(158.92) scale(13.22 4.57) skewX(-12.38)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#c5c6c7"/>
       <stop offset=".02" stop-color="#adaeae"/>
       <stop offset=".16" stop-color="#a2a3a3"/>
@@ -3482,35 +3482,35 @@
     <clipPath id="clippath-370">
       <polygon class="st20" points="203.23 32.18 203.02 32.23 203.03 32.61 203.23 32.56 203.23 32.18"/>
     </clipPath>
-    <linearGradient id="linear-gradient35" x1="-445.22" y1="-8.79" x2="-444.7" y2="-8.79" gradientTransform="translate(-3882.23 1575.12) rotate(158.92) scale(9.85 3.41) skewX(-12.38)" xlink:href="#linear-gradient34"/>
+    <linearGradient id="linear-gradient35" x1="-54.87" y1="224.34" x2="-54.34" y2="224.34" gradientTransform="translate(-478.62 1114.84) rotate(158.92) scale(9.85 3.41) skewX(-12.38)" xlink:href="#linear-gradient34"/>
     <clipPath id="clippath-371">
       <polygon class="st20" points="202 32.83 202.2 32.78 202.2 32.4 202 32.45 202 32.5 202 32.83"/>
     </clipPath>
     <clipPath id="clippath-372">
       <polygon class="st20" points="202.2 32.4 202 32.45 202 32.83 202.2 32.78 202.2 32.4"/>
     </clipPath>
-    <linearGradient id="linear-gradient36" x1="-143.44" y1="-267.64" x2="-142.91" y2="-267.64" gradientTransform="translate(-467.1 -301.38) rotate(158.92) scale(5.96 2.06) skewX(-12.38)" xlink:href="#linear-gradient34"/>
+    <linearGradient id="linear-gradient36" x1="275.88" y1="16.83" x2="276.4" y2="16.83" gradientTransform="translate(1729.89 -519.1) rotate(158.92) scale(5.96 2.06) skewX(-12.38)" xlink:href="#linear-gradient34"/>
     <clipPath id="clippath-373">
       <polygon class="st20" points="203.94 32.41 204.14 32.37 204.14 31.99 203.93 32.03 203.93 32.08 203.94 32.41"/>
     </clipPath>
     <clipPath id="clippath-374">
       <polygon class="st20" points="204.14 31.99 203.93 32.03 203.94 32.41 204.14 32.37 204.14 31.99"/>
     </clipPath>
-    <linearGradient id="linear-gradient37" x1="-510.36" y1="47.25" x2="-509.83" y2="47.25" gradientTransform="translate(-5300.48 2355.05) rotate(158.92) scale(11.47 3.97) skewX(-12.38)" xlink:href="#linear-gradient34"/>
+    <linearGradient id="linear-gradient37" x1="-126.26" y1="269.28" x2="-125.74" y2="269.28" gradientTransform="translate(-1395 1793.88) rotate(158.92) scale(11.47 3.97) skewX(-12.38)" xlink:href="#linear-gradient34"/>
     <clipPath id="clippath-375">
       <polygon class="st20" points="200.98 33.05 201.18 33 201.17 32.62 200.97 32.67 200.97 32.72 200.98 33.05"/>
     </clipPath>
     <clipPath id="clippath-376">
       <polygon class="st20" points="201.17 32.62 200.97 32.67 200.98 33.05 201.18 33 201.17 32.62"/>
     </clipPath>
-    <linearGradient id="linear-gradient38" x1="707.16" y1="-997.79" x2="707.69" y2="-997.79" gradientTransform="translate(2290.18 -1816.81) rotate(158.92) scale(2.82 .98) skewX(-12.38)" xlink:href="#linear-gradient34"/>
+    <linearGradient id="linear-gradient38" x1="1208.15" y1="-568.51" x2="1208.68" y2="-568.51" gradientTransform="translate(3512.08 -1838.52) rotate(158.92) scale(2.82 .98) skewX(-12.38)" xlink:href="#linear-gradient34"/>
     <clipPath id="clippath-377">
       <polygon class="st20" points="203.46 32.51 203.67 32.47 203.66 32.14 203.66 32.09 203.46 32.13 203.46 32.51"/>
     </clipPath>
     <clipPath id="clippath-378">
       <polygon class="st20" points="203.66 32.09 203.46 32.13 203.46 32.51 203.67 32.47 203.66 32.09"/>
     </clipPath>
-    <linearGradient id="linear-gradient39" x1="-441.09" y1="-12.21" x2="-440.57" y2="-12.21" gradientTransform="translate(-3806.52 1533.88) rotate(158.92) scale(9.77 3.38) skewX(-12.38)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient39" x1="-50.35" y1="221.6" x2="-49.82" y2="221.6" gradientTransform="translate(-429.29 1078.9) rotate(158.92) scale(9.77 3.38) skewX(-12.38)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#bfaa93"/>
       <stop offset=".21" stop-color="#c8c9c9"/>
       <stop offset=".88" stop-color="#bfad95"/>
@@ -3522,14 +3522,14 @@
     <clipPath id="clippath-380">
       <polygon class="st20" points="203.46 32.13 203.23 32.18 203.23 32.56 203.46 32.51 203.46 32.13"/>
     </clipPath>
-    <linearGradient id="linear-gradient40" x1="-441.24" y1="-12.03" x2="-440.74" y2="-12.03" gradientTransform="translate(-3809.36 1535.58) rotate(158.92) scale(9.77 3.38) skewX(-12.38)" xlink:href="#linear-gradient39"/>
+    <linearGradient id="linear-gradient40" x1="-50.51" y1="221.76" x2="-50.01" y2="221.76" gradientTransform="translate(-431.08 1080.39) rotate(158.92) scale(9.77 3.38) skewX(-12.38)" xlink:href="#linear-gradient39"/>
     <clipPath id="clippath-381">
       <polygon class="st20" points="202.44 32.73 202.64 32.69 202.64 32.36 202.64 32.31 202.43 32.35 202.44 32.73"/>
     </clipPath>
     <clipPath id="clippath-382">
       <polygon class="st20" points="202.64 32.31 202.43 32.35 202.44 32.73 202.64 32.69 202.64 32.31"/>
     </clipPath>
-    <linearGradient id="linear-gradient41" x1="-172.02" y1="-243.04" x2="-171.5" y2="-243.04" gradientTransform="translate(-670.6 -189.38) rotate(158.92) scale(6.2 2.14) skewX(-12.38)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient41" x1="244.54" y1="36.55" x2="245.07" y2="36.55" gradientTransform="translate(1598.42 -421.57) rotate(158.92) scale(6.2 2.14) skewX(-12.38)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#acacad"/>
       <stop offset=".36" stop-color="#c8c9ca"/>
       <stop offset=".9" stop-color="#acacad"/>
@@ -3541,28 +3541,28 @@
     <clipPath id="clippath-384">
       <polygon class="st20" points="202.43 32.35 202.2 32.4 202.2 32.78 202.44 32.73 202.43 32.35"/>
     </clipPath>
-    <linearGradient id="linear-gradient42" x1="-173.71" y1="-241.58" x2="-173.21" y2="-241.58" gradientTransform="translate(-683.05 -182.53) rotate(158.92) scale(6.21 2.15) skewX(-12.38)" xlink:href="#linear-gradient41"/>
+    <linearGradient id="linear-gradient42" x1="242.69" y1="37.72" x2="243.19" y2="37.72" gradientTransform="translate(1590.39 -415.63) rotate(158.92) scale(6.21 2.15) skewX(-12.38)" xlink:href="#linear-gradient41"/>
     <clipPath id="clippath-385">
       <polygon class="st20" points="204.37 32.32 204.57 32.27 204.57 31.94 204.57 31.89 204.37 31.94 204.37 32.32"/>
     </clipPath>
     <clipPath id="clippath-386">
       <polygon class="st20" points="204.57 31.89 204.37 31.94 204.37 32.32 204.57 32.27 204.57 31.89"/>
     </clipPath>
-    <linearGradient id="linear-gradient43" x1="3539.03" y1="-3426.67" x2="3539.56" y2="-3426.67" gradientTransform="translate(3876.86 -2687.92) rotate(158.92) scale(1.03 .36) skewX(-12.38)" xlink:href="#linear-gradient41"/>
+    <linearGradient id="linear-gradient43" x1="4311.3" y1="-2516.43" x2="4311.83" y2="-2516.43" gradientTransform="translate(4541.38 -2597.58) rotate(158.92) scale(1.03 .36) skewX(-12.38)" xlink:href="#linear-gradient41"/>
     <clipPath id="clippath-387">
       <polygon class="st20" points="204.14 32.37 204.37 32.32 204.37 31.94 204.14 31.99 204.14 32.37"/>
     </clipPath>
     <clipPath id="clippath-388">
       <polygon class="st20" points="204.37 31.94 204.14 31.99 204.14 32.37 204.37 32.32 204.37 31.94"/>
     </clipPath>
-    <linearGradient id="linear-gradient44" x1="3541.01" y1="-3427.2" x2="3541.52" y2="-3427.2" gradientTransform="translate(3877.67 -2688.04) rotate(158.92) scale(1.03 .36) skewX(-12.38)" xlink:href="#linear-gradient41"/>
+    <linearGradient id="linear-gradient44" x1="4313.43" y1="-2516.7" x2="4313.93" y2="-2516.7" gradientTransform="translate(4542.08 -2597.68) rotate(158.92) scale(1.03 .36) skewX(-12.38)" xlink:href="#linear-gradient41"/>
     <clipPath id="clippath-389">
       <polygon class="st20" points="201.41 32.95 201.61 32.91 201.61 32.58 201.61 32.53 201.41 32.57 201.41 32.95"/>
     </clipPath>
     <clipPath id="clippath-390">
       <polygon class="st20" points="201.61 32.53 201.41 32.57 201.41 32.95 201.61 32.91 201.61 32.53"/>
     </clipPath>
-    <linearGradient id="linear-gradient45" x1="658.96" y1="-956.82" x2="659.49" y2="-956.82" gradientTransform="translate(2214.15 -1775.37) rotate(158.92) scale(2.91 1.01) skewX(-12.38)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient45" x1="1155.33" y1="-535.75" x2="1155.85" y2="-535.75" gradientTransform="translate(3463 -1802.5) rotate(158.92) scale(2.91 1.01) skewX(-12.38)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#96a8b4"/>
       <stop offset=".02" stop-color="#96a8b4"/>
       <stop offset=".21" stop-color="#c8c9ca"/>
@@ -3575,21 +3575,21 @@
     <clipPath id="clippath-392">
       <polygon class="st20" points="201.41 32.57 201.17 32.62 201.18 33 201.41 32.95 201.41 32.57"/>
     </clipPath>
-    <linearGradient id="linear-gradient46" x1="658.12" y1="-955.77" x2="658.62" y2="-955.77" gradientTransform="translate(2212.86 -1774.39) rotate(158.92) scale(2.91 1.01) skewX(-12.38)" xlink:href="#linear-gradient45"/>
+    <linearGradient id="linear-gradient46" x1="1154.39" y1="-534.86" x2="1154.9" y2="-534.86" gradientTransform="translate(3462.25 -1801.62) rotate(158.92) scale(2.91 1.01) skewX(-12.38)" xlink:href="#linear-gradient45"/>
     <clipPath id="clippath-393">
       <polygon class="st20" points="197.5 33.79 197.89 33.71 197.89 33.38 197.5 33.46 197.5 33.79"/>
     </clipPath>
     <clipPath id="clippath-394">
       <polygon class="st20" points="197.89 33.38 197.5 33.46 197.5 33.79 197.89 33.71 197.89 33.38"/>
     </clipPath>
-    <linearGradient id="linear-gradient47" x1="-911.35" y1="385.44" x2="-910.77" y2="385.44" gradientTransform="translate(-360578.9 -286620.38) rotate(-78.68) scale(516.29 1063.75) skewX(52.59)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient47" x1="-564.8" y1="539.47" x2="-564.21" y2="539.47" gradientTransform="translate(-576747.73 -41379.1) rotate(-78.68) scale(516.29 1063.75) skewX(52.59)" xlink:href="#linear-gradient"/>
     <clipPath id="clippath-395">
       <polygon class="st20" points="197.5 33.46 197.89 33.38 197.89 33.33 197.5 33.41 197.5 33.46"/>
     </clipPath>
     <clipPath id="clippath-396">
       <polygon class="st20" points="197.89 33.33 197.5 33.41 197.5 33.46 197.89 33.38 197.89 33.33"/>
     </clipPath>
-    <linearGradient id="linear-gradient48" x1="-798.95" y1="295.3" x2="-798.57" y2="295.3" gradientTransform="translate(-31968.8 17043.44) rotate(158.88) scale(41.87 14.48) skewX(-12.27)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient48" x1="-442.6" y1="468.24" x2="-442.22" y2="468.24" gradientTransform="translate(-18616.77 14568.84) rotate(158.88) scale(41.87 14.48) skewX(-12.27)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#c5c6c7"/>
       <stop offset=".08" stop-color="#c7c8c8"/>
       <stop offset=".91" stop-color="#c7c8c8"/>
@@ -3602,70 +3602,70 @@
     <clipPath id="clippath-398">
       <polygon class="st20" points="198.09 33.29 197.89 33.33 197.89 33.71 198.1 33.67 198.09 33.29"/>
     </clipPath>
-    <linearGradient id="linear-gradient49" x1="-474.25" y1="15.98" x2="-473.73" y2="15.98" gradientTransform="translate(-4456.38 1889.9) rotate(158.92) scale(10.5 3.63) skewX(-12.38)" xlink:href="#linear-gradient34"/>
+    <linearGradient id="linear-gradient49" x1="-86.63" y1="244.26" x2="-86.11" y2="244.26" gradientTransform="translate(-852.01 1389.27) rotate(158.92) scale(10.5 3.63) skewX(-12.38)" xlink:href="#linear-gradient34"/>
     <clipPath id="clippath-399">
       <polygon class="st20" points="198.53 33.57 198.92 33.49 198.91 33.16 198.53 33.24 198.53 33.57"/>
     </clipPath>
     <clipPath id="clippath-400">
       <polygon class="st20" points="198.91 33.16 198.53 33.24 198.53 33.57 198.92 33.49 198.91 33.16"/>
     </clipPath>
-    <linearGradient id="linear-gradient50" x1="-911.35" y1="385.44" x2="-910.77" y2="385.44" gradientTransform="translate(-360578.9 -286620.38) rotate(-78.68) scale(516.29 1063.75) skewX(52.59)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient50" x1="-564.8" y1="539.47" x2="-564.21" y2="539.47" gradientTransform="translate(-576747.73 -41379.1) rotate(-78.68) scale(516.29 1063.75) skewX(52.59)" xlink:href="#linear-gradient"/>
     <clipPath id="clippath-401">
       <polygon class="st20" points="198.53 33.24 198.91 33.16 198.91 33.11 198.53 33.19 198.53 33.24"/>
     </clipPath>
     <clipPath id="clippath-402">
       <polygon class="st20" points="198.91 33.11 198.53 33.19 198.53 33.24 198.91 33.16 198.91 33.11"/>
     </clipPath>
-    <linearGradient id="linear-gradient51" x1="-798.95" y1="295.29" x2="-798.57" y2="295.29" xlink:href="#linear-gradient48"/>
+    <linearGradient id="linear-gradient51" x1="-442.6" y1="468.23" x2="-442.22" y2="468.23" xlink:href="#linear-gradient48"/>
     <clipPath id="clippath-403">
       <polygon class="st20" points="198.92 33.49 199.12 33.45 199.12 33.07 198.91 33.11 198.91 33.16 198.92 33.49"/>
     </clipPath>
     <clipPath id="clippath-404">
       <polygon class="st20" points="199.12 33.07 198.91 33.11 198.92 33.49 199.12 33.45 199.12 33.07"/>
     </clipPath>
-    <linearGradient id="linear-gradient52" x1="498.41" y1="-819.69" x2="498.93" y2="-819.69" gradientTransform="translate(1919.99 -1614.62) rotate(158.92) scale(3.24 1.12) skewX(-12.38)" xlink:href="#linear-gradient34"/>
+    <linearGradient id="linear-gradient52" x1="979.47" y1="-425.75" x2="979.99" y2="-425.75" gradientTransform="translate(3271.1 -1662.3) rotate(158.92) scale(3.24 1.12) skewX(-12.38)" xlink:href="#linear-gradient34"/>
     <clipPath id="clippath-405">
       <polygon class="st20" points="199.56 33.35 199.95 33.27 199.95 32.94 199.55 33.02 199.56 33.35"/>
     </clipPath>
     <clipPath id="clippath-406">
       <polygon class="st20" points="199.95 32.94 199.55 33.02 199.56 33.35 199.95 33.27 199.95 32.94"/>
     </clipPath>
-    <linearGradient id="linear-gradient53" x1="-911.35" y1="385.44" x2="-910.77" y2="385.44" gradientTransform="translate(-360578.9 -286620.38) rotate(-78.68) scale(516.29 1063.75) skewX(52.59)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient53" x1="-564.8" y1="539.47" x2="-564.21" y2="539.47" gradientTransform="translate(-576747.73 -41379.1) rotate(-78.68) scale(516.29 1063.75) skewX(52.59)" xlink:href="#linear-gradient"/>
     <clipPath id="clippath-407">
       <polygon class="st20" points="199.55 33.02 199.95 32.94 199.95 32.89 199.55 32.97 199.55 33.02"/>
     </clipPath>
     <clipPath id="clippath-408">
       <polygon class="st20" points="199.95 32.89 199.55 32.97 199.55 33.02 199.95 32.94 199.95 32.89"/>
     </clipPath>
-    <linearGradient id="linear-gradient54" x1="-798.95" y1="295.28" x2="-798.57" y2="295.28" xlink:href="#linear-gradient48"/>
+    <linearGradient id="linear-gradient54" x1="-442.6" y1="468.22" x2="-442.22" y2="468.22" xlink:href="#linear-gradient48"/>
     <clipPath id="clippath-409">
       <polygon class="st20" points="199.95 33.27 200.15 33.22 200.14 32.84 199.95 32.89 199.95 32.94 199.95 33.27"/>
     </clipPath>
     <clipPath id="clippath-410">
       <polygon class="st20" points="200.14 32.84 199.95 32.89 199.95 33.27 200.15 33.22 200.14 32.84"/>
     </clipPath>
-    <linearGradient id="linear-gradient55" x1="978.52" y1="-1230.62" x2="979.05" y2="-1230.62" gradientTransform="translate(2646.03 -2012.44) rotate(158.92) scale(2.42 .84) skewX(-12.38)" xlink:href="#linear-gradient34"/>
+    <linearGradient id="linear-gradient55" x1="1505.59" y1="-755.12" x2="1506.12" y2="-755.12" gradientTransform="translate(3741.83 -2008.8) rotate(158.92) scale(2.42 .84) skewX(-12.38)" xlink:href="#linear-gradient34"/>
     <clipPath id="clippath-411">
       <polygon class="st20" points="200.38 33.17 200.58 33.13 200.58 32.8 200.58 32.75 200.38 32.79 200.38 33.17"/>
     </clipPath>
     <clipPath id="clippath-412">
       <polygon class="st20" points="200.58 32.75 200.38 32.79 200.38 33.17 200.58 33.13 200.58 32.75"/>
     </clipPath>
-    <linearGradient id="linear-gradient56" x1="1748.15" y1="-1891.99" x2="1748.67" y2="-1891.99" gradientTransform="translate(3260.87 -2350.75) rotate(158.92) scale(1.72 .59) skewX(-12.38)" xlink:href="#linear-gradient41"/>
+    <linearGradient id="linear-gradient56" x1="2349.11" y1="-1285.47" x2="2349.64" y2="-1285.47" gradientTransform="translate(4139.39 -2303.43) rotate(158.92) scale(1.72 .59) skewX(-12.38)" xlink:href="#linear-gradient41"/>
     <clipPath id="clippath-413">
       <polygon class="st20" points="200.15 33.22 200.38 33.17 200.38 32.79 200.14 32.84 200.15 33.22"/>
     </clipPath>
     <clipPath id="clippath-414">
       <polygon class="st20" points="200.38 32.79 200.15 32.84 200.15 33.22 200.38 33.17 200.38 32.79"/>
     </clipPath>
-    <linearGradient id="linear-gradient57" x1="1739.84" y1="-1884.42" x2="1740.35" y2="-1884.42" gradientTransform="translate(3255.96 -2347.76) rotate(158.92) scale(1.72 .6) skewX(-12.38)" xlink:href="#linear-gradient41"/>
+    <linearGradient id="linear-gradient57" x1="2340.02" y1="-1279.29" x2="2340.53" y2="-1279.29" gradientTransform="translate(4136.11 -2300.77) rotate(158.92) scale(1.72 .6) skewX(-12.38)" xlink:href="#linear-gradient41"/>
     <clipPath id="clippath-415">
       <polygon class="st20" points="199.36 33.4 199.56 33.35 199.55 33.02 199.55 32.97 199.35 33.02 199.36 33.4"/>
     </clipPath>
     <clipPath id="clippath-416">
       <polygon class="st20" points="199.55 32.97 199.35 33.02 199.36 33.4 199.56 33.35 199.55 32.97"/>
     </clipPath>
-    <linearGradient id="linear-gradient58" x1="299.63" y1="-648.29" x2="300.15" y2="-648.29" gradientTransform="translate(1452.18 -1356.76) rotate(158.92) scale(3.77 1.31) skewX(-12.38)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient58" x1="761.56" y1="-288.27" x2="762.08" y2="-288.27" gradientTransform="translate(2969.07 -1437.77) rotate(158.92) scale(3.77 1.31) skewX(-12.38)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#97a697"/>
       <stop offset=".32" stop-color="#c8c9c9"/>
       <stop offset=".64" stop-color="#99ae9b"/>
@@ -3677,35 +3677,35 @@
     <clipPath id="clippath-418">
       <polygon class="st20" points="199.35 33.02 199.12 33.07 199.12 33.45 199.36 33.4 199.35 33.02"/>
     </clipPath>
-    <linearGradient id="linear-gradient59" x1="301.37" y1="-650.27" x2="301.87" y2="-650.27" gradientTransform="translate(1456.91 -1359.92) rotate(158.92) scale(3.77 1.3) skewX(-12.38)" xlink:href="#linear-gradient58"/>
+    <linearGradient id="linear-gradient59" x1="763.49" y1="-289.92" x2="763.99" y2="-289.92" gradientTransform="translate(2971.9 -1440.55) rotate(158.92) scale(3.77 1.3) skewX(-12.38)" xlink:href="#linear-gradient58"/>
     <clipPath id="clippath-419">
       <polygon class="st20" points="198.33 33.62 198.53 33.57 198.53 33.24 198.53 33.19 198.32 33.24 198.33 33.62"/>
     </clipPath>
     <clipPath id="clippath-420">
       <polygon class="st20" points="198.53 33.19 198.32 33.24 198.33 33.62 198.53 33.57 198.53 33.19"/>
     </clipPath>
-    <linearGradient id="linear-gradient60" x1="-404.85" y1="-43.65" x2="-404.33" y2="-43.65" gradientTransform="translate(-3184.97 1191.11) rotate(158.92) scale(9.05 3.13) skewX(-12.38)" xlink:href="#linear-gradient41"/>
+    <linearGradient id="linear-gradient60" x1="-10.56" y1="196.44" x2="-10.04" y2="196.44" gradientTransform="translate(-29.93 780.8) rotate(158.92) scale(9.05 3.13) skewX(-12.38)" xlink:href="#linear-gradient41"/>
     <clipPath id="clippath-421">
       <polygon class="st20" points="198.33 33.62 198.33 33.62 198.32 33.24 198.33 33.62"/>
     </clipPath>
     <clipPath id="clippath-422">
       <path class="st20" d="M198.33,33.62v-.38s0,.38,0,.38Z"/>
     </clipPath>
-    <linearGradient id="linear-gradient61" x1="-401.17" y1="-46.39" x2="-401.16" y2="-46.39" gradientTransform="translate(-3135.08 1163.63) rotate(158.92) scale(8.99 3.11) skewX(-12.38)" xlink:href="#linear-gradient41"/>
+    <linearGradient id="linear-gradient61" x1="-6.59" y1="194.24" x2="-6.57" y2="194.24" gradientTransform="translate(2.61 756.81) rotate(158.92) scale(8.99 3.11) skewX(-12.38)" xlink:href="#linear-gradient41"/>
     <clipPath id="clippath-423">
       <polygon class="st20" points="198.1 33.67 198.33 33.62 198.32 33.24 198.09 33.29 198.1 33.67"/>
     </clipPath>
     <clipPath id="clippath-424">
       <polygon class="st20" points="198.32 33.24 198.09 33.29 198.1 33.67 198.33 33.62 198.32 33.24"/>
     </clipPath>
-    <linearGradient id="linear-gradient62" x1="-403.97" y1="-44.19" x2="-403.47" y2="-44.19" gradientTransform="translate(-3172.21 1184.58) rotate(158.92) scale(9.04 3.13) skewX(-12.38)" xlink:href="#linear-gradient41"/>
+    <linearGradient id="linear-gradient62" x1="-9.61" y1="196.04" x2="-9.11" y2="196.04" gradientTransform="translate(-21.33 775.11) rotate(158.92) scale(9.04 3.13) skewX(-12.38)" xlink:href="#linear-gradient41"/>
     <clipPath id="clippath-425">
       <polygon class="st20" points="197.3 33.84 197.5 33.79 197.5 33.46 197.5 33.41 197.3 33.46 197.3 33.84"/>
     </clipPath>
     <clipPath id="clippath-426">
       <polygon class="st20" points="197.5 33.41 197.3 33.46 197.3 33.84 197.5 33.79 197.5 33.41"/>
     </clipPath>
-    <linearGradient id="linear-gradient63" x1="-547.81" y1="79.24" x2="-547.29" y2="79.24" gradientTransform="translate(-6338.91 2924.64) rotate(158.92) scale(12.64 4.37) skewX(-12.38)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient63" x1="-167.25" y1="295" x2="-166.73" y2="295" gradientTransform="translate(-2070.26 2290.47) rotate(158.92) scale(12.64 4.37) skewX(-12.38)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#a39187"/>
       <stop offset=".06" stop-color="#aea39c"/>
       <stop offset=".15" stop-color="#bbb6b2"/>
@@ -3724,7 +3724,7 @@
     <clipPath id="clippath-428">
       <polygon class="st20" points="197.3 33.46 197.06 33.51 197.07 33.89 197.3 33.84 197.3 33.46"/>
     </clipPath>
-    <linearGradient id="linear-gradient64" x1="-547.6" y1="78.93" x2="-547.09" y2="78.93" gradientTransform="translate(-6331.13 2919.87) rotate(158.92) scale(12.63 4.37) skewX(-12.38)" xlink:href="#linear-gradient63"/>
+    <linearGradient id="linear-gradient64" x1="-167.01" y1="294.74" x2="-166.51" y2="294.74" gradientTransform="translate(-2065.49 2286.31) rotate(158.92) scale(12.63 4.37) skewX(-12.38)" xlink:href="#linear-gradient63"/>
     <clipPath id="clippath-429">
       <polygon class="st20" points="204.17 25.8 204.17 25.38 204.03 25.41 204.03 25.83 204.03 25.83 204.17 25.8"/>
     </clipPath>
@@ -3869,7 +3869,7 @@
     <clipPath id="clippath-476">
       <polygon class="st20" points="204.84 25.77 204.37 25.87 204.37 25.24 204.83 25.14 204.84 25.77"/>
     </clipPath>
-    <linearGradient id="_무제_그라디언트_1883" data-name="무제 그라디언트 188" x1="-1434.71" y1="-549.2" x2="-1435.57" y2="-556.79" gradientTransform="translate(985.39 -1239.99) rotate(-80.47)" xlink:href="#_무제_그라디언트_188"/>
+    <linearGradient id="_무제_그라디언트_1883" data-name="무제 그라디언트 188" x1="-993.83" y1="-761.55" x2="-994.69" y2="-769.14" gradientTransform="translate(1121.79 -770.02) rotate(-80.47)" xlink:href="#_무제_그라디언트_188"/>
   </defs>
   <rect class="st151" width="240" height="317"/>
   <g>
@@ -6508,7 +6508,7 @@
       <path class="st17" d="M64.66,163.32c1.22.65,2.52,1.14,3.85,1.5,1.4.38,2.84.6,4.29.68s2.89.01,4.32-.21c1.34-.21,2.67-.56,3.92-1.08"/>
     </g>
     <g id="SPLINE130" data-name="SPLINE">
-      <path class="st17" d="M113.64,157.52c-5.71.18-11.42.82-17.03,1.97s-10.56,2.64-15.57,4.71"/>
+      <path class="st17" d="M113.64,157.52c-5.71.18-11.42.82-17.03,1.97-5.32,1.09-10.56,2.64-15.57,4.71"/>
     </g>
     <g id="SPLINE131" data-name="SPLINE">
       <path class="st17" d="M113.64,157.52c1.41-.04,2.82-.23,4.19-.58,1.26-.32,2.49-.78,3.63-1.4,1-.55,1.94-1.22,2.72-2.07.67-.73,1.23-1.58,1.56-2.5"/>
@@ -6700,7 +6700,7 @@
       <path class="st17" d="M36.64,221.64c.51.99,1.42,1.77,2.41,2.32.58.32,1.18.56,1.81.75.66.19,1.34.32,2.02.38"/>
     </g>
     <g id="SPLINE192" data-name="SPLINE">
-      <path class="st17" d="M52.6,164.05c-4.69,3.55-8.98,7.73-12.44,12.51-1.61,2.22-3.03,4.57-4.24,7.03-1.16,2.37-2.11,4.84-2.81,7.39s-1.14,5.05-1.35,7.63-.15,5.17.15,7.74c.3,2.62.86,5.2,1.63,7.72.81,2.61,1.85,5.15,3.1,7.58"/>
+      <path class="st17" d="M52.6,164.05c-4.69,3.55-8.98,7.73-12.44,12.51-1.61,2.22-3.03,4.57-4.24,7.03-1.16,2.37-2.11,4.84-2.81,7.39s-1.14,5.05-1.35,7.63c-.2,2.58-.15,5.17.15,7.74.3,2.62.86,5.2,1.63,7.72.81,2.61,1.85,5.15,3.1,7.58"/>
     </g>
     <g id="SPLINE193" data-name="SPLINE">
       <path class="st17" d="M64.38,163.42c-.89-.48-1.87-.82-2.86-1.03-1.04-.23-2.1-.32-3.16-.28s-2.05.2-3.03.51c-.88.28-1.73.68-2.47,1.23"/>
@@ -7582,7 +7582,7 @@
       <path class="st17" d="M111.09,224.38c-.63-.16-1.26-.33-1.88-.51-1.83-.53-3.63-1.17-5.38-1.92"/>
     </g>
     <g id="SPLINE253" data-name="SPLINE">
-      <path class="st17" d="M95.24,216.89c-1.17-.93-2.27-1.93-3.28-3.03-.95-1.03-1.82-2.13-2.58-3.3-.71-1.1-1.33-2.27-1.81-3.5s-.8-2.38-1-3.61"/>
+      <path class="st17" d="M95.24,216.89c-1.17-.93-2.27-1.93-3.28-3.03-.95-1.03-1.82-2.13-2.58-3.3-.71-1.1-1.33-2.27-1.81-3.5-.46-1.16-.8-2.38-1-3.61"/>
     </g>
     <g id="LINE713" data-name="LINE">
       <line class="st17" x1="90.29" y1="284.91" x2="91.31" y2="275.68"/>
@@ -7675,7 +7675,7 @@
       <path class="st17" d="M187.48,273.56s-.1.06-.15.09c-.16.09-.31.17-.48.25"/>
     </g>
     <g id="SPLINE283" data-name="SPLINE">
-      <path class="st17" d="M186.85,273.9c-.72.35-1.49.58-2.28.73-.84.16-1.7.21-2.55.18s-1.72-.17-2.55-.4c-.79-.22-1.56-.52-2.27-.93"/>
+      <path class="st17" d="M186.85,273.9c-.72.35-1.49.58-2.28.73-.84.16-1.7.21-2.55.18-.86-.04-1.72-.17-2.55-.4-.79-.22-1.56-.52-2.27-.93"/>
     </g>
     <g id="SPLINE284" data-name="SPLINE">
       <path class="st17" d="M177.21,273.49c-.06-.03-.11-.07-.17-.1-.17-.1-.33-.21-.49-.32"/>
@@ -7777,7 +7777,7 @@
       <path class="st17" d="M202.74,252.27c-.16-.51-.51-.95-.92-1.3-.5-.42-1.08-.71-1.69-.9"/>
     </g>
     <g id="SPLINE317" data-name="SPLINE">
-      <path class="st17" d="M21.02,218.54c.57-3.99,1.71-7.92,3.31-11.63,1.68-3.89,3.88-7.55,6.43-10.91"/>
+      <path class="st17" d="M21.02,218.54c.57-3.99,1.71-7.92,3.31-11.63s3.88-7.55,6.43-10.91"/>
     </g>
     <g id="SPLINE318" data-name="SPLINE">
       <path class="st17" d="M218.71,236.97c0,2.18-.17,4.36-.5,6.51-.33,2.17-.82,4.31-1.46,6.41s-1.46,4.22-2.4,6.24c-.97,2.08-2.09,4.09-3.33,6.02-2.61,4.07-5.77,7.79-9.28,11.12-3.8,3.62-8.02,6.79-12.47,9.56-4.82,2.99-9.92,5.51-15.18,7.62-5.61,2.25-11.41,4.03-17.3,5.39s-12.44,2.4-18.75,2.95c-6.47.57-12.98.69-19.47.4-6.52-.3-13.02-1.02-19.44-2.17-6.31-1.13-12.56-2.68-18.66-4.66-5.87-1.91-11.62-4.22-17.15-6.96-5.22-2.59-10.26-5.58-14.98-9-4.39-3.18-8.52-6.73-12.23-10.69-3.42-3.65-6.49-7.64-9.01-11.96-2.34-4.01-4.21-8.3-5.44-12.77-.59-2.14-1.03-4.33-1.31-6.53-.27-2.17-.39-4.36-.35-6.55"/>
@@ -7852,7 +7852,7 @@
       <path class="st17" d="M45.81,259.57c.06.4.25.78.5,1.11.29.38.66.69,1.07.93.46.28.96.48,1.48.62.55.15,1.12.22,1.69.23s1.12-.06,1.66-.2c.49-.13.97-.32,1.39-.6.37-.24.7-.54.93-.92.2-.33.33-.72.34-1.1"/>
     </g>
     <g id="SPLINE342" data-name="SPLINE">
-      <path class="st17" d="M56.28,267.67c.24-.64.39-1.32.45-2.01s.03-1.38-.09-2.05c-.12-.7-.34-1.38-.63-2.03-.31-.69-.7-1.34-1.15-1.95"/>
+      <path class="st17" d="M56.28,267.67c.24-.64.39-1.32.45-2.01s.03-1.38-.09-2.05-.34-1.38-.63-2.03c-.31-.69-.7-1.34-1.15-1.95"/>
     </g>
     <g id="SPLINE343" data-name="SPLINE">
       <path class="st17" d="M61.59,277.76c-1.25-.67-2.42-1.51-3.39-2.56-.85-.91-1.55-1.97-1.95-3.13"/>
@@ -7933,7 +7933,7 @@
       <path class="st17" d="M120.6,295.07c-10.34-.35-20.67-1.78-30.74-4.3-9.63-2.42-19.02-5.85-27.81-10.4"/>
     </g>
     <g id="SPLINE369" data-name="SPLINE">
-      <path class="st17" d="M62.05,280.37c-6.12-3.17-11.98-6.9-17.33-11.25-2.5-2.04-4.9-4.2-7.14-6.52s-4.15-4.53-5.99-6.99-3.35-4.8-4.75-7.37c-1.34-2.45-2.5-5.01-3.45-7.64-.91-2.54-1.62-5.15-2.1-7.8-.47-2.59-.71-5.23-.72-7.86"/>
+      <path class="st17" d="M62.05,280.37c-6.12-3.17-11.98-6.9-17.33-11.25-2.5-2.04-4.9-4.2-7.14-6.52s-4.15-4.53-5.99-6.99-3.35-4.8-4.75-7.37c-1.34-2.45-2.5-5.01-3.45-7.64s-1.62-5.15-2.1-7.8c-.47-2.59-.71-5.23-.72-7.86"/>
     </g>
     <g id="SPLINE370" data-name="SPLINE">
       <path class="st17" d="M139.34,281.66c2-.26,3.99-.57,5.98-.93,5.74-1.06,11.41-2.59,16.88-4.64"/>
@@ -8220,7 +8220,7 @@
       <path class="st17" d="M62.5,279.5c-3.75-1.94-7.39-4.09-10.88-6.47s-6.48-4.71-9.47-7.39c-5.47-4.9-10.33-10.58-13.98-16.92"/>
     </g>
     <g id="SPLINE442" data-name="SPLINE">
-      <path class="st17" d="M28.16,248.72c-1.4-2.43-2.63-4.97-3.64-7.6s-1.75-5.13-2.29-7.78"/>
+      <path class="st17" d="M28.16,248.72c-1.4-2.43-2.63-4.97-3.64-7.6-.97-2.53-1.75-5.13-2.29-7.78"/>
     </g>
     <g id="SPLINE443" data-name="SPLINE">
       <path class="st17" d="M21.81,230.92c-.3-2.04-.47-4.1-.49-6.17-.02-2.05.11-4.11.38-6.14"/>
