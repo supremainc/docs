@@ -84,9 +84,15 @@ Modify the device's default settings.
 
 </Include>
 
-<Include type={props.type} ref='bs3,xpass2,cs-20'>
+<Include type={props.type} ref='bs3,xpass2'>
 
 * <Cmd sid='video_gateway' product='air' />: Connect IP cameras to the device to view live and recorded video. For more information on IP camera connection settings, see <DocLink docId='platform/biostar_air/ip-camera-support-and-configuration' />.
+
+</Include>
+
+<Include type={props.type} ref='cs-20'>
+
+* <Cmd sid='video_gateway' product='air' />: Connect IP cameras to the panel to view live and recorded video. For more information on IP camera connection settings, see <DocLink docId='platform/biostar_air/ip-camera-support-and-configuration' />.
 
 </Include>
 
@@ -166,9 +172,9 @@ Modify the device's network settings.
 
 * <Cmd sid='device_cs20_scb_key_confirm' product='air' />: Re-enter the same value to prevent security key errors.
 
-* <Cmd sid='device_cs20_baud_rate' product='air' />: Set the serial communication baud rate between the device and auxiliary devices.
+* <Cmd sid='device_cs20_baud_rate' product='air' />: Set the serial communication baud rate between the panel and secondary devices.
 
-  * <Cmd>Host</Cmd>: Device communication baud rate
+  * <Cmd>Host</Cmd>: Panel communication baud rate
 
   * <Cmd>0</Cmd> / <Cmd>1</Cmd>: Baud rate for each port connected to an auxiliary device
 
@@ -516,13 +522,23 @@ The <Cmd sid='mobile_consecutive_tag' product='air' /> feature is supported in S
 
 </Include>
 
-<Include type={props.type} ref='bs3,xpass2,cs-20'>
+<Include type={props.type} ref='bs3,xpass2'>
 
 ---
 
 ### <Cmd sid='device_bs3_secure_tamper' product='air' className='normal' /> {#secureTamper}
 
 If a tamper event occurs, configure the device to delete **all user information**, **all logs**, and **security keys** stored on the device.
+
+</Include>
+
+<Include type={props.type} ref='cs-20'>
+
+---
+
+### <Cmd sid='device_bs3_secure_tamper' product='air' className='normal' /> {#secureTamper}
+
+If a tamper event occurs, configure the panel to delete **all user information**, **all logs**, and **security keys** stored on the panel.
 
 </Include>
 
@@ -574,12 +590,22 @@ To reset the settings, click <Cmd sid='device_btn_reset' product='air' />.
 
 </Xclude>
 
-<Include type={props.type} ref='ae-mc,xpass2,xs2,cs-20'>
+<Include type={props.type} ref='ae-mc,xpass2,xs2'>
 
 ---
 
 ### <Cmd sid='module_found_slots_title' product='air' className='normal' /> {#moduleFoundSlots}
 
 Option to detect an OM-120 module connected to the device. Click <Cmd sid='add_btn' product='air' /> to detect the module.
+
+</Include>
+
+<Include type={props.type} ref='cs-20'>
+
+---
+
+### <Cmd sid='module_found_slots_title' product='air' className='normal' /> {#moduleFoundSlots}
+
+Option to detect an OM-120 module connected to the panel. Click <Cmd sid='add_btn' product='air' /> to detect the module.
 
 </Include>
