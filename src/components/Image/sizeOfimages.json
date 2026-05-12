@@ -331,6 +331,10 @@
     "width": 1278,
     "height": 881
   },
+  "/img/air/bsair-cs-20-init-button.png": {
+    "width": 458,
+    "height": 200
+  },
   "/img/air/bsair-device-aifob-app-device.png": {
     "width": 1062,
     "height": 2135
@@ -387,6 +391,10 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/air/bsair-device-mng-fw-upgrade-update.png": {
+    "width": 711,
+    "height": 419
+  },
   "/img/air/bsair-device-mng-fw-upgrade.png": {
     "width": 1920,
     "height": 1080
@@ -408,7 +416,7 @@
     "height": 1080
   },
   "/img/air/bsair-device-mng-list-filter.png": {
-    "width": 496,
+    "width": 269,
     "height": 338
   },
   "/img/air/bsair-device-mng-list-fw-column-align.png": {
@@ -425,7 +433,7 @@
   },
   "/img/air/bsair-device-mng-list-info.png": {
     "width": 1619,
-    "height": 703
+    "height": 798
   },
   "/img/air/bsair-device-mng-list-tools.png": {
     "width": 1920,
@@ -435,9 +443,97 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/air/bsair-device-panel-edit-info-supervised-input.png": {
+    "width": 600,
+    "height": 534
+  },
+  "/img/air/bsair-device-panel-edit-info.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-panel-fw-up-xpd2-01.png": {
+    "width": 1920,
+    "height": 695
+  },
+  "/img/air/bsair-device-panel-fw-up-xpd2-02.png": {
+    "width": 700,
+    "height": 414
+  },
+  "/img/air/bsair-device-panel-legacy-device-edit.png": {
+    "width": 1920,
+    "height": 534
+  },
+  "/img/air/bsair-device-panel-list-cs-20-add-osdp-device-popup.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-panel-list-cs-20-add-osdp-device.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-panel-list-cs-20-add-slave-device.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-panel-list-cs-20-add-wiegand-device.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-panel-list-cs-20-more.png": {
+    "width": 1600,
+    "height": 243
+  },
+  "/img/air/bsair-device-panel-list-master-slave.png": {
+    "width": 1600,
+    "height": 311
+  },
+  "/img/air/bsair-device-panel-list-register-cs20.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-panel-list-registered-cs20.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-panel-list-view.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-panel-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-panel-management-group.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-panel-management-tool.png": {
+    "width": 1920,
+    "height": 685
+  },
+  "/img/air/bsair-device-panel-remove-secondary.png": {
+    "width": 1920,
+    "height": 686
+  },
+  "/img/air/bsair-device-panel-remove.png": {
+    "width": 1920,
+    "height": 570
+  },
   "/img/air/bsair-device-two-fator-auth.png": {
     "width": 499,
     "height": 479
+  },
+  "/img/air/bsair-device-xpass2-add-slave-find.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-device-xpass2-add-slave.png": {
+    "width": 1920,
+    "height": 599
+  },
+  "/img/air/bsair-device-xpass2-rs485-set-master.png": {
+    "width": 1920,
+    "height": 1080
   },
   "/img/air/bsair-door-assign-camera.png": {
     "width": 1920,
@@ -472,8 +568,8 @@
     "height": 235
   },
   "/img/air/bsair-door-mng-register-device-as-door.png": {
-    "width": 1061,
-    "height": 753
+    "width": 854,
+    "height": 757
   },
   "/img/air/bsair-door-mng-registered-door-add.png": {
     "width": 1920,
@@ -751,6 +847,10 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/air/bsair-monitoring-eventlog-list-rf-card.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/img/air/bsair-monitoring-eventlog-list.png": {
     "width": 1920,
     "height": 1080
@@ -776,6 +876,182 @@
     "height": 1080
   },
   "/img/air/bsair-monitoring-recorded-camera.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-partner-admin-invite-input-email.png": {
+    "width": 712,
+    "height": 357
+  },
+  "/img/air/bsair-partner-admin-invite-select-role.png": {
+    "width": 712,
+    "height": 359
+  },
+  "/img/air/bsair-partner-admin-invite.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-partner-admin-invited-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-partner-admin-list-accepted-status.png": {
+    "width": 1600,
+    "height": 236
+  },
+  "/img/air/bsair-partner-admin-list-batch-lock-unlock.png": {
+    "width": 1600,
+    "height": 390
+  },
+  "/img/air/bsair-partner-admin-list-change-role.png": {
+    "width": 1600,
+    "height": 347
+  },
+  "/img/air/bsair-partner-admin-list-delete.png": {
+    "width": 1600,
+    "height": 390
+  },
+  "/img/air/bsair-partner-admin-list-lock-unlock-toggle.png": {
+    "width": 1600,
+    "height": 179
+  },
+  "/img/air/bsair-partner-admin-list-lock-unlock.png": {
+    "width": 1600,
+    "height": 182
+  },
+  "/img/air/bsair-partner-admin-list-pending-status.png": {
+    "width": 1600,
+    "height": 177
+  },
+  "/img/air/bsair-partner-admin-list-resend-invitation.png": {
+    "width": 1600,
+    "height": 336
+  },
+  "/img/air/bsair-partner-admin-list-revoke-invitation.png": {
+    "width": 1600,
+    "height": 561
+  },
+  "/img/air/bsair-partner-admin-list-revoked-status.png": {
+    "width": 1600,
+    "height": 179
+  },
+  "/img/air/bsair-partner-admin-sitelist-added-technician.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-partner-admin-sitelist-edit-admin-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-partner-admin-sitelist-edit-invite-admin-email.png": {
+    "width": 713,
+    "height": 360
+  },
+  "/img/air/bsair-partner-admin-sitelist-edit-invite-admin.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-partner-admin-sitelist-edit-invited-list.png": {
+    "width": 713,
+    "height": 358
+  },
+  "/img/air/bsair-partner-admin-sitelist-edit-site-admin-list-more.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-partner-admin-sitelist-edit-site-admin-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-partner-admin-sitelist-edit-technician-invite-list-selected-batch-01.png": {
+    "width": 698,
+    "height": 271
+  },
+  "/img/air/bsair-partner-admin-sitelist-edit-technician-invite-list-selected-batch-02.png": {
+    "width": 698,
+    "height": 210
+  },
+  "/img/air/bsair-partner-admin-sitelist-edit-technician-invite-list-selected-each.png": {
+    "width": 698,
+    "height": 203
+  },
+  "/img/air/bsair-partner-admin-sitelist-edit-technician-invite-list-selected.png": {
+    "width": 736,
+    "height": 795
+  },
+  "/img/air/bsair-partner-admin-sitelist-edit-technician-invite-list.png": {
+    "width": 737,
+    "height": 711
+  },
+  "/img/air/bsair-partner-admin-sitelist-edit-technician-invited-list.png": {
+    "width": 830,
+    "height": 654
+  },
+  "/img/air/bsair-partner-admin-sitelist-edit-technician-reinvitation.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-partner-admin-sitelist-edit-technician-status.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-partner-admin-sitelist-edit-technician.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-partner-admin-technicial-list-accepted.png": {
+    "width": 1639,
+    "height": 246
+  },
+  "/img/air/bsair-partner-admin-technicial-list-delete.png": {
+    "width": 1640,
+    "height": 335
+  },
+  "/img/air/bsair-partner-admin-technicial-list-edit.png": {
+    "width": 820,
+    "height": 529
+  },
+  "/img/air/bsair-partner-admin-technicial-list-invite-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-partner-admin-technicial-list-invite.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-partner-admin-technicial-list-invited.png": {
+    "width": 1640,
+    "height": 466
+  },
+  "/img/air/bsair-partner-admin-technicial-list-lock-unlock-status.png": {
+    "width": 1640,
+    "height": 240
+  },
+  "/img/air/bsair-partner-admin-technicial-list-lock-unlock.png": {
+    "width": 1639,
+    "height": 185
+  },
+  "/img/air/bsair-partner-admin-technicial-list-multi-lock-unlock.png": {
+    "width": 1639,
+    "height": 455
+  },
+  "/img/air/bsair-partner-admin-technicial-list-pending.png": {
+    "width": 1633,
+    "height": 125
+  },
+  "/img/air/bsair-partner-admin-technicial-list-resend-invite.png": {
+    "width": 1638,
+    "height": 389
+  },
+  "/img/air/bsair-partner-admin-technicial-list-revoke-technicial.png": {
+    "width": 1635,
+    "height": 452
+  },
+  "/img/air/bsair-partner-admin-technicial-list-revoked.png": {
+    "width": 1639,
+    "height": 181
+  },
+  "/img/air/bsair-partner-admin-technicial-list.png": {
     "width": 1920,
     "height": 1080
   },
@@ -807,19 +1083,83 @@
     "width": 812,
     "height": 760
   },
-  "/img/air/bsair-settings-admin-change-role.png": {
-    "width": 1625,
-    "height": 414
+  "/img/air/bsair-settings-admin-allow-technician-unlocked.png": {
+    "width": 1583,
+    "height": 142
   },
-  "/img/air/bsair-settings-admin-deactive-result.png": {
-    "width": 1616,
-    "height": 348
+  "/img/air/bsair-settings-admin-allow-technician.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-admin-change-role.png": {
+    "width": 1600,
+    "height": 270
   },
   "/img/air/bsair-settings-admin-deactive.png": {
     "width": 1920,
     "height": 1080
   },
+  "/img/air/bsair-settings-admin-invite-pending-status-revoke.png": {
+    "width": 1600,
+    "height": 338
+  },
+  "/img/air/bsair-settings-admin-invite-pending-status.png": {
+    "width": 1600,
+    "height": 205
+  },
+  "/img/air/bsair-settings-admin-invite-resend-link-pending-status.png": {
+    "width": 1600,
+    "height": 272
+  },
+  "/img/air/bsair-settings-admin-invite-resend-link.png": {
+    "width": 1600,
+    "height": 397
+  },
+  "/img/air/bsair-settings-admin-invite-revoke-status.png": {
+    "width": 1600,
+    "height": 264
+  },
   "/img/air/bsair-settings-admin-invite.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-admin-list-batch-lock-unlock.png": {
+    "width": 1600,
+    "height": 333
+  },
+  "/img/air/bsair-settings-admin-list-delete.png": {
+    "width": 1600,
+    "height": 333
+  },
+  "/img/air/bsair-settings-admin-list-lock-unlock.png": {
+    "width": 1600,
+    "height": 206
+  },
+  "/img/air/bsair-settings-admin-list-signup-complete.png": {
+    "width": 1600,
+    "height": 206
+  },
+  "/img/air/bsair-settings-admin-technician-changes.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-admin-technician-delete.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-admin-technician-lock-unlock-batch.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-admin-technician-lock-unlock.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-admin-technician-permission-select.png": {
+    "width": 1585,
+    "height": 282
+  },
+  "/img/air/bsair-settings-admin-technician-permission.png": {
     "width": 1920,
     "height": 1080
   },
@@ -900,6 +1240,10 @@
     "height": 1080
   },
   "/img/air/bsair-settings-email.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-settings-security-allow-technician.png": {
     "width": 1920,
     "height": 1080
   },
@@ -999,6 +1343,10 @@
     "width": 5392,
     "height": 2445
   },
+  "/img/air/bsair-technicial-workflow.png": {
+    "width": 1920,
+    "height": 284
+  },
   "/img/air/bsair-upload-profile-image-adjust.png": {
     "width": 452,
     "height": 605
@@ -1023,6 +1371,10 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/air/bsair-user-batch-send-enroll-link.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/img/air/bsair-user-details-edit-info.png": {
     "width": 1920,
     "height": 1080
@@ -1032,6 +1384,10 @@
     "height": 1080
   },
   "/img/air/bsair-user-details-remove.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/air/bsair-user-details-send-enroll-link.png": {
     "width": 1920,
     "height": 1080
   },
@@ -1069,7 +1425,7 @@
   },
   "/img/air/bsair-user-info-credential-face-add.png": {
     "width": 906,
-    "height": 432
+    "height": 411
   },
   "/img/air/bsair-user-info-credential-face.png": {
     "width": 906,
@@ -4083,17 +4439,9 @@
     "width": 1060,
     "height": 413
   },
-  "/img/camera/component-camera-body-vionyx.png": {
-    "width": 2606,
-    "height": 1845
-  },
   "/img/camera/component-connection-cables-vionyx.png": {
     "width": 2319,
     "height": 1453
-  },
-  "/img/camera/component-cover-vionyx.png": {
-    "width": 2694,
-    "height": 1901
   },
   "/img/camera/component-diode1-vionyx.png": {
     "width": 1060,
@@ -4103,22 +4451,6 @@
     "width": 1060,
     "height": 812
   },
-  "/img/camera/component-t10-torx-driver-vionyx.png": {
-    "width": 906,
-    "height": 4456
-  },
-  "/img/camera/component-wall-bracket-vionyx.png": {
-    "width": 2269,
-    "height": 2294
-  },
-  "/img/camera/component-waterproof-grommet-ethernet-cable-vionyx.png": {
-    "width": 1400,
-    "height": 1052
-  },
-  "/img/camera/component-waterproof-rubber-hole-plug-vionyx.png": {
-    "width": 1060,
-    "height": 952
-  },
   "/img/camera/installation-audio-connection-vionyx.png": {
     "width": 800,
     "height": 352
@@ -4126,14 +4458,6 @@
   "/img/camera/installation-usb-sdcard-connection-vionyx.png": {
     "width": 430,
     "height": 360
-  },
-  "/img/camera/installation3-vionyx.png": {
-    "width": 852,
-    "height": 520
-  },
-  "/img/camera/installation9-vionyx.png": {
-    "width": 1398,
-    "height": 853
   },
   "/img/camera/password-setting1-vionyx.png": {
     "width": 1920,
@@ -4146,6 +4470,10 @@
   "/img/camera/product-vionyx.png": {
     "width": 2696,
     "height": 1992
+  },
+  "/img/camera/vionyx-main.png": {
+    "width": 1000,
+    "height": 452
   },
   "/img/camera/web-server-settings1.png": {
     "width": 1202,
@@ -4426,6 +4754,10 @@
   "/img/common/biostarx-tutoria-service-manager-services-stop.png": {
     "width": 1200,
     "height": 495
+  },
+  "/img/common/bsair-cloud-architecture.webp": {
+    "width": 1439,
+    "height": 710
   },
   "/img/common/bsx-main_2n.jpg": {
     "width": 1200,
@@ -7403,6 +7735,10 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/en/air/bsair-device-mng-fw-upgrade-update.png": {
+    "width": 711,
+    "height": 419
+  },
   "/img/en/air/bsair-device-mng-fw-upgrade.png": {
     "width": 1920,
     "height": 1080
@@ -7424,7 +7760,7 @@
     "height": 1080
   },
   "/img/en/air/bsair-device-mng-list-filter.png": {
-    "width": 496,
+    "width": 271,
     "height": 333
   },
   "/img/en/air/bsair-device-mng-list-fw-column-align.png": {
@@ -7441,7 +7777,7 @@
   },
   "/img/en/air/bsair-device-mng-list-info.png": {
     "width": 1614,
-    "height": 703
+    "height": 789
   },
   "/img/en/air/bsair-device-mng-list-tools.png": {
     "width": 1920,
@@ -7451,9 +7787,97 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/en/air/bsair-device-panel-edit-info-supervised-input.png": {
+    "width": 600,
+    "height": 534
+  },
+  "/img/en/air/bsair-device-panel-edit-info.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-panel-fw-up-xpd2-01.png": {
+    "width": 1920,
+    "height": 685
+  },
+  "/img/en/air/bsair-device-panel-fw-up-xpd2-02.png": {
+    "width": 700,
+    "height": 414
+  },
+  "/img/en/air/bsair-device-panel-legacy-device-edit.png": {
+    "width": 1920,
+    "height": 534
+  },
+  "/img/en/air/bsair-device-panel-list-cs-20-add-osdp-device-popup.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-panel-list-cs-20-add-osdp-device.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-panel-list-cs-20-add-slave-device.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-panel-list-cs-20-add-wiegand-device.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-panel-list-cs-20-more.png": {
+    "width": 1600,
+    "height": 243
+  },
+  "/img/en/air/bsair-device-panel-list-master-slave.png": {
+    "width": 1600,
+    "height": 295
+  },
+  "/img/en/air/bsair-device-panel-list-register-cs20.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-panel-list-registered-cs20.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-panel-list-view.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-panel-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-panel-management-group.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-panel-management-tool.png": {
+    "width": 1920,
+    "height": 685
+  },
+  "/img/en/air/bsair-device-panel-remove-secondary.png": {
+    "width": 1920,
+    "height": 686
+  },
+  "/img/en/air/bsair-device-panel-remove.png": {
+    "width": 1920,
+    "height": 570
+  },
   "/img/en/air/bsair-device-two-fator-auth.png": {
     "width": 499,
     "height": 479
+  },
+  "/img/en/air/bsair-device-xpass2-add-slave-find.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-device-xpass2-add-slave.png": {
+    "width": 1920,
+    "height": 599
+  },
+  "/img/en/air/bsair-device-xpass2-rs485-set-master.png": {
+    "width": 1920,
+    "height": 1080
   },
   "/img/en/air/bsair-door-assign-camera.png": {
     "width": 1920,
@@ -7488,8 +7912,8 @@
     "height": 229
   },
   "/img/en/air/bsair-door-mng-register-device-as-door.png": {
-    "width": 1061,
-    "height": 755
+    "width": 851,
+    "height": 817
   },
   "/img/en/air/bsair-door-mng-registered-door-add.png": {
     "width": 1920,
@@ -7763,6 +8187,10 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/en/air/bsair-monitoring-eventlog-list-rf-card.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/img/en/air/bsair-monitoring-eventlog-list.png": {
     "width": 1920,
     "height": 1080
@@ -7791,6 +8219,186 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/en/air/bsair-partner-admin-invite-input-email.png": {
+    "width": 712,
+    "height": 357
+  },
+  "/img/en/air/bsair-partner-admin-invite-select-role.png": {
+    "width": 712,
+    "height": 359
+  },
+  "/img/en/air/bsair-partner-admin-invite.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-partner-admin-invited-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-partner-admin-list-accepted-status.png": {
+    "width": 1600,
+    "height": 254
+  },
+  "/img/en/air/bsair-partner-admin-list-batch-lock-unlock.png": {
+    "width": 1600,
+    "height": 409
+  },
+  "/img/en/air/bsair-partner-admin-list-change-role.png": {
+    "width": 1600,
+    "height": 366
+  },
+  "/img/en/air/bsair-partner-admin-list-delete.png": {
+    "width": 1600,
+    "height": 409
+  },
+  "/img/en/air/bsair-partner-admin-list-lock-unlock-1.png": {
+    "width": 1600,
+    "height": 182
+  },
+  "/img/en/air/bsair-partner-admin-list-lock-unlock-toggle.png": {
+    "width": 1600,
+    "height": 182
+  },
+  "/img/en/air/bsair-partner-admin-list-lock-unlock.png": {
+    "width": 1600,
+    "height": 182
+  },
+  "/img/en/air/bsair-partner-admin-list-pending-status.png": {
+    "width": 1600,
+    "height": 194
+  },
+  "/img/en/air/bsair-partner-admin-list-resend-invitation.png": {
+    "width": 1600,
+    "height": 350
+  },
+  "/img/en/air/bsair-partner-admin-list-revoke-invitation.png": {
+    "width": 1600,
+    "height": 573
+  },
+  "/img/en/air/bsair-partner-admin-list-revoked-status.png": {
+    "width": 1600,
+    "height": 197
+  },
+  "/img/en/air/bsair-partner-admin-sitelist-added-technician.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-partner-admin-sitelist-edit-admin-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-partner-admin-sitelist-edit-invite-admin-email.png": {
+    "width": 713,
+    "height": 360
+  },
+  "/img/en/air/bsair-partner-admin-sitelist-edit-invite-admin.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-partner-admin-sitelist-edit-invited-list.png": {
+    "width": 713,
+    "height": 358
+  },
+  "/img/en/air/bsair-partner-admin-sitelist-edit-site-admin-list-more.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-partner-admin-sitelist-edit-site-admin-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-partner-admin-sitelist-edit-technician-invite-list-selected-batch-01.png": {
+    "width": 703,
+    "height": 274
+  },
+  "/img/en/air/bsair-partner-admin-sitelist-edit-technician-invite-list-selected-batch-02.png": {
+    "width": 703,
+    "height": 214
+  },
+  "/img/en/air/bsair-partner-admin-sitelist-edit-technician-invite-list-selected-each.png": {
+    "width": 697,
+    "height": 209
+  },
+  "/img/en/air/bsair-partner-admin-sitelist-edit-technician-invite-list-selected.png": {
+    "width": 737,
+    "height": 795
+  },
+  "/img/en/air/bsair-partner-admin-sitelist-edit-technician-invite-list.png": {
+    "width": 737,
+    "height": 711
+  },
+  "/img/en/air/bsair-partner-admin-sitelist-edit-technician-invited-list.png": {
+    "width": 827,
+    "height": 648
+  },
+  "/img/en/air/bsair-partner-admin-sitelist-edit-technician-reinvitation.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-partner-admin-sitelist-edit-technician-status.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-partner-admin-sitelist-edit-technician.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-partner-admin-technicial-list-accepted.png": {
+    "width": 1641,
+    "height": 261
+  },
+  "/img/en/air/bsair-partner-admin-technicial-list-delete.png": {
+    "width": 1638,
+    "height": 358
+  },
+  "/img/en/air/bsair-partner-admin-technicial-list-edit.png": {
+    "width": 818,
+    "height": 526
+  },
+  "/img/en/air/bsair-partner-admin-technicial-list-invite-add.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-partner-admin-technicial-list-invite.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-partner-admin-technicial-list-invited.png": {
+    "width": 1638,
+    "height": 484
+  },
+  "/img/en/air/bsair-partner-admin-technicial-list-lock-unlock-status.png": {
+    "width": 1629,
+    "height": 253
+  },
+  "/img/en/air/bsair-partner-admin-technicial-list-lock-unlock.png": {
+    "width": 1642,
+    "height": 199
+  },
+  "/img/en/air/bsair-partner-admin-technicial-list-multi-lock-unlock.png": {
+    "width": 1638,
+    "height": 474
+  },
+  "/img/en/air/bsair-partner-admin-technicial-list-pending.png": {
+    "width": 1632,
+    "height": 137
+  },
+  "/img/en/air/bsair-partner-admin-technicial-list-resend-invite.png": {
+    "width": 1638,
+    "height": 409
+  },
+  "/img/en/air/bsair-partner-admin-technicial-list-revoke-technicial.png": {
+    "width": 1642,
+    "height": 458
+  },
+  "/img/en/air/bsair-partner-admin-technicial-list-revoked.png": {
+    "width": 1641,
+    "height": 199
+  },
+  "/img/en/air/bsair-partner-admin-technicial-list.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/img/en/air/bsair-register-device-step.png": {
     "width": 6901,
     "height": 2372
@@ -7815,19 +8423,83 @@
     "width": 812,
     "height": 760
   },
-  "/img/en/air/bsair-settings-admin-change-role.png": {
-    "width": 1625,
-    "height": 414
+  "/img/en/air/bsair-settings-admin-allow-technician-unlocked.png": {
+    "width": 1585,
+    "height": 148
   },
-  "/img/en/air/bsair-settings-admin-deactive-result.png": {
-    "width": 1616,
-    "height": 348
+  "/img/en/air/bsair-settings-admin-allow-technician.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-admin-change-role.png": {
+    "width": 1600,
+    "height": 276
   },
   "/img/en/air/bsair-settings-admin-deactive.png": {
     "width": 1920,
     "height": 1080
   },
+  "/img/en/air/bsair-settings-admin-invite-pending-status-revoke.png": {
+    "width": 1600,
+    "height": 338
+  },
+  "/img/en/air/bsair-settings-admin-invite-pending-status.png": {
+    "width": 1600,
+    "height": 206
+  },
+  "/img/en/air/bsair-settings-admin-invite-resend-link-pending-status.png": {
+    "width": 1600,
+    "height": 269
+  },
+  "/img/en/air/bsair-settings-admin-invite-resend-link.png": {
+    "width": 1600,
+    "height": 397
+  },
+  "/img/en/air/bsair-settings-admin-invite-revoke-status.png": {
+    "width": 1600,
+    "height": 270
+  },
   "/img/en/air/bsair-settings-admin-invite.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-admin-list-batch-lock-unlock.png": {
+    "width": 1600,
+    "height": 333
+  },
+  "/img/en/air/bsair-settings-admin-list-delete.png": {
+    "width": 1600,
+    "height": 333
+  },
+  "/img/en/air/bsair-settings-admin-list-lock-unlock.png": {
+    "width": 1600,
+    "height": 206
+  },
+  "/img/en/air/bsair-settings-admin-list-signup-complete.png": {
+    "width": 1600,
+    "height": 206
+  },
+  "/img/en/air/bsair-settings-admin-technician-changes.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-admin-technician-delete.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-admin-technician-lock-unlock-batch.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-admin-technician-lock-unlock.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-admin-technician-permission-select.png": {
+    "width": 1585,
+    "height": 282
+  },
+  "/img/en/air/bsair-settings-admin-technician-permission.png": {
     "width": 1920,
     "height": 1080
   },
@@ -7908,6 +8580,10 @@
     "height": 1080
   },
   "/img/en/air/bsair-settings-email.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-settings-security-allow-technician.png": {
     "width": 1920,
     "height": 1080
   },
@@ -8015,6 +8691,10 @@
     "width": 5392,
     "height": 2483
   },
+  "/img/en/air/bsair-technicial-workflow.png": {
+    "width": 1920,
+    "height": 284
+  },
   "/img/en/air/bsair-upload-profile-image-adjust.png": {
     "width": 452,
     "height": 605
@@ -8039,6 +8719,10 @@
     "width": 1920,
     "height": 1080
   },
+  "/img/en/air/bsair-user-batch-send-enroll-link.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/img/en/air/bsair-user-details-edit-info.png": {
     "width": 1920,
     "height": 1080
@@ -8048,6 +8732,10 @@
     "height": 1080
   },
   "/img/en/air/bsair-user-details-remove.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/img/en/air/bsair-user-details-send-enroll-link.png": {
     "width": 1920,
     "height": 1080
   },
@@ -8085,7 +8773,7 @@
   },
   "/img/en/air/bsair-user-info-credential-face-add.png": {
     "width": 906,
-    "height": 432
+    "height": 413
   },
   "/img/en/air/bsair-user-info-credential-face.png": {
     "width": 906,
@@ -13214,6 +13902,10 @@
   "/img/products/sio2.png": {
     "width": 384,
     "height": 384
+  },
+  "/img/products/vionyx.png": {
+    "width": 370,
+    "height": 270
   },
   "/img/products/xpass-2.png": {
     "width": 384,
