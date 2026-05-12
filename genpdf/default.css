@@ -1074,7 +1074,7 @@ footer {
   counter-increment: count;
 }
 
-.doc-section sup#dupl {
+.doc-section sup#dupl, .doc-section sup#dupl_one {
   counter-increment: none;
 }
 
@@ -1086,6 +1086,10 @@ footer {
 
 .doc-section sup a:before {
   content: counter(count) ")";
+}
+
+.doc-section sup#dupl_one a::before {
+  content: "1)";
 }
 
 .doc-content span.annotation a {
