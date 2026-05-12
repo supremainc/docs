@@ -1,0 +1,95 @@
+---
+id: register-panels
+title: Register and Delete Panels
+description: This guide explains how to register the CoreStation 20 panel with BioStar Air and configure RS-485, OSDP, and Wiegand devices as secondary devices.
+keywords:
+  - Panels
+  - Registration
+  - Manage
+---
+
+BioStar Air version 2.12 supports expanding the access control system using the CoreStation 20 (CS-20) panel. Using existing RS-485 wiring to connect additional devices locally reduces infrastructure costs while supporting complex door configurations.
+
+This document provides step-by-step instructions to register the CS-20 panel and configure RS-485, OSDP, and Wiegand devices as secondary devices.
+
+:::note
+
+In BioStar Air, devices are classified as primary devices that act as controllers and secondary devices that connect to controllers. Some systems use the terms Master/Slave for this concept, but BioStar Air documentation does not use those terms.
+
+:::
+
+## Register panel
+
+The CoreStation 20 (CS-20) enables expansion of the access control system by connecting to devices that use RS-485 communication. Follow these steps to register the CS-20.
+
+### Before you start
+
+* Ensure the CS-20 is powered on and physically accessible to press the **INIT** button.
+
+* The CS-20 must be connected to the internet. If the network connection is unstable, issues may occur during registration.
+
+* A 9-digit serial number is required. The serial number can be found on the label on the back of the unit.
+
+:::info
+
+For more information on the CoreStation 20, refer to the [CoreStation 20 Installation Guide](../../device/corestation_20).
+
+:::
+
+### Register CS-20
+
+1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+
+2. Click the <Cmd sid='device_slaves_panels' product='air' /> tab.
+
+   <Image src='/img/air/bsair-device-panel-list.png' />
+
+3. Click <Cmd sid='register_cs20' product='air' /> at the top right of the screen.
+
+4. When the <Cmd sid='register_cs20' product='air' /> window appears, press the INIT button on the CS-20 panel twice.
+
+   <Image src='/img/air/bsair-cs-20-init-button.png' alone />
+
+   :::caution
+
+   After pressing the **INIT** button, there is a 5-minute window to complete CS-20 registration.
+
+   :::
+
+5. Enter the serial number.
+
+   <Image src='/img/air/bsair-device-panel-list-register-cs20.png' />
+
+6. After entering the full serial number, click <Cmd sid='register_btn' product='air' />.
+
+After registration is complete, the system automatically sets up a secure connection and displays the new CS-20 in the panel list. If registration is successful, a green dot appears next to the device name.
+
+<Image src='/img/air/bsair-device-panel-list-registered-cs20.png' />
+
+:::info
+
+For more information on the CS-20 registration process, see <Cmd sid='view_cs20_registration_guide' product='air' />.
+
+:::
+
+## Delete panel
+
+Follow these steps to delete a panel registered in BioStar Air. Deleted panels cannot be recovered. Before deleting a panel, confirm that any peripheral devices connected to it are no longer needed.
+
+1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+
+2. Click the <Cmd sid='device_slaves_panels' product='air' /> tab.
+
+3. In the list, click the checkbox for the panel you want to delete.
+
+4. Click <IcAirRemove title='Delete' /> in the upper left of the screen.
+
+   <Image src='/img/air/bsair-device-panel-remove.png' />
+
+5. When the pop-up appears, click <Cmd sid='device_btn_confirm' product='air' />.
+
+:::caution
+
+If you need to reuse connected peripheral devices, delete those devices before deleting the panel, since the SCB key may be bound.
+
+:::

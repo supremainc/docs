@@ -1,0 +1,166 @@
+---
+id: manage-registered-panels
+title: 등록된 패널 관리하기
+description: 등록된 패널의 정보를 조회하고, 세부 정보를 수정하며, 그룹에 할당하고, 펌웨어를 업데이트하는 방법을 안내합니다.
+keywords: [패널, 관리, 수정, 삭제]
+---
+
+BioStar Air에서 등록된 모든 패널을 한 곳에서 관리할 수 있습니다. 각 패널의 상태를 모니터링하고, 필요에 따라 정보를 수정하며, 그룹으로 구성하고, 펌웨어를 업데이트할 수 있습니다. 이 문서에서는 패널 목록 조회부터 그룹 관리까지 필요한 모든 기능을 확인할 수 있습니다.
+
+import DeviceInfo from '../../common/_bsair-device-info-settings.mdx';
+
+:::info
+
+BioStar Air에서는 컨트롤러 역할을 하는 마스터(Primary) 장치, 컨트롤러에 연결되는 보조(Secondary) 장치로 구분됩니다. 일부 시스템에서는 이 개념을 마스터(Master)/슬레이브(Slave)로 표현하지만, BioStar Air 문서에서는 해당 용어를 사용하지 않습니다.
+
+:::
+
+## 패널 목록 조회
+
+등록된 패널은 <Cmd sid='device_slaves_panels' product='air' /> 탭에서 관리할 수 있습니다. 패널 목록에서는 각 패널 또는 보조 장치의 종류 및 상태, 이름, 아이디, 그룹, 펌웨어 정보, 시간대와 같은 주요 정보를 한눈에 확인할 수 있습니다.
+
+<Image src='/img/air/bsair-device-panel-list-view.png' />
+
+### 패널 및 장치 상태
+
+패널 목록의 상태 아이콘을 통해 각 패널 또는 보조 장치의 연결 상태를 확인할 수 있습니다.
+
+* <StatusOK/> **녹색**: 온라인 상태로, 해당 패널 또는 보조 장치는 원격으로 제어할 수 있으며 업데이트할 수 있습니다.
+
+* <StatusFail/> **빨간색**: 오프라인 상태의 패널 또는 보조 장치입니다.
+
+* <StatusUpdating/> **주황색**: 펌웨어 업데이트 진행 중인 상태입니다.
+
+* <IcAirWarn /> **주의**: 서버와 패널 또는 보조 장치 간의 동기화가 필요한 상태입니다.
+
+### 패널 및 장치 정보
+
+패널 목록의 각 열은 아래 정보를 포함하고 있습니다.
+
+* <Cmd sid='rs485_type' product='air' />: RS-485 통신을 지원하는 패널 또는 보조 장치에서 확인할 수 있습니다. 해당 장치가 마스터 장치인지 보조 장치인지 확인할 수 있습니다.
+
+* <Cmd sid='device_product_column' product='air' />: 슈프리마 데이터베이스로부터 가져온 패널 또는 보조 장치 이름과 모델명, 상태를 확인할 수 있습니다.
+
+* <Cmd sid='device_nickname_column' product='air' />: 쉽게 식별할 수 있도록 사용자가 수정할 수 있는 항목입니다. 목록에서 패널 또는 보조 장치를 클릭하면 표시되는 정보 수정 창에서 변경할 수 있습니다.
+
+* <Cmd sid='device_id_column' product='air' />: 패널 또는 보조 장치에 할당된 고유 식별자입니다.
+
+* <Cmd sid='device_group_column' product='air' />: 패널이 속한 그룹입니다.
+
+* <Cmd sid='device_fw_column' product='air' />: 현재 설치된 펌웨어 버전입니다.
+
+* <Cmd sid='device_timezone_column' product='air' />: 패널 또는 보조 장치에 설정된 시간대입니다.
+
+
+### 필터링 {#deviceFiltering}
+
+패널 목록의 상단 헤더 영역에서 필터링 기능을 이용할 수 있습니다. 헤더 영역의 <IcAirFilter title='Filter' /> 버튼을 클릭하면 원하는 조건을 설정할 수 있습니다.
+
+<Image src='/img/air/bsair-device-mng-list-filter.png' />
+
+:::info
+
+적용한 필터 조건을 초기화하려면 <IcAirFilter title='Filter' /> 버튼을 클릭하고 <Cmd sid='column_filter_modal_reset_btn' product='air' /> 버튼을 선택하세요.
+
+:::
+
+
+## 패널 정보 수정
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' />를 클릭하세요.
+
+1. <Cmd sid='device_slaves_panels' product='air' /> 탭을 클릭하세요.
+
+1. 목록에서 정보를 수정할 패널을 클릭하면 <Cmd sid='device_cs20_edit_panels' product='air' /> 창이 나타납니다.
+
+   <Image src='/img/air/bsair-device-panel-edit-info.png' />
+
+1. 패널의 세부 정보 또는 설정을 수정하세요.
+
+1. 변경 사항을 저장하려면 하단의 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+:::info
+
+각 섹션별 세부 정보 수정 및 설정 옵션에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/device-info-settings#cs-20' />를 참고하세요.
+
+:::
+
+
+## 패널 관리 기능
+
+패널 목록에서 패널을 선택해 목록 상단에서 제공하는 관리 기능을 사용할 수 있습니다.
+
+<Image src='/img/air/bsair-device-panel-management-tool.png' />
+
+* <IcAirRef width='24px' height='24px' title='Refresh' />: 목록을 새로고침할 수 있습니다.
+
+* <IcAirRemove width='24px' height='24px' title='Delete' />: 등록된 패널 또는 보조 장치를 삭제할 수 있습니다.
+
+* <IcAirFw width='24px' height='24px' title='Update Firmware' />: 패널 목록에서 선택한 패널 또는 보조 장치의 펌웨어를 업데이트할 수 있습니다. 펌웨어 업데이트에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/how-to-upgrade-firmware' />를 참고하세요.
+
+   :::note
+
+   * CS-20에 연결된 보조 장치는 한 번에 한 개의 장치만 업그레이드할 수 있습니다.
+
+   * XPass D2 장치 업그레이드에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/how-to-upgrade-firmware#upgradeFirmwareForXPassD2' />를 참고하세요.
+
+   :::
+
+* <IcAirCloud width='24px' height='24px' title='Sync with Server' />: 목록에서 선택한 패널에서 서버로 생체 인증 템플릿을 동기화할 수 있습니다.
+
+* <IcAirGroup width='24px' height='24px' title='Manage Groups' />: 목록에서 선택한 패널을 그룹에 할당할 수 있습니다. 그룹 관리에 대한 자세한 내용은 <DocLink inner='#device_group_in_device_list' />를 참고하세요.
+
+* <IcAirByte width='24px' height='24px' title='RF Card Byte Order' />: 목록에서 선택한 패널의 RF 카드 바이트 순서를 <Cmd>MSB</Cmd> 또는 <Cmd>LSB</Cmd>로 전환할 수 있습니다.
+
+   * <Cmd>MSB</Cmd>: 카드 데이터를 처리할 때 큰 바이트 단위에서 작은 바이트 단위 순서로 처리하여 카드 일련 번호(CSN)를 왼쪽에서 오른쪽으로 순차 저장합니다.
+
+   * <Cmd>LSB</Cmd>: 카드 데이터를 처리할 때 작은 바이트 단위에서 큰 바이트 단위 순서로 처리하여 카드 일련 번호(CSN)를 저장합니다.
+
+* <IcAirDset width='24px' height='24px' title='Load Device Setting' />: 독립 실행 모드에서 원래 설정된 패널의 설정을 가져올 수 있습니다.
+
+* <IcAirUpd width='24px' height='24px' title='Update Status' />: 목록에서 선택한 패널의 상태를 업데이트할 수 있습니다.
+
+:::info
+
+CS-20에 연결된 보조 장치는 새로 고침(<IcAirRef width='24px' height='24px' title='Refresh' />), 장치 삭제(<IcAirRemove width='24px' height='24px' title='Delete' />), 펌웨어 업데이트(<IcAirFw width='24px' height='24px' title='Update Firmware' />) 기능만 제공합니다.
+
+:::
+
+
+## 패널 그룹 관리 {#device_group_in_device_list}
+
+패널 목록에서 개별 패널을 선택하여 그룹에 추가하거나, 기존 그룹에서 제거할 수 있습니다.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' />를 클릭하세요.
+
+1. <Cmd sid='device_slaves_panels' product='air' /> 탭을 클릭하세요.
+
+1. 패널 목록에서 그룹에 추가하거나 제거하려는 패널의 체크박스를 클릭하세요.
+
+1. 패널 목록 상단의 <IcAirGroup width='24px' height='24px' title='Manage Groups' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='manage_device_group_title' product='air' /> 창이 나타나면 선택한 패널을 그룹에 추가하거나 제거하세요.
+
+   <Image src='/img/air/bsair-device-panel-management-group.png' />
+
+   <Cmd sid='manage_device_group_title_two' product='air' />의 체크박스 상태는 아래와 같은 의미를 가집니다.
+
+   * <Cmd sid='manage_device_group_checkbox_state_one' product='air' />: 선택한 패널을 그룹에서 제거합니다.
+
+   * <Cmd sid='manage_device_group_checkbox_state_two' product='air' />: 선택한 패널 중 일부가 그룹에 포함된 상태입니다.
+
+   * <Cmd sid='manage_device_group_checkbox_state_three' product='air' />: 선택한 패널을 그룹에 추가합니다.
+
+1. 변경한 내용을 저장하려면 <Cmd sid='btn_ok' product='air' /> 버튼을 클릭하세요.
+
+:::info
+
+* <Cmd sid='manage_device_group_title' product='air' /> 창에서 다른 그룹을 선택하면 선택한 패널은 해당 그룹으로 이동합니다.
+
+* 패널은 그룹에 중복으로 속할 수 있습니다. 하나의 패널을 여러 그룹에 할당할 수 있습니다.
+
+* 패널 목록에서 보조 장치는 펌웨어 업그레이드 기능만 제공합니다.
+
+* 변경한 내용을 초기화하려면 <Cmd sid='device_btn_reset' product='air' /> 버튼을 클릭하세요.
+
+:::

@@ -1,6 +1,6 @@
 ---
 id: elevator-add-edit-delete
-title: Managing Elevators
+title: Manage Elevators
 description: Configure elevator access control to manage access to each floor. Connect the OM-120 module to the device, configure the floor button relays, and manage access schedules.
 keywords:
   - Elevator
@@ -50,6 +50,12 @@ Meet the following requirements to enable the elevator access control feature.
 4. In the <Cmd sid='add_elevator.assign_device_and_modules.title' product='air' /> section, select the device and module for access authentication.
 
    * <Cmd sid='add_elevator.assign_device_and_modules.field1' product='air' />: Select the device for access authentication.
+
+      :::caution
+
+      If the device doesn't appear in the list, make sure it has been assigned to a door. A device cannot be assigned to both a door and an elevator at the same time.
+
+      :::
 
    * <Cmd sid='add_elevator.assign_device_and_modules.field2' product='air' />: Select the OM-120 module that will control the elevator button relay.
 

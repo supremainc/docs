@@ -1,0 +1,137 @@
+---
+id: managing-technician
+title: 技術者アカウントを管理する
+description: 技術者アカウントの管理方法を説明します。
+keywords:
+  - 技術者
+---
+
+技術者は顧客サイトへのアクセス権を付与された専門家です。 技術者アカウントを管理するには、パートナーポータルで技術者を招待し、各サイトに割り当てて権限レベルを設定します。 
+
+BioStar Air ポータルでは、サイトに招待された技術者のアクセス権を変更したり、サイトへのアクセスをロックまたは解除したりできます。 また、技術者アカウントを完全に削除してサイトへのアクセス権を取り消すこともできます。
+
+:::info
+
+* パートナーポータルで技術者を招待しサイトに割り当てる方法の詳細は、<DocLink docId='platform/biostar_air/technician-overview' />を参照してください。
+
+* 技術者として招待されたユーザーの活動は、<Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' />/<Cmd sid='audit_logs_submenu' product='air' />で個別アカウントごとに記録され、追跡できます。
+
+:::
+
+## 開始する前に
+
+技術者アカウントを管理する前に、サイトのセキュリティ設定で技術者アカウントがサイトにアクセスできるよう許可されているか確認してください。 サイトのセキュリティ設定で技術者アカウントのサイトアクセスが許可されていない場合、技術者アカウントを管理できません。
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> をクリックします。
+
+2. <Cmd sid='site_setting_tab_security' product='air' /> タブをクリックしてください。
+
+3. <Cmd sid='site_security_input7' product='air' /> オプションを有効にしてください。
+
+<Image src='/img/air/bsair-settings-security-allow-technician.png' />
+
+<Cmd sid='site_security_input7' product='air' /> オプションを有効にすると、<Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_text' product='air' /> メニューが <Cmd sid='title_techincians_settings' product='air' /> メニューに変更されます。 <Cmd sid='admin_text' product='air' /> と <Cmd sid='technicians_text' product='air' /> タブに分かれ、管理者アカウントと技術者アカウントをそれぞれ管理できます。
+
+<Image src='/img/air/bsair-settings-admin-technician-changes.png' />
+
+## 技術者の権限変更
+
+サイトに招待された技術者のアクセス権を変更するには、次の手順に従ってください。
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> をクリックしてください。
+
+2. <Cmd sid='technicians_text' product='air' /> タブをクリックしてください。
+
+3. 技術者一覧でアクセス権を変更する技術者の <Cmd sid='technicians_permissions' product='air' /> 列をクリックしてください。
+
+   <Image src='/img/air/bsair-settings-admin-technician-permission.png' />
+
+4. アクセス権の選択リストで希望する権限レベルを選択してください。
+
+   <Image src='/img/air/bsair-settings-admin-technician-permission-select.png' />
+
+   * <Cmd sid='inviteTechnicianModal.dropdown_opt1' product='pn' />：サイトにログインできません。
+
+   * <Cmd sid='techincians_list_permissions_devices_only' product='air' />：<Cmd sid='dashboard_menu' product='air' /> と <Cmd sid='device_menu' product='air' /> メニューのみアクセスできます。
+
+   * <Cmd sid='techincians_list_permissions_full_excluding_users' product='air' />：<Cmd sid='user_menu' product='air' /> メニューを除くすべてのメニューにアクセスできますが、一部の設定機能へのアクセスは制限されます。
+
+   * <Cmd sid='techincians_list_permissions_full_including_users' product='air' />：<Cmd sid='user_menu' product='air' /> メニューを含むすべてのメニューにアクセスできますが、一部の設定機能へのアクセスは制限されます。
+
+5. 変更の確認ダイアログが表示されたら、<Cmd sid='btn_yes' product='air' /> ボタンをクリックしてください。
+
+画面上部に成功メッセージが表示され、該当する技術者のアクセス権が変更されます。
+
+:::info
+
+<Cmd sid='techincians_list_permissions_full_excluding_users' product='air' /> および <Cmd sid='techincians_list_permissions_full_including_users' product='air' /> は、次のメニューパスに対して閲覧権限はありますが、編集権限はありません。
+
+* <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' />
+
+* <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' />
+
+:::
+
+## 技術者アカウントのロック/解除 
+
+技術者のサポートが不要になった場合やセキュリティ上の理由でサイトアクセスを制限する必要がある場合は、技術者のアカウントをロックしてサイトアクセスをブロックできます。 逆に、技術者のサポートが再度必要になった場合は、アカウントのロックを解除してサイトへのアクセスを許可できます。
+
+サイトに招待された技術者のアカウントをロックすると、その技術者はサイトにログインできません。
+
+### 個別の技術者のロック/解除
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> をクリックしてください。
+
+2. <Cmd sid='technicians_text' product='air' /> タブをクリックしてください。
+
+3. 技術者一覧でアカウントをロック/解除する技術者の <Cmd sid='column_admin_account_status' product='air' /> 列のトグルボタンをクリックしてください。
+
+   <Image src='/img/air/bsair-settings-admin-technician-lock-unlock.png' />
+
+4. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='btn_yes' product='air' /> ボタンをクリックしてください。
+
+### 複数の技術者のロック/解除
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> をクリックしてください。
+
+2. <Cmd sid='technicians_text' product='air' /> タブをクリックしてください。
+
+3. 技術者一覧でアカウントをロック/解除する技術者のチェックボックスをクリックしてください。 1人以上の技術者を選択できます。
+
+4. 技術者一覧上部で <IcAirPlock title='Lock Account' /> または <IcAirPunlock title='Unlock Account' /> ボタンをクリックしてください。
+
+   <Image src='/img/air/bsair-settings-admin-technician-lock-unlock-batch.png' />
+
+5. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='btn_yes' product='air' /> ボタンをクリックしてください。
+
+画面上部に成功メッセージが表示され、選択した技術者のアカウントがロックまたは解除されます。
+
+:::info
+
+一括操作を実行すると、選択したすべての技術者が同じ状態（すべてロック、またはすべて解除）になります。
+
+:::
+
+## 技術者アカウントの削除 
+
+サイトに招待された技術者のアカウントを削除すると、その技術者のサイトアクセス権が完全に削除されます。
+
+1. 画面左のサイドバーで <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> をクリックしてください。
+
+2. <Cmd sid='technicians_text' product='air' /> タブをクリックしてください。
+
+3. 技術者一覧でアカウントを削除する技術者のチェックボックスをクリックしてください。 1人以上の技術者を選択できます。
+
+4. 技術者一覧上部の <IcAirRemove title='Delete' /> ボタンをクリックしてください。
+
+   <Image src='/img/air/bsair-settings-admin-technician-delete.png' />
+
+5. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='btn_yes' product='air' /> ボタンをクリックしてください。
+
+画面上部に成功メッセージが表示され、選択した技術者のアカウントが削除され、技術者一覧に表示されなくなります。
+
+:::info
+
+技術者アカウントは削除すると復元できません。 サイトから削除した技術者は、パートナーポータルで再度サイトに割り当てることができます。 パートナーポータルで技術者をサイトに割り当てる方法は、<DocLink docId='platform/biostar_air/assign-technician' />を参照してください。
+
+:::

@@ -1,6 +1,6 @@
 ---
 id: how-to-upgrade-firmware
-title: Firmware upgrade
+title: Upgrade Firmware
 description: Provide instructions to upgrade device firmware individually or in bulk through the web portal and mobile app. It also includes version checks and troubleshooting tips for BioStar Air.
 keywords:
   - firmware
@@ -11,7 +11,7 @@ keywords:
 Upgrade BioStar Air firmware to enhance device performance, strengthen security, and take advantage of new features. This simple process can be performed through the BioStar Air web portal or mobile app.
 
 
-## Before start
+## Before you start
 
 * Devices must be **online** to update firmware. Check the device status in the <Cmd sid='device_product_column' product='air' /> column of the device list. A green dot (<StatusOK />) next to the device image indicates the device is online.
 
@@ -44,7 +44,19 @@ Log in to the [BioStar Air](https://admin.biostarair.com) portal and follow thes
 
    <Image src='/img/air/bsair-device-mng-fw-upgrade.png' caption />
 
-5. Select the latest firmware version for the device and confirm the update.
+5. When the <Cmd sid='release_note.modal.title' product='air' /> window appears, select the latest firmware version and click <Cmd sid='release_note.modal.update' product='air' />.
+
+   <Image src='/img/air/bsair-device-mng-fw-upgrade-update.png' width='50%' />
+
+Wait for the device to restart automatically and come back online. A green dot (<StatusOK />) next to the device image indicates the device is online.
+
+:::info
+
+* Click <Cmd sid='release_note.modal.releaseNote' product='air' /> to view the release notes for that firmware version.
+
+* Click <Cmd sid='release_note.panel.viewAllReleaseNotes' product='air' /> to view the firmware release notes for all devices.
+
+:::
 
 </TabItem>
 <TabItem value='mobile' label='Mobile'>
@@ -88,15 +100,17 @@ This guide explains how to upgrade the firmware using the mobile app.
 
    <Image src='/img/air/bsair-device-mng-list-fw-column-align.png' />
 
-4. Select the checkbox to the left of each device you want to upgrade.
+4. Select the checkbox to the left of each device you want to upgrade. You must select devices of the same type.
 
 5. Click the <IcAirFw width='24px' height='24px' title='Update Firmware' /> button at the top of the device list.
 
    <Image src='/img/air/bsair-device-mng-list-fw-update.png' />
 
-6. When the <Cmd sid="update_fw_text" product="air" /> window appears, select the latest firmware version, and click <Cmd sid="btn_ok" product="air" />.
+6. When the <Cmd sid='release_note.modal.title' product='air' /> window appears, select the latest firmware version and click <Cmd sid='release_note.modal.update' product='air' />.
 
-7. When the message window appears, review the information and click <Cmd sid='device_btn_confirm' product='air' />.
+   <Image src='/img/air/bsair-device-mng-fw-upgrade-update.png' width='50%' />
+
+Wait for the selected devices to restart automatically and come back online. A green dot (<StatusOK />) next to the device image indicates the device is online.
 
 :::info
 
@@ -105,5 +119,49 @@ This guide explains how to upgrade the firmware using the mobile app.
 * Do not power off the device.
 
 * The device restarts automatically after the firmware upgrade is complete.
+
+* Click <Cmd sid='release_note.modal.releaseNote' product='air' /> to view the release notes for that firmware version.
+
+* Click <Cmd sid='release_note.panel.viewAllReleaseNotes' product='air' /> to view the firmware release notes for all devices.
+
+:::
+
+## XPass D2 Firmware Upgrade {#upgradeFirmwareForXPassD2}
+
+XPass D2 uses two firmware components.
+
+* **MICOM**: Includes updates for device operation, RS-485 communication, authentication processing, stability, and general bug fixes.
+
+* **BLE**: Includes updates related to Bluetooth communication.
+
+XPass D2 firmware must be updated in the order **MICOM** → **BLE**.
+
+1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+
+2. Click the <Cmd sid='device_slaves_panels' product='air' /> tab.
+
+3. Click the XPass D2 checkbox. You can select only 1 device.
+
+   <Image src='/img/air/bsair-device-panel-fw-up-xpd2-01.png' />
+
+4. Click <IcAirFw width='24px' height='24px' title='Update Firmware' /> at the top of the list.
+
+5. When the <Cmd sid='release_note.modal.title' product='air' /> window appears, select the **MICOM** firmware version.
+
+   <Image src='/img/air/bsair-device-panel-fw-up-xpd2-02.png' width='50%' />
+
+6. Click <Cmd sid='release_note.modal.update' product='air' />.
+
+7. Wait for the device to restart automatically and come back online. A green dot (<StatusOK />) next to the device image indicates the device is online.
+
+8. Repeat the firmware upgrade process to select and update the **BLE** firmware version.
+
+:::caution
+
+* The firmware version shown on screen does not allow you to individually verify the installation status of the **MICOM** and **BLE** components. Continue the firmware upgrade until the BLE upgrade completes.
+
+* The device comes back online after the **MICOM** update and again after the **BLE** update. Do not rely on the green online indicator (<StatusOK />) alone to confirm that the full upgrade is complete. Confirm both steps are complete.
+
+* Only one secondary device connected via CS-20 can have its firmware upgraded at a time.
 
 :::

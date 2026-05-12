@@ -75,7 +75,7 @@ To reset the applied filters, click <IcAirFilter title='Filter' /> and select <C
 
 In the final step of device registration in the mobile app, select the <Cmd en='Create a door with this device'>Create a door with this device</Cmd> option to create a door. For more information on how to register a device with the mobile app, see <DocLink docId='platform/biostar_air/manage-device-with-app' />.
 
-<Image src='/img/air/bsair-door-mng-register-device-as-door.png' />
+<Image src='/img/air/bsair-door-mng-register-device-as-door.png' width='50%' />
 
 ### Add from the web portal
 
@@ -101,7 +101,37 @@ Follow the steps below to add a new door in the BioStar Air portal.
 
 * If a device is already registered but does not appear in the available device list, check whether it is assigned to another door. If it is assigned to another door, remove it from that door and try again.
 
+* **A device cannot be assigned to both a door and an elevator at the same time**.
+
 :::
+
+:::note
+
+Doors that use primary/secondary devices
+
+* The door is controlled by a primary device (XPass 2 or CoreStation 20).
+
+* An XPass 2 configured as a primary can be assigned to only one door, regardless of how many secondary devices or modules are assigned.
+
+* An XPass 2 configured as a primary can have up to 31 secondary devices assigned, and it can add a new door whose relay is controlled by a secondary Secure Module (SIO2).
+
+* Doors that use a CoreStation 20 (CS-20) together with a Secure Module (SIO2) cannot be created.
+
+:::
+
+### Door configuration limitations
+
+The following limitations apply to door configuration.
+
+* 1 XPass D2 + SIO2 (relay owned by SIO2)
+
+* 1 XPass 2 + XPass D2 (relay owned by XPass 2)
+
+* 2 XPass D2 (relay owned by XPass 2)
+
+* 1 or 2 OSDP/Wiegand devices (relay owned by CS-20)
+
+* Only one SIO2 is allowed per door (relay for I/O): it must be wired to the same XPass 2 as the XPass D2
 
 ## Edit doors {#editingDoors}
 
@@ -121,19 +151,19 @@ Follow these steps to edit door details and settings.
 
    * <Cmd sid="door_product_column3" product="air" />: Select the device that authenticates users exiting the door.
 
-   * <Cmd sid='door_product_column6' product='air' />: You can connect a CCTV camera for event logs.
+5. Configure the relay device in the <Cmd sid='door_auxiliary_device' product='air' /> section.
+
+   * <Cmd sid='door_product_column6' product='air' />: Connect CCTV cameras for event logs.
+
+   * <Cmd sid="add_doors.door_relay" product="air" />: Select the relay device that controls the door lock.
+
+   * <Cmd sid='add_doors.relay_ignoring_door_sensor' product='air' />: Set the relay to ignore the door sensor.
 
    :::note
 
    To use the camera, enable the <Cmd sid='site_setting_video_management' product='air' /> feature under <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> → <Cmd sid='site_setting_qr_reader_tab' product='air' />.
 
    :::
-
-5. Configure the relay device in the <Cmd sid="door_auxiliary_device" product="air" /> section.
-
-   * <Cmd sid="add_doors.door_relay" product="air" />: Select the relay device that controls the door lock.
-
-   * <Cmd sid='add_doors.relay_ignoring_door_sensor' product='air' />: Set the relay to ignore the door sensor.
 
 6. Configure additional settings.
 
@@ -147,9 +177,11 @@ Follow these steps to edit door details and settings.
 
 :::info
 
-* We recommend assigning a relay located inside the secure area as <Cmd sid="door_product_column3" product="air" />.
+* For security, the relay must always connect to the device on the secure side of the door. Use the exit device's relay or an SIO2 module.
 
-* <Cmd sid="door_product_column2" product="air" /> and <Cmd sid="door_product_column3" product="air" /> must be connected to **separate networks**. In a master–slave configuration, connection over Wiegand or RS-485 is not possible.
+* When configured for a direct cloud connection, both the entry and exit devices require separate network cables.
+
+* When using a primary-secondary configuration, the primary device (usually the exit device) needs a network connection and the secondary device connects to the primary via RS-485.
 
 * For more information on configuring the SIO2 secure module, see <DocLink docId='platform/biostar_air/configuring-the-sio2-secure-module' />.
 

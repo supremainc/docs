@@ -1,21 +1,43 @@
 ---
 id: manage-device
 title: Dispositivos
-description: "Administrar el ciclo de vida de todo el dispositivo en BioStar Air. Esta guía cubre todo el proceso de los dispositivos operativos de manera eficiente: desde el registro de dispositivos y configuración detallada hasta la gestión de grupos, actualizaciones de firmware y configuración de módulos de autenticación biométrica y seguridad."
+description: Proporciona orientación sobre cómo seleccionar y configurar la arquitectura de dispositivos óptima para cumplir con los requisitos de cada sitio. Ofrece una visión general de las características y el funcionamiento de las arquitecturas distribuidas y centralizadas de BioStar Air, y presenta criterios de selección para escenarios como instalaciones nuevas, reconstrucciones y despliegues biométricos.
 keywords:
   - Gestión Dispositivos
-  - Registrar dispositivo
-  - Configuración del Dispositivo
-  - Grupo Dispositivo
-  - Actualización de firmware
-  - Biométrico
-  - Asistencia de tiempo
   - BioStar Air
 ---
 
-La gestión de dispositivos en BioStar Air abarca todas las etapas del registro a la operación. Registrar dispositivos en la aplicación móvil, configurar configuraciones detalladas como red, autenticación, y firmware en el portal web, y administrar dispositivos por grupo para optimizar implementaciones a gran escala.
+Los ajustes flexibles de gestión de dispositivos de BioStar Air permiten configurar cada sitio exactamente según sus requisitos. En este documento, la gestión de dispositivos se refiere al ciclo de vida completo de un dispositivo, que incluye la inscripción, los ajustes, la gestión de firmware, la supervisión y la operación continua.
 
-Personalizar el sistema para satisfacer los requerimientos de la organización con características avanzadas como autenticación biométrica, gestión de asistencia y configuración de módulos de seguridad.
+BioStar Air admite dos arquitecturas de dispositivos diferentes. Ambas pueden utilizarse en el mismo sitio, lo que permite a las organizaciones elegir el mejor enfoque para cada puerta o área.
+
+## Arquitectura distribuida
+
+En una arquitectura distribuida, cada dispositivo edge contiene su propio controlador y se conecta directamente a la nube mediante Ethernet. Los dispositivos siguen operando de forma independiente durante interrupciones de red y se sincronizan automáticamente cuando se restablece la conectividad.
+
+Los dispositivos edge también pueden actuar como controladores para lectores secundarios conectados vía RS-485.
+
+Esta arquitectura se utiliza comúnmente para:
+
+* Nuevas instalaciones
+
+* Dispositivos biométricos
+
+* Despliegues en los que es importante minimizar la infraestructura.
+
+## Arquitectura centralizada
+
+En una arquitectura centralizada, los lectores se conectan a un panel de control mediante RS-485 o Wiegand. El panel de control se conecta a la nube vía Ethernet y actúa como controlador para los dispositivos aguas abajo.
+
+El panel de control gestiona la redundancia y las decisiones de acceso para los lectores conectados durante interrupciones de red.
+
+Esta arquitectura se utiliza comúnmente para:
+
+* Proyectos de modernización con cableado de bajo voltaje existente
+
+* Sitios que reemplazan sistemas heredados de control de acceso
+
+* Despliegues con salas de seguridad o paneles centralizados
 
 ---
 

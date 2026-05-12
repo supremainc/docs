@@ -1,0 +1,210 @@
+---
+id: partner-administrator
+title: Invitar administradores de socios.
+description: Esta guía explica cómo invitar cuentas de administradores de socios, asignar roles y gestionar permisos en el Portal de socios.
+keywords:
+  - Socio
+  - Administrador
+  - roles
+  - Permisos
+---
+
+Guía para invitar cuentas de administradores de socios, asignar roles y gestionar permisos en el Portal de socios. Los administradores de socios controlan el acceso a los sitios de los clientes para mejorar la seguridad y la eficiencia operativa.
+
+A los administradores de socios se les asigna uno de 4 roles: Observador, Operador, Administrador o Administrador principal; cada uno tiene permisos de acceso distintos. Este documento compara los permisos de cada rol y ofrece instrucciones paso a paso, desde invitar cuentas de administrador hasta gestionar permisos, bloquear/desbloquear cuentas y eliminar cuentas.
+
+## Comprender los roles y permisos de administrador {#adminRoles}
+
+A los administradores del Portal de socios se les asigna uno de los siguientes 4 roles.
+
+* <Cmd sid="observer_role" product="air" className="bold" />: Puede ver la información del sitio pero no puede realizar cambios.
+
+* <Cmd sid="operator_role" product="air" className="bold" />: Puede configurar nuevos sitios y asignar créditos, pero no puede modificar los permisos de administrador ni invitar a nuevos administradores.
+
+* <Cmd sid="admin_role" product="air" className="bold" />: Puede invitar y gestionar a otros administradores, pero no puede eliminar a usuarios de nivel master.
+
+* <Cmd sid="master_role" product="air" className="bold" />: Tiene control total del Portal de Socios, incluyendo la gestión de usuarios, la creación de sitios y la asignación de créditos. Solo los usuarios de nivel master pueden activar inicialmente la cuenta del Portal de Socios.
+
+:::info
+
+Configura y activa una cuenta principal antes de que los usuarios con otros niveles de permiso puedan acceder al portal.
+
+:::
+
+## Invitar administradores
+
+Sigue los pasos a continuación para invitar administradores.
+
+1. Inicie sesión en el [Partner Portal](https://partner.biostarair.com) con una cuenta asignada el rol <Cmd sid='admin_role' product='air' className='bold' /> o superior.
+
+2. Haz clic en <Cmd sid='site.admin_technicans.title' product='pn' /> en la barra lateral izquierda.
+
+3. Haz clic en <Cmd sid='common.button.invite' product='pn' /> en la parte superior derecha de la pantalla.
+
+4. Cuando aparezca la ventana <Cmd sid='inviteAdminsModal.title' product='pn' />, seleccione el rol de administrador a invitar en el campo <Cmd sid='siteListPage.placeholder.adminType' product='pn' />.
+
+   <Image src='/img/air/bsair-partner-admin-invite.png' />
+
+5. Ingrese la dirección de correo electrónico del administrador a invitar.
+
+6. Haga clic en <Cmd sid='common.button.add' product='pn' /> cuando esté activo.
+
+   <Image src='/img/air/bsair-partner-admin-invite-input-email.png' width='60%' />
+
+7. Los administradores agregados aparecen debajo del campo de dirección de correo electrónico. Repite los pasos 4–6 para invitar administradores adicionales.
+
+   <Image src='/img/air/bsair-partner-admin-invited-list.png' />
+
+8. Después de agregar todos los administradores, haga clic en <Cmd sid='common.button.ok' product='pn' />.
+
+9. Cuando aparezca el mensaje de confirmación, haz clic en <Cmd sid='common.button.confirm' product='pn' />.
+
+:::info
+
+Invitar administradores al Portal de socios no otorga acceso a los sitios; invítalos en cada sitio por separado.
+
+:::
+
+### Estado de la invitación
+
+Después de invitar administradores, consulta el estado de la invitación de cada cuenta invitada en la lista de administradores.
+
+#### Registro pendiente
+
+Los administradores invitados permanecen en el estado <Cmd sid='adminLCM.pending_status' product='pn' /> hasta que acepten la invitación por correo electrónico y activen su cuenta. Los administradores invitados pueden hacer clic en el enlace del correo para registrar su cuenta o iniciar sesión en el Portal de socios.
+
+<Image src='/img/air/bsair-partner-admin-list-pending-status.png' />
+
+:::info
+
+Los administradores invitados tienen hasta 7 días para aceptar la invitación; después de 7 días la invitación expira y el estado cambia a <Cmd sid='adminLCM.user_status_expired' product='pn' />. Si la invitación expira, reenvía el enlace de invitación para que la cuenta invitada pueda registrarse de nuevo. Para más información sobre reenvío de enlaces de invitación, consulta <DocLink inner='#resendInvitation' />.
+
+:::
+
+#### Registro completado
+
+Cuando un administrador invitado acepta la invitación por correo electrónico y completa el registro, el estado de la invitación cambia a <Cmd sid='adminLCM.user_status_accepted' product='pn' />.
+
+<Image src='/img/air/bsair-partner-admin-list-accepted-status.png' />
+
+#### Invitación revocada
+
+Cancela la invitación si la dirección de correo del administrador invitado es incorrecta o si la invitación ya no es necesaria. Si cancelas la invitación, su estado cambiará a <Cmd sid='adminLCM.user_status_revoked' product='pn' />. Para más información sobre cómo revocar invitaciones de administrador, consulta <DocLink inner='#revokeInvite' />.
+
+<Image src='/img/air/bsair-partner-admin-list-revoked-status.png' />
+
+### Invitación revocada {#revokeInvite}
+
+Cancela una invitación si un socio ingresó incorrectamente la dirección de correo de un administrador o si la invitación ya no es necesaria. Tras cancelar la invitación, el usuario no podrá usar el enlace para registrarse.
+
+1. En la lista de administradores, haz clic en la casilla junto al administrador cuyo estado de invitación sea <Cmd sid='adminLCM.pending_status' product='pn' />. Selecciona 1 o más administradores.
+
+2. Haz clic en <IcAirRevoke title='Revoke Invitation' /> en la parte superior izquierda de la lista de administradores.
+
+   <Image src='/img/air/bsair-partner-admin-list-revoke-invitation.png' />
+
+   :::note
+
+   Solo los administradores con el estado <Cmd sid='adminLCM.pending_status' product='pn' /> pueden tener su invitación cancelada.
+
+   :::
+
+3. Si aparece un mensaje emergente, revíselo y haga clic en <Cmd sid='common.button.yes' product='pn' />.
+
+4. Cuando aparezca el mensaje de éxito por la invitación cancelada, haga clic en <Cmd sid='common.button.close' product='pn' />.
+
+En la lista de administradores, el estado de invitación de un administrador cuya invitación fue cancelada cambia a <Cmd sid='adminLCM.user_status_revoked' product='pn' />.
+
+<Image src='/img/air/bsair-partner-admin-list-revoked-status.png' />
+
+### Reenviar enlace de invitación {#resendInvitation}
+
+Reenvía el enlace de invitación si un administrador invitado no recibió el correo, lo perdió o si el enlace ha expirado.
+
+1. En la lista de administradores, haz clic en la casilla junto a cualquier administrador cuyo estado de invitación sea <Cmd sid='adminLCM.pending_status' product='pn' />, <Cmd sid='adminLCM.user_status_expired' product='pn' /> o <Cmd sid='adminLCM.user_status_revoked' product='pn' />. Selecciona 1 o más administradores.
+
+2. Haz clic en <IcAirResend title='Resend Invitation' /> en la parte superior izquierda de la lista de administradores.
+
+   <Image src='/img/air/bsair-partner-admin-list-resend-invitation.png' />
+
+3. Si aparece un mensaje emergente, revíselo y haga clic en <Cmd sid='common.button.yes' product='pn' />.
+
+4. Cuando aparezca el mensaje de éxito por reenvío del enlace de invitación, haga clic en <Cmd sid='common.button.close' product='pn' />.
+
+En la lista de administradores, el estado de invitación de un administrador cuyo enlace fue reenviado cambia a <Cmd sid='adminLCM.pending_status' product='pn' />.
+
+<Image src='/img/air/bsair-partner-admin-list-pending-status.png' />
+
+## Gestión de administradores
+
+Después de que un administrador invitado acepte la invitación por correo y complete el registro, gestiona al administrador desde la lista de administradores. Bloquea o desbloquea la cuenta de un administrador, o cambia su rol. Si un administrador ya no es necesario, elimina su cuenta.
+
+### Bloquear o desbloquear una cuenta de administrador
+
+Bloquea o desbloquea una cuenta usando la opción <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> para administradores que han aceptado la invitación por correo y completado el registro. Cuando una cuenta está bloqueada, el administrador no puede iniciar sesión en el Portal de socios. La información de la cuenta se conserva para poder reactivarla más adelante si es necesario.
+
+Para administradores bloqueados, la columna <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> muestra <Cmd sid='common.label.locked' product='pn' />; para administradores desbloqueados muestra <Cmd sid='common.label.unlocked' product='pn' />.
+
+<Image src='/img/air/bsair-partner-admin-list-lock-unlock.png' />
+
+:::info
+
+* Las cuentas de los administradores que completaron el registro están desbloqueadas por defecto.
+
+* Las cuentas con el rol <Cmd sid='admin_role' product='air' className='bold' /> o superior no se pueden bloquear ni desbloquear.
+
+:::
+
+#### Bloquear o desbloquear a un administrador individual
+
+Haz clic en el interruptor de la columna <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> de la lista de administradores para bloquear o desbloquear cuentas de administradores individuales.
+
+1. Haz clic en el interruptor de la columna <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> de la lista de administradores.
+
+   <Image src='/img/air/bsair-partner-admin-list-lock-unlock-toggle.png' />
+
+2. Si aparece un mensaje emergente, revíselo y haga clic en <Cmd sid='common.button.confirm' product='pn' />.
+
+#### Bloquear o desbloquear varios administradores
+
+Para bloquear o desbloquear varias cuentas de administrador a la vez, selecciónalas en la lista de administradores.
+
+1. En la lista de administradores, haz clic en la casilla del administrador que quieras bloquear o desbloquear. Selecciona 1 o más administradores.
+
+2. Haz clic en <IcAirPlock title='Lock Account' /> o <IcAirPunlock title='Unlock Account' /> en la esquina superior izquierda de la pantalla.
+
+   <Image src='/img/air/bsair-partner-admin-list-batch-lock-unlock.png' />
+
+3. Si aparece un mensaje emergente, revíselo y haga clic en <Cmd sid='common.button.yes' product='pn' />.
+
+4. Cuando aparezca el mensaje de éxito que confirma el bloqueo o desbloqueo de la cuenta, haz clic en <Cmd sid='common.button.close' product='pn' />.
+
+### Cambiar el rol de administrador
+
+Cambia el rol de un administrador. Para más información sobre los roles de administrador, consulta <DocLink inner='#adminRoles' />.
+
+1. En la lista de administradores, haz clic en la columna <Cmd sid='common.label.administrator' product='pn' /> del administrador cuyo rol quieras cambiar.
+
+   <Image src='/img/air/bsair-partner-admin-list-change-role.png' />
+
+2. Selecciona el permiso que deseas cambiar de la lista.
+
+3. Cuando aparezca un mensaje emergente, haz clic en <Cmd sid='common.button.confirm' product='pn' />.
+
+Los permisos del usuario se actualizan en la lista de administradores.
+
+### Eliminar cuenta de administrador
+
+Elimina una cuenta de administrador cuando ya no sea necesaria. Eliminar una cuenta de administrador impide que el administrador inicie sesión en el Portal de socios, y la información de la cuenta se elimina de forma permanente y no se puede restaurar.
+
+1. En la lista de administradores, haz clic en la casilla del administrador que quieras eliminar. Selecciona 1 o más administradores.
+
+2. Haz clic en <IcAirRemove title='Delete' /> en la parte superior izquierda de la pantalla.
+
+   <Image src='/img/air/bsair-partner-admin-list-delete.png' />
+
+3. Si aparece un mensaje emergente, revíselo y haga clic en <Cmd sid='common.button.confirm' product='pn' />.
+
+4. Cuando aparezca el mensaje de éxito de eliminación de la cuenta, haz clic en <Cmd sid='common.button.close' product='pn' />.
+
+Las cuentas de administrador eliminadas ya no aparecen en la lista de administradores.

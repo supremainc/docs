@@ -1,0 +1,225 @@
+---
+id: assign-technician
+title: Asignar técnicos a un sitio
+description: Cómo los socios asignan y gestionan técnicos en un sitio.
+keywords:
+  - Técnico
+  - Asignación
+  - Gestionar
+---
+
+Los socios pueden asignar técnicos a los sitios de clientes y definir permisos. Gestione niveles de acceso granulares para cada técnico y proteja la información personal sensible.
+
+**Funciones clave al asignar técnicos a sitios**
+
+* **Ajustes de acceso granular**: Opciones flexibles, desde acceso a dispositivos hasta permisos de administrador completos
+
+* **Protección de datos de usuarios**: Cumpla con las normativas de privacidad usando la opción para excluir el acceso a datos de usuario
+
+* **Gestión eficiente**: Administre técnicos en cada sitio según los niveles de permiso definidos por el socio
+
+:::info
+
+* Antes de asignar técnicos a un sitio, invite sus cuentas en el Portal de Socios. Para obtener más información, consulte <DocLink docId='platform/biostar_air/technician-access' />.
+
+* Para obtener más información sobre cómo asignar técnicos a un sitio en el portal de administración de BioStar Air, consulte <DocLink docId='platform/biostar_air/managing-technician' />.
+
+:::
+
+## Asignar técnicos a un sitio
+
+Después de invitar a un técnico en el Partner Portal, asigne al técnico a cada sitio individual para que pueda acceder a esos sitios. Siga los pasos siguientes para asignar un técnico a un sitio.
+
+<Steps>
+<Step>
+
+### Ir a la lista de sitios
+
+1. Inicia sesión en el [Portal de Socios](https://partner.biostarair.com).
+
+2. Haga clic en <Cmd sid="menu.label.siteList" product="pn" /> en la barra lateral izquierda.
+
+3. En la lista de sitios, haga clic en el sitio al que asignará un técnico.
+
+4. Cuando aparezca el panel <Cmd sid="siteListPage.drawer.edit.title" product="pn" />, selecciona la pestaña <Cmd sid="site.admin_technicans.title" product="pn" /> y luego la pestaña <Cmd sid="site.technicans.title" product="pn" />.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician.png' />
+
+5. Haga clic en <Cmd sid="common.button.invite" product="pn" />.
+
+6. Cuando aparezca la ventana <Cmd sid="inviteTechniciansModal.title" product="pn" />, seleccione la cuenta deseada de la lista <Cmd sid="inviteTechnicianModal.distributor_admins" product="pn" /> o <Cmd sid="inviteTechnicianModal.distributor_technicians" product="pn" />.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-invite-list.png' width='60%' />
+
+Las cuentas seleccionadas aparecen en la lista <Cmd sid="inviteTechnicianModal.selected" product="pn" /> en la parte inferior.
+
+<Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-invite-list-selected.png' width='60%' />
+
+:::info
+
+* Ingrese el nombre de un administrador o de un técnico en el campo de búsqueda por nombre.
+
+* Para cancelar la cuenta seleccionada, en la lista <Cmd sid='inviteTechnicianModal.selected' product='pn' />, haga clic en <IcClose title='Remove' /> a la derecha de la cuenta.
+
+* Las cuentas que estén registradas como administradores del sitio o ya asignadas como técnicos al sitio no aparecerán en la lista.
+
+:::
+
+</Step>
+<Step>
+
+### Establecer permisos de acceso al sitio
+
+Después de seleccionar todos los técnicos para invitar, aplique los permisos de acceso al sitio. Los permisos disponibles son:
+
+* <Cmd sid='inviteTechnicianModal.dropdown_opt1' product='pn' />: Puede agregarse al sitio pero no puede iniciar sesión.
+
+* <Cmd sid='inviteTechnicianModal.dropdown_opt2' product='pn' />: Solo puede acceder a los menús <Cmd sid='dashboard_menu' product='air' /> y <Cmd sid='device_menu' product='air' />.
+
+* <Cmd sid='inviteTechnicianModal.dropdown_opt3' product='pn' />: Puede acceder a todos los menús excepto el menú <Cmd sid='user_menu' product='air' />, pero el acceso a ciertos ajustes está restringido.
+
+* <Cmd sid='inviteTechnicianModal.dropdown_opt4' product='pn' />: Puede acceder a todos los menús, incluido el menú <Cmd sid='user_menu' product='air' />, pero el acceso a ciertos ajustes está restringido.
+
+:::info
+
+* <Cmd sid='inviteTechnicianModal.dropdown_opt3' product='pn' /> y <Cmd sid='inviteTechnicianModal.dropdown_opt4' product='pn' /> tienen acceso de solo lectura a la siguiente ruta de menú.
+
+  * <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' />
+
+  * <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' />
+
+* Una vez que un técnico se asigna a un sitio y los permisos se configuran en el Portal de Socios, solo una cuenta de administrador puede cambiar esos permisos en el portal de administración de BioStar Air.
+
+:::
+
+#### Establecer permisos para técnicos individuales
+
+Asigne distintos permisos a técnicos individuales. A la derecha de cada cuenta, seleccione el nivel de permiso deseado.
+
+<Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-invite-list-selected-each.png' />
+
+#### Aplicar los mismos permisos a todos los técnicos
+
+1. Elija el nivel de permiso deseado en la opción <Cmd sid='inviteTechnicianModal.apply_site_permissions_to_all' product='pn' />, luego active el interruptor a la derecha para aplicar los mismos permisos a todas las cuentas seleccionadas.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-invite-list-selected-batch-01.png' />
+
+2. Cuando aparezca el mensaje de confirmación, haga clic en <Cmd sid='common.button.yes' product='pn' />.
+
+3. El permiso seleccionado se aplica a todas las cuentas de la lista <Cmd sid='inviteTechnicianModal.selected' product='pn' />.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-invite-list-selected-batch-02.png' />
+
+</Step>
+<Step>
+
+### Invitación de técnico completada
+
+1. Después de completar las invitaciones a técnicos y la configuración de permisos, haga clic en <Cmd sid='common.button.confirm' product='pn' /> en la ventana <Cmd sid='inviteTechniciansModal.title' product='pn' />.
+
+2. La ventana <Cmd sid='inviteTechniciansModal.title' product='pn' /> se cierra y los técnicos invitados aparecen en <Cmd sid='siteListPage.drawer.edit.profile.invitations.title' product='pn' /> dentro del panel <Cmd sid='siteListPage.drawer.edit.title' product='pn' />.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-invited-list.png' />
+
+3. Para enviar los correos de invitación y permitir el acceso de los técnicos al sitio, haga clic en <Cmd sid='common.button.apply' product='pn' /> en la parte inferior del panel <Cmd sid='siteListPage.drawer.edit.title' product='pn' />.
+
+</Step>
+</Steps>
+
+## Verificar el estado de la invitación
+
+Compruebe el estado de invitación de los técnicos invitados al sitio. El estado se muestra como <Cmd sid='adminLCM.pending_status' product='pn' /> hasta que el técnico invitado acepte la invitación. Los técnicos invitados tienen hasta 7 días para aceptar la invitación. Pasados 7 días, la invitación expira y el estado cambia a <Cmd sid='adminLCM.user_status_expired' product='pn' />.
+
+1. En la lista de sitios, haga clic en el sitio donde invitó al técnico.
+
+2. Cuando aparezca el panel <Cmd sid="siteListPage.drawer.edit.title" product="pn" />, selecciona la pestaña <Cmd sid="site.admin_technicans.title" product="pn" /> y luego la pestaña <Cmd sid="site.technicans.title" product="pn" />.
+
+3. <Cmd sid='site.technicans.title' product='pn' />: Compruebe el estado de la invitación.
+
+Cuando un técnico completa el registro en el sitio, su estado cambia de <Cmd sid='adminLCM.pending_status' product='pn' /> a <Cmd sid='adminLCM.user_status_accepted' product='pn' />.
+
+<Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-status.png' />
+
+## Invitación revocada
+
+Cancele la invitación si la dirección de correo electrónico del técnico invitado se ingresó incorrectamente o si el problema se resolvió y la invitación ya no es necesaria.
+
+1. En la lista de sitios, haga clic en el sitio donde invitó al técnico.
+
+2. Cuando aparezca el panel <Cmd sid="siteListPage.drawer.edit.title" product="pn" />, selecciona la pestaña <Cmd sid="site.admin_technicans.title" product="pn" /> y luego la pestaña <Cmd sid="site.technicans.title" product="pn" />.
+
+3. En <Cmd sid='site.technicans.title' product='pn' />, para el técnico cuyo estado sea <Cmd sid='adminLCM.pending_status' product='pn' />, haga clic en <IcAirMore title='More' /> en el extremo derecho.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-reinvitation.png' />
+
+4. Haga clic en <Cmd sid='adminLCM.revoke_invitation' product='pn' /> en el menú emergente.
+
+5. Si aparece un mensaje emergente, revíselo y haga clic en <Cmd sid='common.button.yes' product='pn' />.
+
+6. Cuando aparezca el mensaje de éxito por la invitación cancelada, haga clic en <Cmd sid='common.button.close' product='pn' />.
+
+Cuando se cancela una invitación, el estado del técnico cambia de <Cmd sid='adminLCM.pending_status' product='pn' /> a <Cmd sid='adminLCM.user_status_revoked' product='pn' />.
+
+## Reenviar enlace de invitación
+
+Reenvíe el enlace de invitación si un técnico invitado no recibió el correo de invitación o lo perdió.
+
+1. En la lista de sitios, haga clic en el sitio donde invitó al técnico.
+
+2. Cuando aparezca el panel <Cmd sid="siteListPage.drawer.edit.title" product="pn" />, selecciona la pestaña <Cmd sid="site.admin_technicans.title" product="pn" /> y luego la pestaña <Cmd sid="site.technicans.title" product="pn" />.
+
+3. En <Cmd sid='site.technicans.title' product='pn' />, para el técnico cuyo estado sea <Cmd sid='adminLCM.pending_status' product='pn' />, <Cmd sid='adminLCM.user_status_expired' product='pn' /> o <Cmd sid='adminLCM.user_status_revoked' product='pn' />, haga clic en <IcAirMore title='More' /> en el extremo derecho.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-reinvitation.png' />
+
+4. Haga clic en <Cmd sid='adminLCM.resend_invitation_link' product='pn' /> en el menú emergente.
+
+5. Si aparece un mensaje emergente, revíselo y haga clic en <Cmd sid='common.button.yes' product='pn' />.
+
+6. Cuando aparezca el mensaje de éxito por reenvío del enlace de invitación, haga clic en <Cmd sid='common.button.close' product='pn' />.
+
+## Bloquear o desbloquear cuentas de técnicos
+
+Bloquee o desbloquee cuentas de técnicos asignados a un sitio.
+
+1. Haga clic en <Cmd sid="menu.label.siteList" product="pn" /> en la barra lateral izquierda.
+
+2. En la lista de sitios, haz clic en el sitio donde quieras administrar el acceso de técnicos.
+
+3. Cuando aparezca el panel <Cmd sid="siteListPage.drawer.edit.title" product="pn" />, selecciona la pestaña <Cmd sid="site.admin_technicans.title" product="pn" /> y luego la pestaña <Cmd sid="site.technicans.title" product="pn" />.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-added-technician.png' />
+
+4. En <Cmd sid='site.technicans.title' product='pn' />, haga clic en el botón de alternar en la columna <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> para bloquear o desbloquear la cuenta de un técnico.
+
+5. Haz clic en <Cmd sid='common.button.apply' product='pn' /> en la parte inferior para aplicar los cambios.
+
+:::info
+
+Las cuentas de técnicos recién registradas tienen el acceso al sitio establecido en <Cmd sid='common.label.locked' product='pn' />. Para desbloquear el estado <Cmd sid='common.label.locked' product='pn' />, use una cuenta con derechos de administrador para ese sitio en el portal de BioStar Air.
+
+:::
+
+## Eliminar cuentas de técnicos
+
+Es posible eliminar la cuenta de un técnico invitado al sitio. Cuando se elimina la cuenta de un técnico, este no puede iniciar sesión en el sitio y se revoca su acceso.
+
+1. En la lista de sitios, haga clic en el sitio donde invitó al técnico.
+
+2. Cuando aparezca el panel <Cmd sid="siteListPage.drawer.edit.title" product="pn" />, selecciona la pestaña <Cmd sid="site.admin_technicans.title" product="pn" /> y luego la pestaña <Cmd sid="site.technicans.title" product="pn" />.
+
+3. En <Cmd sid='site.technicans.title' product='pn' />, haga clic en <IcAirMore title='More' /> en el extremo derecho del técnico que va a eliminar.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-reinvitation.png' />
+
+4. Haga clic en <Cmd sid='common.button.delete' product='pn' /> en el menú emergente.
+
+5. Si aparece un mensaje emergente, revíselo y haga clic en <Cmd sid='common.button.confirm' product='pn' />.
+
+6. Cuando aparezca el mensaje de éxito que confirma la eliminación de la cuenta del técnico, haga clic en <Cmd sid='common.button.close' product='pn' />.
+
+:::info
+
+Eliminar la cuenta de un técnico no borra la cuenta por completo; solo revoca el acceso a ese sitio. Vuelva a invitar al técnico eliminado al sitio para restaurar su acceso.
+
+:::

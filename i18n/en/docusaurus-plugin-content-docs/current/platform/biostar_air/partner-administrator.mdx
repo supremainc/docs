@@ -1,0 +1,210 @@
+---
+id: partner-administrator
+title: Invite Partner Administrators
+description: This guide explains how to invite partner administrator accounts, assign roles, and manage permissions in the Partner Portal.
+keywords:
+  - Partner
+  - Administrator
+  - roles
+  - Permission
+---
+
+Guide on inviting partner administrator accounts, assigning roles, and managing permissions in the Partner Portal. Partner administrators control access to customer sites to enhance security and operational efficiency.
+
+Partner administrators are assigned one of 4 roles — Observer, Operator, Administrator, or Master — each with different access permissions. This document compares the permissions of each role and provides step-by-step guidance from inviting administrator accounts to managing permissions, locking/unlocking accounts, and deleting accounts.
+
+## Understand administrator roles and permissions {#adminRoles}
+
+Administrators in the Partner Portal can be assigned one of the following 4 roles.
+
+* <Cmd sid="observer_role" product="air" className="bold" />: Can view site information but cannot make changes.
+
+* <Cmd sid="operator_role" product="air" className="bold" />: Can set up new sites and allocate credits but cannot modify administrator permissions or invite new administrators.
+
+* <Cmd sid="admin_role" product="air" className="bold" />: Can invite and manage other administrators but cannot remove master level users.
+
+* <Cmd sid="master_role" product="air" className="bold" />: Has full control of the portal, including user management, site creation, and credit allocation. Only master level users can activate the Partner Portal account initially.
+
+:::info
+
+Set up and activate a master account before users with other permission levels can access the portal.
+
+:::
+
+## Invite Administrators
+
+Follow the steps below to invite administrators.
+
+1. Log in to the [Partner Portal](https://partner.biostarair.com) with an account assigned the <Cmd sid='admin_role' product='air' className='bold' /> role or higher.
+
+2. Click <Cmd sid='site.admin_technicans.title' product='pn' /> in the left sidebar.
+
+3. Click <Cmd sid='common.button.invite' product='pn' /> at the top right of the screen.
+
+4. When the <Cmd sid='inviteAdminsModal.title' product='pn' /> window appears, select the administrator role to invite from the <Cmd sid='siteListPage.placeholder.adminType' product='pn' /> field.
+
+   <Image src='/img/air/bsair-partner-admin-invite.png' />
+
+5. Enter the email address of the administrator to invite.
+
+6. Click <Cmd sid='common.button.add' product='pn' /> when it becomes active.
+
+   <Image src='/img/air/bsair-partner-admin-invite-input-email.png' width='60%' />
+
+7. Added administrators appear below the email address field. Repeat steps 4–6 to invite additional administrators.
+
+   <Image src='/img/air/bsair-partner-admin-invited-list.png' />
+
+8. After adding all administrators, click <Cmd sid='common.button.ok' product='pn' />.
+
+9. When the confirmation message appears, click <Cmd sid='common.button.confirm' product='pn' />.
+
+:::info
+
+Inviting administrators to the Partner Portal does not grant site access; invite them to each site separately.
+
+:::
+
+### Invitation status
+
+After inviting administrators, check the invitation status of each invited account in the administrators list.
+
+#### Pending sign-up
+
+Invited administrators remain in the <Cmd sid='adminLCM.pending_status' product='pn' /> status until they accept the invitation via email and activate their account. Invited administrators can click the link in the email to register their account or log in to the Partner Portal.
+
+<Image src='/img/air/bsair-partner-admin-list-pending-status.png' />
+
+:::info
+
+Invited administrators have up to 7 days to accept the invitation; after 7 days the invitation expires and the status changes to <Cmd sid='adminLCM.user_status_expired' product='pn' />. If the invitation expires, you can resend the invitation link so the invited account can sign up again. For more information on resending invitation links, see <DocLink inner='#resendInvitation' />.
+
+:::
+
+#### Sign-up complete
+
+When an invited administrator accepts the email invitation and completes registration, the invitation status changes to <Cmd sid='adminLCM.user_status_accepted' product='pn' />.
+
+<Image src='/img/air/bsair-partner-admin-list-accepted-status.png' />
+
+#### Invitation revoked
+
+You can cancel the invitation if the invited administrator's email address is incorrect or if the invitation is no longer needed. If you cancel the invitation, its status will change to <Cmd sid='adminLCM.user_status_revoked' product='pn' />. For more information on revoking administrator invitations, see <DocLink inner='#revokeInvite' />.
+
+<Image src='/img/air/bsair-partner-admin-list-revoked-status.png' />
+
+### Invitation revoked {#revokeInvite}
+
+You can cancel an invitation if a partner entered an administrator's email address incorrectly or if the invitation is no longer needed. After you cancel an invitation, the user will not be able to use the invitation link to sign up.
+
+1. In the administrators list, click the checkbox next to the administrator whose invitation status is <Cmd sid='adminLCM.pending_status' product='pn' />. You can select 1 or more administrators.
+
+2. Click <IcAirRevoke title='Revoke Invitation' /> at the top left of the administrator list.
+
+   <Image src='/img/air/bsair-partner-admin-list-revoke-invitation.png' />
+
+   :::note
+
+   Only administrators with the <Cmd sid='adminLCM.pending_status' product='pn' /> status can have their invitations canceled.
+
+   :::
+
+3. If a popup message appears, review the message and click <Cmd sid='common.button.yes' product='pn' />.
+
+4. When the success message for the canceled invitation appears, click <Cmd sid='common.button.close' product='pn' />.
+
+In the administrators list, the invitation status for an administrator whose invitation was canceled changes to <Cmd sid='adminLCM.user_status_revoked' product='pn' />.
+
+<Image src='/img/air/bsair-partner-admin-list-revoked-status.png' />
+
+### Resend invitation link {#resendInvitation}
+
+Resend the invitation link if an invited administrator did not receive the invitation email, lost it, or if the invitation link has expired.
+
+1. In the administrators list, click the checkbox next to any administrator whose invitation status is <Cmd sid='adminLCM.pending_status' product='pn' />, <Cmd sid='adminLCM.user_status_expired' product='pn' />, or <Cmd sid='adminLCM.user_status_revoked' product='pn' />. You can select 1 or more administrators.
+
+2. Click <IcAirResend title='Resend Invitation' /> at the top left of the administrator list.
+
+   <Image src='/img/air/bsair-partner-admin-list-resend-invitation.png' />
+
+3. If a popup message appears, review the message and click <Cmd sid='common.button.yes' product='pn' />.
+
+4. When the success message for resending the invitation link appears, click <Cmd sid='common.button.close' product='pn' />.
+
+In the administrators list, the invitation status of an administrator whose invitation link was resent changes to <Cmd sid='adminLCM.pending_status' product='pn' />.
+
+<Image src='/img/air/bsair-partner-admin-list-pending-status.png' />
+
+## Admin management
+
+After an invited administrator accepts the email invitation and completes sign-up, you can manage the administrator in the administrators list. Lock or unlock an administrator's account, or change their role. If an administrator is no longer needed, you can delete their account.
+
+### Lock or unlock an administrator account
+
+Lock or unlock an account using the <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> option for administrators who have accepted the email invitation and completed sign-up. When an account is locked, the administrator cannot sign in to the partner portal. Account information is retained so the account can be reactivated later if needed.
+
+For locked administrators, the <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> column shows <Cmd sid='common.label.locked' product='pn' />; for unlocked administrators it shows <Cmd sid='common.label.unlocked' product='pn' />.
+
+<Image src='/img/air/bsair-partner-admin-list-lock-unlock.png' />
+
+:::info
+
+* Accounts for administrators who have completed sign-up are unlocked by default.
+
+* Accounts with the <Cmd sid='admin_role' product='air' className='bold' /> role or higher cannot be locked or unlocked.
+
+:::
+
+#### Lock or unlock an individual administrator
+
+Click the toggle in the <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> column of the administrators list to lock or unlock individual administrator accounts.
+
+1. Click the toggle in the <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> column of the administrators list.
+
+   <Image src='/img/air/bsair-partner-admin-list-lock-unlock-toggle.png' />
+
+2. If a pop-up message appears, review it and click <Cmd sid='common.button.confirm' product='pn' />.
+
+#### Lock or unlock multiple administrators
+
+To lock or unlock multiple administrator accounts at once, select them in the administrators list.
+
+1. In the administrators list, click the checkbox for the administrator you want to lock or unlock. You can select 1 or more administrators.
+
+2. Click <IcAirPlock title='Lock Account' /> or <IcAirPunlock title='Unlock Account' /> in the upper left corner of the screen.
+
+   <Image src='/img/air/bsair-partner-admin-list-batch-lock-unlock.png' />
+
+3. If a popup message appears, review the message and click <Cmd sid='common.button.yes' product='pn' />.
+
+4. When the success message confirming the account lock or unlock appears, click <Cmd sid='common.button.close' product='pn' />.
+
+### Change administrator role
+
+Change an administrator's role. For more information on administrator roles, see <DocLink inner='#adminRoles' />.
+
+1. In the administrators list, click the <Cmd sid='common.label.administrator' product='pn' /> column for the administrator whose role you want to change.
+
+   <Image src='/img/air/bsair-partner-admin-list-change-role.png' />
+
+2. Select the permission you want to change from the list.
+
+3. When a pop-up message appears, click <Cmd sid='common.button.confirm' product='pn' />.
+
+The user's permissions are updated in the administrators list.
+
+### Delete administrator account
+
+You can delete an administrator account when it is no longer needed. Deleting an administrator account prevents the administrator from logging into the partner portal, and the account information is permanently removed and cannot be restored.
+
+1. In the administrators list, click the checkbox for the administrator you want to delete. You can select 1 or more administrators.
+
+2. Click <IcAirRemove title='Delete' /> in the upper left of the screen.
+
+   <Image src='/img/air/bsair-partner-admin-list-delete.png' />
+
+3. If a pop-up message appears, review it and click <Cmd sid='common.button.confirm' product='pn' />.
+
+4. When the account deletion success message appears, click <Cmd sid='common.button.close' product='pn' />.
+
+Deleted administrator accounts no longer appear in the administrator list.

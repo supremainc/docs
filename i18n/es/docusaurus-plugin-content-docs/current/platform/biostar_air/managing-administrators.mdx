@@ -1,14 +1,16 @@
 ---
 id: managing-administrators
 title: Administrar cuentas y roles de administradores
-description: Aprende cómo invitar a administradores, asignar niveles de rol, gestionar permisos y configurar el control de acceso para los roles observador, operador, administrador y master en BioStar Air.
+description: Esta guía explica cómo invitar cuentas de administrador a BioStar Air, asignar los 4 roles (Observador, Operador, Administrador y Maestro) y gestionar permisos.
 keywords:
   - Administrador
   - roles
   - Configuración de Control de Acceso
 ---
 
-Utiliza la función de administrador en BioStar Air para gestionar cuentas de administrador, asignar roles y controlar los niveles de acceso en tu organización. Esto te permite mantener la seguridad y el control administrativo, a la vez que otorgas los privilegios adecuados al personal correspondiente.
+Use las funciones de administración y gestión de roles de BioStar Air para controlar eficazmente el acceso al sitio. Asigne los 4 roles — Observador, Operador, Administrador y Maestro — para otorgar a cada persona solo los permisos que necesita, garantizando seguridad y eficiencia operativa.
+
+Este documento abarca todo el ciclo de vida de las cuentas de administrador: desde invitar administradores hasta asignar roles, gestionar permisos y bloquear cuentas.
 
 :::tip
 
@@ -20,95 +22,67 @@ Mira el siguiente video para ver cómo gestionar administradores.
 
 ## Ver administradores {#viewAdmin}
 
-Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> en la barra lateral izquierda.
+Haga clic en <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> en la barra lateral izquierda.
 
 <Image src='/img/air/bsair-settings-admin.png' />
 
-El menú <Cmd sid="admin_submenu" product="air" /> muestra una lista de todos los administradores activos. La lista de administradores incluye la siguiente información.
+:::info
 
-* Nombre
+Habilitar la opción <Cmd sid='site_security_input7' product='air' /> cambia el menú <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_text' product='air' /> al menú <Cmd sid='title_techincians_settings' product='air' />. Las pestañas <Cmd sid='admin_text' product='air' /> y <Cmd sid='technicians_text' product='air' /> permiten administrar las cuentas de administrador y de técnico por separado.
 
-* Dirección de correo electrónico
+Para más información sobre cómo habilitar <Cmd sid='site_security_input7' product='air' />, consulte <DocLink docId='platform/biostar_air/managing-technician' />.
 
-* Número de teléfono
+:::
 
-* Invitado por
+### Lista de administradores
 
-* Fecha de invitación
+El menú <Cmd sid='title_techincians_settings' product='air' /> muestra una lista de todos los administradores. La lista de administradores incluye la siguiente información.
 
-* Rol de administrador
+* <Cmd sid='admin_table_name_column' product='air' />: El nombre del administrador.
 
-* Estado de la cuenta (activo/inactivo)
+* <Cmd sid='column_email' product='air' />: La dirección de correo electrónico del administrador.
 
-## Desactivar administradores {#deactiveAdmin}
+* <Cmd sid='mobile_card' product='air' />: El número de teléfono del administrador.
 
-En lugar de eliminar a un administrador, desactiva la cuenta y reactívala cuando sea necesario.
+* <Cmd sid='column_admin_invite_by' product='air' />: La dirección de correo electrónico de la persona que invitó al administrador.
 
-1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> en la barra lateral izquierda.
+* <Cmd sid='column_admin_date' product='air' />: La fecha en que se invitó al administrador.
 
-2. Busca en la lista al administrador que quieres desactivar.
+* <Cmd sid='column_admin_level' product='air' />: El nivel de permisos del administrador. Para más información, consulte <DocLink inner='#administrator-levels' />.
 
-3. Haz clic en el interruptor de la columna <Cmd sid="column_admin_account_status" product="air" />.
+* <Cmd sid='invitation_status' product='air' />: El estado de la invitación de la cuenta de administrador. Para más información, consulte <DocLink inner='#invitationStatus' />.
 
-   <Image src='/img/air/bsair-settings-admin-deactive.png' />
+* <Cmd sid='column_admin_account_status' product='air' />: El estado de bloqueo de la cuenta de administrador. Puede bloquear o desbloquear una cuenta. Para más información, consulte <DocLink inner='#deactiveAdmin' />.
 
-4. Cuando aparezca la ventana de mensajes, haz clic en el botón <Cmd sid='admin_status_change_confirm_btn' product='air' />.
+### Estado de la invitación {#invitationStatus}
 
-El estado en la columna <Cmd sid="column_admin_account_status" product="air" /> cambia a <Cmd sid="admin_status_disabled" product="air" />.
+La lista de administradores muestra el estado de la invitación de cada administrador.
 
-<Image src='/img/air/bsair-settings-admin-deactive-result.png' />
+#### Registro pendiente
+
+El estado de un administrador invitado aparece como <Cmd sid='pending_status' product='air' /> hasta que acepta la invitación por correo electrónico y completa el registro. Un administrador invitado puede aceptar la invitación haciendo clic en el enlace del correo para registrarse o iniciar sesión y acceder al sitio.
+
+<Image src='/img/air/bsair-settings-admin-invite-resend-link-pending-status.png' />
 
 :::info
 
-La capacidad para desactivar administradores puede estar restringida por el rol del administrador. Los administradores con el rol <Cmd sid="master_role" product="air" className="bold" /> no pueden desactivar a otros administradores con el rol <Cmd sid="master_role" product="air" className="bold" />.
+Un administrador invitado tiene hasta 7 días para aceptar la invitación. Después de 7 días, la invitación expira y el estado cambia a <Cmd sid='user_status_expired' product='air' />. Si la invitación expira, puede reenviar el enlace de invitación para que la cuenta invitada pueda registrarse de nuevo. Para más información sobre reenviar enlaces de invitación, consulte <DocLink inner='#resendInvitation' />.
 
 :::
 
-## Cambiar el rol de un administrador {#changing-an-administrators-role}
+#### Registro completado
 
-Los administradores pueden cambiar los roles de administradores de nivel inferior.
+Cuando un administrador invitado acepta la invitación por correo y completa el registro, el estado de la invitación cambia a <Cmd sid='user_status_accepted' product='air' />. Tras completar el registro, el administrador inicia sesión en el sitio y accede a menús y funciones según su rol asignado.
 
-1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> en la barra lateral izquierda.
+<Image src='/img/air/bsair-settings-admin-list-signup-complete.png' />
 
-2. Busca en la lista al administrador cuyo rol quieres cambiar.
+#### Invitación revocada
 
-3. Selecciona el nuevo nivel de administrador en la columna <Cmd sid="column_admin_level" product="air" />.
+Puede cancelar la invitación si la dirección de correo del administrador invitado es incorrecta o si la invitación ya no es necesaria. Al cancelar la invitación, su estado cambia a <Cmd sid='user_status_revoked' product='air' />. Para más información sobre cancelar invitaciones de administrador, consulte <DocLink inner='#cancelInvitation' />.
 
-   <Image src='/img/air/bsair-settings-admin-change-role.png' />
+<Image src='/img/air/bsair-settings-admin-invite-revoke-status.png' />
 
-4. Cuando aparezca la ventana de mensajes, haz clic en el botón <Cmd sid='admin_status_change_confirm_btn' product='air' />.
-
-:::note
-
-Solo los administradores con el rol <Cmd sid="master_role" product="air" className="bold" /> pueden asignar o modificar el rol <Cmd sid="master_role" product="air" className="bold" /> para otros administradores.
-
-:::
-
-## Invitar a nuevos administradores {#inviteNewAdmin}
-
-Agregar nuevos administradores.
-
-1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="admin_submenu" product="air" /> en la barra lateral izquierda.
-
-2. Haga clic en <Cmd sid="btn_invite" product="air" /> en la esquina superior derecha de la pantalla.
-
-3. Cuando aparezca la ventana <Cmd sid="admin_invitation_title" product="air" />, ingrese la dirección de correo electrónico.
-
-   <Image src='/img/air/bsair-settings-admin-invite.png' />
-
-4. En <Cmd sid="admin_invitation_input2" product="air" />, seleccione el rol que se asignará al nuevo administrador.
-
-5. Haga clic en <Cmd sid="send_btn" product="air" /> para enviar la invitación.
-
-:::note
-
-* Cada administrador debe tener una dirección de correo electrónico única. Si es necesario, use una dirección alias (por ejemplo, erik+training@example.com).
-
-* Haga clic en el enlace del correo electrónico de invitación. Regístrese si el administrador no tiene una cuenta. Si el administrador ya tiene una cuenta, inicie sesión para acceder directamente al **sitio**.
-
-:::
-
-## Niveles de administrador {#administrator-levels}
+### Niveles de administrador {#administrator-levels}
 
 Cada nivel de administrador en BioStar Air tiene permisos específicos, y los niveles superiores heredan los permisos de los inferiores.
 
@@ -118,9 +92,31 @@ Cada rol de administrador tiene permisos distintos en BioStar Air. <Cmd sid="obs
 
 :::
 
-### <Cmd sid="observer_role" product="air" className="normal" /> (Nivel más bajo) {#observer}
+#### Comparar permisos
 
-* <Cmd sid="dashboard_menu" product="air" /> y los registros **se pueden ver**.
+<div className='table-fixed'>
+
+| Función | Observador | Operador | Administrador | Maestro |
+| --- | :-: | :-: | :-: | :-: |
+| Ver Panel/Registros | ✔️ | ✔️ | ✔️ | ✔️ |
+| Exportar registros y generar informes | ✔️ | ✔️ | ✔️ | ✔️ |
+| Gestión Usuarios | ❌ | ✔️ | ✔️ | ✔️ |
+| Administrar Grupos de Usuarios | ❌ | ✔️ | ✔️ | ✔️ |
+| Administrar Niveles de Acceso | ❌ | ✔️ | ✔️ | ✔️ |
+| Administrar horarios | ❌ | ✔️ | ✔️ | ✔️ |
+| Gestionar grupos de días festivos | ❌ | ✔️ | ✔️ | ✔️ |
+| Controlar y configurar dispositivos | ❌ | ❌ | ✔️ | ✔️ |
+| Invitar administradores | ❌ | ❌ | ✔️ | ✔️ |
+| Asignar rol Maestro | ❌ | ❌ | ❌ | ✔️ |
+| Editar o eliminar administradores maestros | ❌ | ❌ | ❌ | ✔️ |
+| Crear subsitios | ❌ | ❌ | ❌ | ✔️ |
+| Configurar ajustes del sitio | ❌ | ❌ | ❌ | ✔️ |
+
+</div>
+
+#### <Cmd sid="observer_role" product="air" className="normal" /> (Nivel más bajo) {#observer}
+
+* <Cmd sid='dashboard_menu' product='air' /> y los registros **se pueden ver**.
 
 * **Exportar** registros y generar informes.
 
@@ -128,7 +124,7 @@ Cada rol de administrador tiene permisos distintos en BioStar Air. <Cmd sid="obs
 
 * El acceso a los menús está restringido. La mayoría de los menús no se muestran en pantalla.
 
-### <Cmd sid='operator_role' product='air' className='normal' /> {#operator}
+#### <Cmd sid='operator_role' product='air' className='normal' /> {#operator}
 
 * Puede administrar <Cmd sid="user_submenu" product="air" />, <Cmd sid="user_groups_submenu" product="air" />, <Cmd sid="access_levels_submenu" product="air" />, <Cmd sid="schedules_submenu" product="air" /> y <Cmd sid="holiday_groups_submenu" product="air" />.
 
@@ -136,7 +132,7 @@ Cada rol de administrador tiene permisos distintos en BioStar Air. <Cmd sid="obs
 
 * Adecuado para administrar la configuración diaria de usuarios y accesos.
 
-### <Cmd sid='admin_role' product='air' className='normal' /> {#administrator}
+#### <Cmd sid='admin_role' product='air' className='normal' /> {#administrator}
 
 * **Puede invitar** a nuevos administradores. Sin embargo, no puede asignar el rol <Cmd sid="master_role" product="air" className="bold" />.
 
@@ -146,7 +142,7 @@ Cada rol de administrador tiene permisos distintos en BioStar Air. <Cmd sid="obs
 
 * Este rol suele recomendarse para el personal de TI responsable de la gestión del sistema.
 
-### <Cmd sid="master_role" product="air" className="normal" /> (Nivel más alto) {#master}
+#### <Cmd sid="master_role" product="air" className="normal" /> (Nivel más alto) {#master}
 
 * Tiene **acceso total** a todas las configuraciones y funciones.
 
@@ -159,3 +155,133 @@ Cada rol de administrador tiene permisos distintos en BioStar Air. <Cmd sid="obs
 * Responsable de aceptar los **términos** antes de que otros administradores inicien sesión.
 
 * Generalmente asignado al propietario de la empresa o a un ejecutivo de máxima confianza.
+
+## Invitar a nuevos administradores {#inviteNewAdmin}
+
+Agregar nuevos administradores.
+
+1. Haga clic en <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> en la barra lateral izquierda.
+
+2. Haga clic en <Cmd sid="btn_invite" product="air" /> en la esquina superior derecha de la pantalla.
+
+3. Cuando aparezca la ventana <Cmd sid="admin_invitation_title" product="air" />, ingrese la dirección de correo electrónico.
+
+   <Image src='/img/air/bsair-settings-admin-invite.png' />
+
+4. En <Cmd sid="admin_invitation_input2" product="air" />, seleccione el rol que se asignará al nuevo administrador.
+
+5. Haga clic en <Cmd sid="send_btn" product="air" /> para enviar la invitación.
+
+Las cuentas invitadas aparecen en la lista de administradores con <Cmd sid='invitation_status' product='air' /> establecido en <Cmd sid='pending_status' product='air' />. Cuando una cuenta invitada acepta la invitación por correo, su <Cmd sid='invitation_status' product='air' /> cambia a <Cmd sid='user_status_accepted' product='air' />.
+
+<Image src='/img/air/bsair-settings-admin-invite-pending-status.png' />
+
+:::note
+
+* Una cuenta invitada puede aceptar la invitación hasta por 7 días. Si pasan 7 días, la invitación expira y el estado de la cuenta cambia a <Cmd sid='user_status_expired' product='air' />.
+
+* Cada administrador debe tener una dirección de correo electrónico única. Si es necesario, use una dirección alias (por ejemplo, erik+training@example.com).
+
+* Haga clic en el enlace del correo electrónico de invitación. Regístrese si el administrador no tiene una cuenta. Si el administrador ya tiene una cuenta, inicie sesión para acceder directamente al **sitio**.
+
+:::
+
+## Invitación revocada {#cancelInvitation}
+
+Si una cuenta invitada no ha aceptado la invitación, puede cancelarla. Cancelar la invitación impide que las cuentas pendientes se registren usando el enlace de invitación del correo.
+
+1. Haga clic en la casilla de las cuentas con estado de invitación <Cmd sid='pending_status' product='air' /> en la lista de administradores. Seleccione 1 o más cuentas.
+
+2. Haz clic en <IcAirRevoke title='Revoke Invitation' /> en la parte superior izquierda de la lista de administradores.
+
+   <Image src='/img/air/bsair-settings-admin-invite-pending-status-revoke.png' />
+
+3. Cuando aparezca un cuadro emergente, revisa el mensaje y haz clic en <Cmd sid='btn_yes' product='air' />.
+
+Las cuentas en la lista de administradores cuyas invitaciones han sido revocadas cambian a <Cmd sid='user_status_revoked' product='air' />.
+
+<Image src='/img/air/bsair-settings-admin-invite-revoke-status.png' />
+
+## Reenviar enlace de invitación {#resendInvitation}
+
+Puede reenviar el enlace de invitación si una cuenta invitada no recibió o perdió el correo de invitación, o si el enlace ha expirado. Reenviar el enlace permite que el usuario se registre usando el nuevo enlace.
+
+1. Haga clic en la casilla de las cuentas con estado de invitación <Cmd sid='pending_status' product='air' />, <Cmd sid='user_status_expired' product='air' /> o <Cmd sid='user_status_revoked' product='air' /> en la lista de administradores. Seleccione 1 o más cuentas.
+
+2. Haz clic en <IcAirResend title='Resend Invitation' /> en la parte superior izquierda de la lista de administradores.
+
+   <Image src='/img/air/bsair-settings-admin-invite-resend-link.png' />
+
+3. Cuando aparezca un cuadro emergente, revisa el mensaje y haz clic en <Cmd sid='btn_yes' product='air' />.
+
+Las cuentas cuyo enlace de invitación se reenvíe cambiarán a <Cmd sid='pending_status' product='air' />.
+
+<Image src='/img/air/bsair-settings-admin-invite-resend-link-pending-status.png' />
+
+## Bloquear o desbloquear administradores {#deactiveAdmin}
+
+Use la opción <Cmd sid='column_admin_account_status' product='air' /> para bloquear o desbloquear administradores que hayan completado el registro aceptando una invitación por correo. Bloquear una cuenta impide que el administrador inicie sesión. La información de la cuenta se conserva para que pueda reactivarse más tarde si es necesario.
+
+En la columna <Cmd sid='column_admin_account_status' product='air' />, los administradores bloqueados aparecen como <Cmd sid='admin_status_disabled' product='air' />, y los administradores desbloqueados aparecen como <Cmd sid='admin_status_active' product='air' />.
+
+<Image src='/img/air/bsair-settings-admin-list-lock-unlock.png' />
+
+:::info
+
+* Solo se pueden bloquear o desbloquear cuentas de administrador que hayan completado el registro.
+
+* La opción <Cmd sid='column_admin_account_status' product='air' /> puede estar restringida por el rol del administrador. Los administradores con el rol <Cmd sid='master_role' product='air' className='bold' /> no pueden bloquear a otros administradores con el rol <Cmd sid='master_role' product='air' className='bold' />.
+
+:::
+
+### Bloquear o desbloquear a un administrador individual
+
+1. Busque al administrador que desea bloquear o desbloquear en la lista.
+
+2. Haz clic en el interruptor de la columna <Cmd sid="column_admin_account_status" product="air" />.
+
+   <Image src='/img/air/bsair-settings-admin-deactive.png' />
+
+3. Cuando aparezca la ventana de mensajes, haz clic en el botón <Cmd sid='admin_status_change_confirm_btn' product='air' />.
+
+### Bloquear o desbloquear varios administradores
+
+1. En la lista de administradores, haz clic en la casilla del administrador que quieras bloquear o desbloquear. Selecciona 1 o más administradores.
+
+2. Haz clic en <IcAirPlock title='Lock Account' /> o <IcAirPunlock title='Unlock Account' /> en la esquina superior izquierda de la pantalla.
+
+   <Image src='/img/air/bsair-settings-admin-list-batch-lock-unlock.png' />
+
+3. Cuando aparezca un cuadro emergente, revisa el mensaje y haz clic en <Cmd sid='btn_yes' product='air' />.
+
+## Cambiar el rol de un administrador {#changing-an-administrators-role}
+
+Los administradores pueden cambiar los roles de administradores de nivel inferior. Ajuste los roles cuando cambien las funciones de los empleados, cuando sus responsabilidades aumenten o disminuyan, o durante una reorganización. Reducir el nivel de un rol elimina el acceso del administrador a las funciones que tenía anteriormente.
+
+1. Busque en la lista al administrador cuyo rol desea cambiar.
+
+2. Selecciona el nuevo nivel de administrador en la columna <Cmd sid="column_admin_level" product="air" />.
+
+   <Image src='/img/air/bsair-settings-admin-change-role.png' />
+
+3. Cuando aparezca la ventana de mensajes, haz clic en el botón <Cmd sid='admin_status_change_confirm_btn' product='air' />.
+
+:::note
+
+Solo los administradores con el rol <Cmd sid="master_role" product="air" className="bold" /> pueden asignar o modificar el rol <Cmd sid="master_role" product="air" className="bold" /> para otros administradores.
+
+:::
+
+## Eliminar cuenta de administrador {#deleteAdmin}
+
+Si elimina una cuenta de administrador, ese administrador no podrá iniciar sesión en el sitio y la información de la cuenta eliminada no se podrá recuperar.
+
+1. En la lista de administradores, haz clic en la casilla del administrador que quieras eliminar. Selecciona 1 o más administradores.
+
+2. Haz clic en <IcAirRemove title='Delete' /> en la parte superior izquierda de la pantalla.
+
+   <Image src='/img/air/bsair-settings-admin-list-delete.png' />
+
+3. Cuando aparezca un cuadro emergente, revisa el mensaje y haz clic en <Cmd sid='btn_yes' product='air' />.
+
+Las cuentas de administrador eliminadas ya no aparecen en la lista de administradores.

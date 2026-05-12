@@ -1,0 +1,225 @@
+---
+id: assign-technician
+title: Assign Technicians to a Site
+description: Learn how partners assign and manage technicians on a site.
+keywords:
+  - Technician
+  - Assignment
+  - Manage
+---
+
+Partners can assign technicians to customer sites and set permissions. Manage granular access levels for each technician to protect sensitive personal information.
+
+**Key features of assigning technicians to sites**
+
+* **Granular access settings**: Flexible options from device access to full administrator rights
+
+* **User data protection**: Comply with privacy regulations by using the option to exclude user data access
+
+* **Efficient management**: Manage technicians at each site according to partner-defined permission levels
+
+:::info
+
+* Before assigning technicians to a site, invite their accounts in the Partner Portal. For more information, see <DocLink docId='platform/biostar_air/technician-access' />.
+
+* For more information on assigning technicians to a site in the BioStar Air administrator portal, see <DocLink docId='platform/biostar_air/managing-technician' />.
+
+:::
+
+## Assign technicians to a site
+
+After inviting a technician in the Partner Portal, assign the technician to each individual site so they can access those sites. Follow the steps below to assign a technician to a site.
+
+<Steps>
+<Step>
+
+### Go to the site list
+
+1. Log in to the [Partner Portal](https://partner.biostarair.com).
+
+2. Click <Cmd sid="menu.label.siteList" product="pn" /> in the left sidebar.
+
+3. In the site list, click the site to which you want to assign a technician.
+
+4. When the <Cmd sid="siteListPage.drawer.edit.title" product="pn" /> panel appears, select the <Cmd sid="site.admin_technicans.title" product="pn" /> tab, then the <Cmd sid="site.technicans.title" product="pn" /> tab.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician.png' />
+
+5. Click <Cmd sid="common.button.invite" product="pn" />.
+
+6. When the <Cmd sid="inviteTechniciansModal.title" product="pn" /> window appears, select the desired account from the <Cmd sid="inviteTechnicianModal.distributor_admins" product="pn" /> or <Cmd sid="inviteTechnicianModal.distributor_technicians" product="pn" /> list.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-invite-list.png' width='60%' />
+
+Selected accounts appear in the <Cmd sid="inviteTechnicianModal.selected" product="pn" /> list at the bottom.
+
+<Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-invite-list-selected.png' width='60%' />
+
+:::info
+
+* Enter an administrator's or technician's name in the name search field.
+
+* To cancel the selected account, in the <Cmd sid='inviteTechnicianModal.selected' product='pn' /> list, click <IcClose title='Remove' /> to the right of the account.
+
+* Accounts that are registered as site administrators or already assigned as technicians to the site will not appear in the list.
+
+:::
+
+</Step>
+<Step>
+
+### Set site access permissions
+
+After selecting all technicians you want to invite, apply the site access permissions. Available permissions are as follows.
+
+* <Cmd sid='inviteTechnicianModal.dropdown_opt1' product='pn' />: Can be added to the site but cannot log in.
+
+* <Cmd sid='inviteTechnicianModal.dropdown_opt2' product='pn' />: Can only access the <Cmd sid='dashboard_menu' product='air' /> and <Cmd sid='device_menu' product='air' /> menus.
+
+* <Cmd sid='inviteTechnicianModal.dropdown_opt3' product='pn' />: Can access all menus except the <Cmd sid='user_menu' product='air' /> menu, but access to certain settings is restricted.
+
+* <Cmd sid='inviteTechnicianModal.dropdown_opt4' product='pn' />: Can access all menus including the <Cmd sid='user_menu' product='air' /> menu, but access to certain settings is restricted.
+
+:::info
+
+* <Cmd sid='inviteTechnicianModal.dropdown_opt3' product='pn' /> and <Cmd sid='inviteTechnicianModal.dropdown_opt4' product='pn' /> have view-only access to the following menu path.
+
+  * <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' />
+
+  * <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' />
+
+* Once a technician is assigned to a site and permissions are set in the Partner Portal, only an administrator account can change those permissions in the BioStar Air admin portal.
+
+:::
+
+#### Set permissions for individual technicians
+
+Assign different permissions to individual technicians. To the right of each account, select the desired permission level.
+
+<Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-invite-list-selected-each.png' />
+
+#### Apply the same permissions to all technicians
+
+1. Choose the desired permission level from the <Cmd sid='inviteTechnicianModal.apply_site_permissions_to_all' product='pn' /> option, then click the toggle on the right to apply the same permissions to all selected accounts.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-invite-list-selected-batch-01.png' />
+
+2. When the confirmation message appears, click <Cmd sid='common.button.yes' product='pn' />.
+
+3. The selected permission is applied to all accounts in the <Cmd sid='inviteTechnicianModal.selected' product='pn' /> list.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-invite-list-selected-batch-02.png' />
+
+</Step>
+<Step>
+
+### Technician invitation completed
+
+1. After completing technician invitations and permission settings, click <Cmd sid='common.button.confirm' product='pn' /> in the <Cmd sid='inviteTechniciansModal.title' product='pn' /> window.
+
+2. The <Cmd sid='inviteTechniciansModal.title' product='pn' /> window closes, and the invited technicians are listed under <Cmd sid='siteListPage.drawer.edit.profile.invitations.title' product='pn' /> in the <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> panel.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-invited-list.png' />
+
+3. To send invitation emails and allow technicians to access the site, click <Cmd sid='common.button.apply' product='pn' /> at the bottom of the <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> panel.
+
+</Step>
+</Steps>
+
+## Check invitation status
+
+Check the invitation status of technicians invited to the site. The invitation status is shown as <Cmd sid='adminLCM.pending_status' product='pn' /> until the invited technician accepts the invitation. Invited technicians have up to 7 days to accept the invitation. After 7 days, the invitation expires and the status changes to <Cmd sid='adminLCM.user_status_expired' product='pn' />.
+
+1. In the site list, click the site where you invited the technician.
+
+2. When the <Cmd sid="siteListPage.drawer.edit.title" product="pn" /> panel appears, select the <Cmd sid="site.admin_technicans.title" product="pn" /> tab, then the <Cmd sid="site.technicans.title" product="pn" /> tab.
+
+3. <Cmd sid='site.technicans.title' product='pn' />: Check the invitation status.
+
+When a technician completes signing up for the site, their status changes from <Cmd sid='adminLCM.pending_status' product='pn' /> to <Cmd sid='adminLCM.user_status_accepted' product='pn' />.
+
+<Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-status.png' />
+
+## Invitation revoked
+
+You can cancel the invitation if the invited technician's email address was entered incorrectly, or if the issue has been resolved and the invitation is no longer needed.
+
+1. In the site list, click the site where you invited the technician.
+
+2. When the <Cmd sid="siteListPage.drawer.edit.title" product="pn" /> panel appears, select the <Cmd sid="site.admin_technicans.title" product="pn" /> tab, then the <Cmd sid="site.technicans.title" product="pn" /> tab.
+
+3. In <Cmd sid='site.technicans.title' product='pn' />, for the technician whose status is <Cmd sid='adminLCM.pending_status' product='pn' />, click <IcAirMore title='More' /> at the far right.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-reinvitation.png' />
+
+4. Click <Cmd sid='adminLCM.revoke_invitation' product='pn' /> in the popup menu.
+
+5. If a popup message appears, review the message and click <Cmd sid='common.button.yes' product='pn' />.
+
+6. When the success message for the canceled invitation appears, click <Cmd sid='common.button.close' product='pn' />.
+
+When an invitation is canceled, the technician's status changes from <Cmd sid='adminLCM.pending_status' product='pn' /> to <Cmd sid='adminLCM.user_status_revoked' product='pn' />.
+
+## Resend invitation link
+
+Resend the invitation link if an invited technician didn't receive the invitation email or has lost it.
+
+1. In the site list, click the site where you invited the technician.
+
+2. When the <Cmd sid="siteListPage.drawer.edit.title" product="pn" /> panel appears, select the <Cmd sid="site.admin_technicans.title" product="pn" /> tab, then the <Cmd sid="site.technicans.title" product="pn" /> tab.
+
+3. In <Cmd sid='site.technicans.title' product='pn' />, for the technician whose status is <Cmd sid='adminLCM.pending_status' product='pn' />, <Cmd sid='adminLCM.user_status_expired' product='pn' />, or <Cmd sid='adminLCM.user_status_revoked' product='pn' />, click <IcAirMore title='More' /> at the far right.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-reinvitation.png' />
+
+4. Click <Cmd sid='adminLCM.resend_invitation_link' product='pn' /> in the popup menu.
+
+5. If a popup message appears, review the message and click <Cmd sid='common.button.yes' product='pn' />.
+
+6. When the success message for resending the invitation link appears, click <Cmd sid='common.button.close' product='pn' />.
+
+## Lock or unlock technician accounts
+
+Lock or unlock accounts for technicians assigned to a site.
+
+1. Click <Cmd sid="menu.label.siteList" product="pn" /> in the left sidebar.
+
+2. In the site list, click the site where you want to manage technician access.
+
+3. When the <Cmd sid="siteListPage.drawer.edit.title" product="pn" /> panel appears, select the <Cmd sid="site.admin_technicans.title" product="pn" /> tab, then the <Cmd sid="site.technicans.title" product="pn" /> tab.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-added-technician.png' />
+
+4. In <Cmd sid='site.technicans.title' product='pn' />, click the toggle button in the <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> column to lock or unlock a technician account.
+
+5. Click <Cmd sid='common.button.apply' product='pn' /> at the bottom to apply the changes.
+
+:::info
+
+Newly registered technician accounts have site access set to <Cmd sid='common.label.locked' product='pn' />. To unlock the <Cmd sid='common.label.locked' product='pn' /> status, use an account with administrator rights for that site in the BioStar Air portal.
+
+:::
+
+## Delete technician accounts
+
+You can delete the account of a technician invited to the site. When a technician's account is deleted, they cannot sign in to the site and their access is revoked.
+
+1. In the site list, click the site where you invited the technician.
+
+2. When the <Cmd sid="siteListPage.drawer.edit.title" product="pn" /> panel appears, select the <Cmd sid="site.admin_technicans.title" product="pn" /> tab, then the <Cmd sid="site.technicans.title" product="pn" /> tab.
+
+3. On <Cmd sid='site.technicans.title' product='pn' />, click <IcAirMore title='More' /> at the far right of the technician you want to delete.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-technician-reinvitation.png' />
+
+4. Click <Cmd sid='common.button.delete' product='pn' /> in the popup menu.
+
+5. If a pop-up message appears, review it and click <Cmd sid='common.button.confirm' product='pn' />.
+
+6. When the success message confirming the technician's account deletion appears, click <Cmd sid='common.button.close' product='pn' />.
+
+:::info
+
+Deleting a technician account does not remove the account entirely; it only revokes access to that site. Re-invite a deleted technician to the site to restore access.
+
+:::

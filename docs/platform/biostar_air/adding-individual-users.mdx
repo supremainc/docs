@@ -256,7 +256,7 @@ keywords: [사용자 관리, BioStar Air, 사용자 추가]
 
   :::
 
-* <Cmd sid='card_type_option5' product='air' />: 출입 인증 수단으로 얼굴 프로필 이미지를 최대 2개까지 추가할 수 있습니다. 기존 이미지를 업로드하거나 장치를 통해 등록할 수 있습니다. 또는 이메일로 링크를 사용자에게 보내서 사용자의 모바일 기기 카메라를 사용해 직접 등록하는 방법도 있습니다.
+* <Cmd sid='card_type_option5' product='air' />: 출입 인증 수단으로 얼굴 프로필 이미지를 최대 2개까지 추가할 수 있습니다. 기존 이미지를 업로드하거나 장치를 통해 등록할 수 있습니다. 또는 이메일이나 문자 메시지로 링크를 사용자에게 보내서 사용자의 모바일 기기 카메라를 사용해 직접 등록하는 방법도 있습니다.
 
   <Tabs groupId='platform'>
   <TabItem value='web' label='Web'>
@@ -270,6 +270,8 @@ keywords: [사용자 관리, BioStar Air, 사용자 추가]
   * <Cmd sid='register_on_mobile' product='air' />: 모바일 기기의 카메라로 QR 코드를 스캔하면 얼굴 이미지를 등록할 수 있는 링크로 이동할 수 있습니다.
 
     <Image src='/img/air/bsair-add-user-credential-credential-type-face-qr.png' width='50%' />
+
+  * <Cmd sid='user_list_send_face_registration_tooltip' product='air' />: 사용자의 이메일이나 문자 메시지로 얼굴 등록 링크를 보내 모바일 기기의 카메라로 직접 얼굴을 등록할 수 있습니다.
 
   </TabItem>
   <TabItem value='mobile' label='Mobile'>
@@ -288,6 +290,8 @@ keywords: [사용자 관리, BioStar Air, 사용자 추가]
 
   * <Cmd en='Take photo'>카메라로 촬영하기</Cmd>: 모바일 기기의 카메라로 사진을 찍어 업로드할 수 있습니다.
 
+  * <Cmd sid='user_list_send_face_registration_tooltip' product='air' />: 사용자의 이메일로 얼굴 등록 링크를 보내 모바일 기기의 카메라로 직접 얼굴을 등록할 수 있습니다.
+
   * <Cmd sid='use_as_profile_image' product='air' />: 프로필로 사용 중인 이미지를 얼굴 크리덴셜로 사용할 수 있습니다.
 
   :::note
@@ -302,7 +306,7 @@ keywords: [사용자 관리, BioStar Air, 사용자 추가]
   </TabItem>
   </Tabs>
 
-* <Cmd sid='card_type_option6' product='air' />: 4\~16자리 PIN을 설정하여 2단계 인증(2FA)의 일부로 사용할 수 있습니다.
+* <Cmd sid='device_authentication_2fa_pin' product='air' />: 4\~16자리 PIN을 설정하여 2단계 인증(2FA)의 일부로 사용할 수 있습니다.
 
   <Tabs groupId='platform'>
   <TabItem value='web' label='Web'>
@@ -372,11 +376,9 @@ keywords: [사용자 관리, BioStar Air, 사용자 추가]
 
 :::info
 
-* <Cmd sid='user_form_input12' product='air' />은 영구 할당(크리덴셜과 함께 만료)하거나 일시적으로 할당(크리덴셜 보다 일찍 만료)할 수 있습니다. 출입 레벨 설정에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/manage-access-level' />를 참고하세요.
-
 * 층 레벨 설정에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/manage-floor-level' />를 참고하세요.
 
-* <Cmd sid='user_device_manager' product='air' /> 옵션은 X-Station 2 사용자만 사용할 수 있으며, X-Station 2 장치의 관리자 메뉴를 사용할 수 있습니다.
+* <Cmd sid='user_device_manager' product='air' /> 옵션은 BioStation 3, X-Station 2 사용자만 사용할 수 있습니다. 장치 관리자로 설정된 사용자는 BioStation 3, X-Station 2 장치의 관리자 메뉴를 사용할 수 있습니다.
 
 :::
 

@@ -1,0 +1,63 @@
+---
+id: use-xp2-primary-device
+title: 엣지 장치를 마스터 장치로 사용하기
+description: 엣지 장치를 마스터 장치로 설정하여 XPass D2를 보조 장치로 연결하는 방법을 안내합니다.
+keywords: [XPass 2, XPass D2]
+---
+
+엣지 장치를 마스터 장치로 설정하여 XPass D2를 보조 장치로 연결할 수 있습니다. 이를 통해 모든 출입 통제 로직은 엣지 장치에서 관리할 수 있습니다. 출입문에 두 개의 네트워크 연결 필요 없이 입구 및 출구 장치가 있는 출입문의 구성이 가능해집니다.
+
+이 문서에서는 XPass 2 장치를 마스터 장치로 설정하고, XPass D2를 보조 장치로 연결하는 방법을 단계별로 안내합니다. 또한, 마스터-보조 장치 구성에서 지원되는 기능과 제한 사항에 대해서도 설명합니다.
+
+## 시작하기 전에
+
+XPass 2를 마스터 장치로 설정하기 전에 펌웨어 버전을 **2.12** 이상으로 업데이트해야 합니다. 펌웨어 업데이트에 대한 자세한 내용은 <DocLink docId='platform/biostar_air/how-to-upgrade-firmware' />를 참고하세요.
+
+## XPass 2를 마스터 장치로 변경
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' />를 클릭하세요.
+
+1. 장치 목록에서 XPass 2를 클릭하세요.
+
+1. <Cmd sid='device_edit_title' product='air' /> 창이 나타나면 <Cmd sid='new_layout_nav_title_network' product='air' /> 섹션으로 이동하세요.
+
+1. <Cmd sid='device_xpass2_rs485' product='air' /> 설정을 <Cmd sid='device_xpass2_rs485_master' product='air' />로 변경하세요.
+
+   <Image src='/img/air/bsair-device-xpass2-rs485-set-master.png' />
+
+1. 변경 사항을 저장하려면 하단의 <Cmd sid='save_btn' product='air' /> 버튼을 클릭하세요.
+
+
+## 보조 장치 추가
+
+XPass D2 또는 Secure Module(SIO2)과 같은 보조 장치를 추가할 수 있습니다. 
+
+1. 장치 목록에서 마스터 장치로 설정한 XPass 2의 가장 오른쪽에 <IcAirMore title='More' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-device-xpass2-add-slave.png' />
+
+1. 팝업 메뉴에서 <Cmd sid='add_slave_devices' product='air' />를 클릭하면 <Cmd sid='add_slave_devices' product='air' /> 창이 나타납니다.
+
+   <Image src='/img/air/bsair-device-xpass2-add-slave-find.png' />
+
+   :::note
+
+   검색된 슬레이브 장치가 없으면 <Cmd sid='find_devices' product='air' /> 버튼을 클릭해 XPass 2와 연결된 장치를 다시 검색할 수 있습니다.
+
+   :::
+
+1. 연결된 슬레이브 장치가 목록에 표시되면, 장치 옆의 체크박스를 클릭해 추가할 장치를 선택하세요.
+
+1. 선택을 완료하면 <Cmd sid='add_btn' product='air' /> 버튼을 클릭하세요.
+
+연결된 슬레이브 장치가 XPass 2 아래에 계층적으로 표시됩니다. 이제 패널 목록에서 XPass 2와 연결된 모든 장치를 한눈에 확인할 수 있습니다.
+
+:::info
+
+* XPass D2 장치에 대한 자세한 내용은 [XPass D2 설치 가이드](../../device/xpass_d2)를 참고하세요.
+
+* 마스터 장치로 설정된 XPass 2는 최대 31개의 보조 장치를 할당할 수 있습니다.
+
+* Secure Module(SIO2) 장치에 대한 자세한 내용은 [Secure Module 설치 가이드](../../device/securemodule)를 참고하세요.
+
+:::

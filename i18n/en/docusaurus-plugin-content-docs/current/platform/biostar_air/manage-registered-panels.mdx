@@ -1,0 +1,166 @@
+---
+id: manage-registered-panels
+title: Manage Registered Panels
+description: This guide explains how to view registered panel information, edit details, assign panels to groups, and update firmware.
+keywords:
+  - Panels
+  - Manage
+  - Edit
+  - Delete
+---
+
+Manage all panels registered in BioStar Air from a single location. Monitor each panel’s status, edit information as needed, organize panels into groups, and update firmware. This document covers all necessary features, from viewing the panel list to managing groups.
+
+import DeviceInfo from '../../common/_bsair-device-info-settings.mdx';
+
+:::info
+
+In BioStar Air, devices are classified as primary devices that act as controllers and secondary devices that connect to controllers. Some systems use the terms Master/Slave for this concept, but BioStar Air documentation does not use those terms.
+
+:::
+
+## View the panel list
+
+Manage registered panels from the <Cmd sid='device_slaves_panels' product='air' /> tab. The panel list provides key information at a glance, including the type and status of each panel or secondary device, name, ID, group, firmware, and time zone.
+
+<Image src='/img/air/bsair-device-panel-list-view.png' />
+
+### Panel and device status
+
+Check each panel or secondary device’s connection status from the status icons in the panel list.
+
+* <StatusOK/> **Green**: The panel or secondary device is online, can be controlled remotely, and can be updated.
+
+* <StatusFail/> **Red**: The panel or secondary device is offline.
+
+* <StatusUpdating /> **Orange**: Firmware is updating.
+
+* <IcAirWarn /> **Warning**: Synchronization is required between the server and the panel or secondary device.
+
+### Panel and device information
+
+Each column in the panel list includes the following information.
+
+* <Cmd sid='rs485_type' product='air' />: Indicates panels or secondary devices that support RS-485 communication. Indicates whether the device is a primary or a secondary.
+
+* <Cmd sid='device_product_column' product='air' />: The panel or secondary device name, model, and status retrieved from the Suprema database.
+
+* <Cmd sid="device_nickname_column" product="air" />: A user-editable field for easier identification. You can edit the information in the window that appears when you click a panel or subdevice in the list.
+
+* <Cmd sid="device_id_column" product="air" />: The unique identifier assigned to the panel or subdevice.
+
+* <Cmd sid="device_group_column" product="air" />: The group to which the panel belongs.
+
+* <Cmd sid="device_fw_column" product="air" />: The currently installed firmware version.
+
+* <Cmd sid="device_timezone_column" product="air" />: The time zone set on the panel or subdevice.
+
+### Filter {#deviceFiltering}
+
+Use the filter in the header of the panel list. Click <IcAirFilter title='Filter' /> in the header to set the desired conditions.
+
+<Image src='/img/air/bsair-device-mng-list-filter.png' />
+
+:::info
+
+To reset the applied filters, click <IcAirFilter title='Filter' /> and select <Cmd sid='column_filter_modal_reset_btn' product='air' />.
+
+:::
+
+## Edit panel information
+
+1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+
+2. Click the <Cmd sid='device_slaves_panels' product='air' /> tab.
+
+3. Click the panel whose information you want to edit in the list to open the <Cmd sid='device_cs20_edit_panels' product='air' /> window.
+
+   <Image src='/img/air/bsair-device-panel-edit-info.png' />
+
+4. Edit the panel’s details or settings.
+
+5. Click <Cmd sid="save_btn" product="air" /> at the bottom to save the changes.
+
+:::info
+
+For more information on editing fields and setting options for each section, see <DocLink docId='platform/biostar_air/device-info-settings#cs-20' />.
+
+:::
+
+## Panel management features
+
+Select a panel in the list to use the management features at the top.
+
+<Image src='/img/air/bsair-device-panel-management-tool.png' />
+
+* <IcAirRef width="24px" height="24px" title="Refresh" />: Refresh the list.
+
+* <IcAirRemove width="24px" height="24px" title="Delete" />: Delete registered panels or subdevices.
+
+* <IcAirFw width="24px" height="24px" title="Update Firmware" />: Update the firmware of selected panels or subdevices in the list. For more information about firmware upgrades, see <DocLink docId='platform/biostar_air/how-to-upgrade-firmware' />.
+
+   :::note
+
+  * Subdevices connected to a CS-20 can be upgraded one at a time.
+
+  * For more information on upgrading XPass D2 devices, see <DocLink docId='platform/biostar_air/how-to-upgrade-firmware#upgradeFirmwareForXPassD2' />.
+
+   :::
+
+* <IcAirCloud width="24px" height="24px" title="Sync with Server" />: Synchronize biometric templates from selected panels to the server.
+
+* <IcAirGroup width="24px" height="24px" title="Manage Groups" />: Assign selected panels to a group. For more information on managing groups, see <DocLink inner="#device_group_in_device_list" />.
+
+* <IcAirByte width="24px" height="24px" title="RF Card Byte Order" />: Switch the RF card byte order of the selected panel in the list to <Cmd>MSB</Cmd> or <Cmd>LSB</Cmd>.
+
+  * <Cmd>MSB</Cmd>: Processes card data in order from large byte units to small byte units, sequentially storing the card serial number (CSN) from left to right.
+
+  * <Cmd>LSB</Cmd>: Processes card data in order from small byte units to large byte units, storing the card serial number (CSN).
+
+* <IcAirDset width="24px" height="24px" title="Load Device Setting" />: Import settings originally configured in standalone mode.
+
+* <IcAirUpd width="24px" height="24px" title="Update Status" />: Update the status of selected panels.
+
+:::info
+
+Subdevices connected to a CS-20 only support the refresh (<IcAirRef width='24px' height='24px' title='Refresh' />), delete (<IcAirRemove width='24px' height='24px' title='Delete' />), and firmware update (<IcAirFw width='24px' height='24px' title='Update Firmware' />) functions.
+
+:::
+
+## Manage panel groups {#device_group_in_device_list}
+
+Select individual panels in the panel list to add them to or remove them from a group.
+
+1. Click <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> in the left sidebar.
+
+2. Click the <Cmd sid='device_slaves_panels' product='air' /> tab.
+
+3. In the panel list, select the checkbox for the panel you want to add to or remove from a group.
+
+4. Click <IcAirGroup width="24px" height="24px" title="Manage Groups" /> at the top of the panel list.
+
+5. When the <Cmd sid="manage_device_group_title" product="air" /> window appears, add the selected panels to a group or remove them from it.
+
+   <Image src='/img/air/bsair-device-panel-management-group.png' />
+
+   <Cmd sid="manage_device_group_title_two" product="air" /> checkboxes have the following meanings:
+
+   * <Cmd sid="manage_device_group_checkbox_state_one" product="air" />: Removes the selected panels from the group.
+
+   * <Cmd sid="manage_device_group_checkbox_state_two" product="air" />: Some of the selected panels are in the group.
+
+   * <Cmd sid="manage_device_group_checkbox_state_three" product="air" />: Adds the selected panels to the group.
+
+6. Click <Cmd sid="btn_ok" product="air" /> to save the changes.
+
+:::info
+
+* Selecting another group in the <Cmd sid="manage_device_group_title" product="air" /> window moves the selected panels to that group.
+
+* A panel can belong to multiple groups. A single panel can be assigned to multiple groups.
+
+* Secondary devices in the panel list only support firmware upgrades.
+
+* Click <Cmd sid="device_btn_reset" product="air" /> to initialize the changes.
+
+:::

@@ -1,0 +1,215 @@
+---
+id: partner-administrator
+title: 파트너 관리자 초대하기
+description: 파트너 포털에서 파트너 관리자 계정을 초대하고, 역할을 할당하고, 권한을 관리하는 방법을 안내합니다.
+keywords: [파트너, 관리자, 역할, 권한]
+---
+
+파트너 포털에서 파트너 관리자 계정 초대 및 역할 할당, 권한 관리 방법을 안내합니다. 파트너 관리자는 고객 사이트에 대한 접근 권한을 제어하여 보안과 운영 효율성을 확보할 수 있습니다.
+
+파트너 관리자는 옵저버(Observer), 오퍼레이터(Operator), 관리자(Administrator), 마스터(Master)의 4가지 역할 중 하나로 할당되며, 각 역할에 따라 접근 권한이 다릅니다. 이 문서에서는 각 역할의 권한 차이를 비교하고, 관리자 계정 초대부터 권한 관리, 계정 잠금/해제, 계정 삭제까지의 전체 과정을 단계별로 안내합니다.
+
+
+## 관리자 역할 및 권한 이해 {#adminRoles}
+
+파트너 포털에서 관리자는 다음 4가지 역할 중 하나를 할당할 수 있습니다.
+
+* <Cmd sid='observer_role' product='air' className='bold' />: 사이트 정보를 볼 수 있지만 변경할 수 없습니다.
+
+* <Cmd sid='operator_role' product='air' className='bold' />: 새 사이트를 설정하고 크레딧을 할당할 수 있지만 관리자 권한을 수정하거나 새 관리자를 초대할 수 없습니다.
+
+* <Cmd sid='admin_role' product='air' className='bold' />: 다른 관리자를 초대하고 관리할 수 있지만 마스터 레벨 사용자를 제거할 수 없습니다.
+
+* <Cmd sid='master_role' product='air' className='bold' />: 포털에 대한 전체 제어 권한이 있으며, 사용자 관리, 사이트 생성 및 크레딧 분배를 포함합니다. 마스터 레벨만 파트너 포털 계정을 처음 활성화할 수 있습니다.
+
+:::info
+
+마스터 관리자가 아닌 다른 권한의 사용자가 포털에 진입하려면 먼저 마스터 계정을 설정하고 활성화해야 합니다.
+
+:::
+
+
+## 관리자 초대
+
+관리자를 초대하려면 다음 단계를 따르세요.
+
+1. [파트너 포털](https://partner.biostarair.com)에 <Cmd sid='admin_role' product='air' className='bold' /> 권한 이상의 계정으로 로그인하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='site.admin_technicans.title' product='pn' />를 클릭하세요.
+
+1. 화면 오른쪽 상단의 <Cmd sid='common.button.invite' product='pn' /> 버튼을 클릭하세요.
+
+1. <Cmd sid='inviteAdminsModal.title' product='pn' /> 창이 나타나면 <Cmd sid='siteListPage.placeholder.adminType' product='pn' />에서 초대할 관리자의 역할을 선택하세요.
+
+   <Image src='/img/air/bsair-partner-admin-invite.png' />
+
+1. 초대할 관리자의 이메일 주소를 입력하세요.
+
+1. <Cmd sid='common.button.add' product='pn' /> 버튼이 활성화되면 클릭하세요.
+
+   <Image src='/img/air/bsair-partner-admin-invite-input-email.png' width='60%' />
+
+1. 추가된 관리자는 이메일 주소 입력란 하단에 표시됩니다. 추가로 관리자를 초대하려면 4\~6단계를 반복하세요.
+
+   <Image src='/img/air/bsair-partner-admin-invited-list.png' />
+
+1. 관리자를 모두 추가했다면 <Cmd sid='common.button.ok' product='pn' /> 버튼을 클릭하세요.
+
+1. 전송 확인 메시지가 나타나면 <Cmd sid='common.button.confirm' product='pn' /> 버튼을 클릭하세요.
+
+:::info
+
+파트너 포털에 관리자 계정을 초대했더라도 각 사이트에 대한 초대는 별도로 진행해야 합니다.
+
+:::
+
+
+### 초대 상태
+
+관리자를 초대한 후 관리자 목록에서 초대한 계정의 초대 상태를 확인할 수 있습니다.
+
+#### 가입 대기 상태
+
+초대된 관리자가 이메일을 통해 초대를 수락하여 계정을 활성화하기 전까지는 <Cmd sid='adminLCM.pending_status' product='pn' /> 상태입니다. 초대 받은 관리자는 이메일 내의 링크를 클릭하여 계정을 등록하거나 로그인하여 파트너 포털에 진입할 수 있습니다.
+
+<Image src='/img/air/bsair-partner-admin-list-pending-status.png' />
+
+:::info
+
+초대 받은 관리자는 최대 7일까지 초대를 수락할 수 있으며, 7일이 지나면 초대가 만료되어 <Cmd sid='adminLCM.user_status_expired' product='pn' /> 상태로 변경됩니다. 초대장이 만료되면 해당 계정이 다시 가입할 수 있도록 초대 링크를 재전송할 수 있습니다. 초대 링크 재전송에 대한 자세한 내용은 <DocLink inner='#resendInvitation' />을 참고하세요.
+
+:::
+
+#### 가입 완료 상태
+
+초대된 관리자가 이메일 초대를 수락하고 가입을 완료하면 초대 상태가 <Cmd sid='adminLCM.user_status_accepted' product='pn' />로 변경됩니다.
+
+<Image src='/img/air/bsair-partner-admin-list-accepted-status.png' />
+
+#### 초대 취소 상태
+
+초대된 관리자의 이메일 주소를 잘못 입력했거나 더 이상 관리자 초대가 필요하지 않을 때, 초대를 취소할 수 있습니다. 초대를 취소하면 초대 상태가 <Cmd sid='adminLCM.user_status_revoked' product='pn' /> 상태로 변경됩니다. 관리자 초대 취소에 대한 자세한 내용은 <DocLink inner='#revokeInvite' />를 참고하세요.
+
+<Image src='/img/air/bsair-partner-admin-list-revoked-status.png' />
+
+
+### 초대 취소 {#revokeInvite}
+
+파트너가 초대한 관리자의 이메일 주소를 잘못 입력했거나 더 이상 관리자 초대가 필요하지 않을 때, 초대를 취소할 수 있습니다. 초대를 취소하면 해당 사용자는 초대 받은 링크로 가입할 수 없게 됩니다.
+
+1. 관리자 목록에서 초대 상태가 <Cmd sid='adminLCM.pending_status' product='pn' /> 상태인 관리자의 체크박스를 클릭하세요. 1명 이상의 관리자를 선택할 수 있습니다.
+
+1. 관리자 목록 왼쪽 상단의 <IcAirRevoke title='Revoke Invitation' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-partner-admin-list-revoke-invitation.png' />
+
+   :::note
+
+   <Cmd sid='adminLCM.pending_status' product='pn' /> 상태인 관리자만 초대 취소할 수 있습니다.
+
+   :::
+
+1. 팝업 메시지 창이 나타나면 내용을 확인하고 <Cmd sid='common.button.yes' product='pn' /> 버튼을 클릭하세요.
+
+1. 초대 취소 성공 메시지가 나타나면 <Cmd sid='common.button.close' product='pn' /> 버튼을 클릭하세요.
+
+관리자 목록에서 초대 취소한 관리자의 초대 상태가 <Cmd sid='adminLCM.user_status_revoked' product='pn' /> 상태로 변경됩니다.
+
+<Image src='/img/air/bsair-partner-admin-list-revoked-status.png' />
+
+
+### 초대 링크 재전송 {#resendInvitation}
+
+초대된 관리자가 초대 이메일을 받지 못했거나 초대 이메일을 분실했을 때, 또는 초대 링크가 만료되었을 때 초대 링크를 재전송할 수 있습니다.
+
+1. 관리자 목록에서 초대 상태가 <Cmd sid='adminLCM.pending_status' product='pn' /> 또는 <Cmd sid='adminLCM.user_status_expired' product='pn' />, <Cmd sid='adminLCM.user_status_revoked' product='pn' /> 상태인 관리자의 체크박스를 클릭하세요. 1명 이상의 관리자를 선택할 수 있습니다.
+
+1. 관리자 목록 왼쪽 상단의 <IcAirResend title='Resend Invitation' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-partner-admin-list-resend-invitation.png' />
+
+1. 팝업 메시지 창이 나타나면 내용을 확인하고 <Cmd sid='common.button.yes' product='pn' /> 버튼을 클릭하세요.
+
+1. 초대 링크 재전송 성공 메시지가 나타나면 <Cmd sid='common.button.close' product='pn' /> 버튼을 클릭하세요.
+
+관리자 목록에서 초대 링크를 재전송한 관리자의 초대 상태가 <Cmd sid='adminLCM.pending_status' product='pn' /> 상태로 변경됩니다.
+
+<Image src='/img/air/bsair-partner-admin-list-pending-status.png' />
+
+
+## 관리자 관리
+
+초대된 관리자가 이메일 초대를 수락하여 가입을 완료하면, 관리자 목록에서 해당 관리자를 관리할 수 있습니다. 관리자의 계정을 잠금 또는 해제하거나 권한을 변경할 수 있습니다. 관리자가 더 이상 필요하지 않을 때는 관리자 계정을 삭제할 수도 있습니다.
+
+### 관리자 계정 잠금/해제
+
+이메일 초대를 수락하여 가입 완료한 관리자는 <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> 옵션을 통해 계정을 잠그거나 해제할 수 있습니다. 계정을 잠그면 관리자는 파트너 포털에 로그인할 수 없으며, 계정 정보는 유지되어 나중에 필요할 때 계정을 다시 활성화할 수 있습니다.
+
+잠금 상태의 관리자는 <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> 열이 <Cmd sid='common.label.locked' product='pn' />으로 표시되고, 해제된 관리자는 <Cmd sid='common.label.unlocked' product='pn' />로 표시됩니다.
+
+<Image src='/img/air/bsair-partner-admin-list-lock-unlock.png' />
+
+:::info
+
+* 가입 완료한 관리자의 계정은 기본적으로 잠금 해제된 상태입니다.
+
+* <Cmd sid='admin_role' product='air' className='bold' /> 권한 이상의 계정은 잠그거나 해제할 수 없습니다.
+
+:::
+
+#### 개별 관리자 잠금/해제
+
+관리자 목록에서 <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> 열의 토글 버튼을 클릭해 개별 관리자 계정을 잠그거나 해제할 수 있습니다.
+
+1. 관리자 목록에서 <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> 열의 토글 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-partner-admin-list-lock-unlock-toggle.png' />
+
+1. 팝업 메시지 창이 나타나면 내용을 확인하고 <Cmd sid='common.button.confirm' product='pn' /> 버튼을 클릭하세요.
+
+
+#### 여러 관리자 잠금/해제
+
+관리자 목록에서 여러 관리자 계정을 선택해 일괄적으로 잠그거나 해제할 수 있습니다.
+
+1. 관리자 목록에서 잠그거나 해제할 관리자의 체크박스를 클릭하세요. 1명 이상의 관리자를 선택할 수 있습니다.
+
+1. 화면 왼쪽 상단의 <IcAirPlock title='Lock Account' /> 또는 <IcAirPunlock title='Unlock Account' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-partner-admin-list-batch-lock-unlock.png' />
+
+1. 팝업 메시지 창이 나타나면 내용을 확인하고 <Cmd sid='common.button.yes' product='pn' /> 버튼을 클릭하세요.
+
+1. 계정 잠금 또는 해제 성공 메시지가 나타나면 <Cmd sid='common.button.close' product='pn' /> 버튼을 클릭하세요.
+
+
+### 관리자 권한 변경
+
+관리자의 권한을 변경할 수 있습니다. 관리자 권한에 대한 자세한 내용은 <DocLink inner='#adminRoles' />를 참고하세요.
+
+1. 관리자 목록에서 권한을 변경할 관리자의 <Cmd sid='common.label.administrator' product='pn' /> 열을 클릭하세요.
+
+   <Image src='/img/air/bsair-partner-admin-list-change-role.png' />
+
+1. 목록에서 변경할 권한을 선택하세요.
+
+1. 팝업 메시지 창이 나타나면 <Cmd sid='common.button.confirm' product='pn' /> 버튼을 클릭하세요.
+
+관리자 목록에서 해당 사용자의 권한이 변경됩니다.
+
+
+### 관리자 계정 삭제
+
+더 이상 관리자가 필요하지 않을 때, 관리자 계정을 삭제할 수 있습니다. 관리자 계정을 삭제하면 해당 관리자는 파트너 포털에 로그인할 수 없으며, 계정 정보가 완전히 제거되어 복구할 수 없습니다.
+
+1. 관리자 목록에서 삭제할 관리자의 체크박스를 클릭하세요. 1명 이상의 관리자를 선택할 수 있습니다.
+
+1. 화면 왼쪽 상단의 <IcAirRemove title='Delete' /> 버튼을 클릭하세요.
+
+   <Image src='/img/air/bsair-partner-admin-list-delete.png' />
+
+1. 팝업 메시지 창이 나타나면 내용을 확인하고 <Cmd sid='common.button.confirm' product='pn' /> 버튼을 클릭하세요.
+
+1. 계정 삭제 성공 메시지가 나타나면 <Cmd sid='common.button.close' product='pn' /> 버튼을 클릭하세요.
+
+삭제한 관리자 계정은 관리자 목록에서 더 이상 표시되지 않습니다.

@@ -1,0 +1,166 @@
+---
+id: manage-registered-panels
+title: 登録済みパネルの管理
+description: 登録済みパネルの情報を確認し、詳細を編集し、グループに割り当て、ファームウェアを更新する方法を説明します。
+keywords:
+  - パネル
+  - 管理
+  - 編集
+  - 削除
+---
+
+BioStar Airでは、登録済みのすべてのパネルを一元管理できます。 各パネルの状態を監視し、必要に応じて情報を編集し、グループ化し、ファームウェアを更新できます。 本書では、パネル一覧の確認からグループ管理まで必要なすべての機能について説明します.
+
+import DeviceInfo from '../../common/_bsair-device-info-settings.mdx';
+
+:::info
+
+BioStar Airでは、コントローラとして動作するマスター（Primary）デバイスと、コントローラに接続されるセカンダリ（Secondary）デバイスに分類されます。 一部のシステムではこの概念をマスター（Master）/スレーブ（Slave）と表現しますが、BioStar Airの文書ではその用語は使用しません。
+
+:::
+
+## パネル一覧の確認
+
+登録済みのパネルは <Cmd sid='device_slaves_panels' product='air' /> タブで管理できます。 パネル一覧では、各パネルまたは補助デバイスの種類・状態・名前・ID・グループ・ファームウェア情報・タイムゾーンなどの主要情報を一目で確認できます。
+
+<Image src='/img/air/bsair-device-panel-list-view.png' />
+
+### パネルおよびデバイスの状態
+
+パネル一覧のステータスアイコンで、各パネルまたは補助デバイスの接続状態を確認できます。
+
+* <StatusOK/> **緑**：オンライン状態で、該当のパネルまたは補助デバイスをリモートで制御および更新できます。
+
+* <StatusFail/> **赤**：オフライン状態のパネルまたは補助デバイスです。
+
+* <StatusUpdating /> **オレンジ**：ファームウェアをアップデート中です。
+
+* <IcAirWarn /> **注意**：サーバーとパネルまたは補助デバイス間で同期が必要な状態です.
+
+### パネルおよびデバイス情報
+
+パネル一覧の各列には以下の情報が含まれます。
+
+* <Cmd sid='rs485_type' product='air' />：RS-485通信をサポートするパネルまたは補助デバイスで表示されます。 該当のデバイスがマスターか補助かを確認できます。
+
+* <Cmd sid='device_product_column' product='air' />：Supremaデータベースから取得したパネルまたは補助デバイスの名称、モデル名、状態を確認できます。
+
+* <Cmd sid='device_nickname_column' product='air' />：識別しやすいようにユーザーが編集できる項目です。 一覧でパネルまたは補助デバイスをクリックすると表示される情報編集ウィンドウで変更できます。
+
+* <Cmd sid='device_id_column' product='air' />：パネルまたは補助デバイスに割り当てられた固有識別子です。
+
+* <Cmd sid='device_group_column' product='air' />：パネルが所属するグループです。
+
+* <Cmd sid='device_fw_column' product='air' />：現在インストールされているファームウェアのバージョンです。
+
+* <Cmd sid='device_timezone_column' product='air' />：パネルまたは補助デバイスに設定されたタイムゾーンです。
+
+### フィルタリング {#deviceFiltering}
+
+パネル一覧の上部ヘッダー領域でフィルター機能を利用できます。 ヘッダー領域の <IcAirFilter title='Filter' /> ボタンをクリックすると、条件を設定できます。
+
+<Image src='/img/air/bsair-device-mng-list-filter.png' />
+
+:::info
+
+適用したフィルター条件を初期化するには、<IcAirFilter title='Filter' /> ボタンをクリックし、<Cmd sid='column_filter_modal_reset_btn' product='air' /> ボタンを選択してください。
+
+:::
+
+## パネル情報の編集
+
+1. 画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。
+
+2. <Cmd sid='device_slaves_panels' product='air' /> タブをクリックしてください。
+
+3. 一覧で情報を編集するパネルをクリックすると、<Cmd sid='device_cs20_edit_panels' product='air' /> ウィンドウが表示されます。
+
+   <Image src='/img/air/bsair-device-panel-edit-info.png' />
+
+4. パネルの詳細情報または設定を編集してください。
+
+5. 変更を保存するには、下部の <Cmd sid='save_btn' product='air' /> をクリックします。
+
+:::info
+
+各セクションの詳細情報の編集および設定オプションの詳細は <DocLink docId='platform/biostar_air/device-info-settings#cs-20' /> を参照してください。
+
+:::
+
+## パネル管理機能
+
+パネル一覧でパネルを選択すると、一覧上部にある管理機能を使用できます。
+
+<Image src='/img/air/bsair-device-panel-management-tool.png' />
+
+* <IcAirRef width='24px' height='24px' title='Refresh' />：一覧を更新できます。
+
+* <IcAirRemove width='24px' height='24px' title='Delete' />：登録済みのパネルまたは補助デバイスを削除できます。
+
+* <IcAirFw width='24px' height='24px' title='Update Firmware' />：パネル一覧で選択したパネルまたは補助デバイスのファームウェアを更新できます。 ファームウェアの更新に関する詳細は <DocLink docId='platform/biostar_air/how-to-upgrade-firmware' /> を参照してください。
+
+   :::note
+
+  * CS-20に接続された補助デバイスは、同時に1台ずつのみアップグレードできます。
+
+  * XPass D2のファームウェアアップグレードの詳細は<DocLink docId='platform/biostar_air/how-to-upgrade-firmware#upgradeFirmwareForXPassD2' />を参照してください。
+
+   :::
+
+* <IcAirCloud width='24px' height='24px' title='Sync with Server' />：一覧で選択したパネルからサーバーへ生体認証テンプレートを同期できます。
+
+* <IcAirGroup width='24px' height='24px' title='Manage Groups' />：一覧で選択したパネルをグループに割り当てることができます。 グループ管理の詳細は <DocLink inner='#device_group_in_device_list' /> を参照してください。
+
+* <IcAirByte width='24px' height='24px' title='RF Card Byte Order' />：一覧で選択したパネルのRFカードのバイト順を<Cmd>MSB</Cmd>または<Cmd>LSB</Cmd>に切り替えられます。
+
+  * <Cmd>MSB</Cmd>：カードデータを処理するとき、大きいバイト単位から小さいバイト単位の順に処理し、カードシリアル番号 (CSN) を左から右へ順に保存します。
+
+  * <Cmd>LSB</Cmd>：カードデータを処理するとき、小さいバイト単位から大きいバイト単位の順に処理してカードシリアル番号 (CSN) を保存します。
+
+* <IcAirDset width='24px' height='24px' title='Load Device Setting' />：スタンドアロンモードで、元の設定を持つパネルの設定を読み込めます。
+
+* <IcAirUpd width='24px' height='24px' title='Update Status' />：一覧で選択したパネルの状態を更新できます。
+
+:::info
+
+CS-20に接続された補助デバイスは、更新(<IcAirRef width='24px' height='24px' title='Refresh' />)、デバイス削除(<IcAirRemove width='24px' height='24px' title='Delete' />)、ファームウェア更新(<IcAirFw width='24px' height='24px' title='Update Firmware' />)の機能のみ提供します。
+
+:::
+
+## パネルグループの管理 {#device_group_in_device_list}
+
+パネル一覧で個別のパネルを選択して、グループに追加するか既存のグループから削除できます。
+
+1. 画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。
+
+2. <Cmd sid='device_slaves_panels' product='air' /> タブをクリックしてください。
+
+3. パネル一覧でグループに追加または削除するパネルのチェックボックスをクリックしてください。
+
+4. パネル一覧の上部にある <IcAirGroup width='24px' height='24px' title='Manage Groups' /> ボタンをクリックしてください。
+
+5. <Cmd sid='manage_device_group_title' product='air' /> ウィンドウが表示されたら、選択したパネルをグループに追加または削除してください。
+
+   <Image src='/img/air/bsair-device-panel-management-group.png' />
+
+   <Cmd sid='manage_device_group_title_two' product='air' /> のチェックボックスの状態は、以下の意味を持ちます。
+
+   * <Cmd sid='manage_device_group_checkbox_state_one' product='air' />：選択したパネルをグループから削除します。
+
+   * <Cmd sid='manage_device_group_checkbox_state_two' product='air' />：選択したパネルの一部がグループに含まれている状態です。
+
+   * <Cmd sid='manage_device_group_checkbox_state_three' product='air' />：選択したパネルをグループに追加します。
+
+6. 変更内容を保存するには、<Cmd sid='btn_ok' product='air' /> ボタンをクリックします。
+
+:::info
+
+* <Cmd sid='manage_device_group_title' product='air' /> ウィンドウで別のグループを選択すると、選択したパネルはそのグループに移動します。
+
+* パネルはグループに重複して所属できます。 1つのパネルを複数のグループに割り当てることができます。
+
+* パネル一覧の補助デバイスはファームウェアアップグレード機能のみ提供します。
+
+* 変更内容を初期化するには、<Cmd sid='device_btn_reset' product='air' /> ボタンをクリックします。
+
+:::

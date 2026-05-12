@@ -1,0 +1,141 @@
+---
+id: partner-assign-admin
+title: サイト管理者を招待する
+description: パートナーポータルで顧客サイトに管理者を招待する方法と、招待された管理者の権限および役割を理解してください。
+keywords:
+  - サイト管理者
+  - 管理者の招待
+  - 権限の設定
+---
+
+パートナーは顧客サイトに管理者を招待し、権限を設定できます。 各管理者ごとに必要なアクセス権レベルを細分化して管理し、顧客サイトのセキュリティと運用効率を確保できます。
+
+:::info
+
+* サイトの管理者権限および役割の詳細は <DocLink docId='platform/biostar_air/managing-administrators#administrator-levels' /> を参照してください。
+
+* BioStar Air ポータルでの管理者招待および役割設定の詳細は <DocLink docId='platform/biostar_air/managing-administrators' /> を参照してください。
+
+:::
+
+## サイトに管理者を招待
+
+パートナーポータルで顧客サイトに管理者を招待し、権限を設定する方法を案内します。
+
+1. [パートナーポータル](https://partner.biostarair.com)に <Cmd sid='admin_role' product='air' className='bold' /> 権限以上のアカウントでログインします。
+
+2. 画面左のサイドバーで <Cmd sid='menu.label.siteList' product='pn' /> をクリックしてください。
+
+3. サイト一覧から管理者を割り当てるサイトをクリックしてください。
+
+4. <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> パネルが表示されたら、<Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' /> タブを順にクリックします。
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-admin-list.png' />
+
+5. <Cmd sid='common.button.invite' product='pn' /> をクリックしてください。
+
+6. <Cmd sid='inviteAdminsModal.title' product='pn' /> ウィンドウが表示されたら、<Cmd sid='siteListPage.placeholder.adminType' product='pn' /> で招待する管理者の役割を選択します。
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-invite-admin.png' />
+
+7. 招待する管理者のメールアドレスを入力します。
+
+8. <Cmd sid='common.button.add' product='pn' /> ボタンが有効になったらクリックします。
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-invite-admin-email.png' width='60%' />
+
+9. 追加した管理者はメールアドレス入力欄の下に表示されます。 追加で管理者を招待するには、6~8の手順を繰り返してください。
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-invited-list.png' width='60%' />
+
+10. すべての管理者を追加したら、<Cmd sid='common.button.ok' product='pn' /> ボタンをクリックします。
+
+11. <Cmd sid='siteListPage.drawer.edit.profile.invitations.title' product='pn' />で追加した管理者を確認した後、招待メールを送信するには<Cmd sid='common.button.apply' product='pn' />ボタンをクリックします。
+
+12. 成功メッセージが表示されたら、<Cmd sid='common.button.confirm' product='pn' /> ボタンをクリックしてください。
+
+## 招待状況の確認
+
+サイトに招待された管理者の招待ステータスを確認できます。 招待された管理者がメールを受け入れるまで、招待状態は <Cmd sid='adminLCM.pending_status' product='pn' /> と表示されます。 招待された管理者は最大7日間招待を承諾できます。7日を過ぎると招待は期限切れとなり、<Cmd sid='adminLCM.user_status_expired' product='pn' /> 状態に変更されます。
+
+1. サイト一覧から管理者を招待したサイトをクリックしてください。
+
+2. <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> パネルが表示されたら、<Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' /> タブを順にクリックします。
+
+3. <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' />で招待状況を確認できます。
+
+管理者がサイトへの登録を完了すると、<Cmd sid='adminLCM.pending_status' product='pn' /> から <Cmd sid='adminLCM.user_status_accepted' product='pn' /> に状態が変更されます。
+
+<Image src='/img/air/bsair-partner-admin-sitelist-edit-site-admin-list.png' />
+
+## 招待の取り消し
+
+サイトに招待した管理者のメールアドレスを誤って入力した場合や、もはや管理者の招待が不要な場合は、招待を取り消せます。
+
+1. サイト一覧から管理者を招待したサイトをクリックしてください。
+
+2. <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> パネルが表示されたら、<Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' /> タブを順にクリックします。
+
+3. <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' /> の <Cmd sid='adminLCM.pending_status' product='pn' /> 状態の管理者の右端にある <IcAirMore title='More' /> ボタンをクリックします。
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-site-admin-list-more.png' />
+
+4. ポップアップメニューで <Cmd sid='adminLCM.revoke_invitation' product='pn' /> をクリックしてください。
+
+5. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='common.button.yes' product='pn' /> ボタンをクリックしてください。
+
+6. 招待取り消しの成功メッセージが表示されたら、<Cmd sid='common.button.close' product='pn' /> ボタンをクリックしてください。
+
+招待を取り消した管理者は、招待状態が <Cmd sid='adminLCM.pending_status' product='pn' /> から <Cmd sid='adminLCM.user_status_revoked' product='pn' /> に変わります。
+
+## 招待リンクの再送信
+
+サイトに招待した管理者が招待メールを受け取っていないか紛失した場合、招待リンクを再送できます。
+
+1. サイト一覧から管理者を招待したサイトをクリックしてください。
+
+2. <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> パネルが表示されたら、<Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' /> タブを順にクリックします。
+
+3. <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' /> から <Cmd sid='adminLCM.pending_status' product='pn' /> または <Cmd sid='adminLCM.user_status_expired' product='pn' />、<Cmd sid='adminLCM.user_status_revoked' product='pn' /> 状態の管理者の右端にある <IcAirMore title='More' /> ボタンをクリックします。
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-site-admin-list-more.png' />
+
+4. ポップアップメニューで <Cmd sid='adminLCM.resend_invitation_link' product='pn' /> をクリックしてください。
+
+5. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='common.button.yes' product='pn' /> ボタンをクリックしてください。
+
+6. 招待リンク再送信の成功メッセージが表示されたら、<Cmd sid='common.button.close' product='pn' /> ボタンをクリックしてください。
+
+## 管理者アカウントのロック/解除
+
+サイトに割り当てられた管理者アカウントをロックまたは解除できます。
+
+1. 画面左のサイドバーで <Cmd sid='menu.label.siteList' product='pn' /> をクリックしてください。
+
+2. サイト一覧で管理者のアクセスを管理するサイトをクリックしてください。
+
+3. <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> パネルが表示されたら、<Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' /> タブを順にクリックします。
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-admin-list.png' />
+
+4. <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' />で管理者アカウントをロックまたは解除するには、<Cmd sid='adminLCM.column_admin_account_status' product='pn' />列のトグルボタンをクリックしてください。
+
+5. 変更を適用するには、下部の <Cmd sid='common.button.apply' product='pn' /> ボタンをクリックします。 
+
+## 管理者の削除
+
+サイトに招待された管理者のアカウントを削除できます。 管理者のアカウントが削除されると、当該管理者はサイトにログインできず、サイトへのアクセス権が完全に削除されます。 管理者アカウントは削除後に復元できません。
+
+1. サイト一覧から管理者を招待したサイトをクリックしてください。
+
+2. <Cmd sid='siteListPage.drawer.edit.title' product='pn' /> パネルが表示されたら、<Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' /> タブを順にクリックします。
+
+3. <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' />で削除する管理者の右端にある<IcAirMore title='More' />ボタンをクリックします。
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-site-admin-list-more.png' />
+
+4. ポップアップメニューで <Cmd sid='common.button.delete' product='pn' /> をクリックしてください。
+
+5. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='common.button.confirm' product='pn' /> ボタンをクリックします。 
+
+6. 管理者削除の成功メッセージが表示されたら、<Cmd sid='common.button.close' product='pn' /> ボタンをクリックしてください。

@@ -75,7 +75,7 @@ Para restablecer los filtros aplicados, haga clic en <IcAirFilter title='Filter'
 
 En el paso final del registro del dispositivo en la aplicación móvil, seleccione la opción <Cmd en='Create a door with this device'>Create a door with this device</Cmd> para crear una puerta. Para obtener más información sobre cómo registrar un dispositivo con la aplicación móvil, consulte <DocLink docId='platform/biostar_air/manage-device-with-app' />.
 
-<Image src='/img/air/bsair-door-mng-register-device-as-door.png' />
+<Image src='/img/air/bsair-door-mng-register-device-as-door.png' width='50%' />
 
 ### Agregar desde el portal web
 
@@ -101,7 +101,37 @@ Siga los pasos a continuación para agregar una nueva puerta en el portal BioSta
 
 * Si un dispositivo ya está registrado pero no aparece en la lista de dispositivos disponibles, verifique si está asignado a otra puerta. Si lo está, quítelo de esa puerta e inténtelo de nuevo.
 
+* **Un dispositivo no puede asignarse simultáneamente a una puerta y a un elevador**.
+
 :::
+
+:::note
+
+Puertas que usan dispositivos primario/secundario
+
+* Un dispositivo primario controla la puerta (XPass 2 o CoreStation 20).
+
+* Un XPass 2 configurado como primario puede asignarse a una sola puerta, sin importar cuántos dispositivos o módulos secundarios tenga asignados.
+
+* Un XPass 2 configurado como primario puede tener hasta 31 dispositivos secundarios asignados y puede agregar una nueva puerta cuyo relé sea controlado por un módulo Secure secundario (SIO2).
+
+* No se pueden crear puertas que usen una CoreStation 20 (CS-20) junto con un Módulo Seguro (SIO2).
+
+:::
+
+### Limitaciones de configuración de puertas
+
+Las siguientes limitaciones aplican a la configuración de puertas.
+
+* 1 XPass D2 + SIO2 (relé controlado por SIO2)
+
+* 1 XPass 2 + XPass D2 (relé controlado por XPass 2)
+
+* 2 XPass D2 (relé controlado por XPass 2)
+
+* 1 o 2 dispositivos OSDP/Wiegand (relé controlado por CS-20)
+
+* Solo se permite un SIO2 por puerta (relé para I/O): debe estar cableado al mismo XPass 2 que el XPass D2.
 
 ## Editar puertas {#editingDoors}
 
@@ -121,19 +151,19 @@ Siga estos pasos para editar los detalles y la configuración de la puerta.
 
    * <Cmd sid="door_product_column3" product="air" />: Seleccione el dispositivo que autentica a los usuarios al salir por la puerta.
 
+5. Configure el dispositivo relé en la sección <Cmd sid='door_auxiliary_device' product='air' />.
+
    * <Cmd sid='door_product_column6' product='air' />: Puede conectar una cámara CCTV para los registros de eventos.
+
+   * <Cmd sid="add_doors.door_relay" product="air" />: Seleccione el dispositivo relé que controla la cerradura de la puerta.
+
+   * <Cmd sid='add_doors.relay_ignoring_door_sensor' product='air' />: Configure el relé para ignorar el sensor de la puerta.
 
    :::note
 
    Para usar la cámara, habilite la función <Cmd sid='site_setting_video_management' product='air' /> en <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' /> → <Cmd sid='site_setting_qr_reader_tab' product='air' />.
 
    :::
-
-5. Configure el dispositivo relé en la sección <Cmd sid="door_auxiliary_device" product="air" />.
-
-   * <Cmd sid="add_doors.door_relay" product="air" />: Seleccione el dispositivo relé que controla la cerradura de la puerta.
-
-   * <Cmd sid='add_doors.relay_ignoring_door_sensor' product='air' />: Configure el relé para ignorar el sensor de la puerta.
 
 6. Configure los ajustes adicionales.
 
@@ -147,9 +177,11 @@ Siga estos pasos para editar los detalles y la configuración de la puerta.
 
 :::info
 
-* Recomendamos asignar un relé ubicado dentro del área segura como <Cmd sid="door_product_column3" product="air" />.
+* Por seguridad, el relé debe conectarse siempre al dispositivo en el lado seguro de la puerta. Use el relé del dispositivo de salida o un módulo SIO2.
 
-* <Cmd sid="door_product_column2" product="air" /> y <Cmd sid="door_product_column3" product="air" /> deben estar conectados a **redes separadas**. En una configuración maestro–esclavo, la conexión mediante Wiegand o RS-485 no es posible.
+* Cuando está configurado para conexión directa a la nube, tanto el dispositivo de entrada como el de salida requieren cables de red separados.
+
+* Al usar una configuración primario-secundario, el dispositivo primario (generalmente el de salida) necesita una conexión de red y el dispositivo secundario se conecta al primario mediante RS-485.
 
 * Para obtener más información sobre cómo configurar el módulo SIO2 Secure, consulte <DocLink docId='platform/biostar_air/configuring-the-sio2-secure-module' />.
 

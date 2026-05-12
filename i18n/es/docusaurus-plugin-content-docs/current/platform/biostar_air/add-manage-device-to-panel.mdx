@@ -1,0 +1,130 @@
+---
+id: add-manage-device-to-panel
+title: Agregar y Administrar Dispositivos en el Panel
+description: Esta guía explica cómo configurar y administrar dispositivos secundarios conectados al panel.
+keywords:
+  - Dispositivos secundarios
+  - CS-20
+  - OSDP
+  - Wiegand
+---
+
+BioStar Air conecta varios tipos de dispositivos secundarios al panel primario CS-20. El soporte para RS-485, OSDP y Wiegand permite integrarlos fácilmente con los sistemas de seguridad existentes. Este artículo explica cómo configurar, administrar y eliminar dispositivos secundarios.
+
+## Configurar dispositivos secundarios
+
+Después de registrar el CS-20, configure los dispositivos secundarios usando uno de los siguientes métodos:
+
+| Dispositivos secundarios | Descripción |
+| --- | --- |
+| Dispositivos Suprema RS-485 | Conecte XPass D2 y OM-120 mediante el cableado RS-485 existente y protocolos de comunicación estándar. |
+| Dispositivo OSDP | Utiliza un protocolo de comunicación con mayor seguridad. |
+| Dispositivo Wiegand | Dispositivos compatibles con Wiegand existentes, como lectores de tarjetas. |
+
+### Configurar dispositivos secundarios
+
+Conecte los dispositivos que admiten comunicación RS-485 al CS-20 para configurarlos como dispositivos secundarios. Los dispositivos secundarios aparecen anidados bajo el CS-20 en la lista de paneles.
+
+1. En la lista de paneles, haga clic en <IcAirMore title='Más' /> en el extremo derecho del panel CS-20 registrado.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-more.png' />
+
+2. Haga clic en <Cmd sid='add_slave_devices' product='air' /> para abrir la ventana <Cmd sid='add_slave_devices' product='air' />.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-add-slave-device.png' />
+
+   :::note
+
+   Si no se encuentran dispositivos secundarios, haga clic en <Cmd sid='find_devices' product='air' /> para volver a escanear los dispositivos conectados al CS-20.
+
+   :::
+
+3. Cuando los dispositivos secundarios conectados aparezcan en la lista, marque la casilla junto a cada dispositivo para seleccionar los que desea agregar.
+
+4. Una vez completadas las selecciones, haga clic en <Cmd sid='add_btn' product='air' />.
+
+Los dispositivos secundarios conectados aparecen anidados bajo el CS-20. Vea todos los dispositivos conectados al CS-20 de un vistazo en la lista de paneles.
+
+<Image src='/img/air/bsair-device-panel-list-master-slave.png' />
+
+:::info
+
+* Para obtener más información sobre la edición y administración de dispositivos secundarios, consulte <DocLink docId='platform/biostar_air/managing-registered-devices' />.
+
+* Para obtener más información sobre los campos y ajustes de dispositivos secundarios, consulte <DocLink docId='platform/biostar_air/device-info-settings' />.
+
+* Para más información sobre la actualización de dispositivos XPass D2, consulte <DocLink docId='platform/biostar_air/how-to-upgrade-firmware#upgradeFirmwareForXPassD2' />.
+
+:::
+
+### Configurar dispositivos OSDP
+
+[OSDP (Open Supervised Device Protocol)](../../reference/glossary#osdp) es un protocolo de comunicación mejorado para seguridad. En entornos que requieren alta seguridad, conecte dispositivos compatibles con OSDP al CS-20.
+
+1. En la lista de paneles, haga clic en <IcAirMore title='Más' /> en el extremo derecho del panel CS-20 registrado.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-more.png' />
+
+2. Haga clic en <Cmd sid='add_osdp_devices' product='air' /> en el menú emergente.
+
+3. Cuando aparezca la ventana <Cmd sid='add_osdp_devices' product='air' />, seleccione el puerto al que desea agregar el dispositivo.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-add-osdp-device.png' />
+
+4. Después de seleccionar un puerto, haga clic en <Cmd sid='add_btn' product='air' />.
+
+5. Tras completar los ajustes requeridos en la ventana <Cmd sid='device_cs20_add_osdp_devices' product='air' />, haga clic en <Cmd sid='save_btn' product='air' />.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-add-osdp-device-popup.png' />
+
+### Configurar dispositivos Wiegand
+
+Wiegand es un protocolo de comunicación ampliamente utilizado en sistemas de control de acceso. Conecte un dispositivo Wiegand al CS-20 para configurarlo como un dispositivo secundario Wiegand.
+
+1. En la lista de paneles, haga clic en <IcAirMore title='Más' /> en el extremo derecho del panel CS-20 registrado.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-more.png' />
+
+2. En el menú emergente, haga clic en <Cmd sid='add_wiegand_devices' product='air' />.
+
+3. Cuando aparezca la ventana <Cmd sid='add_wiegand_devices' product='air' />, seleccione un puerto para añadir un dispositivo.
+
+   <Image src='/img/air/bsair-device-panel-list-cs-20-add-wiegand-device.png' />
+
+4. Después de seleccionar un puerto, haga clic en <Cmd sid='add_btn' product='air' />.
+
+## Editar información de dispositivos OSDP/Wiegand
+
+1. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haga clic en la pestaña <Cmd sid='device_slaves_panels' product='air' />.
+
+3. Haga clic en el icono + del dispositivo primario en la lista para expandir la lista de dispositivos secundarios conectados.
+
+4. Haga clic en el dispositivo secundario OSDP o Wiegand para editar su información. 
+
+5. Cuando aparezca la ventana Editar información del dispositivo, edite los detalles o ajustes.
+
+   <Image src='/img/air/bsair-device-panel-legacy-device-edit.png' className='none' />
+
+   * Dispositivo OSDP: Establezca el nombre del dispositivo, los ajustes de red, los ajustes de autenticación (RF Card, RF Card + PIN) y el tiempo de espera de autenticación.
+
+   * Dispositivo Wiegand: Edite el nombre del dispositivo.
+
+6. Haz clic en <Cmd sid="save_btn" product="air" /> en la parte inferior para guardar los cambios.
+
+## Eliminar dispositivos secundarios
+
+1. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haga clic en la pestaña <Cmd sid='device_slaves_panels' product='air' />.
+
+3. Haga clic en el icono + del dispositivo primario en la lista para expandir la lista de dispositivos secundarios conectados.
+
+4. Marque la casilla del dispositivo secundario que desea eliminar.
+
+5. Haga clic en el botón <IcAirRemove title='Remove' /> en la parte superior de la lista.
+
+   <Image src='/img/air/bsair-device-panel-remove-secondary.png' />
+
+6. Cuando aparezca la ventana emergente, haga clic en <Cmd sid='device_btn_confirm' product='air' />.

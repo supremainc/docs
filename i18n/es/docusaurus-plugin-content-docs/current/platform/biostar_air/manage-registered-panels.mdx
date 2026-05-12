@@ -1,0 +1,166 @@
+---
+id: manage-registered-panels
+title: Administrar Paneles Registrados
+description: Esta guía explica cómo ver la información de los paneles registrados, editar detalles, asignar paneles a grupos y actualizar el firmware.
+keywords:
+  - Paneles
+  - Gestionar
+  - Editar
+  - Borrar
+---
+
+Administra todos los paneles registrados en BioStar Air desde un único lugar. Supervisa el estado de cada panel, edita la información según sea necesario, organiza los paneles en grupos y actualiza el firmware. Este documento cubre todas las funciones necesarias, desde ver la lista de paneles hasta administrar grupos.
+
+import DeviceInfo from '../../common/_bsair-device-info-settings.mdx';
+
+:::info
+
+En BioStar Air, los dispositivos se clasifican como primarios, que actúan como controladores, y secundarios, que se conectan a los controladores. Algunos sistemas usan los términos Master/Slave para este concepto, pero la documentación de BioStar Air no emplea esos términos.
+
+:::
+
+## Ver la lista de paneles
+
+Administra los paneles registrados desde la pestaña <Cmd sid='device_slaves_panels' product='air' />. La lista de paneles proporciona información clave de un vistazo, incluyendo el tipo y el estado de cada panel o dispositivo secundario, el nombre, la ID, el grupo, el firmware y la zona horaria.
+
+<Image src='/img/air/bsair-device-panel-list-view.png' />
+
+### Estado de paneles y dispositivos
+
+Comprueba el estado de conexión de cada panel o dispositivo secundario mediante los iconos de estado en la lista de paneles.
+
+* <StatusOK/> **Verde**: El panel o dispositivo secundario está en línea, puede controlarse de forma remota y puede actualizarse.
+
+* <StatusFail/> **Rojo**: El panel o dispositivo secundario está fuera de línea.
+
+* <StatusUpdating /> **Naranja**: Se está actualizando el firmware.
+
+* <IcAirWarn /> **Advertencia**: Se requiere sincronización entre el servidor y el panel o dispositivo secundario.
+
+### Información de paneles y dispositivos
+
+Cada columna de la lista de paneles incluye la siguiente información.
+
+* <Cmd sid='rs485_type' product='air' />: Indica los paneles o dispositivos secundarios que admiten la comunicación RS-485. Indica si el dispositivo es primario o secundario.
+
+* <Cmd sid='device_product_column' product='air' />: El nombre, el modelo y el estado del panel o dispositivo secundario obtenidos de la base de datos de Suprema.
+
+* <Cmd sid="device_nickname_column" product="air" />: Campo editable por el usuario para facilitar la identificación. Edite la información en la ventana que aparece al hacer clic en un panel o subdispositivo en la lista.
+
+* <Cmd sid="device_id_column" product="air" />: El identificador único asignado al panel o subdispositivo.
+
+* <Cmd sid="device_group_column" product="air" />: El grupo al que pertenece el panel.
+
+* <Cmd sid="device_fw_column" product="air" />: La versión de firmware instalada actualmente.
+
+* <Cmd sid="device_timezone_column" product="air" />: La zona horaria configurada en el panel o subdispositivo.
+
+### Filtrar {#deviceFiltering}
+
+Use el filtro en el encabezado de la lista de paneles. Haga clic en <IcAirFilter title='Filter' /> en el encabezado para establecer las condiciones deseadas.
+
+<Image src='/img/air/bsair-device-mng-list-filter.png' />
+
+:::info
+
+Para restablecer los filtros aplicados, haga clic en <IcAirFilter title='Filter' /> y seleccione <Cmd sid='column_filter_modal_reset_btn' product='air' />.
+
+:::
+
+## Editar información del panel
+
+1. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haga clic en la pestaña <Cmd sid='device_slaves_panels' product='air' />.
+
+3. Haga clic en el panel cuya información desea editar en la lista para abrir la ventana <Cmd sid='device_cs20_edit_panels' product='air' />.
+
+   <Image src='/img/air/bsair-device-panel-edit-info.png' />
+
+4. Edite los detalles o ajustes del panel.
+
+5. Haz clic en <Cmd sid="save_btn" product="air" /> en la parte inferior para guardar los cambios.
+
+:::info
+
+Para obtener más información sobre cómo editar campos y configurar las opciones de cada sección, consulta <DocLink docId='platform/biostar_air/device-info-settings#cs-20' />.
+
+:::
+
+## Funciones de administración de paneles
+
+Selecciona un panel en la lista para usar las funciones de administración en la parte superior.
+
+<Image src='/img/air/bsair-device-panel-management-tool.png' />
+
+* <IcAirRef width="24px" height="24px" title="Refresh" />: Actualizar la lista.
+
+* <IcAirRemove width="24px" height="24px" title="Delete" />: Eliminar paneles o subdispositivos registrados.
+
+* <IcAirFw width="24px" height="24px" title="Update Firmware" />: Actualizar el firmware de los paneles o subdispositivos seleccionados en la lista. Para más información sobre las actualizaciones de firmware, consulte <DocLink docId='platform/biostar_air/how-to-upgrade-firmware' />.
+
+   :::note
+
+  * Los subdispositivos conectados a un CS-20 se pueden actualizar uno a la vez.
+
+  * Para más información sobre la actualización de dispositivos XPass D2, consulte <DocLink docId='platform/biostar_air/how-to-upgrade-firmware#upgradeFirmwareForXPassD2' />.
+
+   :::
+
+* <IcAirCloud width="24px" height="24px" title="Sync with Server" />: Sincronizar las plantillas biométricas de los paneles seleccionados con el servidor.
+
+* <IcAirGroup width="24px" height="24px" title="Manage Groups" />: Asignar los paneles seleccionados a un grupo. Para más información sobre la gestión de grupos, consulte <DocLink inner="#device_group_in_device_list" />.
+
+* <IcAirByte width="24px" height="24px" title="RF Card Byte Order" />: Cambiar el orden de bytes de la tarjeta RF del panel seleccionado en la lista a <Cmd>MSB</Cmd> o <Cmd>LSB</Cmd>.
+
+  * <Cmd>MSB</Cmd>: Procesa los datos de la tarjeta en orden de unidades de byte grandes a pequeñas, almacenando secuencialmente el número de serie de la tarjeta (CSN) de izquierda a derecha.
+
+  * <Cmd>LSB</Cmd>: Procesa los datos de la tarjeta en orden de unidades de byte pequeñas a grandes, almacenando el número de serie de la tarjeta (CSN).
+
+* <IcAirDset width="24px" height="24px" title="Load Device Setting" />: Importar los ajustes configurados originalmente en modo autónomo.
+
+* <IcAirUpd width="24px" height="24px" title="Update Status" />: Actualizar el estado de los paneles seleccionados.
+
+:::info
+
+Los subdispositivos conectados a un CS-20 solo admiten las funciones de actualización (<IcAirRef width='24px' height='24px' title='Refresh' />), eliminación (<IcAirRemove width='24px' height='24px' title='Delete' />) y actualización de firmware (<IcAirFw width='24px' height='24px' title='Update Firmware' />).
+
+:::
+
+## Gestionar grupos de paneles {#device_group_in_device_list}
+
+Seleccione paneles individuales en la lista para agregarlos o eliminarlos de un grupo.
+
+1. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haga clic en la pestaña <Cmd sid='device_slaves_panels' product='air' />.
+
+3. En la lista de paneles, marque la casilla del panel que desea agregar o quitar de un grupo.
+
+4. Haga clic en <IcAirGroup width="24px" height="24px" title="Manage Groups" /> en la parte superior de la lista de paneles.
+
+5. Cuando aparezca la ventana <Cmd sid="manage_device_group_title" product="air" />, agregue los paneles seleccionados a un grupo o elimínelos de él.
+
+   <Image src='/img/air/bsair-device-panel-management-group.png' />
+
+   Las casillas de verificación de <Cmd sid="manage_device_group_title_two" product="air" /> tienen los siguientes significados:
+
+   * <Cmd sid="manage_device_group_checkbox_state_one" product="air" />: Elimina los paneles seleccionados del grupo.
+
+   * <Cmd sid="manage_device_group_checkbox_state_two" product="air" />: Algunos de los paneles seleccionados están en el grupo.
+
+   * <Cmd sid="manage_device_group_checkbox_state_three" product="air" />: Agrega los paneles seleccionados al grupo.
+
+6. Haz clic en <Cmd sid="btn_ok" product="air" /> para guardar los cambios.
+
+:::info
+
+* Seleccionar otro grupo en la ventana <Cmd sid="manage_device_group_title" product="air" /> mueve los paneles seleccionados a ese grupo.
+
+* Un panel puede pertenecer a varios grupos. Un mismo panel puede asignarse a varios grupos.
+
+* Los dispositivos secundarios en la lista de paneles solo admiten actualizaciones de firmware.
+
+* Haz clic en <Cmd sid="device_btn_reset" product="air" /> para restablecer los cambios.
+
+:::
