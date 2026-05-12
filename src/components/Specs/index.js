@@ -24,13 +24,21 @@ const glossaryMap = {
 };
 
 // 어노테이션 렌더링 유틸
-export function AnnotationSup({ id }) {
+export function AnnotationSup({ id, dupl = false }) {
   if (!id) return null;
-  return (
-    <sup id={`${id}_dest`}>
-      <a href={`#${id}`}></a>
-    </sup>
-  );
+  if (dupl) {
+    return (
+      <sup id='dupl_one'>
+        <a href={`#${id}`}></a>
+      </sup>
+    );
+  } else {
+    return (
+      <sup id={`${id}_dest`}>
+        <a href={`#${id}`}></a>
+      </sup>
+    );
+  }
 }
 
 export function Anno({ id, children }) {
