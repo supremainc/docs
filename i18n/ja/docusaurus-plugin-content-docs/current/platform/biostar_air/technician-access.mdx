@@ -1,0 +1,227 @@
+---
+id: technician-access
+title: パートナーポータルに技術者を招待する
+description: パートナーポータルで技術者アカウントを招待し、招待状況の管理、技術者アカウントの編集および削除方法を説明します。
+keywords:
+  - 技術者
+  - 招待
+  - 管理
+---
+
+技術者アカウントにより、共有管理者アカウントなしでパートナーや施工業者に限定的なサイトアクセス権を付与できます。 技術者はパートナーポータルで集中管理され、各サイトごとに個別に割り当てられます。 
+
+**技術者アカウント使用の主な利点**
+
+* **セキュリティ強化**：共有管理者アカウントを排除し、不正アクセスのリスクを低減 
+
+* **コンプライアンス**：個人情報保護規則（GDPR等）の準拠が可能、ユーザーデータへのアクセス除外オプションを提供 
+
+* **アクセス制御**：機器アクセスから完全な管理者権限まで、細かい権限設定が可能 
+
+* **監査追跡性**：監査ログに個々の技術者の操作が記録され、責任を追跡できます 
+
+* **効率性の向上**：ログイン競合なしで複数サイトに技術者を割り当て・管理できます 
+
+* **迅速な解除**：技術者のアクセス権をいつでも即座に取り消せます 
+
+## 技術者の招待 
+
+サイトへのアクセス権を付与する前に、パートナーは技術者を招待して技術者アカウントを作成する必要があります。  技術者アカウントはメールアドレスを基に作成され、招待された技術者はメールで招待を受け入れてアカウントを有効化できます。 
+
+1. [パートナーポータル](https://partner.biostarair.com)にログインしてください。
+
+2. 画面左のサイドバーで <Cmd sid='technicians.title' product='pn' /> をクリックします。 
+
+3. <Cmd sid='adminsPage.adminsAndTechnicians' product='pn' /> タブをクリックします。
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list.png' />
+
+4. 画面右上の <Cmd sid='common.button.invite' product='pn' /> ボタンをクリックします。 
+
+5. <Cmd sid='inviteTechnicianModal.title' product='pn' /> ウィンドウが表示されたら、招待する技術者のメールアドレスを入力します。
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-invite.png' />
+
+6. <Cmd sid='common.button.add' product='pn' /> ボタンが有効になったらクリックします。
+
+7. 追加した技術者はメールアドレス入力欄の下に表示されます。  技術者を追加で招待するには、手順5～6を繰り返します。 
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-invite-add.png' />
+
+8. すべての技術者を追加したら、<Cmd sid='common.button.ok' product='pn' /> ボタンをクリックします。 
+
+9. 送信確認メッセージが表示されたら、<Cmd sid='common.button.confirm' product='pn' /> ボタンをクリックします。 
+
+:::info
+
+* パートナーポータルに技術者アカウントを招待しても、各サイトへの招待は別途行う必要があります。  サイトへの技術者招待の詳細は <DocLink docId='platform/biostar_air/assign-technician' /> を参照してください。 
+
+* 招待メール経由で登録した技術者はパートナーポータルにログインできますが、すべてのメニューへのアクセスは制限されます。  技術者は自身のアカウントのパスワード変更・アカウント削除・言語設定のみ利用できます。 
+
+:::
+
+### 招待状況 
+
+パートナーは技術者を招待後、技術者一覧で招待状況を確認できます。  
+
+#### 登録待ち 
+
+招待された技術者がメールを承諾するまでは、招待状況は <Cmd sid='adminLCM.pending_status' product='pn' /> と表示されます。 招待された技術者は、メール内のリンクをクリックしてアカウントを登録するか、ログインしてパートナーポータルにアクセスできます。 
+
+<Image src='/img/air/bsair-partner-admin-technicial-list-pending.png' />
+
+:::info
+
+招待された技術者は最大7日間招待を承諾できます。7日を過ぎると招待は期限切れとなり、<Cmd sid='adminLCM.user_status_expired' product='pn' /> 状態に変更されます。 招待が期限切れになった場合、技術者が再度登録できるように招待リンクを再送できます。  招待リンクの再送の詳細は <DocLink inner='#resendInvitation' /> を参照してください。
+
+:::
+
+#### 登録完了 
+
+技術者がメールの招待を受け入れて登録を完了すると、招待状況が <Cmd sid='adminLCM.user_status_accepted' product='pn' /> に変更されます。 
+
+<Image src='/img/air/bsair-partner-admin-technicial-list-accepted.png' />
+
+#### 招待の取り消し状態
+
+招待された技術者のメールアドレスを誤入力した場合や問題が解決して技術者の招待が不要になった場合、パートナーは技術者の招待を取り消せます。  招待状況が <Cmd sid='adminLCM.user_status_revoked' product='pn' /> に変更されます。  技術者招待の取り消しの詳細は <DocLink inner='#revokeInvite' /> を参照してください。 
+
+<Image src='/img/air/bsair-partner-admin-technicial-list-revoked.png' />
+
+### 招待取り消し {#revokeInvite} 
+
+パートナーが招待した技術者のメールアドレスを誤入力した場合や問題が解決して技術者の招待が不要になった場合、招待を取り消せます。  招待を取り消すと、該当ユーザーは招待リンクから登録できなくなります。
+
+1. 技術者一覧で招待状況が <Cmd sid='adminLCM.pending_status' product='pn' /> の技術者のチェックボックスをクリックします。  1人以上の技術者を選択できます。
+
+2. 技術者一覧の左上にある <IcAirRevoke title='Revoke Invitation' /> ボタンをクリックします。 
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-revoke-technicial.png' />
+
+   :::note
+
+   <Cmd sid='adminLCM.pending_status' product='pn' /> 状態の技術者のみ招待を取り消せます。
+
+   :::
+
+3. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='common.button.yes' product='pn' /> ボタンをクリックしてください。
+
+4. 招待取り消しの成功メッセージが表示されたら、<Cmd sid='common.button.close' product='pn' /> ボタンをクリックしてください。
+
+技術者一覧で招待を取り消した技術者の招待状況は <Cmd sid='adminLCM.user_status_revoked' product='pn' /> に変更されます。 
+
+<Image src='/img/air/bsair-partner-admin-technicial-list-revoked.png' />
+
+### 招待リンクの再送 {#resendInvitation}
+
+招待された技術者が招待メールを受け取っていない、またはメールを紛失した、招待リンクが期限切れの場合は、招待リンクを再送できます。 
+
+1. 技術者一覧で招待状況が <Cmd sid='adminLCM.pending_status' product='pn' />、または <Cmd sid='adminLCM.user_status_expired' product='pn' />、<Cmd sid='adminLCM.user_status_revoked' product='pn' /> の技術者のチェックボックスをクリックします。  1人以上の技術者を選択できます。
+
+2. 技術者一覧の左上にある <IcAirResend title='Resend Invitation' /> ボタンをクリックします。 
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-resend-invite.png' />
+
+3. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='common.button.yes' product='pn' /> ボタンをクリックしてください。
+
+4. 招待リンク再送信の成功メッセージが表示されたら、<Cmd sid='common.button.close' product='pn' /> ボタンをクリックしてください。
+
+技術者一覧で招待リンクを再送した技術者の招待状況は <Cmd sid='adminLCM.pending_status' product='pn' /> に変更されます。 
+
+<Image src='/img/air/bsair-partner-admin-technicial-list-pending.png' />
+
+## 技術者管理 {#manageTechnician} 
+
+招待された技術者がメールの招待を受け入れて登録を完了した後、パートナーは技術者一覧で次の項目を管理できます。 
+
+* 技術者アカウントのロックまたは解除 
+
+* サイトへのアクセス権の変更 
+
+* 不要な技術者アカウントの削除 
+
+### 技術者アカウントのロック/解除 
+
+パートナーは <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> オプションで技術者アカウントをロックまたは解除できます。  アカウントをロックすると、技術者はパートナーポータルおよび割り当てられたサイトにログインできません。  アカウント情報は保持されるため、必要なときに再度有効化できます。 
+
+ロック状態の技術者は <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> 列が <Cmd sid='common.label.locked' product='pn' /> と表示され、解除された技術者は <Cmd sid='common.label.unlocked' product='pn' /> と表示されます。 
+
+<Image src='/img/air/bsair-partner-admin-technicial-list-lock-unlock-status.png' />
+
+:::info
+
+* 登録完了した技術者のアカウントは、デフォルトでロック解除されています。 
+
+* パートナーポータルの管理者アカウントが一部サイトで技術者のアクセス権を持っていても技術者一覧に表示されることがありますが、当該管理者アカウントは技術者一覧でロックまたは解除できません。 
+
+:::
+
+#### 個別の技術者のロック/解除
+
+<Cmd sid='adminLCM.column_admin_account_status' product='pn' /> 列のトグルボタンをクリックして、個々の技術者アカウントをロックまたは解除できます。
+
+1. <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> 列のトグルボタンをクリックします。
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-lock-unlock.png' />
+
+2. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='common.button.yes' product='pn' /> ボタンをクリックしてください。
+
+3. アカウントのロック/解除の成功メッセージが表示されたら、<Cmd sid='common.button.close' product='pn' /> ボタンをクリックします。
+
+#### 複数の技術者のロック/解除
+
+技術者一覧で複数の技術者アカウントを選択して一括でロックまたは解除できます。 
+
+1. 技術者一覧でロックまたは解除する技術者のチェックボックスをクリックします。  1人以上の技術者を選択できます。
+
+2. 画面左上の <IcAirPlock title='Lock Account' /> または <IcAirPunlock title='Unlock Account' /> ボタンをクリックします。 
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-multi-lock-unlock.png' />
+
+3. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='common.button.yes' product='pn' /> ボタンをクリックしてください。
+
+4. アカウントのロック/解除の成功メッセージが表示されたら、<Cmd sid='common.button.close' product='pn' /> ボタンをクリックします。
+
+### サイトアクセス権の編集 
+
+技術者のサイトアクセス権を変更できます。 
+
+1. 技術者一覧の <Cmd sid='common.label.invited_sites' product='pn' /> 列で1つ以上のサイトがある技術者をクリックします。 
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-invited.png' />
+
+2. <Cmd sid='editTechnicianModal.title' product='pn' /> ウィンドウが表示されたら、<Cmd sid='common.label.invited_sites' product='pn' /> で技術者が招待されたサイト一覧を確認します。
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-edit.png' width='60%' />
+
+3. <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> 列のトグルボタンをクリックして、サイトアクセスを許可またはブロックします。
+
+4. 変更を保存するには、<Cmd sid='common.button.save' product='pn' /> ボタンをクリックします。 
+
+5. サイトアクセス権の変更成功メッセージが表示されたら、<Cmd sid='common.button.close' product='pn' /> ボタンをクリックします。 
+
+:::info
+
+* パートナーポータルで技術者をサイトに割り当てて権限を設定した後は、BioStar Air管理ポータルの管理者アカウントでのみ権限を変更できます。
+
+* BioStar Air 管理者ポータルでサイト管理者が技術者のサイトアクセスをロックした場合、パートナーポータルからはロックを解除できません。  サイトの技術者アクセス権を変更するには、BioStar Air 管理者ポータルで当該サイトの管理者権限を持つアカウントで変更できます。 
+
+* 技術者にサイトアクセス権を付与する方法の詳細は <DocLink docId='platform/biostar_air/assign-technician' /> を参照してください。 
+
+:::
+
+### 技術者アカウントの削除 
+
+もはや技術者のサポートが不要になった場合、技術者アカウントを削除できます。  技術者アカウントを削除すると、当該技術者はパートナーポータルにログインできなくなり、技術者アカウントに関連するすべての情報がシステムから完全に削除されます。 
+
+1. 技術者一覧で削除する技術者のチェックボックスをクリックします。  1人以上の技術者を選択できます。
+
+2. 画面左上の <IcAirRemove title='Delete' /> ボタンをクリックします。 
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-delete.png' />
+
+3. ポップアップメッセージが表示されたら内容を確認し、<Cmd sid='common.button.confirm' product='pn' /> ボタンをクリックします。 
+
+4. アカウント削除の成功メッセージが表示されたら、<Cmd sid='common.button.close' product='pn' /> ボタンをクリックします。
+
+削除した技術者アカウントは技術者一覧に表示されなくなります。 

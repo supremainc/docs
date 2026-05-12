@@ -1,0 +1,95 @@
+---
+id: register-panels
+title: パネルの登録と削除
+description: CoreStation 20 パネルを BioStar Air に登録し、RS-485、OSDP、Wiegand 機器を補助デバイスとして構成する方法を説明します。
+keywords:
+  - パネル
+  - 登録
+  - 管理
+---
+
+BioStar Air 2.12 では、CoreStation 20（CS-20）パネルを通じてアクセス制御システムを拡張できます。 既存の RS-485 配線を活用して追加機器をローカルに接続するため、インフラコストを削減しつつ複雑なドア構成をサポートできます。
+
+本書では CS-20 パネルを登録し、RS-485、OSDP、Wiegand 通信方式の機器を補助デバイスとして構成する手順をステップごとに説明します。
+
+:::note
+
+BioStar Airでは、コントローラとして動作するマスター（Primary）デバイスと、コントローラに接続されるセカンダリ（Secondary）デバイスに分類されます。 一部のシステムではこの概念をマスター（Master）/スレーブ（Slave）と表現しますが、BioStar Airの文書ではその用語は使用しません。
+
+:::
+
+## パネル登録
+
+CoreStation 20（以下 CS-20）は RS-485 通信をサポートする機器と接続してアクセス制御システムを拡張する機能を提供します。 CS-20 を登録するには、次の手順に従ってください。
+
+### 開始する前に
+
+* CS-20 の電源が入っており、**INIT** ボタンを押すために本体へ物理的にアクセスできる必要があります。
+
+* CS-20 は外部インターネットに接続されている必要があります。 ネットワーク接続が不安定な場合、登録時に問題が発生する可能性があります。
+
+* 9桁のシリアル番号が必要です。 シリアル番号は機器の背面ラベルで確認できます。
+
+:::info
+
+CoreStation 20の詳細は[CoreStation 20 インストールガイド](../../device/corestation_20)を参照してください。
+
+:::
+
+### CS-20 登録
+
+1. 画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。
+
+2. <Cmd sid='device_slaves_panels' product='air' /> タブをクリックしてください。
+
+   <Image src='/img/air/bsair-device-panel-list.png' />
+
+3. 画面右上の <Cmd sid='register_cs20' product='air' /> ボタンをクリックしてください。
+
+4. <Cmd sid='register_cs20' product='air' /> ウィンドウが表示されたら、CS-20 パネルで INIT ボタンを2回押してください。
+
+   <Image src='/img/air/bsair-cs-20-init-button.png' alone />
+
+   :::caution
+
+   INIT ボタンを押してから登録を完了できるのは5分間です。
+
+   :::
+
+5. シリアル番号を入力してください。
+
+   <Image src='/img/air/bsair-device-panel-list-register-cs20.png' />
+
+6. シリアル番号をすべて入力したら、<Cmd sid='register_btn' product='air' /> ボタンをクリックしてください。
+
+登録が完了すると、システムが安全な接続を自動で設定し、パネル一覧に新しい CS-20 が表示されます。 正常に登録されると、機器名の横に緑色の点が表示されます。
+
+<Image src='/img/air/bsair-device-panel-list-registered-cs20.png' />
+
+:::info
+
+CS-20 登録手順の詳細を確認するには、<Cmd sid='view_cs20_registration_guide' product='air' /> ボタンをクリックしてください。
+
+:::
+
+## パネルの削除
+
+BioStar Airに登録されたパネルを削除するには、次の手順に従ってください。 削除したパネルは復元できません。 パネルを削除する前に、そのパネルに接続されている補助機器がもう必要ないことを確認してください。
+
+1. 画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。
+
+2. <Cmd sid='device_slaves_panels' product='air' /> タブをクリックしてください。
+
+3. 一覧で削除するパネルのチェックボックスをクリックしてください。
+
+4. 画面左上の <IcAirRemove title='Delete' /> ボタンをクリックします。 
+
+   <Image src='/img/air/bsair-device-panel-remove.png' />
+
+5. ポップアップメッセージが表示されたら、<Cmd sid='device_btn_confirm' product='air' /> ボタンをクリックします.
+
+:::caution
+
+接続された補助機器を再利用する必要がある場合、SCBキーがバインドされている可能性があるため、補助機器を先に削除してからパネルを削除することを推奨します。
+
+:::

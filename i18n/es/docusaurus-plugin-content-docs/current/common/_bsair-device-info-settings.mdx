@@ -34,7 +34,11 @@ Modifique los ajustes predeterminados del dispositivo.
 
 * <Cmd sid='device_editable_fields_nick_name' product='air' />: El alias que aparece en la lista de dispositivos y en los registros. Puede editar este campo directamente.
 
+<Xclude type={props.type} ref='xpassd2'>
+
 * <Cmd sid='device_editable_fields_timezone' product='air' />: Establezca la zona horaria del dispositivo para mantener los registros consistentes cuando los relojes del sitio y del dispositivo difieran. Active la opción <Cmd sid='device_field_dst_usage' product='air' /> para aplicar el horario de verano (DST).
+
+</Xclude>
 
 <Include type={props.type} ref='xpass2'>
 
@@ -48,7 +52,11 @@ Modifique los ajustes predeterminados del dispositivo.
 
 </Include>
 
+<Xclude type={props.type} ref='cs-20'>
+
 * <Cmd sid='device_editable_fields_hands_free' product='air' />: Amplíe el alcance BLE.
+
+</Xclude>
 
 <Include type={props.type} ref='ae-mc,xpass2,xs2'>
 
@@ -70,13 +78,25 @@ Modifique los ajustes predeterminados del dispositivo.
 
 </Include>
 
-<Include type={props.type} ref='ae-mc,xpass2'>
+<Include type={props.type} ref='ae-mc,xpass2,xpassd2'>
 
 * <Cmd sid='device_editable_fields_beep_setting' product='air' />: Configure el pitido de confirmación para la autenticación de acceso.
 
 </Include>
 
-<Include type={props.type} ref='xpass2,bew3,bs3'>
+<Include type={props.type} ref='bs3,xpass2'>
+
+* <Cmd sid='video_gateway' product='air' />: Conecte cámaras IP al dispositivo para ver video en vivo y grabado. Para más información sobre los ajustes de conexión de cámaras IP, consulte <DocLink docId='platform/biostar_air/ip-camera-support-and-configuration' />.
+
+</Include>
+
+<Include type={props.type} ref='cs-20'>
+
+* <Cmd sid='video_gateway' product='air' />: Conecte cámaras IP al panel para ver video en vivo y grabado. Para más información sobre los ajustes de conexión de cámaras IP, consulte <DocLink docId='platform/biostar_air/ip-camera-support-and-configuration' />.
+
+</Include>
+
+<Include type={props.type} ref='xpass2,bew3,bs3,cs-20,xpassd2'>
 
 ---
 
@@ -106,6 +126,10 @@ En la sección <Cmd sid='device_card_title' product='air' /> puede modificar los
 
    :::
 
+</Include>
+
+<Xclude type={props.type} ref='cs-20'>
+
 #### <Cmd sid='device_card_wiegand_card' product='air' className='normal' /> {#device_card_wiegand_card}
 
 Para tarjetas Wiegand, seleccione <Cmd sid='device_card_wiegand_card_iclass' product='air' /> y <Cmd sid='device_card_wiegand_card_hid_prox' product='air' />. Haga clic en el interruptor para activar la función y luego seleccione el formato de tarjeta deseado en <Cmd sid='device_card_wiegand_card' product='air' />.
@@ -118,7 +142,9 @@ Para tarjetas Wiegand, seleccione <Cmd sid='device_card_wiegand_card_iclass' pro
 
 :::
 
-</Include>
+</Xclude>
+
+<Xclude type={props.type} ref='xpassd2'>
 
 ---
 
@@ -130,15 +156,93 @@ Modifique la configuración de red del dispositivo.
 
    Para configurar la red manualmente, desactive <Cmd sid='device_editable_fields_use_dhcp' product='air' /> y complete los siguientes campos.
 
-* <Cmd sid='device_editable_fields_ip_address' product='air' />
+  * <Cmd sid='device_editable_fields_ip_address' product='air' />
 
-* <Cmd sid='device_editable_fields_gateway' product='air' />
+  * <Cmd sid='device_editable_fields_gateway' product='air' />
 
-* <Cmd sid='device_editable_fields_dns_address' product='air' />
+  * <Cmd sid='device_editable_fields_dns_address' product='air' />
 
-* <Cmd sid='device_editable_fields_subnet_mask' product='air' />
+  * <Cmd sid='device_editable_fields_subnet_mask' product='air' />
 
-<Include type={props.type} ref='xpass2,bew3,bs3'>
+</Xclude>
+
+<Include type={props.type} ref='cs-20'>
+
+* <Cmd sid='device_cs20_scb_key' product='air' />: Ingrese la clave de seguridad del Serial Communication Block (SCB). Ingrese hasta 32 caracteres. Protege la comunicación serial.
+
+* <Cmd sid='device_cs20_scb_key_confirm' product='air' />: Vuelva a ingresar el mismo valor para evitar errores de clave de seguridad.
+
+* <Cmd sid='device_cs20_baud_rate' product='air' />: Configure la tasa de baudios de la comunicación serial entre el panel y los dispositivos secundarios.
+
+  * <Cmd>Host</Cmd>: Tasa de baudios de comunicación del panel
+
+  * <Cmd>0</Cmd> / <Cmd>1</Cmd>: Tasa de baudios para cada puerto conectado a un dispositivo auxiliar
+
+:::info
+
+* Establezca la clave SCB antes de agregar dispositivos OSDP. Si ya se añadieron dispositivos OSDP, la clave SCB no se puede cambiar.
+
+* Si el fabricante de un dispositivo OSDP de terceros utiliza una clave SCB específica, configure el CS-20 para usar la misma clave que el dispositivo OSDP.
+
+* Si las claves SCB del CS-20 y del dispositivo OSDP no coinciden, no es posible conectar con el dispositivo mediante **Secure Session**.
+
+* <Cmd sid='device_cs20_baud_rate' product='air' />: Configure una tasa de baudios diferente de forma independiente; el valor predeterminado es `115200`.
+
+:::
+
+</Include>
+
+<Include type={props.type} ref='xpass2'>
+
+* <Cmd sid='device_xpass2_rs485' product='air' />: Configure el dispositivo en modo maestro para agregar los dispositivos XPass D2 como dispositivos auxiliares.
+
+* <Cmd sid='device_xpass2_rs485_baudrate' product='air' />: Configure la tasa de baudios de la comunicación serial entre el dispositivo y los dispositivos auxiliares.
+
+</Include>
+
+<Include type={props.type} ref='cs-20'>
+
+---
+
+### <Cmd sid='device_cs20_advanced' product='air' className='normal' /> {#advancedSettings}
+
+#### <Cmd sid='device_cs20_device_input_status' product='air' className='normal' />
+
+Si un sensor de manipulación, un sensor de fallo de energía o un detector de incendios está conectado al puerto AUX IN, habilítelo o deshabilítelo.
+
+* <Cmd sid='device_cs20_tamper' product='air' />
+
+* <Cmd sid='device_cs20_ac_fail' product='air' />
+
+* <Cmd sid='device_cs20_fire' product='air' />
+
+:::info
+
+Para usar una cerradura Fail Safe, conecte un relé <Cmd>N/C</Cmd>; para usar una cerradura Fail Secure, conecte un relé <Cmd>N/O</Cmd>. Para más información sobre las conexiones de relé, consulte la [guía de instalación del CoreStation 20](../../device/corestation_20/installation).
+
+:::
+
+#### <Cmd sid='device_cs20_wiegand_input' product='air' className='normal' />
+
+Configure los ajustes detallados de entrada Wiegand.
+
+* <Cmd sid='device_cs20_wiegand_input_use' product='air' />: Habilite o deshabilite la función de entrada Wiegand.
+
+* <Cmd sid='device_cs20_input_format' product='air' />: Seleccione el formato de entrada Wiegand.
+
+* <Cmd sid="wiegand_pulse_width" product="air" />: Establece el ancho de pulso para la señal Wiegand.
+
+* <Cmd sid="wiegand_pulse_interval" product="air" />: Establece el intervalo de pulso para la señal Wiegand.
+
+#### <Cmd sid='device_cs20_supervised_input' product='air' className='normal' />
+
+Configure el puerto Supervised Input para que funcione como puerto de entrada y ajuste el valor de la resistencia usado para Supervised Input. Los valores disponibles son 1 kΩ, 2.2 kΩ, 4.7 kΩ o 10 kΩ.
+
+<Image src='/img/air/bsair-device-panel-edit-info-supervised-input.png' />
+
+</Include>
+
+<Include type={props.type} ref='xpass2,bew3,bs3,xpassd2'>
 
 ---
 
@@ -151,6 +255,12 @@ Modifique la configuración de red del dispositivo.
   * **XP2-MDPB** / **XP2-GDPB**: Solo se pueden seleccionar tarjetas RF como método de autenticación.
 
   * **XP2-GKDPB**: Puede usar una combinación de tarjeta RF y PIN como método de autenticación.
+
+</Include>
+
+<Include type={props.type} ref='xpassd2'>
+
+* <Cmd sid='new_layout_nav_title_authentication_txt1' product='air' />: Agregue métodos de autenticación. Haga clic en <Cmd sid='add_btn' product='air' /> para agregar un método de autenticación. Solo se pueden seleccionar tarjetas RF como método de autenticación.
 
 </Include>
 
@@ -250,6 +360,8 @@ Al usar credenciales no faciales, el momento de "antes" y "después" suele ser i
 
 </Include>
 
+<Xclude type={props.type} ref='cs-20'>
+
 ---
 
 ### <Cmd sid='new_layout_nav_title_tna' product='air' className='normal' /> (Tiempo y asistencia, T&A) {#tna}
@@ -264,9 +376,15 @@ Cuando esta función esté habilitada, <Cmd sid='device_edit_tna_event_label' pr
 
   * <Cmd sid='device_edit_tna_mode_option2' product='air' />: Cuando la tecla de asistencia aparece en la pantalla, el usuario selecciona el evento de asistencia al autenticarse.
 
+     :::note
+
+    <Cmd sid='device_edit_tna_mobile_required_label' product='air' />: Habilite esta opción para exigir que los usuarios registren un evento de asistencia al autenticarse.
+
+     :::
+
   </Include>
 
-  <Include type={props.type} ref='ae-mc,xpass2,bew3,bs3,xs2'>
+  <Include type={props.type} ref='ae-mc,xpass2,bew3,bs3,xs2,xpassd2'>
 
   * <Cmd sid="device_edit_tna_mode_option3" product="air" />: Los eventos de asistencia cambian automáticamente según el horario establecido. Puede seleccionar un horario para aplicarlo a los eventos de asistencia.
 
@@ -278,9 +396,13 @@ Cuando esta función esté habilitada, <Cmd sid='device_edit_tna_event_label' pr
 
   </Include>
 
-  <Include type={props.type} ref='ae-mc,xpass2,bew3,bs3,xs2'>
+  <Include type={props.type} ref='ae-mc,xpass2,bew3,bs3,xs2,xpassd2'>
 
   * <Cmd sid="device_edit_tna_mode_option5" product="air" />: Solo se puede usar el evento de asistencia seleccionado.
+
+  </Include>
+
+  <Include type={props.type} ref='ae-mc,xpass2,xs2'>
 
   * <Cmd sid='device_edit_tna_mode_option6' product='air' />: Al presentar una credencial móvil, la app Suprema Pass permite al usuario seleccionar el evento de asistencia.
 
@@ -291,6 +413,8 @@ Cuando esta función esté habilitada, <Cmd sid='device_edit_tna_event_label' pr
 Para más información sobre la configuración de tiempo y asistencia, consulte <DocLink docId='platform/biostar_air/configuring-ta' />.
 
 :::
+
+</Xclude>
 
 <Include type={props.type} ref='bs3'>
 
@@ -408,6 +532,16 @@ Si ocurre un evento de manipulación, configure el dispositivo para eliminar **t
 
 </Include>
 
+<Include type={props.type} ref='cs-20'>
+
+---
+
+### <Cmd sid='device_bs3_secure_tamper' product='air' className='normal' /> {#secureTamper}
+
+Si ocurre un evento de manipulación, configure el panel para eliminar **toda la información de usuario**, **todos los registros** y **las claves de seguridad** almacenadas en el panel.
+
+</Include>
+
 <Include type={props.type} ref='bs3'>
 
 ---
@@ -434,6 +568,8 @@ La función de transmisión RTSP solo es compatible con BioStation 3.
 
 </Include>
 
+<Xclude type={props.type} ref='cs-20'>
+
 ---
 
 ### <Cmd sid='new_layout_nav_title_sensitivity' product='air' className='normal' /> {#rssiSensitivity}
@@ -452,6 +588,8 @@ Para restablecer la configuración, haga clic en <Cmd sid='device_btn_reset' pro
 
 :::
 
+</Xclude>
+
 <Include type={props.type} ref='ae-mc,xpass2,xs2'>
 
 ---
@@ -459,5 +597,15 @@ Para restablecer la configuración, haga clic en <Cmd sid='device_btn_reset' pro
 ### <Cmd sid='module_found_slots_title' product='air' className='normal' /> {#moduleFoundSlots}
 
 Opción para detectar un módulo OM-120 conectado al dispositivo. Haga clic en <Cmd sid='add_btn' product='air' /> para detectar el módulo.
+
+</Include>
+
+<Include type={props.type} ref='cs-20'>
+
+---
+
+### <Cmd sid='module_found_slots_title' product='air' className='normal' /> {#moduleFoundSlots}
+
+Opción para detectar un módulo OM-120 conectado al panel. Haga clic en <Cmd sid='add_btn' product='air' /> para detectar el módulo.
 
 </Include>

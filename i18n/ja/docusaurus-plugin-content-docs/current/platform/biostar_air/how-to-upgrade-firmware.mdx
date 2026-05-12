@@ -44,7 +44,19 @@ BioStar Airのファームウェアをアップグレードして装置のパフ
 
    <Image src='/img/air/bsair-device-mng-fw-upgrade.png' caption />
 
-5. 装置に応じて最新のファームウェアバージョンを選択し、更新を確認してください。
+5. <Cmd sid='release_note.modal.title' product='air' /> ウィンドウが表示されたら、最新のファームウェアバージョンを選択して <Cmd sid='release_note.modal.update' product='air' /> ボタンをクリックします。
+
+   <Image src='/img/air/bsair-device-mng-fw-upgrade-update.png' width='50%' />
+
+該当デバイスが自動で再起動し、オンラインに戻るまで待ってください。 一覧のデバイスに緑の点(<StatusOK />)が表示されていれば、オンラインです。
+
+:::info
+
+* <Cmd sid='release_note.modal.releaseNote' product='air' /> ボタンをクリックして、該当ファームウェアのリリースノートを確認してください。
+
+* <Cmd sid='release_note.panel.viewAllReleaseNotes' product='air' /> ボタンをクリックして、すべてのデバイスのファームウェアリリースノートを確認してください。
+
+:::
 
 </TabItem>
 <TabItem value='mobile' label='Mobile'>
@@ -88,15 +100,17 @@ BioStar Airのファームウェアをアップグレードして装置のパフ
 
    <Image src='/img/air/bsair-device-mng-list-fw-column-align.png' />
 
-4. アップグレードする各装置の左側にあるチェックボックスをクリックします。
+4. アップグレードする各装置の左側にあるチェックボックスをクリックします。 同じ種類のデバイスを選択してください。
 
 5. 装置一覧の上部にある <IcAirFw width='24px' height='24px' title='Update Firmware' /> ボタンをクリックしてください。
 
    <Image src='/img/air/bsair-device-mng-list-fw-update.png' />
 
-6. <Cmd sid='update_fw_text' product='air' /> ウィンドウが表示されたら、最新のファームウェアバージョンを選択して <Cmd sid='btn_ok' product='air' /> をクリックします。
+6. <Cmd sid='release_note.modal.title' product='air' /> ウィンドウが表示されたら、最新のファームウェアバージョンを選択して <Cmd sid='release_note.modal.update' product='air' /> ボタンをクリックします。
 
-7. メッセージウィンドウが表示されたら、内容を確認して <Cmd sid='device_btn_confirm' product='air' /> をクリックしてください。
+   <Image src='/img/air/bsair-device-mng-fw-upgrade-update.png' width='50%' />
+
+選択したデバイスが自動で再起動し、オンラインに戻るまで待ってください。 一覧のデバイスに緑の点(<StatusOK />)が表示されていれば、オンラインです。
 
 :::info
 
@@ -105,5 +119,49 @@ BioStar Airのファームウェアをアップグレードして装置のパフ
 * 装置の電源を切らないでください。
 
 * ファームウェアアップグレード完了後、装置は自動的に再起動します。
+
+* <Cmd sid='release_note.modal.releaseNote' product='air' /> ボタンをクリックして、該当ファームウェアのリリースノートを確認してください。
+
+* <Cmd sid='release_note.panel.viewAllReleaseNotes' product='air' /> ボタンをクリックして、すべてのデバイスのファームウェアリリースノートを確認してください。
+
+:::
+
+## XPass D2 ファームウェアアップグレード {#upgradeFirmwareForXPassD2}
+
+XPass D2 デバイスは 2 つのファームウェアコンポーネントを使用します。
+
+* **MICOM**：デバイスの動作、RS-485 通信、認証処理、安定性、一般的なバグ修正などに関する更新を含みます。
+
+* **BLE**：Bluetooth 通信に関する更新を含みます。
+
+XPass D2 デバイスは必ず **MICOM** → **BLE** の順でファームウェアをアップグレードしてください。
+
+1. 画面左のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックします。
+
+2. <Cmd sid='device_slaves_panels' product='air' /> タブをクリックしてください。
+
+3. XPass D2 デバイスのチェックボックスをクリックしてください。 1 台のみ選択できます。
+
+   <Image src='/img/air/bsair-device-panel-fw-up-xpd2-01.png' />
+
+4. 一覧上部の<IcAirFw width='24px' height='24px' title='Update Firmware' /> ボタンをクリックしてください。
+
+5. <Cmd sid='release_note.modal.title' product='air' /> ウィンドウが表示されたら、**MICOM** ファームウェアバージョンを選択してください。
+
+   <Image src='/img/air/bsair-device-panel-fw-up-xpd2-02.png' width='50%' />
+
+6. <Cmd sid='release_note.modal.update' product='air' /> ボタンをクリックしてください。
+
+7. 該当デバイスが自動で再起動し、オンラインに戻るまで待ってください。 一覧のデバイスに緑の点(<StatusOK />)が表示されていれば、オンラインです。
+
+8. 同じ手順を繰り返して **BLE** ファームウェアバージョンを選択し、アップデートしてください。
+
+:::caution
+
+* 画面に表示されるファームウェアバージョン情報だけでは、**MICOM** と **BLE** 各コンポーネントのインストール状況を個別に確認することは困難です。 BLE のアップグレードが完了するまで、ファームウェアのアップグレードを続けてください。
+
+* デバイスは **MICOM** 更新後と **BLE** 更新後に、それぞれオンラインに復帰します。 緑のオンライン表示(<StatusOK />)だけでアップグレードが完了したと判断しないでください。 両方の手順を確実に完了したか、もう一度確認してください。
+
+* CS-20 を介して接続されたスレーブデバイスは、一度に 1 台のみファームウェアをアップグレードできます。
 
 :::

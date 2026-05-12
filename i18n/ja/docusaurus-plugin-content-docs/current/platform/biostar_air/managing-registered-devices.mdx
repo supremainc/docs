@@ -1,6 +1,6 @@
 ---
 id: managing-registered-devices
-title: 登録済みデバイスの管理
+title: 登録済みエッジデバイスの管理
 description: BioStar Air ポータルでデバイスの接続状態を確認し、生体認証やカード設定を変更したり、ファームウェアを更新できます。 個別または一括でセキュリティシステムを効率的に管理できます。
 keywords:
   - デバイス管理
@@ -58,6 +58,8 @@ keywords:
 
 <Image src='/img/air/bsair-device-mng-list-info.png' />
 
+* <Cmd sid='rs485_type' product='air' />：RS-485通信をサポートするデバイスで確認できます。  該当デバイスがマスターかスレーブかを確認できます。 マスターまたはスレーブに設定されていないデバイスは <Cmd sid='device_type_default' product='air' /> と表示されます。
+
 * <Cmd sid='device_product_column' product='air' />：Supremaデータベースから取得したデバイス名とモデル名です。
 
 * <Cmd sid='device_nickname_column' product='air' />：識別しやすいようにユーザーが編集できる項目です。 デバイス一覧でデバイスをクリックすると表示される <Cmd sid='device_edit_title' product='air' /> ウィンドウで変更できます。
@@ -106,7 +108,7 @@ keywords:
 
 <Image src='/img/air/bsair-device-mng-list-tools.png' />
 
-* <IcAirRef width='24px' height='24px' title='Refresh' />：デバイス一覧とデバイスの状態を更新します。
+* <IcAirRef width='24px' height='24px' title='Refresh' />：デバイス一覧を更新できます。
 
 * <IcAirRemove width='24px' height='24px' title='Delete' />：サイトに登録されたデバイスを削除できます。
 
@@ -138,9 +140,9 @@ keywords:
 
 1. 画面左側のサイドバーで <Cmd sid='device_menu' product='air' /> → <Cmd sid='device_submenu' product='air' /> をクリックしてください。
 
-2. デバイスグループ一覧で、グループに追加または削除するデバイスのチェックボックスをクリックします。
+2. デバイス一覧で、グループに追加または削除するデバイスのチェックボックスをクリックしてください。
 
-3. デバイスグループ一覧の上部にある <IcAirGroup width='24px' height='24px' title='Manage Groups' /> ボタンをクリックしてください。
+3. デバイス一覧の上部にある <IcAirGroup width='24px' height='24px' title='Manage Groups' /> ボタンをクリックしてください。
 
 4. <Cmd sid='manage_device_group_title' product='air' /> ウィンドウが表示されたら、選択したデバイスをグループに追加または削除します。
 

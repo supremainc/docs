@@ -1,0 +1,141 @@
+---
+id: partner-assign-admin
+title: Invitar a un administrador del sitio.
+description: Aprenda a invitar administradores a los sitios de clientes y a configurar permisos en el Portal de Socios.
+keywords:
+  - Administrador del sitio
+  - Invitar administradores
+  - Configuración de permisos
+---
+
+Los socios pueden invitar administradores a los sitios de clientes y configurar permisos. Administre niveles de acceso granulares para cada administrador para garantizar la seguridad y la eficiencia operativa de los sitios de los clientes.
+
+:::info
+
+* Para obtener más información sobre los niveles y roles de administrador, consulte <DocLink docId='platform/biostar_air/managing-administrators#administrator-levels' />.
+
+* Para obtener más información sobre cómo invitar administradores y asignar roles en el portal BioStar Air, consulte <DocLink docId='platform/biostar_air/managing-administrators' />.
+
+:::
+
+## Invitar a un administrador del sitio
+
+Aprenda a invitar administradores a los sitios de clientes y a configurar permisos en el Portal de Socios.
+
+1. Inicie sesión en el [Partner Portal](https://partner.biostarair.com) con una cuenta asignada el rol <Cmd sid='admin_role' product='air' className='bold' /> o superior.
+
+2. Haga clic en <Cmd sid="menu.label.siteList" product="pn" /> en la barra lateral izquierda.
+
+3. En la lista de sitios, haga clic en el sitio al que desea asignar un administrador.
+
+4. Cuando aparezca el panel <Cmd sid='siteListPage.drawer.edit.title' product='pn' />, haga clic en <Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' /> en ese orden.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-admin-list.png' />
+
+5. Haga clic en <Cmd sid="common.button.invite" product="pn" />.
+
+6. Cuando aparezca la ventana <Cmd sid='inviteAdminsModal.title' product='pn' />, seleccione el rol de administrador a invitar en el campo <Cmd sid='siteListPage.placeholder.adminType' product='pn' />.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-invite-admin.png' />
+
+7. Ingrese la dirección de correo electrónico del administrador a invitar.
+
+8. Haga clic en <Cmd sid='common.button.add' product='pn' /> cuando esté activo.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-invite-admin-email.png' width='60%' />
+
+9. Los administradores agregados aparecen debajo del campo de dirección de correo electrónico. Repita los pasos 6–8 para invitar administradores adicionales.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-invited-list.png' width='60%' />
+
+10. Después de agregar todos los administradores, haga clic en <Cmd sid='common.button.ok' product='pn' />.
+
+11. Revise los administradores agregados en <Cmd sid='siteListPage.drawer.edit.profile.invitations.title' product='pn' /> y, a continuación, haga clic en <Cmd sid='common.button.apply' product='pn' /> para enviar el correo de invitación.
+
+12. Cuando aparezca el mensaje de éxito, haga clic en <Cmd sid='common.button.confirm' product='pn' />.
+
+## Verificar el estado de la invitación
+
+Verifique el estado de invitación de los administradores invitados al sitio. El estado de invitación es <Cmd sid='adminLCM.pending_status' product='pn' /> hasta que el administrador invitado acepte el correo de invitación. Los administradores invitados tienen hasta 7 días para aceptar la invitación; después de 7 días la invitación expira y el estado cambia a <Cmd sid='adminLCM.user_status_expired' product='pn' />.
+
+1. En la lista de sitios, haga clic en el sitio donde invitó a un administrador.
+
+2. Cuando aparezca el panel <Cmd sid='siteListPage.drawer.edit.title' product='pn' />, haga clic en <Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' /> en ese orden.
+
+3. Verifique el estado de la invitación en <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' />.
+
+Cuando un administrador invitado completa la inscripción en el sitio, el estado cambia de <Cmd sid='adminLCM.pending_status' product='pn' /> a <Cmd sid='adminLCM.user_status_accepted' product='pn' />.
+
+<Image src='/img/air/bsair-partner-admin-sitelist-edit-site-admin-list.png' />
+
+## Invitación revocada
+
+Cancele la invitación si la dirección de correo electrónico del administrador invitado se ingresó incorrectamente o si el administrador ya no es necesario.
+
+1. En la lista de sitios, haga clic en el sitio donde invitó a un administrador.
+
+2. Cuando aparezca el panel <Cmd sid='siteListPage.drawer.edit.title' product='pn' />, haga clic en <Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' /> en ese orden.
+
+3. En <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' />, para cualquier administrador con estado <Cmd sid='adminLCM.pending_status' product='pn' />, haga clic en <IcAirMore title='More' /> en el extremo derecho.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-site-admin-list-more.png' />
+
+4. Haga clic en <Cmd sid='adminLCM.revoke_invitation' product='pn' /> en el menú emergente.
+
+5. Si aparece un mensaje emergente, revíselo y haga clic en <Cmd sid='common.button.yes' product='pn' />.
+
+6. Cuando aparezca el mensaje de éxito por la invitación cancelada, haga clic en <Cmd sid='common.button.close' product='pn' />.
+
+Cuando se cancela una invitación, el estado de la invitación cambia de <Cmd sid='adminLCM.pending_status' product='pn' /> a <Cmd sid='adminLCM.user_status_revoked' product='pn' />.
+
+## Reenviar enlace de invitación
+
+Reenvíe el enlace de invitación si el administrador invitado no recibió el correo de invitación o lo perdió.
+
+1. En la lista de sitios, haga clic en el sitio donde invitó a un administrador.
+
+2. Cuando aparezca el panel <Cmd sid='siteListPage.drawer.edit.title' product='pn' />, haga clic en <Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' /> en ese orden.
+
+3. En <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' />, para administradores con estado <Cmd sid='adminLCM.pending_status' product='pn' />, <Cmd sid='adminLCM.user_status_expired' product='pn' /> o <Cmd sid='adminLCM.user_status_revoked' product='pn' />, haga clic en <IcAirMore title='More' /> en el extremo derecho.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-site-admin-list-more.png' />
+
+4. Haga clic en <Cmd sid='adminLCM.resend_invitation_link' product='pn' /> en el menú emergente.
+
+5. Si aparece un mensaje emergente, revíselo y haga clic en <Cmd sid='common.button.yes' product='pn' />.
+
+6. Cuando aparezca el mensaje de éxito por reenvío del enlace de invitación, haga clic en <Cmd sid='common.button.close' product='pn' />.
+
+## Bloquear o desbloquear una cuenta de administrador
+
+Bloquear o desbloquear cuentas de administrador asignadas a un sitio.
+
+1. Haga clic en <Cmd sid="menu.label.siteList" product="pn" /> en la barra lateral izquierda.
+
+2. En la lista de sitios, haga clic en el sitio para administrar el acceso de administradores.
+
+3. Cuando aparezca el panel <Cmd sid='siteListPage.drawer.edit.title' product='pn' />, haga clic en <Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' /> en ese orden.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-admin-list.png' />
+
+4. En <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' />, haga clic en el botón de alternancia en la columna <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> para bloquear o desbloquear una cuenta de administrador.
+
+5. Haz clic en <Cmd sid='common.button.apply' product='pn' /> en la parte inferior para aplicar los cambios.
+
+## Eliminar administrador
+
+Elimine la cuenta de un administrador invitado. Cuando se elimina la cuenta de un administrador, ya no podrá iniciar sesión en el sitio y su acceso se revocará por completo. Una vez eliminada la cuenta de administrador, no se puede recuperar.
+
+1. En la lista de sitios, haga clic en el sitio donde invitó a un administrador.
+
+2. Cuando aparezca el panel <Cmd sid='siteListPage.drawer.edit.title' product='pn' />, haga clic en <Cmd sid='site.admin_technicans.title' product='pn' /> → <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' /> en ese orden.
+
+3. En <Cmd sid='siteListPage.drawer.edit.profile.adminsList.title' product='pn' />, haga clic en <IcAirMore title='More' /> al extremo derecho del administrador que desea eliminar.
+
+   <Image src='/img/air/bsair-partner-admin-sitelist-edit-site-admin-list-more.png' />
+
+4. Haga clic en <Cmd sid='common.button.delete' product='pn' /> en el menú emergente.
+
+5. Si aparece un mensaje emergente, revíselo y haga clic en <Cmd sid='common.button.confirm' product='pn' />.
+
+6. Cuando aparezca el mensaje de éxito que confirma la eliminación del administrador, haga clic en <Cmd sid='common.button.close' product='pn' />.

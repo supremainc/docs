@@ -1,15 +1,16 @@
 ---
 id: device-info-settings
-title: Información y opciones de configuración del dispositivo
-description: Esta página describe la información disponible para cada modelo de dispositivo en el portal BioStar Air y explica las opciones de configuración relacionadas con la red, la autenticación y la gestión del tiempo y el control de asistencia.
+title: Opciones de Configuración de Dispositivos y Paneles
+description: Esta guía explica cómo verificar la información según el tipo de dispositivo y panel en el portal de BioStar Air y cómo configurar opciones como red, autenticación y gestión de asistencia.
 keywords:
-  - Información del dispositivo
+  - Dispositivo
+  - Paneles
   - Opciones de configuración
   - BioStar Air
 toc_max_heading_level: 2
 ---
 
-Los administradores pueden seleccionar un dispositivo registrado para ver su información básica y configurar los parámetros operativos, como la red, la autenticación y la gestión del tiempo y el control de asistencia. Las opciones de configuración varían según el modelo de dispositivo. Despliegue la entrada del dispositivo para ver las opciones disponibles.
+Este documento es una referencia para los ajustes de dispositivos y paneles en BioStar Air. Los administradores pueden ver información básica del hardware y ejecutar acciones como actualizar el firmware, reiniciar o restablecer. Pueden configurar ajustes de operación como red, autenticación, formato de tarjeta, registro de tiempo y asistencia, Wiegand, sensibilidad y módulos conectados. Los ajustes disponibles varían según el modelo de dispositivo y el tipo de panel.
 
 import DeviceInfo from '../../common/_bsair-device-info-settings.mdx';
 
@@ -24,6 +25,13 @@ import DeviceInfo from '../../common/_bsair-device-info-settings.mdx';
 <summary><Head level='2' hashid='xpass2'>XPass 2</Head></summary>
 
 <DeviceInfo type='xpass2' />
+
+</details>
+
+<details className='deviceInfo'>
+<summary><Head level='2' hashid='xpassd2'>XPass D2</Head></summary>
+
+<DeviceInfo type='xpassd2' />
 
 </details>
 
@@ -45,5 +53,12 @@ import DeviceInfo from '../../common/_bsair-device-info-settings.mdx';
 <summary><Head level='2' hashid='bs3'>BioStation 3</Head></summary>
 
 <DeviceInfo type='bs3' />
+
+</details>
+
+<details className='deviceInfo'>
+<summary><Head level='2' hashid='cs-20'>CoreStation 20</Head></summary>
+
+<DeviceInfo type='cs-20' />
 
 </details>

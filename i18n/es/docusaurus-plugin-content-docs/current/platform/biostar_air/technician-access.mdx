@@ -1,0 +1,227 @@
+---
+id: technician-access
+title: Invitar técnicos al Portal de Socios
+description: Aprende cómo invitar técnicos en el Portal de Socios, administrar el estado de las invitaciones y editar o eliminar cuentas de técnicos.
+keywords:
+  - Técnico
+  - Invitar
+  - Gestionar
+---
+
+Con cuentas de técnico, otorga a socios e instaladores acceso limitado a sitios sin una cuenta de administrador compartida. Los técnicos se administran de forma central en el Portal de Socios y pueden asignarse a sitios individuales.
+
+**Beneficios clave de las cuentas de técnico**
+
+* **Mayor seguridad**: Reduce el riesgo de acceso no autorizado eliminando cuentas de administrador compartidas
+
+* **Cumplimiento**: Ayuda a cumplir las normas de privacidad (por ejemplo, GDPR) y ofrece la opción de restringir el acceso a los datos de usuarios
+
+* **Control de acceso**: Configura permisos granulares, desde acceso a dispositivos hasta privilegios de administrador completos
+
+* **Registro de auditoría**: Registra las actividades individuales de los técnicos en los registros de auditoría para rastrear la responsabilidad
+
+* **Mayor eficiencia**: Asigna y administra técnicos en múltiples sitios sin conflictos de inicio de sesión
+
+* **Revocación inmediata**: Revoca el acceso de un técnico de forma inmediata, en cualquier momento
+
+## Invitar técnicos
+
+Los socios deben invitar a los técnicos para crear cuentas de técnico antes de otorgar acceso a un sitio. Las cuentas de técnico se crean con una dirección de correo electrónico. Los técnicos invitados activan sus cuentas aceptando la invitación enviada a su correo.
+
+1. Inicia sesión en el [Portal de Socios](https://partner.biostarair.com).
+
+2. Haz clic en <Cmd sid='technicians.title' product='pn' /> en la barra lateral izquierda.
+
+3. Haz clic en la pestaña <Cmd sid='adminsPage.adminsAndTechnicians' product='pn' />.
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list.png' />
+
+4. Haz clic en <Cmd sid='common.button.invite' product='pn' /> en la parte superior derecha de la pantalla.
+
+5. Cuando aparezca la ventana <Cmd sid='inviteTechnicianModal.title' product='pn' />, ingresa la dirección de correo electrónico del técnico a invitar.
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-invite.png' />
+
+6. Haga clic en <Cmd sid='common.button.add' product='pn' /> cuando esté activo.
+
+7. Los técnicos agregados aparecen debajo del campo de entrada de correo electrónico. Repite los pasos 5–6 para invitar técnicos adicionales.
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-invite-add.png' />
+
+8. Después de agregar a todos los técnicos, haz clic en <Cmd sid='common.button.ok' product='pn' />.
+
+9. Cuando aparezca el mensaje de confirmación, haz clic en <Cmd sid='common.button.confirm' product='pn' />.
+
+:::info
+
+* Invitar técnicos al Portal de Socios no les otorga acceso a los sitios; debes invitar a los técnicos a cada sitio por separado. Para más información sobre cómo invitar a un técnico a un sitio, consulta <DocLink docId='platform/biostar_air/assign-technician' />.
+
+* Los técnicos que se registran mediante el correo de invitación pueden iniciar sesión en el Portal de Socios, pero su acceso a los menús es limitado. Solo pueden cambiar su propia contraseña, eliminar su cuenta y seleccionar su idioma.
+
+:::
+
+### Estado de la invitación
+
+Después de invitar a los técnicos, los socios pueden verificar el estado de la invitación de cada técnico en la lista de técnicos. 
+
+#### Registro pendiente
+
+El estado de la invitación se muestra como <Cmd sid='adminLCM.pending_status' product='pn' /> hasta que el técnico invitado acepta la invitación. Los técnicos invitados pueden hacer clic en el enlace del correo para crear una cuenta o iniciar sesión en el Portal de Socios.
+
+<Image src='/img/air/bsair-partner-admin-technicial-list-pending.png' />
+
+:::info
+
+Los técnicos invitados tienen hasta 7 días para aceptar la invitación. Tras 7 días, la invitación expira y el estado cambia a <Cmd sid='adminLCM.user_status_expired' product='pn' />. Si una invitación expira, los socios pueden reenviar el enlace de invitación para que el técnico vuelva a registrarse. Para más información sobre cómo reenviar enlaces de invitación, consulta <DocLink inner='#resendInvitation' />.
+
+:::
+
+#### Registro completado
+
+Cuando un técnico acepta la invitación por correo y completa el registro, el estado de la invitación cambia a <Cmd sid='adminLCM.user_status_accepted' product='pn' />.
+
+<Image src='/img/air/bsair-partner-admin-technicial-list-accepted.png' />
+
+#### Invitación revocada
+
+Los socios pueden cancelar una invitación si ingresaron mal el correo del técnico, o si el problema se resolvió y la invitación ya no es necesaria. El estado de la invitación cambia a <Cmd sid='adminLCM.user_status_revoked' product='pn' />. Para más información sobre cómo revocar la invitación de un técnico, consulta <DocLink inner='#revokeInvite' />.
+
+<Image src='/img/air/bsair-partner-admin-technicial-list-revoked.png' />
+
+### Invitación revocada {#revokeInvite}
+
+Los socios pueden cancelar una invitación si ingresaron mal el correo del técnico, o si el problema se resolvió y la invitación ya no es necesaria. Después de cancelar la invitación, el usuario no podrá usar el enlace de invitación para registrarse.
+
+1. En la lista de técnicos, selecciona la casilla de cada técnico cuyo estado de invitación sea <Cmd sid='adminLCM.pending_status' product='pn' />. Selecciona 1 o más técnicos.
+
+2. Haz clic en <IcAirRevoke title='Revoke Invitation' /> en la parte superior izquierda de la lista de técnicos.
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-revoke-technicial.png' />
+
+   :::note
+
+   Solo los técnicos con estado <Cmd sid='adminLCM.pending_status' product='pn' /> pueden tener su invitación revocada.
+
+   :::
+
+3. Si aparece un mensaje emergente, revíselo y haga clic en <Cmd sid='common.button.yes' product='pn' />.
+
+4. Cuando aparezca el mensaje de éxito por la invitación cancelada, haga clic en <Cmd sid='common.button.close' product='pn' />.
+
+El estado de la invitación de un técnico revocado cambia a <Cmd sid='adminLCM.user_status_revoked' product='pn' /> en la lista de técnicos.
+
+<Image src='/img/air/bsair-partner-admin-technicial-list-revoked.png' />
+
+### Reenviar enlace de invitación {#resendInvitation}
+
+Reenvía el enlace de invitación si un técnico invitado no recibió el correo, lo perdió o el enlace de invitación expiró.
+
+1. En la lista de técnicos, selecciona la casilla de cada técnico cuyo estado de invitación sea <Cmd sid='adminLCM.pending_status' product='pn' />, <Cmd sid='adminLCM.user_status_expired' product='pn' /> o <Cmd sid='adminLCM.user_status_revoked' product='pn' />. Selecciona 1 o más técnicos.
+
+2. Haz clic en <IcAirResend title='Resend Invitation' /> en la parte superior izquierda de la lista de técnicos.
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-resend-invite.png' />
+
+3. Si aparece un mensaje emergente, revíselo y haga clic en <Cmd sid='common.button.yes' product='pn' />.
+
+4. Cuando aparezca el mensaje de éxito por reenvío del enlace de invitación, haga clic en <Cmd sid='common.button.close' product='pn' />.
+
+Después de reenviar el enlace de invitación de un técnico, su estado de invitación cambia a <Cmd sid='adminLCM.pending_status' product='pn' /> en la lista de técnicos.
+
+<Image src='/img/air/bsair-partner-admin-technicial-list-pending.png' />
+
+## Administrar técnicos {#manageTechnician}
+
+Después de que el técnico invitado acepte la invitación por correo y complete el registro, los socios pueden administrar los siguientes elementos en la lista de técnicos.
+
+* Bloquear o desbloquear cuentas de técnicos
+
+* Editar acceso al sitio
+
+* Eliminar cuentas de técnicos
+
+### Bloquear o desbloquear cuentas de técnicos
+
+Los socios pueden bloquear o desbloquear cuentas de técnico usando la opción <Cmd sid='adminLCM.column_admin_account_status' product='pn' />. Bloquear una cuenta de técnico impide que el técnico inicie sesión en el Portal de Socios y en los sitios asignados. Se conserva la información de la cuenta, permitiendo su reactivación cuando sea necesario.
+
+En la columna <Cmd sid='adminLCM.column_admin_account_status' product='pn' />, los técnicos bloqueados se muestran como <Cmd sid='common.label.locked' product='pn' /> y los técnicos desbloqueados se muestran como <Cmd sid='common.label.unlocked' product='pn' />.
+
+<Image src='/img/air/bsair-partner-admin-technicial-list-lock-unlock-status.png' />
+
+:::info
+
+* Las cuentas de los técnicos que han completado el registro están desbloqueadas por defecto.
+
+* Aunque una cuenta de administrador del Portal de Socios pueda aparecer en la lista de técnicos si tiene acceso de técnico a ciertos sitios, esa cuenta de administrador no puede ser bloqueada o desbloqueada desde la lista de técnicos.
+
+:::
+
+#### Bloquear o desbloquear la cuenta de un técnico individual
+
+En la lista de técnicos, haz clic en el botón de alternancia en la columna <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> para bloquear o desbloquear la cuenta de un técnico.
+
+1. En la lista de técnicos, haz clic en el interruptor en la columna <Cmd sid='adminLCM.column_admin_account_status' product='pn' />.
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-lock-unlock.png' />
+
+2. Si aparece un mensaje emergente, revíselo y haga clic en <Cmd sid='common.button.yes' product='pn' />.
+
+3. Cuando aparezca el mensaje de éxito que confirma el bloqueo o desbloqueo de la cuenta, haz clic en <Cmd sid='common.button.close' product='pn' />.
+
+#### Bloquear o desbloquear varias cuentas de técnicos
+
+Selecciona varias cuentas de técnicos en la lista para bloquearlas o desbloquearlas en lote.
+
+1. En la lista de técnicos, marca la casilla de cada técnico que quieras bloquear o desbloquear. Selecciona 1 o más técnicos.
+
+2. Haz clic en <IcAirPlock title='Lock Account' /> o <IcAirPunlock title='Unlock Account' /> en la esquina superior izquierda de la pantalla.
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-multi-lock-unlock.png' />
+
+3. Si aparece un mensaje emergente, revíselo y haga clic en <Cmd sid='common.button.yes' product='pn' />.
+
+4. Cuando aparezca el mensaje de éxito que confirma el bloqueo o desbloqueo de la cuenta, haz clic en <Cmd sid='common.button.close' product='pn' />.
+
+### Editar acceso al sitio
+
+Modifica el acceso de un técnico al sitio.
+
+1. En la lista de técnicos, haz clic en un técnico cuya columna <Cmd sid='common.label.invited_sites' product='pn' /> indique 1 o más sitios.
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-invited.png' />
+
+2. Cuando aparezca la ventana <Cmd sid='editTechnicianModal.title' product='pn' />, revisa la lista de sitios a los que el técnico está invitado en <Cmd sid='common.label.invited_sites' product='pn' />.
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-edit.png' width='60%' />
+
+3. Haz clic en el botón de alternancia en la columna <Cmd sid='adminLCM.column_admin_account_status' product='pn' /> para permitir o bloquear el acceso al sitio.
+
+4. Haz clic en <Cmd sid='common.button.save' product='pn' /> para guardar los cambios.
+
+5. Cuando aparezca el mensaje de éxito que confirma los cambios en el acceso al sitio, haz clic en <Cmd sid='common.button.close' product='pn' />.
+
+:::info
+
+* Una vez que un técnico se asigna a un sitio y los permisos se configuran en el Portal de Socios, solo una cuenta de administrador puede cambiar esos permisos en el portal de administración de BioStar Air.
+
+* Si un administrador del sitio bloquea el acceso de un técnico al sitio en el portal de BioStar Air, no se puede desbloquear desde el Portal de Socios. Para modificar el acceso de un técnico al sitio, usa una cuenta con privilegios de administrador para ese sitio en el portal de BioStar Air.
+
+* Para más información sobre cómo otorgar acceso a un técnico a un sitio, consulta <DocLink docId='platform/biostar_air/assign-technician' />.
+
+:::
+
+### Eliminar cuentas de técnicos
+
+Si ya no necesitas el soporte del técnico, puedes eliminar su cuenta. Eliminar una cuenta de técnico impide que el técnico inicie sesión en el Portal de Socios y elimina permanentemente toda la información asociada con la cuenta del sistema.
+
+1. En la lista de técnicos, marca la casilla del técnico que deseas eliminar. Selecciona 1 o más técnicos.
+
+2. Haz clic en <IcAirRemove title='Delete' /> en la parte superior izquierda de la pantalla.
+
+   <Image src='/img/air/bsair-partner-admin-technicial-list-delete.png' />
+
+3. Si aparece un mensaje emergente, revíselo y haga clic en <Cmd sid='common.button.confirm' product='pn' />.
+
+4. Cuando aparezca el mensaje de éxito de eliminación de la cuenta, haz clic en <Cmd sid='common.button.close' product='pn' />.
+
+Las cuentas de técnicos eliminadas ya no aparecen en la lista de técnicos.

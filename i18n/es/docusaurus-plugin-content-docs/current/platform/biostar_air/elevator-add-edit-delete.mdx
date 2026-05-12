@@ -1,6 +1,6 @@
 ---
 id: elevator-add-edit-delete
-title: Administrar Elevadores
+title: Administrar Ascensores
 description: Configure el control de acceso del ascensor para controlar el acceso a cada piso. Conecte el módulo OM-120 al dispositivo, configure los relés de los botones de cada piso y administre los horarios de acceso.
 keywords:
   - Elevador
@@ -50,6 +50,12 @@ Cumpla los siguientes requisitos para activar la función de control de acceso d
 4. En la sección <Cmd sid='add_elevator.assign_device_and_modules.title' product='air' />, seleccione el dispositivo y el módulo para la autenticación de acceso.
 
    * <Cmd sid='add_elevator.assign_device_and_modules.field1' product='air' />: Seleccione el dispositivo para la autenticación de acceso.
+
+      :::caution
+
+      Si el dispositivo no aparece en la lista, verifique que esté asignado a una puerta. Un dispositivo no puede asignarse simultáneamente a una puerta y a un elevador.
+
+      :::
 
    * <Cmd sid='add_elevator.assign_device_and_modules.field2' product='air' />: Seleccione el módulo OM-120 que controlará el relé del botón del ascensor.
 

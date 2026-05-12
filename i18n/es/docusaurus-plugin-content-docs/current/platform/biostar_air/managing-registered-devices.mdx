@@ -1,10 +1,10 @@
 ---
 id: managing-registered-devices
-title: Administrar dispositivos registrados
+title: Administrar Dispositivos Edge Registrados
 description: En el portal de BioStar Air, compruebe el estado de conexión de los dispositivos, modifique la configuración biométrica y de tarjetas y actualice el firmware. Administre el sistema de seguridad de forma eficiente mediante operaciones individuales o masivas.
 keywords:
   - Gestión Dispositivos
-  - Configuración del Dispositivo
+  - Configuración del dispositivo
   - BioStar Air
   - Biométrico
   - Configuración de tarjeta
@@ -58,6 +58,8 @@ Cada columna de la lista de dispositivos contiene la siguiente información.
 
 <Image src='/img/air/bsair-device-mng-list-info.png' />
 
+* <Cmd sid="rs485_type" product="air" />: Disponible en dispositivos que admiten comunicación RS-485. Verifique si el dispositivo es primario o secundario. Los dispositivos que no estén configurados como primario o secundario aparecen como <Cmd sid='device_type_default' product='air' />.
+
 * <Cmd sid="device_product_column" product="air" />: El nombre y el modelo del dispositivo obtenidos de la base de datos de Suprema.
 
 * <Cmd sid="device_nickname_column" product="air" />: Un campo editable por el usuario para facilitar su identificación. Edítelo en la ventana <Cmd sid="device_edit_title" product="air" /> que aparece al hacer clic en el dispositivo en la lista.
@@ -106,7 +108,7 @@ Usa los controles en la parte superior de la lista de dispositivos para administ
 
 <Image src='/img/air/bsair-device-mng-list-tools.png' />
 
-* <IcAirRef width='24px' height='24px' title='Refresh' />: Actualiza la lista de dispositivos y su estado.
+* <IcAirRef width='24px' height='24px' title='Refresh' />: Actualizar la lista de dispositivos.
 
 * <IcAirRemove width='24px' height='24px' title='Delete' />: Elimina los dispositivos registrados en el sitio.
 
@@ -138,9 +140,9 @@ En la lista de dispositivos, selecciona dispositivos individuales para añadirlo
 
 1. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
 
-2. Marca la casilla del dispositivo que deseas agregar o quitar de un grupo.
+2. En la lista de dispositivos, haga clic en la casilla del dispositivo para agregarlo o quitarlo de un grupo.
 
-3. Haz clic en <IcAirGroup width='24px' height='24px' title='Manage Groups' /> en la parte superior de la lista de grupos de dispositivos.
+3. Haga clic en <IcAirGroup width='24px' height='24px' title='Manage Groups' /> en la parte superior de la lista de dispositivos.
 
 4. Cuando aparezca la ventana <Cmd sid="manage_device_group_title" product="air" />, agrega o elimina los dispositivos seleccionados del grupo.
 

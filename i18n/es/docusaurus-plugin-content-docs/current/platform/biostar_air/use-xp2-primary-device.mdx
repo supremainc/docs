@@ -1,0 +1,64 @@
+---
+id: use-xp2-primary-device
+title: Usar Edge Readers como Dispositivos Primarios
+description: Este documento explica cómo configurar XPass 2 como dispositivo primario y conectar XPass D2 como dispositivo secundario.
+keywords:
+  - XPass 2
+  - XPass D2
+---
+
+Configure XPass 2 como dispositivo primario para conectar XPass D2 como dispositivo secundario. Gestione toda la lógica de control de acceso en XPass 2. Configure una puerta con dispositivos de entrada y salida sin requerir dos conexiones de red.
+
+Este documento ofrece instrucciones paso a paso para configurar XPass 2 como dispositivo primario y conectar XPass D2 como dispositivo secundario. También explica las características compatibles y las limitaciones de la configuración primario-secundario.
+
+## Antes de comenzar
+
+Actualice el firmware a la versión 2.12 o posterior antes de configurar XPass 2 como dispositivo primario. Para obtener más información sobre las actualizaciones de firmware, consulte <DocLink docId='platform/biostar_air/how-to-upgrade-firmware' />.
+
+## Configurar XPass 2 como dispositivo primario
+
+1. Haz clic en <Cmd sid="device_menu" product="air" /> → <Cmd sid="device_submenu" product="air" /> en la barra lateral izquierda.
+
+2. En la lista de dispositivos, haz clic en XPass 2.
+
+3. Cuando aparezca la ventana <Cmd sid='device_edit_title' product='air' />, ve a la sección <Cmd sid='new_layout_nav_title_network' product='air' />.
+
+4. Cambia el ajuste <Cmd sid='device_xpass2_rs485' product='air' /> a <Cmd sid='device_xpass2_rs485_master' product='air' />.
+
+   <Image src='/img/air/bsair-device-xpass2-rs485-set-master.png' />
+
+5. Haz clic en <Cmd sid="save_btn" product="air" /> en la parte inferior para guardar los cambios.
+
+## Agregar un dispositivo secundario
+
+Agregue un dispositivo secundario como XPass D2 o Secure Module (SIO2). 
+
+1. En la lista de dispositivos, haga clic en <IcAirMore title='Más' /> en el extremo derecho del XPass 2 configurado como dispositivo primario.
+
+   <Image src='/img/air/bsair-device-xpass2-add-slave.png' />
+
+2. Haga clic en <Cmd sid='add_slave_devices' product='air' /> para abrir la ventana <Cmd sid='add_slave_devices' product='air' />.
+
+   <Image src='/img/air/bsair-device-xpass2-add-slave-find.png' />
+
+   :::note
+
+   Si no se encuentran dispositivos secundarios, haga clic en <Cmd sid='find_devices' product='air' /> para buscar nuevamente dispositivos conectados a XPass 2.
+
+   :::
+
+3. Cuando los dispositivos secundarios conectados aparezcan en la lista, marque la casilla junto a cada dispositivo que agregará.
+
+4. Una vez completadas las selecciones, haga clic en <Cmd sid='add_btn' product='air' />.
+
+Los dispositivos secundarios conectados aparecen de forma jerárquica debajo de XPass 2. Vea todos los dispositivos conectados a XPass 2 de un vistazo en la lista del panel.
+
+:::info
+
+* Para obtener más información sobre XPass D2, consulte la [guía de instalación de XPass D2](../../device/xpass_d2).
+
+* Un XPass 2 configurado como dispositivo primario puede tener hasta 31 dispositivos secundarios asignados.
+
+* Para más información sobre el Secure Module (SIO2), consulta la [guía de instalación del Secure Module](../../device/securemodule).
+
+:::
