@@ -426,7 +426,7 @@
     "message": "Proporciona guías paso a paso orientadas al usuario para aprovechar al máximo los dispositivos y el software de Suprema. Sigue las instrucciones y ejemplos fácilmente."
   },
   "index.productTitle.biometricsDevice": {
-    "message": "Dispositivos biométricos"
+    "message": "Dispositivos Biométricos"
   },
   "index.productTitle.rfMobileDevices": {
     "message": "Dispositivos RF/Móviles"
@@ -437,11 +437,11 @@
   "index.productTitle.peripheral": {
     "message": "Periféricos"
   },
-  "index.productTitle.developers": {
-    "message": "Desarrolladores"
-  },
   "index.productTitle.apps": {
     "message": "Aplicaciones"
+  },
+  "index.productTitle.developers": {
+    "message": "Desarrolladores"
   },
   "index.heroBanner.shortcut.biostarx": {
     "message": "Explorar BioStar X →"

@@ -912,8 +912,7 @@
     "description": "The ARIA label and placeholder for search button"
   },
   "theme.SearchBar.product.label": {
-    "message": "製品",
-    "description": "The ARIA label and placeholder for product search button"
+    "message": "製品"
   },
   "theme.SearchModal.searchBox.resetButtonTitle": {
     "message": "検索語をリセット",
@@ -1212,7 +1211,7 @@
     "message": "インテリジェント QR RFID リーダー"
   },
   "externalLinks.dev.sdk.desc": {
-    "message": "指紋認証デバイスのコア機能をサードパーティ製ソフトウェアと完全に統合"
+    "message": "指紋認証デバイスの主要機能をサードパーティ製ソフトウェアと完全統合してサポート"
   },
   "externalLinks.dev.xapi.desc": {
     "message": "BioStar XのすべてのAPIを一目で確認できるAPIドキュメント"
@@ -1233,12 +1232,10 @@
     "message": "BioStar Air のモバイル認証情報"
   },
   "searchBox.refinementList.clearAll": {
-    "message": "すべてクリア",
-    "description": "The label for the button to clear all refinements in the search box"
+    "message": "選択を解除"
   },
   "searchBox.recentList.clearButton": {
-    "message": "最近の検索をクリア",
-    "description": "The label for the button to clear recent searches in the search box"
+    "message": "最近の検索をクリア"
   },
   "theme.docCardList.prefix.latest": {
     "message": "最新"
