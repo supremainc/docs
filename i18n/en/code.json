@@ -402,7 +402,7 @@
     "message": "One Platform. Total Confidence."
   },
   "index.biostarx.description": {
-    "message": "BioStar X is Suprema’s unified security platform, featuring best-in-class biometric access, integrated monitoring, and a resilient backbone built for scale, uptime, and compliance."
+    "message": "BioStar X is Suprema's unified security platform, featuring best-in-class biometric access, integrated monitoring, and a resilient backbone built for scale, uptime, and compliance."
   },
   "index.biostarair.subtitle": {
     "message": "Zero on-prem. BioStar Air"
@@ -912,8 +912,7 @@
     "description": "The ARIA label and placeholder for search button"
   },
   "theme.SearchBar.product.label": {
-    "message": "Products",
-    "description": "The ARIA label and placeholder for product search button"
+    "message": "Products"
   },
   "theme.SearchModal.searchBox.resetButtonTitle": {
     "message": "Clear the query",
@@ -1233,12 +1232,10 @@
     "message": "BioStar Air mobile credentials"
   },
   "searchBox.refinementList.clearAll": {
-    "message": "Clear all",
-    "description": "The label for the button to clear all refinements in the search box"
+    "message": "Clear all"
   },
   "searchBox.recentList.clearButton": {
-    "message": "Clear recent searches",
-    "description": "The label for the button to clear recent searches in the search box"
+    "message": "Clear recent searches"
   },
   "theme.docCardList.prefix.latest": {
     "message": "Latest"
