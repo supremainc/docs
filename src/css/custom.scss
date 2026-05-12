@@ -1514,11 +1514,14 @@ body[data-rh] .redocusaurus {
       font-weight: 600;
     }
   }
-  sup#dupl {
+  sup#dupl, sup#dupl_one {
     counter-increment: none;
   }
   sup a::before {
     content: counter(sup-count)  ")";
+  }
+  sup#dupl_one a::before {
+    content: "1)";
   }
 
   .svg-none-style {

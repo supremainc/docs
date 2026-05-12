@@ -232,6 +232,7 @@
           "label": "RS-485",
           "label_id": "specs.interface.rs485",
           "annotation_label": "anno1",
+          "annotation_dupl": true,
           "value": {
             "ko": "1채널",
             "en": "1 ch",
@@ -273,6 +274,7 @@
           "label": "오디오",
           "label_id": "specs.interface.audio",
           "annotation_label": "anno1",
+          "annotation_dupl": true,
           "value": {
             "ko": ["1채널 입력 (LINE IN, 지원 전압: 2.5 VDC)", "1채널 출력 (LINE OUT, 최대 출력: 1 Vrms)"],
             "en": ["1-channel input (LINE IN, Supported voltage: 2.5 VDC)", "1-channel output (LINE OUT, Maximum output: 1 Vrms)"],
@@ -310,6 +312,7 @@
           "label": "USB",
           "label_id": "specs.interface.usb",
           "annotation_label": "anno1",
+          "annotation_dupl": true,
           "value": {
             "ko": "USB Type-A",
             "en": "USB Type-A",
@@ -326,6 +329,7 @@
           "label": "Micro SD 카드 슬롯",
           "label_id": "specs.interface.micro_sd",
           "annotation_label": "anno1",
+          "annotation_dupl": true,
           "value": true
         }
       }
