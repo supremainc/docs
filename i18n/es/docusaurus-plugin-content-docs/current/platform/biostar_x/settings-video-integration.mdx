@@ -11,7 +11,7 @@ keywords:
 
 El **Sistema de Gestión de Video** (VMS) es un sistema de gestión de video que integra y administra video de múltiples cámaras, lo que permite la grabación y la reproducción. La integración de BioStar X con VMS permite gestionar el control de acceso y la seguridad de video en una sola plataforma.
 
-La integración con VMS ofrece los siguientes beneficios.
+La integración con VMS ofrece las siguientes funciones.
 
 * **Monitoreo en tiempo real**: Visualiza video en tiempo real de las cámaras conectadas a las puertas.
 
@@ -21,23 +21,23 @@ La integración con VMS ofrece los siguientes beneficios.
 
 * **Función de marcadores**: Agrega etiquetas de video a momentos de eventos importantes para facilitar su búsqueda y revisión.
 
-## Antes de Comenzar
+## Antes de comenzar
 
 Antes de integrar el **Sistema de Gestión de Video** (VMS), verifica lo siguiente.
 
-* La función de integración de VMS está disponible como opción adicional para licencias superiores a **Avanzado**. Para más información sobre la política de licencias, consulta [lo siguiente](licensing#features-add-ons).
+* La función de integración de VMS está disponible como opción adicional para licencias superiores a **Avanzado**. Para obtener más información sobre las políticas de licencia, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' />.
 
 * Asegúrate de que el servidor VMS esté instalado y configurado correctamente. El servidor VMS debe estar en un estado que permita la conexión en línea con **BioStar X**.
 
 <Include lang='ko'>
 
-* Utiliza un VMS compatible con **BioStar X**. Utiliza [BioStar X VMS](https://www.supremainc.com/ko/platform/video-ac-integrated-system-biostar-x-vms.asp) o la serie **Nx Witness v5.1.5** de VMS.
+* Utiliza un VMS compatible con **BioStar X**. Puede usar [BioStar X VMS](https://www.supremainc.com/ko/platform/video-ac-integrated-system-biostar-x-vms.asp) o las series de VMS **Nx Witness v5.1.5** y **v6.x.x**.
 
 </Include>
 
 <Xclude lang='ko'>
 
-* Utiliza un VMS compatible con **BioStar X**. Utiliza la serie **Nx Witness v5.1.5** de VMS.
+* Utiliza un VMS compatible con **BioStar X**. Puede usar el VMS **Nx Witness v5.1.5** o **v6.x.x**.
 
 </Xclude>
 
@@ -66,7 +66,7 @@ Para reproducir video grabado desde el servidor VMS, se debe usar el protocolo H
 
    :::note
 
-   Si el VMS está instalado en un servidor diferente de **BioStar X**, copia el archivo *scaleUtil-1.0-all.jar* al servidor VMS y sigue los pasos siguientes.
+   Si el VMS está instalado en un servidor distinto de **BioStar X**, copia el archivo *scaleUtil-1.0-all.jar* al servidor VMS y sigue los pasos que aparecen a continuación.
 
    :::
 
@@ -97,7 +97,7 @@ Para reproducir video grabado desde el servidor VMS, se debe usar el protocolo H
 
 :::info
 
-La ruta de instalación del certificado puede variar según el VMS. Consulta los siguientes ejemplos.
+La ruta de instalación del certificado puede variar según el sistema VMS. Consulte los ejemplos a continuación.
 
 * **BioStar 2 VMS**: *C:\Windows\System32\config\systemprofile\AppData\Local\Suprema Inc\Suprema Inc. Media Server\ssl*
 
@@ -142,7 +142,7 @@ La ruta de instalación del certificado puede variar según el VMS. Consulta los
 
 * Si la integración con el servidor VMS falla y aparece un mensaje de error, verifica nuevamente la dirección del servidor y la información de la cuenta de administrador. También es necesario comprobar si el servidor VMS está en línea y si las conexiones de red están bloqueadas por la configuración del firewall.
 
-* Para obtener más información sobre la configuración en la sección <Cmd sid='video.setting.tag.title' product='2' />, consulta [lo siguiente](#vms-event-bookmark).
+* Para obtener más información sobre la configuración en la sección <Cmd sid='video.setting.tag.title' product='2' />, consulte <DocLink inner='#vms-event-bookmark' />.
 
 :::
 
@@ -172,7 +172,7 @@ La primera vez que integres con el servidor VMS, **BioStar X** reiniciará autom
 
 ### Comprobar y configurar cámaras
 
-Si el servidor VMS se integra correctamente, verifica las cámaras conectadas en el menú <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' />. Para más información, consulta [lo siguiente](settings-videos-camera).
+Si el servidor VMS se integra correctamente, verifica las cámaras conectadas en el menú <Cmd sid='setting.menu.video.root' /> → <Cmd sid='setting.menu.video.video' />. Para obtener más información, consulte <DocLink docId='platform/biostar_x/settings-videos-camera' />.
 
 </Step>
 </Steps>
@@ -191,9 +191,9 @@ Si se presentan las siguientes situaciones, instala el certificado desde el serv
 
 2. Descargue el instalador del certificado HTTPS (*cert-register.zip*) desde la pantalla de inicio de sesión o desde <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid="setting.https.https" product='2' />.
 
-2. Descomprima el archivo descargado y ejecute el archivo **cert-register.exe**. Aparecerá la ventana **Enrollment Certification**.
+3. Descomprima el archivo descargado y ejecute el archivo **cert-register.exe**. Aparecerá la ventana **Enrollment Certification**.
 
-3. Seleccione **VMS** en **Target System** e ingrese la siguiente información.
+4. Seleccione **VMS** en **Target System** e ingrese la siguiente información.
 
    <Image src='/img/common/biostarx-settings-server-enrollment-vms-certification.png' alone />
 
@@ -201,9 +201,9 @@ Si se presentan las siguientes situaciones, instala el certificado desde el serv
 
    * **Port**: número de puerto del servidor VMS
 
-4. Haga clic en el botón **Enrollment**.
+5. Haga clic en el botón **Enrollment**.
 
-5. Verifique el mensaje de advertencia de seguridad y haga clic en **Yes**.
+6. Verifique el mensaje de advertencia de seguridad y haga clic en **Yes**.
 
 Reinicie el navegador web y verifique que el video grabado del servidor VMS se reproduzca normalmente en la página <Cmd sid='shell.header.arena' />.
 
