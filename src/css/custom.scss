@@ -1318,7 +1318,7 @@ body[data-rh] .redocusaurus {
     counter-increment: none;
   }
   sup a::before {
-    content: counter(sup-count)  ")";
+    content: counter(count)  ")";
   }
   sup#dupl_one a::before {
     content: "1)";
