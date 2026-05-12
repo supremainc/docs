@@ -511,6 +511,14 @@
     "width": 1920,
     "height": 685
   },
+  "/docs/img/air/bsair-device-panel-remove-secondary.png": {
+    "width": 1920,
+    "height": 686
+  },
+  "/docs/img/air/bsair-device-panel-remove.png": {
+    "width": 1920,
+    "height": 570
+  },
   "/docs/img/air/bsair-device-two-fator-auth.png": {
     "width": 499,
     "height": 479
@@ -560,8 +568,8 @@
     "height": 235
   },
   "/docs/img/air/bsair-door-mng-register-device-as-door.png": {
-    "width": 1061,
-    "height": 753
+    "width": 854,
+    "height": 757
   },
   "/docs/img/air/bsair-door-mng-registered-door-add.png": {
     "width": 1920,
@@ -1363,6 +1371,10 @@
     "width": 1920,
     "height": 1080
   },
+  "/docs/img/air/bsair-user-batch-send-enroll-link.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/docs/img/air/bsair-user-details-edit-info.png": {
     "width": 1920,
     "height": 1080
@@ -1372,6 +1384,10 @@
     "height": 1080
   },
   "/docs/img/air/bsair-user-details-remove.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/docs/img/air/bsair-user-details-send-enroll-link.png": {
     "width": 1920,
     "height": 1080
   },
@@ -4384,12 +4400,12 @@
     "height": 1080
   },
   "/docs/img/cam-server/password-setting1-vionyx.png": {
-    "width": 1920,
-    "height": 911
+    "width": 1652,
+    "height": 931
   },
   "/docs/img/cam-server/password-setting2-vionyx.png": {
     "width": 1920,
-    "height": 911
+    "height": 1080
   },
   "/docs/img/cam-server/vionyx-home-screen.png": {
     "width": 1920,
@@ -4423,17 +4439,9 @@
     "width": 1060,
     "height": 413
   },
-  "/docs/img/camera/component-camera-body-vionyx.png": {
-    "width": 2606,
-    "height": 1845
-  },
   "/docs/img/camera/component-connection-cables-vionyx.png": {
     "width": 2319,
     "height": 1453
-  },
-  "/docs/img/camera/component-cover-vionyx.png": {
-    "width": 2694,
-    "height": 1901
   },
   "/docs/img/camera/component-diode1-vionyx.png": {
     "width": 1060,
@@ -4443,22 +4451,6 @@
     "width": 1060,
     "height": 812
   },
-  "/docs/img/camera/component-t10-torx-driver-vionyx.png": {
-    "width": 906,
-    "height": 4456
-  },
-  "/docs/img/camera/component-wall-bracket-vionyx.png": {
-    "width": 2269,
-    "height": 2294
-  },
-  "/docs/img/camera/component-waterproof-grommet-ethernet-cable-vionyx.png": {
-    "width": 1400,
-    "height": 1052
-  },
-  "/docs/img/camera/component-waterproof-rubber-hole-plug-vionyx.png": {
-    "width": 1060,
-    "height": 952
-  },
   "/docs/img/camera/installation-audio-connection-vionyx.png": {
     "width": 800,
     "height": 352
@@ -4466,14 +4458,6 @@
   "/docs/img/camera/installation-usb-sdcard-connection-vionyx.png": {
     "width": 430,
     "height": 360
-  },
-  "/docs/img/camera/installation3-vionyx.png": {
-    "width": 852,
-    "height": 520
-  },
-  "/docs/img/camera/installation9-vionyx.png": {
-    "width": 1398,
-    "height": 853
   },
   "/docs/img/camera/password-setting1-vionyx.png": {
     "width": 1920,
@@ -4486,6 +4470,10 @@
   "/docs/img/camera/product-vionyx.png": {
     "width": 2696,
     "height": 1992
+  },
+  "/docs/img/camera/vionyx-main.png": {
+    "width": 1000,
+    "height": 452
   },
   "/docs/img/camera/web-server-settings1.png": {
     "width": 1202,
@@ -4766,6 +4754,10 @@
   "/docs/img/common/biostarx-tutoria-service-manager-services-stop.png": {
     "width": 1200,
     "height": 495
+  },
+  "/docs/img/common/bsair-cloud-architecture.webp": {
+    "width": 1439,
+    "height": 710
   },
   "/docs/img/common/bsx-main_2n.jpg": {
     "width": 1200,
@@ -5303,7 +5295,7 @@
     "width": 320,
     "height": 240
   },
-  "/docs/img/device/bs2a-Administrator-two-step-auth.png": {
+  "/docs/img/device/bs2a-administrator-two-step-auth.png": {
     "width": 320,
     "height": 240
   },
@@ -6916,8 +6908,8 @@
     "height": 385
   },
   "/docs/img/device/installation-wall2-bs3m.png": {
-    "width": 462,
-    "height": 372
+    "width": 380,
+    "height": 337
   },
   "/docs/img/device/installation-wall2-fs2.png": {
     "width": 481,
@@ -7819,6 +7811,10 @@
     "width": 700,
     "height": 414
   },
+  "/docs/img/en/air/bsair-device-panel-legacy-device-edit.png": {
+    "width": 1920,
+    "height": 534
+  },
   "/docs/img/en/air/bsair-device-panel-list-cs-20-add-osdp-device-popup.png": {
     "width": 1920,
     "height": 1080
@@ -7866,6 +7862,14 @@
   "/docs/img/en/air/bsair-device-panel-management-tool.png": {
     "width": 1920,
     "height": 685
+  },
+  "/docs/img/en/air/bsair-device-panel-remove-secondary.png": {
+    "width": 1920,
+    "height": 686
+  },
+  "/docs/img/en/air/bsair-device-panel-remove.png": {
+    "width": 1920,
+    "height": 570
   },
   "/docs/img/en/air/bsair-device-two-fator-auth.png": {
     "width": 499,
@@ -7916,8 +7920,8 @@
     "height": 229
   },
   "/docs/img/en/air/bsair-door-mng-register-device-as-door.png": {
-    "width": 1061,
-    "height": 755
+    "width": 851,
+    "height": 817
   },
   "/docs/img/en/air/bsair-door-mng-registered-door-add.png": {
     "width": 1920,
@@ -8723,6 +8727,10 @@
     "width": 1920,
     "height": 1080
   },
+  "/docs/img/en/air/bsair-user-batch-send-enroll-link.png": {
+    "width": 1920,
+    "height": 1080
+  },
   "/docs/img/en/air/bsair-user-details-edit-info.png": {
     "width": 1920,
     "height": 1080
@@ -8732,6 +8740,10 @@
     "height": 1080
   },
   "/docs/img/en/air/bsair-user-details-remove.png": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/docs/img/en/air/bsair-user-details-send-enroll-link.png": {
     "width": 1920,
     "height": 1080
   },
@@ -11608,12 +11620,12 @@
     "height": 1080
   },
   "/docs/img/en/cam-server/password-setting1-vionyx.png": {
-    "width": 1912,
-    "height": 948
+    "width": 1669,
+    "height": 949
   },
   "/docs/img/en/cam-server/password-setting2-vionyx.png": {
-    "width": 1912,
-    "height": 948
+    "width": 1920,
+    "height": 1080
   },
   "/docs/img/en/cam-server/vionyx-home-screen.png": {
     "width": 1920,
@@ -13084,8 +13096,8 @@
     "height": 409
   },
   "/docs/img/en/device/installation-wall2-bs3m.png": {
-    "width": 526,
-    "height": 380
+    "width": 380,
+    "height": 337
   },
   "/docs/img/en/device/installation-wall2-fs2.png": {
     "width": 402,
@@ -15762,6 +15774,10 @@
   "/docs/img/products/sio2.png": {
     "width": 384,
     "height": 384
+  },
+  "/docs/img/products/vionyx.png": {
+    "width": 370,
+    "height": 270
   },
   "/docs/img/products/xpass-2.png": {
     "width": 384,
