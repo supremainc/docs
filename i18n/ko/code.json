@@ -662,6 +662,9 @@
   "specs.interface.tamper": {
     "message": "탬퍼"
   },
+  "specs.interface.micro_sd": {
+    "message": "Micro SD 카드 슬롯"
+  },
   "specs.interface.samSlot": {
     "message": "SAM 카드 슬롯"
   },
