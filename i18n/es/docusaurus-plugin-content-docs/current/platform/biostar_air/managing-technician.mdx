@@ -1,0 +1,137 @@
+---
+id: managing-technician
+title: Administrar cuentas de técnicos.
+description: Esta guía explica cómo administrar cuentas de técnicos.
+keywords:
+  - Técnico
+---
+
+Un técnico es un profesional al que se le otorga acceso a un sitio del cliente. Para administrar cuentas de técnicos, invita a técnicos en el Partner Portal, asígnalos a sitios y establece sus niveles de permiso. 
+
+En el portal BioStar Air, modifica los permisos de acceso de un técnico invitado o bloquea/desbloquea su acceso al sitio. También puedes eliminar la cuenta de un técnico por completo para revocar su acceso al sitio.
+
+:::info
+
+* Para más información sobre cómo invitar técnicos en el Partner Portal y asignarlos a sitios, consulta <DocLink docId='platform/biostar_air/technician-overview' />.
+
+* Las actividades de los técnicos invitados se registran por cuenta y se pueden ver en <Cmd sid='monitoring_menu' product='air' /> → <Cmd sid='event_logs_submenu' product='air' /> / <Cmd sid='audit_logs_submenu' product='air' />.
+
+:::
+
+## Antes de comenzar
+
+Antes de administrar cuentas de técnicos, asegúrate de permitir que las cuentas de técnicos accedan al sitio en la configuración de seguridad del sitio. Si no lo permites, no podrás administrarlas.
+
+1. Haz clic en <Cmd sid="settings_menu" product="air" /> → <Cmd sid="site_submenu" product="air" /> en la barra lateral izquierda.
+
+2. Haga clic en la pestaña <Cmd sid='site_setting_tab_security' product='air' />.
+
+3. Habilite la opción <Cmd sid='site_security_input7' product='air' />.
+
+<Image src='/img/air/bsair-settings-security-allow-technician.png' />
+
+Habilitar la opción <Cmd sid='site_security_input7' product='air' /> cambia el menú <Cmd sid='settings_menu' product='air' /> → <Cmd sid='admin_text' product='air' /> al menú <Cmd sid='title_techincians_settings' product='air' />. Las pestañas <Cmd sid='admin_text' product='air' /> y <Cmd sid='technicians_text' product='air' /> permiten administrar las cuentas de administrador y de técnico por separado.
+
+<Image src='/img/air/bsair-settings-admin-technician-changes.png' />
+
+## Cambiar permisos de técnicos
+
+Sigue las instrucciones a continuación para cambiar los permisos de acceso de los técnicos invitados al sitio.
+
+1. Haga clic en <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> en la barra lateral izquierda.
+
+2. Haga clic en la pestaña <Cmd sid='technicians_text' product='air' />.
+
+3. En la lista de técnicos, haz clic en la columna <Cmd sid='technicians_permissions' product='air' /> del técnico cuyos permisos de acceso quieres cambiar.
+
+   <Image src='/img/air/bsair-settings-admin-technician-permission.png' />
+
+4. Selecciona el nivel de permiso deseado en el menú desplegable de acceso.
+
+   <Image src='/img/air/bsair-settings-admin-technician-permission-select.png' />
+
+   * <Cmd sid='inviteTechnicianModal.dropdown_opt1' product='pn' />: No puede iniciar sesión en el sitio.
+
+   * <Cmd sid='techincians_list_permissions_devices_only' product='air' />: Proporciona acceso solo a los menús <Cmd sid='dashboard_menu' product='air' /> y <Cmd sid='device_menu' product='air' />.
+
+   * <Cmd sid='techincians_list_permissions_full_excluding_users' product='air' />: Proporciona acceso a todos los menús excepto <Cmd sid='user_menu' product='air' />, pero el acceso a ciertas funciones de configuración está restringido.
+
+   * <Cmd sid='techincians_list_permissions_full_including_users' product='air' />: Proporciona acceso a todos los menús, incluido <Cmd sid='user_menu' product='air' />, pero el acceso a ciertas funciones de configuración está restringido.
+
+5. Haz clic en <Cmd sid='btn_yes' product='air' /> cuando aparezca la ventana de confirmación.
+
+Los permisos de acceso del técnico se actualizan y aparece un mensaje de éxito en la parte superior de la pantalla.
+
+:::info
+
+<Cmd sid='techincians_list_permissions_full_excluding_users' product='air' /> y <Cmd sid='techincians_list_permissions_full_including_users' product='air' /> tienen permiso de visualización pero no de edición para las siguientes rutas de menú.
+
+* <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' />
+
+* <Cmd sid='settings_menu' product='air' /> → <Cmd sid='site_submenu' product='air' />
+
+:::
+
+## Bloquear o desbloquear cuentas de técnicos
+
+Si ya no se necesita el soporte de un técnico o se debe restringir el acceso al sitio por razones de seguridad, bloquea la cuenta del técnico para impedir su acceso al sitio. Si necesitas el soporte del técnico de nuevo, desbloquea la cuenta para permitir su acceso al sitio.
+
+Si bloqueas la cuenta de un técnico invitado, no podrá iniciar sesión en el sitio.
+
+### Bloquear o desbloquear la cuenta de un técnico individual
+
+1. Haga clic en <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> en la barra lateral izquierda.
+
+2. Haga clic en la pestaña <Cmd sid='technicians_text' product='air' />.
+
+3. En la lista de técnicos, haz clic en el interruptor de la columna <Cmd sid='column_admin_account_status' product='air' /> del técnico cuya cuenta quieras bloquear o desbloquear.
+
+   <Image src='/img/air/bsair-settings-admin-technician-lock-unlock.png' />
+
+4. Cuando aparezca un cuadro emergente, revisa el mensaje y haz clic en <Cmd sid='btn_yes' product='air' />.
+
+### Bloquear o desbloquear varias cuentas de técnicos
+
+1. Haga clic en <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> en la barra lateral izquierda.
+
+2. Haga clic en la pestaña <Cmd sid='technicians_text' product='air' />.
+
+3. En la lista de técnicos, marca las casillas junto a los técnicos cuyas cuentas quieras bloquear o desbloquear. Selecciona 1 o más técnicos.
+
+4. Haz clic en <IcAirPlock title='Lock Account' /> o <IcAirPunlock title='Unlock Account' /> en la parte superior de la lista de técnicos.
+
+   <Image src='/img/air/bsair-settings-admin-technician-lock-unlock-batch.png' />
+
+5. Cuando aparezca un cuadro emergente, revisa el mensaje y haz clic en <Cmd sid='btn_yes' product='air' />.
+
+Las cuentas de los técnicos seleccionados se bloquean o desbloquean y aparece un mensaje de éxito en la parte superior de la pantalla.
+
+:::info
+
+Si los técnicos seleccionados tienen estados de bloqueo mixtos, una acción masiva bloqueará o desbloqueará todas las cuentas.
+
+:::
+
+## Eliminar una cuenta de técnico
+
+Eliminar la cuenta de un técnico invitado elimina por completo su acceso al sitio.
+
+1. Haga clic en <Cmd sid='settings_menu' product='air' /> → <Cmd sid='title_techincians_settings' product='air' /> en la barra lateral izquierda.
+
+2. Haga clic en la pestaña <Cmd sid='technicians_text' product='air' />.
+
+3. En la lista de técnicos, marca la casilla junto al técnico cuya cuenta quieras eliminar. Selecciona 1 o más técnicos.
+
+4. Haz clic en <IcAirRemove title='Delete' /> en la parte superior de la lista de técnicos.
+
+   <Image src='/img/air/bsair-settings-admin-technician-delete.png' />
+
+5. Cuando aparezca un cuadro emergente, revisa el mensaje y haz clic en <Cmd sid='btn_yes' product='air' />.
+
+Después de eliminar las cuentas de los técnicos seleccionados, aparece un mensaje de éxito en la parte superior de la pantalla y esos técnicos ya no aparecen en la lista de técnicos.
+
+:::info
+
+Una cuenta de técnico eliminada no se puede recuperar. Los técnicos que hayan sido removidos de un sitio pueden reasignarse a ese sitio a través del Partner Portal. Para más información sobre cómo asignar un técnico a un sitio en el Partner Portal, consulta <DocLink docId='platform/biostar_air/assign-technician' />.
+
+:::
