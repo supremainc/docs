@@ -35,7 +35,8 @@ crowdin upload -b main
 - details
 - summary
 - /value
-- 주석 {/**/}
+- 주석 {/*, */}
+- ![Example banner]
 
 
 영어에 남아있는 한글 정규식 검색
