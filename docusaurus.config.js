@@ -467,7 +467,7 @@ const config = {
               },
               {
                 type: 'doc',
-                label: 'C•CURE',
+                label: 'Software House',
                 docId: 'integration/ccure/index'
               }
             ]
