@@ -2355,7 +2355,7 @@ function createSidebars(preview) {
   ccure: [
     {
       type: 'category',
-      label: 'C•CURE',
+      label: 'C•CURE 9000',
       collapsed: false,
       collapsible: false,
       className: 'p-title',
@@ -2367,7 +2367,7 @@ function createSidebars(preview) {
         'integration/ccure/getting-started',
         'integration/ccure/installation',
         'integration/ccure/enrolling-biometrics',
-        'integration/ccure/troubleshooting',
+      //   'integration/ccure/troubleshooting',
         'integration/ccure/appendices'
       ]
     }
