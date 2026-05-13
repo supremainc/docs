@@ -13,8 +13,8 @@ keywords: [ Installation, Suprema Plugin, Genetec Config Tool ]
 | :-- | :-- | :-- | :-- | :-- |
 | Environment | Total Devices | 50 | 150 | 1000 |
 | System requirement | OS | \> | \> | Microsoft Windows 10 or later (64-bit) |
-| ^ | CPU | 2 GHz dual-core | 4 GHz quad-core | 4 GHz, 16-core |
-| ^ | RAM | 8 GB | 16 GB | 64 GB |
+| ^ | CPU | CPU 8 Core / RAM 64GB or higher | CPU 16 Core / RAM 128GB or higher | Enterprise-level deployment requires prior consultation |
+| ^ | RAM | 64 GB | 128 GB | ^ |
 | ^ | Communication | \> | \> | Supports the Standard Transmission Control Protocol (TCP/IP) networking communication protocol between servers, clients, and devices. |
 | ^ | ^ | \> | \> | Supports Dynamic Host Configuration Protocol (DHCP) or Static IP address. |
 | ^ | ^ | \> | \> | Supports network configuration. |
@@ -24,6 +24,65 @@ keywords: [ Installation, Suprema Plugin, Genetec Config Tool ]
 | ^ | ^ | \> | \> | Supports AES-256 for Fingerprint Template and Face Template (Optional). |
 
 </div>
+
+## Prerequisites
+
+### Server Specification
+
+<div className='overflow-x cols3--20-20-60'>
+
+| Business Size | No. of Suprema Devices | Server Specification |
+| -- | -- | -- |
+| Small | 1\~50 devices | CPU 8 Core / RAM 64GB or higher |
+| Medium | 50\~150 devices | CPU 16 Core / RAM 128GB or higher |
+| Enterprise | Over 150 devices | Enterprise-level deployment requires prior consultation. |
+
+</div>
+
+### Synergis cloud link
+
+1. Enabling RIO Protocol.
+
+   > `https://[IP Address of Cloud link]/Features/DuiRIO/Enabled/Set?value=true`
+
+1. Recommended and Max. Device connection.
+
+   <div className='overflow-x table-fixed'>
+
+   | No. of Users | Recommended Devices per one Cloud link | Max. Possible devices |
+   | -- | -- | -- |
+   | 20,000 + | Up to 40 | Not recommended |
+   | Below 10,000 | Up to 50 | Up to 64 |
+
+   </div>
+
+   :::caution
+
+   * Dedicated Cloud Links for Suprema devices are required.
+
+   * Connecting devices other than Suprema products to the Cloud Link is not recommended.
+
+   :::
+
+### Database
+
+* Plugin Database (Device & Extractor) is automatically created in same SQL server of Directory.
+
+   * Admin can modify the database installation location.
+
+   * Supports backup/restore.
+
+* SQL account needs below authority.
+
+   * Server roles: db_creator, processadmin, public
+
+   * Database roles: db_backupoperator, db_datareader, db_datawriter, public
+
+## Fingerprint enrollment device
+
+To use a USB-type fingerprint enrollment device, a separate driver installation is required.
+
+Please contact the Suprema Partner Business Team for assistance.
 
 ## Plugin Installation
 
@@ -51,15 +110,7 @@ keywords: [ Installation, Suprema Plugin, Genetec Config Tool ]
 
    <Image src='/img/integration/genetec/plugin-installation-cmd.png' alone />
 
-1. The Biomini Slim2 (Fingerprint Enrollment Device / USB type) driver installation will start. Click **Install**.
-
-   <Image src='/img/integration/genetec/plugin-installation5.png' alone />
-
-1. Click **Finish**.
-
-   <Image src='/img/integration/genetec/plugin-installation6.png' alone />
-
-1. Return to the Plugin installation windows and click **Close**.
+1. Click **Close** button.
 
    <Image src='/img/integration/genetec/plugin-installation7.png' alone />
 
