@@ -59,6 +59,9 @@
   "externalLinks.ViOnyx.desc": {
     "message": "AI 기반 지능형 영상 분석 카메라"
   },
+  "externalLinks.BioStation3Max.desc": {
+    "message": "AI 기반 얼굴/지문 멀티인증 단말기"
+  },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "탐색 경로",
     "description": "The ARIA label for the breadcrumbs"
