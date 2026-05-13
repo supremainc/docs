@@ -1459,6 +1459,7 @@ function createSidebars(preview) {
             id: 'device/facestation_f2/release-notes/index',
           },
           items: [
+            'device/facestation_f2/release-notes/222',
             'device/facestation_f2/release-notes/221',
             'device/facestation_f2/release-notes/220',
             'device/facestation_f2/release-notes/214',
