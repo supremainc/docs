@@ -151,7 +151,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
       img: require('@site/static/img/cover/biostation3max.png').default,
       desc: `${translate({
         id: "externalLinks.BioStation3Max.desc",
-        message: "###"
+        message: "AI 기반 얼굴/지문 멀티인증 단말기"
       })}`,
     } : null,
     {
