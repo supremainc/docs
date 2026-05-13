@@ -114,10 +114,10 @@
           "label": "인증",
           "label_id": "specs.general.certifications",
           "value": {
-            "ko": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE, CRS/BIS",
-            "en": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE, CRS/BIS",
-            "es": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE, CRS/BIS",
-            "ja": "CE、UKCA、KC、FCC、IC、RCM、VCCI、RoHS、REACH、WEEE、CRS/BIS"
+            "ko": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE",
+            "en": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE",
+            "es": "CE, UKCA, KC, FCC, IC, RCM, VCCI, RoHS, REACH, WEEE",
+            "ja": "CE、UKCA、KC、FCC、IC、RCM、VCCI、RoHS、REACH、WEEE"
           }
         }
       }
@@ -180,10 +180,10 @@
           "label": "IR LED",
           "label_id": "specs.camera.ir_led",
           "value": {
-            "ko": "8개 (IR 컷 필터 지원, 가시 거리 20 m)",
-            "en": "8 ea (IR Cut Filter supported, Range: 20 m)",
-            "es": "8 unidades (Filtro de corte IR admitido, Rango: 20 m)",
-            "ja": "8 個（IR カットフィルターサポート、照射距離：20 m）"
+            "ko": "10개 (IR 컷 필터 지원)",
+            "en": "10 ea (IR Cut Filter supported)",
+            "es": "10 unidades (Filtro de corte IR admitido)",
+            "ja": "10 個（IR カットフィルターサポート）"
           }
         }
       }
@@ -211,10 +211,10 @@
           "label": "오디오",
           "label_id": "specs.video_audio.audio",
           "value": {
-            "ko": ["스피커 (인식 거리 5 m)", "내장형 마이크 (인식 거리 5 m)<sup id='anno1_dest'><a href='#anno1'></a></sup>"],
-            "en": ["Speaker (Effective Range 5 m)", "Built-in Mic (Range 5 m)<sup id='anno1_dest'><a href='#anno1'></a></sup>"],
-            "es": ["Altavoz (Alcance efectivo 5 m)", "Micrófono incorporado (Alcance 5 m)<sup id='anno1_dest'><a href='#anno1'></a></sup>"],
-            "ja": ["スピーカー（有効距離 5 m）", "内蔵マイク（範囲 5 m）<sup id='anno1_dest'><a href='#anno1'></a></sup>"]
+            "ko": ["스피커", "내장형 마이크<sup id='anno1_dest'><a href='#anno1'></a></sup>"],
+            "en": ["Speaker", "Built-in Mic<sup id='anno1_dest'><a href='#anno1'></a></sup>"],
+            "es": ["Altavoz", "Micrófono incorporado<sup id='anno1_dest'><a href='#anno1'></a></sup>"],
+            "ja": ["スピーカー", "内蔵マイク<sup id='anno1_dest'><a href='#anno1'></a></sup>"]
           }
         }
       }
@@ -362,20 +362,20 @@
               "label": "PoE",
               "label_id": "specs.interface.poe",
               "value": {
-               "ko": ["최대 12 W", "12 VDC: 1.0 A (IR 미지원)"],
-               "en": ["Max. 12 W", "12 VDC: 1.0 A (Without IR)"],
-               "es": ["Máx. 12 W", "12 VDC: 1.0 A (Sin IR)"],
-               "ja": ["最大 12 W", "12 VDC：1.0 A（IR なし）"]
+               "ko": ["최대 12 W", "12 VDC: 1.0 A"],
+               "en": ["Max. 12 W", "12 VDC: 1.0 A"],
+               "es": ["Máx. 12 W", "12 VDC: 1.0 A"],
+               "ja": ["最大 12 W", "12 VDC：1.0 A"]
               }
             },
             "model2": {
               "label": "PoE+",
               "label_id": "specs.interface.poe_plus",
               "value": {
-               "ko": ["최대 22 W", "12 VDC: 1.8 A (IR 지원)"],
-               "en": ["Max. 22 W", "12 VDC: 1.8 A (With IR)"],
-               "es": ["Máx. 22 W", "12 VDC: 1.8 A (Con IR)"],
-               "ja": ["最大 22 W", "12 VDC：1.8 A（IR あり）"]
+               "ko": ["최대 22 W", "12 VDC: 1.8 A"],
+               "en": ["Max. 22 W", "12 VDC: 1.8 A"],
+               "es": ["Máx. 22 W", "12 VDC: 1.8 A"],
+               "ja": ["最大 22 W", "12 VDC：1.8 A"]
               }
             }
           }
