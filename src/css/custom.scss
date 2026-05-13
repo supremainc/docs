@@ -710,6 +710,7 @@ body[data-rh] .redocusaurus {
     border-right: 0;
     border-radius: 0;
     box-shadow: none;
+    margin-bottom: 0;
     summary {
       font-size: 1.2rem;
       font-weight: 500;
@@ -750,6 +751,9 @@ body[data-rh] .redocusaurus {
     &[open] summary::after {
       display: none;
     }
+  }
+  details.faqs--air + details.faqs--air {
+    border-top: none;
   }
   details.faqs {
     background: var(--main-black);
