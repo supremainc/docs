@@ -14,7 +14,7 @@ function CardItem({img, title, url, height, desc, tags}) {
     <Link to={url} className={styles.productLink}>
       <div className={styles.cardItem}>
         <div className={styles.productImg}>
-          {(img) && <img src={img} width='auto' height={height} />}
+          {(img) && <img src={img} width='auto' height={height} fetchpriority='high' alt={title} />}
         </div>
         {
           (title) &&
@@ -34,8 +34,8 @@ function ExternalLinkBanner({Svg, img, title, url, desc, height, play, ios, link
     <div className={styles.externalLinkitem}>
       <div className={styles.externalLinkLogo}>
         <div className={styles.circle}>
-          {(Svg) && <Svg role="img" width='100%' height={height} />}
-          {(img) && <img src={img} width='auto' height={height} />}
+          {(Svg) && <Svg role='img' width='100%' height={height} />}
+          {(img) && <img src={img} width='auto' height={height} fetchpriority='high' alt={title} />}
         </div>
       </div>
       <div className={styles.externalLiinkDesc}>
