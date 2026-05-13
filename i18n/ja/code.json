@@ -59,6 +59,9 @@
   "externalLinks.ViOnyx.desc": {
     "message": "AI 搭載のインテリジェント映像解析カメラ"
   },
+  "externalLinks.BioStation3Max.desc": {
+    "message": "AI ベースの顔/指紋マルチ認証端末"
+  },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "パンくずリスト",
     "description": "The ARIA label for the breadcrumbs"
@@ -710,8 +713,11 @@
   "specs.interface.tamper": {
     "message": "タンパー"
   },
+  "specs.interface.micro_sd": {
+    "message": "Micro SD カードスロット"
+  },
   "specs.interface.samSlot": {
-    "message": "SAMカードスロット"
+    "message": "SAM カードスロット"
   },
   "specs.interface.led": {
     "message": "LED"
