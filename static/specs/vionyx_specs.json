@@ -97,7 +97,12 @@
           "label": "IP 등급",
           "label_id": "specs.general.ip_rating",
           "label_link": "../../reference/glossary#ip_rating",
-          "value": "IP66, IP67, NEMA 4X"
+          "value": {
+            "ko": "IP66, IP67, NEMA 4X",
+            "en": "IP66, IP67, NEMA 4X",
+            "es": "IP66, IP67, NEMA 4X",
+            "ja": "IP66、IP67、NEMA 4X"
+          }
         },
         "ik_rating": {
           "label": "IK 등급",
@@ -190,7 +195,12 @@
         "video_compression": {
           "label": "비디오 압축",
           "label_id": "specs.video_audio.video_compression",
-          "value": "H.265, H.264, MJPEG"
+          "value": {
+            "ko": "H.265, H.264, MJPEG",
+            "en": "H.265, H.264, MJPEG",
+            "es": "H.265, H.264, MJPEG",
+            "ja": "H.265、H.264、MJPEG"
+          }
         },
         "wdr": {
           "label": "광역 역광 보정 (WDR)",
@@ -279,7 +289,7 @@
             "ko": ["1채널 입력 (LINE IN, 지원 전압: 2.5 VDC)", "1채널 출력 (LINE OUT, 최대 출력: 1 Vrms)"],
             "en": ["1-channel input (LINE IN, Supported voltage: 2.5 VDC)", "1-channel output (LINE OUT, Maximum output: 1 Vrms)"],
             "es": ["Entrada de 1 canal (LINE IN, voltaje admitido: 2.5 VDC)", "Salida de 1 canal (LINE OUT, salida máxima: 1 Vrms)"],
-            "ja": ["1チャンネル入力 (LINE IN、対応電圧: 2.5 VDC)", "1チャンネル出力 (LINE OUT、最大出力: 1 Vrms)"]
+            "ja": ["1チャンネル入力 (LINE IN、対応電圧：2.5 VDC)", "1チャンネル出力 (LINE OUT、最大出力：1 Vrms)"]
           }
         },
         "poe": {
