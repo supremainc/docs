@@ -3,9 +3,8 @@ id: maintenance
 title: 保守・管理
 description: カメラを工場出荷時の状態にリセットし、防湿モジュールを交換する方法を説明します。
 keywords:
-  - keyword1
-  - keyword2
-  - keyword3
+  - 工場出荷時初期化
+  - 防湿剤モジュール
 ---
 
 カメラを工場出荷時の状態にリセットし、防湿モジュールを交換する方法を説明します。
@@ -30,9 +29,13 @@ keywords:
 
 :::info
 
-工場出荷時の初期化を実行しても、IPアドレスは変更されません。
+* IPアドレスはデフォルトでDHCPに設定されています。
+
+* 工場出荷状態に初期化した後にIPアドレスが割り当てられない場合は、デフォルトIPアドレス（`https://192.168.1.100`）に変更されます。こちらのアドレスを使用して接続してください。
 
 :::
+
+<PageBreak />
 
 ## 防湿モジュールの交換
 
@@ -42,7 +45,7 @@ keywords:
 
 2. ネジを反時計回りに緩めて、防湿モジュールをカバーから取り外してください。
 
-   <Image src='/img/camera/change-silicagel-vionyx.png' className='none' width={600} alone />
+   <Image src='/img/camera/change-silicagel-vionyx.svg' className='none' width={684} alone />
 
 3. 新しい防湿モジュールをカバーに合わせ、ネジを時計回りに回して固定してください。
 

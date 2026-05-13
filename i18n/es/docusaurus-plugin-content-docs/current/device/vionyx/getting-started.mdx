@@ -25,13 +25,13 @@ Visión general de los componentes de la cámara ViOnyx, con el nombre y la func
 <Tbody>
 <Row className='center white'>
 
-<Td><Image src='/img/camera/component-cover-vionyx.png' className='none' width={200} alone /></Td>
+<Td><Image src='/img/camera/component-cover-vionyx.svg' className='none' width={200} alone /></Td>
 
-<Td><Image src='/img/camera/component-camera-body-vionyx.png' className='none' width={200} alone /></Td>
+<Td><Image src='/img/camera/component-camera-body-vionyx.svg' className='none' width={200} alone /></Td>
 
-<Td><Image src='/img/camera/component-wall-bracket-vionyx.png' className='none' width={200} alone /></Td>
+<Td><Image src='/img/camera/component-wall-bracket-vionyx.svg' className='none' width={200} alone /></Td>
 
-<Td><Image src='/img/camera/component-connection-cables-vionyx.png' className='none' width={200} alone /></Td>
+<Td><Image src='/img/camera/component-drilling-template.svg' className='none' width={200} alone /></Td>
 
 </Row>
 <Row className='center'>
@@ -42,7 +42,7 @@ Visión general de los componentes de la cámara ViOnyx, con el nombre y la func
 
 <Td>Placa de montaje</Td>
 
-<Td>Cables de conexión</Td>
+<Td>Plantilla de perforación</Td>
 
 </Row>
 </Tbody>
@@ -50,16 +50,18 @@ Visión general de los componentes de la cámara ViOnyx, con el nombre y la func
 <Tbody>
 <Row className='center white'>
 
-<Td><Image src='/img/camera/component-waterproof-grommet-ethernet-cable-vionyx.png' className='none' width={200} alone /></Td>
+<Td><Image src='/img/camera/component-connection-cables-vionyx.png' className='none' width={200} alone /></Td>
 
-<Td><Image src='/img/camera/component-waterproof-rubber-hole-plug-vionyx.png' className='none' width={150} alone /></Td>
+<Td><Image src='/img/camera/component-waterproof-grommet-ethernet-cable-vionyx.svg' className='none' width={200} alone /></Td>
+
+<Td><Image src='/img/camera/component-waterproof-rubber-hole-plug-vionyx.svg' className='none' width={150} alone /></Td>
 
 <Td><Image src='/img/camera/component-fixing-screws4-vionyx.png' className='none' width={150} alone /></Td>
 
-<Td><Image src='/img/camera/component-diode1-vionyx.png' className='none' width={200} alone /></Td>
-
 </Row>
 <Row className='center'>
+
+<Td>Cables de conexión</Td>
 
 <Td>Pasamuros impermeable para cable Ethernet</Td>
 
@@ -67,17 +69,19 @@ Visión general de los componentes de la cámara ViOnyx, con el nombre y la func
 
 <Td>Tornillos de fijación x4</Td>
 
-<Td>Diodo</Td>
-
 </Row>
 </Tbody>
+</Table>
 
+<Table className='component'>
 <Tbody>
 <Row className='center white'>
 
+<Td><Image src='/img/camera/component-diode1-vionyx.png' className='none' width={200} alone /></Td>
+
 <Td><Image src='/img/camera/component-120-resistor1-vionyx.png' className='none' width={200} alone /></Td>
 
-<Td><Image src='/img/camera/component-t10-torx-driver-vionyx.png' className='none' width={40} alone /></Td>
+<Td><Image src='/img/camera/component-t10-torx-driver-vionyx.svg' className='none' width={40} alone /></Td>
 
 <Td><Image src='/img/device/component-quick-guide.svg' className='none' alone /></Td>
 
@@ -85,6 +89,8 @@ Visión general de los componentes de la cámara ViOnyx, con el nombre y la func
 
 </Row>
 <Row className='center'>
+
+<Td>Diodo</Td>
 
 <Td>Resistencia de 120 Ω</Td>
 
@@ -107,55 +113,65 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
 ### Configuración de puertos internos
 
-<Image src='/img/camera/name-function-each-part-vionyx.svg' className='none' />
+<Image src='/img/camera/name-function-each-part-vionyx.svg' className='none' width={700} />
 
-* **Entrada de alarma, relé (5 pines)**: Conecte el cable para la entrada de alarma y la salida de relé.
-
-* **Entrada/salida de audio (4 pines)**: Conecte el cable para la entrada y salida de audio.
-
-* **Ethernet (PoE+)**: Conecte el cable Ethernet. La alimentación puede suministrarse mediante PoE+.
-
-* **Alimentación, RS-485 (5 pines)**: Conecte el cable para la alimentación y la comunicación RS-485.
-
-* **Botón de reinicio**: Restaura todos los ajustes a los valores de fábrica. Para más información sobre la inicialización de fábrica, consulte [Restablecimiento de fábrica](installation#factory-reset).
-
-* **Ranura para tarjeta Micro SD**: Inserte la tarjeta Micro SD.
-
-* **USB (tipo A)**: Conecte accesorios USB, como Wi-Fi y BLE.
-
-* **Interruptor del micrófono**: Utilice el interruptor físico del micrófono para controlar la grabación de audio.
-
-<PageBreak />
+<div className='overflow-x col2-2-8'>
+| Nombre | Función |
+| -- | -- |
+| **Entrada de alarma y relé (5 pines)** | Conecte el cable para la entrada de alarma y la salida de relé. |
+| **Entrada/salida de audio (4 pines)** | Conecte el cable para la entrada/salida de audio. |
+| **Ethernet (PoE+)** | Conecte el cable Ethernet. La alimentación se puede suministrar mediante PoE+. |
+| **Alimentación y RS-485 (5 pines)** | Conecte el cable de alimentación y comunicación RS-485. |
+| **Botón de reinicio** | Restablece todos los ajustes a los valores predeterminados de fábrica. Para obtener más información sobre la inicialización de fábrica, consulte [Valores predeterminados de fábrica](maintenance#factory-reset). |
+| **Ranura para tarjeta microSD** | Inserte una tarjeta microSD. |
+| **USB (Tipo A)** | Conecte accesorios basados en USB. |
+| **Interruptor del micrófono** | Use el interruptor del micrófono para habilitar o deshabilitar físicamente la grabación de audio. |
+</div>
 
 ### Cables y conectores
 
-<Columns className='partname'>
-<Column className='text--center'>
+#### Alimentación y RS-485
 
-<Image src='/img/camera/cable-vionyx.png' className='none' width='55%' alone />
+<Image src='/img/camera/cable-vionyx-power-rs485.svg' className='none' width={600} alone />
 
-</Column>
-<Column className='padding--l20'>
-
+<div className='overflow-x table-fixed'>
 | Cable | Pin | Nombre | Color |
-| :-: | :-: | --- | :-: |
+| :--: | :--: | :--: | :--: |
 | POWER | 1 | PWR +VDC | Rojo |
 | ^ | 2 | PWR GND | Negro |
 | RS-485 | 3 | 485 TRXP | Azul |
 | ^ | 4 | 485 TRXN | Amarillo |
 | ^ | 5 | 485 GND | Gris |
-| ALARM IN | 1 | ALARM IN | Morado |
+</div>
+
+#### Entrada de alarma y relé
+
+<Image src='/img/camera/cable-vionyx-alarmin-relay.svg' className='none' width={600} alone />
+
+<div className='overflow-x table-fixed'>
+| Cable | Pin | Nombre | Color |
+| :--: | :--: | :--: | :--: |
+| ALARM_IN | 1 | ALARM IN | Púrpura |
 | ^ | 2 | ALARM GND | Negro |
 | RELAY | 3 | RLY NC | Naranja |
 | ^ | 4 | RLY COM | Azul |
 | ^ | 5 | RLY NO | Blanco |
-| LINE IN | 1 | LINE IN | Blanco |
-| ^ | 2 | LINE IN GND | Negro |
-| LINE OUT | 3 | LINE OUT | Blanco |
-| ^ | 4 | LINE OUT GND | Negro |
+</div>
 
-</Column>
-</Columns>
+<PageBreak />
+
+#### Entrada/salida de audio
+
+<Image src='/img/camera/cable-vionyx-line-inout.svg' className='none' width={600} alone />
+
+<div className='overflow-x table-fixed'>
+| Cable | Pin | Nombre | Color |
+| :--: | :--: | :--: | :--: |
+| LINE_IN | 1 | LINE IN | Blanco |
+| ^ | 2 | LINE IN GND | Negro |
+| LINE_OUT | 3 | LINE OUT | Blanco |
+| ^ | 4 | LINE OUT GND | Negro |
+</div>
 
 <PageBreak />
 
@@ -163,7 +179,7 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 
 El LED en la parte frontal de la cubierta de la cámara indica el estado de funcionamiento y de autenticación mediante colores y patrones de parpadeo.
 
-<Image src='/img/camera/led-status-indicator-vionyx.svg' className='none' alone />
+<Image src='/img/camera/led-status-indicator-vionyx.svg' className='none' width={350} alone />
 
 | Color del LED | Estado |
 | :-: | --- |
@@ -172,20 +188,23 @@ El LED en la parte frontal de la cubierta de la cámara indica el estado de func
 | Azul | Funcionamiento normal |
 | Azul/verde intermitente | Al configurar <Cmd sid='ui_012' product='dev' /> para usar, no se puede obtener la dirección IP. |
 
-### Configuración del interruptor del micrófono
+<PageBreak />
+
+### Configuración del interruptor del micrófono (próximamente)
 
 Utilice el interruptor del micrófono para desactivar físicamente el micrófono de la cámara y evitar la grabación de audio.
 
-<Image src='/img/camera/microphone-switch-vionyx.svg' className='none' alone />
+<Image src='/img/camera/microphone-switch-vionyx.svg' className='none' width={450} alone />
 
-* La grabación de audio está activada por defecto.
+* La grabación de audio está deshabilitada por defecto.
 
-* Deslice el interruptor del micrófono hacia la izquierda para desactivarlo y detener la grabación de audio.
+* Deslice el interruptor del micrófono hacia la derecha para habilitar la grabación de audio.
 
-* La grabación de audio también se puede desactivar desde la cuenta de Command.
+
+{/* * ViOnyx 웹 서버에서도 오디오 녹음을 활성/비활성화할 수 있습니다.
 
 :::caution
 
-Si el interruptor del micrófono está desactivado físicamente, no se grabará audio aunque se cambien los ajustes en la cuenta de Command.
+제품의 마이크 스위치가 물리적으로 비활성화되어있는 상태에서는 ViOnyx 웹 서버에서 오디오 녹음을 활성화하더라도 오디오가 녹음되지 않습니다.
 
-:::
+::: */}

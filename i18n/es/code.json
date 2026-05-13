@@ -59,6 +59,9 @@
   "externalLinks.ViOnyx.desc": {
     "message": "Cámara inteligente de análisis de video con IA"
   },
+  "externalLinks.BioStation3Max.desc": {
+    "message": "Terminal biométrico con IA"
+  },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "Ruta de navegación",
     "description": "The ARIA label for the breadcrumbs"
@@ -402,7 +405,7 @@
     "message": "Una Plataforma. Confianza Total."
   },
   "index.biostarx.description": {
-    "message": "BioStar X es la plataforma de seguridad unificada de Suprema, con acceso biométrico de primer nivel, supervisión integrada y una base resiliente diseñada para la escala, la alta disponibilidad y el cumplimiento."
+    "message": "BioStar X es la plataforma de seguridad unificada de Suprema, que incluye acceso biométrico de primer nivel, monitoreo integrado y una base resiliente diseñada para la escala, el tiempo de actividad y el cumplimiento."
   },
   "index.biostarair.subtitle": {
     "message": "Cero en instalaciones. BioStar Air"
@@ -710,6 +713,9 @@
   "specs.interface.tamper": {
     "message": "Tamper"
   },
+  "specs.interface.micro_sd": {
+    "message": "Ranura para tarjeta Micro SD"
+  },
   "specs.interface.samSlot": {
     "message": "Ranura SAM"
   },
@@ -912,8 +918,7 @@
     "description": "The ARIA label and placeholder for search button"
   },
   "theme.SearchBar.product.label": {
-    "message": "Productos",
-    "description": "The ARIA label and placeholder for product search button"
+    "message": "Productos"
   },
   "theme.SearchModal.searchBox.resetButtonTitle": {
     "message": "Borrar la consulta",
@@ -1233,12 +1238,10 @@
     "message": "Credenciales móviles de BioStar Air"
   },
   "searchBox.refinementList.clearAll": {
-    "message": "Borrar todo",
-    "description": "The label for the button to clear all refinements in the search box"
+    "message": "Borrar todo"
   },
   "searchBox.recentList.clearButton": {
-    "message": "Borrar búsquedas recientes",
-    "description": "The label for the button to clear recent searches in the search box"
+    "message": "Borrar búsquedas recientes"
   },
   "theme.docCardList.prefix.latest": {
     "message": "Último"

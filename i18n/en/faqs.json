@@ -28,7 +28,7 @@
           "answer": [
             "If you're using a power adapter, make sure its output equals or exceeds the camera's maximum power consumption.",
             "Do not connect a power adapter and PoE+ at the same time. Doing so may cause the device to malfunction.",
-            "If powered via an Ethernet cable, be sure it is connected using PoE+ or PoE++, not standard PoE.",
+            "If powered via an Ethernet cable, make sure it is connected using PoE+ or PoE++.",
             "Check that the network cable is securely connected and that the Ethernet waterproof rubber seal is properly fastened."
           ]
         }
@@ -345,8 +345,8 @@
           ],
           "question": "What are the required WAVE file specifications for audio playback during events?",
           "answer": [
-            "It is recommended to use a sampling rate (sampling rate) of 48000 KHz or lower.",
-            "Use 8-bit or 16-bit samples (bits per sample).",
+            "Use a sampling rate of 24,000 Hz or 48,000 Hz.",
+            "Use 8-bit or 16-bit bits per sample (bps).",
             "Only PCM-encoded formats are supported."
           ]
         },
