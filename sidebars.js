@@ -218,6 +218,7 @@ function createSidebars(preview) {
                     'platform/biostar_air/use-xp2-primary-device',
                     'platform/biostar_air/device-info-settings',
                     'platform/biostar_air/configuring-the-airfob-patch-and-tag',
+                    'platform/biostar_air/install-airfob-patch-register-device',
                     'platform/biostar_air/biometric-readers-and-credentials',
                     'platform/biostar_air/how-to-upgrade-firmware',
                   ]
