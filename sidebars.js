@@ -53,7 +53,7 @@ function createSidebars(preview) {
         },
         {
           type: 'category',
-          label: 'AI 이벤트 및 규칙',
+          label: 'AI 이벤트 및 규칙 설정하기',
           className: 'ai--event',
           link: {
             type: 'doc',
@@ -71,7 +71,7 @@ function createSidebars(preview) {
         },
         {
           type: 'category',
-          label: '설정',
+          label: '카메라 설정하기',
           className: 'cam--settings',
           link: {
             type: 'doc',
@@ -87,7 +87,7 @@ function createSidebars(preview) {
         },
         {
           type: 'category',
-          label: '사용자',
+          label: '사용자 관리하기',
           className: 'cam--people',
           link: {
             type: 'doc',
@@ -102,7 +102,7 @@ function createSidebars(preview) {
         },
         {
           type: 'category',
-          label: '시스템',
+          label: '시스템 구성하기',
           className: 'cam--system',
           link: {
             type: 'doc',
