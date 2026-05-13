@@ -80,13 +80,14 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: '사람',
+          label: '사용자',
           className: 'cam--people',
           link: {
             type: 'doc',
             id: 'device/vionyx_webserver/manage-people',
           },
           items: [
+            'device/vionyx_webserver/set-face-recognition',
             'device/vionyx_webserver/add-users',
             'device/vionyx_webserver/modify-delete-users',
             'device/vionyx_webserver/search-view-users'
