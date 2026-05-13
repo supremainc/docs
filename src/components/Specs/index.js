@@ -170,7 +170,7 @@ export function SpecSection({data}) {
               ) : (
                 <>{translate({id: item.label_id})}</>
               )}
-              {item.annotation_label && <AnnotationSup id={item.annotation_label} />}
+              {item.annotation_label && <AnnotationSup id={item.annotation_label} dupl={item.annotation_dupl} />}
             </div>
             
             {/* type에 따라 분기 techspecsBody */}
@@ -200,7 +200,7 @@ export function SpecSection({data}) {
                               {Object.values(subitem.items).map((subsubitem) => (
                                 <li key={subsubitem.label_id || subsubitem.label}>
                                   {translate({id: subsubitem.label_id})}
-                                  {subsubitem.annotation_label && <AnnotationSup id={subsubitem.annotation_label} />}
+                                  {subsubitem.annotation_label && <AnnotationSup id={subsubitem.annotation_label} dupl={subsubitem.annotation_dupl} />}
                                   : {
                                     typeof subsubitem.value === 'boolean' ? (
                                       <SupportedType supported={subsubitem.value} annot={subsubitem.annotation_value} />
