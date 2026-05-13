@@ -177,14 +177,14 @@
   },
   "item.label.ViOnyx": {
     "message": "ViOnyx",
-    "description": "Navbar item with label ViOnyx"
+    "description": "Elemento de la barra de navegación etiquetado como «ViOnyx»"
   },
   "item.label.AI Cameras": {
-    "message": "AI Cameras",
-    "description": "Navbar item with label AI Cameras"
+    "message": "Cámaras AI",
+    "description": "Elemento de la barra de navegación etiquetado como «Cámaras AI»"
   },
   "item.label.XPass Q2": {
     "message": "XPass Q2",
-    "description": "Navbar item with label XPass Q2"
+    "description": "Elemento de la barra de navegación con la etiqueta XPass Q2"
   }
 }
