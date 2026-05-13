@@ -76,7 +76,7 @@ const glossaryMap = {
 //   return sid.split('.').reduce((acc, key) => acc && acc[key], locale);
 // };
 
-const ReplacementLocaleText = ({ sid, code, className, children, product, tip }) => {
+const ReplacementLocaleText = ({ sid, code, className, children, product, tip, replace }) => {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   let localeText, desc;
 
@@ -131,7 +131,11 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
       localeText = locale[sid] ? locale[sid].replace('<br/>', '') : null;
     } else if (product === 'cam') {
       const locale = camLocaleMap[currentLocale] || camLocaleMap.en;
-      localeText = locale[sid] ? locale[sid].replace('<br/>', '') : null;
+      if (sid === 'ntp_address_n' || sid === 'dns_n') {
+        localeText = locale[sid] ? locale[sid].replace('{n}', replace || '1') : null;
+      } else {
+        localeText = locale[sid] ? locale[sid].replace('<br/>', '') : null;
+      }
     } else {
       // const locale = xlocaleMap[currentLocale] || xlocaleMap.en;
       // const text = getLocaleText(locale, sid);
