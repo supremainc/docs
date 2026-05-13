@@ -53,7 +53,7 @@ function createSidebars(preview) {
         },
         {
           type: 'category',
-          label: 'AI 이벤트 및 규칙',
+          label: 'AI 이벤트 및 규칙 설정하기',
           className: 'ai--event',
           link: {
             type: 'doc',
@@ -65,12 +65,13 @@ function createSidebars(preview) {
             'device/vionyx_webserver/configure-line-crossing',
             'device/vionyx_webserver/configure-counting-people',
             'device/vionyx_webserver/edit-delete-ai-event',
-            'device/vionyx_webserver/set-ai-rule'
+            'device/vionyx_webserver/set-ai-rule',
+            'device/vionyx_webserver/set-ai-advanced'
           ]
         },
         {
           type: 'category',
-          label: '설정',
+          label: '카메라 설정하기',
           className: 'cam--settings',
           link: {
             type: 'doc',
@@ -86,13 +87,14 @@ function createSidebars(preview) {
         },
         {
           type: 'category',
-          label: '사람',
+          label: '사용자 관리하기',
           className: 'cam--people',
           link: {
             type: 'doc',
             id: 'device/vionyx_webserver/manage-people',
           },
           items: [
+            'device/vionyx_webserver/set-face-recognition',
             'device/vionyx_webserver/add-users',
             'device/vionyx_webserver/modify-delete-users',
             'device/vionyx_webserver/search-view-users'
@@ -100,7 +102,7 @@ function createSidebars(preview) {
         },
         {
           type: 'category',
-          label: '시스템',
+          label: '시스템 구성하기',
           className: 'cam--system',
           link: {
             type: 'doc',
