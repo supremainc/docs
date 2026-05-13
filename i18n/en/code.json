@@ -713,6 +713,9 @@
   "specs.interface.tamper": {
     "message": "Tamper"
   },
+  "specs.interface.micro_sd": {
+    "message": "Micro SD card slot"
+  },
   "specs.interface.samSlot": {
     "message": "SAM Slot"
   },

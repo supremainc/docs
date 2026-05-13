@@ -3,9 +3,8 @@ id: maintenance
 title: Mantenimiento y cuidado
 description: Esta guía explica cómo restablecer la cámara a la configuración de fábrica y cómo reemplazar el módulo desecante.
 keywords:
-  - keyword1
-  - keyword2
-  - keyword3
+  - Restablecimiento de fábrica
+  - Módulo desecante
 ---
 
 Esta guía explica cómo restablecer la cámara a la configuración de fábrica y cómo reemplazar el módulo desecante.
@@ -30,9 +29,13 @@ Al realizar un restablecimiento de fábrica, se eliminarán todos los datos y la
 
 :::info
 
-La dirección IP no cambia incluso después de un restablecimiento de fábrica.
+* Por defecto, la dirección IP se configura mediante DHCP.
+
+* Si el dispositivo no obtiene una dirección IP después de un restablecimiento de fábrica, cambia a la dirección IP predeterminada (`https://192.168.1.100`), así que conéctese usando esa dirección.
 
 :::
+
+<PageBreak />
 
 ## Reemplazo del módulo desecante
 
@@ -42,7 +45,7 @@ La cámara incluye un módulo desecante para evitar la condensación de la lente
 
 2. Afloja el tornillo girándolo en sentido antihorario y retira el módulo desecante de la tapa.
 
-   <Image src='/img/camera/change-silicagel-vionyx.png' className='none' width={600} alone />
+   <Image src='/img/camera/change-silicagel-vionyx.svg' className='none' width={684} alone />
 
 3. Coloca el nuevo módulo desecante en la tapa y gira el tornillo en sentido horario para fijarlo.
 

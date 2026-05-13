@@ -28,7 +28,7 @@
           "answer": [
             "Si utiliza un adaptador de corriente, asegúrese de que su salida sea igual o superior al consumo máximo de la cámara.",
             "No conecte un adaptador de corriente y PoE+ al mismo tiempo. Hacerlo puede provocar un mal funcionamiento del dispositivo.",
-            "Si la cámara se alimenta mediante un cable Ethernet, asegúrese de que esté conectada mediante PoE+ o PoE++, no mediante PoE estándar.",
+            "Si se alimenta mediante un cable Ethernet, asegúrese de que esté conectado mediante PoE+ o PoE++.",
             "Verifique que el cable de red esté conectado de forma segura y que el sello de goma impermeable del conector Ethernet esté bien asegurado."
           ]
         }
@@ -345,8 +345,8 @@
           ],
           "question": "¿Cuáles son las especificaciones requeridas de los archivos WAVE para la reproducción de audio durante eventos?",
           "answer": [
-            "Se recomienda usar una frecuencia de muestreo (sampling rate) de 48000 KHz o inferior.",
-            "Utilice muestras de 8 o 16 bits (bits por muestra).",
+            "Use una frecuencia de muestreo de 24,000 Hz o 48,000 Hz.",
+            "Use bits de muestra de 8 o 16 bits (bps).",
             "Solo se admiten formatos codificados en PCM."
           ]
         },
@@ -354,25 +354,16 @@
           "product": [
             "vionyx"
           ],
-          "question": "Las imágenes de video se superponen.",
+          "question": "No puedo ver el video.",
           "answer": [
-            "Asegúrese de que dos o más cámaras estén configuradas con direcciones multicast diferentes. Usar la misma dirección puede provocar superposición de video."
+            "Si la transmisión de video está configurada en multicast, asegúrese de que el router de la red local de la cámara admita multicast."
           ]
         },
         {
           "product": [
             "vionyx"
           ],
-          "question": "El video no se muestra.",
-          "answer": [
-            "Si la transmisión de video está configurada como multicast, asegúrese de que la red local a la que está conectada la cámara cuente con un enrutador que admita multicast."
-          ]
-        },
-        {
-          "product": [
-            "vionyx"
-          ],
-          "question": "Ocurrió un evento de análisis de video, pero no se activó ninguna alarma.",
+          "question": "Ocurrió un evento de análisis de video, pero no se generó ninguna alarma.",
           "answer": [
             "Asegúrese de que el puerto de salida de la alarma esté configurado correctamente."
           ]
@@ -381,11 +372,11 @@
           "product": [
             "vionyx"
           ],
-          "question": "No se puede acceder a la cámara desde un navegador.",
+          "question": "No se puede acceder a la cámara desde el navegador.",
           "answer": [
             "Asegúrese de que la configuración de red de la cámara sea correcta.",
             "Asegúrese de que el cable de red esté conectado correctamente.",
-            "Si está conectada vía DHCP, asegúrese de que la cámara haya obtenido correctamente una dirección IP dinámica.",
+            "Si está conectada vía DHCP, asegúrese de que la cámara haya obtenido una dirección IP dinámica.",
             "Si la cámara está conectada a un router, asegúrese de que el reenvío de puertos esté configurado correctamente."
           ]
         },
@@ -393,9 +384,9 @@
           "product": [
             "vionyx"
           ],
-          "question": "Se ha perdido la conexión con el servidor web que monitorea el video.",
+          "question": "Se perdió la conexión con el servidor web que estaba monitoreando el video.",
           "answer": [
-            "Si otro usuario cambia la configuración de la cámara o de la red, la conexión con el servidor web se interrumpirá.",
+            "Si otro usuario cambia los ajustes de la cámara o de la red, el servidor web conectado se desconecta.",
             "Asegúrese de que la conexión de red funcione."
           ]
         },
@@ -403,39 +394,39 @@
           "product": [
             "vionyx"
           ],
-          "question": "El servidor web ViOnyx no puede detectar la cámara en la red.",
+          "question": "No se están detectando las cámaras conectadas a la red.",
           "answer": [
-            "La comunicación con el dispositivo puede estar bloqueada por un firewall o por la configuración de seguridad de la red. Asegúrese de que la red permita los puertos (TCP/UDP) necesarios para el descubrimiento y la comunicación del dispositivo."
+            "La comunicación con el dispositivo puede estar bloqueada por un firewall o por la configuración de seguridad de la red. Asegúrese de que la red permita los puertos (TCP, UDP) necesarios para el descubrimiento y la comunicación del dispositivo."
           ]
         },
         {
           "product": [
             "vionyx"
           ],
-          "question": "La tarjeta microSD no está grabando.",
+          "question": "La grabación no se guarda en la tarjeta Micro SD.",
           "answer": [
-            "Compruebe si la tarjeta microSD está defectuosa.",
-            "Antes de reemplazar la tarjeta microSD, desconecte siempre el dispositivo de la corriente eléctrica."
+            "Compruebe si la tarjeta Micro SD está defectuosa.",
+            "Apague siempre el dispositivo antes de reemplazar la tarjeta Micro SD."
           ]
         },
         {
           "product": [
             "vionyx"
           ],
-          "question": "La tarjeta microSD está insertada pero no se reconoce.",
+          "question": "La tarjeta Micro SD está insertada pero no se reconoce.",
           "answer": [
-            "Asegúrese de que la tarjeta microSD esté insertada en la orientación correcta. Las tarjetas microSD formateadas por otros dispositivos pueden no ser compatibles con esta cámara.",
-            "Compruebe que la capacidad de la tarjeta (recomendada 16GB–1TB) y el fabricante (Samsung, SanDisk, Transcend) cumplan las especificaciones. Recomendamos utilizar tarjetas diseñadas para operaciones de escritura continua, como los modelos High Endurance o Pro Endurance. Las tarjetas de otros fabricantes o de otras líneas de producto pueden variar en compatibilidad."
+            "Asegúrese de que la tarjeta Micro SD esté insertada en la orientación correcta. No se puede garantizar que las tarjetas Micro SD formateadas por otros dispositivos funcionen con esta cámara.",
+            "Compruebe que la capacidad de la tarjeta (recomendada 16GB–1TB) y el fabricante (Samsung, SanDisk, Transcend) cumplan las especificaciones recomendadas. Utilice tarjetas de las líneas High Endurance o Pro Endurance para operaciones de escritura continua. Las tarjetas de otros fabricantes o líneas de producto pueden variar en compatibilidad."
           ]
         },
         {
           "product": [
             "vionyx"
           ],
-          "question": "Se está formando condensación o gotas de agua en el interior de la cámara.",
+          "question": "Se forma humedad o condensación en el interior de la cámara.",
           "answer": [
-            "Asegúrese de que los 3 tornillos de fijación estén completamente apretados después de instalar la tapa. Si los tornillos no están totalmente apretados, la resistencia al agua y al polvo (IP66/IP67) puede verse comprometida.",
-            "Al instalar el cable Ethernet y otros cables de conexión, asegúrese de que los sellos, juntas y tuercas de goma impermeables suministrados para el cable Ethernet estén bien apretados y sin huecos. Para los orificios no utilizados, asegúrese de que los tapones de goma impermeables estén completamente insertados."
+            "Después de montar la cubierta, asegúrese de que los 3 tornillos de retención estén completamente apretados. No apretarlos por completo puede comprometer el rendimiento impermeable/antipolvo (IP66/IP67).",
+            "Al cablear el Ethernet y otros cables, asegúrese de que los sellos de goma impermeables, las juntas y las tuercas suministradas para el cable Ethernet estén bien ajustados y sin huecos. Inserte completamente los tapones de goma impermeables en los orificios no utilizados."
           ]
         },
         {
@@ -444,7 +435,7 @@
           ],
           "question": "El rendimiento del reconocimiento facial y de objetos por IA ha disminuido notablemente.",
           "answer": [
-            "Compruebe si la lente está expuesta directamente a la luz solar o si está instalada en un área con fuerte contraluz. El deslumbramiento o el contraluz pueden ser una causa importante de la reducción del rendimiento del reconocimiento por IA."
+            "Asegúrese de que la lente no esté expuesta a la luz solar directa ni instalada en un área con fuerte contraluz. El destello de lente o el contraluz son causas principales que reducen la precisión de detección por IA."
           ]
         }
       ]
