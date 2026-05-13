@@ -117,10 +117,6 @@ a.banner {
   width: fit-content;
   border-radius: 10px;
 }
-.banner__biostar__img {
-  text-align: right;
-  background: url('./biostarx-banner.png') no-repeat center center/cover;
-}
 .containerRef {
   display: grid;
   grid-template-columns: 2fr 1fr;

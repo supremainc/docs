@@ -14,7 +14,7 @@ function CardItem({img, title, url, height, desc, tags}) {
     <Link to={url} className={styles.productLink}>
       <div className={styles.cardItem}>
         <div className={styles.productImg}>
-          {(img) && <img src={img} width='auto' height={height} />}
+          {(img) && <img src={img} width='auto' height={height} fetchpriority='high' alt={title} />}
         </div>
         {
           (title) &&
@@ -34,8 +34,8 @@ function ExternalLinkBanner({Svg, img, title, url, desc, height, play, ios, link
     <div className={styles.externalLinkitem}>
       <div className={styles.externalLinkLogo}>
         <div className={styles.circle}>
-          {(Svg) && <Svg role="img" width='100%' height={height} />}
-          {(img) && <img src={img} width='auto' height={height} />}
+          {(Svg) && <Svg role='img' width='100%' height={height} />}
+          {(img) && <img src={img} width='auto' height={height} fetchpriority='high' alt={title} />}
         </div>
       </div>
       <div className={styles.externalLiinkDesc}>
@@ -435,7 +435,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
     {
       title: 'Extended Module',
       url: '/device/extendedmodule',
-      img: require('@site/static/img/device/extendedmodule-main.png').default,
+      img: require('@site/static/img/cover/extendedmodule.png').default,
       desc: `${translate({
         id: "externalLinks.peripheral.extendedmodule.desc",
         message: "확장형 통신 및 보안 모듈"
@@ -445,7 +445,7 @@ export function Peripheral({ productLinks: productLinksProp }) {
     {
       title: 'Extended Module-SC',
       url: '/device/extendedmodule_sc',
-      img: require('@site/static/img/device/extendedmodule-sc-main.png').default,
+      img: require('@site/static/img/cover/extendedmodule-sc.png').default,
       desc: `${translate({
         id: "externalLinks.peripheral.extendedmodule.desc",
         message: "확장형 통신 및 보안 모듈"
