@@ -1,0 +1,162 @@
+---
+id: cardholder-management
+title: Cardholder Management
+description: Provides instructions for managing cardholders in Genetec Security Center, including enrolling cards and face credentials, performing bulk face template uploads, and searching for users with enrolled biometrics.
+keywords: [ Cardholder Management, Face Enrollment, Bulk Upload ]
+---
+
+## Card Enrollment
+
+1. In the **Config Tool**, click the **Cardholder management** under **Tasks**.
+
+   <Image src='/img/integration/genetec/card-enrollment.png' width={800} alone />
+
+1. Click the **New** button from the bottom.
+
+   <Image src='/img/integration/genetec/new-ico.png' alone />
+
+1. Enter the **First name** and **Last name**, then click the **Add a credential** button. In the popup that appears, click **Automatic entry**.
+
+   <Image src='/img/integration/genetec/card-enrollment-add-credential1.png' width={800} alone />
+
+1. Select the **Door** assigned to the Suprema device as a reader, then tag a card to the device.
+
+   <Image src='/img/integration/genetec/card-enrollment-add-credential2.png' width={800} alone />
+
+1. The card is automatically enrolled to the credential.
+
+   <Image src='/img/integration/genetec/card-enrollment-add-credential3.png' width={800} alone />
+
+## Face Enrollment
+
+### Precautions when Enrolling Face
+
+When enrolling your face for authentication, refer to the picture below to enroll your face correctly.
+
+If you do not follow the on-screen instructions, face enrollment may take a long time or authentication may fail.
+
+* When enrolling a face, maintain a distance of 60-100 cm between the device and the face.
+
+* Make sure that your expression does not change.
+
+* Do not wear a mask, hat, sunglasses, or eye patches.
+
+* Do not raise head up or lower head.
+
+* Do not wear thick makeup.
+
+* Do not close your eyes.
+
+* Make sure that both of your shoulders correctly appear on the screen.
+
+* Do not use a corrected picture.
+
+* Stand still and enroll your face by staring at the screen.
+
+* Be careful not to display two faces on the screen. Make sure to enroll one face at a time.
+
+* Do not enroll your face in dark places.
+
+<Image src='/img/integration/genetec/face-enrollment.png' width={800} alone />
+
+:::info
+
+* **Resolution**: Larger than 250 x 250 pixels
+
+* **Image size**: Up to 10 MB
+
+* **Supported format**: JPG, JPEG or PNG only
+
+:::
+
+### Enroll from Device
+
+1. In the cardholder details window, click **Suprema Enrollment**.
+
+   <Image src='/img/integration/genetec/enroll-from-device1.png' width={800} alone />
+
+1. Click the **Face-Scan**.
+
+   <Image src='/img/integration/genetec/enroll-from-device2.png' width={800} alone />
+
+1. Select the Suprema face authentication device to enroll the face credential.
+
+   <Image src='/img/integration/genetec/enroll-from-device3.png' alone />
+
+1. Click the **+Add** button to create a face template, then click the **Scan** button and scan the face on the device.
+
+   <Image src='/img/integration/genetec/enroll-from-device4.png' alone />
+
+1. Check the face has been properly scanned, and then click the **Enroll** button to enroll the face.
+
+### Enroll Face Template with Genetec Profile Photo
+
+1. In the cardholder details window, click **Suprema Enrollment**.
+
+   <Image src='/img/integration/genetec/enroll-from-device1.png' width={800} alone />
+
+1. Click the **Face-Scan**.
+
+   <Image src='/img/integration/genetec/enroll-from-device2.png' width={800} alone />
+
+1. Select the Suprema face authentication device to enroll the face credential.
+
+   <Image src='/img/integration/genetec/enroll-from-device3.png' alone />
+
+1. Click the **+Add** button to create a face template, then check **Use Genetec Photo** to automatically upload the user profile photo. The Suprema device extracts face templates from user profile photos.
+
+   <Image src='/img/integration/genetec/enroll-from-device5.png' alone />
+
+1. Check the uploaded photo, and then click the **Enroll** button to enroll the face.
+
+## Bulk Enrollment
+
+1. Go to **Suprema Device Plugin** → **Global Settings**.
+
+   <Image src='/img/integration/genetec/global-settings1.png' alone />
+
+1. Click the **Bulk Face Upload** button. You can check the Face Extraction progress.
+
+   <Image src='/img/integration/genetec/global-settings2.png' alone />
+
+   :::info
+   
+   Face template extraction is performed only for GSC cardholders who have a profile image.
+
+   :::
+
+1. Once the process is completed, you can check the results.
+
+   * Show Failed Users: View the list of users for whom face extraction failed.
+
+   * Face Template Extraction Report: View the report related to face template extraction.
+
+## How to Search for a Cardholder with a Face Template
+
+1. Click the **Advanced search** on the **Cardholder management** page.
+
+   <Image src='/img/integration/genetec/advanced-search.png' width={500} alone />
+
+1. Click the **Custom fields**, switch it to **On**, and click **Add criterion**. Then, select the **BiometricsTimestamp**.
+
+   <Image src='/img/integration/genetec/advanced-search-custom-fields1.png' width={500} alone />
+
+1. Select the **Specific range** and set the period to search.
+
+   :::note
+   
+   **Example**
+
+   * **From**: Plugin installation date
+
+   * **To**: Today
+
+   :::
+
+   To search by specific time, click **Set time** and enter the time.
+
+   <Image src='/img/integration/genetec/advanced-search-custom-fields2.png' alone />
+
+1. Click the **Search** button.
+
+1. All cardholders who have face templates appear.

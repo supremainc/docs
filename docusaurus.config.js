@@ -468,6 +468,28 @@ const config = {
           },
           {
             type: 'dropdown',
+            label: 'Integration',
+            position: 'right',
+            items: [
+              {
+                type: 'doc',
+                label: 'Genetec',
+                docId: 'integration/genetec/index'
+              },
+              {
+                type: 'doc',
+                label: 'Gallagher',
+                docId: 'integration/gallagher/index'
+              },
+              {
+                type: 'doc',
+                label: 'Software House',
+                docId: 'integration/ccure/index'
+              }
+            ]
+          },
+          {
+            type: 'dropdown',
             label: 'Developers',
             position: 'right',
             items: [

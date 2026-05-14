@@ -31,18 +31,17 @@ export default function DocItemContent({children}) {
   const syntheticTitle = useSyntheticTitle();
   const headingClassName = frontMatter.heading_className || null;
   const location = useLocation();
-
   useEffect(() => {
     if (location.hash) {
       const targetId = location.hash.substring(1);
       const decodedTargetId = decodeURI(targetId);
       const targetElement = document.getElementById(decodedTargetId);
-
+      
       if (targetElement) {
         const offset = 160; // 원하는 offset 값 (예: 네비게이션 높이)
         const targetPosition =
-          targetElement.getBoundingClientRect().top + window.scrollY - offset;
-
+        targetElement.getBoundingClientRect().top + window.scrollY - offset;
+        
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth',
@@ -50,7 +49,7 @@ export default function DocItemContent({children}) {
       }
     }
   }, [location.hash]);
-
+  
   return (
     <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
       {syntheticTitle && (
@@ -58,7 +57,7 @@ export default function DocItemContent({children}) {
           <Heading as="h1" className={headingClassName}>{syntheticTitle}</Heading>
         </header>
       )}
-      {frontMatter.isTranslationMissing && (
+      {!location.pathname.includes('/integration/') && frontMatter.isTranslationMissing && (
         <Admonition type="note">
           <b>Not translated</b><br/>
           This page is currently being translated. We will complete the translation as soon as possible.

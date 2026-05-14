@@ -4108,6 +4108,7 @@
     "height": 292
   },
   "/img/bsair-app.png": {
+<<<<<<< HEAD
     "width": 120,
     "height": 120
   },
@@ -4430,6 +4431,10 @@
   "/img/cam-server/vionyx-live-basic.png": {
     "width": 1920,
     "height": 1080
+=======
+    "width": 60,
+    "height": 60
+>>>>>>> origin/integration-genetec
   },
   "/img/camera/change-silicagel-vionyx.png": {
     "width": 800,
@@ -5104,8 +5109,13 @@
     "height": 270
   },
   "/img/cover-device-manager.png": {
+<<<<<<< HEAD
     "width": 120,
     "height": 120
+=======
+    "width": 60,
+    "height": 60
+>>>>>>> origin/integration-genetec
   },
   "/img/default-placeholder-image.webp": {
     "width": 1200,
@@ -5287,7 +5297,7 @@
     "width": 320,
     "height": 240
   },
-  "/img/device/bs2a-administrator-two-step-auth.png": {
+  "/img/device/bs2a-Administrator-two-step-auth.png": {
     "width": 320,
     "height": 240
   },
@@ -13746,6 +13756,1870 @@
   "/img/ico-playstore.png": {
     "width": 120,
     "height": 40
+  },
+  "/img/integration/ccure/adding-devices1.png": {
+    "width": 513,
+    "height": 518
+  },
+  "/img/integration/ccure/adding-devices2.png": {
+    "width": 485,
+    "height": 243
+  },
+  "/img/integration/ccure/adding-devices3.png": {
+    "width": 512,
+    "height": 257
+  },
+  "/img/integration/ccure/adding-devices4.png": {
+    "width": 704,
+    "height": 656
+  },
+  "/img/integration/ccure/adding-devices5.png": {
+    "width": 485,
+    "height": 261
+  },
+  "/img/integration/ccure/adding-devices6.png": {
+    "width": 548,
+    "height": 439
+  },
+  "/img/integration/ccure/allow-sql-authentication1.png": {
+    "width": 232,
+    "height": 471
+  },
+  "/img/integration/ccure/allow-sql-authentication2.png": {
+    "width": 457,
+    "height": 294
+  },
+  "/img/integration/ccure/applying-license-biostar2-settings.png": {
+    "width": 451,
+    "height": 223
+  },
+  "/img/integration/ccure/applying-license-ccure9000-settings.png": {
+    "width": 530,
+    "height": 413
+  },
+  "/img/integration/ccure/applying-license-gui.png": {
+    "width": 454,
+    "height": 269
+  },
+  "/img/integration/ccure/applying-license.png": {
+    "width": 460,
+    "height": 181
+  },
+  "/img/integration/ccure/autoenrollment-kiosk-main.png": {
+    "width": 787,
+    "height": 291
+  },
+  "/img/integration/ccure/autoenrollment-kiosk.png": {
+    "width": 787,
+    "height": 254
+  },
+  "/img/integration/ccure/card-format.png": {
+    "width": 706,
+    "height": 531
+  },
+  "/img/integration/ccure/cloud1.png": {
+    "width": 790,
+    "height": 207
+  },
+  "/img/integration/ccure/cloud2.png": {
+    "width": 790,
+    "height": 339
+  },
+  "/img/integration/ccure/configuration-main.png": {
+    "width": 992,
+    "height": 805
+  },
+  "/img/integration/ccure/delete-credential.png": {
+    "width": 411,
+    "height": 161
+  },
+  "/img/integration/ccure/delete-face.png": {
+    "width": 346,
+    "height": 387
+  },
+  "/img/integration/ccure/delete-fingerprint.png": {
+    "width": 346,
+    "height": 387
+  },
+  "/img/integration/ccure/enrolling-biometrics1.png": {
+    "width": 1068,
+    "height": 609
+  },
+  "/img/integration/ccure/enrolling-biometrics10.png": {
+    "width": 199,
+    "height": 141
+  },
+  "/img/integration/ccure/enrolling-biometrics11.png": {
+    "width": 346,
+    "height": 149
+  },
+  "/img/integration/ccure/enrolling-biometrics12.png": {
+    "width": 346,
+    "height": 387
+  },
+  "/img/integration/ccure/enrolling-biometrics13.png": {
+    "width": 393,
+    "height": 141
+  },
+  "/img/integration/ccure/enrolling-biometrics14.png": {
+    "width": 1598,
+    "height": 381
+  },
+  "/img/integration/ccure/enrolling-biometrics15.png": {
+    "width": 1211,
+    "height": 135
+  },
+  "/img/integration/ccure/enrolling-biometrics16.png": {
+    "width": 363,
+    "height": 150
+  },
+  "/img/integration/ccure/enrolling-biometrics2.png": {
+    "width": 1043,
+    "height": 652
+  },
+  "/img/integration/ccure/enrolling-biometrics3.png": {
+    "width": 1042,
+    "height": 249
+  },
+  "/img/integration/ccure/enrolling-biometrics4.png": {
+    "width": 1029,
+    "height": 495
+  },
+  "/img/integration/ccure/enrolling-biometrics5.png": {
+    "width": 1033,
+    "height": 280
+  },
+  "/img/integration/ccure/enrolling-biometrics6.png": {
+    "width": 1029,
+    "height": 479
+  },
+  "/img/integration/ccure/enrolling-biometrics7.png": {
+    "width": 1039,
+    "height": 281
+  },
+  "/img/integration/ccure/enrolling-biometrics8.png": {
+    "width": 1042,
+    "height": 382
+  },
+  "/img/integration/ccure/enrolling-biometrics9.png": {
+    "width": 1037,
+    "height": 481
+  },
+  "/img/integration/ccure/enrollment-privileges.png": {
+    "width": 940,
+    "height": 757
+  },
+  "/img/integration/ccure/first-run1.png": {
+    "width": 607,
+    "height": 511
+  },
+  "/img/integration/ccure/first-run2.png": {
+    "width": 612,
+    "height": 445
+  },
+  "/img/integration/ccure/first-run3.png": {
+    "width": 569,
+    "height": 580
+  },
+  "/img/integration/ccure/image116 1.png": {
+    "width": 353,
+    "height": 152
+  },
+  "/img/integration/ccure/image124 1.png": {
+    "width": 317,
+    "height": 399
+  },
+  "/img/integration/ccure/image126 1.png": {
+    "width": 492,
+    "height": 255
+  },
+  "/img/integration/ccure/image133 1.png": {
+    "width": 362,
+    "height": 141
+  },
+  "/img/integration/ccure/image134 1.png": {
+    "width": 368,
+    "height": 198
+  },
+  "/img/integration/ccure/image18 1.png": {
+    "width": 496,
+    "height": 384
+  },
+  "/img/integration/ccure/image64 1.png": {
+    "width": 828,
+    "height": 126
+  },
+  "/img/integration/ccure/image65 1.png": {
+    "width": 498,
+    "height": 427
+  },
+  "/img/integration/ccure/install-client3.png": {
+    "width": 463,
+    "height": 293
+  },
+  "/img/integration/ccure/install-client5.png": {
+    "width": 496,
+    "height": 384
+  },
+  "/img/integration/ccure/install-server1.png": {
+    "width": 463,
+    "height": 293
+  },
+  "/img/integration/ccure/install-server2.png": {
+    "width": 463,
+    "height": 293
+  },
+  "/img/integration/ccure/install-server3.png": {
+    "width": 463,
+    "height": 293
+  },
+  "/img/integration/ccure/install-server4.png": {
+    "width": 378,
+    "height": 193
+  },
+  "/img/integration/ccure/install-server5.png": {
+    "width": 496,
+    "height": 384
+  },
+  "/img/integration/ccure/install-server6.png": {
+    "width": 496,
+    "height": 384
+  },
+  "/img/integration/ccure/install-server7.png": {
+    "width": 496,
+    "height": 386
+  },
+  "/img/integration/ccure/install-server8.png": {
+    "width": 496,
+    "height": 384
+  },
+  "/img/integration/ccure/main-ico-configuration.png": {
+    "width": 234,
+    "height": 264
+  },
+  "/img/integration/ccure/main-ico-devices.png": {
+    "width": 234,
+    "height": 264
+  },
+  "/img/integration/ccure/main-ico-pre-enrollment.png": {
+    "width": 234,
+    "height": 262
+  },
+  "/img/integration/ccure/main-ico-users.png": {
+    "width": 234,
+    "height": 264
+  },
+  "/img/integration/ccure/main-menu.png": {
+    "width": 960,
+    "height": 449
+  },
+  "/img/integration/ccure/miscellaneous1.png": {
+    "width": 573,
+    "height": 143
+  },
+  "/img/integration/ccure/miscellaneous2.png": {
+    "width": 755,
+    "height": 468
+  },
+  "/img/integration/ccure/miscellaneous3.png": {
+    "width": 381,
+    "height": 141
+  },
+  "/img/integration/ccure/pre-enrollment-button.png": {
+    "width": 158,
+    "height": 46
+  },
+  "/img/integration/ccure/pre-enrollment1.png": {
+    "width": 368,
+    "height": 198
+  },
+  "/img/integration/ccure/pre-enrollment2.png": {
+    "width": 632,
+    "height": 363
+  },
+  "/img/integration/ccure/pre-enrollment3.png": {
+    "width": 395,
+    "height": 139
+  },
+  "/img/integration/ccure/pre-enrollment4.png": {
+    "width": 150,
+    "height": 189
+  },
+  "/img/integration/ccure/pre-enrollment5.png": {
+    "width": 485,
+    "height": 255
+  },
+  "/img/integration/ccure/pre-enrollment6.png": {
+    "width": 492,
+    "height": 255
+  },
+  "/img/integration/ccure/pre-enrollment7.png": {
+    "width": 346,
+    "height": 387
+  },
+  "/img/integration/ccure/pre-enrollment8.png": {
+    "width": 807,
+    "height": 212
+  },
+  "/img/integration/ccure/profile-image1.png": {
+    "width": 368,
+    "height": 198
+  },
+  "/img/integration/ccure/profile-image2.png": {
+    "width": 621,
+    "height": 182
+  },
+  "/img/integration/ccure/profile-image3.png": {
+    "width": 392,
+    "height": 382
+  },
+  "/img/integration/ccure/scanning-card1.png": {
+    "width": 511,
+    "height": 251
+  },
+  "/img/integration/ccure/scanning-card2.png": {
+    "width": 346,
+    "height": 387
+  },
+  "/img/integration/ccure/scanning-card3.png": {
+    "width": 865,
+    "height": 258
+  },
+  "/img/integration/ccure/scanning-face1.png": {
+    "width": 541,
+    "height": 293
+  },
+  "/img/integration/ccure/scanning-face2.png": {
+    "width": 372,
+    "height": 205
+  },
+  "/img/integration/ccure/scanning-face3.png": {
+    "width": 405,
+    "height": 136
+  },
+  "/img/integration/ccure/scanning-face4.png": {
+    "width": 510,
+    "height": 329
+  },
+  "/img/integration/ccure/scanning-face5.png": {
+    "width": 353,
+    "height": 152
+  },
+  "/img/integration/ccure/scanning-face6.png": {
+    "width": 346,
+    "height": 387
+  },
+  "/img/integration/ccure/scanning-fingerprints1.png": {
+    "width": 503,
+    "height": 208
+  },
+  "/img/integration/ccure/scanning-fingerprints2.png": {
+    "width": 372,
+    "height": 205
+  },
+  "/img/integration/ccure/scanning-fingerprints3.png": {
+    "width": 372,
+    "height": 205
+  },
+  "/img/integration/ccure/scanning-fingerprints4.png": {
+    "width": 305,
+    "height": 79
+  },
+  "/img/integration/ccure/send-by-email-button.png": {
+    "width": 158,
+    "height": 36
+  },
+  "/img/integration/ccure/send-by-email1.png": {
+    "width": 446,
+    "height": 191
+  },
+  "/img/integration/ccure/send-by-email2.png": {
+    "width": 386,
+    "height": 174
+  },
+  "/img/integration/ccure/send-by-email3.png": {
+    "width": 405,
+    "height": 187
+  },
+  "/img/integration/ccure/send-by-email4.png": {
+    "width": 362,
+    "height": 141
+  },
+  "/img/integration/ccure/smtp1.png": {
+    "width": 790,
+    "height": 587
+  },
+  "/img/integration/ccure/smtp2.png": {
+    "width": 790,
+    "height": 539
+  },
+  "/img/integration/ccure/system-settings1.png": {
+    "width": 825,
+    "height": 264
+  },
+  "/img/integration/ccure/system-settings2.png": {
+    "width": 1076,
+    "height": 297
+  },
+  "/img/integration/ccure/system-settings3.png": {
+    "width": 828,
+    "height": 126
+  },
+  "/img/integration/ccure/system-settings4.png": {
+    "width": 498,
+    "height": 427
+  },
+  "/img/integration/ccure/tcp-ip-properties1.png": {
+    "width": 705,
+    "height": 445
+  },
+  "/img/integration/ccure/tcp-ip-properties2.png": {
+    "width": 524,
+    "height": 452
+  },
+  "/img/integration/ccure/upload-from-file-button.png": {
+    "width": 158,
+    "height": 36
+  },
+  "/img/integration/ccure/user-available-pre-enrollment1.png": {
+    "width": 1113,
+    "height": 565
+  },
+  "/img/integration/ccure/user-available-pre-enrollment2.png": {
+    "width": 400,
+    "height": 401
+  },
+  "/img/integration/ccure/user-available-pre-enrollment3.png": {
+    "width": 560,
+    "height": 522
+  },
+  "/img/integration/ccure/users-sync-select-all.png": {
+    "width": 113,
+    "height": 80
+  },
+  "/img/integration/ccure/users-sync-select-page.png": {
+    "width": 129,
+    "height": 80
+  },
+  "/img/integration/ccure/users-sync1.png": {
+    "width": 920,
+    "height": 529
+  },
+  "/img/integration/ccure/users-sync10.png": {
+    "width": 196,
+    "height": 37
+  },
+  "/img/integration/ccure/users-sync2.png": {
+    "width": 163,
+    "height": 128
+  },
+  "/img/integration/ccure/users-sync3.png": {
+    "width": 199,
+    "height": 32
+  },
+  "/img/integration/ccure/users-sync4.png": {
+    "width": 429,
+    "height": 340
+  },
+  "/img/integration/ccure/users-sync5.png": {
+    "width": 410,
+    "height": 304
+  },
+  "/img/integration/ccure/users-sync6.png": {
+    "width": 475,
+    "height": 91
+  },
+  "/img/integration/ccure/users-sync7.png": {
+    "width": 479,
+    "height": 696
+  },
+  "/img/integration/ccure/users-sync8.png": {
+    "width": 445,
+    "height": 440
+  },
+  "/img/integration/ccure/users-sync9.png": {
+    "width": 427,
+    "height": 400
+  },
+  "/img/integration/ccure/verifications-made1.png": {
+    "width": 344,
+    "height": 139
+  },
+  "/img/integration/ccure/verifications-made2.png": {
+    "width": 332,
+    "height": 141
+  },
+  "/img/integration/ccure/verifications-made3.png": {
+    "width": 340,
+    "height": 141
+  },
+  "/img/integration/ccure/verifications-made4.png": {
+    "width": 191,
+    "height": 141
+  },
+  "/img/integration/ccure/verifications-made5.png": {
+    "width": 270,
+    "height": 243
+  },
+  "/img/integration/ccure/verifications-made6.png": {
+    "width": 407,
+    "height": 139
+  },
+  "/img/integration/ccure/verifications-made7.png": {
+    "width": 299,
+    "height": 138
+  },
+  "/img/integration/ccure/verifications-made8.png": {
+    "width": 346,
+    "height": 387
+  },
+  "/img/integration/ccure/verifications-made9.png": {
+    "width": 1052,
+    "height": 286
+  },
+  "/img/integration/ccure/visitor-qr.png": {
+    "width": 997,
+    "height": 284
+  },
+  "/img/integration/gallagher/add-access-group1.png": {
+    "width": 859,
+    "height": 438
+  },
+  "/img/integration/gallagher/add-access-group2.png": {
+    "width": 413,
+    "height": 237
+  },
+  "/img/integration/gallagher/add-access-group3.png": {
+    "width": 1000,
+    "height": 595
+  },
+  "/img/integration/gallagher/add-access-group4.png": {
+    "width": 621,
+    "height": 390
+  },
+  "/img/integration/gallagher/add-access-group5.png": {
+    "width": 621,
+    "height": 392
+  },
+  "/img/integration/gallagher/add-access-group6.png": {
+    "width": 721,
+    "height": 450
+  },
+  "/img/integration/gallagher/biostar2-setup1.png": {
+    "width": 1000,
+    "height": 542
+  },
+  "/img/integration/gallagher/biostar2-setup10.png": {
+    "width": 1000,
+    "height": 309
+  },
+  "/img/integration/gallagher/biostar2-setup11.png": {
+    "width": 1000,
+    "height": 257
+  },
+  "/img/integration/gallagher/biostar2-setup2.png": {
+    "width": 1000,
+    "height": 480
+  },
+  "/img/integration/gallagher/biostar2-setup3.png": {
+    "width": 1000,
+    "height": 385
+  },
+  "/img/integration/gallagher/biostar2-setup4.png": {
+    "width": 1000,
+    "height": 328
+  },
+  "/img/integration/gallagher/biostar2-setup5.png": {
+    "width": 1000,
+    "height": 328
+  },
+  "/img/integration/gallagher/biostar2-setup6.png": {
+    "width": 1000,
+    "height": 321
+  },
+  "/img/integration/gallagher/biostar2-setup7.png": {
+    "width": 916,
+    "height": 160
+  },
+  "/img/integration/gallagher/biostar2-setup8.png": {
+    "width": 1000,
+    "height": 558
+  },
+  "/img/integration/gallagher/biostar2-setup9.png": {
+    "width": 1000,
+    "height": 339
+  },
+  "/img/integration/gallagher/check-api-key1.png": {
+    "width": 500,
+    "height": 275
+  },
+  "/img/integration/gallagher/check-api-key2.png": {
+    "width": 502,
+    "height": 275
+  },
+  "/img/integration/gallagher/check-api-key3.png": {
+    "width": 1000,
+    "height": 556
+  },
+  "/img/integration/gallagher/command-centre1.png": {
+    "width": 470,
+    "height": 283
+  },
+  "/img/integration/gallagher/command-centre10.png": {
+    "width": 612,
+    "height": 327
+  },
+  "/img/integration/gallagher/command-centre11.png": {
+    "width": 1000,
+    "height": 350
+  },
+  "/img/integration/gallagher/command-centre12.png": {
+    "width": 614,
+    "height": 301
+  },
+  "/img/integration/gallagher/command-centre13.png": {
+    "width": 452,
+    "height": 325
+  },
+  "/img/integration/gallagher/command-centre14.png": {
+    "width": 600,
+    "height": 441
+  },
+  "/img/integration/gallagher/command-centre15.png": {
+    "width": 1061,
+    "height": 448
+  },
+  "/img/integration/gallagher/command-centre16.png": {
+    "width": 600,
+    "height": 441
+  },
+  "/img/integration/gallagher/command-centre17.png": {
+    "width": 614,
+    "height": 737
+  },
+  "/img/integration/gallagher/command-centre18.png": {
+    "width": 450,
+    "height": 324
+  },
+  "/img/integration/gallagher/command-centre19.png": {
+    "width": 1082,
+    "height": 409
+  },
+  "/img/integration/gallagher/command-centre2.png": {
+    "width": 470,
+    "height": 324
+  },
+  "/img/integration/gallagher/command-centre20.png": {
+    "width": 592,
+    "height": 410
+  },
+  "/img/integration/gallagher/command-centre21.png": {
+    "width": 797,
+    "height": 494
+  },
+  "/img/integration/gallagher/command-centre22.png": {
+    "width": 863,
+    "height": 413
+  },
+  "/img/integration/gallagher/command-centre23.png": {
+    "width": 592,
+    "height": 409
+  },
+  "/img/integration/gallagher/command-centre3.png": {
+    "width": 997,
+    "height": 218
+  },
+  "/img/integration/gallagher/command-centre4.png": {
+    "width": 614,
+    "height": 106
+  },
+  "/img/integration/gallagher/command-centre5.png": {
+    "width": 626,
+    "height": 157
+  },
+  "/img/integration/gallagher/command-centre6.png": {
+    "width": 795,
+    "height": 758
+  },
+  "/img/integration/gallagher/command-centre7.png": {
+    "width": 614,
+    "height": 304
+  },
+  "/img/integration/gallagher/command-centre8.png": {
+    "width": 452,
+    "height": 325
+  },
+  "/img/integration/gallagher/command-centre9.png": {
+    "width": 575,
+    "height": 329
+  },
+  "/img/integration/gallagher/configuration-client-logon1.png": {
+    "width": 362,
+    "height": 257
+  },
+  "/img/integration/gallagher/configuration-client-logon2.png": {
+    "width": 362,
+    "height": 258
+  },
+  "/img/integration/gallagher/configuration-hw1.png": {
+    "width": 480,
+    "height": 386
+  },
+  "/img/integration/gallagher/configuration-hw10.png": {
+    "width": 732,
+    "height": 363
+  },
+  "/img/integration/gallagher/configuration-hw11.png": {
+    "width": 638,
+    "height": 459
+  },
+  "/img/integration/gallagher/configuration-hw12.png": {
+    "width": 757,
+    "height": 657
+  },
+  "/img/integration/gallagher/configuration-hw13.png": {
+    "width": 758,
+    "height": 658
+  },
+  "/img/integration/gallagher/configuration-hw14.png": {
+    "width": 758,
+    "height": 653
+  },
+  "/img/integration/gallagher/configuration-hw15.png": {
+    "width": 759,
+    "height": 653
+  },
+  "/img/integration/gallagher/configuration-hw16.png": {
+    "width": 716,
+    "height": 520
+  },
+  "/img/integration/gallagher/configuration-hw17.png": {
+    "width": 600,
+    "height": 800
+  },
+  "/img/integration/gallagher/configuration-hw18.png": {
+    "width": 759,
+    "height": 653
+  },
+  "/img/integration/gallagher/configuration-hw19.png": {
+    "width": 473,
+    "height": 409
+  },
+  "/img/integration/gallagher/configuration-hw2.png": {
+    "width": 452,
+    "height": 324
+  },
+  "/img/integration/gallagher/configuration-hw20.png": {
+    "width": 451,
+    "height": 325
+  },
+  "/img/integration/gallagher/configuration-hw21.png": {
+    "width": 593,
+    "height": 457
+  },
+  "/img/integration/gallagher/configuration-hw22.png": {
+    "width": 593,
+    "height": 457
+  },
+  "/img/integration/gallagher/configuration-hw23.png": {
+    "width": 599,
+    "height": 410
+  },
+  "/img/integration/gallagher/configuration-hw24.png": {
+    "width": 758,
+    "height": 653
+  },
+  "/img/integration/gallagher/configuration-hw25.png": {
+    "width": 600,
+    "height": 528
+  },
+  "/img/integration/gallagher/configuration-hw26.png": {
+    "width": 594,
+    "height": 457
+  },
+  "/img/integration/gallagher/configuration-hw27.png": {
+    "width": 637,
+    "height": 458
+  },
+  "/img/integration/gallagher/configuration-hw28.png": {
+    "width": 452,
+    "height": 323
+  },
+  "/img/integration/gallagher/configuration-hw29.png": {
+    "width": 624,
+    "height": 501
+  },
+  "/img/integration/gallagher/configuration-hw3.png": {
+    "width": 602,
+    "height": 465
+  },
+  "/img/integration/gallagher/configuration-hw30.png": {
+    "width": 623,
+    "height": 524
+  },
+  "/img/integration/gallagher/configuration-hw31.png": {
+    "width": 450,
+    "height": 322
+  },
+  "/img/integration/gallagher/configuration-hw32.png": {
+    "width": 624,
+    "height": 524
+  },
+  "/img/integration/gallagher/configuration-hw33.png": {
+    "width": 561,
+    "height": 472
+  },
+  "/img/integration/gallagher/configuration-hw34.png": {
+    "width": 561,
+    "height": 473
+  },
+  "/img/integration/gallagher/configuration-hw35.png": {
+    "width": 561,
+    "height": 473
+  },
+  "/img/integration/gallagher/configuration-hw36.png": {
+    "width": 561,
+    "height": 496
+  },
+  "/img/integration/gallagher/configuration-hw37.png": {
+    "width": 561,
+    "height": 496
+  },
+  "/img/integration/gallagher/configuration-hw38.png": {
+    "width": 562,
+    "height": 497
+  },
+  "/img/integration/gallagher/configuration-hw39.png": {
+    "width": 758,
+    "height": 773
+  },
+  "/img/integration/gallagher/configuration-hw4.png": {
+    "width": 755,
+    "height": 500
+  },
+  "/img/integration/gallagher/configuration-hw40.png": {
+    "width": 618,
+    "height": 752
+  },
+  "/img/integration/gallagher/configuration-hw41.png": {
+    "width": 376,
+    "height": 402
+  },
+  "/img/integration/gallagher/configuration-hw42.png": {
+    "width": 593,
+    "height": 429
+  },
+  "/img/integration/gallagher/configuration-hw43.png": {
+    "width": 660,
+    "height": 539
+  },
+  "/img/integration/gallagher/configuration-hw5.png": {
+    "width": 758,
+    "height": 653
+  },
+  "/img/integration/gallagher/configuration-hw6.png": {
+    "width": 601,
+    "height": 465
+  },
+  "/img/integration/gallagher/configuration-hw7.png": {
+    "width": 341,
+    "height": 272
+  },
+  "/img/integration/gallagher/configuration-hw8.png": {
+    "width": 612,
+    "height": 460
+  },
+  "/img/integration/gallagher/configuration-hw9.png": {
+    "width": 612,
+    "height": 461
+  },
+  "/img/integration/gallagher/create-migration-manually1.png": {
+    "width": 289,
+    "height": 754
+  },
+  "/img/integration/gallagher/create-migration-manually2.png": {
+    "width": 399,
+    "height": 298
+  },
+  "/img/integration/gallagher/create-migration-manually3.png": {
+    "width": 537,
+    "height": 330
+  },
+  "/img/integration/gallagher/create-migration-manually4.png": {
+    "width": 578,
+    "height": 355
+  },
+  "/img/integration/gallagher/create-migration-manually5.png": {
+    "width": 249,
+    "height": 510
+  },
+  "/img/integration/gallagher/create-migration-manually6.png": {
+    "width": 613,
+    "height": 101
+  },
+  "/img/integration/gallagher/create-migration-manually7.png": {
+    "width": 258,
+    "height": 142
+  },
+  "/img/integration/gallagher/default-card-selection1.png": {
+    "width": 920,
+    "height": 415
+  },
+  "/img/integration/gallagher/default-card-selection2.png": {
+    "width": 1000,
+    "height": 291
+  },
+  "/img/integration/gallagher/email-configuration-qr-code1.png": {
+    "width": 1000,
+    "height": 795
+  },
+  "/img/integration/gallagher/email-configuration-qr-code2.png": {
+    "width": 491,
+    "height": 522
+  },
+  "/img/integration/gallagher/email-configuration-qr-code3.png": {
+    "width": 946,
+    "height": 732
+  },
+  "/img/integration/gallagher/enroll-email-qr1.png": {
+    "width": 723,
+    "height": 440
+  },
+  "/img/integration/gallagher/enroll-email-qr10.png": {
+    "width": 836,
+    "height": 434
+  },
+  "/img/integration/gallagher/enroll-email-qr11.png": {
+    "width": 839,
+    "height": 433
+  },
+  "/img/integration/gallagher/enroll-email-qr12.png": {
+    "width": 838,
+    "height": 434
+  },
+  "/img/integration/gallagher/enroll-email-qr13.png": {
+    "width": 838,
+    "height": 435
+  },
+  "/img/integration/gallagher/enroll-email-qr14.png": {
+    "width": 839,
+    "height": 433
+  },
+  "/img/integration/gallagher/enroll-email-qr15.png": {
+    "width": 835,
+    "height": 434
+  },
+  "/img/integration/gallagher/enroll-email-qr2.png": {
+    "width": 969,
+    "height": 675
+  },
+  "/img/integration/gallagher/enroll-email-qr3.png": {
+    "width": 475,
+    "height": 571
+  },
+  "/img/integration/gallagher/enroll-email-qr4.png": {
+    "width": 839,
+    "height": 434
+  },
+  "/img/integration/gallagher/enroll-email-qr5.png": {
+    "width": 416,
+    "height": 238
+  },
+  "/img/integration/gallagher/enroll-email-qr6.png": {
+    "width": 838,
+    "height": 435
+  },
+  "/img/integration/gallagher/enroll-email-qr7.png": {
+    "width": 838,
+    "height": 434
+  },
+  "/img/integration/gallagher/enroll-email-qr8.png": {
+    "width": 1076,
+    "height": 193
+  },
+  "/img/integration/gallagher/enroll-email-qr9.png": {
+    "width": 839,
+    "height": 435
+  },
+  "/img/integration/gallagher/enroll-face-template1.png": {
+    "width": 591,
+    "height": 362
+  },
+  "/img/integration/gallagher/enroll-face-template2.png": {
+    "width": 886,
+    "height": 633
+  },
+  "/img/integration/gallagher/enroll-face-template3.png": {
+    "width": 351,
+    "height": 454
+  },
+  "/img/integration/gallagher/enroll-face-template4.png": {
+    "width": 796,
+    "height": 429
+  },
+  "/img/integration/gallagher/enroll-face-template5.png": {
+    "width": 838,
+    "height": 433
+  },
+  "/img/integration/gallagher/enroll-face-template6.png": {
+    "width": 600,
+    "height": 240
+  },
+  "/img/integration/gallagher/enroll-face-template7.png": {
+    "width": 600,
+    "height": 240
+  },
+  "/img/integration/gallagher/enroll-face-template8.png": {
+    "width": 838,
+    "height": 433
+  },
+  "/img/integration/gallagher/enroll-template.png": {
+    "width": 867,
+    "height": 514
+  },
+  "/img/integration/gallagher/exe-thumbprint-not-generated1.png": {
+    "width": 574,
+    "height": 401
+  },
+  "/img/integration/gallagher/exe-thumbprint-not-generated2.png": {
+    "width": 637,
+    "height": 164
+  },
+  "/img/integration/gallagher/hid-iclass-card1.png": {
+    "width": 814,
+    "height": 401
+  },
+  "/img/integration/gallagher/hid-iclass-card2.png": {
+    "width": 814,
+    "height": 400
+  },
+  "/img/integration/gallagher/hid-iclass-card3.png": {
+    "width": 476,
+    "height": 313
+  },
+  "/img/integration/gallagher/image151 1.png": {
+    "width": 840,
+    "height": 455
+  },
+  "/img/integration/gallagher/image17 10.png": {
+    "width": 886,
+    "height": 633
+  },
+  "/img/integration/gallagher/image170 1.png": {
+    "width": 416,
+    "height": 238
+  },
+  "/img/integration/gallagher/installation-biostar1.png": {
+    "width": 500,
+    "height": 390
+  },
+  "/img/integration/gallagher/installation-biostar2.png": {
+    "width": 500,
+    "height": 388
+  },
+  "/img/integration/gallagher/installation-biostar3.png": {
+    "width": 500,
+    "height": 388
+  },
+  "/img/integration/gallagher/installation-biostar4.png": {
+    "width": 500,
+    "height": 388
+  },
+  "/img/integration/gallagher/installation-biostar5.png": {
+    "width": 500,
+    "height": 386
+  },
+  "/img/integration/gallagher/installation-biostar6.png": {
+    "width": 500,
+    "height": 390
+  },
+  "/img/integration/gallagher/installation-gallagher1.png": {
+    "width": 527,
+    "height": 537
+  },
+  "/img/integration/gallagher/installation-gallagher2.png": {
+    "width": 527,
+    "height": 537
+  },
+  "/img/integration/gallagher/installation-gallagher3.png": {
+    "width": 1046,
+    "height": 622
+  },
+  "/img/integration/gallagher/installation-gallagher4.png": {
+    "width": 527,
+    "height": 537
+  },
+  "/img/integration/gallagher/installation-gallagher5.png": {
+    "width": 527,
+    "height": 537
+  },
+  "/img/integration/gallagher/installation-gallagher6.png": {
+    "width": 527,
+    "height": 536
+  },
+  "/img/integration/gallagher/installation-gallagher7.png": {
+    "width": 527,
+    "height": 538
+  },
+  "/img/integration/gallagher/installation-gallagher8.png": {
+    "width": 527,
+    "height": 537
+  },
+  "/img/integration/gallagher/installation-gallagher9.png": {
+    "width": 527,
+    "height": 536
+  },
+  "/img/integration/gallagher/installation-middleware-prerequisite1.png": {
+    "width": 600,
+    "height": 145
+  },
+  "/img/integration/gallagher/installation-middleware-prerequisite2.png": {
+    "width": 400,
+    "height": 159
+  },
+  "/img/integration/gallagher/installation-middleware-prerequisite3.png": {
+    "width": 500,
+    "height": 388
+  },
+  "/img/integration/gallagher/installation-middleware-prerequisite4.png": {
+    "width": 600,
+    "height": 406
+  },
+  "/img/integration/gallagher/installation-middleware-prerequisite5.png": {
+    "width": 500,
+    "height": 241
+  },
+  "/img/integration/gallagher/installation-middleware-prerequisite6.png": {
+    "width": 500,
+    "height": 409
+  },
+  "/img/integration/gallagher/licensed-devices.png": {
+    "width": 805,
+    "height": 394
+  },
+  "/img/integration/gallagher/login-error-lan-disconnected-ip-changed1.png": {
+    "width": 589,
+    "height": 302
+  },
+  "/img/integration/gallagher/login-error-lan-disconnected-ip-changed2.png": {
+    "width": 439,
+    "height": 138
+  },
+  "/img/integration/gallagher/middleware-lan-disconnected-ip-error1.png": {
+    "width": 519,
+    "height": 256
+  },
+  "/img/integration/gallagher/middleware-lan-disconnected-ip-error2.png": {
+    "width": 565,
+    "height": 280
+  },
+  "/img/integration/gallagher/middleware-lan-disconnected-ip-error3.png": {
+    "width": 572,
+    "height": 287
+  },
+  "/img/integration/gallagher/middleware-multi-server-older-versions1.png": {
+    "width": 584,
+    "height": 299
+  },
+  "/img/integration/gallagher/middleware-multi-server-older-versions2.png": {
+    "width": 593,
+    "height": 109
+  },
+  "/img/integration/gallagher/middleware-port-ip-config-inbound-rules1.png": {
+    "width": 499,
+    "height": 389
+  },
+  "/img/integration/gallagher/middleware-port-ip-config-inbound-rules2.png": {
+    "width": 499,
+    "height": 407
+  },
+  "/img/integration/gallagher/middleware-slow-scan-sync-issue.png": {
+    "width": 577,
+    "height": 330
+  },
+  "/img/integration/gallagher/middleware-uninstall-from-exe1.png": {
+    "width": 513,
+    "height": 346
+  },
+  "/img/integration/gallagher/middleware-uninstall-from-exe2.png": {
+    "width": 375,
+    "height": 153
+  },
+  "/img/integration/gallagher/middleware-uninstall-from-exe3.png": {
+    "width": 587,
+    "height": 312
+  },
+  "/img/integration/gallagher/middleware-uninstall-from-exe4.png": {
+    "width": 328,
+    "height": 147
+  },
+  "/img/integration/gallagher/middleware-uninstall-from-exe5.png": {
+    "width": 376,
+    "height": 140
+  },
+  "/img/integration/gallagher/middleware-uninstall-from-exe6.png": {
+    "width": 375,
+    "height": 146
+  },
+  "/img/integration/gallagher/middleware-uninstall-from-exe7.png": {
+    "width": 612,
+    "height": 211
+  },
+  "/img/integration/gallagher/middleware-uninstall-from-exe8.png": {
+    "width": 375,
+    "height": 158
+  },
+  "/img/integration/gallagher/middleware-upgrade-from-exe1.png": {
+    "width": 490,
+    "height": 398
+  },
+  "/img/integration/gallagher/middleware-upgrade-from-exe2.png": {
+    "width": 490,
+    "height": 401
+  },
+  "/img/integration/gallagher/osdp-connection-diagram.png": {
+    "width": 1000,
+    "height": 408
+  },
+  "/img/integration/gallagher/osdp-reader-connection1.png": {
+    "width": 1000,
+    "height": 69
+  },
+  "/img/integration/gallagher/osdp-reader-connection2.png": {
+    "width": 1000,
+    "height": 220
+  },
+  "/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore1.png": {
+    "width": 262,
+    "height": 410
+  },
+  "/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore2.png": {
+    "width": 515,
+    "height": 350
+  },
+  "/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore3.png": {
+    "width": 515,
+    "height": 339
+  },
+  "/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore4.png": {
+    "width": 515,
+    "height": 383
+  },
+  "/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore5.png": {
+    "width": 515,
+    "height": 224
+  },
+  "/img/integration/gallagher/qr-code-card.png": {
+    "width": 838,
+    "height": 436
+  },
+  "/img/integration/gallagher/setup1-1.png": {
+    "width": 399,
+    "height": 206
+  },
+  "/img/integration/gallagher/setup1-2.png": {
+    "width": 540,
+    "height": 122
+  },
+  "/img/integration/gallagher/setup1-3.png": {
+    "width": 540,
+    "height": 216
+  },
+  "/img/integration/gallagher/setup1-4.png": {
+    "width": 540,
+    "height": 274
+  },
+  "/img/integration/gallagher/setup1-5.png": {
+    "width": 540,
+    "height": 253
+  },
+  "/img/integration/gallagher/setup1-6.png": {
+    "width": 540,
+    "height": 472
+  },
+  "/img/integration/gallagher/setup2-1.png": {
+    "width": 338,
+    "height": 305
+  },
+  "/img/integration/gallagher/setup2-2.png": {
+    "width": 384,
+    "height": 367
+  },
+  "/img/integration/gallagher/setup3-1.png": {
+    "width": 318,
+    "height": 267
+  },
+  "/img/integration/gallagher/setup3-2.png": {
+    "width": 396,
+    "height": 314
+  },
+  "/img/integration/gallagher/setup3-3.png": {
+    "width": 445,
+    "height": 266
+  },
+  "/img/integration/gallagher/setup4-1.png": {
+    "width": 309,
+    "height": 380
+  },
+  "/img/integration/gallagher/setup4-2.png": {
+    "width": 629,
+    "height": 91
+  },
+  "/img/integration/gallagher/setup5-1.png": {
+    "width": 624,
+    "height": 183
+  },
+  "/img/integration/gallagher/setup5-2.png": {
+    "width": 400,
+    "height": 277
+  },
+  "/img/integration/gallagher/smart-card1.png": {
+    "width": 839,
+    "height": 434
+  },
+  "/img/integration/gallagher/smart-card2.png": {
+    "width": 838,
+    "height": 434
+  },
+  "/img/integration/gallagher/smart-card3.png": {
+    "width": 838,
+    "height": 434
+  },
+  "/img/integration/gallagher/smart-card4.png": {
+    "width": 812,
+    "height": 400
+  },
+  "/img/integration/gallagher/smart-card5.png": {
+    "width": 741,
+    "height": 215
+  },
+  "/img/integration/gallagher/smart-card6.png": {
+    "width": 736,
+    "height": 223
+  },
+  "/img/integration/gallagher/smart-card7.png": {
+    "width": 898,
+    "height": 411
+  },
+  "/img/integration/gallagher/smart-card8.png": {
+    "width": 840,
+    "height": 400
+  },
+  "/img/integration/gallagher/smart-card9.png": {
+    "width": 1000,
+    "height": 292
+  },
+  "/img/integration/gallagher/ssl-certificate-generation1.png": {
+    "width": 520,
+    "height": 368
+  },
+  "/img/integration/gallagher/ssl-certificate-generation10.png": {
+    "width": 380,
+    "height": 368
+  },
+  "/img/integration/gallagher/ssl-certificate-generation11.png": {
+    "width": 380,
+    "height": 370
+  },
+  "/img/integration/gallagher/ssl-certificate-generation12.png": {
+    "width": 380,
+    "height": 363
+  },
+  "/img/integration/gallagher/ssl-certificate-generation13.png": {
+    "width": 380,
+    "height": 363
+  },
+  "/img/integration/gallagher/ssl-certificate-generation14.png": {
+    "width": 380,
+    "height": 365
+  },
+  "/img/integration/gallagher/ssl-certificate-generation15.png": {
+    "width": 380,
+    "height": 370
+  },
+  "/img/integration/gallagher/ssl-certificate-generation16.png": {
+    "width": 380,
+    "height": 370
+  },
+  "/img/integration/gallagher/ssl-certificate-generation17.png": {
+    "width": 380,
+    "height": 363
+  },
+  "/img/integration/gallagher/ssl-certificate-generation18.png": {
+    "width": 380,
+    "height": 351
+  },
+  "/img/integration/gallagher/ssl-certificate-generation19.png": {
+    "width": 693,
+    "height": 185
+  },
+  "/img/integration/gallagher/ssl-certificate-generation2.png": {
+    "width": 529,
+    "height": 393
+  },
+  "/img/integration/gallagher/ssl-certificate-generation20.png": {
+    "width": 704,
+    "height": 231
+  },
+  "/img/integration/gallagher/ssl-certificate-generation21.png": {
+    "width": 608,
+    "height": 299
+  },
+  "/img/integration/gallagher/ssl-certificate-generation3.png": {
+    "width": 596,
+    "height": 420
+  },
+  "/img/integration/gallagher/ssl-certificate-generation4.png": {
+    "width": 597,
+    "height": 356
+  },
+  "/img/integration/gallagher/ssl-certificate-generation5.png": {
+    "width": 578,
+    "height": 271
+  },
+  "/img/integration/gallagher/ssl-certificate-generation6.png": {
+    "width": 405,
+    "height": 516
+  },
+  "/img/integration/gallagher/ssl-certificate-generation7.png": {
+    "width": 380,
+    "height": 373
+  },
+  "/img/integration/gallagher/ssl-certificate-generation8.png": {
+    "width": 380,
+    "height": 373
+  },
+  "/img/integration/gallagher/ssl-certificate-generation9.png": {
+    "width": 380,
+    "height": 368
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher1.png": {
+    "width": 1011,
+    "height": 301
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher10.png": {
+    "width": 400,
+    "height": 320
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher11.png": {
+    "width": 840,
+    "height": 455
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher12.png": {
+    "width": 400,
+    "height": 146
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher13.png": {
+    "width": 400,
+    "height": 196
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher14.png": {
+    "width": 838,
+    "height": 431
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher15.png": {
+    "width": 835,
+    "height": 420
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher16.png": {
+    "width": 973,
+    "height": 207
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher17.png": {
+    "width": 680,
+    "height": 500
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher18.png": {
+    "width": 835,
+    "height": 420
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher19.png": {
+    "width": 838,
+    "height": 434
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher2.png": {
+    "width": 1000,
+    "height": 557
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher20.png": {
+    "width": 840,
+    "height": 433
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher21.png": {
+    "width": 838,
+    "height": 434
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher22.png": {
+    "width": 839,
+    "height": 434
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher23.png": {
+    "width": 839,
+    "height": 434
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher24.png": {
+    "width": 923,
+    "height": 473
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher25.png": {
+    "width": 926,
+    "height": 416
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher26.png": {
+    "width": 839,
+    "height": 434
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher27.png": {
+    "width": 839,
+    "height": 434
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher28.png": {
+    "width": 922,
+    "height": 469
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher29.png": {
+    "width": 839,
+    "height": 421
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher3.png": {
+    "width": 402,
+    "height": 352
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher30.png": {
+    "width": 835,
+    "height": 434
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher4.png": {
+    "width": 744,
+    "height": 537
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher5.png": {
+    "width": 603,
+    "height": 560
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher6.png": {
+    "width": 450,
+    "height": 410
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher7.png": {
+    "width": 721,
+    "height": 278
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher8.png": {
+    "width": 1000,
+    "height": 539
+  },
+  "/img/integration/gallagher/suprema-integration-gallagher9.png": {
+    "width": 400,
+    "height": 472
+  },
+  "/img/integration/gallagher/uninstall-postgresql14-after-upgrade-to-16-1.png": {
+    "width": 584,
+    "height": 372
+  },
+  "/img/integration/gallagher/uninstall-postgresql14-after-upgrade-to-16-2.png": {
+    "width": 312,
+    "height": 319
+  },
+  "/img/integration/gallagher/uninstall-postgresql14-after-upgrade-to-16-3.png": {
+    "width": 459,
+    "height": 106
+  },
+  "/img/integration/gallagher/wiegand-connection-diagram.png": {
+    "width": 989,
+    "height": 1040
+  },
+  "/img/integration/gallagher/wiegand-reader-connection1.png": {
+    "width": 1000,
+    "height": 224
+  },
+  "/img/integration/gallagher/wiegand-reader-connection2.png": {
+    "width": 1000,
+    "height": 543
+  },
+  "/img/integration/gallagher/wiegand-reader-connection3.png": {
+    "width": 1000,
+    "height": 538
+  },
+  "/img/integration/gallagher/wiegand-reader-connection4.png": {
+    "width": 1000,
+    "height": 202
+  },
+  "/img/integration/genetec/access-control-manage-suprema-devices1.png": {
+    "width": 800,
+    "height": 183
+  },
+  "/img/integration/genetec/advanced-search-custom-fields1.png": {
+    "width": 503,
+    "height": 202
+  },
+  "/img/integration/genetec/advanced-search-custom-fields2.png": {
+    "width": 414,
+    "height": 407
+  },
+  "/img/integration/genetec/advanced-search.png": {
+    "width": 566,
+    "height": 358
+  },
+  "/img/integration/genetec/area-view-hardware.png": {
+    "width": 966,
+    "height": 606
+  },
+  "/img/integration/genetec/card-enrollment-add-credential1.png": {
+    "width": 850,
+    "height": 598
+  },
+  "/img/integration/genetec/card-enrollment-add-credential2.png": {
+    "width": 850,
+    "height": 660
+  },
+  "/img/integration/genetec/card-enrollment-add-credential3.png": {
+    "width": 850,
+    "height": 551
+  },
+  "/img/integration/genetec/card-enrollment.png": {
+    "width": 1000,
+    "height": 241
+  },
+  "/img/integration/genetec/config-tool-add-plugin.png": {
+    "width": 283,
+    "height": 187
+  },
+  "/img/integration/genetec/config-tool-device-plugin1.png": {
+    "width": 750,
+    "height": 550
+  },
+  "/img/integration/genetec/config-tool-device-plugin2.png": {
+    "width": 750,
+    "height": 550
+  },
+  "/img/integration/genetec/config-tool-device-plugin3.png": {
+    "width": 750,
+    "height": 550
+  },
+  "/img/integration/genetec/config-tool-extractor-plugin1.png": {
+    "width": 750,
+    "height": 550
+  },
+  "/img/integration/genetec/config-tool-extractor-plugin2.png": {
+    "width": 750,
+    "height": 550
+  },
+  "/img/integration/genetec/config-tool-extractor-plugin3.png": {
+    "width": 750,
+    "height": 550
+  },
+  "/img/integration/genetec/config-tool-plugin.png": {
+    "width": 175,
+    "height": 281
+  },
+  "/img/integration/genetec/config-tool-successful.png": {
+    "width": 750,
+    "height": 550
+  },
+  "/img/integration/genetec/config-tool-tasks-access-control.png": {
+    "width": 892,
+    "height": 217
+  },
+  "/img/integration/genetec/config-tool-tasks-area-view.png": {
+    "width": 892,
+    "height": 217
+  },
+  "/img/integration/genetec/config-tool-tasks-plugins.png": {
+    "width": 1000,
+    "height": 150
+  },
+  "/img/integration/genetec/config-tool.png": {
+    "width": 60,
+    "height": 59
+  },
+  "/img/integration/genetec/database-size-requirements.png": {
+    "width": 552,
+    "height": 61
+  },
+  "/img/integration/genetec/device-management1.png": {
+    "width": 532,
+    "height": 59
+  },
+  "/img/integration/genetec/device-management2.png": {
+    "width": 800,
+    "height": 546
+  },
+  "/img/integration/genetec/device-management3.png": {
+    "width": 1000,
+    "height": 500
+  },
+  "/img/integration/genetec/device-settings-advanced.png": {
+    "width": 849,
+    "height": 847
+  },
+  "/img/integration/genetec/device-settings-authentication1.png": {
+    "width": 1000,
+    "height": 643
+  },
+  "/img/integration/genetec/device-settings-authentication2.png": {
+    "width": 800,
+    "height": 510
+  },
+  "/img/integration/genetec/device-settings-information.png": {
+    "width": 751,
+    "height": 447
+  },
+  "/img/integration/genetec/device-settings-intercom.png": {
+    "width": 844,
+    "height": 794
+  },
+  "/img/integration/genetec/device-settings-mask.png": {
+    "width": 517,
+    "height": 279
+  },
+  "/img/integration/genetec/device-settings-network.png": {
+    "width": 751,
+    "height": 470
+  },
+  "/img/integration/genetec/device-sync-information1.png": {
+    "width": 535,
+    "height": 60
+  },
+  "/img/integration/genetec/device-sync-information2.png": {
+    "width": 1000,
+    "height": 156
+  },
+  "/img/integration/genetec/device-sync-information3.png": {
+    "width": 1000,
+    "height": 153
+  },
+  "/img/integration/genetec/enroll-from-device1.png": {
+    "width": 850,
+    "height": 646
+  },
+  "/img/integration/genetec/enroll-from-device2.png": {
+    "width": 1000,
+    "height": 586
+  },
+  "/img/integration/genetec/enroll-from-device3.png": {
+    "width": 799,
+    "height": 530
+  },
+  "/img/integration/genetec/enroll-from-device4.png": {
+    "width": 799,
+    "height": 530
+  },
+  "/img/integration/genetec/enroll-from-device5.png": {
+    "width": 799,
+    "height": 530
+  },
+  "/img/integration/genetec/face-enrollment.png": {
+    "width": 1093,
+    "height": 484
+  },
+  "/img/integration/genetec/global-settings1.png": {
+    "width": 800,
+    "height": 231
+  },
+  "/img/integration/genetec/global-settings2.png": {
+    "width": 800,
+    "height": 415
+  },
+  "/img/integration/genetec/image38 1.png": {
+    "width": 750,
+    "height": 550
+  },
+  "/img/integration/genetec/manage-suprema-devices2.png": {
+    "width": 800,
+    "height": 313
+  },
+  "/img/integration/genetec/manage-suprema-devices3.png": {
+    "width": 800,
+    "height": 252
+  },
+  "/img/integration/genetec/manage-suprema-devices4.png": {
+    "width": 500,
+    "height": 450
+  },
+  "/img/integration/genetec/new-ico.png": {
+    "width": 118,
+    "height": 40
+  },
+  "/img/integration/genetec/plugin-installation-cmd.png": {
+    "width": 505,
+    "height": 292
+  },
+  "/img/integration/genetec/plugin-installation-setup.png": {
+    "width": 409,
+    "height": 68
+  },
+  "/img/integration/genetec/plugin-installation1.png": {
+    "width": 499,
+    "height": 409
+  },
+  "/img/integration/genetec/plugin-installation2.png": {
+    "width": 499,
+    "height": 409
+  },
+  "/img/integration/genetec/plugin-installation3.png": {
+    "width": 499,
+    "height": 409
+  },
+  "/img/integration/genetec/plugin-installation4.png": {
+    "width": 499,
+    "height": 409
+  },
+  "/img/integration/genetec/plugin-installation5.png": {
+    "width": 497,
+    "height": 382
+  },
+  "/img/integration/genetec/plugin-installation6.png": {
+    "width": 495,
+    "height": 380
+  },
+  "/img/integration/genetec/plugin-installation7.png": {
+    "width": 496,
+    "height": 403
+  },
+  "/img/integration/genetec/profile-image-quality-setting.png": {
+    "width": 655,
+    "height": 458
+  },
+  "/img/integration/genetec/Rectangle 10 (Stroke).png": {
+    "width": 97,
+    "height": 21
+  },
+  "/img/integration/genetec/rio-protocol-hardware.png": {
+    "width": 906,
+    "height": 246
+  },
+  "/img/integration/genetec/rio-protocol-login-successful.png": {
+    "width": 400,
+    "height": 138
+  },
+  "/img/integration/genetec/rio-protocol-login.png": {
+    "width": 300,
+    "height": 192
+  },
+  "/img/integration/genetec/suprema-device-plugin-settings.png": {
+    "width": 248,
+    "height": 208
+  },
+  "/img/integration/genetec/suprema-device-plugin.png": {
+    "width": 254,
+    "height": 188
+  },
+  "/img/menus/ico-facial-pre-enrollment.png": {
+    "width": 191,
+    "height": 38
+  },
+  "/img/menus/ico-send-pre-enrollment-link.png": {
+    "width": 188,
+    "height": 31
+  },
+  "/img/menus/ico-sync.png": {
+    "width": 79,
+    "height": 38
+  },
+  "/img/menus/ico-system-settings.png": {
+    "width": 134,
+    "height": 24
   },
   "/img/monitoring-door-camera-control-open-video.png": {
     "width": 1200,
