@@ -20,9 +20,9 @@ export default function Redirect2Product() {
     switch (product) {
         case 'bs3':
             return <Redirect to={useBaseUrl(`/device/biostation_3`)} />;
-        case 'bs3m':
+        //case 'bs3m':
             // 외부 사이트로 리다이렉트 예시
-            return redirectToExternal('https://download.supremainc.com/download-center/pages/login.asp');
+            //return redirectToExternal('https://download.supremainc.com/download-center/pages/login.asp');
         default:
             return <Redirect to={useBaseUrl(`/`)} />;
     }
