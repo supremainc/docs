@@ -153,6 +153,7 @@ export function BiometricReader({ productLinks: productLinksProp }) {
         id: "externalLinks.BioStation3Max.desc",
         message: "AI 기반 얼굴/지문 멀티인증 단말기"
       })}`,
+      tags: ['AI', 'Face', 'Fingerprint', 'RTSP', 'Touch Screen', 'QR/Barcode']
     },
     {
       title: 'BioEntry W3',
