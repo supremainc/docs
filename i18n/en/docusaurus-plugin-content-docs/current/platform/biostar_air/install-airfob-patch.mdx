@@ -1,20 +1,22 @@
 ---
-id: install-airfob-patch-register-device
-title: Install the Airfob Patch and Register a Device
-description: This guide explains how to install the Airfob Patch and register a device in the BioStar Air app.
+id: install-airfob-patch
+title: Install Airfob Patch
+description: This guide explains how to install Airfob Patch.
 keywords:
   - Airfob Patch
   - Install
   - Register Device
 ---
 
-This guide explains how to install the Airfob Patch and register a device in the BioStar Air app. The Airfob Patch upgrades an existing access control system to work with BioStar Air mobile credentials.
+This guide explains how to install Airfob Patch. The Airfob Patch upgrades an existing access control system to work with BioStar Air mobile credentials.
 
 :::info
 
 * Airfob Patch is compatible with MIFARE 1K technology but are not compatible with 125 kHz low-frequency readers or locks.
 
 * Airfob Patch authenticate encrypted Bluetooth BioStar Air credentials from a mobile device and operate by emulating a MIFARE RFID signal. They attach to readers and locks with tape and require no wiring.
+
+* For more information on how to register an Airfob Patch in the BioStar Air app, see <DocLink docId='platform/biostar_air/configuring-the-airfob-patch-and-tag' />.
 
 :::
 
@@ -99,37 +101,3 @@ If the Airfob Patch LED blinks red, adjust the patch position.
 * The operating range of the Airfob Patch may be small or large depending on the RF signal strength of the access control reader and the position and size of the RF coil.
 
 </details>
-
-## Register the Airfob Patch in the BioStar Air app
-
-### Before you start
-
-* Install the BioStar Air app on your mobile device. Install the mobile app through the following link.
-
-  * [iOS](https://apps.apple.com/us/app/airfob-pro/id1659959609)
-
-  * [Android](https://play.google.com/store/apps/details?id=com.mocainc.afs2pro)
-
-* Log in using the same ID and password you use for the BioStar Air admin portal.
-
-* Make sure <Cmd>BLE Mode</Cmd> is enabled in the BioStar Air mobile app.
-
-:::info
-
-For more information on using the BioStar Air mobile app, see <DocLink docId='platform/biostar_air/managing-sites-with-app' />.
-
-:::
-
-### Register Airfob Patch
-
-1. Open the BioStar Air app on your mobile device and log in.
-
-2. On the BioStar Air home screen, tap <Cmd sid='site_setting_tab_management' product='air' /> at the bottom.
-
-3. Bring your mobile device within 10 cm of the Airfob Patch, then tap the <IcAdd /> button in the upper-right corner of the screen.
-
-4. In the device search screen, tap <Cmd sid="button.register" product="2" /> for Airfob Patch to register.
-
-5. When the device registration window appears, tap <Cmd sid="device_btn_ok" product="air" />.
-
-Return to the device list and confirm the added Airfob Patch.
