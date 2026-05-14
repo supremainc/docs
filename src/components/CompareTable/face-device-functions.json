@@ -6,7 +6,8 @@
     "FaceLite": true,
     "FaceStation F2": true,
     "BioStation 3": true,
-    "BioEntry W3": true
+    "BioEntry W3": true,
+    "BioStation 3 Max": true
   },
   {
     "category": "credential",
@@ -15,7 +16,8 @@
     "FaceLite": false,
     "FaceStation F2": "🔶",
     "BioStation 3": false,
-    "BioEntry W3": false
+    "BioEntry W3": false,
+    "BioStation 3 Max": "🔶"
   },
   {
     "category": "credential",
@@ -24,7 +26,8 @@
     "FaceLite": true,
     "FaceStation F2": true,
     "BioStation 3": true,
-    "BioEntry W3": true
+    "BioEntry W3": true,
+    "BioStation 3 Max": true
   },
   {
     "category": "credential",
@@ -33,7 +36,8 @@
     "FaceLite": true,
     "FaceStation F2": true,
     "BioStation 3": true,
-    "BioEntry W3": true
+    "BioEntry W3": true,
+    "BioStation 3 Max": true
   },
   {
     "category": "credential",
@@ -42,7 +46,8 @@
     "FaceLite": true,
     "FaceStation F2": true,
     "BioStation 3": true,
-    "BioEntry W3": false
+    "BioEntry W3": false,
+    "BioStation 3 Max": true
   },
   {
     "category": "credential",
@@ -51,7 +56,8 @@
     "FaceLite": false,
     "FaceStation F2": false,
     "BioStation 3": true,
-    "BioEntry W3": false
+    "BioEntry W3": false,
+    "BioStation 3 Max": true
   },
   {
     "category": "credential",
@@ -60,7 +66,8 @@
     "FaceLite": false,
     "FaceStation F2": false,
     "BioStation 3": true,
-    "BioEntry W3": false
+    "BioEntry W3": false,
+    "BioStation 3 Max": true
   },
   {
     "category": "basic",
@@ -69,7 +76,8 @@
     "FaceLite": false,
     "FaceStation F2": true,
     "BioStation 3": true,
-    "BioEntry W3": true
+    "BioEntry W3": true,
+    "BioStation 3 Max": true
   },
   {
     "category": "basic",
@@ -78,7 +86,8 @@
     "FaceLite": false,
     "FaceStation F2": false,
     "BioStation 3": true,
-    "BioEntry W3": true
+    "BioEntry W3": true,
+    "BioStation 3 Max": true
   },
   {
     "category": "basic",
@@ -87,7 +96,8 @@
     "FaceLite": true,
     "FaceStation F2": true,
     "BioStation 3": true,
-    "BioEntry W3": true
+    "BioEntry W3": true,
+    "BioStation 3 Max": true
   },
   {
     "category": "basic",
@@ -96,7 +106,8 @@
     "FaceLite": true,
     "FaceStation F2": true,
     "BioStation 3": true,
-    "BioEntry W3": true
+    "BioEntry W3": true,
+    "BioStation 3 Max": true
   },
   {
     "category": "basic",
@@ -105,7 +116,8 @@
     "FaceLite": true,
     "FaceStation F2": true,
     "BioStation 3": true,
-    "BioEntry W3": false
+    "BioEntry W3": false,
+    "BioStation 3 Max": true
   },
   {
     "category": "basic",
@@ -114,7 +126,8 @@
     "FaceLite": true,
     "FaceStation F2": true,
     "BioStation 3": true,
-    "BioEntry W3": true
+    "BioEntry W3": true,
+    "BioStation 3 Max": true
   },
   {
     "category": "basic",
@@ -123,7 +136,8 @@
     "FaceLite": false,
     "FaceStation F2": false,
     "BioStation 3": "🔶",
-    "BioEntry W3": false
+    "BioEntry W3": false,
+    "BioStation 3 Max": false
   },
   {
     "category": "basic",
@@ -132,7 +146,8 @@
     "FaceLite": true,
     "FaceStation F2": true,
     "BioStation 3": true,
-    "BioEntry W3": true
+    "BioEntry W3": true,
+    "BioStation 3 Max": true
   },
   {
     "category": "basic",
@@ -141,7 +156,8 @@
     "FaceLite": true,
     "FaceStation F2": true,
     "BioStation 3": true,
-    "BioEntry W3": true
+    "BioEntry W3": true,
+    "BioStation 3 Max": true
   },
   {
     "category": "basic",
@@ -150,7 +166,8 @@
     "FaceLite": true,
     "FaceStation F2": true,
     "BioStation 3": true,
-    "BioEntry W3": true
+    "BioEntry W3": true,
+    "BioStation 3 Max": true
   },
   {
     "category": "advanced",
@@ -159,7 +176,8 @@
     "FaceLite": false,
     "FaceStation F2": true,
     "BioStation 3": true,
-    "BioEntry W3": true
+    "BioEntry W3": true,
+    "BioStation 3 Max": true
   },
   {
     "category": "advanced",
@@ -168,7 +186,8 @@
     "FaceLite": false,
     "FaceStation F2": "🔶",
     "BioStation 3": false,
-    "BioEntry W3": false
+    "BioEntry W3": false,
+    "BioStation 3 Max": "🔶"
   },
   {
     "category": "advanced",
@@ -177,7 +196,8 @@
     "FaceLite": true,
     "FaceStation F2": true,
     "BioStation 3": true,
-    "BioEntry W3": true
+    "BioEntry W3": true,
+    "BioStation 3 Max": true
   },
   {
     "category": "advanced",
@@ -186,7 +206,8 @@
     "FaceLite": true,
     "FaceStation F2": true,
     "BioStation 3": true,
-    "BioEntry W3": true
+    "BioEntry W3": true,
+    "BioStation 3 Max": true
   },
   {
     "category": "advanced",
@@ -195,7 +216,8 @@
     "FaceLite": false,
     "FaceStation F2": false,
     "BioStation 3": true,
-    "BioEntry W3": false
+    "BioEntry W3": false,
+    "BioStation 3 Max": true
   },
   {
     "category": "advanced",
@@ -204,7 +226,8 @@
     "FaceLite": false,
     "FaceStation F2": false,
     "BioStation 3": "🔶",
-    "BioEntry W3": "🔶"
+    "BioEntry W3": "🔶",
+    "BioStation 3 Max": "🔶"
   },
   {
     "category": "advanced",
@@ -213,7 +236,8 @@
     "FaceLite": false,
     "FaceStation F2": false,
     "BioStation 3": false,
-    "BioEntry W3": true
+    "BioEntry W3": true,
+    "BioStation 3 Max": false
   },
   {
     "category": "advanced",
@@ -222,7 +246,8 @@
     "FaceLite": false,
     "FaceStation F2": false,
     "BioStation 3": false,
-    "BioEntry W3": false
+    "BioEntry W3": false,
+    "BioStation 3 Max": false
   },
   {
     "category": "advanced",
@@ -231,6 +256,7 @@
     "FaceLite": true,
     "FaceStation F2": true,
     "BioStation 3": true,
-    "BioEntry W3": true
+    "BioEntry W3": true,
+    "BioStation 3 Max": true
   }
 ]
