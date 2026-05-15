@@ -379,6 +379,26 @@
               }
             }
           }
+        },
+        "alarm_input_vih": {
+          "label": "알람 입력 VIH",
+          "label_id": "specs.power.alarm_input_vih",
+          "value": {
+            "ko": [ "최소: 3 V", "최대: 5 V" ],
+            "en": [ "Min.: 3 V", "Max.: 5 V" ],
+            "es": [ "Mín.: 3 V", "Máx.: 5 V" ],
+            "ja": [ "最小：3 V", "最大：5 V" ]
+          }
+        },
+        "alarm_input_vil": {
+          "label": "알람 입력 VIL",
+          "label_id": "specs.power.alarm_input_vil",
+          "value": {
+            "ko": "최대: 1 V",
+            "en": "Max.: 1 V",
+            "es": "Máx.: 1 V",
+            "ja": "最大：1 V"
+          }
         }
       }
     }

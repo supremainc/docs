@@ -743,11 +743,17 @@
   "specs.power.switch_input_vih": {
     "message": "스위치 입력 VIH"
   },
+  "specs.power.alarm_input_vih": {
+    "message": "알람 입력 VIH"
+  },
   "specs.power.led_beep_input_vih": {
     "message": "LED, Beep 입력 VIH"
   },
   "specs.power.switch_input_vil": {
     "message": "스위치 입력 VIL"
+  },
+  "specs.power.alarm_input_vil": {
+    "message": "알람 입력 VIL"
   },
   "specs.power.led_beep_input_vil": {
     "message": "LED, Beep 입력 VIL"
