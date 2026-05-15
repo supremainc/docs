@@ -2,14 +2,7 @@
 id: xpd2-settings
 title: Configurar XPass D2
 description: Configura ajustes para aplicar a XPass D2 como plantilla y aplícalos directamente a dispositivos individuales.
-keywords:
-  - XPass D2
-  - Plantilla
-  - Búsqueda de dispositivos
-  - Conexión de dispositivos
-  - Actualización de firmware
-  - Reiniciar dispositivo
-  - Contraseña de administrador
+keywords: [ XPass D2, Plantilla, Búsqueda de dispositivos, Conexión de dispositivos, Actualización de firmware, Reiniciar dispositivo, Contraseña de administrador ]
 ---
 
 Configura ajustes para aplicar a XPass D2 como plantilla y aplícalos directamente a dispositivos individuales. Aplica los ajustes mucho más rápido que al acceder al programa de gestión en un PC o usar tarjetas de comando.
@@ -146,6 +139,8 @@ Cuando se establece en <Cmd sid='ui_034' product='dev' />, los datos de la tarje
 
   * <Cmd sid='ui_222' product='dev' />: Configura el tipo de cifrado en DES/3DES o AES.
 
+  * <Cmd>Enforce EV2/EV3 Secure Messaging</Cmd>: Al habilitar esta opción, se puede forzar el uso de mensajería segura al autenticarse en el dispositivo con tarjetas DESFire EV2 y EV3. Solo puede activarse cuando <Cmd sid='ui_222' product='dev' /> está configurado como AES.
+
 * <Cmd sid='ui_202' product='dev' />: Configure el orden de bytes para la salida de tarjeta inteligente.
 
 :::info
@@ -195,6 +190,8 @@ Cuando se establece en <Cmd sid='ui_034' product='dev' />, los datos de la tarje
   * <Cmd sid='ui_145' product='dev' />: Configure el punto de inicio para leer el número de tarjeta.
 
   * <Cmd sid='ui_110' product='dev' />: Configure el tamaño de los datos que se leerán de la tarjeta (si los valores establecidos de <Cmd sid='ui_087' product='dev' /> y <Cmd sid='ui_151' product='dev' /> son iguales a los de la tarjeta).
+
+  * <Cmd>Enforce EV2/EV3 Secure Messaging</Cmd>: Al habilitar esta opción, se puede forzar el uso de mensajería segura al autenticarse en el dispositivo con tarjetas DESFire EV2 y EV3. Solo puede activarse cuando <Cmd sid='ui_222' product='dev' /> está configurado como AES.
 
 * <Cmd sid='ui_146' product='dev' />: Configure el orden de bytes para la salida de tarjeta inteligente.
 
