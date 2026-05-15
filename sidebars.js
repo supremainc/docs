@@ -139,6 +139,24 @@ function createSidebars(preview) {
       ]
     }
   ],
+  biostarx_mobile: [
+    {
+      type: 'category',
+      label: 'BioStar X 모바일',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'platform/biostar_x_mobile/index',
+      },
+      items: [
+        'platform/biostar_x_mobile/before-you-start',
+        'platform/biostar_x_mobile/install-mobile-app',
+        'platform/biostar_x_mobile/app-settings',
+      ]
+    }
+  ],
   biostar_air: [
     {
       type: 'category',

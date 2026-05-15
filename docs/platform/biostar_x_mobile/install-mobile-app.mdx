@@ -1,0 +1,102 @@
+---
+id: install-mobile-app
+title: 설치 및 시작하기
+description: BioStar X 모바일 앱을 iOS, 안드로이드에서 다운로드하고 서버와 연결하는 방법을 단계별로 안내합니다.
+keywords: [BioStar X, 모바일, 설치, 연결, 다운로드, iOS, 안드로이드]
+---
+
+BioStar X 모바일 앱은 iOS와 안드로이드에서 사용할 수 있습니다. 
+안내에 따라 앱을 설치한 후 BioStar X 서버에 연결하세요.
+
+## BioStar X 모바일 앱 다운로드
+
+다음 제공하는 링크 또는 QR 코드를 통해 앱을 다운로드하세요.
+
+<div className='table--fixed'>
+
+| 플랫폼 | 다운로드 링크 | QR 코드 |
+| :--: | :--: | :--: |
+| **iOS** | [App Store](https://apps.apple.com/app/biostar-x-mobile/id6741415253) | ![iOS QR Code](/img/mobile/bsx-appstore-qr-code.png) |
+| **안드로이드** | [Google Play](https://play.google.com/store/apps/details?id=com.suprema.biostarmobile) | ![Android QR Code](/img/mobile/bsx-playstore-qr-code.png) |
+
+</div>
+
+## 앱 시작 및 초기 설정
+
+앱을 시작하면 BioStar X 서버 연결을 위한 정보를 입력하는 화면이 표시됩니다.
+
+<Columns>
+
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-init-setting.png' alone />
+
+</Column>
+<Column className='padding--l20'>
+
+* <Cmd>BioStar X Server Address</Cmd>: BioStar X 서버의 IP 주소 또는 도메인 주소를 입력하세요.
+
+* <Cmd>Port</Cmd>: BioStar X 서버의 포트 번호를 입력하세요. 기본값은 `443`입니다.
+
+* <Cmd>ID</Cmd> / <Cmd>Password</Cmd>: BioStar X 서버에 로그인하기 위한 관리자 등급의 아이디와 비밀번호를 입력하세요.
+
+필요한 정보를 모두 입력한 후 로그인하려면 <Cmd>Login</Cmd> 버튼을 탭하세요.
+
+:::info
+
+* BioStar X 서버의 IP 주소, 포트 번호를 확인하려면 <DocLink docId='platform/biostar_x/settings-server-server' />를 참고하세요.
+
+* 관리자 아이디와 비밀번호를 입력 필드에 저장하려면 <Cmd>Remember username and password</Cmd> 옵션의 체크박스를 선택하세요. 다음 로그인 시 입력한 아이디와 비밀번호가 자동으로 채워집니다.
+
+:::
+
+</Column>
+</Columns>
+
+
+## 연결 문제 해결
+
+로그인에 실패했다면 아래 사항을 확인하세요.
+
+* BioStar X 서버 주소와 포트 번호가 올바른지 확인하세요.
+
+* 관리자 등급의 아이디와 비밀번호가 올바른지 확인하세요.
+
+* 네트워크 연결 상태를 확인하세요. 모바일 기기가 BioStar X를 설치한 서버와 같은 네트워크에 연결되어 있는지 확인하세요.
+
+:::info
+
+외부 네트워크에서 접속하려면 공용 IP 주소가 필요하며, 그렇지 않은 경우 **리모트 액세스** 라이선스를 추가 구매해야 합니다. 자세한 내용은 <DocLink docId='platform/biostar_x_mobile/before-you-start' />를 참고하세요.
+
+:::
+
+
+## 앱 사용
+
+로그인에 성공하면 BioStar X 모바일 앱의 홈 화면이 표시됩니다. 홈 화면에서는 등록된 사용자, 출입문, 실시간 로그, 이벤트 로그 및 경보를 확인할 수 있습니다. 또한 사이드 메뉴와 설정 메뉴에 접근할 수 있습니다.
+
+<Columns>
+
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-home-screen.png' alone />
+
+</Column>
+<Column className='padding--l20'>
+
+* <IcHamberg title='Hamburger icon' width='24px' height='24px' />: 사이드 메뉴를 열 수 있습니다. 사이드 메뉴에서는 비밀 번호를 변경하거나 로그아웃할 수 있으며, 주요 메뉴에 접근할 수 있습니다.
+
+* <IcSet2 title='Setting icon' width='24px' height='24px' />: 설정 메뉴를 열 수 있습니다.
+
+* <Cmd>USER</Cmd>: 등록된 사용자 목록을 확인하고, 사용자를 관리할 수 있습니다.
+
+* <Cmd>DOOR</Cmd>: 등록된 출입문 목록을 확인하고, 원격으로 제어할 수 있습니다.
+
+* <Cmd>REAL-TIME LOG</Cmd>: 실시간 출입 이벤트 로그를 확인할 수 있습니다.
+
+* <Cmd>EVENT LOG</Cmd>: BioStar X 서버에 저장된 모든 이벤트 로그를 확인할 수 있습니다.
+
+* <Cmd>ALERT</Cmd>: 출입문 및 장치, 고급 출입 통제 경보를 확인할 수 있습니다. 
+
+</Column>
+</Columns>
