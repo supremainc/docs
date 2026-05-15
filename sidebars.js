@@ -1,6 +1,8 @@
 // @ts-check
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+import { type } from 'os';
+
 /**
  * Creating a sidebar enables you to:
  - create an ordered group of docs
@@ -154,6 +156,17 @@ function createSidebars(preview) {
         'platform/biostar_x_mobile/before-you-start',
         'platform/biostar_x_mobile/install-mobile-app',
         'platform/biostar_x_mobile/app-settings',
+        {
+          type: 'category',
+          label: '사용자 관리하기',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x_mobile/manage-users',
+          },
+          items: [
+            
+          ]
+        }
       ]
     }
   ],
