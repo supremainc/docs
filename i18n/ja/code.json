@@ -741,13 +741,19 @@
     "message": "消費電力"
   },
   "specs.power.switch_input_vih": {
-    "message": "スイッチ入力VIH"
+    "message": "スイッチ入力 VIH"
+  },
+  "specs.power.alarm_input_vih": {
+    "message": "アラーム入力 VIH"
   },
   "specs.power.led_beep_input_vih": {
     "message": "LED、Beep 入力 VIH"
   },
   "specs.power.switch_input_vil": {
-    "message": "スイッチ入力VIL"
+    "message": "スイッチ入力 VIL"
+  },
+  "specs.power.alarm_input_vil": {
+    "message": "アラーム入力 VIL"
   },
   "specs.power.led_beep_input_vil": {
     "message": "LED、Beep 入力 VIL"

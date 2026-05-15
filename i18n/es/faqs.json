@@ -28,7 +28,7 @@
           "answer": [
             "Si utiliza un adaptador de corriente, asegúrese de que su salida sea igual o superior al consumo máximo de la cámara.",
             "No conecte un adaptador de corriente y PoE+ al mismo tiempo. Hacerlo puede provocar un mal funcionamiento del dispositivo.",
-            "Si se alimenta mediante un cable Ethernet, asegúrese de que esté conectado mediante PoE+ o PoE++. El estándar recomendado es PoE+.",
+            "Si recibe alimentación a través de un cable Ethernet, asegúrese de que esté conectado utilizando el estándar PoE+. El estándar recomendado es PoE+.",
             "Verifique que el cable de red esté conectado de forma segura y que el sello de goma impermeable del conector Ethernet esté bien asegurado."
           ]
         }
