@@ -1,80 +1,87 @@
 ---
 title: ViOnyx Web Server
-description: Suprema AI 어안 카메라(Fisheye Camera)의 웹 기반 관리 플랫폼. 얼굴 인식 기반 접근 제어, 사람 추적, 다중 카메라 통합 관리를 한 곳에서 제어합니다.
-keywords: [ViOnyx, AI 카메라, 얼굴 인식, 접근 제어, 사람 추적, Re-ID, 어안카메라]
+description: ViOnyx 카메라에서 실행되는 웹 기반 운영 인터페이스. 실시간 모니터링, AI 이벤트 설정, 사용자 및 시스템 관리를 한 화면에서 수행할 수 있습니다.
+keywords: [ViOnyx, Web Server, Fisheye Camera, People Analytics, Face Analytics, Re-ID, AI 이벤트, VLM, Context AI]
 ---
 
-> **"누가 들어오는가 뿐만 아니라 누가 거기 있고, 어디에 있고, 무엇을 하고 있는가"**
+**ViOnyx Web Server**는 ViOnyx 카메라에 내장된 웹 기반 관리 서버입니다. 별도의 VMS 없이 웹 브라우저에서 실시간 영상 확인, AI 이벤트 운영, 사용자 관리, 시스템 설정을 수행할 수 있습니다.
 
-ViOnyx Web Server는 Suprema AI 어안 카메라(Fisheye Camera)를 위한 통합 관리 플랫폼입니다.
-얼굴 인식 기반의 Walk-through 접근 제어, 실시간 사람 추적(Re-ID), 다중 카메라 통합 감시를 웹 브라우저에서 간단하게 제어할 수 있습니다.
-
----
+360도 Fisheye 기반 영상과 AI 분석을 결합해, 사람의 이동과 이벤트를 현장에서 빠르게 파악하고 대응할 수 있도록 지원합니다.
 
 ## 주요 기능
 
-<Columns>
-<Column>
+<Columns className='features'>
+<Column className='width--40'>
 
-### Walk-Through 얼굴 인식 접근 제어
-
-* 1초 이내에 50명 이상의 개인 동시 식별
-
-* 카드 없이 얼굴만으로 진입
-
-* 미인증 사용자만 게이트 차단하는 스마트 시스템
-
-* BioStar와의 완벽한 통합
-
-### 사람 추적 & Re-ID (재식별)
-
-* 한 개인을 다중 카메라 간 자동 추적
-
-* 이동 경로 기록 및 분석
-
-* 특정 구역별 체류 시간 측정
-
-* 구역 진입/통과 감지
-
-### 다중 카메라 통합 관리
-
-* 최대 4대의 확장 카메라 동시 제어
-
-* 통합 대시보드에서 실시간 모니터링
-
-* 카메라 간 자동 사람 추적
-
-* 구역별 통합 분석
+<Image src='/img/cam-server/vionyx-feature-01.png' alt='ViOnyx Feature 01' />
 
 </Column>
-<Column>
+<Column className='padding--l40'>
 
-### AI 영상 분석
+### 파노라마 360°, 사각지대 제로
 
-* 침입 감지 (Intrusion Detection)
-
-* 배회 감지 (Loitering)
-
-* 화재/연기 감지
-
-* 이상 행동 감지
-
-### 엔드포인트 AI 처리
-
-* 클라우드 서버 필요 없음
-
-* 엣지 기반 실시간 처리
-
-* 낮은 TCO (총 소유 비용)
-
-* 프라이버시 보호
+천장 마운트 어안 한 대가 카메라 3-4대의 영역을 커버합니다. 넓은 공간에서도 사각지대 없이 전체를 모니터링할 수 있습니다.
 
 </Column>
 </Columns>
 
+---
 
-## 가이드 구성
+<Columns className='features'>
+<Column className='width--40'>
 
-ViOnyx Web Server 가이드는 다음과 같은 주요 섹션으로 구성되어 있습니다.
+<Image src='/img/cam-server/vionyx-feature-02.png' alt='ViOnyx Feature 02' />
+
+</Column>
+<Column className='padding--l40'>
+
+### 100% 온-디바이스 AI 얼굴 매칭
+
+BioStation 3 등급의 정확도를 카메라 자체에서 구현합니다. 
+
+* 카메라 장치에 **최대 10만 명 등록**
+
+* 넓은 영역에서 다각도 캡쳐
+
+* **최대 7m 거리**, **초당 10회 동시 인증**
+
+</Column>
+</Columns>
+
+---
+
+<Columns className='features'>
+<Column className='width--40'>
+
+<Image src='/img/cam-server/vionyx-feature-03.png' alt='ViOnyx Feature 03' />
+
+</Column>
+<Column className='padding--l40'>
+
+### 신원 인식 기반 카메라 내 추적
+
+일반 Re-ID는 회전, 앉기, 재킷 교체에 피사체를 놓칩니다. ViOnyx는 모든트랙을 얼굴 인증된 ID에 고정해, 동일 인물을 화면 전반에서 일관되게 유지합니다.
+
+</Column>
+</Columns>
+
+---
+
+<Columns className='features'>
+<Column className='width--40'>
+
+<Image src='/img/cam-server/vionyx-feature-04.png' alt='ViOnyx Feature 04' />
+
+</Column>
+<Column className='padding--l40'>
+
+### 프라이버시 우선, 엣지 전용 처리
+
+얼굴은 장치 안에서 매칭되며 원본 데이터는 외부로 나가지 않습니다. 다운스트림에는 신원 및 이벤트 메타데이터만 전달됩니다. 생체 정보는 기본 비활성화되어 있으며, 관리자가 사전 동의(Opt-in)해야 하며, 완전한 감사 로그를 제공합니다.
+
+</Column>
+</Columns>
+
+## 사용 설명서 구성
 
 <Overview />
