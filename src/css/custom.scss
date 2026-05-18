@@ -1042,6 +1042,11 @@ body[data-rh] .redocusaurus {
   }
   // Column width
   .columns {
+    .features {
+      p.hasimg {
+        margin-bottom: 0;
+      }
+    }
     .col {
       height: fit-content;
       ul li {
