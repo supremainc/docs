@@ -8,11 +8,11 @@ keywords:
   - Upgrade
 ---
 
-Devices connected to **BioStar X** can easily upgrade their firmware without additional connections or operations. Keeping the device firmware up to date resolves security vulnerabilities and allows access to new features.
+Devices connected to **BioStar X** can easily upgrade firmware without additional connections or operations. Keeping the device firmware up to date resolves security vulnerabilities and allows access to new features.
 
 ## Before you start {#before-start}
 
-Before upgrading the device firmware, prepare the new version of the firmware file. Save the downloaded firmware file in the following path. Create a new folder if the *firmware* folder does not exist.
+Before upgrading the device firmware, prepare the new version of the firmware file. Save the downloaded firmware file to the path below and extract it. Create a new folder if the *firmware* folder does not exist.
 
 > *C:\Program Files\BioStar X\firmware*
 
@@ -23,6 +23,16 @@ Search for your device model name on the [Suprema Download Center](https://downl
 :::
 
 ## Firmware upgrade {#upgrade-firmware}
+
+:::caution
+
+* Before upgrading firmware, make sure the device has power and network connectivity. In particular, make sure power is not interrupted during the upgrade.
+
+* Depending on the device type and mode, it may take up to 1 hour or longer. Also, the device cannot be used during the upgrade.
+
+* Do not turn off the device during the firmware upgrade. When the upgrade is complete, the device restarts automatically.
+
+:::
 
 ### Upgrade firmware for a single device
 
@@ -35,6 +45,12 @@ Search for your device model name on the [Suprema Download Center](https://downl
 4. Click the <Cmd sid='button.firmwareUpgrade' product='2' /> button in the <Cmd sid='device.info.information' product='2' /> section of the device details screen.
 
    <Image src='/img/biostarx-setting-device-info-upgrade-firmware.png' />
+
+5. When the <Cmd sid='device.firmwareUpgrade' product='2' /> window appears, click the firmware version.
+
+   <Image src='/img/biostarx-setting-device-upgrade-firmware-popup.png' />
+
+6. When the warning message window appears, click the <Cmd sid='button.continue' product='2' /> button.
 
 This initiates the firmware upgrade for the device.
 
@@ -53,6 +69,8 @@ This initiates the firmware upgrade for the device.
 5. When the <Cmd sid='device.firmwareUpgrade' product='2' /> window appears, click the firmware version.
 
    <Image src='/img/biostarx-setting-device-upgrade-firmware-popup.png' />
+
+6. When the warning message window appears, click the <Cmd sid='button.continue' product='2' /> button.
 
 This initiates the firmware upgrade for the selected devices.
 
