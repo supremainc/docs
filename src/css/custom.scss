@@ -826,7 +826,7 @@ body[data-rh] .redocusaurus {
       // word-break: break-word;
     }
     &.hasimg {
-      margin-top: calc(1.25 * .5rem) !important;
+      margin-top: calc(1.25 * .5rem);
       img {
         // margin-left: auto;
         // margin-right: auto;
@@ -922,7 +922,7 @@ body[data-rh] .redocusaurus {
       }
     }
     p.hasimg {
-      margin-top: 0;
+      margin-top: .5rem !important;
       margin-bottom: 15px;
       img {
         margin-left: 0;
@@ -1480,8 +1480,8 @@ body[data-rh] .redocusaurus {
     .col {
       padding-left: 0;
       padding-right: 0;
-      p.hasimg {
-        margin-top: 0 !important;
+      > p.hasimg {
+        margin-top: 0;
       }
     }
     .text--left {

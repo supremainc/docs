@@ -164,7 +164,7 @@ function createSidebars(preview) {
             id: 'platform/biostar_x_mobile/manage-users',
           },
           items: [
-            
+            'platform/biostar_x_mobile/add-user',
           ]
         }
       ]

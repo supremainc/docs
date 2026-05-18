@@ -4,7 +4,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import Link from '@docusaurus/Link';
 import { useDocById } from '@docusaurus/plugin-content-docs/client';
 
-export default function DocLink({ docId, inner }) {
+export default function DocLink({ docId, inner, ...props }) {
     const [anchorText, setAnchorText] = useState(null);
     
     useEffect(() => {
@@ -24,7 +24,7 @@ export default function DocLink({ docId, inner }) {
     if (inner && inner.startsWith('#')) {
         const targetLink = useBaseUrl(inner);
         return (
-            <Link to={targetLink}>
+            <Link to={targetLink} {...props}>
                 {anchorText || inner}
             </Link>
         );
@@ -34,7 +34,7 @@ export default function DocLink({ docId, inner }) {
         // docId 기반 링크 (기존 방식)
         const targetLink = useBaseUrl(doc?.permalink || docId);
         return (
-            <Link to={targetLink}>
+            <Link to={targetLink} {...props}>
                 {doc?.title || docId}
             </Link>
         );
