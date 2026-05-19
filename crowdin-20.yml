@@ -15,7 +15,7 @@
 #
 # Files configuration
 #
-files: [
+"files": [
   {
     "source" : "/docs/integration/**/*.mdx",
     "translation" : "/i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/integration/**/%original_file_name%",
