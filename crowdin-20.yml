@@ -1,0 +1,31 @@
+#
+# Your Crowdin credentials
+#
+"project_id" : "20"
+"api_token" : "763fcd04f64c1312bad530dba993f905bad244a6d8b0e9f8da39bf8589242e3ee16d864c28f71eeb"
+"base_path" : "."
+"base_url" : "https://supremainc.crowdin.com"
+
+#
+# Choose file structure in Crowdin
+# e.g. true or false
+#
+"preserve_hierarchy": true
+
+#
+# Files configuration
+#
+"files": [
+  {
+    "source" : "/docs/integration/**/*.mdx",
+    "translation" : "/i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/integration/**/%original_file_name%",
+    "escape_special_characters": 0,
+    "ignore": [
+      # "/docs/integration/**/*.mdx",
+      "/docs/integration/ccure/appendices.mdx",
+      "/docs/integration/genetec/appendices.mdx",
+      "/docs/integration/ccure/troubleshooting.mdx",
+    ],
+    "type": "mdx_v1"
+  }
+]
