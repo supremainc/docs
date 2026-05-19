@@ -1,0 +1,331 @@
+---
+id: installation
+title: Instalación
+description: Guía de instalación paso a paso para la integración de Suprema con Gallagher, que cubre los requisitos previos, Gallagher Command Centre, BioStar 2 y la configuración del middleware.
+keywords:
+  - Instalación
+  - Requisitos previos
+  - BioStar 2
+---
+
+## Requisitos previos
+
+Se requieren los siguientes requisitos previos para usar la integración de Suprema con Gallagher. Revise las condiciones de soporte antes de instalar la integración de Suprema con Gallagher.
+
+<Table className='table-fixed'>
+<Thead>
+<Row>
+
+<Th colspan='2'>Requisitos previos</Th>
+
+</Row>
+</Thead>
+<Tbody>
+<Row>
+
+<Td colspan='2'>Microsoft Windows 10 (x64) o posterior</Td>
+
+</Row>
+
+<Row>
+
+<Td>Navegadores web</Td>
+<Td>Nuevo Microsoft Edge</Td>
+
+</Row>
+
+<Row>
+
+<Td>Gallagher Command Centre</Td>
+<Td>Command Centre 8.80 o posterior</Td>
+
+</Row>
+<Row>
+
+<Td>Suprema BioStar 2</Td>
+<Td>
+
+- 64 bits
+
+- Versión 2.9.5 o posterior
+
+</Td>
+
+</Row>
+<Row>
+
+<Td>Software</Td>
+<Td>
+
+- Node v16.17.0
+
+- PostgreSQL v14.5
+
+- pgAdmin 4 v6.16
+
+- Win64OpenSSL-3.0.5
+
+</Td>
+
+</Row>
+<Row>
+
+<Td>Requisitos de hardware del sistema middleware</Td>
+<Td>
+
+- 16 GB de RAM
+
+- Windows 10 o posterior
+
+- SSD de 256 GB/HDD de 1 TB
+
+- Intel Iris Xe Graphics (recomendado)
+
+</Td>
+
+</Row>
+<Row>
+
+<Td>Dispositivos biométricos Suprema</Td>
+<Td>
+
+- BioStation 3
+
+- BioLite N2
+
+- FaceStation F2
+
+- BioEntry W2
+
+- XPass 2
+
+- X-Station 2
+
+- BioEntry W3
+
+</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+## Diagrama de flujo de la configuración
+
+<Image src='/img/integration/gallagher/configuration-flowchart.svg' className='none' width={300} alone />
+
+## Conexión del cableado de hardware
+
+### Para conexión Wiegand
+
+Dispositivo Suprema - **Lector 1** a módulo de puerta HBUS 4 In 2 Out Wiegand
+
+<div className='overflow-x table-fixed'>
+| (Suprema Device) Wire Name | HBUS 4 In 2 Out Door Module<br/>Wiegand Port to connector |
+| -- | -- |
+| Wiegand D0 Out (Green) | R1 Data 0 |
+| Wiegand D1 Out (White) | R1 Data 1 |
+| Wiegand Ground (Black) | GND |
+| TTL IN0 (Red/Purple) | R1 Out 2 |
+| TTL IN1 (Yellow/Brown) | R1 Out 1 |
+</div>
+
+<br/>
+
+Dispositivo Suprema - **Lector 2** a módulo de puerta HBUS 4 In 2 Out Wiegand
+
+<div className='overflow-x table-fixed'>
+| (Suprema Device) Wire Name | HBUS 4 In 2 Out Door Module<br/>Wiegand Port to connector |
+| -- | -- |
+| Wiegand D0 Out (Green) | R2 Data 0 |
+| Wiegand D1 Out (White) | R2 Data 1 |
+| Wiegand Ground (Black) | GND |
+| TTL IN0 (Red/Purple) | R2 Out 2 |
+| TTL IN1 (Yellow/Brown) | R2 Out 1 |
+</div>
+
+<br/>
+
+Módulo de puerta HBUS 4 In 2 Out Wiegand a Controller 6000 HBus
+
+<div className='overflow-x table-fixed'>
+| Controller 6000 | HBUS 4 In 2 Out Door<br/>Module Wiegand |
+| -- | -- |
+| H1 A | COM A |
+| H1 B | COM B |
+| Vout -ve | GND |
+| Vout +ve | Vin |
+</div>
+
+#### Diagrama de conexión Wiegand
+
+<Magnify src='/img/integration/gallagher/wiegand-connection-diagram.png' width={700} zoomFactor={.3} mgWidth={500} mgHeight={500} alone />
+
+### Para conexión OSDP
+
+Dispositivo Suprema OSDP/RS485 **lector 1** a Controller 6000
+
+<div className='overflow-x table-fixed'>
+| (Suprema Devices/OSDP device)<br/>Wire Name | Controller 6000 Ports |
+| -- | -- |
+| Blue/Blue With White | RS485 1 A |
+| Yellow/Yellow With Black | RS485 1 B |
+| Black/White With Black | RS485 1 -ve |
+</div>
+
+<br/>
+
+Dispositivo Suprema OSDP/RS485 **lector 2** a Controller 6000
+
+<div className='overflow-x table-fixed'>
+| (Suprema Devices/OSDP device)<br/>Wire Name | Controller 6000 Ports |
+| -- | -- |
+| Blue/Blue With White | RS485 2 A |
+| Yellow/Yellow With Black | RS485 2 B |
+| Black/White With Black | RS485 2 -ve |
+</div>
+
+#### Diagrama de conexión OSDP
+
+<Magnify src='/img/integration/gallagher/osdp-connection-diagram.png' width={800} zoomFactor={.3} mgWidth={500} mgHeight={500} alone />
+
+## Instalar software de requisitos previos
+
+### Instalación de la configuración de Gallagher Command Centre
+
+:::info
+
+- No cambie ningún nombre ni contraseña durante la instalación y la configuración.
+
+- Para actualizar la integración de Suprema con la versión de Gallagher, haga clic [aquí](troubleshooting).
+
+- En concreto, puede consultar la **3C4643 Gallagher Command Centre vEL8.80 Release Note** para instalaciones nuevas.
+
+- La **3E0068 Upgrade Procedure** para fines de actualización contiene más información en la carpeta Release Notes de su directorio ISO de Command Centre.
+
+- Debe extraer `Suprema integration With Gallagher.zip` en `C:\Program Files\`.
+
+:::
+
+1. Dentro de la carpeta Gallagher Command Centre vEL.8.80 (o posterior) → Setup.exe, **marque la casilla** y presione el botón **Siguiente**.
+
+   <Image src='/img/integration/gallagher/installation-gallagher1.png' width={500} alone />
+
+2. **Haga clic** en el botón "…" y ubique el archivo de licencia incluido en la configuración.
+
+   <Image src='/img/integration/gallagher/installation-gallagher2.png' width={500} alone />
+
+   <Image src='/img/integration/gallagher/installation-gallagher3.png' width={800} alone />
+
+3. Cuando seleccione el archivo de licencia correcto, el icono cambiará a una marca de verificación; después, **presione** el botón **Siguiente**.
+
+   <Image src='/img/integration/gallagher/installation-gallagher4.png' width={500} alone />
+
+4. **Desmarque** solo la casilla de la subred y presione el botón **Siguiente**.
+
+   <Image src='/img/integration/gallagher/installation-gallagher5.png' width={500} alone />
+
+5. **Seleccione** la opción Instalar nueva SQL y presione el botón **Siguiente**.
+
+   <Image src='/img/integration/gallagher/installation-gallagher6.png' width={500} alone />
+
+6. **Seleccione** la opción No instalar una plantilla de base de datos.
+
+7. Sin cambiar ninguna opción, presione **Siguiente** hasta llegar a la pantalla del código de recuperación.
+
+   :::info
+
+   Haga clic en el botón de exportación, guarde el código de recuperación y marque la casilla.
+
+   :::
+
+   <Image src='/img/integration/gallagher/installation-gallagher7.png' width={500} alone />
+
+8. Seleccione **Sí** y comenzará la instalación.
+
+   <Image src='/img/integration/gallagher/installation-gallagher8.png' width={500} alone />
+
+9. Después de completar la instalación, presione el botón **Finalizar**.
+
+   <Image src='/img/integration/gallagher/installation-gallagher9.png' width={500} alone />
+
+### Instalación de BioStar 2
+
+1. Abra **BioStar 2.exe**, elija el idioma, acepte el acuerdo y presione **Siguiente**.
+
+   :::info
+
+   Descargue la versión más reciente de BioStar 2: [Haga clic aquí](https://www.supremainc.com/download-center/pages/login.asp).
+
+   :::
+
+   <Image src='/img/integration/gallagher/installation-biostar1.png' alone />
+
+2. Ingrese aquí su **contraseña** de BioStar 2 y presione el botón **Siguiente**.
+
+   <Image src='/img/integration/gallagher/installation-biostar2.png' alone />
+
+3. Seleccione la instalación **Express** e ingrese de nuevo la contraseña de BioStar 2.
+
+4. Seleccione la ubicación y continúe.
+
+   <Image src='/img/integration/gallagher/installation-biostar3.png' alone />
+
+5. Presione el botón **Siguiente** hasta llegar a la pantalla Seleccionar componentes. Marque ambas opciones y presione el botón **Siguiente**.
+
+   <Image src='/img/integration/gallagher/installation-biostar4.png' alone />
+
+6. Presione el botón **Instalar** para iniciar la instalación.
+
+   <Image src='/img/integration/gallagher/installation-biostar5.png' alone />
+
+7. **Desmarque** la opción Instalar USB Device Agent, presione el botón **Finalizar** y BioStar 2 se instalará en su PC.
+
+   :::info
+
+   Si va a usar el dispositivo USB, debe **marcar** Instalar USB Device Agent.
+
+   :::
+
+   <Image src='/img/integration/gallagher/installation-biostar6.png' alone />
+
+### Requisitos previos de instalación del middleware
+
+:::info
+
+- Antes de extraer o ejecutar `Suprema Integration with Gallagher2.0.zip`, desactive el antivirus.
+
+- Si está actualizando desde una versión anterior, revise la solución en la guía de solución de problemas.
+
+:::
+
+1. Debe **ejecutar** el archivo Suprema Integration with Gallagher 2.0 como administrador dentro de la carpeta Suprema Integration with Gallagher 2.0. Esto instalará OpenSSL, PostgreSQL, PgAdmin4 y Node. JS. Además, esto configurará los certificados necesarios para nuestra integración.
+
+   <Image src='/img/integration/gallagher/installation-middleware-prerequisite1.png' alone />
+
+2. Presione **Sí** si solicita permisos para permitir desde un editor desconocido.
+
+3. Presione **Aceptar**.
+
+   <Image src='/img/integration/gallagher/installation-middleware-prerequisite2.png' alone />
+
+4. Ahora que está listo para instalar el software, presione **Instalar**.
+
+   <Image src='/img/integration/gallagher/installation-middleware-prerequisite3.png' alone />
+
+5. Comenzará la instalación de los requisitos previos y el software se instalará automáticamente.
+
+   <Image src='/img/integration/gallagher/installation-middleware-prerequisite4.png' width={500} alone />
+
+6. Presione **Aceptar** para la ventana emergente siguiente.
+
+   <Image src='/img/integration/gallagher/installation-middleware-prerequisite5.png' alone />
+
+7. Ya terminó con la instalación de los requisitos previos; presione **Finalizar**.
+
+   :::info
+
+   Después de instalar el middleware, reinicie el sistema una vez.
+
+   :::
+
+   <Image src='/img/integration/gallagher/installation-middleware-prerequisite6.png' alone />

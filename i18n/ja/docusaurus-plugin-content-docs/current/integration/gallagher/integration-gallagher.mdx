@@ -1,0 +1,365 @@
+---
+id: integration-gallagher
+title: Suprema と Gallagher の統合
+description: Suprema と Gallagher の統合における、指紋、Visual Face、カード割り当て、QRコード、スマートカードの設定を含むユーザー登録とデバイス管理ガイド。
+keywords:
+  - ユーザー登録
+  - ｽﾏｰﾄｶｰﾄﾞ
+  - QRコード
+---
+
+1. Cardholder Viewer の検索で rest を実行すると、すべてのウィンドウが読み込まれます。
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher7.png' width={600} alone />
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher8.png' width={800} alone />
+
+2. 最初に以下の画面が表示されるので、先に進むには Gallagher API キー、BioStar 2 サーバー IP、BioStar 2 サーバー ポート、およびミドルウェア アドレスの SYSTEM/HOST 名を**入力**します。
+
+   :::info
+
+   特定の IP アドレスを持つ 2 台の異なるサーバーで、特定のポートを使用してミドルウェアを実行する場合は、ミドルウェアの受信ルールを設定するを参照してください。
+
+   :::
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher9.png' alone />
+
+3. ライセンス画面で、管理者から取得したライセンス キーと**正確な**プロジェクト名を**入力**します。
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher10.png' alone />
+
+4. ログイン画面で、Suprema BioStar 2 の認証情報を**入力**します。
+
+   :::info
+
+   ログイン画面で、**LAN が切断されているか、IP Address の IP が変更されている**という**エラー**が表示される場合があります。 [ログインページのエラーをトラブルシューティングする](troubleshooting#login-lan-disconnected-error)を参照してください。
+
+   :::
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher11.png' width={800} alone />
+
+   正しい認証情報を入力すると、初期同期用のユーザー同期画面が開きます。
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher12.png' alone />
+
+   ユーザーの同期が正常に完了すると、画面に Close ボタンが表示されるので、続けるには Close ボタンを**押します**。
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher13.png' alone />
+
+   ユーザーの同期が正常に完了すると、ユーザー検索画面が表示されます。
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher14.png' width={800} alone />
+
+5. **検索**で rest を実行し、検索ボタンを押すと、検索したユーザーが表に表示されます。
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher15.png' width={800} alone />
+
+6. Mifare Encoder をシステムに接続します。 Assign Access ボタンを**押し**、作成した Suprema Access グループを選択し、Save ボタンを**押します**。
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher16.png' width={800} alone />
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher17.png' alone />
+
+7. アクセス グループを追加し、Mifare Encoder を接続したら、Viewer Configuration を**右クリック**してビューアーを再読み込みします。
+
+8. Encoder のボタンから Encoder Assign Card にカードを**置き**、そのボタンを**押す**とカードがユーザーに割り当てられ、その後 Save ボタンを**押します**。 その後、ミドルウェアで Edit ボタンを**押します**。
+
+   :::info
+
+   生体認証のみを登録する場合は、事前にカードを割り当てず、アクセス ゾーンを割り当てた後に Edit ボタンを**押します**。
+
+   :::
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher18.png' width={800} alone />
+
+   カードを割り当てて Save ボタンを**押した後**、緑の sync button を**押す**と、そのユーザーの全データが同期されます。
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher19.png' width={800} alone />
+
+9. Fingerprint ボタンを**押す**と、指紋モジュールが読み込まれます。
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher20.png' width={800} alone />
+
+10. 一覧からデバイスを**選択**します。
+
+    <Image src='/img/integration/gallagher/suprema-integration-gallagher21.png' width={800} alone />
+
+11. 左手または右手を**選択**し、指紋の品質を設定した後に scan ボタンを**押す**と、スキャンが開始されます。 スキャンが完了すると、scan ボタンは delete ボタンに変わり、指紋が画面に表示されます。データは自動的に保存され、保存が成功すると、保存された指紋に色が付きます。
+
+    <Image src='/img/integration/gallagher/suprema-integration-gallagher22.png' width={800} alone />
+
+12. 生画像が必要な場合は、Raw Image チェックボックスをオンにしてから指を**スキャン**します。
+
+    <Image src='/img/integration/gallagher/suprema-integration-gallagher23.png' width={800} alone />
+
+13. 単一の指紋を削除するには、**delete** ボタンを**押し**、ポップアップが表示されたら **Yes** ボタンを**押す**と、その指紋が削除されます。
+
+    <Image src='/img/integration/gallagher/suprema-integration-gallagher24.png' width={800} alone />
+
+    すべての指紋データをリセットするには、**reset** ボタンを**押し**、ポップアップが表示されたら Yes を**押す**と、すべての指紋データがリセットされます。
+
+14. BioMini Plus 2 を使用して、ユーザーの指紋データを登録できます。 そのためにはデバイスを接続すると、指紋のデバイス選択セクションに表示されます。 デバイスを**選択**して、ユーザーのデータ登録を開始します。
+
+    <Image src='/img/integration/gallagher/suprema-integration-gallagher25.png' width={800} alone />
+
+15. Visual Face を登録するには、指紋の横にあるボタンを**押す**と、Visual Face モジュールが読み込まれます。
+
+    <Image src='/img/integration/gallagher/suprema-integration-gallagher26.png' width={800} alone />
+
+    Visual Face のスキャン方法は 2 つあります。 アップロードするか、顔をスキャンして登録できます。
+
+16. **upload** アイコンを**押す**と、新しいウィンドウが開き、アップロードする画像を選択できます。
+
+    **scan** ボタンを**押す**と、選択したデバイスが有効になります。選択したデバイスを使用して顔をスキャンします。 Visual Face のアップロードまたはスキャン後、データは自動的に保存され、成功メッセージが表示されます。
+
+    <Image src='/img/integration/gallagher/suprema-integration-gallagher27.png' width={800} alone />
+
+    :::info
+
+    - 対応している画像ファイルサイズは最大 2MB です。
+
+    - 対応している画像ファイル形式は JPG、JPEG、PNG です。
+
+    - プロフィール画像で Visual Face の登録中にエラーが発生した場合は、より鮮明な画像を使用してください。
+
+    :::
+
+17. 再スキャンまたは再アップロードする場合は、古いデータを削除する必要があります。**赤い delete ボタン**を**押し**、ポップアップで **Yes** を**押す**と、その画像が削除されます。
+
+    <Image src='/img/integration/gallagher/suprema-integration-gallagher28.png' width={800} alone />
+
+18. すべての Visual Face データをリセットする場合は、**reset** ボタンを**押し**、**Yes** を**押す**と、すべてのデータがリセットされます。
+
+    <Image src='/img/integration/gallagher/suprema-integration-gallagher29.png' width={800} alone />
+
+19. 終了してからもう一度ユーザーを検索すると、保存されたすべてのデータが表に表示されます。
+
+    <Image src='/img/integration/gallagher/suprema-integration-gallagher30.png' width={800} alone />
+
+    ユーザー ID でも検索できます。ドロップダウンの user name を user id に**変更**し、ID でユーザーを**検索**します。
+
+## Command Center で Face Template 用のユーザー写真 ID を登録する
+
+1. Administration に**移動**し、Personal Data Field を**クリック**して、New Personal Data Field を**押します**。
+
+   <Image src='/img/integration/gallagher/enroll-template.png' width={600} alone />
+
+2. ポップアップで名前を Image に**設定**し、Close ボタンを**押します**。 Data Type フィールドで Data Type を Image に**選択**します。ここは変更しません。Access Group セクション内の Add Access Group ボタンを**押し**、Suprema Access Zone を**選択**して Access Group を割り当てます。Access Zone を**選択**した後、フィールドの Add Selection ボタンを**押します**。
+
+   <Image src='/img/integration/gallagher/enroll-face-template1.png' alone />
+
+3. Access Zone を割り当てた後、下部の Save ボタンを**押します**。
+
+   <Image src='/img/integration/gallagher/enroll-face-template2.png' width={800} alone />
+
+4. Viewer Configuration に**移動**し、Cardholder Images を設定するために Click を**押します**。 Cardholder Images Configuration で Selected PDFs を**選択**し、Image フィールドを**選択**して、Close ボタンを**押します**。 変更を保存するには、左下の Save ボタンを**押します**。 Viewer Configuration を**右クリック**して、ビューアーを再読み込みし、変更を反映します。
+
+   <Image src='/img/integration/gallagher/enroll-face-template3.png' alone />
+
+5. Cardholder Viewer では Cardholder Images タブが表示され、黄色のアイコンを**クリック**して画像をアップロードできます。 そのためには、ユーザーに Access Zone を割り当てる必要があります。 画像をアップロードした後、Save ボタンを**押します**。
+
+   <Image src='/img/integration/gallagher/enroll-face-template4.png' alone />
+
+6. ユーザー情報の更新中に発生するエラーメッセージを確認するには、このアイコンを**クリック**して ErrorLog セクションで確認します。ポップアップが開き、ユーザーごとのさまざまなエラーが表示されます。
+
+   <Image src='/img/integration/gallagher/enroll-face-template5.png' width={800} alone />
+
+7. 下の画像のように、1 人のユーザーにエラーがあります。ここで **Type** はエラーの種類を示し、**Status** の Un-solved はエラーがまだ解決されていないことを示し、Solved はユーザーのエラーが解決済みであることを示します。 赤い枠の 1 つはユーザー名を示し、もう 1 つの赤い枠はユーザー ID を示します。
+
+   <Image src='/img/integration/gallagher/enroll-face-template6.png' alone />
+
+8. 下の画像は、Gallagher Command Center でユーザー画像を変更した後の状態です。ユーザーの顔登録時にエラーが発生し、登録が成功するとエラーメッセージの色と Status も変わります。
+
+   <Image src='/img/integration/gallagher/enroll-face-template7.png' alone />
+
+9. デバイスの設定を変更する場合は、**settings** ボタンを**押す**と、以下の画面が表示されます。
+
+   <Image src='/img/integration/gallagher/enroll-face-template8.png' width={800} alone />
+
+## Command Center で QR Code 用のユーザーのメール ID を登録する {#enroll-email-qr-code}
+
+1. Administration に**移動**し、Personal Data Field を**クリック**して、New Personal Data Field を**押します**。
+
+   <Image src='/img/integration/gallagher/enroll-template.png' width={600} alone />
+
+2. ポップアップで名前を Email に**設定**し、Close ボタンを**押します**。 Data Type フィールドで Data Type を Email に**選択**し、Unique Value チェックボックスを**オン**にします。 ここは変更しません。Access Group セクション内の Add Access Group ボタンを**押し**、Suprema Access Zone を**選択**して Access Group を割り当てます。Access Zone を**選択**した後、フィールドの Add Selection ボタンを**押します**。
+
+   :::info
+
+   フィールド名は記載されている用語をそのまま使用してください。
+
+   :::
+
+   <Image src='/img/integration/gallagher/enroll-email-qr1.png' alone />
+
+3. Access Zone を割り当てた後、下部の Save ボタンを**押します**。
+
+   <Image src='/img/integration/gallagher/enroll-email-qr2.png' width={800} alone />
+
+4. Viewer Configuration に**移動**し、Cardholder Details を設定するために Click を**押します**。 Cardholder Details Configuration で Selected PDFs を**選択**し、Email フィールドを**選択**して、Close ボタンを**押します**。 変更を保存するには、左下の Save ボタンを**押します**。 Viewer Configuration を右クリックし、ビューアーを再読み込みします。
+
+   <Image src='/img/integration/gallagher/enroll-email-qr3.png' alone />
+
+5. QR Code を割り当てるには、ミドルウェア内のユーザー プロファイルに移動し、QR アイコンを**クリック**します。 下のように、Add QR ボタンは**無効**で、ユーザーのメールアドレスが Gallagher に割り当てられていないことを示す注記があります。
+
+   <Image src='/img/integration/gallagher/enroll-email-qr4.png' width={800} alone />
+
+   :::info
+
+   - SMPT 設定を行うには、[QR Code 用 SMTP を設定する](configuration#email-config-qr-code)を参照してください。
+
+   - Gallagher でメールアドレスを設定するには、[Gallagher でのメール設定](#enroll-email-qr-code)を参照してください。
+
+   - Gallagher で QR Card タイプを設定するには、[QR Code カードタイプを作成する](configuration#create-another-card-type)を参照してください。
+
+   :::
+
+6. ユーザーにメールアドレスを割り当てるには、Command Center でユーザー詳細を開き、Cardholder details の email フィールドにユーザーのメールを入力して、save ボタンを**押します**。
+
+   <Image src='/img/integration/gallagher/enroll-email-qr5.png' alone />
+
+7. ミドルウェアのユーザー プロファイルで sync ボタンを**押す**と、メールは BioStar 2 のユーザー プロファイルに自動的に割り当てられます。 メール ボタンが有効になり、注記は削除されます。
+
+   <Image src='/img/integration/gallagher/enroll-email-qr6.png' width={800} alone />
+
+8. 次に、ユーザー プロファイルの QR セクション内で Add QR Code ボタンを**押す**と、QR Code が Gallagher と BioStar 2 に追加され、上で割り当てたメールアドレスに QR Code が送信されます。
+
+   <Image src='/img/integration/gallagher/enroll-email-qr7.png' width={800} alone />
+
+   QR を追加したら、sync ボタンを**押して**データを更新できます。
+
+   <Image src='/img/integration/gallagher/enroll-email-qr8.png' width={800} alone />
+
+9. デバイスを同期するには sync ボタンを**押します**。ここで接続済みデバイスをすべて確認でき、任意の接続済みデバイスを選択してデバイス設定を表示できます。
+
+   <Image src='/img/integration/gallagher/enroll-email-qr9.png' width={800} alone />
+
+10. 下の画像はデバイスの OSDP 設定を示しています。
+
+    <Image src='/img/integration/gallagher/enroll-email-qr10.png' width={800} alone />
+
+11. 下の画像はデバイスの Wiegand 設定です。
+
+    <Image src='/img/integration/gallagher/enroll-email-qr11.png' width={800} alone />
+
+    <Image src='/img/integration/gallagher/enroll-email-qr12.png' width={800} alone />
+
+12. 上の画像は管理者モードです。必要に応じてモードを選択できます。下の画像のように + ボタンを**押す**と、ドロップダウンからさまざまなユーザーを選択できます。
+
+    <Image src='/img/integration/gallagher/enroll-email-qr13.png' width={800} alone />
+
+13. ユーザーを**選択**すると、下の画像のように表示されます。delete ボタンを**クリック**すると、一覧からユーザーを削除できます。
+
+    <Image src='/img/integration/gallagher/enroll-email-qr14.png' width={800} alone />
+
+14. これはデバイスの出力モードのトリガーとアクション モードです。 + ボタンを**押して**設定できます。
+
+    <Image src='/img/integration/gallagher/enroll-email-qr15.png' width={800} alone />
+
+## 既定のカード選択
+
+1. ユーザーのラジオ ボタンを**押して**既定のカードを選択できます。
+
+   <Image src='/img/integration/gallagher/default-card-selection1.png' width={800} alone />
+
+2. 既定のカードに有効期限を設定して、カードホルダーの有効期限を**設定**できます。
+
+   <Image src='/img/integration/gallagher/default-card-selection2.png' width={800} alone />
+
+   :::info
+
+   Command Center で cardholder details を変更した場合は、 同じユーザーを Suprema integration with middleware で開き、sync ボタンを押す必要があります。
+
+   :::
+
+## スマートカード（AOC/TOC）
+
+:::info
+
+スマートカード機能を使用するには、BioStar 2 のバージョン 2.9.4 以上が必要です。
+
+:::
+
+1. Smart Card（AOC/TOC）オプションを使用する場合は、デバイスの設定に移動し、**settings** ボタンを**押し**、Device Management で設定するデバイスを**選択**してから Smart Card オプションを**選択**します。
+
+   <Image src='/img/integration/gallagher/smart-card1.png' width={800} alone />
+
+2. Smart Card トグルを**有効にし**、以下の画面のとおりに設定します。
+
+   <Image src='/img/integration/gallagher/smart-card2.png' width={800} alone />
+
+3. すべての設定を変更したら、Apply ボタンを**押します**。 その後、左下隅の Exit Settings ボタンを**押して**、設定タブを終了します。
+
+   <Image src='/img/integration/gallagher/smart-card3.png' width={800} alone />
+
+4. ユーザー検索画面で Smart Card を適用するユーザーを検索し、Edit ボタンを**押して**ユーザー詳細を表示します。
+
+   <Image src='/img/integration/gallagher/smart-card4.png' width={800} alone />
+
+5. 次にスマートカードを割り当てるには、Gallagher の cardholder cards タブで encoder からカードを割り当てます。
+
+   <Image src='/img/integration/gallagher/smart-card5.png' alone />
+
+6. ボタンを押すとカード番号が表示されます。Gallagher で save を**押す**と、割り当てたカードが表示されます。
+
+   <Image src='/img/integration/gallagher/smart-card6.png' alone />
+
+7. 次にユーザー詳細表の card セクションに移動し、Use AOC ボタンを**押して**ユーザーにスマートカードを割り当てます。
+
+   :::info
+
+   ユーザーに Smart Card（AOC）を割り当てるには、ユーザーに生体情報が必要です。
+
+   :::
+
+   <Image src='/img/integration/gallagher/smart-card7.png' width={800} alone />
+
+8. AOC に使用するデバイスを**選択**し、encoder で割り当てる際に取得したカード ID と同じ番号を**使用します**。 顔テンプレートを**選択**し、Visual Face タブの画像を**選択します**。 write smart card ボタンを**押します**。
+
+   <Image src='/img/integration/gallagher/smart-card8.png' width={800} alone />
+
+9. 次に、選択したデバイスに同じカードを**スキャン**して、ユーザーにカードを割り当てます。 同じカードをスキャンしない場合はエラーメッセージが表示され、それ以外の場合はユーザーにカードを書き込み、ユーザーの生体情報をすべて削除します。
+
+   :::info
+
+   ユーザーに割り当てられる Smart Card（AOC）の生体情報は 1 つだけです。
+
+   :::
+
+10. 指紋ユーザーにスマートカードを割り当てるには指紋が必要で、1 枚のカードに対して最大 2 つの指紋を割り当てられます。 ユーザーのカード セクションで Use AOC ボタンを**押し**、デバイスを選択します。encoder からカードを割り当てる際に取得したカード ID と同じ番号を**使用します**。 スマートカードに使用する指紋を**選択**します。 write smart card ボタンを**押します**。
+
+    <Image src='/img/integration/gallagher/smart-card9.png' width={800} alone />
+
+11. 次に、選択したデバイスに同じカードを**スキャン**して、ユーザーにカードを割り当てます。 同じカードをスキャンしない場合はエラーメッセージが表示され、それ以外の場合はユーザーにカードを書き込み、ユーザーの生体情報をすべて削除します。
+
+## HID ICLASS カード
+
+1. HID ICLASS カード オプションを使用する場合は、デバイスの設定に移動し、**settings** ボタンを**押し**、Device Management で設定するデバイスを**選択**してから Wiegand Settings オプションを**選択**し、下にスクロールして Wiegand 設定を見つけます。
+
+   <Image src='/img/integration/gallagher/hid-iclass-card1.png' width={800} alone />
+
+2. Wiegand Settings オプションを有効にし、ICLASS AND HID PROX オプションを**選択**します。 Wiegand 形式は、ドロップダウンで選択した既定値と同じである必要があります。 変更を保存するには Apply ボタンを**押します**。
+
+   :::info
+
+   Wiegand カードを使用するには、ユーザーに少なくとも 1 つの生体情報が必要です。
+
+   :::
+
+   <Image src='/img/integration/gallagher/hid-iclass-card2.png' width={800} alone />
+
+3. この機能を使用するには、ユーザーにカードを割り当てる必要があります。 Gallagher command center に移動し、assign card ボタンを押して HID Seos Corporate を**選択**し、番号を**入力**して OK ボタンを**押し**、Save を**押します**。
+
+   <Image src='/img/integration/gallagher/hid-iclass-card3.png' alone />
+
+## QR Code カード
+
+QR Code カード オプションを使用する場合は、**settings** ボタンを**押して**設定に移動し、Device Management で設定するデバイスを**選択**します。 次に、QR Code Settings オプションを**選択**し、カメラ オプション設定による QR/Barcode の使用を**有効にします**。 変更を保存するには Apply ボタンを**押します**。
+
+<Image src='/img/integration/gallagher/qr-code-card.png' width={800} alone />
+
+## ライセンス済みデバイス
+
+**ライセンス**に関連付けられているデバイスを確認するには、**settings** の下にある **Admin Management** に移動し、Licensed devices を**クリック**してから、sync ボタンを**押す**必要があります。 ライセンスに関連付けられた最新のデバイス一覧が表示されます。
+
+<Image src='/img/integration/gallagher/licensed-devices.png' alone />

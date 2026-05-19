@@ -1,0 +1,572 @@
+---
+id: installation
+title: Suprema - C•CURE統合インストール
+description: Suprema - C•CURE統合のインストールと設定について、サーバーとクライアントのセットアップ、必要ポート、ユーザー同期を含めた詳細な手順を説明します。
+keywords:
+  - インストール
+  - 設定
+  - C•CURE統合
+---
+
+## 前提条件
+
+- Software House C•CURE 9000（バージョン2.90、3.0、3.10）
+
+- Suprema BioStar 2（バージョン2.9.0以降）
+
+:::info
+
+BioStar 2サーバーとC•CURE 9000サーバーは同じマシンにインストールしてください。
+
+:::
+
+## 注意事項
+
+- C•CURE 9000またはBioStar 2のインストールと設定方法の詳細は、各プラットフォームのインストールマニュアルを参照してください。
+
+- MS SQL 2014 Expressを使用している場合は、（新しいバージョンのほうが望ましいです）、次のWebページを参照してService Pack 2をインストールしてください。
+
+  > https://www.microsoft.com/en-us/download/details.aspx?id=53168
+
+- セキュリティ上の理由により、この統合はHTTPをサポートせず、HTTPS（TLS 1.2経由）のみをサポートします。BioStar 2をHTTPSのみに対応するよう設定してください。
+
+- 使用するポートの既定値は次のとおりです。 別のプログラムが同じポートを使用している場合、前提条件またはこの統合が正常に動作しないことがあります。
+
+  - Suprema - C•CURE統合
+
+    <div className='overflow-x cols3--20-20-60'>
+     | 種類 | ポート | 説明 |
+     | :--: | :--: | -- |
+     | ポート | 7733 | TLS 1.2経由のHTTPS |
+     | ポート | 51211 | Supremaデバイス |
+     </div>
+
+  - Suprema BioStar 2バックエンドサービス
+
+    <div className='overflow-x cols3--20-20-60'>
+     | 種類 | ポート | 説明 |
+     | :--: | :--: | -- |
+     | ポート | 443 | TLS 1.2経由のHTTPS |
+     | ポート | 3312 | MariaDBスキーマを使用する場合。 |
+     | ポート | 9002 | Web Socket |
+     </div>
+
+  - C•CURE 9000 v2.9またはv3.0
+
+    <div className='overflow-x cols3--20-20-60'>
+     | 種類 | ポート | 説明 |
+     | :--: | :--: | -- |
+     | ポート | 161 | デバイス情報の収集と整理に使用します。 |
+     | ポート | 2901/2 | iSTAR Ultra G2のGCM待受ポート。デフォルトの証明書/キーを使ったIP-ACM2のSSL暗号化接続用。 |
+     | ポート | 28014 | TLS 1.3署名付き証明書配信用ポート。 iSTAR Ultra G2がポートを開きます。 ホストが署名付き証明書を配信します。 |
+     </div>
+
+  - Microsoft SQL Server
+    <div className='overflow-x cols3--20-20-60'>
+     | 種類 | ポート | 説明 |
+     | :--: | :--: | -- |
+     | ポート | 1433 | または設定済みのポートを使用します。 |
+     </div>
+
+- データはTLS 1.2と秘密証明書で転送されます。機密データ（ユーザー、パスワード、設定）は、トランスポート層の暗号化に加えて暗号化して保存されます。
+
+- インストールを開始する前に、MS SQLが次のように設定されていることを必ず確認してください。
+
+  - 次の画像のとおり、指定したIPアドレスから、指定したポート（既定値1433）でIP接続を許可します。
+
+    <Image src='/img/integration/ccure/tcp-ip-properties1.png' alone />
+
+    <Image src='/img/integration/ccure/tcp-ip-properties2.png' alone />
+
+   :::info
+
+   MS SQLで新しい設定を有効にするには、PCの再起動が必要な場合があります。
+
+   :::
+
+- SQL認証を許可:
+
+  - SQL Server Management StudioのObject Explorerで、**Server**を右クリックし、**Properties** → **Security** → **SQL Server and Windows Authentication mode**を選択して、**Apply**をクリックします。
+
+    <div className='grid-container'>
+     <Image src='/img/integration/ccure/allow-sql-authentication1.png' alone />
+     <Image src='/img/integration/ccure/allow-sql-authentication2.png' alone />
+     </div>
+
+  - この統合では、Windows認証とSQL認証（ローカルおよびドメインベース）をサポートします。
+
+  - Windows認証を使用する場合は、統合をインストールした現在のWindowsユーザーアカウントに、ローカルユーザーまたはドメインユーザーとしてC•CUREデータベースへのアクセス権が必要です。 そうでない場合、Integration CTは接続に失敗します。
+
+  - Active Directoryと統合する場合は、特定のデータベース設定に注意してください。データベース接続で問題が発生した場合は、サポートチケットを起票して技術サポートを依頼してください。
+
+## インストール手順
+
+この統合の以前のBASIC版は廃止されています。 現在サポートされているのはADVANCED版のみです。使用する統合バージョンに応じて、専用のインストーラーを提供します。
+
+このガイドはADVANCED版向けです。
+
+### サーバー統合のインストール
+
+:::info
+
+このインストールを開始する前にCrossFire Servicesを完全に停止し、完了後に再度起動してください。
+
+:::
+
+1. セットアッププログラム（Suprema-CCURE_Integration-v2.x.exe）をダブルクリックします。
+
+   <Image src='/img/integration/ccure/install-server1.png' width={400} alone />
+
+2. まず、インストールするバージョンを選択します。
+
+   <Image src='/img/integration/ccure/install-server2.png' width={400} alone />
+
+3. **Server**のオプションを選択し、installをクリックすると、サーバー統合のインストールを開始できます。
+
+   <Image src='/img/integration/ccure/install-server3.png' width={400} alone />
+
+   :::info
+
+   これはStubインストーラーのため、常時インターネット接続が必要です。
+
+   :::
+
+4. ダウンロードが完了すると、次の画面が表示されます。 言語を選択して、**OK**をクリックします。
+
+   <Image src='/img/integration/ccure/install-server4.png' width={350} alone />
+
+5. ウィザードがインストール手順を案内します。
+
+   <Image src='/img/integration/ccure/install-server5.png' alone />
+
+6. インストールを続行するには、ライセンス契約に同意して、**Next**をクリックします。
+
+7. セットアップがインストールを実行していることが確認できます。
+
+   <Image src='/img/integration/ccure/install-server6.png' alone />
+
+8. 統合インストーラーは、セットアップメッセージを表示しながら、いくつかのCMDウィンドウを表示する場合があります。
+
+   <Image src='/img/integration/ccure/install-server7.png' alone />
+
+9. インストールが完了すると、セットアップが表示されます。
+
+   <Image src='/img/integration/ccure/install-server8.png' alone />
+
+10. インストール後にシステムの再起動が必要な場合があります。
+
+### クライアント統合のインストール
+
+:::info
+
+このインストールを開始する前に、すべてのAdministrator WorkstationとMonitoring Stationのインスタンスを閉じてください。
+
+:::
+
+1. セットアッププログラム（Suprema-CCURE_Integration-v2.x.exe）をダブルクリックします。
+
+   <Image src='/img/integration/ccure/install-server1.png' width={400} alone />
+
+2. まず、インストールするバージョンを選択します。
+
+   <Image src='/img/integration/ccure/install-server2.png' width={400} alone />
+
+3. **Client**のオプションを選択し、installをクリックすると、クライアント統合のインストールを開始できます。
+
+   <Image src='/img/integration/ccure/install-client3.png' width={400} alone />
+
+   :::info
+
+   これはStubインストーラーのため、常時インターネット接続が必要です。
+
+   :::
+
+4. ダウンロードが完了すると、次の画面が表示されます。 言語を選択して、**OK**をクリックします。
+
+   <Image src='/img/integration/ccure/install-server4.png' width={350} alone />
+
+5. ウィザードがインストール手順を案内します。
+
+   <Image src='/img/integration/ccure/install-client5.png' alone />
+
+6. インストールを続行するには、ライセンス契約に同意して、**Next**をクリックします。
+
+7. 統合インストーラーは、セットアップメッセージを表示しながら、いくつかのCMDウィンドウを表示する場合があります。
+
+   <Image src='/img/integration/ccure/install-server7.png' alone />
+
+8. セットアップが完了したら、ウィンドウを閉じます。
+
+:::info
+
+- インストール中は、PCがインターネットに接続していることを必ず確認してください。
+
+- ウイルス対策ソフトはインストールを妨げる場合があるため、インストール中は無効にしてください。
+
+- Suprema - C•CURE統合サーバーのセットアップは、C•CUREサーバーとBioStar 2サーバーがインストールされている同じPCにインストールする必要があります。
+
+:::
+
+## ログイン
+
+Suprema - C•CURE統合設定ツールはWebベースのツールです。インストール先のマシンにアクセスできれば、ネットワーク上のどこからでもアクセスできます。
+
+この設定ツールで、この統合の多くの設定を調整できます。
+
+## 初回起動
+
+1. Webブラウザーを起動します。
+
+   Brave Browser、Microsoft Edge、またはGoogle Chromeの使用を推奨します。
+
+2. Suprema - C•CURE統合設定ツールは、次の方法でアクセスできます。
+
+   > https:\//BioStar 2_server_IP_or_Domain_Name:PORT/modules/SupremaCCURE/index.html
+
+   PORTはBioStar 2 Serverの設定と同じ値にしてください。 適切なポートは、C•CURE 9000 ServerとBioStar 2 ServerをインストールしたPCのスタートメニューから、**BioStar 2 Settings**アプリを開いて確認できます。
+
+   > https://127.0.0.1:443/modules/SupremaCCURE/index.html
+
+   :::info
+
+   IPアドレスまたはドメイン名の確認に困っていますか？ トラブルシューティングのセクションを参照してください。
+
+   :::
+
+3. Suprema管理者の資格情報でログインしてください。管理者アカウントIDは_admin_で、パスワードはBioStar 2サーバーのインストール時に設定したものです。
+
+4. 初回ログイン時に画面に「_保護されていません_」という警告が表示される場合があります。これは秘密証明書（自己署名）が使用されているためです。**OK**をクリックすると、次のログイン画面が表示されます。
+
+   <Image src='/img/integration/ccure/first-run1.png' width={400} alone />
+
+   前の画面の直後に次の通知が表示される場合は、
+
+   <Image src='/img/integration/ccure/first-run2.png' width={400} alone />
+
+   Integration CTで**Service Not running**通知が表示されたときの対処方法については、トラブルシューティングのセクションを参照してください。
+
+5. 初回起動時、またはシステムに有効なライセンスがない場合、画面に次の通知が表示されます。
+
+   <Image src='/img/integration/ccure/first-run3.png' width={400} alone />
+
+6. Integration Configuration Toolには、**System Settings**に移動する必要があるという警告メッセージが表示されます。
+
+7. **System Settings**で、ライセンスを有効化できます。
+
+## メインメニュー
+
+次のメニューが表示されます。
+
+<Image src='/img/integration/ccure/main-menu.png' width={600} alone />
+
+### デバイスの追加
+
+iStarコントローラーとSupremaデバイスを物理接続したあと、Suprema - C•CURE統合設定ツールのADD DEVICESメニューからプラットフォームにデバイスを追加できます。
+
+<Image src='/img/integration/ccure/main-ico-devices.png' width={140} alone />
+
+システムに新しいデバイスを追加または削除できます。 選択したら、**Add/Update**ボタンをクリックします。 現在追加されているデバイスは、左列に表示されます（ある場合）。
+
+<Image src='/img/integration/ccure/adding-devices1.png' width={400} alone />
+
+デバイスアイコンの右側にデバイスの状態が表示されます。緑はデバイスがオンラインで正常、赤はオフラインを示します。
+
+デバイスID、具体的なモデル、登録名も確認できます。
+
+さらにデバイスを追加する場合は、画面右側の列を参照してください。
+
+<Image src='/img/integration/ccure/adding-devices2.png' width={400} alone />
+
+**Search**ボタンをクリックしたあと、
+
+<Image src='/img/integration/ccure/adding-devices3.png' width={400} alone />
+
+結果は次の画像のように表示される場合があります。
+
+<Image src='/img/integration/ccure/adding-devices4.png' width={500} alone />
+
+プラットフォームに追加するデバイスを選択し、**Add Devices**ボタンをクリックして操作を実行します。
+
+Normal Searchではネットワーク上のSupremaデバイスをUDP検索し、Advanced Searchでは次の処理を行います。
+
+<Image src='/img/integration/ccure/adding-devices5.png' width={400} alone />
+
+特定のIPアドレスとポートの組み合わせにTCP検索を実行し、1台ずつデバイスを見つけます。
+
+<Image src='/img/integration/ccure/adding-devices3.png' width={400} alone />
+
+結果は画面に表示されます。
+
+<Image src='/img/integration/ccure/adding-devices6.png' width={400} alone />
+
+Normal Searchの場合と同様に、少なくとも1台のデバイスを選択すると**Add Devices**ボタンが有効になり、操作を実行できます。
+
+少なくとも1台のデバイスを追加し、追加したデバイスがiStarパネルに対して正しく設定されると、C•CURE 9000 v2.90、v3.0、v3.10のユーザーに生体認証を追加できます。
+
+:::info
+
+- Supremaデバイスを統合に追加する前に、必ず正しくライセンスを取得してください。 ライセンスがない場合、追加も操作もできません。
+
+- デバイスライセンスについて質問がある場合は、この文書の末尾にあるQnAセクションを参照してください。
+
+:::
+
+## Suprema - C•CURE統合の一括操作
+
+これらの操作は、CCUREに既存ユーザーと資格情報が多数あるシステムで、統合を初期導入するための便利な方法として用意されています。
+
+### ユーザー同期
+
+_Users_メニューは、Integration Configuration Toolのメインメニューにあります。
+
+<Image src='/img/integration/ccure/main-ico-users.png' width={140} alone />
+
+この機能を使うと、CCURE 9000のすべてのユーザーをSupremaデバイスへ一括同期できます。メニューをクリックすると、次の画面が表示されます。
+
+<Image src='/img/integration/ccure/users-sync1.png' width={800} alone />
+
+利用可能なオプション:
+
+<Image src='/img/integration/ccure/users-sync-select-all.png' className='none' alone />
+
+すべてのユーザーを選択できます。**All**切り替えボタンをクリックすると、次のように変わります。
+
+<Image src='/img/integration/ccure/users-sync-select-page.png' className='none' alone />
+
+つまり、_現在の_ページのすべてのユーザーを選択します。これは、次の画像のとおり、インターフェースで一度に10、25、50、100件のどれを表示するかによって変わります。
+
+<Image src='/img/integration/ccure/users-sync2.png' alone />
+
+どちらのオプションを選んでも、**Select**ボタンをクリックすると、ユーザー記録が自動的に選択され、**Selected User records**に選択済みユーザー数が自動表示されます。
+
+<Image src='/img/integration/ccure/users-sync3.png' alone />
+
+一括同期したいユーザー数を選択したら、<Image src='/img/menus/ico-sync.png' ico alone />ボタンをクリックします。次の通知が表示されます。
+
+<Image src='/img/integration/ccure/users-sync4.png' width={400} alone />
+
+処理が完了すると、次のような通知が表示されます。
+
+<Image src='/img/integration/ccure/users-sync5.png' width={400} alone />
+
+操作結果を通知し、正常に処理されたユーザー数も表示します。エラーがあるユーザーがいる場合は、エラーのあるユーザー一覧もダウンロードできるため、トラブルシューティングが容易になります。
+
+次のオプション:
+
+<Image src='/img/integration/ccure/users-sync6.png' className='none' alone />
+
+最初のオプションは、その名のとおり、C•CUREのクリアランスに応じてユーザーを自動分割できます。このオプションを有効にすると、次の通知が表示されます。
+
+<Image src='/img/integration/ccure/users-sync7.png' width={400} alone />
+
+提供された<Cmd>この設定ガイド</Cmd>リンクにはガイドが含まれています。 そのため、ユーザーからデバイスへの同期プロセスでこの変更を適用する前に、必ずそのガイドを慎重に確認してください。
+
+前のセクションで一部説明した2つ目のオプションでは、C•CUREのPersonnel Imagesを使って顔認証用資格情報の事前登録を行えます。
+
+このメニューではオプションを有効化し、必要に応じてこの機能を実行できます。
+
+その後、前述の手順に従って処理対象のユーザーを選択し、<Image src='/img/menus/ico-facial-pre-enrollment.png' ico alone />ボタンをクリックします。C•CUREでプロフィール画像を持つユーザーのみが処理される点に注意してください。
+
+続行前に確認を求める次の通知が表示されます。
+
+<Image src='/img/integration/ccure/users-sync8.png' width={400} alone />
+
+前の機能と同様に、この処理はレポートで終了します。
+
+<Image src='/img/integration/ccure/users-sync9.png' width={400} alone />
+
+:::info
+
+このオプションを開始する前に、ユーザーを同期する必要があります。 選択したユーザーがすでにSupremaデバイスへ同期されていることが確実な場合を除きます。
+
+:::
+
+GUIには、CCUREから取得したユーザー数が表示されます。例:
+
+<Image src='/img/integration/ccure/users-sync10.png' alone />
+
+表示される数はC•CUREのユーザー数と異なる場合があります。統合が取得するのは、次の条件を満たすユーザーのみだからです。
+
+- 無効化されていない。
+
+- 少なくとも**1つ**の有効な資格情報を持っている。つまり、紛失、期限切れ、無効化、失効などに設定されていない資格情報です。
+
+### 事前登録
+
+_Pre-Enrollment_メニューは、Integration Configuration Toolで使用できます。
+
+<Image src='/img/integration/ccure/main-ico-pre-enrollment.png' width={140} alone />
+
+このダイアログに表示されるデータを使って、個別または一括でユーザーにEメールを送信し、モバイルデバイスから顔認証の事前登録を有効にできます。
+
+<Image src='/img/integration/ccure/user-available-pre-enrollment1.png' width={800} alone />
+
+ユーザーを選択しても、選択したユーザーのプロフィールにEメールアドレスが設定されていない場合は、処理対象に含まれません。
+
+この機能では、必要な前提設定がすべてすでに構成されているかも確認します。未設定の場合は、事前登録リンクを送信する前に設定すべき内容を示すフィードバックウィンドウが表示されます。例:
+
+<Image src='/img/integration/ccure/user-available-pre-enrollment2.png' width={400} alone />
+
+このフィードバックを参考に、該当する設定へ移動して設定を見直してください。その後、<Image src='/img/menus/ico-send-pre-enrollment-link.png' ico alone />ボタンをもう一度選択すると、処理が正しく進みます。
+
+処理が完了すると、次のようなEメールを受け取れます。
+
+<Image src='/img/integration/ccure/user-available-pre-enrollment3.png' alone />
+
+メールメッセージに表示されるURLの指示に従ってください。完了すると、対応するSupremaデバイスの前に最初に立ったときに事前登録済みの顔認証用資格情報が使えるようになります。
+
+## 設定のその他の利用可能な項目
+
+Configurationメニューをクリックしたあと、
+
+<Image src='/img/integration/ccure/main-ico-configuration.png' width={140} alone />
+
+次の設定が表示されます。
+
+<Image src='/img/integration/ccure/configuration-main.png' width={600} alone />
+
+### カード形式
+
+<Image src='/img/integration/ccure/card-format.png' width={500} alone />
+
+- グローバル施設コードを設定できます。
+
+- Wiegand形式を選択して設定し、iStarパネルとSupremaデバイス間のインターフェースを設定します。
+
+- サイトに複数の施設コードがある場合、Personnel ViewのCredentialsタブにある各カードには、それぞれ独自の施設コードが必要です。 そうしないと、同期が予期しない動作をする場合があります。
+
+### ｸﾗｳﾄﾞ
+
+<Image src='/img/integration/ccure/cloud1.png' width={600} alone />
+
+Suprema ACライセンスを検証すると、Suprema Cloud機能を使用できます。
+
+<Image src='/img/integration/ccure/cloud2.png' width={600} alone />
+
+ライセンスを検証すると、サーバーのサブドメイン名を設定できます。
+
+### SMTP
+
+サーバーのSMTPアクセスを設定し、事前登録機能（個別および一括）を使用できます。
+
+<Image src='/img/integration/ccure/smtp1.png' width={600} alone />
+
+顧客やユーザーに送信するメールをカスタマイズすることもできます。
+
+<Image src='/img/integration/ccure/smtp2.png' width={600} alone />
+
+### 登録と権限
+
+このメニューでは、割り当てられた権限に応じて、特定のオペレーターが利用できる登録用デバイスのフィルターを作成できます。
+
+そのため、C•CUREにログインしたオペレーターに生体認証登録に必要な権限がない場合、ユーザーの生体認証登録に利用可能なデバイスは表示されません。
+
+<Image src='/img/integration/ccure/enrollment-privileges.png' width={800} alone />
+
+### Visitor QR
+
+このメニューでは、C•CURE Visitor QRを入退室管理用資格情報として使用できます。つまり、C•CURE Portalから訪問者ユーザーを作成し、施設に招く各訪問先にVisitor QRを送信すると、この統合が、訪問期間で選択した有効期限に合わせた正しい資格情報の生成を行います。
+
+:::info
+
+この機能を有効にするには、Supremaデバイスのライセンス検証が必要です。
+
+:::
+
+<Image src='/img/integration/ccure/visitor-qr.png' width={800} alone />
+
+### システム設定
+
+System Settingsを見つける方法は2つあります。 1つ目でより直接的な方法は、上部ナビゲーションバーのメニュー<Image src='/img/menus/ico-system-settings.png' ico alone />に移動することです。 2つ目は、メインメニューからまずConfigurationを開く方法です。
+
+<Image src='/img/integration/ccure/system-settings1.png' className='none' width={500} alone />
+
+System Settingsでは次の項目を設定できます。
+
+- 有効なライセンス。
+
+- Supremaの資格情報（ユーザー名とパスワード）。
+
+- C•CURE 9000の接続資格情報。
+
+- その他の設定。
+
+ライセンスを適用する前は、ライセンスを検証するまで、すべての設定が無効になります。
+
+<Image src='/img/integration/ccure/system-settings2.png' width={800} alone />
+
+_Advanced_ライセンスではオフラインでライセンスを有効化できます。ベーシックライセンスでは、アクティベーションはオンラインのみで実行されます。
+
+前の画像のとおり、Advancedライセンスではデバイスライセンスをオフラインで検証する機能も利用できます。
+
+このメニューでは次の項目も表示されます。
+
+<Image src='/img/integration/ccure/system-settings3.png' width={600} alone />
+
+このメニューでは、**Autoenrollment Kiosk**のような他の種類のサーバーライセンスも検証または有効化できます。
+
+サーバーのオフラインライセンスを検証する場合は、
+
+- 最初にライセンスキーと名前を入力し、**Activate Offline**ボタンをクリックします。
+
+  <Image src='/img/integration/ccure/system-settings4.png' width={400} alone />
+
+- 最初の手順に従って`*.req`ファイルを取得し、営業担当者に送信します。
+
+- ライセンスファイルを取得したら、手順2に進みます。
+
+#### ライセンス適用後
+
+<Image src='/img/integration/ccure/applying-license.png' width={400} alone />
+
+ライセンスを適用すると、他の設定が有効になります。
+
+- BioStar 2の設定
+
+  <Image src='/img/integration/ccure/applying-license-biostar2-settings.png' width={400} alone />
+
+  - 統合を正しく動作させるには、管理者タイプのアカウントを使用してください。
+
+  - adminアカウントとパスワードを入力したら、**Test Connection**をクリックします。
+
+  - 接続に成功すると、**Save Credentials**ボタンが有効になります。
+
+  - 必要に応じて、**Edit**ボタンで資格情報を変更できます。
+
+- C•CURE 9000の設定
+
+  <Image src='/img/integration/ccure/applying-license-ccure9000-settings.png' width={400} alone />
+
+  - hostフィールドには、データベースがインストールされているIPアドレスまたはドメイン名を入力します。
+
+    > 例: LOCALHOST\SQLSERVER
+
+  - SQL Serverのポート。
+
+  - SQL認証またはWindows認証。
+
+  - 使用するSQL認証用のSQLユーザー名とパスワード。
+
+- GUI
+
+  <Image src='/img/integration/ccure/applying-license-gui.png' width={400} alone />
+
+  - Integration Configuration Toolは英語とスペイン語で提供されています。
+
+  - Session Timeoutは、GUIの自動ログアウトまでの時間です（不正アクセスを防ぐため）。
+
+### Autoenrollment Kiosk
+
+この機能のサーバーライセンスを有効化すると、統合のメインメニューに次のメニューが表示されます。
+
+<Image src='/img/integration/ccure/autoenrollment-kiosk-main.png' width={600} alone />
+
+<Image src='/img/integration/ccure/autoenrollment-kiosk.png' alone />
+
+:::info
+
+前述の情報は、この統合のAdvanced版にのみ有効です。
+
+:::
+
+**Autoenrollment Kiosk**の使用方法の詳細は、関連する専用ユーザーガイドとインストールマニュアルを参照してください。

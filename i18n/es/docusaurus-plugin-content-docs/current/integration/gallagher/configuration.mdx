@@ -1,0 +1,585 @@
+---
+id: configuración
+title: Configuración
+description: Guía de configuración para Gallagher Command Centre, cableado de hardware, formatos de tarjeta BioStar 2 y configuración de grupos de acceso para la integración con Suprema.
+keywords:
+  - Configuración
+  - Clave de API
+  - Configuración de Hardware
+---
+
+## Configuración de Gallagher Command Centre
+
+### Inicio de sesión del cliente de configuración de Gallagher
+
+1. **Haz clic** en el menú Inicio y abre Configuration Client.
+
+   <Image src='/img/integration/gallagher/configuration-client-logon1.png' alone />
+
+2. Establece el nombre de inicio de sesión como **system**, la contraseña como **none** y **presiona** el botón **Logon**.
+
+   <Image src='/img/integration/gallagher/configuration-client-logon2.png' alone />
+
+### Gallagher Command Centre
+
+:::info
+
+Proceso para generar la clave de API de Gallagher.
+
+:::
+
+1. Abre Gallagher Command Centre, establece el nombre de inicio de sesión como system y presiona el botón **OK**.
+
+   <Image src='/img/integration/gallagher/command-centre1.png' alone />
+
+2. **Establece** el nombre de inicio de sesión como **system**, establece la contraseña para Gallagher Command Centre y presiona **OK**.
+
+   <Image src='/img/integration/gallagher/command-centre2.png' alone />
+
+3. Ahora, ve a Administration desde la esquina superior izquierda y **selecciona** Configuration Client; la ventana se abrirá.
+
+   <Image src='/img/integration/gallagher/command-centre3.png' width={800} alone />
+
+4. Se abrirá la pestaña siguiente.
+
+   <Image src='/img/integration/gallagher/command-centre4.png' width={600} alone />
+
+5. Para configurar las propiedades del servidor, **selecciona File** → **Server Properties**.
+
+   <Image src='/img/integration/gallagher/command-centre5.png' width={600} alone />
+
+6. Se abrirá la nueva ventana. Ahora ve a **Web Services**. En la sección **REST API**, habilita la conexión a la red local, **establece** el puerto del servidor en **8904**, **desmarca** Enable REST client with no client certificate y **presiona** el botón **OK**.
+
+   <Image src='/img/integration/gallagher/command-centre6.png' width={600} alone />
+
+7. **Haz clic** en **Gallagher Client**.
+
+   **Haz clic** en **Manage**. En el menú desplegable, **selecciona Operator Groups**.
+
+   <Image src='/img/integration/gallagher/command-centre7.png' width={600} alone />
+
+8. Se abrirá la ventana de Operator Group. **Haz clic derecho** y selecciona **New** → **Operator Group**.
+
+   <Image src='/img/integration/gallagher/command-centre8.png' alone />
+
+9. En la configuración general, el nombre debe establecerse como **REST Client Operator Group**. Luego haz clic en **Apply**.
+
+   <Image src='/img/integration/gallagher/command-centre9.png' alone />
+
+10. Ahora **selecciona** la configuración **Operator Privileges** en Operator group y ve a la ventana de cliente de configuración de Gallagher: Manage → Operator Privileges. Ahora **arrastra y suelta**.
+
+    Debes agregar 3 privilegios al Operator Group (Add Card or Credential, Edit Cardholders, View Cardholders) desde operator privileges al operator group y **presionar** el botón **OK**; luego **cierra** operator privileges.
+
+    <Image src='/img/integration/gallagher/command-centre10.png' width={600} alone />
+
+    <Image src='/img/integration/gallagher/command-centre11.png' width={800} alone />
+
+11. Ve a Configuration Client y **selecciona Cardholders**.
+
+    <Image src='/img/integration/gallagher/command-centre12.png' width={600} alone />
+
+12. **Haz clic derecho** en New → Cardholder.
+
+    <Image src='/img/integration/gallagher/command-centre13.png' alone />
+
+13. En la configuración general, establece First Name como **REST Client** y **presiona Apply**.
+
+    <Image src='/img/integration/gallagher/command-centre14.png' alone />
+
+14. **Haz clic** en la pestaña **Operator Configuration** del lado izquierdo dentro de REST Client Properties. **Arrastra y suelta** el grupo de operadores REST Client que creamos desde Operator Group hasta Operator Group Membership.
+
+15. **Arrastra** REST Client Operator Group hasta Operator Group Membership, como en la imagen siguiente:
+
+    <Image src='/img/integration/gallagher/command-centre15.png' width={800} alone />
+
+16. **Establece** el nombre de inicio de sesión en **REST** y **establece** la contraseña igual a la que configuramos para Gallagher Command Centre. **Haz clic en OK** y también **cierra** la ventana de Operator Group.
+
+    <Image src='/img/integration/gallagher/command-centre16.png' width={600} alone />
+
+17. En **Configuration** Client, ve a Configure → Services & Workstations.
+
+    <Image src='/img/integration/gallagher/command-centre17.png' width={600} alone />
+
+18. Ahora **haz clic derecho** en New → REST Client.
+
+    <Image src='/img/integration/gallagher/command-centre18.png' alone />
+
+19. En la sección de clave de API, **arrastra y suelta** el REST Client de Cardholder a REST Client Operator. **Haz clic en Apply**. **Cierra** la ventana de Cardholder.
+
+    <Image src='/img/integration/gallagher/command-centre19.png' width={800} alone />
+
+20. La clave de API de Gallagher está allí, en la sección de clave de API.
+
+    :::info
+
+    Guarda la clave de API de Gallagher en un lugar seguro.
+
+    :::
+
+    <Image src='/img/integration/gallagher/command-centre20.png' width={500} alone />
+
+21. Para obtener el thumbprint, ve a `C:\Program Files\Suprema Integration with Gallagher\Prerequisites`, abre el archivo del thumbprint y copia el valor del thumbprint que contiene.
+
+    :::info
+
+    Si falta el archivo del thumbprint. [Si el thumbprint no se genera al ejecutar el archivo EXE.](troubleshooting#thumbprint-not-generated)
+
+    :::
+
+    <Image src='/img/integration/gallagher/command-centre21.png' width={600} alone />
+
+    <Image src='/img/integration/gallagher/command-centre22.png' width={600} alone />
+
+22. **Copie** el thumbprint y **pegue la clave del thumbprint del certificado del cliente** en la sección correspondiente. **Presione** el botón **OK** y también **cierre** Services and Workstations.
+
+    <Image src='/img/integration/gallagher/command-centre23.png' alone />
+
+### Verificar la clave de API de Gallagher
+
+1. Ve a Command Centre iso → utilities → REST API → RestClient_v8.60.072 → win-x64 → RestClientDemo, **muévelo** al escritorio y **abre** `RESTClientDemo.exe`.
+
+2. **Ingresa** la clave de API de Gallagher como se muestra en la imagen.
+
+   <Image src='/img/integration/gallagher/check-api-key1.png' alone />
+
+3. **Marca** Command Centre Requirement Client Certificate y completa Certificate Thumbprint; además, **marca** Remember credentials (Optional).
+
+   <Image src='/img/integration/gallagher/check-api-key2.png' alone />
+
+:::info
+
+Si hay un error, se mostrará en la terminal; de lo contrario, se abrirá una nueva pantalla como se muestra en la imagen siguiente. Después de la prueba, cierra esta ventana.
+
+<Image src='/img/integration/gallagher/check-api-key3.png' width={800} alone />
+
+:::
+
+## Configuración de hardware
+
+:::info
+
+- Salta a [Configuración de BioStar 2](#biostar2-setup) si el hardware ya se configuró.
+
+- Usamos el controlador 6000 como referencia. Si tienes otro controlador, sigue los pasos según corresponda.
+
+:::
+
+1. Primero, debemos crear el controlador 6000 (o cualquier otro controlador que tengas) para **conectarlo** al controlador Gallagher.
+
+   Abre la ventana Gallagher Configuration Client y ve a Configure → Hardware.
+
+2. En la ventana de hardware, **haz clic derecho** y luego **New** → **Controllers** → **Controller 6000** (si tienes un controlador diferente, aparecerá aquí) y **presiona apply**. Esto creará un controlador en hardware.
+
+   <Image src='/img/integration/gallagher/configuration-hw1.png' alone />
+
+3. Luego **regresa** a Gallagher Configuration Client y ve a configure → Alarm Zones. Después, **haz clic derecho** para crear una nueva zona de alarma.
+
+   <Image src='/img/integration/gallagher/configuration-hw2.png' alone />
+
+4. Para configurar la zona de alarma en General settings, cambia el nombre a **System Alarm Zone** y **presiona** el botón **OK**.
+
+   <Image src='/img/integration/gallagher/configuration-hw3.png' alone />
+
+5. Configuremos el Controller 6000. En la configuración general, **establece** el nombre como **Controller 6000** (usa el mismo nombre que tu controlador).
+
+   <Image src='/img/integration/gallagher/configuration-hw4.png' width={600} alone />
+
+6. Ahora **ve** a Event Response y selecciona Alarm Zone para todos los eventos y selecciona **System Alarm Zone**. Luego **presiona** el botón **Apply**.
+
+   <Image src='/img/integration/gallagher/configuration-hw5.png' width={600} alone />
+
+   Ahora ve a System Alarm Zone Properties y **selecciona** Connections; en el menú desplegable del controlador, **elige Controller 6000**. **Presiona** el botón **OK** y **cierra** la ventana de Alarm Zone.
+
+   <Image src='/img/integration/gallagher/configuration-hw6.png' alone />
+
+7. Ahora debemos **crear** una Access Zone en configure.
+
+   Ve a Access Zone y se abrirá la ventana. Ahora **haz clic derecho** en la ventana de Access Zone y **selecciona** New → luego **haz clic** en Access Zone, y se creará una access zone.
+
+   <Image src='/img/integration/gallagher/configuration-hw7.png' alone />
+
+8. **Abre** las propiedades de Access Zone que creamos en General Setting. Luego **establece** el nombre como **Suprema Access Zone**.
+
+   <Image src='/img/integration/gallagher/configuration-hw8.png' alone />
+
+9. **Ve** a la pestaña Access Mode. **Selecciona** Schedule como Default Access Zone Secure y **presiona** el botón **OK**.
+
+   <Image src='/img/integration/gallagher/configuration-hw9.png' alone />
+
+10. Ahora **ve** a la ventana de Hardware y luego **haz clic derecho** en Controller 6000. Selecciona New → HBUS Devices → HBUS I/O. Este paso creará HBUS dentro del controlador.
+
+    <Image src='/img/integration/gallagher/configuration-hw10.png' width={600} alone />
+
+11. Configuremos el HBUS que creamos; para editar las propiedades, **haz doble clic** en él. En la configuración general, **establece** el nombre como **HBUS I/O Wiegand Module (Suprema)**.
+
+    **Ve** a la pestaña Connections y **elige** Controller como Controller 6000, establece Hardware Variant como 4 in 2 out y luego presiona el botón **OK**.
+
+    <Image src='/img/integration/gallagher/configuration-hw11.png' width={600} alone />
+
+12. Para conectar tu controlador Gallagher al sistema, **abre** las propiedades de Controller 6000 y **haz clic** en la pestaña Server Address. Marca use different IP for the server y escribe la dirección IP de tu PC/servidor. Luego **presiona** el botón **Apply**.
+
+    <Image src='/img/integration/gallagher/configuration-hw12.png' width={600} alone />
+
+13. En la configuración de Controller Address, establece la dirección MAC de tu controlador (consulta tu controlador C6000). Además, **establece** la dirección IP asignada para el controlador, la subred y la puerta de enlace. **Presiona** el botón **Apply**.
+
+    <Image src='/img/integration/gallagher/configuration-hw13.png' width={600} alone />
+
+14. En la pestaña Setup, establece Plug in Module como **4H Module** (elige según tu controlador) y en Hardware RS485 Bus 1 como **OSDP** y RS485 Bus 2 como **HBUS**; luego presiona Apply.
+
+    <Image src='/img/integration/gallagher/configuration-hw14.png' width={600} alone />
+
+    :::info
+
+    Tu configuración puede variar según tus dispositivos y componentes Gallagher.
+
+    :::
+
+15. En las opciones Status and Overrides, **marca** las dos casillas Disable Front Tamper y DisableRear Tamper.
+
+    <Image src='/img/integration/gallagher/configuration-hw15.png' width={600} alone />
+
+16. Para conectar tu controlador al sistema, **apaga** el controlador y espera hasta que la luz roja se apague. Luego **enciende** el segundo interruptor desde la izquierda.
+
+    :::info
+
+    Antes de realizar este paso, asegúrate de que el firewall de tu PC esté desactivado.
+
+    :::
+
+    <Image src='/img/integration/gallagher/configuration-hw16.png' width={400} alone />
+
+17. Cuando el estado del controlador vuelva a normal, **apaga** el segundo interruptor (baja el segundo interruptor DIP).
+
+    :::info
+
+    Una vez que el controlador esté en línea y en estado normal, puedes apagar todos los interruptores DIP, incluido el 2.
+
+    :::
+
+    <Image src='/img/integration/gallagher/configuration-hw17.png' width={400} alone />
+
+    **Nota adicional: primer encendido y conexión de un controlador nuevo:**
+
+    Solo necesitas activar el interruptor #2 cuando enciendas por primera vez un controlador nuevo y lo conectes a un servidor.
+
+    Además, el puente #2 puede usarse al realizar ciertos reinicios del controlador. Déjalo fijo si realizas actualizaciones en el controlador.
+
+    <Image src='/img/integration/gallagher/configuration-hw18.png' width={600} alone />
+
+    :::info
+
+    Conecta dispositivos para acceder a HBUS en la configuración HBUS del controlador. (Para conectar dispositivos, consulta la configuración de BioStar 2.)
+
+    :::
+
+18. En la opción HBUS Devices de Controller 6000, **arrastra y suelta** el módulo HBUS I/O 4 in 2 Out - Wiegand desde **Plugin Modules** a **Undetected devices** HBUS I/O.
+
+    <Image src='/img/integration/gallagher/configuration-hw19.png' alone />
+
+19. Para crear una puerta, ve a Configure, Door y luego **haz clic derecho** y crea una nueva puerta.
+
+    <Image src='/img/integration/gallagher/configuration-hw20.png' alone />
+
+20. **Establece** el nombre de la puerta como **Suprema Door** y ve a Event Response y **elige** la alarma como System Alarm Zone.
+
+    <Image src='/img/integration/gallagher/configuration-hw21.png' alone />
+
+21. En **Connections, selecciona** Controller como Controller 6000 y presiona **Apply** y **OK**.
+
+    <Image src='/img/integration/gallagher/configuration-hw22.png' alone />
+
+22. Para crear una conexión **OSDP**, haz clic derecho en la ventana de Hardware. Selecciona New** → **OSDP Device** → **luego haz clic en OSDP Reader\*\* para crear OSDP Reader en Hardware.
+
+    Se abre una nueva ventana. **Establece** el nombre como Suprema OSDP Reader y, en la pestaña de ajustes de Event Response, **establece** Alarm Zone for all events como System Alarm Zone. Luego **haz clic** en Apply y **presiona** OK para guardar los cambios.
+
+    <Image src='/img/integration/gallagher/configuration-hw23.png' alone />
+
+    **Regresa** a la ventana de Hardware. **Haz doble clic** en Controller 6000 para abrir las propiedades. **Haz clic** en la pestaña OSDP Devices.
+
+23. **Arrastra** el lector OSDP desde la **ventana de Hardware** hasta las **propiedades del controlador** en la pestaña OSDP Devices. **Establece** Configured Address como 0, Suprema OSDP Device Address como 0 y Baudrate como **115200**.
+
+    <Image src='/img/integration/gallagher/configuration-hw24.png' width={600} alone />
+
+    :::info
+
+    Si tienes un lector OSDP 2x, cambia la dirección OSDP dentro de BioStar 2.
+
+    :::
+
+24. Para crear el lector Wiegand. **Haz clic derecho** en la ventana de Hardware. Haz clic en New → Third-Party Reader. Aparece una nueva ventana; **establece** el nombre como Suprema Wiegand Reader y luego ve a la pestaña Event Response. **Elige** Alarm Zone como System Alarm Zone y **presiona OK**.
+
+    <Image src='/img/integration/gallagher/configuration-hw25.png' alone />
+
+25. **Ve** a la puerta que creamos en las propiedades. En **Entry Zone**, establece Access Zone como **Suprema Access Zone** y reader como **Suprema Wiegand Reader** y **Suprema OSDP Reader**; luego **presiona** el botón **OK**.
+
+    <Image src='/img/integration/gallagher/configuration-hw26.png' alone />
+
+26. En las propiedades de **HBUS I/O**, ve a los ajustes de **Reader** y establece Reader 1 como Suprema Wiegand Reader; **presiona** el botón **OK**. **Cierra** la ventana de la puerta y del controlador.
+
+    <Image src='/img/integration/gallagher/configuration-hw27.png' width={600} alone />
+
+27. Para crear un tipo de tarjeta, ve a Configure → Card Type, **haz clic derecho** y crea un nuevo **Card Type**. **Establece** su nombre como **Suprema Card Type**.
+
+    :::info
+
+    - Se necesita una licencia QR Device para leer el código QR de Gallagher. Ponte en contacto con Suprema para obtenerla.
+
+    - Usa los mismos términos mencionados para los campos.
+
+    :::
+
+    <Image src='/img/integration/gallagher/configuration-hw28.png' alone />
+
+28. En las propiedades del tipo de tarjeta, **ve** a la opción setup y configura Region code como **A**, Facility code como **10000**, el rango de números de tarjeta como **1 a 99999999999999999999 (20 veces)** y habilita la notificación de vencimiento de la tarjeta. **Presiona OK**.
+
+    <Image src='/img/integration/gallagher/configuration-hw29.png' width={600} alone />
+
+29. Crea otro tipo de tarjeta: ve a Configure → Card Type, **haz clic derecho** y crea un nuevo **Card Type**. Establece su nombre como **HID Seos Corporate**. Y **ve a** las propiedades (setup) para configurar el tipo de tarjeta. Usa la siguiente configuración para configurar la tarjeta y **presiona** Apply y **OK**.
+
+    <Image src='/img/integration/gallagher/configuration-hw30.png' width={600} alone />
+
+30. <Anchor id="create-another-card-type" />Crea otro tipo de tarjeta: ve a Configure → Card Type, **haz clic derecho** y crea un nuevo **Card Type**. Establece su nombre como **Suprema QR Code**.
+
+    <Image src='/img/integration/gallagher/configuration-hw31.png' alone />
+
+31. En las propiedades del tipo de tarjeta, **ve** a la opción setup y configura Region code como **A**, Facility code como **10000**, el rango de números de tarjeta como **4194304 a 8388607** y habilita la notificación de vencimiento de la tarjeta. **Presiona OK**.
+
+    <Image src='/img/integration/gallagher/configuration-hw32.png' width={600} alone />
+
+32. Para crear un tipo de tarjeta universal, ve a Configure → Universal Card Format, **haz clic derecho** y crea un nuevo formato de tarjeta universal. Debemos crear 4 formatos de tarjeta.
+
+    1. **Crea** un nuevo formato con el nombre **Suprema 26 bits** Wiegand y establece el formato como en la imagen siguiente:
+
+       <Image src='/img/integration/gallagher/configuration-hw33.png' alone />
+
+    2. **Crea** un segundo formato de tarjeta como **Suprema CSN 32 bits** y establece el formato como se muestra abajo.
+
+       <Image src='/img/integration/gallagher/configuration-hw34.png' alone />
+
+    3. **Crea** un tercer formato de tarjeta como **Suprema CSN 56 bits** y establece el formato como se muestra abajo.
+
+       <Image src='/img/integration/gallagher/configuration-hw35.png' alone />
+
+    4. **Crea** un cuarto formato de tarjeta como **Suprema Virtual Card (25bit)** y establece el formato como se muestra abajo.
+
+       <Image src='/img/integration/gallagher/configuration-hw36.png' alone />
+
+    5. **Crea** un quinto formato de tarjeta como **HID 48bit** y establece el formato como se muestra abajo.
+
+       <Image src='/img/integration/gallagher/configuration-hw37.png' alone />
+
+    6. **Crea** un sexto formato de tarjeta como **Suprema QR 23 bits** y establece el formato como se muestra abajo.
+
+       <Image src='/img/integration/gallagher/configuration-hw38.png' alone />
+
+33. **Arrastra** los seis tipos de tarjeta y suéltalos en las propiedades del controlador, en Card Format Setting, y **aplica** la configuración. **Presiona** **OK** y **cierra** todas las ventanas de Gallagher Configuration Client.
+
+    <Image src='/img/integration/gallagher/configuration-hw39.png' width={600} alone />
+
+34. **Ve** a Config Client Configure → Hardware.
+
+    <Image src='/img/integration/gallagher/configuration-hw40.png' width={600} alone />
+
+    Luego **haz clic derecho** en la ventana y **crea** una salida y **establece** el nombre como **Wiegand Output** en la pestaña general.
+
+    <Image src='/img/integration/gallagher/configuration-hw41.png' alone />
+
+35. Ahora **haz clic** en Advance en el lado izquierdo, **establece** 1 segundo en la opción Output times y **presiona Apply** y **OK**.
+
+    <Image src='/img/integration/gallagher/configuration-hw42.png' alone />
+
+36. Ahora **ve** a la ventana de hardware → **haz doble clic** en HBUS I/O Wiegand Module (Suprema) en el lado izquierdo, **ve** a Outputs y **selecciona** Wiegand Output; **presiona Apply** y **OK**.
+
+    <Image src='/img/integration/gallagher/configuration-hw43.png' width={600} alone />
+
+## Configuración de BioStar 2 {#biostar2-setup}
+
+1. Para abrir BioStar 2, **escribe** `https://[Your system IP Address]/#/login` en tu navegador; se abrirá el formulario de inicio de sesión.
+
+   <Image src='/img/integration/gallagher/biostar2-setup1.png' width={800} alone />
+
+2. **Completa** tus credenciales de BioStar 2 para iniciar sesión, **ve** a la página de ajustes y **selecciona** Card Format.
+
+   <Image src='/img/integration/gallagher/biostar2-setup2.png' width={800} alone />
+
+3. En el ajuste de la tarjeta, **haz clic** en el botón **edit** para crear un nuevo formato de tarjeta.
+
+   <Image src='/img/integration/gallagher/biostar2-setup3.png' width={800} alone />
+
+4. Aquí también debemos crear tres tipos de tarjeta: **56-bit**, **32-bit** y **26-bit**.
+
+   1. **Establece** el nombre como **56-bit Gallagher**, los bits totales como 56 y, en el campo ID, **presiona** add, **establece** el bit inicial como 0 y el bit final como 55.
+
+      <Image src='/img/integration/gallagher/biostar2-setup4.png' width={800} alone />
+
+   2. **Establece** el nombre como **32-bit Gallagher**, los bits totales como 32 y, en el campo ID, **presiona** add y **establece** el bit inicial como 0 y el bit final como 31.
+
+      <Image src='/img/integration/gallagher/biostar2-setup5.png' width={800} alone />
+
+   3. **Establece** el nombre como **26-bit Gallagher**, los bits totales como 26 y, en el campo ID, **presiona** add y **establece** el bit inicial como 0 y el bit final como 25.
+
+      <Image src='/img/integration/gallagher/biostar2-setup6.png' width={800} alone />
+
+5. Ahora, dentro del formato de tarjeta, **ve** a la sección smart card presionando el botón smart card y **haz clic** en el botón ADD SMART CARD.
+
+   <Image src='/img/integration/gallagher/biostar2-setup7.png' width={800} alone />
+
+6. Ahora escribe el **nombre** como AOC Inside MIFARE, **ingresa 1** para Start Block Index, **marca** la casilla Use Face template y **presiona** el botón Apply.
+
+   :::info
+
+   Si no quieres usar un Visual Face y solo quieres usar una fingerprint en la smart card, puedes desmarcar la casilla.
+
+   :::
+
+   <Image src='/img/integration/gallagher/biostar2-setup8.png' width={800} alone />
+
+7. Para conectar dispositivos al sistema, **ve** al panel de dispositivos y **presiona** el botón SEARCH DEVICE.
+
+   <Image src='/img/integration/gallagher/biostar2-setup9.png' width={800} alone />
+
+8. Ahora **presiona** el botón de búsqueda, **selecciona** el dispositivo y **presiona** el botón Add.
+
+   <Image src='/img/integration/gallagher/biostar2-setup10.png' width={800} alone />
+
+9. Los dispositivos conectados aparecerán en el panel de dispositivos del lado izquierdo.
+
+   <Image src='/img/integration/gallagher/biostar2-setup11.png' width={800} alone />
+
+### CONEXIÓN DEL READER Wiegand
+
+1. **Haz clic** en el dispositivo que está conectado mediante la conexión Wiegand. **Desplázate hacia abajo** hasta ver Card Type.
+
+   **Activa** la **card CSN**, **marca** **Mifare/Felica**, **establece** el tipo de formato como **Wiegand**, el orden de bytes como **LSB** y el formato Wiegand como **56-bit Gallagher**.
+
+   <Image src='/img/integration/gallagher/wiegand-reader-connection1.png' width={800} alone />
+
+2. Ahora **ve** a la configuración avanzada y desplázate hacia abajo hasta ver trigger and action; **presiona** el botón add y **establece** el campo como se muestra en la imagen.
+
+   <Image src='/img/integration/gallagher/wiegand-reader-connection2.png' width={800} alone />
+
+3. Vuelve a **presionar** el botón add para agregar otro trigger and action.
+
+   <Image src='/img/integration/gallagher/wiegand-reader-connection3.png' width={800} alone />
+
+4. En la sección Advanced, debajo de Trigger & Action: la configuración Wiegand debe establecer Input/Output como **Output**, Wiegand Input Format como Default, Pulse width como **40**, pulse interval como **10000**, output mode como **normal**, marca fail code y output info como **Card ID**.
+
+   <Image src='/img/integration/gallagher/wiegand-reader-connection4.png' width={800} alone />
+
+### CONEXIÓN DEL READER OSDP
+
+1. Para la conexión OSDP, **haz clic** en el dispositivo conectado al panel OSDP y desplázate hacia abajo hasta ver Serial.
+
+   **Establece** RS485 como Default y Baud rate como **115200**.
+
+   <Image src='/img/integration/gallagher/osdp-reader-connection1.png' width={800} alone />
+
+2. En intelligent slave expectation, configura code as **Enabled**, output info as Card ID y OSDP ID como **0**.
+
+   :::info
+
+   Si tienes más dispositivos OSDP, cambia el OSDP ID a otro número y, para output, Info debe ser Card ID.
+
+   :::
+
+   <Image src='/img/integration/gallagher/osdp-reader-connection2.png' width={800} alone />
+
+### Configuraciones de correo electrónico para el código QR {#email-config-qr-code}
+
+:::info
+
+- Las confirmaciones por correo electrónico y los correos electrónicos para los perfiles de usuario son obligatorios para QR Code.
+
+- Se requieren licencias para los correos electrónicos. Contacta al administrador para obtener la licencia necesaria.
+
+:::
+
+1. **Ve** a la página de ajustes y **selecciona** Email Settings.
+
+   <Image src='/img/integration/gallagher/email-configuration-qr-code1.png' width={800} alone />
+
+2. **Presiona** el botón de configuración SMTP dentro de Email Settings, completa los detalles de la opción SMTP y **presiona** el botón Apply.
+
+   <Image src='/img/integration/gallagher/email-configuration-qr-code2.png' width={400} alone />
+
+3. Para verificarlo, usa la función de correo de prueba: debes ingresar la dirección de correo que deseas probar y **presionar** el botón send email.
+
+   Para usar la tarjeta QR Code, **habilita** la opción QR dentro de los ajustes, ingresa los detalles según los requisitos y **presiona** el botón Apply.
+
+   <Image src='/img/integration/gallagher/email-configuration-qr-code3.png' width={800} alone />
+
+## Integración de Suprema con Gallagher v2.0
+
+1. **Abre** Gallagher Command Centre en la opción Cardholder viewer y **ve** a viewer configuration.
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher1.png' width={800} alone />
+
+2. En Viewer Configuration, configura las ventanas como se muestra en la imagen siguiente y usa la ventana de herramientas para **arrastrar y soltar** ventanas.
+
+   - Detalles del titular de la tarjeta
+
+   - Grupos de acceso del titular de la tarjeta
+
+   - Tarjetas del titular de la tarjeta
+
+   - Historial de eventos
+
+   - Elemento URL
+
+   - Imágenes del titular de la tarjeta
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher2.png' width={800} alone />
+
+3. En la ventana URL, **haz clic** para configurar la URL específica en `<127.0.0.1>:28523` y elige navegación como Disable Navigation. Y **presiona** el botón de guardar para guardar la configuración.
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher3.png' alone />
+
+4. Después de completar la configuración, **presiona** el botón de guardar y luego **haz clic derecho** en viewer configuration y recarga el visor para ver el cambio.
+
+5. **Conecta** el **Mifare Encoder** a la PC.
+
+6. **Ve** al Administrador de dispositivos del sistema, en Otros dispositivos, **haz clic derecho** en SDI011 Contactless Reader (en tu caso puede ser un dispositivo diferente) y elige actualizar controlador.
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher4.png' width={600} alone />
+
+7. **Busca en mi equipo** el controlador y selecciona la carpeta que proporcionamos.
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher5.png' alone />
+
+8. Cuando actualices el controlador por primera vez, estará disponible un lector de tarjeta inteligente.
+
+   :::info
+
+   El nombre del dispositivo USB puede diferir de un dispositivo a otro.
+
+   :::
+
+9. Ahora debemos actualizar de nuevo el controlador de Contactless Reader con el mismo archivo. Después verás que el nuevo controlador de tarjeta inteligente estará disponible.
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher6.png' alone />
+
+## Agregar grupo de acceso
+
+1. **Ve** a Administration, donde puedes ver **Access Groups** en la parte superior izquierda. **Haz clic** allí; luego verás el botón **New Access Group** en la parte inferior izquierda. **Haz clic** en ese botón.
+
+   <Image src='/img/integration/gallagher/add-access-group1.png' width={600} alone />
+
+2. Después de **hacer clic en el botón New Access Group**, se abrirá una ventana emergente como se muestra en la imagen siguiente. **Establece** el nombre como **Suprema Access Group** y **haz clic** en el botón Close; luego la ventana emergente se cerrará.
+
+   <Image src='/img/integration/gallagher/add-access-group2.png' alone />
+
+3. Después de **hacer clic** en el botón close, verás la pantalla que se muestra en la imagen siguiente; **haz clic** en el botón **Add Access** en la esquina inferior izquierda.
+
+   <Image src='/img/integration/gallagher/add-access-group3.png' width={800} alone />
+
+4. Después de **hacer clic en Add Access**, se abrirá una ventana emergente como se muestra en la imagen siguiente. Allí, **marca** la **casilla** y luego haz clic en el botón Add **Selection**.
+
+   <Image src='/img/integration/gallagher/add-access-group4.png' width={600} alone />
+
+   Luego **marca** el botón de opción y haz clic en el botón **OK**; la ventana emergente se cerrará.
+
+   <Image src='/img/integration/gallagher/add-access-group5.png' width={600} alone />
+
+5. **Haz clic** en el botón **Save**; tu Access Group se agregará correctamente.
+
+   <Image src='/img/integration/gallagher/add-access-group6.png' width={600} alone />

@@ -1,0 +1,572 @@
+---
+id: installation
+title: Instalación de la integración Suprema - C•CURE
+description: Proporciona instrucciones completas para instalar y configurar la integración Suprema - C•CURE, incluida la configuración del servidor y del cliente, los requisitos de puertos y la sincronización de usuarios.
+keywords:
+  - Instalación
+  - Configuración
+  - Integración C•CURE
+---
+
+## Requisitos previos
+
+- Software House C•CURE 9000 (versión 2.90, 3.0, 3.10)
+
+- Suprema BioStar 2 (versión 2.9.0 y posteriores)
+
+:::info
+
+Debe instalar BioStar 2 Server y C•CURE 9000 Server en la MISMA máquina.
+
+:::
+
+## Consideraciones
+
+- Para instrucciones específicas sobre cómo instalar y configurar C•CURE 9000 o BioStar 2, consulte el manual de instalación de cada plataforma.
+
+- Si usa MS SQL 2014 Express (es mejor una versión más reciente), instale el Service Pack 2 según la siguiente página web.
+
+  > https://www.microsoft.com/en-us/download/details.aspx?id=53168
+
+- Tenga en cuenta que, por razones de seguridad, esta integración no admite HTTP, solo HTTPS (sobre TLS 1.2); asegúrese de que BioStar 2 esté configurado para usar solo HTTPS.
+
+- Los valores predeterminados de los puertos usados son los siguientes. Si otro programa usa el mismo puerto, los requisitos previos o esta integración pueden no funcionar correctamente.
+
+  - Integración Suprema - C•CURE
+
+    <div className='overflow-x cols3--20-20-60'>
+     | Type | Port | Description |
+     | :--: | :--: | -- |
+     | Port | 7733 | HTTPS sobre TLS 1.2 |
+     | Port | 51211 | Dispositivos Suprema |
+     </div>
+
+  - Servicio backend de Suprema BioStar 2
+
+    <div className='overflow-x cols3--20-20-60'>
+     | Type | Port | Description |
+     | :--: | :--: | -- |
+     | Port | 443 | HTTPS sobre TLS 1.2 |
+     | Port | 3312 | Cuando se usa el esquema MariaDB. |
+     | Port | 9002 | Web Socket |
+     </div>
+
+  - C•CURE 9000 v2.9 o v3.0
+
+    <div className='overflow-x cols3--20-20-60'>
+     | Type | Port | Description |
+     | :--: | :--: | -- |
+     | Port | 161 | Para recopilar y organizar información sobre los dispositivos. |
+     | Port | 2901/2 | Puerto de escucha GCM de iSTAR Ultra G2 para conexión SSL IP-ACM2 con certificado y clave predeterminados. |
+     | Port | 28014 | Puerto de entrega de certificados firmados TLS 1.3. iSTAR Ultra G2 abre el puerto. El host entrega los certificados firmados. |
+     </div>
+
+  - Servidor Microsoft SQL
+    <div className='overflow-x cols3--20-20-60'>
+     | Type | Port | Description |
+     | :--: | :--: | -- |
+     | Port | 1433 | O según la configuración. |
+     </div>
+
+- Los datos se transfieren bajo TLS 1.2 con certificados privados. Los datos sensibles (usuarios, contraseñas, configuraciones), además del cifrado en la capa de transporte, se almacenan cifrados.
+
+- Antes de iniciar la instalación, asegúrese de que MS SQL esté configurado para:
+
+  - Permitir conexiones IP en el puerto deseado (1433 predeterminado), desde las direcciones IP deseadas, como se muestra en las siguientes imágenes.
+
+    <Image src='/img/integration/ccure/tcp-ip-properties1.png' alone />
+
+    <Image src='/img/integration/ccure/tcp-ip-properties2.png' alone />
+
+   :::info
+
+   Puede que sea necesario reiniciar la PC para que la nueva configuración surta efecto en MS SQL.
+
+   :::
+
+- Permitir autenticación SQL:
+
+  - En SQL Server Management Studio: Object Explorer, haga clic derecho en **Server** → **Properties** → **Security** → seleccione **SQL Server and Windows Authentication mode** → **Apply**.
+
+    <div className='grid-container'>
+     <Image src='/img/integration/ccure/allow-sql-authentication1.png' alone />
+     <Image src='/img/integration/ccure/allow-sql-authentication2.png' alone />
+     </div>
+
+  - Esta integración admite autenticación de Windows y autenticación SQL (local y basada en dominio).
+
+  - Para la autenticación de Windows, tenga en cuenta que la cuenta de usuario actual de Windows (donde se instaló la integración) debe tener acceso a las bases de datos de C•CURE, ya sea para usuarios locales o de dominio. De lo contrario, CT de la integración fallará al conectarse.
+
+  - Tenga en cuenta las configuraciones específicas de la base de datos al integrar con Active Directory. Si tiene algún problema con la conexión a la base de datos, abra un ticket para solicitar soporte técnico.
+
+## Procedimiento de instalación
+
+La versión BASIC anterior de esta integración ha quedado obsoleta. Actualmente solo se admite la versión ADVANCED; se proporcionará un instalador específico según la versión de la integración con la que desee trabajar.
+
+Esta guía es para la versión ADVANCED.
+
+### Instalar integración del servidor
+
+:::info
+
+Puede detener por completo los servicios CrossFire antes de iniciar esta instalación y volver a iniciarlos al terminar.
+
+:::
+
+1. Haga doble clic en el programa de instalación (Suprema-CCURE_Integration-v2.x.exe).
+
+   <Image src='/img/integration/ccure/install-server1.png' width={400} alone />
+
+2. Primero, elija la versión que va a instalar:
+
+   <Image src='/img/integration/ccure/install-server2.png' width={400} alone />
+
+3. Seleccione la opción **Server**, luego haga clic en instalar. Así podrá iniciar el proceso de instalación de la integración del servidor.
+
+   <Image src='/img/integration/ccure/install-server3.png' width={400} alone />
+
+   :::info
+
+   Como este es un instalador Stub, debe tener en cuenta que SE DEBE proporcionar una conexión constante a Internet.
+
+   :::
+
+4. Una vez que termine la descarga, se mostrará lo siguiente. Seleccione un idioma y haga clic en **OK**.
+
+   <Image src='/img/integration/ccure/install-server4.png' width={350} alone />
+
+5. El asistente lo guiará durante el proceso de instalación.
+
+   <Image src='/img/integration/ccure/install-server5.png' alone />
+
+6. Para continuar con la instalación, acepte el acuerdo de licencia y haga clic en **Next**.
+
+7. Verá que el programa de instalación ejecuta el proceso de instalación.
+
+   <Image src='/img/integration/ccure/install-server6.png' alone />
+
+8. El instalador de la integración puede mostrar un par de ventanas CMD mientras aparece el mensaje de instalación:
+
+   <Image src='/img/integration/ccure/install-server7.png' alone />
+
+9. Una vez que termine la instalación, se mostrará la pantalla de instalación.
+
+   <Image src='/img/integration/ccure/install-server8.png' alone />
+
+10. Puede que sea necesario reiniciar el sistema después de la instalación.
+
+### Instalar integración del cliente
+
+:::info
+
+Todas las instancias de Administrator Workstation y Monitoring Station deben cerrarse antes de iniciar esta instalación.
+
+:::
+
+1. Haga doble clic en el programa de instalación (Suprema-CCURE_Integration-v2.x.exe).
+
+   <Image src='/img/integration/ccure/install-server1.png' width={400} alone />
+
+2. Primero, elija la versión que va a instalar:
+
+   <Image src='/img/integration/ccure/install-server2.png' width={400} alone />
+
+3. Seleccione la opción **Client**, luego haga clic en instalar. Así podrá iniciar el proceso de instalación de la integración del cliente.
+
+   <Image src='/img/integration/ccure/install-client3.png' width={400} alone />
+
+   :::info
+
+   Como este es un instalador Stub, debe tener en cuenta que SE DEBE proporcionar una conexión constante a Internet.
+
+   :::
+
+4. Una vez que termine la descarga, se mostrará lo siguiente. Seleccione un idioma y haga clic en **OK**.
+
+   <Image src='/img/integration/ccure/install-server4.png' width={350} alone />
+
+5. El asistente lo guiará durante el proceso de instalación.
+
+   <Image src='/img/integration/ccure/install-client5.png' alone />
+
+6. Para continuar con la instalación, acepte el acuerdo de licencia y haga clic en **Next**.
+
+7. El instalador de la integración puede mostrar un par de ventanas CMD mientras aparece el mensaje de instalación:
+
+   <Image src='/img/integration/ccure/install-server7.png' alone />
+
+8. Cierre la ventana una vez que termine la instalación.
+
+:::info
+
+- DEBE asegurarse de que la PC tenga acceso a Internet durante toda la instalación.
+
+- Asegúrese de desactivar el antivirus durante la instalación, ya que a veces bloquea el proceso de instalación.
+
+- La instalación del servidor de la integración Suprema - C•CURE debe instalarse en la misma PC donde están instalados el servidor C•CURE y el servidor BioStar 2.
+
+:::
+
+## Iniciar sesión
+
+La herramienta de configuración de la integración Suprema - C•CURE es una herramienta web a la que puede acceder desde cualquier lugar de su red, siempre que tenga acceso a la máquina donde se instaló.
+
+A través de esta herramienta de configuración puede ajustar muchos parámetros de esta integración.
+
+## Primer inicio
+
+1. Abra su navegador web.
+
+   Recomendamos el navegador Brave, Microsoft Edge o Google Chrome.
+
+2. Se puede acceder a la herramienta de configuración de la integración Suprema - C•CURE mediante:
+
+   > https:\//BioStar 2_server_IP_or_Domain_Name:PORT/modules/SupremaCCURE/index.html
+
+   Donde el PORT debe ser el mismo que en la configuración del servidor BioStar 2. Puede encontrar el puerto adecuado revisando la app **BioStar 2 Settings** en el menú Inicio, en la PC donde instaló tanto C•CURE 9000 Server como BioStar 2 Server.
+
+   > https://127.0.0.1:443/modules/SupremaCCURE/index.html
+
+   :::info
+
+   ¿Tiene problemas para encontrar la dirección IP o el nombre de dominio? Consulte la sección de solución de problemas.
+
+   :::
+
+3. Debe iniciar sesión con las credenciales de administrador de Suprema. El ID de la cuenta de administrador es _admin_ y la contraseña es la que configuró al instalar BioStar 2 Server.
+
+4. Cuando inicie sesión por primera vez, puede ver en pantalla la advertencia "_Not secure_". Esto se debe a que se usan certificados privados (auto-firmados). Haga clic en **OK** y verá la siguiente pantalla de inicio de sesión.
+
+   <Image src='/img/integration/ccure/first-run1.png' width={400} alone />
+
+   Si justo después de que aparezca la pantalla anterior se muestra el siguiente aviso:
+
+   <Image src='/img/integration/ccure/first-run2.png' width={400} alone />
+
+   Vaya a la sección de solución de problemas: qué hacer cuando aparece el aviso **Service Not running** en CT de la integración.
+
+5. En el primer inicio o cuando no tenga una licencia válida en el sistema, verá el siguiente aviso en pantalla:
+
+   <Image src='/img/integration/ccure/first-run3.png' width={400} alone />
+
+6. La herramienta de configuración de la integración mostrará un mensaje de advertencia indicando que debe ir a **System Settings**.
+
+7. Dentro de **System Settings** podrá activar sus licencias.
+
+## Menú principal
+
+Se mostrará el siguiente menú:
+
+<Image src='/img/integration/ccure/main-menu.png' width={600} alone />
+
+### Agregar dispositivos
+
+Después de realizar las conexiones físicas entre su controlador iStar y los dispositivos Suprema, puede agregar los dispositivos a la plataforma mediante el menú ADD DEVICES de la herramienta de configuración de la integración Suprema - C•CURE.
+
+<Image src='/img/integration/ccure/main-ico-devices.png' width={140} alone />
+
+Permite agregar o eliminar nuevos dispositivos del sistema. Una vez seleccionado, haga clic en el botón **Add/Update**. Los dispositivos agregados actualmente aparecerán en la columna izquierda (si hay alguno).
+
+<Image src='/img/integration/ccure/adding-devices1.png' width={400} alone />
+
+Junto al icono del dispositivo verá el estado del dispositivo: si es verde, significa que el dispositivo está en línea y funciona bien; si es rojo, el dispositivo no está en línea.
+
+También verá el ID del dispositivo, el modelo específico y el nombre con el que se registró.
+
+Si desea agregar más dispositivos, consulte la columna del lado derecho de la pantalla:
+
+<Image src='/img/integration/ccure/adding-devices2.png' width={400} alone />
+
+Después de hacer clic en el botón **Search**.
+
+<Image src='/img/integration/ccure/adding-devices3.png' width={400} alone />
+
+Los resultados pueden aparecer como se muestra en la siguiente imagen.
+
+<Image src='/img/integration/ccure/adding-devices4.png' width={500} alone />
+
+Haga clic en los dispositivos que desea agregar a la plataforma y haga clic en el botón **Add Devices** para ejecutar la acción.
+
+Ahora, la búsqueda Normal ejecutará una búsqueda UDP de dispositivos Suprema en su red, mientras que la búsqueda avanzada:
+
+<Image src='/img/integration/ccure/adding-devices5.png' width={400} alone />
+
+Ejecutará una búsqueda TCP para un par específico de dirección IP y puerto para ubicar un dispositivo a la vez.
+
+<Image src='/img/integration/ccure/adding-devices3.png' width={400} alone />
+
+Los resultados aparecerán en su pantalla.
+
+<Image src='/img/integration/ccure/adding-devices6.png' width={400} alone />
+
+Del mismo modo que en el caso anterior con la búsqueda Normal, una vez que seleccione al menos un dispositivo, el botón **Add Devices** se habilitará y le permitirá ejecutar la acción.
+
+Después de agregar al menos un dispositivo y de que esos dispositivos agregados estén correctamente configurados con el panel iStar, podrá agregar biométricos a los usuarios desde C•CURE 9000 v2.90, v3.0, v3.10.
+
+:::info
+
+- Tenga en cuenta que sus dispositivos Suprema deben tener la licencia adecuada antes de agregarlos a la integración. Si no tienen licencia, no podrá agregarlos ni trabajar con ellos.
+
+- Si tiene preguntas sobre las licencias de dispositivos, consulte la sección QnA al final de este documento.
+
+:::
+
+## Operaciones masivas con la integración Suprema - C•CURE
+
+Estas operaciones están disponibles como una forma práctica de iniciar la integración si tiene un sistema con varios usuarios y credenciales existentes en CCURE.
+
+### Sincronización de usuarios
+
+El menú _Users_ está disponible en el menú principal de la herramienta de configuración de la integración:
+
+<Image src='/img/integration/ccure/main-ico-users.png' width={140} alone />
+
+Puede usar esta función para sincronizar por lotes a todos los usuarios de CCURE 9000 en dispositivos Suprema. Una vez que haga clic en el menú, verá lo siguiente:
+
+<Image src='/img/integration/ccure/users-sync1.png' width={800} alone />
+
+Las opciones disponibles:
+
+<Image src='/img/integration/ccure/users-sync-select-all.png' className='none' alone />
+
+Le permite seleccionar a TODOS los usuarios o, si hace clic en el botón de cambio **All**, cambiará a:
+
+<Image src='/img/integration/ccure/users-sync-select-page.png' className='none' alone />
+
+Es decir, seleccionar todos los usuarios de la página _actual_. Eso dependerá de si configuró la interfaz para mostrar 10, 25, 50 o 100 entradas a la vez, como se muestra en la siguiente imagen:
+
+<Image src='/img/integration/ccure/users-sync2.png' alone />
+
+Para cualquiera de las opciones que seleccione, una vez que haga clic en el botón **Select**, los registros de usuarios se seleccionarán automáticamente y **Selected User records** mostrará automáticamente cuántos usuarios ya se seleccionaron:
+
+<Image src='/img/integration/ccure/users-sync3.png' alone />
+
+Después de seleccionar la cantidad de usuarios que desea sincronizar masivamente, haga clic en el botón <Image src='/img/menus/ico-sync.png' ico alone />, y se mostrará el siguiente aviso.
+
+<Image src='/img/integration/ccure/users-sync4.png' width={400} alone />
+
+Una vez que termine el proceso, verá un aviso como este:
+
+<Image src='/img/integration/ccure/users-sync5.png' width={400} alone />
+
+Le informará los resultados de la operación y mostrará la cantidad de usuarios procesados correctamente. Si se produce un error con algún usuario, el informe también permitirá descargar una lista de los usuarios con error para facilitar la solución de problemas.
+
+Las siguientes opciones:
+
+<Image src='/img/integration/ccure/users-sync6.png' className='none' alone />
+
+La primera opción, como indica su nombre, le permite realizar una segmentación automática de usuarios según las autorizaciones de C•CURE. Cuando haga clic para activar la opción, se mostrará el siguiente aviso:
+
+<Image src='/img/integration/ccure/users-sync7.png' width={400} alone />
+
+Se incluye una guía en el enlace <Cmd>this configuration GUIDE</Cmd> proporcionado. Por lo tanto, lea con atención esa guía antes de aplicar ese cambio en el proceso de sincronización de usuarios con dispositivos.
+
+La segunda opción, cubierta en parte en la sección anterior, le permite usar las imágenes del personal de C•CURE para el preenrolamiento de credenciales faciales.
+
+En este menú se activará la opción y permitirá realizar esta función cuando la solicite.
+
+Luego, siga el mismo procedimiento explicado antes para seleccionar a los usuarios que desea incluir en el proceso y haga clic en el botón <Image src='/img/menus/ico-facial-pre-enrollment.png' ico alone />; tenga en cuenta que solo se procesarán los usuarios con una imagen de perfil en C•CURE.
+
+Se mostrará el siguiente aviso para pedirle confirmación antes de continuar:
+
+<Image src='/img/integration/ccure/users-sync8.png' width={400} alone />
+
+Como en la función anterior, este proceso terminará con un informe:
+
+<Image src='/img/integration/ccure/users-sync9.png' width={400} alone />
+
+:::info
+
+Tenga en cuenta que, antes de iniciar esta opción, necesita sincronizar a los usuarios. A menos que esté seguro de que los usuarios seleccionados ya se sincronizaron con los dispositivos Suprema.
+
+:::
+
+La interfaz gráfica le mostrará cuántos usuarios se obtuvieron de CCURE, por ejemplo:
+
+<Image src='/img/integration/ccure/users-sync10.png' alone />
+
+Tenga en cuenta que la cantidad que se muestra aquí puede diferir del número de usuarios que se muestra en C•CURE, ya que la integración solo obtendrá usuarios que cumplan con estas condiciones:
+
+- No deshabilitados.
+
+- Tengan al menos **UNA** credencial activa, es decir, credenciales que no se hayan marcado como perdidas, vencidas, deshabilitadas, revocadas, etc.
+
+### Preinscripción
+
+El menú _Pre-Enrollment_ está disponible en la herramienta de configuración de la integración:
+
+<Image src='/img/integration/ccure/main-ico-pre-enrollment.png' width={140} alone />
+
+Los datos que se muestran en este cuadro de diálogo le permitirán seleccionar individualmente o enviar por lotes un correo electrónico a los usuarios para habilitar el preenrolamiento de biometría facial desde sus dispositivos móviles.
+
+<Image src='/img/integration/ccure/user-available-pre-enrollment1.png' width={800} alone />
+
+Tenga en cuenta que, aunque seleccione a un usuario, si el usuario seleccionado no tiene una dirección de correo electrónico ya configurada en su perfil, no se incluirá en el proceso.
+
+Esta función también valida que toda la configuración previa necesaria ya esté establecida; si no, mostrará una ventana de información para que sepa qué le falta configurar antes de enviar los enlaces de preenrolamiento, por ejemplo:
+
+<Image src='/img/integration/ccure/user-available-pre-enrollment2.png' width={400} alone />
+
+Con esta información puede ir a la configuración específica y revisar su configuración. Después de hacerlo, puede seleccionar de nuevo el botón <Image src='/img/menus/ico-send-pre-enrollment-link.png' ico alone /> y el proceso se ejecutará correctamente.
+
+Después de que termine el proceso, podrá recibir un correo electrónico como el que se muestra abajo:
+
+<Image src='/img/integration/ccure/user-available-pre-enrollment3.png' alone />
+
+Debe seguir las instrucciones indicadas en la URL que aparece en el mensaje de correo, y una vez hecho esto, su credencial facial de preenrolamiento estará lista la primera vez que se coloque frente a cualquier dispositivo Suprema compatible.
+
+## Más ajustes disponibles para la configuración
+
+Después de hacer clic en el menú Configuration:
+
+<Image src='/img/integration/ccure/main-ico-configuration.png' width={140} alone />
+
+Se mostrarán los siguientes ajustes:
+
+<Image src='/img/integration/ccure/configuration-main.png' width={600} alone />
+
+### Formatos de tarjeta
+
+<Image src='/img/integration/ccure/card-format.png' width={500} alone />
+
+- Le permite configurar un código de instalación global.
+
+- Seleccione y configure formatos Wiegand para configurar la interfaz entre el panel iStar y los dispositivos Suprema.
+
+- Tenga en cuenta que, si su sitio tiene más de un código de instalación, cada tarjeta en la pestaña Credentials de la vista Personnel debe tener su propio código de instalación. De lo contrario, la sincronización puede comportarse de forma inesperada.
+
+### Nube
+
+<Image src='/img/integration/ccure/cloud1.png' width={600} alone />
+
+Le permite validar una licencia Suprema AC para usar la funcionalidad de Suprema Cloud.
+
+<Image src='/img/integration/ccure/cloud2.png' width={600} alone />
+
+Una vez validada la licencia, podrá configurar un nombre de subdominio para su servidor.
+
+### SMTP
+
+Le permite configurar el acceso SMTP para su servidor para poder usar la función de preenrolamiento (individual y masiva).
+
+<Image src='/img/integration/ccure/smtp1.png' width={600} alone />
+
+También le permite personalizar el correo que se enviará a sus clientes o usuarios.
+
+<Image src='/img/integration/ccure/smtp2.png' width={600} alone />
+
+### Enrolamiento y privilegios
+
+Este menú le permitirá crear filtros para los dispositivos de enrolamiento disponibles para operadores específicos según sus respectivos privilegios asignados.
+
+Por lo tanto, si el operador que inicia sesión en C•CURE no tiene ningún privilegio requerido para enrolar biometría, no aparecerá ningún dispositivo disponible para enrolar biometría de usuarios.
+
+<Image src='/img/integration/ccure/enrollment-privileges.png' width={800} alone />
+
+### QR de visitantes
+
+Este menú le permite usar el QR de visitantes de C•CURE como credencial de control de acceso. Es decir, cuando cree un usuario visitante desde C•CURE Portal y envíe el QR del visitante a cada visita que planea recibir en su instalación, esta integración se encargará de generar las credenciales correctas con la validez exacta que seleccionó en el período de visita.
+
+:::info
+
+Los dispositivos Suprema requieren validación de licencia para habilitar esta función.
+
+:::
+
+<Image src='/img/integration/ccure/visitor-qr.png' width={800} alone />
+
+### Configuración del Sistema
+
+Tiene dos opciones para encontrar System Settings. La primera, y la más directa, es ir al menú de la barra de navegación superior <Image src='/img/menus/ico-system-settings.png' ico alone />. La segunda es ir primero a Configuration desde el menú principal:
+
+<Image src='/img/integration/ccure/system-settings1.png' className='none' width={500} alone />
+
+Dentro de System Settings puede configurar lo siguiente:
+
+- Una licencia válida.
+
+- Las credenciales de Suprema (usuario y contraseña).
+
+- Las credenciales de conexión de C•CURE 9000.
+
+- Otros ajustes.
+
+Antes de aplicar la licencia, todos los ajustes estarán deshabilitados hasta que valide la licencia.
+
+<Image src='/img/integration/ccure/system-settings2.png' width={800} alone />
+
+Con la licencia _Advanced_ tendrá la opción de activar la licencia sin conexión; si tiene una licencia básica, la activación se realizará solo en línea.
+
+Como puede ver en la imagen anterior, con una licencia Advanced también tendrá disponible la función de validar licencias de dispositivos sin conexión.
+
+En este menú también verá:
+
+<Image src='/img/integration/ccure/system-settings3.png' width={600} alone />
+
+Este menú le permitirá validar o activar otros tipos de licencias del servidor, como en el caso del **Autoenrollment Kiosk**, por ejemplo.
+
+Si realiza una validación de licencia del servidor sin conexión:
+
+- Primero debe ingresar la clave y el nombre de la licencia y luego hacer clic en el botón **Activate Offline**.
+
+  <Image src='/img/integration/ccure/system-settings4.png' width={400} alone />
+
+- Siga el primer paso para obtener el archivo `*.req` y envíelo a su representante de ventas.
+
+- Una vez que obtenga el archivo de licencia, puede pasar al paso número 2.
+
+#### Después de aplicar la licencia
+
+<Image src='/img/integration/ccure/applying-license.png' width={400} alone />
+
+Después de aplicar la licencia, los demás ajustes se habilitarán.
+
+- Ajustes de BioStar 2
+
+  <Image src='/img/integration/ccure/applying-license-biostar2-settings.png' width={400} alone />
+
+  - Debe usar una cuenta de tipo administrador para que la integración funcione correctamente.
+
+  - Después de escribir la cuenta de administrador y su contraseña, haga clic en **Test Connection**.
+
+  - Si la conexión es exitosa, el botón **Save Credentials** se habilitará.
+
+  - El botón **Edit** le permitirá modificar las credenciales si lo necesita.
+
+- Ajustes de C•CURE 9000
+
+  <Image src='/img/integration/ccure/applying-license-ccure9000-settings.png' width={400} alone />
+
+  - En el campo host debe ingresar la dirección IP o el nombre de dominio donde está instalada la base de datos.
+
+    > Ejemplo: LOCALHOST\SQLSERVER
+
+  - Puerto de SQL Server.
+
+  - Autenticación SQL o autenticación de Windows.
+
+  - Usuario y contraseña de SQL para la autenticación SQL usada.
+
+- GUI
+
+  <Image src='/img/integration/ccure/applying-license-gui.png' width={400} alone />
+
+  - La herramienta de configuración de la integración se ofrece en inglés y español.
+
+  - Session Timeout es el tiempo para el cierre automático de sesión de la GUI (para evitar cualquier acceso no autorizado).
+
+### Kiosco de autoenrolamiento
+
+Una vez que active una licencia de servidor para esta función, el siguiente menú aparecerá en el menú principal de la integración.
+
+<Image src='/img/integration/ccure/autoenrollment-kiosk-main.png' width={600} alone />
+
+<Image src='/img/integration/ccure/autoenrollment-kiosk.png' alone />
+
+:::info
+
+La información anterior solo es válida para una versión Advanced de esta integración.
+
+:::
+
+Para obtener más información sobre cómo usar el **Autoenrollment Kiosk**, consulte la guía de usuario específica y el manual de instalación relacionados con esta función.
