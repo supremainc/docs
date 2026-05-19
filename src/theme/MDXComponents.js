@@ -39,6 +39,7 @@ import Magnify from "@site/src/components/Magnify";
 import Linkto from "@site/src/components/Linkto";
 import Anchor from '@site/src/components/Anchor';
 import AnchorCollect from '@site/src/components/AnchorCollect';
+import Support from '@site/src/components/Support';
 // icon images svg
 import IcLicense from '@site/static/img/menus/ico-license.svg';
 import IcAdd from '@site/static/img/menus/ico-add.svg';
@@ -214,7 +215,7 @@ export default {
     Jira,
     Productpart, Callout, Item,
     SpecSection, SpecSizeWieght, Anno,
-    Faqs, FaqsItems, Calloutlists, DocLink, Treeview, YouTube, PageBreak, Magnify, Linkto, Anchor, AnchorCollect,
+    Faqs, FaqsItems, Calloutlists, DocLink, Treeview, YouTube, PageBreak, Magnify, Linkto, Anchor, AnchorCollect, Support,
     IcSvTime, IcAccount, IcHelp, IcAibtn,
     IcLicense,
     IcAdd, IcMinus,
