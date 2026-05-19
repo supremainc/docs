@@ -1,11 +1,29 @@
 ---
 id: set-ai-advanced
 title: 고급 설정하기
-description: 얼굴 인식을 통한 자동 사용자 등록 설정, 보존 정책 구성, 얼굴 촬영 방식 설정 방법을 안내합니다.
+description: 고급 설정을 통해 추가 옵션을 구성할 수 있습니다.
 keywords: [AI, 고급 설정]
 ---
 
-고급 설정에서는 얼굴 인식 시 사용자를 자동으로 등록하고, 등록된 사용자의 보존 정책을 관리하며, 얼굴 촬영 타입을 설정할 수 있습니다.
+<Include lang='ja'>
+
+고급 설정에서는 얼굴 촬영 타입을 설정하고, 얼굴 인식 시 사용자 자동 등록 및 등록된 사용자의 보존 정책을 관리할 수 있습니다.
+
+</Include>
+
+<Include lang='ko,en'>
+
+고급 설정에서는 사용자의 얼굴을 촬영할 때 상반신만 촬영할지, 전신까지 촬영할지 선택할 수 있습니다.
+
+</Include>
+
+## 얼굴 촬영 타입 설정
+
+얼굴 촬영 타입을 상반신만 촬영할지, 전신까지 촬영할지 설정할 수 있습니다. <Cmd sid='shoot_type' product='cam' /> 옵션에서 원하는 촬영 타입을 선택하고, <Cmd sid='save' product='cam' /> 버튼을 클릭하세요.
+
+<ProdImg src='/img/cam-server/ai-advanced-face-shot-type.png' />
+
+<Include lang='ja'>
 
 ## 자동 사용자 등록 설정
 
@@ -25,7 +43,7 @@ AI 이벤트를 통해 감지된 얼굴을 사용자로 자동 등록할 수 있
 
 1. <Cmd sid='auto_user_enroll' product='cam' /> 섹션에서 <Cmd sid='by_face_recognition' product='cam' /> 옵션을 활성화하세요.
 
-<Image src='/img/cam-server/ai-advanced-register-user-auto.png' />
+<ProdImg src='/img/cam-server/ai-advanced-register-user-auto.png' />
 
 다음 안내에 따라 각 옵션을 설정하고 <Cmd sid='save' product='cam' /> 버튼을 클릭해 저장하세요.
 
@@ -106,9 +124,4 @@ AI 이벤트를 통해 감지된 얼굴을 사용자로 자동 등록할 수 있
 
 * 로그의 <Cmd sid='face_shot' product='cam' />을 클릭하면 해당 인증 시점의 얼굴 사진이 표시됩니다.
 
-
-## 얼굴 촬영 타입 설정
-
-얼굴 촬영 타입을 상반신만 촬영할지, 전신까지 촬영할지 설정할 수 있습니다. <Cmd sid='shoot_type' product='cam' /> 옵션에서 원하는 촬영 타입을 선택하세요. 선택한 촬영 타입을 저장하려면 <Cmd sid='save' product='cam' /> 버튼을 클릭하세요.
-
-<Image src='/img/cam-server/ai-advanced-face-shot-type.png' />
+</Include>

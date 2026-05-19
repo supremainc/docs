@@ -107,10 +107,12 @@ const sidebars = {
             'device/vionyx_webserver/manage-device',
             'device/vionyx_webserver/upload-audio-clips',
             'device/vionyx_webserver/update-admin-password',
-            'device/vionyx_webserver/add-operators',
-            'device/vionyx_webserver/view-system-logs'
+            'device/vionyx_webserver/manage-operators',
+            'device/vionyx_webserver/view-system-logs',
+            'device/vionyx_webserver/system-log-type'
           ]
-        }
+        },
+        'device/vionyx_webserver/appendices',
       ]
     }
   ],

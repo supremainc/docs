@@ -1,11 +1,11 @@
 ---
-id: add-operators
-title: 운영자 추가하기
-description: 카메라 운영을 위한 추가 관리자(운영자) 계정을 추가하는 방법을 안내합니다.
-keywords: [운영자, 관리자, 계정, 추가, 권한, Operator]
+id: manage-operators
+title: 운영자 관리하기
+description: 카메라 운영을 위한 추가 관리자(운영자) 계정을 관리하는 방법을 안내합니다.
+keywords: [운영자]
 ---
 
-관리자 외에 제한된 권한을 가진 운영자(Operator) 계정을 추가할 수 있습니다. 운영자는 관리자를 대신하여 카메라의 일부 기능을 관리할 수 있습니다.
+관리자 외에 제한된 권한을 가진 운영자(Operator) 계정을 추가 및 수정, 삭제할 수 있습니다. 운영자는 관리자를 대신하여 카메라의 일부 기능을 관리할 수 있습니다.
 
 다음과 같은 상황에서 운영자를 추가하세요.
 
@@ -90,11 +90,21 @@ keywords: [운영자, 관리자, 계정, 추가, 권한, Operator]
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid='account_management' product='cam' />를 클릭하세요.
 
-1. <Cmd sid='operator' product='cam' /> 섹션에서 권한을 변경할 운영자를 클릭하세요.
+1. <Cmd sid='operator' product='cam' /> 섹션에서 권한을 변경할 운영자의 <Cmd sid='permission' product='cam' /> 항목을 클릭하세요.
 
-1. 운영자 편집 팝업창이 나타나면 <Cmd sid='permission' product='cam' /> 선택 항목에서 원하는 권한으로 변경하세요.
+   <Image src='/img/cam-server/cam-webserver-system-manage-operator.png' />
 
-1. 변경사항을 저장하려면 <Cmd sid='apply' product='cam' /> 버튼을 클릭하세요.
+1. 선택 목록에서 원하는 권한으로 변경하세요.
+
+권한 변경에 성공하면 화면 오른쪽 상단에 성공 메시지가 표시됩니다.
+
+:::tip
+
+<IcCamEdit title='Edit' /> 버튼을 클릭하면 <Cmd sid='edit_operator' product='cam' /> 창이 나타납니다. <Cmd sid='permission' product='cam' /> 항목에서 원하는 권한으로 변경한 후 <Cmd sid='ok' product='cam' /> 버튼을 클릭하세요.
+
+<Image src='/img/cam-server/cam-webserver-system-manage-operator-edit.png' width='50%' />
+
+:::
 
 
 ## 운영자 비활성화
@@ -105,13 +115,19 @@ keywords: [운영자, 관리자, 계정, 추가, 권한, Operator]
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid='account_management' product='cam' />를 클릭하세요.
 
-1. <Cmd sid='operator' product='cam' /> 섹션에서 비활성화할 운영자를 클릭하세요.
+1. <Cmd sid='operator' product='cam' /> 섹션에서 비활성화할 운영자의 <Cmd sid='enabled' product='cam' /> 항목에서 토글 버튼을 클릭하여 계정을 비활성화하세요.
 
-1. 운영자 편집 팝업창이 나타나면 <Cmd sid='enabled' product='cam' /> 항목에서 토글 버튼을 클릭하여 계정을 비활성화하세요.
+   <Image src='/img/cam-server/cam-webserver-system-manage-operator-active.png' />
 
-1. 변경사항을 저장하려면 <Cmd sid='apply' product='cam' /> 버튼을 클릭하세요.
+비활성화에 성공하면 화면 오른쪽 상단에 성공 메시지가 표시됩니다. 운영자 계정이 비활성화되어 더 이상 로그인할 수 없습니다.
 
-운영자 계정이 비활성화되어 더 이상 로그인할 수 없습니다.
+:::tip
+
+<IcCamEdit title='Edit' /> 버튼을 클릭하면 <Cmd sid='edit_operator' product='cam' /> 창이 나타납니다. <Cmd sid='enabled' product='cam' /> 항목에서 토글 버튼을 클릭하여 계정을 비활성화하세요. 변경 사항을 저장하려면 <Cmd sid='ok' product='cam' /> 버튼을 클릭하세요.
+
+<Image src='/img/cam-server/cam-webserver-system-manage-operator-edit.png' width='50%' />
+
+:::
 
 :::info
 
@@ -124,3 +140,19 @@ keywords: [운영자, 관리자, 계정, 추가, 권한, Operator]
 운영자가 이미 로그인된 상태라면, 다음 로그인을 시도할 때 접근이 거부됩니다.
 
 :::
+
+## 운영자 삭제
+
+운영자 계정을 완전히 삭제할 수 있습니다. 삭제된 계정은 복구할 수 없습니다.
+
+1. 화면 왼쪽 상단의 <Cmd sid='system' product='cam' /> 메뉴를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='account_management' product='cam' />를 클릭하세요.
+
+1. <Cmd sid='operator' product='cam' /> 섹션에서 삭제할 운영자의 <IcCamTrash title='Delete' /> 버튼을 클릭하세요.
+
+   <Image src='/img/cam-server/cam-webserver-system-manage-operator-delete.png' />
+
+1. 경고 메시지가 나타나면 <Cmd sid='ok' product='cam' /> 버튼을 클릭하세요.
+
+삭제에 성공하면 화면 오른쪽 상단에 성공 메시지가 표시됩니다. 운영자 계정이 목록에서 완전히 제거됩니다.
