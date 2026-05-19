@@ -1,0 +1,165 @@
+---
+id: cardholder-management
+title: Gestión de titulares de tarjetas
+description: Proporciona instrucciones para administrar titulares de tarjetas en Genetec Security Center, incluido el enrolamiento de tarjetas y credenciales faciales, la carga masiva de plantillas faciales y la búsqueda de usuarios con datos biométricos enrolados.
+keywords:
+  - Gestión de titulares de tarjetas
+  - Enrolamiento facial
+  - Carga masiva
+---
+
+## Enrolamiento de tarjetas
+
+1. En **Config Tool**, haz clic en **Gestión de titulares de tarjetas** en **Tareas**.
+
+   <Image src='/img/integration/genetec/card-enrollment.png' width={800} alone />
+
+2. Haz clic en el botón **Nuevo** de la parte inferior.
+
+   <Image src='/img/integration/genetec/new-ico.png' alone />
+
+3. Ingresa el **Nombre** y el **Apellido**, luego haz clic en el botón **Agregar una credencial**. En la ventana emergente que aparece, haz clic en **Entrada automática**.
+
+   <Image src='/img/integration/genetec/card-enrollment-add-credential1.png' width={800} alone />
+
+4. Selecciona la **Puerta** asignada al dispositivo Suprema como lector y luego acerca una tarjeta al dispositivo.
+
+   <Image src='/img/integration/genetec/card-enrollment-add-credential2.png' width={800} alone />
+
+5. La tarjeta se enrola automáticamente en la credencial.
+
+   <Image src='/img/integration/genetec/card-enrollment-add-credential3.png' width={800} alone />
+
+## Enrolamiento facial
+
+### Precauciones al enrolar el rostro
+
+Al enrolar tu rostro para autenticación, consulta la imagen siguiente para hacerlo correctamente.
+
+Si no sigues las instrucciones en pantalla, el enrolamiento facial puede tardar más o fallar la autenticación.
+
+- Al enrolar un rostro, mantén una distancia de 60 a 100 cm entre el dispositivo y el rostro.
+
+- Asegúrate de que tu expresión no cambie.
+
+- No uses mascarilla, sombrero, lentes de sol ni parches oculares.
+
+- No inclines la cabeza hacia arriba ni hacia abajo.
+
+- No uses maquillaje pesado.
+
+- No cierres los ojos.
+
+- Asegúrate de que ambos hombros aparezcan correctamente en la pantalla.
+
+- No uses una imagen corregida.
+
+- Permanece quieto y enrola tu rostro mirando fijamente la pantalla.
+
+- Asegúrate de que no aparezcan dos rostros en la pantalla. Asegúrate de enrolar un rostro a la vez.
+
+- No enrolar tu rostro en lugares oscuros.
+
+<Image src='/img/integration/genetec/face-enrollment.png' width={800} alone />
+
+:::info
+
+- **Resolución**: Mayor que 250 x 250 píxeles
+
+- **Tamaño de imagen**: Hasta 10 MB
+
+- **Formato admitido**: solo JPG, JPEG o PNG
+
+:::
+
+### Enrolar desde el dispositivo
+
+1. En la ventana de detalles del titular de la tarjeta, haz clic en **Suprema Enrollment**.
+
+   <Image src='/img/integration/genetec/enroll-from-device1.png' width={800} alone />
+
+2. Haz clic en **Face-Scan**.
+
+   <Image src='/img/integration/genetec/enroll-from-device2.png' width={800} alone />
+
+3. Selecciona el dispositivo Suprema de autenticación facial para enrolar la credencial facial.
+
+   <Image src='/img/integration/genetec/enroll-from-device3.png' alone />
+
+4. Haz clic en el botón **+Agregar** para crear una plantilla facial; luego haz clic en el botón **Escanear** y escanea el rostro en el dispositivo.
+
+   <Image src='/img/integration/genetec/enroll-from-device4.png' alone />
+
+5. Comprueba que el rostro se haya escaneado correctamente y luego haz clic en el botón **Enrolar** para enrolarlo.
+
+### Enrolar plantilla facial con foto de perfil de Genetec
+
+1. En la ventana de detalles del titular de la tarjeta, haz clic en **Suprema Enrollment**.
+
+   <Image src='/img/integration/genetec/enroll-from-device1.png' width={800} alone />
+
+2. Haz clic en **Face-Scan**.
+
+   <Image src='/img/integration/genetec/enroll-from-device2.png' width={800} alone />
+
+3. Selecciona el dispositivo Suprema de autenticación facial para enrolar la credencial facial.
+
+   <Image src='/img/integration/genetec/enroll-from-device3.png' alone />
+
+4. Haz clic en el botón **+Agregar** para crear una plantilla facial; luego activa **Usar foto de Genetec** para cargar automáticamente la foto de perfil del usuario. El dispositivo Suprema extrae plantillas faciales de las fotos de perfil de usuario.
+
+   <Image src='/img/integration/genetec/enroll-from-device5.png' alone />
+
+5. Comprueba la foto cargada y luego haz clic en el botón **Enrolar** para enrolar el rostro.
+
+## Enrolamiento masivo
+
+1. Ve a **Suprema Device Plugin** → **Global Settings**.
+
+   <Image src='/img/integration/genetec/global-settings1.png' alone />
+
+2. Haz clic en el botón **Carga masiva de rostros**. Puedes revisar el progreso de extracción facial.
+
+   <Image src='/img/integration/genetec/global-settings2.png' alone />
+
+   :::info
+
+   La extracción de plantillas faciales se ejecuta solo para titulares de tarjetas de GSC que tienen una imagen de perfil.
+
+   :::
+
+3. Una vez que el proceso se complete, puedes revisar los resultados.
+
+   - Mostrar usuarios con error: revisa la lista de usuarios para quienes falló la extracción facial.
+
+   - Informe de extracción de plantillas faciales: revisa el informe relacionado con la extracción de plantillas faciales.
+
+## Cómo buscar un titular de tarjeta con una plantilla facial
+
+1. Haz clic en **Búsqueda avanzada** en la página **Gestión de titulares de tarjetas**.
+
+   <Image src='/img/integration/genetec/advanced-search.png' width={500} alone />
+
+2. Haz clic en **Campos personalizados**, actívalo y haz clic en **Agregar criterio**. Luego, selecciona **BiometricsTimestamp**.
+
+   <Image src='/img/integration/genetec/advanced-search-custom-fields1.png' width={500} alone />
+
+3. Selecciona **Rango específico** y define el período de búsqueda.
+
+   :::note
+
+   **Ejemplo**
+
+   - **Desde**: fecha de instalación del complemento
+
+   - **Hasta**: hoy
+
+   :::
+
+   Para buscar por una hora específica, haz clic en **Definir hora** e ingresa la hora.
+
+   <Image src='/img/integration/genetec/advanced-search-custom-fields2.png' alone />
+
+4. Haz clic en el botón **Buscar**.
+
+5. Aparecen todos los titulares de tarjetas que tienen plantillas faciales.

@@ -1,0 +1,188 @@
+---
+id: installation
+title: インストール
+description: Suprema Plugin のインストールに必要な最小システム要件と、Extractor および Device プラグインを Genetec Config Tool に追加する手順を説明します。
+keywords:
+  - インストール
+  - Suprema Plugin
+  - Genetec Config Tool
+---
+
+## 最小システム要件
+
+<div className='overflow-x col5--15-10-25'>
+
+| \>     | 項目    | 小規模ビジネス サーバー           | 中規模ビジネス サーバー             | 大規模ビジネス サーバー                                                            |
+| :----- | :---- | :--------------------- | :----------------------- | :---------------------------------------------------------------------- |
+| 環境     | 端末 合計 | 50                     | 150                      | 1000                                                                    |
+| システム要件 | OS    | \>                     | \>                       | Microsoft Windows 10 以降（64 ビット）                                         |
+| ^      | CPU   | CPU 8 コア / RAM 64GB 以上 | CPU 16 コア / RAM 128GB 以上 | エンタープライズ規模の導入には事前相談が必要です                                                |
+| ^      | RAM   | 64 GB                  | 128 GB                   | ^                                                                       |
+| ^      | 通信    | \>                     | \>                       | サーバー、クライアント、デバイス間の標準伝送制御プロトコル（TCP/IP）ネットワーク通信プロトコルをサポートします。             |
+| ^      | ^     | \>                     | \>                       | 動的ホスト構成プロトコル（DHCP）または固定 IP アドレスをサポートします。                                |
+| ^      | ^     | \>                     | \>                       | ネットワーク設定をサポートします。                                                       |
+| ^      | ^     | \>                     | \>                       | ネットワーク タイム プロトコル（NTP）をサポートします。                                          |
+| ^      | ^     | \>                     | \>                       | クライアント（Web ブラウザー）とプラットフォーム間のセキュア ソケット レイヤー（SSL）で保護された HTTPS 通信をサポートします。 |
+| ^      | 暗号化   | \>                     | \>                       | 指紋テンプレートと顔テンプレートに AES-256 をサポートします。                                     |
+| ^      | ^     | \>                     | \>                       | 指紋テンプレートと顔テンプレートに AES-256 をサポートします（オプション）。                              |
+
+</div>
+
+## 前提条件
+
+### サーバー仕様
+
+<div className='overflow-x cols3--20-20-60'>
+
+| ビジネス規模     | 番号 Suprema デバイス数 | サーバー仕様                    |
+| ---------- | ---------------- | ------------------------- |
+| 小規模        | 1\~50 台のデバイス     | CPU 8 コア / RAM 64GB 以上    |
+| 中          | 50\~150 台のデバイス   | CPU 16 コア / RAM 128GB 以上  |
+| ｴﾝﾀｰﾌﾟﾗｲｽﾞ | 150 台を超えるデバイス    | エンタープライズ規模の導入には事前相談が必要です。 |
+
+</div>
+
+### Synergis cloud link
+
+1. RIO プロトコルを有効にします。
+
+   > `https://[IP Address of Cloud link]/Features/DuiRIO/Enabled/Set?value=true`
+
+2. 推奨および最大値。 デバイス接続。
+
+   <div className='overflow-x table-fixed'>
+
+   | 番号 ユーザー数  | クラウド リンク 1 つあたりの推奨デバイス数 | 最大値 接続可能なデバイス |
+   | --------- | ----------------------- | ------------- |
+   | 20,000 以上 | 最大 40                   | 非推奨           |
+   | 10,000 未満 | 最大 50                   | 最大 64         |
+
+   </div>
+
+   :::caution
+
+   - Suprema デバイス専用の Cloud Link が必要です。
+
+   - Cloud Link への Suprema 製品以外のデバイス接続は推奨されません。
+
+   :::
+
+### データベース
+
+- プラグイン データベース（Device と Extractor）は Directory と同じ SQL サーバーに自動作成されます。
+
+  - 管理者はデータベースのインストール先を変更できます。
+
+  - バックアップ/復元をサポートします。
+
+- SQL アカウントには以下の権限が必要です。
+
+  - サーバー ロール: db_creator, processadmin, public
+
+  - データベース ロール: db_backupoperator, db_datareader, db_datawriter, public
+
+## 指紋登録デバイス
+
+USB タイプの指紋登録デバイスを使用するには、別途ドライバーのインストールが必要です。
+
+サポートが必要な場合は、Suprema Partner Business Team にお問い合わせください。
+
+## プラグインのインストール
+
+1. インストール ファイル（setup.exe）を管理者として実行します。
+
+   <Image src='/img/integration/genetec/plugin-installation-setup.png' alone />
+
+2. **次へ** をクリックします。
+
+   <Image src='/img/integration/genetec/plugin-installation1.png' alone />
+
+3. Suprema Plugin をインストールするパスを設定し、**次へ** をクリックします。
+
+   <Image src='/img/integration/genetec/plugin-installation2.png' alone />
+
+4. インストールの準備ができたら、**次へ** をクリックします。
+
+   <Image src='/img/integration/genetec/plugin-installation3.png' alone />
+
+5. インストールが開始されます。 正常に完了するまでお待ちください。
+
+   <Image src='/img/integration/genetec/plugin-installation4.png' alone />
+
+6. インストール完了後、コマンド プロンプト ウィンドウが表示されます。 任意のキーを押してウィンドウを閉じます。
+
+   <Image src='/img/integration/genetec/plugin-installation-cmd.png' alone />
+
+7. **閉じる** ボタンをクリックします。
+
+   <Image src='/img/integration/genetec/plugin-installation7.png' alone />
+
+8. 任意のキーを押して完了します。
+
+   <Image src='/img/integration/genetec/plugin-installation-cmd.png' alone />
+
+## Genetec Config Tool に Suprema Plugin を追加する
+
+1. Genetec の **Config Tool** を実行します。
+
+   <Image src='/img/integration/genetec/config-tool.png' alone />
+
+2. **Tasks** の下にある **Plugins** をクリックします。
+
+   <Image src='/img/integration/genetec/config-tool-tasks-plugins.png' width={800} alone />
+
+3. **Plugins** 画面で **Add an entity** をクリックし、一覧から **Plugin** を選択します。
+
+   <Image src='/img/integration/genetec/config-tool-plugin.png' alone />
+
+4. **Select plugin type** で **Suprema Extractor Plugin** を選択し、**次へ** をクリックします。
+
+   <Image src='/img/integration/genetec/config-tool-extractor-plugin1.png' width={600} alone />
+
+5. **Entity name** と **Entity description** を入力し、**次へ** をクリックします。
+
+   <Image src='/img/integration/genetec/config-tool-extractor-plugin2.png' width={600} alone />
+
+   :::info
+
+   **Entity description** は省略できます。
+
+   :::
+
+6. 情報を確認し、**作成** をクリックします。
+
+   <Image src='/img/integration/genetec/config-tool-extractor-plugin3.png' width={600} alone />
+
+7. **Suprema Extractor Plugin** が作成されます。 **閉じる** をクリックします。
+
+   <Image src='/img/integration/genetec/config-tool-successful.png' width={600} alone />
+
+8. **Plugins** 画面で **Add an entity** をクリックし、一覧から **Plugin** を選択します。
+
+   <Image src='/img/integration/genetec/config-tool-plugin.png' alone />
+
+9. **Select plugin type** で **Suprema Device Plugin** を選択し、**次へ** をクリックします。
+
+   <Image src='/img/integration/genetec/config-tool-device-plugin1.png' width={600} alone />
+
+10. **Entity name** と **Entity description** を入力し、**次へ** をクリックします。
+
+    <Image src='/img/integration/genetec/config-tool-device-plugin2.png' width={600} alone />
+
+    :::info
+
+    **Entity description** は省略できます。
+
+    :::
+
+11. 情報を確認し、**作成** をクリックします。
+
+    <Image src='/img/integration/genetec/config-tool-device-plugin3.png' width={600} alone />
+
+12. **Suprema Device Plugin** が作成されます。 **閉じる** をクリックします。
+
+    <Image src='/img/integration/genetec/config-tool-successful.png' width={600} alone />
+
+13. **Suprema Plugin** の追加が完了しました。
+
+    <Image src='/img/integration/genetec/config-tool-add-plugin.png' alone />

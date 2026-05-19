@@ -1,0 +1,726 @@
+---
+id: troubleshooting
+title: トラブルシューティングとFAQ
+description: Suprema Integration with Gallagher のトラブルシューティングガイドとFAQです。ミドルウェアのアップグレード、ネットワークエラー、SSL証明書、PostgreSQLデータベース管理を扱います。
+keywords:
+  - トラブルシューティング
+  - SSL証明書
+  - PostgreSQL
+---
+
+## セットアップ
+
+<details className='faqs'>
+<summary>**ミドルウェアのみを新しいバージョンにアップグレードする（手動手順）。**</summary>
+
+ミドルウェアのみをアップグレードする場合は、以下の手順に従ってください。
+
+:::info
+
+ミドルウェアを V1.8.3 にアップグレードする場合は、[Migration を手動で作成する](#create-migration-manually) を参照してください。
+
+:::
+
+<Image src='/img/integration/gallagher/setup1-1.png' alone />
+
+以前のバージョンの `setup.vbs - Shortcut` を削除します。
+
+<Image src='/img/integration/gallagher/setup1-2.png' alone />
+
+下の画像のように、現在使用しているバージョンから cert ファイルと key ファイルを切り取ります。
+
+既定のパスは次のとおりです: `C:\Program Files\Suprema Integration with Gallagher\Suprema Integration with Gallagher v(Current working version)\files`
+
+<Image src='/img/integration/gallagher/setup1-3.png' alone />
+
+:::info
+
+- 1.8.0 以降のバージョンからアップグレードする場合は、`key.pem`、`cert.pem`、`cronjob_status.txt`、`number_range.txt` の4ファイルを切り取る必要があります。
+
+- 1.7.0 では `number_range` のみ使用できないため、他の3ファイルを切り取ります。
+
+  <Image src='/img/integration/gallagher/setup1-4.png' alone />
+
+:::
+
+次に、上記のとおり `Gallagher V(new version)\files` にファイルを**貼り付け**ます。1.8.0 以降からアップグレードする場合は4ファイルを切り取る必要があります。下の画像は4ファイルを新しいバージョンに貼り付けた例です。4ファイルがない場合は、旧バージョンから新バージョンへ2ファイルを貼り付けてください。
+
+<Image src='/img/integration/gallagher/setup1-5.png' alone />
+
+Suprema Integration with Gallagher の最新バージョンの setup.vbs のショートカットを作成し、そのショートカットファイルを切り取ります。
+
+<Image src='/img/integration/gallagher/setup1-6.png' alone />
+
+<Kbd>Win + R</Kbd> を実行し、`shell:startup` に貼り付けたあと、デスクトップを再起動します。
+
+</details>
+
+<details className='faqs'>
+<summary>**ミドルウェアが自動的に起動しない場合。**</summary>
+
+まず、setup.vbs ファイルのショートカットが `shell:startup` にあることを確認します。 setup.vbs がない場合は、`shell:startup` に貼り付けてシステムを再起動します。
+
+それでもミドルウェアが自動的に起動しない場合は、環境変数を確認します。<Start/> → システムの環境変数を編集 → **詳細設定** タブ → タブ下部の **環境変数** ボタンから開けます。
+
+_環境変数_ ウィンドウ（下図）で、_システム環境変数_ セクションの **Path** 変数を選択し、**編集** ボタンをクリックします。
+
+<Image src='/img/integration/gallagher/setup2-1.png' alone />
+
+環境変数の編集ウィンドウ（下図）が開いたら、**新規** ボタンをクリックし、`C:\Program Files\nodejs\` のパスを追加して **OK** ボタンを押します。
+
+<Image src='/img/integration/gallagher/setup2-2.png' alone />
+
+_環境変数_ ウィンドウで **OK** ボタンを押し、続いてシステムのプロパティでも **OK** ボタンを押します。
+
+:::info
+
+環境変数を作成または変更したあと、変更を Windows に反映するためにコンピューターを再起動します。
+
+:::
+
+</details>
+
+<details className='faqs'>
+<summary>**ミドルウェアの前提条件リストをアンインストールする。**</summary>
+
+以下は、ミドルウェアの前提条件をアンインストールする手順です。
+
+1. **コントロール パネル** を開き、**プログラムと機能** に移動します。
+
+2. 下へスクロールして **Node.js** を**検索**し、右クリックして **アンインストール** を**選択**します。
+
+3. Node.js のアンインストールを求められたら、**はい** を**押し**てアンインストールを開始します。
+
+4. しばらくすると Runtime application の削除を求められるので、以下に従って **OK** を**押し**ます。 該当しない場合は、この手順をスキップしてください。
+
+   <Image src='/img/integration/gallagher/setup3-1.png' alone />
+
+5. 次に **OpenSSL** を**検索**し、右クリックして **アンインストール** を**押し**ます。
+
+6. OpenSSL のアンインストールを求められたら、**はい** を押し、アンインストールを開始します。
+
+7. 次に **PgAdmin 4** を**検索**し、右クリックして **アンインストール** を**押し**ます。
+
+   :::info
+
+   PgAdmin 4 が表示されない、またはアンインストールできない場合は、この手順をスキップして次へ進んでください。
+
+   :::
+
+8. PgAdmin 4 のアンインストールを求められたら、**はい** を押し、アンインストールを開始します。
+
+9. 次に PostgreSQL 14 を**検索**し、右クリックして **アンインストール** を**押し**ます。
+
+10. PostgreSQL 14 のアンインストールを求められたら、**はい** を押し、アンインストールを開始します。
+
+11. アンインストール モードが開いたら、**アプリケーション全体** のラジオ ボタンを**選択**し、**次へ** を押します。
+
+    <Image src='/img/integration/gallagher/setup3-2.png' alone />
+
+12. 次に `C:\Users\<YourUser>\AppData\Roaming\pgadmin\sessions` に**移動**し、このフォルダー内のすべてのファイルを削除します。
+
+    :::info
+
+    AppData フォルダーが表示されない場合: [Windows で AppData フォルダーを開く](#open-appdata-folder-windows)。
+
+    :::
+
+    <Image src='/img/integration/gallagher/setup3-3.png' alone />
+
+13. 次に `C:\Users\<Your User>\AppData\Local` に**移動**し、PgAdmin フォルダーと PgAdmin4 フォルダーを選択してフォルダーを**削除**します。
+
+14. 次に `C:\Program Files` に**移動**し、PostgreSQL フォルダーを削除します。
+
+</details>
+
+<details className='faqs'>
+<summary id="open-appdata-folder-windows">**Windows で AppData フォルダーを開く方法。**</summary>
+
+<AnchorCollect anchor="open-appdata-folder-windows" />
+
+Windows 11 を使用している場合は、ファイル マネージャーで **表示** タブをクリックし、**表示** を**選択**して **隠しファイル** を**クリック**します。
+
+<Image src='/img/integration/gallagher/setup4-1.png' alone />
+
+Windows 10 を使用している場合は、ファイル マネージャーを開き、**表示** を**クリック**して **隠しファイル** を**選択**します。
+
+<Image src='/img/integration/gallagher/setup4-2.png' alone />
+
+</details>
+
+<details className='faqs'>
+<summary id="manual-thumbprint-certificate-generation">**thumbprint と証明書を手動で生成する方法。**</summary>
+
+<AnchorCollect anchor="manual-thumbprint-certificate-generation" />
+
+1. Client Certificate の Thumbprint を生成するには、Windows PowerShell を開き、このコマンドを実行して証明書の Thumbprint を取得します。
+
+   > New-SelfSignedCertificate -CertStoreLocation cert:\currentuser\my -dnsname GallagherRestClientCert
+
+   <Image src='/img/integration/gallagher/setup5-1.png' alone />
+
+2. Thumbprint を**コピー**し、Client Certificate Thumbprint セクションに **Client Certificate Thumbprint key** を**貼り付け**、**OK** ボタンを**押し**て、Services and Workstations も**閉じ**ます。
+
+   <Image src='/img/integration/gallagher/setup5-2.png' alone />
+
+</details>
+
+### SSL証明書の生成
+
+1. スタート メニューを開き、**MMC** アプリケーションを**開き**ます。
+
+2. **ファイル** → **スナップインの追加と削除…** に進み、下の画面を表示します。
+
+   <Image src='/img/integration/gallagher/ssl-certificate-generation1.png' alone />
+
+3. **Certificates** を**選択**して **追加** ボタンを**クリック**すると、下の画面が表示されます。そこで **My user account** のラジオ ボタンを**選択**し、**Finish** ボタンを**クリック**します。
+
+   <Image src='/img/integration/gallagher/ssl-certificate-generation2.png' width={520} alone />
+
+4. Finish をクリックすると下の画面が表示されるので、**OK** ボタンを**クリック**します。 証明書が正常に追加されます。
+
+   <Image src='/img/integration/gallagher/ssl-certificate-generation3.png' alone />
+
+5. 次に **Certificates - Current User** → **Personal** → **Certificates** に移動し、**GallagherRestClientCert** 証明書を選択します。
+
+   <Image src='/img/integration/gallagher/ssl-certificate-generation4.png' width={578} alone />
+
+   <Image src='/img/integration/gallagher/ssl-certificate-generation5.png' alone />
+
+6. **Details** に移動し、**Copy to File** を**クリック**します。
+
+   <Image src='/img/integration/gallagher/ssl-certificate-generation6.png' alone />
+
+   次に、以下のスクリーンショットに従って **Next** を順に**クリック**します。
+
+   :::info
+
+   証明書が複数ある場合は、Thumbprint が正しいことを確認してください。
+
+   :::
+
+   <Image src='/img/integration/gallagher/ssl-certificate-generation7.png' alone />
+
+   <Image src='/img/integration/gallagher/ssl-certificate-generation8.png' alone />
+
+7. 次の画面が表示されたら、パスワードのチェックボックスをオンにし、パスワードを次のように設定します: <Cmd>G@ll@gher</Cmd>
+
+   <Image src='/img/integration/gallagher/ssl-certificate-generation9.png' alone />
+
+8. 次に、`C:\Program Files\Suprema Integration with Gallagher\Prerequisites` のパスを**参照**してファイルをエクスポートし、このファイルを **GallagherRestClient.pfx** として**保存**してから、**Next** を**クリック**します。
+
+   <Image src='/img/integration/gallagher/ssl-certificate-generation10.png' alone />
+
+   <Image src='/img/integration/gallagher/ssl-certificate-generation11.png' alone />
+
+   **Finish** を**クリック**すると証明書のエクスポートが正常に完了します。証明書と MMC ウィンドウを**閉じ**ます。
+
+9. 次に、**GallagherRestClient.pfx** 証明書ファイルをエクスポートした `C:\Program Files\Suprema Integration with Gallagher\Prerequisites` に移動し、**GallagherRestClient.pfx** ファイルを**ダブルクリック**します。下の画像のように **Current User** のラジオ ボタンを**選択**し、**Next** を**クリック**します。
+
+   <Image src='/img/integration/gallagher/ssl-certificate-generation12.png' alone />
+
+10. 次に、**GallagherRestClient.pfx** を保存した `C:\Program Files\Suprema Integration with Gallagher\Prerequisites` を**参照**し、**Next** を**クリック**します。
+
+    <Image src='/img/integration/gallagher/ssl-certificate-generation13.png' alone />
+
+11. 次に、パスワード <Cmd>G@ll@gher</Cmd> を**入力**し、下の画像のようにチェックボックスを**オンにし**てから **Next** を**クリック**します。
+
+    <Image src='/img/integration/gallagher/ssl-certificate-generation14.png' alone />
+
+12. **Place all certificates in the following store** のラジオ ボタンを**選択**し、**Trusted Root Certification Authorities** フォルダーを**参照**してから **OK** と **Next** を**クリック**します。
+
+    <Image src='/img/integration/gallagher/ssl-certificate-generation15.png' alone />
+
+    <Image src='/img/integration/gallagher/ssl-certificate-generation16.png' alone />
+
+13. **Finish** を**クリック**するとセキュリティ警告が表示されるので、**Yes** を**クリック**します。
+
+    <Image src='/img/integration/gallagher/ssl-certificate-generation17.png' alone />
+
+    <Image src='/img/integration/gallagher/ssl-certificate-generation18.png' alone />
+
+    次に、GallagherRestClient.pfx ファイルを保存した `C:\Program Files\Suprema Integration with Gallagher\Prerequisites` に**移動**し、ここで Powershell を**開き**ます。フォルダー URL に **PowerShell** と**入力**して PowerShell を開きます。
+
+14. 以下のコマンドを**入力**して **key.pem** ファイルを生成します。
+
+    > openssl pkcs12 -in Gallagherrestclient.pfx -nocerts -out key.pem
+
+15. 次に、パスワードを求められます。 そのため、以前設定したパスワード、つまり <Cmd>G@ll@gher</Cmd> を**入力**します。
+
+    <Image src='/img/integration/gallagher/ssl-certificate-generation19.png' width={600} alone />
+
+    **key.pem** ファイルが正常に生成されます。
+
+    :::info
+
+    ここではパスワードを3回入力する必要があります。
+
+    :::
+
+    1. 次に、以下のコマンドを**入力**して **cert.pem** ファイルを生成します:
+
+       > command: openssl pkcs12 -in Gallagherrestclient.pfx -clcerts -nokeys -out cert.pem
+
+       <Image src='/img/integration/gallagher/ssl-certificate-generation20.png' width={600} alone />
+
+       次に、パスワードを求められます。 そのため、以前設定したパスワード <Cmd>G@ll@gher</Cmd> を**入力**します。
+
+       **cert.pem** ファイルが正常に生成されます。
+
+       :::info
+
+       ここではパスワードを1回入力する必要があります。
+
+       :::
+
+16. 次に、**key.pem** と **cert.pem** の両方を**コピー**し、次のパス `C:\Program Files\Suprema Integration with Gallagher\Suprema Integration with Gallagher v(lateast version)\files` に貼り付けます。
+
+    <Image src='/img/integration/gallagher/ssl-certificate-generation21.png' alone />
+
+<details className='faqs'>
+<summary>**EXE アプリケーションからミドルウェアを直接アップグレードする。**</summary>
+
+1. バージョンをアップグレードする場合は、ポップアップで **OK** を**押し**ます。
+
+2. その後、**Update** ボタンを**押し**ます。
+
+   <Image src='/img/integration/gallagher/middleware-upgrade-from-exe1.png' alone />
+
+3. ミドルウェアのアップグレードが始まります。
+
+4. ミドルウェアのインストールが正常に完了したら、**Finish** ボタンを**押し**ます。
+
+   :::info
+
+   最新の変更を反映するには、システムの再起動が必要です。
+
+   :::
+
+   <Image src='/img/integration/gallagher/middleware-upgrade-from-exe2.png' alone />
+
+</details>
+
+<details className='faqs'>
+<summary>**EXE アプリケーションからミドルウェアを直接アンインストールする。**</summary>
+
+1. Windows の <Start/> ボタンを**押し**、**検索**して、**アプリの追加と削除** を**開き**ます。
+
+2. アプリと機能の検索一覧で、Suprema integration with the Gallagher のバージョンを**検索**して選択し、**アンインストール** を**クリック**します。小さなポップアップが表示されたら、もう一度 **アンインストール** を**押し**ます。
+
+   <Image src='/img/integration/gallagher/middleware-uninstall-from-exe1.png' alone />
+
+3. 統合のすべてのコンポーネントを削除するポップアップで **はい** を**押し**ます。
+
+   <Image src='/img/integration/gallagher/middleware-uninstall-from-exe2.png' alone />
+
+4. アンインストールが始まり、下の画面のような表示が見えます。
+
+   <Image src='/img/integration/gallagher/middleware-uninstall-from-exe3.png' alone />
+
+5. 下のポップアップで **はい** を**押し**ます。
+
+   <Image src='/img/integration/gallagher/middleware-uninstall-from-exe4.png' alone />
+
+6. 下のポップアップでも **はい** を**押し**ます。
+
+   <Image src='/img/integration/gallagher/middleware-uninstall-from-exe5.png' alone />
+
+7. **OK** を**押し**ます。
+
+   <Image src='/img/integration/gallagher/middleware-uninstall-from-exe6.png' alone />
+
+8. 次に端末内をクリックし、**Enter** を押してアンインストールを完了します。
+
+   <Image src='/img/integration/gallagher/middleware-uninstall-from-exe7.png' alone />
+
+9. 下のポップアップで **OK** を**押し**ます。これでミドルウェアの削除は完了です。
+
+   :::info
+
+   変更を反映するには、システムを再起動する必要があります。
+
+   :::
+
+   <Image src='/img/integration/gallagher/middleware-uninstall-from-exe8.png' alone />
+
+</details>
+
+## ミドルウェア
+
+<details className='faqs'>
+<summary>**ミドルウェアでのスキャンまたはデータ同期が非常に遅い場合。**</summary>
+
+- この問題を解決するには、[ここをクリック](https://support.supremainc.com/en/support/solutions/articles/24000023469--biostar-2-changing-the-server-ip-register-resolving-https-not-secure-issue-) してブログを参照してください。
+
+  - カード所有者カードが自動作成されない場合、ミドルウェアでカードは表示されません。
+
+- オペレーター グループに3つの権限を追加する必要があります。
+
+  <Image src='/img/integration/gallagher/middleware-slow-scan-sync-issue.png' alone />
+
+   これら3つの権限を追加したあと、システムを再起動してください。
+
+</details>
+
+<details className='faqs'>
+<summary id="login-lan-disconnected-error">**ログイン ページに「LAN is disconnected or IP is changed for (IP Address)」というエラーが表示される場合。**</summary>
+
+<AnchorCollect anchor="login-lan-disconnected-error" />
+
+- この問題を解決するには、次のトラブルシューティング項目を確認してください:
+
+  1. LAN ケーブルが接続されていることを確認します。
+
+  2. IP が変更されていないこと、また BioStar 2 Server の IP アドレスが同じであることを確認してください。誤った IP アドレスを入力している可能性があります。
+
+- ログイン画面で **LAN is disconnected or IP is changed for (IP Address)** のエラーを受信した場合は、ミドルウェアの **click here to Reset** **ボタン**を**押す**必要があります。
+
+  <Image src='/img/integration/gallagher/login-error-lan-disconnected-ip-changed1.png' alone />
+
+   ミドルウェアのリセット許可を求められたら、**Yes** **ボタン**を**押し**ます。
+
+  <Image src='/img/integration/gallagher/login-error-lan-disconnected-ip-changed2.png' alone />
+
+   リセットすると、ミドルウェアの初期画面が表示されるので、続きの手順に従います。
+
+</details>
+
+<details className='faqs'>
+<summary>**任意のページでミドルウェア実行中に「LAN is disconnected or IP is changed for (IP Address)」というエラーが発生する場合。**</summary>
+
+- この問題を解決するには、次のトラブルシューティング項目を確認してください:
+
+  1. LAN ケーブルが接続されていることを確認します。
+
+  2. IP が変更されていないこと、また BioStar 2 Server の IP アドレスが変更されていることを確認してください。
+
+- その場合は、ミドルウェア内の **Settings** → **Admin Management** → **IP management** セクションに移動します。
+
+  <Image src='/img/integration/gallagher/middleware-lan-disconnected-ip-error1.png' alone />
+
+  <Image src='/img/integration/gallagher/middleware-lan-disconnected-ip-error2.png' alone />
+
+   次に、テキスト ボックスに BioStar 2 server の IP アドレスとミドルウェアの HOST/SERVER 名を入力し、**Submit** ボタンを押してミドルウェア用の BioStar 2 サービスを開始します。
+
+  <Image src='/img/integration/gallagher/middleware-lan-disconnected-ip-error3.png' alone />
+
+   **Submit** **button** を**押す**と IP 変更の成功メッセージが表示されるので、**Exit setting** **button** を**押して**設定画面を終了します。
+
+</details>
+
+<details className='faqs'>
+<summary>**古いバージョンで複数サーバー上のミドルウェアを使用する方法。**</summary>
+
+バージョン 1.7.0 から、BioStar 2 server の IP アドレスを取得するための独立した画面を追加しました。 そのため、これは 1.7.0 未満のミドルウェア バージョンで使用するための解決策です。
+
+IP アドレスを変更する手順は次のとおりです。
+
+1. PgAdmin → テーブル に移動し、テーブルを右クリックして **Truncate** → **Truncate Restart Identity**（3つのテーブルすべて）を実行します。
+
+2. API key ウィンドウが表示されず、ログイン画面しか表示されない場合は、Gallagher command center に入って **reset middleware** リンクをクリックし、ミドルウェアをリセットします。
+
+   <Image src='/img/integration/gallagher/middleware-multi-server-older-versions1.png' alone />
+
+3. ミドルウェアの API key を入力したあとにログインし、Pgadmin を開き、資格情報テーブルを右クリックして、**View/Edit Data** → **All Rows** を開きます。
+
+4. テーブルのデータが読み込まれます。 次に、BioStar server の IP に合わせて IP アドレスを変更し、**F6** ボタンを押して変更を保存します。
+
+   <Image src='/img/integration/gallagher/middleware-multi-server-older-versions2.png' alone />
+
+5. そのあと、Pgadmin 内の globaluserrecord テーブルを truncate します。
+
+6. 変更を反映するためにシステムを再起動します。
+
+</details>
+
+<details className='faqs'>
+<summary>**特定の IP アドレスを持つ 2 台の異なるサーバーで特定のポート上でミドルウェアを実行する / ミドルウェアの受信ルールを構成する。**</summary>
+
+以下は、特定の IP アドレスを持つ 2 台の異なるサーバーで特定のポート上でミドルウェアを実行する手順です。
+
+ミドルウェアが 28523 ポートを使ってアプリケーションのバックエンド（middleware-backend）を呼び出していることが分かりました。バックエンドでは BioStar 2 server API を呼び出しているため、使用するポートは Web サーバーの HTTPS 既定ポートである 443 のみです。
+
+そのため、BioStar 2 server である server2 では、プロトコル タイプを TCP に設定し、ローカル ポートに 443、8081 を指定します。 リモート ポート オプションは **All ports** のままにします。
+
+Server 1 には Gallagher と Middleware が含まれます。
+
+- IP Address: 192.168.1.68
+
+- Subnet mask: 255.255.255.0
+
+- Default Gateway: 162.168.1.1
+
+Server 2 には BioStar 2 が含まれます。
+
+- IP Address: 10.10.104.13
+
+- Subnet mask: 255.255.254.0
+
+- Default Gateway: 10.10.104.1
+
+受信ルールを作成する手順は次のとおりです:
+
+:::info
+
+以下の手順は BioStar 2 server で実行する必要があります。
+
+:::
+
+1. Windows Defender Firewall の設定を開く:
+
+   - <Kbd>Win + R</Kbd> を押して、[ファイル名を指定して実行] ダイアログを開きます。
+
+   - `control firewall.cpl` と入力し、Enter を押します。 Windows Defender Firewall の設定が開きます。
+
+2. 詳細設定にアクセスする:
+
+   - Windows Defender Firewall ウィンドウでは、左側にオプションが表示されます。 **詳細設定** をクリックします。 Windows Defender Firewall with Advanced Security コンソールが開きます。
+
+3. 新しい受信ルールを作成する:
+
+   - Windows Defender Firewall with Advanced Security コンソールでは、左側に **Inbound Rules** と **Outbound Rules** を含むオプションが表示されます。
+
+   - **Inbound Rules** をクリックします。
+
+   - 右側のペインで **New Rule...** をクリックします。 New Inbound Rule Wizard が開きます。
+
+4. ルールの種類を選択する:
+
+   - New Inbound Rule Wizard で **Custom** を選択し、**Next** をクリックします。
+
+5. プログラムを構成する:
+
+   - このルールを特定のプログラムに適用する場合は、ここで指定します。 ICMP トラフィックを扱うため、ここは **All programs** のままにして **Next** をクリックします。
+
+6. プロトコルとポートを構成する:
+
+   - プロトコルとポートのウィンドウで、特定のポートを使用するため **TCP** を選択します。 次にローカル ポートで **Specific Ports** を選択し、443 と 8081 を入力します。 リモート ポートは **All Ports** のままにします。 その後、**Next** をクリックします。
+
+   :::info
+
+   ここでは、8081 ポートを BioStar 2 の USB デバイス用として割り当てています。
+
+   :::
+
+   <Image src='/img/integration/gallagher/middleware-port-ip-config-inbound-rules1.png' alone />
+
+7. スコープを構成する:
+
+   - Scope ウィンドウでは、どの IP アドレスがサーバーに ICMP トラフィックを送信できるかを指定できます。 そのため、ローカル IP アドレスはそのままにし、リモート IP アドレスには Gallagher と Middleware のサーバーの IP アドレスを入力します。次に **These IP addresses:** を選び、**Add** ボタンをクリックします。IP address wizard で Gallagher と Middleware のサーバーの IP Address を入力し、**OK** を押します。 参照用に下の画像を確認してください。
+
+   <Image src='/img/integration/gallagher/middleware-port-ip-config-inbound-rules2.png' alone />
+
+8. アクションを構成する:
+
+   - Action ウィンドウで **Allow the connection** を選択し、**Next** をクリックします。
+
+9. プロファイルを構成する:
+
+   - Profile ウィンドウで、このルールを適用するプロファイルを選択します。 通常は、すべてのプロファイル（Domain、Private、Public）で有効にします。 その後、**Next** をクリックします。
+
+10. 名前と説明:
+
+    - ルールに名前と説明を付けます。 たとえば、**Allow ICMP Echo Request for middleware** という名前にします。 その後、**Finish** をクリックします。
+
+11. ルールを有効にする:
+
+    - ルールを作成すると、Windows Defender Firewall with Advanced Security コンソールの Inbound Rules セクションに表示されます。
+
+    - 作成したルールを右クリックし、自動で有効にならない場合は **Enable Rule** を選択します。 これでルールが有効になり、ICMP トラフィックを許可します。
+
+</details>
+
+<details className='faqs'>
+<summary>**BioStar サーバーの IP が変更され、ミドルウェアの動作が遅くなった場合。**</summary>
+
+IP が変更されたというエラーが発生した場合は、次のリンクを確認してください: https://support.supremainc.com/en/support/solutions/articles/24000041659--biostar-2-troubleshooting-when-the-server-ip-changed.
+
+</details>
+
+<details className='faqs'>
+<summary id="thumbprint-not-generated">**EXE ファイル実行時に thumbprint が生成されない場合。**</summary>
+
+<AnchorCollect anchor="thumbprint-not-generated" />
+
+ミドルウェアをインストールしても thumbprint が生成されない場合は、管理者権限で EXE ファイルを再度実行してください。手順は次のとおりです。
+
+下のスクリーンショットのように、Suprema integration with the gallagher.exe ファイルを右クリックし、**管理者として実行** を**選択**します。 続いて許可を求められるので、**はい** を**クリック**して exe ファイルを実行します。
+
+<Image src='/img/integration/gallagher/exe-thumbprint-not-generated1.png' alone />
+
+それでも thumbprint ファイルが生成されない場合は、`C:\TMP` に移動し、すべてのログ ファイルを開発チームと共有してください。
+
+<Image src='/img/integration/gallagher/exe-thumbprint-not-generated2.png' alone />
+
+それまでの間、thumbprint を手動で生成する方法の記事を参照してください。 参照: [thumbprint を手動で生成する方法](#manual-thumbprint-certificate-generation)。
+
+</details>
+
+<details className='faqs'>
+<summary id="create-migration-manually">**Migration を手動で作成する。**</summary>
+
+<AnchorCollect anchor="create-migration-manually" />
+
+ミドルウェア V1.8.3 では Hostname に対応したため、Gallagher workstation client を使ってミドルウェアを使用できるように、Migration を実施しています。
+
+Migration を手動で作成するには、以下の手順に従ってください:
+
+1. Pgadmin に移動します。 パスワードを求められたら、インストール時に設定した既定のパスワード **G@ll@gher** を入力します。
+
+2. 次に **Servers** を**クリック**します。パスワードを求められたら同じ **G@ll@gher** をパスワードとして使用します。続いて **Databases** を**クリック**し、Suprema → Schemas → public → Tables を**展開**します。 次に credentials テーブルを**選択**します。
+
+   <Image src='/img/integration/gallagher/create-migration-manually1.png' alone />
+
+3. 次に credentials テーブルを**右クリック**し、一覧から **Properties** オプションを**選択**します。
+
+   <Image src='/img/integration/gallagher/create-migration-manually2.png' alone />
+
+4. 次のウィンドウで **Columns** オプションを**選択**し、**+** アイコンを**クリック**すると、下の画像のように新しい列オプションが表示されます。
+
+   <Image src='/img/integration/gallagher/create-migration-manually3.png' alone />
+
+5. 次に Columns オプション内で、名前を host_name、データ型を character varying、Length/Precision を 255 に設定し、**Save** ボタンを**クリック**します。
+
+   <Image src='/img/integration/gallagher/create-migration-manually4.png' alone />
+
+6. 次に credentials テーブルを**選択**し、**View Data** ボタンを**クリック**します。
+
+   <Image src='/img/integration/gallagher/create-migration-manually5.png' alone />
+
+7. 次に host_name 列内のボックスを**ダブルクリック**すると、ポップアップが開きます。
+
+   <Image src='/img/integration/gallagher/create-migration-manually6.png' alone />
+
+8. ポップアップに `https://[YOUR-HOST/SYSTEM-NAME]/api` と入力し、**OK** を**押し**ます。
+
+   <Image src='/img/integration/gallagher/create-migration-manually7.png' alone />
+
+9. 次に <Kbd>F6</Kbd> を**押して**変更を保存します。
+
+</details>
+
+<details className='faqs'>
+<summary>**PostgreSQL 14 のデータベースをバックアップし、バージョン 16 にアップグレードして、データベースを復元する手順。**</summary>
+
+##### PostgreSQL 14 でデータベースをバックアップする
+
+1. pgAdmin 4 を開く:
+
+   - **Databases** セクションの下にある **Suprema** データベースを右クリックし、**Backup** を選択します。
+
+   <Image src='/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore1.png' alone />
+
+2. バックアップ ファイル名と形式を設定する:
+
+   - **File name** フィールドに **Suprema-backup** と入力し、形式として **Directory** を選択します。
+
+   - **ファイル** アイコンをクリックして保存先を選択します。
+
+   <Image src='/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore2.png' alone />
+
+3. 保存先を選択する:
+
+   - バックアップを保存するディレクトリを選択します（例: デスクトップ）。 ファイル名を入力し、**Save** を押します。
+
+   <Image src='/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore3.png' alone />
+
+4. バックアップを開始する:
+
+   - 選択した場所が反映されたファイル名が表示されます。 **Backup** ボタンを押します。
+
+   <Image src='/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore4.png' alone />
+
+5. バックアップ完了を確認する:
+
+   - バックアップが完了すると通知が表示されます。 これでデータベースのバックアップは安全に保存されました。
+
+   <Image src='/img/integration/gallagher/postgresql-backup-upgrade-14-to-16-restore5.png' alone />
+
+##### PostgreSQL をバージョン 16 にアップグレードする
+
+1. ミドルウェアと PostgreSQL のサービスを停止する:
+
+   - 28523 ポートと 5432 ポートのプロセスを停止して、実行中のミドルウェアと PostgreSQL のサービスを終了します。
+
+2. パスワードを更新する（必要な場合）:
+
+   - アップグレード中の互換性を確保するため、パスワードを <Cmd>G@ll@gher</Cmd> に設定します。
+
+3. PostgreSQL 16 をインストールする:
+
+   - 公式 PostgreSQL Web サイトから PostgreSQL 16 をダウンロードしてインストールし、OS に応じた手順に従ってください。直接 V16.4.1 を取得する場合は、次のリンクを参照してください: https://drive.google.com/file/d/17ehlTpedaGeWezOHZiMd6-ircQhTqBAJ/view?usp=drive_link.
+
+4. データを移行する（任意）:
+
+   - [Postgresql 16 でデータベースを復元する](#database-postgresql) を参照してください。
+
+5. PostgreSQL 14 をアンインストールする（任意）:
+
+   - アップグレードを確認したあと、不要であれば PostgreSQL 14 をアンインストールできます。 参照: [バージョン 16 へアップグレードしたあとに postgresql14 をアンインストールする](#uninstall-postgresql-after-upgrade)。
+
+##### PostgreSQL 16 でデータベースを復元する {#database-postgresql}
+
+1. pgAdmin 4 を開きます（PostgreSQL 16 に接続済み）。
+
+2. 新しいデータベースを作成する:
+
+   - pgAdmin で **Databases** を右クリックし、**Create** → **Database** を選択します。
+
+   - データベース名を **Suprema** にして保存します。
+
+3. バックアップを復元する:
+
+   - 新しく作成した **Suprema** データベースを右クリックし、**Restore** を選択します。
+
+4. バックアップ ファイルを選択する:
+
+   - **Filename** フィールドで、以前作成したディレクトリ バックアップ ファイル（Suprema-backup）を選択します。
+
+5. 復元を開始する:
+
+   - **Restore** をクリックします。 処理が完了するまで待ちます。
+
+6. 復元完了を確認する:
+
+   - 復元が完了すると、成功メッセージが表示されます。 これで PostgreSQL 16 でデータにアクセスし、確認できます。
+
+</details>
+
+<details className='faqs'>
+<summary id="uninstall-postgresql-after-upgrade">**PostgreSQL をバージョン 16 にアップグレードしたあと、PostgreSQL 14 をアンインストールする。**</summary>
+
+<AnchorCollect anchor="uninstall-postgresql-after-upgrade" />
+
+PostgreSQL 14 をアンインストールするには、以下の手順に従ってください。
+
+1. **コントロール パネル** → **プログラム** → **プログラムと機能** に移動します。
+
+2. インストール済みプログラムの一覧で **PostgreSQL 14** を見つけます。
+
+3. **PostgreSQL 14** を右クリックし、**アンインストール** を選択します。 表示される案内に従ってアンインストールを完了します。
+
+   <Image src='/img/integration/gallagher/uninstall-postgresql14-after-upgrade-to-16-1.png' alone />
+
+4. インストール ディレクトリ（通常は `C:\Program Files\PostgreSQL\14`）を確認し、残っているファイルやフォルダーを削除します。
+
+:::info
+
+アンインストール後も pgAdmin に PostgreSQL 14 が表示される場合、pgAdmin がサーバー設定を保持している可能性があります。
+
+:::
+
+次の手順で pgAdmin から手動で削除できます:
+
+1. pgAdmin の Object Explorer パネルで **PostgreSQL 14** を**右クリック**します。
+
+2. コンテキスト メニューから **Delete/Remove Server** を**選択**します。
+
+   <Image src='/img/integration/gallagher/uninstall-postgresql14-after-upgrade-to-16-2.png' alone />
+
+3. 表示される削除確認を**確定**します。
+
+   <Image src='/img/integration/gallagher/uninstall-postgresql14-after-upgrade-to-16-3.png' alone />
+
+これで PostgreSQL 16 のインストールに影響を与えずに、pgAdmin から PostgreSQL 14 のサーバー設定が削除されます。
+
+</details>

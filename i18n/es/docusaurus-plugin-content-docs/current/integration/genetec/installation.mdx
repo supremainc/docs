@@ -1,0 +1,188 @@
+---
+id: installation
+title: Instalación
+description: Proporciona los requisitos mínimos del sistema e instrucciones paso a paso para instalar el complemento Suprema y agregar los complementos Extractor y Device a Genetec Config Tool.
+keywords:
+  - Instalación
+  - Complemento Suprema
+  - Genetec Config Tool
+---
+
+## Requisitos mínimos del sistema
+
+<div className='overflow-x col5--15-10-25'>
+
+| >                     | Ítem               | Servidor para pequeña empresa              | Servidor para mediana empresa                | Servidor para empresa grande                                                                                                          |
+| :-------------------- | :----------------- | :----------------------------------------- | :------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------ |
+| Entorno               | Total Dispositivos | 50                                         | 150                                          | 1000                                                                                                                                  |
+| Requisito del sistema | SO                 | >                                          | >                                            | Microsoft Windows 10 o posterior (64 bits)                                                                                            |
+| ^                     | CPU                | CPU de 8 núcleos / RAM de 64 GB o superior | CPU de 16 núcleos / RAM de 128 GB o superior | La implementación de nivel empresarial requiere consulta previa                                                                       |
+| ^                     | RAM                | 64 GB                                      | 128 GB                                       | ^                                                                                                                                     |
+| ^                     | Comunicación       | >                                          | >                                            | Admite el protocolo estándar de comunicación de red Transmission Control Protocol (TCP/IP) entre servidores, clientes y dispositivos. |
+| ^                     | ^                  | >                                          | >                                            | Admite Dynamic Host Configuration Protocol (DHCP) o una dirección IP estática.                                                        |
+| ^                     | ^                  | >                                          | >                                            | Admite la configuración de red.                                                                                                       |
+| ^                     | ^                  | >                                          | >                                            | Admite Network Time Protocol (NTP).                                                                                                   |
+| ^                     | ^                  | >                                          | >                                            | Admite comunicación HTTPS protegida por Secure Socket Layer (SSL) entre el cliente (navegador web) y la plataforma.                   |
+| ^                     | Cifrado            | >                                          | >                                            | Admite AES-256 para la plantilla de huella dactilar y la plantilla facial.                                                            |
+| ^                     | ^                  | >                                          | >                                            | Admite AES-256 para la plantilla de huella dactilar y la plantilla facial (opcional).                                                 |
+
+</div>
+
+## Requisitos previos
+
+### Especificación del servidor
+
+<div className='overflow-x cols3--20-20-60'>
+
+| Tamaño de la empresa | No. de dispositivos Suprema | Especificación del servidor                                      |
+| -------------------- | --------------------------- | ---------------------------------------------------------------- |
+| Pequeña              | 1\~50 dispositivos          | CPU de 8 núcleos / RAM de 64 GB o superior                       |
+| Medio                | 50\~150 dispositivos        | CPU de 16 núcleos / RAM de 128 GB o superior                     |
+| Corporativa          | Más de 150 dispositivos     | La implementación de nivel empresarial requiere consulta previa. |
+
+</div>
+
+### Synergis cloud link
+
+1. Habilitación del protocolo RIO.
+
+   > `https://[IP Address of Cloud link]/Features/DuiRIO/Enabled/Set?value=true`
+
+2. Recomendado y máximo. Conexión de dispositivos.
+
+   <div className='overflow-x table-fixed'>
+
+   | No. de usuarios | Dispositivos recomendados por cada enlace de nube | Máx. Dispositivos posibles |
+   | --------------- | ------------------------------------------------- | -------------------------- |
+   | 20,000 +        | Hasta 40                                          | No recomendado             |
+   | Menos de 10,000 | Hasta 50                                          | Hasta 64                   |
+
+   </div>
+
+   :::caution
+
+   - Se requieren enlaces de nube dedicados para dispositivos Suprema.
+
+   - No se recomienda conectar al Cloud Link dispositivos que no sean productos Suprema.
+
+   :::
+
+### Base de datos
+
+- La base de datos del complemento (Device y Extractor) se crea automáticamente en el mismo servidor SQL de Directory.
+
+  - El administrador puede modificar la ubicación de instalación de la base de datos.
+
+  - Admite copia de seguridad y restauración.
+
+- La cuenta de SQL necesita los siguientes permisos.
+
+  - Roles del servidor: db_creator, processadmin, public
+
+  - Roles de base de datos: db_backupoperator, db_datareader, db_datawriter, public
+
+## Dispositivo de enrolamiento de huellas dactilares
+
+Para usar un dispositivo de enrolamiento de huellas dactilares de tipo USB, se requiere instalar un controlador aparte.
+
+Comuníquese con el equipo de socios comerciales de Suprema para obtener ayuda.
+
+## Instalación del complemento
+
+1. Ejecute el archivo de instalación (setup.exe) como administrador.
+
+   <Image src='/img/integration/genetec/plugin-installation-setup.png' alone />
+
+2. Haga clic en **Siguiente**.
+
+   <Image src='/img/integration/genetec/plugin-installation1.png' alone />
+
+3. Establezca la ruta donde se instalará el complemento Suprema y luego haga clic en **Siguiente**.
+
+   <Image src='/img/integration/genetec/plugin-installation2.png' alone />
+
+4. Si la instalación está lista, haga clic en **Siguiente**.
+
+   <Image src='/img/integration/genetec/plugin-installation3.png' alone />
+
+5. La instalación comenzará. Espere hasta que termine correctamente.
+
+   <Image src='/img/integration/genetec/plugin-installation4.png' alone />
+
+6. Cuando termine la instalación, aparecerá una ventana del símbolo del sistema. Presione cualquier tecla para cerrar la ventana.
+
+   <Image src='/img/integration/genetec/plugin-installation-cmd.png' alone />
+
+7. Haga clic en el botón **Cerrar**.
+
+   <Image src='/img/integration/genetec/plugin-installation7.png' alone />
+
+8. Presione cualquier tecla para finalizar.
+
+   <Image src='/img/integration/genetec/plugin-installation-cmd.png' alone />
+
+## Complemento Suprema agregado en Genetec Config Tool
+
+1. Ejecute **Config Tool** de Genetec.
+
+   <Image src='/img/integration/genetec/config-tool.png' alone />
+
+2. Haga clic en **Plugins** en **Tareas**.
+
+   <Image src='/img/integration/genetec/config-tool-tasks-plugins.png' width={800} alone />
+
+3. Haga clic en **Agregar una entidad** en la pantalla **Plugins** y luego seleccione **Plugin** de la lista.
+
+   <Image src='/img/integration/genetec/config-tool-plugin.png' alone />
+
+4. En **Select plugin type**, seleccione **Suprema Extractor Plugin** y haga clic en **Siguiente**.
+
+   <Image src='/img/integration/genetec/config-tool-extractor-plugin1.png' width={600} alone />
+
+5. Ingrese el **Entity name** y la **Entity description**, y luego haga clic en **Siguiente**.
+
+   <Image src='/img/integration/genetec/config-tool-extractor-plugin2.png' width={600} alone />
+
+   :::info
+
+   La **Entity description** es opcional.
+
+   :::
+
+6. Verifique la información y haga clic en **Crear**.
+
+   <Image src='/img/integration/genetec/config-tool-extractor-plugin3.png' width={600} alone />
+
+7. Se creará el **Suprema Extractor Plugin**. Haga clic en **Cerrar**.
+
+   <Image src='/img/integration/genetec/config-tool-successful.png' width={600} alone />
+
+8. Haga clic en **Agregar una entidad** en la pantalla **Plugins** y luego seleccione **Plugin** de la lista.
+
+   <Image src='/img/integration/genetec/config-tool-plugin.png' alone />
+
+9. En **Select plugin type**, seleccione **Suprema Device Plugin** y haga clic en **Siguiente**.
+
+   <Image src='/img/integration/genetec/config-tool-device-plugin1.png' width={600} alone />
+
+10. Ingrese el **Entity name** y la **Entity description**, y luego haga clic en **Siguiente**.
+
+    <Image src='/img/integration/genetec/config-tool-device-plugin2.png' width={600} alone />
+
+    :::info
+
+    La **Entity description** es opcional.
+
+    :::
+
+11. Verifique la información y haga clic en **Crear**.
+
+    <Image src='/img/integration/genetec/config-tool-device-plugin3.png' width={600} alone />
+
+12. Se creará el **Suprema Device Plugin**. Haga clic en **Cerrar**.
+
+    <Image src='/img/integration/genetec/config-tool-successful.png' width={600} alone />
+
+13. La adición del **Suprema Plugin** se completó.
+
+    <Image src='/img/integration/genetec/config-tool-add-plugin.png' alone />

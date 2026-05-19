@@ -1,0 +1,464 @@
+---
+id: enrolling-biometrics
+title: Inscripción de biometría desde C•CURE 9000
+description: Proporciona instrucciones paso a paso para inscribir credenciales biométricas, incluidas tarjetas RFID, huellas dactilares y rostros, así como la administración de métodos de preinscripción a través de C•CURE 9000.
+keywords:
+  - Inscripción biométrica
+  - Credencial
+  - C•CURE 9000
+---
+
+Abra la estación de trabajo de administración y, en la vista de personal, haga clic en un usuario existente o cree uno nuevo.
+
+<Image src='/img/integration/ccure/enrolling-biometrics1.png' width={800} alone />
+
+Una vez en la vista de personal, asegúrese de estar en la **Vista de inscripción biométrica Suprema**, como se muestra a continuación.
+
+<Image src='/img/integration/ccure/enrolling-biometrics2.png' width={800} alone />
+
+Allí encontrará la pestaña Suprema, ubicada al final de las pestañas de la vista de personal.
+
+<Image src='/img/integration/ccure/enrolling-biometrics3.png' width={800} alone />
+
+Haga clic y verá:
+
+<Image src='/img/integration/ccure/enrolling-biometrics4.png' width={800} alone />
+
+En el panel lateral derecho verá un resumen del usuario actual.
+
+1. **Cuando el usuario es nuevo**, y aún no se ha guardado en C•CURE 9000: verá este aviso que le pide guardar el usuario antes de inscribir datos biométricos.
+
+   <Image src='/img/integration/ccure/enrolling-biometrics5.png' width={800} alone />
+
+2. **Cuando el usuario es nuevo en dispositivos Suprema**, justo después de guardar el usuario e ir a la pestaña Suprema, notará lo siguiente:
+
+   <Image src='/img/integration/ccure/enrolling-biometrics6.png' width={800} alone />
+
+   El cuadro de diálogo **Espere** se muestra mientras la integración sincroniza al usuario con los dispositivos Suprema. Al terminar el proceso, verá algo similar a:
+
+   <Image src='/img/integration/ccure/enrolling-biometrics7.png' width={800} alone />
+
+   Como el usuario se creó recientemente, no mostrará plantillas. Ahora vamos a crearlas.
+
+   El primer paso es añadir una credencial RFID desde la pestaña Credenciales.
+
+   <Image src='/img/integration/ccure/enrolling-biometrics8.png' width={800} alone />
+
+   Asegúrese de haber configurado al menos los siguientes campos:
+
+   1. Número de tarjeta.
+
+   2. Código de instalación.
+
+   3. Fecha y hora de activación.
+
+   4. Fecha y hora de expiración.
+
+   Después de añadir al menos estas opciones, haga clic en el botón **Guardar** antes de ir a la pestaña Suprema.
+
+   La información recién añadida se transferirá a los dispositivos Suprema.
+
+   <Image src='/img/integration/ccure/enrolling-biometrics9.png' width={800} alone />
+
+   El proceso puede durar una fracción de segundo o más, según la cantidad de dispositivos con los que deba sincronizarse la información (tenga paciencia).
+
+   Cuando el proceso termine, verá el cuadro de información.
+
+   <Image src='/img/integration/ccure/enrolling-biometrics10.png' alone />
+
+   Ahora, en el panel lateral Detalles del usuario, verá la información actualizada.
+
+   <Image src='/img/integration/ccure/enrolling-biometrics11.png' alone />
+
+   Cuando tenga más de una tarjeta (hasta cinco, según la cantidad máxima de credenciales de C•CURE), verá:
+
+   <Image src='/img/integration/ccure/enrolling-biometrics12.png' alone />
+
+   :::info
+
+   La versión _Basic_ de esta integración sincroniza solo la primera tarjeta disponible en el grupo de credenciales del personal.
+
+   :::
+
+   Ahora estamos listos para inscribir biometría al usuario actual:
+
+   <Image src='/img/integration/ccure/enrolling-biometrics13.png' alone />
+
+   Como puede ver en la imagen anterior, se muestran las opciones para inscribir tarjetas RFID, huellas dactilares o credenciales faciales.
+
+   Después de seleccionar una, verá un panel dinámico para cada tipo de credencial en la pantalla, como referencia:
+
+   <Image src='/img/integration/ccure/enrolling-biometrics14.png' className='none' width={1000} alone />
+
+   Al seleccionar el tipo de credencial, la integración puede clasificar los dispositivos según sus capacidades y mostrar solo los dispositivos capaces de manejar el tipo de credencial seleccionado. Por ejemplo:
+
+   <Image src='/img/integration/ccure/enrolling-biometrics15.png' className='none' width={1000} alone />
+
+   Después de seleccionar un dispositivo, se habilitarán las opciones en los paneles respectivos para que continúe.
+
+   :::info
+
+   Cada vez que seleccione un tipo de credencial, la integración seleccionará solo los dispositivos capaces de manejar la credencial seleccionada; si no encuentra ninguno, se mostrará el siguiente mensaje.
+
+   <Image src='/img/integration/ccure/enrolling-biometrics16.png' alone />
+
+   :::
+
+## Escaneo de tarjeta
+
+Los dispositivos Suprema son multitecnología; por eso podrá escanear tarjetas al menos con las siguientes características: EM (125 kHz) y, en 13,56 MHz: MIFARE, MIFARE Plus, DESFire EV1/EV2 y FeliCa.
+
+Con el otro conjunto de dispositivos, HID Prox es compatible además de EM para 125 kHz, e iCLASS SE/SR/SEOS también.
+
+Si tiene preguntas sobre los detalles de compatibilidad RF de su dispositivo Suprema, consulte el manual del dispositivo en https://www.supremainc.com/en/hardware/security-products-lineup.asp.
+
+Cuando escanee una tarjeta, verá los siguientes detalles:
+
+<Image src='/img/integration/ccure/scanning-card1.png' alone />
+
+En **Formato de tarjeta**: el formato reconocido automáticamente por el lector.
+
+En el **diseño de tarjeta en pantalla**: el número de serie de la tarjeta con el formato Código de instalación + Número de tarjeta (separados por un guion), lo que facilita el registro de la tarjeta desde la pestaña Credenciales, en caso de que la tarjeta no tenga el número de serie impreso físicamente.
+
+El formato que ve reconocido en **Formato de tarjeta** también puede ayudarle a verificar si la tarjeta que va a inscribir es compatible con el formato de tarjeta seleccionado en el menú de configuración de Formatos de tarjeta y claves.
+
+:::info
+
+Después de hacer clic en el botón **Inscribir tarjeta**, haga clic en el botón **Guardar** del menú superior dentro de la ventana Personal para que los cambios realizados en la pestaña Suprema se reflejen en C•CURE.
+
+:::
+
+Después de registrar la tarjeta, puede ver o eliminar la credencial haciendo doble clic en las plantillas de tarjeta en el Resumen del usuario:
+
+<Image src='/img/integration/ccure/scanning-card2.png' alone />
+
+Si hace doble clic en la tarjeta que aparece en Credenciales, verá la tarjeta mostrada en el **diseño de tarjeta en pantalla**.
+
+<Image src='/img/integration/ccure/scanning-card3.png' width={800} alone />
+
+### Eliminar una tarjeta
+
+Desde allí, si desea eliminar la tarjeta de los dispositivos Suprema, haga clic en el botón **Eliminar**. Se mostrará un mensaje de advertencia. Haga clic en **Sí** si desea eliminar la tarjeta del perfil de usuario en los dispositivos Suprema; de lo contrario, haga clic en **No**.
+
+<Image src='/img/integration/ccure/delete-credential.png' alone />
+
+:::info
+
+Tenga en cuenta que, si elimina esta credencial del perfil de usuario y el usuario no tiene otra tarjeta en su perfil, o no la reemplaza por otra tarjeta (en caso de una versión _Basic_), la integración la reemplazará con la última tarjeta guardada en las credenciales del personal. Si elimina las credenciales de ambos lados, eso puede provocar errores en la autenticación contra el panel iStar.
+
+:::
+
+## Escaneo de huellas dactilares
+
+Registre la huella correctamente para mejorar la tasa de autenticación de huellas dactilares. Los dispositivos Suprema pueden reconocer una huella dactilar aunque cambien el ángulo y la posición de la entrada de huella del usuario. Registre la huella teniendo en cuenta los siguientes aspectos para mejorar la tasa de autenticación.
+
+La calidad mínima de inscripción garantiza que el dedo sea lo suficientemente bueno para diferenciar a una persona de otra. Se prefiere un valor de 90 o superior para una mejor autenticación; sin embargo, si encuentra un problema cuando una persona reconoce su huella dactilar, puede bajar un poco el valor.
+
+<Image src='/img/integration/ccure/scanning-fingerprints1.png' alone />
+
+Tenga en cuenta el mensaje tanto en la pantalla como en los dispositivos. En la pantalla verá una animación con los siguientes mensajes:
+
+<div className='grid-container'>
+<Image src='/img/integration/ccure/scanning-fingerprints2.png' alone />
+<Image src='/img/integration/ccure/scanning-fingerprints3.png' alone />
+</div>
+
+Como el mensaje en pantalla le pide colocar el dedo en el sensor, y una vez realizado el primer escaneo, el mensaje cambiará y le pedirá que coloque OTRA VEZ el dedo.
+
+En cada escaneo completado, la plantilla se mostrará en la pantalla con el resultado real de calidad del evento de escaneo:
+
+<Image src='/img/integration/ccure/scanning-fingerprints4.png' alone />
+
+La integración le pedirá escanear el dedo dos veces para realizar lo siguiente:
+
+**Verificaciones realizadas:**
+
+1. ¿El resultado escaneado cumplió con la calidad mínima de inscripción? Esta verificación se ejecutará en cada escaneo y fallará si no se cumple la calidad mínima.
+
+   <Image src='/img/integration/ccure/verifications-made1.png' alone />
+
+   Por motivos de seguridad, la información obtenida se restablecerá para que tenga datos claros y conformes para sus datos biométricos.
+
+2. ¿Se escaneó el mismo dedo dos veces? De lo contrario, la verificación fallará.
+
+   <Image src='/img/integration/ccure/verifications-made2.png' alone />
+
+3. ¿El dedo ya está inscrito? La verificación fallará si se detecta que el dedo ya está inscrito para el mismo usuario o para otro.
+
+   <Image src='/img/integration/ccure/verifications-made3.png' alone />
+
+4. Si se superan las verificaciones anteriores, el botón **Inscripción** se habilitará para que registre este dedo en el usuario actual.
+
+   <Image src='/img/integration/ccure/verifications-made4.png' alone />
+
+Luego se habilitará el botón **Inscribir dedo**.
+
+<div className='grid-container'>
+<Image src='/img/integration/ccure/verifications-made5.png' alone />
+<Image src='/img/integration/ccure/verifications-made6.png' alone />
+</div>
+
+Cuando se muestra el mensaje de advertencia y hace clic en **Sí**, los datos se enviarán de inmediato a los dispositivos Suprema y estarán disponibles al instante. Haga clic en **No** para cerrar el cuadro de diálogo.
+
+Cuando termine el proceso, se mostrará un mensaje de confirmación.
+
+<Image src='/img/integration/ccure/verifications-made7.png' alone />
+
+Después de registrar la huella dactilar, puede ver o eliminar la credencial haciendo doble clic en las plantillas de huella dactilar en el Resumen del usuario:
+
+<Image src='/img/integration/ccure/verifications-made8.png' alone />
+
+Si hace doble clic en la plantilla de dedo que aparece en Credenciales, verá la plantilla mostrada en el panel de **Huellas dactilares**.
+
+<Image src='/img/integration/ccure/verifications-made9.png' width={800} alone />
+
+### Eliminar una huella dactilar
+
+Desde allí, si desea eliminar una huella dactilar del perfil del usuario en los dispositivos Suprema, haga clic en el botón **Eliminar**. Se mostrará un mensaje de advertencia. Haga clic en **Sí** si desea eliminar la credencial del perfil del usuario en los dispositivos Suprema; de lo contrario, haga clic en **No**.
+
+<Image src='/img/integration/ccure/delete-credential.png' alone />
+
+**¿Cuántas huellas dactilares se pueden añadir a cada usuario?**
+
+Se pueden añadir las 10 huellas dactilares de la mano del usuario al perfil del usuario. Aunque los dedos índice, medio y pulgar son los que más se usan en el proceso de inscripción, puede intentar inscribir los diez.
+
+<Image src='/img/integration/ccure/delete-fingerprint.png' alone />
+
+Después de hacer doble clic en cada una de las plantillas en la pantalla, podrá verlas en el panel de huellas dactilares; desde allí también puede editarlas, como se describe en la sección anterior.
+
+### Método de inscripción de huellas dactilares
+
+1. Cuando aparezca en la pantalla LCD un mensaje que diga "Coloque su dedo en el sensor." para inscribir la huella dactilar, coloque el dedo cuya huella desea inscribir en la unidad de autenticación por huella dactilar y presiónelo suavemente para una mejor autenticación.
+
+   <Image src='/img/device/fingerprint-register.svg' className='none' alone />
+
+2. Cuando aparezca la pantalla de reingreso después de un pitido, vuelva a escanear la huella del dedo inscrito (escanee dos veces la huella del dedo que se va a inscribir).
+
+:::info
+
+Algunas recomendaciones o precauciones que debe tener en cuenta al escanear e inscribir una huella dactilar.
+
+Cuando se reconoce una huella dactilar, se compara con la huella dactilar registrada inicialmente, por eso la inscripción inicial es la más importante. Tenga en cuenta los siguientes aspectos al registrar la huella.
+
+- Coloque el dedo lo suficientemente profundo para que haga contacto completo con el sensor.
+
+- Coloque el centro de la huella en el centro del sensor.
+
+- Si un dedo tiene un corte o la huella está borrosa, seleccione otro dedo para la huella.
+
+- Escanee la huella correctamente sin moverla, según las instrucciones de la pantalla.
+
+- Si mantiene el dedo en posición vertical de modo que se reduzca el área de contacto con el sensor o cambia el ángulo del dedo, es posible que la autenticación de la huella no se realice.
+
+<Image src='/img/device/fingerprint-authentication.svg' className='none' alone />
+
+Los dispositivos Suprema pueden reconocer una huella dactilar sin importar los cambios de estación o del estado del dedo.
+
+Sin embargo, la tasa de autenticación puede variar según el entorno externo o el método de ingreso de la huella. Si la autenticación de huellas no se realiza sin problemas, adopte las siguientes medidas.
+
+- Si el dedo está mojado o sudoroso, séquelo y luego escanee la huella.
+
+- Si el dedo está demasiado seco, sople sobre la yema y luego escanee la huella.
+
+- Si el dedo tiene un corte, inscriba la huella dactilar de otro dedo.
+
+- La huella dactilar inscrita inicialmente muchas veces pudo no haberse escaneado correctamente, así que inscriba la huella dactilar de nuevo según las recomendaciones anteriores.
+
+:::
+
+## Trabajo con credenciales faciales
+
+### Escaneo de rostro
+
+Una vez que seleccione un dispositivo compatible, el botón **Escanear rostro** se habilitará para permitirle escanear su rostro desde él.
+
+<Image src='/img/integration/ccure/scanning-face1.png' alone />
+
+Cuando haga clic en el botón **Escanear rostro**, se mostrará el siguiente mensaje con la animación solicitando que:
+
+<Image src='/img/integration/ccure/scanning-face2.png' alone />
+
+Si en un tiempo no se presenta un rostro frente al dispositivo para capturarlo, se mostrará el siguiente mensaje.
+
+<Image src='/img/integration/ccure/scanning-face3.png' alone />
+
+Por otra parte, cuando la persona esté frente al dispositivo, se capturará su rostro y se mostrará en el panel:
+
+<Image src='/img/integration/ccure/scanning-face4.png' alone />
+
+Notará que el botón **Inscribir rostro** se habilitará para permitirle continuar con la inscripción facial.
+
+Después de que termine el proceso, recibirá el cuadro de diálogo de confirmación. Haga clic en **OK** para continuar:
+
+<Image src='/img/integration/ccure/scanning-face5.png' alone />
+
+Notará una actualización en el panel Detalles del usuario, ubicado en el panel lateral derecho.
+
+<Image src='/img/integration/ccure/scanning-face6.png' alone />
+
+Tenga en cuenta las pautas generales para inscribir rostros visuales:
+
+<Image src='/img/integration/genetec/face-enrollment.png' width={800} alone />
+
+:::info
+
+Estas pautas aplican tanto para escanear un rostro directamente desde el dispositivo como para cargar una imagen facial para la preinscripción.
+
+:::
+
+### Preinscripción
+
+En la versión _Advanced_, cuando haga clic en el botón **Preinscribir**, en el panel de credenciales faciales.
+
+<Image src='/img/integration/ccure/pre-enrollment-button.png' alone />
+
+Se mostrará el siguiente menú.
+
+<Image src='/img/integration/ccure/pre-enrollment1.png' alone />
+
+- Carga de una imagen para preinscripción.
+
+  <Image src='/img/integration/ccure/upload-from-file-button.png' alone />
+
+Esta es una de las opciones para la inscripción no presencial. Cuando haga clic en el botón **Cargar desde archivo**, se mostrará un cuadro de diálogo Selector de archivos para que seleccione la imagen de la persona que va a inscribir.
+
+<Image src='/img/integration/ccure/pre-enrollment2.png' alone />
+
+Seleccione la imagen de la persona que va a inscribir y haga clic en **Abrir**.
+
+Asegúrese de que la imagen seleccionada tenga un rostro; de lo contrario, el proceso no continuará y se mostrará el siguiente mensaje:
+
+<Image src='/img/integration/ccure/pre-enrollment3.png' alone />
+
+Como ejemplo, tenga en cuenta que la imagen debe ser de una persona de frente, con expresión neutra y el rostro descubierto.
+
+<Image src='/img/integration/ccure/pre-enrollment4.png' alone />
+
+Para que el proceso de preinscripción se complete correctamente, se deben considerar los siguientes criterios.
+
+- Resolución: mayor que 250 x 250 píxeles
+
+- Tamaño de la imagen: hasta 10 MB
+
+- Formatos compatibles: solo JPG, JPEG o PNG
+
+Después de cargar una imagen, se le proporcionará un rectángulo de recorte que reconocerá automáticamente dónde está ubicado el rostro. Ayude a la herramienta seleccionando el área facial en caso de que aún no esté completamente seleccionada.
+
+<Image src='/img/integration/ccure/pre-enrollment5.png' alone />
+
+Haga doble clic en la imagen para completar el procedimiento de recorte.
+
+<Image src='/img/integration/ccure/pre-enrollment6.png' alone />
+
+Después de hacer doble clic en la imagen facial, el rostro se ampliará automáticamente para llenar el área y mostrarse en el panel. También verá que el botón **Inscribir rostro** se habrá habilitado para permitirle completar el proceso de inscripción facial.
+
+Cuando termine el proceso, recibirá un mensaje de confirmación.
+
+<Image src='/img/integration/ccure/scanning-face5.png' alone />
+
+Después de registrar el rostro, puede ver o eliminar la credencial haciendo doble clic en las plantillas faciales en el Resumen del usuario:
+
+<Image src='/img/integration/ccure/pre-enrollment7.png' alone />
+
+Si hace doble clic en la plantilla de rostro que aparece en Credenciales, verá la plantilla mostrada en el panel **Facial**.
+
+<Image src='/img/integration/ccure/pre-enrollment8.png' alone />
+
+### Enviar por correo electrónico
+
+<Image src='/img/integration/ccure/send-by-email-button.png' alone />
+
+Esta es la segunda opción para la inscripción facial no presencial. Esta opción le permite enviar un vínculo seguro de preinscripción por correo electrónico, donde el usuario podrá tomar una fotografía de sí mismo y enviar en tiempo real esos datos de preinscripción de vuelta al servidor del cliente, de modo que la primera vez que el usuario se presente en las instalaciones del cliente pueda ser autenticado biométricamente (según las políticas de control de acceso configuradas previamente entre C•CURE/BioStar 2).
+
+Después de realizar las validaciones, si el usuario no tiene una dirección de correo electrónico registrada en su perfil, la integración mostrará el siguiente panel para registrar una dirección de correo electrónico antes de enviar el vínculo de preinscripción.
+
+<Image src='/img/integration/ccure/send-by-email1.png' alone />
+
+:::info
+
+La integración validará que los datos ingresados sean una dirección de correo electrónico válida. Después de realizar la validación, la integración guardará los datos recién ingresados en BioStar 2 y C•CURE. Por lo tanto, asegúrese de hacer clic en **Guardar** antes de salir de la ventana de la vista de personal.
+
+:::
+
+Una vez ingresada la dirección de correo electrónico, se mostrará el siguiente aviso. Haga clic en **Sí** para continuar o en **No** para cancelar.
+
+<Image src='/img/integration/ccure/send-by-email2.png' alone />
+
+Si hizo clic en la opción **Sí**, la integración ejecutará una comprobación más antes de enviar el vínculo de preinscripción. Esto sirve para validar todas las opciones necesarias para esta función.
+
+Si alguna de ellas aún no se ha configurado correctamente, se mostrará la siguiente ventana:
+
+<Image src='/img/integration/ccure/send-by-email3.png' alone />
+
+Indicando qué feature debe revisarse o configurarse antes de continuar.
+
+Si todo ya estaba configurado, se mostrará un aviso de confirmación indicando que todo se realizó correctamente.
+
+<Image src='/img/integration/ccure/send-by-email4.png' alone />
+
+#### Usar imagen de perfil de C•CURE
+
+Si esta opción está activada y el perfil del usuario no tiene una credencial facial, al abrir la vista de personal la integración intentará automáticamente usar esa imagen de perfil para crear una credencial facial de preinscripción.
+
+La integración usa un algoritmo de IA para analizar la imagen y verificar si contiene un rostro humano; si no, la imagen se rechazará. Si hay un rostro humano, la integración continuará con las siguientes revisiones, donde se aplican ciertos criterios para saber si la imagen de la persona cumple los requisitos mínimos. Si los cumple, la imagen se usará como entrada para crear la credencial facial de preinscripción.
+
+Si la opción Usar imágenes del personal de C•CURE (para preinscripción facial) no está activada en la herramienta de configuración de la integración, solo se mostrará el menú de Preinscripción.
+
+<Image src='/img/integration/ccure/profile-image1.png' alone />
+
+Para activarla o desactivarla, vaya a **Integration Configuration Tool** → **menú Users**:
+
+<Image src='/img/integration/ccure/profile-image2.png' width={500} alone />
+
+Se mostrará el siguiente aviso:
+
+<Image src='/img/integration/ccure/profile-image3.png' alone />
+
+Haga clic en **Aceptar** para continuar o en **Cancelar** en caso contrario.
+
+Si activó la opción, puede volver a la vista de personal, abrir el perfil del personal y revisar la opción agregada en el menú de Preinscripción:
+
+<Image src='/img/integration/ccure/pre-enrollment1.png' alone />
+
+Una vez que haga clic en el botón **Usar imagen de perfil de C•CURE**, la integración ejecutará los procedimientos para analizar la imagen de perfil de C•CURE y, si cumple los requisitos descritos antes, el proceso producirá una credencial facial válida de preinscripción.
+
+### Eliminar un rostro
+
+Desde allí, si desea eliminar un rostro del perfil del usuario en los dispositivos Suprema, haga clic en el botón **Eliminar**. Se mostrará un mensaje de advertencia. Haga clic en **Sí** si desea eliminar la credencial del perfil del usuario en los dispositivos Suprema; de lo contrario, haga clic en **No**.
+
+<Image src='/img/integration/ccure/delete-credential.png' alone />
+
+**¿Cuántos rostros se pueden añadir a cada usuario?**
+
+Se puede inscribir o preinscribir un registro facial por usuario (dos si se hace a través de BioStar 2). La razón es que el algoritmo de aprendizaje profundo implementado en los dispositivos FaceStation F2 y BioStation 3 es muy preciso, y la característica más importante es que el algoritmo de autoaprendizaje puede, como su nombre indica, aprender por sí mismo las variaciones que puede experimentar un rostro; por ejemplo, con o sin mascarilla, lentes, barba o bigote.
+
+Sin embargo, tenga en cuenta que, aunque la evaluación comparativa del algoritmo Fusion Matching de Suprema es de primer nivel en el mercado, no realiza tareas imposibles como reconocer a una persona que usa casco si no se exponen rasgos faciales.
+
+<Image src='/img/integration/ccure/delete-face.png' alone />
+
+Después de hacer doble clic en cada una de las plantillas de sus distintos tipos en la pantalla, podrá verlas en su panel respectivo; desde allí también puede editarlas, como se describe en la sección anterior.
+
+:::info
+
+Es muy importante enfatizar que estos cambios se realizan en línea y se aplicarán de inmediato en el dispositivo Suprema. Por eso, asegúrese de hacer los cambios correctos; de lo contrario, podría bloquear por error el acceso de una persona.
+
+:::
+
+## Misceláneo
+
+Hay una sección de ayuda en el panel inferior de la pestaña Suprema.
+
+<Image src='/img/integration/ccure/miscellaneous1.png' alone />
+
+Aquí podrá visualizar información de registro y también ver los cambios o la respuesta del servicio Suprema.
+
+En la primera ejecución o cuando una licencia no está validada correctamente, o el servicio de integración Suprema - C•CURE no está en ejecución, verá lo siguiente.
+
+<div className='grid-container'>
+<Image src='/img/integration/ccure/miscellaneous2.png' width={600} alone />
+<Image src='/img/integration/ccure/miscellaneous3.png' alone />
+</div>
+
+No podrá usar la integración hasta que verifique la validación de su licencia o que el servicio esté en ejecución.
+
+Si está seguro de que la licencia se validó correctamente y aún recibe este error, intente cerrar la vista de personal y abrirla de nuevo. Si eso no resuelve el problema, consulte la sección de solución de problemas, número 2.

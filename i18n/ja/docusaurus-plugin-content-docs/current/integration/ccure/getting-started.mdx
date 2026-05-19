@@ -1,0 +1,221 @@
+---
+id: getting-started
+title: はじめに
+description: 前提条件、最小システム要件、ソフトウェア構成要素、および対応デバイス一覧を含む、Suprema - C•CURE Integration の概要を説明します。
+keywords:
+  - はじめに
+  - システム要件
+  - 対応デバイス
+---
+
+入退室管理システムに Suprema バイオメトリクスを C•CURE 9000 プラットフォームへ実装するために Suprema - C•CURE Integration を使用する前に、C•CURE サーバーがインストールされている同じサーバー/ワークステーションに、C•CURE 9000 v2.90、v3.0、v3.10（以降）サーバー、Suprema BioStar 2 サーバー、およびこの Integration Setup サービスをインストールする必要があります。さらに、使用するワークステーションには、C•CURE 9000 v2.90、v3.0、v3.10（以降）クライアントと、この Integration Setup クライアントをインストールする必要があります。
+
+サーバーは、接続されたデバイスからイベントログやユーザー情報などを受信して保存します。 この統合は簡単にインストールできます。 インストール前に、最小システム要件を確認してください。
+
+Suprema - C•CURE Integration のサーバーおよびクライアント用セットアップは、[Suprema Team](https://support.supremainc.com) への依頼により提供されます。
+
+## 略語
+
+- Software House C•CURE 9000（C•CURE）
+
+- Suprema の BioStar 2（BioStar 2）
+
+- Suprema - C•CURE Integration（以下「Integration」）
+
+この統合には、次のコンポーネントが含まれます。
+
+- Suprema - C•CURE Integration Service（Integration Service）
+
+- Suprema - C•CURE Integration Client（Integration Client）
+
+- Suprema - C•CURE Integration Configuration Tool（Integration CT）
+
+  - Integration CT は、Integration Service（GUI なし）を設定し、Integration Client 関連のパラメーターも調整するための Web ベースの GUI ツールです。
+
+## 最小システム要件
+
+<Table>
+<Thead>
+<Row>
+<Th colspan='2'>C•CURE 9000 スタンドアロン サーバー シリーズ L, M, N, P</Th>
+</Row>
+<Row>
+<Th colspan='2'>推奨ハードウェアおよびソフトウェア</Th>
+</Row>
+</Thead>
+<Tbody>
+<Row>
+<Td>Processor</Td>
+<Td>Intel® 第3世代 Core i7-3770 以上（8 MB、3.4 GHz 以上）</Td>
+</Row>
+<Row>
+<Td>Hard Disk Drives</Td>
+<Td>2 台構成: 主ドライブ = 1 TB 以上（9000 Runtime）、副ドライブ = 1 TB 以上（データバックアップ）。 SSD を推奨します。</Td>
+</Row>
+<Row>
+<Td>Drive Speed</Td>
+<Td>7,200 RPM 以上</Td>
+</Row>
+<Row>
+<Td>Memory</Td>
+<Td>16 GB 以上</Td>
+</Row>
+<Row>
+<Td>Network Adapter Card</Td>
+<Td>統合ギガビット ネットワーク ポート</Td>
+</Row>
+<Row>
+<Td>DVD Drive</Td>
+<Td>推奨</Td>
+</Row>
+<Row>
+<Td>Video Card</Td>
+<Td>統合ビデオ サブシステム（クライアント ワークステーションとして使用する場合は、専用ビデオ アクセラレーターを推奨）</Td>
+</Row>
+<Row>
+<Td>Database Support (English Only)</Td>
+<Td>
+SQL Server 2014（SP1 以降）Express（64 ビット）<br/>
+SQL Server 2016 Express/Standard/Enterprise SP1 以降（64 ビット）<br/>
+SQL Server 2017 Express（64 ビット）<br/>
+SQL Server 2019 Express/Standard/Enterprise（64 ビット）
+</Td>
+</Row>
+<Row>
+<Td>Operating System Support</Td>
+<Td>
+Windows 10 Professional & Enterprise（バージョン 1809 以降）（64 ビット）<br/>
+Windows Server 2016 SP1 以降（64 ビット）<br/>
+Windows Server 2019（64 ビット）
+</Td>
+</Row>
+<Row>
+<Td>Web Server</Td>
+<Td>C•CURE Web、C•CURE Go、victor Web Service には IIS V8.0 以上</Td>
+</Row>
+</Tbody>
+</Table>
+
+:::info
+
+C•CURE Web を C•CURE Go または victor Web Service と同じマシンにインストールするには、IIS V8.0 が必要です。
+
+:::
+
+<Table>
+<Thead>
+<Row>
+<Th colspan='2'>C•CURE 9000 スタンドアロン サーバー シリーズ Q, R, R+, S, S+, T SAS サーバー シリーズ L, M, N, P</Th>
+</Row>
+<Row>
+<Th colspan='2'>推奨ハードウェアおよびソフトウェア</Th>
+</Row>
+</Thead>
+<Tbody>
+<Row>
+<Td>Processor</Td>
+<Td>Intel Xeon E3-1240 v5（3.5 GHz 以上）</Td>
+</Row>
+<Row>
+<Td>Hard Disk Drives</Td>
+<Td>2 台構成: 主ドライブ = 1 TB 以上（9000 Runtime）、副ドライブ = 1 TB 以上（データバックアップ）。 SSD を推奨します。</Td>
+</Row>
+<Row>
+<Td>Drive Speed</Td>
+<Td>15,000 RPM 以上</Td>
+</Row>
+<Row>
+<Td>Memory</Td>
+<Td>32 GB 以上</Td>
+</Row>
+<Row>
+<Td>Network Adapter Card</Td>
+<Td>Intel Gigabit ET Quad Port Adapter、Gigabit Ethernet NIC、PCIe x4</Td>
+</Row>
+<Row>
+<Td>DVD Drive</Td>
+<Td>推奨</Td>
+</Row>
+<Row>
+<Td>Video Card</Td>
+<Td>統合ビデオ サブシステム（クライアント ワークステーションとして使用する場合は、専用ビデオ アクセラレーターを推奨）</Td>
+</Row>
+<Row>
+<Td>Database Support (English Only)</Td>
+<Td>
+SQL Server 2016 Standard & Enterprise SP1 以降（64 ビット）<br/>
+SQL Server 2019 Standard & Enterprise（64 ビット）
+</Td>
+</Row>
+<Row>
+<Td>Operating System Support</Td>
+<Td>
+Windows 10 Professional & Enterprise（バージョン 1809 以降）（64 ビット）<br/>
+Windows Server 2016 SP1 以降（64 ビット）<br/>
+Windows Server 2019（64 ビット）
+</Td>
+</Row>
+<Row>
+<Td>Web Server</Td>
+<Td>C•CURE Web、C•CURE Go、victor Web Service には IIS V8.0 以上</Td>
+</Row>
+</Tbody>
+</Table>
+
+:::info
+
+C•CURE Web を C•CURE Go または victor Web Service と同じマシンにインストールするには、IIS V8.0 が必要です。
+
+:::
+
+- 最適な性能を得るには、64 ビット オペレーティング システムのみを使用してください。
+
+- Integration CT は、MS Edge、Brave Browser、または Google Chrome に最適化されています。
+
+- 旧バージョンの Windows は使用しないでください。前の表で示した旧バージョンと比べて、Microsoft が OS ライブラリを大幅に変更しているため、OS ライブラリの非互換性によりシステムが不安定になる可能性があります。
+
+- MS SQL Server と Suprema BioStar 2 が別の PC にインストールされている場合は、BioStar 2 をインストールした PC に Native Client をインストールしてください。
+
+  > https://www.microsoft.com/en-us/download/details.aspx?id=50402
+
+## 対応デバイス
+
+RFID デバイス:
+
+- XPass 2 ファミリー
+
+- X-Station 2 ファミリー
+
+顔認証デバイス:
+
+- FaceStation F2
+
+- BioStation 3
+
+- BioEntry W3
+
+指紋デバイス:
+
+- BioEntry ファミリー（P2、W2）
+
+- BioLite N2
+
+- BioStation 2, BioStation A2
+
+- X-Station 2（指紋モデル）
+
+- BioStation L2
+
+非対応デバイス:
+
+- BioEntry R2
+
+- CoreStation
+
+- FaceStation 2 / FaceLite
+
+:::info
+
+BioMini Plus 2 / Slim 2 などの USB リーダーは、カスタマイズにより対応できます。 該当する場合は、`latam@supremainc.com` に連絡してください。
+
+:::

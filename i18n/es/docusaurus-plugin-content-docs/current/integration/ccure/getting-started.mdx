@@ -1,0 +1,221 @@
+---
+id: getting-started
+title: Primeros Pasos
+description: Proporciona una descripción general de la integración Suprema - C•CURE, incluidos los requisitos previos, los requisitos mínimos del sistema, los componentes de software y una lista de dispositivos compatibles.
+keywords:
+  - Primeros Pasos
+  - Requisitos del sistema
+  - Dispositivos Compatibles
+---
+
+Antes de usar la integración Suprema - C•CURE para implementar Suprema Biometrics en la plataforma C•CURE 9000 para un sistema de control de acceso, deben instalarse en el mismo servidor o estación de trabajo donde está instalado el servidor C•CURE tanto C•CURE 9000 v2.90, v3.0, v3.10 (o posterior) Server como el servidor Suprema BioStar 2, junto con este servicio de instalación de la integración. Además, debe instalarse C•CURE 9000 v2.90, v3.0, v3.10 (o posterior) Client en la(s) estación(es) de trabajo donde se usará, junto con este cliente de instalación de la integración.
+
+El servidor recibe registros de eventos, información de usuarios, etc. de los dispositivos conectados y los almacena. La integración se puede instalar fácilmente. Antes de la instalación, revise los Requisitos mínimos del sistema.
+
+El paquete de instalación de la integración Suprema - C•CURE para servidor y cliente se puede proporcionar a solicitud enviada al [equipo de Suprema](https://support.supremainc.com).
+
+## Abreviaturas
+
+- Software House C•CURE 9000 (C•CURE)
+
+- BioStar 2 de Suprema (BioStar 2)
+
+- Integración Suprema - C•CURE ("Integración" para abreviar)
+
+Esta integración incluye los siguientes componentes:
+
+- Servicio de integración Suprema - C•CURE (Servicio de integración)
+
+- Cliente de integración Suprema - C•CURE (Cliente de integración)
+
+- Herramienta de configuración de la integración Suprema - C•CURE (Integration CT)
+
+  - Integration CT es la herramienta de interfaz gráfica web para configurar el Servicio de integración (sin GUI) y ajustar también los parámetros del Cliente de integración.
+
+## Requisitos mínimos del sistema
+
+<Table>
+<Thead>
+<Row>
+<Th colspan='2'>Serie de servidores independientes C•CURE 9000 L, M, N, P</Th>
+</Row>
+<Row>
+<Th colspan='2'>Hardware y software recomendados</Th>
+</Row>
+</Thead>
+<Tbody>
+<Row>
+<Td>Processor</Td>
+<Td>Intel® Core i7-3770 de 3.ª generación o superior (8 MB, 3.4 GHz o superior)</Td>
+</Row>
+<Row>
+<Td>Hard Disk Drives</Td>
+<Td>Unidades dobles: unidad principal = 1 TB o superior (9000 Runtime); unidad secundaria = 1 TB o superior (copias de seguridad de datos). Se recomienda SSD.</Td>
+</Row>
+<Row>
+<Td>Drive Speed</Td>
+<Td>7,200 RPM o superior</Td>
+</Row>
+<Row>
+<Td>Memory</Td>
+<Td>16 GB o superior</Td>
+</Row>
+<Row>
+<Td>Network Adapter Card</Td>
+<Td>Puerto de red Gigabit integrado</Td>
+</Row>
+<Row>
+<Td>DVD Drive</Td>
+<Td>Recomendado</Td>
+</Row>
+<Row>
+<Td>Video Card</Td>
+<Td>Subsistema de video integrado (se recomienda un acelerador de video dedicado cuando se usa como estación de trabajo cliente)</Td>
+</Row>
+<Row>
+<Td>Database Support (English Only)</Td>
+<Td>
+SQL Server 2014 (SP1 o posterior) Express (64 bits)<br/>
+SQL Server 2016 Express/Standard/Enterprise SP1 y superior (64 bits)<br/>
+SQL Server 2017 Express (64 bits)<br/>
+SQL Server 2019 Express/Standard/Enterprise (64 bits)
+</Td>
+</Row>
+<Row>
+<Td>Operating System Support</Td>
+<Td>
+Windows 10 Professional y Enterprise (versión 1809 o superior) (64 bits)<br/>
+Windows Server 2016 SP1 y superior (64 bits)<br/>
+Windows Server 2019 (64 bits)
+</Td>
+</Row>
+<Row>
+<Td>Web Server</Td>
+<Td>IIS V8.0 o superior para C•CURE Web, C•CURE Go y victor Web Service</Td>
+</Row>
+</Tbody>
+</Table>
+
+:::info
+
+Se requiere IIS V8.0 para instalar C•CURE Web en la misma máquina que C•CURE Go o victor Web Service.
+
+:::
+
+<Table>
+<Thead>
+<Row>
+<Th colspan='2'>Serie de servidores independientes C•CURE 9000 Q, R, R+, S, S+, T Serie de servidores SAS L, M, N, P</Th>
+</Row>
+<Row>
+<Th colspan='2'>Hardware y software recomendados</Th>
+</Row>
+</Thead>
+<Tbody>
+<Row>
+<Td>Processor</Td>
+<Td>Intel Xeon E3-1240 v5 (3.5 GHz o superior)</Td>
+</Row>
+<Row>
+<Td>Hard Disk Drives</Td>
+<Td>Unidades dobles: unidad principal = 1 TB o superior (9000 Runtime); unidad secundaria = 1 TB o superior (copias de seguridad de datos). Se recomienda SSD.</Td>
+</Row>
+<Row>
+<Td>Drive Speed</Td>
+<Td>15,000 RPM o superior</Td>
+</Row>
+<Row>
+<Td>Memory</Td>
+<Td>32 GB o superior</Td>
+</Row>
+<Row>
+<Td>Network Adapter Card</Td>
+<Td>Adaptador Intel Gigabit ET Quad Port, NIC Gigabit Ethernet, PCle x4</Td>
+</Row>
+<Row>
+<Td>DVD Drive</Td>
+<Td>Recomendado</Td>
+</Row>
+<Row>
+<Td>Video Card</Td>
+<Td>Subsistema de video integrado (se recomienda un acelerador de video dedicado cuando se usa como estación de trabajo cliente)</Td>
+</Row>
+<Row>
+<Td>Database Support (English Only)</Td>
+<Td>
+SQL Server 2016 Standard y Enterprise SP1 y superior (64 bits)<br/>
+SQL Server 2019 Standard y Enterprise (64 bits)
+</Td>
+</Row>
+<Row>
+<Td>Operating System Support</Td>
+<Td>
+Windows 10 Professional y Enterprise (versión 1809 o superior) (64 bits)<br/>
+Windows Server 2016 SP1 y superior (64 bits)<br/>
+Windows Server 2019 (64 bits)
+</Td>
+</Row>
+<Row>
+<Td>Web Server</Td>
+<Td>IIS V8.0 o superior para C•CURE Web, C•CURE Go y victor Web Service</Td>
+</Row>
+</Tbody>
+</Table>
+
+:::info
+
+Se requiere IIS V8.0 para instalar C•CURE Web en la misma máquina que C•CURE Go o victor Web Service.
+
+:::
+
+- Para un mejor rendimiento, use solo el sistema operativo de 64 bits.
+
+- Integration CT está optimizada para MS Edge, Brave Browser o Google Chrome.
+
+- No use versiones anteriores de Windows, ya que pueden provocar inestabilidad del sistema debido a la incompatibilidad de las bibliotecas del sistema operativo, porque Microsoft realizó cambios sustanciales en las bibliotecas del sistema operativo en comparación con las versiones anteriores de las especificadas en la tabla anterior.
+
+- Si MS SQL Server y Suprema BioStar 2 están instalados en equipos distintos, instale el Native Client en el equipo donde se instaló BioStar 2.
+
+  > https://www.microsoft.com/en-us/download/details.aspx?id=50402
+
+## Dispositivos Compatibles
+
+Dispositivos RFID:
+
+- familia XPass 2
+
+- familia X-Station 2
+
+Dispositivos faciales:
+
+- FaceStation F2
+
+- BioStation 3
+
+- BioEntry W3
+
+Dispositivos de huella:
+
+- Familia BioEntry (P2, W2)
+
+- BioLite N2
+
+- BioStation 2, BioStation A2
+
+- X-Station 2 (modelo de huella)
+
+- BioStation L2
+
+Dispositivos NO compatibles:
+
+- BioEntry R2
+
+- CoreStation
+
+- FaceStation 2 / FaceLite
+
+:::info
+
+Los lectores USB como BioMini Plus 2 / Slim 2 pueden ser compatibles mediante personalización. Para ello, escriba a `latam@supremainc.com`.
+
+:::
