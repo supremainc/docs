@@ -34,6 +34,8 @@ crowdin upload -b main
 - import
 - details
 - summary
+- div
+- AnchorCollect
 - /value
 - 주석 {/*, */}
 - ![Example banner]
