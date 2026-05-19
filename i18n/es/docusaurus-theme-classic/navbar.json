@@ -151,6 +151,10 @@
     "message": "Desarrolladores",
     "description": "Elemento de la barra de navegación etiquetado como «Developers»"
   },
+  "item.label.Integration": {
+    "message": "Integración",
+    "description": "Elemento de la barra de navegación etiquetado como «Integration»"
+  },
   "item.label.BioStar X API": {
     "message": "BioStar X API",
     "description": "Elemento de la barra de navegación etiquetado como «BioStar X API»"
