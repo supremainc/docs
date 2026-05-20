@@ -9,19 +9,41 @@ keywords:
   - 構成
 ---
 
-Airfob PatchおよびTagは、既存の入退室管理リーダーやドアロックをBioStar Airのモバイルクレデンシャルに対応させるためにアップグレードします。
+## BioStar Airアプリでのエアポップパッチ登録 {#registerApp}
 
-* **Airfob Patch**：有線リーダーおよびインターホンに適し、配線不要で取り付け可能なエネルギーハーベスティング(Energy-Harvesting)装置です。
+### 開始する前に
 
-* **Airfob Tag**：コイン型セル電池を搭載し、ドアロックなどのバッテリー駆動機器に適しています。
+* モバイル端末にBioStar Airアプリがインストールされている必要があります。 モバイルアプリは次のリンクからインストールできます。
+
+  * [iOS](https://apps.apple.com/us/app/airfob-pro/id1659959609)
+
+  * [Android](https://play.google.com/store/apps/details?id=com.mocainc.afs2pro)
+
+* BioStar Air管理者ポータルで使用するIDとパスワードでログインしてください。
+
+* モバイル端末でBLEが有効になっていることを確認してください。
+
+* エアポップパッチを入退室制御デバイスに恒久的または一時的に取り付けます。 詳細は<DocLink docId='platform/biostar_air/install-airfob-patch' />を参照してください。
 
 :::info
 
-* Airfob PatchおよびTagはMIFARE 1K技術と互換性がありますが、125 KHzの「低周波」リーダーやロック装置とは互換性がありません。
-
-* Airfob PatchおよびTagは、モバイル機器上の暗号化されたBluetooth BioStar Airクレデンシャルを認証し、MIFARE RFID信号をエミュレートして動作します。 テープでリーダーやロック装置に貼り付けられ、配線は不要です。
+BioStar Airモバイルアプリの詳細は、<DocLink docId='platform/biostar_air/managing-sites-with-app' />を参照してください。
 
 :::
+
+### エアポップパッチ登録
+
+1. モバイル端末でBioStar Airアプリを起動してログインします。
+
+2. BioStar Airアプリの初期画面で<Cmd sid='devices_card' product='air' />カードをタップします。
+
+3. モバイル端末をエアポップパッチに10cm以内まで近づけ、画面右上の<IcAdd />ボタンをタップします。
+
+4. デバイス検索画面で、登録するエアポップパッチの<Cmd sid='button.register' product='2' />ボタンをタップします。
+
+5. デバイス登録ウィンドウが表示されたら <Cmd sid='device_btn_ok' product='air' /> ボタンをタップします。
+
+デバイス一覧に戻り、追加されたエアポップパッチを確認します。
 
 ## 構成手順 {#configurationSteps}
 
