@@ -210,7 +210,7 @@
             "ko": [ "적외선: 2M 픽셀", "비주얼: 2M 픽셀" ],
             "en": [ "IR: 2M pixels", "Visual: 2M pixels" ],
             "es": [ "IR: 2M píxeles", "Visual: 2M píxeles" ],
-            "jp": [ "IR：200 万画素", "ビジュアル：200 万画素" ]
+            "ja": [ "IR：200 万画素", "ビジュアル：200 万画素" ]
           }
         },
         "ip_rating": {
