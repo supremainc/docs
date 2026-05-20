@@ -5,21 +5,7 @@ description: 기존 출입 통제 시스템을 BioStar Air로 업그레이드하
 keywords: [Airfob, Patch, Tag, configuration]
 ---
 
-에어팝 패치 및 태그 장치는 기존 출입 통제 시스템을 BioStar Air 모바일 크리덴셜과 호환될 수 있도록 업그레이드하는 장치입니다. 이 문서에서는 BioStar Air 모바일 앱을 통해 에어팝 패치 및 태그 장치를 등록하고 구성하는 방법을 안내합니다.
-
-* **에어팝 패치**(Airfob Patch): 유선 리더기 및 인터콤에 적합하며, 배선 없이 부착할 수 있는 에너지 하베스팅(Energy-Harvesting) 장치입니다.
-
-* **에어팝 태그**(Airfob Tag): 동전형 셀 배터리를 장착하여 출입문 잠금 장치와 같은 배터리 구동 장치에 적합합니다.
-
-:::info
-
-* 에어팝 패치 및 태그 장치는 MIFARE 1K 기술과 호환되지만 125 KHz **저주파** 리더기 또는 잠금 장치와는 호환되지 않습니다.
-
-* 에어팝 패치 및 태그 장치는 모바일 기기에서 암호화된 Bluetooth BioStar Air 크리덴셜을 인증하고 MIFARE RFID 신호를 에뮬레이션하여 작동합니다. 테이프를 사용하여 리더기 및 잠금 장치에 부착되며 배선이 필요하지 않습니다.
-
-:::
-
-## BioStar Air 앱에서 에어팝 패치 등록
+## BioStar Air 앱에서 에어팝 패치 등록 {#registerApp}
 
 ### 시작하기 전에
 
@@ -31,7 +17,9 @@ keywords: [Airfob, Patch, Tag, configuration]
 
 * BioStar Air 관리자 포털에서 사용하는 아이디와 비밀번호로 로그인하세요.
 
-* BioStar Air 모바일 앱에서 <Cmd>BLE 모드</Cmd>가 활성화되어 있는지 확인하세요.
+* 모바일 기기에서 BLE가 활성화되어 있는지 확인하세요.
+
+* 에어팝 패치를 출입 통제 장치에 영구적으로 또는 임시로 부착하세요. 자세한 내용은 <DocLink docId='platform/biostar_air/install-airfob-patch' />를 참고하세요.
 
 :::info
 
