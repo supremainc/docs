@@ -25,6 +25,7 @@ import partner_ko from './partner/ko.json';
 import partner_en from './partner/en.json';
 import cam_ko from './cam/ko.json';
 import cam_en from './cam/en.json';
+import cam_ja from './cam/ja.json';
 
 // 다국어 지원을 위한 locale mapping
 const localeMap = {
@@ -55,6 +56,8 @@ const partnerLocaleMap = {
 const camLocaleMap = {
   ko: cam_ko,
   en: cam_en,
+  ja: cam_ja,
+  es: cam_en, // cam의 스페인어 번역이 없는 경우 영어로 대체
 };
 
 const xlocaleMap = {
