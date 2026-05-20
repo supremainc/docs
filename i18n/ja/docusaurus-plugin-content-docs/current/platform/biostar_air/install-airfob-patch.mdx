@@ -1,0 +1,99 @@
+---
+id: install-airfob-patch
+title: Airfob Patchのインストール
+description: Airfob Patchのインストール方法を案内します。
+keywords:
+  - Airfob Patch
+  - インストール
+  - デバイス登録
+---
+
+Airfob Patchのインストール方法を案内します。 Airfob Patchは、既存の入退室管理システムをBioStar Airモバイルクレデンシャルと互換性を持たせるためのデバイスです。
+
+:::info
+
+* Airfob PatchはMIFARE 1K技術と互換性がありますが、125 KHzの**低周波**リーダーとは互換性がありません。
+
+* Airfob Patchは、モバイル機器上の暗号化されたBioStar AirクレデンシャルをBluetoothで認証し、リーダーにMIFARE RFID信号をエミュレートして動作します。 テープを使用して入退室管理デバイスに貼り付け、配線は不要です。
+
+* Airfob PatchをBioStar Airアプリに登録する方法の詳細は、<DocLink docId='platform/biostar_air/configuring-the-airfob-patch-and-tag' />を参照してください。
+
+:::
+
+## インストール概要
+
+Airfob PatchがデバイスのRFフィールドから電源を供給される位置を見つけてください。
+
+<Image src='/img/air/airfob-patch-installation-process.png' alone />
+
+## Airfob Patchの設置場所を確認する
+
+付属の粘着テープでAirfob Patchを入退室管理デバイスに貼り付ける前に、下の図と手順に従って、デバイスで最適な位置を見つけてください。
+
+<Image src='/img/air/airfob-patch-install-access-device.png' alone />
+
+1. Airfob Patchを入退室管理デバイスに接触するように配置してください。
+
+2. Airfob PatchのLEDが1秒に1回以上緑に点滅する位置を見つけてください。
+
+3. Airfob Patchをデバイスに当てるか、取り外し可能なテープを使って一時的に貼り付けてください。 BioStar Airアプリを使用してAirfob Patchを登録してください。 詳しくは、<DocLink docId='platform/biostar_air/configuring-the-airfob-patch-and-tag#registerApp' />を参照してください。
+
+4. AirfobまたはBioStar Airモバイルクレデンシャルを使用して、少なくとも5回のテスト認証を実行してください。
+
+5. Airfob Patchの裏面に貼られた両面粘着テープの保護フィルムを剥がしてください。
+
+6. 入退室管理デバイスにAirfob Patchを貼り付けてください。
+
+:::info
+
+* Airfob Patchに別途電源供給は不要です。 入退室管理デバイスに貼り付けると、自動的に電源が入ります。
+
+* 付属の両面テープでAirfob Patchをデバイスに貼り付けると、恒久的に固定されます。 Airfob Patchを取り外すと、Airfob Patchが損傷し、再利用できない場合があります。
+
+:::
+
+### トラブルシューティング
+
+<details className='faqs--air'>
+
+<summary>Q. 入退室管理デバイスで連続5回の動作音が発生しません。</summary>
+
+入退室管理デバイスで連続5回の動作音が発生しない場合は、Airfob Patchを再起動してください。
+
+1. 入退室管理デバイスからAirfob Patchを取り外してください。
+
+2. 電源が切れると、Airfob PatchのLEDは約6秒間赤く点滅してから消灯します。
+
+3. Airfob Patchの電源がオフになっていることを確認し、最初からやり直してください。
+
+</details>
+
+<details className='faqs--air'>
+
+<summary>Q. Airfob PatchのLEDが赤く点滅します。</summary>
+
+Airfob Patchの赤いLEDが点滅する場合は、Airfob Patchの位置を調整してください。
+
+1. Airfob Patchを入退室管理デバイスの別の位置に移動し、LEDが緑に点滅するか確認してください。
+
+2. 電力が十分強い場合、LEDは0.5秒または1秒間隔で点滅します。
+
+3. Airfob Patchの位置を変更した場合は、Airfob Patchを再起動して最初からやり直してください。
+
+</details>
+
+<details className='faqs--air'>
+
+<summary>Q. 入退室管理デバイスがAirfob Patchを認識しません。</summary>
+
+<Image src='/img/air/airfob-patch-position.png' alone />
+
+* 入退室管理デバイスのRFコイル位置とAirfob PatchのRFアンテナ位置が一致すると、両方のデバイスは正常に動作します。
+
+* モバイル機器で入退室管理デバイスにタッチしたときに有効なアクセス権限が付与されない場合は、Airfob Patchの位置を調整するか回転させて、正常に動作する位置を見つけてください。
+
+* Airfob Patchの位置と向きは、入退室管理デバイスによって異なる場合があります。
+
+* Airfob Patchの動作範囲は、入退室管理デバイスのRF信号強度とRFコイルの位置およびサイズによって、小さくも大きくもなります。
+
+</details>

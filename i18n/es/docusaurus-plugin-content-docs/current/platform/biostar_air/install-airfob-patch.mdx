@@ -1,0 +1,99 @@
+---
+id: install-airfob-patch
+title: Instalar Airfob Patch
+description: Esta guía explica cómo instalar Airfob Patch.
+keywords:
+  - Airfob Patch
+  - Instalar
+  - Registrar dispositivo
+---
+
+Esta guía explica cómo instalar Airfob Patch. Airfob Patch actualiza un sistema de control de acceso existente para que funcione con credenciales móviles de BioStar Air.
+
+:::info
+
+* Airfob Patch es compatible con la tecnología MIFARE 1K, pero no es compatible con lectores de **baja frecuencia** de 125 kHz.
+
+* Airfob Patch autentica credenciales Bluetooth cifradas de BioStar Air y emula una señal RFID MIFARE para el lector. Se fija a los lectores de control de acceso con cinta y no requiere cableado.
+
+* Para obtener más información sobre cómo enrollar un Airfob Patch en la aplicación BioStar Air, consulte <DocLink docId='platform/biostar_air/configuring-the-airfob-patch-and-tag' />.
+
+:::
+
+## Resumen de instalación
+
+Encuentre la ubicación donde el lector alimenta el Airfob Patch mediante su campo RF.
+
+<Image src='/img/air/airfob-patch-installation-process.png' alone />
+
+## Verifique la ubicación de instalación del Airfob Patch
+
+Antes de fijar permanentemente el Airfob Patch al lector de control de acceso con la cinta adhesiva incluida, encuentre la mejor ubicación en el lector siguiendo las acciones del diagrama y las instrucciones a continuación.
+
+<Image src='/img/air/airfob-patch-install-access-device.png' alone />
+
+1. Coloque el Airfob Patch sobre el lector de control de acceso para que se toquen.
+
+2. Encuentre un punto donde el LED del Airfob Patch parpadee en verde al menos una vez por segundo.
+
+3. Sostenga el Airfob Patch sobre el lector o fíjelo temporalmente con cinta removible. Enrolle el Airfob Patch con la aplicación BioStar Air. Para obtener más información, consulte <DocLink docId='platform/biostar_air/configuring-the-airfob-patch-and-tag#registerApp' />.
+
+4. Realice al menos cinco autenticaciones de prueba con una credencial móvil de Airfob o BioStar Air.
+
+5. Retire la película protectora de la cinta adhesiva de doble cara en la parte posterior del Airfob Patch.
+
+6. Fije permanentemente el Airfob Patch al lector de control de acceso.
+
+:::info
+
+* El Airfob Patch no requiere una fuente de alimentación adicional. Al fijarlo al lector de control de acceso, el dispositivo se enciende.
+
+* Cuando fije el Airfob Patch a un lector con la cinta adhesiva de doble cara incluida, considérelo permanente. Si retira el Airfob Patch, podría dañarlo y hacer imposible volver a usarlo.
+
+:::
+
+### Solución de Problemas
+
+<details className='faqs--air'>
+
+<summary>P. El lector de control de acceso no emite cinco pitidos consecutivos.</summary>
+
+Si el lector de control de acceso no emite cinco pitidos consecutivos, reinicie el Airfob Patch.
+
+1. Desconecte el Airfob Patch del lector de control de acceso.
+
+2. Cuando se apaga la alimentación, el LED del Airfob Patch parpadea en rojo durante unos 6 segundos y luego se apaga.
+
+3. Asegúrese de que el Airfob Patch esté apagado y luego comience de nuevo.
+
+</details>
+
+<details className='faqs--air'>
+
+<summary>P. El LED del Airfob Patch parpadea en rojo.</summary>
+
+Si el LED del Airfob Patch parpadea en rojo, ajuste la posición del parche.
+
+1. Mueva el Airfob Patch a otra ubicación en el lector de control de acceso y verifique si el LED parpadea en verde.
+
+2. Si la intensidad de la alimentación es alta, el LED parpadea a intervalos de 0.5 segundos o 1 segundo.
+
+3. Si cambia la posición del Airfob Patch, reinícielo y comience de nuevo.
+
+</details>
+
+<details className='faqs--air'>
+
+<summary>P. El lector de control de acceso no reconoce el Airfob Patch.</summary>
+
+<Image src='/img/air/airfob-patch-position.png' alone />
+
+* Los dos dispositivos funcionan correctamente cuando la posición de la bobina RF del lector de control de acceso coincide con la posición de la antena RF del Airfob Patch.
+
+* Si no se conceden derechos de acceso válidos cuando toca el lector de control de acceso con un dispositivo móvil, ajuste o rote el Airfob Patch para encontrar una ubicación en la que funcione correctamente.
+
+* La posición y la orientación del Airfob Patch pueden variar según el lector de control de acceso.
+
+* El rango de funcionamiento del Airfob Patch puede ser pequeño o grande según la intensidad de la señal RF del lector de control de acceso y la posición y el tamaño de la bobina RF.
+
+</details>

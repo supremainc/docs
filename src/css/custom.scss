@@ -702,6 +702,59 @@ body[data-rh] .redocusaurus {
     }
   }
 
+  details.faqs--air {
+    background: var(--main-black);
+    border-top: 2px solid var(--ifm-color-color-ol-gray);
+    border-bottom: 1px solid var(--ifm-color-color-ol-gray);
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 0;
+    summary {
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding-left: 0;
+    }
+    div[class*='collapsibleContent'] {
+      border-top: 0;
+      background: #eee;
+      padding: 1rem 1.5rem;
+      color: #333;
+      border-radius: .5rem;
+    }
+    summary::before, summary::after {
+      content: ' ';
+      width: 1rem;
+      height: 0;
+      inset-block-start: 50%;
+      inset-inline-end: 0;
+      position: absolute;
+      position-anchor: --faqs;
+      position-area: top end;
+      display: inline-block;
+    }
+    summary::before {
+      position: absolute;
+      top: 15px;
+      left: unset;
+      right: -2px;
+      border: 2px solid var(--ifm-color-cmd);
+    }
+    summary::after {
+      transform: rotate(90deg);
+      border-block-start: 3px solid var(--ifm-color-cmd);
+    }
+    &[open] summary::before {
+      transform: none;
+    }
+    &[open] summary::after {
+      display: none;
+    }
+  }
+  details.faqs--air + details.faqs--air {
+    border-top: none;
+  }
   details.faqs {
     background: var(--main-black);
     border-radius: none;

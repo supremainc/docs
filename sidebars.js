@@ -346,6 +346,7 @@ function createSidebars(preview) {
               items: [
                 'platform/biostar_air/sip-intercom-for-biostation3',
                 'platform/biostar_air/ip-camera-support-and-configuration',
+                'platform/biostar_air/install-airfob-patch',
                 'platform/biostar_air/configuring-the-sio2-secure-module',
                 'platform/biostar_air/e200-qr-scanner',
                 'platform/biostar_air/site-setup-networking',
