@@ -1,0 +1,165 @@
+---
+id: cardholder-management
+title: カードホルダー管理
+description: Genetec Security Center で、カードの登録、顔クレデンシャルの登録、顔テンプレートの一括アップロード、登録済み生体認証を持つユーザーの検索など、カードホルダーの管理手順を説明します。
+keywords:
+  - カードホルダー管理
+  - 顔登録
+  - 一括アップロード
+---
+
+## カード登録
+
+1. **Config Tool** で、**タスク** の **Cardholder management** をクリックします。
+
+   <Image src='/img/integration/genetec/card-enrollment.png' width={800} alone />
+
+2. 下部の **New** ボタンをクリックします。
+
+   <Image src='/img/integration/genetec/new-ico.png' alone />
+
+3. **First name** と **Last name** を入力し、**Add a credential** ボタンをクリックします。 表示されたポップアップで、**Automatic entry** をクリックします。
+
+   <Image src='/img/integration/genetec/card-enrollment-add-credential1.png' width={800} alone />
+
+4. Suprema デバイスにリーダーとして割り当てられた **Door** を選択し、カードをデバイスにかざします。
+
+   <Image src='/img/integration/genetec/card-enrollment-add-credential2.png' width={800} alone />
+
+5. カードがクレデンシャルに自動で登録されます。
+
+   <Image src='/img/integration/genetec/card-enrollment-add-credential3.png' width={800} alone />
+
+## 顔登録
+
+### 顔登録時の注意事項
+
+認証用の顔を登録するときは、下の図を参考にして正しく顔を登録してください。
+
+画面の指示に従わない場合、顔登録に時間がかかったり、認証に失敗したりすることがあります。
+
+- 顔を登録するときは、デバイスと顔の距離を 60～100 cm に保ちます。
+
+- 表情を変えないでください。
+
+- マスク、帽子、サングラス、アイパッチは着用しないでください。
+
+- 顔を上げたり下げたりしないでください。
+
+- 濃いメイクはしないでください。
+
+- 目を閉じないでください。
+
+- 両肩が画面に正しく表示されていることを確認してください。
+
+- 補正した画像は使用しないでください。
+
+- 動かずに、画面を見つめて顔を登録します。
+
+- 画面に 2 つの顔が表示されないように注意してください。 顔は 1 人ずつ登録してください。
+
+- 暗い場所では顔を登録しないでください。
+
+<Image src='/img/integration/genetec/face-enrollment.png' width={800} alone />
+
+:::info
+
+- **解像度**：250 x 250 ピクセル以上
+
+- **画像サイズ**：10 MB 以下
+
+- **対応形式**：JPG、JPEG、PNG のみ
+
+:::
+
+### デバイスから登録
+
+1. カードホルダー詳細ウィンドウで、**Suprema Enrollment** をクリックします。
+
+   <Image src='/img/integration/genetec/enroll-from-device1.png' width={800} alone />
+
+2. **Face-Scan** をクリックします。
+
+   <Image src='/img/integration/genetec/enroll-from-device2.png' width={800} alone />
+
+3. 顔クレデンシャルを登録する Suprema の顔認証デバイスを選択します。
+
+   <Image src='/img/integration/genetec/enroll-from-device3.png' alone />
+
+4. **+Add** ボタンをクリックして顔テンプレートを作成し、**Scan** ボタンをクリックしてデバイスで顔をスキャンします。
+
+   <Image src='/img/integration/genetec/enroll-from-device4.png' alone />
+
+5. 顔が正しくスキャンされたことを確認し、**Enroll** ボタンをクリックして顔を登録します。
+
+### Genetec プロファイル写真から顔テンプレートを登録
+
+1. カードホルダー詳細ウィンドウで、**Suprema Enrollment** をクリックします。
+
+   <Image src='/img/integration/genetec/enroll-from-device1.png' width={800} alone />
+
+2. **Face-Scan** をクリックします。
+
+   <Image src='/img/integration/genetec/enroll-from-device2.png' width={800} alone />
+
+3. 顔クレデンシャルを登録する Suprema の顔認証デバイスを選択します。
+
+   <Image src='/img/integration/genetec/enroll-from-device3.png' alone />
+
+4. **+Add** ボタンをクリックして顔テンプレートを作成し、**Use Genetec Photo** を選択してユーザープロファイル写真を自動でアップロードします。 Suprema デバイスは、ユーザープロファイル写真から顔テンプレートを抽出します。
+
+   <Image src='/img/integration/genetec/enroll-from-device5.png' alone />
+
+5. アップロードされた写真を確認し、**Enroll** ボタンをクリックして顔を登録します。
+
+## 一括登録
+
+1. **Suprema Device Plugin** → **Global Settings** に移動します。
+
+   <Image src='/img/integration/genetec/global-settings1.png' alone />
+
+2. **Bulk Face Upload** ボタンをクリックします。 顔抽出の進行状況を確認できます。
+
+   <Image src='/img/integration/genetec/global-settings2.png' alone />
+
+   :::info
+
+   顔テンプレートの抽出は、プロファイル画像を持つ GSC カードホルダーに対してのみ実行されます。
+
+   :::
+
+3. 処理が完了したら、結果を確認します。
+
+   - Show Failed Users：顔抽出に失敗したユーザーの一覧を表示します。
+
+   - Face Template Extraction Report：顔テンプレート抽出に関するレポートを表示します。
+
+## 顔テンプレートを持つカードホルダーの検索方法
+
+1. **Cardholder management** ページで **Advanced search** をクリックします。
+
+   <Image src='/img/integration/genetec/advanced-search.png' width={500} alone />
+
+2. **Custom fields** をクリックし、**On** に切り替えて、**Add criterion** をクリックします。 次に、**BiometricsTimestamp** を選択します。
+
+   <Image src='/img/integration/genetec/advanced-search-custom-fields1.png' width={500} alone />
+
+3. **Specific range** を選択し、検索する期間を設定します。
+
+   :::note
+
+   **例**
+
+   - **From**：プラグインのインストール日
+
+   - **To**：今日
+
+   :::
+
+   特定の時刻で検索するには、**Set time** をクリックして時刻を入力します。
+
+   <Image src='/img/integration/genetec/advanced-search-custom-fields2.png' alone />
+
+4. **Search** ボタンをクリックします。
+
+5. 顔テンプレートを持つすべてのカードホルダーが表示されます。

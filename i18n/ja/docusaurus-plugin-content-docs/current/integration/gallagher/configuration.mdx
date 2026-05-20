@@ -1,0 +1,585 @@
+---
+id: configuration
+title: 設定
+description: Gallagher Command Centre の設定ガイド、ハードウェア配線、BioStar 2 のカード形式、および Suprema Integration 用のアクセスグループ設定。
+keywords:
+  - 設定
+  - APIキー
+  - ハードウェア設定
+---
+
+## Gallagher Command Centre の設定
+
+### Gallagher Configuration Client へのログオン
+
+1. **クリック**してスタートメニューを開き、Configuration Client を開きます。
+
+   <Image src='/img/integration/gallagher/configuration-client-logon1.png' alone />
+
+2. ログオン名を **system** に設定し、パスワードは **none** にして、**Logon** ボタンを **押します**。
+
+   <Image src='/img/integration/gallagher/configuration-client-logon2.png' alone />
+
+### Gallagher Command Centre
+
+:::info
+
+Gallagher APIキーを生成する手順。
+
+:::
+
+1. Gallagher Command Centre を開き、ログオン名を system に設定して、**OK** ボタンを押します。
+
+   <Image src='/img/integration/gallagher/command-centre1.png' alone />
+
+2. ログオン名を **system** に**設定**し、Gallagher Command Centre のパスワードを設定して、**OK** を押します。
+
+   <Image src='/img/integration/gallagher/command-centre2.png' alone />
+
+3. 次に、左上隅の Administration に移動し、**Configuration Client を選択**します。ウィンドウが開きます。
+
+   <Image src='/img/integration/gallagher/command-centre3.png' width={800} alone />
+
+4. 下のタブが開きます。
+
+   <Image src='/img/integration/gallagher/command-centre4.png' width={600} alone />
+
+5. サーバー設定を構成するには、**File を選択** → **Server Properties**。
+
+   <Image src='/img/integration/gallagher/command-centre5.png' width={600} alone />
+
+6. 新しいウィンドウが開きます。**Web Services** に移動し、**REST API** セクションでローカルネットワーク接続を有効にします。サーバーポートを **8904** に**設定**し、Enable REST client with no client certificate のチェックを外して、**OK** ボタンを**押します**。
+
+   <Image src='/img/integration/gallagher/command-centre6.png' width={600} alone />
+
+7. **Gallagher Client に切り替えます**。
+
+   **Manage をクリック**します。 ドロップダウンで **Operator Groups を選択**します。
+
+   <Image src='/img/integration/gallagher/command-centre7.png' width={600} alone />
+
+8. Operator Group ウィンドウが開きます。**右クリック**して **New** → **Operator Group** を選択します。
+
+   <Image src='/img/integration/gallagher/command-centre8.png' alone />
+
+9. 一般設定で、名前を **REST Client Operator Group** に**設定**します。 次に **Apply** をクリックします。
+
+   <Image src='/img/integration/gallagher/command-centre9.png' alone />
+
+10. 次に、Operator group で **Operator Privileges** 設定を**選択**し、Gallagher configuration client ウィンドウの Manage → Operator Privileges に移動します。 次に**ドラッグ＆ドロップ**します。
+
+    Operator Group に 3 つの権限（Add Card or Credential、Edit Cardholders、View Cardholders）を operator privileges から operator group に追加し、**OK** ボタンを**押して**、operator privileges を**閉じます**。
+
+    <Image src='/img/integration/gallagher/command-centre10.png' width={600} alone />
+
+    <Image src='/img/integration/gallagher/command-centre11.png' width={800} alone />
+
+11. Configuration Client に移動し、**Cardholders を選択**します。
+
+    <Image src='/img/integration/gallagher/command-centre12.png' width={600} alone />
+
+12. **右クリック**して New → Cardholder を選択します。
+
+    <Image src='/img/integration/gallagher/command-centre13.png' alone />
+
+13. 一般設定で First Name を **REST Client** にし、**Apply** を押します。
+
+    <Image src='/img/integration/gallagher/command-centre14.png' alone />
+
+14. REST Client Properties の左側にある **Operator Configuration** タブを**クリック**します。 作成した REST Client operator group を Operator Group から Operator Group Membership に**ドラッグ＆ドロップ**します。
+
+15. REST Client Operator Group を Operator Group Membership に**ドラッグ**します。次の画像のようにします。
+
+    <Image src='/img/integration/gallagher/command-centre15.png' width={800} alone />
+
+16. ログオン名を **REST** に**設定**し、パスワードは Gallagher Command Centre で設定したものと同じにします。 **OK** をクリックし、Operator Group ウィンドウも**閉じます**。
+
+    <Image src='/img/integration/gallagher/command-centre16.png' width={600} alone />
+
+17. Configuration Client で Configure → Services & Workstations に移動します。
+
+    <Image src='/img/integration/gallagher/command-centre17.png' width={600} alone />
+
+18. 次に**右クリック**して New → REST Client を選択します。
+
+    <Image src='/img/integration/gallagher/command-centre18.png' alone />
+
+19. APIキー欄で、Cardholder から REST Client を REST Client Operator に**ドラッグ＆ドロップ**します。 **Apply をクリック**します。 Cardholder ウィンドウを**閉じます**。
+
+    <Image src='/img/integration/gallagher/command-centre19.png' width={800} alone />
+
+20. Gallagher APIキーは APIキー欄にあります。
+
+    :::info
+
+    Gallagher APIキーは安全な場所に保存してください。
+
+    :::
+
+    <Image src='/img/integration/gallagher/command-centre20.png' width={500} alone />
+
+21. thumbprint を取得するには、`C:\Program Files\Suprema Integration with Gallagher\Prerequisites` に移動し、thumbprint ファイルを開いて、その中の thumbprint の値をコピーします。
+
+    :::info
+
+    thumbprint ファイルがない場合。 [EXE ファイルの実行中に thumbprint が生成されない場合。](troubleshooting#thumbprint-not-generated)
+
+    :::
+
+    <Image src='/img/integration/gallagher/command-centre21.png' width={600} alone />
+
+    <Image src='/img/integration/gallagher/command-centre22.png' width={600} alone />
+
+22. Thumbprint を**コピー**し、Client Certificate Thumbprint セクションに **Client Certificate Thumbprint key** を**貼り付け**、**OK** ボタンを**押し**て、Services and Workstations も**閉じ**ます。
+
+    <Image src='/img/integration/gallagher/command-centre23.png' alone />
+
+### Gallagher APIキーを確認
+
+1. Command Centre iso → utilities → REST API → RestClient_v8.60.072 → win-x64 → RestClientDemo に移動し、それをデスクトップに**移動**して、`RESTClientDemo.exe` を**開きます**。
+
+2. 画像のとおり Gallagher APIキーを**入力**します。
+
+   <Image src='/img/integration/gallagher/check-api-key1.png' alone />
+
+3. Command Centre Requirement Client Certificate に**チェック**し、Certificate Thumbprint を入力します。Remember credentials (Optional) にも**チェック**します。
+
+   <Image src='/img/integration/gallagher/check-api-key2.png' alone />
+
+:::info
+
+エラーがある場合は端末に表示され、問題がなければ下の画像のように新しい画面が開きます。 テスト後、このウィンドウを閉じます。
+
+<Image src='/img/integration/gallagher/check-api-key3.png' width={800} alone />
+
+:::
+
+## ハードウェア設定
+
+:::info
+
+- ハードウェアの設定が完了している場合は、[BioStar 2 設定](#biostar2-setup) に進みます。
+
+- ここでは Controller 6000 を例として使用します。別のコントローラーを使用する場合は、それに合わせて手順を実行してください。
+
+:::
+
+1. まず、Gallagher コントローラーに**接続**する Controller 6000（または使用中の別のコントローラー）を作成します。
+
+   Gallagher Configuration Client ウィンドウを開き、Configure → Hardware に移動します。
+
+2. ハードウェアウィンドウで**右クリック**し、**New** → **Controllers** → **Controller 6000**（別のコントローラーを使用している場合はここに表示されます）を選び、**Apply** を押します。 これでハードウェアにコントローラーが作成されます。
+
+   <Image src='/img/integration/gallagher/configuration-hw1.png' alone />
+
+3. 次に Gallagher Configuration Client に戻り、configure → Alarm Zones に移動して**右クリック**し、新しいアラームゾーンを作成します。
+
+   <Image src='/img/integration/gallagher/configuration-hw2.png' alone />
+
+4. アラームゾーンの一般設定で名前を **System Alarm Zone** に変更し、**OK** ボタンを**押します**。
+
+   <Image src='/img/integration/gallagher/configuration-hw3.png' alone />
+
+5. Controller 6000 を設定します。一般設定で名前を **Controller 6000** に**設定**します（名前は使用中のコントローラーと同じにします）。
+
+   <Image src='/img/integration/gallagher/configuration-hw4.png' width={600} alone />
+
+6. 次に **Event Response** に移動し、すべてのイベントで Alarm Zone を選び、**System Alarm Zone** を選択します。 そして **Apply** ボタンを**押します**。
+
+   <Image src='/img/integration/gallagher/configuration-hw5.png' width={600} alone />
+
+   次に System Alarm Zone Properties で **Connections を選択**し、controller のドロップダウンで **Controller 6000 を選択**します。 **OK** ボタンを**押して**、Alarm Zone ウィンドウを**閉じます**。
+
+   <Image src='/img/integration/gallagher/configuration-hw6.png' alone />
+
+7. 次に、configure で Access Zone を**作成**します。
+
+   Access Zone に移動すると、ウィンドウが開きます。 Access Zone ウィンドウで**右クリック**し、New を**選択**してから Access Zone を**クリック**します。これで access zone が作成されます。
+
+   <Image src='/img/integration/gallagher/configuration-hw7.png' alone />
+
+8. 作成した Access Zone Properties を一般設定で**開きます**。 次に名前を **Suprema Access Zone** に**設定**します。
+
+   <Image src='/img/integration/gallagher/configuration-hw8.png' alone />
+
+9. Access Mode タブ設定に**移動します**。 Schedule を Default Access Zone Secure に**選択**し、**OK** ボタンを**押します**。
+
+   <Image src='/img/integration/gallagher/configuration-hw9.png' alone />
+
+10. 次に Hardware ウィンドウに**移動**し、Controller 6000 を**右クリック**します。 New → HBUS Devices → HBUS I/O を選択します。 この手順で Controller 配下に HBUS が作成されます。
+
+    <Image src='/img/integration/gallagher/configuration-hw10.png' width={600} alone />
+
+11. 作成した HBUS を**ダブルクリック**して、プロパティを編集し、設定します。 一般設定で名前を **HBUS I/O Wiegand Module (Suprema)** に**設定**します。
+
+    Connections タブに**移動**し、Controller を Controller 6000 に**選択**します。Hardware Variant を 4 in 2 out に設定し、**OK** ボタンを押します。
+
+    <Image src='/img/integration/gallagher/configuration-hw11.png' width={600} alone />
+
+12. Gallagher Controller をシステムに接続するには、Controller 6000 のプロパティを**開き**、Server Address タブを**クリック**します。 サーバーに別の IP を使用するに**チェック**し、PC/サーバーの IP アドレスを入力します。 次に **Apply** ボタンを**押します**。
+
+    <Image src='/img/integration/gallagher/configuration-hw12.png' width={600} alone />
+
+13. Controller Address 設定でコントローラーの MAC アドレスを設定します（C6000 コントローラーを確認してください）。また、コントローラーに割り当てた IP アドレス、サブネット、ゲートウェイも**設定**します。 **Apply** ボタンを**押します**。
+
+    <Image src='/img/integration/gallagher/configuration-hw13.png' width={600} alone />
+
+14. Setup タブで Plug in Module を **4H Module** に**設定**します（コントローラーに合わせて選択します）。Hardware RS485 Bus 1 は **OSDP**、RS485 Bus 2 は **HBUS** にし、Apply を押します。
+
+    <Image src='/img/integration/gallagher/configuration-hw14.png' width={600} alone />
+
+    :::info
+
+    設定は Gallagher デバイスとコンポーネントによって異なる場合があります。
+
+    :::
+
+15. Status and Overrides のオプションで、Disable Front Tamper と DisableRear Tamper の両方のチェックボックスを**オンにします**。
+
+    <Image src='/img/integration/gallagher/configuration-hw15.png' width={600} alone />
+
+16. コントローラーをシステムに接続するには、コントローラーの電源を**切り**、赤いランプが消えるまで待ちます。 次に左から 2 番目のボタンを**オンにします**。
+
+    :::info
+
+    この手順を行う前に、PC のファイアウォールがオフになっていることを確認してください。
+
+    :::
+
+    <Image src='/img/integration/gallagher/configuration-hw16.png' width={400} alone />
+
+17. コントローラーの状態が正常になったら、2 番目のボタンを**オフにします**（2 番目のボタンを下げます）。
+
+    :::info
+
+    コントローラーがオンラインで正常になったら、2 番目を含むすべての DIP スイッチをオフにできます。
+
+    :::
+
+    <Image src='/img/integration/gallagher/configuration-hw17.png' width={400} alone />
+
+    **補足：初回電源投入と新しいコントローラー接続：**
+
+    新しいコントローラーの初回電源投入時にサーバーへ接続する場合のみ #2 をオンにします。
+
+    また、Jumper #2 はコントローラーのリセット時にも使用できます。 コントローラーをアップグレードする場合は、固定してください。
+
+    <Image src='/img/integration/gallagher/configuration-hw18.png' width={600} alone />
+
+    :::info
+
+    コントローラーの HBUS 設定で HBUS にアクセスするには、デバイスを接続します。 （デバイスの接続方法は BioStar 2 設定を参照してください。）
+
+    :::
+
+18. Controller 6000 の HBUS Devices オプションで、HBUS I/O 4 in 2 Out module - Wiegand を Plugin Modules から Undetected devices の HBUS I/O に**ドラッグ＆ドロップ**します。
+
+    <Image src='/img/integration/gallagher/configuration-hw19.png' alone />
+
+19. ドアを作成するには Configure → Door に移動し、**右クリック**して新しいドアを作成します。
+
+    <Image src='/img/integration/gallagher/configuration-hw20.png' alone />
+
+20. ドア名を **Suprema Door** に**設定**し、Event Response に移動してアラームを System Alarm Zone に**選択**します。
+
+    <Image src='/img/integration/gallagher/configuration-hw21.png' alone />
+
+21. Connections で Controller を Controller 6000 に**選択**し、**Apply** と **OK** を押します。
+
+    <Image src='/img/integration/gallagher/configuration-hw22.png' alone />
+
+22. **OSDP 接続を作成するには、Hardware ウィンドウを右クリックします。 New** → **OSDP Device** → そして OSDP Reader をクリックし、Hardware に OSDP Reader を作成します。
+
+    新しいウィンドウが開きます。 名前を Suprema OSDP Reader に**設定**し、Event Response 設定タブで Alarm Zone for all events を System Alarm Zone に**設定**します。 次に Apply をクリックし、**OK** を押して変更を保存します。
+
+    <Image src='/img/integration/gallagher/configuration-hw23.png' alone />
+
+    Hardware ウィンドウに**戻ります**。 Controller 6000 を**ダブルクリック**してプロパティを開きます。 OSDP Devices タブを**クリック**します。
+
+23. OSDP reader を **Hardware Window から** OSDP Devices タブの **Controller properties** に**ドラッグ**します。 Configured Address を 0、Suprema OSDP Device Address を 0、Baudrate を **115200** に**設定**します。
+
+    <Image src='/img/integration/gallagher/configuration-hw24.png' width={600} alone />
+
+    :::info
+
+    2x OSDP Reader を使用している場合は、BioStar 2 で OSDP アドレスを変更してください。
+
+    :::
+
+24. Wiegand Reader を作成します。 Hardware ウィンドウを**右クリック**します。 New → Third-Party Reader をクリックします。 新しいウィンドウが表示されます。名前を Suprema Wiegand Reader に**設定**し、Event Response タブに移動します。 Alarm Zone を System Alarm Zone に**選択**し、**OK** を押します。
+
+    <Image src='/img/integration/gallagher/configuration-hw25.png' alone />
+
+25. 作成した Door のプロパティで **Entry Zone** に**移動**し、Access Zone を **Suprema Access Zone**、reader を **Suprema Wiegand Reader** と **Suprema OSDP Reader** に**設定**して、**OK** ボタンを**押します**。
+
+    <Image src='/img/integration/gallagher/configuration-hw26.png' alone />
+
+26. HBUS I/O のプロパティで Reader 設定に**移動**し、Reader 1 を Suprema Wiegand Reader に設定して、**OK** ボタンを**押します**。 Door ウィンドウと Controller ウィンドウを**閉じます**。
+
+    <Image src='/img/integration/gallagher/configuration-hw27.png' width={600} alone />
+
+27. カード種別を作成するには Configure → Card Type を**右クリック**し、新しい **Card Type** を作成します。 名前を **Suprema Card Type** に**設定**します。
+
+    :::info
+
+    - Gallagher QR Code を読み取るには QR Device ライセンスが必要です。 必要な場合は Suprema にお問い合わせください。
+
+    - フィールド名は記載されている用語をそのまま使用してください。
+
+    :::
+
+    <Image src='/img/integration/gallagher/configuration-hw28.png' alone />
+
+28. Card type properties で setup オプションに**移動**し、Region code を **A**、Facility code を **10000**、card number range を **1 to 99999999999999999999 (20 times)** に設定し、card expiry notification を有効にします。 **OK** を押します。
+
+    <Image src='/img/integration/gallagher/configuration-hw29.png' width={600} alone />
+
+29. 別のカード種別を作成するには Configure → Card Type を**右クリック**し、新しい **Card Type** を作成します。 名前を **HID Seos Corporate** に設定します。 そしてカード種別を設定するため、プロパティ（setup）に**移動します**。 下の設定を使ってカードを構成し、**Apply** と **OK** を押します。
+
+    <Image src='/img/integration/gallagher/configuration-hw30.png' width={600} alone />
+
+30. <Anchor id="create-another-card-type" />別のカード種別を作成するには Configure → Card Type を**右クリック**し、新しい **Card Type** を作成します。 名前を **Suprema QR Code** に設定します。
+
+    <Image src='/img/integration/gallagher/configuration-hw31.png' alone />
+
+31. Card type properties で setup オプションに**移動**し、Region code を **A**、Facility code を **10000**、card number range を **4194304 to 8388607** に設定し、card expiry notification を有効にします。 **OK** を押します。
+
+    <Image src='/img/integration/gallagher/configuration-hw32.png' width={600} alone />
+
+32. ユニバーサルカード形式を作成するには Configure → Universal Card Format を**右クリック**し、新しい universal card format を作成します。 4 つのカード形式を作成する必要があります。
+
+    1. 新しい形式名を **Suprema 26 bits** Wiegand として**作成**し、形式を下の画像のとおりに設定します。
+
+       <Image src='/img/integration/gallagher/configuration-hw33.png' alone />
+
+    2. 2 つ目のカード形式を **Suprema CSN 32 bits** として**作成**し、形式を下のとおりに**設定**します。
+
+       <Image src='/img/integration/gallagher/configuration-hw34.png' alone />
+
+    3. 3 つ目のカード形式を **Suprema CSN 56 bits** として**作成**し、形式を下のとおりに**設定**します。
+
+       <Image src='/img/integration/gallagher/configuration-hw35.png' alone />
+
+    4. 4 つ目のカード形式を **Suprema Virtual Card (25bit)** として**作成**し、形式を下のとおりに**設定**します。
+
+       <Image src='/img/integration/gallagher/configuration-hw36.png' alone />
+
+    5. 5 つ目のカード形式を **HID 48bit** として**作成**し、形式を下のとおりに**設定**します。
+
+       <Image src='/img/integration/gallagher/configuration-hw37.png' alone />
+
+    6. 6 つ目のカード形式を **Suprema QR 23 bits** として**作成**し、形式を下のとおりに**設定**します。
+
+       <Image src='/img/integration/gallagher/configuration-hw38.png' alone />
+
+33. 6 つのカード種別をすべてドラッグして Controller properties の Card Format Setting にドロップし、設定を**適用**します。 **OK** を押して、Gallagher Configuration Client のすべてのウィンドウを**閉じます**。
+
+    <Image src='/img/integration/gallagher/configuration-hw39.png' width={600} alone />
+
+34. Config Client の Configure → Hardware に**移動**します。
+
+    <Image src='/img/integration/gallagher/configuration-hw40.png' width={600} alone />
+
+    次にウィンドウを**右クリック**し、出力を**作成**して、一般タブで名前を **Wiegand Output** に**設定**します。
+
+    <Image src='/img/integration/gallagher/configuration-hw41.png' alone />
+
+35. 次に左側の Advance を**クリック**し、Output times オプションで 1 秒に**設定**して、**Apply** と **OK** を押します。
+
+    <Image src='/img/integration/gallagher/configuration-hw42.png' alone />
+
+36. 次に hardware window → HBUS I/O Wiegand Module (Suprema) を左側で**ダブルクリック**し、Outputs に**移動**して Wiegand Output を**選択**し、**Apply** と **OK** を押します。
+
+    <Image src='/img/integration/gallagher/configuration-hw43.png' width={600} alone />
+
+## BioStar 2 設定 {#biostar2-setup}
+
+1. BioStar 2 を開くには、ブラウザーで `https://[Your system IP Address]/#/login` と**入力**すると、ログインフォームが開きます。
+
+   <Image src='/img/integration/gallagher/biostar2-setup1.png' width={800} alone />
+
+2. BioStar 2 の資格情報を**入力**してログインし、設定ページに**移動**して、Card Format を**選択**します。
+
+   <Image src='/img/integration/gallagher/biostar2-setup2.png' width={800} alone />
+
+3. カード設定で **edit** ボタンを**クリック**し、新しいカード形式を作成します。
+
+   <Image src='/img/integration/gallagher/biostar2-setup3.png' width={800} alone />
+
+4. ここでも **56-bit**、**32-bit**、**26-bit** の 3 つのカード種別を作成する必要があります。
+
+   1. 名前を **56-bit Gallagher**、total bits を 56 に**設定**し、ID field で **add** を**押して** start bit を 0、end bit を 55 に**設定**します。
+
+      <Image src='/img/integration/gallagher/biostar2-setup4.png' width={800} alone />
+
+   2. 名前を **32-bit Gallagher**、total bits を 32 に**設定**し、ID field で **add** を押して start bit を 0、end bit を 31 に**設定**します。
+
+      <Image src='/img/integration/gallagher/biostar2-setup5.png' width={800} alone />
+
+   3. 名前を **26-bit Gallagher**、total bits を 26 に**設定**し、ID field で **add** を押して start bit を 0、end bit を 25 に**設定**します。
+
+      <Image src='/img/integration/gallagher/biostar2-setup6.png' width={800} alone />
+
+5. 次にカード形式内で、smart card ボタンを**押して** smart card セクションに**移動**し、ADD SMART CARD ボタンを**クリック**します。
+
+   <Image src='/img/integration/gallagher/biostar2-setup7.png' width={800} alone />
+
+6. 次に名前を AOC Inside MIFARE に**入力**し、Start Block Index に 1 を**入力**し、Use Face template のチェックボックスを**オンにして**、Apply ボタンを**押します**。
+
+   :::info
+
+   顔の表示を使わず、smart card では fingerprint のみを使う場合は、チェックボックスをオフにできます。
+
+   :::
+
+   <Image src='/img/integration/gallagher/biostar2-setup8.png' width={800} alone />
+
+7. デバイスをシステムに接続するには、device panel に**移動**し、SEARCH DEVICE ボタンを**押します**。
+
+   <Image src='/img/integration/gallagher/biostar2-setup9.png' width={800} alone />
+
+8. 次に search ボタンを**押し**、デバイスを**選択**して、Add ボタンを**押します**。
+
+   <Image src='/img/integration/gallagher/biostar2-setup10.png' width={800} alone />
+
+9. 接続したデバイスは、左側の device panel に一覧表示されます。
+
+   <Image src='/img/integration/gallagher/biostar2-setup11.png' width={800} alone />
+
+### Wiegand の READER CONNECTION
+
+1. Wiegand 接続で接続されたデバイスを**クリック**します。 Card Type が表示されるまで**下にスクロール**します。
+
+   **CSN card** を**オンにし**、**Mifare/Felica** に**チェック**し、形式 type を **Wiegand**、Byte order を **LSB**、Wiegand format を **56-bit Gallagher** に**設定**します。
+
+   <Image src='/img/integration/gallagher/wiegand-reader-connection1.png' width={800} alone />
+
+2. 次に advanced setting に**移動**し、trigger and action が表示されるまで下にスクロールして add ボタンを**押し**、画像のとおりに field を**設定**します。
+
+   <Image src='/img/integration/gallagher/wiegand-reader-connection2.png' width={800} alone />
+
+3. もう一度 add ボタンを**押して**、別の trigger and action を追加します。
+
+   <Image src='/img/integration/gallagher/wiegand-reader-connection3.png' width={800} alone />
+
+4. Advanced Section の Trigger & Action：Wiegand setting では、Input/Output を **Output**、Wiegand Input Format を Default、Pulse width を **40**、pulse interval を **10000**、output mode を **normal** に設定し、fail code を確認して、output info を **Card ID** にします。
+
+   <Image src='/img/integration/gallagher/wiegand-reader-connection4.png' width={800} alone />
+
+### OSDP READER CONNECTION
+
+1. OSDP 接続では、OSDP パネルに接続されたデバイスを**クリック**し、Serial が表示されるまで下にスクロールします。
+
+   RS485 を Default に、Baud rate を **115200** に**設定**します。
+
+   <Image src='/img/integration/gallagher/osdp-reader-connection1.png' width={800} alone />
+
+2. intelligent slave expectation code を **Enabled**、output info を Card ID、OSDP ID を **0** にします。
+
+   :::info
+
+   OSDP デバイスが複数ある場合は、OSDP ID を別の番号に**変更**し、output の Info は Card ID にしてください。
+
+   :::
+
+   <Image src='/img/integration/gallagher/osdp-reader-connection2.png' width={800} alone />
+
+### QR コード用のメール設定 {#email-config-qr-code}
+
+:::info
+
+- QR コードには、メール確認とユーザープロファイルのメールが必須です。
+
+- メールにはライセンスが必要です。 必要なライセンスを取得するには管理者にお問い合わせください。
+
+:::
+
+1. 設定ページに**移動**し、Email Settings を**選択**します。
+
+   <Image src='/img/integration/gallagher/email-configuration-qr-code1.png' width={800} alone />
+
+2. メール設定内の SMTP setting ボタンを**押し**、SMTP オプションの詳細を入力して、**Apply** ボタンを**押します**。
+
+   <Image src='/img/integration/gallagher/email-configuration-qr-code2.png' width={400} alone />
+
+3. 確認用にはテストメール機能を使用できます。送信先のメールアドレスを入力し、send email ボタンを**押します**。
+
+   QR Code カードを使うには、設定内で QR オプションを**有効にし**、要件に従って詳細を入力して、Apply ボタンを**押します**。
+
+   <Image src='/img/integration/gallagher/email-configuration-qr-code3.png' width={800} alone />
+
+## Suprema Integration with Gallagher v2.0
+
+1. Cardholder viewer オプションで Gallagher Command Centre を**開き**、viewer configuration に**移動します**。
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher1.png' width={800} alone />
+
+2. Viewer Configuration で、下の画像のようにウィンドウを設定し、window toolbox を使ってウィンドウを**ドラッグ＆ドロップ**します。
+
+   - Cardholder Details
+
+   - Cardholder Access Groups
+
+   - Cardholder Cards
+
+   - Event trail
+
+   - URL Tile
+
+   - Cardholder Images
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher2.png' width={800} alone />
+
+3. URL ウィンドウで**クリック**し、Specific URL を `<127.0.0.1>:28523` に設定して、navigation を Disable Navigation に**選択**します。 そして **save button** を**押して**設定を保存します。
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher3.png' alone />
+
+4. 設定完了後、**save button** を**押し**、viewer configuration を**右クリック**して viewer を再読み込みし、変更を確認します。
+
+5. **Mifare Encoder を PC に接続します**。
+
+6. システムのデバイスマネージャーのその他のデバイスにある SDI011 Contactless Reader（環境によっては別のデバイス）を**右クリック**し、ドライバーの更新を**選択**します。
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher4.png' width={600} alone />
+
+7. ドライバーをコンピューター上で検索し、提供されたフォルダーを**選択**します。
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher5.png' alone />
+
+8. ドライバーを初めて更新すると、スマートカードリーダーが使用可能になります。
+
+   :::info
+
+   USB デバイス名はデバイスごとに異なる場合があります。
+
+   :::
+
+9. 次に同じファイルで Contactless Reader ドライバーを**再度更新**します。 その後、新しいスマートカードドライバーが使用可能になります。
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher6.png' alone />
+
+## アクセスグループを追加
+
+1. **Administration に移動**し、左上にある **Access Groups** を**クリック**します。すると左下に **New Access Group** ボタンが表示されます。 そのボタンを**クリック**します。
+
+   <Image src='/img/integration/gallagher/add-access-group1.png' width={600} alone />
+
+2. **New Access Group** ボタンをクリックすると、下の画像のようなポップアップが開きます。名前を **Suprema Access Group** に**設定**し、Close ボタンを**クリック**するとポップアップが閉じます。
+
+   <Image src='/img/integration/gallagher/add-access-group2.png' alone />
+
+3. Close ボタンを**クリック**すると、下の画像のような画面が表示されるので、左下隅の **Add Access** ボタンを**クリック**します。
+
+   <Image src='/img/integration/gallagher/add-access-group3.png' width={800} alone />
+
+4. **Add Access** ボタンをクリックすると、下の画像のようなポップアップが開きます。そこで **checkbox** に**チェック**し、Add **Selection** ボタンをクリックします。
+
+   <Image src='/img/integration/gallagher/add-access-group4.png' width={600} alone />
+
+   次に **radio** ボタンを**選択**し、**OK** ボタンをクリックするとポップアップが閉じます。
+
+   <Image src='/img/integration/gallagher/add-access-group5.png' width={600} alone />
+
+5. **Save** ボタンを**クリック**すると、Access Group が正常に追加されます。
+
+   <Image src='/img/integration/gallagher/add-access-group6.png' width={600} alone />

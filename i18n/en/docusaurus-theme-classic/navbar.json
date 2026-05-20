@@ -151,6 +151,10 @@
     "message": "Developers",
     "description": "Navbar item with label Developers"
   },
+  "item.label.Integration": {
+    "message": "Integration",
+    "description": "Navbar item with label Integration"
+  },
   "item.label.BioStar X API": {
     "message": "BioStar X API",
     "description": "Navbar item with label BioStar X API"

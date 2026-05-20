@@ -1,0 +1,365 @@
+---
+id: integration-gallagher
+title: Integración de Suprema con Gallagher
+description: Guía de inscripción de usuarios y administración de dispositivos para la integración de Suprema con Gallagher, que incluye huella dactilar, rostro visual, asignación de tarjetas, código QR y configuración de tarjetas inteligentes.
+keywords:
+  - Inscripción de usuarios
+  - Tarjeta Inteligente
+  - Código QR
+---
+
+1. En Cardholder Viewer, busca rest y se cargarán todas las ventanas.
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher7.png' width={600} alone />
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher8.png' width={800} alone />
+
+2. Primero, aparece la siguiente pantalla y debes **ingresar** la clave API de Gallagher, la IP del servidor BioStar 2, el puerto del servidor BioStar 2 y el nombre SYSTEM/HOST de la dirección del middleware para continuar.
+
+   :::info
+
+   Si ejecutas el middleware en un puerto específico en dos servidores diferentes con direcciones IP particulares, consulta: Configura las reglas de entrada para el middleware.
+
+   :::
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher9.png' alone />
+
+3. En la pantalla de licencia, **ingresa** la clave de licencia y el nombre de proyecto **exacto** que obtienes del administrador.
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher10.png' alone />
+
+4. En la pantalla de inicio de sesión, **ingresa** las credenciales de Suprema BioStar 2.
+
+   :::info
+
+   En la pantalla de inicio de sesión, si obtienes un **error** por **LAN desconectada o IP cambiada para (dirección IP)**. Consulta: [Solucionar error de la página de inicio de sesión](troubleshooting#login-lan-disconnected-error).
+
+   :::
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher11.png' width={800} alone />
+
+   Después de ingresar las credenciales correctas, se abrirá la siguiente pantalla de sincronización de usuarios para la sincronización inicial.
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher12.png' alone />
+
+   Después de sincronizar correctamente los usuarios, aparecerá el botón Cerrar en la pantalla, y al **presionar** el botón Cerrar podrás continuar.
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher13.png' alone />
+
+   Después de sincronizar correctamente los usuarios, aparecerá la pantalla de búsqueda de usuarios.
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher14.png' width={800} alone />
+
+5. **Busca** rest y presiona el botón de búsqueda; el usuario buscado aparecerá en la tabla.
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher15.png' width={800} alone />
+
+6. Ahora, conecta el codificador Mifare al sistema. **Presiona** el botón Asignar acceso, elige el grupo de acceso Suprema que creamos y **presiona** el botón Guardar.
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher16.png' width={800} alone />
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher17.png' alone />
+
+7. Después de agregar el grupo de acceso y conectar el codificador Mifare, haz **clic derecho** en Viewer Configuration y vuelve a cargar el visor.
+
+8. Al **colocar** la tarjeta en el botón Assign Card del codificador, al **presionar** ese botón se asignará la tarjeta al usuario; después, **presiona** el botón **Guardar**. Luego **presiona** el botón **Editar** en el middleware.
+
+   :::info
+
+   Si solo quieres inscribir datos biométricos, no asignes ninguna tarjeta antes; solo **presiona** el botón Editar después de asignar la zona de acceso.
+
+   :::
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher18.png' width={800} alone />
+
+   Puedes asignar varias tarjetas al usuario; cuando asignes la tarjeta y **presiones** el botón Guardar, **presiona** el botón verde de **sincronización** para sincronizar todos los datos de ese usuario.
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher19.png' width={800} alone />
+
+9. **Presiona** el botón Fingerprint y se cargará el módulo de huella dactilar.
+
+   <Image src='/img/integration/gallagher/suprema-integration-gallagher20.png' width={800} alone />
+
+10. **Selecciona** el dispositivo de la lista.
+
+    <Image src='/img/integration/gallagher/suprema-integration-gallagher21.png' width={800} alone />
+
+11. Puedes **seleccionar** la mano izquierda o derecha; después, elige la calidad de la huella dactilar y **presiona** el botón de escaneo para iniciar el escaneo. Cuando el escaneo se complete, el botón de escaneo cambiará al botón eliminar y la huella dactilar aparecerá en la pantalla. Los datos se almacenarán automáticamente; cuando se guarden correctamente, la huella dactilar guardada se mostrará en color.
+
+    <Image src='/img/integration/gallagher/suprema-integration-gallagher22.png' width={800} alone />
+
+12. Si necesitas una imagen sin procesar, marca la casilla Raw Image y luego **escanea** el dedo.
+
+    <Image src='/img/integration/gallagher/suprema-integration-gallagher23.png' width={800} alone />
+
+13. Para eliminar una sola huella dactilar, **presiona** el botón **Eliminar**; aparecerá una ventana emergente y luego **presiona** el botón **Sí**. Se eliminará esa huella dactilar.
+
+    <Image src='/img/integration/gallagher/suprema-integration-gallagher24.png' width={800} alone />
+
+    Para restablecer todos los datos de huellas dactilares, **presiona** el botón **Restablecer**; aparecerá una ventana emergente y luego **presiona** Sí. Se restablecerán todos los datos de huellas dactilares.
+
+14. Podemos usar BioMini Plus 2 para inscribir datos de huellas dactilares de usuarios. Para ello, solo conecta el dispositivo y lo verás dentro de la **sección** de selección de dispositivos de huellas dactilares. **Selecciona** el dispositivo e inicia la inscripción de datos del usuario.
+
+    <Image src='/img/integration/gallagher/suprema-integration-gallagher25.png' width={800} alone />
+
+15. Para inscribir el rostro visual, **presiona** el botón junto a la huella dactilar; se cargará el módulo de rostro visual.
+
+    <Image src='/img/integration/gallagher/suprema-integration-gallagher26.png' width={800} alone />
+
+    Hay dos métodos para escanear el rostro visual. Podemos cargarlo o escanear el rostro para inscribirlo.
+
+16. **Presiona** el icono de **carga**; luego se abrirá una nueva ventana y podrás elegir la imagen que deseas cargar.
+
+    Si **presionas** el botón de **escaneo**, se activará el dispositivo que seleccionaste; usa ese dispositivo seleccionado para escanear tu rostro. Los datos se almacenarán automáticamente después de cargar o escanear el rostro visual, y luego aparecerá un mensaje de éxito.
+
+    <Image src='/img/integration/gallagher/suprema-integration-gallagher27.png' width={800} alone />
+
+    :::info
+
+    - El tamaño admitido del archivo de imagen es de hasta 2 MB.
+
+    - Los formatos de archivo de imagen admitidos son JPG, JPEG y PNG.
+
+    - Si ocurre un error al inscribir un rostro visual con una imagen de perfil, usa una imagen más nítida.
+
+    :::
+
+17. Si necesitas volver a escanear o volver a cargar los datos, debes eliminar los datos anteriores; **presiona** la ventana emergente del **botón rojo Eliminar** y **presiona Sí**. Se eliminará esa imagen.
+
+    <Image src='/img/integration/gallagher/suprema-integration-gallagher28.png' width={800} alone />
+
+18. Y si necesitas restablecer todos los datos de rostro visual, **presiona** el botón **Restablecer** y **presiona** Sí. Se restablecerán todos los datos.
+
+    <Image src='/img/integration/gallagher/suprema-integration-gallagher29.png' width={800} alone />
+
+19. Si sales y buscas de nuevo al usuario, todos los datos guardados aparecerán en la tabla.
+
+    <Image src='/img/integration/gallagher/suprema-integration-gallagher30.png' width={800} alone />
+
+    También puedes buscar al usuario por su id; **cambia** el nombre de usuario del menú desplegable a id de usuario y **busca** al usuario por id.
+
+## Inscribir la ID de foto del usuario en Command Center para la plantilla facial
+
+1. **Ve** a Administration, **haz clic** en Personal Data Field y **presiona** New Personal Data Field.
+
+   <Image src='/img/integration/gallagher/enroll-template.png' width={600} alone />
+
+2. Ahora, dentro de la ventana emergente, **establece** el nombre como Image y **presiona** el botón Close. En el campo Data Type, **selecciona** Image como tipo de dato. No cambies nada aquí y asigna el grupo de acceso **presionando** el botón Add Access Group dentro de la sección Access Group y **seleccionando** Suprema Access Zone. Después de **seleccionar** Access Zone, **presiona** el botón Add Selection para el campo.
+
+   <Image src='/img/integration/gallagher/enroll-face-template1.png' alone />
+
+3. Después de asignar Access Zone, **presiona** el botón Guardar en la parte inferior.
+
+   <Image src='/img/integration/gallagher/enroll-face-template2.png' width={800} alone />
+
+4. Ahora **ve** a Viewer Configuration y **haz clic** en Click to configure para Cardholder Images. Dentro de Cardholder Images Configuration, **elige** Selected PDFs, **selecciona** el campo Image y **presiona** el botón Close. Ahora **presiona** el botón Guardar en la parte inferior izquierda para guardar los cambios. Ahora haz **clic derecho** en Viewer Configuration y vuelve a cargar el visor para reflejar los cambios.
+
+   <Image src='/img/integration/gallagher/enroll-face-template3.png' alone />
+
+5. Ahora, dentro de Cardholder Viewer, puedes ver la pestaña Cardholder Images. Puedes cargar imágenes **haciendo clic** en el icono amarillo. Para ello, debemos asignar una zona de acceso al usuario. Después de cargar la imagen, **presiona** el botón Guardar.
+
+   <Image src='/img/integration/gallagher/enroll-face-template4.png' alone />
+
+6. Si necesitas ver el mensaje de error que ocurre para los usuarios al actualizar la información del usuario, puedes encontrarlo en la sección ErrorLog **haciendo clic** en este icono. Se abrirá una ventana emergente que muestra diferentes errores del usuario.
+
+   <Image src='/img/integration/gallagher/enroll-face-template5.png' width={800} alone />
+
+7. Como en la imagen siguiente, tenemos un error para un usuario. Aquí **Type** define qué tipo de error es, **Status** Un-solved significa que el error todavía no se ha resuelto para el usuario, y Solved indica que el error ya se resolvió para el usuario. Ahora el cuadro rojo indica el nombre del usuario y el otro cuadro rojo indica la ID del usuario.
+
+   <Image src='/img/integration/gallagher/enroll-face-template6.png' alone />
+
+8. La imagen siguiente muestra el resultado después de cambiar la imagen del usuario desde Gallagher Command Center, ya que obtenemos el error al inscribir el rostro del usuario; después de una inscripción exitosa, el color del mensaje de error también cambia y **Status** también cambia.
+
+   <Image src='/img/integration/gallagher/enroll-face-template7.png' alone />
+
+9. Si necesitas cambiar la configuración del dispositivo, **presiona** el botón **Configuración** y verás las siguientes pantallas:
+
+   <Image src='/img/integration/gallagher/enroll-face-template8.png' width={800} alone />
+
+## Inscribir la ID de correo electrónico del usuario en Command Center para el código QR {#enroll-email-qr-code}
+
+1. **Ve** a Administration, **haz clic** en Personal Data Field y **presiona** New Personal Data Field.
+
+   <Image src='/img/integration/gallagher/enroll-template.png' width={600} alone />
+
+2. Ahora, dentro de la ventana emergente, **establece** el nombre como Email y **presiona** el botón Close. En el campo Data Type, **selecciona** Email como tipo de dato y **marca** la casilla Unique Value. No cambies nada aquí y asigna el grupo de acceso **presionando** el botón Add Access Group dentro de la sección Access Group y **seleccionando** Suprema Access Zone. Después de **seleccionar** Access Zone, **presiona** el botón Add Selection para el campo.
+
+   :::info
+
+   Usa los mismos términos mencionados para los campos.
+
+   :::
+
+   <Image src='/img/integration/gallagher/enroll-email-qr1.png' alone />
+
+3. Después de asignar Access Zone, **presiona** el botón Guardar en la parte inferior.
+
+   <Image src='/img/integration/gallagher/enroll-email-qr2.png' width={800} alone />
+
+4. Ahora **ve** a Viewer Configuration y **haz clic** en Click to configure para Cardholder Details. Dentro de Cardholder Details Configuration, **elige** Selected PDFs, **selecciona** el campo Email y **presiona** el botón Close. Ahora **presiona** el botón Guardar en la parte inferior izquierda para guardar los cambios. Haz clic derecho en Viewer Configuration y **presiona** Reload Viewer.
+
+   <Image src='/img/integration/gallagher/enroll-email-qr3.png' alone />
+
+5. Para asignar el código QR, ve al perfil de usuario dentro del middleware y **haz clic** en el icono de QR. Como se muestra abajo, el botón Add QR está **deshabilitado**, y hay una nota que indica que el correo electrónico del usuario no se ha asignado en Gallagher.
+
+   <Image src='/img/integration/gallagher/enroll-email-qr4.png' width={800} alone />
+
+   :::info
+
+   - Para configurar las opciones de SMTP: [Configurar SMTP para código QR](configuration#email-config-qr-code).
+
+   - Para configurar la dirección de correo electrónico en Gallagher, [configuración de correo electrónico en Gallagher](#enroll-email-qr-code).
+
+   - Configura el tipo de tarjeta QR en Gallagher: [Crear tipo de tarjeta de código QR](configuration#create-another-card-type).
+
+   :::
+
+6. Para asignar una dirección de correo electrónico a un usuario, en Command Center ve a los detalles del usuario, coloca el correo electrónico del usuario en el campo de correo electrónico de Cardholder Details y **presiona** el botón Guardar.
+
+   <Image src='/img/integration/gallagher/enroll-email-qr5.png' alone />
+
+7. En el perfil de usuario del middleware, **presiona** el botón de sincronización, y el correo electrónico se asignará automáticamente al perfil de usuario en BioStar 2. El botón de correo electrónico ahora estará habilitado y la nota se quitará.
+
+   <Image src='/img/integration/gallagher/enroll-email-qr6.png' width={800} alone />
+
+8. Ahora **presiona** el botón Add QR Code dentro de la sección QR del perfil de usuario; agregará el código QR a Gallagher y BioStar 2, y **enviará** el código QR a la dirección de correo electrónico que asignamos arriba.
+
+   <Image src='/img/integration/gallagher/enroll-email-qr7.png' width={800} alone />
+
+   Una vez agregado el QR, puedes actualizar los datos **presionando** el botón de sincronización.
+
+   <Image src='/img/integration/gallagher/enroll-email-qr8.png' width={800} alone />
+
+9. Debes **presionar** el botón de sincronización para sincronizar los dispositivos, y desde aquí puedes ver todos los dispositivos conectados y seleccionar cualquiera de ellos para ver la configuración del dispositivo.
+
+   <Image src='/img/integration/gallagher/enroll-email-qr9.png' width={800} alone />
+
+10. La imagen siguiente indica la configuración OSDP del dispositivo.
+
+    <Image src='/img/integration/gallagher/enroll-email-qr10.png' width={800} alone />
+
+11. Las imágenes siguientes corresponden a la configuración Wiegand del dispositivo.
+
+    <Image src='/img/integration/gallagher/enroll-email-qr11.png' width={800} alone />
+
+    <Image src='/img/integration/gallagher/enroll-email-qr12.png' width={800} alone />
+
+12. La imagen anterior corresponde al modo administrador, donde puedes elegir modos según tus necesidades. Como ves en la imagen siguiente, al **presionar** el botón + puedes seleccionar diferentes usuarios del menú desplegable.
+
+    <Image src='/img/integration/gallagher/enroll-email-qr13.png' width={800} alone />
+
+13. Después de **seleccionar** el usuario, se puede mostrar como en la imagen siguiente; puedes eliminar al usuario de la lista **haciendo clic** en el botón eliminar.
+
+    <Image src='/img/integration/gallagher/enroll-email-qr14.png' width={800} alone />
+
+14. Este es el modo de activación y acción para el modo de salida del dispositivo. Puedes configurarlo **presionando** el botón +.
+
+    <Image src='/img/integration/gallagher/enroll-email-qr15.png' width={800} alone />
+
+## Selección de tarjeta predeterminada
+
+1. Puedes seleccionar la tarjeta predeterminada **presionando** el botón de opción del usuario.
+
+   <Image src='/img/integration/gallagher/default-card-selection1.png' width={800} alone />
+
+2. Puedes **establecer** el vencimiento del titular de la tarjeta configurando la fecha de vencimiento de la tarjeta predeterminada.
+
+   <Image src='/img/integration/gallagher/default-card-selection2.png' width={800} alone />
+
+   :::info
+
+   Si hiciste algún cambio en los detalles del titular de la tarjeta desde Command Centre. Debes abrir al mismo usuario en Suprema integration con middleware y presionar el botón de sincronización.
+
+   :::
+
+## Tarjeta inteligente (AOC/TOC)
+
+:::info
+
+Debes tener BioStar 2 versión 2.9.4 o superior para usar la función de tarjeta inteligente.
+
+:::
+
+1. Si quieres usar la opción de tarjeta inteligente (AOC/TOC), ve a la configuración del dispositivo, **presiona** el botón **Configuración**, y dentro de Device Management **selecciona** el dispositivo que deseas configurar y **selecciona** la opción Smart Card.
+
+   <Image src='/img/integration/gallagher/smart-card1.png' width={800} alone />
+
+2. Ahora **habilita** el selector de Smart Card y realiza los siguientes ajustes como se muestra abajo.
+
+   <Image src='/img/integration/gallagher/smart-card2.png' width={800} alone />
+
+3. Después de cambiar todos los ajustes, **presiona** el botón Apply. Después de eso, **presiona** el botón Exit Settings en la esquina inferior izquierda para salir de la pestaña de configuración.
+
+   <Image src='/img/integration/gallagher/smart-card3.png' width={800} alone />
+
+4. Ahora busca al usuario en la pantalla de búsqueda de usuarios; a quien deseas aplicar la tarjeta inteligente y **presiona** el botón editar para ver los detalles del usuario.
+
+   <Image src='/img/integration/gallagher/smart-card4.png' width={800} alone />
+
+5. Ahora, para asignar la tarjeta inteligente, debes asignar una tarjeta desde el codificador en Gallagher dentro de la pestaña de tarjetas del titular.
+
+   <Image src='/img/integration/gallagher/smart-card5.png' alone />
+
+6. Después de presionar el botón, puedes ver el número de tarjeta; ahora debes **presionar** Guardar en Gallagher y verás la tarjeta recién asignada.
+
+   <Image src='/img/integration/gallagher/smart-card6.png' alone />
+
+7. Ahora, dentro de la tabla de detalles del usuario, **ve** a la sección de tarjetas y **presiona** el botón Use AOC para asignar una tarjeta inteligente al usuario.
+
+   :::info
+
+   Para asignar una tarjeta inteligente (AOC) al usuario, el usuario debe tener datos biométricos.
+
+   :::
+
+   <Image src='/img/integration/gallagher/smart-card7.png' width={800} alone />
+
+8. Ahora **selecciona** el dispositivo que usarás para AOC y **usa** el mismo número para la ID de tarjeta que obtuvimos al asignarla desde el codificador. **Selecciona** la plantilla facial y **elige** una imagen de la pestaña de rostro visual. **Presiona** el botón write smart card.
+
+   <Image src='/img/integration/gallagher/smart-card8.png' width={800} alone />
+
+9. Ahora debes **escanear** la misma tarjeta en el dispositivo seleccionado para asignarla al usuario. Si no escaneas la misma tarjeta, obtendrás un mensaje de error; de lo contrario, escribirá la tarjeta para el usuario y borrará toda la información biométrica del usuario.
+
+   :::info
+
+   Solo puedes asignar un dato biométrico a la tarjeta inteligente (AOC) del usuario.
+
+   :::
+
+10. Para asignar la tarjeta inteligente con un usuario de huella dactilar, el usuario debe tener una huella dactilar; el usuario puede asignar hasta 2 huellas dactilares por tarjeta. Dentro de la sección de tarjetas del usuario, **presiona** el botón Use AOC y selecciona el dispositivo, **usa** el mismo número para la ID de tarjeta que obtenemos al asignar una tarjeta desde el codificador. **Selecciona** las huellas dactilares que deseas usar para la tarjeta inteligente. **Presiona** el botón write smart card.
+
+    <Image src='/img/integration/gallagher/smart-card9.png' width={800} alone />
+
+11. Ahora debes **escanear** la misma tarjeta en el dispositivo seleccionado para asignarla al usuario. Si no escaneas la misma tarjeta, obtendrás un mensaje de error; de lo contrario, escribirá la tarjeta para el usuario y borrará toda la información biométrica del usuario.
+
+## Tarjeta HID ICLASS
+
+1. Si quieres usar la opción de tarjeta HID ICLASS, ve a la configuración del dispositivo, **presiona** el botón **Configuración**, y dentro de Device Management **selecciona** el dispositivo que deseas configurar y **selecciona** la opción Wiegand Settings; luego desplázate hacia abajo y busca la configuración de Wiegand.
+
+   <Image src='/img/integration/gallagher/hid-iclass-card1.png' width={800} alone />
+
+2. Ahora habilita la opción Wiegand Settings y **selecciona** las opciones ICLASS AND HID PROX. El formato Wiegand debe ser el mismo que el predeterminado seleccionado en el menú desplegable. **Presiona** el botón Apply para guardar los cambios.
+
+   :::info
+
+   Para usar la tarjeta Wiegand, el usuario debe tener al menos un dato biométrico.
+
+   :::
+
+   <Image src='/img/integration/gallagher/hid-iclass-card2.png' width={800} alone />
+
+3. Para usar la función, debes asignar la tarjeta al usuario. Ve al Command Center de Gallagher, presiona el botón asignar tarjeta, **selecciona** HID Seos Corporate, **ingresa** el número, **presiona** el botón OK y **presiona** Guardar.
+
+   <Image src='/img/integration/gallagher/hid-iclass-card3.png' alone />
+
+## Tarjeta de código QR
+
+Si quieres usar la opción de tarjeta de código QR, ve a la configuración **presionando** el botón **Configuración**, y dentro de Device Management, **selecciona** el dispositivo que deseas configurar. Luego, **selecciona** la opción QR Code Settings y **habilita** el uso de QR/Barcode mediante la configuración de la opción de cámara. **Presiona** el botón Apply para guardar los cambios.
+
+<Image src='/img/integration/gallagher/qr-code-card.png' width={800} alone />
+
+## Dispositivos con licencia
+
+Si necesitas revisar los dispositivos asociados con la **licencia**, debes ir a **Admin Management** en **configuración** y **hacer clic** en Licensed devices; luego debes **presionar** el botón de sincronización. Mostrará la lista de los dispositivos más recientes asociados con tu licencia.
+
+<Image src='/img/integration/gallagher/licensed-devices.png' alone />

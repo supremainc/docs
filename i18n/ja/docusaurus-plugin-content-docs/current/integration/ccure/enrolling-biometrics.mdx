@@ -1,0 +1,464 @@
+---
+id: enrolling-biometrics
+title: C•CURE 9000 からの生体認証登録
+description: RFID カード、指紋、顔を含む生体認証クレデンシャルの登録手順を、C•CURE 9000 での事前登録方法の管理も含めて、手順ごとに説明します。
+keywords:
+  - 生体認証登録
+  - 資格情報
+  - C•CURE 9000
+---
+
+Administration Workstation を開き、Personnel View で既存のユーザーをクリックするか、新規ユーザーを作成してください。
+
+<Image src='/img/integration/ccure/enrolling-biometrics1.png' width={800} alone />
+
+Personnel View を開いたら、下図のように **Suprema Biometrics Enrollment View** になっていることを確認してください。
+
+<Image src='/img/integration/ccure/enrolling-biometrics2.png' width={800} alone />
+
+Personnel View のタブの末尾にある Suprema タブを確認できます。
+
+<Image src='/img/integration/ccure/enrolling-biometrics3.png' width={800} alone />
+
+クリックすると、次の内容が表示されます：
+
+<Image src='/img/integration/ccure/enrolling-biometrics4.png' width={800} alone />
+
+右側のサイドパネルに、現在のユーザーの概要が表示されます。
+
+1. **ユーザーが新規の場合**、まだ C•CURE 9000 に保存されていません。この通知が表示され、バイオメトリクス データを登録する前にユーザーを保存するよう求められます。
+
+   <Image src='/img/integration/ccure/enrolling-biometrics5.png' width={800} alone />
+
+2. **ユーザーが Suprema デバイスで新規の場合**、ユーザーを保存して Suprema タブを開くと、次の内容が表示されます：
+
+   <Image src='/img/integration/ccure/enrolling-biometrics6.png' width={800} alone />
+
+   インテグレーション機能が Suprema デバイスとユーザーを同期している間は **Please wait** ダイアログが表示されます。処理が完了すると、次のような画面が表示されます：
+
+   <Image src='/img/integration/ccure/enrolling-biometrics7.png' width={800} alone />
+
+   新規作成したユーザーなのでテンプレートは表示されません。では、テンプレートを作成します。
+
+   最初の手順は、Credentials タブから RFID クレデンシャルを追加することです。
+
+   <Image src='/img/integration/ccure/enrolling-biometrics8.png' width={800} alone />
+
+   少なくとも次の項目を設定してください：
+
+   1. カード番号。
+
+   2. Facility Code。
+
+   3. 有効化日時。
+
+   4. 有効期限日時。
+
+   これらの設定を少なくとも追加したら、Suprema タブに移動する前に **Save** ボタンをクリックしてください。
+
+   新しく追加した情報が Suprema デバイスに転送されます。
+
+   <Image src='/img/integration/ccure/enrolling-biometrics9.png' width={800} alone />
+
+   処理時間は、情報の同期先デバイス数に応じて、数秒の一部からそれ以上まで変わります。しばらくお待ちください。
+
+   処理が完了すると、情報ボックスが表示されます。
+
+   <Image src='/img/integration/ccure/enrolling-biometrics10.png' alone />
+
+   User Details のサイドパネルで、情報の更新を確認できます。
+
+   <Image src='/img/integration/ccure/enrolling-biometrics11.png' alone />
+
+   カードが複数ある場合は、C•CURE のクレデンシャル最大数に従い最大 5 枚まで、次の内容が表示されます：
+
+   <Image src='/img/integration/ccure/enrolling-biometrics12.png' alone />
+
+   :::info
+
+   このインテグレーション機能の _Basic_ 版は、Personnel の Credentials プールにある最初の利用可能なカードのみを同期します。
+
+   :::
+
+   これで、現在のユーザーに生体認証を登録できます：
+
+   <Image src='/img/integration/ccure/enrolling-biometrics13.png' alone />
+
+   前の画像のとおり、RFID カード、指紋、顔クレデンシャルの登録オプションがあります。
+
+   いずれかを選択すると、画面に各クレデンシャル種別の動的パネルが表示されます。参考：
+
+   <Image src='/img/integration/ccure/enrolling-biometrics14.png' className='none' width={1000} alone />
+
+   クレデンシャルの種類を選択すると、インテグレーション機能がデバイスの機能に応じて分類し、選択したクレデンシャル種別を処理できるデバイスのみを表示します。 例：
+
+   <Image src='/img/integration/ccure/enrolling-biometrics15.png' className='none' width={1000} alone />
+
+   デバイスを選択すると、各パネルのオプションが有効になり、次へ進めます。
+
+   :::info
+
+   クレデンシャルの種類を選択すると、インテグレーション機能は選択したクレデンシャルを処理できるデバイスのみを選択します。該当デバイスがない場合は、次のメッセージが表示されます。
+
+   <Image src='/img/integration/ccure/enrolling-biometrics16.png' alone />
+
+   :::
+
+## カードのスキャン
+
+Suprema デバイスはマルチテクノロジーです。そのため、少なくとも次の特性のカードを読み取れます：EM (125KHz)、13.56MHz の MIFARE、MIFARE Plus、DESFire EV1/EV2、FeliCa。
+
+別のデバイスセットでは、125KHz の EM に加えて HID Prox、iCLASS SE/SR/SEOS もサポートしています。
+
+お使いの Suprema デバイスが対応する RF について不明な点がある場合は、https://www.supremainc.com/en/hardware/security-products-lineup.asp のデバイスマニュアルを確認してください。
+
+カードをスキャンすると、次の詳細が表示されます：
+
+<Image src='/img/integration/ccure/scanning-card1.png' alone />
+
+**Card Format** には、リーダーが自動認識したフォーマットが表示されます。
+
+**Card-on-Screen-design** には、Facility Code + Card Number の形式のカードシリアル（ダッシュ区切り）が表示され、カードにシリアル番号が物理的に印字されていない場合でも、Credentials タブからのカード登録を সহজにします。
+
+_Card Format_ に表示される認識済みフォーマットは、Card Formats and Keys 設定メニューで選択したカードフォーマットと、登録予定のカードが互換性があるか確認する際にも役立ちます。
+
+:::info
+
+**Enroll Card** ボタンをクリックした後、Suprema タブでの変更を C•CURE に反映させるために、Personnel ウィンドウ上部の **Save** ボタンをクリックしてください。
+
+:::
+
+カードの登録後は、User Summary の下にある Card Templates をダブルクリックして、クレデンシャルの表示または削除ができます：
+
+<Image src='/img/integration/ccure/scanning-card2.png' alone />
+
+Credentials の下に表示されている Card をダブルクリックすると、**Card-on-Screen-design** にカードが表示されます。
+
+<Image src='/img/integration/ccure/scanning-card3.png' width={800} alone />
+
+### カードの削除
+
+ここから Suprema デバイスのカードを削除する場合は、**Delete** ボタンをクリックしてください。警告メッセージが表示されます。Suprema デバイスの User プロファイルからカードを削除する場合は **Yes** をクリックし、そうでない場合は **No** をクリックしてください。
+
+<Image src='/img/integration/ccure/delete-credential.png' alone />
+
+:::info
+
+このクレデンシャルをユーザープロファイルから削除し、そのユーザーのプロファイルに別のカードがない場合、または（_Basic_ 版の場合）別のカードに置き換えない場合、インテグレーション機能は Personnel Credentials に保存された最後のカードに置き換えます。両方からクレデンシャルを削除すると、iStar パネルでの認証にエラーが発生する可能性があります。
+
+:::
+
+## 指紋のスキャン
+
+指紋認証率を向上させるには、指紋を正しく登録してください。 Suprema デバイスは、ユーザーの指紋入力の角度や位置が変わっても指紋を認識できます。 次の点に注意して指紋を登録すると、認証率を向上できます。
+
+Enrollment Minimum Quality は、指が他人と区別できる十分な品質であることを保証します。 より良い認証のため、90 以上の値を推奨します。ただし、指紋の認識で問題がある場合は、少し下げてもかまいません。
+
+<Image src='/img/integration/ccure/scanning-fingerprints1.png' alone />
+
+画面とデバイスのメッセージに注意してください。画面には次のメッセージ付きアニメーションが表示されます：
+
+<div className='grid-container'>
+<Image src='/img/integration/ccure/scanning-fingerprints2.png' alone />
+<Image src='/img/integration/ccure/scanning-fingerprints3.png' alone />
+</div>
+
+画面のメッセージでセンサーに指を置くよう求められます。1 回目のスキャンが完了すると、メッセージが変わり、もう一度指を置くよう求められます。
+
+各スキャン完了時に、テンプレートとスキャンイベントの実際の品質結果が画面に表示されます：
+
+<Image src='/img/integration/ccure/scanning-fingerprints4.png' alone />
+
+インテグレーション機能は、次の処理のために指を 2 回スキャンするよう求めます：
+
+**実施する検証：**
+
+1. スキャン結果は Enrollment Minimum Quality を満たしていますか? この検証は各スキャンで実行され、最小品質を満たさない場合は失敗します。
+
+   <Image src='/img/integration/ccure/verifications-made1.png' alone />
+
+   セキュリティ上の理由から、現在取得した情報はリセットされ、生体認証データとして明確で適合したデータになります。
+
+2. 同じ指が 2 回スキャンされましたか? そうでない場合は検証に失敗します。
+
+   <Image src='/img/integration/ccure/verifications-made2.png' alone />
+
+3. その指はすでに登録されていますか? その指が同一ユーザーまたは別ユーザーにすでに登録されている場合、検証に失敗します。
+
+   <Image src='/img/integration/ccure/verifications-made3.png' alone />
+
+4. 上記の条件を満たすと、**Enrollment** ボタンが有効になり、この指を現在のユーザーに登録できます。
+
+   <Image src='/img/integration/ccure/verifications-made4.png' alone />
+
+続いて **Enroll Finger** ボタンが有効になります。
+
+<div className='grid-container'>
+<Image src='/img/integration/ccure/verifications-made5.png' alone />
+<Image src='/img/integration/ccure/verifications-made6.png' alone />
+</div>
+
+警告メッセージが表示され、**Yes** をクリックすると、データはすぐに Suprema デバイスに送信され、直ちに利用可能になります。 **No** をクリックすると、ダイアログを閉じます。
+
+処理が終了すると、確認メッセージが表示されます。
+
+<Image src='/img/integration/ccure/verifications-made7.png' alone />
+
+指紋の登録後は、User Summary の下にある Fingerprint Templates をダブルクリックして、クレデンシャルの表示または削除ができます：
+
+<Image src='/img/integration/ccure/verifications-made8.png' alone />
+
+Credentials の下に表示されている Finger Template をダブルクリックすると、テンプレートが **Fingerprints** パネルに表示されます。
+
+<Image src='/img/integration/ccure/verifications-made9.png' width={800} alone />
+
+### 指紋の削除
+
+ここから Suprema デバイスのユーザープロファイルから指紋を削除する場合は、**Delete** ボタンをクリックしてください。警告メッセージが表示されます。Suprema デバイスの User プロファイルからクレデンシャルを削除する場合は **Yes** をクリックし、そうでない場合は **No** をクリックしてください。
+
+<Image src='/img/integration/ccure/delete-credential.png' alone />
+
+**各ユーザーに追加できる指紋の数は?**
+
+ユーザーの手の 10 本の指紋をユーザープロファイルに追加できます。人差し指、中指、親指が登録手順で一般的に使用されますが、10 本すべての登録を試してかまいません。
+
+<Image src='/img/integration/ccure/delete-fingerprint.png' alone />
+
+画面で各テンプレートをダブルクリックすると、指紋パネルに表示されます。そこから、前の節で説明したとおり編集できます。
+
+### 指紋登録方法
+
+1. LCD 画面に「センサーに指を置いてください。」というメッセージが表示されたら、登録したい指紋の指を指紋認証ユニットに置き、認証精度を高めるため軽く押さえてください。
+
+   <Image src='/img/device/fingerprint-register.svg' className='none' alone />
+
+2. ビープ音の後に再入力画面が表示されたら、登録した指の指紋をもう一度スキャンしてください（登録対象の指紋を 2 回スキャンします）。
+
+:::info
+
+指紋のスキャンと登録の際に留意すべき推奨事項と注意事項があります。
+
+指紋が認識されると、最初に登録した指紋と比較されます。そのため、最初の指紋登録が最も重要です。 指紋を登録するときは、次の点に注意してください。
+
+- 指先を十分奥まで入れ、センサー全体に完全に接触させてください。
+
+- 指紋の中心をセンサーの中心に合わせてください。
+
+- 指に傷がある場合や指紋が不鮮明な場合は、別の指の指紋を選択してください。
+
+- 画面の指示に従い、動かさずに正しく指紋をスキャンしてください。
+
+- 指を立ててセンサーとの接触面を減らしたり、指の角度を曲げたりすると、指紋認証が実行されない場合があります。
+
+<Image src='/img/device/fingerprint-authentication.svg' className='none' alone />
+
+Suprema デバイスは、季節や指の状態が変わっても指紋を認識できます。
+
+ただし、認証率は外部環境や指紋入力方法によって変わる場合があります。 指紋認証がスムーズに行えない場合は、次の対策を推奨します。
+
+- 指が水や汗で濡れている場合は、指を拭いてからスキャンしてください。
+
+- 指が乾燥しすぎている場合は、指先に息を吹きかけてからスキャンしてください。
+
+- 指に傷がある場合は、別の指の指紋を登録してください。
+
+- 最初に登録した指紋は正しくスキャンされていないことがあります。上記の推奨事項に従って、もう一度指紋を登録してください。
+
+:::
+
+## 顔クレデンシャルの操作
+
+### 顔のスキャン
+
+対応デバイスを選択すると、**Scan Face** ボタンが有効になり、そのデバイスから顔をスキャンできます。
+
+<Image src='/img/integration/ccure/scanning-face1.png' alone />
+
+**Scan Face** ボタンをクリックすると、アニメーション付きで次のメッセージが表示され、次の操作を求められます：
+
+<Image src='/img/integration/ccure/scanning-face2.png' alone />
+
+一定時間内にデバイスの前に顔が提示されない場合、次のメッセージが表示されます。
+
+<Image src='/img/integration/ccure/scanning-face3.png' alone />
+
+一方、人物がデバイスの前にいる場合は、その顔がキャプチャされ、パネルに表示されます：
+
+<Image src='/img/integration/ccure/scanning-face4.png' alone />
+
+**Enroll Face** ボタンが有効になり、顔の登録を続行できることがわかります。
+
+処理が終了すると確認ダイアログが表示されます。続行するには **OK** をクリックしてください：
+
+<Image src='/img/integration/ccure/scanning-face5.png' alone />
+
+右側のサイドパネルにある User Details パネルの更新が確認できます。
+
+<Image src='/img/integration/ccure/scanning-face6.png' alone />
+
+Visual Face の登録に関する一般的なガイドラインを確認してください：
+
+<Image src='/img/integration/genetec/face-enrollment.png' width={800} alone />
+
+:::info
+
+これらのガイドラインは、デバイスから直接顔をスキャンする場合と、事前登録用に顔写真をアップロードする場合の両方に適用されます。
+
+:::
+
+### 事前登録
+
+_Advanced_ 版では、顔クレデンシャル パネルで **Pre-Enroll** ボタンをクリックします。
+
+<Image src='/img/integration/ccure/pre-enrollment-button.png' alone />
+
+次のメニューが表示されます。
+
+<Image src='/img/integration/ccure/pre-enrollment1.png' alone />
+
+- 事前登録用に画像をアップロードします。
+
+  <Image src='/img/integration/ccure/upload-from-file-button.png' alone />
+
+これは非対面での登録オプションの 1 つです。 **Upload from File** ボタンをクリックすると、ファイル選択ダイアログが表示され、登録予定の人物の画像を選択できます。
+
+<Image src='/img/integration/ccure/pre-enrollment2.png' alone />
+
+登録予定の人物の画像を選択し、**Open** をクリックします。
+
+選択した画像に顔が含まれていることを確認してください。そうでない場合、処理は続行されず、次のメッセージが表示されます：
+
+<Image src='/img/integration/ccure/pre-enrollment3.png' alone />
+
+例として、画像は正面を向いた無表情で、顔が隠れていない人物のものにしてください。
+
+<Image src='/img/integration/ccure/pre-enrollment4.png' alone />
+
+事前登録処理を成功させるには、次の条件を考慮してください。
+
+- 解像度：250 x 250 ピクセル超
+
+- 画像サイズ：最大 10 MB
+
+- 対応形式：JPG、JPEG、PNG のみ
+
+画像を読み込むと、顔の位置を自動認識する切り抜き矩形が表示されます。まだ完全に選択されていない場合は、顔領域の選択を補助してください。
+
+<Image src='/img/integration/ccure/pre-enrollment5.png' alone />
+
+画像をダブルクリックして切り抜き手順を完了します。
+
+<Image src='/img/integration/ccure/pre-enrollment6.png' alone />
+
+顔画像をダブルクリックすると、顔が自動的に拡大されて領域いっぱいに表示されます。さらに、**Enroll Face** ボタンが有効になり、顔の登録を完了できます。
+
+処理が終了すると確認メッセージが表示されます。
+
+<Image src='/img/integration/ccure/scanning-face5.png' alone />
+
+顔の登録後は、User Summary の下にある Facial Templates をダブルクリックして、クレデンシャルの表示または削除ができます：
+
+<Image src='/img/integration/ccure/pre-enrollment7.png' alone />
+
+Credentials の下に表示されている Face Template をダブルクリックすると、テンプレートが **Facial** パネルに表示されます。
+
+<Image src='/img/integration/ccure/pre-enrollment8.png' alone />
+
+### メール送信
+
+<Image src='/img/integration/ccure/send-by-email-button.png' alone />
+
+これは非対面での顔登録の 2 つ目のオプションです。このオプションでは、メールで安全な事前登録リンクを送信できます。ユーザーはそこで自分の写真を撮影し、その事前登録データをリアルタイムで顧客サーバーへ返送できます。そのため、ユーザーが初めて顧客施設を訪れた際に、生体認証で認識されます（C•CURE/BioStar 2 間で事前に設定したアクセス制御ポリシーに依存します）。
+
+検証後、ユーザープロファイルにメールアドレスが登録されていない場合は、事前登録リンクを送信する前にメールアドレスを登録する次のパネルが表示されます。
+
+<Image src='/img/integration/ccure/send-by-email1.png' alone />
+
+:::info
+
+入力したデータが有効なメールアドレスであることをインテグレーション機能が検証します。 検証後、インテグレーション機能は新しく入力したデータを BioStar 2 と C•CURE に保存します。Personnel View ウィンドウを閉じる前に必ず **Save** を押してください。
+
+:::
+
+メールアドレスを入力すると、次の通知が表示されます。続行するには **Yes**、キャンセルするには **No** をクリックしてください。
+
+<Image src='/img/integration/ccure/send-by-email2.png' alone />
+
+**Yes** をクリックした場合、インテグレーション機能は事前登録リンクを送信する前にもう 1 回確認を実行し、この機能に必要なすべての設定を検証します。
+
+未設定の項目がある場合、次のウィンドウが表示されます：
+
+<Image src='/img/integration/ccure/send-by-email3.png' alone />
+
+続行前に確認または設定が必要な機能を示します。
+
+すべて設定済みの場合は、すべて正常に実行されたことを示す確認通知が表示されます。
+
+<Image src='/img/integration/ccure/send-by-email4.png' alone />
+
+#### C•CURE プロファイル画像を使用
+
+このオプションを有効にし、ユーザープロファイルに顔クレデンシャルがない場合、Personnel View を開くと、インテグレーション機能がそのプロファイル画像を使って顔の事前登録クレデンシャルを自動的に作成しようとします。
+
+インテグレーション機能は AI アルゴリズムを使って画像を解析し、人の顔があるかを確認します。ない場合は画像を拒否します。 人の顔がある場合は、続いて追加の確認を実行し、人物画像が最低要件を満たすかどうかを判断します。 満たしている場合、その画像を顔の事前登録クレデンシャル作成の入力として使用します。
+
+Integration Configuration Tool で **Use C•CURE Personnel Images (for Facial Pre-enrollment)** オプションが有効でない場合、Pre-Enrollment メニューのみが表示されます。
+
+<Image src='/img/integration/ccure/profile-image1.png' alone />
+
+有効化または無効化するには、**Integration Configuration Tool** → **Users menu** に移動してください：
+
+<Image src='/img/integration/ccure/profile-image2.png' width={500} alone />
+
+次の通知が表示されます：
+
+<Image src='/img/integration/ccure/profile-image3.png' alone />
+
+続行するには **Accept**、そうでない場合は **Cancel** をクリックしてください。
+
+オプションを有効にした場合は、Personnel View に戻り、Personnel プロファイルを開いて、Pre-Enrollment メニュー下に追加されたオプションを確認できます：
+
+<Image src='/img/integration/ccure/pre-enrollment1.png' alone />
+
+**Use C•CURE Profile Image** ボタンをクリックすると、インテグレーション機能が C•CURE プロファイル画像の解析処理を実行し、前述の要件を満たしていれば、有効な顔の事前登録クレデンシャルを作成します。
+
+### 顔の削除
+
+ここから Suprema デバイスの User プロファイルから顔を削除する場合は、**Delete** ボタンをクリックしてください。警告メッセージが表示されます。Suprema デバイスの User プロファイルからクレデンシャルを削除する場合は **Yes** をクリックし、そうでない場合は **No** をクリックしてください。
+
+<Image src='/img/integration/ccure/delete-credential.png' alone />
+
+**各ユーザーに追加できる顔の数は?**
+
+ユーザーごとに 1 件の顔記録を登録または事前登録できます（BioStar 2 経由なら 2 件）。これは、FaceStation F2 と BioStation 3 に実装された Deep Learning アルゴリズムが非常に高精度であり、最も重要な機能は自己学習アルゴリズムが、その名のとおり、顔の変化を自ら学習できることです。たとえば、マスクの有無、メガネ、ひげ、口ひげです。
+
+ただし、Suprema の Fusion Matching アルゴリズムは市場最高水準でも、顔の特徴が露出していないヘルメット着用者を認識するような不可能な処理はできません。
+
+<Image src='/img/integration/ccure/delete-face.png' alone />
+
+画面で種類ごとの各テンプレートをダブルクリックすると、それぞれのパネルに表示されます。そこから、前の節で説明したとおり編集できます。
+
+:::info
+
+これらの変更はオンラインで実行され、Suprema デバイスに直ちに反映されます。必ず正しい変更を行ってください。そうでないと、誤って人のアクセスを禁止する可能性があります。
+
+:::
+
+## その他
+
+Suprema タブの下部パネルにヘルパー セクションがあります。
+
+<Image src='/img/integration/ccure/miscellaneous1.png' alone />
+
+ここでは、ログ情報を確認でき、Suprema サービスからの変更や応答も確認できます。
+
+初回実行時、またはライセンスが正しく検証されていない場合、あるいは Suprema - C•CURE Integration Service が実行されていない場合は、次の内容が表示されます。
+
+<div className='grid-container'>
+<Image src='/img/integration/ccure/miscellaneous2.png' width={600} alone />
+<Image src='/img/integration/ccure/miscellaneous3.png' alone />
+</div>
+
+ライセンスの検証状態またはサービスの実行状態を確認するまで、このインテグレーション機能は使用できません。
+
+ライセンスが正しく検証されているのにこのエラーが引き続き表示される場合は、Personnel View を閉じて再度開いてください。解決しない場合は、Troubleshooting の 2 番を参照してください。

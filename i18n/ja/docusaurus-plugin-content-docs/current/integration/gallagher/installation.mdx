@@ -1,0 +1,331 @@
+---
+id: installation
+title: インストール
+description: Suprema Integration と Gallagher のステップごとのインストールガイド。前提条件、Gallagher Command Centre、BioStar 2、ミドルウェアのセットアップを説明します。
+keywords:
+  - インストール
+  - 前提条件
+  - BioStar 2
+---
+
+## 前提条件
+
+Suprema Integration と Gallagher を使用するには、次の前提条件が必要です。 Suprema Integration と Gallagher をインストールする前に、サポート条件を確認してください。
+
+<Table className='table-fixed'>
+<Thead>
+<Row>
+
+<Th colspan='2'>前提条件</Th>
+
+</Row>
+</Thead>
+<Tbody>
+<Row>
+
+<Td colspan='2'>Microsoft Windows 10（x64）以降</Td>
+
+</Row>
+
+<Row>
+
+<Td>Web ブラウザー</Td>
+<Td>新しい Microsoft Edge</Td>
+
+</Row>
+
+<Row>
+
+<Td>Gallagher Command Centre</Td>
+<Td>Command Center 8.80 以降</Td>
+
+</Row>
+<Row>
+
+<Td>Suprema BioStar 2</Td>
+<Td>
+
+- x64 ビット
+
+- バージョン 2.9.5 以降
+
+</Td>
+
+</Row>
+<Row>
+
+<Td>ソフトウェア</Td>
+<Td>
+
+- Node v16.17.0
+
+- Postgresql v14.5
+
+- pgAdmin 4 v6.16
+
+- Win64OpenSSL-3.0.5
+
+</Td>
+
+</Row>
+<Row>
+
+<Td>ミドルウェアシステムのハードウェア要件</Td>
+<Td>
+
+- 16 GB RAM
+
+- Windows 10 以降
+
+- 256 GB SSD / 1 TB HDD
+
+- Intel Iris Xe Graphics（あれば望ましい）
+
+</Td>
+
+</Row>
+<Row>
+
+<Td>Suprema 生体認証デバイス</Td>
+<Td>
+
+- BioStation 3
+
+- BioLite N2
+
+- FaceStation F2
+
+- BioEntry W2
+
+- XPass 2
+
+- X-Station 2
+
+- BioEntry W3
+
+</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+## 設定フローチャート
+
+<Image src='/img/integration/gallagher/configuration-flowchart.svg' className='none' width={300} alone />
+
+## ハードウェア配線接続
+
+### Wiegand 接続用
+
+Suprema デバイス - **リーダー 1** を HBUS 4 In 2Out n Door Module Wiegand に接続
+
+<div className='overflow-x table-fixed'>
+| （Suprema デバイス）配線名 | HBUS 4 In 2 Out Door Module<br/>Wiegand ポートのコネクター |
+| -- | -- |
+| Wiegand D0 Out（緑） | R1 Data 0 |
+| Wiegand D1 Out（白） | R1 Data 1 |
+| Wiegand Ground（黒） | GND |
+| TTL IN0（赤/紫） | R1 Out 2 |
+| TTL IN1（黄/茶） | R1 Out 1 |
+</div>
+
+<br/>
+
+Suprema デバイス - **リーダー 2** を HBUS 4 In 2Out n Door Module Wiegand に接続
+
+<div className='overflow-x table-fixed'>
+| （Suprema デバイス）配線名 | HBUS 4 In 2 Out Door Module<br/>Wiegand ポートのコネクター |
+| -- | -- |
+| Wiegand D0 Out（緑） | R2 Data 0 |
+| Wiegand D1 Out（白） | R2 Data 1 |
+| Wiegand Ground（黒） | GND |
+| TTL IN0（赤/紫） | R2 Out 2 |
+| TTL IN1（黄/茶） | R2 Out 1 |
+</div>
+
+<br/>
+
+HBUS 4 In 2Out n Door Module Wiegand から Controller 6000 HBus へ接続
+
+<div className='overflow-x table-fixed'>
+| Controller 6000 | HBUS 4 In 2 Out Door<br/>Module Wiegand |
+| -- | -- |
+| H1 A | COM A |
+| H1 B | COM B |
+| Vout -ve | GND |
+| Vout +ve | Vin |
+</div>
+
+#### Wiegand 接続図
+
+<Magnify src='/img/integration/gallagher/wiegand-connection-diagram.png' width={700} zoomFactor={.3} mgWidth={500} mgHeight={500} alone />
+
+### OSDP 接続用
+
+Suprema デバイス OSDP/RS485 **リーダー 1** を Controller 6000 に接続
+
+<div className='overflow-x table-fixed'>
+| （Suprema デバイス/OSDP デバイス）<br/>配線名 | Controller 6000 ポート |
+| -- | -- |
+| 青 / 白線入り青 | RS485 1 A |
+| 黄 / 黒線入り黄 | RS485 1 B |
+| 黒 / 白線入り黒 | RS485 1 -ve |
+</div>
+
+<br/>
+
+Suprema デバイス OSDP/RS485 **リーダー 2** を Controller 6000 に接続
+
+<div className='overflow-x table-fixed'>
+| （Suprema デバイス/OSDP デバイス）<br/>配線名 | Controller 6000 ポート |
+| -- | -- |
+| 青 / 白線入り青 | RS485 2 A |
+| 黄 / 黒線入り黄 | RS485 2 B |
+| 黒 / 白線入り黒 | RS485 2 -ve |
+</div>
+
+#### OSDP 接続図
+
+<Magnify src='/img/integration/gallagher/osdp-connection-diagram.png' width={800} zoomFactor={.3} mgWidth={500} mgHeight={500} alone />
+
+## 前提ソフトウェアをインストールする
+
+### Gallagher Command Centre のセットアップをインストールする
+
+:::info
+
+- セットアップと設定中は、名前やパスワードを変更しないでください。
+
+- Suprema Integration with Gallagher のバージョンをアップグレードする場合は、[ここをクリック](troubleshooting)してください。
+
+- 新規インストールの場合は、**3C4643 Gallagher Command Centre vEL8.80 Release Note** を参照してください。
+
+- アップグレードする場合は、Command Centre の ISO ディレクトリにある Release Notes フォルダーの **3E0068 Upgrade Procedure** を参照してください。
+
+- `Suprema integration With Gallagher.zip` を `C:\Program Files\` に展開してください。
+
+:::
+
+1. Gallagher Command Centre フォルダー vEL.8.80（以降）→ Setup.exe で、**チェックボックスをオンにして** **Next** ボタンを押します。
+
+   <Image src='/img/integration/gallagher/installation-gallagher1.png' width={500} alone />
+
+2. **「…」** ボタンをクリックし、セットアップに含まれるライセンスファイルを指定します。
+
+   <Image src='/img/integration/gallagher/installation-gallagher2.png' width={500} alone />
+
+   <Image src='/img/integration/gallagher/installation-gallagher3.png' width={800} alone />
+
+3. 正しいライセンスファイルを選択すると、アイコンがチェックマークに変わります。次に、**Next** ボタンを押します。
+
+   <Image src='/img/integration/gallagher/installation-gallagher4.png' width={500} alone />
+
+4. サブネットのチェックボックスだけを**オフにして**、**Next** ボタンを押します。
+
+   <Image src='/img/integration/gallagher/installation-gallagher5.png' width={500} alone />
+
+5. **Install new SQL** オプションを**選択して**、**Next** ボタンを押します。
+
+   <Image src='/img/integration/gallagher/installation-gallagher6.png' width={500} alone />
+
+6. データベーステンプレートをインストールしないを**選択します**。
+
+7. 設定を変更せずに、復旧コード画面が表示されるまで **Next** を押します。
+
+   :::info
+
+   エクスポートボタンをクリックして復旧コードを保存し、チェックボックスをオンにします。
+
+   :::
+
+   <Image src='/img/integration/gallagher/installation-gallagher7.png' width={500} alone />
+
+8. **Yes** を選択すると、インストールが開始されます。
+
+   <Image src='/img/integration/gallagher/installation-gallagher8.png' width={500} alone />
+
+9. インストールが完了したら、**Finish** ボタンを押します。
+
+   <Image src='/img/integration/gallagher/installation-gallagher9.png' width={500} alone />
+
+### BioStar 2 のインストール
+
+1. **BioStar 2.exe** を開き、言語を選択して使用許諾契約に同意し、**Next** を押します。
+
+   :::info
+
+   BioStar 2 の最新バージョンをダウンロードします - [ここをクリック](https://www.supremainc.com/download-center/pages/login.asp)。
+
+   :::
+
+   <Image src='/img/integration/gallagher/installation-biostar1.png' alone />
+
+2. BioStar 2 の **Password** を入力し、**Next** ボタンを押します。
+
+   <Image src='/img/integration/gallagher/installation-biostar2.png' alone />
+
+3. **Express** インストールを選択し、BioStar 2 のパスワードを再入力します。
+
+4. 場所を選択して続行します。
+
+   <Image src='/img/integration/gallagher/installation-biostar3.png' alone />
+
+5. コンポーネント選択画面が表示されるまで **Next** ボタンを押します。 両方のオプションをチェックして、**Next** ボタンを押します。
+
+   <Image src='/img/integration/gallagher/installation-biostar4.png' alone />
+
+6. **Install** ボタンを押してインストールを開始します。
+
+   <Image src='/img/integration/gallagher/installation-biostar5.png' alone />
+
+7. Install USB Device Agent のチェックボックスを**オフにして** **Finish** ボタンを押すと、BioStar 2 のインストールが完了します。
+
+   :::info
+
+   USB デバイスを使用する場合は、Install USB Device Agent を**チェック**してください。
+
+   :::
+
+   <Image src='/img/integration/gallagher/installation-biostar6.png' alone />
+
+### ミドルウェアの前提条件
+
+:::info
+
+- `Suprema Integration with Gallagher2.0.zip` を展開または実行する前に、ウイルス対策ソフトをオフにしてください。
+
+- 古いバージョンからアップグレードする場合は、トラブルシューティングガイドで解決方法を確認してください。
+
+:::
+
+1. `Suprema Integration with Gallagher 2.0` フォルダー内で、`Suprema Integration with Gallagher 2.0` ファイルを管理者として**実行する**必要があります。 これにより、OpenSSL、PostgreSQL、PgAdmin4、Node、 JS。 また、インテグレーションに必要な証明書を設定します。
+
+   <Image src='/img/integration/gallagher/installation-middleware-prerequisite1.png' alone />
+
+2. 不明な発行元からの許可を求められたら、**Yes** を押します。
+
+3. **OK** を押します。
+
+   <Image src='/img/integration/gallagher/installation-middleware-prerequisite2.png' alone />
+
+4. ソフトウェアをインストールできる状態になったら、**Install** を押します。
+
+   <Image src='/img/integration/gallagher/installation-middleware-prerequisite3.png' alone />
+
+5. 前提条件のインストールが開始され、ソフトウェアは自動的にインストールされます。
+
+   <Image src='/img/integration/gallagher/installation-middleware-prerequisite4.png' width={500} alone />
+
+6. 下のポップアップで **OK** を押します。
+
+   <Image src='/img/integration/gallagher/installation-middleware-prerequisite5.png' alone />
+
+7. 前提条件のインストールが完了したら、**Finish** を押します。
+
+   :::info
+
+   ミドルウェアをインストールした後は、システムを 1 回再起動してください。
+
+   :::
+
+   <Image src='/img/integration/gallagher/installation-middleware-prerequisite6.png' alone />

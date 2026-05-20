@@ -1,0 +1,733 @@
+---
+id: system-management
+title: システム管理
+description: システム要件、Suprema デバイスの登録と設定、Synergis Cloud Link の割り当て、および Genetec Security Center 連携用のドア ハードウェア設定を網羅します。
+keywords:
+  - システム設定
+  - 登録端末
+  - ドア設定
+---
+
+## システム設定
+
+### 前提条件
+
+#### ライセンス
+
+1. ソフトウェア ライセンス
+
+   1. Genetec 
+
+      - Security Center: 1ea.
+
+      - SDK 接続：GSC-1SDK-SUPREMA-READ（1 ライセンスで 2 接続をサポートします。）
+
+        1. Config Tool ログイン：2ea
+
+        2. Security Desk ログイン：1ea
+
+        3. Suprema extractor plugin: 1ea per **Genetec Security Center Server**
+
+        4. Suprema device plugin：**Suprema device plugin** ごとに 1ea
+
+           :::info
+
+           1 つの device plugin で最大 4 つの cloud link（256 台の Suprema デバイス）をサポートし、必要な数だけ Suprema Device Plugin を追加できます。
+
+           - サーバーごとに合計 3 個の GSC-1SDK-SUPREMA-READ が必要です。
+
+           :::
+
+   2. Suprema
+
+      - プラグイン ライセンス：INT_GEN_GSC
+
+2. デバイス ライセンス
+
+   1. Genetec
+
+      - GSC-Sy-X-1R(E)：ドアにリーダーとして割り当てた Suprema デバイスごとに 1ea。
+
+   2. Suprema
+
+      - サーバー ライセンスに ID が登録されたデバイスのみ、Plugin に登録できます。
+
+      - Sku：デバイス モデル - GEN.
+
+#### データベース
+
+1. SQL データベースの権限
+
+   Plugin（Device Plugin および Extractor DB）が正しく動作するよう、SQL アカウントに次の権限を付与してください：
+
+   1. サーバー ロール：
+
+      - db_creator
+
+      - processadmin
+
+      - public
+
+   2. データベース ロール：
+
+      - db_backupoperator
+
+      - db_datareader
+
+      - db_datawriter
+
+2. データベース サイズ要件
+
+   必要なデータベース容量は、生体データを登録したユーザー数によって異なります。 顔テンプレートを登録すると、Suprema Extractor Plugin は対応するテンプレートを生成し、データベースに保存します。
+
+   :::note
+
+   - 顔テンプレート 1 件あたり、約 104 KB のデータベース容量が必要です。
+
+   - 想定される生体ユーザー数に基づいて、十分な保存容量を割り当ててください。
+
+   :::
+
+   <Image src='/img/integration/genetec/database-size-requirements.png' alone />
+
+#### RIO プロトコル
+
+Plugin を正しく動作させるには、Synergis Cloud Link または Softwire で RIO プロトコルを有効にしてください。
+
+##### 手順
+
+1. 次の URL をブラウザーに入力します。
+
+   > `https://[Unit IP]/Features/DuiRIO/Enabled/Set?value=true`
+
+   <Image src='/img/integration/genetec/rio-protocol-login.png' alone />
+
+2. Synergis Cloud Link または Softwire にログインします。
+
+3. URL `http://[IPaddress]/Features/DuiRIO/Enabled/Set?value=true` をクリックします。
+
+   <Image src='/img/integration/genetec/rio-protocol-login-successful.png' alone />
+
+   :::note
+
+   RIO プロトコルを有効にすると、**Config Tool** → **Access Control** → **Cloud Link** の **Hardware** ページで **RIO** タブを使用できます。 
+
+   <Image src='/img/integration/genetec/rio-protocol-hardware.png' width={800} alone />
+
+   :::
+
+#### プロフィール画像の画質設定
+
+GSC で **カードホルダーのプロフィール画像から顔テンプレートを抽出** する場合は、画像品質を確保するために画像サイズを調整してください。
+
+- パス：**Config Tool** → **Access Control** → **General settings**
+
+  <Image src='/img/integration/genetec/profile-image-quality-setting.png' width={600} alone />
+
+#### デバイス設定
+
+1. デバイスからすべてのユーザーとログを削除します。
+
+2. デバイスを初期化します。
+
+3. ユーザー ID の種類を英数字に設定します。
+
+   :::info
+
+   **デバイス管理者のデフォルト IP と PW。**
+
+   - ID: su
+
+   - PW: 1234
+
+   PW は **Config Tool** → **Suprema Plugin Configuration** → **Superadmin Credential** ページで変更できます。
+
+   :::
+
+4. ネットワーク設定。
+
+   - DHCP をサポートします。
+
+   - サイト ポリシーに従って必要なネットワーク設定。
+
+5. ユーザー ID 種別設定。
+
+   Suprema plugin にデバイスを接続する前に、ユーザー ID の種類を英数字に設定する必要があります。
+
+## 登録端末
+
+1. **Config Tool** で、**Tasks** の下の **Plugins** をクリックします。
+
+   <Image src='/img/integration/genetec/config-tool-tasks-plugins.png' width={800} alone />
+
+2. **Suprema Device Plugin** をクリックします。
+
+   <Image src='/img/integration/genetec/suprema-device-plugin.png' alone />
+
+3. **Device Management** タブに移動します。
+
+   <Image src='/img/integration/genetec/device-management1.png' alone />
+
+4. **Search Device** ボタンをクリックします。 利用可能なデバイスがすべて表示されます。
+
+   Device Communication Mode が Device To Server に設定されている場合は、下のペインで **Refresh List** ボタンをクリックしてください。
+
+   <Image src='/img/integration/genetec/device-management2.png' width={600} alone />
+
+5. **Select** ボックスをオンにして追加するデバイスを選択し、**Add Devices** ボタンをクリックします。 すべてのデバイスを登録するには、**Add All Devices** ボタンをクリックします。
+
+   <Image src='/img/integration/genetec/device-management3.png' width={600} alone />
+
+## Device Sync Information の表示
+
+1. **Config Tool** で、**Tasks** の下の **Plugins** をクリックします。
+
+   <Image src='/img/integration/genetec/config-tool-tasks-plugins.png' width={800} alone />
+
+2. **Suprema Device Plugin** をクリックします。
+
+   <Image src='/img/integration/genetec/suprema-device-plugin.png' alone />
+
+3. **Device Sync Information** タブに移動します。
+
+   <Image src='/img/integration/genetec/device-sync-information1.png' alone />
+
+4. 接続中の Suprema デバイスの同期情報を確認できます。
+
+   <Image src='/img/integration/genetec/device-sync-information2.png' width={800} alone />
+
+   <Image src='/img/integration/genetec/device-sync-information3.png' width={800} alone />
+
+   <div className='overflow-x cols3--10-30-60'>
+   | No. | フィールド | 説明 |
+   | :--: | -- | -- |
+   | 1 | **Device ID** | Suprema デバイス ID を表示します。 |
+   | 2 | **Device Name** | Suprema デバイス名を表示します。 |
+   | 3 | **Online Status** | デバイスのネットワーク状態を表示します。<br/>- **True** / **False** |
+   | 4 | **Sync Status** | デバイスの同期状態を表示します。<br/>-	**Idle** /Cache loading/ Biometric downloading/ **Syncing** |
+   | 5 | **Device Model** | Suprema デバイスのモデルを表示します。 |
+   | 6 | **IP Address** | Suprema デバイスの IP アドレスを表示します。 |
+   | 7 | **Device Port** | Suprema デバイスのポートを表示します。 |
+   | 8 | **Device Firmware Version** | Suprema デバイスのファームウェア バージョンを表示します。 |
+   | 9 | **Failed Users** | 同期に失敗したユーザーを確認できます。 |
+   | 10 | **Doors (syncing / failed / total)** | ドアの同期状態を表示します。 |
+   | 11 | **Schedules (syncing / failed / total)** | スケジュールの同期状態を表示します。 |
+   | 12 | **Access Levels (syncing / failed / total)** | アクセス レベルの同期状態を表示します。 |
+   | 13 | **Access Groups (syncing / failed / total)** | アクセス グループの同期状態を表示します。 |
+   | 14 | **Users (syncing / failed / total)** | カードホルダーの同期状態を表示します。 |
+   | 15 | **Last Trigger Time** | デバイスとの同期が最後に開始された時刻です。 |
+   | 16 | **Last Success Time** | デバイスとの同期が最後に正常完了した時刻です。 |
+   </div>
+
+   :::info
+
+   各同期状態に表示される値は次のとおりです：
+
+   - **syncing**：現在デバイスと同期中の項目数。
+
+   - **failed**：デバイスとの同期に失敗した項目数。
+
+   - **total**：正常に同期された項目数。
+
+   :::
+
+## デバイス設定と情報の編集
+
+登録済みデバイスの設定と情報を編集できます。
+
+1. **Config Tool** で、**Tasks** の下の **Plugins** をクリックします。
+
+   <Image src='/img/integration/genetec/config-tool-tasks-plugins.png' width={800} alone />
+
+2. **Suprema Device Plugin** の左矢印を開き、登録済みデバイスを選択します。 **Device Settings** 領域が表示されます。
+
+   <Image src='/img/integration/genetec/suprema-device-plugin-settings.png' alone />
+
+3. 必要なオプションを設定し、下部の **Apply** ボタンをクリックして編集内容を適用します。
+
+## デバイス設定
+
+### 情報
+
+デバイスの名前とグループを入力または編集できます。 新しいファームウェア バージョンがある場合は、アップグレードできます。
+
+<Image src='/img/integration/genetec/device-settings-information.png' width={650} alone />
+
+<div className='overflow-x cols3--10-30-60'>
+| No. | フィールド | 説明 |
+| :--: | -- | -- |
+| <Num num='1' /> | **Name** | デバイス名を入力します。 |
+| <Num num='2' /> | **Description** | 製品名、ID、IP を表示します。 |
+| <Num num='3' /> | **Device ID** | デバイス ID を表示します。 |
+| <Num num='4' /> | **Firmware Version** | **Upgrade** をクリックして新しいファームウェア バージョンをインストールします。 |
+| <Num num='5' /> | **Kernel Version** | カーネル バージョンを表示します。 |
+| <Num num='6' /> | **Time Zone** | デバイスのタイムゾーンを設定します。 |
+| <Num num='7' /> | **Device Type** | デバイスの種類を表示します。 |
+| <Num num='8' /> | **Product Name** | モデル名を表示します。 |
+| <Num num='9' /> | **Hardware Version** | ハードウェア バージョンを表示します。 |
+| <Num num='10' /> | **Time Synchronization with Server** | デバイスの時刻情報をサーバーと同期するオプションを選択します。 |
+| <Num num='11' /> | **Display Date** | 表示時刻を表示します。 |
+| <Num num='12' /> | **Date Format** | 日付形式を選択します。 |
+| <Num num='13' /> | **Get Time** | ボタンをクリックして、デバイスに設定された時刻を取得します。 |
+</div>
+
+### ﾈｯﾄﾜｰｸ
+
+デバイスのネットワーク接続設定を構成できます。
+
+<Image src='/img/integration/genetec/device-settings-network.png' width={650} alone />
+
+<Table className='cols3--10-30-60 first--column--center'>
+<Thead>
+<Row>
+
+<Th>No.</Th>
+<Th>フィールド</Th>
+<Th>説明</Th>
+
+</Row>
+</Thead>
+<Tbody>
+<Row>
+
+<Td><Num num='1' /></Td>
+<Td>**TCP/IP**</Td>
+<Td>
+
+デバイスの TCP/IP 接続設定を構成できます。
+
+- **Use DHCP**：このオプションを選択すると、デバイスは動的 IP アドレスを使用します。 このオプションを選択すると、ネットワーク設定を入力できません。
+
+- **IP Address**、**Subnet Mask**、**Gateway**：デバイスのネットワーク設定を入力します。
+
+- **Device Port**：デバイスで使用するポートを入力します。
+
+- **DNS Server**：DNS サーバーのアドレスを入力します。
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='2' /></Td>
+<Td>**Server**</Td>
+<Td>
+
+サーバー モードで使用する接続設定を入力できます。
+
+- **Device → Server Connection**：デバイスへの接続設定を構成するには、このオプションを選択します。 このオプションを選択すると、サーバーのネットワーク設定を入力できます。
+
+- **Server Address**：サーバーの IP アドレスまたはドメイン名を入力します。
+
+- **Server Port**：サーバーのポート番号を入力します。
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='3' /></Td>
+<Td>**Serial**</Td>
+<Td>
+
+RS-485 で接続されたデバイスの接続モードとボー レートを設定できます。
+
+- **RS-485**：RS-485 モードを設定します。
+
+- **Baud Rate**：RS-485 接続のボー レートを設定します。
+
+</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+### 認証
+
+デバイスのユーザー認証設定を構成できます。
+
+#### 顔認証デバイス
+
+<Image src='/img/integration/genetec/device-settings-authentication1.png' width={850} alone />
+
+<Table className='cols3--10-30-60 first--column--center'>
+<Thead>
+<Row>
+
+<Th>No.</Th>
+<Th>フィールド</Th>
+<Th>説明</Th>
+
+</Row>
+</Thead>
+<Tbody>
+<Row>
+
+<Td><Num num='1' /></Td>
+<Td>**Auth Mode**</Td>
+<Td>
+
+デバイスの認証モードを構成できます。 指紋、ID、カード、PIN、顔を組み合わせて認証モードを設定できます。
+
+**+Add** をクリックし、利用可能なオプションをドラッグ アンド ドロップして認証モードを作成します。
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='2' /></Td>
+<Td>**Auth Timeout**</Td>
+<Td>
+
+**Auth Mode** で複数の Credential を組み合わせる場合、システムは 2 つ目の Credential の認証をこの時間待機します。
+
+1 つ目の Credential を認証した後、2 つ目の Credential の認証タイムアウトを設定します。 この時間内に 2 つ目の Credential を認証できない場合、認証は失敗します。
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='3' /></Td>
+<Td>**Full Access**</Td>
+<Td>
+
+アクセス グループを設定せずに、デバイスに登録されたユーザーにフル アクセスを付与できます。
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='4' /></Td>
+<Td>**Face**</Td>
+<Td>
+
+顔認証に関する詳細設定を構成できます。
+
+- **1:N Security Level**：顔認証で使用するセキュリティ レベルを設定できます。 セキュリティ レベルを高くすると、本人拒否率（FRR）は上がりますが、他人受入率（FAR）は下がります。
+
+- **Enrollment Time**：ユーザーの顔を登録するとき、設定時間内に顔が登録されない場合、顔登録はキャンセルされます。
+
+- **Motion Sensor**：デバイス付近の動きを検知する感度を設定します。
+
+- **Face Detect Setting**：顔認証時にユーザーの顔を認識する環境を設定します。
+
+  - **Maximum Head Pose Angle**：頭部の最大回転角度を設定します。
+
+  - **Detection Distance**：最小および最大の検知距離を設定します。
+
+  - **Wide Search**：**ON** にすると、カメラ画像全体で顔を検索します。
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='5' /></Td>
+<Td>**Use Suprema Handler**</Td>
+<Td>
+
+このオプションで、Suprema デバイスと Cloud Link 間の RIO 通信を有効または無効にします。
+
+- **Enable**：Suprema デバイスで生成されたイベントを、Plugin 経由で Cloud Link に送信します。
+
+- **Disable**：Suprema デバイスで生成されたイベントは Plugin に送信されません。
+
+**Suprema デバイスを Mercury コントローラーに接続するリーダーとして使用する場合** は、このオプションを無効にしてください。
+
+</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+#### 指紋認証デバイス
+
+<Image src='/img/integration/genetec/device-settings-authentication2.png' width={700} alone />
+
+<Table className='cols3--10-30-60 first--column--center'>
+<Thead>
+<Row>
+
+<Th>No.</Th>
+<Th>フィールド</Th>
+<Th>説明</Th>
+
+</Row>
+</Thead>
+<Tbody>
+<Row>
+
+<Td><Num num='1' /></Td>
+<Td>**Auth Mode**</Td>
+<Td>
+
+デバイスの認証モードを構成できます。 指紋、ID、カード、PIN、顔を組み合わせて認証モードを設定できます。
+
+**+Add** をクリックし、利用可能なオプションをドラッグ アンド ドロップして認証モードを作成します。
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='2' /></Td>
+<Td>**Auth Timeout**</Td>
+<Td>
+
+**Auth Mode** で複数の Credential を組み合わせる場合、システムは 2 つ目の Credential の認証をこの時間待機します。
+
+1 つ目の Credential を認証した後、2 つ目の Credential の認証タイムアウトを設定します。 この時間内に 2 つ目の Credential を認証できない場合、認証は失敗します。
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='3' /></Td>
+<Td>**Full Access**</Td>
+<Td>
+
+アクセス グループを設定せずに、デバイスに登録されたユーザーにフル アクセスを付与できます。
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='4' /></Td>
+<Td>**Fingerprint**</Td>
+<Td>
+
+指紋認証に関する詳細設定を構成できます。
+
+- **1:N Security Level**：指紋認証で使用するセキュリティ レベルを設定できます。 セキュリティ レベルを高くすると、本人拒否率（FRR）は上がりますが、他人受入率（FAR）は下がります。
+
+- **Scan Timeout**：ユーザーの指を登録するとき、設定時間内に指が登録されない場合、指の登録はキャンセルされます。
+
+- **Sensor Sensitivity**：指紋認識センサーの感度を設定します。 感度を高くすると、より精密な指紋情報を取得できます。
+
+- **1:N Fast Mode**：指紋認証の性能を設定できます。 **Auto** を選択すると、デバイスに登録されている指紋テンプレートの総数に応じて認証性能が自動的に設定されます。
+
+- **Template Format**：設定されている指紋テンプレート形式を確認できます。
+
+- **Matching Timeout**：指紋照合のタイムアウトを設定します。 指定時間内に認証が完了しない場合、失敗します。
+
+- **Fingerprint LFD**：[偽造指紋](../../reference/glossary#fake_fp) 検知のレベルを設定します。 偽造指紋検知レベルを高くすると、実際の指紋の拒否率も高くなる場合があります。
+
+- **Sensor Mode**：指紋センサーの動作モードを設定します。
+
+  - **Auto On**：ユーザーの指を認識して指紋センサーがオンになります。
+
+  - **Always On**：指紋センサーは常にオンのままです。
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='5' /></Td>
+<Td>**Use Suprema Handler**</Td>
+<Td>
+
+このオプションで、Suprema デバイスと Cloud Link 間の RIO 通信を有効または無効にします。
+
+- **Enable**：Suprema デバイスで生成されたイベントを、Plugin 経由で Cloud Link に送信します。
+
+- **Disable**：Suprema デバイスで生成されたイベントは Plugin に送信されません。
+
+**Suprema デバイスを Mercury コントローラーに接続するリーダーとして使用する場合** は、このオプションを無効にしてください。
+
+</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+### 高度な
+
+表示/サウンドと wiegand を設定できます。
+
+<Image src='/img/integration/genetec/device-settings-advanced.png' width={750} alone />
+
+<div className='overflow-x cols3--10-30-60'>
+| No. | フィールド | 説明 |
+| :--: | -- | -- |
+| <Num num='1' /> | **Language** | デバイスの表示言語を設定します。 |
+| <Num num='2' /> | **Device Volume** | デバイスの既定音量を制御します。 |
+| <Num num='3' /> | **Menu Timeout** | メニュー画面のタイムアウトを設定します。 |
+| <Num num='4' /> | **Intercom Speaker Volume** | Intercom 機能使用時のスピーカー音量を設定します。 |
+| <Num num='5' /> | **Intercom Microphone Volume** | Intercom 機能使用時のマイク音量を設定します。 |
+| <Num num='6' /> | **Backlight Timeout** | バックライトのタイムアウトを設定します。 |
+| <Num num='7' /> | **Msg. Timeout** | 各種メッセージが自動的に消えるまでのタイムアウト時間を設定します。 |
+| <Num num='8' /> | **Screen Saver** | スクリーン セーバー機能を使用するオプションを設定します。 デバイスを使用していないときに LCD 画面の明るさを下げ、不要な消費電力を抑えます。 |
+| <Num num='9' /> | **Use Voice** | 音声ガイダンスを有効にします。 |
+| <Num num='10' /> | **Sound** | 起動、認証成功、認証失敗イベントのサウンド効果を設定します。<br/>**Find** をクリックし、`*.wav` ファイル（500 KB 未満）を選択します。 |
+| <Num num='11' /> | **Input/Output** | 入出力モードを選択できます。 |
+| <Num num='12' /> | **Wiegand I/p Format** | Wiegand の形式を設定できます。 |
+| <Num num='13' /> | **Output Mode** | Wiegand 信号の出力モードを設定できます。 **Normal** に設定すると、カードは設定した Wiegand 形式でスキャンされます。 **ByPass** に設定すると、Wiegand 認証に関係なく CSN が送信されます。 入口ドア制御機能なしでデバイスを使用する場合は、**ByPass** を設定してください。<br/>**Normal** モードに設定すると、**Fail Code** を設定し、Wiegand カード認証が失敗したときに送信する値を選択できます。 |
+| <Num num='14' /> | **Pulse Width(μs)** | Wiegand 信号のパルス幅を設定できます。 |
+| <Num num='15' /> | **Pulse Interval(μs)** | Wiegand 信号のパルス間隔を設定できます。 |
+| <Num num='16' /> | **Output Info** | ユーザーが認証したときにデバイスへ出力する情報を選択できます。 |
+</div>
+
+### ﾏｽｸ
+
+マスク検出の詳細設定を構成できます。
+
+顔認証デバイスはマスクを検知し、マスク未着用のユーザーのアクセスを制限できます。
+
+<Image src='/img/integration/genetec/device-settings-mask.png' width={450} alone />
+
+<Table className='cols3--10-30-60 first--column--center'>
+<Thead>
+<Row>
+
+<Th>No.</Th>
+<Th>フィールド</Th>
+<Th>説明</Th>
+
+</Row>
+</Thead>
+<Tbody>
+<Row>
+
+<Td><Num num='1' /></Td>
+<Td>**Mask Detection**</Td>
+<Td>
+
+マスク検出を使用するかどうかを設定できます。 **Use (Deny access when failed to detect mask)** を選択すると、マスク未着用のユーザーの認証を拒否し、イベント ログを保存します。 **Use (Allow access after leaving log when failed to detect mask)** を選択すると、マスク未着用のユーザーも認証できますが、イベント ログは保存されます。
+
+</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='2' /></Td>
+<Td>**Mask Detect Level**</Td>
+<Td>マスク検出の感度を設定できます。</Td>
+
+</Row>
+
+<Row>
+
+<Td><Num num='3' /></Td>
+<Td>**Check Mode**</Td>
+<Td>
+
+- **Check after authentication**：認証後にユーザーがマスクを着用しているか確認します。
+
+- **Check before authentication**：ユーザーがマスクを着用しているか確認してから認証します。 このモードでは、マスクを着用していない場合はユーザー ID を認証しません。
+
+- **Check without authentication**：認証せずにユーザーがマスクを着用しているか確認します。 このモードを有効にすると、マスクを着用しているユーザーは認証に関係なくアクセスできます。
+
+</Td>
+
+</Row>
+</Tbody>
+</Table>
+
+### ｲﾝﾀｰﾌｫﾝ
+
+SIP Intercom の詳細設定を構成できます。
+
+<Image src='/img/integration/genetec/device-settings-intercom.png' width={750} alone />
+
+<div className='overflow-x cols3--10-30-60'>
+| No. | フィールド | 説明 |
+| :--: | -- | -- |
+| <Num num='1' /> | **SIP Server Address** | SIP サーバー アドレスを入力します。 |
+| <Num num='2' /> | **SIP Server Port** | SIP サーバー ポートを入力します。 |
+| <Num num='3' /> | **SIP Username** | SIP アカウントのユーザー名を入力します。 |
+| <Num num='4' /> | **Password** | SIP アカウントのパスワードを入力します。 |
+| <Num num='5' /> | **Authorization ID** | SIP アカウントの認証 ID を入力します。 |
+| <Num num='6' /> | **Registration Duration(sec)** | 登録維持時間を秒単位で入力します。 デバイス（SIP エンドポイント）は、設定した登録維持時間ごとに SIP サーバーへの登録を試みます。<br/>- 登録維持時間は 60〜600 秒に設定できます。 |
+| <Num num='7' /> | **Open Door Button(DTMF)** | 電話でドアを開けるボタンを設定します。 |
+| <Num num='8' /> | **Outbound Proxy Server** | SIP サービスに別の（アウトバウンド）プロキシ サーバーがある場合は、これを **Use** に設定します。 |
+| <Num num='9' /> | **Outbound Proxy Server Address** | アウトバウンド プロキシ サーバーのアドレスを入力します。 |
+| <Num num='10' /> | **Outbound Proxy Server Port** | アウトバウンド プロキシ サーバーのポートを入力します。 |
+| <Num num='11' /> | **Display Extension Number** | 画面に内線番号を表示したくない場合は、これを **Not Use** に設定します。 |
+| <Num num='12' /> | **Extension Number** | 最大 128 件の内線番号を登録します。 **Edit** をクリックして追加または削除します。<br/>- **Add**：内線番号を追加します。<br/>- **Delete**：内線番号を削除します。 |
+</div>
+
+## デバイスを Cloud Link に割り当てる
+
+1. **Config Tool** で、**Tasks** の下の **Access Control** をクリックします。
+
+   <Image src='/img/integration/genetec/config-tool-tasks-access-control.png' width={800} alone />
+
+2. 画面上部の **Manage Suprema Devices** タブに移動します。
+
+   <Image src='/img/integration/genetec/access-control-manage-suprema-devices1.png' alone />
+
+3. **Cloud Link Host**（IP アドレス）、**Cloud Link Username**（ID）、**Cloud Link Password** を入力し、**Validate Login** ボタンをクリックします。
+
+   <Image src='/img/integration/genetec/manage-suprema-devices2.png' alone />
+
+4. **View Devices To Add** ボタンをクリックします。
+
+   <Image src='/img/integration/genetec/manage-suprema-devices3.png' alone />
+
+5. **Select** ボックスをオンにして割り当てるデバイスを選択し、**Assign** または **Assign Selected** ボタンをクリックします。 すべてのデバイスを割り当てるには、**Assign All** ボタンをクリックします。
+
+   <Image src='/img/integration/genetec/manage-suprema-devices4.png' width={400} alone />
+
+## ドア設定
+
+1. **Config Tool** で、**Tasks** の下の **Area view** をクリックします。
+
+   <Image src='/img/integration/genetec/config-tool-tasks-area-view.png' width={800} alone />
+
+2. ドアを選択し、**Hardware** タブに移動します。
+
+3. Suprema デバイスを **Reader**、**Request to exit**、**Entry sensor** に割り当てます。
+
+   <Image src='/img/integration/genetec/area-view-hardware.png' width={800} alone />
+
+:::note
+
+**入力設定の制限**
+
+Suprema の構成では、**入力タイプ（例：REX、Door Contact）** は **デバイスを Door に割り当てた後** にのみ設定できます。
+
+原因：
+
+- **Suprema SDK では、入力はデバイス単位ではなく Door 単位で割り当てる必要があります。**
+
+- そのため、Genetec では **デバイスを Door に割り当てる前に入力タイプを事前設定する方法はありません**。
+
+---
+
+<Image src='/img/common/ico-caution.svg' ico alone /> **注意**
+
+次の方法で変更した入力タイプは：
+
+**Config Tool** → **Access Control** → **Cloud Link** → **Peripherals Tab** では、**Suprema device** に直接適用されません。
+
+---
+
+**プラグインの自動割り当て**
+
+<div className='overflow-x table-fixed'>
+| 入力番号 | プラグインが割り当てる入力タイプ |
+| :--: | :--: |
+| 奇数 | NO（Normally Open） |
+| 偶数 | NC（Normally Closed） |
+</div>
+
+この自動割り当てにより、Door 設定後に入力をマップする際の互換性が確保されます。
+
+:::
