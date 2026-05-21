@@ -165,6 +165,9 @@ function createSidebars(preview) {
           },
           items: [
             'platform/biostar_x_mobile/add-user',
+            'platform/biostar_x_mobile/edit-delete-user',
+            'platform/biostar_x_mobile/view-user-log-event',
+            'platform/biostar_x_mobile/search-users',
           ]
         }
       ]
