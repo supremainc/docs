@@ -169,6 +169,19 @@ function createSidebars(preview) {
             'platform/biostar_x_mobile/view-user-log-event',
             'platform/biostar_x_mobile/search-users',
           ]
+        },
+        {
+          type: 'category', 
+          label: '출입문 관리하기',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x_mobile/manage-doors',
+          },
+          items: [
+            'platform/biostar_x_mobile/remote-control-door',
+            'platform/biostar_x_mobile/view-door-details',
+            'platform/biostar_x_mobile/search-doors',
+          ]
         }
       ]
     }
