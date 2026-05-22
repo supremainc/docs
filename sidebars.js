@@ -182,7 +182,8 @@ function createSidebars(preview) {
             'platform/biostar_x_mobile/view-door-details',
             'platform/biostar_x_mobile/search-doors',
           ]
-        }
+        },
+        'platform/biostar_x_mobile/view-realtime-log',
       ]
     }
   ],
