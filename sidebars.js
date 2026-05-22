@@ -184,6 +184,7 @@ function createSidebars(preview) {
           ]
         },
         'platform/biostar_x_mobile/view-realtime-log',
+        'platform/biostar_x_mobile/view-past-events',
       ]
     }
   ],

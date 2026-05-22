@@ -1,0 +1,131 @@
+---
+id: view-past-events
+title: 과거 로그 조회하기
+description: 과거 로그를 조회하고 필터링하여 원하는 기간과 장소의 출입 이력을 확인할 수 있습니다.
+keywords: [과거 로그, 조회, 필터링]
+---
+
+과거 로그를 조회하여 특정 기간과 장소에서 발생한 출입 이력을 확인할 수 있습니다. 로그를 필터링하면 원하는 조건에 맞는 이벤트를 쉽게 찾을 수 있습니다.
+
+<Image src='/img/mobile/bsx-mobile-app-past-log.png' width='500px' className='none' alone />
+
+<Cmd>EVENT LOG</Cmd> 기능은 아래와 같은 상황에서 활용할 수 있습니다.
+
+* 특정 사용자의 과거 출입 기록 확인
+
+* 특정 기간 내 보안 이벤트 이력 추적
+
+* 출입 통제 감사 및 보고
+
+:::note
+
+**실시간 로그와의 차이**
+
+* **실시간 로그**: 현재 발생하는 이벤트를 즉시 모니터링할 수 있습니다. 실시간 로그는 현재 상황을 파악하고 즉각적인 대응이 필요한 경우에 유용합니다.
+
+* **과거 로그**: 특정 기간의 이벤트 이력을 검색 및 조회할 수 있습니다.
+
+:::
+
+## 과거 로그 조회
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-past-log-list.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+앱 홈 화면에서 <Cmd>EVENT LOG</Cmd>를 탭하세요.
+
+* 각 로그에는 이벤트 유형, 발생 시간, 출입문/장치, 사용자 정보가 표시됩니다.
+
+* 로그 목록을 아래로 당겨서 새로고침하면 로그 목록이 갱신되고 최신 로그가 표시됩니다.
+
+   <Image src='/img/mobile/bsx-mobile-app-past-log-refresh.png' width='252px' alone />
+
+:::info
+
+로그에 표시되는 날짜와 시간은 BioStar X 서버의 환경 설정에 따릅니다. BioStar X에서 날짜 및 시간 표시 형식 설정에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-preferences' />를 참고하세요.
+
+:::
+
+</Column>
+</Columns>
+
+
+## 특정 로그만 보기
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-past-log-filter.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+로그 목록에서 특정 이벤트, 사용자, 출입문 또는 장치 등 관련된 로그만 표시하도록 필터링할 수 있습니다. 
+
+1. 화면 오른쪽 상단의 <IcAppFilter title='Filter' width='20px' height='20px' />를 탭하세요. 
+
+1. 원하는 로그만 표시하려면 아래 필터링 조건을 조합해 설정하세요.
+
+   * <Cmd>Period</Cmd>: 이벤트 발생 기간 설정
+
+   * <Cmd>Time</Cmd>: 이벤트 발생 시간 설정
+
+   * <Cmd>Event</Cmd>: 특정 이벤트 유형 선택 (예: 얼굴 인증 실패, 침입 경보 알람 등)
+
+   * <Cmd>User</Cmd>: 특정 사용자 선택 (예: VIP 사용자의 출입 기록)
+
+   * <Cmd>Device</Cmd>: 특정 장치 선택 (예: 특정 출입 통제 장치에서 발생한 이벤트)
+
+   * <Cmd>Door</Cmd>: 특정 출입문 선택 (예: 1층 정문 출입구)
+
+1. 설정한 조건으로 로그 목록을 필터링하려면 <Cmd>Apply</Cmd>를 탭하세요.
+
+:::info
+
+필터링 조건을 초기화하려면 화면 오른쪽 상단의 <IcAppFilter title='Filter' width='20px' height='20px' /> → <IcAppReset title='Reset' width='20px' height='20px' />을 탭하세요.
+
+:::
+
+</Column>
+</Columns>
+
+
+## 로그 상세 정보 확인
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-past-log-detail.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+로그 목록에서 원하는 로그를 탭하면 해당 로그의 상세 정보를 확인할 수 있습니다.
+
+* <Cmd>Event</Cmd>: 발생한 이벤트 유형 (예: 출입 인증 성공, 출입 인증 실패, 알람 발생 등)
+
+* <Cmd>Description</Cmd>: 이벤트에 대한 설명
+
+* <Cmd>Datetime</Cmd>: 이벤트 발생 날짜와 시간
+
+* <Cmd>Door</Cmd>: 이벤트 발생 출입문
+
+* <Cmd>Device Name</Cmd>: 이벤트 발생 장치
+
+* <Cmd>User Group</Cmd>: 이벤트를 발생시킨 사용자의 그룹 이름
+
+* <Cmd>User</Cmd>: 이벤트를 발생시킨 사용자
+
+상세 정보 팝업 하단의 버튼을 탭하여 다음 작업을 수행할 수 있습니다.
+
+* 이벤트 정보를 클립보드에 복사하려면 <Cmd>EVENT INFORMATION COPIED</Cmd>를 탭하세요.
+
+* 상세 정보 팝업을 닫으려면 <Cmd>OK</Cmd>를 탭하세요.
+
+</Column>
+</Columns>
