@@ -1,0 +1,101 @@
+---
+id: remote-control-door
+title: 출입문 원격 제어하기
+description: 모바일 앱에서 출입문 상태를 실시간으로 확인하고 상황에 맞게 제어할 수 있습니다. 정상 운영부터 긴급 대응까지 다양한 제어 옵션을 지원합니다
+keywords: [출입문, 원격 제어]
+---
+
+출입문 목록에서 각 출입문의 상태를 실시간으로 확인하고 필요에 따라 제어할 수 있습니다. 정상 운영 중에는 기본 제어 기능으로 관리하고, 보안 강화나 긴급 상황에는 추가 제어 옵션을 활용할 수 있습니다.
+
+앱 홈 화면에서 <Cmd>DOOR</Cmd>를 탭하세요. BioStar X에 등록된 출입문 목록이 표시됩니다.
+
+:::info
+
+사이드 메뉴를 통해 진입할 수도 있습니다. <IcHamberg title='Hamburger icon' width={20} height={20} /> → <Cmd>Door</Cmd>를 탭하세요.
+
+:::
+
+## 출입문 상태 확인
+
+출입문 목록에서 출입문의 상태 아이콘을 통해 출입문에 할당된 장치의 이상 상태를 한눈에 확인할 수 있습니다. 출입문 상태 아이콘은 출입문이 열려 있는지, 닫혀 있는지, 알람이 발생했는지 등을 나타냅니다.
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-doors-list.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+<div className='col2-2-8'>
+
+| 상태 아이콘 | 설명 |
+| :--: | -- |
+| ![Door Error](/img/mobile/bsx-mobile-door-status-error.png) | 출입문에 문제가 발생한 상태입니다. 출입문에 할당된 장치와 연결이 끊어졌거나 커뮤니케이션 서버 오류, 동기화 오류 등의 이상 상태입니다. |
+| ![Door Opened](/img/mobile/bsx-mobile-door-status-unlock.png) | 출입문이 열려 있는 상태입니다. |
+| ![Door Closed](/img/mobile/bsx-mobile-door-status-lock.png) | 출입문이 닫혀 있는 상태입니다. |
+| ![Door Alarm](/img/mobile/bsx-mobile-door-status-alarm.png) | 출입문에 알람이 발생한 상태입니다. |
+| ![Door APB](/img/mobile/bsx-mobile-door-status-apb.png) | 출입문에 APB 알람이 발생한 상태입니다. |
+
+</div>
+
+</Column>
+</Columns>
+
+
+## 출입문 열기/잠그기
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-door-control.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+출입문 원격 제어 기능을 통해 출입문을 열거나 잠궈, 출입을 허용하거나 차단할 수 있습니다.
+
+* <Cmd>Open</Cmd>: 출입문을 일시적으로 열어 출입을 허용합니다. 출입문은 설정된 시간 후 자동으로 닫힙니다.
+
+* <Cmd>Release</Cmd>: 인증된 사용자만 출입할 수 있도록 설정합니다. 출입문에 설정된 스케줄에 따라 출입문 상태가 변경됩니다.
+
+:::info
+
+출입문을 일시적으로 열어 자동으로 닫히는 시간을 설정하는 방법은 <DocLink docId='platform/biostar_x/settings-door-add#option' />에서 <Cmd sid='common.open' product='2' /> → <Cmd sid='door.openTime' product='2' />을 참고하세요.
+
+:::
+
+</Column>
+</Columns>
+
+
+## 추가 제어
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-door-control-more.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+보안 강화가 필요하거나 장시간 출입을 통제해야 할 때, 시간 제한 없이 출입문을 수동으로 잠그거나 개방할 수 있습니다. 발생한 알람을 해제할 수도 있습니다.
+
+출입문의 가장 오른쪽에 <IcAirMore title='More' />를 탭하면 추가 제어 옵션을 사용할 수 있습니다.
+
+* <Cmd>Manual Lock</Cmd>: 출입문을 수동으로 잠가 출입을 차단합니다. 이 기능은 시간 제한 없이 출입문을 잠글 수 있습니다. 이 상태에서는 모든 사용자의 출입을 차단합니다.
+
+* <Cmd>Manual Unlock</Cmd>: 출입문을 수동으로 개방하여 출입을 허용합니다. 이 기능은 시간 제한 없이 출입문을 개방합니다. 이 상태에서는 모든 사용자의 출입을 허용합니다.
+
+* <Cmd>Clear Alarm</Cmd>: 출입문에서 발생한 알람을 해제할 수 있습니다.
+
+* <Cmd>Clear APB</Cmd>: 출입문에서 발생한 APB 알람을 해제할 수 있습니다.
+
+:::info
+
+출입문을 수동으로 잠그거나 개방한 후에는 출입문 상태가 자동으로 변경되지 않습니다. 보안을 위해 출입문의 상태를 설정된 스케줄에 맞춰 작동하게 하려면 <Cmd>Release</Cmd> 기능을 사용하세요.
+
+:::
+
+</Column>
+</Columns>
