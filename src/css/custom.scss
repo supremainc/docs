@@ -803,6 +803,9 @@ body[data-rh] .redocusaurus {
       color: var(--ifm-color-markdown-link);
       text-decoration: none;
     }
+    h3 {
+      margin-top: 0;
+    }
   }
   .theme-admonition-note {
     // background: url('./img/ico-note.svg') no-repeat 15px 18px;
