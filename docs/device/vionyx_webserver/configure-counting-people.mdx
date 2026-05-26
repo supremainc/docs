@@ -31,17 +31,17 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' />를 클릭하세요.
 
-   <Image src='/img/cam-server/ai-analysis-events.png' />
+   <ProdImg src='/img/cam-server/ai-analysis-events.png' />
 
 1. 화면 오른쪽 상단의 <Cmd sid='add_button' product='cam' /> 버튼을 클릭하세요.
 
 1. <Cmd sid='select_ai_analysis_type' product='cam' /> 창에서 <Cmd sid='ai_analysis_people_counting' product='cam' />을 클릭하세요.
 
-   <Image src='/img/cam-server/ai-analysis-events-counting-people.png' />
+   <ProdImg src='/img/cam-server/ai-analysis-events-counting-people.png' />
 
 1. <Cmd sid='face_analytics_consent_title' product='cam' /> 팝업이 표시되면 내용을 확인하고, 동의 체크박스를 클릭한 후 <Cmd sid='face_analytics_consent_agree' product='cam' /> 버튼을 클릭하세요.
 
-   <Image src='/img/cam-server/ai-analysis-notice-face-auth.png' width='50%' />
+   <ProdImg src='/img/cam-server/ai-analysis-notice-face-auth.png' width='50%' />
 
    :::note
 
@@ -53,7 +53,7 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
 1. 오른쪽 <Cmd sid='ai_analysis_people_counting' product='cam' /> 패널에서 필요한 설정을 완료하세요.
 
-   <Image src='/img/cam-server/ai-analysis-events-add-counting-people-settings.png' />
+   <ProdImg src='/img/cam-server/ai-analysis-events-add-counting-people-settings.png' />
 
 </Step>
 <Step>
@@ -69,7 +69,7 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
 라이브 뷰에서 카운팅 영역을 설정하세요. 카메라에서 설정한 카운팅 영역에 머무르는 사람을 실시간으로 카운팅하고 이벤트를 발생시킵니다. 최소 1개를 설정해야 하며, <Cmd sid='add_button' product='cam' /> 버튼을 클릭해 최대 10개까지 추가할 수 있습니다. 라이브 뷰에 표시되는 카운팅 영역 상자의 모서리 또는 점을 마우스로 드래그하여 원하는 형태로 조정할 수 있습니다. 가운데 영역을 드래그하여 위치를 이동할 수도 있습니다.
 
-<Image src='/img/cam-server/ai-analysis-events-add-counting-people-settings-counting-area.png' />
+<ProdImg src='/img/cam-server/ai-analysis-events-add-counting-people-settings-counting-area.png' />
 
 * <Cmd sid='name' product='cam' />: 카운팅 영역의 이름을 수정할 수 있습니다. 알기 쉽게 이름을 지정하세요. 카운팅 영역의 이름은 라이브 뷰에서 마우스 오버 시 표시됩니다.
 
@@ -98,7 +98,7 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
 얼굴을 감지할 영역을 설정하세요. 설정하면 해당 영역에서 얼굴을 우선 추적합니다. 얼굴 영역과 카운팅 영역은 겹쳐서 설정할 수 있습니다. <Cmd sid='add_button' product='cam' /> 버튼을 클릭해 최대 10개까지 설정할 수 있습니다. 라이브 뷰에 파란색 상자가 표시되며, 마우스로 모서리 또는 점을 드래그하여 원하는 형태로 조정할 수 있습니다. 가운데 영역을 드래그하여 위치를 이동할 수도 있습니다.
 
-<Image src='/img/cam-server/ai-analysis-events-add-counting-people-settings-face-area.png' />
+<ProdImg src='/img/cam-server/ai-analysis-events-add-counting-people-settings-face-area.png' />
 
 * <Cmd sid='name' product='cam' />: 얼굴 영역의 이름을 수정할 수 있습니다. 알기 쉽게 이름을 지정하세요. 얼굴 영역의 이름은 라이브 뷰에서 마우스 오버 시 표시됩니다.
 
@@ -128,7 +128,7 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
 모든 설정을 완료한 후 오른쪽 상단의 <Cmd sid='save' product='cam' /> 버튼을 클릭하세요. 이전 화면으로 돌아가며, 새로 생성된 AI 이벤트가 목록에 추가됩니다.
 
-<Image src='/img/cam-server/ai-analysis-events-add-counting-people-settings-complete.png' />
+<ProdImg src='/img/cam-server/ai-analysis-events-add-counting-people-settings-complete.png' />
 
 </Step>
 </Steps>
@@ -138,13 +138,13 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
 화면 왼쪽 상단의 <Cmd sid='live' product='cam' /> 메뉴를 클릭하세요. 카메라 영상의 오른쪽 상단의 <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> 아이콘이 켜져 있는지 확인하세요. 설정한 카운팅 영역과 얼굴 영역이 영상에 오버레이로 표시됩니다. 카운팅 영역에 머무르는 사람의 수를 <Cmd sid='count' product='cam' /> <Cmd>: N</Cmd> 형식으로 표시합니다. 얼굴 영역을 설정했다면 카메라가 해당 영역에서 얼굴을 감지하며, 등록된 사용자는 자동으로 신원이 인식되어 이름을 표시합니다.
 
-<Image src='/img/cam-server/ai-analysis-events-counting-people-result.png' />
+<ProdImg src='/img/cam-server/ai-analysis-events-counting-people-result.png' />
 
 :::info
 
 * 카운트 값을 수동으로 초기화하려면 <IcMoreB title='More' /> → <Cmd sid='count_reset' product='cam' /> 버튼을 클릭하세요.
 
-   <Image src='/img/cam-server/ai-analysis-events-counting-people-result-reset.png' />
+   <ProdImg src='/img/cam-server/ai-analysis-events-counting-people-result-reset.png' />
 
 * 등록되지 않은 사용자는 <Cmd sid='unknown_face' product='cam' />로 표시됩니다. 등록된 사용자는 이름과 함께 표시합니다.
 
