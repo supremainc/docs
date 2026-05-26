@@ -502,5 +502,25 @@
   "sidebar.device_manager.category.릴리스 노트": {
     "message": "릴리스 노트",
     "description": "The label for category '릴리스 노트' in sidebar 'device_manager'"
+  },
+  "sidebar.aicamwebserver.category.Vionyx Web Server": {
+    "message": "ViOnyx Web Server",
+    "description": "The label for category 'Vionyx Web Server' in sidebar 'aicamwebserver'"
+  },
+  "sidebar.aicamwebserver.category.AI 이벤트 및 규칙 설정하기": {
+    "message": "AI 이벤트 및 규칙 설정하기",
+    "description": "The label for category 'AI 이벤트 및 규칙 설정하기' in sidebar 'aicamwebserver'"
+  },
+  "sidebar.aicamwebserver.category.카메라 설정하기": {
+    "message": "카메라 설정하기",
+    "description": "The label for category '카메라 설정하기' in sidebar 'aicamwebserver'"
+  },
+  "sidebar.aicamwebserver.category.사용자 관리하기": {
+    "message": "사용자 관리하기",
+    "description": "The label for category '사용자 관리하기' in sidebar 'aicamwebserver'"
+  },
+  "sidebar.aicamwebserver.category.시스템 구성하기": {
+    "message": "시스템 구성하기",
+    "description": "The label for category '시스템 구성하기' in sidebar 'aicamwebserver'"
   }
 }
