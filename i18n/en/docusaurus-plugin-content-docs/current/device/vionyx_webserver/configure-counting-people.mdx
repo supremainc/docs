@@ -1,0 +1,158 @@
+---
+id: configure-counting-people
+title: Set Up People Counting Event
+description: Detects the number of people staying in designated areas.
+keywords:
+  - AI analysis
+  - Pedestrian flow
+  - Facial recognition
+---
+
+Configure a people counting event to detect the number of people staying in designated areas. Add an optional face area to automatically authenticate enrolled users.
+
+## When to use this?
+
+* When you want to monitor visitor counts in real time for a retail store or a specific area of a store.
+
+* When you want to track the number of people in a specific area for crowd management.
+
+* When you want to track entry and exit status for registered staff and VIP customers.
+
+* When you want to manage access statistics for a specific area for security purposes.
+
+## Create people counting event.
+
+After creating a people counting event, the <Cmd sid='live' product='cam' /> menu detects the number of people staying in designated areas. Also, setting a face area prioritizes face tracking in that area; enrolled users are automatically identified.
+
+<Steps>
+<Step>
+
+### Start event creation
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. Click <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> in the left sidebar.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events.png' />
+
+3. Click <Cmd sid='add_button' product='cam' /> at the top right of the screen.
+
+4. Click <Cmd sid='ai_analysis_people_counting' product='cam' /> in the <Cmd sid='select_ai_analysis_type' product='cam' /> window.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-counting-people.png' />
+
+5. When the <Cmd sid='face_analytics_consent_title' product='cam' /> pop-up appears, review the details, select the consent checkbox, and click <Cmd sid='face_analytics_consent_agree' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-analysis-notice-face-auth.png' width='50%' />
+
+   :::note
+
+   * To use the Facial Authentication feature, comply with local regulations. Cannot proceed without consent.
+
+   * The <Cmd sid='face_analytics_consent_title' product='cam' /> popup appears only once. Subsequent AI event creation assumes consent.
+
+   :::
+
+6. Complete the required settings in the right <Cmd sid='ai_analysis_people_counting' product='cam' /> panel.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-add-counting-people-settings.png' />
+
+</Step>
+<Step>
+
+### Set event name
+
+Enter the AI event name in the <Cmd sid='name' product='cam' /> input field. The name can be up to 64 characters long.
+
+</Step>
+<Step>
+
+### Counting area setup
+
+Set counting areas in Live View. The camera counts people within configured counting areas in real time and triggers events. Set at least one virtual line. Click <Cmd sid='add_button' product='cam' /> to add up to 10. Drag the corners or points of the counting area box in Live View to reshape it. Drag the center to move the line.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-counting-people-settings-counting-area.png' />
+
+* <Cmd sid='name' product='cam' />: Edit the counting area's name. Assign a clear, descriptive name. The counting area's name appears on hover in Live View.
+
+* <Cmd sid='color' product='cam' />: Select the counting area's color. The counting area appears in the selected color in Live View.
+
+* <Cmd sid='condition' product='cam' />: Set the event trigger condition.
+
+  * <Cmd sid='every_change' product='cam' />: Trigger an event whenever a person enters or leaves the counting area
+
+  * <Cmd sid='count_limit' product='cam' />: Trigger an event when the number of people in the counting area exceeds the specified value (default: 10 people, maximum: 100 people)
+
+* <Cmd sid='duration' product='cam' />: Set the minimum time the count in the counting area must satisfy the event condition. For example, if Duration is set to 5 seconds, a person must remain in the counting area for at least 5 seconds to trigger the event. It can be set up to a maximum of 60 seconds.
+
+:::info
+
+* Click <IcCamReset title='reset' /> to reset the configured counting area's shape and size.
+
+* Click <IcCamTrash title='delete' /> to delete the added counting area.
+
+:::
+
+</Step>
+<Step>
+
+### Face area settings (optional)
+
+Define the area for face detection. When set, the system prioritizes face tracking in that area. Face areas and counting areas can overlap. Click <Cmd sid='add_button' product='cam' /> to add up to 10 face areas. A blue box appears in Live View; drag corners or points to adjust the shape. Drag the center to move the line.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-counting-people-settings-face-area.png' />
+
+* <Cmd sid='name' product='cam' />: Edit the face area's name. Assign a clear, descriptive name. The face area name appears on hover in Live View.
+
+:::info
+
+* Enrolled users are automatically identified in the <Cmd sid='live' product='cam' /> menu and shown by name. Unenrolled users appear as <Cmd sid='unknown_face' product='cam' />.
+
+* Click <IcCamReset title='reset' /> to reset the configured face area's shape and size.
+
+* Click <IcCamTrash title='delete' /> to delete an added face area.
+
+:::
+
+</Step>
+<Step>
+
+### Counting reset settings
+
+Set the condition to reset the people count in counting areas.
+
+* <Cmd sid='all_areas_count_reset' product='cam' />: Set to <Cmd sid='on' product='cam' /> to reset counts for all counting areas at the scheduled time. Counts for all counting areas reset at the time set in <Cmd sid='reset_time' product='cam' />.
+
+</Step>
+<Step>
+
+### Save settings
+
+After completing all settings, click <Cmd sid='save' product='cam' /> in the upper-right. The interface returns to the previous screen, and the new AI event is added to the list.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-counting-people-settings-complete.png' />
+
+</Step>
+</Steps>
+
+## Check in Live
+
+Click the <Cmd sid='live' product='cam' /> menu at the top left of the screen. Confirm the <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> icon at the top right of the camera feed is on. Configured counting and face areas appear as overlays on the video. Displays the number of people in the counting area in the format <Cmd sid='count' product='cam' /> <Cmd>: N</Cmd>. If face areas are set, the camera detects faces there; enrolled users are automatically identified and their names are displayed.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-counting-people-result.png' />
+
+:::info
+
+* To reset the count manually, click <IcMoreB title='More' /> → <Cmd sid='count_reset' product='cam' />.
+
+  <ProdImg src='/img/cam-server/ai-analysis-events-counting-people-result-reset.png' />
+
+* Unenrolled users appear as <Cmd sid='unknown_face' product='cam' />. Enrolled users appear with their name.
+
+* Poor lighting or backlight may prevent the camera from detecting faces. Improve area lighting or adjust the camera position and angle so faces are clearly visible.
+
+* Faces must face the camera to be detected. Profile or rear views may not be detected.
+
+* If too many events occur, adjust the <Cmd sid='every_delay' product='cam' /> option. Increasing the event delay reduces event frequency.
+
+:::

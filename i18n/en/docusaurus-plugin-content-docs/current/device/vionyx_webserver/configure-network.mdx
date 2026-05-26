@@ -1,0 +1,179 @@
+---
+id: configure-network
+title: Configure Network Settings
+description: This page explains how to set the IPv4 address automatically or manually, configure web UI and video streaming ports, and connect to the CLUe cloud service.
+keywords:
+  - Network
+  - IPv4
+  - DHCP
+  - Static
+  - port
+  - CLUe
+  - Cloud
+---
+
+Network settings configure the device's IPv4 address, subnet, gateway, and DNS servers, set ports used by the web UI and live video streaming, and manage the Suprema CLUe cloud connection. Select either automatic assignment (DHCP) or manual (Static) according to your network environment.
+
+Check network settings in the following situations.
+
+* When the network supports DHCP and you need the device to obtain an IP address automatically.
+
+* When you need stable network access using a fixed IP address.
+
+* When the default ports conflict with other devices or you need to change ports for security.
+
+* When you need remote management by enrolling the device in Suprema CLUe.
+
+:::info
+
+Changing network settings, especially the IP address, may disconnect active connections. Reconnect using the new IP address.
+
+:::
+
+## Automatic IP address
+
+DHCP automatically assigns IP addresses on the network. In most typical network environments, it configures automatically without additional settings.
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. In the left sidebar, click <Cmd sid='network' product='cam' /> 14 <Cmd sid='network' product='cam' />.
+
+3. Select <Cmd sid='dhcp' product='cam' /> in <Cmd sid='ip_type' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-dhcp.png' />
+
+4. If you need **DNS** server addresses, enter them in the <Cmd sid='dns_n' product='cam' replace='1' /> and <Cmd sid='dns_n' product='cam' replace='2' /> input fields.
+
+5. Adjust the **MTU** (Maximum Transmission Unit) value as needed in the <Cmd sid='mtu' product='cam' /> input field.
+
+   * The default is 1500.
+
+   * Set a value between 1280 and 1500.
+
+6. Click <Cmd sid='save' product='cam' /> to save the network settings.
+
+If the settings save successfully, the assigned IP address appears in the <Cmd sid='ip_address' product='cam' />, <Cmd sid='subnet_mask' product='cam' />, and <Cmd sid='gateway' product='cam' /> input fields.
+
+:::info
+
+DHCP mode is set by default and operates automatically in most standard network environments without additional settings.
+
+:::
+
+## Static IP address
+
+Set the IP address manually when the network requires a fixed IP for stable access.
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. In the left sidebar, click <Cmd sid='network' product='cam' /> 14 <Cmd sid='network' product='cam' />.
+
+3. Select <Cmd sid='static' product='cam' /> in <Cmd sid='ip_type' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-static.png' />
+
+4. Enter the assigned IPv4 address in the <Cmd sid='ip_address' product='cam' /> input field.
+
+   > Example: 192.168.111.11
+
+5. Enter the subnet mask in the <Cmd sid='subnet_mask' product='cam' /> input field.
+
+   > Example: 255.255.255.0
+
+6. Enter the gateway address in the <Cmd sid='gateway' product='cam' /> input field.
+
+7. Enter the DNS server address in the <Cmd sid='dns_n' product='cam' replace='1' /> and <Cmd sid='dns_n' product='cam' replace='2' /> input fields.
+
+8. Adjust the value in the <Cmd sid='mtu' product='cam' /> input field as needed.
+
+   * The default is 1500.
+
+   * Set a value between 1280 and 1500.
+
+9. Click <Cmd sid='save' product='cam' /> to save the network settings.
+
+:::note
+
+If you do not enter a valid address in each input field, a red border appears around the field and <Cmd sid='save' product='cam' /> is disabled. After entering all input fields correctly, try again.
+
+:::
+
+## Port settings
+
+In the <Cmd sid='port' product='cam' /> section, set port numbers used to access the web UI (HTTP, HTTPS) and for video streaming (RTSP).
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. In the left sidebar, click <Cmd sid='network' product='cam' /> 14 <Cmd sid='network' product='cam' />.
+
+3. Set the required ports in the <Cmd sid='port' product='cam' /> section.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-port.png' />
+
+   * <Cmd sid='https' product='cam' />: Port for encrypted access to the web UI (default: 443)
+
+   * <Cmd sid='rtsp' product='cam' />: Port for streaming video through the RTSP protocol (default: 554)
+
+4. Click <Cmd sid='save' product='cam' /> to save the port settings.
+
+:::info
+
+* Enter a number from 1 to 65535 in each port input field.
+
+* Do not assign the same port number to multiple services. Each port must have a unique number.
+
+* If a port differs from the default, include the port number in the web UI URL.
+
+  > Example: If the HTTPS port is 4000: `https://{ip_address}:4000`
+
+:::
+
+## Video transmission and encryption settings
+
+In the <Cmd sid='rtsp' product='cam' /> section, configure video transmission and encryption settings.
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. In the left sidebar, click <Cmd sid='network' product='cam' /> 14 <Cmd sid='network' product='cam' />.
+
+3. Set the following options in the <Cmd sid='rtsp' product='cam' /> section.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-rtsp.png' />
+
+   * <Cmd sid='transport' product='cam' />: Select the transport protocol used for video streaming.
+
+     * <Cmd>UDP</Cmd>: Enables faster transmission, but video may stutter depending on network conditions.
+
+     * <Cmd>TCP</Cmd>: Enables stable transmission, but network latency may occur.
+
+     * <Cmd>DUAL</Cmd>: Automatically selects UDP or TCP for streaming based on network conditions.
+
+     * <Cmd>TLS</Cmd>: Sends the RTSP stream with TLS encryption. Enhances security, but may increase CPU load.
+
+   * <Cmd sid='secure_rtp' product='cam' />: Enable the RTSP stream encryption option.
+
+4. Click <Cmd sid='save' product='cam' /> to save the settings.
+
+## CLUe cloud connection
+
+Suprema CLUe is a cloud-based remote management service. Connect to CLUe to manage the device remotely over the Internet.
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. In the left sidebar, click <Cmd sid='network' product='cam' /> 14 <Cmd sid='network' product='cam' />.
+
+3. Click the <Cmd sid='clue' product='cam' /> toggle in the <Cmd sid='cloud' product='cam' /> section to enable it.
+
+4. The system checks the Internet connection and the CLUe server connection.
+
+   * Connection successful: <Cmd sid='clue_enabled' product='cam' /> message appears.
+
+   * Internet connection failed: <Cmd sid='clue_disabled' product='cam' /> message appears. Check the Internet connection and try again.
+
+:::note
+
+* If you disable the <Cmd sid='clue' product='cam' /> option, the connection to the CLUe server is disconnected, and remote management through the cloud is unavailable. However, the device's enrollment on the CLUe server remains.
+
+* CLUe connection successes and failures are recorded in the system log.
+
+:::

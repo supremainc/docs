@@ -1,0 +1,202 @@
+---
+id: getting-started
+title: Getting Started
+description: This guide walks you through certificate installation, password setup, and login when you first access the ViOnyx Web Server.
+keywords:
+  - ViOnyx
+  - Web Server
+  - Getting Started
+---
+
+After installing the ViOnyx camera, complete the initial setup through a web browser. This document explains all required steps, from certificate installation to setting the administrator password and logging in.
+
+:::info
+
+If the camera does not obtain an IP address after a factory reset, it changes to the default IP address (`https://192.168.1.100`). Connect to that address in your web browser.
+
+:::
+
+## Certificate installation
+
+The ViOnyx Web Server uses a secure HTTPS connection. A security warning appears the first time you connect because the camera uses a self-signed certificate. Learn how to connect to the web server securely without warnings after adding the certificate to the Windows trusted store.
+
+<Steps>
+<Step>
+
+### Download certificate
+
+1. Connect to the camera in your web browser using the assigned IP address (`https://{IP_address}`).
+
+2. If the warning message "**Your connection is not private**" appears, click **Advanced** at the bottom.
+
+   <ProdImg src='/img/cam-server/vionyx-web-unsafe-01.png' />
+
+3. Expand the **Advanced** section, then click **Proceed to `https://{IP_address}` (unsafe)** or a similar link to continue.
+
+   <ProdImg src='/img/cam-server/vionyx-web-unsafe-02.png' />
+
+4. Click the <Cmd sid='download_root_ca_certificate' product='cam' /> link at the bottom of the password setup screen.
+
+   <ProdImg src='/img/cam-server/vionyx-install-root-ca.png' width='70%' />
+
+5. Save the certificate file `Suprema_ViOnyx_Device_{serial-number}_Root_CA.crt` locally.
+
+</Step>
+<Step>
+
+### Open the Windows management console
+
+1. Press <Start /> + <Kbd>R</Kbd> to open the Run window.
+
+2. Type `certmgr.msc`, then press <Kbd>Enter</Kbd> to open the **Management Console**.
+
+   <ProdImg src='/img/cam-server/yionyx-win-run.png' />
+
+</Step>
+<Step>
+
+### Run the certificate import wizard
+
+1. In the left pane of the **Management Console**, expand **Trusted Root Certification Authorities**.
+
+2. Right-click **Certificates** under it, then select **All Tasks** → **Import**.
+
+   <ProdImg src='/img/cam-server/yionyx-mng-console-import.png' />
+
+3. In the Certificate Import Wizard, click **Next**.
+
+   <ProdImg src='/img/cam-server/yionyx-cert-import-wizard-01.png' />
+
+4. Click **Browse** and select the saved certificate file `Suprema_ViOnyx_Device_547849187_Root_CA.crt`.
+
+   <ProdImg src='/img/cam-server/yionyx-cert-import-wizard-02.png' />
+
+5. Click **Next**.
+
+6. Select **Place all certificates in the following store**.
+
+7. Make sure **Certificate store** is set to **Trusted Root Certification Authorities**.
+
+   <ProdImg src='/img/cam-server/yionyx-cert-import-wizard-03.png' />
+
+8. Click **Next**.
+
+9. Click **Finish** to complete the certificate import.
+
+   <ProdImg src='/img/cam-server/yionyx-cert-import-wizard-04.png' />
+
+10. If a security warning appears, click **Yes**.
+
+11. When the certificate import success message appears, click **OK**.
+
+    <ProdImg src='/img/cam-server/yionyx-cert-import-wizard-complete.png' />
+
+</Step>
+<Step>
+
+### Verify certificate installation
+
+In the Management Console, select **Trusted Root Certification Authorities** → **Certificates** to confirm that the imported certificate appears in the list.
+
+<ProdImg src='/img/cam-server/yionyx-cert-mng-imported-check.png' />
+
+</Step>
+</Steps>
+
+After certificate installation completes, fully close and restart the web browser, then reconnect using the camera's IP address. You now connect securely without a security warning.
+
+## Set password
+
+Set a strong password for security when logging in for the first time. ViOnyx enforces a strong password policy to protect system security.
+
+1. Connect to the camera in your web browser using the assigned IP address (`https://{IP_address}`).
+
+   <ProdImg src='/img/cam-server/password-setting1-vionyx.png' />
+
+2. On the password setup page, enter a new password in the <Cmd sid='password' product='cam' /> input field.
+
+3. Re-enter the same password in the <Cmd sid='confirm_password' product='cam' /> field.
+
+4. Make sure the password you entered meets all of the following requirements.
+
+5. When all conditions are met, <Cmd sid='submit' product='cam' /> becomes active. Click the button to finish setting your password.
+
+:::note
+
+**Password requirements**
+
+The password must meet all of the following requirements:
+
+* The values in the <Cmd sid='password' product='cam' /> and <Cmd sid='confirm_password' product='cam' /> fields must match exactly.
+
+* The password must be at least 12 characters long. Maximum length: 64 characters.
+
+* Include at least one lowercase letter (`a-z`) and one uppercase letter (`A-Z`).
+
+* Include at least one digit (`0-9`) and one special character.
+
+  > Example special characters: `"` `!` `@` `#` `$` `%` `^` `&` `*` `(` `)` `-` `_` `=` `+` `[` `]` `{` `}`
+
+* Do not include sequences of 4 or more consecutive characters (e.g., `1234`, `abcd`) or 4 or more identical characters.
+
+* The username (case-insensitive) must not be included in the password.
+
+  > admin, Admin, ADMIN, Admin123! etc.
+
+* Common weak passwords such as `password`, `qwerty`, `123456` are not allowed.
+
+:::
+
+:::caution
+
+Store the password you set in a safe place. If you lose the password, initialize the camera.
+
+:::
+
+## Sign in
+
+After the password is set, you will be automatically redirected to the sign in page. Enter the administrator ID and the password you set to access the ViOnyx Web server.
+
+<ProdImg src='/img/cam-server/password-setting2-vionyx.png' />
+
+1. Enter **admin** in the <Cmd sid='id' product='cam' /> input field.
+
+2. Enter the password you set in the <Cmd sid='password' product='cam' /> input field.
+
+3. Click <Cmd sid='sign_in' product='cam' />.
+
+After successful sign in, the ViOnyx Web Server opens the <Cmd sid='live' product='cam' /> page.
+
+:::info
+
+Change the administrator ID (admin) in <Cmd sid='system' product='cam' /> → <Cmd sid='account_management' product='cam' />.
+
+:::
+
+<NextStep>
+<NextItem to='live-basic'>
+
+Explains the main features and usage of the <Cmd sid='live' product='cam' className='normal' /> menu.
+
+</NextItem>
+<NextItem to='configure-ai-events-and-rules'>
+
+Configure AI events to monitor specific situations detected by the camera.
+
+</NextItem>
+<NextItem to='configure-camera-device'>
+
+Use the camera's settings to maintain optimal image quality for the shooting environment, configure the network, and apply security and privacy policies. 
+
+</NextItem>
+<NextItem to='manage-people'>
+
+Register users to enable the AI face recognition feature.
+
+</NextItem>
+<NextItem to='system-management'>
+
+Systematically manage device information, firmware, maintenance, accounts, audio, and logs to effectively operate the camera system.
+
+</NextItem>
+</NextStep>

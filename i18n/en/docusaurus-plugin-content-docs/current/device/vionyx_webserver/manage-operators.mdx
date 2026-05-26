@@ -1,0 +1,159 @@
+---
+id: manage-operators
+title: Manage Operators
+description: This guide explains how to manage additional administrator (operator) accounts for camera operation.
+keywords:
+  - Operator
+---
+
+In addition to administrators, add, edit, or delete operator accounts with limited permissions. Operators can manage certain camera features on behalf of administrators.
+
+An operator account is required to use the ONVIF feature. When connecting to the camera from an ONVIF client or VMS, use a registered operator account.
+
+Add operators in the following situations.
+
+* Assign additional staff for camera operation.
+
+* Grant only specific permissions.
+
+* When multiple people must collaborate to manage the camera.
+
+* Grant team members read-only or edit permissions.
+
+:::info
+
+* Add up to 10 operators.
+
+* Operators cannot add other operators. Only administrators can add operators.
+
+* Operator passwords follow the same rules as administrator passwords. For more information, refer to <DocLink docId='device/vionyx_webserver/update-admin-password' />.
+
+* Each operator can change only their own account information.
+
+:::
+
+## Operator permission types
+
+Select one of the following two permissions when adding an operator.
+
+* <Cmd sid='read_only' product='cam' className='bold' />: View all camera settings and logs; cannot change settings.
+
+* <Cmd sid='read_write' product='cam' className='bold' />: Access all menus except the Administrator menu; can change camera settings. Operators can change their own password but not other operators' or administrators' passwords.
+
+## Add operator
+
+1. Click the <Cmd sid='system' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <Cmd sid='account_management' product='cam' /> in the left sidebar.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-account-manage.png' />
+
+3. In the <Cmd sid='operator' product='cam' /> section, click <Cmd sid='add_button' product='cam' />.
+
+4. When the <Cmd sid='add_operator' product='cam' /> popup appears, enter the required information.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-add-operator.png' />
+
+   * <Cmd sid='id' product='cam' />: Enter the operator's unique ID.
+
+     * Up to 64 characters.
+
+     * Can include Korean, English letters, and numbers.
+
+     * Allowed special characters: `_`, `.`, `-`, `(`, `)`.
+
+     * Must be unique and not duplicate another operator.
+
+   * <Cmd sid='password' product='cam' />: Enter the operator's password. Follows the same rules as the administrator password. For more information, refer to <DocLink docId='device/vionyx_webserver/update-admin-password' />.
+
+   * <Cmd sid='confirm_password' product='cam' />: Re-enter the password.
+
+   * <Cmd sid='permission' product='cam' />: Select the operator's permission.
+
+   * <Cmd sid='enabled' product='cam' />: Enable or disable the operator's account.
+
+5. After entering all information, click <Cmd sid='ok' product='cam' />.
+
+After adding a new operator, the new account appears in the list.
+
+:::info
+
+* After adding an operator, log in with that account to verify permissions are applied correctly.
+
+* Deliver the operator's ID and password to the operator securely.
+
+:::
+
+## Change operator permissions
+
+Change an operator's permissions.
+
+1. Click the <Cmd sid='system' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <Cmd sid='account_management' product='cam' /> in the left sidebar.
+
+3. In the <Cmd sid='operator' product='cam' /> section, click the <Cmd sid='permission' product='cam' /> field for the operator whose permissions you want to change.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-manage-operator.png' />
+
+4. Select the desired permissions from the list.
+
+When the permission change succeeds, a success message appears in the upper right corner of the screen.
+
+:::tip
+
+Click <IcCamEdit title='Edit' /> to open the <Cmd sid='edit_operator' product='cam' /> window. In the <Cmd sid='permission' product='cam' /> field, change to the desired permissions, and then click <Cmd sid='ok' product='cam' />.
+
+<ProdImg src='/img/cam-server/cam-webserver-system-manage-operator-edit.png' width='50%' />
+
+:::
+
+## Disable operator
+
+Temporarily disable an operator's account. Blocks access without deleting the account.
+
+1. Click the <Cmd sid='system' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <Cmd sid='account_management' product='cam' /> in the left sidebar.
+
+3. In the <Cmd sid='operator' product='cam' /> section, click the toggle in the <Cmd sid='enabled' product='cam' /> field for the operator you want to deactivate.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-manage-operator-active.png' />
+
+When deactivation succeeds, a success message appears in the upper right corner of the screen. Disabled operator accounts cannot log in.
+
+:::tip
+
+Click <IcCamEdit title='Edit' /> to open the <Cmd sid='edit_operator' product='cam' /> window. Click the toggle in the <Cmd sid='enabled' product='cam' /> field to deactivate the account. Click <Cmd sid='ok' product='cam' /> to save the changes.
+
+<ProdImg src='/img/cam-server/cam-webserver-system-manage-operator-edit.png' width='50%' />
+
+:::
+
+:::info
+
+Disabled accounts can be reactivated later.
+
+:::
+
+:::caution
+
+If an operator is already logged in, they will be denied access on their next login attempt.
+
+:::
+
+## Delete operator
+
+You can permanently delete operator accounts. Deleted accounts cannot be recovered.
+
+1. Click the <Cmd sid='system' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <Cmd sid='account_management' product='cam' /> in the left sidebar.
+
+3. In the <Cmd sid='operator' product='cam' /> section, click <IcCamTrash title='Delete' /> for the operator you want to delete.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-manage-operator-delete.png' />
+
+4. When the warning message appears, click <Cmd sid='ok' product='cam' />.
+
+When deletion succeeds, a success message appears in the upper right corner of the screen. The operator account is removed from the list.

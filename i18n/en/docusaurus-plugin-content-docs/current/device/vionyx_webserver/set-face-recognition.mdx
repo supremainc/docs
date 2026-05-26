@@ -1,0 +1,34 @@
+---
+id: set-face-recognition
+title: Set Up Facial Authentication
+description: To improve Facial Authentication security and efficiency, set the authentication interval, security level, and spoof detection.
+keywords:
+  - Face authentication
+  - Prevent duplicate matches
+  - Security level
+  - Spoof detection
+---
+
+Use Facial Authentication settings to manage authentication efficiency, security level, and spoof detection at once. Adjust values appropriately based on your organization’s security policy and operating environment.
+
+1. Click the <Cmd sid='people' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <IcCamFace title='Face Setting' /> <Cmd sid='face_setting' product='cam' /> in the upper right corner of the screen.
+
+3. When the <Cmd sid='face_setting' product='cam' /> window appears, set the required options.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-face-setting.png' />
+
+   * <Cmd sid='face_settings_security_level' product='cam' />: Set the security level. The higher the security level, the stricter the authentication becomes.
+
+   * <Cmd sid='face_settings_fake_detection' product='cam' />: Prevent user authentication with spoofed faces, such as photos.
+
+4. When you finish setting the options, click <Cmd sid='apply' product='cam' />.
+
+:::tip
+
+* For areas that require high security, set the <Cmd sid='face_settings_security_level' product='cam' /> option to <Cmd>Most Secure</Cmd>.
+
+* The <Cmd sid='face_settings_auth_timeout' product='cam' /> option is not supported.
+
+:::

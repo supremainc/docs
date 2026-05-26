@@ -1,0 +1,62 @@
+---
+id: edit-delete-ai-event
+title: Edit and Delete AI Events
+description: Modify the settings of created AI events or delete events that are no longer needed.
+keywords:
+  - AI event
+  - Manage
+  - Settings
+  - Delete
+---
+
+Modify the settings of created AI events or delete events that are no longer needed.
+
+## Edit AI event settings
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. Click <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> in the left sidebar.
+
+   <ProdImg src='/img/cam-server/manage-ai-event-list.png' />
+
+3. Click the AI event to edit.
+
+4. In the right panel, edit the AI event settings.
+
+5. After you finish all settings, click <Cmd sid='update' product='cam' /> in the upper right corner. 
+
+Return to the previous screen and confirm the modified event in the AI event list.
+
+:::info
+
+For more information about each event setting, refer to the following document.
+
+* [<Cmd sid='ai_analysis_people_tracking' product='cam' className='normal' />](configure-people-tracking)
+
+* [<Cmd sid='ai_analysis_intrusion' product='cam' className='normal' />](configure-intrusion)
+
+* [<Cmd sid='ai_analysis_line_crossing' product='cam' className='normal' />](configure-line-crossing)
+
+* [<Cmd sid='ai_analysis_people_counting' product='cam' className='normal' />](configure-counting-people)
+
+:::
+
+## Delete AI event
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. Click <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> in the left sidebar.
+
+   <ProdImg src='/img/cam-server/manage-ai-event-list.png' />
+
+3. Click <IcCamTrash title='delete' alone /> to the right of the AI event to delete.
+
+4. When a warning message appears, review the message and click <Cmd sid='ok' product='cam' />.
+
+:::info
+
+* Deleted AI events cannot be recovered. If an AI event is linked to rules (Rule), deleting the event also deletes the linked rules.
+
+* Deleting an AI event records the deletion in the system log.
+
+:::

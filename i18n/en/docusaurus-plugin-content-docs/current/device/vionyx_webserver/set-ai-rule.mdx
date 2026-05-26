@@ -1,0 +1,183 @@
+---
+id: set-ai-rule
+title: AI Rule Settings
+description: Define rules that execute actions when AI events occur. This guide explains how to create rules, select conditions, configure audio and webhook actions, and save and operate rules.
+keywords:
+  - AI
+  - Rules
+---
+
+Use AI rules to automatically execute audio playback or send webhooks based on event type and conditions. This document guides the complete procedure for creating and operating rules.
+
+Set AI rules in the following situations.
+
+* Send a webhook to an external server when a specific AI event occurs.
+
+* Play audio on the device when a specific AI event occurs.
+
+* Automate different follow-up actions by event type.
+
+## Before you start
+
+Before starting rule setup, check the following.
+
+* AI events must already exist. Refer to the following documents to create AI events.
+
+  * <DocLink docId='device/vionyx_webserver/configure-people-tracking' />
+
+  * <DocLink docId='device/vionyx_webserver/configure-intrusion' />
+
+  * <DocLink docId='device/vionyx_webserver/configure-line-crossing' />
+
+  * <DocLink docId='device/vionyx_webserver/configure-counting-people' />
+
+* Prepare the audio clips to play before using audio.
+
+* Prepare the webhook receiver URL beforehand.
+
+* You must configure at least one audio or webhook action.
+
+## Create AI rule
+
+<Steps>
+<Step>
+
+### Start creating a rule
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. In the left sidebar, click <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='rule_settings' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-rule-settings-list.png' />
+
+3. Click <Cmd sid='add_button' product='cam' /> at the top right of the screen.
+
+4. When the <Cmd sid='add_rule_page_title' product='cam' /> screen appears, enter the rule name and set conditions and actions.
+
+   <ProdImg src='/img/cam-server/ai-rule-settings-add-rule.png' />
+
+</Step>
+<Step>
+
+### Enter rule name
+
+Enter the rule name in the <Cmd sid='name' product='cam' /> input field. Rule name is required. Up to 64 characters.
+
+</Step>
+<Step>
+
+### Set conditions
+
+Conditions determine whether a rule executes when an AI event occurs. Set conditions as instructed below. The <Cmd sid='type' product='cam' /> and <Cmd sid='event' product='cam' /> options appear based on the settings specified when creating the AI event.
+
+* <Cmd sid='channel' product='cam' />: The channel is fixed to CH 1. Only Fisheye view is supported.
+
+* <Cmd sid='type' product='cam' />: Select the AI event type. Select one of the following.
+
+  * <Cmd sid='ai_analysis_people_tracking' product='cam' />
+
+  * <Cmd sid='ai_analysis_intrusion' product='cam' />
+
+  * <Cmd sid='ai_analysis_line_crossing' product='cam' />
+
+  * <Cmd sid='ai_analysis_people_counting' product='cam' />
+
+* <Cmd sid='event' product='cam' />: Select the AI event that will trigger the rule. The event list shows AI events that match the selected type. Events appear in the format `(ID:N) event_name`.
+
+* <Cmd sid='entry_area' product='cam' /> / <Cmd sid='intrusion_area' product='cam' /> / <Cmd sid='line' product='cam' /> / <Cmd sid='counting_area' product='cam' />: Add conditions for an area based on the selected event type.
+
+* <Cmd sid='event_type' product='cam' />: Select the event type that determines whether the rule executes. The rule executes based on the selected event type.
+
+  :::note
+
+  You must select at least one event type.
+
+  :::
+
+</Step>
+<Step>
+
+### Audio action settings
+
+Audio action plays audio from the camera when an AI event occurs. Click the toggle button to enable the audio action.
+
+<ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-audio.png' />
+
+* <Cmd sid='audio_clip' product='cam' />: Select the audio clip to play. Select an audio clip from the list of clips uploaded to the system.
+
+* <Cmd sid='repeat' product='cam' />: Set the number of times to repeat audio playback. Plays the audio clip repeatedly the number of times you set. It can be set to a maximum of 10 times.
+
+* <Cmd sid='schedule' product='cam' />: The schedule when the rule runs and plays audio. You cannot change this option.
+
+:::info
+
+Prepare audio clips before configuring audio actions. Upload audio clips in <Cmd sid='system' product='cam' /> → <Cmd sid='audio' product='cam' />. For more information, refer to <DocLink docId='device/vionyx_webserver/upload-audio-clips' />.
+
+:::
+
+</Step>
+<Step>
+
+### Webhook action settings
+
+Webhook action sends a webhook to an external server when an AI event occurs. Click the toggle button to enable the webhook action.
+
+<ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-webhook.png' />
+
+* <Cmd sid='method' product='cam' />: The webhook transmission method. Only the `POST` method is supported.
+
+* <Cmd>URL</Cmd>: Enter the URL to receive the webhook. The address must be valid and start with `http://` or `https://`.
+
+* <Cmd sid='header' product='cam' />: Set the HTTP headers to include in the webhook. Click <Cmd sid='add_button' product='cam' /> to add headers. Enter each header as a key-value pair.
+
+* <Cmd sid='body' product='cam' />: Set the HTTP body to include in the webhook. Click <Cmd sid='add_button' product='cam' /> to add body items. Enter each body item as a key-value pair.
+
+  :::note
+
+  Custom items cannot be empty; up to 10 items can be added.
+
+  :::
+
+* <Cmd sid='schedule' product='cam' />: The schedule when the rule runs and sends the webhook. You cannot change this option.
+
+:::info
+
+Webhook send logs and response codes can be checked in the system logs for troubleshooting.
+
+:::
+
+</Step>
+<Step>
+
+### Save rule
+
+After completing rule setup, click <Cmd sid='apply' product='cam' /> at the top right to save the rule. Saved rules appear in the rule list. The rule list shows the rule name, type, event, and schedule. 
+
+<ProdImg src='/img/cam-server/ai-rule-settings-added-list.png' />
+
+</Step>
+</Steps>
+
+## Enable/Disable AI rules
+
+In the rule list, click the leftmost toggle for a rule to enable or disable it. Enabled rules execute the configured actions when an AI event occurs. Disabled rules do not execute actions when AI events occur.
+
+<ProdImg src='/img/cam-server/ai-rule-settings-added-list-enable-disable.png' />
+
+:::info
+
+The rule list shows enabled status at a glance. Rules with a blue toggle are enabled; rules with a gray toggle are disabled.
+
+:::
+
+## Edit AI rule
+
+Click a rule in the rule list to view or edit its details. On the rule details screen, after modifying conditions and actions, click <Cmd sid='update' product='cam' /> to save changes.
+
+<ProdImg src='/img/cam-server/ai-rule-settings-edit.png' />
+
+## Delete AI rule
+
+In the rule list, click <IcCamTrash title='delete' /> on the right of a rule to delete it. Deleted rules cannot be recovered.
+
+<ProdImg src='/img/cam-server/ai-rule-settings-added-list-delete.png' />

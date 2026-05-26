@@ -1,0 +1,159 @@
+---
+id: configure-video-profile
+title: Configure Video Profile
+description: Describes how to manage, from an operational perspective, per-channel view modes and stream encoding settings, and mirror and reset policies.
+keywords:
+  - Video profile
+  - Stream
+  - Codec
+  - Resolution
+  - Frame rate
+  - Bitrate
+  - Mirror
+---
+
+Live-view image quality and recorded video quality depend on the video profile settings. In video profile settings, adjust per-channel view modes and stream encoding values. Also provide Mirror (left-right flip) and channel reset features depending on the installation environment.
+
+Set the video profile in the following situations to balance image quality, storage, and network bandwidth.
+
+* When balancing storage and image quality
+
+* When separating Main and Sub streams to match network bandwidth
+
+* When using per-channel view modes to match their intended purpose
+
+:::info
+
+If AI events are active, changing the mirror setting or performing a reset may delete AI event settings.
+
+:::
+
+## Video profile settings
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. On the left sidebar, click <Cmd sid='basic' product='cam' /> → <Cmd sid='video_profile' product='cam' />.
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-video-profile.png' />
+
+:::info
+
+Video profile changes apply to the camera immediately without a separate save button.
+
+:::
+
+## Channel selection and view type
+
+The main purpose of each channel is as follows.
+
+* **CH 1**: This channel operates based on the original fisheye view from the physical camera.
+
+* **CH 2**: This channel uses processed views, such as panorama or quad split screens, to improve monitoring efficiency.
+
+Set detailed video profile settings per camera channel.
+
+1. From the right <Cmd sid='video_profile' product='cam' /> panel, select <Cmd>CH 1</Cmd> or <Cmd>CH 2</Cmd> in <Cmd sid='channel' product='cam' />.
+
+2. From <Cmd sid='view_type' product='cam' /> → <Cmd sid='type' product='cam' />, select the view type for the selected channel.
+
+Channel view type policies are as follows.
+
+* <Cmd>CH 1</Cmd>: Fixed to fisheye and cannot be changed.
+
+* <Cmd>CH 2</Cmd>: Select a view mode other than fisheye.
+
+  * <Cmd sid='view_type_single' product='cam' />: This mode corrects video captured by a fisheye camera so you can view a wall-style panorama.
+
+  * <Cmd sid='view_type_double' product='cam' />: This mode corrects distortion in video captured from a 360° area so you can view a panorama split into upper and lower screens.
+
+  * <Cmd sid='view_type_quad' product='cam' />: This mode corrects distortion so you can view four specific screens that fit human vision at the same time.
+
+## Stream type selection
+
+In <Cmd sid='stream' product='cam' />, select the stream to configure. Select the main or sub stream, then adjust the detailed values in the <Cmd sid='profile' product='cam' /> section.
+
+* <Cmd sid='stream_type_main' product='cam' />: Recording and high-quality monitoring
+
+* <Cmd sid='stream_type_sub' product='cam' />: Low-bandwidth remote monitoring
+
+:::info
+
+The <Cmd>CH 2</Cmd> channel supports only <Cmd sid='stream_type_main' product='cam' />.
+
+:::
+
+## Profile detail settings
+
+Adjust codec, resolution, frame rate, and other detailed settings according to the selected stream type.
+
+* <Cmd sid='codec' product='cam' />: Select the codec to apply to the profile. Select one of **H.264**, **H.265**, or **MJPEG**.
+
+   :::note
+
+   Selecting H.265 requires Profile T.
+
+   :::
+
+* <Cmd sid='resolution' product='cam' />: Resolution to apply to the profile. Supported resolutions vary by channel, video type, and stream type.
+
+  | Channel | Video Type | Stream Type | Supported Resolution |
+  | --- | --- | --- | --- |
+  | CH 1 | <Cmd sid='view_type_fisheye' product='cam' className='normal' /> | <Cmd sid='stream_type_main' product='cam' className='normal' /> | 3520 × 3520 |
+  | ^ | ^ | <Cmd sid='stream_type_sub' product='cam' className='normal' /> | 1760 × 1760 |
+  | CH 2 | <Cmd sid='view_type_single' product='cam' className='normal' /> | <Cmd sid='stream_type_main' product='cam' className='normal' /> | 2048 × 512, 1920 × 480, 1280 × 320, 704 × 176 |
+  | ^ | <Cmd sid='view_type_double' product='cam' className='normal' /> | <Cmd sid='stream_type_main' product='cam' className='normal' /> | 2048 × 2048, 1920 × 1920, 1280 × 1280, 704 × 704 |
+  | ^ | <Cmd sid='view_type_quad' product='cam' className='normal' /> | <Cmd sid='stream_type_main' product='cam' className='normal' /> | 2048 × 2048, 1600 × 1600, 1280 × 1280, 1024 × 1024 |
+
+   :::note
+
+  The <Cmd>CH 2</Cmd> channel supports only <Cmd sid='stream_type_main' product='cam' />.
+
+   :::
+
+* <Cmd sid='frame_rate' product='cam' />: Set the number of frames per second. Select one of 30, 25, 20, 15, or 10 frames per second.
+
+* <Cmd sid='max_bitrate' product='cam' />: Set the maximum video bit rate.
+
+* <Cmd sid='bitrate_control' product='cam' />: Select the video bitrate control method.
+
+  * <Cmd>VBR</Cmd>: Variable Bitrate adjusts according to scene complexity, providing high quality when the network is stable. Recommended when network bandwidth is sufficient.
+
+  * <Cmd>CBR</Cmd>: Fixed bitrate ensures stable streaming but may reduce quality in complex scenes. Recommended when network bandwidth is limited or consistent.
+
+* <Cmd sid='gov_length' product='cam' />: Set the I-frame interval. Select a value between 1 and 300. Longer GOV reduces data size; shorter GOV increases it.
+
+:::info
+
+* **Variable Bitrate** (VBR): This method transmits video within the maximum bit rate without fixing the data size of each frame. Bitrate varies according to scene complexity. Generally provides high quality, but may cause video interruptions when network bandwidth is unstable.
+
+* **Constant Bitrate** (CBR): This method transmits video by fixing the data size of each frame. Provides stable streaming in environments with consistent network bandwidth, but quality may degrade depending on scene complexity.
+
+* **GOV** (Group of Video): In H.264/H.265 compression, this refers to the group of frames from an I-frame to the frame immediately before the next I-frame. A GOV contains I-frames (key frames) that hold full image data and P-frames that contain only changes from the previous frame. Longer GOV reduces the number of I-frames and thus reduces video data; shorter GOV increases the number of I-frames and increases video data.
+
+:::
+
+## Mirror settings
+
+Depending on the camera installation location, mirror or flip settings may be required. 
+
+* <Cmd sid='mirror' product='cam' />: Turn the mirror setting on or off.
+
+* <Cmd sid='flip' product='cam' />: Turn the flip setting on or off.
+
+:::info
+
+Changing Mirror may be restricted when AI events are configured. Follow the popup instructions to delete AI settings and proceed.
+
+:::
+
+## Channel settings initialization
+
+To restore the selected channel's view mode and stream settings to factory defaults, click <Cmd sid='restore_to_default' product='cam' /> in <Cmd sid='reset' product='cam' />.
+
+:::info
+
+* Only the selected channel is restored to factory defaults.
+
+* If an AI event is set in fisheye mode, delete the AI setting before continuing.
+
+:::
