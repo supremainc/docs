@@ -136,11 +136,15 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
 ## 라이브에서 확인
 
-화면 왼쪽 상단의 <Cmd sid='live' product='cam' /> 메뉴를 클릭하세요. 카메라 영상의 오른쪽 상단의 <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> 아이콘이 켜져 있는지 확인하세요. 설정한 카운팅 영역과 얼굴 영역이 영상에 오버레이로 표시됩니다. 카운팅 영역에 머무르는 사람의 수를 `Count: N` 형식으로 표시합니다. 얼굴 영역을 설정했다면 카메라가 해당 영역에서 얼굴을 감지하며, 등록된 사용자는 자동으로 신원이 인식되어 이름을 표시합니다.
+화면 왼쪽 상단의 <Cmd sid='live' product='cam' /> 메뉴를 클릭하세요. 카메라 영상의 오른쪽 상단의 <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> 아이콘이 켜져 있는지 확인하세요. 설정한 카운팅 영역과 얼굴 영역이 영상에 오버레이로 표시됩니다. 카운팅 영역에 머무르는 사람의 수를 <Cmd sid='count' product='cam' /> <Cmd>: N</Cmd> 형식으로 표시합니다. 얼굴 영역을 설정했다면 카메라가 해당 영역에서 얼굴을 감지하며, 등록된 사용자는 자동으로 신원이 인식되어 이름을 표시합니다.
 
 <Image src='/img/cam-server/ai-analysis-events-counting-people-result.png' />
 
 :::info
+
+* 카운트 값을 수동으로 초기화하려면 <IcMoreB title='More' /> → <Cmd sid='count_reset' product='cam' /> 버튼을 클릭하세요.
+
+   <Image src='/img/cam-server/ai-analysis-events-counting-people-result-reset.png' />
 
 * 등록되지 않은 사용자는 <Cmd sid='unknown_face' product='cam' />로 표시됩니다. 등록된 사용자는 이름과 함께 표시합니다.
 
