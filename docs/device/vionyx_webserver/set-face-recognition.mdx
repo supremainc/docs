@@ -15,10 +15,6 @@ keywords: [얼굴 인증, 중복 매칭 방지, 보안 등급, 위조 감지]
 
    <Image src='/img/cam-server/cam-webserver-people-face-setting.png' />
 
-   * <Cmd sid='face_settings_auth_timeout' product='cam' />: 같은 사람의 매칭 성공 후 추가 매칭 이벤트 발생 지연 시간을 설정할 수 있습니다. 최대 10초까지 설정할 수 있습니다.
-
-      > 예를 들어 1분으로 설정하면, 사용자 A에 대해 매칭 성공 후 1분 이내의 추가 매칭은 이벤트를 발생시키지 않습니다.
-
    * <Cmd sid='face_settings_security_level' product='cam' />: 보안 등급을 설정할 수 있습니다. 보안 등급이 높을수록 인증이 더 엄격해집니다.
 
    * <Cmd sid='face_settings_fake_detection' product='cam' />: 사진 등의 위조 얼굴을 이용한 사용자 인증을 방지할 수 있습니다.
@@ -27,6 +23,8 @@ keywords: [얼굴 인증, 중복 매칭 방지, 보안 등급, 위조 감지]
 
 :::tip
 
-높은 보안이 필요한 구역은 <Cmd sid='face_settings_security_level' product='cam' /> 옵션을 <Cmd>Most Secure</Cmd>로 설정하는 것을 권장합니다.
+* 높은 보안이 필요한 구역은 <Cmd sid='face_settings_security_level' product='cam' /> 옵션을 <Cmd>Most Secure</Cmd>로 설정하는 것을 권장합니다.
+
+* <Cmd sid='face_settings_auth_timeout' product='cam' /> 옵션은 지원하지 않는 기능입니다.
 
 :::
