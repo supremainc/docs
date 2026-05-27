@@ -1,0 +1,101 @@
+---
+id: remote-control-door
+title: Remote Control of Doors
+description: Check door status in real time in the mobile app and control doors as needed. Support for a range of control options, from normal operation to emergency response.
+keywords:
+  - Door
+  - Remote Control
+---
+
+In the door list, check each door's status in real time and control it as needed. During normal operation, manage doors with basic control features. Use additional control options for stronger security or emergencies.
+
+Tap <Cmd>DOOR</Cmd> on the app home screen. The list of doors enrolled in BioStar X appears.
+
+:::info
+
+You can also access it through the side menu. Tap <IcHamberg title='Hamburger icon' width={20} height={20} /> → <Cmd>Door</Cmd>.
+
+:::
+
+## Check door status
+
+In the door list, the status icon lets you see abnormal conditions for the device assigned to each door at a glance. The door status icon indicates whether the door is open, closed, or has an alarm.
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-doors-list.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+<div className='col2-2-8'>
+
+| Status Icon | Description |
+| :-: | --- |
+| ![Door Error](/img/mobile/bsx-mobile-door-status-error.png) | The door has a problem. The door is in an abnormal state, such as a disconnected device, communication server error, or synchronization error. |
+| ![Door Opened](/img/mobile/bsx-mobile-door-status-unlock.png) | The door is open. |
+| ![Door Closed](/img/mobile/bsx-mobile-door-status-lock.png) | The door is closed. |
+| ![Door Alarm](/img/mobile/bsx-mobile-door-status-alarm.png) | An alarm has occurred at the door. |
+| ![Door APB](/img/mobile/bsx-mobile-door-status-apb.png) | An APB alarm has occurred at the door. |
+
+</div>
+
+</Column>
+</Columns>
+
+## Open/Lock door
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-door-control.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+The remote door control feature lets you open or lock door to allow or block access.
+
+* <Cmd>Open</Cmd>: Temporarily opens the door to allow access. The door closes automatically after the set time.
+
+* <Cmd>Release</Cmd>: Sets the door to allow access only for authenticated users. The door status changes according to the schedule set for the door.
+
+:::info
+
+For more information on how to temporarily open a door and set the auto-close time, see <Cmd sid='common.open' product='2' /> → <Cmd sid='door.openTime' product='2' /> in <DocLink docId='platform/biostar_x/settings-door-add#option' />.
+
+:::
+
+</Column>
+</Columns>
+
+## Additional control
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-door-control-more.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+When stronger security is needed or access must be controlled for a long period, manually lock or unlock the door without a time limit. You can also clear the triggered alarm.
+
+Tap <IcAirMore title='More' /> at the far right of the door to use additional control options.
+
+* <Cmd>Manual Lock</Cmd>: Manually locks the door to block access. This feature locks the door without a time limit. In this state, access is blocked for all users.
+
+* <Cmd>Manual Unlock</Cmd>: Manually unlocks the door to allow access. This feature unlocks the door without a time limit. In this state, access is allowed for all users.
+
+* <Cmd>Clear Alarm</Cmd>: Clear the alarm that occurred at the door.
+
+* <Cmd>Clear APB</Cmd>: Clear the APB alarm that occurred at the door.
+
+:::info
+
+After you manually lock or unlock a door, the door status does not change automatically. For security, use <Cmd>Release</Cmd> to make the door operate according to the set schedule.
+
+:::
+
+</Column>
+</Columns>

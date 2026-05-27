@@ -530,5 +530,17 @@
   "sidebar.aicamwebserver.category.시스템 구성하기": {
     "message": "시스템 구성하기",
     "description": "The label for category '시스템 구성하기' in sidebar 'aicamwebserver'"
+  },
+  "sidebar.biostarx_mobile.category.BioStar X 모바일": {
+    "message": "BioStar X 모바일",
+    "description": "The label for category 'BioStar X 모바일' in sidebar 'biostarx_mobile'"
+  },
+  "sidebar.biostarx_mobile.category.사용자 관리하기": {
+    "message": "사용자 관리하기",
+    "description": "The label for category '사용자 관리하기' in sidebar 'biostarx_mobile'"
+  },
+  "sidebar.biostarx_mobile.category.출입문 관리하기": {
+    "message": "출입문 관리하기",
+    "description": "The label for category '출입문 관리하기' in sidebar 'biostarx_mobile'"
   }
 }

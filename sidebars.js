@@ -158,7 +158,7 @@ function createSidebars(preview) {
       },
       items: [
         'platform/biostar_x_mobile/before-you-start',
-        'platform/biostar_x_mobile/install-mobile-app',
+        'platform/biostar_x_mobile/getting-started',
         'platform/biostar_x_mobile/app-settings',
         {
           type: 'category',

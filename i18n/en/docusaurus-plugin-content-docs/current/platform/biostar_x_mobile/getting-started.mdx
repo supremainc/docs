@@ -1,0 +1,133 @@
+---
+id: getting-started
+title: Getting Started
+description: This guide provides step-by-step instructions for downloading the BioStar X mobile app on iOS and Android and connecting it to the server.
+keywords:
+  - BioStar X
+  - Mobile
+  - Install
+  - Connect
+  - Download
+  - iOS
+  - Android
+---
+
+The BioStar X mobile app is available on iOS and Android. 
+Install the app by following the instructions, then connect to the BioStar X server.
+
+## Download the BioStar X Mobile app
+
+Download the app using the links or QR codes below.
+
+<div className='table--fixed'>
+
+| Platforms | Download link | QR code |
+| :-: | :-: | :-: |
+| **iOS** | [App Store](https://apps.apple.com/app/biostar-x-mobile/id6741415253) | ![iOS QR Code](/img/mobile/bsx-appstore-qr-code.png) |
+| **Android** | [Google Play](https://play.google.com/store/apps/details?id=com.suprema.biostarmobile) | ![Android QR Code](/img/mobile/bsx-playstore-qr-code.png) |
+
+</div>
+
+## App permissions
+
+The BioStar X mobile app requests the following permissions when certain features are used. It does not request permissions during initial installation.
+
+| Permission | Required | Purpose |
+| --- | --- | --- |
+| Storage | Optional | Required to manage and upload user images, such as gallery or device storage images. |
+| Camera | Optional | Used to capture images for facial credential enrollment and video recording. |
+| Biometric | Optional | Required for secure login using fingerprint or facial authentication on a mobile device. |
+
+:::info
+
+All permissions are optional, and users can deny them without affecting the app's basic features.
+
+:::
+
+## Starting the app and initial setup
+
+When the app starts, a screen appears where you enter information to connect to the BioStar X server.
+
+<Columns>
+
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-init-setting.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+* <Cmd>BioStar X Server Address</Cmd>: Enter the IP address or domain address of the BioStar X server.
+
+* <Cmd>Port</Cmd>: Enter the port number of the BioStar X server. The default is `443`.
+
+* <Cmd>ID</Cmd> / <Cmd>Password</Cmd>: Enter the administrator ID and password for logging in to the BioStar X server.
+
+After entering all required information, tap <Cmd>Login</Cmd> to sign in.
+
+:::info
+
+* To save the administrator ID and password in the input fields, select the <Cmd>Remember username and password</Cmd> checkbox. The entered ID and password are automatically filled in on the next login.
+
+* For information on the BioStar X server IP address and port number, see <DocLink docId='platform/biostar_x/settings-server-server' />.
+
+* If the time zone of the mobile device differs from the BioStar X server, log event lookup may not work. For more information on the BioStar X time zone setting, see <DocLink docId='platform/biostar_x/settings-preferences' />.
+
+:::
+
+</Column>
+</Columns>
+
+## Connection troubleshooting
+
+If login fails, check the following:
+
+* Check that the BioStar X server address and port number are correct.
+
+* Check that the administrator ID and password are correct.
+
+* Check the network connection. Check that the mobile device is connected to the same network as the server where BioStar X is installed.
+
+:::info
+
+Access from an external network requires a public IP address. Otherwise, purchase an additional **Remote Access** license. For more information, see <DocLink docId='platform/biostar_x_mobile/before-you-start' />.
+
+:::
+
+## Using the app
+
+After login succeeds, the BioStar X mobile app home screen appears. On the home screen, view registered users, doors, real-time logs, event logs, and alerts. You can also access the side menu and settings menu.
+
+<Columns>
+
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-home-screen.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+* <IcHamberg title='Hamburger icon' width={20} height={20} />: Opens the side menu. In the side menu, change the password or log out, and access the main menus.
+
+* <IcSet title='Setting icon' width={20} height={20} />: Opens the settings menu. For more information on app settings, see <DocLink docId='platform/biostar_x_mobile/app-settings' />.
+
+* <Cmd>USER</Cmd>: View the list of registered users and manage users. For more information on user management, see <DocLink docId='platform/biostar_x_mobile/manage-users' />.
+
+* <Cmd>DOOR</Cmd>: View the list of registered doors and control them remotely. For more information on door management, see <DocLink docId='platform/biostar_x_mobile/manage-doors' />.
+
+* <Cmd>REAL-TIME LOG</Cmd>: View real-time access event logs. For more information on real-time log monitoring, see <DocLink docId='platform/biostar_x_mobile/view-realtime-log' />.
+
+* <Cmd>EVENT LOG</Cmd>: View all event logs stored on the BioStar X server. For more information on log lookup, see <DocLink docId='platform/biostar_x_mobile/view-past-events' />.
+
+* <Cmd>ROLL CALL</Cmd>: Quickly generate a list of people based on access records within a specific time and place, and check their current locations. The Roll Call feature is available through an add-on option with an **Advanced** license or higher. For more information on the Roll Call feature, see <DocLink docId='platform/biostar_x_mobile/start-rollcall' />.
+
+* <Cmd>ALERT</Cmd>: View alerts for doors, devices, and advanced access control. For more information on alerts, see <DocLink docId='platform/biostar_x_mobile/check-resolve-alerts' />.
+
+:::info
+
+All features are also accessible through the side menu (<IcHamberg title='Hamburger icon' width={20} height={20} />).
+
+:::
+
+</Column>
+</Columns>

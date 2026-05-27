@@ -1,0 +1,532 @@
+---
+id: add-user
+title: Register Users
+description: This guide explains how to register users through the BioStar X mobile app.
+keywords:
+  - BioStar X
+  - Mobile
+  - Register Users
+  - Add
+---
+
+When you need to register a new user or a temporary visitor to the system, enroll basic information, permissions, and authentication methods together.
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-all-users-tap-add.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+1. On the app home screen, tap <Cmd>USER</Cmd>.
+
+   :::note
+
+   You can also access it through the side menu. Tap <IcHamberg title='Hamburger icon' width={20} height={20} /> → <Cmd>User</Cmd>.
+
+   :::
+
+2. Tap <IcAdd title='Add user' /> at the top right of the screen.
+
+3. Enter the user's basic information and set up credentials.
+
+</Column>
+</Columns>
+
+## Enroll profile image
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-add-user-profile-image.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+To enroll a user's profile image, tap the profile icon at the top of the screen.
+
+* <Cmd>Take photo</Cmd>: Take a photo with your mobile device's camera and use it as the profile image.
+
+* <Cmd>From Gallery</Cmd>: Select a saved photo on your mobile device and use it as the profile image.
+
+:::info
+
+To delete an enrolled profile image, tap <Cmd>Remove Picture</Cmd>.
+
+:::
+
+</Column>
+</Columns>
+
+## Enter user information and set permissions
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-add-user-basic-info.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+* <Cmd>ID</Cmd>: The unique ID assigned to the user. The value generated automatically by the system is prefilled. The administrator can also enter it manually.
+
+* <Cmd>Name</Cmd>: Enter the user's name.
+
+* <Cmd>Account Level</Cmd>: Set the user's administrator level.
+
+  * <Cmd>None</Cmd>: A standard user with no administrator privileges.
+
+  * <Cmd>Administrator</Cmd>: An administrator level that can use all menus.
+
+  * <Cmd>User Operator</Cmd>: Has **read** and **write** permissions in the <Cmd sid='shell.header.user' product='2' /> menu.
+
+  * <Cmd>Monitoring Operator</Cmd>: Has **read** and **write** permissions in the <Cmd sid='shell.header.arena' />, <Cmd sid='shell.header.data' />, and <Cmd sid='shell.header.dashboard' /> menus.
+
+  * <Cmd>T&A Operator</Cmd>: Has **read** and **write** permissions in the <Cmd sid='common.gnb.time_attendance' product='2' /> menu.
+
+  * <Cmd>Visitor Operator</Cmd>: Has **read** and **write** permissions in the <Cmd sid='common.gnb.visitor' product='2' /> menu.
+
+   :::note
+
+   When you set an administrator level, you can set a login ID and password so the user can log in to the BioStar X server.
+
+  <Image src='/img/mobile/bsx-mobile-app-add-user-assign-admin.png' width='40%' alone />
+
+   :::
+
+* <Cmd>User Group</Cmd>: Select the group the user belongs to.
+
+* <Cmd>Email</Cmd>: Enter the user's email address.
+
+* <Cmd>Phone</Cmd>: Enter the user's phone number.
+
+* <Cmd>Status</Cmd>: Activate or deactivate the user account.
+
+* <Cmd>Period</Cmd>: Set the period for using the user account. Set the start and end dates to use the user account only during that period.
+
+* <Cmd>Access Group</Cmd>: Set the user's access group to restrict access by organization or department.
+
+:::info
+
+* The available user ID values may vary depending on the <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.server' /> menu's <Cmd sid="setting.userDevice.useridType" product='2' /> option. For more information, refer to <DocLink docId='platform/biostar_x/settings-server-server#userid-type' target='_blank' />.
+
+* The <Cmd>T&A Operator</Cmd> and <Cmd>Visitor Operator</Cmd> levels require a separate license. For more information on licensing policies, see <DocLink docId='platform/biostar_x/licensing#features-add-ons' target='_blank' />.
+
+* For more information about adding and setting up access groups, refer to <DocLink docId='platform/biostar_x/settings-access-control-manage-access-group' target='_blank' />.
+
+:::
+
+</Column>
+</Columns>
+
+## Enroll credential
+
+When you enroll a user, you can also enroll a credential so the user can access the access control system. Users can enroll their fingerprints, faces, card information, and PINs as credentials. Credentials can be added or modified when registering or updating a user.
+
+<Columns className='mt--50'>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-add-user-credential-pin.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+### Enroll PIN {#enrollPin}
+
+You can enroll a PIN credential so the user can gain access by entering a PIN on the device.
+
+1. Tap <Cmd>Credential</Cmd> → <Cmd>PIN</Cmd>.
+
+2. When the PIN entry window appears, enter the desired PIN one by one.
+
+3. When you finish entering it, tap <Cmd>OK</Cmd>.
+
+:::info
+
+* The PIN must be at least 8 characters long and can only contain numbers.
+
+* You can enroll a maximum of one PIN credential per user.
+
+:::
+
+</Column>
+</Columns>
+
+<Columns className='mt--50'>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-add-user-credential-fingerprint.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+### Enroll fingerprint {#enrollFingerprint}
+
+You can enroll the user's fingerprint as a means of authentication for access control. Enroll the user's fingerprint information through a device that supports fingerprint authentication.
+
+:::note
+
+**Before enrolling fingerprints...**
+
+* Ensure that the user's fingerprint is clean and dry.
+
+* Do not enroll fingerprints that are injured or blurry.
+
+:::
+
+1. Tap <Cmd>Credential</Cmd> → <Cmd>Fingerprint</Cmd>.
+
+2. Tap <Cmd>Device</Cmd>, select a device for enrolling the fingerprint, and then tap <Cmd>Yes</Cmd>.
+
+3. In the <Cmd>Add Device</Cmd> pop-up, select a device for fingerprint enrollment and tap <Cmd>Yes</Cmd>.
+
+4. Use <Cmd>Scan Quality</Cmd> to adjust fingerprint quality. The default is **80**. Cannot enroll fingerprint information if it does not meet the configured quality level.
+
+5. Tap <IcAdd title='Add' /> at the top right of the screen.
+
+6. When <Cmd>1st Fingerprint</Cmd> appears in the list, tap it.
+
+7. <Cmd>scanning...</Cmd> When the pop-up appears, scan the fingerprint on the selected device.
+
+8. To verify the fingerprint, scan the same fingerprint again. 
+
+9. When fingerprint scanning is complete, tap <Cmd>OK</Cmd>.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-fingerprint-success.png' width='30%' alone />
+
+:::info
+
+* The device list shows only fingerprint devices registered on the BioStar X server that support fingerprint enrollment.
+
+* Repeat steps 5–9 to enroll additional fingerprints. You can enroll up to 10 fingerprints per user.
+
+* To edit an enrolled fingerprint, tap the fingerprint credential and repeat the previous steps.
+
+:::
+
+</Column>
+</Columns>
+
+<Columns className='mt--50'>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-add-user-credential-ir-face.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+### Enroll IR face
+
+You can enroll the user's face as a means of authentication for access control. IR face enrollment is an authentication method that captures the user's face using an infrared camera.
+
+1. Tap <Cmd>Credential</Cmd> → <Cmd>IR Face</Cmd>.
+
+2. Tap <Cmd>Device</Cmd>, select a device that supports IR face enrollment, and then tap <Cmd>Yes</Cmd>.
+
+3. Adjust <Cmd>Face Pose Variation</Cmd> to set sensitivity for face position, angle, and distance. The default is **4**. Set it high to obtain a precise IR face template.
+
+4. Tap <IcAdd title='Add' /> at the top right of the screen.
+
+5. When <Cmd>1st IR Face</Cmd> appears in the list, tap it.
+
+6. When the face enrollment pop-up appears, scan the face on the selected device. When the face is recognized, the face image appears in the pop-up.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-ir-face-success.png' width='30%' alone />
+
+7. To complete IR face enrollment, tap <Cmd>OK</Cmd>.
+
+:::info
+
+* Devices that can enroll IR face are as follows:
+
+  * FaceStation 2
+
+  * FaceLite
+
+* You can enroll up to 5 IR faces.
+
+* If the face authentication rate is low, delete face information and enroll a new face.
+
+* To edit an enrolled IR face, tap the IR face credential and repeat the previous steps.
+
+:::
+
+</Column>
+</Columns>
+
+<Columns className='mt--50'>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-add-user-credential-face.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+### Face enrollment
+
+You can enroll the user's face as a means of authentication for access control. Facial enrollment is an authentication method that captures the user's face with a camera. In the BioStar X mobile app, you can also import a face image saved on your mobile device or take a photo with the camera to enroll a face. You can also scan a face on a device that supports face recognition and enroll it.
+
+1. Tap <Cmd>Credential</Cmd> → <Cmd>Face</Cmd>.
+
+2. Tap <Cmd>Device</Cmd>, select a device that supports face enrollment, and then tap <Cmd>Yes</Cmd>.
+
+   :::note
+
+   * If you do not select a device, you can import a photo from your mobile device or take a photo with the camera to enroll a face.
+
+   * If you select a device, you can scan a face on that device and enroll it.
+
+   :::
+
+3. Tap <IcAdd title='Add' /> at the top right of the screen.
+
+4. When <Cmd>1st Face</Cmd> appears in the list, tap it.
+
+5. In the pop-up, select the face enrollment method you want.
+
+   * <Cmd>Take photo</Cmd>: Take a photo with your mobile device's camera and enroll the face.
+
+   * <Cmd>From Gallery</Cmd>: Select a photo saved on your mobile device and enroll the face.
+
+   * <Cmd>Device Scan</Cmd>: Scan the face with the device selected in <Cmd>Device</Cmd>.
+
+6. When the face is recognized, the face image appears in the pop-up.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-face-success.png' width='30%' alone />
+
+7. To complete face enrollment, tap <Cmd>OK</Cmd>.
+
+:::info
+
+* To use the enrolled face image as the profile image, enable <Cmd>Use as Profile Image?</Cmd> option.
+
+* When you take a face photo with your mobile device's camera or import a saved photo, access permission is required. Select Allow in the permission request pop-up to enroll the face photo.
+
+* To edit an enrolled face, tap the face credential and repeat the previous steps.
+
+:::
+
+</Column>
+</Columns>
+
+### Enroll access card
+
+You can enroll a new access card or assign an enrolled access card as an authentication method for access. There are two ways to enroll an access card: scan the card on a card reader or enter the card number manually.
+
+#### CSN card
+
+1. Tap <Cmd>Credential</Cmd> → <Cmd>Card</Cmd>.
+
+2. Tap <IcAdd title='Add' /> at the top right of the screen.
+
+3. In <Cmd>Card Type</Cmd>, select <Cmd>CSN</Cmd> and tap <Cmd>Yes</Cmd>.
+
+4. In <Cmd>Registration Option</Cmd>, select the enrollment method you want.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-csn.png' className='none' width='70%' alone />
+
+   * <Num num='1' /> <Cmd>Register by Card Reader</Cmd>: Scan the card on a card reader to enroll it. In <Cmd>Device</Cmd>, select the device to read the card, and then tap <Cmd>Read Card</Cmd>. Hold the card up to the card reader to scan it. When the card is scanned successfully, the card number appears in <Cmd>Card ID</Cmd>.
+
+   * <Num num='2' /> <Cmd>Assign Card</Cmd>: Assign an enrolled access card to a user. Select one of the enrolled card numbers from the list.
+
+   * <Num num='3' /> <Cmd>Enter Manually</Cmd>: Enter the card number manually. Enter the card number in the <Cmd>Card ID</Cmd> input field. To use the user's ID as the card number, tap <Cmd>Use User ID</Cmd>.
+
+5. To complete card enrollment, tap <Cmd>OK</Cmd> at the top right of the screen.
+
+6. When you return to the card list, the enrolled card number appears.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-csn-success.png' width='30%' alone />
+
+:::info
+
+To stop using an enrolled card, tap the card's toggle switch to set it to <Cmd>Blocked</Cmd>.
+
+:::
+
+#### Wiegand card
+
+1. Tap <Cmd>Credential</Cmd> → <Cmd>Card</Cmd>.
+
+2. Tap <IcAdd title='Add' /> at the top right of the screen.
+
+3. In <Cmd>Card Type</Cmd>, select <Cmd>Wiegand</Cmd> and tap <Cmd>Yes</Cmd>.
+
+4. In <Cmd>Card Data Format</Cmd>, select the card format you want.
+
+5. In <Cmd>Registration Option</Cmd>, select the enrollment method you want.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-wiegand.png' className='none' width='70%' alone />
+
+   * <Num num='1' /> <Cmd>Register by Card Reader</Cmd>: Scan the card on a card reader to enroll it. In <Cmd>Device</Cmd>, select the device to read the card, and then tap <Cmd>Read Card</Cmd>. Hold the card up to the card reader to scan it. When the card is scanned successfully, the card number appears in <Cmd>Facility Code</Cmd> and <Cmd>Card ID</Cmd>.
+
+   * <Num num='2' /> <Cmd>Assign Card</Cmd>: Assign an enrolled access card to a user. Select one of the enrolled card numbers from the list.
+
+   * <Num num='3' /> <Cmd>Enter Manually</Cmd>: Enter the card number manually. Enter the card number in the <Cmd>Facility Code</Cmd> and <Cmd>Card ID</Cmd> input fields.
+
+6. To complete card enrollment, tap <Cmd>OK</Cmd> at the top right of the screen.
+
+7. When you return to the card list, the enrolled card number appears.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-wiegand-success.png' width='30%' alone />
+
+:::info
+
+To stop using an enrolled card, tap the card's toggle switch to set it to <Cmd>Blocked</Cmd>.
+
+:::
+
+### Smart Card
+
+:::info
+
+* To issue a smart card, the correct card type must be set. For more information on card formats, refer to <DocLink docId='platform/biostar_x/settings-credential-smart-format' target='_blank' />.
+
+* The user information stored on the smart card uses information stored in **BioStar X**. Failure to store updated user information may result in incorrect information being stored on the smart card. Additionally, if the updated user information is not synchronized with the device, the device may fail to perform authentication.
+
+* To add PIN authentication information, enroll a PIN first. For more information on enrolling a PIN, refer to <DocLink inner='#enrollPin' />.
+
+* To add fingerprint credential information, enroll a fingerprint first. For more information on fingerprint enrollment, refer to <DocLink inner='#enrollFingerprint' />.
+
+:::
+
+#### Access on Card
+
+User information (card ID, PIN, access group, period, fingerprint template, face template, and private authentication mode) can be stored on the card.
+
+1. Tap <Cmd>Credential</Cmd> → <Cmd>Card</Cmd>.
+
+2. Tap <IcAdd title='Add' /> at the top right of the screen.
+
+3. In <Cmd>Card Type</Cmd>, select <Cmd>Smart Card</Cmd> and tap <Cmd>Yes</Cmd>.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-smartcard-aoc.png' width='30%' alone />
+
+4. In <Cmd>Device</Cmd>, select the device to enroll the card, and then tap <Cmd>Yes</Cmd>.
+
+   :::note
+
+   The card layout set on the selected device appears in <Cmd>Card Layout Format</Cmd>.
+
+   :::
+
+5. (Optional) To add fingerprint authentication, tap <Cmd>Figerprint</Cmd> and select an enrolled fingerprint.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-smartcard-aoc-add-finger.png' width='30%' alone />
+
+6. (Optional) To add private authentication mode, tap <Cmd>Private Auth Mode</Cmd> and select the authentication method you want.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-smartcard-aoc-add-pam.png' width='30%' alone />
+
+7. To enroll the card, tap <Cmd>Writes Smart Card</Cmd>.
+
+8. Hold the card up to the selected device to enroll the user information on it.
+
+9. When card enrollment is complete, tap <Cmd>OK</Cmd> at the top right of the screen.
+
+#### Secure Credential Card
+
+User information (card ID, PIN, fingerprint template, and face template) can be stored on the card.
+
+1. Tap <Cmd>Credential</Cmd> → <Cmd>Card</Cmd>.
+
+2. Tap <IcAdd title='Add' /> at the top right of the screen.
+
+3. In <Cmd>Card Type</Cmd>, select <Cmd>Smart Card</Cmd> and tap <Cmd>Yes</Cmd>.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-smartcard-aoc.png' width='30%' alone />
+
+4. In <Cmd>Device</Cmd>, select the device to enroll the card, and then tap <Cmd>Yes</Cmd>.
+
+   :::note
+
+   The card layout set on the selected device appears in <Cmd>Card Layout Format</Cmd>.
+
+   :::
+
+5. Tap <Cmd>Smart Card Type</Cmd>, select <Cmd>Secure Credential Card</Cmd>, and then tap <Cmd>Yes</Cmd>.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-smartcard-scc-select.png' width='30%' alone />
+
+6. (Optional) To add fingerprint authentication, tap <Cmd>Figerprint</Cmd> and select an enrolled fingerprint.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-smartcard-scc-add-finger.png' width='30%' alone />
+
+7. To enroll the card, tap <Cmd>Writes Smart Card</Cmd>.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-smartcard-scc-type.png' width='30%' alone />
+
+8. Hold the card up to the selected device to enroll the user information on it.
+
+9. When card enrollment is complete, tap <Cmd>OK</Cmd> at the top right of the screen.
+
+#### Read Card / Format
+
+You can format smart cards and rewrite information.
+
+1. Tap <Cmd>Credential</Cmd> → <Cmd>Card</Cmd>.
+
+2. Tap <IcAdd title='Add' /> at the top right of the screen.
+
+3. In <Cmd>Card Type</Cmd>, select <Cmd>Read Card</Cmd> and tap <Cmd>Yes</Cmd>.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-smartcard-read.png' width='30%' alone />
+
+4. In <Cmd>Device</Cmd>, select the device to read the card, and then tap <Cmd>Yes</Cmd>.
+
+   :::note
+
+   The card layout set on the selected device appears in <Cmd>Card Layout Format</Cmd>.
+
+   :::
+
+5. Tap <Cmd>Read Card</Cmd> and hold the card up to the device to scan it.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-smartcard-read-card.png' width='30%' alone />
+
+6. After you check the card information, tap <Cmd>Format Card</Cmd> to format the card.
+
+:::info
+
+Custom smart cards cannot be formatted.
+
+:::
+
+## Complete user enrollment
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-add-user-complete.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+After you set the user's basic information, permissions, and credentials, tap <IcSave title='Save' /> at the top right of the screen to complete user enrollment.
+
+* In the <Cmd>Credential</Cmd> section, you can check the number of enrolled credentials for each credential.
+
+* To delete a registered credential, tap the credential to delete, then tap <IcAppDelete title='Delete' /> at the top right of the screen. Select the credential to delete, then tap <Cmd>OK</Cmd>.
+
+  <Image src='/img/mobile/bsx-mobile-app-add-user-credential-remove.png' width='70%' className='none' alone />
+
+:::info
+
+For more information about enrolling and managing users in BioStar X, refer to <DocLink docId='platform/biostar_x/how-to-guide-user' target='_blank' />.
+
+:::
+
+</Column>
+</Columns>
+
+## Check user information
+
+You can check enrolled users in the user list. Each user includes the following information.
+
+<Image src='/img/mobile/bsx-mobile-app-all-users-info.png' width='500px' className='none' alone />
+
+* User name
+
+* User ID | User group
+
+* Enrolled credential information: Fingerprint / IR face / Face / Card / PIN
