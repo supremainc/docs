@@ -1,0 +1,183 @@
+---
+id: set-ai-rule
+title: Ajustes de Reglas de IA
+description: Defina reglas que ejecuten acciones cuando ocurran eventos de IA. Esta guía explica cómo crear reglas, seleccionar condiciones, configurar acciones de audio y webhook, y guardar y operar reglas.
+keywords:
+  - IA
+  - Reglas
+---
+
+Use reglas de IA para ejecutar automáticamente la reproducción de audio o enviar webhooks según el tipo de evento y las condiciones. Este documento guía el procedimiento completo para crear y operar reglas.
+
+Configure reglas de IA en las siguientes situaciones.
+
+* Envíe un webhook a un servidor externo cuando ocurra un evento específico de IA.
+
+* Reproduzca audio en el dispositivo cuando ocurra un evento específico de IA.
+
+* Automatice diferentes acciones de seguimiento según el tipo de evento.
+
+## Antes de comenzar
+
+Antes de empezar la configuración de reglas, revise lo siguiente.
+
+* Los eventos de IA ya deben existir. Consulte los siguientes documentos para crear eventos de IA.
+
+  * <DocLink docId='device/vionyx_webserver/configure-people-tracking' />
+
+  * <DocLink docId='device/vionyx_webserver/configure-intrusion' />
+
+  * <DocLink docId='device/vionyx_webserver/configure-line-crossing' />
+
+  * <DocLink docId='device/vionyx_webserver/configure-counting-people' />
+
+* Prepare los clips de audio que se reproducirán antes de usar audio.
+
+* Prepare con antelación la URL del receptor del webhook.
+
+* Debe configurar al menos una acción de audio o webhook.
+
+## Crear regla de IA
+
+<Steps>
+<Step>
+
+### Iniciar la creación de una regla
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. En la barra lateral izquierda, haga clic en <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='rule_settings' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-rule-settings-list.png' />
+
+3. Haga clic en <Cmd sid='add_button' product='cam' /> en la esquina superior derecha de la pantalla.
+
+4. Cuando aparezca la pantalla <Cmd sid='add_rule_page_title' product='cam' />, ingrese el nombre de la regla y configure las condiciones y acciones.
+
+   <ProdImg src='/img/cam-server/ai-rule-settings-add-rule.png' />
+
+</Step>
+<Step>
+
+### Ingresar nombre de la regla
+
+Ingrese el nombre de la regla en el campo de entrada <Cmd sid='name' product='cam' />. El nombre de la regla es obligatorio. Hasta 64 caracteres.
+
+</Step>
+<Step>
+
+### Configurar condiciones
+
+Las condiciones determinan si una regla se ejecuta cuando ocurre un evento de IA. Configure las condiciones como se indica a continuación. Las opciones <Cmd sid='type' product='cam' /> y <Cmd sid='event' product='cam' /> aparecen según la configuración especificada al crear el evento de IA.
+
+* <Cmd sid='channel' product='cam' />: El canal está fijo en CH 1. Solo se admite la vista Fisheye.
+
+* <Cmd sid='type' product='cam' />: Seleccione el tipo de evento de IA. Seleccione una de las siguientes opciones.
+
+  * <Cmd sid='ai_analysis_people_tracking' product='cam' />
+
+  * <Cmd sid='ai_analysis_intrusion' product='cam' />
+
+  * <Cmd sid='ai_analysis_line_crossing' product='cam' />
+
+  * <Cmd sid='ai_analysis_people_counting' product='cam' />
+
+* <Cmd sid='event' product='cam' />: Seleccione el evento de IA que activará la regla. La lista de eventos muestra los eventos de IA que coinciden con el tipo seleccionado. Los eventos aparecen en el formato `(ID:N) event_name`.
+
+* <Cmd sid='entry_area' product='cam' /> / <Cmd sid='intrusion_area' product='cam' /> / <Cmd sid='line' product='cam' /> / <Cmd sid='counting_area' product='cam' />: Agregue condiciones para un área según el tipo de evento seleccionado.
+
+* <Cmd sid='event_type' product='cam' />: Seleccione el tipo de evento que determina si la regla se ejecuta. La regla se ejecuta según el tipo de evento seleccionado.
+
+  :::note
+
+  Debe seleccionar al menos un tipo de evento.
+
+  :::
+
+</Step>
+<Step>
+
+### Ajustes de acción de audio
+
+La acción de audio reproduce audio de la cámara cuando ocurre un evento de IA. Haga clic en el botón de alternancia para habilitar la acción de audio.
+
+<ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-audio.png' />
+
+* <Cmd sid='audio_clip' product='cam' />: Seleccione el clip de audio que se reproducirá. Seleccione un clip de audio de la lista de clips cargados en el sistema.
+
+* <Cmd sid='repeat' product='cam' />: Configure la cantidad de veces que se repetirá la reproducción de audio. Reproduce el clip de audio repetidamente la cantidad de veces que configure. Puede configurarse hasta un máximo de 10 veces.
+
+* <Cmd sid='schedule' product='cam' />: El horario en que la regla se ejecuta y reproduce audio. No puede cambiar esta opción.
+
+:::info
+
+Prepare los clips de audio antes de configurar acciones de audio. Cargue clips de audio en <Cmd sid='system' product='cam' /> → <Cmd sid='audio' product='cam' />. Para obtener más información, consulte <DocLink docId='device/vionyx_webserver/upload-audio-clips' />.
+
+:::
+
+</Step>
+<Step>
+
+### Ajustes de acción de webhook
+
+La acción de webhook envía un webhook a un servidor externo cuando ocurre un evento de IA. Haga clic en el botón de alternancia para habilitar la acción de webhook.
+
+<ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-webhook.png' />
+
+* <Cmd sid='method' product='cam' />: El método de transmisión del webhook. Solo se admite el método `POST`.
+
+* <Cmd>URL</Cmd>: Ingrese la URL para recibir el webhook. La dirección debe ser válida y comenzar con `http://` o `https://`.
+
+* <Cmd sid='header' product='cam' />: Configure los encabezados HTTP que se incluirán en el webhook. Haga clic en <Cmd sid='add_button' product='cam' /> para agregar encabezados. Ingrese cada encabezado como un par clave-valor.
+
+* <Cmd sid='body' product='cam' />: Configure el cuerpo HTTP que se incluirá en el webhook. Haga clic en <Cmd sid='add_button' product='cam' /> para agregar elementos del cuerpo. Ingrese cada elemento del cuerpo como un par clave-valor.
+
+  :::note
+
+  Los elementos personalizados no pueden estar vacíos; se pueden agregar hasta 10.
+
+  :::
+
+* <Cmd sid='schedule' product='cam' />: El horario en que la regla se ejecuta y envía el webhook. No puede cambiar esta opción.
+
+:::info
+
+Los registros de envío del webhook y los códigos de respuesta se pueden revisar en los registros del sistema para solucionar problemas.
+
+:::
+
+</Step>
+<Step>
+
+### Guardar regla
+
+Después de completar la configuración de la regla, haga clic en <Cmd sid='apply' product='cam' /> en la parte superior derecha para guardar la regla. Las reglas guardadas aparecen en la lista de reglas. La lista de reglas muestra el nombre de la regla, el tipo, el evento y el horario. 
+
+<ProdImg src='/img/cam-server/ai-rule-settings-added-list.png' />
+
+</Step>
+</Steps>
+
+## Habilitar/Deshabilitar reglas de IA
+
+En la lista de reglas, haga clic en el interruptor de la izquierda de una regla para habilitarla o deshabilitarla. Las reglas habilitadas ejecutan las acciones configuradas cuando ocurre un evento de IA. Las reglas deshabilitadas no ejecutan acciones cuando ocurren eventos de IA.
+
+<ProdImg src='/img/cam-server/ai-rule-settings-added-list-enable-disable.png' />
+
+:::info
+
+La lista de reglas muestra el estado de habilitación de un vistazo. Las reglas con un interruptor azul están habilitadas; las reglas con un interruptor gris están deshabilitadas.
+
+:::
+
+## Editar regla de IA
+
+Haga clic en una regla de la lista de reglas para ver o editar sus detalles. En la pantalla de detalles de la regla, después de modificar las condiciones y las acciones, haga clic en <Cmd sid='update' product='cam' /> para guardar los cambios.
+
+<ProdImg src='/img/cam-server/ai-rule-settings-edit.png' />
+
+## Eliminar regla de IA
+
+En la lista de reglas, haga clic en <IcCamTrash title='delete' /> a la derecha de una regla para eliminarla. Las reglas eliminadas no se pueden recuperar.
+
+<ProdImg src='/img/cam-server/ai-rule-settings-added-list-delete.png' />

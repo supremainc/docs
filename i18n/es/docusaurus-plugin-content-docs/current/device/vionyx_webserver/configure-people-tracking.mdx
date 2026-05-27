@@ -1,0 +1,148 @@
+---
+id: configure-people-tracking
+title: Configurar Eventos de Seguimiento de Personas
+description: Detecta y sigue a las personas que se mueven en áreas de entrada definidas por el administrador. Definir áreas de rostro prioriza el seguimiento facial en esas zonas e identifica automáticamente a los usuarios registrados.
+keywords:
+  - Análisis con IA
+  - Flujo peatonal
+  - Autenticación facial
+---
+
+Crea eventos de seguimiento de personas para detectar la entrada en áreas restringidas. Agrega áreas de rostro de forma opcional para priorizar el seguimiento facial en zonas específicas; los usuarios registrados se identifican automáticamente.
+
+## ¿Cuándo usarlo?
+
+* Supervisa la entrada y la salida de empleados o clientes registrados en el área de entrada.
+
+* Supervisa el acceso a áreas seguras (salas de reuniones, almacenamiento).
+
+* Sigue el flujo de clientes hacia rincones específicos de la tienda (nuevos productos, zonas de eventos).
+
+## Crear eventos de seguimiento de personas
+
+Al crear eventos de seguimiento de usuarios, puedes seguir el movimiento de las personas en tiempo real en la página en vivo. Además, definir áreas de rostro reconoce a los usuarios registrados e identifica quién se movió.
+
+<Steps>
+<Step>
+
+### Iniciar creación del evento
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> en la barra lateral izquierda.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events.png' />
+
+3. Haga clic en <Cmd sid='add_button' product='cam' /> en la esquina superior derecha de la pantalla.
+
+4. Haz clic en <Cmd sid='ai_analysis_people_tracking' product='cam' /> en la ventana <Cmd sid='select_ai_analysis_type' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking.png' />
+
+5. Cuando aparece la ventana emergente <Cmd sid='face_analytics_consent_title' product='cam' />, revise los detalles, seleccione la casilla de consentimiento y haga clic en <Cmd sid='face_analytics_consent_agree' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-analysis-notice-face-auth.png' width='50%' />
+
+   :::note
+
+   * Para usar la función de Facial Authentication, cumpla con las normas locales. No puede continuar sin consentimiento.
+
+   * La ventana emergente <Cmd sid='face_analytics_consent_title' product='cam' /> aparece solo una vez. La creación posterior de eventos de IA asume el consentimiento.
+
+   :::
+
+6. Completa la configuración necesaria en el panel derecho <Cmd sid='ai_analysis_people_tracking' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking-settings.png' />
+
+</Step>
+<Step>
+
+### Configurar nombre del evento
+
+Ingrese el nombre del evento de IA en el campo <Cmd sid='name' product='cam' />. El nombre puede tener hasta 64 caracteres.
+
+</Step>
+<Step>
+
+### Configuración del área de entrada
+
+Define el área de entrada que se va a seguir. La cámara detecta entradas y salidas en el área configurada. Configure al menos una línea virtual. Haga clic en <Cmd sid='add_button' product='cam' /> para agregar hasta 10. Aparece un recuadro amarillo en la vista en vivo. Arrastra las esquinas o los puntos con el mouse para ajustar la forma. Arrastre el centro para mover la línea.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking-settings-entry-area.png' />
+
+* <Cmd sid='name' product='cam' />: Edita el nombre del área de entrada. Asigne un nombre claro y descriptivo. El nombre del área de entrada aparece al pasar el mouse por encima en la vista en vivo.
+
+:::info
+
+* Haz clic en <IcCamReset title='reset' /> para restablecer la forma y el tamaño del área de entrada configurada.
+
+* Haz clic en <IcCamTrash title='delete' /> para eliminar un área de entrada agregada.
+
+:::
+
+</Step>
+<Step>
+
+### Ajustes del área facial (opcional)
+
+Defina el área para la detección facial. Cuando se configura, el sistema prioriza el seguimiento facial en esa área. Configura el área de rostro para incluir el área de entrada. Si el área de rostro no incluye el área de entrada, la cámara no puede reconocer rostros. Haga clic en <Cmd sid='add_button' product='cam' /> para agregar hasta 10 áreas faciales. Aparece un cuadro azul en Live View; arrastre las esquinas o los puntos para ajustar la forma. Arrastre el centro para mover la línea.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking-settings-face-area.png' />
+
+* <Cmd sid='name' product='cam' />: edite el nombre del área facial. Asigne un nombre claro y descriptivo. El nombre del área facial aparece al pasar el cursor en Live View.
+
+:::info
+
+* Los usuarios enrolados se identifican automáticamente en el menú <Cmd sid='live' product='cam' /> y se muestran por nombre. Los usuarios no enrolados aparecen como <Cmd sid='unknown_face' product='cam' />.
+
+* Haga clic en <IcCamReset title='reset' /> para restablecer la forma y el tamaño del área facial configurada.
+
+* Haga clic en <IcCamTrash title='delete' /> para eliminar un área facial agregada.
+
+:::
+
+</Step>
+<Step>
+
+### Establecer condiciones de activación de eventos
+
+Establezca las condiciones de activación de eventos. Selecciona detección de entrada o salida y define el tiempo de retraso del evento.
+
+* <Cmd sid='event_condition' product='cam' />: Selecciona detección de entrada o salida. Puedes seleccionar ambos.
+
+* <Cmd sid='every_delay' product='cam' />: Establezca el retraso de activación del evento. Los eventos se activan solo después de que transcurre el tiempo configurado; establezca hasta 60 segundos.
+
+</Step>
+<Step>
+
+### Guardar ajustes
+
+Después de completar todas las configuraciones, haga clic en <Cmd sid='create' product='cam' /> en la esquina superior derecha. La interfaz vuelve a la pantalla anterior y el nuevo evento de IA se agrega a la lista.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking-settings-complete.png' />
+
+</Step>
+</Steps>
+
+## Verificación en Live
+
+Haga clic en el menú <Cmd sid='live' product='cam' /> en la esquina superior izquierda de la pantalla. Confirme que el ícono <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> en la esquina superior derecha de la transmisión de la cámara esté activado. Las áreas de entrada y de rostro configuradas aparecen como superposiciones sobre el video. Se activa un evento cada vez que una persona entra o sale de un área de entrada. Si se configuran áreas faciales, la cámara detecta rostros allí; los usuarios enrolados se identifican automáticamente y sus nombres se muestran.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking-result.png' />
+
+:::info
+
+* Los usuarios no enrolados aparecen como <Cmd sid='unknown_face' product='cam' />. Los usuarios enrolados aparecen con su nombre.
+
+* Si la cámara no logra reconocer rostros, activa la opción <Cmd sid='min_face_size_visualize' product='cam' />. Como alternativa, amplía el área de rostro o ajusta la posición de la cámara.
+
+* La mala iluminación o la luz de fondo pueden impedir que la cámara detecte rostros. Mejore la iluminación del área o ajuste la posición y el ángulo de la cámara para que los rostros se vean con claridad.
+
+* Los rostros deben mirar hacia la cámara para detectarse. Las vistas de perfil o de espaldas pueden no detectarse.
+
+* Si no se producen eventos en el área de entrada, verifica que el área de rostro la incluya.
+
+* Si ocurren demasiados eventos, ajuste la opción <Cmd sid='every_delay' product='cam' />. Aumentar el retraso del evento reduce la frecuencia de los eventos.
+
+:::

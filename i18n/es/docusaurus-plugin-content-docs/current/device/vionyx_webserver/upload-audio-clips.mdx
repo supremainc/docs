@@ -1,0 +1,92 @@
+---
+id: upload-audio-clips
+title: Subir Clips de Audio
+description: Guía para subir y administrar archivos de audio usados como tonos de alarma e indicaciones de voz.
+keywords:
+  - Audio
+  - Clip
+  - Subir
+  - WAV
+  - Voz
+  - Tono de alarma
+---
+
+Sube clips de audio para la cámara y aplícalos como tonos de alarma o indicaciones de voz. Sube y administra archivos de audio en formato WAV.
+
+Sube clips de audio en las siguientes situaciones.
+
+* Cuando necesites subir tonos de alarma para que suenen cuando ocurra un evento
+
+* Cuando necesites agregar indicaciones de voz en varios idiomas
+
+* Cuando necesites agregar mensajes de voz para situaciones específicas
+
+## Verificar capacidad de almacenamiento de audio
+
+1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haz clic en <Cmd sid='audio' product='cam' /> en la barra lateral izquierda.
+
+3. Puedes verificar la capacidad restante del almacenamiento de audio en la sección <Cmd sid='audio_clip' product='cam' />.
+
+<ProdImg src='/img/cam-server/cam-webserver-system-audio-check-size.png' />
+
+## Preparar archivos de audio
+
+Antes de subir clips de audio, verifica lo siguiente.
+
+* **Formato de archivo**: Solo se admite la extensión `.wav`.
+
+* **Frecuencia de muestreo**: Usa una frecuencia de muestreo de 48 kHz o superior.
+
+* **Nombre de archivo**: Usa solo letras, números y guiones bajos (`_`) en inglés, hasta 64 caracteres. No se permiten espacios ni caracteres especiales.
+
+* **Tamaño de archivo**: Puedes subir archivos dentro de la capacidad restante.
+
+## Subir clips de audio
+
+1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haz clic en <Cmd sid='audio' product='cam' /> en la barra lateral izquierda.
+
+3. Haga clic en <Cmd sid='add_button' product='cam' /> en la esquina superior derecha de la pantalla.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-audio-add-btn.png' />
+
+4. Aparece la ventana emergente <Cmd sid='add_clip_file' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-audio-add-popup.png' />
+
+5. Arrastra y suelta un archivo WAV en el área de carga, o haz clic en <Cmd sid='choose_file' product='cam' /> y selecciona un archivo WAV almacenado localmente.
+
+6. Después de completar la carga, ajusta las opciones de volumen y repetición.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-audio-add-set-option.png' />
+
+7. Haz clic en <Cmd sid='firmware_upload' product='cam' /> para subir el clip de audio.
+
+Consulta los clips de audio subidos en la lista.
+
+<ProdImg src='/img/cam-server/cam-webserver-system-audio-complete.png' />
+
+:::info
+
+* Ajusta el control deslizante de volumen para definir el volumen de reproducción del clip de audio.
+
+* Para reproducir el clip de audio, haz clic en <IcPlay title='Play' />.
+
+:::
+
+## Eliminar clip de audio
+
+Haz clic en <IcCamTrash title='Delete' /> a la derecha del clip de audio que quieres eliminar.
+
+<ProdImg src='/img/cam-server/cam-webserver-system-audio-delete.png' />
+
+:::info
+
+* Si el clip de audio que quieres eliminar está aplicado a una regla de IA, se excluye automáticamente de la configuración de la regla de IA.
+
+* Para obtener más información sobre la configuración de la regla de IA, consulta <DocLink docId='device/vionyx_webserver/set-ai-rule' />.
+
+:::

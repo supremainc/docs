@@ -1,0 +1,158 @@
+---
+id: configure-counting-people
+title: Configurar Evento de Conteo de Personas
+description: Detecta la cantidad de personas que permanecen en áreas designadas.
+keywords:
+  - Análisis con IA
+  - Flujo peatonal
+  - Autenticación facial
+---
+
+Configure un evento de conteo de personas para detectar la cantidad de personas que permanecen en áreas designadas. Agregue un área facial opcional para autenticar automáticamente a los usuarios enrolados.
+
+## ¿Cuándo usarlo?
+
+* Cuando necesita monitorear en tiempo real la cantidad de visitantes en una tienda minorista o en un área específica de la tienda.
+
+* Cuando necesita rastrear la cantidad de personas en un área específica para la gestión de multitudes.
+
+* Cuando necesita rastrear el estado de entrada y salida del personal registrado y de clientes VIP.
+
+* Cuando necesita administrar estadísticas de acceso para un área específica por motivos de seguridad.
+
+## Crear evento de conteo de personas
+
+Después de crear un evento de conteo de personas, el menú <Cmd sid='live' product='cam' /> detecta la cantidad de personas que permanecen en áreas designadas. Además, al configurar un área facial, se prioriza el seguimiento facial en esa área; los usuarios enrolados se identifican automáticamente.
+
+<Steps>
+<Step>
+
+### Iniciar creación del evento
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> en la barra lateral izquierda.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events.png' />
+
+3. Haga clic en <Cmd sid='add_button' product='cam' /> en la esquina superior derecha de la pantalla.
+
+4. Haga clic en <Cmd sid='ai_analysis_people_counting' product='cam' /> en la ventana <Cmd sid='select_ai_analysis_type' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-counting-people.png' />
+
+5. Cuando aparece la ventana emergente <Cmd sid='face_analytics_consent_title' product='cam' />, revise los detalles, seleccione la casilla de consentimiento y haga clic en <Cmd sid='face_analytics_consent_agree' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-analysis-notice-face-auth.png' width='50%' />
+
+   :::note
+
+   * Para usar la función de Facial Authentication, cumpla con las normas locales. No puede continuar sin consentimiento.
+
+   * La ventana emergente <Cmd sid='face_analytics_consent_title' product='cam' /> aparece solo una vez. La creación posterior de eventos de IA asume el consentimiento.
+
+   :::
+
+6. Complete los ajustes requeridos en el panel derecho <Cmd sid='ai_analysis_people_counting' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-add-counting-people-settings.png' />
+
+</Step>
+<Step>
+
+### Configurar nombre del evento
+
+Ingrese el nombre del evento de IA en el campo <Cmd sid='name' product='cam' />. El nombre puede tener hasta 64 caracteres.
+
+</Step>
+<Step>
+
+### Configuración del área de conteo
+
+Configure las áreas de conteo en Live View. La cámara cuenta personas dentro de las áreas de conteo configuradas en tiempo real y activa eventos. Configure al menos una línea virtual. Haga clic en <Cmd sid='add_button' product='cam' /> para agregar hasta 10. Arrastre las esquinas o los puntos del cuadro del área de conteo en Live View para cambiar su forma. Arrastre el centro para mover la línea.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-counting-people-settings-counting-area.png' />
+
+* <Cmd sid='name' product='cam' />: edite el nombre del área de conteo. Asigne un nombre claro y descriptivo. El nombre del área de conteo aparece al pasar el cursor en Live View.
+
+* <Cmd sid='color' product='cam' />: seleccione el color del área de conteo. El área de conteo aparece en el color seleccionado en Live View.
+
+* <Cmd sid='condition' product='cam' />: configure la condición de activación del evento.
+
+  * <Cmd sid='every_change' product='cam' />: active un evento cada vez que una persona entra o sale del área de conteo
+
+  * <Cmd sid='count_limit' product='cam' />: active un evento cuando la cantidad de personas en el área de conteo supere el valor especificado (predeterminado: 10 personas, máximo: 100 personas)
+
+* <Cmd sid='duration' product='cam' />: configure el tiempo mínimo que el conteo en el área de conteo debe cumplir para activar la condición del evento. Por ejemplo, si Duración está configurado en 5 segundos, una persona debe permanecer en el área de conteo al menos 5 segundos para activar el evento. Se puede configurar hasta un máximo de 60 segundos.
+
+:::info
+
+* Haga clic en <IcCamReset title='reset' /> para restablecer la forma y el tamaño del área de conteo configurada.
+
+* Haga clic en <IcCamTrash title='delete' /> para eliminar el área de conteo agregada.
+
+:::
+
+</Step>
+<Step>
+
+### Ajustes del área facial (opcional)
+
+Defina el área para la detección facial. Cuando se configura, el sistema prioriza el seguimiento facial en esa área. Las áreas faciales y las áreas de conteo pueden superponerse. Haga clic en <Cmd sid='add_button' product='cam' /> para agregar hasta 10 áreas faciales. Aparece un cuadro azul en Live View; arrastre las esquinas o los puntos para ajustar la forma. Arrastre el centro para mover la línea.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-counting-people-settings-face-area.png' />
+
+* <Cmd sid='name' product='cam' />: edite el nombre del área facial. Asigne un nombre claro y descriptivo. El nombre del área facial aparece al pasar el cursor en Live View.
+
+:::info
+
+* Los usuarios enrolados se identifican automáticamente en el menú <Cmd sid='live' product='cam' /> y se muestran por nombre. Los usuarios no enrolados aparecen como <Cmd sid='unknown_face' product='cam' />.
+
+* Haga clic en <IcCamReset title='reset' /> para restablecer la forma y el tamaño del área facial configurada.
+
+* Haga clic en <IcCamTrash title='delete' /> para eliminar un área facial agregada.
+
+:::
+
+</Step>
+<Step>
+
+### Ajustes de restablecimiento del conteo
+
+Configure la condición para restablecer el conteo de personas en las áreas de conteo.
+
+* <Cmd sid='all_areas_count_reset' product='cam' />: configúrelo en <Cmd sid='on' product='cam' /> para restablecer los conteos de todas las áreas de conteo en la hora programada. Los conteos de todas las áreas de conteo se restablecen a la hora configurada en <Cmd sid='reset_time' product='cam' />.
+
+</Step>
+<Step>
+
+### Guardar ajustes
+
+Después de completar todos los ajustes, haga clic en <Cmd sid='save' product='cam' /> en la esquina superior derecha. La interfaz vuelve a la pantalla anterior y el nuevo evento de IA se agrega a la lista.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-counting-people-settings-complete.png' />
+
+</Step>
+</Steps>
+
+## Verificación en Live
+
+Haga clic en el menú <Cmd sid='live' product='cam' /> en la esquina superior izquierda de la pantalla. Confirme que el ícono <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> en la esquina superior derecha de la transmisión de la cámara esté activado. Las áreas de conteo y faciales configuradas aparecen como superposiciones en el video. Muestra la cantidad de personas en el área de conteo con el formato <Cmd sid='count' product='cam' /> <Cmd>: N</Cmd>. Si se configuran áreas faciales, la cámara detecta rostros allí; los usuarios enrolados se identifican automáticamente y sus nombres se muestran.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-counting-people-result.png' />
+
+:::info
+
+* Para restablecer el conteo manualmente, haga clic en <IcMoreB title='More' /> → <Cmd sid='count_reset' product='cam' />.
+
+  <ProdImg src='/img/cam-server/ai-analysis-events-counting-people-result-reset.png' />
+
+* Los usuarios no enrolados aparecen como <Cmd sid='unknown_face' product='cam' />. Los usuarios enrolados aparecen con su nombre.
+
+* La mala iluminación o la luz de fondo pueden impedir que la cámara detecte rostros. Mejore la iluminación del área o ajuste la posición y el ángulo de la cámara para que los rostros se vean con claridad.
+
+* Los rostros deben mirar hacia la cámara para detectarse. Las vistas de perfil o de espaldas pueden no detectarse.
+
+* Si ocurren demasiados eventos, ajuste la opción <Cmd sid='every_delay' product='cam' />. Aumentar el retraso del evento reduce la frecuencia de los eventos.
+
+:::

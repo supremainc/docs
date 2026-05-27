@@ -1,0 +1,77 @@
+---
+id: update-firmware
+title: Actualizar Firmware
+description: Esta guía explica cómo seleccionar el archivo de firmware más reciente para actualizar el firmware de la cámara y aplicar nuevas funciones y parches de seguridad.
+keywords:
+  - firmware
+  - Actualizar
+  - Versiones
+  - Archivo
+  - Último
+---
+
+Esta función actualiza el firmware de la cámara a la versión más reciente. Las actualizaciones de firmware incorporan nuevas funciones, mejoras de rendimiento y parches de seguridad.
+
+Actualice el firmware en las siguientes situaciones.
+
+* Para usar nuevas funciones
+
+* Para aplicar parches de seguridad y proteger la cámara
+
+* Para mejorar el rendimiento de la cámara
+
+* Cuando el soporte técnico recomienda una versión específica de firmware
+
+:::info
+
+* La cámara se reinicia durante una actualización de firmware y no está disponible durante ese tiempo.
+
+* Asegúrese de que el dispositivo tenga suficiente energía antes de iniciar la actualización de firmware.
+
+* Use solo archivos de firmware oficiales (.bin) proporcionados por el soporte técnico de Suprema.
+
+:::
+
+## Verificar la versión actual de firmware
+
+Verifique la versión de firmware instalada de la cámara.
+
+1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='device_info' product='cam' /> en la barra lateral izquierda.
+
+<ProdImg src='/img/cam-server/cam-webserver-system-firmware.png' />
+
+En la sección <Cmd sid='firmware_reset' product='cam' />, verifique la versión de firmware instalada actualmente en <Cmd sid='version' product='cam' />.
+
+## Actualizar firmware
+
+Seleccione el nuevo archivo de firmware para actualizar el dispositivo.
+
+1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='device_info' product='cam' /> en la barra lateral izquierda.
+
+3. En la sección <Cmd sid='firmware_reset' product='cam' />, haga clic en <Cmd sid='update' product='cam' />.
+
+4. Cuando aparezca la ventana emergente <Cmd sid='firmware_update' product='cam' />, seleccione el archivo de firmware (.bin) proporcionado por Suprema.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-firmware-update.png' />
+
+   * La extensión del archivo debe ser .bin.
+
+   * Arrastre el archivo al área de carga o haga clic en <Cmd sid='choose_file' product='cam' /> para seleccionar el archivo.
+
+5. Después de seleccionar un archivo, <Cmd sid='firmware_upload' product='cam' /> se activa.
+
+6. Haga clic en <Cmd sid='firmware_upload' product='cam' /> para iniciar la actualización de firmware.
+
+7. Después de que termine la carga, aparece una ventana emergente de confirmación de reinicio. Haga clic en <Cmd sid='ok' product='cam' /> para reiniciar la cámara y completar la actualización de firmware.
+
+:::note
+
+* Vuelva a conectarse a la interfaz web después de que la cámara se reinicie. Para verificar la nueva versión de firmware, vaya a <Cmd sid='device_info' product='cam' />.
+
+* No puede cancelar la actualización de firmware una vez que inicia. Espere hasta que termine la actualización.
+
+:::

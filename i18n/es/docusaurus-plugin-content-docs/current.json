@@ -503,24 +503,24 @@
     "message": "Notas de la Versión",
     "description": "The label for category '릴리스 노트' in sidebar 'device_manager'"
   },
-  "sidebar.aicamwebserver.category.Vionyx Web Server": {
-    "message": "ViOnyx Web Server",
+  "sidebar.aicamwebserver.category.ViOnyx Web Server": {
+    "message": "Servidor Web de ViOnyx",
     "description": "The label for category 'Vionyx Web Server' in sidebar 'aicamwebserver'"
   },
   "sidebar.aicamwebserver.category.AI 이벤트 및 규칙 설정하기": {
-    "message": "Set Up AI Events and Rules",
+    "message": "Configurar Eventos y Reglas de IA",
     "description": "The label for category 'AI 이벤트 및 규칙 설정하기' in sidebar 'aicamwebserver'"
   },
   "sidebar.aicamwebserver.category.카메라 설정하기": {
-    "message": "Configure the Camera",
+    "message": "Configurar la Cámara",
     "description": "The label for category '카메라 설정하기' in sidebar 'aicamwebserver'"
   },
   "sidebar.aicamwebserver.category.사용자 관리하기": {
-    "message": "Manage Users",
+    "message": "Administrar Usuarios",
     "description": "The label for category '사용자 관리하기' in sidebar 'aicamwebserver'"
   },
   "sidebar.aicamwebserver.category.시스템 구성하기": {
-    "message": "Configure System",
+    "message": "Configurar Sistema",
     "description": "The label for category '시스템 구성하기' in sidebar 'aicamwebserver'"
   }
 }

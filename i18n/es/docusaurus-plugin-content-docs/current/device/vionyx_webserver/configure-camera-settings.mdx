@@ -1,0 +1,125 @@
+---
+id: configure-camera-settings
+title: Configurar Ajustes de la Cámara
+description: Esta guía explica cómo ajustar la calidad de imagen, el balance de blancos, la sensibilidad (Time Filter), la compensación de contraluz (WDR), el anti-parpadeo y el tipo de montaje para adaptarlos al entorno de instalación.
+keywords:
+  - Ajustes de la cámara
+  - Calidad de imagen
+  - Balance de blancos
+  - Sensibilidad
+  - Tipo de montaje
+---
+
+Ajuste los parámetros de la cámara para capturar video óptimo para el entorno de instalación. Revise los cambios en tiempo real en Live View y ajuste la calidad de imagen, el balance de blancos y los filtros de sensibilidad. La disponibilidad de la función de IA también se limita automáticamente según el montaje en techo o pared.
+
+Ajuste los parámetros de la cámara en las siguientes situaciones.
+
+* Para mejorar la calidad de imagen y adaptarla al brillo y color de la escena.
+
+* Para reducir el parpadeo de la iluminación fluorescente o LED.
+
+* Para minimizar el ruido en entornos con poca luz mientras mantiene la detección de movimiento.
+
+* Para optimizar la cámara y las funciones de IA para la ubicación de instalación.
+
+## Ajustes de la cámara
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='basic' product='cam' /> → <Cmd sid='camera' product='cam' /> en la barra lateral izquierda.
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-camera.png' />
+
+:::info
+
+Cada cambio de opción aparece en Live View en tiempo real y se guarda automáticamente.
+
+:::
+
+## Ajustar calidad de imagen
+
+Ajuste la calidad de imagen para adaptarla al entorno de captura. Ajuste cada control deslizante en la sección <Cmd sid='preset' product='cam' /> para ver los cambios en la vista previa en tiempo real. Establezca valores entre 1 y 100.
+
+* <Cmd sid='saturation' product='cam' />: Ajuste la saturación del color. (Predeterminado: 26)
+
+* <Cmd sid='sharpness' product='cam' />: Ajuste la nitidez de la imagen. (Predeterminado: 55)
+
+* <Cmd sid='brightness' product='cam' />: Ajuste el brillo general de la imagen. (Predeterminado: 50)
+
+* <Cmd sid='contrast' product='cam' />: Ajuste el contraste entre las áreas claras y oscuras. (Predeterminado: 50)
+
+:::info
+
+Al mover un control deslizante, cada ajuste actualiza la vista previa de inmediato y se guarda automáticamente.
+
+:::
+
+## Ajustes de balance de blancos
+
+Configure el balance de blancos para que la cámara reproduzca con precisión el color de la iluminación de la escena. En la sección <Cmd sid='white_balance' product='cam' />, active o desactive la opción <Cmd sid='auto' product='cam' />.
+
+* <Cmd sid='on' product='cam' />(predeterminado): La cámara detecta y ajusta automáticamente la temperatura de color.
+
+* <Cmd sid='off' product='cam' />: Configure el balance de blancos ajustando manualmente los valores <Cmd sid='red' product='cam' /> y <Cmd sid='blue' product='cam' />.
+
+## Ajustes de sensibilidad (Time Filter)
+
+Ajuste el filtro de tiempo para equilibrar la reducción de ruido del sensor y la detección rápida de movimiento. Ajuste el control deslizante <Cmd sid='time_filter' product='cam' /> en la sección <Cmd sid='sensitivity' product='cam' /> para definir la intensidad del filtrado de ruido.
+
+* Bajo (1~30): El filtrado de ruido débil ayuda a detectar objetos en rápido movimiento, pero el ruido puede aumentar en entornos con poca luz.
+
+* Medio (31~70): Filtrado equilibrado, adecuado para entornos de captura típicos.
+
+* Alto (71~100): El filtrado de ruido intenso reduce el ruido en condiciones de poca luz, pero puede dificultar la detección de objetos en rápido movimiento.
+
+:::info
+
+El valor predeterminado de <Cmd sid='time_filter' product='cam' /> es 50.
+
+:::
+
+## Ajustes de contraluz
+
+Active WDR (Wide Dynamic Range) para que la cámara capture al mismo tiempo las áreas claras y oscuras en escenas a contraluz. En la sección <Cmd sid='backlight_setting' product='cam' />, active la opción <Cmd sid='wdr' product='cam' /> para activar la compensación de contraluz. (Predeterminado: <Cmd sid='off' product='cam' />)
+
+:::info
+
+El modo **WDR** (Wide Dynamic Range) permite que la cámara ajuste la exposición automáticamente para representar tanto las áreas claras como las oscuras en escenas a contraluz. Activar WDR evita la sobreexposición de las áreas claras y mejora el detalle en las áreas oscuras. Útil al capturar en entornos con fuerte contraluz.
+
+:::
+
+## Ajustes de anti-parpadeo
+
+Para reducir el parpadeo de la pantalla causado por una discrepancia entre la iluminación y la frecuencia, establezca la opción <Cmd sid='anti_flicker' product='cam' /> en la sección <Cmd sid='video' product='cam' />.
+
+* <Cmd sid='off' product='cam' />: Desactive el anti-parpadeo.
+
+* <Cmd>50HZ</Cmd>: entorno fluorescente/LED de 50 Hz
+
+* <Cmd>60HZ</Cmd>: entorno fluorescente/LED de 60 Hz
+
+:::info
+
+Seleccione la opción que coincida con la frecuencia de iluminación de la escena. Los ajustes incorrectos pueden causar parpadeo o bandas en la imagen.
+
+:::
+
+## Ajustes de tipo de montaje
+
+Configure <Cmd sid='mounting_type' product='cam' /> según la ubicación de instalación de la cámara. Las funciones de IA compatibles dependen del tipo de montaje.
+
+* Seleccione <Cmd sid='ceiling' product='cam' /> para instalación en techo. Todas las funciones de IA están disponibles.
+
+* Seleccione <Cmd sid='wall' product='cam' /> para instalación en pared. Solo está disponible Facial Authentication AI; el seguimiento de objetos no es compatible.
+
+:::info
+
+* **Al cambiar de techo a pared**, aparece una ventana de confirmación que indica que solo está disponible Facial Authentication y que la IA de seguimiento de objetos no está disponible. Revise el mensaje antes de continuar.
+
+* **Al cambiar de pared a techo**, el cambio se aplica de inmediato y todas las funciones de IA se activan automáticamente.
+
+:::
+
+## Restablecer ajustes de la cámara
+
+Para restaurar todos los ajustes de la cámara a los valores predeterminados de fábrica, haga clic en <Cmd sid='restore_to_default' product='cam' /> en la sección <Cmd sid='reset' product='cam' />.

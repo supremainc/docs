@@ -1,0 +1,143 @@
+---
+id: live-basic
+title: Ver en Vivo
+description: Use el menú En vivo en ViOnyx Web Server para ver el video en vivo de la cámara, seleccionar canales y modos de visualización, y acercar o entrar en pantalla completa.
+keywords:
+  - Tiempo real
+  - Video
+  - En vivo
+  - Monitorizar
+  - Modo de visualización
+---
+
+Use el menú <Cmd sid='live' product='cam' /> de ViOnyx Web Server para ver el video en vivo de la cámara. Seleccione el canal y el modo de visualización deseados, luego acerque o vea en pantalla completa.
+
+## Diseño básico de la vista en vivo
+
+Al entrar por primera vez al menú <Cmd sid='live' product='cam' />, el video aparece en el siguiente estado predeterminado.
+
+<ProdImg src='/img/cam-server/vionyx-live-basic.png' />
+
+<div className='menu-icon-table'>
+
+| Ítem | Componente | Descripción |
+| :-: | :-: | --- |
+| <Num num='1' /> | <Image src='/img/cam-server/ico-content-ai-hide.svg' width='100%' alone className='none' alt='AI Event' /> | * Las funciones de IA están deshabilitadas. Haga clic en el icono para habilitar las funciones de IA.<br />- Para mostrar u ocultar los eventos de IA y los cuadros de usuario, haga clic en <IcMoreB title='More' /> y ajuste el setting. |
+| <Num num='2' /> | <IcPanelFace width='26px' height='26px' title='Face Shot' /> | Abra el panel <Cmd sid='face_shot' product='cam' />(Face Shot). |
+| <Num num='3' /> | CH | Seleccione el modo de visualización disponible para cada canal. |
+| <Num num='4' /> | <IcKnob width='28px' height='28px' title='Rotate' /> | Gire el video en vivo. |
+| ^ | <IcCapture width='26px' height='26px' title='Capture' /> | Capture el video en vivo. |
+| ^ | <IcFull width='26px' height='26px' title='Full Screen' /> | Vea el video en vivo en pantalla completa. |
+
+</div>
+
+## Seleccione canal y modo de visualización
+
+ViOnyx Web Server ofrece varios canales y modos de visualización. Seleccione el canal y el modo de visualización deseados en la lista desplegable <Cmd>CH</Cmd> en la parte inferior de la pantalla.
+
+<Image src='/img/cam-server/vionyx-live-basic-select-ch.png' alone />
+
+**Canales y modos de visualización compatibles**
+
+<div className='table--viewmode'>
+
+| Canal | Modo de visualización | Descripción | Ejemplo |
+| :-: | --- | --- | :-: |
+| **1ch** | Fisheye View (Main/Sub) | Video original de lente ojo de pez para el canal principal | <Image src='/img/cam-server/vionyx-live-basic-fisheye-view-mode.png' width='50%' alone /> |
+| **2ch** | Quad View (Main) | Vista dividida en 4 para el canal panorámico | <Image src='/img/cam-server/vionyx-live-basic-quad-view-mode.png' width='50%' alone /> |
+
+</div>
+
+:::info
+
+* Los flujos Principal y Secundario de cada canal ofrecen diferentes resoluciones. Principal es el flujo de mayor calidad; Secundario es el flujo de menor calidad.
+
+* La imagen es una pantalla de ejemplo. La pantalla real puede diferir.
+
+:::
+
+## Acercamiento
+
+Use el mouse para acercar y alejar.
+
+* Desplazar hacia arriba: acercar
+
+* Desplazar hacia abajo: alejar
+
+* Doble clic: regresar al tamaño original (1x)
+
+:::info
+
+* Rango de acercamiento: de 1x a 8x
+
+* El acercamiento usa ampliación digital, por lo que la imagen puede verse borrosa con niveles altos de acercamiento.
+
+:::
+
+## Rotar la pantalla
+
+Para rotar el video en vivo, haga clic y arrastre <IcKnob />. O ingrese directamente el ángulo de rotación en el campo de entrada a la derecha del botón <IcKnob />.
+
+<ProdImg src='/img/cam-server/vionyx-live-basic-rotate-screen.png' />
+
+## Capturar pantalla
+
+Para capturar el video en vivo, haga clic en <IcCapture title='Capture' />. La imagen capturada se guarda en el formato `capture_{ch1|ch2}_{main|sub}_{YYYY-MM-DDTHH-MM-SS}.jpeg`.
+
+<ProdImg src='/img/cam-server/vionyx-live-basic-capture-screen.png' />
+
+## Modo de pantalla completa
+
+Use el modo de pantalla completa para ver el video en un tamaño mayor. Haga clic en <IcFull /> en la esquina inferior derecha de la pantalla.
+
+<ProdImg src='/img/cam-server/vionyx-live-basic-full-screen.png' />
+
+* Los cambios de modo de visualización y el acercamiento siguen disponibles en el modo de pantalla completa.
+
+* Para salir del modo de pantalla completa, presione la tecla <Kbd>ESC</Kbd> o haga clic de nuevo en <IcMin />.
+
+## Mostrar cuadros de eventos y de usuario {#displayBox}
+
+Para mostrar u ocultar los eventos de IA y los cuadros de usuario en el video en vivo, haga clic en <IcMoreB /> en la esquina superior derecha de la pantalla. Seleccione los elementos que se mostrarán.
+
+<ProdImg src='/img/cam-server/live-view-event-user-box.png' width='60%' />
+
+* <Cmd sid='event_box_popup' product='cam' />: Cuando ocurre un evento de IA, el evento aparece como una ventana emergente en la esquina superior izquierda del video en vivo.
+
+* <Cmd sid='user_box_popup' product='cam' />: Cuando una cara se detecta mediante un evento de IA, el cuadro de usuario aparece como una ventana emergente en la esquina inferior derecha del video en vivo.
+
+:::info
+
+La ventana emergente permanece visible durante el tiempo configurado en la opción <Cmd sid='display_time' product='cam' /> (en segundos).
+
+:::
+
+## Abra el panel Face Shot
+
+Si habilitó la función de eventos de IA, puede revisar las caras detectadas por la cámara. Para abrir el panel <Cmd sid='face_shot' product='cam' />, haga clic en <IcPanelFace /> en la esquina superior derecha de la pantalla.
+
+<ProdImg src='/img/cam-server/vionyx-live-basic-ai-face-shot.png' />
+
+Haga clic en los iconos de herramientas en la parte superior del panel <Cmd sid='face_shot' product='cam' /> para usar estas funciones:
+
+* <Image src='/img/menus/ico-faceshot-pause.svg' ico alone className='none' /> / <Image src='/img/menus/ico-faceshot-play.svg' ico alone className='none' />: Pausar o reanudar Face Shot.
+
+* <Image src='/img/menus/ico-faceshot-filter.svg' ico alone className='none' />: Filtrar los resultados de Face Shot.
+
+* <Image src='/img/menus/ico-faceshot-max.svg' ico alone className='none' />: Expandir el panel <Cmd sid='face_shot' product='cam' /> a pantalla completa.
+
+:::info
+
+Para obtener más información sobre las opciones de eventos de IA y reglas, consulte <DocLink docId='device/vionyx_webserver/configure-ai-events-and-rules' />.
+
+:::
+
+## Cuando el video no se reproduce
+
+Si el video de la cámara no carga, siga estos pasos para comprobar la conexión de red.
+
+1. Verifique las conexiones de la cámara y de red.
+
+2. Presione **Actualizar (F5)** en su navegador web.
+
+3. El sistema intenta reconectarse automáticamente.

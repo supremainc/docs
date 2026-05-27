@@ -1,0 +1,179 @@
+---
+id: configure-network
+title: Configurar Ajustes de Red
+description: Esta página explica cómo configurar la dirección IPv4 automáticamente o de forma manual, configurar los puertos de la interfaz web y de transmisión de video, y conectarse al servicio en la nube CLUe.
+keywords:
+  - Red
+  - IPv4
+  - DHCP
+  - Estático
+  - puerto
+  - CLUe
+  - Nube
+---
+
+Los ajustes de red configuran la dirección IPv4, la subred, la puerta de enlace y los servidores DNS del dispositivo, establecen los puertos usados por la interfaz web y la transmisión de video en vivo, y administran la conexión en la nube de Suprema CLUe. Seleccione asignación automática (DHCP) o manual (Static) según su entorno de red.
+
+Revise los ajustes de red en las siguientes situaciones.
+
+* Cuando la red admite DHCP y necesita que el dispositivo obtenga una dirección IP automáticamente.
+
+* Cuando necesita acceso estable a la red mediante una dirección IP fija.
+
+* Cuando los puertos predeterminados entran en conflicto con otros dispositivos o necesita cambiar los puertos por seguridad.
+
+* Cuando necesita administración remota al enrolar el dispositivo en Suprema CLUe.
+
+:::info
+
+Cambiar los ajustes de red, especialmente la dirección IP, puede desconectar las conexiones activas. Vuelva a conectarse usando la nueva dirección IP.
+
+:::
+
+## Dirección IP automática
+
+DHCP asigna direcciones IP automáticamente en la red. En la mayoría de los entornos de red habituales, se configura automáticamente sin ajustes adicionales.
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. En la barra lateral izquierda, haga clic en <Cmd sid='network' product='cam' /> 14 <Cmd sid='network' product='cam' />.
+
+3. Seleccione <Cmd sid='dhcp' product='cam' /> en <Cmd sid='ip_type' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-dhcp.png' />
+
+4. Si necesita direcciones de servidor **DNS**, escríbalas en los campos de entrada <Cmd sid='dns_n' product='cam' replace='1' /> y <Cmd sid='dns_n' product='cam' replace='2' />.
+
+5. Ajuste el valor de **MTU** (Unidad Máxima de Transmisión) en el campo de entrada <Cmd sid='mtu' product='cam' /> según sea necesario.
+
+   * El valor predeterminado es 1500.
+
+   * Establezca un valor entre 1280 y 1500.
+
+6. Haga clic en <Cmd sid='save' product='cam' /> para guardar los ajustes de red.
+
+Si los ajustes se guardan correctamente, la dirección IP asignada aparece en los campos de entrada <Cmd sid='ip_address' product='cam' />, <Cmd sid='subnet_mask' product='cam' /> y <Cmd sid='gateway' product='cam' />.
+
+:::info
+
+El modo DHCP está configurado de forma predeterminada y funciona automáticamente en la mayoría de los entornos de red estándar sin ajustes adicionales.
+
+:::
+
+## Dirección IP estática
+
+Establezca la dirección IP manualmente cuando la red requiera una IP fija para un acceso estable.
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. En la barra lateral izquierda, haga clic en <Cmd sid='network' product='cam' /> 14 <Cmd sid='network' product='cam' />.
+
+3. Seleccione <Cmd sid='static' product='cam' /> en <Cmd sid='ip_type' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-static.png' />
+
+4. Escriba la dirección IPv4 asignada en el campo de entrada <Cmd sid='ip_address' product='cam' />.
+
+   > Ejemplo: 192.168.111.11
+
+5. Escriba la máscara de subred en el campo de entrada <Cmd sid='subnet_mask' product='cam' />.
+
+   > Ejemplo: 255.255.255.0
+
+6. Escriba la dirección de la puerta de enlace en el campo de entrada <Cmd sid='gateway' product='cam' />.
+
+7. Escriba la dirección del servidor DNS en los campos de entrada <Cmd sid='dns_n' product='cam' replace='1' /> y <Cmd sid='dns_n' product='cam' replace='2' />.
+
+8. Ajuste el valor en el campo de entrada <Cmd sid='mtu' product='cam' /> según sea necesario.
+
+   * El valor predeterminado es 1500.
+
+   * Establezca un valor entre 1280 y 1500.
+
+9. Haga clic en <Cmd sid='save' product='cam' /> para guardar los ajustes de red.
+
+:::note
+
+Si no escribe una dirección válida en cada campo de entrada, aparece un borde rojo alrededor del campo y <Cmd sid='save' product='cam' /> se desactiva. Después de escribir correctamente todos los campos de entrada, inténtelo de nuevo.
+
+:::
+
+## Ajustes de puertos
+
+En la sección <Cmd sid='port' product='cam' />, establezca los números de puerto usados para acceder a la interfaz web (HTTP, HTTPS) y para la transmisión de video (RTSP).
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. En la barra lateral izquierda, haga clic en <Cmd sid='network' product='cam' /> 14 <Cmd sid='network' product='cam' />.
+
+3. Establezca los puertos necesarios en la sección <Cmd sid='port' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-port.png' />
+
+   * <Cmd sid='https' product='cam' />: Puerto para acceso cifrado a la interfaz web (predeterminado: 443)
+
+   * <Cmd sid='rtsp' product='cam' />: Puerto para transmitir video mediante el protocolo RTSP (predeterminado: 554)
+
+4. Haga clic en <Cmd sid='save' product='cam' /> para guardar los ajustes de puertos.
+
+:::info
+
+* Escriba un número del 1 al 65535 en cada campo de entrada de puerto.
+
+* No asigne el mismo número de puerto a varios servicios. Cada puerto debe tener un número único.
+
+* Si un puerto difiere del valor predeterminado, incluya el número de puerto en la URL de la interfaz web.
+
+  > Ejemplo: Si el puerto HTTPS es 4000: `https://{ip_address}:4000`
+
+:::
+
+## Ajustes de transmisión y cifrado de video
+
+En la sección <Cmd sid='rtsp' product='cam' />, configure los ajustes de transmisión y cifrado de video.
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. En la barra lateral izquierda, haga clic en <Cmd sid='network' product='cam' /> 14 <Cmd sid='network' product='cam' />.
+
+3. Establezca las siguientes opciones en la sección <Cmd sid='rtsp' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-rtsp.png' />
+
+   * <Cmd sid='transport' product='cam' />: Seleccione el protocolo de transporte usado para la transmisión de video.
+
+     * <Cmd>UDP</Cmd>: Permite una transmisión más rápida, pero el video puede entrecortarse según las condiciones de la red.
+
+     * <Cmd>TCP</Cmd>: Permite una transmisión estable, pero puede producirse latencia en la red.
+
+     * <Cmd>DUAL</Cmd>: Selecciona automáticamente UDP o TCP para la transmisión según las condiciones de la red.
+
+     * <Cmd>TLS</Cmd>: Envía el flujo RTSP con cifrado TLS. Mejora la seguridad, pero puede aumentar la carga de la CPU.
+
+   * <Cmd sid='secure_rtp' product='cam' />: Active la opción de cifrado del flujo RTSP.
+
+4. Haga clic en <Cmd sid='save' product='cam' /> para guardar los ajustes.
+
+## Conexión en la nube CLUe
+
+Suprema CLUe es un servicio de administración remota basado en la nube. Conéctese a CLUe para administrar el dispositivo de forma remota por Internet.
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. En la barra lateral izquierda, haga clic en <Cmd sid='network' product='cam' /> 14 <Cmd sid='network' product='cam' />.
+
+3. Haga clic en el interruptor <Cmd sid='clue' product='cam' /> de la sección <Cmd sid='cloud' product='cam' /> para activarlo.
+
+4. El sistema verifica la conexión a Internet y la conexión al servidor CLUe.
+
+   * Conexión exitosa: aparece el mensaje <Cmd sid='clue_enabled' product='cam' />.
+
+   * Error de conexión a Internet: aparece el mensaje <Cmd sid='clue_disabled' product='cam' />. Revise la conexión a Internet e inténtelo de nuevo.
+
+:::note
+
+* Si desactiva la opción <Cmd sid='clue' product='cam' />, la conexión al servidor CLUe se desconecta y la administración remota mediante la nube no está disponible. Sin embargo, el enrolamiento del dispositivo en el servidor CLUe permanece.
+
+* Los éxitos y fallos de conexión a CLUe se registran en el registro del sistema.
+
+:::

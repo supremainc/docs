@@ -1,0 +1,159 @@
+---
+id: configure-video-profile
+title: Configurar Perfil de Video
+description: Describe cómo administrar, desde una perspectiva operativa, los modos de vista por canal, los ajustes de codificación de transmisión y las políticas de espejo y restablecimiento.
+keywords:
+  - Perfil de video
+  - Transmisión
+  - Códec
+  - Resolución
+  - Velocidad de fotogramas
+  - Tasa de bits
+  - Espejo
+---
+
+La calidad de la imagen de vista en vivo y la calidad del video grabado dependen de los ajustes del perfil de video. En los ajustes del perfil de video, ajuste los modos de vista por canal y los valores de codificación de transmisión. También ofrece las funciones de Espejo (inversión izquierda-derecha) y restablecimiento de canal según el entorno de instalación.
+
+Configure el perfil de video en las siguientes situaciones para equilibrar la calidad de imagen, el almacenamiento y el ancho de banda de red.
+
+* Cuando equilibra el almacenamiento y la calidad de imagen
+
+* Cuando separa las transmisiones principal y secundaria para ajustarlas al ancho de banda de red
+
+* Cuando usa modos de vista por canal para ajustarlos a su propósito previsto
+
+:::info
+
+Si los eventos de IA están activos, cambiar el ajuste de espejo o realizar un restablecimiento puede eliminar los ajustes de eventos de IA.
+
+:::
+
+## Ajustes del perfil de video
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. En la barra lateral izquierda, haga clic en <Cmd sid='basic' product='cam' /> → <Cmd sid='video_profile' product='cam' />.
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-video-profile.png' />
+
+:::info
+
+Los cambios del perfil de video se aplican a la cámara de inmediato sin un botón separado de guardar.
+
+:::
+
+## Selección de canal y tipo de vista
+
+El propósito principal de cada canal es el siguiente.
+
+* **CH 1**: Este canal funciona según la vista ojo de pez original de la cámara física.
+
+* **CH 2**: Este canal usa vistas procesadas, como pantallas panorámicas o divididas en cuatro, para mejorar la eficiencia de monitoreo.
+
+Defina los ajustes detallados del perfil de video por canal de cámara.
+
+1. Desde el panel derecho <Cmd sid='video_profile' product='cam' />, seleccione <Cmd>CH 1</Cmd> o <Cmd>CH 2</Cmd> en <Cmd sid='channel' product='cam' />.
+
+2. En <Cmd sid='view_type' product='cam' /> → <Cmd sid='type' product='cam' />, seleccione el tipo de vista para el canal seleccionado.
+
+Las políticas del tipo de vista por canal son las siguientes.
+
+* <Cmd>CH 1</Cmd>: Fijo en ojo de pez y no se puede cambiar.
+
+* <Cmd>CH 2</Cmd>: Seleccione un modo de vista distinto de ojo de pez.
+
+  * <Cmd sid='view_type_single' product='cam' />: Este modo corrige el video capturado por una cámara ojo de pez para que pueda ver una vista panorámica tipo muro.
+
+  * <Cmd sid='view_type_double' product='cam' />: Este modo corrige la distorsión en el video capturado de un área de 360° para que pueda ver una vista panorámica dividida en pantalla superior e inferior.
+
+  * <Cmd sid='view_type_quad' product='cam' />: Este modo corrige la distorsión para que pueda ver al mismo tiempo cuatro pantallas específicas que se ajustan a la visión humana.
+
+## Selección del tipo de transmisión
+
+En <Cmd sid='stream' product='cam' />, seleccione la transmisión que va a configurar. Seleccione la transmisión principal o secundaria y luego ajuste los valores detallados en la sección <Cmd sid='profile' product='cam' />.
+
+* <Cmd sid='stream_type_main' product='cam' />: Grabación y monitoreo de alta calidad
+
+* <Cmd sid='stream_type_sub' product='cam' />: Monitoreo remoto de bajo ancho de banda
+
+:::info
+
+El canal <Cmd>CH 2</Cmd> solo admite <Cmd sid='stream_type_main' product='cam' />.
+
+:::
+
+## Ajustes detallados del perfil
+
+Ajuste el códec, la resolución, la velocidad de fotogramas y otros ajustes detallados según el tipo de transmisión seleccionado.
+
+* <Cmd sid='codec' product='cam' />: Seleccione el códec que se aplicará al perfil. Seleccione una de estas opciones: **H.264**, **H.265** o **MJPEG**.
+
+   :::note
+
+   Seleccionar H.265 requiere Profile T.
+
+   :::
+
+* <Cmd sid='resolution' product='cam' />: Resolución que se aplicará al perfil. Las resoluciones admitidas varían según el canal, el tipo de video y el tipo de transmisión.
+
+  | Canal | Tipo de video | Tipo de transmisión | Resolución admitida |
+  | --- | --- | --- | --- |
+  | CH 1 | <Cmd sid='view_type_fisheye' product='cam' className='normal' /> | <Cmd sid='stream_type_main' product='cam' className='normal' /> | 3520 × 3520 |
+  | ^ | ^ | <Cmd sid='stream_type_sub' product='cam' className='normal' /> | 1760 × 1760 |
+  | CH 2 | <Cmd sid='view_type_single' product='cam' className='normal' /> | <Cmd sid='stream_type_main' product='cam' className='normal' /> | 2048 × 512, 1920 × 480, 1280 × 320, 704 × 176 |
+  | ^ | <Cmd sid='view_type_double' product='cam' className='normal' /> | <Cmd sid='stream_type_main' product='cam' className='normal' /> | 2048 × 2048, 1920 × 1920, 1280 × 1280, 704 × 704 |
+  | ^ | <Cmd sid='view_type_quad' product='cam' className='normal' /> | <Cmd sid='stream_type_main' product='cam' className='normal' /> | 2048 × 2048, 1600 × 1600, 1280 × 1280, 1024 × 1024 |
+
+   :::note
+
+  El canal <Cmd>CH 2</Cmd> solo admite <Cmd sid='stream_type_main' product='cam' />.
+
+   :::
+
+* <Cmd sid='frame_rate' product='cam' />: Establezca la cantidad de fotogramas por segundo. Seleccione uno de estos valores: 30, 25, 20, 15 o 10 fotogramas por segundo.
+
+* <Cmd sid='max_bitrate' product='cam' />: Establezca la tasa de bits de video máxima.
+
+* <Cmd sid='bitrate_control' product='cam' />: Seleccione el método de control de la tasa de bits de video.
+
+  * <Cmd>VBR</Cmd>: La tasa de bits variable se ajusta según la complejidad de la escena y ofrece alta calidad cuando la red es estable. Recomendado cuando el ancho de banda de red es suficiente.
+
+  * <Cmd>CBR</Cmd>: La tasa de bits constante garantiza una transmisión estable, pero puede reducir la calidad en escenas complejas. Recomendado cuando el ancho de banda de red es limitado o constante.
+
+* <Cmd sid='gov_length' product='cam' />: Establezca el intervalo de I-frame. Seleccione un valor entre 1 y 300. Un GOV más largo reduce el tamaño de los datos; uno más corto lo aumenta.
+
+:::info
+
+* **Tasa de bits variable** (VBR): Este método transmite video dentro de la tasa de bits máxima sin fijar el tamaño de datos de cada fotograma. La tasa de bits varía según la complejidad de la escena. Por lo general ofrece alta calidad, pero puede causar interrupciones de video cuando el ancho de banda de red es inestable.
+
+* **Tasa de bits constante** (CBR): Este método transmite video fijando el tamaño de datos de cada fotograma. Ofrece una transmisión estable en entornos con ancho de banda de red constante, pero la calidad puede degradarse según la complejidad de la escena.
+
+* **GOV** (Group of Video): En la compresión H.264/H.265, esto se refiere al grupo de fotogramas desde un I-frame hasta el fotograma inmediatamente anterior al siguiente I-frame. Un GOV contiene I-frames (fotogramas clave) que conservan todos los datos de la imagen y P-frames que solo contienen los cambios respecto al fotograma anterior. Un GOV más largo reduce la cantidad de I-frames y, por tanto, reduce los datos de video; uno más corto aumenta la cantidad de I-frames y aumenta los datos de video.
+
+:::
+
+## Ajustes de espejo
+
+Según la ubicación de instalación de la cámara, es posible que se requieran ajustes de espejo o de volteo. 
+
+* <Cmd sid='mirror' product='cam' />: Active o desactive el ajuste de espejo.
+
+* <Cmd sid='flip' product='cam' />: Active o desactive el ajuste de volteo.
+
+:::info
+
+Cambiar el espejo puede estar restringido cuando se configuran eventos de IA. Siga las instrucciones emergentes para eliminar los ajustes de IA y continuar.
+
+:::
+
+## Inicialización de ajustes del canal
+
+Para restaurar el modo de vista y los ajustes de transmisión del canal seleccionado a los valores predeterminados de fábrica, haga clic en <Cmd sid='restore_to_default' product='cam' /> en <Cmd sid='reset' product='cam' />.
+
+:::info
+
+* Solo el canal seleccionado se restaura a los valores predeterminados de fábrica.
+
+* Si se establece un evento de IA en modo ojo de pez, elimine el ajuste de IA antes de continuar.
+
+:::

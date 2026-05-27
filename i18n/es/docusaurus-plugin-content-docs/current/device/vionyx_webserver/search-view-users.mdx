@@ -1,0 +1,106 @@
+---
+id: search-view-users
+title: Búsqueda y Vista de Usuarios
+description: Explica cómo encontrar usuarios en la lista de usuarios con la búsqueda y administrarlos con eficiencia.
+keywords:
+  - Usuario
+  - Buscar
+  - Filtrar
+  - Ordenar
+  - Vista
+  - Gestionar
+---
+
+Ingrese un nombre o ID en la lista de usuarios para encontrar rápidamente a un usuario. Cambie entre las vistas de tabla y tarjeta para mostrar la información del usuario según sea necesario.
+
+Use la función de búsqueda y vista de usuarios en las siguientes situaciones.
+
+* Cuando necesita encontrar rápidamente a un usuario específico entre muchos usuarios
+
+* Cuando necesita ver los perfiles de usuario de un vistazo en la vista de tarjeta
+
+* Cuando quiere ordenar la lista de usuarios por nombre, ID y hora de la última actualización
+
+## Búsqueda de usuarios
+
+Ofrece una función de búsqueda para encontrar al usuario que necesita. Busque por nombre o ID de usuario, o encuentre usuarios similares por imagen facial.
+
+### Búsqueda por palabra clave
+
+Ingrese un nombre o ID en la lista de usuarios para buscar al usuario que necesita.
+
+1. Haga clic en el menú <Cmd sid='people' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Seleccione los criterios de búsqueda en el campo de búsqueda en la parte superior izquierda de la lista de usuarios. Seleccione <Cmd sid='user_name' product='cam' /> o <Cmd sid='user_id' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-search-select.png' />
+
+3. Ingrese un término de búsqueda en el campo de búsqueda.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-search.png' />
+
+4. Los usuarios que coincidan con el término de búsqueda ingresado aparecen en la lista.
+
+:::info
+
+* Admite búsqueda parcial. Por ejemplo, al ingresar 'Kim' se muestran todos los usuarios cuyos nombres incluyen 'Kim'.
+
+* Los filtros seleccionados actualmente determinan los resultados de búsqueda. Cambie los filtros para actualizar los resultados de búsqueda en consecuencia.
+
+:::
+
+### Buscar por imagen facial
+
+Cargue una imagen facial para buscar usuarios con un rostro similar.
+
+1. Haga clic en el menú <Cmd sid='people' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <IcCamFaceSearch title='Face Search' /> a la derecha del campo de búsqueda.
+
+3. Cuando aparece la ventana <Cmd sid='find_face_user' product='cam' />, arrastre y suelte una imagen facial o cárguela mediante <Cmd sid='choose_file' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-search-upload-face.png' />
+
+4. Después de completar la carga de la imagen facial, haga clic en <Cmd sid='firmware_upload' product='cam' />.
+
+5. Cuando aparece la ventana <Cmd sid='choose_face_to_search' product='cam' />, aparece una lista de usuarios que coinciden con la imagen facial cargada.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-search-face-result.png' />
+
+   * Seleccione el usuario deseado de los usuarios coincidentes para ir a la página de detalles de ese usuario.
+
+   * Para buscar otra vez con una imagen facial diferente, haga clic en <Cmd sid='choose_file' product='cam' /> en la parte inferior izquierda y cargue una nueva imagen facial.
+
+:::info
+
+Si carga una imagen que no es facial, aparece un mensaje que indica que no es una imagen facial válida. Intente de nuevo con una imagen facial.
+
+:::
+
+## Cambiar modo de vista
+
+Muestre la lista de usuarios en vista de tabla o de tarjeta. Haga clic en <Image src='/img/cam-server/ico-people-list-mode.svg' alone ico /> o <Image src='/img/cam-server/ico-people-card-mode.svg' alone ico /> en la parte superior derecha de la lista de usuarios para seleccionar el modo de vista que desea.
+
+* <Cmd sid='switch_to_list_view' product='cam' />
+
+  <ProdImg src='/img/cam-server/cam-webserver-people-list-mode.png' />
+
+* <Cmd sid='switch_to_grid_view' product='cam' />
+
+  <ProdImg src='/img/cam-server/cam-webserver-people-card-mode.png' />
+
+:::info
+
+<Cmd sid='switch_to_list_view' product='cam' />, y <Cmd sid='switch_to_grid_view' product='cam' /> ofrecen la misma función. Solo cambia la visualización; los resultados de búsqueda, filtrado y ordenación son idénticos.
+
+:::
+
+## Ordenamiento de la lista de usuarios
+
+Puede ordenar la lista de usuarios en orden ascendente o descendente por ID de usuario y hora de la última actualización.
+
+1. Haga clic en la opción desplegable de ordenamiento en la parte superior derecha de la lista de usuarios. 
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-filter.png' />
+
+2. Seleccione los criterios de ordenamiento deseados.
