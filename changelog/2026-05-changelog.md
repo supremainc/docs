@@ -66,7 +66,7 @@ slug: 2026-05-changelog
 
 ---
 
-## Integratioin
+## Integration
 
 Integration 카테고리를 추가했습니다. 타사 제품과 슈프리마 장치를 연동하는 방법을 확인해보세요.
 
