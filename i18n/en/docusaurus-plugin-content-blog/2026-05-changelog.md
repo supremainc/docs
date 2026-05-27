@@ -14,7 +14,7 @@ This May, **Suprema Docs** expanded in both scope and scale. The new device **Bi
 
 ### BioStar X
 
-* Read the [v1.0.2 release notes](../platform/biostar_x/release-notes/102)
+* Read the [v1.0.2 Release Notes](../platform/biostar_x/release-notes/102)
 
 * [Change the Main Server IP Address](../platform/biostar_x/change-ip): Added instructions for changing the BioStar X main server IP address
 
@@ -22,7 +22,7 @@ This May, **Suprema Docs** expanded in both scope and scale. The new device **Bi
 
 * [System Restore](../platform/biostar_x/settings-system-system-restore): Updated detailed procedures for using the restore tool
 
-* [Delete Event Logs from Device](../platform/biostar_x/settings-device-using-functions#deleteLogsFromDevice): Added the ability to delete event logs stored on the device
+* [Delete Event Logs from Device](../platform/biostar_x/settings-device-using-functions#deleteLogsFromDevice): Added the feature to delete event logs stored on the device
 
 * [Integrate VMS](../platform/biostar_x/settings-video-integration): Added support for **Nx Witness v6.x.x**
 
@@ -32,7 +32,7 @@ This May, **Suprema Docs** expanded in both scope and scale. The new device **Bi
 
 ### BioStar Air
 
-* Read the [SW v2.12 release notes](../platform/biostar_air/release-notes/bsair-release-notes#2120)
+* Read the [SW v2.12 Release Notes](../platform/biostar_air/release-notes/bsair-release-notes#2120)
 
 * [Install Airfob Patch](../platform/biostar_air/install-airfob-patch): Added instructions for installing the Airfob patch
 
@@ -54,27 +54,27 @@ This May, **Suprema Docs** expanded in both scope and scale. The new device **Bi
 
 * Applied v1.2.3 update for [Device Manager](../device/device_manager/)
 
-  * [Set Up XPass D2](../device/device_manager/xpd2-settings): Added forced EV2/EV3 secure messaging feature
+  * [Set Up XPass D2](../device/device_manager/xpd2-settings): Added **Enforce EV2/EV3 Secure Messaging** feature
 
 ### Device Release Notes
 
-* [BioEntry R2](../device/bioentry_r2/release-notes/142): Added v1.4.2 release notes
+* [BioEntry R2](../device/bioentry_r2/release-notes/142): Added v1.4.2 Release Notes
 
-* [CoreStation](../device/corestation_40/release-notes/172): Added v1.7.2 release notes
+* [CoreStation](../device/corestation_40/release-notes/172): Added v1.7.2 Release Notes
 
-* [CoreStation 20](../device/corestation_20/release-notes/104): Added v1.0.4 release notes
+* [CoreStation 20](../device/corestation_20/release-notes/104): Added v1.0.4 Release Notes
 
-* [BioEntry W3](../device/bioentry_w3/release-notes/102): Added v1.0.2 release notes
+* [BioEntry W3](../device/bioentry_w3/release-notes/102): Added v1.0.2 Release Notes
 
-* [Device Manager](../device/device_manager/release-notes/123): Added v1.2.3 release notes
+* [Device Manager](../device/device_manager/release-notes/123): Added v1.2.3 Release Notes
 
-* [FaceStation F2](../device/facestation_f2/release-notes/222): Added v2.2.2 release notes
+* [FaceStation F2](../device/facestation_f2/release-notes/222): Added v2.2.2 Release Notes
 
 ---
 
 ## Integration
 
-We've added a new Integration category. Check out how to integrate third-party products with Suprema devices.
+We've added a new **Integration** category. Check out how to integrate third-party products with Suprema devices.
 
 * [Genetec](../integration/genetec/)
 
