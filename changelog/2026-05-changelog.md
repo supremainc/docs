@@ -50,6 +50,8 @@ slug: 2026-05-changelog
 
 * [Device Manager](../device/device_manager/) 1.2.3 버전 업데이트 적용
 
+  * [XPass D2 설정하기](../device/device_manager/xpd2-settings): EV2/EV3 보안 메시징 강제 기능 추가
+
 ### 장치 릴리스 노트
 
 * [BioEntry R2](../device/bioentry_r2/release-notes/142): 1.4.2 버전 릴리스 노트 추가
