@@ -1,0 +1,172 @@
+---
+id: add-users
+title: ユーザーの追加
+description: 顔認証ユーザーの登録と顔写真の登録方法を案内します。院号?
+keywords:
+  - ユーザー
+  - 登録
+  - 顔
+  - Face User
+  - 追加
+  - 写真
+---
+
+AI顔認証に使用するユーザーを登録できます。 ユーザーを追加する際に基本情報を入力し、3つの方法のいずれかで顔写真を登録できます。
+
+次のような場合にユーザーを追加してください。
+
+* 組織に新たに入社したユーザーを登録する場合
+
+* ユーザーの顔写真を撮影して顔認証データベースに登録する場合
+
+* 複数のユーザーを一括で追加する場合
+
+* 外部システム（ERP、人事管理システム）と連携するためにユーザーを登録する場合
+
+:::info
+
+* 顔認識機能を使用するには、該当地域の関連法規を遵守する必要があります。
+
+* 初回にユーザーを追加する際、顔認証利用同意のポップアップが表示されます。 同意の記録はシステムログに保存され、同意後は再表示されません。
+
+* AIイベント設定で事前に同意を完了している場合、ユーザー追加時に別のポップアップは表示されません。
+
+:::
+
+## ユーザー基本情報の入力
+
+初回のユーザー追加時に顔認証利用同意のポップアップが表示されたら、内容を確認して進めてください。 同意完了後、ユーザー追加ダイアログで基本情報を入力してください。
+
+1. 画面左上の <Cmd sid='people' product='cam' /> メニューをクリックします.
+
+2. 画面右上の <Cmd sid='add' product='cam' /> ボタンをクリックしてください。
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-add.png' />
+
+3. 初回ユーザー追加時に <Cmd sid='face_analytics_consent_title' product='cam' /> ポップアップが表示されたら、内容を確認し、同意チェックボックスをクリックしてから <Cmd sid='face_analytics_consent_agree' product='cam' /> ボタンをクリックしてください。
+
+   <ProdImg src='/img/cam-server/ai-analysis-notice-face-auth.png' width='50%' />
+
+   :::note
+
+   * 顔認識機能を使用するには、該当地域の関連法規を遵守する必要があります。 同意しない場合は先に進めません。
+
+   * 「<Cmd sid='face_analytics_consent_title' product='cam' />」ポップアップは初回のみ表示されます。
+
+   :::
+
+4. <Cmd sid='add_new_face_user' product='cam' /> ウィンドウが表示されたら、ユーザーの基本情報を入力してください。
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-add-pop-profile.png' />
+
+5. <Cmd sid='user_id' product='cam' /> 入力欄にユーザーの固有IDを入力してください。 ユーザーIDは他のユーザーと重複できません。
+
+6. <Cmd sid='name' product='cam' /> 入力欄にユーザー名を入力してください。
+
+   * 最大64文字まで入力できます。
+
+   * 韓国語、日本語、英大文字・小文字、数字、特殊文字（`#`、`-`、`_`、`.`、`(`、`)`）、文字の途中のスペースを含めることができます。
+
+7. <Cmd sid='description' product='cam' /> 入力欄にユーザーの説明を入力してください。 最大256文字まで入力できます。
+
+8. <Cmd sid='custom_field' product='cam' /> 入力欄では、ユーザー固有の追加情報を最大64文字まで入力できます。 たとえば、部署、役職、ユーザーグループなどを英数字形式のメモとして入力できます。
+
+9. ユーザー基本情報を保存するには、<Cmd sid='apply' product='cam' /> ボタンをクリックしてください。
+
+:::info
+
+新しいユーザーは顔写真なしで先に作成できます。 後でユーザーの詳細ページから顔写真を追加できます。
+
+:::
+
+## 顔登録
+
+ユーザーを新規追加する際、またはユーザー詳細ページで顔を登録できます。 3つの方法が提供されます。
+
+1. 画面左上の <Cmd sid='people' product='cam' /> メニューをクリックします.
+
+2. 画面右上の<Cmd sid='add' product='cam' />ボタンをクリックするか、ユーザー一覧から既存ユーザーをクリックして詳細ページに移動してください。
+
+3. ユーザー追加またはユーザー詳細のポップアップの<Cmd sid='face_credentials' product='cam' />セクションで顔を登録できます。
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential.png' />
+
+4. <Cmd sid='first_face' product='cam' /> にマウスを重ねると、登録オプションが表示されます。
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential-upload.png' />
+
+   * <IcUpload width='24px' height='24px' title='Upload' />: ローカルに保存された画像ファイルをアップロードして、顔写真を登録できます。
+
+   * <IcCapture width='24px' height='24px' title='Web Cam' />: ウェブカメラで顔写真を撮影して登録できます。
+
+   * <IcCamAi width='24px' height='24px' title='AI Recommend' />: AIイベントで検出された未認識顔の一覧から、ユーザーに合う顔を選択して登録できます。
+
+:::info
+
+1番目の顔を先に選択してください。 2番目の顔は任意です。
+
+:::
+
+### 顔写真のアップロード
+
+ローカルに保存された画像ファイルをアップロードして顔写真を登録できます。
+
+<ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential-upload.png' />
+
+1. 以下の方法から希望の方法で顔写真をアップロードしてください。
+
+   * ローカルに保存された画像ファイルをドラッグ＆ドロップで顔領域にドラッグしてください。
+
+   * ローカルに保存された画像ファイルを選択するには、<IcUpload title='Upload' /> ボタンをクリックして、目的の画像ファイルを選択してください。
+
+2. 顔が認識されると写真が表示されます。
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential-upload-complete.png' />
+
+3. アップロードした写真をユーザーに適用するには、下部の <Cmd sid='apply' product='cam' /> ボタンをクリックしてください。
+
+:::info
+
+* 対応する画像ファイル形式はPNG、JPEG、JPGです。
+
+* 対応する画像ファイルの最大サイズは10MBです。
+
+:::
+
+### ウェブカメラで顔を登録
+
+ウェブカメラを使用して顔写真を撮影して登録できます。
+
+1. <IcCamera title='Webcam' /> ボタンをクリックしてください。
+
+2. ウェブカメラの撮影画面が表示されたら、顔が画面中央の円内に来るように位置を調整してください。
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential-webcam-2.png' />
+
+3. <Cmd sid='capture' product='cam' /> ボタンをクリックしてください。
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential-upload-complete.png' />
+
+4. 撮影した写真をユーザーに適用するには、<Cmd sid='apply' product='cam' /> ボタンをクリックしてください。
+
+:::info
+
+再撮影するには、顔写真をクリックして再度撮影できます。
+
+:::
+
+### AI推奨顔登録
+
+AI分析で検出された未認識顔の一覧から、ユーザーに合う顔を選択して登録できます。
+
+1. <IcCamAi title='AI Recommend' /> ボタンをクリックしてください。
+
+2. <Cmd sid='ai_shot' product='cam' /> ポップアップウィンドウに、最近認証された未認識顔の一覧が表示されます。
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-ai-matching.png' />
+
+3. ユーザーに合う顔を選択してください。 一度に1つの顔のみ選択できます。
+
+4. <Cmd sid='save' product='cam' /> ボタンをクリックしてください。
+
+5. 選択した顔をユーザーに適用するには、<Cmd sid='apply' product='cam' /> ボタンをクリックしてください。

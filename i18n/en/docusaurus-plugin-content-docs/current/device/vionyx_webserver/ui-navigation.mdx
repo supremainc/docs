@@ -1,0 +1,45 @@
+---
+id: ui-navigation
+title: Understanding the User Interface
+description: This guide explains the ViOnyx Web Server web interface structure, the left main menu, and the right-side information and tools.
+keywords:
+  - UI
+  - Menu
+  - Navigation
+  - Interface
+---
+
+After signing in to ViOnyx Web Server, the main menu appears at the top. Menus provide quick access to features. This page explains the web server interface structure and each menu's role.
+
+<ProdImg src='/img/cam-server/vionyx-home-screen.png' />
+
+## Main menu quick access
+
+The top-left shows the ViOnyx Web Server logo and main menu icons. Features provided by each menu are listed below.
+
+<div className='menu-icon-table'>
+
+| Menu icon | Menu name | Description |
+| :-: | :-: | --- |
+| <IcCamLive width='26px' height='26px' title='Live' /> | <Cmd sid='live' product='cam' /> | View live video from the camera. |
+| <IcCamSet width='26px' height='26px' title='Settings' /> | <Cmd sid='settings' product='cam' /> | Change camera and web server settings. |
+| <IcCamPeople width='26px' height='26px' title='People' /> | <Cmd sid='people' product='cam' /> | Add and manage camera system users. |
+| <IcCamSys width='26px' height='26px' title='System' /> | <Cmd sid='system' product='cam' /> | Manage device information, accounts, audio, logs, and other system settings. |
+
+</div>
+
+## Information and tools
+
+The top-right shows camera info, language selection, a shortcut to the user guide, and a logout button.
+
+<div className='menu-icon-table'>
+
+| Menu icon | Menu name | Description |
+| :-: | :-: | --- |
+| <ProdImg src='/img/cam-server/ico-header-camera.svg' width='30px' alone className='none' /> | Camera information | View the connected camera's name, status, and IP address. Click **IP Address** to view device information. |
+| **10:00** | Session time | View the current logged-in administrator's session time. You are automatically logged out when the session time is exceeded. |
+| <span style={{fontSize: '18px'}}>🌐</span> | Language selection | Change the web interface language. |
+| <ProdImg src='/img/cam-server/ico-header-guide.svg' width='30px' alone className='none' /> | User guide shortcut | View the user guide. |
+| <ProdImg src='/img/cam-server/ico-header-logout.svg' width='30px' alone className='none' /> | Logout | Log out. |
+
+</div>

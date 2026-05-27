@@ -1,0 +1,166 @@
+---
+id: view-system-logs
+title: Ver Registros del Sistema
+description: Esta guía explica cómo ver y exportar los registros de acceso, eventos y sistema de la cámara.
+keywords:
+  - Registro
+  - Registro del sistema
+  - Registros de eventos
+  - Registros de acceso
+  - CSV
+  - Exportar
+---
+
+Puede ver y administrar los registros de acceso de usuarios de la cámara, los eventos y las operaciones del sistema. Filtre los registros por los criterios deseados en la interfaz web, expórtelos en formato CSV o descargue los registros cifrados del dispositivo cuando necesite un análisis más detallado.
+
+Revise los registros en las siguientes situaciones.
+
+* Para verificar quién accedió a la cámara y cuándo
+
+* Para rastrear cuándo ocurrió un evento específico
+
+* Para revisar operaciones importantes del sistema, como el arranque y el reinicio
+
+* Para revisar los registros de acceso con fines de monitoreo de seguridad
+
+* Para recopilar registros del sistema para la solución de problemas
+
+:::info
+
+* Los registros se conservan automáticamente según el tamaño de memoria del dispositivo.
+
+* Cada tipo de registro se conserva durante aproximadamente un mes.
+
+* Cuando la memoria se llena, los registros más antiguos se eliminan automáticamente.
+
+* Solo los administradores y operadores con permiso de lectura y escritura pueden ver los registros del sistema.
+
+:::
+
+## Ver registros
+
+1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='system_logs' product='cam' /> en la barra lateral izquierda. Ver todos los registros.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-log.png' />
+
+3. Para filtrar los registros por categoría, nivel y tipo, seleccione los criterios deseados en <Cmd sid='all_logs' product='cam' />, <Cmd sid='all_levels' product='cam' /> y <Cmd sid='all_types' product='cam' /> en la parte superior izquierda de la lista de registros.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-log-filter.png' className='none' />
+
+4. Haga clic en <IcSearch title='Search' /> en la parte superior de la lista de registros para filtrar los registros según los criterios seleccionados.
+
+:::info
+
+* Para ver los registros de un período específico, haga clic en los campos de entrada de fecha y hora. Cuando aparezcan el calendario y el selector de hora, seleccione la fecha y hora de inicio deseadas. Establezca la fecha y hora de fin del mismo modo.
+
+  <ProdImg src='/img/cam-server/cam-webserver-system-log-date.png' width='40%' />
+
+* Desplácese hacia abajo en la lista para actualizarla y seguir viendo registros anteriores.
+
+* Para obtener más información sobre los tipos de registro, consulte <DocLink docId='device/vionyx_webserver/system-log-type' />.
+
+:::
+
+### Tipos de registro
+
+Los registros se clasifican de la siguiente manera.
+
+* <Cmd sid='ai_analysis' product='cam' />: Ver registros de eventos relacionados con el análisis de IA.
+
+* <Cmd sid='access' product='cam' />: Registros de usuarios que acceden a la interfaz web de la cámara.
+
+* <Cmd sid='event' product='cam' />: Registros de eventos, envíos de webhook y ejecuciones de reglas.
+
+* <Cmd sid='system' product='cam' />: Registros de operaciones del sistema, como arranque, reinicio e inicialización. Este registro **solo lo pueden ver los administradores**.
+
+:::info
+
+Seleccione <Cmd sid='log_category_download' product='cam' /> para descargar el archivo de registro cifrado del dispositivo. Para más información, consulte <DocLink inner='#downloadDeviceLogs' />.
+
+:::
+
+### Niveles de registro
+
+Los registros se clasifican en los siguientes niveles.
+
+* <Cmd sid='log_level_info' product='cam' />: Ver registros de mensajes informativos generales.
+
+* <Cmd sid='log_level_warning' product='cam' />: Ver registros de mensajes de advertencia.
+
+* <Cmd sid='log_level_error' product='cam' />: Ver registros de mensajes de error.
+
+## Exportar registros
+
+Descargue los registros en formato CSV para su análisis externo o archivo.
+
+1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='system_logs' product='cam' /> en la barra lateral izquierda.
+
+3. Seleccione el tipo de registro que desea exportar en <Cmd sid='all_logs' product='cam' /> en la parte superior izquierda de la lista de registros. Establezca un período de búsqueda para exportar registros de un rango de tiempo específico.
+
+4. Haga clic en <Cmd sid='csv_export' product='cam' /> en la parte superior derecha de la pantalla.
+
+5. Cuando aparezca la ventana emergente <Cmd sid='csv_export' product='cam' />, seleccione el idioma de exportación.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-log-export.png' />
+
+6. Haga clic en <Cmd sid='ok' product='cam' />.
+
+Descargue la lista de registros como archivo CSV.
+
+:::info
+
+* Formato del nombre de archivo CSV: `system-logs-YYYYMMDD_HHMMSS.csv`. 
+
+  > Ejemplo: *system-logs-20240326_153000.csv*
+
+* El archivo se guarda en la carpeta de descargas predeterminada del navegador o en una ubicación seleccionada por el usuario.
+
+:::
+
+## Retención y administración de registros
+
+### Eliminación automática de registros
+
+Cuando la memoria de la cámara se llena, los registros más antiguos se eliminan automáticamente.
+
+<div className='table-fixed'>
+
+| **Tipo de registro** | **Período de retención** |
+| --- | --- |
+| **Registros del sistema** | Aproximadamente un mes |
+| **Registros de acceso** | Aproximadamente un mes |
+| **Registros de eventos** | Aproximadamente un mes |
+
+</div>
+
+### Cómo conservar registros importantes
+
+Para conservar registros importantes a largo plazo, siga estos pasos:
+
+* Exporte los registros a CSV con regularidad.
+
+* Guarde los archivos exportados en almacenamiento externo (NAS, almacenamiento en la nube, etc.).
+
+* Incluya la fecha de exportación y el período del registro en el archivo.
+
+## Descarga de registros del dispositivo {#downloadDeviceLogs}
+
+Descargue los archivos de registro almacenados en el dispositivo en formato cifrado. Los registros del dispositivo son archivos detallados que incluyen todos los eventos y registros operativos generados por el sistema de la cámara para la solución de problemas. El archivo está cifrado para mantenerlo seguro y entréguelo a <Support /> cuando sea necesario para la solución de problemas.
+
+1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='system_logs' product='cam' /> en la barra lateral izquierda.
+
+3. Seleccione <Cmd sid='log_category_download' product='cam' /> en <Cmd sid='all_logs' product='cam' /> en la parte superior izquierda de la lista de registros.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-log-download-device-log.png' />
+
+4. Haga clic en <Cmd sid='log_category_download' product='cam' /> en la parte superior derecha de la lista de registros.
+
+Descargue localmente el archivo de registro del dispositivo. El nombre de archivo usa el formato `device_logs_{device-serial-number}_YYYYMMDDTHHMMSS.zip.enc`.
+
+> Ejemplo: *device_logs_1234567890_20240326T153000.zip.enc*

@@ -1,0 +1,120 @@
+---
+id: update-device-info
+title: Update Camera Information
+description: Learn how to manage cameras effectively by entering the camera name, memo, location, and GPS coordinates.
+keywords:
+  - Camera
+  - Information
+  - Name
+  - Location
+  - GPS
+  - Memo
+---
+
+Check basic camera information and enter the device name, description, and location to manage multiple cameras in your organization.
+
+Update camera information in the following situations:
+
+* Rename an installed camera to a distinctive name within your organization.
+
+* Add additional information about the camera's location or installation site.
+
+* Record the camera's precise location by entering GPS coordinates.
+
+* Add specific notes or descriptions for each camera when managing multiple cameras.
+
+:::info
+
+* Fields such as model name, serial number, and hardware version are read-only and cannot be edited.
+
+* Camera name, memo, and location support Unicode and accept Korean, English, numbers, and special characters.
+
+:::
+
+## Check basic camera information
+
+Check basic information such as the camera model, serial number, and hardware version.
+
+1. Click the <Cmd sid='system' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <Cmd sid='device_info' product='cam' /> in the left sidebar.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-device-info.png' />
+
+You can check the basic information below in the <Cmd sid='information' product='cam' /> section. These fields are read-only and cannot be edited.
+
+* <Cmd sid='model' product='cam' />: Camera model
+
+* <Cmd sid='device_sn' product='cam' />: Camera serial number
+
+* <Cmd sid='hw_version' product='cam' />: Hardware version
+
+* <Cmd sid='kernel' product='cam' />: Kernel version
+
+* <Cmd sid='open_source_license' product='cam' />: Click <Cmd sid='view' product='cam' /> to view open source license information.
+
+## Set camera information
+
+Enter the camera name, memo, and location to manage cameras effectively.
+
+1. Click the <Cmd sid='system' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <Cmd sid='device_info' product='cam' /> in the left sidebar.
+
+### Enter name
+
+Enter a custom name to make the camera easy to identify. Enter the camera name in the <Cmd sid='name' product='cam' /> input field.
+
+* Up to 64 characters.
+
+* Allows Korean, English, numbers, and special characters (`.`, `-`, `(`, `)`).
+
+> Example: "Entrance 1", "Conference Room A"
+
+:::info
+
+The entered camera name appears in the system menu and throughout the web UI, making it easy to identify the camera.
+
+:::
+
+### Add memo
+
+Enter additional information or a memo for the camera. Enter a memo or description in the <Cmd sid='memo' product='cam' /> input field. Up to 64 characters.
+
+> Example: installation department, administrator name, installation date
+
+### Enter location information
+
+Enter the camera's installation location as text. Enter the camera's installation location in the <Cmd sid='location' product='cam' /> input field. Up to 64 characters.
+
+> Example: "1st floor lobby entrance", "2nd floor conference room waiting area"
+
+### Save settings
+
+After entering all information, click <Cmd sid='save' product='cam' /> in the upper right corner of the screen.
+
+## Set GPS coordinates
+
+Enter the camera's exact geographic location as GPS coordinates.
+
+1. Click the <Cmd sid='system' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <Cmd sid='device_info' product='cam' /> in the left sidebar.
+
+3. To enable GPS setting, click the <Cmd sid='gps' product='cam' /> toggle in the <Cmd sid='information' product='cam' /> section.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-device-info-gps.png' />
+
+4. Enter the longitude and latitude information.
+
+   > Example: Seoul (37.5665, 126.9780)
+
+5. Click <Cmd sid='save' product='cam' /> in the upper right corner of the screen to save the setting.
+
+:::info
+
+* Enter GPS coordinates in decimal degrees (DD) format.
+
+* To disable GPS setting, click the <Cmd sid='gps' product='cam' /> toggle again.
+
+:::

@@ -1,0 +1,172 @@
+---
+id: add-users
+title: Add Users
+description: Guide to enrolling users for Facial Authentication and enrolling face images.
+keywords:
+  - User
+  - Enrollment
+  - Face
+  - Face User
+  - Add
+  - Photo
+---
+
+Enroll users for AI Facial Authentication. When adding a user, enter basic information and enroll a face using one of three methods.
+
+Add users in the following situations.
+
+* When enrolling a new employee in the organization
+
+* When enrolling a user's face photo into the Facial Authentication database
+
+* When adding multiple users in bulk
+
+* When enrolling users for integration with external systems (ERP, HR management system)
+
+:::info
+
+* To use the Facial Authentication feature, comply with local regulations.
+
+* When adding the first user, a Facial Authentication consent popup appears. The system log stores consent records; the popup does not reappear after consent.
+
+* If consent was completed earlier in AI Event settings, no popup appears when adding users.
+
+:::
+
+## Enter basic user information
+
+If the Facial Authentication consent popup appears when adding the first user, review it and proceed. After giving consent, enter basic information in the Add User dialog.
+
+1. Click the <Cmd sid='people' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <Cmd sid='add' product='cam' /> at the top right of the screen.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-add.png' />
+
+3. When adding the first user, if the <Cmd sid='face_analytics_consent_title' product='cam' /> popup appears, review the content, select the consent checkbox, and click <Cmd sid='face_analytics_consent_agree' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-analysis-notice-face-auth.png' width='50%' />
+
+   :::note
+
+   * To use the Facial Authentication feature, comply with local regulations. Cannot proceed without consent.
+
+   * The <Cmd sid='face_analytics_consent_title' product='cam' /> popup appears only once.
+
+   :::
+
+4. When the <Cmd sid='add_new_face_user' product='cam' /> popup appears, enter the user's basic information.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-add-pop-profile.png' />
+
+5. Enter the user's unique ID in the <Cmd sid='user_id' product='cam' /> input field. User ID must be unique.
+
+6. Enter the user's name in the <Cmd sid='name' product='cam' /> input field.
+
+   * Up to 64 characters.
+
+   * It can include Korean, Japanese, uppercase and lowercase English letters, numbers, special characters (`#`, `-`, `_`, `.`, `(`, `)`), and spaces within a word.
+
+7. Enter a description of the user in the <Cmd sid='description' product='cam' /> input field. Enter up to 256 characters.
+
+8. The <Cmd sid='custom_field' product='cam' /> input field lets you enter up to 64 characters of additional user-specific information. For example, enter notes in English such as department, title, or user group.
+
+9. Click <Cmd sid='apply' product='cam' /> to save basic user information.
+
+:::info
+
+Create new users without a face photo. Add a face photo later from the user's detail page.
+
+:::
+
+## Face enrollment
+
+Enroll a face when adding a new user or from the user's detail page. Three methods are available.
+
+1. Click the <Cmd sid='people' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <Cmd sid='add' product='cam' /> at the top right of the screen or click an existing user in the user list to open the detail page.
+
+3. Enroll a face in the <Cmd sid='face_credentials' product='cam' /> section of the Add User or User Detail popup.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential.png' />
+
+4. Hover over <Cmd sid='first_face' product='cam' /> to show the enrollment options.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential-upload.png' />
+
+   * <IcUpload width='24px' height='24px' title='Upload' />: Upload a locally saved image file to enroll a face photo.
+
+   * <IcCapture width='24px' height='24px' title='Web Cam' />: Capture a face photo with a webcam to enroll it.
+
+   * <IcCamAi width='24px' height='24px' title='AI Recommend' />: Select a face that matches the user from the list of unrecognized faces detected through AI events, and enroll it.
+
+:::info
+
+Select face slot 1 first. Face slot 2 is optional.
+
+:::
+
+### Upload face photo
+
+Upload a locally saved image file to enroll a face photo.
+
+<ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential-upload.png' />
+
+1. Upload the face photo using one of the following methods.
+
+   * Drag and drop a locally saved image file onto the face area.
+
+   * To select a locally saved image file, click <IcUpload title='Upload' /> and choose the image file you want.
+
+2. When the face is detected, the photo appears.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential-upload-complete.png' />
+
+3. To apply the uploaded photo to the user, click <Cmd sid='apply' product='cam' /> at the bottom.
+
+:::info
+
+* Supported image formats are PNG, JPEG, and JPG.
+
+* The maximum size for supported image files is 10MB.
+
+:::
+
+### Enroll face with webcam
+
+Use a webcam to capture and enroll a face photo.
+
+1. Click <IcCamera title='Webcam' />.
+
+2. When the webcam capture screen appears, position your face inside the central circle.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential-webcam-2.png' />
+
+3. Click <Cmd sid='capture' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential-upload-complete.png' />
+
+4. To apply the captured photo to the user, click <Cmd sid='apply' product='cam' />.
+
+:::info
+
+To capture again, click the face photo and capture it again.
+
+:::
+
+### Enroll AI-recommended face
+
+Select and enroll a face that matches the user from the list of unrecognized faces detected through AI analysis.
+
+1. Click <IcCamAi title='AI Recommend' />.
+
+2. The <Cmd sid='ai_shot' product='cam' /> popup shows the list of recently authenticated unrecognized faces.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-ai-matching.png' />
+
+3. Select the face that matches the user. Only one face can be selected at a time.
+
+4. Click <Cmd sid='save' product='cam' />.
+
+5. Click <Cmd sid='apply' product='cam' /> to apply the selected face to the user.

@@ -1,0 +1,121 @@
+---
+id: configure-date-time
+title: 日付と時刻の設定
+description: タイムゾーンを設定し、手動入力またはNTPサーバーで正確な時刻を維持する方法を案内します。
+keywords:
+  - 日付
+  - 時間
+  - NTP
+  - タイムゾーン
+  - 時刻同期
+---
+
+日付と時刻の設定により、カメラの時刻を正確に保てます。 タイムゾーンを選択し、時刻を手動で設定するか、NTPサーバーで自動的に同期します。 正確な時刻は映像のタイムスタンプおよびAIイベント記録の信頼性を保証します。
+
+以下のような場合は日付と時刻の設定を確認してください。
+
+* カメラ設置後に運用地域に合わせてタイムゾーンを設定する場合
+
+* 時刻を手動で正確に入力してカメラの時刻を同期する場合
+
+* NTPサーバーで長期間にわたり正確な時刻を自動で維持する場合
+
+* 複数のカメラの時刻を統一して映像解析や追跡を容易にする場合
+
+:::info
+
+カメラの時刻が不正確だと、AIイベント記録、ビデオタイムスタンプ、システムログの信頼性が低下します。 定期的に時刻設定を確認してください。
+
+:::
+
+## タイムゾーンの設定
+
+まずカメラの運用地域のタイムゾーンを設定してください。
+
+1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+
+2. 画面左側のサイドバーで <Cmd sid='basic' product='cam' /> → <Cmd sid='date_time' product='cam' /> をクリックしてください。
+
+3. <Cmd sid='date' product='cam' /> セクションの <Cmd sid='time_zone' product='cam' /> で地域を選択してください。
+
+   > 例：`(UTC+09:00) Asia/Seoul`
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-date-time.png' />
+
+4. タイムゾーンに応じてサマータイムを適用するには、<Cmd sid='daylight_savings' product='cam' /> オプションのチェックボックスをクリックしてください。
+
+5. 設定したタイムゾーンを保存するには、画面右上の <Cmd sid='save' product='cam' /> ボタンをクリックしてください。
+
+:::info
+
+デフォルト値は `(UTC+09:00) Asia/Seoul` に設定されています。 運用地域が異なる場合は必ずタイムゾーンを変更してください。
+
+:::
+
+## 手動で時刻を設定
+
+カメラの時刻を手動で設定できます。
+
+1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+
+2. 画面左側のサイドバーで <Cmd sid='basic' product='cam' /> → <Cmd sid='date_time' product='cam' /> をクリックしてください。
+
+3. <Cmd sid='time' product='cam' /> セクションで <Cmd sid='manual' product='cam' /> を選択してください。
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-date-time-manual.png' />
+
+4. 日付フィールドに現在の日付を入力するか、カレンダーアイコンをクリックして日付を選択してください。
+
+5. 時刻フィールドに現在の時刻を入力するか、時計アイコンをクリックして時刻を選択してください。
+
+6. 手動で設定した時刻を適用するには、<Cmd sid='apply' product='cam' /> ボタンをクリックしてください。
+
+7. 時刻設定を保存するには、画面右上の <Cmd sid='save' product='cam' /> ボタンをクリックしてください。
+
+:::info
+
+* PCの時刻をカメラに自動適用するには、<Cmd sid='pc_viewer_time_apply' product='cam' /> オプションを有効にしてください。 Webブラウザーのシステム時刻がカメラに適用されます。
+
+* 手動モードとNTP自動同期は同時に有効にできません。 手動モードを選択するとNTP自動同期は無効になります。
+
+:::
+
+## 自動同期（NTP）設定
+
+NTPサーバーを通じてカメラの時刻を自動的に正確に維持します。 長期間の運用時に推奨されます。
+
+1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+
+2. 画面左側のサイドバーで <Cmd sid='basic' product='cam' /> → <Cmd sid='date_time' product='cam' /> をクリックしてください。
+
+3. <Cmd sid='time' product='cam' /> セクションで <Cmd sid='ntp_server_sync' product='cam' /> を選択してください。
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-date-time-sync-mode.png' />
+
+4. <Cmd sid='ntp_address_n' product='cam' replace='1' />(必須) フィールドにNTPサーバーアドレスを入力します。
+
+   * URL形式: time.windows.com、time.nist.gov など
+
+   * IPアドレス: 192.0.2.1 など
+
+5. (オプション) 必要に応じて、<Cmd sid='ntp_address_n' product='cam' replace='2' />、<Cmd sid='ntp_address_n' product='cam' replace='3' />、<Cmd sid='ntp_address_n' product='cam' replace='4' /> に追加のNTPサーバーを入力します。
+
+   * 最大4つのサーバーを設定できます。
+
+   * <Cmd sid='ntp_address_n' product='cam' replace='1' />が応答しない場合、次のサーバーに自動的に切り替わります。
+
+6. 時刻設定を保存するには、画面右上の <Cmd sid='save' product='cam' /> ボタンをクリックしてください。
+
+設定完了後、カメラは自動的にNTPサーバーと同期し、定期的に時刻を更新します。
+
+:::info
+
+**推奨NTPサーバー**
+
+* time.windows.com（Windows 公開NTP）
+
+* time.nist.gov（NIST 公開NTP）
+
+* pool.ntp.org（NTP Pool プロジェクト）
+
+:::

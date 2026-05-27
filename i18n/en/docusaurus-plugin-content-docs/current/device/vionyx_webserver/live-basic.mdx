@@ -1,0 +1,143 @@
+---
+id: live-basic
+title: View Live
+description: Use the Live menu in ViOnyx Web Server to view live camera video, select channels and view modes, and zoom or enter full screen.
+keywords:
+  - Real-time
+  - Video
+  - Live
+  - Monitoring
+  - View mode
+---
+
+Use the ViOnyx Web Server <Cmd sid='live' product='cam' /> menu to view live camera video. Select the desired channel and view mode, then zoom or view in full screen.
+
+## Live view basic layout
+
+When first entering the <Cmd sid='live' product='cam' /> menu, the video appears in the following default state.
+
+<ProdImg src='/img/cam-server/vionyx-live-basic.png' />
+
+<div className='menu-icon-table'>
+
+| Item | Component | Description |
+| :-: | :-: | --- |
+| <Num num='1' /> | <Image src='/img/cam-server/ico-content-ai-hide.svg' width='100%' alone className='none' alt='AI Event' /> | - AI features are disabled. Click the icon to enable AI features.<br />- To show or hide AI events and user boxes, click <IcMoreB title='More' /> and adjust the setting. |
+| <Num num='2' /> | <IcPanelFace width='26px' height='26px' title='Face Shot' /> | Open the <Cmd sid='face_shot' product='cam' />(Face Shot) panel. |
+| <Num num='3' /> | CH | Select the view mode available for each channel. |
+| <Num num='4' /> | <IcKnob width='28px' height='28px' title='Rotate' /> | Rotate the live video. |
+| ^ | <IcCapture width='26px' height='26px' title='Capture' /> | Capture the live video. |
+| ^ | <IcFull width='26px' height='26px' title='Full Screen' /> | View the live video in full screen. |
+
+</div>
+
+## Select channel and view mode
+
+ViOnyx Web Server provides multiple channels and view modes. Select the desired channel and view mode from the <Cmd>CH</Cmd> dropdown at the bottom of the screen.
+
+<Image src='/img/cam-server/vionyx-live-basic-select-ch.png' alone />
+
+**Supported channels and view modes**
+
+<div className='table--viewmode'>
+
+| Channel | View mode | Description | Example |
+| :-: | --- | --- | :-: |
+| **1ch** | Fisheye View (Main/Sub) | Original fisheye-lens video for the primary channel | <Image src='/img/cam-server/vionyx-live-basic-fisheye-view-mode.png' width='50%' alone /> |
+| **2ch** | Quad View (Main) | 4-split view for the panorama channel | <Image src='/img/cam-server/vionyx-live-basic-quad-view-mode.png' width='50%' alone /> |
+
+</div>
+
+:::info
+
+* Each channel's Main and Sub streams provide different resolutions. Main is the high-quality stream; Sub is the low-quality stream.
+
+* The image is an example screen. The actual screen may differ.
+
+:::
+
+## Zooming
+
+Use the mouse to zoom in and out.
+
+* Scroll up: Zoom in
+
+* Scroll down: Zoom out
+
+* Double-click: Return to original size (1x)
+
+:::info
+
+* Zoom range: 1x to 8x
+
+* Zoom uses digital magnification, so the image may become blurry at high zoom levels.
+
+:::
+
+## Rotate the screen
+
+To rotate the live video, click and drag <IcKnob />. Or enter the rotation angle directly in the input field to the right of the <IcKnob /> button.
+
+<ProdImg src='/img/cam-server/vionyx-live-basic-rotate-screen.png' />
+
+## Capture screen
+
+To capture the live video, click <IcCapture title='Capture' />. The capture image is saved in the `capture_{ch1|ch2}_{main|sub}_{YYYY-MM-DDTHH-MM-SS}.jpeg` format.
+
+<ProdImg src='/img/cam-server/vionyx-live-basic-capture-screen.png' />
+
+## Full-screen mode
+
+Use full-screen mode to view the video in a larger size. Click <IcFull /> at the bottom right of the screen.
+
+<ProdImg src='/img/cam-server/vionyx-live-basic-full-screen.png' />
+
+* View-mode changes and zoom remain available in full-screen mode.
+
+* To exit full screen mode, press the <Kbd>ESC</Kbd> key or click <IcMin /> again.
+
+## Show event and user boxes {#displayBox}
+
+To show or hide AI events and user boxes in the live video, click <IcMoreB /> at the top right of the screen. Select the elements to show.
+
+<ProdImg src='/img/cam-server/live-view-event-user-box.png' width='60%' />
+
+* <Cmd sid='event_box_popup' product='cam' />: When an AI event occurs, the event appears as a pop-up at the top left of the live video.
+
+* <Cmd sid='user_box_popup' product='cam' />: When a face is detected through an AI event, the user box appears as a pop-up at the bottom right of the live video.
+
+:::info
+
+The pop-up stays visible for the time set in the <Cmd sid='display_time' product='cam' /> option (in seconds).
+
+:::
+
+## Open the Face Shot panel
+
+If you enabled the AI event feature, you can check faces detected through the camera. To open the <Cmd sid='face_shot' product='cam' /> panel, click <IcPanelFace /> at the top right of the screen.
+
+<ProdImg src='/img/cam-server/vionyx-live-basic-ai-face-shot.png' />
+
+Click the tool icons at the top of the <Cmd sid='face_shot' product='cam' /> panel to use these features:
+
+* <Image src='/img/menus/ico-faceshot-pause.svg' ico alone className='none' /> / <Image src='/img/menus/ico-faceshot-play.svg' ico alone className='none' />: Pause or resume Face Shot.
+
+* <Image src='/img/menus/ico-faceshot-filter.svg' ico alone className='none' />: Filter Face Shot results.
+
+* <Image src='/img/menus/ico-faceshot-max.svg' ico alone className='none' />: Expand the <Cmd sid='face_shot' product='cam' /> panel to full screen.
+
+:::info
+
+For more information about AI event and rule settings, see <DocLink docId='device/vionyx_webserver/configure-ai-events-and-rules' />.
+
+:::
+
+## When video does not play
+
+If the camera video does not load, follow these steps to check the network connection.
+
+1. Check the camera and network connections.
+
+2. Press **Refresh (F5)** in your web browser.
+
+3. The system automatically tries to reconnect.

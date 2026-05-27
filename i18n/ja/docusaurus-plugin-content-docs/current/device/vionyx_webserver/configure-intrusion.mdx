@@ -1,0 +1,152 @@
+---
+id: configure-intrusion
+title: 侵入検知イベントを設定
+description: 設定した区域の出入りイベントをリアルタイムで検知し、顔認証で登録済みの従業員と未承認者を自動で区別します.
+keywords:
+  - AI分析
+  - 出入者の動線
+  - 顔認証
+---
+
+侵入検知イベントを設定すると、管理者が定義した区域に人が出入りするたびにリアルタイムでイベントが発生します. 任意で顔領域を追加すると、該当領域で顔を優先的に追跡し、登録済みのユーザーは自動で身元を認証します. 監視が必要な区域における不正侵入をすばやく検知し、リアルタイムで通知を受け取れます。
+
+## いつ使用しますか？
+
+* セキュリティが必要な区域への不正侵入をリアルタイムで検知
+
+* 業務時間外、または監視が必要な区域にアクセスしたときにリアルタイム通知を受け取る
+
+* 監視区域への未登録者の侵入を検知
+
+* 高リスク区域の出入り状況を記録および追跡する.
+
+:::info
+
+入退室制限以外の用途にも使用でき、カメラで入退室制限の有無を判断しません。
+
+:::
+
+## 侵入検知イベントの作成.
+
+侵入検知イベントを作成すると、<Cmd sid='live' product='cam' /> メニューで特定区域への人物の侵入を検知してイベントを発生させることができます. また、顔領域を設定すると当該領域で顔を優先的に追跡でき、登録済みユーザーは自動で識別されます。
+
+<Steps>
+<Step>
+
+### イベント作成の開始
+
+1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+
+2. 画面左のサイドバーで <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> をクリックします。
+
+   <ProdImg src='/img/cam-server/ai-analysis-events.png' />
+
+3. 画面右上の<Cmd sid='add_button' product='cam' />ボタンをクリックしてください。
+
+4. <Cmd sid='select_ai_analysis_type' product='cam' />ウィンドウで<Cmd sid='ai_analysis_intrusion' product='cam' />をクリックします。
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-add-intrusion.png' />
+
+5. <Cmd sid='face_analytics_consent_title' product='cam' /> ポップアップが表示されたら、内容を確認し、同意チェックボックスをクリックしてから <Cmd sid='face_analytics_consent_agree' product='cam' /> ボタンをクリックします。
+
+   <ProdImg src='/img/cam-server/ai-analysis-notice-face-auth.png' width='50%' />
+
+   :::note
+
+   * 顔認識機能を使用するには、該当地域の関連法規を遵守する必要があります。 同意しない場合は先に進めません。
+
+   * 「<Cmd sid='face_analytics_consent_title' product='cam' />」ポップアップは初回のみ表示されます。 以降、AIイベント作成時は同意済みとみなします。
+
+   :::
+
+6. 右側の <Cmd sid='ai_analysis_intrusion' product='cam' /> パネルで必要な設定を完了してください.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-add-intrusion-settings.png' />
+
+</Step>
+<Step>
+
+### イベント名の設定
+
+<Cmd sid='name' product='cam' /> 入力フィールドに AI イベント名を入力します。 名前は最大64文字まで入力できます。
+
+</Step>
+<Step>
+
+### 侵入領域の設定.
+
+侵入領域を設定してください. カメラは設定したエリアの出入りを検知します。 最低1本を設定する必要があり、<Cmd sid='add_button' product='cam' />ボタンをクリックして最大10本まで追加できます。 ライブビューにオレンジ色の枠が表示されます。マウスで角または点をドラッグして希望の形に調整できます. 中央の領域をドラッグして位置を移動できます。
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-intrusion-settings-entry-area.png' />
+
+* <Cmd sid='name' product='cam' />：侵入領域の名前を編集できます. わかりやすい名前を付けてください。 侵入領域の名前はライブビューでマウスオーバーすると表示されます.
+
+:::info
+
+* 設定した侵入領域の形状とサイズを初期化するには、<IcCamReset title='reset' /> ボタンをクリックしてください.
+
+* 追加した侵入領域を削除するには、<IcCamTrash title='delete' /> ボタンをクリックしてください.
+
+:::
+
+</Step>
+<Step>
+
+### 顔領域の設定（任意）
+
+顔を検知する領域を設定してください。 設定すると、当該領域で顔を優先的に追跡します。 顔領域で検出された人物を認証済みユーザーと未承認者に分類することで、承認された出入り者と未許可者を明確に把握できます. 顔領域と侵入領域は重ねて設定できます. <Cmd sid='add_button' product='cam' />ボタンをクリックして最大10個まで設定できます。 ライブビューに青い枠が表示され、マウスで角や点をドラッグして形状を調整できます。 中央の領域をドラッグして位置を移動できます。
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-intrusion-settings-face-area.png' />
+
+* <Cmd sid='name' product='cam' />：顔領域の名前を編集できます。 わかりやすい名前を付けてください。 顔領域の名前はライブビューでマウスオーバーすると表示されます。
+
+:::info
+
+* 登録済みユーザーは<Cmd sid='live' product='cam' />メニューで自動的に識別され、名前が表示されます。 登録されていないユーザーは<Cmd sid='unknown_face' product='cam' />として表示されます。
+
+* 設定した顔領域の形状とサイズを初期化するには、<IcCamReset title='reset' />ボタンをクリックしてください。
+
+* 追加した顔領域を削除するには、<IcCamTrash title='delete' />ボタンをクリックしてください。
+
+:::
+
+</Step>
+<Step>
+
+### イベント発生条件の設定
+
+イベント発生条件を設定してください。 進入または退出の検知有無と、イベント発生の遅延時間を設定できます。
+
+* <Cmd sid='event_condition' product='cam' />：進入（Entry）または退出（Exit）の検知有無を選択してください。 両方を選択できます。
+
+* <Cmd sid='every_delay' product='cam' />：イベント発生の遅延時間を設定してください。 設定した時間を超えた場合にのみイベントが発生し、最大60秒まで設定できます。
+
+</Step>
+<Step>
+
+### 設定を保存
+
+すべての設定を完了したら、右上の <Cmd sid='save' product='cam' /> ボタンをクリックします。  前の画面に戻り、新しく作成したAIイベントが一覧に追加されます。
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-intrusion-settings-complete.png' />
+
+</Step>
+</Steps>
+
+## ライブで確認
+
+画面左上の<Cmd sid='live' product='cam' />メニューをクリックしてください。 カメラ映像の右上にある<Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico />アイコンがオンになっているか確認してください。 設定した侵入領域と顔領域が映像にオーバーレイ表示されます. 人物が侵入領域に入る、または出るたびにイベントが発生します. 顔領域を設定している場合、カメラは当該領域で顔を検知し、登録済みユーザーは自動的に識別され名前が表示されます。
+
+<ProdImg src='/img/cam-server/ai-analysis-events-intrusion-result.png' />
+
+:::info
+
+* 登録されていないユーザーは<Cmd sid='unknown_face' product='cam' />として表示されます。 登録済みユーザーは名前とともに表示されます。
+
+* 照明が不足しているか逆光の場合、カメラが顔を認識できないことがあります。 撮影エリアの照明を改善するか、カメラの位置と角度を調整して顔が見えやすくしてください。
+
+* 顔がカメラに向いている必要があります。 横顔や後ろ姿は認識が難しい場合があります。
+
+* イベントが多発する場合は、<Cmd sid='every_delay' product='cam' />の値を調整してください。 イベント発生の遅延時間を長くするとイベント頻度を減らせます。
+
+:::

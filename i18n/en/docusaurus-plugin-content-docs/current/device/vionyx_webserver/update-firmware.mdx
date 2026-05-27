@@ -1,0 +1,77 @@
+---
+id: update-firmware
+title: Upgrade Firmware
+description: This guide explains how to select the latest firmware file to update the camera's firmware and apply new features and security patches.
+keywords:
+  - firmware
+  - Update
+  - Versions
+  - File
+  - Latest
+---
+
+This feature updates the camera firmware to the latest version. Firmware updates apply new features, performance improvements, and security patches.
+
+Update the firmware in the following situations.
+
+* To use new features
+
+* To apply security patches to protect the camera
+
+* To improve the camera's performance
+
+* When technical support recommends a specific firmware version
+
+:::info
+
+* The camera restarts during a firmware update and is unavailable during that time.
+
+* Ensure the device has sufficient power before starting the firmware update.
+
+* Use only official firmware files (.bin) provided by Suprema technical support.
+
+:::
+
+## Check current firmware version
+
+Check the camera's installed firmware version.
+
+1. Click the <Cmd sid='system' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <Cmd sid='device_info' product='cam' /> in the left sidebar.
+
+<ProdImg src='/img/cam-server/cam-webserver-system-firmware.png' />
+
+In the <Cmd sid='firmware_reset' product='cam' /> section, check the currently installed firmware version in <Cmd sid='version' product='cam' />.
+
+## Upgrade firmware
+
+Select the new firmware file to update the device.
+
+1. Click the <Cmd sid='system' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <Cmd sid='device_info' product='cam' /> in the left sidebar.
+
+3. In the <Cmd sid='firmware_reset' product='cam' /> section, click <Cmd sid='update' product='cam' />.
+
+4. When the <Cmd sid='firmware_update' product='cam' /> popup appears, select the firmware file (.bin) provided by Suprema.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-firmware-update.png' />
+
+   * The file extension must be .bin.
+
+   * Drag the file into the upload area or click <Cmd sid='choose_file' product='cam' /> to select the file.
+
+5. After selecting a file, <Cmd sid='firmware_upload' product='cam' /> becomes active.
+
+6. Click <Cmd sid='firmware_upload' product='cam' /> to start the firmware update.
+
+7. After the upload completes, a reboot confirmation popup appears. Click <Cmd sid='ok' product='cam' /> to restart the camera and complete the firmware update.
+
+:::note
+
+* Reconnect to the web UI after the camera reboots. To verify the new firmware version, go to <Cmd sid='device_info' product='cam' />.
+
+* You cannot cancel the firmware update once it has started. Wait until the update completes.
+
+:::

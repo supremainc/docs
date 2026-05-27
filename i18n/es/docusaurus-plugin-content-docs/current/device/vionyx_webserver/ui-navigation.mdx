@@ -1,0 +1,45 @@
+---
+id: ui-navigation
+title: Comprender la Interfaz de Usuario
+description: Esta guía explica la estructura de la interfaz web de ViOnyx Web Server, el menú principal izquierdo y la información y herramientas del lado derecho.
+keywords:
+  - IU
+  - Menú
+  - Navegación
+  - Interfaz
+---
+
+Después de iniciar sesión en ViOnyx Web Server, el menú principal aparece en la parte superior. Los menús brindan acceso rápido a las features. Esta página explica la estructura de la interfaz del servidor web y la función de cada menú.
+
+<ProdImg src='/img/cam-server/vionyx-home-screen.png' />
+
+## Acceso rápido al menú principal
+
+En la parte superior izquierda aparecen el logotipo de ViOnyx Web Server y los íconos del menú principal. Las features que ofrece cada menú se enumeran a continuación.
+
+<div className='menu-icon-table'>
+
+| Ícono del menú | Nombre del menú | Descripción |
+| :-: | :-: | --- |
+| <IcCamLive width='26px' height='26px' title='Live' /> | <Cmd sid='live' product='cam' /> | Ver video en vivo de la cámara. |
+| <IcCamSet width='26px' height='26px' title='Settings' /> | <Cmd sid='settings' product='cam' /> | Cambie la cámara y las setting del servidor web. |
+| <IcCamPeople width='26px' height='26px' title='People' /> | <Cmd sid='people' product='cam' /> | Agregue y administre usuarios del sistema de cámaras. |
+| <IcCamSys width='26px' height='26px' title='System' /> | <Cmd sid='system' product='cam' /> | Administre la información del dispositivo, las cuentas, el audio, los registros y otras setting del sistema. |
+
+</div>
+
+## Información y herramientas
+
+En la parte superior derecha aparecen la información de la cámara, la selección de idioma, un acceso directo a la guía del usuario y un botón para cerrar sesión.
+
+<div className='menu-icon-table'>
+
+| Ícono del menú | Nombre del menú | Descripción |
+| :-: | :-: | --- |
+| <ProdImg src='/img/cam-server/ico-header-camera.svg' width='30px' alone className='none' /> | Información de la cámara | Vea el nombre, el estado y la dirección IP de la cámara conectada. Haga clic en **Dirección IP** para ver la información del dispositivo. |
+| **10:00** | Tiempo de sesión | Vea el tiempo de sesión del administrador que inició sesión actualmente. Se cierra sesión automáticamente cuando se supera el tiempo de sesión. |
+| <span style={{fontSize: '18px'}}>🌐</span> | Selección de idioma | Cambie el idioma de la interfaz web. |
+| <ProdImg src='/img/cam-server/ico-header-guide.svg' width='30px' alone className='none' /> | Acceso directo a la guía del usuario | Vea la guía del usuario. |
+| <ProdImg src='/img/cam-server/ico-header-logout.svg' width='30px' alone className='none' /> | Cerrar sesión | Cerrar sesión. |
+
+</div>

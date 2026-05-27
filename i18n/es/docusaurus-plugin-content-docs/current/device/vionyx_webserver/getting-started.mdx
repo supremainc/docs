@@ -1,0 +1,202 @@
+---
+id: getting-started
+title: Primeros Pasos
+description: Esta guía lo orienta en la instalación del certificado, la configuración de la contraseña y el inicio de sesión cuando accede por primera vez a ViOnyx Web Server.
+keywords:
+  - ViOnyx
+  - Servidor web
+  - Primeros Pasos
+---
+
+Después de instalar la cámara ViOnyx, complete la configuración inicial en un navegador web. Este documento explica todos los pasos necesarios, desde la instalación del certificado hasta la configuración de la contraseña del administrador y el inicio de sesión.
+
+:::info
+
+Si la cámara no obtiene una dirección IP después de un restablecimiento de fábrica, cambia a la dirección IP predeterminada (`https://192.168.1.100`). Conéctese a esa dirección en su navegador web.
+
+:::
+
+## Instalación del certificado
+
+ViOnyx Web Server usa una conexión HTTPS segura. Aparece una advertencia de seguridad la primera vez que se conecta porque la cámara usa un certificado autofirmado. Aprenda a conectarse al servidor web de forma segura sin advertencias después de agregar el certificado al almacén de confianza de Windows.
+
+<Steps>
+<Step>
+
+### Descargar certificado
+
+1. Conéctese a la cámara en su navegador web usando la dirección IP asignada (`https://{IP_address}`).
+
+2. Si aparece el mensaje de advertencia "**Your connection is not private**", haga clic en **Advanced** en la parte inferior.
+
+   <ProdImg src='/img/cam-server/vionyx-web-unsafe-01.png' />
+
+3. Despliegue la sección **Advanced** y luego haga clic en **Proceed to `https://{IP_address}` (unsafe)** o en un vínculo similar para continuar.
+
+   <ProdImg src='/img/cam-server/vionyx-web-unsafe-02.png' />
+
+4. Haga clic en el enlace <Cmd sid='download_root_ca_certificate' product='cam' /> en la parte inferior de la pantalla de configuración de la contraseña.
+
+   <ProdImg src='/img/cam-server/vionyx-install-root-ca.png' width='70%' />
+
+5. Guarde localmente el archivo de certificado `Suprema_ViOnyx_Device_{serial-number}_Root_CA.crt`.
+
+</Step>
+<Step>
+
+### Abra la consola de administración de Windows
+
+1. Presione <Start /> + <Kbd>R</Kbd> para abrir la ventana Ejecutar.
+
+2. Escriba `certmgr.msc` y luego presione <Kbd>Enter</Kbd> para abrir la **Management Console**.
+
+   <ProdImg src='/img/cam-server/yionyx-win-run.png' />
+
+</Step>
+<Step>
+
+### Ejecute el asistente de importación de certificados
+
+1. En el panel izquierdo de la **Management Console**, expanda **Trusted Root Certification Authorities**.
+
+2. Haga clic derecho en **Certificates** debajo de esta opción y luego seleccione **All Tasks** → **Import**.
+
+   <ProdImg src='/img/cam-server/yionyx-mng-console-import.png' />
+
+3. En el Asistente para importación de certificados, haga clic en **Next**.
+
+   <ProdImg src='/img/cam-server/yionyx-cert-import-wizard-01.png' />
+
+4. Haga clic en **Browse** y seleccione el archivo de certificado guardado `Suprema_ViOnyx_Device_547849187_Root_CA.crt`.
+
+   <ProdImg src='/img/cam-server/yionyx-cert-import-wizard-02.png' />
+
+5. Haga clic en **Next**.
+
+6. Seleccione **Place all certificates in the following store**.
+
+7. Asegúrese de que **Certificate store** esté configurado en **Trusted Root Certification Authorities**.
+
+   <ProdImg src='/img/cam-server/yionyx-cert-import-wizard-03.png' />
+
+8. Haga clic en **Next**.
+
+9. Haga clic en **Finish** para completar la importación del certificado.
+
+   <ProdImg src='/img/cam-server/yionyx-cert-import-wizard-04.png' />
+
+10. Si aparece una advertencia de seguridad, haga clic en **Yes**.
+
+11. Cuando aparezca el mensaje de importación correcta del certificado, haga clic en **OK**.
+
+    <ProdImg src='/img/cam-server/yionyx-cert-import-wizard-complete.png' />
+
+</Step>
+<Step>
+
+### Verificar la instalación del certificado
+
+En la **Management Console**, seleccione **Trusted Root Certification Authorities** → **Certificates** para confirmar que el certificado importado aparezca en la lista.
+
+<ProdImg src='/img/cam-server/yionyx-cert-mng-imported-check.png' />
+
+</Step>
+</Steps>
+
+Después de completar la instalación del certificado, cierre por completo y reinicie el navegador web, y luego vuelva a conectarse usando la dirección IP de la cámara. Ahora se conecta de forma segura sin una advertencia de seguridad.
+
+## Establecer contraseña
+
+Configure una contraseña segura por seguridad al iniciar sesión por primera vez. ViOnyx aplica una política de contraseñas seguras para proteger la seguridad del sistema.
+
+1. Conéctese a la cámara en su navegador web usando la dirección IP asignada (`https://{IP_address}`).
+
+   <ProdImg src='/img/cam-server/password-setting1-vionyx.png' />
+
+2. En la página de configuración de la contraseña, introduzca una nueva contraseña en el campo de entrada <Cmd sid='password' product='cam' />.
+
+3. Vuelva a introducir la misma contraseña en el campo <Cmd sid='confirm_password' product='cam' />.
+
+4. Asegúrese de que la contraseña que introdujo cumpla con todos los siguientes requisitos.
+
+5. Cuando se cumplan todas las condiciones, <Cmd sid='submit' product='cam' /> se activa. Haga clic en el botón para finalizar la configuración de su contraseña.
+
+:::note
+
+**Requisitos de la contraseña**
+
+La contraseña debe cumplir con todos los requisitos siguientes:
+
+* Los valores de los campos <Cmd sid='password' product='cam' /> y <Cmd sid='confirm_password' product='cam' /> deben coincidir exactamente.
+
+* La contraseña debe tener al menos 12 caracteres. Longitud máxima: 64 caracteres.
+
+* Incluya al menos una letra minúscula (`a-z`) y una mayúscula (`A-Z`).
+
+* Incluya al menos un dígito (`0-9`) y un carácter especial.
+
+  > Ejemplos de caracteres especiales: `"` `!` `@` `#` `$` `%` `^` `&` `*` `(` `)` `-` `_` `=` `+` `[` `]` `{` `}`
+
+* No incluya secuencias de 4 o más caracteres consecutivos (por ejemplo, `1234`, `abcd`) ni 4 o más caracteres idénticos.
+
+* El nombre de usuario (sin distinguir mayúsculas y minúsculas) no debe incluirse en la contraseña.
+
+  > admin, Admin, ADMIN, Admin123! etc.
+
+* No se permiten contraseñas débiles comunes como `password`, `qwerty`, `123456`.
+
+:::
+
+:::caution
+
+Guarde la contraseña que configuró en un lugar seguro. Si pierde la contraseña, inicialice la cámara.
+
+:::
+
+## Iniciar sesión
+
+Después de configurar la contraseña, se le redirigirá automáticamente a la página de inicio de sesión. Introduzca el ID del administrador y la contraseña que configuró para acceder a ViOnyx Web Server.
+
+<ProdImg src='/img/cam-server/password-setting2-vionyx.png' />
+
+1. Introduzca **admin** en el campo de entrada <Cmd sid='id' product='cam' />.
+
+2. Introduzca la contraseña que configuró en el campo de entrada <Cmd sid='password' product='cam' />.
+
+3. Haga clic en <Cmd sid='sign_in' product='cam' />.
+
+Después de iniciar sesión correctamente, ViOnyx Web Server abre la página <Cmd sid='live' product='cam' />.
+
+:::info
+
+Cambie el ID del administrador (admin) en <Cmd sid='system' product='cam' /> → <Cmd sid='account_management' product='cam' />.
+
+:::
+
+<NextStep>
+<NextItem to='live-basic'>
+
+Explica las principales características y el uso del menú <Cmd sid='live' product='cam' className='normal' />.
+
+</NextItem>
+<NextItem to='configure-ai-events-and-rules'>
+
+Configure eventos de IA para supervisar situaciones específicas detectadas por la cámara.
+
+</NextItem>
+<NextItem to='configure-camera-device'>
+
+Use la configuración de la cámara para mantener una calidad de imagen óptima para el entorno de captura, configurar la red y aplicar políticas de seguridad y privacidad. 
+
+</NextItem>
+<NextItem to='manage-people'>
+
+Enrolle usuarios para habilitar la feature de reconocimiento facial con IA.
+
+</NextItem>
+<NextItem to='system-management'>
+
+Administra de forma sistemática la información del dispositivo, el firmware, el mantenimiento, las cuentas, el audio y los registros para operar eficazmente el sistema de cámaras.
+
+</NextItem>
+</NextStep>

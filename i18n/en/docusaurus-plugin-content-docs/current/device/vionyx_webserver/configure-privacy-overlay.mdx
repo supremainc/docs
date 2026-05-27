@@ -1,0 +1,150 @@
+---
+id: configure-privacy-overlay
+title: Configure Privacy & Overlay Settings
+description: Shows how to mask sensitive areas, automatically blur faces, and display date/time and the camera name on video.
+keywords:
+  - Privacy
+  - Overlay
+  - Privacy
+  - Overlay
+  - Masking
+  - Blur
+---
+
+<Cmd sid='privacy_overlay' product='cam' className='normal' /> setting lets you mask sensitive areas or automatically blur faces in camera video. Also display date/time and the camera name on video to clearly indicate the source and recording time. All settings take effect immediately in Live View.
+
+Configure Privacy & Overlay in the following situations.
+
+* When you need to mask specific areas that may invade privacy
+
+* When you need to comply with privacy policies by automatically blurring faces
+
+* When you need to ensure traceability of recorded video by displaying date/time
+
+* When operating multiple cameras, display camera names to clarify the video source
+
+:::info
+
+Privacy settings (masking, face blur) apply only to video display; AI analysis runs on the original images and does not affect AI performance.
+
+:::
+
+## Privacy & Overlay settings
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. In the left sidebar, click <Cmd sid='basic' product='cam' /> → <Cmd sid='privacy_overlay' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-privacy-overlay.png' />
+
+3. To save changes, click <Cmd sid='save' product='cam' /> in the upper right corner of the screen. 
+
+Saved changes apply to the camera immediately after saving.
+
+## Privacy area settings
+
+Mask specific areas in recorded video that should remain private. Set up to 10 areas; each area is fixed and does not move.
+
+1. Click the toggle button in the <Cmd sid='area_setting' product='cam' /> section.
+
+2. Click <Cmd sid='add_button' product='cam' />.
+
+3. A masking area is added to Live View. Drag the corners of the area to resize it, or drag the entire area to move it.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-privacy-overlay-add-area.png' />
+
+4. After you create a masking area, set the area name, order, and color in the right settings panel.
+
+   * <Cmd sid='name' product='cam' />: The masking area name is generated automatically and can be edited if needed.
+
+   * <Cmd sid='order' product='cam' />: Adjust the display order when masking areas overlap. A higher number appears on top.
+
+   * <Cmd sid='color' product='cam' />: Select the masking area color.
+
+5. To save the added masking area, click <Cmd sid='save' product='cam' /> in the upper-right corner of the screen.
+
+Saved masking areas are applied to Live View and recorded video.
+
+:::info
+
+* Masked areas are applied automatically to all view modes (fisheye, single panorama, double panorama, and quad).
+
+* To reset the masking area settings, click <IcCamReset title='reset' />.
+
+* To delete a masking area, click <IcCamTrash title='delete' />.
+
+:::
+
+## Face privacy settings
+
+Automatically blur detected faces or full bodies to protect personal information. Enable <Cmd sid='face_privacy_setting' product='cam' /> and choose the desired blur scope.
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-privacy-overlay-face-body.png' />
+
+* <Cmd sid='face_only' product='cam' />: All detected faces are automatically blurred.
+
+* <Cmd sid='full_body' product='cam' />: The entire detected body is automatically blurred.
+
+:::info
+
+Blurring faces or full bodies does not affect AI performance. While the camera displays blurred video, AI analysis runs on the original images, so AI features such as Facial Authentication and object tracking operate normally.
+
+:::
+
+## Overlay settings
+
+Display date/time and camera name in Live View. Enable <Cmd sid='overlay' product='cam' /> and adjust details in <Cmd sid='date_and_time_overlay' product='cam' /> and <Cmd sid='camera_name' product='cam' />.
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-privacy-overlay-date-camera.png' className='none' />
+
+:::info
+
+Each setting is saved automatically upon change and immediately applied to Live View.
+
+:::
+
+### <Cmd sid='date_and_time_overlay' product='cam' className='normal' />
+
+Set the format, size, and color of the date and time shown in Live View. In Live View, check the date/time position, and drag it with the mouse to adjust its position or size if needed.
+
+* <Cmd sid='date' product='cam' /> / <Cmd sid='time' product='cam' />: Click the toggle to turn the date and time overlay on or off.
+
+* <Cmd sid='date_format' product='cam' />: Select the date format.
+
+  * YYYY-MM-DD (default, e.g.: 2026-01-12)
+
+  * MM-DD-YYYY (e.g.: 01-12-2026)
+
+  * DD-MM-YYYY (e.g.: 12-01-2026)
+
+* <Cmd sid='time_format' product='cam' />: Select the time format.
+
+  * HH:MM:SS (default, e.g.: 13:45:56)
+
+  * HH:MM (seconds omitted, e.g.: 13:45)
+
+* <Cmd sid='font_size' product='cam' />: Select the font size shown in Live View. Select from 1 to 32.
+
+* <Cmd sid='color' product='cam' />: Select the text color shown in Live View.
+
+:::info
+
+The date and time overlay appears only in Fisheye View.
+
+:::
+
+### <Cmd sid='camera_name' product='cam' className='normal' />
+
+Display the camera name in Live View to clarify the video source. In Live View, check the camera name position, and drag it with the mouse to adjust its position or size if needed.
+
+* <Cmd sid='display' product='cam' />: Click the toggle to turn the camera name overlay on or off.
+
+* <Cmd sid='name' product='cam' />: Enter the camera name.
+
+* <Cmd sid='font_size' product='cam' />: Select the font size shown in Live View. Select from 1 to 32.
+
+* <Cmd sid='color' product='cam' />: Select the text color shown in Live View.
+
+## Save settings
+
+Verify settings immediately in Live View. To save them, click <Cmd sid='save' product='cam' /> in the upper right corner of the screen. Saved settings apply to the camera and appear in Live View and recorded video.

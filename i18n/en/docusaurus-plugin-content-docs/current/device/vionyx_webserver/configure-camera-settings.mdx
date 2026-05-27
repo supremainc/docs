@@ -1,0 +1,125 @@
+---
+id: configure-camera-settings
+title: Configure Camera Settings
+description: This guide explains how to adjust image quality, white balance, sensitivity (Time Filter), backlight compensation (WDR), anti-flicker, and mounting type to suit the installation environment.
+keywords:
+  - Camera settings
+  - Image quality
+  - White balance
+  - Sensitivity
+  - Mounting type
+---
+
+Adjust camera settings to capture optimal footage for the installation environment. Check changes in real time on Live View and adjust image quality, white balance, and sensitivity filters. AI feature availability is also automatically limited depending on ceiling or wall mounting.
+
+Adjust camera settings in the following situations.
+
+* To improve image quality to match scene brightness and color.
+
+* To reduce flicker from fluorescent or LED lighting.
+
+* To minimize noise in low-light environments while maintaining motion detection.
+
+* To optimize the camera and AI features for the installation location.
+
+## Camera settings
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. Click <Cmd sid='basic' product='cam' /> → <Cmd sid='camera' product='cam' /> in the left sidebar.
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-camera.png' />
+
+:::info
+
+Each option change appears in Live View in real time and saves automatically.
+
+:::
+
+## Adjust image quality
+
+Adjust image quality to match the shooting environment. Adjust each slider in the <Cmd sid='preset' product='cam' /> section to reflect changes in the preview in real time. Set values between 1 and 100.
+
+* <Cmd sid='saturation' product='cam' />: Adjust color saturation. (Default: 26)
+
+* <Cmd sid='sharpness' product='cam' />: Adjust image sharpness. (Default: 55)
+
+* <Cmd sid='brightness' product='cam' />: Adjust overall image brightness. (Default: 50)
+
+* <Cmd sid='contrast' product='cam' />: Adjust contrast between bright and dark areas. (Default: 50)
+
+:::info
+
+When moving a slider, each setting updates the preview immediately and saves automatically.
+
+:::
+
+## White balance settings
+
+Set white balance so the camera accurately reproduces the scene's lighting color. In the <Cmd sid='white_balance' product='cam' /> section, enable or disable the <Cmd sid='auto' product='cam' /> option.
+
+* <Cmd sid='on' product='cam' />(default): The camera automatically detects and adjusts the color temperature.
+
+* <Cmd sid='off' product='cam' />: Set the white balance by manually adjusting the <Cmd sid='red' product='cam' /> and <Cmd sid='blue' product='cam' /> values.
+
+## Sensitivity settings (Time Filter)
+
+Adjust the time filter to balance sensor noise reduction and fast motion detection. Adjust the <Cmd sid='time_filter' product='cam' /> slider in the <Cmd sid='sensitivity' product='cam' /> section to set noise filtering strength.
+
+* Low (1~30): Weak noise filtering helps detect fast-moving objects, but noise may increase in low-light environments.
+
+* Medium (31~70): Balanced filtering suitable for typical shooting environments.
+
+* High (71~100): Strong noise filtering reduces noise in low-light conditions but may hinder detection of fast-moving objects.
+
+:::info
+
+The default value of <Cmd sid='time_filter' product='cam' /> is 50.
+
+:::
+
+## Backlight settings
+
+Enable WDR (Wide Dynamic Range) to allow the camera to capture bright and dark areas simultaneously in backlit scenes. In the <Cmd sid='backlight_setting' product='cam' /> section, enable the <Cmd sid='wdr' product='cam' /> option to activate backlight compensation. (Default: <Cmd sid='off' product='cam' />)
+
+:::info
+
+**WDR** (Wide Dynamic Range) mode allows the camera to adjust exposure automatically so both bright and dark areas are represented in backlit scenes. Enabling WDR prevents overexposure of bright areas and improves detail in dark areas. Useful when shooting in heavily backlit environments.
+
+:::
+
+## Anti-flicker settings
+
+To reduce screen flicker caused by a mismatch between lighting and frequency, set the <Cmd sid='anti_flicker' product='cam' /> option in the <Cmd sid='video' product='cam' /> section.
+
+* <Cmd sid='off' product='cam' />: Disable anti-flicker.
+
+* <Cmd>50HZ</Cmd>: 50 Hz fluorescent/LED environment
+
+* <Cmd>60HZ</Cmd>: 60 Hz fluorescent/LED environment
+
+:::info
+
+Select the option that matches the lighting frequency in the scene. Incorrect settings may cause flicker or banding on the image.
+
+:::
+
+## Mounting type settings
+
+Set <Cmd sid='mounting_type' product='cam' /> according to the camera's installation location. Supported AI features depend on the mounting type.
+
+* Select <Cmd sid='ceiling' product='cam' /> for ceiling installation. All AI features are available.
+
+* Select <Cmd sid='wall' product='cam' /> for wall installation. Only Facial Authentication AI is available; object tracking is not supported.
+
+:::info
+
+* **When changing from ceiling to wall**, a confirmation popup appears stating that only Facial Authentication is available and object-tracking AI is unavailable. Review the message before proceeding.
+
+* **When changing from wall to ceiling**, the change applies immediately and all AI features activate automatically.
+
+:::
+
+## Reset camera settings
+
+To restore all camera settings to factory defaults, click <Cmd sid='restore_to_default' product='cam' /> in the <Cmd sid='reset' product='cam' /> section.

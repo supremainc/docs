@@ -1,0 +1,114 @@
+---
+id: modify-delete-users
+title: ユーザーの編集と削除
+description: 登録済みユーザーの情報を編集し、ユーザーを削除し、イベントログでユーザーの操作履歴を確認する方法を説明します。
+keywords:
+  - ユーザー
+  - 編集
+  - 削除
+  - 編集
+  - イベント
+  - ログ
+---
+
+登録済みユーザーの情報を編集し、顔を追加・変更できます。 また、不要になったユーザーを削除でき、ユーザーの操作履歴をイベントログで確認できます。
+
+以下のような場合にユーザーを編集または削除してください。
+
+* ユーザーの氏名、所属部署などの情報を変更するとき
+
+* ユーザーの顔写真を更新する、または新しい顔を追加するとき
+
+* ユーザーが退職したり、システムから削除する必要があるとき
+
+* ユーザーの認証記録や変更履歴を確認するとき
+
+* 登録済みユーザーで誤認証が発生した場合
+
+:::info
+
+* ユーザー情報の編集で高品質の写真をアップロードしても、以前のテンプレートデータが残る場合があるため、ユーザーを削除して再登録することを推奨します。
+
+* 削除操作は取り消せません。 ユーザーを削除する前に必要なデータをバックアップし、慎重に確認してください。
+
+:::
+
+## ユーザー情報の編集
+
+登録済みユーザーの情報を編集し、顔を追加・変更できます。
+
+1. 画面左上の <Cmd sid='people' product='cam' /> メニューをクリックします.
+
+2. ユーザー一覧で、編集するユーザーの <Cmd sid='edit' product='cam' /> 列にある <IcCamEdit title='Edit' /> ボタンをクリックします。
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-edit.png' />
+
+3. <Cmd sid='edit_face_user' product='cam' /> ウィンドウが表示されたら、必要な情報を編集します。
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-edit-detail-face-edit.png' />
+
+4. ユーザー情報の編集が完了したら、<Cmd sid='apply' product='cam' /> ボタンをクリックしてください。
+
+編集が完了すると、右上に成功メッセージが表示され、ユーザー一覧に戻ります。
+
+:::info
+
+* ユーザーの詳細情報については、<DocLink docId='device/vionyx_webserver/add-users' />を参照してください。 
+
+* <Cmd sid='user_id' product='cam' />は編集できません。
+
+* 顔写真は個別に削除できます。 該当する顔写真の右上にある <IcCamTrash title='delete' /> ボタンをクリックします。
+
+:::
+
+## ユーザーの削除
+
+不要になったユーザーを削除できます。
+
+### 個別ユーザーの削除
+
+1. 画面左上の <Cmd sid='people' product='cam' /> メニューをクリックします.
+
+2. ユーザー一覧で削除するユーザーの一番右にある<IcCamTrash title='delete' />ボタンをクリックしてください。
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-delete.png' />
+
+3. 削除確認メッセージが表示されたら、<Cmd sid='ok' product='cam' /> ボタンをクリックしてください。
+
+画面右上に削除確認メッセージが表示され、ユーザー一覧から該当ユーザーが削除されます。
+
+### 複数ユーザーの一括削除
+
+1. 画面左上の <Cmd sid='people' product='cam' /> メニューをクリックします.
+
+2. ユーザー一覧で削除するユーザーの一番左にあるチェックボックスをクリックしてください。 複数のユーザーを選択できます。
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-batch-delete.png' />
+
+3. 画面右上に削除ボタンが表示されたら、<Cmd sid='delete' product='cam' /> ボタンをクリックしてください。
+
+4. 削除確認メッセージが表示されたら、<Cmd sid='ok' product='cam' /> ボタンをクリックしてください。
+
+画面右上に削除確認メッセージが表示され、ユーザー一覧から該当ユーザーが削除されます。
+
+## ユーザーイベントログの確認
+
+登録済みユーザーの活動履歴をイベントログで確認できます。
+
+1. 画面左上の <Cmd sid='people' product='cam' /> メニューをクリックします.
+
+2. ユーザー一覧でイベントログを確認するユーザーをクリックしてください。
+
+3. ユーザー詳細ポップアップが表示されたら、右側の<Cmd sid='event_logs' product='cam' />でイベント一覧を確認できます。
+
+<ProdImg src='/img/cam-server/cam-webserver-people-edit-detail.png' />
+
+:::note
+
+* 右上のカレンダーアイコンで特定の日付のイベントを表示できます。
+
+  <ProdImg src='/img/cam-server/cam-webserver-people-event-log-date.png' />
+
+* イベントログは自動で記録され、ユーザーの重要なすべての活動を追跡できます。
+
+:::

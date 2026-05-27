@@ -1,0 +1,114 @@
+---
+id: modify-delete-users
+title: Edit and Delete Users
+description: Explains how to edit registered users' information, delete users, and view user event logs.
+keywords:
+  - User
+  - Edit
+  - Delete
+  - Edit
+  - Event
+  - Log
+---
+
+Edit a registered user's information or add/change a face. Delete users who are no longer needed, and view a user's activity history in the event log.
+
+Modify or delete users in the following situations.
+
+* When you need to change a user's name, department, or other information
+
+* When you need to update a user's face photo or add a new face
+
+* When a user leaves or must be removed from the system
+
+* When you need to review a user's authentication records and change history
+
+* When false authentication occurs for a registered user
+
+:::info
+
+* Even if you upload a high-quality photo when editing user information, previous template data may remain. Delete the user and register again.
+
+* Deletion is irreversible. Back up any required data and verify carefully before deleting a user.
+
+:::
+
+## Edit user information
+
+Edit a registered user's information or add/change a face.
+
+1. Click the <Cmd sid='people' product='cam' /> menu in the upper-left corner of the screen.
+
+2. In the user list, click the <IcCamEdit title='Edit' /> button in the <Cmd sid='edit' product='cam' /> column for the user you want to edit.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-edit.png' />
+
+3. When the <Cmd sid='edit_face_user' product='cam' /> window appears, edit the required information.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-edit-detail-face-edit.png' />
+
+4. After editing user information, click <Cmd sid='apply' product='cam' />.
+
+After saving edits, a success message appears in the top-right and the view returns to the user list.
+
+:::info
+
+* For more information on user details, see <DocLink docId='device/vionyx_webserver/add-users' />. 
+
+* The <Cmd sid='user_id' product='cam' /> cannot be changed.
+
+* Face photos can be deleted individually. Click <IcCamTrash title='delete' /> in the upper right corner of that face photo.
+
+:::
+
+## Delete users
+
+Delete users who are no longer needed.
+
+### Delete an individual user
+
+1. Click the <Cmd sid='people' product='cam' /> menu in the upper-left corner of the screen.
+
+2. In the user list, click <IcCamTrash title='delete' /> at the far right of the user to delete.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-delete.png' />
+
+3. When the deletion confirmation message appears, click <Cmd sid='ok' product='cam' />.
+
+A deletion confirmation message appears in the top-right and the user is removed from the user list.
+
+### Delete multiple users
+
+1. Click the <Cmd sid='people' product='cam' /> menu in the upper-left corner of the screen.
+
+2. In the user list, click the checkbox at the far left of the user to delete. Select multiple users.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-batch-delete.png' />
+
+3. When the delete button appears at the top-right of the screen, click <Cmd sid='delete' product='cam' />.
+
+4. When the deletion confirmation message appears, click <Cmd sid='ok' product='cam' />.
+
+A deletion confirmation message appears in the top-right and the user is removed from the user list.
+
+## View user event logs
+
+View registered users' activity history in the event log.
+
+1. Click the <Cmd sid='people' product='cam' /> menu in the upper-left corner of the screen.
+
+2. In the user list, click the user to view the event log.
+
+3. When the user detail popup appears, view the event list on the right under <Cmd sid='event_logs' product='cam' />.
+
+<ProdImg src='/img/cam-server/cam-webserver-people-edit-detail.png' />
+
+:::note
+
+* Use the calendar icon in the top-right to view events for a specific date.
+
+  <ProdImg src='/img/cam-server/cam-webserver-people-event-log-date.png' />
+
+* Event logs are recorded automatically and track all important user activities.
+
+:::

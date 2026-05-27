@@ -1,0 +1,120 @@
+---
+id: update-device-info
+title: Actualizar Información de la Cámara
+description: Aprenda a administrar cámaras de forma eficaz ingresando el nombre de la cámara, la nota, la ubicación y las coordenadas GPS.
+keywords:
+  - Cámara
+  - Información
+  - Nombre
+  - Ubicación
+  - GPS
+  - Nota
+---
+
+Revise la información básica de la cámara e ingrese el nombre del dispositivo, la descripción y la ubicación para administrar varias cámaras de su organización.
+
+Actualice la información de la cámara en las siguientes situaciones:
+
+* Cambie el nombre de una cámara instalada por uno distintivo dentro de su organización.
+
+* Agregue información adicional sobre la ubicación o el sitio de instalación de la cámara.
+
+* Registre la ubicación precisa de la cámara ingresando coordenadas GPS.
+
+* Agregue notas o descripciones específicas para cada cámara al administrar varias cámaras.
+
+:::info
+
+* Los campos como el nombre del modelo, el número de serie y la versión de hardware son de solo lectura y no se pueden editar.
+
+* El nombre de la cámara, la nota y la ubicación admiten Unicode y aceptan coreano, inglés, números y caracteres especiales.
+
+:::
+
+## Revise la información básica de la cámara
+
+Revise información básica como el modelo de la cámara, el número de serie y la versión de hardware.
+
+1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='device_info' product='cam' /> en la barra lateral izquierda.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-device-info.png' />
+
+Puede revisar la información básica a continuación en la sección <Cmd sid='information' product='cam' />. Estos campos son de solo lectura y no se pueden editar.
+
+* <Cmd sid='model' product='cam' />: Modelo de la cámara
+
+* <Cmd sid='device_sn' product='cam' />: Número de serie de la cámara
+
+* <Cmd sid='hw_version' product='cam' />: Versión de hardware
+
+* <Cmd sid='kernel' product='cam' />: Versión del kernel
+
+* <Cmd sid='open_source_license' product='cam' />: Haga clic en <Cmd sid='view' product='cam' /> para ver la información de la licencia de código abierto.
+
+## Establecer información de la cámara
+
+Ingrese el nombre, la nota y la ubicación de la cámara para administrarlas de forma eficaz.
+
+1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='device_info' product='cam' /> en la barra lateral izquierda.
+
+### Ingrese el nombre
+
+Ingrese un nombre personalizado para identificar la cámara con facilidad. Ingrese el nombre de la cámara en el campo <Cmd sid='name' product='cam' />.
+
+* Hasta 64 caracteres.
+
+* Admite coreano, inglés, números y caracteres especiales (`.`, `-`, `(`, `)`).
+
+> Ejemplo: "Entrada 1", "Sala de conferencias A"
+
+:::info
+
+El nombre de la cámara ingresado aparece en el menú del sistema y en toda la interfaz web, lo que facilita identificar la cámara.
+
+:::
+
+### Agregar nota
+
+Ingrese información adicional o una nota para la cámara. Ingrese una nota o descripción en el campo <Cmd sid='memo' product='cam' />. Hasta 64 caracteres.
+
+> Ejemplo: departamento de instalación, nombre del administrador, fecha de instalación
+
+### Ingrese información de ubicación
+
+Ingrese la ubicación de instalación de la cámara como texto. Ingrese la ubicación de instalación de la cámara en el campo <Cmd sid='location' product='cam' />. Hasta 64 caracteres.
+
+> Ejemplo: "entrada del vestíbulo del primer piso", "área de espera de la sala de conferencias del segundo piso"
+
+### Guardar ajustes
+
+Después de ingresar toda la información, haga clic en <Cmd sid='save' product='cam' /> en la esquina superior derecha de la pantalla.
+
+## Establecer coordenadas GPS
+
+Ingrese la ubicación geográfica exacta de la cámara como coordenadas GPS.
+
+1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='device_info' product='cam' /> en la barra lateral izquierda.
+
+3. Para habilitar el ajuste de GPS, haga clic en el interruptor <Cmd sid='gps' product='cam' /> en la sección <Cmd sid='information' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-device-info-gps.png' />
+
+4. Ingrese la información de longitud y latitud.
+
+   > Ejemplo: Seúl (37.5665, 126.9780)
+
+5. Haga clic en <Cmd sid='save' product='cam' /> en la esquina superior derecha de la pantalla para guardar el ajuste.
+
+:::info
+
+* Ingrese las coordenadas GPS en formato de grados decimales (DD).
+
+* Para deshabilitar el ajuste de GPS, haga clic de nuevo en el interruptor <Cmd sid='gps' product='cam' />.
+
+:::

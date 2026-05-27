@@ -1,0 +1,159 @@
+---
+id: manage-operators
+title: Administrar Operadores
+description: Esta guía explica cómo administrar cuentas adicionales de administrador (operador) para la operación de cámaras.
+keywords:
+  - Operador
+---
+
+Además de los administradores, agregue, edite o elimine cuentas de operador con permisos limitados. Los operadores pueden administrar ciertas funciones de la cámara en nombre de los administradores.
+
+Se requiere una cuenta de operador para usar la feature ONVIF. Al conectarse a la cámara desde un cliente ONVIF o VMS, use una cuenta de operador registrada.
+
+Agregue operadores en las siguientes situaciones.
+
+* Asigne personal adicional para operar la cámara.
+
+* Otorgue solo permisos específicos.
+
+* Cuando varias personas deben colaborar para administrar la cámara.
+
+* Otorgue a los miembros del equipo permisos de solo lectura o de edición.
+
+:::info
+
+* Agregue hasta 10 operadores.
+
+* Los operadores no pueden agregar otros operadores. Solo los administradores pueden agregar operadores.
+
+* Las contraseñas de los operadores siguen las mismas reglas que las contraseñas de los administradores. Para obtener más información, consulte <DocLink docId='device/vionyx_webserver/update-admin-password' />.
+
+* Cada operador solo puede cambiar la información de su propia cuenta.
+
+:::
+
+## Tipos de permisos de operador
+
+Seleccione uno de los dos permisos siguientes al agregar un operador.
+
+* <Cmd sid='read_only' product='cam' className='bold' />: Ve todas las configuraciones y registros de la cámara; no puede cambiar la configuración.
+
+* <Cmd sid='read_write' product='cam' className='bold' />: Accede a todos los menús excepto el menú de Administrador; puede cambiar la configuración de la cámara. Los operadores pueden cambiar su propia contraseña, pero no la de otros operadores ni la de los administradores.
+
+## Agregar operador
+
+1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='account_management' product='cam' /> en la barra lateral izquierda.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-account-manage.png' />
+
+3. En la sección <Cmd sid='operator' product='cam' />, haga clic en <Cmd sid='add_button' product='cam' />.
+
+4. Cuando aparezca la ventana emergente <Cmd sid='add_operator' product='cam' />, ingrese la información requerida.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-add-operator.png' />
+
+   * <Cmd sid='id' product='cam' />: Ingrese el ID único del operador.
+
+     * Hasta 64 caracteres.
+
+     * Puede incluir letras coreanas, letras inglesas y números.
+
+     * Caracteres especiales permitidos: `_`, `.`, `-`, `(`, `)`.
+
+     * Debe ser único y no duplicarse con otro operador.
+
+   * <Cmd sid='password' product='cam' />: Ingrese la contraseña del operador. Sigue las mismas reglas que la contraseña del administrador. Para obtener más información, consulte <DocLink docId='device/vionyx_webserver/update-admin-password' />.
+
+   * <Cmd sid='confirm_password' product='cam' />: Vuelva a ingresar la contraseña.
+
+   * <Cmd sid='permission' product='cam' />: Seleccione el permiso del operador.
+
+   * <Cmd sid='enabled' product='cam' />: Active o desactive la cuenta del operador.
+
+5. Después de ingresar toda la información, haga clic en <Cmd sid='ok' product='cam' />.
+
+Después de agregar un nuevo operador, la nueva cuenta aparece en la lista.
+
+:::info
+
+* Después de agregar un operador, inicie sesión con esa cuenta para verificar que los permisos se apliquen correctamente.
+
+* Entregue de forma segura al operador su ID y contraseña.
+
+:::
+
+## Cambiar permisos del operador
+
+Cambie los permisos de un operador.
+
+1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='account_management' product='cam' /> en la barra lateral izquierda.
+
+3. En la sección <Cmd sid='operator' product='cam' />, haga clic en el campo <Cmd sid='permission' product='cam' /> del operador cuyos permisos desea cambiar.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-manage-operator.png' />
+
+4. Seleccione los permisos deseados de la lista.
+
+Cuando el cambio de permisos se completa correctamente, aparece un mensaje de éxito en la esquina superior derecha de la pantalla.
+
+:::tip
+
+Haga clic en <IcCamEdit title='Edit' /> para abrir la ventana <Cmd sid='edit_operator' product='cam' />. En el campo <Cmd sid='permission' product='cam' />, cambie a los permisos deseados y luego haga clic en <Cmd sid='ok' product='cam' />.
+
+<ProdImg src='/img/cam-server/cam-webserver-system-manage-operator-edit.png' width='50%' />
+
+:::
+
+## Deshabilitar operador
+
+Desactive temporalmente la cuenta de un operador. Bloquea el acceso sin eliminar la cuenta.
+
+1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='account_management' product='cam' /> en la barra lateral izquierda.
+
+3. En la sección <Cmd sid='operator' product='cam' />, haga clic en el interruptor del campo <Cmd sid='enabled' product='cam' /> del operador que desea desactivar.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-manage-operator-active.png' />
+
+Cuando la desactivación se completa correctamente, aparece un mensaje de éxito en la esquina superior derecha de la pantalla. Las cuentas de operador deshabilitadas no pueden iniciar sesión.
+
+:::tip
+
+Haga clic en <IcCamEdit title='Edit' /> para abrir la ventana <Cmd sid='edit_operator' product='cam' />. Haga clic en el interruptor del campo <Cmd sid='enabled' product='cam' /> para desactivar la cuenta. Haga clic en <Cmd sid='ok' product='cam' /> para guardar los cambios.
+
+<ProdImg src='/img/cam-server/cam-webserver-system-manage-operator-edit.png' width='50%' />
+
+:::
+
+:::info
+
+Las cuentas deshabilitadas se pueden reactivar más tarde.
+
+:::
+
+:::caution
+
+Si un operador ya inició sesión, se le denegará el acceso en el siguiente intento de inicio de sesión.
+
+:::
+
+## Eliminar operador
+
+Puede eliminar permanentemente las cuentas de operador. Las cuentas eliminadas no se pueden recuperar.
+
+1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='account_management' product='cam' /> en la barra lateral izquierda.
+
+3. En la sección <Cmd sid='operator' product='cam' />, haga clic en <IcCamTrash title='Delete' /> del operador que desea eliminar.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-manage-operator-delete.png' />
+
+4. Cuando aparezca el mensaje de advertencia, haga clic en <Cmd sid='ok' product='cam' />.
+
+Cuando la eliminación se completa correctamente, aparece un mensaje de éxito en la esquina superior derecha de la pantalla. La cuenta de operador se quita de la lista.

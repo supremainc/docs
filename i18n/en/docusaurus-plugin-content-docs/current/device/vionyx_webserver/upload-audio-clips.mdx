@@ -1,0 +1,92 @@
+---
+id: upload-audio-clips
+title: Upload Audio Clips
+description: Guide to uploading and managing audio files used as alarm tones and voice prompts.
+keywords:
+  - Audio
+  - Clip
+  - Upload
+  - WAV
+  - Voice
+  - Alarm tone
+---
+
+Upload audio clips for the camera and apply them as alarm tones or voice prompts. Upload and manage audio files in WAV format.
+
+Upload audio clips in the following situations.
+
+* When you need to upload alarm tones to play when an event occurs
+
+* When you need to add multilingual voice prompts
+
+* When you need to add voice messages for specific situations
+
+## Check audio storage capacity
+
+1. Click the <Cmd sid='system' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <Cmd sid='audio' product='cam' /> in the left sidebar.
+
+3. You can check the remaining capacity of the audio storage in the <Cmd sid='audio_clip' product='cam' /> section.
+
+<ProdImg src='/img/cam-server/cam-webserver-system-audio-check-size.png' />
+
+## Prepare audio files
+
+Before uploading audio clips, check the following.
+
+* **File format**: Only the `.wav` extension is supported.
+
+* **Sample rate**: Use a sample rate of 48 kHz or higher.
+
+* **File name**: Use only English letters, numbers, and underscores (`_`), up to 64 characters. Spaces and special characters are not allowed.
+
+* **File size**: You can upload files within the remaining capacity.
+
+## Upload audio clips
+
+1. Click the <Cmd sid='system' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <Cmd sid='audio' product='cam' /> in the left sidebar.
+
+3. Click <Cmd sid='add_button' product='cam' /> at the top right of the screen.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-audio-add-btn.png' />
+
+4. The <Cmd sid='add_clip_file' product='cam' /> popup appears.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-audio-add-popup.png' />
+
+5. Drag and drop a WAV file into the upload area, or click <Cmd sid='choose_file' product='cam' /> and select a WAV file stored locally.
+
+6. After the upload completes, adjust the volume and repeat settings options.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-audio-add-set-option.png' />
+
+7. Click <Cmd sid='firmware_upload' product='cam' /> to upload the audio clip.
+
+View uploaded audio clips in the list.
+
+<ProdImg src='/img/cam-server/cam-webserver-system-audio-complete.png' />
+
+:::info
+
+* Adjust the volume slider to set the playback volume for the audio clip.
+
+* To play the audio clip, click <IcPlay title='Play' />.
+
+:::
+
+## Delete audio clip
+
+Click <IcCamTrash title='Delete' /> to the right of the audio clip you want to delete.
+
+<ProdImg src='/img/cam-server/cam-webserver-system-audio-delete.png' />
+
+:::info
+
+* If the audio clip you want to delete is applied to an AI rule, it is automatically excluded from the AI rule settings.
+
+* For more information on AI rule settings, see <DocLink docId='device/vionyx_webserver/set-ai-rule' />.
+
+:::

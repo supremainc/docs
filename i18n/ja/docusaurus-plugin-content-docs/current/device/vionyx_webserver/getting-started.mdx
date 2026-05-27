@@ -1,0 +1,202 @@
+---
+id: getting-started
+title: はじめに
+description: ViOnyx Web Serverに初めてアクセスして、証明書のインストール、パスワード設定、ログイン方法を段階的に案内します。
+keywords:
+  - ViOnyx
+  - Web サーバー
+  - はじめに
+---
+
+ViOnyxカメラを初めて設置した後、Webブラウザーで初期設定を完了する必要があります。 この文書では、証明書のインストール、管理者パスワードの設定、ログインまでに必要なすべての手順を案内します。
+
+:::info
+
+工場出荷時設定にリセットした後、IPアドレスが割り当てられない場合は、デフォルトIPアドレス（`https://192.168.1.100`）に変更されます。Webブラウザーでそのアドレスにアクセスしてください。
+
+:::
+
+## 証明書のインストール
+
+ViOnyx Web Serverは安全なHTTPS接続を使用します。 初回アクセス時にセキュリティ警告が表示されますが、これはカメラの自己発行証明書が原因です。 証明書をWindowsの信頼済みストアに登録した後、Webサーバーにアクセスすると、警告なしで安全に接続する方法を確認してください。
+
+<Steps>
+<Step>
+
+### 証明書をダウンロード
+
+1. Webブラウザーで、カメラに割り当てたIPアドレス（`https://{IP_address}`）にアクセスしてください。
+
+2. **この接続ではプライバシーが保護されません** という警告メッセージが表示されたら、下部の **詳細設定** ボタンをクリックしてください。
+
+   <ProdImg src='/img/cam-server/vionyx-web-unsafe-01.png' />
+
+3. **詳細設定** セクションを展開した後、**`https://{IP_address}`にアクセスする（安全ではありません）** または同様のリンクをクリックして続行してください。
+
+   <ProdImg src='/img/cam-server/vionyx-web-unsafe-02.png' />
+
+4. パスワード設定画面の下部にある <Cmd sid='download_root_ca_certificate' product='cam' /> リンクをクリックしてください。
+
+   <ProdImg src='/img/cam-server/vionyx-install-root-ca.png' width='70%' />
+
+5. 証明書ファイル `Suprema_ViOnyx_Device_{serial-number}_Root_CA.crt` をローカルに保存してください。
+
+</Step>
+<Step>
+
+### Windows管理コンソールを開く
+
+1. <Start /> + <Kbd>R</Kbd> キーを押して、実行ウィンドウを開いてください。
+
+2. `certmgr.msc` を入力し、<Kbd>Enter</Kbd> キーを押して **管理コンソール** を起動してください。
+
+   <ProdImg src='/img/cam-server/yionyx-win-run.png' />
+
+</Step>
+<Step>
+
+### 証明書ウィザードのインポートを実行
+
+1. **管理コンソール** の左ペインで **信頼されたルート証明機関** を展開してください。
+
+2. 下の **証明書** を右クリックし、**すべてのタスク** → **インポート** を選択してください。
+
+   <ProdImg src='/img/cam-server/yionyx-mng-console-import.png' />
+
+3. 証明書のインポートウィザードで **次へ** ボタンをクリックしてください。
+
+   <ProdImg src='/img/cam-server/yionyx-cert-import-wizard-01.png' />
+
+4. **参照** ボタンをクリックして、保存した証明書ファイル `Suprema_ViOnyx_Device_547849187_Root_CA.crt` を選択してください。
+
+   <ProdImg src='/img/cam-server/yionyx-cert-import-wizard-02.png' />
+
+5. **次へ** ボタンをクリックしてください。
+
+6. **証明書をすべて次のストアに配置する** を選択してください。
+
+7. **証明書ストア** が **信頼されたルート証明機関** に設定されていることを確認してください。
+
+   <ProdImg src='/img/cam-server/yionyx-cert-import-wizard-03.png' />
+
+8. **次へ** ボタンをクリックしてください。
+
+9. **完了** ボタンをクリックして、証明書のインポートを完了してください。
+
+   <ProdImg src='/img/cam-server/yionyx-cert-import-wizard-04.png' />
+
+10. セキュリティ警告が表示されたら、**はい** ボタンをクリックしてください。
+
+11. 証明書のインポート成功メッセージが表示されたら、**OK** ボタンをクリックしてください。
+
+    <ProdImg src='/img/cam-server/yionyx-cert-import-wizard-complete.png' />
+
+</Step>
+<Step>
+
+### 証明書インストールの確認
+
+管理コンソールで **信頼されたルート証明機関** → **証明書** を選択し、先ほどインポートした証明書が一覧にあることを確認してください。
+
+<ProdImg src='/img/cam-server/yionyx-cert-mng-imported-check.png' />
+
+</Step>
+</Steps>
+
+証明書のインストールが完了したら、Webブラウザーを完全に終了して再起動し、カメラのIPアドレスに再度アクセスしてください。 これで、セキュリティ警告なしで安全に接続されます。
+
+## パスワードの設定
+
+初回ログイン時はセキュリティのため強力なパスワードを設定する必要があります。 ViOnyx は強力なパスワードポリシーを適用してシステムのセキュリティを確保します。
+
+1. Webブラウザーで、カメラに割り当てたIPアドレス（`https://{IP_address}`）にアクセスしてください。
+
+   <ProdImg src='/img/cam-server/password-setting1-vionyx.png' />
+
+2. パスワード設定ページの <Cmd sid='password' product='cam' /> 入力フィールドに新しいパスワードを入力してください。
+
+3. <Cmd sid='confirm_password' product='cam' /> フィールドに同じパスワードを再入力してください。
+
+4. 入力したパスワードが以下のすべての要件を満たしていることを確認してください。
+
+5. すべての条件が満たされると、<Cmd sid='submit' product='cam' /> ボタンが有効になります。 ボタンをクリックしてパスワードの設定を完了してください。
+
+:::note
+
+**パスワード要件**
+
+パスワードは次のすべての条件を満たす必要があります:
+
+* <Cmd sid='password' product='cam' /> フィールドと <Cmd sid='confirm_password' product='cam' /> フィールドの値が正確に一致する必要があります。
+
+* パスワードは12文字以上にしてください。 最大64文字以内です。
+
+* 少なくとも1つの英小文字(`a-z`)と英大文字(`A-Z`)を含める必要があります。
+
+* 少なくとも1つの数字(`0-9`)と特殊文字を含める必要があります。
+
+  > 特殊文字の例: `\"` `!` `@` `#` `$` `%` `^` `&` `*` `(` `)` `-` `_` `=` `+` `[` `]` `{` `}`
+
+* `1234`、`abcd` のような連続する4文字以上、または同一文字が4回以上含まれていてはいけません。
+
+* 大文字小文字を問わず、IDをパスワードに含めることはできません。
+
+  > admin, Admin, ADMIN, Admin123! など
+
+* `password`、`qwerty`、`123456` など、よく使用されるパスワードパターンは使用できません。
+
+:::
+
+:::caution
+
+設定したパスワードは安全な場所に保管してください。 パスワードを紛失した場合はカメラを初期化する必要があります。
+
+:::
+
+## ログイン
+
+パスワードの設定が完了すると、ログインページへ自動的に移動します。 管理者IDと設定したパスワードを入力して、ViOnyx Web Server に接続してください。
+
+<ProdImg src='/img/cam-server/password-setting2-vionyx.png' />
+
+1. <Cmd sid='id' product='cam' /> 入力フィールドに **admin** を入力してください。
+
+2. <Cmd sid='password' product='cam' /> 入力フィールドに設定したパスワードを入力してください。
+
+3. <Cmd>ログイン</Cmd> ボタンをクリックしてください
+
+ログインに成功すると、ViOnyx Web Server の <Cmd sid='live' product='cam' /> ページに移動します。
+
+:::info
+
+管理者 ID (admin) は <Cmd sid='system' product='cam' /> → <Cmd sid='account_management' product='cam' /> で変更できます。
+
+:::
+
+<NextStep>
+<NextItem to='live-basic'>
+
+<Cmd sid='live' product='cam' className='normal' /> メニューの主な機能と使用方法を案内します。
+
+</NextItem>
+<NextItem to='configure-ai-events-and-rules'>
+
+AI イベントを設定して、カメラが検知した特定の状況を監視できます。
+
+</NextItem>
+<NextItem to='configure-camera-device'>
+
+カメラの各種設定により、撮影環境に適した最適な映像品質を維持し、ネットワークを構成し、セキュリティおよび個人情報保護ポリシーを適用できます。 
+
+</NextItem>
+<NextItem to='manage-people'>
+
+ユーザーを登録して、AI顔認識機能を活用できます。
+
+</NextItem>
+<NextItem to='system-management'>
+
+カメラシステムを効果的に管理するために、デバイス情報、ファームウェア、メンテナンス、アカウント、オーディオ、ログを体系的に管理できます。
+
+</NextItem>
+</NextStep>

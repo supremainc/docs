@@ -29,7 +29,7 @@ function createSidebars(preview) {
     aicamwebserver: [
     {
       type: 'category',
-      label: 'Vionyx Web Server',
+      label: 'ViOnyx Web Server',
       collapsed: false,
       collapsible: false,
       className: 'p-title',
