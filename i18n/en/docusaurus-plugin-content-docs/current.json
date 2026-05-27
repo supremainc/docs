@@ -510,5 +510,17 @@
   "sidebar.biostar_air.category.파트너 기술자 관리하기": {
     "message": "Manage Partner Technicians",
     "description": "The label for category '파트너 기술자 관리하기' in sidebar 'biostar_air'"
+  },
+  "sidebar.biostarx_mobile.category.BioStar X 모바일": {
+    "message": "BioStar X Mobile",
+    "description": "The label for category 'BioStar X 모바일' in sidebar 'biostarx_mobile'"
+  },
+  "sidebar.biostarx_mobile.category.사용자 관리하기": {
+    "message": "Manage Users",
+    "description": "The label for category '사용자 관리하기' in sidebar 'biostarx_mobile'"
+  },
+  "sidebar.biostarx_mobile.category.출입문 관리하기": {
+    "message": "Manage Doors",
+    "description": "The label for category '출입문 관리하기' in sidebar 'biostarx_mobile'"
   }
 }
