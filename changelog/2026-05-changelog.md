@@ -12,7 +12,7 @@ slug: 2026-05-changelog
 
 ## Platform
 
-### BioStar X v1.0.2 업데이트
+### BioStar X
 
 * [1.0.2 버전 릴리스 노트](../platform/biostar_x/release-notes/102) 살펴보기
 
