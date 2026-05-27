@@ -48,9 +48,13 @@ slug: 2026-05-changelog
 
 * [BioEntry W3](../device/bioentry_w3/) 1.0.2 버전 업데이트 적용
 
+   * 벽걸이용 브래킷 이미지 변경
+
+   * [RS-485 사용 관련 주의 사항](../device/bioentry_w3/getting-started#cable) 추가
+
 * [Device Manager](../device/device_manager/) 1.2.3 버전 업데이트 적용
 
-  * [XPass D2 설정하기](../device/device_manager/xpd2-settings): EV2/EV3 보안 메시징 강제 기능 추가
+   * [XPass D2 설정하기](../device/device_manager/xpd2-settings): EV2/EV3 보안 메시징 강제 기능 추가
 
 ### 장치 릴리스 노트
 
