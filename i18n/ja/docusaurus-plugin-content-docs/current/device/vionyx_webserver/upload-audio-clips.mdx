@@ -1,0 +1,92 @@
+---
+id: upload-audio-clips
+title: オーディオクリップのアップロード
+description: 警報音や案内音として使用するオーディオファイルのアップロードと管理方法を説明します。
+keywords:
+  - 音声
+  - クリップ
+  - アップロード
+  - WAV
+  - 音声
+  - 警報音
+---
+
+カメラで使用するオーディオクリップをアップロードし、警報音や案内音として利用できます。 WAV形式のオーディオファイルをアップロードおよび管理できます。
+
+次のような状況でオーディオクリップをアップロードしてください。
+
+* イベント発生時に再生する警報音をアップロードする場合
+
+* 多言語の案内音を登録する場合
+
+* 特定の状況に合わせた音声メッセージを追加する場合
+
+## オーディオ保存容量の確認
+
+1. 画面左上の <Cmd sid='system' product='cam' /> メニューをクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='audio' product='cam' /> をクリックしてください。
+
+3. <Cmd sid='audio_clip' product='cam' /> セクションで、オーディオ保存領域の残り容量を確認できます。
+
+<ProdImg src='/img/cam-server/cam-webserver-system-audio-check-size.png' />
+
+## オーディオファイルの準備
+
+オーディオクリップをアップロードする前に次の点を確認してください。
+
+* **ファイル形式**: `.wav` 拡張子のみサポートします。
+
+* **サンプルレート**: 48kHz以上を使用します。
+
+* **ファイル名**: 英字、数字、アンダースコア（`_`）のみ入力でき、最大64文字です。 スペースや特殊文字は使用できません。
+
+* **ファイルサイズ**: 残り容量の範囲内でアップロードできます。
+
+## オーディオクリップのアップロード
+
+1. 画面左上の <Cmd sid='system' product='cam' /> メニューをクリックします。
+
+2. 画面左側のサイドバーで <Cmd sid='audio' product='cam' /> をクリックしてください。
+
+3. 画面右上の<Cmd sid='add_button' product='cam' />ボタンをクリックしてください。
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-audio-add-btn.png' />
+
+4. <Cmd sid='add_clip_file' product='cam' /> ポップアップが表示されます。
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-audio-add-popup.png' />
+
+5. アップロード領域にWAVファイルをドラッグ＆ドロップするか、<Cmd sid='choose_file' product='cam' /> ボタンをクリックして、ローカルに保存されたWAVファイルを選択してください。
+
+6. アップロードが完了したら、音量と繰り返し設定オプションを調整してください。
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-audio-add-set-option.png' />
+
+7. オーディオクリップをアップロードするには、<Cmd sid='firmware_upload' product='cam' /> ボタンをクリックしてください。
+
+アップロードしたオーディオクリップは一覧で確認してください。
+
+<ProdImg src='/img/cam-server/cam-webserver-system-audio-complete.png' />
+
+:::info
+
+* 音量スライダーを調整して、オーディオクリップの再生音量を設定できます。
+
+* オーディオクリップを再生するには、<IcPlay title='Play' /> ボタンをクリックしてください。
+
+:::
+
+## オーディオクリップの削除
+
+削除するオーディオクリップの右側にある<IcCamTrash title='Delete' />ボタンをクリックしてください。
+
+<ProdImg src='/img/cam-server/cam-webserver-system-audio-delete.png' />
+
+:::info
+
+* 削除するオーディオクリップがAIルール（Rule）に適用されている場合、AIルール設定から自動的に除外されます。
+
+* AIルール設定の詳細は<DocLink docId='device/vionyx_webserver/set-ai-rule' />を参照してください。
+
+:::

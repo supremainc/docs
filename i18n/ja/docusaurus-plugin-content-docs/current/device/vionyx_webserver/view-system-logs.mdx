@@ -1,0 +1,166 @@
+---
+id: view-system-logs
+title: システムログの確認
+description: カメラのアクセスログ、イベントログ、システムログの確認とエクスポート方法を説明します。
+keywords:
+  - ログ
+  - システムログ
+  - イベントログ
+  - アクセスログ
+  - CSV
+  - エクスポート
+---
+
+カメラのユーザーアクセス、イベント発生、システム運用記録をログとして確認し、管理できます。 Webインターフェースで必要な条件でログをフィルターし、CSV形式でエクスポートできます。さらに詳しい分析が必要な場合は、暗号化されたデバイスログをダウンロードできます。
+
+次の場合にログを確認してください。
+
+* カメラに誰がいつアクセスしたかを確認したい場合
+
+* 特定のイベント発生記録を追跡したい場合
+
+* カメラの起動・再起動など主要な操作を確認したい場合
+
+* セキュリティ監視のためにアクセス記録を確認したい場合
+
+* トラブルシューティングのためにシステムログを収集したい場合
+
+:::info
+
+* ログは機器のメモリ容量に応じて自動的に保持されます。
+
+* ログの種類ごとの保持期間は約1か月です。
+
+* メモリが満杯になると、最も古いログから自動的に削除されます。
+
+* システムログは、管理者および読み書き権限を持つ運用者のみが閲覧できます。
+
+:::
+
+## ログ確認
+
+1. 画面左上の <Cmd sid='system' product='cam' /> メニューをクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='system_logs' product='cam' /> をクリックしてください。 すべてのログを確認できます。
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-log.png' />
+
+3. ログ種類、レベル、タイプでログをフィルターするには、ログ一覧の左上にある <Cmd sid='all_logs' product='cam' />、<Cmd sid='all_levels' product='cam' />、<Cmd sid='all_types' product='cam' /> から必要な条件を選択してください。
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-log-filter.png' className='none' />
+
+4. ログ一覧の上部にある <IcSearch title='Search' /> ボタンをクリックすると、選択した条件でログをフィルターできます。
+
+:::info
+
+* 特定期間のログを確認するには、日付と時刻の入力フィールドをクリックしてください。 カレンダーと時刻の選択ツールが表示されたら、開始日と時刻を選択してください。 終了日と時刻も同じ方法で設定できます。
+
+  <ProdImg src='/img/cam-server/cam-webserver-system-log-date.png' width='40%' />
+
+* 一覧を下へスクロールすると、ログ一覧を更新しながら過去のログを継続して確認できます。
+
+* ログ種類の詳細は <DocLink docId='device/vionyx_webserver/system-log-type' /> を参照してください。
+
+:::
+
+### ログ種類
+
+ログは次のように分類できます。
+
+* <Cmd sid='ai_analysis' product='cam' />: AI分析に関連するイベント記録を確認できます。
+
+* <Cmd sid='access' product='cam' />: ユーザーがカメラのウェブインターフェースにアクセスした記録を確認できます。
+
+* <Cmd sid='event' product='cam' />: イベント発生、Webhook送信、ルールの実行などの記録を確認できます。
+
+* <Cmd sid='system' product='cam' />: カメラの起動、再起動、初期化などのシステム運用記録を確認できます。 このログは**管理者のみが閲覧できます**。
+
+:::info
+
+<Cmd sid='log_category_download' product='cam' /> を選択すると、デバイスの暗号化されたログファイルをダウンロードできます。 詳しくは <DocLink inner='#downloadDeviceLogs' /> を参照してください。
+
+:::
+
+### ログレベル
+
+ログは次のレベルに分類されます。
+
+* <Cmd sid='log_level_info' product='cam' />: 一般的な情報メッセージのログを確認できます。
+
+* <Cmd sid='log_level_warning' product='cam' />: 警告メッセージのログを確認できます。
+
+* <Cmd sid='log_level_error' product='cam' />: エラーメッセージのログを確認できます。
+
+## ログのエクスポート
+
+ログをCSV形式でダウンロードし、外部で分析または保存できます。
+
+1. 画面左上の <Cmd sid='system' product='cam' /> メニューをクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='system_logs' product='cam' /> をクリックしてください。
+
+3. ログ一覧の左上にある <Cmd sid='all_logs' product='cam' /> で、エクスポートするログ種類を選択してください。 検索期間を設定すると、特定期間のログもエクスポートできます。
+
+4. 画面右上の <Cmd sid='csv_export' product='cam' /> ボタンをクリックしてください。
+
+5. <Cmd sid='csv_export' product='cam' /> ポップアップが表示されたら、エクスポートする言語を選択してください。
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-log-export.png' />
+
+6. <Cmd sid='ok' product='cam' /> ボタンをクリックします。
+
+ログ一覧をCSVファイルとしてダウンロードできます。
+
+:::info
+
+* CSVファイル名は `system-logs-YYYYMMDD_HHMMSS.csv` 形式です。 
+
+  > 例: *system-logs-20240326_153000.csv*
+
+* ウェブブラウザーの既定のダウンロードフォルダーに保存されるか、ユーザーが選択した場所に保存できます。
+
+:::
+
+## ログの保管と管理
+
+### ログの自動削除
+
+カメラのメモリ容量が満杯になると、最も古いログから自動的に削除されます。
+
+<div className='table-fixed'>
+
+| **ログの種類** | **保持期間** |
+| --- | --- |
+| **システムログ** | 約1か月 |
+| **アクセスログ** | 約1か月 |
+| **イベントログ** | 約1か月 |
+
+</div>
+
+### 重要なログの保管方法
+
+重要なログを長期間保管する場合は、次のようにしてください。
+
+* 定期的にログをCSVでエクスポートしてください。
+
+* エクスポートしたファイルを外部ストレージ（NAS、クラウドストレージなど）に保管してください。
+
+* ファイルにエクスポート日とログの期間を明記してください。
+
+## デバイスログのダウンロード {#downloadDeviceLogs}
+
+デバイスに保存されたログファイルを暗号化された形式でダウンロードできます。 デバイスログは、問題解決のためにカメラシステムで発生したすべてのイベントと運用記録を含む詳細なログファイルです。 このファイルは暗号化されているため、セキュリティが保たれます。必要に応じて <Support /> に提供し、問題解決に活用できます。
+
+1. 画面左上の <Cmd sid='system' product='cam' /> メニューをクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='system_logs' product='cam' /> をクリックしてください。
+
+3. ログ一覧の左上にある <Cmd sid='all_logs' product='cam' /> で <Cmd sid='log_category_download' product='cam' /> を選択してください。
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-log-download-device-log.png' />
+
+4. ログ一覧の右上にある <Cmd sid='log_category_download' product='cam' /> ボタンをクリックしてください。
+
+デバイスログファイルをローカルにダウンロードできます。 ファイル名は `device_logs_{device-serial-number}_YYYYMMDDTHHMMSS.zip.enc` 形式です。
+
+> 例: *device_logs_1234567890_20240326T153000.zip.enc*

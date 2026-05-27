@@ -1,0 +1,152 @@
+---
+id: configure-line-crossing
+title: ライン通過検知イベントの設定
+description: 設定した仮想ラインを通過する人を検知し、リアルタイムでイベントを発生させます。 通過方向を指定して、特定の方向の出入りのみを監視できます。
+keywords:
+  - AI分析
+  - 出入者の動線
+  - 顔認証
+---
+
+ライン通過検知イベントを設定すると、設定した仮想ラインを通過する人を検知し、リアルタイムでイベントを発生させます。 通過方向（A→B、B→A、双方向）を指定して特定の方向の出入りのみを監視できます。任意で顔領域を追加すると、登録済みユーザーを自動で識別します。
+
+## いつ使用しますか？
+
+* 出入口の通行量監視およびカウント
+
+* 特定方向への出入りのみを監視（一方向通路の検知）
+
+* 営業時間外の特定エリアへの出入りを検知
+
+* ラインを基準に左右エリアの移動を追跡
+
+## ライン通過検知イベントの作成
+
+ライン通過検知イベントを作成すると、<Cmd sid='live' product='cam' /> メニューで特定エリアを人がラインを通過するのを検知してイベントを発生させます。 また、顔領域を設定すると当該領域で顔を優先的に追跡でき、登録済みユーザーは自動で識別されます。
+
+<Steps>
+<Step>
+
+### イベント作成の開始
+
+1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+
+2. 画面左のサイドバーで <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> をクリックします。
+
+   <ProdImg src='/img/cam-server/ai-analysis-events.png' />
+
+3. 画面右上の<Cmd sid='add_button' product='cam' />ボタンをクリックしてください。
+
+4. <Cmd sid='select_ai_analysis_type' product='cam' /> 画面で <Cmd sid='ai_analysis_line_crossing' product='cam' /> をクリックします。
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing.png' />
+
+5. <Cmd sid='face_analytics_consent_title' product='cam' /> ポップアップが表示されたら、内容を確認し、同意チェックボックスをクリックしてから <Cmd sid='face_analytics_consent_agree' product='cam' /> ボタンをクリックします。
+
+   <ProdImg src='/img/cam-server/ai-analysis-notice-face-auth.png' width='50%' />
+
+   :::note
+
+   * 顔認識機能を使用するには、該当地域の関連法規を遵守する必要があります。 同意しない場合は先に進めません。
+
+   * 「<Cmd sid='face_analytics_consent_title' product='cam' />」ポップアップは初回のみ表示されます。 以降、AIイベント作成時は同意済みとみなします。
+
+   :::
+
+6. 右側の<Cmd sid='ai_analysis_line_crossing' product='cam' />パネルで必要な設定を完了してください。
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-settings.png' />
+
+</Step>
+<Step>
+
+### イベント名の設定
+
+<Cmd sid='name' product='cam' /> 入力フィールドに AI イベント名を入力します。 名前は最大64文字まで入力できます。
+
+</Step>
+<Step>
+
+### 仮想ラインの設定
+
+ライブビューで仮想ラインを適切な位置に設定してください。 カメラに設定した仮想ラインを通過する人を検知してイベントを発生させます。 最低1本を設定する必要があり、<Cmd sid='add_button' product='cam' />ボタンをクリックして最大10本まで追加できます。 ライブビューにオレンジ色のラインが表示され、マウスで角や点をドラッグして形状を調整できます。 中央の領域をドラッグして位置を移動できます。
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-settings-position.png' />
+
+* <Cmd sid='name' product='cam' />：仮想ラインの名前を編集できます。 わかりやすい名前を付けてください。 仮想ラインの名前はライブビューでマウスオーバーすると表示されます。
+
+* <Cmd sid='condition' product='cam' />：仮想ラインを通過する条件を設定してください。 以下の3つの通過方向オプションからいずれかを選択できます。
+
+  * <Cmd>A -> B</Cmd>：AからB方向への通過でイベントが発生します。
+
+  * <Cmd>B -> A</Cmd>：BからA方向への通過でイベントが発生します。
+
+  * <Cmd>A \<-> B</Cmd>：双方向の通過でイベントが発生します。
+
+:::info
+
+* 設定した仮想ラインの形状とサイズを初期化するには、<IcCamReset title='reset' />ボタンをクリックしてください。
+
+* 追加した仮想ラインを削除するには、<IcCamTrash title='delete' />ボタンをクリックしてください。
+
+:::
+
+</Step>
+<Step>
+
+### 顔領域の設定（任意）
+
+顔を検知する領域を設定してください。 設定すると、当該領域で顔を優先的に追跡します。 顔領域と仮想ラインは重ねて設定できます。 <Cmd sid='add_button' product='cam' />ボタンをクリックして最大10個まで設定できます。 ライブビューに青い枠が表示され、マウスで角や点をドラッグして形状を調整できます。 中央の領域をドラッグして位置を移動できます。
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-settings-face-area.png' />
+
+* <Cmd sid='name' product='cam' />：顔領域の名前を編集できます。 わかりやすい名前を付けてください。 顔領域の名前はライブビューでマウスオーバーすると表示されます。
+
+:::info
+
+* 登録済みユーザーは<Cmd sid='live' product='cam' />メニューで自動的に識別され、名前が表示されます。 登録されていないユーザーは<Cmd sid='unknown_face' product='cam' />として表示されます。
+
+* 設定した顔領域の形状とサイズを初期化するには、<IcCamReset title='reset' />ボタンをクリックしてください。
+
+* 追加した顔領域を削除するには、<IcCamTrash title='delete' />ボタンをクリックしてください。
+
+:::
+
+</Step>
+<Step>
+
+### イベント発生条件の設定
+
+イベント発生条件を設定してください。
+
+* <Cmd sid='every_delay' product='cam' />：イベント発生の遅延時間を設定してください。 設定した時間を超えた場合にのみイベントが発生し、最大60秒まで設定できます。
+
+</Step>
+<Step>
+
+### 設定を保存
+
+すべての設定を完了したら、右上の<Cmd sid='create' product='cam' />ボタンをクリックしてください。 前の画面に戻り、新しく作成したAIイベントが一覧に追加されます。
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-settings-complete.png' />
+
+</Step>
+</Steps>
+
+## ライブで確認
+
+画面左上の<Cmd sid='live' product='cam' />メニューをクリックしてください。 カメラ映像の右上にある<Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico />アイコンがオンになっているか確認してください。 設定した仮想ラインと顔領域が映像にオーバーレイ表示されます。 人が仮想ラインを通過するたびにイベントが発生します。 顔領域を設定している場合、カメラは当該領域で顔を検知し、登録済みユーザーは自動的に識別され名前が表示されます。
+
+<ProdImg src='/img/cam-server/ai-analysis-events-line-crosing-result.png' />
+
+:::info
+
+* 登録されていないユーザーは<Cmd sid='unknown_face' product='cam' />として表示されます。 登録済みユーザーは名前とともに表示されます。
+
+* 照明が不足しているか逆光の場合、カメラが顔を認識できないことがあります。 撮影エリアの照明を改善するか、カメラの位置と角度を調整して顔が見えやすくしてください。
+
+* 顔がカメラに向いている必要があります。 横顔や後ろ姿は認識が難しい場合があります。
+
+* イベントが多発する場合は、<Cmd sid='every_delay' product='cam' />の値を調整してください。 イベント発生の遅延時間を長くするとイベント頻度を減らせます。
+
+:::

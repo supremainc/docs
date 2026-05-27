@@ -1,0 +1,159 @@
+---
+id: configure-video-profile
+title: ビデオプロファイルの設定
+description: チャネルごとのビュー モードとストリームエンコード値を設定し、画面の左右反転や初期化ポリシーまで運用視点で管理する方法を案内します。
+keywords:
+  - ビデオプロファイル
+  - ストリーム
+  - コーデック
+  - 解像度
+  - フレームレート
+  - ビットレート
+  - 左右反転
+---
+
+ライブ画面に表示される映像品質と保存される録画映像の品質は、ビデオプロファイルの設定により変わります。 ビデオプロファイル設定では、チャネルごとにビュー モードとストリームエンコード値を調整できます。 また、設置環境に応じて左右反転（Mirror）設定とチャネル設定の初期化機能も提供します。
+
+以下の状況ではビデオプロファイルを設定して、映像品質、保存容量、ネットワーク帯域幅の最適なバランスを確保してください。
+
+* 保存容量と画質のバランスを調整したいとき
+
+* ネットワーク帯域に合わせてMain/Subストリームを分離して運用したいとき
+
+* チャネルごとのビュー モードを目的に応じて使用したいとき
+
+:::info
+
+AIイベントを既に運用している場合、左右反転や初期化を行うとAIイベント設定が削除される可能性があります。
+
+:::
+
+## ビデオプロファイルの設定
+
+1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+
+2. 画面左側のサイドバーで <Cmd sid='basic' product='cam' /> → <Cmd sid='video_profile' product='cam' /> をクリックしてください。
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-video-profile.png' />
+
+:::info
+
+ビデオプロファイルの設定は、保存ボタンが不要で、変更すると即座にカメラに反映されます。
+
+:::
+
+## チャネルの選択とビュータイプの確認
+
+チャネルごとの主な目的は次のとおりです。
+
+* **CH 1**: 物理カメラの元のフィッシュアイ画面を基準に運用するチャンネルです。
+
+* **CH 2**: パノラマや4分割画面などの加工ビューで監視効率を高めて運用するチャンネルです。
+
+カメラのチャネルごとにビデオプロファイルの詳細項目を設定できます。
+
+1. 画面右側の <Cmd sid='video_profile' product='cam' /> パネルの <Cmd sid='channel' product='cam' /> で <Cmd>CH 1</Cmd> または <Cmd>CH 2</Cmd> を選択してください。
+
+2. <Cmd sid='view_type' product='cam' /> の <Cmd sid='type' product='cam' /> で、選択したチャネルのビュータイプを選べます。
+
+チャネルごとのビュータイプポリシーは以下の通りです。
+
+* <Cmd>CH 1</Cmd>: フィッシュアイに固定されており、変更できません。
+
+* <Cmd>CH 2</Cmd>: フィッシュアイを除くビュー モードを選択できます。
+
+  * <Cmd sid='view_type_single' product='cam' />: フィッシュアイカメラが撮影した映像を補正し、壁面型パノラマ形式で表示するモードです。
+
+  * <Cmd sid='view_type_double' product='cam' />: 360˚領域を撮影した映像を歪み補正し、パノラマ形式の上下分割画面で表示するモードです。
+
+  * <Cmd sid='view_type_quad' product='cam' />: 人の視野に適したように歪み補正した4つの特定画面を同時に表示するモードです。
+
+## ストリームタイプの選択
+
+<Cmd sid='stream' product='cam' /> で設定するストリームを選択してください。 メインまたはサブストリームのどちらかを選択し、<Cmd sid='profile' product='cam' /> セクションで詳細値を調整してください。
+
+* <Cmd sid='stream_type_main' product='cam' />: 録画と高画質監視
+
+* <Cmd sid='stream_type_sub' product='cam' />: 低帯域幅のリモート監視
+
+:::info
+
+<Cmd>CH 2</Cmd> チャンネルは <Cmd sid='stream_type_main' product='cam' /> タイプのみをサポートします。
+
+:::
+
+## プロファイル詳細設定
+
+選択したストリームタイプに応じて、コーデック、解像度、フレームレートなどの詳細設定を調整してください。
+
+* <Cmd sid='codec' product='cam' />：プロファイルに適用するコーデックを選択してください。 **H.264**、**H.265**、**MJPEG** のいずれかを選択できます。
+
+   :::note
+
+   H.265コーデックを選択すると、Profile Tが必須で適用されます。
+
+   :::
+
+* <Cmd sid='resolution' product='cam' />：プロファイルに適用する解像度です。 チャンネル、ビデオタイプ、ストリームタイプによって、サポートする解像度が異なります。
+
+  | チャンネル | ビデオタイプ | ストリームタイプ | サポート解像度 |
+  | --- | --- | --- | --- |
+  | CH 1 | <Cmd sid='view_type_fisheye' product='cam' className='normal' /> | <Cmd sid='stream_type_main' product='cam' className='normal' /> | 3520 × 3520 |
+  | ^ | ^ | <Cmd sid='stream_type_sub' product='cam' className='normal' /> | 1760 × 1760 |
+  | CH 2 | <Cmd sid='view_type_single' product='cam' className='normal' /> | <Cmd sid='stream_type_main' product='cam' className='normal' /> | 2048 × 512、1920 × 480、1280 × 320、704 × 176 |
+  | ^ | <Cmd sid='view_type_double' product='cam' className='normal' /> | <Cmd sid='stream_type_main' product='cam' className='normal' /> | 2048 × 2048、1920 × 1920、1280 × 1280、704 × 704 |
+  | ^ | <Cmd sid='view_type_quad' product='cam' className='normal' /> | <Cmd sid='stream_type_main' product='cam' className='normal' /> | 2048 × 2048、1600 × 1600、1280 × 1280、1024 × 1024 |
+
+   :::note
+
+  <Cmd>CH 2</Cmd> チャンネルは <Cmd sid='stream_type_main' product='cam' /> タイプのみをサポートします。
+
+   :::
+
+* <Cmd sid='frame_rate' product='cam' />：1秒あたりのフレーム数を設定してください。 30、25、20、15、10フレームのいずれかを選択できます。
+
+* <Cmd sid='max_bitrate' product='cam' />: 映像の最大ビットレートを設定できます。
+
+* <Cmd sid='bitrate_control' product='cam' />：映像データの制御方式を選択してください。
+
+  * <Cmd>VBR</Cmd>：映像の複雑さに応じてビットレートが可変となるため、ネットワークが安定している場合に高画質を提供します。 ネットワーク帯域が十分な環境で推奨します。
+
+  * <Cmd>CBR</Cmd>：ビットレートを固定して安定したストリーミングを保証しますが、複雑な画面では画質が低下する場合があります。 ネットワーク帯域が制限されている、または一定の環境で推奨します。
+
+* <Cmd sid='gov_length' product='cam' />：I-Frameの間隔を設定します。 1\\~300 の範囲の値を選択できます。 GOVの長さが長いほどデータ量は減少し、短いほど増加します。
+
+:::info
+
+* **可変ビットレート**(Variable Bitrate, VBR): フレームのデータサイズを固定せず、最大ビットレート内で映像を送信する方式です。 映像の複雑さに応じてビットレートが可変に調整される方式です。 一般に高画質を提供しますが、ネットワーク帯域が安定していない環境では映像の途切れが発生する可能性があります。
+
+* **固定ビットレート**(Constant Bitrate, CBR): フレームのデータサイズを固定して映像を送信する方式です。 ネットワーク帯域が一定の環境で安定した映像ストリーミングを提供しますが、映像の複雑さに応じて画質が低下する場合があります。
+
+* **GOV**(Group of Video): H.264/H.265圧縮で、Iフレームから次のIフレームの直前までのフレーム集合を意味します。 GOVには、完全な画像情報を含むI-Frame（キーフレーム）と、前フレームとの差分情報のみを含むP-Frameが含まれます。 GOVの長さが長くなるほどI-Frameの数は減少し映像データ量が減り、短くなるほどI-Frameの数は増加し映像データ量が増えます。
+
+:::
+
+## 左右反転設定
+
+カメラの設置位置によって、左右または上下反転の設定が必要になる場合があります。 
+
+* <Cmd sid='mirror' product='cam' />: 左右反転の設定をオンまたはオフにできます。
+
+* <Cmd sid='flip' product='cam' />: 上下反転の設定をオンまたはオフにできます。
+
+:::info
+
+AIイベントが設定されている場合、左右反転の変更が制限されることがあります。 この場合、案内ポップアップに従いAI設定を削除してから進めてください。
+
+:::
+
+## チャネル設定の初期化
+
+設定したチャネルのビュー モードとストリーム設定を工場出荷時の初期値に戻すには、<Cmd sid='reset' product='cam' /> セクションで <Cmd sid='restore_to_default' product='cam' /> ボタンをクリックしてください。
+
+:::info
+
+* 選択したチャネルのみ工場出荷時の初期設定に復元されます。
+
+* フィッシュアイモードでAIイベントが設定されている場合は、AI設定を削除してから進めてください。
+
+:::

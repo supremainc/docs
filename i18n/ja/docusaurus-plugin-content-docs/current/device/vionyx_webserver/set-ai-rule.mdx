@@ -1,0 +1,183 @@
+---
+id: set-ai-rule
+title: AIルールの設定
+description: AIイベント発生時に実行する動作をルールとして設定します。 ルールの作成、条件の選択、オーディオとウェブフック動作の設定、保存および運用方法を案内します。
+keywords:
+  - AI
+  - ルール
+---
+
+AIルールを使用すると、イベント種類と条件に応じてオーディオ再生またはウェブフック送信を自動で実行できます。 このドキュメントではルールの作成と運用の全手順を案内します。
+
+次のような場合にAIルールを設定してください。
+
+* 特定のAIイベント発生時に外部サーバーへウェブフックを送信する場合
+
+* 特定のAIイベント発生時にデバイスでオーディオを再生する場合
+
+* イベント種類ごとに異なる後続動作を自動化する場合
+
+## 開始する前に
+
+ルール設定を開始する前に、以下を確認してください。
+
+* AIイベントが事前に作成されている必要があります。 次のドキュメントを参照してAIイベントを作成してください。
+
+  * <DocLink docId='device/vionyx_webserver/configure-people-tracking' />
+
+  * <DocLink docId='device/vionyx_webserver/configure-intrusion' />
+
+  * <DocLink docId='device/vionyx_webserver/configure-line-crossing' />
+
+  * <DocLink docId='device/vionyx_webserver/configure-counting-people' />
+
+* オーディオを使用する場合は、再生するオーディオクリップを事前に用意してください。
+
+* ウェブフックを使用する場合は、受信URLを事前に用意してください。
+
+* オーディオまたはWebhookのいずれか1つ以上のアクションを設定する必要があります。
+
+## AIルールの作成
+
+<Steps>
+<Step>
+
+### ルール作成の開始
+
+1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+
+2. 画面左のサイドバーで <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='rule_settings' product='cam' /> をクリックします。
+
+   <ProdImg src='/img/cam-server/ai-rule-settings-list.png' />
+
+3. 画面右上の<Cmd sid='add_button' product='cam' />ボタンをクリックしてください。
+
+4. <Cmd sid='add_rule_page_title' product='cam' /> 画面が表示されたら、ルール名を入力し、条件と動作を設定します。
+
+   <ProdImg src='/img/cam-server/ai-rule-settings-add-rule.png' />
+
+</Step>
+<Step>
+
+### ルール名の入力
+
+<Cmd sid='name' product='cam' /> 入力フィールドにルール名を入力します。 ルール名は必須項目です。 最大64文字まで入力できます。
+
+</Step>
+<Step>
+
+### 条件の設定
+
+条件はAIイベント発生時にルールが実行されるかを決定する要素です。 案内に従って条件を設定してください。 <Cmd sid='type' product='cam' /> と <Cmd sid='event' product='cam' /> オプションは、AIイベント作成時に設定した内容に応じて表示されます。
+
+* <Cmd sid='channel' product='cam' />：チャンネルはCH 1に固定されています。 Fisheyeビューのみサポートします。
+
+* <Cmd sid='type' product='cam' />：AIイベントタイプを選択します。 次のいずれかを選択できます。
+
+  * <Cmd sid='ai_analysis_people_tracking' product='cam' />
+
+  * <Cmd sid='ai_analysis_intrusion' product='cam' />
+
+  * <Cmd sid='ai_analysis_line_crossing' product='cam' />
+
+  * <Cmd sid='ai_analysis_people_counting' product='cam' />
+
+* <Cmd sid='event' product='cam' />：ルールを実行するAIイベントを選択します。 イベント一覧には選択したタイプに該当するAIイベントが表示されます。 イベントは `(ID:N) event_name` 形式で表示されます。
+
+* <Cmd sid='entry_area' product='cam' /> / <Cmd sid='intrusion_area' product='cam' /> / <Cmd sid='line' product='cam' /> / <Cmd sid='counting_area' product='cam' />：選択したイベントタイプに応じて、エリアの条件を追加できます。
+
+* <Cmd sid='event_type' product='cam' />：ルール実行の判定に使うイベントタイプを選択します。 選択したイベントタイプに応じてルールが実行されます。
+
+  :::note
+
+  少なくとも1つのイベントタイプを選択する必要があります。
+
+  :::
+
+</Step>
+<Step>
+
+### オーディオ動作の設定
+
+オーディオ動作は、AIイベント発生時にカメラでオーディオを再生する機能です。 トグルボタンをクリックしてオーディオ動作を有効にします。
+
+<ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-audio.png' />
+
+* <Cmd sid='audio_clip' product='cam' />：再生するオーディオクリップを選択します。 オーディオクリップはシステムにアップロードされた一覧から選択できます。
+
+* <Cmd sid='repeat' product='cam' />：オーディオの再生回数を設定します。 設定した回数だけオーディオクリップを繰り返し再生します。 最大 10 回まで設定できます。
+
+* <Cmd sid='schedule' product='cam' />：ルールが実行され、オーディオを再生するスケジュールです。 このオプションは変更できません。
+
+:::info
+
+オーディオ動作を設定する前に、オーディオクリップを事前に用意してください。 オーディオクリップは <Cmd sid='system' product='cam' /> → <Cmd sid='audio' product='cam' /> メニューでアップロードできます。 詳細は <DocLink docId='device/vionyx_webserver/upload-audio-clips' /> を参照してください。
+
+:::
+
+</Step>
+<Step>
+
+### ウェブフック動作の設定
+
+ウェブフック動作は、AIイベント発生時に外部サーバーへウェブフックを送信する機能です。 トグルボタンをクリックしてウェブフック動作を有効にします。
+
+<ProdImg src='/img/cam-server/ai-rule-settings-add-rule-action-webhook.png' />
+
+* <Cmd sid='method' product='cam' />：Webhookの送信方式です。 `POST`方式のみサポートします。
+
+* <Cmd>URL</Cmd>：ウェブフックを受信するURLを入力します。 `http://`または`https://`で始まる有効なアドレスである必要があります。
+
+* <Cmd sid='header' product='cam' />：ウェブフックに含めるHTTPヘッダーを設定します。 <Cmd sid='add_button' product='cam' /> ボタンをクリックしてヘッダーを追加できます。 各ヘッダーはキーと値のペアで入力します。
+
+* <Cmd sid='body' product='cam' />：ウェブフックに含めるHTTPボディを設定します。 <Cmd sid='add_button' product='cam' /> ボタンをクリックしてボディ項目を追加できます。 各ボディ項目はキーと値のペアで入力します。
+
+  :::note
+
+  カスタム項目は空にできず、最大10件まで追加できます。
+
+  :::
+
+* <Cmd sid='schedule' product='cam' />：ルールが実行され、Webhookを送信するスケジュールです。 このオプションは変更できません。
+
+:::info
+
+ウェブフック送信履歴と応答コードは、障害解析のためシステムログで確認できます。
+
+:::
+
+</Step>
+<Step>
+
+### ルールを保存
+
+ルール設定をすべて完了してルールを保存するには、画面右上の <Cmd sid='apply' product='cam' /> ボタンをクリックします。 保存したルールはルール一覧で確認できます。 ルール一覧では、ルール名、タイプ、イベント、スケジュールを確認できます。 
+
+<ProdImg src='/img/cam-server/ai-rule-settings-added-list.png' />
+
+</Step>
+</Steps>
+
+## AIルールの有効化/無効化
+
+ルール一覧で各ルール項目の最左のトグルボタンをクリックすると、そのルールを有効または無効にできます。 有効なルールはAIイベント発生時に設定された動作を実行します。 無効なルールはAIイベント発生時でも動作が実行されません。
+
+<ProdImg src='/img/cam-server/ai-rule-settings-added-list-enable-disable.png' />
+
+:::info
+
+ルール一覧で有効/無効の状態をひと目で区別できます。 青色のトグルで表示されるルールは有効、灰色のトグルで表示されるルールは無効です。
+
+:::
+
+## AIルールの編集
+
+ルール一覧で各ルール項目をクリックすると、ルールの詳細を確認または編集できます。 ルール詳細画面で条件と動作を編集した後、変更を保存するには <Cmd sid='update' product='cam' /> ボタンをクリックします。
+
+<ProdImg src='/img/cam-server/ai-rule-settings-edit.png' />
+
+## AIルールの削除
+
+ルール一覧で各ルール項目の最右の <IcCamTrash title='delete' /> ボタンをクリックすると、該当ルールを削除できます。 削除したルールは復元できません。
+
+<ProdImg src='/img/cam-server/ai-rule-settings-added-list-delete.png' />

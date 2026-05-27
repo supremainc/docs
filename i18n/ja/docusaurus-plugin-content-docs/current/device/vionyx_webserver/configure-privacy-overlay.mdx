@@ -1,0 +1,150 @@
+---
+id: configure-privacy-overlay
+title: プライバシーとオーバーレイの設定
+description: 機密領域をマスクし、顔を自動でぼかし、映像に日付/時刻とカメラ名を表示する方法を説明します。
+keywords:
+  - プライバシー
+  - オーバーレイ
+  - プライバシー
+  - オーバーレイ
+  - マスキング
+  - ぼかし
+---
+
+<Cmd sid='privacy_overlay' product='cam' className='normal' /> 設定を使用するとカメラ映像の機密領域を隠すか、顔を自動でぼかすことができます。 また、映像に日付/時刻とカメラ名を表示して、映像の出所と撮影時刻を明確にできます。 すべての設定は即座にライブビューに反映されます。
+
+以下のような状況でプライバシーとオーバーレイを設定します。
+
+* プライバシー侵害が懸念される特定の領域をマスクする場合
+
+* 顔の自動ぼかしで個人情報保護方針に準拠する場合
+
+* 録画映像に日付/時刻を表示して映像の追跡性を確保する場合
+
+* 複数カメラを運用する際にカメラ名を表示して映像の出所を明確にする場合
+
+:::info
+
+プライバシー設定（マスキング、顔のぼかし）は映像の表示にのみ適用され、AI解析は原画像を基に実行されるためAIの性能には影響しません。
+
+:::
+
+## プライバシーとオーバーレイの設定
+
+1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+
+2. 画面左のサイドバーで <Cmd sid='basic' product='cam' /> → <Cmd sid='privacy_overlay' product='cam' /> をクリックします。
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-privacy-overlay.png' />
+
+3. 変更内容を保存するには、画面右上の <Cmd sid='save' product='cam' /> ボタンをクリックします。 
+
+変更は保存後すぐにカメラに反映されます。
+
+## プライバシー領域の設定
+
+撮影映像内の非公開領域をマスクできます。 最大10領域まで設定でき、各領域は移動せず固定されます。
+
+1. <Cmd sid='area_setting' product='cam' /> セクションのトグルボタンをクリックします。
+
+2. <Cmd sid='add_button' product='cam' /> ボタンをクリックします。
+
+3. ライブビューにマスキングする領域が追加されます。 領域の角をドラッグしてサイズを調整するか、領域全体をドラッグして位置を移動できます。
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-privacy-overlay-add-area.png' />
+
+4. マスキング領域を作成すると、右側の設定パネルで領域名、順序、色を設定できます。
+
+   * <Cmd sid='name' product='cam' />: マスキング領域名は自動生成され、必要に応じて修正できます。
+
+   * <Cmd sid='order' product='cam' />: マスキング領域が重なる場合に表示順序を調整できます。 数字が大きいほど上に表示されます。
+
+   * <Cmd sid='color' product='cam' />: マスキング領域の色を選択できます。
+
+5. 追加したマスキング領域を保存するには、画面右上の <Cmd sid='save' product='cam' /> ボタンをクリックします。
+
+保存したマスキング領域はライブビューと録画映像に反映されます。
+
+:::info
+
+* マスキングした領域は、すべての表示モード（フィッシュアイ、シングルパノラマ、ダブルパノラマ、クアッド）に自動適用されます。
+
+* マスク領域の設定を初期化するには、<IcCamReset title='reset' /> ボタンをクリックします。
+
+* マスク領域を削除するには、<IcCamTrash title='delete' /> ボタンをクリックします。
+
+:::
+
+## 顔のプライバシー設定
+
+カメラが検出した顔または全身を自動でぼかして個人情報を保護できます。 <Cmd sid='face_privacy_setting' product='cam' /> オプションを有効にし、ぼかし範囲を選択します。
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-privacy-overlay-face-body.png' />
+
+* <Cmd sid='face_only' product='cam' />: 検出したすべての顔を自動でぼかします。
+
+* <Cmd sid='full_body' product='cam' />: 検出した全身を自動でぼかします。
+
+:::info
+
+顔または全身がぼかされてもAIの性能には影響しません。 カメラがぼかした映像を表示している間も、AI解析は原画像を基に実行されるため、顔認識やオブジェクト追跡などのAI機能は正常に動作します。
+
+:::
+
+## オーバーレイ設定
+
+ライブビューに日付/時刻とカメラ名を表示できます。 <Cmd sid='overlay' product='cam' /> オプションを有効にし、<Cmd sid='date_and_time_overlay' product='cam' />、<Cmd sid='camera_name' product='cam' />で詳細設定を調整します。
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-privacy-overlay-date-camera.png' className='none' />
+
+:::info
+
+各設定は変更直後に自動保存され、ライブビューにただちに反映されます。
+
+:::
+
+### <Cmd sid='date_and_time_overlay' product='cam' className='normal' />
+
+ライブビューに表示される日付と時刻の形式、サイズ、色を設定できます。 ライブビューで日付/時刻の位置を確認し、必要に応じてマウスでドラッグして位置やサイズを調整します。
+
+* <Cmd sid='date' product='cam' /> / <Cmd sid='time' product='cam' />：トグルボタンをクリックして日付および時刻のオーバーレイをオンまたはオフにできます。
+
+* <Cmd sid='date_format' product='cam' />：日付形式を選択します。
+
+  * YYYY-MM-DD (既定, 例: 2026-01-12)
+
+  * MM-DD-YYYY (例: 01-12-2026)
+
+  * DD-MM-YYYY (例: 12-01-2026)
+
+* <Cmd sid='time_format' product='cam' />：時間形式を選択します。
+
+  * HH:MM:SS (既定, 예: 13:45:56)
+
+  * HH:MM (秒を省略, 例: 13:45)
+
+* <Cmd sid='font_size' product='cam' />：ライブビューに表示される文字サイズを選択します。 1から32まで選択できます。
+
+* <Cmd sid='color' product='cam' />：ライブビューに表示される文字色を選択します。
+
+:::info
+
+日付および時刻のオーバーレイはFisheye Viewにのみ表示されます。
+
+:::
+
+### <Cmd sid='camera_name' product='cam' className='normal' />
+
+ライブビューにカメラ名を表示して映像の出所を明確にできます。 ライブビューでカメラ名の位置を確認し、必要に応じてマウスでドラッグして位置やサイズを調整します。
+
+* <Cmd sid='display' product='cam' />：トグルボタンをクリックしてカメラ名オーバーレイをオンまたはオフにできます。
+
+* <Cmd sid='name' product='cam' />：カメラ名を入力します。
+
+* <Cmd sid='font_size' product='cam' />：ライブビューに表示される文字サイズを選択します。 1から32まで選択できます。
+
+* <Cmd sid='color' product='cam' />：ライブビューに表示される文字色を選択します。
+
+## 設定を保存
+
+設定内容はライブビューで即時確認でき、保存するには画面右上の <Cmd sid='save' product='cam' /> ボタンをクリックします。 保存された設定はカメラに適用され、ライブビューと録画映像に反映されます。

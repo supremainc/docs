@@ -1,0 +1,143 @@
+---
+id: live-basic
+title: ライブ映像を見る
+description: ViOnyx Web ServerのLiveメニューでカメラ映像をリアルタイムで確認し、チャンネルとビュー モードを選択して画面を拡大・縮小する方法を案内します。
+keywords:
+  - リアルタイム
+  - 映像
+  - ライブ
+  - モニタリング
+  - ビュー モード
+---
+
+ViOnyx Web Serverの<Cmd sid='live' product='cam' />メニューでは、カメラが撮影している映像をリアルタイムで確認できます。 希望するチャンネルとビュー モードを選択し、画面を拡大したり全画面で表示できます。
+
+## ライブビューの基本構成
+
+初めて<Cmd sid='live' product='cam' />メニューに入ると、映像は次のような初期状態で表示されます。
+
+<ProdImg src='/img/cam-server/vionyx-live-basic.png' />
+
+<div className='menu-icon-table'>
+
+| 項目 | 構成要素 | 説明 |
+| :-: | :-: | --- |
+| <Num num='1' /> | <Image src='/img/cam-server/ico-content-ai-hide.svg' width='100%' alone className='none' alt='AI Event' /> | - AI機能は無効です。 アイコンをクリックしてAI機能を有効にできます。<br />- AIイベントとユーザーボックスを表示または非表示にするには、<IcMoreB title='More' /> ボタンをクリックして設定を調整します。 |
+| <Num num='2' /> | <IcPanelFace width='26px' height='26px' title='Face Shot' /> | <Cmd sid='face_shot' product='cam' />(Face Shot) パネルを開けます。 |
+| <Num num='3' /> | CH | チャンネルごとに利用可能なビュー モードを選択できます。 |
+| <Num num='4' /> | <IcKnob width='28px' height='28px' title='Rotate' /> | ライブ映像を回転できます。 |
+| ^ | <IcCapture width='26px' height='26px' title='Capture' /> | ライブ映像をキャプチャできます。 |
+| ^ | <IcFull width='26px' height='26px' title='Full Screen' /> | ライブ映像を全画面で表示できます。 |
+
+</div>
+
+## チャンネルとビュー モードを選択する
+
+ViOnyx Web Serverは複数のチャンネルとさまざまなビュー モードを提供します。 画面下の<Cmd>CH</Cmd>ドロップダウンメニューから目的のチャンネルとビュー モードを選択します。
+
+<Image src='/img/cam-server/vionyx-live-basic-select-ch.png' alone />
+
+**サポートされているチャンネルとビュー モード**
+
+<div className='table--viewmode'>
+
+| チャンネル | ビュー モード | 説明 | 例 |
+| :-: | --- | --- | :-: |
+| **1ch** | Fisheye View (Main/Sub) | 基本チャンネルのフィッシュアイレンズの原映像 | <Image src='/img/cam-server/vionyx-live-basic-fisheye-view-mode.png' width='50%' alone /> |
+| **2ch** | Quad View (Main) | パノラマビュー チャンネルの4分割表示 | <Image src='/img/cam-server/vionyx-live-basic-quad-view-mode.png' width='50%' alone /> |
+
+</div>
+
+:::info
+
+* 各チャンネルのMainとSubは異なる解像度のストリームを提供します。 Mainは高画質、Subは低画質のストリームです。
+
+* 上の画像は例示用の画面です。 実際の画面とは異なる場合があります。
+
+:::
+
+## 画面の拡大・縮小
+
+マウスで画面を拡大・縮小できます。
+
+* スクロールアップ（上）：画面拡大（ズームイン）
+
+* スクロールダウン（下）：画面縮小（ズームアウト）
+
+* ダブルクリック：元のサイズに戻る（1倍）
+
+:::info
+
+* 1倍〜8倍まで画面を拡大できます。
+
+* 画面の拡大はデジタルズームのため、高倍率にすると映像がぼやける場合があります。
+
+:::
+
+## 画面回転
+
+ライブ映像を回転するには、<IcKnob /> ボタンをクリックしたままドラッグします。 または、<IcKnob /> ボタンの右側の入力フィールドに回転角度を直接入力することもできます。
+
+<ProdImg src='/img/cam-server/vionyx-live-basic-rotate-screen.png' />
+
+## 画面キャプチャ
+
+ライブ映像をキャプチャするには、<IcCapture title='Capture' /> ボタンをクリックします。 キャプチャ画像は `capture_{ch1|ch2}_{main|sub}_{YYYY-MM-DDTHH-MM-SS}.jpeg` 形式で保存されます。
+
+<ProdImg src='/img/cam-server/vionyx-live-basic-capture-screen.png' />
+
+## 全画面モード
+
+大きな映像を確認するには、全画面モードを使用してください。 画面右下の <IcFull /> ボタンをクリックします。
+
+<ProdImg src='/img/cam-server/vionyx-live-basic-full-screen.png' />
+
+* 全画面モードでもビュー モードの変更とズーム機能を継続して使用できます。
+
+* 全画面モードを終了するには、<Kbd>ESC</Kbd> キーを押すか、<IcMin /> ボタンをもう一度クリックします。
+
+## イベントとユーザーボックスの表示 {#displayBox}
+
+ライブ映像でAIイベントとユーザーボックスを表示または非表示にするには、画面右上の <IcMoreB /> ボタンをクリックします。 表示する要素を選択できます。
+
+<ProdImg src='/img/cam-server/live-view-event-user-box.png' width='60%' />
+
+* <Cmd sid='event_box_popup' product='cam' />: AIイベントが発生すると、ライブ映像の左上にイベントがポップアップ表示されます。
+
+* <Cmd sid='user_box_popup' product='cam' />: AIイベントで顔が検出されると、ライブ映像の右下にユーザーボックスがポップアップ表示されます。
+
+:::info
+
+<Cmd sid='display_time' product='cam' /> オプションで設定した時間（単位: 秒）の間、ポップアップが表示されます。
+
+:::
+
+## 顔撮影パネルを開く
+
+AIイベント機能を有効にすると、カメラで検出された顔を確認できます。 <Cmd sid='face_shot' product='cam' />(Face Shot) パネルを開くには、画面右上の <IcPanelFace /> ボタンをクリックします。
+
+<ProdImg src='/img/cam-server/vionyx-live-basic-ai-face-shot.png' />
+
+<Cmd sid='face_shot' product='cam' /> パネル上部のツールアイコンをクリックして、次の機能を使用できます。
+
+* <Image src='/img/menus/ico-faceshot-pause.svg' ico alone className='none' /> / <Image src='/img/menus/ico-faceshot-play.svg' ico alone className='none' />: 顔撮影を一時停止または再開できます。
+
+* <Image src='/img/menus/ico-faceshot-filter.svg' ico alone className='none' />: 顔撮影結果をフィルタリングできます。
+
+* <Image src='/img/menus/ico-faceshot-max.svg' ico alone className='none' />: <Cmd sid='face_shot' product='cam' /> パネルを全画面に拡大できます。
+
+:::info
+
+AIイベントとルール設定の詳細は、<DocLink docId='device/vionyx_webserver/configure-ai-events-and-rules' />を参照してください。
+
+:::
+
+## 映像が再生されないとき
+
+カメラの映像が読み込まれない場合は、次の手順に従ってネットワーク接続を確認してください。
+
+1. カメラとネットワークの接続状態を確認してください。
+
+2. ウェブブラウザで**再読み込み（F5）**ボタンを押してください。
+
+3. システムが自動的に再接続を試みます。

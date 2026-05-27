@@ -1,0 +1,45 @@
+---
+id: ui-navigation
+title: ユーザーインターフェースの理解
+description: "ViOnyx Web Serverのウェブインターフェースの構成、左側のメインメニュー、右側の情報およびツールを案内します。 "
+keywords:
+  - UI
+  - メニュー
+  - ナビゲーション
+  - インターフェース
+---
+
+ViOnyx Web Serverにログインすると、上部に主要メニューが表示されます。 各メニューから目的の機能へ素早くアクセスできます。 このページでは、ウェブサーバーインターフェースの構成と各メニューの役割を説明します。
+
+<ProdImg src='/img/cam-server/vionyx-home-screen.png' />
+
+## メインメニューのショートカット
+
+画面左上にはViOnyx Web Serverのロゴと主要メニューのアイコンがあります。 各メニューで提供される機能は以下のとおりです。
+
+<div className='menu-icon-table'>
+
+| メニューアイコン | メニュー名 | 説明 |
+| :-: | :-: | --- |
+| <IcCamLive width='26px' height='26px' title='Live' /> | <Cmd sid='live' product='cam' /> | カメラが撮影中の映像をリアルタイムで確認できます。 |
+| <IcCamSet width='26px' height='26px' title='Settings' /> | <Cmd sid='settings' product='cam' /> | カメラとウェブサーバーの設定値を変更できます。 |
+| <IcCamPeople width='26px' height='26px' title='People' /> | <Cmd sid='people' product='cam' /> | カメラシステムのユーザーを追加・管理できます。 |
+| <IcCamSys width='26px' height='26px' title='System' /> | <Cmd sid='system' product='cam' /> | デバイス情報、アカウント、オーディオ、ログなど、システム全体を管理できます。 |
+
+</div>
+
+## 情報とツール
+
+画面右上にはカメラ情報、言語選択、ユーザーガイドへのショートカット、ログアウトボタンがあります。
+
+<div className='menu-icon-table'>
+
+| メニューアイコン | メニュー名 | 説明 |
+| :-: | :-: | --- |
+| <ProdImg src='/img/cam-server/ico-header-camera.svg' width='30px' alone className='none' /> | カメラ情報 | 現在接続中のカメラの名前、状態、IPアドレスを確認できます。 **IPアドレス**をクリックすると、デバイス情報を確認できます。 |
+| **10:00** | セッション時間 | 現在ログインしている管理者のセッション時間を確認できます。 セッション時間を超えると、自動的にログアウトします。 |
+| <span style={{fontSize: '18px'}}>🌐</span> | 言語選択 | ウェブインターフェースの言語を変更できます。 |
+| <ProdImg src='/img/cam-server/ico-header-guide.svg' width='30px' alone className='none' /> | ユーザーガイドへのショートカット | ユーザーガイドを確認できます。 |
+| <ProdImg src='/img/cam-server/ico-header-logout.svg' width='30px' alone className='none' /> | ログアウト | ログアウトできます。 |
+
+</div>
