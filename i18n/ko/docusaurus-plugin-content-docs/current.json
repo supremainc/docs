@@ -511,9 +511,9 @@
     "message": "파트너 기술자 관리하기",
     "description": "The label for category '파트너 기술자 관리하기' in sidebar 'biostar_air'"
   },
-  "sidebar.aicamwebserver.category.Vionyx Web Server": {
+  "sidebar.aicamwebserver.category.ViOnyx Web Server": {
     "message": "ViOnyx Web Server",
-    "description": "The label for category 'Vionyx Web Server' in sidebar 'aicamwebserver'"
+    "description": "The label for category 'ViOnyx Web Server' in sidebar 'aicamwebserver'"
   },
   "sidebar.aicamwebserver.category.AI 이벤트 및 규칙 설정하기": {
     "message": "AI 이벤트 및 규칙 설정하기",

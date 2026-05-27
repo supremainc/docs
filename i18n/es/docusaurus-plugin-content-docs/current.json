@@ -513,7 +513,7 @@
   },
   "sidebar.aicamwebserver.category.ViOnyx Web Server": {
     "message": "Servidor Web de ViOnyx",
-    "description": "The label for category 'Vionyx Web Server' in sidebar 'aicamwebserver'"
+    "description": "The label for category 'ViOnyx Web Server' in sidebar 'aicamwebserver'"
   },
   "sidebar.aicamwebserver.category.AI 이벤트 및 규칙 설정하기": {
     "message": "Configurar Eventos y Reglas de IA",
