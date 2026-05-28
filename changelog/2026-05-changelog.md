@@ -2,6 +2,7 @@
 title: 2026년 5월
 description: 2026년 5월 Suprema Docs 주요 업데이트 내역을 제공합니다.
 slug: 2026-05-changelog
+date: 2026-05-28T12:00
 ---
 
 이번 5월, **Suprema Docs**는 더 크게, 더 넓게 움직였습니다. 신규 장치 **BioStation 3 Max**가 새롭게 라인업에 합류했습니다. BioStar X와 BioStar Air의 기능도 한층 보강되었습니다. 특히 이번 달엔 타사 제품과의 연동을 다루는 **인테그레이션** 카테고리가 새롭게 문을 열었으니, 더욱 풍성해진 Suprema Docs를 지금 바로 만나보세요.
