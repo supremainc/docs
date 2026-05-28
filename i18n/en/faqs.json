@@ -28,7 +28,7 @@
           "answer": [
             "If you're using a power adapter, make sure its output equals or exceeds the camera's maximum power consumption.",
             "Do not connect a power adapter and PoE+ at the same time. Doing so may cause the device to malfunction.",
-            "If powered via an Ethernet cable, make sure it is connected using PoE+ or PoE++. The recommended standard is PoE+.",
+            "If receiving power via an Ethernet cable, ensure it is connected using the PoE+ standard. The recommended standard is PoE+.",
             "Check that the network cable is securely connected and that the Ethernet waterproof rubber seal is properly fastened."
           ]
         }

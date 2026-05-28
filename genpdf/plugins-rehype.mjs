@@ -143,21 +143,37 @@ function buildSpecSectionAst(data, language = 'ko') {
   /**
    * Build annotation sup element
    */
-  const buildAnnotationSup = (id) => {
+  const buildAnnotationSup = (id, dupl = false) => {
     if (!id) return null;
-    return {
-      type: 'element',
-      tagName: 'sup',
-      properties: { id: `${id}_dest` },
-      children: [
-        {
-          type: 'element',
-          tagName: 'a',
-          properties: { href: `#${id}` },
-          children: []
-        }
-      ]
-    };
+    if (dupl) {
+      return {
+        type: 'element',
+        tagName: 'sup',
+        properties: { id: 'dupl_one' },
+        children: [
+          {
+            type: 'element',
+            tagName: 'a',
+            properties: { href: `#${id}` },
+            children: []
+          }
+        ]
+      }
+    } else {
+      return {
+        type: 'element',
+        tagName: 'sup',
+        properties: { id: `${id}_dest` },
+        children: [
+          {
+            type: 'element',
+            tagName: 'a',
+            properties: { href: `#${id}` },
+            children: []
+          }
+        ]
+      };
+    }
   };
 
   /**
@@ -271,7 +287,7 @@ function buildSpecSectionAst(data, language = 'ko') {
     // Build header children with annotation support
     const headerChildren = [{ type: 'text', value: headerLabel }];
     if (item.annotation_label) {
-      const annotSup = buildAnnotationSup(item.annotation_label);
+      const annotSup = buildAnnotationSup(item.annotation_label, item.annotation_dupl);
       if (annotSup) headerChildren.push(annotSup);
     }
     
@@ -298,7 +314,7 @@ function buildSpecSectionAst(data, language = 'ko') {
         // Build right column children
         const rightChildren = buildValueChildren(subitem.value);
         if (subitem.annotation_value) {
-          const annotSup = buildAnnotationSup(subitem.annotation_value);
+          const annotSup = buildAnnotationSup(subitem.annotation_value, subitem.annotation_dupl);
           if (annotSup) rightChildren.push(annotSup);
         }
         
@@ -364,7 +380,7 @@ function buildSpecSectionAst(data, language = 'ko') {
               // Build label with annotation if present
               const labelChildren = [{ type: 'text', value: featureLabel }];
               if (feature.annotation_label) {
-                const annotSup = buildAnnotationSup(feature.annotation_label);
+                const annotSup = buildAnnotationSup(feature.annotation_label, feature.annotation_dupl);
                 if (annotSup) labelChildren.push(annotSup);
               }
               labelChildren.push({ type: 'text', value: ':' });
@@ -398,7 +414,7 @@ function buildSpecSectionAst(data, language = 'ko') {
         
         // Add annotation if present
         if (subitem.annotation_value) {
-          const annotSup = buildAnnotationSup(subitem.annotation_value);
+          const annotSup = buildAnnotationSup(subitem.annotation_value, subitem.annotation_dupl);
           if (annotSup) subvalue.push(annotSup);
         }
         
@@ -428,7 +444,7 @@ function buildSpecSectionAst(data, language = 'ko') {
       
       // Add annotation if present
       if (item.annotation_value) {
-        const annotSup = buildAnnotationSup(item.annotation_value);
+        const annotSup = buildAnnotationSup(item.annotation_value, item.annotation_dupl);
         if (annotSup) valueChildren.push(annotSup);
       }
       
