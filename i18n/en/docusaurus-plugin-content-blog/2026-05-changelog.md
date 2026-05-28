@@ -2,6 +2,7 @@
 title: May 2026
 description: Provides an overview of key updates to Suprema Docs in May 2026.
 slug: 2026-05-changelog
+date: 2026-05-28T12:00
 ---
 
 This May, **Suprema Docs** expanded in both scope and scale. The new device **BioStation 3 Max** has joined the lineup, and BioStar X and BioStar Air have received significant feature enhancements. Don't miss the highlight of this month—a brand-new **Integration** category covering third-party product connectivity.

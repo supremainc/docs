@@ -2,6 +2,7 @@
 title: April 2026
 description: Provides an overview of key updates to Suprema Docs in April 2026.
 slug: 2026-04-changelog
+date: 2026-05-01T12:00
 ---
 
 April was a busy month for **Suprema Docs** with new updates across platforms, devices, and developer APIs. Explore the changes we've made this month.
