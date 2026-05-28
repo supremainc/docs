@@ -144,7 +144,7 @@ const config = {
           blogTitle: 'Changelog',
           blogDescription: 'Suprema product change logs',
           routeBasePath: 'changelog',
-          showReadingTime: true,
+          showReadingTime: false,
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'All Changelogs',
         },
