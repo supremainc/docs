@@ -1,0 +1,229 @@
+---
+id: os-configuration
+title: Operating System Configuration
+description: Description
+keywords: [keyword1, keyword2]
+---
+
+#### Use Windows Server LTS releases
+
+Running BioStar X on an unsupported or outdated Windows version exposes the system to unpatched vulnerabilities. Microsoft provides Long-Term Servicing (LTS) releases of Windows Server that guarantee security updates, stability fixes, and support for 10+ years (5 years mainstream + 5 years extended). Choosing an LTS release ensures that your BioStar X server has the longest possible security support window with fewer disruptive feature updates.
+
+:::note
+
+**Summary for Administrators**
+
+- Always deploy BioStar X on **Windows Server LTS editions** (2019 or 2022).
+
+- **Verify** the OS version after installation.
+
+- **Plan upgrades** before end-of-support dates.
+
+- **Keep automatic updates enabled** or connect to WSUS/SCCM.
+
+- **Document lifecycle** to avoid running on unsupported software.
+
+:::
+
+### Identify supported versions
+
+The following LTS Windows Server editions are actively supported by Microsoft (as of May 2026):
+
+- Windows Server 2019 (LTS) — Mainstream support: until January 2024 / Extended security support: until January 2029
+
+- Windows Server 2022 (LTS) — Mainstream support: until October 2026 / Extended security support: until October 2031
+
+- Windows Server 2025 (LTS) — Mainstream support: until November 2029 / Extended security support: until November 2034
+
+:::caution
+
+Avoid Semi-Annual Channel (SAC) releases — they are short-lived and not intended for production workloads like BioStar X.
+
+:::
+
+### Check current OS version
+
+- Press `Win + R`, type `winver`, and press Enter.
+
+- Or open **PowerShell** and run:
+
+   ```powershell
+   systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
+   ```
+
+
+### Plan for upgrade if needed
+
+- If the server is running Windows Server 2016 or older, you should plan a migration.
+
+- Upgrading to 2019 or 2022 LTS ensures security updates and compatibility with modern TLS protocols (TLS 1.2/1.3).
+
+:::note
+
+**Best practice**
+
+Build a new VM or server with the supported OS, install BioStar X fresh, then migrate configuration and database. This minimizes downtime and risk.
+
+:::
+
+### Ensure Windows Update is Configured
+
+Enable **automatic updates** for security patches, or if using Windows Server Update Services (WSUS) or System Center Configuration Manager (SCCM), ensure the host is properly enrolled.
+
+---
+
+## Apply the latest Windows Updates and Security Patches
+
+Before production deployment, apply the latest Windows updates and security patches to protect the system from known vulnerabilities.
+
+Unpatched Windows servers are the **#1 attack vector** for ransomware, remote code execution, and privilege escalation exploits. Applying the latest security updates ensures the BioStar X host starts its lifecycle protected from all **known vulnerabilities**.
+
+
+### Check Current Patch Level
+
+- Open **Settings** → **Windows Update**, then click **Check for updates** to check the patch status.
+
+- To check the 10 most recently installed patches using PowerShell, run the following command:
+
+   ```powershell
+   Get-HotFix | Sort-Object -Descending InstalledOn | Select-Object -First 10
+   ```
+
+:::caution
+
+If the most recent patch is older than 30 days, update immediately.
+
+:::
+
+**Update Process (Step by Step)**
+
+1. Run Windows Update manually
+2. Install all security and critical updates — do not defer them, even if the server is not yet in production
+3. Reboot when required
+4. Verify update status — run again until "You're up to date" is displayed
+
+**Ongoing Patch Strategy**
+
+- **Monthly "Patch Tuesday"**: Microsoft releases new patches the 2nd Tuesday of every month.
+- Apply patches **within 1–2 weeks** of release in production, after testing in staging if available.
+- If you can't patch immediately, enable **compensating controls**: firewall restrictions, disable internet access, enhanced monitoring until patched.
+
+---
+
+#### 3.1.3. Remove or disable unnecessary Windows features (e.g., Internet Explorer, SMBv1, legacy components).
+
+**Why this matters:**
+
+Every enabled Windows feature increases the server's **attack surface**. Services like Print Spooler, Fax, or IIS are rarely needed on dedicated BioStar X hosts and have a history of critical vulnerabilities (e.g., PrintNightmare).
+
+**Step-by-step:**
+
+1. Open **Server Manager** → Manage → Remove Roles and Features.
+2. Review installed roles (e.g., File Services, IIS, Print Services).
+3. Remove roles not required by BioStar X.
+4. Only keep **.NET Framework Features** and **Desktop Experience** if needed by your admin workflow.
+5. Open **services.msc** and set unneeded services (e.g., Fax, Remote Registry, Bluetooth, SMBv1) to **Disabled**.
+
+👍 **Best practice:** Keep the host **dedicated** to BioStar X only. No additional workloads.
+
+---
+
+#### 3.1.4. Ensure Windows Defender Antivirus (or approved endpoint protection) is enabled and up-to-date.
+
+**Why this matters:**
+
+Defender (built-in AV) protects against malware and ransomware. Disabling it leaves the host exposed.
+
+**Step-by-step:**
+
+1. Open **Windows Security** → Virus & Threat Protection.
+2. Confirm **Real-time protection** is ON.
+3. Ensure **Cloud-delivered protection** and **Automatic sample submission** are ON.
+4. Keep virus definitions updated (usually automatic via Windows Update).
+
+> ⚠️ If using a 3rd party AV, ensure only **one AV solution** is running to prevent conflicts.
+
+---
+
+#### 3.1.5. Enable BitLocker for system and data drives to protect against physical theft.
+
+**Why this matters:**
+
+If an attacker gains physical access to the server (e.g., stolen disk, VM snapshot, backup media), unencrypted drives allow direct access to sensitive data such as credentials, logs, and biometric information. BitLocker provides full-disk encryption to protect data at rest.
+
+**Recommendation:**
+
+- Enable BitLocker on:
+  - OS drive (C:)
+  - All data drives storing: BioStar X database, logs, and backups
+- Use TPM + PIN where possible for stronger protection
+
+**Step-by-step (GUI):**
+
+1. Open `Control Panel → BitLocker Drive Encryption`
+2. Click Turn on BitLocker for each drive
+3. Choose authentication method: TPM (default) or TPM + PIN (recommended)
+4. Save recovery key: Active Directory / Azure AD (preferred), or secure vault (do NOT store locally)
+5. Choose encryption mode: XTS-AES 256-bit (recommended)
+6. Start encryption
+
+**Monitor BitLocker status:**
+
+```powershell
+Get-BitLockerVolume
+```
+
+> ⚠️ BitLocker protects **data at rest only**. It does NOT replace database encryption or TLS encryption.
+
+---
+
+#### 3.1.6. Enforce Secure Authentication Policies
+
+**Why this matters:**
+
+Weak local accounts or cached credentials make the server vulnerable to brute-force or privilege escalation.
+
+**Step-by-step:**
+
+1. Open **Local Security Policy** (`secpol.msc`).
+2. Configure Password Policy:
+   - Minimum length: 12+ characters
+   - Complexity: Enabled
+   - Maximum age: 90 days
+   - Lockout threshold: 5 attempts
+3. Disable or rename default "Administrator" account.
+4. Require multi-factor authentication (MFA) for RDP or remote admin access.
+
+---
+
+#### 3.1.7. Enforce Group Policy settings for security baselines (use Microsoft Security Compliance Toolkit).
+
+**Why this matters:**
+
+Microsoft's **Security Compliance Toolkit (SCT)** provides downloadable **Group Policy Objects (GPOs)** that align with security baselines. These baselines reduce misconfiguration risks and ensure BioStar X runs on a hardened Windows OS.
+
+**Step-by-step:**
+
+1. Download the latest [Microsoft Security Compliance Toolkit](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit-10).
+2. Select the baseline for your OS version: **Windows Server 2019** or **2022 Security Baseline**.
+3. Import baseline GPOs into **Group Policy Management Console (GPMC)**: open `gpmc.msc` → Right-click Group Policy Objects → Import Settings.
+4. Link the baseline GPO to the **BioStar X server OU** in Active Directory (or apply locally if standalone).
+5. Review critical settings: account lockout, audit logging, network security (SMB signing, LDAP signing, disabling NTLM fallback), LSA Protection.
+6. **Test in staging first** → deploy to production after confirming BioStar X compatibility.
+
+---
+
+#### 3.1.8. Disable Remote Desktop if Not Required (or Harden if Needed)
+
+**Why this matters:**
+
+RDP is a common attack vector (brute force, credential stuffing).
+
+**If not required:**
+- Disable via: `System Properties → Remote → "Don't allow remote connections"`
+
+**If required:**
+- Restrict to VPN or LAN only.
+- Require Network Level Authentication (NLA).
+- Change default RDP port (3389 → custom).
+- Monitor with event logs & alerts.

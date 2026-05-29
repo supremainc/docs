@@ -1,0 +1,78 @@
+---
+id: monitoring-audit
+title: Monitoring and Auditing
+description: Description
+keywords: [keyword1, keyword2]
+---
+
+Monitoring and auditing ensure visibility into the security posture of BioStar X. Effective auditing requires enabling logs at the **operating system, application, and database levels**, centralizing them, and reviewing them regularly.
+
+#### 3.6.1. Define Logging Policy
+
+Establish a logging policy that specifies what events must be logged, retention periods, and who is responsible for review.
+
+At minimum, log:
+- Authentication attempts (success/failure)
+- Privilege changes
+- Configuration changes
+- Database access
+- Firewall activity
+
+**Retention:** typically 90–180 days locally, longer in centralized systems.
+
+---
+
+#### 3.6.2. Enable Windows Event Logging and Monitoring
+
+- Open Event Viewer and ensure logging is enabled for: Security, Application, System.
+- Configure log size (at least 1GB for Security logs).
+- Set audit policy (`secpol.msc → Local Policies → Audit Policy`): logon events, privilege use, policy change, account logon, object access.
+
+---
+
+#### 3.6.3. Centralized Log Forwarding and SIEM Integration
+
+- Forward logs to a central SIEM or log management system.
+- Supported options: Splunk, Elastic Stack, Microsoft Sentinel, or Windows Event Forwarding (WEF).
+
+💡 **Best Practice:** Encrypt logs in transit (TLS) to prevent interception or tampering.
+
+---
+
+#### 3.6.4. Enable Application-Level Auditing
+
+- From BioStar X → **Settings → Server**, find **System Log Level Settings**.
+- Log file location: `[BioStar X Install Path]\logs\acs.log`
+- Set permissions so only the BioStar X service account and administrators can access.
+- Forward logs to SIEM or central logging solution.
+
+---
+
+#### 3.6.5. Enable Database Auditing
+
+- **MariaDB**: Use the Audit Plugin (`server_audit`).
+- **SQL Server**: Use SQL Server Audit (logs to file or event log).
+- Forward to central log system.
+
+---
+
+#### 3.6.6. Monitor Firewall and Network Activity
+
+- In `wf.msc → Properties → Logging`, enable logging of dropped packets.
+- Store logs at `%systemroot%\system32\LogFiles\Firewall\pfirewall.log`.
+- Forward logs to SIEM.
+- Deploy IDS/IPS (Snort, Suricata, Zeek) to detect anomalies.
+
+> ⚠️ Firewall logs grow quickly — implement log rotation and secure storage.
+
+---
+
+#### 3.6.7. Review and Alerting
+
+Establish automated alerts for critical events:
+- Multiple failed logins
+- Privilege escalation
+- Unexpected service startup/shutdown
+- Database schema modifications
+
+Conduct manual log reviews periodically.

@@ -1,6 +1,8 @@
 // @ts-check
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+import { type } from 'os';
+
 /**
  * Creating a sidebar enables you to:
  - create an ordered group of docs
@@ -440,6 +442,55 @@ function createSidebars(preview) {
             }
           ]
         }
+      ]
+    }
+  ],
+  bsx_hardening: [
+    {
+      type: 'category',
+      label: 'BioStar X 보안 강화',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'how-to/bsx_hardening/index',
+      },
+      items: [
+        'how-to/bsx_hardening/security-principle',
+        {
+          type: 'category',
+          label: '서버 보안 강화',
+          link: {
+            type: 'doc',
+            id: 'how-to/bsx_hardening/server-hardening-overview',
+          },
+          items: [
+            'how-to/bsx_hardening/os-configuration',
+            'how-to/bsx_hardening/users-access-control',
+            'how-to/bsx_hardening/network-firewall',
+            'how-to/bsx_hardening/service-application-hierarchy',
+            'how-to/bsx_hardening/protect-database-data',
+            'how-to/bsx_hardening/monitoring-audit',
+            'how-to/bsx_hardening/patch-maintenance',
+            'how-to/bsx_hardening/physical-security',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'BioStar X 강화 가이드',
+          link: {
+            type: 'doc',
+            id: 'how-to/bsx_hardening/hardening-biostarx'
+          },
+          items: [
+            'how-to/bsx_hardening/bsx-system-security',
+            'how-to/bsx_hardening/bsx-privacy-data-security'
+          ]
+        },
+        'how-to/bsx_hardening/hardening-suprema-device',
+        'how-to/bsx_hardening/references',
+        'how-to/bsx_hardening/appendices',
       ]
     }
   ],

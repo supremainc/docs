@@ -1,0 +1,52 @@
+---
+id: physical-security
+title: Physical Security
+description: Description
+keywords: [keyword1, keyword2]
+---
+
+Physical security controls prevent unauthorized individuals from gaining direct access to the servers or storage hosting BioStar X.
+
+#### 3.8.1. Secure Server Location
+
+- Host BioStar X servers in a physically secured data center or locked server room.
+- Access should be limited to authorized IT staff only.
+- Use surveillance (CCTV) and access logs for server rooms.
+- Place servers in locked racks or cages; maintain visitor logs.
+
+---
+
+#### 3.8.2. Protect Portable and Backup Media
+
+- Store backup drives or tapes in secure, access-controlled areas.
+- Use encryption for all removable storage containing BioStar X data.
+- Encrypt backups with AES-256 before transport.
+
+💡 **Best Practice:** Use **cloud-based encrypted backups** to reduce reliance on physical media.
+
+---
+
+#### 3.8.3. Secure BIOS/UEFI Settings
+
+- Set BIOS/UEFI passwords to prevent unauthorized configuration changes.
+- Disable booting from external devices (USB, DVD).
+- Enable Secure Boot if supported.
+
+> ⚠️ Keep BIOS/UEFI passwords documented in a secure vault. Losing them can block legitimate maintenance.
+
+---
+
+#### 3.8.4. Protect Against Device Theft
+
+- Enable full-disk encryption using BitLocker on all system and data drives.
+- Configure BitLocker as described in Section 3.1.5.
+- Use TPM + PIN for enhanced protection where applicable.
+- Use cable locks or secured racks for non-data-center deployments.
+
+---
+
+#### 3.8.5. Environmental Controls
+
+- Ensure server rooms have stable temperature, humidity, and power supply (UPS).
+- Protect against fire (extinguishers or suppression systems such as FM200 or inert gas).
+- Monitor temperature/humidity with sensors.

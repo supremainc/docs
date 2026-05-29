@@ -1,0 +1,57 @@
+---
+id: users-access-control
+title: User and Access Control
+description: Description
+keywords: [keyword1, keyword2]
+---
+
+#### 3.2.1. Enforce Least Privilege
+
+- Create separate user groups in Active Directory or Local Users and Groups.
+- Assign file system and application permissions based on these groups.
+- Configure BioStar X roles within the application to mirror the OS-level least-privilege model.
+
+#### 3.2.2. Restrict Local Administrative Privileges
+
+- Use `lusrmgr.msc` to remove unnecessary accounts from the Administrators group.
+- Assign least privilege — use standard user accounts for normal operation, admin only when required.
+- If domain-joined, apply Group Policy Restricted Groups to enforce consistent permissions.
+
+#### 3.2.3. Enforce Strong Authentication
+
+- Configure Group Policy to require complex passwords (minimum 12–15 characters, mix of upper/lowercase, numbers, symbols).
+- Set password expiration (e.g., every 90 days) and limit reuse.
+- Configure Account Lockout Policy to lock accounts after several failed attempts.
+- For remote access or privileged accounts, enforce Multi-Factor Authentication (MFA).
+
+**Step-by-step:**
+
+- Open Group Policy Editor (`gpedit.msc`).
+- Navigate to `Computer Configuration → Windows Settings → Security Settings → Account Policies → Password Policy`.
+- Configure password length, complexity, and history.
+- Set lockout duration and threshold under Account Lockout Policy.
+
+#### 3.2.4. Manage Built-in Accounts
+
+- Go to Local Users and Groups (`lusrmgr.msc`).
+- Right-click the Administrator account → Rename it (use a non-obvious name).
+- Disable Guest account unless explicitly required.
+- Regularly audit accounts with `net user` in PowerShell.
+
+#### 3.2.5. Session Management
+
+- Configure automatic lockout after 15 minutes of inactivity.
+- Prevent simultaneous logins with the same account, if possible.
+- Limit idle remote sessions.
+
+**Group Policy path:** `Computer Configuration → Windows Settings → Security Settings → Local Policies → Security Options → Interactive Logon: Machine inactivity limit` (e.g., 900 seconds = 15 minutes)
+
+#### 3.2.6. Auditing and Monitoring
+
+- Enable auditing for login attempts, privilege use, and account management.
+- Forward logs to a **SIEM** or central log collector.
+- Review security logs regularly for anomalies.
+
+**Group Policy path:** `Computer Configuration → Windows Settings → Advanced Audit Policy Configuration`
+
+Enable categories: Logon/Logoff, Account Management, Privilege Use.

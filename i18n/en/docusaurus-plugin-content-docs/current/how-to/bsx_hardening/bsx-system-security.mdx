@@ -1,0 +1,384 @@
+---
+id: bsx-system-security
+title: System Security
+description: Description
+keywords: [keyword1, keyword2]
+---
+
+#### 4.1.1. Change Default Admin Login ID and Password
+
+**Recommendation:**
+
+Change the default **Administrator** login ID (`admin`) and assign a strong, unique password immediately after installation.
+
+**Why this matters:**
+
+Default credentials are one of the most common entry points for attackers. Since every BioStar X installation ships with a predefined Administrator account (UID: 1), leaving it unchanged makes the system predictable and highly vulnerable to brute-force or dictionary attacks.
+
+**Step-by-step:**
+
+1. Log in with the default admin account (Login ID: `admin`).
+2. Navigate to **User Module**.
+3. Double-click the **Administrator** account (User Name: *Administrator*, UID: 1).
+4. In the **Edit User** page, find the **Permission** section:
+   - **Login ID**: Change from `admin` to a unique, non-obvious username. Avoid names like `root`, `system`, or your company name.
+   - **Password**: Change to a secure password. By default, BioStar X enforces *Medium strength*: 8–32 characters, must include both letters (uppercase/lowercase) and numbers.
+5. Click **Apply**.
+6. Log out, then log back in with the **new credentials** to confirm the change.
+
+**Best Practices:**
+
+- Do **not** use personal names or simple patterns (`admin1`, `company2025`).
+- Store the new credentials in a secure password manager or enterprise vault.
+- Create a **secondary administrator account** for emergency use.
+- Regularly review **audit logs** for Administrator login attempts.
+
+---
+
+#### 4.1.2. Access Separation
+
+**Recommendation:**
+
+Enforce strict separation of roles inside BioStar X by assigning **Administrator**, **Operator**, and **Auditor** accounts with clearly defined privileges.
+
+**Why this matters:**
+
+A single super-user account for all tasks introduces unnecessary risk. By separating roles, you:
+- Reduce the chance of accidental misconfiguration.
+- Limit insider threats (no single user has unchecked power).
+- Improve auditability and compliance (clear accountability per role).
+
+This practice aligns with **least privilege** and **separation of duties** — two core principles in ISO 27001, NIST, and other frameworks.
+
+**Recommended Approach After Installation:**
+
+1. **Rename & Secure the Default Admin**: Treat it as a **"break-glass only" emergency account**. Details in Section 4.1.1.
+
+2. **Create Named Role Accounts**:
+   - **Admin Role** → For system configuration and role management. Limit to **1–2 trusted people**.
+   - **Operator Role** → For daily operations. No access to system security settings or audit logs.
+   - **Auditor Role** → Read-only access to logs, reports, and configurations. No ability to change settings.
+
+3. **Enable Multi-Factor Authentication (MFA)**: Enforce MFA for all role accounts. Details in Section 4.1.5.
+
+4. **Use Custom Account Levels (if required)**:
+   - Navigate to `Settings Module → Account → Add Custom Level`.
+   - Configure granular access across User Groups, Device Groups, Doors Groups, etc.
+   - Under **Admin Menu Settings**, choose for each module: **Read-only** or **Edit/Read**.
+
+**Step by Step Example: Creating a Custom Auditor Role**
+
+1. Go to `Settings Module → Account → Add Custom Level`.
+2. Enter **Name** = "Auditor", add description.
+3. Under **Admin Menu Settings**, set:
+   - **User** = Read-only
+   - **Monitoring** = Read-only
+   - **Data** = Read-only
+   - **Dashboard** = Read-only
+   - **Setting** = None
+4. Click **Apply**, then assign this role to designated auditor accounts.
+
+**Best Practices:**
+
+- Assign **unique accounts per individual** — avoid shared logins.
+- Review account roles quarterly and remove unused accounts.
+- Keep the renamed built-in Administrator account for emergencies only.
+
+---
+
+#### 4.1.3. Enforcing Strong Password Policy
+
+**Recommendation:**
+
+Configure BioStar X to enforce strong password policies for all user accounts.
+
+**Path:** `Settings → System → Security → Login Password`
+
+**Password Policy Options in BioStar X:**
+
+- **Password Level**:
+  - **Low**: Up to 32 characters (no complexity required).
+  - **Medium** (default): 8–32 characters, must include letters and numbers.
+  - **Strong**: 10–32 characters, must include uppercase, lowercase, numbers, and symbols.
+- **Maximum Password Age**: 1–180 days.
+- **Maximum Invalid Attempts**: Default is 100 attempts per 10 minutes → **reduce to 5–10 attempts per 15 minutes**.
+- **Maximum Password Change Limit**: Limits how often a user can change their password.
+
+**Step by Step: Strengthening Password Policy**
+
+1. Go to `Settings → System → Security`.
+2. Under **Login Password**, configure:
+   - **Password Level** → **Strong**
+   - **Maximum Password Age** → Enable, set to **90 days**
+   - **Maximum Invalid Attempts** → Enable, set to **5 attempts** per **15 minutes**
+   - **Maximum Password Change Limit** → Enable, set to **5 times** maximum
+3. Click **Apply** and communicate new policies to all users.
+
+---
+
+#### 4.1.4. Session Security
+
+**Recommendation:**
+
+Disable **Simultaneous Connection Allow** to ensure that each account can only be used for one active session at a time.
+
+**Path:** `Settings → System → Security → Session Security`
+
+- **Active** → Multiple concurrent logins with the same credentials are allowed.
+- **Inactive** → Only one login per account is permitted. A new login automatically logs out the previous session.
+
+**Why it matters:**
+
+- Account sharing goes undetected — impossible to know who performed which action.
+- Attackers who gain stolen credentials can log in unnoticed while the legitimate user is still active.
+- Audit logs lose their value because they cannot attribute actions to specific individuals.
+
+---
+
+#### 4.1.5. Multi Factor Authentication
+
+**Recommendation:**
+
+Enable multi-factor authentication for all high-privilege accounts (Admin, Operator) in BioStar X by requiring an additional biometric fingerprint factor.
+
+**How It Works in BioStar X:**
+
+- MFA is implemented using a fingerprint scanner (Suprema BioMini or BioMini Plus 2).
+- After users enter their Login ID and Password, the system prompts for a fingerprint scan.
+
+> ⚠️ Cautions:
+> - If the Admin account has MFA enabled and the fingerprint component fails, you may get locked out.
+> - MFA is not supported when logging in via Cloud interfaces.
+> - MFA can't be enabled for accounts authenticated via Active Directory or non-supported services.
+
+**Step-by-step:**
+
+1. Connect and install the fingerprint scanner on the BioStar X server or client machine.
+2. In the BioStar X User Module, open the user's profile and ensure fingerprint is enrolled.
+3. Set **MFA (Multi-Factor Auth for Login)** to **Use**. Configuration is found in the Permission section.
+4. Apply the changes.
+5. Test by logging in: enter valid credentials, then scan your fingerprint to gain access.
+
+**Best Practices & Safety Measures:**
+
+- Enroll backup fingerprints (alternate finger) to mitigate scanner failures.
+- The original built-in Administrator ("break-glass" account) should have fallback recovery in case biometric hardware fails.
+- Document MFA-enabled accounts and maintain a recovery mechanism.
+
+---
+
+#### 4.1.6. Secure Communication with Device
+
+**Recommendation:**
+
+Enable **Secure communication with device** to encrypt traffic between BioStar X and connected devices using digital certificates (TLS/SSL-style).
+
+**Path:** `Settings → System → Security → Advanced Security Settings → Secure communication with device`
+
+**Option A — Server-generated certificates (default):**
+- Quick setup: BioStar X generates a certificate and automatically provisions it to devices.
+- Limitation: If disabled and re-enabled, a new certificate is generated, which may require manual device resets.
+
+**Option B — External certificates (recommended for enterprise use):**
+- Upload your organization's certificate chain and private key.
+- Provides easier integration with enterprise PKI.
+
+**Step by Step:**
+
+1. Log in as an Administrator.
+2. Go to `Settings → System → Security → Advanced Security Settings`.
+3. Set **Secure communication with device = Use**.
+4. If using external CA certificates:
+   - Set **Use external certificates = Use**.
+   - Upload the Root CA, Public certificate, and Private key.
+5. Apply and verify that devices reconnect successfully over secure channels.
+
+**Best Practices:**
+
+- Always use **strong keys** (RSA 2048+ or ECC equivalent).
+- Use certificates with proper **CN/SAN values** that match how devices connect (hostname or IP).
+- Rotate certificates before expiry; keep a renewal calendar.
+
+> 🔎 **Note on Log Upload:** If **Automatic Log Upload** is disabled, you risk **delayed event visibility** or **gaps in audit trails**. Keep **Automatic Log Upload enabled** whenever possible.
+
+---
+
+#### 4.1.7. Device Hashkey Management
+
+**Recommendation:**
+
+Enable **Device Hashkey Management** to manually control the encryption key used between BioStar X and devices. This activates tamper-resistance: devices can automatically wipe critical data if physical tampering is detected.
+
+**Why this matters:**
+
+While Secure Communication with Device (4.1.6) protects data in transit, Device Hashkey Management goes further:
+- It ensures the **data encryption key is controlled by the administrator**, not generated automatically.
+- It activates **tamper defense** — if a device detects unauthorized opening or manipulation, it deletes stored users, logs, and its encryption key.
+
+**Path:** `Settings → System → Security → Advanced Security Settings → Device Hashkey Management`
+
+> ⚠️ Important Notes:
+> - Manual key management **cannot be applied if non-administrator users have login PW or PIN**.
+> - Remove such logins before enabling.
+
+**Step by Step:**
+
+1. Log in with an Administrator account.
+2. Go to `Settings → System → Security → Advanced Security Settings`.
+3. Set **Device Hashkey Management = Use**.
+4. Read and acknowledge the warning pop-up.
+5. Remove any non-admin PW/PIN logins from devices before applying.
+6. Rotate the encryption key and administrator password when prompted.
+7. Test: confirm devices can still sync users, logs, and events.
+8. Document the key change (date, responsible admin, next scheduled rotation).
+
+**Best Practices:**
+
+- Rotate the device hashkey on a regular cycle (e.g., annually or semi-annually).
+- Document all rotations and store in a secure vault.
+- Test tamper events in a lab/staging device.
+- Pair with **Secure Communication with Device (4.1.6)** for full defense-in-depth.
+
+---
+
+#### 4.1.8. System Backup
+
+**Recommendation:**
+
+Use the built-in **System Backup** feature to regularly back up BioStar X's database, system settings, and key values.
+
+**Path:** `Settings → System → System Backup`
+
+> ⚠️ **Product Limitations:**
+> - If BioStar X and MSSQL are installed on different servers, **System Backup/Restore is not available**.
+> - BioStar X Backup function (manual or scheduled) is **unencrypted**.
+> - BioStar X Restore function does not support encrypted backup.
+
+**General (Manual Backup Settings):**
+
+- **Backup File Path**: Define the directory. The path must exist and have appropriate write permissions.
+- **Number of Backup Files to Keep**: Range 1–100. Recommendation: at least **7–10 rotating backups** for daily schedules.
+- **Backup Now**: Trigger an immediate backup on demand (useful before upgrades or major changes).
+
+**Automatic System Backup:**
+
+- **Frequency**: Daily / Weekly / Monthly.
+- **Time**: Specify the time (follows BioStar X server time zone).
+- 💡 **Best Practice**: For production → **Daily backups at off-peak hours** (e.g., 02:00 local time).
+
+**Step by Step: Configuring Automatic Backups**
+
+1. Go to `Settings → System → System Backup`.
+2. Under **Automatic System Backup**, set:
+   - **Frequency = Daily**
+   - **Time = 02:00** (or another off-peak time)
+   - **Number of Backup Files to Keep = 30**
+3. Click **Apply**.
+4. Verify backups are created by checking the target directory.
+5. Periodically test **restore procedures** in a staging environment.
+
+> ⚠️ Ensure server is protected by UPS. Do not interrupt operations while "In Progress" status is displayed — interruptions may cause database corruption.
+
+---
+
+#### 4.1.9. Directory Integration
+
+Directory Integration allows BioStar X to connect with enterprise identity systems such as **Microsoft Active Directory (AD)** or **Entra ID (Azure AD)**.
+
+**Why this matters:**
+
+- Stronger security: Enterprise policies for password rules, MFA, and conditional access are automatically applied to BioStar X.
+- Centralized control: User lifecycle is handled in AD/Entra ID, reducing risk of stale accounts.
+- Audit and compliance: All user actions are tied back to corporate accounts.
+
+> ⚠️ **License Note:** Directory Integration requires the **Advance license** to be active.
+
+**Microsoft Active Directory — Step-by-step:**
+
+1. Log in to BioStar X with an Administrator account.
+2. Go to `Settings → Directory Integration`.
+3. Under **Directory Service**, select **Microsoft Active Directory**.
+4. Configure **Directory Server**:
+   - **Server Address**: IP or hostname of AD server.
+   - **User Name** and **Password**: AD service account credentials.
+   - **Base Domain Name**: Distinguished name of your AD domain.
+5. For **Secure Transfer (LDAPS)**:
+   - Install AD Certificate Services on the AD server.
+   - Export the root certificate, convert to `.jks`, place in the BioStar X installation path.
+   - Enter **Keystore Password** in BioStar X.
+6. Click **Connect**. Retrieve AD user groups.
+7. **User Group Filter**: Deselect groups not needed.
+8. **Enable Login with Active Directory**.
+9. **Synchronization Options**: Manual (Sync Now) or Automatic (30 min–7 days).
+10. Click **Apply**. Confirm sync by checking user list.
+
+**Microsoft Entra ID — Step-by-step:**
+
+1. Log in to BioStar X with an Administrator account.
+2. Go to `Settings → Directory Integration`.
+3. Under **Directory Service**, select **Microsoft Entra ID**.
+4. Configure:
+   - **Client ID**: Application Client ID from Entra ID.
+   - **Client Secret**: Secret from Certificates & secrets in Entra ID app registration.
+   - **Primary Domain (Tenant ID)**: Found in the Overview of the Entra ID application.
+5. Click **Connect**. BioStar X retrieves user group information.
+6. **Enable Login with Entra ID**. Copy the **Redirection URI** and paste into Entra ID SSO settings.
+7. Set synchronization options and click **Apply**.
+
+**Best Practices:**
+
+- Use **dedicated AD/Entra service accounts** with limited privileges.
+- Restrict synchronization to **only relevant groups**.
+- Always use **LDAPS** for Active Directory connections.
+- Periodically review synchronized accounts for stale entries.
+
+---
+
+#### 4.1.10. System Log Settings
+
+**Recommendation:**
+
+Configure BioStar X logging to retain sufficient data for audits and troubleshooting.
+
+**Path:** `Settings → Server → Server`
+
+**System Log Storage Duration:**
+
+- **Automatic (default)** → Logs are automatically deleted after the retention period.
+- **Manual** → Logs must be purged manually.
+- **Retention Period**: 1–120 days (default: 60 days).
+
+💡 **Best Practice**: For compliance-sensitive environments, set retention to 90–120 days and forward logs to a SIEM.
+
+**System Log Level Settings** (per subsystem: Debug, Network, SQL, System, Web, WebSocket):
+
+| Level | Description |
+|-------|-------------|
+| Trace | Captures everything (very verbose) |
+| Debug | Detailed developer-level logs |
+| Info | Operational events, successful connections (default for most) |
+| Warning | Potential issues |
+| Error | Failures only |
+
+> ⚠️ Running with **Trace** or **Debug** in production can generate excessive logs, impacting performance and filling disks rapidly. Reserve for short-term troubleshooting only.
+
+**BioStar X Default Log Levels:**
+- Debug, SQL, WebSocket: **Not Use**
+- Network, System, Web: **Info**
+
+---
+
+#### 4.1.11. Server Port Configuration
+
+**Recommendation:**
+
+Configure BioStar X ports explicitly and prefer secure channels wherever possible. Use the default HTTPS port (443) for system access, and restrict device communication ports to trusted networks only.
+
+**Step-by-step: Changing the HTTPS Port**
+
+1. Open **BioStar X Service Manager**: `http://127.0.0.1:28088/`
+2. In the side menu, select **Service Settings**.
+3. Under **Unified Gateway Service**, locate the **HTTPS port** field (default: 443).
+4. Change the port to your desired value (e.g., 8443).
+5. Click **Apply** and restart the service if required.
+6. Update firewall rules and client connections accordingly.

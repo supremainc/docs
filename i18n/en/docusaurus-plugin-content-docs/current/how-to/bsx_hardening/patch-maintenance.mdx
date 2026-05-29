@@ -1,0 +1,65 @@
+---
+id: patch-maintenance
+title: Patch and Maintenance
+description: Description
+keywords: [keyword1, keyword2]
+---
+
+#### 3.7.1. Backup and Restore Security Configuration
+
+```powershell
+# Export Group Policy settings
+secedit /export /cfg C:\backup\secpol.cfg
+
+# Backup Windows Firewall rules
+netsh advfirewall export "C:\backup\firewall.wfw"
+```
+
+---
+
+#### 3.7.2. Establish Patch Management Policy
+
+- Define a formal patching policy covering operating system, database engines, BioStar X software, and third-party dependencies.
+- Specify timelines (e.g., OS patches within 2 weeks, application patches within 1 month).
+- Include rollback and recovery procedures if a patch causes instability.
+
+> ⚠️ Before patching BioStar X bundled third-party dependencies, confirm with Suprema Tech Support that the update is supported. Try it first in a staging or VM environment.
+
+---
+
+#### 3.7.3. Maintain BioStar X Software Updates
+
+- Keep BioStar X updated to the latest supported version provided.
+- Subscribe to release notes and advisories at [https://www.supremainc.com/en/support/main.asp](https://www.supremainc.com/en/support/main.asp).
+- Test new releases in a staging environment before production rollout.
+
+---
+
+#### 3.7.4. Keep Database Engines Up to Date
+
+- Apply updates to MariaDB 11.4 or Microsoft SQL Server according to Suprema's security advisories.
+- Avoid running unsupported versions.
+
+---
+
+#### 3.7.5. Manage Dependencies and Runtime Components
+
+- Patch supporting frameworks like Visual C++ Redistributables and Java runtimes.
+- Maintain reverse proxy/WAF software (if used).
+- Update quarterly or whenever advisories are published.
+
+---
+
+#### 3.7.6. Perform Regular Vulnerability Scanning
+
+- Run vulnerability scans on BioStar X hosts quarterly (or monthly in high-security environments).
+- Tools: Nessus, OpenVAS, Qualys, or Microsoft Defender for Endpoint.
+- Schedule scans after patch cycles and track remediation in ticketing systems.
+
+---
+
+#### 3.7.7. Maintain Asset and Patch Inventory
+
+- Keep an inventory of all BioStar X servers: OS versions, database versions, and patch levels.
+- Use automated tools (e.g., SCCM, Intune, Ansible) where possible.
+- Review inventory quarterly.

@@ -1,0 +1,76 @@
+---
+id: security-principle
+title: Core Principles of Secure Access Control
+description: An overview of the foundational security concepts that guide the hardening process.
+keywords: [BioStar X, Security, Access control, Hardening]
+---
+
+Security hardening for an access control system is not just about technical settings — it's about applying proven principles consistently across people, processes, and technology. BioStar X supports these principles by design, but administrators must configure and enforce them correctly.
+
+## Principle of Least Privilege (PoLP)
+
+Users and services should be granted **only the permissions necessary** to perform their tasks — no more, no less.
+
+- Admin accounts should be reserved for configuration and system changes, not daily operations.
+
+- Operators should manage doors, users, and events but not security policies.
+
+- Auditors should have full read-only visibility without the ability to change data.
+
+:::info
+
+Limiting privileges reduces the impact of account compromise. An operator account hijacked by an attacker cannot alter encryption keys or disable logs.
+
+:::
+
+## Separation of Duties
+
+Critical responsibilities should be **split across multiple roles**, so that no single person has unchecked control over the system.
+
+- For example, one administrator manages system configuration, while another operator handles daily access requests.
+
+- Auditors verify changes and monitor logs independently.
+
+:::info
+
+Prevents insider abuse and ensures **checks and balances**. Even if one account is compromised, the attacker cannot control the entire system.
+
+:::
+
+## Defense in Depth
+
+No single security measure is perfect. Instead, layers of security controls should be applied so that if one fails, others remain to protect the system.
+
+- **Network layer**: Firewalls, VLAN segmentation
+
+- **System layer**: Secure OS baseline, patches, antivirus
+
+- **Application layer**: Strong passwords, MFA, encryption
+
+- **Monitoring layer**: Logs, SIEM, alerting
+
+:::info
+
+Attackers often look for weak links. Defense in depth ensures there's no single point of failure.
+
+:::
+
+## Zero Trust Architecture Concepts
+
+Assume no device, user, or network can be trusted by default — **"never trust, always verify."**
+
+- Every login should require authentication (MFA where possible).
+
+- Device-to-server communication should always be encrypted.
+
+- Internal traffic should be segmented and monitored as if it were external.
+
+:::info
+
+Modern threats often originate inside the network (compromised laptops, phishing, malicious insiders). Zero Trust reduces reliance on "trusted perimeters" and enforces continuous verification.
+
+:::
+
+---
+
+These four principles form the **foundation of the hardening guide**. Every configuration recommendation in later chapters — from port settings to directory integration — is a practical application of **PoLP, Separation of Duties, Defense in Depth, and Zero Trust**.

@@ -1,0 +1,69 @@
+---
+id: bsx-privacy-data-security
+title: Personal Data Security
+description: Description
+keywords: [keyword1, keyword2]
+---
+
+#### 4.2.1. Encrypt Personal Data on Database
+
+**Recommendation:**
+
+Enable **Encrypt Personal Data on Database** to ensure all sensitive user and credential information is stored in an encrypted state.
+
+**Path:** `Settings → System → Security → Encrypt Personal Data on Database`
+
+**Scope of Encrypted Data:**
+
+When enabled, the following items are encrypted at rest:
+- Profile images
+- User ID, Name, Phone number, User IP, Email addresses
+- Login ID and Login password
+- Face templates, Fingerprint templates
+- Card ID, Smart card layout keys
+- Custom information for users and visitors
+- Image log files
+
+**Personal Data Encryption Key:**
+
+- Becomes configurable once encryption is set to **Use**.
+- The key must be **32 characters**, using letters, numbers, and symbols.
+- Changing the key triggers re-encryption of all existing data.
+
+💡 **Best Practice:** Generate the key using a **secure random generator**. Store it in a **password vault**. Rotate periodically (e.g., annually) or immediately if compromise is suspected.
+
+**Step by Step:**
+
+1. Log in as Administrator.
+2. Go to `Settings → System → Security`.
+3. Set **Encrypt Personal Data on Database = Use**.
+4. Optionally, click **Change** under **Personal Data Encryption Key**, enter a new **32-character key**, and apply.
+
+> ⚠️ Changing the encryption key will **re-encrypt all existing personal data** — schedule during maintenance windows. Losing the encryption key may make encrypted data unrecoverable.
+
+---
+
+#### 4.2.2. Store Visual Face Image
+
+**Recommendation:**
+
+Disable **Store Visual Face Image** unless there is a strict operational requirement to retain actual facial images.
+
+**Why this matters:**
+
+- **Templates vs. Images**: Templates are mathematical representations of biometric data and are harder to reverse-engineer into a recognizable face.
+- Many privacy regulations (GDPR, PDPA, etc.) treat biometric images as highly sensitive data.
+- Storing images unnecessarily increases legal risk and attack surface.
+
+**Path:**
+
+1. Go to `Settings → Server`.
+2. Enable **Display Expert Settings = Use**.
+3. Under **Expert Settings**, find **Store Visual Face Image**.
+4. Default: **Use** → Recommended: **Not Use**.
+
+**Best Practices:**
+
+- Retain only **templates**, not images, for biometric authentication.
+- If images are required for audit purposes: store in a **separate secure repository** with strict access controls and **short retention periods** (30–60 days).
+- Periodically review settings after upgrades to ensure the value hasn't reverted to default.

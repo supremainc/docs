@@ -1,0 +1,91 @@
+---
+id: network-firewall
+title: 네트워크 및 방화벽
+description: Description
+keywords: [keyword1, keyword2]
+---
+
+BioStar X는 HTTPS, REST, gRPC, WebSocket, Thrift를 통해 서비스를 노출할 수 있으므로 인바운드 및 아웃바운드 연결을 엄격하게 제어하는 것이 중요합니다.
+
+#### 3.3.1. Windows Defender 방화벽 활성화 및 구성
+
+**중요한 이유:**  
+제대로 구성된 방화벽은 명시적으로 승인된 트래픽만 BioStar X에 도달하도록 하여 공격 표면을 크게 줄입니다.
+
+**BioStar X 기본 네트워크 포트**
+
+| 서비스 | 용도 | 기본 포트 |
+|--------|------|----------|
+| BioStar X Core Web Service | HTTPS / 웹 인터페이스 | 5002 |
+|  | Thrift RPC | 9310 |
+| BioStar X Core Service | WebSocket | 9002 |
+|  | FastCGI | 9000 |
+|  | API | 9010 |
+|  | RPC | 51218 |
+| Unified Gateway Service | HTTPS | 443 |
+| Coordinator Service | 클라이언트 통신 | 21810 |
+| Main Server | TCP 서버 | 51212 |
+|  | SSL 서버 | 51213 |
+|  | gRPC | 51219 |
+| Cache Service | 클라이언트 | 10800 |
+|  | 통신 | 47500 |
+|  | 검색 | 47100 |
+
+> **참고**: Communication Server가 배포된 경우 Main Server 통신 포트(51212, 51219)를 동일하게 사용합니다. 배포 토폴로지에 따라 이 포트가 Communication Server와 Main Server 간에 도달 가능한지 확인하십시오.
+
+**단계별 조치:**
+
+1. `wf.msc` 열기
+2. **인바운드 규칙** → 필요하지 않은 규칙 제거 또는 비활성화
+3. 다음에 대한 명시적 허용 규칙 생성:
+   - Unified Gateway HTTPS(443) – 필요한 경우 외부/공용
+   - Core Web Service HTTPS(5002) – 가급적 443을 통해 프록시
+   - 내부 전용 포트(gRPC 51219, Cache 10800/47500/47100, Coordinator 21810, Thrift 9310) → 로컬호스트 또는 신뢰할 수 있는 서브넷에서만 허용
+4. 다른 모든 인바운드 트래픽은 **차단**
+5. **아웃바운드 규칙** → 알려진 신뢰할 수 있는 엔드포인트로만 제한
+
+> ⚠️ 광범위한 "모두 허용" 규칙을 피하십시오. 기본 포트 변경은 약간의 모호성 이점을 제공하지만 방화벽 적용을 대체하지 않습니다.
+
+---
+
+#### 3.3.2. 원격 접근 제한
+
+- RDP를 승인된 관리자로만 제한
+- RDP가 필요한 경우: NLA 사용, VPN 또는 점프 호스트 뒤에 배치
+- 외부 접근에는 VPN 또는 점프 호스트 요구
+
+---
+
+#### 3.3.3. 안전한 네트워크 세분화
+
+- BioStar X 서버를 사용자 네트워크와 분리된 전용 VLAN 또는 DMZ에 배치
+- BioStar X와 필요한 시스템(데이터베이스 서버, API 소비자, 리더) 간의 통신만 허용
+- 관리 접근(RDP, SSH)을 관리자 서브넷으로만 제한
+
+👍 **모범 사례**: 세분화와 호스트 방화벽을 결합하여 **심층 방어** 구현.
+
+---
+
+#### 3.3.4. 네트워크 프로토콜 강화
+
+**SMBv1 비활성화:**
+
+```powershell
+Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
+```
+
+**TLS 1.2+ 시행:**
+- 레지스트리에서 SSL 2.0, SSL 3.0, TLS 1.0, TLS 1.1 비활성화
+- IIS Crypto 또는 `nmap --script ssl-enum-ciphers`로 검증
+
+> ⚠️ 호환성 문제를 방지하기 위해 프로토콜 비활성화 전에 스테이징에서 테스트합니다.
+
+---
+
+#### 3.3.5. 네트워크 침입 감지 및 모니터링
+
+- IDS/IPS(Snort, Suricata 또는 상용 제품) 배포
+- Windows Defender 방화벽 로깅 활성화
+- SIEM으로 로그 전달
+
+방화벽 로그 저장 위치: `%systemroot%\system32\LogFiles\Firewall\pfirewall.log`

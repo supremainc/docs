@@ -1,0 +1,60 @@
+---
+id: patch-maintenance
+title: 패치 및 유지 관리
+description: Description
+keywords: [keyword1, keyword2]
+---
+
+#### 3.7.1. 보안 구성 백업 및 복원
+
+```powershell
+# 그룹 정책 내보내기
+secedit /export /cfg C:\backup\secpol.cfg
+
+# 방화벽 규칙 백업
+netsh advfirewall export "C:\backup\firewall.wfw"
+```
+
+---
+
+#### 3.7.2. 패치 관리 정책 수립
+
+- 운영 체제, 데이터베이스 엔진, BioStar X 소프트웨어, 타사 종속성을 다루는 공식 패치 정책 정의
+- 일정 지정: OS 패치는 2주 이내, 애플리케이션 패치는 1개월 이내
+
+> ⚠️ BioStar X 번들 타사 종속성을 패치하기 전에 Suprema 기술 지원팀에 업데이트가 지원되는지 확인하고 스테이징 또는 VM 환경에서 먼저 테스트합니다.
+
+---
+
+#### 3.7.3. BioStar X 소프트웨어 업데이트 유지
+
+- BioStar X를 제공된 최신 지원 버전으로 최신 상태 유지
+- [Suprema 지원 페이지](https://www.supremainc.com/en/support/main.asp)에서 릴리스 노트 및 보안 공지 구독
+
+---
+
+#### 3.7.4. 데이터베이스 엔진 최신 상태 유지
+
+- Suprema의 보안 권고에 따라 MariaDB 11.4 또는 Microsoft SQL Server 업데이트 적용
+- 지원되지 않는 버전 실행 금지
+
+---
+
+#### 3.7.5. 종속성 및 런타임 구성 요소 관리
+
+- Visual C++ Redistributables, Java 런타임 등 지원 프레임워크 패치
+- 분기별 또는 권고 사항 발행 시마다 업데이트
+
+---
+
+#### 3.7.6. 정기적인 취약점 스캐닝 수행
+
+- BioStar X 호스트에 분기별(또는 고보안 환경에서는 월별) 취약점 스캔 실행
+- 도구: Nessus, OpenVAS, Qualys, Microsoft Defender for Endpoint
+
+---
+
+#### 3.7.7. 자산 및 패치 인벤토리 유지
+
+- 모든 BioStar X 서버의 OS 버전, 데이터베이스 버전, 패치 수준 인벤토리 유지
+- SCCM, Intune, Ansible 등 자동화 도구 사용

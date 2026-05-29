@@ -1,0 +1,93 @@
+---
+id: network-firewall
+title: Network and Firewall
+description: Description
+keywords: [keyword1, keyword2]
+---
+
+Securing the network perimeter and host-based firewall settings is critical for protecting BioStar X against unauthorized access and lateral movement in the network. Since BioStar X can expose services over HTTPS, REST, gRPC, WebSockets, and Thrift, it's important to strictly control inbound and outbound connections.
+
+#### 3.3.1. Enable and Configure Windows Defender Firewall
+
+**Why this matters:**
+
+A properly configured firewall ensures that only explicitly authorized traffic reaches BioStar X, significantly reducing attack surface.
+
+**BioStar X Default Network Ports**
+
+| **Service** | **Purpose** | **Default Port(s)** |
+|-------------|-------------|---------------------|
+| BioStar X Core Web Service | HTTPS / Web Interface | 5002 |
+|  | Thrift RPC | 9310 |
+| BioStar X Core Service | WebSocket | 9002 |
+|  | FastCGI | 9000 |
+|  | API | 9010 |
+|  | RPC | 51218 |
+| Unified Gateway Service | HTTPS | 443 |
+| Coordinator Service | Client Communication | 21810 |
+| Main Server | TCP Server | 51212 |
+|  | SSL Server | 51213 |
+|  | gRPC | 51219 |
+| Cache Service | Client | 10800 |
+|  | Communication | 47500 |
+|  | Discovery | 47100 |
+
+> **Note:** When Communication Server is deployed, it uses the same Main Server communication ports (51212, 51219). Administrators should ensure these ports are reachable between the Communication Server and the Main Server according to the deployment topology.
+
+**Step-by-step:**
+
+1. Open **Windows Defender Firewall with Advanced Security** (`wf.msc`).
+2. Go to **Inbound Rules** → remove or disable rules that are not required.
+3. Create explicit allow rules for:
+   - **Unified Gateway HTTPS (443)** – external/public if required.
+   - **Core Web Service HTTPS (5002)** – but ideally proxied through 443.
+   - Internal-only ports (gRPC 51219, Cache 10800/47500/47100, Coordinator 21810, Thrift 9310) → allow only from localhost or trusted subnets.
+4. Set all other inbound traffic to **Block**.
+5. Go to **Outbound Rules** → restrict to known trusted endpoints.
+
+> ⚠️ Avoid broad "Allow All" rules. Changing default ports provides minor obscurity benefits but does not replace firewall enforcement.
+
+---
+
+#### 3.3.2. Limit Remote Access
+
+- Restrict Remote Desktop (RDP) to authorized administrators only.
+- If RDP is required: use NLA, place server behind a VPN or jump host.
+- If not needed → disable it (`System Properties → Remote settings`).
+
+---
+
+#### 3.3.3. Secure Network Segmentation
+
+- Place BioStar X servers in a dedicated VLAN or DMZ separated from user networks.
+- Only allow communication between BioStar X and required systems (e.g., database server, API consumers, readers).
+- Restrict management access (RDP, SSH) to admin subnets only.
+
+👍 **Best Practice:** Combine segmentation with host firewalls for **defense in depth**.
+
+---
+
+#### 3.3.4. Harden Network Protocols
+
+**Disable SMBv1:**
+
+```powershell
+Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
+```
+
+**Enforce TLS 1.2+:**
+- Registry: `HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols`
+- Disable SSL 2.0, SSL 3.0, TLS 1.0, and TLS 1.1.
+- Verify with IIS Crypto or `nmap --script ssl-enum-ciphers`.
+
+> ⚠️ Test in staging before disabling protocols to avoid compatibility issues.
+
+---
+
+#### 3.3.5. Network Intrusion Detection & Monitoring
+
+- Deploy IDS/IPS (Snort, Suricata, or commercial).
+- Enable Windows Defender Firewall logging for dropped packets and allowed connections.
+- Forward logs to SIEM for centralized monitoring.
+
+Firewall log path: `%systemroot%\system32\LogFiles\Firewall\pfirewall.log`

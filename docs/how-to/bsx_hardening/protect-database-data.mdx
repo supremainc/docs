@@ -1,0 +1,112 @@
+---
+id: protect-database-data
+title: 데이터베이스 및 데이터 보호
+description: Description
+keywords: [keyword1, keyword2]
+---
+
+BioStar X는 배포에 따라 **MariaDB(11.4)** 또는 **Microsoft SQL Server**를 사용합니다.
+
+#### 3.5.1. 인증 및 접근 제어 시행
+
+- 모든 데이터베이스 연결에 인증 요구
+- BioStar X에 전용 데이터베이스 계정 사용(공유 또는 기본 계정 사용 금지)
+- 필요한 최소 권한 역할만 할당(애플리케이션 데이터에 대한 읽기/쓰기, 스키마 수정 불가)
+- 사용하지 않거나 과도한 권한을 가진 사용자를 위해 데이터베이스 계정 정기 감사
+- IP 기반 접근 항목에서 오래된 항목 제거
+
+> ⚠️ BioStar X가 sa 또는 동급 슈퍼유저 계정으로 연결되도록 허용하지 마십시오.
+
+---
+
+#### 3.5.2. 전송 중 데이터 암호화
+
+**MariaDB 설정 (`my.cnf`):**
+
+```ini
+[mysqld]
+require_secure_transport=ON
+ssl_cert=/etc/mysql/server-cert.pem
+ssl_key=/etc/mysql/server-key.pem
+ssl_ca=/etc/mysql/ca-cert.pem
+```
+
+검증:
+```sql
+SHOW VARIABLES LIKE '%ssl%';
+```
+
+**SQL Server 설정:** SQL Server 구성 관리자 → MSSQLSERVER 프로토콜 → 암호화 강제 활성화 → 신뢰할 수 있는 인증서 설치
+
+---
+
+#### 3.5.3. 미사용 데이터 암호화
+
+**SQL Server TDE:**
+
+```sql
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'StrongP@ssw0rd!';
+CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'BioStarX';
+CREATE DATABASE ENCRYPTION KEY WITH ALGORITHM = AES_256 ENCRYPTION BY SERVER CERTIFICATE MyServerCert;
+ALTER DATABASE biostarx_ac SET ENCRYPTION ON;
+```
+
+**MariaDB:** `file_key_management` 플러그인 활성화 및 안전한 키파일에 암호화 키 정의
+
+> ⚠️ 성능 오버헤드가 약 3–5% 있습니다. DB를 다른 서버로 이동하거나 복원할 경우 인증서와 키가 필요합니다. BioStar X의 복원 기능은 암호화된 백업을 지원하지 않으므로 수동 처리가 필요합니다.
+
+---
+
+#### 3.5.4. 데이터베이스 감사 활성화
+
+**MariaDB:**
+
+```sql
+INSTALL SONAME 'server_audit';
+SET GLOBAL server_audit_logging=ON;
+SET GLOBAL server_audit_events='CONNECT,QUERY_DML,QUERY_DDL';
+```
+
+**SQL Server:**
+
+```sql
+CREATE SERVER AUDIT BioStarX_Audit TO FILE (FILEPATH = 'C:\AuditLogs\');
+CREATE SERVER AUDIT SPECIFICATION BioStarX_Spec FOR SERVER AUDIT BioStarX_Audit ADD (FAILED_LOGIN_GROUP);
+ALTER SERVER AUDIT BioStarX_Audit WITH (STATE = ON);
+```
+
+---
+
+#### 3.5.5. 백업 및 안전한 저장
+
+- BioStar X 데이터베이스를 정기적으로 암호화하여 백업
+- 백업은 동일한 호스트가 아닌 별도의 보안 서버에 저장
+- 주기적으로 백업 복원 테스트
+
+**SQL Server 암호화 백업:**
+
+```sql
+BACKUP DATABASE biostarx_db TO DISK = 'D:\backups\biostarx_db.bak' 
+WITH ENCRYPTION (ALGORITHM = AES_256, SERVER CERTIFICATE = MyServerCert);
+```
+
+**MariaDB:**
+
+```bash
+mariadb-dump --all-databases --ssl --result-file=/secure/backups/biostarx.sql
+gpg -c /secure/backups/biostarx.sql
+```
+
+> ⚠️ **제품 한계**: BioStar X 백업 기능(수동 또는 예약)은 암호화되지 않습니다. BioStar X 복원 기능은 암호화된 백업을 지원하지 않습니다.
+
+---
+
+#### 3.5.6. 원격 접근 제한
+
+**MariaDB (`my.cnf`):**
+
+```ini
+bind-address=127.0.0.1
+```
+
+**SQL Server:** 방화벽 규칙을 구성하여 BioStar X 애플리케이션 서버에서만 연결을 허용합니다.

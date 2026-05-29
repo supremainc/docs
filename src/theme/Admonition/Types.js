@@ -5,19 +5,21 @@ import AdmonitionTypeInfo from '@theme/Admonition/Type/Info';
 import AdmonitionTypeWarning from '@theme/Admonition/Type/Warning';
 import AdmonitionTypeDanger from '@theme/Admonition/Type/Danger';
 import AdmonitionTypeCaution from '@theme/Admonition/Type/Caution';
+import AdmonitionTypeImportant from '@theme/Admonition/Type/Important';
 const admonitionTypes = {
   note: AdmonitionTypeNote,
   tip: AdmonitionTypeTip,
   info: AdmonitionTypeInfo,
   warning: AdmonitionTypeWarning,
   danger: AdmonitionTypeDanger,
+  important: AdmonitionTypeImportant,
 };
 // Undocumented legacy admonition type aliases
 // Provide hardcoded/untranslated retrocompatible label
 // See also https://github.com/facebook/docusaurus/issues/7767
 const admonitionAliases = {
   secondary: (props) => <AdmonitionTypeNote title="secondary" {...props} />,
-  important: (props) => <AdmonitionTypeInfo title="important" {...props} />,
+  important: (props) => <AdmonitionTypeImportant {...props} />,
   success: (props) => <AdmonitionTypeTip title="success" {...props} />,
   caution: AdmonitionTypeCaution,
 };
