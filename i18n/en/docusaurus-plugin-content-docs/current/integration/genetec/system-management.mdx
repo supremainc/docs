@@ -175,59 +175,6 @@ If you'd like to **extract face templates from cardholder profile images** in GS
 
    <Image src='/img/integration/genetec/device-management3.png' width={600} alone />
 
-## View the Device Sync Information
-
-1. In the **Config Tool**, click the **Plugins** under **Tasks**.
-
-   <Image src='/img/integration/genetec/config-tool-tasks-plugins.png' width={800} alone />
-
-1. Click the **Suprema Device Plugin**.
-
-   <Image src='/img/integration/genetec/suprema-device-plugin.png' alone />
-
-1. Go to **Device Sync Information** tab.
-
-   <Image src='/img/integration/genetec/device-sync-information1.png' alone />
-
-1. Synchronization information of connected Suprema devices can be checked.
-
-   <Image src='/img/integration/genetec/device-sync-information2.png' width={800} alone />
-
-   <Image src='/img/integration/genetec/device-sync-information3.png' width={800} alone />
-
-   <div className='overflow-x cols3--10-30-60'>
-   | No. | Item | Description |
-   | :--: | -- | -- |
-   | 1 | **Device ID** | Displays the Suprema device ID. |
-   | 2 | **Device Name** | Displays the Suprema device name. |
-   | 3 | **Online Status** | Displays the network status of the device.<br/>- **True** / **False** |
-   | 4 | **Sync Status** | Displays the synchronization status of the device.<br/>-	**Idle** /Cache loading/ Biometric downloading/ **Syncing** |
-   | 5 | **Device Model** | Displays the Suprema device model. |
-   | 6 | **IP Address** | Displays the Suprema device IP Address. |
-   | 7 | **Device Port** | Displays the Suprema device port. |
-   | 8 | **Device Firmware Version** | Displays the Suprema device firmware version. |
-   | 9 | **Failed Users** | Allows checking users who failed to synchronize. |
-   | 10 | **Doors (syncing / failed / total)** | Displays the synchronization status of the door. |
-   | 11 | **Schedules (syncing / failed / total)** | Displays the synchronization status of the schedule. |
-   | 12 | **Access Levels (syncing / failed / total)** | Displays the synchronization status of the access level. |
-   | 13 | **Access Groups (syncing / failed / total)** | Displays the synchronization status of the access group. |
-   | 14 | **Users (syncing / failed / total)** | Displays the synchronization status of the cardholder. |
-   | 15 | **Last Trigger Time** | The time when synchronization with the device was last triggered. |
-   | 16 | **Last Success Time** | The time when synchronization with the device was last completed successfully. |
-   </div>
-
-   :::info
-
-   The values displayed for each synchronization status are as follows:
-
-   * **syncing**: Number of items currently being synchronized with the device.
-
-   * **failed**: Number of items that failed to synchronize with the device.
-
-   * **total**: Number of items that have been successfully synchronized.
-
-   :::
-
 ## Editing Device Settings and Information
 
 Settings and information of registered devices can be edited.
@@ -706,25 +653,102 @@ Root Cause:
 
 * Therefore, there is **no way to pre-configure input types before assigning the device to a Door** in Genetec.
 
----
+:::
 
-<Image src='/img/common/ico-caution.svg' ico alone /> **Caution**
+:::caution
 
-Any input type changes made via:
+* Any input type changes made via:
 
-**Config Tool** → **Access Control** → **Cloud Link** → **Peripherals Tab** will **not apply to the Suprema device** directly.
+   **Config Tool** → **Access Control** → **Cloud Link** → **Peripherals Tab** will **not apply to the Suprema device** directly.
 
----
+   <br/>
 
-**Plugin’s Auto Assignment Logic**
+   **Plugin’s Auto Assignment Logic**
 
-<div className='overflow-x table-fixed'>
-| Input Number | Input Type Assigned by Plugin |
-| :--: | :--: |
-| Odd Numbers | NO (Normally Open) |
-| Even Numbers | NC (Normally Closed) |
-</div>
+   <div className='overflow-x table-fixed'>
+   | Input Number | Input Type Assigned by Plugin |
+   | :--: | :--: |
+   | Odd Numbers | NO (Normally Open) |
+   | Even Numbers | NC (Normally Closed) |
+   </div>
 
-This automatic assignment helps ensure compatibility when mapping inputs post-Door configuration.
+   This automatic assignment helps ensure compatibility when mapping inputs post-Door configuration.
+
+* After configuring or updating a door, click **Sync Now** in **Suprema Device Plugin** → **Device Sync Information** to apply the changes to the device.
+
+   <Image src='/img/integration/genetec/area-view-sync-now.png' width={800} alone />
 
 :::
+
+## View the Device Sync Information
+
+1. In the **Config Tool**, click the **Plugins** under **Tasks**.
+
+   <Image src='/img/integration/genetec/config-tool-tasks-plugins.png' width={800} alone />
+
+1. Click the **Suprema Device Plugin**.
+
+   <Image src='/img/integration/genetec/suprema-device-plugin.png' alone />
+
+1. Go to **Device Sync Information** tab.
+
+   <Image src='/img/integration/genetec/device-sync-information1.png' alone />
+
+1. Synchronization information of connected Suprema devices can be checked.
+
+   <Image src='/img/integration/genetec/device-sync-information2.png' width={800} alone />
+
+   <Image src='/img/integration/genetec/device-sync-information3.png' width={800} alone />
+
+   <div className='overflow-x cols3--10-30-60'>
+   | No. | Item | Description |
+   | :--: | -- | -- |
+   | 1 | **Device ID** | Displays the Suprema device ID. |
+   | 2 | **Device Name** | Displays the Suprema device name. |
+   | 3 | **Online Status** | Displays the network status of the device.<br/>- **True** / **False** |
+   | 4 | **Sync Status** | Displays the synchronization status of the device.<br/>-	**Idle** /Cache loading/ Biometric downloading/ **Syncing** |
+   | 5 | **Device Model** | Displays the Suprema device model. |
+   | 6 | **IP Address** | Displays the Suprema device IP Address. |
+   | 7 | **Device Port** | Displays the Suprema device port. |
+   | 8 | **Device Firmware Version** | Displays the Suprema device firmware version. |
+   | 9 | **Failed Users** | Allows checking users who failed to synchronize. |
+   | 10 | **Doors (syncing / failed / total)** | Displays the synchronization status of the door. |
+   | 11 | **Schedules (syncing / failed / total)** | Displays the synchronization status of the schedule. |
+   | 12 | **Access Levels (syncing / failed / total)** | Displays the synchronization status of the access level. |
+   | 13 | **Access Groups (syncing / failed / total)** | Displays the synchronization status of the access group. |
+   | 14 | **Users (syncing / failed / total)** | Displays the synchronization status of the cardholder. |
+   | 15 | **Last Trigger Time** | The time when synchronization with the device was last triggered. |
+   | 16 | **Last Success Time** | The time when synchronization with the device was last completed successfully. |
+   </div>
+
+   :::info
+
+   The values displayed for each synchronization status are as follows:
+
+   * **syncing**: Number of items currently being synchronized with the device.
+
+   * **failed**: Number of items that failed to synchronize with the device.
+
+   * **total**: Number of items that have been successfully synchronized.
+
+   :::
+
+## Card Format Setting
+
+1. In the **Config Tool**, click the **Suprema Plugin Configuration** under **Tasks**.
+
+   <Image src='/img/integration/genetec/card-format-setting1.png' width={800} alone />
+
+1. Select card type and format.
+
+   <Image src='/img/integration/genetec/card-format-setting2.png' width={800} alone />
+
+   * Byte Order: Supports MSB or LSB
+
+   * CSN Card_Format type: After enabling the **CSN Card_Format type** and selecting a Wiegand format, the **Plugin converts the card data received from the device into the selected Wiegand format and delivers it to the Cloud Link**.
+
+   * Wiegand Card Setting: Devices can read wiegand cards based on the **selected Wiegand Card Format**.
+
+   * Custom Credential: When using a Custom Credential Format, compatibility with Suprema devices must be verified in advance.
+
+1. Click **Save button** to set selected card type and format into all devices.
