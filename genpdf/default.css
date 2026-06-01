@@ -635,20 +635,100 @@ details.deviceInfo summary, details.faq summary {
   width: 100%;
 }
 
-.doc-content img[src*='component-t10-torx-driver-vionyx'] {
-  width: 20% !important;
-}
-
-.doc-content img[src*='cable-vionyx'] {
-  width: 50% !important;
-}
-
 .doc-content img[src*='component-connection-cables-vionyx'] {
-  Height: 20% !important;
+  width: 150px !important;
+}
+
+.doc-content img[src*='component-t10-torx-driver-vionyx'] {
+  width: 10px !important;
 }
 
 .doc-content img[src*='ico-content-ai-hide.svg'] {
   width: 50% !important;
+}
+
+.doc-content img[src*='installation1-vionyx'] {
+  width: 351px !important;
+}
+
+.doc-content img[src*='installation2-vionyx'] {
+  width: 381px !important;
+}
+
+.doc-content img[src*='installation3-vionyx'] {
+  width: 239px !important;
+}
+
+.doc-content img[src*='installation4-vionyx'] {
+  width: 240px !important;
+}
+
+.doc-content img[src*='installation5-vionyx'] {
+  width: 512px !important;
+}
+
+.doc-content img[src*='installation-safe-wire'] {
+  width: 240px !important;
+}
+
+.doc-content img[src*='carabiner-type'] {
+  width: 130px !important;
+}
+
+.doc-content img[src*='ring-type'] {
+  width: 130px !important;
+}
+
+.doc-content img[src*='ring-lug-terminal-type'] {
+  width: 300px !important;
+}
+
+.doc-content img[src*='installation6-vionyx'] {
+  width: 315px !important;
+}
+
+.doc-content img[src*='installation7-vionyx'] {
+  width: 298px !important;
+}
+
+.doc-content img[src*='installation8-vionyx'] {
+  width: 454px !important;
+}
+
+.doc-content img[src*='installation9-vionyx'] {
+  width: 240px !important;
+}
+
+.doc-content img[src*='installation10-vionyx'] {
+  width: 551px !important;
+}
+
+.doc-content img[src*='cable-waterproofing-vionyx'] {
+  width: 60% !important;
+}
+
+.doc-content img[src*='installation11-vionyx'] {
+  width: 240px !important;
+}
+
+.doc-content img[src*='installation12-vionyx'] {
+  width: 250px !important;
+}
+
+.doc-content img[src*='installation13-vionyx'] {
+  width: 240px !important;
+}
+
+.doc-content img[src*='installation14-vionyx'] {
+  width: 334px !important;
+}
+
+.doc-content img[src*='installation15-vionyx'] {
+  width: 351px !important;
+}
+
+.doc-content img[src*='change-silicagel-vionyx'] {
+  width: 684px !important;
 }
 
 .doc-content .container {
