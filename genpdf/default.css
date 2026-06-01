@@ -580,8 +580,16 @@ details.deviceInfo summary, details.faq summary {
   width: 150px !important;
 }
 
+.doc-content img[src*='component-diode1-vionyx'] {
+  width: 120px !important;
+}
+
+.doc-content img[src*='component-120-resistor1-vionyx'] {
+  width: 120px !important;
+}
+
 .doc-content img[src*='component-t10-torx-driver-vionyx'] {
-  width: 10px !important;
+  width: 30px !important;
 }
 
 .doc-content img[src*='ico-content-ai-hide.svg'] {
