@@ -92,11 +92,57 @@ html[lang='ko-KR'] * {
   * {
     word-break: keep-all;
   }
+  .markdown header {
+    h1.ce--only::after {
+      content: "CE향 제품";
+    }
+  }
+  .theme-doc-sidebar-menu {
+    li.ce--only a span::after {
+      content: "CE향 제품";
+    }
+  }
+}
+
+html[lang='en-US'] {
+  .markdown header {
+    h1.ce--only::after {
+      content: "CE products only";
+    }
+  }
+  .theme-doc-sidebar-menu {
+    li.ce--only a span::after {
+      content: "CE products only";
+    }
+  }
+}
+
+html[lang='es-419'] *, html[lang='es'] {
+  .markdown header {
+    h1.ce--only::after {
+      content: "Solo productos CE";
+    }
+  }
+  .theme-doc-sidebar-menu {
+    li.ce--only a span::after {
+      content: "Solo productos CE";
+    }
+  }
 }
 
 html[lang='ja-JP'] *, html[lang='ja'] * {
   font-family: 'Noto Sans JP', sans-serif;
+  .theme-doc-sidebar-menu {
+    li.ce--only a span::after {
+      content: "CE 製品のみ";
+    }
+  }
   .markdown {
+    header {
+      h1.ce--only::after {
+        content: "CE 製品のみ";
+      }
+    }
     .bug--lists {
       ol {
         li:has(>.badge) {
@@ -313,6 +359,15 @@ div[class*='docItemCol'] {
       transition: none;
     }
   }
+  li.ce--only a span::after {
+    display: inline-block;
+    font-size: .8rem;
+    background: var(--ifm-color-cmd);
+    color: #fff;
+    padding: 0.1rem 0.3rem;
+    border-radius: 10px;
+    margin-left: 0.5rem;
+  }
   li {
     hr {
       margin: 1rem 64px 1rem 12px;
@@ -480,6 +535,15 @@ body[data-rh] .redocusaurus {
       border: 1px solid;
       border-radius: 6px;
       top: -.3rem;
+    }
+    &.ce--only::after {
+      display: inline-block;
+      font-size: 1.8rem;
+      background: var(--ifm-color-cmd);
+      color: #fff;
+      padding: 0.2rem 0.7rem;
+      border-radius: 20px;
+      margin-left: 1rem;
     }
   }
   h1, h2, h3, h4, h5, h6 {
