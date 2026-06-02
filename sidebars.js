@@ -859,7 +859,11 @@ const sidebars = {
         id: 'how-to/index',
       },
       items: [
-        'how-to/master-admin',
+        {
+          type: 'doc',
+          id: 'how-to/master-admin',
+          className: 'ce--only'
+        }
       ]
     }
   ],
