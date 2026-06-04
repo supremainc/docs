@@ -65,23 +65,20 @@ keywords: [BioStar X, 모바일, 사용자 등록, 추가]
 </Column>
 <Column className='padding--l40'>
 
-* <Cmd>ID</Cmd>: 사용자에게 부여되는 고유 아이디입니다. 시스템에 의해 자동 생성된 값이 기본 입력되어 있습니다. 관리자가 직접 입력할 수도 있습니다.
+* <Cmd>ID</Cmd>: 사용자에게 부여되는 고유 아이디입니다. 시스템에 의해 자동 생성된 값이 기본 입력되어 있습니다. 직접 입력할 수도 있습니다.
 
 * <Cmd>Name</Cmd>: 사용자의 이름을 입력하세요.
 
-* <Cmd>Account Level</Cmd>: 사용자의 관리자 등급을 설정할 수 있습니다.
+* <Cmd>Account Level</Cmd>: 사용자의 관리자 등급을 선택할 수 있습니다.
 
-   * <Cmd>None</Cmd>: 관리자 권한이 없는 일반 사용자입니다.
-
-   * <Cmd>Administrator</Cmd>: 모든 메뉴를 사용할 수 있는 관리자 등급입니다.
-
-   * <Cmd>User Operator</Cmd>: <Cmd sid='shell.header.user' product='2' /> 메뉴에서 **읽기**, **쓰기** 권한을 가집니다.
-
-   * <Cmd>Monitoring Operator</Cmd>: <Cmd sid='shell.header.arena' />과 <Cmd sid='shell.header.data' />, <Cmd sid='shell.header.dashboard' /> 메뉴에서 **읽기**, **쓰기** 권한을 가집니다.
-
-   * <Cmd>T&A Operator</Cmd>: <Cmd sid='common.gnb.time_attendance' product='2' /> 메뉴에서 **읽기**, **쓰기** 권한을 가집니다.
-
-   * <Cmd>Visitor Operator</Cmd>: <Cmd sid='common.gnb.visitor' product='2' /> 메뉴에서 **읽기**, **쓰기** 권한을 가집니다.
+   | 관리자 등급 | > | 메뉴별 권한 |
+   | --- | --- | --- |
+   | <Cmd>None</Cmd> | \- | 없음 |
+   | <Cmd>Administrator</Cmd> | 모든 메뉴 | 모든 권한 |
+   | <Cmd>User Operator</Cmd> | <Cmd sid='shell.header.user' /> | 읽기, 쓰기 |
+   | <Cmd>Monitoring Operator</Cmd> | <Cmd sid='shell.header.arena' />, <Cmd sid='shell.header.data' />, <Cmd sid='shell.header.dashboard' /> | 읽기, 쓰기 |
+   | <Cmd>T&A Operator</Cmd> | <Cmd sid='common.gnb.time_attendance' product='2' /> | 읽기, 쓰기 |
+   | <Cmd>Visitor Operator</Cmd> | <Cmd sid='common.gnb.visitor' product='2' /> | 읽기, 쓰기 |
 
    :::note
 
@@ -101,7 +98,7 @@ keywords: [BioStar X, 모바일, 사용자 등록, 추가]
 
 * <Cmd>Period</Cmd>: 사용자 계정을 사용할 기간을 설정하세요. 시작 날짜와 종료 날짜를 설정하여 해당 기간 동안만 사용자 계정을 사용할 수 있습니다.
 
-* <Cmd>Access Group</Cmd>: 사용자의 출입 그룹을 설정해 조직별, 부서별로 출입을 제한할 수 있습니다.
+* <Cmd>Access Group</Cmd>: 사용자의 출입 그룹을 선택할 수 있습니다.
 
 :::info
 
@@ -174,9 +171,9 @@ keywords: [BioStar X, 모바일, 사용자 등록, 추가]
 
 1. <Cmd>Credential</Cmd> → <Cmd>Fingerprint</Cmd>를 탭하세요.
 
-1. <Cmd>Device</Cmd>를 탭하고 지문을 등록할 장치를 선택하고 <Cmd>Yes</Cmd>를 탭하세요.
+1. 지문을 등록할 장치를 선택하려면 <Cmd>Device</Cmd>를 탭하세요.
 
-1. <Cmd>Add Device</Cmd> 팝업에서 지문 등록을 위한 장치를 선택하고 <Cmd>Yes</Cmd>를 탭하세요.
+1. <Cmd>Add Device</Cmd> 팝업에서 지문 등록 장치를 선택하고 <Cmd>Yes</Cmd>를 탭하세요.
 
 1. <Cmd>Scan Quality</Cmd>에서 지문 품질을 조절할 수 있습니다. 기본값은 **80**입니다. 설정한 품질 수준에 미치지 않으면 지문 정보를 등록할 수 없습니다.
 
@@ -312,7 +309,7 @@ keywords: [BioStar X, 모바일, 사용자 등록, 추가]
 
 ### 출입 카드 등록
 
-출입을 위한 인증 수단으로 새로운 출입 카드를 등록하거나 이미 등록된 출입 카드를 할당할 수 있습니다. 출입 카드 등록은 카드 리더기에 카드를 스캔해 등록하는 방법과 카드 번호를 수동으로 입력하는 방법이 있습니다.
+출입을 위한 인증 수단으로 새로운 출입 카드를 등록하거나 이미 등록된 출입 카드를 할당할 수 있습니다. 출입 카드 등록은 카드 리더기에 카드를 스캔해 등록하는 방법과 이미 등록된 카드를 할당하는 방법, 카드 번호를 수동으로 입력하는 방법이 있습니다.
 
 #### CSN 카드
 

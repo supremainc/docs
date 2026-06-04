@@ -191,6 +191,7 @@ function createSidebars(preview) {
         'platform/biostar_x_mobile/view-past-events',
         'platform/biostar_x_mobile/check-resolve-alerts',
         'platform/biostar_x_mobile/start-rollcall',
+        'platform/biostar_x_mobile/use-quickaction',
         'platform/biostar_x_mobile/change-password',
         'platform/biostar_x_mobile/appendices',
       ]
