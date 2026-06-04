@@ -1,0 +1,112 @@
+---
+id: monitoring-audit
+title: Monitoring and Auditing
+description: Explains how to maintain continuous visibility into the security posture of the BioStar X server through logging and auditing at the operating system, application, and database levels.
+---
+
+Monitoring and auditing ensure visibility into the security posture of BioStar X. Effective auditing requires enabling logs at the **operating system**, **application**, and **database** levels, centralizing them, and reviewing them regularly.
+
+## Define Logging Policy
+
+Establish a logging policy that specifies what events must be logged, retention periods, and who is responsible for review.
+
+At minimum, log:
+
+* Authentication attempts (success/failure)
+
+* Privilege changes
+
+* Configuration changes
+
+* Database access
+
+* Firewall activity
+
+:::info
+
+**Retention**: typically 90–180 days locally, longer in centralized systems.
+
+:::
+
+## Enable Windows event logging and monitoring
+
+* Open Event Viewer and ensure logging is enabled for: Security, Application, System.
+
+* Configure log size (at least 1GB for Security logs).
+
+* Set up auditing for the following policies in **Local Security Policy** (`secpol.msc`) → **Local Policies** → **Audit Policy**.
+
+   > Logon events, privilege use, policy change, account logon, object access.
+
+
+## Centralized log forwarding and SIEM integration
+
+* Forward logs to a central SIEM or log management system.
+
+* Supported options: Splunk, Elastic Stack, Microsoft Sentinel, or Windows Event Forwarding (WEF).
+
+:::note
+
+**Best Practice**
+
+Encrypt logs in transit (TLS) to prevent interception or tampering.
+
+:::
+
+
+## Enable application-level auditing
+
+* From BioStar X → <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' />, find <Cmd sid='setting.server.logLevelManagement' product='2' />.
+
+* Log file location: `[BioStar X Install Path]\logs\acs.log`
+
+* Set permissions so only the BioStar X service account and administrators can access.
+
+* Forward logs to SIEM or central logging solution.
+
+
+## Enable database auditing
+
+* **MariaDB**: Use the Audit Plugin (`server_audit`).
+
+* **SQL Server**: Use SQL Server Audit (logs to file or event log).
+
+* Forward to central log system.
+
+:::info
+
+For more information on enabling database auditing, see <DocLink docId='how-to/bsx_hardening/protect-database-data#enableDatabaseAudit' />.
+
+:::
+
+
+## Monitor firewall and network activity
+
+* In **Windows Defender Firewall with Advanced Security** (`wf.msc`) → **Properties** → **Logging**, enable logging of dropped packets.
+
+* Store logs at `%systemroot%\system32\LogFiles\Firewall\pfirewall.log`.
+
+* Forward logs to SIEM.
+
+* Deploy IDS/IPS (Snort, Suricata, Zeek) to detect anomalies.
+
+:::caution
+
+Firewall logs grow quickly — implement log rotation and secure storage.
+
+:::
+
+
+## Review and alerting
+
+Establish automated alerts for critical events:
+
+* Multiple failed logins
+
+* Privilege escalation
+
+* Unexpected service startup/shutdown
+
+* Database schema modifications
+
+Conduct manual log reviews periodically.

@@ -5,31 +5,13 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
-import ConfigLocalized from './docusaurus.config.localized.json';
+import {getLocalizedConfigValue} from './utils/localization.js';
 const {rehypeExtendedTable} = require("rehype-extended-table");
 
 const isDev = process.env.NODE_ENV === 'development';
 const isPreview = process.env.CONTEXT === 'preview';
 const locale = process.env.DOCUSAURUS_CURRENT_LOCALE; // 현재 로케일
 const __DOCUSAURUS_MERMAID_LAYOUT_ELK_ENABLED__ = false;
-
-// Locale constants
-const defaultLocale = 'ko';
-
-function getLocalizedConfigValue(key) {
-  const currentLocale = process.env.DOCUSAURUS_CURRENT_LOCALE ?? defaultLocale;
-  const values = ConfigLocalized[key];
-  if (!values) {
-    throw new Error(`Localized config key=${key} not found`);
-  }
-  const value = values[currentLocale] ?? values[defaultLocale];
-  if (!value) {
-    throw new Error(
-      `Localized value for config key=${key} not found for both currentLocale=${currentLocale} or defaultLocale=${defaultLocale}`,
-    );
-  }
-  return value;
-}
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -560,7 +542,7 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        additionalLanguages: [ 'powershell', 'bash' ],
+        additionalLanguages: [ 'powershell', 'bash', 'sql', 'ini' ],
         theme: prismThemes.github,
         darkTheme: prismThemes.vsDark,
       },

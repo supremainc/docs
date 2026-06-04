@@ -1,0 +1,92 @@
+---
+id: service-application-hierarchy
+title: Service and Application Layer
+description: Explains how to harden the BioStar X software layer through dedicated service accounts, configuration file encryption, and application controls.
+---
+
+The Service and Application Layer focuses on securing the software components and runtime environment of BioStar X.
+
+## Apply principle of least privilege to services
+
+* Run BioStar X services under dedicated service accounts instead of Local System or Administrator.
+
+* Grant only the minimal rights required (logon as a service, read/write specific directories).
+
+* Use separate accounts for each BioStar X service component where possible.
+
+### Step-by-step
+
+1. Create a dedicated local user account for BioStar X services.
+
+1. Open **Services.msc** → Right-click the BioStar X service → **Properties** → **Log On** tab.
+
+1. Assign the dedicated account.
+
+1. Apply file system ACLs so the account can only access necessary directories.
+
+1. Deny interactive logon rights for these accounts.
+
+:::caution
+
+Using shared accounts between multiple services makes it harder to audit breaches.
+
+:::
+
+
+## Secure application configuration files
+
+* Restrict access to configuration files that contain secrets (e.g., database connection strings, API keys).
+
+* Use Windows Data Protection API (DPAPI) or Key Vault solutions if supported.
+
+* Store secrets separately from binaries; avoid hard-coding.
+
+### Protect encryption key files (`util/` directory)
+
+* Restrict NTFS permissions so only the BioStar X service account has read access.
+
+* Deny access to standard users and interactive logins.
+
+* Back up the `util/` directory securely before upgrades (offline storage recommended).
+
+:::caution
+
+Loss or compromise of these files may result in data loss or unauthorized decryption.
+
+:::
+
+:::note
+
+**Best Practice**
+
+Rotate stored secrets (DB passwords, API keys) periodically.
+
+:::
+
+
+## Maintain application runtime components
+
+* Keep BioStar X and its dependent runtime components (e.g., Visual C++ Redistributables) up to date.
+
+* Subscribe to vendor advisories for patches.
+
+* Document update procedures to avoid downtime.
+
+
+## Application whitelisting
+
+* Use Windows Defender Application Control (WDAC) or AppLocker to allow only trusted binaries.
+
+* Block execution from temporary directories (e.g., `%TEMP%`, `%APPDATA%`).
+
+### Step-by-step
+
+1. Open `Local Security Policy → Application Control Policies → AppLocker`.
+
+1. Define rules for executable, script, and DLL paths.
+
+1. Allow signed BioStar X binaries.
+
+1. Deny execution from user-writable directories.
+
+1. **Deploy in Audit Mode first** to test, then enforce.
