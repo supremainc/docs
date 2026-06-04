@@ -178,59 +178,6 @@ Si desea **extraer plantillas faciales de las imágenes de perfil de los titular
 
    <Image src='/img/integration/genetec/device-management3.png' width={600} alone />
 
-## Ver información de sincronización del dispositivo
-
-1. En **Config Tool**, haga clic en **Plugins** debajo de **Tasks**.
-
-   <Image src='/img/integration/genetec/config-tool-tasks-plugins.png' width={800} alone />
-
-2. Haga clic en **Suprema Device Plugin**.
-
-   <Image src='/img/integration/genetec/suprema-device-plugin.png' alone />
-
-3. Vaya a la pestaña **Device Sync Information**.
-
-   <Image src='/img/integration/genetec/device-sync-information1.png' alone />
-
-4. Puede revisar la información de sincronización de los dispositivos Suprema conectados.
-
-   <Image src='/img/integration/genetec/device-sync-information2.png' width={800} alone />
-
-   <Image src='/img/integration/genetec/device-sync-information3.png' width={800} alone />
-
-   <div className='overflow-x cols3--10-30-60'>
-   | No. | Elemento | Descripción |
-   | :--: | -- | -- |
-   | 1 | **Device ID** | Muestra el ID del dispositivo Suprema. |
-   | 2 | **Device Name** | Muestra el nombre del dispositivo Suprema. |
-   | 3 | **Online Status** | Muestra el estado de red del dispositivo.<br/>- **True** / **False** |
-   | 4 | **Sync Status** | Muestra el estado de sincronización del dispositivo.<br/>-	**Idle** /Cache loading/ Biometric downloading/ **Syncing** |
-   | 5 | **Device Model** | Muestra el modelo del dispositivo Suprema. |
-   | 6 | **IP Address** | Muestra la dirección IP del dispositivo Suprema. |
-   | 7 | **Device Port** | Muestra el puerto del dispositivo Suprema. |
-   | 8 | **Device Firmware Version** | Muestra la versión del firmware del dispositivo Suprema. |
-   | 9 | **Failed Users** | Permite revisar los usuarios que no se sincronizaron. |
-   | 10 | **Doors (syncing / failed / total)** | Muestra el estado de sincronización de la puerta. |
-   | 11 | **Schedules (syncing / failed / total)** | Muestra el estado de sincronización del horario. |
-   | 12 | **Access Levels (syncing / failed / total)** | Muestra el estado de sincronización del nivel de acceso. |
-   | 13 | **Access Groups (syncing / failed / total)** | Muestra el estado de sincronización del grupo de acceso. |
-   | 14 | **Users (syncing / failed / total)** | Muestra el estado de sincronización del titular de tarjeta. |
-   | 15 | **Last Trigger Time** | Hora en que se activó por última vez la sincronización con el dispositivo. |
-   | 16 | **Last Success Time** | Hora en que la sincronización con el dispositivo se completó correctamente por última vez. |
-   </div>
-
-   :::info
-
-   Los valores mostrados para cada estado de sincronización son los siguientes:
-
-   - **syncing**: número de elementos que se están sincronizando actualmente con el dispositivo.
-
-   - **failed**: número de elementos que no se sincronizaron con el dispositivo.
-
-   - **total**: número de elementos que se sincronizaron correctamente.
-
-   :::
-
 ## Editar ajustes e información del dispositivo
 
 Se pueden editar los ajustes y la información de los dispositivos enrolados.
@@ -685,6 +632,26 @@ Puede configurar los ajustes detallados de SIP Intercom.
 
    <Image src='/img/integration/genetec/manage-suprema-devices4.png' width={400} alone />
 
+## Configuración del formato de tarjeta
+
+1. En **Config Tool**, haga clic en **Suprema Plugin Configuration** en **Tasks**.
+
+   <Image src='/img/integration/genetec/card-format-setting1.png' width={800} alone />
+
+2. Seleccione el tipo y formato de tarjeta.
+
+   <Image src='/img/integration/genetec/card-format-setting2.png' width={800} alone />
+
+   - Orden de bytes: admite MSB o LSB
+
+   - Tipo de CSN Card_Format: después de habilitar el **tipo de CSN Card_Format** y seleccionar un formato Wiegand, el **plugin convierte los datos de la tarjeta recibidos del dispositivo al formato Wiegand seleccionado y los entrega a Cloud Link**.
+
+   - Configuración de tarjeta Wiegand: los dispositivos pueden leer tarjetas Wiegand según el **formato de tarjeta Wiegand seleccionado**.
+
+   - Credencial personalizada: al usar un formato de credencial personalizada, verifique antes la compatibilidad con los dispositivos Suprema.
+
+3. Haga clic en **Save button** para aplicar el tipo y formato de tarjeta seleccionados a todos los dispositivos.
+
 ## Configuración de puertas
 
 1. En **Config Tool**, haga clic en **Area view** debajo de **Tasks**.
@@ -709,15 +676,15 @@ Causa raíz:
 
 - Por lo tanto, en Genetec **no hay forma de preconfigurar los tipos de entrada antes de asignar el dispositivo a una puerta**.
 
----
+:::
 
-<Image src='/img/common/ico-caution.svg' ico alone /> **Precaución**
+:::caution
 
 Cualquier cambio en el tipo de entrada realizado desde:
 
 **Config Tool** → **Access Control** → **Cloud Link** → **Peripherals Tab** no se **aplicará al dispositivo Suprema** directamente.
 
----
+<br/>
 
 **Asignación automática del complemento**
 
@@ -730,4 +697,61 @@ Cualquier cambio en el tipo de entrada realizado desde:
 
 Esta asignación automática ayuda a garantizar la compatibilidad al asignar entradas después de la configuración de la puerta.
 
+Después de configurar o actualizar una puerta, haga clic en **Sync Now** en **Suprema Device Plugin** → **Device Sync Information** para aplicar los cambios al dispositivo.
+
+<Image src='/img/integration/genetec/area-view-sync-now.png' width={800} alone />
+
 :::
+
+## Ver información de sincronización del dispositivo
+
+1. En **Config Tool**, haga clic en **Plugins** debajo de **Tasks**.
+
+   <Image src='/img/integration/genetec/config-tool-tasks-plugins.png' width={800} alone />
+
+2. Haga clic en **Suprema Device Plugin**.
+
+   <Image src='/img/integration/genetec/suprema-device-plugin.png' alone />
+
+3. Vaya a la pestaña **Device Sync Information**.
+
+   <Image src='/img/integration/genetec/device-sync-information1.png' alone />
+
+4. Puede revisar la información de sincronización de los dispositivos Suprema conectados.
+
+   <Image src='/img/integration/genetec/device-sync-information2.png' width={800} alone />
+
+   <Image src='/img/integration/genetec/device-sync-information3.png' width={800} alone />
+
+   <div className='overflow-x cols3--10-30-60'>
+   | No. | Elemento | Descripción |
+   | :--: | -- | -- |
+   | 1 | **Device ID** | Muestra el ID del dispositivo Suprema. |
+   | 2 | **Device Name** | Muestra el nombre del dispositivo Suprema. |
+   | 3 | **Online Status** | Muestra el estado de red del dispositivo.<br/>- **True** / **False** |
+   | 4 | **Sync Status** | Muestra el estado de sincronización del dispositivo.<br/>-	**Idle** /Cache loading/ Biometric downloading/ **Syncing** |
+   | 5 | **Device Model** | Muestra el modelo del dispositivo Suprema. |
+   | 6 | **IP Address** | Muestra la dirección IP del dispositivo Suprema. |
+   | 7 | **Device Port** | Muestra el puerto del dispositivo Suprema. |
+   | 8 | **Device Firmware Version** | Muestra la versión del firmware del dispositivo Suprema. |
+   | 9 | **Failed Users** | Permite revisar los usuarios que no se sincronizaron. |
+   | 10 | **Doors (syncing / failed / total)** | Muestra el estado de sincronización de la puerta. |
+   | 11 | **Schedules (syncing / failed / total)** | Muestra el estado de sincronización del horario. |
+   | 12 | **Access Levels (syncing / failed / total)** | Muestra el estado de sincronización del nivel de acceso. |
+   | 13 | **Access Groups (syncing / failed / total)** | Muestra el estado de sincronización del grupo de acceso. |
+   | 14 | **Users (syncing / failed / total)** | Muestra el estado de sincronización del titular de tarjeta. |
+   | 15 | **Last Trigger Time** | Hora en que se activó por última vez la sincronización con el dispositivo. |
+   | 16 | **Last Success Time** | Hora en que la sincronización con el dispositivo se completó correctamente por última vez. |
+   </div>
+
+   :::info
+
+   Los valores mostrados para cada estado de sincronización son los siguientes:
+
+   - **syncing**: número de elementos que se están sincronizando actualmente con el dispositivo.
+
+   - **failed**: número de elementos que no se sincronizaron con el dispositivo.
+
+   - **total**: número de elementos que se sincronizaron correctamente.
+
+   :::
