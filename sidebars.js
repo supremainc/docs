@@ -2440,10 +2440,10 @@ function createSidebars(preview) {
 };
 
   // Preview가 아니면 조건부 사이드바 제거 (빌드 최적화)
-  if (!preview) {
-    delete sidebars.aicamwebserver;
-    delete sidebars.vionyx;
-  }
+  // if (!preview) {
+  //   delete sidebars.aicamwebserver;
+  //   delete sidebars.vionyx;
+  // }
 
   return sidebars;
 }
