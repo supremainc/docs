@@ -164,10 +164,12 @@ export default function Home() {
         <div className={styles.backBlurPink}></div> */}
         <HomepageHeader />
 
-        <div className={clsx('container', styles.headsec)}>
-          <Heading as='h2'>AI Camera</Heading>
-        </div>
-        <AiCamera />
+        {isPreview && (
+          <div className={clsx('container', styles.headsec)}>
+            <Heading as='h2'>AI Camera</Heading>
+          </div>
+        )}
+        {isPreview && <AiCamera />}
 
         <div className={clsx('container', styles.headsec)}>
           <Heading as='h2'>{translate({message: 'index.productTitle.biometricsDevice'})}</Heading>
