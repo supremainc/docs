@@ -258,6 +258,18 @@ main div[class*='cardItem'] div[class*='tags'] {
       background: #f3e8ff;
       color: #7e22ce;
     }
+    &.fisheye {
+      background: #fef9c3;
+      color: #854d0e;
+    }
+    &.peopleanalytics {
+      background: #fce7f3;
+      color: #9d174d;
+    }
+    &.walk-through {
+      background: #ffe4e6;
+      color: #9f1239;
+    }
   }
 }
 [data-theme='dark'] main .search-pop-trigger {
