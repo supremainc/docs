@@ -11,10 +11,10 @@ keywords: [ Installation, Suprema Plugin, Genetec Config Tool ]
 
 | \> | Item | Small Business Server | Medium Business Server | Enterprise Business Server |
 | :-- | :-- | :-- | :-- | :-- |
-| Environment | Total Devices | 50 | 150 | 1000 |
+| Environment | Total Devices | 50 | Up to 100 | More than 100 |
 | System requirement | OS | \> | \> | Microsoft Windows 10 or later (64-bit) |
-| ^ | CPU | CPU 8 Core / RAM 64GB or higher | CPU 16 Core / RAM 128GB or higher | Enterprise-level deployment requires prior consultation |
-| ^ | RAM | 64 GB | 128 GB | ^ |
+| ^ | CPU | 8 Core or higher | 16 Core or higher | Enterprise-level deployment requires prior consultation |
+| ^ | RAM | 32 GB or higher | 64 GB Core or higher | ^ |
 | ^ | Communication | \> | \> | Supports the Standard Transmission Control Protocol (TCP/IP) networking communication protocol between servers, clients, and devices. |
 | ^ | ^ | \> | \> | Supports Dynamic Host Configuration Protocol (DHCP) or Static IP address. |
 | ^ | ^ | \> | \> | Supports network configuration. |
@@ -25,19 +25,31 @@ keywords: [ Installation, Suprema Plugin, Genetec Config Tool ]
 
 </div>
 
+:::caution
+
+For stable operation, Suprema recommends using dedicated server for the Suprema Plugins.
+
+Please refer to the server specifications below.
+
+:::
+
 ## Prerequisites
 
 ### Server Specification
 
-<div className='overflow-x cols3--20-20-60'>
+Suprema recommends using a dedicated server for the Suprema Plugin to ensure stable operation.
 
-| Business Size | No. of Suprema Devices | Server Specification |
-| -- | -- | -- |
-| Small | 1\~50 devices | CPU 8 Core / RAM 64GB or higher |
-| Medium | 50\~150 devices | CPU 16 Core / RAM 128GB or higher |
-| Enterprise | Over 150 devices | Enterprise-level deployment requires prior consultation. |
+* Recommended specification: CPU 8 Core / RAM 32 GB or higher
 
-</div>
+   <div className='overflow-x col2--20-80'>
+
+   | Deployment Scale | Recommendation |
+   | -- | -- |
+   | 0-20 devices | Installation on an existing server may be possible, but server specification and resource review are required. |
+   | Up to 100 devices | Dedicated Plugin server recommended. |
+   | More than 100 devices | Additional plugin server recommended. |
+
+   </div>
 
 ### Synergis cloud link
 

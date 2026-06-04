@@ -12,35 +12,47 @@ keywords:
 
 <div className='overflow-x col5--15-10-25'>
 
-| >                     | Ítem               | Servidor para pequeña empresa              | Servidor para mediana empresa                | Servidor para empresa grande                                                                                                          |
-| :-------------------- | :----------------- | :----------------------------------------- | :------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------ |
-| Entorno               | Total Dispositivos | 50                                         | 150                                          | 1000                                                                                                                                  |
-| Requisito del sistema | SO                 | >                                          | >                                            | Microsoft Windows 10 o posterior (64 bits)                                                                                            |
-| ^                     | CPU                | CPU de 8 núcleos / RAM de 64 GB o superior | CPU de 16 núcleos / RAM de 128 GB o superior | La implementación de nivel empresarial requiere consulta previa                                                                       |
-| ^                     | RAM                | 64 GB                                      | 128 GB                                       | ^                                                                                                                                     |
-| ^                     | Comunicación       | >                                          | >                                            | Admite el protocolo estándar de comunicación de red Transmission Control Protocol (TCP/IP) entre servidores, clientes y dispositivos. |
-| ^                     | ^                  | >                                          | >                                            | Admite Dynamic Host Configuration Protocol (DHCP) o una dirección IP estática.                                                        |
-| ^                     | ^                  | >                                          | >                                            | Admite la configuración de red.                                                                                                       |
-| ^                     | ^                  | >                                          | >                                            | Admite Network Time Protocol (NTP).                                                                                                   |
-| ^                     | ^                  | >                                          | >                                            | Admite comunicación HTTPS protegida por Secure Socket Layer (SSL) entre el cliente (navegador web) y la plataforma.                   |
-| ^                     | Cifrado            | >                                          | >                                            | Admite AES-256 para la plantilla de huella dactilar y la plantilla facial.                                                            |
-| ^                     | ^                  | >                                          | >                                            | Admite AES-256 para la plantilla de huella dactilar y la plantilla facial (opcional).                                                 |
+| >                     | Ítem               | Servidor para pequeña empresa | Servidor para mediana empresa | Servidor para empresa grande                                                                                                          |
+| :-------------------- | :----------------- | :---------------------------- | :---------------------------- | :------------------------------------------------------------------------------------------------------------------------------------ |
+| Entorno               | Total Dispositivos | 50                            | Hasta 100                     | Más de 100                                                                                                                            |
+| Requisito del sistema | SO                 | >                             | >                             | Microsoft Windows 10 o posterior (64 bits)                                                                                            |
+| ^                     | CPU                | 8 núcleos o más               | 16 núcleos o más              | La implementación de nivel empresarial requiere consulta previa                                                                       |
+| ^                     | RAM                | 32 GB o más                   | 64 GB Core o más              | ^                                                                                                                                     |
+| ^                     | Comunicación       | >                             | >                             | Admite el protocolo estándar de comunicación de red Transmission Control Protocol (TCP/IP) entre servidores, clientes y dispositivos. |
+| ^                     | ^                  | >                             | >                             | Admite Dynamic Host Configuration Protocol (DHCP) o una dirección IP estática.                                                        |
+| ^                     | ^                  | >                             | >                             | Admite la configuración de red.                                                                                                       |
+| ^                     | ^                  | >                             | >                             | Admite Network Time Protocol (NTP).                                                                                                   |
+| ^                     | ^                  | >                             | >                             | Admite comunicación HTTPS protegida por Secure Socket Layer (SSL) entre el cliente (navegador web) y la plataforma.                   |
+| ^                     | Cifrado            | >                             | >                             | Admite AES-256 para la plantilla de huella dactilar y la plantilla facial.                                                            |
+| ^                     | ^                  | >                             | >                             | Admite AES-256 para la plantilla de huella dactilar y la plantilla facial (opcional).                                                 |
 
 </div>
+
+:::caution
+
+Para un funcionamiento estable, Suprema recomienda usar un servidor dedicado para los Plugins de Suprema.
+
+Consulta las especificaciones del servidor a continuación.
+
+:::
 
 ## Requisitos previos
 
 ### Especificación del servidor
 
-<div className='overflow-x cols3--20-20-60'>
+Suprema recomienda usar un servidor dedicado para el Plugin de Suprema para garantizar un funcionamiento estable.
 
-| Tamaño de la empresa | No. de dispositivos Suprema | Especificación del servidor                                      |
-| -------------------- | --------------------------- | ---------------------------------------------------------------- |
-| Pequeña              | 1\~50 dispositivos          | CPU de 8 núcleos / RAM de 64 GB o superior                       |
-| Medio                | 50\~150 dispositivos        | CPU de 16 núcleos / RAM de 128 GB o superior                     |
-| Corporativa          | Más de 150 dispositivos     | La implementación de nivel empresarial requiere consulta previa. |
+- Especificación recomendada: CPU de 8 núcleos / RAM de 32 GB o más
 
-</div>
+  <div className='overflow-x col2--20-80'>
+
+  | Escala de despliegue    | Recomendación                                                                                                                   |
+  | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+  | 0-20 dispositivos       | La instalación en un servidor existente puede ser posible, pero requiere revisar la especificación del servidor y los recursos. |
+  | Hasta 100 dispositivos  | Se recomienda un servidor dedicado para el plugin.                                                                              |
+  | Más de 100 dispositivos | Se recomienda un servidor adicional para el plugin.                                                                             |
+
+  </div>
 
 ### Synergis cloud link
 
