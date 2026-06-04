@@ -1,29 +1,34 @@
 ---
 id: protect-database-data
 title: Database and Data Protection
-description: Description
-keywords: [keyword1, keyword2]
+description: Explains how to protect sensitive information stored in the BioStar X database through encryption, access controls, and audit logging.
 ---
 
-BioStar X requires a database to store sensitive information such as user credentials, access logs, and configuration data. Depending on the deployment, either **MariaDB (11.4)** or **Microsoft SQL Server** may be used.
+BioStar X requires a database to store sensitive information such as user credentials, access logs, and configuration data. Depending on the deployment, either **MariaDB** (11.4) or **Microsoft SQL Server** may be used.
 
-#### 3.5.1. Enforce Authentication and Access Control
+## Enforce Authentication and Access Control
 
-- Require authentication for all database connections.
-- Use dedicated database accounts for BioStar X, not shared or default accounts.
-- Assign the least privilege role needed (read/write for application data, no schema modification).
-- Regularly audit database accounts for unused or over-privileged users.
-- Remove unused or outdated database user entries, especially after IP or infrastructure changes.
+* Require authentication for all database connections.
 
-> ⚠️ Never allow BioStar X to connect using `sa` or equivalent superuser accounts.
+* Use dedicated database accounts for BioStar X, not shared or default accounts.
 
----
+* Assign the least privilege role needed (read/write for application data, no schema modification).
 
-#### 3.5.2. Encrypt Data in Transit
+* Regularly audit database accounts for unused or over-privileged users.
 
-**Step-by-step (MariaDB) — `my.cnf`:**
+* Remove unused or outdated database user entries, especially after IP or infrastructure changes.
 
-```ini
+:::caution
+
+Never allow BioStar X to connect using `sa` or equivalent superuser accounts.
+
+:::
+
+## Encrypt data in transit
+
+### MariaDB
+
+```ini title='my.cnf'
 [mysqld]
 require_secure_transport=ON
 ssl_cert=/etc/mysql/server-cert.pem
@@ -31,93 +36,107 @@ ssl_key=/etc/mysql/server-key.pem
 ssl_ca=/etc/mysql/ca-cert.pem
 ```
 
-Verify:
+**Verify**:
 
-```sql
+```sql title='SQL'
 SHOW VARIABLES LIKE '%ssl%';
 ```
 
-**Step-by-step (SQL Server):**
+### SQL Server
 
-- Open SQL Server Configuration Manager.
-- Go to `SQL Server Network Configuration → Protocols for MSSQLSERVER`.
-- Enable Force Encryption.
-- Install a trusted certificate on the server.
+1. Open **SQL Server Configuration Manager**.
 
----
+1. Go to **SQL Server Network Configuration** → **Protocols for MSSQLSERVER**.
 
-#### 3.5.3. Encrypt Data at Rest
+1. Enable **Force Encryption**.
 
-**Step-by-step (SQL Server TDE):**
+1. Install a trusted certificate on the server.
 
-```sql
+
+## Encrypt data at rest
+
+### MariaDB
+
+* Enable `file_key_management` plugin for encryption at rest.
+
+* Define encryption keys in a secure keyfile.
+
+* Apply encryption per table if full TDE is not available.
+
+:::caution
+
+Slight performance overhead (usually 3–5%). If you move/restore the DB on another server, you'll need the certificate and keys. BioStar X's Restore function does not support encrypted backups — this will need to be done manually.
+
+:::
+
+### SQL Server TDE
+
+```sql title='SQL'
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'StrongP@ssw0rd!';
 CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'BioStarX';
 CREATE DATABASE ENCRYPTION KEY WITH ALGORITHM = AES_256 ENCRYPTION BY SERVER CERTIFICATE MyServerCert;
 ALTER DATABASE biostarx_ac SET ENCRYPTION ON;
 ```
 
-**Step-by-step (MariaDB):**
 
-- Enable `file_key_management` plugin for encryption at rest.
-- Define encryption keys in a secure keyfile.
-- Apply encryption per table if full TDE is not available.
+## Enable database auditing {#enableDatabaseAudit}
 
-> ⚠️ Slight performance overhead (usually 3–5%). If you move/restore the DB on another server, you'll need the certificate and keys. BioStar X's Restore function does not support encrypted backups — this will need to be done manually.
+### MariaDB
 
----
-
-#### 3.5.4. Enable Database Auditing
-
-**Step-by-step (MariaDB):**
-
-```sql
+```sql title='SQL'
 INSTALL SONAME 'server_audit';
 SET GLOBAL server_audit_logging=ON;
 SET GLOBAL server_audit_events='CONNECT,QUERY_DML,QUERY_DDL';
 ```
 
-**Step-by-step (SQL Server):**
+### SQL Server
 
-```sql
+```sql title='SQL'
 CREATE SERVER AUDIT BioStarX_Audit TO FILE (FILEPATH = 'C:\AuditLogs\');
 CREATE SERVER AUDIT SPECIFICATION BioStarX_Spec FOR SERVER AUDIT BioStarX_Audit ADD (FAILED_LOGIN_GROUP);
 ALTER SERVER AUDIT BioStarX_Audit WITH (STATE = ON);
 ```
 
----
 
-#### 3.5.5. Backup and Secure Storage
+## Backup and secure storage
 
-- Perform regular encrypted backups of the BioStar X database.
-- Store backups on a separate secure server, not the same host.
-- Test backup restores periodically.
-- Store backups on BitLocker-encrypted volumes.
+* Perform regular encrypted backups of the BioStar X database.
 
-**Step-by-step (SQL Server):**
+* Store backups on a separate secure server, not the same host.
 
-```sql
-BACKUP DATABASE biostarx_db TO DISK = 'D:\backups\biostarx_db.bak'
-WITH ENCRYPTION (ALGORITHM = AES_256, SERVER CERTIFICATE = MyServerCert);
-```
+* Test backup restores periodically.
 
-**Step-by-step (MariaDB):**
+* Store backups on BitLocker-encrypted volumes.
 
-```bash
+### MariaDB
+
+```bash title='Bash'
 mariadb-dump --all-databases --ssl --result-file=/secure/backups/biostarx.sql
 gpg -c /secure/backups/biostarx.sql
 ```
 
-> ⚠️ **Product limitation:** BioStar X Backup function (manual or scheduled) is unencrypted. BioStar X Restore function does not support encrypted backup.
+:::caution
 
----
+BioStar X Backup function (manual or scheduled) is unencrypted. BioStar X Restore function does not support encrypted backup.
 
-#### 3.5.6. Restrict Remote Access
+:::
 
-**MariaDB (`my.cnf`):**
+### SQL Server
 
-```ini
+```sql title='SQL'
+BACKUP DATABASE biostarx_db TO DISK = 'D:\backups\biostarx_db.bak'
+WITH ENCRYPTION (ALGORITHM = AES_256, SERVER CERTIFICATE = MyServerCert);
+```
+
+
+## Restrict remote access
+
+### MariaDB
+
+```ini title='my.cnf'
 bind-address=127.0.0.1
 ```
 
-**SQL Server:** Configure firewall rules to allow connections only from the BioStar X application server.
+### SQL Server
+
+Configure firewall rules to allow connections only from the BioStar X application server.

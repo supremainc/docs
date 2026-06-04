@@ -2,7 +2,7 @@
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 import { type } from 'os';
-
+import { getLocalizedConfigValue } from './utils/localization.js';
 /**
  * Creating a sidebar enables you to:
  - create an ordered group of docs
@@ -478,7 +478,7 @@ function createSidebars(preview) {
         },
         {
           type: 'category',
-          label: 'BioStar X 강화 가이드',
+          label: 'BioStar X 강화',
           link: {
             type: 'doc',
             id: 'how-to/bsx_hardening/hardening-biostarx'
@@ -1064,6 +1064,12 @@ function createSidebars(preview) {
       },
       items: [
         'how-to/master-admin',
+        {
+          type: 'link',
+          label: 'BioStar X 보안 강화',
+          description: getLocalizedConfigValue('hardeningGuideDescription'),
+          href: 'bsx_hardening/',
+        }
       ]
     }
   ],

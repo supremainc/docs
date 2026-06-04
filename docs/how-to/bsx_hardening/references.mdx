@@ -1,68 +1,75 @@
 ---
 id: references
 title: 참조
-description: Description
-keywords: [keyword1, keyword2]
+description: BioStar X 배포 및 보안 구성을 위한 포트, 기본 보안 설정, 컴플라이언스 요구사항 참조 문서입니다.
 ---
 
-### 6.1. BioStar X 기본 네트워크 포트
+이 문서는 BioStar X 시스템 구축 및 보안 강화 시 필요한 기술적 참조 정보를 제공합니다. 네트워크 포트 구성, 권장 보안 설정, 주요 컴플라이언스 요구사항을 한눈에 확인할 수 있으며, 
+추가 지원이 필요한 경우 외부 참조 자료를 참고하세요.
+
+## BioStar X 기본 네트워크 포트
 
 | 서비스 | 용도 | 기본 포트 | 참고 / 권장 사항 |
-|--------|------|----------|-----------------|
-| Unified Gateway Service | HTTPS (시스템 접근) | 443 | 관리자/운영자 로그인 기본값. 서비스 관리자에서 변경 가능. |
-| Core Web Service | HTTPS (내부 UI) | 5002 | 443으로 프록시 처리 권장; 직접 접근 제한. |
-|  | CloudNgrok | 52000 | 필요하지 않은 경우 비활성화. |
-|  | Thrift RPC | 9310 | 신뢰할 수 있는 서비스로 제한. |
-| Core Service | WebSocket | 9002 | 내부 전용. |
-|  | FastCGI | 9000 | 로컬에서 바인딩해야 함. |
-|  | API | 9010 | TLS 및 인증으로 보안. |
-| Coordinator Service | 클라이언트 통신 | 21810 | 내부 전용. |
-| Main Server | TCP 서버 | 51212 | **일반 텍스트** 장치 통신 — 가능하면 차단. |
-|  | SSL 서버 | 51213 | **권장** 장치 통신(TLS). |
-|  | gRPC | 51219 | 내부 서비스 통신만. |
-| Cache Service | 클라이언트 | 10800 | Redis에 해당 — 외부에 노출 금지. |
-|  | 통신 | 47500 | 내부 전용. |
-|  | 검색 | 47100 | 내부 전용. |
+| -- | -- | -- | -- |
+| Unified Gateway Service | HTTPS (시스템 접근) | 443 | 관리자/운영자 로그인 기본 포트입니다. <Cmd>Service Manager</Cmd> → <Cmd>Service Settings</Cmd>에서 변경할 수 있습니다. |
+| Core Web Service | HTTPS (내부 UI) | 5002 | 443 포트로 프록시 연결을 권장하며, 직접 접근을 제한합니다. |
+| ^ | CloudNgrok | 52000 | 필요하지 않은 경우 비활성화하세요. |
+| ^ | Thrift RPC | 9310 | 신뢰할 수 있는 서비스로 제한합니다. |
+| Core Service | WebSocket | 9002 | 내부 전용입니다. |
+| ^ | FastCGI | 9000 | 로컬에서 바인딩해야 합니다. |
+| ^ | API | 9010 | TLS 및 인증으로 보안을 유지합니다. |
+| Coordinator Service | 클라이언트 통신 | 21810 | 내부 전용입니다. |
+| Main Server | TCP 서버 | 51212 | **일반 텍스트** 장치 통신 — 가능하면 차단하세요. |
+| ^ | SSL 서버 | 51213 | **권장** 장치 통신(TLS) |
+| ^ | gRPC | 51219 | 내부 서비스 통신 전용입니다. |
+| Cache Service | 클라이언트 | 10800 | Redis와 동일 — 외부에 노출하지 마세요. |
+| ^ | 통신 | 47500 | 내부 전용입니다. |
+| ^ | 검색 | 47100 | 내부 전용입니다. |
 
----
 
-### 6.2. BioStar X의 기본 보안 기능
+## BioStar X의 기본 보안 기능
 
 | 기능 | UI 위치 | 기본값 | 권장 사항 |
-|------|---------|--------|----------|
-| 기본 Admin 로그인 ID & 암호 변경 | 사용자 모듈 → 기본 Admin 편집(UID:1) | admin / 설치 PW | 설치 직후 변경. |
-| 접근 분리(역할) | 설정 → 사용자 → 계정 수준 | 사전 정의: Admin, Operator, Monitoring | 필요에 따라 맞춤 역할 생성. |
-| 암호 강도 정책 | 설정 → 시스템 → 보안 | 중간 | 강력으로 설정하고 MFA 시행. |
-| 세션 보안(동시 연결) | 설정 → 시스템 → 보안 | 허용 | 공유 로그인 방지를 위해 **비활성** 설정. |
-| 다단계 인증 | 설정 → 시스템 → 보안 → MFA | 사용 안 함 | Admin/Operator/Auditor 계정에 활성화. |
-| 장치와의 보안 통신 | 설정 → 시스템 → 보안 → 고급 | 사용 안 함 | 활성화 + SSL 포트(51213) 사용. |
-| 장치 해시키 관리 | 설정 → 시스템 → 보안 → 고급 | 사용 안 함 | 고보안 배포에서 탬퍼 보호를 위해 활성화. |
-| 시스템 백업 | 설정 → 시스템 → 시스템 백업 | 수동 | 자동 일별 백업 활성화. |
-| 디렉터리 통합 | 설정 → 디렉터리 통합 | 구성되지 않음 | 가능한 경우 Entra ID 또는 AD와 통합. |
-| 로그 설정(보존 및 수준) | 설정 → 서버 → 서버 | 60일, Info | 컴플라이언스에 맞게 조정. SIEM으로 전달. |
-| 데이터베이스의 개인 데이터 암호화 | 설정 → 시스템 → 보안 | 사용 안 함 | 프로덕션에서 활성화. |
-| 시각적 얼굴 이미지 저장 | 설정 → 서버 → 전문가 설정 | 사용 | 정당한 이유가 없는 한 비활성화. |
+| -- | -- | -- | -- |
+| 기본 관리자 로그인 ID & 암호 변경 | <Cmd sid='shell.header.user' /> → 사용자 목록에서 기본 관리자 편집(`UID:1`) | admin / 설치 비밀번호 | 설치 직후 변경하세요. |
+| 권한 및 역할 분리 | <Cmd sid='shell.header.user' /> → 사용자 선택 → <Cmd sid='common.permission' product='2' /> → <Cmd sid='user.accountLevel' product='2' /> | 사전 정의: <Cmd sid='setting.account.administrator' product='2' />, <Cmd sid='setting.account.userOperator' product='2' />, <Cmd sid='setting.account.monitoringOperator' product='2' /> | 필요에 따라 커스텀 권한을 생성하세요. |
+| 암호 강도 정책 | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.systemSecurity.loginPassword' product='2' /> → <Cmd sid='setting.server.passwordLevel' product='2' /> | <Cmd sid='setting.server.passwordLevelMedium' product='2' /> | <Cmd sid='setting.server.passwordLevelStrong' product='2' />으로 설정하고 멀티팩터 인증(MFA)을 적용하세요. |
+| 세션 보안(동시 연결) | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.systemSecurity.sessionSecurity' product='2' /> → <Cmd sid='setting.systemSecurity.useSimultaneousConnection' product='2' /> | <Cmd sid='common.active' product='2' /> | 공유 로그인 방지를 위해 <Cmd sid='common.inactive' product='2' />로 설정하세요. |
+| 멀티팩터 인증 | <Cmd sid='shell.header.user' /> → 사용자 선택 → <Cmd sid='common.permission' product='2' /> → <Cmd sid='common.fingerprintLogin' product='2' /> | <Cmd sid='common.notUse' product='2' /> | <Cmd sid='setting.account.administrator' product='2' />, <Cmd sid='setting.account.userOperator' product='2' />, <Cmd sid='setting.account.monitoringOperator' product='2' /> 계정에 대해 활성화할 수 있습니다. |
+| 장치와 보안 통신 | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.server.secure.comm.title' product='2' /> → <Cmd sid='setting.sever.secure.comm.menu' product='2' /> | <Cmd sid='common.notUse' product='2' /> | 기능을 활성화하고, SSL 포트(51213)를 사용하세요. |
+| 장치 해시키 관리 | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.server.secure.comm.title' product='2' /> → <Cmd sid='setting.server.secure.comm.data_encryption' product='2' /> | <Cmd sid='common.notUse' product='2' /> | 높은 보안 환경 배포에서 탬퍼 보호를 위해 활성화하세요. |
+| 시스템 백업 | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.systemBackup' /> | <Cmd sid='common.manual' product='2' /> | <Cmd sid='common.backup.autoBackup' product='2' /> 기능을 활성화하세요. |
+| 디렉터리 연동 | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.directoryIntegration.root' /> | 구성되지 않음 | 가능하다면 Entra ID 또는 Active Directory와 연동하세요. |
+| 로그 설정(보존 및 수준) | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' /> | <Cmd sid='setting.server.logRetainDays' product='2' />: 60일<br /><Cmd sid='setting.server.logLevel' product='2' />: <Cmd sid='setting.server.logLevel.info' product='2' /> | 규정 준수 여부에 따라 조정하세요. 로그는 SIEM으로 전달하세요. |
+| 개인 정보 데이터베이스 암호화 | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.server.secure.comm.title' product='2' /> → <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' /> | <Cmd sid='common.notUse' product='2' /> | 프로덕션 환경에 활성화하세요. |
+| 얼굴 이미지 저장 | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.server' /> → <Cmd sid='settings.expertSettings.enableButton' product='2' /> → <Cmd sid='settings.expertSettings.detail.storeVisualFaceImageOptionLabel' product='2' /> | <Cmd sid='common.use' product='2' /> | 정당한 이유가 없는 한 비활성화하세요. |
 
----
 
-### 6.3. 컴플라이언스 매핑 (간략 보기)
+## 컴플라이언스 요구사항 (간략 보기)
+
+<div className='table-fixed'>
 
 | 보안 제어 | 지원하는 컴플라이언스 영역 |
-|----------|--------------------------|
-| 데이터베이스 암호화(PII, 생체 정보) | GDPR, CCPA, ISO 27001 |
-| 시스템 로그 보존 + 전달 | ISO 27001, PCI-DSS |
-| 관리자/운영자 계정 MFA | NIST 800-63, ISO 27001 |
-| 장치와의 보안 통신(TLS) | GDPR, ISO 27001 |
+| -- | -- |
+| 데이터베이스 암호화(개인 식별 정보, 바이오메트릭 정보) | GDPR, CCPA, ISO 27001 |
+| 시스템 로그 보존 및 전달 | ISO 27001, PCI-DSS |
+| 관리자/운영자 계정 멀티팩터 인증(MFA) | NIST 800-63, ISO 27001 |
+| 장치와 보안 통신(TLS) | GDPR, ISO 27001 |
 | 백업 및 복원 기능 | ISO 27001, SOC 2 |
-| 디렉터리 통합(AD/Entra ID) | SOX, ISO 27001, SOC 2 |
+| 디렉터리 연동(Entra ID/Active Directory) | SOX, ISO 27001, SOC 2 |
 
----
+</div>
 
-### 6.4. 외부 참조
+## 외부 참조
 
-- [Suprema 지식 베이스 – 장치와 서버 간 보안 통신 구성](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_configure_secure_communication_between_device_and_server_tls_ssl)
-- [Suprema 지식 베이스 – 장치 해시키 관리](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_manually_manage_server_device_encryption_key)
-- [Suprema 지식 베이스 – USB를 통한 장치 로그 가져오기/내보내기](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_import_export_user_log_between_biostar_2_and_suprema_reader_using_usb_memory)
-- [Microsoft – Windows Security Compliance Toolkit](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit-10)
-- [Suprema Docs – BioStation 3 Max 장치 문서](https://docs.supremainc.com/en/device/biostation_3_max/)
-- [Suprema 지식 베이스 – 보안 탬퍼 구성 방법](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_configure_secure_tamper)
+* [슈프리마 지식 베이스 – 장치와 서버 간 보안 통신 구성하기](https://kb.supremainc.com/knowledge/doku.php?id=ko:how_to_configure_secure_communication_between_device_and_server_tls_ssl)
+
+* [슈프리마 지식 베이스 – 서버 및 장치 암호화 키 수동으로 관리하기](https://kb.supremainc.com/knowledge/doku.php?id=ko:how_to_manually_manage_server_device_encryption_key)
+
+* [슈프리마 지식 베이스 – USB 메모리로 BioStar 2와 장치 간 사용자 및 로그 불러오고 내보내기](https://kb.supremainc.com/knowledge/doku.php?id=ko:how_to_import_export_user_log_between_biostar_2_and_suprema_reader_using_usb_memory)
+
+* [슈프리마 지식 베이스 – USB를 이용하여 펌웨어 업그레이드하기](https://kb.supremainc.com/knowledge/lib/exe/fetch.php?media=ko:bew3_usb_fw_upgrade_ko.pdf)
+
+* [슈프리마 지식 베이스 – 보안 탬퍼 구성하기](https://kb.supremainc.com/knowledge/doku.php?id=ko:how_to_configure_secure_tamper)
+
+* [Microsoft 보안 준수 도구 키트 - 사용 방법](https://learn.microsoft.com/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit-10)

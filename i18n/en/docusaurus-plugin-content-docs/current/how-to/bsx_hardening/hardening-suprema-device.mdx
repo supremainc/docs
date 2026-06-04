@@ -1,168 +1,238 @@
 ---
 id: hardening-suprema-device
 title: Suprema Device Hardening
-description: Description
-keywords: [keyword1, keyword2]
+description: This documents provides hardening recommendations for Suprema-manufactured access control devices connected to BioStar X.
 ---
 
-This section provides hardening recommendations for Suprema-manufactured access control devices connected to BioStar X.
+This documents provides hardening recommendations for Suprema-manufactured access control devices connected to BioStar X.
 
 While server and BioStar X application hardening protect the central system, access control devices are installed at physical entry points and may be exposed to local network access, physical tampering, unauthorized operation, or outdated firmware. Device-level hardening must be treated as an essential part of the overall security posture.
 
-**Scope:**
-- Applies to Suprema access control devices connected to BioStar X.
-- Covers firmware maintenance, device event log handling, administrator configuration, and device-side operational controls.
-- Device capabilities may differ depending on the model and firmware version.
+This document covers the following:
 
-### 5.1. Keep Device Firmware Up to Date
+* Applies to Suprema access control devices connected to BioStar X.
 
-**Recommendation:**
+* Covers firmware maintenance, device event log handling, administrator configuration, and device-side operational controls.
+
+* Device capabilities may differ depending on the model and firmware version.
+
+
+## Keep device firmware up to date
 
 Keep Suprema device firmware updated to the latest supported version approved for the customer environment.
 
-**General Best Practices:**
+### General best practices
 
-- Maintain an inventory of all connected devices (model name, device ID, firmware version, installation location, role).
-- Review Suprema firmware release notes before upgrading.
-- Test firmware upgrades on a non-production device before broad deployment.
-- Schedule firmware upgrades during a maintenance window.
-- Ensure the device has stable power during the upgrade. Do not disconnect power or network.
-- After upgrade, confirm device reconnects to BioStar X and all functions operate normally.
+* Maintain an inventory of all connected devices (model name, device ID, firmware version, installation location, role).
 
-#### 5.1.1. Firmware Upgrade from Software
+* Review Suprema firmware release notes before upgrading.
 
-**Recommended approach:**
+* Test firmware upgrades on a non-production device before broad deployment.
+
+* Schedule firmware upgrades during a maintenance window.
+
+* Ensure the device has stable power during the upgrade. Do not disconnect power or network.
+
+* After upgrade, confirm device reconnects to BioStar X and all functions operate normally.
+
+### Firmware upgrade from software
 
 When possible, perform firmware upgrades through the management software rather than directly from the device.
 
-**General Procedure:**
+1. Download the correct firmware file for the target device model in [Suprema Download Center](https://download.supremainc.com/download-center/pages/login.asp).
 
-1. Obtain the correct firmware file for the target device model.
-2. Review the release notes and compatibility notes.
-3. Confirm that the device is online and communicating normally.
-4. Back up or confirm synchronization of users, credentials, logs, and device configuration.
-5. Select the target device and run Firmware Upgrade.
-6. Wait until the upgrade completes and the device restarts.
-7. Confirm the firmware version after the restart.
-8. Validate: device reconnects to BioStar X; authentication, door control, and event log upload work normally; secure communication and hashkey settings remain as expected.
+1. Review the release notes and compatibility notes.
 
-> ⚠️ Do not apply firmware intended for a different device model. Do not interrupt the upgrade process. Some firmware upgrades may restrict downgrade paths — always review release notes before upgrading.
+1. Confirm that the device is online and communicating normally.
 
-#### 5.1.2. Firmware Upgrade Directly from Device / USB
+1. Back up or confirm synchronization of users, credentials, logs, and device configuration.
+
+1. Select the target device and run Firmware Upgrade.
+
+1. Wait until the upgrade completes and the device restarts.
+
+1. Confirm the firmware version after the restart.
+
+Device reconnects to BioStar X; authentication, door control, and event log upload work normally; secure communication and hashkey settings remain as expected.
+
+:::caution
+
+* Do not apply firmware intended for a different device model. 
+
+* Do not interrupt the upgrade process. 
+
+* Some firmware upgrades may restrict downgrade paths — always review release notes before upgrading.
+
+:::
+
+### Firmware upgrade directly from device / USB
 
 Some Suprema devices support firmware upgrade by connecting a USB memory device directly to the device.
 
-**General Procedure:**
+1. Save the firmware upgrade file to a supported USB memory device.
 
-1. Save the firmware upgrade file to a supported USB memory device (preferably only one firmware file).
-2. Connect the USB memory to the device.
-3. When prompted, authenticate using an administrator-level credential.
-4. Wait for the firmware file to transfer to the device.
-5. When instructed, remove the USB memory.
-6. Wait until the firmware upgrade completes and the device restarts automatically.
-7. Confirm the firmware version and validate device operation.
+   :::note
 
-> ⚠️ A device administrator must be configured before device-side firmware upgrade can proceed. Do not disconnect power during firmware upgrade.
+   It is recommended to save only one file to the USB memory.
 
----
+   :::
 
-### 5.2. Device Event Log Retention and Protection
+1. Connect the USB memory to the device.
 
-**Recommendation:**
+1. When prompted, authenticate using an administrator-level credential.
+
+1. Wait for the firmware file to transfer to the device.
+
+1. When instructed, remove the USB memory.
+
+1. Wait until the firmware upgrade completes and the device restarts automatically.
+
+1. Confirm the firmware version and validate device operation.
+
+:::caution
+
+A device administrator must be configured before device-side firmware upgrade can proceed. Do not disconnect power during firmware upgrade.
+
+:::
+
+
+## Device event log retention and protection
 
 Preserve device event logs and ensure they are uploaded to BioStar X regularly.
 
-**Device Log Policy:**
+### Device log policy
 
-- Device logs are retained locally up to the device's supported capacity unless deleted or overwritten.
-- Administrators should not rely only on device-local storage for long-term audit retention.
-- Automatic log upload to BioStar X should be enabled whenever possible.
-- Event logs should be reviewed and backed up according to the organization's audit and compliance policy.
-- Ensure device date, time, time zone, and daylight-saving time settings are configured correctly. Enable Time Sync where supported.
+* Device logs are retained locally up to the device's supported capacity unless deleted or overwritten.
 
-**Secure Tamper Consideration:**
+* Administrators should not rely only on device-local storage for long-term audit retention.
+
+* Automatic log upload to BioStar X should be enabled whenever possible.
+
+* Event logs should be reviewed and backed up according to the organization's audit and compliance policy.
+
+* Ensure device date, time, time zone, and daylight-saving time settings are configured correctly. Enable Time Sync where supported.
+
+### Secure tamper consideration
 
 Some Suprema devices support **Secure Tamper** behaviour. If tamper protection is enabled and a tamper event occurs, the device may delete sensitive data stored on the device — including users, logs, encryption keys, and SSL certificates. Enable automatic log upload to reduce the risk of losing device-local logs.
 
-**Operational Best Practices:**
+:::note
 
-- Treat device tamper events as security incidents.
-- After a tamper event, inspect the device physically before re-enrolment or redeployment.
-- Do not disable tamper-related protections without documented security approval.
+**Operational best practices**
 
----
+* Treat device tamper events as security incidents.
 
-### 5.3. Configure Device Administrator
+* After a tamper event, inspect the device physically before re-enrolment or redeployment.
 
-**Recommendation:**
+* Do not disable tamper-related protections without documented security approval.
+
+:::
+
+
+## Configure device administrator
 
 Configure a device administrator on supported Suprema devices and restrict access to the device administrator menu. Devices should not be deployed in production without administrator protection.
 
-> Device administrator privileges are separate from BioStar X user permissions.
+:::info
 
-**General Best Practices:**
+Device administrator privileges are separate from BioStar X user permissions.
 
-- Register at least one device administrator before production deployment.
-- Use unique administrator credentials assigned to authorized personnel only.
-- Use strong authentication methods (card + PIN, biometric + PIN, or multi-credential administrator authentication).
-- Periodically review device administrator assignments.
-- Remove administrator access immediately when staff roles change.
-- Document emergency recovery procedures in case administrator credentials are lost.
+:::
 
-#### 5.3.1. Configure Device Administrator from Software
+:::note
 
-**General Procedure:**
+**Best practices**
 
-1. Log in to BioStar X as an administrator.
-2. Create or select the user who will act as the device administrator.
-3. Enrol the required credential (card, PIN, fingerprint, or face).
-4. Assign administrator-level privilege or the appropriate device administrator role.
-5. Transfer or synchronize the user to the target device.
-6. Confirm on the device that the administrator credential can access the admin menu.
+* Register at least one device administrator before production deployment.
 
-#### 5.3.2. Configure Device Administrator Directly from Device
+* Use unique administrator credentials assigned to authorized personnel only.
 
-**General Procedure:**
+* Use strong authentication methods (card + PIN, biometric + PIN, or multi-credential administrator authentication).
+
+* Periodically review device administrator assignments.
+
+* Remove administrator access immediately when staff roles change.
+
+* Document emergency recovery procedures in case administrator credentials are lost.
+
+:::
+
+### Configure device administrator from software
+
+1. Log in to BioStar X with an Administrator account.
+
+1. Create or select the user who will act as the device administrator.
+
+1. Enrol the required credential (card, PIN, fingerprint, or face).
+
+1. Assign administrator-level privilege or the appropriate device administrator role.
+
+1. Transfer or synchronize the user to the target device.
+
+1. Confirm on the device that the administrator credential can access the admin menu.
+
+### Configure device administrator directly from device
 
 1. Access the device menu.
-2. Open the user enrolment or administrator configuration menu.
-3. Enrol the administrator user and credential.
-4. Assign administrator-level privilege.
-5. Save the configuration.
-6. Test administrator authentication by accessing the admin menu again.
 
----
+1. Open the user enrolment or administrator configuration menu.
 
-### 5.4. Device Network and Local Service Hardening
+1. Enrol the administrator user and credential.
 
-**Recommendation:**
+1. Assign administrator-level privilege.
+
+1. Save the configuration.
+
+1. Test administrator authentication by accessing the admin menu again.
+
+
+## Device network and local service hardening
 
 Configure device network and local service settings according to the principle of least functionality.
 
-**Recommended Actions:**
+### Recommended actions
 
-- Use stable and documented device IP addressing (reserve IP in DHCP, or document static IP with subnet mask, gateway, DNS, port, device ID, and location).
-- Verify the BioStar X server address and server port used by the device.
-- Disable device-side features that are not required (e.g., RTSP, IP Intercom).
-- If RTSP, intercom, or other optional services are required, configure strong credentials and restrict access to trusted systems only.
-- Enable Time Sync where supported.
-- After Restore Default or Factory Default, recheck network settings, administrator levels, root certificates, secure communication, and BioStar X connection.
+* Use stable and documented device IP addressing (reserve IP in DHCP, or document static IP with subnet mask, gateway, DNS, port, device ID, and location).
 
----
+* Verify the BioStar X server address and server port used by the device.
 
-### 5.5. Device-Side Operational Hardening Checklist
+* Disable device-side features that are not required.
 
-- ✅ Keep firmware updated to the latest supported version.
-- ✅ Maintain an inventory of device model, device ID, firmware version, location, and role.
-- ✅ Configure device administrator access before production use.
-- ✅ Restrict administrator privileges to authorized personnel only.
-- ✅ Enable secure communication with BioStar X where supported.
-- ✅ Enable Device Hashkey Management / Secure Tamper where appropriate for the deployment risk level.
-- ✅ Keep Automatic Log Upload enabled where possible.
-- ✅ Confirm device event logs are uploaded to BioStar X regularly.
-- ✅ Physically secure device installation and cabling.
-- ✅ Treat tamper events, unexpected restarts, firmware changes, and log gaps as security-relevant events.
-- ✅ Review device configuration after firmware upgrades, device replacement, or restore operations.
-- ✅ Use stable and documented network addressing for production devices.
-- ✅ Disable device-side features that are not required for the deployment.
-- ✅ Restrict Restore Default and Factory Default operations to authorized administrators only.
+   > e.g., RTSP, IP Intercom
+
+* If RTSP, intercom, or other optional services are required, configure strong credentials and restrict access to trusted systems only.
+
+* Enable Time Sync where supported.
+
+* After Restore Default or Factory Default, recheck network settings, administrator levels, root certificates, secure communication, and BioStar X connection.
+
+
+## Device-side operational hardening checklist
+
+* [ ] Keep firmware updated to the latest supported version.
+
+* [ ] Maintain an inventory of device model, device ID, firmware version, location, and role.
+
+* [ ] Configure device administrator access before production use.
+
+* [ ] Restrict administrator privileges to authorized personnel only.
+
+* [ ] Enable secure communication with BioStar X where supported.
+
+* [ ] Enable <Cmd sid='setting.server.secure.comm.data_encryption' product='2' className='normal' /> and <Cmd sid='device.info.tamperOn' product='2' className='normal' /> where appropriate for the deployment risk level.
+
+* [ ] Set <Cmd sid='setting.server.logUploadType' product='2' className='normal' /> to <Cmd sid='common.auto' product='2' className='normal' /> where possible.
+
+* [ ] Confirm device event logs are uploaded to BioStar X regularly.
+
+* [ ] Physically secure device installation and cabling.
+
+* [ ] Treat tamper events, unexpected restarts, firmware changes, and log gaps as security-relevant events.
+
+* [ ] Review device configuration after firmware upgrades, device replacement, or restore operations.
+
+* [ ] Use stable and documented network addressing for production devices.
+
+* [ ] Disable device-side features that are not required for the deployment.
+
+* [ ] Restrict Restore Default and Factory Default operations to authorized administrators only.

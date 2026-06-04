@@ -1,72 +1,76 @@
 ---
 id: references
 title: References
-description: Description
-keywords: [keyword1, keyword2]
+description: Technical reference guide for BioStar X network configuration, security settings, and compliance requirements.
 ---
 
-### 6.1. Default BioStar X Network Ports
+This document provides essential technical reference information for deploying and securing BioStar X. Find network port configurations, recommended security settings, and key compliance requirements at a glance. Refer to the external resources section for additional support and detailed guidelines.
+
+## Default BioStar X network ports
 
 | Service | Purpose | Default Port(s) | Notes / Recommendations |
-|---------|---------|-----------------|------------------------|
-| Unified Gateway Service | HTTPS (system access) | 443 | Default for admin/operator login. Changeable via **Service Manager → Service Settings**. |
+| -- | -- | -- | -- |
+| Unified Gateway Service | HTTPS (system access) | 443 | Default for admin/operator login. Changeable via <Cmd>Service Manager</Cmd> → <Cmd>Service Settings</Cmd>. |
 | Core Web Service | HTTPS (internal UI) | 5002 | Prefer proxied to 443; restrict direct access. |
-|  | CloudNgrok | 52000 | Disable if not required. |
-|  | Thrift RPC | 9310 | Restrict to trusted services. |
+| ^ | CloudNgrok | 52000 | Disable if not required. |
+| ^ | Thrift RPC | 9310 | Restrict to trusted services. |
 | Core Service | WebSocket | 9002 | Internal only. |
-|  | FastCGI | 9000 | Should be bound locally. |
-|  | API | 9010 | Secure with TLS & authentication. |
+| ^ | FastCGI | 9000 | Should be bound locally. |
+| ^ | API | 9010 | Secure with TLS & authentication. |
 | Coordinator Service | Client Communication | 21810 | Internal only. |
 | Main Server | TCP Server | 51212 | **Plaintext** device comms — block if possible. |
-|  | SSL Server | 51213 | **Preferred** device comms (TLS). |
-|  | gRPC | 51219 | Internal service comms only. |
+| ^ | SSL Server | 51213 | **Preferred** device comms (TLS). |
+| ^ | gRPC | 51219 | Internal service comms only. |
 | Cache Service | Client | 10800 | Equivalent to Redis — do not expose externally. |
-|  | Communication | 47500 | Internal only. |
-|  | Discovery | 47100 | Internal only. |
+| ^ | Communication | 47500 | Internal only. |
+| ^ | Discovery | 47100 | Internal only. |
 
----
 
-### 6.2. Default Security Features in BioStar X
+
+## Default security features in BioStar X
 
 | Feature | Location in UI | Default | Recommendation |
-|---------|---------------|---------|----------------|
-| Change Default Admin Login ID & Password | User Module → Edit Default Admin (UID:1) | admin / installer PW | Change immediately after install. |
-| Access Separation (roles) | Settings → User → Account Levels | Predefined: Admin, Operator, Monitoring | Create custom roles as needed. |
-| Password Strength Policy | Settings → System → Security | Medium | Set to Strong, enforce MFA. |
-| Session Security (Simultaneous Connection) | Settings → System → Security | Allow | Set to **Inactive** to prevent shared logins. |
-| Multi-Factor Authentication | Settings → System → Security → MFA | Not Use | Enable for Admin/Operator/Auditor accounts. |
-| Secure Communication with Device | Settings → System → Security → Advanced | Not Use | Enable + use SSL port (51213). |
-| Device Hashkey Management | Settings → System → Security → Advanced | Not Use | Enable for tamper protection in high-security deployments. |
-| System Backup | Settings → System → System Backup | Manual | Enable Automatic Daily backups. |
-| Directory Integration | Settings → Directory Integration | Not Configured | Integrate with Entra ID or AD where available. |
-| Log Settings (Retention & Levels) | Settings → Server → Server | 60 days, Info | Adjust per compliance. Forward to SIEM. |
-| Encrypt Personal Data on Database | Settings → System → Security | Not Use | Enable in production. |
-| Store Visual Face Image | Settings → Server → Expert Settings | Use | Disable unless justified. |
+| -- | -- | -- | -- | 
+| Change Default Admin Login ID & Password | <Cmd sid='shell.header.user' /> → Edit Default Admin (`UID:1`) | admin / installer PW | Change immediately after install. |
+| Access Separation (roles) | <Cmd sid='shell.header.user' /> → Select a user → <Cmd sid='common.permission' product='2' /> → <Cmd sid='user.accountLevel' product='2' /> | Predefined: <Cmd sid='setting.account.administrator' product='2' />, <Cmd sid='setting.account.userOperator' product='2' />, <Cmd sid='setting.account.monitoringOperator' product='2' /> | Create custom roles as needed. |
+| Password Strength Policy | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.systemSecurity.loginPassword' product='2' /> → <Cmd sid='setting.server.passwordLevel' product='2' /> | <Cmd sid='setting.server.passwordLevelMedium' product='2' /> | Set to <Cmd sid='setting.server.passwordLevelStrong' product='2' />, enforce MFA. |
+| Session Security (Simultaneous Connection) | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.systemSecurity.sessionSecurity' product='2' /> → <Cmd sid='setting.systemSecurity.useSimultaneousConnection' product='2' /> | <Cmd sid='common.active' product='2' /> | Set to <Cmd sid='common.inactive' product='2' /> to prevent shared logins. |
+| Multi-Factor Authentication | <Cmd sid='shell.header.user' /> → Select a user → <Cmd sid='common.permission' product='2' /> → <Cmd sid='common.fingerprintLogin' product='2' /> | <Cmd sid='common.notUse' product='2' /> | Enable for <Cmd sid='setting.account.administrator' product='2' />, <Cmd sid='setting.account.userOperator' product='2' />, <Cmd sid='setting.account.monitoringOperator' product='2' /> accounts. |
+| Secure Communication with Device | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.server.secure.comm.title' product='2' /> → <Cmd sid='setting.sever.secure.comm.menu' product='2' /> | <Cmd sid='common.notUse' product='2' /> | Enable + use SSL port (51213). |
+| Device Hashkey Management | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.server.secure.comm.title' product='2' /> → <Cmd sid='setting.server.secure.comm.data_encryption' product='2' /> | <Cmd sid='common.notUse' product='2' /> | Enable for tamper protection in high-security deployments. |
+| System Backup | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.systemBackup' /> | <Cmd sid='common.manual' product='2' /> | Enable <Cmd sid='common.backup.autoBackup' product='2' />. |
+| Directory Integration | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.directoryIntegration.root' /> | Not Configured | Integrate with Entra ID or Active Directory where available. |
+| Log Settings (Retention & Levels) | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' /> | <Cmd sid='setting.server.logRetainDays' product='2' />: 60 days<br /><Cmd sid='setting.server.logLevel' product='2' />: <Cmd sid='setting.server.logLevel.info' product='2' /> | Adjust per compliance. Forward to SIEM. |
+| Encrypt Personal Data on Database | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.server.secure.comm.title' product='2' /> → <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' /> | <Cmd sid='common.notUse' product='2' /> | Enable in production. |
+| Store Visual Face Image | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.server' /> → <Cmd sid='settings.expertSettings.enableButton' product='2' /> → <Cmd sid='settings.expertSettings.detail.storeVisualFaceImageOptionLabel' product='2' /> | <Cmd sid='common.use' product='2' /> | Disable unless justified. |
 
----
 
-### 6.3. Compliance Mapping (Quick View)
+## Compliance mapping (quick view)
+
+<div className='table-fixed'>
 
 | Security Control | Supports Compliance Areas |
-|-----------------|--------------------------|
+| -- | -- |
 | Database encryption (PII, biometrics) | GDPR, CCPA, ISO 27001 |
 | System log retention + forwarding | ISO 27001, PCI-DSS |
 | MFA for admin/operator accounts | NIST 800-63, ISO 27001 |
 | Secure comms with devices (TLS) | GDPR, ISO 27001 |
 | Backup & restore capability | ISO 27001, SOC 2 |
-| Directory integration (AD/Entra ID) | SOX, ISO 27001, SOC 2 |
+| Directory integration (Entra ID / Active Directory) | SOX, ISO 27001, SOC 2 |
 
----
+</div>
 
-### 6.4. External References
 
-- [Suprema Knowledge Base – Secure Communication with Device](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_configure_secure_communication_between_device_and_server_tls_ssl)
-- [Suprema Knowledge Base – Device Hashkey Management](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_manually_manage_server_device_encryption_key)
-- [Suprema Knowledge Base – Import/Export Device Logs via USB](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_import_export_user_log_between_biostar_2_and_suprema_reader_using_usb_memory)
-- [Microsoft – Windows Security Compliance Toolkit](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit-10)
-- [Suprema Docs – BioStation 3 Max Device Documentation](https://docs.supremainc.com/en/device/biostation_3_max/)
-- [Suprema Docs – BioStation 3 Max Admin Menu](https://docs.supremainc.com/en/device/biostation_3_max/admin-menu)
-- [Suprema Docs – BioStation 3 Max Product Specifications](https://docs.supremainc.com/en/device/biostation_3_max/product-specifications)
-- [Suprema Knowledge Base – FaceStation F2 Revision Notes](https://kb.supremainc.com/knowledge/doku.php?id=en:tc_prod_f2)
-- [Suprema Knowledge Base – BioEntry W3 USB Firmware Upgrade Guide](https://kb.supremainc.com/knowledge/lib/exe/fetch.php?media=en:bew3_usb_fw_upgrade_en.pdf)
-- [Suprema Knowledge Base – How to Configure Secure Tamper](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_configure_secure_tamper)
+## External References
+
+* [Suprema Knowledge Base – Secure Communication with Device](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_configure_secure_communication_between_device_and_server_tls_ssl)
+
+* [Suprema Knowledge Base – Device Hashkey Management](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_manually_manage_server_device_encryption_key)
+
+* [Suprema Knowledge Base – Import/Export Device Logs via USB](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_import_export_user_log_between_biostar_2_and_suprema_reader_using_usb_memory)
+
+* [Suprema Knowledge Base – BioEntry W3 USB Firmware Upgrade Guide](https://kb.supremainc.com/knowledge/lib/exe/fetch.php?media=en:bew3_usb_fw_upgrade_en.pdf)
+
+* [Suprema Knowledge Base – How to Configure Secure Tamper](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_configure_secure_tamper)
+
+* [Microsoft – Windows Security Compliance Toolkit](https://learn.microsoft.com/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit-10)
