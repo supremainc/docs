@@ -127,7 +127,8 @@ export function AiCamera({ productLinks: productLinksProp }) {
         id: "externalLinks.ViOnyx.desc",
         message: "AI 기반 지능형 영상 분석 카메라"
       })}`,
-      height: '60px'
+      height: '60px',
+      tags: [ 'AI', 'Face', 'Fisheye', 'Re-ID', 'Walk-through' ]
     }
   ], [currentLocale]);
   const productLinks = productLinksProp || defaultProductLinks;
