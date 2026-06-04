@@ -69,23 +69,20 @@ To delete an enrolled profile image, tap <Cmd>Remove Picture</Cmd>.
 </Column>
 <Column className='padding--l40'>
 
-* <Cmd>ID</Cmd>: The unique ID assigned to the user. The value generated automatically by the system is prefilled. The administrator can also enter it manually.
+* <Cmd>ID</Cmd>: The unique ID assigned to the user. The value generated automatically by the system is prefilled. You can also enter it manually.
 
 * <Cmd>Name</Cmd>: Enter the user's name.
 
-* <Cmd>Account Level</Cmd>: Set the user's administrator level.
+* <Cmd>Account Level</Cmd>: Select the user's account level.
 
-  * <Cmd>None</Cmd>: A standard user with no administrator privileges.
-
-  * <Cmd>Administrator</Cmd>: An administrator level that can use all menus.
-
-  * <Cmd>User Operator</Cmd>: Has **read** and **write** permissions in the <Cmd sid='shell.header.user' product='2' /> menu.
-
-  * <Cmd>Monitoring Operator</Cmd>: Has **read** and **write** permissions in the <Cmd sid='shell.header.arena' />, <Cmd sid='shell.header.data' />, and <Cmd sid='shell.header.dashboard' /> menus.
-
-  * <Cmd>T&A Operator</Cmd>: Has **read** and **write** permissions in the <Cmd sid='common.gnb.time_attendance' product='2' /> menu.
-
-  * <Cmd>Visitor Operator</Cmd>: Has **read** and **write** permissions in the <Cmd sid='common.gnb.visitor' product='2' /> menu.
+  | Account level | > | Permissions by menu |
+  | --- | --- | --- |
+  | <Cmd>None</Cmd> | \- | None |
+  | <Cmd>Administrator</Cmd> | All menus | All permissions |
+  | <Cmd>User Operator</Cmd> | <Cmd sid='shell.header.user' /> | Read, Write |
+  | <Cmd>Monitoring Operator</Cmd> | <Cmd sid='shell.header.arena' />, <Cmd sid='shell.header.data' />, <Cmd sid='shell.header.dashboard' /> | Read, Write |
+  | <Cmd>T&A Operator</Cmd> | <Cmd sid='common.gnb.time_attendance' product='2' /> | Read, Write |
+  | <Cmd>Visitor Operator</Cmd> | <Cmd sid='common.gnb.visitor' product='2' /> | Read, Write |
 
    :::note
 
@@ -105,7 +102,7 @@ To delete an enrolled profile image, tap <Cmd>Remove Picture</Cmd>.
 
 * <Cmd>Period</Cmd>: Set the period for using the user account. Set the start and end dates to use the user account only during that period.
 
-* <Cmd>Access Group</Cmd>: Set the user's access group to restrict access by organization or department.
+* <Cmd>Access Group</Cmd>: Select the user's access group.
 
 :::info
 
@@ -177,7 +174,7 @@ You can enroll the user's fingerprint as a means of authentication for access co
 
 1. Tap <Cmd>Credential</Cmd> → <Cmd>Fingerprint</Cmd>.
 
-2. Tap <Cmd>Device</Cmd>, select a device for enrolling the fingerprint, and then tap <Cmd>Yes</Cmd>.
+2. Tap <Cmd>Device</Cmd> to select a device to enroll the fingerprint.
 
 3. In the <Cmd>Add Device</Cmd> pop-up, select a device for fingerprint enrollment and tap <Cmd>Yes</Cmd>.
 
@@ -312,7 +309,7 @@ You can enroll the user's face as a means of authentication for access control. 
 
 ### Enroll access card
 
-You can enroll a new access card or assign an enrolled access card as an authentication method for access. There are two ways to enroll an access card: scan the card on a card reader or enter the card number manually.
+You can enroll a new access card or assign an enrolled access card as an authentication method for access. There are ways to enroll an access card: scan the card on a card reader, assign an already enrolled card, or enter the card number manually.
 
 #### CSN card
 
