@@ -1,0 +1,157 @@
+---
+id: manage-device
+title: Mantener la Cámara
+description: Explica cómo gestionar la cámara de forma eficaz reiniciándola o inicializando su configuración.
+keywords:
+  - Reiniciar
+  - Restablecimiento
+  - Mantenimiento
+  - Restablecimiento
+  - Restablecimiento de fábrica
+  - Restablecimiento de la configuración
+---
+
+Gestiona la cámara de forma eficaz reiniciándola o inicializando la configuración. Cubre tres métodos: reinicio, restablecimiento de la configuración y restablecimiento de fábrica.
+
+Usa la función de mantenimiento de la cámara en las siguientes situaciones.
+
+* Cuando una persona externa que no es administradora intenta quitar la cubierta de la cámara y necesitas aplicar medidas de seguridad para que la cámara deje de operar normalmente.
+
+* Después de cambiar la configuración de red, para aplicar la nueva configuración.
+
+* Cuando la cámara responde lentamente o su rendimiento disminuye.
+
+* Cuando el sistema no funciona normalmente.
+
+* Cuando necesitas restaurar todas las configuraciones de la cámara a los valores predeterminados.
+
+* Antes de entregar la cámara a otro usuario, para eliminar toda la información.
+
+* Cuando un problema del sistema requiere restaurar los valores predeterminados de fábrica.
+
+:::warning
+
+* No apagues la cámara durante el reinicio o la inicialización.
+
+* **El restablecimiento de fábrica** elimina de forma permanente todos los datos del usuario, los registros de eventos y los registros. Esta acción no se puede revertir; procede con extrema precaución.
+
+* Haz una copia de seguridad de los datos necesarios antes de inicializar.
+
+:::
+
+## <Cmd sid='tamper' product='cam' className='normal' />
+
+Activa la función <Cmd sid='tamper' product='cam' /> de la cámara para eliminar los certificados y las claves de la cámara cuando una persona externa que no es administradora intenta quitar la cubierta de la cámara, lo que evita que la cámara funcione normalmente.
+
+1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='device_info' product='cam' /> en la barra lateral izquierda.
+
+3. Haz clic en el interruptor de la sección <Cmd sid='tamper' product='cam' /> para activar la función.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-tamper.png' />
+
+4. Cuando aparezca el mensaje de advertencia, haga clic en <Cmd sid='ok' product='cam' />.
+
+Esta función guarda los cambios automáticamente sin hacer clic en <Cmd sid='save' product='cam' />.
+
+:::caution
+
+Cuando la función <Cmd sid='tamper' product='cam' /> está activada y el administrador debe quitar la cubierta de la cámara para mantenimiento, desactiva temporalmente la función <Cmd sid='tamper' product='cam' /> antes de continuar. Vuelve a activarla después de completar la tarea para mantener la seguridad.
+
+:::
+
+## Reiniciar la cámara
+
+Reinicia la cámara para aplicar cambios de configuración o restaurar el rendimiento del sistema. El reinicio reinicializa el sistema y mantiene la configuración actual.
+
+1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='device_info' product='cam' /> en la barra lateral izquierda.
+
+3. En la sección <Cmd sid='firmware_reset' product='cam' />, debajo de <Cmd sid='reboot' product='cam' />, haz clic en <Cmd sid='apply' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-reboot-init.png' />
+
+4. Cuando aparezca la ventana emergente de confirmación del reinicio, haz clic en <Cmd sid='ok' product='cam' />.
+
+:::info
+
+* Mientras se reinicia, la cámara no está disponible temporalmente. El reinicio tarda al menos 1 a 2 minutos.
+
+* No apagues la cámara durante el reinicio. Puede producirse daño en el sistema.
+
+* Si la dirección IP de la cámara cambia después del reinicio, conéctate con la nueva dirección IP.
+
+* Cuando comienza el reinicio, la conexión de la interfaz web se desconecta automáticamente. Este comportamiento es normal.
+
+:::
+
+## Restablecimiento
+
+Inicializa la configuración de la cámara o restáurala por completo a los valores predeterminados de fábrica. Hay dos métodos de inicialización disponibles; eliminan datos distintos, así que elige con cuidado.
+
+### Comparación de métodos de inicialización
+
+| Método | Descripción | Datos eliminados | Datos conservados |
+| --- | --- | --- | --- |
+| <Cmd sid='config_reset' product='cam' /> | Inicializar solo la configuración | Configuración de la cámara, configuración de red (opcional), perfiles de video, reglas, cuentas | Información del usuario, datos faciales, eventos/registros |
+| <Cmd sid='factory_reset' product='cam' /> | Eliminar todos los datos y restaurar los valores predeterminados de fábrica | Todas las configuraciones, información del usuario, eventos, registros, cuentas | * |
+
+### <Cmd sid='config_reset' product='cam' className='normal' />
+
+Inicializa solo la configuración; conserva la información del usuario y los datos de registros.
+
+1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='device_info' product='cam' /> en la barra lateral izquierda.
+
+3. En la sección <Cmd sid='firmware_reset' product='cam' />, debajo de <Cmd sid='config_reset' product='cam' />, haz clic en <Cmd sid='reset' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-reboot-init.png' />
+
+   Para excluir la configuración de red de la inicialización, haz clic en la casilla de verificación de la opción <Cmd sid='config_reset_excluding_network' product='cam' />.
+
+4. Cuando aparezca la ventana emergente de confirmación del restablecimiento de la configuración, haz clic en <Cmd sid='ok' product='cam' />.
+
+El restablecimiento de la configuración continúa y la cámara se reinicia automáticamente.
+
+### <Cmd sid='factory_reset' product='cam' className='normal' />
+
+Inicializa por completo la cámara para restaurarla a los valores predeterminados de fábrica. Esta acción no se puede deshacer.
+
+:::warning
+
+El restablecimiento de fábrica elimina por completo todos los datos. Esta acción no se puede revertir; procede con extrema precaución.
+
+:::
+
+1. Haga clic en el menú <Cmd sid='system' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='device_info' product='cam' /> en la barra lateral izquierda.
+
+3. En la sección <Cmd sid='firmware_reset' product='cam' />, debajo de <Cmd sid='factory_reset' product='cam' />, haz clic en <Cmd sid='reset' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-reboot-init.png' />
+
+   Para excluir la configuración de red de la inicialización, haz clic en la casilla de verificación de la opción <Cmd sid='config_reset_excluding_network' product='cam' />.
+
+4. Cuando aparezca la ventana emergente de confirmación del restablecimiento de fábrica, haz clic en <Cmd sid='ok' product='cam' />.
+
+5. Cuando aparezca la ventana emergente de confirmación final, ingresa la contraseña de administrador.
+
+6. Haga clic en <Cmd sid='ok' product='cam' />.
+
+:::info
+
+* Después de completar el restablecimiento de fábrica, los siguientes elementos se restauran a sus valores predeterminados.
+
+  * ID de administrador: **admin**
+
+  * Configuración de red: DHCP
+
+  * Todos los datos del usuario, eventos y registros: eliminados
+
+* Después del restablecimiento de fábrica, establece una nueva contraseña predeterminada al acceder a la interfaz web.
+
+:::

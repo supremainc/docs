@@ -25,6 +25,7 @@ import partner_ko from './partner/ko.json';
 import partner_en from './partner/en.json';
 import cam_ko from './cam/ko.json';
 import cam_en from './cam/en.json';
+import cam_ja from './cam/ja.json';
 
 // 다국어 지원을 위한 locale mapping
 const localeMap = {
@@ -54,6 +55,8 @@ const partnerLocaleMap = {
 const camLocaleMap = {
   ko: cam_ko,
   en: cam_en,
+  ja: cam_ja,
+  es: cam_en, // cam의 스페인어 번역이 없는 경우 영어로 대체
 };
 
 const xlocaleMap = {
@@ -75,7 +78,7 @@ const glossaryMap = {
 //   return sid.split('.').reduce((acc, key) => acc && acc[key], locale);
 // };
 
-const ReplacementLocaleText = ({ sid, code, className, children, product, tip }) => {
+const ReplacementLocaleText = ({ sid, code, className, children, product, tip, replace }) => {
   const { i18n: { currentLocale } } = useDocusaurusContext();
   let localeText, desc;
 
@@ -130,7 +133,11 @@ const ReplacementLocaleText = ({ sid, code, className, children, product, tip })
       localeText = locale[sid] ? locale[sid].replace('<br/>', '') : null;
     } else if (product === 'cam') {
       const locale = camLocaleMap[currentLocale] || camLocaleMap.en;
-      localeText = locale[sid] ? locale[sid].replace('<br/>', '') : null;
+      if (sid === 'ntp_address_n' || sid === 'dns_n') {
+        localeText = locale[sid] ? locale[sid].replace('{n}', replace || '1') : null;
+      } else {
+        localeText = locale[sid] ? locale[sid].replace('<br/>', '') : null;
+      }
     } else {
       // const locale = xlocaleMap[currentLocale] || xlocaleMap.en;
       // const text = getLocaleText(locale, sid);

@@ -1,0 +1,132 @@
+---
+id: set-ai-advanced
+title: Advanced Settings
+description: You can configure additional options in Advanced settings.
+keywords:
+  - AI
+  - Advanced Settings
+---
+
+<Include lang='ja'>
+
+In Advanced settings, you can set the face capture type and manage automatic user enrollment and retention policies for enrolled users when facial recognition occurs.
+
+</Include>
+
+<Xclude lang='ja'>
+
+In Advanced settings, choose whether to capture only the upper body or the full body when capturing a user's face.
+
+</Xclude>
+
+## Face capture type setting
+
+Set the face capture type to capture only the upper body or the full body. Select the desired capture type in the <Cmd sid='shoot_type' product='cam' /> option, then click <Cmd sid='save' product='cam' />.
+
+<ProdImg src='/img/cam-server/ai-advanced-face-shot-type.png' />
+
+<Include lang='ja'>
+
+## Automatic user enrollment setting
+
+Faces detected through AI events can be automatically enrolled as users. This feature is set to Manual Enrollment mode by default, and you can switch to Automatic Enrollment mode as needed.
+
+:::info
+
+For automatically enrolled users, manually edit information such as user name and description. For more information on editing user information, see <DocLink docId='device/vionyx_webserver/modify-delete-users' />.
+
+:::
+
+### Enable automatic enrollment mode
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. On the left sidebar, click <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='advanced' product='cam' />.
+
+3. In the <Cmd sid='auto_user_enroll' product='cam' /> section, enable the <Cmd sid='by_face_recognition' product='cam' /> option.
+
+<ProdImg src='/img/cam-server/ai-advanced-register-user-auto.png' />
+
+Set each option as follows, then click <Cmd sid='save' product='cam' /> to save.
+
+:::info
+
+When using <Cmd sid='auto_user_enroll' product='cam' /> mode, users enrolled with low-quality photos, such as blurry images, masked faces, or side profiles, may experience false authentication.
+
+:::
+
+### Automatic enrollment user count setting
+
+In the <Cmd sid='num_of_auto_enroll_user' product='cam' /> option, set the number of users that can be automatically enrolled. Drag the slider or enter a number directly in the input field.
+
+* The default value is 50,000 users, and you can set up to 100,000 users.
+
+* When you set the automatic enrollment user count, manually enrolled users can be enrolled only within the configured count. For example, if the configured user count is 50,000, the total of automatic and manual enrollments can reach only 50,000 users.
+
+:::info
+
+* If manually enrolled users already exist, you cannot increase the automatic enrollment user count.
+
+* When you decrease the automatic enrollment user count, excess users are automatically deleted from the oldest first.
+
+:::
+
+### Retention policy setting
+
+In the <Cmd sid='retention_period' product='cam' /> option, set the retention policy for automatically enrolled users. Choose how to delete automatically enrolled users when the user limit is reached.
+
+* <Cmd sid='delete_oldest_when_full' product='cam' />: When the assigned user count is exceeded, automatically delete the oldest enrolled users first.
+
+* <Cmd sid='delete_newest_when_full' product='cam' />: When the assigned user count is exceeded, automatically delete the most recently enrolled users first.
+
+* <Cmd sid='reject_new_when_full' product='cam' />: When the assigned user count is exceeded, new users cannot be enrolled.
+
+### Retention period setting
+
+In the <Cmd sid='retention_period_days' product='cam' /> option, set the retention period for automatically enrolled users in days. When the retention period expires, the oldest enrolled users are automatically deleted first.
+
+* <Cmd sid='disabled' product='cam' /> (default): When the assigned user count is exceeded, automatically delete the oldest enrolled users first.
+
+* <Cmd>1 day</Cmd>, <Cmd>3 days</Cmd>, <Cmd>7 days</Cmd>, <Cmd>14 days</Cmd>, <Cmd>30 days</Cmd>, <Cmd>90 days</Cmd>, <Cmd>365 days</Cmd>: Automatically delete automatically enrolled users after the selected period ends.
+
+:::info
+
+When you set a retention period, once the user limit is reached, older users are deleted immediately instead of waiting for the period to end.
+
+:::
+
+## View and manage automatically enrolled users
+
+### View in the <Cmd sid='people' product='cam' className='normal' /> menu
+
+Automatically enrolled users appear in the user list in the <Cmd sid='people' product='cam' /> menu.
+
+* User IDs are assigned automatically in sequence based on facial recognition order.
+
+* The <Cmd sid='description' product='cam' /> column shows <Cmd sid='auto_enroll' product='cam' />, so you can distinguish these users from manually enrolled users.
+
+* The <Cmd sid='last_updated' product='cam' /> column shows the date and time the user was enrolled.
+
+### Edit user details
+
+1. Click the <Cmd sid='people' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click the automatically enrolled user in the user list.
+
+3. When the user detail popup appears, edit the required information.
+
+4. After editing user information, click <Cmd sid='apply' product='cam' />.
+
+### View facial authentication logs and face captures
+
+1. Click the <Cmd sid='people' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click the automatically enrolled user in the user list.
+
+3. When the user details popup appears, view facial authentication logs in the <Cmd sid='event_logs' product='cam' /> section.
+
+* Select a date to view facial authentication logs for a specific period.
+
+* Click <Cmd sid='face_shot' product='cam' /> in the log to display the face photo from that authentication time.
+
+</Include>

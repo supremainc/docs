@@ -32,9 +32,11 @@ keywords: [날짜, 시간, NTP, 시간대, 시간 동기화]
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid='basic' product='cam' /> → <Cmd sid='date_time' product='cam' />을 클릭하세요.
 
-1. <Cmd sid='date' product='cam' /> 섹션의 <Cmd sid='time_zone' product='cam' />에서 지역을 선택하세요. (예: GMT+09:00 Seoul)
+1. <Cmd sid='date' product='cam' /> 섹션의 <Cmd sid='time_zone' product='cam' />에서 지역을 선택하세요. 
 
-   <Image src='/img/cam-server/cam-webserver-settings-date-time.png' />
+   > 예: `(UTC+09:00) Asia/Seoul`
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-date-time.png' />
 
 1. 시간대에 따른 서머 타임을 적용하려면 <Cmd sid='daylight_savings' product='cam' /> 옵션의 체크박스를 클릭하세요.
 
@@ -42,7 +44,7 @@ keywords: [날짜, 시간, NTP, 시간대, 시간 동기화]
 
 :::info
 
-기본값은 (GMT+09:00) Seoul로 설정되어 있습니다. 운영 지역이 다르면 반드시 시간대를 변경하세요.
+기본값은 `(UTC+09:00) Asia/Seoul`로 설정되어 있습니다. 운영 지역이 다르면 반드시 시간대를 변경하세요.
 
 :::
 
@@ -57,7 +59,7 @@ keywords: [날짜, 시간, NTP, 시간대, 시간 동기화]
 
 1. <Cmd sid='time' product='cam' /> 섹션에서 <Cmd sid='manual' product='cam' />을 선택하세요.
 
-   <Image src='/img/cam-server/cam-webserver-settings-date-time-manual.png' />
+   <ProdImg src='/img/cam-server/cam-webserver-settings-date-time-manual.png' />
 
 1. 날짜 필드에 현재 날짜를 입력하거나 달력 아이콘을 클릭해 날짜를 선택하세요.
 
@@ -69,7 +71,7 @@ keywords: [날짜, 시간, NTP, 시간대, 시간 동기화]
 
 :::info
 
-* PC의 시간을 카메라에 자동으로 적용하려면, <Cmd sid='pc_viewer_time_apply' product='cam' /> 옵션을 활성화하세요. 브라우저의 시스템 시간이 카메라에 적용됩니다.
+* PC의 시간을 카메라에 자동으로 적용하려면, <Cmd sid='pc_viewer_time_apply' product='cam' /> 옵션을 활성화하세요. 웹 브라우저의 시스템 시간이 카메라에 적용됩니다.
 
 * 수동 모드와 NTP 자동 동기화는 동시에 활성화할 수 없습니다. 수동 모드를 선택하면 NTP 자동 동기화는 비활성화됩니다.
 
@@ -86,18 +88,19 @@ NTP 서버를 통해 카메라의 시간을 자동으로 정확하게 유지할 
 
 1. <Cmd sid='time' product='cam' /> 섹션에서 <Cmd sid='ntp_server_sync' product='cam' />를 선택하세요.
 
-   <Image src='/img/cam-server/cam-webserver-settings-date-time-sync-mode.png' />
+   <ProdImg src='/img/cam-server/cam-webserver-settings-date-time-sync-mode.png' />
 
-1. <Cmd sid='ntp_address_1' product='cam' /> (필수) 필드에 NTP 서버 주소를 입력하세요.
+1. <Cmd sid='ntp_address_n' product='cam' replace='1' />(필수) 필드에 NTP 서버 주소를 입력하세요.
 
    * URL 형식: time.windows.com, time.nist.gov 등
+
    * IP 주소: 192.0.2.1 등
 
-1. (선택) 필요하면 <Cmd sid='ntp_address_2' product='cam' />, <Cmd sid='ntp_address_3' product='cam' />, <Cmd sid='ntp_address_4' product='cam' />에 추가 NTP 서버를 입력하세요.
+1. (선택) 필요하면 <Cmd sid='ntp_address_n' product='cam' replace='2' />, <Cmd sid='ntp_address_n' product='cam' replace='3' />, <Cmd sid='ntp_address_n' product='cam' replace='4' />에 추가 NTP 서버를 입력하세요.
 
    * 최대 4개 서버까지 설정할 수 있습니다.
 
-   * 주소 1이 응답하지 않으면 자동으로 다음 서버로 전환됩니다.
+   * <Cmd sid='ntp_address_n' product='cam' replace='1' />이 응답하지 않으면 자동으로 다음 서버로 전환됩니다.
 
 1. 시간 설정을 저장하려면 화면 오른쪽 상단의 <Cmd sid='save' product='cam' /> 버튼을 클릭하세요.
 
@@ -105,13 +108,12 @@ NTP 서버를 통해 카메라의 시간을 자동으로 정확하게 유지할 
 
 :::info
 
-**NTP 서버 우선순위:**
-- 주소 1 (첫 번째) → 주소 2 → 주소 3 → 주소 4 순서로 연결 시도
-- 우선순위 서버가 응답하지 않으면 자동으로 다음 서버를 시도
+**권장 NTP 서버**
 
-**권장 NTP 서버:**
-- time.windows.com (Windows 공용 NTP)
-- time.nist.gov (NIST 공용 NTP)
-- pool.ntp.org (NTP Pool 프로젝트)
+* time.windows.com (Windows 공용 NTP)
+
+* time.nist.gov (NIST 공용 NTP)
+
+* pool.ntp.org (NTP Pool 프로젝트)
 
 :::

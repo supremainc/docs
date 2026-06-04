@@ -1,0 +1,121 @@
+---
+id: configure-date-time
+title: Configure Date and Time
+description: Guide to setting the time zone and keeping accurate time using manual entry or an NTP server.
+keywords:
+  - Date
+  - Time
+  - NTP
+  - time zone
+  - Time sync
+---
+
+Date and time settings keep the camera's clock accurate. Select a time zone and set the time manually or synchronize automatically with an NTP server. Accurate time ensures the reliability of video timestamps and AI event logs.
+
+Check date and time settings in the following situations.
+
+* After installing the camera, set the time zone to match the operating region.
+
+* To synchronize the camera's clock by entering the exact time manually.
+
+* To maintain accurate time automatically over long periods via an NTP server.
+
+* To unify time across multiple cameras to simplify video analysis and tracking.
+
+:::info
+
+Inaccurate camera time reduces the reliability of AI event logs, video timestamps, and system logs. Check time settings regularly.
+
+:::
+
+## Time zone settings
+
+First, set the camera's time zone to the operating region.
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. In the left sidebar, click <Cmd sid='basic' product='cam' /> → <Cmd sid='date_time' product='cam' />.
+
+3. In the <Cmd sid='date' product='cam' /> section, select the region in <Cmd sid='time_zone' product='cam' />.
+
+   > Example: `(UTC+09:00) Asia/Seoul`
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-date-time.png' />
+
+4. To apply daylight savings for the time zone, enable the <Cmd sid='daylight_savings' product='cam' /> option by clicking its checkbox.
+
+5. Click <Cmd sid='save' product='cam' /> at the top right of the screen to save the selected time zone.
+
+:::info
+
+The default is set to `(UTC+09:00) Asia/Seoul`. If the operating region differs, change the time zone.
+
+:::
+
+## Manual time setting
+
+Set the camera's time manually.
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. In the left sidebar, click <Cmd sid='basic' product='cam' /> → <Cmd sid='date_time' product='cam' />.
+
+3. In the <Cmd sid='time' product='cam' /> section, select <Cmd sid='manual' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-date-time-manual.png' />
+
+4. Enter the current date in the Date field, or click the calendar icon to select a date.
+
+5. Enter the current time in the Time field, or click the clock icon to select a time.
+
+6. Click <Cmd sid='apply' product='cam' /> to apply the manual time setting.
+
+7. Click <Cmd sid='save' product='cam' /> at the top right of the screen to save the time settings.
+
+:::info
+
+* Enable the <Cmd sid='pc_viewer_time_apply' product='cam' /> option to apply the PC's time to the camera automatically. The system time in the web browser is applied to the camera.
+
+* Manual mode and NTP automatic synchronization cannot be active at the same time. Selecting manual mode disables NTP automatic synchronization.
+
+:::
+
+## Automatic time synchronization
+
+Use an NTP server to keep the camera's time accurate automatically. Recommended for long-term operation.
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. In the left sidebar, click <Cmd sid='basic' product='cam' /> → <Cmd sid='date_time' product='cam' />.
+
+3. In the <Cmd sid='time' product='cam' /> section, select <Cmd sid='ntp_server_sync' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-date-time-sync-mode.png' />
+
+4. Enter the NTP server address in the <Cmd sid='ntp_address_n' product='cam' replace='1' /> (required) field.
+
+   * URL format: time.windows.com, time.nist.gov, etc.
+
+   * IP address: 192.0.2.1, etc.
+
+5. (Optional) Enter additional NTP servers in <Cmd sid='ntp_address_n' product='cam' replace='2' />, <Cmd sid='ntp_address_n' product='cam' replace='3' />, and <Cmd sid='ntp_address_n' product='cam' replace='4' /> if needed.
+
+   * Up to 4 servers are supported.
+
+   * If <Cmd sid='ntp_address_n' product='cam' replace='1' /> does not respond, the system automatically switches to the next server.
+
+6. Click <Cmd sid='save' product='cam' /> at the top right of the screen to save the time settings.
+
+After setup, the camera automatically synchronizes with the NTP server and periodically updates the time.
+
+:::info
+
+**Recommended NTP Servers**
+
+* time.windows.com (Windows public NTP)
+
+* time.nist.gov (NIST public NTP)
+
+* pool.ntp.org (NTP Pool project)
+
+:::

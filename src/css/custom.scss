@@ -1277,6 +1277,11 @@ body[data-rh] .redocusaurus {
     content: counter(column-count) ". ";
   }
   .columns {
+    .features {
+      p.hasimg {
+        margin-bottom: 0;
+      }
+    }
     .col {
       height: fit-content;
       h2 {
@@ -1554,18 +1559,30 @@ body[data-rh] .redocusaurus {
   }
   .menu-icon-table {
     table {
+      th {
+        &:first-of-type, &:nth-of-type(2) {
+          width: 20%;
+        }
+      }
       td {
         p.hasimg {
           margin: 0 auto !important;
           width: fit-content;
         }
-        &:first-of-type, &:nth-of-type(2) {
-          width: 20%;
+        &:first-of-type {
+          svg {
+            top: 0;
+          }
+        }
+        &:nth-of-type(2) {
+          svg {
+            top: 4px;
+          }
         }
       }
       svg {
         position: relative;
-        top: 0;
+        
       }
     }
   }

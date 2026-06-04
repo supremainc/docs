@@ -1,0 +1,157 @@
+---
+id: manage-device
+title: カメラの保守
+description: カメラを再起動または設定を初期化して、効果的に管理する方法を説明します。
+keywords:
+  - 再起動
+  - 初期化
+  - 保守
+  - リセット
+  - 工場出荷時リセット (Factory Reset)
+  - 設定の初期化 (Config Reset)
+---
+
+カメラを再起動または設定を初期化して、カメラを効果的に管理できます。 再起動、設定初期化、工場出荷時リセットの3つの方法を説明します。
+
+次のような状況でカメラの保守機能を使用してください。
+
+* 管理者以外の外部者がカメラのカバーを取り外そうとしたときに、カメラが正常に動作しないようにセキュリティ対策を行いたいとき
+
+* ネットワーク設定を変更した後、新しい設定を適用する場合
+
+* カメラの応答が遅くなる、またはパフォーマンスが低下した場合
+
+* システムが正常に動作しない場合
+
+* カメラの設定をすべてデフォルトに戻す場合
+
+* カメラを他のユーザーに引き継ぐ前に、すべての情報を削除する場合
+
+* システムに問題が発生し、工場出荷時の状態に戻す必要がある場合
+
+:::warning
+
+* 再起動または初期化中にカメラの電源を切らないでください。
+
+* **工場出荷時リセット**は、すべてのユーザーデータ、イベント記録、ログを永久に削除します。 復元できないため、十分に注意して実行してください。
+
+* 初期化する前に必要なデータをバックアップしてください。
+
+:::
+
+## <Cmd sid='tamper' product='cam' className='normal' />
+
+カメラの<Cmd sid='tamper' product='cam' />機能を有効にすると、管理者以外の外部者がカメラのカバーを取り外そうとしたときに、カメラの証明書とキーを削除して、カメラが正常に動作しないようにできます。
+
+1. 画面左上の <Cmd sid='system' product='cam' /> メニューをクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='device_info' product='cam' /> をクリックします。
+
+3. <Cmd sid='tamper' product='cam' />セクションのトグルボタンをクリックして、機能を有効にします。
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-tamper.png' />
+
+4. 警告メッセージが表示されたら、<Cmd sid='ok' product='cam' /> ボタンをクリックしてください。
+
+この機能では、<Cmd sid='save' product='cam' />ボタンをクリックしなくても変更内容が自動保存されます。
+
+:::caution
+
+<Cmd sid='tamper' product='cam' />機能を有効にした状態で、管理者がメンテナンスのためにカメラのカバーを取り外す必要がある場合は、<Cmd sid='tamper' product='cam' />機能を一時的に無効にしてから作業を進めます。 作業完了後は、再度有効にしてセキュリティを維持します。
+
+:::
+
+## カメラの再起動
+
+カメラを再起動して、設定の変更を適用するかシステムのパフォーマンスを回復します。 再起動は、現在の設定を保持したままシステムを再初期化する方法です。
+
+1. 画面左上の <Cmd sid='system' product='cam' /> メニューをクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='device_info' product='cam' /> をクリックします。
+
+3. <Cmd sid='firmware_reset' product='cam' /> セクションの <Cmd sid='reboot' product='cam' /> で <Cmd sid='apply' product='cam' /> ボタンをクリックします。
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-reboot-init.png' />
+
+4. 再起動確認のポップアップが表示されたら、<Cmd sid='ok' product='cam' /> ボタンをクリックします。
+
+:::info
+
+* 再起動中はカメラを一時的に使用できません。 再起動には最低1〜2分かかります。
+
+* 再起動中にカメラの電源を切らないでください。 システムが損傷する可能性があります。
+
+* 再起動後にカメラのIPアドレスが変更された場合、新しいIPアドレスで接続してください。
+
+* 再起動が開始されると、Web UIの接続は自動的に切断されます。 これは正常な動作です。
+
+:::
+
+## 初期化
+
+カメラの設定を初期化するか、工場出荷時の状態に完全に戻せます。 2つの初期化方式が提供され、削除されるデータが異なるため、慎重に選択してください。
+
+### 初期化方式の比較
+
+| 方式 | 説明 | 削除対象 | 保持対象 |
+| --- | --- | --- | --- |
+| <Cmd sid='config_reset' product='cam' /> | 設定値のみ初期化 | カメラ設定、ネットワーク設定（オプション）、ビデオプロファイル、ルール、アカウント | ユーザー情報、顔データ、イベント／ログ |
+| <Cmd sid='factory_reset' product='cam' /> | すべてのデータを削除して工場出荷時の状態に戻す | すべての設定、ユーザー情報、イベント、ログ、アカウント | - |
+
+### <Cmd sid='config_reset' product='cam' className='normal' />
+
+設定値のみを初期化し、ユーザー情報およびログデータは保持します。
+
+1. 画面左上の <Cmd sid='system' product='cam' /> メニューをクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='device_info' product='cam' /> をクリックします。
+
+3. <Cmd sid='firmware_reset' product='cam' /> セクションの <Cmd sid='config_reset' product='cam' /> で <Cmd sid='reset' product='cam' /> ボタンをクリックします。
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-reboot-init.png' />
+
+   ネットワーク設定の初期化を除外するには、<Cmd sid='config_reset_excluding_network' product='cam' /> オプションのチェックボックスをクリックします。
+
+4. 設定初期化の確認ポップアップが表示されたら、<Cmd sid='ok' product='cam' /> ボタンをクリックします。
+
+設定初期化が実行されると、カメラは自動的に再起動します。
+
+### <Cmd sid='factory_reset' product='cam' className='normal' />
+
+カメラを完全に初期化して工場出荷時の状態に戻します。 この操作は元に戻せません。
+
+:::warning
+
+工場出荷時リセットは、すべてのデータを完全に削除します。 この操作は復元できないため、十分に注意して実行してください。
+
+:::
+
+1. 画面左上の <Cmd sid='system' product='cam' /> メニューをクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='device_info' product='cam' /> をクリックします。
+
+3. <Cmd sid='firmware_reset' product='cam' /> セクションの <Cmd sid='factory_reset' product='cam' /> で <Cmd sid='reset' product='cam' /> ボタンをクリックします。
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-reboot-init.png' />
+
+   ネットワーク設定の初期化を除外するには、<Cmd sid='config_reset_excluding_network' product='cam' /> オプションのチェックボックスをクリックします。
+
+4. 工場出荷時リセットの確認ポップアップが表示されたら、<Cmd sid='ok' product='cam' /> ボタンをクリックします。
+
+5. 最終確認のポップアップが表示されたら、管理者パスワードを入力してください。
+
+6. <Cmd sid='ok' product='cam' /> ボタンをクリックします。
+
+:::info
+
+* 工場出荷時リセット完了後、以下の項目がデフォルトに復元されます。
+
+  * 管理者ID: **admin**
+
+  * ネットワーク設定: DHCP
+
+  * すべてのユーザーデータ、イベント、ログ: 削除されます
+
+* 工場出荷時リセット後、Web UIにアクセスする際に新しい初期パスワードを設定する必要があります。
+
+:::

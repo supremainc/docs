@@ -1,0 +1,172 @@
+---
+id: add-users
+title: Agregar usuarios
+description: Guía para enrollar usuarios para Autenticación Facial y enrollar imágenes de rostro.
+keywords:
+  - Usuario
+  - Enrolamiento
+  - Rostro
+  - Usuario de rostro
+  - Agregar
+  - Foto
+---
+
+Enrolla usuarios para Autenticación Facial con IA. Al agregar un usuario, ingresa la información básica y enrolla un rostro mediante uno de tres métodos.
+
+Agrega usuarios en las siguientes situaciones.
+
+* Al enrollar a un nuevo empleado en la organización
+
+* Al enrollar la foto del rostro de un usuario en la base de datos de Autenticación Facial
+
+* Al agregar varios usuarios en lote
+
+* Al enrollar usuarios para la integración con sistemas externos (ERP, sistema de gestión de RR. HH.)
+
+:::info
+
+* Para usar la función de Facial Authentication, cumpla con las normas locales.
+
+* Al agregar el primer usuario, aparece una ventana emergente de consentimiento de Autenticación Facial. El registro del sistema almacena los consentimientos; la ventana emergente no vuelve a aparecer después del consentimiento.
+
+* Si el consentimiento se completó antes en la configuración de Eventos de IA, no aparece ninguna ventana emergente al agregar usuarios.
+
+:::
+
+## Ingresa la información básica del usuario
+
+Si aparece la ventana emergente de consentimiento de Autenticación Facial al agregar al primer usuario, revisa el contenido y continúa. Después de dar el consentimiento, ingresa la información básica en el cuadro de diálogo Agregar usuario.
+
+1. Haga clic en el menú <Cmd sid='people' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haz clic en <Cmd sid='add' product='cam' /> en la esquina superior derecha de la pantalla.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-add.png' />
+
+3. Al agregar al primer usuario, si aparece la ventana emergente <Cmd sid='face_analytics_consent_title' product='cam' />, revisa el contenido, selecciona la casilla de consentimiento y haz clic en <Cmd sid='face_analytics_consent_agree' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-analysis-notice-face-auth.png' width='50%' />
+
+   :::note
+
+   * Para usar la función de Facial Authentication, cumpla con las normas locales. No puede continuar sin consentimiento.
+
+   * La ventana emergente <Cmd sid='face_analytics_consent_title' product='cam' /> aparece solo una vez.
+
+   :::
+
+4. Cuando aparezca la ventana emergente <Cmd sid='add_new_face_user' product='cam' />, ingresa la información básica del usuario.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-add-pop-profile.png' />
+
+5. Ingresa el ID único del usuario en el campo <Cmd sid='user_id' product='cam' />. El ID de usuario debe ser único.
+
+6. Ingresa el nombre del usuario en el campo <Cmd sid='name' product='cam' />.
+
+   * Hasta 64 caracteres.
+
+   * Puede incluir letras coreanas, japonesas e inglesas en mayúsculas y minúsculas, números, caracteres especiales (`#`, `-`, `_`, `.`, `(`, `)`), y espacios dentro de una palabra.
+
+7. Ingresa una descripción del usuario en el campo <Cmd sid='description' product='cam' />. Ingresa hasta 256 caracteres.
+
+8. El campo <Cmd sid='custom_field' product='cam' /> permite ingresar hasta 64 caracteres de información adicional específica del usuario. Por ejemplo, ingresa notas en inglés como departamento, cargo o grupo de usuarios.
+
+9. Haz clic en <Cmd sid='apply' product='cam' /> para guardar la información básica del usuario.
+
+:::info
+
+Crea usuarios nuevos sin una foto de rostro. Agrega una foto de rostro más tarde desde la página de detalles del usuario.
+
+:::
+
+## Enrolamiento facial
+
+Enrolla un rostro al agregar un usuario nuevo o desde la página de detalles del usuario. Hay tres métodos disponibles.
+
+1. Haga clic en el menú <Cmd sid='people' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haz clic en <Cmd sid='add' product='cam' /> en la esquina superior derecha de la pantalla o haz clic en un usuario existente de la lista de usuarios para abrir la página de detalles.
+
+3. Enrolla un rostro en la sección <Cmd sid='face_credentials' product='cam' /> del cuadro emergente Agregar usuario o Detalles del usuario.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential.png' />
+
+4. Pasa el cursor sobre <Cmd sid='first_face' product='cam' /> para mostrar las opciones de enrollamiento.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential-upload.png' />
+
+   * <IcUpload width='24px' height='24px' title='Upload' />: Sube un archivo de imagen guardado localmente para enrollar una foto de rostro.
+
+   * <IcCapture width='24px' height='24px' title='Web Cam' />: Captura una foto de rostro con una cámara web para enrollarla.
+
+   * <IcCamAi width='24px' height='24px' title='AI Recommend' />: Selecciona un rostro que coincida con el usuario de la lista de rostros no reconocidos detectados mediante eventos de IA y enrolla ese rostro.
+
+:::info
+
+Primero selecciona la ranura de rostro 1. La ranura de rostro 2 es opcional.
+
+:::
+
+### Subir foto de rostro
+
+Sube un archivo de imagen guardado localmente para enrollar una foto de rostro.
+
+<ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential-upload.png' />
+
+1. Sube la foto de rostro mediante uno de los siguientes métodos.
+
+   * Arrastra y suelta un archivo de imagen guardado localmente sobre el área del rostro.
+
+   * Para seleccionar un archivo de imagen guardado localmente, haz clic en <IcUpload title='Upload' /> y elige el archivo de imagen que quieras.
+
+2. Cuando se detecta el rostro, aparece la foto.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential-upload-complete.png' />
+
+3. Para aplicar la foto subida al usuario, haz clic en <Cmd sid='apply' product='cam' /> en la parte inferior.
+
+:::info
+
+* Los formatos de imagen admitidos son PNG, JPEG y JPG.
+
+* El tamaño máximo de los archivos de imagen admitidos es de 10 MB.
+
+:::
+
+### Enrollar rostro con cámara web
+
+Usa una cámara web para capturar y enrollar una foto de rostro.
+
+1. Haz clic en <IcCamera title='Webcam' />.
+
+2. Cuando aparezca la pantalla de captura de la cámara web, coloca tu rostro dentro del círculo central.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential-webcam-2.png' />
+
+3. Haz clic en <Cmd sid='capture' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential-upload-complete.png' />
+
+4. Para aplicar la foto capturada al usuario, haz clic en <Cmd sid='apply' product='cam' />.
+
+:::info
+
+Para capturar de nuevo, haz clic en la foto de rostro y vuelve a capturarla.
+
+:::
+
+### Enrollar rostro recomendado por IA
+
+Selecciona y enrolla un rostro que coincida con el usuario de la lista de rostros no reconocidos detectados mediante análisis de IA.
+
+1. Haz clic en <IcCamAi title='AI Recommend' />.
+
+2. La ventana emergente <Cmd sid='ai_shot' product='cam' /> muestra la lista de rostros no reconocidos autenticados recientemente.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-ai-matching.png' />
+
+3. Selecciona el rostro que coincide con el usuario. Solo se puede seleccionar un rostro a la vez.
+
+4. Haz clic en <Cmd sid='save' product='cam' />.
+
+5. Haz clic en <Cmd sid='apply' product='cam' /> para aplicar al usuario el rostro seleccionado.

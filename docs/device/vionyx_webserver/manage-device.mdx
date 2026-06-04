@@ -9,6 +9,8 @@ keywords: [재부팅, 초기화, 유지 관리, 리셋, Factory Reset, Config Re
 
 다음과 같은 상황에서 카메라 유지 관리 기능을 사용하세요.
 
+* 관리자가 아닌 외부인이 카메라의 커버를 분리하려고 할 때, 카메라가 정상 작동하지 않도록 보안 조치를 취하고 싶을 때
+
 * 네트워크 설정 변경 후 새로운 설정을 적용하고 싶을 때
 
 * 카메라의 응답이 느려지거나 성능 저하가 발생했을 때
@@ -31,6 +33,29 @@ keywords: [재부팅, 초기화, 유지 관리, 리셋, Factory Reset, Config Re
 
 :::
 
+## <Cmd sid='tamper' product='cam' className='normal' />
+
+카메라의 <Cmd sid='tamper' product='cam' /> 기능을 활성화하면 관리자가 아닌 외부인이 카메라의 커버를 분리하려고 할 때, 카메라의 인증서와 키를 삭제하여 카메라가 정상 작동하지 않도록 할 수 있습니다.
+
+1. 화면 왼쪽 상단의 <Cmd sid='system' product='cam' /> 메뉴를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device_info' product='cam' />를 클릭하세요.
+
+1. <Cmd sid='tamper' product='cam' /> 섹션의 토글 버튼을 클릭해 기능을 활성화하세요.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-tamper.png' />
+
+1. 경고 메시지가 나타나면 <Cmd sid='ok' product='cam' /> 버튼을 클릭하세요.
+
+이 기능은 <Cmd sid='save' product='cam' /> 버튼을 클릭하지 않아도 변경 사항이 자동 저장됩니다.
+
+:::caution
+
+<Cmd sid='tamper' product='cam' /> 기능을 활성화한 상태에서 관리자가 유지보수를 위해 카메라의 커버를 분리해야 할 때는 <Cmd sid='tamper' product='cam' /> 기능을 일시적으로 비활성화한 후 작업을 진행해야 합니다. 작업이 완료된 후에는 다시 활성화하여 보안을 유지하세요.
+
+:::
+
+
 
 ## 카메라 재부팅
 
@@ -41,6 +66,8 @@ keywords: [재부팅, 초기화, 유지 관리, 리셋, Factory Reset, Config Re
 1. 화면 왼쪽 사이드바에서 <Cmd sid='device_info' product='cam' />를 클릭하세요.
 
 1. <Cmd sid='firmware_reset' product='cam' /> 섹션의 <Cmd sid='reboot' product='cam' />에서 <Cmd sid='apply' product='cam' /> 버튼을 클릭하세요.
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-reboot-init.png' />
 
 1. 재부팅 확인 팝업이 나타나면 <Cmd sid='ok' product='cam' /> 버튼을 클릭하세요.
 
@@ -78,6 +105,8 @@ keywords: [재부팅, 초기화, 유지 관리, 리셋, Factory Reset, Config Re
 
 1. <Cmd sid='firmware_reset' product='cam' /> 섹션의 <Cmd sid='config_reset' product='cam' />에서 <Cmd sid='reset' product='cam' /> 버튼을 클릭하세요.
 
+   <ProdImg src='/img/cam-server/cam-webserver-system-reboot-init.png' />
+
    네트워크 설정 초기화를 제외하려면 <Cmd sid='config_reset_excluding_network' product='cam' /> 옵션의 체크박스를 클릭하세요.
 
 1. 설정 초기화 확인 팝업이 나타나면 <Cmd sid='ok' product='cam' /> 버튼을 클릭하세요.
@@ -101,6 +130,8 @@ keywords: [재부팅, 초기화, 유지 관리, 리셋, Factory Reset, Config Re
 
 1. <Cmd sid='firmware_reset' product='cam' /> 섹션의 <Cmd sid='factory_reset' product='cam' />에서 <Cmd sid='reset' product='cam' /> 버튼을 클릭하세요.
 
+   <ProdImg src='/img/cam-server/cam-webserver-system-reboot-init.png' />
+
    네트워크 설정 초기화를 제외하려면 <Cmd sid='config_reset_excluding_network' product='cam' /> 옵션의 체크박스를 클릭하세요.
 
 1. 공장 초기화 확인 팝업이 나타나면 <Cmd sid='ok' product='cam' /> 버튼을 클릭하세요.
@@ -113,7 +144,7 @@ keywords: [재부팅, 초기화, 유지 관리, 리셋, Factory Reset, Config Re
 
 * 공장 초기화 완료 후 아래 항목이 기본값으로 복원됩니다.
 
-  * 관리자 ID: `admin`
+  * 관리자 ID: **admin**
 
   * 네트워크 설정: DHCP
 

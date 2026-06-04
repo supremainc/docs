@@ -1,0 +1,148 @@
+---
+id: configure-people-tracking
+title: Set Up User Tracking Events
+description: Detects and tracks people moving in administrator-defined entry areas. Setting face areas prioritizes face tracking in those zones and automatically identifies registered users.
+keywords:
+  - AI analysis
+  - Pedestrian flow
+  - Facial recognition
+---
+
+Create user tracking events to detect entry into restricted areas. Optionally add face areas to prioritize face tracking in specific zones; registered users are automatically identified.
+
+## When to use this?
+
+* Monitor entry and exit of employees or customers registered to the entry area.
+
+* Monitor access to secure areas (meeting rooms, storage).
+
+* Track customer flow into specific store corners (new products, event zones).
+
+## Create people tracking events
+
+When you create user tracking events, you can track people's movement in real time on the live page. Additionally, setting face areas recognizes registered users and identifies who moved.
+
+<Steps>
+<Step>
+
+### Start event creation
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. Click <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> in the left sidebar.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events.png' />
+
+3. Click <Cmd sid='add_button' product='cam' /> at the top right of the screen.
+
+4. Click <Cmd sid='ai_analysis_people_tracking' product='cam' /> in the <Cmd sid='select_ai_analysis_type' product='cam' /> window.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking.png' />
+
+5. When the <Cmd sid='face_analytics_consent_title' product='cam' /> pop-up appears, review the details, select the consent checkbox, and click <Cmd sid='face_analytics_consent_agree' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-analysis-notice-face-auth.png' width='50%' />
+
+   :::note
+
+   * To use the Facial Authentication feature, comply with local regulations. Cannot proceed without consent.
+
+   * The <Cmd sid='face_analytics_consent_title' product='cam' /> popup appears only once. Subsequent AI event creation assumes consent.
+
+   :::
+
+6. Complete the necessary settings in the right <Cmd sid='ai_analysis_people_tracking' product='cam' /> panel.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking-settings.png' />
+
+</Step>
+<Step>
+
+### Set event name
+
+Enter the AI event name in the <Cmd sid='name' product='cam' /> input field. The name can be up to 64 characters long.
+
+</Step>
+<Step>
+
+### Entry area settings
+
+Define the entry area to track. The camera detects entries and exits in the configured area. Set at least one virtual line. Click <Cmd sid='add_button' product='cam' /> to add up to 10. A yellow box appears in Live view. Drag the corners or points with the mouse to adjust the shape. Drag the center to move the line.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking-settings-entry-area.png' />
+
+* <Cmd sid='name' product='cam' />: Edit the entry area name. Assign a clear, descriptive name. The entry area name appears on mouse hover in Live view.
+
+:::info
+
+* Click <IcCamReset title='reset' /> to reset the shape and size of the configured entry area.
+
+* Click <IcCamTrash title='delete' /> to delete an added entry area.
+
+:::
+
+</Step>
+<Step>
+
+### Face area settings (optional)
+
+Define the area for face detection. When set, the system prioritizes face tracking in that area. Set the face area to include the entry area. If the face area does not include the entry area, the camera cannot recognize faces. Click <Cmd sid='add_button' product='cam' /> to add up to 10 face areas. A blue box appears in Live View; drag corners or points to adjust the shape. Drag the center to move the line.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking-settings-face-area.png' />
+
+* <Cmd sid='name' product='cam' />: Edit the face area's name. Assign a clear, descriptive name. The face area name appears on hover in Live View.
+
+:::info
+
+* Enrolled users are automatically identified in the <Cmd sid='live' product='cam' /> menu and shown by name. Unenrolled users appear as <Cmd sid='unknown_face' product='cam' />.
+
+* Click <IcCamReset title='reset' /> to reset the configured face area's shape and size.
+
+* Click <IcCamTrash title='delete' /> to delete an added face area.
+
+:::
+
+</Step>
+<Step>
+
+### Set event trigger conditions
+
+Set the event trigger conditions. Select Entry or Exit detection and set the event delay time.
+
+* <Cmd sid='event_condition' product='cam' />: Select Entry or Exit detection. You can select both.
+
+* <Cmd sid='every_delay' product='cam' />: Set the event trigger delay. Events trigger only after the configured time elapses; set up to 60 seconds.
+
+</Step>
+<Step>
+
+### Save settings
+
+After completing all settings, click <Cmd sid='create' product='cam' /> in the top right. The interface returns to the previous screen, and the new AI event is added to the list.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking-settings-complete.png' />
+
+</Step>
+</Steps>
+
+## Check in Live
+
+Click the <Cmd sid='live' product='cam' /> menu at the top left of the screen. Confirm the <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> icon at the top right of the camera feed is on. The configured entry and face areas appear as overlays on the video. An event triggers whenever a person enters or exits an entry area. If face areas are set, the camera detects faces there; enrolled users are automatically identified and their names are displayed.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-people-tracking-result.png' />
+
+:::info
+
+* Unenrolled users appear as <Cmd sid='unknown_face' product='cam' />. Enrolled users appear with their name.
+
+* If the camera fails to recognize faces, enable the <Cmd sid='min_face_size_visualize' product='cam' /> option. Alternatively, enlarge the face area or adjust the camera position.
+
+* Poor lighting or backlight may prevent the camera from detecting faces. Improve area lighting or adjust the camera position and angle so faces are clearly visible.
+
+* Faces must face the camera to be detected. Profile or rear views may not be detected.
+
+* If no events occur in the entry area, verify that the face area includes it.
+
+* If too many events occur, adjust the <Cmd sid='every_delay' product='cam' /> option. Increasing the event delay reduces event frequency.
+
+:::

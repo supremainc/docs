@@ -1,22 +1,117 @@
 ---
 id: getting-started
 title: 시작하기
-description: ViOnyx Web Server에 처음 로그인하고 비밀번호 설정하는 방법을 안내합니다.
+description: ViOnyx Web Server를 처음 접속하여 인증서 설치, 비밀번호 설정, 로그인 방법을 단계별로 안내합니다.
 keywords: [ViOnyx, Web Server, 시작하기]
 ---
 
-ViOnyx 카메라를 처음 설치한 후, 웹 브라우저에서 카메라의 IP 주소로 접속할 수 있습니다. 초기 로그인 시 보안을 위해 비밀번호를 설정해야 하며, 설정 완료 후 로그인할 수 있습니다.
+ViOnyx 카메라를 처음 설치한 후 웹 브라우저를 통해 초기 설정을 완료해야 합니다. 이 문서는 인증서 설치, 관리자 비밀번호 설정, 로그인까지 필요한 모든 단계를 안내합니다.
+
+:::info
+
+공장 초기화 후 IP 주소를 할당받지 못했다면 기본 IP 주소(`https://192.168.1.100`)로 변경되므로 웹 브라우저에서 해당 주소로 접속하세요.
+
+:::
+
+## 인증서 설치
+
+ViOnyx Web Server는 안전한 HTTPS 연결을 사용합니다. 처음 접속 시 보안 경고가 표시되지만, 이는 카메라의 자체 발급 인증서 때문입니다. 인증서를 Windows 신뢰 저장소에 등록한 후 웹 서버 접속 시, 경고 없이 안전하게 연결하는 방법을 알아보세요.
+
+<Steps>
+<Step>
+
+### 인증서 다운로드
+
+1. 웹 브라우저에서 카메라에 할당한 IP 주소(`https://{IP_address}`)로 접속하세요.
+
+1. **연결이 비공개로 설정되어 있지 않습니다** 라는 경고 메시지가 표시되면 하단의 **고급** 버튼을 클릭하세요.
+
+   <ProdImg src='/img/cam-server/vionyx-web-unsafe-01.png' />
+
+1. **고급** 섹션을 확장한 후 **`https://{IP_address}`로 이동(안전하지 않음)** 또는 유사한 링크를 클릭하여 계속 진행하세요.
+
+   <ProdImg src='/img/cam-server/vionyx-web-unsafe-02.png' />
+
+1. 비밀번호 설정 화면 하단의 <Cmd sid='download_root_ca_certificate' product='cam' /> 링크를 클릭하세요.
+
+   <ProdImg src='/img/cam-server/vionyx-install-root-ca.png' width='70%' />
+
+1. 인증서 파일 `Suprema_ViOnyx_Device_{serial-number}_Root_CA.crt`를 로컬에 저장하세요.
+
+</Step>
+<Step>
+
+### Windows 관리 콘솔 열기
+
+1. <Start /> + <Kbd>R</Kbd> 키를 눌러 실행 창을 여세요.
+
+1. `certmgr.msc`를 입력하고 <Kbd>Enter</Kbd> 키를 눌러 **관리 콘솔**을 실행하세요.
+
+   <ProdImg src='/img/cam-server/yionyx-win-run.png' />
+
+</Step>
+<Step>
+
+### 인증서 마법사 가져오기 실행
+
+1. **관리 콘솔**의 왼쪽 패널에서 **신뢰할 수 있는 루트 인증 기관**을 확장하세요.
+
+1. 하위의 **인증서**에서 마우스 오른쪽 버튼을 클릭하고 **모든 작업** → **가져오기**를 선택하세요.
+
+   <ProdImg src='/img/cam-server/yionyx-mng-console-import.png' />
+
+1. 인증서 가져오기 마법사에서 **다음** 버튼을 클릭하세요.
+
+   <ProdImg src='/img/cam-server/yionyx-cert-import-wizard-01.png' />
+
+1. **찾아보기** 버튼을 클릭하여 저장한 인증서 파일 `Suprema_ViOnyx_Device_547849187_Root_CA.crt`를 선택하세요.
+
+   <ProdImg src='/img/cam-server/yionyx-cert-import-wizard-02.png' />
+
+1. **다음** 버튼을 클릭하세요.
+
+1. **모든 인증서를 다음 저장소에 저장**을 선택하세요.
+
+1. **인증서 저장소**가 **신뢰할 수 있는 루트 인증 기관**으로 설정되어 있는지 확인하세요.
+
+   <ProdImg src='/img/cam-server/yionyx-cert-import-wizard-03.png' />
+
+1. **다음** 버튼을 클릭하세요.
+
+1. **마침** 버튼을 클릭하여 인증서 가져오기를 완료하세요.
+
+   <ProdImg src='/img/cam-server/yionyx-cert-import-wizard-04.png' />
+
+1. 보안 경고가 나타나면 **예** 버튼을 클릭하세요.
+
+1. 인증서 가져오기 성공 메시지가 나타나면 **확인** 버튼을 클릭하세요.
+
+   <ProdImg src='/img/cam-server/yionyx-cert-import-wizard-complete.png' />
+
+</Step>
+<Step>
+
+### 인증서 설치 확인
+
+관리 콘솔에서 **신뢰할 수 있는 루트 인증 기관** → **인증서**를 선택하여 앞서 가져온 인증서가 목록에 있는지 확인하세요.
+
+<ProdImg src='/img/cam-server/yionyx-cert-mng-imported-check.png' />
+
+</Step>
+</Steps>
+
+인증서 설치가 완료되면 웹 브라우저를 완전히 종료하고 다시 시작한 후, 카메라의 IP 주소로 다시 접속하세요. 이제 보안 경고 없이 안전하게 연결됩니다.
 
 
 ## 비밀번호 설정
 
 처음 로그인할 때는 보안을 위해 강력한 비밀번호를 설정해야 합니다. ViOnyx는 강력한 비밀번호 정책을 적용하여 시스템 보안을 보장합니다.
 
-1. 웹 브라우저에서 ViOnyx Web Server의 IP 주소로 접속하세요.
+1. 웹 브라우저에서 카메라에 할당한 IP 주소(`https://{IP_address}`)로 접속하세요.
 
-   <Image src='/img/cam-server/password-setting1-vionyx.png' />
+   <ProdImg src='/img/cam-server/password-setting1-vionyx.png' />
 
-1. 비밀번호 설정 페이지에 <Cmd sid='password' product='cam' /> 입력란에 새로운 비밀번호를 입력하세요.
+1. 비밀번호 설정 페이지에 <Cmd sid='password' product='cam' /> 입력 필드에 새로운 비밀번호를 입력하세요.
 
 1. <Cmd sid='confirm_password' product='cam' /> 필드에 동일한 비밀번호를 다시 입력하세요.
 
@@ -61,13 +156,13 @@ ViOnyx 카메라를 처음 설치한 후, 웹 브라우저에서 카메라의 IP
 
 비밀번호 설정이 완료되면 로그인 페이지로 자동 이동합니다. 관리자 아이디와 설정한 비밀번호를 입력하여 ViOnyx Web Server에 접속하세요.
 
-<Image src='/img/cam-server/password-setting2-vionyx.png' />
+<ProdImg src='/img/cam-server/password-setting2-vionyx.png' />
 
-1. <Cmd sid='id' product='cam' /> 입력란에 **admin**을 입력하세요.
+1. <Cmd sid='id' product='cam' /> 입력 필드에 **admin**을 입력하세요.
 
-1. <Cmd sid='password' product='cam' /> 입력란에 설정한 비밀번호를 입력하세요.
+1. <Cmd sid='password' product='cam' /> 입력 필드에 설정한 비밀번호를 입력하세요.
 
-1. <Cmd>로그인</Cmd> 버튼을 클릭하세요
+1. <Cmd sid='sign_in' product='cam' /> 버튼을 클릭하세요
 
 로그인에 성공하면 ViOnyx Web Server의 <Cmd sid='live' product='cam' /> 페이지로 이동합니다.
 

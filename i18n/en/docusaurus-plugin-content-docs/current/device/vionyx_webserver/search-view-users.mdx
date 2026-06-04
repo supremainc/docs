@@ -1,0 +1,106 @@
+---
+id: search-view-users
+title: User Search and View
+description: Explains how to find users in the user list using search and manage them efficiently.
+keywords:
+  - User
+  - Search
+  - Filter
+  - Sort
+  - View
+  - Manage
+---
+
+Enter a name or ID in the user list to quickly find a user. Switch between table and card views to show user information as needed.
+
+Use the user search and view feature in the following situations.
+
+* When you must quickly find a specific user among many users
+
+* When you need to view user profiles at a glance in card view
+
+* When you want to sort the user list by name, ID, and last update time
+
+## User search
+
+Provides a search feature to find the user you need. Search by user name or ID, or find similar users by facial image.
+
+### Keyword search
+
+Enter a name or ID in the user list to search for the user you need.
+
+1. Click the <Cmd sid='people' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Select the search criteria in the search field at the top left of the user list. Select <Cmd sid='user_name' product='cam' /> or <Cmd sid='user_id' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-search-select.png' />
+
+3. Enter a search term in the search field.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-search.png' />
+
+4. Users matching the entered search term appear in the list.
+
+:::info
+
+* Supports partial search. For example, entering 'Kim' shows all users whose names include 'Kim'.
+
+* The currently selected filters determine the search results. Change filters to update the search results accordingly.
+
+:::
+
+### Find by facial image
+
+Upload a facial image to search for users with a similar face.
+
+1. Click the <Cmd sid='people' product='cam' /> menu in the upper-left corner of the screen.
+
+2. Click <IcCamFaceSearch title='Face Search' /> to the right of the search field.
+
+3. When the <Cmd sid='find_face_user' product='cam' /> window appears, drag and drop a facial image or upload it through <Cmd sid='choose_file' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-search-upload-face.png' />
+
+4. After completing the facial image upload, click <Cmd sid='firmware_upload' product='cam' />.
+
+5. When the <Cmd sid='choose_face_to_search' product='cam' /> window appears, a list of users matched to the uploaded facial image appears.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-search-face-result.png' />
+
+   * Select the desired user from the matched users to go to that user's details page.
+
+   * To search again with a different facial image, click <Cmd sid='choose_file' product='cam' /> at the bottom left, and upload a new facial image.
+
+:::info
+
+If you upload an image that is not a facial image, a message appears that says it is not a valid facial image. Try again with a facial image.
+
+:::
+
+## Change view mode
+
+Display the user list in a table or card view. Click <Image src='/img/cam-server/ico-people-list-mode.svg' alone ico /> or <Image src='/img/cam-server/ico-people-card-mode.svg' alone ico /> at the top right of the user list to select the view mode you want.
+
+* <Cmd sid='switch_to_list_view' product='cam' />
+
+  <ProdImg src='/img/cam-server/cam-webserver-people-list-mode.png' />
+
+* <Cmd sid='switch_to_grid_view' product='cam' />
+
+  <ProdImg src='/img/cam-server/cam-webserver-people-card-mode.png' />
+
+:::info
+
+<Cmd sid='switch_to_list_view' product='cam' />, and <Cmd sid='switch_to_grid_view' product='cam' /> both provide the same feature. Only the display differs; search, filter, and sort results are identical.
+
+:::
+
+## User list sorting
+
+You can sort the user list in ascending or descending order by user ID and last update time.
+
+1. Click the sort drop-down option at the top right of the user list. 
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-filter.png' />
+
+2. Select the desired sort criteria.

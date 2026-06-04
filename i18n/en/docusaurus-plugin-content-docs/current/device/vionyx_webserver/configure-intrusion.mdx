@@ -1,0 +1,152 @@
+---
+id: configure-intrusion
+title: Set Up Intrusion Detection Events
+description: Detects entry and exit events in configured areas in real time and uses facial authentication to automatically distinguish enrolled staff from unauthorized persons.
+keywords:
+  - AI analysis
+  - Pedestrian flow
+  - Facial recognition
+---
+
+An intrusion detection event generates a real-time event whenever a person enters or exits an administrator-defined area. Optionally add face areas to prioritize face tracking within those zones; enrolled users are automatically authenticated. Get real-time alerts when unauthorized people enter areas that require monitoring.
+
+## When to use this?
+
+* Real-time intrusion detection for unauthorized people in areas that require security
+
+* Get real-time alerts when someone enters outside business hours or an area that requires monitoring
+
+* Detect when unregistered people enter a monitoring area
+
+* Record and track access to high-risk areas.
+
+:::info
+
+Use this for purposes other than access control, and the camera does not determine whether access is restricted.
+
+:::
+
+## Create intrusion detection event
+
+Creating an intrusion detection event lets the <Cmd sid='live' product='cam' /> menu detect when a person enters a specific area and generate events. Also, setting a face area prioritizes face tracking in that area; enrolled users are automatically identified.
+
+<Steps>
+<Step>
+
+### Start event creation
+
+1. Click <Cmd sid='settings' product='cam' /> in the upper-left of the screen.
+
+2. Click <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> in the left sidebar.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events.png' />
+
+3. Click <Cmd sid='add_button' product='cam' /> at the top right of the screen.
+
+4. Click <Cmd sid='ai_analysis_intrusion' product='cam' /> in the <Cmd sid='select_ai_analysis_type' product='cam' /> window.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-add-intrusion.png' />
+
+5. When the <Cmd sid='face_analytics_consent_title' product='cam' /> pop-up appears, review the details, select the consent checkbox, and click <Cmd sid='face_analytics_consent_agree' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-analysis-notice-face-auth.png' width='50%' />
+
+   :::note
+
+   * To use the Facial Authentication feature, comply with local regulations. Cannot proceed without consent.
+
+   * The <Cmd sid='face_analytics_consent_title' product='cam' /> popup appears only once. Subsequent AI event creation assumes consent.
+
+   :::
+
+6. Complete the required settings in the <Cmd sid='ai_analysis_intrusion' product='cam' /> panel on the right.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-add-intrusion-settings.png' />
+
+</Step>
+<Step>
+
+### Set event name
+
+Enter the AI event name in the <Cmd sid='name' product='cam' /> input field. The name can be up to 64 characters long.
+
+</Step>
+<Step>
+
+### Intrusion area settings
+
+Set the intrusion area. The camera detects entries and exits in the configured area. Set at least one virtual line. Click <Cmd sid='add_button' product='cam' /> to add up to 10. An orange box appears in the live view; drag its corners or points with the mouse to adjust it to the desired shape. Drag the center to move the line.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-intrusion-settings-entry-area.png' />
+
+* <Cmd sid='name' product='cam' />: Edit the name of the intrusion area. Assign a clear, descriptive name. The intrusion area name appears on mouse-over in the live view.
+
+:::info
+
+* To initialize the shape and size of a configured intrusion area, click <IcCamReset title='reset' />.
+
+* To delete an added intrusion area, click <IcCamTrash title='delete' />.
+
+:::
+
+</Step>
+<Step>
+
+### Face area settings (optional)
+
+Define the area for face detection. When set, the system prioritizes face tracking in that area. Classify people detected in face areas as authenticated users or unauthorized persons to clearly identify authorized entrants and intruders. Face areas and intrusion areas can overlap. Click <Cmd sid='add_button' product='cam' /> to add up to 10 face areas. A blue box appears in Live View; drag corners or points to adjust the shape. Drag the center to move the line.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-intrusion-settings-face-area.png' />
+
+* <Cmd sid='name' product='cam' />: Edit the face area's name. Assign a clear, descriptive name. The face area name appears on hover in Live View.
+
+:::info
+
+* Enrolled users are automatically identified in the <Cmd sid='live' product='cam' /> menu and shown by name. Unenrolled users appear as <Cmd sid='unknown_face' product='cam' />.
+
+* Click <IcCamReset title='reset' /> to reset the configured face area's shape and size.
+
+* Click <IcCamTrash title='delete' /> to delete an added face area.
+
+:::
+
+</Step>
+<Step>
+
+### Set event trigger conditions
+
+Set the event trigger conditions. Select Entry or Exit detection and set the event delay time.
+
+* <Cmd sid='event_condition' product='cam' />: Select Entry or Exit detection. You can select both.
+
+* <Cmd sid='every_delay' product='cam' />: Set the event trigger delay. Events trigger only after the configured time elapses; set up to 60 seconds.
+
+</Step>
+<Step>
+
+### Save settings
+
+After completing all settings, click <Cmd sid='save' product='cam' /> in the upper-right. The interface returns to the previous screen, and the new AI event is added to the list.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-intrusion-settings-complete.png' />
+
+</Step>
+</Steps>
+
+## Check in Live
+
+Click the <Cmd sid='live' product='cam' /> menu at the top left of the screen. Confirm the <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> icon at the top right of the camera feed is on. Configured intrusion areas and face areas are overlaid on the video. An event occurs whenever a person enters or exits an intrusion area. If face areas are set, the camera detects faces there; enrolled users are automatically identified and their names are displayed.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-intrusion-result.png' />
+
+:::info
+
+* Unenrolled users appear as <Cmd sid='unknown_face' product='cam' />. Enrolled users appear with their name.
+
+* Poor lighting or backlight may prevent the camera from detecting faces. Improve area lighting or adjust the camera position and angle so faces are clearly visible.
+
+* Faces must face the camera to be detected. Profile or rear views may not be detected.
+
+* If too many events occur, adjust the <Cmd sid='every_delay' product='cam' /> option. Increasing the event delay reduces event frequency.
+
+:::

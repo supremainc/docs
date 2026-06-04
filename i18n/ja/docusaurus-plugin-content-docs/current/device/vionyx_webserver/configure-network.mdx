@@ -1,0 +1,179 @@
+---
+id: configure-network
+title: ネットワークを設定
+description: "IPv4アドレスを自動または手動で設定し、Web UIと映像ストリーミングのポートを構成し、CLUeクラウドサービスに接続する方法を案内します。 "
+keywords:
+  - ネットワーク
+  - IPv4
+  - DHCP
+  - Static
+  - ポート
+  - CLUe
+  - クラウド
+---
+
+ネットワーク設定では、デバイスのIPv4アドレス、サブネット、ゲートウェイ、DNSサーバーを構成し、Web UIおよびライブ映像ストリーミングで使用するポートを設定し、Suprema CLUeクラウドサービスへの接続を管理します。 ネットワーク環境に応じて、自動割り当て（DHCP）または手動設定（Static）のいずれかを選択して構成できます。
+
+以下の状況ではネットワーク設定を確認してください。
+
+* DHCP対応のネットワークでIPアドレスを自動取得して構成する場合
+
+* 特定のIPアドレスに固定して安定したネットワークアクセスが必要な場合
+
+* デフォルトのポートが他の機器と競合するか、セキュリティ上の理由でポートを変更する場合
+
+* Suprema CLUeクラウドにデバイスを登録してリモート管理が必要な場合
+
+:::info
+
+ネットワーク設定の変更、特にIPアドレスの変更により既存の接続が切断されることがあります。 変更後のIPアドレスで再接続してください。
+
+:::
+
+## IPアドレス自動設定
+
+DHCPはネットワーク上でIPアドレスを自動割り当てする方式です。 ほとんどの一般的なネットワーク環境では、設定なしで自動的に構成されます。
+
+1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+
+2. 画面左のサイドバーで <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' /> をクリックします。
+
+3. <Cmd sid='ip_type' product='cam' />で<Cmd sid='dhcp' product='cam' />を選択します。
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-dhcp.png' />
+
+4. **DNS** サーバーアドレスが必要な場合は、<Cmd sid='dns_n' product='cam' replace='1' />および<Cmd sid='dns_n' product='cam' replace='2' />入力フィールドに入力します。
+
+5. <Cmd sid='mtu' product='cam' />入力フィールドで、**MTU**（Maximum Transmission Unit）の値を必要に応じて調整します。
+
+   * デフォルトは1500です。
+
+   * 1280〜1500の範囲で設定できます。
+
+6. ネットワーク設定を保存するには、<Cmd sid='save' product='cam' />ボタンをクリックします。
+
+設定が正常に保存されると、自動割り当てされたIPアドレスが<Cmd sid='ip_address' product='cam' />、<Cmd sid='subnet_mask' product='cam' />、<Cmd sid='gateway' product='cam' />入力フィールドに表示されます。
+
+:::info
+
+DHCPモードがデフォルトに設定されており、ほとんどの標準的なネットワーク環境では追加設定なしで自動的に動作します。
+
+:::
+
+## 固定IPアドレス設定
+
+ネットワーク環境によっては、特定のIPアドレスに固定して安定したネットワークアクセスが必要なため、手動でIPアドレスを設定できます。
+
+1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+
+2. 画面左のサイドバーで <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' /> をクリックします。
+
+3. <Cmd sid='ip_type' product='cam' />で<Cmd sid='static' product='cam' />を選択します。
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-static.png' />
+
+4. <Cmd sid='ip_address' product='cam' />入力フィールドに、割り当てられたIPv4アドレスを入力します。
+
+   > 例：192.168.111.11
+
+5. <Cmd sid='subnet_mask' product='cam' />入力フィールドにサブネットマスクを入力します。
+
+   > 例：255.255.255.0
+
+6. <Cmd sid='gateway' product='cam' />入力フィールドにゲートウェイアドレスを入力します。
+
+7. <Cmd sid='dns_n' product='cam' replace='1' />および<Cmd sid='dns_n' product='cam' replace='2' />入力フィールドにDNSサーバーアドレスを入力します。
+
+8. <Cmd sid='mtu' product='cam' />入力フィールドの値を必要に応じて調整します。
+
+   * デフォルトは1500です。
+
+   * 1280〜1500の範囲で設定できます。
+
+9. ネットワーク設定を保存するには、<Cmd sid='save' product='cam' />ボタンをクリックします。
+
+:::note
+
+各入力フィールドに正しい形式のアドレスを入力しないと、入力フィールドの周囲に赤い枠が表示され、<Cmd sid='save' product='cam' />ボタンが無効になります。 すべての入力フィールドを正しく入力してから、もう一度お試しください。
+
+:::
+
+## ポート設定
+
+<Cmd sid='port' product='cam' /> セクションでは、Web UI接続（HTTP、HTTPS）および映像ストリーミング（RTSP）で使用するポート番号を設定できます。
+
+1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+
+2. 画面左のサイドバーで <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' /> をクリックします。
+
+3. <Cmd sid='port' product='cam' /> セクションで必要なポートを設定します。
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-port.png' />
+
+   * <Cmd sid='https' product='cam' />: Web UIに暗号化して接続するポート（既定値: 443）
+
+   * <Cmd sid='rtsp' product='cam' />: RTSPプロトコルで映像をストリーミングするポート（既定値: 554）
+
+4. ポート設定を保存するには、<Cmd sid='save' product='cam' />ボタンをクリックします。
+
+:::info
+
+* 各ポート入力フィールドに1\~65535の範囲の番号を入力できます。
+
+* 同じポート番号を複数設定することはできません。 各ポートは固有の番号でなければなりません。
+
+* ポート設定がデフォルトと異なる場合は、Web UIの接続アドレスにポート番号を明記する必要があります。
+
+  > 例: HTTPSポートが4000の場合: `https://{ip_address}:4000`
+
+:::
+
+## 映像転送と暗号化の設定
+
+<Cmd sid='rtsp' product='cam' />セクションでは、映像転送と暗号化の設定を構成できます。
+
+1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+
+2. 画面左のサイドバーで <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' /> をクリックします。
+
+3. <Cmd sid='rtsp' product='cam' />セクションで次のオプションを設定します。
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-network-rtsp.png' />
+
+   * <Cmd sid='transport' product='cam' />: 映像ストリーミングに使用する転送プロトコルを選択します。
+
+     * <Cmd>UDP</Cmd>: 高速転送が可能ですが、ネットワーク状態によっては映像の途切れが発生する場合があります。
+
+     * <Cmd>TCP</Cmd>: 安定した転送が可能ですが、ネットワークの遅延が発生する場合があります。
+
+     * <Cmd>DUAL</Cmd>: ネットワーク状態に応じてUDPとTCPを自動的に選択してストリーミングします。
+
+     * <Cmd>TLS</Cmd>: RTSPストリームをTLS暗号化で送信します。 セキュリティを強化しますが、CPU負荷が増加する場合があります。
+
+   * <Cmd sid='secure_rtp' product='cam' />: RTSPストリーム暗号化オプションを有効にします。
+
+4. 設定を保存するには、<Cmd sid='save' product='cam' />ボタンをクリックします。
+
+## CLUeクラウド接続
+
+Suprema CLUeはクラウドベースのリモート管理サービスです。 CLUeに接続すると、インターネット経由でリモートからデバイスを管理できます。
+
+1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+
+2. 画面左のサイドバーで <Cmd sid='network' product='cam' /> → <Cmd sid='network' product='cam' /> をクリックします。
+
+3. <Cmd sid='cloud' product='cam' />セクションの<Cmd sid='clue' product='cam' />トグルをクリックして有効にします。
+
+4. システムがインターネット接続とCLUeサーバーへの接続を確認します。
+
+   * 接続成功: <Cmd sid='clue_enabled' product='cam' />メッセージが表示されます。
+
+   * インターネット接続失敗: <Cmd sid='clue_disabled' product='cam' />メッセージが表示されます。 インターネット接続を確認してから再試行してください。
+
+:::note
+
+* <Cmd sid='clue' product='cam' />オプションを無効にすると、CLUeサーバーとの接続が切断され、クラウド経由のリモート管理はできません。 ただし、CLUeサーバー側の登録情報は保持されます。
+
+* CLUeの接続成功および失敗はシステムログに記録されます。
+
+:::

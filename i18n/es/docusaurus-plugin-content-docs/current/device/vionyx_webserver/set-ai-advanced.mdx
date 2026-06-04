@@ -1,0 +1,132 @@
+---
+id: set-ai-advanced
+title: Configuración Avanzada
+description: Puedes configurar opciones adicionales en la configuración avanzada.
+keywords:
+  - IA
+  - Configuración Avanzada
+---
+
+<Include lang='ja'>
+
+En la configuración avanzada, puedes establecer el tipo de captura de rostro y administrar las políticas automáticas de enrolamiento y retención de usuarios enrolados cuando ocurre el reconocimiento facial.
+
+</Include>
+
+<Xclude lang='ja'>
+
+En la configuración avanzada, elige si deseas capturar solo la parte superior del cuerpo o el cuerpo completo al capturar el rostro de un usuario.
+
+</Xclude>
+
+## Configuración del tipo de captura de rostro
+
+Establece el tipo de captura de rostro para capturar solo la parte superior del cuerpo o el cuerpo completo. Selecciona el tipo de captura deseado en la opción <Cmd sid='shoot_type' product='cam' />, luego haz clic en <Cmd sid='save' product='cam' />.
+
+<ProdImg src='/img/cam-server/ai-advanced-face-shot-type.png' />
+
+<Include lang='ja'>
+
+## Configuración de enrolamiento automático de usuarios
+
+Los rostros detectados mediante eventos de IA pueden enrolarse automáticamente como usuarios. De forma predeterminada, esta feature está configurada en el modo Enrolamiento manual, y puedes cambiar al modo Enrolamiento automático según sea necesario.
+
+:::info
+
+Para los usuarios enrolados automáticamente, edita manualmente información como el nombre de usuario y la descripción. Para obtener más información sobre cómo editar la información del usuario, consulta <DocLink docId='device/vionyx_webserver/modify-delete-users' />.
+
+:::
+
+### Habilitar el modo de enrolamiento automático
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. En la barra lateral izquierda, haz clic en <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='advanced' product='cam' />.
+
+3. En la sección <Cmd sid='auto_user_enroll' product='cam' />, habilita la opción <Cmd sid='by_face_recognition' product='cam' />.
+
+<ProdImg src='/img/cam-server/ai-advanced-register-user-auto.png' />
+
+Configura cada opción como se indica a continuación y luego haz clic en <Cmd sid='save' product='cam' /> para guardar.
+
+:::info
+
+Cuando se usa el modo <Cmd sid='auto_user_enroll' product='cam' />, los usuarios enrolados con fotos de baja calidad, como imágenes borrosas, rostros con mascarilla o de perfil, pueden experimentar autenticación incorrecta.
+
+:::
+
+### Configuración del número de usuarios para enrolamiento automático
+
+En la opción <Cmd sid='num_of_auto_enroll_user' product='cam' />, establece el número de usuarios que se pueden enrolar automáticamente. Arrastra el control deslizante o ingresa un número directamente en el campo de entrada.
+
+* El valor predeterminado es 50,000 usuarios, y puedes establecer hasta 100,000 usuarios.
+
+* Cuando estableces el número de usuarios para enrolamiento automático, los usuarios enrolados manualmente solo se pueden enrolar dentro del número configurado. Por ejemplo, si el número de usuarios configurado es 50,000, el total de enrolamientos automáticos y manuales solo puede llegar a 50,000 usuarios.
+
+:::info
+
+* Si ya existen usuarios enrolados manualmente, no puedes aumentar el número de usuarios para enrolamiento automático.
+
+* Cuando disminuyes el número de usuarios para enrolamiento automático, los usuarios excedentes se eliminan automáticamente empezando por los más antiguos.
+
+:::
+
+### Configuración de la política de retención
+
+En la opción <Cmd sid='retention_period' product='cam' />, establece la política de retención para los usuarios enrolados automáticamente. Elige cómo eliminar a los usuarios enrolados automáticamente cuando se alcance el límite de usuarios.
+
+* <Cmd sid='delete_oldest_when_full' product='cam' />: Cuando se excede el número de usuarios asignado, elimina automáticamente primero a los usuarios enrolados más antiguos.
+
+* <Cmd sid='delete_newest_when_full' product='cam' />: Cuando se excede el número de usuarios asignado, elimina automáticamente primero a los usuarios enrolados más recientemente.
+
+* <Cmd sid='reject_new_when_full' product='cam' />: Cuando se excede el número de usuarios asignado, no se pueden enrolar nuevos usuarios.
+
+### Configuración del período de retención
+
+En la opción <Cmd sid='retention_period_days' product='cam' />, establece en días el período de retención para los usuarios enrolados automáticamente. Cuando vence el período de retención, los usuarios enrolados más antiguos se eliminan automáticamente primero.
+
+* <Cmd sid='disabled' product='cam' /> (predeterminado): Cuando se excede el número de usuarios asignado, elimina automáticamente primero a los usuarios enrolados más antiguos.
+
+* <Cmd>1 day</Cmd>, <Cmd>3 days</Cmd>, <Cmd>7 days</Cmd>, <Cmd>14 days</Cmd>, <Cmd>30 days</Cmd>, <Cmd>90 days</Cmd>, <Cmd>365 days</Cmd>: Elimina automáticamente a los usuarios enrolados automáticamente después de que termine el período seleccionado.
+
+:::info
+
+Cuando estableces un período de retención, una vez que se alcanza el límite de usuarios, los usuarios más antiguos se eliminan de inmediato en lugar de esperar a que termine el período.
+
+:::
+
+## Ver y administrar usuarios enrolados automáticamente
+
+### Ver en el menú <Cmd sid='people' product='cam' className='normal' />
+
+Los usuarios enrolados automáticamente aparecen en la lista de usuarios del menú <Cmd sid='people' product='cam' />.
+
+* Los IDs de usuario se asignan automáticamente en secuencia según el orden de reconocimiento facial.
+
+* La columna <Cmd sid='description' product='cam' /> muestra <Cmd sid='auto_enroll' product='cam' />, por lo que puedes distinguir a estos usuarios de los usuarios enrolados manualmente.
+
+* La columna <Cmd sid='last_updated' product='cam' /> muestra la fecha y hora en que se enroló al usuario.
+
+### Editar detalles del usuario
+
+1. Haga clic en el menú <Cmd sid='people' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haz clic en el usuario enrolado automáticamente de la lista de usuarios.
+
+3. Cuando aparezca la ventana emergente de detalles del usuario, edita la información requerida.
+
+4. Después de editar la información del usuario, haz clic en <Cmd sid='apply' product='cam' />.
+
+### Ver registros de autenticación facial y capturas de rostro
+
+1. Haga clic en el menú <Cmd sid='people' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haz clic en el usuario enrolado automáticamente de la lista de usuarios.
+
+3. Cuando aparezca la ventana emergente de detalles del usuario, consulta los registros de autenticación facial en la sección <Cmd sid='event_logs' product='cam' />.
+
+* Selecciona una fecha para ver los registros de autenticación facial de un período específico.
+
+* Haz clic en <Cmd sid='face_shot' product='cam' /> en el registro para mostrar la foto del rostro de ese momento de autenticación.
+
+</Include>

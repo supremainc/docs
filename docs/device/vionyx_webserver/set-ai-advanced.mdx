@@ -1,0 +1,133 @@
+---
+id: set-ai-advanced
+title: 고급 설정하기
+description: 고급 설정을 통해 추가 옵션을 구성할 수 있습니다.
+keywords: [AI, 고급 설정]
+---
+
+<Include lang='ja'>
+
+고급 설정에서는 얼굴 촬영 타입을 설정하고, 얼굴 인식 시 사용자 자동 등록 및 등록된 사용자의 보존 정책을 관리할 수 있습니다.
+
+</Include>
+
+<Xclude lang='ja'>
+
+고급 설정에서는 사용자의 얼굴을 촬영할 때 상반신만 촬영할지, 전신까지 촬영할지 선택할 수 있습니다.
+
+</Xclude>
+
+## 얼굴 촬영 타입 설정
+
+얼굴 촬영 타입을 상반신만 촬영할지, 전신까지 촬영할지 설정할 수 있습니다. <Cmd sid='shoot_type' product='cam' /> 옵션에서 원하는 촬영 타입을 선택하고, <Cmd sid='save' product='cam' /> 버튼을 클릭하세요.
+
+<ProdImg src='/img/cam-server/ai-advanced-face-shot-type.png' />
+
+<Include lang='ja'>
+
+## 자동 사용자 등록 설정
+
+AI 이벤트를 통해 감지된 얼굴을 사용자로 자동 등록할 수 있습니다. 수동 등록 모드로 기본 설정되어 있으며, 필요에 따라 자동 등록 모드로 전환할 수 있습니다.
+
+:::info
+
+자동 등록된 사용자도 사용자 이름, 설명 등의 정보를 수동으로 편집하고 수정할 수 있습니다. 사용자 정보 수정에 대한 자세한 내용은 <DocLink docId='device/vionyx_webserver/modify-delete-users' />를 참고하세요.
+
+:::
+
+### 자동 등록 모드 활성화
+
+1. 화면 왼쪽 상단의 <Cmd sid='settings' product='cam' /> 메뉴를 클릭하세요.
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='advanced' product='cam' />을 클릭하세요.
+
+1. <Cmd sid='auto_user_enroll' product='cam' /> 섹션에서 <Cmd sid='by_face_recognition' product='cam' /> 옵션을 활성화하세요.
+
+<ProdImg src='/img/cam-server/ai-advanced-register-user-auto.png' />
+
+다음 안내에 따라 각 옵션을 설정하고 <Cmd sid='save' product='cam' /> 버튼을 클릭해 저장하세요.
+
+:::info
+
+<Cmd sid='auto_user_enroll' product='cam' /> 모드 사용 시, 저품질 사진(흐림, 마스크, 측면 얼굴 등)으로 등록된 사용자는 오인증이 발생할 수 있습니다.
+
+:::
+
+### 자동 등록 사용자 수 설정
+
+<Cmd sid='num_of_auto_enroll_user' product='cam' /> 옵션에서 자동으로 등록할 수 있는 사용자 수를 설정할 수 있습니다. 슬라이더를 드래그하거나 입력 필드에 숫자를 직접 입력하세요.
+
+* 기본값은 50,000명이며, 최대 100,000명까지 설정할 수 있습니다.
+
+* 자동 등록 사용자 수 설정 시 수동 등록 사용자도 설정한 수량 내에서만 등록할 수 있습니다. 예를 들어, 설정 사용자 수가 50,000명이면, 자동 등록 사용자 수와 수동 등록 사용자 수를 합산하여 최대 50,000명까지만 등록할 수 있습니다.
+
+:::info
+
+* 수동으로 등록된 사용자가 있다면 자동 등록 사용자 수를 늘릴 수 없습니다.
+
+* 자동 등록 사용자 수를 줄이면 초과 분량의 사용자가 가장 오래된 순서부터 자동 삭제됩니다.
+
+:::
+
+### 보존 처리 방식 설정
+
+<Cmd sid='retention_period' product='cam' /> 옵션에서 자동으로 등록된 사용자의 보존 처리 방식을 설정할 수 있습니다. 사용자 수 한계에 도달했을 때 자동 등록된 사용자의 삭제 방식을 선택하세요.
+
+* <Cmd sid='delete_oldest_when_full' product='cam' />: 할당된 사용자 수를 초과하면 가장 오래 등록된 사용자부터 자동 삭제합니다.
+
+* <Cmd sid='delete_newest_when_full' product='cam' />: 할당된 사용자 수를 초과하면 가장 최근에 등록된 사용자부터 자동 삭제합니다.
+
+* <Cmd sid='reject_new_when_full' product='cam' />: 할당된 사용자 수를 초과하면 새로운 사용자를 등록할 수 없습니다.
+
+### 보존 기간 설정
+
+<Cmd sid='retention_period_days' product='cam' /> 옵션에서는 자동으로 등록된 사용자의 보존 기간을 일 단위로 설정할 수 있습니다. 보존 기간이 만료되면 가장 오래 등록된 사용자부터 자동 삭제됩니다.
+
+* <Cmd sid='disabled' product='cam' /> (기본값): 할당된 사용자 수를 초과하면 가장 오래 등록된 사용자부터 자동 삭제합니다.
+
+* <Cmd>1일</Cmd>, <Cmd>3일</Cmd>, <Cmd>7일</Cmd>, <Cmd>14일</Cmd>, <Cmd>30일</Cmd>, <Cmd>90일</Cmd>, <Cmd>365일</Cmd>: 선택한 기간 경과 후 자동 등록된 사용자를 자동 삭제합니다.
+
+:::info
+
+보존 기간을 설정하면 사용자 수 한계에 도달했을 때, 기간 종료를 기다리지 않고 즉시 오래된 사용자부터 삭제합니다.
+
+:::
+
+
+## 자동 등록 사용자 확인 및 관리
+
+### <Cmd sid='people' product='cam' className='normal' /> 메뉴에서 확인
+
+자동 등록된 사용자는 <Cmd sid='people' product='cam' /> 메뉴의 사용자 목록에서 확인할 수 있습니다.
+
+* 사용자 아이디는 얼굴 인식 순서대로 순차적으로 자동 부여됩니다.
+
+* <Cmd sid='description' product='cam' /> 컬럼에 <Cmd sid='auto_enroll' product='cam' />으로 표시되어 수동 등록 사용자와 구분할 수 있습니다.
+
+* <Cmd sid='last_updated' product='cam' /> 컬럼에 사용자가 등록된 날짜 및 시간이 표시됩니다.
+
+
+### 사용자 상세 정보 수정
+
+1. 화면 왼쪽 상단의 <Cmd sid='people' product='cam' /> 메뉴를 클릭하세요.
+
+1. 사용자 목록에서 자동 등록된 사용자를 클릭하세요.
+
+1. 사용자 상세 정보 팝업이 나타나면 필요한 정보를 수정하세요.
+
+1. 사용자 정보 수정을 완료하면 <Cmd sid='apply' product='cam' /> 버튼을 클릭하세요.
+
+
+### 얼굴 인증 로그 및 얼굴 촬영 보기
+
+1. 화면 왼쪽 상단의 <Cmd sid='people' product='cam' /> 메뉴를 클릭하세요.
+
+1. 사용자 목록에서 자동 등록된 사용자를 클릭하세요.
+
+1. 사용자 상세 정보 팝업이 나타나면 <Cmd sid='event_logs' product='cam' /> 섹션에서 얼굴 인증 로그를 조회할 수 있습니다.
+
+* 날짜를 선택하여 특정 기간의 얼굴 인증 로그를 조회할 수 있습니다.
+
+* 로그의 <Cmd sid='face_shot' product='cam' />을 클릭하면 해당 인증 시점의 얼굴 사진이 표시됩니다.
+
+</Include>

@@ -1,0 +1,62 @@
+---
+id: edit-delete-ai-event
+title: AIイベントの編集と削除
+description: 作成したAIイベントの設定を編集したり、不要なイベントを削除したりできます。
+keywords:
+  - AIイベント
+  - 管理
+  - 設定
+  - 削除
+---
+
+作成したAIイベントの設定を編集したり、不要になったイベントを削除したりできます。
+
+## AIイベント設定の編集
+
+1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+
+2. 画面左のサイドバーで <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> をクリックします。
+
+   <ProdImg src='/img/cam-server/manage-ai-event-list.png' />
+
+3. 編集するAIイベントをクリックします。
+
+4. 右側のパネルでAIイベントの設定を編集します。
+
+5. すべての設定が完了したら、右上の <Cmd sid='update' product='cam' /> ボタンをクリックします。 
+
+前の画面に戻り、AIイベント一覧で編集したイベントを確認できます。
+
+:::info
+
+各イベント設定の詳細については、次のドキュメントを参照してください。
+
+* [<Cmd sid='ai_analysis_people_tracking' product='cam' className='normal' />](configure-people-tracking)
+
+* [<Cmd sid='ai_analysis_intrusion' product='cam' className='normal' />](configure-intrusion)
+
+* [<Cmd sid='ai_analysis_line_crossing' product='cam' className='normal' />](configure-line-crossing)
+
+* [<Cmd sid='ai_analysis_people_counting' product='cam' className='normal' />](configure-counting-people)
+
+:::
+
+## AIイベントの削除
+
+1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+
+2. 画面左のサイドバーで <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> をクリックします。
+
+   <ProdImg src='/img/cam-server/manage-ai-event-list.png' />
+
+3. 削除するAIイベントの右側にある <IcCamTrash title='delete' alone /> ボタンをクリックします。
+
+4. 警告メッセージが表示されたら内容を確認し、<Cmd sid='ok' product='cam' /> ボタンをクリックします。
+
+:::info
+
+* 削除したAIイベントは復元できません。 削除すると、AIイベントに連動するルール（Rule）も削除されます。
+
+* AIイベントを削除すると、システムログに削除イベントが記録されます。
+
+:::

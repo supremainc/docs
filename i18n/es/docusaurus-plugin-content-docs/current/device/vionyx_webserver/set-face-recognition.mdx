@@ -1,0 +1,34 @@
+---
+id: set-face-recognition
+title: Configurar Autenticación Facial
+description: Para mejorar la seguridad y la eficiencia de la Autenticación facial, configure el intervalo de autenticación, el nivel de seguridad y la detección de suplantación.
+keywords:
+  - Autenticación facial
+  - Evitar coincidencias duplicadas
+  - Nivel seguridad
+  - Detección de suplantación
+---
+
+Use la configuración de Autenticación facial para administrar a la vez la eficiencia de la autenticación, el nivel de seguridad y la detección de suplantación. Ajuste los valores según la política de seguridad y el entorno operativo de su organización.
+
+1. Haga clic en el menú <Cmd sid='people' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <IcCamFace title='Face Setting' /> <Cmd sid='face_setting' product='cam' /> en la esquina superior derecha de la pantalla.
+
+3. Cuando aparezca la ventana <Cmd sid='face_setting' product='cam' />, configure las opciones requeridas.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-face-setting.png' />
+
+   * <Cmd sid='face_settings_security_level' product='cam' />: Configure el nivel de seguridad. Cuanto mayor sea el nivel de seguridad, más estricta será la autenticación.
+
+   * <Cmd sid='face_settings_fake_detection' product='cam' />: Evite la autenticación de usuarios con rostros falsificados, como fotografías.
+
+4. Cuando termine de configurar las opciones, haga clic en <Cmd sid='apply' product='cam' />.
+
+:::tip
+
+* Para áreas que requieren alta seguridad, establezca la opción <Cmd sid='face_settings_security_level' product='cam' /> en <Cmd>Most Secure</Cmd>.
+
+* La opción <Cmd sid='face_settings_auth_timeout' product='cam' /> no es compatible.
+
+:::

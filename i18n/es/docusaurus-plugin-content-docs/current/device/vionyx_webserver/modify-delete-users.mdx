@@ -1,0 +1,114 @@
+---
+id: modify-delete-users
+title: Editar y Eliminar Usuarios
+description: Explica cómo editar la información de usuarios registrados, eliminar usuarios y ver los registros de eventos de usuario.
+keywords:
+  - Usuario
+  - Editar
+  - Borrar
+  - Editar
+  - Evento
+  - Registro
+---
+
+Edita la información de un usuario registrado o agrega o cambia un rostro. Elimina a los usuarios que ya no se necesitan y revisa el historial de actividad de un usuario en el registro de eventos.
+
+Modifica o elimina usuarios en las siguientes situaciones.
+
+* Cuando necesitas cambiar el nombre, el departamento u otra información de un usuario
+
+* Cuando necesitas actualizar la foto de rostro de un usuario o agregar un nuevo rostro
+
+* Cuando un usuario deja la empresa o debe eliminarse del sistema
+
+* Cuando necesitas revisar los registros de autenticación y el historial de cambios de un usuario
+
+* Cuando ocurre una autenticación falsa para un usuario registrado
+
+:::info
+
+* Aunque cargues una foto de alta calidad al editar la información del usuario, los datos de plantilla anteriores pueden permanecer. Elimina al usuario y regístralo de nuevo.
+
+* La eliminación no se puede deshacer. Haz una copia de seguridad de los datos necesarios y verifica cuidadosamente antes de eliminar a un usuario.
+
+:::
+
+## Editar información del usuario
+
+Edita la información de un usuario registrado o agrega o cambia un rostro.
+
+1. Haga clic en el menú <Cmd sid='people' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. En la lista de usuarios, haz clic en el botón <IcCamEdit title='Edit' /> de la columna <Cmd sid='edit' product='cam' /> del usuario que deseas editar.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-edit.png' />
+
+3. Cuando aparezca la ventana <Cmd sid='edit_face_user' product='cam' />, edita la información requerida.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-edit-detail-face-edit.png' />
+
+4. Después de editar la información del usuario, haz clic en <Cmd sid='apply' product='cam' />.
+
+Después de guardar los cambios, aparece un mensaje de éxito en la parte superior derecha y la vista vuelve a la lista de usuarios.
+
+:::info
+
+* Para obtener más información sobre los datos del usuario, consulta <DocLink docId='device/vionyx_webserver/add-users' />. 
+
+* El <Cmd sid='user_id' product='cam' /> no se puede cambiar.
+
+* Las fotos de rostro se pueden eliminar individualmente. Haz clic en <IcCamTrash title='delete' /> en la esquina superior derecha de esa foto de rostro.
+
+:::
+
+## Eliminar usuarios
+
+Elimina a los usuarios que ya no se necesitan.
+
+### Eliminar un usuario individual
+
+1. Haga clic en el menú <Cmd sid='people' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. En la lista de usuarios, haz clic en <IcCamTrash title='delete' /> al extremo derecho del usuario que deseas eliminar.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-delete.png' />
+
+3. Cuando aparezca el mensaje de confirmación de eliminación, haz clic en <Cmd sid='ok' product='cam' />.
+
+Aparece un mensaje de confirmación de eliminación en la parte superior derecha y el usuario se quita de la lista de usuarios.
+
+### Eliminar varios usuarios
+
+1. Haga clic en el menú <Cmd sid='people' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. En la lista de usuarios, haz clic en la casilla de verificación al extremo izquierdo del usuario que deseas eliminar. Selecciona varios usuarios.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-batch-delete.png' />
+
+3. Cuando aparezca el botón de eliminar en la parte superior derecha de la pantalla, haz clic en <Cmd sid='delete' product='cam' />.
+
+4. Cuando aparezca el mensaje de confirmación de eliminación, haz clic en <Cmd sid='ok' product='cam' />.
+
+Aparece un mensaje de confirmación de eliminación en la parte superior derecha y el usuario se quita de la lista de usuarios.
+
+## Ver registros de eventos de usuario
+
+Ver el historial de actividad de los usuarios registrados en el registro de eventos.
+
+1. Haga clic en el menú <Cmd sid='people' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. En la lista de usuarios, haz clic en el usuario para ver el registro de eventos.
+
+3. Cuando aparezca la ventana emergente de detalles del usuario, revisa la lista de eventos a la derecha, en <Cmd sid='event_logs' product='cam' />.
+
+<ProdImg src='/img/cam-server/cam-webserver-people-edit-detail.png' />
+
+:::note
+
+* Usa el ícono de calendario en la parte superior derecha para ver eventos de una fecha específica.
+
+  <ProdImg src='/img/cam-server/cam-webserver-people-event-log-date.png' />
+
+* Los registros de eventos se guardan automáticamente y rastrean todas las actividades importantes del usuario.
+
+:::

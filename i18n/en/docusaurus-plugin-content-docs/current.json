@@ -510,5 +510,25 @@
   "sidebar.biostar_air.category.파트너 기술자 관리하기": {
     "message": "Manage Partner Technicians",
     "description": "The label for category '파트너 기술자 관리하기' in sidebar 'biostar_air'"
+  },
+  "sidebar.aicamwebserver.category.ViOnyx Web Server": {
+    "message": "ViOnyx Web Server",
+    "description": "The label for category 'ViOnyx Web Server' in sidebar 'aicamwebserver'"
+  },
+  "sidebar.aicamwebserver.category.AI 이벤트 및 규칙 설정하기": {
+    "message": "Set Up AI Events and Rules",
+    "description": "The label for category 'AI 이벤트 및 규칙 설정하기' in sidebar 'aicamwebserver'"
+  },
+  "sidebar.aicamwebserver.category.카메라 설정하기": {
+    "message": "Configure the Camera",
+    "description": "The label for category '카메라 설정하기' in sidebar 'aicamwebserver'"
+  },
+  "sidebar.aicamwebserver.category.사용자 관리하기": {
+    "message": "Manage Users",
+    "description": "The label for category '사용자 관리하기' in sidebar 'aicamwebserver'"
+  },
+  "sidebar.aicamwebserver.category.시스템 구성하기": {
+    "message": "Configure System",
+    "description": "The label for category '시스템 구성하기' in sidebar 'aicamwebserver'"
   }
 }

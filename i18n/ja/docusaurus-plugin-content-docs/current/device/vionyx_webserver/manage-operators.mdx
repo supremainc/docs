@@ -1,0 +1,159 @@
+---
+id: manage-operators
+title: オペレーターの管理
+description: カメラ運用のための追加管理者（オペレーター）アカウントを管理する方法を案内します。
+keywords:
+  - オペレーター
+---
+
+管理者以外に、制限された権限を持つオペレーター（Operator）アカウントを追加、編集、削除できます。 オペレーターは管理者に代わってカメラの一部機能を管理できます。
+
+ONVIF機能を使用するには、オペレーターアカウントが必要です。 ONVIFクライアントまたはVMSからカメラに接続する場合は、登録済みのオペレーターアカウントを使用してください。
+
+次のような場合にオペレーターを追加してください。
+
+* カメラ運用の担当者を追加で割り当てるとき
+
+* 特定の権限のみを限定して付与する場合
+
+* 複数名で協力してカメラを管理する必要があるとき
+
+* チームメンバーに読み取り専用または編集権限を付与する場合
+
+:::info
+
+* 最大10名までオペレーターを追加できます。
+
+* オペレーターは他のオペレーターを追加できません。 オペレーターを追加できるのは管理者のみです。
+
+* オペレーターのパスワードは管理者のパスワードと同じルールに従います。 詳しくは <DocLink docId='device/vionyx_webserver/update-admin-password' /> をご参照ください。
+
+* 各オペレーターは自分のアカウント情報のみ変更できます。
+
+:::
+
+## オペレーター権限の種類
+
+オペレーターを追加する際に、次の2つの権限のいずれかを選択します。
+
+* <Cmd sid='read_only' product='cam' className='bold' />：すべてのカメラ設定とログを参照できますが、設定は変更できません。
+
+* <Cmd sid='read_write' product='cam' className='bold' />：管理者メニューを除くすべてのメニューにアクセスでき、カメラ設定を変更できます。 自分のパスワードは変更できますが、他のオペレーターや管理者アカウントのパスワードは変更できません。
+
+## オペレーターを追加
+
+1. 画面左上の <Cmd sid='system' product='cam' /> メニューをクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='account_management' product='cam' /> をクリックします。
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-account-manage.png' />
+
+3. <Cmd sid='operator' product='cam' /> セクションで <Cmd sid='add_button' product='cam' /> ボタンをクリックします。
+
+4. <Cmd sid='add_operator' product='cam' /> ポップアップが表示されたら、必要な情報を入力します。
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-add-operator.png' />
+
+   * <Cmd sid='id' product='cam' />：オペレーターの固有IDを入力します。
+
+     * 最大64文字まで入力できます。
+
+     * ハングル、英字、数字を含めることができます。
+
+     * 特殊文字（`_`, `.`, `-`, `(`, `)`）を使用できます。
+
+     * 他のオペレーターと重複できません。
+
+   * <Cmd sid='password' product='cam' />：オペレーターのパスワードを入力します。 管理者のパスワードと同じルールに従います。 詳しくは <DocLink docId='device/vionyx_webserver/update-admin-password' /> をご参照ください。
+
+   * <Cmd sid='confirm_password' product='cam' />：パスワードを再入力します。
+
+   * <Cmd sid='permission' product='cam' />：オペレーターの権限を選択します。
+
+   * <Cmd sid='enabled' product='cam' />：オペレーターのアカウントを有効または無効にできます。
+
+5. すべての情報を入力したら、<Cmd sid='ok' product='cam' /> ボタンをクリックします。
+
+新しいオペレーターを追加すると、一覧に新しいアカウントが表示されます。
+
+:::info
+
+* オペレーターを追加したら、そのアカウントでログインして権限が正しく適用されているか確認します。
+
+* オペレーターのIDとパスワードは安全にオペレーターに伝えてください。
+
+:::
+
+## オペレーター権限の変更
+
+追加されたオペレーターの権限を変更できます。
+
+1. 画面左上の <Cmd sid='system' product='cam' /> メニューをクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='account_management' product='cam' /> をクリックします。
+
+3. <Cmd sid='operator' product='cam' /> セクションで、権限を変更するオペレーターの <Cmd sid='permission' product='cam' /> 項目をクリックしてください。
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-manage-operator.png' />
+
+4. 選択リストから目的の権限に変更します。
+
+権限の変更に成功すると、画面右上に成功メッセージが表示されます。
+
+:::tip
+
+<IcCamEdit title='Edit' /> ボタンをクリックすると、<Cmd sid='edit_operator' product='cam' /> ウィンドウが表示されます。 <Cmd sid='permission' product='cam' /> 項目で目的の権限に変更した後、<Cmd sid='ok' product='cam' /> ボタンをクリックしてください。
+
+<ProdImg src='/img/cam-server/cam-webserver-system-manage-operator-edit.png' width='50%' />
+
+:::
+
+## オペレーターの無効化
+
+オペレーターのアカウントを一時的に無効化できます。 アカウントを削除せず、アクセスのみをブロックします。
+
+1. 画面左上の <Cmd sid='system' product='cam' /> メニューをクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='account_management' product='cam' /> をクリックします。
+
+3. <Cmd sid='operator' product='cam' /> セクションで、無効化するオペレーターの <Cmd sid='enabled' product='cam' /> 項目のトグルボタンをクリックして、アカウントを無効化してください。
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-manage-operator-active.png' />
+
+無効化に成功すると、画面右上に成功メッセージが表示されます。 オペレーターのアカウントが無効化されると、これ以上ログインできなくなります。
+
+:::tip
+
+<IcCamEdit title='Edit' /> ボタンをクリックすると、<Cmd sid='edit_operator' product='cam' /> ウィンドウが表示されます。 <Cmd sid='enabled' product='cam' /> 項目でトグルボタンをクリックして、アカウントを無効化してください。 変更を保存するには、<Cmd sid='ok' product='cam' /> ボタンをクリックしてください。
+
+<ProdImg src='/img/cam-server/cam-webserver-system-manage-operator-edit.png' width='50%' />
+
+:::
+
+:::info
+
+無効化されたアカウントは後で再度有効化できます。
+
+:::
+
+:::caution
+
+オペレーターが既にログイン中の場合、次回のログイン試行時にアクセスが拒否されます。
+
+:::
+
+## オペレーターの削除
+
+オペレーターアカウントを完全に削除できます。 削除したアカウントは復元できません。
+
+1. 画面左上の <Cmd sid='system' product='cam' /> メニューをクリックします。
+
+2. 画面左のサイドバーで <Cmd sid='account_management' product='cam' /> をクリックします。
+
+3. <Cmd sid='operator' product='cam' /> セクションで、削除するオペレーターの <IcCamTrash title='Delete' /> ボタンをクリックしてください。
+
+   <ProdImg src='/img/cam-server/cam-webserver-system-manage-operator-delete.png' />
+
+4. 警告メッセージが表示されたら、<Cmd sid='ok' product='cam' /> ボタンをクリックしてください。
+
+削除に成功すると、画面右上に成功メッセージが表示されます。 オペレーターアカウントが一覧から完全に削除されます。

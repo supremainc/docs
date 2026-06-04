@@ -31,15 +31,17 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
 1. 화면 왼쪽 사이드바에서 <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' />를 클릭하세요.
 
-   <Image src='/img/cam-server/ai-analysis-events.png' />
+   <ProdImg src='/img/cam-server/ai-analysis-events.png' />
 
 1. 화면 오른쪽 상단의 <Cmd sid='add_button' product='cam' /> 버튼을 클릭하세요.
 
-1. <Cmd sid='select_ai_analysis_type' product='cam' /> 창에서 <Cmd sid='ai_analysis_line_crossing' product='cam' />를 선택하고 <Cmd sid='next' product='cam' /> 버튼을 클릭하세요.
+1. <Cmd sid='select_ai_analysis_type' product='cam' /> 창에서 <Cmd sid='ai_analysis_line_crossing' product='cam' />를 클릭하세요.
 
-   <Image src='/img/cam-server/ai-analysis-events-add-line-crossing.png' />
+   <ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing.png' />
 
-1. <Cmd sid='face_analytics_consent_title' product='cam' /> 팝업이 표시되면 내용을 확인하고 <Cmd sid='face_analytics_consent_agree' product='cam' /> 버튼을 클릭하세요.
+1. <Cmd sid='face_analytics_consent_title' product='cam' /> 팝업이 표시되면 내용을 확인하고, 동의 체크박스를 클릭한 후 <Cmd sid='face_analytics_consent_agree' product='cam' /> 버튼을 클릭하세요.
+
+   <ProdImg src='/img/cam-server/ai-analysis-notice-face-auth.png' width='50%' />
 
    :::note
 
@@ -51,14 +53,14 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
 1. 오른쪽 <Cmd sid='ai_analysis_line_crossing' product='cam' /> 패널에서 필요한 설정을 완료하세요.
 
-   <Image src='/img/cam-server/ai-analysis-events-add-line-crossing-settings.png' />
+   <ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-settings.png' />
 
 </Step>
 <Step>
 
 ### 이벤트 이름 설정
 
-<Cmd sid='name' product='cam' /> 입력란에서 AI 이벤트 이름을 입력하세요. 이름은 최대 64자까지 입력할 수 있습니다.
+<Cmd sid='name' product='cam' /> 입력 필드에서 AI 이벤트 이름을 입력하세요. 이름은 최대 64자까지 입력할 수 있습니다.
 
 </Step>
 <Step>
@@ -67,7 +69,7 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
 라이브 뷰에서 가상 라인을 적절한 위치에 설정하세요. 카메라에 설정한 가상 라인을 통과하는 사람을 감지하여 이벤트를 발생시킵니다. 최소 1개를 설정해야 하며, <Cmd sid='add_button' product='cam' /> 버튼을 클릭해 최대 10개까지 추가할 수 있습니다. 라이브 뷰에 주황색 라인이 표시되며, 마우스로 모서리 또는 점을 드래그하여 원하는 형태로 조정할 수 있습니다. 가운데 영역을 드래그하여 위치를 이동할 수도 있습니다.
 
-<Image src='/img/cam-server/ai-analysis-events-add-line-crossing-settings-position.png' />
+<ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-settings-position.png' />
 
 * <Cmd sid='name' product='cam' />: 가상 라인의 이름을 수정할 수 있습니다. 알기 쉽게 이름을 지정하세요. 가상 라인의 이름은 라이브 뷰에서 마우스 오버 시 표시됩니다.
 
@@ -78,8 +80,6 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
    * <Cmd>B -> A</Cmd>: B에서 A 방향으로 통과 시 이벤트 발생
 
    * <Cmd>A \<-> B</Cmd>: 양방향으로 통과 시 이벤트 발생
-
-* <Cmd sid='face_matching' product='cam' />: 가상 라인을 통과하는 사람의 신원을 자동으로 확인하려면 <Cmd sid='on' product='cam' />으로 설정하세요.
 
 :::info
 
@@ -96,7 +96,7 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
 얼굴을 감지할 영역을 설정하세요. 설정하면 해당 영역에서 얼굴을 우선 추적합니다. 얼굴 영역과 가상 라인은 겹쳐서 설정할 수 있습니다. <Cmd sid='add_button' product='cam' /> 버튼을 클릭해 최대 10개까지 설정할 수 있습니다. 라이브 뷰에 파란색 상자가 표시되며, 마우스로 모서리 또는 점을 드래그하여 원하는 형태로 조정할 수 있습니다. 가운데 영역을 드래그하여 위치를 이동할 수도 있습니다.
 
-<Image src='/img/cam-server/ai-analysis-events-add-line-crossing-settings-face-area.png' />
+<ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-settings-face-area.png' />
 
 * <Cmd sid='name' product='cam' />: 얼굴 영역의 이름을 수정할 수 있습니다. 알기 쉽게 이름을 지정하세요. 얼굴 영역의 이름은 라이브 뷰에서 마우스 오버 시 표시됩니다.
 
@@ -126,7 +126,7 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
 모든 설정을 완료한 후 오른쪽 상단의 <Cmd sid='create' product='cam' /> 버튼을 클릭하세요. 이전 화면으로 돌아가며, 새로 생성된 AI 이벤트가 목록에 추가됩니다.
 
-<Image src='/img/cam-server/ai-analysis-events-add-line-crossing-settings-complete.png' />
+<ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-settings-complete.png' />
 
 </Step>
 </Steps>
@@ -136,7 +136,7 @@ keywords: [AI 분석, 출입자 동선, 얼굴 인식]
 
 화면 왼쪽 상단의 <Cmd sid='live' product='cam' /> 메뉴를 클릭하세요. 카메라 영상의 오른쪽 상단의 <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> 아이콘이 켜져 있는지 확인하세요. 설정한 가상 라인과 얼굴 영역이 영상에 오버레이로 표시됩니다. 사람이 가상 라인을 통과할 때마다 이벤트가 발생합니다. 얼굴 영역을 설정했다면 카메라가 해당 영역에서 얼굴을 감지하며, 등록된 사용자는 자동으로 신원이 인식되어 이름을 표시합니다.
 
-<Image src='/img/cam-server/ai-analysis-events-line-crosing-result.png' />
+<ProdImg src='/img/cam-server/ai-analysis-events-line-crosing-result.png' />
 
 :::info
 

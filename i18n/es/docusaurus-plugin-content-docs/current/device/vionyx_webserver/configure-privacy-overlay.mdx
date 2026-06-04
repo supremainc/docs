@@ -1,0 +1,150 @@
+---
+id: configure-privacy-overlay
+title: Configurar Ajustes de Privacidad y Superposición
+description: Muestra cómo ocultar áreas sensibles, difuminar rostros automáticamente y mostrar la fecha, la hora y el nombre de la cámara en el video.
+keywords:
+  - Privacidad
+  - Superposición
+  - Privacidad
+  - Superposición
+  - Ocultación
+  - Difuminar
+---
+
+El ajuste <Cmd sid='privacy_overlay' product='cam' className='normal' /> permite ocultar áreas sensibles o difuminar rostros automáticamente en el video de la cámara. También muestra la fecha, la hora y el nombre de la cámara en el video para indicar claramente el origen y la hora de grabación. Todos los ajustes surten efecto de inmediato en Live View.
+
+Configura Privacy & Overlay en las siguientes situaciones.
+
+* Cuando necesitas ocultar áreas específicas que pueden invadir la privacidad
+
+* Cuando necesitas cumplir con las políticas de privacidad al difuminar rostros automáticamente
+
+* Cuando necesitas asegurar la trazabilidad del video grabado al mostrar la fecha y la hora
+
+* Al operar varias cámaras, muestra los nombres de las cámaras para aclarar el origen del video
+
+:::info
+
+Los ajustes de privacidad (ocultación, difuminado de rostros) solo se aplican a la visualización del video; el análisis de IA se ejecuta en las imágenes originales y no afecta el rendimiento de IA.
+
+:::
+
+## Ajustes de privacidad y superposición
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. En la barra lateral izquierda, haz clic en <Cmd sid='basic' product='cam' /> → <Cmd sid='privacy_overlay' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-privacy-overlay.png' />
+
+3. Para guardar los cambios, haz clic en <Cmd sid='save' product='cam' /> en la esquina superior derecha de la pantalla. 
+
+Los cambios guardados se aplican a la cámara de inmediato después de guardar.
+
+## Ajustes del área de privacidad
+
+Oculta áreas específicas en el video grabado que deben permanecer privadas. Configura hasta 10 áreas; cada área es fija y no se mueve.
+
+1. Haz clic en el botón de alternancia en la sección <Cmd sid='area_setting' product='cam' />.
+
+2. Haz clic en <Cmd sid='add_button' product='cam' />.
+
+3. Se agrega un área de ocultación a Live View. Arrastra las esquinas del área para cambiar su tamaño, o arrastra toda el área para moverla.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-privacy-overlay-add-area.png' />
+
+4. Después de crear un área de ocultación, define el nombre, el orden y el color en el panel de ajustes derecho.
+
+   * <Cmd sid='name' product='cam' />: El nombre del área de ocultación se genera automáticamente y se puede editar si es necesario.
+
+   * <Cmd sid='order' product='cam' />: Ajusta el orden de visualización cuando las áreas de ocultación se superponen. Un número mayor aparece encima.
+
+   * <Cmd sid='color' product='cam' />: Selecciona el color del área de ocultación.
+
+5. Para guardar el área de ocultación agregada, haz clic en <Cmd sid='save' product='cam' /> en la esquina superior derecha de la pantalla.
+
+Las áreas de ocultación guardadas se aplican a Live View y al video grabado.
+
+:::info
+
+* Las áreas ocultas se aplican automáticamente a todos los modos de visualización (ojo de pez, panorámica simple, panorámica doble y cuadrante).
+
+* Para restablecer los ajustes del área de ocultación, haz clic en <IcCamReset title='reset' />.
+
+* Para eliminar un área de ocultación, haz clic en <IcCamTrash title='delete' />.
+
+:::
+
+## Ajustes de privacidad de rostros
+
+Difumina automáticamente los rostros o cuerpos completos detectados para proteger la información personal. Activa <Cmd sid='face_privacy_setting' product='cam' /> y elige el alcance de difuminado deseado.
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-privacy-overlay-face-body.png' />
+
+* <Cmd sid='face_only' product='cam' />: Todos los rostros detectados se difuminan automáticamente.
+
+* <Cmd sid='full_body' product='cam' />: Todo el cuerpo detectado se difumina automáticamente.
+
+:::info
+
+Difuminar rostros o cuerpos completos no afecta el rendimiento de IA. Mientras la cámara muestra video difuminado, el análisis de IA se ejecuta en las imágenes originales, por lo que las funciones de IA, como Facial Authentication y el seguimiento de objetos, funcionan con normalidad.
+
+:::
+
+## Ajustes de superposición
+
+Muestra la fecha, la hora y el nombre de la cámara en Live View. Activa <Cmd sid='overlay' product='cam' /> y ajusta los detalles en <Cmd sid='date_and_time_overlay' product='cam' /> y <Cmd sid='camera_name' product='cam' />.
+
+<ProdImg src='/img/cam-server/cam-webserver-settings-privacy-overlay-date-camera.png' className='none' />
+
+:::info
+
+Cada ajuste se guarda automáticamente al cambiarlo y se aplica de inmediato a Live View.
+
+:::
+
+### <Cmd sid='date_and_time_overlay' product='cam' className='normal' />
+
+Define el formato, el tamaño y el color de la fecha y la hora que se muestran en Live View. En Live View, verifica la posición de la fecha y la hora, y arrástralas con el mouse para ajustar su posición o tamaño si es necesario.
+
+* <Cmd sid='date' product='cam' /> / <Cmd sid='time' product='cam' />: Haz clic en el botón de alternancia para activar o desactivar la superposición de la fecha y la hora.
+
+* <Cmd sid='date_format' product='cam' />: Selecciona el formato de fecha.
+
+  * AAAA-MM-DD (predeterminado, por ejemplo: 2026-01-12)
+
+  * MM-DD-AAAA (por ejemplo: 01-12-2026)
+
+  * DD-MM-AAAA (por ejemplo: 12-01-2026)
+
+* <Cmd sid='time_format' product='cam' />: Selecciona el formato de hora.
+
+  * HH:MM:SS (predeterminado, por ejemplo: 13:45:56)
+
+  * HH:MM (se omiten los segundos, por ejemplo: 13:45)
+
+* <Cmd sid='font_size' product='cam' />: Selecciona el tamaño de la fuente que se muestra en Live View. Selecciona un valor de 1 a 32.
+
+* <Cmd sid='color' product='cam' />: Selecciona el color del texto que se muestra en Live View.
+
+:::info
+
+La superposición de fecha y hora aparece solo en Fisheye View.
+
+:::
+
+### <Cmd sid='camera_name' product='cam' className='normal' />
+
+Muestra el nombre de la cámara en Live View para aclarar el origen del video. En Live View, verifica la posición del nombre de la cámara y arrástralo con el mouse para ajustar su posición o tamaño si es necesario.
+
+* <Cmd sid='display' product='cam' />: Haz clic en el botón de alternancia para activar o desactivar la superposición del nombre de la cámara.
+
+* <Cmd sid='name' product='cam' />: Ingresa el nombre de la cámara.
+
+* <Cmd sid='font_size' product='cam' />: Selecciona el tamaño de la fuente que se muestra en Live View. Selecciona un valor de 1 a 32.
+
+* <Cmd sid='color' product='cam' />: Selecciona el color del texto que se muestra en Live View.
+
+## Guardar ajustes
+
+Verifica los ajustes de inmediato en Live View. Para guardarlos, haz clic en <Cmd sid='save' product='cam' /> en la esquina superior derecha de la pantalla. Los ajustes guardados se aplican a la cámara y aparecen en Live View y en el video grabado.

@@ -1,34 +1,41 @@
 ---
 id: search-view-users
-title: 사용자 목록에서 검색 및 보기
+title: 사용자 검색 및 보기
 description: 사용자 목록에서 검색을 통해 원하는 사용자를 찾고 효율적으로 관리하는 방법을 안내합니다.
 keywords: [사용자, 검색, 필터, 정렬, 뷰, 관리]
 ---
 
 사용자 목록에서 이름이나 아이디를 입력하여 원하는 사용자를 신속하게 찾을 수 있습니다. 필요에 따라 테이블 또는 카드 형태로 사용자 정보를 표시할 수 있습니다.
 
-아래와 같은 상황에서 사용자 검색 및 관리 기능을 사용하세요.
+아래와 같은 상황에서 사용자 검색 및 보기 기능을 사용하세요.
 
 * 많은 사용자 중에서 특정 사용자를 빠르게 찾아야 할 때
 
 * 카드 형태로 사용자 프로필을 한눈에 확인하고 싶을 때
 
-:::info
-
-검색과 필터를 함께 사용하면 대규모 사용자 목록을 더 효율적으로 관리할 수 있습니다.
-
-:::
+* 사용자 목록을 이름, 아이디, 최종 업데이트 시간 기준으로 정렬하여 보고 싶을 때
 
 
 ## 사용자 검색
 
+원하는 사용자를 찾을 수 있는 검색 기능을 제공합니다. 사용자 이름이나 아이디를 기준으로 검색할 수 있으며, 얼굴 이미지로 유사한 사용자를 찾을 수 있습니다.
+
+### 키워드 검색
+
+사용자 목록에서 이름이나 아이디를 입력하여 원하는 사용자를 검색할 수 있습니다.
+
 1. 화면 왼쪽 상단의 <Cmd sid='people' product='cam' /> 메뉴를 클릭하세요.
 
-1. 화면 오른쪽 상단의 검색 입력란에 사용자 이름 또는 사용자 ID의 일부를 입력하세요.
+1. 사용자 목록 왼쪽 상단의 검색 입력에서 검색 기준을 선택하세요. <Cmd sid='user_name' product='cam' /> 또는 <Cmd sid='user_id' product='cam' />를 선택할 수 있습니다.
 
-   <Image src='/img/cam-server/cam-webserver-people-list-search.png' />
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-search-select.png' />
+
+1. 검색 입력 필드에 검색어를 입력하세요.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-search.png' />
 
 1. 입력한 검색어와 일치하는 사용자가 목록에 표시됩니다.
+
 
 :::info
 
@@ -38,25 +45,59 @@ keywords: [사용자, 검색, 필터, 정렬, 뷰, 관리]
 
 :::
 
+### 얼굴 이미지로 찾기
 
-## 뷰 모드 변경
+얼굴 이미지를 업로드하여 유사한 얼굴을 가진 사용자를 검색할 수 있습니다.
 
-사용자 목록을 테이블 형태 또는 카드 형태로 표시할 수 있습니다.
+1. 화면 왼쪽 상단의 <Cmd sid='people' product='cam' /> 메뉴를 클릭하세요.
 
-### 테이블 뷰
+1. 검색 입력 필드 오른쪽의 <IcCamFaceSearch title='Face Search' /> 버튼을 클릭하세요.
 
-사용자 목록을 테이블 형태로 표시하려면 목록 오른쪽 상단의 <Image src='/img/cam-server/ico-people-list-mode.svg' alone ico /> 클릭하세요.
+1. <Cmd sid='find_face_user' product='cam' /> 창이 나타나면 얼굴 이미지를 드래그 앤 드롭하거나 <Cmd sid='choose_file' product='cam' />을 통해 업로드하세요.
 
-<Image src='/img/cam-server/cam-webserver-people-list-mode.png' />
+   <ProdImg src='/img/cam-server/cam-webserver-people-search-upload-face.png' />
 
-### 카드 뷰
+1. 얼굴 이미지 업로드를 완료하면 <Cmd sid='firmware_upload' product='cam' /> 버튼을 클릭하세요.
 
-사용자 목록을 카드 형태로 표시하려면 목록 오른쪽 상단의 <Image src='/img/cam-server/ico-people-card-mode.svg' alone ico /> 클릭하세요.
+1. <Cmd sid='choose_face_to_search' product='cam' /> 창이 나타나면 업로드한 얼굴 이미지와 매칭된 사용자 목록이 표시됩니다.
 
-<Image src='/img/cam-server/cam-webserver-people-card-mode.png' />
+   <ProdImg src='/img/cam-server/cam-webserver-people-search-face-result.png' />
+
+   * 매칭된 사용자 중에서 원하는 사용자를 선택하면 해당 사용자의 상세 정보 페이지로 이동할 수 있습니다.
+
+   * 다른 얼굴 이미지로 다시 검색하려면 왼쪽 하단의 <Cmd sid='choose_file' product='cam' /> 버튼을 클릭하고, 새로운 얼굴 이미지를 업로드하세요.
 
 :::info
 
-리스트 뷰와 카드 뷰는 모두 동일한 기능을 제공합니다. 표시 방식만 다르며, 검색 및 필터, 정렬 결과는 동일합니다.
+얼굴 이미지가 아닌 다른 이미지를 업로드하면 올바른 얼굴 이미지가 아니라는 메시지가 표시됩니다. 얼굴 이미지로 다시 시도하세요.
 
 :::
+
+
+## 뷰 모드 변경
+
+사용자 목록을 테이블 형태 또는 카드 형태로 표시할 수 있습니다. 사용자 목록 오른쪽 상단의 <Image src='/img/cam-server/ico-people-list-mode.svg' alone ico /> 또는 <Image src='/img/cam-server/ico-people-card-mode.svg' alone ico /> 버튼을 클릭해 원하는 뷰 모드를 선택하세요.
+
+* <Cmd sid='switch_to_list_view' product='cam' />
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-mode.png' />
+
+* <Cmd sid='switch_to_grid_view' product='cam' />
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-card-mode.png' />
+
+:::info
+
+<Cmd sid='switch_to_list_view' product='cam' />, <Cmd sid='switch_to_grid_view' product='cam' />는 모두 동일한 기능을 제공합니다. 표시 방식만 다르며, 검색 및 필터, 정렬 결과는 동일합니다.
+
+:::
+
+## 사용자 목록 정렬
+
+사용자 목록을 사용자 아이디, 최종 업데이트 시간 기준으로 오름차순 또는 내림차순으로 정렬할 수 있습니다.
+
+1. 사용자 목록 오른쪽 상단의 정렬 드롭다운 옵션을 클릭하세요. 
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-filter.png' />
+
+1. 원하는 정렬 기준을 선택하세요.

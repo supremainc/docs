@@ -19,7 +19,7 @@ AI 얼굴 인식을 위한 사용자를 등록할 수 있습니다. 사용자를
 
 :::info
 
-* 얼굴 인식 기능을 사용하려면 해당 지역의 관련 규제 법규를 준수해야 하세요.
+* 얼굴 인식 기능을 사용하려면 해당 지역의 관련 규제 법규를 준수해야 합니다.
 
 * 최초로 사용자를 추가할 때 얼굴 인식 사용 동의 팝업이 표시됩니다. 동의 기록은 시스템 로그에 저장되며, 동의 후에는 재표시되지 않습니다.
 
@@ -36,13 +36,15 @@ AI 얼굴 인식을 위한 사용자를 등록할 수 있습니다. 사용자를
 
 1. 화면 오른쪽 상단의 <Cmd sid='add' product='cam' /> 버튼을 클릭하세요.
 
-   <Image src='/img/cam-server/cam-webserver-people-list-add.png' />
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-add.png' />
 
-1. 최초 사용자 추가 시 <Cmd sid='face_analytics_consent_title' product='cam' /> 팝업이 표시되면 내용을 확인하고 <Cmd sid='face_analytics_consent_agree' product='cam' /> 버튼을 클릭하세요.
+1. 최초 사용자 추가 시 <Cmd sid='face_analytics_consent_title' product='cam' /> 팝업이 표시되면 내용을 확인하고, 동의 체크박스를 클릭한 후 <Cmd sid='face_analytics_consent_agree' product='cam' /> 버튼을 클릭하세요.
+
+   <ProdImg src='/img/cam-server/ai-analysis-notice-face-auth.png' width='50%' />
 
    :::note
 
-   * 얼굴 인식 기능을 사용하려면 해당 지역의 관련 규제 법규를 준수해야 하세요. 동의하지 않으면 진행할 수 없습니다.
+   * 얼굴 인식 기능을 사용하려면 해당 지역의 관련 규제 법규를 준수해야 합니다. 동의하지 않으면 진행할 수 없습니다.
 
    * <Cmd sid='face_analytics_consent_title' product='cam' /> 팝업은 최초 한 번만 표시됩니다.
 
@@ -50,19 +52,19 @@ AI 얼굴 인식을 위한 사용자를 등록할 수 있습니다. 사용자를
 
 1. <Cmd sid='add_new_face_user' product='cam' /> 팝업창이 나타나면 사용자 기본 정보를 입력하세요.
 
-   <Image src='/img/cam-server/cam-webserver-people-list-add-pop-profile.png' />
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-add-pop-profile.png' />
 
-1. <Cmd sid='user_id' product='cam' /> 입력란에 사용자 고유 아이디를 입력하세요. 사용자 아이디는 다른 사용자와 중복될 수 없습니다.
+1. <Cmd sid='user_id' product='cam' /> 입력 필드에 사용자 고유 아이디를 입력하세요. 사용자 아이디는 다른 사용자와 중복될 수 없습니다.
 
-1. <Cmd sid='name' product='cam' /> 입력란에 사용자 이름을 입력하세요.
+1. <Cmd sid='name' product='cam' /> 입력 필드에 사용자 이름을 입력하세요.
 
    * 최대 64자까지 입력할 수 있습니다.
 
-   * 한글, 영문, 숫자, 특수문자(`*`, `.`, `-`, `(`, `)`)를 포함할 수 있습니다.
+   * 한글, 일본어, 영문 대소문자, 숫자, 특수문자(`#`, `-`, `_`, `.`, `(`, `)`), 문자 중간 공백을 포함할 수 있습니다.
 
-1. <Cmd sid='description' product='cam' /> 입력란에 사용자에 대한 설명을 입력하세요. 최대 256자까지 입력할 수 있습니다.
+1. <Cmd sid='description' product='cam' /> 입력 필드에 사용자에 대한 설명을 입력하세요. 최대 256자까지 입력할 수 있습니다.
 
-1. <Cmd sid='custom_field' product='cam' /> 입력란은 사용자 고유의 추가 정보를 최대 64자까지 입력할 수 있습니다. 예를 들어, 부서, 직책, 유저 그룹 등 자유 형식의 메모를 작성할 수 있습니다.
+1. <Cmd sid='custom_field' product='cam' /> 입력 필드는 사용자 고유의 추가 정보를 최대 64자까지 입력할 수 있습니다. 예를 들어, 부서, 직책, 유저 그룹 등 영문 형식 메모를 작성할 수 있습니다.
 
 1. 사용자 기본 정보를 저장하려면 <Cmd sid='apply' product='cam' /> 버튼을 클릭하세요.
 
@@ -83,35 +85,41 @@ AI 얼굴 인식을 위한 사용자를 등록할 수 있습니다. 사용자를
 
 1. 사용자 추가 또는 사용자 상세 팝업창의 <Cmd sid='face_credentials' product='cam' /> 섹션에서 얼굴을 등록할 수 있습니다.
 
-   <Image src='/img/cam-server/cam-webserver-people-list-face-credential.png' />
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential.png' />
 
-1. <Cmd sid='add_face_button' product='cam' /> 버튼을 클릭하세요.
+1. <Cmd sid='first_face' product='cam' />에 마우스를 오버하면 등록 옵션이 표시됩니다.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential-upload.png' />
+
+   * <IcUpload width='24px' height='24px' title='Upload' />: 로컬에 저장된 이미지 파일을 업로드하여 얼굴 사진을 등록할 수 있습니다.
+
+   * <IcCapture width='24px' height='24px' title='Web Cam' />: 웹캠으로 얼굴 사진을 촬영하여 등록할 수 있습니다.
+
+   * <IcCamAi width='24px' height='24px' title='AI Recommend' />: AI 이벤트를 통해 감지된 미인식 얼굴 목록에서 사용자에 맞는 얼굴을 선택하여 등록할 수 있습니다.
 
 :::info
 
-* 1번 얼굴을 먼저 선택하세요. 2번 얼굴은 선택 사항입니다.
-
-* 얼굴 사진 등록 시 얼굴이 검출되지 않으면 'The face cannot be found in the photo or the quality is poor. Please try again with a different photo.' 메시지가 표시됩니다.
+1번 얼굴을 먼저 선택하세요. 2번 얼굴은 선택 사항입니다.
 
 :::
 
 ### 얼굴 사진 업로드
 
-로컬에 저장된 이미지 파일을 업로드해 얼굴 사진을 등록하려면 <Cmd sid='add_face' product='cam' /> 팝업창에서 <Cmd sid='my_files' product='cam' /> 옵션을 선택하세요.
+로컬에 저장된 이미지 파일을 업로드해 얼굴 사진을 등록할 수 있습니다.
 
-<Image src='/img/cam-server/cam-webserver-people-list-face-credential-upload.png' />
+<ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential-upload.png' />
 
 1. 다음 중 원하는 방법으로 얼굴 사진을 업로드하세요.
 
-   * 로컬에 저장된 이미지 파일을 드래그 앤 드롭으로 업로드 영역에 끌어오세요.
+   * 로컬에 저장된 이미지 파일을 드래그 앤 드롭으로 얼굴 영역에 끌어오세요.
 
-   * 로컬에 저장된 이미지 파일을 선택하려면 <Cmd sid='browse' product='cam' /> 버튼을 클릭하세요.
+   * 로컬에 저장된 이미지 파일을 선택하려면 <IcUpload title='Upload' /> 버튼을 클릭하고 원하는 이미지 파일을 선택하세요.
 
 1. 얼굴이 인식되면 사진이 표시됩니다.
 
-   <Image src='/img/cam-server/cam-webserver-people-list-face-credential-upload-complete.png' />
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential-upload-complete.png' />
 
-1. 업로드한 사진을 사용자에게 적용하려면 <Cmd sid='apply' product='cam' /> 버튼을 클릭하세요.
+1. 업로드한 사진을 사용자에게 적용하려면 하단의 <Cmd sid='apply' product='cam' /> 버튼을 클릭하세요.
 
 :::info
 
@@ -121,19 +129,19 @@ AI 얼굴 인식을 위한 사용자를 등록할 수 있습니다. 사용자를
 
 :::
 
-### 웹캠으로 얼굴 등록 (Web Cam)
+### 웹캠으로 얼굴 등록
 
-웹캠을 사용해 얼굴 사진을 촬영하고 등록할 수 있습니다. <Cmd sid='add_face' product='cam' /> 팝업창에서 <Cmd sid='web_cam' product='cam' /> 옵션을 선택하세요.
+웹캠을 사용해 얼굴 사진을 촬영하고 등록할 수 있습니다.
 
-<Image src='/img/cam-server/cam-webserver-people-list-face-credential-webcam-2.png' />
+1. <IcCamera title='Webcam' /> 버튼을 클릭하세요.
 
 1. 웹캠 촬영 화면이 표시되면 얼굴이 화면 중앙의 원안에 오도록 위치를 조정하세요.
 
-1. <Cmd sid='capture' product='cam' /> 버튼을 클릭하세요. 3초 카운트다운 후 사진을 촬영합니다.
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential-webcam-2.png' />
 
-1. 얼굴이 인식되면 사진이 표시됩니다.
+1. <Cmd sid='capture' product='cam' /> 버튼을 클릭하세요.
 
-   <Image src='/img/cam-server/cam-webserver-people-list-face-credential-upload-complete.png' />
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-face-credential-upload-complete.png' />
 
 1. 촬영한 사진을 사용자에게 적용하려면 <Cmd sid='apply' product='cam' /> 버튼을 클릭하세요.
 
@@ -145,12 +153,16 @@ AI 얼굴 인식을 위한 사용자를 등록할 수 있습니다. 사용자를
 
 ### AI 추천 얼굴 등록
 
-AI 분석을 통해 감지된 미인식 얼굴 목록에서 사용자에 맞는 얼굴을 선택하고 등록할 수 있습니다. <Cmd sid='add_face' product='cam' /> 팝업창에서 <Cmd sid='ai_shot' product='cam' /> 옵션을 선택하세요.
+AI 분석을 통해 감지된 미인식 얼굴 목록에서 사용자에 맞는 얼굴을 선택하고 등록할 수 있습니다.
 
+1. <IcCamAi title='AI Recommend' /> 버튼을 클릭하세요.
 
-1. 최근 인증된 미인식 얼굴 목록이 표시됩니다.
+1. <Cmd sid='ai_shot' product='cam' /> 팝업창에서 최근 인증된 미인식 얼굴 목록이 표시됩니다.
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-ai-matching.png' />
 
 1. 사용자에 맞는 얼굴을 선택하세요. 한 번에 1개의 얼굴만 선택할 수 있습니다.
 
-1. 선택한 얼굴을 사용자에게 적용하려면 <Cmd sid='apply' product='cam' /> 버튼을 클릭하세요.
+1. <Cmd sid='save' product='cam' /> 버튼을 클릭하세요.
 
+1. 선택한 얼굴을 사용자에게 적용하려면 <Cmd sid='apply' product='cam' /> 버튼을 클릭하세요.

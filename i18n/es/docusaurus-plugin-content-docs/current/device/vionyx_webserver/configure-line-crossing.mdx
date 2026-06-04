@@ -1,0 +1,152 @@
+---
+id: configure-line-crossing
+title: Configurar Evento de Detección de Cruce de Línea
+description: Detecta a las personas que cruzan líneas virtuales configuradas y activa eventos en tiempo real. Especifique la dirección de cruce para supervisar solo una dirección de movimiento.
+keywords:
+  - Análisis con IA
+  - Flujo peatonal
+  - Autenticación facial
+---
+
+Configurar un evento de detección de cruce de línea detecta a las personas que cruzan líneas virtuales configuradas y activa eventos en tiempo real. Especifique la dirección de cruce (A→B, B→A o ambas) para supervisar solo una dirección. Agregue opcionalmente un área facial para priorizar el seguimiento de rostros; los usuarios inscritos se identifican automáticamente.
+
+## ¿Cuándo usarlo?
+
+* Supervisar y contar el tráfico en la puerta
+
+* Supervise la entrada solo en una dirección específica (detecta tráfico de un solo sentido)
+
+* Detecte la entrada a áreas específicas fuera del horario laboral
+
+* Rastree el movimiento a la izquierda o derecha del área con respecto a la línea
+
+## Crear evento de detección de cruce de línea
+
+Use el menú <Cmd sid='live' product='cam' /> para detectar a las personas que cruzan una línea configurada en un área específica y activar eventos. Además, al configurar un área facial, se prioriza el seguimiento facial en esa área; los usuarios enrolados se identifican automáticamente.
+
+<Steps>
+<Step>
+
+### Iniciar creación del evento
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. Haga clic en <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='ai_analysis' product='cam' /> en la barra lateral izquierda.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events.png' />
+
+3. Haga clic en <Cmd sid='add_button' product='cam' /> en la esquina superior derecha de la pantalla.
+
+4. En la ventana <Cmd sid='select_ai_analysis_type' product='cam' />, haga clic en <Cmd sid='ai_analysis_line_crossing' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing.png' />
+
+5. Cuando aparece la ventana emergente <Cmd sid='face_analytics_consent_title' product='cam' />, revise los detalles, seleccione la casilla de consentimiento y haga clic en <Cmd sid='face_analytics_consent_agree' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-analysis-notice-face-auth.png' width='50%' />
+
+   :::note
+
+   * Para usar la función de Facial Authentication, cumpla con las normas locales. No puede continuar sin consentimiento.
+
+   * La ventana emergente <Cmd sid='face_analytics_consent_title' product='cam' /> aparece solo una vez. La creación posterior de eventos de IA asume el consentimiento.
+
+   :::
+
+6. Complete las configuraciones requeridas en el panel derecho de <Cmd sid='ai_analysis_line_crossing' product='cam' />.
+
+   <ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-settings.png' />
+
+</Step>
+<Step>
+
+### Configurar nombre del evento
+
+Ingrese el nombre del evento de IA en el campo <Cmd sid='name' product='cam' />. El nombre puede tener hasta 64 caracteres.
+
+</Step>
+<Step>
+
+### Configuración de línea virtual
+
+Coloque la línea virtual en la ubicación adecuada en Live View. La cámara detecta a las personas que cruzan líneas virtuales configuradas y activa eventos. Configure al menos una línea virtual. Haga clic en <Cmd sid='add_button' product='cam' /> para agregar hasta 10. Aparece una línea naranja en Live View; arrastre las esquinas o los puntos para ajustar la forma. Arrastre el centro para mover la línea.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-settings-position.png' />
+
+* <Cmd sid='name' product='cam' />: Edite el nombre de la línea virtual. Asigne un nombre claro y descriptivo. El nombre de la línea virtual aparece al pasar el cursor en Live View.
+
+* <Cmd sid='condition' product='cam' />: Establezca la condición de cruce para la línea virtual. Seleccione una de las tres opciones de dirección a continuación.
+
+  * <Cmd>A -> B</Cmd>: Active un evento cuando se cruce de A a B.
+
+  * <Cmd>B -> A</Cmd>: Active un evento cuando se cruce de B a A.
+
+  * <Cmd>A \<-> B</Cmd>: Active un evento cuando se cruce en ambas direcciones.
+
+:::info
+
+* Haga clic en <IcCamReset title='reset' /> para restablecer la forma y el tamaño de la línea virtual configurada.
+
+* Haga clic en <IcCamTrash title='delete' /> para eliminar una línea virtual agregada.
+
+:::
+
+</Step>
+<Step>
+
+### Ajustes del área facial (opcional)
+
+Defina el área para la detección facial. Cuando se configura, el sistema prioriza el seguimiento facial en esa área. Las áreas faciales pueden superponerse con líneas virtuales. Haga clic en <Cmd sid='add_button' product='cam' /> para agregar hasta 10 áreas faciales. Aparece un cuadro azul en Live View; arrastre las esquinas o los puntos para ajustar la forma. Arrastre el centro para mover la línea.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-settings-face-area.png' />
+
+* <Cmd sid='name' product='cam' />: edite el nombre del área facial. Asigne un nombre claro y descriptivo. El nombre del área facial aparece al pasar el cursor en Live View.
+
+:::info
+
+* Los usuarios enrolados se identifican automáticamente en el menú <Cmd sid='live' product='cam' /> y se muestran por nombre. Los usuarios no enrolados aparecen como <Cmd sid='unknown_face' product='cam' />.
+
+* Haga clic en <IcCamReset title='reset' /> para restablecer la forma y el tamaño del área facial configurada.
+
+* Haga clic en <IcCamTrash title='delete' /> para eliminar un área facial agregada.
+
+:::
+
+</Step>
+<Step>
+
+### Establecer condiciones de activación de eventos
+
+Establezca las condiciones de activación de eventos.
+
+* <Cmd sid='every_delay' product='cam' />: Establezca el retraso de activación del evento. Los eventos se activan solo después de que transcurre el tiempo configurado; establezca hasta 60 segundos.
+
+</Step>
+<Step>
+
+### Guardar ajustes
+
+Después de completar todas las configuraciones, haga clic en <Cmd sid='create' product='cam' /> en la esquina superior derecha. La interfaz vuelve a la pantalla anterior y el nuevo evento de IA se agrega a la lista.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-add-line-crossing-settings-complete.png' />
+
+</Step>
+</Steps>
+
+## Verificación en Live
+
+Haga clic en el menú <Cmd sid='live' product='cam' /> en la esquina superior izquierda de la pantalla. Confirme que el ícono <Image src='/img/cam-server/ico-content-ai-show.svg' alt='AI On' alone ico /> en la esquina superior derecha de la transmisión de la cámara esté activado. Las líneas virtuales y las áreas faciales configuradas se superponen en el video. Se produce un evento cada vez que una persona cruza una línea virtual. Si se configuran áreas faciales, la cámara detecta rostros allí; los usuarios enrolados se identifican automáticamente y sus nombres se muestran.
+
+<ProdImg src='/img/cam-server/ai-analysis-events-line-crosing-result.png' />
+
+:::info
+
+* Los usuarios no enrolados aparecen como <Cmd sid='unknown_face' product='cam' />. Los usuarios enrolados aparecen con su nombre.
+
+* La mala iluminación o la luz de fondo pueden impedir que la cámara detecte rostros. Mejore la iluminación del área o ajuste la posición y el ángulo de la cámara para que los rostros se vean con claridad.
+
+* Los rostros deben mirar hacia la cámara para detectarse. Las vistas de perfil o de espaldas pueden no detectarse.
+
+* Si ocurren demasiados eventos, ajuste la opción <Cmd sid='every_delay' product='cam' />. Aumentar el retraso del evento reduce la frecuencia de los eventos.
+
+:::

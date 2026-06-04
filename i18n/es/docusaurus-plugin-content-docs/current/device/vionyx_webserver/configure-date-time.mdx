@@ -1,0 +1,121 @@
+---
+id: configure-date-time
+title: Configurar Fecha y Hora
+description: Guía para configurar la zona horaria y mantener la hora precisa mediante ingreso manual o un servidor NTP.
+keywords:
+  - Fecha
+  - Hora
+  - NTP
+  - zona horaria
+  - Sincronización de hora
+---
+
+La configuración de fecha y hora mantiene exacto el reloj de la cámara. Seleccione una zona horaria y configure la hora manualmente o sincronícela automáticamente con un servidor NTP. La hora precisa garantiza la confiabilidad de las marcas de tiempo de video y de los registros de eventos de IA.
+
+Revise la configuración de fecha y hora en las siguientes situaciones.
+
+* Después de instalar la cámara, configure la zona horaria para que coincida con la región de operación.
+
+* Para sincronizar el reloj de la cámara ingresando manualmente la hora exacta.
+
+* Para mantener la hora precisa automáticamente durante períodos largos mediante un servidor NTP.
+
+* Para unificar la hora en varias cámaras y simplificar el análisis y el seguimiento de video.
+
+:::info
+
+La hora incorrecta de la cámara reduce la confiabilidad de los registros de eventos de IA, las marcas de tiempo de video y los registros del sistema. Revise la configuración de hora con regularidad.
+
+:::
+
+## Configuración de zona horaria
+
+Primero, configure la zona horaria de la cámara para que coincida con la región de operación.
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. En la barra lateral izquierda, haga clic en <Cmd sid='basic' product='cam' /> → <Cmd sid='date_time' product='cam' />.
+
+3. En la sección <Cmd sid='date' product='cam' />, seleccione la región en <Cmd sid='time_zone' product='cam' />.
+
+   > Ejemplo: `(UTC+09:00) Asia/Seoul`
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-date-time.png' />
+
+4. Para aplicar el horario de verano a la zona horaria, active la opción <Cmd sid='daylight_savings' product='cam' /> marcando su casilla.
+
+5. Haga clic en <Cmd sid='save' product='cam' /> en la esquina superior derecha de la pantalla para guardar la zona horaria seleccionada.
+
+:::info
+
+De forma predeterminada, se establece `(UTC+09:00) Asia/Seoul`. Si la región de operación es diferente, cambie la zona horaria.
+
+:::
+
+## Configuración manual de hora
+
+Configure la hora de la cámara manualmente.
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. En la barra lateral izquierda, haga clic en <Cmd sid='basic' product='cam' /> → <Cmd sid='date_time' product='cam' />.
+
+3. En la sección <Cmd sid='time' product='cam' />, seleccione <Cmd sid='manual' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-date-time-manual.png' />
+
+4. Ingrese la fecha actual en el campo Fecha, o haga clic en el icono de calendario para seleccionar una fecha.
+
+5. Ingrese la hora actual en el campo Hora, o haga clic en el icono de reloj para seleccionar una hora.
+
+6. Haga clic en <Cmd sid='apply' product='cam' /> para aplicar la configuración de hora manual.
+
+7. Haga clic en <Cmd sid='save' product='cam' /> en la esquina superior derecha de la pantalla para guardar la configuración de hora.
+
+:::info
+
+* Active la opción <Cmd sid='pc_viewer_time_apply' product='cam' /> para aplicar automáticamente la hora de la PC a la cámara. La hora del sistema en el navegador web se aplica a la cámara.
+
+* El modo manual y la sincronización automática NTP no pueden estar activos al mismo tiempo. Al seleccionar el modo manual, se desactiva la sincronización automática NTP.
+
+:::
+
+## Sincronización automática de hora
+
+Use un servidor NTP para mantener automáticamente precisa la hora de la cámara. Recomendado para operación a largo plazo.
+
+1. Haga clic en <Cmd sid='settings' product='cam' /> en la esquina superior izquierda de la pantalla.
+
+2. En la barra lateral izquierda, haga clic en <Cmd sid='basic' product='cam' /> → <Cmd sid='date_time' product='cam' />.
+
+3. En la sección <Cmd sid='time' product='cam' />, seleccione <Cmd sid='ntp_server_sync' product='cam' />.
+
+   <ProdImg src='/img/cam-server/cam-webserver-settings-date-time-sync-mode.png' />
+
+4. Ingrese la dirección del servidor NTP en el campo <Cmd sid='ntp_address_n' product='cam' replace='1' /> (obligatorio).
+
+   * Formato de URL: time.windows.com, time.nist.gov, etc.
+
+   * Dirección IP: 192.0.2.1, etc.
+
+5. (Opcional) Ingrese servidores NTP adicionales en <Cmd sid='ntp_address_n' product='cam' replace='2' />, <Cmd sid='ntp_address_n' product='cam' replace='3' /> y <Cmd sid='ntp_address_n' product='cam' replace='4' /> si es necesario.
+
+   * Se admiten hasta 4 servidores.
+
+   * Si <Cmd sid='ntp_address_n' product='cam' replace='1' /> no responde, el sistema cambia automáticamente al siguiente servidor.
+
+6. Haga clic en <Cmd sid='save' product='cam' /> en la esquina superior derecha de la pantalla para guardar la configuración de hora.
+
+Después de la configuración, la cámara se sincroniza automáticamente con el servidor NTP y actualiza la hora periódicamente.
+
+:::info
+
+**Servidores NTP recomendados**
+
+* time.windows.com (NTP público de Windows)
+
+* time.nist.gov (NTP público de NIST)
+
+* pool.ntp.org (proyecto NTP Pool)
+
+:::

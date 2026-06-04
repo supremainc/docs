@@ -1,0 +1,132 @@
+---
+id: set-ai-advanced
+title: 高度設定
+description: 高度な設定で追加オプションを構成できます。
+keywords:
+  - AI
+  - 高度な設定
+---
+
+<Include lang='ja'>
+
+高度な設定では、顔の撮影タイプを設定し、顔認証時のユーザーの自動登録と、登録済みユーザーの保存ポリシーを管理できます。
+
+</Include>
+
+<Xclude lang='ja'>
+
+高度な設定では、ユーザーの顔を撮影する際に上半身のみを撮影するか、全身まで撮影するかを選択できます。
+
+</Xclude>
+
+## 顔の撮影タイプ設定
+
+顔の撮影タイプを上半身のみ撮影するか、全身まで撮影するか設定できます。 <Cmd sid='shoot_type' product='cam' />オプションで希望の撮影タイプを選択し、<Cmd sid='save' product='cam' />ボタンをクリックしてください。
+
+<ProdImg src='/img/cam-server/ai-advanced-face-shot-type.png' />
+
+<Include lang='ja'>
+
+## 自動登録ユーザ設定
+
+AIイベントで検知した顔をユーザーとして自動登録できます。 既定では手動登録モードに設定されており、必要に応じて自動登録モードに切り替えられます。
+
+:::info
+
+自動登録したユーザーも、ユーザー名や説明などの情報を手動で編集できます。 ユーザー情報の編集の詳細については <DocLink docId='device/vionyx_webserver/modify-delete-users' /> をご覧ください。
+
+:::
+
+### 自動登録モードを有効にする
+
+1. 画面左上の <Cmd sid='settings' product='cam' /> メニューをクリックしてください。
+
+2. 画面左側のサイドバーで <Cmd sid='ai_and_event' product='cam' /> → <Cmd sid='advanced' product='cam' /> をクリックしてください。
+
+3. <Cmd sid='auto_user_enroll' product='cam' />セクションで <Cmd sid='by_face_recognition' product='cam' /> オプションを有効にしてください。
+
+<ProdImg src='/img/cam-server/ai-advanced-register-user-auto.png' />
+
+次の手順に従って各オプションを設定し、<Cmd sid='save' product='cam' />ボタンをクリックして保存してください。
+
+:::info
+
+<Cmd sid='auto_user_enroll' product='cam' />モードを使用すると、低品質の写真（ぼけ、マスク、横顔など）で登録されたユーザーで誤認証が発生する場合があります。
+
+:::
+
+### 自動登録ユーザー数設定
+
+<Cmd sid='num_of_auto_enroll_user' product='cam' />オプションで、自動登録できるユーザー数を設定できます。 スライダーをドラッグするか、入力欄に数値を直接入力してください。
+
+* 既定値は50,000人で、最大100,000人まで設定できます。
+
+* 自動登録ユーザー数を設定すると、手動登録ユーザーも設定した人数内でのみ登録できます。 たとえば、設定ユーザー数が50,000人の場合、自動登録ユーザー数と手動登録ユーザー数を合計して最大50,000人まで登録できます。
+
+:::info
+
+* 手動で登録されたユーザーがいる場合、自動登録ユーザー数は増やせません。
+
+* 自動登録ユーザー数を減らすと、超過分のユーザーは古い順に自動削除されます。
+
+:::
+
+### 保存処理方法設定
+
+<Cmd sid='retention_period' product='cam' />オプションでは、自動登録されたユーザーの保存処理方法を設定できます。 ユーザー数の上限に達したときの、自動登録ユーザーの削除方法を選択してください。
+
+* <Cmd sid='delete_oldest_when_full' product='cam' />: 割り当てられたユーザー数を超えると、最も古く登録されたユーザーから自動削除します。
+
+* <Cmd sid='delete_newest_when_full' product='cam' />: 割り当てられたユーザー数を超えると、最も最近登録されたユーザーから自動削除します。
+
+* <Cmd sid='reject_new_when_full' product='cam' />: 割り当てられたユーザー数を超えると、新しいユーザーは登録できません。
+
+### 保存期間設定
+
+<Cmd sid='retention_period_days' product='cam' />オプションでは、自動登録されたユーザーの保存期間を日単位で設定できます。 保存期間が終了すると、最も古く登録されたユーザーから自動削除されます。
+
+* <Cmd sid='disabled' product='cam' />（既定値）: 割り当てられたユーザー数を超えると、最も古く登録されたユーザーから自動削除します。
+
+* <Cmd>1日</Cmd>、<Cmd>3日</Cmd>、<Cmd>7日</Cmd>、<Cmd>14日</Cmd>、<Cmd>30日</Cmd>、<Cmd>90日</Cmd>、<Cmd>365日</Cmd>: 選択した期間が経過すると、自動登録されたユーザーを自動削除します。
+
+:::info
+
+保存期間を設定すると、ユーザー数の上限に達したときに、期間終了を待たずに古いユーザーから即時削除されます。
+
+:::
+
+## 自動登録ユーザーの確認と管理
+
+### <Cmd sid='people' product='cam' className='normal' /> メニューで確認
+
+自動登録されたユーザーは、<Cmd sid='people' product='cam' /> メニューのユーザー一覧で確認できます。
+
+* ユーザーIDは顔認証の順序に従って順番に自動付与されます。
+
+* <Cmd sid='description' product='cam' />列に<Cmd sid='auto_enroll' product='cam' />として表示され、手動登録ユーザーと区別できます。
+
+* <Cmd sid='last_updated' product='cam' />列にユーザーが登録された日時が表示されます。
+
+### ユーザー詳細情報の編集
+
+1. 画面左上の <Cmd sid='people' product='cam' /> メニューをクリックします.
+
+2. ユーザー一覧で自動登録されたユーザーをクリックしてください。
+
+3. ユーザー詳細ポップアップが表示されたら、必要な情報を編集してください。
+
+4. ユーザー情報の編集が完了したら、<Cmd sid='apply' product='cam' /> ボタンをクリックしてください。
+
+### 顔認証ログと顔撮影の表示
+
+1. 画面左上の <Cmd sid='people' product='cam' /> メニューをクリックします.
+
+2. ユーザー一覧で自動登録されたユーザーをクリックしてください。
+
+3. ユーザー詳細情報のポップアップが表示されたら、<Cmd sid='event_logs' product='cam' />セクションで顔認証ログを確認できます。
+
+* 日付を選択して、特定期間の顔認証ログを確認できます。
+
+* ログの<Cmd sid='face_shot' product='cam' />をクリックすると、該当認証時点の顔写真が表示されます。
+
+</Include>

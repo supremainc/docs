@@ -1,0 +1,106 @@
+---
+id: search-view-users
+title: ユーザーの検索と表示
+description: ユーザー一覧で検索を使い、目的のユーザーを見つけて効率的に管理する方法を説明します.
+keywords:
+  - ユーザー
+  - 検索
+  - フィルター
+  - 並べ替え
+  - ビュー
+  - 管理
+---
+
+ユーザー一覧で名前やIDを入力すると、目的のユーザーを素早く見つけられます. 必要に応じて、ユーザー情報をテーブル形式またはカード形式で表示できます.
+
+次のような場合に、ユーザーの検索と表示機能を使用してください。
+
+* 多数のユーザーの中から特定のユーザーをすばやく見つける必要があるとき
+
+* カード形式でユーザープロフィールを一目で確認したいとき
+
+* ユーザー一覧を名前、ID、最終更新時刻で並べ替えて確認したいとき
+
+## ユーザー検索
+
+目的のユーザーを見つけるための検索機能を提供します。 ユーザー名またはIDで検索でき、顔画像から類似したユーザーを検索できます。
+
+### キーワード検索
+
+ユーザー一覧で名前またはIDを入力して、目的のユーザーを検索できます。
+
+1. 画面左上の <Cmd sid='people' product='cam' /> メニューをクリックします.
+
+2. ユーザー一覧の左上にある検索入力で検索条件を選択します。 <Cmd sid='user_name' product='cam' /> または <Cmd sid='user_id' product='cam' /> を選択できます。
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-search-select.png' />
+
+3. 検索入力フィールドに検索語を入力します。
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-search.png' />
+
+4. 入力したキーワードと一致するユーザーが一覧に表示されます.
+
+:::info
+
+* 部分一致検索に対応しています. 例えば「Kim」と入力すると、名前に「Kim」を含むすべてのユーザーが表示されます.
+
+* 検索結果は現在選択されているフィルター条件に従って表示されます. フィルターを変更すると、検索結果も更新されます.
+
+:::
+
+### 顔画像で検索
+
+顔画像をアップロードして、類似した顔のユーザーを検索できます。
+
+1. 画面左上の <Cmd sid='people' product='cam' /> メニューをクリックします.
+
+2. 検索入力フィールド右側の <IcCamFaceSearch title='Face Search' /> ボタンをクリックします。
+
+3. <Cmd sid='find_face_user' product='cam' /> ウィンドウが表示されたら、顔画像をドラッグ＆ドロップするか、<Cmd sid='choose_file' product='cam' /> からアップロードします。
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-search-upload-face.png' />
+
+4. 顔画像のアップロードが完了したら、<Cmd sid='firmware_upload' product='cam' /> ボタンをクリックします。
+
+5. <Cmd sid='choose_face_to_search' product='cam' /> ウィンドウが表示されると、アップロードした顔画像に一致するユーザー一覧が表示されます。
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-search-face-result.png' />
+
+   * 一致したユーザーの中から目的のユーザーを選択すると、そのユーザーの詳細情報ページに移動できます。
+
+   * 別の顔画像でもう一度検索するには、左下の <Cmd sid='choose_file' product='cam' /> ボタンをクリックして、新しい顔画像をアップロードします。
+
+:::info
+
+顔画像以外の画像をアップロードすると、正しい顔画像ではないというメッセージが表示されます。 顔画像で再試行してください。
+
+:::
+
+## 表示モードの変更
+
+ユーザー一覧をテーブル形式またはカード形式で表示できます. ユーザー一覧の右上にある <Image src='/img/cam-server/ico-people-list-mode.svg' alone ico /> または <Image src='/img/cam-server/ico-people-card-mode.svg' alone ico /> ボタンをクリックして、表示モードを選択します。
+
+* <Cmd sid='switch_to_list_view' product='cam' />
+
+  <ProdImg src='/img/cam-server/cam-webserver-people-list-mode.png' />
+
+* <Cmd sid='switch_to_grid_view' product='cam' />
+
+  <ProdImg src='/img/cam-server/cam-webserver-people-card-mode.png' />
+
+:::info
+
+<Cmd sid='switch_to_list_view' product='cam' />, <Cmd sid='switch_to_grid_view' product='cam' /> は、どちらも同じ機能を提供します。 表示方法が異なるだけで、検索、フィルター、並べ替えの結果は同じです.
+
+:::
+
+## ユーザー一覧の並べ替え
+
+ユーザー一覧をユーザーID、最終更新時刻の昇順または降順で並べ替えできます。
+
+1. ユーザー一覧の右上にある並べ替えドロップダウンをクリックします。 
+
+   <ProdImg src='/img/cam-server/cam-webserver-people-list-filter.png' />
+
+2. 目的の並べ替え条件を選択します。
