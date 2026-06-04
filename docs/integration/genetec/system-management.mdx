@@ -629,6 +629,26 @@ You can set the detailed settings of SIP Intercom.
 
    <Image src='/img/integration/genetec/manage-suprema-devices4.png' width={400} alone />
 
+## Card Format Setting
+
+1. In the **Config Tool**, click the **Suprema Plugin Configuration** under **Tasks**.
+
+   <Image src='/img/integration/genetec/card-format-setting1.png' width={800} alone />
+
+1. Select card type and format.
+
+   <Image src='/img/integration/genetec/card-format-setting2.png' width={800} alone />
+
+   * Byte Order: Supports MSB or LSB
+
+   * CSN Card_Format type: After enabling the **CSN Card_Format type** and selecting a Wiegand format, the **Plugin converts the card data received from the device into the selected Wiegand format and delivers it to the Cloud Link**.
+
+   * Wiegand Card Setting: Devices can read wiegand cards based on the **selected Wiegand Card Format**.
+
+   * Custom Credential: When using a Custom Credential Format, compatibility with Suprema devices must be verified in advance.
+
+1. Click **Save button** to set selected card type and format into all devices.
+
 ## Door Configuration
 
 1. In the **Config Tool**, click the **Area view** under **Tasks**.
@@ -732,23 +752,3 @@ After configuring or updating a door, click **Sync Now** in **Suprema Device Plu
    * **total**: Number of items that have been successfully synchronized.
 
    :::
-
-## Card Format Setting
-
-1. In the **Config Tool**, click the **Suprema Plugin Configuration** under **Tasks**.
-
-   <Image src='/img/integration/genetec/card-format-setting1.png' width={800} alone />
-
-1. Select card type and format.
-
-   <Image src='/img/integration/genetec/card-format-setting2.png' width={800} alone />
-
-   * Byte Order: Supports MSB or LSB
-
-   * CSN Card_Format type: After enabling the **CSN Card_Format type** and selecting a Wiegand format, the **Plugin converts the card data received from the device into the selected Wiegand format and delivers it to the Cloud Link**.
-
-   * Wiegand Card Setting: Devices can read wiegand cards based on the **selected Wiegand Card Format**.
-
-   * Custom Credential: When using a Custom Credential Format, compatibility with Suprema devices must be verified in advance.
-
-1. Click **Save button** to set selected card type and format into all devices.
