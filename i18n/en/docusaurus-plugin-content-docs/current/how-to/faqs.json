@@ -1,14 +1,14 @@
 [
   {
-    "question": "What happens if you do not register a Master Administrator?",
-    "answer": "A new device without a registered Master Admin cannot perform authentication or change settings. However, you can connect the new device to BioStar to register a Master Admin."
+    "question": "What happens if a Master Administrator is not enrolled? (CE products)",
+    "answer": "A new CE product without an enrolled Master Administrator cannot authenticate or change settings. However, connect the device to BioStar to enroll a Master Administrator."
   },
   {
-    "question": "Is Master Administrator configuration supported on devices upgraded with firmware from existing devices?",
-    "answer": "No. Devices upgraded with firmware from existing devices do not support master administrator configuration. However, you can enhance device security by strengthening the permissions of all administrators through the Admin 2-Step Authentication option. For more information, refer to the <a href='#admin-two-step-authentication'>Admin 2-Step Authentication</a>."
+    "question": "Is Master Administrator setting supported after firmware upgrade on an existing device? (CE products)",
+    "answer": "<b>Master Administrator</b> is <b>supported only on CE products with a CE-marked label</b>.<br>Use the label sticker on the back of the product to identify <b>CE products</b> and <b>Global (Non-CE) products</b>. For details, see <a href='#master-admin-support-policy'>Master Administrator support policy</a>."
   },
   {
-    "question": "Can you register a Master Administrator on a slave device?",
+    "question": "Can a Master Administrator be enrolled on a slave device? (CE products)",
     "answer": "Yes. You can register a Master Administrator on a slave device."
   }
 ]

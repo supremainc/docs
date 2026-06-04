@@ -2,101 +2,156 @@
 id: master-admin
 title: Introducción a la Función Master Admin y Guía de Configuración
 description: Proporciona una guía para configurar el Master Admin, que mejora la seguridad del dispositivo al reforzar los permisos de administrador.
+heading_className: ce--only
 keywords:
   - Administrador Principal
-  - Maestro
+  - CE ROJO
   - Administrador Principal
+  - CE
+  - UE
 ---
 
-La función de **Master Admin** está diseñada para **mejorar la seguridad del dispositivo** al **reforzar los privilegios de administrador** y **evitar el acceso no autorizado y cambios de configuración**.<br />Con esta función, **debe registrar un Master Admin** en el nuevo dispositivo y solo los Master Admin registrados pueden acceder al menú de administrador y cambiar la configuración del dispositivo.
+:::caution
 
-La función de **Master Admin** está disponible **solo en productos Suprema que admiten interfaz de usuario mediante pantalla LCD**.
+<Cmd sid="ui_128" product='dev' /> la feature solo está disponible en **Productos CE** que admiten una interfaz de usuario mediante la pantalla LCD.
+
+:::
+
+La feature <Cmd sid="ui_128" product='dev' /> está diseñada para **mejorar los privilegios generales del administrador**, **fortalecer la seguridad del dispositivo** y **evitar el acceso no autorizado y los cambios de setting**.<br/>Esta feature se aplica solo a **Productos CE** para la región de la UE, y se requiere el **enrollment del Master Administrator** en **Productos CE**. Solo el Master Administrator enrolled puede acceder al menú de administrador y cambiar los settings del dispositivo.
 
 :::info
 
-* Esta función es una política esencial para mejorar la seguridad del dispositivo.
+* Esta feature es una policy obligatoria introducida para mejorar la seguridad de los **Productos CE** en la región de la UE, y no es compatible con **productos Global (No CE)**.
 
 * El Master Admin no puede eliminarse directamente y **solo se borra mediante restablecimiento de fábrica**.
 
 :::
 
-## Configurar el Master Admin
+## Política de soporte del Master Administrator <Badge only>Productos CE vs productos Global (No CE)</Badge> {#master-admin-support-policy}
 
-### ¿Qué es un Master Admin?
+La feature <Cmd sid="ui_128" product='dev' /> se activa solo en <Cmd>Productos CE con una etiqueta que tiene la marca CE</Cmd>.
 
-Si se utiliza el dispositivo sin configurar un administrador, cualquiera podrá acceder al menú de administración y cambiar la configuración del dispositivo. La función de administrador maestro aplica la configuración administrativa general para solucionar estas vulnerabilidades de seguridad.
+:::note
 
-### Productos compatibles con Master Admin
+Use la etiqueta adhesiva en el rótulo posterior para identificar **Productos CE** y **productos Global (No CE)**. La feature funciona de manera diferente, como se indica a continuación.
+
+* **Productos CE**: marca CE presente
+
+* **productos Global (No CE)**: marca CE ausente
+
+:::
+
+<Table>
+<Tbody>
+<Row>
+<Th>Categoría</Th>
+<Th>Productos CE</Th>
+<Th>Productos Global (No CE)</Th>
+</Row>
+<Row>
+<Td><Cmd sid="ui_128" product='dev' /></Td>
+<Td>Activado (no se puede desactivar)</Td>
+<Td>No compatible</Td>
+</Row>
+<Row>
+<Td><Cmd sid="ui_073" product='dev' /></Td>
+<Td>Obligatorio</Td>
+<Td>No compatible</Td>
+</Row>
+<Row>
+<Td>**Longitud mínima del PIN**</Td>
+<Td>Al menos 8 dígitos</Td>
+<Td>Al menos 4 dígitos</Td>
+</Row>
+</Tbody>
+</Table>
+
+:::note
+
+Cuando se conecta a BioStar X (o BioStar 2), el setting de Master Admin cambia según la compatibilidad del dispositivo, y la activación del menú de autenticación en dos pasos del administrador se sincroniza automáticamente.
+
+:::
+
+## Productos compatibles con Master Admin
 
 <Table className='component'>
 <Tbody>
 <Row className='center white'>
 
-<Td><Image src='/img/how-to/BioStation 3-Front.png' className='none' alone width='130px'/></Td>
+<Td><Image src='/img/how-to/BioStation 3 Max-Front.png' className='none' alone width='180px'/></Td>
 
-<Td><Image src='/img/how-to/BioStation 2a-front.png' className='none' alone width='200px' /></Td>
+<Td><Image src='/img/how-to/BioStation 3-Front.png' className='none' alone width='90px'/></Td>
 
-<Td><Image src='/img/how-to/BioLite N2-Front.png' className='none' alone width='110px' /></Td>
+<Td><Image src='/img/how-to/BioStation 2a-front.png' className='none' alone width='170px' /></Td>
 
-<Td><Image src='/img/how-to/X-Station 2-Front.png' className='none' alone width='300px' /></Td>
+<Td><Image src='/img/how-to/BioLite N2-Front.png' className='none' alone width='90px' /></Td>
+
+<Td><Image src='/img/how-to/X-Station 2-Front.png' className='none' alone width='270px' /></Td>
 
 </Row>
 <Row className='center'>
 
-<Td>**BioStation 3**<br/>Firmware v1.4.0 o posterior</Td>
+<Td>**BioStation 3 Max** <Badge only>Productos CE</Badge><br/>Firmware v1.0.0 o posterior</Td>
 
-<Td>**BioStation 2a**<br/>Firmware v1.2.0 o posterior</Td>
+<Td>**BioStation 3** <Badge only>Productos CE</Badge><br/>Firmware v1.4.0 o posterior</Td>
 
-<Td>**BioLite N2**<br/>Firmware v1.7.0 o posterior</Td>
+<Td>**BioStation 2a** <Badge only>Productos CE</Badge><br/>Firmware v1.2.0 o posterior</Td>
 
-<Td>**X-Station 2**<br/>Firmware v1.4.0 o posterior</Td>
+<Td>**BioLite N2** <Badge only>Productos CE</Badge><br/>Firmware v1.7.0 o posterior</Td>
+
+<Td>**X-Station 2** <Badge only>Productos CE</Badge><br/>Firmware v1.4.0 o posterior</Td>
 
 </Row>
 </Tbody>
 </Table>
 
-## Cómo mejorar la seguridad del administrador en dispositivos nuevos o dispositivos existentes con firmware actualizado
+## Lógica de comportamiento durante la actualización del firmware {#firmware-upgrade-logic}
 
-### Dispositivos nuevos
+Cuando actualiza el firmware de un dispositivo existente, la compatibilidad con <Cmd sid="ui_128" product='dev' /> y <Cmd sid="ui_073" product='dev' /> puede variar según la combinación de la **versión anterior a la actualización** y la **versión objetivo**.
 
-En dispositivos nuevos, registrar un **Master Admin** es obligatorio desde el principio. Si no registra un Master Admin, el uso del dispositivo estará restringido.
+:::note
+
+Para obtener detalles de compatibilidad según la versión, comuníquese con el Soporte técnico de Suprema en CS@suprema.co.kr.
+
+:::
+
+## Nuevo dispositivo <Badge only>Productos CE</Badge>
+
+En un dispositivo nuevo para Productos CE, debe enrolar <Cmd sid="ui_128" product='dev' /> desde el inicio. Si no lo enrola, el uso del dispositivo queda restringido.
 
 :::info
 
-* En los dispositivos nuevos, la pantalla de registro de **Master Admin** aparece al iniciar por primera vez. Si no registra un Master Admin, el uso del dispositivo estará restringido.
+* En el primer arranque, aparece la pantalla de enrollment de <Cmd sid="ui_128" product="dev" />. Si no completa el enrollment, no puede pasar a la siguiente pantalla.
 
-* Incluso si asigna un administrador general del dispositivo mediante BioStar 2, debe registrar un **Master Admin** para utilizar todas las funciones del dispositivo.
+* Incluso si se conecta a BioStar X y asigna un administrador general para el dispositivo, debe enrolar <Cmd sid="ui_128" product='dev' /> directamente en el dispositivo para usar todas las features.
 
 * Los dispositivos nuevos no pueden realizar degradaciones de firmware.
 
 :::
 
-<details>
-<summary>**Registrar un Master Admin en un dispositivo nuevo**</summary>
+### Registra al administrador maestro
 
-#### Inscribir administrador maestro en un dispositivo nuevo
-
-1. Cuando enciende un dispositivo nuevo por primera vez, aparece la pantalla de registro de **Master Admin**.
+1. Cuando el dispositivo nuevo se inicia por primera vez, aparece la pantalla de enrollment de <Cmd sid="ui_128" product='dev' />.
 
    <Image src='/img/how-to/setting-master-admin-1.png' caption width='300px' />
 
-2. Para registrar un **Master Admin**, debe inscribir al menos dos tipos de credenciales. Seleccione e inscriba las dos credenciales deseadas.
+2. Según la policy de seguridad de la UE, el Master Administrator debe enrolar credenciales de al menos dos tipos. Seleccione e inscriba las dos credenciales deseadas.
 
    <Image src='/img/how-to/setting-master-admin-2.png' caption width='300px' />
 
-   Las credenciales que pueden inscribirse para **Master Admin** son las siguientes:
+   Las credenciales que se pueden enrolar como <Cmd sid="ui_128" product='dev' /> son las siguientes:
 
    <Table>
    <Tbody>
    <Row>
    <Th>Tipo de credencial</Th>
-   <Th>Cantidad máxima</Th>
+   <Th>Cantidad máxima de enrollments</Th>
    <Th>Detalles</Th>
    </Row>
    <Row>
    <Td>Card</Td>
    <Td>Hasta 4</Td>
-   <Td>Admite únicamente tipos CSN y Wiegand<br />No se permite inscripción duplicada dentro del mismo tipo</Td>
+   <Td>Admite solo tipos CSN y Wiegand<br/>No permite enrollment duplicado dentro del mismo tipo</Td>
    </Row>
    <Row>
    <Td>Face</Td>
@@ -111,7 +166,7 @@ En dispositivos nuevos, registrar un **Master Admin** es obligatorio desde el pr
    <Row>
    <Td>PIN</Td>
    <Td>1</Td>
-   <Td>Mínimo 8 dígitos</Td>
+   <Td>Al menos 8 dígitos (se aplica la regulación CE)</Td>
    </Row>
    </Tbody>
    </Table>
@@ -122,37 +177,19 @@ En dispositivos nuevos, registrar un **Master Admin** es obligatorio desde el pr
 
    * Debe enrolar al menos dos tipos de credenciales.
 
-   * Las mismas condiciones se aplican tanto a dispositivos nuevos como a dispositivos con actualización de firmware.
-
    * Todas las credenciales compatibles con el dispositivo pueden utilizarse como medios de autenticación.
 
    :::
 
-3. Después de inscribir al menos dos tipos de credenciales, presione el botón **Complete** para finalizar el registro de **Master Admin**.
+3. Después de enrolar dos o más tipos de credenciales, presione el botón <Cmd>Complete</Cmd> para completar el enrollment de <Cmd sid="ui_128" product='dev' />.
 
    <Image src='/img/how-to/setting-master-admin-3.png' caption width='300px' />
 
-{/* :::warning
+### Editar y administrar el Master Admin
 
-**Mensaje de advertencia cuando el administrador maestro no está registrado**
-
-Si no se configura ni un Administrador Maestro ni un ajuste equivalente, aparecerá un mensaje emergente de advertencia al guardar la configuración.
-
-<Image src='/img/how-to/no-register-master-admin.png' alone caption />
-
-::: */}
-
-</details>
-
-<details>
-<summary>**Gestionar Master Admin en un dispositivo nuevo**</summary>
-
-#### Gestionar Master Admin en un dispositivo nuevo
-
-En dispositivos nuevos, puede modificar la configuración de **Master Admin** en el menú **Settings → Device → Master Admin**.
+Puede cambiar la información enrolada o administrar credenciales en <Cmd>Settings</Cmd> → <Cmd>Device</Cmd> → <Cmd sid="ui_128" product='dev' />.
 
 <div className='grid-container'>
-  <Image src='/img/device/xs2-master-admin.png' />
 
 <Image src='/img/how-to/edit-master-admin-1.png' caption width='300px' />
 
@@ -160,30 +197,25 @@ En dispositivos nuevos, puede modificar la configuración de **Master Admin** en
 
 </div>
 
-</details>
+## Dispositivo actualizado mediante firmware <Badge only>Productos CE</Badge>
 
-### Dispositivos actualizados {#admin-two-step-authentication}
+Un producto CE actualizado mediante firmware no ofrece settings de <Cmd sid="ui_128" product='dev' />, pero puede usar la opción <Cmd sid="ui_073" product='dev' /> para mejorar los privilegios generales del administrador y la seguridad del dispositivo.
 
-Los dispositivos actualizados mediante firmware no ofrecen la configuración de **Master Admin**, pero puede mejorar la seguridad del administrador al habilitar la opción **Admin 2-step Authentication**.
+### Configurar la autenticación en dos pasos del administrador {#admin-two-step-authentication}
 
 :::info
 
-* El valor predeterminado de **Admin 2-step Authentication** es autenticación de un solo paso.
+* <Cmd sid="ui_073" product='dev' /> se puede activar solo si todos los administradores enrolled tienen al menos dos tipos de credenciales.
 
-* La autenticación de dos pasos puede activarse solo si todos los administradores registrados tienen al menos dos tipos de credenciales.
+  * El PIN no se puede usar como credencial independiente, por lo que la combinación ID + PIN no es compatible.
 
 * El dispositivo actualizado mediante firmware no puede degradarse a una versión inferior después de la actualización.
 
 :::
 
-<details>
-<summary>**Configurar Admin 2-step Authentication en dispositivos actualizados**</summary>
+* Puede activar la autenticación en dos pasos del administrador en el menú **Settings** → **Device** → <Cmd sid="ui_073" product='dev' />.
 
-#### Configurar Admin 2-step Authentication en dispositivos actualizados
-
-Puede activar Admin 2-step Authentication en el menú **Settings → Device → Admin 2-step Authentication**.
-
-* La opción **Admin 2-step Authentication** aparece solo en dispositivos actualizados al firmware más reciente.
+* La opción <Cmd sid="ui_073" product='dev' /> aparece solo cuando actualiza el firmware a la versión más reciente en un dispositivo existente.
 
 <Image src='/img/how-to/setting-two-step-authentication.png' caption width='300px' />
 
@@ -191,19 +223,29 @@ Puede activar Admin 2-step Authentication en el menú **Settings → Device → 
 
 * Si no todos los administradores tienen al menos dos tipos de credenciales, la activación fallará y aparecerá un mensaje de error.<br />Enrole dos tipos de credenciales para todos los administradores e inténtelo nuevamente.
 
+  * El PIN no se puede usar como credencial independiente, por lo que la combinación ID + PIN no es compatible.
+
 <Image src='/img/how-to/error-two-step-authentication.png' caption width='300px' />
 
 :::
 
 :::warning
 
-* Si activa **Admin 2-step Authentication** y luego elimina credenciales de modo que todos los administradores tengan menos de dos tipos, no podrá acceder al menú de administrador si la conexión con BioStar 2 también está indisponible. Por lo tanto, tenga precaución al eliminar credenciales de administrador.
+* Si activa <Cmd sid="ui_073" product='dev' /> y elimina las credenciales de todos los administradores hasta dejar menos de dos tipos, no podrá acceder al menú de administrador en el dispositivo cuando no pueda conectarse a BioStar X (o BioStar 2). Por lo tanto, tenga precaución al eliminar credenciales de administrador.
 
 :::
 
-</details>
-
 ## Información adicional
+
+* **Cuando se enrola un PIN mediante el software BioStar**
+
+  * Los productos Global (No CE) que no admiten el Master Administrator pueden enrolar un PIN de al menos 4 dígitos directamente en el dispositivo. Sin embargo, al enrolar usuarios mediante BioStar X (o BioStar 2), las siguientes versiones requieren un PIN de al menos 8 dígitos.
+
+    * BioStar 2 v2.9.11 o posterior
+
+    * BioStar X v1.0.0 a v1.0.2
+
+  * Los usuarios enrolados con un PIN de 4 dígitos en las versiones anteriores no pueden asignarse como administradores del dispositivo.
 
 * **Cambio manual de la clave hash del dispositivo**
 

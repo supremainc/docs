@@ -1,14 +1,14 @@
 [
   {
-    "question": "¿Qué sucede si no registras un administrador maestro?",
-    "answer": "Un dispositivo nuevo sin un administrador maestro registrado no puede realizar autenticaciones ni cambiar la configuración. Sin embargo, conecta el nuevo dispositivo a BioStar para registrar un administrador maestro."
+    "question": "¿Qué ocurre si no se enrolla un Administrador maestro? (Productos CE)",
+    "answer": "Un producto CE nuevo sin un Administrador maestro enrollado no puede autenticarse ni cambiar settings. Sin embargo, conecta el device a BioStar para enrollar un Administrador maestro."
   },
   {
-    "question": "¿Se admite la configuración de administrador maestro en los dispositivos actualizados con firmware de dispositivos existentes?",
-    "answer": "No. Los dispositivos actualizados con firmware de dispositivos existentes no admiten la configuración de administrador maestro. Sin embargo, mejora la seguridad del dispositivo fortaleciendo los permisos de todos los administradores mediante la opción Admin 2-Step Authentication. Para obtener más información, consulta <a href='#admin-two-step-authentication'>Admin 2-Step Authentication</a>."
+    "question": "¿Se admite el setting de Administrador maestro después de actualizar el firmware en un device existente? (Productos CE)",
+    "answer": "<b>Administrador maestro</b> solo se <b>admite en productos CE con una etiqueta marcada CE</b>.<br>Usa la etiqueta adhesiva en la parte trasera del producto para identificar <b>productos CE</b> y <b>productos Global (no CE)</b>. Para obtener detalles, consulta la <a href='#master-admin-support-policy'>política de soporte de Administrador maestro</a>."
   },
   {
-    "question": "¿Es posible registrar un administrador maestro en un dispositivo esclavo?",
+    "question": "¿Se puede enrollar un Administrador maestro en un device esclavo? (Productos CE)",
     "answer": "Sí. Es posible registrar un administrador maestro en un dispositivo esclavo."
   }
 ]
