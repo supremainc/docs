@@ -2,89 +2,144 @@
 id: master-admin
 title: マスター管理者機能の概要と設定方法
 description: 管理者権限を強化してデバイスのセキュリティを向上させるマスター管理者設定ガイドを提供します。
+heading_className: ce--only
 keywords:
   - マスター管理者
-  - マスター
+  - CE RED
   - マスター管理者
+  - CE製品
+  - EU製品
 ---
 
-**マスター管理者**機能は、デバイスの**完全な管理者権限を強化**し、**デバイスのセキュリティを向上**させ、**不正アクセスおよび設定変更を防止**するための機能です。<br/>新しいデバイスでは、この機能を使用して**必ずマスター管理者を登録**する必要があり、登録されたマスター管理者のみが管理者メニューにアクセスしてデバイス設定を変更できます。
+:::caution
 
-**マスター管理者** 機能は **LCD画面を介したユーザーインターフェースに対応するSuprema製品** でのみ使用できます。
+<Cmd sid="ui_128" product='dev' /> 機能は、LCD画面によるユーザーインターフェースに対応するSuprema製品のうち、CE製品のみで使用できます。
+
+:::
+
+<Cmd sid="ui_128" product='dev' /> 機能は、デバイスの**完全な管理者権限を強化**し、**デバイスのセキュリティを向上**させ、**不正アクセスおよび設定変更を防止**するための機能です。<br/>この機能はEU地域向けの**CE製品**のみに適用され、**CE製品**では**必ずマスター管理者を登録**する必要があります。 登録済みのマスター管理者のみが管理者メニューに入って、デバイス設定を変更できます。
 
 :::info
 
-* この機能はデバイスのセキュリティを強化するための必須ポリシーです。
+* この機能はEU地域向けの**CE製品**のセキュリティを強化するために導入された必須ポリシーであり、**グローバル製品（Non-CE）**では対応していません。
 
 * マスター管理者は直接削除できず、**工場出荷時リセット時のみ削除されます**。
 
 :::
 
-## マスター管理者を設定する
+## マスター管理者対応ポリシー <Badge only>CE製品 vs グローバル製品（Non-CE）</Badge> {#master-admin-support-policy}
 
-### マスター管理者とは？
+<Cmd sid="ui_128" product='dev' /> 機能は、<Cmd>CEマークの付いたラベルが貼付されたCE製品のみで有効化</Cmd>されます。
 
-デバイスに管理者を設定せずに使用すると、誰でも管理メニューに入りデバイス設定を変更できます。 マスター管理者機能は、このようなセキュリティ脆弱性を解決するために、全体管理者の設定を強制する機能です。
+:::note
 
-### マスター管理者対応製品案内
+製品背面のラベルシールで**CE製品** / **グローバル製品（Non-CE）**を識別でき、これに応じて機能は次のように区別して動作します。
+
+* **CE製品**: CEマークあり
+
+* **グローバル製品（Non-CE）**: CEマークなし
+
+:::
+
+<Table>
+<Tbody>
+<Row>
+<Th>区分</Th>
+<Th>CE製品</Th>
+<Th>グローバル製品（Non-CE）</Th>
+</Row>
+<Row>
+<Td><Cmd sid="ui_128" product='dev' /></Td>
+<Td>有効化（無効化不可）</Td>
+<Td>非対応</Td>
+</Row>
+<Row>
+<Td><Cmd sid="ui_073" product='dev' /></Td>
+<Td>必須</Td>
+<Td>非対応</Td>
+</Row>
+<Row>
+<Td>**最小PIN長**</Td>
+<Td>最低8桁以上</Td>
+<Td>最低4桁以上</Td>
+</Row>
+</Tbody>
+</Table>
+
+:::note
+
+BioStar X（またはBioStar 2）と接続すると、デバイスの対応状況に応じてマスター管理者設定の表示が変わり、管理者2段階認証メニューの有効化状態も自動で同期されます。
+
+:::
+
+## マスター管理者対応デバイス案内
 
 <Table className='component'>
 <Tbody>
 <Row className='center white'>
 
-<Td><Image src='/img/how-to/BioStation 3-Front.png' className='none' alone width='130px'/></Td>
+<Td><Image src='/img/how-to/BioStation 3 Max-Front.png' className='none' alone width='180px'/></Td>
 
-<Td><Image src='/img/how-to/BioStation 2a-front.png' className='none' alone width='200px' /></Td>
+<Td><Image src='/img/how-to/BioStation 3-Front.png' className='none' alone width='90px'/></Td>
 
-<Td><Image src='/img/how-to/BioLite N2-Front.png' className='none' alone width='110px' /></Td>
+<Td><Image src='/img/how-to/BioStation 2a-front.png' className='none' alone width='170px' /></Td>
 
-<Td><Image src='/img/how-to/X-Station 2-Front.png' className='none' alone width='300px' /></Td>
+<Td><Image src='/img/how-to/BioLite N2-Front.png' className='none' alone width='90px' /></Td>
+
+<Td><Image src='/img/how-to/X-Station 2-Front.png' className='none' alone width='270px' /></Td>
 
 </Row>
 <Row className='center'>
 
-<Td>**BioStation 3**<br/>ファームウェア バージョン 1.4.0 以上</Td>
+<Td>**BioStation 3 Max** <Badge only>CE製品</Badge><br/>ファームウェア1.0.0以降</Td>
 
-<Td>**BioStation 2a**<br/>ファームウェア バージョン 1.2.0 以上</Td>
+<Td>**BioStation 3** <Badge only>CE製品</Badge><br/>ファームウェア1.4.0以降</Td>
 
-<Td>**BioLite N2**<br/>ファームウェア バージョン 1.7.0 以上</Td>
+<Td>**BioStation 2a** <Badge only>CE製品</Badge><br/>ファームウェア1.2.0以降</Td>
 
-<Td>**X-Station 2**<br/>ファームウェア バージョン 1.4.0 以上</Td>
+<Td>**BioLite N2** <Badge only>CE製品</Badge><br/>ファームウェア1.7.0以降</Td>
+
+<Td>**X-Station 2** <Badge only>CE製品</Badge><br/>ファームウェア1.4.0以降</Td>
 
 </Row>
 </Tbody>
 </Table>
 
-## 新しいデバイスまたはファームウェアをアップグレードした既存デバイスで管理者セキュリティを強化する
+## ファームウェアアップグレード時の動作ロジック {#firmware-upgrade-logic}
 
-### 新しいデバイス
+既存で使用中の製品のファームウェアをアップグレードする場合、**アップグレード前のバージョン**と**アップグレード対象バージョン**の組み合わせによって <Cmd sid="ui_128" product='dev' /> および <Cmd sid="ui_073" product='dev' /> の対応状況が異なる場合があります。
 
-新しいデバイスでは、最初に**マスター管理者**を必ず登録する必要があり、登録しない場合はデバイスの使用が制限されます。
+:::note
+
+詳細なバージョン別の対応状況は、Suprema技術サポートチーム（CS@suprema.co.kr）にお問い合わせください。
+
+:::
+
+## 新しいデバイス <Badge only>CE製品</Badge>
+
+CE製品の新しいデバイスでは、最初から <Cmd sid="ui_128" product='dev' /> の登録が必須であり、登録しない場合はデバイスの使用が制限されます。
 
 :::info
 
-* 新しいデバイスでは、初回起動時に**Master Admin**登録画面が表示されます。 **マスター管理者**を登録しないと、次の画面に進むことはできません。
+* 初回起動時に <Cmd sid="ui_128" product='dev' /> の登録画面が表示され、登録を完了しないと次の画面に進めません。
 
-* BioStar 2に接続してデバイス全体の管理者を割り当てても、**マスター管理者**を登録しなければ、すべての機能を使用できます。
+* BioStar Xと接続してデバイス全体の管理者を割り当てても、<Cmd sid="ui_128" product='dev' /> をデバイスで直接登録しなければ、すべての機能を使用できません。
 
 * 新しいデバイスはファームウェアをダウングレードできません。
 
 :::
 
-<details>
-<summary>**新しいデバイスでマスター管理者を登録する**</summary>
+### マスター管理者を登録する
 
-#### 新しいデバイスでマスター管理者を登録する
-
-1. 新しいデバイスでは、初回起動時に**マスター管理者**登録画面が表示されます。
+1. 新しいデバイスを初回起動すると、<Cmd sid="ui_128" product='dev' /> の登録画面が表示されます。
 
    <Image src='/img/how-to/setting-master-admin-1.png' caption width='300px' />
 
-2. **マスター管理者**を登録するには、少なくとも 2 種類以上のクレデンシャルを登録する必要があります。 必要な2種類のクレデンシャルを選択して登録してください。
+2. EU地域のセキュリティポリシーにより、マスター管理者は**最低2種類以上**のクレデンシャルを登録する必要があります。 必要な2種類のクレデンシャルを選択して登録してください。
 
    <Image src='/img/how-to/setting-master-admin-2.png' caption width='300px' />
 
-   **マスター管理者**に登録できるクレデンシャルは次のとおりです。
+   <Cmd sid="ui_128" product='dev' /> に登録できるクレデンシャルは次のとおりです。
 
    <Table>
    <Tbody>
@@ -111,7 +166,7 @@ keywords:
    <Row>
    <Td>PIN</Td>
    <Td>1個</Td>
-   <Td>8桁以上</Td>
+   <Td>最低8桁以上（CE規制適用）</Td>
    </Row>
    </Tbody>
    </Table>
@@ -122,34 +177,17 @@ keywords:
 
    * 少なくとも 2 種類以上のクレデンシャルを登録する必要があります。
 
-   * 新規デバイスとファームウェアをアップグレードしたデバイスの両方に同じ条件が適用されます。
-
    * デバイスがサポートするすべてのクレデンシャルを認証手段として使用できます。
 
    :::
 
-3. 2種類以上のクレデンシャルを登録した後、**Complete**ボタンを押すと**マスター管理者**の登録が完了します。
+3. 2種類以上のクレデンシャルを登録した後、<Cmd>完了</Cmd>ボタンを押すと <Cmd sid="ui_128" product='dev' /> の登録が完了します。
 
    <Image src='/img/how-to/setting-master-admin-3.png' caption width='300px' />
 
-{/* :::warning
+### マスター管理者の修正と管理
 
-**マスター管理者未登録時の警告メッセージ**
-
-マスター管理者またはそれに準じた設定が行われていない場合、設定を保存する際に警告ポップアップメッセージで通知します。
-
-<Image src='/img/how-to/no-register-master-admin.png' alone caption />
-
-::: */}
-
-</details>
-
-<details>
-<summary>**新しいデバイスでマスター管理者を管理する**</summary>
-
-#### 新しいデバイスでマスター管理者を管理する
-
-新しいデバイスでは、**Master Admin**設定を**Settings → Device → Master Admin**メニューで変更します。
+<Cmd>設定</Cmd> → <Cmd>デバイス</Cmd> → <Cmd sid="ui_128" product='dev' /> メニューで登録済み情報を変更したり、クレデンシャルを管理したりできます。
 
 <div className='grid-container'>
 
@@ -159,30 +197,25 @@ keywords:
 
 </div>
 
-</details>
+## ファームウェアアップグレードデバイス <Badge only>CE製品</Badge>
 
-### デバイスをアップグレードする {#admin-two-step-authentication}
+ファームウェアをアップグレードしたCE製品は <Cmd sid="ui_128" product='dev' /> 設定を提供しませんが、<Cmd sid="ui_073" product='dev' /> オプションで管理者の権限を強化し、デバイスのセキュリティを向上できます。
 
-ファームウェアをアップグレードしたデバイスには **Master Admin** 設定がありませんが、**Admin 2-step Authentication** オプションを使用してすべての管理者の権限を強化し、デバイスのセキュリティを向上させることができます。
+### 管理者2段階認証の設定 {#admin-two-step-authentication}
 
 :::info
 
-* **Admin 2-step Authentication** オプションを有効にしていない場合、1段階認証がデフォルトになります。
+* デバイスに登録された管理者のクレデンシャルが2種類以上の場合のみ、<Cmd sid="ui_073" product='dev' /> を有効化できます。
 
-* デバイスに登録されている管理者のクレデンシャルが2種類以上の場合のみ、2段階認証を有効にします。
+  * PINは単独クレデンシャルとして使用できないため、ID + PINの組み合わせは対応していません。
 
 * アップグレードされたデバイスではファームウェアをダウングレードできません。
 
 :::
 
-<details>
-<summary>**アップグレードしたデバイスで管理者の2段階認証を設定する**</summary>
+* **設定** → **デバイス** → <Cmd sid="ui_073" product='dev' /> メニューで管理者2段階認証を有効化できます。
 
-#### アップグレードデバイスで管理者の二段階認証を設定する
-
-**Settings → Device → Admin 2-step Authentication** メニューで管理者 2段階認証を有効にします。
-
-* **Admin 2-step Authentication** オプションは、既に使用しているデバイスのファームウェアを最新バージョンにアップグレードした場合にのみ表示されます。
+* <Cmd sid="ui_073" product='dev' /> オプションは、既存で使用していたデバイスのファームウェアを最新バージョンにアップグレードした場合にのみ表示されます。
 
 <Image src='/img/how-to/setting-two-step-authentication.png' caption width='300px' />
 
@@ -190,19 +223,29 @@ keywords:
 
 * すべての管理者に2種類以上のクレデンシャルが登録されていない場合、有効化に失敗し、エラーメッセージが表示されます。<br/>すべての管理者に2種類以上のクレデンシャルを登録してから、再試行してください。
 
+  * PINは単独クレデンシャルとして使用できないため、ID + PINの組み合わせは対応していません。
+
 <Image src='/img/how-to/error-two-step-authentication.png' caption width='300px' />
 
 :::
 
 :::warning
 
-* **Admin 2-step Authentication**を有効化した後、すべての管理者のクレデンシャルを2種類未満に削除すると、BioStar 2 に接続できない状況では管理者メニューにアクセスできなくなります。 そのため、管理者クレデンシャルを削除する際は十分に注意してください。
+* <Cmd sid="ui_073" product='dev' /> を有効化した後、すべての管理者のクレデンシャルを2種類未満に削除すると、BioStar X（またはBioStar 2）に接続できない状況では管理者メニューにアクセスできなくなります。 そのため、管理者クレデンシャルを削除する際は十分に注意してください。
 
 :::
 
-</details>
-
 ## ご案内事項
+
+* **BioStarソフトウェアでPINを登録する場合**
+
+  * マスター管理者に対応していないグローバル製品（Non-CE）は、4桁以上のPINをデバイスで直接登録できます。 ただし、BioStar X（またはBioStar 2）を通じてユーザーを登録する場合、下記バージョンでは最低8桁のPINが必要です。
+
+    * BioStar 2 v2.9.11以上
+
+    * BioStar X v1.0.0 ～ v1.0.2
+
+  * 上記バージョンで4桁PINとして登録されたユーザーは、デバイス管理者に指定できません。
 
 * **デバイスハッシュキーを手動で変更する場合**
 
