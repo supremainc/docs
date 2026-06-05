@@ -1129,7 +1129,7 @@ function createSidebars(preview) {
           type: 'link',
           label: 'BioStar X 보안 강화',
           description: getLocalizedConfigValue('hardeningGuideDescription'),
-          href: 'bsx_hardening/',
+          href: '../how-to/bsx_hardening/',
         }
       ]
     }
