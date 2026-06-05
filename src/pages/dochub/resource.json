@@ -1,0 +1,90 @@
+[
+    {
+        "category": " Biometric Devices",
+        "product": "BioStation 3",
+        "models": [
+            "BS3-DB",
+            "BS3-APWB"
+        ],
+        "version": "1.4.3",
+        "manuals": {
+            "ko": "manuals/BioStation_3_UG_1.4.3_KO_260605.pdf",
+            "en": "manuals/BioStation_3_UG_1.4.3_EN_260605.pdf",
+            "es": "manuals/BioStation_3_UG_1.4.3_ES_260605.pdf",
+            "ja": "manuals/BioStation_3_UG_1.4.3_JA_260605.pdf"
+        },
+        "release_notes": {
+            "ko": "release_notes/BioStation_3_RN_1.4.3_KO_260605.pdf",
+            "en": "release_notes/BioStation_3_RN_1.4.3_EN_260605.pdf",
+            "es": "release_notes/BioStation_3_RN_1.4.3_ES_260605.pdf",
+            "ja": "release_notes/BioStation_3_RN_1.4.3_JA_260605.pdf"
+        },
+        "quickguides": {
+            "ko": "qg/BioStation_3_QG_1.4.3_KO_260605.pdf",
+            "en": "qg/BioStation_3_QG_1.4.3_EN_260605.pdf",
+            "es": "qg/BioStation_3_QG_1.4.3_ES_260605.pdf",
+            "ja": "qg/BioStation_3_QG_1.4.3_JA_260605.pdf"
+        },
+        "a_e": "a_e/BioStation_3_AE_1.4.3_260605.pdf",
+        "dt": "dt/BioStation_3_DT_1.4.3_260605.pdf"
+    },
+    {
+        "category": " Biometric Devices",
+        "product": "BioStation 3 Max",
+        "models": [
+            "BS3M-DB",
+            "BS3M-ODB",
+            "BS3M-APB",
+            "BS3M-OAPB"
+        ],
+        "version": "1.0.0",
+        "manuals": {
+            "ko": "manuals/BioStation_3_UG_1.4.3_KO_260605.pdf",
+            "en": "manuals/BioStation_3_UG_1.4.3_EN_260605.pdf",
+            "es": "manuals/BioStation_3_UG_1.4.3_ES_260605.pdf",
+            "ja": "manuals/BioStation_3_UG_1.4.3_JA_260605.pdf"
+        },
+        "release_notes": {
+            "ko": "release_notes/BioStation_3_RN_1.4.3_KO_260605.pdf",
+            "en": "release_notes/BioStation_3_RN_1.4.3_EN_260605.pdf",
+            "es": "release_notes/BioStation_3_RN_1.4.3_ES_260605.pdf",
+            "ja": "release_notes/BioStation_3_RN_1.4.3_JA_260605.pdf"
+        },
+        "quickguides": {
+            "ko": "qg/BioStation_3_QG_1.4.3_KO_260605.pdf",
+            "en": "qg/BioStation_3_QG_1.4.3_EN_260605.pdf",
+            "es": "qg/BioStation_3_QG_1.4.3_ES_260605.pdf",
+            "ja": "qg/BioStation_3_QG_1.4.3_JA_260605.pdf"
+        },
+        "a_e": "a_e/BioStation_3_AE_1.4.3_260605.pdf",
+        "dt": "dt/BioStation_3_DT_1.4.3_260605.pdf"
+    },
+    {
+        "category": "RF/Mobile",
+        "product": "XPass Q2",
+        "models": [
+            "XPQ2-DB"
+        ],
+        "version": "1.4.3",
+        "manuals": {
+            "ko": "manuals/BioStation_3_UG_1.4.3_KO_260605.pdf",
+            "en": "manuals/BioStation_3_UG_1.4.3_EN_260605.pdf",
+            "es": "manuals/BioStation_3_UG_1.4.3_ES_260605.pdf",
+            "ja": "manuals/BioStation_3_UG_1.4.3_JA_260605.pdf"
+        },
+        "release_notes": {
+            "ko": "release_notes/BioStation_3_RN_1.4.3_KO_260605.pdf",
+            "en": "release_notes/BioStation_3_RN_1.4.3_EN_260605.pdf",
+            "es": "release_notes/BioStation_3_RN_1.4.3_ES_260605.pdf",
+            "ja": "release_notes/BioStation_3_RN_1.4.3_JA_260605.pdf"
+        },
+        "quickguides": {
+            "ko": "qg/BioStation_3_QG_1.4.3_KO_260605.pdf",
+            "en": "qg/BioStation_3_QG_1.4.3_EN_260605.pdf",
+            "es": "qg/BioStation_3_QG_1.4.3_ES_260605.pdf",
+            "ja": "qg/BioStation_3_QG_1.4.3_JA_260605.pdf"
+        },
+        "a_e": "a_e/BioStation_3_AE_1.4.3_260605.pdf",
+        "dt": "dt/BioStation_3_DT_1.4.3_260605.pdf"
+    }
+]
