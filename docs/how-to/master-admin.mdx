@@ -12,9 +12,7 @@ keywords: [ 마스터 관리자, CE RED, Master Admin, CE향, EU향 ]
 
 :::
 
-
 <Cmd sid="ui_128" product='dev' /> 기능은 장치의 **전체 관리자 권한을 강화**하여, **장치의 보안을 향상**시키고 **무단 접근 및 설정 변경을 방지**하기 위한 기능입니다.<br/>이 기능은 EU 지역용 **CE향 제품**에만 적용되며, **CE향 제품**에는 **반드시 마스터 관리자를 등록**해야 합니다. 등록된 마스터 관리자만 관리자 메뉴에 진입하여 장치 설정을 변경할 수 있습니다.
-
 
 :::info
 
@@ -24,51 +22,9 @@ keywords: [ 마스터 관리자, CE RED, Master Admin, CE향, EU향 ]
 
 :::
 
-## 마스터 관리자 지원 정책 <Badge only>CE향 vs 글로벌향 (Non-CE)</Badge> {#master-admin-support-policy}
+import MasterAdminSupportPolicy from '../common/_master-admin-support-policy.mdx';
 
-<Cmd sid="ui_128" product='dev' /> 기능은 <Cmd>CE 마크가 있는 라벨이 부착된 CE향 제품에서만 활성화</Cmd>됩니다.
-
-:::note
-
-제품 뒷면 라벨 스티커를 통해 **CE향** / **글로벌향 (Non-CE)** 제품을 식별할 수 있으며, 이에 따라 기능이 다음과 같이 구분되어 동작합니다.
-
-   - **CE향**: CE 마크 있음
-
-   - **글로벌향 (Non-CE)**: CE 마크 없음
-
-:::
-
-<Table>
-<Tbody>
-<Row>
-<Th>구분</Th>
-<Th>CE향 제품</Th>
-<Th>글로벌향 (Non-CE) 제품</Th>
-</Row>
-<Row>
-<Td><Cmd sid="ui_128" product='dev' /></Td>
-<Td>활성화 (비활성화 불가)</Td>
-<Td>미지원</Td>
-</Row>
-<Row>
-<Td><Cmd sid="ui_073" product='dev' /></Td>
-<Td>필수</Td>
-<Td>미지원</Td>
-</Row>
-<Row>
-<Td>**최소 PIN 길이**</Td>
-<Td>최소 8자리 이상</Td>
-<Td>최소 4자리 이상</Td>
-</Row>
-</Tbody>
-</Table>
-
-:::note
-
-BioStar X(또는 BioStar 2)와 연결 시, 장치의 지원 여부에 따라 마스터 관리자 설정 표시가 달라지며 관리자 2단계 인증 메뉴의 활성화 여부도 자동으로 동기화됩니다.
-
-:::
-
+<MasterAdminSupportPolicy />
 
 ## 마스터 관리자 지원 장치 안내
 
