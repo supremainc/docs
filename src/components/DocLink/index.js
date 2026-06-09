@@ -32,7 +32,7 @@ export default function DocLink({ docId, inner }) {
         const dId = docId.split('#')[0];
         const doc = useDocById(dId);
         // docId 기반 링크 (기존 방식)
-        const targetLink = useBaseUrl(doc?.permalink || docId);
+        const targetLink = useBaseUrl(doc?.permalink || docId).replace('/index', '/');
         return (
             <Link to={targetLink}>
                 {doc?.title || docId}
