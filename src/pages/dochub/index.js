@@ -11,7 +11,7 @@ const BLOB_BASE_URL = "https://supremadocs.blob.core.windows.net/dochub/";
 
 const Locale = {
   ko: {
-    pageTitle: "다운로드 센터",
+    pageTitle: "DocHub",
     searchPlaceholder: "모델 또는 제품명으로 검색...",
     allCategories: "전체",
     countSuffix: "개 제품",
@@ -24,7 +24,7 @@ const Locale = {
     colDT: "드릴링 템플릿",
   },
   en: {
-    pageTitle: "Download center",
+    pageTitle: "DocHub",
     searchPlaceholder: "Search by model or series...",
     allCategories: "All",
     countSuffix: " products",
@@ -37,7 +37,7 @@ const Locale = {
     colDT: "Datasheet",
   },
   ja: {
-    pageTitle: "ダウンロードセンター",
+    pageTitle: "DocHub",
     searchPlaceholder: "モデルまたは製品名で検索...",
     allCategories: "すべて",
     countSuffix: " 製品",
@@ -50,7 +50,7 @@ const Locale = {
     colDT: "データシート",
   },
   es: {
-    pageTitle: "Centro de descargas",
+    pageTitle: "DocHub",
     searchPlaceholder: "Buscar por modelo o serie...",
     allCategories: "Todo",
     countSuffix: " productos",
@@ -230,8 +230,8 @@ function DocHub({ data }) {
       {/* 페이지 헤더 */}
       <div className="dochub-header">
         <div className="dochub-header-left">
-          <span className="dochub-brand">SUPREMA</span>
           <h1 className="dochub-title">{localeData.pageTitle}</h1>
+          <span className="dochub-brand">Technical Documentation</span>
         </div>
         <div className="dochub-search-bar">
           <svg className="dochub-search-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">

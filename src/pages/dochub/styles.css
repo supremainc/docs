@@ -160,8 +160,8 @@
 }
 
 /* ── Tabulator: 모든 외곽선 제거 ────────────────────── */
-.dochub-table .tabulator,
-.dochub-table .tabulator *,
+.dochub-table.tabulator,
+.dochub-table.tabulator *,
 .dochub-table .tabulator-header,
 .dochub-table .tabulator-header .tabulator-row,
 .dochub-table .tabulator-col,
@@ -173,7 +173,7 @@
   outline: none !important;
 }
 
-.dochub-table .tabulator {
+.dochub-table.tabulator {
   background: transparent;
   font-size: 0.875rem;
 }
@@ -241,9 +241,9 @@
 }
 
 .dochub-table .tabulator-page.active {
-  background: var(--ifm-color-cmd);
+  /* background: var(--ifm-color-cmd); */
   border-color: var(--ifm-color-cmd);
-  color: #fff;
+  color: var(--ifm-color-cmd);
   font-weight: 700;
 }
 
