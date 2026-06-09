@@ -1,14 +1,9 @@
 ---
 id: master-admin
-title: Introducción a la Función Master Admin y Guía de Configuración
+title: Guía de configuración de Master Admin
 description: Proporciona una guía para configurar el Master Admin, que mejora la seguridad del dispositivo al reforzar los permisos de administrador.
 heading_className: ce--only
-keywords:
-  - Administrador Principal
-  - CE ROJO
-  - Administrador Principal
-  - CE
-  - UE
+keywords: [ Master Admin, CE ROJO, CE, UE ]
 ---
 
 :::caution
@@ -27,50 +22,9 @@ La feature <Cmd sid="ui_128" product='dev' /> está diseñada para **mejorar los
 
 :::
 
-## Política de soporte del Master Administrator <Badge only>Productos CE vs productos Global (No CE)</Badge> {#master-admin-support-policy}
+import MasterAdminSupportPolicy from '../common/_master-admin-support-policy.mdx';
 
-La feature <Cmd sid="ui_128" product='dev' /> se activa solo en <Cmd>Productos CE con una etiqueta que tiene la marca CE</Cmd>.
-
-:::note
-
-Use la etiqueta adhesiva en el rótulo posterior para identificar **Productos CE** y **productos Global (No CE)**. La feature funciona de manera diferente, como se indica a continuación.
-
-* **Productos CE**: marca CE presente
-
-* **productos Global (No CE)**: marca CE ausente
-
-:::
-
-<Table>
-<Tbody>
-<Row>
-<Th>Categoría</Th>
-<Th>Productos CE</Th>
-<Th>Productos Global (No CE)</Th>
-</Row>
-<Row>
-<Td><Cmd sid="ui_128" product='dev' /></Td>
-<Td>Activado (no se puede desactivar)</Td>
-<Td>No compatible</Td>
-</Row>
-<Row>
-<Td><Cmd sid="ui_073" product='dev' /></Td>
-<Td>Obligatorio</Td>
-<Td>No compatible</Td>
-</Row>
-<Row>
-<Td>**Longitud mínima del PIN**</Td>
-<Td>Al menos 8 dígitos</Td>
-<Td>Al menos 4 dígitos</Td>
-</Row>
-</Tbody>
-</Table>
-
-:::note
-
-Cuando se conecta a BioStar X (o BioStar 2), el setting de Master Admin cambia según la compatibilidad del dispositivo, y la activación del menú de autenticación en dos pasos del administrador se sincroniza automáticamente.
-
-:::
+<MasterAdminSupportPolicy />
 
 ## Productos compatibles con Master Admin
 

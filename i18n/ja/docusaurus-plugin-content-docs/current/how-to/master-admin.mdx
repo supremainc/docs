@@ -1,14 +1,9 @@
 ---
 id: master-admin
-title: マスター管理者機能の概要と設定方法
-description: 管理者権限を強化してデバイスのセキュリティを向上させるマスター管理者設定ガイドを提供します。
+title: Master Admin セットアップガイド
+description: 管理者権限を強化してデバイスのセキュリティを向上させるMaster Admin設定ガイドを提供します。
 heading_className: ce--only
-keywords:
-  - マスター管理者
-  - CE RED
-  - マスター管理者
-  - CE製品
-  - EU製品
+keywords: [ Master Admin, CE RED, マスター管理者, CE製品, EU製品 ]
 ---
 
 :::caution
@@ -27,50 +22,9 @@ keywords:
 
 :::
 
-## マスター管理者対応ポリシー <Badge only>CE製品 vs グローバル製品（Non-CE）</Badge> {#master-admin-support-policy}
+import MasterAdminSupportPolicy from '../common/_master-admin-support-policy.mdx';
 
-<Cmd sid="ui_128" product='dev' /> 機能は、<Cmd>CEマークの付いたラベルが貼付されたCE製品のみで有効化</Cmd>されます。
-
-:::note
-
-製品背面のラベルシールで**CE製品** / **グローバル製品（Non-CE）**を識別でき、これに応じて機能は次のように区別して動作します。
-
-* **CE製品**: CEマークあり
-
-* **グローバル製品（Non-CE）**: CEマークなし
-
-:::
-
-<Table>
-<Tbody>
-<Row>
-<Th>区分</Th>
-<Th>CE製品</Th>
-<Th>グローバル製品（Non-CE）</Th>
-</Row>
-<Row>
-<Td><Cmd sid="ui_128" product='dev' /></Td>
-<Td>有効化（無効化不可）</Td>
-<Td>非対応</Td>
-</Row>
-<Row>
-<Td><Cmd sid="ui_073" product='dev' /></Td>
-<Td>必須</Td>
-<Td>非対応</Td>
-</Row>
-<Row>
-<Td>**最小PIN長**</Td>
-<Td>最低8桁以上</Td>
-<Td>最低4桁以上</Td>
-</Row>
-</Tbody>
-</Table>
-
-:::note
-
-BioStar X（またはBioStar 2）と接続すると、デバイスの対応状況に応じてマスター管理者設定の表示が変わり、管理者2段階認証メニューの有効化状態も自動で同期されます。
-
-:::
+<MasterAdminSupportPolicy />
 
 ## マスター管理者対応デバイス案内
 
