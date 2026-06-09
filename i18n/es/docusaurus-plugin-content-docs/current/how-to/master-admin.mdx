@@ -189,25 +189,10 @@ Un producto CE actualizado mediante firmware no ofrece settings de <Cmd sid="ui_
 
 :::
 
-## Información adicional
+{/* 안내 사항 */}
+import MasterAdminAdditionalInfo from '../common/_master-admin-additional-info.mdx';
 
-* **Cuando se enrola un PIN mediante el software BioStar**
-
-  * Los productos Global (No CE) que no admiten el Master Administrator pueden enrolar un PIN de al menos 4 dígitos directamente en el dispositivo. Sin embargo, al enrolar usuarios mediante BioStar X (o BioStar 2), las siguientes versiones requieren un PIN de al menos 8 dígitos.
-
-    * BioStar 2 v2.9.11 o posterior
-
-    * BioStar X v1.0.0 a v1.0.2
-
-  * Los usuarios enrolados con un PIN de 4 dígitos en las versiones anteriores no pueden asignarse como administradores del dispositivo.
-
-* **Cambio manual de la clave hash del dispositivo**
-
-  * Al cambiar manualmente la clave hash del dispositivo, aparecerá un mensaje de advertencia que indicará que los PIN de Master Admin se eliminarán. Confirme el mensaje antes de continuar.
-
-* **Restricción de transmisión de imágenes biométricas RS-485**
-
-  * Las imágenes de credenciales biométricas no se transmiten por comunicación RS-485, por lo que aparecen imágenes sustitutas al ver el rostro del Master Admin registrado en dispositivos esclavos.
+<MasterAdminAdditionalInfo />
 
 ## Preguntas frecuentes
 
