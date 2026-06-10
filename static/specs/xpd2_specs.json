@@ -8,10 +8,10 @@
           "label": "RF 카드",
           "label_id": "specs.credentials.rfcard",
           "value": {
-          "ko": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
-          "en": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
-          "es": "125kHz EM y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
-          "ja": "125kHz EM および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>、FeliCa"
+          "ko": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
+          "en": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
+          "es": "125kHz EM y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
+          "ja": "125kHz EM および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3、FeliCa"
           }
         },
         "rf_distance": {
@@ -23,7 +23,7 @@
             "es": "EM/MIFARE/DESFire: 50 mm, FeliCa: 30 mm",
             "ja": "EM/MIFARE/DESFire：50 mm、FeliCa：30 mm"
           },
-          "annotation_label": "anno2"
+          "annotation_label": "anno1"
         },
         "mobile": {
           "label": "모바일",

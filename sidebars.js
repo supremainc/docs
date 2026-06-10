@@ -2068,6 +2068,22 @@ function createSidebars(preview) {
         'device/vionyx/product-specifications',
         'device/vionyx/regulatory-information',
         'device/vionyx/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/vionyx/release-notes/index',
+          },
+          items: [
+            'device/vionyx/release-notes/101',
+            'device/vionyx/release-notes/100',
+          ]
+        },
       ],
     },
   ],
