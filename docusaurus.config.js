@@ -255,7 +255,10 @@ const config = {
     },
     hooks: {
       onBrokenMarkdownLinks: 'warn'
-    }
+    },
+    remarkRehypeOptions: {
+      footnoteLabel: getLocalizedConfigValue('remarkRehypeOptions_footnotes'),
+    },
   },
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
