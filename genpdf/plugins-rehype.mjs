@@ -1708,6 +1708,44 @@ export function rehypeProcessMdxElements(translations = {}, basePath = '', langu
         return;
       }
 
+      // Process Support components - locale-aware technical support contact
+      if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Support') {
+        let replacement;
+
+        if (language === 'ko') {
+          replacement = {
+            type: 'element',
+            tagName: 'span',
+            properties: {},
+            children: [
+              { type: 'text', value: '슈프리마 기술 지원팀(' },
+              {
+                type: 'element',
+                tagName: 'a',
+                properties: { href: 'mailto:CS@suprema.co.kr' },
+                children: [{ type: 'text', value: 'CS@suprema.co.kr' }]
+              },
+              { type: 'text', value: ')' }
+            ]
+          };
+        } else {
+          const supportText = {
+            en: 'Suprema Global Technical Support Team',
+            ja: 'Suprema グローバル技術サポートチーム',
+            es: 'Equipo de Soporte Técnico global de Suprema'
+          };
+          replacement = {
+            type: 'element',
+            tagName: 'a',
+            properties: { href: 'https://support.supremainc.com', target: '_blank' },
+            children: [{ type: 'text', value: supportText[language] || supportText.en }]
+          };
+        }
+
+        parent.children[index] = replacement;
+        return;
+      }
+
       // Process Badge components
       if ((node.type === 'mdxJsxFlowElement' || node.type === 'mdxJsxTextElement') && node.name === 'Badge') {
         const attributes = node.attributes || [];
