@@ -39,6 +39,9 @@ crowdin upload -b main
 - /value
 - 주석 {/*, */}
 - ![Example banner]
+- CXPath: //yaml/id
+- :::
+- http
 
 
 영어에 남아있는 한글 정규식 검색
