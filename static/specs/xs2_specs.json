@@ -123,23 +123,9 @@
         "qr_barcode": {
           "label": "QR/바코드",
           "label_id": "specs.credentials.qr_barcode",
+          "value": true,
           "annotation_label": "anno2",
-          "type": "model",
-          "items": {
-            "model1": {
-              "label": "XS2-QDPB, XS2-QAPB",
-              "value": true
-            },
-            "model2": {
-              "label": "XS2-DPB, XS2-APB,<br/>XS2-ODPB, XS2-OAPB",
-              "value": {
-                "ko": "지원<sup id='anno3_dest'><a href='#anno3'></a></sup>",
-                "en": "Supported<sup id='anno3_dest'><a href='#anno3'></a></sup>",
-                "es": "Compatible<sup id='anno3_dest'><a href='#anno3'></a></sup>",
-                "ja": "サポート対象<sup id='anno3_dest'><a href='#anno3'></a></sup>"
-              }
-            }
-          }
+          "annotation_value": "anno3"
         }
       }
     },
