@@ -1695,6 +1695,10 @@ body[data-rh] .redocusaurus {
   sup a::before {
     content: counter(sup-count)  ")";
   }
+  sup a[class*='anchorTargetStickyNavbar']::before {
+    content: "";
+
+  }
   sup#dupl_one a::before {
     content: "1)";
   }
@@ -1720,6 +1724,13 @@ body[data-rh] .redocusaurus {
       width: 100%; /* Take full width of its parent container */
       aspect-ratio: 16 / 9; /* Maintain the 16:9 aspect ratio */
       height: auto; /* Height adjusts automatically */
+    }
+  }
+  .footnotes {
+    border-top: 1px solid var(--ifm-color-border);
+    margin-top: 4rem;
+    h2 {
+      font-size: var(--ifm-h3-font-size);
     }
   }
 }

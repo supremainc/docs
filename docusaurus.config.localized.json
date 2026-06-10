@@ -28,5 +28,11 @@
     "en": "Provides best practices and recommendations for hardening BioStar X systems and devices.",
     "ja": "BioStar Xシステムとデバイスのセキュリティを強化するためのベストプラクティスと推奨事項を提供します。",
     "es": "Proporciona mejores prácticas y recomendaciones para fortalecer los sistemas y dispositivos BioStar X."
+  },
+  "remarkRehypeOptions_footnotes": {
+    "ko": "각주",
+    "en": "Footnotes",
+    "ja": "脚注",
+    "es": "Notas al pie"
   }
 }
