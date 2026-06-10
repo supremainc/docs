@@ -5,7 +5,7 @@ export default function Support() {
     const { i18n: { currentLocale } } = useDocusaurusContext();
     if (currentLocale === 'ko') {
         return (
-            <span>슈프리마 기술 지원팀(<Link to='mailto:CS@suprema.co.kr'>CS@suprema.co.kr</Link>)</span>
+            <Link to='https://www.supremainc.com/ko/support/customer-center-reception.asp'>슈프리마 기술 지원팀</Link>
         )
     } else if (currentLocale === 'en') {
         return (
