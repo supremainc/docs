@@ -77,19 +77,19 @@
             "model1": {
               "label": "XS2-DPB, XS2-QDPB,<br/>XS2-ODPB",
               "value": {
-               "ko": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
-               "en": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
-               "es": "125kHz EM y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>, FeliCa",
-               "ja": "125kHz EM および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3<sup id='anno1_dest'><a href='#anno1'></a></sup>、FeliCa"
+               "ko": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
+               "en": "125kHz EM & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
+               "es": "125kHz EM y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa",
+               "ja": "125kHz EM および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3、FeliCa"
               }
             },
             "model2": {
               "label": "XS2-APB, XS2-QAPB,<br/>XS2-OAPB",
               "value": {
-                "ko": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
-                "en": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
-                "es": "125kHz EM, HID Prox y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>, FeliCa, iCLASS SE/SR/Seos",
-                "ja": "125kHz EM、HID Prox および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3<sup id='dupl'><a href='#anno1'></a></sup>、FeliCa、iCLASS SE/SR/Seos"
+                "ko": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa, iCLASS SE/SR/Seos",
+                "en": "125kHz EM, HID Prox & 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa, iCLASS SE/SR/Seos",
+                "es": "125kHz EM, HID Prox y 13.56MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV3, FeliCa, iCLASS SE/SR/Seos",
+                "ja": "125kHz EM、HID Prox および 13.56MHz MIFARE、MIFARE Plus、DESFire、DESFire EV1/EV2/EV3、FeliCa、iCLASS SE/SR/Seos"
               }
             }
           }
@@ -103,7 +103,7 @@
             "es": "EM/HID Prox/MIFARE/DESFire/HID iCLASS: 50 mm, Felica: 30 mm",
             "ja": "EM/HID Prox/MIFARE/DESFire/HID iCLASS：50 mm、Felica：30 mm"
           },
-          "annotation_label": "anno2"
+          "annotation_label": "anno1"
         },
         "mobile": {
           "label": "모바일",
@@ -123,7 +123,7 @@
         "qr_barcode": {
           "label": "QR/바코드",
           "label_id": "specs.credentials.qr_barcode",
-          "annotation_label": "anno3",
+          "annotation_label": "anno2",
           "type": "model",
           "items": {
             "model1": {
@@ -133,10 +133,10 @@
             "model2": {
               "label": "XS2-DPB, XS2-APB,<br/>XS2-ODPB, XS2-OAPB",
               "value": {
-                "ko": "지원<sup id='anno4_dest'><a href='#anno4'></a></sup>",
-                "en": "Supported<sup id='anno4_dest'><a href='#anno4'></a></sup>",
-                "es": "Compatible<sup id='anno4_dest'><a href='#anno4'></a></sup>",
-                "ja": "サポート対象<sup id='anno4_dest'><a href='#anno4'></a></sup>"
+                "ko": "지원<sup id='anno3_dest'><a href='#anno3'></a></sup>",
+                "en": "Supported<sup id='anno3_dest'><a href='#anno3'></a></sup>",
+                "es": "Compatible<sup id='anno3_dest'><a href='#anno3'></a></sup>",
+                "ja": "サポート対象<sup id='anno3_dest'><a href='#anno3'></a></sup>"
               }
             }
           }
@@ -293,7 +293,7 @@
           "label": "최대 사용자 수",
           "label_id": "specs.storage.max_users",
           "value": "500,000",
-          "annotation_value": "anno5"
+          "annotation_value": "anno4"
         },
         "max_credentials_1n": {
           "label": "최대 크리덴셜 수 (1:N)",
