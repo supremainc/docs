@@ -179,6 +179,9 @@ const config = {
           // route: '/api/bsxapi',
           id: 'bsxapi',
         }],
+        config: {
+          hideDownloadButtons: true
+        },
         theme: {
           primaryColor: '#3578e5',
         },
