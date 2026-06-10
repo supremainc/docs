@@ -567,7 +567,7 @@ const sidebars = {
                 'platform/biostar_x/settings-credential-ir-face-group-matching'
               ]
             },
-            'platform/biostar_x/settings-card-printer',
+            // 'platform/biostar_x/settings-card-printer',
             'platform/biostar_x/settings-email-setting',
             'platform/biostar_x/settings-custom-interface',
             {
@@ -679,10 +679,10 @@ const sidebars = {
                 'platform/biostar_x/settings-map-manage-area'
               ]
             },
-            'platform/biostar_x/settings-visitor',
-            'platform/biostar_x/settings-diretory-integration',
-            'platform/biostar_x/settings-remote-access',
-            'platform/biostar_x/settings-virtual-device-event-log'
+            // 'platform/biostar_x/settings-visitor',
+            // 'platform/biostar_x/settings-diretory-integration',
+            // 'platform/biostar_x/settings-remote-access',
+            // 'platform/biostar_x/settings-virtual-device-event-log'
           ]
         },
         {
@@ -712,22 +712,22 @@ const sidebars = {
                 'platform/biostar_x/tna-settings'
               ]
             },
-            {
-              type: 'category',
-              label: '방문자 신청 및 관리하기',
-              link: {
-                type: 'doc',
-                id: 'platform/biostar_x/visitor',
-              },
-              items: [
-                'platform/biostar_x/visitor-register',
-                'platform/biostar_x/visitor-register-manage',
-                'platform/biostar_x/visitor-register-checkin-manage',
-                'platform/biostar_x/visitor-register-checkout-manage',
-                'platform/biostar_x/visitor-register-all-manage',
-                'platform/biostar_x/visitor-remove-expire-personal'
-              ]
-            }
+            // {
+            //   type: 'category',
+            //   label: '방문자 신청 및 관리하기',
+            //   link: {
+            //     type: 'doc',
+            //     id: 'platform/biostar_x/visitor',
+            //   },
+            //   items: [
+            //     'platform/biostar_x/visitor-register',
+            //     'platform/biostar_x/visitor-register-manage',
+            //     'platform/biostar_x/visitor-register-checkin-manage',
+            //     'platform/biostar_x/visitor-register-checkout-manage',
+            //     'platform/biostar_x/visitor-register-all-manage',
+            //     'platform/biostar_x/visitor-remove-expire-personal'
+            //   ]
+            // }
           ]
         },
         {
