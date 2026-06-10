@@ -18,7 +18,9 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "translate": "tsx src/plugins/translate/index.ts",
     "translate:file": "tsx src/plugins/translate/index.ts --file",
-    "mdx-to-html": "node genpdf/index.mjs"
+    "mdx-to-html": "node genpdf/index.mjs",
+    "build:postman": "node generate-postman-collection.js",
+    "addcodesample": "node utils/addCodeSamples.js"
   },
   "dependencies": {
     "@docusaurus/core": "^3.9.2",
@@ -86,6 +88,7 @@
     "node-fetch": "^3.3.2",
     "openai": "^4.67.1",
     "openapi-snippet": "^0.14.0",
+    "openapi-to-postmanv2": "^6.1.0",
     "prettier": "^3.3.3",
     "prismjs": "^1.29.0",
     "prop-types": "^15.8.1",

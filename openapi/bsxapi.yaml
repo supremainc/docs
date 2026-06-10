@@ -86,7 +86,7 @@ info:
 
     To import the Postman collection online, follow these steps:
 
-    1. Click the **Download** button at the top of this page to download the OpenAPI specification file(`bsxapi.yaml`).
+    1. Download the Postman collection file(<a href="../../specs/bsxapi-postman-collection.json" rel="noopener noreferrer" download>bsxapi-postman-collection.json</a>).
 
     2. Go to <a href="https://web.postman.co/home" target="_blank" rel="noopener noreferrer">Postman</a> and sign in.
 
@@ -157,7 +157,6 @@ tags:
   - name: Audit
   - name: Zones
   - name: Occupancy Limit
-  - name: Step by Step
   - name: Event Log
   - name: Create User
   - name: Virtual Device & Event Import
