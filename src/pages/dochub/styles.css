@@ -1,12 +1,12 @@
 :root {
   --ifm-font-color-title: #1A1C1C;
-  --ifm-font-color-base: #6B7280;
+  --ifm-font-color-tableBody: #6B7280;
   --ifm-font-color-header: #8C8D8D;
 }
 
 [data-theme='dark'] {
   --ifm-font-color-title: #E5E7EB;
-  --ifm-font-color-base: #9CA3AF;
+  --ifm-font-color-tableBody: #9CA3AF;
   --ifm-font-color-header: #6B7280;
 }
 
@@ -52,7 +52,7 @@
 
 .dochub-subtitle {
   font-size: 18px;
-  color: var(--ifm-font-color-base);
+  color: var(--ifm-font-color-tableBody);
   margin: 0;
   line-height: 1.65;
 }
@@ -71,7 +71,7 @@
   transform: translateY(-50%);
   width: 15px;
   height: 15px;
-  color: var(--ifm-font-color-base);
+  color: var(--ifm-font-color-tableBody);
   pointer-events: none;
 }
 
@@ -82,7 +82,7 @@
   font-size: 0.875rem;
   width: 384px;
   background: var(--ifm-background-color);
-  color: var(--ifm-font-color-base);
+  color: var(--ifm-font-color-tableBody);
   outline: none;
   transition: border-color 0.15s;
 }
@@ -92,7 +92,7 @@
 }
 
 .dochub-search-input::placeholder {
-  color: var(--ifm-font-color-base);
+  color: var(--ifm-font-color-tableBody);
 }
 
 /* ── Validation panel ────────────────────────────────── */
@@ -302,7 +302,7 @@
   align-items: center;
   gap: 0.35rem;
   text-decoration: none;
-  color: var(--ifm-font-color-base);
+  color: var(--ifm-font-color-tableBody);
   font-size: 13px;
   padding: 0.15rem 0;
   transition: color 0.15s;
@@ -324,7 +324,7 @@
 }
 
 .dochub-release-date {
-  color: var(--ifm-font-color-base);
+  color: var(--ifm-font-color-tableBody);
   font-size: 13px;
 }
 
