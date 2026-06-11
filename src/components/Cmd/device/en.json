@@ -468,12 +468,5 @@
   "ui_383": "Manual Lock",
   "ui_384": "Normalize",
   "ui_385": "Scanner",
-  "ui_386": "Password",
-  "ui_387": "Confirm Password",
-  "ui_388": "Submit",
-  "ui_389": "ID",
-  "ui_390": "System",
-  "ui_391": "Account",
-  "ui_392": "Sign In",
-  "ui_393": "Enforce EV2/EV3 Secure Messaging"
+  "ui_386": "Enforce EV2/EV3 Secure Messaging"
 }
