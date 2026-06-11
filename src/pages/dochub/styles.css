@@ -1,12 +1,12 @@
 :root {
   --ifm-font-color-title: #1A1C1C;
-  --ifm-font-color-base: #6B7280;
+  --ifm-font-color-tableBody: #6B7280;
   --ifm-font-color-header: #8C8D8D;
 }
 
 [data-theme='dark'] {
   --ifm-font-color-title: #E5E7EB;
-  --ifm-font-color-base: #9CA3AF;
+  --ifm-font-color-tableBody: #9CA3AF;
   --ifm-font-color-header: #6B7280;
 }
 
@@ -52,7 +52,7 @@
 
 .dochub-subtitle {
   font-size: 18px;
-  color: var(--ifm-font-color-base);
+  color: var(--ifm-font-color-tableBody);
   margin: 0;
   line-height: 1.65;
 }
@@ -71,7 +71,7 @@
   transform: translateY(-50%);
   width: 15px;
   height: 15px;
-  color: var(--ifm-font-color-base);
+  color: var(--ifm-font-color-tableBody);
   pointer-events: none;
 }
 
@@ -82,7 +82,7 @@
   font-size: 0.875rem;
   width: 384px;
   background: var(--ifm-background-color);
-  color: var(--ifm-font-color-base);
+  color: var(--ifm-font-color-tableBody);
   outline: none;
   transition: border-color 0.15s;
 }
@@ -92,7 +92,7 @@
 }
 
 .dochub-search-input::placeholder {
-  color: var(--ifm-font-color-base);
+  color: var(--ifm-font-color-tableBody);
 }
 
 /* ── Validation panel ────────────────────────────────── */
@@ -214,7 +214,7 @@
   border-right: none;
 }
 
-.tabulator .tabulator-header .tabulator-col .tabulator-col-content {
+.dochub-table .tabulator-header .tabulator-col .tabulator-col-content {
   padding: 20px 32px;
 }
 
@@ -226,7 +226,7 @@
   color: var(--ifm-font-color-header);
 }
 
-.tabulator .tabulator-tableholder .tabulator-table {
+.dochub-table .tabulator-tableholder .tabulator-table {
   background: transparent;
 }
 
@@ -302,7 +302,7 @@
   align-items: center;
   gap: 0.35rem;
   text-decoration: none;
-  color: var(--ifm-font-color-base);
+  color: var(--ifm-font-color-tableBody);
   font-size: 13px;
   padding: 0.15rem 0;
   transition: color 0.15s;
@@ -317,7 +317,6 @@
   width: 20px;
   height: 20px;
   flex-shrink: 0;
-  /* filter: invert(15%) sepia(80%) saturate(700%) hue-rotate(310deg) brightness(80%) contrast(120%); */
 }
 
 .dochub-doc-label {
@@ -325,7 +324,7 @@
 }
 
 .dochub-release-date {
-  color: var(--ifm-font-color-base);
+  color: var(--ifm-font-color-tableBody);
   font-size: 13px;
 }
 
@@ -370,15 +369,6 @@
   background: rgba(163, 35, 67, 0.07) !important;
 }
 
-[data-theme='dark'] .dochub-table .tabulator-footer {
-  border-color: #242424 !important;
-}
-
-[data-theme='dark'] .dochub-table .tabulator-page {
-  background: #1e1e1e;
-  border-color: #3a3a3a;
-  color: #888;
-}
 
 [data-theme='dark'] .dochub-doc-item {
   color: #888;
@@ -386,10 +376,6 @@
 
 [data-theme='dark'] .dochub-doc-item:hover {
   color: var(--ifm-color-cmd-lightest);
-}
-
-[data-theme='dark'] .dochub-doc-icon {
-  filter: invert(75%) sepia(40%) saturate(500%) hue-rotate(300deg) brightness(110%) contrast(100%);
 }
 
 /* ── Responsive ──────────────────────────────────────── */
@@ -425,7 +411,7 @@
     padding: 14px 16px;
   }
 
-  .tabulator .tabulator-header .tabulator-col .tabulator-col-content {
+  .dochub-table .tabulator-header .tabulator-col .tabulator-col-content {
     padding: 14px 16px;
   }
 
@@ -435,7 +421,7 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .tabulator-row.tabulator-selectable:hover {
+  .dochub-table .tabulator-row.tabulator-selectable:hover {
     cursor: auto;
   }
 }
