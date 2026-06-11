@@ -95,6 +95,65 @@
   color: var(--ifm-font-color-base);
 }
 
+/* ── Validation panel ────────────────────────────────── */
+.dochub-validation-panel {
+  background: #FFFBEB;
+  border: 1px solid #FCD34D;
+  border-radius: 8px;
+  padding: 0.875rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.dochub-validation-title {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #92400E;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+.dochub-validation-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+  font-size: 0.775rem;
+  color: #78350F;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.dochub-validation-product {
+  font-weight: 600;
+  margin-right: 0.4rem;
+}
+
+.dochub-validation-fields {
+  color: #B45309;
+  font-family: monospace;
+  font-size: 0.75rem;
+}
+
+[data-theme='dark'] .dochub-validation-panel {
+  background: #1C1505;
+  border-color: #854D0E;
+}
+
+[data-theme='dark'] .dochub-validation-title {
+  color: #FDE68A;
+}
+
+[data-theme='dark'] .dochub-validation-list {
+  color: #FCD34D;
+}
+
+[data-theme='dark'] .dochub-validation-fields {
+  color: #F59E0B;
+}
+
 /* ── Pill tabs ───────────────────────────────────────── */
 .dochub-tabs {
   display: flex;
@@ -129,11 +188,20 @@
   font-weight: 400;
 }
 
+/* ── Table wrapper ───────────────────────────────────── */
+.dochub-table-wrapper {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .dochub-table.tabulator {
   background: transparent;
   font-size: 0.9rem;
-  border: 1px solid rgba(0, 0, 0, 0.05) !important;
-  border-radius: 12px;
+  border: none !important;
+  border-radius: 0 !important;
+  min-width: 620px;
 }
 
 .dochub-table .tabulator-header {
@@ -284,6 +352,10 @@
   color: #fff;
 }
 
+[data-theme='dark'] .dochub-table-wrapper {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
 [data-theme='dark'] .dochub-table .tabulator-header {
   border-color: #2a2a2a !important;
 }
@@ -346,7 +418,19 @@
   }
 
   .dochub-doc-items {
-    gap: 0.25rem 0.5rem;
+    gap: 0.25rem 0.75rem;
+  }
+
+  .dochub-table .tabulator-cell {
+    padding: 14px 16px;
+  }
+
+  .tabulator .tabulator-header .tabulator-col .tabulator-col-content {
+    padding: 14px 16px;
+  }
+
+  .dochub-table .tabulator-row {
+    min-height: 80px;
   }
 }
 

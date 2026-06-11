@@ -98,6 +98,7 @@ function DocHub({ data }) {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
+  const [validationErrors, setValidationErrors] = useState([]);
   const selectedCategoryRef = useRef("all");
   const searchQueryRef = useRef("");
   const localeData = useLocaleData();
@@ -109,6 +110,16 @@ function DocHub({ data }) {
   useEffect(() => {
     const cats = [...new Set(data.map(item => item.category?.trim()).filter(Boolean))];
     setCategories(cats);
+
+    const REQUIRED = ["category", "product", "version", "release_date"];
+    const errors = data.reduce((acc, item, i) => {
+      const missing = REQUIRED.filter(f => !item[f]);
+      if (missing.length) {
+        acc.push({ index: i + 1, product: item.product || `항목 ${i + 1}`, missing });
+      }
+      return acc;
+    }, []);
+    setValidationErrors(errors);
   }, [data]);
 
   const applyFilters = useCallback((tableInstance, query, category) => {
@@ -206,13 +217,16 @@ function DocHub({ data }) {
           title: localeData.colProduct,
           field: "product",
           formatter: productFormatter,
+          minWidth: 160,
           maxWidth: 420,
+          widthGrow: 2,
         },
         {
           title: localeData.colVersion,
           field: "version",
           formatter: versionFormatter,
-          width: 160,
+          minWidth: 100,
+          widthGrow: 1,
           hozAlign: "left",
           headerSort: true,
         },
@@ -220,13 +234,16 @@ function DocHub({ data }) {
           title: localeData.colDocumentation,
           field: "manuals",
           formatter: docFormatter,
-          minWidth: 700,
+          minWidth: 240,
+          widthGrow: 4,
           headerSort: false,
         },
         {
           title: localeData.colReleaseDate,
           field: "release date",
           formatter: releaseDateFormatter,
+          minWidth: 100,
+          widthGrow: 1,
           headerSort: false,
         },
       ],
@@ -291,8 +308,31 @@ function DocHub({ data }) {
         ))}
       </div>
 
+      {/* 필수 필드 누락 경고 */}
+      {validationErrors.length > 0 && (
+        <div className="dochub-validation-panel" role="alert">
+          <div className="dochub-validation-title">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M10 2L2 17h16L10 2z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+              <path d="M10 8v4M10 14.5v.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            </svg>
+            필수 필드 누락 — {validationErrors.length}개 항목
+          </div>
+          <ul className="dochub-validation-list">
+            {validationErrors.map(({ index, product, missing }) => (
+              <li key={index}>
+                <span className="dochub-validation-product">{product}</span>
+                <span className="dochub-validation-fields">{missing.join(", ")} 누락</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       {/* 테이블 */}
-      <div ref={tableRef} className="dochub-table" />
+      <div className="dochub-table-wrapper">
+        <div ref={tableRef} className="dochub-table" />
+      </div>
     </div>
   );
 }
