@@ -3,9 +3,9 @@ id: 173
 title: Firmware Version 1.7.3
 ---
 
-# Firmware Version 1.7.3 (Build No. 1.7.3_260522)
+# Firmware Version 1.7.3 (Build No. 1.7.3_260610)
 
-Release<Separator/>2026-05-29
+Release<Separator/>2026-06-12
 
 ## New Features and Improvements
 
@@ -23,6 +23,10 @@ Release<Separator/>2026-05-29
 
 1. Supports feature to set the baud rate of slave devices.
 
+1. Improved to distinguish devices that support the **Secure Tamper** feature.
+
+1. Improved to allow the use of **Secure Tamper** regardless of the **Device Hashkey Management** option.
+
 ## Bug Fixes
 
 ---
@@ -30,5 +34,15 @@ Release<Separator/>2026-05-29
 <BugLists>
 
 1. The master device disconnecting or alarms failing to clear when performing **Clear Alarm** on alarms triggered by **Trigger & Action** settings on master or slave devices. <Badge>1.7.2</Badge>
+
+1. When a specific device is connected as a slave, configuration changes are not properly applied. <Badge>1.0.0</Badge>
+
+1. The firmware upgrade failing for BioStation 2a devices connected as slaves. <Badge>1.7.1</Badge>
+
+1. Card authentication failure on connected Wiegand readers. <Badge>1.0.0</Badge>
+
+1. Some devices are displayed as "Unknown" in the CoreStation Setup Manager. <Badge>1.7.2</Badge>
+
+1. **Custom Smart Card Layout** set through **Batch Edit** is not applied on the device detail page. <Badge>1.0.0</Badge>
 
 </BugLists>
