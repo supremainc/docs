@@ -748,7 +748,7 @@
     "message": "Switch Input VIH"
   },
   "specs.power.alarm_input_vih": {
-    "message": "Alarm input VIH"
+    "message": "Alarm Input VIH"
   },
   "specs.power.led_beep_input_vih": {
     "message": "LED, Beep Input VIH"
@@ -757,7 +757,7 @@
     "message": "Switch Input VIL"
   },
   "specs.power.alarm_input_vil": {
-    "message": "Alarm input VIL"
+    "message": "Alarm Input VIL"
   },
   "specs.power.led_beep_input_vil": {
     "message": "LED, Beep Input VIL"

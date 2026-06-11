@@ -509,26 +509,38 @@
   },
   "sidebar.biostar_air.category.파트너 기술자 관리하기": {
     "message": "Administrar técnicos de socios",
-    "description": "La etiqueta para la categoría \"Administrar técnicos asociados\" en la barra lateral \"biostar_air\""
+    "description": "La etiqueta para la categoría 'Administrar técnicos asociados' en la barra lateral 'biostar_air'"
   },
   "sidebar.aicamwebserver.category.ViOnyx Web Server": {
     "message": "Servidor Web de ViOnyx",
-    "description": "The label for category 'ViOnyx Web Server' in sidebar 'aicamwebserver'"
+    "description": "La etiqueta para la categoría 'ViOnyx Web Server' en la barra lateral 'aicamwebserver'"
   },
   "sidebar.aicamwebserver.category.AI 이벤트 및 규칙 설정하기": {
     "message": "Configurar Eventos y Reglas de IA",
-    "description": "The label for category 'AI 이벤트 및 규칙 설정하기' in sidebar 'aicamwebserver'"
+    "description": "La etiqueta para la categoría 'AI 이벤트 및 규칙 설정하기' en la barra lateral 'aicamwebserver'"
   },
   "sidebar.aicamwebserver.category.카메라 설정하기": {
     "message": "Configurar la Cámara",
-    "description": "The label for category '카메라 설정하기' in sidebar 'aicamwebserver'"
+    "description": "La etiqueta para la categoría '카메라 설정하기' en la barra lateral 'aicamwebserver'"
   },
   "sidebar.aicamwebserver.category.사용자 관리하기": {
     "message": "Administrar Usuarios",
-    "description": "The label for category '사용자 관리하기' in sidebar 'aicamwebserver'"
+    "description": "La etiqueta para la categoría '사용자 관리하기' en la barra lateral 'aicamwebserver'"
   },
   "sidebar.aicamwebserver.category.시스템 구성하기": {
     "message": "Configurar Sistema",
-    "description": "The label for category '시스템 구성하기' in sidebar 'aicamwebserver'"
+    "description": "La etiqueta para la categoría '시스템 구성하기' en la barra lateral 'aicamwebserver'"
+  },
+  "sidebar.genetec.category.Genetec": {
+    "message": "Genetec",
+    "description": "La etiqueta para la categoría 'Genetec' en la barra lateral 'genetec'"
+  },
+  "sidebar.gallagher.category.Gallagher": {
+    "message": "Gallagher",
+    "description": "La etiqueta para la categoría 'Gallagher' en la barra lateral 'gallagher'"
+  },
+  "sidebar.ccure.category.C•CURE 9000": {
+    "message": "C•CURE 9000",
+    "description": "La etiqueta para la categoría 'C•CURE 9000' en la barra lateral 'ccure'"
   }
 }

@@ -173,7 +173,7 @@ Los ajustes del dispositivo, los ajustes de red y los niveles de operador se res
 
 :::
 
-### Administrador Principal
+### Administrador principal <Badge only>productos CE</Badge>
 
 Cambie el método de autenticación del administrador maestro.
 
@@ -199,9 +199,19 @@ Cambie el método de autenticación del administrador maestro.
 
 :::
 
-### Autenticación en dos pasos del administrador {#admin-2-step-authentication}
+### Autenticación en dos pasos del administrador <Badge only>productos CE</Badge> {#admin-2-step-authentication}
 
-Los dispositivos con firmware actualizado no ofrecen la configuración <Cmd sid='ui_128' product='dev' />; mejore la seguridad del dispositivo elevando los privilegios de administrador completo mediante la opción <Cmd sid='ui_073' product='dev' />.
+Un producto CE actualizado mediante firmware no ofrece settings de <Cmd sid="ui_128" product='dev' />, pero puede usar la opción <Cmd sid="ui_073" product='dev' /> para mejorar los privilegios generales del administrador y la seguridad del dispositivo.
+
+:::info
+
+* <Cmd sid="ui_073" product='dev' /> se puede activar solo si todos los administradores enrolled tienen al menos dos tipos de credenciales.
+
+  * El PIN no se puede usar como credencial independiente, por lo que la combinación ID + PIN no es compatible.
+
+* El dispositivo actualizado mediante firmware no puede degradarse a una versión inferior después de la actualización.
+
+:::
 
 1. Pulsa **ESC** y autentícate como administrador.
 
@@ -211,19 +221,19 @@ Los dispositivos con firmware actualizado no ofrecen la configuración <Cmd sid=
 
 :::info
 
-* <Cmd sid='ui_073' product='dev' /> está disponible después de actualizar el firmware a la versión v1.7.0 o posterior, y el firmware no puede degradarse a una versión anterior después de la actualización.
+Si no hay dos tipos de credenciales enroladas para todos los administradores, la activación falla y se muestra un mensaje de error.
 
-* El primer paso de autenticación es el predeterminado a menos que la opción <Cmd sid='ui_073' product='dev' /> esté habilitada.
+Enrole dos tipos de credenciales para todos los administradores e inténtelo nuevamente.
 
-* Si no hay dos tipos de credenciales enroladas para todos los administradores, la activación falla y se muestra un mensaje de error. Enrole dos tipos de credenciales para todos los administradores e inténtelo nuevamente.
+* El PIN no se puede usar como credencial independiente, por lo que la combinación ID + PIN no es compatible.
 
-  <Image src='/img/device/bln2-master-admin-error-message.png' />
+<Image src='/img/device/bln2-master-admin-error-message.png' />
 
 :::
 
 :::caution
 
-Si elimina las credenciales de todos los administradores por debajo del tipo 2 después de habilitar <Cmd sid='ui_073' product='dev' />, ya no tendrá acceso al menú de administrador ni podrá conectarse a BioStar X. Por lo tanto, tenga especial cuidado al eliminar las credenciales de administrador.
+Si activa <Cmd sid='ui_073' product='dev' /> y elimina las credenciales de todos los administradores hasta dejar menos de dos tipos, no podrá acceder al menú de administrador cuando BioStar X o BioStar 2 no estén disponibles. Por lo tanto, tenga especial cuidado al eliminar credenciales de administrador.
 
 :::
 

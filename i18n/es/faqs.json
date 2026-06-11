@@ -28,7 +28,7 @@
           "answer": [
             "Si utiliza un adaptador de corriente, asegúrese de que su salida sea igual o superior al consumo máximo de la cámara.",
             "No conecte un adaptador de corriente y PoE+ al mismo tiempo. Hacerlo puede provocar un mal funcionamiento del dispositivo.",
-            "Si recibe alimentación a través de un cable Ethernet, asegúrese de que esté conectado utilizando el estándar PoE+. El estándar recomendado es PoE+.",
+            "Si recibe alimentación a través de un cable Ethernet, asegúrese de que esté conectado usando el estándar PoE+. El estándar recomendado es PoE+.",
             "Verifique que el cable de red esté conectado de forma segura y que el sello de goma impermeable del conector Ethernet esté bien asegurado."
           ]
         }
@@ -297,7 +297,7 @@
   },
   {
     "category": {
-      "title": "Administrador Principal",
+      "title": "Administrador maestro (productos orientados a CE)",
       "hid": "admin",
       "contents": [
         {
@@ -307,9 +307,9 @@
             "biostation_2a",
             "xstation_2"
           ],
-          "question": "Después de actualizar el firmware en dispositivos existentes, la configuración de Master Admin no aparece.",
+          "question": "¿Es compatible la configuración de Administrador maestro después de una actualización de firmware desde un dispositivo existente?",
           "answer": [
-            "Los dispositivos actualizados con firmware de dispositivos existentes no admiten la configuración de Master Admin. Puede mejorar la seguridad del dispositivo reforzando los permisos de todos los administradores mediante la opción <span class='cmd'>Admin 2-Step Authentication</span>. Para obtener información detallada, consulte <a href='settings#admin-2-step-authentication'>Autenticación en dos pasos del administrador</a>."
+            "<b>Master Administrator</b> <b>solo es compatible en productos orientados a CE con una etiqueta con marca CE</b>. Use la etiqueta adhesiva en la parte posterior del producto para identificar productos <b>orientados a CE / globales (no CE)</b>. Para obtener detalles, consulte la <a href='getting-started#master-admin-support-policy'>Política de soporte del Master Administrator</a>."
           ]
         }
       ]

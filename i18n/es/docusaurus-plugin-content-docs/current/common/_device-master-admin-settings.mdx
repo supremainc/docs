@@ -1,26 +1,39 @@
-## Configurar administrador maestro
+## Configurar administrador maestro <Badge only>solo para modelos CE</Badge>
 
-La función <Cmd sid='ui_128' product='dev' /> mejora los privilegios administrativos generales del dispositivo para aumentar la seguridad del dispositivo y evitar el acceso y los cambios de configuración no autorizados. **Inscriba un administrador maestro** en los dispositivos nuevos con esta función. Solo el administrador maestro inscrito puede acceder al menú de administración para cambiar la configuración del dispositivo.
+La función <Cmd sid='ui_128' product='dev' /> mejora los privilegios administrativos generales del dispositivo para aumentar la seguridad del dispositivo y evitar el acceso y los cambios de configuración no autorizados. Esta feature se aplica solo a **Productos CE** para la región de la UE, y se requiere el **enrollment del Master Administrator** en **Productos CE**. Solo el Master Administrator enrolled puede acceder al menú de administrador y cambiar los settings del dispositivo.
 
-:::note
+:::info
 
-¿Qué es un administrador maestro?
-
-* Si se utiliza el dispositivo sin configurar un administrador, cualquiera podrá acceder al menú de administración y cambiar la configuración del dispositivo. La función de administrador maestro aplica la configuración administrativa general para solucionar estas vulnerabilidades de seguridad.
+* Esta feature es una policy obligatoria introducida para mejorar la seguridad de los **Productos CE** en la región de la UE, y no es compatible con **productos Global (No CE)**.
 
 * El administrador maestro no puede eliminarse directamente y solo se eliminará durante <Cmd sid='ui_072' product='dev' />.
 
 :::
 
+{/* 마스터 관리자 지원 정책 */}
+import MasterAdminSupportPolicy from './_master-admin-support-policy.mdx';
+
+<MasterAdminSupportPolicy />
+
+### Lógica de comportamiento durante la actualización del firmware {#firmware-upgrade-logic}
+
+Cuando actualiza el firmware de un dispositivo existente, la compatibilidad con <Cmd sid="ui_128" product='dev' /> y <Cmd sid="ui_073" product='dev' /> puede variar según la combinación de la **versión anterior a la actualización** y la **versión objetivo**.
+
+:::note
+
+Contacte a <Support /> para obtener información detallada sobre la disponibilidad del soporte por versión.
+
+:::
+
 ### Inscribir administrador maestro en un dispositivo nuevo
 
-En un dispositivo nuevo, <Cmd sid='ui_128' product='dev' /> debe registrarse desde el inicio; si no se registra, el uso del dispositivo se restringirá.
+En un dispositivo nuevo para Productos CE, debe enrolar <Cmd sid="ui_128" product='dev' /> desde el inicio. Si no lo enrola, el uso del dispositivo queda restringido.
 
 :::info
 
-* Cuando el dispositivo nuevo se inicie por primera vez, aparecerá la pantalla de registro de <Cmd sid='ui_128' product='dev' />. Si no se registra <Cmd sid='ui_128' product='dev' />, no podrá continuar a la siguiente pantalla.
+* En el primer arranque, aparece la pantalla de enrollment de <Cmd sid="ui_128" product="dev" />. Si no completa el enrollment, no puede pasar a la siguiente pantalla.
 
-* Registre <Cmd sid='ui_128' product='dev' /> para usar todas las funciones, incluso si conecta BioStar X y asigna un administrador global del dispositivo.
+* Aunque se conecte a BioStar X (o BioStar 2) y asigne un administrador para todo el dispositivo, debe inscribir <Cmd sid="ui_128" product='dev' /> directamente en el dispositivo para usar todas las funciones.
 
 * Los dispositivos nuevos no pueden realizar degradaciones de firmware.
 
@@ -58,7 +71,7 @@ En un dispositivo nuevo, <Cmd sid='ui_128' product='dev' /> debe registrarse des
 
 </Include>
 
-2. Se deben inscribir al menos dos tipos diferentes de credenciales para registrar <Cmd sid='ui_128' product='dev' />. Seleccione e inscriba las dos credenciales deseadas.
+2. Según la política de seguridad de la UE, <Cmd sid="ui_128" product='dev' /> debe inscribir credenciales de al menos dos tipos. Seleccione e inscriba las dos credenciales deseadas.
 
    <Include product='biostation_3'><Image src='/img/how-to/setting-master-admin-2.png' width='300px' /></Include>
 
@@ -71,33 +84,33 @@ En un dispositivo nuevo, <Cmd sid='ui_128' product='dev' /> debe registrarse des
    Las credenciales que se pueden inscribir para <Cmd sid='ui_128' product='dev' /> son las siguientes.
 
    <Table>
-     <Tbody>
-       <Row>
-         <Th>Tipo de credencial</Th>
-         <Th>Número de inscripciones</Th>
-         <Th>Condiciones</Th>
-       </Row>
-       <Row>
-         <Td>Tarjeta</Td>
-         <Td>Hasta 4</Td>
-         <Td>Admite solo los tipos CSN y Wiegand<br/>No se permite la duplicación dentro del mismo tipo</Td>
-       </Row>
-       <Row>
-         <Td>Rostro</Td>
-         <Td>Hasta 2</Td>
-         <Td>Solo se puede inscribir en dispositivos con el mismo algoritmo</Td>
-       </Row>
-       <Row>
-         <Td>Fingerprint</Td>
-         <Td>Hasta 2</Td>
-         <Td>-</Td>
-       </Row>
-       <Row>
-         <Td>PIN</Td>
-         <Td>1</Td>
-         <Td>Al menos 8 caracteres</Td>
-       </Row>
-     </Tbody>
+   <Tbody>
+   <Row>
+      <Th>Tipo de credencial</Th>
+      <Th>Número de inscripciones</Th>
+      <Th>Condiciones</Th>
+   </Row>
+   <Row>
+      <Td>Tarjeta</Td>
+      <Td>Hasta 4</Td>
+      <Td>Admite solo tipos CSN y Wiegand<br/>No se permite la inscripción duplicada dentro del mismo tipo</Td>
+   </Row>
+   <Row>
+      <Td>Rostro</Td>
+      <Td>Hasta 2</Td>
+      <Td>Inscriba solo en dispositivos con el mismo algoritmo</Td>
+   </Row>
+   <Row>
+      <Td>Fingerprint</Td>
+      <Td>Hasta 2</Td>
+      <Td>-</Td>
+   </Row>
+   <Row>
+      <Td>PIN</Td>
+      <Td>1</Td>
+      <Td>Al menos 8 dígitos (se aplica la normativa CE)</Td>
+   </Row>
+   </Tbody>
    </Table>
 
    :::note
@@ -105,8 +118,6 @@ En un dispositivo nuevo, <Cmd sid='ui_128' product='dev' /> debe registrarse des
    **Condiciones de enrolamiento**
 
    * Debe enrolar al menos dos tipos de credenciales.
-
-   * Las mismas condiciones se aplican tanto a dispositivos nuevos como a dispositivos con actualización de firmware.
 
    * Todas las credenciales compatibles con el dispositivo pueden utilizarse como medios de autenticación.
 
@@ -144,12 +155,7 @@ En un dispositivo nuevo, <Cmd sid='ui_128' product='dev' /> debe registrarse des
 
 </Include>
 
-### Información adicional
+{/* 안내 사항 */}
+import MasterAdminAdditionalInfo from './_master-admin-additional-info.mdx';
 
-* **Cambio manual de la clave hash del dispositivo**
-
-  Al cambiar manualmente la clave hash del dispositivo, aparecerá un mensaje de advertencia que indicará que los PIN de Master Admin se eliminarán. Confirme el mensaje antes de continuar.
-
-* **Restricción de transmisión de imágenes biométricas RS-485**
-
-  Las imágenes de credenciales biométricas no se transmiten por comunicación RS-485, por lo que aparecen imágenes sustitutas al ver el rostro del Master Admin registrado en dispositivos esclavos.
+<MasterAdminAdditionalInfo />
