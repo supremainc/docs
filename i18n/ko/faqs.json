@@ -205,14 +205,14 @@
   },
   {
     "category": {
-      "title": "마스터 관리자",
+      "title": "마스터 관리자 (CE향 제품)",
       "hid": "admin",
       "contents": [
         {
           "product": [ "biostation_3", "biolite_n2", "biostation_2a", "xstation_2" ],
-          "question": "기존 장치에서 펌웨어 업그레이드 후 마스터 관리자 설정이 보이지 않습니다.",
+          "question": "기존 장치에서 펌웨어를 업그레이드하면 마스터 관리자 설정이 지원되나요?",
           "answer": [
-            "기존 장치에서 펌웨어 업그레이드한 장치는 마스터 관리자 설정이 제공되지 않습니다. <span class='cmd'>관리자 2단계 인증</span> 옵션을 통해 전체 관리자의 권한을 강화하여 장치의 보안을 향상시킬 수 있습니다. 자세한 내용은 <a href='settings#admin-2-step-authentication'>관리자 2단계 인증</a> 옵션을 참조하세요."
+            "<b>마스터 관리자</b> 기능은 <b>CE 마크가 있는 라벨이 부착된 CE향 제품에서만 지원</b>됩니다. 제품 뒷면 라벨 스티커를 통해 <b>CE향 / 글로벌향 (Non-CE)</b> 제품을 식별할 수 있습니다. 자세한 내용은 <a href='getting-started#master-admin-support-policy'>마스터 관리자 지원 정책</a>을 참조하세요."
           ]
         }
       ]
