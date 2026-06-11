@@ -4,10 +4,30 @@
         "product": "BioStar X",
         "version": "1.0.2",
         "manuals": {
-            "ko": "BioStar X_Administrator_Guide_1.0.2_KO_260507.pdf",
-            "en": "BioStar X_Administrator_Guide_1.0.2_EN_260507.pdf"
+            "ko": "bsx/BioStar X_Administrator_Guide_1.0.2_KO_260507.pdf",
+            "en": "bsx/BioStar X_Administrator_Guide_1.0.2_EN_260507.pdf"
         },
-        "a_e": "Suprema_BioStar X_Platform_AE-Specification_1.0.1_260109.docx",
+        "a_e": "bsx/Suprema_BioStar X_Platform_AE-Specification_1.0.1_260109.docx",
+        "release_notes": {
+            "ko": "bsx/BioStar X_ReleaseNotes_1.0.2_KO_260507.pdf",
+            "en": "bsx/BioStar X_ReleaseNotes_1.0.2_EN_260507.pdf"
+        },
+        "release_date": "2026-05-07"
+    },
+    {
+        "category": "Platform",
+        "product": "BioStar Air",
+        "version": "2.12.0",
+        "manuals": {
+            "ko": "bsair/BioStar Air_AG_2.12.0_KO_260514.pdf",
+            "en": "bsair/BioStar Air_AG_2.12.0_EN_260514.pdf",
+            "es": "bsair/BioStar Air_AG_2.12.0_ES_260514.pdf",
+            "ja": "bsair/BioStar Air_AG_2.12.0_JA_260514.pdf"
+        },
+        "release_notes": {
+            "ko": "bsair/BioStar Air_ReleaseNotes_2.12.0_KO_260514.pdf",
+            "en": "bsair/BioStar Air_ReleaseNotes_2.12.0_EN_260514.pdf"
+        },
         "release_date": "2026-05-07"
     },
     {
