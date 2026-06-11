@@ -1,66 +1,89 @@
 import React, { useEffect, useRef, useCallback, useState } from "react";
+import { renderToStaticMarkup } from 'react-dom/server';
 import { TabulatorFull as Tabulator } from "tabulator-tables";
 import "tabulator-tables/dist/css/tabulator.min.css";
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Resources from "./resource.json";
+import Pdficon from "@site/static/img/menus/ico-pdf.svg";
+import Wordicon from "@site/static/img/menus/ico-word.svg";
 import "./styles.css";
 
 const BLOB_BASE_URL = "https://supremadocs.blob.core.windows.net/dochub/";
 
 const Locale = {
   ko: {
-    pageTitle: "DocHub",
+    brand: "CENTRAL REPOSITORY",
+    pageTitle: "Document Hub",
+    subtitle: "슈프리마 제품의 매뉴얼 및 기술 문서를 쉽게 찾고 다운로드하세요.",
     searchPlaceholder: "모델 또는 제품명으로 검색...",
     allCategories: "전체",
-    countSuffix: "개 제품",
-    colProduct: "제품",
-    colVersion: "버전",
-    colManuals: "사용자 가이드",
-    colReleaseNotes: "릴리스 노트",
-    colQuickguides: "퀵 가이드",
-    colAE: "A&E",
-    colDT: "드릴링 템플릿",
+    colProduct: "PRODUCT IDENTITY",
+    colVersion: "VERSION",
+    colDocumentation: "DOCUMENTATION & ASSETS",
+    docLabels: {
+      manuals: "사용자 가이드",
+      release_notes: "릴리스 노트",
+      dt: "드릴링 템플릿",
+      a_e: "A&E",
+      quickguides: "퀵 가이드",
+    },
+    colReleaseDate: "RELEASED",
   },
   en: {
-    pageTitle: "DocHub",
-    searchPlaceholder: "Search by model or series...",
+    brand: "CENTRAL REPOSITORY",
+    pageTitle: "Document Hub",
+    subtitle: "Easily find and download all Suprema product manuals and technical documentation.",
+    searchPlaceholder: "Search by model or product name...",
     allCategories: "All",
-    countSuffix: " products",
-    colProduct: "Product",
-    colVersion: "Version",
-    colManuals: "User Guide",
-    colReleaseNotes: "Release Notes",
-    colQuickguides: "Quick Guide",
-    colAE: "A&E",
-    colDT: "Datasheet",
+    colProduct: "PRODUCT IDENTITY",
+    colVersion: "VERSION",
+    colDocumentation: "DOCUMENTATION & ASSETS",
+    docLabels: {
+      manuals: "Manual",
+      release_notes: "Release Notes",
+      dt: "Drilling Template",
+      a_e: "A&E",
+      quickguides: "Quick Guide",
+    },
+    colReleaseDate: "RELEASED",
   },
   ja: {
-    pageTitle: "DocHub",
+    brand: "CENTRAL REPOSITORY",
+    pageTitle: "Document Hub",
+    subtitle: "Suprema製品のマニュアルおよび技術文書を簡単に検索・ダウンロードできます。",
     searchPlaceholder: "モデルまたは製品名で検索...",
     allCategories: "すべて",
-    countSuffix: " 製品",
-    colProduct: "製品",
-    colVersion: "バージョン",
-    colManuals: "ユーザーガイド",
-    colReleaseNotes: "リリースノート",
-    colQuickguides: "クイックガイド",
-    colAE: "インストールガイド",
-    colDT: "データシート",
+    colProduct: "PRODUCT IDENTITY",
+    colVersion: "VERSION",
+    colDocumentation: "DOCUMENTATION & ASSETS",
+    docLabels: {
+      manuals: "ユーザーガイド",
+      release_notes: "リリースノート",
+      dt: "ドリルテンプレート",
+      a_e: "A&E",
+      quickguides: "クイックガイド",
+    },
+    colReleaseDate: "RELEASED",
   },
   es: {
-    pageTitle: "DocHub",
-    searchPlaceholder: "Buscar por modelo o serie...",
+    brand: "CENTRAL REPOSITORY",
+    pageTitle: "Document Hub",
+    subtitle: "Encuentre y descargue fácilmente los manuales de productos Suprema y documentación técnica.",
+    searchPlaceholder: "Buscar por modelo o nombre de producto...",
     allCategories: "Todo",
-    countSuffix: " productos",
-    colProduct: "Producto",
-    colVersion: "Versión",
-    colManuals: "Guía del usuario",
-    colReleaseNotes: "Notas de versión",
-    colQuickguides: "Guía rápida",
-    colAE: "Guía de instalación",
-    colDT: "Hoja de datos",
+    colProduct: "PRODUCT IDENTITY",
+    colVersion: "VERSION",
+    colDocumentation: "DOCUMENTATION & ASSETS",
+    docLabels: {
+      manuals: "Manual",
+      release_notes: "Notas de versión",
+      dt: "Plantilla de perforación",
+      a_e: "A&E",
+      quickguides: "Guía rápida",
+    },
+    colReleaseDate: "RELEASED",
   },
 };
 
@@ -75,7 +98,6 @@ function DocHub({ data }) {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
-  const [productCount, setProductCount] = useState(data.length);
   const selectedCategoryRef = useRef("all");
   const searchQueryRef = useRef("");
   const localeData = useLocaleData();
@@ -110,10 +132,21 @@ function DocHub({ data }) {
   useEffect(() => {
     if (!tableRef.current) return;
 
+    const { docLabels } = localeData;
+    const DOC_FIELDS = [
+      { key: "manuals", label: docLabels.manuals },
+      { key: "release_notes", label: docLabels.release_notes },
+      { key: "dt", label: docLabels.dt },
+      { key: "a_e", label: docLabels.a_e },
+    ];
+
     const getUrl = (val) => {
       if (!val) return null;
       if (typeof val === "object") {
-        return val[currentLocale] || val["en"] || Object.values(val).find(Boolean);
+        if (currentLocale === "ko") {
+          return val["ko"] || val["en"] || null;
+        }
+        return val[currentLocale] || val["en"] || null;
       }
       return val;
     };
@@ -123,82 +156,77 @@ function DocHub({ data }) {
       const models = Array.isArray(row.models) ? row.models.join(", ") : "";
       return `<div class="dochub-product-cell">
         <span class="dochub-product-name">${row.product}</span>
-        ${models ? `<span class="dochub-models">${models}</span>` : ""}
+        ${models ? `<span class="dochub-models"><span class="dochub-model-label">MODEL:</span> ${models}</span>` : ""}
       </div>`;
     };
 
     const versionFormatter = (cell) => {
       const v = cell.getValue();
       if (!v) return "";
-      return `<span class="dochub-version-badge">FW ${v}</span>`;
+      const row = cell.getRow().getData();
+      if (row.category === 'Platform') {
+        return `<span class="dochub-version-badge platform">SW ${v}</span>`;
+      } else {
+        return `<span class="dochub-version-badge">FW ${v}</span>`;
+      }
     };
 
-    const pdfFormatter = (cell) => {
-      const url = getUrl(cell.getValue());
-      if (!url) return "";
-      return `<a href="${BLOB_BASE_URL}${url}" target="_blank" rel="noopener noreferrer" class="dochub-pdf-link" title="Download PDF">
-        <img src="/img/menus/ico-air-report.svg" class="dochub-pdf-icon" alt="PDF" />
-      </a>`;
+    const releaseDateFormatter = (cell) => {
+      const row = cell.getRow().getData();
+      const v = row.release_date;
+      if (!v) return "";
+      const date = new Date(v);
+      if (isNaN(date)) return v; // If not a valid date, return original value
+      return `<span class="dochub-release-date">${date.toLocaleDateString(currentLocale, { year: 'numeric', month: 'short', day: 'numeric' })}</span>`;
+    }
+
+    const pdfIconHtml = renderToStaticMarkup(React.createElement(Pdficon, { className: 'dochub-doc-icon' }));
+    const wordIconHtml = renderToStaticMarkup(React.createElement(Wordicon, { className: 'dochub-doc-icon' }));
+
+    const docFormatter = (cell) => {
+      const row = cell.getRow().getData();
+      const items = DOC_FIELDS.map(({ key, label }) => {
+        const url = getUrl(row[key]);
+        if (!url) return "";
+        const iconHtml = key === 'a_e' ? wordIconHtml : pdfIconHtml;
+        return `<a href="${BLOB_BASE_URL}${url}" target="_blank" rel="noopener noreferrer" class="dochub-doc-item" download>
+          ${iconHtml}
+          <span class="dochub-doc-label">${label}</span>
+        </a>`;
+      }).filter(Boolean);
+      return `<div class="dochub-doc-items">${items.join("")}</div>`;
     };
 
     const table = new Tabulator(tableRef.current, {
       data: data,
       layout: "fitColumns",
-      pagination: true,
-      paginationSize: 20,
+      renderVertical: "virtual",
       columns: [
         {
           title: localeData.colProduct,
           field: "product",
           formatter: productFormatter,
-          minWidth: 200,
+          maxWidth: 420,
         },
         {
           title: localeData.colVersion,
           field: "version",
           formatter: versionFormatter,
-          width: 110,
+          width: 160,
           hozAlign: "left",
           headerSort: true,
         },
         {
-          title: localeData.colManuals,
+          title: localeData.colDocumentation,
           field: "manuals",
-          formatter: pdfFormatter,
-          width: 110,
-          hozAlign: "center",
+          formatter: docFormatter,
+          minWidth: 700,
           headerSort: false,
         },
         {
-          title: localeData.colReleaseNotes,
-          field: "release_notes",
-          formatter: pdfFormatter,
-          width: 120,
-          hozAlign: "center",
-          headerSort: false,
-        },
-        {
-          title: localeData.colQuickguides,
-          field: "quickguides",
-          formatter: pdfFormatter,
-          width: 110,
-          hozAlign: "center",
-          headerSort: false,
-        },
-        {
-          title: localeData.colAE,
-          field: "a_e",
-          formatter: pdfFormatter,
-          width: 110,
-          hozAlign: "center",
-          headerSort: false,
-        },
-        {
-          title: localeData.colDT,
-          field: "dt",
-          formatter: pdfFormatter,
-          width: 110,
-          hozAlign: "center",
+          title: localeData.colReleaseDate,
+          field: "release date",
+          formatter: releaseDateFormatter,
           headerSort: false,
         },
       ],
@@ -208,11 +236,6 @@ function DocHub({ data }) {
 
     table.on("tableBuilt", () => {
       applyFilters(table, searchQueryRef.current, selectedCategoryRef.current);
-      setProductCount(table.getData("active").length);
-    });
-
-    table.on("dataFiltered", (_filters, rows) => {
-      setProductCount(rows.length);
     });
 
     return () => {
@@ -227,11 +250,12 @@ function DocHub({ data }) {
 
   return (
     <div className="dochub-page">
-      {/* 페이지 헤더 */}
+      {/* 헤더 */}
       <div className="dochub-header">
         <div className="dochub-header-left">
+          <span className="dochub-brand">{localeData.brand}</span>
           <h1 className="dochub-title">{localeData.pageTitle}</h1>
-          <span className="dochub-brand">Technical Documentation</span>
+          <p className="dochub-subtitle">{localeData.subtitle}</p>
         </div>
         <div className="dochub-search-bar">
           <svg className="dochub-search-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -248,61 +272,27 @@ function DocHub({ data }) {
         </div>
       </div>
 
-      {/* 콘텐츠 영역: 사이드바 + 메인 */}
-      <div className="dochub-body">
-        {/* 사이드바 */}
-        <aside className="dochub-sidebar">
-          <ul className="dochub-category-list">
-            <li
-              className={`dochub-category-item${selectedCategory === "all" ? " active" : ""}`}
-              onClick={() => setSelectedCategory("all")}
-            >
-              {localeData.allCategories}
-            </li>
-            {categories.map(cat => (
-              <li
-                key={cat}
-                className={`dochub-category-item${selectedCategory === cat ? " active" : ""}`}
-                onClick={() => setSelectedCategory(cat)}
-              >
-                {cat}
-              </li>
-            ))}
-          </ul>
-        </aside>
-
-        {/* 메인 */}
-        <main className="dochub-main">
-          {/* 상단 카테고리 탭 */}
-          <div className="dochub-tabs-bar">
-            <div className="dochub-tabs">
-              <button
-                className={`dochub-tab${selectedCategory === "all" ? " active" : ""}`}
-                onClick={() => setSelectedCategory("all")}
-              >
-                {localeData.allCategories}
-              </button>
-              {categories.map(cat => (
-                <button
-                  key={cat}
-                  className={`dochub-tab${selectedCategory === cat ? " active" : ""}`}
-                  onClick={() => setSelectedCategory(cat)}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* 제품 수 */}
-          <div className="dochub-count">
-            {productCount}{localeData.countSuffix}
-          </div>
-
-          {/* 테이블 */}
-          <div ref={tableRef} className="dochub-table" />
-        </main>
+      {/* Pill 카테고리 탭 */}
+      <div className="dochub-tabs">
+        <button
+          className={`dochub-tab${selectedCategory === "all" ? " active" : ""}`}
+          onClick={() => setSelectedCategory("all")}
+        >
+          {localeData.allCategories}
+        </button>
+        {categories.map(cat => (
+          <button
+            key={cat}
+            className={`dochub-tab${selectedCategory === cat ? " active" : ""}`}
+            onClick={() => setSelectedCategory(cat)}
+          >
+            {cat}
+          </button>
+        ))}
       </div>
+
+      {/* 테이블 */}
+      <div ref={tableRef} className="dochub-table" />
     </div>
   );
 }
