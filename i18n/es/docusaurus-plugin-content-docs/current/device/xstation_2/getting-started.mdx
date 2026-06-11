@@ -195,6 +195,8 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 </Column>
 </Columns>
 
+<PageBreak />
+
 {/* 마스터 관리자 설정하기 */}
 import Masteradminsettings from '../../common/_device-master-admin-settings.mdx'
 
@@ -211,9 +213,15 @@ import DocumentA from '../../common/_enroll-fingerprint.mdx'
 
 Emita un QR/código de barras al usuario para usarlo como medio de autenticación. Escanee el QR/código de barras correctamente según las indicaciones en la pantalla para mejorar la tasa de reconocimiento.
 
-<Badge only>XS2-DPB, XS2-APB</Badge>
+#### Cámara
+
+<div className='grid-container'>
 
 <Image src='/img/device/qr-scanning-xs2.svg' className='none' alone />
+<Image src='/img/device/qr-scanning-xs2-q-camera.svg' className='none' alone />
+<Image src='/img/device/qr-scanning-xs2-finger.svg' className='none' alone />
+
+</div>
 
 * Mantenga la distancia entre la cámara del dispositivo y el QR/código de barras a 5-20 cm.
 
@@ -223,25 +231,13 @@ Emita un QR/código de barras al usuario para usarlo como medio de autenticació
 
 * Si no sigue las instrucciones en la pantalla, el reconocimiento del QR/código de barras puede ser lento o fallar.
 
-<Badge only>XS2-QDPB, XS2-QAPB</Badge>
+#### Escáner de QR/código de barras <Badge only>XS2-QDPB, XS2-QAPB</Badge>
 
 <Image src='/img/device/qr-scanning-xs2-q.svg' className='none' alone />
 
 * Mantenga la distancia entre la unidad de reconocimiento de QR/código de barras del dispositivo y el QR/código de barras a 5-20 cm.
 
 * Asegúrese de que la unidad de reconocimiento de QR/código de barras del dispositivo esté horizontal con respecto al QR/código de barras que se escanea y coloque el haz guía en el centro del QR/código de barras.
-
-* Si autentica con un QR/código de barras descargado en un dispositivo móvil, ajuste el brillo del dispositivo para que la pantalla sea claramente visible.
-
-* Si no sigue las instrucciones en la pantalla, el reconocimiento del QR/código de barras puede ser lento o fallar.
-
-<Badge only>XS2-ODPB, XS2-OAPB</Badge>
-
-<Image src='/img/device/qr-scanning-xs2-finger.svg' className='none' alone />
-
-* Mantenga la distancia entre la cámara del dispositivo y el QR/código de barras a 5-20 cm.
-
-* Coloque el QR/código de barras de modo que quede centrado en la pantalla de escaneo del dispositivo.
 
 * Si autentica con un QR/código de barras descargado en un dispositivo móvil, ajuste el brillo del dispositivo para que la pantalla sea claramente visible.
 

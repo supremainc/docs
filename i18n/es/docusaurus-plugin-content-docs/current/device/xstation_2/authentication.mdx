@@ -140,35 +140,50 @@ Configura la autenticación por QR/código de barras.
 
 1. Haz clic en <Image src='/img/common/ico-menu2.svg' ico alone /> y autentícate con privilegios de administrador.
 
-2. Tras presionar <Cmd sid='ui_256' product='dev' />, activa <Cmd sid='ui_043' product='dev' /> en <Cmd sid='ui_044' product='dev' />.
+2. Después de presionar <Cmd sid='ui_256' product='dev' />, configure el método de autenticación de QR/Barcode en <Cmd sid='ui_044' product='dev' />.
 
 <Badge only>XS2-QDPB, XS2-QAPB</Badge>
 
-<Image src='/img/device/xs2-auth3.png' />
+<div className='grid-container'>
 
-* <Cmd sid='ui_043' product='dev' />: Selecciona si utilizar la autenticación por QR/código de barras.
+<Image src='/img/device/xs2-qr-barcode-scanner.png' />
+<Image src='/img/device/xs2-qr-barcode-camera.png' />
 
-* <Cmd sid='ui_374' product='dev' />: Si el QR/código de barras no se escanea dentro del tiempo establecido, la autenticación falla. Establece entre 4 y 10 segundos.
+</div>
 
-* <Cmd sid='ui_329' product='dev' />: Configura la autenticación con un código QR que contenga los mismos datos que la tarjeta CSN o tarjeta Wiegand emitida al usuario.
+* <Cmd sid='ui_043' product='dev' />: Configure el método de autenticación de QR/Barcode. Seleccione <Cmd sid='ui_330' product='dev' /> o <Cmd sid='ui_385' product='dev' /> para autenticarse con la cámara frontal del dispositivo o con el escáner de QR/Barcode inferior, respectivamente. El valor predeterminado es <Cmd sid='ui_385' product='dev' />.
+
+   :::info
+
+   Se requiere una licencia independiente del dispositivo para usar <Cmd sid='ui_330' product='dev' />. Para obtener más información, consulta [Licencia](settings#license).
+
+   :::
+
+* <Cmd sid='ui_374' product='dev' />: Si el QR/código de barras no se escanea dentro del tiempo establecido, la autenticación falla. Establece entre 4 y 10 segundos. Disponible cuando <Cmd sid='ui_043' product='dev' /> está configurado en <Cmd sid='ui_385' product='dev' />.
+
+* <Cmd sid='ui_375' product='dev' />: Si el QR/código de barras no se escanea dentro del tiempo establecido, la autenticación falla. Establece entre 3 y 20 segundos. Disponible cuando <Cmd sid='ui_043' product='dev' /> está configurado en <Cmd sid='ui_330' product='dev' />.
+
+* <Cmd sid='ui_140' product='dev' />: Establece la sensibilidad para detectar movimiento alrededor del dispositivo. Disponible cuando <Cmd sid='ui_043' product='dev' /> está configurado en <Cmd sid='ui_330' product='dev' />.
+
+* <Cmd sid='ui_329' product='dev' />: Configura la autenticación con un código QR que contenga los mismos datos que la tarjeta CSN o tarjeta Wiegand emitida al usuario. Disponible cuando <Cmd sid='ui_043' product='dev' /> está configurado en <Cmd sid='ui_330' product='dev' /> o <Cmd sid='ui_385' product='dev' />.
 
 <Badge only>XS2-DPB, XS2-APB, XS2-ODPB, XS2-OAPB</Badge>
 
-<Image src='/img/device/xs2-auth3-1.png' />
+<Image src='/img/device/xs2-qr-barcode-camera.png' />
 
-* <Cmd sid='ui_043' product='dev' />: Selecciona si utilizar la autenticación por QR/código de barras.
+* <Cmd sid='ui_043' product='dev' />: Configure el método de autenticación de QR/Barcode. Seleccione <Cmd sid='ui_330' product='dev' /> para autenticarse con la cámara frontal del dispositivo. Cuando <Cmd sid='ui_043' product='dev' /> está configurado en <Cmd sid='ui_330' product='dev' />, puede usar <Cmd sid='ui_375' product='dev' />, <Cmd sid='ui_140' product='dev' /> y <Cmd sid='ui_329' product='dev' />.
 
-* <Cmd sid='ui_375' product='dev' />: Si el QR/código de barras no se escanea dentro del tiempo establecido, la autenticación falla. Establece entre 3 y 20 segundos. Disponible solo cuando <Cmd sid='ui_043' product='dev' /> está activado.
+   :::info
 
-* <Cmd sid='ui_140' product='dev' />: Establece la sensibilidad para detectar movimiento alrededor del dispositivo. Disponible solo cuando <Cmd sid='ui_043' product='dev' /> está activado.
+   Se requiere una licencia independiente del dispositivo para usar <Cmd sid='ui_330' product='dev' />. Para obtener más información, consulta [Licencia](settings#license).
 
-* <Cmd sid='ui_329' product='dev' />: Configura la autenticación con un código QR que contenga los mismos datos que la tarjeta CSN o tarjeta Wiegand emitida al usuario. Disponible solo cuando <Cmd sid='ui_043' product='dev' /> está activado.
+   :::
 
-:::info
+* <Cmd sid='ui_375' product='dev' />: Si el QR/código de barras no se escanea dentro del tiempo establecido, la autenticación falla. Establece entre 3 y 20 segundos.
 
-Para usar la autenticación <Cmd sid='ui_043' product='dev' /> en los modelos XS2-DPB, XS2-APB, XS2-ODPB y XS2-OAPB, activa <Cmd sid='ui_043' product='dev' /> en <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_044' product='dev' /> y adquiere una licencia de dispositivo adicional. Para obtener más información, consulta [Licencia](settings#license).
+* <Cmd sid='ui_140' product='dev' />: Establece la sensibilidad para detectar movimiento alrededor del dispositivo.
 
-:::
+* <Cmd sid='ui_329' product='dev' />: Configura la autenticación con un código QR que contenga los mismos datos que la tarjeta CSN o tarjeta Wiegand emitida al usuario.
 
 ## Configuraciones de huella digital <Badge only>XS2-ODPB, XS2-OAPB</Badge>
 
@@ -192,11 +207,11 @@ Cambia los ajustes de autenticación por huella digital.
 
    * <Cmd sid='ui_342' product='dev' />: Configura el formato de plantilla de huella. <Cmd sid='ui_057' product='dev' /> está configurado por defecto. Al cambiar el formato de la plantilla, las huellas digitales guardadas anteriormente quedarán inutilizables, así que tenga cuidado al modificarlo.
 
-     :::info
+      :::info
 
-     Elimina toda la información de huellas dactilares de los usuarios y luego cambia el formato de la plantilla. Si hay información de huellas dactilares registrada, no es posible cambiar el formato de la plantilla. 
+      Elimina toda la información de huellas dactilares de los usuarios y luego cambia el formato de la plantilla. Si hay información de huellas dactilares registrada, no es posible cambiar el formato de la plantilla. 
 
-     :::
+      :::
 
    * <Cmd sid='ui_198' product='dev' />: Configura en <Cmd sid='ui_277' product='dev' /> para encender el sensor de huella cuando detecte el dedo del usuario. Al configurarse en <Cmd sid='ui_362' product='dev' />, el sensor permanece encendido aunque no se estén escaneando huellas.
 
