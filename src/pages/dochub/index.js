@@ -200,7 +200,12 @@ function DocHub({ data }) {
         const url = getUrl(row[key]);
         if (!url) return "";
         const iconHtml = key === 'a_e' ? wordIconHtml : pdfIconHtml;
-        return `<a href="${BLOB_BASE_URL}${url}" target="_blank" rel="noopener noreferrer" class="dochub-doc-item" download>
+        const fullUrl = `${BLOB_BASE_URL}${url}`;
+        return `<a href="${fullUrl}" target="_blank" rel="noopener noreferrer" class="dochub-doc-item"
+          data-product="${row.product}"
+          data-doc-type="${key}"
+          data-doc-label="${label}"
+          download>
           ${iconHtml}
           <span class="dochub-doc-label">${label}</span>
         </a>`;
@@ -264,6 +269,28 @@ function DocHub({ data }) {
   useEffect(() => {
     applyFilters(tabulatorInstance.current, searchQuery, selectedCategory);
   }, [searchQuery, selectedCategory, applyFilters]);
+
+  useEffect(() => {
+    const el = tableRef.current;
+    if (!el) return;
+
+    const handleClick = (e) => {
+      const link = e.target.closest("a.dochub-doc-item");
+      if (!link) return;
+
+      window.gtag?.("event", "file_download", {
+        file_name: link.href.split("/").pop(),
+        file_extension: link.href.split(".").pop(),
+        link_url: link.href,
+        link_text: link.dataset.docLabel,
+        doc_type: link.dataset.docType,
+        product_name: link.dataset.product,
+      });
+    };
+
+    el.addEventListener("click", handleClick);
+    return () => el.removeEventListener("click", handleClick);
+  }, []);
 
   return (
     <div className="dochub-page">
