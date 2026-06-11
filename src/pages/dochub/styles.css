@@ -266,6 +266,10 @@
   color: var(--ifm-font-color-title);
 }
 
+.dochub-table .tabulator-row:hover .dochub-product-name {
+  color: var(--ifm-color-cmd);
+}
+
 .dochub-models {
   font-size: 13px;
   color: var(--ifm-font-color-header);
@@ -302,8 +306,8 @@
   align-items: center;
   gap: 0.35rem;
   text-decoration: none;
-  color: var(--ifm-font-color-tableBody);
-  font-size: 13px;
+  color: var(--ifm-font-color-title);
+  font-size: 14px;
   padding: 0.15rem 0;
   transition: color 0.15s;
 }
