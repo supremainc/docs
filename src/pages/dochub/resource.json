@@ -1,0 +1,125 @@
+[
+    {
+        "category": "Platform",
+        "product": "BioStar X",
+        "version": "1.0.2",
+        "manuals": {
+            "ko": "BioStar X_Administrator_Guide_1.0.2_KO_260507.pdf",
+            "en": "BioStar X_Administrator_Guide_1.0.2_EN_260507.pdf"
+        },
+        "a_e": "Suprema_BioStar X_Platform_AE-Specification_1.0.1_260109.docx",
+        "release_date": "2026-05-07"
+    },
+    {
+        "category": "Biometric Device",
+        "product": "BioStation 3",
+        "models": [
+            "BS3-DB",
+            "BS3-APWB"
+        ],
+        "version": "1.4.3",
+        "manuals": {
+            "ko": "BioStation 3_IG_1.10_KO_250930.pdf",
+            "en": "BioStation 3_IG_1.10_EN_250930.pdf",
+            "es": "BioStation 3_IG_1.10_ES_250930.pdf",
+            "ja": "BioStation 3_IG_1.10_JA_250930.pdf"
+        },
+        "release_notes": {
+            "ko": "BioStation 3_RevisionNotes_1.4.3_KO_260410.pdf",
+            "en": "BioStation 3_RevisionNotes_1.4.3_EN_260410.pdf"
+        },
+        "a_e": "SUPREMA_BioStation_3_AE-Specification_250723.docx",
+        "dt": {
+            "ko": "BioStation 3_DrillingTemplate_KO.pdf",
+            "en": "BioStation 3_DrillingTemplate_EN.pdf"
+        },
+        "release_date": "2026-04-10"
+    },
+    {
+        "category": "Biometric Device",
+        "product": "BioStation 3 Max",
+        "models": [
+            "BS3M-DB",
+            "BS3M-ODB",
+            "BS3M-APB",
+            "BS3M-OAPB"
+        ],
+        "version": "1.0.0",
+        "manuals": {
+            "ko": "BioStation 3 Max_UG_1.00_KO_260513.pdf",
+            "en": "BioStation 3 Max_UG_1.00_EN_260513.pdf",
+            "es": "BioStation 3 Max_UG_1.00_ES_260513.pdf",
+            "ja": "BioStation 3 Max_UG_1.00_JA_260513.pdf"
+        },
+        "a_e": "SUPREMA_BioStation_3_Max_AE-Specification_260507.docx",
+        "dt": {
+            "ko": "BioStation 3 Max(DB_APB)_DrillingTemplate_1.00_KO_WEB_260113.pdf",
+            "en": "BioStation 3 Max(DB_APB)_DrillingTemplate_1.00_EN_WEB_260113.pdf"
+        },
+        "release_date": "2026-05-13"
+    },
+    {
+        "category": "RF/Mobile",
+        "product": "XPass Q2",
+        "models": [
+            "XPQ2-DB"
+        ],
+        "version": "1.0.0",
+        "manuals": {
+            "ko": "XPass Q2_IG_1.00_KO_260403.pdf",
+            "en": "XPass Q2_IG_1.00_EN_260403.pdf",
+            "es": "XPass Q2_IG_1.00_ES_260403.pdf",
+            "ja": "XPass Q2_IG_1.00_JA_260403.pdf"
+        },
+        "a_e": "SUPREMA_XPass_Q2_AE-Specification_260406.docx",
+        "dt": {
+            "ko": "XPass Q2_DrillingTemplate_KO_WEB_260331.pdf",
+            "en": "XPass Q2_DrillingTemplate_EN_WEB_260331.pdf"
+        },
+        "release_date": "2026-04-03"
+    },
+    {
+        "category": "Access Controller",
+        "product": "CoreStation",
+        "models": [
+            "CS-40"
+        ],
+        "version": "1.7.2",
+        "manuals": {
+            "ko": "CoreStation_IG_1.12_KO_250730.pdf",
+            "en": "CoreStation_IG_1.12_EN_250730.pdf",
+            "es": "CoreStation_IG_1.12_ES_250730.pdf",
+            "ja": "CoreStation_IG_1.12_JA_250730.pdf"
+        },
+        "release_notes": {
+            "ko": "CoreStation_ReleaseNotes_1.7.2_KO_260430.pdf",
+            "en": "CoreStation_ReleaseNotes_1.7.2_EN_260430.pdf"
+        },
+        "a_e": "SUPREMA_CoreStation_AE-Specification_250731.docx",
+        "release_date": "2025-04-30"
+    },
+    {
+        "category": "Peripherals",
+        "product": "Input Module",
+        "models": [
+            "IM-120"
+        ],
+        "version": "1.0.0",
+        "manuals": {
+            "ko": "Input Module_IG_1.04_KO_240213.0.pdf",
+            "en": "Input Module_IG_1.04_EN_240213.0.pdf",
+            "es": "Input Module_IG_1.04_ES_240213.0.pdf",
+            "ja": "Input Module_IG_1.04_JA_240213.0.pdf"
+        },
+        "release_notes": {
+            "ko": "IM-120_RevisionNotes_1.0.0_KO.pdf",
+            "en": "IM-120_RevisionNotes_1.0.0_EN.pdf"
+        },
+        "dt": {
+            "ko": "IM-120_DrillingTemplate_KO_WEB.pdf",
+            "en": "IM-120_DrillingTemplate_EN_WEB.pdf"
+        },
+        "a_e": "SUPREMA_IM-120_AE-Specification_240213.docx",
+        "release_date": "2024-02-13"
+    }
+]
