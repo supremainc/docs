@@ -214,7 +214,7 @@
   border-right: none;
 }
 
-.tabulator .tabulator-header .tabulator-col .tabulator-col-content {
+.dochub-table .tabulator-header .tabulator-col .tabulator-col-content {
   padding: 20px 32px;
 }
 
@@ -226,7 +226,7 @@
   color: var(--ifm-font-color-header);
 }
 
-.tabulator .tabulator-tableholder .tabulator-table {
+.dochub-table .tabulator-tableholder .tabulator-table {
   background: transparent;
 }
 
@@ -317,7 +317,6 @@
   width: 20px;
   height: 20px;
   flex-shrink: 0;
-  /* filter: invert(15%) sepia(80%) saturate(700%) hue-rotate(310deg) brightness(80%) contrast(120%); */
 }
 
 .dochub-doc-label {
@@ -370,15 +369,6 @@
   background: rgba(163, 35, 67, 0.07) !important;
 }
 
-[data-theme='dark'] .dochub-table .tabulator-footer {
-  border-color: #242424 !important;
-}
-
-[data-theme='dark'] .dochub-table .tabulator-page {
-  background: #1e1e1e;
-  border-color: #3a3a3a;
-  color: #888;
-}
 
 [data-theme='dark'] .dochub-doc-item {
   color: #888;
@@ -386,10 +376,6 @@
 
 [data-theme='dark'] .dochub-doc-item:hover {
   color: var(--ifm-color-cmd-lightest);
-}
-
-[data-theme='dark'] .dochub-doc-icon {
-  filter: invert(75%) sepia(40%) saturate(500%) hue-rotate(300deg) brightness(110%) contrast(100%);
 }
 
 /* ── Responsive ──────────────────────────────────────── */
@@ -425,7 +411,7 @@
     padding: 14px 16px;
   }
 
-  .tabulator .tabulator-header .tabulator-col .tabulator-col-content {
+  .dochub-table .tabulator-header .tabulator-col .tabulator-col-content {
     padding: 14px 16px;
   }
 
@@ -435,7 +421,7 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .tabulator-row.tabulator-selectable:hover {
+  .dochub-table .tabulator-row.tabulator-selectable:hover {
     cursor: auto;
   }
 }
