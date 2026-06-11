@@ -530,5 +530,17 @@
   "sidebar.aicamwebserver.category.시스템 구성하기": {
     "message": "Configure System",
     "description": "The label for category '시스템 구성하기' in sidebar 'aicamwebserver'"
+  },
+  "sidebar.genetec.category.Genetec": {
+    "message": "Genetec",
+    "description": "The label for category 'Genetec' in sidebar 'genetec'"
+  },
+  "sidebar.gallagher.category.Gallagher": {
+    "message": "Gallagher",
+    "description": "The label for category 'Gallagher' in sidebar 'gallagher'"
+  },
+  "sidebar.ccure.category.C•CURE 9000": {
+    "message": "C•CURE 9000",
+    "description": "The label for category 'C•CURE 9000' in sidebar 'ccure'"
   }
 }

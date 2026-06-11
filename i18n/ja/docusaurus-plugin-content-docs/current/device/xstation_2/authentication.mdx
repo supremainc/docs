@@ -41,7 +41,7 @@ keywords:
    | 区分 | 説明 |
    | :-: | --- |
    | 指紋 | - <Image src='/img/common/ico-authmode-fingerprint.png' ico alone />：指紋のみを使用するモードです。<br/>- <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：指紋で認証した後、PIN を入力するモードです。 |
-   | カード / QRコード | - <Image src='/img/common/ico-authmode-card-bs3.png' ico alone />：カード / QRコードのみを使用するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone />：カード／QRコードで認証した後、指紋で認証するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：カード / QRコードで認証した後にPINを入力するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：カード／QRコードで認証した後、指紋で認証するか PIN を入力するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：カード／QRコードで認証した後、指紋認証と PIN 入力を両方使用するモードです。 |
+   | カード / QR コード | - <Image src='/img/common/ico-authmode-card-bs3.png' ico alone />：カード / QRコードのみを使用するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone />：カード／QRコードで認証した後、指紋で認証するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：カード / QRコードで認証した後にPINを入力するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：カード／QRコードで認証した後、指紋で認証するか PIN を入力するモードです。<br/>- <Image src='/img/common/ico-authmode-card-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：カード／QRコードで認証した後、指紋認証と PIN 入力を両方使用するモードです。 |
    | ID | - <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone />：ID を入力した後、指紋で認証するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：ID を入力した後に PIN を入力するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> / <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：ID を入力した後、指紋で認証するか PIN を入力するモードです。<br/>- <Image src='/img/common/ico-authmode-id-bs3.png' ico alone /> + <Image src='/img/common/ico-authmode-fingerprint.png' ico alone /> + <Image src='/img/common/ico-authmode-pin-bs3.png' ico alone />：ID を入力した後、指紋認証と PIN 入力を両方使用するモードです。 |
 
    </div>
@@ -140,35 +140,50 @@ QR/バーコード認証を設定できます。
 
 1. <Image src='/img/common/ico-menu2.svg' ico alone />を押して、管理者権限の認証手段で認証してください。
 
-2. <Cmd sid='ui_256' product='dev' /> を押してから <Cmd sid='ui_044' product='dev' /> で <Cmd sid='ui_043' product='dev' /> を有効にしてください。
+2. <Cmd sid='ui_256' product='dev' /> を押した後、<Cmd sid='ui_044' product='dev' /> で QR/バーコード認証方式を設定します。
 
 <Badge only>XS2-QDPB, XS2-QAPB</Badge>
 
-<Image src='/img/device/xs2-auth3.png' />
+<div className='grid-container'>
 
-* <Cmd sid='ui_043' product='dev' />：QR/バーコード認証の使用有無を選択できます。
+<Image src='/img/device/xs2-qr-barcode-scanner.png' />
+<Image src='/img/device/xs2-qr-barcode-camera.png' />
 
-* <Cmd sid='ui_374' product='dev' />：設定した時間内に QR/バーコードをスキャンしない場合、認識は失敗します。 4～10 秒に設定できます。
+</div>
 
-* <Cmd sid='ui_329' product='dev' />：付与した CSN カードまたは Wiegand カードと同じデータを持つ QR コードで認証できるように設定します。
+* <Cmd sid='ui_043' product='dev' />：QR/バーコード認証方式を設定します。 <Cmd sid='ui_330' product='dev' />または <Cmd sid='ui_385' product='dev' /> を選択すると、デバイス前面カメラまたは下部の QR/バーコードスキャナーで認証できます。デフォルトは <Cmd sid='ui_385' product='dev' /> です。
+
+   :::info
+
+  <Cmd sid='ui_330' product='dev' /> を使用するには、別途デバイスライセンスが必要です。 詳細は[ライセンス](settings#license)を参照してください。
+
+   :::
+
+* <Cmd sid='ui_374' product='dev' />：設定した時間内に QR/バーコードをスキャンしない場合、認識は失敗します。 4～10 秒に設定できます。<Cmd sid='ui_043' product='dev' /> を <Cmd sid='ui_385' product='dev' /> に設定したときに使用できます。
+
+* <Cmd sid='ui_375' product='dev' />：設定した時間内に QR/バーコードをスキャンしない場合、認識は失敗します。3～20 秒に設定できます。<Cmd sid='ui_043' product='dev' /> を <Cmd sid='ui_330' product='dev' /> に設定したときに使用できます。
+
+* <Cmd sid='ui_140' product='dev' />：デバイス周辺の動きを検知する感度を設定します。 <Cmd sid='ui_043' product='dev' /> を <Cmd sid='ui_330' product='dev' /> に設定したときに使用できます。
+
+* <Cmd sid='ui_329' product='dev' />：付与した CSN カードまたは Wiegand カードと同じデータを持つ QR コードで認証できるように設定します。<Cmd sid='ui_043' product='dev' /> を <Cmd sid='ui_330' product='dev' /> または <Cmd sid='ui_385' product='dev' /> に設定したときに使用できます。
 
 <Badge only>XS2-DPB, XS2-APB, XS2-ODPB, XS2-OAPB</Badge>
 
-<Image src='/img/device/xs2-auth3-1.png' />
+<Image src='/img/device/xs2-qr-barcode-camera.png' />
 
-* <Cmd sid='ui_043' product='dev' />：QR/バーコード認証の使用有無を選択できます。
+* <Cmd sid='ui_043' product='dev' />：QR/バーコード認証方式を設定します。<Cmd sid='ui_330' product='dev' /> を選択すると、デバイス前面カメラで認証できます。 <Cmd sid='ui_043' product='dev' /> を <Cmd sid='ui_330' product='dev' /> に設定すると、<Cmd sid='ui_375' product='dev' />、<Cmd sid='ui_140' product='dev' />、<Cmd sid='ui_329' product='dev' /> を使用できます。
 
-* <Cmd sid='ui_375' product='dev' />：設定した時間内に QR/バーコードをスキャンしない場合、認識は失敗します。 3～20 秒に設定できます。 <Cmd sid='ui_043' product='dev' /> が有効になっている場合にのみ設定できます。
+   :::info
 
-* <Cmd sid='ui_140' product='dev' />：デバイス周辺の動きを検知する感度を設定します。 <Cmd sid='ui_043' product='dev' /> が有効になっている場合にのみ設定できます。
+  <Cmd sid='ui_330' product='dev' /> を使用するには、別途デバイスライセンスが必要です。詳細は[ライセンス](settings#license)を参照してください。
 
-* <Cmd sid='ui_329' product='dev' />：付与した CSN カードまたは Wiegand カードと同じデータを持つ QR コードで認証できるように設定します。 <Cmd sid='ui_043' product='dev' /> が有効になっている場合にのみ設定できます。
+   :::
 
-:::info
+* <Cmd sid='ui_375' product='dev' />：設定した時間内に QR/バーコードをスキャンしない場合、認識は失敗します。3～20 秒に設定できます。
 
-XS2-DPB、XS2-APB、XS2-ODPB、XS2-OAPB モデルで <Cmd sid='ui_043' product='dev' /> 認証を使用するには、<Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_044' product='dev' /> で <Cmd sid='ui_043' product='dev' /> を有効にする必要があり、別途デバイスライセンスが必要です。 詳細は[ライセンス](settings#license)を参照してください。
+* <Cmd sid='ui_140' product='dev' />：デバイス周辺の動きを検知する感度を設定します。
 
-:::
+* <Cmd sid='ui_329' product='dev' />：付与した CSN カードまたは Wiegand カードと同じデータを持つ QR コードで認証できるように設定します。
 
 ## 指紋設定 <Badge only>XS2-ODPB, XS2-OAPB</Badge>
 

@@ -140,35 +140,50 @@ You can set QR/Barcode authentication.
 
 1. Click <Image src='/img/common/ico-menu2.svg' ico alone /> and authenticate with administrator privileges.
 
-2. After pressing <Cmd sid='ui_256' product='dev' />, enable <Cmd sid='ui_043' product='dev' /> in <Cmd sid='ui_044' product='dev' />.
+2. After pressing <Cmd sid='ui_256' product='dev' />, set the QR/Barcode authentication method in <Cmd sid='ui_044' product='dev' />.
 
 <Badge only>XS2-QDPB, XS2-QAPB</Badge>
 
-<Image src='/img/device/xs2-auth3.png' />
+<div className='grid-container'>
 
-* <Cmd sid='ui_043' product='dev' />: Select whether to use QR/Barcode authentication.
+<Image src='/img/device/xs2-qr-barcode-scanner.png' />
+<Image src='/img/device/xs2-qr-barcode-camera.png' />
 
-* <Cmd sid='ui_374' product='dev' />: If QR/Barcode is not scanned within the set time, authentication fails. Set between 4 and 10 seconds.
+</div>
 
-* <Cmd sid='ui_329' product='dev' />: You can set up authentication with a QR code that has the same data as the CSN card or Wiegand card issued to the user.
+* <Cmd sid='ui_043' product='dev' />: Set the QR/Barcode authentication method. Select <Cmd sid='ui_330' product='dev' /> or <Cmd sid='ui_385' product='dev' /> to authenticate with the device front camera or bottom QR/Barcode scanner, respectively. The default is <Cmd sid='ui_385' product='dev' />.
+
+   :::info
+
+   A separate device license is required to use <Cmd sid='ui_330' product='dev' />. For more information, refer to [License](settings#license).
+
+   :::
+
+* <Cmd sid='ui_374' product='dev' />: If QR/Barcode is not scanned within the set time, authentication fails. Set between 4 and 10 seconds. Available when <Cmd sid='ui_043' product='dev' /> is set to <Cmd sid='ui_385' product='dev' />.
+
+* <Cmd sid='ui_375' product='dev' />: If QR/Barcode is not scanned within the set time, authentication fails. Set between 3 and 20 seconds. Available when <Cmd sid='ui_043' product='dev' /> is set to <Cmd sid='ui_330' product='dev' />.
+
+* <Cmd sid='ui_140' product='dev' />: Set the sensitivity for detecting movement around the device. Available when <Cmd sid='ui_043' product='dev' /> is set to <Cmd sid='ui_330' product='dev' />.
+
+* <Cmd sid='ui_329' product='dev' />: You can set up authentication with a QR code that has the same data as the CSN card or Wiegand card issued to the user. Available when <Cmd sid='ui_043' product='dev' /> is set to <Cmd sid='ui_330' product='dev' /> or <Cmd sid='ui_385' product='dev' />.
 
 <Badge only>XS2-DPB, XS2-APB, XS2-ODPB, XS2-OAPB</Badge>
 
-<Image src='/img/device/xs2-auth3-1.png' />
+<Image src='/img/device/xs2-qr-barcode-camera.png' />
 
-* <Cmd sid='ui_043' product='dev' />: Select whether to use QR/Barcode authentication.
+* <Cmd sid='ui_043' product='dev' />: Set the QR/Barcode authentication method. Select <Cmd sid='ui_330' product='dev' /> to authenticate with the device front camera. When <Cmd sid='ui_043' product='dev' /> is set to <Cmd sid='ui_330' product='dev' />, you can use <Cmd sid='ui_375' product='dev' />, <Cmd sid='ui_140' product='dev' />, and <Cmd sid='ui_329' product='dev' />.
 
-* <Cmd sid='ui_375' product='dev' />: If QR/Barcode is not scanned within the set time, authentication fails. Set between 3 and 20 seconds. Available only when <Cmd sid='ui_043' product='dev' /> is enabled.
+   :::info
 
-* <Cmd sid='ui_140' product='dev' />: Set the sensitivity for detecting movement around the device. Available only when <Cmd sid='ui_043' product='dev' /> is enabled.
+   A separate device license is required to use <Cmd sid='ui_330' product='dev' />. For more information, refer to [License](settings#license).
 
-* <Cmd sid='ui_329' product='dev' />: You can set up authentication with a QR code that has the same data as the CSN card or Wiegand card issued to the user. Available only when <Cmd sid='ui_043' product='dev' /> is enabled.
+   :::
 
-:::info
+* <Cmd sid='ui_375' product='dev' />: If QR/Barcode is not scanned within the set time, authentication fails. Set between 3 and 20 seconds.
 
-To use <Cmd sid='ui_043' product='dev' /> authentication on XS2-DPB, XS2-APB, XS2-ODPB, and XS2-OAPB models, <Cmd sid='ui_043' product='dev' /> must be activated in <Cmd sid='ui_256' product='dev' /> → <Cmd sid='ui_044' product='dev' />, and a separate device license is required. For more information, refer to [License](settings#license).
+* <Cmd sid='ui_140' product='dev' />: Set the sensitivity for detecting movement around the device.
 
-:::
+* <Cmd sid='ui_329' product='dev' />: You can set up authentication with a QR code that has the same data as the CSN card or Wiegand card issued to the user.
 
 ## Fingerprint settings <Badge only>XS2-ODPB, XS2-OAPB</Badge>
 
@@ -192,11 +207,11 @@ You can change the settings for fingerprint authentication.
 
    * <Cmd sid='ui_342' product='dev' />: Set the fingerprint template format. <Cmd sid='ui_057' product='dev' /> is set as default. Changing the template format will make all previously saved fingerprints unusable, so take care when changing.
 
-     :::info
+      :::info
 
-     Delete all user fingerprint information and then change the template format. If user fingerprint information is enrolled, you cannot change the template format. 
+      Delete all user fingerprint information and then change the template format. If user fingerprint information is enrolled, you cannot change the template format. 
 
-     :::
+      :::
 
    * <Cmd sid='ui_198' product='dev' />: Set to <Cmd sid='ui_277' product='dev' /> to turn on the fingerprint sensor when it detects the user’s finger. When set to <Cmd sid='ui_362' product='dev' />, the sensor remains on even when not scanning fingerprints.
 

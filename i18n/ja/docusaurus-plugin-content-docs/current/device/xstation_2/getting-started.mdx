@@ -195,6 +195,8 @@ import Componentsnote from '../../common/_getting-started-components-note.mdx'
 </Column>
 </Columns>
 
+<PageBreak />
+
 {/* 마스터 관리자 설정하기 */}
 import Masteradminsettings from '../../common/_device-master-admin-settings.mdx'
 
@@ -211,9 +213,15 @@ import DocumentA from '../../common/_enroll-fingerprint.mdx'
 
 ユーザーにQR/バーコードを発行して認証手段として利用できます。 認識率を高めるため、案内に従い、正しくQR／バーコードをスキャンしてください。
 
-<Badge only>XS2-DPB, XS2-APB</Badge>
+#### カメラ
+
+<div className='grid-container'>
 
 <Image src='/img/device/qr-scanning-xs2.svg' className='none' alone />
+<Image src='/img/device/qr-scanning-xs2-q-camera.svg' className='none' alone />
+<Image src='/img/device/qr-scanning-xs2-finger.svg' className='none' alone />
+
+</div>
 
 * デバイスのカメラとQR/バーコードの距離を5〜20 cmに保ちます。
 
@@ -223,27 +231,15 @@ import DocumentA from '../../common/_enroll-fingerprint.mdx'
 
 * 画面の指示に従わないと、QR/バーコードの認識に時間がかかるか、失敗する場合があります。
 
-<Badge only>XS2-QDPB, XS2-QAPB</Badge>
+#### QR/バーコードスキャナー <Badge only>XS2-QDPB, XS2-QAPB</Badge>
 
 <Image src='/img/device/qr-scanning-xs2-q.svg' className='none' alone />
 
-* デバイスのQR/バーコード認識部とQR/バーコードの距離を5〜20 cmに保ちます。
+* デバイスの QR/バーコード認識部と QR/バーコードの距離を 5〜20 cm に保ちます。
 
-* デバイスのQR/バーコード認識部とスキャンするQR/バーコードが水平になるようにし、ガイドビームがQR/バーコードの中央に位置するようにします。
+* デバイスの QR/バーコード認識部とスキャンする QR/バーコードが水平になるようにし、ガイドビームがQR/バーコードの中央に位置するようにします。
 
-* モバイルデバイスでダウンロードしたQR/バーコードで認証する場合、画面が見えやすいようにモバイルデバイスの明るさを調整します。
-
-* 画面の指示に従わないと、QR/バーコードの認識に時間がかかるか、失敗する場合があります。
-
-<Badge only>XS2-ODPB, XS2-OAPB</Badge>
-
-<Image src='/img/device/qr-scanning-xs2-finger.svg' className='none' alone />
-
-* デバイスのカメラとQR/バーコードの距離を5〜20 cmに保ちます。
-
-* QR/バーコードをデバイスのスキャン画面中央に位置させます。
-
-* モバイルデバイスでダウンロードしたQR/バーコードで認証する場合、画面が見えやすいようにモバイルデバイスの明るさを調整します。
+* モバイルデバイスでダウンロードした QR/バーコードで認証する場合、画面が見えやすいようにモバイルデバイスの明るさを調整します。
 
 * 画面の指示に従わないと、QR/バーコードの認識に時間がかかるか、失敗する場合があります。
 

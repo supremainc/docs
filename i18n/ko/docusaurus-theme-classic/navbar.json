@@ -190,5 +190,21 @@
   "item.label.XPass Q2": {
     "message": "XPass Q2",
     "description": "Navbar item with label XPass Q2"
+  },
+  "item.label.BioStation 3 Max": {
+    "message": "BioStation 3 Max",
+    "description": "Navbar item with label BioStation 3 Max"
+  },
+  "item.label.Genetec": {
+    "message": "Genetec",
+    "description": "Navbar item with label Genetec"
+  },
+  "item.label.Gallagher": {
+    "message": "Gallagher",
+    "description": "Navbar item with label Gallagher"
+  },
+  "item.label.Software House": {
+    "message": "Software House",
+    "description": "Navbar item with label Software House"
   }
 }

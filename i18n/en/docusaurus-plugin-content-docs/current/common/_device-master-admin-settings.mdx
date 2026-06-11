@@ -1,26 +1,39 @@
-## Set master administrator
+## Set Up Master Administrator <Badge only>CE model only</Badge>
 
-The <Cmd sid='ui_128' product='dev' /> feature enhances the overall admin privileges of the device to improve device security and prevent unauthorized access and configuration changes. **Enroll a master administrator** on new devices using this feature. Only the enrolled master administrator can access the administrator menu to change device setting.
+The <Cmd sid='ui_128' product='dev' /> feature enhances the overall admin privileges of the device to improve device security and prevent unauthorized access and configuration changes. This feature applies only to **CE products** for the EU region, and **Master Administrator enrollment is required** on **CE products**. Only the enrolled master administrator can access the administrator menu and change device settings.
 
-:::note
+:::info
 
-What is a master administrator?
-
-* If you use the device without setting an administrator, anyone can access the administrator menu and change device settings. The master administrator feature enforces overall administrator settings to address these security vulnerabilities.
+* This feature is a required policy introduced to enhance security for **CE products** in the EU region, and it is not supported on **Global (Non-CE) products**.
 
 * The master admin cannot delete directly and will be deleted only during <Cmd sid='ui_072' product='dev' />.
 
 :::
 
+{/* 마스터 관리자 지원 정책 */}
+import MasterAdminSupportPolicy from './_master-admin-support-policy.mdx';
+
+<MasterAdminSupportPolicy />
+
+### Behavior Logic During Firmware Upgrade {#firmware-upgrade-logic}
+
+When you upgrade the firmware of an existing device, support for <Cmd sid="ui_128" product='dev' /> and <Cmd sid="ui_073" product='dev' /> can vary based on the combination of the **version before upgrade** and the **target version**.
+
+:::note
+
+Contact <Support /> for detailed version support availability.
+
+:::
+
 ### Enroll master administrator on a new device
 
-On a new device, <Cmd sid='ui_128' product='dev' /> must be registered from the beginning; if not registered, device usage will be restricted.
+On a new device for CE products, you must enroll <Cmd sid="ui_128" product='dev' /> from the start. If you do not enroll it, device use is restricted.
 
 :::info
 
-* When the new device is booted for the first time, the <Cmd sid='ui_128' product='dev' /> registration screen will appear. If <Cmd sid='ui_128' product='dev' /> is not registered, you cannot proceed to the next screen.
+* At first boot, the <Cmd sid="ui_128" product='dev' /> enrollment screen appears. If you do not complete enrollment, you cannot move to the next screen.
 
-* Register <Cmd sid='ui_128' product='dev' /> to use all features, even if you connect to BioStar X and assign a device-wide administrator.
+* Even if you connect to BioStar X (or BioStar 2) and assign a device-wide administrator, you must enroll <Cmd sid="ui_128" product='dev' /> directly on the device to use all features.
 
 * New devices cannot perform firmware downgrades.
 
@@ -58,7 +71,7 @@ On a new device, <Cmd sid='ui_128' product='dev' /> must be registered from the 
 
 </Include>
 
-2. At least two different types of credentials must be enrolled to register <Cmd sid='ui_128' product='dev' />. Select and enroll two desired credentials.
+2. According to EU security policy, <Cmd sid="ui_128" product='dev' /> must enroll credentials of at least two types. Select and enroll two desired credentials.
 
    <Include product='biostation_3'><Image src='/img/how-to/setting-master-admin-2.png' width='300px' /></Include>
 
@@ -71,33 +84,33 @@ On a new device, <Cmd sid='ui_128' product='dev' /> must be registered from the 
    The credentials that can be enrolled for <Cmd sid='ui_128' product='dev' /> are as follows.
 
    <Table>
-     <Tbody>
-     <Row>
-       <Th>Credential type</Th>
-       <Th>Number of enrollments</Th>
-       <Th>Conditions</Th>
-     </Row>
-     <Row>
-       <Td>Card</Td>
-       <Td>Up to 4</Td>
-       <Td>Supports only CSN and Wiegand types<br/>Duplication within the same type is not allowed</Td>
-     </Row>
-     <Row>
-       <Td>Face</Td>
-       <Td>Up to 2</Td>
-       <Td>Only enrollable on devices with the same algorithm</Td>
-     </Row>
-     <Row>
-       <Td>Fingerprint</Td>
-       <Td>Up to 2</Td>
-       <Td>-</Td>
-     </Row>
-     <Row>
-       <Td>PIN</Td>
-       <Td>1</Td>
-       <Td>At least 8 characters long</Td>
-     </Row>
-     </Tbody>
+   <Tbody>
+   <Row>
+      <Th>Credential type</Th>
+      <Th>Number of enrollments</Th>
+      <Th>Conditions</Th>
+   </Row>
+   <Row>
+      <Td>Card</Td>
+      <Td>Up to 4</Td>
+      <Td>Supports only CSN and Wiegand types<br/>Duplicate enrollment within the same type is not allowed</Td>
+   </Row>
+   <Row>
+      <Td>Face</Td>
+      <Td>Up to 2</Td>
+      <Td>Enroll only on devices with the same algorithm</Td>
+   </Row>
+   <Row>
+      <Td>Fingerprint</Td>
+      <Td>Up to 2</Td>
+      <Td>-</Td>
+   </Row>
+   <Row>
+      <Td>PIN</Td>
+      <Td>1</Td>
+      <Td>At least 8 digits long (CE regulation applies)</Td>
+   </Row>
+   </Tbody>
    </Table>
 
    :::note
@@ -105,8 +118,6 @@ On a new device, <Cmd sid='ui_128' product='dev' /> must be registered from the 
    **Enrollment conditions**
 
    * You must enroll at least two types of credentials.
-
-   * The same conditions apply to both new devices and firmware upgrade devices.
 
    * All credentials supported by the device can be used as authentication means.
 
@@ -144,12 +155,7 @@ On a new device, <Cmd sid='ui_128' product='dev' /> must be registered from the 
 
 </Include>
 
-### Additional Information
+{/* 안내 사항 */}
+import MasterAdminAdditionalInfo from './_master-admin-additional-info.mdx';
 
-* **Manual Device Hash Key Change**
-
-  When manually changing the device hash key, a warning message will indicate that Master Admin PINs will be deleted. Please confirm the message before proceeding.
-
-* **RS-485 Biometric Image Transmission Restriction**
-
-  Biometric credential images are not transmitted over RS-485 communication, so substitute images appear when viewing the registered Master Admin face on slave devices.
+<MasterAdminAdditionalInfo />

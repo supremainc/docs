@@ -297,7 +297,7 @@
   },
   {
     "category": {
-      "title": "Master Admin",
+      "title": "Master Administrator (CE-oriented products)",
       "hid": "admin",
       "contents": [
         {
@@ -307,9 +307,9 @@
             "biostation_2a",
             "xstation_2"
           ],
-          "question": "After upgrading the firmware on existing devices, the Master Admin setting does not appear.",
+          "question": "Is Master Administrator setup supported after a firmware upgrade from an existing device?",
           "answer": [
-            "Devices upgraded with firmware from existing devices do not support master administrator configuration. You can enhance device security by strengthening the permissions of all administrators through the <span class='cmd'>Admin 2-Step Authentication</span> option. For more detailed information, refer to <a href='settings#admin-2-step-authentication'>Admin 2-step Authentication</a>."
+            "<b>Master Administrator</b> is <b>supported only on CE-oriented products with a CE-marked label</b>. Use the label sticker on the back of the product to identify <b>CE-oriented / global (Non-CE)</b> products. For details, see <a href='getting-started#master-admin-support-policy'>Master Administrator support policy</a>."
           ]
         }
       ]
