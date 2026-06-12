@@ -360,9 +360,14 @@ paths:
           application/json:
             schema:
               type: object
+              required:
+                - User
               properties:
                 User:
                   type: object
+                  required:
+                    - login_id
+                    - password
                   properties:
                     login_id:
                       type: string
@@ -370,9 +375,6 @@ paths:
                     password:
                       type: string
                       description: Your password.
-              required:
-                - login_id
-                - password
             example:
               User:
                 login_id: admin
@@ -7029,6 +7031,10 @@ paths:
           application/json:
             schema:
               type: object
+              properties:
+                monitoring_permission:
+                  type: boolean
+                  description: Set to `true` to retrieve door status with monitoring permission applied.
               example:
                 monitoring_permission: true
       responses:
@@ -13133,17 +13139,19 @@ components:
     SMTPSettings:
       type: object
       required:
-        - name
-        - description
-        - smtp_server_addr
-        - smtp_server_port
-        - smtp_username
-        - smtp_password
-        - smtp_security
-        - smtp_sender
+        - AlarmSmtp
       properties:
         AlarmSmtp:
           type: object
+          required:
+            - name
+            - description
+            - smtp_server_addr
+            - smtp_server_port
+            - smtp_username
+            - smtp_password
+            - smtp_security
+            - smtp_sender
           properties:
             name:
               type: string
