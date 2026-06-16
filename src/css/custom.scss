@@ -530,7 +530,14 @@ footer {
 body[data-rh] .redocusaurus {
   display: block;
 }
-
+.api--docs {
+  pre * {
+    font-family: 'Noto Sans Coptic', sans-serif;
+  }
+  table {
+    display: table;
+  }
+}
 // markdown 콘텐츠 스타일 
 .markdown {
   counter-reset: sup-count column-count;
