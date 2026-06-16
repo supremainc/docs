@@ -751,6 +751,14 @@ details.deviceInfo summary, details.faq summary {
   height: 150px !important;
 }
 
+.doc-content img[src*='component-device-xpd2-mdb'] {
+  width: 72px !important;
+}
+
+.doc-content img[src*='component-wall-bracket-xpd2-mdb'] {
+  width: 67px !important;
+}
+
 .doc-content .container {
   max-width: 100%;
   width: 100%;
