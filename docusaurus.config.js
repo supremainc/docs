@@ -565,7 +565,7 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        additionalLanguages: [ 'powershell', 'bash' ],
+        additionalLanguages: [ 'powershell', 'bash', 'javascript', 'go', 'python', 'java' ],
         theme: prismThemes.github,
         darkTheme: prismThemes.vsDark,
       },
