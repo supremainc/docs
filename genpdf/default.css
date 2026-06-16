@@ -739,6 +739,18 @@ details.deviceInfo summary, details.faq summary {
   width: 684px !important;
 }
 
+.doc-content img[src*='component-device-bln2'] {
+  height: 150px !important;
+}
+
+.doc-content img[src*='component-wall-bracket-bln2'] {
+  height: 150px !important;
+}
+
+.doc-content img[src*='component-drilling-template-bln2'] {
+  height: 150px !important;
+}
+
 .doc-content .container {
   max-width: 100%;
   width: 100%;
