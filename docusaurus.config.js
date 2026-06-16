@@ -108,8 +108,8 @@ const config = {
             '_unused/**.{md,mdx}',
             '**/_*.{md,mdx}',
             ...(!isPreview ? [
-              'device/vionyx/**.{md,mdx}',
-              'device/vionyx_webserver/**.{md,mdx}',
+              'device/vionyx/**/**.{md,mdx}',
+              'device/vionyx_webserver/**/**.{md,mdx}',
             ] : []),
           ],
           rehypePlugins: [ rehypeExtendedTable ],
