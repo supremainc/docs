@@ -104,6 +104,15 @@ info:
 
     ## Release Notes
 
+    ### v1.0.2
+    
+    **2026-06-15**
+    
+    - Updated Run Backup
+    - Updated Setting > Active Directory > Synchronize
+
+    ### v1.0.0
+    
     **2025-09-30**
 
     - Initial version
