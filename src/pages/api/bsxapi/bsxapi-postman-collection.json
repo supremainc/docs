@@ -9,7 +9,7 @@
   },
   "item": [
     {
-      "name": "Release Notes",
+      "name": "Revision Notes",
       "item": [],
       "description": "## v1.0.2\n\n**2026-06-15**\n\n- Updated Run Backup\n    \n- Updated Setting > Active Directory > Synchronize\n    \n\n---\n\n## v1.0.0\n\n**2025-09-30**\n\n- Initial version",
       "auth": {
