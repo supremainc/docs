@@ -1045,6 +1045,9 @@ body[data-rh] .redocusaurus {
     ul {
       list-style-type: none;
       margin-top: var(--ifm-list-paragraph-margin);
+      li {
+        position: relative;
+      }
       li::before {
         content: "‒";
         position: absolute;
