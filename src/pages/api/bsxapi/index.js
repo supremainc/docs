@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallback, useEffect } from 'react';
+import React, { useState, useMemo, useCallback, useEffect, useRef } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import CodeBlock from '@theme/CodeBlock';
@@ -19,6 +19,13 @@ const SNIPPET_LANGS = {
   Shell: 'bash', Python: 'python', JavaScript: 'javascript',
   'Node.js': 'javascript', Go: 'go', Java: 'java',
 };
+
+const SECTION_LABEL = {
+  fontSize: 11, fontWeight: 700, color: 'var(--ifm-color-content-secondary)',
+  textTransform: 'uppercase', letterSpacing: '0.07em', margin: '0 0 8px',
+};
+
+const TOTAL_ENDPOINTS = (collectionData.item || []).reduce((acc, f) => acc + (f.item?.length || 0), 0);
 
 // ─── Responsive hook ─────────────────────────────────────────────────
 function useIsMobile(breakpoint = 768) {
@@ -63,21 +70,24 @@ function toSlug(name) {
     .replace(/\s+/g, '-');
 }
 
-function findRequestBySlug(slug) {
+const SLUG_MAP = (() => {
+  const m = new Map();
   for (const folder of collectionData.item || []) {
-    if (toSlug(folder.name) === slug) return { _folder: folder };
+    m.set(toSlug(folder.name), { _folder: folder });
     for (const child of folder.item || []) {
       if (child.item?.length > 0) {
-        if (toSlug(child.name) === slug) return { _folder: child };
-        for (const req of child.item) {
-          if (toSlug(req.name) === slug) return req;
-        }
-      } else if (toSlug(child.name) === slug) {
-        return child;
+        m.set(toSlug(child.name), { _folder: child });
+        for (const req of child.item) m.set(toSlug(req.name), req);
+      } else {
+        m.set(toSlug(child.name), child);
       }
     }
   }
-  return null;
+  return m;
+})();
+
+function findRequestBySlug(slug) {
+  return SLUG_MAP.get(slug) ?? null;
 }
 
 // ─── Code snippet builder ─────────────────────────────────────────────
@@ -188,6 +198,8 @@ function renderInline(text) {
 
   s = s
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/&lt;br\s*\/?&gt;/gi, '<br>')
+    .replace(/\\([*_`[\]()#!\\])/g, '$1')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     .replace(/`([^`]+)`/g, '<code style="padding:1px 4px;border-radius:3px;font-size:.9em">$1</code>')
     .replace(/\[((?:[^\]]|\](?!\())+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
@@ -302,7 +314,7 @@ function Markdown({ text }) {
           <p key={i} style={{ margin: '8px 0' }}
             dangerouslySetInnerHTML={{ __html: renderInline(b.text) }} />
         );
-        if (b.type === 'hr') return <hr key={i} style={{ border: 'none', borderTop: '1px solid #e1e4e8', margin: '16px 0' }} />;
+        if (b.type === 'hr') return <hr key={i} style={{ border: 'none', borderTop: '1px solid var(--ifm-color-emphasis-300)', margin: '16px 0' }} />;
         return null;
       })}
     </div>
@@ -317,7 +329,7 @@ function MethodBadge({ method, compact }) {
       background: color, color: '#fff',
       padding: compact ? '2px 5px' : '2px 8px',
       borderRadius: 3,
-      fontSize: compact ? 11 : 11,
+      fontSize: 11,
       fontWeight: 700,
       fontFamily: 'Noto Sans Coptic, monospace',
       letterSpacing: '0.02em',
@@ -338,9 +350,7 @@ function ParamTable({ title, params }) {
   if (!params?.length) return null;
   return (
     <div style={{ margin: '20px 0' }}>
-      <h4 style={{ fontSize: 11, fontWeight: 700, color: 'var(--ifm-color-content-secondary)', textTransform: 'uppercase', letterSpacing: '0.07em', margin: '0 0 8px' }}>
-        {title}
-      </h4>
+      <h4 style={SECTION_LABEL}>{title}</h4>
       <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, overflow: 'hidden' }}>
         <thead>
           <tr style={{ background: 'var(--ifm-color-emphasis-100)' }}>
@@ -400,9 +410,7 @@ function ResponseExamples({ responses }) {
   const resp = responses[active];
   return (
     <div style={{ margin: '24px 0' }}>
-      <h4 style={{ fontSize: 11, fontWeight: 700, color: 'var(--ifm-color-content-secondary)', textTransform: 'uppercase', letterSpacing: '0.07em', margin: '0 0 8px' }}>
-        Example Responses
-      </h4>
+      <h4 style={SECTION_LABEL}>Example Responses</h4>
       <div style={{ border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: 8, overflow: 'hidden' }}>
         <div style={{ display: 'flex', background: 'var(--ifm-color-emphasis-100)', borderBottom: '1px solid var(--ifm-color-emphasis-300)', overflowX: 'auto' }}>
           {responses.map((r, i) => (
@@ -430,7 +438,33 @@ function ResponseExamples({ responses }) {
   );
 }
 
+function findParentKeys(selected) {
+  if (!selected) return null;
+  for (const folder of collectionData.item || []) {
+    if (selected._folder?.name === folder.name) return { folder: folder.name };
+    for (const child of folder.item || []) {
+      if (child.item?.length > 0) {
+        if (selected._folder?.name === child.name) return { folder: folder.name, sub: `${folder.name}::${child.name}` };
+        for (const req of child.item) {
+          if (req.name === selected.name) return { folder: folder.name, sub: `${folder.name}::${child.name}` };
+        }
+      } else if (child.name === selected.name) {
+        return { folder: folder.name };
+      }
+    }
+  }
+  return null;
+}
+
 // ─── Sidebar ──────────────────────────────────────────────────────────
+const reqBtnStyle = (isActive) => ({
+  display: 'flex', alignItems: 'center', gap: 8, width: '100%',
+  background: isActive ? 'rgba(0,102,204,0.25)' : 'transparent',
+  border: 'none', borderLeft: `2px solid ${isActive ? '#0066cc' : 'transparent'}`,
+  cursor: 'pointer', color: isActive ? '#fff' : '#a8b0ba',
+  fontSize: 14, textAlign: 'left', transition: 'background 0.12s',
+});
+
 function Sidebar({ selected, onSelect, isMobile }) {
   const [open, setOpen] = useState(() => {
     const init = {};
@@ -445,6 +479,17 @@ function Sidebar({ selected, onSelect, isMobile }) {
   const [q, setQ] = useState('');
 
   const toggle = useCallback((key) => setOpen(p => ({ ...p, [key]: !p[key] })), []);
+
+  // selected 변경 시 해당 항목의 부모 폴더를 자동으로 열기
+  useEffect(() => {
+    const keys = findParentKeys(selected);
+    if (!keys) return;
+    setOpen(p => ({
+      ...p,
+      [keys.folder]: true,
+      ...(keys.sub ? { [keys.sub]: true } : {}),
+    }));
+  }, [selected]);
 
   const folders = useMemo(() => {
     if (!q.trim()) return collectionData.item || [];
@@ -466,14 +511,6 @@ function Sidebar({ selected, onSelect, isMobile }) {
       }))
       .filter(f => f.item.length > 0 || matchStr(f.name));
   }, [q]);
-
-  const reqBtnStyle = (isActive) => ({
-    display: 'flex', alignItems: 'center', gap: 8, width: '100%',
-    background: isActive ? 'rgba(0,102,204,0.25)' : 'transparent',
-    border: 'none', borderLeft: `2px solid ${isActive ? '#0066cc' : 'transparent'}`,
-    cursor: 'pointer', color: isActive ? '#fff' : '#a8b0ba',
-    fontSize: 14, textAlign: 'left', transition: 'background 0.12s',
-  });
 
   return (
     <aside style={{
@@ -502,7 +539,7 @@ function Sidebar({ selected, onSelect, isMobile }) {
       <nav style={{ flex: 1, overflowY: 'auto', padding: '6px 0' }}>
         {folders.map(folder => {
           const hasItems = folder.item?.length > 0;
-          const isFolderOpen = q.trim() ? true : (open[folder.name] ?? true);
+          const isFolderOpen = !!q.trim() || (open[folder.name] ?? false);
           return (
             <div key={folder.name}>
               {/* 최상위 폴더 헤더 */}
@@ -522,7 +559,7 @@ function Sidebar({ selected, onSelect, isMobile }) {
                 // 서브폴더
                 if (child.item?.length > 0) {
                   const subKey = `${folder.name}::${child.name}`;
-                  const isSubOpen = q.trim() ? true : (open[subKey] ?? true);
+                  const isSubOpen = !!q.trim() || (open[subKey] ?? false);
                   return (
                     <div key={child.name}>
                       <button onClick={() => { toggle(subKey); onSelect({ _folder: child }); }} style={{
@@ -571,14 +608,8 @@ function Sidebar({ selected, onSelect, isMobile }) {
 }
 
 // ─── Request detail ───────────────────────────────────────────────────
-const SECTION_LABEL = {
-  fontSize: 11, fontWeight: 700, color: 'var(--ifm-color-content-secondary)',
-  textTransform: 'uppercase', letterSpacing: '0.07em', margin: '0 0 8px',
-};
-
 function EndpointRow({ req, onSelect }) {
   const method = req.request?.method;
-  const color = METHOD_COLORS[method?.toUpperCase()] || '#999';
   const desc = req.request?.description;
   const shortDesc = typeof desc === 'string' ? desc.split('\n')[0].replace(/\*\*/g, '').trim() : '';
   return (
@@ -588,11 +619,7 @@ function EndpointRow({ req, onSelect }) {
       borderBottom: '1px solid var(--ifm-color-emphasis-200)',
       cursor: 'pointer', textAlign: 'left',
     }}>
-      <span style={{
-        flexShrink: 0, marginTop: 2, background: color, color: '#fff',
-        padding: '2px 7px', borderRadius: 3, fontSize: 11, fontWeight: 700,
-        fontFamily: 'monospace', minWidth: 52, textAlign: 'center',
-      }}>{method}</span>
+      <span style={{ flexShrink: 0, marginTop: 2 }}><MethodBadge method={method} compact /></span>
       <span style={{ flex: 1 }}>
         <span style={{ display: 'block', fontWeight: 600, fontSize: 14, color: 'var(--ifm-color-content)' }}>
           {req.name}
@@ -651,7 +678,6 @@ function RequestDetail({ item, onSelect }) {
   const method = req?.method;
   const url = toDisplayUrl(req?.url);
   const color = METHOD_COLORS[method?.toUpperCase()] || '#0066cc';
-  const hasRight = req?.body?.raw || true; // code examples는 항상 표시
 
   return (
     <div>
@@ -713,14 +739,13 @@ function RequestDetail({ item, onSelect }) {
 
 // ─── Welcome screen ───────────────────────────────────────────────────
 function WelcomeScreen() {
-  const totalEndpoints = (collectionData.item || []).reduce((acc, f) => acc + (f.item?.length || 0), 0);
   const info = collectionData.info;
 
   return (
     <div style={{ padding: '32px 40px', maxWidth: 860 }}>
       <h1 style={{ fontSize: 28, margin: '0 0 6px', color: 'var(--ifm-color-content)' }}>{info?.name}</h1>
       <p style={{ color: '#999', fontSize: 12, margin: '0 0 28px' }}>
-        {totalEndpoints} endpoints — 사이드바에서 엔드포인트를 선택하세요.
+        {TOTAL_ENDPOINTS} endpoints — Select an endpoint from the sidebar.
       </p>
       <Markdown text={info?.description} />
     </div>
@@ -733,11 +758,13 @@ export default function ApiV2Page() {
   const location = useLocation();
   const [selected, setSelected] = useState(null);
   const isMobile = useIsMobile();
+  const mainRef = useRef(null);
 
   // URL → 상태 동기화 (초기 로드 + 브라우저 뒤로/앞으로)
   useEffect(() => {
     const slug = new URLSearchParams(location.search).get('api');
     setSelected(slug ? findRequestBySlug(slug) : null);
+    if (mainRef.current) mainRef.current.scrollTop = 0;
   }, [location.search]);
 
   const handleSelect = useCallback((item) => {
@@ -804,7 +831,7 @@ export default function ApiV2Page() {
         )}
         {/* 모바일: selected 있을 때만 콘텐츠 표시 / 데스크톱: 항상 표시 */}
         {(!isMobile || selected) && (
-          <main className='api--docs' style={{ flex: 1, overflow: 'auto', background: 'var(--ifm-background-color)', minWidth: 0 }}>
+          <main ref={mainRef} className='api--docs' style={{ flex: 1, overflow: 'auto', background: 'var(--ifm-background-color)', minWidth: 0 }}>
             {isMobile && selected && (
               <button onClick={() => handleSelect(null)} style={{
                 display: 'flex', alignItems: 'center', gap: 6,
