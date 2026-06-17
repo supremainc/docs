@@ -20,6 +20,19 @@ const SNIPPET_LANGS = {
   'Node.js': 'javascript', Go: 'go', Java: 'java',
 };
 
+// ─── Responsive hook ─────────────────────────────────────────────────
+function useIsMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(
+    () => typeof window !== 'undefined' ? window.innerWidth < breakpoint : false
+  );
+  useEffect(() => {
+    const handler = () => setIsMobile(window.innerWidth < breakpoint);
+    window.addEventListener('resize', handler);
+    return () => window.removeEventListener('resize', handler);
+  }, [breakpoint]);
+  return isMobile;
+}
+
 // ─── URL utilities ────────────────────────────────────────────────────
 function toDisplayUrl(url) {
   if (!url?.raw) return '';
@@ -418,7 +431,7 @@ function ResponseExamples({ responses }) {
 }
 
 // ─── Sidebar ──────────────────────────────────────────────────────────
-function Sidebar({ selected, onSelect }) {
+function Sidebar({ selected, onSelect, isMobile }) {
   const [open, setOpen] = useState(() => {
     const init = {};
     (collectionData.item || []).forEach(f => {
@@ -464,9 +477,12 @@ function Sidebar({ selected, onSelect }) {
 
   return (
     <aside style={{
-      width: 380, minWidth: 280, background: '#1a1d23',
+      width: isMobile ? '100%' : 380,
+      minWidth: isMobile ? '100%' : 280,
+      background: '#1a1d23',
       display: 'flex', flexDirection: 'column', overflow: 'hidden',
       borderRight: '1px solid #2d3139',
+      flexShrink: 0,
     }}>
       <div style={{ padding: '14px 14px 10px', borderBottom: '1px solid #2d3139', flexShrink: 0 }}>
         <button onClick={() => onSelect(null)} style={{
@@ -630,6 +646,7 @@ function RequestDetail({ item, onSelect }) {
     );
   }
 
+  const isMobile = useIsMobile();
   const req = item.request;
   const method = req?.method;
   const url = toDisplayUrl(req?.url);
@@ -654,11 +671,20 @@ function RequestDetail({ item, onSelect }) {
         </div>
       </div>
 
-      {/* ── 2-컬럼 본문 ───────────────────────────────────── */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 3fr) minmax(0, 2fr)', minHeight: 0 }}>
+      {/* ── 본문 (데스크톱: 2컬럼 / 모바일: 1컬럼) ──────── */}
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: isMobile ? '1fr' : 'minmax(0, 3fr) minmax(0, 2fr)',
+        minHeight: 0,
+      }}>
 
         {/* 왼쪽: 설명 + 파라미터 */}
-        <div style={{ padding: '24px 32px', borderRight: '1px solid var(--ifm-color-emphasis-300)', overflow: 'auto' }}>
+        <div style={{
+          padding: isMobile ? '16px 20px' : '24px 32px',
+          borderRight: isMobile ? 'none' : '1px solid var(--ifm-color-emphasis-300)',
+          borderBottom: isMobile ? '1px solid var(--ifm-color-emphasis-300)' : 'none',
+          overflow: 'auto',
+        }}>
           {req?.description && (
             <div style={{ marginBottom: 20 }}>
               <Markdown text={req.description} />
@@ -670,7 +696,7 @@ function RequestDetail({ item, onSelect }) {
         </div>
 
         {/* 오른쪽: Request Body + Code Examples + Response Examples */}
-        <div style={{ padding: '24px 24px', background: 'var(--ifm-background-surface-color)', overflow: 'auto' }}>
+        <div style={{ padding: isMobile ? '16px 20px' : '24px 24px', background: 'var(--ifm-background-surface-color)', overflow: 'auto' }}>
           {req?.body?.raw && (
             <div style={{ marginBottom: 20 }}>
               <h4 style={SECTION_LABEL}>Request Body</h4>
@@ -706,6 +732,7 @@ export default function ApiV2Page() {
   const history = useHistory();
   const location = useLocation();
   const [selected, setSelected] = useState(null);
+  const isMobile = useIsMobile();
 
   // URL → 상태 동기화 (초기 로드 + 브라우저 뒤로/앞으로)
   useEffect(() => {
@@ -771,13 +798,31 @@ export default function ApiV2Page() {
         </script>
       </Head>
       <div style={{ display: 'flex', height: 'calc(100vh - var(--ifm-navbar-height, 60px))', overflow: 'hidden' }}>
-        <Sidebar selected={selected} onSelect={handleSelect} />
-        <main className='api--docs' style={{ flex: 1, overflow: 'auto', background: 'var(--ifm-background-color)', minWidth: 0 }}>
-          {selected
-            ? <RequestDetail key={selected.name || selected._folder?.name} item={selected} onSelect={handleSelect} />
-            : <WelcomeScreen />
-          }
-        </main>
+        {/* 모바일: selected 없을 때만 사이드바 표시 / 데스크톱: 항상 표시 */}
+        {(!isMobile || !selected) && (
+          <Sidebar selected={selected} onSelect={handleSelect} isMobile={isMobile} />
+        )}
+        {/* 모바일: selected 있을 때만 콘텐츠 표시 / 데스크톱: 항상 표시 */}
+        {(!isMobile || selected) && (
+          <main className='api--docs' style={{ flex: 1, overflow: 'auto', background: 'var(--ifm-background-color)', minWidth: 0 }}>
+            {isMobile && selected && (
+              <button onClick={() => handleSelect(null)} style={{
+                display: 'flex', alignItems: 'center', gap: 6,
+                padding: '10px 16px', width: '100%',
+                background: 'var(--ifm-color-emphasis-100)',
+                borderBottom: '1px solid var(--ifm-color-emphasis-300)',
+                border: 'none', cursor: 'pointer',
+                fontSize: 14, fontWeight: 600, color: 'var(--ifm-color-content)',
+              }}>
+                ← Back
+              </button>
+            )}
+            {selected
+              ? <RequestDetail key={selected.name || selected._folder?.name} item={selected} onSelect={handleSelect} />
+              : <WelcomeScreen />
+            }
+          </main>
+        )}
       </div>
     </Layout>
   );
