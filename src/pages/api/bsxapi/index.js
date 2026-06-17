@@ -4,6 +4,7 @@ import Head from '@docusaurus/Head';
 import CodeBlock from '@theme/CodeBlock';
 import { useHistory, useLocation } from '@docusaurus/router';
 import collectionData from './bsxapi-postman-collection.json';
+import MarkdownIt from 'markdown-it';
 
 // ─── Constants ────────────────────────────────────────────────────────
 const METHOD_COLORS = {
@@ -26,6 +27,22 @@ const SECTION_LABEL = {
 };
 
 const TOTAL_ENDPOINTS = (collectionData.item || []).reduce((acc, f) => acc + (f.item?.length || 0), 0);
+
+const FLAT_ITEMS = (() => {
+  const list = [];
+  for (const folder of collectionData.item || []) {
+    list.push({ _folder: folder });
+    for (const child of folder.item || []) {
+      if (child.item?.length > 0) {
+        list.push({ _folder: child });
+        for (const req of child.item) list.push(req);
+      } else {
+        list.push(child);
+      }
+    }
+  }
+  return list;
+})();
 
 // ─── Responsive hook ─────────────────────────────────────────────────
 function useIsMobile(breakpoint = 768) {
@@ -187,137 +204,20 @@ function makeSnippets(req) {
 }
 
 // ─── Markdown → JSX ───────────────────────────────────────────────────
-function renderInline(text) {
-  // HTML 이스케이핑 전에 이미지 링크([<img ...>](url))를 먼저 추출
-  const slots = [];
-  let s = text.replace(/\[(<img\b[^\]]*>)\]\(([^)]+)\)/g, (_, img, url) => {
-    const idx = slots.length;
-    slots.push(`<a href="${url}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:6px">${img}</a>`);
-    return `\x01${idx}\x01`;
-  });
-
-  s = s
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    .replace(/&lt;br\s*\/?&gt;/gi, '<br>')
-    .replace(/\\([*_`[\]()#!\\])/g, '$1')
-    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-    .replace(/`([^`]+)`/g, '<code style="padding:1px 4px;border-radius:3px;font-size:.9em">$1</code>')
-    .replace(/\[((?:[^\]]|\](?!\())+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
-    .replace(/\*([^*]+)\*/g, '<em>$1</em>');
-
-  // 플레이스홀더 복원
-  return s.replace(/\x01(\d+)\x01/g, (_, i) => slots[+i]);
-}
-
-function parseBlocks(text) {
-  const lines = text.replace(/\r\n/g, '\n').split('\n');
-  const blocks = [];
-  let i = 0;
-  while (i < lines.length) {
-    const line = lines[i];
-    if (line.startsWith('```')) {
-      const lang = line.slice(3).trim() || 'text';
-      const code = [];
-      i++;
-      while (i < lines.length && !lines[i].startsWith('```')) {
-        const cur = lines[i];
-        // 닫힘 없는 코드 블록 탈출: 빈 줄 다음에 헤딩이 오면 종료
-        if (code.length > 0 && !code[code.length - 1].trim() && /^#{1,6}\s/.test(cur)) break;
-        code.push(cur);
-        i++;
-      }
-      while (code.length > 0 && !code[code.length - 1].trim()) code.pop();
-      blocks.push({ type: 'code', lang, content: code.join('\n') });
-      if (i < lines.length && lines[i].startsWith('```')) i++;
-      continue;
-    }
-    if (line.trim().startsWith('|')) {
-      const tLines = [];
-      while (i < lines.length && lines[i].trim().startsWith('|')) { tLines.push(lines[i].trim()); i++; }
-      const rows = tLines
-        .filter(l => !/^\|[\s\-:|]+\|$/.test(l))
-        .map(l => l.split('|').slice(1, -1).map(c => c.trim()));
-      if (rows.length) blocks.push({ type: 'table', rows });
-      continue;
-    }
-    const hm = line.match(/^(#{1,6})\s+(.+)/);
-    if (hm) { blocks.push({ type: 'heading', level: hm[1].length, text: hm[2] }); i++; continue; }
-    if (/^[-*]\s/.test(line)) {
-      const items = [];
-      // 빈 줄로 구분된 loose list도 하나의 리스트로 병합
-      while (i < lines.length) {
-        if (/^[-*]\s/.test(lines[i])) { items.push(lines[i].slice(2).trim()); i++; }
-        else if (!lines[i].trim() && i + 1 < lines.length && /^[-*]\s/.test(lines[i + 1])) { i++; }
-        else break;
-      }
-      blocks.push({ type: 'list', items }); continue;
-    }
-    if (!line.trim()) { i++; continue; }
-    if (/^[-*_]{3,}$/.test(line.trim())) { blocks.push({ type: 'hr' }); i++; continue; }
-    const pLines = [];
-    while (
-      i < lines.length && lines[i].trim() &&
-      !lines[i].startsWith('|') && !lines[i].startsWith('```') &&
-      !/^#{1,6}\s/.test(lines[i]) && !/^[-*]\s/.test(lines[i])
-    ) { pLines.push(lines[i]); i++; }
-    if (pLines.length) blocks.push({ type: 'para', text: pLines.join(' ') });
-  }
-  return blocks;
-}
+const md = new MarkdownIt({ html: true, breaks: true, linkify: false, typographer: false });
 
 function Markdown({ text }) {
   if (!text) return null;
-  const blocks = useMemo(() => parseBlocks(text), [text]);
+  const html = useMemo(() => {
+    const normalized = text.replace(/\r\n/g, '\n').replace(/^\\\-/gm, '-');
+    return md.render(normalized);
+  }, [text]);
   return (
-    <div style={{ color: 'var(--ifm-color-content)', fontSize: 14, lineHeight: 1.7 }}>
-      {blocks.map((b, i) => {
-        if (b.type === 'code') return <CodeBlock key={i} language={b.lang}>{b.content}</CodeBlock>;
-        if (b.type === 'table') {
-          const [header, ...data] = b.rows;
-          return (
-            <table key={i} style={{ width: '100%', borderCollapse: 'collapse', margin: '12px 0', fontSize: 13 }}>
-              <thead>
-                <tr style={{ background: 'var(--ifm-color-emphasis-100)' }}>
-                  {(header || []).map((c, j) => (
-                    <th key={j} style={{ padding: '8px 12px', borderBottom: '1px solid var(--ifm-color-emphasis-300)', textAlign: 'left', fontWeight: 600 }}
-                      dangerouslySetInnerHTML={{ __html: renderInline(c) }} />
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {data.map((row, ri) => (
-                  <tr key={ri} style={{ borderBottom: '1px solid var(--ifm-color-emphasis-200)' }}>
-                    {row.map((c, ci) => (
-                      <td key={ci} style={{ padding: '8px 12px' }}
-                        dangerouslySetInnerHTML={{ __html: renderInline(c) }} />
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          );
-        }
-        if (b.type === 'heading') {
-          const Tag = `h${Math.min(b.level + 2, 5)}`;
-          return <Tag key={i} style={{ marginTop: 20, marginBottom: 6 }}
-            dangerouslySetInnerHTML={{ __html: renderInline(b.text) }} />;
-        }
-        if (b.type === 'list') return (
-          <ul key={i} style={{ paddingLeft: 20, margin: '6px 0' }}>
-            {b.items.map((item, j) => (
-              <li key={j} style={{ marginBottom: 3 }}
-                dangerouslySetInnerHTML={{ __html: renderInline(item) }} />
-            ))}
-          </ul>
-        );
-        if (b.type === 'para') return (
-          <p key={i} style={{ margin: '8px 0' }}
-            dangerouslySetInnerHTML={{ __html: renderInline(b.text) }} />
-        );
-        if (b.type === 'hr') return <hr key={i} style={{ border: 'none', borderTop: '1px solid var(--ifm-color-emphasis-300)', margin: '16px 0' }} />;
-        return null;
-      })}
-    </div>
+    <div
+      className="markdown"
+      style={{ color: 'var(--ifm-color-content)', fontSize: 14, lineHeight: 1.7 }}
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
   );
 }
 
@@ -349,8 +249,8 @@ const TD = { padding: '8px 12px', verticalAlign: 'top' };
 function ParamTable({ title, params }) {
   if (!params?.length) return null;
   return (
-    <div style={{ margin: '20px 0' }}>
-      <h4 style={SECTION_LABEL}>{title}</h4>
+    <div style={{ margin: '20px 0' }} className='markdown'>
+      <h4>{title}</h4>
       <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, overflow: 'hidden' }}>
         <thead>
           <tr style={{ background: 'var(--ifm-color-emphasis-100)' }}>
@@ -366,7 +266,8 @@ function ParamTable({ title, params }) {
               <td style={{ ...TD, fontFamily: 'monospace', color: 'var(--ifm-color-content-secondary)', fontSize: 12 }}>
                 {(p.value || '').replace(/\{\{([^}]+)\}\}/g, '{$1}') || '-'}
               </td>
-              <td style={{ ...TD, color: 'var(--ifm-color-content-secondary)' }}>{p.description || '-'}</td>
+              <td style={{ ...TD, color: 'var(--ifm-color-content-secondary)' }}
+                dangerouslySetInnerHTML={{ __html: md.render(p.description || '-').replace(/^<p>([\s\S]*)<\/p>\n?$/, '$1') }} />
             </tr>
           ))}
         </tbody>
@@ -772,6 +673,25 @@ export default function ApiV2Page() {
     const slug = item._folder ? toSlug(item._folder.name) : toSlug(item.name);
     history.push({ search: `?api=${slug}` });
   }, [history]);
+
+  // ← / → 키보드 탐색
+  useEffect(() => {
+    const onKeyDown = (e) => {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      const tag = document.activeElement?.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+      e.preventDefault();
+      const currentIdx = FLAT_ITEMS.findIndex(item =>
+        selected?._folder
+          ? item._folder?.name === selected._folder.name
+          : !item._folder && item.name === selected?.name
+      );
+      const next = FLAT_ITEMS[currentIdx + (e.key === 'ArrowRight' ? 1 : -1)];
+      if (next) handleSelect(next);
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [selected, handleSelect]);
 
   const pageTitle = selected
     ? (selected._folder?.name || selected.name) + ' — BioStar X API'
