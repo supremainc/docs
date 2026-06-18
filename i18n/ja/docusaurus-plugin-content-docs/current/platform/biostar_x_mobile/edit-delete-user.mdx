@@ -1,0 +1,94 @@
+---
+id: edit-delete-user
+title: ユーザーの編集と削除
+description: 登録済みユーザーの情報、権限、クレデンシャルを編集または削除する方法を案内します。
+keywords:
+  - ユーザー
+  - 編集
+  - 削除
+  - クレデンシャル
+---
+
+ユーザーの所属が変わった場合や権限を調整する場合は、情報を編集できます。 退職や契約終了時には、ユーザーを削除してセキュリティを強化する方法も確認してください。
+
+## ユーザーの編集
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-user-details.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+ユーザー情報、権限、クレデンシャルはユーザー詳細情報で編集できます。
+
+1. アプリのホーム画面で <Cmd>USER</Cmd> をタップします。
+
+   :::note
+
+   サイドメニューからも開けます。 <IcHamberg title='Hamburger icon' width={20} height={20} /> → <Cmd>User</Cmd> をタップします。
+
+   :::
+
+2. ユーザー一覧で、編集するユーザーをタップします。
+
+3. ユーザー詳細情報で、画面右上の <IcAppEdit title='Edit' width='20px' height='20px' /> をタップします。
+
+4. <Cmd>Edit User</Cmd> では、ユーザーの基本情報の編集、権限の変更、クレデンシャルの管理を行えます。
+
+5. 変更内容を保存するには、画面右上の <IcSave title='Save' width='20px' height='20px' /> をタップします。
+
+:::info
+
+* ユーザー情報、権限、クレデンシャル項目の詳細は、<DocLink docId='platform/biostar_x_mobile/add-user' /> を参照してください。
+
+* ユーザーを一時的に無効にするには、<Cmd>Status</Cmd> でトグルスイッチをタップし、<Cmd>Inactive</Cmd> に設定します。 無効化されたユーザーは入退室が制限されます。
+
+* 登録済みクレデンシャルを削除するには、削除するクレデンシャル項目をタップし、画面右上の <IcAppDelete title='Delete' /> をタップします。 削除するクレデンシャルを選択し、<Cmd>OK</Cmd> をタップします。
+
+  <Image src='/img/mobile/bsx-mobile-app-add-user-credential-remove.png' width='70%' className='none' alone />
+
+:::
+
+</Column>
+</Columns>
+
+## ユーザーの削除
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-user-delete.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+ユーザーを削除する場合は、次の案内に従って削除します。
+
+1. アプリのホーム画面で <Cmd>USER</Cmd> をタップします。
+
+   :::note
+
+   サイドメニューからも開けます。 <IcHamberg title='Hamburger icon' width={20} height={20} /> → <Cmd>User</Cmd> をタップします。
+
+   :::
+
+2. ユーザー一覧で、画面右上の <IcAppDelete title='Delete' width='20px' height='20px' /> をタップします。
+
+3. 削除するユーザーを選択します。 1 人以上のユーザーを選択できます。
+
+4. 画面右上の <Cmd>OK</Cmd> をタップします。
+
+5. 確認メッセージが表示されたら、<Cmd>Yes</Cmd> をタップします。
+
+選択したユーザーが削除されます。 削除したユーザーは復元できません。
+
+:::info
+
+IDが `1` の管理者アカウントは削除できません。
+
+:::
+
+</Column>
+</Columns>

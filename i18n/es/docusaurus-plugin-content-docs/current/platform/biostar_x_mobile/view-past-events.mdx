@@ -1,0 +1,140 @@
+---
+id: view-past-events
+title: Ver Registros de Eventos Pasados
+description: Vea y filtre registros pasados para consultar el historial de acceso de un periodo y una ubicación específicos.
+keywords:
+  - Registros pasados
+  - Vista
+  - Filtrado
+---
+
+Vea registros pasados para consultar el historial de acceso que ocurrió durante un periodo y en una ubicación específicos. Filtre los registros para encontrar fácilmente eventos que coincidan con las condiciones deseadas.
+
+<Image src='/img/mobile/bsx-mobile-app-past-log.png' width='500px' className='none' alone />
+
+Use la función <Cmd>EVENT LOG</Cmd> en las siguientes situaciones.
+
+* Consultar el historial de acceso pasado de un usuario específico
+
+* Rastrear el historial de eventos de seguridad dentro de un periodo específico
+
+* Auditar e informar el control de acceso
+
+:::note
+
+**Diferencias con los registros en tiempo real**
+
+* **Registros en tiempo real**: Supervise los eventos actuales de inmediato. Los registros en tiempo real son útiles cuando necesita entender la situación actual y responder de inmediato.
+
+* **Registros pasados**: Busque y vea el historial de eventos de un periodo específico.
+
+:::
+
+## Ver registros de eventos pasados
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-past-log-list.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Desde la pantalla de inicio de la app, toque <Cmd>EVENT LOG</Cmd>.
+
+* Cada registro muestra el tipo de evento, la hora, la puerta o el dispositivo, y la información del usuario.
+
+* Deslice hacia abajo la lista de registros para actualizarla y mostrar los registros más recientes.
+
+  <Image src='/img/mobile/bsx-mobile-app-past-log-refresh.png' width='252px' alone />
+
+:::info
+
+* La fecha y la hora que aparecen en los registros siguen la configuración regional del servidor BioStar X. Para obtener más información sobre la configuración del formato de visualización de fecha y hora en BioStar X, consulte <DocLink docId='platform/biostar_x/settings-preferences' />.
+
+* También puede abrir la pantalla Registro de eventos tocando el menú lateral (<IcHamberg title='Hamburger icon' width={20} height={20} />) → <Cmd>Monitoring</Cmd> → <Cmd>Event Log</Cmd>.
+
+:::
+
+</Column>
+</Columns>
+
+## Ver solo registros específicos
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-past-log-filter.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Filtre la lista de registros para mostrar solo los registros relacionados con un evento, usuario, puerta o dispositivo específicos. 
+
+1. Toque <IcAppFilter title='Filter' width='20px' height='20px' /> en la esquina superior derecha de la pantalla. 
+
+2. Configure las siguientes condiciones de filtro para mostrar solo los registros que desea.
+
+   * <Cmd>Period</Cmd>: Configure el periodo del evento
+
+   * <Cmd>Time</Cmd>: Configure la hora del evento
+
+   * <Cmd>Event</Cmd>: Seleccione un tipo de evento específico (por ejemplo, falla de autenticación facial, alarma de intrusión y más)
+
+   * <Cmd>User</Cmd>: Seleccione un usuario específico (por ejemplo, el historial de acceso de un usuario VIP)
+
+   * <Cmd>Device</Cmd>: Seleccione un dispositivo específico (por ejemplo, un evento de un dispositivo de control de acceso específico)
+
+   * <Cmd>Door</Cmd>: Seleccione una puerta específica (por ejemplo, la entrada principal del primer piso)
+
+3. Para filtrar la lista de registros con las condiciones configuradas, toque <Cmd>Apply</Cmd>.
+
+:::info
+
+Para restablecer las condiciones de filtro, toque <IcAppFilter title='Filter' width='20px' height='20px' /> → <IcAppReset title='Reset' width='20px' height='20px' /> en la esquina superior derecha de la pantalla.
+
+:::
+
+</Column>
+</Columns>
+
+## Ver detalles del registro
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-past-log-detail.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Toque el registro que desea en la lista para ver sus detalles.
+
+* <Cmd>Event</Cmd>: El tipo de evento que ocurrió (por ejemplo, autenticación de acceso correcta, falla de autenticación de acceso, activación de alarma y más)
+
+* <Cmd>Description</Cmd>: Descripción del evento
+
+* <Cmd>Datetime</Cmd>: La fecha y hora en que ocurrió el evento
+
+* <Cmd>Door</Cmd>: La puerta donde ocurrió el evento
+
+* <Cmd>Device Name</Cmd>: El dispositivo donde ocurrió el evento
+
+* <Cmd>User Group</Cmd>: El nombre del grupo del usuario que generó el evento
+
+* <Cmd>User</Cmd>: El usuario que generó el evento
+
+Toque los botones en la parte inferior de la ventana emergente de detalles para realizar las siguientes acciones.
+
+* Para copiar la información del evento al portapapeles, toque <Cmd>EVENT INFORMATION COPIED</Cmd>.
+
+* Para cerrar la ventana emergente de detalles, toque <Cmd>OK</Cmd>.
+
+:::info
+
+Si el registro de eventos está relacionado con una puerta, en los detalles del registro se muestra información adicional sobre el control de la puerta.
+
+:::
+
+</Column>
+</Columns>

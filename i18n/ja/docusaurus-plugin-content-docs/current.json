@@ -542,5 +542,17 @@
   "sidebar.ccure.category.C•CURE 9000": {
     "message": "C•CURE 9000",
     "description": "The label for category 'C•CURE 9000' in sidebar 'ccure'"
+  },
+  "sidebar.biostarx_mobile.category.BioStar X 모바일": {
+    "message": "BioStar X モバイル",
+    "description": "The label for category 'BioStar X 모바일' in sidebar 'biostarx_mobile'"
+  },
+  "sidebar.biostarx_mobile.category.사용자 관리하기": {
+    "message": "ユーザー管理",
+    "description": "The label for category '사용자 관리하기' in sidebar 'biostarx_mobile'"
+  },
+  "sidebar.biostarx_mobile.category.출입문 관리하기": {
+    "message": "ドア管理",
+    "description": "The label for category '출입문 관리하기' in sidebar 'biostarx_mobile'"
   }
 }

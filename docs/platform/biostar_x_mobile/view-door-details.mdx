@@ -1,0 +1,143 @@
+---
+id: view-door-details
+title: 출입문 상세 정보 확인하기
+description: 개별 출입문의 실시간 상태, 설정된 장치 정보, 접근 이력을 한 화면에서 확인할 수 있습니다. 상태 이상을 빠르게 감지하고 즉시 제어하거나 출입문에서 발생한 이벤트를 추적할 수 있습니다.
+keywords: [출입문, 상세 정보, 원격 제어]
+---
+
+출입문을 선택하면 현재 상태와 설정된 장치를 확인할 수 있습니다. 문제가 발생하면 바로 제어하거나 최근 활동 기록을 조회할 수 있습니다.
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-door-details.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+출입문의 상태 정보와, 원격 제어 기능, 출입문에 할당된 장치 정보와 열림 시간을 확인할 수 있습니다.
+
+1. 앱 홈 화면에서 <Cmd>DOOR</Cmd>를 탭하세요.
+
+   :::note
+
+   사이드 메뉴를 통해 진입할 수도 있습니다. <IcHamberg title='Hamburger icon' width={20} height={20} /> → <Cmd>Door</Cmd>를 탭하세요.
+
+   :::
+
+1. 출입문 목록에서 상세 정보를 확인하려는 출입문을 탭하세요.
+
+</Column>
+</Columns>
+
+## 출입문 상태 정보
+
+출입문의 현재 상태를 실시간으로 확인할 수 있습니다.
+
+<Image src='/img/mobile/bsx-mobile-app-door-details-status.png' alone />
+
+* <Cmd>Door Status</Cmd>: 출입문의 열림 또는 닫힘 상태를 표시합니다.
+
+* <Cmd>Door Status Type</Cmd>: 출입문의 상태 유형을 표시합니다. 예를 들어, 정상(Normal), 관리자 수동 개방(Operator Unlocked), 관리자 수동 잠금(Operator Locked) 등이 있습니다.
+
+* <Cmd>Door Relay</Cmd>: 출입문과 연결된 릴레이의 상태를 표시합니다.
+
+* <Cmd>Alarm</Cmd>: 출입문에서 발생한 알람 이벤트를 표시합니다.
+
+* <Cmd>Last Event</Cmd>: 출입문에서 발생한 마지막 이벤트의 날짜와 시간, 이벤트 유형을 표시합니다.
+
+
+## 원격 제어 기능
+
+출입문을 원격으로 제어하여 출입을 관리할 수 있습니다.
+
+<Image src='/img/mobile/bsx-mobile-app-door-details-remote-control.png' alone />
+
+* <Cmd>Open</Cmd>: 출입문을 일시적으로 열어 출입을 허용합니다. 출입문은 설정된 시간 후 자동으로 닫힙니다.
+
+* <Cmd>Release</Cmd>: 인증된 사용자만 출입할 수 있도록 설정합니다. 출입문에 설정된 스케줄에 따라 출입문 상태가 변경됩니다.
+
+* <Cmd>Manual Lock</Cmd>: 출입문을 수동으로 잠가 출입을 차단합니다. 이 기능은 시간 제한 없이 출입문을 잠글 수 있습니다. 이 상태에서는 모든 사용자의 출입을 차단합니다.
+
+* <Cmd>Manual Unlock</Cmd>: 출입문을 수동으로 개방하여 출입을 허용합니다. 이 기능은 시간 제한 없이 출입문을 개방합니다. 이 상태에서는 모든 사용자의 출입을 허용합니다.
+
+* <Cmd>Clear APB</Cmd>: 선택한 출입문의 모든 사용자에 대한 APB 알람을 해제할 수 있습니다.
+
+* <Cmd>Clear Alarm</Cmd>: 출입문에서 발생한 알람을 해제할 수 있습니다.
+
+:::info
+
+* 출입문을 일시적으로 열어 자동으로 닫히는 시간은 하단의 <Cmd>Open Time</Cmd>에서 확인할 수 있습니다.
+
+* 출입문을 수동으로 잠그거나 개방한 후에는 출입문 상태가 자동으로 변경되지 않습니다. 보안을 위해 출입문의 상태를 설정된 스케줄에 맞춰 작동하게 하려면 <Cmd>Release</Cmd> 기능을 사용하세요.
+
+:::
+
+
+## 출입문 장치 정보
+
+출입문에 할당된 장치 정보를 확인할 수 있습니다.
+
+<Image src='/img/mobile/bsx-mobile-app-door-details-device-info.png' alone />
+
+* <Cmd>Entry Device</Cmd>: 입실 장치로 할당된 장치 정보입니다.
+
+* <Cmd>Door Relay</Cmd>: 출입문의 잠금 장치로 동작할 릴레이 정보입니다.
+
+* <Cmd>Exit Button</Cmd>: 퇴실 버튼으로 사용할 장치의 포트 정보입니다.
+
+* <Cmd>Door Sensor</Cmd>: 출입문의 열림과 닫힘을 감지하는 센서로 할당된 장치의 포트 정보입니다.
+
+* <Cmd>Open Time</Cmd>: 출입문을 일시적으로 열었을 때, 출입문이 자동으로 닫히기까지 유지되는 시간입니다.
+
+:::info
+
+<Cmd>Open Time</Cmd> 설정에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-door-add#option' />에서 <Cmd sid='common.open' product='2' /> → <Cmd sid='door.openTime' product='2' />을 참고하세요.
+
+:::
+
+
+## 출입문 로그 이벤트 조회
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-door-log-event.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+출입문에서 발생한 로그 이벤트를 조회하여 출입문에서 발생한 출입 시도, 알람 등의 이벤트를 확인할 수 있습니다. 
+
+1. 출입문 상세 정보 화면에서 오른쪽 상단의 <IcAppDoorLog title='Log event' width='20px' height='20px' />를 탭하세요.
+
+   <Image src='/img/mobile/bsx-mobile-app-door-log-event-filter-list.png' width='252px' alone />
+
+1. 출입문 로그 이벤트를 필터링하려면 화면 오른쪽 상단의 <IcAppLogFiltered title='Filter' width='20px' height='20px' />를 탭하세요.
+
+   <Image src='/img/mobile/bsx-mobile-app-door-log-event-filter.png' width='30%' alone />
+
+   * <Cmd>Period</Cmd>: 로그 이벤트가 발생한 기간을 설정하세요.
+
+   * <Cmd>Time</Cmd>: 로그 이벤트가 발생한 시간을 설정하세요.
+
+   * <Cmd>Event</Cmd>: 로그 이벤트 종류를 선택하세요. 예를 들어, 출입 인증 성공, 출입 인증 실패 등을 선택할 수 있습니다.
+
+   * <Cmd>User</Cmd>: 로그 이벤트를 발생시킨 사용자를 선택할 수 있습니다.
+
+   * <Cmd>Device</Cmd>: 로그 이벤트가 발생한 장치를 선택할 수 있습니다.
+
+   * <Cmd>Door</Cmd>: 현재 출입문 외 다른 출입문의 로그 이벤트도 조회할 수 있습니다.
+
+1. 필터 조건이 나타나면 원하는 조건을 설정하세요.
+
+1. 설정한 조건으로 로그 이벤트를 필터링하려면 <Cmd>Apply</Cmd>를 탭하세요.
+
+:::info
+
+필터링 조건을 초기화하려면 화면 오른쪽 상단의 <IcAppLogFiltered title='Filtered' width='20px' height='20px' /> → <IcAppReset title='Reset' width='20px' height='20px' />을 탭하세요.
+
+:::
+
+</Column>
+</Columns>

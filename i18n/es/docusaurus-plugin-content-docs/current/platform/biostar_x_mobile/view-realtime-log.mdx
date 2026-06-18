@@ -1,0 +1,124 @@
+---
+id: view-realtime-log
+title: Monitoreo de Registros en Tiempo Real
+description: Monitorea los registros en tiempo real para revisar al instante eventos como intentos de acceso y alarmas.
+keywords:
+  - Registro Tiempo Real
+  - Monitorizar
+  - Evento
+---
+
+Consulta en tiempo real los eventos que ocurren en el servidor BioStar X. En la pantalla principal de la app, toca <Cmd>REGISTRO EN TIEMPO REAL</Cmd>.
+
+<Image src='/img/mobile/bsx-mobile-app-realtime-log.png' width='500px' className='none' alone />
+
+Usa la función <Cmd>REGISTRO EN TIEMPO REAL</Cmd> en las siguientes situaciones.
+
+* Monitorea intentos de acceso durante las horas de traslado
+
+* Revisa en tiempo real los eventos recibidos actualmente
+
+## Ver registros en tiempo real
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-realtime-log-list.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+En la pantalla principal de la app, toca <Cmd>REGISTRO EN TIEMPO REAL</Cmd>. Cuando abres por primera vez la pantalla Registro en tiempo real (<Cmd>Registro en tiempo real</Cmd>), la lista está vacía.
+
+* Cuando ocurre un evento nuevo, se agrega automáticamente a la lista en tiempo real. La lista no tiene límite de filas, y los eventos nuevos se agregan al inicio.
+
+* Para pausar la recepción de eventos en tiempo real, toca <IcAppPause title='Pause' width='20px' height='20px' /> en la esquina superior derecha de la pantalla. Cuando se pausa, los eventos nuevos no se agregan a la lista, pero quedan en cola en segundo plano. Para reanudar la recepción de eventos en tiempo real, toca <IcAppPlay title='Play' width='20px' height='20px' />. Los eventos agregados a la cola aparecen antes que los eventos más recientes.
+
+* Para limpiar la lista de registros en tiempo real, toca <IcAppClean title='Clean' width='20px' height='20px' /> en la esquina superior derecha de la pantalla. La lista de registros se limpia, y los eventos nuevos se agregan en tiempo real a medida que ocurren.
+
+* Filtra la lista de registros en tiempo real para mostrar solo registros relacionados, como ciertos eventos, usuarios, puertas o dispositivos. Para obtener más información, consulta <DocLink inner='#viewSpecificLog' />.
+
+:::info
+
+* Si vas a otro menú y regresas a <Cmd>Registro en tiempo real</Cmd>, la lista de registros se limpia, y los registros nuevos se agregan en tiempo real a medida que ocurren.
+
+* La fecha y la hora que aparecen en los registros siguen la configuración regional del servidor BioStar X. Para obtener más información sobre la configuración del formato de visualización de fecha y hora en BioStar X, consulte <DocLink docId='platform/biostar_x/settings-preferences' />.
+
+* También puedes abrir la pantalla Registro en tiempo real tocando Menú lateral (<IcHamberg title='Hamburger icon' width={20} height={20} />) → <Cmd>Monitoreo</Cmd> → <Cmd>Registro en tiempo real</Cmd>.
+
+:::
+
+</Column>
+</Columns>
+
+## Ver solo ciertos registros {#viewSpecificLog}
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-realtime-log-filter.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Filtra la lista de Registro en tiempo real para mostrar solo registros relacionados, como ciertos eventos, usuarios, puertas o dispositivos. 
+
+1. Toque <IcAppFilter title='Filter' width='20px' height='20px' /> en la esquina superior derecha de la pantalla. 
+
+2. Configure las siguientes condiciones de filtro para mostrar solo los registros que desea.
+
+   * <Cmd>Puerta</Cmd>: Una cierta puerta (por ejemplo, la entrada principal del primer piso)
+
+   * <Cmd>Dispositivo</Cmd>: Un cierto dispositivo (por ejemplo, un evento generado por un cierto dispositivo de control de acceso)
+
+   * <Cmd>Usuario</Cmd>: Un cierto usuario (por ejemplo, registros de acceso de un usuario VIP)
+
+   * <Cmd>Evento</Cmd>: Un cierto tipo de evento (por ejemplo, fallo de autenticación facial, alarma de intrusión y más)
+
+   * <Cmd>Elevador</Cmd>: Un cierto elevador (por ejemplo, un elevador en un cierto piso)
+
+   * <Cmd>AC avanzada</Cmd>: Ciertos eventos avanzados de control de acceso (por ejemplo, anti-passback, alarma de incendio, apertura/cierre programado y más)
+
+3. Para filtrar la lista de registros con las condiciones configuradas, toque <Cmd>Apply</Cmd>.
+
+:::info
+
+* Para restablecer las condiciones de filtro, toque <IcAppFilter title='Filter' width='20px' height='20px' /> → <IcAppReset title='Reset' width='20px' height='20px' /> en la esquina superior derecha de la pantalla.
+
+* Los elevadores y el control de acceso avanzado están disponibles cuando la licencia **Advanced** o superior está activa. Para obtener más información sobre la política de licencias, consulte <DocLink docId='platform/biostar_x/licensing' />.
+
+:::
+
+</Column>
+</Columns>
+
+## Ver detalles del registro
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-realtime-log-details.png' width='252px' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Toca un registro para ver información detallada sobre ese registro.
+
+* <Cmd>Registro de evento</Cmd>: El tipo de evento. Muestra qué tipo de evento ocurrió.
+
+* <Cmd>Fecha y hora</Cmd>: La fecha y hora en que ocurrió el evento.
+
+* <Cmd>Puerta</Cmd>: La puerta donde ocurrió el evento.
+
+* <Cmd>Dispositivo</Cmd>: El dispositivo donde ocurrió el evento.
+
+* <Cmd>Usuario</Cmd>: El usuario que activó el evento. Por ejemplo, en un evento de autenticación de acceso, aparece el usuario que intentó acceder.
+
+Toque los botones en la parte inferior de la ventana emergente de detalles para realizar las siguientes acciones.
+
+* Para copiar la información del evento al portapapeles, toque <Cmd>EVENT INFORMATION COPIED</Cmd>.
+
+* Para cerrar la ventana emergente de detalles, toque <Cmd>OK</Cmd>.
+
+</Column>
+</Columns>

@@ -1,0 +1,140 @@
+---
+id: view-past-events
+title: View Past Event Logs
+description: View and filter past logs to check access history for a desired period and location.
+keywords:
+  - Past logs
+  - View
+  - Filtering
+---
+
+View past logs to check access history that occurred during a specific period and at a specific location. Filter logs to easily find events that match your desired conditions.
+
+<Image src='/img/mobile/bsx-mobile-app-past-log.png' width='500px' className='none' alone />
+
+Use the <Cmd>EVENT LOG</Cmd> feature in the following situations.
+
+* Check a specific user's past access history
+
+* Track security event history within a specific period
+
+* Audit and report access control
+
+:::note
+
+**Differences from real-time logs**
+
+* **Real-time logs**: Monitor current events immediately. Real-time logs are useful when you need to understand the current situation and respond immediately.
+
+* **Past logs**: Search and view event history for a specific period.
+
+:::
+
+## View past event logs
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-past-log-list.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+From the app home screen, tap <Cmd>EVENT LOG</Cmd>.
+
+* Each log shows the event type, time, door/device, and user information.
+
+* Pull down the log list to refresh it and show the latest logs.
+
+  <Image src='/img/mobile/bsx-mobile-app-past-log-refresh.png' width='252px' alone />
+
+:::info
+
+* The date and time shown in the logs follow the BioStar X server locale settings. For more information on date and time display format settings in BioStar X, refer to <DocLink docId='platform/biostar_x/settings-preferences' />.
+
+* You can also open the Event Log screen by tapping the side menu (<IcHamberg title='Hamburger icon' width={20} height={20} />) → <Cmd>Monitoring</Cmd> → <Cmd>Event Log</Cmd>.
+
+:::
+
+</Column>
+</Columns>
+
+## View only specific logs
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-past-log-filter.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Filter the log list to show only logs related to a specific event, user, door, or device. 
+
+1. Tap <IcAppFilter title='Filter' width='20px' height='20px' /> in the upper right corner of the screen. 
+
+2. Set the following filter conditions to show only the logs you want.
+
+   * <Cmd>Period</Cmd>: Set the event period
+
+   * <Cmd>Time</Cmd>: Set the event time
+
+   * <Cmd>Event</Cmd>: Select a specific event type (for example, facial authentication failure, intrusion alarm, and more)
+
+   * <Cmd>User</Cmd>: Select a specific user (for example, a VIP user's access history)
+
+   * <Cmd>Device</Cmd>: Select a specific device (for example, an event from a specific access control device)
+
+   * <Cmd>Door</Cmd>: Select a specific door (for example, the first-floor main entrance)
+
+3. To filter the log list with the set conditions, tap <Cmd>Apply</Cmd>.
+
+:::info
+
+To reset the filter conditions, tap <IcAppFilter title='Filter' width='20px' height='20px' /> → <IcAppReset title='Reset' width='20px' height='20px' /> in the upper right corner of the screen.
+
+:::
+
+</Column>
+</Columns>
+
+## View log details
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-past-log-detail.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Tap the log you want in the log list to view its details.
+
+* <Cmd>Event</Cmd>: The event type that occurred (for example, access authentication success, access authentication failure, alarm triggered, and more)
+
+* <Cmd>Description</Cmd>: Event description
+
+* <Cmd>Datetime</Cmd>: The date and time the event occurred
+
+* <Cmd>Door</Cmd>: The door where the event occurred
+
+* <Cmd>Device Name</Cmd>: The device where the event occurred
+
+* <Cmd>User Group</Cmd>: The group name of the user who triggered the event
+
+* <Cmd>User</Cmd>: The user who triggered the event
+
+Tap the buttons at the bottom of the details popup to perform the following actions.
+
+* To copy the event information to the clipboard, tap <Cmd>EVENT INFORMATION COPIED</Cmd>.
+
+* To close the details popup, tap <Cmd>OK</Cmd>.
+
+:::info
+
+If the event log is related to a door, additional information regarding door control is displayed in the log details.
+
+:::
+
+</Column>
+</Columns>

@@ -1,0 +1,80 @@
+---
+id: view-user-log-event
+title: ユーザーログイベントを確認する
+description: ユーザーのログイベントを確認して、ユーザーの入退室履歴を確認できます。
+keywords:
+  - ユーザー
+  - ログイベント
+---
+
+ユーザーの入退室履歴を確認して、異常なアクセスや許可されていない時間帯の入退室を確認できます。 ログイベントをフィルタリングすると、必要な期間と場所の履歴を簡単に見つけられます。
+
+## ユーザー入退室履歴の確認
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-user-log-event.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+1. アプリのホーム画面で <Cmd>USER</Cmd> をタップします。
+
+   :::note
+
+   サイドメニューからも開けます。 <IcHamberg title='Hamburger icon' width={20} height={20} /> → <Cmd>User</Cmd> をタップします。
+
+   :::
+
+2. ユーザーリストで、ログイベントを確認するユーザーをタップします。
+
+3. ユーザー詳細情報で、右上の <IcAppLog title='Log' width='20px' height='20px' /> をタップします。
+
+4. <Cmd>Event Log</Cmd>でユーザーの入退室履歴を確認できます。
+
+   <Image src='/img/mobile/bsx-mobile-app-user-log-filter.png' width='252px' alone />
+
+最新のログイベントが先に表示され、入退室場所とイベント情報を確認できます。
+
+</Column>
+</Columns>
+
+## ログイベントのフィルタリング
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-user-log-event-filter.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+ユーザーのログイベントを日付と時刻、イベント種類、入退室場所など、さまざまな条件でフィルタリングできます。
+
+1. イベントログの右上にある <IcAppLogFiltered title='Filter' width='20px' height='20px' /> をタップします。
+
+2. フィルター条件が表示されたら、必要な条件を設定します。
+
+   * <Cmd>Period</Cmd>: ログイベントが発生した期間を設定します。
+
+   * <Cmd>Time</Cmd>: ログイベントが発生した時間を設定します。
+
+   * <Cmd>Event</Cmd>: ログイベントの種類を選択します。 たとえば、正常（Normal）、管理者手動開放（Operator Unlocked）、管理者手動施錠（Operator Locked）などがあります。
+
+   * <Cmd>User</Cmd>: 現在のユーザー以外のログイベントも確認できます。
+
+   * <Cmd>Device</Cmd>: ログイベントが発生したデバイスを選択できます。
+
+   * <Cmd>Door</Cmd>: ログイベントが発生した入退室扉を選択できます。
+
+3. 設定した条件でログイベントをフィルタリングするには、<Cmd>Apply</Cmd>をタップします。
+
+:::info
+
+フィルタリング条件を初期化するには、画面右上の <IcAppLogFiltered title='Filtered' width='20px' height='20px' /> → <IcAppReset title='Reset' width='20px' height='20px' /> をタップします。
+
+:::
+
+</Column>
+</Columns>

@@ -1,0 +1,79 @@
+---
+id: check-resolve-alerts
+title: 경보 알람 확인 및 해제하기
+description: 모바일 앱을 통해 BioStar X에서 발생한 경보 알람을 확인하고 해제하는 방법을 안내합니다.
+keywords: [경보 확인, 경보 해제]
+---
+
+BioStar X에서 발생한 경보 알람을 모바일 앱에서 확인하고, 필요에 따라 경보를 해제할 수 있습니다. 출입문 강제 열림과 같은 경보 알람 이벤트가 발생했을 때, 앱에서 경보 알람을 확인하고 조치 사항을 기록할 수 있습니다.
+
+<Image src='/img/mobile/bsx-mobile-app-alert.png' width='500px' className='none' alone />
+
+:::info
+
+* BioStar X에서 경보 알람을 확인하고 해제하는 방법에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/monitoring-event#acknowledge-alarm-and-record-action' />를 참고하세요.
+
+* 경보 알람 목록에 표시되는 날짜와 시간은 BioStar X 서버의 환경 설정에 따릅니다. BioStar X에서 날짜 및 시간 표시 형식 설정에 대한 자세한 내용은 <DocLink docId='platform/biostar_x/settings-preferences' />를 참고하세요.
+
+:::
+
+
+## 경보 알람 목록 (Alert List)
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-alert-list.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+앱 홈 화면에서 <Cmd>ALERT</Cmd>를 탭하세요. 경보 알람 목록(<Cmd>Alert List</Cmd>)을 확인할 수 있습니다. 
+
+경보 알람 목록에서는 출입문 강제 열림과 같은 경보 알람 이벤트를 최신 순으로 확인할 수 있습니다. 새로운 경보 알람 이벤트가 발생하면 자동으로 목록에 실시간으로 추가됩니다.
+
+:::info
+
+경보 알람 화면은 사이드 메뉴(<IcHamberg title='Hamburger icon' width={20} height={20} />) → <Cmd>Alert</Cmd>을 탭하여 진입할 수도 있습니다.
+
+:::
+
+</Column>
+</Columns>
+
+<Columns className='mt--50'>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-alert-detail.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+### 알람 상세 정보 보기
+
+경보 알람 목록에서 특정 알람을 탭하면, 해당 알람의 상세 정보를 확인할 수 있습니다. 알람 상세 정보에는 발생한 알람 이벤트의 유형 및 사용자, 발생 시간, 출입문/장치 등이 표시됩니다.
+
+* 경보 알람을 확인하고 조치 사항 등을 기록하려면 <Cmd>Comment (optioinal)</Cmd> 필드에 내용을 입력하세요. 입력한 내용은 BioStar X 서버에 저장되고, 알람 이벤트의 상세 정보에서 확인할 수 있습니다.
+
+* 조치 사항을 입력하고 경보 알람을 해제하려면 <Cmd>ACKNOWLEDGE</Cmd>를 탭하세요. 경보 알람이 해제되고, <Cmd>Alert List</Cmd>에서 해당 알람 이벤트가 사라집니다.
+
+</Column>
+</Columns>
+
+
+
+
+## 경보 알람 내역 (Alert History)
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-alert-history.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+경보 알람 내역에서는 확인된 경보 이벤트를 확인할 수 있습니다. 각 알람 이벤트의 유형, 발생 시간, 출입문/장치, 사용자 등의 정보를 확인할 수 있습니다. 확인된 알람 이벤트는 어떤 사용자가 언제 확인했는지 등의 정보도 함께 표시됩니다.
+
+</Column>
+</Columns>

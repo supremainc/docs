@@ -1,0 +1,143 @@
+---
+id: view-door-details
+title: ドア詳細情報を確認する
+description: 個別のドアのリアルタイム状態、設定済みのデバイス情報、アクセス履歴を1画面で確認できます。 状態異常をすばやく検知し、すぐに制御したり、ドアで発生したイベントを追跡したりできます。
+keywords:
+  - ドア
+  - 詳細情報
+  - リモート制御
+---
+
+ドアを選択すると、現在の状態と設定済みのデバイスを確認できます。 問題が発生した場合は、すぐに制御したり、最近の活動履歴を確認したりできます。
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-door-details.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+ドアの状態情報、リモート制御機能、ドアに割り当てられたデバイス情報と開放時間を確認できます。
+
+1. アプリのホーム画面で<Cmd>DOOR</Cmd>をタップしてください。
+
+   :::note
+
+   サイドメニューからも開けます。 <IcHamberg title='Hamburger icon' width={20} height={20} /> → <Cmd>Door</Cmd>をタップしてください。
+
+   :::
+
+2. ドア一覧で、詳細情報を確認するドアをタップします。
+
+</Column>
+</Columns>
+
+## ドア状態情報
+
+ドアの現在の状態をリアルタイムで確認できます。
+
+<Image src='/img/mobile/bsx-mobile-app-door-details-status.png' alone />
+
+* <Cmd>Door Status</Cmd>: ドアの開閉状態を表示します。
+
+* <Cmd>Door Status Type</Cmd>: ドアの状態タイプを表示します。 たとえば、正常（Normal）、管理者手動開放（Operator Unlocked）、管理者手動施錠（Operator Locked）などがあります。
+
+* <Cmd>Door Relay</Cmd>: ドアに接続されたリレーの状態を表示します。
+
+* <Cmd>Alarm</Cmd>: ドアで発生したアラームイベントを表示します。
+
+* <Cmd>Last Event</Cmd>: ドアで発生した最後のイベントの日付、時刻、イベントタイプを表示します。
+
+## リモート制御機能
+
+ドアをリモートで制御して、出入を管理できます。
+
+<Image src='/img/mobile/bsx-mobile-app-door-details-remote-control.png' alone />
+
+* <Cmd>Open</Cmd>: ドアを一時的に開けて入室を許可します。 ドアは設定した時間後に自動で閉じます。
+
+* <Cmd>Release</Cmd>: 認証されたユーザーのみ入室できるように設定します。 ドアに設定したスケジュールに従って、ドアの状態が変更されます。
+
+* <Cmd>Manual Lock</Cmd>: ドアを手動でロックして入室を遮断します。 この機能では、時間制限なしでドアをロックできます。 この状態では、すべてのユーザーの入室を遮断します。
+
+* <Cmd>Manual Unlock</Cmd>: ドアを手動で開放して入室を許可します。 この機能では、時間制限なしでドアを開放します。 この状態では、すべてのユーザーの入室を許可します。
+
+* <Cmd>Clear APB</Cmd>: 選択したドアのすべてのユーザーに対するAPBアラームを解除できます。
+
+* <Cmd>Clear Alarm</Cmd>: ドアで発生したアラームを解除できます。
+
+:::info
+
+* ドアを一時的に開き、オートクローズまでの時間は下部の<Cmd>Open Time</Cmd>で確認できます。
+
+* ドアを手動でロックまたは開放した後は、ドアの状態は自動で変更されません。 セキュリティのため、ドアの状態を設定したスケジュールに合わせて動作させるには、<Cmd>Release</Cmd>機能を使用してください。
+
+:::
+
+## ドアデバイス情報
+
+ドアに割り当てられたデバイス情報を確認できます。
+
+<Image src='/img/mobile/bsx-mobile-app-door-details-device-info.png' alone />
+
+* <Cmd>Entry Device</Cmd>: 入室デバイスとして割り当てられたデバイス情報です。
+
+* <Cmd>Door Relay</Cmd>: ドアのロックデバイスとして動作するリレー情報です。
+
+* <Cmd>Exit Button</Cmd>: 退室ボタンとして使用するデバイスのポート情報です。
+
+* <Cmd>Door Sensor</Cmd>: ドアの開閉を検知するセンサーとして割り当てられたデバイスのポート情報です。
+
+* <Cmd>Open Time</Cmd>: ドアを一時的に開いたとき、ドアが自動で閉じるまで維持される時間です。
+
+:::info
+
+<Cmd>Open Time</Cmd>設定の詳細は、<DocLink docId='platform/biostar_x/settings-door-add#option' />の<Cmd sid='common.open' product='2' /> → <Cmd sid='door.openTime' product='2' />を参照してください。
+
+:::
+
+## ドアログイベントの確認
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-door-log-event.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+ドアで発生したログイベントを確認し、出入試行、アラームなどのイベントを確認できます。 
+
+1. ドア詳細情報画面の右上にある<IcAppDoorLog title='Log event' width='20px' height='20px' />をタップします。
+
+   <Image src='/img/mobile/bsx-mobile-app-door-log-event-filter-list.png' width='252px' alone />
+
+2. ドアログイベントをフィルタリングするには、画面右上の<IcAppLogFiltered title='Filter' width='20px' height='20px' />をタップします。
+
+   <Image src='/img/mobile/bsx-mobile-app-door-log-event-filter.png' width='30%' alone />
+
+   * <Cmd>Period</Cmd>: ログイベントが発生した期間を設定します。
+
+   * <Cmd>Time</Cmd>: ログイベントが発生した時間を設定します。
+
+   * <Cmd>Event</Cmd>: ログイベントの種類を選択します。 たとえば、正常（Normal）、管理者手動開放（Operator Unlocked）、管理者手動施錠（Operator Locked）などがあります。
+
+   * <Cmd>User</Cmd>: ログイベントを発生させたユーザーを選択できます。
+
+   * <Cmd>Device</Cmd>: ログイベントが発生したデバイスを選択できます。
+
+   * <Cmd>Door</Cmd>: 現在のドア以外のドアのログイベントも確認できます。
+
+3. フィルター条件が表示されたら、必要な条件を設定します。
+
+4. 設定した条件でログイベントをフィルタリングするには、<Cmd>Apply</Cmd>をタップします。
+
+:::info
+
+フィルタリング条件を初期化するには、画面右上の <IcAppLogFiltered title='Filtered' width='20px' height='20px' /> → <IcAppReset title='Reset' width='20px' height='20px' /> をタップします。
+
+:::
+
+</Column>
+</Columns>

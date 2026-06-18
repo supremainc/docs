@@ -1,0 +1,101 @@
+---
+id: remote-control-door
+title: ドアのリモート制御
+description: モバイルアプリでドアの状態をリアルタイムで確認し、状況に応じて制御できます。 通常運用から緊急対応まで、さまざまな制御オプションをサポートします
+keywords:
+  - ドア
+  - リモート制御
+---
+
+ドア一覧で各ドアの状態をリアルタイムで確認し、必要に応じて制御できます。 通常運用時は基本制御機能で管理し、セキュリティ強化や緊急時には追加制御オプションを活用できます。
+
+アプリのホーム画面で<Cmd>DOOR</Cmd>をタップしてください。 BioStar Xに登録されたドア一覧が表示されます。
+
+:::info
+
+サイドメニューからも開けます。 <IcHamberg title='Hamburger icon' width={20} height={20} /> → <Cmd>Door</Cmd>をタップしてください。
+
+:::
+
+## ドア状態の確認
+
+ドア一覧では、ドアの状態アイコンで各ドアに割り当てられたデバイスの異常状態をひと目で確認できます。 ドア状態アイコンは、ドアが開いているか、閉じているか、アラームが発生したかなどを示します。
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-doors-list.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+<div className='col2-2-8'>
+
+| ステータスアイコン | 説明 |
+| :-: | --- |
+| ![Door Error](/img/mobile/bsx-mobile-door-status-error.png) | ドアに問題が発生した状態です。 ドアに割り当てられたデバイスとの接続が切断されたか、コミュニケーションサーバーエラー、同期エラーなどの異常状態です。 |
+| ![Door Opened](/img/mobile/bsx-mobile-door-status-unlock.png) | ドアが開いている状態です。 |
+| ![Door Closed](/img/mobile/bsx-mobile-door-status-lock.png) | ドアが閉じている状態です。 |
+| ![Door Alarm](/img/mobile/bsx-mobile-door-status-alarm.png) | ドアでアラームが発生した状態です。 |
+| ![Door APB](/img/mobile/bsx-mobile-door-status-apb.png) | ドアでAPBアラームが発生した状態です。 |
+
+</div>
+
+</Column>
+</Columns>
+
+## ドアの開閉
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-door-control.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+ドアのリモート制御機能で、ドアを開けたりロックしたりして、入室を許可または遮断できます。
+
+* <Cmd>Open</Cmd>: ドアを一時的に開けて入室を許可します。 ドアは設定した時間後に自動で閉じます。
+
+* <Cmd>Release</Cmd>: 認証されたユーザーのみ入室できるように設定します。 ドアに設定したスケジュールに従って、ドアの状態が変更されます。
+
+:::info
+
+ドアを一時的に開けて自動で閉じる時間を設定する方法は、<DocLink docId='platform/biostar_x/settings-door-add#option' />の<Cmd sid='common.open' product='2' /> → <Cmd sid='door.openTime' product='2' />を参照してください。
+
+:::
+
+</Column>
+</Columns>
+
+## 追加制御
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-door-control-more.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+セキュリティ強化が必要な場合や長時間入室を制御する必要がある場合は、時間制限なしでドアを手動でロックまたは開放できます。 発生したアラームを解除することもできます。
+
+ドアの右端で<IcAirMore title='More' />をタップすると、追加制御オプションを使用できます。
+
+* <Cmd>Manual Lock</Cmd>: ドアを手動でロックして入室を遮断します。 この機能では、時間制限なしでドアをロックできます。 この状態では、すべてのユーザーの入室を遮断します。
+
+* <Cmd>Manual Unlock</Cmd>: ドアを手動で開放して入室を許可します。 この機能では、時間制限なしでドアを開放します。 この状態では、すべてのユーザーの入室を許可します。
+
+* <Cmd>Clear Alarm</Cmd>: ドアで発生したアラームを解除できます。
+
+* <Cmd>Clear APB</Cmd>: 選択したドアのすべてのユーザーに対するAPBアラームを解除できます。
+
+:::info
+
+ドアを手動でロックまたは開放した後は、ドアの状態は自動で変更されません。 セキュリティのため、ドアの状態を設定したスケジュールに合わせて動作させるには、<Cmd>Release</Cmd>機能を使用してください。
+
+:::
+
+</Column>
+</Columns>

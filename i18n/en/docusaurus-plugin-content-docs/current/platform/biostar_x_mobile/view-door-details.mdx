@@ -1,0 +1,143 @@
+---
+id: view-door-details
+title: View Door Details
+description: View the real-time status of each door, configured device information, and access history on one screen. Quickly detect status issues, control immediately, or track events that occur at the door.
+keywords:
+  - Door
+  - Details
+  - Remote Control
+---
+
+Select a door to view the current status and configured devices. If a problem occurs, control it immediately or view recent activity logs.
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-door-details.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+View the door's status information, remote control feature, device information assigned to the door, and open time.
+
+1. Tap <Cmd>DOOR</Cmd> on the app home screen.
+
+   :::note
+
+   You can also access it through the side menu. Tap <IcHamberg title='Hamburger icon' width={20} height={20} /> → <Cmd>Door</Cmd>.
+
+   :::
+
+2. Tap the door whose details you want to view in the door list.
+
+</Column>
+</Columns>
+
+## Door status information
+
+View the door's current status in real time.
+
+<Image src='/img/mobile/bsx-mobile-app-door-details-status.png' alone />
+
+* <Cmd>Door Status</Cmd>: Shows whether the door is open or closed.
+
+* <Cmd>Door Status Type</Cmd>: Shows the door status type. For example, Normal, Operator Unlocked, and Operator Locked.
+
+* <Cmd>Door Relay</Cmd>: Shows the status of the relay connected to the door.
+
+* <Cmd>Alarm</Cmd>: Shows alarm events that occurred at the door.
+
+* <Cmd>Last Event</Cmd>: Shows the date, time, and event type of the last event that occurred at the door.
+
+## Remote control feature
+
+Control the door remotely to manage access.
+
+<Image src='/img/mobile/bsx-mobile-app-door-details-remote-control.png' alone />
+
+* <Cmd>Open</Cmd>: Temporarily opens the door to allow access. The door closes automatically after the set time.
+
+* <Cmd>Release</Cmd>: Sets the door to allow access only for authenticated users. The door status changes according to the schedule set for the door.
+
+* <Cmd>Manual Lock</Cmd>: Manually locks the door to block access. This feature locks the door without a time limit. In this state, access is blocked for all users.
+
+* <Cmd>Manual Unlock</Cmd>: Manually unlocks the door to allow access. This feature unlocks the door without a time limit. In this state, access is allowed for all users.
+
+* <Cmd>Clear APB</Cmd>: Clear APB status for all users at the selected door.
+
+* <Cmd>Clear Alarm</Cmd>: Clear the alarm that occurred at the door.
+
+:::info
+
+* The time the door stays open temporarily before it closes automatically is shown in <Cmd>Open Time</Cmd> below.
+
+* After you manually lock or unlock a door, the door status does not change automatically. For security, use <Cmd>Release</Cmd> to make the door operate according to the set schedule.
+
+:::
+
+## Door device information
+
+View the device information assigned to the door.
+
+<Image src='/img/mobile/bsx-mobile-app-door-details-device-info.png' alone />
+
+* <Cmd>Entry Device</Cmd>: The device information assigned as the entry device.
+
+* <Cmd>Door Relay</Cmd>: The relay information that operates as the door lock.
+
+* <Cmd>Exit Button</Cmd>: The port information of the device used as the exit button.
+
+* <Cmd>Door Sensor</Cmd>: The port information of the device assigned as the sensor that detects the door opening and closing.
+
+* <Cmd>Open Time</Cmd>: The time the door stays open after it is opened temporarily before it closes automatically.
+
+:::info
+
+For more information on the <Cmd>Open Time</Cmd> setting, see <Cmd sid='common.open' product='2' /> → <Cmd sid='door.openTime' product='2' /> in <DocLink docId='platform/biostar_x/settings-door-add#option' />.
+
+:::
+
+## View door log events
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-door-log-event.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+View log events that occurred at the door and check events such as access attempts and alarms. 
+
+1. On the Door Details screen, tap <IcAppDoorLog title='Log event' width='20px' height='20px' /> in the upper right corner.
+
+   <Image src='/img/mobile/bsx-mobile-app-door-log-event-filter-list.png' width='252px' alone />
+
+2. To filter door log events, tap <IcAppLogFiltered title='Filter' width='20px' height='20px' /> in the upper right corner of the screen.
+
+   <Image src='/img/mobile/bsx-mobile-app-door-log-event-filter.png' width='30%' alone />
+
+   * <Cmd>Period</Cmd>: Set the period when the log event occurred.
+
+   * <Cmd>Time</Cmd>: Set the time when the log event occurred.
+
+   * <Cmd>Event</Cmd>: Select the log event type. For example, select access authentication success or access authentication failure.
+
+   * <Cmd>User</Cmd>: Select the user who triggered the log event.
+
+   * <Cmd>Device</Cmd>: Select the device where the log event occurred.
+
+   * <Cmd>Door</Cmd>: View log events for doors other than the current door.
+
+3. When the filter criteria appear, set the desired criteria.
+
+4. To filter log events with the selected criteria, tap <Cmd>Apply</Cmd>.
+
+:::info
+
+To reset the filter conditions, tap <IcAppLogFiltered title='Filtered' width='20px' height='20px' /> → <IcAppReset title='Reset' width='20px' height='20px' /> in the upper right corner of the screen.
+
+:::
+
+</Column>
+</Columns>

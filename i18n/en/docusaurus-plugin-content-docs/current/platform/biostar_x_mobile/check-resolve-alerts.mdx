@@ -1,0 +1,77 @@
+---
+id: check-resolve-alerts
+title: Check and Resolve Alerts
+description: This guide explains how to check and resolve alerts from BioStar X in the mobile app.
+keywords:
+  - Check alert
+  - Resolve alert
+---
+
+In the mobile app, check alerts from BioStar X and resolve them as needed. When an alert event such as a forced door open occurs, check the alert in the app and record the action taken.
+
+<Image src='/img/mobile/bsx-mobile-app-alert.png' width='500px' className='none' alone />
+
+:::info
+
+* For more information on checking and resolving alerts in BioStar X, see <DocLink docId='platform/biostar_x/monitoring-event#acknowledge-alarm-and-record-action' />.
+
+* The date and time shown in the alert list follow the BioStar X server's time settings. For more information on date and time display format settings in BioStar X, refer to <DocLink docId='platform/biostar_x/settings-preferences' />.
+
+:::
+
+## Alert list
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-alert-list.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Tap <Cmd>ALERT</Cmd> on the app home screen. View the <Cmd>Alert List</Cmd>. 
+
+In the alert list, view alert events such as forced door opens in reverse chronological order. When a new alert event occurs, it is added to the list in real time.
+
+:::info
+
+You can also open the alert screen by tapping the side menu (<IcHamberg title='Hamburger icon' width={20} height={20} />) → <Cmd>Alert</Cmd>.
+
+:::
+
+</Column>
+</Columns>
+
+<Columns className='mt--50'>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-alert-detail.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+### View alert details
+
+In the alert list, tap a specific alert to view its details. Alert details show the event type, user, occurrence time, and the door/device.
+
+* To record the action taken after checking an alert, enter the details in the <Cmd>Comment (optional)</Cmd> field. The entered details are saved on the BioStar X server and appear in the alert event details.
+
+* To enter the action taken and resolve the alert, tap <Cmd>ACKNOWLEDGE</Cmd>. The alert is resolved, and the event disappears from <Cmd>Alert List</Cmd>.
+
+</Column>
+</Columns>
+
+## Alert history
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-alert-history.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+In alert history, you can view acknowledged alert events. View information such as each event's type, occurrence time, door/device, and user. Acknowledged alert events also show who acknowledged them and when.
+
+</Column>
+</Columns>

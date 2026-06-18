@@ -1,6 +1,8 @@
 // @ts-check
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+import { type } from 'os';
+
 /**
  * Creating a sidebar enables you to:
  - create an ordered group of docs
@@ -140,6 +142,58 @@ function createSidebars(preview) {
         'platform/plugins/development-guide',
         'platform/plugins/registration-guide',
         'platform/plugins/troubleshooting'
+      ]
+    }
+  ],
+  biostarx_mobile: [
+    {
+      type: 'category',
+      label: 'BioStar X 모바일',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'platform/biostar_x_mobile/index',
+      },
+      items: [
+        'platform/biostar_x_mobile/before-you-start',
+        'platform/biostar_x_mobile/getting-started',
+        'platform/biostar_x_mobile/app-settings',
+        {
+          type: 'category',
+          label: '사용자 관리하기',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x_mobile/manage-users',
+          },
+          items: [
+            'platform/biostar_x_mobile/add-user',
+            'platform/biostar_x_mobile/edit-delete-user',
+            'platform/biostar_x_mobile/view-user-log-event',
+            'platform/biostar_x_mobile/search-users',
+          ]
+        },
+        {
+          type: 'category', 
+          label: '출입문 관리하기',
+          link: {
+            type: 'doc',
+            id: 'platform/biostar_x_mobile/manage-doors',
+          },
+          items: [
+            'platform/biostar_x_mobile/remote-control-door',
+            'platform/biostar_x_mobile/view-door-details',
+            'platform/biostar_x_mobile/search-doors',
+          ]
+        },
+        'platform/biostar_x_mobile/view-realtime-log',
+        'platform/biostar_x_mobile/view-past-events',
+        'platform/biostar_x_mobile/check-resolve-alerts',
+        'platform/biostar_x_mobile/start-rollcall',
+        'platform/biostar_x_mobile/use-quickaction',
+        'platform/biostar_x_mobile/change-password',
+        'platform/biostar_x_mobile/appendices',
       ]
     }
   ],

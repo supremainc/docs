@@ -1,0 +1,529 @@
+---
+id: add-user
+title: Registrar usuarios
+description: Esta guía explica cómo registrar usuarios a través de la aplicación móvil BioStar X.
+keywords:
+  - BioStar X
+  - Móvil
+  - Registrar usuarios
+  - Agregar
+---
+
+Cuando necesite enrollar un usuario nuevo o un visitante temporal en el sistema, inscriba juntos la información básica, los permisos y los métodos de autenticación.
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-all-users-tap-add.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+1. En la pantalla de inicio de la app, toque <Cmd>USER</Cmd>.
+
+   :::note
+
+   También puedes acceder a ella desde el menú lateral. Toque <IcHamberg title='Hamburger icon' width={20} height={20} /> → <Cmd>User</Cmd>.
+
+   :::
+
+2. Toque <IcAdd title='Add user' /> en la esquina superior derecha de la pantalla.
+
+3. Ingrese la información básica del usuario y configure las credenciales.
+
+</Column>
+</Columns>
+
+## Enrolar profile image
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-add-user-profile-image.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Para enrollar la imagen de perfil de un usuario, toque el icono de perfil en la parte superior de la pantalla.
+
+* <Cmd>Take photo</Cmd>: Tome una foto con la cámara de su dispositivo móvil y úsela como imagen de perfil.
+
+* <Cmd>From Gallery</Cmd>: Seleccione una foto guardada en su dispositivo móvil y úsela como imagen de perfil.
+
+:::info
+
+Para eliminar una imagen de perfil enrollada, toque <Cmd>Remove Picture</Cmd>.
+
+:::
+
+</Column>
+</Columns>
+
+## Ingrese la información del usuario y configure los permisos
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-add-user-basic-info.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+* <Cmd>ID</Cmd>: El ID único asignado al usuario. El valor generado automáticamente por el sistema se completa de forma previa. También puede ingresarlo manualmente.
+
+* <Cmd>Name</Cmd>: Ingrese el nombre del usuario.
+
+* <Cmd>Account Level</Cmd>: Seleccione el nivel de cuenta del usuario.
+
+  | Nivel de cuenta | > | Permisos por menú |
+  | --- | --- | --- |
+  | <Cmd>None</Cmd> | \- | Ninguno |
+  | <Cmd>Administrator</Cmd> | Todos los menús | Todos los permisos |
+  | <Cmd>User Operator</Cmd> | <Cmd sid='shell.header.user' /> | Lectura, escritura |
+  | <Cmd>Monitoring Operator</Cmd> | <Cmd sid='shell.header.arena' />, <Cmd sid='shell.header.data' />, <Cmd sid='shell.header.dashboard' /> | Lectura, escritura |
+  | <Cmd>T&A Operator</Cmd> | <Cmd sid='common.gnb.time_attendance' product='2' /> | Lectura, escritura |
+  | <Cmd>Visitor Operator</Cmd> | <Cmd sid='common.gnb.visitor' product='2' /> | Lectura, escritura |
+
+   :::note
+
+   Cuando configure un nivel de administrador, puede definir un ID de inicio de sesión y una contraseña para que el usuario inicie sesión en el servidor BioStar X.
+
+  <Image src='/img/mobile/bsx-mobile-app-add-user-assign-admin.png' width='40%' alone />
+
+   :::
+
+* <Cmd>User Group</Cmd>: Seleccione el grupo al que pertenece el usuario.
+
+* <Cmd>Email</Cmd>: Ingrese la dirección de correo electrónico del usuario.
+
+* <Cmd>Phone</Cmd>: Ingrese el número de teléfono del usuario.
+
+* <Cmd>Status</Cmd>: Active o desactive la cuenta del usuario.
+
+* <Cmd>Period</Cmd>: Defina el período de uso de la cuenta del usuario. Defina las fechas de inicio y fin para usar la cuenta del usuario solo durante ese período.
+
+* <Cmd>Access Group</Cmd>: Seleccione el grupo de acceso del usuario.
+
+:::info
+
+* Los valores disponibles del ID de usuario pueden variar según la opción <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.server' /> → <Cmd sid="setting.userDevice.useridType" product='2' /> del menú. Para más información, consulte <DocLink docId='platform/biostar_x/settings-server-server#userid-type' target='_blank' />.
+
+* Los niveles <Cmd>T&A Operator</Cmd> y <Cmd>Visitor Operator</Cmd> requieren una licencia aparte. Para obtener más información sobre las políticas de licencias, consulte <DocLink docId='platform/biostar_x/licensing#features-add-ons' target='_blank' />.
+
+* Para más información sobre cómo agregar y configurar grupos de acceso, consulte <DocLink docId='platform/biostar_x/settings-access-control-manage-access-group' target='_blank' />.
+
+:::
+
+</Column>
+</Columns>
+
+## Enrolar credencial
+
+Cuando registra a un usuario, también puede enrolar una credencial para que el usuario pueda acceder al sistema de control de acceso. Los usuarios pueden inscribir sus fingerprints, faces, información de card y PINs como credenciales. Las credenciales se pueden añadir o modificar al registrar o actualizar un usuario.
+
+<Columns className='mt--50'>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-add-user-credential-pin.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+### Enrolar PIN {#enrollPin}
+
+Puede enrollar una credencial PIN para que el usuario acceda al ingresar un PIN en el dispositivo.
+
+1. Toque <Cmd>Credential</Cmd> → <Cmd>PIN</Cmd>.
+
+2. Cuando aparezca la ventana de ingreso de PIN, ingrese el PIN deseado dígito por dígito.
+
+3. Cuando termine de ingresarlo, toque <Cmd>OK</Cmd>.
+
+:::info
+
+* El PIN debe tener al menos 8 caracteres y solo puede contener números.
+
+* Inscriba como máximo una credencial de PIN por usuario.
+
+:::
+
+</Column>
+</Columns>
+
+<Columns className='mt--50'>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-add-user-credential-fingerprint.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+### Enrolar huella dactilar {#enrollFingerprint}
+
+Inscriba la huella digital del usuario como medio de autenticación para el control de acceso. Inscriba la información de la huella digital del usuario mediante un dispositivo que admita autenticación por huella digital.
+
+:::note
+
+**Antes de inscribir huellas digitales...**
+
+* Asegúrese de que la huella digital del usuario esté limpia y seca.
+
+* No inscriba huellas digitales lesionadas o borrosas.
+
+:::
+
+1. Toque <Cmd>Credential</Cmd> → <Cmd>Fingerprint</Cmd>.
+
+2. Toque <Cmd>Device</Cmd> para seleccionar un dispositivo para enrollar la huella digital.
+
+3. En la ventana emergente <Cmd>Add Device</Cmd>, seleccione un dispositivo para el enrollamiento de huellas digitales y toque <Cmd>Yes</Cmd>.
+
+4. Use <Cmd>Scan Quality</Cmd> para ajustar la calidad de la huella digital. El valor predeterminado es **80**. No se puede inscribir la información de la huella digital si no cumple el nivel de calidad configurado.
+
+5. Toque <IcAdd title='Add' /> en la esquina superior derecha de la pantalla.
+
+6. Cuando <Cmd>1st Fingerprint</Cmd> aparezca en la lista, tóquelo.
+
+7. <Cmd>scanning...</Cmd> Cuando aparezca la ventana emergente, escanee la huella digital en el dispositivo seleccionado.
+
+8. Para verificar la huella digital, escanee la misma huella digital otra vez. 
+
+9. Cuando termine el escaneo de la huella digital, toque <Cmd>OK</Cmd>.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-fingerprint-success.png' width='30%' alone />
+
+:::info
+
+* La lista de dispositivos muestra solo dispositivos de huella digital registrados en el servidor BioStar X que admiten el enrollamiento de huellas digitales.
+
+* Repita los pasos 5–9 para enrollar huellas digitales adicionales. Puede enrollar hasta 10 huellas digitales por usuario.
+
+* Para editar una huella digital enrollada, toque la credencial de huella digital y repita los pasos anteriores.
+
+:::
+
+</Column>
+</Columns>
+
+<Columns className='mt--50'>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-add-user-credential-ir-face.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+### Enrolar IR face
+
+Registra el rostro del usuario como medio de autenticación para el control de acceso. El registro de rostro IR es un método de autenticación que captura el rostro del usuario utilizando una cámara infrarroja.
+
+1. Toque <Cmd>Credential</Cmd> → <Cmd>IR Face</Cmd>.
+
+2. Toque <Cmd>Device</Cmd>, seleccione un dispositivo que admita el enrollamiento de rostro IR y luego toque <Cmd>Yes</Cmd>.
+
+3. Ajuste <Cmd>Face Pose Variation</Cmd> para definir la sensibilidad de la posición, el ángulo y la distancia del rostro. El valor predeterminado es **4**. Defínala alta para obtener una plantilla de rostro IR precisa.
+
+4. Toque <IcAdd title='Add' /> en la esquina superior derecha de la pantalla.
+
+5. Cuando <Cmd>1st IR Face</Cmd> aparezca en la lista, tóquelo.
+
+6. Cuando aparezca la ventana emergente de enrollamiento de rostro, escanee el rostro en el dispositivo seleccionado. Cuando el rostro se autentique, la imagen del rostro aparece en la ventana emergente.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-ir-face-success.png' width='30%' alone />
+
+7. Para completar el enrollamiento de rostro IR, toque <Cmd>OK</Cmd>.
+
+:::info
+
+* Los dispositivos que pueden registrar rostro IR son los siguientes:
+
+  * FaceStation 2
+
+  * FaceLite
+
+* Puede enrollar hasta 5 rostros IR.
+
+* Si la tasa de autenticación facial es baja, elimina la información de rostro y registra un nuevo rostro.
+
+* Para editar un rostro IR enrollado, toque la credencial de rostro IR y repita los pasos anteriores.
+
+:::
+
+</Column>
+</Columns>
+
+<Columns className='mt--50'>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-add-user-credential-face.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+### Enrolamiento facial
+
+Registra el rostro del usuario como medio de autenticación para el control de acceso. El registro facial es un método de autenticación que captura el rostro del usuario con una cámara. En la aplicación móvil BioStar X, también puede importar una imagen de rostro guardada en su dispositivo móvil o tomar una foto con la cámara para enrollar un rostro. También puede escanear un rostro en un dispositivo que admita autenticación facial y enrollarlo.
+
+1. Toque <Cmd>Credential</Cmd> → <Cmd>Face</Cmd>.
+
+2. Toque <Cmd>Device</Cmd>, seleccione un dispositivo que admita el enrollamiento de rostros y luego toque <Cmd>Yes</Cmd>.
+
+   :::note
+
+   * Si no selecciona un dispositivo, puede importar una foto desde su dispositivo móvil o tomar una foto con la cámara para enrollar un rostro.
+
+   * Si selecciona un dispositivo, puede escanear un rostro en ese dispositivo y enrollarlo.
+
+   :::
+
+3. Toque <IcAdd title='Add' /> en la esquina superior derecha de la pantalla.
+
+4. Cuando <Cmd>1st Face</Cmd> aparezca en la lista, tóquelo.
+
+5. En la ventana emergente, seleccione el método de enrollamiento de rostro que desea.
+
+   * <Cmd>Take photo</Cmd>: Tome una foto con la cámara de su dispositivo móvil y enróllelo como rostro.
+
+   * <Cmd>From Gallery</Cmd>: Seleccione una foto guardada en su dispositivo móvil y enróllela como rostro.
+
+   * <Cmd>Device Scan</Cmd>: Escanee el rostro con el dispositivo seleccionado en <Cmd>Device</Cmd>.
+
+6. Cuando el rostro se autentique, la imagen del rostro aparece en la ventana emergente.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-face-success.png' width='30%' alone />
+
+7. Para completar el enrollamiento de rostro, toque <Cmd>OK</Cmd>.
+
+:::info
+
+* Para usar la imagen de rostro enrollada como imagen de perfil, active la opción <Cmd>Use as Profile Image?</Cmd> opción.
+
+* Cuando toma una foto de rostro con la cámara de su dispositivo móvil o importa una foto guardada, se requiere permiso de acceso. Seleccione Allow en la ventana emergente de solicitud de permiso para enrollar la foto de rostro.
+
+* Para editar un rostro enrollado, toque la credencial de rostro y repita los pasos anteriores.
+
+:::
+
+</Column>
+</Columns>
+
+### Registrar tarjeta de acceso
+
+Puede registrar una nueva tarjeta de acceso o asignar una tarjeta de acceso registrada como método de autenticación. Hay formas de registrar una tarjeta de acceso: escanea la tarjeta en un lector de tarjetas, asignar una tarjeta ya inscrita, o introducir manualmente el número de la tarjeta.
+
+#### CSN tarjeta
+
+1. Toque <Cmd>Credential</Cmd> → <Cmd>Card</Cmd>.
+
+2. Toque <IcAdd title='Add' /> en la esquina superior derecha de la pantalla.
+
+3. En <Cmd>Card Type</Cmd>, seleccione <Cmd>CSN</Cmd> y toque <Cmd>Yes</Cmd>.
+
+4. En <Cmd>Registration Option</Cmd>, seleccione el método de registro que desee.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-csn.png' className='none' width='70%' alone />
+
+   * <Num num='1' /> <Cmd>Register by Card Reader</Cmd>: Escanea la tarjeta en un lector de tarjetas para registrarla. En <Cmd>Device</Cmd>, seleccione el dispositivo para leer la tarjeta y luego toque <Cmd>Read Card</Cmd>. Acerque la tarjeta al lector de tarjetas para escanearla. Cuando la tarjeta se escanee correctamente, el número de tarjeta aparece en <Cmd>Card ID</Cmd>.
+
+   * <Num num='2' /> <Cmd>Assign Card</Cmd>: Asignar una tarjeta de acceso registrada a un usuario. Seleccione uno de los números de tarjeta registrados de la lista.
+
+   * <Num num='3' /> <Cmd>Enter Manually</Cmd>: Ingrese el número de tarjeta manualmente. Ingrese el número de tarjeta en el campo de entrada <Cmd>Card ID</Cmd>. Para usar el ID del usuario como número de tarjeta, toque <Cmd>Use User ID</Cmd>.
+
+5. Para completar el registro de tarjeta, toca <Cmd>OK</Cmd> en la parte superior derecha de la pantalla.
+
+6. Al volver a la lista de tarjetas, aparece el número de la tarjeta registrada.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-csn-success.png' width='30%' alone />
+
+:::info
+
+Para dejar de usar una tarjeta registrada, toca el interruptor de la tarjeta para establecerla a <Cmd>Blocked</Cmd>.
+
+:::
+
+#### Tarjeta Wiegand
+
+1. Toque <Cmd>Credential</Cmd> → <Cmd>Card</Cmd>.
+
+2. Toque <IcAdd title='Add' /> en la esquina superior derecha de la pantalla.
+
+3. En <Cmd>Card Type</Cmd>, seleccione <Cmd>Wiegand</Cmd> y toque <Cmd>Yes</Cmd>.
+
+4. En <Cmd>Card Data Format</Cmd>, seleccione el formato de tarjeta que desea.
+
+5. En <Cmd>Registration Option</Cmd>, seleccione el método de registro que desee.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-wiegand.png' className='none' width='70%' alone />
+
+   * <Num num='1' /> <Cmd>Register by Card Reader</Cmd>: Escanea la tarjeta en un lector de tarjetas para registrarla. En <Cmd>Device</Cmd>, seleccione el dispositivo para leer la tarjeta y luego toque <Cmd>Read Card</Cmd>. Acerque la tarjeta al lector de tarjetas para escanearla. Cuando la tarjeta se escanee correctamente, el número de tarjeta aparece en <Cmd>Facility Code</Cmd> y <Cmd>Card ID</Cmd>.
+
+   * <Num num='2' /> <Cmd>Assign Card</Cmd>: Asignar una tarjeta de acceso registrada a un usuario. Seleccione uno de los números de tarjeta registrados de la lista.
+
+   * <Num num='3' /> <Cmd>Enter Manually</Cmd>: Ingrese el número de tarjeta manualmente. Ingrese el número de tarjeta en los campos de entrada <Cmd>Facility Code</Cmd> y <Cmd>Card ID</Cmd>.
+
+6. Para completar el registro de tarjeta, toca <Cmd>OK</Cmd> en la parte superior derecha de la pantalla.
+
+7. Al volver a la lista de tarjetas, aparece el número de la tarjeta registrada.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-wiegand-success.png' width='30%' alone />
+
+:::info
+
+Para dejar de usar una tarjeta registrada, toca el interruptor de la tarjeta para establecerla a <Cmd>Blocked</Cmd>.
+
+:::
+
+### Tarjeta Inteligente
+
+:::info
+
+* Para emitir una tarjeta inteligente, se debe configurar el tipo de tarjeta correcto. Para obtener más información sobre los formatos de tarjeta, consulte <DocLink docId='platform/biostar_x/settings-credential-smart-format' target='_blank' />.
+
+* La información del usuario almacenada en la tarjeta inteligente utiliza la información almacenada en **BioStar X**. Si no se almacena la información actualizada del usuario, puede que se almacene información incorrecta en la tarjeta inteligente. Además, si la información de usuario actualizada no se sincroniza con el dispositivo, este podría no realizar la autenticación.
+
+* Para agregar la información de autenticación PIN, primero enrrolle un PIN. Para más información sobre cómo enrollar un PIN, consulte <DocLink inner='#enrollPin' />.
+
+* Para agregar la información de credencial de huella digital, primero enrrolle una huella digital. Para más información sobre el enrollamiento de huellas digitales, consulte <DocLink inner='#enrollFingerprint' />.
+
+:::
+
+#### Acceso en tarjeta
+
+La información del usuario (ID de tarjeta, PIN, grupo de acceso, período, plantilla de huella digital, plantilla facial y modo de autenticación privada) puede almacenarse en la tarjeta.
+
+1. Toque <Cmd>Credential</Cmd> → <Cmd>Card</Cmd>.
+
+2. Toque <IcAdd title='Add' /> en la esquina superior derecha de la pantalla.
+
+3. En <Cmd>Card Type</Cmd>, seleccione <Cmd>Smart Card</Cmd> y toque <Cmd>Yes</Cmd>.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-smartcard-aoc.png' width='30%' alone />
+
+4. En <Cmd>Device</Cmd>, selecciona el dispositivo para registrar la tarjeta y luego pulsa <Cmd>Yes</Cmd>.
+
+   :::note
+
+   El diseño de tarjeta configurado en el dispositivo seleccionado aparece en <Cmd>Card Layout Format</Cmd>.
+
+   :::
+
+5. (Opcional) Para agregar autenticación de huella digital, toque <Cmd>Figerprint</Cmd> y seleccione una huella digital enrollada.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-smartcard-aoc-add-finger.png' width='30%' alone />
+
+6. (Opcional) Para agregar el modo de autenticación privada, toque <Cmd>Private Auth Mode</Cmd> y seleccione el método de autenticación que desea.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-smartcard-aoc-add-pam.png' width='30%' alone />
+
+7. Para registrar la tarjeta, pulse <Cmd>Writes Smart Card</Cmd>.
+
+8. Mantenga la tarjeta al día del dispositivo seleccionado para registrar la información del usuario en ella.
+
+9. Cuando se complete el registro de la tarjeta, pulse <Cmd>OK</Cmd> en la parte superior derecha de la pantalla.
+
+#### Tarjeta credencial segura
+
+La información del usuario (ID de tarjeta, PIN, plantilla de huella digital y plantilla facial) puede almacenarse en la tarjeta.
+
+1. Toque <Cmd>Credential</Cmd> → <Cmd>Card</Cmd>.
+
+2. Toque <IcAdd title='Add' /> en la esquina superior derecha de la pantalla.
+
+3. En <Cmd>Card Type</Cmd>, seleccione <Cmd>Smart Card</Cmd> y toque <Cmd>Yes</Cmd>.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-smartcard-aoc.png' width='30%' alone />
+
+4. En <Cmd>Device</Cmd>, selecciona el dispositivo para registrar la tarjeta y luego pulsa <Cmd>Yes</Cmd>.
+
+   :::note
+
+   El diseño de tarjeta configurado en el dispositivo seleccionado aparece en <Cmd>Card Layout Format</Cmd>.
+
+   :::
+
+5. Toque <Cmd>Smart Card Type</Cmd>, seleccione <Cmd>Secure Credential Card</Cmd> y luego toque <Cmd>Yes</Cmd>.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-smartcard-scc-select.png' width='30%' alone />
+
+6. (Opcional) Para agregar autenticación de huella digital, toque <Cmd>Figerprint</Cmd> y seleccione una huella digital enrollada.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-smartcard-scc-add-finger.png' width='30%' alone />
+
+7. Para registrar la tarjeta, pulse <Cmd>Writes Smart Card</Cmd>.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-smartcard-scc-type.png' width='30%' alone />
+
+8. Mantenga la tarjeta al día del dispositivo seleccionado para registrar la información del usuario en ella.
+
+9. Cuando se complete el registro de la tarjeta, pulse <Cmd>OK</Cmd> en la parte superior derecha de la pantalla.
+
+#### Leer tarjeta / formato
+
+Formatea tarjetas inteligentes y reescribe información.
+
+1. Toque <Cmd>Credential</Cmd> → <Cmd>Card</Cmd>.
+
+2. Toque <IcAdd title='Add' /> en la esquina superior derecha de la pantalla.
+
+3. En <Cmd>Card Type</Cmd>, seleccione <Cmd>Read Card</Cmd> y toque <Cmd>Yes</Cmd>.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-smartcard-read.png' width='30%' alone />
+
+4. En <Cmd>Device</Cmd>, seleccione el dispositivo para leer la tarjeta y luego toque <Cmd>Yes</Cmd>.
+
+   :::note
+
+   El diseño de tarjeta configurado en el dispositivo seleccionado aparece en <Cmd>Card Layout Format</Cmd>.
+
+   :::
+
+5. Toque <Cmd>Read Card</Cmd> y acerque la tarjeta al dispositivo para escanearla.
+
+   <Image src='/img/mobile/bsx-mobile-app-add-user-credential-smartcard-read-card.png' width='30%' alone />
+
+6. Después de revisar la información de la tarjeta, toque <Cmd>Format Card</Cmd> para formatearla.
+
+:::info
+
+Las tarjetas inteligentes personalizadas no se pueden formatear.
+
+:::
+
+## Completar registro de usuario
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-add-user-complete.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Después de configurar la información, los permisos y las credenciales básicas del usuario, pulse <IcSave title='Save' /> en la parte superior derecha de la pantalla para completar el registro de usuario.
+
+* En la sección <Cmd>Credential</Cmd>, puede revisar la cantidad de credenciales enrolladas para cada credencial.
+
+* Para eliminar una credencial enrolada, toca la credencial a eliminar, luego toca <IcAppDelete title='Delete' /> en la esquina superior derecha de la pantalla. Selecciona la credencial que deseas eliminar y luego toca <Cmd>OK</Cmd>.
+
+  <Image src='/img/mobile/bsx-mobile-app-add-user-credential-remove.png' width='70%' className='none' alone />
+
+:::info
+
+Para obtener más información sobre el registro y la gestión de usuarios en BioStar X, consulte <DocLink docId='platform/biostar_x/how-to-guide-user' target='_blank' />.
+
+:::
+
+</Column>
+</Columns>
+
+## Comprobar información de usuario
+
+Puede comprobar los usuarios registrados en la lista de usuarios. Cada usuario incluye la siguiente información.
+
+<Image src='/img/mobile/bsx-mobile-app-all-users-info.png' width='500px' className='none' alone />
+
+* Nombre de usuario
+
+* ID de usuario | Grupo de usuarios
+
+* Información de credenciales enrolladas: huella digital / rostro IR / rostro / tarjeta / PIN
