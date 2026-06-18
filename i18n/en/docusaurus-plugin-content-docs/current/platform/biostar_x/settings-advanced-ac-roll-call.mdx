@@ -107,95 +107,9 @@ import ExploreListPages from '../../common/_explore-list-pages.mdx';
 
 <ExploreListPages />
 
-## Start roll call {#mobileAppRollCall}
+import RollCall from '../../common/_bsx-rollcall.mdx';
 
-The roll call feature is available in the **BioStar X** mobile app.
-
-:::info
-
-You can install the **BioStar X** mobile app via the following links.
-
-* iOS: [Apple App Store](https://apps.apple.com/kr/app/biostar-x-mobile/id6741415253)
-
-* Android: [Google Play](https://play.google.com/store/apps/details?id=com.suprema.biostarmobile)
-
-:::
-
-### Start roll call in the mobile app {#useRollCallMobileApp}
-
-To start the roll call feature in the mobile app, follow these steps.
-
-1. Launch the **BioStar X** mobile app on your mobile device.
-
-2. Tap the **Roll Call** button on the app's home screen.
-
-   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-01.png' width={253} alone />
-
-3. In the Roll Call list, tap the <IcRCplay /> button for the item you want to execute roll call.
-
-   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-02.png' width={253} alone />
-
-4. When the confirmation message appears, tap the **Yes** button.
-
-Roll call will start, and by tapping on the ongoing roll call item, you can check the status of the roll call.
-
-<Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-03.png' width={595} alone className='none' />
-
-### Ongoing roll call control
-
-* Users entering will be marked with the <IcRCdone /> icon. When all users have entered, a message indicating that roll call has ended will appear. To end the roll call, tap the **Yes** button.
-
-* The administrator can manually change the user's entry or status. Long press the round button on the far right of the user whose status you wish to change from the user list.
-
-  <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-change-status.png' alone className='none' width={595} />
-
-* To reset an entering user, tap the **Reset** button. Change the **Accounted** user to **Unaccounted** status.
-
-* If roll call is ended by another administrator, a notification message will appear.
-
-  <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-stopped.png' width={253} alone />
-
-* To end an ongoing roll call, tap the <IcRCstop /> button in the roll call list screen, or tap the **END** button in the roll call status screen.
-
-* You can also end the ongoing roll call in **BioStar X**. Go to <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.advancedAc.root' /> → <Cmd sid='data.sidebar.events' /> → <Cmd sid='zone.rollCall' product='2' /> menu, select the ongoing roll call item, and click the <Cmd sid='data.header.rollCall.ended' /> button at the top right of the screen.
-
-  <Image src='/img/biostarx-settings-adv-ac-rollcoll-ended.png' />
-
-* After completing the roll call, you can check related reports from <Cmd sid='shell.header.data' /> → <Cmd sid='data.mainMenu.generate' /> → <Cmd sid='data.sidebar.rollCall' />. For more information, see <DocLink inner='#viewRollCallReport' />.
-
-### User information during roll call
-
-During roll call in the mobile app, you can check each user's information. It is useful to contact users in an emergency or to locate a user's current position.
-
-Swipe left on the user item for which you want to check details during roll call. Then tap the <IcRCinfo /> button.
-
-<Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-user-info.png' className='none' width={595} alone />
-
-### Leave a note for users during roll call
-
-If a specific user has not entered during roll call in the mobile app, you can leave a note for that user.
-
-Swipe left on the user item where you want to input a note during roll call. Then tap the <IcRCmemo /> button. On the note input screen, enter the content and tap the **Save** button.
-
-<Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-user-memo.png' className='none' width={595} alone />
-
-Users who have entered notes will be marked with the <IcRCmemo /> icon in the roll call list.
-
-<Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-user-status.png' width={253} alone />
-
-### Check roll call details {#viewRollCallinfo}
-
-You can check the details of the roll call settings in the mobile app.
-
-1. Launch the **BioStar X** mobile app on your mobile device.
-
-2. Tap the **Roll Call** button on the app's home screen.
-
-   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-01.png' width={253} alone />
-
-3. Swipe left on the item to check details from the list, then tap the <IcRCinfo /> button.
-
-   <Image src='/img/common/biostarx-settings-adv-ac-mobile-app-rollcall-info.png' width={595} alone className='none' />
+<RollCall />
 
 ## View roll call reports {#viewRollCallReport}
 
