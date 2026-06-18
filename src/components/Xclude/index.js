@@ -12,7 +12,7 @@ export default function XcludeDoc ({children, product, pages, type, ref, lang}) 
     if (product) {
         const prods = Array.isArray(product) ? product : product.split(',');
         const cProd = currentLocale === "ko" ? location.pathname.split("/")[prodSplit] : location.pathname.split("/")[prodSplit + 1];
-        const isProduct = prods.includes(cProd);
+        const isProduct = prods.includes(cProd.replace('_ul', ''));
         
         return isProduct ? null : <MDXContent>{children}</MDXContent>;
     } else if (pages) {

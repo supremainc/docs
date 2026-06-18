@@ -1115,6 +1115,27 @@ function createSidebars(preview) {
       ]
     }
   ],
+  corestation20_ul: [
+    {
+      type: 'category',
+      label: 'CoreStation 20 UL',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/corestation_20_ul/index',
+      },
+      items: [
+        'device/corestation_20_ul/safety-instructions',
+        'device/corestation_20_ul/getting-started',
+        'device/corestation_20_ul/installation',
+        'device/corestation_20_ul/product-specifications',
+        'device/corestation_20_ul/regulatory-information',
+        'device/corestation_20_ul/appendices',
+      ]
+    }
+  ],
   enclosure: [
     {
       type: 'category',
@@ -1170,6 +1191,27 @@ function createSidebars(preview) {
             'device/doorinterface/release-notes/100',
           ]
         },
+      ]
+    }
+  ],
+  doorinterface_ul: [
+    {
+      type: 'category',
+      label: 'Door Interface UL',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/doorinterface_ul/index',
+      },
+      items: [
+        'device/doorinterface_ul/safety-instructions',
+        'device/doorinterface_ul/getting-started',
+        'device/doorinterface_ul/installation',
+        'device/doorinterface_ul/product-specifications',
+        'device/doorinterface_ul/regulatory-information',
+        'device/doorinterface_ul/appendices',
       ]
     }
   ],
