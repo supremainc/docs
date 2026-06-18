@@ -530,7 +530,14 @@ footer {
 body[data-rh] .redocusaurus {
   display: block;
 }
-
+.api--docs {
+  pre * {
+    font-family: 'Noto Sans Coptic', sans-serif;
+  }
+  table {
+    display: table;
+  }
+}
 // markdown 콘텐츠 스타일 
 .markdown {
   counter-reset: sup-count column-count;
@@ -1033,6 +1040,9 @@ body[data-rh] .redocusaurus {
     ul {
       list-style-type: none;
       margin-top: var(--ifm-list-paragraph-margin);
+      li {
+        position: relative;
+      }
       li::before {
         content: "‒";
         position: absolute;
@@ -1155,6 +1165,12 @@ body[data-rh] .redocusaurus {
     color: var(--ifm-color-markdown-link);
     text-decoration: none;
     border-bottom: 1px solid;
+  }
+  a[href*='https://app.getpostman.com'], a[href*='https://app.getpostman.com']:hover {
+    border-bottom: none;
+    img {
+      cursor: pointer;
+    }
   }
 
   a:hover {
