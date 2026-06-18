@@ -1774,6 +1774,27 @@ function createSidebars(preview) {
       ],
     },
   ],
+  bioentryw2_ul: [
+    {
+      type: 'category',
+      label: 'BioEntry W2 UL',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/bioentry_w2_ul/index',
+      },
+      items: [
+        'device/bioentry_w2_ul/safety-instructions',
+        'device/bioentry_w2_ul/getting-started',
+        'device/bioentry_w2_ul/installation',
+        'device/bioentry_w2_ul/product-specifications',
+        'device/bioentry_w2_ul/regulatory-information',
+        'device/bioentry_w2_ul/appendices',
+      ],
+    },
+  ],
   device_manager: [
     {
       type: 'category',
