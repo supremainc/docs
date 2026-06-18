@@ -1,0 +1,101 @@
+---
+id: remote-control-door
+title: Control Remoto de Puertas
+description: Consulta el estado de la puerta en tiempo real en la app móvil y controla las puertas según sea necesario. Compatibilidad con varias opciones de control, desde la operación normal hasta la respuesta ante emergencias.
+keywords:
+  - Puerta
+  - Control remoto
+---
+
+En la lista de puertas, revisa el estado de cada puerta en tiempo real y contrólala según sea necesario. Durante la operación normal, administra las puertas con funciones de control básicas. Usa opciones de control adicionales para mayor seguridad o emergencias.
+
+Toca <Cmd>DOOR</Cmd> en la pantalla de inicio de la app. La lista de puertas registradas en BioStar X aparece.
+
+:::info
+
+También puedes acceder a ella desde el menú lateral. Toca <IcHamberg title='Hamburger icon' width={20} height={20} /> → <Cmd>Door</Cmd>.
+
+:::
+
+## Verifica el estado de la puerta
+
+En la lista de puertas, el icono de estado te permite ver de un vistazo las condiciones anómalas del dispositivo asignado a cada puerta. El icono de estado de la puerta indica si la puerta está abierta, cerrada o tiene una alarma.
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-doors-list.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+<div className='col2-2-8'>
+
+| Ícono de estado | Descripción |
+| :-: | --- |
+| ![Door Error](/img/mobile/bsx-mobile-door-status-error.png) | La puerta tiene un problema. La puerta está en un estado anómalo, como un dispositivo desconectado, un error del servidor de comunicación o un error de sincronización. |
+| ![Door Opened](/img/mobile/bsx-mobile-door-status-unlock.png) | La puerta está abierta. |
+| ![Door Closed](/img/mobile/bsx-mobile-door-status-lock.png) | La puerta está cerrada. |
+| ![Door Alarm](/img/mobile/bsx-mobile-door-status-alarm.png) | Se ha producido una alarma en la puerta. |
+| ![Door APB](/img/mobile/bsx-mobile-door-status-apb.png) | Se produjo una alarma APB en la puerta. |
+
+</div>
+
+</Column>
+</Columns>
+
+## Abrir/Bloquear puerta
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-door-control.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+La función de control remoto de puertas te permite abrir o bloquear la puerta para permitir o bloquear el acceso.
+
+* <Cmd>Abrir</Cmd>: Abre temporalmente la puerta para permitir el acceso. La puerta se cierra automáticamente después del tiempo configurado.
+
+* <Cmd>Liberar</Cmd>: Configura la puerta para permitir el acceso solo a usuarios autenticados. El estado de la puerta cambia según el horario configurado para la puerta.
+
+:::info
+
+Para obtener más información sobre cómo abrir temporalmente una puerta y configurar el tiempo de cierre automático, consulta <Cmd sid='common.open' product='2' /> → <Cmd sid='door.openTime' product='2' /> en <DocLink docId='platform/biostar_x/settings-door-add#option' />.
+
+:::
+
+</Column>
+</Columns>
+
+## Control adicional
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-door-control-more.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Cuando se necesita mayor seguridad o controlar el acceso durante mucho tiempo, bloquea o desbloquea la puerta manualmente sin límite de tiempo. También puedes borrar la alarma activada.
+
+Toca <IcAirMore title='More' /> en el extremo derecho de la puerta para usar opciones de control adicionales.
+
+* <Cmd>Bloqueo manual</Cmd>: Bloquea la puerta manualmente para impedir el acceso. Esta función bloquea la puerta sin límite de tiempo. En este estado, el acceso queda bloqueado para todos los usuarios.
+
+* <Cmd>Desbloqueo manual</Cmd>: Desbloquea la puerta manualmente para permitir el acceso. Esta función desbloquea la puerta sin límite de tiempo. En este estado, el acceso queda permitido para todos los usuarios.
+
+* <Cmd>Borrar alarma</Cmd>: Borra la alarma que se produjo en la puerta.
+
+* <Cmd>Borrar APB</Cmd>: Borra el estado APB para todos los usuarios en la puerta seleccionada.
+
+:::info
+
+Después de bloquear o desbloquear una puerta manualmente, el estado de la puerta no cambia automáticamente. Por seguridad, usa <Cmd>Liberar</Cmd> para que la puerta funcione según el horario configurado.
+
+:::
+
+</Column>
+</Columns>

@@ -1,0 +1,133 @@
+---
+id: getting-started
+title: Primeros Pasos
+description: Esta guía ofrece instrucciones paso a paso para descargar la aplicación móvil BioStar X en iOS y Android, y conectarla al servidor.
+keywords:
+  - BioStar X
+  - Móvil
+  - Instalar
+  - Conectar
+  - Descargar
+  - iOS
+  - Android
+---
+
+La aplicación móvil BioStar X está disponible en iOS y Android. 
+Instala la aplicación siguiendo las instrucciones y luego conéctala al servidor BioStar X.
+
+## Descargar la aplicación móvil BioStar X
+
+Descarga la aplicación usando los enlaces o códigos QR a continuación.
+
+<div className='table--fixed'>
+
+| Plataformas | Enlace de descarga | Código QR |
+| :-: | :-: | :-: |
+| **iOS** | [App Store](https://apps.apple.com/app/biostar-x-mobile/id6741415253) | ![iOS QR Code](/img/mobile/bsx-appstore-qr-code.png) |
+| **Android** | [Google Play](https://play.google.com/store/apps/details?id=com.suprema.biostarmobile) | ![Android QR Code](/img/mobile/bsx-playstore-qr-code.png) |
+
+</div>
+
+## Permisos de la aplicación
+
+La aplicación móvil BioStar X solicita los siguientes permisos cuando se usan ciertas funciones. No solicita permisos durante la instalación inicial.
+
+| Permisos | Obligatorio | Propósito |
+| --- | --- | --- |
+| Almacenamiento | Opcional | Se requiere para administrar y cargar imágenes de usuario, como imágenes de la galería o del almacenamiento del dispositivo. |
+| Cámara | Opcional | Se usa para capturar imágenes para el enrolamiento de credenciales faciales y la grabación de video. |
+| Biométrico | Opcional | Se requiere para iniciar sesión de forma segura con Fingerprint o autenticación facial en un dispositivo móvil. |
+
+:::info
+
+Todos los permisos son opcionales, y los usuarios pueden rechazarlos sin afectar las funciones básicas de la aplicación.
+
+:::
+
+## Inicio de la aplicación y configuración inicial
+
+Cuando se inicia la aplicación, aparece una pantalla donde ingresas la información para conectar con el servidor BioStar X.
+
+<Columns>
+
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-init-setting.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+* <Cmd>Dirección del servidor BioStar X</Cmd>: Ingresa la dirección IP o de dominio del servidor BioStar X.
+
+* <Cmd>Puerto</Cmd>: Ingresa el número de puerto del servidor BioStar X. El valor predeterminado es `443`.
+
+* <Cmd>ID</Cmd> / <Cmd>Contraseña</Cmd>: Ingresa tu ID y contraseña para iniciar sesión en el servidor BioStar X.
+
+Después de ingresar toda la información requerida, toca <Cmd>Iniciar sesión</Cmd> para acceder.
+
+:::info
+
+* Para guardar el ID y la contraseña de la cuenta en los campos de entrada, selecciona la casilla <Cmd>Recordar nombre de usuario y contraseña</Cmd>. El ID y la contraseña ingresados se completan automáticamente en el siguiente inicio de sesión.
+
+* Para obtener información sobre la dirección IP y el número de puerto del servidor BioStar X, consulta <DocLink docId='platform/biostar_x/settings-server-server' />.
+
+:::
+
+</Column>
+</Columns>
+
+## Solución de problemas de conexión
+
+Si el inicio de sesión falla, revisa lo siguiente:
+
+* Verifica que la dirección del servidor BioStar X y el número de puerto sean correctos.
+
+* Verifica que el ID y la contraseña de la cuenta sean correctos.
+
+* Verifica que el dispositivo móvil y BioStar X estén conectados a la red.
+
+:::info
+
+El acceso desde una red externa requiere una dirección IP pública. De lo contrario, compre una licencia adicional de **Acceso remoto**. Para obtener más información, consulta <DocLink docId='platform/biostar_x_mobile/before-you-start' />.
+
+:::
+
+## Uso de la aplicación
+
+Después de que el inicio de sesión se complete correctamente, aparece la pantalla principal de la aplicación móvil BioStar X. En la pantalla principal, consulta usuarios, puertas, registros en tiempo real, registros de eventos y alertas. También puedes acceder al menú lateral y al menú de ajustes.
+
+<Columns>
+
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-home-screen.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+* <IcHamberg title='Hamburger icon' width={20} height={20} />: Abre el menú lateral. En el menú lateral, cambia la contraseña o cierra sesión, y accede a los menús principales.
+
+* <IcSet title='Setting icon' width={20} height={20} />: Abre el menú de ajustes. Para obtener más información sobre los ajustes de la aplicación, consulta <DocLink docId='platform/biostar_x_mobile/app-settings' />.
+
+* <Cmd>USUARIO</Cmd>: Consulta la lista de usuarios y administra usuarios. Para obtener más información sobre la administración de usuarios, consulta <DocLink docId='platform/biostar_x_mobile/manage-users' />.
+
+* <Cmd>PUERTA</Cmd>: Consulta la lista de puertas y contrólalas de forma remota. Para obtener más información sobre la administración de puertas, consulta <DocLink docId='platform/biostar_x_mobile/manage-doors' />.
+
+* <Cmd>REGISTRO EN TIEMPO REAL</Cmd>: Consulta registros de eventos de acceso en tiempo real. Para obtener más información sobre la supervisión de registros en tiempo real, consulta <DocLink docId='platform/biostar_x_mobile/view-realtime-log' />.
+
+* <Cmd>REGISTRO DE EVENTOS</Cmd>: Consulta todos los registros de eventos almacenados en el servidor BioStar X. Para obtener más información sobre la búsqueda de registros, consulta <DocLink docId='platform/biostar_x_mobile/view-past-events' />.
+
+* <Cmd>ROLLL CALL</Cmd>: En caso de emergencia, el usuario puede determinar si llegó al lugar de lista de asistencia al autenticarse a través de dispositivos de entrada o salida en una ubicación predesignada. La función de Roll Call está disponible mediante una opción adicional con una licencia **Advanced** o superior. Para obtener más información sobre la función Roll Call, consulta <DocLink docId='platform/biostar_x_mobile/start-rollcall' />.
+
+* <Cmd>ALERTA</Cmd>: Consulta alertas de puertas, dispositivos y control de acceso avanzado. Para obtener más información sobre las alertas, consulta <DocLink docId='platform/biostar_x/settings-alert' />.
+
+* <Cmd>Acción rápida</Cmd>: Esta función te permite controlar fácilmente varias operaciones de puerta durante una emergencia. Debes crear Acciones rápidas en la interfaz web de BioStar X antes de usarlas en la app móvil. Para obtener más información sobre la función **Acción rápida**, consulta <DocLink docId='platform/biostar_x_mobile/use-quickaction' />.
+
+:::info
+
+Todas las funciones también están disponibles a través del menú lateral (<IcHamberg title='Hamburger icon' width={20} height={20} />).
+
+:::
+
+</Column>
+</Columns>

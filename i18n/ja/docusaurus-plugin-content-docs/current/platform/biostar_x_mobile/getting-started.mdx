@@ -1,0 +1,133 @@
+---
+id: getting-started
+title: はじめに
+description: BioStar XモバイルアプリをiOS、Androidでダウンロードし、サーバーに接続する方法を手順付きで案内します。
+keywords:
+  - BioStar X
+  - モバイル
+  - インストール
+  - 接続
+  - ダウンロード
+  - iOS
+  - Android
+---
+
+BioStar XモバイルアプリはiOSとAndroidで利用できます。 
+案内に従ってアプリをインストールした後、BioStar Xサーバーに接続してください。
+
+## BioStar Xモバイルアプリのダウンロード
+
+次の提供リンクまたはQRコードからアプリをダウンロードしてください。
+
+<div className='table--fixed'>
+
+| プラットフォーム | ダウンロードリンク | QRコード |
+| :-: | :-: | :-: |
+| **iOS** | [App Store](https://apps.apple.com/app/biostar-x-mobile/id6741415253) | ![iOS QR Code](/img/mobile/bsx-appstore-qr-code.png) |
+| **Android** | [Google Play](https://play.google.com/store/apps/details?id=com.suprema.biostarmobile) | ![Android QR Code](/img/mobile/bsx-playstore-qr-code.png) |
+
+</div>
+
+## アプリ権限
+
+BioStar Xモバイルアプリは、特定の機能を使用する際に次の権限を要求します。 初回インストール時には権限を要求しません。
+
+| 権限 | 必須かどうか | 用途 |
+| --- | --- | --- |
+| ストレージ | 任意 | ユーザー画像（ギャラリーや端末のストレージなど）を管理してアップロードするために必要です。 |
+| カメラ | 任意 | 顔画像のエンロールと動画録画のための画像キャプチャに使用します。 |
+| 生体認証 | 任意 | モバイル端末のFingerprintまたは顔認証を使ったセキュアログインに必要です。 |
+
+:::info
+
+すべての権限は必須ではなく、ユーザーはアプリの基本機能に影響を与えずに権限を任意で拒否できます。
+
+:::
+
+## アプリの起動と初期設定
+
+アプリを起動すると、BioStar Xサーバー接続用の情報を入力する画面が表示されます。
+
+<Columns>
+
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-init-setting.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+* <Cmd>BioStar X Server Address</Cmd>: BioStar XサーバーのIPアドレスまたはドメインアドレスを入力してください。
+
+* <Cmd>Port</Cmd>: BioStar Xサーバーのポート番号を入力してください。 デフォルトは`443`です。
+
+* <Cmd>ID</Cmd> / <Cmd>Password</Cmd>: BioStar XサーバーにログインするためのIDとパスワードを入力してください。
+
+必要な情報をすべて入力した後、ログインするには<Cmd>Login</Cmd>をタップしてください。
+
+:::info
+
+* アカウントIDとパスワードを入力欄に保存するには、<Cmd>Remember username and password</Cmd>オプションのチェックボックスを選択してください。 次回のログイン時に、入力したIDとパスワードが自動入力されます。
+
+* BioStar XサーバーのIPアドレス、ポート番号を確認するには、<DocLink docId='platform/biostar_x/settings-server-server' target='_blank' />を参照してください。
+
+:::
+
+</Column>
+</Columns>
+
+## 接続のトラブルシューティング
+
+ログインに失敗した場合は、以下を確認してください。
+
+* BioStar Xサーバーのアドレスとポート番号が正しいか確認してください。
+
+* アカウントIDとパスワードが正しいか確認してください。
+
+* モバイル端末とBioStar Xがネットワークに接続されているか確認してください。
+
+:::info
+
+外部ネットワークから接続するには公開 IP アドレスが必要です。ない場合は、**リモートアクセス** ライセンスを追加購入してください。 詳しくは、<DocLink docId='platform/biostar_x_mobile/before-you-start' />を参照してください。
+
+:::
+
+## アプリの使用
+
+ログインに成功すると、BioStar Xモバイルアプリのホーム画面が表示されます。 ホーム画面では、登録済みユーザー、ドア、リアルタイムログ、イベントログ、アラートを確認できます。 サイドメニューと設定メニューにもアクセスできます。
+
+<Columns>
+
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-home-screen.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+* <IcHamberg title='Hamburger icon' width={20} height={20} />: サイドメニューを開けます。 サイドメニューでは、パスワードの変更やログアウトができ、主要メニューにアクセスできます。
+
+* <IcSet title='Setting icon' width={20} height={20} />: 設定メニューを開けます。 アプリ設定の詳細は、<DocLink docId='platform/biostar_x_mobile/app-settings' />を参照してください。
+
+* <Cmd>USER</Cmd>: 登録済みユーザー一覧を確認し、ユーザーを管理できます。 ユーザー管理の詳細は、<DocLink docId='platform/biostar_x_mobile/manage-users' />を参照してください。
+
+* <Cmd>DOOR</Cmd>: 登録済みドア一覧を確認し、リモートで制御できます。 ドア管理の詳細は、<DocLink docId='platform/biostar_x_mobile/manage-doors' />を参照してください。
+
+* <Cmd>REAL-TIME LOG</Cmd>: リアルタイムの入退室イベントログを確認できます。 リアルタイムログの監視の詳細は、<DocLink docId='platform/biostar_x_mobile/view-realtime-log' />を参照してください。
+
+* <Cmd>EVENT LOG</Cmd>: BioStar Xサーバーに保存されたすべてのイベントログを確認できます。 ログの確認の詳細は、<DocLink docId='platform/biostar_x_mobile/view-past-events' />を参照してください。
+
+* <Cmd>ROLL CALL</Cmd>: 緊急時に、ユーザーがあらかじめ指定された場所の入室または退室デバイスで認証し、出席確認場所に到着したかどうかを確認できます。 人員点検（Roll Call）機能は、**アドバンス**（Advanced）ライセンス以上で追加オプションとして利用できます。 人員点検機能の詳細は、<DocLink docId='platform/biostar_x_mobile/start-rollcall' />を参照してください。
+
+* <Cmd>ALERT</Cmd>: ドア、端末、高度な入退室制御アラートを確認できます。 アラートの詳細は、<DocLink docId='platform/biostar_x/settings-alert' />を参照してください。
+
+* <Cmd>QUICK ACTION</Cmd>: 緊急時に、複数のドアの動作を簡単に制御できる機能です。 BioStar X Webインターフェースでクイックアクションを作成すると、モバイルアプリで使用できます。 **クイックアクション**機能の詳細は、<DocLink docId='platform/biostar_x_mobile/use-quickaction' />を参照してください。
+
+:::info
+
+すべての機能には、サイドメニュー（<IcHamberg title='Hamburger icon' width={20} height={20} />）からもアクセスできます。
+
+:::
+
+</Column>
+</Columns>

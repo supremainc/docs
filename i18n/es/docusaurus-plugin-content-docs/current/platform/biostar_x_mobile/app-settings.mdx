@@ -1,0 +1,213 @@
+---
+id: app-settings
+title: Configurar la App
+description: Esta guía explica paso a paso la configuración de la app para el inicio de sesión, la zona horaria, la seguridad y más en BioStar X Mobile App.
+keywords:
+  - BioStar X
+  - Móvil
+  - App
+  - Ajustes
+---
+
+En el menú de configuración de BioStar X Mobile App, administra las funciones principales de la app, como el inicio de sesión, la zona horaria y la seguridad. Para acceder al menú de configuración de la app, toca <IcSet title='Settings' /> en la esquina superior derecha de la pantalla de inicio.
+
+<Image src='/img/mobile/bsx-mobile-app-setting.png' width='252px' alone />
+
+## Ver información de la versión de la app
+
+En <Cmd>BioStar X Mobile App</Cmd>, revisa la información de la versión de BioStar X Mobile App instalada actualmente. Toca <Cmd>BioStar X Mobile App</Cmd> para verificar si la app instalada es la versión más reciente.
+
+:::info
+
+Usa la información de la versión de la app cuando contactes al soporte para resolver problemas.
+
+:::
+
+## Configuración de inicio de sesión
+
+### Configuración de inicio de sesión automática
+
+Los usuarios pueden activar la función de inicio de sesión automático en lugar de ingresar la información de inicio de sesión cada vez que abren la app o vuelven a iniciar sesión después de que vence la sesión. 
+
+1. Para activar la función de inicio de sesión automático, habilita la opción <Cmd>Auto Login</Cmd>.
+
+   <Image src='/img/mobile/bsx-mobile-app-setting-auto-login.png' width='252px' alone />
+
+2. Para guardar los cambios, toca <Cmd>OK</Cmd> en la esquina superior derecha de la pantalla.
+
+3. Cuando aparezca el mensaje de confirmación, toca <Cmd>Yes</Cmd>.
+
+:::info
+
+* Usa la función de inicio de sesión automático solo cuando <Cmd>Remember username and password</Cmd> esté habilitado en la pantalla de inicio de sesión. Si esta opción no está habilitada, la función de inicio de sesión automático no está disponible.
+
+  <Image src='/img/mobile/bsx-mobile-login-check.png' width='252px' alone />
+
+* Si la función de inicio de sesión automático está habilitada, cerrar sesión no está disponible. Para cerrar sesión, primero desactiva la función de inicio de sesión automático y luego cierra sesión.
+
+:::
+
+### Configuración de inicio de sesión biométrico
+
+En dispositivos móviles con autenticación biométrica, activa la función de inicio de sesión biométrico. Cuando esta función está activada, los usuarios pueden iniciar sesión con la huella registrada en su dispositivo móvil en lugar de usar un ID y una contraseña.
+
+1. Para activar la función de inicio de sesión biométrico, toca <Cmd>Biometrics Information</Cmd> → <Cmd>Biometrics Login</Cmd>.
+
+   <Image src='/img/mobile/bsx-mobile-app-setting-biometrics.png' width='252px' alone />
+
+2. Para guardar los cambios, toca <Cmd>OK</Cmd> en la esquina superior derecha de la pantalla.
+
+3. Cuando aparezca el mensaje de confirmación, toca <Cmd>Yes</Cmd>.
+
+Usa la autenticación biométrica en la pantalla de inicio de sesión.
+
+<Image src='/img/mobile/bsx-mobile-app-setting-biometrics-login.png' width='252px' alone />
+
+:::info
+
+Esta función requiere autenticación biométrica en el dispositivo móvil y la opción <Cmd>Remember username and password</Cmd> habilitada en la pantalla de inicio de sesión.
+
+:::
+
+## Configuración de zona horaria estándar
+
+Define la zona horaria de la ubicación donde está instalado el servidor BioStar X. Una configuración correcta de la zona horaria es importante para que las marcas de tiempo en los registros de eventos y las notificaciones sean precisas.
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-setting-timezone.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+1. Toca <Cmd>Time Zone</Cmd>.
+
+2. Selecciona la zona horaria de la ubicación donde está instalado el servidor BioStar X en la lista de zonas horarias.
+
+3. Toca <Cmd>Yes</Cmd>.
+
+4. Para guardar los cambios, toca <Cmd>OK</Cmd> en la esquina superior derecha de la pantalla.
+
+5. Cuando aparezca el mensaje de confirmación, toca <Cmd>Yes</Cmd>.
+
+:::info
+
+La configuración cambiada también se aplica al servidor BioStar X, y las marcas de tiempo de los registros de eventos y las notificaciones que aparecen en la app reflejan la zona horaria actualizada.
+
+:::
+
+</Column>
+</Columns>
+
+## Configuración del formato de fecha y hora
+
+Puede configurar el formato de visualización de fecha y hora que se utilizará en todo el sistema.
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-setting-date-format.png' className='none' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+### Formato de fecha
+
+1. Toca <Cmd>Date Format</Cmd>.
+
+2. Selecciona el formato de visualización de fecha deseado en la lista <Cmd>Date Format</Cmd>.
+
+   * <Cmd>MM/dd/yyyy</Cmd>: 01/31/2025
+
+   * <Cmd>yyyy/MM/dd</Cmd>: 2025/01/31
+
+   * <Cmd>dd/MM/yyyy</Cmd>: 31/01/2025
+
+3. Toca <Cmd>Yes</Cmd>.
+
+4. Para guardar los cambios, toca <Cmd>OK</Cmd> en la esquina superior derecha de la pantalla.
+
+5. Cuando aparezca el mensaje de confirmación, toca <Cmd>Yes</Cmd>.
+
+</Column>
+</Columns>
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-setting-time-format.png' className='none' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+### Formato de hora
+
+1. Toca <Cmd>Time Format</Cmd>.
+
+2. Selecciona el formato de visualización de hora deseado en la lista <Cmd>Time Format</Cmd>.
+
+   * <Cmd>hh:mm</Cmd>: 23:59, formato de 24 horas
+
+   * <Cmd>hh:mm a</Cmd>: 11:59 PM, formato de 12 horas
+
+   * <Cmd>a hh:mm</Cmd>: PM 11:59, formato de 12 horas
+
+3. Toca <Cmd>Yes</Cmd>.
+
+4. Para guardar los cambios, toca <Cmd>OK</Cmd> en la esquina superior derecha de la pantalla.
+
+5. Cuando aparezca el mensaje de confirmación, toca <Cmd>Yes</Cmd>.
+
+</Column>
+</Columns>
+
+## Confirmar cambios con biometría
+
+Cuando hagas cambios importantes en el sistema, puedes requerir autenticación adicional con biometría. Esto ayuda a evitar que otros usuarios hagan cambios no autorizados.
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-setting-biometrics-change-confirm.png' width='252px' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+1. Toca <Cmd>Biometrics Information</Cmd> → <Cmd>Changes Confirmation</Cmd>.
+
+2. Para guardar los cambios, toca <Cmd>OK</Cmd> en la esquina superior derecha de la pantalla.
+
+3. Cuando aparezca el mensaje de confirmación, toca <Cmd>Yes</Cmd>.
+
+Los siguientes cambios requieren autenticación biométrica.
+
+* Cambiar la contraseña de la cuenta
+
+* Cambiar la configuración de la app
+
+* Registrar un nuevo usuario
+
+* Editar información del usuario
+
+* Eliminar usuarios
+
+</Column>
+</Columns>
+
+## Ver información de la licencia y la política de privacidad
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-check-info.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+* Para ver la información de la licencia aplicada a BioStar X Mobile App, toca <Cmd>Service Information</Cmd> → <Cmd>License</Cmd>.
+
+* Para ver la política de privacidad de Suprema, toca <Cmd>Service Information</Cmd> → <Cmd>Privacy Policy</Cmd>. Usa el enlace disponible en la app para ver la política de privacidad de Suprema publicada en el sitio web oficial.
+
+</Column>
+</Columns>

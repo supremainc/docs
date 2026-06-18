@@ -1,0 +1,77 @@
+---
+id: check-resolve-alerts
+title: 警報アラームの確認と解除
+description: モバイルアプリで、BioStar Xで発生した警報アラームを確認し、解除する方法を案内します。
+keywords:
+  - 警報の確認
+  - 警報の解除
+---
+
+BioStar Xで発生した警報アラームを、モバイルアプリで確認し、必要に応じて解除できます。 出入口の強制開放などの警報アラームイベントが発生したとき、アプリで警報アラームを確認し、対応内容を記録できます。
+
+<Image src='/img/mobile/bsx-mobile-app-alert.png' width='500px' className='none' alone />
+
+:::info
+
+* BioStar Xで警報アラームを確認し、解除する方法の詳細は、<DocLink docId='platform/biostar_x/monitoring-event#acknowledge-alarm-and-record-action' />を参照してください。
+
+* 警報アラーム一覧に表示される日付と時刻は、BioStar Xサーバーの環境設定に従います。 BioStar Xの日付と時刻の表示形式設定の詳細は、<DocLink docId='platform/biostar_x/settings-preferences' /> をご参照ください。
+
+:::
+
+## 警報アラーム一覧 (Alert List)
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-alert-list.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+ホーム画面で<Cmd>ALERT</Cmd>をタップします。 警報アラーム一覧(<Cmd>Alert List</Cmd>)を確認できます。 
+
+警報アラーム一覧では、出入口の強制開放などの警報アラームイベントを新しい順で確認できます。 新しい警報アラームイベントが発生すると、自動的に一覧へリアルタイムで追加されます。
+
+:::info
+
+警報アラーム画面は、サイドメニュー(<IcHamberg title='Hamburger icon' width={20} height={20} />) → <Cmd>Alert</Cmd>をタップして開くこともできます。
+
+:::
+
+</Column>
+</Columns>
+
+<Columns className='mt--50'>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-alert-detail.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+### アラーム詳細情報の表示
+
+警報アラーム一覧で特定のアラームをタップすると、そのアラームの詳細情報を確認できます。 アラーム詳細情報には、発生したアラームイベントの種類、ユーザー、発生時刻、出入口/デバイスなどが表示されます。
+
+* 警報アラームを確認し、対応内容などを記録するには、<Cmd>Comment (optioinal)</Cmd>フィールドに内容を入力します。 入力した内容はBioStar Xサーバーに保存され、アラームイベントの詳細情報で確認できます。
+
+* 対応内容を入力して警報アラームを解除するには、<Cmd>ACKNOWLEDGE</Cmd>をタップします。 警報アラームが解除され、<Cmd>Alert List</Cmd>から該当アラームイベントが消えます。
+
+</Column>
+</Columns>
+
+## 警報アラーム履歴 (Alert History)
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-alert-history.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+警報アラーム履歴では、確認済みの警報イベントを確認できます。 各アラームイベントの種類、発生時刻、出入口/デバイス、ユーザーなどの情報を確認できます。 確認済みのアラームイベントには、どのユーザーがいつ確認したかなどの情報も表示されます。
+
+</Column>
+</Columns>
