@@ -270,6 +270,11 @@ const config = {
               },
               {
                 type: 'doc',
+                label: 'BioStar X Mobile',
+                docId: 'platform/biostar_x_mobile/index'
+              },
+              {
+                type: 'doc',
                 label: 'BioStar Air',
                 docId: 'platform/biostar_air/index'
               }
