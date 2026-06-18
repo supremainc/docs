@@ -1,0 +1,124 @@
+---
+id: view-realtime-log
+title: リアルタイムログモニタリング
+description: ログをリアルタイムで監視し、入場試行やアラームなどのイベントをすぐに確認できます。
+keywords:
+  - リアルタイムログ
+  - モニタリング
+  - イベント
+---
+
+BioStar Xサーバーで発生するイベントをリアルタイムで確認してください。 アプリのホーム画面で <Cmd>REAL-TIME LOG</Cmd> をタップしてください。
+
+<Image src='/img/mobile/bsx-mobile-app-realtime-log.png' width='500px' className='none' alone />
+
+<Cmd>REAL-TIME LOG</Cmd> では、次のような状況で使用できます。
+
+* 出勤時間帯の入場試行を監視
+
+* 現在受信中のイベントをリアルタイムで確認
+
+## リアルタイムログの確認
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-realtime-log-list.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+アプリのホーム画面で <Cmd>REAL-TIME LOG</Cmd> をタップしてください。 最初にリアルタイムログ(<Cmd>Real-time Log</Cmd>)画面を開くと、一覧は空です。
+
+* 新しいイベントが発生すると、自動的に一覧へリアルタイムで追加されます。 一覧の行数に制限はなく、新しいイベントは先頭に追加されます。
+
+* リアルタイムイベントの受信を一時停止するには、画面右上の <IcAppPause title='Pause' width='20px' height='20px' /> をタップしてください。 一時停止中は新しいイベントが一覧に追加されませんが、バックグラウンドでキューに追加されます。 リアルタイムイベントの受信を再開するには、<IcAppPlay title='Play' width='20px' height='20px' /> をタップしてください。 キューに追加されたイベントは、新しいイベントより先に一覧へ追加されます。
+
+* リアルタイムログ一覧を消去するには、画面右上の <IcAppClean title='Clean' width='20px' height='20px' /> をタップしてください。 ログ一覧が消去され、新しいイベントが発生した時点からリアルタイムで追加されます。
+
+* リアルタイムログ一覧をフィルタリングして、特定のイベント、ユーザー、ドア、またはデバイスなど、関連するログだけを表示できます。 詳しくは <DocLink inner='#viewSpecificLog' /> をご参照ください。
+
+:::info
+
+* 別のメニューへ移動してから再び <Cmd>Real-time Log</Cmd> に戻ると、ログ一覧は空になり、新しいログが発生した時点からリアルタイムで追加されます。
+
+* ログに表示される日付と時刻は、BioStar Xサーバーの環境設定に従います。 BioStar Xの日付と時刻の表示形式設定の詳細は、<DocLink docId='platform/biostar_x/settings-preferences' /> をご参照ください。
+
+* リアルタイムログ画面は、サイドメニュー(<IcHamberg title='Hamburger icon' width={20} height={20} />) → <Cmd>Monitoring</Cmd> → <Cmd>Real-time Log</Cmd> をタップして開くこともできます。
+
+:::
+
+</Column>
+</Columns>
+
+## 特定のログだけを表示 {#viewSpecificLog}
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-realtime-log-filter.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+リアルタイムログ一覧では、特定のイベント、ユーザー、ドア、またはデバイスなど、関連するログだけを表示するようにフィルタリングできます。 
+
+1. 画面右上の <IcAppFilter title='Filter' width='20px' height='20px' /> をタップしてください。 
+
+2. 表示したいログだけに絞るには、下のフィルタ条件を組み合わせて設定してください。
+
+   * <Cmd>Door</Cmd>: 特定のドア（例: 1階正面入口）
+
+   * <Cmd>Device</Cmd>: 特定のデバイス（例: 特定の入退室制御デバイスで発生したイベント）
+
+   * <Cmd>User</Cmd>: 特定のユーザー（例: VIPユーザーの入退室記録）
+
+   * <Cmd>Event</Cmd>: 特定のイベント種別（例: 顔認証失敗、侵入警報アラームなど）
+
+   * <Cmd>Elevator</Cmd>: 特定のエレベーター（例: 特定階のエレベーター）
+
+   * <Cmd>Advanced AC</Cmd>: 特定の高度な入退室制御（例: アンチパスバック、火災警報、スケジュール開閉錠など）
+
+3. 設定した条件でログ一覧をフィルタリングするには、<Cmd>Apply</Cmd> をタップしてください。
+
+:::info
+
+* フィルタ条件を初期化するには、画面右上の <IcAppFilter title='Filter' width='20px' height='20px' /> → <IcAppReset title='Reset' width='20px' height='20px' /> をタップしてください。
+
+* エレベーター、高度な入退室制御は、**アドバンス**(Advanced)以上のライセンスを有効にすると使用できます。 ライセンスポリシーの詳細については、<DocLink docId='platform/biostar_x/licensing' />をご参照ください。
+
+:::
+
+</Column>
+</Columns>
+
+## ログ詳細情報の確認
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-realtime-log-details.png' width='252px' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+ログ項目をタップして、そのログの詳細情報を確認してください。
+
+* <Cmd>Event Log</Cmd>: イベントの種類です。 どの種類のイベントが発生したかを表示します。
+
+* <Cmd>Datetime</Cmd>: イベントが発生した日付と時刻です。
+
+* <Cmd>Door</Cmd>: イベントが発生したドアです。
+
+* <Cmd>Device</Cmd>: イベントが発生したデバイスです。
+
+* <Cmd>User</Cmd>: イベントを発生させたユーザーです。 たとえば、入退室認証イベントの場合、入室を試みたユーザーが表示されます。
+
+詳細情報ポップアップ下部のボタンをタップして、次の操作を実行できます。
+
+* イベント情報をクリップボードにコピーするには、<Cmd>EVENT INFORMATION COPIED</Cmd> をタップしてください。
+
+* 詳細情報ポップアップを閉じるには、<Cmd>OK</Cmd> をタップしてください。
+
+</Column>
+</Columns>

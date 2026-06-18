@@ -1,0 +1,140 @@
+---
+id: view-past-events
+title: 過去ログの照会
+description: 過去ログを照会してフィルタリングすると、希望する期間と場所の入退室履歴を確認できます。
+keywords:
+  - 過去ログ
+  - 照会
+  - フィルタリング
+---
+
+過去ログを照会して、特定の期間と場所で発生した入退室履歴を確認できます。 ログをフィルタリングすると、条件に合うイベントを簡単に見つけられます。
+
+<Image src='/img/mobile/bsx-mobile-app-past-log.png' width='500px' className='none' alone />
+
+<Cmd>EVENT LOG</Cmd> 機能は、次のような状況で活用できます。
+
+* 特定ユーザーの過去の入退室記録を確認
+
+* 特定期間内のセキュリティイベント履歴を追跡
+
+* 入退室管理の監査とレポート作成
+
+:::note
+
+**リアルタイムログとの違い**
+
+* **リアルタイムログ**: 現在発生しているイベントをすぐに監視できます。 リアルタイムログは現在の状況を把握し、即時対応が必要な場合に役立ちます。
+
+* **過去ログ**: 特定期間のイベント履歴を検索して照会できます。
+
+:::
+
+## 過去ログの照会
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-past-log-list.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+アプリのホーム画面で <Cmd>EVENT LOG</Cmd> をタップします。
+
+* 各ログには、イベントタイプ、発生時刻、出入口/デバイス、ユーザー情報が表示されます。
+
+* ログ一覧を下に引いて更新すると、一覧が更新され、最新のログが表示されます。
+
+  <Image src='/img/mobile/bsx-mobile-app-past-log-refresh.png' width='252px' alone />
+
+:::info
+
+* ログに表示される日付と時刻は、BioStar Xサーバーの環境設定に従います。 BioStar Xの日付と時刻の表示形式設定の詳細は、<DocLink docId='platform/biostar_x/settings-preferences' /> をご参照ください。
+
+* イベントログ画面には、サイドメニュー（<IcHamberg title='Hamburger icon' width={20} height={20} />）→ <Cmd>Monitoring</Cmd> → <Cmd>Event Log</Cmd> をタップして移動することもできます。
+
+:::
+
+</Column>
+</Columns>
+
+## 特定のログのみを表示
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-past-log-filter.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+ログ一覧で、特定のイベント、ユーザー、出入口、またはデバイスなど、関連するログのみをフィルタリングして表示できます。 
+
+1. 画面右上の <IcAppFilter title='Filter' width='20px' height='20px' /> をタップしてください。 
+
+2. 表示したいログだけに絞るには、下のフィルタ条件を組み合わせて設定してください。
+
+   * <Cmd>Period</Cmd>: イベント発生期間の設定
+
+   * <Cmd>Time</Cmd>: イベント発生時刻の設定
+
+   * <Cmd>Event</Cmd>: 特定のイベントタイプを選択（例: 顔認証失敗、侵入警報アラームなど）
+
+   * <Cmd>User</Cmd>: 特定のユーザーを選択（例: VIPユーザーの入退室記録）
+
+   * <Cmd>Device</Cmd>: 特定のデバイスを選択（例: 特定の入退室管理デバイスで発生したイベント）
+
+   * <Cmd>Door</Cmd>: 特定の出入口を選択（例: 1階正面入口）
+
+3. 設定した条件でログ一覧をフィルタリングするには、<Cmd>Apply</Cmd> をタップしてください。
+
+:::info
+
+フィルタ条件を初期化するには、画面右上の <IcAppFilter title='Filter' width='20px' height='20px' /> → <IcAppReset title='Reset' width='20px' height='20px' /> をタップしてください。
+
+:::
+
+</Column>
+</Columns>
+
+## ログ詳細情報の確認
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-past-log-detail.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+ログ一覧で希望するログをタップすると、そのログの詳細情報を確認できます。
+
+* <Cmd>Event</Cmd>: 発生したイベントタイプ（例: 入退室認証成功、入退室認証失敗、アラーム発生など）
+
+* <Cmd>Description</Cmd>: イベントの説明
+
+* <Cmd>Datetime</Cmd>: イベント発生日時
+
+* <Cmd>Door</Cmd>: イベント発生の出入口
+
+* <Cmd>Device Name</Cmd>: イベント発生デバイス
+
+* <Cmd>User Group</Cmd>: イベントを発生させたユーザーのグループ名
+
+* <Cmd>User</Cmd>: イベントを発生させたユーザー
+
+詳細情報ポップアップ下部のボタンをタップして、次の操作を実行できます。
+
+* イベント情報をクリップボードにコピーするには、<Cmd>EVENT INFORMATION COPIED</Cmd> をタップしてください。
+
+* 詳細情報ポップアップを閉じるには、<Cmd>OK</Cmd> をタップしてください。
+
+:::info
+
+イベントログが出入口関連イベントの場合、ログ詳細情報に出入口制御関連情報が追加で表示されます。
+
+:::
+
+</Column>
+</Columns>
