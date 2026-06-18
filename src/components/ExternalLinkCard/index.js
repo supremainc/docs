@@ -472,10 +472,12 @@ export function Apps({ externalLinks: externalLinksProp }) {
   const defaultExternalLinks = useMemo(() => [
     {
       title: 'BioStar X Mobile',
+      url: '/platform/biostar_x_mobile',
       play: 'https://play.google.com/store/apps/details?id=com.suprema.biostarmobile',
       ios: 'https://apps.apple.com/app/biostar-x-mobile/id6741415253',
       Svg: require('@site/static/img/cover-bsx-app.svg').default,
-      height: '60px'
+      height: '60px',
+      linkText: `${translate({ id: "index.shortcut.linkText" })}`
     },
     {
       title: 'BioStar Air Mobile',

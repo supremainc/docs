@@ -206,5 +206,9 @@
   "item.label.Software House": {
     "message": "Software House",
     "description": "Elemento de la barra de navegación etiquetado como «Software House»"
+  },
+  "item.label.BioStar X Mobile": {
+    "message": "BioStar X Mobile",
+    "description": "Navbar item with label BioStar X Mobile"
   }
 }
