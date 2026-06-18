@@ -1,0 +1,77 @@
+---
+id: check-resolve-alerts
+title: Revisar y Resolver Alertas
+description: Esta guía explica cómo revisar y resolver alertas de BioStar X en la aplicación móvil.
+keywords:
+  - Revisar alerta
+  - Resolver alerta
+---
+
+En la aplicación móvil, revise las alertas de BioStar X y resuélvalas según sea necesario. Cuando ocurra un evento de alerta, como una apertura forzada de puerta, revise la alerta en la aplicación y registre la acción realizada.
+
+<Image src='/img/mobile/bsx-mobile-app-alert.png' width='500px' className='none' alone />
+
+:::info
+
+* Para obtener más información sobre cómo revisar y resolver alertas en BioStar X, consulte <DocLink docId='platform/biostar_x/monitoring-event#acknowledge-alarm-and-record-action' />.
+
+* La fecha y la hora que aparecen en la lista de alertas siguen la configuración de hora del servidor de BioStar X. Para obtener más información sobre la configuración del formato de visualización de fecha y hora en BioStar X, consulte <DocLink docId='platform/biostar_x/settings-preferences' />.
+
+:::
+
+## Lista de alertas
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-alert-list.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Toque <Cmd>ALERT</Cmd> en la pantalla principal de la aplicación. Vea la <Cmd>Lista de alertas</Cmd>. 
+
+En la lista de alertas, vea eventos de alerta, como aperturas forzadas de puerta, en orden cronológico inverso. Cuando ocurre un nuevo evento de alerta, se agrega a la lista en tiempo real.
+
+:::info
+
+También puede abrir la pantalla de alertas al tocar el menú lateral (<IcHamberg title='Hamburger icon' width={20} height={20} />) → <Cmd>Alert</Cmd>.
+
+:::
+
+</Column>
+</Columns>
+
+<Columns className='mt--50'>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-alert-detail.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+### Ver detalles de la alerta
+
+En la lista de alertas, toque una alerta específica para ver sus detalles. Los detalles de la alerta muestran el tipo de evento, el usuario, la hora de ocurrencia y la puerta/dispositivo.
+
+* Para registrar la acción realizada después de revisar una alerta, ingrese los detalles en el campo <Cmd>Comment (optional)</Cmd>. Los detalles ingresados se guardan en el servidor de BioStar X y aparecen en los detalles del evento de alerta.
+
+* Para ingresar la acción realizada y resolver la alerta, toque <Cmd>ACKNOWLEDGE</Cmd>. La alerta se resuelve y el evento desaparece de <Cmd>Alert List</Cmd>.
+
+</Column>
+</Columns>
+
+## Historial de alertas
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-alert-history.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+En el historial de alertas, puede ver los eventos de alerta reconocidos. Vea información como el tipo de cada evento, la hora de ocurrencia, la puerta/dispositivo y el usuario. Los eventos de alerta reconocidos también muestran quién los reconoció y cuándo.
+
+</Column>
+</Columns>

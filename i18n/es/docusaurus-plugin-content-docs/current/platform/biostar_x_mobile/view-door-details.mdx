@@ -1,0 +1,143 @@
+---
+id: view-door-details
+title: Ver Detalles de Puerta
+description: Vea el estado en tiempo real de cada puerta, la información del dispositivo configurado y el historial de acceso en una sola pantalla. Detecte rápidamente problemas de estado, controle de inmediato o siga los eventos que ocurren en la puerta.
+keywords:
+  - Puerta
+  - Detalles
+  - Control remoto
+---
+
+Seleccione una puerta para ver el estado actual y los dispositivos configurados. Si ocurre un problema, contrólelo de inmediato o vea los registros de actividad recientes.
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-door-details.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Vea la información de estado de la puerta, la feature de control remoto, la información del dispositivo asignado a la puerta y el tiempo de apertura.
+
+1. Toca <Cmd>DOOR</Cmd> en la pantalla de inicio de la app.
+
+   :::note
+
+   También puedes acceder a ella desde el menú lateral. Toca <IcHamberg title='Hamburger icon' width={20} height={20} /> → <Cmd>Door</Cmd>.
+
+   :::
+
+2. Toque la puerta cuyos detalles quiere ver en la lista de puertas.
+
+</Column>
+</Columns>
+
+## Información del estado de la puerta
+
+Vea en tiempo real el estado actual de la puerta.
+
+<Image src='/img/mobile/bsx-mobile-app-door-details-status.png' alone />
+
+* <Cmd>Estado de la puerta</Cmd>: Muestra si la puerta está abierta o cerrada.
+
+* <Cmd>Tipo de estado de la puerta</Cmd>: Muestra el tipo de estado de la puerta. Por ejemplo, Normal, Desbloqueada por el operador y Bloqueada por el operador.
+
+* <Cmd>Relé de la puerta</Cmd>: Muestra el estado del relé conectado a la puerta.
+
+* <Cmd>Alarma</Cmd>: Muestra eventos de alarma que ocurrieron en la puerta.
+
+* <Cmd>Último evento</Cmd>: Muestra la fecha, la hora y el tipo de evento del último evento que ocurrió en la puerta.
+
+## Feature de control remoto
+
+Controla la puerta de forma remota para administrar el acceso.
+
+<Image src='/img/mobile/bsx-mobile-app-door-details-remote-control.png' alone />
+
+* <Cmd>Abrir</Cmd>: Abre temporalmente la puerta para permitir el acceso. La puerta se cierra automáticamente después del tiempo configurado.
+
+* <Cmd>Liberar</Cmd>: Configura la puerta para permitir el acceso solo a usuarios autenticados. El estado de la puerta cambia según el horario configurado para la puerta.
+
+* <Cmd>Bloqueo manual</Cmd>: Bloquea la puerta manualmente para impedir el acceso. Esta función bloquea la puerta sin límite de tiempo. En este estado, el acceso queda bloqueado para todos los usuarios.
+
+* <Cmd>Desbloqueo manual</Cmd>: Desbloquea la puerta manualmente para permitir el acceso. Esta función desbloquea la puerta sin límite de tiempo. En este estado, el acceso queda permitido para todos los usuarios.
+
+* <Cmd>Borrar APB</Cmd>: Borra el estado APB para todos los usuarios en la puerta seleccionada.
+
+* <Cmd>Borrar alarma</Cmd>: Borra la alarma que se produjo en la puerta.
+
+:::info
+
+* El tiempo que la puerta permanece abierta temporalmente antes de cerrarse automáticamente aparece en <Cmd>Tiempo de apertura</Cmd> a continuación.
+
+* Después de bloquear o desbloquear una puerta manualmente, el estado de la puerta no cambia automáticamente. Por seguridad, usa <Cmd>Liberar</Cmd> para que la puerta funcione según el horario configurado.
+
+:::
+
+## Información del dispositivo de la puerta
+
+Vea la información del dispositivo asignado a la puerta.
+
+<Image src='/img/mobile/bsx-mobile-app-door-details-device-info.png' alone />
+
+* <Cmd>Dispositivo de entrada</Cmd>: La información del dispositivo asignado como dispositivo de entrada.
+
+* <Cmd>Relé de la puerta</Cmd>: La información del relé que funciona como cerradura de la puerta.
+
+* <Cmd>Botón de salida</Cmd>: La información del port del dispositivo usado como botón de salida.
+
+* <Cmd>Sensor de la puerta</Cmd>: La información del port del dispositivo asignado como sensor que detecta la apertura y el cierre de la puerta.
+
+* <Cmd>Tiempo de apertura</Cmd>: El tiempo que la puerta permanece abierta después de abrirse temporalmente antes de cerrarse automáticamente.
+
+:::info
+
+Para obtener más información sobre la setting <Cmd>Tiempo de apertura</Cmd>, consulte <Cmd sid='common.open' product='2' /> → <Cmd sid='door.openTime' product='2' /> en <DocLink docId='platform/biostar_x/settings-door-add#option' />.
+
+:::
+
+## Ver eventos del registro de la puerta
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-door-log-event.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Vea los eventos del registro que ocurrieron en la puerta y revise eventos como intentos de acceso y alarmas. 
+
+1. En la pantalla Detalles de la puerta, toque <IcAppDoorLog title='Log event' width='20px' height='20px' /> en la esquina superior derecha.
+
+   <Image src='/img/mobile/bsx-mobile-app-door-log-event-filter-list.png' width='252px' alone />
+
+2. Para filtrar los eventos del registro de la puerta, toque <IcAppLogFiltered title='Filter' width='20px' height='20px' /> en la esquina superior derecha de la pantalla.
+
+   <Image src='/img/mobile/bsx-mobile-app-door-log-event-filter.png' width='30%' alone />
+
+   * <Cmd>Period</Cmd>: Defina el período en que ocurrió el evento del registro.
+
+   * <Cmd>Time</Cmd>: Defina la hora en que ocurrió el evento del registro.
+
+   * <Cmd>Event</Cmd>: Seleccione el tipo de evento del registro. Por ejemplo, seleccione éxito de autenticación de acceso o fallo de autenticación de acceso.
+
+   * <Cmd>Usuario</Cmd>: Seleccione el usuario que generó el evento del registro.
+
+   * <Cmd>Device</Cmd>: Seleccione el dispositivo donde ocurrió el evento del registro.
+
+   * <Cmd>Puerta</Cmd>: Vea eventos del registro de otras puertas distintas de la puerta actual.
+
+3. Cuando aparezcan los criterios del filtro, defina los criterios deseados.
+
+4. Para filtrar los eventos del registro con los criterios seleccionados, toque <Cmd>Apply</Cmd>.
+
+:::info
+
+Para restablecer las condiciones del filtro, toca <IcAppLogFiltered title='Filtered' width='20px' height='20px' /> → <IcAppReset title='Reset' width='20px' height='20px' /> en la esquina superior derecha de la pantalla.
+
+:::
+
+</Column>
+</Columns>

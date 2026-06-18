@@ -1,0 +1,80 @@
+---
+id: view-user-log-event
+title: Ver Eventos del Registro de Usuario
+description: Puede ver los eventos del registro de un usuario para consultar su historial de acceso.
+keywords:
+  - Usuario
+  - Eventos del registro
+---
+
+Vea el historial de acceso de un usuario para detectar accesos anormales o fuera del horario autorizado. Filtre los eventos del registro para encontrar fácilmente el historial de un período y una ubicación específicos.
+
+## Ver historial de acceso del usuario
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-user-log-event.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+1. En la pantalla de inicio de la app, toque <Cmd>USER</Cmd>.
+
+   :::note
+
+   También puedes acceder a ella desde el menú lateral. Toque <IcHamberg title='Hamburger icon' width={20} height={20} /> → <Cmd>User</Cmd>.
+
+   :::
+
+2. Toque al usuario cuyos eventos del registro desea ver en la lista de usuarios.
+
+3. Toque <IcAppLog title='Log' width='20px' height='20px' /> en la esquina superior derecha de los detalles del usuario.
+
+4. En <Cmd>Event Log</Cmd>, puede ver el historial de acceso del usuario.
+
+   <Image src='/img/mobile/bsx-mobile-app-user-log-filter.png' width='252px' alone />
+
+Los eventos del registro más recientes aparecen primero, y puede revisar la ubicación del acceso y los detalles del evento.
+
+</Column>
+</Columns>
+
+## Filtrar eventos del registro
+
+<Columns>
+<Column className='width--23'>
+
+<Image src='/img/mobile/bsx-mobile-app-user-log-event-filter.png' alone />
+
+</Column>
+<Column className='padding--l40'>
+
+Puede filtrar los eventos del registro de un usuario por varias condiciones, como fecha y hora, tipo de evento, y ubicación de acceso.
+
+1. Toque <IcAppLogFiltered title='Filter' width='20px' height='20px' /> en la esquina superior derecha de Event Log.
+
+2. Cuando aparezcan los criterios del filtro, defina los criterios deseados.
+
+   * <Cmd>Period</Cmd>: Defina el período en que ocurrió el evento del registro.
+
+   * <Cmd>Time</Cmd>: Defina la hora en que ocurrió el evento del registro.
+
+   * <Cmd>Event</Cmd>: Seleccione el tipo de evento del registro. Por ejemplo, seleccione éxito de autenticación de acceso o fallo de autenticación de acceso.
+
+   * <Cmd>User</Cmd>: Vea eventos del registro de usuarios distintos del usuario actual.
+
+   * <Cmd>Device</Cmd>: Seleccione el dispositivo donde ocurrió el evento del registro.
+
+   * <Cmd>Door</Cmd>: Seleccione la puerta donde ocurrió el evento del registro.
+
+3. Para filtrar los eventos del registro con los criterios seleccionados, toque <Cmd>Apply</Cmd>.
+
+:::info
+
+Para restablecer las condiciones del filtro, toca <IcAppLogFiltered title='Filtered' width='20px' height='20px' /> → <IcAppReset title='Reset' width='20px' height='20px' /> en la esquina superior derecha de la pantalla.
+
+:::
+
+</Column>
+</Columns>
