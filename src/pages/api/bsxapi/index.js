@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import CodeBlock from '@theme/CodeBlock';
 import { useHistory, useLocation } from '@docusaurus/router';
-import collectionData from './bsxapi-postman-collection.json';
+import collectionData from '@site/static/specs/bsxapi-postman-collection.json';
 import MarkdownIt from 'markdown-it';
 
 // ─── Constants ────────────────────────────────────────────────────────

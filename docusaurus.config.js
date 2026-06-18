@@ -153,23 +153,7 @@ const config = {
           },
         },
       }),
-    ],
-    [
-      'redocusaurus',
-      {
-        specs: [{
-          spec: './openapi/bsxapi-with-samples.yaml',
-          // route: '/api/bsxapi',
-          id: 'bsxapi',
-        }],
-        config: {
-          hideDownloadButtons: true
-        },
-        theme: {
-          primaryColor: '#3578e5',
-        },
-      }
-    ],
+    ]
   ],
   plugins: [
     // Redocusaurus Prism 주입 문제 해결 플러그인
