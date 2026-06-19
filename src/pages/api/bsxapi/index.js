@@ -744,7 +744,7 @@ export default function ApiV2Page() {
           })}
         </script>
       </Head>
-      <div style={{ display: 'flex', height: 'calc(100vh - var(--ifm-navbar-height, 60px))', overflow: 'hidden' }}>
+      <div style={{ display: 'flex', flex: 1, minHeight: 0, overflow: 'hidden' }}>
         {/* 모바일: selected 없을 때만 사이드바 표시 / 데스크톱: 항상 표시 */}
         {(!isMobile || !selected) && (
           <Sidebar selected={selected} onSelect={handleSelect} isMobile={isMobile} />
