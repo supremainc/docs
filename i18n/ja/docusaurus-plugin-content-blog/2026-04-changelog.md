@@ -51,4 +51,4 @@ Added new release notes and updated device documentation.
 
 ## Developer
 
-* Updated API documentation: [Export as CSV API](../api/bsxapi#tag/Events/operation/exportEventsExport)
+* Updated API documentation: [Export as CSV API](../api/bsxapi?api=export-as-csv)

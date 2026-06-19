@@ -59,7 +59,7 @@ Added new release notes and updated existing device documentation.
 
 ## Developer
 
-* API documentation updated: [Create BioStar X QR](../api/bsxapi#tag/Cards/operation/createCard)
+* API documentation updated: [Create BioStar X QR](../api/bsxapi?api=create-biostar-x-qr)
 
 * Device SDK: Added v2.9.12 release notes
 
