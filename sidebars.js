@@ -1953,6 +1953,43 @@ function createSidebars(preview) {
       ],
     },
   ],
+  biostation3_ul: [
+    {
+      type: 'category',
+      label: 'BioStation 3 UL',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/biostation_3_ul/index',
+      },
+      items: [
+        'device/biostation_3_ul/safety-instructions',
+        'device/biostation_3_ul/getting-started',
+        'device/biostation_3_ul/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/biostation_3_ul/using-device',
+          },
+          items: [
+            'device/biostation_3_ul/admin-menu',
+            'device/biostation_3_ul/user',
+            'device/biostation_3_ul/authentication',
+            'device/biostation_3_ul/settings',
+            'device/biostation_3_ul/event-log',
+          ],
+        },
+        'device/biostation_3_ul/troubleshooting',
+        'device/biostation_3_ul/product-specifications',
+        'device/biostation_3_ul/regulatory-information',
+        'device/biostation_3_ul/appendices',
+      ],
+    },
+  ],
   biostation3max: [
     {
       type: 'category',
