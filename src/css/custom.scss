@@ -515,21 +515,6 @@ footer {
 }
 // Zoom 스타일
 
-.redocusaurus {
-  display: none;
-  // div[role='search'] {
-  //   position: fixed;
-  //   top: 60px;
-  //   background: #fff;
-  // }
-  // .scrollbar-container {
-  //   top: 100px;
-  // }
-}
-
-body[data-rh] .redocusaurus {
-  display: block;
-}
 .api--docs {
   pre * {
     font-family: 'Noto Sans Coptic', sans-serif;
