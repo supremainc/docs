@@ -2175,6 +2175,43 @@ function createSidebars(preview) {
       ],
     },
   ],
+  bioliten2_ul: [
+    {
+      type: 'category',
+      label: 'BioLite N2',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/biolite_n2_ul/index',
+      },
+      items: [
+        'device/biolite_n2_ul/safety-instructions',
+        'device/biolite_n2_ul/getting-started',
+        'device/biolite_n2_ul/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/biolite_n2_ul/using-device',
+          },
+          items: [
+            'device/biolite_n2_ul/admin-menu',
+            'device/biolite_n2_ul/user',
+            'device/biolite_n2_ul/authentication',
+            'device/biolite_n2_ul/settings',
+            'device/biolite_n2_ul/event-log',
+          ],
+        },
+        'device/biolite_n2_ul/troubleshooting',
+        'device/biolite_n2_ul/product-specifications',
+        'device/biolite_n2_ul/regulatory-information',
+        'device/biolite_n2_ul/appendices',
+      ],
+    },
+  ],
   xpass2: [
     {
       type: 'category',
