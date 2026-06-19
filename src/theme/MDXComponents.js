@@ -1,5 +1,4 @@
 import MDXComponents from '@theme-original/MDXComponents';
-import Cmd from '@site/src/components/Cmd';
 import Include from '@site/src/components/Include';
 import Xclude from '@site/src/components/Xclude';
 import { Steps, Step } from '@site/src/components/Steps';
@@ -197,7 +196,6 @@ import IcAppPlay from '@site/static/img/menus/ico-xapp-play.svg';
 import IcAppClean from '@site/static/img/menus/ico-xapp-clean.svg';
 export default {
     ...MDXComponents,
-    Cmd,
     Include,
     Xclude,
     Steps,
