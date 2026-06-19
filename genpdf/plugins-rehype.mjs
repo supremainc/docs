@@ -17,26 +17,26 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Cmd component locale imports
-const cmdKo = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/ko.json`, 'utf-8'));
-const cmdEn = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/en.json`, 'utf-8'));
-const cmdEs = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/es.json`, 'utf-8'));
-const cmdJa = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/ja.json`, 'utf-8'));
+const cmdKo = JSON.parse(readFileSync(`${__dirname}/../src/plugins/remark-cmd/ko.json`, 'utf-8'));
+const cmdEn = JSON.parse(readFileSync(`${__dirname}/../src/plugins/remark-cmd/en.json`, 'utf-8'));
+const cmdEs = JSON.parse(readFileSync(`${__dirname}/../src/plugins/remark-cmd/es.json`, 'utf-8'));
+const cmdJa = JSON.parse(readFileSync(`${__dirname}/../src/plugins/remark-cmd/ja.json`, 'utf-8'));
 
-const cmdXKo = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/x/ko.json`, 'utf-8'));
-const cmdXEn = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/x/en.json`, 'utf-8'));
-const cmdXEs = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/x/es.json`, 'utf-8'));
-const cmdXJa = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/x/ja.json`, 'utf-8'));
+const cmdXKo = JSON.parse(readFileSync(`${__dirname}/../src/plugins/remark-cmd/x/ko.json`, 'utf-8'));
+const cmdXEn = JSON.parse(readFileSync(`${__dirname}/../src/plugins/remark-cmd/x/en.json`, 'utf-8'));
+const cmdXEs = JSON.parse(readFileSync(`${__dirname}/../src/plugins/remark-cmd/x/es.json`, 'utf-8'));
+const cmdXJa = JSON.parse(readFileSync(`${__dirname}/../src/plugins/remark-cmd/x/ja.json`, 'utf-8'));
 
-const cmdDevKo = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/device/ko.json`, 'utf-8'));
-const cmdDevEn = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/device/en.json`, 'utf-8'));
+const cmdDevKo = JSON.parse(readFileSync(`${__dirname}/../src/plugins/remark-cmd/device/ko.json`, 'utf-8'));
+const cmdDevEn = JSON.parse(readFileSync(`${__dirname}/../src/plugins/remark-cmd/device/en.json`, 'utf-8'));
 
-const cmdAirKo = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/air/ko.json`, 'utf-8'));
-const cmdAirEn = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/air/en.json`, 'utf-8'));
-const cmdAirEs = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/air/es.json`, 'utf-8'));
-const cmdAirJa = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/air/ja.json`, 'utf-8'));
+const cmdAirKo = JSON.parse(readFileSync(`${__dirname}/../src/plugins/remark-cmd/air/ko.json`, 'utf-8'));
+const cmdAirEn = JSON.parse(readFileSync(`${__dirname}/../src/plugins/remark-cmd/air/en.json`, 'utf-8'));
+const cmdAirEs = JSON.parse(readFileSync(`${__dirname}/../src/plugins/remark-cmd/air/es.json`, 'utf-8'));
+const cmdAirJa = JSON.parse(readFileSync(`${__dirname}/../src/plugins/remark-cmd/air/ja.json`, 'utf-8'));
 
-const cmdCamKo = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/cam/ko.json`, 'utf-8'));
-const cmdCamEn = JSON.parse(readFileSync(`${__dirname}/../src/components/Cmd/cam/en.json`, 'utf-8'));
+const cmdCamKo = JSON.parse(readFileSync(`${__dirname}/../src/plugins/remark-cmd/cam/ko.json`, 'utf-8'));
+const cmdCamEn = JSON.parse(readFileSync(`${__dirname}/../src/plugins/remark-cmd/cam/en.json`, 'utf-8'));
 
 const glossaryKo = JSON.parse(readFileSync(`${__dirname}/../i18n/ko/glossary.json`, 'utf-8'));
 const glossaryEn = JSON.parse(readFileSync(`${__dirname}/../i18n/en/glossary.json`, 'utf-8'));
