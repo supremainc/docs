@@ -1457,6 +1457,27 @@ function createSidebars(preview) {
       ]
     }
   ],
+  securemodule_ul: [
+    {
+      type: 'category',
+      label: 'Secure Module UL',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/securemodule_ul/index',
+      },
+      items: [
+        'device/securemodule_ul/safety-instructions',
+        'device/securemodule_ul/getting-started',
+        'device/securemodule_ul/installation',
+        'device/securemodule_ul/product-specifications',
+        'device/securemodule_ul/regulatory-information',
+        'device/securemodule_ul/appendices',
+      ]
+    }
+  ],
   extendedmodule: [
     {
       type: 'category',
