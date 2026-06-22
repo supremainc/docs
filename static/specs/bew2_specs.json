@@ -225,12 +225,11 @@
           "label": "인증",
           "label_id": "specs.general.certifications",
           "value": {
-            "ko": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE, ETL Listed to UL 294",
-            "en": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE, ETL Listed to UL 294",
-            "es": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE, ETL Listed to UL 294",
-            "ja": "CE、UKCA、KC、FCC、IC、RCM、BIS、ANATEL、SIG、RoHS、REACH、WEEE、ETL Listed to UL 294"
-          },
-          "annotation_value": "anno3"
+            "ko": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE, ETL Listed to UL 294<sup id='anno3_dest'><a href='#anno3'></a></sup>",
+            "en": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE, ETL Listed to UL 294<sup id='anno3_dest'><a href='#anno3'></a></sup>",
+            "es": "CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE, ETL Listed to UL 294<sup id='anno3_dest'><a href='#anno3'></a></sup>",
+            "ja": "CE、UKCA、KC、FCC、IC、RCM、BIS、ANATEL、SIG、RoHS、REACH、WEEE、ETL Listed to UL 294<sup id='anno3_dest'><a href='#anno3'></a></sup>"
+          }
         }
       }
     },
