@@ -1295,6 +1295,7 @@ function createSidebars(preview) {
             id: 'device/doorinterface/release-notes/index',
           },
           items: [
+            'device/doorinterface/release-notes/103',
             'device/doorinterface/release-notes/102',
             'device/doorinterface/release-notes/101',
             'device/doorinterface/release-notes/100',
