@@ -1,0 +1,83 @@
+---
+id: users-access-control
+title: Usuarios y Control de Acceso
+description: Explica cómo controlar las cuentas de usuario y los permisos de acceso en Windows Server para evitar el acceso no autorizado al servidor BioStar X.
+---
+
+Después de reforzar el sistema operativo, el siguiente paso es controlar **quién** puede acceder al sistema y **qué** puede hacer. Los permisos de cuenta mal configurados, las contraseñas débiles y las cuentas integradas descuidadas son las rutas más comunes para que los atacantes escalen privilegios en un servidor BioStar X. Siga la guía de este documento para fortalecer los controles de usuario y acceso.
+
+## Aplicar el principio de mínimo privilegio
+
+* Cree grupos de usuarios separados en Active Directory o Usuarios y grupos locales.
+
+* Asigne permisos del sistema de archivos y de aplicaciones según estos grupos.
+
+* Configure los roles de BioStar X dentro de la aplicación para reflejar el modelo de mínimo privilegio del sistema operativo.
+
+## Restringir los privilegios administrativos locales
+
+* Use `lusrmgr.msc` para quitar las cuentas innecesarias del grupo Administradores.
+
+* Asigne el mínimo privilegio: use cuentas de usuario estándar para la operación normal y cuentas de administrador solo cuando sea necesario.
+
+* Si está unido a un dominio, aplique Grupos restringidos de la directiva de grupo para imponer permisos consistentes.
+
+## Aplicar autenticación fuerte
+
+* Configure la directiva de grupo para exigir contraseñas complejas (mínimo 12 a 15 caracteres, combinación de mayúsculas, minúsculas, números y símbolos).
+
+* Establezca la expiración de la contraseña (por ejemplo, cada 90 días) y limite la reutilización.
+
+* Configure la directiva de bloqueo de cuentas para bloquear cuentas después de varios intentos fallidos.
+
+* Para acceso remoto o cuentas con privilegios, aplique autenticación multifactor (MFA).
+
+### Paso a paso
+
+1. Abra **Editor de directivas de grupo local** (`gpedit.msc`).
+
+2. Vaya a **Configuración del equipo** → **Configuración de Windows** → **Configuración de seguridad** → **Directivas de cuenta** → **Directiva de contraseñas**.
+
+3. Configure la longitud, la complejidad y el historial de contraseñas.
+
+4. Establezca la duración y el umbral de bloqueo en **Directiva de bloqueo de cuentas**.
+
+## Administrar cuentas integradas
+
+Abra **Usuarios y grupos locales** (`lusrmgr.msc`).
+
+* Haga clic derecho en la cuenta Administrador y cámbiele el nombre (use un nombre poco obvio).
+
+* Deshabilite la cuenta Invitado, a menos que sea requerido explícitamente.
+
+* Audite las cuentas con `net user` en PowerShell con regularidad.
+
+## Administración de sesiones
+
+* Configure el bloqueo automático después de 15 minutos de inactividad.
+
+* Evite inicios de sesión simultáneos con la misma cuenta, si es posible.
+
+* Limite las sesiones remotas inactivas.
+
+:::info
+
+**Editor de directivas de grupo local** (`gpedit.msc`) → **Configuración del equipo** → **Configuración de Windows** → **Configuración de seguridad** → **Directivas locales** → **Opciones de seguridad** → **Inicio de sesión interactivo: límite de inactividad de la máquina** (por ejemplo, 900 segundos = 15 minutos)
+
+:::
+
+## Auditoría y supervisión
+
+* Habilite la auditoría de intentos de inicio de sesión, uso de privilegios y administración de cuentas.
+
+* Reenvíe los registros a un **SIEM** o a un recopilador central de registros.
+
+* Revise los registros de seguridad con regularidad para detectar anomalías.
+
+:::info
+
+**Editor de directivas de grupo local** (`gpedit.msc`) → **Configuración del equipo** → **Configuración de Windows** → **Configuración de seguridad** → **Configuración avanzada de directiva de auditoría**
+
+Habilite las categorías: **Inicio y cierre de sesión**, **Administración de cuentas**, **Uso de privilegios**.
+
+:::

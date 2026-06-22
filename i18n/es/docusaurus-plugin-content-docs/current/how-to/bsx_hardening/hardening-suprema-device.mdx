@@ -1,0 +1,233 @@
+---
+id: hardening-suprema-device
+title: Endurecimiento de Dispositivo Suprema
+description: Este documento proporciona recomendaciones de endurecimiento para dispositivos de control de acceso fabricados por Suprema y conectados a BioStar X.
+---
+
+Este documento proporciona recomendaciones de endurecimiento para dispositivos de control de acceso fabricados por Suprema y conectados a BioStar X.
+
+Aunque el endurecimiento del servidor y de la aplicación BioStar X protege el sistema central, los dispositivos de control de acceso se instalan en puntos de entrada físicos y pueden estar expuestos al acceso a la red local, la manipulación física, el uso no autorizado o firmware desactualizado. El endurecimiento a nivel de dispositivo debe tratarse como una parte esencial de la postura general de seguridad.
+
+Este documento cubre lo siguiente:
+
+* Aplica a dispositivos de control de acceso Suprema conectados a BioStar X.
+
+* Cubre el mantenimiento del firmware, la gestión de registros de eventos del dispositivo, la configuración del administrador y los controles operativos del dispositivo.
+
+* Las capacidades del dispositivo pueden variar según el modelo y la versión del firmware.
+
+## Mantener el firmware del dispositivo actualizado
+
+Mantenga el firmware del dispositivo Suprema actualizado a la versión más reciente admitida y aprobada para el entorno del cliente.
+
+### Prácticas recomendadas generales
+
+* Mantenga un inventario de todos los dispositivos conectados (nombre del modelo, ID del dispositivo, versión del firmware, ubicación de instalación, rol).
+
+* Revise las notas de publicación del firmware de Suprema antes de actualizar.
+
+* Pruebe las actualizaciones de firmware en un dispositivo de pruebas antes de implementarlas ampliamente.
+
+* Programe las actualizaciones de firmware durante una ventana de mantenimiento.
+
+* Asegúrese de que el dispositivo tenga energía estable durante la actualización. No desconecte la energía ni la red.
+
+* Después de la actualización, confirme que el dispositivo se reconecta a BioStar X y que todas las funciones operan con normalidad.
+
+### Actualización de firmware desde el software
+
+Cuando sea posible, realice las actualizaciones de firmware desde el software de administración en lugar de hacerlo directamente desde el dispositivo.
+
+1. Descargue el archivo de firmware correcto para el modelo de dispositivo de destino en [Suprema Download Center](https://download.supremainc.com/download-center/pages/login.asp). 
+
+2. Revise las notas de publicación y las notas de compatibilidad.
+
+3. Confirme que el dispositivo esté en línea y se comunique con normalidad.
+
+4. Haga una copia de seguridad o confirme la sincronización de usuarios, credenciales, registros y la configuración del dispositivo.
+
+5. Seleccione el dispositivo de destino y ejecute Firmware Upgrade.
+
+6. Espere hasta que la actualización termine y el dispositivo se reinicie.
+
+7. Confirme la versión del firmware después del reinicio.
+
+El dispositivo se reconecta a BioStar X; la autenticación, el control de puertas y la carga de registros de eventos funcionan con normalidad; la comunicación segura y la configuración de hashkey permanecen como se espera.
+
+:::caution
+
+* No aplique firmware destinado a otro modelo de dispositivo. 
+
+* No interrumpa el proceso de actualización. 
+
+* Algunas actualizaciones de firmware pueden restringir las rutas de degradación; revise siempre las notas de publicación antes de actualizar.
+
+:::
+
+### Actualización de firmware directamente desde el dispositivo / USB
+
+Algunos dispositivos Suprema admiten la actualización de firmware mediante la conexión de una memoria USB directamente al dispositivo.
+
+1. Guarde el archivo de actualización de firmware en una memoria USB compatible.
+
+   :::note
+
+   Se recomienda guardar solo un archivo en la memoria USB.
+
+   :::
+
+2. Conecte la memoria USB al dispositivo.
+
+3. Cuando se le indique, autentíquese con una credencial de nivel administrador.
+
+4. Espere a que el archivo de firmware se transfiera al dispositivo.
+
+5. Cuando se le indique, retire la memoria USB.
+
+6. Espere hasta que la actualización de firmware termine y el dispositivo se reinicie automáticamente.
+
+7. Confirme la versión del firmware y valide el funcionamiento del dispositivo.
+
+:::caution
+
+Debe configurarse un administrador del dispositivo antes de que continúe la actualización de firmware desde el dispositivo. No desconecte la energía durante la actualización de firmware.
+
+:::
+
+## Retención y protección de registros de eventos del dispositivo
+
+Conserve los registros de eventos del dispositivo y asegúrese de que se carguen a BioStar X con regularidad.
+
+### Política de registros del dispositivo
+
+* Los registros del dispositivo se conservan localmente hasta la capacidad admitida del dispositivo, a menos que se eliminen o se sobrescriban.
+
+* Los administradores no deben depender solo del almacenamiento local del dispositivo para la retención de auditoría a largo plazo.
+
+* La carga automática de registros a BioStar X debe habilitarse siempre que sea posible.
+
+* Los registros de eventos deben revisarse y respaldarse según la política de auditoría y cumplimiento de la organización.
+
+* Asegúrese de que la fecha, la hora, la zona horaria y la configuración del horario de verano del dispositivo estén configuradas correctamente. Habilite Time Sync donde sea compatible.
+
+### Consideraciones de Secure Tamper
+
+Algunos dispositivos Suprema admiten el comportamiento de **Secure Tamper**. Si la protección contra manipulación está habilitada y ocurre un evento de manipulación, el dispositivo puede eliminar datos confidenciales almacenados en el dispositivo, incluidos usuarios, registros, claves de cifrado y certificados SSL. Habilite la carga automática de registros para reducir el riesgo de perder los registros locales del dispositivo.
+
+:::note
+
+**Prácticas operativas recomendadas**
+
+* Trate los eventos de manipulación del dispositivo como incidentes de seguridad.
+
+* Después de un evento de manipulación, inspeccione físicamente el dispositivo antes de volver a enrollarlo o volver a implementarlo.
+
+* No deshabilite las protecciones relacionadas con la manipulación sin aprobación de seguridad documentada.
+
+:::
+
+## Configurar administrador del dispositivo
+
+Configure un administrador del dispositivo en los dispositivos Suprema compatibles y restrinja el acceso al menú del administrador del dispositivo. Los dispositivos no deben implementarse en producción sin protección de administrador.
+
+:::info
+
+Los privilegios del administrador del dispositivo son independientes de los permisos de usuario de BioStar X.
+
+:::
+
+:::note
+
+**Mejor práctica**
+
+* Enrolle al menos un administrador del dispositivo antes de la implementación en producción.
+
+* Use credenciales de administrador únicas asignadas solo al personal autorizado.
+
+* Use métodos de autenticación fuertes (tarjeta + PIN, biometría + PIN o autenticación de administrador con varias credenciales).
+
+* Revise periódicamente las asignaciones de administrador del dispositivo.
+
+* Retire de inmediato el acceso de administrador cuando cambien los roles del personal.
+
+* Documente los procedimientos de recuperación de emergencia en caso de perder las credenciales de administrador.
+
+:::
+
+### Configurar administrador del dispositivo desde el software
+
+1. Inicie sesión en BioStar X con una cuenta de administrador.
+
+2. Cree o seleccione al usuario que actuará como administrador del dispositivo.
+
+3. Enrolle la credencial requerida (tarjeta, PIN, huella dactilar o rostro).
+
+4. Asigne privilegios de nivel administrador o el rol adecuado de administrador del dispositivo.
+
+5. Transfiera o sincronice al usuario con el dispositivo de destino.
+
+6. Confirme en el dispositivo que la credencial de administrador pueda acceder al menú de administrador.
+
+### Configurar administrador del dispositivo directamente desde el dispositivo
+
+1. Acceda al menú del dispositivo.
+
+2. Abra el menú de enrolamiento de usuarios o de configuración del administrador.
+
+3. Enrolle al usuario administrador y la credencial.
+
+4. Asigne privilegios de nivel administrador.
+
+5. Guarde la configuración.
+
+6. Pruebe la autenticación del administrador accediendo de nuevo al menú de administrador.
+
+## Endurecimiento de red y servicios locales del dispositivo
+
+Configure las opciones de red y de servicios locales del dispositivo según el principio de la menor funcionalidad.
+
+### Acciones recomendadas
+
+* Use direccionamiento IP estable y documentado para el dispositivo (reserve la IP en DHCP o documente la IP estática con máscara de subred, puerta de enlace, DNS, puerto, ID del dispositivo y ubicación).
+
+* Verifique la dirección del servidor BioStar X y el puerto del servidor que usa el dispositivo.
+
+* Deshabilite las funciones del dispositivo que no sean necesarias.
+
+  > por ejemplo, RTSP, intercomunicador IP
+
+* Si se requieren RTSP, intercomunicador u otros servicios opcionales, configure credenciales sólidas y restrinja el acceso solo a sistemas de confianza.
+
+* Habilite Time Sync donde sea compatible.
+
+* Después de Restore Default o Factory Default, vuelva a revisar las opciones de red, los niveles de administrador, los certificados raíz, la comunicación segura y la conexión con BioStar X.
+
+## Lista de verificación de endurecimiento operativo en el dispositivo
+
+* [ ] Mantenga el firmware actualizado a la versión más reciente admitida.
+
+* [ ] Mantenga un inventario del modelo del dispositivo, ID del dispositivo, versión del firmware, ubicación y rol.
+
+* [ ] Configure el acceso de administrador del dispositivo antes de usarlo en producción.
+
+* [ ] Restrinja los privilegios de administrador solo al personal autorizado.
+
+* [ ] Habilite la comunicación segura con BioStar X donde sea compatible.
+
+* [ ] Habilite <Cmd sid='setting.server.secure.comm.data_encryption' product='2' className='normal' /> y <Cmd sid='device.info.tamperOn' product='2' className='normal' /> cuando corresponda al nivel de riesgo de la implementación.
+
+* [ ] Configure <Cmd sid='setting.server.logUploadType' product='2' className='normal' /> en <Cmd sid='common.auto' product='2' className='normal' /> donde sea posible.
+
+* [ ] Confirme que los registros de eventos del dispositivo se cargan a BioStar X con regularidad.
+
+* [ ] Asegure físicamente la instalación y el cableado del dispositivo.
+
+* [ ] Trate los eventos de manipulación, los reinicios inesperados, los cambios de firmware y las brechas en los registros como eventos relevantes para la seguridad.
+
+* [ ] Revise la configuración del dispositivo después de actualizaciones de firmware, reemplazo del dispositivo u operaciones de restauración.
+
+* [ ] Use direccionamiento de red estable y documentado para los dispositivos de producción.
+
+* [ ] Deshabilite las funciones del dispositivo que no sean necesarias para la implementación.
+
+* [ ] Restrinja las operaciones Restore Default y Factory Default solo a administradores autorizados.

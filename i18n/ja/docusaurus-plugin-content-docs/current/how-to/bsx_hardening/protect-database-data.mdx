@@ -1,0 +1,138 @@
+---
+id: protect-database-data
+title: データベースとデータ保護
+description: 暗号化、アクセス制御、監査ログを通じて、BioStar X データベースに保存された機密情報を保護する方法を案内します。
+---
+
+BioStar X には、ユーザーのクレデンシャル、アクセスログ、設定データなどの重要情報を保存するデータベースが必要です。 導入環境に応じて、**MariaDB** (11.4) または **Microsoft SQL Server** を使用します。
+
+## 認証とアクセス制御
+
+* すべてのデータベース接続で認証を要求するように設定します。
+
+* BioStar X 専用のデータベースアカウントを使用し、共有アカウントや既定のアカウントは使用しないでください。
+
+* 必要最小限の権限ロールのみを割り当てます。アプリケーションデータには読み取り/書き込みを許可し、スキーマ変更は許可しません。
+
+* 未使用のユーザーや過剰な権限を持つユーザーがいないか、データベースアカウントを定期的に監査します。
+
+* 特に IP またはインフラ変更後は、未使用または古いデータベースユーザーエントリを削除します。
+
+:::caution
+
+`sa` または同等のスーパーユーザーアカウントを使用して BioStar X に接続しないでください。
+
+:::
+
+## 送信中データの暗号化
+
+### MariaDB
+
+```ini title='my.cnf'
+[mysqld]
+require_secure_transport=ON
+ssl_cert=/etc/mysql/server-cert.pem
+ssl_key=/etc/mysql/server-key.pem
+ssl_ca=/etc/mysql/ca-cert.pem
+```
+
+**設定の確認**
+
+```sql title='SQL'
+SHOW VARIABLES LIKE '%ssl%';
+```
+
+### SQL Server
+
+1. **SQL Server 構成マネージャー**を実行します。
+
+2. **SQL Server ネットワーク構成** → **MSSQLSERVER のプロトコル** に移動します。
+
+3. **暗号化の強制**を有効にします。
+
+4. サーバーに信頼できる証明書をインストールします。
+
+## 保存データの暗号化
+
+### MariaDB
+
+* 保存データを暗号化するには、`file_key_management` プラグインを有効にします。
+
+* 安全なキーファイルに暗号化キーを定義します。
+
+* 完全な TDE を使用できない場合は、テーブルごとに暗号化を適用します。
+
+:::caution
+
+軽微な性能低下（通常 3\~5%）が発生する場合があります。 データベースを別のサーバーに移動または復元する場合は、証明書とキーが必要です。 BioStar X の復元機能は暗号化バックアップをサポートしないため、手動で処理する必要があります。
+
+:::
+
+### SQL Server TDE
+
+```sql title='SQL'
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'StrongP@ssw0rd!';
+CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'BioStarX';
+CREATE DATABASE ENCRYPTION KEY WITH ALGORITHM = AES_256 ENCRYPTION BY SERVER CERTIFICATE MyServerCert;
+ALTER DATABASE biostarx_ac SET ENCRYPTION ON;
+```
+
+## データベース監査の有効化 {#enableDatabaseAudit}
+
+### MariaDB
+
+```sql title='SQL'
+INSTALL SONAME 'server_audit';
+SET GLOBAL server_audit_logging=ON;
+SET GLOBAL server_audit_events='CONNECT,QUERY_DML,QUERY_DDL';
+```
+
+### SQL Server
+
+```sql title='SQL'
+CREATE SERVER AUDIT BioStarX_Audit TO FILE (FILEPATH = 'C:\AuditLogs\');
+CREATE SERVER AUDIT SPECIFICATION BioStarX_Spec FOR SERVER AUDIT BioStarX_Audit ADD (FAILED_LOGIN_GROUP);
+ALTER SERVER AUDIT BioStarX_Audit WITH (STATE = ON);
+```
+
+## バックアップと安全な保管場所
+
+* BioStar X データベースを定期的に暗号化してバックアップします。
+
+* バックアップは、同じホストではなく、別の安全なサーバーに保存します。
+
+* バックアップと復元を定期的にテストします。
+
+* BitLocker で暗号化されたボリュームにバックアップを保存します。
+
+### MariaDB
+
+```bash title='Bash'
+mariadb-dump --all-databases --ssl --result-file=/secure/backups/biostarx.sql
+gpg -c /secure/backups/biostarx.sql
+```
+
+:::caution
+
+BioStar X のバックアップ機能（手動またはスケジュール）は暗号化されません。 BioStar Xの復元機能は、暗号化されたバックアップをサポートしません。
+
+:::
+
+### SQL Server
+
+```sql title='SQL'
+BACKUP DATABASE biostarx_db TO DISK = 'D:\backups\biostarx_db.bak' 
+WITH ENCRYPTION (ALGORITHM = AES_256, SERVER CERTIFICATE = MyServerCert);
+```
+
+## リモートアクセスの制限
+
+### MariaDB
+
+```ini title='my.cnf'
+bind-address=127.0.0.1
+```
+
+### SQL Server
+
+BioStar X アプリケーションサーバーからの接続のみを許可するように、ファイアウォールルールを構成します。

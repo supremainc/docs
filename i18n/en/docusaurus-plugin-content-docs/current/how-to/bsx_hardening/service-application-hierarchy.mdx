@@ -18,20 +18,19 @@ The Service and Application Layer focuses on securing the software components an
 
 1. Create a dedicated local user account for BioStar X services.
 
-1. Open **Services.msc** → Right-click the BioStar X service → **Properties** → **Log On** tab.
+2. Open **Services.msc** → Right-click the BioStar X service → **Properties** → **Log On** tab.
 
-1. Assign the dedicated account.
+3. Assign the dedicated account.
 
-1. Apply file system ACLs so the account can only access necessary directories.
+4. Apply file system ACLs so the account can only access necessary directories.
 
-1. Deny interactive logon rights for these accounts.
+5. Deny interactive logon rights for these accounts.
 
 :::caution
 
 Using shared accounts between multiple services makes it harder to audit breaches.
 
 :::
-
 
 ## Secure application configuration files
 
@@ -63,7 +62,6 @@ Rotate stored secrets (DB passwords, API keys) periodically.
 
 :::
 
-
 ## Maintain application runtime components
 
 * Keep BioStar X and its dependent runtime components (e.g., Visual C++ Redistributables) up to date.
@@ -71,7 +69,6 @@ Rotate stored secrets (DB passwords, API keys) periodically.
 * Subscribe to vendor advisories for patches.
 
 * Document update procedures to avoid downtime.
-
 
 ## Application whitelisting
 
@@ -83,10 +80,10 @@ Rotate stored secrets (DB passwords, API keys) periodically.
 
 1. Open `Local Security Policy → Application Control Policies → AppLocker`.
 
-1. Define rules for executable, script, and DLL paths.
+2. Define rules for executable, script, and DLL paths.
 
-1. Allow signed BioStar X binaries.
+3. Allow signed BioStar X binaries.
 
-1. Deny execution from user-writable directories.
+4. Deny execution from user-writable directories.
 
-1. **Deploy in Audit Mode first** to test, then enforce.
+5. **Deploy in Audit Mode first** to test, then enforce.

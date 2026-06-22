@@ -1,0 +1,575 @@
+---
+id: bsx-system-security
+title: Seguridad del Sistema
+description: Explica cómo reforzar la capa de aplicación de BioStar X mediante autenticación sólida, control de acceso basado en roles, comunicación cifrada y respaldos periódicos.
+---
+
+Después de reforzar la seguridad del servidor en el servidor BioStar X, el siguiente paso es proteger la propia aplicación BioStar X. Las cuentas de administrador predeterminadas, las contraseñas débiles y la comunicación no cifrada con dispositivos se convierten en vías para comprometer directamente el sistema y omitir la seguridad a nivel de infraestructura. Este documento explica cómo establecer una base de seguridad en la capa de aplicación mediante autenticación de BioStar X, gestión de roles, cifrado de dispositivos y estrategias de respaldo.
+
+## Cambiar el ID de inicio de sesión y la contraseña predeterminados del administrador {#changeDefaultAdmin}
+
+Cambie de inmediato el ID de inicio de sesión predeterminado del **Administrador** (`admin`) y asigne una contraseña segura y única después de la instalación.
+
+Las credenciales predeterminadas son uno de los puntos de entrada más comunes para los atacantes. Como cada instalación de BioStar X incluye una cuenta de Administrador predefinida (UID: 1), dejarla sin cambios hace que el sistema sea predecible y muy vulnerable a ataques de fuerza bruta o diccionario.
+
+1. Inicie sesión con la cuenta de administrador predeterminada (ID de inicio de sesión: `admin`).
+
+2. Vaya a <Cmd sid='shell.header.user' />.
+
+3. Haga doble clic en la cuenta **Administrator**.
+
+   > Nombre de usuario: *Administrator*, UID: 1
+
+4. En la página de edición de usuario, busque la sección <Cmd sid='team.user.permission.title' />:
+
+   * <Cmd sid='user.loginId' product='2' />: Cámbielo de `admin` a un ID de usuario único y difícil de adivinar. Evite nombres como `root`, `system` o el nombre de su empresa.
+
+   * <Cmd sid='common.password' product='2' />: Cámbiela por una contraseña segura. De forma predeterminada, BioStar X exige contraseñas de **fortaleza media**. Las contraseñas deben tener entre 8 y 32 caracteres e incluir letras mayúsculas, minúsculas y números.
+
+5. Haga clic en <Cmd sid='common.save' /> en la parte superior derecha de la pantalla.
+
+6. Cierre sesión y vuelva a iniciarla con las **nuevas credenciales** para confirmar el cambio.
+
+:::note
+
+**Mejor práctica**
+
+* **no** utilice nombres personales o patrones simples (`admin1`, `company2025`).
+
+* Guarde las nuevas credenciales en un administrador de contraseñas seguro o en una bóveda empresarial.
+
+* Cree una **cuenta de administrador secundaria** para uso de emergencia.
+
+* Revise periódicamente los **registros de auditoría** de los intentos de inicio de sesión del Administrador.
+
+:::
+
+## Separación de accesos
+
+Aplique una separación estricta de roles dentro de BioStar X al asignar cuentas **Administrator**, **Operator** y **Auditor** con privilegios claramente definidos.
+
+Una sola cuenta de superusuario para todas las tareas introduce un riesgo innecesario. Al separar los roles, usted:
+
+* Reduce la posibilidad de errores de configuración accidentales.
+
+* Limita las amenazas internas (ningún usuario tiene poder sin control).
+
+* Mejora la capacidad de auditoría y el cumplimiento (responsabilidad clara por rol).
+
+Esta práctica se alinea con **mínimo privilegio** y **separación de funciones**, dos principios fundamentales en ISO 27001, NIST y otros marcos.
+
+### Enfoque recomendado después de la instalación
+
+1. **Cambiar el nombre y proteger el administrador predeterminado**:
+
+   Trátelo como una cuenta de emergencia **solo para casos críticos**. Para obtener más información, consulte <DocLink inner='#changeDefaultAdmin' />.
+
+2. **Crear cuentas de rol con nombre**:
+
+   * **Rol de administrador**: Para la configuración del sistema y la gestión de roles. Limítelo a **1 o 2 personas de confianza**.
+
+   * **Rol de operador**: Para las operaciones diarias. Sin acceso a las opciones de seguridad del sistema ni a los registros de auditoría.
+
+   * **Rol de auditor**: Acceso de solo lectura a registros, informes y configuraciones. Sin capacidad para cambiar las opciones.
+
+3. **Habilitar la autenticación multifactor (MFA)**:
+
+   Exija MFA para todas las cuentas de rol. Para obtener más información, consulte <DocLink inner='#setMfa' />.
+
+4. **Usar niveles de cuenta personalizados (si es necesario)**:
+
+   * Vaya a <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.account.root' />, y luego haga clic en <Cmd sid='setting.account.addCustomOperator' product='2' />.
+
+   * Configurar acceso granular a través de Grupos de Usuarios, Grupos de Dispositivos, Grupos de Puertas, etc.
+
+   * Seleccione el permiso <Cmd sid='common.editRead' product='2' /> o <Cmd sid='common.read' product='2' /> para cada opción de menú en <Cmd sid='settings.account.menu.setting' product='2' />.
+
+### Ejemplo paso a paso: crear un rol de auditor personalizado
+
+1. Vaya a <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.account.root' />.
+
+2. Haga clic en <Cmd sid='setting.account.addCustomOperator' product='2' />.
+
+3. Ingrese <Cmd sid='common.name' product='2' /> como `Auditor` y agregue una descripción.
+
+4. En <Cmd sid='settings.account.menu.setting' product='2' />, configure:
+
+   * <Cmd sid='common.permission.module.user' product='2' />: <Cmd sid='common.read' product='2' />
+
+   * <Cmd sid='common.permission.module.monitoring' product='2' />: <Cmd sid='common.read' product='2' />
+
+   * <Cmd sid='common.permission.module.data' product='2' />: <Cmd sid='common.read' product='2' />
+
+   * <Cmd sid='common.permission.module.dashboard' product='2' />: <Cmd sid='common.read' product='2' />
+
+   * <Cmd sid='common.permission.module.setting' product='2' />: No seleccione.
+
+5. Haga clic en <Cmd sid='button.apply' product='2' />, luego asigne este rol a las cuentas de auditor designadas.
+
+:::note
+
+**Mejor práctica**
+
+* Asigne **cuentas únicas por persona**; evite inicios de sesión compartidos.
+
+* Revise los roles de las cuentas cada trimestre y elimine las cuentas sin uso.
+
+* Mantenga la cuenta de Administrador integrada renombrada solo para emergencias.
+
+:::
+
+## Aplicación de una política de contraseñas seguras
+
+Configurar BioStar X para aplicar políticas de contraseñas fuertes para todas las cuentas de usuario.
+
+### Opciones de política de contraseñas en BioStar X
+
+* <Cmd sid="setting.server.passwordLevel" product='2' />
+
+  * <Cmd sid='setting.server.passwordLevelDefault' product='2' />: Permite ingresar hasta 32 caracteres.
+
+  * <Cmd sid='setting.server.passwordLevelMedium' product='2' />: Al establecer una contraseña, se requiere una combinación de 8 a 32 caracteres alfabéticos (mayúsculas o minúsculas) y números.
+
+  * <Cmd sid='setting.server.passwordLevelStrong' product='2' />: Al establecer una contraseña, se requiere una combinación de 10 a 32 caracteres alfabéticos (mayúsculas y minúsculas, con al menos una mayúscula), números y caracteres especiales.
+
+* <Cmd sid="setting.systemSecurity.passwordUpdateCycle" product='2' />: Se puede configurar de 1 a 180 días.
+
+* <Cmd sid="setting.systemSecurity.allowLoginFailed" product='2' />: Si ingresa la contraseña incorrectamente más veces que el número establecido, no podrá iniciar sesión durante el tiempo límite. El valor predeterminado es 100 intentos en 10 minutos, y se recomienda **reducirlo a 5 a 10 intentos en 15 minutos**.
+
+* <Cmd sid="setting.systemSecurity.allowPasswordChange" product='2' />: Sirve para limitar el número de cambios de contraseña que un usuario puede hacer en un día.
+
+### Paso a paso: reforzar la política de contraseñas
+
+1. Vaya a <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid="setting.systemSecurity" product='2' />.
+
+2. En <Cmd sid='setting.systemSecurity.loginPassword' product='2' />, configure:
+
+   * <Cmd sid="setting.server.passwordLevel" product='2' />: <Cmd sid="setting.server.passwordLevelStrong" product='2' />
+
+   * <Cmd sid="setting.systemSecurity.passwordUpdateCycle" product='2' />: Habilite y establezca en **90 días**
+
+   * <Cmd sid="setting.systemSecurity.allowLoginFailed" product='2' />: Habilite y establezca en **5 intentos** por **15 minutos**
+
+   * <Cmd sid="setting.systemSecurity.allowPasswordChange" product='2' />: Habilite y establezca un máximo de **5 veces**
+
+3. Haga clic en <Cmd sid='button.apply' product='2' /> en la esquina inferior derecha de la pantalla.
+
+Comunique las nuevas políticas a todos los usuarios.
+
+## Seguridad de la sesión
+
+**Ruta**: <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.systemSecurity' product='2' /> → <Cmd sid='setting.systemSecurity.sessionSecurity' product='2' />
+
+Desactive <Cmd sid="setting.systemSecurity.useSimultaneousConnection" product='2' /> para asegurar que cada cuenta solo pueda usarse en una sesión activa a la vez.
+
+* <Cmd sid="common.active" product='2' />: Se permiten varios inicios de sesión simultáneos con las mismas credenciales.
+
+* <Cmd sid="common.inactive" product='2' />: Solo se permite un inicio de sesión por cuenta. Un nuevo inicio de sesión cierra automáticamente la sesión anterior.
+
+:::caution
+
+* El uso compartido de cuentas pasa desapercibido; es imposible saber quién realizó cada acción.
+
+* Los atacantes que obtienen credenciales robadas pueden iniciar sesión sin ser detectados mientras el usuario legítimo sigue activo.
+
+* Los registros de auditoría pierden valor porque no pueden atribuir acciones a personas específicas.
+
+:::
+
+## Autenticación multifactor {#setMfa}
+
+Habilite la autenticación multifactor para todas las cuentas con privilegios altos (Admin, Operator) en BioStar X, y exija un factor biométrico adicional de huella dactilar.
+
+:::note
+
+**Cómo funciona en BioStar X**
+
+* La MFA se implementa con un lector de huellas dactilares (Suprema BioMini o BioMini Plus 2).
+
+* Después de que los usuarios ingresan su ID de inicio de sesión y contraseña, el sistema solicita un escaneo de huella dactilar.
+
+:::
+
+:::caution
+
+* Si la cuenta de administrador tiene MFA habilitada y falla el componente de huella dactilar, puede quedar bloqueado.
+
+* La MFA no se admite al iniciar sesión mediante interfaces en la nube.
+
+* No se puede habilitar MFA para cuentas autenticadas mediante Active Directory o servicios no compatibles.
+
+:::
+
+### Paso a paso
+
+1. Conecte e instale el lector de huellas dactilares en el servidor o equipo cliente de BioStar X.
+
+2. En BioStar X, vaya a <Cmd sid='shell.header.user' />.
+
+3. Abra el perfil del usuario y confirme que la huella dactilar esté enrollada.
+
+4. Establezca <Cmd sid='common.fingerprintLogin' product='2' /> en <Cmd sid='common.use' /> en la sección <Cmd sid='team.user.permission.title' />.
+
+5. Haga clic en <Cmd sid='common.save' /> en la esquina superior derecha de la pantalla para aplicar los cambios.
+
+Pruebe el inicio de sesión: ingrese credenciales válidas y luego escanee su huella dactilar para obtener acceso.
+
+:::note
+
+**Mejores prácticas y medidas de seguridad:**
+
+* Enrolle huellas dactilares de respaldo (otro dedo) para mitigar fallas del lector.
+
+* El Administrador integrado original (cuenta de emergencia) debe tener recuperación de respaldo en caso de que falle el hardware biométrico.
+
+* Documentar cuentas con MFA-enabled y mantener un mecanismo de recuperación.
+
+:::
+
+## Comunicación segura con dispositivos {#secureComm}
+
+Habilite <Cmd sid='setting.sever.secure.comm.menu' product='2' /> para cifrar el tráfico entre BioStar X y los dispositivos conectados mediante certificados digitales, estilo TLS/SSL.
+
+### Opción A: certificados generados por el servidor (predeterminada)
+
+BioStar X genera un certificado y lo aprovisiona automáticamente a los dispositivos.
+
+:::caution
+
+Si se desactiva y luego se vuelve a activar, se genera un nuevo certificado, lo que puede requerir reinicios manuales de los dispositivos.
+
+:::
+
+### Opción B: certificados externos (recomendado para uso empresarial)
+
+* Cargue la cadena de certificados y la clave privada de su organización.
+
+* Ofrece una integración más sencilla con la PKI empresarial.
+
+### Paso a paso
+
+1. Inicie sesión en BioStar X con una cuenta de administrador.
+
+2. Vaya a <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.systemSecurity' product='2' /> → <Cmd sid='setting.server.secure.comm.title' product='2' />.
+
+3. Establezca <Cmd sid='setting.sever.secure.comm.menu' product='2' /> en <Cmd sid='common.use' />.
+
+4. Si usa certificados de CA externos, establezca <Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' /> en <Cmd sid='common.use' />.
+
+   * Cargue la CA raíz, el certificado público y la clave privada.
+
+5. Aplique y verifique que los dispositivos se reconecten correctamente mediante canales seguros.
+
+:::note
+
+**Mejor práctica**
+
+* Utilice siempre **llaves fuertes** (RSA 2048+ o equivalente en ECC).
+
+* Utilice certificados con los correspondientes **valores CN/SAN** que coincidan con la forma en que se conectan los dispositivos (nombre de host o IP).
+
+* Rotar certificados antes de caducidad; mantener un calendario de renovación.
+
+:::
+
+:::note
+
+**Nota sobre la carga de registros**
+
+Si <Cmd sid='setting.server.logUploadType' product='2' /> es <Cmd sid='common.manual' product='2' />, corre el riesgo de **demora en la visibilidad de eventos** o **vacíos en las pistas de auditoría**. Mantenga <Cmd sid='setting.server.logUploadType' product='2' /> en <Cmd sid='common.auto' product='2' /> siempre que sea posible.
+
+:::
+
+## Gestión de hashkey del dispositivo
+
+Habilite <Cmd sid="setting.server.secure.comm.data_encryption" product='2' /> para controlar manualmente la clave de cifrado usada entre BioStar X y los dispositivos. Esto activa la resistencia a la manipulación. Los dispositivos pueden borrar automáticamente los datos críticos si detectan manipulación física.
+
+:::important
+
+Mientras <DocLink inner='#secureComm' /> protege los datos en tránsito, <Cmd sid="setting.server.secure.comm.data_encryption" product='2' /> va más allá:
+
+* Garantiza que el **administrador controle la clave de cifrado de datos**, en lugar de generarse automáticamente.
+
+* Activa la **defensa contra manipulación**. Si un dispositivo detecta apertura o manipulación no autorizada, elimina los usuarios almacenados, los registros y su clave de cifrado.
+
+:::
+
+:::caution
+
+* La administración manual de claves **no se puede aplicar si los usuarios que no son administradores tienen inicio de sesión PW o PIN**.
+
+* Elimine esos inicios de sesión antes de habilitarla.
+
+:::
+
+### Paso a paso
+
+1. Inicie sesión en BioStar X con una cuenta de administrador.
+
+2. Vaya a <Cmd sid="shell.header.setting" /> → <Cmd sid="setting.menu.system.root" /> → <Cmd sid="setting.systemSecurity" product='2' /> → <Cmd sid="setting.server.secure.comm.title" product='2' />.
+
+3. Establezca <Cmd sid="setting.server.secure.comm.data_encryption" product='2' /> en <Cmd sid="common.use" />.
+
+4. Lea y acepte la ventana emergente de advertencia.
+
+5. Elimine de los dispositivos cualquier inicio de sesión con PW/PIN que no sea de administrador antes de aplicar.
+
+6. Rote la clave de cifrado y la contraseña del administrador cuando se le solicite.
+
+7. Confirme que los dispositivos todavía puedan sincronizar usuarios, registros y eventos.
+
+8. Documente el cambio de clave (fecha, administrador responsable, próxima rotación programada).
+
+:::note
+
+**Mejor práctica**
+
+* Rote la clave hash del dispositivo en un ciclo regular (por ejemplo, anual o semestral).
+
+* Documente todas las rotaciones y guárdelas en una bóveda segura.
+
+* Pruebe eventos de manipulación en un dispositivo de laboratorio o preproducción.
+
+* Combínelo con <DocLink inner='#secureComm' /> para una defensa en profundidad completa.
+
+:::
+
+## Copia de seguridad del sistema
+
+Utilice la función incorporada de **Copia de seguridad del sistema** para realizar copias de seguridad periódicas de la base de datos, ajustes del sistema y valores clave de BioStar X.
+
+:::caution
+
+* Si BioStar X y MSSQL están instalados en servidores diferentes, **Copia de seguridad/Restauración del sistema no está disponible**.
+
+* La función de respaldo de BioStar X, manual o programada, **no está cifrada**.
+
+* La función Restore de BioStar X no admite copias de seguridad cifradas.
+
+:::
+
+### Opciones de copia de seguridad manual
+
+**Ruta**: <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid="common.backup" product='2' />
+
+* <Cmd sid='backup.filePath' product='2' />: Defina el directorio. La ruta debe existir y tener permisos de escritura adecuados.
+
+* <Cmd sid='backup.numberFileToKeep' product='2' />: Rango de 1 a 100. Recomendación: al menos **7 a 10 respaldos rotativos** para programaciones diarias.
+
+* <Cmd sid='backup.backupNow' product='2' />: Inicie un respaldo inmediato cuando se requiera. Útil antes de actualizaciones o cambios importantes.
+
+### Copia de seguridad automática del sistema
+
+* <Cmd sid='common.backup.frequency' product='2' />: <Cmd sid="backup.daily" product='2' /> / <Cmd sid="backup.weekly" product='2' /> / <Cmd sid="backup.monthly" product='2' />
+
+* <Cmd sid='backup.time' product='2' />: Especifique la hora. Sigue la zona horaria del servidor BioStar X.
+
+:::note
+
+**Mejor práctica**
+
+Para producción, **respaldo diario en horas de menor carga**.
+
+> por ejemplo, 02:00 hora local
+
+:::
+
+### Configuración de copias de seguridad automáticas
+
+1. Vaya a <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid="common.backup" product='2' />.
+
+2. En <Cmd sid='common.backup.autoBackup' product='2' />, configure:
+
+   * <Cmd sid='common.backup.frequency' product='2' />: <Cmd sid="backup.daily" product='2' />
+
+   * <Cmd sid='backup.time' product='2' />: 02:00 (u otra hora de menor carga)
+
+   * <Cmd sid='backup.numberFileToKeep' product='2' />: 30
+
+3. Haga clic en <Cmd sid='button.apply' product='2' /> para guardar la configuración.
+
+4. Verifique que las copias de seguridad se creen revisando el directorio de destino.
+
+5. Pruebe periódicamente los **procedimientos de restauración** en un entorno de preproducción.
+
+:::caution
+
+Asegúrese de que el servidor esté protegido por UPS. No interrumpa las operaciones mientras se muestre el estado "In Progress". Las interrupciones pueden causar daños en la base de datos.
+
+:::
+
+## Integración de directorio
+
+Directory Integration permite que BioStar X se conecte con sistemas de identidad empresariales como **Entra ID (Azure AD)** o **Microsoft Active Directory (AD)**.
+
+* **Mayor seguridad**: Las políticas empresariales de reglas de contraseñas, MFA y acceso condicional se aplican automáticamente a BioStar X.
+
+* **Control centralizado**: El ciclo de vida del usuario se gestiona en Entra ID/AD, lo que reduce el riesgo de cuentas obsoletas.
+
+* **Auditoría y cumplimiento**: Todas las acciones de usuario se vinculan con cuentas corporativas.
+
+:::info
+
+Directory Integration requiere que la licencia **Advance** esté activa.
+
+:::
+
+:::note
+
+**Mejor práctica**
+
+* Use **cuentas de servicio dedicadas de Entra ID/AD** con privilegios limitados.
+
+* Restrinja la sincronización a **solo los grupos relevantes**.
+
+* Use siempre **LDAPS** para conexiones de Active Directory. 
+
+* Revise periódicamente las cuentas sincronizadas para detectar entradas obsoletas.
+
+:::
+
+### Microsoft Entra ID — paso a paso
+
+1. Inicie sesión en BioStar X con una cuenta de administrador.
+
+2. Vaya a <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.directoryIntegration.root' />.
+
+3. En <Cmd sid='settings.activeDirectory.title' product='2' />, seleccione <Cmd sid='settings.activeDirectory.AdServerNew' product='2' />.
+
+4. Configurar <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' />:
+
+   * <Cmd sid='settings.activeDirectory.ClientID' product='2' />: Ingresa el **Client ID** de la aplicación registrada en **Entra ID**.
+
+   * <Cmd sid='settings.activeDirectory.ClientSecret' product='2' />: Ingresa el **Client secret** agregado en **Certificates & secrets** de la aplicación registrada en **Entra ID**.
+
+   * <Cmd sid='settings.activeDirectory.PrimaryDomain' product='2' />: Ingresa el nombre de dominio principal que se ingresó al crear la organización en **Entra ID**.
+
+5. Haga clic en <Cmd sid='settings.activeDirectory.Connect' product='2' /> para obtener la información de grupos de usuarios en BioStar X.
+
+6. Habilite <Cmd sid='settings.activeDirectory.LogintitleEI' product='2' />.
+
+7. Copie <Cmd sid='settings.activeDirectory.RedirectionUri' product='2' /> y péguelo en la configuración de redirección SSO del portal de **Entra ID**.
+
+8. Seleccione el modo de sincronización deseado en <Cmd sid='settings.activeDirectory.syncMode.label' product='2' />.
+
+9. Haga clic en <Cmd sid='button.apply' product='2' /> para guardar la configuración.
+
+Confirme la sincronización revisando la lista de usuarios.
+
+:::info
+
+* Para obtener más información sobre cómo registrar una aplicación en **Entra ID**, consulta [el siguiente enlace](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app).
+
+* Para obtener más información sobre cómo configurar **Certificates & secrets** en **Entra ID**, consulta [el siguiente enlace](https://learn.microsoft.com/entra/identity-platform/how-to-add-credentials?tabs=client-secret).
+
+* **Tenant ID** se puede encontrar en **Overview** de la aplicación registrada en **Entra ID**.
+
+* La información de <Cmd sid='settings.activeDirectory.PrimaryDomain' product='2' /> se puede verificar en **Overview** de **Entra ID**.
+
+  <Image src='/img/biostarx-setting-directory-primary-domain.png' />
+
+:::
+
+### Microsoft Active Directory — paso a paso
+
+1. Inicie sesión en BioStar X con una cuenta de administrador.
+
+2. Vaya a <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.directoryIntegration.root' />.
+
+3. En <Cmd sid='settings.activeDirectory.title' product='2' />, seleccione <Cmd sid='settings.activeDirectory.AdServerOld' product='2' />.
+
+4. Configurar <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' />:
+
+   * <Cmd sid='settings.activeDirectory.ServerAddress' product='2' />: IP o nombre de host del servidor AD.
+
+   * <Cmd sid='settings.activeDirectory.UserName' product='2' /> y <Cmd sid='settings.activeDirectory.Password' product='2' />: Credenciales de la cuenta de servicio de AD.
+
+   * <Cmd sid='settings.activeDirectory.DomainNode' product='2' />: Nombre distinguido de su dominio AD.
+
+5. Para usar una conexión cifrada (LDAPS), habilite <Cmd sid='settings.activeDirectory.secureTransfer' product='2' />:
+
+   * Instale los Servicios de certificados de AD en el servidor AD.
+
+   * Exporte el certificado raíz, conviértalo a *\.jks* y colóquelo en la ruta de instalación de BioStar X.
+
+   * Ingrese <Cmd sid='settings.activeDirectory.keystorePassword' product='2' /> en BioStar X.
+
+6. Haga clic en <Cmd sid='settings.activeDirectory.Connect' product='2' /> para obtener la información de grupos de usuarios en BioStar X.
+
+7. Anule la selección de los grupos que no necesite en <Cmd sid='settings.activeDirectory.userGroup' product='2' />.
+
+8. Habilite <Cmd sid='settings.activeDirectory.LogintitleAD' product='2' />.
+
+9. Seleccione el modo de sincronización deseado en <Cmd sid='settings.activeDirectory.syncMode.label' product='2' />.
+
+10. Haga clic en <Cmd sid='button.apply' product='2' /> para guardar la configuración. 
+
+Confirme la sincronización revisando la lista de usuarios.
+
+## Opciones de registro del sistema
+
+**Ruta:** <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid="common.server" product='2' />
+
+Configurar el registro de BioStar X para conservar suficientes datos para auditorías y solución de problemas.
+
+### Duración del almacenamiento de registros del sistema
+
+* <Cmd sid='setting.server.logUploadType' product='2' />: Seleccione el método para cargar registros de eventos.
+
+  * <Cmd sid='common.auto' product='2' /> (predeterminado): Los registros se eliminan automáticamente después del período de retención.
+
+  * <Cmd sid='common.manual' product='2' />: Los registros deben purgarse manualmente.
+
+* <Cmd sid='setting.server.logRetainDays' product='2' />: 1 a 120 días (predeterminado: 60 días).
+
+:::note
+
+**Mejor práctica**
+
+En entornos con requisitos de cumplimiento estrictos, establezca la retención en 90 a 120 días y reenvíe los registros a un SIEM.
+
+:::
+
+### Opciones del nivel de registro del sistema
+
+Por subsistema: Debug, Network, SQL, System, Web, WebSocket
+
+| Nivel | Descripción |
+| --- | --- |
+| Trazar | Captura todo, con mucho detalle |
+| Depurar | Registros detallados a nivel de desarrollador |
+| Info. | Eventos operativos, conexiones correctas (predeterminado para la mayoría) |
+| Aviso | Posibles problemas |
+| Error | Solo fallas |
+
+:::caution
+
+Ejecutar **Trazar** o **Depurar** en producción puede generar registros excesivos, afectar el rendimiento y llenar los discos rápidamente. Resérvelo solo para solución de problemas a corto plazo.
+
+:::
+
+### Niveles de registro predeterminados de BioStar X
+
+* Depurar, SQL, WebSocket: **No usar**
+
+* Network, System, Web: **Info.**
+
+## Configuración de puertos del servidor
+
+Configure explícitamente los puertos de BioStar X y prefiera canales seguros siempre que sea posible. Use el puerto HTTPS predeterminado (`443`) para el acceso al sistema y restrinja los puertos de comunicación con dispositivos solo a redes confiables.
+
+### Cambiar el puerto HTTPS
+
+1. Abra <Cmd>BioStar X Service Manager</Cmd>: `http://127.0.0.1:28088/`
+
+2. En el menú lateral, seleccione <Cmd>SERVICE SETTINGS</Cmd>.
+
+3. En <Cmd>Unified Gateway Service</Cmd>, busque el campo <Cmd>HTTPS Port</Cmd> (predeterminado: 443).
+
+4. Cambie el puerto al valor que desee.
+
+   > por ejemplo, 8443
+
+5. Haga clic en <Cmd>Apply</Cmd> y reinicie el servicio si es necesario.
+
+6. Actualice las reglas del firewall y las conexiones de cliente según corresponda.

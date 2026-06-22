@@ -16,7 +16,6 @@ secedit /export /cfg C:\backup\secpol.cfg
 netsh advfirewall export "C:\backup\firewall.wfw"
 ```
 
-
 ## Establish patch management policy
 
 * Define a formal patching policy covering operating system, database engines, BioStar X software, and third-party dependencies.
@@ -39,13 +38,11 @@ Before patching BioStar X bundled third-party dependencies, confirm with <Suppor
 
 * Test new releases in a staging environment before production rollout.
 
-
 ## Keep database engines up to date
 
 * Apply updates to MariaDB 11.4 or Microsoft SQL Server according to Suprema's security advisories.
 
 * Avoid running unsupported versions.
-
 
 ## Manage dependencies and runtime components
 
@@ -55,7 +52,6 @@ Before patching BioStar X bundled third-party dependencies, confirm with <Suppor
 
 * Update quarterly or whenever advisories are published.
 
-
 ## Perform regular vulnerability scanning
 
 * Run vulnerability scans on BioStar X hosts quarterly (or monthly in high-security environments).
@@ -63,7 +59,6 @@ Before patching BioStar X bundled third-party dependencies, confirm with <Suppor
 * Tools: Nessus, OpenVAS, Qualys, or Microsoft Defender for Endpoint.
 
 * Schedule scans after patch cycles and track remediation in ticketing systems.
-
 
 ## Maintain asset and patch inventory
 
