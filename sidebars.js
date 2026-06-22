@@ -2257,7 +2257,7 @@ function createSidebars(preview) {
   bioliten2_ul: [
     {
       type: 'category',
-      label: 'BioLite N2',
+      label: 'BioLite N2 UL',
       collapsed: false,
       collapsible: false,
       className: 'p-title',

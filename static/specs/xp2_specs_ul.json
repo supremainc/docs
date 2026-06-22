@@ -250,16 +250,6 @@
             "ja": "1 リレー"
           }
         },
-        "poe": {
-          "label": "PoE",
-          "label_id": "specs.interface.poe",
-          "value": {
-            "ko": "지원 (IEEE 802.3af 호환, 44-57 VDC 최대 350 mA)",
-            "en": "Supported (IEEE 802.3af compliant, 44-57 VDC Max. 350 mA)",
-            "es": "Compatible (compatible con IEEE 802.3af, 44-57 VDC máx. 350 mA)",
-            "ja": "対応（IEEE 802.3af 互換、44-57 VDC 最大 350 mA）"
-          }
-        },
         "tamper": {
           "label": "탬퍼",
           "label_id": "specs.interface.tamper",
@@ -293,6 +283,11 @@
                 "es": "Corriente: Máx. 0.3 A",
                 "ja": "電流：最大 0.3 A"
               }
+            },
+            "poe": {
+              "label": "PoE",
+              "label_id": "specs.interface.poe",
+              "value": "IEEE 802.3af compliant, 44-57 VDC Max. 350 mA"
             }
           }
         },

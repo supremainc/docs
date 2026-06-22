@@ -373,27 +373,6 @@
             "ja": "1 リレー"
           }
         },
-        "poe_plus": {
-          "label": "PoE+",
-          "label_id": "specs.interface.poe_plus",
-          "type": "model",
-          "annotation_label": "anno6",
-          "items": {
-            "model1": {
-              "label": "BS3-DB",
-              "value": false
-            },
-            "model2": {
-              "label": "BS3-APWB",
-              "value": {
-                "ko": "지원 (IEEE 802.3at 호환, 44-57 VDC 최대 600 mA)",
-                "en": "Supported (IEEE 802.3at compliant, 44-57 VDC Max. 600 mA)",
-                "es": "Compatible (compatible con IEEE 802.3at, 44-57 VDC máx. 600 mA)",
-                "ja": "対応（IEEE 802.3at 互換、44-57 VDC 最大 600 mA）"
-              }
-            }
-          }
-        },
         "interphone": {
           "label": "인터폰",
           "label_id": "specs.interface.interphone",
@@ -452,6 +431,11 @@
                 "es": "Corriente: Máx. 0.7 A",
                 "ja": "電流：最大 0.7 A"
               }
+            },
+            "poe_plus": {
+              "label": "PoE+: IEEE 802.3at compliant, 44-57 VDC Max. 600 mA",
+              "annotation_label": "anno6",
+              "value": ["BS3-DB: Not supported", "BS3-APWB: Supported"]
             }
           }
         },
