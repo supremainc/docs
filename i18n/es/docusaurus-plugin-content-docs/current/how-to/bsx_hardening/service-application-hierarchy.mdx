@@ -1,0 +1,89 @@
+---
+id: service-application-hierarchy
+title: Capa de Servicio y Aplicación
+description: Explica cómo reforzar la capa de software de BioStar X mediante cuentas de servicio dedicadas, cifrado de archivos de configuración y controles de aplicación.
+---
+
+La capa de servicio y aplicación se centra en proteger los componentes de software y el entorno de ejecución de BioStar X.
+
+## Aplique el principio de mínimo privilegio a los servicios
+
+* Ejecute los servicios de BioStar X con cuentas de servicio dedicadas, en lugar de Local System o Administrator.
+
+* Otorgue solo los permisos mínimos requeridos (iniciar sesión como servicio, leer y escribir directorios específicos).
+
+* Use cuentas separadas para cada componente de servicio de BioStar X cuando sea posible.
+
+### Paso a paso
+
+1. Cree una cuenta de usuario local dedicada para los servicios de BioStar X.
+
+2. Abra **Services.msc** → haga clic derecho en el servicio de BioStar X → **Properties** → pestaña **Log On**.
+
+3. Asigne la cuenta dedicada.
+
+4. Aplique ACL del sistema de archivos para que la cuenta solo pueda acceder a los directorios necesarios.
+
+5. Deniegue los permisos de inicio de sesión interactivo para estas cuentas.
+
+:::caution
+
+Usar cuentas compartidas entre varios servicios dificulta auditar las brechas.
+
+:::
+
+## Asegure los archivos de configuración de la aplicación
+
+* Restringa el acceso a los archivos de configuración que contienen secretos (por ejemplo, cadenas de conexión de bases de datos, claves de API).
+
+* Use Windows Data Protection API (DPAPI) o soluciones de Key Vault, si son compatibles.
+
+* Guarde los secretos por separado de los binarios; evite codificarlos de forma fija.
+
+### Proteja los archivos de claves de cifrado (`util/` directory)
+
+* Restrinja los permisos NTFS para que solo la cuenta de servicio de BioStar X tenga acceso de lectura.
+
+* Deniegue el acceso a usuarios estándar e inicios de sesión interactivos.
+
+* Realice una copia de seguridad segura del directorio `util/` antes de las actualizaciones (se recomienda almacenamiento sin conexión).
+
+:::caution
+
+La pérdida o el compromiso de estos archivos puede provocar pérdida de datos o descifrado no autorizado.
+
+:::
+
+:::note
+
+**Mejor práctica**
+
+Rote periódicamente los secretos almacenados (contraseñas de la base de datos, claves de API).
+
+:::
+
+## Mantener los componentes de ejecución de la aplicación
+
+* Mantenga actualizados BioStar X y sus componentes de ejecución dependientes (por ejemplo, Visual C++ Redistributables).
+
+* Suscríbase a los avisos del proveedor para recibir parches.
+
+* Documente los procedimientos de actualización para evitar tiempos de inactividad.
+
+## Lista blanca de aplicaciones
+
+* Use Windows Defender Application Control (WDAC) o AppLocker para permitir solo binarios confiables.
+
+* Bloquee la ejecución desde directorios temporales (por ejemplo, `%TEMP%`, `%APPDATA%`).
+
+### Paso a paso
+
+1. Abra `Local Security Policy → Application Control Policies → AppLocker`.
+
+2. Defina reglas para rutas de archivos ejecutables, scripts y DLL.
+
+3. Permita los binarios firmados de BioStar X.
+
+4. Deniegue la ejecución desde directorios con permiso de escritura para el usuario.
+
+5. **Despliegue primero en modo auditoría** para probar y luego aplique la política.

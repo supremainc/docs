@@ -1,0 +1,107 @@
+---
+id: monitoring-audit
+title: Supervisión y Auditoría
+description: Explica cómo mantener visibilidad continua del estado de seguridad del servidor BioStar X mediante el registro y la auditoría en los niveles de sistema operativo, aplicación y base de datos.
+---
+
+La supervisión y la auditoría garantizan visibilidad del estado de seguridad de BioStar X. Una auditoría eficaz requiere habilitar registros en los niveles de **sistema operativo**, **aplicación** y **base de datos**, centralizarlos y revisarlos con regularidad.
+
+## Definir la política de registro
+
+Establece una política de registro que especifique qué eventos se deben registrar, los períodos de retención y quién es responsable de la revisión.
+
+Debe registrar como mínimo los siguientes tipos de eventos:
+
+* Intentos de autenticación (éxito/fallo)
+
+* Cambios de privilegios
+
+* Cambios de configuración
+
+* Acceso a la base de datos
+
+* Actividad del firewall
+
+:::info
+
+**Retención**: normalmente 90–180 días de forma local, y más tiempo en sistemas centralizados.
+
+:::
+
+## Habilitar el registro y la supervisión de eventos de Windows
+
+* Abre el Visor de eventos y asegúrate de que el registro esté habilitado para: Seguridad, Aplicación y Sistema.
+
+* Configura el tamaño del registro. Se recomienda establecer el registro de seguridad en al menos 1 GB.
+
+* Configura la auditoría para las siguientes políticas en **Directiva de seguridad local** (`secpol.msc`) → **Directivas locales** → **Directiva de auditoría**.
+
+  > Eventos de inicio de sesión, uso de privilegios, cambio de directiva, inicio de sesión de cuenta, acceso a objetos.
+
+## Reenvío centralizado de registros e integración con SIEM
+
+* Reenvía los registros a un SIEM central o a un sistema de administración de registros.
+
+* Opciones compatibles: Splunk, Elastic Stack, Microsoft Sentinel o Windows Event Forwarding (WEF).
+
+:::note
+
+**Mejor práctica**
+
+Cifra los registros en tránsito (TLS) para evitar la interceptación o la manipulación.
+
+:::
+
+## Habilitar la auditoría a nivel de aplicación
+
+* En BioStar X → <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' />, busca <Cmd sid='setting.server.logLevelManagement' product='2' />.
+
+* Ubicación del archivo de registro: `[BioStar X Install Path]\logs\acs.log`
+
+* Establecer permisos para que sólo la cuenta del servicio BioStar X y los administradores puedan acceder.
+
+* Reenvía los registros al SIEM o a una solución centralizada de registros.
+
+## Habilitar la auditoría de la base de datos
+
+* **MariaDB**: Usa el plugin Audit (`server_audit`).
+
+* **SQL Server**: Utilice la auditoría de SQL Server (registros para el registro de archivos o eventos).
+
+* Reenvía al sistema central de registros.
+
+:::info
+
+Para obtener más información sobre cómo habilitar la auditoría de la base de datos, consulta <DocLink docId='how-to/bsx_hardening/protect-database-data#enableDatabaseAudit' />.
+
+:::
+
+## Supervisar la actividad del firewall y de la red
+
+* En **Firewall de Windows Defender con seguridad avanzada** (`wf.msc`) → **Propiedades** → **Registro**, habilita el registro de paquetes descartados.
+
+* Guarda los registros en `%systemroot%\system32\LogFiles\Firewall\pfirewall.log`.
+
+* Reenvía los registros al SIEM.
+
+* Despliega IDS/IPS (Snort, Suricata, Zeek) para detectar anomalías.
+
+:::caution
+
+Los registros del firewall crecen rápidamente; implementa la rotación de registros y el almacenamiento seguro.
+
+:::
+
+## Revisión y alertas
+
+Establece alertas automáticas para eventos críticos:
+
+* Múltiples inicios de sesión fallidos
+
+* Escalada de privilegios
+
+* Inicio o cierre inesperado del servicio
+
+* Modificaciones del esquema de la base de datos
+
+Realiza revisiones manuales de los registros con regularidad.

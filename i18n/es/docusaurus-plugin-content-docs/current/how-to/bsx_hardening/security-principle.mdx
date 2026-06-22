@@ -1,0 +1,77 @@
+---
+id: security-principle
+title: Principios Fundamentales del Control de Acceso Seguro
+description: Una descripción general de los conceptos de seguridad fundamentales que guían el proceso de endurecimiento.
+---
+
+El endurecimiento de la seguridad para un sistema de control de acceso no se trata solo de las setting técnicas. Se trata de aplicar principios probados de forma consistente en las personas, los procesos y la tecnología. BioStar X incorpora estos principios de forma nativa, pero los administradores deben configurarlos y aplicarlos correctamente.
+
+## Principio de mínimo privilegio (PoLP)
+
+A los usuarios y servicios se les deben conceder **solo los permisos necesarios** para realizar sus tareas. Ni más, ni menos.
+
+* Las cuentas de administrador deben reservarse para la configuración y los cambios del sistema, no para las operaciones diarias.
+
+* Los operadores deben administrar puertas, usuarios y eventos, pero no las políticas de seguridad.
+
+* Los auditores deben tener visibilidad completa de solo lectura, sin la capacidad de cambiar datos.
+
+:::info
+
+Limitar los privilegios reduce el impacto del compromiso de una cuenta. Una cuenta de operador secuestrada por un atacante no puede alterar las claves de cifrado ni deshabilitar los registros.
+
+:::
+
+## Separación de funciones
+
+Las responsabilidades críticas deben **dividirse entre varios roles**. Ninguna persona debe tener control total del sistema sin supervisión.
+
+Por ejemplo:
+
+* Un administrador gestiona la configuración del sistema, mientras otro operador atiende las solicitudes diarias de acceso.
+
+* Los auditores verifican los cambios y supervisan los registros de forma independiente.
+
+:::info
+
+Evita el abuso interno y garantiza **controles y contrapesos**. Incluso si una cuenta se ve comprometida, el atacante no puede controlar todo el sistema.
+
+:::
+
+## Defensa en profundidad
+
+Ninguna medida de seguridad es perfecta. En su lugar, aplica capas de controles de seguridad para que, si una falla, las demás sigan protegiendo el sistema.
+
+* **Capa de red**: firewalls, segmentación VLAN
+
+* **Capa de sistema**: línea base segura del sistema operativo, parches, antivirus
+
+* **Capa de aplicación**: contraseñas seguras, MFA, cifrado
+
+* **Capa de monitoreo**: registros, SIEM, alertas
+
+:::info
+
+Los atacantes suelen buscar puntos débiles. La defensa en profundidad garantiza que no exista un único punto de falla.
+
+:::
+
+## Conceptos de la arquitectura Zero Trust
+
+Supón que ningún dispositivo, usuario ni red es confiable por defecto. Este principio se conoce como "**nunca confíes, verifica siempre**".
+
+* Cada inicio de sesión debe requerir autenticación (MFA cuando sea posible).
+
+* La comunicación entre dispositivos y servidor debe estar siempre cifrada.
+
+* El tráfico interno debe segmentarse y monitorearse como si fuera externo.
+
+:::info
+
+Las amenazas modernas suelen originarse dentro de la red (portátiles comprometidos, phishing, insiders maliciosos). Zero Trust reduce la dependencia de los "perímetros confiables" y aplica verificación continua.
+
+:::
+
+---
+
+Estos cuatro principios forman la **base de la guía de endurecimiento**. Cada recomendación de configuración en los capítulos posteriores — desde el setting de puertos hasta la integración con directorios — es una aplicación práctica de **Principio de mínimo privilegio (PoLP)**, **Separación de funciones**, **Defensa en profundidad** y **Zero Trust**.

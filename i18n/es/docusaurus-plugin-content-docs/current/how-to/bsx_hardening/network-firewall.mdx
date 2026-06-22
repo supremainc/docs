@@ -1,0 +1,122 @@
+---
+id: network-firewall
+title: Red y Firewall
+description: Explica cómo reducir la superficie de ataque y evitar el acceso no autorizado al servidor BioStar X mediante Windows Firewall y la segmentación de red.
+---
+
+Proteger el perímetro de la red y las opciones del firewall del host es fundamental para proteger BioStar X contra el acceso no autorizado y el movimiento lateral en la red. Como BioStar X puede exponer servicios sobre HTTPS, REST, gRPC, WebSockets y Thrift, es importante controlar estrictamente las conexiones de entrada y salida.
+
+## Habilite y configure Windows Defender Firewall
+
+Un firewall bien configurado garantiza que solo el tráfico autorizado explícitamente llegue a BioStar X, lo que reduce de forma significativa la superficie de ataque.
+
+### Puertos de red predeterminados de BioStar X
+
+| Servicio | Propósito | Puerto(s) predeterminado(s) |
+| --- | --- | --- |
+| Servicio web principal de BioStar X Core | HTTPS / Interfaz web | 5002 |
+| ^ | Thrift RPC | 9310 |
+| BioStar X Core Service | WebSocket | 9002 |
+| ^ | FastCGI | 9000 |
+| ^ | API | 9010 |
+| ^ | RPC | 51218 |
+| Unified Gateway Service | HTTPS | 443 |
+| Coordinator Service | Client Communication | 21810 |
+| Main Server | TCP Server | 51212 |
+| ^ | SSL Server | 51213 |
+| ^ | gRPC | 51219 |
+| Cache Service | Cliente | 10800 |
+| ^ | Communication | 47500 |
+| ^ | Discovery | 47100 |
+
+:::info
+
+Cuando se implementa Communication Server, usa los mismos puertos de comunicación del Main Server (`51212`, `51219`). Los administradores deben asegurarse de que estos puertos sean accesibles entre Communication Server y Main Server según la topología de implementación.
+
+:::
+
+### Paso a paso
+
+1. Abra **Windows Defender Firewall with Advanced Security** (`wf.msc`).
+
+2. Vaya a **Inbound Rules** y elimine o deshabilite las reglas que no sean necesarias.
+
+3. Crear reglas de autorización explícitas para:
+
+   * **Unified Gateway HTTPS (`443`)**: externo/público, si es necesario.
+
+   * **Core Web Service HTTPS (`5002`)**: pero idealmente a través de 443 como proxy.
+
+   * Puertos de uso interno exclusivo (gRPC `51219`, Cache `10800`/`47500`/`47100`, Coordinator `21810`, Thrift `9310`): permita solo desde localhost o subredes de confianza.
+
+4. Configure todo el demás tráfico entrante como **Block**.
+
+5. Vaya a **Outbound Rules** y restrinja a endpoints de confianza conocidos.
+
+:::caution
+
+Evite reglas amplias de "Allow All". Cambiar los puertos predeterminados aporta una leve obfuscación, pero no reemplaza la aplicación del firewall.
+
+:::
+
+## Limite el acceso remoto
+
+* Restrinja Remote Desktop (RDP) solo a administradores autorizados.
+
+* Si RDP es necesario: use NLA y coloque el servidor detrás de una VPN o un host intermedio.
+
+* Si no se necesita: desactívelo (**System Properties** → **Remote settings**).
+
+## Segmentación segura de red
+
+* Coloque los servidores de BioStar X en una VLAN o DMZ dedicada, separada de las redes de usuarios.
+
+* Permita solo la comunicación entre BioStar X y los sistemas requeridos (por ejemplo, servidor de base de datos, consumidores de API, lectores).
+
+* Restrinja el acceso de administración (RDP, SSH) solo a las subredes de administración.
+
+:::note
+
+**Mejor práctica**
+
+Combine la segmentación con firewalls del host para **defensa en profundidad**.
+
+:::
+
+## Endurezca los protocolos de red
+
+### Deshabilite SMBv1
+
+Comando de PowerShell para deshabilitar SMBv1:
+
+```powershell title='PowerShell'
+Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
+```
+
+### Exija TLS 1.2+
+
+* Ruta del registro: `HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols`
+
+   Deshabilite SSL 2.0, SSL 3.0, TLS 1.0 y TLS 1.1.
+
+* Verifique con IIS Crypto o `nmap --script ssl-enum-ciphers`.
+
+:::caution
+
+Pruebe en staging antes de deshabilitar protocolos para evitar problemas de compatibilidad.
+
+:::
+
+## Detección y monitoreo de intrusiones en la red
+
+* Implemente IDS/IPS (Snort, Suricata o comercial).
+
+* Habilite el registro de Windows Defender Firewall para paquetes descartados y conexiones permitidas.
+
+* Envíe los registros a SIEM para monitoreo centralizado.
+
+:::info
+
+Ruta del registro del firewall: `%systemroot%\system32\LogFiles\Firewall\pfirewall.log`
+
+:::

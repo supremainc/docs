@@ -1,0 +1,72 @@
+---
+id: references
+title: Referencias
+description: Guía técnica de referencia para la configuración de red, los ajustes de seguridad y los requisitos de cumplimiento de BioStar X.
+---
+
+Este documento proporciona información técnica esencial de referencia para implementar y proteger BioStar X. Consulte de un vistazo las configuraciones de puertos de red, los ajustes de seguridad recomendados y los requisitos clave de cumplimiento. Consulte la sección de recursos externos para obtener más soporte y guías detalladas.
+
+## Puertos de red predeterminados de BioStar X
+
+| Servicio | Propósito | Puerto(s) predeterminado(s) | Notas / Recomendaciones |
+| --- | --- | --- | --- |
+| Unified Gateway Service | HTTPS (acceso al sistema) | 443 | Predeterminado para el inicio de sesión de administrador y operador. Se puede cambiar mediante <Cmd>Service Manager</Cmd> → <Cmd>Service Settings</Cmd>. |
+| Core Web Service | HTTPS (interfaz de usuario interna) | 5002 | Prefiera el proxy al puerto 443; restrinja el acceso directo. |
+| ^ | CloudNgrok | 52000 | Desactívelo si no es necesario. |
+| ^ | Thrift RPC | 9310 | Restrinja a servicios de confianza. |
+| Core Service | WebSocket | 9002 | Solo interno. |
+| ^ | FastCGI | 9000 | Debe vincularse localmente. |
+| ^ | API | 9010 | Proteja con TLS y autenticación. |
+| Coordinator Service | Client Communication | 21810 | Solo interno. |
+| Main Server | TCP Server | 51212 | **Texto sin formato** de la comunicación del dispositivo — bloquéela si es posible. |
+| ^ | SSL Server | 51213 | Comunicación del dispositivo **preferida** (TLS). |
+| ^ | gRPC | 51219 | Solo comunicación de servicios internos. |
+| Cache Service | Cliente | 10800 | Equivalente a Redis: no lo exponga externamente. |
+| ^ | Communication | 47500 | Solo interno. |
+| ^ | Discovery | 47100 | Solo interno. |
+
+## Funciones de seguridad predeterminadas en BioStar X
+
+| Función | Ubicación en la interfaz de usuario | Predeterminado | Recomendación |
+| --- | --- | --- | --- |
+| Cambie el ID y la contraseña de inicio de sesión de administrador predeterminados | <Cmd sid='shell.header.user' /> → Edit Default Admin (`UID:1`) | Contraseña de admin / instalador | Cámbiela inmediatamente después de la instalación. |
+| Separación de acceso (roles) | <Cmd sid='shell.header.user' /> → Seleccione un usuario → <Cmd sid='common.permission' product='2' /> → <Cmd sid='user.accountLevel' product='2' /> | Predefinidos: <Cmd sid='setting.account.administrator' product='2' />, <Cmd sid='setting.account.userOperator' product='2' />, <Cmd sid='setting.account.monitoringOperator' product='2' /> | Cree roles personalizados según sea necesario. |
+| Política de fortaleza de la contraseña | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.systemSecurity.loginPassword' product='2' /> → <Cmd sid='setting.server.passwordLevel' product='2' /> | <Cmd sid='setting.server.passwordLevelMedium' product='2' /> | Establézcalo en <Cmd sid='setting.server.passwordLevelStrong' product='2' />, y aplique MFA. |
+| Seguridad de sesión (conexión simultánea) | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.systemSecurity.sessionSecurity' product='2' /> → <Cmd sid='setting.systemSecurity.useSimultaneousConnection' product='2' /> | <Cmd sid='common.active' product='2' /> | Establézcalo en <Cmd sid='common.inactive' product='2' /> para evitar inicios de sesión compartidos. |
+| Autenticación multifactor | <Cmd sid='shell.header.user' /> → Seleccione un usuario → <Cmd sid='common.permission' product='2' /> → <Cmd sid='common.fingerprintLogin' product='2' /> | <Cmd sid='common.notUse' product='2' /> | Habilítelo para las cuentas <Cmd sid='setting.account.administrator' product='2' />, <Cmd sid='setting.account.userOperator' product='2' /> y <Cmd sid='setting.account.monitoringOperator' product='2' />. |
+| Comunicación segura con el dispositivo | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.server.secure.comm.title' product='2' /> → <Cmd sid='setting.sever.secure.comm.menu' product='2' /> | <Cmd sid='common.notUse' product='2' /> | Habilite y use el puerto SSL (51213). |
+| Gestión de hashkey del dispositivo | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.server.secure.comm.title' product='2' /> → <Cmd sid='setting.server.secure.comm.data_encryption' product='2' /> | <Cmd sid='common.notUse' product='2' /> | Habilítelo para la protección contra manipulaciones en implementaciones de alta seguridad. |
+| Respaldo de Sistema | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.systemBackup' /> | <Cmd sid='common.manual' product='2' /> | Habilite <Cmd sid='common.backup.autoBackup' product='2' />. |
+| Integración de directorio | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.directoryIntegration.root' /> | No configurado | Intégrelo con Entra ID o Active Directory cuando esté disponible. |
+| Ajustes de registros (retención y niveles) | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' /> | <Cmd sid='setting.server.logRetainDays' product='2' />: 60 días<br /><Cmd sid='setting.server.logLevel' product='2' />: <Cmd sid='setting.server.logLevel.info' product='2' /> | Ajuste según el cumplimiento. Envíelo a SIEM. |
+| Cifrar datos personales en la base de datos | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.server.secure.comm.title' product='2' /> → <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' /> | <Cmd sid='common.notUse' product='2' /> | Habilítelo en producción. |
+| Almacenar imagen de rostro visual | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.server' /> → <Cmd sid='settings.expertSettings.enableButton' product='2' /> → <Cmd sid='settings.expertSettings.detail.storeVisualFaceImageOptionLabel' product='2' /> | <Cmd sid='common.use' product='2' /> | Desactívelo salvo que esté justificado. |
+
+## Mapeo de cumplimiento (vista rápida)
+
+<div className='table-fixed'>
+
+| Control de seguridad | Admite áreas de cumplimiento |
+| --- | --- |
+| Cifrado de base de datos (PII, biometría) | GDPR, CCPA, ISO 27001 |
+| Retención y reenvío de registros del sistema | ISO 27001, PCI-DSS |
+| MFA para cuentas de administrador y operador | NIST 800-63, ISO 27001 |
+| Comunicación segura con dispositivos (TLS) | GDPR, ISO 27001 |
+| Capacidad de copia de seguridad y restauración | ISO 27001, SOC 2 |
+| Integración de directorio (Entra ID / Active Directory) | SOX, ISO 27001, SOC 2 |
+
+</div>
+
+## Referencias externas
+
+* [Base de conocimientos de Suprema – Comunicación segura con el dispositivo](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_configure_secure_communication_between_device_and_server_tls_ssl)
+
+* [Base de conocimientos de Suprema – Gestión de hashkey del dispositivo](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_manually_manage_server_device_encryption_key)
+
+* [Base de conocimientos de Suprema – Importar y exportar registros del dispositivo por USB](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_import_export_user_log_between_biostar_2_and_suprema_reader_using_usb_memory)
+
+* [Base de conocimientos de Suprema – Guía de actualización de firmware por USB de BioEntry W3](https://kb.supremainc.com/knowledge/lib/exe/fetch.php?media=en:bew3_usb_fw_upgrade_en.pdf)
+
+* [Base de conocimientos de Suprema – Cómo configurar protección contra manipulaciones segura](https://kb.supremainc.com/knowledge/doku.php?id=en:how_to_configure_secure_tamper)
+
+* [Microsoft – Kit de herramientas de cumplimiento de seguridad de Windows](https://learn.microsoft.com/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit-10)

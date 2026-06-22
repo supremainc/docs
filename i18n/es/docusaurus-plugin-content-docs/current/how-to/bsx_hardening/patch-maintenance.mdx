@@ -1,0 +1,69 @@
+---
+id: patch-maintenance
+title: Parches y Mantenimiento
+description: Explica cómo mantener la postura de seguridad del servidor BioStar X mediante parches regulares, análisis de vulnerabilidades y gestión de activos.
+---
+
+Después de reforzar un servidor, debe mantener esa postura. Las nuevas vulnerabilidades se descubren continuamente, y los sistemas sin parches quedan cada vez más expuestos al riesgo con el tiempo. Este documento explica cómo mantener la línea base de seguridad del servidor BioStar X mediante parches regulares, análisis de vulnerabilidades y gestión de activos.
+
+## Copia de seguridad y restauración de la configuración de seguridad
+
+```powershell title='PowerShell'
+# Export Group Policy settings
+secedit /export /cfg C:\backup\secpol.cfg
+
+# Backup Windows Firewall rules
+netsh advfirewall export "C:\backup\firewall.wfw"
+```
+
+## Establezca una política de gestión de parches
+
+* Defina una política formal de parches que cubra el sistema operativo, los motores de base de datos, el software BioStar X y las dependencias de terceros.
+
+* Especifique plazos (por ejemplo, parches del sistema operativo dentro de 2 semanas, parches de aplicaciones dentro de 1 mes).
+
+* Incluya procedimientos de reversión y recuperación si un parche causa inestabilidad.
+
+:::caution
+
+Antes de aplicar parches a las dependencias de terceros incluidas en BioStar X, confirme con <Support /> que la actualización sea compatible. Pruébelo primero en un entorno de pruebas o VM.
+
+:::
+
+## Mantener actualizaciones del software BioStar X
+
+* Mantenga BioStar X actualizado a la última versión compatible disponible.
+
+* Suscríbase a las notas de versión y los avisos en [https://www.supremainc.com/en/support/main.asp](https://www.supremainc.com/en/support/main.asp).
+
+* Pruebe las nuevas versiones en un entorno de pruebas antes de implementarlas en producción.
+
+## Mantener actualizados los motores de base de datos
+
+* Aplique actualizaciones a MariaDB 11.4 o Microsoft SQL Server según los avisos de seguridad de Suprema.
+
+* Evite ejecutar versiones no compatibles.
+
+## Administrar dependencias y componentes de tiempo de ejecución
+
+* Aplique parches a marcos de soporte como Visual C++ Redistributables y entornos de ejecución de Java.
+
+* Mantenga el software de proxy inverso/WAF, si se usa.
+
+* Actualícelo cada trimestre o cuando se publiquen avisos.
+
+## Realizar análisis de vulnerabilidades periódicos
+
+* Ejecute análisis de vulnerabilidades en los hosts de BioStar X cada trimestre, o cada mes en entornos de alta seguridad.
+
+* Herramientas: Nessus, OpenVAS, Qualys o Microsoft Defender for Endpoint.
+
+* Programar análisis después de ciclos de parches y seguimiento de la remediación en sistemas de ticketing.
+
+## Mantener el inventario de activos y parches
+
+* Mantenga un inventario de todos los servidores BioStar X: versiones del sistema operativo, versiones de la base de datos y niveles de parches.
+
+* Utilice herramientas automatizadas (por ejemplo, SCM, Intune, Ansible) cuando sea posible.
+
+* Revise el inventario cada trimestre.

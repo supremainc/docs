@@ -1,0 +1,65 @@
+---
+id: physical-security
+title: Seguridad Física
+description: Explica cómo proteger el servidor de BioStar X del acceso físico no autorizado y del robo mediante controles de acceso físico, cifrado de discos y gestión ambiental.
+---
+
+Los controles de seguridad física evitan que personas no autorizadas obtengan acceso directo a los servidores o al almacenamiento que hospeda BioStar X.
+
+## Ubicación segura del servidor
+
+* Hospede los servidores de BioStar X en un centro de datos físicamente seguro o en una sala de servidores con llave.
+
+* El acceso debe limitarse solo al personal de TI autorizado.
+
+* Utilice la vigilancia (CCTV) y los registros de acceso para salas de servidores.
+
+* Coloque los servidores en racks o jaulas con llave; mantenga registros de visitantes.
+
+## Proteja los medios portátiles y de respaldo
+
+* Guarde las unidades o cintas de respaldo en áreas seguras con control de acceso.
+
+* Utilice el cifrado para todo almacenamiento extraíble que contenga datos BioStar X.
+
+* Cifre los respaldos con AES-256 antes del transporte.
+
+:::note
+
+**Mejor práctica**
+
+Utilice **copias de seguridad cifradas basadas en la nube** para reducir la dependencia de los medios físicos.
+
+:::
+
+## Proteja los ajustes de BIOS/UEFI
+
+* Establezca contraseñas de BIOS/UEFI para evitar cambios no autorizados en los ajustes.
+
+* Desactivar el arranque desde dispositivos externos (USB, DVD).
+
+* Habilitar Arranque Seguro si es compatible.
+
+:::caution
+
+Mantener las contraseñas BIOS/UEFI documentadas en una bóveda segura. Perderlas puede bloquear el mantenimiento legítimo.
+
+:::
+
+## Proteja contra el robo del dispositivo
+
+* Habilita el cifrado de disco completo usando BitLocker en todas las unidades de sistema y datos.
+
+* Para más información sobre cómo configurar BitLocker, consulte <DocLink docId='how-to/bsx_hardening/os-configuration#enableBitLocker' />.
+
+* Utilice TPM + PIN para mejorar la protección cuando corresponda.
+
+* Utilice cerraduras de cable o racks seguros para despliegues que no sean de centro de datos.
+
+## Controles ambientales
+
+* Asegúrese de que las salas de servidores tengan temperatura, humedad y suministro eléctrico estables (UPS).
+
+* Proteja contra incendios (extintores o sistemas de supresión como FM200 o gas inerte).
+
+* Monitoree la temperatura y la humedad con sensores.

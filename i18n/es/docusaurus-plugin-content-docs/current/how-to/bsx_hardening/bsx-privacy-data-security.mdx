@@ -1,0 +1,95 @@
+---
+id: bsx-privacy-data-security
+title: Seguridad de Datos Personales
+description: Explica cómo proteger los datos personales y la información biométrica en BioStar X mediante cifrado de base de datos y almacenamiento mínimo de datos biométricos.
+---
+
+BioStar X almacena credenciales de usuario, plantillas biométricas e información personal identificable. Sin cifrado de base de datos, una brecha expone esta información en texto sin formato, lo que provoca robo de identidad, responsabilidad legal e infracciones regulatorias. Este documento explica cómo habilitar el cifrado de la base de datos de información personal y minimizar el almacenamiento de imágenes biométricas para proteger los datos confidenciales.
+
+## Cifrar datos personales en la base de datos
+
+Habilite <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' /> para asegurar que toda la información confidencial de usuarios y credenciales se almacene cifrada.
+
+### Alcance de los datos cifrados
+
+Cuando se habilita <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' />, se cifran en reposo los siguientes elementos:
+
+* Imágenes de perfil
+
+* ID de usuario, nombre, número de teléfono, IP de usuario, direcciones de correo electrónico
+
+* ID de inicio de sesión y contraseña de inicio de sesión
+
+* Plantillas de rostro, plantillas de huella
+
+* ID de tarjeta, claves de diseño de tarjeta inteligente
+
+* Información personalizada para usuarios y visitantes
+
+* Archivos de registros de imágenes
+
+### Clave de cifrado de datos personales
+
+* Se vuelve configurable cuando <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' /> se establece en <Cmd sid='common.use' product='2' />.
+
+* La clave debe tener **32 caracteres** y usar letras, números y símbolos.
+
+* Cambiar la clave activa el nuevo cifrado de todos los datos existentes.
+
+:::note
+
+**Mejor práctica**
+
+Genere la clave con un **generador aleatorio seguro**. Almacénela en un **administrador de contraseñas**. Rótela periódicamente (por ejemplo, anualmente) o de inmediato si sospecha una filtración.
+
+:::
+
+### Paso a paso
+
+1. Inicie sesión en BioStar X con una cuenta de administrador.
+
+2. Vaya a <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.systemSecurity' product='2' />.
+
+3. Establezca <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' /> en <Cmd sid='common.use' product='2' />.
+
+4. De forma opcional, haga clic en <Cmd sid='setting.server.secure.comm.key_change' product='2' /> en <Cmd sid='setting.server.secure.comm.encryption_key_db' product='2' /> e ingrese una nueva clave de cifrado de **32 caracteres**.
+
+:::caution
+
+Cambiar la clave de cifrado **vuelve a cifrar todos los datos personales existentes**. Programe este cambio durante las ventanas de mantenimiento. Perder la clave de cifrado puede hacer que los datos cifrados sean irrecuperables.
+
+:::
+
+## Almacenar imagen de rostro visual
+
+Deshabilite <Cmd sid="settings.expertSettings.detail.storeVisualFaceImageOptionLabel" product='2' /> a menos que exista un requisito operativo estricto para conservar imágenes faciales reales.
+
+* **Plantillas** frente a **imágenes**: las plantillas son representaciones matemáticas de los datos biométricos y es más difícil revertirlas hasta obtener un rostro reconocible.
+
+* Muchas regulaciones de privacidad (GDPR, PDPA, etc.) tratan las imágenes biométricas como datos altamente sensibles.
+
+* Almacenar imágenes sin necesidad aumenta el riesgo legal y la superficie de ataque.
+
+### Paso a paso
+
+1. Vaya a <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid="common.server" product='2' />.
+
+2. Establezca <Cmd sid="settings.expertSettings.enableOptionLabel" product='2' /> en <Cmd sid="common.use" product='2' />.
+
+3. En <Cmd sid="settings.expertSettings.detail.title" product='2' />, configure <Cmd sid="settings.expertSettings.detail.storeVisualFaceImageOptionLabel" product='2' />.
+
+   * Predeterminado: <Cmd sid="common.use" product='2' />
+
+   * Recomendado: <Cmd sid="common.notUse" product='2' />
+
+:::note
+
+**Mejor práctica**
+
+* Conserve solo **plantillas**, no imágenes, para la autenticación biométrica.
+
+* Si necesita imágenes para auditoría: almacénelas en un **repositorio seguro independiente** con controles de acceso estrictos y **períodos de retención cortos** (30 a 60 días).
+
+* Revise periódicamente las settings después de las actualizaciones para asegurar que el valor no haya vuelto al predeterminado.
+
+:::

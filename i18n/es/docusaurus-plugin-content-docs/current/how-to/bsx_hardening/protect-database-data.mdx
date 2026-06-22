@@ -1,0 +1,138 @@
+---
+id: protect-database-data
+title: Base de Datos y Protección de Datos
+description: Explica cómo proteger la información confidencial almacenada en la base de datos de BioStar X mediante cifrado, controles de acceso y registros de auditoría.
+---
+
+BioStar X requiere una base de datos para almacenar información confidencial, como credenciales de usuario, registros de acceso y datos de configuración. Según la implementación, se puede usar **MariaDB** (11.4) o **Microsoft SQL Server**.
+
+## Aplicar autenticación y control de acceso
+
+* Exija autenticación para todas las conexiones a la base de datos.
+
+* Utilice cuentas de base de datos dedicadas para BioStar X, no para cuentas compartidas o predeterminadas.
+
+* Asigne el rol con el menor privilegio necesario (lectura y escritura para los datos de la aplicación, sin modificación del esquema).
+
+* Audite con regularidad las cuentas de la base de datos para detectar usuarios sin uso o con privilegios excesivos.
+
+* Elimine entradas de usuario de la base de datos sin uso o desactualizadas, especialmente después de cambios de IP o de infraestructura.
+
+:::caution
+
+Nunca permita que BioStar X se conecte con `sa` ni con cuentas de superusuario equivalentes.
+
+:::
+
+## Cifrar los datos en tránsito
+
+### MariaDB
+
+```ini title='my.cnf'
+[mysqld]
+require_secure_transport=ON
+ssl_cert=/etc/mysql/server-cert.pem
+ssl_key=/etc/mysql/server-key.pem
+ssl_ca=/etc/mysql/ca-cert.pem
+```
+
+**Verificar**:
+
+```sql title='SQL'
+SHOW VARIABLES LIKE '%ssl%';
+```
+
+### SQL Server
+
+1. Abra **SQL Server Configuration Manager**.
+
+2. Vaya a **SQL Server Network Configuration** → **Protocols for MSSQLSERVER**.
+
+3. Habilite **Force Encryption**.
+
+4. Instale un certificado confiable en el servidor.
+
+## Cifrar los datos en reposo
+
+### MariaDB
+
+* Habilite el complemento `file_key_management` para el cifrado en reposo.
+
+* Defina las claves de cifrado en un archivo de claves seguro.
+
+* Aplique cifrado por tabla si no hay disponibilidad de TDE completo.
+
+:::caution
+
+Ligero impacto en el rendimiento (por lo general, 3–5%). Si mueve o restaura la base de datos en otro servidor, necesitará el certificado y las claves. La función Restore de BioStar X no admite copias de seguridad cifradas; esto deberá hacerse manualmente.
+
+:::
+
+### TDE de SQL Server
+
+```sql title='SQL'
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'StrongP@ssw0rd!';
+CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'BioStarX';
+CREATE DATABASE ENCRYPTION KEY WITH ALGORITHM = AES_256 ENCRYPTION BY SERVER CERTIFICATE MyServerCert;
+ALTER DATABASE biostarx_ac SET ENCRYPTION ON;
+```
+
+## Habilite la auditoría de la base de datos {#enableDatabaseAudit}
+
+### MariaDB
+
+```sql title='SQL'
+INSTALL SONAME 'server_audit';
+SET GLOBAL server_audit_logging=ON;
+SET GLOBAL server_audit_events='CONNECT,QUERY_DML,QUERY_DDL';
+```
+
+### SQL Server
+
+```sql title='SQL'
+CREATE SERVER AUDIT BioStarX_Audit TO FILE (FILEPATH = 'C:\AuditLogs\');
+CREATE SERVER AUDIT SPECIFICATION BioStarX_Spec FOR SERVER AUDIT BioStarX_Audit ADD (FAILED_LOGIN_GROUP);
+ALTER SERVER AUDIT BioStarX_Audit WITH (STATE = ON);
+```
+
+## Copia de seguridad y almacenamiento seguro
+
+* Realice copias de seguridad cifradas periódicas de la base de datos de BioStar X.
+
+* Almacene las copias de seguridad en un servidor seguro independiente, no en el mismo host.
+
+* Pruebe periódicamente la restauración de copias de seguridad.
+
+* Almacene las copias de seguridad en volúmenes cifrados con BitLocker.
+
+### MariaDB
+
+```bash title='Bash'
+mariadb-dump --all-databases --ssl --result-file=/secure/backups/biostarx.sql
+gpg -c /secure/backups/biostarx.sql
+```
+
+:::caution
+
+La función Backup de BioStar X (manual o programada) no está cifrada. La función Restore de BioStar X no admite copias de seguridad cifradas.
+
+:::
+
+### SQL Server
+
+```sql title='SQL'
+BACKUP DATABASE biostarx_db TO DISK = 'D:\backups\biostarx_db.bak' 
+WITH ENCRYPTION (ALGORITHM = AES_256, SERVER CERTIFICATE = MyServerCert);
+```
+
+## Restringir el acceso remoto
+
+### MariaDB
+
+```ini title='my.cnf'
+bind-address=127.0.0.1
+```
+
+### SQL Server
+
+Configure las reglas del firewall para permitir conexiones solo desde el servidor de aplicaciones de BioStar X.
