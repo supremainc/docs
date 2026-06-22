@@ -2341,6 +2341,27 @@ function createSidebars(preview) {
       ],
     },
   ],
+  xpass2_ul: [
+    {
+      type: 'category',
+      label: 'XPass 2 UL',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/xpass_2_ul/index',
+      },
+      items: [
+        'device/xpass_2_ul/safety-instructions',
+        'device/xpass_2_ul/getting-started',
+        'device/xpass_2_ul/installation',
+        'device/xpass_2_ul/product-specifications',
+        'device/xpass_2_ul/regulatory-information',
+        'device/xpass_2_ul/appendices',
+      ],
+    },
+  ],
   xpassd2: [
     {
       type: 'category',
