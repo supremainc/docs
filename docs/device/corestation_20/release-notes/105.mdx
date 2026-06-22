@@ -40,23 +40,37 @@ title: 펌웨어 버전 1.0.5
 
    - Improved the overall font sizes and UI.
 
-(CS20FW-265) [FISF-2438] DST 적용 시 Schedule(Daily)에 따른 Access Group 인증 성공 이상 동작
-1. 
+(CS20FW-265) [FISF-2438] [BES-3681] DST 적용 시 Schedule(Daily)에 따른 Access Group 인증 성공 이상 동작 - 발생버전: V1.0.0
+1. 일광절약시간(DST) 적용 시 출입 그룹 인증이 스케줄에 따라 비정상적으로 작동하는 문제 <Badge>1.0.0</Badge>
+1. Access group authentication behaves abnormally according to the schedule (Daily) when DST is applied. <Badge>1.0.0</Badge>
 
 (CS20FW-297) [Setup Manager] Q2가 Unknown으로 표시되는 현상
-	(CS20FW-297) [Setup Manager] XPQ2 지원????????
-1. CoreStation Setup Manager에서 일부 장치가 "Unknown"으로 표시되는 문제 <Badge>???</Badge>
-1. Some devices are displayed as "Unknown" in the CoreStation Setup Manager. <Badge>???</Badge>
+(CS20FW-297) [Setup Manager] XPQ2 지원
+1. 신규 장치 연결 지원
+   - XPass Q2
+1. Supports new device.
+   - XPass Q2
 
-(CS20FW-306) 장치에서 Alarm 발생 중에 Clear Alarm 시도해도 Alarm이 정지되지 않음
+(CS20FW-306) 장치에서 Alarm 발생 중에 Clear Alarm 시도해도 alarm이 정지되지 않음 - 발생버전: V1.0.0
 1. 장치에서 발생한 알람을 해제할 때, 알람이 정상적으로 해제되지 않는 문제 <Badge>???</Badge>
 1. Alarms failing to clear properly when attempting to clear alarm on a device. <Badge>???</Badge>
 
-(CS20FW-314) [Setup Manager] Admin 관리자 로그인이 잘 안되는 이슈
+(CS20FW-314) [Setup Manager] 로그인 관련 오동작 - 발생버전: V1.0.3
+1. CoreStation Setup Manager 로그인 시, 일시적으로 페이지 접속이 실패하거나 연결이 지연되는 문제 <Badge>1.0.3</Badge>
+1. Temporary page access failure or connection delays when logging in to CoreStation Setup Manager. <Badge>1.0.3</Badge>
+
+(CS20FW-316) 카메라 QR 라이선스 적용 시 바이오스타 UI상 "활성화된 수" 미표시 되도록 수정필요 - 발생버전: V1.0.0
 1. 
 
-(CS20FW-316) 카메라 QR 라이선스 적용시 바이오스타 UI 상 “활성화된 수” 미표시 되도록 수정
+(CS20FW-318) [BSF-2963] mac error시 disconnect log를 남기지 않도록 개선 - 발생버전: V1.0.0
 1. 
 
-(CS20FW-318) [BSF-2963] mac error시 disconnect log 남기지 않도록 수정 
-1. 
+## 버그 수정
+
+---
+
+<BugLists>
+
+(CS20FW-334) DI24 하위로 연결된 D2에 SM옵션 설정된 상태에서 EV1카드 리드시 1:1인증실패(카드)로 동작하는 문제 - 발생버전: V1.0.3
+
+</BugLists>
