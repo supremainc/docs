@@ -1,0 +1,83 @@
+---
+id: users-access-control
+title: User and Access Control
+description: Explains how to control user accounts and access permissions on Windows Server to prevent unauthorized access to the BioStar X server.
+---
+
+After hardening the operating system, the next step is to control **who** can access the system and **what** they can do. Misconfigured account permissions, weak passwords, and neglected built-in accounts are the most common paths for attackers to escalate privileges on a BioStar X server. Follow the guidance in this document to strengthen user and access controls.
+
+## Enforce least privilege
+
+* Create separate user groups in Active Directory or Local Users and Groups.
+
+* Assign file system and application permissions based on these groups.
+
+* Configure BioStar X roles within the application to mirror the OS-level least-privilege model.
+
+## Restrict local administrative privileges
+
+* Use `lusrmgr.msc` to remove unnecessary accounts from the Administrators group.
+
+* Assign least privilege — use standard user accounts for normal operation, admin only when required.
+
+* If domain-joined, apply Group Policy Restricted Groups to enforce consistent permissions.
+
+## Enforce strong authentication
+
+* Configure Group Policy to require complex passwords (minimum 12–15 characters, mix of upper/lowercase, numbers, symbols).
+
+* Set password expiration (e.g., every 90 days) and limit reuse.
+
+* Configure Account Lockout Policy to lock accounts after several failed attempts.
+
+* For remote access or privileged accounts, enforce Multi-Factor Authentication (MFA).
+
+### Step-by-step
+
+1. Open **Local Group Policy Editor** (`gpedit.msc`).
+
+2. Navigate to **Computer Configuration** → **Windows Settings** → **Security Settings** → **Account Policies** → **Password Policy**.
+
+3. Configure password length, complexity, and history.
+
+4. Set lockout duration and threshold under **Account Lockout Policy**.
+
+## Manage built-in accounts
+
+Open **Local Users and Groups** (`lusrmgr.msc`).
+
+* Right-click the Administrator account and then rename it (use a non-obvious name).
+
+* Disable Guest account unless explicitly required.
+
+* Regularly audit accounts with `net user` in PowerShell.
+
+## Session management
+
+* Configure automatic lockout after 15 minutes of inactivity.
+
+* Prevent simultaneous logins with the same account, if possible.
+
+* Limit idle remote sessions.
+
+:::info
+
+**Local Group Policy Editor** (`gpedit.msc`) → **Computer Configuration** → **Windows Settings** → **Security Settings** → **Local Policies** → **Security Options** → **Interactive logon: Machine inactivity limit** (e.g., 900 seconds = 15 minutes)
+
+:::
+
+## Auditing and monitoring
+
+* Enable auditing for login attempts, privilege use, and account management.
+
+* Forward logs to a **SIEM** or central log collector.
+
+* Review security logs regularly for anomalies.
+
+:::info
+
+**Local Group Policy Editor** (`gpedit.msc`) → **Computer Configuration** → **Windows Settings** → **Security Settings** → **Advanced Audit Policy Configuration**
+
+Enable categories: **Logon/Logoff**, **Account Management**, **Privilege Use**.
+
+:::

@@ -904,6 +904,11 @@ footer {
     --ifm-alert-border-color: var(--ifm-color-primary-light);
     --ifm-alert-foreground-color: var(--ifm-color-primary-light);
   }
+  .alert--important {
+    --ifm-alert-border-color: #bf0000;
+    --ifm-alert-foreground-color: #bf0000;
+    --ifm-alert-background-color: #ffe6e6;
+  }
   .alert--success {
     --ifm-alert-foreground-color: rgb(0, 148, 0)
   }
@@ -1033,6 +1038,11 @@ footer {
         position: absolute;
         margin-left: -20px;
       }
+    }
+  }
+  ul.contains-task-list {
+    li::marker {
+      content: "";
     }
   }
   ul, ol {

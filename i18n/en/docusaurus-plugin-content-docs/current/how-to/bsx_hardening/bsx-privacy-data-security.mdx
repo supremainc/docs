@@ -1,0 +1,95 @@
+---
+id: bsx-privacy-data-security
+title: Personal Data Security
+description: Explains how to protect personal data and biometric information in BioStar X through database encryption and minimal biometric storage.
+---
+
+BioStar X stores user credentials, biometric templates, and personally identifiable information. Without database encryption, a breach exposes this information in plaintext, leading to identity theft, legal liability, and regulatory violations. This document explains how to enable personal information database encryption and minimize biometric image storage to protect sensitive data.
+
+## Encrypt personal data on database
+
+Enable <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' /> to ensure all sensitive user and credential information is stored in an encrypted state.
+
+### Scope of encrypted data
+
+When enabled <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' />, the following items are encrypted at rest:
+
+* Profile images
+
+* User ID, Name, Phone number, User IP, Email addresses
+
+* Login ID and Login password
+
+* Face templates, Fingerprint templates
+
+* Card ID, Smart card layout keys
+
+* Custom information for users and visitors
+
+* Image log files
+
+### Personal data encryption key
+
+* Becomes configurable once <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' /> is set to <Cmd sid='common.use' product='2' />.
+
+* The key must be **32 characters**, using letters, numbers, and symbols.
+
+* Changing the key triggers re-encryption of all existing data.
+
+:::note
+
+**Best Practice**
+
+Generate the key using a **secure random generator**. Store it in a **password vault**. Rotate periodically (e.g., annually) or immediately if compromise is suspected.
+
+:::
+
+### Step-by-step
+
+1. Log in to BioStar X with an Administrator account.
+
+2. Go to <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.systemSecurity' product='2' />.
+
+3. Set <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' /> to <Cmd sid='common.use' product='2' />.
+
+4. Optionally, click <Cmd sid='setting.server.secure.comm.key_change' product='2' /> under <Cmd sid='setting.server.secure.comm.encryption_key_db' product='2' />, enter a new encryption key of **32 characters**.
+
+:::caution
+
+Changing the encryption key will **re-encrypt all existing personal data**. Schedule during maintenance windows. Losing the encryption key may make encrypted data unrecoverable.
+
+:::
+
+## Store visual face image
+
+Disable  <Cmd sid="settings.expertSettings.detail.storeVisualFaceImageOptionLabel" product='2' /> unless there is a strict operational requirement to retain actual facial images.
+
+* **Templates** vs **Images**: Templates are mathematical representations of biometric data and are harder to reverse-engineer into a recognizable face.
+
+* Many privacy regulations (GDPR, PDPA, etc.) treat biometric images as highly sensitive data.
+
+* Storing images unnecessarily increases legal risk and attack surface.
+
+### Step-by-step
+
+1. Go to <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid="common.server" product='2' />.
+
+2. Set <Cmd sid="settings.expertSettings.enableOptionLabel" product='2' /> to <Cmd sid="common.use" product='2' />.
+
+3. Under <Cmd sid="settings.expertSettings.detail.title" product='2' />, configure <Cmd sid="settings.expertSettings.detail.storeVisualFaceImageOptionLabel" product='2' />.
+
+   * Default: <Cmd sid="common.use" product='2' />
+
+   * Recommended: <Cmd sid="common.notUse" product='2' />
+
+:::note
+
+**Best Practice**
+
+* Retain only **templates**, not images, for biometric authentication.
+
+* If images are required for audit purposes: store in a **separate secure repository** with strict access controls and **short retention periods** (30–60 days).
+
+* Periodically review settings after upgrades to ensure the value hasn't reverted to default.
+
+:::

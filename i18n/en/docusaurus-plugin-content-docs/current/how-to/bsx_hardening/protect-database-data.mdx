@@ -1,0 +1,138 @@
+---
+id: protect-database-data
+title: Database and Data Protection
+description: Explains how to protect sensitive information stored in the BioStar X database through encryption, access controls, and audit logging.
+---
+
+BioStar X requires a database to store sensitive information such as user credentials, access logs, and configuration data. Depending on the deployment, either **MariaDB** (11.4) or **Microsoft SQL Server** may be used.
+
+## Enforce authentication and access control
+
+* Require authentication for all database connections.
+
+* Use dedicated database accounts for BioStar X, not shared or default accounts.
+
+* Assign the least privilege role needed (read/write for application data, no schema modification).
+
+* Regularly audit database accounts for unused or over-privileged users.
+
+* Remove unused or outdated database user entries, especially after IP or infrastructure changes.
+
+:::caution
+
+Never allow BioStar X to connect using `sa` or equivalent superuser accounts.
+
+:::
+
+## Encrypt data in transit
+
+### MariaDB
+
+```ini title='my.cnf'
+[mysqld]
+require_secure_transport=ON
+ssl_cert=/etc/mysql/server-cert.pem
+ssl_key=/etc/mysql/server-key.pem
+ssl_ca=/etc/mysql/ca-cert.pem
+```
+
+**Verify**:
+
+```sql title='SQL'
+SHOW VARIABLES LIKE '%ssl%';
+```
+
+### SQL Server
+
+1. Open **SQL Server Configuration Manager**.
+
+2. Go to **SQL Server Network Configuration** → **Protocols for MSSQLSERVER**.
+
+3. Enable **Force Encryption**.
+
+4. Install a trusted certificate on the server.
+
+## Encrypt data at rest
+
+### MariaDB
+
+* Enable `file_key_management` plugin for encryption at rest.
+
+* Define encryption keys in a secure keyfile.
+
+* Apply encryption per table if full TDE is not available.
+
+:::caution
+
+Slight performance overhead (usually 3–5%). If you move/restore the DB on another server, you'll need the certificate and keys. BioStar X's Restore function does not support encrypted backups — this will need to be done manually.
+
+:::
+
+### SQL Server TDE
+
+```sql title='SQL'
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'StrongP@ssw0rd!';
+CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'BioStarX';
+CREATE DATABASE ENCRYPTION KEY WITH ALGORITHM = AES_256 ENCRYPTION BY SERVER CERTIFICATE MyServerCert;
+ALTER DATABASE biostarx_ac SET ENCRYPTION ON;
+```
+
+## Enable database auditing {#enableDatabaseAudit}
+
+### MariaDB
+
+```sql title='SQL'
+INSTALL SONAME 'server_audit';
+SET GLOBAL server_audit_logging=ON;
+SET GLOBAL server_audit_events='CONNECT,QUERY_DML,QUERY_DDL';
+```
+
+### SQL Server
+
+```sql title='SQL'
+CREATE SERVER AUDIT BioStarX_Audit TO FILE (FILEPATH = 'C:\AuditLogs\');
+CREATE SERVER AUDIT SPECIFICATION BioStarX_Spec FOR SERVER AUDIT BioStarX_Audit ADD (FAILED_LOGIN_GROUP);
+ALTER SERVER AUDIT BioStarX_Audit WITH (STATE = ON);
+```
+
+## Backup and secure storage
+
+* Perform regular encrypted backups of the BioStar X database.
+
+* Store backups on a separate secure server, not the same host.
+
+* Test backup restores periodically.
+
+* Store backups on BitLocker-encrypted volumes.
+
+### MariaDB
+
+```bash title='Bash'
+mariadb-dump --all-databases --ssl --result-file=/secure/backups/biostarx.sql
+gpg -c /secure/backups/biostarx.sql
+```
+
+:::caution
+
+BioStar X Backup function (manual or scheduled) is unencrypted. BioStar X Restore function does not support encrypted backup.
+
+:::
+
+### SQL Server
+
+```sql title='SQL'
+BACKUP DATABASE biostarx_db TO DISK = 'D:\backups\biostarx_db.bak' 
+WITH ENCRYPTION (ALGORITHM = AES_256, SERVER CERTIFICATE = MyServerCert);
+```
+
+## Restrict remote access
+
+### MariaDB
+
+```ini title='my.cnf'
+bind-address=127.0.0.1
+```
+
+### SQL Server
+
+Configure firewall rules to allow connections only from the BioStar X application server.

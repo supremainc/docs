@@ -1,0 +1,263 @@
+---
+id: os-configuration
+title: Configuración del Sistema Operativo
+description: Describe cómo reforzar el entorno de Windows Server antes de implementar BioStar X. Incluye seleccionar una versión LTS, aplicar parches de seguridad, quitar funciones innecesarias, habilitar el cifrado BitLocker y configurar las políticas de autenticación.
+---
+
+Proteger el sistema operativo es el primer paso del proceso de refuerzo de BioStar X. Los sistemas operativos sin parches, los servicios innecesarios y las configuraciones débiles de autenticación son vectores de ataque comunes para cualquier carga de trabajo de servidor, incluido BioStar X. Siga la guía de este documento para reforzar su entorno de Windows Server.
+
+## Usar versiones LTS de Windows Server
+
+Ejecutar BioStar X en una versión de Windows no compatible o desactualizada expone el sistema a vulnerabilidades sin parches. Microsoft ofrece versiones de Long-Term Servicing (LTS) de Windows Server que garantizan actualizaciones de seguridad, correcciones de estabilidad y soporte por más de 10 años (5 años de soporte general + 5 años de soporte extendido). Elegir una versión LTS asegura que el servidor de BioStar X tenga la ventana de soporte de seguridad más larga posible, con menos actualizaciones de funciones que interrumpen el servicio.
+
+:::note
+
+**Resumen para administradores**
+
+* Implemente siempre BioStar X en **ediciones LTS de Windows Server** (2019 o 2022).
+
+* **Verifique** la versión del sistema operativo después de la instalación.
+
+* **Planifique las actualizaciones** antes de las fechas de fin de soporte.
+
+* **Mantenga habilitadas las actualizaciones automáticas** o conéctese a WSUS/SCCM.
+
+* **Documente el ciclo de vida** para evitar ejecutar software sin soporte.
+
+:::
+
+### Identificar las versiones compatibles
+
+Las siguientes ediciones LTS de Windows Server cuentan con soporte activo de Microsoft (a mayo de 2026):
+
+* Windows Server 2019 (LTS) — Soporte general: hasta enero de 2024 / Soporte de seguridad extendido: hasta enero de 2029
+
+* Windows Server 2022 (LTS) — Soporte general: hasta octubre de 2026 / Soporte de seguridad extendido: hasta octubre de 2031
+
+* Windows Server 2025 (LTS) — Soporte general: hasta noviembre de 2029 / Soporte de seguridad extendido: hasta noviembre de 2034
+
+:::caution
+
+Evite las versiones de Semi-Annual Channel (SAC); duran poco y no están pensadas para cargas de trabajo de producción como BioStar X.
+
+:::
+
+### Comprobar la versión actual del sistema operativo
+
+* Presione `Win + R`, escriba `winver` y presione Enter. Esto muestra la edición y la versión.
+
+* También puede ejecutar el siguiente comando en PowerShell para comprobar el nombre y la versión del sistema operativo:
+
+  ```powershell title='PowerShell'
+  systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
+  ```
+
+### Planificar la actualización si es necesario
+
+* Si el servidor ejecuta Windows Server 2016 o anterior, debe planificar una migración.
+
+* Actualizar a LTS 2019 o 2022 asegura actualizaciones de seguridad y compatibilidad con protocolos TLS modernos (TLS 1.2/1.3).
+
+:::note
+
+**Mejor práctica**
+
+Cree una nueva VM o un nuevo servidor con el sistema operativo compatible. Luego instale BioStar X desde cero y migre la configuración y la base de datos. Esto minimiza el tiempo de inactividad y el riesgo.
+
+:::
+
+### Asegurar la configuración de Windows Update
+
+Habilite las **actualizaciones automáticas** para los parches de seguridad. O, si usa Windows Server Update Services (WSUS) o System Center Configuration Manager (SCCM), asegúrese de que el host esté inscrito correctamente.
+
+## Aplicar las últimas actualizaciones y parches de seguridad de Windows
+
+Antes de la implementación en producción, aplique las últimas actualizaciones y los parches de seguridad de Windows para proteger el sistema de vulnerabilidades conocidas.
+
+Los servidores Windows sin parches son el **principal vector de ataque** para ransomware, ejecución remota de código y exploits de elevación de privilegios. Aplicar las últimas actualizaciones de seguridad asegura que el host de BioStar X comience su ciclo de vida protegido frente a todas las **vulnerabilidades conocidas**.
+
+### Comprobar el nivel actual de parches
+
+* Abra **Configuración** → **Windows Update** y luego haga clic en **Buscar actualizaciones** para revisar el estado de parches.
+
+* Para comprobar los 10 parches instalados más recientemente con PowerShell, ejecute el siguiente comando:
+
+  ```powershell title='PowerShell'
+  Get-HotFix | Sort-Object -Descending InstalledOn | Select-Object -First 10
+  ```
+
+:::caution
+
+Si el parche más reciente tiene más de 30 días, actualice de inmediato.
+
+:::
+
+### Proceso de actualización
+
+1. Ejecute Windows Update manualmente.
+
+2. Instale todas las actualizaciones críticas y de seguridad.
+
+   :::note
+
+   Recomendamos aplicar los últimos parches sin demora, aunque el servidor aún no esté en modo de producción.
+
+   :::
+
+3. Reinicie cuando se requiera.
+
+4. Verifique el estado de la actualización: ejecute de nuevo hasta que aparezca "You're up to date".
+
+### Estrategia de parches continua
+
+* **Parches mensuales de "Patch Tuesday"**: Microsoft publica nuevos parches el segundo martes de cada mes.
+
+* Aplique los parches **dentro de 1 a 2 semanas** de su publicación en producción, después de probarlos en staging si está disponible.
+
+* Si no puede aplicar parches de inmediato, habilite **controles compensatorios**: restricciones de firewall, desactive el acceso a Internet, supervisión mejorada hasta aplicar los parches.
+
+## Quitar o deshabilitar funciones innecesarias de Windows
+
+Cada función de Windows habilitada aumenta la **superficie de ataque** del servidor. Servicios como Print Spooler, Fax o IIS rara vez se necesitan en hosts dedicados a BioStar X y tienen antecedentes de vulnerabilidades críticas (por ejemplo, PrintNightmare).
+
+> por ejemplo, Internet Explorer, SMBv1, componentes heredados
+
+1. Abra <Start /> → **Server Manager** → **Manage** → **Remove Roles and Features**.
+
+2. Revise los roles instalados (por ejemplo, File Services, IIS, Print Services).
+
+3. Quite los roles que BioStar X no requiera.
+
+4. Conserve solo **.NET Framework Features** y **Desktop Experience** si su flujo de trabajo de administración los necesita.
+
+5. Abra `services.msc` y establezca los servicios innecesarios (por ejemplo, Fax, Remote Registry, Bluetooth, SMBv1) como **Deshabilitado**.
+
+:::note
+
+**Mejor práctica**
+
+Mantenga el host **dedicado** solo a BioStar X. Sin cargas de trabajo adicionales.
+
+:::
+
+## Asegure que Windows Defender esté habilitado y actualizado.
+
+Windows Defender (antivirus integrado) protege contra malware y ransomware. Deshabilitarlo deja el host expuesto.
+
+1. Abra **Configuración** → **Privacidad y seguridad** → **Seguridad de Windows** → **Protección contra virus y amenazas**.
+
+2. Confirme que **Administrar configuraciones** → **Protección en tiempo real** esté habilitada.
+
+3. Confirme que **Protección en la nube** y **Envío automático de muestras** estén habilitadas.
+
+4. Mantenga actualizada la inteligencia de seguridad (a veces llamada definiciones). Por lo general, se actualiza automáticamente mediante Windows Update.
+
+:::caution
+
+Si usa un antivirus de terceros, asegúrese de que solo se ejecute **una solución antivirus** para evitar conflictos.
+
+:::
+
+## Habilitar BitLocker para proteger contra el robo físico {#enableBitLocker}
+
+Si un atacante obtiene acceso físico al servidor (por ejemplo, disco robado, instantánea de VM, medio de respaldo), las unidades sin cifrar permiten acceso directo a datos confidenciales como credenciales, registros e información biométrica. BitLocker ofrece cifrado de disco completo para proteger los datos en reposo.
+
+### Recomendación
+
+* Habilite BitLocker en:
+
+  * Unidad del sistema operativo (C:)
+
+  * Todas las unidades de datos que almacenan: base de datos de BioStar X, registros y copias de seguridad
+
+* Use TPM + PIN siempre que sea posible para una protección más sólida
+
+### Paso a paso
+
+1. Abra **Panel de control** → **Sistema y seguridad** → **Cifrado de unidad BitLocker**.
+
+2. Haga clic en **Activar BitLocker** para cada unidad.
+
+3. Elija el método de autenticación: **TPM** (predeterminado) o **TPM + PIN** (recomendado).
+
+4. Guarde la clave de recuperación en: **Active Directory** / **Azure AD** (preferido) o en una **bóveda segura** (NO la almacene localmente).
+
+5. Elija el modo de cifrado: **XTS-AES de 256 bits** (recomendado).
+
+6. Inicie el cifrado.
+
+### Supervisar el estado de BitLocker
+
+Ejecute el siguiente comando para comprobar el estado de BitLocker.
+
+```powershell title='PowerShell'
+Get-BitLockerVolume
+```
+
+:::info
+
+BitLocker protege **solo los datos en reposo**. NO reemplaza el cifrado de la base de datos ni el cifrado TLS.
+
+:::
+
+## Aplicar políticas de autenticación seguras
+
+Las cuentas locales débiles o las credenciales almacenadas en caché hacen que el servidor sea vulnerable a ataques de fuerza bruta o elevación de privilegios.
+
+1. Abra **Directiva de seguridad local** (`secpol.msc`).
+
+2. Configure las siguientes **Directivas de cuenta** → **Directiva de contraseñas**:
+
+   * **Longitud mínima de contraseña**: 12 caracteres o más
+
+   * **La contraseña debe cumplir los requisitos de complejidad**: Habilitada
+
+   * **Caducidad máxima de contraseña**: 90 días
+
+3. Configure las siguientes **Directivas de cuenta** → **Directiva de bloqueo de cuenta**:
+
+   * **Umbral de bloqueo de cuenta**: 5 intentos
+
+4. Deshabilite o cambie el nombre de la cuenta predeterminada de **Administrator**.
+
+5. Exija autenticación multifactor (MFA) para RDP o acceso remoto de administración.
+
+## Aplicar configuraciones de Directiva de grupo para bases de seguridad
+
+El **Security Compliance Toolkit (SCT)** de Microsoft ofrece **Objetos de Directiva de grupo (GPO)** descargables que se alinean con bases de seguridad. Estas bases reducen los riesgos de mala configuración y aseguran que BioStar X se ejecute en un Windows OS reforzado.
+
+1. Descargue la última versión de [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319).
+
+2. Seleccione la base para la versión de su sistema operativo: **Windows Server 2019** o **Base de seguridad de 2022**.
+
+3. Importe las GPO base en **Group Policy Management Console (GPMC)**
+
+   Abra `gpmc.msc` → haga clic derecho en **Group Policy Objects** → haga clic en **Import Settings**.
+
+4. Vincule la GPO base a la **OU del servidor de BioStar X** en Active Directory (o aplíquela localmente si es independiente).
+
+5. Revise las configuraciones críticas: 
+
+   bloqueo de cuenta, registro de auditoría, seguridad de red (firmado SMB, firmado LDAP, deshabilitar respaldo NTLM), protección de LSA.
+
+6. **Pruebe primero en staging**, confirme la compatibilidad con BioStar X y luego impleméntelo en producción.
+
+## Deshabilitar Escritorio remoto si no se requiere
+
+RDP es un vector de ataque común (fuerza bruta, relleno de credenciales).
+
+### Si no se requiere
+
+Seleccione **No permitir conexiones remotas a este equipo** en **Propiedades del sistema** → **Remoto**
+
+### Reforzar si es necesario
+
+Si se requiere Escritorio remoto, aplique las siguientes medidas de refuerzo de seguridad para mitigar riesgos.
+
+* Restrinja solo a VPN o LAN.
+
+* Exija Autenticación a nivel de red (NLA).
+
+* Cambie el puerto RDP predeterminado (3389 → personalizado).
+
+* Supervise con registros de eventos y alertas.

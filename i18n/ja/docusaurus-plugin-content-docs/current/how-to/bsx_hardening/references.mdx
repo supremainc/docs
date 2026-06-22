@@ -1,0 +1,72 @@
+---
+id: references
+title: 参考
+description: BioStar X の展開とセキュリティ設定に関するポート、基本セキュリティ設定、およびコンプライアンス要件の参考資料です。
+---
+
+この文書では、BioStar X システムの構築とセキュリティ強化に必要な技術参考情報を提供します。 ネットワークポートの設定、推奨セキュリティ設定、主要なコンプライアンス要件を一目で確認できます。\n追加のサポートが必要な場合は、外部参考資料を参照してください。
+
+## BioStar X の基本ネットワークポート
+
+| サービス | 用途 | 基本ポート | 参考 / 推奨事項 |
+| --- | --- | --- | --- |
+| Unified Gateway Service | HTTPS（システムアクセス） | 443 | 管理者/オペレーターのログイン用基本ポートです。 <Cmd>Service Manager</Cmd> → <Cmd>Service Settings</Cmd> で変更できます。 |
+| Core Web Service | HTTPS（内部 UI） | 5002 | 443 ポートでプロキシ接続することを推奨し、直接アクセスを制限します。 |
+| ^ | CloudNgrok | 52000 | 不要な場合は無効にしてください。 |
+| ^ | Thrift RPC | 9310 | 信頼できるサービスに限定します。 |
+| Core Service | WebSocket | 9002 | 内部専用です。 |
+| ^ | FastCGI | 9000 | ローカルにバインドする必要があります。 |
+| ^ | API | 9010 | TLS と認証でセキュリティを維持します。 |
+| Coordinator Service | クライアント通信 | 21810 | 内部専用です。 |
+| Main Server | TCP サーバー | 51212 | **平文テキスト** のデバイス通信 — 可能なら遮断してください。 |
+| ^ | SSL サーバー | 51213 | **推奨** デバイス通信（TLS） |
+| ^ | gRPC | 51219 | 内部サービス通信専用です。 |
+| Cache Service | クライアント | 10800 | Redis と同様です。外部に公開しないでください。 |
+| ^ | 通信 | 47500 | 内部専用です。 |
+| ^ | 検索 | 47100 | 内部専用です。 |
+
+## BioStar X の基本セキュリティ機能
+
+| 機能 | UI の場所 | 既定値 | 推奨事項 |
+| --- | --- | --- | --- |
+| 既定の管理者ログイン ID とパスワードの変更 | <Cmd sid='shell.header.user' /> → ユーザー一覧で既定の管理者を編集（`UID:1`） | admin / インストールパスワード | インストール直後に変更してください。 |
+| 権限と役割の分離 | <Cmd sid='shell.header.user' /> → ユーザー選択 → <Cmd sid='common.permission' product='2' /> → <Cmd sid='user.accountLevel' product='2' /> | 事前定義: <Cmd sid='setting.account.administrator' product='2' />, <Cmd sid='setting.account.userOperator' product='2' />, <Cmd sid='setting.account.monitoringOperator' product='2' /> | 必要に応じてカスタム権限を作成してください。 |
+| パスワード強度ポリシー | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.systemSecurity.loginPassword' product='2' /> → <Cmd sid='setting.server.passwordLevel' product='2' /> | <Cmd sid='setting.server.passwordLevelMedium' product='2' /> | <Cmd sid='setting.server.passwordLevelStrong' product='2' /> に設定し、マルチファクター認証（MFA）を適用してください。 |
+| セッションセキュリティ（同時接続） | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.systemSecurity.sessionSecurity' product='2' /> → <Cmd sid='setting.systemSecurity.useSimultaneousConnection' product='2' /> | <Cmd sid='common.active' product='2' /> | 共有ログインを防ぐため、<Cmd sid='common.inactive' product='2' /> に設定してください。 |
+| 多要素認証 | <Cmd sid='shell.header.user' /> → ユーザー選択 → <Cmd sid='common.permission' product='2' /> → <Cmd sid='common.fingerprintLogin' product='2' /> | <Cmd sid='common.notUse' product='2' /> | <Cmd sid='setting.account.administrator' product='2' />, <Cmd sid='setting.account.userOperator' product='2' />, <Cmd sid='setting.account.monitoringOperator' product='2' /> アカウントに対して有効化できます。 |
+| デバイスとのセキュア通信 | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.server.secure.comm.title' product='2' /> → <Cmd sid='setting.sever.secure.comm.menu' product='2' /> | <Cmd sid='common.notUse' product='2' /> | 機能を有効化し、SSL ポート（51213）を使用してください。 |
+| デバイスハッシュキー管理 | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.server.secure.comm.title' product='2' /> → <Cmd sid='setting.server.secure.comm.data_encryption' product='2' /> | <Cmd sid='common.notUse' product='2' /> | 高セキュリティ環境の展開では、タンパー保護のために有効化してください。 |
+| システムバックアップ | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.systemBackup' /> | <Cmd sid='common.manual' product='2' /> | <Cmd sid='common.backup.autoBackup' product='2' /> 機能を有効化してください。 |
+| ディレクトリ連携 | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.directoryIntegration.root' /> | 未構成 | 可能であれば Entra ID または Active Directory と連携してください。 |
+| ログ設定（保持とレベル） | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid='setting.menu.server.server' /> | <Cmd sid='setting.server.logRetainDays' product='2' />: 60日<br /><Cmd sid='setting.server.logLevel' product='2' />: <Cmd sid='setting.server.logLevel.info' product='2' /> | コンプライアンス要件に応じて調整してください。 ログは SIEM に送信してください。 |
+| 個人情報データベース暗号化 | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.system.security' /> → <Cmd sid='setting.server.secure.comm.title' product='2' /> → <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' /> | <Cmd sid='common.notUse' product='2' /> | 本番環境で有効化してください。 |
+| 顔画像の保存 | <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.menu.server.server' /> → <Cmd sid='settings.expertSettings.enableButton' product='2' /> → <Cmd sid='settings.expertSettings.detail.storeVisualFaceImageOptionLabel' product='2' /> | <Cmd sid='common.use' product='2' /> | 正当な理由がない限り無効化してください。 |
+
+## コンプライアンス要件（簡易表示）
+
+<div className='table-fixed'>
+
+| セキュリティ制御 | 対応するコンプライアンス領域 |
+| --- | --- |
+| データベース暗号化（個人識別情報、バイオメトリック情報） | GDPR、CCPA、ISO 27001 |
+| システムログの保持と転送 | ISO 27001、PCI-DSS |
+| 管理者/オペレーターアカウントのマルチファクター認証（MFA） | NIST 800-63、ISO 27001 |
+| デバイスとのセキュア通信（TLS） | GDPR、ISO 27001 |
+| バックアップと復元機能 | ISO 27001、SOC 2 |
+| ディレクトリ連携（Entra ID/Active Directory） | SOX、ISO 27001、SOC 2 |
+
+</div>
+
+## 外部参考資料
+
+* [Suprema ナレッジベース – デバイスとサーバー間のセキュア通信の設定](https://kb.supremainc.com/knowledge/doku.php?id=ko:how_to_configure_secure_communication_between_device_and_server_tls_ssl)
+
+* [Suprema ナレッジベース – サーバーとデバイスの暗号化キーを手動で管理する](https://kb.supremainc.com/knowledge/doku.php?id=ko:how_to_manually_manage_server_device_encryption_key)
+
+* [Suprema ナレッジベース – USB メモリを使って BioStar 2 とデバイス間でユーザーとログをインポート/エクスポートする](https://kb.supremainc.com/knowledge/doku.php?id=ko:how_to_import_export_user_log_between_biostar_2_and_suprema_reader_using_usb_memory)
+
+* [Suprema ナレッジベース – USB を使用してファームウェアをアップグレードする](https://kb.supremainc.com/knowledge/lib/exe/fetch.php?media=ko:bew3_usb_fw_upgrade_ko.pdf)
+
+* [Suprema ナレッジベース – セキュアタンパーの設定](https://kb.supremainc.com/knowledge/doku.php?id=ko:how_to_configure_secure_tamper)
+
+* [Microsoft セキュリティ準拠ツールキット - 使用方法](https://learn.microsoft.com/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit-10)

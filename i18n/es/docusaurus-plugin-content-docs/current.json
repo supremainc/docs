@@ -554,5 +554,21 @@
   "sidebar.biostarx_mobile.category.출입문 관리하기": {
     "message": "Administrar Puertas",
     "description": "The label for category '출입문 관리하기' in sidebar 'biostarx_mobile'"
+  },
+  "sidebar.bsx_hardening.category.BioStar X 보안 강화": {
+    "message": "Guía de Endurecimiento de BioStar X",
+    "description": "The label for category 'BioStar X 보안 강화' in sidebar 'bsx_hardening'"
+  },
+  "sidebar.bsx_hardening.category.서버 보안 강화": {
+    "message": "Guía de Endurecimiento del Servidor",
+    "description": "The label for category '서버 보안 강화' in sidebar 'bsx_hardening'"
+  },
+  "sidebar.bsx_hardening.category.BioStar X 강화": {
+    "message": "Endurecimiento de BioStar X",
+    "description": "The label for category 'BioStar X 강화' in sidebar 'bsx_hardening'"
+  },
+  "sidebar.howto.link.BioStar X 보안 강화": {
+    "message": "Guía de Endurecimiento de BioStar X",
+    "description": "The label for link 'BioStar X 보안 강화' in sidebar 'howto', linking to 'bsx_hardening/'"
   }
 }

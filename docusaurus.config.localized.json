@@ -28,5 +28,11 @@
     "en": "Footnotes",
     "ja": "脚注",
     "es": "Notas al pie"
+  },
+  "hardeningGuideDescription": {
+    "ko": "BioStar X 시스템과 장치의 보안을 강화하기 위한 모범 사례와 권장 사항을 제공합니다.",
+    "en": "Provides best practices and recommendations for hardening BioStar X systems and devices.",
+    "ja": "BioStar Xシステムとデバイスのセキュリティを強化するためのベストプラクティスと推奨事項を提供します。",
+    "es": "Proporciona mejores prácticas y recomendaciones para fortalecer los sistemas y dispositivos BioStar X."
   }
 }
