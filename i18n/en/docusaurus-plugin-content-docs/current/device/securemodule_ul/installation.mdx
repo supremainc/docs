@@ -1,0 +1,47 @@
+---
+id: installation
+title: Connect
+description: You can check examples of connecting the product.
+keywords:
+  - Secure Module
+  - Device
+---
+
+You can check examples of connecting the product.
+
+:::info
+
+* Use AWG22 to AWG16 cables for connection with the product.
+
+* To connect the cable to the product's cable connector, strip the end of the cable about 5 to 6 mm.
+
+:::
+
+{/* ## 전원 연결 */}
+import PowerConnection from "../../common/_device-power-connection.mdx";
+
+<PowerConnection />
+
+## RS-485 Connection
+
+<Image src='/img/device/installation-rs485-connection-sio2.png' width='75%' className='none' />
+
+:::info
+
+* Use an AWG24 twisted pair with a maximum length of 1.2 km for the RS-485 cable.
+
+* It is recommended to use RS-485 cables with a characteristic impedance of 120 Ω.
+
+* If connecting with a RS-485 daisy chain, connect the termination resistor (120 Ω) to both ends of the daisy chain connection. If connected to the middle line, the signal level becomes smaller and the communication performance will deteriorate. Make sure to connect it to both ends of the daisy chain connection.
+
+:::
+
+{/* ## 릴레이 연결 */}
+import RelayConnectioin from "../../common/_device-indoor-module-relay-connection.mdx";
+
+<RelayConnectioin />
+
+{/* ## 출입문 센서 및 퇴실 버튼 연결 */}
+import RtsConnection from "../../common/_device-door-sensor-connection.mdx";
+
+<RtsConnection />

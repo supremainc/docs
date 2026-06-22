@@ -1185,6 +1185,27 @@ function createSidebars(preview) {
       ]
     }
   ],
+  corestation_ul: [
+    {
+      type: 'category',
+      label: 'CoreStation UL',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/corestation_40_ul/index',
+      },
+      items: [
+        'device/corestation_40_ul/safety-instructions',
+        'device/corestation_40_ul/getting-started',
+        'device/corestation_40_ul/installation',
+        'device/corestation_40_ul/product-specifications',
+        'device/corestation_40_ul/regulatory-information',
+        'device/corestation_40_ul/appendices',
+      ]
+    }
+  ],
   corestation20: [
     {
       type: 'category',
@@ -1490,6 +1511,27 @@ function createSidebars(preview) {
             'device/securemodule/release-notes/100',
           ]
         },
+      ]
+    }
+  ],
+  securemodule_ul: [
+    {
+      type: 'category',
+      label: 'Secure Module UL',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/securemodule_ul/index',
+      },
+      items: [
+        'device/securemodule_ul/safety-instructions',
+        'device/securemodule_ul/getting-started',
+        'device/securemodule_ul/installation',
+        'device/securemodule_ul/product-specifications',
+        'device/securemodule_ul/regulatory-information',
+        'device/securemodule_ul/appendices',
       ]
     }
   ],
@@ -1831,6 +1873,27 @@ function createSidebars(preview) {
       ],
     },
   ],
+  bioentryw2_ul: [
+    {
+      type: 'category',
+      label: 'BioEntry W2 UL',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/bioentry_w2_ul/index',
+      },
+      items: [
+        'device/bioentry_w2_ul/safety-instructions',
+        'device/bioentry_w2_ul/getting-started',
+        'device/bioentry_w2_ul/installation',
+        'device/bioentry_w2_ul/product-specifications',
+        'device/bioentry_w2_ul/regulatory-information',
+        'device/bioentry_w2_ul/appendices',
+      ],
+    },
+  ],
   device_manager: [
     {
       type: 'category',
@@ -1988,6 +2051,43 @@ function createSidebars(preview) {
         //   label: 'A&E',
         //   id: 'device/biostation_3/ae/biostation3_ae',
         // },
+      ],
+    },
+  ],
+  biostation3_ul: [
+    {
+      type: 'category',
+      label: 'BioStation 3 UL',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/biostation_3_ul/index',
+      },
+      items: [
+        'device/biostation_3_ul/safety-instructions',
+        'device/biostation_3_ul/getting-started',
+        'device/biostation_3_ul/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/biostation_3_ul/using-device',
+          },
+          items: [
+            'device/biostation_3_ul/admin-menu',
+            'device/biostation_3_ul/user',
+            'device/biostation_3_ul/authentication',
+            'device/biostation_3_ul/settings',
+            'device/biostation_3_ul/event-log',
+          ],
+        },
+        'device/biostation_3_ul/troubleshooting',
+        'device/biostation_3_ul/product-specifications',
+        'device/biostation_3_ul/regulatory-information',
+        'device/biostation_3_ul/appendices',
       ],
     },
   ],
@@ -2214,6 +2314,43 @@ function createSidebars(preview) {
       ],
     },
   ],
+  bioliten2_ul: [
+    {
+      type: 'category',
+      label: 'BioLite N2 UL',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/biolite_n2_ul/index',
+      },
+      items: [
+        'device/biolite_n2_ul/safety-instructions',
+        'device/biolite_n2_ul/getting-started',
+        'device/biolite_n2_ul/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/biolite_n2_ul/using-device',
+          },
+          items: [
+            'device/biolite_n2_ul/admin-menu',
+            'device/biolite_n2_ul/user',
+            'device/biolite_n2_ul/authentication',
+            'device/biolite_n2_ul/settings',
+            'device/biolite_n2_ul/event-log',
+          ],
+        },
+        'device/biolite_n2_ul/troubleshooting',
+        'device/biolite_n2_ul/product-specifications',
+        'device/biolite_n2_ul/regulatory-information',
+        'device/biolite_n2_ul/appendices',
+      ],
+    },
+  ],
   xpass2: [
     {
       type: 'category',
@@ -2264,6 +2401,27 @@ function createSidebars(preview) {
       ],
     },
   ],
+  xpass2_ul: [
+    {
+      type: 'category',
+      label: 'XPass 2 UL',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/xpass_2_ul/index',
+      },
+      items: [
+        'device/xpass_2_ul/safety-instructions',
+        'device/xpass_2_ul/getting-started',
+        'device/xpass_2_ul/installation',
+        'device/xpass_2_ul/product-specifications',
+        'device/xpass_2_ul/regulatory-information',
+        'device/xpass_2_ul/appendices',
+      ],
+    },
+  ],
   xpassd2: [
     {
       type: 'category',
@@ -2308,6 +2466,27 @@ function createSidebars(preview) {
             'device/xpass_d2/release-notes/140',
           ]
         },
+      ],
+    },
+  ],
+  xpassd2_ul: [
+    {
+      type: 'category',
+      label: 'XPass D2 UL',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/xpass_d2_ul/index',
+      },
+      items: [
+        'device/xpass_d2_ul/safety-instructions',
+        'device/xpass_d2_ul/getting-started',
+        'device/xpass_d2_ul/installation',
+        'device/xpass_d2_ul/product-specifications',
+        'device/xpass_d2_ul/regulatory-information',
+        'device/xpass_d2_ul/appendices',
       ],
     },
   ],

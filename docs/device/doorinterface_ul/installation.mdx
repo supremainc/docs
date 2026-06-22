@@ -1,17 +1,20 @@
 ---
 id: installation
-title: 설치하기
-description: 제품 설치에 필요한 전체 과정과 연결 예시를 제공합니다.
-keywords: [설치, Door Interface, 장치]
+title: Installation
+description: Provides the complete process and connection examples required for product installation.
+keywords:
+  - Install
+  - Door Interface
+  - Device
 ---
 
 import InstallationBracketNotes from '../../common/_installation-bracket-notes.mdx';
 
-설치에 필요한 전체 과정과 연결 예시를 제공합니다.
+Provides the complete installation procedures and connection examples required for the device.
 
-## 제품 고정
+## Product Fixation
 
-장착할 위치에 고정용 나사로 제품을 단단히 고정하세요.
+Secure the product tightly with a fixing screw at the location to be mounted.
 
 <Image src='/img/device/device-fix-di24.png' className='none' width='50%' alone />
 
@@ -22,24 +25,24 @@ import PowerConnection from "../../common/_device-power-connection.mdx";
 
 <PowerConnection />
 
-### 전원별 리더 및 락 전력 사양
+### Power-specific reader and lock power specifications
 
-| 전원 | 리더(최대 전류, 장치 수) | 락(최대 전류, 장치 수) |
+| Power | Reader (maximum current, number of devices) | Lock (maximum current, number of devices) |
 | --- | --- | --- |
-| DC 12V | 600mA (300mA x 2개) | 1.2A (600mA x 2개) |
-| DC 24V | 300mA (150mA x 2개) | 600mA (300mA x 2개) |
+| DC 12V | 600mA (300mA x 2) | 1.2A (600mA x 2) |
+| DC 24V | 300mA (150mA x 2) | 600mA (300mA x 2) |
 
 <PageBreak />
 
-### 케이블 규격별 최대 연장 길이
+### Maximum extension length by cable specification
 
-전원 연결 시 사용하는 케이블의 규격과 설치 환경에 따라 연결할 수 있는 거리가 다를 수 있습니다. 올바르게 연결하지 않을 경우 장치가 오작동할 수 있으므로 주의하세요. 이 제품은 DC 12V, DC 24V 전원을 모두 지원하므로, 각 케이블 규격에 따른 최대 연장 길이를 확인하여 전원을 올바르게 연결하세요.
+The distance that can be connected may vary depending on the cable specifications and installation environment used for power connection. If cable connections are made improperly it may cause the device to malfunction. This product supports both DC 12V and DC 24V power supplies, so check the maximum extension length according to each cable specification and connect the power correctly.
 
 <Table>
 <Thead>
 <Row>
 
-<Th rowspan={2}>케이블 규격</Th>
+<Th rowspan={2}>Cable Specification</Th>
 
 <Th colspan={2}>DC 12V</Th>
 
@@ -48,13 +51,13 @@ import PowerConnection from "../../common/_device-power-connection.mdx";
 </Row>
 <Row>
 
-<Th>리더(300mA)</Th>
+<Th>Reader (300mA)</Th>
 
-<Th>락(600mA)</Th>
+<Th>Lock (600mA)</Th>
 
-<Th>리더(150mA)</Th>
+<Th>Reader (150mA)</Th>
 
-<Th>락(300mA)</Th>
+<Th>Lock (300mA)</Th>
 
 </Row>
 </Thead>
@@ -89,28 +92,27 @@ import PowerConnection from "../../common/_device-power-connection.mdx";
 
 <PageBreak />
 
+## RS-485 Connection
 
-## RS-485 연결
-
-이 제품은 3개의 RS-485 포트를 지원하며, 마스터 장치에 여러대의 Door Interface를 데이지 체인으로 연결하면 최대 34개의 출입문을 구성할 수 있습니다.
+This product supports 3 RS-485 ports, and by daisy-chaining multiple Door Interfaces to the master device, you can configure up to 34 doors.
 
 <Image src='/img/device/installation-rs485-connection-di24.svg' width='80%' className='none' />
 
 :::info
 
-* 제품의 RS-485 포트에 연결할 수 있는 최대 슬레이브 장치 수는 4대입니다.
+* The maximum number of slave devices that can be connected to the product's RS-485 port is 4.
 
-* RS-485 0 및 RS-485 1 포트에는 포트당 최대 2대의 장치를 연결할 수 있습니다.
+* Up to 2 devices can be connected per port for RS-485 0 and RS-485 1.
 
-* RS-485 포트 하나에 3대 이상의 장치가 연결된 경우 슬레이브 장치 검색 시 원하는 장치가 연결 가능 목록에 표시되지 않을 수 있습니다.
+* If more than 3 devices are connected to a single RS-485 port, the desired device may not appear in the connectable list when searching for slave devices.
 
-* RS-485 케이블은 AWG26 이상을 사용해야 하며, 모든 배선은 ANSI/NFPA 70 표준을 준수해야 합니다.
+* Use AWG26 or larger for RS-485 cables, and all wiring must comply with ANSI/NFPA 70 standards.
 
-* RS-485 케이블은 AWG24, 꼬임선(Twisted Pair), 최대 길이 1.2 km를 사용하세요.
+* Use an AWG24 twisted pair with a maximum length of 1.2 km for the RS-485 cable.
 
-* RS-485 케이블은 특성 임피던스가 120 Ω인 케이블을 사용하는 것을 권장합니다.
+* It is recommended to use RS-485 cables with a characteristic impedance of 120 Ω.
 
-* RS-485 데이지 체인 연결의 양 끝에 종단 저항(120 Ω)을 연결하세요. 중간 선로에 연결할 경우 신호 레벨이 작아져 통신 성능이 떨어지므로 반드시 데이지 체인 연결의 양 끝에 연결하세요. 이 제품의 종단 저항 스위치를 ON으로 설정하세요.
+* Connect termination resistors (120 Ω) at both ends of the RS-485 daisy chain connection. If connected to the middle line, the signal level becomes smaller and the communication performance will deteriorate. Make sure to connect it to both ends of the daisy chain connection. Set this product's termination resistor switch to ON.
 
 :::
 
