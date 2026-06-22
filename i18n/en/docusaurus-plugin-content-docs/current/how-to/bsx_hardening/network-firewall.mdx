@@ -10,10 +10,10 @@ Securing the network perimeter and host-based firewall settings is critical for 
 
 A properly configured firewall ensures that only explicitly authorized traffic reaches BioStar X, significantly reducing attack surface.
 
-### BioStar X default network ports
+### Default BioStar X network ports
 
-| **Service** | **Purpose** | **Default Port(s)** |
-|-------------|-------------|---------------------|
+| Service | Purpose | Default Port(s) |
+| --- | --- | --- |
 | BioStar X Core Web Service | HTTPS / Web Interface | 5002 |
 | ^ | Thrift RPC | 9310 |
 | BioStar X Core Service | WebSocket | 9002 |
@@ -39,9 +39,9 @@ When Communication Server is deployed, it uses the same Main Server communicatio
 
 1. Open **Windows Defender Firewall with Advanced Security** (`wf.msc`).
 
-1. Go to **Inbound Rules** and remove or disable rules that are not required.
+2. Go to **Inbound Rules** and remove or disable rules that are not required.
 
-1. Create explicit allow rules for:
+3. Create explicit allow rules for:
 
    * **Unified Gateway HTTPS (`443`)**: external/public if required.
 
@@ -49,16 +49,15 @@ When Communication Server is deployed, it uses the same Main Server communicatio
 
    * Internal-only ports (gRPC `51219`, Cache `10800`/`47500`/`47100`, Coordinator `21810`, Thrift `9310`): allow only from localhost or trusted subnets.
 
-1. Set all other inbound traffic to **Block**.
+4. Set all other inbound traffic to **Block**.
 
-1. Go to **Outbound Rules** and restrict to known trusted endpoints.
+5. Go to **Outbound Rules** and restrict to known trusted endpoints.
 
 :::caution
 
 Avoid broad "Allow All" rules. Changing default ports provides minor obscurity benefits but does not replace firewall enforcement.
 
 :::
-
 
 ## Limit remote access
 
@@ -67,7 +66,6 @@ Avoid broad "Allow All" rules. Changing default ports provides minor obscurity b
 * If RDP is required: use NLA, place server behind a VPN or jump host.
 
 * If not needed: disable it (**System Properties** → **Remote settings**).
-
 
 ## Secure network segmentation
 
@@ -84,7 +82,6 @@ Avoid broad "Allow All" rules. Changing default ports provides minor obscurity b
 Combine segmentation with host firewalls for **defense in depth**.
 
 :::
-
 
 ## Harden network protocols
 
@@ -109,7 +106,6 @@ Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
 Test in staging before disabling protocols to avoid compatibility issues.
 
 :::
-
 
 ## Network intrusion detection & monitoring
 

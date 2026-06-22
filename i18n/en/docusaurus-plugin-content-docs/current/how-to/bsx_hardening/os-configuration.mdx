@@ -48,10 +48,9 @@ Avoid Semi-Annual Channel (SAC) releases — they are short-lived and not intend
 
 * You can also run the following command in PowerShell to check the OS name and version:
 
-   ```powershell title='PowerShell'
-   systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
-   ```
-
+  ```powershell title='PowerShell'
+  systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
+  ```
 
 ### Plan for upgrade if needed
 
@@ -61,16 +60,15 @@ Avoid Semi-Annual Channel (SAC) releases — they are short-lived and not intend
 
 :::note
 
-**Best practice**
+**Best Practice**
 
-Build a new VM or server with the supported OS, install BioStar X fresh, then migrate configuration and database. This minimizes downtime and risk.
+Build a new VM or server with the supported OS. And install BioStar X fresh, then migrate configuration and database. This minimizes downtime and risk.
 
 :::
 
 ### Ensure Windows update is configured
 
-Enable **automatic updates** for security patches, or if using Windows Server Update Services (WSUS) or System Center Configuration Manager (SCCM), ensure the host is properly enrolled.
-
+Enable **automatic updates** for security patches. Or if using Windows Server Update Services (WSUS) or System Center Configuration Manager (SCCM), ensure the host is properly enrolled.
 
 ## Apply the latest Windows Updates and security patches
 
@@ -78,16 +76,15 @@ Before production deployment, apply the latest Windows updates and security patc
 
 Unpatched Windows servers are the **#1 attack vector** for ransomware, remote code execution, and privilege escalation exploits. Applying the latest security updates ensures the BioStar X host starts its lifecycle protected from all **known vulnerabilities**.
 
-
 ### Check current patch level
 
 * Open **Settings** → **Windows Update**, then click **Check for updates** to check the patch status.
 
 * To check the 10 most recently installed patches using PowerShell, run the following command:
 
-   ```powershell title='PowerShell'
-   Get-HotFix | Sort-Object -Descending InstalledOn | Select-Object -First 10
-   ```
+  ```powershell title='PowerShell'
+  Get-HotFix | Sort-Object -Descending InstalledOn | Select-Object -First 10
+  ```
 
 :::caution
 
@@ -99,7 +96,7 @@ If the most recent patch is older than 30 days, update immediately.
 
 1. Run Windows Update manually.
 
-1. Install all security and critical updates.
+2. Install all security and critical updates.
 
    :::note
 
@@ -107,10 +104,9 @@ If the most recent patch is older than 30 days, update immediately.
 
    :::
 
-1. Reboot when required.
+3. Reboot when required.
 
-1. Verify update status — run again until "You're up to date" is displayed.
-
+4. Verify update status — run again until "You're up to date" is displayed.
 
 ### Ongoing patch strategy
 
@@ -120,8 +116,7 @@ If the most recent patch is older than 30 days, update immediately.
 
 * If you can't patch immediately, enable **compensating controls**: firewall restrictions, disable internet access, enhanced monitoring until patched.
 
-
-## Remove or disable unnecessary Windows features 
+## Remove or disable unnecessary Windows features
 
 Every enabled Windows feature increases the server's **attack surface**. Services like Print Spooler, Fax, or IIS are rarely needed on dedicated BioStar X hosts and have a history of critical vulnerabilities (e.g., PrintNightmare).
 
@@ -129,22 +124,21 @@ Every enabled Windows feature increases the server's **attack surface**. Service
 
 1. Open <Start /> → **Server Manager** → **Manage** → **Remove Roles and Features**.
 
-1. Review installed roles (e.g., File Services, IIS, Print Services).
+2. Review installed roles (e.g., File Services, IIS, Print Services).
 
-1. Remove roles not required by BioStar X.
+3. Remove roles not required by BioStar X.
 
-1. Only keep **.NET Framework Features** and **Desktop Experience** if needed by your admin workflow.
+4. Only keep **.NET Framework Features** and **Desktop Experience** if needed by your admin workflow.
 
-1. Open `services.msc` and set unneeded services (e.g., Fax, Remote Registry, Bluetooth, SMBv1) to **Disabled**.
+5. Open `services.msc` and set unneeded services (e.g., Fax, Remote Registry, Bluetooth, SMBv1) to **Disabled**.
 
 :::note
 
-**Best practice**
+**Best Practice**
 
 Keep the host **dedicated** to BioStar X only. No additional workloads.
 
 :::
-
 
 ## Ensure Windows Defender is enabled and up-to-date.
 
@@ -152,18 +146,17 @@ Windows Defender (built-in antivirus) protects against malware and ransomware. D
 
 1. Open **Settings** → **Privacy & security** → **Windows Security** → **Virus & threat protection**.
 
-1. Confirm **Manage settings** → **Real-time protection** is enabled.
+2. Confirm **Manage settings** → **Real-time protection** is enabled.
 
-1. Confirm **Cloud-delivered protection** and **Automatic sample submission** are enabled.
+3. Confirm **Cloud-delivered protection** and **Automatic sample submission** are enabled.
 
-1. Keep Security intelligence (sometimes referred to as definitions) updated. Usually automatic via Windows Update.
+4. Keep Security intelligence (sometimes referred to as definitions) updated. Usually automatic via Windows Update.
 
 :::caution
 
 If using a 3rd party antivirus, ensure only **one antivirus solution** is running to prevent conflicts.
 
 :::
-
 
 ## Enable BitLocker to protect against physical theft {#enableBitLocker}
 
@@ -173,9 +166,9 @@ If an attacker gains physical access to the server (e.g., stolen disk, VM snapsh
 
 * Enable BitLocker on:
 
-   * OS drive (C:)
+  * OS drive (C:)
 
-   * All data drives storing: BioStar X database, logs, and backups
+  * All data drives storing: BioStar X database, logs, and backups
 
 * Use TPM + PIN where possible for stronger protection
 
@@ -183,15 +176,15 @@ If an attacker gains physical access to the server (e.g., stolen disk, VM snapsh
 
 1. Open **Control Panel** → **System and Security** → **BitLocker Drive Encryption**.
 
-1. Click **Turn on BitLocker** for each drive.
+2. Click **Turn on BitLocker** for each drive.
 
-1. Choose authentication method: **TPM** (default) or **TPM + PIN** (recommended).
+3. Choose authentication method: **TPM** (default) or **TPM + PIN** (recommended).
 
-1. Save recovery key: **Active Directory** / **Azure AD** (preferred), or **secure vault** (do NOT store locally).
+4. Save recovery key: **Active Directory** / **Azure AD** (preferred), or **secure vault** (do NOT store locally).
 
-1. Choose encryption mode: **XTS-AES 256-bit** (recommended).
+5. Choose encryption mode: **XTS-AES 256-bit** (recommended).
 
-1. Start encryption.
+6. Start encryption.
 
 ### Monitor BitLocker status
 
@@ -207,14 +200,13 @@ BitLocker protects **data at rest only**. It does NOT replace database encryptio
 
 :::
 
-
 ## Enforce secure authentication policies
 
 Weak local accounts or cached credentials make the server vulnerable to brute-force or privilege escalation.
 
 1. Open **Local Security Policy** (`secpol.msc`).
 
-1. Configure the following **Account Policies** → **Password Policy**:
+2. Configure the following **Account Policies** → **Password Policy**:
 
    * **Minimum password length**: 12+ characters
 
@@ -222,14 +214,13 @@ Weak local accounts or cached credentials make the server vulnerable to brute-fo
 
    * **Maximum password age**: 90 days
 
-1. Configure the following **Account Policies** → **Account Lockout Policy**:
+3. Configure the following **Account Policies** → **Account Lockout Policy**:
 
    * **Account lockout threshold**: 5 attempts
 
-1. Disable or rename default **Administrator** account.
+4. Disable or rename default **Administrator** account.
 
-1. Require multi-factor authentication (MFA) for RDP or remote admin access.
-
+5. Require multi-factor authentication (MFA) for RDP or remote admin access.
 
 ## Enforce Group Policy settings for security baselines
 
@@ -237,18 +228,19 @@ Microsoft's **Security Compliance Toolkit (SCT)** provides downloadable **Group 
 
 1. Download the latest [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319).
 
-1. Select the baseline for your OS version: **Windows Server 2019** or **2022 Security Baseline**.
+2. Select the baseline for your OS version: **Windows Server 2019** or **2022 Security Baseline**.
 
-1. Import baseline GPOs into **Group Policy Management Console (GPMC)**
+3. Import baseline GPOs into **Group Policy Management Console (GPMC)**
 
    Open `gpmc.msc` → Right-click **Group Policy Objects** → Click **Import Settings**.
 
-1. Link the baseline GPO to the **BioStar X server OU** in Active Directory (or apply locally if standalone).
+4. Link the baseline GPO to the **BioStar X server OU** in Active Directory (or apply locally if standalone).
 
-1. Review critical settings: account lockout, audit logging, network security (SMB signing, LDAP signing, disabling NTLM fallback), LSA Protection.
+5. Review critical settings: 
 
-1. **Test in staging first**, confirming BioStar X compatibility and then deploy to production.
+   account lockout, audit logging, network security (SMB signing, LDAP signing, disabling NTLM fallback), LSA Protection.
 
+6. **Test in staging first**, confirming BioStar X compatibility and then deploy to production.
 
 ## Disable Remote Desktop if not required
 

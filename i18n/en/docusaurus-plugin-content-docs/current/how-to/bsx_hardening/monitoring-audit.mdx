@@ -6,11 +6,11 @@ description: Explains how to maintain continuous visibility into the security po
 
 Monitoring and auditing ensure visibility into the security posture of BioStar X. Effective auditing requires enabling logs at the **operating system**, **application**, and **database** levels, centralizing them, and reviewing them regularly.
 
-## Define Logging Policy
+## Define logging policy
 
 Establish a logging policy that specifies what events must be logged, retention periods, and who is responsible for review.
 
-At minimum, log:
+You must log at minimum the following event types:
 
 * Authentication attempts (success/failure)
 
@@ -32,12 +32,11 @@ At minimum, log:
 
 * Open Event Viewer and ensure logging is enabled for: Security, Application, System.
 
-* Configure log size (at least 1GB for Security logs).
+* Configure log size. It is recommended to set the security log to at least 1Gb.
 
 * Set up auditing for the following policies in **Local Security Policy** (`secpol.msc`) → **Local Policies** → **Audit Policy**.
 
-   > Logon events, privilege use, policy change, account logon, object access.
-
+  > Logon events, privilege use, policy change, account logon, object access.
 
 ## Centralized log forwarding and SIEM integration
 
@@ -53,7 +52,6 @@ Encrypt logs in transit (TLS) to prevent interception or tampering.
 
 :::
 
-
 ## Enable application-level auditing
 
 * From BioStar X → <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' />, find <Cmd sid='setting.server.logLevelManagement' product='2' />.
@@ -63,7 +61,6 @@ Encrypt logs in transit (TLS) to prevent interception or tampering.
 * Set permissions so only the BioStar X service account and administrators can access.
 
 * Forward logs to SIEM or central logging solution.
-
 
 ## Enable database auditing
 
@@ -78,7 +75,6 @@ Encrypt logs in transit (TLS) to prevent interception or tampering.
 For more information on enabling database auditing, see <DocLink docId='how-to/bsx_hardening/protect-database-data#enableDatabaseAudit' />.
 
 :::
-
 
 ## Monitor firewall and network activity
 
@@ -95,7 +91,6 @@ For more information on enabling database auditing, see <DocLink docId='how-to/b
 Firewall logs grow quickly — implement log rotation and secure storage.
 
 :::
-
 
 ## Review and alerting
 

@@ -6,7 +6,7 @@ description: Explains how to protect sensitive information stored in the BioStar
 
 BioStar X requires a database to store sensitive information such as user credentials, access logs, and configuration data. Depending on the deployment, either **MariaDB** (11.4) or **Microsoft SQL Server** may be used.
 
-## Enforce Authentication and Access Control
+## Enforce authentication and access control
 
 * Require authentication for all database connections.
 
@@ -46,12 +46,11 @@ SHOW VARIABLES LIKE '%ssl%';
 
 1. Open **SQL Server Configuration Manager**.
 
-1. Go to **SQL Server Network Configuration** → **Protocols for MSSQLSERVER**.
+2. Go to **SQL Server Network Configuration** → **Protocols for MSSQLSERVER**.
 
-1. Enable **Force Encryption**.
+3. Enable **Force Encryption**.
 
-1. Install a trusted certificate on the server.
-
+4. Install a trusted certificate on the server.
 
 ## Encrypt data at rest
 
@@ -78,7 +77,6 @@ CREATE DATABASE ENCRYPTION KEY WITH ALGORITHM = AES_256 ENCRYPTION BY SERVER CER
 ALTER DATABASE biostarx_ac SET ENCRYPTION ON;
 ```
 
-
 ## Enable database auditing {#enableDatabaseAudit}
 
 ### MariaDB
@@ -96,7 +94,6 @@ CREATE SERVER AUDIT BioStarX_Audit TO FILE (FILEPATH = 'C:\AuditLogs\');
 CREATE SERVER AUDIT SPECIFICATION BioStarX_Spec FOR SERVER AUDIT BioStarX_Audit ADD (FAILED_LOGIN_GROUP);
 ALTER SERVER AUDIT BioStarX_Audit WITH (STATE = ON);
 ```
-
 
 ## Backup and secure storage
 
@@ -124,10 +121,9 @@ BioStar X Backup function (manual or scheduled) is unencrypted. BioStar X Restor
 ### SQL Server
 
 ```sql title='SQL'
-BACKUP DATABASE biostarx_db TO DISK = 'D:\backups\biostarx_db.bak'
+BACKUP DATABASE biostarx_db TO DISK = 'D:\backups\biostarx_db.bak' 
 WITH ENCRYPTION (ALGORITHM = AES_256, SERVER CERTIFICATE = MyServerCert);
 ```
-
 
 ## Restrict remote access
 

@@ -16,7 +16,6 @@ This document covers the following:
 
 * Device capabilities may differ depending on the model and firmware version.
 
-
 ## Keep device firmware up to date
 
 Keep Suprema device firmware updated to the latest supported version approved for the customer environment.
@@ -39,19 +38,19 @@ Keep Suprema device firmware updated to the latest supported version approved fo
 
 When possible, perform firmware upgrades through the management software rather than directly from the device.
 
-1. Download the correct firmware file for the target device model in [Suprema Download Center](https://download.supremainc.com/download-center/pages/login.asp).
+1. Download the correct firmware file for the target device model in [Suprema Download Center](https://download.supremainc.com/download-center/pages/login.asp). 
 
-1. Review the release notes and compatibility notes.
+2. Review the release notes and compatibility notes.
 
-1. Confirm that the device is online and communicating normally.
+3. Confirm that the device is online and communicating normally.
 
-1. Back up or confirm synchronization of users, credentials, logs, and device configuration.
+4. Back up or confirm synchronization of users, credentials, logs, and device configuration.
 
-1. Select the target device and run Firmware Upgrade.
+5. Select the target device and run Firmware Upgrade.
 
-1. Wait until the upgrade completes and the device restarts.
+6. Wait until the upgrade completes and the device restarts.
 
-1. Confirm the firmware version after the restart.
+7. Confirm the firmware version after the restart.
 
 Device reconnects to BioStar X; authentication, door control, and event log upload work normally; secure communication and hashkey settings remain as expected.
 
@@ -77,24 +76,23 @@ Some Suprema devices support firmware upgrade by connecting a USB memory device 
 
    :::
 
-1. Connect the USB memory to the device.
+2. Connect the USB memory to the device.
 
-1. When prompted, authenticate using an administrator-level credential.
+3. When prompted, authenticate using an administrator-level credential.
 
-1. Wait for the firmware file to transfer to the device.
+4. Wait for the firmware file to transfer to the device.
 
-1. When instructed, remove the USB memory.
+5. When instructed, remove the USB memory.
 
-1. Wait until the firmware upgrade completes and the device restarts automatically.
+6. Wait until the firmware upgrade completes and the device restarts automatically.
 
-1. Confirm the firmware version and validate device operation.
+7. Confirm the firmware version and validate device operation.
 
 :::caution
 
 A device administrator must be configured before device-side firmware upgrade can proceed. Do not disconnect power during firmware upgrade.
 
 :::
-
 
 ## Device event log retention and protection
 
@@ -128,7 +126,6 @@ Some Suprema devices support **Secure Tamper** behaviour. If tamper protection i
 
 :::
 
-
 ## Configure device administrator
 
 Configure a device administrator on supported Suprema devices and restrict access to the device administrator menu. Devices should not be deployed in production without administrator protection.
@@ -141,7 +138,7 @@ Device administrator privileges are separate from BioStar X user permissions.
 
 :::note
 
-**Best practices**
+**Best Practice**
 
 * Register at least one device administrator before production deployment.
 
@@ -161,30 +158,29 @@ Device administrator privileges are separate from BioStar X user permissions.
 
 1. Log in to BioStar X with an Administrator account.
 
-1. Create or select the user who will act as the device administrator.
+2. Create or select the user who will act as the device administrator.
 
-1. Enrol the required credential (card, PIN, fingerprint, or face).
+3. Enrol the required credential (card, PIN, fingerprint, or face).
 
-1. Assign administrator-level privilege or the appropriate device administrator role.
+4. Assign administrator-level privilege or the appropriate device administrator role.
 
-1. Transfer or synchronize the user to the target device.
+5. Transfer or synchronize the user to the target device.
 
-1. Confirm on the device that the administrator credential can access the admin menu.
+6. Confirm on the device that the administrator credential can access the admin menu.
 
 ### Configure device administrator directly from device
 
 1. Access the device menu.
 
-1. Open the user enrolment or administrator configuration menu.
+2. Open the user enrolment or administrator configuration menu.
 
-1. Enrol the administrator user and credential.
+3. Enrol the administrator user and credential.
 
-1. Assign administrator-level privilege.
+4. Assign administrator-level privilege.
 
-1. Save the configuration.
+5. Save the configuration.
 
-1. Test administrator authentication by accessing the admin menu again.
-
+6. Test administrator authentication by accessing the admin menu again.
 
 ## Device network and local service hardening
 
@@ -198,14 +194,13 @@ Configure device network and local service settings according to the principle o
 
 * Disable device-side features that are not required.
 
-   > e.g., RTSP, IP Intercom
+  > e.g., RTSP, IP Intercom
 
 * If RTSP, intercom, or other optional services are required, configure strong credentials and restrict access to trusted systems only.
 
 * Enable Time Sync where supported.
 
 * After Restore Default or Factory Default, recheck network settings, administrator levels, root certificates, secure communication, and BioStar X connection.
-
 
 ## Device-side operational hardening checklist
 

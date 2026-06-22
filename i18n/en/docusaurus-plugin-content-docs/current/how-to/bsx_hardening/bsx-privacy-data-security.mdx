@@ -38,28 +38,27 @@ When enabled <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' />, the
 
 :::note
 
-**Best Practices**
+**Best Practice**
 
 Generate the key using a **secure random generator**. Store it in a **password vault**. Rotate periodically (e.g., annually) or immediately if compromise is suspected.
 
 :::
 
-### Step by step
+### Step-by-step
 
 1. Log in to BioStar X with an Administrator account.
 
-1. Go to <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.systemSecurity' product='2' />.
+2. Go to <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.systemSecurity' product='2' />.
 
-1. Set <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' /> to <Cmd sid='common.use' product='2' />.
+3. Set <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' /> to <Cmd sid='common.use' product='2' />.
 
-1. Optionally, click <Cmd sid='setting.server.secure.comm.key_change' product='2' /> under <Cmd sid='setting.server.secure.comm.encryption_key_db' product='2' />, enter a new encryption key of **32 characters**.
+4. Optionally, click <Cmd sid='setting.server.secure.comm.key_change' product='2' /> under <Cmd sid='setting.server.secure.comm.encryption_key_db' product='2' />, enter a new encryption key of **32 characters**.
 
 :::caution
 
-Changing the encryption key will **re-encrypt all existing personal data** — schedule during maintenance windows. Losing the encryption key may make encrypted data unrecoverable.
+Changing the encryption key will **re-encrypt all existing personal data**. Schedule during maintenance windows. Losing the encryption key may make encrypted data unrecoverable.
 
 :::
-
 
 ## Store visual face image
 
@@ -71,21 +70,21 @@ Disable  <Cmd sid="settings.expertSettings.detail.storeVisualFaceImageOptionLabe
 
 * Storing images unnecessarily increases legal risk and attack surface.
 
-### Step by step
+### Step-by-step
 
 1. Go to <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid="common.server" product='2' />.
 
-1. Set <Cmd sid="settings.expertSettings.enableOptionLabel" product='2' /> to <Cmd sid="common.use" product='2' />.
+2. Set <Cmd sid="settings.expertSettings.enableOptionLabel" product='2' /> to <Cmd sid="common.use" product='2' />.
 
-1. Under <Cmd sid="settings.expertSettings.detail.title" product='2' />, configure <Cmd sid="settings.expertSettings.detail.storeVisualFaceImageOptionLabel" product='2' />.
+3. Under <Cmd sid="settings.expertSettings.detail.title" product='2' />, configure <Cmd sid="settings.expertSettings.detail.storeVisualFaceImageOptionLabel" product='2' />.
 
-   * Default: <Cmd sid="common.use" product='2' /> 
+   * Default: <Cmd sid="common.use" product='2' />
 
    * Recommended: <Cmd sid="common.notUse" product='2' />
 
 :::note
 
-**Best Practices:**
+**Best Practice**
 
 * Retain only **templates**, not images, for biometric authentication.
 
