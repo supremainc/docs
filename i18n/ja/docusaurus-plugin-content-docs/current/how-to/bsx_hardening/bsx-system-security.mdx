@@ -1,0 +1,575 @@
+---
+id: bsx-system-security
+title: システムセキュリティ
+description: 強力な認証、役割ベースのアクセス制御、暗号化通信、定期バックアップによって、BioStar Xアプリケーション層のセキュリティを強化する方法を案内します。
+---
+
+BioStar Xサーバーのセキュリティを強化した後、次のステップはBioStar Xアプリケーション自体のセキュリティ設定です。 既定の管理者アカウント、弱いパスワード、暗号化されていないデバイス通信は、インフラレベルのセキュリティを回避し、システムへ直接侵入する経路になります。 このドキュメントでは、BioStar Xの認証、役割管理、デバイス暗号化、バックアップ戦略を通じて、アプリケーション層のセキュリティ基準を確立する方法を案内します。
+
+## 既定の管理者IDとパスワードの変更 {#changeDefaultAdmin}
+
+インストール直後に、既定の**Administrator**アカウントのログインID(`admin`)を変更し、強力で固有のパスワードに更新してください。
+
+既定のクレデンシャルは、攻撃者が侵入する最も一般的な経路の1つです。 すべてのBioStar Xインストールには、事前定義されたAdministratorアカウント（UID: 1）が含まれます。変更しない場合、システムは予測しやすくなり、ブルートフォース攻撃や辞書攻撃に非常に脆弱になります。
+
+1. 既定の管理者(`admin`)アカウントでログインします。
+
+2. <Cmd sid='shell.header.user' />に移動します。
+
+3. ユーザー一覧で**Administrator**アカウントをダブルクリックします。
+
+   > ユーザー名: Administrator, UID: 1
+
+4. ユーザー編集ページの<Cmd sid='team.user.permission.title' />セクションで、以下の項目を変更します。
+
+   * <Cmd sid='user.loginId' product='2' />: `admin`を固有で推測しにくいユーザーIDに変更します。 `root`、`system`、または会社名は使用しないでください。
+
+   * <Cmd sid='common.password' product='2' />: 安全なパスワードに変更します。 BioStar Xは既定で**中強度**のパスワードを使用します。 パスワードは8\~32文字で、大文字、小文字、数字をすべて含める必要があります。
+
+5. 画面右上の <Cmd sid='common.save' /> ボタンをクリックします。
+
+6. ログアウト後、**新しいIDとパスワード**で再度ログインします。
+
+:::note
+
+**ベストプラクティス**
+
+* 個人名や単純なパターン（`admin1`、`company2025`）は**使用しないでください**。
+
+* 新しいIDとパスワードは、安全なパスワードマネージャーまたは企業向けパスワード保管庫に保存してください。
+
+* 緊急時用の**補助管理者アカウント**を作成します。
+
+* 管理者ログイン試行に対する**監査ログ**を定期的に確認します。
+
+:::
+
+## アクセス権の分離
+
+BioStar X内で、**フル管理者**、**オペレーター**、**監査者**アカウントに明確に定義された権限を付与し、役割分離を厳格に適用します。
+
+すべての作業を1つの最高管理者アカウントで処理すると、不要なリスクが発生します。 役割を分離すると、次の効果があります。
+
+* 誤った設定によるミスの発生可能性を低減
+
+* 1人のユーザーに無制限の権限を持たせないことで、内部者による脅威を防止
+
+* 役割ごとの責任範囲を明確にし、監査可能性とコンプライアンスを向上
+
+この方法は、ISO 27001、NIST、その他のフレームワークの中核原則である**最小権限**と**職務分離**に通じます。
+
+### インストール後の推奨対応
+
+1. **既定の管理者(`admin`)名の変更とセキュリティ設定**
+
+   既定の管理者(`admin`)アカウントは**緊急時専用アカウント**として管理します。 詳細については、<DocLink inner='#changeDefaultAdmin' />をご参照ください。
+
+2. **名前付き役割アカウントの作成**
+
+   * **フル管理者(Admin)役割**: システム構成と役割管理専用で、信頼できる1\~2人に限定します。
+
+   * **オペレーター(Operator)役割**: ユーザーの追加と削除、出入り口/デバイス制御などの日常運用を担当します。 システムのセキュリティ設定や監査ログへのアクセスはありません。
+
+   * **監査者(Auditor)役割**: ログ、レポート、設定への読み取り専用アクセス権のみを付与します。 システムの主要設定を変更できません。
+
+3. **多要素認証(MFA)の有効化**
+
+   すべての役割アカウントにMFAを適用します。 詳細については、<DocLink inner='#setMfa' />をご参照ください。
+
+4. **カスタム権限アカウントの使用**（必要な場合）
+
+   * <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.account.root' />に移動し、<Cmd sid='setting.account.addCustomOperator' product='2' />ボタンをクリックします。
+
+   * ユーザーグループ、デバイスグループ、出入口グループ、エレベーターグループ、アクセスグループにまたがる詳細なアクセス権を設定します。
+
+   * <Cmd sid='settings.account.menu.setting' product='2' />で、各メニュー項目に対して<Cmd sid='common.editRead' product='2' />または<Cmd sid='common.read' product='2' />権限を選択します。
+
+### カスタム監査者(Auditor)役割の作成例
+
+1. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.account.root' />に移動します。
+
+2. <Cmd sid='setting.account.addCustomOperator' product='2' /> をクリックします。
+
+3. カスタム権限の<Cmd sid='common.name' product='2' />に`Auditor`を入力し、説明を追加します。
+
+4. <Cmd sid='settings.activeDirectory.syncMode.label' product='2' />で、次のように権限を設定します。
+
+   * <Cmd sid='common.permission.module.user' product='2' />: <Cmd sid='common.read' product='2' />
+
+   * <Cmd sid='common.permission.module.monitoring' product='2' />: <Cmd sid='common.read' product='2' />
+
+   * <Cmd sid='common.permission.module.data' product='2' />: <Cmd sid='common.read' product='2' />
+
+   * <Cmd sid='common.permission.module.dashboard' product='2' />: <Cmd sid='common.read' product='2' />
+
+   * <Cmd sid='common.permission.module.setting' product='2' />: 選択しない
+
+5. 指定した監査者アカウントに役割を割り当てるには、画面下部の<Cmd sid='button.apply' product='2' />ボタンをクリックします。
+
+:::note
+
+**ベストプラクティス**
+
+* **個人ごとに固有のアカウント**を割り当て、ログイン情報を共有しないでください。
+
+* 四半期ごとにアカウントの役割を確認し、使用していないアカウントを削除します。
+
+* 名前を変更した既定の管理者アカウントは、緊急時のみ使用します。
+
+:::
+
+## 強力なパスワードポリシーの適用
+
+すべてのユーザーアカウントに強力なパスワードポリシーを適用するようにBioStar Xを設定します。
+
+### パスワードポリシーオプション
+
+* <Cmd sid="setting.server.passwordLevel" product='2' />
+
+  * <Cmd sid="setting.server.passwordLevelDefault" product='2' />：最大32文字まで入力できます。
+
+  * <Cmd sid="setting.server.passwordLevelMedium" product='2' />: パスワードを設定する際は、8\~32文字の英字（大文字または小文字）と数字を組み合わせる必要があります。
+
+  * <Cmd sid="setting.server.passwordLevelStrong" product='2' />: パスワードを設定する際は、10\~32文字の英字（大文字と小文字、少なくとも1文字の大文字を含む）と数字、特殊記号を組み合わせる必要があります。
+
+* <Cmd sid="setting.systemSecurity.passwordUpdateCycle" product='2' />: 1日から180日まで設定できます。
+
+* <Cmd sid="setting.systemSecurity.allowLoginFailed" product='2' />: 設定した回数を超えてパスワードを誤入力すると、制限時間中はログインできません。 既定値は10分間に100回ですが、**15分間に5\~10回に減らすこと**を推奨します。
+
+* <Cmd sid="setting.systemSecurity.allowPasswordChange" product='2' />: ユーザーが1日にパスワードを変更できる回数を制限できます。
+
+### パスワードポリシーの強化
+
+1. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid="setting.systemSecurity" product='2' />に移動します。
+
+2. <Cmd sid='setting.systemSecurity.loginPassword' product='2' />で、次のように設定します。
+
+   * <Cmd sid="setting.server.passwordLevel" product='2' />: <Cmd sid="setting.server.passwordLevelStrong" product='2' />
+
+   * <Cmd sid="setting.systemSecurity.passwordUpdateCycle" product='2' />: 有効化後、**90日**に設定します。
+
+   * <Cmd sid="setting.systemSecurity.allowLoginFailed" product='2' />: 有効化後、**15分間に5回**に設定します。
+
+   * <Cmd sid="setting.systemSecurity.allowPasswordChange" product='2' />: 有効化後、最大**5回**に設定します。
+
+3. 画面右下の<Cmd sid="button.apply" product='2' />をクリックします。
+
+すべてのユーザーに新しいパスワードポリシーを通知します。
+
+## セッションセキュリティ
+
+**メニュー経路**: <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.systemSecurity' product='2' /> → <Cmd sid='setting.systemSecurity.sessionSecurity' product='2' />
+
+各アカウントを一度に1つのアクティブセッションでのみ使用できるようにするには、<Cmd sid="setting.systemSecurity.useSimultaneousConnection" product='2' />を無効にします。
+
+* <Cmd sid="common.active" product='2' />: 同じクレデンシャルで複数のユーザーが同時にログインできます。
+
+* <Cmd sid="common.inactive" product='2' />: 1アカウントにつき1回のログインのみ許可します。 新しいログインが発生すると、以前のセッションは自動的にログアウトされます。
+
+:::caution
+
+* アカウント共有を検知できないと、誰がどの作業を実行したか分かりません。
+
+* 盗まれたクレデンシャルを入手した攻撃者は、正規ユーザーが活動中でも目立たずにログインできます。
+
+* 監査ログは特定ユーザーの作業を追跡できないため、その価値が下がります。
+
+:::
+
+## 多要素認証 (MFA) {#setMfa}
+
+BioStar Xのすべての高権限アカウント（管理者、オペレーター）に指紋認証を追加して、多要素認証を有効にできます。
+
+:::note
+
+**BioStar Xでの動作**
+
+* Suprema BioMiniやBioMini Plus 2などの指紋スキャナーを使用してMFAを実装します。
+
+* ユーザーがログインIDとパスワードを入力すると、システムが指紋スキャンを要求します。
+
+:::
+
+:::caution
+
+* 管理者アカウントでMFAが有効な場合、指紋認証に失敗するとアカウントがロックされることがあります。
+
+* クラウドインターフェース経由のログインではMFAはサポートされません。
+
+* Active Directory、またはサポートされていないサービスを通じて認証されたアカウントには、MFAを有効にできません。
+
+:::
+
+### 手順
+
+1. BioStar XサーバーまたはクライアントPCに指紋スキャナーを接続してインストールします。
+
+2. BioStar Xで<Cmd sid='shell.header.user' />に移動します。
+
+3. ユーザープロファイルを開き、指紋を登録します。
+
+4. <Cmd sid='team.user.permission.title' />セクションで、<Cmd sid='common.fingerprintLogin' product='2' />項目を<Cmd sid='common.use' />に設定します。
+
+5. 変更を適用するには、画面右上の<Cmd sid='common.save' />ボタンをクリックします。
+
+ログアウト後、有効なクレデンシャルを入力し、指紋をスキャンしてログインします。
+
+:::note
+
+**ベストプラクティスと安全対策**
+
+* スキャナーエラーに備えて、別の指で代替指紋を登録します。
+
+* 生体認証デバイスのエラーに備えて復旧できるよう、既定の管理者アカウント（「緊急用」アカウント）をバックアップアカウントとして設定しておきます。
+
+* 多要素認証(MFA)が有効なアカウントを文書化し、復旧メカニズムを維持管理します。
+
+:::
+
+## デバイスとの安全な通信 {#secureComm}
+
+デジタル証明書（TLS/SSL方式）を使用して、BioStar Xと接続されたデバイス間のトラフィックを暗号化するには、<Cmd sid='setting.sever.secure.comm.menu' product='2' />を有効にします。
+
+### オプションA: サーバー生成証明書（既定値）
+
+BioStar Xで証明書を生成し、デバイスに自動的にプロビジョニングします。
+
+:::caution
+
+この機能を無効にしてから再度有効にすると、新しい証明書が生成されるため、デバイスを手動で再設定する必要があります。
+
+:::
+
+### オプションB: 外部証明書（エンタープライズ利用を推奨）
+
+* 組織の証明書チェーンと秘密鍵をアップロードできます。
+
+* エンタープライズPKIとの連携が容易です。
+
+### 手順
+
+1. 管理者アカウントでBioStar Xにログインします。
+
+2. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.systemSecurity' product='2' /> → <Cmd sid='setting.server.secure.comm.title' product='2' />に移動します。
+
+3. <Cmd sid='setting.sever.secure.comm.menu' product='2' />を<Cmd sid='common.use' />に設定します。
+
+4. 外部CA証明書を使用する場合は、<Cmd sid='setting.sever.secure.comm.extcert.menu' product='2' />を<Cmd sid='common.use' />に設定します。
+
+   * ルートCA、公開証明書、秘密鍵をアップロードします。
+
+5. 適用し、デバイスが安全なチャネルで接続されることを確認します。
+
+:::note
+
+**ベストプラクティス**
+
+* 必ず**強力な暗号鍵**（RSA 2048以上、または同等のECC）を使用します。
+
+* デバイス接続方式（ホスト名またはIPアドレス）と一致する適切な**CN/SAN値**を持つ証明書を使用します。
+
+* 有効期限前に証明書を交換し、更新スケジュールを管理します。
+
+:::
+
+:::note
+
+**ログアップロードの注意**
+
+<Cmd sid='setting.server.logUploadType' product='2' />が<Cmd sid='common.manual' product='2' />に設定されている場合、**イベント可視性の遅延**または**監査追跡の欠落**のリスクがあります。 可能であれば、<Cmd sid='setting.server.logUploadType' product='2' />は<Cmd sid='common.auto' product='2' />のままにします。
+
+:::
+
+## デバイスハッシュキーの手動管理
+
+BioStar Xとデバイス間で使用される暗号化キーを手動で制御するには、<Cmd sid="setting.server.secure.comm.data_encryption" product='2' />を有効にする必要があります。 この機能はタンパー防御機能を有効にします。 物理的な改ざんを検知すると、デバイスは重要データを自動的に削除します。
+
+:::important
+
+<DocLink inner='#secureComm' />は転送中のデータを保護しますが、<Cmd sid="setting.server.secure.comm.data_encryption" product='2' />は次の追加機能を提供します。
+
+* **データ暗号化キーは自動生成されず、管理者が管理します。**
+
+* **タンパー防御**機能を有効にします。 デバイスが不正アクセスまたは改ざんを検知すると、保存されたユーザー情報、ログ、暗号化キーを削除します。
+
+:::
+
+:::caution
+
+* **管理者アカウント以外のユーザーがログインパスワードまたはPINを持っている場合、手動キー管理は適用できません**。
+
+* 有効化する前に、そのログイン情報を削除します。
+
+:::
+
+### 手順
+
+1. 管理者アカウントでBioStar Xにログインします。
+
+2. <Cmd sid="shell.header.setting" /> → <Cmd sid="setting.menu.system.root" /> → <Cmd sid="setting.systemSecurity" product='2' /> → <Cmd sid="setting.server.secure.comm.title" product='2' />に移動します。
+
+3. <Cmd sid="setting.server.secure.comm.data_encryption" product='2' />を<Cmd sid="common.use" product='2' />に設定します。
+
+4. 警告ポップアップを読み、確認します。
+
+5. 適用する前に、デバイスから管理者以外のユーザーのパスワード/PINログインをすべて削除します。
+
+6. メッセージが表示されたら、暗号化キーと管理者パスワードを変更します。
+
+7. デバイスが引き続きユーザー、ログ、イベントを同期できることを確認します。
+
+8. キーの変更内容を文書化します（日時、担当管理者、次回変更予定日）。
+
+:::note
+
+**ベストプラクティス**
+
+* デバイスハッシュキーを毎年、または6か月ごとに定期的に変更します。
+
+* すべての変更を記録し、安全な保管場所に保存します。
+
+* 検証用または一時的なデバイスでタンパーイベントをテストします。
+
+* 多層防御（Defense in Depth）のために、<DocLink inner='#secureComm' />と併用します。
+
+:::
+
+## システムバックアップ
+
+**システムバックアップ**機能を使用して、BioStar Xのデータベース、システム設定、キー値を定期的にバックアップします。
+
+:::caution
+
+* BioStar XとMSSQLが別々のサーバーにインストールされている場合、**システムバックアップ/復元**機能は使用できません。
+
+* BioStar Xのバックアップ機能（手動または予約）は**暗号化されません**。
+
+* BioStar Xの復元機能は、暗号化されたバックアップをサポートしません。
+
+:::
+
+### 手動バックアップの設定
+
+**メニュー経路**: <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid="common.backup" product='2' />
+
+* <Cmd sid='backup.filePath' product='2' />: ディレクトリを指定します。 パスは存在している必要があり、適切な書き込み権限が必要です。
+
+* <Cmd sid='backup.numberFileToKeep' product='2' />: 1\~100個まで設定でき、日次予約では少なくとも**7\~10個の循環バックアップ**を保持することを推奨します。
+
+* <Cmd sid='backup.backupNow' product='2' />: 必要に応じてすぐにバックアップを実行します。 アップグレードまたは大きな変更の前に有用です。
+
+### システム自動バックアップ
+
+* <Cmd sid='common.backup.frequency' product='2' />: <Cmd sid="backup.daily" product='2' /> / <Cmd sid="backup.weekly" product='2' /> / <Cmd sid="backup.monthly" product='2' />
+
+* <Cmd sid='backup.time' product='2' />: 時刻を指定します。 BioStar Xのサーバータイムゾーンに合わせて予約が実行されます。
+
+:::note
+
+**ベストプラクティス**
+
+運用環境では、**利用者の少ない時間帯に毎日バックアップ**することを推奨します。
+
+> 例: 現地時間 午前2時
+
+:::
+
+### 自動バックアップの設定
+
+1. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid="common.backup" product='2' />に移動します。
+
+2. <Cmd sid='common.backup.autoBackup' product='2' />を設定します。
+
+   * <Cmd sid='common.backup.frequency' product='2' />: <Cmd sid="backup.daily" product='2' />
+
+   * <Cmd sid='backup.time' product='2' />: 02:00（または利用者が少ない別の時間帯）
+
+   * <Cmd sid='backup.numberFileToKeep' product='2' />: 30
+
+3. <Cmd sid="button.apply" product='2' /> をクリックして設定を保存します。
+
+4. 対象ディレクトリにバックアップファイルが作成されたことを確認します。
+
+5. ステージング環境で**復元手順**を定期的にテストします。
+
+:::caution
+
+サーバーがUPSで保護されていることを確認します。 「進行中」状態が表示されている間は、作業を中断しないでください。 バックアップまたは復元を中断すると、データベースが破損することがあります。
+
+:::
+
+## ディレクトリ連携
+
+ディレクトリ連携により、BioStar Xは**Entra ID（Azure AD）**や**Microsoft Active Directory（AD）**などのエンタープライズIDシステムと接続できます。
+
+* **強化されたセキュリティ**: パスワード規則、多要素認証(MFA)、条件付きアクセスに対するエンタープライズポリシーをBioStar Xに自動適用できます。
+
+* **集中管理**: ユーザーライフサイクルがEntra ID/ADで管理されるため、アカウント失効のリスクが下がります。
+
+* **監査とコンプライアンス**: すべてのユーザー操作が会社アカウントに関連付けられます。
+
+:::info
+
+ディレクトリ連携には**アドバンス**(Advanced)ライセンスが必要です。
+
+:::
+
+:::note
+
+**ベストプラクティス**
+
+* 権限を制限した**専用のEntra ID/ADサービスアカウント**を使用します。
+
+* 同期を**関連グループ**のみに制限します。
+
+* Active Directory接続には常に**LDAPS**を使用します。 
+
+* 同期済みアカウントを定期的に確認し、古い項目がないか点検します。
+
+:::
+
+### Microsoft Entra IDの手順案内
+
+1. 管理者アカウントでBioStar Xにログインします。
+
+2. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.directoryIntegration.root' />に移動します。
+
+3. <Cmd sid='settings.activeDirectory.title' product='2' />で、<Cmd sid='settings.activeDirectory.AdServerNew' product='2' />を選択します。
+
+4. <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' />を設定します。
+
+   * <Cmd sid='settings.activeDirectory.ClientID' product='2' />：**Entra ID** で登録したアプリケーションの **クライアント ID**（**Client ID**）を入力します。
+
+   * <Cmd sid='settings.activeDirectory.ClientSecret' product='2' />：**Entra ID** で登録したアプリケーションの **証明書とシークレット**（**Certificates & secrets**）に追加した **クライアント シークレット**（**Client secrets**）を入力します。
+
+   * <Cmd sid='settings.activeDirectory.PrimaryDomain' product='2' />：**Entra ID** で組織を作成するときに入力した既定のドメイン名を入力します。
+
+5. BioStar Xにユーザーグループ情報を取り込むには、<Cmd sid='settings.activeDirectory.Connect' product='2' />ボタンをクリックします。
+
+6. <Cmd sid='settings.activeDirectory.LogintitleEI' product='2' />を有効にします。
+
+7. <Cmd sid='settings.activeDirectory.RedirectionUri' product='2' />をコピーし、**Entra ID**ポータルのSSOリダイレクト設定に貼り付けます。
+
+8. <Cmd sid='settings.activeDirectory.syncMode.label' product='2' />で、希望する同期方式を選択します。
+
+9. 設定を保存するには、<Cmd sid='button.apply' product='2' /> をクリックします。
+
+ユーザー一覧を確認し、同期が完了したことを点検します。
+
+:::info
+
+* **Entra ID** でアプリケーションを登録する方法は [以下のリンク](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app) を参照してください。
+
+* **Entra ID** で **証明書とシークレット** を設定する方法は [以下のリンク](https://learn.microsoft.com/entra/identity-platform/how-to-add-credentials?tabs=client-secret) を参照してください。
+
+* **テナント ID** は **Entra ID** で登録したアプリケーションの **概要**（**Overview**）で確認できます。
+
+* <Cmd sid='settings.activeDirectory.PrimaryDomain' product='2' /> の情報は **Entra ID** の **概要** (Overview) で確認できます。
+
+  <Image src='/img/biostarx-setting-directory-primary-domain.png' />
+
+:::
+
+### Microsoft Active Directoryの手順案内
+
+1. 管理者アカウントでBioStar Xにログインします。
+
+2. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.directoryIntegration.root' />に移動します。
+
+3. <Cmd sid='settings.activeDirectory.title' product='2' />で、<Cmd sid='settings.activeDirectory.AdServerOld' product='2' />を選択します。
+
+4. <Cmd sid='settings.activeDirectory.ADServerConfiguration' product='2' />を設定します。
+
+   * <Cmd sid='settings.activeDirectory.ServerAddress' product='2' />: ADサーバーのIPアドレスまたはホスト名です。
+
+   * <Cmd sid='settings.activeDirectory.UserName' product='2' /> / <Cmd sid='settings.activeDirectory.Password' product='2' />: ADサービスアカウントのクレデンシャルです。
+
+   * <Cmd sid='settings.activeDirectory.DomainNode' product='2' />: ADドメインの固有名です。
+
+5. 暗号化接続(LDAPS)を使用するには、<Cmd sid='settings.activeDirectory.secureTransfer' product='2' />を有効にします。
+
+   * ADサーバーにAD証明書サービスをインストールします。
+
+   * ルート証明書をエクスポートし、*\.jks*ファイルに変換して、BioStar Xのインストールパスに配置します。
+
+   * BioStar Xで<Cmd sid='settings.activeDirectory.keystorePassword' product='2' />を入力します。
+
+6. BioStar Xにユーザーグループ情報を取り込むには、<Cmd sid='settings.activeDirectory.Connect' product='2' />ボタンをクリックします。
+
+7. <Cmd sid='settings.activeDirectory.userGroup' product='2' />で、不要なグループの選択を解除します。
+
+8. <Cmd sid='settings.activeDirectory.LogintitleAD' product='2' />を有効にします。
+
+9. <Cmd sid='settings.activeDirectory.syncMode.label' product='2' />で、希望する同期方式を選択します。
+
+10. 設定を保存するには、<Cmd sid='button.apply' product='2' /> をクリックします。 
+
+ユーザー一覧を確認し、同期が完了したことを点検します。
+
+## システムログ設定
+
+**メニュー経路**: <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid="common.server" product='2' />
+
+監査と問題解決に必要な十分なデータを保持するように、BioStar Xのログ設定を構成します。
+
+### システムログ保存期間
+
+* <Cmd sid='setting.server.logUploadType' product='2' />: イベントログのアップロード方法を選択します。
+
+  * <Cmd sid='common.auto' product='2' />(既定値): 保存期間が過ぎるとログを自動削除します。
+
+  * <Cmd sid='common.manual' product='2' />: ログを手動で削除する必要があります。
+
+* <Cmd sid='setting.server.logRetainDays' product='2' />: 1\~120日（既定値: 60日）
+
+:::note
+
+**ベストプラクティス**
+
+コンプライアンスが重要な環境では、保存期間を90\~120日に設定し、ログをSIEMに送信します。
+
+:::
+
+### システムログレベルの設定
+
+サブシステム別: デバッグ、ネットワーク、SQL、システム、Web、WebSocket
+
+| レベル | 説明 |
+| --- | --- |
+| トレース | すべての項目をキャプチャ（非常に詳細） |
+| デバッグ | 開発者レベルの詳細ログ |
+| 情報 | 運用イベント、接続成功（多くは既定値） |
+| 警告 | 潜在的な問題 |
+| エラー | 失敗のみ |
+
+:::caution
+
+運用環境で**トレース**または**デバッグ**モードを実行すると、過剰なログが生成され、性能低下やディスク容量不足が発生することがあります。 短期的な問題解決にのみ使用します。
+
+:::
+
+### BioStar X既定のログレベル
+
+* デバッグ、SQL、WebSocket: **無効**
+
+* ネットワーク、システム、Web: **情報**
+
+## サーバーポートの構成
+
+BioStar Xのポートを明示的に設定し、可能なら安全なチャネルを優先します。 システムアクセスには既定のHTTPSポート(`443`)を使用し、デバイス通信ポートは信頼できるネットワークにのみ制限します。
+
+### HTTPSポートの変更
+
+1. <Cmd>BioStar X Service Manager</Cmd>(`http:/127.0.0.1:28088/`)を実行します。
+
+2. 左側のサイドメニューで<Cmd>SERVICE SETTINGS</Cmd>をクリックします。
+
+3. <Cmd>Unified Gateway Service</Cmd>の<Cmd>HTTPS Port</Cmd>（既定値: 443）フィールドに移動します。
+
+4. ポート番号を希望の値に変更します。
+
+   > 例: 8443
+
+5. <Cmd>Apply</Cmd>ボタンをクリックし、必要に応じてサービスを再起動します。
+
+6. 変更したポートに合わせて、ファイアウォールルールとクライアント接続を更新します。

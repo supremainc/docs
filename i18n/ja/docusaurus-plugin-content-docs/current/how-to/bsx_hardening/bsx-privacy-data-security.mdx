@@ -1,0 +1,95 @@
+---
+id: bsx-privacy-data-security
+title: 個人データセキュリティ
+description: データベースの暗号化とバイオメトリクスの最小限の保存で、BioStar Xの個人データとバイオメトリクスを保護する方法を案内します。
+---
+
+BioStar Xは、ユーザーCredential、バイオメトリックテンプレート、個人識別情報を保存します。 データベースが暗号化されていない場合、侵害時にこれらの情報が平文で公開され、ID盗用、法的責任、規制違反につながる可能性があります。 この文書では、個人情報データベースの暗号化を有効にし、バイオメトリック画像の保存を最小限にして、機密データを保護する方法を案内します。
+
+## 個人情報データベース暗号化
+
+すべての機密ユーザー情報とCredential情報を暗号化して保存するには、<Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' />を有効にします。
+
+### 暗号化データの範囲
+
+<Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' />を有効にすると、次の項目がデータベースに保存される際に暗号化されます。
+
+* プロフィール画像
+
+* ユーザーID、名前、電話番号、ユーザーIPアドレス、メールアドレス
+
+* ログインIDおよびログインパスワード
+
+* 顔テンプレート、指紋テンプレート
+
+* カードID、スマートカードレイアウトキー
+
+* ユーザーおよび訪問者のカスタム情報
+
+* イメージログファイル
+
+### 個人情報DB暗号化キー
+
+* <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' />を<Cmd sid='common.use' product='2' />に設定すると構成できます。
+
+* キーは、文字、数字、記号を組み合わせた**32文字**で構成する必要があります。
+
+* キーを変更すると、既存データがすべて再暗号化されます。
+
+:::note
+
+**ベストプラクティス**
+
+**安全な乱数生成器**を使用してキーを生成し、**Password Vault**に保存します。 定期的に変更するか、侵害が疑われる場合は直ちに暗号化キーを変更します。
+
+:::
+
+### 手順
+
+1. 管理者アカウントでBioStar Xにログインします。
+
+2. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.system.root' /> → <Cmd sid='setting.systemSecurity' product='2' />に移動します。
+
+3. <Cmd sid='setting.sever.secure.comm.encrypt.db' product='2' />を<Cmd sid='common.use' product='2' />に設定します。
+
+4. 必要に応じて、<Cmd sid='setting.server.secure.comm.encryption_key_db' product='2' />で<Cmd sid='setting.server.secure.comm.key_change' product='2' />ボタンをクリックし、新しい暗号化キーを**32文字**入力します。
+
+:::caution
+
+暗号化キーを変更すると、**既存のすべての個人データが再暗号化されます**。 保守期間中に変更作業を予約します。 暗号化キーを紛失すると、暗号化されたデータを復旧できません。
+
+:::
+
+## 顔画像の保存
+
+顔画像の保持が必要な厳格な運用要件がない限り、<Cmd sid="settings.expertSettings.detail.storeVisualFaceImageOptionLabel" product='2' />機能を無効にします。
+
+* **テンプレート** vs **画像**: テンプレートはバイオメトリックデータの数学的表現であり、逆追跡で顔を特定しにくくなります。
+
+* GDPR、PDPAなど、多くの個人情報保護規制では、バイオメトリック画像を非常に機密性の高いデータとして扱います。
+
+* 画像を不要に保存すると、法的リスクと攻撃の可能性が高まります。
+
+### 手順
+
+1. <Cmd sid='shell.header.setting' /> → <Cmd sid='setting.menu.server.root' /> → <Cmd sid="common.server" product='2' />に移動します。
+
+2. <Cmd sid="settings.expertSettings.enableOptionLabel" product='2' />を<Cmd sid="common.use" product='2' />に設定します。
+
+3. <Cmd sid="settings.expertSettings.detail.title" product='2' />で<Cmd sid="settings.expertSettings.detail.storeVisualFaceImageOptionLabel" product='2' />を設定します。
+
+   * 既定値: <Cmd sid="common.use" product='2' />
+
+   * 推奨設定: <Cmd sid="common.notUse" product='2' />
+
+:::note
+
+**ベストプラクティス**
+
+* バイオメトリック認証には、画像ではなく**テンプレート**のみを保存します。
+
+* 監査目的で画像が必要な場合は、厳格なアクセス制御と短い保存期間（30\~60日）を適用し、**別のセキュアストレージ**に保存します。
+
+* アップグレード後、設定が既定値に戻っていないか定期的に確認します。
+
+:::

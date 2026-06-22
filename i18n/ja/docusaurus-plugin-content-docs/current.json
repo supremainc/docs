@@ -510,5 +510,21 @@
   "sidebar.biostar_air.category.파트너 기술자 관리하기": {
     "message": "パートナー技術者の管理",
     "description": "The label for category '파트너 기술자 관리하기' in sidebar 'biostar_air'"
+  },
+  "sidebar.bsx_hardening.category.BioStar X 보안 강화": {
+    "message": "BioStar Xのセキュリティ強化",
+    "description": "The label for category 'BioStar X 보안 강화' in sidebar 'bsx_hardening'"
+  },
+  "sidebar.bsx_hardening.category.서버 보안 강화": {
+    "message": "サーバーのセキュリティ強化",
+    "description": "The label for category '서버 보안 강화' in sidebar 'bsx_hardening'"
+  },
+  "sidebar.bsx_hardening.category.BioStar X 강화": {
+    "message": "BioStar Xの強化",
+    "description": "The label for category 'BioStar X 강화' in sidebar 'bsx_hardening'"
+  },
+  "sidebar.howto.link.BioStar X 보안 강화": {
+    "message": "BioStar Xのセキュリティ強化",
+    "description": "The label for link 'BioStar X 보안 강화' in sidebar 'howto', linking to 'bsx_hardening/'"
   }
 }
