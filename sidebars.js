@@ -1124,7 +1124,7 @@ function createSidebars(preview) {
           type: 'doc',
           id: 'how-to/master-admin',
           className: 'ce--only'
-        }
+        },
         {
           type: 'link',
           label: 'BioStar X 보안 강화',
