@@ -19,7 +19,6 @@ date: 2026-06-30T09:00
 
 * [ViOnyx 웹 서버 사용 설명서](../device/vionyx_webserver/)
 
-
 ## Platform
 
 ### BioStar X
@@ -46,11 +45,11 @@ date: 2026-06-30T09:00
 
 ### 장치 업데이트
 
-* [BioStation 3](../device/biostation_3/): 틸팅 브래킷 설치 안내 및 마스터 관리자 관련 내용 업데이트
+* [BioStation 3](../device/biostation_3/installation): 틸팅 브래킷 설치 안내 및 마스터 관리자 관련 내용 업데이트
 
 * [X-Station 2](../device/xstation_2/): 인증 방식, 설치, 제품 사양, 규제 인증 정보 업데이트
 
-* [BioStation 2a](../device/biostation_2a/): 설치 관련 내용 업데이트
+* [BioStation 2a](../device/biostation_2a/installation): 설치 관련 내용 업데이트
 
 * [BioLite N2](../device/biolite_n2/): 설치 방법 및 규제 인증 정보 업데이트
 
@@ -60,7 +59,7 @@ date: 2026-06-30T09:00
 
   * [XPass D2](../device/xpass_d2/product-specifications)
 
-  * [BioEntry W3](../device/bioentry_w3/product-specifications):
+  * [BioEntry W3](../device/bioentry_w3/product-specifications)
 
 ### 릴리스 노트
 
