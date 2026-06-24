@@ -760,7 +760,7 @@ details.deviceInfo summary, details.faq summary {
 }
 
 .doc-content img[src*='component-device-sio2'] {
-  width: 300px !important;
+  width: 200px !important;
 }
 
 .doc-content .container {
