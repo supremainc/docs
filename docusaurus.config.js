@@ -107,10 +107,6 @@ const config = {
             'common/**.{md,mdx}',
             '_unused/**.{md,mdx}',
             '**/_*.{md,mdx}',
-            ...(!isPreview ? [
-              'device/vionyx/**/**.{md,mdx}',
-              'device/vionyx_webserver/**/**.{md,mdx}',
-            ] : []),
           ],
           remarkPlugins: [[remarkCmd, { locale: locale || 'ko' }]],
           rehypePlugins: [ rehypeExtendedTable ],
@@ -279,25 +275,23 @@ const config = {
               }
             ]
           },
-          ...(!isPreview ? [] : [
-            {
-              type: 'dropdown',
-              label: 'AI Cameras',
-              position: 'right',
-              items: [
-                {
-                  type: 'doc',
-                  label: 'ViOnyx',
-                  docId: 'device/vionyx/index'
-                },
-                {
-                  type: 'doc',
-                  label: 'ViOnyx Web Server',
-                  docId: 'device/vionyx_webserver/index'
-                },
-              ]
-            }
-          ]),
+          {
+            type: 'dropdown',
+            label: 'AI Cameras',
+            position: 'right',
+            items: [
+              {
+                type: 'doc',
+                label: 'ViOnyx',
+                docId: 'device/vionyx/index'
+              },
+              {
+                type: 'doc',
+                label: 'ViOnyx Web Server',
+                docId: 'device/vionyx_webserver/index'
+              },
+            ]
+          },
           {
             type: 'dropdown',
             label: 'Devices',
