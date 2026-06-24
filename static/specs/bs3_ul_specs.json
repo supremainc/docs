@@ -433,9 +433,8 @@
               }
             },
             "poe_plus": {
-              "label": "PoE+: IEEE 802.3at compliant, 44-57 VDC Max. 600 mA",
-              "annotation_label": "anno6",
-              "value": ["BS3-DB: Not supported", "BS3-APWB: Supported"]
+              "label": "PoE+<sup id='anno6_dest'><a href='#anno6'></a></sup>",
+              "value": ["IEEE 802.3at compliant, 44-57 VDC Max. 600 mA", "BS3-DB: Not supported", "BS3-APWB: Supported"]
             }
           }
         },
