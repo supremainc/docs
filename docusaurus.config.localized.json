@@ -23,16 +23,16 @@
     "ja": "<b>このドキュメントには、まだサービスバージョンにリリースされていないコンテンツが含まれています。公式にリリースされた機能のドキュメントについては、<a href='https://docs.supremainc.com/en/' target='_blank'>次のリンク</a>をご覧ください。</b>",
     "es": "<b>Este documento contiene contenido que aún no se ha lanzado a la versión de servicio. Para obtener documentación sobre funciones oficialmente lanzadas, consulte <a href='https://docs.supremainc.com/en/' target='_blank'>los siguientes</a> enlaces.</b>"
   },
-  "hardeningGuideDescription": {
-    "ko": "BioStar X 시스템과 장치의 보안을 강화하기 위한 모범 사례와 권장 사항을 제공합니다.",
-    "en": "Provides best practices and recommendations for hardening BioStar X systems and devices.",
-    "ja": "BioStar Xシステムとデバイスのセキュリティを強化するためのベストプラクティスと推奨事項を提供します。",
-    "es": "Proporciona mejores prácticas y recomendaciones para fortalecer los sistemas y dispositivos BioStar X."
-  },
   "remarkRehypeOptions_footnotes": {
     "ko": "각주",
     "en": "Footnotes",
     "ja": "脚注",
     "es": "Notas al pie"
+  },
+  "hardeningGuideDescription": {
+    "ko": "BioStar X 시스템과 장치의 보안을 강화하기 위한 모범 사례와 권장 사항을 제공합니다.",
+    "en": "Provides best practices and recommendations for hardening BioStar X systems and devices.",
+    "ja": "BioStar Xシステムとデバイスのセキュリティを強化するためのベストプラクティスと推奨事項を提供します。",
+    "es": "Proporciona mejores prácticas y recomendaciones para fortalecer los sistemas y dispositivos BioStar X."
   }
 }

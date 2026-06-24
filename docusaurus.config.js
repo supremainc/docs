@@ -158,8 +158,6 @@ const config = {
     ]
   ],
   plugins: [
-    // Redocusaurus Prism 주입 문제 해결 플러그인
-    [ './src/plugins/fix-prism', {} ],
     // MSAL 인증 플러그인은 프로덕션 환경에서만 활성화
     ...(!isDev && isPreview ? [['./src/plugins/msal-auth', {}]] : []),
     [ 'docusaurus-plugin-sass', {} ],
@@ -539,7 +537,7 @@ const config = {
         copyright: getLocalizedConfigValue('copyright'),
       },
       prism: {
-        additionalLanguages: [ 'powershell', 'bash', 'sql', 'ini', 'javascript', 'go', 'python', 'java' ],
+        additionalLanguages: [ 'powershell', 'bash', 'javascript', 'go', 'python', 'java', 'sql', 'ini' ],
         theme: prismThemes.github,
         darkTheme: prismThemes.vsDark,
       },
@@ -565,8 +563,7 @@ const config = {
           ],
           snippetEllipsisText: '…'
         }
-      }
-    })
-};
+      },
+    })};
 
 export default config;
