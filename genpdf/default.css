@@ -763,6 +763,18 @@ details.deviceInfo summary, details.faq summary {
   width: 200px !important;
 }
 
+.doc-content img[src*='component-device-fsf2'] {
+  width: 100px !important;
+}
+
+.doc-content img[src*='component-wall-bracket-fsf2'] {
+  width: 100px !important;
+}
+
+.doc-content img[src*='component-drilling-template-fsf2'] {
+  width: 100px !important;
+}
+
 .doc-content .container {
   max-width: 100%;
   width: 100%;
