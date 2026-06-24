@@ -759,6 +759,10 @@ details.deviceInfo summary, details.faq summary {
   width: 67px !important;
 }
 
+.doc-content img[src*='component-device-sio2'] {
+  width: 300px !important;
+}
+
 .doc-content .container {
   max-width: 100%;
   width: 100%;
