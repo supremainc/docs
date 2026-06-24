@@ -5,7 +5,7 @@ title: 펌웨어 버전 1.0.5
 
 # 펌웨어 버전 1.0.5 (빌드 번호 1.0.5_260616)
 
-릴리즈<Separator/>2026-06-18
+릴리즈<Separator/>2026-06-24
 
 :::caution
 
@@ -19,7 +19,10 @@ title: 펌웨어 버전 1.0.5
 
 ---
 
-(CS20FW-278) [BDP-1031] CoreStation Setup Manager 개선 – Phase 2 (Device ID 변경, SCB Key 설정 및 백업, 복원)
+1. 신규 장치 연결 지원
+
+   - XPass Q2
+
 1. CoreStation Setup Manager 기능 개선
 
    - SCB 키 수동 입력 설정 지원
@@ -30,40 +33,7 @@ title: 펌웨어 버전 1.0.5
 
    - 전반적인 폰트 크기 및 UI 개선
 
-1. Improved CoreStation Setup Manager features
-
-   - Supported manual configuration of SCB Keys.
-
-   - Supported backup and restoration of network information (Device ID, SCB Keys, etc.).
-
-   - Improved the ability to transfer existing settings when replacing the CoreStation.
-
-   - Improved the overall font sizes and UI.
-
-(CS20FW-265) [FISF-2438] [BES-3681] DST 적용 시 Schedule(Daily)에 따른 Access Group 인증 성공 이상 동작 - 발생버전: V1.0.0
-1. 일광절약시간(DST) 적용 시 출입 그룹 인증이 스케줄에 따라 비정상적으로 작동하는 문제 <Badge>1.0.0</Badge>
-1. Access group authentication behaves abnormally according to the schedule (Daily) when DST is applied. <Badge>1.0.0</Badge>
-
-(CS20FW-297) [Setup Manager] Q2가 Unknown으로 표시되는 현상
-(CS20FW-297) [Setup Manager] XPQ2 지원
-1. 신규 장치 연결 지원
-   - XPass Q2
-1. Supports new device.
-   - XPass Q2
-
-(CS20FW-306) 장치에서 Alarm 발생 중에 Clear Alarm 시도해도 alarm이 정지되지 않음 - 발생버전: V1.0.0
-1. 장치에서 발생한 알람을 해제할 때, 알람이 정상적으로 해제되지 않는 문제 <Badge>???</Badge>
-1. Alarms failing to clear properly when attempting to clear alarm on a device. <Badge>???</Badge>
-
-(CS20FW-314) [Setup Manager] 로그인 관련 오동작 - 발생버전: V1.0.3
-1. CoreStation Setup Manager 로그인 시, 일시적으로 페이지 접속이 실패하거나 연결이 지연되는 문제 <Badge>1.0.3</Badge>
-1. Temporary page access failure or connection delays when logging in to CoreStation Setup Manager. <Badge>1.0.3</Badge>
-
-(CS20FW-316) 카메라 QR 라이선스 적용 시 바이오스타 UI상 "활성화된 수" 미표시 되도록 수정필요 - 발생버전: V1.0.0
-1. 
-
-(CS20FW-318) [BSF-2963] mac error시 disconnect log를 남기지 않도록 개선 - 발생버전: V1.0.0
-1. 
+1. 카메라 QR 라이선스 적용 시 '활성화된 수'가 표시되지 않도록 UI 개선
 
 ## 버그 수정
 
@@ -71,6 +41,14 @@ title: 펌웨어 버전 1.0.5
 
 <BugLists>
 
-(CS20FW-334) DI24 하위로 연결된 D2에 SM옵션 설정된 상태에서 EV1카드 리드시 1:1인증실패(카드)로 동작하는 문제 - 발생버전: V1.0.3
+1. 일광절약시간(DST) 적용 시 출입 그룹 인증이 스케줄에 따라 비정상적으로 작동하는 문제 <Badge>1.0.0</Badge>
+
+1. 장치에서 발생한 알람을 해제할 때, 알람이 정상적으로 해제되지 않는 문제 <Badge>1.0.0</Badge>
+
+1. CoreStation Setup Manager 로그인 시, 일시적으로 페이지 접속이 실패하거나 연결이 지연되는 문제 <Badge>1.0.3</Badge>
+
+1. RS-485 슬레이브 장치 연결 시 간헐적으로 연결이 끊기고 로그가 과다하게 기록되는 문제 <Badge>1.0.0</Badge>
+
+1. 슬레이브로 연결된 장치에 보안 메시징(Secure Messaging) 옵션 설정 후 EV1 카드 인증 시, 인증 실패 사유가 올바르지 않게 표시되는 문제 <Badge>1.0.3</Badge>
 
 </BugLists>
