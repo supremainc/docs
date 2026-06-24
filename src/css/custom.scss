@@ -1785,9 +1785,14 @@ footer {
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   main .search-pop-trigger {
     width: 70%;
+  }
+  .theme-layout-navbar-right {
+    > .navbar__link {
+      display: none;
+    }
   }
 }
 
