@@ -39,10 +39,10 @@
                   "label": "매칭 속도",
                   "label_id": "specs.credentials.biometrics.face.matching_speed",
                   "value": {
-                    "ko": "0.3초 이내",
-                    "en": "Within 0.3 seconds",
-                    "es": "En un plazo de 0.3 segundos",
-                    "ja": "0.3 秒以内"
+                    "ko": "0.2초 이내",
+                    "en": "Within 0.2 seconds",
+                    "es": "En un plazo de 0.2 segundos",
+                    "ja": "0.2 秒以内"
                   }
                 },
                 "live_face_detection": {
