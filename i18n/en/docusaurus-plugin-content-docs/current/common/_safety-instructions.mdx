@@ -110,6 +110,12 @@ Used to provide notes or additional information while using the product.
 
 * May cause fire or electric shock.
 
+<Include type={props.type} ref='biolite_n2_ul'>
+
+**Do not connect to receptacle controlled by a switch**.
+
+</Include>
+
 {/* ViOnyx 전용 */}
 
 <Include product='vionyx'>
@@ -174,7 +180,13 @@ Used to provide notes or additional information while using the product.
 
 </Xclude>
 
-<Xclude product='extendedmodule,extendedmodule_sc'>
+<Include type={props.type} ref='biostation_3_ul,xpass_2_ul'>
+
+**The product is powered by Class 2 Power supply with 12 VDC or 24 VDC; or by UL 62368-1 listed PoE Power Source Equipment (PSE)**.
+
+</Include>
+
+<Xclude product='extendedmodule,extendedmodule_sc' type={props.type} ref='biolite_n2_ul'>
 
 **Use a power adapter that has IEC/EN 62368-1 approval and is rated above the power consumption of the terminal device**. **It is recommended to use the power adapters sold by Suprema**.
 
@@ -183,6 +195,16 @@ Used to provide notes or additional information while using the product.
 * Refer to the [Power](product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
 
 </Xclude>
+
+<Include type={props.type} ref='biolite_n2_ul'>
+
+**Use the UL 60950-1/UL 62368-1 and UL 294, or equivalent LSS standard that includes supply line transient testing, approved power adapter that supports higher power consumption than the product**.
+
+* Using an unsuitable power supply may cause devices to malfunction.
+
+* Refer to the [Power](product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
+
+</Include>
 
 {/* SIO2 연결 가능한 제품만 적용 */}
 
@@ -199,6 +221,24 @@ Used to provide notes or additional information while using the product.
 **Ensure that Secure I/O 2, electric lock (electronic locking device), and access control devices use separate power supplies**.
 
 * Devices may malfunction.
+
+</Include>
+
+<Include type={props.type} ref='securemodule_ul,xpass_d2_ul'>
+
+**The product is powered by Class 2 Power supply with 12 VDC**.
+
+</Include>
+
+<Include type={props.type} ref='biostation_3_ul'>
+
+**For PoE / PoE+, the maximum distance from PSE is 100 meters or 328 feet**.
+
+</Include>
+
+<Include type={props.type} ref='xpass_2_ul'>
+
+**For PoE, the maximum distance from PSE is 100 meters or 328 feet**.
 
 </Include>
 
@@ -256,7 +296,7 @@ Used to provide notes or additional information while using the product.
 
 <Include product='vionyx'>
 
-**Connect via PoE+ power. The default recommended specification is PoE+.**
+**Connect via PoE+ power. The default recommended specification is PoE+**.
 
 * When using standard PoE, IR LED output may be limited depending on system power consumption.
 
@@ -284,7 +324,7 @@ Used to provide notes or additional information while using the product.
 
 ---
 
-<Xclude product='vionyx,extendedmodule,extendedmodule_sc'>
+<Xclude product='vionyx,extendedmodule,extendedmodule_sc' type={props.type} ref='biostation_3_ul,xpass_2_ul'>
 
 <PageBreak />
 

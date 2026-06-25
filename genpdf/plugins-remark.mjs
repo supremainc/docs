@@ -324,29 +324,33 @@ function processIncludeXcludeRecursive(node, products, typeFilter = '', docId = 
       let shouldKeepChildren = false;
       let shouldRemove = false;
 
-      // Check product-based filter
-      let productMatches = true;
+      // Check each condition independently (OR logic matching component behavior)
+      // If any condition matches, filtersMatch = true
+      let filtersMatch = false;
+      let hasAnyFilter = false;
+
       if (productList.length > 0) {
-        // If product attribute is specified, check if any product matches
-        productMatches = products.length === 0 || productList.some(p => products.includes(p));
+        hasAnyFilter = true;
+        if (products.length === 0 || productList.some(p => products.includes(p))) {
+          filtersMatch = true;
+        }
       }
 
-      // Check ref-based filter
-      let refMatches = true;
-      if (refList.length > 0 && typeValue) {
-        // If both type and ref are specified, check if typeValue matches any ref
-        refMatches = refList.includes(typeValue);
-      }
-
-      // Check pages-based filter (document ID matching)
-      let pagesMatches = true;
       if (pagesList.length > 0) {
-        // If pages attribute is specified, check if docId matches any pages value
-        pagesMatches = docId && pagesList.includes(docId);
+        hasAnyFilter = true;
+        if (docId && pagesList.includes(docId)) {
+          filtersMatch = true;
+        }
       }
 
-      // Combine filters with AND logic: all specified filters must match
-      const filtersMatch = productMatches && refMatches && pagesMatches;
+      if (refList.length > 0 && typeValue) {
+        hasAnyFilter = true;
+        if (refList.includes(typeValue)) {
+          filtersMatch = true;
+        }
+      }
+
+      if (!hasAnyFilter) filtersMatch = true;
 
       if (isInclude) {
         // Include: keep children if all filters match
@@ -395,7 +399,8 @@ function processIncludeXcludeRecursive(node, products, typeFilter = '', docId = 
  * 1. product attribute: matches if product is in productOption
  * 2. type and ref attributes: matches if typeFilter matches any ref value
  * 3. pages attribute: matches if docId matches any pages value
- * 4. Multiple specified: matches if ALL conditions are true (AND logic)
+ * 4. Multiple specified: matches if ANY condition is true (OR logic)
+ *    - product is checked first; if it doesn't match, type&&ref is evaluated next
  */
 export function remarkProcessIncludeXclude(productOption = '', typeFilter = '', docId = '') {
   return (tree) => {

@@ -52,9 +52,9 @@
 
 <Include product='bioentry_w2'>
 
-* The power supply of the device must use an external 12VDC Listed Class 2 power supply or a UL294B PoE power supply.
+* The unit is powered by external Listed Class 2 power supply with 12VDC or by Listed to UL294B PoE power source.
 
-* To satisfy ULC S319, connect the 'PSC-100A' power supply and the 'Casil CA 1270' battery.
+* For ULC S319 compliance, connect PSC-100A power supply and Casil CA 1270 battery.
 
 </Include>
 
@@ -76,9 +76,21 @@
 
 </Include>
 
+<Include type={props.type} ref='biolite_n2_ul'>
+
+* Use the UL 60950-1/UL 62368-1 and UL 294, or equivalent LSS standard that includes supply line transient testing, approved power adapter that supports higher power consumption than the product. If you wish to connect and use another device to the power supply adapter, you should use an adapter with a current capacity which is the same or larger than the total power consumption required for the terminal and another device.
+
+  * Refer to the [Power](product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
+
+</Include>
+
+<Xclude type={props.type} ref='biolite_n2_ul'>
+
 * Use the IEC/EN 62368-1 approved power adapter that supports higher power consumption than the product. If you wish to connect and use another device to the power supply adapter, you should use an adapter with a current capacity which is the same or larger than the total power consumption required for the terminal and another device.
 
   * Refer to the [Power](product-specifications#specs.power) in the product specifications for maximum current consumption specifications.
+
+</Xclude>
 
 <Xclude product='corestation_20,corestation_40,doorinterface,inputmodule,outputmodule,securemodule'>
 
@@ -182,7 +194,7 @@
 
 * The minimum conductor gauge that can be connected between PSE or power injector and PD is 26 AWG (0.13 mm2) for patch cables. For horizontal or riser cables, the minimum conductor gauge is 24 AWG (0.21 mm2).
 
-* When providing power via PoE, UL294B or UL294 8th Edition must be complied with.
+* When the product is powered via PoE, it must be either UL294B or UL294 8th Ed. compliant source.
 
 * Compliance with IEEE 802.3 (at or af) specifications does not count as part of this requirement.
 
