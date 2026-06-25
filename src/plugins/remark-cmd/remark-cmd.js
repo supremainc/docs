@@ -85,6 +85,9 @@ function resolveText(data, sid, product, deviceName, replace) {
         text = raw.replace('<br/>', '');
       }
     }
+  } else if (product === 'clue') {
+    const raw = data.clue[sid];
+    if (raw) text = raw.replace('<br/>', '');
   } else {
     const raw = data.x[sid];
     if (raw) text = raw.replace('<br>', '').replace('{{value}}', 'N');
@@ -163,6 +166,7 @@ function remarkCmd(options = {}) {
     device:  load(`device/${locale}.json`,   'device/en.json'),
     air:     load(`air/${locale}.json`,      'air/en.json'),
     cam:     load(`cam/${locale}.json`,      'cam/en.json'),
+    clue:    load(`clue/${locale}.json`,     'clue/en.json'),
     partner: load(`partner/${locale}.json`,  'partner/en.json'),
     code:    loadJson(path.join(i18nDir, locale, 'code.json')),
   };

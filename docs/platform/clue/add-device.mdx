@@ -1,0 +1,118 @@
+---
+id: add-device
+title: 장치 추가하기
+description: 슈프리마 CLUe 시스템에 장치 추가 방법을 안내합니다.
+---
+
+:::info
+
+**Registering a device in the CLUe system can only be done by the Branch Admin**.
+
+For Admins of disti or place groups, they can allocate or edit devices within their group that have been assigned by the Branch Admin.
+
+:::
+
+## Before Start!
+
+Devices must be in a state where they have been assigned a CLUe certificate to be added.
+
+In other words, devices equipped with certificates through Suprema production or those provided with certificates separately upon request to Suprema headquarters can be searched and added to the system.
+
+The device addition feature in Clue is designed with the following goal:
+
+* To allow devices to be added remotely and assigned to a place without opening the box.
+
+* To enable the addition of devices without the need for any additional identification methods.
+
+As a result, the system supports registration using the device's unique serial number (SN) and restricts registration to Branch Admins or higher roles.
+
+This restriction is in place to prevent indiscriminate device registration by lower-level dealerships or channels and to avoid devices being registered for other customers.
+
+## Add Device as Branch Admin
+
+1. Move to Branch → Settings.
+
+   <Image src='/img/clue/add-device-settings.png' />
+
+1. Go to Device tap
+
+   <Image src='/img/clue/add-device-go-device-tap.png' />
+
+1. Enter a device SN to the add device field and click “Add”
+
+   <Image src='/img/clue/add-device-enter-id.png' />
+
+1. Then, the device shows up in the device list.
+
+   <Image src='/img/clue/add-device-list.png' />
+
+1. Click any of none filed to turn on Edit mode and select a place to assign.
+
+   <Image src='/img/clue/add-device-list-set-place.png' />
+
+1. Then, click <IcCheck title='confirm' /> button to apply.
+
+1. Place allocation is finished. Now, you can click each field and move to a place to set up the device and door.
+
+   <Image src='/img/clue/add-device-complete.png' />
+
+## Assign Device as Disti Admin
+
+1. Move to Disti → Settings.
+
+   <Image src='/img/clue/assign-device-settings.png' />
+
+1. Move to Device Tap
+
+   <Image src='/img/clue/assign-device-device-list.png' />
+
+   :::note
+
+   From the disti level, branch admins can allocate devices assigned to them to sub-place groups or individual places. If the device you need to register is not visible in the list, please contact the relevant Suprema branch or headquarters.
+
+   :::
+
+1. Click the place group or place and select “edit” to assign to a place group or a place.
+
+   <Image src='/img/clue/assign-device-device-list-edit.png' />
+
+   :::note
+
+   When the device is deleted, it’s automatically going back to the branch level device list as non-assigned device. If you delete it by accident, please ask the branch admin to reassign.
+
+   :::
+
+1. After allocation, it’s recommened to move to a place and add a door.
+
+   <Image src='/img/clue/assign-device-device-list-move.png' />
+
+:::info
+
+Please note that the disti level admin cannot see the user and monitoring tap as default following to privacy policy. If needed, please ask the place group/place admin to invite you to access them.
+
+:::
+
+## Assign Device as Place Group Admin
+
+1. Move to Disti → Settings.
+
+1. Move to Device Tap
+
+1. Click a place column and select a edit and assign a device to a place
+
+1. After allocation, it’s recommened to move to a place and add a door.
+
+
+## Test Place Setting (Branch Admin Only)
+
+Since subscription is based on the number of devices, it is necessary to distinguish test devices to exclude them from total.
+
+To address this, the system allows Branch Admins or higher roles to designate a space as a "test place" in the place settings.
+
+1. Move to Place Settings → Basic
+
+1. Click Setting of Test Date and set test period.
+
+   - With custom setting, there’s no limit. You can set up to 9999.12.31 23:59
+
+1. Once it’s set, you can check the test device in red color with its total number info

@@ -26,6 +26,36 @@ const isPreview = process.env.CONTEXT === 'preview';
 function createSidebars(preview) {
   const sidebars = {
     // By default, Docusaurus generates a sidebar from the docs folder structure
+    clueportal: [
+      {
+        type: 'category',
+        label: 'CLUe',
+        collapsed: false,
+        collapsible: false,
+        className: 'p-title',
+        items: [
+          {
+            type: 'category',
+            label: '관리자 가이드',
+            items: [
+              'platform/clue/web-portal-service-settings',
+              'platform/clue/fw-update',
+              'platform/clue/add-device',
+              'platform/clue/add-door',
+              'platform/clue/mobile-app-start',
+              'platform/clue/dynamic-qr-code',
+            ]
+          },
+          {
+            type: 'category',
+            label: '방문자 가이드',
+            items: [
+              'platform/clue/visiter-settings',
+            ]
+          }
+        ]
+      }
+    ],
     aicamwebserver: [
     {
       type: 'category',

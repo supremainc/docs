@@ -1,0 +1,69 @@
+---
+id: fw-update
+title: 펌웨어 업데이트하기
+description: CLUe 펌웨어 업데이트 방법을 안내합니다.
+---
+
+CLUe currently supports the following devices:
+
+- BioStation 3, BioEntry W3, BioLite N2, XStation 2, XPass 2
+
+Typically, CLUe required both the CLUe firmware and certificates to be updated in a specific order. However, following this sequence or performing multiple updates during the process was not convenient when updating a large number of devices.
+
+Now, the latest CLUe firmware can automatically perform updates that include certificates by itself. In other words, with a single firmware update, you can switch from the existing BioStar-supported mode to CLUe-supported mode.
+
+## How to Change
+
+1. **Prepare the firmware version that supports CLUe**.
+
+   This can be obtained through your local Suprema branch or the CLUe team. The applicable versions are as follows.
+
+   *xpass2\_v1\_4\_2\_20250705\_000000CL-AU.bin*
+
+   *bs3-all\_v1.1.0\_20250621\_000000CL-AU.bin*
+
+   *xs2-all\_v1.2.1\_20250704\_000000CL-AU.zip*
+
+   *bln2-oab\_v1.6.0\_20250512\_000000CL-AU.bin*
+
+   *bln2-odb\_v1.6.0\_20250512\_000000CL-AU.bin*
+
+   *bln2-pab\_v1.6.0\_20250512\_000000CL-AU.bin*
+
+   *bew3-all\_v1.0.1\_20250715\_000000CL-AU.bin*
+
+1. **Before updating the firmware, ensure that the device can connect to the internet and the CLUe server**.
+
+   After the CLUe firmware update, the device will automatically retrieve and apply the certificate from the CLUe server and then attempt to connect, so an internet connection is essential.Note that after the CLUe firmware update, the device will, by default, obtain an IP address via DHCP, so please check that dynamic IP assignment is available.
+
+   - Default network setting is DHCP
+
+   - Use 8.8.8.8 DNS server
+
+1. **During the update process, the device will reboot at least two to three times**. 
+
+   The main firmware update may take some time, while retrieving certificates and configuration firmware will take less time. Typically, the process takes about 3 to 5 minutes, so please keep the device powered and connected until the update is complete.
+
+1. **Once all updates are complete, the device will display the CLUe icon on the main screen**.
+
+   For devices without a display, you can check the device’s registration status by entering the serial number on the CLUe portal.
+
+1. **After this, please ask to your Suprema representative to assign the device to your acount through the portal**.
+
+   Then, you can assign it to the designated place, and use it together with your door configurations.For secure device management, the CLUe system requires that each branch administrator allocates the device to your place group.
+
+Please ensure that **no user information remains on the device before performing the firmware update**. If user data remains, it may conflict with user information synchronized from the CLUe system.
+
+Additionally, **firmware updates can be performed via BioStar 2 or using a USB**.
+
+**Need to Register to CLUe before FW Update**
+
+If you would like the device to be pre-assigned before the update, please provide the device SN and model name (e.g., BS3-DB), and we will take the necessary steps to register it in advance.
+
+## Trouble shooting
+
+If there’s no cloud icon from the device display, there are a few things to check.
+
+* Firstly, please check the internet connectivity. Since the device is directly connected to the cloud server, it must be connected to the internet. Additionally, the CLUe firmware uses the standard HTTPS port 443 for its outbound communication.
+
+* Secondly, if the cloud icon still does not appear, go to the device menu → Network → Ethernet → Ping Test. Tap the ping test buttons and check the response. If the device is properly connected to the internet, it should display a 'ping test success' popup for the AWS endpoint and Google DNS or Cloudflare DNS test. If the device shows an 'unknown' or 'fail' popup, it is necessary to check if your network is blocking such DNS usage
