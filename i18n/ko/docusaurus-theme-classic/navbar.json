@@ -210,5 +210,9 @@
   "item.label.BioStar X Mobile": {
     "message": "BioStar X Mobile",
     "description": "Navbar item with label BioStar X Mobile"
+  },
+  "item.label.ViOnyx Web Server": {
+    "message": "ViOnyx Web Server",
+    "description": "Navbar item with label ViOnyx Web Server"
   }
 }
