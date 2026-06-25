@@ -263,10 +263,10 @@
             "model2": {
               "label": "BLN2-OAB",
               "value": {
-                "ko": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE, ETL Listed to UL 294",
-                "en": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE",
-                "es": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE",
-                "ja": "CE、UKCA、KC、FCC、IC、RCM、BIS、SIG、RoHS、REACH、WEEE"
+                "ko": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE, ETL Listed to UL 294<sup id='anno2_dest'><a href='#anno2'></a></sup>",
+                "en": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE, ETL Listed to UL 294<sup id='anno2_dest'><a href='#anno2'></a></sup>",
+                "es": "CE, UKCA, KC, FCC, IC, RCM, BIS, SIG, RoHS, REACH, WEEE, ETL Listed to UL 294<sup id='anno2_dest'><a href='#anno2'></a></sup>",
+                "ja": "CE、UKCA、KC、FCC、IC、RCM、BIS、SIG、RoHS、REACH、WEEE、ETL Listed to UL 294<sup id='anno2_dest'><a href='#anno2'></a></sup>"
               }
             }
           },

@@ -110,7 +110,7 @@ Used to provide notes or additional information while using the product.
 
 * May cause fire or electric shock.
 
-<Include product='biolite_n2_ul'>
+<Include type={props.type} ref='biolite_n2_ul'>
 
 **Do not connect to receptacle controlled by a switch**.
 
@@ -180,13 +180,13 @@ Used to provide notes or additional information while using the product.
 
 </Xclude>
 
-<Include product='biostation_3_ul,xpass_2_ul'>
+<Include type={props.type} ref='biostation_3_ul,xpass_2_ul'>
 
 **The product is powered by Class 2 Power supply with 12 VDC or 24 VDC; or by UL 62368-1 listed PoE Power Source Equipment (PSE)**.
 
 </Include>
 
-<Xclude product='extendedmodule,extendedmodule_sc,biolite_n2_ul'>
+<Xclude product='extendedmodule,extendedmodule_sc' type={props.type} ref='biolite_n2_ul'>
 
 **Use a power adapter that has IEC/EN 62368-1 approval and is rated above the power consumption of the terminal device**. **It is recommended to use the power adapters sold by Suprema**.
 
@@ -196,7 +196,7 @@ Used to provide notes or additional information while using the product.
 
 </Xclude>
 
-<Include product='biolite_n2_ul'>
+<Include type={props.type} ref='biolite_n2_ul'>
 
 **Use the UL 60950-1/UL 62368-1 and UL 294, or equivalent LSS standard that includes supply line transient testing, approved power adapter that supports higher power consumption than the product**.
 
@@ -224,19 +224,19 @@ Used to provide notes or additional information while using the product.
 
 </Include>
 
-<Include product='securemodule_ul,xpass_d2_ul'>
+<Include type={props.type} ref='securemodule_ul,xpass_d2_ul'>
 
 **The product is powered by Class 2 Power supply with 12 VDC**.
 
 </Include>
 
-<Include product='biostation_3_ul'>
+<Include type={props.type} ref='biostation_3_ul'>
 
 **For PoE / PoE+, the maximum distance from PSE is 100 meters or 328 feet**.
 
 </Include>
 
-<Include product='xpass_2_ul'>
+<Include type={props.type} ref='xpass_2_ul'>
 
 **For PoE, the maximum distance from PSE is 100 meters or 328 feet**.
 
@@ -324,7 +324,7 @@ Used to provide notes or additional information while using the product.
 
 ---
 
-<Xclude product='vionyx,extendedmodule,extendedmodule_sc'>
+<Xclude product='vionyx,extendedmodule,extendedmodule_sc' type={props.type} ref='biostation_3_ul,xpass_2_ul'>
 
 <PageBreak />
 
