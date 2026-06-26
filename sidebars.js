@@ -2474,6 +2474,32 @@ function createSidebars(preview) {
             'device/xpass_2/release-notes/100',
           ]
         },
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: 'CLUe 릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/xpass_2/release-notes-clue/index',
+          },
+          items: [
+            'device/xpass_2/release-notes-clue/142_clue',
+            'device/xpass_2/release-notes-clue/142',
+            'device/xpass_2/release-notes-clue/141',
+            'device/xpass_2/release-notes-clue/132',
+            'device/xpass_2/release-notes-clue/131',
+            'device/xpass_2/release-notes-clue/124',
+            'device/xpass_2/release-notes-clue/123',
+            'device/xpass_2/release-notes-clue/122',
+            'device/xpass_2/release-notes-clue/121',
+            'device/xpass_2/release-notes-clue/120',
+            'device/xpass_2/release-notes-clue/110',
+            'device/xpass_2/release-notes-clue/100',
+          ]
+        },
       ],
     },
   ],
