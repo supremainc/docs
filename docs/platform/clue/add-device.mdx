@@ -1,118 +1,134 @@
----
+﻿---
 id: add-device
 title: 장치 추가하기
 description: 슈프리마 CLUe 시스템에 장치 추가 방법을 안내합니다.
 ---
 
-:::info
+CLUe 장치는 박스를 개봉하지 않고도 특정 장소에 할당하고 필요한 출입문 설정을 미리 구성할 수 있도록 설계되었습니다.
 
-**Registering a device in the CLUe system can only be done by the Branch Admin**.
+하지만 이러한 설계로 인해 포털에서 초기 등록 절차가 필요합니다. 무분별하거나 중복된 등록을 방지하기 위해 이 등록 절차는 지점 관리자만 이용할 수 있습니다.
 
-For Admins of disti or place groups, they can allocate or edit devices within their group that have been assigned by the Branch Admin.
+따라서 신규로 장치를 구매한 고객은 먼저 CLUe 펌웨어와 인증서가 제대로 적용되었는지 확인한 후 해당 슈프리마 지점에 장치 등록을 요청해야 합니다. 지점에서 장치를 특정 지역 또는 장소 그룹에 할당하면 이후에는 장치를 자유롭게 할당하고 관리할 수 있습니다.
 
-:::
+## 장치 등록(브랜치 관리자)
 
-## Before Start!
+브랜치 관리자만 장치를 등록할 수 있습니다.
 
-Devices must be in a state where they have been assigned a CLUe certificate to be added.
+1. [CLUe 웹 포털](https://clue.moon.supremainc.com)에 로그인하세요.
 
-In other words, devices equipped with certificates through Suprema production or those provided with certificates separately upon request to Suprema headquarters can be searched and added to the system.
+1. 초기 화면에서 장치를 등록할 브랜치를 선택하세요.
 
-The device addition feature in Clue is designed with the following goal:
-
-* To allow devices to be added remotely and assigned to a place without opening the box.
-
-* To enable the addition of devices without the need for any additional identification methods.
-
-As a result, the system supports registration using the device's unique serial number (SN) and restricts registration to Branch Admins or higher roles.
-
-This restriction is in place to prevent indiscriminate device registration by lower-level dealerships or channels and to avoid devices being registered for other customers.
-
-## Add Device as Branch Admin
-
-1. Move to Branch → Settings.
+1. 화면 오른쪽 상단에서 <IcAirMore title='more' /> → <Cmd sid='settings_2' product='clue' />을 클릭하세요.
 
    <Image src='/img/clue/add-device-settings.png' />
 
-1. Go to Device tap
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device' product='clue' />을 클릭하세요.
 
    <Image src='/img/clue/add-device-go-device-tap.png' />
 
-1. Enter a device SN to the add device field and click “Add”
+1. <Cmd sid='add_4' product='clue' /> 섹션의 <Cmd sid='device_id_s_n' product='clue' /> 입력 필드에 장치 시리얼 번호를 입력하고 <Cmd sid='add' product='clue' /> 버튼을 클릭하세요.
 
    <Image src='/img/clue/add-device-enter-id.png' />
 
-1. Then, the device shows up in the device list.
+1. <Cmd sid='device_list' product='clue' />에 추가한 장치가 표시됩니다.
 
    <Image src='/img/clue/add-device-list.png' />
 
-1. Click any of none filed to turn on Edit mode and select a place to assign.
+1. 편집 모드를 활성화하려면 <Cmd sid='none_select' product='clue' /> 필드를 클릭하고 <IcCLEdit title='edit' /> 버튼을 선택하세요.
+
+   <Image src='/img/clue/add-device-list-enable-edit-mode.png' />
+
+1. 장치를 할당할 <Cmd sid='distributor' product='clue' className='normal' />, <Cmd sid='place_group' product='clue' className='normal' />, <Cmd sid='place' product='clue' className='normal' />을 선택하세요.
 
    <Image src='/img/clue/add-device-list-set-place.png' />
 
-1. Then, click <IcCheck title='confirm' /> button to apply.
+1. 선택한 항목을 적용하려면 <IcCLCheck title='confirm' /> 버튼을 클릭하세요.
 
-1. Place allocation is finished. Now, you can click each field and move to a place to set up the device and door.
+장치 할당 성공 메시지가 화면 상단에 표시됩니다. 각 필드를 클릭하면 해당 <Cmd sid='distributor' product='clue' className='normal' />, <Cmd sid='place_group' product='clue' className='normal' />, <Cmd sid='place' product='clue' className='normal' />으로 이동할 수 있는 <IcCLMove title='move' /> 버튼이 활성화됩니다. 버튼을 클릭하면 해당 위치로 이동한 후 장치와 출입문을 설정할 수 있습니다.
 
-   <Image src='/img/clue/add-device-complete.png' />
+<Image src='/img/clue/add-device-complete.png' />
 
-## Assign Device as Disti Admin
+## 장치 할당
 
-1. Move to Disti → Settings.
+### 대리점 관리자
+
+대리점 레벨에서 브랜치 관리자는 자신에게 할당된 장치를 하위 공간 그룹 또는 개별 공간에 배정할 수 있습니다. 등록이 필요한 장치가 목록에 표시되지 않는다면 해당 슈프리마 지사 또는 본사에 문의하세요.
+
+1. [CLUe 웹 포털](https://clue.moon.supremainc.com)에 로그인하세요.
+
+1. 초기 화면에서 장치를 할당할 대리점을 선택하세요.
+
+1. 화면 오른쪽 상단에서 <IcAirMore title='more' /> → <Cmd sid='settings_2' product='clue' />을 클릭하세요.
 
    <Image src='/img/clue/assign-device-settings.png' />
 
-1. Move to Device Tap
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device' product='clue' />을 클릭하세요.
 
    <Image src='/img/clue/assign-device-device-list.png' />
 
-   :::note
-
-   From the disti level, branch admins can allocate devices assigned to them to sub-place groups or individual places. If the device you need to register is not visible in the list, please contact the relevant Suprema branch or headquarters.
-
-   :::
-
-1. Click the place group or place and select “edit” to assign to a place group or a place.
+1. 편집 모드를 활성화하려면 <Cmd sid='none_select' product='clue' /> 필드를 클릭하고 <IcCLEdit title='edit' /> 버튼을 클릭하세요.
 
    <Image src='/img/clue/assign-device-device-list-edit.png' />
 
-   :::note
+1. 장치를 할당할 <Cmd sid='place_group' product='clue' className='normal' /> 또는 <Cmd sid='place' product='clue' className='normal' />을 선택하세요.
 
-   When the device is deleted, it’s automatically going back to the branch level device list as non-assigned device. If you delete it by accident, please ask the branch admin to reassign.
+   <Image src='/img/clue/assign-device-device-list-assign-place.png' />
 
-   :::
+1. 선택한 항목을 적용하려면 <IcCLCheck title='confirm' /> 버튼을 클릭하세요.
 
-1. After allocation, it’s recommened to move to a place and add a door.
+장치 할당 성공 메시지가 화면 상단에 표시됩니다. 각 필드를 클릭하면 해당 <Cmd sid='place_group' product='clue' className='normal' />, <Cmd sid='place' product='clue' className='normal' />으로 이동할 수 있는 <IcCLMove title='move' /> 버튼이 활성화됩니다. 할당 후 공간으로 이동하여 출입문을 추가하는 것을 권장합니다.
 
-   <Image src='/img/clue/assign-device-device-list-move.png' />
+<Image src='/img/clue/assign-device-device-list-move.png' />
 
 :::info
 
-Please note that the disti level admin cannot see the user and monitoring tap as default following to privacy policy. If needed, please ask the place group/place admin to invite you to access them.
+* 대리점 관리자는 개인 정보 보호 정책에 따라 기본적으로 사용자 및 모니터링 탭을 볼 수 없습니다. 접근이 필요하다면 <Cmd sid='place_group' product='clue' className='normal' />, <Cmd sid='place' product='clue' className='normal' /> 관리자에게 초대를 요청하세요.
+
+* 장치를 삭제하면 자동으로 브랜치 레벨의 장치 목록으로 돌아가며 미할당 상태가 됩니다. 실수로 장치를 삭제했다면 브랜치 관리자에게 재할당을 요청하세요.
 
 :::
 
-## Assign Device as Place Group Admin
+### 공간 그룹 관리자
 
-1. Move to Disti → Settings.
+공간 그룹 관리자는 자신에게 할당된 장치를 하위 공간에 할당할 수 있습니다.
 
-1. Move to Device Tap
+1. [CLUe 웹 포털](https://clue.moon.supremainc.com)에 로그인하세요.
 
-1. Click a place column and select a edit and assign a device to a place
+1. 초기 화면에서 장치를 할당할 공간 그룹을 선택하세요.
 
-1. After allocation, it’s recommened to move to a place and add a door.
+1. 화면 오른쪽 상단에서 <IcAirMore title='more' /> → <Cmd sid='settings_2' product='clue' />을 클릭하세요.
+
+   <Image src='/img/clue/place-group-settings.png' />
+
+1. 화면 왼쪽 사이드바에서 <Cmd sid='device' product='clue' />을 클릭하세요.
+
+   <Image src='/img/clue/place-group-settings-device.png' />
+
+1. 편집 모드를 활성화하려면 <Cmd sid='none_select' product='clue' /> 필드를 클릭하고 <IcCLEdit title='edit' /> 버튼을 선택하세요.
+
+   <Image src='/img/clue/place-group-settings-device-list-edit.png' />
+
+1. 장치를 할당할 <Cmd sid='place' product='clue' className='normal' />을 선택하세요.
+
+   <Image src='/img/clue/place-group-settings-device-list-select-place.png' />
+
+1. 선택한 항목을 적용하려면 <IcCLCheck title='confirm' /> 버튼을 클릭하세요.
+
+장치 할당 성공 메시지가 화면 상단에 표시됩니다. 장치 할당 후 해당 <Cmd sid='place' product='clue' className='normal' />으로 이동하여 출입문을 추가하는 것을 권장합니다.
+
+<Image src='/img/clue/place-group-settings-device-list-move.png' />
 
 
-## Test Place Setting (Branch Admin Only)
+## 테스트 공간 설정(브랜치 관리자 전용)
 
-Since subscription is based on the number of devices, it is necessary to distinguish test devices to exclude them from total.
+구독은 장치 수를 기준으로 하므로, 테스트 장치를 구분하여 전체 합산에서 제외해야 합니다.
 
-To address this, the system allows Branch Admins or higher roles to designate a space as a "test place" in the place settings.
+이를 위해 브랜치 관리자 이상의 역할을 가진 사용자는 공간 설정에서 특정 공간을 '테스트 공간'으로 지정할 수 있습니다.
 
-1. Move to Place Settings → Basic
+1. 공간 설정 → **기본**으로 이동하세요.
 
-1. Click Setting of Test Date and set test period.
+1. **테스트 기간 설정**을 클릭하고 테스트 기간을 설정하세요.
 
-   - With custom setting, there’s no limit. You can set up to 9999.12.31 23:59
+   - 사용자 지정 설정을 사용하면 제한이 없습니다. 최대 9999.12.31 23:59까지 설정할 수 있습니다.
 
-1. Once it’s set, you can check the test device in red color with its total number info
+1. 설정이 완료되면 테스트 장치가 빨간색으로 표시되며, 전체 수량 정보도 함께 확인할 수 있습니다.
