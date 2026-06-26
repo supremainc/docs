@@ -1,0 +1,62 @@
+---
+id: 110
+title: Firmware Version 1.1.0
+---
+
+# Firmware Version 1.1.0 (Build No. 1.1.0_230414)
+
+Release<Separator/>2023-04-19
+
+## New Features and Improvements
+
+---
+
+1. Supports QR code recognition and authentication using the camera.
+
+1. Supports activating licenses for use of specific features on devices.
+
+1. Improved LED operation according to illuminance.
+
+1. Supports Thai font.
+
+1. Added Japanese regulatory certification electronic notation.
+
+1. Improved performance of the authentication result displayed when face authentication is performed from a slave device.
+
+1. Improved smartcard output byte order setting.
+
+    - When using Wiegand or OSDP output, it is improved to be affected by the smartcard output byte order when the Wiegand output information is set to send user ID.
+
+1. Improved performance of the authentication result and LED action.
+
+1. Improved scrolling performance in lists when querying users or logs.
+
+1. Improved call failure pop-up messages and end call operation when **SIP Intercom** when there is no response from the other party.
+
+1. Optimized camera performance to enhance face and QR authentication performance in various illuminance environments.
+
+1. Improved mask detection algorithm.
+
+1. Improved to display an error message when pressing **OK** when there are unentered items from **SIP Setting** in the **Intercom** of the device.
+
+1. Improved face anti-spoofing performance.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. Applying an invalid custom resource causes the device to restart. <Badge>1.0.0</Badge>
+
+1. Face authentication fails on a slave device when the master device restarts without having any **Auth Mode**. <Badge>1.0.0</Badge>
+
+1. Changing the **Auth Timeout** in BioStar 2 does not apply to the device. <Badge>1.0.0</Badge>
+
+1. An issue where an administrator with the device setup operating level can initialize the device. <Badge>1.0.0</Badge>
+
+1. Intermittently, the door does not open even if authentication succeeds when the door uses the slave device's relay. <Badge>1.0.0</Badge>
+
+1. When face authentication is performed while pressing the Call button on the main screen to use the **Intercom**, only the main screen is displayed instead of the intercom screen. <Badge>1.0.0</Badge>
+
+</BugLists>

@@ -2039,15 +2039,62 @@ function createSidebars(preview) {
             'device/biostation_3/release-notes/100',
           ]
         },
-        // {
-        //   type: 'html',
-        //   value: '<hr />'
-        // },
-        // {
-        //   type: 'doc',
-        //   label: 'A&E',
-        //   id: 'device/biostation_3/ae/biostation3_ae',
-        // },
+      ],
+    },
+  ],
+  biostation3_clue: [
+    {
+      type: 'category',
+      label: 'BioStation 3 CLUe',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/biostation_3_clue/index',
+      },
+      items: [
+        'device/biostation_3_clue/safety-instructions',
+        'device/biostation_3_clue/getting-started',
+        'device/biostation_3_clue/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/biostation_3_clue/using-device',
+          },
+          items: [
+            'device/biostation_3_clue/admin-menu',
+            'device/biostation_3_clue/user',
+            'device/biostation_3_clue/authentication',
+            'device/biostation_3_clue/settings',
+            'device/biostation_3_clue/event-log',
+          ],
+        },
+        'device/biostation_3_clue/troubleshooting',
+        'device/biostation_3_clue/product-specifications',
+        'device/biostation_3_clue/regulatory-information',
+        'device/biostation_3_clue/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/biostation_3_clue/release-notes/index',
+          },
+          items: [
+            'device/biostation_3_clue/release-notes/110_clue',
+            'device/biostation_3_clue/release-notes/110',
+            'device/biostation_3_clue/release-notes/102',
+            'device/biostation_3_clue/release-notes/101',
+            'device/biostation_3_clue/release-notes/100',
+          ]
+        },
       ],
     },
   ],
