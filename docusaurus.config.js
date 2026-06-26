@@ -319,6 +319,11 @@ const config = {
                },
                {
                   type: 'doc',
+                  label: 'BioStation 3 (CLUe)',
+                  docId: 'device/biostation_3_clue/index'
+               },
+               {
+                  type: 'doc',
                   label: 'FaceStation F2',
                   docId: 'device/facestation_f2/index'
                },
@@ -331,6 +336,11 @@ const config = {
                   type: 'doc',
                   label: 'BioLite N2',
                   docId: 'device/biolite_n2/index'
+               },
+               {
+                  type: 'doc',
+                  label: 'BioLite N2 (CLUe)',
+                  docId: 'device/biolite_n2_clue/index'
                },
                {
                   type: 'doc',
@@ -351,6 +361,11 @@ const config = {
                   type: 'doc',
                   label: 'X-Station 2',
                   docId: 'device/xstation_2/index'
+               },
+               {
+                  type: 'doc',
+                  label: 'X-Station 2 (CLUe)',
+                  docId: 'device/xstation_2_clue/index'
                },
                {
                   type: 'doc',
