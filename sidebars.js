@@ -2294,6 +2294,71 @@ function createSidebars(preview) {
       ],
     },
   ],
+  bioliten2_clue: [
+    {
+      type: 'category',
+      label: 'BioLite N2 CLUe',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/biolite_n2_clue/index',
+      },
+      items: [
+        'device/biolite_n2_clue/safety-instructions',
+        'device/biolite_n2_clue/getting-started',
+        'device/biolite_n2_clue/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/biolite_n2_clue/using-device',
+          },
+          items: [
+            'device/biolite_n2_clue/admin-menu',
+            'device/biolite_n2_clue/user',
+            'device/biolite_n2_clue/authentication',
+            'device/biolite_n2_clue/settings',
+            'device/biolite_n2_clue/event-log',
+          ],
+        },
+        'device/biolite_n2_clue/troubleshooting',
+        'device/biolite_n2_clue/product-specifications',
+        'device/biolite_n2_clue/regulatory-information',
+        'device/biolite_n2_clue/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/biolite_n2_clue/release-notes/index',
+          },
+          items: [
+            'device/biolite_n2_clue/release-notes/160_clue',
+            'device/biolite_n2_clue/release-notes/160',
+            'device/biolite_n2_clue/release-notes/150',
+            'device/biolite_n2_clue/release-notes/142',
+            'device/biolite_n2_clue/release-notes/141',
+            'device/biolite_n2_clue/release-notes/140',
+            'device/biolite_n2_clue/release-notes/132',
+            'device/biolite_n2_clue/release-notes/131',
+            'device/biolite_n2_clue/release-notes/130',
+            'device/biolite_n2_clue/release-notes/120',
+            'device/biolite_n2_clue/release-notes/110',
+            'device/biolite_n2_clue/release-notes/102',
+            'device/biolite_n2_clue/release-notes/101',
+            'device/biolite_n2_clue/release-notes/100',
+          ]
+        },
+      ],
+    },
+  ],
   bioliten2_ul: [
     {
       type: 'category',
