@@ -2711,6 +2711,70 @@ function createSidebars(preview) {
       ],
     },
   ],
+  xstation2_clue: [
+    {
+      type: 'category',
+      label: 'X-Station 2 CLUe',
+      collapsed: false,
+      collapsible: false,
+      className: 'p-title',
+      link: {
+        type: 'doc',
+        id: 'device/xstation_2_clue/index',
+      },
+      items: [
+        'device/xstation_2_clue/safety-instructions',
+        'device/xstation_2_clue/getting-started',
+        'device/xstation_2_clue/installation',
+        {
+          type: 'category',
+          label: '사용하기',
+          link: {
+            type: 'doc',
+            id: 'device/xstation_2_clue/using-device',
+          },
+          items: [
+            'device/xstation_2_clue/admin-menu',
+            'device/xstation_2_clue/user',
+            'device/xstation_2_clue/authentication',
+            'device/xstation_2_clue/settings',
+            'device/xstation_2_clue/event-log',
+          ],
+        },
+        'device/xstation_2_clue/troubleshooting',
+        'device/xstation_2_clue/product-specifications',
+        'device/xstation_2_clue/regulatory-information',
+        'device/xstation_2_clue/appendices',
+        {
+          type: 'html',
+          value: '<hr />'
+        },
+        {
+          type: 'category',
+          label: '릴리스 노트',
+          link: {
+            type: 'doc',
+            id: 'device/xstation_2_clue/release-notes/index',
+          },
+          items: [
+            'device/xstation_2_clue/release-notes/121_clue_260125',
+            'device/xstation_2_clue/release-notes/121_clue',
+            'device/xstation_2_clue/release-notes/121',
+            'device/xstation_2_clue/release-notes/120',
+            'device/xstation_2_clue/release-notes/114',
+            'device/xstation_2_clue/release-notes/113',
+            'device/xstation_2_clue/release-notes/112',
+            'device/xstation_2_clue/release-notes/111',
+            'device/xstation_2_clue/release-notes/110',
+            'device/xstation_2_clue/release-notes/103',
+            'device/xstation_2_clue/release-notes/102',
+            'device/xstation_2_clue/release-notes/101',
+            'device/xstation_2_clue/release-notes/100',
+          ]
+        },
+      ],
+    },
+  ],
   corestation_setup_manager: [
     {
       type: 'category',
