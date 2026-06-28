@@ -472,5 +472,9 @@
   "ui_387": "Menu Password",
   "ui_388": "CLUe Mode",
   "ui_389": "Entry Button",
-  "ui_390": "Ping Test"
+  "ui_390": "Ping Test",
+  "ui_391": "Manual Address",
+  "ui_392": "Timeout",
+  "ui_393": "CLUe Resource",
+  "ui_394": "Log"
 }
