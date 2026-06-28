@@ -34,7 +34,7 @@
           "product": [ "biostation_3_clue", "biolite_n2_clue", "xstation_2_clue" ],
           "question": "PIN을 분실했습니다.",
           "answer": [
-            "관리자 PIN 분실 시 설치 업체에 문의하세요."
+            "PIN 분실 시 설치 업체에 문의하세요."
           ]
         },
         {
