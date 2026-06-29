@@ -1,0 +1,54 @@
+---
+id: 112
+title: Firmware Version 1.1.2
+---
+
+# Firmware Version 1.1.2 (Build No. 1.1.2_211220)
+
+Release<Separator/>2021-12-22
+
+## New Features and Improvements
+
+---
+
+1. Improved QR/Barcode reading performance.
+
+1. Improved the speed at which the device recognizes objects.
+
+1. Supports LCDs from multiple manufactures.
+
+## Bug Fixes
+
+---
+
+<BugLists>
+
+1. The device rebooted abnormally when a user scanned a card on the device with several cards overlapped in a wallet or the like. <Badge>1.0.0</Badge>
+
+1. When setting the elevator to the scheduled unlock zone and using the 'Started by User Authentication' option, the floor is activated normally when a user belonging to the access group authenticates, but the 'Floor released' logs are output. <Badge>1.0.0</Badge>
+
+1. Improved to check for the duplication of cards registered with users when transmitting user data from the server to devices. <Badge>1.0.0</Badge>
+
+1. The master device reboots if re-searching the slave device while RS-485 communication is operating normally. <Badge>1.0.0</Badge>
+
+1. String resources were not updated when upgrading firmware. <Badge>1.0.0</Badge>
+
+1. PIN authentication did not work properly when using Device Hashkey Management. <Badge>1.0.0</Badge>
+
+1. When loading the logs for the user who entered the admin menu using the SDK, the user ID was not displayed. <Badge>1.0.0</Badge>
+
+1. The device failed to recognize the iCLASS Seos card suddenly (XS2-APB, XS2-QAPB, XS2-OAPB). <Badge>1.0.0</Badge>
+
+1. When authenticating on a device that has dual authentication set up, the authentication success sound is not output for the dual authentication result, and the home screen is maintained. <Badge>1.0.0</Badge>
+
+1. Slave devices are disconnected when the master device is rebooted. <Badge>1.0.0</Badge>
+
+1. Even though the device's language was set to Korean, some phrases were displayed on the screen in English. <Badge>1.0.0</Badge>
+
+1. The device reboots abnormally when the user authenticates the card continuously. <Badge>1.0.0</Badge>
+
+1. The 'Delete the Root Certificate' was not displayed when a user with the administrator level accessed the menu on the device where the certificate was stored. <Badge>1.0.0</Badge>
+
+1. When initializing the master device with the 'Without Network' option, the RS-485 communication key was initialized and the slave device was disconnected. <Badge>1.0.0</Badge>
+
+</BugLists>
