@@ -7,11 +7,14 @@
         {
           "product": [
             "biostation_3",
+            "biostation_3_clue",
             "biostation_2a",
             "facestation_f2",
             "biolite_n2",
+            "biolite_n2_clue",
             "facestation_2",
             "xstation_2",
+            "xstation_2_clue",
             "biostation_3_max"
           ],
           "question": "電源が供給されていますが、動作しません。",
@@ -27,8 +30,8 @@
           "question": "映像が撮影されない、または画面が表示されない場合があります。",
           "answer": [
             "電源アダプターを使用する場合は、アダプターの出力がカメラの最大消費電力以上であることを確認してください。",
-            "電源アダプターと PoE+ 電源が同時に接続されていないことを確認してください。両方を同時に接続すると誤動作の原因になります。",
-            "イーサネットケーブルで電源を供給する場合は、PoE+ 規格で接続されていることを確認してください。標準の推奨規格は PoE+ です。",
+            "電源アダプターとPoE+電源が同時に接続されていないことを確認してください。両方を同時に接続すると誤動作の原因になります。",
+            "イーサネットケーブルで電源を供給する場合は、PoE+規格で接続されていることを確認してください。標準の推奨規格はPoE+です。",
             "ネットワークケーブルの接続状態とイーサネット用の防水ゴムの取り付け状態も確認してください。"
           ]
         }
@@ -40,6 +43,17 @@
       "title": "PIN",
       "hid": "pin",
       "contents": [
+        {
+          "product": [
+            "biostation_3_clue",
+            "biolite_n2_clue",
+            "xstation_2_clue"
+          ],
+          "question": "PIN を紛失しました。",
+          "answer": [
+            "PINを紛失した場合は、設置業者にお問い合わせください。"
+          ]
+        },
         {
           "product": [
             "biostation_3",
@@ -54,6 +68,18 @@
           "answer": [
             "一般ユーザーの PIN は管理者に依頼してから再入力してください。",
             "管理者 PIN を紛失した場合は、設置業者にお問い合わせください。"
+          ]
+        },
+        {
+          "product": [
+            "biostation_3_clue",
+            "biolite_n2_clue",
+            "xstation_2_clue"
+          ],
+          "question": "PIN を入力してから <span class='cmd'>OK</span> ボタンを押しても、施錠されたドアを開けられません。",
+          "answer": [
+            "登録した PIN を正しく入力したか確認してください。",
+            "最近 PIN を変更していないか確認してください。"
           ]
         },
         {
@@ -83,7 +109,8 @@
       "contents": [
         {
           "product": [
-            "xstation_2"
+            "xstation_2",
+            "xstation_2_clue"
           ],
           "question": "QR/バーコードがうまく読み取れません。",
           "answer": [
@@ -116,6 +143,7 @@
         {
           "product": [
             "biostation_3",
+            "biostation_3_clue",
             "facestation_f2",
             "facestation_2",
             "biostation_3_max"
@@ -129,6 +157,7 @@
         {
           "product": [
             "biostation_3",
+            "biostation_3_clue",
             "facestation_f2",
             "facestation_2",
             "biostation_3_max"
@@ -141,6 +170,7 @@
         {
           "product": [
             "biostation_3",
+            "biostation_3_clue",
             "facestation_f2",
             "biostation_3_max"
           ],
@@ -182,7 +212,9 @@
           "product": [
             "biostation_2a",
             "biolite_n2",
+            "biolite_n2_clue",
             "xstation_2",
+            "xstation_2_clue",
             "facestation_f2",
             "biostation_3_max"
           ],
@@ -198,7 +230,9 @@
           "product": [
             "biostation_2a",
             "biolite_n2",
+            "biolite_n2_clue",
             "xstation_2",
+            "xstation_2_clue",
             "facestation_f2",
             "biostation_3_max"
           ],
@@ -213,7 +247,9 @@
           "product": [
             "biostation_2a",
             "biolite_n2",
+            "biolite_n2_clue",
             "xstation_2",
+            "xstation_2_clue",
             "facestation_f2",
             "biostation_3_max"
           ],
@@ -233,11 +269,14 @@
         {
           "product": [
             "biostation_3",
+            "biostation_3_clue",
             "biostation_2a",
             "facestation_f2",
             "biolite_n2",
+            "biolite_n2_clue",
             "facestation_2",
             "xstation_2",
+            "xstation_2_clue",
             "biostation_3_max"
           ],
           "question": "ドアを閉めてもロック装置が施錠されません。",
@@ -256,11 +295,14 @@
         {
           "product": [
             "biostation_3",
+            "biostation_3_clue",
             "biostation_2a",
             "facestation_f2",
             "biolite_n2",
+            "biolite_n2_clue",
             "facestation_2",
             "xstation_2",
+            "xstation_2_clue",
             "biostation_3_max"
           ],
           "question": "突然時刻が合わなくなりました。",

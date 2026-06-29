@@ -15,15 +15,19 @@ Provides instructions on how to set system and device configurations.
 
 You can change the display and sound settings of the device.
 
-1. Press **ESC** and authenticate as an administrator.
+1. Press **ESC**, enter the password, and access the menu.
 
 2. Select <Cmd sid='ui_366' product='dev' /> and press **6**.
 
 3. Select the desired item and press **4** or **6** to set the schedule.
 
-   <Image src='/img/device/bln2-displaysound.png' />
+   <Image src='/img/device/bln2-displaysound-clue.png' />
 
    * <Cmd sid='ui_364' product='dev' />: You can choose items to display in the background of the home screen.
+
+   * <Cmd sid='ui_388' product='dev' />: Indicates the CLUe mode status.
+
+   * <Cmd sid='ui_389' product='dev' />: Select whether to use the entry button.
 
    * <Cmd sid='ui_148' product='dev' />: Set the time (sec) to turn off the lighting of the screen.
 
@@ -45,7 +49,7 @@ You can change the display and sound settings of the device.
 
 You can set date and time. Set the date and time accurately in order to collect accurate log data.
 
-1. Press **ESC** and authenticate as an administrator.
+1. Press **ESC**, enter the password, and access the menu.
 
 2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_098' product='dev' /> and press **6**.
 
@@ -71,7 +75,7 @@ You can set date and time. Set the date and time accurately in order to collect 
 
 You can use the device by applying daylight saving time. Set the start and end time correctly.
 
-1. Press **ESC** and authenticate as an administrator.
+1. Press **ESC**, enter the password, and access the menu.
 
 2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_270' product='dev' /> and press **6**.
 
@@ -89,7 +93,7 @@ You can use the device by applying daylight saving time. Set the start and end t
 
 You can set the input ports of <Cmd sid='ui_144' product='dev' /> and <Cmd sid='ui_015' product='dev' /> on the device. Useful when used as a standalone.
 
-1. Press **ESC** and authenticate as an administrator.
+1. Press **ESC**, enter the password, and access the menu.
 
 2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_122' product='dev' /> and press **6**.
 
@@ -107,7 +111,7 @@ You can set the input ports of <Cmd sid='ui_144' product='dev' /> and <Cmd sid='
 
 You can view the model name, device ID, serial number, device and firmware version, kernel, and MAC address.
 
-1. Press **ESC** and authenticate as an administrator.
+1. Press **ESC**, enter the password, and access the menu.
 
 2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_289' product='dev' /> and press **6**. You can check the information of <Cmd sid='ui_136' product='dev' />, <Cmd sid='ui_282' product='dev' />, <Cmd sid='ui_210' product='dev' />, <Cmd sid='ui_019' product='dev' />, <Cmd sid='ui_017' product='dev' />, <Cmd sid='ui_332' product='dev' />, <Cmd sid='ui_031' product='dev' />.
 
@@ -117,7 +121,7 @@ You can view the model name, device ID, serial number, device and firmware versi
 
 View the status of memory usage.
 
-1. Press **ESC** and authenticate as an administrator.
+1. Press **ESC**, enter the password, and access the menu.
 
 2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_133' product='dev' /> and press **6**. You can view the memory usage status of the device.
 
@@ -127,7 +131,7 @@ View the status of memory usage.
 
 You can set whether to use security tamper. When the tamper is turned on, you can set to delete the entire user, the entire log, and the security key.
 
-1. Press **ESC** and authenticate as an administrator.
+1. Press **ESC**, enter the password, and access the menu.
 
 2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_150' product='dev' /> and press **4** or **6** to change settings.
 
@@ -137,7 +141,7 @@ You can set whether to use security tamper. When the tamper is turned on, you ca
 
 The user can restart the device.
 
-1. Press **ESC** and authenticate as an administrator.
+1. Press **ESC**, enter the password, and access the menu.
 
 2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_286' product='dev' /> and press **6**.
 
@@ -147,7 +151,7 @@ The user can restart the device.
 
 Device settings, network settings, and operator levels will be reset.
 
-1. Press **ESC** and authenticate as an administrator.
+1. Press **ESC**, enter the password, and access the menu.
 
 2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_089' product='dev' /> and press **6**.
 
@@ -173,75 +177,11 @@ Device settings, network settings, and operator levels will be reset.
 
 :::
 
-### Master administrator <Badge only>CE products</Badge>
-
-You can change the authentication method of the Master Admin.
-
-1. Press **ESC** and authenticate as an administrator.
-
-2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_128' product='dev' />.
-
-3. Configure the desired authentication methods.
-
-   <div className='grid-container'>
-
-   <Image src='/img/device/bln2-master-admin.png' width='100%' />
-
-   <Image src='/img/device/bln2-master-admin-edit.png' width='100%' />
-
-   </div>
-
-:::info
-
-* You must enroll at least two types of credentials.
-
-* Available only on new devices with firmware v1.7.0 or later.
-
-:::
-
-### Administrator two-step authentication <Badge only>CE products</Badge> {#admin-2-step-authentication}
-
-A CE product that has been upgraded from firmware does not provide <Cmd sid="ui_128" product='dev' /> settings, but you can use the <Cmd sid="ui_073" product='dev' /> option to enhance overall administrator privileges and improve device security.
-
-:::info
-
-* <Cmd sid="ui_073" product='dev' /> can be activated only if all enrolled administrators have at least two types of credentials.
-
-  * PIN cannot be used as a standalone credential, so the ID + PIN combination is not supported.
-
-* The firmware upgrade device cannot be downgraded to a lower version after upgrading the firmware.
-
-:::
-
-1. Press **ESC** and authenticate as an administrator.
-
-2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_073' product='dev' />.
-
-   <Image src='/img/device/bln2-administrator-two-step-auth.png' />
-
-:::info
-
-If there are not two types of credentials enrolled for all administrators, activation fails and an error message is displayed.
-
-Enroll two types of credentials for all administrators and try again.
-
-* PIN cannot be used as a standalone credential, so the ID + PIN combination is not supported.
-
-<Image src='/img/device/bln2-master-admin-error-message.png' />
-
-:::
-
-:::caution
-
-If you enable <Cmd sid='ui_073' product='dev' /> and delete all administrators' credentials to fewer than two types, you cannot access the administrator menu when BioStar X or BioStar 2 is unavailable. Therefore, you need to be particularly careful when deleting administrator credentials.
-
-:::
-
 ### User ID type
 
 Select the type of user ID to register to the device.
 
-1. Press **ESC** and authenticate as an administrator.
+1. Press **ESC**, enter the password, and access the menu.
 
 2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_168' product='dev' /> and press **4** or **6** to change settings.
 
@@ -251,13 +191,31 @@ Select the type of user ID to register to the device.
 
 3. Press **OK** to save the settings.
 
+### Menu password {#menu-password}
+
+Set the device password.
+
+1. Press **ESC**, enter the password, and access the menu.
+
+2. Select <Cmd sid='ui_280' product='dev' /> → <Cmd sid='ui_387' product='dev' />, and then press **6**.
+
+3. Set the password, and press **OK** to save.
+
+:::info
+
+* Set the device password to 4\~16 digits.
+
+* Be careful not to lose the device password. If you lose the password, initialize the device to connect to it.
+
+:::
+
 ## Network
 
 You can change the communication settings of devices such as Ethernet, server, and serial communication.
 
 ### TCP/IP
 
-1. Press **ESC** and authenticate as an administrator.
+1. Press **ESC**, enter the password, and access the menu.
 
 2. Select <Cmd sid='ui_103' product='dev' /> → <Cmd sid='ui_059' product='dev' /> and press **6**.
 
@@ -277,11 +235,19 @@ You can change the communication settings of devices such as Ethernet, server, a
 
    * <Cmd sid='ui_013' product='dev' />: You can set the domain name server address.
 
+   * <Cmd sid='ui_390' product='dev' />: Starts the Ping test.
+
+      :::info
+
+      Select a DNS server below to run the Ping test.
+
+      :::
+
 4. Press **OK** to save the settings.
 
 ### Server
 
-1. Press **ESC** and authenticate as an administrator.
+1. Press **ESC**, enter the password, and access the menu.
 
 2. Select <Cmd sid='ui_103' product='dev' /> → <Cmd sid='ui_180' product='dev' /> and press **6**.
 
@@ -291,28 +257,40 @@ You can change the communication settings of devices such as Ethernet, server, a
 
    * <Cmd sid='ui_234' product='dev' />: Selecting <Cmd sid='ui_283' product='dev' /> sends a direct connection signal to the server with the information entered on the device. Users can input <Cmd sid='ui_183' product='dev' />, <Cmd sid='ui_182' product='dev' />, and <Cmd sid='ui_189' product='dev' />.
 
+      :::info
+
+      When you use Suprema CLUe mode, the <Cmd sid='ui_283' product='dev' /> setting is fixed.
+
+      :::
+
    * <Cmd sid='ui_183' product='dev' />: You can enter <Cmd sid='ui_183' product='dev' /> instead of <Cmd sid='ui_182' product='dev' />.
 
-   * <Cmd sid='ui_182' product='dev' />: Enter the IP address of the PC on which BioStar X is installed.
+   * <Cmd sid='ui_182' product='dev' />: To connect to Suprema CLUe, enter `127.0.0.1`.
 
-   * <Cmd sid='ui_189' product='dev' />: Enter the port of the PC on which BioStar X is installed.
+   * <Cmd sid='ui_189' product='dev' />: To connect to Suprema CLUe, enter `51212`.
 
 4. Press **OK** to save the settings.
 
 ### Serial communication settings
 
-1. Press **ESC** and authenticate as an administrator.
+1. Press **ESC**, enter the password, and access the menu.
 
 2. Select <Cmd sid='ui_103' product='dev' /> → <Cmd sid='ui_049' product='dev' /> and press **6**.
 
 3. Select the desired item and press **4** or **6** to change settings.
 
-   <Image src='/img/device/bln2-network-rs485.png' />
+   <Image src='/img/device/bln2-network-rs485-clue.png' />
 
    * <Cmd sid='ui_112' product='dev' />: You can select the RS-485 operation mode.
 
    * <Cmd sid='ui_113' product='dev' />: You can select the desired communication performance.
 
-   * <Cmd sid='ui_257' product='dev' />: When using <Cmd sid='ui_269' product='dev' />, select to display the authentication results of 3rd party controllers or devices on the screen. This option can be used when <Cmd sid='ui_049' product='dev' /> mode is set to <Cmd sid='ui_088' product='dev' /> or <Cmd sid='ui_205' product='dev' />.
+   * <Cmd sid='ui_205' product='dev' />: Displays a list of devices connected as slaves. <IcBw /><Cmd sid='ui_066' product='dev' /> and then press **6** to search for new slave devices and add them to the list automatically.
+
+      :::info
+
+     The <Cmd sid='ui_205' product='dev' /> menu is available only on the master device.
+
+      :::
 
 4. Press **OK** to save the settings.

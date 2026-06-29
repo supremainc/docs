@@ -8,9 +8,30 @@ keywords:
 
 Provides guidance on the main menus and features accessible with administrator privileges.
 
-## DASHBOARD
+## Top icon
 
-1. Press <Image src='/img/common/ico-menu.svg' ico alone /> and authenticate with the Admin level credential.<br/>You can check the status and information of the device at <Cmd sid='ui_109' product='dev' />. Alternatively, you can press <Cmd sid='ui_174' product='dev' /> to directly enroll a user.
+<Image src='/img/device/bs3-main.png' />
+
+| Name | Feature description |
+| --- | --- |
+| <Image src='/img/common/ico-clue-rec.svg' ico alone /> (RTSP) | Icon indicating that the device is streaming live video through RTSP |
+| <Image src='/img/common/ico-clue-wifi.svg' ico alone /> (WLAN) | Icon indicating that WLAN communication is connected |
+| <Image src='/img/common/ico-clue-connect.svg' ico alone /> (Connecting to Suprema CLUe) | Icon indicating that the device is connecting to Suprema CLUe |
+| <Image src='/img/common/ico-clue.svg' ico alone /> (Suprema CLUe) | Icon indicating that the device is connected to Suprema CLUe |
+| <Image src='/img/common/ico-clue-rs485.svg' ico alone /> (RS-485) | Icon indicating that RS-485 communication is connected |
+| <Image src='/img/common/ico-clue-tcp-ip.svg' ico alone /> (TCP/IP) | Icon indicating the TCP/IP communication connection status |
+
+## Dashboard
+
+:::info
+
+When using Suprema CLUe mode, user enrollment, editing, and deletion are available only on the Suprema CLUe server, not on the device.
+
+:::
+
+1. Press <Image src='/img/common/ico-menu.svg' ico alone />, enter the password, and enter the menu.
+
+   You can check the status and information of the device at <Cmd sid='ui_109' product='dev' />. Alternatively, you can press <Cmd sid='ui_174' product='dev' /> to directly enroll a user.
 
 2. To register a user or set up a device, select the desired menu from the bottom of the dashboard.
 
@@ -18,13 +39,8 @@ Provides guidance on the main menus and features accessible with administrator p
 
 :::info
 
-* If an administrator is not designated, pressing <Image src='/img/common/ico-menu.svg' ico alone /> will display the <Cmd sid='ui_109' product='dev' /> screen.
+* If <Cmd sid='ui_387' product='dev' /> is not set, pressing <Image src='/img/common/ico-menu.svg' ico alone /> opens the <Cmd sid='ui_109' product='dev' /> screen. For details on how to set the password, refer to [Menu password](settings#menu-password).
 
 * <Cmd sid='ui_142' product='dev' /> can only be confirmed on the BS3-APWB model.
 
 :::
-
-{/* ## 출입문 제어 */}
-import Doorcontrol from "../../common/_device-door-control.mdx";
-
-<Doorcontrol />
