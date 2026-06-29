@@ -2,7 +2,7 @@
 
 <Include product='bioentry_w3'><Image src='/img/device/bew3-power-connetion.png' width='45%' className='none' /></Include>
 
-<Include product='biostation_3'><Image src='/img/device/installation-power-connection-bs3.png' width='60%' className='none' /></Include>
+<Include product='biostation_3,biostation_3_clue'><Image src='/img/device/installation-power-connection-bs3.png' width='60%' className='none' /></Include>
 
 <Include product='biostation_2a'><Image src='/img/device/installation-power-connection-bs2a.png' width='60%' className='none' /></Include>
 
@@ -14,9 +14,9 @@
 
 <Include product='doorinterface'><Image src='/img/device/installation-power-connection-di24.png' width='60%' className='none' /></Include>
 
-<Include product='biolite_n2'><Image src='/img/device/installation-power-connection-bln2.png' width='60%' className='none' /></Include>
+<Include product='biolite_n2,biolite_n2_clue'><Image src='/img/device/installation-power-connection-bln2.png' width='60%' className='none' /></Include>
 
-<Include product='xstation_2'><Image src='/img/device/installation-power-connection-xs2.png' width='60%' className='none' /></Include>
+<Include product='xstation_2,xstation_2_clue'><Image src='/img/device/installation-power-connection-xs2.png' width='60%' className='none' /></Include>
 
 <Include product='facestation_2'><Image src='/img/device/installation-power-connection-fs2.png' width='60%' className='none' /></Include>
 
@@ -52,13 +52,13 @@
 
 <Include product='bioentry_w2'>
 
-* La alimentación del dispositivo debe usar una fuente de alimentación externa de 12 VCC listada de Clase 2 o una fuente de alimentación PoE UL294B.
+* La unidad se alimenta mediante una fuente de alimentación externa Lista Clase 2 de 12 VCC o mediante una fuente de alimentación PoE Lista según UL294B.
 
-* Conecte la fuente de alimentación 'PSC-100A' y la batería 'Casil CA 1270' para cumplir con ULC S319.
+* Para cumplir con ULC S319, conecte la fuente de alimentación PSC-100A y la batería Casil CA 1270.
 
 </Include>
 
-<Include product='bioentry_w3,biostation_2a,biostation_3,xstation_2,bioentry_w2'>
+<Include product='bioentry_w3,biostation_2a,biostation_3,biostation_3_clue,xstation_2,xstation_2_clue,bioentry_w2'>
 
 * NO conecte el dispositivo a la fuente de alimentación de CC (o adaptador) y a la alimentación PoE al mismo tiempo.
 
@@ -76,9 +76,21 @@
 
 </Include>
 
+<Include type={props.type} ref='biolite_n2_ul'>
+
+* Use un adaptador de alimentación aprobado por UL 60950-1/UL 62368-1 y UL 294, o un estándar LSS equivalente que incluya pruebas de transitorios en la línea de suministro, y que admita un consumo de energía mayor que el del producto. Si desea conectar y usar otro dispositivo al adaptador de alimentación, use un adaptador con una capacidad de corriente igual o mayor que el consumo total requerido por el terminal y el otro dispositivo.
+
+   * Consulte la sección [Alimentación](product-specifications#specs.power) en las especificaciones del producto para conocer el consumo máximo de corriente.
+
+</Include>
+
+<Xclude type={props.type} ref='biolite_n2_ul'>
+
 * Use un adaptador de alimentación aprobado por IEC/EN 62368-1 que admita un consumo de energía mayor que el del producto. Si desea conectar y usar otro dispositivo al adaptador de alimentación, utilice un adaptador con una capacidad de corriente igual o mayor que el consumo total requerido por el terminal y el otro dispositivo.
 
-  * Consulte la sección [Alimentación](product-specifications#specs.power) en las especificaciones del producto para conocer el consumo máximo de corriente.
+   * Consulte la sección [Alimentación](product-specifications#specs.power) en las especificaciones del producto para conocer el consumo máximo de corriente.
+
+</Xclude>
 
 <Xclude product='corestation_20,corestation_40,doorinterface,inputmodule,outputmodule,securemodule'>
 
@@ -86,7 +98,7 @@
 
 </Xclude>
 
-<Include product='biostation_3,facestation_f2,bioentry_w3,biostation_3_max'>
+<Include product='biostation_3,biostation_3_clue,facestation_f2,bioentry_w3,biostation_3_max'>
 
 * Al conectar la alimentación, tenga en cuenta la distancia entre el dispositivo y la fuente de alimentación. Conecte el dispositivo lo más cerca posible de la fuente de alimentación para que la longitud del cable sea mínima. Si las conexiones de los cables se realizan de forma incorrecta, el dispositivo puede funcionar incorrectamente. Se recomienda usar un cable de 16 AWG o 18 AWG si el producto está lejos de la fuente de alimentación. La distancia de conexión puede variar según el estándar del cable utilizado y el entorno de instalación. Este producto admite alimentación de 24 VCC y 12 VCC; verifique la longitud máxima según la especificación del cable para asegurarse de que la unidad reciba alimentación adecuada.
 
@@ -153,7 +165,7 @@
 
 * NO extienda la longitud del cable de alimentación al usar el adaptador de alimentación.
 
-<Include product='biostation_3,xstation_2,facestation_2,bioentry_w3,facestation_f2,biostation_3_max'>
+<Include product='biostation_3,biostation_3_clue,xstation_2,xstation_2_clue,facestation_2,bioentry_w3,facestation_f2,biostation_3_max'>
 
 * NO utilice CAT5 UTP de 2 hilos para la alimentación.
 
@@ -163,16 +175,16 @@
 
 * Las señales de alarma se transmiten mediante contactos de relé a través de los pines de estado AC OK y de batería con voltaje bajo.
 
-  <div className='overflow-x'>
+   <div className='overflow-x'>
 
-  | Función | Descripción | Estado del relé |
-  | :-: | :-: | :-: |
-  | Confirmación de alimentación de CA | La alimentación de CA está encendida | Cortocircuito |
-  | ^ | La alimentación de CA está apagada | Abierto |
-  | Estado de batería con voltaje bajo | Cuando el voltaje de la batería es inferior a 11 V | Cortocircuito |
-  | ^ | Cuando el voltaje de la batería es superior a 11 V | Abierto |
+   | Función | Descripción | Estado del relé |
+   | :-: | :-: | :-: |
+   | Confirmación de alimentación de CA | La alimentación de CA está encendida | Cortocircuito |
+   | ^ | La alimentación de CA está apagada | Abierto |
+   | Estado de batería con voltaje bajo | Cuando el voltaje de la batería es inferior a 11 V | Cortocircuito |
+   | ^ | Cuando el voltaje de la batería es superior a 11 V | Abierto |
 
-  </div>
+   </div>
 
 * Se requiere una fuente de alimentación externa para usar la función de señal de alarma. El voltaje máximo aplicado es de 30 V y la corriente máxima de absorción es de 1 A.
 
@@ -182,7 +194,7 @@
 
 * El calibre mínimo del conductor que se puede conectar entre el PSE o inyector de energía y el PD es de 26 AWG (0.13 mm2) para cables de parcheo. Para cables horizontales o verticales (riser), el calibre mínimo del conductor es de 24 AWG (0.21 mm2).
 
-* Al suministrar energía mediante PoE, se debe cumplir UL294B o UL294 8ª edición.
+* Cuando el producto se alimenta mediante PoE, la fuente debe cumplir con UL294B o con UL294 8.ª ed.
 
 * El cumplimiento de las especificaciones IEEE 802.3 (at o af) no cuenta como parte de este requisito.
 

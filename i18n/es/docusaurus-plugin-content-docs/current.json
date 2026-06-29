@@ -517,19 +517,19 @@
   },
   "sidebar.aicamwebserver.category.AI 이벤트 및 규칙 설정하기": {
     "message": "Configurar Eventos y Reglas de IA",
-    "description": "La etiqueta para la categoría 'AI 이벤트 및 규칙 설정하기' en la barra lateral 'aicamwebserver'"
+    "description": "La etiqueta para la categoría 'AI eventos y configuración de reglas' en la barra lateral 'aicamwebserver'"
   },
   "sidebar.aicamwebserver.category.카메라 설정하기": {
     "message": "Configurar la Cámara",
-    "description": "La etiqueta para la categoría '카메라 설정하기' en la barra lateral 'aicamwebserver'"
+    "description": "La etiqueta para la categoría 'Configuración de cámara' en la barra lateral 'aicamwebserver'"
   },
   "sidebar.aicamwebserver.category.사용자 관리하기": {
     "message": "Administrar Usuarios",
-    "description": "La etiqueta para la categoría '사용자 관리하기' en la barra lateral 'aicamwebserver'"
+    "description": "La etiqueta para la categoría 'Administración de usuarios' en la barra lateral 'aicamwebserver'"
   },
   "sidebar.aicamwebserver.category.시스템 구성하기": {
     "message": "Configurar Sistema",
-    "description": "La etiqueta para la categoría '시스템 구성하기' en la barra lateral 'aicamwebserver'"
+    "description": "La etiqueta para la categoría 'Configuración del sistema' en la barra lateral 'aicamwebserver'"
   },
   "sidebar.genetec.category.Genetec": {
     "message": "Genetec",
@@ -557,22 +557,98 @@
   },
   "sidebar.bsx_hardening.category.BioStar X 보안 강화": {
     "message": "Guía de Endurecimiento de BioStar X",
-    "description": "The label for category 'BioStar X 보안 강화' in sidebar 'bsx_hardening'"
+    "description": "La etiqueta para la categoría 'Endurecimiento de BioStar X' en la barra lateral 'bsx_hardening'"
   },
   "sidebar.bsx_hardening.category.서버 보안 강화": {
     "message": "Guía de Endurecimiento del Servidor",
-    "description": "The label for category '서버 보안 강화' in sidebar 'bsx_hardening'"
+    "description": "La etiqueta para la categoría 'Endurecimiento del servidor' en la barra lateral 'bsx_hardening'"
   },
   "sidebar.bsx_hardening.category.BioStar X 강화": {
     "message": "Endurecimiento de BioStar X",
-    "description": "The label for category 'BioStar X 강화' in sidebar 'bsx_hardening'"
+    "description": "La etiqueta para la categoría 'Endurecimiento de BioStar X' en la barra lateral 'bsx_hardening'"
   },
   "sidebar.howto.link.BioStar X 보안 강화": {
     "message": "Guía de Endurecimiento de BioStar X",
-    "description": "The label for link 'BioStar X 보안 강화' in sidebar 'howto', linking to 'bsx_hardening/'"
+    "description": "La etiqueta para el enlace 'Endurecimiento de BioStar X' en la barra lateral 'howto', vinculado a '/how-to/bsx_hardening/'"
   },
   "sidebar.vionyx.category.릴리스 노트": {
     "message": "Notas de la Versión",
-    "description": "The label for category '릴리스 노트' in sidebar 'vionyx'"
+    "description": "La etiqueta para la categoría 'Notas de la versión' en la barra lateral 'vionyx'"
+  },
+  "sidebar.corestation_ul.category.CoreStation UL": {
+    "message": "CoreStation UL",
+    "description": "La etiqueta para la categoría 'CoreStation UL' en la barra lateral 'corestation_ul'"
+  },
+  "sidebar.corestation20_ul.category.CoreStation 20 UL": {
+    "message": "CoreStation 20 UL",
+    "description": "La etiqueta para la categoría 'CoreStation 20 UL' en la barra lateral 'corestation20_ul'"
+  },
+  "sidebar.doorinterface_ul.category.Door Interface UL": {
+    "message": "Door Interface UL",
+    "description": "La etiqueta para la categoría 'Door Interface UL' en la barra lateral 'doorinterface_ul'"
+  },
+  "sidebar.securemodule_ul.category.Secure Module UL": {
+    "message": "Secure Module UL",
+    "description": "La etiqueta para la categoría 'Secure Module UL' en la barra lateral 'securemodule_ul'"
+  },
+  "sidebar.bioentryw2_ul.category.BioEntry W2 UL": {
+    "message": "BioEntry W2 UL",
+    "description": "La etiqueta para la categoría 'BioEntry W2 UL' en la barra lateral 'bioentryw2_ul'"
+  },
+  "sidebar.biostation3_clue.category.BioStation 3 CLUe": {
+    "message": "BioStation 3 CLUe",
+    "description": "La etiqueta para la categoría 'BioStation 3 CLUe' en la barra lateral 'biostation3_clue'"
+  },
+  "sidebar.biostation3_clue.category.사용하기": {
+    "message": "Cómo Usar",
+    "description": "La etiqueta para la categoría 'Uso' en la barra lateral 'biostation3_clue'"
+  },
+  "sidebar.biostation3_clue.category.릴리스 노트": {
+    "message": "Notas de la Versión",
+    "description": "La etiqueta para la categoría 'Notas de la versión' en la barra lateral 'biostation3_clue'"
+  },
+  "sidebar.biostation3_ul.category.BioStation 3 UL": {
+    "message": "BioStation 3 UL",
+    "description": "La etiqueta para la categoría 'BioStation 3 UL' en la barra lateral 'biostation3_ul'"
+  },
+  "sidebar.bioliten2_clue.category.BioLite N2 CLUe": {
+    "message": "BioLite N2 CLUe",
+    "description": "La etiqueta para la categoría 'BioLite N2 CLUe' en la barra lateral 'bioliten2_clue'"
+  },
+  "sidebar.bioliten2_clue.category.사용하기": {
+    "message": "Cómo Usar",
+    "description": "La etiqueta para la categoría 'Uso' en la barra lateral 'bioliten2_clue'"
+  },
+  "sidebar.bioliten2_clue.category.릴리스 노트": {
+    "message": "Notas de la Versión",
+    "description": "La etiqueta para la categoría 'Notas de la versión' en la barra lateral 'bioliten2_clue'"
+  },
+  "sidebar.bioliten2_ul.category.BioLite N2 UL": {
+    "message": "BioLite N2 UL",
+    "description": "La etiqueta para la categoría 'BioLite N2 UL' en la barra lateral 'bioliten2_ul'"
+  },
+  "sidebar.xpass2.category.CLUe 릴리스 노트": {
+    "message": "Notas de la versión de CLUe",
+    "description": "La etiqueta para la categoría 'Notas de la versión de CLUe' en la barra lateral 'xpass2'"
+  },
+  "sidebar.xpass2_ul.category.XPass 2 UL": {
+    "message": "XPass 2 UL",
+    "description": "La etiqueta para la categoría 'XPass 2 UL' en la barra lateral 'xpass2_ul'"
+  },
+  "sidebar.xpassd2_ul.category.XPass D2 UL": {
+    "message": "XPass D2 UL",
+    "description": "La etiqueta para la categoría 'XPass D2 UL' en la barra lateral 'xpassd2_ul'"
+  },
+  "sidebar.xstation2_clue.category.X-Station 2 CLUe": {
+    "message": "X-Station 2 CLUe",
+    "description": "La etiqueta para la categoría 'X-Station 2 CLUe' en la barra lateral 'xstation2_clue'"
+  },
+  "sidebar.xstation2_clue.category.사용하기": {
+    "message": "Cómo Usar",
+    "description": "La etiqueta para la categoría 'Uso' en la barra lateral 'xstation2_clue'"
+  },
+  "sidebar.xstation2_clue.category.릴리스 노트": {
+    "message": "Notas de la Versión",
+    "description": "La etiqueta para la categoría 'Notas de la versión' en la barra lateral 'xstation2_clue'"
   }
 }

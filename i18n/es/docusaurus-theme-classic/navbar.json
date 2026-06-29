@@ -208,11 +208,23 @@
     "description": "Elemento de la barra de navegación etiquetado como «Software House»"
   },
   "item.label.BioStar X Mobile": {
-    "message": "BioStar X Mobile",
-    "description": "Navbar item with label BioStar X Mobile"
+    "message": "BioStar X Móvil",
+    "description": "Elemento de la barra de navegación etiquetado como «BioStar X Mobile»"
   },
   "item.label.ViOnyx Web Server": {
     "message": "Servidor Web de ViOnyx",
-    "description": "Navbar item with label ViOnyx Web Server"
+    "description": "Elemento de la barra de navegación etiquetado como «ViOnyx Web Server»"
+  },
+  "item.label.BioStation 3 (CLUe)": {
+    "message": "BioStation 3 (CLUe)",
+    "description": "Elemento de la barra de navegación etiquetado como «BioStation 3 (CLUe)»"
+  },
+  "item.label.BioLite N2 (CLUe)": {
+    "message": "BioLite N2 (CLUe)",
+    "description": "Elemento de la barra de navegación etiquetado como «BioLite N2 (CLUe)»"
+  },
+  "item.label.X-Station 2 (CLUe)": {
+    "message": "X-Station 2 (CLUe)",
+    "description": "Elemento de la barra de navegación etiquetado como «X-Station 2 (CLUe)»"
   }
 }
