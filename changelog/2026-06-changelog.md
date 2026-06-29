@@ -43,16 +43,6 @@ date: 2026-06-30T09:00
 
 ## Devices
 
-### 신규 장치
-
-* [BioStation 3 CLUe](../device/biostation_3_clue/)
-  
-* [BioLite N2 CLUe](../device/biolite_n2_clue/)
-  
-* [X-Station CLUe](../device/xstation_2_clue/)
-  
-* [XPass 2 CLUe 릴리스 노트](../device/xpass_2/release-notes-clue/)
-
 ### 장치 업데이트
 
 * [BioStation 3 Max](../device/biostation_3_max/)
