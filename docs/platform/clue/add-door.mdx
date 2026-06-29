@@ -1,76 +1,49 @@
 ---
 id: add-door
 title: 출입문 추가하기
-description: 슈프리마 CLUe 시스템에 출입문 추가 방법을 안내합니다.
+description: CLUe 공간에 출입문을 추가하고 릴레이 및 퇴실 버튼 등 필요한 설정을 구성하는 방법을 안내합니다.
 ---
 
-:::info
+CLUe에서 출입문 설정은 필수입니다. 출입문을 설정하지 않으면 사용자 동기화를 포함한 서버와의 통신이 정상 동작하지 않으므로, 서비스 시작 전에 반드시 완료하세요.
 
-In CLUe, you can configure access doors in advance through the web portal without directly connecting to a device. These settings will be automatically applied to the device once it connects to the server.
+## 출입문 설정
 
-:::
+1. [CLUe 웹 포털](https://clue.moon.supremainc.com)에 로그인하세요.
 
-## How to Use Slave Device Relay(SIO2, DM-20)
+1. 출입문을 추가할 공간을 선택하세요.
 
-You need to check the necessary conditions for door configuration in advance. It is essential to verify and set up the relay and door sensor input ports beforehand.
+1. 화면 왼쪽 사이드바에서 <Cmd sid='door' product='clue' /> → <Cmd sid='door' product='clue' />을 클릭하세요.
 
-:::info
+   <Image src='/img/clue/place-doors.png' />
 
-When using an RS485 slave device such as SIO2 and DM-20, it must be assigned to a space like a regular device. Additionally, the slave device must be added to the master device.
+1. 화면 오른쪽 상단의 <IcCLEditR title='Edit' /> → <Cmd sid='add_door' product='clue' />을 클릭하세요.
 
-:::
+   <Image src='/img/clue/place-doors-add.png' />
 
-Please check the slave device from the device list.
+1. 출입문 이름을 입력하고 입실 장치, 릴레이, 퇴실 버튼 등 기타 필요한 설정을 선택하세요.
 
-{/* ![image.png](attachment:ef18098e-b385-46c8-a575-ff30c29a5a73:image.png) */}
+   <Image src='/img/clue/place-doors-add-details.png' />
 
-{/* ![image.png](attachment:b449b29e-98a5-4c95-8df3-c9daaebe3132:image.png) */}
-
-Please select the master device and add a connected slave device. Then, you can use a slavce device relay and input ports.
-
-{/* ![image.png](attachment:00fe8bae-1268-42fa-ab3e-aaa7a9f836ab:image.png) */}
-
-## How to Set a Door
-
-Enter door name and select door relay and exit button and necessary setttings.
-
-![image.png](attachment:5405c593-e75e-4f7f-b193-029991664a23:image.png)
+1. 출입문 설정을 완료한 후 <Cmd sid='add_2' product='clue' /> 버튼을 클릭하세요.
 
 :::info
 
-What is Sensor Ignore Option?
+<Cmd sid='sensor_ignore_option' product='clue' />
 
-When it’s set to “Use”, door relay switches its status after a lock time regardless of door sensor status. When it’s “Not in Use”, the relay does not switch back when the open door sensor status is detected. This option is necessary to be used to configure a automatic door.
+* <Cmd sid='use' product='clue' />: 출입문 센서 상태와 관계없이 잠금 시간이 경과된 후 출입문 릴레이의 상태가 전환됩니다. 
 
-:::
-
-## How to Set a Schedule (Unlock/Lock Time)
-
-In order to set a door schedule, it’s necessary to set weekly time segement first from the schedule menu.
-
-1. Go to Schedule Tap → Click “Pencil” icon to add schedule.
-
-   {/* ![image.png](attachment:2ee4922a-5137-4d9c-8721-89c9aec27144:image.png) */}
-
-1. Enter its name and select weekly day and time range to apply. (Up to three time segments are supported.)
-
-   {/* ![image.png](attachment:80d107e7-ab58-4377-b9b0-cfa18c22c4cd:image.png) */}
-
-:::info
-💡
-
-Please note that only "\_" and "-" special characters are supported for the name field input.
+* <Cmd sid='not_in_use' product='clue' />: 출입문 센서가 열림 상태를 감지해도 출입문 릴레이가 원래 상태로 전환되지 않습니다. 자동문을 구성한다면 이 옵션을 선택하세요.
 
 :::
 
-1. Click “Apply” and Verify and Edit the time segments and click “Add” to create.
+## 슬레이브 장치 릴레이 사용
 
-   {/* ![image.png](attachment:c4b1c531-be9b-488f-bf4a-144c91f82bd3:image.png) */}
+SIO2, DM-20, DI-24와 같은 RS485 슬레이브 장치를 사용한다면, 일반 장치와 동일하게 공간에 할당해야 합니다.
 
-1. Once it’s created, the schedule can be seen from the list.
+* 장치 목록에서 슬레이브 장치를 확인하세요.
 
-   {/* ![image.png](attachment:9ad9ae21-98be-42c7-ac13-dab095b1e667:image.png) */}
+   <Image src='/img/clue/device-list-slave-device-02.png' alone />
 
-1. Go to “Door Settings” and select a door schedule to apply. 
+* 마스터 장치를 선택하고 연결된 슬레이브 장치를 추가하세요. 이후 슬레이브 장치의 릴레이와 입력 포트를 사용할 수 있습니다.
 
-   Unlock time and lock time cannot be overlapped.
+   <Image src='/img/clue/device-list-slave-device-03.png' alone />

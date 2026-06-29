@@ -38,7 +38,8 @@ function createSidebars(preview) {
             type: 'category',
             label: '관리자 가이드',
             items: [
-              'platform/clue/web-portal-service-settings',
+              'platform/clue/web-portal-getting-started',
+              'platform/clue/service-settings',
               'platform/clue/fw-update',
               'platform/clue/add-device',
               'platform/clue/add-door',
